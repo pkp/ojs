@@ -30,8 +30,7 @@ class RTHandler extends ArticleHandler {
 		$journalRt = &$rtDao->getJournalRTByJournalId($journal->getJournalId());
 
 		if (!$journalRt || $journalRt->getVersion()==null || !$journalRt->getAuthorBio()) {
-			Request::redirect(Request::getPageUrl());
-			return;
+			Request::redirect(null, Request::getRequestedPage());
 		}
 
 		$templateMgr = &TemplateManager::getManager();
@@ -50,8 +49,7 @@ class RTHandler extends ArticleHandler {
 		$journalRt = &$rtDao->getJournalRTByJournalId($journal->getJournalId());
 
 		if (!$journalRt || $journalRt->getVersion()==null || !$journalRt->getViewMetadata()) {
-			Request::redirect(Request::getPageUrl());
-			return;
+			Request::redirect(null, Request::getRequestedPage());
 		}
 		
 		$sectionDao = &DAORegistry::getDAO('SectionDAO');
@@ -82,7 +80,7 @@ class RTHandler extends ArticleHandler {
 		if ($context) $version = &$rtDao->getVersion($context->getVersionId(), $journal->getJournalId());
 
 		if (!$context || !$version || !$journalRt || $journalRt->getVersion()==null || $journalRt->getVersion() !=  $context->getVersionId()) {
-			Request::redirect(Request::getPageUrl() . "/article/view/$articleId/$galleyId");
+			Request::redirect(null, 'article', 'view', array($articleId, $galleyId));
 		}
 
 		// Deal with the post and URL parameters for each search
@@ -137,8 +135,7 @@ class RTHandler extends ArticleHandler {
 		$journalRt = &$rtDao->getJournalRTByJournalId($journal->getJournalId());
 
 		if (!$journalRt || $journalRt->getVersion()==null || !$journalRt->getCaptureCite()) {
-			Request::redirect(Request::getPageUrl());
-			return;
+			Request::redirect(null, Request::getRequestedPage());
 		}
 
 		$templateMgr = &TemplateManager::getManager();
@@ -180,8 +177,7 @@ class RTHandler extends ArticleHandler {
 		$journalRt = &$rtDao->getJournalRTByJournalId($journal->getJournalId());
 
 		if (!$journalRt || $journalRt->getVersion()==null || !$journalRt->getPrinterFriendly()) {
-			Request::redirect(Request::getPageUrl());
-			return;
+			Request::redirect(null, Request::getRequestedPage());
 		}
 
 		$articleGalleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
@@ -212,8 +208,7 @@ class RTHandler extends ArticleHandler {
 		$user = &Request::getUser();
 
 		if (!$journalRt || $journalRt->getVersion()==null || !$journalRt->getEmailOthers() || !$user) {
-			Request::redirect(Request::getPageUrl());
-			return;
+			Request::redirect(null, Request::getRequestedPage());
 		}
 
 		import('mail.MailTemplate');
@@ -236,10 +231,10 @@ class RTHandler extends ArticleHandler {
 					'number' => $issue->getNumber(),
 					'year' => $issue->getYear(),
 					'authorName' => $primaryAuthor->getFullName(),
-					'articleUrl' => Request::getPageUrl() . '/article/view/' . $article->getBestArticleId()
+					'articleUrl' => Request::url(null, 'article', 'view', $article->getBestArticleId())
 				));
 			}
-			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/emailColleague/' . $articleId . '/' . $galleyId, null, 'rt/email.tpl');
+			$email->displayEditForm(Request::url(null, null, 'emailColleague', array($articleId, $galleyId)), null, 'rt/email.tpl');
 		}
 	}
 
@@ -254,8 +249,7 @@ class RTHandler extends ArticleHandler {
 		$user = &Request::getUser();
 
 		if (!$journalRt || $journalRt->getVersion()==null || !$journalRt->getEmailAuthor() || !$user) {
-			Request::redirect(Request::getPageUrl());
-			return;
+			Request::redirect(null, Request::getRequestedPage());
 		}
 
 		import('mail.MailTemplate');
@@ -273,7 +267,7 @@ class RTHandler extends ArticleHandler {
 				$author = &$authors[0];
 				$email->addRecipient($author->getEmail(), $author->getFullName());
 			}
-			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/emailAuthor/' . $articleId . '/' . $galleyId, null, 'rt/email.tpl');
+			$email->displayEditForm(Request::url(null, null, 'emailAuthor', array($articleId, $galleyId)), null, 'rt/email.tpl');
 		}
 	}
 
@@ -289,8 +283,7 @@ class RTHandler extends ArticleHandler {
 		$journalRt = &$rtDao->getJournalRTByJournalId($journal->getJournalId());
 
 		if (!$journalRt || $journalRt->getVersion()==null || !$journalRt->getSupplementaryFiles()) {
-			Request::redirect(Request::getPageUrl());
-			return;
+			Request::redirect(null, Request::getRequestedPage());
 		}
 
 		$templateMgr = &TemplateManager::getManager();
@@ -315,8 +308,7 @@ class RTHandler extends ArticleHandler {
 		$suppFile = $suppFileDao->getSuppFile($suppFileId, $article->getArticleId());
 
 		if (!$journalRt || $journalRt->getVersion()==null || !$journalRt->getSupplementaryFiles() || !$suppFile) {
-			Request::redirect(Request::getPageUrl());
-			return;
+			Request::redirect(null, Request::getRequestedPage());
 		}
 
 		$templateMgr = &TemplateManager::getManager();

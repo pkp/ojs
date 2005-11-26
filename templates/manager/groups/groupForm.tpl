@@ -15,14 +15,14 @@
 
 {if $group}
 	<ul class="menu">
-		<li class="current"><a href="{$pageUrl}/manager/editGroup/{$group->getGroupId()}">{translate key="manager.groups.editTitle"}</a></li>
-		<li><a href="{$pageUrl}/manager/groupMembership/{$group->getGroupId()}">{translate key="manager.groups.membership}</a></li>
+		<li class="current"><a href="{url op="editGroup" path=$group->getGroupId()}">{translate key="manager.groups.editTitle"}</a></li>
+		<li><a href="{url op="groupMembership" path=$group->getGroupId()}">{translate key="manager.groups.membership}</a></li>
 	</ul>
 {/if}
 
 <br/>
 
-<form method="post" action="{$pageUrl}/manager/updateGroup">
+<form method="post" action="{url op="updateGroup"}">
 {if $group}
 	<input type="hidden" name="groupId" value="{$group->getGroupId()}"/>
 {/if}
@@ -49,7 +49,7 @@
 {/if}
 </table>
 
-<p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{$pageUrl}/manager/groups'" /></p>
+<p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url op="groups"}'" /></p>
 </form>
 
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>

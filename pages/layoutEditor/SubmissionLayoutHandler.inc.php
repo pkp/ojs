@@ -59,7 +59,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		list($journal, $submission) = SubmissionLayoutHandler::validate($articleId, true);
 		
 		if (LayoutEditorAction::completeLayoutEditing($submission, Request::getUserVar('send'))) {
-			Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $articleId));
+			Request::redirect(null, null, 'submission', $articleId);
 		}		
 	}
 	
@@ -80,7 +80,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		$galleyForm = &new ArticleGalleyForm($articleId);
 		$galleyId = $galleyForm->execute();
 		
-		Request::redirect(sprintf('%s/editGalley/%d/%d', Request::getRequestedPage(), $articleId, $galleyId));
+		Request::redirect(null, null, 'editGalley', array($articleId, $galleyId));
 	}
 	
 	/**
@@ -108,7 +108,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 			$galley = &$galleyDao->getGalley($galleyId, $articleId);
 			
 			if (!isset($galley)) {
-				Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $articleId));
+				Request::redirect(null, null, 'submission', $articleId);
 			}
 			
 			$templateMgr = &TemplateManager::getManager();
@@ -149,7 +149,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 			
 		} else if ($submitForm->validate()) {
 			$submitForm->execute();
-			Request::redirect('layoutEditor/submission/' . $articleId);
+			Request::redirect(null, null, 'submission', $articleId);
 		
 		} else {
 			parent::setupTemplate(true, $articleId, 'editing');
@@ -168,7 +168,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		
 		LayoutEditorAction::deleteGalley($submission, $galleyId);
 		
-		Request::redirect('layoutEditor/submission/' . $articleId);
+		Request::redirect(null, null, 'submission', $articleId);
 	}
 	
 	/**
@@ -180,7 +180,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		
 		LayoutEditorAction::orderGalley($submission, Request::getUserVar('galleyId'), Request::getUserVar('d'));
 
-		Request::redirect('layoutEditor/submission/' . $articleId);
+		Request::redirect(null, null, 'submission', $articleId);
 	}
 	
 	/**
@@ -259,7 +259,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		$suppFileForm->setData('title', Locale::translate('common.untitled'));
 		$suppFileId = $suppFileForm->execute();
 		
-		Request::redirect(sprintf('%s/editSuppFile/%d/%d', Request::getRequestedPage(), $articleId, $suppFileId));
+		Request::redirect(null, null, 'editSuppFile', array($articleId, $suppFileId));
 	}
 	
 	/**
@@ -288,7 +288,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 			$suppFile = &$suppFileDao->getSuppFile($suppFileId, $articleId);
 			
 			if (!isset($suppFile)) {
-				Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $articleId));
+				Request::redirect(null, null, 'submission', $articleId);
 			}
 			
 			$templateMgr = &TemplateManager::getManager();
@@ -315,7 +315,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		
 		if ($submitForm->validate()) {
 			$submitForm->execute();
-			Request::redirect('layoutEditor/submission/' . $articleId);
+			Request::redirect(null, null, 'submission', $articleId);
 		
 		} else {
 			parent::setupTemplate(true, $articleId, 'editing');
@@ -334,7 +334,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		
 		LayoutEditorAction::deleteSuppFile($submission, $suppFileId);
 		
-		Request::redirect('layoutEditor/submission/' . $articleId);
+		Request::redirect(null, null, 'submission', $articleId);
 	}
 	
 	/**
@@ -346,7 +346,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		
 		LayoutEditorAction::orderSuppFile($submission, Request::getUserVar('suppFileId'), Request::getUserVar('d'));
 
-		Request::redirect('layoutEditor/submission/' . $articleId);
+		Request::redirect(null, null, 'submission', $articleId);
 	}
 	
 	
@@ -365,7 +365,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 
 		list($journal, $submission) = SubmissionLayoutHandler::validate($articleId);
 		if (!LayoutEditorAction::downloadFile($submission, $fileId, $revision)) {
-			Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $articleId));
+			Request::redirect(null, null, 'submission', $articleId);
 		}
 	}
 	
@@ -380,7 +380,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 
 		list($journal, $submission) = SubmissionLayoutHandler::validate($articleId);
 		if (!LayoutEditorAction::viewFile($articleId, $fileId, $revision)) {
-			Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $articleId));
+			Request::redirect(null, null, 'submission', $articleId);
 		}
 	}
 
@@ -404,7 +404,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 
 		import('submission.proofreader.ProofreaderAction');
 		if (ProofreaderAction::proofreadEmail($articleId,'PROOFREAD_LAYOUT_COMPLETE', $send?'':'/layoutEditor/layoutEditorProofreadingComplete/send')) {
-			Request::redirect(sprintf('layoutEditor/submission/%d', $articleId));
+			Request::redirect(null, null, 'submission', $articleId);
 		}
 	}
 				
@@ -443,7 +443,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		}
 		
 		if (!$isValid) {
-			Request::redirect(Request::getRequestedPage());
+			Request::redirect(null, Request::getRequestedPage());
 		}
 		return array($journal, $submission);
 	}

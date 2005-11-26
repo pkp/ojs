@@ -18,7 +18,7 @@
 {assign var="pageCrumbTitle" value="submission.supplementaryFiles"}
 {include file="common/header.tpl"}
 
-<form method="post" action="{$pageUrl}/{$rolePath}/saveSuppFile/{$suppFileId}" enctype="multipart/form-data">
+<form method="post" action="{url page=$rolePath op="saveSuppFile" path=$suppFileId}" enctype="multipart/form-data">
 <input type="hidden" name="articleId" value="{$articleId}" />
 {include file="common/formErrors.tpl"}
 
@@ -110,7 +110,7 @@
 {if $suppFile}
 	<tr valign="top">
 		<td width="20%" class="label">{translate key="common.fileName"}</td>
-		<td width="80%" class="data"><a href="{$requestPageUrl}/downloadFile/{$articleId}/{$suppFile->getFileId()}">{$suppFile->getFileName()|escape}</a></td>
+		<td width="80%" class="data"><a href="{url op="downloadFile" path=$articleId|to_array:$suppFile->getFileId()}">{$suppFile->getFileName()|escape}</a></td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="common.originalFileName"}</td>

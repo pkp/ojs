@@ -42,7 +42,7 @@ function checkSubmissionChecklist() {
 {/literal}
 </script>
 
-<form name="submit" method="post" action="{$pageUrl}/author/saveSubmit/{$submitStep}" onsubmit="return checkSubmissionChecklist()">
+<form name="submit" method="post" action="{url op="saveSubmit" path=$submitStep}" onsubmit="return checkSubmissionChecklist()">
 
 {if $articleId}
 <input type="hidden" name="articleId" value="{$articleId}" />
@@ -93,7 +93,8 @@ function checkSubmissionChecklist() {
 
 <h3>{translate key="author.submit.journalSection"}</h3>
 
-<p>{translate key="author.submit.journalSectionDescription" aboutUrl=`$pageUrl`/about}</p>
+{url|assign:"url" page="about"}
+<p>{translate key="author.submit.journalSectionDescription" aboutUrl=$url}</p>
 
 
 <table class="data" width="100%">
@@ -118,7 +119,7 @@ function checkSubmissionChecklist() {
 
 <div class="separator"></div>
 
-<p><input type="submit" value="{translate key="common.saveAndContinue"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="{if $articleId}confirmAction('{$pageUrl}/author', '{translate|escape:"javascript" key="author.submit.cancelSubmission"}'){else}document.location.href='{$pageUrl}/author'{/if}" /></p>
+<p><input type="submit" value="{translate key="common.saveAndContinue"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="{if $articleId}confirmAction('{url page="author"}', '{translate|escape:"javascript" key="author.submit.cancelSubmission"}'){else}document.location.href='{url page="author"}'{/if}" /></p>
 
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 

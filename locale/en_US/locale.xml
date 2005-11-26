@@ -424,6 +424,7 @@
 	<message key="user.lastName">Last name</message>
 	<message key="user.title">Title</message>
 	<message key="user.affiliation">Affiliation</message>
+	<message key="user.affiliations">Affiliations</message>
 	<message key="user.email">Email</message>
 	<message key="user.phone">Phone</message>
 	<message key="user.fax">Fax</message>
@@ -687,7 +688,7 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="admin.journals.confirmDelete">Are you sure you want to permanently delete this journal and all of its contents?</message>
 	<message key="admin.journals.create">Create Journal</message>
 	<message key="admin.journals.createInstructions">You will automatically be enrolled as the manager of this journal. After creating a new journal, enter it as a manager to continue with its setup and user enrollment.</message>
-	<message key="admin.journals.urlWillBe"><![CDATA[The journal's URL will be {$path}/&lt;path&gt;]]></message>
+	<message key="admin.journals.urlWillBe">The journal's URL will be {$sampleUrl}</message>
 	<message key="admin.journals.form.titleRequired">A title is required.</message>
 	<message key="admin.journals.form.pathRequired">A path is required.</message>
 	<message key="admin.journals.form.pathAlphaNumeric">The path can contain only alphanumeric characters, underscores, and hyphens, and must begin and end with an alphanumeric character.</message>
@@ -708,7 +709,7 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="manager.journalManagement">Journal Management</message>
 	<message key="manager.setup">Setup</message>
 	<message key="manager.emails">Prepared Emails</message>
-	<message key="manager.statistics">Statistics</message>
+	<message key="manager.statistics">Stats &amp; Reports</message>
 	<message key="manager.readingTools">Reading Tools</message>
 	<message key="manager.people">People</message>
 	<message key="manager.filesBrowser">Files Browser</message>
@@ -719,6 +720,28 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="manager.roles">Roles</message>
 	<message key="manager.subscriptionTypes">Subscription Types</message>
 	<message key="manager.subscriptions">Subscriptions</message>
+
+	<!-- Statistics & Reports -->
+	<message key="manager.statistics.statistics">Statistics</message>
+	<message key="manager.statistics.statistics.numSubmissions">No. of submissions</message>
+	<message key="manager.statistics.statistics.numSubmissionsValue">{$numSubmissions} ({$numPublishedSubmissions} published)</message>
+	<message key="manager.statistics.statistics.numIssues">No. of issues</message>
+	<message key="manager.statistics.statistics.numIssuesValue">{$numIssues} ({$numPublishedIssues} published)</message>
+	<message key="manager.statistics.statistics.users">Users</message>
+	<message key="manager.statistics.statistics.totalUsers">Total</message>
+	<message key="manager.statistics.statistics.totalUsersValue">{$numUsers} ({$numNotifiableUsers} signed up for notifications)</message>
+
+	<message key="manager.statistics.reports">Report Generator</message>
+	<message key="manager.statistics.reports.dateFrom">From</message>
+	<message key="manager.statistics.reports.dateTo">Until</message>
+	<message key="manager.statistics.reports.includeInReportType">Include the following in</message>
+	<message key="manager.statistics.reports.type.journal">Journal Report</message>
+	<message key="manager.statistics.reports.type.editor">Editor Report</message>
+	<message key="manager.statistics.reports.type.reviewer">Reviewer Report</message>
+	<message key="manager.statistics.reports.type.section">Section Report</message>
+	<message key="manager.statistics.reports.generate">Generate Report</message>
+	<message key="manager.statistics.reports.status">Status (Accepted, declined, other)</message>
+	<message key="manager.statistics.reports.dateDecided">Date Decided</message>
 
 	<!-- Plugin Management -->
 	<message key="manager.plugins.pluginManagement">Plugin Management</message>
@@ -889,8 +912,8 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems supports the <a href="http://lockss.stanford.edu/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) system to ensure a secure and permanent archive for the journal. LOCKSS is open source software developed at Stanford University Library that enables libraries to preserve selected web journals by regularly polling registered journal websites for newly published content and archiving it. Each archive is continually validated against other library caches, and if content is found to be corrupted or lost, the other caches or the journal is used to restore it.
 <br /><br />
 Setting up LOCKSS support for Open Journal Systems does not need to take place until after publishing is fully underway, at which point follow these two steps:]]></message>
-	<message key="manager.setup.lockssRegister"><![CDATA[Identify 6-10 libraries that will register and cache the journal. For example, turn to institutions where editors or Board members work and/or institutions already participating in LOCKSS. See <a href="http://lockss.stanford.edu/about/users.htm" target="_blank">participating libraries</a>. Use the prepared invitations for (i) <a href="{$pageUrl}/manager/email?template=LOCKSS_EXISTING_ARCHIVE" target="_blank">libraries participating in LOCKSS</a> or (ii) <a href="{$pageUrl}/manager/email?template=LOCKSS_NEW_ARCHIVE" target="_blank">libraries not yet participating in LOCKSS</a>.]]></message>
-	<message key="manager.setup.lockssEnable"><![CDATA[Enable LOCKSS to store and distribute journal content at participating libraries via a LOCKSS <a href="{$pageUrl}/gateway/lockss" target="_blank">Publisher Manifest</a> page. A LOCKSS license will appear in About the Journal under Archiving:]]></message>
+	<message key="manager.setup.lockssRegister"><![CDATA[Identify 6-10 libraries that will register and cache the journal. For example, turn to institutions where editors or Board members work and/or institutions already participating in LOCKSS. See <a href="http://lockss.stanford.edu/about/users.htm" target="_blank">participating libraries</a>. Use the prepared invitations for (i) <a href="{$lockssExistingArchiveUrl}" target="_blank">libraries participating in LOCKSS</a> or (ii) <a href="{$lockssNewArchiveUrl}" target="_blank">libraries not yet participating in LOCKSS</a>.]]></message>
+	<message key="manager.setup.lockssEnable"><![CDATA[Enable LOCKSS to store and distribute journal content at participating libraries via a LOCKSS <a href="{$lockssUrl}" target="_blank">Publisher Manifest</a> page. A LOCKSS license will appear in About the Journal under Archiving:]]></message>
 	<message key="manager.setup.lockssLicenses"><![CDATA[See <a href="http://lockss.stanford.edu/publishers/publishers.htm" target="_blank">other versions of a LOCKSS license</a>.]]></message>
 	
 	<!-- Setup Step 3 -->
@@ -1891,11 +1914,11 @@ current password.<br /><br />Enter your email address below to reset your passwo
 
 	<!-- Interstitial page for PDFs -->
 	<message key="article.pdf.title">Portable Document Format (PDF)</message>
-	<message key="article.pdf.note"><![CDATA[The PDF file you selected should load here, if your Web browser has a PDF reader plug-in installed (for example, a recent version of <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>). Alternatively, the PDF file will download to your computer, where it can also be opened using a PDF reader. If you would like more information about how to print, save, and work with PDFs, Highwire Press provides a helpful <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">Frequently Asked Questions about PDFs</a>.<br /><br />If the file does not download automatically, <a href="{$pdfUrl}">click here</a>.]]></message>
+	<message key="article.pdf.note"><![CDATA[The PDF file you selected should load here, if your Web browser has a PDF reader plug-in installed (for example, a recent version of <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>). Alternatively, the PDF file will download to your computer, where it can also be opened using a PDF reader. If you would like more information about how to print, save, and work with PDFs, Highwire Press provides a helpful <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">Frequently Asked Questions about PDFs</a>.<br /><br />If the file does not download automatically, <a href="{$url}">click here</a>.]]></message>
 	
 	<!-- Interstitial page for non-PDF non-HTML galleys -->
 	<message key="article.nonpdf.title">Article Download</message>
-	<message key="article.nonpdf.note"><![CDATA[The file you selected should begin downloading automatically. If it does not, click the link below. Note that this file may require a special viewer or plugin to view.<br /><br />If the file does not download automatically, <a href="{$pdfUrl}">click here</a>.]]></message>
+	<message key="article.nonpdf.note"><![CDATA[The file you selected should begin downloading automatically. If it does not, click the link below. Note that this file may require a special viewer or plugin to view.<br /><br />If the file does not download automatically, <a href="{url}">click here</a>.]]></message>
 	
 	<!-- Site index -->
 	<message key="site.journalsHosted">Journals hosted on this site</message>
@@ -1983,7 +2006,7 @@ current password.<br /><br />Enter your email address below to reset your passwo
 
 <h4>Upgrade</h4>
 
-<p>If you are upgrading an existing installation of OJS 2.x, <a href="{$pageUrl}/install/upgrade">click here</a> to proceed.</p>
+<p>If you are upgrading an existing installation of OJS 2.x, <a href="{$upgradeUrl}">click here</a> to proceed.</p>
 
 <h4>Recommended system requirements</h4>
 
@@ -2089,7 +2112,7 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 <p>The SQL statements to create the OJS database schema and initial data are displayed below. Note that the system will be unusable until these statements have been executed manually. You will also have to manually configure the <tt>config.inc.php</tt> configuration file.</p>]]></message>
 	<message key="installer.installerSQLStatements">SQL statements for installation</message>
 	<message key="installer.installationComplete"><![CDATA[<p>Installation of OJS has completed successfully.</p>
-<p>To begin using the system, <a href="{$indexUrl}/index/login">login</a> with the username and password entered on the previous page.</p>]]></message>
+<p>To begin using the system, <a href="{$loginUrl}">login</a> with the username and password entered on the previous page.</p>]]></message>
 	<message key="installer.upgradeComplete"><![CDATA[<p>Upgrade of OJS to version {$version} has completed successfully.</p>
 <p>Don't forget to set the "installed" setting in your config.inc.php configuration file back to <i>On</i>.</p>]]></message>
 	<message key="installer.skipFilesDir">Do not create required subdirectories (only useful for a manual installation)</message>
@@ -2187,7 +2210,7 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="rt.admin.contexts.metadata">Metadata</message>
 	<message key="rt.admin.contexts.options">Options</message>
 	<message key="rt.admin.contexts.options.authorTerms">Use author names as default search terms to enable users to find other works by the authors for this item (e.g., for an "Other Works" context)</message>
-	<message key="rt.admin.contexts.options.defineTerms"><![CDATA[Use the word highlighted by the reader as default search term or be left blank if none has been selected for this item (e.g., for a "Define Terms" context). The "Define Terms" option must be enabled in the <a href="{$requestPageUrl}/settings">RST Settings</a> to allow double-clicking on words to open this context.]]></message>
+	<message key="rt.admin.contexts.options.defineTerms"><![CDATA[Use the word highlighted by the reader as default search term or be left blank if none has been selected for this item (e.g., for a "Define Terms" context). The "Define Terms" option must be enabled in the <a href="{$settingsUrl}">RST Settings</a> to allow double-clicking on words to open this context.]]></message>
 
 	<!-- RT Searches -->
 	<message key="rt.admin.searches.edit.editSearch">Edit Search</message>
@@ -2299,7 +2322,7 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="rt.thisJournal">Find items in this journal</message>
 	
 	<message key="rt.email.sent">Your message has been sent.</message>
-	<message key="rt.email.needLogin"><![CDATA[* Requires <a target="_parent" href="{$pageUrl}/user/register">registration</a>]]></message>
+	<message key="rt.email.needLogin"><![CDATA[* Requires <a target="_parent" href="{$loginUrl}">registration</a>]]></message>
 
 	<message key="rt.context.searchTerms">Search Terms</message>
 	<message key="rt.context.termToDefine">Word to define</message>
@@ -2317,6 +2340,7 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<!-- Icons: Default "alt" text -->
 	<message key="icon.view.alt">View</message>
 	<message key="icon.checked.alt">Checked</message>
+	<message key="icon.unchecked.alt">Unchecked</message>
 	<message key="icon.comment.alt">Comment</message>
 	<message key="icon.edit.alt">Edit</message>
 	<message key="icon.delete.alt">Delete</message>

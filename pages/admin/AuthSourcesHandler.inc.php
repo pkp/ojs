@@ -50,7 +50,7 @@ class AuthSourcesHandler extends AdminHandler {
 		$authDao = &DAORegistry::getDAO('AuthSourceDAO');
 		$authDao->setDefault((int) Request::getUserVar('defaultAuthId'));
 		
-		Request::redirect('admin/auth');
+		Request::redirect(null, null, 'auth');
 	}
 	
 	/**
@@ -64,9 +64,9 @@ class AuthSourcesHandler extends AdminHandler {
 		
 		$authDao = &DAORegistry::getDAO('AuthSourceDAO');
 		if ($authDao->insertSource($auth)) {
-			Request::redirect('admin/editAuthSource/' . $auth->getAuthId());
+			Request::redirect(null, null, 'editAuthSource', $auth->getAuthId());
 		} else {
-			Request::redirect('admin/auth');
+			Request::redirect(null, null, 'auth');
 		}
 	}
 	
@@ -93,7 +93,7 @@ class AuthSourcesHandler extends AdminHandler {
 		$form = &new AuthSourceSettingsForm((int)@$args[0]);
 		$form->readInputData();
 		$form->execute();
-		Request::redirect('admin/auth');
+		Request::redirect(null, null, 'auth');
 	}
 	
 	/**
@@ -105,7 +105,7 @@ class AuthSourcesHandler extends AdminHandler {
 		$authId = (int)@$args[0];
 		$authDao = &DAORegistry::getDAO('AuthSourceDAO');
 		$authDao->deleteSource($authId);
-		Request::redirect('admin/auth');
+		Request::redirect(null, null, 'auth');
 	}
 	
 }

@@ -29,7 +29,7 @@
 			<ul>
 				<li><a href="{get_help_id key="index.index" url="true"}">{translate key="help.ojsHelp"}</a></li>
 				{foreach from=$helpToc item=topic key=topicId}
-				<li>{$topic.prefix}<a href="{$pageUrl}/help/view/{$topicId}">{$topic.title}</a></li>
+				<li>{$topic.prefix}<a href="{url page="help" op="view" path=$topicId}">{$topic.title}</a></li>
 				{/foreach}
 			</ul>
 		</div>
@@ -38,7 +38,7 @@
 
 		<div>
 			<h4>{translate key="help.search"}</h4>
-			<form action="{$pageUrl}/help/search" method="post" style="display: inline">
+			<form action="{url op="search"}" method="post" style="display: inline">
 			{translate key="help.searchFor"}&nbsp;&nbsp;<input type="text" name="keyword" size="30" maxlength="60" value="{$helpSearchKeyword|escape}" class="textField" />
 			<input type="submit" value="{translate key="common.search"}" class="button" />
 			</form>

@@ -17,19 +17,18 @@
 {foreach from=$publishedArticles item=article}
 	{assign var=issueId value=$article->getIssueId()}
 	{assign var=issue value=$issues[$issueId]}
-	{assign var=bestIssueId value=$issue->getBestIssueId()|escape:"url"}
 	{assign var=issueUnavailable value=$issuesUnavailable.$issueId}
 	{assign var=sectionId value=$article->getSectionId()}
 	{assign var=section value=$sections[$sectionId]}
 	{if $issue->getPublished()}
 	<li>
 
-		<i><a href="{$pageUrl}/issue/view/{$bestIssueId}">{$issue->getIssueIdentification()|escape}</a> - {$section->getSectionTitle()|escape}</i><br />
+		<i><a href="{url page="issue" op="view" path=$issue->getBestIssueId()}">{$issue->getIssueIdentification()|escape}</a> - {$section->getSectionTitle()|escape}</i><br />
 		{$article->getArticleTitle()|strip_unsafe_html}<br/>
-		<a href="{$pageUrl}/article/view/{$article->getBestArticleId()|escape:"url"}" class="file">{if $section->getAbstractsDisabled()}{translate key="article.details"}{else}{translate key="article.abstract"}{/if}</a>
+		<a href="{url page="article" op="view" path=$article->getBestArticleId()}" class="file">{if $section->getAbstractsDisabled()}{translate key="article.details"}{else}{translate key="article.abstract"}{/if}</a>
 		{if (!$issueUnavailable || $article->getAccessStatus())}
 		{foreach from=$article->getGalleys() item=galley name=galleyList}
-			&nbsp;<a href="{$pageUrl}/article/view/{$article->getBestArticleId()|escape:"url"}/{$galley->getGalleyId()}" class="file">{$galley->getLabel()|escape}</a>
+			&nbsp;<a href="{url page="article" op="view" path=$article->getBestArticleId()|to_array:$galley->getGalleyId()}" class="file">{$galley->getLabel()|escape}</a>
 		{/foreach}
 		{/if}
 	</li>

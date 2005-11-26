@@ -27,7 +27,7 @@ function submitForm(key) {
 <br/>
 
 {if $locales}
-<form action="{$pageUrl}/manager/selectTemplate" method="post">
+<form action="{url op="selectTemplate"}" method="post">
 	{foreach from=$persistAttachments item=temporaryFile}
 		<input type="hidden" name="persistAttachments[]" value="{$temporaryFile}" />
 	{/foreach}
@@ -58,7 +58,7 @@ function submitForm(key) {
 	<td width="15%" align="right">{translate key="common.action"}</td>
 </tr>
 <tr><td colspan="5" class="headseparator">&nbsp;</td></tr>
-<form action="{$pageUrl}/manager/email" name="submit" method="post">
+<form action="{url op="email"}" name="submit" method="post">
 <input type="hidden" name="usePostedAddresses" value="1"/>
 <input type="hidden" name="template" value=""/>
 <input type="hidden" name="locale" value="{$locale|escape}"/>
@@ -88,6 +88,6 @@ function submitForm(key) {
 {/foreach}
 </form>
 </table>
-<a href="{$pageUrl}/manager/resetAllEmails" onclick="return confirm('{translate|escape:"javascript" key="manager.emails.confirmResetAll"}')" class="action" onclick=>{translate key="manager.emails.resetAll"}</a>
+<a href="{url op="resetAllEmails"}" onclick="return confirm('{translate|escape:"javascript" key="manager.emails.confirmResetAll"}')" class="action" onclick=>{translate key="manager.emails.resetAll"}</a>
 
 {include file="common/footer.tpl"}

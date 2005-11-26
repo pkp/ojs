@@ -50,10 +50,9 @@ class ManagerHandler extends Handler {
 	function setupTemplate($subclass = false) {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('pageHierarchy',
-			$subclass ? array(array('user', 'navigation.user'), array('manager', 'manager.journalManagement'))
-				: array(array('user', 'navigation.user'))
+			$subclass ? array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, 'manager'), 'manager.journalManagement'))
+				: array(array(Request::url(null, 'user'), 'navigation.user'))
 		);
-		$templateMgr->assign('pagePath', '/user/manager');
 	}
 	
 	
@@ -435,6 +434,15 @@ class ManagerHandler extends Handler {
 	function moveMembership($args) {
 		import('pages.manager.GroupHandler');
 		GroupHandler::moveMembership($args);
+	}
+
+	//
+	// Statistics Functions
+	//
+
+	function statistics($args) {
+		import('pages.manager.StatisticsHandler');
+		StatisticsHandler::statistics($args);
 	}
 }
 

@@ -22,7 +22,7 @@
 
 <tr valign="top">
 	<td class="label">{translate key="common.fileName"}</td>
-	<td class="value"><a class="action" href="{$requestPageUrl}/downloadFile/{$articleId}/{$galley->getFileId()}">{$galley->getFileName()|escape}</a></td>
+	<td class="value"><a class="action" href="{url op="downloadFile" path=$articleId|to_array:$galley->getFileId()}">{$galley->getFileName()|escape}</a></td>
 </tr>
 <tr valign="top">
 	<td class="label">{translate key="common.fileType"}</td>
@@ -46,7 +46,7 @@
 {if $styleFile}
 	<tr valign="top>
 		<td class="label">{translate key="common.fileName"}</td>
-		<td class="value"><a href="{$requestPageUrl}/downloadFile/{$articleId}/{$styleFile->getFileId()}" class="action">{$styleFile->getFileName()|escape}</a></td>
+		<td class="value"><a href="{url op="downloadFile" path=$articleId|to_array:$styleFile->getFileId()}" class="action">{$styleFile->getFileName()|escape}</a></td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="common.fileSize"}</td>
@@ -76,7 +76,7 @@
 <tr><td colspan="4" class="headseparator">&nbsp;</td></tr>
 {foreach name="images" from=$galley->getImageFiles() item=imageFile}
 <tr valign="top">
-	<td><a class="action" href="{$requestPageUrl}/downloadFile/{$articleId}/{$imageFile->getFileId()}">{$imageFile->getFileName()|escape}</a></td>
+	<td><a class="action" href="{url op="downloadFile" path=$articleId|to_array:$imageFile->getFileId()}">{$imageFile->getFileName()|escape}</a></td>
 	<td>{$imageFile->getOriginalFileName()|escape}</td>
 	<td>{$imageFile->getNiceFileSize()}</td>
 	<td>{$imageFile->getDateUploaded()|date_format:$dateFormatShort}</td>

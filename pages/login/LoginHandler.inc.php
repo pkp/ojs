@@ -22,7 +22,7 @@ class LoginHandler extends Handler {
 	function index() {
 		parent::validate();
 		if (Validation::isLoggedIn()) {
-			Request::redirect('user');
+			Request::redirect(null, 'user');
 		}
 		
 		if (Config::getVar('security', 'force_login_ssl') && Request::getProtocol() != 'https') {
@@ -47,7 +47,7 @@ class LoginHandler extends Handler {
 	function signIn() {
 		parent::validate();
 		if (Validation::isLoggedIn()) {
-			Request::redirect('user');
+			Request::redirect(null, 'user');
 		}
 		
 		if (Config::getVar('security', 'force_login_ssl') && Request::getProtocol() != 'https') {
@@ -64,14 +64,14 @@ class LoginHandler extends Handler {
 			} else if ($user->getMustChangePassword()) {
 				// User must change their password in order to log in
 				Validation::logout();
- 				Request::redirect('login/changePassword/' . $user->getUsername());
+ 				Request::redirect(null, null, 'changePassword', $user->getUsername());
 				
 			} else {
 				$source = Request::getUserVar('source');
 				if (isset($source) && !empty($source)) {
-					Request::redirect(Request::getProtocol() . '://' . Request::getServerHost() . $source, false);
+					Request::redirectUrl(Request::getProtocol() . '://' . Request::getServerHost() . $source, false);
 				} else {
-	 				Request::redirect('user');
+	 				Request::redirect(null, 'user');
 	 			}
 			}
 			
@@ -99,7 +99,7 @@ class LoginHandler extends Handler {
 			Validation::logout();
 		}
 		
-		Request::redirect('login');
+		Request::redirect(null, Request::getRequestedPage());
 	}
 	
 	/**
@@ -134,15 +134,14 @@ class LoginHandler extends Handler {
 			$mail = &new MailTemplate('PASSWORD_RESET_CONFIRM');
 			$mail->setFrom($site->getContactEmail(), $site->getContactName());
 			$mail->assignParams(array(
-				'url' => sprintf('%s/login/resetPassword/%s?confirm=%s',
-					Request::getPageUrl(), $user->getUsername(), $hash),
+				'url' => Request::url(null, 'login', 'resetPassword', $user->getUsername(), array('confirm' => $hash)),
 				'siteTitle' => $site->getTitle()
 			));
 			$mail->addRecipient($user->getEmail(), $user->getFullName());
 			$mail->send();
 			$templateMgr->assign('pageTitle',  'user.login.resetPassword');
 			$templateMgr->assign('message', 'user.login.lostPassword.confirmationSent');
-			$templateMgr->assign('backLink', Request::getPageUrl() . '/login');
+			$templateMgr->assign('backLink', Request::url(null, Request::getRequestedPage()));
 			$templateMgr->assign('backLinkLabel',  'user.login');
 			$templateMgr->display('common/message.tpl');
 		}
@@ -160,7 +159,7 @@ class LoginHandler extends Handler {
 		$confirmHash = Request::getUserVar('confirm');
 		
 		if ($username == null || ($user = &$userDao->getUserByUsername($username)) == null) {
-			Request::redirect('login/lostPassword');
+			Request::redirect(null, null, 'lostPassword');
 			return;
 		}
 		
@@ -169,7 +168,7 @@ class LoginHandler extends Handler {
 		$hash = Validation::generatePasswordResetHash($user->getUserId());
 		if ($hash == false || $confirmHash != $hash) {
 			$templateMgr->assign('errorMsg', 'user.login.lostPassword.invalidHash');
-			$templateMgr->assign('backLink', Request::getPageUrl() . '/login/lostPassword');
+			$templateMgr->assign('backLink', Request::url(null, null, 'lostPassword'));
 			$templateMgr->assign('backLinkLabel',  'user.login.resetPassword');
 			$templateMgr->display('common/error.tpl');
 		
@@ -206,7 +205,7 @@ class LoginHandler extends Handler {
 			$mail->send();
 			$templateMgr->assign('pageTitle',  'user.login.resetPassword');
 			$templateMgr->assign('message', 'user.login.lostPassword.passwordSent');
-			$templateMgr->assign('backLink', Request::getPageUrl() . '/login');
+			$templateMgr->assign('backLink', Request::url(null, Request::getRequestedPage()));
 			$templateMgr->assign('backLinkLabel',  'user.login');
 			$templateMgr->display('common/message.tpl');
 		}
@@ -244,7 +243,7 @@ class LoginHandler extends Handler {
 			if ($passwordForm->execute()) {
 				$user = Validation::login($passwordForm->getData('username'), $passwordForm->getData('password'), $reason);
 			}
-			Request::redirect('user');
+			Request::redirect(null, 'user');
 			
 		} else {
 			$passwordForm->display();

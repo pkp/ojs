@@ -31,7 +31,7 @@ class EmailHandler extends UserHandler {
 		
 		if (Request::getUserVar('send') && !$email->hasErrors()) {
 			$email->send();
-			Request::redirect(Request::getUserVar('redirectUrl'));
+			Request::redirectUrl(Request::getUserVar('redirectUrl'));
 		} else {
 			if (!Request::getUserVar('continued')) {
 				// Check for special cases.
@@ -51,7 +51,7 @@ class EmailHandler extends UserHandler {
 					}
 				}
 			}
-			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/email', array('redirectUrl' => Request::getUserVar('redirectUrl')));
+			$email->displayEditForm(Request::url(null, null, 'email'), array('redirectUrl' => Request::getUserVar('redirectUrl')));
 		}
 	}
 }

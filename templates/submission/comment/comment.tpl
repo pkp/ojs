@@ -21,7 +21,7 @@
 	</td>
 	<td width="75%">
 		{if $comment->getAuthorId() eq $userId and not $isLocked}
-			<div style="float: right"><a href="{$requestPageUrl}/editComment/{$articleId}/{$comment->getCommentId()}" class="action">{translate key="common.edit"}</a> <a href="{$requestPageUrl}/deleteComment/{$articleId}/{$comment->getCommentId()}" onclick="return confirm('{translate|escape:"javascript" key="submission.comments.confirmDelete"}')" class="action">{translate key="common.delete"}</a></div>
+			<div style="float: right"><a href="{url op="editComment" path=$articleId|to_array:$comment->getCommentId()}" class="action">{translate key="common.edit"}</a> <a href="{url op="deleteComment" path=$articleId|to_array:$comment->getCommentId()}" onclick="return confirm('{translate|escape:"javascript" key="submission.comments.confirmDelete"}')" class="action">{translate key="common.delete"}</a></div>
 		{/if}
 		<a name="{$comment->getCommentId()}"></a>
 		{if $comment->getCommentTitle() neq ""}
@@ -41,7 +41,7 @@
 <br />
 
 {if not $isLocked}
-<form method="post" action="{$requestPageUrl}/{$commentAction}">
+<form method="post" action="{url op=$commentAction}">
 {if $hiddenFormParams}
 	{foreach from=$hiddenFormParams item=hiddenFormParam key=key}
 		<input type="hidden" name="{$key}" value="{$hiddenFormParam}" />

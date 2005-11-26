@@ -19,13 +19,13 @@
 
 <h3>{translate key="rt.admin.configuration"}</h3>
 <ul class="plain">
-	<li>&#187; <a href="{$pageUrl}/rtadmin/settings">{translate key="rt.admin.settings"}</a></li>
-	<li>&#187; <a href="{$pageUrl}/rtadmin/versions">{translate key="rt.versions"}</a></li>
+	<li>&#187; <a href="{url op="settings"}">{translate key="rt.admin.settings"}</a></li>
+	<li>&#187; <a href="{url op="versions"}">{translate key="rt.versions"}</a></li>
 </ul>
 
 <h3>{translate key="rt.admin.management"}</h3>
 <ul class="plain">
-	<li>&#187; <a href="{$pageUrl}/rtadmin/validateUrls">{translate key="rt.admin.validateUrls"}</a></li>
+	<li>&#187; <a href="{url op="validateUrls"}">{translate key="rt.admin.validateUrls"}</a></li>
 </ul>
 
 {include file="common/footer.tpl"}

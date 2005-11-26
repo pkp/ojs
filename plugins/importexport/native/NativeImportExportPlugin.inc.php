@@ -61,7 +61,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 				$issues = array();
 				foreach ($issueIds as $issueId) {
 					$issue = &$issueDao->getIssueById($issueId);
-					if (!$issue) Request::redirect($this->getPluginUrl());
+					if (!$issue) Request::redirect();
 					$issues[] = &$issue;
 				}
 				$this->exportIssues($journal, $issues);
@@ -69,7 +69,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 			case 'exportIssue':
 				$issueId = array_shift($args);
 				$issue = &$issueDao->getIssueById($issueId);
-				if (!$issue) Request::redirect($this->getPluginUrl());
+				if (!$issue) Request::redirect();
 				$this->exportIssue($journal, $issue);
 				break;
 			case 'exportArticle':

@@ -17,7 +17,7 @@
 {assign var="dateTo" value="--"}
 {/if}
 
-<form name="submit" action="{$requestPageUrl}/index/{$pageToDisplay}">
+<form method="post" name="submit" action="{url op="index" path=$pageToDisplay}">
 	<select name="searchField" size="1" class="selectMenu">
 		{html_options_translate options=$fieldOptions selected=$searchField}
 	</select>
@@ -58,7 +58,7 @@
 		<td>{$submission->getDateNotified()|date_format:$dateFormatTrunc}</td>
 		<td>{$submission->getSectionAbbrev()|escape}</td>
 		<td>{$submission->getAuthorString(true)|truncate:40:"..."|escape}</td>
-		<td><a href="{$requestPageUrl}/submission/{$articleId}" class="action">{$submission->getArticleTitle()|strip_unsafe_html|truncate:60:"..."}</a></td>
+		<td><a href="{url op="submission" path=$articleId}" class="action">{$submission->getArticleTitle()|strip_unsafe_html|truncate:60:"..."}</a></td>
 		<td>{$submission->getDateFinalCompleted()|date_format:$dateFormatTrunc}</td>
 		<td align="right">
 			{assign var="status" value=$submission->getStatus()}

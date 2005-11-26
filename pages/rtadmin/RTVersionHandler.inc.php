@@ -29,7 +29,7 @@ class RTVersionHandler extends RTAdminHandler {
 		if (isset($args[0]) && $args[0]=='save') {
 			$versionForm->readInputData();
 			$versionForm->execute();
-			Request::redirect('rtadmin/versions');
+			Request::redirect(null, null, 'versions');
 		} else {
 			RTAdminHandler::setupTemplate(true);
 			$versionForm->display();
@@ -51,7 +51,7 @@ class RTVersionHandler extends RTAdminHandler {
 
 			$templateMgr->display('rtadmin/exportXml.tpl', 'application/xml');
 		}
-		else Request::redirect('rtadmin/versions');
+		else Request::redirect(null, null, 'versions');
 	}
 
 	function importVersion() {
@@ -62,7 +62,7 @@ class RTVersionHandler extends RTAdminHandler {
 			$rtAdmin = &new JournalRTAdmin($journal->getJournalId());
 			$rtAdmin->importVersion($_FILES[$fileField]['tmp_name']);
 		}
-		Request::redirect('rtadmin/versions');
+		Request::redirect(null, null, 'versions');
 	}
 
 	function restoreVersions() {
@@ -82,7 +82,7 @@ class RTVersionHandler extends RTAdminHandler {
 			$rtDao->updateJournalRT($journalRt);
 		}
 
-		Request::redirect('rtadmin/versions');
+		Request::redirect(null, null, 'versions');
 	}
 
 	function versions() {
@@ -116,7 +116,7 @@ class RTVersionHandler extends RTAdminHandler {
 			$versionForm->initData();
 			$versionForm->display();
 		}
-		else Request::redirect('rtadmin/versions');
+		else Request::redirect(null, null, 'versions');
 	}
 
 	function deleteVersion($args) {
@@ -129,7 +129,7 @@ class RTVersionHandler extends RTAdminHandler {
 
 		$rtDao->deleteVersion($versionId, $journal->getJournalId());
 
-		Request::redirect('rtadmin/versions');
+		Request::redirect(null, null, 'versions');
 	}
 
 	function saveVersion($args) {
@@ -148,7 +148,7 @@ class RTVersionHandler extends RTAdminHandler {
 			$versionForm->execute();
 		}
 
-		Request::redirect('rtadmin/versions');
+		Request::redirect(null, null, 'versions');
 	}
 }
 

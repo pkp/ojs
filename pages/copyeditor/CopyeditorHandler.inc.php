@@ -106,9 +106,8 @@ class CopyeditorHandler extends Handler {
 	 */
 	function setupTemplate($subclass = false, $articleId = 0, $parentPage = null, $showSidebar = true) {
 		$templateMgr = &TemplateManager::getManager();
-		$pageHierarchy = $subclass ? array(array('user', 'navigation.user'), array('copyeditor', 'user.role.copyeditor'))
+		$pageHierarchy = $subclass ? array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, 'copyeditor'), 'user.role.copyeditor'))
 				: array(array('user', 'navigation.user'), array('copyeditor', 'user.role.copyeditor'));
-		$templateMgr->assign('pagePath', '/user/copyeditor');
 
 		import('submission.sectionEditor.SectionEditorAction');
 		$submissionCrumb = SectionEditorAction::submissionBreadcrumb($articleId, $parentPage, 'copyeditor');
@@ -135,7 +134,7 @@ class CopyeditorHandler extends Handler {
 	function instructions($args) {
 		import('submission.proofreader.ProofreaderAction');
 		if (!isset($args[0]) || !ProofreaderAction::instructions($args[0], array('copy'))) {
-			Request::redirect(Request::getRequestedPage());
+			Request::redirect(null, Request::getRequestedPage());
 		}
 	}
 	

@@ -14,7 +14,7 @@
 </div>
 
 <div class="block">
-	<a href="javascript:openHelp('{if $helpTopicId}{get_help_id key="$helpTopicId" url="true"}{else}{$pageUrl}/help{/if}')">{translate key="navigation.journalHelp"}</a>
+	<a href="javascript:openHelp('{if $helpTopicId}{get_help_id key="$helpTopicId" url="true"}{else}{url page="help"}{/if}')">{translate key="navigation.journalHelp"}</a>
 </div>
 	
 <div class="block">
@@ -25,16 +25,16 @@
 	
 	<ul>
 		{if $hasOtherJournals}
-		<li><a href="{$indexUrl}/index/user">{translate key="navigation.myJournals"}</a></li>
+		<li><a href="{url journal="index" page="user"}">{translate key="navigation.myJournals"}</a></li>
 		{/if}
-		<li><a href="{$pageUrl}/user/profile">{translate key="navigation.myProfile"}</a></li>
-		<li><a href="{$pageUrl}/login/signOut">{translate key="navigation.logout"}</a></li>
+		<li><a href="{url page="user" op="profile"}">{translate key="navigation.myProfile"}</a></li>
+		<li><a href="{url page="login" op="signOut"}">{translate key="navigation.logout"}</a></li>
 	{if $userSession->getSessionVar('signedInAs')}
-		<li><a href="{$pageUrl}/manager/signOutAsUser">{translate key="manager.people.signOutAsUser"}</a></li>
+		<li><a href="{url page="manager" op="signOutAsUser"}">{translate key="manager.people.signOutAsUser"}</a></li>
 	{/if}
 	</ul>
 	{else}
-	<form method="post" action="{$pageUrl}/login/signIn">
+	<form method="post" action="{url page="login" op="signIn"}">
 	<table>
 	<tr>
 		<td><label for="sidebar-username">{translate key="user.username"}</label></td>
@@ -63,7 +63,7 @@
 <div class="block">
 	<span class="blockTitle">{translate key="common.language"}</span>
 	<form action="#">
-		<select size="1" onchange="location.href={if $languageToggleNoUser}'{$currentUrl}{if strstr($currentUrl, '?')}&{else}?{/if}setLocale='+this.options[this.selectedIndex].value{else}'{$pageUrl}/user/setLocale/'+this.options[this.selectedIndex].value+'?source={$smarty.server.REQUEST_URI|escape:"javascript"}'{/if}" class="selectMenu">{html_options options=$languageToggleLocales selected=$currentLocale}</select>
+		<select size="1" name="locale" onchange="location.href={if $languageToggleNoUser}'{$currentUrl}{if strstr($currentUrl, '?')}&{else}?{/if}setLocale='+this.options[this.selectedIndex].value{else}('{url page="user" op="setLocale" path="NEW_LOCALE" source=$smarty.server.REQUEST_URI}'.replace('NEW_LOCALE', this.options[this.selectedIndex].value)){/if}" class="selectMenu">{html_options options=$languageToggleLocales selected=$currentLocale}</select>
 	</form>
 </div>
 {/if}
@@ -72,7 +72,7 @@
 	<span class="blockTitle">{translate key="navigation.journalContent"}</span>
 	
 	<span class="blockSubtitle">{translate key="navigation.search"}</span>
-	<form method="get" action="{$pageUrl}/search/results">
+	<form method="post" action="{url page="search" op="results"}">
 	<table>
 	<tr>
 		<td><input type="text" id="query" name="query" size="15" maxlength="255" value="" class="textField" /></td>
@@ -93,11 +93,11 @@
 	{if $currentJournal}
 	<span class="blockSubtitle">{translate key="navigation.browse"}</span>
 	<ul>
-		<li><a href="{$pageUrl}/issue/archive">{translate key="navigation.browseByIssue"}</a></li>
-		<li><a href="{$pageUrl}/search/authors">{translate key="navigation.browseByAuthor"}</a></li>
-		<li><a href="{$pageUrl}/search/titles">{translate key="navigation.browseByTitle"}</a></li>
+		<li><a href="{url page="issue" op="archive"}">{translate key="navigation.browseByIssue"}</a></li>
+		<li><a href="{url page="search" op="authors"}">{translate key="navigation.browseByAuthor"}</a></li>
+		<li><a href="{url page="search" op="titles"}">{translate key="navigation.browseByTitle"}</a></li>
 		{if $hasOtherJournals}
-		<li><a href="{$indexUrl}">{translate key="navigation.otherJournals"}</a></li>
+		<li><a href="{url journal="index"}">{translate key="navigation.otherJournals"}</a></li>
 		{/if}
 	</ul>
 	{/if}
@@ -107,9 +107,9 @@
 <div class="block">
 	<span class="blockTitle">{translate key="navigation.info"}</span>
 	<ul>
-		<li><a href="{$pageUrl}/information/readers">{translate key="navigation.infoForReaders"}</a></li>
-		<li><a href="{$pageUrl}/information/authors">{translate key="navigation.infoForAuthors"}</a></li>
-		<li><a href="{$pageUrl}/information/librarians">{translate key="navigation.infoForLibrarians"}</a></li>		
+		<li><a href="{url page="information" op="readers"}">{translate key="navigation.infoForReaders"}</a></li>
+		<li><a href="{url page="information" op="authors"}">{translate key="navigation.infoForAuthors"}</a></li>
+		<li><a href="{url page="information" op="librarians"}">{translate key="navigation.infoForLibrarians"}</a></li>		
 	</ul>
 </div>
 {/if}

@@ -297,7 +297,7 @@ class Installer {
 		$result = true;
 		HookRegistry::call('Installer::updateVersion', array(&$this, &$result));
 
-		return true;
+		return $result;
 	}
 	
 	

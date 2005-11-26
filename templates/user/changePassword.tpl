@@ -10,10 +10,10 @@
  *}
 
 {assign var="pageTitle" value="user.changePassword"}
-{assign var="currentUrl" value="$pageUrl/user/changePassword"}
+{url|assign:"currentUrl" page="user" op="changePassword"}
 {include file="common/header.tpl"}
 
-<form method="post" action="{$pageUrl}/user/savePassword">
+<form method="post" action="{url op="savePassword"}">
 
 {include file="common/formErrors.tpl"}
 
@@ -38,7 +38,7 @@
 </tr>
 </table>
 
-<p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{$pageUrl}/user'" /></p>
+<p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url page="user"}'" /></p>
 </form>
 
 {include file="common/footer.tpl"}

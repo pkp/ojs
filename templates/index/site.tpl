@@ -25,7 +25,7 @@
 <p>{$journal->getDescription()|nl2br}</p>
 {/if}
 
-<p><a href="{$indexUrl}/{$journal->getPath()}" class="action">{translate key="site.journalView"}</a> | <a href="{$indexUrl}/{$journal->getPath()}/issue/current" class="action">{translate key="site.journalCurrent"}</a> | <a href="{$indexUrl}/{$journal->getPath()}/user/register" class="action">{translate key="site.journalRegister"}</a></p>
+<p><a href="{url journal=$journal->getPath()}" class="action">{translate key="site.journalView"}</a> | <a href="{url journal=$journal->getPath() page="issue" op="current"}" class="action">{translate key="site.journalCurrent"}</a> | <a href="{url journal=$journal->getPath() page="user" op="register"}" class="action">{translate key="site.journalRegister"}</a></p>
 {/iterate}
 
 {include file="common/footer.tpl"}

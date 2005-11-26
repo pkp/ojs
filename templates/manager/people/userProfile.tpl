@@ -16,7 +16,7 @@
 
 <h4>{translate key="user.profile"}</h4>
 
-<p><a href="{$pageUrl}/manager/editUser/{$user->getUserId()}" class="action">{translate key="manager.people.editProfile"}</a></p>
+<p><a href="{url op="editUser" path=$user->getUserId()}" class="action">{translate key="manager.people.editProfile"}</a></p>
 
 <table width="100%" class="data">
 	<tr valign="top">
@@ -48,9 +48,8 @@
 		<td class="value">
 			{$user->getEmail()|escape} 
 			{assign var=emailString value="`$user->getFullName()` <`$user->getEmail()`>"}
-			{assign var=emailStringEscaped value=$emailString|escape:"url"}
-			{assign var=urlEscaped value=$currentUrl|escape:"url"}
-			{icon name="mail" url="`$pageUrl`/user/email?to[]=$emailStringEscaped&amp;redirectUrl=$urlEscaped"}
+			{url|assign:"url" to=$emailString|to_array redirectUrl=$currentUrl}
+			{icon name="mail" url=$url}
 		</td>
 	</tr>
 	<tr valign="top">
@@ -98,7 +97,7 @@
 
 <ul>
 {section name=role loop=$userRoles}
-	<li>{translate key=$userRoles[role]->getRoleName()} <a href="{$pageUrl}/manager/unEnroll/{$userRoles[role]->getRoleId()}?userId={$user->getUserId()}" onclick="return confirm('{translate|escape:"javascript" key="manager.people.confirmUnenroll"}')" class="action">{translate key="manager.people.unenroll"}</a></li>
+	<li>{translate key=$userRoles[role]->getRoleName()} <a href="{url op="unEnroll" path=$userRoles[role]->getRoleId() userId=$user->getUserId()}" onclick="return confirm('{translate|escape:"javascript" key="manager.people.confirmUnenroll"}')" class="action">{translate key="manager.people.unenroll"}</a></li>
 {/section}
 </ul>
 

@@ -25,7 +25,7 @@ class FilesHandler extends ManagerHandler {
 		import('file.FileManager');
 		
 		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign('pageHierarchy', array(array('manager', 'manager.journalManagement')));
+		$templateMgr->assign('pageHierarchy', array(array(Request::url(null, 'manager'), 'manager.journalManagement')));
 
 		FilesHandler::parseDirArg($args, $currentDir, $parentDir);
 		$currentPath = FilesHandler::getRealFilesDir($currentDir);
@@ -82,7 +82,7 @@ class FilesHandler extends ManagerHandler {
 			@$fileMgr->uploadFile('file', $destPath);
 		}
 		
-		Request::redirect('manager/files/' . $currentDir);
+		Request::redirect(null, null, 'files', explode('/', $currentDir));
 		
 	}
 	
@@ -103,7 +103,7 @@ class FilesHandler extends ManagerHandler {
 			@$fileMgr->mkdir($newDir);
 		}
 		
-		Request::redirect('manager/files/' . $currentDir);
+		Request::redirect(null, null, 'files', explode('/', $currentDir));
 	}
 	
 	function fileDelete($args) {
@@ -122,7 +122,7 @@ class FilesHandler extends ManagerHandler {
 			@$fileMgr->rmdir($currentPath);
 		}
 		
-		Request::redirect('manager/files/' . $parentDir);
+		Request::redirect(null, null, 'files', explode('/', $parentDir));
 	}
 	
 	

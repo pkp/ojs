@@ -25,7 +25,7 @@ function deleteAttachment(fileId) {
 </script>
 
 <br/>
-<form method="post" name="emailForm" action="{$requestPageUrl}/email"{if $attachmentsEnabled} enctype="multipart/form-data"{/if}>
+<form method="post" name="emailForm" action="{url op="email"}"{if $attachmentsEnabled} enctype="multipart/form-data"{/if}>
 {if $attachmentsEnabled}
 	<input type="hidden" name="deleteAttachment" value="">
 	{foreach from=$persistAttachments item=temporaryFile}

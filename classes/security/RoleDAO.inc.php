@@ -442,6 +442,45 @@ class RoleDAO extends DAO {
 				return null;
 		}
 	}
+
+	/**
+	 * Get statistics about users in the system.
+	 * Returns a map of name => value pairs.
+	 * @param $journalId int The journal to fetch statistics for
+	 * @return array
+	 */
+	function getUserStatistics($journalId) {
+		// Get count of total users for this journal
+		$result = &$this->retrieve(
+			'SELECT COUNT(DISTINCT r.user_id) FROM roles r WHERE r.journal_id = ?',
+			$journalId
+		);
+
+		$returner = array(
+			'totalUsersCount' => $result->fields[0]
+		);
+
+		$result->Close();
+		unset($result);
+
+		// Get user counts for each role.
+		$result = &$this->retrieve(
+			'SELECT r.role_id, COUNT(r.user_id) AS role_count FROM roles r WHERE r.journal_id = ? GROUP BY r.role_id',
+			$journalId
+		);
+
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+			$returner[$this->getRolePath($row['role_id'])] = $row['role_count'];
+			$result->moveNext();
+		}
+
+		$result->Close();
+		unset($result);
+
+		return $returner;
+	}
+
 }
 
 ?>

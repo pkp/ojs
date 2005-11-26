@@ -15,7 +15,7 @@
 <h3>{translate key="manager.files.indexOfDir" dir=$displayDir|escape}</h3>
 
 {if $currentDir}
-<p><a href="{$pageUrl}/manager/files/{$parentDir}" class="action">&lt; {translate key="manager.files.parentDir"}</a></p>
+<p><a href="{url op="files" path=$parentDir|explode:"/"}" class="action">&lt; {translate key="manager.files.parentDir"}</a></p>
 {/if}
 
 <table width="100%" class="listing">
@@ -42,15 +42,15 @@
 	{assign var=filePath value=$filePath|escape}
 	<tr valign="top">
 		<td>{if $file.isDir}{icon name="folder"}{else}{icon name="letter"}{/if}</td>
-		<td><a href="{$pageUrl}/manager/files/{$filePath}">{$file.name}</a></td>
+		<td><a href="{url op="files" path=$filePath|explode:"/"}">{$file.name}</a></td>
 		<td>{$file.mimetype|escape|default:"&mdash;"}</td>
 		<td>{$file.mtime|escape|date_format:$datetimeFormatShort}</td>
 		<td>{$file.size|escape|default:"&mdash;"}</td>
 		<td align="right" class="nowrap">
 			{if !$file.isDir}
-				<a href="{$pageUrl}/manager/files/{$filePath}?download=1" class="action">{translate key="common.download"}</a>&nbsp;|
+				<a href="{url op="files" path=$filePath|explode:"/" download=1}" class="action">{translate key="common.download"}</a>&nbsp;|
 			{/if}
-			<a href="{$pageUrl}/manager/fileDelete/{$filePath}" onclick="return confirm('{translate|escape:"javascript" key="manager.files.confirmDelete"}')" class="action">{translate key="common.delete"}</a>
+			<a href="{url op="fileDelete" path=$filePath|explode:"/"}" onclick="return confirm('{translate|escape:"javascript" key="manager.files.confirmDelete"}')" class="action">{translate key="common.delete"}</a>
 		</td>
 	</tr>
 	<tr>
@@ -66,12 +66,12 @@
 {/foreach}
 </table>
 
-<form method="post" action="{$pageUrl}/manager/fileUpload/{$currentDir|escape:"url"}" enctype="multipart/form-data">
+<form method="post" action="{url op="fileUpload" path=$currentDir|explode:"/"}" enctype="multipart/form-data">
 	<input type="file" size="20" name="file" class="uploadField" />
 	<input type="submit" value="{translate key="manager.files.uploadFile"}" class="button" />
 </form>
 
-<form method="post" action="{$pageUrl}/manager/fileMakeDir/{$currentDir|escape:"url"}" enctype="multipart/form-data">
+<form method="post" action="{url op="fileMakeDir" path=$currentDirexplode:"/"}" enctype="multipart/form-data">
 	<input type="text" size="20" maxlength="255" name="dirName" class="textField" />
 	<input type="submit" value="{translate key="manager.files.createDir"}" class="button" />
 </form>

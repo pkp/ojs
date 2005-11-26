@@ -24,10 +24,10 @@
 	<link rel="stylesheet" href="{$publicFilesDir}/{$pageStyleSheet.uploadName}" type="text/css" />
 	{/if}
 	{if $galley->getStyleFileId()}
-	<link rel="stylesheet" href="{$requestPageUrl}/viewFile/{$galley->getArticleId()}/{$galley->getGalleyId()}/{$galley->getStyleFileId()}" type="text/css" />
+	<link rel="stylesheet" href="{url op="viewFile" path=$galley->getArticleId()|to_array:$galley->getGalleyId():$galley->getStyleFileId()}" type="text/css" />
 	{/if}
 </head>
 <body>
-	{$galley->getHTMLContents("$requestPageUrl/viewFile")}
+	{$galley->getHTMLContents()}
 </body>
 </html>

@@ -17,15 +17,15 @@
 {include file="common/header.tpl"}
 
 <ul class="plain">
-	{if !empty($journalSettings.focusScopeDesc)}<li>&#187; <a href="{$pageUrl}/about/editorialPolicies#focusAndScope">{translate key="about.focusAndScope"}</a></li>{/if}
-	<li>&#187; <a href="{$pageUrl}/about/editorialPolicies#sectionPolicies">{translate key="about.sectionPolicies"}</a></li>
-	{if !empty($journalSettings.reviewPolicy)}<li>&#187; <a href="{$pageUrl}/about/editorialPolicies#peerReviewProcess">{translate key="about.peerReviewProcess"}</a></li>{/if}
-	{if !empty($journalSettings.pubFreqPolicy)}<li>&#187; <a href="{$pageUrl}/about/editorialPolicies#publicationFrequency">{translate key="about.publicationFrequency"}</a></li>{/if}
-	{if !empty($journalSettings.openAccessPolicy)}<li>&#187; <a href="{$pageUrl}/about/editorialPolicies#openAccessPolicy">{translate key="about.openAccessPolicy"}</a></li>{/if}
-	{if $journalSettings.enableLockss && !empty($journalSettings.lockssLicense)}<li>&#187; <a href="{$pageUrl}/about/editorialPolicies#archiving">{translate key="about.archiving"}</a></li>{/if}
+	{if !empty($journalSettings.focusScopeDesc)}<li>&#187; <a href="{url page="editorialPolicies" anchor="focusAndScope"}">{translate key="about.focusAndScope"}</a></li>{/if}
+	<li>&#187; <a href="{url page="editorialPolicies" anchor="sectionPolicies"}">{translate key="about.sectionPolicies"}</a></li>
+	{if !empty($journalSettings.reviewPolicy)}<li>&#187; <a href="{url page="editorialPolicies" anchor="peerReviewProcess"}">{translate key="about.peerReviewProcess"}</a></li>{/if}
+	{if !empty($journalSettings.pubFreqPolicy)}<li>&#187; <a href="{url page="editorialPolicies" anchor="publicationFrequency"}">{translate key="about.publicationFrequency"}</a></li>{/if}
+	{if !empty($journalSettings.openAccessPolicy)}<li>&#187; <a href="{url page="editorialPolicies" anchor="openAccessPolicy"}">{translate key="about.openAccessPolicy"}</a></li>{/if}
+	{if $journalSettings.enableLockss && !empty($journalSettings.lockssLicense)}<li>&#187; <a href="{url page="editorialPolicies" anchor="archiving"}">{translate key="about.archiving"}</a></li>{/if}
 	{foreach key=key from=$journalSettings.customAboutItems item=customAboutItem}
 		{if !empty($customAboutItem.title)}
-			<li>&#187; <a href="{$pageUrl}/about/editorialPolicies#custom{$key}">{$customAboutItem.title|escape}</a>
+			<li>&#187; <a href="{url page="editorialPolicies" anchor=custom`$key`}">{$customAboutItem.title|escape}</a>
 		{/if}
 	{/foreach}
 </ul>

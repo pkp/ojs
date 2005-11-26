@@ -16,7 +16,7 @@
 
 <p>{translate key="editor.article.designateDueDateDescription"}</p>
 
-<form method="post" action="{$requestPageUrl}/{$actionHandler}/{$articleId}/{$reviewId}">
+<form method="post" action="{url op=$actionHandler path=$articleId|to_array:$reviewId}">
 	<table class="data" width="100%">
 		<tr valign="top">
 			<td class="label" width="20%">{translate key="editor.article.todaysDate"}</td>

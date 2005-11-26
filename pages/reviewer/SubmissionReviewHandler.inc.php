@@ -67,10 +67,10 @@ class SubmissionReviewHandler extends ReviewerHandler {
 		
 		if (!$reviewerSubmission->getCancelled()) {
 			if (ReviewerAction::confirmReview($reviewerSubmission, $decline, Request::getUserVar('send'))) {
-				Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $reviewId));
+				Request::redirect(null, null, 'submission', $reviewId);
 			}
 		} else {
-			Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $reviewId));
+			Request::redirect(null, null, 'submission', $reviewId);
 		}
 	}
 	
@@ -84,10 +84,10 @@ class SubmissionReviewHandler extends ReviewerHandler {
 
 		if (!$reviewerSubmission->getCancelled()) {
 			if (ReviewerAction::recordRecommendation($reviewerSubmission, $recommendation, Request::getUserVar('send'))) {
-				Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $reviewId));
+				Request::redirect(null, null, 'submission', $reviewId);
 			}
 		} else {
-			Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $reviewId));
+			Request::redirect(null, null, 'submission', $reviewId);
 		}
 	}
 	
@@ -112,7 +112,7 @@ class SubmissionReviewHandler extends ReviewerHandler {
 
 		ReviewerHandler::setupTemplate(true);
 		ReviewerAction::uploadReviewerVersion($reviewId);
-		Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $reviewId));
+		Request::redirect(null, null, 'submission', $reviewId);
 	}
 
 	/*
@@ -126,7 +126,7 @@ class SubmissionReviewHandler extends ReviewerHandler {
                 list($journal, $reviewerSubmission) = SubmissionReviewHandler::validate($reviewId);
 
                 if (!$reviewerSubmission->getCancelled()) ReviewerAction::deleteReviewerVersion($reviewId, $fileId, $revision);
-		Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $reviewId));
+		Request::redirect(null, null, 'submission', $reviewId);
 	}
 	
 	//
@@ -145,7 +145,7 @@ class SubmissionReviewHandler extends ReviewerHandler {
 
 		list($journal, $reviewerSubmission) = SubmissionReviewHandler::validate($reviewId);
 		if (!ReviewerAction::downloadReviewerFile($reviewId, $reviewerSubmission, $fileId, $revision)) {
-			Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $reviewId));
+			Request::redirect(null, null, 'submission', $reviewId);
 		}
 	}
 	
@@ -180,7 +180,7 @@ class SubmissionReviewHandler extends ReviewerHandler {
 		}
 
 		if (!$isValid) {
-			Request::redirect(Request::getRequestedPage());
+			Request::redirect(null, Request::getRequestedPage());
 		}
 
 		return array($journal, $reviewerSubmission, $user);

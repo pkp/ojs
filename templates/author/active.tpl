@@ -31,21 +31,21 @@
 		<td>{$submission->getSectionAbbrev()|escape}</td>
 		<td>{$submission->getAuthorString(true)|truncate:40:"..."|escape}</td>
 		{if $progress == 0}
-			<td><a href="{$requestPageUrl}/submission/{$articleId}" class="action">{if $submission->getArticleTitle()}{$submission->getArticleTitle()|strip_unsafe_html|truncate:60:"..."}{else}{translate key="common.untitled"}{/if}</a></td>
+			<td><a href="{url op="submission" path=$articleId}" class="action">{if $submission->getArticleTitle()}{$submission->getArticleTitle()|strip_unsafe_html|truncate:60:"..."}{else}{translate key="common.untitled"}{/if}</a></td>
 			<td align="right">
 				{assign var="status" value=$submission->getSubmissionStatus()}
 				{if $status==STATUS_ARCHIVED}{translate key="submissions.archived"}
 				{elseif $status==STATUS_QUEUED_UNASSIGNED}{translate key="submissions.queuedUnassigned"}
-				{elseif $status==STATUS_QUEUED_EDITING}<a href="{$requestPageUrl}/submissionEditing/{$articleId}" class="action">{translate key="submissions.queuedEditing"}</a>
-				{elseif $status==STATUS_QUEUED_REVIEW}<a href="{$requestPageUrl}/submissionReview/{$articleId}" class="action">{translate key="submissions.queuedReview"}</a>
+				{elseif $status==STATUS_QUEUED_EDITING}<a href="{url op="submissionEditing" path=$articleId}" class="action">{translate key="submissions.queuedEditing"}</a>
+				{elseif $status==STATUS_QUEUED_REVIEW}<a href="{url op="submissionReview" path=$articleId}" class="action">{translate key="submissions.queuedReview"}</a>
 				{elseif $status==STATUS_SCHEDULED}{translate key="submissions.scheduled"}
 				{elseif $status==STATUS_PUBLISHED}{translate key="submissions.published"}
 				{elseif $status==STATUS_DECLINED}{translate key="submissions.declined"}
 				{/if}
 			</td>
 		{else}
-			<td><a href="{$pageUrl}/author/submit/{$progress}?articleId={$articleId}" class="action">{if $submission->getArticleTitle()}{$submission->getArticleTitle()|strip_unsafe_html|truncate:60:"..."}{else}{translate key="common.untitled"}{/if}</a></td>
-			<td align="right">{translate key="submissions.incomplete"}<br /><a href="{$pageUrl}/author/deleteSubmission/{$articleId}" class="action" onclick="return confirm('{translate|escape:"javascript" key="author.submissions.confirmDelete"}')">{translate key="common.delete"}</a></td>
+			<td><a href="{url op="submit" path=$progress articleId=$articleId}" class="action">{if $submission->getArticleTitle()}{$submission->getArticleTitle()|strip_unsafe_html|truncate:60:"..."}{else}{translate key="common.untitled"}{/if}</a></td>
+			<td align="right">{translate key="submissions.incomplete"}<br /><a href="{url op="deleteSubmission" path=$articleId}" class="action" onclick="return confirm('{translate|escape:"javascript" key="author.submissions.confirmDelete"}')">{translate key="common.delete"}</a></td>
 		{/if}
 
 	</tr>

@@ -68,7 +68,7 @@ class AdminJournalHandler extends AdminHandler {
 		
 		if ($settingsForm->validate()) {
 			$settingsForm->execute();
-			Request::redirect('admin/journals');
+			Request::redirect(null, null, 'journals');
 			
 		} else {
 			parent::setupTemplate(true);
@@ -102,7 +102,7 @@ class AdminJournalHandler extends AdminHandler {
 			}
 		}
 		
-		Request::redirect('admin/journals');
+		Request::redirect(null, null, 'journals');
 	}
 	
 	/**
@@ -120,7 +120,7 @@ class AdminJournalHandler extends AdminHandler {
 			$journalDao->resequenceJournals();
 		}
 		
-		Request::redirect('admin/journals');
+		Request::redirect(null, null, 'journals');
 	}
 	
 	/**
@@ -149,7 +149,7 @@ class AdminJournalHandler extends AdminHandler {
 		$importForm->readInputData();
 		
 		if ($importForm->validate() && ($journalId = $importForm->execute()) !== false) {
-			Request::redirect('admin/editJournal/' . $journalId);
+			Request::redirect(null, null, 'editJournal', $journalId);
 			
 		} else {
 			parent::setupTemplate(true);

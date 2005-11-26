@@ -105,9 +105,8 @@ class LayoutEditorHandler extends Handler {
 	 */
 	function setupTemplate($subclass = false, $articleId = 0, $parentPage = null, $showSidebar = true) {
 		$templateMgr = &TemplateManager::getManager();
-		$pageHierarchy = $subclass ? array(array('user', 'navigation.user'), array('layoutEditor', 'user.role.layoutEditor'))
-				: array(array('user', 'navigation.user'), array('layoutEditor', 'user.role.layoutEditor'));
-		$templateMgr->assign('pagePath', '/user/layoutEditor');
+		$pageHierarchy = $subclass ? array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, 'layoutEditor'), 'user.role.layoutEditor'))
+				: array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, 'layoutEditor'), 'user.role.layoutEditor'));
 
 		import('submission.sectionEditor.SectionEditorAction');
 		$submissionCrumb = SectionEditorAction::submissionBreadcrumb($articleId, $parentPage, 'layoutEditor');
@@ -135,7 +134,7 @@ class LayoutEditorHandler extends Handler {
 	function instructions($args) {
 		import('submission.proofreader.ProofreaderAction');
 		if (!isset($args[0]) || !ProofreaderAction::instructions($args[0], array('layout', 'proof'))) {
-			Request::redirect(Request::getRequestedPage());
+			Request::redirect(null, Request::getRequestedPage());
 		}
 	}
 	

@@ -28,7 +28,7 @@
 	<table width="100%" height="100%">
 		<tr>
 			<td align="center">
-				<a href="{$requestPageUrl}/{$backHandler}/{$articleId}" target="_top">{translate key="submission.backToSubmissionEditing"}</a>
+				<a href="{url op=$backHandler path=$articleId}" target="_top">{translate key="submission.backToSubmissionEditing"}</a>
 			</td>
 		</tr>
 	</table>

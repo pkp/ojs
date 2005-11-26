@@ -25,18 +25,28 @@ class Request {
 	 * @param $url string (exclude protocol for local redirects) 
 	 * @param $includeJournal boolean optional, for relative URLs will include the journal path in the redirect URL
 	 */
-	function redirect($url, $includeJournal = true) {
-		if (HookRegistry::call('Request::redirect', array(&$url, &$includeJournal))) {
+	function redirectUrl($url) {
+		if (HookRegistry::call('Request::redirect', array(&$url))) {
 			return;
 		}
 		
-		if (!preg_match('!^https?://!i', $url)) {
-			$url = Request::getIndexUrl() . '/' . ($includeJournal ? Request::getRequestedJournalPath() . '/' : '') . $url;
-		}
 		header("Location: $url");
 		exit();
 	}
-	
+
+	/**
+	 * Redirect to the specified page within OJS. Shorthand for a common call to Request::redirect(Request::url(...)).
+	 * @param $journalPath string The path of the journal to redirect to.
+	 * @param $page string The name of the op to redirect to.
+	 * @param $op string optional The name of the op to redirect to.
+	 * @param $path mixed string or array containing path info for redirect.
+	 * @param $params array Map of name => value pairs for additional parameters
+	 * @param $anchor string Name of desired anchor on the target page
+	 */
+	function redirect($journalPath = null, $page = null, $op = null, $path = null, $params = null, $anchor = null) {
+		Request::redirectUrl(Request::url($journalPath, $page, $op, $path, $params, $anchor));
+	}
+
 	/**
 	 * Redirect to the current URL, forcing the HTTPS protocol to be used.
 	 */
@@ -105,14 +115,6 @@ class Request {
 		}
 
 		return $indexUrl;
-	}
-
-	/**
-	 * Get the URL to the currently selected page (excludes other parameters).
-	 * @return string
-	 */
-	function getPageUrl() {
-		return Request::getIndexUrl() . '/' . Request::getRequestedJournalPath();
 	}
 
 	/**
@@ -243,7 +245,18 @@ class Request {
 		}
 		return $userAgent;
 	}
-	
+
+	/**
+	 * Return true iff PATH_INFO is enabled.
+	 */
+	function isPathInfoEnabled() {
+		static $isPathInfoEnabled;
+		if (!isset($isPathInfoEnabled)) {
+                        $isPathInfoDisabled = Config::getVar('general', 'disable_path_info')?true:false;
+                }
+		return $isPathInfoEnabled;
+	}
+
 	/**
 	 * Get the journal path requested in the URL ("index" for top-level site requests).
 	 * @return string 
@@ -252,13 +265,18 @@ class Request {
 		static $journal;
 		
 		if (!isset($journal)) {
-			$journal = '';
-			if (isset($_SERVER['PATH_INFO'])) {
-				$vars = explode('/', $_SERVER['PATH_INFO']);
-				if (count($vars) >= 2) {
-					$journal = Core::cleanFileVar($vars[1]);
+			if (Request::isPathInfoEnabled()) {
+				$journal = '';
+				if (isset($_SERVER['PATH_INFO'])) {
+					$vars = explode('/', $_SERVER['PATH_INFO']);
+					if (count($vars) >= 2) {
+						$journal = Core::cleanFileVar($vars[1]);
+					}
 				}
+			} else {
+				$journal = Request::getUserVar('journal');
 			}
+
 			$journal = empty($journal) ? 'index' : $journal;
 			HookRegistry::call('Request::getRequestedJournalPath', array(&$journal));
 		}
@@ -338,12 +356,16 @@ class Request {
 		static $page;
 		
 		if (!isset($page)) {
-			$page = '';
-			if (isset($_SERVER['PATH_INFO'])) {
-				$vars = explode('/', $_SERVER['PATH_INFO']);
-				if (count($vars) >= 3) {
-					$page = Core::cleanFileVar($vars[2]);
+			if (Request::isPathInfoEnabled()) {
+				$page = '';
+				if (isset($_SERVER['PATH_INFO'])) {
+					$vars = explode('/', $_SERVER['PATH_INFO']);
+					if (count($vars) >= 3) {
+						$page = Core::cleanFileVar($vars[2]);
+					}
 				}
+			} else {
+				$page = Request::getUserVar('page');
 			}
 		}
 		
@@ -358,12 +380,16 @@ class Request {
 		static $op;
 		
 		if (!isset($op)) {
-			$op = '';
-			if (isset($_SERVER['PATH_INFO'])) {
-				$vars = explode('/', $_SERVER['PATH_INFO']);
-				if (count($vars) >= 4) {
-					$op = Core::cleanFileVar($vars[3]);
+			if (Request::isPathInfoEnabled()) {
+				$op = '';
+				if (isset($_SERVER['PATH_INFO'])) {
+					$vars = explode('/', $_SERVER['PATH_INFO']);
+					if (count($vars) >= 4) {
+						$op = Core::cleanFileVar($vars[3]);
+					}
 				}
+			} else {
+				return Request::getUserVar('op');
 			}
 			$op = empty($op) ? 'index' : $op;
 		}
@@ -376,15 +402,21 @@ class Request {
 	 * @return array
 	 */
 	function getRequestedArgs() {
-		$args = array();
-		if (isset($_SERVER['PATH_INFO'])) {
-			$vars = explode('/', $_SERVER['PATH_INFO']);
-			if (count($vars) > 3) {
-				$args = array_slice($vars, 4);
-				for ($i=0, $count=count($args); $i<$count; $i++) {
-					$args[$i] = Core::cleanVar(get_magic_quotes_gpc() ? stripslashes($args[$i]) : $args[$i]);
+		if (Request::isPathInfoEnabled()) {
+			$args = array();
+			if (isset($_SERVER['PATH_INFO'])) {
+				$vars = explode('/', $_SERVER['PATH_INFO']);
+				if (count($vars) > 3) {
+					$args = array_slice($vars, 4);
+					for ($i=0, $count=count($args); $i<$count; $i++) {
+						$args[$i] = Core::cleanVar(get_magic_quotes_gpc() ? stripslashes($args[$i]) : $args[$i]);
+					}
 				}
 			}
+		} else {
+			$args = Request::getUserVar('path');
+			if (empty($args)) $args = array();
+			elseif (!is_array($args)) $args = array($args);
 		}
 		return $args;	
 	}
@@ -481,7 +513,90 @@ class Request {
 		setcookie($key, $value, 0, Request::getBasePath());
 		$_COOKIE[$key] = $value;
 	}
-	
+
+	/**
+	 * Build a URL into OJS.
+	 */
+	function url($journalPath = null, $page = null, $op = null, $path = null, $params = null, $anchor = null) {
+		$pathInfoDisabled = !Request::isPathInfoEnabled();
+
+		$prefix = $pathInfoDisabled?'&':'?';
+
+		// Establish defaults for page and op
+		$defaultPage = Request::getRequestedPage();
+		$defaultOp = Request::getRequestedOp();
+
+		// If a journal has been specified, don't supply default
+		// page or op.
+		if ($journalPath) {
+			$journalPath = rawurlencode($journalPath);
+			$defaultPage = null;
+			$defaultOp = null;
+		} else {
+			$journal =& Request::getJournal();
+			if ($journal) $journalPath = $journal->getPath();
+			else $journalPath = 'index';
+		}
+
+		// If a page has been specified, don't supply a default op.
+		if ($page) {
+			$page = rawurlencode($page);
+			$defaultOp = null;
+		} else {
+			$page = $defaultPage;
+		}
+
+		// Encode the op.
+		if ($op) $op = rawurlencode($op);
+		else $op = $defaultOp;
+
+		// Process additional parameters
+		$additionalParams = '';
+		if (!empty($params)) foreach ($params as $key => $value) {
+			if (is_array($value)) foreach($value as $element) {
+				$additionalParams .= $prefix . $key . '[]=' . rawurlencode($element);
+				$prefix = '&';
+			} else {
+				$additionalParams .= $prefix . $key . '=' . rawurlencode($value);
+				$prefix = '&';
+			}
+		}
+
+		// Process anchor
+		if (!empty($anchor)) $anchor = '#' . rawurlencode($anchor);
+		else $anchor = '';
+
+		if (!empty($path)) {
+			if (is_array($path)) $path = array_map('rawurlencode', $path);
+			else $path = array(rawurlencode($path));
+			if (!$page) $page = 'index';
+			if (!$op) $op = 'index';
+		}
+
+		$pathString = '';
+		if ($pathInfoDisabled) {
+			if (!empty($path)) $pathString = '&path[]=' . implode('&path[]=', $path);
+			$baseParams = "$anchor?journal=$journalPath";
+			if (!empty($page)) {
+				$baseParams .= "&page=$page";
+				if (!empty($op)) {
+					$baseParams .= "&op=$op";
+				}
+			}
+		} else {
+			if (!empty($path)) $pathString = '/' . implode('/', $path);
+			$baseParams = "/$journalPath";
+			if (!empty($page)) {
+				$baseParams .= "/$page";
+				if (!empty($op)) {
+					$baseParams .= "/$op";
+				}
+			}
+			$baseParams .= $anchor;
+		}
+
+		return Request::getIndexUrl() . $baseParams . $pathString . $additionalParams;
+	}
 }
 
 ?>

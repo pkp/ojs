@@ -31,14 +31,14 @@ function ensureKeyword() {
 <br/>
 
 {if $basicQuery}
-	<form name="search" action="{$pageUrl}/search/results">
+	<form method="post" name="search" action="{url op="results"}">
 		<input type="text" size="40" maxlength="255" class="textField" name="query" value="{$basicQuery|escape}"/>&nbsp;&nbsp;
 		<input type="hidden" name="searchField" value="{$searchField|escape}"/>
 		<input type="submit" class="button defaultButton" onclick="ensureKeyword();" value="{translate key="common.search"}"/>
 	</form>
 	<br />
 {else}
-	<form name="revise" action="{$pageUrl}/search/advanced" method="post">
+	<form name="revise" action="{url op="advanced"}" method="post">
 		<input type="hidden" name="query" value="{$query|escape}"/>
 		<input type="hidden" name="searchJournal" value="{$searchJournal|escape}"/>
 		<input type="hidden" name="author" value="{$author|escape}"/>
@@ -82,11 +82,11 @@ function ensureKeyword() {
 {assign var=journal value=$result.journal}
 {assign var=section value=$result.section}
 <tr valign="top">
-	{if !$currentJournal}<td><a href="{$indexUrl}/{$journal->getPath()}">{$journal->getTitle()|escape}</a></td>{/if}
-	<td>{if $issue->getAccessStatus()}<a href="{$indexUrl}/{$journal->getPath()}/issue/view/{$issue->getBestIssueId($journal)|escape:"url"}">{/if}{$issue->getIssueIdentification()|escape}{if $issue->getAccessStatus()}</a>{/if}</td>
+	{if !$currentJournal}<td><a href="{url journal=$journal->getPath()}">{$journal->getTitle()|escape}</a></td>{/if}
+	<td>{if $issue->getAccessStatus()}<a href="{url journal=$journal->getPath() page="issue" op="view" path=$issue->getBestIssueId($journal)}">{/if}{$issue->getIssueIdentification()|escape}{if $issue->getAccessStatus()}</a>{/if}</td>
 	<td width="30%">{$article->getArticleTitle()|strip_unsafe_html}</td>
 	<td width="30%" align="right">
-		<a href="{$indexUrl}/{$journal->getPath()}/article/view/{$publishedArticle->getBestArticleId($journal)|escape:"url"}" class="file">{if $section->getAbstractsDisabled()}{translate key="article.details"}{else}{translate key="article.abstract"}{/if}</a>{if ($issue->getAccessStatus() || $issueAvailable)}{foreach from=$publishedArticle->getGalleys() item=galley name=galleyList}&nbsp;<a href="{$indexUrl}/{$journal->getPath()}/article/view/{$publishedArticle->getBestArticleId($journal)|escape:"url"}/{$galley->getGalleyId()}" class="file">{$galley->getLabel()|escape}</a>{/foreach}{/if}
+		<a href="{url journal=$journal->getPath() page="article" op="view" path=$publishedArticle->getBestArticleId($journal)}" class="file">{if $section->getAbstractsDisabled()}{translate key="article.details"}{else}{translate key="article.abstract"}{/if}</a>{if ($issue->getAccessStatus() || $issueAvailable)}{foreach from=$publishedArticle->getGalleys() item=galley name=galleyList}&nbsp;<a href="{url journal=$journal->getPath() page="article" op="view" path=$publishedArticle->getBestArticleId($journal)|to_array:$galley->getGalleyId()}" class="file">{$galley->getLabel()|escape}</a>{/foreach}{/if}
 	</td>
 </tr>
 <tr>

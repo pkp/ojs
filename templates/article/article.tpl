@@ -40,34 +40,34 @@
 
 <div id="navbar">
 	<ul class="menu">
-		<li><a href="{$pageUrl}" target="_parent">{translate key="navigation.home"}</a></li>
-		<li><a href="{$pageUrl}/about" target="_parent">{translate key="navigation.about"}</a></li>
+		<li><a href="{url page="index"}" target="_parent">{translate key="navigation.home"}</a></li>
+		<li><a href="{url page="about"}" target="_parent">{translate key="navigation.about"}</a></li>
 		{if $isUserLoggedIn}
-		<li><a href="{$pageUrl}/user" target="_parent">{translate key="navigation.userHome"}</a></li>
+		<li><a href="{url page="user"}" target="_parent">{translate key="navigation.userHome"}</a></li>
 		{else}
-		<li><a href="{$pageUrl}/login" target="_parent">{translate key="navigation.login"}</a></li>
-		<li><a href="{$pageUrl}/user/register" target="_parent">{translate key="navigation.register"}</a></li>
+		<li><a href="{url page="login"}" target="_parent">{translate key="navigation.login"}</a></li>
+		<li><a href="{url page="user" op="register"}" target="_parent">{translate key="navigation.register"}</a></li>
 		{/if}
-		<li><a href="{$pageUrl}/search" target="_parent">{translate key="navigation.search"}</a></li>
+		<li><a href="{url page="search"}" target="_parent">{translate key="navigation.search"}</a></li>
 		{if $currentJournal}
-		<li><a href="{$pageUrl}/issue/current" target="_parent">{translate key="navigation.current"}</a></li>
-		<li><a href="{$pageUrl}/issue/archive" target="_parent">{translate key="navigation.archives"}</a></li>
+		<li><a href="{url page="issue" op="current"}" target="_parent">{translate key="navigation.current"}</a></li>
+		<li><a href="{url page="issue" op="archive"}" target="_parent">{translate key="navigation.archives"}</a></li>
 		{/if}
 		{foreach from=$navMenuItems item=navItem}
-		<li><a href="{if $navItem.isAbsolute}{$navItem.url|escape}{else}{$pageUrl}{$navItem.url|escape}{/if}" target="_parent">{if $navItem.isLiteral}{$navItem.name|escape}{else}{translate key=$navItem.name}{/if}</a></li>
+		<li><a href="{if $navItem.isAbsolute}{$navItem.url|escape}{else}{url page=$requestedPage}{$navItem.url|escape}{/if}" target="_parent">{if $navItem.isLiteral}{$navItem.name|escape}{else}{translate key=$navItem.name}{/if}</a></li>
 		{/foreach}
 	</ul>
 </div>
 
 <div id="breadcrumb">
-	<a href="{$pageUrl}" target="_parent">{translate key="navigation.home"}</a> &gt;
-	<a href="{$pageUrl}/issue/view/{$issue->getBestIssueId($currentJournal)|escape:"url"}" target="_parent">{$issue->getIssueIdentification(false,true)|escape}</a> &gt;
-	<a href="{$pageUrl}/article/view/{$articleId|escape:"url"}/{$galleyId|escape:"url"}" class="current" target="_parent">{$article->getFirstAuthor(true)|escape}</a>
+	<a href="{url page="index"}" target="_parent">{translate key="navigation.home"}</a> &gt;
+	<a href="{url page="issue" op="view" path=$issue->getBestIssueId($currentJournal)}" target="_parent">{$issue->getIssueIdentification(false,true)|escape}</a> &gt;
+	<a href="{url page="article" op="view" path=$articleId|to_array:$galleyId}" class="current" target="_parent">{$article->getFirstAuthor(true)|escape}</a>
 </div>
 
 <div id="content">
 {if $galley}
-	{$galley->getHTMLContents("$requestPageUrl/viewFile")}
+	{$galley->getHTMLContents()}
 {else}
 
 	<h3>{$article->getArticleTitle()|strip_unsafe_html}</h3>
@@ -85,7 +85,7 @@
 		{if $galleys}
 			{translate key="reader.fullText"}
 			{foreach from=$galleys item=galley name=galleyList}
-				<a href="{$pageUrl}/article/view/{$articleId}/{$galley->getGalleyId()}" class="action" target="_parent">{$galley->getLabel()|escape}</a>
+				<a href="{url page="article" op="view" path=$articleId|to_array:$galley->getGalleyId()}" class="action" target="_parent">{$galley->getLabel()|escape}</a>
 			{/foreach}
 		{/if}
 	{else}
@@ -101,14 +101,14 @@
 {foreach from=$comments item=comment}
 {assign var=poster value=$comment->getUser()}
 	<li>
-		<a href="{$pageUrl}/comment/view/{$article->getArticleId()}/{$galleyId|escape:"url"}/{$comment->getCommentId()}" target="_parent">{$comment->getTitle()|escape}</a>
+		<a href="{url page="comment" op="view" path=$article->getArticleId()|to_array:$galleyId:$comment->getCommentId()}" target="_parent">{$comment->getTitle()|escape}</a>
 		{if $comment->getChildCommentCount()==1}{translate key="comments.oneReply"}{elseif $comment->getChildCommentCount()>0}{translate key="comments.nReplies" num=$comment->getChildCommentCount()}{/if}<br/>
 		{if $poster}{translate key="comments.authenticated" userName=$comment->getPosterName()|escape}{elseif $comment->getPosterName()}{translate key="comments.anonymousNamed" userName=$comment->getPosterName()|escape}{else}{translate key="comments.anonymous"}{/if} ({$comment->getDatePosted()|date_format:$dateFormatShort})
 	</li>
 {/foreach}
 </ul>
 
-<a href="{$pageUrl}/comment/view/{$article->getArticleId()}/{$galleyId|escape:"url"}" class="action" target="_parent">{translate key="comments.viewAllComments"}</a>{if $postingAllowed}&nbsp;|&nbsp;<a class="action" href="{$pageUrl}/comment/add/{$article->getArticleId()}/{$galleyId|escape:"url"}" target="_parent">{translate key="rt.addComment"}</a>{/if}<br />
+<a href="{url page="comment" op="view" path=$article->getArticleId()|to_array:$galleyId}" class="action" target="_parent">{translate key="comments.viewAllComments"}</a>{if $postingAllowed}&nbsp;|&nbsp;<a class="action" href="{url page="comment" op="add" path=$article->getArticleId()|to_array:$galleyId}" target="_parent">{translate key="rt.addComment"}</a>{/if}<br />
 
 {/if}
 
@@ -139,7 +139,7 @@
 	if(document.captureEvents) {
 		document.captureEvents(Event.DBLCLICK);
 	}
-	document.ondblclick = new Function("openSearchTermWindow('{/literal}{$pageUrl}/rt/context/{$articleId|escape:"url"}/{$galleyId|escape:"url"}/{$defineTermsContextId}{literal}')");
+	document.ondblclick = new Function("openSearchTermWindow('{/literal}{url page="rt" op="context" path=$articleId|to_array:$galleyId:$defineTermsContextId}{literal}')");
 // -->
 {/literal}
 </script>

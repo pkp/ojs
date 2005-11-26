@@ -72,9 +72,8 @@ class AuthorHandler extends Handler {
 	function setupTemplate($subclass = false, $articleId = 0, $parentPage = null, $showSidebar = true) {
 		$templateMgr = &TemplateManager::getManager();
 
-		$pageHierarchy = $subclass ? array(array('user', 'navigation.user'), array('author', 'user.role.author'), array('author', 'article.submissions'))
-			: array(array('user', 'navigation.user'), array('author', 'user.role.author'));
-		$templateMgr->assign('pagePath', '/user/author');
+		$pageHierarchy = $subclass ? array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, 'author'), 'user.role.author'), array(Request::url(null, 'author'), 'article.submissions'))
+			: array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, 'author'), 'user.role.author'));
 
 		import('submission.sectionEditor.SectionEditorAction');
 		$submissionCrumb = SectionEditorAction::submissionBreadcrumb($articleId, $parentPage, 'author');
@@ -101,7 +100,7 @@ class AuthorHandler extends Handler {
 	function instructions($args) {
 		import('submission.proofreader.ProofreaderAction');
 		if (!isset($args[0]) || !ProofreaderAction::instructions($args[0], array('copy', 'proof'))) {
-			Request::redirect(Request::getRequestedPage());
+			Request::redirect(null, null, 'index');
 		}
 	}
 

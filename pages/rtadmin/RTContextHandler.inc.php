@@ -31,7 +31,7 @@ class RTContextHandler extends RTAdminHandler {
 		if (isset($args[1]) && $args[1]=='save') {
 			$contextForm->readInputData();
 			$contextForm->execute();
-			Request::redirect('rtadmin/contexts/' . $versionId);
+			Request::redirect(null, null, 'contexts', $versionId);
 		} else {
 			RTAdminHandler::setupTemplate(true, $version);
 			$contextForm->display();
@@ -61,7 +61,7 @@ class RTContextHandler extends RTAdminHandler {
 			$templateMgr->assign('helpTopicId', 'journal.managementPages.readingTools.contexts');
 			$templateMgr->display('rtadmin/contexts.tpl');
 		}
-		else Request::redirect('rtadmin/versions');
+		else Request::redirect(null, null, 'versions');
 	}
 
 	function editContext($args) {
@@ -82,7 +82,7 @@ class RTContextHandler extends RTAdminHandler {
 			$contextForm->initData();
 			$contextForm->display();
 		}
-		else Request::redirect('rtadmin/contexts/' . $versionId);
+		else Request::redirect(null, null, 'contexts', $versionId);
 
 
 	}
@@ -102,7 +102,7 @@ class RTContextHandler extends RTAdminHandler {
 			$rtDao->deleteContext($contextId, $versionId);
 		}
 
-		Request::redirect('rtadmin/contexts/' . $versionId);
+		Request::redirect(null, null, 'contexts', $versionId);
 	}
 
 	function saveContext($args) {
@@ -123,7 +123,7 @@ class RTContextHandler extends RTAdminHandler {
 			$contextForm->execute();
 		}
 
-		Request::redirect('rtadmin/contexts/' . $versionId);
+		Request::redirect(null, null, 'contexts', $versionId);
 	}
 
 	function moveContext($args) {
@@ -144,7 +144,7 @@ class RTContextHandler extends RTAdminHandler {
 			$rtDao->resequenceContexts($version->getVersionId());
 		}
 
-		Request::redirect('rtadmin/contexts/' . $versionId);
+		Request::redirect(null, null, 'rtadmin', $versionId);
 	}
 }
 

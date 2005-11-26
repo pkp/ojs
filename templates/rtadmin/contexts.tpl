@@ -13,8 +13,8 @@
 {include file="common/header.tpl"}
 
 <ul class="menu">
-	<li><a href="{$requestPageUrl}/editVersion/{$version->getVersionId()}" class="action">{translate key="rt.admin.versions.metadata"}</a></li>
-	<li class="current"><a href="{$requestPageUrl}/contexts/{$version->getVersionId()}" class="action">{translate key="rt.contexts"}</a></li>
+	<li><a href="{url op="editVersion" path=$version->getVersionId()}" class="action">{translate key="rt.admin.versions.metadata"}</a></li>
+	<li class="current"><a href="{url op="contexts" path=$version->getVersionId()}" class="action">{translate key="rt.contexts"}</a></li>
 </ul>
 
 <br />
@@ -31,7 +31,7 @@
 		<tr valign="top">
 			<td>{$context->getTitle()|escape}</td>
 			<td>{$context->getAbbrev()|escape}</td>
-			<td align="right"><a href="{$requestPageUrl}/moveContext/{$version->getVersionId()}/{$context->getContextId()}?dir=u" class="action">&uarr;</a>&nbsp;<a href="{$requestPageUrl}/moveContext/{$version->getVersionId()}/{$context->getContextId()}?dir=d" class="action">&darr;</a>&nbsp;&nbsp;<a href="{$requestPageUrl}/editContext/{$version->getVersionId()}/{$context->getContextId()}" class="action">{translate key="rt.admin.contexts.metadata"}</a>&nbsp;&nbsp;<a href="{$requestPageUrl}/searches/{$version->getVersionId()}/{$context->getContextId()}" class="action">{translate key="rt.searches"}</a>&nbsp;&nbsp;<a href="{$requestPageUrl}/deleteContext/{$version->getVersionId()}/{$context->getContextId()}" onclick="return confirm('{translate|escape:"javascript" key="rt.admin.contexts.confirmDelete"}')" class="action">{translate key="common.delete"}</a></td>
+			<td align="right"><a href="{url op="moveContext" path=$version->getVersionId()|to_array:$context->getContextId() dir=u}" class="action">&uarr;</a>&nbsp;<a href="{url op="moveContext" path=$version->getVersionId()|to_array:$context->getContextId() dir=d}" class="action">&darr;</a>&nbsp;&nbsp;<a href="{url op="editContext" path=$version->getVersionId()|to_array:$context->getContextId()}" class="action">{translate key="rt.admin.contexts.metadata"}</a>&nbsp;&nbsp;<a href="{url op="searches" path=$version->getVersionId()|to_array:$context->getContextId()}" class="action">{translate key="rt.searches"}</a>&nbsp;&nbsp;<a href="{url op="deleteContext" path=$version->getVersionId()|to_array:$context->getContextId()}" onclick="return confirm('{translate|escape:"javascript" key="rt.admin.contexts.confirmDelete"}')" class="action">{translate key="common.delete"}</a></td>
 		</tr>
 		<tr><td class="{if $contexts->eof()}end{/if}separator" colspan="3"></td></tr>
 	{/iterate}
@@ -49,6 +49,6 @@
 	</table>
 <br/>
 
-<a href="{$requestPageUrl}/createContext/{$version->getVersionId()}" class="action">{translate key="rt.admin.contexts.createContext"}</a><br/>
+<a href="{url op="createContext" path=$version->getVersionId()}" class="action">{translate key="rt.admin.contexts.createContext"}</a><br/>
 
 {include file="common/footer.tpl"}

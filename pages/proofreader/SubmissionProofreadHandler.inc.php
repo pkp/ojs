@@ -53,7 +53,7 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
 		parent::setupTemplate(true);
 
 		if (ProofreaderAction::proofreadEmail($articleId,'PROOFREAD_COMPLETE', Request::getUserVar('send')?'':'/proofreader/completeProofreader')) {
-			Request::redirect(sprintf('proofreader/submission/%d', $articleId));	
+			Request::redirect(null, null, 'submission', $articleId);
 		}		
 	}
 
@@ -80,7 +80,7 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
 		}
 		
 		if (!$isValid) {
-			Request::redirect(Request::getRequestedPage());
+			Request::redirect(null, Request::getRequestedPage());
 		}
 
 		return array($journal, $submission);
@@ -101,7 +101,7 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
 
 		list($journal, $submission) = SubmissionProofreadHandler::validate($articleId);
 		if (!ProofreaderAction::downloadProofreaderFile($submission, $fileId, $revision)) {
-			Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $articleId));
+			Request::redirect(null, null, 'submission', $articleId);
 		}
 	}
 
@@ -174,7 +174,7 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
 
 		list($journal, $submission) = SubmissionProofreadHandler::validate($articleId);
 		if (!ProofreaderAction::viewFile($articleId, $fileId, $revision)) {
-			Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $articleId));
+			Request::redirect(null, null, 'submission', $articleId);
 		}
 	}
 

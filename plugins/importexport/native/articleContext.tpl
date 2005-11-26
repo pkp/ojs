@@ -14,7 +14,7 @@
 
 <p>{translate key="plugins.importexport.native.import.articles.description"}</p>
 
-<form action="{$pluginUrl}/import" method="post">
+<form action="{plugin_url path="import"}" method="post">
 <input type="hidden" name="temporaryFileId" value="{$temporaryFileId|escape}"/>
 
 {translate key="section.section"}&nbsp;&nbsp;
@@ -41,7 +41,7 @@
 	<tr valign="top">
 		<td><input {if !$notFirst}checked {/if}name="issueId" type="radio" value="{$issue->getIssueId()}"/></td>
 		{assign var=notFirst value=1}
-		<td><a href="{$pageUrl}/issue/issueToc/{$issue->getIssueId()}" class="action">{$issue->getIssueIdentification()|escape}</a></td>
+		<td><a href="{url page="issue" op="issueToc" path=$issue->getIssueId()}" class="action">{$issue->getIssueIdentification()|escape}</a></td>
 		<td>{$issue->getDatePublished()|date_format:"$dateFormatShort"}</td>
 		<td>{$issue->getNumArticles()}</td>
 	</tr>

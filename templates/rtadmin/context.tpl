@@ -14,14 +14,14 @@
 
 {if $contextId}
 	<ul class="menu">
-		<li class="current"><a href="{$requestPageUrl}/editContext/{$versionId}/{$contextId}" class="action">{translate key="rt.admin.contexts.metadata"}</a></li>
-		<li><a href="{$requestPageUrl}/searches/{$versionId}/{$contextId}" class="action">{translate key="rt.searches"}</a></li>
+		<li class="current"><a href="{url op="editContext" path=$versionId|to_array:$contextId}" class="action">{translate key="rt.admin.contexts.metadata"}</a></li>
+		<li><a href="{url op="searches" path=$versionId|to_array:$contextId}" class="action">{translate key="rt.searches"}</a></li>
 	</ul>
 {/if}
 
 <br />
 
-<form action="{$requestPageUrl}/{if $contextId}saveContext/{$versionId}/{$contextId}{else}createContext/{$versionId}/save{/if}" method="post">
+<form action="{if $contextId}{url op="saveContext" path=$versionId|to_array:$contextId}{else}{url op="createContext" path=$versionId|to_array:"save"}{/if}" method="post">
 <table class="data" width="100%">
 	<tr valign="top">
 		<td class="label" width="20%"><label for="title">{translate key="rt.context.title"}</label></td>
@@ -47,14 +47,15 @@
 				</tr>
 				<tr valign="top">
 					<td><input type="checkbox" name="defineTerms" id="defineTerms" {if $defineTerms}checked="checked"{/if} /></td>
-					<td><label for="defineTerms">{translate key="rt.admin.contexts.options.defineTerms" requestPageUrl=$requestPageUrl}</label></td>
+					{url|assign:"url" page="rtadmin" op="settings"}
+					<td><label for="defineTerms">{translate key="rt.admin.contexts.options.defineTerms" settingsUrl=$url}</label></td>
 				</tr>
 			</table>
 		</td>
 	</tr>
 </table>
 
-<p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{$requestPageUrl}/contexts/{$versionId}'" /></p>
+<p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url op="contexts" path=$versionId}'" /></p>
 
 </form>
 

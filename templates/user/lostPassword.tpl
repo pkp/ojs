@@ -12,7 +12,7 @@
 {assign var="pageTitle" value="user.login.resetPassword"}
 {include file="common/header.tpl"}
 
-<form name="reset" action="{$pageUrl}/login/requestResetPassword" method="post">
+<form name="reset" action="{url page="login" op="requestResetPassword"}" method="post">
 <p><span class="instruct">{translate key="user.login.resetPasswordInstructions"}</span></p>
 
 {if $error}
@@ -28,7 +28,7 @@
 
 <p><input type="submit" value="{translate key="user.login.resetPassword"}" class="button defaultButton" /></p>
 
-&#187; <a href="{$pageUrl}/user/register">{translate key="user.login.registerNewAccount"}</a>
+&#187; <a href="{url page="user" op="register"}">{translate key="user.login.registerNewAccount"}</a>
 
 <script type="text/javascript">
 <!--

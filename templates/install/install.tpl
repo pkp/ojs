@@ -19,13 +19,14 @@
 {if is_writeable('cache/t_cache')}{assign_translate var="writable_templates_cache" key="installer.checkYes"}{else}{assign_translate var="writable_templates_cache" key="installer.checkNo"}{/if}
 {if is_writeable('cache/t_compile')}{assign_translate var="writable_templates_compile" key="installer.checkYes"}{else}{assign_translate var="writable_templates_compile" key="installer.checkNo"}{/if}
 
-{translate key="installer.installationInstructions" version=$version->getVersionString() baseUrl=$baseUrl pageUrl=$pageUrl writable_config=$writable_config writable_db_cache=$writable_db_cache writable_cache=$writable_cache writable_public=$writable_public writable_templates_cache=$writable_templates_cache writable_templates_compile=$writable_templates_compile}
+{url|assign:"upgradeUrl" page="install" op="upgrade"}
+{translate key="installer.installationInstructions" version=$version->getVersionString() upgradeUrl=$upgradeUrl baseUrl=$baseUrl writable_config=$writable_config writable_db_cache=$writable_db_cache writable_cache=$writable_cache writable_public=$writable_public writable_templates_cache=$writable_templates_cache writable_templates_compile=$writable_templates_compile}
 
 
 <div class="separator"></div>
 
 
-<form method="post" action="{$pageUrl}/install/install">
+<form method="post" action="{url op="install"}">
 {include file="common/formErrors.tpl"}
 
 {if $isInstallError}

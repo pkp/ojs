@@ -124,9 +124,8 @@ class ReviewerHandler extends Handler {
 	 */
 	function setupTemplate($subclass = false, $articleId = 0, $parentPage = null, $showSidebar = true) {
 		$templateMgr = &TemplateManager::getManager();
-		$pageHierarchy = $subclass ? array(array('user', 'navigation.user'), array('reviewer', 'user.role.reviewer'))
-				: array(array('user', 'navigation.user'), array('reviewer', 'user.role.reviewer'));
-		$templateMgr->assign('pagePath', '/user/reviewer');
+		$pageHierarchy = $subclass ? array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, 'reviewer'), 'user.role.reviewer'))
+				: array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, 'reviewer'), 'user.role.reviewer'));
 
 		import('submission.sectionEditor.SectionEditorAction');
 		$submissionCrumb = SectionEditorAction::submissionBreadcrumb($articleId, $parentPage, 'reviewer');

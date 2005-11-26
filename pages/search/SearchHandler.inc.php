@@ -96,8 +96,7 @@ class SearchHandler extends Handler {
 			}
 
 			if (empty($publishedArticles)) {
-				Request::redirect(Request::getPageUrl());
-				return;
+				Request::redirect(null, Request::getRequestedPage());
 			}
 
 			$templateMgr = &TemplateManager::getManager();
@@ -232,7 +231,7 @@ class SearchHandler extends Handler {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('helpTopicId', 'user.searchAndBrowse');
 		$templateMgr->assign('pageHierarchy',
-			$subclass ? array(array('search', 'navigation.search'))
+			$subclass ? array(array(Request::url(null, 'search'), 'navigation.search'))
 				: array()
 		);
 	}

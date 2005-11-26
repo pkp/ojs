@@ -21,7 +21,7 @@
 
 <br/>
 
-<form method="post" action="{$pageUrl}/manager/updateSubscription">
+<form method="post" action="{url op="updateSubscription"}">
 {if $subscriptionId}
 <input type="hidden" name="subscriptionId" value="{$subscriptionId}" />
 {/if}
@@ -32,7 +32,7 @@
 <tr valign="top">
 	<td width="20%" class="label">{fieldLabel name="userId" required="true" key="manager.subscriptions.form.userId"}</td>
 	<td width="80%" class="value">
-		{$user->getFullName()|escape}&nbsp;&nbsp;<a href="{$requestPageUrl}/selectSubscriber{if $subscriptionId}?subscriptionId={$subscriptionId}{/if}" class="action">{translate key="common.select"}</a>
+		{$user->getFullName()|escape}&nbsp;&nbsp;<a href="{if $subscriptionId}{url op="selectSubscriber" subscriptionId=$subscriptionId}{else}{url op="selectSubscriber"}{/if}" class="action">{translate key="common.select"}</a>
 		<input type="hidden" name="userId" value="{$user->getUserId()}"/>
 	</td>
 </tr>
@@ -89,7 +89,7 @@
 </tr>
 </table>
 
-<p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> {if not $subscriptionId}<input type="submit" name="createAnother" value="{translate key="manager.subscriptions.form.saveAndCreateAnother"}" class="button" /> {/if}<input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{$pageUrl}/manager/subscriptions'" /></p>
+<p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> {if not $subscriptionId}<input type="submit" name="createAnother" value="{translate key="manager.subscriptions.form.saveAndCreateAnother"}" class="button" /> {/if}<input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url op="subscriptions"}'" /></p>
 
 </form>
 

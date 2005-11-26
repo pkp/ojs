@@ -106,9 +106,8 @@ class ProofreaderHandler extends Handler {
 	 */
 	function setupTemplate($subclass = false, $articleId = 0, $parentPage = null, $showSidebar = true) {
 		$templateMgr = &TemplateManager::getManager();
-		$pageHierarchy = $subclass ? array(array('user', 'navigation.user'), array('proofreader', 'user.role.proofreader'))
-				: array(array('user', 'navigation.user'), array('proofreader', 'user.role.proofreader'));
-		$templateMgr->assign('pagePath', '/user/proofreader');
+		$pageHierarchy = $subclass ? array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, 'proofreader'), 'user.role.proofreader'))
+				: array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, 'proofreader'), 'user.role.proofreader'));
 
 		import('submission.sectionEditor.SectionEditorAction');
 		$submissionCrumb = SectionEditorAction::submissionBreadcrumb($articleId, $parentPage, 'proofreader');
@@ -135,7 +134,7 @@ class ProofreaderHandler extends Handler {
 	 */
 	function instructions($args) {
 		if (!isset($args[0]) || !ProofreaderAction::instructions($args[0], array('proof'))) {
-			Request::redirect(Request::getRequestedPage());
+			Request::redirect(null, Request::getRequestedPage());
 		}
 	}
 

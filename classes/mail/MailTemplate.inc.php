@@ -123,7 +123,7 @@ class MailTemplate extends Mail {
 			$enableAttachments = Config::getVar('email', 'enable_attachments')?true:false;
 		}
 
-		if ($enableAttachments) {
+		if ($enableAttachments && $user) {
 			$this->_handleAttachments($user->getUserId());
 		} else {
 			$this->attachmentsEnabled = false;

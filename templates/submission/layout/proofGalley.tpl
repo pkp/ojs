@@ -26,15 +26,16 @@
 	<link rel="stylesheet" href="{$publicFilesDir}/{$pageStyleSheet.uploadName}" type="text/css" />
 	{/if}
 </head>
+{url|assign:"galleyUrl" op="proofGalleyFile" path=$articleId|to_array:$galleyId}
 <frameset rows="40,*" frameborder="0" framespacing="0" border="0">
-	<frame src="{$requestPageUrl}/proofGalleyTop/{$articleId}" noresize="noresize" frameborder="0" scrolling="no" />
-	<frame src="{$requestPageUrl}/proofGalleyFile/{$articleId}/{$galleyId}" frameborder="0" />
+	<frame src="{url op="proofGalleyTop" path=$articleId}" noresize="noresize" frameborder="0" scrolling="no" />
+	<frame src="{$galleyUrl}" frameborder="0" />
 <noframes>
 <body>
 	<table width="100%">
 		<tr>
 			<td align="center">
-				{translate key="common.error.framesRequired" url="$requestPageUrl/proofGalleyFile/$articleId/$galleyId"}
+				{translate key="common.error.framesRequired" url=$galleyUrl}
 			</td>
 		</tr>
 	</table>

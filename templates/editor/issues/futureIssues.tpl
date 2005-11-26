@@ -10,14 +10,14 @@
  *}
 
 {assign var="pageTitle" value="editor.issues.futureIssues"}
-{assign var="currentUrl" value="$pageUrl/editor/issues"}
+{url|assign:"currentUrl" page="editor" op="issues"}
 {include file="common/header.tpl"}
 
 <ul class="menu">
-        <li><a href="{$pageUrl}/editor/createIssue">{translate key="editor.navigation.createIssue"}</a></li>
-        <li><a href="{$pageUrl}/editor/schedulingQueue">{translate key="common.queue.short.submissionsInScheduling"}</a></li>
-        <li class="current"><a href="{$pageUrl}/editor/futureIssues">{translate key="editor.navigation.futureIssues"}</a></li>
-        <li><a href="{$pageUrl}/editor/backIssues">{translate key="editor.navigation.issueArchive"}</a></li>
+        <li><a href="{url op="createIssue"}">{translate key="editor.navigation.createIssue"}</a></li>
+        <li><a href="{url op="schedulingQueue"}">{translate key="common.queue.short.submissionsInScheduling"}</a></li>
+        <li class="current"><a href="{url op="futureIssues"}">{translate key="editor.navigation.futureIssues"}</a></li>
+        <li><a href="{url op="backIssues"}">{translate key="editor.navigation.issueArchive"}</a></li>
 </ul>
 
 <br/>
@@ -36,9 +36,9 @@
 	</tr>
 	{iterate from=issues item=issue}
 	<tr valign="top">
-		<td><a href="{$requestPageUrl}/issueToc/{$issue->getIssueId()}" class="action">{$issue->getIssueIdentification()|escape}</a></td>
+		<td><a href="{url op="issueToc" path=$issue->getIssueId()}" class="action">{$issue->getIssueIdentification()|escape}</a></td>
 		<td>{$issue->getNumArticles()}</td>
-		<td align="right"><a href="{$requestPageUrl}/removeIssue/{$issue->getIssueId()}" onclick="return confirm('{translate|escape:"javascript" key="editor.issues.confirmDelete"}')" class="action">{translate key="common.delete"}</a></td>
+		<td align="right"><a href="{url op="removeIssue" path=$issue->getIssueId()}" onclick="return confirm('{translate|escape:"javascript" key="editor.issues.confirmDelete"}')" class="action">{translate key="common.delete"}</a></td>
 	</tr>
 	<tr>
 		<td colspan="3" class="{if $issues->eof()}end{/if}separator">&nbsp;</td>

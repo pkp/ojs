@@ -10,15 +10,14 @@
  *}
 
 {assign var="pageTitle" value="common.queue.long.$pageToDisplay"}
-{assign var="thisUrl" value=$currentUrl}
-{assign var="currentUrl" value="$pageUrl/editor"}
+{url|assign:"currentUrl" page="editor"}
 {include file="common/header.tpl"}
 
 <ul class="menu">
-	<li{if $pageToDisplay == "submissionsUnassigned"} class="current"{/if}><a href="{$pageUrl}/editor/submissions/submissionsUnassigned">{translate key="common.queue.short.submissionsUnassigned"}</a></li>
-	<li{if $pageToDisplay == "submissionsInReview"} class="current"{/if}><a href="{$pageUrl}/editor/submissions/submissionsInReview">{translate key="common.queue.short.submissionsInReview"}</a></li>
-	<li{if $pageToDisplay == "submissionsInEditing"} class="current"{/if}><a href="{$pageUrl}/editor/submissions/submissionsInEditing">{translate key="common.queue.short.submissionsInEditing"}</a></li>
-	<li{if $pageToDisplay == "submissionsArchives"} class="current"{/if}><a href="{$pageUrl}/editor/submissions/submissionsArchives">{translate key="common.queue.short.submissionsArchives"}</a></li>
+	<li{if $pageToDisplay == "submissionsUnassigned"} class="current"{/if}><a href="{url op="submissions" path="submissionsUnassigned"}">{translate key="common.queue.short.submissionsUnassigned"}</a></li>
+	<li{if $pageToDisplay == "submissionsInReview"} class="current"{/if}><a href="{url op="submissions" path="submissionsInReview"}">{translate key="common.queue.short.submissionsInReview"}</a></li>
+	<li{if $pageToDisplay == "submissionsInEditing"} class="current"{/if}><a href="{url op="submissions" path="submissionsInEditing"}">{translate key="common.queue.short.submissionsInEditing"}</a></li>
+	<li{if $pageToDisplay == "submissionsArchives"} class="current"{/if}><a href="{url op="submissions" path="submissionsArchives"}">{translate key="common.queue.short.submissionsArchives"}</a></li>
 </ul>
 
 <br />
@@ -31,7 +30,7 @@
 {assign var="dateTo" value="--"}
 {/if}
 
-<form name="submit" action="{$requestPageUrl}/submissions/{$pageToDisplay}">
+<form method="post" name="submit" action="{url op="submissions" path=$pageToDisplay}">
 	<select name="searchField" size="1" class="selectMenu">
 		{html_options_translate options=$fieldOptions selected=$searchField}
 	</select>
@@ -55,7 +54,7 @@
 
 {include file="editor/$pageToDisplay.tpl"}
 <form action="#">
-{translate key="section.section"}: <select name="section" onchange="location.href='{$thisUrl}?section='+this.options[this.selectedIndex].value" size="1" class="selectMenu">{html_options options=$sectionOptions selected=$section}</select>
+{translate key="section.section"}: <select name="section" onchange="location.href='{url section="SECTION_ID"}'.replace('SECTION_ID', this.options[this.selectedIndex].value)" size="1" class="selectMenu">{html_options options=$sectionOptions selected=$section}</select>
 </form>
 
 {if ($pageToDisplay == "submissionsInReview")}

@@ -17,7 +17,7 @@
 function handleRequest() {
 	if (!Config::getVar('general', 'installed') && pageRequiresInstall()) {
 		// Redirect to installer if application has not been installed
-		Request::redirect('install');
+		Request::redirect(null, 'install');
 		
 	}
 

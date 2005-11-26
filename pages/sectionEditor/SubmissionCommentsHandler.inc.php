@@ -96,7 +96,7 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 
 		if (!$send) parent::setupTemplate(true, $articleId, 'editing');
 		if (SectionEditorAction::blindCcReviewsToReviewers($submission, $send)) {
-			Request::redirect(sprintf('%s/viewEditorDecisionComments/%d', Request::getRequestedPage(), $articleId));
+			Request::redirect(null, null, 'viewEditorDecisionComments', $articleId);
 		}
 	}
 	
@@ -239,15 +239,15 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		
 		// Redirect back to initial comments page
 		if ($comment->getCommentType() == COMMENT_TYPE_PEER_REVIEW) {
-			Request::redirect(sprintf('%s/viewPeerReviewComments/%d/%d', Request::getRequestedPage(), $articleId, $comment->getAssocId()));
+			Request::redirect(null, null, 'viewPeerReviewComments', array($articleId, $comment->getAssocId()));
 		} else if ($comment->getCommentType() == COMMENT_TYPE_EDITOR_DECISION) {
-			Request::redirect(sprintf('%s/viewEditorDecisionComments/%d', Request::getRequestedPage(), $articleId));
+			Request::redirect(null, null, 'viewEditorDecisionComments', $articleId);
 		} else if ($comment->getCommentType() == COMMENT_TYPE_COPYEDIT) {
-			Request::redirect(sprintf('%s/viewCopyeditComments/%d', Request::getRequestedPage(), $articleId));
+			Request::redirect(null, null, 'viewCopyeditComments', $articleId);
 		} else if ($comment->getCommentType() == COMMENT_TYPE_LAYOUT) {
-			Request::redirect(sprintf('%s/viewLayoutComments/%d', Request::getRequestedPage(), $articleId));
+			Request::redirect(null, null, 'viewLayoutComments', $articleId);
 		} else if ($comment->getCommentType() == COMMENT_TYPE_PROOFREAD) {
-			Request::redirect(sprintf('%s/viewProofreadComments/%d', Request::getRequestedPage(), $articleId));
+			Request::redirect(null, null, 'viewProofreadComments', $articleId);
 		}
 	}
 	
@@ -267,15 +267,15 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		
 		// Redirect back to initial comments page
 		if ($comment->getCommentType() == COMMENT_TYPE_PEER_REVIEW) {
-			Request::redirect(sprintf('%s/viewPeerReviewComments/%d/%d', Request::getRequestedPage(), $articleId, $comment->getAssocId()));
+			Request::redirect(null, null, 'viewPeerReviewComments', array($articleId, $comment->getAssocId()));
 		} else if ($comment->getCommentType() == COMMENT_TYPE_EDITOR_DECISION) {
-			Request::redirect(sprintf('%s/viewEditorDecisionComments/%d', Request::getRequestedPage(), $articleId));
+			Request::redirect(null, null, 'viewEditorDecisionComments', $articleId);
 		} else if ($comment->getCommentType() == COMMENT_TYPE_COPYEDIT) {
-			Request::redirect(sprintf('%s/viewCopyeditComments/%d', Request::getRequestedPage(), $articleId));
+			Request::redirect(null, null, 'viewCopyeditComments', $articleId);
 		} else if ($comment->getCommentType() == COMMENT_TYPE_LAYOUT) {
-			Request::redirect(sprintf('%s/viewLayoutComments/%d', Request::getRequestedPage(), $articleId));
+			Request::redirect(null, null, 'viewLayoutComments', $articleId);
 		} else if ($comment->getCommentType() == COMMENT_TYPE_PROOFREAD) {
-			Request::redirect(sprintf('%s/viewProofreadComments/%d', Request::getRequestedPage(), $articleId));
+			Request::redirect(null, null, 'viewProofreadComments', $articleId);
 		}
 
 	}
@@ -318,7 +318,7 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		}
 		
 		if (!$isValid) {
-			Request::redirect(Request::getRequestedPage());
+			Request::redirect(null, Request::getRequestedPage());
 		}
 
 		return array($comment);

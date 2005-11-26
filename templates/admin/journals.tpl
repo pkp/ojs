@@ -29,10 +29,10 @@
 	</tr>
 	{iterate from=journals item=journal}
 	<tr valign="top">
-		<td><a class="action" href="{$indexUrl}/{$journal->getPath()}/manager">{$journal->getTitle()|escape}</a></td>
+		<td><a class="action" href="{url journal=$journal->getPath() page="manager"}">{$journal->getTitle()|escape}</a></td>
 		<td>{$journal->getPath()|escape}</td>
-		<td><a href="{$pageUrl}/admin/moveJournal?d=u&amp;journalId={$journal->getJournalId()}">&uarr;</a> <a href="{$pageUrl}/admin/moveJournal?d=d&amp;journalId={$journal->getJournalId()}">&darr;</a></td>
-		<td align="right"><a href="{$pageUrl}/admin/editJournal/{$journal->getJournalId()}" class="action">{translate key="common.edit"}</a>&nbsp;|&nbsp;<a class="action" href="{$pageUrl}/admin/deleteJournal/{$journal->getJournalId()}" onclick="return confirm('{translate|escape:"javascript" key="admin.journals.confirmDelete"}')">{translate key="common.delete"}</a></td>
+		<td><a href="{url op="moveJournal" d=u journalId=$journal->getJournalId()}">&uarr;</a> <a href="{url op="moveJournal" d=d journalId=$journal->getJournalId()}">&darr;</a></td>
+		<td align="right"><a href="{url op="editJournal" path=$journal->getJournalId()}" class="action">{translate key="common.edit"}</a>&nbsp;|&nbsp;<a class="action" href="{url op="deleteJournal" path=$journal->getJournalId()}" onclick="return confirm('{translate|escape:"javascript" key="admin.journals.confirmDelete"}')">{translate key="common.delete"}</a></td>
 	</tr>
 	<tr>
 		<td colspan="4" class="{if $smarty.foreach.journals.last}end{/if}separator">&nbsp;</td>
@@ -53,6 +53,6 @@
 	{/if}
 </table>
 
-<p><a href="{$pageUrl}/admin/createJournal" class="action">{translate key="admin.journals.create"}</a> | <a href="{$pageUrl}/admin/importOJS1" class="action">{translate key="admin.journals.importOJS1"}</a></p>
+<p><a href="{url op="createJournal"}" class="action">{translate key="admin.journals.create"}</a> | <a href="{url op="importOJS1"}" class="action">{translate key="admin.journals.importOJS1"}</a></p>
 
 {include file="common/footer.tpl"}

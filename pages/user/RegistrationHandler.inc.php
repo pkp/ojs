@@ -59,11 +59,11 @@ class RegistrationHandler extends UserHandler {
 				$templateMgr->assign('pageTitle', 'user.login');
 				$templateMgr->assign('errorMsg', $reason==''?'user.login.accountDisabled':'user.login.accountDisabledWithReason');
 				$templateMgr->assign('errorParams', array('reason' => $reason));
-				$templateMgr->assign('backLink', Request::getPageUrl() . '/login');
+				$templateMgr->assign('backLink', Request::url(null, null, 'login'));
 				$templateMgr->assign('backLinkLabel', 'user.login');
 				$templateMgr->display('common/error.tpl');
 			}
-			Request::redirect('login');
+			Request::redirect(null, 'login');
 			
 		} else {
 			parent::setupTemplate(true);
@@ -79,7 +79,7 @@ class RegistrationHandler extends UserHandler {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('pageTitle', 'user.register');
 		$templateMgr->assign('errorMsg', 'user.register.registrationDisabled');
-		$templateMgr->assign('backLink', Request::getPageUrl() . '/login');
+		$templateMgr->assign('backLink', Request::url(null, null, 'login'));
 		$templateMgr->assign('backLinkLabel', 'user.login');
 		$templateMgr->display('common/error.tpl');
 	}

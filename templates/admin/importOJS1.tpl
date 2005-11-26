@@ -13,7 +13,7 @@
 {assign var="helpTopicId" value="site.siteManagement"}
 {include file="common/header.tpl"}
 
-<form method="post" action="{$pageUrl}/admin/doImportOJS1">
+<form method="post" action="{url page="admin" op="doImportOJS1"}">
 
 {include file="common/formErrors.tpl"}
 
@@ -53,7 +53,7 @@
 	</tr>
 </table>
 
-<p><input type="submit" value="{translate key="common.import"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{$pageUrl}/admin/journals'" /></p>
+<p><input type="submit" value="{translate key="common.import"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url page="admin" op="journals"}'" /></p>
 
 </form>
 

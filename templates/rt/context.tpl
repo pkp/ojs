@@ -103,7 +103,7 @@
 
 <table class="listing" width="100%">
 	{foreach from=$searches item=search key=key name=searches}
-	<form name="search{$key+1}form" method="{if $search->getSearchPost()}post{else}get{/if}" action="{$search->getSearchUrl()|escape}{if !$search->getSearchPost()}KEYWORDS_HERE{/if}">
+	<form method="post" name="search{$key+1}form" method="{if $search->getSearchPost()}post{else}get{/if}" action="{$search->getSearchUrl()|escape}{if !$search->getSearchPost()}KEYWORDS_HERE{/if}">
 	{foreach from=$search->postParams item=postParam}
 		<input type="hidden" name="{$postParam.name|escape}" value="{if $postParam.needsKeywords}KEYWORDS_HERE{else}{$postParam.value|escape}{/if}" />
 	{/foreach}

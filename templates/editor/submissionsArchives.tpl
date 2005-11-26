@@ -34,17 +34,17 @@
 		<td>{$submission->getDateSubmitted()|date_format:$dateFormatShort}</td>
 		<td>{$submission->getSectionAbbrev()|escape}</td>
 		<td>{$submission->getAuthorString(true)|truncate:40:"..."|escape}</td>
-		<td><a href="{$requestPageUrl}/submissionEditing/{$articleId}" class="action">{$submission->getArticleTitle()|strip_unsafe_html|truncate:60:"..."}</a></td>
+		<td><a href="{url op="submissionEditing" path=$articleId}" class="action">{$submission->getArticleTitle()|strip_unsafe_html|truncate:60:"..."}</a></td>
 		<td align="right">
 			{assign var="status" value=$submission->getStatus()}
 			{if $status == STATUS_ARCHIVED}
-				{translate key="submissions.archived"}&nbsp;&nbsp;<a href="{$requestPageUrl}/deleteSubmission/{$articleId}" onclick="return confirm('{translate|escape:"javascript" key="editor.submissionArchive.confirmDelete"}')" class="action">{translate key="common.delete"}</a>
+				{translate key="submissions.archived"}&nbsp;&nbsp;<a href="{url op="deleteSubmission" path=$articleId}" onclick="return confirm('{translate|escape:"javascript" key="editor.submissionArchive.confirmDelete"}')" class="action">{translate key="common.delete"}</a>
 			{elseif $status == STATUS_SCHEDULED}
 				{translate key="submissions.scheduled"}
 			{elseif $status == STATUS_PUBLISHED}
 				{print_issue_id articleId="$articleId"}	
 			{elseif $status == STATUS_DECLINED}
-				{translate key="submissions.declined"}&nbsp;&nbsp;<a href="{$requestPageUrl}/deleteSubmission/{$articleId}" onclick="return confirm('{translate|escape:"javascript" key="editor.submissionArchive.confirmDelete"}')" class="action">{translate key="common.delete"}</a>
+				{translate key="submissions.declined"}&nbsp;&nbsp;<a href="{url op="deleteSubmission" path=$articleId}" onclick="return confirm('{translate|escape:"javascript" key="editor.submissionArchive.confirmDelete"}')" class="action">{translate key="common.delete"}</a>
 			{/if}
 		</td>
 	</tr>

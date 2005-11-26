@@ -27,7 +27,7 @@ class EmailHandler extends ManagerHandler {
 		$emailTemplates = &$emailTemplateDao->getEmailTemplates(Locale::getLocale(), $journal->getJournalId());
 		
 		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign('pageHierarchy', array(array('manager', 'manager.journalManagement')));
+		$templateMgr->assign('pageHierarchy', array(array(Request::url(null, 'manager'), 'manager.journalManagement')));
 		$templateMgr->assign_by_ref('emailTemplates', $emailTemplates);
 		$templateMgr->assign('helpTopicId','journal.managementPages.emails');
 		$templateMgr->display('manager/emails/emails.tpl');
@@ -46,7 +46,7 @@ class EmailHandler extends ManagerHandler {
 		parent::setupTemplate(true);
 
 		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->append('pageHierarchy', array('manager/emails', 'manager.emails'));
+		$templateMgr->append('pageHierarchy', array(Request::url(null, 'manager', 'emails'), 'manager.emails'));
 		
 		$emailKey = !isset($args) || empty($args) ? null : $args[0];
 
@@ -72,7 +72,7 @@ class EmailHandler extends ManagerHandler {
 
 		if ($emailTemplateForm->validate()) {
 			$emailTemplateForm->execute();
-			Request::redirect('manager/emails');
+			Request::redirect(null, null, 'emails');
 
 		} else {
 			parent::setupTemplate(true);
@@ -94,7 +94,7 @@ class EmailHandler extends ManagerHandler {
 			$emailTemplateDao->deleteEmailTemplateByKey($emailKey, $journal->getJournalId());
 		}
 
-		Request::redirect('manager/emails');
+		Request::redirect(null, null, 'emails');
 	}
 
 	/**
@@ -111,7 +111,7 @@ class EmailHandler extends ManagerHandler {
 			$emailTemplateDao->deleteEmailTemplateByKey($args[0], $journal->getJournalId());
 		}
 		
-		Request::redirect('manager/emails');
+		Request::redirect(null, null, 'emails');
 	}
 	
 	/**
@@ -124,7 +124,7 @@ class EmailHandler extends ManagerHandler {
 		$emailTemplateDao = &DAORegistry::getDAO('EmailTemplateDAO');
 		$emailTemplateDao->deleteEmailTemplatesByJournal($journal->getJournalId());
 		
-		Request::redirect('manager/emails');
+		Request::redirect(null, null, 'emails');
 	}
 	
 	/**
@@ -157,7 +157,7 @@ class EmailHandler extends ManagerHandler {
 			}
 		}
 		
-		Request::redirect('manager/emails');
+		Request::redirect(null, null, 'emails');
 	}
 	
 	/**
@@ -186,7 +186,7 @@ class EmailHandler extends ManagerHandler {
 			}
 		}
 		
-		Request::redirect('manager/emails');
+		Request::redirect(null, null, 'emails');
 	}
 	
 }

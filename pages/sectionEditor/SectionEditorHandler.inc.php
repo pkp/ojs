@@ -141,8 +141,8 @@ class SectionEditorHandler extends Handler {
 		} else {
 			$templateMgr->assign('helpTopicId', 'editorial.sectionEditorsRole');
 
-			$pageHierarchy = $subclass ? array(array('user', 'navigation.user'), array('sectionEditor', 'user.role.sectionEditor'), array('sectionEditor', 'article.submissions'))
-				: array(array('user', 'navigation.user'), array('sectionEditor', 'user.role.sectionEditor'));
+			$pageHierarchy = $subclass ? array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, 'sectionEditor'), 'user.role.sectionEditor'), Request::url(null, array('sectionEditor'), 'article.submissions'))
+				: array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, 'sectionEditor'), 'user.role.sectionEditor'));
 
 			import('submission.sectionEditor.SectionEditorAction');
 			$submissionCrumb = SectionEditorAction::submissionBreadcrumb($articleId, $parentPage, 'sectionEditor');
@@ -150,8 +150,6 @@ class SectionEditorHandler extends Handler {
 				$pageHierarchy = array_merge($pageHierarchy, $submissionCrumb);
 			}
 			$templateMgr->assign('pageHierarchy', $pageHierarchy);
-
-			$templateMgr->assign('pagePath', '/user/sectionEditor');
 
 			if ($showSidebar) {
 				$templateMgr->assign('sidebarTemplate', 'sectionEditor/navsidebar.tpl');
@@ -172,7 +170,7 @@ class SectionEditorHandler extends Handler {
 	function instructions($args) {
 		import('submission.sectionEditor.SectionEditorAction');
 		if (!isset($args[0]) || !SectionEditorAction::instructions($args[0])) {
-			Request::redirect(Request::getRequestedPage());
+			Request::redirect(null, Request::getRequestedPage());
 		}
 	}
 

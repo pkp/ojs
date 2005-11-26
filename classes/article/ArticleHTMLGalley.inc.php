@@ -39,7 +39,7 @@ class ArticleHTMLGalley extends ArticleGalley {
 	 * @param $baseImageUrl string base URL for image references
 	 * @return string
 	 */
-	function getHTMLContents($baseImageUrl) {
+	function getHTMLContents() {
 		import('file.ArticleFileManager');
 		$fileManager = &new ArticleFileManager($this->getArticleId());
 		$contents = $fileManager->readFile($this->getFileId());
@@ -48,9 +48,10 @@ class ArticleHTMLGalley extends ArticleGalley {
 		$images = &$this->getImageFiles();
 
 		foreach ($images as $image) {
+			$imageUrl = Request::url(null, 'article', 'viewFile', array($this->getArticleId(), $this->getGalleyId(), $image->getFileId()));
 			$contents = preg_replace(
 				'/[Ss][Rr][Cc]\s*=\s*"([^"]*' . preg_quote($image->getOriginalFileName()) .    ')"/', 
-				'src="' . $baseImageUrl . '/' . $this->getArticleId() . '/' . $this->getGalleyId() . '/' . $image->getFileId() . '"',
+				'src="' . $imageUrl . '"',
 				$contents,
 				1
 			);
@@ -71,19 +72,27 @@ class ArticleHTMLGalley extends ArticleGalley {
 		$urlParts = explode('/', $url);
 		if (isset($urlParts[0])) switch(String::strtolower($urlParts[0])) {
 			case 'journal':
-				$url = Request::getIndexUrl() . '/' . (isset($urlParts[1])?$urlParts[1]:Request::getRequestedJournalPath());
+				$url = Request::url(
+					isset($urlParts[1]) ?
+						$urlParts[1] :
+						Request::getRequestedJournalPath()
+				);
 				break;
 			case 'article':
 				if (isset($urlParts[1])) {
-					$url = Request::getPageUrl() . '/article/view/' . $urlParts[1];
+					$url = Request::url(null, 'article', 'view', $urlParts[1]);
 				}
 				break;
 			case 'issue':
-				$url = Request::getPageUrl() . '/issue/' . (isset($urlParts[1])?'view/' . $urlParts[1] : 'current');
+				if (isset($urlParts[1])) {
+					$url = Request::url(null, 'issue', 'view', $urlParts[1]);
+				} else {
+					$url = Request::url(null, 'issue', 'current');
+				}
 				break;
 			case 'suppfile':
 				if (isset($urlParts[1]) && isset($urlParts[2])) {
-					$url = Request::getPageUrl() . '/article/downloadSuppFile/' . $urlParts[1] . '/' . $urlParts[2];
+					$url = Request::url(null, 'article', 'downloadSuppFile', array($urlParts[1], $urlParts[2]));
 				}
 				break;
 			case 'sitepublic':

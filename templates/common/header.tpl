@@ -66,29 +66,29 @@
 <div id="main">
 <div id="navbar">
 	<ul class="menu">
-		<li><a href="{$pageUrl}">{translate key="navigation.home"}</a></li>
-		<li><a href="{$pageUrl}/about">{translate key="navigation.about"}</a></li>
+		<li><a href="{url page="index"}">{translate key="navigation.home"}</a></li>
+		<li><a href="{url page="about"}">{translate key="navigation.about"}</a></li>
 		{if $isUserLoggedIn}
-		<li><a href="{$pageUrl}/user">{translate key="navigation.userHome"}</a></li>
+		<li><a href="{url page="user"}">{translate key="navigation.userHome"}</a></li>
 		{else}
-		<li><a href="{$pageUrl}/login">{translate key="navigation.login"}</a></li>
-		<li><a href="{$pageUrl}/user/register">{translate key="navigation.register"}</a></li>
+		<li><a href="{url page="login"}">{translate key="navigation.login"}</a></li>
+		<li><a href="{url page="user" op="register"}">{translate key="navigation.register"}</a></li>
 		{/if}
-		<li><a href="{$pageUrl}/search">{translate key="navigation.search"}</a></li>
+		<li><a href="{url page="search"}">{translate key="navigation.search"}</a></li>
 		{if $currentJournal}
-		<li><a href="{$pageUrl}/issue/current">{translate key="navigation.current"}</a></li>
-		<li><a href="{$pageUrl}/issue/archive">{translate key="navigation.archives"}</a></li>
+		<li><a href="{url page="issue" op="current"}">{translate key="navigation.current"}</a></li>
+		<li><a href="{url page="issue" op="archive"}">{translate key="navigation.archives"}</a></li>
 		{/if}
 		{foreach from=$navMenuItems item=navItem}
-		<li><a href="{if $navItem.isAbsolute}{$navItem.url|escape}{else}{$pageUrl}{$navItem.url|escape}{/if}">{if $navItem.isLiteral}{$navItem.name|escape}{else}{translate key=$navItem.name}{/if}</a></li>
+		<li><a href="{if $navItem.isAbsolute}{$navItem.url|escape}{else}{$navItem.url|escape}{/if}">{if $navItem.isLiteral}{$navItem.name|escape}{else}{translate key=$navItem.name}{/if}</a></li>
 		{/foreach}
 	</ul>
 </div>
 
 <div id="breadcrumb">
-	<a href="{$pageUrl}">{translate key="navigation.home"}</a> &gt;
+	<a href="{url page="index"}">{translate key="navigation.home"}</a> &gt;
 	{foreach from=$pageHierarchy item=hierarchyLink}
-		<a href="{$pageUrl}/{$hierarchyLink[0]}" class="hierarchyLink">{if not $hierarchyLink[2]}{translate key=$hierarchyLink[1]}{else}{$hierarchyLink[1]}{/if}</a> &gt;
+		<a href="{$hierarchyLink[0]}" class="hierarchyLink">{if not $hierarchyLink[2]}{translate key=$hierarchyLink[1]}{else}{$hierarchyLink[1]}{/if}</a> &gt;
 	{/foreach}
 	<a href="{$currentUrl}" class="current">{$pageCrumbTitleTranslated}</a>
 </div>

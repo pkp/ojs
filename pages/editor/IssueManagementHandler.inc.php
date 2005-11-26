@@ -87,7 +87,7 @@ class IssueManagementHandler extends EditorHandler {
 			}
 		}
 
-		Request::redirect(sprintf('%s/backIssues', Request::getRequestedPage(), $issueId));
+		Request::redirect(null, null, 'backIssues');
 	}
 
 	/**
@@ -231,7 +231,7 @@ class IssueManagementHandler extends EditorHandler {
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
 		$issueDao->updateIssue($issue);
 
-		Request::redirect(sprintf('%s/issueData/%d', Request::getRequestedPage(), $issueId));
+		Request::redirect(null, null, 'issueData', $issueId);
 	}
 
 	/**
@@ -336,7 +336,7 @@ class IssueManagementHandler extends EditorHandler {
 			$articleDao->updateArticle($article);
 		}
 
-		Request::redirect(sprintf('%s/issueToc/%d', Request::getRequestedPage(), $issueId));
+		Request::redirect(null, null, 'issueToc', $issueId);
 	}
 
 	/**
@@ -359,7 +359,7 @@ class IssueManagementHandler extends EditorHandler {
 			$sectionDao->moveCustomSectionOrder($issueId, $section->getSectionId(), Request::getUserVar('d')==='u');
 		}
 
-		Request::redirect(sprintf('%s/issueToc/%d', Request::getRequestedPage(), $issueId));
+		Request::redirect(null, null, 'issueToc', $issueId);
 	}
 
 	/**
@@ -372,7 +372,7 @@ class IssueManagementHandler extends EditorHandler {
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
 		$sectionDao->deleteCustomSectionOrdering($issueId);
 
-		Request::redirect(sprintf('%s/issueToc/%s', Request::getRequestedPage(), $issue->getIssueId()));
+		Request::redirect(null, null, 'issueToc', $issue->getIssueId());
 	}
 
 	/**
@@ -393,7 +393,7 @@ class IssueManagementHandler extends EditorHandler {
 			$publishedArticleDao->resequencePublishedArticles(Request::getUserVar('sectionId'),$issueId);
 		}
 
-		Request::redirect(sprintf('%s/issueToc/%d', Request::getRequestedPage(), $issueId));
+		Request::redirect(null, null, 'issueToc', $issueId);
 	}
 
 	/**
@@ -413,7 +413,7 @@ class IssueManagementHandler extends EditorHandler {
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
 		$issueDao->updateCurrentIssue($journalId,$issue);
 
-		Request::redirect(sprintf('%s/issueToc/%s', Request::getRequestedPage(), $issue->getIssueId()));
+		Request::redirect(null, null, 'issueToc', $issue->getIssueId());
 	}
 
 	/**
@@ -471,7 +471,7 @@ class IssueManagementHandler extends EditorHandler {
 
 			$email->send();
 
-			Request::redirect(Request::getRequestedPage());
+			Request::redirect(null, Request::getRequestedPage());
 		} else {
 			if (!Request::getUserVar('continued')) {
 				$email->assignParams(array(
@@ -484,7 +484,7 @@ class IssueManagementHandler extends EditorHandler {
 			$issuesIterator = &$issueDao->getIssues($journal->getJournalId());
 
 			$email->displayEditForm(
-				Request::getPageUrl() . '/' . Request::getRequestedPage() . '/notifyUsers',
+				Request::url(null, null, 'notifyUsers'),
 				array(),
 				'editor/notifyUsers.tpl',
 				array(
@@ -543,7 +543,7 @@ class IssueManagementHandler extends EditorHandler {
 			$issue = $issueDao->getIssueById($issueId, $journal->getJournalId());
 			
 			if (!isset($issue)) {
-				Request::redirect(sprintf('%s/createIssue', Request::getRequestedPage()));
+				Request::redirect(null, null, 'createIssue');
 			}
 			
 			return $issue;

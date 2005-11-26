@@ -12,7 +12,7 @@
 {assign var="pageTitle" value="manager.setup.guidingSubmissions}
 {include file="manager/setup/setupHeader.tpl"}
 
-<form method="post" action="{$pageUrl}/manager/saveSetup/3">
+<form method="post" action="{url op="saveSetup" path="3"}">
 {include file="common/formErrors.tpl"}
 
 <h3>3.1 {translate key="manager.setup.authorGuidelines"}</h3>
@@ -216,13 +216,15 @@
 
 <h3>3.4 {translate key="manager.setup.registerJournalForIndexing"}</h3>
 
-<p>{translate key="manager.setup.registerJournalForIndexingDescription" siteUrl="$pageUrl/" oaiUrl="$pageUrl/oai/"}</p>
+{url|assign:"oaiSiteUrl" journal=$currentJournal->getPath()}
+{url|assign:"oaiUrl" page="oai"}
+<p>{translate key="manager.setup.registerJournalForIndexingDescription" siteUrl=$oaiSiteUrl oaiUrl=$oaiUrl}</p>
 
 
 <div class="separator"></div>
 
 
-<p><input type="submit" value="{translate key="common.saveAndContinue"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{$pageUrl}/manager/setup'" /></p>
+<p><input type="submit" value="{translate key="common.saveAndContinue"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url op="setup"}'" /></p>
 
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 

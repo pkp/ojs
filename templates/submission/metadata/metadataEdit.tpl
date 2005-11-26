@@ -12,7 +12,7 @@
 {assign var="pageTitle" value="submission.editMetadata"}
 {include file="common/header.tpl"}
 
-<form name="metadata" method="post" action="{$requestPageUrl}/saveMetadata">
+<form name="metadata" method="post" action="{url op="saveMetadata"}">
 <input type="hidden" name="articleId" value="{$articleId}" />
 {include file="common/formErrors.tpl"}
 

@@ -10,10 +10,10 @@
  *}
 
 {assign var="pageTitle" value="user.changePassword"}
-{assign var="currentUrl" value="$pageUrl/login/changePassword"}
+{url|assign:"currentUrl" page="login" op="changePassword"}
 {include file="common/header.tpl"}
 
-<form method="post" action="{$pageUrl}/login/savePassword">
+<form method="post" action="{url page="login" op="savePassword"}">
 
 {include file="common/formErrors.tpl"}
 
@@ -41,7 +41,7 @@
 	<td class="value"><input type="password" name="password2" value="{$password2|escape}" id="password2" size="20" maxlength="32" class="textField" /></td>
 </tr>
 </table>
-<p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{$pageUrl}/login'" /></p>
+<p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url page="login"}'" /></p>
 
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 

@@ -15,7 +15,7 @@
 {assign var="pageTitle" value="manager.people.enrollment"}
 {include file="common/header.tpl"}
 
-<form name="disableUser" method="post" action="{$pageUrl}/manager/disableUser">
+<form name="disableUser" method="post" action="{url op="disableUser"}">
 	<input type="hidden" name="reason" value=""/>
 	<input type="hidden" name="userId" value=""/>
 </form>
@@ -36,7 +36,7 @@ function confirmAndPrompt(userId) {
 {/literal}
 </script>
 
-<form name="submit" action="{$requestPageUrl}/enrollSearch">
+<form method="post" name="submit" action="{url op="enrollSearch"}">
 <input type="hidden" name="roleId" value="{$roleId}"/>
 	<select name="searchField" size="1" class="selectMenu">
 		{html_options_translate options=$fieldOptions selected=$searchField}
@@ -48,9 +48,9 @@ function confirmAndPrompt(userId) {
 	<input type="text" size="15" name="search" class="textField" value="{$search|escape}" />&nbsp;<input type="submit" value="{translate key="common.search"}" class="button" />
 </form>
 
-<p>{section loop=26 name=letters}<a href="{$requestPageUrl}/enrollSearch?searchInitial={$smarty.section.letters.index+$start|chr}&amp;roleId={$roleId}">{if chr($smarty.section.letters.index+$start) == $searchInitial}<strong>{$smarty.section.letters.index+$start|chr}</strong>{else}{$smarty.section.letters.index+$start|chr}{/if}</a> {/section}<a href="{$requestPageUrl}/enrollSearch?roleId={$roleId}">{if $searchInitial==''}<strong>{translate key="common.all"}</strong>{else}{translate key="common.all"}{/if}</a></p>
+<p>{section loop=26 name=letters}<a href="{url op="enrollSearch" searchInitial=$smarty.section.letters.index+$start|chr roleId=$roleId}">{if chr($smarty.section.letters.index+$start) == $searchInitial}<strong>{$smarty.section.letters.index+$start|chr}</strong>{else}{$smarty.section.letters.index+$start|chr}{/if}</a> {/section}<a href="{url op="enrollSearch" roleId=$roleId}">{if $searchInitial==''}<strong>{translate key="common.all"}</strong>{else}{translate key="common.all"}{/if}</a></p>
 
-<form name="enroll" action="{$requestPageUrl}/enroll{if $roleId}/{$roleId}{/if}" method="post">
+<form name="enroll" action="{if $roleId}{url op="enroll" path=$roleId}{else}{url op="enroll"}{/if}" method="post">
 {if !$roleId}
 	<p>
 	{translate key="manager.people.enrollUserAs"} <select name="roleId" size="1"  class="selectMenu">
@@ -69,7 +69,10 @@ function confirmAndPrompt(userId) {
 	<script type="text/javascript">
 	<!--
 	function enrollUser(userId) {ldelim}
-		location.href = '{$requestPageUrl}/enroll/'+document.enroll.roleId.options[document.enroll.roleId.selectedIndex].value+'?userId='+userId;
+		var fakeUrl = '{url op="enroll" path="ROLE_ID" userId="USER_ID"}';
+		fakeUrl.replace('ROLE_ID', document.enroll.roleId.options[document.enroll.roleId.selectedIndex]);
+		fakeUrl.replace('USER_ID', userId);
+		location.href = fakeUrl;
 	{rdelim}
 	// -->
 	</script>
@@ -90,22 +93,22 @@ function confirmAndPrompt(userId) {
 {assign var="stats" value=$statistics[$userid]}
 <tr valign="top">
 	<td><input type="checkbox" name="users[]" value="{$user->getUserId()}" /></td>
-	<td><a class="action" href="{$requestPageUrl}/userProfile/{$userid}">{$user->getUsername()}</a></td>
+	<td><a class="action" href="{url op="userProfile" path=$userid}">{$user->getUsername()}</a></td>
 	<td>{$user->getFullName(true)|escape}</td>
 	<td class="nowrap">
 		{assign var=emailString value="`$user->getFullName()` <`$user->getEmail()`>"}
-		{assign var=emailStringEscaped value=$emailString|escape:"url"}
-		{$user->getEmail()|truncate:20:"..."|escape}&nbsp;{icon name="mail" url="`$requestPageUrl`/email?to[]=$emailStringEscaped"}
+		{url|assign:"url" op="email" to=$emailString|to_array}
+		{$user->getEmail()|truncate:20:"..."|escape}&nbsp;{icon name="mail" url=$url}
 	</td>
 	<td align="right" class="nowrap">
 		{if $roleId}
-		<a href="{$requestPageUrl}/enroll/{$roleId}?userId={$user->getUserId()}" class="action">{translate key="manager.people.enroll"}</a>&nbsp;|
+		<a href="{url op="enroll" path=$roleId userId=$user->getUserId()}" class="action">{translate key="manager.people.enroll"}</a>
 		{else}
 		<a href="javascript:enrollUser({$user->getUserId()})" class="action">{translate key="manager.people.enroll"}</a>
 		{/if}
 		{if $thisUser->getUserId() != $user->getUserId()}
 			{if $user->getDisabled()}
-				|&nbsp;<a href="{$pageUrl}/manager/enableUser/{$user->getUserId()}" class="action">{translate key="manager.people.enable"}</a>
+				|&nbsp;<a href="{url op="enableUser" path=$user->getUserId()}" class="action">{translate key="manager.people.enable"}</a>
 			{else}
 				|&nbsp;<a href="javascript:confirmAndPrompt({$user->getUserId()})" class="action">{translate key="manager.people.disable"}</a>
 			{/if}
@@ -127,7 +130,7 @@ function confirmAndPrompt(userId) {
 {/if}
 </table>
 
-<input type="submit" value="{translate key="manager.people.enrollSelected"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{$pageUrl}/manager'" />
+<input type="submit" value="{translate key="manager.people.enrollSelected"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url page="manager"}'" />
 
 </form>
 

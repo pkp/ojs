@@ -45,11 +45,11 @@ class PublishedArticleDAO extends DAO {
 
 		if (isset($limit)) {
 			$result = &$this->retrieveLimit(
-				'SELECT pa.*, a.*, s.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, s.abbrev AS section_abbrev, s.abbrev_alt1 AS section_abbrev_alt1, s.abbrev_alt2 AS section_abbrev_alt2 FROM published_articles pa, articles a LEFT JOIN sections s ON s.section_id = a.section_id LEFT JOIN custom_section_orders o ON a.section_id = o.section_id AND pa.issue_id = o.issue_id WHERE pa.article_id = a.article_id AND pa.issue_id = ? ORDER BY COALESCE(o.seq, s.seq) ASC, pa.seq ASC', $issueId, $limit
+				'SELECT DISTINCT pa.*, a.*, s.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, s.abbrev AS section_abbrev, s.abbrev_alt1 AS section_abbrev_alt1, s.abbrev_alt2 AS section_abbrev_alt2 FROM published_articles pa, articles a LEFT JOIN sections s ON s.section_id = a.section_id LEFT JOIN custom_section_orders o ON a.section_id = o.section_id WHERE pa.article_id = a.article_id AND pa.issue_id = ? AND (o.issue_id IS NULL OR o.issue_id = pa.issue_id) ORDER BY COALESCE(o.seq, s.seq) ASC, pa.seq ASC', $issueId, $limit
 			);
 		} else {
 			$result = &$this->retrieve(
-				'SELECT pa.*, a.*, s.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, s.abbrev AS section_abbrev, s.abbrev_alt1 AS section_abbrev_alt1, s.abbrev_alt2 AS section_abbrev_alt2 FROM published_articles pa, articles a LEFT JOIN sections s ON s.section_id = a.section_id LEFT JOIN custom_section_orders o ON a.section_id = o.section_id AND pa.issue_id = o.issue_id WHERE pa.article_id = a.article_id AND pa.issue_id = ? ORDER BY COALESCE(o.seq, s.seq) ASC, pa.seq ASC', $issueId
+				'SELECT DISTINCT pa.*, a.*, s.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, s.abbrev AS section_abbrev, s.abbrev_alt1 AS section_abbrev_alt1, s.abbrev_alt2 AS section_abbrev_alt2 FROM published_articles pa, articles a LEFT JOIN sections s ON s.section_id = a.section_id LEFT JOIN custom_section_orders o ON a.section_id = o.section_id WHERE (o.issue_id IS NULL OR o.issue_id = pa.issue_id) AND pa.article_id = a.article_id AND pa.issue_id = ? ORDER BY COALESCE(o.seq, s.seq) ASC, pa.seq ASC', $issueId
 			);
 		}
 
@@ -73,7 +73,7 @@ class PublishedArticleDAO extends DAO {
 		$publishedArticles = array();
 
 		$result = &$this->retrieve(
-			'SELECT pa.*, a.*, s.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, s.abbrev AS section_abbrev, s.abbrev_alt1 AS section_abbrev_alt1, s.abbrev_alt2 AS section_abbrev_alt2, s.abstracts_disabled AS abstracts_disabled, s.hide_title AS section_hide_title FROM published_articles pa, articles a LEFT JOIN sections s ON s.section_id = a.section_id LEFT JOIN custom_section_orders o ON a.section_id = o.section_id AND pa.issue_id = o.issue_id WHERE pa.article_id = a.article_id AND pa.issue_id = ? ORDER BY COALESCE(o.seq, s.seq) ASC, pa.seq ASC', $issueId
+			'SELECT DISTINCT pa.*, a.*, s.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, s.abbrev AS section_abbrev, s.abbrev_alt1 AS section_abbrev_alt1, s.abbrev_alt2 AS section_abbrev_alt2, s.abstracts_disabled AS abstracts_disabled, s.hide_title AS section_hide_title FROM published_articles pa, articles a LEFT JOIN sections s ON s.section_id = a.section_id LEFT JOIN custom_section_orders o ON a.section_id = o.section_id WHERE (o.issue_id IS NULL OR pa.issue_id = o.issue_id) AND pa.article_id = a.article_id AND pa.issue_id = ? ORDER BY COALESCE(o.seq, s.seq) ASC, pa.seq ASC', $issueId
 		);
 
 		$currSectionId = 0;
@@ -480,6 +480,30 @@ class PublishedArticleDAO extends DAO {
 
 		return $returner;
 	}
- }
+
+	/**
+	 * Get statistics about articles in the system.
+	 * Returns a map of name => value pairs.
+	 * @param $journalId int The journal to fetch statistics for
+	 * @return array
+	 */
+	function getArticleStatistics($journalId) {
+		$result = &$this->retrieve(
+			'SELECT COUNT(a.article_id) AS num_submissions, COUNT(pa.pub_id) AS num_pub_submissions FROM articles a LEFT JOIN published_articles pa ON (a.article_id = pa.article_id) WHERE a.journal_id = ?',
+			$journalId
+		);
+
+		$row = $result->GetRowAssoc(false);
+		$returner = array(
+			'numSubmissions' => $row['num_submissions'],
+			'numPublishedSubmissions' => $row['num_pub_submissions']
+		);
+
+		$result->Close();
+		unset($result);
+
+		return $returner;
+	}
+}
 
 ?>

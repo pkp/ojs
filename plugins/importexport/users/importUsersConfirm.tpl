@@ -13,7 +13,7 @@
 {include file="common/header.tpl"}
 
 {translate key="plugins.importexport.users.import.confirmUsers"}:
-<form action="{$pluginUrl}/import" method="post">
+<form action="{plugin_url path="import"}" method="post">
 {if $sendNotify}
 	<input type="hidden" name="sendNotify" value="{$sendNotify|escape}" />
 {/if}
@@ -89,6 +89,6 @@
 </p>
 {/if}
 
-<p>&#187; <a href="{$pageUrl}/manager">{translate key="manager.journalManagement"}</a></p>
+<p>&#187; <a href="{url page="manager"}">{translate key="manager.journalManagement"}</a></p>
 
 {include file="common/footer.tpl"}

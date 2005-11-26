@@ -18,18 +18,18 @@
 
 <ul>
 {iterate from=journals item=journal}
-	{if $journal->getSetting('enableLockss')}<li><a href="{$indexUrl}/{$journal->getPath()}/gateway/lockss">{$journal->getTitle()|escape}</a></li>{/if}
+	{if $journal->getSetting('enableLockss')}<li><a href="{url journal=$journal->getPath() page="gateway" op="lockss"}">{$journal->getTitle()|escape}</a></li>{/if}
 {/iterate}
 </ul>
 {else}
 
-<p>{if $prevYear !== null}<a href="{$requestPageUrl}/lockss?year={$prevYear}" class="action">&lt;&lt; Previous</a>{else}<span class="disabled heading">&lt;&lt; Previous</span>{/if} | {if $nextYear !== null}<a href="{$requestPageUrl}/lockss?year={$nextYear}" class="action">Next &gt;&gt;</a>{else}<span class="disabled heading">Next &gt;&gt;</span>{/if}</p>
+<p>{if $prevYear !== null}<a href="{url op="lockss" year=$prevYear}" class="action">&lt;&lt; Previous</a>{else}<span class="disabled heading">&lt;&lt; Previous</span>{/if} | {if $nextYear !== null}<a href="{url op="lockss" year=$nextYear}" class="action">Next &gt;&gt;</a>{else}<span class="disabled heading">Next &gt;&gt;</span>{/if}</p>
 
 <h3>Archive of Published Issues: {$year}</h3>
 
 <ul>
 {iterate from=issues item=issue}
-	<li><a href="{$pageUrl}/issue/view/{$issue->getBestIssueId($journal)}">{$issue->getIssueIdentification()|escape}</a></li>
+	<li><a href="{url page="issue" op="view" path=$issue->getBestIssueId($journal)}">{$issue->getIssueIdentification()|escape}</a></li>
 {/iterate}
 </ul>
 
@@ -43,9 +43,9 @@
 <p>Front Matter associated with this Archival Unit includes:</p>
 
 <ul>
-	<li><a href="{$pageUrl}/about">About the Journal</a></li>
-	<li><a href="{$pageUrl}/about/submissions">Submission Guidelines</a></li>
-	<li><a href="{$pageUrl}/about/contact">Contact Information</a></li>
+	<li><a href="{url page="about"}">About the Journal</a></li>
+	<li><a href="{url page="about" op="submission"}">Submission Guidelines</a></li>
+	<li><a href="{url page="about" op="contact"}">Contact Information</a></li>
 </ul>
 
 <br />

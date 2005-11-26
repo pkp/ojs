@@ -37,14 +37,14 @@ class Handler {
 		
 		if ($requiresJournal && $journal == null) {
 			// Requested page is only allowed for journals
-			Request::redirect('about');
+			Request::redirect(null, 'about');
 		}
 		
 		if ($journal != null && !Validation::isLoggedIn() && Request::getRequestedPage() != 'login' && Request::getRequestedPage() != 'user' && Request::getRequestedPage() != 'help') {
 			// Check if unregistered users can access the site
 			$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
 			if ($journalSettingsDao->getSetting($journal->getJournalId(), 'restrictSiteAccess')) {
-				Request::redirect('login');
+				Request::redirect(null, 'login');
 			}
 		}
 	}

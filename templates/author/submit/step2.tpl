@@ -18,7 +18,7 @@
 
 <div class="separator"></div>
 
-<form name="submit" method="post" action="{$pageUrl}/author/saveSubmit/{$submitStep}">
+<form name="submit" method="post" action="{url op="saveSubmit" path=$submitStep}">
 <input type="hidden" name="articleId" value="{$articleId}" />
 {include file="common/formErrors.tpl"}
 
@@ -305,7 +305,7 @@ function moveAuthor(dir, authorIndex) {
 
 <div class="separator"></div>
 
-<p><input type="submit" value="{translate key="common.saveAndContinue"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="confirmAction('{$pageUrl}/author', '{translate|escape:"javascript" key="author.submit.cancelSubmission"}')" /></p>
+<p><input type="submit" value="{translate key="common.saveAndContinue"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="confirmAction('{url page="author"}', '{translate|escape:"javascript" key="author.submit.cancelSubmission"}')" /></p>
 
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 

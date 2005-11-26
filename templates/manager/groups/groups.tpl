@@ -15,9 +15,9 @@
 
 <br/>
 
-<form action="{$pageUrl}/manager/setBoardEnabled" method="post">
-	{assign var=aboutEditorialTeamUrl value="$pageUrl/about/editorialTeam"}
-	{assign var=peopleManagementUrl value="$pageUrl/manager/people/all"}
+<form action="{url op="setBoardEnabled"}" method="post">
+	{url|assign:"aboutEditorialTeamUrl" page="about" op="editorialTeam"}
+	{url|assign:"peopleManagementUrl" page="manager" op="people" path="all"}
 	{translate key="manager.groups.enableBoard.description" aboutEditorialTeamUrl=$aboutEditorialTeamUrl}<br/>
 	<input type="radio" id="boardEnabledOff" {if !$boardEnabled}checked="checked" {/if}name="boardEnabled" value="0"/>&nbsp;<label for="boardEnabledOff">{translate key="manager.groups.disableBoard"}</label><br/>
 	<input type="radio" id="boardEnabledOn" {if $boardEnabled}checked="checked" {/if}name="boardEnabled" value="1"/>&nbsp;<label for="boardEnabledOn">{translate key="manager.groups.enableBoard"}</label><br/>
@@ -41,7 +41,7 @@
 	<tr valign="top">
 		<td>{$group->getGroupTitle()|escape}</td>
 		<td>
-			<a href="{$pageUrl}/manager/editGroup/{$group->getGroupId()}" class="action">{translate key="common.edit"}</a>&nbsp;|&nbsp;<a href="{$pageUrl}/manager/groupMembership/{$group->getGroupId()}" class="action">{translate key="manager.groups.membership"}</a>&nbsp;|&nbsp;<a href="{$pageUrl}/manager/deleteGroup/{$group->getGroupId()}" onclick="return confirm('{translate|escape:"javascript" key="manager.groups.confirmDelete"}')" class="action">{translate key="common.delete"}</a>&nbsp;|&nbsp;<a href="{$pageUrl}/manager/moveGroup?d=u&amp;groupId={$group->getGroupId()}">&uarr;</a>&nbsp;<a href="{$pageUrl}/manager/moveGroup?d=d&amp;groupId={$group->getGroupId()}">&darr;</a>
+			<a href="{url op="editGroup" path=$group->getGroupId()}" class="action">{translate key="common.edit"}</a>&nbsp;|&nbsp;<a href="{url op="groupMembership" path=$group->getGroupId()}" class="action">{translate key="manager.groups.membership"}</a>&nbsp;|&nbsp;<a href="{url op="deleteGroup" path=$group->getGroupId()}" onclick="return confirm('{translate|escape:"javascript" key="manager.groups.confirmDelete"}')" class="action">{translate key="common.delete"}</a>&nbsp;|&nbsp;<a href="{url op="moveGroup" d=u groupId=$group->getGroupId()}">&uarr;</a>&nbsp;<a href="{url op="moveGroup" d=d groupId=$group->getGroupId()}">&darr;</a>
 		</td>
 	</tr>
 	<tr>
@@ -63,6 +63,6 @@
 {/if}
 </table>
 
-<a href="{$pageUrl}/manager/createGroup" class="action">{translate key="manager.groups.create"}</a>
+<a href="{url op="createGroup"}" class="action">{translate key="manager.groups.create"}</a>
 
 {include file="common/footer.tpl"}

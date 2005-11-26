@@ -123,7 +123,7 @@
 	<td>10.</td>
 	<td>{translate key="rt.metadata.dublinCore.identifier"}</td>
 	<td>{translate key="rt.metadata.pkp.uri"}</td>
-	<td><a target="_new" href="{$pageUrl}/article/view/{$articleId|escape:"url"}">{$pageUrl|escape}/article/view/{$articleId|escape:"url"}</a></td>
+	<td><a target="_new" href="{url page="article" op="view" path=$articleId}">{url page="article" op="view" path=$articleId}</a></td>
 </tr>
 <tr><td colspan="4" class="separator">&nbsp;</td></tr>
 <tr valign="top">
@@ -147,7 +147,7 @@
 	<td>{translate key="rt.metadata.pkp.suppFiles"}</td>
 	<td>
 		{foreach from=$article->getSuppFiles() item=suppFile}
-			<a href="{$pageUrl}/article/download/{$articleId|escape:"url"}/{$suppFile->getFileId()}">{$suppFile->getTitle()|escape}</a> ({$suppFile->getNiceFileSize()})<br />
+			<a href="{url page="article" op="download" path=$articleId|to_array:$suppFile->getFileId()}">{$suppFile->getTitle()|escape}</a> ({$suppFile->getNiceFileSize()})<br />
 		{/foreach}
 	</td>
 </tr>

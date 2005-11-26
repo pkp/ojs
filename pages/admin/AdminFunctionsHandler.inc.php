@@ -65,7 +65,7 @@ class AdminFunctionsHandler extends AdminHandler {
 		parent::setupTemplate(true);
 		
 		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->append('pageHierarchy', array('admin/systemInfo', 'admin.systemInformation'));
+		$templateMgr->append('pageHierarchy', array(Request::url(null, 'admin', 'systemInfo'), 'admin.systemInformation'));
 		
 		$configData = &Config::getData();
 		
@@ -107,7 +107,7 @@ class AdminFunctionsHandler extends AdminHandler {
 		if (!$configParser->updateConfig(Config::getConfigFileName(), $configData)) {
 			// Error reading config file (this should never happen)
 			$templateMgr->assign('errorMsg', 'admin.systemConfigFileReadError');
-			$templateMgr->assign('backLink', Request::getPageUrl() . '/systemInfo');
+			$templateMgr->assign('backLink', Request::url(null, null, 'systemInfo'));
 			$templateMgr->assign('backLinkLabel', 'admin.systemInformation');
 			$templateMgr->display('common/error.tpl');
 			
@@ -146,7 +146,7 @@ class AdminFunctionsHandler extends AdminHandler {
 		parent::validate();
 		$sessionDao = &DAORegistry::getDAO('SessionDAO');
 		$sessionDao->deleteAllSessions();
-		Request::redirect('admin');
+		Request::redirect(null, 'admin');
 	}
 	
 	/**
@@ -156,7 +156,7 @@ class AdminFunctionsHandler extends AdminHandler {
 		parent::validate();
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->clearTemplateCache();
-		Request::redirect('admin');
+		Request::redirect(null, 'admin');
 	}
 
 	/**
@@ -167,7 +167,7 @@ class AdminFunctionsHandler extends AdminHandler {
 		import('cache.CacheManager');
 		$cacheManager =& CacheManager::getManager();
 		$cacheManager->flush();
-		Request::redirect('admin');
+		Request::redirect(null, 'admin');
 	}
 }
 

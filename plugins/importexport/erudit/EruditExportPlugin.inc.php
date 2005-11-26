@@ -49,7 +49,7 @@ class EruditExportPlugin extends ImportExportPlugin {
 
 	function display(&$args) {
 		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign('pluginUrl', $this->getPluginUrl());
+		parent::display();
 
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
 		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');

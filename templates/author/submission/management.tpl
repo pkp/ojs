@@ -24,7 +24,7 @@
 		<td width="20%" class="label">{translate key="submission.originalFile"}</td>
 		<td width="80%" colspan="2" class="data">
 			{if $submissionFile}
-				<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$submissionFile->getFileId()}/{$submissionFile->getRevision()}" class="file">{$submissionFile->getFileName()|escape}</a>&nbsp;&nbsp;{$submissionFile->getDateModified()|date_format:$dateFormatShort}
+				<a href="{url op="downloadFile" path=$submission->getArticleId()|to_array:$submissionFile->getFileId():$submissionFile->getRevision()}" class="file">{$submissionFile->getFileName()|escape}</a>&nbsp;&nbsp;{$submissionFile->getDateModified()|date_format:$dateFormatShort}
 			{else}
 				{translate key="common.none"}
 			{/if}
@@ -34,22 +34,20 @@
 		<td class="label">{translate key="article.suppFilesAbbrev"}</td>
 		<td width="30%" class="value">
 			{foreach name="suppFiles" from=$suppFiles item=suppFile}
-				<a href="{$requestPageUrl}/editSuppFile/{$submission->getArticleId()}/{$suppFile->getSuppFileId()}" class="file">{$suppFile->getFileName()|escape}</a>&nbsp;&nbsp;{$suppFile->getDateModified()|date_format:$dateFormatShort}<br />
+				<a href="{url op="editSuppFile" path=$submission->getArticleId()|to_array:$suppFile->getSuppFileId()}" class="file">{$suppFile->getFileName()|escape}</a>&nbsp;&nbsp;{$suppFile->getDateModified()|date_format:$dateFormatShort}<br />
 			{foreachelse}
 				{translate key="common.none"}
 			{/foreach}
 		</td>
-		<td width="50%" class="value"><a href="{$requestPageUrl}/addSuppFile/{$submission->getArticleId()}" class="action">{translate key="submission.addSuppFile"}</a></td>
+		<td width="50%" class="value"><a href="{url op="addSuppFile" path=$submission->getArticleId()}" class="action">{translate key="submission.addSuppFile"}</a></td>
 	</tr>
 	<tr>
 		<td class="label">{translate key="submission.submitter"}</td>
 		<td colspan="2" class="value">
 			{assign var="submitter" value=$submission->getUser()}
 			{assign var=emailString value="`$submitter->getFullName()` <`$submitter->getEmail()`>"}
-			{assign var=emailStringEscaped value=$emailString|escape:"url"}
-			{assign var=urlEscaped value=$currentUrl|escape:"url"}
-			{assign var=subjectEscaped value=$submission->getArticleTitle()|strip_tags|escape:"url"}
-			{$submitter->getFullName()|escape} {icon name="mail" url="`$pageUrl`/user/email?to[]=$emailStringEscaped&amp;redirectUrl=$urlEscaped&amp;subject=$subjectEscaped"}
+			{url|assign:"url" page="user" op="email" to=$emailString|to_array redirectUrl=$currentUrl subject=$submission->getArticleTitle|strip_tags}
+			{$submitter->getFullName()|escape} {icon name="mail" url=$url}
 		</td>
 	</tr>
 	<tr>
@@ -66,10 +64,8 @@
 		<td width="80%" colspan="2" class="data">
 			{if $editor}
 				{assign var=emailString value="`$editor->getEditorFullName()` <`$editor->getEditorEmail()`>"}
-				{assign var=emailStringEscaped value=$emailString|escape:"url"}
-				{assign var=urlEscaped value=$currentUrl|escape:"url"}
-				{assign var=subjectEscaped value=$submission->getArticleTitle()|strip_tags|escape:"url"}
-				{$editor->getEditorFullName()|escape} {icon name="mail" url="`$pageUrl`/user/email?to[]=$emailStringEscaped&amp;redirectUrl=$urlEscaped&amp;subject=$subjectEscaped"}
+				{url|assign:"url" page="user" op="email" to=$emailString|to_array redirectUrl=$currentUrl subject=$submission->getArticleTitle|strip_tags}
+				{$editor->getEditorFullName()|escape} {icon name="mail" url=$url}
                         {else}
                                 {translate key="common.noneAssigned"}
                         {/if}

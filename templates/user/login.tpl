@@ -19,7 +19,7 @@
 	<br />
 {/if}
 
-<form name="login" action="{$pageUrl}/login/signIn" method="post">
+<form name="login" action="{url page="login" op="signIn"}" method="post">
 <input type="hidden" name="source" value="{$source|escape}" />
 <table class="data">
 <tr>
@@ -43,8 +43,8 @@
 </table>
 
 <p>
-&#187; <a href="{$pageUrl}/user/register">{translate key="user.login.registerNewAccount"}</a><br />
-&#187; <a href="{$pageUrl}/login/lostPassword">{translate key="user.login.forgotPassword"}</a>
+&#187; <a href="{url page="user" op="register"}">{translate key="user.login.registerNewAccount"}</a><br />
+&#187; <a href="{url page="login" op="lostPassword"}">{translate key="user.login.forgotPassword"}</a>
 </p>
 
 <script type="text/javascript">

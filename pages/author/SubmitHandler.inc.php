@@ -36,7 +36,7 @@ class SubmitHandler extends AuthorHandler {
 			$submitForm->display();
 		
 		} else {
-			Request::redirect('author/submit/1');
+			Request::redirect(null, null, 'submit', '1');
 		}
 	}
 	
@@ -53,7 +53,7 @@ class SubmitHandler extends AuthorHandler {
 		
 		if (!SubmitHandler::validate($articleId, $step)) {
 			// Invalid step
-			Request::redirect('author/submit');
+			Request::redirect(null, null, 'submit');
 			return;
 		}
 			
@@ -145,14 +145,14 @@ class SubmitHandler extends AuthorHandler {
 			if ($step == 5) {
 				$journal = &Request::getJournal();
 				$templateMgr = &TemplateManager::getManager();
-				$templateMgr->assign('backLink', Request::getPageUrl() . '/author/track');
+				$templateMgr->assign('backLink', Request::url(null, null, 'track'));
 				$templateMgr->assign('backLinkLabel', 'author.track');
 				$templateMgr->assign_by_ref('journal', $journal);
 				$templateMgr->assign('helpTopicId','submission.index');
 				$templateMgr->display('author/submit/complete.tpl');
 				
 			} else {
-				Request::redirect(sprintf('author/submit/%d?articleId=%d', $step+1, $articleId));
+				Request::redirect(null, null, 'submit', $step+1, array('articleId' => $articleId));
 			}
 		
 		} else {
@@ -171,7 +171,7 @@ class SubmitHandler extends AuthorHandler {
 		
 		if (!SubmitHandler::validate($articleId, 4)) {
 			// Invalid submission
-			Request::redirect('author/submit');
+			Request::redirect(null, null, 'submit');
 			return;
 		}
 		
@@ -182,7 +182,7 @@ class SubmitHandler extends AuthorHandler {
 		$submitForm->setData('title', Locale::translate('common.untitled'));
 		$suppFileId = $submitForm->execute();
 		
-		Request::redirect(sprintf('author/submitSuppFile/%d?articleId=%d', $suppFileId, $articleId));
+		Request::redirect(null, null, 'submitSuppFile', $suppFileId, array('articleId' => $articleId));
 	}
 	
 	/**
@@ -198,7 +198,7 @@ class SubmitHandler extends AuthorHandler {
 		
 		if (!SubmitHandler::validate($articleId, 4)) {
 			// Invalid submission
-			Request::redirect('author/submit');
+			Request::redirect(null, null, 'submit');
 			return;
 		}
 		
@@ -224,7 +224,7 @@ class SubmitHandler extends AuthorHandler {
 		
 		if (!SubmitHandler::validate($articleId, 4)) {
 			// Invalid submission
-			Request::redirect('author/submit');
+			Request::redirect(null, null, 'submit');
 			return;
 		}
 		
@@ -236,8 +236,7 @@ class SubmitHandler extends AuthorHandler {
 		
 		if ($submitForm->validate()) {
 			$submitForm->execute();
-			Request::redirect(sprintf('author/submit/%d?articleId=%d', 4, $articleId));
-		
+			Request::redirect(null, null, 'submit', '4', array('articleId' => $articleId));
 		} else {
 			$submitForm->display();
 		}
@@ -258,7 +257,7 @@ class SubmitHandler extends AuthorHandler {
 
 		if (!SubmitHandler::validate($articleId, 4)) {
 			// Invalid submission
-			Request::redirect('author/submit');
+			Request::redirect(null, null, 'submit');
 			return;
 		}
 		
@@ -271,7 +270,7 @@ class SubmitHandler extends AuthorHandler {
 			$articleFileManager->deleteFile($suppFile->getFileId());
 		}
 		
-		Request::redirect(sprintf('author/submit/%d?articleId=%d', 4, $articleId));
+		Request::redirect(null, null, 'submit', '4', array('articleId' => $articleId));
 	}
 
 	/**

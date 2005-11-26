@@ -14,8 +14,8 @@
 {include file="common/header.tpl"}
 
 <ul class="menu">
-	<li class="current"><a href="{$pageUrl}/manager/subscriptions">{translate key="manager.subscriptions"}</a></li>
-	<li><a href="{$pageUrl}/manager/subscriptionTypes">{translate key="manager.subscriptionTypes"}</a></li>
+	<li class="current"><a href="{url op="subscriptions"}">{translate key="manager.subscriptions"}</a></li>
+	<li><a href="{url op="subscriptionTypes"}">{translate key="manager.subscriptionTypes"}</a></li>
 </ul>
 
 <br />
@@ -40,7 +40,7 @@
 		<td>{$subscription->getTypeName()|escape}</td>
 		<td>{$subscription->getDateStart()|date_format:$dateFormatShort}</td>
 		<td>{$subscription->getDateEnd()|date_format:$dateFormatShort}</td>
-		<td><a href="{$pageUrl}/manager/editSubscription/{$subscription->getSubscriptionId()}" class="action">{translate key="common.edit"}</a>&nbsp;|&nbsp;<a href="{$pageUrl}/manager/deleteSubscription/{$subscription->getSubscriptionId()}" onclick="return confirm('{translate|escape:"javascript" key="manager.subscriptions.confirmDelete"}')" class="action">{translate key="common.delete"}</a></td>
+		<td><a href="{url op="editSubscription" path=$subscription->getSubscriptionId()}" class="action">{translate key="common.edit"}</a>&nbsp;|&nbsp;<a href="{url op="deleteSubscription" path=$subscription->getSubscriptionId()}" onclick="return confirm('{translate|escape:"javascript" key="manager.subscriptions.confirmDelete"}')" class="action">{translate key="common.delete"}</a></td>
 	</tr>
 	<tr>
 		<td colspan="5" class="{if $subscriptions->eof()}end{/if}separator">&nbsp;</td>
@@ -61,6 +61,6 @@
 {/if}
 </table>
 
-<a href="{$pageUrl}/manager/selectSubscriber" class="action">{translate key="manager.subscriptions.create"}</a>
+<a href="{url op="selectSubscriber"}" class="action">{translate key="manager.subscriptions.create"}</a>
 
 {include file="common/footer.tpl"}

@@ -15,8 +15,6 @@
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 
-{assign var=escapedArticleId value=$articleId|escape:"url"}
-
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset={$defaultCharset}" />
 	<title>{translate key="article.pdf.title"}</title>
@@ -28,7 +26,7 @@
 	{if $pageStyleSheet}
 	<link rel="stylesheet" href="{$publicFilesDir}/{$pageStyleSheet.uploadName}" type="text/css" />
 	{/if}
-	<meta http-equiv="refresh" content="2;URL={$requestPageUrl}/viewFile/{$escapedArticleId}/{$galley->getGalleyId()}"/>
+	<meta http-equiv="refresh" content="2;URL={url op="viewFile" path=$articleId|to_array:$galley->getGalleyId()}"/>
 
 </head>
 <body>
@@ -39,7 +37,8 @@
 <div id="content">
 		<h3>{translate key="article.pdf.title"}</h3>
 
-<p>{translate key="article.pdf.note" pdfUrl=$requestPageUrl/download/`$escapedArticleId`/`$galley->getGalleyId()`}</p>
+{url|assign:"url" op="download" path=$articleId|to_array:$galley->getGalleyId()}
+<p>{translate key="article.pdf.note" url=$url}</p>
 
 </div>
 </div>

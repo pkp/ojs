@@ -46,10 +46,10 @@ class JournalLanguagesHandler extends ManagerHandler {
 			
 			$templateMgr = &TemplateManager::getManager();
 			$templateMgr->assign(array(
-				'currentUrl' => Request::getPageUrl() . '/manager/languages',
+				'currentUrl' => Request::url(null, null, 'languages'),
 				'pageTitle' => 'common.languages',
 				'message' => 'common.changesSaved',
-				'backLink' => Request::getPageUrl() . '/manager',
+				'backLink' => Request::url(null, Request::getRequestedPage()),
 				'backLinkLabel' => 'manager.journalManagement'
 			));
 			$templateMgr->display('common/message.tpl');

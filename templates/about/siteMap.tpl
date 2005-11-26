@@ -16,55 +16,54 @@
 
 <ul class="plain">
 <li>
-	<a href="{$indexUrl}">{translate key="navigation.home"}</a><br/>
+	<a href="{url journal="index" page="index" op="index"}">{translate key="navigation.home"}</a><br/>
 	<ul class="plain">
 	{if $journals|@count>1 && !$currentJournal}
 		{foreach from=$journals item=journal}
-			<li><a href="{$indexUrl}/{$journal->getPath()}/about/siteMap">{$journal->getTitle()|escape}</a></li>
+			<li><a href="{url journal=`$journal->getPath()` page="about" op="siteMap"}">{$journal->getTitle()|escape}</a></li>
 		{/foreach}
 	{else}
 		{if $journals|@count==1}
 			{assign var=currentJournal value=$journals[0]}
 		{else}
-			<li><a href="{$indexUrl}/index/about/siteMap">{translate key="journal.journals"}</a><br/>
+			<li><a href="{url journal="index" page="about" op="siteMap"}">{translate key="journal.journals"}</a><br/>
 			<ul class="plain">
 			{assign var=onlyOneJournal value=1}
 		{/if}
 
-		{assign var="jBase" value=`$indexUrl`/`$currentJournal->getPath()`}
-		<li><a href="{$jBase}">{$currentJournal->getTitle()|escape}</a><br/>
+		<li><a href="{url journal=`$currentJournal->getPath()`}">{$currentJournal->getTitle()|escape}</a><br/>
 			<ul class="plain">
-				<li><a href="{$jBase}/about">{translate key="navigation.about"}</a></li>
+				<li><a href="{url journal=`$currentJournal->getPath()` page="about"}">{translate key="navigation.about"}</a></li>
 				<li>
 					{if $isUserLoggedIn}
-						<li><a href="{$jBase}/user">{translate key="navigation.userHome"}</a><br/>
+						<li><a href="{url journal=`$currentJournal->getPath()` page="user"}">{translate key="navigation.userHome"}</a><br/>
 							<ul class="plain">
 								{assign var=currentJournalId value=$currentJournal->getJournalId()}
 								{foreach from=$rolesByJournal[$currentJournalId] item=role}
 									{assign_translate var=roleName key=$role->getRoleName()}
-									<li><a href="{$jBase}/{$role->getRolePath()}">{$roleName}</a></li>
+									<li><a href="{url journal=`$currentJournal->getPath()` page=`$role->getRolePath()`}">{$roleName}</a></li>
 								{/foreach}
 							</ul>
 						</li>
 					{else}
-						<li><a href="{$jBase}/login">{translate key="navigation.login"}</a></li>
-						<li><a href="{$jBase}/register">{translate key="navigation.register"}</a></li>
+						<li><a href="{url journal=`$currentJournal->getPath()` page="login"}">{translate key="navigation.login"}</a></li>
+						<li><a href="{url journal=`$currentJournal->getPath()` page="register"}">{translate key="navigation.register"}</a></li>
 					{/if}
-					<li><a href="{$jBase}/search">{translate key="navigation.search"}</a><br />
+					<li><a href="{url journal=`$currentJournal->getPath()` page="search"}">{translate key="navigation.search"}</a><br />
 						<ul class="plain">
-							<li><a href="{$jBase}/search/authors">{translate key="navigation.browseByAuthor"}</a></li>
-							<li><a href="{$jBase}/search/titles">{translate key="navigation.browseByTitle"}</a></li>
+							<li><a href="{url journal=`$currentJournal->getPath()` page="search" op="authors"}">{translate key="navigation.browseByAuthor"}</a></li>
+							<li><a href="{url journal=`$currentJournal->getPath()` page="search" op="titles"}">{translate key="navigation.browseByTitle"}</a></li>
 						</ul>
 					</li>
 					<li>{translate key="issue.issues"}<br/>
 						<ul class="plain">
-							<li><a href="{$jBase}/issue/current">{translate key="journal.currentIssue"}</a></li>
-							<li><a href="{$jBase}/issue/archive">{translate key="navigation.archives"}</a></li>
+							<li><a href="{url journal=`$currentJournal->getPath()` page="issue" op="current"}">{translate key="journal.currentIssue"}</a></li>
+							<li><a href="{url journal=`$currentJournal->getPath()` page="issue" op="archive"}">{translate key="navigation.archives"}</a></li>
 						</ul>
 					</li>
 				</li>
 				{foreach from=$currentJournal->getSetting('navItems') item=navItem}
-					<li><a href="{if $navItem.isAbsolute}{$navItem.url|escape}{else}{$pageUrl}{$navItem.url|escape}{/if}">{if $navItem.isLiteral}{$navItem.name|escape}{else}{translate key=$navItem.name|escape}{/if}</a></li>
+					<li><a href="{if $navItem.isAbsolute}{$navItem.url|escape}{else}{url page=$requestedPage}{$navItem.url|escape}{/if}">{if $navItem.isLiteral}{$navItem.name|escape}{else}{translate key=$navItem.name|escape}{/if}</a></li>
 				{/foreach}
 			</ul>
 		</li>	
@@ -74,10 +73,10 @@
 	</ul>
 </li>
 {if $isSiteAdmin}
-	<li><a href="{$indexUrl}/index/{$isSiteAdmin->getRolePath()}">{translate key=$isSiteAdmin->getRoleName()}</a></li>
+	<li><a href="{url journal="index" page=$isSiteAdmin->getRolePath()}">{translate key=$isSiteAdmin->getRoleName()}</a></li>
 {/if}
 <li><a href="http://pkp.sfu.ca/ojs">{translate key="common.openJournalSystems"}</a></li>
-<li><a href="javascript:openHelp('{$indexUrl}/index/help')">{translate key="help.help"}</a></li>
+<li><a href="javascript:openHelp('{url journal="index" page="help"}')">{translate key="help.help"}</a></li>
 </ul>
 
 {include file="common/footer.tpl"}

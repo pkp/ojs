@@ -52,7 +52,7 @@ class SubscriptionHandler extends ManagerHandler {
 			}
 		}
 		
-		Request::redirect('manager/subscriptions');
+		Request::redirect(null, null, 'subscriptions');
 	}
 
 	/**
@@ -73,7 +73,7 @@ class SubscriptionHandler extends ManagerHandler {
 			import('manager.form.SubscriptionForm');
 
 			$templateMgr = &TemplateManager::getManager();
-			$templateMgr->append('pageHierarchy', array('manager/subscriptions', 'manager.subscriptions'));
+			$templateMgr->append('pageHierarchy', array(Request::url(null, 'manager', 'subscriptions'), 'manager.subscriptions'));
 
 			if ($subscriptionId == null) {
 				$templateMgr->assign('subscriptionTitle', 'manager.subscriptions.createTitle');
@@ -86,7 +86,7 @@ class SubscriptionHandler extends ManagerHandler {
 			$subscriptionForm->display();
 		
 		} else {
-				Request::redirect('manager/subscriptions');
+				Request::redirect(null, null, 'subscriptions');
 		}
 	}
 
@@ -104,7 +104,7 @@ class SubscriptionHandler extends ManagerHandler {
 		parent::validate();
 		$templateMgr = &TemplateManager::getManager();
 		SubscriptionHandler::setupTemplate();
-		$templateMgr->append('pageHierarchy', array('manager/subscriptions', 'manager.subscriptions'));
+		$templateMgr->append('pageHierarchy', array(Request::url(null, 'manager', 'subscriptions'), 'manager.subscriptions'));
 
 		$userDao = &DAORegistry::getDAO('UserDAO');
 
@@ -164,16 +164,16 @@ class SubscriptionHandler extends ManagerHandler {
 				$subscriptionForm->execute();
 
 				if (Request::getUserVar('createAnother')) {
-					Request::redirect('manager/selectSubscriber?subscriptionCreated=1');
+					Request::redirect(null, null, 'selectSubscriber', null, array('subscriptionCreated', 1));
 				} else {
-					Request::redirect('manager/subscriptions');
+					Request::redirect(null, null, 'subscriptions');
 				}
 				
 			} else {
 				SubscriptionHandler::setupTemplate();
 
 				$templateMgr = &TemplateManager::getManager();
-				$templateMgr->append('pageHierarchy', array('manager/subscriptions', 'manager.subscriptions'));
+				$templateMgr->append('pageHierarchy', array(Request::url(null, 'manager', 'subscriptions'), 'manager.subscriptions'));
 
 				if ($subscriptionId == null) {
 					$templateMgr->assign('subscriptionTitle', 'manager.subscriptions.createTitle');
@@ -185,7 +185,7 @@ class SubscriptionHandler extends ManagerHandler {
 			}
 			
 		} else {
-				Request::redirect('manager/subscriptions');
+				Request::redirect(null, null, 'subscriptions');
 		}
 	}
 
@@ -227,7 +227,7 @@ class SubscriptionHandler extends ManagerHandler {
 			$subscriptionTypeDao->resequenceSubscriptionTypes($subscriptionType->getJournalId());
 		}
 
-		Request::redirect('manager/subscriptionTypes');
+		Request::redirect(null, null, 'subscriptionTypes');
 	}
 
 	/**
@@ -249,7 +249,7 @@ class SubscriptionHandler extends ManagerHandler {
 			}
 		}
 		
-		Request::redirect('manager/subscriptionTypes');
+		Request::redirect(null, null, 'subscriptionTypes');
 	}
 
 	/**
@@ -270,7 +270,7 @@ class SubscriptionHandler extends ManagerHandler {
 			import('manager.form.SubscriptionTypeForm');
 
 			$templateMgr = &TemplateManager::getManager();
-			$templateMgr->append('pageHierarchy', array('manager/subscriptionTypes', 'manager.subscriptionTypes'));
+			$templateMgr->append('pageHierarchy', array(Request::url(null, 'manager', 'subscriptionTypes'), 'manager.subscriptionTypes'));
 
 			if ($subscriptionTypeId == null) {
 				$templateMgr->assign('subscriptionTypeTitle', 'manager.subscriptionTypes.createTitle');
@@ -283,7 +283,7 @@ class SubscriptionHandler extends ManagerHandler {
 			$subscriptionTypeForm->display();
 		
 		} else {
-				Request::redirect('manager/subscriptionTypes');
+				Request::redirect(null, null, 'subscriptionTypes');
 		}
 	}
 
@@ -318,7 +318,7 @@ class SubscriptionHandler extends ManagerHandler {
 					SubscriptionHandler::setupTemplate(true);
 
 					$templateMgr = &TemplateManager::getManager();
-					$templateMgr->append('pageHierarchy', array('manager/subscriptionTypes', 'manager.subscriptionTypes'));
+					$templateMgr->append('pageHierarchy', array(Request::url(null, 'manager', 'subscriptionTypes'), 'manager.subscriptionTypes'));
 					$templateMgr->assign('subscriptionTypeTitle', 'manager.subscriptionTypes.createTitle');
 					$templateMgr->assign('subscriptionTypeCreated', '1');
 
@@ -327,14 +327,14 @@ class SubscriptionHandler extends ManagerHandler {
 					$subscriptionTypeForm->display();
 	
 				} else {
-					Request::redirect('manager/subscriptionTypes');
+					Request::redirect(null, null, 'subscriptionTypes');
 				}
 				
 			} else {
 				SubscriptionHandler::setupTemplate(true);
 
 				$templateMgr = &TemplateManager::getManager();
-				$templateMgr->append('pageHierarchy', array('manager/subscriptionTypes', 'manager.subscriptionTypes'));
+				$templateMgr->append('pageHierarchy', array(Request::url(null, 'manager', 'subscriptionTypes'), 'manager.subscriptionTypes'));
 
 				if ($subscriptionTypeId == null) {
 					$templateMgr->assign('subscriptionTypeTitle', 'manager.subscriptionTypes.createTitle');
@@ -346,7 +346,7 @@ class SubscriptionHandler extends ManagerHandler {
 			}
 			
 		} else {
-				Request::redirect('manager/subscriptionTypes');
+				Request::redirect(null, null, 'subscriptionTypes');
 		}
 	}
 	
@@ -354,7 +354,7 @@ class SubscriptionHandler extends ManagerHandler {
 		parent::setupTemplate(true);
 		if ($subclass) {
 			$templateMgr = &TemplateManager::getManager();
-			$templateMgr->append('pageHierarchy', array('manager/subscriptions', 'manager.subscriptions'));
+			$templateMgr->append('pageHierarchy', array(Request::url(null, 'manager', 'subscriptions'), 'manager.subscriptions'));
 		}
 	}
 

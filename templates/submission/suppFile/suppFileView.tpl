@@ -68,7 +68,7 @@
 {if $suppFile}
 	<tr valign="top">
 		<td width="20%" class="label">{translate key="common.fileName"}</td>
-		<td width="80%" class="value"><a href="{$requestPageUrl}/downloadFile/{$articleId}/{$suppFile->getFileId()}">{$suppFile->getFileName()|escape}</a></td>
+		<td width="80%" class="value"><a href="{url op="downloadFile" path=$articleId|to_array:$suppFile->getFileId()}">{$suppFile->getFileName()|escape}</a></td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="common.originalFileName"}</td>

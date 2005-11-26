@@ -18,8 +18,8 @@
 	<tr>
 		<td width="20%" class="label">{translate key="article.authors"}</td>
 		<td width="80%">
-			{assign var=urlEscaped value=$currentUrl|escape:"url"}
-			{$submission->getAuthorString()|escape} {icon name="mail" url="`$pageUrl`/user/email?redirectUrl=$urlEscaped&authorsArticleId=`$submission->getArticleId()`"}
+			{url|assign:"url" page="user" op="email" redirectUrl=$currentUrl authorsArticleId=$submission->getArticleId()}
+			{$submission->getAuthorString()|escape} {icon name="mail" url=$url}
 		</td>
 	</tr>
 	<tr>
@@ -35,10 +35,8 @@
 		<td>
 			{if $editor}
 				{assign var=emailString value="`$editor->getEditorFullName()` <`$editor->getEditorEmail()`>"}
-				{assign var=emailStringEscaped value=$emailString|escape:"url"}
-				{assign var=urlEscaped value=$currentUrl|escape:"url"}
-				{assign var=subjectEscaped value=$submission->getArticleTitle()|strip_tags|escape:"url"}
-				{$editor->getEditorFullName()|escape} {icon name="mail" url="`$pageUrl`/user/email?to[]=$emailStringEscaped&amp;redirectUrl=$urlEscaped&amp;subject=$subjectEscaped"}
+				{url|assign:"url" page="user" op="email" to=$emailString|to_array redirectUrl=$currentUrl subject=$submission->getArticleTitle()|strip_tags}
+				{$editor->getEditorFullName()|escape} {icon name="mail" url=$url}
 			{else}
 				{translate key="common.noneAssigned"}
 			{/if}

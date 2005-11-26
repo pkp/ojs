@@ -13,20 +13,20 @@
 {include file="common/header.tpl"}
 
 <ul class="plain">
-	<li>&#187; <a href="{$pageUrl}/about/submissions#onlineSubmissions">{translate key="about.onlineSubmissions"}</a></li>
-	{if !empty($journalSettings.authorGuidelines)}<li>&#187; <a href="{$pageUrl}/about/submissions#authorGuidelines">{translate key="about.authorGuidelines"}</a></li>{/if}
-	{if !empty($journalSettings.copyrightNotice)}<li>&#187; <a href="{$pageUrl}/about/submissions#copyrightNotice">{translate key="about.copyrightNotice"}</a></li>{/if}
-	{if !empty($journalSettings.privacyStatement)}<li>&#187; <a href="{$pageUrl}/about/submissions#privacyStatement">{translate key="about.privacyStatement"}</a></li>{/if}
+	<li>&#187; <a href="{url page="about" op="submissions" anchor="onlineSubmissions"}">{translate key="about.onlineSubmissions"}</a></li>
+	{if !empty($journalSettings.authorGuidelines)}<li>&#187; <a href="{url page="about" op="submissions" anchor="authorGuidelines"}">{translate key="about.authorGuidelines"}</a></li>{/if}
+	{if !empty($journalSettings.copyrightNotice)}<li>&#187; <a href="{url page="about" op="submissions" anchor="copyrightNotice"}">{translate key="about.copyrightNotice"}</a></li>{/if}
+	{if !empty($journalSettings.privacyStatement)}<li>&#187; <a href="{url page="about" op="submissions" anchor="privacyStatement"}">{translate key="about.privacyStatement"}</a></li>{/if}
 </ul>
 
 <a name="onlineSubmissions"></a><h3>{translate key="about.onlineSubmissions"}</h3>
 <p>
 	{translate key="about.onlineSubmissions.haveAccount" journalTitle=$siteTitle|escape}<br />
-	<a href="{$pageUrl}/login" class="action">{translate key="about.onlineSubmissions.login"}</a>
+	<a href="{url page="login"}" class="action">{translate key="about.onlineSubmissions.login"}</a>
 </p>
 <p>
 	{translate key="about.onlineSubmissions.needAccount"}<br />
-	<a href="{$pageUrl}/user/register" class="action">{translate key="about.onlineSubmissions.registration"}</a>
+	<a href="{url page="user" op="register"}" class="action">{translate key="about.onlineSubmissions.registration"}</a>
 </p>
 <p>{translate key="about.onlineSubmissions.registrationRequired"}</p>
 

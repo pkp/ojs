@@ -11,10 +11,10 @@
 
 {assign var="pageTitle" value="section.section"}
 {assign var="pageCrumbTitle" value="section.sections"}
-{assign var="currentUrl" value="$pageUrl/manager/sections"}
+{url|assign:"currentUser" op="sections"}
 {include file="common/header.tpl"}
 
-<form name="section" method="post" action="{$pageUrl}/manager/updateSection" onsubmit="return saveSelectedEditors()">
+<form name="section" method="post" action="{url op="updateSection"}" onsubmit="return saveSelectedEditors()">
 {if $sectionId}
 <input type="hidden" name="sectionId" value="{$sectionId}" />
 {/if}
@@ -205,7 +205,7 @@
 </tr>
 </table>
 
-<p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{$pageUrl}/manager/sections'" /></p>
+<p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url op="sections"}'" /></p>
 
 </form>
 

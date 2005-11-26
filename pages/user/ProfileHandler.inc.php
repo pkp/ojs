@@ -42,7 +42,7 @@ class ProfileHandler extends UserHandler {
 		
 		if ($profileForm->validate()) {
 			$profileForm->execute();
-			Request::redirect('user');
+			Request::redirect(null, Request::getRequestedPage());
 			
 		} else {
 			parent::setupTemplate(true);
@@ -77,7 +77,7 @@ class ProfileHandler extends UserHandler {
 		
 		if ($passwordForm->validate()) {
 			$passwordForm->execute();
-			Request::redirect('user');
+			Request::redirect(null, Request::getRequestedPage());
 			
 		} else {
 			parent::setupTemplate(true);

@@ -33,9 +33,10 @@
 			{if not $proofAssignment->getDateAuthorNotified() or $proofAssignment->getDateAuthorCompleted()}
 				{icon name="mail" disabled="disabled"}
 			{else}
-				{icon name="mail" url="$requestPageUrl/authorProofreadingComplete?articleId=`$submission->getArticleId()`"}
+				{url|assign:"url" op="authorProofreadingComplete" articleId=$submission->getArticleId()}
+				{icon name="mail" url=$url}
 			{/if}
-						{$proofAssignment->getDateAuthorCompleted()|date_format:$dateFormatShort|default:""}
+			{$proofAssignment->getDateAuthorCompleted()|date_format:$dateFormatShort|default:""}
 		</td>
 	</tr>
 	<tr>
@@ -60,12 +61,12 @@
 {translate key="submission.proofread.corrections"}
 {if $submission->getMostRecentProofreadComment()}
         {assign var="comment" value=$submission->getMostRecentProofreadComment()}
-        <a href="javascript:openComments('{$requestPageUrl}/viewProofreadComments/{$submission->getArticleId()}#{$comment->getCommentId()}');" class="icon">{icon name="comment"}</a>{$comment->getDatePosted()|date_format:$dateFormatShort}
+        <a href="javascript:openComments('{url op="viewProofreadComments" path=$submission->getArticleId() anchor=$comment->getCommentId()}');" class="icon">{icon name="comment"}</a>{$comment->getDatePosted()|date_format:$dateFormatShort}
 {else}
-        <a href="javascript:openComments('{$requestPageUrl}/viewProofreadComments/{$submission->getArticleId()}');" class="icon">{icon name="comment"}</a>
+        <a href="javascript:openComments('{url op="viewProofreadComments" path=$submission->getArticleId()}');" class="icon">{icon name="comment"}</a>
 {/if}
 
 {if $currentJournal->getSetting('proofInstructions')}
 &nbsp;&nbsp;
-<a href="javascript:openHelp('{$requestPageUrl}/instructions/proof')" class="action">{translate key="submission.proofread.instructions"}</a>
+<a href="javascript:openHelp('{url op="instructions" path="proof"}')" class="action">{translate key="submission.proofread.instructions"}</a>
 {/if}

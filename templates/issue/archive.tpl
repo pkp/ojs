@@ -25,7 +25,7 @@
 		<h3>{$issue->getYear()|escape}</h3>
 		{assign var=lastYear value=$issue->getYear()}
 	{/if}
-	<h4><a href="{$requestPageUrl}/view/{$issue->getBestIssueId($currentJournal)}">{$issue->getIssueIdentification()|escape}</a></h4>
+	<h4><a href="{url op="view" path=$issue->getBestIssueId($currentJournal)}">{$issue->getIssueIdentification()|escape}</a></h4>
 {/iterate}
 {if $notFirstYear}</div>{/if}
 

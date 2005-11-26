@@ -12,7 +12,7 @@
 {assign var="pageTitle" value="submission.comments.editComment"}
 {include file="submission/comment/header.tpl"}
 
-<form method="post" action="{$requestPageUrl}/saveComment/{$commentId}">
+<form method="post" action="{url op="saveComment" path=$commentId}">
 {if $hiddenFormParams}
 	{foreach from=$hiddenFormParams item=hiddenFormParam key=key}
 		<input type="hidden" name="{$key|escape}" value="{$hiddenFormParam|escape}" />

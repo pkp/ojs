@@ -10,23 +10,23 @@
  *}
 
 {assign var="pageTitle" value="editor.schedulingQueue"}
-{assign var="currentUrl" value="$pageUrl/editor/schedulingQueue"}
+{url|assign:"currentUrl" op="schedulingQueue"}
 {include file="common/header.tpl"}
 
 <ul class="menu">
-	<li><a href="{$pageUrl}/editor/createIssue">{translate key="editor.navigation.createIssue"}</a></li>
-	<li class="current"><a href="{$pageUrl}/editor/schedulingQueue">{translate key="common.queue.short.submissionsInScheduling"}</a></li>
-	<li><a href="{$pageUrl}/editor/futureIssues">{translate key="editor.navigation.futureIssues"}</a></li>
-	<li><a href="{$pageUrl}/editor/backIssues">{translate key="editor.navigation.issueArchive"}</a></li>
+	<li><a href="{url op="createIssue"}">{translate key="editor.navigation.createIssue"}</a></li>
+	<li class="current"><a href="{url op="schedulingQueue"}">{translate key="common.queue.short.submissionsInScheduling"}</a></li>
+	<li><a href="{url op="futureIssues"}">{translate key="editor.navigation.futureIssues"}</a></li>
+	<li><a href="{url op="backIssues"}">{translate key="editor.navigation.issueArchive"}</a></li>
 </ul>
 
 <br/>
 
-<form action="#">{translate key="section.section"}:&nbsp;<select name="section" onchange="location.href='{$pageUrl}/editor/schedulingQueue?section='+this.options[this.selectedIndex].value" size="1" class="selectMenu">{html_options options=$sectionOptions selected=$section}</select></form>
+<form action="#">{translate key="section.section"}:&nbsp;<select name="section" onchange="location.href='{url section="SECTION_ID"}'.replace('SECTION_ID', this.options[this.selectedIndex].value)" size="1" class="selectMenu">{html_options options=$sectionOptions selected=$section}</select></form>
 
 <br />
 
-<form method="post" action="{$pageUrl}/editor/updateSchedulingQueue" onsubmit="return confirm('{translate|escape:"javascript" key="editor.schedulingQueue.saveChanges"}')">
+<form method="post" action="{url op="updateSchedulingQueue"} onsubmit="return confirm('{translate|escape:"javascript" key="editor.schedulingQueue.saveChanges"}')">
 
 <table class="listing" width="100%">
 	<tr>
@@ -50,7 +50,7 @@
 		<td>{$submission->getDateSubmitted()|date_format:$dateFormatTrunc}</td>
 		<td>{$submission->getSectionAbbrev()|escape}</td>
 		<td>{$submission->getAuthorString(true)|truncate:40:"..."|escape}</td>
-		<td><a href="{$requestPageUrl}/submission/{$submission->getArticleId()}" class="action">{$submission->getArticleTitle()|strip_unsafe_html|truncate:40:"..."}</a></td>
+		<td><a href="{url op="submission" path=$submission->getArticleId()}" class="action">{$submission->getArticleTitle()|strip_unsafe_html|truncate:40:"..."}</a></td>
 		<td><select name="schedule[{$submission->getArticleID()}]" class="selectMenu">{html_options options=$issueOptions}</select></td>
 		<td width="10%"><input type="checkbox" name="remove[]" value="{$submission->getArticleID()}" /></td>
 	</tr>

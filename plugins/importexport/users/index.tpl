@@ -18,7 +18,7 @@
 
 <ul class="plain">
 	<li>
-		<form action="{$pluginUrl}/exportByRole" method="post">
+		<form action="{plugin_url path="exportByRole"}" method="post">
 			&#187; {translate key="plugins.importexport.users.export.exportByRole"}<br/>
 			&nbsp;&nbsp;&nbsp;&nbsp;<select name="roles[]" size="5" multiple="multiple" class="selectMenu">
 				{foreach from=$roleOptions item=roleOption key=roleKey}
@@ -30,12 +30,12 @@
 		</form>
 		&nbsp;
 	</li>
-	<li>&#187; <a href="{$pluginUrl}/exportAll">{translate key="plugins.importexport.users.export.exportAllUsers"}</a></li>
+	<li>&#187; <a href="{plugin_url path="exportAll"}">{translate key="plugins.importexport.users.export.exportAllUsers"}</a></li>
 </ul>
 
 <h3>{translate key="plugins.importexport.users.import.importUsers"}</h3>
 
-<form action="{$pluginUrl}/confirm" method="post" enctype="multipart/form-data">
+<form action="{plugin_url path="confirm"}" method="post" enctype="multipart/form-data">
 
 <p>{translate key="plugins.importexport.users.import.instructions"}</p>
 
@@ -56,7 +56,7 @@
 	</tr>
 </table>
 
-<p><input type="submit" value="{translate key="common.upload"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{$pageUrl}/manager/importexport'" /></p>
+<p><input type="submit" value="{translate key="common.upload"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url page="manager" path="importexport"}'" /></p>
 
 </form>
 

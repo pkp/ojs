@@ -40,7 +40,7 @@
 
 <div id="content">
 {if $galley}
-	{$galley->getHTMLContents("$requestPageUrl/viewFile")}
+	{$galley->getHTMLContents()}
 {else}
 
 	<h3>{$article->getArticleTitle()|strip_unsafe_html}</h3>

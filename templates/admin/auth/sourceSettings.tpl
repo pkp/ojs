@@ -14,7 +14,7 @@
 
 <br />
 
-<form method="post" action="{$requestPageUrl}/updateAuthSource/{$authId}">
+<form method="post" action="{url op="updateAuthSource" path=$authId}">
 
 <table class="data" width="100%">
 	<tr valign="top">
@@ -54,7 +54,7 @@
 
 {if $pluginTemplate}{include file=$pluginTemplate}{/if}
 
-<p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{$requestPageUrl}/auth'" /></p>
+<p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url op="auth"}'" /></p>
 
 </form>
 

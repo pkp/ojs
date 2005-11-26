@@ -93,7 +93,7 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 		
 		// Redirect back to initial comments page
 		if ($comment->getCommentType() == COMMENT_TYPE_PEER_REVIEW) {
-			Request::redirect(sprintf('%s/viewPeerReviewComments/%d/%d', Request::getRequestedPage(), $articleId, $comment->getAssocId()));
+			Request::redirect(null, null, 'viewPeerReviewComments', array($articleId, $comment->getAssocId()));
 		}
 	}
 	
@@ -114,7 +114,7 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 		
 		// Redirect back to initial comments page
 		if ($comment->getCommentType() == COMMENT_TYPE_PEER_REVIEW) {
-			Request::redirect(sprintf('%s/viewPeerReviewComments/%d/%d', Request::getRequestedPage(), $articleId, $comment->getAssocId()));
+			Request::redirect(null, null, 'viewPeerReviewComments', array($articleId, $comment->getAssocId()));
 		}
 	}
 	
@@ -139,7 +139,7 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 		}
 		
 		if (!$isValid) {
-			Request::redirect(Request::getRequestedPage());
+			Request::redirect(null, Request::getRequestedPage());
 		}
 
 		return array($comment);

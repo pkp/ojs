@@ -33,7 +33,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 			$articleDao->deleteArticleById($args[0]);
 		}
 		
-		Request::redirect('author/index');
+		Request::redirect(null, null, 'index');
 	}
 	
 	/**
@@ -48,7 +48,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		list($journal, $authorSubmission) = TrackSubmissionHandler::validate($articleId);
 		AuthorAction::deleteArticleFile($authorSubmission, $fileId, $revisionId);
 		
-		Request::redirect(sprintf('%s/submissionReview/%d', Request::getRequestedPage(), $articleId));
+		Request::redirect(null, null, 'submissionReview', $articleId);
 	}
 	
 	/**
@@ -194,7 +194,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 			$suppFile->setShowReviewers(Request::getUserVar('hide')==1?0:1);
 			$suppFileDao->updateSuppFile($suppFile);
 		}
-		Request::redirect(sprintf('%s/submissionReview/%d', Request::getRequestedPage(), $articleId));
+		Request::redirect(null, null, 'submissionReview', $articleId);
 	}
 	
 	/**
@@ -214,8 +214,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 
 		if ($submitForm->validate()) {
 			$submitForm->execute();
-			Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $articleId));
-
+			Request::redirect(null, null, 'submission', $articleId);
 		} else {
 			parent::setupTemplate(true, $articleId, 'summary');
 			$submitForm->display();
@@ -264,7 +263,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 			
 		AuthorAction::uploadRevisedVersion($submission);
 		
-		Request::redirect(sprintf('author/submissionReview/%d', $articleId));	
+		Request::redirect(null, null, 'submissionReview', $articleId);
 	}
 	
 	function viewMetadata($args) {
@@ -281,7 +280,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		parent::setupTemplate(true, $articleId);
 		
 		if (AuthorAction::saveMetadata($submission)) {
-			Request::redirect(Request::getRequestedPage() . "/submission/$articleId");
+			Request::redirect(null, null, 'submission', $articleId);
 		}
 	}
 
@@ -294,7 +293,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		
 		AuthorAction::uploadCopyeditVersion($submission, $copyeditStage);
 		
-		Request::redirect(sprintf('author/submissionEditing/%d', $articleId));	
+		Request::redirect(null, null, 'submissionEditing', $articleId);
 	}
 	
 	function completeAuthorCopyedit($args) {
@@ -303,7 +302,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		parent::setupTemplate(true);		
 		
 		if (AuthorAction::completeAuthorCopyedit($submission, Request::getUserVar('send'))) {
-			Request::redirect(sprintf('author/submissionEditing/%d', $articleId));
+			Request::redirect(null, null, 'submissionEditing', $articleId);
 		}
 	}
 	
@@ -322,7 +321,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 
 		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
 		if (!AuthorAction::downloadAuthorFile($submission, $fileId, $revision)) {
-			Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $articleId));
+			Request::redirect(null, null, 'submission', $articleId);
 		}
 	}
 
@@ -370,7 +369,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		}
 		
 		if (!$isValid) {
-			Request::redirect(Request::getRequestedPage());
+			Request::redirect(null, Request::getRequestedPage());
 		}
 
 		return array($journal, $authorSubmission);
@@ -393,7 +392,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		import('submission.proofreader.ProofreaderAction');
 
 		if (ProofreaderAction::proofreadEmail($articleId,'PROOFREAD_AUTHOR_COMPLETE', $send?'':'/author/authorProofreadingComplete/send')) {
-			Request::redirect(sprintf('author/submissionEditing/%d', $articleId));
+			Request::redirect(null, null, 'submissionEditing', $articleId);
 		}
 	}
 
@@ -466,7 +465,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 
 		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
 		if (!AuthorAction::viewFile($articleId, $fileId, $revision)) {
-			Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $articleId));
+			Request::redirect(null, null, 'submission', $articleId);
 		}
 	}
 

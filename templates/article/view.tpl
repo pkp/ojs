@@ -14,9 +14,6 @@
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
 <html>
 
-{assign var=escapedArticleId value=$articleId|escape:"url"}
-{assign var=escapedGalleyId value=$galleyId|escape:"url"}
-
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset={$defaultCharset}" />
 	<title>{$article->getFirstAuthor(true)|escape}</title>
@@ -29,15 +26,28 @@
 	<link rel="stylesheet" href="{$publicFilesDir}/{$pageStyleSheet.uploadName}" type="text/css" />
 	{/if}
 </head>
-<frameset cols="*,180" frameborder="0" framespacing="0" border="0">
-	<frame src="{$requestPageUrl}/view{if !$galley || $galley->isHtmlGalley()}Article{elseif $galley->isPdfGalley()}PDFInterstitial{else}DownloadInterstitial{/if}/{$escapedArticleId}/{$escapedGalleyId}" frameborder="0" />
-	<frame src="{$requestPageUrl}/viewRST/{$escapedArticleId}/{$escapedGalleyId}" noresize="noresize" frameborder="0" scrolling="auto" />
+<frameset cols="*,180" frameborder="0" framespacing="0" border="0">a
+	{if !$galley}
+		{url|assign:"articleUrl" op="viewArticle" path=$articleId}
+		{url|assign:"rstUrl" op="viewRST" path=$articleId}
+	{else}
+		{url|assign:"rstUrl" op="viewRST" path=$articleId|to_array:$galleyId}
+		{if $galley->isHtmlGalley()}
+			{url|assign:"articleUrl" op="viewArticle" path=$articleId|to_array:$galleyId}
+		{elseif $galley->isPdfGalley()}
+			{url|assign:"articleUrl" op="viewPDFInterstitial" path=$articleId|to_array:$galleyId}
+		{else}
+			{url|assign:"articleUrl" op="viewDownloadInterstitial" path=$articleId|to_array:$galleyId}
+		{/if}
+	{/if}
+	<frame src="{$articleUrl}" frameborder="0"/>
+	<frame src="{$rstUrl}" noresize="noresize" frameborder="0" scrolling="auto" />
 <noframes>
 <body>
 	<table width="100%">
 		<tr>
 			<td align="center">
-				{translate key="common.error.framesRequired" url="$requestPageUrl/viewArticle/$escapedArticleId/$escapedGalleyId"}
+				{translate key="common.error.framesRequired" url=$articleUrl}
 			</td>
 		</tr>
 	</table>

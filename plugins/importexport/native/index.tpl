@@ -16,13 +16,13 @@
 
 <h3>{translate key="plugins.importexport.native.export"}</h3>
 <ul class="plain">
-	<li>&#187; <a href="{$pluginUrl}/issues">{translate key="plugins.importexport.native.export.issues"}</a></li>
-	<li>&#187; <a href="{$pluginUrl}/articles">{translate key="plugins.importexport.native.export.articles"}</a></li>
+	<li>&#187; <a href="{plugin_url path="issues"}">{translate key="plugins.importexport.native.export.issues"}</a></li>
+	<li>&#187; <a href="{plugin_url path="articles"}">{translate key="plugins.importexport.native.export.articles"}</a></li>
 </ul>
 
 <h3>{translate key="plugins.importexport.native.import"}</h3>
 <p>{translate key="plugins.importexport.native.import.description"}</p>
-<form action="{$pluginUrl}/import" method="post" enctype="multipart/form-data">
+<form action="{plugin_url path="import"}" method="post" enctype="multipart/form-data">
 <input type="file" class="uploadField" name="importFile" id="import" /> <input name="import" type="submit" class="button" value="{translate key="common.import"}" />
 </form>
 

@@ -50,9 +50,7 @@ class TemplateManager extends Smarty {
 		$this->assign('baseUrl', Request::getBaseUrl());
 		$this->assign('pageTitle', 'common.openJournalSystems');
 		$this->assign('indexUrl', Request::getIndexUrl());
-		$this->assign('pageUrl', Request::getPageUrl());
-		$this->assign('requestPageUrl', Request::getPageUrl() . '/' . Request::getRequestedPage());
-		$this->assign('pagePath', '/' . Request::getRequestedPage() . (($requestedOp = Request::getRequestedOp()) == '' ? '' : '/' . $requestedOp));
+		$this->assign('requestedPage', Request::getRequestedPage());
 		$this->assign('currentUrl', Request::getRequestUrl());
 		$this->assign('dateFormatTrunc', Config::getVar('general', 'date_format_trunc'));
 		$this->assign('dateFormatShort', Config::getVar('general', 'date_format_short'));
@@ -134,6 +132,9 @@ class TemplateManager extends Smarty {
 		
 		// Register custom functions
 		$this->register_modifier('strip_unsafe_html', array('String', 'stripUnsafeHtml'));
+		$this->register_modifier('to_array', array(&$this, 'smartyToArray'));
+		$this->register_modifier('explode', array(&$this, 'smartyExplode'));
+		$this->register_modifier('assign', array(&$this, 'smartyAssign'));
 		$this->register_function('translate', array(&$this, 'smartyTranslate'));
 		$this->register_function('flush', array(&$this, 'smartyFlush'));
 		$this->register_function('call_hook', array(&$this, 'smartyCallHook'));
@@ -147,6 +148,8 @@ class TemplateManager extends Smarty {
 		$this->register_function('help_topic', array(&$this, 'smartyHelpTopic'));
 		$this->register_function('get_debug_info', array(&$this, 'smartyGetDebugInfo'));
 		$this->register_function('assign_mailto', array(&$this, 'smartyAssignMailto'));
+
+		$this->register_function('url', array(&$this, 'smartyUrl'));
 	}
 
 	/**
@@ -354,7 +357,7 @@ class TemplateManager extends Smarty {
 			}
 			
 			if ($params['url'] == "true") {
-				return $this->get_template_vars('pageUrl') . "/help/view/" . $translatedKey;
+				return Request::url(null, 'help', 'view', $translatedKey);
 			} else {
 				return $translatedKey;
 			}
@@ -372,7 +375,7 @@ class TemplateManager extends Smarty {
 	function smartyHelpTopic($params, &$smarty) {
 		if (isset($params) && !empty($params)) {
 			$translatedKey = isset($params['key']) ? Help::translate($params['key']) : Help::translate('');
-			$link = $this->get_template_vars('pageUrl') . "/help/view/" . $translatedKey;
+			$link = Request::url(null, 'help', 'view', $translatedKey);
 			$text = isset($params['text']) ? $params['text'] : '';
 			return "<a href=\"$link\">$text</a>";
 		}
@@ -477,6 +480,29 @@ class TemplateManager extends Smarty {
 	}
 
 	/**
+	 * Generate a URL into OJS.
+	 */
+	function smartyUrl($params, &$smarty) {
+		$path = null;
+		$anchor = null;
+		$journal = null;
+		$page = null;
+		$op = null;
+		$extraParams = array();
+
+		foreach ($params as $name => $value) switch ($name) {
+			case 'journal': $journal = $value; break;
+			case 'page': $page = $value; break;
+			case 'op': $op = $value; break;
+			case 'anchor': $anchor = $value; break;
+			case 'path': $path = $value; break;
+			default: $extraParams[$name] = $value; break;
+		}
+
+		return Request::url($journal, $page, $op, $path, $extraParams, $anchor);
+	}
+
+	/**
 	 * Display page links for a listing of items that has been
 	 * divided onto multiple pages.
 	 * Usage:
@@ -552,6 +578,29 @@ class TemplateManager extends Smarty {
 		$returner .= @$url['query'] ? '?' . @$url['query'] : '';
 		$returner .= @$url['fragment'] ? '#'. @$url['fragment'] : '';
 		return $returner;
+	}
+
+	/**
+	 * Convert the parameters of a function to an array.
+	 */
+	function smartyToArray() {
+		return func_get_args();
+	}
+
+	/**
+	 * Split the supplied string by the supplied separator.
+	 */
+	function smartyExplode($string, $separator) {
+		return explode($separator, $string);
+	}
+
+	/**
+	 * Assign a value to a template variable.
+	 */
+	function smartyAssign($value, $varName) {
+		if (isset($varName)) {
+			$this->assign($varName, $value);
+		}
 	}
 }
 

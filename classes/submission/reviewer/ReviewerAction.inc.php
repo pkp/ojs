@@ -101,7 +101,7 @@ class ReviewerAction extends Action {
 				}
 				$paramArray = array('reviewId' => $reviewId);
 				if ($decline) $paramArray['declineReview'] = 1;
-				$email->displayEditForm(Request::getPageUrl() . '/reviewer/confirmReview', $paramArray);
+				$email->displayEditForm(Request::url(null, 'reviewer', 'confirmReview'), $paramArray);
 				return false;
 			}
 		}
@@ -181,7 +181,7 @@ class ReviewerAction extends Action {
 					));
 				}
 			
-				$email->displayEditForm(Request::getPageUrl() . '/reviewer/recordRecommendation',
+				$email->displayEditForm(Request::url(null, 'reviewer', 'recordRecommendation'),
 					array('reviewId' => $reviewerSubmission->getReviewId(), 'recommendation' => $recommendation)
 				);
 				return false;

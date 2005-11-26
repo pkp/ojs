@@ -12,13 +12,13 @@
 {assign var="pageTitle" value="installer.ojsUpgrade"}
 {include file="common/header.tpl"}
 
-{translate key="installer.upgradeInstructions" version=$version->getVersionString() baseUrl=$baseUrl pageUrl=$pageUrl}
+{translate key="installer.upgradeInstructions" version=$version->getVersionString() baseUrl=$baseUrl}
 
 
 <div class="separator"></div>
 
 
-<form method="post" action="{$pageUrl}/install/installUpgrade">
+<form method="post" action="{url op="installUpgrade"}">
 {include file="common/formErrors.tpl"}
 
 {if $isInstallError}

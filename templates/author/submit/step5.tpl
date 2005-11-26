@@ -14,7 +14,7 @@
 
 <p>{translate key="author.submit.confirmationDescription" journalTitle=$journal->getTitle()}</p>
 
-<form method="post" action="{$pageUrl}/author/saveSubmit/{$submitStep}">
+<form method="post" action="{url op="saveSubmit" path=$submitStep}">
 <input type="hidden" name="articleId" value="{$articleId}" />
 
 <h3>{translate key="author.submit.filesSummary"}</h3>
@@ -35,7 +35,7 @@
 {foreach from=$files item=file}
 <tr valign="top">
 	<td>{$file->getFileId()}</td>
-	<td><a class="file" href="{$pageUrl}/author/download/{$articleId}/{$file->getFileId()}">{$file->getOriginalFileName()|escape}</a></td>
+	<td><a class="file" href="{url op="download" path=$articleId|to_array:$file->getFileId()}">{$file->getOriginalFileName()|escape}</a></td>
 	<td>{if ($file->getType() == 'supp')}{translate key="article.suppFile"}{else}{translate key="author.submit.submissionFile"}{/if}</td>
 	<td>{$file->getNiceFileSize()}</td>
 	<td>{$file->getDateUploaded()|date_format:$dateFormatTrunc}</td>
@@ -49,7 +49,7 @@
 
 <div class="separator"></div>
 
-<p><input type="submit" value="{translate key="author.submit.finishSubmission"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="confirmAction('{$pageUrl}/author', '{translate|escape:"javascript" key="author.submit.cancelSubmission"}')" /></p>
+<p><input type="submit" value="{translate key="author.submit.finishSubmission"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="confirmAction('{url page="author"}', '{translate|escape:"javascript" key="author.submit.cancelSubmission"}')" /></p>
 
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 

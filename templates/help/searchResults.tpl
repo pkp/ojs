@@ -32,17 +32,17 @@
 			{foreach name=results from=$searchResults item=result}
 				{assign var=sections value=$result.topic->getSections()}
 				<li>
-					<a href="{$pageUrl}/help/view/{$result.topic->getId()}">{$result.topic->getTitle()}</a>
+					<a href="{url op="view" path=$result.topic->getId()}">{$result.topic->getTitle()}</a>
 					{eval var=$sections[0]->getContent()|strip_tags|truncate:200}
 					<div class="searchBreadcrumb">
-						<a href="{$pageUrl}/help/view/index/topic/000000">{translate key="navigation.home"}</a>
+						<a href="{url op="view" path="index"|to_array:"topic":"000000"}">{translate key="navigation.home"}</a>
 						{foreach name=breadcrumbs from=$result.toc->getBreadcrumbs() item=breadcrumb key=key}
 							{if $breadcrumb != $result.topic->getId()}
-							 &gt; <a href="{$pageUrl}/help/view/{$breadcrumb}">{$key}</a>
+							 &gt; <a href="{url op="view" path=$breadcrumb}">{$key}</a>
 							{/if}
 						{/foreach}
 						{if $result.topic->getId() != "index/topic/000000"}
-						&gt; <a href="{$pageUrl}/help/view/{$result.topic->getId()}" class="current">{$result.topic->getTitle()}</a>
+						&gt; <a href="{url op="view" path=$result.topic->getId()}" class="current">{$result.topic->getTitle()}</a>
 						{/if}
 					</div>
 				</li>
@@ -57,7 +57,7 @@
 
 		<div>
 			<h4>{translate key="help.search"}</h4>
-			<form action="{$pageUrl}/help/search" method="post" style="display: inline">
+			<form action="{url op="search"}" method="post" style="display: inline">
 			{translate key="help.searchFor"}&nbsp;&nbsp;<input type="text" name="keyword" size="30" maxlength="60" value="{$helpSearchKeyword|escape}" class="textField" />
 			<input type="submit" value="{translate key="common.search"}" class="button" />
 			</form>

@@ -13,7 +13,7 @@
 
 {include file="common/header.tpl"}
 <h3>{translate key=$pageSubTitle}</h3>
-<form name="submit" method="post" action="{$requestPageUrl}/{$actionHandler}/{$articleId}">
+<form name="submit" method="post" action="{url op=$actionHandler path=$articleId}">
 	<select name="searchField" size="1" class="selectMenu">
 		{html_options_translate options=$fieldOptions selected=$searchField}
 	</select>
@@ -24,7 +24,7 @@
 	<input type="text" size="15" name="search" class="textField" value="{$search|escape}" />&nbsp;<input type="submit" value="{translate key="common.search"}" class="button" />
 </form>
 
-<p>{section loop=26 name=letters}<a href="{$requestPageUrl}/{$actionHandler}/{$articleId}?searchInitial={$smarty.section.letters.index+$start|chr}">{if chr($smarty.section.letters.index+$start) == $searchInitial}<strong>{$smarty.section.letters.index+$start|chr}</strong>{else}{$smarty.section.letters.index+$start|chr}{/if}</a> {/section}<a href="{$requestPageUrl}/{$actionHandler}/{$articleId}">{if $searchInitial==''}<strong>{translate key="common.all"}</strong>{else}{translate key="common.all"}{/if}</a></p>
+<p>{section loop=26 name=letters}<a href="{url op=$actionHandler path=$articleId searchInitial=$smarty.section.letters.index+$start|chr}">{if chr($smarty.section.letters.index+$start) == $searchInitial}<strong>{$smarty.section.letters.index+$start|chr}</strong>{else}{$smarty.section.letters.index+$start|chr}{/if}</a> {/section}<a href="{url op=$actionHandler path=$articleId}">{if $searchInitial==''}<strong>{translate key="common.all"}</strong>{else}{translate key="common.all"}{/if}</a></p>
 
 <table width="100%" class="listing">
 <tr><td colspan="5" class="headseparator">&nbsp;</td></tr>
@@ -40,13 +40,13 @@
 {assign var="userid" value=$user->getUserId()}
 {assign var="stats" value=$statistics[$userid]}
 <tr valign="top">
-	<td><a class="action" href="{$requestPageUrl}/userProfile/{$userid}">{$user->getFullName(true)|escape}</a></td>
+	<td><a class="action" href="{url op="userProfile" path=$userid}">{$user->getFullName(true)|escape}</a></td>
 	<td>{if $stats.complete}{$stats.complete}{else}0{/if}</td>
 	<td>{if $stats.incomplete}{$stats.incomplete}{else}0{/if}</td>
 	<td>{if $stats.last_assigned}{$stats.last_assigned|date_format:$dateFormatShort}{else}&mdash;{/if}</td>
 	<td>
 		{if $currentUser != $userid}
-			<a href="{$requestPageUrl}/{$actionHandler}/{$articleId}/{$userid}" class="action">{translate key="common.assign"}</a>
+			<a href="{url op=$actionHandler path=$articleId|to_array:$userid}" class="action">{translate key="common.assign"}</a>
 		{else}
 			{translate key="common.alreadyAssigned"}</a>
 		{/if}

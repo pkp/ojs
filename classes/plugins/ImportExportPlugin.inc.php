@@ -43,13 +43,6 @@ class ImportExportPlugin extends Plugin {
 	}
 
 	/**
-	 * Get the base URL to this plugin
-	 */
-	function getPluginUrl() {
-		return Request::getPageUrl() . '/manager/importexport/plugin/' . $this->getName();
-	}
-
-	/**
 	 * Set the page's breadcrumbs, given the plugin's tree of items
 	 * to append.
 	 * @param $crumbs Array ($url, $name, $isTranslated)
@@ -59,20 +52,20 @@ class ImportExportPlugin extends Plugin {
 		$templateMgr = &TemplateManager::getManager();
 		$pageCrumbs = array(
 			array(
-				'user',
+				Request::url(null, 'user'),
 				'navigation.user'
 			),
 			array(
-				'manager',
+				Request::url(null, 'manager'),
 				'user.role.manager'
 			),
 			array (
-				'manager/importexport',
+				Request::url(null, 'manager', 'importexport'),
 				'manager.importExport'
 			)
 		);
 		if ($isSubclass) $pageCrumbs[] = array(
-			'manager/importexport/plugin/' . $this->getName(),
+			Request::url(null, 'manager', 'importexport', array('plugin', $this->getName())),
 			$this->getDisplayName(),
 			true
 		);
@@ -81,12 +74,27 @@ class ImportExportPlugin extends Plugin {
 	}
 
 	/**
+	 * Extend the {url ...} smarty to support import/export plugins.
+	 */
+	function smartyPluginUrl($params, &$smarty) {
+		$path = array('plugin', $this->getName());
+		if (is_array($params['path'])) {
+			$params['path'] = array_merge($path, $params['path']);
+		} elseif (!empty($params['path'])) {
+			$params['path'] = array_merge($path, array($params['path']));
+		} else {
+			$params['path'] = $path;
+		}
+		return $smarty->smartyUrl($params, $smarty);
+	}
+
+	/**
 	 * Display the import/export plugin UI.
 	 * @param $args Array The array of arguments the user supplied.
 	 */
-	function display(&$args) {
-		// This should never be called for this class -- subclasses
-		// must override this method to provide an implementation.
+	function display() {
+		$templateManager =& TemplateManager::getManager();
+		$templateManager->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
 	}
 
 	/**
@@ -123,7 +131,7 @@ class ImportExportPlugin extends Plugin {
 	 */
 	function manage($verb, $args) {
 		if ($verb === 'importexport') {
-			Request::redirect(Request::getPageUrl() . '/manager/importexport/plugin/' . $this->getName());
+			Request::redirect(Request::url(null, 'manager', 'importexport', array('plugin', $this->getName())));
 		}
 		return false;
 	}

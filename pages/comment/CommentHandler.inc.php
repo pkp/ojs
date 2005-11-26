@@ -80,7 +80,7 @@ class CommentHandler extends Handler {
 
 		$parent = &$commentDao->getComment($parentId, $articleId);
 		if (isset($parent) && $parent->getArticleId() != $articleId) {
-			Request::redirect('comment/view/' . $articleId . '/' . $galleyId);
+			Request::redirect(null, null, 'view', array($articleId, $galleyId));
 		}
 
 		import('comment.form.CommentForm');
@@ -90,7 +90,7 @@ class CommentHandler extends Handler {
 		if (isset($args[3]) && $args[3]=='save') {
 			$commentForm->readInputData();
 			$commentForm->execute();
-			Request::redirect('comment/view/' . $articleId . '/' . $galleyId . '/' . $parentId);
+			Request::redirect(null, null, 'view', array($articleId, $galleyId, $parentId));
 		} else {
 			CommentHandler::setupTemplate($article, $galleyId, $parent);
 			$commentForm->display();
@@ -113,13 +113,13 @@ class CommentHandler extends Handler {
 
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
 		if (!$roleDao->roleExists($journal->getJournalId(), $userId, ROLE_ID_JOURNAL_MANAGER)) {
-			Request::redirect('index');
+			Request::redirect(null, 'index');
 		}
 
 		$comment = &$commentDao->getComment($commentId, $articleId, ARTICLE_COMMENT_RECURSE_ALL);
 		if ($comment)$commentDao->deleteComment($comment);
 
-		Request::redirect('comment/view/' . $articleId . '/' . $galleyId);
+		Request::redirect(null, null, 'view', array($articleId, $galleyId));
 	}
 
 	/**
@@ -155,10 +155,10 @@ class CommentHandler extends Handler {
 			$subscribedUser = IssueAction::subscribedUser();
 
 			if (!(!$subscriptionRequired || $article->getAccessStatus() || $subscribedUser)) {
-				Request::redirect('index');
+				Request::redirect(null, 'index');
 			}
 		} else {
-			Request::redirect('index');
+			Request::redirect(null, 'index');
 		}
 
 		return array(&$journal, &$issue, &$article);
@@ -167,8 +167,17 @@ class CommentHandler extends Handler {
 	function setupTemplate($article, $galleyId, $comment = null) {
 		$templateMgr = &TemplateManager::getManager();
 
-		$pageHierarchy = array(array('article/view/' . $article->getBestArticleId(Request::getJournal()) . '/' . $galleyId, String::stripUnsafeHtml($article->getArticleTitle()), true));
-		if ($comment) $pageHierarchy[] = array('comment/view/' . $article->getArticleId() . '/' . $galleyId, 'comments.readerComments');
+		$pageHierarchy = array(
+			array(
+				Request::url(null, 'article', 'view', array(
+					$article->getBestArticleId(Request::getJournal()), $galleyId
+				)),
+				String::stripUnsafeHtml($article->getArticleTitle()),
+				true
+			)
+		);
+
+		if ($comment) $pageHierarchy[] = array(Request::url(null, 'comment', 'view', array($article->getArticleId(), $galleyId)), 'comments.readerComments');
 		$templateMgr->assign('pageHierarchy', $pageHierarchy);
 	}
 }

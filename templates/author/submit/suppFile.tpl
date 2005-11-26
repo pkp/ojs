@@ -12,9 +12,9 @@
 {assign var="pageTitle" value="author.submit.step4a"}
 {include file="author/submit/submitHeader.tpl"}
 
-<p><a href="{$pageUrl}/author/submit/4?articleId={$articleId}">&lt;&lt; {translate key="author.submit.backToSupplementaryFiles"}</a></p>
+<p><a href="{url op="submit" path=4 articleId=$articleId}">&lt;&lt; {translate key="author.submit.backToSupplementaryFiles"}</a></p>
 
-<form method="post" action="{$pageUrl}/author/saveSubmitSuppFile/{$suppFileId}" enctype="multipart/form-data">
+<form method="post" action="{url op="saveSubmitSuppFile" path=$suppFileId}" enctype="multipart/form-data">
 <input type="hidden" name="articleId" value="{$articleId}" />
 {include file="common/formErrors.tpl"}
 
@@ -92,7 +92,7 @@
 {if $suppFile && $suppFile->getFileId()}
 <tr valign="top">
 	<td width="20%" class="label">{translate key="common.fileName"}</td>
-	<td width="80%" class="value"><a href="{$pageUrl}/author/download/{$articleId}/{$suppFile->getFileId()}">{$suppFile->getFileName()|escape}</a></td>
+	<td width="80%" class="value"><a href="{url op="download" path=$articleId|to_array:$suppFile->getFileId()}">{$suppFile->getFileName()|escape}</a></td>
 </tr>
 <tr valign="top">
 	<td width="20%" class="label">{translate key="common.originalFileName"}</td>
@@ -140,7 +140,7 @@
 
 <div class="separator"></div>
 
-<p><input type="submit" value="{translate key="common.saveAndContinue"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{$pageUrl}/author/submit/4?articleId={$articleId}'" /></p>
+<p><input type="submit" value="{translate key="common.saveAndContinue"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url op="submit" path="4" articleId=$articleId}'" /></p>
 
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 

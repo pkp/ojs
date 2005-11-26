@@ -12,7 +12,7 @@
 {assign var="pageTitle" value="common.languages"}
 {include file="common/header.tpl"}
 
-<form method="post" action="{$pageUrl}/admin/saveLanguageSettings">
+<form method="post" action="{url op="saveLanguageSettings"}">
 
 <h3>{translate key="admin.languages.languageSettings"}</h3>
 
@@ -56,13 +56,13 @@
 </tr>
 </table>
 
-<p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{$pageUrl}/admin'" /></p>
+<p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url page="admin"}'" /></p>
 
 </form>
 
 <div class="separator"></div>
 
-<form method="post" action="{$pageUrl}/admin/installLocale">
+<form method="post" action="{url op="installLocale"}">
 
 <h3>{translate key="admin.languages.installLanguages"}</h3>
 <h4>{translate key="admin.languages.installedLocales"}</h4>
@@ -71,7 +71,7 @@
 {foreach from=$installedLocales item=localeKey}
 <tr valign="top">
 	<td width="20%"><li>{$localeNames.$localeKey|escape} ({$localeKey})</li></td>
-	<td width="80%"><a href="{$pageUrl}/admin/reloadLocale?locale={$localeKey}" onclick="return confirm('{translate|escape:"javascript" key="admin.languages.confirmReload"}')" class="action">{translate key="admin.languages.reload"}</a>{if $localeKey != $primaryLocale} <a href="{$pageUrl}/admin/uninstallLocale?locale={$localeKey}" onclick="return confirm('{translate|escape:"javascript" key="admin.languages.confirmUninstall"}')" class="action">{translate key="admin.languages.uninstall"}</a>{/if}</td>
+	<td width="80%"><a href="{url op="reloadLocale" locale=$localeKey}" onclick="return confirm('{translate|escape:"javascript" key="admin.languages.confirmReload"}')" class="action">{translate key="admin.languages.reload"}</a>{if $localeKey != $primaryLocale} <a href="{url op="uninstallLocale" locale=$localeKey}" onclick="return confirm('{translate|escape:"javascript" key="admin.languages.confirmUninstall"}')" class="action">{translate key="admin.languages.uninstall"}</a>{/if}</td>
 </tr>
 {/foreach}
 </table>
@@ -87,7 +87,7 @@
 {/foreach}
 
 {if not $noLocalesToInstall}
-<p><input type="submit" value="{translate key="admin.languages.installLocales"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{$pageUrl}/admin'" /></p>
+<p><input type="submit" value="{translate key="admin.languages.installLocales"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url page="admin"}'" /></p>
 {/if}
 
 </form>

@@ -14,14 +14,14 @@
 
 {if $versionId}
 	<ul class="menu">
-		<li class="current"><a href="{$requestPageUrl}/editVersion/{$versionId}" class="action">{translate key="rt.admin.versions.metadata"}</a></li>
-		<li><a href="{$requestPageUrl}/contexts/{$versionId}" class="action">{translate key="rt.contexts"}</a></li>
+		<li class="current"><a href="{url op="editVersion" path=$versionId}" class="action">{translate key="rt.admin.versions.metadata"}</a></li>
+		<li><a href="{url op="contexts" path=$versionId}" class="action">{translate key="rt.contexts"}</a></li>
 	</ul>
 {/if}
 
 <br />
 
-<form action="{$requestPageUrl}/{if $versionId}saveVersion/{$versionId}{else}createVersion/save{/if}" method="post">
+<form action="{if $versionId}{url op="saveVersion" path=$versionId}{else}{url op="createVersion" path="save"}{/if}" method="post">
 <table class="data" width="100%">
 	<tr valign="top">
 		<td class="label" width="20%"><label for="title">{translate key="rt.version.title"}</label></td>
@@ -43,7 +43,7 @@
 	</tr>
 </table>
 
-<p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{$requestPageUrl}/versions'" /></p>
+<p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url op="versions"}'" /></p>
 
 </form>
 

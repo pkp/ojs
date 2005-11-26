@@ -56,7 +56,7 @@
 	number = {{/literal}{$issue->getNumber()|escape}{literal}},
 	year = {{/literal}{$article->getDatePublished()|date_format:'%Y'}{literal}},
 {/literal}{assign var=issn value=$journal->getSetting('issn')|escape}{if $issn}{literal}	issn = {{/literal}{$issn}{literal}},{/literal}{/if}{literal}
-	url = {{/literal}{$pageUrl}/article/view/{$articleId|escape:"url"}/{$galleyId}{literal}}
+	url = {{/literal}{url page="article" op="view" path=$articleId|to_array:$galleyId}{literal}}
 }
 </pre>
 {/literal}
@@ -83,7 +83,7 @@
 	{$article->getDatePublished()|date_format:'%Y %b %e'}.
 	{$article->getArticleTitle()|strip_unsafe_html}.
 	<i>{$journal->getTitle()|escape}</i> [{translate key="rt.captureCite.online"}] {$issue->getVolume()|escape}:{$issue->getNumber()|escape}.
-	{translate key="rt.captureCite.available"} <a target="_new" href="{$pageUrl}/article/view/{$articleId|escape:"url"}/{$galleyId}">{$pageUrl}/article/view/{$articleId|escape:"url"}/{$galleyId}</a>
+	{translate key="rt.captureCite.available"} <a target="_new" href="{url page="article" op="view" path=$articleId|to_array:$galleyId}">{url|escape page="article" op="view" path=$articleId|to_array:$galleyId}</a>
 {/if}
 
 <br />
@@ -93,10 +93,14 @@
 
 <h3>{translate key="rt.captureCite.capture"}</h3>
 <ul>
-	{assign var=escapedArticleId value=$articleId|escape:"url"}
-	<li>{translate key="rt.captureCite.capture.endNote" url="$requestPageUrl/captureCite/$escapedArticleId/$galleyId/endNote"}</li>
-	<li>{translate key="rt.captureCite.capture.referenceManager" url="$requestPageUrl/captureCite/$escapedArticleId/$galleyId/referenceManager"}</li>
-	<li>{translate key="rt.captureCite.capture.proCite" url="$requestPageUrl/captureCite/$escapedArticleId/$galleyId/proCite"}</li>
+	{url|assign:"url" op="captureCite" path=$articleId|to_array:$galleyId:"endNote"}
+	<li>{translate key="rt.captureCite.capture.endNote" url=$url}</li>
+
+	{url|assign:"url" op="captureCite" path=$articleId|to_array:$galleyId:"referenceManager"}
+	<li>{translate key="rt.captureCite.capture.referenceManager" url=$url}</li>
+
+	{url|assign:"url" op="captureCite" path=$articleId|to_array:$galleyId:"proCite"}
+	<li>{translate key="rt.captureCite.capture.proCite" url=$url}</li>
 </ul>
 
 {include file="rt/footer.tpl"}

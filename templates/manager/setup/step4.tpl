@@ -12,7 +12,7 @@
 {assign var="pageTitle" value="manager.setup.managingTheJournal}
 {include file="manager/setup/setupHeader.tpl"}
 
-<form method="post" action="{$pageUrl}/manager/saveSetup/4">
+<form method="post" action="{url op="saveSetup" path="4"}">
 {include file="common/formErrors.tpl"}
 
 <h3>4.1 {translate key="manager.setup.publicationScheduling"}</h3>
@@ -255,7 +255,7 @@
 <div class="separator"></div>
 
 
-<p><input type="submit" value="{translate key="common.saveAndContinue"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{$pageUrl}/manager/setup'" /></p>
+<p><input type="submit" value="{translate key="common.saveAndContinue"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url op="setup"}'" /></p>
 
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 

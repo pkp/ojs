@@ -98,7 +98,7 @@ class RTAdminHandler extends Handler {
 		$journal = Request::getJournal();
 
 		if (!$journal) {
-			Request::redirect('rtadmin');
+			Request::redirect(null, Request::getRequestedPage());
 			return;
 		}
 
@@ -248,24 +248,23 @@ class RTAdminHandler extends Handler {
 	function setupTemplate($subclass = false, $version = null, $context = null, $search = null) {
 		$templateMgr = &TemplateManager::getManager();
 
-		$pageHierarchy = array(array('user', 'navigation.user'), array('manager', 'manager.journalManagement'));
+		$pageHierarchy = array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, 'manager'), 'manager.journalManagement'));
 
-		if ($subclass) $pageHierarchy[] = array('rtadmin', 'rt.readingTools');
+		if ($subclass) $pageHierarchy[] = array(Request::url(null, 'rtadmin'), 'rt.readingTools');
 
 		if ($version) {
-			$pageHierarchy[] = array('rtadmin/versions', 'rt.versions');
-			$pageHierarchy[] = array('rtadmin/editVersion/' . $version->getVersionId(), $version->getTitle(), true);
+			$pageHierarchy[] = array(Request::url(null, 'rtadmin', 'versions'), 'rt.versions');
+			$pageHierarchy[] = array(Request::url(null, 'rtadmin', 'editVersion', $version->getVersionId()), $version->getTitle(), true);
 			if ($context) {
-				$pageHierarchy[] = array('rtadmin/contexts/' . $version->getVersionId(), 'rt.contexts');
-				$pageHierarchy[] = array('rtadmin/editContext/' . $version->getVersionId() . '/' . $context->getContextId(), $context->getAbbrev(), true);
+				$pageHierarchy[] = array(Request::url(null, 'rtadmin', 'contexts', $version->getVersionId()), 'rt.contexts');
+				$pageHierarchy[] = array(Request::url(null, 'rtadmin', 'editContext', array($version->getVersionId(), $context->getContextId())), $context->getAbbrev(), true);
 				if ($search) {
-					$pageHierarchy[] = array('rtadmin/searches/' . $version->getVersionId() . '/' . $context->getContextId(), 'rt.searches');
-					$pageHierarchy[] = array('rtadmin/editSearch/' . $version->getVersionId() . '/' . $context->getContextId() . '/' . $search->getSearchId(), $search->getTitle(), true);
+					$pageHierarchy[] = array(Request::url(null, 'rtadmin', 'searches', array($version->getVersionId(), $context->getContextId())), 'rt.searches');
+					$pageHierarchy[] = array(Request::url(null, 'rtadmin', 'editSearch', array($version->getVersionId(), $context->getContextId(), $search->getSearchId())), $search->getTitle(), true);
 				}
 			}
 		}
 		$templateMgr->assign('pageHierarchy', $pageHierarchy);
-		$templateMgr->assign('pagePath', '/user/rtadmin');
 	}
 }
 

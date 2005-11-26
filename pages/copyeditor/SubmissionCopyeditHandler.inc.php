@@ -43,7 +43,7 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 		parent::setupTemplate($articleId);
 		
 		if (CopyeditorAction::completeCopyedit($submission, Request::getUserVar('send'))) {
-			Request::redirect(sprintf('copyeditor/submission/%d', $articleId));
+			Request::redirect(null, null, 'submission', $articleId);
 		}
 	}
 	
@@ -53,7 +53,7 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 		parent::setupTemplate(true, $articleId);
 		
 		if (CopyeditorAction::completeFinalCopyedit($submission, Request::getUserVar('send'))) {
-			Request::redirect(sprintf('copyeditor/submission/%d', $articleId));
+			Request::redirect(null, null, 'submission', $articleId);
 		}
 	}
 	
@@ -64,7 +64,7 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 		$copyeditStage = Request::getUserVar('copyeditStage');
 		CopyeditorAction::uploadCopyeditVersion($submission, $copyeditStage);
 		
-		Request::redirect(sprintf('copyeditor/submission/%d', $articleId));	
+		Request::redirect(null, null, 'submission', $articleId);
 	}
 	
 	//
@@ -82,7 +82,7 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 
 		list($journal, $submission) = SubmissionCopyeditHandler::validate($articleId);
 		if (!CopyeditorAction::downloadCopyeditorFile($submission, $fileId, $revision)) {
-			Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $articleId));
+			Request::redirect(null, null, 'submission', $articleId);
 		}
 	}
 	
@@ -97,7 +97,7 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 
 		list($journal, $submission) = SubmissionCopyeditHandler::validate($articleId);
 		if (!CopyeditorAction::viewFile($articleId, $fileId, $revision)) {
-			Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $articleId));
+			Request::redirect(null, null, 'submission', $articleId);
 		}
 	}
 
@@ -132,7 +132,7 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 		}
 		
 		if (!$isValid) {
-			Request::redirect(Request::getRequestedPage());
+			Request::redirect(null, Request::getRequestedPage());
 		}
 
 		return array($journal, $copyeditorSubmission);
@@ -155,7 +155,7 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 		import('submission.proofreader.ProofreaderAction');
 
 		if (ProofreaderAction::proofreadEmail($articleId,'PROOFREAD_AUTHOR_COMPLETE', $send?'':'/copyeditor/authorProofreadingComplete/send')) {
-			Request::redirect(sprintf('copyeditor/submission/%d', $articleId));	
+			Request::redirect(null, null, 'submission', $articleId);
 		}
 	}
 
@@ -234,7 +234,7 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 		parent::setupTemplate(true, $articleId);
 		
 		if (CopyeditorAction::saveMetadata($submission)) {
-			Request::redirect(Request::getRequestedPage() . "/submission/$articleId");
+			Request::redirect(null, null, 'submission', $articleId);
 		}
 	}
 

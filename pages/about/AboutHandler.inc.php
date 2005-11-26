@@ -57,7 +57,7 @@ class AboutHandler extends Handler {
 		parent::validate();
 		
 		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign('pageHierarchy', array(array('about', 'about.aboutTheJournal')));
+		$templateMgr->assign('pageHierarchy', array(array(Request::url(null, 'about'), 'about.aboutTheJournal')));
 	}
 	
 	/**
@@ -212,7 +212,7 @@ class AboutHandler extends Handler {
 			}
 		}
 
-		if (!$user) Request::redirect('about/editorialTeam');
+		if (!$user) Request::redirect(null, 'about', 'editorialTeam');
 
 		$templateMgr->assign_by_ref('user', $user);
 		$templateMgr->display('about/editorialTeamBio.tpl');

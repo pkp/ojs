@@ -12,7 +12,7 @@
 {assign var="pageTitle" value="admin.systemConfiguration"}
 {include file="common/header.tpl"}
 
-<form method="post" action="{$pageUrl}/admin/saveSystemConfig">
+<form method="post" action="{url op="saveSystemConfig"}">
 <p>{translate key="admin.editSystemConfigInstructions"}</p>
 
 {foreach from=$configData key=sectionName item=sectionData}
@@ -30,7 +30,7 @@
 {/foreach}
 </table>
 
-<p><input type="submit" value="{translate key="admin.saveSystemConfig"}" class="button defaultButton" /> <input name="display" type="submit" value="{translate key="admin.displayNewSystemConfig"}" class="button" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{$pageUrl}/admin/systemInfo'" /></p>
+<p><input type="submit" value="{translate key="admin.saveSystemConfig"}" class="button defaultButton" /> <input name="display" type="submit" value="{translate key="admin.displayNewSystemConfig"}" class="button" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url op="systemInfo"}'" /></p>
 
 </form>
 

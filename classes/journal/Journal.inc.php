@@ -28,7 +28,7 @@ class Journal extends DataObject {
 	 * @return string
 	 */
 	function getUrl() {
-		return Config::getVar('general', 'base_url') . '/' . INDEX_SCRIPTNAME . '/' . $this->getPath();
+		return Request::url($this->getPath());
 	}
 	
 	/**

@@ -13,8 +13,8 @@
 {include file="common/header.tpl"}
 
 <ul class="menu">
-	<li{if ($pageToDisplay == "active")} class="current"{/if}><a href="{$pageUrl}/author/index/active">{translate key="common.queue.short.active"}</a></li>
-	<li{if ($pageToDisplay == "completed")} class="current"{/if}><a href="{$pageUrl}/author/index/completed">{translate key="common.queue.short.completed"}</a></li>
+	<li{if ($pageToDisplay == "active")} class="current"{/if}><a href="{url op="index" path="active"}">{translate key="common.queue.short.active"}</a></li>
+	<li{if ($pageToDisplay == "completed")} class="current"{/if}><a href="{url op="index" path="completed"}">{translate key="common.queue.short.completed"}</a></li>
 </ul>
 
 <br />
@@ -22,7 +22,7 @@
 {include file="author/$pageToDisplay.tpl"}
 
 <p>{translate key="author.submit.startHere"}<br/>
-<a href="{$pageUrl}/author/submit" class="action">{translate key="author.submit.startHereLink"}</a><br />
+<a href="{url op="submit"}" class="action">{translate key="author.submit.startHereLink"}</a><br />
 </p>
 
 {include file="common/footer.tpl"}

@@ -123,7 +123,7 @@ class SubmissionCommentsHandler extends ProofreaderHandler {
 		);
 		
 		// Redirect back to initial comments page
-		Request::redirect(sprintf('%s/%s/%d', Request::getRequestedPage(), $commentPageMap[$comment->getCommentType()], $articleId));
+		Request::redirect(null, null, $commentPageMap[$comment->getCommentType()], $articleId);
 	}
 	
 	/**
@@ -150,7 +150,7 @@ class SubmissionCommentsHandler extends ProofreaderHandler {
 		);
 		
 		// Redirect back to initial comments page
-		Request::redirect(sprintf('%s/%s/%d', Request::getRequestedPage(), $commentPageMap[$comment->getCommentType()], $articleId));
+		Request::redirect(null, null, $commentPageMap[$comment->getCommentType()], $articleId);
 	}
 	
 	
@@ -179,7 +179,7 @@ class SubmissionCommentsHandler extends ProofreaderHandler {
 		}
 		
 		if (!$isValid) {
-			Request::redirect(Request::getRequestedPage());
+			Request::redirect(null, Request::getRequestedPage());
 		}
 
 		return array(&$comment);

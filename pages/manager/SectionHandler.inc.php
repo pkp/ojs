@@ -28,7 +28,7 @@ class SectionHandler extends ManagerHandler {
 		$sections = &$sectionDao->getJournalSections($journal->getJournalId(), $rangeInfo);
 		
 		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign('pageHierarchy', array(array('manager', 'manager.journalManagement')));
+		$templateMgr->assign('pageHierarchy', array(array(Request::url(null, 'manager'), 'manager.journalManagement')));
 		$templateMgr->assign_by_ref('sections', $sections);
 		$templateMgr->assign('helpTopicId','journal.managementPages.sections');
 		$templateMgr->display('manager/sections/sections.tpl');
@@ -69,7 +69,7 @@ class SectionHandler extends ManagerHandler {
 		
 		if ($sectionForm->validate()) {
 			$sectionForm->execute();
-			Request::redirect('manager/sections');
+			Request::redirect(null, null, 'sections');
 			
 		} else {
 			parent::setupTemplate(true);
@@ -91,7 +91,7 @@ class SectionHandler extends ManagerHandler {
 			$sectionDao->deleteSectionById($args[0], $journal->getJournalId());
 		}
 		
-		Request::redirect('manager/sections');
+		Request::redirect(null, null, 'sections');
 	}
 	
 	/**
@@ -111,7 +111,7 @@ class SectionHandler extends ManagerHandler {
 			$sectionDao->resequenceSections($journal->getJournalId());
 		}
 		
-		Request::redirect('manager/sections');
+		Request::redirect(null, null, 'sections');
 	}
 	
 }

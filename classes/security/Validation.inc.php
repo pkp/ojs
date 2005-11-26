@@ -125,9 +125,9 @@ class Validation {
 	 */
 	function redirectLogin() {
 		if (isset($_SERVER['REQUEST_URI'])) {
-			Request::redirect('login/?source=' . $_SERVER['REQUEST_URI']);
+			Request::redirect(null, 'login', null, null, array('source' => $_SERVER['REQUEST_URI']));
 		} else {
-			Request::redirect('login');
+			Request::redirect(null, 'login');
 		}
 	}
 	

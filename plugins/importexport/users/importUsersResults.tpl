@@ -28,11 +28,11 @@
 	</tr>
 	{foreach name=importedUsers from=$importedUsers item=user}
 	<tr valign="top">
-		<td><a href="{$pageUrl}/manager/userProfile/{$user->getUserId()}">{$user->getUsername()|escape}</a></td>
+		<td><a href="{url page="manager" path="userProfile"|to_array:$user->getUserId()}">{$user->getUsername()|escape}</a></td>
 		<td>{$user->getFullName()|escape}</td>
 		<td>{$user->getEmail()|escape}</td>
 		<td align="right" class="nowrap">
-			<a href="{$pageUrl}/manager/editUser/{$user->getUserId()}" class="action">{translate key="common.edit"}</a>&nbsp;|&nbsp;<a href="{$pageUrl}/manager/signInAsUser/{$user->getUserId()}" class="action">{translate key="manager.people.signInAs"}</a>
+			<a href="{url page="manager" path="editUser"|to_array:$user->getUserId()}" class="action">{translate key="common.edit"}</a>&nbsp;|&nbsp;<a href="{url page="manager" path="signInAsUser"|to_array:$user->getUserId()}" class="action">{translate key="manager.people.signInAs"}</a>
 		</td>
 	</tr>
 	<tr>
@@ -59,6 +59,6 @@
 </p>
 {/if}
 
-<p>&#187; <a href="{$pageUrl}/manager">{translate key="manager.journalManagement"}</a></p>
+<p>&#187; <a href="{url page="manager"}">{translate key="manager.journalManagement"}</a></p>
 
 {include file="common/footer.tpl"}

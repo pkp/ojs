@@ -12,7 +12,7 @@
 {assign var="pageTitle" value="author.submit.step3"}
 {include file="author/submit/submitHeader.tpl"}
 
-<form method="post" action="{$pageUrl}/author/saveSubmit/{$submitStep}" enctype="multipart/form-data">
+<form method="post" action="{url op="saveSubmit" path=$submitStep}" enctype="multipart/form-data">
 <input type="hidden" name="articleId" value="{$articleId}" />
 {include file="common/formErrors.tpl"}
 
@@ -25,7 +25,7 @@
 {if $submissionFile}
 <tr valign="top">
 	<td width="20%" class="label">{translate key="common.fileName"}</td>
-	<td width="80%" class="value"><a href="{$pageUrl}/author/download/{$articleId}/{$submissionFile->getFileId()}">{$submissionFile->getFileName()|escape}</a></td>
+	<td width="80%" class="value"><a href="{url op="download" path=$articleId|to_array:$submissionFile->getFileId()}">{$submissionFile->getFileName()|escape}</a></td>
 </tr>
 <tr valign="top">
 	<td width="20%" class="label">{translate key="common.originalFileName"}</td>
@@ -63,7 +63,7 @@
 
 <div class="separator"></div>
 
-<p><input type="submit"{if !$submissionFile} onclick="return confirm('{translate|escape:"javascript" key="author.submit.noSubmissionConfirm"}')"{/if} value="{translate key="common.saveAndContinue"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="confirmAction('{$pageUrl}/author', '{translate|escape:"javascript" key="author.submit.cancelSubmission"}')" /></p>
+<p><input type="submit"{if !$submissionFile} onclick="return confirm('{translate|escape:"javascript" key="author.submit.noSubmissionConfirm"}')"{/if} value="{translate key="common.saveAndContinue"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="confirmAction('{url page="author"}', '{translate|escape:"javascript" key="author.submit.cancelSubmission"}')" /></p>
 
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 

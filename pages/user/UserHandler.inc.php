@@ -56,7 +56,7 @@ class UserHandler extends Handler {
 			// Show roles for the currently selected journal
 			$roles = &$roleDao->getRolesByUserId($session->getUserId(), $journal->getJournalId());
 			if (empty($roles)) {
-				Request::redirect(Request::getIndexUrl() . '/index/user');
+				Request::redirect('index', 'user');
 			}
 			
 			$rolesToDisplay[$journal->getJournalId()] = &$roles;
@@ -90,15 +90,15 @@ class UserHandler extends Handler {
 		}
 		
 		if(isset($_SERVER['HTTP_REFERER'])) {
-			Request::redirect($_SERVER['HTTP_REFERER']);
+			Request::redirectUrl($_SERVER['HTTP_REFERER']);
 		}
 		
 		$source = Request::getUserVar('source');
 		if (isset($source) && !empty($source)) {
-			Request::redirect(Request::getProtocol() . '://' . Request::getServerHost() . $source, false);
+			Request::redirectUrl(Request::getProtocol() . '://' . Request::getServerHost() . $source, false);
 		}
 		
-		Request::redirect('index');		
+		Request::redirect(null, 'index');		
 	}
 	
 	/**
@@ -120,7 +120,7 @@ class UserHandler extends Handler {
 	function setupTemplate($subclass = false) {
 		if ($subclass) {
 			$templateMgr = &TemplateManager::getManager();
-			$templateMgr->assign('pageHierarchy', array(array('user', 'navigation.user')));
+			$templateMgr->assign('pageHierarchy', array(array(Request::url(null, 'user'), 'navigation.user')));
 		}
 	}
 	

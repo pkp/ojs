@@ -28,7 +28,7 @@
 			<i>{translate key="manager.plugins.sitePlugin"}</i>
 		{elseif $managementVerbs}
 			{foreach from=$managementVerbs item=verb}
-				<a class="action" href="plugin/{$category}/{$plugin->getName()}/{$verb[0]}">{$verb[1]|escape}</a>&nbsp;
+				<a class="action" href="{url op="plugin" path=$category|to_array:$plugin->getName():$verb[0]}">{$verb[1]|escape}</a>&nbsp;
 			{/foreach}
 		{/if}
 	</li>

@@ -49,7 +49,7 @@ class UserImportExportPlugin extends ImportExportPlugin {
 
 	function display(&$args) {
 		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign('pluginUrl', $this->getPluginUrl());
+		parent::display();
 
 		$templateMgr->assign('roleOptions', array(
 			'' => 'manager.people.doNotEnroll',

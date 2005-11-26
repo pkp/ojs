@@ -56,6 +56,10 @@ date_format_long = "%B %e, %Y"
 datetime_format_short = "%Y-%m-%d %I:%M %p"
 datetime_format_long = "%B %e, %Y - %I:%M %p"
 
+; Use URL parameters instead of CGI PATH_INFO. This is useful for
+; broken server setups that don't support the PATH_INFO environment
+; variable.
+disable_path_info = Off
 
 ;;;;;;;;;;;;;;;;;;;;;
 ; Database Settings ;

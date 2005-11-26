@@ -51,7 +51,7 @@ class IndexHandler extends Handler {
 			$site = &$siteDao->getSite();
 
 			if ($site->getJournalRedirect() && ($journal = $journalDao->getJournal($site->getJournalRedirect())) != null) {
-				Request::redirect($journal->getPath(), false);
+				Request::redirect($journal->getPath());
 			}
 
 			$templateMgr->assign('intro', $site->getIntro());

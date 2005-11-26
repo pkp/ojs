@@ -34,12 +34,12 @@
 	{assign var=issue value=$articleData.issue}
 	{assign var=publishedArticle value=$articleData.publishedArticle}
 	<tr valign="top">
-		<td><a href="{$pageUrl}/issue/issueToc/{$issue->getIssueId()}" class="action">{$issue->getIssueIdentification()|escape}</a></td>
+		<td><a href="{url page="issue" op="issueToc" path=$issue->getIssueId()}" class="action">{$issue->getIssueIdentification()|escape}</a></td>
 		<td>{$article->getArticleTitle()|strip_unsafe_html}</td>
 		<td>{$article->getAuthorString()|escape}</td>
 		<td>
 			{foreach from=$publishedArticle->getGalleys() item=galley}
-				<a href="{$pluginUrl}/exportGalley/{$article->getArticleId()}/{$galley->getGalleyId()}" class="action">{$galley->getLabel()|escape}</a>
+				<a href="{plugin_url path="exportGalley"|to_array:$article->getArticleId():$galley->getGalleyId()}" class="action">{$galley->getLabel()|escape}</a>
 			{/foreach}
 		</td>
 	</tr>

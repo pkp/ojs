@@ -12,7 +12,7 @@
 {assign var="pageTitle" value="rt.admin.searches.edit.editSearch"}
 {include file="common/header.tpl"}
 
-<form action="{$requestPageUrl}/{if $searchId}saveSearch/{$versionId}/{$contextId}/{$searchId}{else}createSearch/{$versionId}/{$contextId}/save{/if}" method="post">
+<form action="{if $searchId}{url op="saveSearch" path=$versionId|to_array:$contextId:$searchId}{else}{url op="createSearch" path=$versionId|to_array:$contextId:"save"}{/if}" method="post">
 <table class="data" width="100%">
 	<tr valign="top">
 		<td class="label" width="20%"><label for="title">{translate key="rt.search.title"}</label></td>
@@ -38,7 +38,7 @@
 	</tr>
 </table>
 
-<p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{$requestPageUrl}/searches/{$versionId}/{$contextId}'" /></p>
+<p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url op="searches" path=$versionId|to_array:$contextId}'" /></p>
 
 </form>
 

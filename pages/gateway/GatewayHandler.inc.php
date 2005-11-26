@@ -16,7 +16,7 @@
 class GatewayHandler extends Handler {
 
 	function index() {
-		Request::redirect('index');
+		Request::redirect(null, 'index');
 	}
 
 	function lockss() {
@@ -27,7 +27,7 @@ class GatewayHandler extends Handler {
 		
 		if ($journal != null) {
 			if (!$journal->getSetting('enableLockss')) {
-				Request::redirect('index');
+				Request::redirect(null, 'index');
 			}
 			
 			$year = Request::getUserVar('year');

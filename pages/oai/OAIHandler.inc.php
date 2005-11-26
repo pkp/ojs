@@ -31,7 +31,7 @@ class OAIHandler extends Handler {
 		//parent::validate();
 		
 		if (!Config::getVar('oai', 'oai')) {
-			Request::redirect('index');
+			Request::redirect(null, 'index');
 		}
 	}
 }

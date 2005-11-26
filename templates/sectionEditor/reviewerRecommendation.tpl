@@ -16,7 +16,7 @@
 
 <br />
 
-<form method="post" action="{$requestPageUrl}/enterReviewerRecommendation">
+<form method="post" action="{url op="enterReviewerRecommendation"}">
 <input type="hidden" name="articleId" value="{$articleId|escape}" />
 <input type="hidden" name="reviewId" value="{$reviewId|escape}" />
 <table width="100%" class="data">
@@ -29,7 +29,7 @@
 	</td>
 </tr>
 </table>
-<p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{$pageUrl}/sectionEditor/submissionReview/{$articleId}';"/></p>
+<p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url op="submissionsInReview" path=$articleId}';"/></p>
 </form>
 
 {include file="common/footer.tpl"}

@@ -40,7 +40,7 @@ class ArticleHandler extends Handler {
 		}
 
 		if (!$article) {
-			Request::redirect(Request::getPageUrl());
+			Request::redirect(null, Request::getRequestedPage());
 			return;
 		}
 
@@ -231,14 +231,14 @@ class ArticleHandler extends Handler {
 		$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
 		$galley = &$galleyDao->getGalley($galleyId, $article->getArticleId());
 
-		if (!$galley) Request::redirect("article/view/$articleId");
+		if (!$galley) Request::redirect(null, null, 'view', $articleId);
 
 		if (!$fileId) {
 			$galleyDao->incrementViews($galleyId);
 			$fileId = $galley->getFileId();
 		} else {
 			if (!$galley->isDependentFile($fileId)) {
-				Request::redirect("article/view/$articleId");
+				Request::redirect(null, null, 'view', $articleId);
 			}
 		}
 
@@ -333,12 +333,12 @@ class ArticleHandler extends Handler {
 	
 				if (!(!$subscriptionRequired || $article->getAccessStatus() || $subscribedUser)) {
 					if (!isset($galleyId) || $galleyId) {
-						Request::redirect('index');	
+						Request::redirect(null, 'index');	
 					}
 				}
 			}
 		} else {
-			Request::redirect('index');
+			Request::redirect(null, 'index');
 		}
 		return array($journal, $issue, $article);
 	}

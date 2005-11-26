@@ -12,14 +12,16 @@
 {assign var="pageTitle" value="user.register"}
 {include file="common/header.tpl"}
 
-<form method="post" action="{$pageUrl}/user/registerUser">
+<form method="post" action="{url op="registerUser"}">
 
 <p>{translate key="user.register.completeForm"}</p>
 
 {if !$existingUser}
-	<p>{translate key="user.register.alreadyRegisteredOtherJournal" registerUrl="$pageUrl/user/register?existingUser=1"}</p>
+	{url|assign:"url" page="user" op="register" existingUser=1}
+	<p>{translate key="user.register.alreadyRegisteredOtherJournal" registerUrl=$url}</p>
 {else}
-	<p>{translate key="user.register.notAlreadyRegisteredOtherJournal" registerUrl="$pageUrl/user/register"}</p>
+	{url|assign:"url" page="user" op="register"}
+	<p>{translate key="user.register.notAlreadyRegisteredOtherJournal" registerUrl=$url}</p>
 	<input type="hidden" name="existingUser" value="1"/>
 {/if}
 
@@ -125,7 +127,7 @@
 </tr>
 </table>
 
-<p><input type="submit" value="{translate key="user.register"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{$pageUrl}'" /></p>
+<p><input type="submit" value="{translate key="user.register"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url page="index"}'" /></p>
 
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 

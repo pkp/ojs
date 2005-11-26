@@ -17,7 +17,7 @@
 
 <table width="100%" class="info">
 	<tr>
-		<td width="40%" colspan="2"><a class="action" href="{$pageUrl}/copyeditor/viewMetadata/{$submission->getArticleId()}">{translate key="submission.reviewMetadata"}</a></td>
+		<td width="40%" colspan="2"><a class="action" href="{url op="viewMetadata" path=$submission->getArticleId()}">{translate key="submission.reviewMetadata"}</a></td>
 		<td width="20%" class="heading">{translate key="submission.request"}</td>
 		<td width="20%" class="heading">{translate key="submission.underway"}</td>
 		<td width="20%" class="heading">{translate key="submission.complete"}</td>
@@ -31,7 +31,8 @@
 			{if not $submission->getDateNotified() or $submission->getDateCompleted()}
 				{icon name="mail" disabled="disabled"}
 			{else}
-				{icon name="mail" url="$requestPageUrl/completeCopyedit?articleId=`$submission->getArticleId()`"}
+				{url|assign:"url" op="completeCopyedit" articleId=$submission->getArticleId()}
+				{icon name="mail" url=$url}
 			{/if}
 			{$submission->getDateCompleted()|date_format:$dateFormatShort|default:""}
 		</td>
@@ -41,12 +42,12 @@
 		<td colspan="4">
 			{translate key="common.file"}:
 			{if $submission->getDateNotified() && $initialCopyeditFile}
-				<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$initialCopyeditFile->getFileId()}/{$initialCopyeditFile->getRevision()}" class="file">{$initialCopyeditFile->getFileName()|escape}</a> {$initialCopyeditFile->getDateModified()|date_format:$dateFormatShort}
+				<a href="{url op="downloadFile" path=$submission->getArticleId()|to_array:$initialCopyeditFile->getFileId():$initialCopyeditFile->getRevision()}" class="file">{$initialCopyeditFile->getFileName()|escape}</a> {$initialCopyeditFile->getDateModified()|date_format:$dateFormatShort}
 			{else}
 				{translate key="common.none"}
 			{/if}
 			<br />
-			<form method="post" action="{$requestPageUrl}/uploadCopyeditVersion"  enctype="multipart/form-data">
+			<form method="post" action="{url op="uploadCopyeditVersion"}"  enctype="multipart/form-data">
 				<input type="hidden" name="articleId" value="{$submission->getArticleId()}" />
 				<input type="hidden" name="copyeditStage" value="initial" />
 				<input type="file" name="upload"{if not $submission->getDateNotified() or $submission->getDateCompleted()} disabled="disabled"{/if} class="uploadField" />
@@ -69,7 +70,7 @@
 		<td colspan="4">
 			{translate key="common.file"}:
 			{if $submission->getDateAuthorCompleted() && $editorAuthorCopyeditFile}
-				<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$editorAuthorCopyeditFile->getFileId()}/{$editorAuthorCopyeditFile->getRevision()}" class="file">{$editorAuthorCopyeditFile->getFileName()|escape}</a> {$editorAuthorCopyeditFile->getDateModified()|date_format:$dateFormatShort}
+				<a href="{url op="downloadFile" path=$submission->getArticleId()|to_array:$editorAuthorCopyeditFile->getFileId():$editorAuthorCopyeditFile->getRevision()}" class="file">{$editorAuthorCopyeditFile->getFileName()|escape}</a> {$editorAuthorCopyeditFile->getDateModified()|date_format:$dateFormatShort}
 			{else}
 				{translate key="common.none"}
 			{/if}
@@ -87,7 +88,8 @@
 			{if not $submission->getDateFinalNotified() or $submission->getDateFinalCompleted()}
 				{icon name="mail" disabled="disabled"}
 			{else}
-				{icon name="mail" url="$requestPageUrl/completeFinalCopyedit?articleId=`$submission->getArticleId()`"}
+				{url|assign:"url" op="completeFinalCopyedit" articleId=$submission->getArticleId()}
+				{icon name="mail" url=$url}
 			{/if}
 			{$submission->getDateFinalCompleted()|date_format:$dateFormatShort|default:""}
 		</td>
@@ -97,12 +99,12 @@
 		<td colspan="4">
 			{translate key="common.file"}:
 			{if $submission->getDateFinalNotified() && $finalCopyeditFile}
-				<a href="{$requestPageUrl}/downloadFile/{$submission->getArticleId()}/{$finalCopyeditFile->getFileId()}/{$finalCopyeditFile->getRevision()}" class="file">{$finalCopyeditFile->getFileName()|escape}</a> {$finalCopyeditFile->getDateModified()|date_format:$dateFormatShort}
+				<a href="{url op="downloadFile" path=$submission->getArticleId()|to_array:$finalCopyeditFile->getFileId():$finalCopyeditFile->getRevision()}" class="file">{$finalCopyeditFile->getFileName()|escape}</a> {$finalCopyeditFile->getDateModified()|date_format:$dateFormatShort}
 			{else}
 				{translate key="common.none"}
 			{/if}
 			<br />
-			<form method="post" action="{$requestPageUrl}/uploadCopyeditVersion"  enctype="multipart/form-data">
+			<form method="post" action="{url op="uploadCopyeditVersion"}"  enctype="multipart/form-data">
 				<input type="hidden" name="articleId" value="{$submission->getArticleId()}" />
 				<input type="hidden" name="copyeditStage" value="final" />
 				<input type="file" name="upload"{if not $submission->getDateFinalNotified() or $submission->getDateFinalCompleted()} disabled="disabled"{/if} class="uploadField">
@@ -117,12 +119,13 @@
 
 {translate key="submission.copyedit.copyeditComments"}
 {if $submission->getMostRecentCopyeditComment()}
-	{assign var="comment" value=$submission->getMostRecentCopyeditComment()}        <a href="javascript:openComments('{$requestPageUrl}/viewCopyeditComments/{$submission->getArticleId()}#{$comment->getCommentId()}');" class="icon">{icon name="comment"}</a>{$comment->getDatePosted()|date_format:$dateFormatShort}
+	{assign var="comment" value=$submission->getMostRecentCopyeditComment()}
+	<a href="javascript:openComments('{url op="viewCopyeditComments" path=$submission->getArticleId() anchor=$comment->getCommentId()}');" class="icon">{icon name="comment"}</a>{$comment->getDatePosted()|date_format:$dateFormatShort}
 {else}
-	<a href="javascript:openComments('{$requestPageUrl}/viewCopyeditComments/{$submission->getArticleId()}');" class="icon">{icon name="comment"}</a>
+	<a href="javascript:openComments('{url op="viewCopyeditComments" path=$submission->getArticleId()}');" class="icon">{icon name="comment"}</a>
 {/if}
 
 {if $currentJournal->getSetting('copyeditInstructions')}
 &nbsp;&nbsp;
-<a href="javascript:openHelp('{$requestPageUrl}/instructions/copy')" class="action">{translate key="submission.copyedit.instructions"}</a>
+<a href="javascript:openHelp('{url op="instructions" path="copy"}')" class="action">{translate key="submission.copyedit.instructions"}</a>
 {/if}

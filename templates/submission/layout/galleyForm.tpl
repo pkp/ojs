@@ -16,7 +16,7 @@
 
 <br />
 
-<form method="post" action="{$requestPageUrl}/saveGalley/{$articleId}/{$galleyId}" enctype="multipart/form-data">
+<form method="post" action="{url op="saveGalley" path=$articleId|to_array:$galleyId}" enctype="multipart/form-data">
 {include file="common/formErrors.tpl"}
 
 <p>{translate key="submission.layout.galleyFileData"}</p>
@@ -32,7 +32,7 @@
 
 <tr valign="top">
 	<td class="label">{translate key="common.fileName"}</td>
-	<td class="value"><a class="action" href="{$requestPageUrl}/downloadFile/{$articleId}/{$galley->getFileId()}">{$galley->getFileName()|escape}</a></td>
+	<td class="value"><a class="action" href="{url op="downloadFile" path=$articleId|to_array:$galley->getFileId()}">{$galley->getFileName()|escape}</a></td>
 </tr>
 <tr valign="top">
 	<td class="label">{translate key="common.originalFileName"}</td>
@@ -71,7 +71,7 @@
 {if $styleFile}
 <tr valign="top">
 	<td width="20%" class="label">{translate key="common.fileName"}</td>
-	<td width="80%" class="value"><a class="action" href="{$requestPageUrl}/downloadFile/{$articleId}/{$styleFile->getFileId()}">{$styleFile->getFileName()|escape}</a></td>
+	<td width="80%" class="value"><a class="action" href="{url op="downloadFile" path=$articleId|to_array:$styleFile->getFileId()}">{$styleFile->getFileName()|escape}</a></td>
 </tr>
 <tr valign="top">
 	<td class="label">{translate key="common.fileSize"}</td>
@@ -120,7 +120,7 @@
 <tr><td colspan="6" class="headseparator">&nbsp;</td></tr>
 {foreach name=images from=$galley->getImageFiles() item=imageFile}
 <tr valign="top">
-	<td><a class="action" href="{$requestPageUrl}/downloadFile/{$articleId}/{$imageFile->getFileId()}">{$imageFile->getFileName()|escape}</a></td>
+	<td><a class="action" href="{url op="downloadFile" path=$articleId|to_array:$imageFile->getFileId()}">{$imageFile->getFileName()|escape}</a></td>
 	<td>{$imageFile->getOriginalFileName()|escape}</td>
 	<td>{$imageFile->getNiceFileSize()}</td>
 	<td>{$imageFile->getDateUploaded()|date_format:$dateFormatShort}</td>
@@ -146,7 +146,7 @@
 
 <br />
 
-<p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{$requestPageUrl}/submissionEditing/{$articleId}'" /></p>
+<p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url op="submissionEditing" path=$articleId}'" /></p>
 
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 

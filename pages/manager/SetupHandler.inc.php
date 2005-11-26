@@ -337,7 +337,7 @@ class SetupHandler extends ManagerHandler {
 			}
 		
 		} else {
-			Request::redirect('manager/setup');
+			Request::redirect();
 		}
 	}
 	

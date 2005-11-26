@@ -16,7 +16,7 @@
 {/if}
 {include file="common/header.tpl"}
 
-<form method="post" action="{$pageUrl}/manager/updateEmail">
+<form method="post" action="{url op="updateEmail"}">
 <input type="hidden" name="emailId" value="{$emailId|escape}" />
 <input type="hidden" name="journalId" value="{$journalId|escape}" />
 {if !$isNewTemplate}
@@ -73,7 +73,7 @@
 <p><input type="checkbox" name="enabled" id="emailEnabled" value="1"{if $enabled} checked="checked"{/if} /> <label for="emailEnabled">{translate key="manager.emails.enabled"}</label></p>
 {/if}
 
-<p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{$pageUrl}/manager/emails'" /></p>
+<p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url op="emails"}'" /></p>
 </form>
 
 {include file="common/footer.tpl"}

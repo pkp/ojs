@@ -45,7 +45,7 @@ class GroupHandler extends ManagerHandler {
 		$groupDao->deleteGroup($group);
 		$groupDao->resequenceGroups($journal->getJournalId());
 		
-		Request::redirect('manager/groups');
+		Request::redirect(null, null, 'groups');
 	}
 
 	/**
@@ -60,7 +60,7 @@ class GroupHandler extends ManagerHandler {
 		$groupDao->updateGroup($group);
 		$groupDao->resequenceGroups($journal->getJournalId());
 		
-		Request::redirect('manager/groups');
+		Request::redirect(null, null, 'groups');
 	}
 
 	/**
@@ -75,7 +75,7 @@ class GroupHandler extends ManagerHandler {
 			$groupDao =& DAORegistry::getDAO('GroupDAO');
 			$group =& $groupDao->getGroup($groupId);
 			if (!$group || $journal->getJournalId() !== $group->getJournalId()) {
-				Request::redirect('manager/groups');
+				Request::redirect(null, null, 'groups');
 			}
 		} else $group = null;
 		
@@ -121,12 +121,12 @@ class GroupHandler extends ManagerHandler {
 		
 		if ($groupForm->validate()) {
 			$groupForm->execute();
-			Request::redirect('manager/groups');
+			Request::redirect(null, null, 'groups');
 		} else {
 			GroupHandler::setupTemplate($group);
 
 			$templateMgr = &TemplateManager::getManager();
-			$templateMgr->append('pageHierarchy', array('manager/groups', 'manager.groups'));
+			$templateMgr->append('pageHierarchy', array(Request::url(null, 'manager', 'groups'), 'manager.groups'));
 
 			$templateMgr->assign('pageTitle',
 				$group?
@@ -183,7 +183,7 @@ class GroupHandler extends ManagerHandler {
 				$groupMembership->setAboutDisplayed(true);
 				$groupMembershipDao->insertMembership($groupMembership);
 			}
-			Request::redirect('manager/groupMembership/' . $group->getGroupId());
+			Request::redirect(null, null, 'groupMembership', $group->getGroupId());
 		} else {
 			list($journal, $group) = GroupHandler::validate($groupId);
 			GroupHandler::setupTemplate($group, true);
@@ -237,7 +237,7 @@ class GroupHandler extends ManagerHandler {
 		$groupMembershipDao->deleteMembershipById($group->getGroupId(), $user->getUserId());
 		$groupMembershipDao->resequenceMemberships($group->getGroupId());
 
-		Request::redirect('manager/groupMembership/' . $group->getGroupId());
+		Request::redirect(null, null, 'groupMembership', $group->getGroupId());
 	}
 
 	/**
@@ -253,7 +253,7 @@ class GroupHandler extends ManagerHandler {
 		$groupMembershipDao->updateMembership($groupMembership);
 		$groupMembershipDao->resequenceMemberships($group->getGroupId());
 		
-		Request::redirect('manager/groupMembership/' . $group->getGroupId());
+		Request::redirect(null, null, 'groupMembership', $group->getGroupId());
 	}
 
 	function setBoardEnabled($args) {
@@ -262,17 +262,17 @@ class GroupHandler extends ManagerHandler {
 		$boardEnabled = Request::getUserVar('boardEnabled')==1?true:false;
 		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 		$journalSettingsDao->updateSetting($journal->getJournalId(), 'boardEnabled', $boardEnabled);
-		Request::redirect('manager/groups');
+		Request::redirect(null, null, 'groups');
 	}
 
 	function setupTemplate($group = null, $subclass = false) {
 		parent::setupTemplate(true);
 		$templateMgr = &TemplateManager::getManager();
 		if ($subclass) {
-			$templateMgr->append('pageHierarchy', array('manager/groups', 'manager.groups'));
+			$templateMgr->append('pageHierarchy', array(Request::url(null, 'manager', 'groups'), 'manager.groups'));
 		}
 		if ($group) {
-			$templateMgr->append('pageHierarchy', array('manager/editGroup/' . $group->getGroupId(), $group->getTitle(), true));
+			$templateMgr->append('pageHierarchy', array(Request::url(null, 'manager', 'editGroup', $group->getGroupId()), $group->getTitle(), true));
 		}
 		$templateMgr->assign('helpTopicId', 'journal.managementPages.groups');
 	}
@@ -317,7 +317,7 @@ class GroupHandler extends ManagerHandler {
 				}
 			}
 		}
-		if (!$passedValidation) Request::redirect('manager/groups');
+		if (!$passedValidation) Request::redirect(null, null, 'groups');
 		return $returner;
 	}
 }

@@ -35,10 +35,11 @@
 		<td>{$proofAssignment->getDateProofreaderNotified()|date_format:$dateFormatShort|default:"&mdash;"}</td>
 		<td>{$proofAssignment->getDateProofreaderUnderway()|date_format:$dateFormatShort|default:"&mdash;"}</td>
 		<td>
+			{url|assign:"url" op="completeProofreader" articleId=$submission->getArticleId()}
 			{if not $proofAssignment->getDateProofreaderNotified() or not $useProofreaders or $proofAssignment->getDateProofreaderCompleted()}
-				{icon name="mail" disabled="disabled" url="$requestPageUrl/completeProofreader?articleId=`$submission->getArticleId()`"}
+				{icon name="mail" disabled="disabled" url=$url}
 			{else}
-				{icon name="mail" url="$requestPageUrl/completeProofreader?articleId=`$submission->getArticleId()`"}
+				{icon name="mail" url=$url}
 			{/if}
 			{$proofAssignment->getDateProofreaderCompleted()|date_format:$dateFormatShort|default:""}
 		</td>
@@ -58,12 +59,12 @@
 {translate key="submission.proofread.corrections"}
 {if $submission->getMostRecentProofreadComment()}
 	{assign var="comment" value=$submission->getMostRecentProofreadComment()}
-	<a href="javascript:openComments('{$requestPageUrl}/viewProofreadComments/{$submission->getArticleId()}#{$comment->getCommentId()}');" class="icon">{icon name="comment"}</a>{$comment->getDatePosted()|date_format:$dateFormatShort}
+	<a href="javascript:openComments('{url op="viewProofreadComments" path=$submission->getArticleId() anchor=$comment->getCommentId()}');" class="icon">{icon name="comment"}</a>{$comment->getDatePosted()|date_format:$dateFormatShort}
 {else}
-	<a href="javascript:openComments('{$requestPageUrl}/viewProofreadComments/{$submission->getArticleId()}');" class="icon">{icon name="comment"}</a>
+	<a href="javascript:openComments('{url op="viewProofreadComments" path=$submission->getArticleId()}');" class="icon">{icon name="comment"}</a>
 {/if}
 
 {if $currentJournal->getSetting('proofInstructions')}
 &nbsp;&nbsp;
-<a href="javascript:openHelp('{$requestPageUrl}/instructions/proof')" class="action">{translate key="submission.proofread.instructions"}</a>
+<a href="javascript:openHelp('{url op="instructions" path="proof"}')" class="action">{translate key="submission.proofread.instructions"}</a>
 {/if}

@@ -9,7 +9,7 @@
  * $Id$
  *}
 
-{assign var="currentUrl" value="$requestPageUrl/people/all"}
+{url|assign:"currentUrl" op="people" path="all"}
 {assign var="pageTitle" value="manager.people"}
 {include file="common/header.tpl"}
 
@@ -52,7 +52,7 @@
 
 <h3>{if $userId}{translate key="manager.people.editProfile"}{else}{translate key="manager.people.createUser"}{/if}</h3>
 
-<form name="userForm" method="post" action="{$pageUrl}/manager/updateUser" onsubmit="enablePasswordFields()">
+<form name="userForm" method="post" action="{url op="updateUser"}" onsubmit="enablePasswordFields()">
 {if $userId}
 <input type="hidden" name="userId" value="{$userId}" />
 {/if}
@@ -179,7 +179,7 @@
 	{/if}
 </table>
 
-<p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> {if not $userId}<input type="submit" name="createAnother" value="{translate key="manager.people.saveAndCreateAnotherUser"}" class="button" /> {/if}<input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{$pageUrl}/manager/people/all'" /></p>
+<p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> {if not $userId}<input type="submit" name="createAnother" value="{translate key="manager.people.saveAndCreateAnotherUser"}" class="button" /> {/if}<input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url path="all"}'" /></p>
 
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 

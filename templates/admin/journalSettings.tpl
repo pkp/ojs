@@ -14,7 +14,7 @@
 
 <br />
 
-<form method="post" action="{$pageUrl}/admin/updateJournal">
+<form method="post" action="{url op="updateJournal"}">
 {if $journalId}
 <input type="hidden" name="journalId" value="{$journalId}" />
 {/if}
@@ -39,7 +39,8 @@
 		<td class="value">
 			<input type="text" id="path" name="path" value="{$path|escape}" size="16" maxlength="32" class="textField" />
 			<br />
-			<span class="instruct">{translate key="admin.journals.urlWillBe" path="$indexUrl"}</span>
+			{url|assign:"sampleUrl" journal="path"}
+			<span class="instruct">{translate key="admin.journals.urlWillBe" sampleUrl=$sampleUrl}</span>
 		</td>
 	</tr>
 	<tr valign="top">
@@ -49,7 +50,7 @@
 	</tr>
 </table>
 
-<p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{$pageUrl}/admin/journals'" /></p>
+<p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url op="journals"}'" /></p>
 
 </form>
 

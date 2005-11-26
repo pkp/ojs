@@ -38,7 +38,7 @@ class EruditExportDom {
 		XMLWriter::appendChild($adminNode, $articleInfoNode);
 
 		// The first public ID should be a full URL to the article.
-		$urlIdNode = &XMLWriter::createChildWithText($doc, $articleInfoNode, 'idpublic', Request::getPageUrl() . '/article/view/' . $article->getArticleId() . '/' . $galley->getGalleyId());
+		$urlIdNode = &XMLWriter::createChildWithText($doc, $articleInfoNode, 'idpublic', Request::url($journal->getPath(), 'article', 'view', array($article->getArticleId(), $galley->getGalleyId())));
 		XMLWriter::setAttribute($urlIdNode, 'scheme', 'sici');
 
 		/* --- journal --- */

@@ -27,7 +27,8 @@
 
 	{if $parent}
 		{assign var=parentId value=$parent->getCommentId()}
-		<i>{translate key="comments.inResponseTo" url="$pageUrl/comment/view/$articleId/$parentId" title=$parent->getTitle()|escape}</i><br />
+		{url|assign:"url" page="comment" op="view" path=$articleId|to_array:$parentId}
+		<i>{translate key="comments.inResponseTo" url=$url title=$parent->getTitle()|escape}</i><br />
 	{/if}
 
 	{if $comment->getPosterEmail()}
@@ -36,11 +37,11 @@
 	{/if}
 
 	{if $enableComments==COMMENTS_UNAUTHENTICATED || (($enableComments==COMMENTS_AUTHENTICATED || $enableComments==COMMENTS_ANONYMOUS) && $isUserLoggedIn)}
-		<a href="{$pageUrl}/comment/add/{$articleId}/{$galleyId}/{$comment->getCommentId()}" class="action">{translate key="comments.postReply"}</a>&nbsp;&nbsp;
+		<a href="{url op="add" path=$articleId|to_array:$galleyId:$comment->getCommentId()}" class="action">{translate key="comments.postReply"}</a>&nbsp;&nbsp;
 	{/if}
 
 	{if $isManager}
-		<a href="{$pageUrl}/comment/delete/{$articleId}/{$galleyId}/{$comment->getCommentId()}" {if $comment->getChildCommentCount()!=0}onclick="return confirm('{translate|escape:"javascript" key="comments.confirmDeleteChildren"}')" {/if}class="action">{translate key="comments.delete"}</a>
+		<a href="{url op="delete" path=$articleId|to_array:$galleyId:$comment->getCommentId()}" {if $comment->getChildCommentCount()!=0}onclick="return confirm('{translate|escape:"javascript" key="comments.confirmDeleteChildren"}')" {/if}class="action">{translate key="comments.delete"}</a>
 	{/if}
 
 	<br />
@@ -60,7 +61,7 @@
 
 {assign var=user value=$child->getUser()}
 {assign var=childId value=$child->getCommentId()}
-<h4><a href="{$pageUrl}/comment/view/{$articleId}/{$galleyId}/{$childId}" target="_parent">{$child->getTitle()|escape}</a></h4>
+<h4><a href="{url op="view" path=$articleId|to_array:$galleyId:$childId}" target="_parent">{$child->getTitle()|escape}</a></h4>
 <h5>{if $user}{translate key="comments.authenticated" userName=$child->getPosterName()|escape}{elseif $child->getPosterName()}{translate key="comments.anonymousNamed" userName=$child->getPosterName()|escape}{else}{translate key="comments.anonymous"}{/if} ({$child->getDatePosted()|date_format:$dateFormatShort})</h5>
 {if $child->getPosterEmail()}
 	{assign_translate var=emailReply key="comments.emailReply"}
@@ -68,15 +69,16 @@
 {/if}
 
 {if $enableComments==COMMENTS_UNAUTHENTICATED || (($enableComments==COMMENTS_AUTHENTICATED || $enableComments==COMMENTS_ANONYMOUS) && $isUserLoggedIn)}
-	<a href="{$pageUrl}/comment/add/{$articleId}/{$galleyId}/{$childId}" class="action">{translate key="comments.postReply"}</a>&nbsp;&nbsp;
+	<a href="{url op="add" path=$articleId|to_array:$galleyId:$childId}" class="action">{translate key="comments.postReply"}</a>&nbsp;&nbsp;
 {/if}
 {if $isManager}
-	<a href="{$pageUrl}/comment/delete/{$articleId}/{$galleyId}/{$child->getCommentId()}" {if $child->getChildCommentCount()!=0}onclick="return confirm('{translate|escape:"javascript" key="comments.confirmDeleteChildren"}')" {/if}class="action">{translate key="comments.delete"}</a>
+	<a href="{url op="delete" path=$articleId|to_array:$galleyId:$child->getCommentId()}" {if $child->getChildCommentCount()!=0}onclick="return confirm('{translate|escape:"javascript" key="comments.confirmDeleteChildren"}')" {/if}class="action">{translate key="comments.delete"}</a>
 {/if}
 <br />
 
 {assign_translate var=readMore key="comments.readMore"}
-{assign var=moreLink value="<a href=\"$pageUrl/comment/view/$articleId/$galleyId/$childId\">$readMore</a>"}
+{url|assign:"moreUrl" op="view" path=$articleId|to_array:$galleyId:$childId}
+{assign var=moreLink value="<a href=\"$moreUrl\">$readMore</a>"}
 <p>{$child->getBody()|strip_unsafe_html|nl2br|truncate:300:"... $moreLink"}</p>
 
 {assign var=grandChildren value=$child->getChildren()}
@@ -84,7 +86,7 @@
 {foreach from=$child->getChildren() item=grandChild}
 {assign var=user value=$grandChild->getUser()}
 	<li>
-		<a href="{$pageUrl}/comment/view/{$articleId}/{$galleyId}/{$grandChild->getCommentId()}" target="_parent">{$grandChild->getTitle()|escape}</a>
+		<a href="{url op="view" path=$articleId|to_array:$galleyId:$grandChild->getCommentId()}" target="_parent">{$grandChild->getTitle()|escape}</a>
 		{if $grandChild->getChildCommentCount()==1}{translate key="comments.oneReply"}{elseif $grandChild->getChildCommentCount()>0}{translate key="comments.nReplies" num=$grandChild->getChildCommentCount()}{/if}<br/>
 		{if $user}{translate key="comments.authenticated" userName=$grandChild->getPosterName()|escape}{elseif $grandChild->getPosterName()}{translate key="comments.anonymousNamed" userName=$grandChild->getPosterName()|escape}{else}{translate key="comments.anonymous"}{/if} ({$grandChild->getDatePosted()|date_format:$dateFormatShort})
 	</li>

@@ -16,7 +16,7 @@
 
 <h3>{translate key="editor.article.selectSectionEditor"}</h3>
 
-<form name="submit" method="post" action="{$requestPageUrl}/assignEditor?articleId={$articleId}">
+<form name="submit" method="post" action="{url op="assignEditor" articleId=$articleId}">
 	<select name="searchField" size="1" class="selectMenu">
 		{html_options_translate options=$fieldOptions selected=$searchField}
 	</select>
@@ -27,7 +27,7 @@
 	<input type="text" name="search" class="textField" value="{$search|escape}" />&nbsp;<input type="submit" value="{translate key="common.search"}" class="button" />
 </form>
 
-<p>{section loop=26 name=letters}<a href="{$requestPageUrl}/assignEditor?articleId={$articleId}&amp;searchInitial={$smarty.section.letters.index+$start|chr}">{if chr($smarty.section.letters.index+$start) == $searchInitial}<strong>{$smarty.section.letters.index+$start|chr}</strong>{else}{$smarty.section.letters.index+$start|chr}{/if}</a> {/section}<a href="{$requestPageUrl}/assignEditor?articleId={$articleId}">{if $searchInitial==''}<strong>{translate key="common.all"}</strong>{else}{translate key="common.all"}{/if}</a></p>
+<p>{section loop=26 name=letters}<a href="{url op="assignEditor" articleId=$articleId searchInitial=$smarty.section.letters.index+$start|chr}">{if chr($smarty.section.letters.index+$start) == $searchInitial}<strong>{$smarty.section.letters.index+$start|chr}</strong>{else}{$smarty.section.letters.index+$start|chr}{/if}</a> {/section}<a href="{url op="assignEditor" articleId=$articleId}">{if $searchInitial==''}<strong>{translate key="common.all"}</strong>{else}{translate key="common.all"}{/if}</a></p>
 
 <table width="100%" class="listing">
 <tr><td colspan="5" class="headseparator">&nbsp;</td></tr>
@@ -42,7 +42,7 @@
 {iterate from=sectionEditors item=sectionEditor}
 {assign var=sectionEditorId value=$sectionEditor->getUserId()}
 <tr valign="top">
-	<td><a class="action" href="{$pageUrl}/editor/userProfile/{$sectionEditorId}">{$sectionEditor->getFullName()}</a></td>
+	<td><a class="action" href="{url op="userProfile" path=$sectionEditorId}">{$sectionEditor->getFullName()}</a></td>
 	<td>
 		{assign var=thisEditorSections value=$editorSections[$sectionEditorId]}
 		{foreach from=$thisEditorSections item=section}
@@ -65,7 +65,7 @@
 			0
 		{/if}
 	</td>
-	<td><a class="action" href="{$pageUrl}/editor/assignEditor?articleId={$articleId}&amp;editorId={$sectionEditorId}">{translate key="common.assign"}</a></td>
+	<td><a class="action" href="{url op="assignEditor" articleId=$articleId editorId=$sectionEditorId}">{translate key="common.assign"}</a></td>
 </tr>
 <tr><td colspan="5" class="{if $sectionEditors->eof()}end{/if}separator">&nbsp;</td></tr>
 {/iterate}

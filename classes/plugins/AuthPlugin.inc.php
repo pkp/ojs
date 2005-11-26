@@ -241,7 +241,7 @@ class AuthPlugin extends Plugin {
 
 	function manage($verb, $args) {
 		if ($verb === 'authSources') {
-			Request::redirect(Request::getIndexUrl() . '/index/admin/auth');
+			Request::redirect(Request::url('index', 'admin', 'auth'));
 		}
 		return false;
 	}

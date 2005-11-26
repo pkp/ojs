@@ -31,7 +31,7 @@ class PeopleHandler extends ManagerHandler {
 		if ($roleSymbolic != 'all' && String::regexp_match_get('/^(\w+)s$/', $roleSymbolic, $matches)) {
 			$roleId = $roleDao->getRoleIdFromPath($matches[1]);
 			if ($roleId == null) {
-				Request::redirect('manager/people/all');
+				Request::redirect(null, null, null, 'all');
 			}
 			$roleName = $roleDao->getRoleName($roleId, true);
 			
@@ -99,7 +99,7 @@ class PeopleHandler extends ManagerHandler {
 			$helpTopicId = 'journal.users.allUsers';
 		}
 		
-		$templateMgr->assign('currentUrl', Request::getPageUrl() . '/manager/people/all');
+		$templateMgr->assign('currentUrl', Request::url(null, null, 'people', 'all'));
 		$templateMgr->assign('roleName', $roleName);
 		$templateMgr->assign_by_ref('users', $users);
 		$templateMgr->assign_by_ref('thisUser', Request::getUser());
@@ -215,7 +215,7 @@ class PeopleHandler extends ManagerHandler {
 			}
 		}
 			
-		Request::redirect('manager/people' . (empty($rolePath) ? '' : '/' . $rolePath . 's'));
+		Request::redirect(null, null, 'people', (empty($rolePath) ? null : $rolePath . 's'));
 	}
 	
 	/**
@@ -233,7 +233,7 @@ class PeopleHandler extends ManagerHandler {
 			$roleDao->deleteRoleByUserId(Request::getUserVar('userId'), $journal->getJournalId(), $roleId);
 		}
 		
-		Request::redirect('manager/people');
+		Request::redirect(null, null, 'people');
 	}
 	
 	/**
@@ -289,7 +289,7 @@ class PeopleHandler extends ManagerHandler {
 			}
 		}
 		
-		Request::redirect('manager/people/' . $roleDao->getRolePath($roleId));
+		Request::redirect(null, null, 'people', $roleDao->getRolePath($roleId));
 	}
 	
 	/**
@@ -318,14 +318,14 @@ class PeopleHandler extends ManagerHandler {
 			// over this user. Display an error.
 			$templateMgr->assign('pageTitle', 'manager.people');
 			$templateMgr->assign('errorMsg', 'manager.people.noAdministrativeRights');
-			$templateMgr->assign('backLink', Request::getPageUrl() . '/manager/people/all');
+			$templateMgr->assign('backLink', Request::url(null, null, 'people', 'all'));
 			$templateMgr->assign('backLinkLabel', 'manager.people.allUsers');
 			return $templateMgr->display('common/error.tpl');
 		}
 
 		import('manager.form.UserManagementForm');
 		
-		$templateMgr->assign('currentUrl', Request::getPageUrl() . '/manager/people/all');
+		$templateMgr->assign('currentUrl', Request::url(null, null, 'people', 'all'));
 		$userForm = &new UserManagementForm($userId);
 		$userForm->initData();
 		$userForm->display();
@@ -350,7 +350,7 @@ class PeopleHandler extends ManagerHandler {
 				$templateMgr = &TemplateManager::getManager();
 				$templateMgr->assign('pageTitle', 'manager.people');
 				$templateMgr->assign('errorMsg', 'manager.people.noAdministrativeRights');
-				$templateMgr->assign('backLink', Request::getPageUrl() . '/manager/people/all');
+				$templateMgr->assign('backLink', Request::url(null, null, 'people', 'all'));
 				$templateMgr->assign('backLinkLabel', 'manager.people.allUsers');
 				return $templateMgr->display('common/error.tpl');
 			}
@@ -363,7 +363,7 @@ class PeopleHandler extends ManagerHandler {
 			$userDao->updateUser($user);
 		}
 
-		Request::redirect('manager/people/all');
+		Request::redirect(null, null, 'people', 'all');
 	}
 
 	/**
@@ -386,7 +386,7 @@ class PeopleHandler extends ManagerHandler {
 			$userDao->updateUser($user);
 		}
 
-		Request::redirect('manager/people/all');
+		Request::redirect(null, null, 'people', 'all');
 	}
 
 	/**
@@ -406,7 +406,7 @@ class PeopleHandler extends ManagerHandler {
 			$roleDao->deleteRoleByUserId($userId, $journal->getJournalId());
 		}
 
-		Request::redirect('manager/people/all');
+		Request::redirect(null, null, 'people', 'all');
 	}
 
 	/**
@@ -424,7 +424,7 @@ class PeopleHandler extends ManagerHandler {
 			$templateMgr = &TemplateManager::getManager();
 			$templateMgr->assign('pageTitle', 'manager.people');
 			$templateMgr->assign('errorMsg', 'manager.people.noAdministrativeRights');
-			$templateMgr->assign('backLink', Request::getPageUrl() . '/manager/people/all');
+			$templateMgr->assign('backLink', Request::url(null, null, 'people', 'all'));
 			$templateMgr->assign('backLinkLabel', 'manager.people.allUsers');
 			return $templateMgr->display('common/error.tpl');
 		}
@@ -440,14 +440,14 @@ class PeopleHandler extends ManagerHandler {
 			if (Request::getUserVar('createAnother')) {
 				// C
 				$templateMgr = &TemplateManager::getManager();
-				$templateMgr->assign('currentUrl', Request::getPageUrl() . '/manager/people/all');
+				$templateMgr->assign('currentUrl', Request::url(null, null, 'people', 'all'));
 				$templateMgr->assign('userCreated', true);
 				$userForm = &new UserManagementForm();
 				$userForm->initData();
 				$userForm->display();
 				
 			} else {
-				Request::redirect('manager/people/all');
+				Request::redirect(null, null, 'people', 'all');
 			}
 			
 		} else {
@@ -465,7 +465,7 @@ class PeopleHandler extends ManagerHandler {
 		parent::setupTemplate(true);
 			
 		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign('currentUrl', Request::getPageUrl() . '/manager/people/all');
+		$templateMgr->assign('currentUrl', Request::url(null, null, 'people', 'all'));
 		$templateMgr->assign('helpTopicId', 'journal.users.index');
 		
 		$userDao = &DAORegistry::getDAO('UserDAO');
@@ -482,7 +482,7 @@ class PeopleHandler extends ManagerHandler {
 			// Non-existent user requested
 			$templateMgr->assign('pageTitle', 'manager.people');
 			$templateMgr->assign('errorMsg', 'manager.people.invalidUser');
-			$templateMgr->assign('backLink', Request::getPageUrl() . '/manager/people/all');
+			$templateMgr->assign('backLink', Request::url(null, null, 'people', 'all'));
 			$templateMgr->assign('backLinkLabel', 'manager.people.allUsers');
 			$templateMgr->display('common/error.tpl');
 			
@@ -521,13 +521,13 @@ class PeopleHandler extends ManagerHandler {
 		
 		if (Request::getUserVar('send') && !$email->hasErrors()) {
 			$email->send();
-			Request::redirect(Request::getPageUrl() . '/manager');
+			Request::redirect(null, Request::getRequestedPage());
 		} else {
 			$email->assignParams(); // FIXME Forces default parameters to be assigned (should do this automatically in MailTemplate?)
 			if (!Request::getUserVar('continued')) {
 				if (count($email->getRecipients())==0) $email->addRecipient($user->getEmail(), $user->getFullName());
 			}
-			$email->displayEditForm(Request::getPageUrl() . '/manager/email', array(), 'manager/people/email.tpl');
+			$email->displayEditForm(Request::url(null, null, 'email'), array(), 'manager/people/email.tpl');
 		}
 	}
 
@@ -580,7 +580,7 @@ class PeopleHandler extends ManagerHandler {
 				$templateMgr = &TemplateManager::getManager();
 				$templateMgr->assign('pageTitle', 'manager.people');
 				$templateMgr->assign('errorMsg', 'manager.people.noAdministrativeRights');
-				$templateMgr->assign('backLink', Request::getPageUrl() . '/manager/people/all');
+				$templateMgr->assign('backLink', Request::url(null, null, 'people', 'all'));
 				$templateMgr->assign('backLinkLabel', 'manager.people.allUsers');
 				return $templateMgr->display('common/error.tpl');
 			}
@@ -595,10 +595,10 @@ class PeopleHandler extends ManagerHandler {
 				$session->setSessionVar('userId', $userId);
 				$session->setUserId($userId);
 				$session->setSessionVar('username', $newUser->getUsername());
-				Request::redirect('user');
+				Request::redirect(null, 'user');
 			}
 		}
-		Request::redirect('manager');
+		Request::redirect(null, Request::getRequestedPage());
 	}
 	
 	/**
@@ -625,7 +625,7 @@ class PeopleHandler extends ManagerHandler {
 			}
 		}
 		
-		Request::redirect('manager');
+		Request::redirect(null, Request::getRequestedPage());
 	}
 }
 

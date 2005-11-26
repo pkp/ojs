@@ -10,10 +10,10 @@
  *}
 
 {assign var="pageTitle" value="user.profile.editProfile"}
-{assign var="currentUrl" value="$pageUrl/user/profile"}
+{url|assign:"url" op="profile"}
 {include file="common/header.tpl"}
 
-<form method="post" action="{$pageUrl}/user/saveProfile">
+<form method="post" action="{url op="saveProfile"}">
 
 {include file="common/formErrors.tpl"}
 
@@ -94,7 +94,7 @@
 {/foreach}
 
 </table>
-<p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{$pageUrl}/user'" /></p>
+<p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url page="user"}'" /></p>
 </form>
 
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>

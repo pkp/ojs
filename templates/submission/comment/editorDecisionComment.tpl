@@ -16,7 +16,7 @@
 {if $isEditor}
 <tr valign="top">
 	<td colspan="2" align="center">
-		<form method="post" action="{$requestPageUrl}/importPeerReviews">
+		<form method="post" action="{url op="importPeerReviews"}">
 			{if $hiddenFormParams}
 				{foreach from=$hiddenFormParams item=hiddenFormParam key=key}
 					<input type="hidden" name="{$key|escape}" value="{$hiddenFormParam|escape}" />
@@ -35,7 +35,7 @@
 	</td>
 	<td width="75%">
 		{if $comment->getAuthorId() eq $userId and not $isLocked}
-			<div style="float: right"><a href="{$requestPageUrl}/editComment/{$articleId}/{$comment->getCommentId()}" class="action">{translate key="common.edit"}</a> <a href="{$requestPageUrl}/deleteComment/{$articleId}/{$comment->getCommentId()}" onclick="return confirm('{translate|escape:"javascript" key="submission.comments.confirmDelete"}')" class="action">{translate key="common.delete"}</a></div>
+			<div style="float: right"><a href="{url op="editComment" path=$articleId|to_array:$comment->getCommentId()}" class="action">{translate key="common.edit"}</a> <a href="{url op="deleteComment" path=$articleId|to_array:$comment->getCommentId()}" onclick="return confirm('{translate|escape:"javascript" key="submission.comments.confirmDelete"}')" class="action">{translate key="common.delete"}</a></div>
 		{/if}
 		<a name="{$comment->getCommentId()}"></a>
 		{if $comment->getCommentTitle() neq ""}
@@ -55,7 +55,7 @@
 <br />
 
 {if not $isLocked}
-<form method="post" action="{$requestPageUrl}/{$commentAction}">
+<form method="post" action="{url op=$commentAction}">
 {if $hiddenFormParams}
 	{foreach from=$hiddenFormParams item=hiddenFormParam key=key}
 		<input type="hidden" name="{$key|escape}" value="{$hiddenFormParam|escape}" />
@@ -80,7 +80,8 @@
 <p><input type="submit" name="save" value="{translate key="common.save"}" class="button defaultButton" /> <input type="submit" name="saveAndEmail" value="{if $isEditor}{translate key="submission.comments.saveAndEmailAuthor"}{else}{translate key="submission.comments.saveAndEmailEditor"}{/if}" class="button" /> <input type="button" value="{translate key="common.close"}" class="button" onclick="window.opener.location.reload(); window.close()" /></p>
 
 {if $isEditor}
-	{icon name="mail" url="`$requestPageUrl`/blindCcReviewsToReviewers?articleId=$articleId"} {translate key="submission.comments.sendDecisionToReviewers"}
+	{url|assign:"url" op="blindCcReviewsToReviewers" articleId=$articleId}
+	{icon name="mail" url=$url} {translate key="submission.comments.sendDecisionToReviewers"}
 {/if}
 
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>

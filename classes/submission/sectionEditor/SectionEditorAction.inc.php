@@ -221,7 +221,7 @@ class SectionEditorAction extends Action {
 						$reviewDueDate = date('Y-m-d', strtotime('+2 week'));
 					}
 
-					$submissionUrl = Request::getPageUrl() . '/reviewer/submission/' . $reviewId;
+					$submissionUrlParams = array();
 					if ($reviewerAccessKeysEnabled) {
 						import('security.AccessKeyManager');
 						import('pages.reviewer.ReviewerHandler');
@@ -230,9 +230,9 @@ class SectionEditorAction extends Action {
 						// Key lifetime is the typical review period plus four weeks
 						$keyLifetime = ($journal->getSetting('numWeeksPerReview') + 4) * 7;
 
-						$key = $accessKeyManager->createKey('ReviewerContext', $reviewer->getUserId(), $reviewId, $keyLifetime);
-						$submissionUrl .= "?key=$key";
+						$submissionUrlParams['key'] = $accessKeyManager->createKey('ReviewerContext', $reviewer->getUserId(), $reviewId, $keyLifetime);
 					}
+					$submissionUrl = Request::url(null, 'reviewer', 'submission', $reviewId, $submissionUrlParams);
 
 					$paramArray = array(
 						'reviewerName' => $reviewer->getFullName(),
@@ -243,7 +243,7 @@ class SectionEditorAction extends Action {
 						'editorialContactSignature' => $user->getContactSignature(),
 						'reviewGuidelines' => $journal->getSetting('reviewGuidelines'),
 						'submissionReviewUrl' => $submissionUrl,
-						'passwordResetUrl' => sprintf('%s/login/resetPassword/%s?confirm=%s', Request::getPageUrl(), $reviewer->getUsername(), Validation::generatePasswordResetHash($reviewer->getUserId()))
+						'passwordResetUrl' => Request::url(null, 'login', 'resetPassword', $reviewer->getUsername(), array('confirm' => Validation::generatePasswordResetHash($reviewer->getUserId())))
 					);
 					$email->assignParams($paramArray);
 					$email->addRecipient($reviewer->getEmail(), $reviewer->getFullName());
@@ -259,7 +259,7 @@ class SectionEditorAction extends Action {
 						}
 					}
 				}
-				$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/notifyReviewer', array('reviewId' => $reviewId, 'articleId' => $sectionEditorSubmission->getArticleId()));
+				$email->displayEditForm(Request::url(null, null, 'notifyReviewer'), array('reviewId' => $reviewId, 'articleId' => $sectionEditorSubmission->getArticleId()));
 				return false;
 			}
 		}
@@ -320,7 +320,7 @@ class SectionEditorAction extends Action {
 						);
 						$email->assignParams($paramArray);
 					}
-					$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/cancelReview/send', array('reviewId' => $reviewId, 'articleId' => $sectionEditorSubmission->getArticleId()));
+					$email->displayEditForm(Request::url(null, null, 'cancelReview', 'send'), array('reviewId' => $reviewId, 'articleId' => $sectionEditorSubmission->getArticleId()));
 					return false;
 				}
 			}				
@@ -364,7 +364,7 @@ class SectionEditorAction extends Action {
 				if (!isset($reviewer)) return true;
 				$email->addRecipient($reviewer->getEmail(), $reviewer->getFullName());
 
-				$submissionUrl = Request::getPageUrl() . '/reviewer/submission/' . $reviewId;
+				$submissionUrlParams = array();
 				if ($reviewerAccessKeysEnabled) {
 					import('security.AccessKeyManager');
 					import('pages.reviewer.ReviewerHandler');
@@ -373,10 +373,9 @@ class SectionEditorAction extends Action {
 					// Key lifetime is the typical review period plus four weeks
 					$keyLifetime = ($journal->getSetting('numWeeksPerReview') + 4) * 7;
 
-					$key = $accessKeyManager->createKey('ReviewerContext', $reviewer->getUserId(), $reviewId, $keyLifetime);
-
-					$submissionUrl .= "?key=$key";
+					$submissionUrlParams['key'] = $accessKeyManager->createKey('ReviewerContext', $reviewer->getUserId(), $reviewId, $keyLifetime);
 				}
+				$submissionUrl = Request::url(null, 'reviewer', 'submission', $reviewId, $submissionUrlParams);
 				
 				//
 				// FIXME: Assign correct values!
@@ -387,14 +386,14 @@ class SectionEditorAction extends Action {
 					'reviewerPassword' => $reviewer->getPassword(),
 					'reviewDueDate' => date('Y-m-d', strtotime($reviewAssignment->getDateDue())),
 					'editorialContactSignature' => $user->getContactSignature(),
-					'passwordResetUrl' => sprintf('%s/login/resetPassword/%s?confirm=%s', Request::getPageUrl(), $reviewer->getUsername(), Validation::generatePasswordResetHash($reviewer->getUserId())),
+					'passwordResetUrl' => Request::url(null, 'login', 'resetPassword', $reviewer->getUsername(), array('confirm' => Validation::generatePasswordResetHash($reviewer->getUserId()))),
 					'submissionReviewUrl' => $submissionUrl
 				);
 				$email->assignParams($paramArray);
 	
 			}
 			$email->displayEditForm(
-				Request::getPageUrl() . '/' . Request::getRequestedPage() . '/remindReviewer/send',
+				Request::url(null, null, 'remindReviewer', 'send'),
 				array(
 					'reviewerId' => $reviewer->getUserId(),
 					'articleId' => $sectionEditorSubmission->getArticleId(),
@@ -449,7 +448,7 @@ class SectionEditorAction extends Action {
 					);
 					$email->assignParams($paramArray);
 				}
-				$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/thankReviewer/send', array('reviewId' => $reviewId, 'articleId' => $sectionEditorSubmission->getArticleId()));
+				$email->displayEditForm(Request::url(null, null, 'thankReviewer', 'send'), array('reviewId' => $reviewId, 'articleId' => $sectionEditorSubmission->getArticleId()));
 				return false;
 			}
 		}
@@ -593,7 +592,7 @@ class SectionEditorAction extends Action {
 				$email->assignParams($paramArray);
 				$email->addRecipient($author->getEmail(), $author->getFullName());
 			}
-			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/unsuitableSubmission', array('articleId' => $sectionEditorSubmission->getArticleId()));
+			$email->displayEditForm(Request::url(null, null, 'unsuitableSubmission'), array('articleId' => $sectionEditorSubmission->getArticleId()));
 			return false;
 		}
 	}
@@ -629,11 +628,11 @@ class SectionEditorAction extends Action {
 					'authorUsername' => $author->getUsername(),
 					'authorPassword' => $author->getPassword(),
 					'editorialContactSignature' => $user->getContactSignature(),
-					'submissionUrl' => Request::getPageUrl() . '/author/submissionEditing/' . $sectionEditorSubmission->getArticleId()
+					'submissionUrl' => Request::url(null, 'author', 'submissionEditing', $sectionEditorSubmission->getArticleId())
 				);
 				$email->assignParams($paramArray);
 			}
-			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/notifyAuthor', array('articleId' => $sectionEditorSubmission->getArticleId()));
+			$email->displayEditForm(Request::url(null, null, 'notifyAuthor'), array('articleId' => $sectionEditorSubmission->getArticleId()));
 		}
 	}
 	 
@@ -826,11 +825,11 @@ class SectionEditorAction extends Action {
 					'copyeditorUsername' => $copyeditor->getUsername(),
 					'copyeditorPassword' => $copyeditor->getPassword(),
 					'editorialContactSignature' => $user->getContactSignature(),
-					'submissionCopyeditingUrl' => Request::getPageUrl() . '/copyeditor/submission/' . $sectionEditorSubmission->getArticleId()
+					'submissionCopyeditingUrl' => Request::url(null, 'copyeditor', 'submission', $sectionEditorSubmission->getArticleId())
 				);
 				$email->assignParams($paramArray);
 			}
-			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/notifyCopyeditor/send', array('articleId' => $sectionEditorSubmission->getArticleId()));
+			$email->displayEditForm(Request::url(null, null, 'notifyCopyeditor', 'send'), array('articleId' => $sectionEditorSubmission->getArticleId()));
 			return false;
 		}
 		return true;
@@ -885,7 +884,7 @@ class SectionEditorAction extends Action {
 				);
 				$email->assignParams($paramArray);
 			}
-			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/thankCopyeditor/send', array('articleId' => $sectionEditorSubmission->getArticleId()));
+			$email->displayEditForm(Request::url(null, null, 'thankCopyeditor', 'send'), array('articleId' => $sectionEditorSubmission->getArticleId()));
 			return false;
 		}
 		return true;
@@ -928,12 +927,12 @@ class SectionEditorAction extends Action {
 					'authorUsername' => $author->getUsername(),
 					'authorPassword' => $author->getPassword(),
 					'editorialContactSignature' => $user->getContactSignature(),
-					'submissionCopyeditingUrl' => Request::getPageUrl() . '/author/submission/' . $sectionEditorSubmission->getArticleId()
+					'submissionCopyeditingUrl' => Request::url(null, 'author', 'submission', $sectionEditorSubmission->getArticleId())
 					
 				);
 				$email->assignParams($paramArray);
 			}
-			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/notifyAuthorCopyedit/send', array('articleId' => $sectionEditorSubmission->getArticleId()));
+			$email->displayEditForm(Request::url(null, null, 'notifyAuthorCopyedit', 'send'), array('articleId' => $sectionEditorSubmission->getArticleId()));
 			return false;
 		}
 		return true;
@@ -974,7 +973,7 @@ class SectionEditorAction extends Action {
 				);
 				$email->assignParams($paramArray);
 			}
-			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/thankAuthorCopyedit/send', array('articleId' => $sectionEditorSubmission->getArticleId()));
+			$email->displayEditForm(Request::url(null, null, 'thankAuthorCopyedit', 'send'), array('articleId' => $sectionEditorSubmission->getArticleId()));
 			return false;
 		}
 		return true;
@@ -1019,11 +1018,11 @@ class SectionEditorAction extends Action {
 					'copyeditorUsername' => $copyeditor->getUsername(),
 					'copyeditorPassword' => $copyeditor->getPassword(),
 					'editorialContactSignature' => $user->getContactSignature(),
-					'submissionCopyeditingUrl' => Request::getPageUrl() . '/copyeditor/submission/' . $sectionEditorSubmission->getArticleId()
+					'submissionCopyeditingUrl' => Request::url(null, 'copyeditor', 'submission', $sectionEditorSubmission->getArticleId())
 				);
 				$email->assignParams($paramArray);
 			}
-			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/notifyFinalCopyedit/send', array('articleId' => $sectionEditorSubmission->getArticleId()));
+			$email->displayEditForm(Request::url(null, null, 'notifyFinalCopyedit', 'send'), array('articleId' => $sectionEditorSubmission->getArticleId()));
 			return false;
 		}
 		return true;
@@ -1064,7 +1063,7 @@ class SectionEditorAction extends Action {
 				);
 				$email->assignParams($paramArray);
 			}
-			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/thankFinalCopyedit/send', array('articleId' => $sectionEditorSubmission->getArticleId()));
+			$email->displayEditForm(Request::url(null, null, 'thankFinalCopyedit', 'send'), array('articleId' => $sectionEditorSubmission->getArticleId()));
 			return false;
 		}
 		return true;
@@ -1379,11 +1378,11 @@ class SectionEditorAction extends Action {
 					'layoutEditorName' => $layoutEditor->getFullName(),
 					'layoutEditorUsername' => $layoutEditor->getUsername(),
 					'editorialContactSignature' => $user->getContactSignature(),
-					'submissionLayoutUrl' => Request::getPageUrl() . '/layoutEditor/submission/' . $submission->getArticleId()
+					'submissionLayoutUrl' => Request::url(null, 'layoutEditor', 'submission', $submission->getArticleId())
 				);
 				$email->assignParams($paramArray);
 			}
-			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/notifyLayoutEditor/send', array('articleId' => $submission->getArticleId()));
+			$email->displayEditForm(Request::url(null, null, 'notifyLayoutEditor', 'send'), array('articleId' => $submission->getArticleId()));
 			return false;
 		}
 		return true;
@@ -1427,7 +1426,7 @@ class SectionEditorAction extends Action {
 				);
 				$email->assignParams($paramArray);
 			}
-			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/thankLayoutEditor/send', array('articleId' => $submission->getArticleId()));
+			$email->displayEditForm(Request::url(null, null, 'thankLayoutEditor', 'send'), array('articleId' => $submission->getArticleId()));
 			return false;
 		}
 		return true;
@@ -1745,7 +1744,7 @@ class SectionEditorAction extends Action {
 				$email->assignParams($paramArray);
 			}
 			
-			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/blindCcReviewsToReviewers', array('articleId' => $article->getArticleId()), 'submission/comment/commentEmail.tpl');
+			$email->displayEditForm(Request::url(null, null, 'blindCcReviewsToReviewers'), array('articleId' => $article->getArticleId()), 'submission/comment/commentEmail.tpl');
 			return false;
 		}
 	}
@@ -1934,26 +1933,26 @@ class SectionEditorAction extends Action {
 	function submissionBreadcrumb($articleId, $parentPage, $section) {
 		$breadcrumb = array();
 		if ($articleId) {
-			$breadcrumb[] = array("$section/submission/$articleId", "#$articleId", true);
+			$breadcrumb[] = array(Request::url(null, $section, 'submission', $articleId), "#$articleId", true);
 		}
 
 		if ($parentPage) {
 			switch($parentPage) {
 				case 'summary':
-					$parent = array("$section/submission/$articleId", 'submission.summary');
+					$parent = array(Request::url(null, $section, 'submission', $articleId), 'submission.summary');
 					break;
 				case 'review':
-					$parent = array("$section/submissionReview/$articleId", 'submission.review');
+					$parent = array(Request::url(null, $section, 'submissionReview', $articleId), 'submission.review');
 					break;
 				case 'editing':
-					$parent = array("$section/submissionEditing/$articleId", 'submission.editing');
+					$parent = array(Request::url(null, $section, 'submissionEditing', $articleId), 'submission.editing');
 					break;
 				case 'history':
-					$parent = array("$section/submissionHistory/$articleId", 'submission.history');
+					$parent = array(Request::url(null, $section, 'submissionHistory', $articleId), 'submission.history');
 					break;
 			}
 			if ($section != 'editor' && $section != 'sectionEditor') {
-				$parent[0] = "$section/submission/$articleId";
+				$parent[0] = Request::url(null, $section, 'submission', $articleId);
 			}
 			$breadcrumb[] = $parent;
 		}

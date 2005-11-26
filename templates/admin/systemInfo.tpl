@@ -24,7 +24,7 @@
 		<p><strong>{translate key="admin.version.upToDate"}</strong></p>
 	{/if}
 {else}
-<p><a href="{$requestUrl}?versionCheck=1">{translate key="admin.version.checkForUpdates"}</a></p>
+<p><a href="{url versionCheck=1}">{translate key="admin.version.checkForUpdates"}</a></p>
 {/if}
 
 <h4>{translate key="admin.versionHistory"}</h4>
@@ -59,7 +59,7 @@
 </table>
 
 <h3>{translate key="admin.systemConfiguration"}</h3>
-<a class="action" href="{$pageUrl}/admin/editSystemConfig">{translate key="common.edit"}</a>
+<a class="action" href="{url op="editSystemConfig"}">{translate key="common.edit"}</a>
 <p>{translate key="admin.systemConfigurationDescription"}</p>
 
 {foreach from=$configData key=sectionName item=sectionData}
@@ -90,6 +90,6 @@
 {/foreach}
 </table>
 
-<a href="{$pageUrl}/admin/phpInfo" target="_blank">{translate key="admin.phpInfo"}</a>
+<a href="{url op="phpInfo"}" target="_blank">{translate key="admin.phpInfo"}</a>
 
 {include file="common/footer.tpl"}

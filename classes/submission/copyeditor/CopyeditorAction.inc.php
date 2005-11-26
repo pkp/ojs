@@ -79,7 +79,7 @@ class CopyeditorAction extends Action {
 				);
 				$email->assignParams($paramArray);
 			}
-			$email->displayEditForm(Request::getPageUrl() . '/copyeditor/completeCopyedit/send', array('articleId' => $copyeditorSubmission->getArticleId()));
+			$email->displayEditForm(Request::url(null, 'copyeditor', 'completeCopyedit', 'send'), array('articleId' => $copyeditorSubmission->getArticleId()));
 
 			return false;
 		}
@@ -154,7 +154,7 @@ class CopyeditorAction extends Action {
 				}
 				$email->assignParams($paramArray);
 			}
-			$email->displayEditForm(Request::getPageUrl() . '/copyeditor/completeFinalCopyedit/send', array('articleId' => $copyeditorSubmission->getArticleId()));
+			$email->displayEditForm(Request::url(null, 'copyeditor', 'completeFinalCopyedit', 'send'), array('articleId' => $copyeditorSubmission->getArticleId()));
 
 			return false;
 		}

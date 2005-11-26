@@ -16,7 +16,7 @@
 
 <p><span class="instruct">{translate key="manager.people.syncUserDescription"}</span></p>
 
-<form method="post" action="{$requestPageUrl}/enrollSync">
+<form method="post" action="{url op="enrollSync"}">
 
 <table class="data" width="100%">
 	<tr valign="top">

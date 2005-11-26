@@ -23,7 +23,7 @@ class InformationHandler extends Handler {
 		$journal = Request::getJournal();
 
 		if ($journal == null) {
-			Request::redirect(Request::getPageUrl(), false);
+			Request::redirect('index');
 			return;
 		}
 
@@ -44,7 +44,7 @@ class InformationHandler extends Handler {
 				$pageCrumbTitle = 'navigation.infoForAuthors';
 				break;
 			default:
-				Request::redirect($journal->getPath(), false);
+				Request::redirect($journal->getPath());
 				return;
 		}
 

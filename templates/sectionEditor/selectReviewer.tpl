@@ -15,7 +15,7 @@
 {assign var="start" value="A"|ord}
 
 <h3>{translate key="editor.article.selectReviewer"}</h3>
-<form name="submit" method="post" action="{$requestPageUrl}/selectReviewer/{$articleId}">
+<form name="submit" method="post" action="{url op="selectReviewer" path=$articleId}">
 	<select name="searchField" size="1" class="selectMenu">
 		{html_options_translate options=$fieldOptions selected=$searchField}
 	</select>
@@ -26,9 +26,9 @@
 	<input type="text" size="10" name="search" class="textField" value="{$search|escape}" />&nbsp;<input type="submit" value="{translate key="common.search"}" class="button" />
 </form>
 
-<p>{section loop=26 name=letters}<a href="{$requestPageUrl}/selectReviewer/{$articleId}?searchInitial={$smarty.section.letters.index+$start|chr}">{if chr($smarty.section.letters.index+$start) == $searchInitial}<strong>{$smarty.section.letters.index+$start|chr}</strong>{else}{$smarty.section.letters.index+$start|chr}{/if}</a> {/section}<a href="{$requestPageUrl}/selectReviewer/{$articleId}">{if $searchInitial==''}<strong>{translate key="common.all"}</strong>{else}{translate key="common.all"}{/if}</a></p>
+<p>{section loop=26 name=letters}<a href="{url op="selectReviewer" path=$articleId searchInitial=$smarty.section.letters.index+$start|chr}">{if chr($smarty.section.letters.index+$start) == $searchInitial}<strong>{$smarty.section.letters.index+$start|chr}</strong>{else}{$smarty.section.letters.index+$start|chr}{/if}</a> {/section}<a href="{url op="selectReviewer" path=$articleId}">{if $searchInitial==''}<strong>{translate key="common.all"}</strong>{else}{translate key="common.all"}{/if}</a></p>
 
-<p><a class="action" href="{$requestPageUrl}/enrollSearch/{$articleId}">{translate key="sectionEditor.review.addReviewer"}</a></p>
+<p><a class="action" href="{url op="enrollSearch" path=$articleId}">{translate key="sectionEditor.review.addReviewer"}</a></p>
 
 <table class="listing" width="100%">
 {assign var=numCols value=6}
@@ -55,7 +55,7 @@
 {assign var="reviewerStats" value=$reviewerStatistics[$userId]}
 
 <tr valign="top">
-	<td><a class="action" href="{$requestPageUrl}/userProfile/{$userId}">{$reviewer->getFullName()|escape}</a></td>
+	<td><a class="action" href="{url op="userProfile" path=$userId}">{$reviewer->getFullName()|escape}</a></td>
 	<td>{$reviewer->getInterests()|escape}</td>
 	{if $rateReviewerOnQuality}<td>
 		{if $qualityCount}{$averageQualityRatings[$userId].average|string_format:"%.1f"}
@@ -85,7 +85,7 @@
 		{if $reviewer->review_id}
 			{translate key="common.alreadyAssigned"}
 		{else}
-		<a class="action" href="{$requestPageUrl}/selectReviewer/{$articleId}/{$reviewer->getUserId()}">{translate key="common.assign"}</a>
+		<a class="action" href="{url op="selectReviewer" path=$articleId|to_array:$reviewer->getUserId()}">{translate key="common.assign"}</a>
 		{/if}
 	</td>
 </tr>

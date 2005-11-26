@@ -15,7 +15,7 @@
 {if $useProofreaders}
 <p>{translate key="user.role.proofreader"}:
 {if $proofAssignment->getProofreaderId()}&nbsp; {$proofAssignment->getProofreaderFullName()|escape}{/if}
-&nbsp; <a href="{$requestPageUrl}/selectProofreader/{$submission->getArticleId()}" class="action">{translate key="editor.article.selectProofreader"}</a></p>
+&nbsp; <a href="{url op="selectProofreader" path=$submission->getArticleId()}" class="action">{translate key="editor.article.selectProofreader"}</a></p>
 {/if}
 
 <table width="100%" class="info">
@@ -30,11 +30,12 @@
 		<td width="2%">1.</td>
 		<td width="26%">{translate key="user.role.author"}</td>
 		<td>
+			{url|assign:"url" op="notifyAuthorProofreader" articleId=$submission->getArticleId()}
 			{if $proofAssignment->getDateAuthorUnderway()}
 				{assign_translate|escape:"javascript" var=confirmText key="sectionEditor.author.confirmRenotify"}
-				{icon name="mail" onclick="return confirm('$confirmText')" url="$requestPageUrl/notifyAuthorProofreader?articleId=`$submission->getArticleId()`"}
+				{icon name="mail" onclick="return confirm('$confirmText')" url=$url}
 			{else}
-				{icon name="mail" url="$requestPageUrl/notifyAuthorProofreader?articleId=`$submission->getArticleId()`"}
+				{icon name="mail" url=$url}
 			{/if}
 
 			{$proofAssignment->getDateAuthorNotified()|date_format:$dateFormatShort|default:""}
@@ -47,7 +48,8 @@
 		</td>
 		<td>
 			{if $proofAssignment->getDateAuthorCompleted() && !$proofAssignment->getDateAuthorAcknowledged()}
-				{icon name="mail" url="$requestPageUrl/thankAuthorProofreader?articleId=`$submission->getArticleId()`"}
+				{url|assign:"url" op="thankAuthorProofreader" articleId=$submission->getArticleId()}
+				{icon name="mail" url=$url}
 			{else}
 				{icon name="mail" disabled="disable"}
 			{/if}
@@ -60,18 +62,19 @@
 		<td>
 			{if $useProofreaders}
 				{if $proofAssignment->getProofreaderId() && $proofAssignment->getDateAuthorCompleted()}
+					{url|assign:"url" op="notifyProofreader" articleId=$submission->getArticleId()}
 					{if $proofAssignment->getDateProofreaderUnderway()}
 						{assign_translate|escape:"javascript" var=confirmText key="sectionEditor.proofreader.confirmRenotify"}
-						{icon name="mail" onclick="return confirm('$confirmText')" url="$requestPageUrl/notifyProofreader?articleId=`$submission->getArticleId()`"}
+						{icon name="mail" onclick="return confirm('$confirmText')" url=$url}
 					{else}
-						{icon name="mail" url="$requestPageUrl/notifyProofreader?articleId=`$submission->getArticleId()`"}
+						{icon name="mail" url=$url}
 					{/if}
 				{else}
 					{icon name="mail" disabled="disable"}
 				{/if}
 			{else}
 				{if !$proofAssignment->getDateProofreaderNotified()}
-					<a href="{$requestPageUrl}/editorInitiateProofreader?articleId={$submission->getArticleId()}" class="action">{translate key="common.initiate"}</a>
+					<a href="{url op="editorInitiateProofreader" articleId=$submission->getArticleId()}" class="action">{translate key="common.initiate"}</a>
 				{/if}
 			{/if}
 			{$proofAssignment->getDateProofreaderNotified()|date_format:$dateFormatShort|default:""}
@@ -85,7 +88,7 @@
 		</td>
 		<td>
 			{if !$useProofreaders && !$proofAssignment->getDateProofreaderCompleted() && $proofAssignment->getDateProofreaderNotified()}
-				<a href="{$requestPageUrl}/editorCompleteProofreader/articleId?articleId={$submission->getArticleId()}" class="action">{translate key="common.complete"}</a>
+				<a href="{url op="editorCompleteProofreader" articleId=$submission->getArticleId()}" class="action">{translate key="common.complete"}</a>
 			{else}
 				{$proofAssignment->getDateProofreaderCompleted()|date_format:$dateFormatShort|default:"&mdash;"}
 			{/if}
@@ -93,7 +96,8 @@
 		<td>
 			{if $useProofreaders}
 				{if $proofAssignment->getDateProofreaderCompleted() && !$proofAssignment->getDateProofreaderAcknowledged()}
-					{icon name="mail" url="$requestPageUrl/thankProofreader?articleId=`$submission->getArticleId()`"}
+					{url|assign:"url" op="thankProofreader" articleId=$submission->getArticleId()}
+					{icon name="mail" url=$url}
 				{else}
 					{icon name="mail" disabled="disable"}
 				{/if}
@@ -109,18 +113,19 @@
 		<td>
 			{if $useLayoutEditors}
 				{if $layoutAssignment->getEditorId() && $proofAssignment->getDateProofreaderCompleted()}
+					{url|assign:"url" op="notifyLayoutEditorProofreader" articleId=$submission->getArticleId()}
 					{if $proofAssignment->getDateLayoutEditorUnderway()}
 						{assign_translate|escape:"javascript" var=confirmText key="sectionEditor.layout.confirmRenotify"}
-						{icon name="mail" onclick="return confirm('$confirmText')" url="$requestPageUrl/notifyLayoutEditorProofreader?articleId=`$submission->getArticleId()`"}
+						{icon name="mail" onclick="return confirm('$confirmText')" url=$url}
 					{else}
-						{icon name="mail" url="$requestPageUrl/notifyLayoutEditorProofreader?articleId=`$submission->getArticleId()`"}
+						{icon name="mail" url=$url}
 					{/if}
 				{else}
 					{icon name="mail" disabled="disable"}
 				{/if}
 			{else}
 				{if !$proofAssignment->getDateLayoutEditorNotified()}
-					<a href="{$requestPageUrl}/editorInitiateLayoutEditor?articleId={$submission->getArticleId()}" class="action">{translate key="common.initiate"}</a>
+					<a href="{url op="editorInitiateLayoutEditor" articleId=$submission->getArticleId()}" class="action">{translate key="common.initiate"}</a>
 				{/if}
 			{/if}
 				{$proofAssignment->getDateLayoutEditorNotified()|date_format:$dateFormatShort|default:""}
@@ -138,7 +143,7 @@
 			{elseif $proofAssignment->getDateLayoutEditorCompleted()}
 				{$proofAssignment->getDateLayoutEditorCompleted()|date_format:$dateFormatShort}
 			{elseif $proofAssignment->getDateLayoutEditorNotified()}
-				<a href="{$requestPageUrl}/editorCompleteLayoutEditor/articleId?articleId={$submission->getArticleId()}" class="action">{translate key="common.complete"}</a>
+				<a href="{url op="editorCompleteLayoutEditor" articleId=$submission->getArticleId()}" class="action">{translate key="common.complete"}</a>
 			{else}
 				&mdash;
 			{/if}
@@ -146,7 +151,8 @@
 		<td>
 			{if $useLayoutEditors}
 				{if $proofAssignment->getDateLayoutEditorCompleted() && !$proofAssignment->getDateLayoutEditorAcknowledged()}
-					{icon name="mail" url="$requestPageUrl/thankLayoutEditorProofreader?articleId=`$submission->getArticleId()`"}
+					{url|assign:"url" op="thankLayoutEditorProofreader" articleId=$submission->getArticleId()}
+					{icon name="mail" url=$url}
 				{else}
 					{icon name="mail" disabled="disable"}
 				{/if}
@@ -164,14 +170,14 @@
 {translate key="submission.proofread.corrections"}
 {if $submission->getMostRecentProofreadComment()}
 	{assign var="comment" value=$submission->getMostRecentProofreadComment()}
-	<a href="javascript:openComments('{$requestPageUrl}/viewProofreadComments/{$submission->getArticleId()}#{$comment->getCommentId()}');" class="icon">{icon name="comment"}</a>{$comment->getDatePosted()|date_format:$dateFormatShort}
+	<a href="javascript:openComments('{url op="viewProofreadComments" path=$submission->getArticleId() anchor=$comment->getCommentId()}');" class="icon">{icon name="comment"}</a>{$comment->getDatePosted()|date_format:$dateFormatShort}
 {else}
-	<a href="javascript:openComments('{$requestPageUrl}/viewProofreadComments/{$submission->getArticleId()}');" class="icon">{icon name="comment"}</a>
+	<a href="javascript:openComments('{url op="viewProofreadComments" path=$submission->getArticleId()}');" class="icon">{icon name="comment"}</a>
 {/if}
 
 {if $currentJournal->getSetting('proofInstructions')}
 &nbsp;&nbsp;
-<a href="javascript:openHelp('{$requestPageUrl}/instructions/proof')" class="action">{translate key="submission.proofread.instructions"}</a>
+<a href="javascript:openHelp('{url op="instructions" path="proof"}')" class="action">{translate key="submission.proofread.instructions"}</a>
 {/if}
 
 
@@ -180,7 +186,7 @@
 {if $proofAssignment->getDateSchedulingQueue()}
 {translate key="editor.article.placeSubmissionInSchedulingQueue"} {$proofAssignment->getDateSchedulingQueue()|date_format:$dateFormatShort}
 {else}
-<form method="post" action="{$requestPageUrl}/queueForScheduling/{$submission->getArticleId()}">
+<form method="post" action="{url op="queueForScheduling" path=$submission->getArticleId()}">
 {translate key="editor.article.placeSubmissionInSchedulingQueue"} 
 <input type="submit" value="{translate key="editor.article.scheduleSubmission"}"{if !$submissionAccepted} disabled="disabled"{/if} class="button defaultButton" />
 </form>

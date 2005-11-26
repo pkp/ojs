@@ -73,10 +73,10 @@ class AdminLanguagesHandler extends AdminHandler {
 		
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign(array(
-			'currentUrl' => Request::getPageUrl() . '/admin/languages',
+			'currentUrl' => Request::url(null, null, 'languages'),
 			'pageTitle' => 'common.languages',
 			'message' => 'common.changesSaved',
-			'backLink' => Request::getPageUrl() . '/admin',
+			'backLink' => Request::url(null, 'admin'),
 			'backLinkLabel' => 'admin.siteAdmin'
 		));
 		$templateMgr->display('common/message.tpl');
@@ -106,7 +106,7 @@ class AdminLanguagesHandler extends AdminHandler {
 			$siteDao->updateSite($site);
 		}
 		
-		Request::redirect('admin/languages');
+		Request::redirect(null, null, 'languages');
 	}
 	
 	/**
@@ -135,7 +135,7 @@ class AdminLanguagesHandler extends AdminHandler {
 			}
 		}
 		
-		Request::redirect('admin/languages');
+		Request::redirect(null, null, 'languages');
 	}
 	
 	/*
@@ -151,7 +151,7 @@ class AdminLanguagesHandler extends AdminHandler {
 			Locale::reloadLocale($locale);
 		}
 		
-		Request::redirect('admin/languages');
+		Request::redirect(null, null, 'languages');
 	}
 	
 	/**

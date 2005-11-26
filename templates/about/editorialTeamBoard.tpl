@@ -19,7 +19,7 @@
 
 {foreach from=$members item=member}
 	{assign var=user value=$member->getUser()}
-	<a href="javascript:openRTWindow('{$requestPageUrl}/editorialTeamBio/{$user->getUserId()}')">{$user->getFullName()|escape}</a>{if $user->getAffiliation()}, {$user->getAffiliation()|escape}{/if}
+	<a href="javascript:openRTWindow('{url op="editorialTeamBio" path=$user->getUserId()}')">{$user->getFullName()|escape}</a>{if $user->getAffiliation()}, {$user->getAffiliation()|escape}{/if}
 	<br />
 {/foreach}
 {/foreach}

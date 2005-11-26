@@ -12,7 +12,7 @@
 {assign var="pageTitle" value="manager.setup.journalPolicies}
 {include file="manager/setup/setupHeader.tpl"}
 
-<form method="post" action="{$pageUrl}/manager/saveSetup/2">
+<form method="post" action="{url op="saveSetup" path="2"}">
 {include file="common/formErrors.tpl"}
 
 <h3>2.1 {translate key="manager.setup.focusAndScopeOfJournal"}</h3>
@@ -195,9 +195,12 @@
 
 <p>{translate key="manager.setup.lockssDescription"}</p>
 
-<p>{translate key="manager.setup.lockssRegister" pageUrl=$pageUrl}</p>
+{url|assign:"lockssExistingArchiveUrl" page="manager" op="email" template="LOCKSS_EXISTING_ARCHIVE"}
+{url|assign:"lockssNewArchiveUrl" page="manager" op="email" template="LOCKSS_NEW_ARCHIVE"}
+<p>{translate key="manager.setup.lockssRegister" lockssExistingArchiveUrl=$lockssExistingArchiveUrl lockssNewArchiveUrl=$lockssNewArchiveUrl}</p>
 
-<p><input type="checkbox" name="enableLockss" id="enableLockss" value="1"{if $enableLockss} checked="checked"{/if} /> <label for="enableLockss">{translate key="manager.setup.lockssEnable" pageUrl=$pageUrl}</label></p>
+{url|assign:"lockssUrl" page="gateway" op="lockss"}
+<p><input type="checkbox" name="enableLockss" id="enableLockss" value="1"{if $enableLockss} checked="checked"{/if} /> <label for="enableLockss">{translate key="manager.setup.lockssEnable" lockssUrl=$lockssUrl}</label></p>
 
 <p>
 	<textarea name="lockssLicense" id="lockssLicense" rows="6" cols="60" class="textArea">{$lockssLicense|escape}</textarea>
@@ -307,7 +310,7 @@ function toggleRegAllowOpts(form) {
 
 <div class="separator"></div>
 
-<p><input type="submit" value="{translate key="common.saveAndContinue"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{$pageUrl}/manager/setup'" /></p>
+<p><input type="submit" value="{translate key="common.saveAndContinue"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url op="setup"}'" /></p>
 
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 

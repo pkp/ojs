@@ -19,5 +19,5 @@
 	Y2  - {$article->getDatePublished()|date_format:"%Y"}
 	KW  - {$article->getSubject()|escape}
 	N2  - {$article->getArticleAbstract()|escape}
-	UR  - {$pageUrl}/article/view/{$articleId|escape}/{$galleyId}
+	UR  - {url page="article" op="view" path=$articleId|to_array:$galleyId}
 	

@@ -139,7 +139,7 @@ function deleteAttachment(fileId) {
 <tr valign="top">
 	<td>&nbsp;</td>
 	<td class="value">
-		<input type="submit" onclick="document.submit.action='{$requestPageUrl}/selectTemplate';" class="button" value="{translate key="manager.people.emailUsers.selectTemplate"}"/>
+		<input type="submit" onclick="document.submit.action='{url op="selectTemplate"}';" class="button" value="{translate key="manager.people.emailUsers.selectTemplate"}"/>
 	</td>
 </tr>
 <tr valign="top">

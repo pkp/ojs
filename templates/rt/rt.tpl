@@ -35,7 +35,7 @@
 
 <h5>{$journal->getSetting('journalInitials')|escape}<br />{$issue->getIssueIdentification()|escape}</h5>
 
-<p><a href="{$pageUrl}/issue/view/{$issue->getBestIssueId($journal)|escape:"url"}" target="_parent" class="rtAction">{translate key="issue.toc"}</a></p>
+<p><a href="{url page="issue" op="view" path=$issue->getBestIssueId($journal)}" target="_parent" class="rtAction">{translate key="issue.toc"}</a></p>
 
 <div class="rtSeparator"></div>
 
@@ -52,23 +52,23 @@
 <div class="rtBlock">
 	<span class="rtSubtitle">{if $section && $section->getIdentifyType()}{translate key="rt.forThis" identifyType=$section->getIdentifyType()|escape}{else}{translate key="rt.peerReviewed"}{/if}</span>
 	<ul>
-		{if $galley && !$section->getAbstractsDisabled()}<li><a href="{$pageUrl}/article/view/{$articleId|escape:"url"}" target="_parent">{translate key="article.abstract"}</a></li>{/if}
-		{if $journalRt->getAuthorBio()}<li><a href="javascript:openRTWindow('{$pageUrl}/rt/bio/{$articleId|escape:"url"}/{$galleyId}');">{translate key="rt.authorBio"}</a></li>{/if}
-		{if $journalRt->getCaptureCite()}<li><a href="javascript:openRTWindow('{$pageUrl}/rt/captureCite/{$articleId|escape:"url"}/{$galleyId}');">{translate key="rt.captureCitation"}</a></li>{/if}
-		{if $journalRt->getViewMetadata()}<li><a href="javascript:openRTWindow('{$pageUrl}/rt/metadata/{$articleId|escape:"url"}/{$galleyId}');">{translate key="rt.viewMetadata"}</a></li>{/if}
-		{if $journalRt->getSupplementaryFiles() && $article->getSuppFiles()}<li><a href="javascript:openRTWindow('{$pageUrl}/rt/suppFiles/{$articleId|escape:"url"}/{$galleyId}');">{translate key="rt.suppFiles"}</a></li>{/if}
-		{if $journalRt->getPrinterFriendly()}<li><a href="{if !$galley || $galley->isHtmlGalley()}javascript:openRTWindow('{$pageUrl}/rt/printerFriendly/{$articleId|escape:"url"}/{$galleyId}');{else}{$pageUrl}/article/download/{$articleId|escape:"url"}/{$galley->getFileId()}{/if}">{translate key="rt.printVersion"}</a></li>{/if}
+		{if $galley && !$section->getAbstractsDisabled()}<li><a href="{url page="article" op="view" path=$articleId}" target="_parent">{translate key="article.abstract"}</a></li>{/if}
+		{if $journalRt->getAuthorBio()}<li><a href="javascript:openRTWindow('{url op="bio" path=$articleId|to_array:$galleyId}');">{translate key="rt.authorBio"}</a></li>{/if}
+		{if $journalRt->getCaptureCite()}<li><a href="javascript:openRTWindow('{url op="captureCite" path=$articleId|to_array:$galleyId}');">{translate key="rt.captureCitation"}</a></li>{/if}
+		{if $journalRt->getViewMetadata()}<li><a href="javascript:openRTWindow('{url op="metadata" path=$articleId|to_array:$galleyId}');">{translate key="rt.viewMetadata"}</a></li>{/if}
+		{if $journalRt->getSupplementaryFiles() && $article->getSuppFiles()}<li><a href="javascript:openRTWindow('{url op="suppFiles" path=$articleId|to_array:$galleyId}');">{translate key="rt.suppFiles"}</a></li>{/if}
+		{if $journalRt->getPrinterFriendly()}<li><a href="{if !$galley || $galley->isHtmlGalley()}javascript:openRTWindow('{url op="printerFriendly" path=$articleId|to_array:$galleyId}');{else}{url page="article" op="download" path=$articleId|to_array:$galley->getFileId()}{/if}">{translate key="rt.printVersion"}</a></li>{/if}
 		{if $journalRt->getDefineTerms()}
 			{foreach from=$version->getContexts() item=context}
 				{if $context->getDefineTerms()}
-					<li><a href="javascript:openRTWindow('{$pageUrl}/rt/context/{$articleId|escape:"url"}/{$galleyId}/{$context->getContextId()}');">{$context->getTitle()|escape}</a></li>
+					<li><a href="javascript:openRTWindow('{url op="context" path=$articleId|to_array:$galleyId:$context->getContextId()}');">{$context->getTitle()|escape}</a></li>
 				{/if}
 			{/foreach}
 		{/if}
 		{if $journalRt->getEmailOthers()}
 			<li>
 				{if $isUserLoggedIn}
-					<a href="javascript:openRTWindow('{$pageUrl}/rt/emailColleague/{$articleId|escape:"url"}/{$galleyId}');">{translate key="rt.colleague"}</a>
+					<a href="javascript:openRTWindow('{url op="emailColleague" path=$articleId|to_array:$galleyId}');">{translate key="rt.colleague"}</a>
 				{else}
 					{translate key="rt.colleague"}&nbsp;*
 					{assign var=needsLoginNote value=1}
@@ -76,7 +76,7 @@
 			</li>
 		{/if}
 		{if $journalRt->getAddComment() && $postingAllowed}
-			<li><a href="{$pageUrl}/comment/add/{$article->getArticleId()}/{$galleyId}" target="_parent">{translate key="rt.addComment"}</a></li>
+			<li><a href="{url page="comment" op="add" path=$article->getArticleId()|to_array:$galleyId}" target="_parent">{translate key="rt.addComment"}</a></li>
 		{elseif !$postingDisabled}
 			{translate key="rt.addComment"}&nbsp;*
 			{assign var=needsLoginNote value=1}
@@ -84,7 +84,7 @@
 		{if $journalRt->getEmailAuthor()}
 			<li>
 				{if $isUserLoggedIn}
-					<a href="javascript:openRTWindow('{$pageUrl}/rt/emailAuthor/{$articleId|escape:"url"}/{$galleyId}');">{translate key="rt.emailAuthor"}</a>
+					<a href="javascript:openRTWindow('{url op="emailAuthor" path=$articleId|to_array:$galleyId}');">{translate key="rt.emailAuthor"}</a>
 				{else}
 					{translate key="rt.emailAuthor"}&nbsp;*
 					{assign var=needsLoginNote value=1}
@@ -101,7 +101,7 @@
 	<ul>
 		{foreach from=$version->getContexts() item=context}
 			{if !$context->getDefineTerms()}
-				<li><a href="javascript:openRTWindow('{$pageUrl}/rt/context/{$articleId|escape:"url"}/{$galleyId}/{$context->getContextId()}');">{$context->getTitle()|escape}</a></li>
+				<li><a href="javascript:openRTWindow('{url op="context" path=$articleId|to_array:$galleyId:$context->getContextId()}');">{$context->getTitle()|escape}</a></li>
 			{/if}
 		{/foreach}
 	</ul>
@@ -111,7 +111,7 @@
 
 <div class="rtBlock">
 	<span class="rtSubtitle">{translate key="rt.thisJournal"}</span>
-	<form method="get" action="{$pageUrl}/search/results" target="_parent">
+	<form method="post" action="{url page="search" op="results"}" target="_parent">
 	<table>
 	<tr>
 		<td><input type="text" id="query" name="query" size="15" maxlength="255" value="" class="textField" /></td>
@@ -132,16 +132,17 @@
 
 {if $galley}
 	{if $galley->isHtmlGalley()}
-		<a href="{$requestPageUrl}/viewArticle/{$articleId|escape:"url"}/{$galleyId}" target="_parent" class="rtAction">{translate key="common.close"}</a>
+		<a href="{url op="viewArticle" path=$articleId|to_array:$galleyId}" target="_parent" class="rtAction">{translate key="common.close"}</a>
 	{elseif $galley->isPdfGalley()}
-		<a href="{$requestPageUrl}/viewPDFInterstitial/{$articleId|escape:"url"}/{$galleyId}" target="_parent" class="rtAction">{translate key="common.close"}</a>
+		<a href="{url op="viewPDFInterstitial" path=$articleId|to_array:$galleyId}" target="_parent" class="rtAction">{translate key="common.close"}</a>
 	{else}
-		<a href="{$requestPageUrl}/viewDownloadInterstitial/{$articleId|escape:"url"}/{$galleyId}" target="_parent" class="rtAction">{translate key="common.close"}</a>
+		<a href="{url op="viewDownloadInterstitial" path=$articleId|to_array:$galleyId}" target="_parent" class="rtAction">{translate key="common.close"}</a>
 	{/if}
 {/if}
 
 {if $needsLoginNote}
-<p><i style="font-size: 0.9em">{translate key="rt.email.needLogin" pageUrl=$pageUrl}</i></p>
+{url|assign:"loginUrl" page="user" op="register"}
+<p><i style="font-size: 0.9em">{translate key="rt.email.needLogin" loginUrl=$loginUrl}</i></p>
 {/if}
 
 </div>

@@ -121,11 +121,11 @@ class SubmissionCommentsHandler extends CopyeditorHandler {
 
 		// Redirect back to initial comments page
 		if ($comment->getCommentType() == COMMENT_TYPE_COPYEDIT) {
-			Request::redirect(sprintf('%s/viewCopyeditComments/%d', Request::getRequestedPage(), $articleId));
+			Request::redirect(null, null, 'viewCopyeditComments', $articleId);
 		} else if ($comment->getCommentType() == COMMENT_TYPE_LAYOUT) {
-			Request::redirect(sprintf('%s/viewLayoutComments/%d', Request::getRequestedPage(), $articleId));
+			Request::redirect(null, null, 'viewLayoutComments', $articleId);
 		} else if ($comment->getCommentType() == COMMENT_TYPE_PROOFREAD) {
-			Request::redirect(sprintf('%s/viewProofreadComments/%d', Request::getRequestedPage(), $articleId));
+			Request::redirect(null, null, 'viewProofreadComments', $articleId);
 		}
 	}
 	
@@ -145,11 +145,11 @@ class SubmissionCommentsHandler extends CopyeditorHandler {
 		
 		// Redirect back to initial comments page
 		if ($comment->getCommentType() == COMMENT_TYPE_COPYEDIT) {
-			Request::redirect(sprintf('%s/viewCopyeditComments/%d', Request::getRequestedPage(), $articleId));
+			Request::redirect(null, null, 'viewCopyeditComments', $articleId);
 		} else if ($comment->getCommentType() == COMMENT_TYPE_LAYOUT) {
-			Request::redirect(sprintf('%s/viewLayoutComments/%d', Request::getRequestedPage(), $articleId));
+			Request::redirect(null, null, 'viewLayoutComments', $articleId);
 		} else if ($comment->getCommentType() == COMMENT_TYPE_PROOFREAD) {
-			Request::redirect(sprintf('%s/viewProofreadComments/%d', Request::getRequestedPage(), $articleId));
+			Request::redirect(null, null, 'viewProofreadComments', $articleId);
 		}
 	}
 	
@@ -178,7 +178,7 @@ class SubmissionCommentsHandler extends CopyeditorHandler {
 		}
 		
 		if (!$isValid) {
-			Request::redirect(Request::getRequestedPage());
+			Request::redirect(null, Request::getRequestedPage());
 		}
 
 		return array($comment);

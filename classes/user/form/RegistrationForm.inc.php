@@ -224,8 +224,8 @@ class RegistrationForm extends Form {
 			$mail->send();
 		}
 
-		// By default, self-registering users will receive notifications
-		// about journal updates. (The delete is here to prevent a
+		// By default, self-registering readers will receive
+		// journal updates. (The delete is here to prevent a
 		// duplicate insert error msg if there was a notification entry
 		// left over from a previous role.)
 		if (isset($allowedRoles['reader']) && $this->getData($allowedRoles['reader'])) {

@@ -14,8 +14,8 @@
 {include file="common/header.tpl"}
 
 <ul class="menu">
-	<li><a href="{$pageUrl}/manager/subscriptions">{translate key="manager.subscriptions"}</a></li>
-	<li class="current"><a href="{$pageUrl}/manager/subscriptionTypes">{translate key="manager.subscriptionTypes"}</a></li>
+	<li><a href="{url op="subscriptions"}">{translate key="manager.subscriptions"}</a></li>
+	<li class="current"><a href="{url op="subscriptionTypes"}">{translate key="manager.subscriptionTypes"}</a></li>
 </ul>
 
 <br />
@@ -36,7 +36,7 @@
 	<tr valign="top">
 		<td>{$subscriptionType->getTypeName()|escape}</td>
 		<td>{$subscriptionType->getCost()|string_format:"%.2f"}&nbsp;({$subscriptionType->getCurrencyStringShort()})</td>
-		<td><a href="{$pageUrl}/manager/moveSubscriptionType/{$subscriptionType->getTypeId()}?dir=u" class="action">&uarr;</a>&nbsp;<a href="{$pageUrl}/manager/moveSubscriptionType/{$subscriptionType->getTypeId()}?dir=d" class="action">&darr;</a>&nbsp;|&nbsp;<a href="{$pageUrl}/manager/editSubscriptionType/{$subscriptionType->getTypeId()}" class="action">{translate key="common.edit"}</a>&nbsp;|&nbsp;<a href="{$pageUrl}/manager/deleteSubscriptionType/{$subscriptionType->getTypeId()}" onclick="return confirm('{translate|escape:"javascript" key="manager.subscriptionTypes.confirmDelete"}')" class="action">{translate key="common.delete"}</a></td>
+		<td><a href="{url op="moveSubscriptionType" path=$subscriptionType->getTypeId() dir=u}" class="action">&uarr;</a>&nbsp;<a href="{url op="moveSubscriptionType" path=$subscriptionType->getTypeId() dir=d}" class="action">&darr;</a>&nbsp;|&nbsp;<a href="{url op="editSubscriptionType" path=$subscriptionType->getTypeId()}" class="action">{translate key="common.edit"}</a>&nbsp;|&nbsp;<a href="{url op="deleteSubscriptionType" path=$subscriptionType->getTypeId()}" onclick="return confirm('{translate|escape:"javascript" key="manager.subscriptionTypes.confirmDelete"}')" class="action">{translate key="common.delete"}</a></td>
 	</tr>
 	<tr><td colspan="3" class="{if $subscriptionTypes->eof()}end{/if}separator">&nbsp;</td></tr>
 {/iterate}
@@ -55,6 +55,6 @@
 {/if}
 </table>
 
-<a href="{$pageUrl}/manager/createSubscriptionType" class="action">{translate key="manager.subscriptionTypes.create"}</a>
+<a href="{url op="createSubscriptionType"}" class="action">{translate key="manager.subscriptionTypes.create"}</a>
 
 {include file="common/footer.tpl"}

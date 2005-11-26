@@ -76,7 +76,7 @@ class RTSetupHandler extends RTAdminHandler {
 			$templateMgr->assign('helpTopicId', 'journal.managementPages.readingTools.settings');
 			$templateMgr->display('rtadmin/settings.tpl');
 		} else {
-			Request::redirect('rtadmin');
+			Request::redirect(null, Request::getRequestedPage());
 		}
 	}
 
@@ -116,7 +116,7 @@ class RTSetupHandler extends RTAdminHandler {
 				$rtDao->updateJournalRT($rt);
 			}
 		}
-		Request::redirect('rtadmin');
+		Request::redirect(null, Request::getRequestedPage());
 	}
 }
 

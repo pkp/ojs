@@ -42,7 +42,7 @@ class InstallHandler extends Handler {
 	 */
 	function validate() {
 		if (Config::getVar('general', 'installed')) {
-			Request::redirect('index');	
+			Request::redirect(null, 'index');	
 		}
 	}
 	

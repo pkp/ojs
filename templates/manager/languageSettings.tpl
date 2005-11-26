@@ -17,7 +17,7 @@
 {include file="common/formErrors.tpl"}
 
 {if count($availableLocales) > 1}
-<form method="post" action="{$pageUrl}/manager/saveLanguageSettings">
+<form method="post" action="{url op="saveLanguageSettings"}">
 
 <table class="data" width="100%">
 <tr valign="top">
@@ -75,7 +75,7 @@
 </tr>
 </table>
 
-<p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{$pageUrl}/manager'" /></p>
+<p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{$url page="manager"}'" /></p>
 
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 

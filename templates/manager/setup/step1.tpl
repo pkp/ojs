@@ -12,7 +12,7 @@
 {assign var="pageTitle" value="manager.setup.gettingDownTheDetails}
 {include file="manager/setup/setupHeader.tpl"}
 
-<form method="post" action="{$pageUrl}/manager/saveSetup/1">
+<form method="post" action="{url op="saveSetup" path="1"}">
 {include file="common/formErrors.tpl"}
 
 <h3>1.1 {translate key="manager.setup.generalInformation"}</h3>
@@ -264,7 +264,7 @@
 <div class="separator"></div>
 
 
-<p><input type="submit" value="{translate key="common.saveAndContinue"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{$pageUrl}/manager/setup'" /></p>
+<p><input type="submit" value="{translate key="common.saveAndContinue"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url op="setup"}'" /></p>
 
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 

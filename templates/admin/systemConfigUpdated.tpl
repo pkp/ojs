@@ -11,7 +11,7 @@
  *}
 
 {assign var="pageTitle" value="admin.systemConfiguration"}
-{assign var="currentUrl" value="$pageUrl/admin/editSystemConfig"}
+{assign var="currentUrl" value="{url op="editSystemConfig"}"}
 {include file="common/header.tpl"}
 
 <br/>
@@ -32,6 +32,6 @@
 <br />
 {/if}
 
-<a class="action" href="{$pageUrl}/admin/systemInfo">{translate key="admin.systemInformation"}</a>
+<a class="action" href="{url op="systemInfo"}">{translate key="admin.systemInformation"}</a>
 
 {include file="common/footer.tpl"}

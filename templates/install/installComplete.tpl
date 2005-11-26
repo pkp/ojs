@@ -13,7 +13,8 @@
 {assign var="pageTitle" value="installer.ojsInstallation"}
 {include file="common/header.tpl"}
 
-{translate key="installer.installationComplete" indexUrl=$indexUrl}
+{url|assign:"loginUrl" page="login"}
+{translate key="installer.installationComplete" loginUrl=$loginUrl}
 
 {if $writeConfigFailed}
 {translate key="installer.overwriteConfigFileInstructions"}

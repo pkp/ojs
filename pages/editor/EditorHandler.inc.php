@@ -269,7 +269,7 @@ class EditorHandler extends SectionEditorHandler {
 
 			// FIXME: Prompt for due date.
 			if (EditorAction::assignEditor($articleId, $editorId, Request::getUserVar('send'))) {
-				Request::redirect('editor/submission/'.$articleId);
+				Request::redirect(null, null, 'submission', $articleId);
 			}
 		} else {
 			// Allow the user to choose a section editor.
@@ -348,7 +348,7 @@ class EditorHandler extends SectionEditorHandler {
 			$articleDao->deleteArticleById($articleId);
 		}
 		
-		Request::redirect('editor/submissions/submissionsArchives');
+		Request::redirect(null, null, 'submissions', 'submissionsArchives');
 	}
 
 	/**
@@ -369,9 +369,9 @@ class EditorHandler extends SectionEditorHandler {
 	function setupTemplate($level = EDITOR_SECTION_HOME, $showSidebar = true, $articleId = 0, $parentPage = null) {
 		$templateMgr = &TemplateManager::getManager();
 
-		if ($level==EDITOR_SECTION_HOME) $pageHierarchy = array(array('user', 'navigation.user'));
-		else if ($level==EDITOR_SECTION_SUBMISSIONS) $pageHierarchy = array(array('user', 'navigation.user'), array('editor', 'user.role.editor'), array('editor/submissions', 'article.submissions'));
-		else if ($level==EDITOR_SECTION_ISSUES) $pageHierarchy = array(array('user', 'navigation.user'), array('editor', 'user.role.editor'), array('editor/issueToc', 'issue.issues'));
+		if ($level==EDITOR_SECTION_HOME) $pageHierarchy = array(array(Request::url(null, 'user'), 'navigation.user'));
+		else if ($level==EDITOR_SECTION_SUBMISSIONS) $pageHierarchy = array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, 'editor'), 'user.role.editor'), array(Request::url(null, 'editor', 'submissions'), 'article.submissions'));
+		else if ($level==EDITOR_SECTION_ISSUES) $pageHierarchy = array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, 'editor'), 'user.role.editor'), array(Request::url(null, 'editor', 'issueToc'), 'issue.issues'));
 	
 		import('submission.sectionEditor.SectionEditorAction');
 		$submissionCrumb = SectionEditorAction::submissionBreadcrumb($articleId, $parentPage, 'editor');
@@ -406,7 +406,7 @@ class EditorHandler extends SectionEditorHandler {
 	function removeIssue($args) {
 		import('pages.editor.IssueManagementHandler');
 		IssueManagementHandler::removeIssue($args);
-		Request::redirect(sprintf('%s/issueToc', Request::getRequestedPage()));
+		Request::redirect(null, null, 'issueToc');
 	}
 
 	function createIssue() {

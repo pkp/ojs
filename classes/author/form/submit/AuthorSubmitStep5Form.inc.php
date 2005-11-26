@@ -91,7 +91,7 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 				'authorName' => $user->getFullName(),
 				'authorUsername' => $user->getUsername(),
 				'editorialContactSignature' => $journal->getSetting('contactName') . "\n" . $journal->getTitle(),
-				'submissionUrl' => Request::getPageUrl() . '/author/submission/' . $article->getArticleId()
+				'submissionUrl' => Request::url(null, 'author', 'submission', $article->getArticleId())
 			));
 			$mail->send();
 		}

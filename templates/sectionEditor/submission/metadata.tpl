@@ -12,7 +12,7 @@
 <a name="metadata"></a>
 <h3>{translate key="submission.metadata"}</h3>
 
-<p><a href="{$requestPageUrl}/viewMetadata/{$submission->getArticleId()}" class="action">{translate key="submission.editMetadata"}</a></p>
+<p><a href="{url op="viewMetadata" path=$submission->getArticleId()}" class="action">{translate key="submission.editMetadata"}</a></p>
 
 
 <h4>{translate key="article.authors"}</h4>
@@ -23,10 +23,8 @@
 		<td width="20%" class="label">{translate key="user.name"}</td>
 		<td width="80%" class="value">
 			{assign var=emailString value="`$author->getFullName()` <`$author->getEmail()`>"}
-			{assign var=emailStringEscaped value=$emailString|escape:"url"}
-			{assign var=urlEscaped value=$currentUrl|escape:"url"}
-			{assign var=subjectEscaped value=$submission->getArticleTitle()|strip_tags|escape:"url"}
-			{$author->getFullName()|escape} {icon name="mail" url="`$pageUrl`/user/email?to[]=$emailStringEscaped&amp;redirectUrl=$urlEscaped&amp;subject=$subjectEscaped"}
+			{url|assign:"url" page="user" op="email" redirectUrl=$currentUrl to=$emailString|to_array subject=$submission->getArticleTitle|strip_tags}
+			{$author->getFullName()|escape} {icon name="mail" url=$url}
 		</td>
 	</tr>
 	<tr valign="top">

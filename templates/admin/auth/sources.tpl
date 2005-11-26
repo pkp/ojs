@@ -14,7 +14,7 @@
 
 <br />
 
-<form method="post" action="{$requestPageUrl}/updateAuthSources">
+<form method="post" action="{url op="updateAuthSources"}">
 
 <table width="100%" class="listing">
 	<tr>
@@ -34,7 +34,7 @@
 		<td><input type="radio" id="defaultAuthId_{$auth->getAuthId()}" name="defaultAuthId" value="{$auth->getAuthId()}"{if $auth->getDefault()} checked="checked"{assign var="defaultAuthId" value=$auth->getAuthId()}{/if} /></td>
 		<td><label for="defaultAuthId_{$auth->getAuthId()}">{$auth->getTitle()|escape}</label></td>
 		<td>{$auth->getPlugin()}</td>
-		<td align="right"><a href="{$requestPageUrl}/editAuthSource/{$auth->getAuthId()}" class="action">{translate key="common.edit"}</a>&nbsp;|&nbsp;<a class="action" href="{$requestPageUrl}/deleteAuthSource/{$auth->getAuthId()}" onclick="return confirm('{translate|escape:"javascript" key="admin.auth.confirmDelete"}')">{translate key="common.delete"}</a></td>
+		<td align="right"><a href="{url op="editAuthSource" path=$auth->getAuthId()}" class="action">{translate key="common.edit"}</a>&nbsp;|&nbsp;<a class="action" href="{url op="deleteAuthSource" path=$auth->getAuthId()}" onclick="return confirm('{translate|escape:"javascript" key="admin.auth.confirmDelete"}')">{translate key="common.delete"}</a></td>
 	</tr>
 	<tr>
 		<td colspan="4" class="{if $smarty.foreach.sources.last}end{/if}separator">&nbsp;</td>
@@ -68,7 +68,7 @@
 
 <h4>{translate key="admin.auth.create"}</h4>
 
-<form method="post" action="{$requestPageUrl}/createAuthSource">
+<form method="post" action="{url op="createAuthSource"}">
 	{translate key="common.plugin"}: <select name="plugin" size="1"><option value=""></option>{html_options options=$pluginOptions}</select> <input type="submit" value="{translate key="common.create"}" class="button" />
 </form>
 

@@ -96,7 +96,7 @@ class ProofreaderAction extends Action {
 					'authorUsername' => $receiver->getUsername(),
 					'authorPassword' => $receiver->getPassword(),
 					'editorialContactSignature' => $user->getContactSignature(),
-					'submissionUrl' => Request::getPageUrl() . '/author/submission/' . $articleId
+					'submissionUrl' => Request::url(null, 'author', 'submission', $articleId)
 				);
 				break;
 
@@ -167,7 +167,7 @@ class ProofreaderAction extends Action {
 					'proofreaderUsername' => $receiver->getUsername(),
 					'proofreaderPassword' => $receiver->getPassword(),
 					'editorialContactSignature' => $user->getContactSignature(),
-					'submissionUrl' => Request::getPageUrl() . '/proofreader/submission/' . $articleId
+					'submissionUrl' => Request::url(null, 'proofreader', 'submission', $articleId)
 				);
 				break;
 
@@ -242,7 +242,7 @@ class ProofreaderAction extends Action {
 					'layoutEditorUsername' => $receiver->getUsername(),
 					'layoutEditorPassword' => $receiver->getPassword(),
 					'editorialContactSignature' => $user->getContactSignature(),
-					'submissionUrl' => Request::getPageUrl() . '/proofreader/submission/' . $articleId
+					'submissionUrl' => Request::url(null, 'proofreader', 'submission', $articleId)
 				);
 				
 				if (!$actionPath) {
@@ -291,7 +291,7 @@ class ProofreaderAction extends Action {
 		if (isset($getDateField)) {
 			$date = $proofAssignment->$getDateField();		
 			if (isset($date)) {
-				Request::redirect(sprintf('%s/submission/%d', Request::getRequestedPage(), $articleId));
+				Request::redirect(null, null, 'submission', $articleId);
 			}
 		}
 
@@ -312,7 +312,7 @@ class ProofreaderAction extends Action {
 				}
 				$email->assignParams($paramArray);
 			}
-			$email->displayEditForm(Request::getPageUrl() . $actionPath, array('articleId' => $articleId));
+			$email->displayEditForm(Request::url(null, $actionPath), array('articleId' => $articleId));
 			return false;
 		} else {
 			HookRegistry::call('ProofreaderAction::proofreaderEmail', array(&$proofAssignment, &$email, $mailType));

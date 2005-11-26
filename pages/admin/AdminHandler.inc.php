@@ -45,8 +45,8 @@ class AdminHandler extends Handler {
 	function setupTemplate($subclass = false) {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('pageHierarchy',
-			$subclass ? array(array('user', 'navigation.user'), array('admin', 'admin.siteAdmin'))
-				: array(array('user', 'navigation.user'))
+			$subclass ? array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, 'admin'), 'admin.siteAdmin'))
+				: array(array(Request::url(null, 'user'), 'navigation.user'))
 		);
 	}
 	

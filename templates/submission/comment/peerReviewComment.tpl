@@ -37,7 +37,7 @@
 	</td>
 	<td width="75%">
 		{if $comment->getAuthorId() eq $userId and not $isLocked}
-			<div style="float: right"><a href="{$requestPageUrl}/editComment/{$articleId}/{$comment->getCommentId()}{if $reviewId}?reviewId={$reviewId}{/if}" class="action">{translate key="common.edit"}</a> <a href="{$requestPageUrl}/deleteComment/{$articleId}/{$comment->getCommentId()}{if $reviewId}?reviewId={$reviewId}{/if}" onclick="return confirm('{translate|escape:"javascript" key="submission.comments.confirmDelete"}')" class="action">{translate key="common.delete"}</a></div>
+			<div style="float: right"><a href="{if $reviewId}{url op="editComment" path=$articleId|to_array:$comment->getCommentId() reviewId=$reviewId}{else}{url op="editComment" path=$articleId|to_array:$comment->getCommentId()}{/if}" class="action">{translate key="common.edit"}</a> <a href="{if $reviewId}{url op="deleteComment" path=$articleId|to_array:$comment->getCommentId() reviewId=$reviewId}{else}{url op="deleteComment" path=$articleId|to_array:$comment->getCommentId()}{/if}" onclick="return confirm('{translate|escape:"javascript" key="submission.comments.confirmDelete"}')" class="action">{translate key="common.delete"}</a></div>
 		{/if}
 		<a name="{$comment->getCommentId()}"></a>
 		{if $comment->getCommentTitle()}
@@ -57,7 +57,7 @@
 <br />
 
 {if not $isLocked}
-<form method="post" action="{$requestPageUrl}/{$commentAction}">
+<form method="post" action="{url op=$commentAction}">
 {if $hiddenFormParams}
 	{foreach from=$hiddenFormParams item=hiddenFormParam key=key}
 		<input type="hidden" name="{$key}" value="{$hiddenFormParam}" />

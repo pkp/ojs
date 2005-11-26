@@ -82,7 +82,7 @@ class IssueHandler extends Handler {
 
 		$templateMgr->assign('issueCrumbTitle', $issueCrumbTitle);
 		$templateMgr->assign('issueTitle', $issueTitle);
-		$templateMgr->assign('pageHierarchy', array(array('issue/current', 'current.current')));
+		$templateMgr->assign('pageHierarchy', array(array(Request::url(null, 'issue', 'current'), 'current.current')));
 		$templateMgr->assign('helpTopicId', 'user.currentAndArchives');
 		$templateMgr->display('issue/current.tpl');
 	}
@@ -106,11 +106,11 @@ class IssueHandler extends Handler {
 			$issue = &$issueDao->getIssueById((int) $issueId);
 		}
 
-		if (!$issue) Request::redirect('issue/current');
+		if (!$issue) Request::redirect(null, null, 'current');
 
 		$templateMgr = &TemplateManager::getManager();
 		IssueHandler::setupIssueTemplate($issue, ($showToc == 'showToc') ? true : false);
-		$templateMgr->assign('pageHierarchy', array(array('issue/archive', 'archive.archives')));
+		$templateMgr->assign('pageHierarchy', array(array(Request::url(null, 'issue', 'archive'), 'archive.archives')));
 		$templateMgr->assign('helpTopicId', 'user.currentAndArchives');
 		$templateMgr->display('issue/viewPage.tpl');
 

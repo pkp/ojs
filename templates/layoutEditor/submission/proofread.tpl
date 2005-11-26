@@ -57,17 +57,20 @@
 	<tr>
 		<td>3.</td>
 		<td>{translate key="user.role.layoutEditor"}</td>
-		<td>				{$proofAssignment->getDateLayoutEditorNotified()|date_format:$dateFormatShort|default:"&mdash;"}
+		<td>
+			{$proofAssignment->getDateLayoutEditorNotified()|date_format:$dateFormatShort|default:"&mdash;"}
 		</td>
-		<td>				{$proofAssignment->getDateLayoutEditorUnderway()|date_format:$dateFormatShort|default:"&mdash;"}
+		<td>
+			{$proofAssignment->getDateLayoutEditorUnderway()|date_format:$dateFormatShort|default:"&mdash;"}
 		</td>
 		<td>
 			{if not $proofAssignment->getDateLayoutEditorNotified() or $proofAssignment->getDateLayoutEditorCompleted()}
 				{icon name="mail" disabled="disabled"}
 			{else}
-				{icon name="mail" url="$requestPageUrl/layoutEditorProofreadingComplete?articleId=`$submission->getArticleId()`"}
+				{url|assign:"url" op="layoutEditorProofreadingComplete" articleId=$submission->getArticleId()}
+				{icon name="mail" url=$url}
 			{/if}
-						{$proofAssignment->getDateLayoutEditorCompleted()|date_format:$dateFormatShort|default:""}
+			{$proofAssignment->getDateLayoutEditorCompleted()|date_format:$dateFormatShort|default:""}
 		</td>
 	</tr>
 	<tr>
@@ -78,12 +81,12 @@
 {translate key="submission.proofread.corrections"}
 {if $submission->getMostRecentProofreadComment()}
 	{assign var="comment" value=$submission->getMostRecentProofreadComment()}
-	<a href="javascript:openComments('{$requestPageUrl}/viewProofreadComments/{$submission->getArticleId()}#{$comment->getCommentId()}');" class="icon">{icon name="comment"}</a>{$comment->getDatePosted()|date_format:$dateFormatShort}
+	<a href="javascript:openComments('{url op="viewProofreadComments" path=$submission->getArticleId() anchor=$comment->getCommentId()}');" class="icon">{icon name="comment"}</a>{$comment->getDatePosted()|date_format:$dateFormatShort}
 {else}
-	<a href="javascript:openComments('{$requestPageUrl}/viewProofreadComments/{$submission->getArticleId()}');" class="icon">{icon name="comment"}</a>
+	<a href="javascript:openComments('{url op="viewProofreadComments" path=$submission->getArticleId()}');" class="icon">{icon name="comment"}</a>
 {/if}
 
 {if $currentJournal->getSetting('proofInstructions')}
 &nbsp;&nbsp;
-<a href="javascript:openHelp('{$requestPageUrl}/instructions/proof')" class="action">{translate key="submission.proofread.instructions"}</a>
+<a href="javascript:openHelp('{url op="instructions" path="proof"}')" class="action">{translate key="submission.proofread.instructions"}</a>
 {/if}

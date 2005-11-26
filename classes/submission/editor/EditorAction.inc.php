@@ -83,12 +83,12 @@ class EditorAction extends SectionEditorAction {
 					'editorUsername' => $sectionEditor->getUsername(),
 					'editorPassword' => $sectionEditor->getPassword(),
 					'editorialContactSignature' => $user->getContactSignature(),
-					'submissionUrl' => Request::getPageUrl() . '/sectionEditor/submissionReview/' . $articleId,
-					'submissionEditingUrl' => Request::getPageUrl() . '/sectionEditor/submissionReview/' . $articleId // FIXME For backwards compatibility
+					'submissionUrl' => Request::url(null, 'sectionEditor', 'submissionReview', $articleId),
+					'submissionEditingUrl' => Request::url(null, 'sectionEditor', 'submissionReview', $articleId)
 				);
 				$email->assignParams($paramArray);
 			}
-			$email->displayEditForm(Request::getPageUrl() . '/' . Request::getRequestedPage() . '/assignEditor/send', array('articleId' => $articleId, 'editorId' => $sectionEditorId));
+			$email->displayEditForm(Request::url(null, null, 'assignEditor', 'send'), array('articleId' => $articleId, 'editorId' => $sectionEditorId));
 			return false;
 		}
 	}

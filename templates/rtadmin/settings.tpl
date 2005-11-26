@@ -12,7 +12,7 @@
 {assign var="pageTitle" value="rt.admin.settings}
 {include file="common/header.tpl"}
 
-<form method="post" action="{$pageUrl}/rtadmin/saveSettings">
+<form method="post" action="{url op="saveSettings"}">
 
 <h3>{translate key="rt.version"}</h3>
 <p>{translate key="rt.admin.versionDescription"}</p>
@@ -68,7 +68,7 @@
 	</tr>
 </table>
 
-<p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{$pageUrl}/rtadmin'" /></p>
+<p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url page="rtadmin"}'" /></p>
 
 </form>
 

@@ -34,7 +34,7 @@ class RTSearchHandler extends RTAdminHandler {
 		if (isset($args[2]) && $args[2]=='save') {
 			$searchForm->readInputData();
 			$searchForm->execute();
-			Request::redirect('rtadmin/searches/' . $versionId . '/' . $contextId);
+			Request::redirect(null, null, 'searches', array($versionId, $contextId));
 		} else {
 			RTAdminHandler::setupTemplate(true, $version, $context);
 			$searchForm->display();
@@ -67,7 +67,7 @@ class RTSearchHandler extends RTAdminHandler {
 			$templateMgr->assign('helpTopicId', 'journal.managementPages.readingTools.contexts');
 			$templateMgr->display('rtadmin/searches.tpl');
 		}
-		else Request::redirect('rtadmin/versions');
+		else Request::redirect(null, null, 'versions');
 	}
 
 	function editSearch($args) {
@@ -90,7 +90,7 @@ class RTSearchHandler extends RTAdminHandler {
 			$searchForm->initData();
 			$searchForm->display();
 		}
-		else Request::redirect('rtadmin/searches/' . $versionId . '/' . $contextId);
+		else Request::redirect(null, null, 'searches', array($versionId, $contextId));
 
 
 	}
@@ -112,7 +112,7 @@ class RTSearchHandler extends RTAdminHandler {
 			$rtDao->deleteSearch($searchId, $contextId);
 		}
 
-		Request::redirect('rtadmin/searches/' . $versionId . '/' . $contextId);
+		Request::redirect(null, null, 'searches', array($versionId, $contextId));
 	}
 
 	function saveSearch($args) {
@@ -135,7 +135,7 @@ class RTSearchHandler extends RTAdminHandler {
 			$searchForm->execute();
 		}
 
-		Request::redirect('rtadmin/searches/' . $versionId . '/' . $contextId);
+		Request::redirect(null, null, 'searches', array($versionId, $contextId));
 	}
 
 	function moveSearch($args) {
@@ -158,7 +158,7 @@ class RTSearchHandler extends RTAdminHandler {
 			$rtDao->resequenceSearches($context->getContextId());
 		}
 
-		Request::redirect('rtadmin/searches/' . $versionId . '/' . $contextId);
+		Request::redirect(null, null, 'searches', array($versionId, $contextId));
 	}
 }
 

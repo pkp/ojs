@@ -14,7 +14,7 @@
 {assign var="pageTitle" value="search.authorIndex"}
 {include file="common/header.tpl"}
 
-<p>{section loop=26 name=letters}<a href="{$requestPageUrl}/authors?searchInitial={$smarty.section.letters.index+$start|chr}">{if chr($smarty.section.letters.index+$start) == $searchInitial}<strong>{$smarty.section.letters.index+$start|chr}</strong>{else}{$smarty.section.letters.index+$start|chr}{/if}</a> {/section}<a href="{$requestPageUrl}/authors">{if $searchInitial==''}<strong>{translate key="common.all"}</strong>{else}{translate key="common.all"}{/if}</a></p>
+<p>{section loop=26 name=letters}<a href="{url op="authors" searchInitial=$smarty.section.letters.index+$start|chr}">{if chr($smarty.section.letters.index+$start) == $searchInitial}<strong>{$smarty.section.letters.index+$start|chr}</strong>{else}{$smarty.section.letters.index+$start|chr}{/if}</a> {/section}<a href="{url op="authors"}">{if $searchInitial==''}<strong>{translate key="common.all"}</strong>{else}{translate key="common.all"}{/if}</a></p>
 
 {iterate from=authors item=author}
 	{assign var=lastFirstLetter value=$firstLetter}
@@ -26,7 +26,7 @@
 		<h3>{$firstLetter|escape}</h3>
 	{/if}
 
-	<a href="{$requestPageUrl}/authors/view?firstName={$author->getFirstName()|escape:'url'}&amp;middleName={$author->getMiddleName()|escape:'url'}&amp;lastName={$author->getLastName()|escape:'url'}&amp;affiliation={$author->getAffiliation()|escape:'url'}">
+	<a href="{url op="authors" path="view" firstName=$author->getFirstName() middleName=$author->getMiddleName() lastName=$author->getLastName() affiliation=$author->getAffiliation()}">
 		{$author->getLastName(true)|escape},
 		{$author->getFirstName()|escape}{if $author->getMiddleName()} {$author->getMiddleName|escape}{/if}{if $author->getAffiliation()}, {$author->getAffiliation()|escape}{/if}
 	</a>

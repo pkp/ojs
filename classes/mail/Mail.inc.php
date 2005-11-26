@@ -363,7 +363,9 @@ class Mail extends DataObject {
 		} else {
 			$additionalParameters = null;
 		}
-		
+
+		if (HookRegistry::call('Mail::send', array(&$this, &$recipients, &$subject, &$mailBody, &$headers, &$additionalParameters))) return;
+
 		if (Config::getVar('email', 'smtp')) {
 			static $smtp = null;
 			if (!isset($smtp)) {
