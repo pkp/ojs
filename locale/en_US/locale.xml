@@ -723,13 +723,18 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 
 	<!-- Statistics & Reports -->
 	<message key="manager.statistics.statistics">Statistics</message>
-	<message key="manager.statistics.statistics.numSubmissions">No. of submissions</message>
-	<message key="manager.statistics.statistics.numSubmissionsValue">{$numSubmissions} ({$numPublishedSubmissions} published)</message>
-	<message key="manager.statistics.statistics.numIssues">No. of issues</message>
-	<message key="manager.statistics.statistics.numIssuesValue">{$numIssues} ({$numPublishedIssues} published)</message>
-	<message key="manager.statistics.statistics.users">Users</message>
-	<message key="manager.statistics.statistics.totalUsers">Total</message>
-	<message key="manager.statistics.statistics.totalUsersValue">{$numUsers} ({$numNotifiableUsers} signed up for notifications)</message>
+	<message key="manager.statistics.statistics.itemsPublished">Items Published</message>
+	<message key="manager.statistics.statistics.numSubmissions">Submissions</message>
+	<message key="manager.statistics.statistics.count.accept">Accept (%)</message>
+	<message key="manager.statistics.statistics.count.decline">Decline (%)</message>
+	<message key="manager.statistics.statistics.count.revise">Revise (%)</message>
+	<message key="manager.statistics.statistics.count.undecided">Undecided (%)</message>
+	<message key="manager.statistics.statistics.count.value">{$count} ({$percentage}%)</message>
+	<message key="manager.statistics.statistics.numIssues">Issues Published</message>
+	<message key="manager.statistics.statistics.reviewsPerReviewer">Reviews Per Reviewer</message>
+	<message key="manager.statistics.statistics.daysPerReview">Days Per Review</message>
+	<message key="manager.statistics.statistics.reviewerScore">Reviewers' Score</message>
+	<message key="manager.statistics.statistics.daysToPublication">Days To Publication</message>
 
 	<message key="manager.statistics.reports">Report Generator</message>
 	<message key="manager.statistics.reports.dateFrom">From</message>

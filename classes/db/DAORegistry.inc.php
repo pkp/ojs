@@ -94,6 +94,7 @@ class DAORegistry {
 			case 'HelpTopicDAO': return 'help.HelpTopicDAO';
 			case 'IssueDAO': return 'issue.IssueDAO';
 			case 'JournalDAO': return 'journal.JournalDAO';
+			case 'JournalStatisticsDAO': return 'journal.JournalStatisticsDAO';
 			case 'JournalSettingsDAO': return 'journal.JournalSettingsDAO';
 			case 'SectionDAO': return 'journal.SectionDAO';
 			case 'SectionEditorsDAO': return 'journal.SectionEditorsDAO';

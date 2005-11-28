@@ -26,7 +26,7 @@
 
 <br />
 
-<form method="post" action="{url op="updateSchedulingQueue"} onsubmit="return confirm('{translate|escape:"javascript" key="editor.schedulingQueue.saveChanges"}')">
+<form method="post" action="{url op="updateSchedulingQueue"}" onsubmit="return confirm('{translate|escape:"javascript" key="editor.schedulingQueue.saveChanges"}')">
 
 <table class="listing" width="100%">
 	<tr>

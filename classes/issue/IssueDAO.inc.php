@@ -473,42 +473,6 @@ class IssueDAO extends DAO {
 
 		return $returner;
 	}
-
-	/**
-	 * Get statistics about issues in the system.
-	 * Returns a map of name => value pairs.
-	 * @param $journalId int The journal to fetch statistics for
-	 * @return array
-	 */
-	function getIssueStatistics($journalId) {
-		$result = &$this->retrieve(
-			'SELECT COUNT(*) AS count, published FROM issues  WHERE journal_id = ? GROUP BY published',
-			$journalId
-		);
-
-		$returner = array(
-			'numPublishedIssues' => 0,
-			'numUnpublishedIssues' => 0
-		);
-
-		while (!$result->EOF) {
-			$row = $result->GetRowAssoc(false);
-
-			if ($row['published']) {
-				$returner['numPublishedIssues'] = $row['count'];
-			} else {
-				$returner['numUnpublishedIssues'] = $row['count'];
-			}
-			$result->moveNext();
-		}
-
-		$result->Close();
-		unset($result);
-
-		$returner['numIssues'] = $returner['numPublishedIssues'] + $returner['numUnpublishedIssues'];
-
-		return $returner;
-	}
 }
   
 ?>

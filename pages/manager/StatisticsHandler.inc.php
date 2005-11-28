@@ -31,16 +31,24 @@ class StatisticsHandler extends ManagerHandler {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('helpTopicId','journal.managementPages.statistics');
 
-		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
-		$articleStatistics = $publishedArticleDao->getArticleStatistics($journal->getJournalId());
+		$statisticsYear = Request::getUserVar('statisticsYear');
+		if (empty($statisticsYear)) $statisticsYear = date('Y');
+		$templateMgr->assign('statisticsYear', $statisticsYear);
+		
+		$fromDate = mktime(0, 0, 1, 1, 1, $statisticsYear);
+		$toDate = mktime(23, 59, 59, 12, 31, $statisticsYear);
+
+		$journalStatisticsDao =& DAORegistry::getDAO('JournalStatisticsDAO');
+		$articleStatistics = $journalStatisticsDao->getArticleStatistics($journal->getJournalId(), $fromDate, $toDate);
 		$templateMgr->assign('articleStatistics', $articleStatistics);
 
-		$issueDao =& DAORegistry::getDAO('IssueDAO');
-		$issueStatistics = $issueDao->getIssueStatistics($journal->getJournalId());
+		$issueStatistics = $journalStatisticsDao->getIssueStatistics($journal->getJournalId(), $fromDate, $toDate);
 		$templateMgr->assign('issueStatistics', $issueStatistics);
 
-		$roleDao =& DAORegistry::getDAO('RoleDAO');
-		$userStatistics = $roleDao->getUserStatistics($journal->getJournalId());
+		$reviewerStatistics = $journalStatisticsDao->getReviewerStatistics($journal->getJournalId(), $fromDate, $toDate);
+		$templateMgr->assign('reviewerStatistics', $reviewerStatistics);
+
+		$userStatistics = $journalStatisticsDao->getUserStatistics($journal->getJournalId());
 		$templateMgr->assign('userStatistics', $userStatistics);
 
 		$notificationStatusDao =& DAORegistry::getDAO('NotificationStatusDAO');
@@ -53,6 +61,7 @@ class StatisticsHandler extends ManagerHandler {
 			REPORT_TYPE_REVIEWER => 'manager.statistics.reports.type.reviewer',
 			REPORT_TYPE_SECTION => 'manager.statistics.reports.type.section'
 		));
+
 
 		$templateMgr->display('manager/statistics/index.tpl');
 	}

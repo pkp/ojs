@@ -480,30 +480,6 @@ class PublishedArticleDAO extends DAO {
 
 		return $returner;
 	}
-
-	/**
-	 * Get statistics about articles in the system.
-	 * Returns a map of name => value pairs.
-	 * @param $journalId int The journal to fetch statistics for
-	 * @return array
-	 */
-	function getArticleStatistics($journalId) {
-		$result = &$this->retrieve(
-			'SELECT COUNT(a.article_id) AS num_submissions, COUNT(pa.pub_id) AS num_pub_submissions FROM articles a LEFT JOIN published_articles pa ON (a.article_id = pa.article_id) WHERE a.journal_id = ?',
-			$journalId
-		);
-
-		$row = $result->GetRowAssoc(false);
-		$returner = array(
-			'numSubmissions' => $row['num_submissions'],
-			'numPublishedSubmissions' => $row['num_pub_submissions']
-		);
-
-		$result->Close();
-		unset($result);
-
-		return $returner;
-	}
 }
 
 ?>
