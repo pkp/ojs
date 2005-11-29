@@ -30,7 +30,7 @@
 		<ul class="plain">
 	{/if}
 	{if $message.type == MAIL_ERROR_INVALID_EMAIL}
-		{assign_translate var=message key="email.invalid" email=`$message.address`}
+		{translate|assign:"message" key="email.invalid" email=`$message.address`}
 		<li>{$message|escape}</li>
 	{/if}
 {/foreach}

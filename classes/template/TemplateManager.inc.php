@@ -138,7 +138,6 @@ class TemplateManager extends Smarty {
 		$this->register_function('translate', array(&$this, 'smartyTranslate'));
 		$this->register_function('flush', array(&$this, 'smartyFlush'));
 		$this->register_function('call_hook', array(&$this, 'smartyCallHook'));
-		$this->register_function('assign_translate', array(&$this, 'smartyAssignTranslate'));
 		$this->register_function('html_options_translate', array(&$this, 'smartyHtmlOptionsTranslate'));
 		$this->register_block('iterate', array(&$this, 'smartyIterate'));
 		$this->register_function('page_links', array(&$this, 'smartyPageLinks'));
@@ -224,18 +223,6 @@ class TemplateManager extends Smarty {
 			} else {
 				return Locale::translate('');
 			}
-		}
-	}
-	
-	/**
-	 * Smarty usage: {translate var="varName" key="localization.key.name" [paramName="paramValue" ...]} 
-	 *
-	 * Same as Smarty translate except translated string is assigned to variable.
-	 * @see TemplateManager#smartyTranslate
-	 */
-	function smartyAssignTranslate($params, &$smarty) {
-		if (isset($params['var'])) {
-			$smarty->assign($params['var'], $smarty->smartyTranslate($params, $smarty));
 		}
 	}
 	

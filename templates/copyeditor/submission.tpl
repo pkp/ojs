@@ -9,7 +9,7 @@
  * $Id$
  *}
 
-{assign_translate var="pageTitleTranslated" key="submission.page.editing" id=$submission->getArticleId()}
+{translate|assign:"pageTitleTranslated" key="submission.page.editing" id=$submission->getArticleId()}
 {assign var="pageCrumbTitle" value="submission.editing"}
 
 {include file="common/header.tpl"}

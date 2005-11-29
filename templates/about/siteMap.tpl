@@ -40,7 +40,7 @@
 							<ul class="plain">
 								{assign var=currentJournalId value=$currentJournal->getJournalId()}
 								{foreach from=$rolesByJournal[$currentJournalId] item=role}
-									{assign_translate var=roleName key=$role->getRoleName()}
+									{translate|assign:"roleName" key=$role->getRoleName()}
 									<li><a href="{url journal=`$currentJournal->getPath()` page=`$role->getRolePath()`}">{$roleName}</a></li>
 								{/foreach}
 							</ul>

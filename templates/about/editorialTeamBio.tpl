@@ -38,7 +38,7 @@
 {/literal}
 
 {assign var=pageTitleTranslated value=$user->getFullName()|escape}
-{if !$pageTitleTranslated}{assign_translate var="pageTitleTranslated" key=$pageTitle}{/if}
+{if !$pageTitleTranslated}{translate|assign:"pageTitleTranslated" key=$pageTitle}{/if}
 
 <div id="container">
 

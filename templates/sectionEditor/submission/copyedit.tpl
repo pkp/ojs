@@ -34,7 +34,7 @@
 				{if $submission->getCopyeditorId() && $initialCopyeditFile}
 					{url|assign:"url" op="notifyCopyeditor" articleId=$submission->getArticleId()}
 					{if $submission->getCopyeditorDateUnderway()}
-						{assign_translate|escape:"javascript" var=confirmText key="sectionEditor.copyedit.confirmRenotify"}
+						{translate|escape:"javascript"|assign:"confirmText" key="sectionEditor.copyedit.confirmRenotify"}
 						{icon name="mail" onclick="return confirm('$confirmText')" url=$url}
 					{else}
 						{icon name="mail" url=$url}
@@ -100,7 +100,7 @@
 			{if ($submission->getCopyeditorId() || !$useCopyeditors) && $submission->getCopyeditorDateCompleted()}
 				{url|assign:"url" op="notifyAuthorCopyedit articleId=$submission->getArticleId()}
 				{if $submission->getCopyeditorDateAuthorUnderway()}
-					{assign_translate|escape:"javascript" var=confirmText key="sectionEditor.author.confirmRenotify"}
+					{translate|escape:"javascript"|assign:"confirmText" key="sectionEditor.author.confirmRenotify"}
 					{icon name="mail" onclick="return confirm('$confirmText')" url=$url}
 				{else}
 					{icon name="mail" url=$url}
@@ -146,7 +146,7 @@
 				{if $submission->getCopyeditorId() && $submission->getCopyeditorDateAuthorCompleted()}
 					{url|assign:"url" op="notifyFinalCopyedit articleId=$submission->getArticleId()}
 					{if $submission->getCopyeditorDateFinalUnderway()}
-						{assign_translate|escape:"javascript" var=confirmText key="sectionEditor.copyedit.confirmRenotify"}
+						{translate|escape:"javascript"|assign:"confirmText" key="sectionEditor.copyedit.confirmRenotify"}
 						{icon name="mail" onclick="return confirm('$confirmText')" url=$url}
 					{else}
 						{icon name="mail" url=$url}

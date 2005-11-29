@@ -32,7 +32,7 @@
 		<td>
 			{url|assign:"url" op="notifyAuthorProofreader" articleId=$submission->getArticleId()}
 			{if $proofAssignment->getDateAuthorUnderway()}
-				{assign_translate|escape:"javascript" var=confirmText key="sectionEditor.author.confirmRenotify"}
+				{translate|escape:"javascript"|assign:"confirmText" key="sectionEditor.author.confirmRenotify"}
 				{icon name="mail" onclick="return confirm('$confirmText')" url=$url}
 			{else}
 				{icon name="mail" url=$url}
@@ -64,7 +64,7 @@
 				{if $proofAssignment->getProofreaderId() && $proofAssignment->getDateAuthorCompleted()}
 					{url|assign:"url" op="notifyProofreader" articleId=$submission->getArticleId()}
 					{if $proofAssignment->getDateProofreaderUnderway()}
-						{assign_translate|escape:"javascript" var=confirmText key="sectionEditor.proofreader.confirmRenotify"}
+						{translate|escape:"javascript"|assign:"confirmText" key="sectionEditor.proofreader.confirmRenotify"}
 						{icon name="mail" onclick="return confirm('$confirmText')" url=$url}
 					{else}
 						{icon name="mail" url=$url}
@@ -115,7 +115,7 @@
 				{if $layoutAssignment->getEditorId() && $proofAssignment->getDateProofreaderCompleted()}
 					{url|assign:"url" op="notifyLayoutEditorProofreader" articleId=$submission->getArticleId()}
 					{if $proofAssignment->getDateLayoutEditorUnderway()}
-						{assign_translate|escape:"javascript" var=confirmText key="sectionEditor.layout.confirmRenotify"}
+						{translate|escape:"javascript"|assign:"confirmText" key="sectionEditor.layout.confirmRenotify"}
 						{icon name="mail" onclick="return confirm('$confirmText')" url=$url}
 					{else}
 						{icon name="mail" url=$url}

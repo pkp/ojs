@@ -12,12 +12,12 @@
 {assign var="pageTitle" value="installer.ojsInstallation"}
 {include file="common/header.tpl"}
 
-{if is_writeable('config.inc.php')}{assign_translate var="writable_config" key="installer.checkYes"}{else}{assign_translate var="writable_config" key="installer.checkNo"}{/if}
-{if is_writeable('cache')}{assign_translate var="writable_cache" key="installer.checkYes"}{else}{assign_translate var="writable_cache" key="installer.checkNo"}{/if}
-{if is_writeable('public')}{assign_translate var="writable_public" key="installer.checkYes"}{else}{assign_translate var="writable_public" key="installer.checkNo"}{/if}
-{if is_writeable('cache/_db')}{assign_translate var="writable_db_cache" key="installer.checkYes"}{else}{assign_translate var="writable_db_cache" key="installer.checkNo"}{/if}
-{if is_writeable('cache/t_cache')}{assign_translate var="writable_templates_cache" key="installer.checkYes"}{else}{assign_translate var="writable_templates_cache" key="installer.checkNo"}{/if}
-{if is_writeable('cache/t_compile')}{assign_translate var="writable_templates_compile" key="installer.checkYes"}{else}{assign_translate var="writable_templates_compile" key="installer.checkNo"}{/if}
+{if is_writeable('config.inc.php')}{translate|assign:"writable_config" key="installer.checkYes"}{else}{translate|assign:"writable_config" key="installer.checkNo"}{/if}
+{if is_writeable('cache')}{translate|assign:"writable_cache" key="installer.checkYes"}{else}{translate|assign:"writable_cache" key="installer.checkNo"}{/if}
+{if is_writeable('public')}{translate|assign:"writable_public" key="installer.checkYes"}{else}{translate|assign:"writable_public" key="installer.checkNo"}{/if}
+{if is_writeable('cache/_db')}{translate|assign:"writable_db_cache" key="installer.checkYes"}{else}{translate|assign:"writable_db_cache" key="installer.checkNo"}{/if}
+{if is_writeable('cache/t_cache')}{translate|assign:"writable_templates_cache" key="installer.checkYes"}{else}{translate|assign:"writable_templates_cache" key="installer.checkNo"}{/if}
+{if is_writeable('cache/t_compile')}{translate|assign:"writable_templates_compile" key="installer.checkYes"}{else}{translate|assign:"writable_templates_compile" key="installer.checkNo"}{/if}
 
 {url|assign:"upgradeUrl" page="install" op="upgrade"}
 {translate key="installer.installationInstructions" version=$version->getVersionString() upgradeUrl=$upgradeUrl baseUrl=$baseUrl writable_config=$writable_config writable_db_cache=$writable_db_cache writable_cache=$writable_cache writable_public=$writable_public writable_templates_cache=$writable_templates_cache writable_templates_compile=$writable_templates_compile}
