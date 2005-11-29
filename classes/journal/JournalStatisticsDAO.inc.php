@@ -124,7 +124,7 @@ class JournalStatisticsDAO extends DAO {
 
 		if ($timeToPublicationCount != 0) {
 			// Keep one sig fig
-			$returner['daysToPublication'] = round($totalTimeToPublication / $timeToPublicationCount / 60 / 60 / 24 * 10) / 10;
+			$returner['daysToPublication'] = round($totalTimeToPublication / $timeToPublicationCount / 60 / 60 / 24);
 		}
 
 		return $returner;
@@ -221,7 +221,7 @@ class JournalStatisticsDAO extends DAO {
 	 */
 	function getReviewerStatistics($journalId, $dateStart = null, $dateEnd = null) {
 		$result = &$this->retrieve(
-			'SELECT r.review_id AS review_id, r.quality AS quality, r.date_assigned AS date_assigned, r.date_completed AS date_completed FROM review_assignments r, articles a WHERE a.journal_id = ? AND r.article_id = a.article_id' .
+			'SELECT r.review_id AS review_id, r.reviewer_id AS reviewer_id, r.quality AS quality, r.date_assigned AS date_assigned, r.date_completed AS date_completed FROM review_assignments r, articles a WHERE a.journal_id = ? AND r.article_id = a.article_id' .
 			($dateStart !== null ? ' AND a.date_submitted >= ' . $this->datetimeToDB($dateStart) : '') .
 			($dateEnd !== null ? ' AND a.date_submitted <= ' . $this->datetimeToDB($dateEnd) : ''),
 			$journalId
@@ -230,13 +230,15 @@ class JournalStatisticsDAO extends DAO {
 		$returner = array(
 			'reviewsCount' => 0,
 			'reviewerScore' => 0,
-			'daysPerReview' => 0
+			'daysPerReview' => 0,
+			'reviewerCount' => 0
 		);
 
 		$scoredReviewsCount = 0;
 		$totalScore = 0;
 		$completedReviewsCount = 0;
 		$totalElapsedTime = 0;
+		$reviewerList = array();
 
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
@@ -245,6 +247,12 @@ class JournalStatisticsDAO extends DAO {
 				$scoredReviewsCount++;
 				$totalScore += $row['quality'];
 			}
+
+			if (!empty($row['reviewer_id']) && !in_array($row['reviewer_id'], $reviewerList)) {
+				$returner['reviewerCount']++;
+				array_push($reviewerList, $row['reviewer_id']);
+			}
+
 			if (!empty($row['date_assigned']) && !empty($row['date_completed'])) {
 				$timeAssigned = strtotime($this->datetimeFromDB($row['date_assigned']));
 				$timeCompleted = strtotime($this->datetimeFromDB($row['date_completed']));
@@ -267,6 +275,27 @@ class JournalStatisticsDAO extends DAO {
 		}
 
 		return $returner;
+	}
+
+	function &getCountryDistribution($journalId, $locale = null) {
+		if ($locale == null) $locale = Locale::getLocale();
+		$result = &$this->retrieve(
+			'SELECT DISTINCT u.country AS country FROM users u, roles r WHERE r.journal_id = ? AND r.user_id = u.user_id',
+			$journalId
+		);
+
+		$countries = array();
+		$countryDao =& DAORegistry::getDAO('CountryDAO');
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+			array_push($countries, $countryDao->getCountry($row['country'], $locale));
+			$result->moveNext();
+		}
+
+		$result->Close();
+		unset($result);
+
+		return $countries;
 	}
 }
 

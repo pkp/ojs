@@ -55,6 +55,9 @@ class StatisticsHandler extends ManagerHandler {
 		$notifiableUsers = $notificationStatusDao->getNotifiableUsersCount($journal->getJournalId());
 		$templateMgr->assign('notifiableUsers', $notifiableUsers);
 
+		$countries = $journalStatisticsDao->getCountryDistribution($journal->getJournalId());
+		$templateMgr->assign_by_ref('countryDistribution', $countries);
+
 		$templateMgr->assign('reportTypes', array(
 			REPORT_TYPE_JOURNAL => 'manager.statistics.reports.type.journal',
 			REPORT_TYPE_EDITOR => 'manager.statistics.reports.type.editor',
