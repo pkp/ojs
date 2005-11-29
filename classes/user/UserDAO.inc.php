@@ -135,6 +135,7 @@ class UserDAO extends DAO {
 		$user->setPhone($row['phone']);
 		$user->setFax($row['fax']);
 		$user->setMailingAddress($row['mailing_address']);
+		$user->setCountry($row['country']);
 		$user->setBiography($row['biography']);
 		$user->setInterests($row['interests']);
 		$user->setLocales(isset($row['locales']) && !empty($row['locales']) ? explode(':', $row['locales']) : array());
@@ -163,9 +164,9 @@ class UserDAO extends DAO {
 		}
 		$this->update(
 			sprintf('INSERT INTO users
-				(username, password, first_name, middle_name, initials, last_name, affiliation, email, phone, fax, mailing_address, biography, interests, locales, date_registered, date_last_login, must_change_password, disabled, disabled_reason, auth_id)
+				(username, password, first_name, middle_name, initials, last_name, affiliation, email, phone, fax, mailing_address, country, biography, interests, locales, date_registered, date_last_login, must_change_password, disabled, disabled_reason, auth_id)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, %s, %s, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, %s, %s, ?, ?, ?, ?)',
 				$this->datetimeToDB($user->getDateRegistered()), $this->datetimeToDB($user->getDateLastLogin())),
 			array(
 				$user->getUsername(),
@@ -179,6 +180,7 @@ class UserDAO extends DAO {
 				$user->getPhone(),
 				$user->getFax(),
 				$user->getMailingAddress(),
+				$user->getCountry(),
 				$user->getBiography(),
 				$user->getInterests(),
 				join(':', $user->getLocales()),
@@ -215,6 +217,7 @@ class UserDAO extends DAO {
 					phone = ?,
 					fax = ?,
 					mailing_address = ?,
+					country = ?,
 					biography = ?,
 					interests = ?,
 					locales = ?,
@@ -237,6 +240,7 @@ class UserDAO extends DAO {
 				$user->getPhone(),
 				$user->getFax(),
 				$user->getMailingAddress(),
+				$user->getCountry(),
 				$user->getBiography(),
 				$user->getInterests(),
 				join(':', $user->getLocales()),

@@ -136,6 +136,7 @@
 		<field name="phone" type="C2" size="24"/>
 		<field name="fax" type="C2" size="24"/>
 		<field name="mailing_address" type="C2" size="255"/>
+		<field name="country" type="C2" size="90"/>
 		<field name="biography" type="X"/>
 		<field name="interests" type="C2" size="255"/>
 		<field name="locales" type="C2" size="255"/>

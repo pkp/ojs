@@ -134,6 +134,7 @@
 	<message key="common.active">Active</message>
 	<message key="common.completed">Completed</message>
 	<message key="common.mailingAddress">Mailing Address</message>
+	<message key="common.country">Country</message>
 	<message key="common.close">Close</message>
 	<message key="common.closeWindow">Close Window</message>
 	<message key="common.initiate">Initiate</message>

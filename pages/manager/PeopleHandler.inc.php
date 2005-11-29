@@ -491,7 +491,14 @@ class PeopleHandler extends ManagerHandler {
 			$journal = &Request::getJournal();
 			$roleDao = &DAORegistry::getDAO('RoleDAO');
 			$roles = &$roleDao->getRolesByUserId($user->getUserId(), $journal->getJournalId());
-			
+
+			$countryDao =& DAORegistry::getDAO('CountryDAO');
+			$country = null;
+			if ($user->getCountry() != '') {
+				$country = $countryDao->getCountry($user->getCountry());
+			}
+			$templateMgr->assign('country', $country);
+
 			$templateMgr->assign_by_ref('user', $user);
 			$templateMgr->assign_by_ref('userRoles', $roles);
 			$templateMgr->assign('profileLocalesEnabled', $site->getProfileLocalesEnabled());

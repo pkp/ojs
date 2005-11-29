@@ -126,11 +126,13 @@ codes, e.g. "fr_FR", is recommended):
 	* locale/en_US
 	* dbscripts/xml/data/locale/en_US
 	* help/en_US
+	* registry/locale/en_US
 	* rt/en_US
 	* plugins/[plugin category]/[plugin name]/locale, where applicable
 
 The only critical files that need translation for the system to function
-properly are found in locale/en_US and dbscripts/xml/data/locale/en_US.
+properly are found in locale/en_US, dbscripts/xml/data/locale/en_US, and
+registry/locale/en_US.
 
 New locales must also be added to the file registry/locales.xml, after which
 they can be installed in the system through the site administration web

@@ -218,6 +218,22 @@ class User extends DataObject {
 	}
 	
 	/**
+	 * Get country.
+	 * @return string
+	 */
+	function getCountry() {
+		return $this->getData('country');
+	}
+	
+	/**
+	 * Set country.
+	 * @param $country string
+	 */
+	function setCountry($country) {
+		return $this->setData('country', $country);
+	}
+	
+	/**
 	 * Get user biography.
 	 * @return string
 	 */

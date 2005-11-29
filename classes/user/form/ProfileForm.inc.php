@@ -59,8 +59,12 @@ class ProfileForm extends Form {
 		$journals = &$journalDao->getJournals();
 		$journals = &$journals->toArray();
 		$journalNotifications = &$notificationStatusDao->getJournalNotifications($user->getUserId());
-		
+
+		$countryDao =& DAORegistry::getDAO('CountryDAO');
+		$countries =& $countryDao->getCountries();
+
 		$templateMgr->assign_by_ref('journals', $journals);
+		$templateMgr->assign_by_ref('countries', $countries);
 		$templateMgr->assign_by_ref('journalNotifications', $journalNotifications);
 		$templateMgr->assign('helpTopicId', 'user.registerAndProfile');		
 		parent::display();
@@ -82,6 +86,7 @@ class ProfileForm extends Form {
 			'phone' => $user->getPhone(),
 			'fax' => $user->getFax(),
 			'mailingAddress' => $user->getMailingAddress(),
+			'country' => $user->getCountry(),
 			'biography' => $user->getBiography(),
 			'interests' => $user->getInterests(),
 			'userLocales' => $user->getLocales()
@@ -102,6 +107,7 @@ class ProfileForm extends Form {
 			'phone',
 			'fax',
 			'mailingAddress',
+			'country',
 			'biography',
 			'interests',
 			'userLocales'
@@ -127,6 +133,7 @@ class ProfileForm extends Form {
 		$user->setPhone($this->getData('phone'));
 		$user->setFax($this->getData('fax'));
 		$user->setMailingAddress($this->getData('mailingAddress'));
+		$user->setCountry($this->getData('country'));
 		$user->setBiography($this->getData('biography'));
 		$user->setInterests($this->getData('interests'));
 		

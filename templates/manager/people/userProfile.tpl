@@ -69,6 +69,10 @@
 		<td class="value">{$user->getMailingAddress()|escape|nl2br|default:"&mdash;"}</td>
 	</tr>
 	<tr valign="top">
+		<td class="label">{translate key="common.country"}</td>
+		<td class="value">{$country|escape|default:"&mdash;"}</td>
+	</tr>
+	<tr valign="top">
 		<td class="label">{translate key="user.biography"}</td>
 		<td class="value">{$user->getBiography()|escape|nl2br|default:"&mdash;"}</td>
 	</tr>

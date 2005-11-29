@@ -67,7 +67,7 @@
 <div id="content">
 <p>
 	<i>{$user->getFullName()|escape}</i> {icon name="mail" url=$address}<br />
-	{if $user->getAffiliation()}{$user->getAffiliation()|escape}{/if}
+	{if $user->getAffiliation()}{$user->getAffiliation()|escape}{assign var=needsComma value=1}{/if}{if $country}{if $needsComma}, {/if}{$country|escape}{/if}
 </p>
 
 <p>{$user->getBiography()|escape|nl2br}</p>

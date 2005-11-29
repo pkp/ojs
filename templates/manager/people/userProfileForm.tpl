@@ -165,6 +165,15 @@
 		<td class="label">{fieldLabel name="mailingAddress" key="common.mailingAddress"}</td>
 		<td class="value"><textarea name="mailingAddress" id="mailingAddress" rows="3" cols="40" class="textArea">{$mailingAddress|escape}</textarea></td>
 	</tr>
+<tr valign="top">
+	<td class="label">{fieldLabel name="country" key="common.country"}</td>
+	<td class="value">
+		<select name="country" id="country" class="selectMenu">
+			<option value=""></option>
+			{html_options options=$countries selected=$country}
+		</select>
+	</td>
+</tr>
 	<tr valign="top">
 		<td class="label">{fieldLabel name="biography" key="user.biography"}<br />{translate key="user.biography.description"}</td>
 		<td class="value"><textarea name="biography" id="biography" rows="5" cols="40" class="textArea">{$biography|escape}</textarea></td>

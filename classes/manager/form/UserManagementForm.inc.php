@@ -87,6 +87,10 @@ class UserManagementForm extends Form {
 			$templateMgr->assign('availableLocales', $site->getSupportedLocaleNames());
 		}
 		$templateMgr->assign('helpTopicId', $helpTopicId);
+
+		$countryDao =& DAORegistry::getDAO('CountryDAO');
+		$countries =& $countryDao->getCountries();
+		$templateMgr->assign_by_ref('countries', $countries);
 		
 		$authDao = &DAORegistry::getDAO('AuthSourceDAO');
 		$authSources = &$authDao->getSources();
@@ -121,6 +125,7 @@ class UserManagementForm extends Form {
 					'phone' => $user->getPhone(),
 					'fax' => $user->getFax(),
 					'mailingAddress' => $user->getMailingAddress(),
+					'country' => $user->getCountry(),
 					'biography' => $user->getBiography(),
 					'interests' => $user->getInterests(),
 					'userLocales' => $user->getLocales()
@@ -145,7 +150,7 @@ class UserManagementForm extends Form {
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->readUserVars(array('authId', 'enrollAs', 'password', 'password2', 'firstName', 'middleName', 'lastName', 'initials', 'affiliation', 'email', 'phone', 'fax', 'mailingAddress', 'biography', 'interests', 'userLocales', 'generatePassword', 'sendNotify', 'mustChangePassword'));
+		$this->readUserVars(array('authId', 'enrollAs', 'password', 'password2', 'firstName', 'middleName', 'lastName', 'initials', 'affiliation', 'email', 'phone', 'fax', 'mailingAddress', 'country', 'biography', 'interests', 'userLocales', 'generatePassword', 'sendNotify', 'mustChangePassword'));
 		if ($this->userId == null) {
 			$this->readUserVars(array('username'));
 		}
@@ -183,6 +188,7 @@ class UserManagementForm extends Form {
 		$user->setPhone($this->getData('phone'));
 		$user->setFax($this->getData('fax'));
 		$user->setMailingAddress($this->getData('mailingAddress'));
+		$user->setCountry($this->getData('country'));
 		$user->setBiography($this->getData('biography'));
 		$user->setInterests($this->getData('interests'));
 		$user->setMustChangePassword($this->getData('mustChangePassword') ? 1 : 0);

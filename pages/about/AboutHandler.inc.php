@@ -86,6 +86,10 @@ class AboutHandler extends Handler {
 		$journal = &Request::getJournal();
 		$templateMgr = &TemplateManager::getManager();
 
+		$countryDao =& DAORegistry::getDAO('CountryDAO');
+		$countries =& $countryDao->getCountries();
+		$templateMgr->assign_by_ref('countries', $countries);
+
 		// FIXME: This is pretty inefficient; should probably be cached.
 
 		if ($journal->getSetting('boardEnabled') != true) {
@@ -213,6 +217,12 @@ class AboutHandler extends Handler {
 		}
 
 		if (!$user) Request::redirect(null, 'about', 'editorialTeam');
+
+		$countryDao =& DAORegistry::getDAO('CountryDAO');
+		if ($user && $user->getCountry() != '') {
+			$country = $countryDao->getCountry($user->getCountry());
+			$templateMgr->assign('country', $country);
+		}
 
 		$templateMgr->assign_by_ref('user', $user);
 		$templateMgr->display('about/editorialTeamBio.tpl');
