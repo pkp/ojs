@@ -63,14 +63,15 @@ class DBRowIterator extends ItemIterator {
 	 * @return object
 	 */
 	function &next() {
-		if ($this->records == null) return null;
+		if ($this->records == null) return $this->records;
 		if (!$this->records->EOF) {
 			$row = &$this->records->getRowAssoc(false);
 			if (!$this->records->MoveNext()) $this->_cleanup();
 			return $row;
 		} else {
 			$this->_cleanup();
-			return null;
+			$nullVar = null;
+			return $nullVar;
 		}
 	}
 

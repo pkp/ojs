@@ -72,7 +72,7 @@ class DAOResultFactory extends ItemIterator {
 	 * @return object
 	 */
 	function &next() {
-		if ($this->records == null) return null;
+		if ($this->records == null) return $this->records;
 		if (!$this->records->EOF) {
 			$functionName = &$this->functionName;
 			$dao = &$this->dao;
@@ -82,7 +82,8 @@ class DAOResultFactory extends ItemIterator {
 			return $result;
 		} else {
 			$this->_cleanup();
-			return null;
+			$nullVar = null;
+			return $nullVar;
 		}
 	}
 

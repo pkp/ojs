@@ -444,6 +444,11 @@ class ManagerHandler extends Handler {
 		import('pages.manager.StatisticsHandler');
 		StatisticsHandler::statistics($args);
 	}
+	
+	function reportGenerator($args) {
+		import('pages.manager.StatisticsHandler');
+		StatisticsHandler::reportGenerator($args);
+	}
 }
 
 ?>

@@ -20,7 +20,8 @@ class ItemIterator {
 	 * @return object
 	 */
 	function &next() {
-		return null;
+		$nullVar = null;
+		return $nullVar;
 	}
 
 	/**

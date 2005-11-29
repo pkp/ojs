@@ -14,6 +14,11 @@
  * $Id$
  */
 
+define('REPORT_TYPE_JOURNAL',	0x00001);
+define('REPORT_TYPE_EDITOR',	0x00002);
+define('REPORT_TYPE_REVIEWER',	0x00003);
+define('REPORT_TYPE_SECTION',	0x00004);
+
 class JournalStatisticsDAO extends DAO {
 	/**
 	 * Constructor.
@@ -296,6 +301,135 @@ class JournalStatisticsDAO extends DAO {
 		unset($result);
 
 		return $countries;
+	}
+
+	/**
+	 * Generate a report of the given $reportType including the supplied
+	 * $fields between the given dates.
+	 * @param $journalId int The journal to report on
+	 * @param $reportType int Type of report (see REPORT_TYPE_... constants)
+	 * @param $fields array List of fields to include
+	 * @param $dateStart string The start date
+	 * @param $dateEnd string The end date
+	 */
+	function &getReport($journalId, $reportType, $fields, $dateStart = null, $dateEnd = null) {
+		$fieldList = array();
+		$orderColumns = array();
+
+		foreach ($fields as $field) switch ($field) {
+			case 'authors':
+			case 'affiliations':
+			case 'reviewers':
+			case 'dateDecided':
+				// Don't do anything here.
+				break;
+			case 'status':
+				array_push($fieldList, 'a.status AS status');
+				break;
+			case 'title':
+				array_push($fieldList, 'a.title AS submission_title');
+				break;
+			case 'section':
+				array_push($fieldList, 's.title AS section_title');
+				array_push($fieldList, 's.title_alt1 AS section_title_alt1');
+				array_push($fieldList, 's.title_alt2 AS section_title_alt2');
+				break;
+			case 'dateSubmitted':
+				array_push($fieldList, 'a.date_submitted AS date_submitted');
+				break;
+			case 'editor':
+				array_push($fieldList, 'eu.last_name AS editor_last_name');
+				array_push($fieldList, 'eu.middle_name AS editor_middle_name');
+				array_push($fieldList, 'eu.first_name AS editor_first_name');
+				break;
+		}
+
+		$result = &$this->retrieve(
+			'SELECT DISTINCT a.article_id' . (!empty($fieldList)?', ':'') . implode(', ', $fieldList) . ' ' .
+			'FROM ' .
+			'articles a ' .
+			'LEFT JOIN sections s ON (s.section_id = a.section_id) ' .
+			'LEFT JOIN edit_assignments ee ON (ee.article_id = a.article_id) ' .
+			'LEFT JOIN users eu ON (ee.editor_id = eu.user_id) ' .
+			'WHERE a.journal_id = ? ' .
+			($dateStart !== null ? ' AND a.date_submitted >= ' . $this->datetimeToDB($dateStart) : '') .
+			($dateEnd !== null ? ' AND a.date_submitted <= ' . $this->datetimeToDB($dateEnd) : '') .
+			(!empty($orderColumns) ? ' ORDER BY ' . implode(', ', $orderColumns) : ''),
+			$journalId
+		);
+		import('journal.JournalReportIterator');
+		$report =& new JournalReportIterator($journalId, $result, $fields, $dateStart, $dateEnd);
+		return $report;
+	}
+
+	/**
+	 * Determine, within a given journal and date range (optional),
+	 * the maximum number of authors that a single submission has.
+	 * @param $journalId int
+	 * @param $dateStart string
+	 * @param $dateEnd string
+	 */
+	function getMaxAuthorCount($journalId, $dateStart, $dateEnd) {
+		$result = &$this->retrieve(
+			'SELECT COUNT(aa.author_id) ' .
+			'FROM ' .
+			'articles a, ' .
+			'article_authors aa ' .
+			'WHERE a.journal_id = ? ' .
+			'AND aa.article_id = a.article_id ' .
+			($dateStart !== null ? ' AND a.date_submitted >= ' . $this->datetimeToDB($dateStart) : '') .
+			($dateEnd !== null ? ' AND a.date_submitted <= ' . $this->datetimeToDB($dateEnd) : '') .
+			' GROUP BY a.article_id',
+			$journalId
+		);
+
+		$max = null;
+		while (!$result->EOF) {
+			if ($max === null || $max < $result->fields[0]) {
+				$max = $result->fields[0];
+			}
+			$result->moveNext();
+		}
+
+		$result->Close();
+		unset($result);
+
+		return $max;
+	}
+
+	/**
+	 * Determine, within a given journal and date range (optional),
+	 * the maximum number of reviewers that a single submission has.
+	 * @param $journalId int
+	 * @param $dateStart string
+	 * @param $dateEnd string
+	 */
+	function getMaxReviewerCount($journalId, $dateStart, $dateEnd) {
+		$result = &$this->retrieve(
+			'SELECT COUNT(DISTINCT r.reviewer_id) ' .
+			'FROM ' .
+			'articles a, ' .
+			'review_assignments r ' .
+			'WHERE a.journal_id = ? ' .
+			'AND r.article_id = a.article_id ' .
+			($dateStart !== null ? ' AND a.date_submitted >= ' . $this->datetimeToDB($dateStart) : '') .
+			($dateEnd !== null ? ' AND a.date_submitted <= ' . $this->datetimeToDB($dateEnd) : '') .
+			' GROUP BY r.article_id',
+			$journalId
+		);
+
+		$max = null;
+		while (!$result->EOF) {
+			if ($max === null || $max < $result->fields[0]) {
+				$max = $result->fields[0];
+			}
+			$result->moveNext();
+		}
+
+		$result->Close();
+		unset($result);
+
+		return $max;
 	}
 }
 

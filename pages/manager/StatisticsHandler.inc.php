@@ -13,11 +13,6 @@
  * $Id$
  */
 
-define('REPORT_TYPE_JOURNAL',	0x00001);
-define('REPORT_TYPE_EDITOR',	0x00002);
-define('REPORT_TYPE_REVIEWER',	0x00003);
-define('REPORT_TYPE_SECTION',	0x00004);
-
 class StatisticsHandler extends ManagerHandler {
 
 	/**
@@ -71,13 +66,29 @@ class StatisticsHandler extends ManagerHandler {
 
 	function reportGenerator($args) {
 		parent::validate();
-
-		$articleDao =& DAORegistry::getDAO('ArticleDAO');
+		$journal =& Request::getJournal();
 
 		$fromDate = Request::getUserDateVar('dateFrom', 1, 1);
 		if ($fromDate !== null) $fromDate = date('Y-m-d H:i:s', $fromDate);
 		$toDate = Request::getUserDateVar('dateTo', 32, 12, null, 23, 59, 59);
 		if ($toDate !== null) $toDate = date('Y-m-d H:i:s', $toDate);
+
+		$journalStatisticsDao =& DAORegistry::getDAO('JournalStatisticsDAO');
+
+		$fields = Request::getUserVar('fields');
+		if (!is_array($fields)) {
+			if (empty($fields)) $fields = array();
+			else $fields = array($fields);
+		}
+
+		$report =& $journalStatisticsDao->getReport($journal->getJournalId(), Request::getUserVar('reportType'), $fields, $fromDate, $toDate);
+
+		$templateMgr =& TemplateManager::getManager();
+		header('content-disposition: attachment; filename=report.csv');
+		header('content-type: text/comma-separated-values');
+		$templateMgr->assign_by_ref('report', $report);
+		$templateMgr->assign_by_ref('fields', $fields);
+		$templateMgr->display('manager/statistics/report.tpl');
 	}
 }
 
