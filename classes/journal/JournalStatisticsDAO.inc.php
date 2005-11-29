@@ -316,6 +316,23 @@ class JournalStatisticsDAO extends DAO {
 		$fieldList = array();
 		$orderColumns = array();
 
+		switch ($reportType) {
+			case REPORT_TYPE_JOURNAL:
+				array_push($orderColumns, 'a.article_id');
+				break;
+			case REPORT_TYPE_EDITOR:
+				array_push($orderColumns, 'ee.editor_id');
+				break;
+			case REPORT_TYPE_REVIEWER:
+				array_push($orderColumns, 'a.article_id');
+				// FIXME: This report needs definition.
+				break;
+			case REPORT_TYPE_SECTION:
+				array_push($orderColumns, 's.title');
+				array_push($orderColumns, 's.section_id');
+				break;
+		}
+
 		foreach ($fields as $field) switch ($field) {
 			case 'authors':
 			case 'affiliations':
