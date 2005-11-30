@@ -60,6 +60,7 @@
 	<topic key="journal.roles.reviewer" id="journal/topic/000021"></topic>
 	<topic key="journal.roles.author" id="journal/topic/000022"></topic>
 	<topic key="journal.roles.reader" id="journal/topic/000023"></topic>
+	<topic key="journal.roles.subscriptionManager" id="journal/topic/000032"></topic>
 
 	<!-- Submission Process -->
 	<topic key="submission.index" id="submission/topic/000000"></topic>

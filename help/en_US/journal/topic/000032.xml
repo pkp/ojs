@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000015.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Subscription Manager 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000015" locale="en_US" title="Subscription Manager" toc="journal/toc/000032" key="journal.roles.subscriptionManager">
+	<section>
+		<![CDATA[<p>The Subscription Manager manages the journal's Subscriptions and Subscription Types.</p>]]>
+	</section>
+</topic>
