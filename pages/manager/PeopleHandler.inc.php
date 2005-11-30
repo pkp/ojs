@@ -90,6 +90,9 @@ class PeopleHandler extends ManagerHandler {
 				case ROLE_ID_READER:
 					$helpTopicId = 'journal.roles.reader';
 					break;
+				case ROLE_ID_SUBSCRIPTION_MANAGER:
+					$helpTopicId = 'journal.roles.subscriptionManager';
+					break;
 				default:
 					$helpTopicId = 'journal.roles.index';
 					break;

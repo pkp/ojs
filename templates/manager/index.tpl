@@ -53,6 +53,7 @@
 	<li>&#187; <a href="{url op="people" path="proofreaders"}">{translate key="user.role.proofreaders"}</a></li>
 	<li>&#187; <a href="{url op="people" path="authors"}">{translate key="user.role.authors"}</a></li>
 	<li>&#187; <a href="{url op="people" path="readers"}">{translate key="user.role.readers"}</a></li>
+	<li>&#187; <a href="{url op="people" path="subscriptionManagers"}">{translate key="user.role.subscriptionManagers"}</a></li>
 	{call_hook name="Templates::Manager::Index::Roles"}
 </ul>
 

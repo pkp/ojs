@@ -1,26 +1,29 @@
 <?php
 
 /**
- * SubscriptionHandler.inc.php
+ * SubscriptionManagerHandler.inc.php
  *
- * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package pages.manager
+ * @package pages.subscriptionManager
  *
  * Handle requests for subscription management functions. 
  *
  * $Id$
  */
 
-class SubscriptionHandler extends ManagerHandler {
+class SubscriptionManagerHandler extends Handler {
+	function index() {
+		SubscriptionManagerHandler::subscriptions();
+	}
 
 	/**
 	 * Display a list of subscriptions for the current journal.
 	 */
 	function subscriptions() {
-		parent::validate();
-		SubscriptionHandler::setupTemplate();
+		SubscriptionManagerHandler::validate();
+		SubscriptionManagerHandler::setupTemplate();
 
 		$journal = &Request::getJournal();
 		$rangeInfo = &Handler::getRangeInfo('subscriptions');
@@ -38,7 +41,7 @@ class SubscriptionHandler extends ManagerHandler {
 	 * @param $args array first parameter is the ID of the subscription to delete
 	 */
 	function deleteSubscription($args) {
-		parent::validate();
+		SubscriptionManagerHandler::validate();
 		
 		if (isset($args) && !empty($args)) {
 			$journal = &Request::getJournal();
@@ -60,8 +63,8 @@ class SubscriptionHandler extends ManagerHandler {
 	 * @param $args array optional, first parameter is the ID of the subscription to edit
 	 */
 	function editSubscription($args = array()) {
-		parent::validate();
-		SubscriptionHandler::setupTemplate();
+		SubscriptionManagerHandler::validate();
+		SubscriptionManagerHandler::setupTemplate();
 
 		$journal = &Request::getJournal();
 		$subscriptionId = !isset($args) || empty($args) ? null : (int) $args[0];
@@ -94,16 +97,16 @@ class SubscriptionHandler extends ManagerHandler {
 	 * Display form to create new subscription.
 	 */
 	function createSubscription() {
-		SubscriptionHandler::editSubscription();
+		SubscriptionManagerHandler::editSubscription();
 	}
 
 	/**
 	 * Display a list of users from which to choose a subscriber.
 	 */
 	function selectSubscriber() {
-		parent::validate();
+		SubscriptionManagerHandler::validate();
 		$templateMgr = &TemplateManager::getManager();
-		SubscriptionHandler::setupTemplate();
+		SubscriptionManagerHandler::setupTemplate();
 		$templateMgr->append('pageHierarchy', array(Request::url(null, 'manager', 'subscriptions'), 'manager.subscriptions'));
 
 		$userDao = &DAORegistry::getDAO('UserDAO');
@@ -131,7 +134,7 @@ class SubscriptionHandler extends ManagerHandler {
 		$templateMgr->assign('search', $searchQuery);
 		$templateMgr->assign('searchInitial', $searchInitial);
 
-		$templateMgr->assign('isJournalManager', true);
+		$templateMgr->assign('isJournalManager', false);
 
 		$templateMgr->assign('fieldOptions', Array(
 			USER_FIELD_FIRSTNAME => 'user.firstName',
@@ -149,7 +152,7 @@ class SubscriptionHandler extends ManagerHandler {
 	 * Save changes to a subscription.
 	 */
 	function updateSubscription() {
-		parent::validate();
+		SubscriptionManagerHandler::validate();
 		
 		import('subscription.form.SubscriptionForm');
 		
@@ -172,7 +175,7 @@ class SubscriptionHandler extends ManagerHandler {
 				}
 				
 			} else {
-				SubscriptionHandler::setupTemplate();
+				SubscriptionManagerHandler::setupTemplate();
 
 				$templateMgr = &TemplateManager::getManager();
 				$templateMgr->append('pageHierarchy', array(Request::url(null, 'manager', 'subscriptions'), 'manager.subscriptions'));
@@ -195,8 +198,8 @@ class SubscriptionHandler extends ManagerHandler {
 	 * Display a list of subscription types for the current journal.
 	 */
 	function subscriptionTypes() {
-		parent::validate();
-		SubscriptionHandler::setupTemplate(true);
+		SubscriptionManagerHandler::validate();
+		SubscriptionManagerHandler::setupTemplate(true);
 
 		$journal = &Request::getJournal();
 		$rangeInfo = &Handler::getRangeInfo('subscriptionTypes');
@@ -214,7 +217,7 @@ class SubscriptionHandler extends ManagerHandler {
 	 * Rearrange the order of subscription types.
 	 */
 	function moveSubscriptionType($args) {
-		parent::validate();
+		SubscriptionManagerHandler::validate();
 
 		$subscriptionTypeId = isset($args[0])?$args[0]:0;
 		$journal = &Request::getJournal();
@@ -237,7 +240,7 @@ class SubscriptionHandler extends ManagerHandler {
 	 * @param $args array first parameter is the ID of the subscription type to delete
 	 */
 	function deleteSubscriptionType($args) {
-		parent::validate();
+		SubscriptionManagerHandler::validate();
 		
 		if (isset($args) && !empty($args)) {
 			$journal = &Request::getJournal();
@@ -259,8 +262,8 @@ class SubscriptionHandler extends ManagerHandler {
 	 * @param $args array optional, first parameter is the ID of the subscription type to edit
 	 */
 	function editSubscriptionType($args = array()) {
-		parent::validate();
-		SubscriptionHandler::setupTemplate(true);
+		SubscriptionManagerHandler::validate();
+		SubscriptionManagerHandler::setupTemplate(true);
 
 		$journal = &Request::getJournal();
 		$subscriptionTypeId = !isset($args) || empty($args) ? null : (int) $args[0];
@@ -293,14 +296,14 @@ class SubscriptionHandler extends ManagerHandler {
 	 * Display form to create new subscription type.
 	 */
 	function createSubscriptionType() {
-		SubscriptionHandler::editSubscriptionType();
+		SubscriptionManagerHandler::editSubscriptionType();
 	}
 
 	/**
 	 * Save changes to a subscription type.
 	 */
 	function updateSubscriptionType() {
-		parent::validate();
+		SubscriptionManagerHandler::validate();
 		
 		import('subscription.form.SubscriptionTypeForm');
 		
@@ -317,7 +320,7 @@ class SubscriptionHandler extends ManagerHandler {
 				$subscriptionTypeForm->execute();
 
 				if (Request::getUserVar('createAnother')) {
-					SubscriptionHandler::setupTemplate(true);
+					SubscriptionManagerHandler::setupTemplate(true);
 
 					$templateMgr = &TemplateManager::getManager();
 					$templateMgr->append('pageHierarchy', array(Request::url(null, 'manager', 'subscriptionTypes'), 'manager.subscriptionTypes'));
@@ -333,7 +336,7 @@ class SubscriptionHandler extends ManagerHandler {
 				}
 				
 			} else {
-				SubscriptionHandler::setupTemplate(true);
+				SubscriptionManagerHandler::setupTemplate(true);
 
 				$templateMgr = &TemplateManager::getManager();
 				$templateMgr->append('pageHierarchy', array(Request::url(null, 'manager', 'subscriptionTypes'), 'manager.subscriptionTypes'));
@@ -352,14 +355,29 @@ class SubscriptionHandler extends ManagerHandler {
 		}
 	}
 	
-	function setupTemplate($subclass = false) {
-		parent::setupTemplate(true);
-		if ($subclass) {
-			$templateMgr = &TemplateManager::getManager();
-			$templateMgr->append('pageHierarchy', array(Request::url(null, 'manager', 'subscriptions'), 'manager.subscriptions'));
+	/**
+	 * Validate that user has permissions to manage subscriptions for the
+	 * selected journal. Redirects to user index page if not properly
+	 * authenticated.
+	 */
+	function validate() {
+		parent::validate();
+		if (!Validation::isSubscriptionManager()) {
+			Validation::redirectLogin();
 		}
 	}
-
+	
+	/**
+	 * Setup common template variables.
+	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
+	 */
+	function setupTemplate($subclass = false) {
+		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign('pageHierarchy',
+			$subclass ? array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, 'subscriptionManager'), 'subscriptionManager.subscriptionManagement'))
+				: array(array(Request::url(null, 'user'), 'navigation.user'))
+		);
+	}
 }
 
 ?>

@@ -87,7 +87,7 @@ function confirmAndPrompt(userId) {
 <p><a href="{url path="all"}" class="action">{translate key="manager.people.allUsers"}</a></p>
 {/if}
 
-<form name="people" action="{url op="email"}" method="post">
+<form name="people" action="{url page="user" op="email"}" method="post">
 <table width="100%" class="listing">
 	<tr>
 		<td colspan="5" class="headseparator">&nbsp;</td>
@@ -110,7 +110,7 @@ function confirmAndPrompt(userId) {
 		<td>{$user->getFullName()|escape}</td>
 		<td class="nowrap">
 			{assign var=emailString value="`$user->getFullName()` <`$user->getEmail()`>"}
-			{url|assign:"url" op="email" to=$emailString|to_array}
+			{url|assign:"url" page="user" op="email" to=$emailString|to_array}
 			{$user->getEmail()|truncate:20:"..."|escape}&nbsp;{icon name="mail" url=$url}
 		</td>
 		<td align="right" class="nowrap">

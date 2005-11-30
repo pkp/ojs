@@ -50,11 +50,11 @@
 {iterate from=users item=user}
 {assign var="userid" value=$user->getUserId()}
 <tr valign="top">
-	<td><a class="action" href="{url op="userProfile" path=$userid}">{$user->getUsername()}</a></td>
+	<td>{if $isJournalManager}<a class="action" href="{url op="userProfile" path=$userid}">{/if}{$user->getUsername()}{if $isJournalManager}</a>{/if}</td>
 	<td>{$user->getFullName(true)|escape}</td>
 	<td class="nowrap">
 		{assign var=emailString value="`$user->getFullName()` <`$user->getEmail()`>"}
-		{url|assign:"url" op="email" to=$emailString|to_array}
+		{url|assign:"url" page="user" op="email" to=$emailString|to_array}
 		{$user->getEmail()|truncate:20:"..."|escape}&nbsp;{icon name="mail" url=$url}
 	</td>
 	<td align="right" class="nowrap">

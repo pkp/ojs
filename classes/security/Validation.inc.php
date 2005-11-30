@@ -340,6 +340,15 @@ class Validation {
 	}
 
 	/**
+	 * Shortcut for checking authorization as subscription manager.
+	 * @param $journalId int
+	 * @return boolean
+	 */
+	function isSubscriptionManager($journalId = -1) {
+		return Validation::isAuthorized(ROLE_ID_SUBSCRIPTION_MANAGER, $journalId);
+	}
+	
+	/**
 	 * Check whether a user is allowed to administer another user.
 	 * @param $journalId int
 	 * @param $userId int

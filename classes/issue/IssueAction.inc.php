@@ -79,7 +79,8 @@ class IssueAction {
 				ROLE_ID_SECTION_EDITOR,
 				ROLE_ID_LAYOUT_EDITOR,
 				ROLE_ID_COPYEDITOR,
-				ROLE_ID_PROOFREADER
+				ROLE_ID_PROOFREADER,
+				ROLE_ID_SUBSCRIPTION_MANAGER
 			);
 			$roles = &$roleDao->getRolesByUserId($user->getUserId(), $journal->getJournalId());
 			foreach ($roles as $role) {

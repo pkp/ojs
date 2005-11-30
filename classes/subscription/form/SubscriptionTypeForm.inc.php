@@ -48,7 +48,7 @@ class SubscriptionTypeForm extends Form {
 		$this->typeId = isset($typeId) ? (int) $typeId : null;
 		$journal = &Request::getJournal();
 
-		parent::Form('manager/subscription/subscriptionTypeForm.tpl');
+		parent::Form('subscription/subscriptionTypeForm.tpl');
 	
 		// Type name is provided
 		$this->addCheck(new FormValidator($this, 'typeName', 'required', 'manager.subscriptionTypes.form.typeNameRequired'));

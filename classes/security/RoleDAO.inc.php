@@ -374,6 +374,8 @@ class RoleDAO extends DAO {
 				return 'user.role.author' . ($plural ? 's' : '');
 			case ROLE_ID_READER:
 				return 'user.role.reader' . ($plural ? 's' : '');
+			case ROLE_ID_SUBSCRIPTION_MANAGER:
+				return 'user.role.subscriptionManager' . ($plural ? 's' : '');
 			default:
 				return '';
 		}
@@ -406,6 +408,8 @@ class RoleDAO extends DAO {
 				return 'author';
 			case ROLE_ID_READER:
 				return 'reader';
+			case ROLE_ID_SUBSCRIPTION_MANAGER:
+				return 'subscriptionManager';
 			default:
 				return '';
 		}
@@ -438,6 +442,8 @@ class RoleDAO extends DAO {
 				return ROLE_ID_AUTHOR;
 			case 'reader':
 				return ROLE_ID_READER;
+			case 'subscriptionManager':
+				return ROLE_ID_SUBSCRIPTION_MANAGER;
 			default:
 				return null;
 		}

@@ -455,6 +455,7 @@
 	<message key="user.role.proofreader">Proofreader</message>
 	<message key="user.role.author">Author</message>
 	<message key="user.role.reader">Reader</message>
+	<message key="user.role.subscriptionManager">Subscription Manager</message>
 	<message key="user.role.siteAdmins">Site Administrators</message>
 	<message key="user.role.managers">Journal Managers</message>
 	<message key="user.role.editors">Editors</message>
@@ -465,6 +466,7 @@
 	<message key="user.role.proofreaders">Proofreaders</message>
 	<message key="user.role.authors">Authors</message>
 	<message key="user.role.readers">Readers</message>
+	<message key="user.role.subscriptionManagers">Subscription Managers</message>
 	
 	<!-- Common Issue Terms -->
 	<message key="issue.issue">Issue</message>
@@ -705,6 +707,8 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="admin.journals.form.importPathRequired">The import path is required.</message>
 	<message key="admin.journals.importErrors">Importing failed to complete successfully</message>
 	
+	<!-- Subscription Management -->
+	<message key="subscriptionManager.subscriptionManagement">Subscription Management</message>
 	
 	<!-- Journal Management -->
 	<message key="manager.journalManagement">Journal Management</message>

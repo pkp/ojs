@@ -3,10 +3,10 @@
 /**
  * SubscriptionForm.inc.php
  *
- * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package manager.form
+ * @package subscription.form
  *
  * Form for journal managers to create/edit subscriptions.
  *
@@ -30,7 +30,7 @@ class SubscriptionForm extends Form {
 		$this->userId = isset($userId) ? (int) $userId : null;
 		$journal = &Request::getJournal();
 
-		parent::Form('manager/subscription/subscriptionForm.tpl');
+		parent::Form('subscription/subscriptionForm.tpl');
 	
 		// User is provided and valid
 		$this->addCheck(new FormValidator($this, 'userId', 'required', 'manager.subscriptions.form.userIdRequired'));

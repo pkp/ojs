@@ -25,6 +25,7 @@ define('ROLE_ID_COPYEDITOR',		0x00002000);
 define('ROLE_ID_PROOFREADER',		0x00003000);
 define('ROLE_ID_AUTHOR',		0x00010000);
 define('ROLE_ID_READER',		0x00100000);
+define('ROLE_ID_SUBSCRIPTION_MANAGER',	0x00200000);
 
 class Role extends DataObject {
 

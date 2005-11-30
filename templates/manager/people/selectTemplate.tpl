@@ -58,7 +58,7 @@ function submitForm(key) {
 	<td width="15%" align="right">{translate key="common.action"}</td>
 </tr>
 <tr><td colspan="5" class="headseparator">&nbsp;</td></tr>
-<form action="{url op="email"}" name="submit" method="post">
+<form action="{url page="user" op="email"}" name="submit" method="post">
 <input type="hidden" name="usePostedAddresses" value="1"/>
 <input type="hidden" name="template" value=""/>
 <input type="hidden" name="locale" value="{$locale|escape}"/>
