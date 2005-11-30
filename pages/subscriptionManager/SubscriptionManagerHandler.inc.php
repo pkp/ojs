@@ -362,7 +362,8 @@ class SubscriptionManagerHandler extends Handler {
 	 */
 	function validate() {
 		parent::validate();
-		if (!Validation::isSubscriptionManager()) {
+		$journal =& Request::getJournal();
+		if (!$journal || !Validation::isSubscriptionManager()) {
 			Validation::redirectLogin();
 		}
 	}
