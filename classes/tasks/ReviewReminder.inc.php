@@ -33,7 +33,7 @@ class ReviewReminder extends ScheduledTask {
 
 		$reviewerAccessKeysEnabled = $journal->getSetting('reviewerAccessKeysEnabled');
 
-		$email = &new ArticleMailTemplate($article, $reviewerAccessKeysEnabled?'REVIEW_REMIND_AUTO_ONECLICK':'REVIEW_REMIND_AUTO');
+		$email = &new ArticleMailTemplate($article, $reviewerAccessKeysEnabled?'REVIEW_REMIND_AUTO_ONECLICK':'REVIEW_REMIND_AUTO', null, false, $journal);
 		$email->setJournal($journal);
 		$email->setFrom($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
 		$email->addRecipient($reviewer->getEmail(), $reviewer->getFullName());
@@ -100,24 +100,20 @@ class ReviewReminder extends ScheduledTask {
 			// are initialized by this point.
 			$shouldRemind = false;
 			if ($inviteReminderEnabled==1 && $reviewAssignment->getDateConfirmed() == null) {
-				if ($reviewAssignment->getDateReminded() != null) {
-					$checkDate = strtotime($reviewAssignment->getDateReminded());
-				} else {
-					$checkDate = strtotime($reviewAssignment->getDateNotified());
-				}
+				$checkDate = strtotime($reviewAssignment->getDateNotified());
 				if (time() - $checkDate > 60 * 60 * 24 * $inviteReminderDays) {
 					$shouldRemind = true;
 				}
 			}
 			if ($submitReminderEnabled==1 && $reviewAssignment->getDateDue() != null) {
-				if ($reviewAssignment->getDateReminded() != null) {
-					$remindedDate = strtotime($reviewAssignment->getDateReminded());
-				}
-				$dueDate = strtotime($reviewAssignment->getDateDue());
-				$checkDate = isset($remindedDate)?max($remindedDate, $dueDate):$dueDate;
+				$checkDate = strtotime($reviewAssignment->getDateDue());
 				if (time() - $checkDate > 60 * 60 * 24 * $submitReminderDays) {
 					$shouldRemind = true;
 				}
+			}
+
+			if ($reviewAssignment->getDateReminded() !== null) {
+				$shouldRemind = false;
 			}
 
 			if ($shouldRemind) $this->sendReminder ($reviewAssignment, $article, $journal);

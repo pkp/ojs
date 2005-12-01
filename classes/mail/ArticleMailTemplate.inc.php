@@ -37,12 +37,14 @@ class ArticleMailTemplate extends MailTemplate {
 	/**
 	 * Constructor.
 	 * @param $article object
-	 * @param $emailType int
-	 * @param $locale string
+	 * @param $emailType int optional
+	 * @param $locale string optional
+	 * @param $enableAttachments boolean optional
+	 * @param $journal object optional
 	 * @see MailTemplate::MailTemplate()
 	 */
-	function ArticleMailTemplate($article, $emailKey = null, $locale = null, $enableAttachments = false) {
-		parent::MailTemplate($emailKey, $locale, $enableAttachments);
+	function ArticleMailTemplate($article, $emailKey = null, $locale = null, $enableAttachments = false, $journal = null) {
+		parent::MailTemplate($emailKey, $locale, $enableAttachments, $journal);
 		$this->article = $article;
 	}
 

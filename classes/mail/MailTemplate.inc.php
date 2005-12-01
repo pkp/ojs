@@ -47,15 +47,18 @@ class MailTemplate extends Mail {
 	 * Constructor.
 	 * @param $emailKey string unique identifier for the template
 	 * @param $locale string locale of the template
+	 * @param $enableAttachments boolean optional Whether or not to enable article attachments in the template
+	 * @param $journal object optional The journal this message relates to
 	 */
-	function MailTemplate($emailKey = null, $locale = null, $enableAttachments = null) {
+	function MailTemplate($emailKey = null, $locale = null, $enableAttachments = null, $journal = null) {
 		$this->emailKey = isset($emailKey) ? $emailKey : null;
 
 		
 		// Use current user's locale if none specified
 		$this->locale = isset($locale) ? $locale : Locale::getLocale();
 		
-		$journal = &Request::getJournal();
+		// If a journal wasn't specified, use the current request.
+		if ($journal === null) $journal = &Request::getJournal();
 		
 		if (isset($this->emailKey)) {
 			$emailTemplateDao = &DAORegistry::getDAO('EmailTemplateDAO');
