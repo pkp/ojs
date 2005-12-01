@@ -282,7 +282,7 @@ class NativeExportDom {
 
 		XMLWriter::createChildWithText($doc, $root, 'affiliation', $author->getAffiliation(), false);
 		XMLWriter::createChildWithText($doc, $root, 'email', $author->getEmail(), false);
-		XMLWriter::createChildWithText($doc, $root, 'biography', $author->getBiography(), false);
+		XMLWriter::createChildWithText($doc, $root, 'biography', strip_tags($author->getBiography()), false);
 
 		return $root;
 	}

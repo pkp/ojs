@@ -159,7 +159,7 @@ class ArticleSearchIndex {
 			array_push($authorText, $author->getMiddleName());
 			array_push($authorText, $author->getLastName());
 			array_push($authorText, $author->getAffiliation());
-			array_push($authorText, $author->getBiography());
+			array_push($authorText, strip_tags($author->getBiography()));
 		}
 		
 		// Update search index

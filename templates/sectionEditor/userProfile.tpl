@@ -62,7 +62,7 @@
 </tr>
 <tr valign="top">
 	<td class="label">{translate key="user.biography"}:</td>
-	<td class="value">{$user->getBiography()|escape|nl2br}</td>
+	<td class="value">{$user->getBiography()|strip_unsafe_html|nl2br}</td>
 </tr>
 {if $profileLocalesEnabled}
 <tr valign="top">

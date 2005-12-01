@@ -33,7 +33,7 @@
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="user.biography"}</td>
-		<td class="value">{$author->getBiography()|escape|nl2br|default:"&mdash;"}</td>
+		<td class="value">{$author->getBiography()|strip_unsafe_html|nl2br|default:"&mdash;"}</td>
 	</tr>
 	{if $author->getPrimaryContact()}
 	<tr valign="top">

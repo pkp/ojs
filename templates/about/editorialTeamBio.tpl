@@ -70,7 +70,7 @@
 	{if $user->getAffiliation()}{$user->getAffiliation()|escape}{assign var=needsComma value=1}{/if}{if $country}{if $needsComma}, {/if}{$country|escape}{/if}
 </p>
 
-<p>{$user->getBiography()|escape|nl2br}</p>
+<p>{$user->getBiography()|nl2br|strip_unsafe_html}</p>
 
 <input type="button" onclick="window.close()" value="{translate key="common.close"}" class="button defaultButton" />
 

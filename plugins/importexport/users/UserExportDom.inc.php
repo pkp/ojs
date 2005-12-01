@@ -36,7 +36,7 @@ class UserExportDom {
 			XMLWriter::createChildWithText($doc, $userNode, 'phone', $user->getPhone(), false);
 			XMLWriter::createChildWithText($doc, $userNode, 'fax', $user->getFax(), false);
 			XMLWriter::createChildWithText($doc, $userNode, 'mailing_address', $user->getMailingAddress(), false);
-			XMLWriter::createChildWithText($doc, $userNode, 'biography', $user->getBiography(), false);
+			XMLWriter::createChildWithText($doc, $userNode, 'biography', strip_tags($user->getBiography()), false);
 
 			$roles = &$roleDao->getRolesByUserId($user->getUserId(), $journal->getJournalId());
 			foreach ($roles as $role) {
