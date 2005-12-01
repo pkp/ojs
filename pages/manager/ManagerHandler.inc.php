@@ -33,6 +33,52 @@ class ManagerHandler extends Handler {
 	}
 	
 	/**
+	 * Send an email to a user or group of users.
+	 */
+	function email($args) {
+		parent::validate();
+
+		ManagerHandler::setupTemplate(true);
+		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign('helpTopicId', 'journal.users.emailUsers');
+
+		$userDao = &DAORegistry::getDAO('UserDAO');
+
+		$site = &Request::getSite();
+		$journal = &Request::getJournal();
+		$user = &Request::getUser();
+
+		import('mail.MailTemplate');
+		$email = &new MailTemplate(Request::getUserVar('template'), Request::getUserVar('locale'));
+		
+		if (Request::getUserVar('send') && !$email->hasErrors()) {
+			$email->send();
+			Request::redirect(null, Request::getRequestedPage());
+		} else {
+			$email->assignParams(); // FIXME Forces default parameters to be assigned (should do this automatically in MailTemplate?)
+			if (!Request::getUserVar('continued')) {
+				if (($groupId = Request::getUserVar('toGroup')) != '') {
+					// Special case for emailing entire groups:
+					// Check for a group ID and add recipients.
+					$groupDao =& DAORegistry::getDAO('GroupDAO');
+					$group =& $groupDao->getGroup($groupId);
+					if ($group && $group->getJournalId() == $journal->getJournalId()) {
+						$groupMembershipDao =& DAORegistry::getDAO('GroupMembershipDAO');
+						$memberships =& $groupMembershipDao->getMemberships($group->getGroupId());
+						$memberships =& $memberships->toArray();
+						foreach ($memberships as $membership) {
+							$user =& $membership->getUser();
+							$email->addRecipient($user->getEmail(), $user->getFullName());
+						}
+					}
+				}
+				if (count($email->getRecipients())==0) $email->addRecipient($user->getEmail(), $user->getFullName());
+			}
+			$email->displayEditForm(Request::url(null, null, 'email'), array(), 'manager/people/email.tpl');
+		}
+	}
+
+	/**
 	 * Validate that user has permissions to manage the selected journal.
 	 * Redirects to user index page if not properly authenticated.
 	 */
@@ -190,11 +236,6 @@ class ManagerHandler extends Handler {
 	// E-mail Management
 	//
 	
-	function emails() {
-		import('pages.manager.EmailHandler');
-		EmailHandler::emails();
-	}
-	
 	function createEmail($args) {
 		import('pages.manager.EmailHandler');
 		EmailHandler::createEmail($args);
@@ -233,11 +274,6 @@ class ManagerHandler extends Handler {
 	function resetAllEmails() {
 		import('pages.manager.EmailHandler');
 		EmailHandler::resetAllEmails();
-	}
-	
-	function email($args) {
-		import('pages.manager.PeopleHandler');
-		PeopleHandler::email($args);
 	}
 	
 	function selectTemplate($args) {

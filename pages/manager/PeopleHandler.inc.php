@@ -511,37 +511,6 @@ class PeopleHandler extends ManagerHandler {
 	}
 	
 	/**
-	 * Send an email to a user or group of users.
-	 */
-	function email($args) {
-		parent::validate();
-
-		parent::setupTemplate(true);
-		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign('helpTopicId', 'journal.users.emailUsers');
-
-		$userDao = &DAORegistry::getDAO('UserDAO');
-
-		$site = &Request::getSite();
-		$journal = &Request::getJournal();
-		$user = &Request::getUser();
-
-		import('mail.MailTemplate');
-		$email = &new MailTemplate(Request::getUserVar('template'), Request::getUserVar('locale'));
-		
-		if (Request::getUserVar('send') && !$email->hasErrors()) {
-			$email->send();
-			Request::redirect(null, Request::getRequestedPage());
-		} else {
-			$email->assignParams(); // FIXME Forces default parameters to be assigned (should do this automatically in MailTemplate?)
-			if (!Request::getUserVar('continued')) {
-				if (count($email->getRecipients())==0) $email->addRecipient($user->getEmail(), $user->getFullName());
-			}
-			$email->displayEditForm(Request::url(null, null, 'email'), array(), 'manager/people/email.tpl');
-		}
-	}
-
-	/**
 	 * Select a template to send to a user or group of users.
 	 */
 	function selectTemplate($args) {
