@@ -69,6 +69,15 @@ function moveAuthor(dir, authorIndex) {
 	<td width="80%" class="value"><input type="text" class="textField" name="authors[{$authorIndex}][affiliation]" id="authors-{$authorIndex}-affiliation" value="{$author.affiliation|escape}" size="30" maxlength="255"/></td>
 </tr>
 <tr valign="top">
+	<td width="20%" class="label">{fieldLabel name="authors-$authorIndex-country" key="common.country"}</td>
+	<td width="80%" class="value">
+		<select name="authors[{$authorIndex}][country]" id="authors-{$authorIndex}-country" class="selectMenu">
+			<option value=""></option>
+			{html_options options=$countries selected=$author.country}
+		</select>
+	</td>
+</tr>
+<tr valign="top">
 	<td width="20%" class="label">{fieldLabel name="authors-$authorIndex-email" required="true" key="user.email"}</td>
 	<td width="80%" class="value"><input type="text" class="textField" name="authors[{$authorIndex}][email]" id="authors-{$authorIndex}-email" value="{$author.email|escape}" size="30" maxlength="90" /></td>
 </tr>
@@ -111,6 +120,15 @@ function moveAuthor(dir, authorIndex) {
 <tr valign="top">
 	<td width="20%" class="label">{fieldLabel name="authors-0-affiliation" key="user.affiliation"}</td>
 	<td width="80%" class="value"><input type="text" class="textField" name="authors[0][affiliation]" id="authors-0-affiliation" size="30" maxlength="255" /></td>
+</tr>
+<tr valign="top">
+	<td width="20%" class="label">{fieldLabel name="authors-0-country" key="common.country"}</td>
+	<td width="80%" class="value">
+		<select name="authors[0][country]" id="authors-0-country" class="selectMenu">
+			<option value=""></option>
+			{html_options options=$countries}
+		</select>
+	</td>
 </tr>
 <tr valign="top">
 	<td width="20%" class="label">{fieldLabel name="authors-0-email" required="true" key="user.email"}</td>

@@ -753,8 +753,17 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="manager.statistics.reports.type.reviewer">Reviewer Report</message>
 	<message key="manager.statistics.reports.type.section">Section Report</message>
 	<message key="manager.statistics.reports.generate">Generate Report</message>
+	<message key="manager.statistics.reports.csvNote"><![CDATA[<strong>Note:</strong> Reports are generated in CSV format and should be viewed using a spreadsheet application.]]></message>
 	<message key="manager.statistics.reports.status">Status (Accepted, declined, other)</message>
 	<message key="manager.statistics.reports.dateDecided">Date Decided</message>
+	<message key="manager.statistics.reports.author">Author #{$num}</message>
+	<message key="manager.statistics.reports.affiliation">Affiliation #{$num}</message>
+	<message key="manager.statistics.reports.country">Country #{$num}</message>
+	<message key="manager.statistics.reports.reviewer">Reviewer #{$num}</message>
+	<message key="manager.statistics.reports.score">Score #{$num}</message>
+	<message key="manager.statistics.reports.recommendation">Recommendation #{$num}</message>
+	<message key="manager.statistics.reports.daysToDecision">Days To Decision</message>
+	<message key="manager.statistics.reports.daysToPublication">Days To Publication</message>
 
 	<!-- Plugin Management -->
 	<message key="manager.plugins.pluginManagement">Plugin Management</message>
@@ -2292,7 +2301,7 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="rt.metadata.dublinCore.rights">Rights</message>
 
 	<message key="rt.metadata.pkp.title">Title of document</message>
-	<message key="rt.metadata.pkp.primaryAuthor">Author's name, affiliation</message>
+	<message key="rt.metadata.pkp.primaryAuthor">Author's name, affiliation, country</message>
 	<message key="rt.metadata.pkp.discipline">Discipline(s)</message>
 	<message key="rt.metadata.pkp.subject">Subject(s)</message>
 	<message key="rt.metadata.pkp.subjectClass">Subject classification</message>

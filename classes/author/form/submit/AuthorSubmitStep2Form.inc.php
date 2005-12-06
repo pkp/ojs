@@ -69,6 +69,7 @@ class AuthorSubmitStep2Form extends AuthorSubmitForm {
 						'middleName' => $authors[$i]->getMiddleName(),
 						'lastName' => $authors[$i]->getLastName(),
 						'affiliation' => $authors[$i]->getAffiliation(),
+						'country' => $authors[$i]->getCountry(),
 						'email' => $authors[$i]->getEmail(),
 						'biography' => $authors[$i]->getBiography()
 					)
@@ -112,7 +113,20 @@ class AuthorSubmitStep2Form extends AuthorSubmitForm {
 		$sectionDao = &DAORegistry::getDAO('SectionDAO');
 		$this->_data['section'] = &$sectionDao->getSection($this->article->getSectionId());
 	}
-	
+
+	/**
+	 * Display the form.
+	 */
+	function display() {
+		$countryDao =& DAORegistry::getDAO('CountryDAO');
+		$countries =& $countryDao->getCountries();
+
+		$templateMgr =& TemplateManager::getManager();
+		$templateMgr->assign_by_ref('countries', $countries);
+
+		parent::display();
+	}
+
 	/**
 	 * Save changes to article.
 	 * @return int the article ID
@@ -162,6 +176,7 @@ class AuthorSubmitStep2Form extends AuthorSubmitForm {
 				$author->setMiddleName($authors[$i]['middleName']);
 				$author->setLastName($authors[$i]['lastName']);
 				$author->setAffiliation($authors[$i]['affiliation']);
+				$author->setCountry($authors[$i]['country']);
 				$author->setEmail($authors[$i]['email']);
 				$author->setBiography($authors[$i]['biography']);
 				$author->setPrimaryContact($this->getData('primaryContact') == $i ? 1 : 0);

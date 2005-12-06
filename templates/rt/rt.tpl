@@ -53,22 +53,22 @@
 	<span class="rtSubtitle">{if $section && $section->getIdentifyType()}{translate key="rt.forThis" identifyType=$section->getIdentifyType()|escape}{else}{translate key="rt.peerReviewed"}{/if}</span>
 	<ul>
 		{if $galley && !$section->getAbstractsDisabled()}<li><a href="{url page="article" op="view" path=$articleId}" target="_parent">{translate key="article.abstract"}</a></li>{/if}
-		{if $journalRt->getAuthorBio()}<li><a href="javascript:openRTWindow('{url op="bio" path=$articleId|to_array:$galleyId}');">{translate key="rt.authorBio"}</a></li>{/if}
-		{if $journalRt->getCaptureCite()}<li><a href="javascript:openRTWindow('{url op="captureCite" path=$articleId|to_array:$galleyId}');">{translate key="rt.captureCitation"}</a></li>{/if}
-		{if $journalRt->getViewMetadata()}<li><a href="javascript:openRTWindow('{url op="metadata" path=$articleId|to_array:$galleyId}');">{translate key="rt.viewMetadata"}</a></li>{/if}
-		{if $journalRt->getSupplementaryFiles() && $article->getSuppFiles()}<li><a href="javascript:openRTWindow('{url op="suppFiles" path=$articleId|to_array:$galleyId}');">{translate key="rt.suppFiles"}</a></li>{/if}
-		{if $journalRt->getPrinterFriendly()}<li><a href="{if !$galley || $galley->isHtmlGalley()}javascript:openRTWindow('{url op="printerFriendly" path=$articleId|to_array:$galleyId}');{else}{url page="article" op="download" path=$articleId|to_array:$galley->getFileId()}{/if}">{translate key="rt.printVersion"}</a></li>{/if}
+		{if $journalRt->getAuthorBio()}<li><a href="javascript:openRTWindow('{url page="rt" op="bio" path=$articleId|to_array:$galleyId}');">{translate key="rt.authorBio"}</a></li>{/if}
+		{if $journalRt->getCaptureCite()}<li><a href="javascript:openRTWindow('{url page="rt" op="captureCite" path=$articleId|to_array:$galleyId}');">{translate key="rt.captureCitation"}</a></li>{/if}
+		{if $journalRt->getViewMetadata()}<li><a href="javascript:openRTWindow('{url page="rt" op="metadata" path=$articleId|to_array:$galleyId}');">{translate key="rt.viewMetadata"}</a></li>{/if}
+		{if $journalRt->getSupplementaryFiles() && $article->getSuppFiles()}<li><a href="javascript:openRTWindow('{url page="rt" op="suppFiles" path=$articleId|to_array:$galleyId}');">{translate key="rt.suppFiles"}</a></li>{/if}
+		{if $journalRt->getPrinterFriendly()}<li><a href="{if !$galley || $galley->isHtmlGalley()}javascript:openRTWindow('{url page="rt" op="printerFriendly" path=$articleId|to_array:$galleyId}');{else}{url page="article" op="download" path=$articleId|to_array:$galley->getFileId()}{/if}">{translate key="rt.printVersion"}</a></li>{/if}
 		{if $journalRt->getDefineTerms()}
 			{foreach from=$version->getContexts() item=context}
 				{if $context->getDefineTerms()}
-					<li><a href="javascript:openRTWindow('{url op="context" path=$articleId|to_array:$galleyId:$context->getContextId()}');">{$context->getTitle()|escape}</a></li>
+					<li><a href="javascript:openRTWindow('{url page="rt" op="context" path=$articleId|to_array:$galleyId:$context->getContextId()}');">{$context->getTitle()|escape}</a></li>
 				{/if}
 			{/foreach}
 		{/if}
 		{if $journalRt->getEmailOthers()}
 			<li>
 				{if $isUserLoggedIn}
-					<a href="javascript:openRTWindow('{url op="emailColleague" path=$articleId|to_array:$galleyId}');">{translate key="rt.colleague"}</a>
+					<a href="javascript:openRTWindow('{url page="rt" op="emailColleague" path=$articleId|to_array:$galleyId}');">{translate key="rt.colleague"}</a>
 				{else}
 					{translate key="rt.colleague"}&nbsp;*
 					{assign var=needsLoginNote value=1}
@@ -84,7 +84,7 @@
 		{if $journalRt->getEmailAuthor()}
 			<li>
 				{if $isUserLoggedIn}
-					<a href="javascript:openRTWindow('{url op="emailAuthor" path=$articleId|to_array:$galleyId}');">{translate key="rt.emailAuthor"}</a>
+					<a href="javascript:openRTWindow('{url page="rt" op="emailAuthor" path=$articleId|to_array:$galleyId}');">{translate key="rt.emailAuthor"}</a>
 				{else}
 					{translate key="rt.emailAuthor"}&nbsp;*
 					{assign var=needsLoginNote value=1}
@@ -101,7 +101,7 @@
 	<ul>
 		{foreach from=$version->getContexts() item=context}
 			{if !$context->getDefineTerms()}
-				<li><a href="javascript:openRTWindow('{url op="context" path=$articleId|to_array:$galleyId:$context->getContextId()}');">{$context->getTitle()|escape}</a></li>
+				<li><a href="javascript:openRTWindow('{url page="rt" op="context" path=$articleId|to_array:$galleyId:$context->getContextId()}');">{$context->getTitle()|escape}</a></li>
 			{/if}
 		{/foreach}
 	</ul>

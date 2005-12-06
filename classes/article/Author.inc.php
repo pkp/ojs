@@ -134,6 +134,35 @@ class Author extends DataObject {
 	}
 	
 	/**
+	 * Get country code
+	 * @return string
+	 */
+	function getCountry() {
+		return $this->getData('country');
+	}
+
+	/**
+	 * Get localized country
+	 * @return string
+	 */
+	function getCountryLocalized() {
+		$countryDao =& DAORegistry::getDAO('CountryDAO');
+		$country = $this->getCountry();
+		if ($country) {
+			return $countryDao->getCountry($country);
+		}
+		return null;
+	}
+	
+	/**
+	 * Set country code.
+	 * @param $country string
+	 */
+	function setCountry($country) {
+		return $this->setData('country', $country);
+	}
+	
+	/**
 	 * Get email address.
 	 * @return string
 	 */

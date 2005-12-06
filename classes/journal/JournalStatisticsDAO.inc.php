@@ -307,75 +307,29 @@ class JournalStatisticsDAO extends DAO {
 	 * Generate a report of the given $reportType including the supplied
 	 * $fields between the given dates.
 	 * @param $journalId int The journal to report on
-	 * @param $reportType int Type of report (see REPORT_TYPE_... constants)
-	 * @param $fields array List of fields to include
 	 * @param $dateStart string The start date
 	 * @param $dateEnd string The end date
 	 */
-	function &getReport($journalId, $reportType, $fields, $dateStart = null, $dateEnd = null) {
-		$fieldList = array();
-		$orderColumns = array();
-
-		switch ($reportType) {
-			case REPORT_TYPE_JOURNAL:
-				array_push($orderColumns, 'a.article_id');
-				break;
-			case REPORT_TYPE_EDITOR:
-				array_push($orderColumns, 'ee.editor_id');
-				break;
-			case REPORT_TYPE_REVIEWER:
-				array_push($orderColumns, 'a.article_id');
-				// FIXME: This report needs definition.
-				break;
-			case REPORT_TYPE_SECTION:
-				array_push($orderColumns, 's.title');
-				array_push($orderColumns, 's.section_id');
-				break;
-		}
-
-		foreach ($fields as $field) switch ($field) {
-			case 'authors':
-			case 'affiliations':
-			case 'reviewers':
-			case 'dateDecided':
-				// Don't do anything here.
-				break;
-			case 'status':
-				array_push($fieldList, 'a.status AS status');
-				break;
-			case 'title':
-				array_push($fieldList, 'a.title AS submission_title');
-				break;
-			case 'section':
-				array_push($fieldList, 's.title AS section_title');
-				array_push($fieldList, 's.title_alt1 AS section_title_alt1');
-				array_push($fieldList, 's.title_alt2 AS section_title_alt2');
-				break;
-			case 'dateSubmitted':
-				array_push($fieldList, 'a.date_submitted AS date_submitted');
-				break;
-			case 'editor':
-				array_push($fieldList, 'eu.last_name AS editor_last_name');
-				array_push($fieldList, 'eu.middle_name AS editor_middle_name');
-				array_push($fieldList, 'eu.first_name AS editor_first_name');
-				break;
-		}
-
+	function &getJournalReport($journalId, $dateStart = null, $dateEnd = null) {
 		$result = &$this->retrieve(
-			'SELECT DISTINCT a.article_id' . (!empty($fieldList)?', ':'') . implode(', ', $fieldList) . ' ' .
+			'SELECT a.article_id AS article_id, a.title AS article_title, ' .
+			'pa.pub_id AS pub_id, pa.date_published AS date_published, ' .
+			's.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, ' .
+			'a.date_submitted AS date_submitted, a.status AS status, ' .
+			'ee.editor_id AS editor_id ' .
 			'FROM ' .
 			'articles a ' .
 			'LEFT JOIN sections s ON (s.section_id = a.section_id) ' .
 			'LEFT JOIN edit_assignments ee ON (ee.article_id = a.article_id) ' .
-			'LEFT JOIN users eu ON (ee.editor_id = eu.user_id) ' .
+			'LEFT JOIN published_articles pa ON (a.article_id = pa.article_id) ' .
 			'WHERE a.journal_id = ? ' .
 			($dateStart !== null ? ' AND a.date_submitted >= ' . $this->datetimeToDB($dateStart) : '') .
 			($dateEnd !== null ? ' AND a.date_submitted <= ' . $this->datetimeToDB($dateEnd) : '') .
-			(!empty($orderColumns) ? ' ORDER BY ' . implode(', ', $orderColumns) : ''),
+			' ORDER BY a.date_submitted',
 			$journalId
 		);
 		import('journal.JournalReportIterator');
-		$report =& new JournalReportIterator($journalId, $result, $fields, $dateStart, $dateEnd);
+		$report =& new JournalReportIterator($journalId, $result, $dateStart, $dateEnd);
 		return $report;
 	}
 
@@ -423,7 +377,7 @@ class JournalStatisticsDAO extends DAO {
 	 */
 	function getMaxReviewerCount($journalId, $dateStart, $dateEnd) {
 		$result = &$this->retrieve(
-			'SELECT COUNT(DISTINCT r.reviewer_id) ' .
+			'SELECT COUNT(r.review_id) ' .
 			'FROM ' .
 			'articles a, ' .
 			'review_assignments r ' .

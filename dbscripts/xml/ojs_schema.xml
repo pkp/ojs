@@ -668,6 +668,7 @@
 			<NOTNULL/>
 		</field>
 		<field name="affiliation" type="C2" size="255"/>
+		<field name="country" type="C2" size="90"/>
 		<field name="email" type="C2" size="90">
 			<NOTNULL/>
 		</field>

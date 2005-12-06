@@ -17,9 +17,6 @@
 import('db.DBRowIterator');
 
 class JournalReportIterator extends DBRowIterator {
-	/** @var $fields Array of fields included in this report */
-	var $fields;
-
 	/** @var $locale Name of report's locale */
 	var $locale;
 
@@ -32,13 +29,19 @@ class JournalReportIterator extends DBRowIterator {
 	/** @var $authorDao object */
 	var $authorDao;
 
+	/** @var $userDao object */
+	var $userDao;
+
+	/** @var $countryDao object */
+	var $countryDao;
+
 	/** @var $authorSubmissionDao object */
 	var $authorSubmissionDao;
 
-	/** @var $maxAuthorCount int If authors or affiliations column is included, this is the most authors that can be expected for an article. */
+	/** @var $maxAuthorCount int The most authors that can be expected for an article. */
 	var $maxAuthorCount;
 
-	/** @var $maxReviewerCount int If reviewers column is included, this is the most reviewers that can be expected for a submission. */
+	/** @var $maxReviewerCount int The most reviewers that can be expected for a submission. */
 	var $maxReviewerCount;
 
 	/**
@@ -46,29 +49,20 @@ class JournalReportIterator extends DBRowIterator {
 	 * Initialize the JournalReportIterator
 	 * @param $journalId int ID of journal this report is generated on
 	 * @param $records object ADO record set
-	 * @param $fields array Set of fields included in this report
 	 */
-	function JournalReportIterator($journalId, &$records, &$fields, $dateStart, $dateEnd) {
-		parent::DBRowIterator($records);
-		$this->fields =& $fields;
-
+	function JournalReportIterator($journalId, &$records, $dateStart, $dateEnd) {
+		$this->authorDao =& DAORegistry::getDao('AuthorDAO');
+		$this->authorSubmissionDao =& DAORegistry::getDAO('AuthorSubmissionDAO');
+		$this->userDao =& DAORegistry::getDAO('UserDAO');
 		$this->journalStatisticsDao =& DAORegistry::getDAO('JournalStatisticsDAO');
+		$this->countryDao =& DAORegistry::getDAO('CountryDAO');
+
+		parent::DBRowIterator($records);
 
 		$this->altLocaleNum = Locale::isAlternateJournalLocale($journalId);
-
-		if ($this->hasField('authors') || $this->hasField('affiliations')) {
-			$this->authorDao =& DAORegistry::getDao('AuthorDAO');
-			$this->maxAuthorCount = $this->journalStatisticsDao->getMaxAuthorCount($journalId, $dateStart, $dateEnd);
-		}
-
-		if ($this->hasField('reviewers')) {
-			$this->reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
-			$this->maxReviewerCount = $this->journalStatisticsDao->getMaxReviewerCount($journalId, $dateStart, $dateEnd);
-		}
-
-		if ($this->hasField('status') || $this->hasField('dateDecided')) {
-			$this->authorSubmissionDao =& DAORegistry::getDAO('AuthorSubmissionDAO');
-		}
+		$this->maxAuthorCount = $this->journalStatisticsDao->getMaxAuthorCount($journalId, $dateStart, $dateEnd);
+		$this->reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
+		$this->maxReviewerCount = $this->journalStatisticsDao->getMaxReviewerCount($journalId, $dateStart, $dateEnd);
 	}
 
 	/**
@@ -80,80 +74,101 @@ class JournalReportIterator extends DBRowIterator {
 		if ($row == null) return $row;
 
 		$ret = array(
-			'submissionId' => $row['article_id']
+			'articleId' => $row['article_id']
 		);
 
-		if ($this->hasField('dateSubmitted'))
-			$ret['dateSubmitted'] = $row['date_submitted'];
+		$ret['dateSubmitted'] = $this->journalStatisticsDao->dateFromDB($row['date_submitted']);
+		$ret['title'] = $row['article_title'];
 
-		if ($this->hasField('title'))
-			$ret['title'] = $row['submission_title'];
-
-		// Localize the section title, if it was requested
-		if ($this->hasField('section')) {
-			$ret['section'] = null;
-			switch ($this->altLocaleNum) {
-				case 1: $ret['section'] = $row['section_title_alt1']; break;
-				case 2: $ret['section'] = $row['section_title_alt2']; break;
-			}
-			if (empty($ret['section'])) $ret['section'] = $row['section_title'];
+		$ret['section'] = null;
+		switch ($this->altLocaleNum) {
+			case 1: $ret['section'] = $row['section_title_alt1']; break;
+			case 2: $ret['section'] = $row['section_title_alt2']; break;
 		}
+		if (empty($ret['section'])) $ret['section'] = $row['section_title'];
 
 		// Author Names & Affiliations
-		$hasAuthors = $this->hasField('authors');
-		$hasAffiliations = $this->hasField('affiliations');
-		if ($hasAuthors || $hasAffiliations) {
-			if ($hasAuthors) $ret['authors'] = array_fill(0, $this->getMaxAuthors(), '');
-			if ($hasAffiliations) $ret['affiliations'] = array_fill(0, $this->getMaxAuthors(), '');
-			$authors =& $this->authorDao->getAuthorsByArticle($row['article_id']);
-			$authorIndex = 0;
-			foreach ($authors as $author) {
-				if ($hasAuthors) $ret['authors'][$authorIndex] = $author->getFullName();
-				if ($hasAffiliations) $ret['affiliations'][$authorIndex] = $author->getAffiliation();
-				$authorIndex++;
+		$ret['authors'] = array_fill(0, $this->getMaxAuthors(), '');
+		$ret['affiliations'] = array_fill(0, $this->getMaxAuthors(), '');
+		$ret['countries'] = array_fill(0, $this->getMaxAuthors(), '');
+		$authors =& $this->authorDao->getAuthorsByArticle($row['article_id']);
+		$authorIndex = 0;
+		foreach ($authors as $author) {
+			$ret['authors'][$authorIndex] = $author->getFullName();
+			$ret['affiliations'][$authorIndex] = $author->getAffiliation();
+			
+			$country = $author->getCountry();
+			if (!empty($country)) {
+				$ret['countries'][$authorIndex] = $this->countryDao->getCountry($country);
 			}
+			$authorIndex++;
 		}
 
 		// Editor Names
-		if ($this->hasField('editor')) {
-			$lastName = $row['editor_last_name'];
-			$middleName = $row['editor_middle_name'];
-			$firstName = $row['editor_first_name'];
-			if (!empty($middleName)) {
-				$ret['editor'] = "$lastName, $firstName $middleName";
-			} elseif (!empty($firstName) && !empty($lastName)) {
-				$ret['editor'] = "$lastName, $firstName";
-			} else {
-				$ret['editor'] = '';
+		if (!empty($row['editor_id'])) {
+			$editor =& $this->userDao->getUser($row['editor_id']);
+			if ($editor) {
+				$ret['editor'] = $editor->getFullName();
 			}
+		} else {
+			$ret['editor'] = '';
 		}
 
 		// Reviewer Names
-		if ($this->hasField('reviewers')) {
-			$ret['reviewers'] = array_fill(0, $this->getMaxReviewers(), '');
-			$reviewAssignments =& $this->reviewAssignmentDao->getReviewAssignmentsByArticleId($row['article_id']);
-			$reviewerIndex = 0;
-			$reviewerIds = array();
-			foreach ($reviewAssignments as $reviewAssignment) {
-				$reviewerId = $reviewAssignment->getReviewerId();
-				if (!empty($reviewerId) && !in_array($reviewerId, $reviewerIds)) {
-					array_push($reviewerIds, $reviewerId);
-					$ret['reviewers'][$reviewerIndex] = $reviewAssignment->getReviewerFullName();
-					$reviewerIndex++;
-				}
+		$ret['reviewers'] = array_fill(0, $this->getMaxReviewers(), '');
+		$ret['scores'] = array_fill(0, $this->getMaxReviewers(), '');
+		$ret['recommendations'] = array_fill(0, $this->getMaxReviewers(), '');
+		$reviewAssignments =& $this->reviewAssignmentDao->getReviewAssignmentsByArticleId($row['article_id']);
+		$reviewerIndex = 0;
+		foreach ($reviewAssignments as $reviewAssignment) {
+			$reviewerId = $reviewAssignment->getReviewerId();
+			$ret['reviewers'][$reviewerIndex] = $reviewAssignment->getReviewerFullName();
+			$rating = $reviewAssignment->getQuality();
+			if ($rating != '') {
+				$ratingOptions =& $reviewAssignment->getReviewerRatingOptions();
+				$ret['scores'][$reviewerIndex] = Locale::translate($ratingOptions[$rating]);
+			}
+			$recommendation = $reviewAssignment->getRecommendation();
+			if ($recommendation != '') {
+				$recommendationOptions =& $reviewAssignment->getReviewerRecommendationOptions();
+				$ret['recommendations'][$reviewerIndex] = Locale::translate($recommendationOptions[$recommendation]);
+			}
+			$reviewerIndex++;
+		}
+
+		// Fetch the last editorial decision for this article.
+		$editorDecisions =& $this->authorSubmissionDao->getEditorDecisions($row['article_id']);
+		$lastDecision = array_pop($editorDecisions);
+
+		if ($lastDecision) {
+			import('submission.sectionEditor.SectionEditorSubmission');
+			$decisionOptions =& SectionEditorSubmission::getEditorDecisionOptions();
+			$ret['decision'] = Locale::translate($decisionOptions[$lastDecision['decision']]);
+			$ret['dateDecided'] = $lastDecision['dateDecided'];
+
+			$decisionTime = strtotime($lastDecision['dateDecided']);
+			$submitTime = strtotime($ret['dateSubmitted']);
+			$ret['daysToDecision'] = round(($decisionTime - $submitTime) / 3600 / 24);
+		} else {
+			$ret['decision'] = '';
+			$ret['daysToDecision'] = '';
+			$ret['dateDecided'] = '';
+		}
+
+		$ret['daysToPublication'] = '';
+		if ($row['pub_id']) {
+			$submitTime = strtotime($ret['dateSubmitted']);
+			$publishTime = strtotime($this->journalStatisticsDao->dateFromDB($row['date_published']));
+			if ($publishTime > $submitTime) {
+				// Imported documents can be published before
+				// they were submitted -- in this case, ignore
+				// this metric (as opposed to displaying
+				// negative numbers).
+				$ret['daysToPublication'] = round(($publishTime - $submitTime) / 3600 / 24);
 			}
 		}
 
-		if ($this->hasField('dateDecided')) {
-			// Fetch the last editorial decision for this article.
-			$editorDecisions =& $this->authorSubmissionDao->getEditorDecisions($row['article_id']);
-			$lastDecision = array_pop($editorDecisions);
-			$ret['dateDecided'] = ($lastDecision?$lastDecision['dateDecided']:'');
-		}
-
-		if ($this->hasField('status')) {
-			$ret['status'] = $row['status'];
-		}
+		$ret['status'] = $row['status'];
 
 		return $ret;
 	}
@@ -170,14 +185,6 @@ class JournalReportIterator extends DBRowIterator {
 
 	function _cleanup() {
 		parent::_cleanup();
-	}
-
-	/**
-	 * Return true iff this report contains the specified field
-	 */
-	function hasField($name) {
-		if ($this->fields !== null) return in_array($name, $this->fields);
-		return $this->fields;
 	}
 
 	/**

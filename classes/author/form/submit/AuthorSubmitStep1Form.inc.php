@@ -113,6 +113,7 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 			$author->setMiddleName($user->getMiddleName());
 			$author->setLastName($user->getLastName());
 			$author->setAffiliation($user->getAffiliation());
+			$author->setCountry($user->getCountry());
 			$author->setEmail($user->getEmail());
 			$author->setBiography($user->getBiography());
 			$author->setPrimaryContact(1);

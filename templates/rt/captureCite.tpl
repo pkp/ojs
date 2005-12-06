@@ -13,6 +13,12 @@
 
 {include file="rt/header.tpl"}
 
+{if $galleyId}
+	{url|assign:"articleUrl" page="article" op="view" path=$articleId|to_array:$galleyId}
+{else}
+	{url|assign:"articleUrl" page="article" op="view" path=$articleId}
+{/if}
+
 <h3>"{$article->getArticleTitle()|strip_unsafe_html}"</h3>
 
 {if $bibFormat == 'MLA'}
@@ -56,7 +62,7 @@
 	number = {{/literal}{$issue->getNumber()|escape}{literal}},
 	year = {{/literal}{$article->getDatePublished()|date_format:'%Y'}{literal}},
 {/literal}{assign var=issn value=$journal->getSetting('issn')|escape}{if $issn}{literal}	issn = {{/literal}{$issn}{literal}},{/literal}{/if}{literal}
-	url = {{/literal}{url page="article" op="view" path=$articleId|to_array:$galleyId}{literal}}
+	url = {{/literal}{$articleUrl}{literal}}
 }
 </pre>
 {/literal}
@@ -83,7 +89,7 @@
 	{$article->getDatePublished()|date_format:'%Y %b %e'}.
 	{$article->getArticleTitle()|strip_unsafe_html}.
 	<i>{$journal->getTitle()|escape}</i> [{translate key="rt.captureCite.online"}] {$issue->getVolume()|escape}:{$issue->getNumber()|escape}.
-	{translate key="rt.captureCite.available"} <a target="_new" href="{url page="article" op="view" path=$articleId|to_array:$galleyId}">{url|escape page="article" op="view" path=$articleId|to_array:$galleyId}</a>
+	{translate key="rt.captureCite.available"} <a target="_new" href="{$articleUrl}">{$articleUrl|escape}</a>
 {/if}
 
 <br />

@@ -38,7 +38,9 @@
 	<td>2.</td>
 	<td width="25%">{translate key="rt.metadata.dublinCore.primaryAuthor"}</td>
 	<td>{translate key="rt.metadata.pkp.primaryAuthor"}</td>
-	<td>{$author->getFullName()|escape}{if $author->getAffiliation()}; {$author->getAffiliation()|escape}{/if}</td>
+	<td>
+		{$author->getFullName()|escape}{if $author->getAffiliation()}; {$author->getAffiliation()|escape}{/if}{if $author->getCountry()}; {$author->getCountryLocalized()|escape}{/if}
+		</td>
 </tr>
 {/foreach}
 <tr><td colspan="4" class="separator">&nbsp;</td></tr>

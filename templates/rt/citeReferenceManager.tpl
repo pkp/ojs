@@ -9,6 +9,11 @@
  * $Id$
  *}
 
+{if $galleyId}
+	{url|assign:"articleUrl" page="article" op="view" path=$articleId|to_array:$galleyId}
+{else}
+	{url|assign:"articleUrl" page="article" op="view" path=$articleId}
+{/if}
 	TY  - JOUR
 {foreach from=$article->getAuthors() item=author}
 	AU  - {$author->getFullName(true)|escape}
@@ -19,5 +24,5 @@
 	Y2  - {$article->getDatePublished()|date_format:"%Y"}
 	KW  - {$article->getSubject()|replace:';':','|escape}
 	N2  - {$article->getArticleAbstract()|escape}
-	UR  - {url page="article" op="view" path=$articleId|to_array:$galleyId}
+	UR  - {$articleUrl}
 	

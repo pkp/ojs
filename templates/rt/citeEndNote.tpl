@@ -9,6 +9,11 @@
  * $Id$
  *}
 
+{if $galleyId}
+	{url|assign:"articleUrl" page="article" op="view" path=$articleId|to_array:$galleyId}
+{else}
+	{url|assign:"articleUrl" page="article" op="view" path=$articleId}
+{/if}
 {foreach from=$article->getAuthors() item=author}
 	%A {$author->getFullName(true)|escape}
 {/foreach}
@@ -19,5 +24,5 @@
 	%! {$article->getArticleTitle()|strip_tags}
 	%K {$article->getSubject()|escape}
 	%X {$article->getArticleAbstract()|escape}
-	%U {url page="article" op="view" path=$articleId|to_array:$galleyId}
+	%U {$articleUrl}
 	

@@ -29,17 +29,7 @@
 	</td>
 </table>
 
-<input type="checkbox" name="fields[]" value="authors" id="authors" />&nbsp;<label for="authors">{translate key="article.authors"}</label><br />
-<input type="checkbox" name="fields[]" value="affiliations" id="affiliations" />&nbsp;<label for="affiliations">{translate key="user.affiliations"}</label><br />
-<input type="checkbox" name="fields[]" value="title" id="title" />&nbsp;<label for="title">{translate key="article.title"}</label><br />
-<input type="checkbox" name="fields[]" value="section" id="section" />&nbsp;<label for="section">{translate key="section.section"}</label><br />
-<input type="checkbox" name="fields[]" value="dateSubmitted" id="dateSubmitted" />&nbsp;<label for="dateSubmitted">{translate key="common.dateSubmitted"}</label><br />
-<input type="checkbox" name="fields[]" value="editor" id="editor" />&nbsp;<label for="editor">{translate key="user.role.editor"}</label><br />
-<input type="checkbox" name="fields[]" value="reviewers" id="reviewers" />&nbsp;<label for="reviewers">{translate key="user.role.reviewers"}</label><br />
-<input type="checkbox" name="fields[]" value="status" id="status" />&nbsp;<label for="status">{translate key="manager.statistics.reports.status"}</label><br />
-<input type="checkbox" name="fields[]" value="dateDecided" id="dateDecided" />&nbsp;<label for="dateDecided">{translate key="manager.statistics.reports.dateDecided"}</label><br />
-<br />
-
 <input type="submit" class="button defaultButton" value="{translate key="manager.statistics.reports.generate"}"/>
+<p>{translate key="manager.statistics.reports.csvNote"}</p>
 
 </form>

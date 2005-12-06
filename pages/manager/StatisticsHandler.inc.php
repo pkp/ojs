@@ -64,6 +64,11 @@ class StatisticsHandler extends ManagerHandler {
 		$templateMgr->display('manager/statistics/index.tpl');
 	}
 
+	function csvEscape($value) {
+		$value = str_replace('"', '""', $value);
+		return '"' . $value . '"';
+	}
+
 	function reportGenerator($args) {
 		parent::validate();
 		$journal =& Request::getJournal();
@@ -75,20 +80,68 @@ class StatisticsHandler extends ManagerHandler {
 
 		$journalStatisticsDao =& DAORegistry::getDAO('JournalStatisticsDAO');
 
-		$fields = Request::getUserVar('fields');
-		if (!is_array($fields)) {
-			if (empty($fields)) $fields = array();
-			else $fields = array($fields);
-		}
-
-		$report =& $journalStatisticsDao->getReport($journal->getJournalId(), Request::getUserVar('reportType'), $fields, $fromDate, $toDate);
+		$report =& $journalStatisticsDao->getJournalReport($journal->getJournalId(), $fromDate, $toDate);
 
 		$templateMgr =& TemplateManager::getManager();
-		header('content-disposition: attachment; filename=report.csv');
 		header('content-type: text/comma-separated-values');
-		$templateMgr->assign_by_ref('report', $report);
-		$templateMgr->assign_by_ref('fields', $fields);
-		$templateMgr->display('manager/statistics/report.tpl');
+		header('content-disposition: attachment; filename=report.csv');
+
+		$separator = ',';
+
+		// Display the heading row.
+		echo Locale::translate('article.submissionId');
+		for ($i=0; $i<$report->getMaxAuthors(); $i++) {
+			echo $separator . Locale::translate('manager.statistics.reports.author', array('num' => $i+1));
+			echo $separator . Locale::translate('manager.statistics.reports.affiliation', array('num' => $i+1));
+			echo $separator . Locale::translate('manager.statistics.reports.country', array('num' => $i+1));
+		}
+		echo $separator . Locale::translate('article.title');
+		echo $separator . Locale::translate('section.section');
+		echo $separator . Locale::translate('submissions.submitted');
+		echo $separator . Locale::translate('user.role.editor');
+
+		for ($i=0; $i<$report->getMaxReviewers(); $i++) {
+			echo $separator . Locale::translate('manager.statistics.reports.reviewer', array('num' => $i+1));
+			echo $separator . Locale::translate('manager.statistics.reports.score', array('num' => $i+1));
+			echo $separator . Locale::translate('manager.statistics.reports.recommendation', array('num' => $i+1));
+		}
+
+		echo $separator . Locale::translate('editor.article.decision');
+		echo $separator . Locale::translate('manager.statistics.reports.daysToDecision');
+		echo $separator . Locale::translate('manager.statistics.reports.daysToPublication');
+
+		echo "\n";
+
+		// Display the report.
+		$dateFormatShort = Config::getVar('general', 'date_format_short');
+		while ($row =& $report->next()) {
+			echo $row['articleId'];
+
+			for ($i=0; $i<$report->getMaxAuthors(); $i++) {
+				echo $separator . StatisticsHandler::csvEscape($row['authors'][$i]);
+				echo $separator . StatisticsHandler::csvEscape($row['affiliations'][$i]);
+				echo $separator . StatisticsHandler::csvEscape($row['countries'][$i]);
+			}
+
+			echo $separator . StatisticsHandler::csvEscape($row['title']);
+
+			echo $separator . StatisticsHandler::csvEscape($row['section']);
+
+			echo $separator . $row['dateSubmitted'];
+
+			echo $separator . StatisticsHandler::csvEscape($row['editor']);
+
+			for ($i=0; $i<$report->getMaxReviewers(); $i++) {
+				echo $separator . StatisticsHandler::csvEscape($row['reviewers'][$i]);
+				echo $separator . StatisticsHandler::csvEscape($row['scores'][$i]);
+				echo $separator . StatisticsHandler::csvEscape($row['recommendations'][$i]);
+			}
+
+			echo $separator . StatisticsHandler::csvEscape($row['decision']);
+			echo $separator . StatisticsHandler::csvEscape($row['daysToDecision']);
+			echo $separator . StatisticsHandler::csvEscape($row['daysToPublication']);
+			echo "\n";
+		}
 	}
 }
 
