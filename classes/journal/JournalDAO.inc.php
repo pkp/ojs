@@ -171,8 +171,8 @@ class JournalDAO extends DAO {
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
 		$roleDao->deleteRoleByJournalId($journalId);
 
-		$positionDao = &DAORegistry::getDAO('BoardPositionDAO');
-		$positionDao->deletePositionsByJournalId($journalId);
+		$groupDao = &DAORegistry::getDAO('GroupDAO');
+		$groupDao->deleteGroupsByJournalId($journalId);
 
 		$pluginSettingsDao = &DAORegistry::getDAO('PluginSettingsDAO');
 		$pluginSettingsDao->deleteSettingsByJournalId($journalId);
