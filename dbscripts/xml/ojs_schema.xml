@@ -839,6 +839,15 @@
 		<field name="editor_id" type="I8">
 			<NOTNULL/>
 		</field>
+		<field name="can_edit" type="I1">
+			<NOTNULL/>
+			<DEFAULT VALUE="1"/>
+		</field>
+		<field name="can_review" type="I1">
+			<NOTNULL/>
+			<DEFAULT VALUE="1"/>
+		</field>
+		<field name="date_assigned" type="T"/>
 		<field name="date_notified" type="T"/>
 		<field name="date_underway" type="T"/>
 		<descr>Editing assignments.</descr>

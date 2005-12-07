@@ -37,7 +37,6 @@ class SubmissionReviewHandler extends ReviewerHandler {
 		$templateMgr->assign_by_ref('user', $user);
 		$templateMgr->assign_by_ref('submission', $submission);
 		$templateMgr->assign_by_ref('reviewAssignment', $reviewAssignment);
-		$templateMgr->assign_by_ref('editor', $submission->getEditor());
 		$templateMgr->assign('confirmedStatus', $confirmedStatus);
 		$templateMgr->assign('declined', $submission->getDeclined());
 		$templateMgr->assign_by_ref('reviewFile', $reviewAssignment->getReviewFile());

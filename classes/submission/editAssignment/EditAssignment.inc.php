@@ -76,6 +76,54 @@ class EditAssignment extends DataObject {
 	}
 	
 	/**
+	 * Get flag indicating whether this section editor can review this article. (Irrelevant if this is an editor.)
+	 * @return boolean
+	 */
+	function getCanReview() {
+		return $this->getData('canReview');
+	}
+	
+	/**
+	 * Set flag indicating whether this section editor can review this article. (Irrelevant if this is an editor.)
+	 * @param $canReview boolean
+	 */
+	function setCanReview($canReview) {
+		return $this->setData('canReview', $canReview);
+	}
+	
+	/**
+	 * Get flag indicating whether this section editor can edit this article. (Irrelevant if this is an editor.)
+	 * @return boolean
+	 */
+	function getCanEdit() {
+		return $this->getData('canEdit');
+	}
+	
+	/**
+	 * Set flag indicating whether this section editor can edit this article. (Irrelevant if this is an editor.)
+	 * @param $canEdit boolean
+	 */
+	function setCanEdit($canEdit) {
+		return $this->setData('canEdit', $canEdit);
+	}
+	
+	/**
+	 * Get flag indicating whether this entry is for an editor or a section editor.
+	 * @return boolean
+	 */
+	function getIsEditor() {
+		return $this->getData('isEditor');
+	}
+	
+	/**
+	 * Set flag indicating whether this entry is for an editor or a section editor.
+	 * @param $isEditor boolean
+	 */
+	function setIsEditor($isEditor) {
+		return $this->setData('isEditor', $isEditor);
+	}
+
+	/**
 	 * Get date editor notified.
 	 * @return timestamp
 	 */

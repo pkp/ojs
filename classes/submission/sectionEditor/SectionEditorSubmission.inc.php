@@ -140,8 +140,8 @@ class SectionEditorSubmission extends Article {
 		if ($this->getSubmissionProgress()) return (STATUS_INCOMPLETE);
 
 		// The submission is STATUS_QUEUED. Find out where it's queued.
-		$editor = $this->getEditor();
-		if (!isset($editor))
+		$editAssignments = $this->getEditAssignments();
+		if (empty($editAssignments))
 			return (STATUS_QUEUED_UNASSIGNED);
 
 		$decisions = $this->getDecisions();
@@ -160,21 +160,21 @@ class SectionEditorSubmission extends Article {
 	 */
 	 
 	/**
-	 * Get editor of this article.
-	 * @return User
+	 * Get edit assignments for this article.
+	 * @return array
 	 */
-	function &getEditor() {
-		$editor = &$this->getData('editor');
-		return $editor;
+	function &getEditAssignments() {
+		$editAssignments = &$this->getData('editAssignments');
+		return $editAssignments;
 	}
 	
 	/**
-	 * Set editor of this article.
-	 * @param $editor User
+	 * Set edit assignments for this article.
+	 * @param $editAssignments array
 	 */
-	function setEditor($editor) {
-		return $this->setData('editor', $editor);
-	}	
+	function setEditAssignments($editAssignments) {
+		return $this->setData('editAssignments', $editAssignments);
+	}
 
 	//
 	// Review Assignments

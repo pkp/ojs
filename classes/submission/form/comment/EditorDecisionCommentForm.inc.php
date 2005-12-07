@@ -110,23 +110,23 @@ class EditorDecisionCommentForm extends CommentForm {
 		} else {
 			// Then add editor
 			$editAssignmentDao = &DAORegistry::getDAO('EditAssignmentDAO');
-			$editAssignment = &$editAssignmentDao->getEditAssignmentByArticleId($this->article->getArticleId());
-			
-			// Check to ensure that there is a section editor assigned to this article.
-			// If there isn't, add all editors.
-			if ($editAssignment != null && $editAssignment->getEditorId() != null) {
-				$user = &$userDao->getUser($editAssignment->getEditorId());
-				
-				if ($user) $recipients = array_merge($recipients, array($user->getEmail() => $user->getFullName()));
-			} else {
-				// Get editors
+			$editAssignments = &$editAssignmentDao->getEditAssignmentsByArticleId($this->article->getArticleId());
+			$editorAddresses = array();
+			while (!$editAssignments->eof()) {
+				$editAssignment =& $editAssignments->next();
+				$editorAddresses[$editAssignment->getEditorEmail()] = $editAssignment->getEditorFullName();
+			}
+
+			// If no editors are currently assigned to this article,
+			// send the email to all editors for the journal
+			if (empty($editorAddresses)) {
 				$editors = &$roleDao->getUsersByRoleId(ROLE_ID_EDITOR, $journal->getJournalId());
-				
 				while (!$editors->eof()) {
 					$editor = &$editors->next();
-					$recipients = array_merge($recipients, array($editor->getEmail() => $editor->getFullName()));
+					$editorAddresses[$editor->getEmail()] = $editor->getFullName();
 				}
 			}
+			$recipients = array_merge($recipients, $editorAddresses);
 		}
 		
 		parent::email($recipients);	

@@ -67,21 +67,28 @@ class ProofreadCommentForm extends CommentForm {
 		// Create list of recipients:
 		$recipients = array();
 		
-		// Proofread comments are to be sent to the editor, layout editor, proofreader, and author,
+		// Proofread comments are to be sent to the editors, layout editor, proofreader, and author,
 		// excluding whomever posted the comment.
 		
-		// Get editor
-		$editAssignmentDao = &DAORegistry::getDAO('EditAssignmentDAO');
-		$editAssignment = &$editAssignmentDao->getEditAssignmentByArticleId($this->article->getArticleId());
-		if ($editAssignment != null && $editAssignment->getEditorId() != null) {
-			$editor = &$userDao->getUser($editAssignment->getEditorId());
-		} else {
-			$editor = null;
-		}
-		
 		// Get editors
-		$editors = &$roleDao->getUsersByRoleId(ROLE_ID_EDITOR, $journal->getJournalId());
-		
+		$editAssignmentDao = &DAORegistry::getDAO('EditAssignmentDAO');
+		$editAssignments = &$editAssignmentDao->getEditAssignmentsByArticleId($this->article->getArticleId());
+		$editorAddresses = array();
+		while (!$editAssignments->eof()) {
+			$editAssignment =& $editAssignments->next();
+			$editorAddresses[$editAssignment->getEditorEmail()] = $editAssignment->getEditorFullName();
+		}
+
+		// If no editors are currently assigned to this article,
+		// send the email to all editors for the journal
+		if (empty($editorAddresses)) {
+			$editors = &$roleDao->getUsersByRoleId(ROLE_ID_EDITOR, $journal->getJournalId());
+			while (!$editors->eof()) {
+				$editor = &$editors->next();
+				$editorAddresses[$editor->getEmail()] = $editor->getFullName();
+			}
+		}
+
 		// Get layout editor
 		$layoutAssignmentDao = &DAORegistry::getDAO('LayoutAssignmentDAO');
 		$layoutAssignment = &$layoutAssignmentDao->getLayoutAssignmentByArticleId($this->article->getArticleId());
@@ -117,15 +124,8 @@ class ProofreadCommentForm extends CommentForm {
 			if (isset($author)) $recipients = array_merge($recipients, array($author->getEmail() => $author->getFullName()));
 		
 		} else if ($this->roleId == ROLE_ID_LAYOUT_EDITOR) {
-			// Then add editor, proofreader and author
-			if ($editor != null) {
-				$recipients = array_merge($recipients, array($editor->getEmail() => $editor->getFullName()));
-			} else {
-				while (!$editors->eof()) {
-					$editor = &$editors->next();
-					$recipients = array_merge($recipients, array($editor->getEmail() => $editor->getFullName()));
-				}
-			}
+			// Then add editors, proofreader and author
+			$recipients = array_merge($recipients, $editorAddresses);
 			
 			if ($proofreader != null) {
 				$recipients = array_merge($recipients, array($proofreader->getEmail() => $proofreader->getFullName()));
@@ -134,15 +134,8 @@ class ProofreadCommentForm extends CommentForm {
 			if (isset($author)) $recipients = array_merge($recipients, array($author->getEmail() => $author->getFullName()));
 		
 		} else if ($this->roleId == ROLE_ID_PROOFREADER) {
-			// Then add editor, layout editor, and author
-			if ($editor != null) {
-				$recipients = array_merge($recipients, array($editor->getEmail() => $editor->getFullName()));
-			} else {
-				while (!$editors->eof()) {
-					$editor = &$editors->next();
-					$recipients = array_merge($recipients, array($editor->getEmail() => $editor->getFullName()));
-				}
-			}
+			// Then add editors, layout editor, and author
+			$recipients = array_merge($recipients, $editorAddresses);
 			
 			if ($layoutEditor != null) {
 				$recipients = array_merge($recipients, array($layoutEditor->getEmail() => $layoutEditor->getFullName()));
@@ -151,15 +144,8 @@ class ProofreadCommentForm extends CommentForm {
 			if (isset($author)) $recipients = array_merge($recipients, array($author->getEmail() => $author->getFullName()));
 		
 		} else {
-			// Then add editor, layout editor, and proofreader
-			if ($editor != null) {
-				$recipients = array_merge($recipients, array($editor->getEmail() => $editor->getFullName()));
-			} else {
-				while (!$editors->eof()) {
-					$editor = &$editors->next();
-					$recipients = array_merge($recipients, array($editor->getEmail() => $editor->getFullName()));
-				}
-			}
+			// Then add editors, layout editor, and proofreader
+			$recipients = array_merge($recipients, $editorAddresses);
 			
 			if ($layoutEditor != null) {
 				$recipients = array_merge($recipients, array($layoutEditor->getEmail() => $layoutEditor->getFullName()));

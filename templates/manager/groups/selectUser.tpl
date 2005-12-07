@@ -51,7 +51,7 @@
 {else}
 	<tr>
 		<td align="left">{page_info iterator=$users}</td>
-		<td align="right">{page_links name="users" iterator=$users}</td>
+		<td align="right">{page_links name="users" iterator=$users searchField=$searchField searchMatch=$searchMatch search=$search dateFromDay=$dateFromDay dateFromYear=$dateFromYear dateFromMonth=$dateFromMonth dateToDay=$dateToDay dateToYear=$dateToYear dateToMonth=$dateToMonth}</td>
 	</tr>
 {/if}
 </table>

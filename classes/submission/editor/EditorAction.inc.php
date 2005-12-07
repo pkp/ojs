@@ -43,30 +43,31 @@ class EditorAction extends SectionEditorAction {
 
 		$editorSubmission = &$editorSubmissionDao->getEditorSubmission($articleId);
 		$sectionEditor = &$userDao->getUser($sectionEditorId);
-		$editor = $editorSubmission->getEditor();
 		if (!isset($sectionEditor)) return true;
 
 		import('mail.ArticleMailTemplate');
 		$email = &new ArticleMailTemplate($editorSubmission, 'EDITOR_ASSIGN');
 
-		if (!$email->isEnabled() || ($send && !$email->hasErrors())) {
-			HookRegistry::call('EditorAction::assignEditor', array(&$editorSubmission, &$sectionEditor, &$editor, &$email));
+		if ($user->getUserId() === $sectionEditorId || !$email->isEnabled() || ($send && !$email->hasErrors())) {
+			HookRegistry::call('EditorAction::assignEditor', array(&$editorSubmission, &$sectionEditor, &$email));
 			if ($email->isEnabled()) {
 				$email->setAssoc(ARTICLE_EMAIL_EDITOR_ASSIGN, ARTICLE_EMAIL_TYPE_EDITOR, $sectionEditor->getUserId());
 				$email->send();
 			}
 
-			if (!isset($editor)) {
-				$editor = &new EditAssignment();
-				$editor->setArticleId($articleId);
-			}
+			$editAssignment = &new EditAssignment();
+			$editAssignment->setArticleId($articleId);
+			$editAssignment->setCanEdit(1);
+			$editAssignment->setCanReview(1);
 		
 			// Make the selected editor the new editor
-			$editor->setEditorId($sectionEditorId);
-			$editor->setDateNotified(Core::getCurrentDate());
-			$editor->setDateUnderway(null);
+			$editAssignment->setEditorId($sectionEditorId);
+			$editAssignment->setDateNotified(Core::getCurrentDate());
+			$editAssignment->setDateUnderway(null);
 		
-			$editorSubmission->setEditor($editor);
+			$editAssignments =& $editorSubmission->getEditAssignments();
+			array_push($editAssignments, $editAssignment);
+			$editorSubmission->setEditAssignments($editAssignments);
 		
 			$editorSubmissionDao->updateEditorSubmission($editorSubmission);
 		

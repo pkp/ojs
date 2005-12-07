@@ -45,13 +45,19 @@ function confirmSubmissionCheck() {
 	<td class="label">{translate key="article.abstract"}</td>
 	<td class="value">{$submission->getArticleAbstract()|strip_unsafe_html|nl2br}</td>
 </tr>
-{if $editor}
-	<tr valign="top">
-		<td class="label">{translate key="reviewer.article.submissionEditor"}</td>
-		<td class="value">
-			{assign var=emailString value="`$editor->getEditorFullName()` <`$editor->getEditorEmail()`>"}
+{assign var=editAssignments value=$submission->getEditAssignments()}
+{foreach from=$editAssignments item=$editAssignment}
+	{if !$notFirstEditAssignment}
+		{assign var=notFirstEditAssignment value=1}
+		<tr valign="top">
+			<td class="label">{translate key="reviewer.article.submissionEditor"}</td>
+			<td class="value">
+	{/if}
+			{assign var=emailString value="`$editAssignment->getEditorFullName()` <`$editAssignment->getEditorEmail()`>"}
 			{url|assign:"url" page="user" op="email" to=$emailString|to_array redirectUrl=$currentUrl subject=$submission->getArticleTitle()|strip_tags}
-			{$editor->getEditorFullName()|escape} {icon name="mail" url=$url}
+			{$editAssignment->getEditorFullName()|escape} {icon name="mail" url=$url}<br/>
+{/foreach}
+{if $notFirstEditAssignment}
 		</td>
 	</tr>
 {/if}
@@ -87,8 +93,11 @@ function confirmSubmissionCheck() {
 
 <table width="100%" class="data">
 <tr valign="top">
+	{assign var=editAssignments value=$submission->getEditAssignments}
+	{* FIXME: Should be able to assign primary editorial contact *}
+	{if $editAssignments[0]}{assign var=firstEditAssignment value=$editAssignments[0]}{/if}
 	<td width="3%">1.</td>
-	<td width="97%"><span class="instruct">{translate key="reviewer.article.reviewerInstruction1a"}{if $editor}, {$editor->getEditorFullName()},{/if} {translate key="reviewer.article.reviewerInstruction1b"}</span></td>
+	<td width="97%"><span class="instruct">{translate key="reviewer.article.reviewerInstruction1a"}{if $firstEditAssignment}, {$firstEditAssignment->getEditorFullName()},{/if} {translate key="reviewer.article.reviewerInstruction1b"}</span></td>
 </tr>
 <tr valign="top">
 	<td>&nbsp;</td>

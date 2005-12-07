@@ -85,7 +85,8 @@ class AuthorSubmissionDAO extends DAO {
 		$this->articleDao->_articleFromRow($authorSubmission, $row);
 		
 		// Editor Assignment
-		$authorSubmission->setEditor($this->editAssignmentDao->getEditAssignmentByArticleId($row['article_id']));
+		$editAssignments =& $this->editAssignmentDao->getEditAssignmentsByArticleId($row['article_id']);
+		$authorSubmission->setEditAssignments($editAssignments->toArray());
 		
 		// Editor Decisions
 		for ($i = 1; $i <= $row['current_round']; $i++) {

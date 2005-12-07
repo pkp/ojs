@@ -113,8 +113,9 @@ class AuthSource extends DataObject {
 	 * Get the authentication plugin object associated with this source.
 	 * @return AuthPlugin
 	 */
-	function getPluginClass() {
-		return $this->getData('authPlugin');
+	function &getPluginClass() {
+		$returner =& $this->getData('authPlugin');
+		return $returner;
 	}
 	
 	/**

@@ -37,7 +37,7 @@ class AuthSourceDAO extends DAO {
 		$plugin = null;
 		$auth = &$this->getSource($authId);
 		if ($auth != null) {
-			$plugin = $auth->getPluginClass();
+			$plugin =& $auth->getPluginClass();
 			if ($plugin != null) {
 				$plugin = &$plugin->getInstance($auth->getSettings(), $auth->getAuthId());
 			}
@@ -53,7 +53,7 @@ class AuthSourceDAO extends DAO {
 		$plugin = null;
 		$auth = &$this->getDefaultSource();
 		if ($auth != null) {
-			$plugin = $auth->getPluginClass();
+			$plugin =& $auth->getPluginClass();
 			if ($plugin != null) {
 				$plugin = &$plugin->getInstance($auth->getSettings(), $auth->getAuthId());
 			}

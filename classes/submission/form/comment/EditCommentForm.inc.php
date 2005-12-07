@@ -119,17 +119,24 @@ class EditCommentForm extends Form {
 		
 		$recipients = array();
 		
-		// Get editor
+		// Get editors for article
 		$editAssignmentDao = &DAORegistry::getDAO('EditAssignmentDAO');
-		$editAssignment = &$editAssignmentDao->getEditAssignmentByArticleId($this->article->getArticleId());
-		if ($editAssignment != null && $editAssignment->getEditorId() != null) {
-			$editor = &$userDao->getUser($editAssignment->getEditorId());
-		} else {
-			$editor = null;
+		$editAssignments = &$editAssignmentDao->getEditAssignmentsByArticleId($this->article->getArticleId());
+		$editAssignments =& $editAssignments->toArray();
+		$editorAddresses = array();
+		foreach ($editAssignments as $editAssignment) {
+			$editorAddresses[$editAssignment->getEditorEmail()] = $editAssignment->getEditorFullName();
 		}
-		
-		// Get editors
-		$editors = &$roleDao->getUsersByRoleId(ROLE_ID_EDITOR, $journal->getJournalId());
+
+		// If no editors are currently assigned, send this message to
+		// all of the journal's editors.
+		if (empty($editorAddresses)) {
+			$editors = &$roleDao->getUsersByRoleId(ROLE_ID_EDITOR, $journal->getJournalId());
+			while (!$editors->eof()) {
+				$editor = &$editors->next();
+				$editorAddresses[$editor->getEmail()] = $editor->getFullName();
+			}
+		}
 		
 		// Get proofreader
 		$proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
@@ -185,18 +192,8 @@ class EditCommentForm extends Form {
 				// Then add author
 				if (isset($author)) $recipients = array_merge($recipients, array($author->getEmail() => $author->getFullName()));
 			} else {
-				// Then add editor
-				
-				// Check to ensure that there is a section editor assigned to this article.
-				// If there isn't, add all editors.
-				if ($editor != null) {
-					$recipients = array_merge($recipients, array($editor->getEmail() => $editor->getFullName()));
-				} else {
-					while (!$editors->eof()) {
-						$editor = &$editors->next();
-						$recipients = array_merge($recipients, array($editor->getEmail() => $editor->getFullName()));
-					}
-				}
+				// Then add editors
+				$recipients = array_merge($recipients, $editorAddresses);
 			}
 			break;
 
@@ -210,28 +207,14 @@ class EditCommentForm extends Form {
 				$recipients = array_merge($recipients, array($author->getEmail() => $author->getFullName()));
 			
 			} else if ($this->roleId == ROLE_ID_COPYEDITOR) {
-				// Then add editor and author
-				if ($editor != null) {
-					$recipients = array_merge($recipients, array($editor->getEmail() => $editor->getFullName()));
-				} else {
-					while (!$editors->eof()) {
-						$editor = &$editors->next();
-						$recipients = array_merge($recipients, array($editor->getEmail() => $editor->getFullName()));
-					}
-				}
+				// Then add editors and author
+				$recipients = array_merge($recipients, $editorAddresses);
 			
 				if (isset($author)) $recipients = array_merge($recipients, array($author->getEmail() => $author->getFullName()));
 			
 			} else {
-				// Then add editor and copyeditor
-				if ($editor != null) {
-					$recipients = array_merge($recipients, array($editor->getEmail() => $editor->getFullName()));
-				} else {
-					while (!$editors->eof()) {
-						$editor = &$editors->next();
-						$recipients = array_merge($recipients, array($editor->getEmail() => $editor->getFullName()));
-					}
-				}
+				// Then add editors and copyeditor
+				$recipients = array_merge($recipients, $editorAddresses);
 				
 				if ($copyeditor != null) {
 					$recipients = array_merge($recipients, array($copyeditor->getEmail() => $copyeditor->getFullName()));
@@ -247,18 +230,8 @@ class EditCommentForm extends Form {
 					$recipients = array_merge($recipients, array($layoutEditor->getEmail() => $layoutEditor->getFullName()));
 				}
 			} else {
-				// Then add editor
-	
-				// Check to ensure that there is a section editor assigned to this article.
-				// If there isn't, I add all editors.
-				if ($editor != null) {
-					$recipients = array_merge($recipients, array($editor->getEmail() => $editor->getFullName()));
-				} else {
-					while (!$editors->eof()) {
-						$editor = &$editors->next();
-						$recipients = array_merge($recipients, array($editor->getEmail() => $editor->getFullName()));
-					}
-				}
+				// Then add editors
+				$recipients = array_merge($recipients, $editorAddresses);
 			}
 			break;
 		case COMMENT_TYPE_PROOFREAD:
@@ -275,15 +248,8 @@ class EditCommentForm extends Form {
 				if (isset($author)) $recipients = array_merge($recipients, array($author->getEmail() => $author->getFullName()));
 			
 			} else if ($this->roleId == ROLE_ID_LAYOUT_EDITOR) {
-				// Then add editor, proofreader and author
-				if ($editor != null) {
-					$recipients = array_merge($recipients, array($editor->getEmail() => $editor->getFullName()));
-				} else {
-					while (!$editors->eof()) {
-						$editor = &$editors->next();
-						$recipients = array_merge($recipients, array($editor->getEmail() => $editor->getFullName()));
-					}
-				}
+				// Then add editors, proofreader and author
+				$recipients = array_merge($recipients, $editorAddresses);
 				
 				if ($proofreader != null) {
 					$recipients = array_merge($recipients, array($proofreader->getEmail() => $proofreader->getFullName()));
@@ -292,15 +258,8 @@ class EditCommentForm extends Form {
 				if (isset($author)) $recipients = array_merge($recipients, array($author->getEmail() => $author->getFullName()));
 			
 			} else if ($this->roleId == ROLE_ID_PROOFREADER) {
-				// Then add editor, layout editor, and author
-				if ($editor != null) {
-					$recipients = array_merge($recipients, array($editor->getEmail() => $editor->getFullName()));
-				} else {
-					while (!$editors->eof()) {
-						$editor = &$editors->next();
-						$recipients = array_merge($recipients, array($editor->getEmail() => $editor->getFullName()));
-					}
-				}
+				// Then add editors, layout editor, and author
+				$recipients = array_merge($recipients, $editorAddresses);
 				
 				if ($layoutEditor != null) {
 					$recipients = array_merge($recipients, array($layoutEditor->getEmail() => $layoutEditor->getFullName()));
@@ -309,15 +268,8 @@ class EditCommentForm extends Form {
 				if (isset($author)) $recipients = array_merge($recipients, array($author->getEmail() => $author->getFullName()));
 			
 			} else {
-				// Then add editor, layout editor, and proofreader
-				if ($editor != null) {
-					$recipients = array_merge($recipients, array($editor->getEmail() => $editor->getFullName()));
-				} else {
-					while (!$editors->eof()) {
-						$editor = &$editors->next();
-						$recipients = array_merge($recipients, array($editor->getEmail() => $editor->getFullName()));
-					}
-				}
+				// Then add editors, layout editor, and proofreader
+				$recipients = array_merge($recipients, $editorAddresses);
 				
 				if ($layoutEditor != null) {
 					$recipients = array_merge($recipients, array($layoutEditor->getEmail() => $layoutEditor->getFullName()));

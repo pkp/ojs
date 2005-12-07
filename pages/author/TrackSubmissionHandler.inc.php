@@ -85,7 +85,6 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$templateMgr->assign_by_ref('journalSettings', $journalSettings);
 		$templateMgr->assign_by_ref('submission', $submission);
 		$templateMgr->assign_by_ref('reviewAssignments', $submission->getReviewAssignments($round));
-		$templateMgr->assign_by_ref('editor', $submission->getEditor());
 		$templateMgr->assign('round', $round);
 		$templateMgr->assign_by_ref('submissionFile', $submission->getSubmissionFile());
 		$templateMgr->assign_by_ref('revisedFile', $submission->getRevisedFile());
@@ -121,7 +120,6 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$templateMgr->assign_by_ref('submission', $authorSubmission);
 		$templateMgr->assign_by_ref('reviewAssignments', $authorSubmission->getReviewAssignments());
 		$templateMgr->assign_by_ref('reviewFilesByRound', $reviewFilesByRound);
-		$templateMgr->assign_by_ref('editor', $authorSubmission->getEditor());
 		$templateMgr->assign_by_ref('reviewFilesByRound', $reviewFilesByRound);
 		$templateMgr->assign_by_ref('authorViewableFilesByRound', $authorViewableFilesByRound);
 		$templateMgr->assign_by_ref('reviewModifiedByRound', $reviewModifiedByRound);
@@ -238,7 +236,6 @@ class TrackSubmissionHandler extends AuthorHandler {
 	
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign_by_ref('submission', $submission);
-		$templateMgr->assign_by_ref('editor', $submission->getEditor());
 		$templateMgr->assign_by_ref('copyeditor', $submission->getCopyeditor());
 		$templateMgr->assign_by_ref('submissionFile', $submission->getSubmissionFile());
 		$templateMgr->assign_by_ref('initialCopyeditFile', $submission->getInitialCopyeditFile());

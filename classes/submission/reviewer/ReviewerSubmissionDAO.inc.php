@@ -74,7 +74,8 @@ class ReviewerSubmissionDAO extends DAO {
 		$reviewerSubmission = &new ReviewerSubmission();
 
 		// Editor Assignment
-		$reviewerSubmission->setEditor($this->editAssignmentDao->getEditAssignmentByArticleId($row['article_id']));
+		$editAssignments =& $this->editAssignmentDao->getEditAssignmentsByArticleId($row['article_id']);
+		$reviewerSubmission->setEditAssignments($editAssignments->toArray());
 
 		// Files
 		$reviewerSubmission->setSubmissionFile($this->articleFileDao->getArticleFile($row['submission_file_id']));

@@ -127,24 +127,7 @@ class PeerReviewCommentForm extends CommentForm {
 			
 			if ($user) $recipients = array_merge($recipients, array($user->getEmail() => $user->getFullName()));
 		} else {
-			/* COMMENTED OUT SINCE THE REVIEWER CAN NO LONGER 'SAVE AND EMAIL' COMMENTS
-		
-			// Then add editor
-			$editAssignmentDao = &DAORegistry::getDAO('EditAssignmentDAO');
-			$userDao = &DAORegistry::getDAO('UserDAO');
-			
-			$editAssignment = &$editAssignmentDao->getEditAssignmentByArticleId($this->article->getArticleId());
-			
-			// Check to ensure that there is a section editor assigned to this article.
-			// If there isn't, I guess all editors should be emailed, but this is not coded
-			// as of yet.
-			if ($editAssignment != null && $editAssignment->getEditorId() != null) {
-				$user = &$userDao->getUser($editAssignment->getEditorId());
-				
-				if ($user) $recipients = array_merge($recipients, array($user->getEmail() => $user->getFullName()));
-			}
-			
-			*/
+			/* COMMENTED OUT SINCE THE REVIEWER CAN NO LONGER 'SAVE AND EMAIL' COMMENTS */
 		}
 		
 		parent::email($recipients, $this->insertedComments);

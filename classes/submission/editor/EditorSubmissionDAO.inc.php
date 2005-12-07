@@ -68,7 +68,8 @@ class EditorSubmissionDAO extends DAO {
 		$this->articleDao->_articleFromRow($editorSubmission, $row);
 		
 		// Editor Assignment
-		$editorSubmission->setEditor($this->editAssignmentDao->getEditAssignmentByArticleId($row['article_id']));
+		$editAssignments =& $this->editAssignmentDao->getEditAssignmentsByArticleId($row['article_id']);
+		$editorSubmission->setEditAssignments($editAssignments->toArray());
 		
 		// Editor Decisions
 		for ($i = 1; $i <= $row['current_round']; $i++) {
@@ -114,12 +115,14 @@ class EditorSubmissionDAO extends DAO {
 	 * @param $article Article
 	 */
 	function updateEditorSubmission(&$editorSubmission) {
-		// update edit assignment
-		$editAssignment = $editorSubmission->getEditor();
-		if ($editAssignment->getEditId() > 0) {
-			$this->editAssignmentDao->updateEditAssignment($editAssignment);
-		} else {
-			$this->editAssignmentDao->insertEditAssignment($editAssignment);
+		// update edit assignments
+		$editAssignments = $editorSubmission->getEditAssignments();
+		foreach ($editAssignments as $editAssignment) {
+			if ($editAssignment->getEditId() > 0) {
+				$this->editAssignmentDao->updateEditAssignment($editAssignment);
+			} else {
+				$this->editAssignmentDao->insertEditAssignment($editAssignment);
+			}
 		}
 	}
 	
@@ -322,9 +325,9 @@ class EditorSubmissionDAO extends DAO {
 			$editorSubmission = &$this->_returnEditorSubmissionFromRow($result->GetRowAssoc(false));
 
 			// used to check if editor exists for this submission
-			$editor = $editorSubmission->getEditor();
+			$editAssignments =& $editorSubmission->getEditAssignments();
 
-			if (!isset($editor) && !$editorSubmission->getSubmissionProgress()) {
+			if (empty($editAssignments) && !$editorSubmission->getSubmissionProgress()) {
 				$editorSubmissions[] = $editorSubmission;
 			}
 			$result->MoveNext();
@@ -382,9 +385,9 @@ class EditorSubmissionDAO extends DAO {
 			}
 
 			// used to check if editor exists for this submission
-			$editor = $editorSubmission->getEditor();
+			$editAssignments =& $editorSubmission->getEditAssignments();
 
-			if (isset($editor) && $inReview && !$editorSubmission->getSubmissionProgress()) {
+			if (!empty($editAssignments) && $inReview && !$editorSubmission->getSubmissionProgress()) {
 				$editorSubmissions[] = $editorSubmission;
 			}
 			$result->MoveNext();
@@ -450,9 +453,9 @@ class EditorSubmissionDAO extends DAO {
 			}
 
 			// used to check if editor exists for this submission
-			$editor = $editorSubmission->getEditor();
+			$editAssignments = $editorSubmission->getEditAssignments();
 
-			if ($inEditing && isset($editor) && !$editorSubmission->getSubmissionProgress()) {
+			if ($inEditing && !empty($editAssignments) && !$editorSubmission->getSubmissionProgress()) {
 				$editorSubmissions[] = $editorSubmission;
 			}
 			$result->MoveNext();
@@ -552,10 +555,10 @@ class EditorSubmissionDAO extends DAO {
 			}
 
 			// used to check if editor exists for this submission
-			$editor = $editorSubmission->getEditor();
+			$editAssignments = $editorSubmission->getEditAssignments();
 
 			if (!$editorSubmission->getSubmissionProgress()) {
-				if (!isset($editor)) {
+				if (empty($editAssignments)) {
 					// unassigned submissions
 					$submissionsCount[0] += 1;
 				} elseif ($editorSubmission->getStatus() == STATUS_SCHEDULED) {
@@ -616,15 +619,16 @@ class EditorSubmissionDAO extends DAO {
 	}
 	
 	/**
-	 * Retrieve a list of all section editors not assigned to the specified article.
+	 * Retrieve a list of all users in the specified role not assigned as editors to the specified article.
 	 * @param $journalId int
 	 * @param $articleId int
+	 * @param $roleId int
 	 * @return DAOResultFactory containing matching Users
 	 */
-	function &getSectionEditorsNotAssignedToArticle($journalId, $articleId, $searchType=null, $search=null, $searchMatch=null, $rangeInfo = null) {
+	function &getUsersNotAssignedToArticle($journalId, $articleId, $roleId, $searchType=null, $search=null, $searchMatch=null, $rangeInfo = null) {
 		$users = array();
 		
-		$paramArray = array($articleId, $journalId, RoleDAO::getRoleIdFromPath('sectionEditor'));
+		$paramArray = array($articleId, $journalId, $roleId);
 		$searchSql = '';
 
 		if (isset($search)) switch ($searchType) {

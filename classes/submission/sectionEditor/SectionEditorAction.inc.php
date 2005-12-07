@@ -75,7 +75,8 @@ class SectionEditorAction extends Action {
 	 * @param $decision int
 	 */
 	function recordDecision($sectionEditorSubmission, $decision) {
-		if ($sectionEditorSubmission->getEditor() == null) return;
+		$editAssignments =& $sectionEditorSubmission->getEditAssignments();
+		if (empty($editAssignments)) return;
 
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$user = &Request::getUser();

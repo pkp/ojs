@@ -90,7 +90,8 @@ class ProofreaderSubmissionDAO extends DAO {
 		$submission->setProofAssignment($this->proofAssignmentDao->getProofAssignmentByArticleId($row['article_id']));
 
 		// Editor Assignment
-		$submission->setEditor($this->editAssignmentDao->getEditAssignmentByArticleId($row['article_id']));
+		$editAssignments =& $this->editAssignmentDao->getEditAssignmentsByArticleId($row['article_id']);
+		$submission->setEditAssignments($editAssignments->toArray());
 
 		// Layout reference information
 		$submission->setLayoutAssignment($this->layoutAssignmentDao->getLayoutAssignmentByArticleId($row['article_id']));

@@ -30,7 +30,7 @@ class EditAssignmentDAO extends DAO {
 	 */
 	function &getEditAssignment($editId) {
 		$result = &$this->retrieve(
-			'SELECT e.*, u.first_name, u.last_name, u.email, u.initials FROM edit_assignments e LEFT JOIN users u ON (e.editor_id = u.user_id) WHERE e.edit_id = ?',
+			'SELECT e.*, u.first_name, u.last_name, u.email, u.initials, r.role_id AS editor_role_id FROM articles a, edit_assignments e LEFT JOIN users u ON (e.editor_id = u.user_id) LEFT JOIN roles r ON (r.user_id = e.editor_id AND r.role_id = ' . ROLE_ID_EDITOR . ') WHERE (r.journal_id = a.journal_id OR r.journal_id IS NULL) AND e.edit_id = ? AND a.article_id = e.article_id',
 			$editId
 			);
 
@@ -46,24 +46,17 @@ class EditAssignmentDAO extends DAO {
 	}
 	
 	/**
-	 * Retrieve an edit assignment by article id.
+	 * Retrieve edit assignments by article id.
 	 * @param $articleId int
 	 * @return EditAssignment
 	 */
-	function &getEditAssignmentByArticleId($articleId) {
+	function &getEditAssignmentsByArticleId($articleId) {
 		$result = &$this->retrieve(
-			'SELECT e.*, u.first_name, u.last_name, u.email, u.initials FROM edit_assignments e LEFT JOIN users u ON (e.editor_id = u.user_id) WHERE e.article_id = ?',
+			'SELECT e.*, u.first_name, u.last_name, u.email, u.initials, r.role_id AS editor_role_id FROM articles a, edit_assignments e LEFT JOIN users u ON (e.editor_id = u.user_id) LEFT JOIN roles r ON (r.user_id = e.editor_id AND r.role_id = ' . ROLE_ID_EDITOR . ') WHERE e.article_id = ? AND (r.journal_id IS NULL OR r.journal_id = a.journal_id) AND a.article_id = e.article_id',
 			$articleId
 			);
 
-		$returner = null;
-		if ($result->RecordCount() != 0) {
-			$returner = $this->_returnEditAssignmentFromRow($result->GetRowAssoc(false));
-		}
-
-		$result->Close();
-		unset($result);
-
+		$returner = &new DAOResultFactory($result, $this, '_returnEditAssignmentFromRow');
 		return $returner;
 	}
 
@@ -77,11 +70,14 @@ class EditAssignmentDAO extends DAO {
 		$editAssignment->setEditId($row['edit_id']);
 		$editAssignment->setArticleId($row['article_id']);
 		$editAssignment->setEditorId($row['editor_id']);
+		$editAssignment->setCanReview($row['can_review']);
+		$editAssignment->setCanEdit($row['can_edit']);
 		$editAssignment->setEditorFullName($row['first_name'].' '.$row['last_name']);
 		$editAssignment->setEditorFirstName($row['first_name']);
 		$editAssignment->setEditorLastName($row['last_name']);
 		$editAssignment->setEditorInitials($row['initials']);
 		$editAssignment->setEditorEmail($row['email']);
+		$editAssignment->setIsEditor($row['editor_role_id']==ROLE_ID_EDITOR?1:0);
 		$editAssignment->setDateUnderway($this->datetimeFromDB($row['date_underway']));
 		$editAssignment->setDateNotified($this->datetimeFromDB($row['date_notified']));
 
@@ -97,13 +93,16 @@ class EditAssignmentDAO extends DAO {
 	function insertEditAssignment(&$editAssignment) {
 		$this->update(
 			sprintf('INSERT INTO edit_assignments
-				(article_id, editor_id, date_notified, date_underway)
+				(article_id, editor_id, can_edit, can_review, date_notified, date_underway)
 				VALUES
-				(?, ?, %s, %s)',
-				$this->datetimeToDB($editAssignment->getDateNotified()), $this->datetimeToDB($editAssignment->getDateUnderway())),
+				(?, ?, ?, ?, %s, %s)',
+				$this->datetimeToDB($editAssignment->getDateNotified()),
+				$this->datetimeToDB($editAssignment->getDateUnderway())),
 			array(
 				$editAssignment->getArticleId(),
 				$editAssignment->getEditorId(),
+				$editAssignment->getCanEdit()?1:0,
+				$editAssignment->getCanReview()?1:0
 			)
 		);
 		
@@ -120,13 +119,18 @@ class EditAssignmentDAO extends DAO {
 			sprintf('UPDATE edit_assignments
 				SET	article_id = ?,
 					editor_id = ?,
+					can_review = ?,
+					can_edit = ?,
 					date_notified = %s,
 					date_underway = %s
 				WHERE edit_id = ?',
-				$this->datetimeToDB($editAssignment->getDateNotified()), $this->datetimeToDB($editAssignment->getDateUnderway())),
+				$this->datetimeToDB($editAssignment->getDateNotified()),
+				$this->datetimeToDB($editAssignment->getDateUnderway())),
 			array(
 				$editAssignment->getArticleId(),
 				$editAssignment->getEditorId(),
+				$editAssignment->getCanReview() ? 1:0,
+				$editAssignment->getCanEdit() ? 1:0,
 				$editAssignment->getEditId()
 			)
 		);

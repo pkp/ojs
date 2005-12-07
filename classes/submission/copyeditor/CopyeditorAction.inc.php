@@ -45,14 +45,13 @@ class CopyeditorAction extends Action {
 		import('mail.ArticleMailTemplate');
 		$email = &new ArticleMailTemplate($copyeditorSubmission, 'COPYEDIT_COMPLETE');
 		
-		$editAssignment = $copyeditorSubmission->getEditor();
-		$editor = &$userDao->getUser($editAssignment->getEditorId());
+		$editAssignments = $copyeditorSubmission->getEditAssignments();
 
 		$authors = $copyeditorSubmission->getAuthors();
 		$author = $authors[0];	// assumed at least one author always
 		
 		if (!$email->isEnabled() || ($send && !$email->hasErrors())) {
-			HookRegistry::call('CopyeditorAction::completeCopyedit', array(&$copyeditorSubmission, &$editAssignment, &$editor, &$author, &$email));
+			HookRegistry::call('CopyeditorAction::completeCopyedit', array(&$copyeditorSubmission, &$editAssignments, &$author, &$email));
 			if ($email->isEnabled()) {
 				$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_COMPLETE, ARTICLE_EMAIL_TYPE_COPYEDIT, $copyeditorSubmission->getArticleId());
 				$email->send();
@@ -72,7 +71,10 @@ class CopyeditorAction extends Action {
 		} else {
 			if (!Request::getUserVar('continued')) {
 				$email->addRecipient($author->getEmail(), $author->getFullName());
-				if (isset($editor)) $email->addCc($editor->getEmail(), $editor->getFullName());
+				foreach ($editAssignments as $editAssignment) {
+					$email->addCc($editAssignment->getEditorEmail(), $editAssignment->getEditorFullName());
+				}
+
 				$paramArray = array(
 					'editorialContactName' => $author->getFullName(),
 					'copyeditorName' => $user->getFullName()
@@ -102,11 +104,10 @@ class CopyeditorAction extends Action {
 		import('mail.ArticleMailTemplate');
 		$email = &new ArticleMailTemplate($copyeditorSubmission, 'COPYEDIT_FINAL_COMPLETE');
 		
-		$editAssignment = $copyeditorSubmission->getEditor();
-		$editor = &$userDao->getUser($editAssignment->getEditorId());
+		$editAssignments = $copyeditorSubmission->getEditAssignments();
 		
 		if (!$email->isEnabled() || ($send && !$email->hasErrors())) {
-			HookRegistry::call('CopyeditorAction::completeFinalCopyedit', array(&$copyeditorSubmission, &$editAssignment, &$editor, &$email));
+			HookRegistry::call('CopyeditorAction::completeFinalCopyedit', array(&$copyeditorSubmission, &$editAssignments, &$email));
 			if ($email->isEnabled()) {
 				$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_FINAL_COMPLETE, ARTICLE_EMAIL_TYPE_COPYEDIT, $copyeditorSubmission->getArticleId());
 				$email->send();
@@ -139,10 +140,16 @@ class CopyeditorAction extends Action {
 
 		} else {
 			if (!Request::getUserVar('continued')) {
-				if (isset($editor)) {
-					$email->addRecipient($editor->getEmail(), $editor->getFullName());
+				if (!empty($editAssignments)) {
+					foreach ($editAssignments as $editAssignment) {
+						$email->addRecipient($editAssignment->getEditorEmail(), $editAssignment->getEditorFullName());
+					}
+					// FIXME: Should be able to designate
+					// primary contact editor.
+					$editAssignment = $editAssignments[0];
+
 					$paramArray = array(
-						'editorialContactName' => $editor->getFullName(),
+						'editorialContactName' => $editAssignment->getEditorFullName(),
 						'copyeditorName' => $user->getFullName()
 					);
 				} else {

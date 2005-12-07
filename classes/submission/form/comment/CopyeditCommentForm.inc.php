@@ -73,17 +73,24 @@ class CopyeditCommentForm extends CommentForm {
 		// Copyedit comments are to be sent to the editor, author, and copyeditor,
 		// excluding whomever posted the comment.
 		
-		// Get editor
-		$editAssignmentDao = &DAORegistry::getDAO('EditAssignmentDAO');
-		$editAssignment = &$editAssignmentDao->getEditAssignmentByArticleId($article->getArticleId());
-		if ($editAssignment != null && $editAssignment->getEditorId() != null) {
-			$editor = &$userDao->getUser($editAssignment->getEditorId());
-		} else {
-			$editor = null;
-		}
-		
 		// Get editors
-		$editors = &$roleDao->getUsersByRoleId(ROLE_ID_EDITOR, $journal->getJournalId());
+		$editAssignmentDao = &DAORegistry::getDAO('EditAssignmentDAO');
+		$editAssignments = &$editAssignmentDao->getEditAssignmentsByArticleId($article->getArticleId());
+		$editAssignments =& $editAssignments->toArray();
+		$editorAddresses = array();
+		foreach ($editAssignments as $editAssignment) {
+			$editorAddresses[$editAssignment->getEditorEmail()] = $editAssignment->getEditorFullName();
+		}
+
+		// If no editors are currently assigned, send this message to
+		// all of the journal's editors.
+		if (empty($editorAddresses)) {
+			$editors = &$roleDao->getUsersByRoleId(ROLE_ID_EDITOR, $journal->getJournalId());
+			while (!$editors->eof()) {
+				$editor = &$editors->next();
+				$editorAddresses[$editor->getEmail()] = $editor->getFullName();
+			}
+		}
 		
 		// Get copyeditor
 		$copyAssignmentDao = &DAORegistry::getDAO('CopyAssignmentDAO');
@@ -107,32 +114,14 @@ class CopyeditCommentForm extends CommentForm {
 			$recipients = array_merge($recipients, array($author->getEmail() => $author->getFullName()));
 		
 		} else if ($this->roleId == ROLE_ID_COPYEDITOR) {
-			// Then add editor and author
-			// Check to ensure that there is a section editor assigned to this article.
-			// If there isn't, add all editors.
-			if ($editor != null) {
-				$recipients = array_merge($recipients, array($editor->getEmail() => $editor->getFullName()));
-			} else {
-				while (!$editors->eof()) {
-					$editor = &$editors->next();
-					$recipients = array_merge($recipients, array($editor->getEmail() => $editor->getFullName()));
-				}
-			}
+			// Then add editors and author
+			$recipients = array_merge($recipients, $editorAddresses);
 		
 			if (isset($author)) $recipients = array_merge($recipients, array($author->getEmail() => $author->getFullName()));
 		
 		} else {
-			// Then add editor and copyeditor
-			// Check to ensure that there is a section editor assigned to this article.
-			// If there isn't, add all editors.
-			if ($editor != null) {
-				$recipients = array_merge($recipients, array($editor->getEmail() => $editor->getFullName()));
-			} else {
-				while (!$editors->eof()) {
-					$editor = &$editors->next();
-					$recipients = array_merge($recipients, array($editor->getEmail() => $editor->getFullName()));
-				}
-			}
+			// Then add editors and copyeditor
+			$recipients = array_merge($recipients, $editorAddresses);
 			
 			if ($copyeditor != null) {
 				$recipients = array_merge($recipients, array($copyeditor->getEmail() => $copyeditor->getFullName()));

@@ -78,6 +78,8 @@ class ProofreaderAction extends Action {
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 
+		$ccs = array();
+
 		$proofAssignment =& $proofAssignmentDao->getProofAssignmentByArticleId($articleId);
 		$useProofreaders = $journal->getSetting('useProofreaders');
 
@@ -120,7 +122,7 @@ class ProofreaderAction extends Action {
 				$setDateField = 'setDateAuthorCompleted';
 				$getDateField = 'getDateAuthorCompleted';
 
-				$editor = $sectionEditorSubmission->getEditor();
+				$editAssignments = $sectionEditorSubmission->getEditAssignments();
 
 				if ($proofAssignment->getProofreaderId() != 0) {
 					$setNextDateField = 'setDateProofreaderNotified';
@@ -128,17 +130,23 @@ class ProofreaderAction extends Action {
 					$receiverName = $proofAssignment->getProofreaderFullName();
 					$receiverAddress = $proofAssignment->getProofreaderEmail();
 
-					if (isset($editor)) {
-						$ccReceiverName = $editor->getEditorFullName();
-						$ccReceiverAddress = $editor->getEditorEmail();
+					if (!empty($editAssignments)) {
+						$ccs[$editAssignment->getEditorEmail()] = $editAssignment->getEditorFullName();
 					} else {
-						$ccReceiverAddress = $journal->getSetting('contactEmail');
-						$ccReceiverName =  $journal->getSetting('contactName');
+						$ccs[$journal->getSetting('contactEmail')] = $journal->getSetting('contactName');
 					}
 				} else {
-					if (isset($editor)) {
-						$receiverName = $editor->getEditorFullName();
-						$receiverAddress = $editor->getEditorEmail();
+					if (!empty($editAssignments)) {
+						// FIXME: Should be able to designate primary editorial contact.
+						$assignmentIndex = 0;
+						foreach ($editAssignments as $editAssignment) {
+							if ($assignmentIndex++ == 0) {
+								$receiverName = $editAssignment->getEditorFullName();
+								$receiverAddress = $editAssignment->getEditorEmail();
+							} else {
+								$ccs[$editAssignment->getEditorEmail()] = $editAssignment->getEditorFullName();
+							}
+						}
 					} else {
 						$receiverAddress = $journal->getSetting('contactEmail');
 						$receiverName =  $journal->getSetting('contactName');
@@ -193,11 +201,11 @@ class ProofreaderAction extends Action {
 				$setDateField = 'setDateProofreaderCompleted';
 				$getDateField = 'getDateProofreaderCompleted';
 				$setNextDateField = 'setDateLayoutEditorNotified';
-				$editor =& $sectionEditorSubmission->getEditor();
+				$editAssignments =& $sectionEditorSubmission->getEditAssignments();
 				$layoutAssignment =& $sectionEditorSubmission->getLayoutAssignment();
 
 				$receiver = &$userDao->getUser($layoutAssignment->getEditorId());
-				if (isset($editor)) {
+				if (!empty($editAssignments)) {
 					if (isset($receiver)) {
 						$receiverName = $receiver->getFullName();
 						$receiverAddress = $receiver->getEmail();
@@ -205,14 +213,14 @@ class ProofreaderAction extends Action {
 						$receiverAddress = $journal->getSetting('contactEmail');
 						$receiverName =  $journal->getSetting('contactName');
 					}
-					$ccReceiverName = $editor->getEditorFullName();
-					$ccReceiverAddress = $editor->getEditorEmail();
+					foreach ($editAssignments as $editAssignment) {
+						$ccs[$editAssignment->getEditorEmail()] = $editAssignment->getEditorFullName();
+					}
 				} else {
 					if (isset($receiver)) {
 						$receiverName = $receiver->getFullName();
 						$receiverAddress = $receiver->getEmail();
-						$ccReceiverAddress = $journal->getSetting('contactEmail');
-						$ccReceiverName =  $journal->getSetting('contactName');
+						$ccs[$journal->getSetting('contactEmail')] = $journal->getSetting('contactName');
 					} else {
 						$receiverAddress = $journal->getSetting('contactEmail');
 						$receiverName =  $journal->getSetting('contactName');
@@ -274,9 +282,16 @@ class ProofreaderAction extends Action {
 				$setDateField = 'setDateLayoutEditorCompleted';
 				$getDateField = 'getDateLayoutEditorCompleted';
 
-				$editor = $sectionEditorSubmission->getEditor();
-				$receiverName = $editor->getEditorFullName();
-				$receiverAddress = $editor->getEditorEmail();
+				// FIXME: Should be able to designate primary editorial contact.
+				$assignmentIndex = 0;
+				foreach ($editAssignments as $editAssignment) {
+					if ($assignmentIndex++ == 0) {
+						$receiverName = $editAssignment->getEditorFullName();
+						$receiverAddress = $editAssignment->getEditorEmail();
+					} else {
+						$ccs[$editAssignment->getEditorEmail()] = $editAssignment->getEditorFullName();
+					}
+				}
 
 				$addParamArray = array(
 					'editorialContactName' => $receiverName,

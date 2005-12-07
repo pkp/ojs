@@ -126,12 +126,11 @@ class LayoutEditorAction extends Action {
 		import('mail.ArticleMailTemplate');
 		$email = &new ArticleMailTemplate($submission, 'LAYOUT_COMPLETE');
 
-		$editAssignment = &$submission->getEditor();
-		$editor = &$userDao->getUser($editAssignment->getEditorId());
-		if (!isset($editor)) return;
+		$editAssignments = &$submission->getEditAssignments();
+		if (empty($editAssignments)) return;
 		
 		if (!$email->isEnabled() || ($send && !$email->hasErrors())) {
-			HookRegistry::call('LayoutEditorAction::completeLayoutEditing', array(&$submission, &$layoutAssignment, &$editAssignment, &$editor, &$email));
+			HookRegistry::call('LayoutEditorAction::completeLayoutEditing', array(&$submission, &$layoutAssignment, &$editAssignments, &$email));
 			if ($email->isEnabled()) {
 				$email->setAssoc(ARTICLE_EMAIL_LAYOUT_NOTIFY_COMPLETE, ARTICLE_EMAIL_TYPE_LAYOUT, $layoutAssignment->getLayoutId());
 				$email->send();
@@ -150,9 +149,14 @@ class LayoutEditorAction extends Action {
 		} else {
 			$user = &Request::getUser();
 			if (!Request::getUserVar('continued')) {
-				$email->addRecipient($editor->getEmail(), $editor->getFullName());
+				foreach ($editAssignments as $editAssignment) {
+					$email->addRecipient($editAssignment->getEditorEmail(), $editAssignment->getEditorFullName());
+				}
+				// FIXME: Should be able to designate primary
+				// contact
+				$editAssignment = $editAssignments[0];
 				$paramArray = array(
-					'editorialContactName' => $editor->getFullName(),
+					'editorialContactName' => $editAssignment->getEditorFullName(),
 					'layoutEditorName' => $user->getFullName()
 				);
 				$email->assignParams($paramArray);

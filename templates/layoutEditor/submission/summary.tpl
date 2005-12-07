@@ -12,8 +12,6 @@
 <a name="submission"></a>
 <h3>{translate key="article.submission"}</h3>
 
-{assign var="editor" value=$submission->getEditor()}
-
 <table width="100%" class="data">
 	<tr>
 		<td width="20%" class="label">{translate key="article.authors"}</td>
@@ -31,15 +29,16 @@
 		<td>{$submission->getSectionTitle()|escape}</td>
 	</tr>
 	<tr>
-		<td class="label">{translate key="user.role.sectionEditor"}</td>
+		<td class="label">{translate key="user.role.editor"}</td>
 		<td>
-			{if $editor}
-				{assign var=emailString value="`$editor->getEditorFullName()` <`$editor->getEditorEmail()`>"}
+			{assign var=editAssignments value=$submission->getEditAssignments()}
+			{foreach from=$editAssignments item=editAssignment}
+				{assign var=emailString value="`$editAssignment->getEditorFullName()` <`$editAssignment->getEditorEmail()`>"}
 				{url|assign:"url" page="user" op="email" to=$emailString|to_array redirectUrl=$currentUrl subject=$submission->getArticleTitle()|strip_tags}
-				{$editor->getEditorFullName()|escape} {icon name="mail" url=$url}
-			{else}
+				{$editAssignment->getEditorFullName()|escape} {icon name="mail" url=$url}<br/>
+			{foreachelse}
 				{translate key="common.noneAssigned"}
-			{/if}
+			{/foreach}
 		</td>
 	</tr>
 </table>

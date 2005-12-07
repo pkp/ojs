@@ -101,7 +101,8 @@ class CopyeditorSubmissionDAO extends DAO {
 		$copyeditorSubmission->setFinalRevision($row['final_revision']);
 
 		// Editor Assignment
-		$copyeditorSubmission->setEditor($this->editAssignmentDao->getEditAssignmentByArticleId($row['article_id']));
+		$editAssignments =& $this->editAssignmentDao->getEditAssignmentsByArticleId($row['article_id']);
+		$copyeditorSubmission->setEditAssignments($editAssignments->toArray());
 		
 		// Comments
 		$copyeditorSubmission->setMostRecentCopyeditComment($this->articleCommentDao->getMostRecentArticleComment($row['article_id'], COMMENT_TYPE_COPYEDIT, $row['article_id']));

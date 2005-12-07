@@ -1064,6 +1064,8 @@ class ImportOJS1 {
 					$editAssignment = &new EditAssignment();
 					$editAssignment->setArticleId($articleId);
 					$editAssignment->setEditorId($this->userMap[$row['nEditorUserID']]);
+					$editAssignment->setCanEdit(1);
+					$editAssignment->setCanReview(1);
 					$editAssignment->setDateNotified($row['dtDateEditorNotified']);
 					$editAssignment->setDateUnderway($row['dtDateEditorNotified']);
 					$editAssignmentDao->insertEditAssignment($editAssignment);

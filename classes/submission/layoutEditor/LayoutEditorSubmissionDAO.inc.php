@@ -22,7 +22,7 @@ class LayoutEditorSubmissionDAO extends DAO {
 	var $articleDao;
 	var $layoutDao;
 	var $galleyDao;
-	var $editorDao;
+	var $editAssignmentDao;
 	var $suppFileDao;
 	var $proofAssignmentDao;
 	var $articleCommentDao;
@@ -36,7 +36,7 @@ class LayoutEditorSubmissionDAO extends DAO {
 		$this->articleDao = &DAORegistry::getDAO('ArticleDAO');
 		$this->layoutDao = &DAORegistry::getDAO('LayoutAssignmentDAO');
 		$this->galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
-		$this->editorDao = &DAORegistry::getDAO('EditAssignmentDAO');
+		$this->editAssignmentDao = &DAORegistry::getDAO('EditAssignmentDAO');
 		$this->suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
 		$this->proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
 		$this->articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
@@ -96,7 +96,8 @@ class LayoutEditorSubmissionDAO extends DAO {
 
 		$submission->setGalleys($this->galleyDao->getGalleysByArticle($row['article_id']));
 		
-		$submission->setEditor($this->editorDao->getEditAssignmentByArticleId($row['article_id']));
+		$editAssignments =& $this->editAssignmentDao->getEditAssignmentsByArticleId($row['article_id']);
+		$submission->setEditAssignments($editAssignments->toArray());
 
 		$submission->setProofAssignment($this->proofAssignmentDao->getProofAssignmentByArticleId($row['article_id']));
 

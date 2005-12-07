@@ -80,9 +80,13 @@ class ReviewerAction extends Action {
 				return true;
 			} else {
 				if (!Request::getUserVar('continued')) {
-					$editAssignment = &$reviewerSubmission->getEditor();
-					if ($editAssignment && $editAssignment->getEditorId() != null) {
-						$email->addRecipient($editAssignment->getEditorEmail(), $editAssignment->getEditorFullName());
+					$editAssignments = &$reviewerSubmission->getEditAssignments();
+					if (!empty($editAssignments)) {
+						// FIXME: Should be able to designate primary editorial contact.
+						foreach ($editAssignments as $editAssignment) {
+							$email->addRecipient($editAssignment->getEditorEmail(), $editAssignment->getEditorFullName());
+						}
+						$editAssignment = $editAssignments[0];
 						$editorialContactName = $editAssignment->getEditorFullName();
 					} else {
 						$journal = &Request::getJournal();
@@ -157,9 +161,13 @@ class ReviewerAction extends Action {
 				ArticleLog::logEventEntry($reviewAssignment->getArticleId(), $entry);
 			} else {
 				if (!Request::getUserVar('continued')) {
-					$editAssignment = &$reviewerSubmission->getEditor();
-					if ($editAssignment && $editAssignment->getEditorId() != null) {
-						$email->addRecipient($editAssignment->getEditorEmail(), $editAssignment->getEditorFullName());
+					$editAssignments = &$reviewerSubmission->getEditAssignments();
+					if (!empty($editAssignments)) {
+						// FIXME: Should be able to designate primary editorial contact.
+						foreach ($editAssignments as $editAssignment) {
+							$email->addRecipient($editAssignment->getEditorEmail(), $editAssignment->getEditorFullName());
+						}
+						$editAssignment = $editAssignments[0];
 						$editorialContactName = $editAssignment->getEditorFullName();
 					} else {
 						$journal = &Request::getJournal();

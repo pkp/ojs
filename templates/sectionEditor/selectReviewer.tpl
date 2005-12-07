@@ -99,7 +99,7 @@
 {else}
 	<tr>
 		<td colspan="2" align="left">{page_info iterator=$reviewers}</td>
-		<td colspan="{$numCols-2}" align="right">{page_links name="reviewers" iterator=$reviewers}</td>
+		<td colspan="{$numCols-2}" align="right">{page_links name="reviewers" iterator=$reviewers searchField=$searchField searchMatch=$searchMatch search=$search dateFromDay=$dateFromDay dateFromYear=$dateFromYear dateFromMonth=$dateFromMonth dateToDay=$dateToDay dateToYear=$dateToYear dateToMonth=$dateToMonth}</td>
 	</tr>
 {/if}
 </table>

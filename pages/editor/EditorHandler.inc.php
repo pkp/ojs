@@ -245,12 +245,67 @@ class EditorHandler extends SectionEditorHandler {
 			EditorHandler::schedulingQueue();
 		}
 	}
-	
+
+	/**
+	 * Set the canEdit / canReview flags for this submission's edit assignments.
+	 */
+	function setEditorFlags($args) {
+		EditorHandler::validate();
+		
+		$journal = &Request::getJournal();
+		$articleId = (int) Request::getUserVar('articleId');
+
+		$articleDao =& DAORegistry::getDAO('ArticleDAO');
+		$article =& $articleDao->getArticle($articleId);
+
+		if ($article && $article->getJournalId() === $journal->getJournalId()) {
+			$editAssignmentDao =& DAORegistry::getDAO('EditAssignmentDAO');
+			$editAssignments =& $editAssignmentDao->getEditAssignmentsByArticleId($articleId);
+
+			while($editAssignment =& $editAssignments->next()) {
+				if ($editAssignment->getIsEditor()) continue;
+
+				$canReview = Request::getUserVar('canReview-' . $editAssignment->getEditId()) ? 1 : 0;
+				$canEdit = Request::getUserVar('canEdit-' . $editAssignment->getEditId()) ? 1 : 0;
+
+				$editAssignment->setCanReview($canReview);
+				$editAssignment->setCanEdit($canEdit);
+
+				$editAssignmentDao->updateEditAssignment($editAssignment);
+			}
+		}
+
+		Request::redirect(null, null, 'submission', $articleId);
+	}
+
+	/**
+	 * Delete the specified edit assignment.
+	 */
+	function deleteEditAssignment($args) {
+		EditorHandler::validate();
+		
+		$journal = &Request::getJournal();
+		$editId = (int) (isset($args[0])?$args[0]:0);
+
+		$editAssignmentDao =& DAORegistry::getDAO('EditAssignmentDAO');
+		$editAssignment =& $editAssignmentDao->getEditAssignment($editId);
+
+		if ($editAssignment) {
+			$articleDao =& DAORegistry::getDAO('ArticleDAO');
+			$article =& $articleDao->getArticle($editAssignment->getArticleId());
+
+			if ($article && $article->getJournalId() === $journal->getJournalId()) {
+				$editAssignmentDao->deleteEditAssignmentById($editAssignment->getEditId());
+				Request::redirect(null, null, 'submission', $article->getArticleId());
+			}
+		}
+
+		Request::redirect(null, null, 'submissions');
+	}
+
 	/**
 	 * Assigns the selected editor to the submission.
-	 * Any previously assigned editors become unassigned.
 	 */
-	 
 	function assignEditor($args) {
 		EditorHandler::validate();
 		
@@ -259,7 +314,7 @@ class EditorHandler extends SectionEditorHandler {
 		$editorId = Request::getUserVar('editorId');
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
 
-		if (isset($editorId) && $editorId != null && $roleDao->roleExists($journal->getJournalId(), $editorId, ROLE_ID_SECTION_EDITOR)) {
+		if (isset($editorId) && $editorId != null && ($roleDao->roleExists($journal->getJournalId(), $editorId, ROLE_ID_SECTION_EDITOR) || $roleDao->roleExists($journal->getJournalId(), $editorId, ROLE_ID_EDITOR))) {
 			// A valid section editor has already been chosen;
 			// either prompt with a modifiable email or, if this
 			// has been done, send the email and store the editor
@@ -272,7 +327,7 @@ class EditorHandler extends SectionEditorHandler {
 				Request::redirect(null, null, 'submission', $articleId);
 			}
 		} else {
-			// Allow the user to choose a section editor.
+			// Allow the user to choose a section editor or editor.
 			EditorHandler::setupTemplate(EDITOR_SECTION_SUBMISSIONS, true, $articleId, 'summary');
 
 			$searchType = null;
@@ -289,13 +344,20 @@ class EditorHandler extends SectionEditorHandler {
 				$search = $searchInitial;
 			}
 
-			$rangeInfo = &Handler::getRangeInfo('sectionEditors');
+			$rangeInfo = &Handler::getRangeInfo('editors');
 			$editorSubmissionDao = &DAORegistry::getDAO('EditorSubmissionDAO');
-			$sectionEditors = &$editorSubmissionDao->getSectionEditorsNotAssignedToArticle($journal->getJournalId(), $articleId, $searchType, $search, $searchMatch, $rangeInfo);
+
+			if (isset($args[0]) && $args[0] === 'editor') {
+				$roleName = 'user.role.editors';
+				$editors = &$editorSubmissionDao->getUsersNotAssignedToArticle($journal->getJournalId(), $articleId, RoleDAO::getRoleIdFromPath('editor'), $searchType, $search, $searchMatch, $rangeInfo);
+			} else {
+				$roleName = 'user.role.sectionEditors';
+				$editors = &$editorSubmissionDao->getUsersNotAssignedToArticle($journal->getJournalId(), $articleId, RoleDAO::getRoleIdFromPath('sectionEditor'), $searchType, $search, $searchMatch, $rangeInfo);
+			}
 	
 			$templateMgr = &TemplateManager::getManager();
 	
-			$templateMgr->assign_by_ref('sectionEditors', $sectionEditors);
+			$templateMgr->assign_by_ref('editors', $editors);
 			$templateMgr->assign('articleId', $articleId);
 	
 			$sectionDao = &DAORegistry::getDAO('SectionDAO');

@@ -13,6 +13,9 @@
  * $Id$
  */
 
+define('SECTION_EDITOR_ACCESS_EDIT', 0x00001);
+define('SECTION_EDITOR_ACCESS_REVIEW', 0x00002);
+
 class SubmissionEditHandler extends SectionEditorHandler {
 	
 	function submission($args) {
@@ -36,11 +39,11 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->assign_by_ref('submission', $submission);
 		$templateMgr->assign_by_ref('section', $section);
 		$templateMgr->assign_by_ref('authors', $submission->getAuthors());
-		$templateMgr->assign_by_ref('editor', $submission->getEditor());
 		$templateMgr->assign_by_ref('submissionFile', $submission->getSubmissionFile());
 		$templateMgr->assign_by_ref('suppFiles', $submission->getSuppFiles());
 		$templateMgr->assign_by_ref('reviewFile', $submission->getReviewFile());
 		$templateMgr->assign_by_ref('journalSettings', $journalSettings);
+		$templateMgr->assign('userId', $user->getUserId());
 		$templateMgr->assign('isEditor', $isEditor);
 		
 		$sectionDao = &DAORegistry::getDAO('SectionDAO');
@@ -96,7 +99,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	
 	function submissionReview($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
-		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
 		parent::setupTemplate(true, $articleId);
 
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
@@ -113,7 +116,8 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$editorDecisions = $submission->getDecisions($round);
 		$lastDecision = count($editorDecisions) >= 1 ? $editorDecisions[count($editorDecisions) - 1]['decision'] : null;				
 
-		$allowRecommendation = $submission->getCurrentRound() == $round && $submission->getReviewFileId() != null && $submission->getCopyeditFileId() == null && $submission->getEditor()!=null;
+		$editAssignments =& $submission->getEditAssignments();
+		$allowRecommendation = $submission->getCurrentRound() == $round && $submission->getReviewFileId() != null && $submission->getCopyeditFileId() == null && !empty($editAssignments);
 		$allowResubmit = $lastDecision == SUBMISSION_EDITOR_DECISION_RESUBMIT && $sectionEditorSubmissionDao->getMaxReviewRound($articleId) == $round ? true : false;
 		$allowCopyedit = $lastDecision == SUBMISSION_EDITOR_DECISION_ACCEPT && $submission->getCopyeditFileId() == null ? true : false;
 		
@@ -139,7 +143,6 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->assign_by_ref('submission', $submission);
 		$templateMgr->assign_by_ref('reviewIndexes', $reviewAssignmentDao->getReviewIndexesForRound($articleId, $round));
 		$templateMgr->assign('round', $round);
-		$templateMgr->assign_by_ref('editor', $submission->getEditor());
 		$templateMgr->assign_by_ref('reviewAssignments', $submission->getReviewAssignments($round));
 		$templateMgr->assign_by_ref('notifyReviewerLogs', $notifyReviewerLogs);
 		$templateMgr->assign_by_ref('submissionFile', $submission->getSubmissionFile());
@@ -175,7 +178,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	
 	function submissionEditing($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
-		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 		parent::setupTemplate(true, $articleId);
 		
 		$useCopyeditors = $journal->getSetting('useCopyeditors');
@@ -191,7 +194,6 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr = &TemplateManager::getManager();
 		
 		$templateMgr->assign_by_ref('submission', $submission);
-		$templateMgr->assign_by_ref('editor', $submission->getEditor());
 		$templateMgr->assign_by_ref('submissionFile', $submission->getSubmissionFile());
 		$templateMgr->assign_by_ref('copyeditFile', $submission->getCopyeditFile());
 		$templateMgr->assign_by_ref('initialCopyeditFile', $submission->getInitialCopyeditFile());
@@ -244,7 +246,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	
 	function designateReviewVersion() {
 		$articleId = Request::getUserVar('articleId');
-		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
 		
 		$designate = Request::getUserVar('designate');
 
@@ -266,7 +268,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	
 	function recordDecision() {
 		$articleId = Request::getUserVar('articleId');
-		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
 		
 		$decision = Request::getUserVar('decision');
 
@@ -288,7 +290,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	
 	function selectReviewer($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
-		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
 		
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 
@@ -355,7 +357,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		parent::validate();
 
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
-		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
 
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
 		$roleId = $roleDao->getRoleIdFromPath('reviewer');
@@ -404,7 +406,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 	function enroll($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
-		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
 		
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
 		$roleId = $roleDao->getRoleIdFromPath('reviewer');
@@ -428,7 +430,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	
 	function notifyReviewer($args = array()) {
 		$articleId = Request::getUserVar('articleId');
-		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
 		
 		$reviewId = Request::getUserVar('reviewId');
 
@@ -442,7 +444,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	
 	function clearReview($args) {
 		$articleId = isset($args[0])?$args[0]:0;
-		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
 		
 		$reviewId = $args[1];
 		
@@ -453,7 +455,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	
 	function cancelReview($args) {
 		$articleId = Request::getUserVar('articleId');
-		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
 		
 		$reviewId = Request::getUserVar('reviewId');
 
@@ -467,7 +469,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	
 	function remindReviewer($args = null) {
 		$articleId = Request::getUserVar('articleId');
-		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
 		
 		$reviewId = Request::getUserVar('reviewId');
 		parent::setupTemplate(true, $articleId, 'review');
@@ -479,7 +481,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	
 	function thankReviewer($args = array()) {
 		$articleId = Request::getUserVar('articleId');
-		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
 		
 		$reviewId = Request::getUserVar('reviewId');
 
@@ -493,7 +495,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	
 	function rateReviewer() {
 		$articleId = Request::getUserVar('articleId');
-		SubmissionEditHandler::validate($articleId);
+		SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
 		list($journal, $submission) = parent::setupTemplate(true, $articleId, 'review');
 		
 		$reviewId = Request::getUserVar('reviewId');
@@ -506,7 +508,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 	function acceptReviewForReviewer($args) {
 		$articleId = $args[0];
-		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
 		
 		$reviewId = $args[1];
 		
@@ -516,7 +518,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 	function makeReviewerFileViewable() {
 		$articleId = Request::getUserVar('articleId');
-		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
 		
 		$reviewId = Request::getUserVar('reviewId');
 		$fileId = Request::getUserVar('fileId');
@@ -530,7 +532,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 	function setDueDate($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
-		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
 		
 		$reviewId = isset($args[1]) ? $args[1] : 0;
 		$dueDate = Request::getUserVar('dueDate');
@@ -570,7 +572,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	
 	function enterReviewerRecommendation($args) {
 		$articleId = Request::getUserVar('articleId');
-		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
 		
 		$reviewId = Request::getUserVar('reviewId');
 		
@@ -657,7 +659,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	
 	function editorReview() {
 		$articleId = Request::getUserVar('articleId');
-		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
 
 		$redirectTarget = 'submissionReview';
 		
@@ -688,7 +690,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	
 	function notifyAuthor($args = array()) {
 		$articleId = Request::getUserVar('articleId');
-		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
 
 		$send = Request::getUserVar('send')?true:false;
 		parent::setupTemplate(true, $articleId, 'editing');
@@ -704,7 +706,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	
 	function selectCopyeditor($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
-		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 		
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
 		
@@ -761,7 +763,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	
 	function notifyCopyeditor($args = array()) {
 		$articleId = Request::getUserVar('articleId');
-		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 
 		$send = Request::getUserVar('send')?true:false;
 		parent::setupTemplate(true, $articleId, 'editing');
@@ -774,7 +776,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	/* Initiates the copyediting process when the editor does the copyediting */
 	function initiateCopyedit() {
 		$articleId = Request::getUserVar('articleId');
-		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 		
 		SectionEditorAction::initiateCopyedit($submission);
 		Request::redirect(null, null, 'submissionEditing', $articleId);
@@ -782,7 +784,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 	function thankCopyeditor($args = array()) {
 		$articleId = Request::getUserVar('articleId');
-		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 
 		$send = Request::getUserVar('send')?true:false;
 		parent::setupTemplate(true, $articleId, 'editing');
@@ -794,7 +796,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	
 	function notifyAuthorCopyedit($args) {
 		$articleId = Request::getUserVar('articleId');
-		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 
 		$send = Request::getUserVar('send')?true:false;
 		parent::setupTemplate(true, $articleId, 'editing');
@@ -806,7 +808,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	
 	function thankAuthorCopyedit($args) {
 		$articleId = Request::getUserVar('articleId');
-		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 
 		$send = Request::getUserVar('send')?true:false;
 		parent::setupTemplate(true, $articleId, 'editing');
@@ -818,7 +820,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	
 	function notifyFinalCopyedit($args = array()) {
 		$articleId = Request::getUserVar('articleId');
-		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 
 		$send = Request::getUserVar('send')?true:false;
 		parent::setupTemplate(true, $articleId, 'editing');
@@ -832,7 +834,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		parent::validate();
 		$articleId = Request::getUserVar('articleId');
  
-		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
  
 		SectionEditorAction::completeCopyedit($submission);
 		Request::redirect(null, null, 'submissionEditing', $articleId);
@@ -842,7 +844,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		parent::validate();
 		$articleId = Request::getUserVar('articleId');
  
-		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
  
 		SectionEditorAction::completeFinalCopyedit($submission);
 		Request::redirect(null, null, 'submissionEditing', $articleId);
@@ -850,7 +852,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 	function thankFinalCopyedit($args) {
 		$articleId = Request::getUserVar('articleId');
-		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 
 		$send = Request::getUserVar('send')?true:false;
 		parent::setupTemplate(true, $articleId, 'editing');
@@ -862,7 +864,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 	function uploadReviewVersion() {
 		$articleId = Request::getUserVar('articleId');
-		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
 		
 		SectionEditorAction::uploadReviewVersion($submission);
 		
@@ -871,7 +873,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	
 	function uploadCopyeditVersion() {
 		$articleId = Request::getUserVar('articleId');
-		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 		
 		$copyeditStage = Request::getUserVar('copyeditStage');
 		SectionEditorAction::uploadCopyeditVersion($submission, $copyeditStage);
@@ -966,7 +968,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$fileId = isset($args[1]) ? (int) $args[1] : 0;
 		$revisionId = isset($args[2]) ? (int) $args[2] : 0;
 
-		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
 		SectionEditorAction::deleteArticleFile($submission, $fileId, $revisionId);
 		
 		Request::redirect(null, null, 'submissionReview', $articleId);
@@ -1056,7 +1058,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	 */
 	function uploadLayoutVersion() {
 		$articleId = Request::getUserVar('articleId');
-		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 		
 		SectionEditorAction::uploadLayoutVersion($submission);
 		
@@ -1070,7 +1072,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	function assignLayoutEditor($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$editorId = isset($args[1]) ? (int) $args[1] : 0;
-		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 		
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
 		
@@ -1134,7 +1136,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	 */
 	function notifyLayoutEditor($args) {
 		$articleId = Request::getUserVar('articleId');
-		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 
 		$send = Request::getUserVar('send')?true:false;
 		parent::setupTemplate(true, $articleId, 'editing');
@@ -1149,7 +1151,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	 */
 	function thankLayoutEditor($args) {
 		$articleId = Request::getUserVar('articleId');
-		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 
 		$send = Request::getUserVar('send')?true:false;
 		parent::setupTemplate(true, $articleId, 'editing');
@@ -1164,7 +1166,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	 */
 	function uploadGalley($fileName = null) {
 		$articleId = Request::getUserVar('articleId');
-		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 		
 		import('submission.form.ArticleGalleyForm');
 		
@@ -1181,7 +1183,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	function editGalley($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
-		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 		
 		parent::setupTemplate(true, $articleId, 'editing');
 		
@@ -1200,7 +1202,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	function saveGalley($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
-		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 		
 		import('submission.form.ArticleGalleyForm');
 		
@@ -1237,7 +1239,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	 */
 	function orderGalley() {
 		$articleId = Request::getUserVar('articleId');
-		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 		
 		SectionEditorAction::orderGalley($submission, Request::getUserVar('galleyId'), Request::getUserVar('d'));
 
@@ -1251,7 +1253,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	function deleteGalley($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
-		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 		
 		SectionEditorAction::deleteGalley($submission, $galleyId);
 		
@@ -1265,7 +1267,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	function proofGalley($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
-		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 		
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
@@ -1280,7 +1282,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	function proofGalleyTop($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
-		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 		
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
@@ -1296,7 +1298,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	function proofGalleyFile($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
-		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 		
 		$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
 		$galley = &$galleyDao->getGalley($galleyId, $articleId);
@@ -1411,7 +1413,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	function clearSubmissionEventLog($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$logId = isset($args[1]) ? (int) $args[1] : 0;
-		list($journal, $submission) = SubmissionEditHandler::validate($articleId, true);
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
 		
 		$logDao = &DAORegistry::getDAO('ArticleEventLogDAO');
 		
@@ -1487,7 +1489,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	function clearSubmissionEmailLog($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$logId = isset($args[1]) ? (int) $args[1] : 0;
-		list($journal, $submission) = SubmissionEditHandler::validate($articleId, true);
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
 		
 		$logDao = &DAORegistry::getDAO('ArticleEmailLogDAO');
 		
@@ -1636,7 +1638,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$userId = isset($args[1]) ? (int) $args[1] : 0;
 
-		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
 
@@ -1702,7 +1704,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	 */
 	function queueForScheduling($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
-		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 
 		import('submission.proofreader.ProofreaderAction');
 		ProofreaderAction::queueForScheduling($submission);
@@ -1716,7 +1718,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	function notifyAuthorProofreader($args) {
 		$articleId = Request::getUserVar('articleId');
 		$send = Request::getUserVar('send')?1:0;
-		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 		parent::setupTemplate(true, $articleId, 'editing');
 
 		import('submission.proofreader.ProofreaderAction');
@@ -1731,7 +1733,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	function thankAuthorProofreader($args) {
 		$articleId = Request::getUserVar('articleId');
 		$send = Request::getUserVar('send')?1:0;
-		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 		parent::setupTemplate(true, $articleId, 'editing');
 
 		import('submission.proofreader.ProofreaderAction');
@@ -1745,7 +1747,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	 */
 	function editorInitiateProofreader() {
 		$articleId = Request::getUserVar('articleId');
-		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 
 		$proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
 		$proofAssignment = &$proofAssignmentDao->getProofAssignmentByArticleId($articleId);
@@ -1760,7 +1762,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	 */
 	function editorCompleteProofreader() {
 		$articleId = Request::getUserVar('articleId');
-		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 
 		$proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
 		$proofAssignment = &$proofAssignmentDao->getProofAssignmentByArticleId($articleId);
@@ -1776,7 +1778,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	function notifyProofreader($args) {
 		$articleId = Request::getUserVar('articleId');
 		$send = Request::getUserVar('send');
-		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 		parent::setupTemplate(true, $articleId, 'editing');
 
 		import('submission.proofreader.ProofreaderAction');
@@ -1791,7 +1793,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	function thankProofreader($args) {
 		$articleId = Request::getUserVar('articleId');
 		$send = Request::getUserVar('send')?1:0;
-		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 		parent::setupTemplate(true, $articleId, 'editing');
 
 		import('submission.proofreader.ProofreaderAction');
@@ -1805,7 +1807,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	 */
 	function editorInitiateLayoutEditor() {
 		$articleId = Request::getUserVar('articleId');
-		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 
 		$proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
 		$proofAssignment = &$proofAssignmentDao->getProofAssignmentByArticleId($articleId);
@@ -1820,7 +1822,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	 */
 	function editorCompleteLayoutEditor() {
 		$articleId = Request::getUserVar('articleId');
-		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 
 		$proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
 		$proofAssignment = &$proofAssignmentDao->getProofAssignmentByArticleId($articleId);
@@ -1836,7 +1838,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	function notifyLayoutEditorProofreader($args) {
 		$articleId = Request::getUserVar('articleId');
 		$send = Request::getUserVar('send')?1:0;
-		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 		parent::setupTemplate(true, $articleId, 'editing');
 
 		import('submission.proofreader.ProofreaderAction');
@@ -1851,7 +1853,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	function thankLayoutEditorProofreader($args) {
 		$articleId = Request::getUserVar('articleId');
 		$send = Request::getUserVar('send')?1:0;
-		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 		parent::setupTemplate(true, $articleId, 'editing');
 
 		import('submission.proofreader.ProofreaderAction');
@@ -1869,9 +1871,10 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	 * Validate that the user is the assigned section editor for
 	 * the article, or is a managing editor.
 	 * Redirects to sectionEditor index page if validation fails.
-	 * @param $mustBeEditor boolean user must be an editor
+	 * @param $articleId int Article ID to validate
+	 * @param $access int Optional name of access level required -- see SECTION_EDITOR_ACCESS_... constants
 	 */
-	function validate($articleId, $mustBeEditor = false) {
+	function validate($articleId, $access = null) {
 		parent::validate();
 		
 		$isValid = true;
@@ -1892,9 +1895,40 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$isValid = false;
 			
 		} else {
-			$editor = $sectionEditorSubmission->getEditor();
-			if (($mustBeEditor || $editor == null || $editor->getEditorId() != $user->getUserId()) && !Validation::isEditor()) {
-				$isValid = false;
+			$templateMgr =& TemplateManager::getManager();
+			if (Validation::isEditor()) {
+				// Make canReview and canEdit available to templates.
+				// Since this user is an editor, both are available.
+				$templateMgr->assign('canReview', true);
+				$templateMgr->assign('canEdit', true);
+			} else {
+				// If this user isn't the submission's editor, they don't have access.
+				$editAssignments =& $sectionEditorSubmission->getEditAssignments();
+				$wasFound = false;
+				foreach ($editAssignments as $editAssignment) {
+					if ($editAssignment->getEditorId() == $user->getUserId()) {
+						$templateMgr->assign('canReview', $editAssignment->getCanReview());
+						$templateMgr->assign('canEdit', $editAssignment->getCanEdit());
+						switch ($access) {
+							case SECTION_EDITOR_ACCESS_EDIT:
+								if ($editAssignment->getCanEdit()) {
+									$wasFound = true;
+								}
+								break;
+							case SECTION_EDITOR_ACCESS_REVIEW:
+								if ($editAssignment->getCanReview()) {
+									$wasFound = true;
+								}
+								break;
+
+							default:
+								$wasFound = true;
+						}
+						break;
+					}
+				}
+
+				if (!$wasFound) $isValid = false;
 			}
 		}
 		
@@ -1904,10 +1938,12 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		// If necessary, note the current date and time as the "underway" date/time
 		$editAssignmentDao = &DAORegistry::getDAO('EditAssignmentDAO');
-		$editAssignment = &$sectionEditorSubmission->getEditor();
-		if ($editAssignment && $editAssignment->getDateUnderway()===null) {
-			$editAssignment->setDateUnderway(Core::getCurrentDate());
-			$editAssignmentDao->updateEditAssignment($editAssignment);
+		$editAssignments = &$sectionEditorSubmission->getEditAssignments();
+		foreach ($editAssignments as $editAssignment) {
+			if ($editAssignment->getEditorId() == $user->getUserId() && $editAssignment->getDateUnderway() === null) {
+				$editAssignment->setDateUnderway(Core::getCurrentDate());
+				$editAssignmentDao->updateEditAssignment($editAssignment);
+			}
 		}
 
 		return array(&$journal, &$sectionEditorSubmission);

@@ -39,12 +39,12 @@
 	<td class="heading" width="10%">{translate key="common.action"}</td>
 </tr>
 <tr><td colspan="5" class="headseparator">&nbsp;</td></tr>
-{iterate from=sectionEditors item=sectionEditor}
-{assign var=sectionEditorId value=$sectionEditor->getUserId()}
+{iterate from=editors item=editor}
+{assign var=editorId value=$editor->getUserId()}
 <tr valign="top">
-	<td><a class="action" href="{url op="userProfile" path=$sectionEditorId}">{$sectionEditor->getFullName()}</a></td>
+	<td><a class="action" href="{url op="userProfile" path=$editorId}">{$editor->getFullName()}</a></td>
 	<td>
-		{assign var=thisEditorSections value=$editorSections[$sectionEditorId]}
+		{assign var=thisEditorSections value=$editorSections[$editorId]}
 		{foreach from=$thisEditorSections item=section}
 			{$section->getSectionAbbrev()|escape}&nbsp;
 		{foreachelse}
@@ -52,32 +52,32 @@
 		{/foreach}
 	</td>
 	<td>
-		{if $editorStatistics[$sectionEditorId] && $editorStatistics[$sectionEditorId].complete}
-			{$editorStatistics[$sectionEditorId].complete}
+		{if $editorStatistics[$editorId] && $editorStatistics[$editorId].complete}
+			{$editorStatistics[$editorId].complete}
 		{else}
 			0
 		{/if}
 	</td>
 	<td>
-		{if $editorStatistics[$sectionEditorId] && $editorStatistics[$sectionEditorId].incomplete}
-			{$editorStatistics[$sectionEditorId].incomplete}
+		{if $editorStatistics[$editorId] && $editorStatistics[$editorId].incomplete}
+			{$editorStatistics[$editorId].incomplete}
 		{else}
 			0
 		{/if}
 	</td>
-	<td><a class="action" href="{url op="assignEditor" articleId=$articleId editorId=$sectionEditorId}">{translate key="common.assign"}</a></td>
+	<td><a class="action" href="{url op="assignEditor" articleId=$articleId editorId=$editorId}">{translate key="common.assign"}</a></td>
 </tr>
-<tr><td colspan="5" class="{if $sectionEditors->eof()}end{/if}separator">&nbsp;</td></tr>
+<tr><td colspan="5" class="{if $editors->eof()}end{/if}separator">&nbsp;</td></tr>
 {/iterate}
-{if $sectionEditors->wasEmpty()}
+{if $editors->wasEmpty()}
 <tr>
 <td colspan="5" class="nodata">{translate key="manager.people.noneEnrolled"}</td>
 </tr>
-<tr><td colspan="5" class="{if $sectionEditors->eof()}end{/if}separator">&nbsp;</td></tr>
+<tr><td colspan="5" class="{if $editors->eof()}end{/if}separator">&nbsp;</td></tr>
 {else}
 	<tr>
-		<td colspan="2" align="left">{page_info iterator=$sectionEditors}</td>
-		<td colspan="3" align="right">{page_links name="sectionEditors" iterator=$sectionEditors}</td>
+		<td colspan="2" align="left">{page_info iterator=$editors}</td>
+		<td colspan="3" align="right">{page_links name="editors" iterator=$editors searchField=$searchField searchMatch=$searchMatch search=$search dateFromDay=$dateFromDay dateFromYear=$dateFromYear dateFromMonth=$dateFromMonth dateToDay=$dateToDay dateToYear=$dateToYear dateToMonth=$dateToMonth}</td>
 	</tr>
 {/if}
 </table>

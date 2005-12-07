@@ -90,8 +90,9 @@ class SectionEditorSubmissionDAO extends DAO {
 		$this->articleDao->_articleFromRow($sectionEditorSubmission, $row);
 		
 		// Editor Assignment
-		$sectionEditorSubmission->setEditor($this->editAssignmentDao->getEditAssignmentByArticleId($row['article_id']));
-		
+		$editAssignments =& $this->editAssignmentDao->getEditAssignmentsByArticleId($row['article_id']);
+		$sectionEditorSubmission->setEditAssignments($editAssignments->toArray());
+
 		// Editor Decisions
 		for ($i = 1; $i <= $row['current_round']; $i++) {
 			$sectionEditorSubmission->setDecisions($this->getEditorDecisions($row['article_id'], $i), $i);
@@ -180,8 +181,8 @@ class SectionEditorSubmissionDAO extends DAO {
 	 */
 	function updateSectionEditorSubmission(&$sectionEditorSubmission) {
 		// update edit assignment
-		$editAssignment = $sectionEditorSubmission->getEditor();
-		if ($editAssignment != null) {
+		$editAssignments =& $sectionEditorSubmission->getEditAssignments();
+		foreach ($editAssignments as $editAssignment) {
 			if ($editAssignment->getEditId() > 0) {
 				$this->editAssignmentDao->updateEditAssignment($editAssignment);
 			} else {
@@ -425,6 +426,8 @@ class SectionEditorSubmissionDAO extends DAO {
 		
 		$sql = 'SELECT DISTINCT
 				a.*,
+				e.can_review AS can_review,
+				e.can_edit AS can_edit,
 				s.title AS section_title,
 				s.title_alt1 AS section_title_alt1,
 				s.title_alt2 AS section_title_alt2,
@@ -501,7 +504,8 @@ class SectionEditorSubmissionDAO extends DAO {
 		$result = $this->getUnfilteredSectionEditorSubmissions($sectionEditorId, $journalId, $sectionId, $searchField, $searchMatch, $search, $dateField, $dateFrom, $dateTo, true);
 
 		while (!$result->EOF) {
-			$submission = &$this->_returnSectionEditorSubmissionFromRow($result->GetRowAssoc(false));
+			$row = $result->GetRowAssoc(false);
+			$submission = &$this->_returnSectionEditorSubmissionFromRow($row);
 			$articleId = $submission->getArticleId();
 
 			// check if submission is still in review
@@ -515,10 +519,7 @@ class SectionEditorSubmissionDAO extends DAO {
 				}
 			}
 
-			// used to check if editor exists for this submission
-			$editor = $submission->getEditor();
-
-			if (isset($editor) && $inReview && !$submission->getSubmissionProgress()) {
+			if ($row['can_review'] && $inReview && !$submission->getSubmissionProgress()) {
 				$submissions[] = $submission;
 			}
 			$result->MoveNext();
@@ -556,7 +557,8 @@ class SectionEditorSubmissionDAO extends DAO {
 		$result = $this->getUnfilteredSectionEditorSubmissions($sectionEditorId, $journalId, $sectionId, $searchField, $searchMatch, $search, $dateField, $dateFrom, $dateTo, true);
 
 		while (!$result->EOF) {
-			$submission = &$this->_returnSectionEditorSubmissionFromRow($result->GetRowAssoc(false));
+			$row = $result->GetRowAssoc(false);
+			$submission = &$this->_returnSectionEditorSubmissionFromRow($row);
 
 			// check if submission is still in review
 			$notInReview = false;
@@ -569,10 +571,7 @@ class SectionEditorSubmissionDAO extends DAO {
 				}
 			}
 
-			// used to check if editor exists for this submission
-			$editor = $submission->getEditor();
-
-			if ($notInReview && isset($editor) && !$submission->getSubmissionProgress()) {
+			if ($row['can_edit'] && $notInReview && !$submission->getSubmissionProgress()) {
 				$submissions[] = $submission;
 			}
 			$result->MoveNext();
@@ -641,7 +640,8 @@ class SectionEditorSubmissionDAO extends DAO {
 		$result = $this->getUnfilteredSectionEditorSubmissions($sectionEditorId, $journalId);
 
 		while (!$result->EOF) {
-			$sectionEditorSubmission = &$this->_returnSectionEditorSubmissionFromRow($result->GetRowAssoc(false));
+			$row = $result->GetRowAssoc(false);
+			$sectionEditorSubmission = &$this->_returnSectionEditorSubmissionFromRow($row);
 
 			// check if submission is still in review
 			$inReview = true;
@@ -659,13 +659,15 @@ class SectionEditorSubmissionDAO extends DAO {
 
 			if (!$sectionEditorSubmission->getSubmissionProgress()) {
 				if ($inReview) {
-					if ($notDeclined) {
+					if ($notDeclined && $row['can_review']) {
 						// in review submissions
 						$submissionsCount[0] += 1;
 					}
 				} else {
 					// in editing submissions
-					$submissionsCount[1] += 1;					
+					if ($row['can_edit']) {
+						$submissionsCount[1] += 1;
+					}
 				}
 			}
 

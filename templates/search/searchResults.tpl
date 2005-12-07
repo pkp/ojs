@@ -106,7 +106,11 @@ function ensureKeyword() {
 {else}
 	<tr>
 		<td {if !$currentJournal}colspan="2" {/if}align="left">{page_info iterator=$results}</td>
-		<td colspan="2" align="right">{page_links iterator=$results name="search"}</td>
+		{if $basicQuery}
+			<td colspan="2" align="right">{page_links iterator=$results name="search" query=$basicQuery searchField=$searchField}</td>
+		{else}
+			<td colspan="2" align="right">{page_links iterator=$results name="search" query=$query searchJournal=$searchJournal author=$author title=$title fullText=$fullText supplementaryFiles=$supplementaryFiles discipline=$discipline subject=$subject type=$type coverage=$coverage dateFromMonth=$dateFromMonth dateFromDay=$dateFromDay dateFromYear=$dateFromYear dateToMonth=$dateToMonth dateToDay=$dateToDay dateToYear=$dateToYear}</td>
+		{/if}
 	</tr>
 {/if}
 </table>

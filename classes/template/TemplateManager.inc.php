@@ -467,26 +467,23 @@ class TemplateManager extends Smarty {
 	}
 
 	/**
-	 * Generate a URL into OJS.
+	 * Generate a URL into OJS. (This is a wrapper around Request::url to make it available to Smarty templates.)
 	 */
 	function smartyUrl($params, &$smarty) {
-		$path = null;
-		$anchor = null;
-		$journal = null;
-		$page = null;
-		$op = null;
-		$extraParams = array();
-
-		foreach ($params as $name => $value) switch ($name) {
-			case 'journal': $journal = $value; break;
-			case 'page': $page = $value; break;
-			case 'op': $op = $value; break;
-			case 'anchor': $anchor = $value; break;
-			case 'path': $path = $value; break;
-			default: $extraParams[$name] = $value; break;
+		// Extract the variables named in $paramList, and remove them
+		// from the params array. Variables remaining in params will be
+		// passed along to Request::url as extra parameters.
+		$paramList = array('journal', 'page', 'op', 'path', 'anchor');
+		foreach ($paramList as $param) {
+			if (isset($params[$param])) {
+				$$param = $params[$param];
+				unset($params[$param]);
+			} else {
+				$$param = null;
+			}
 		}
 
-		return Request::url($journal, $page, $op, $path, $extraParams, $anchor);
+		return str_replace('&', '&amp;', Request::url($journal, $page, $op, $path, $params, $anchor));
 	}
 
 	/**
@@ -496,13 +493,15 @@ class TemplateManager extends Smarty {
 	 * {page_links
 	 * 	name="nameMustMatchGetRangeInfoCall"
 	 * 	iterator=$myIterator
+	 *	additional_param=myAdditionalParameterValue
 	 * }
-	 * This function works correctly IFF the current URL
-	 * contains enough information to display the page correctly;
 	 * Pages requiring POST parameters WILL NOT work properly.
 	 */
 	function smartyPageLinks($params, &$smarty) {
 		$iterator = $params['iterator'];
+		$name = $params['name'];
+		unset($params['iterator']);
+		unset($params['name']);
 
 		$numPageLinks = $smarty->get_template_vars('numPageLinks');
 		if (!is_numeric($numPageLinks)) $numPageLinks=10;
@@ -512,59 +511,35 @@ class TemplateManager extends Smarty {
 		$itemTotal = $iterator->getCount();
 
 		$pageBase = max($page - floor($numPageLinks / 2), 1);
-		$paramName = $params['name'] . 'Page';
+		$paramName = $name . 'Page';
 
 		if ($pageCount<=1) return '';
 
 		$value = '';
 
 		if ($page>1) {
-			$value .= '<a href="' . $this->_makePageUrl(Request::getCompleteUrl(), $paramName, 1) . '">&lt;&lt;</a>&nbsp;';
-			$value .= '<a href="' . $this->_makePageUrl(Request::getCompleteUrl(), $paramName, $page - 1) . '">&lt;</a>&nbsp;';
+			$params[$paramName] = 1;
+			$value .= '<a href="' . Request::url(null, null, null, Request::getRequestedArgs(), $params) . '">&lt;&lt;</a>&nbsp;';
+			$params[$paramName] = $page - 1;
+			$value .= '<a href="' . Request::url(null, null, null, Request::getRequestedArgs(), $params) . '">&lt;</a>&nbsp;';
 		}
 
 		for ($i=$pageBase; $i<min($pageBase+$numPageLinks, $pageCount+1); $i++) {
 			if ($i == $page) {
 				$value .= "<b>$i</b>&nbsp;";
 			} else {
-				$value .= '<a href="' . $this->_makePageUrl(Request::getCompleteUrl(), $paramName, $i) . '">' . $i . '</a>&nbsp;';
+				$params[$paramName] = $i;
+				$value .= '<a href="' . Request::url(null, null, null, Request::getRequestedArgs(), $params) . '">' . $i . '</a>&nbsp;';
 			}
 		}
 		if ($page < $pageCount) {
-			$value .= '<a href="' . $this->_makePageUrl(Request::getCompleteUrl(), $paramName, $page + 1) . '">&gt;</a>&nbsp;';
-			$value .= '<a href="' . $this->_makePageUrl(Request::getCompleteUrl(), $paramName, $pageCount) . '">&gt;&gt;</a>&nbsp;';
+			$params[$paramName] = $page + 1;
+			$value .= '<a href="' . Request::url(null, null, null, Request::getRequestedArgs(), $params) . '">&gt;</a>&nbsp;';
+			$params[$paramName] = $pageCount;
+			$value .= '<a href="' . Request::url(null, null, null, Request::getRequestedArgs(), $params) . '">&gt;&gt;</a>&nbsp;';
 		}
 
 		return $value;
-	}
-
-	/**
-	 * PRIVATE function, used by assignPaging to generate a URL with the
-	 * specified page number. Replaces the current page number if necessary.
-	 */
-	function _makePageUrl($currentUrl, $paramName, $pageNum) {
-		$url = parse_url($currentUrl);
-		if (empty($url['query'])) return "$currentUrl?$paramName=$pageNum";
-		if (substr_count($url['query'], "$paramName=")>0) {
-			$array=explode("$paramName=", $url['query']);
-			$array2=explode('&',$array[1]);
-			$url['query']=str_replace("$paramName=$array2[0]", "$paramName=$pageNum", $url["query"]);
-			return $this->_glueUrl($url);
-		}
-		else return "$currentUrl&$paramName=$pageNum";
-	}
-
-	function _glueUrl($url) {
-		if (!is_array($url)) return false;
-	
-		$returner = @$url['scheme'] ? @$url['scheme'] . ':' . ((strtolower(@$url['scheme']) == 'mailto') ? '' : '//') : '';
-		$returner .= @$url['user'] ? @$url['user'] . (@$url['pass']? ':' . @$url['pass']:'') . '@' : '';
-		$returner .= @$url['host'] ? @$url['host'] : '';
-		$returner .= @$url['port'] ? ':' . @$url['port'] : '';
-		$returner .= @$url['path'] ? @$url['path'] : '';
-		$returner .= @$url['query'] ? '?' . @$url['query'] : '';
-		$returner .= @$url['fragment'] ? '#'. @$url['fragment'] : '';
-		return $returner;
 	}
 
 	/**
