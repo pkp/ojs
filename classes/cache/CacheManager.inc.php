@@ -14,7 +14,7 @@
  */
 
 class CacheManager {
-	function getManager() {
+	function &getManager() {
 		static $manager;
 		if (!isset($manager)) {
 			$manager =& new CacheManager();
