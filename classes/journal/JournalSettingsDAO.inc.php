@@ -46,7 +46,8 @@ class JournalSettingsDAO extends DAO {
 	 */
 	function &getSetting($journalId, $name) {
 		$cache =& $this->_getCache($journalId);
-		return $cache->get($name);
+		$returner = $cache->get($name);
+		return $returner;
 	}
 
 	function _cacheMiss(&$cache, $id) {
