@@ -236,6 +236,11 @@ class ManagerHandler extends Handler {
 	// E-mail Management
 	//
 	
+	function emails($args) {
+		import('pages.manager.EmailHandler');
+		EmailHandler::emails($args);
+	}
+	
 	function createEmail($args) {
 		import('pages.manager.EmailHandler');
 		EmailHandler::createEmail($args);
