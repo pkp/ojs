@@ -304,8 +304,7 @@ class JournalStatisticsDAO extends DAO {
 	}
 
 	/**
-	 * Generate a report of the given $reportType including the supplied
-	 * $fields between the given dates.
+	 * Generate a Journal Report between the given dates (optional)
 	 * @param $journalId int The journal to report on
 	 * @param $dateStart string The start date
 	 * @param $dateEnd string The end date
@@ -315,12 +314,10 @@ class JournalStatisticsDAO extends DAO {
 			'SELECT a.article_id AS article_id, a.title AS article_title, ' .
 			'pa.pub_id AS pub_id, pa.date_published AS date_published, ' .
 			's.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, ' .
-			'a.date_submitted AS date_submitted, a.status AS status, ' .
-			'ee.editor_id AS editor_id ' .
+			'a.date_submitted AS date_submitted, a.status AS status ' .
 			'FROM ' .
 			'articles a ' .
 			'LEFT JOIN sections s ON (s.section_id = a.section_id) ' .
-			'LEFT JOIN edit_assignments ee ON (ee.article_id = a.article_id) ' .
 			'LEFT JOIN published_articles pa ON (a.article_id = pa.article_id) ' .
 			'WHERE a.journal_id = ? ' .
 			($dateStart !== null ? ' AND a.date_submitted >= ' . $this->datetimeToDB($dateStart) : '') .
@@ -329,7 +326,90 @@ class JournalStatisticsDAO extends DAO {
 			$journalId
 		);
 		import('journal.JournalReportIterator');
-		$report =& new JournalReportIterator($journalId, $result, $dateStart, $dateEnd);
+		$report =& new JournalReportIterator($journalId, $result, $dateStart, $dateEnd, REPORT_TYPE_JOURNAL);
+		return $report;
+	}
+
+	/**
+	 * Generate a Section Report between the given dates (optional)
+	 * @param $journalId int The journal to report on
+	 * @param $dateStart string The start date
+	 * @param $dateEnd string The end date
+	 */
+	function &getSectionReport($journalId, $dateStart = null, $dateEnd = null) {
+		$result = &$this->retrieve(
+			'SELECT a.article_id AS article_id, a.title AS article_title, ' .
+			'pa.pub_id AS pub_id, pa.date_published AS date_published, ' .
+			's.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, ' .
+			'a.date_submitted AS date_submitted, a.status AS status ' .
+			'FROM ' .
+			'articles a ' .
+			'LEFT JOIN sections s ON (s.section_id = a.section_id) ' .
+			'LEFT JOIN published_articles pa ON (a.article_id = pa.article_id) ' .
+			'WHERE a.journal_id = ? ' .
+			($dateStart !== null ? ' AND a.date_submitted >= ' . $this->datetimeToDB($dateStart) : '') .
+			($dateEnd !== null ? ' AND a.date_submitted <= ' . $this->datetimeToDB($dateEnd) : '') .
+			' ORDER BY s.title, a.date_submitted',
+			$journalId
+		);
+		import('journal.JournalReportIterator');
+		$report =& new JournalReportIterator($journalId, $result, $dateStart, $dateEnd, REPORT_TYPE_SECTION);
+		return $report;
+	}
+
+	/**
+	 * Generate a Reviewer Report between the given dates (optional)
+	 * @param $journalId int The journal to report on
+	 * @param $dateStart string The start date
+	 * @param $dateEnd string The end date
+	 */
+	function &getReviewerReport($journalId, $dateStart = null, $dateEnd = null) {
+		$result = &$this->retrieve(
+			'SELECT ra.reviewer_id, ra.quality, a.article_id AS article_id, a.title AS article_title, ' .
+			'pa.pub_id AS pub_id, pa.date_published AS date_published, ' .
+			's.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, ' .
+			'a.date_submitted AS date_submitted, a.status AS status ' .
+			'FROM ' .
+			'review_assignments ra, ' .
+			'articles a ' .
+			'LEFT JOIN sections s ON (s.section_id = a.section_id) ' .
+			'LEFT JOIN published_articles pa ON (a.article_id = pa.article_id) ' .
+			'WHERE a.journal_id = ? AND ra.article_id = a.article_id ' .
+			($dateStart !== null ? ' AND a.date_submitted >= ' . $this->datetimeToDB($dateStart) : '') .
+			($dateEnd !== null ? ' AND a.date_submitted <= ' . $this->datetimeToDB($dateEnd) : '') .
+			' ORDER BY ra.reviewer_id, a.date_submitted',
+			$journalId
+		);
+		import('journal.JournalReportIterator');
+		$report =& new JournalReportIterator($journalId, $result, $dateStart, $dateEnd, REPORT_TYPE_REVIEWER);
+		return $report;
+	}
+
+	/**
+	 * Generate an Editor Report between the given dates (optional)
+	 * @param $journalId int The journal to report on
+	 * @param $dateStart string The start date
+	 * @param $dateEnd string The end date
+	 */
+	function &getEditorReport($journalId, $dateStart = null, $dateEnd = null) {
+		$result = &$this->retrieve(
+			'SELECT ee.editor_id, a.article_id AS article_id, a.title AS article_title, ' .
+			'pa.pub_id AS pub_id, pa.date_published AS date_published, ' .
+			's.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, ' .
+			'a.date_submitted AS date_submitted, a.status AS status ' .
+			'FROM ' .
+			'articles a ' .
+			'LEFT JOIN edit_assignments ee ON (ee.article_id = a.article_id) ' .
+			'LEFT JOIN sections s ON (s.section_id = a.section_id) ' .
+			'LEFT JOIN published_articles pa ON (a.article_id = pa.article_id) ' .
+			'WHERE a.journal_id = ? ' .
+			($dateStart !== null ? ' AND a.date_submitted >= ' . $this->datetimeToDB($dateStart) : '') .
+			($dateEnd !== null ? ' AND a.date_submitted <= ' . $this->datetimeToDB($dateEnd) : '') .
+			' ORDER BY ee.editor_id, a.date_submitted',
+			$journalId
+		);
+		import('journal.JournalReportIterator');
+		$report =& new JournalReportIterator($journalId, $result, $dateStart, $dateEnd, REPORT_TYPE_EDITOR);
 		return $report;
 	}
 
@@ -386,6 +466,41 @@ class JournalStatisticsDAO extends DAO {
 			($dateStart !== null ? ' AND a.date_submitted >= ' . $this->datetimeToDB($dateStart) : '') .
 			($dateEnd !== null ? ' AND a.date_submitted <= ' . $this->datetimeToDB($dateEnd) : '') .
 			' GROUP BY r.article_id',
+			$journalId
+		);
+
+		$max = null;
+		while (!$result->EOF) {
+			if ($max === null || $max < $result->fields[0]) {
+				$max = $result->fields[0];
+			}
+			$result->moveNext();
+		}
+
+		$result->Close();
+		unset($result);
+
+		return $max;
+	}
+
+	/**
+	 * Determine, within a given journal and date range (optional),
+	 * the maximum number of editors that a single submission has.
+	 * @param $journalId int
+	 * @param $dateStart string
+	 * @param $dateEnd string
+	 */
+	function getMaxEditorCount($journalId, $dateStart, $dateEnd) {
+		$result = &$this->retrieve(
+			'SELECT COUNT(e.editor_id) ' .
+			'FROM ' .
+			'articles a, ' .
+			'edit_assignments e ' .
+			'WHERE a.journal_id = ? ' .
+			'AND e.article_id = a.article_id ' .
+			($dateStart !== null ? ' AND a.date_submitted >= ' . $this->datetimeToDB($dateStart) : '') .
+			($dateEnd !== null ? ' AND a.date_submitted <= ' . $this->datetimeToDB($dateEnd) : '') .
+			' GROUP BY e.article_id',
 			$journalId
 		);
 

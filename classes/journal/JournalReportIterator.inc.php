@@ -38,31 +38,49 @@ class JournalReportIterator extends DBRowIterator {
 	/** @var $authorSubmissionDao object */
 	var $authorSubmissionDao;
 
+	/** @var $editAssignmentDao object */
+	var $editAssignmentDao;
+
 	/** @var $maxAuthorCount int The most authors that can be expected for an article. */
 	var $maxAuthorCount;
 
 	/** @var $maxReviewerCount int The most reviewers that can be expected for a submission. */
 	var $maxReviewerCount;
 
+	/** @var $maxEditorCount int The most editors that can be expected for a submission. */
+	var $maxEditorCount;
+
+	/** @var $reportType int The report type (REPORT_TYPE_...) */
+	var $type;
+
 	/**
 	 * Constructor.
 	 * Initialize the JournalReportIterator
 	 * @param $journalId int ID of journal this report is generated on
 	 * @param $records object ADO record set
+	 * @param $dateStart string optional
+	 * @param $dateEnd string optional
+	 * @param $reportType int REPORT_TYPE_...
 	 */
-	function JournalReportIterator($journalId, &$records, $dateStart, $dateEnd) {
+	function JournalReportIterator($journalId, &$records, $dateStart, $dateEnd, $reportType) {
 		$this->authorDao =& DAORegistry::getDao('AuthorDAO');
 		$this->authorSubmissionDao =& DAORegistry::getDAO('AuthorSubmissionDAO');
 		$this->userDao =& DAORegistry::getDAO('UserDAO');
 		$this->journalStatisticsDao =& DAORegistry::getDAO('JournalStatisticsDAO');
 		$this->countryDao =& DAORegistry::getDAO('CountryDAO');
+		$this->reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
+		$this->editAssignmentDao =& DAORegistry::getDAO('EditAssignmentDAO');
 
 		parent::DBRowIterator($records);
 
 		$this->altLocaleNum = Locale::isAlternateJournalLocale($journalId);
+		$this->type = $reportType;
+
 		$this->maxAuthorCount = $this->journalStatisticsDao->getMaxAuthorCount($journalId, $dateStart, $dateEnd);
-		$this->reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
 		$this->maxReviewerCount = $this->journalStatisticsDao->getMaxReviewerCount($journalId, $dateStart, $dateEnd);
+		if ($this->type !== REPORT_TYPE_EDITOR) {
+			$this->maxEditorCount = $this->journalStatisticsDao->getMaxEditorCount($journalId, $dateStart, $dateEnd);
+		}
 	}
 
 	/**
@@ -104,36 +122,53 @@ class JournalReportIterator extends DBRowIterator {
 			$authorIndex++;
 		}
 
-		// Editor Names
-		if (!empty($row['editor_id'])) {
-			$editor =& $this->userDao->getUser($row['editor_id']);
-			if ($editor) {
-				$ret['editor'] = $editor->getFullName();
-			}
+		if ($this->type === REPORT_TYPE_EDITOR) {
+			$user = null;
+			if ($row['editor_id']) $user =& $this->userDao->getUser($row['editor_id']);
+			$ret['editor'] = $user?$user->getFullName():'';
 		} else {
-			$ret['editor'] = '';
+			$editAssignments =& $this->editAssignmentDao->getEditAssignmentsByArticleId($row['article_id']);
+			$ret['editors'] = array_fill(0, $this->getMaxEditors(), '');
+
+			$editorIndex = 0;
+			while ($editAssignment =& $editAssignments->next()) {
+				$ret['editors'][$editorIndex++] = $editAssignment->getEditorFullName();
+			}
 		}
 
 		// Reviewer Names
-		$ret['reviewers'] = array_fill(0, $this->getMaxReviewers(), '');
-		$ret['scores'] = array_fill(0, $this->getMaxReviewers(), '');
-		$ret['recommendations'] = array_fill(0, $this->getMaxReviewers(), '');
-		$reviewAssignments =& $this->reviewAssignmentDao->getReviewAssignmentsByArticleId($row['article_id']);
-		$reviewerIndex = 0;
-		foreach ($reviewAssignments as $reviewAssignment) {
-			$reviewerId = $reviewAssignment->getReviewerId();
-			$ret['reviewers'][$reviewerIndex] = $reviewAssignment->getReviewerFullName();
-			$rating = $reviewAssignment->getQuality();
-			if ($rating != '') {
-				$ratingOptions =& $reviewAssignment->getReviewerRatingOptions();
-				$ret['scores'][$reviewerIndex] = Locale::translate($ratingOptions[$rating]);
+		$ratingOptions =& ReviewAssignment::getReviewerRatingOptions();
+		if ($this->type === REPORT_TYPE_REVIEWER) {
+			$user = null;
+			if ($row['reviewer_id']) $user =& $this->userDao->getUser($row['reviewer_id']);
+			$ret['reviewer'] = $user?$user->getFullName():'';
+
+			if ($row['quality']) {
+				$ret['score'] = Locale::translate($ratingOptions[$row['quality']]);
+			} else {
+				$ret['score'] = '';
 			}
-			$recommendation = $reviewAssignment->getRecommendation();
-			if ($recommendation != '') {
-				$recommendationOptions =& $reviewAssignment->getReviewerRecommendationOptions();
-				$ret['recommendations'][$reviewerIndex] = Locale::translate($recommendationOptions[$recommendation]);
+			$ret['affiliation'] = $user?$user->getAffiliation():'';
+		} else {
+			$ret['reviewers'] = array_fill(0, $this->getMaxReviewers(), '');
+			$ret['scores'] = array_fill(0, $this->getMaxReviewers(), '');
+			$ret['recommendations'] = array_fill(0, $this->getMaxReviewers(), '');
+			$reviewAssignments =& $this->reviewAssignmentDao->getReviewAssignmentsByArticleId($row['article_id']);
+			$reviewerIndex = 0;
+			foreach ($reviewAssignments as $reviewAssignment) {
+				$reviewerId = $reviewAssignment->getReviewerId();
+				$ret['reviewers'][$reviewerIndex] = $reviewAssignment->getReviewerFullName();
+				$rating = $reviewAssignment->getQuality();
+				if ($rating != '') {
+					$ret['scores'][$reviewerIndex] = Locale::translate($ratingOptions[$rating]);
+				}
+				$recommendation = $reviewAssignment->getRecommendation();
+				if ($recommendation != '') {
+					$recommendationOptions =& $reviewAssignment->getReviewerRecommendationOptions();
+					$ret['recommendations'][$reviewerIndex] = Locale::translate($recommendationOptions[$recommendation]);
+				}
+				$reviewerIndex++;
 			}
-			$reviewerIndex++;
 		}
 
 		// Fetch the last editorial decision for this article.
@@ -201,6 +236,15 @@ class JournalReportIterator extends DBRowIterator {
 	 */
 	function getMaxReviewers() {
 		return $this->maxReviewerCount;
+	}
+
+	/**
+	 * Return the maximum number of editors that can be expected for a
+	 * single article in this report. This call can be used for all
+	 * report types EXCEPT, of course, REPORT_TYPE_EDITOR.
+	 */
+	function getMaxEditors() {
+		return $this->maxEditorCount;
 	}
 }
 

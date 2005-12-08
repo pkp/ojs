@@ -80,7 +80,24 @@ class StatisticsHandler extends ManagerHandler {
 
 		$journalStatisticsDao =& DAORegistry::getDAO('JournalStatisticsDAO');
 
-		$report =& $journalStatisticsDao->getJournalReport($journal->getJournalId(), $fromDate, $toDate);
+		$reportType = (int) Request::getUserVar('reportType');
+
+		switch ($reportType) {
+			case REPORT_TYPE_EDITOR:
+				$report =& $journalStatisticsDao->getEditorReport($journal->getJournalId(), $fromDate, $toDate);
+				break;
+			case REPORT_TYPE_REVIEWER:
+				$report =& $journalStatisticsDao->getReviewerReport($journal->getJournalId(), $fromDate, $toDate);
+				break;
+			case REPORT_TYPE_SECTION:
+				$report =& $journalStatisticsDao->getSectionReport($journal->getJournalId(), $fromDate, $toDate);
+				break;
+			case REPORT_TYPE_JOURNAL:
+			default:
+				$reportType = REPORT_TYPE_JOURNAL;
+				$report =& $journalStatisticsDao->getJournalReport($journal->getJournalId(), $fromDate, $toDate);
+				break;
+		}
 
 		$templateMgr =& TemplateManager::getManager();
 		header('content-type: text/comma-separated-values');
@@ -89,6 +106,20 @@ class StatisticsHandler extends ManagerHandler {
 		$separator = ',';
 
 		// Display the heading row.
+		switch ($reportType) {
+			case REPORT_TYPE_EDITOR:
+				echo Locale::translate('user.role.editor') . $separator;
+				break;
+			case REPORT_TYPE_REVIEWER:
+				echo Locale::translate('user.role.reviewer') . $separator;
+				echo Locale::translate('manager.statistics.reports.singleScore') . $separator;
+				echo Locale::translate('user.affiliation') . $separator;
+				break;
+			case REPORT_TYPE_SECTION:
+				echo Locale::translate('section.section') . $separator;
+				break;
+		}
+
 		echo Locale::translate('article.submissionId');
 		for ($i=0; $i<$report->getMaxAuthors(); $i++) {
 			echo $separator . Locale::translate('manager.statistics.reports.author', array('num' => $i+1));
@@ -96,11 +127,16 @@ class StatisticsHandler extends ManagerHandler {
 			echo $separator . Locale::translate('manager.statistics.reports.country', array('num' => $i+1));
 		}
 		echo $separator . Locale::translate('article.title');
-		echo $separator . Locale::translate('section.section');
-		echo $separator . Locale::translate('submissions.submitted');
-		echo $separator . Locale::translate('user.role.editor');
 
-		for ($i=0; $i<$report->getMaxReviewers(); $i++) {
+		if ($reportType !== REPORT_TYPE_SECTION) echo $separator . Locale::translate('section.section');
+
+		echo $separator . Locale::translate('submissions.submitted');
+
+		if ($reportType !== REPORT_TYPE_EDITOR) for ($i=0; $i<$report->getMaxEditors(); $i++) {
+			echo $separator . Locale::translate('manager.statistics.reports.editor', array('num' => $i+1));
+		}
+
+		if ($reportType !== REPORT_TYPE_REVIEWER) for ($i=0; $i<$report->getMaxReviewers(); $i++) {
 			echo $separator . Locale::translate('manager.statistics.reports.reviewer', array('num' => $i+1));
 			echo $separator . Locale::translate('manager.statistics.reports.score', array('num' => $i+1));
 			echo $separator . Locale::translate('manager.statistics.reports.recommendation', array('num' => $i+1));
@@ -115,6 +151,20 @@ class StatisticsHandler extends ManagerHandler {
 		// Display the report.
 		$dateFormatShort = Config::getVar('general', 'date_format_short');
 		while ($row =& $report->next()) {
+			switch ($reportType) {
+				case REPORT_TYPE_EDITOR:
+					echo $row['editor'] . $separator;
+					break;
+				case REPORT_TYPE_REVIEWER:
+					echo $row['reviewer'] . $separator;
+					echo $row['score'] . $separator;
+					echo $row['affiliation'] . $separator;
+					break;
+				case REPORT_TYPE_SECTION:
+					echo $row['section'] . $separator;
+					break;
+			}
+
 			echo $row['articleId'];
 
 			for ($i=0; $i<$report->getMaxAuthors(); $i++) {
@@ -125,13 +175,15 @@ class StatisticsHandler extends ManagerHandler {
 
 			echo $separator . StatisticsHandler::csvEscape($row['title']);
 
-			echo $separator . StatisticsHandler::csvEscape($row['section']);
+			if ($reportType !== REPORT_TYPE_SECTION) echo $separator . StatisticsHandler::csvEscape($row['section']);
 
 			echo $separator . $row['dateSubmitted'];
 
-			echo $separator . StatisticsHandler::csvEscape($row['editor']);
+			if ($reportType !== REPORT_TYPE_EDITOR) for ($i=0; $i<$report->getMaxEditors(); $i++) {
+				echo $separator . StatisticsHandler::csvEscape($row['editors'][$i]);
+			}
 
-			for ($i=0; $i<$report->getMaxReviewers(); $i++) {
+			if ($reportType !== REPORT_TYPE_REVIEWER) for ($i=0; $i<$report->getMaxReviewers(); $i++) {
 				echo $separator . StatisticsHandler::csvEscape($row['reviewers'][$i]);
 				echo $separator . StatisticsHandler::csvEscape($row['scores'][$i]);
 				echo $separator . StatisticsHandler::csvEscape($row['recommendations'][$i]);

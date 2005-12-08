@@ -761,7 +761,9 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="manager.statistics.reports.affiliation">Affiliation #{$num}</message>
 	<message key="manager.statistics.reports.country">Country #{$num}</message>
 	<message key="manager.statistics.reports.reviewer">Reviewer #{$num}</message>
+	<message key="manager.statistics.reports.editor">Editor #{$num}</message>
 	<message key="manager.statistics.reports.score">Score #{$num}</message>
+	<message key="manager.statistics.reports.singleScore">Score</message>
 	<message key="manager.statistics.reports.recommendation">Recommendation #{$num}</message>
 	<message key="manager.statistics.reports.daysToDecision">Days To Decision</message>
 	<message key="manager.statistics.reports.daysToPublication">Days To Publication</message>
