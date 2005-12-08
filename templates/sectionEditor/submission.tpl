@@ -22,6 +22,10 @@
 
 {include file="sectionEditor/submission/management.tpl"}
 
+<div class="separator"></div
+
+{include file="sectionEditor/submission/editors.tpl"}
+
 <div class="separator"></div>
 
 {include file="sectionEditor/submission/status.tpl"}

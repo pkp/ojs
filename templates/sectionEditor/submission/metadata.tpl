@@ -9,6 +9,8 @@
  * $Id$
  *}
 
+<br />
+
 <a name="metadata"></a>
 <h3>{translate key="submission.metadata"}</h3>
 
