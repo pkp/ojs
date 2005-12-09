@@ -133,6 +133,11 @@ class AuthorHandler extends Handler {
 		import('pages.author.SubmitHandler');
 		SubmitHandler::deleteSubmitSuppFile($args);
 	}
+
+	function expediteSubmission($args) {
+		import('pages.author.SubmitHandler');
+		SubmitHandler::expediteSubmission($args);
+	}
 	
 	//
 	// Submission Tracking

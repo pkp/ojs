@@ -27,17 +27,14 @@ class SubmitHandler extends AuthorHandler {
 		$step = isset($args[0]) ? (int) $args[0] : 0;
 		$articleId = Request::getUserVar('articleId');
 		
-		if (SubmitHandler::validate($articleId, $step)) {
-			$formClass = "AuthorSubmitStep{$step}Form";
-			import("author.form.submit.$formClass");
-			
-			$submitForm = &new $formClass($articleId);
-			$submitForm->initData();
-			$submitForm->display();
-		
-		} else {
-			Request::redirect(null, null, 'submit', '1');
-		}
+		list($journal, $article) = SubmitHandler::validate($articleId, $step);
+
+		$formClass = "AuthorSubmitStep{$step}Form";
+		import("author.form.submit.$formClass");
+
+		$submitForm = &new $formClass($article);
+		$submitForm->initData();
+		$submitForm->display();
 	}
 	
 	/**
@@ -51,16 +48,12 @@ class SubmitHandler extends AuthorHandler {
 		$step = isset($args[0]) ? (int) $args[0] : 0;
 		$articleId = Request::getUserVar('articleId');
 		
-		if (!SubmitHandler::validate($articleId, $step)) {
-			// Invalid step
-			Request::redirect(null, null, 'submit');
-			return;
-		}
+		list($journal, $article) = SubmitHandler::validate($articleId, $step);
 			
 		$formClass = "AuthorSubmitStep{$step}Form";
 		import("author.form.submit.$formClass");
 		
-		$submitForm = &new $formClass($articleId);
+		$submitForm = &new $formClass($article);
 		$submitForm->readInputData();
 			
 		// Check for any special cases before trying to save
@@ -145,9 +138,13 @@ class SubmitHandler extends AuthorHandler {
 			if ($step == 5) {
 				$journal = &Request::getJournal();
 				$templateMgr = &TemplateManager::getManager();
-				$templateMgr->assign('backLink', Request::url(null, null, 'track'));
-				$templateMgr->assign('backLinkLabel', 'author.track');
 				$templateMgr->assign_by_ref('journal', $journal);
+				// If this is an editor and there is a
+				// submission file, article can be expedited.
+				if (Validation::isEditor($journal->getJournalId()) && $article->getSubmissionFileId()) {
+					$templateMgr->assign('canExpedite', true);
+				}
+				$templateMgr->assign('articleId', $articleId);
 				$templateMgr->assign('helpTopicId','submission.index');
 				$templateMgr->display('author/submit/complete.tpl');
 				
@@ -169,16 +166,10 @@ class SubmitHandler extends AuthorHandler {
 		
 		$articleId = Request::getUserVar('articleId');
 		
-		if (!SubmitHandler::validate($articleId, 4)) {
-			// Invalid submission
-			Request::redirect(null, null, 'submit');
-			return;
-		}
+		list($journal, $article) = SubmitHandler::validate($articleId, 4);
 		
-		$formClass = "AuthorSubmitSuppFileForm";
-		import("author.form.submit.$formClass");
-		
-		$submitForm = &new $formClass($articleId);
+		import("author.form.submit.AuthorSubmitSuppFileForm");
+		$submitForm = &new AuthorSubmitSuppFileForm($article);
 		$submitForm->setData('title', Locale::translate('common.untitled'));
 		$suppFileId = $submitForm->execute();
 		
@@ -196,16 +187,10 @@ class SubmitHandler extends AuthorHandler {
 		$articleId = Request::getUserVar('articleId');
 		$suppFileId = isset($args[0]) ? (int) $args[0] : 0;
 		
-		if (!SubmitHandler::validate($articleId, 4)) {
-			// Invalid submission
-			Request::redirect(null, null, 'submit');
-			return;
-		}
+		list($journal, $article) = SubmitHandler::validate($articleId, 4);
 		
-		$formClass = "AuthorSubmitSuppFileForm";
-		import("author.form.submit.$formClass");
-		
-		$submitForm = &new $formClass($articleId, $suppFileId);
+		import("author.form.submit.AuthorSubmitSuppFileForm");
+		$submitForm = &new AuthorSubmitSuppFileForm($article, $suppFileId);
 		
 		$submitForm->initData();
 		$submitForm->display();
@@ -222,16 +207,10 @@ class SubmitHandler extends AuthorHandler {
 		$articleId = Request::getUserVar('articleId');
 		$suppFileId = isset($args[0]) ? (int) $args[0] : 0;
 		
-		if (!SubmitHandler::validate($articleId, 4)) {
-			// Invalid submission
-			Request::redirect(null, null, 'submit');
-			return;
-		}
+		list($journal, $article) = SubmitHandler::validate($articleId, 4);
 		
-		$formClass = "AuthorSubmitSuppFileForm";
-		import("author.form.submit.$formClass");
-		
-		$submitForm = &new $formClass($articleId, $suppFileId);
+		import("author.form.submit.AuthorSubmitSuppFileForm");
+		$submitForm = &new AuthorSubmitSuppFileForm($article, $suppFileId);
 		$submitForm->readInputData();
 		
 		if ($submitForm->validate()) {
@@ -255,11 +234,7 @@ class SubmitHandler extends AuthorHandler {
 		$articleId = Request::getUserVar('articleId');
 		$suppFileId = isset($args[0]) ? (int) $args[0] : 0;
 
-		if (!SubmitHandler::validate($articleId, 4)) {
-			// Invalid submission
-			Request::redirect(null, null, 'submit');
-			return;
-		}
+		list($journal, $article) = SubmitHandler::validate($articleId, 4);
 		
 		$suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
 		$suppFile = $suppFileDao->getSuppFile($suppFileId, $articleId);
@@ -273,30 +248,45 @@ class SubmitHandler extends AuthorHandler {
 		Request::redirect(null, null, 'submit', '4', array('articleId' => $articleId));
 	}
 
+	function expediteSubmission() {
+		$articleId = (int) Request::getUserVar('articleId');
+		list($journal, $article) = SubmitHandler::validate($articleId);
+
+		// The author must also be an editor to perform this task.
+		if (Validation::isEditor($journal->getJournalId()) && $article->getSubmissionFileId()) {
+			import('submission.editor.EditorAction');
+			EditorAction::expediteSubmission($article);
+			Request::redirect(null, 'editor', 'schedulingQueue');
+		}
+
+		Request::redirect(null, null, 'track');
+	}
+
 	/**
 	 * Validation check for submission.
 	 * Checks that article ID is valid, if specified.
 	 * @param $articleId int
 	 * @param $step int
 	 */
-	function validate($articleId, $step) {
-		$articleId = Request::getUserVar('articleId');
-		if ($step < 1 || $step > 5 || (!isset($articleId) && $step != 1)) {
-			return false;
-			
-		} else if (!isset($articleId)) {
-			return true;
-		}
-		
-		// Check that article exists for this journal and user and that submission is incomplete
+	function validate($articleId = null, $step = false) {
 		$articleDao = &DAORegistry::getDAO('ArticleDAO');
-		$sessionManager = &SessionManager::getManager();
-		$session = &$sessionManager->getUserSession();
-		$user = &$session->getUser();
+		$user = &Request::getUser();
 		$journal = &Request::getJournal();
-		
-		$submissionProgress = $articleDao->incompleteSubmissionExists($articleId, $user->getUserId(), $journal->getJournalId());
-		return $step === false || $step > $submissionProgress ? false : true;
+
+		if ($step !== false && ($step < 1 || $step > 5 || (!isset($articleId) && $step != 1))) {
+			Request::redirect(null, null, 'track');
+		}
+
+		$article = null;
+
+		// Check that article exists for this journal and user and that submission is incomplete
+		if (isset($articleId)) {
+			$article =& $articleDao->getArticle((int) $articleId);
+			if (!$article || $article->getUserId() !== $user->getUserId() || $article->getJournalId() !== $journal->getJournalId() || ($step !== false && $step > $article->getSubmissionProgress())) {
+				Request::redirect(null, null, 'submit');
+			}
+		}
+		return array(&$journal, &$article);
 	}
 	
 }

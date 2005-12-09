@@ -93,6 +93,89 @@ class EditorAction extends SectionEditorAction {
 			return false;
 		}
 	}
+
+	/**
+	 * Rush a new submission into the Scheduling queue.
+	 * @param $article object
+	 */
+	function expediteSubmission($article) {
+		$user =& Request::getUser();
+
+		import('submission.editor.EditorAction');
+		import('submission.sectionEditor.SectionEditorAction');
+		import('submission.proofreader.ProofreaderAction');
+
+		$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$sectionEditorSubmission =& $sectionEditorSubmissionDao->getSectionEditorSubmission($article->getArticleId());
+
+		$submissionFile = $sectionEditorSubmission->getSubmissionFile();
+
+		// Add a long entry before doing anything.
+		import('article.log.ArticleLog');
+		import('article.log.ArticleEventLogEntry');
+		ArticleLog::logEvent($article->getArticleId(), ARTICLE_LOG_EDITOR_EXPEDITE, ARTICLE_LOG_TYPE_EDITOR, $user->getUserId(), 'log.editor.submissionExpedited', array('editorName' => $user->getFullName(), 'articleId' => $article->getArticleId()));
+
+		// 1. Ensure that an editor is assigned.
+		$editAssignments =& $sectionEditorSubmission->getEditAssignments();
+		if (empty($editAssignments)) {
+			// No editors are currently assigned; assign self.
+			EditorAction::assignEditor($article->getArticleId(), $user->getUserId());
+		}
+
+		// 2. Ensure there's a review version in place.
+		if (!$sectionEditorSubmission->getReviewFile()) {
+			// No review version; designate original.
+			SectionEditorAction::designateReviewVersion($sectionEditorSubmission, true);
+		}
+
+		// 3. Accept the submission and send to copyediting.
+		$sectionEditorSubmission =& $sectionEditorSubmissionDao->getSectionEditorSubmission($article->getArticleId());
+		if (!$sectionEditorSubmission->getCopyeditFile()) {
+			SectionEditorAction::recordDecision($sectionEditorSubmission, SUBMISSION_EDITOR_DECISION_ACCEPT);
+			$editorFile = $sectionEditorSubmission->getEditorFile();
+			SectionEditorAction::setCopyeditFile($sectionEditorSubmission, $editorFile->getFileId(), $editorFile->getRevision());
+		}
+
+		// 4. Add a galley.
+		$sectionEditorSubmission =& $sectionEditorSubmissionDao->getSectionEditorSubmission($article->getArticleId());
+		$galleys =& $sectionEditorSubmission->getGalleys();
+		if (empty($galleys)) {
+			// No galley present -- use copyediting file.
+			import('file.ArticleFileManager');
+			$copyeditFile =& $sectionEditorSubmission->getCopyeditFile();
+			$fileType = $copyeditFile->getFileType();
+			$articleFileManager =& new ArticleFileManager($article->getArticleId());
+			$fileId = $articleFileManager->copyPublicFile($copyeditFile->getFilePath(), $fileType);
+
+			if (strstr($fileType, 'html')) {
+				$galley =& new ArticleHTMLGalley();
+			} else {
+				$galley =& new ArticleGalley();
+			}
+			$galley->setArticleId($article->getArticleId());
+			$galley->setFileId($fileId);
+
+			if ($galley->isHTMLGalley()) {
+				$galley->setLabel('HTML');
+			} else {
+				if (strstr($fileType, 'pdf')) {
+					$galley->setLabel('PDF');
+				} else if (strtr($fileType, 'postscript')) {
+					$galley->setLabel('Postscript');
+				} else if (strtr($fileType, 'xml')) {
+					$galley->setLabel('XML');
+				} else {
+					$galley->setLabel(Locale::translate('common.untitled'));
+				}
+			}
+
+			$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
+			$galleyDao->insertGalley($galley);
+		}
+
+		// 5. Send to scheduling
+		ProofreaderAction::queueForScheduling($sectionEditorSubmission);
+	}
 }
 
 ?>

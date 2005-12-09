@@ -20,8 +20,8 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 	/**
 	 * Constructor.
 	 */
-	function AuthorSubmitStep5Form($articleId) {
-		parent::AuthorSubmitForm($articleId, 5);
+	function AuthorSubmitStep5Form($article) {
+		parent::AuthorSubmitForm($article, 5);
 	}
 	
 	/**

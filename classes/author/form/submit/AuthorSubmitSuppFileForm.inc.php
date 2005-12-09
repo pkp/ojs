@@ -31,19 +31,16 @@ class AuthorSubmitSuppFileForm extends Form {
 	
 	/**
 	 * Constructor.
-	 * @param $articleId int
+	 * @param $article object
 	 * @param $suppFileId int (optional)
 	 */
-	function AuthorSubmitSuppFileForm($articleId, $suppFileId = null) {
+	function AuthorSubmitSuppFileForm($article, $suppFileId = null) {
 		parent::Form('author/submit/suppFile.tpl');
-		$this->articleId = $articleId;
-		
-		$articleDao = &DAORegistry::getDAO('ArticleDAO');
-		$this->article = &$articleDao->getArticle($articleId);
+		$this->articleId = $article->getArticleId();
 		
 		if (isset($suppFileId) && !empty($suppFileId)) {
 			$suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
-			$this->suppFile = &$suppFileDao->getSuppFile($suppFileId, $articleId);
+			$this->suppFile = &$suppFileDao->getSuppFile($suppFileId, $article->getArticleId());
 			if (isset($this->suppFile)) {
 				$this->suppFileId = $suppFileId;
 			}

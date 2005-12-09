@@ -1727,6 +1727,7 @@ The file can be viewed by clicking on the file name. A new or revised file can b
 	<message key="author.submit.filesSummary">File Summary</message>
 	<message key="author.submit.finishSubmission">Finish Submission</message>
 	<message key="author.submit.submissionComplete">Submission complete. Thank you for your interest in publishing with {$journalTitle}.</message>
+	<message key="author.submit.expedite"><![CDATA[As an Editor, you can choose to expedite a submission. This will bypass the editing process, create a galley from the original submission file (which should be HTML, PDF, or another publication-ready format), and move the submission directly to the scheduling queue. <a href="{$expediteUrl}" class="action">Click here</a> if you wish to expedite this submission.]]></message>
 
 	<!-- Used in submission review / editing -->
 	<message key="submission.review.mustUploadFileForReview">Request email cannot be sent until a Review Version is in place.</message>
@@ -2183,6 +2184,7 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="log.editor.archived">The submission {$articleId} has been archived.</message>
 	<message key="log.editor.restored">The submission {$articleId} has been restored to the queue.</message>
 	<message key="log.editor.editorAssigned">{$editorName} has been assigned as editor to submission {$articleId}.</message>
+	<message key="log.editor.submissionExpedited">{$editorName} has expedited the editing process for article {$articleId}.</message>
 
 	<message key="log.proofread.assign">{$assignerName} has assigned {$proofreaderName} to proofread submission {$articleId}.</message>
 	<message key="log.proofread.complete">{$proofreaderName} has submitted {$articleId} for scheduling.</message>

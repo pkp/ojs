@@ -20,8 +20,8 @@ class AuthorSubmitStep3Form extends AuthorSubmitForm {
 	/**
 	 * Constructor.
 	 */
-	function AuthorSubmitStep3Form($articleId) {
-		parent::AuthorSubmitForm($articleId, 3);
+	function AuthorSubmitStep3Form($article) {
+		parent::AuthorSubmitForm($article, 3);
 
 		// Validation checks for this form
 	}

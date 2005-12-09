@@ -20,8 +20,8 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 	/**
 	 * Constructor.
 	 */
-	function AuthorSubmitStep1Form($articleId = null) {
-		parent::AuthorSubmitForm($articleId, 1);
+	function AuthorSubmitStep1Form($article = null) {
+		parent::AuthorSubmitForm($article, 1);
 		
 		$journal = &Request::getJournal();
 		
@@ -57,10 +57,9 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 	 */
 	function initData() {
 		if (isset($this->article)) {
-			$article = &$this->article;
 			$this->_data = array(
-				'sectionId' => $article->getSectionId(),
-				'commentsToEditor' => $article->getCommentsToEditor()
+				'sectionId' => $this->article->getSectionId(),
+				'commentsToEditor' => $this->article->getCommentsToEditor()
 			);
 		}
 	}
@@ -81,32 +80,29 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 		
 		if (isset($this->article)) {
 			// Update existing article
-			$article = &$this->article;
-			$article->setSectionId($this->getData('sectionId'));
-			$article->setCommentsToEditor($this->getData('commentsToEditor'));
-			if ($article->getSubmissionProgress() <= $this->step) {
-				$article->stampStatusModified();
-				$article->setSubmissionProgress($this->step + 1);
+			$this->article->setSectionId($this->getData('sectionId'));
+			$this->article->setCommentsToEditor($this->getData('commentsToEditor'));
+			if ($this->article->getSubmissionProgress() <= $this->step) {
+				$this->article->stampStatusModified();
+				$this->article->setSubmissionProgress($this->step + 1);
 			}
-			$articleDao->updateArticle($article);
+			$articleDao->updateArticle($this->article);
 			
 		} else {
 			// Insert new article
 			$journal = &Request::getJournal();
 			$user = &Request::getUser();
 		
-			$article = &new Article();
-			$article->setUserId($user->getUserId());
-			$article->setJournalId($journal->getJournalId());
-			$article->setSectionId($this->getData('sectionId'));
-			$article->stampStatusModified();
-			$article->setSubmissionProgress($this->step + 1);
-			$article->setLanguage('');
-			$article->setCommentsToEditor($this->getData('commentsToEditor'));
+			$this->article = &new Article();
+			$this->article->setUserId($user->getUserId());
+			$this->article->setJournalId($journal->getJournalId());
+			$this->article->setSectionId($this->getData('sectionId'));
+			$this->article->stampStatusModified();
+			$this->article->setSubmissionProgress($this->step + 1);
+			$this->article->setLanguage('');
+			$this->article->setCommentsToEditor($this->getData('commentsToEditor'));
 		
 			// Set user to initial author
-			$sessionManager = &SessionManager::getManager();
-			$session = &$sessionManager->getUserSession();
 			$user = &Request::getUser();
 			$author = &new Author();
 			$author->setFirstName($user->getFirstName());
@@ -117,10 +113,10 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 			$author->setEmail($user->getEmail());
 			$author->setBiography($user->getBiography());
 			$author->setPrimaryContact(1);
-			$article->addAuthor($author);
+			$this->article->addAuthor($author);
 			
-			$articleDao->insertArticle($article);
-			$this->articleId = $article->getArticleId();
+			$articleDao->insertArticle($this->article);
+			$this->articleId = $this->article->getArticleId();
 		}
 		
 		return $this->articleId;

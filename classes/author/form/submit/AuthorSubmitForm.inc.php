@@ -28,19 +28,14 @@ class AuthorSubmitForm extends Form {
 	
 	/**
 	 * Constructor.
-	 * @param $articleId int
+	 * @param $article object
 	 * @param $step int
 	 */
-	function AuthorSubmitForm($articleId, $step) {
+	function AuthorSubmitForm($article, $step) {
 		parent::Form(sprintf('author/submit/step%d.tpl', $step));
 		$this->step = $step;
-		if (isset($articleId) && !empty($articleId)) {
-			$articleDao = &DAORegistry::getDAO('ArticleDAO');
-			$this->article = &$articleDao->getArticle($articleId);
-			if (isset($this->article)) {
-				$this->articleId = $this->article->getArticleId();
-			}
-		}
+		$this->article = $article;
+		$this->articleId = $article ? $article->getArticleId() : null;
 	}
 	
 	/**
