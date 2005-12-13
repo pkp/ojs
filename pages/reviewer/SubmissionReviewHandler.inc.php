@@ -174,7 +174,7 @@ class SubmissionReviewHandler extends ReviewerHandler {
 				$isValid = false;
 			}
 		} else {
-			$user =& SubmissionReviewHandler::validateAccessKey($reviewerSubmission->getUserId(), $reviewId, $newKey);
+			$user =& SubmissionReviewHandler::validateAccessKey($reviewerSubmission->getReviewerId(), $reviewId, $newKey);
 			if (!$user) $isValid = false;
 		}
 
