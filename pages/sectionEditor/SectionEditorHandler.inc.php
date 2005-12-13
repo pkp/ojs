@@ -183,6 +183,11 @@ class SectionEditorHandler extends Handler {
 		SubmissionEditHandler::enrollSearch($args);
 	}
 
+	function createReviewer($args) {
+		import('pages.sectionEditor.SubmissionEditHandler');
+		SubmissionEditHandler::createReviewer($args);
+	}
+
 	function enroll($args) {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::enroll($args);

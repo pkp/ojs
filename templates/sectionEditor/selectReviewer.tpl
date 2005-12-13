@@ -28,7 +28,7 @@
 
 <p>{section loop=26 name=letters}<a href="{url op="selectReviewer" path=$articleId searchInitial=$smarty.section.letters.index+$start|chr}">{if chr($smarty.section.letters.index+$start) == $searchInitial}<strong>{$smarty.section.letters.index+$start|chr}</strong>{else}{$smarty.section.letters.index+$start|chr}{/if}</a> {/section}<a href="{url op="selectReviewer" path=$articleId}">{if $searchInitial==''}<strong>{translate key="common.all"}</strong>{else}{translate key="common.all"}{/if}</a></p>
 
-<p><a class="action" href="{url op="enrollSearch" path=$articleId}">{translate key="sectionEditor.review.addReviewer"}</a></p>
+<p><a class="action" href="{url op="enrollSearch" path=$articleId}">{translate key="sectionEditor.review.enrollReviewer"}</a>&nbsp;|&nbsp;<a class="action" href="{url op="createReviewer" path=$articleId}">{translate key="sectionEditor.review.createReviewer"}</a></p>
 
 <table class="listing" width="100%">
 {assign var=numCols value=6}

@@ -48,7 +48,7 @@ class PluginSettingsDAO extends DAO {
 	 * @param $name
 	 * @return mixed
 	 */
-	function &getSetting($journalId, $pluginName, $name) {
+	function getSetting($journalId, $pluginName, $name) {
 		$cache =& $this->_getCache($journalId, $pluginName);
 		return $cache->get($name);
 	}

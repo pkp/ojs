@@ -140,7 +140,7 @@ class Plugin {
 		require_once($this->getPluginPath() . '/' . str_replace('.', '/', $class) . '.inc.php');
 	}
 
-	function &getSetting($journalId, $name) {
+	function getSetting($journalId, $name) {
 		$pluginSettingsDao =& DAORegistry::getDAO('PluginSettingsDAO');
 		return $pluginSettingsDao->getSetting($journalId, $this->getName(), $name);
 	}

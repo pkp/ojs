@@ -351,11 +351,36 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	}
 
 	/**
+	 * Create a new user as a reviewer.
+	 */
+	function createReviewer($args) {
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
+
+		import('sectionEditor.form.CreateReviewerForm');
+		$createReviewerForm =& new CreateReviewerForm($articleId);
+		parent::setupTemplate(true, $articleId);
+
+		if (isset($args[1]) && $args[1] === 'create') {
+			$createReviewerForm->readInputData();
+			if ($createReviewerForm->validate()) {
+				// Create a user and enroll them as a reviewer.
+				$createReviewerForm->execute();
+				Request::redirect(null, null, 'selectReviewer', $articleId);
+			} else {
+				$createReviewerForm->display();
+			}
+		} else {
+			// Display the "create user" form.
+			$createReviewerForm->display();
+		}
+
+	}
+
+	/**
 	 * Search for users to enroll as reviewers.
 	 */
 	function enrollSearch($args) {
-		parent::validate();
-
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
 
@@ -831,8 +856,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	}
 
 	function completeCopyedit($args) {
-		parent::validate();
-		$articleId = Request::getUserVar('articleId');
+		$articleId = (int) Request::getUserVar('articleId');
  
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
  
@@ -841,8 +865,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	}
  
 	function completeFinalCopyedit($args) {
-		parent::validate();
-		$articleId = Request::getUserVar('articleId');
+		$articleId = (int) Request::getUserVar('articleId');
  
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
  

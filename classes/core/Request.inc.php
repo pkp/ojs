@@ -252,7 +252,7 @@ class Request {
 	function isPathInfoEnabled() {
 		static $isPathInfoEnabled;
 		if (!isset($isPathInfoEnabled)) {
-                        $isPathInfoDisabled = Config::getVar('general', 'disable_path_info')?true:false;
+                        $isPathInfoEnabled = Config::getVar('general', 'disable_path_info')?false:true;
                 }
 		return $isPathInfoEnabled;
 	}
