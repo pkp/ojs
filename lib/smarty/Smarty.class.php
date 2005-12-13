@@ -1059,6 +1059,8 @@ class Smarty
         if(isset($this->_tpl_vars[$name])) {
             return $this->_tpl_vars[$name];
         }
+        $nullVar = null; // Added by Alec 2005-12-12 -- is this a bug?
+        return $nullVar;
     }
 
     /**
