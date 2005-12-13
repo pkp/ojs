@@ -204,6 +204,17 @@ class SectionEditorAction extends Action {
 				HookRegistry::call('SectionEditorAction::notifyReviewer', array(&$sectionEditorSubmission, &$reviewAssignment, &$email));
 				if ($email->isEnabled()) {
 					$email->setAssoc(ARTICLE_EMAIL_REVIEW_NOTIFY_REVIEWER, ARTICLE_EMAIL_TYPE_REVIEW, $reviewId);
+					if ($reviewerAccessKeysEnabled) {
+						import('security.AccessKeyManager');
+						import('pages.reviewer.ReviewerHandler');
+						$accessKeyManager =& new AccessKeyManager();
+
+						// Key lifetime is the typical review period plus four weeks
+						$keyLifetime = ($journal->getSetting('numWeeksPerReview') + 4) * 7;
+
+						$email->addPrivateParam('ACCESS_KEY', $accessKeyManager->createKey('ReviewerContext', $reviewer->getUserId(), $reviewId, $keyLifetime));
+					}
+
 					$email->send();
 				}
 				
@@ -222,18 +233,7 @@ class SectionEditorAction extends Action {
 						$reviewDueDate = date('Y-m-d', strtotime('+2 week'));
 					}
 
-					$submissionUrlParams = array();
-					if ($reviewerAccessKeysEnabled) {
-						import('security.AccessKeyManager');
-						import('pages.reviewer.ReviewerHandler');
-						$accessKeyManager =& new AccessKeyManager();
-
-						// Key lifetime is the typical review period plus four weeks
-						$keyLifetime = ($journal->getSetting('numWeeksPerReview') + 4) * 7;
-
-						$submissionUrlParams['key'] = $accessKeyManager->createKey('ReviewerContext', $reviewer->getUserId(), $reviewId, $keyLifetime);
-					}
-					$submissionUrl = Request::url(null, 'reviewer', 'submission', $reviewId, $submissionUrlParams);
+					$submissionUrl = Request::url(null, 'reviewer', 'submission', $reviewId, array('key' => 'ACCESS_KEY'));
 
 					$paramArray = array(
 						'reviewerName' => $reviewer->getFullName(),
@@ -352,6 +352,16 @@ class SectionEditorAction extends Action {
 			HookRegistry::call('SectionEditorAction::remindReviewer', array(&$sectionEditorSubmission, &$reviewAssignment, &$email));
 			$email->setAssoc(ARTICLE_EMAIL_REVIEW_REMIND, ARTICLE_EMAIL_TYPE_REVIEW, $reviewId);
 			
+			if ($reviewerAccessKeysEnabled) {
+				import('security.AccessKeyManager');
+				import('pages.reviewer.ReviewerHandler');
+				$accessKeyManager =& new AccessKeyManager();
+
+				// Key lifetime is the typical review period plus four weeks
+				$keyLifetime = ($journal->getSetting('numWeeksPerReview') + 4) * 7;
+
+				$email->addPrivateParam('ACCESS_KEY', $accessKeyManager->createKey('ReviewerContext', $reviewer->getUserId(), $reviewId, $keyLifetime));
+			}
 			$email->send();
 
 			$reviewAssignment->setDateReminded(Core::getCurrentDate());
@@ -365,18 +375,7 @@ class SectionEditorAction extends Action {
 				if (!isset($reviewer)) return true;
 				$email->addRecipient($reviewer->getEmail(), $reviewer->getFullName());
 
-				$submissionUrlParams = array();
-				if ($reviewerAccessKeysEnabled) {
-					import('security.AccessKeyManager');
-					import('pages.reviewer.ReviewerHandler');
-					$accessKeyManager =& new AccessKeyManager();
-
-					// Key lifetime is the typical review period plus four weeks
-					$keyLifetime = ($journal->getSetting('numWeeksPerReview') + 4) * 7;
-
-					$submissionUrlParams['key'] = $accessKeyManager->createKey('ReviewerContext', $reviewer->getUserId(), $reviewId, $keyLifetime);
-				}
-				$submissionUrl = Request::url(null, 'reviewer', 'submission', $reviewId, $submissionUrlParams);
+				$submissionUrl = Request::url(null, 'reviewer', 'submission', $reviewId, array('key' => 'ACCESS_KEY'));
 				
 				//
 				// FIXME: Assign correct values!

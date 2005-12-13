@@ -171,9 +171,9 @@ class ReviewerSubmissionDAO extends DAO {
 		$sql = 'SELECT a.*, r.*, r2.review_revision, u.first_name, u.last_name, s.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, s.abbrev AS section_abbrev, s.abbrev_alt1 AS section_abbrev_alt1, s.abbrev_alt2 AS section_abbrev_alt2 FROM articles a LEFT JOIN review_assignments r ON (a.article_id = r.article_id) LEFT JOIN sections s ON (s.section_id = a.section_id) LEFT JOIN users u ON (r.reviewer_id = u.user_id) LEFT JOIN review_rounds r2 ON (r.article_id = r2.article_id AND r.round = r2.round)  WHERE a.journal_id = ? AND r.reviewer_id = ? AND r.date_notified IS NOT NULL';
 
 		if ($active) {
-			$sql .=  ' AND r.date_completed IS NULL AND (r.cancelled = 0 OR r.cancelled IS NULL)';
+			$sql .=  ' AND r.date_completed IS NULL AND r.declined <> 1 AND (r.cancelled = 0 OR r.cancelled IS NULL)';
 		} else {
-			$sql .= ' AND (r.date_completed IS NOT NULL OR r.cancelled = 1)';
+			$sql .= ' AND (r.date_completed IS NOT NULL OR r.cancelled = 1 OR r.declined = 1)';
 		}
 
 		$result = &$this->retrieveRange($sql, array($journalId, $reviewerId), $rangeInfo);

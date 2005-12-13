@@ -84,9 +84,6 @@ class ArticleMailTemplate extends MailTemplate {
 		$this->assignParams($paramArray);
 		
 		$ret = $this->send();
-		if ($ret) {
-			$this->log();
-		}
 		
 		$this->setSubject($savedSubject);
 		$this->setBody($savedBody);

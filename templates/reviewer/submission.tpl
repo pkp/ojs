@@ -46,7 +46,7 @@ function confirmSubmissionCheck() {
 	<td class="value">{$submission->getArticleAbstract()|strip_unsafe_html|nl2br}</td>
 </tr>
 {assign var=editAssignments value=$submission->getEditAssignments()}
-{foreach from=$editAssignments item=$editAssignment}
+{foreach from=$editAssignments item=editAssignment}
 	{if !$notFirstEditAssignment}
 		{assign var=notFirstEditAssignment value=1}
 		<tr valign="top">

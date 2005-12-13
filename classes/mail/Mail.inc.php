@@ -17,14 +17,33 @@ define('MAIL_EOL', Core::isWindows() ? "\r\n" : "\n");
 define('MAIL_WRAP', 76);
 
 class Mail extends DataObject {
+	/** @var array List of key => value private parameters for this message */
+	var $privateParams;
 
 	/**
 	 * Constructor.
 	 */
 	function Mail() {
 		parent::DataObject();
+		$this->privateParams = array();
 	}
-	
+
+	/**
+	 * Add a private parameter to this email. Private parameters are replaced
+	 * just before sending and are never available via getBody etc.
+	 */
+	function addPrivateParam($name, $value) {
+		$this->privateParams[$name] = $value;
+	}
+
+	/**
+	 * Set the entire list of private parameters.
+	 * @see addPrivateParam
+	 */
+	function setPrivateParams($privateParams) {
+		$this->privateParams = $privateParams;
+	}
+
 	function addRecipient($email, $name = '') {
 		if (($recipients = $this->getData('recipients')) == null) {
 			$recipients = array();
@@ -365,6 +384,13 @@ class Mail extends DataObject {
 		}
 
 		if (HookRegistry::call('Mail::send', array(&$this, &$recipients, &$subject, &$mailBody, &$headers, &$additionalParameters))) return;
+
+		// Replace all the private parameters for this message.
+		if (is_array($this->privateParams)) {
+			foreach ($this->privateParams as $name => $value) {
+				$mailBody = str_replace($name, $value, $mailBody);
+			}
+		}
 
 		if (Config::getVar('email', 'smtp')) {
 			static $smtp = null;
