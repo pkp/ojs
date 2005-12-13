@@ -136,7 +136,7 @@
 				</tr>
 				<tr valign="top">
 					<td>
-						{url|assign:"reviewiUrl" op="notifyReviewer" reviewId=$reviewAssignment->getReviewId() articleId=$submission->getArticleId()}
+						{url|assign:"reviewUrl" op="notifyReviewer" reviewId=$reviewAssignment->getReviewId() articleId=$submission->getArticleId()}
 						{if $reviewAssignment->getDateNotified()}
 							{$reviewAssignment->getDateNotified()|date_format:$dateFormatShort}
 							{if !$reviewAssignment->getDateCompleted()}
