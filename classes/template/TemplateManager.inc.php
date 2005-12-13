@@ -561,7 +561,11 @@ class TemplateManager extends Smarty {
 	 */
 	function smartyAssign($value, $varName) {
 		if (isset($varName)) {
-			$this->assign($varName, $value);
+			// NOTE: CANNOT use $this, as it's actually
+			// a COPY of the real template manager!
+			// FIXME: Track this bug down. (Smarty?)
+			$templateMgr =& TemplateManager::getManager();
+			$templateMgr->assign($varName, $value);
 		}
 	}
 }
