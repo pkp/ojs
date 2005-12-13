@@ -84,7 +84,7 @@ class ManagerHandler extends Handler {
 	 */
 	function validate() {
 		parent::validate();
-		if (!Validation::isJournalManager()) {
+		if (!Validation::isJournalManager() && !Validation::isSiteAdmin()) {
 			Validation::redirectLogin();
 		}
 	}
