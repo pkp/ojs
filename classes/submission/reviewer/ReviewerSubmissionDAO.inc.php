@@ -197,7 +197,7 @@ class ReviewerSubmissionDAO extends DAO {
 		$result = &$this->retrieve($sql, array($journalId, $reviewerId));
 
 		while (!$result->EOF) {
-			if ($result->fields['date_completed'] == null && $result->fields['cancelled'] != 1) {
+			if ($result->fields['date_completed'] == null && $result->fields['declined'] != 1 && $result->fields['cancelled'] != 1) {
 				$submissionsCount[0] += 1;
 			} else {
 				$submissionsCount[1] += 1;

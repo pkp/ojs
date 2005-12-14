@@ -13,7 +13,7 @@
    be available as the user isn't actually logged in. Therefore we must check to
    see if the user object actually exists before displaying submission counts. *}
 
-{if $currentUser}
+{if $isUserLoggedIn}
 	<div class="block">
 		<span class="blockTitle">{translate key="user.role.reviewer"}</span>
 		<span class="blockSubtitle">{translate key="article.submissions"}</span>
