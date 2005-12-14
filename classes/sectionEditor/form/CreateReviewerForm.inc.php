@@ -40,6 +40,14 @@ class CreateReviewerForm extends Form {
 		$this->addCheck(new FormValidator($this, 'lastName', 'required', 'user.profile.form.lastNameRequired'));
 		$this->addCheck(new FormValidatorEmail($this, 'email', 'required', 'user.profile.form.emailRequired'));
 		$this->addCheck(new FormValidatorCustom($this, 'email', 'required', 'user.register.form.emailExists', array(DAORegistry::getDAO('UserDAO'), 'userExistsByEmail'), array(null, true), true));
+
+		// Provide a default for sendNotify: If we're using one-click
+		// reviewer access or email-based reviews, it's not necessary;
+		// otherwise, it should default to on.
+		$journal =& Request::getJournal();
+		$reviewerAccessKeysEnabled = $journal->getSetting('reviewerAccessKeysEnabled');
+		$isEmailBasedReview = $journal->getSetting('mailSubmissionsToReviewers')==1?true:false;
+		$this->setData('sendNotify', ($reviewerAccessKeysEnabled || $isEmailBasedReview)?false:true);
 	}
 	
 	/**

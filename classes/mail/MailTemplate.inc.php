@@ -43,6 +43,9 @@ class MailTemplate extends Mail {
 	/** @var $bccSender boolean whether or not to bcc the sender */
 	var $bccSender;
 
+	/** @var boolean Whether or not email fields are disabled */
+	var $addressFieldsEnabled;
+	
 	/**
 	 * Constructor.
 	 * @param $emailKey string unique identifier for the template
@@ -131,6 +134,27 @@ class MailTemplate extends Mail {
 		} else {
 			$this->attachmentsEnabled = false;
 		}
+
+		$this->addressFieldsEnabled = true;
+	}
+
+	/**
+	 * Disable or enable the address fields on the email form.
+	 * NOTE: This affects the displayed form ONLY; if disabling the address
+	 * fields, callers should manually clearAllRecipients and add/set
+	 * recipients just prior to sending.
+	 * @param $addressFieldsEnabled boolean
+	 */
+	function setAddressFieldsEnabled($addressFieldsEnabled) {
+		$this->addressFieldsEnabled = $addressFieldsEnabled;
+	}
+
+	/**
+	 * Get the enabled/disabled state of address fields on the email form.
+	 * @return boolean
+	 */
+	function getAddressFieldsEnabled() {
+		return $this->addressFieldsEnabled;
 	}
 
 	/**
@@ -225,6 +249,8 @@ class MailTemplate extends Mail {
 		$form->setData('blankCc', Request::getUserVar('blankCc'));
 		$form->setData('blankBcc', Request::getUserVar('blankBcc'));
 		$form->setData('from', $this->getFromString());
+
+		$form->setData('addressFieldsEnabled', $this->getAddressFieldsEnabled());
 
 		$user = &Request::getUser();
 		if ($user) {

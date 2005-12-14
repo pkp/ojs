@@ -73,7 +73,7 @@ class Mail extends DataObject {
 		return $this->getData('recipients');
 	}
 	
-	function setRecipients(&$recipients) {
+	function setRecipients($recipients) {
 		return $this->setData('recipients', $recipients);
 	}
 	
@@ -90,7 +90,7 @@ class Mail extends DataObject {
 		return $this->getData('ccs');
 	}
 
-	function setCcs(&$ccs) {
+	function setCcs($ccs) {
 		return $this->setData('ccs', $ccs);
 	}
 	
@@ -107,10 +107,19 @@ class Mail extends DataObject {
 		return $this->getData('bccs');
 	}
 	
-	function setBccs(&$bccs) {
+	function setBccs($bccs) {
 		return $this->setData('bccs', $bccs);
 	}
-	
+
+	/**
+	 * Clear all recipients for this message (To, CC, and BCC).
+	 */
+	function clearAllRecipients() {
+		$this->setRecipients(array());
+		$this->setCcs(array());
+		$this->setBccs(array());
+	}
+
 	function addHeader($name, $content) {
 		$updated = false;
 		

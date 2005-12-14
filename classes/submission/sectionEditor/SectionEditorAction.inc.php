@@ -192,9 +192,19 @@ class SectionEditorAction extends Action {
 		$isEmailBasedReview = $journal->getSetting('mailSubmissionsToReviewers')==1?true:false;
 		$reviewerAccessKeysEnabled = $journal->getSetting('reviewerAccessKeysEnabled');
 
+		// If we're using access keys, disable the address fields
+		// for this message. (Prevents security issue: section editor
+		// could CC or BCC someone else, or change the reviewer address,
+		// in order to get the access key.)
+		$preventAddressChanges = $reviewerAccessKeysEnabled;
+
 		import('mail.ArticleMailTemplate');
 
 		$email = &new ArticleMailTemplate($sectionEditorSubmission, $isEmailBasedReview?'REVIEW_REQUEST_ATTACHED':($reviewerAccessKeysEnabled?'REVIEW_REQUEST_ONECLICK':'REVIEW_REQUEST'), null, $isEmailBasedReview?true:null);
+
+		if ($preventAddressChanges) {
+			$email->setAddressFieldsEnabled(false);
+		}
 
 		if ($reviewAssignment->getArticleId() == $sectionEditorSubmission->getArticleId() && $reviewAssignment->getReviewFileId()) {
 			$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
@@ -215,6 +225,14 @@ class SectionEditorAction extends Action {
 						$email->addPrivateParam('ACCESS_KEY', $accessKeyManager->createKey('ReviewerContext', $reviewer->getUserId(), $reviewId, $keyLifetime));
 					}
 
+					if ($preventAddressChanges) {
+						// Ensure that this messages goes to the reviewer, and the reviewer ONLY.
+						$email->clearAllRecipients();
+						$email->setRecipients(array(
+							'name' => $reviewer->getFullName(),
+							'email' => $reviewer->getEmail()
+						));
+					}
 					$email->send();
 				}
 				
@@ -233,7 +251,7 @@ class SectionEditorAction extends Action {
 						$reviewDueDate = date('Y-m-d', strtotime('+2 week'));
 					}
 
-					$submissionUrl = Request::url(null, 'reviewer', 'submission', $reviewId, array('key' => 'ACCESS_KEY'));
+					$submissionUrl = Request::url(null, 'reviewer', 'submission', $reviewId, $reviewerAccessKeysEnabled?array('key' => 'ACCESS_KEY'):array());
 
 					$paramArray = array(
 						'reviewerName' => $reviewer->getFullName(),
@@ -375,7 +393,7 @@ class SectionEditorAction extends Action {
 				if (!isset($reviewer)) return true;
 				$email->addRecipient($reviewer->getEmail(), $reviewer->getFullName());
 
-				$submissionUrl = Request::url(null, 'reviewer', 'submission', $reviewId, array('key' => 'ACCESS_KEY'));
+				$submissionUrl = Request::url(null, 'reviewer', 'submission', $reviewId, $reviewerAccessKeysEnabled?array('key' => 'ACCESS_KEY'):array());
 				
 				//
 				// FIXME: Assign correct values!

@@ -37,6 +37,7 @@ function deleteAttachment(fileId) {
 {include file="common/formErrors.tpl"}
 
 <table class="data" width="100%">
+{if $addressFieldsEnabled}
 <tr valign="top">
 	<td width="20%" class="label"><label for="to">{translate key="email.to"}</label></td>
 	<td width="80%" class="value">
@@ -92,6 +93,9 @@ function deleteAttachment(fileId) {
 		<input type="submit" name="blankCc" class="button" value="{translate key="email.addCcRecipient"}"/>
 		<input type="submit" name="blankBcc" class="button" value="{translate key="email.addBccRecipient"}"/>
 	</td>
+</tr>
+{/if}{* addressFieldsEnabled *}
+
 {if $attachmentsEnabled}
 <tr valign="top">
 	<td colspan="2">&nbsp;</td>

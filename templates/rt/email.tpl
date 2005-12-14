@@ -58,6 +58,7 @@ function deleteAttachment(fileId) {
 {/if}
 
 <table class="data" width="100%">
+{if $addressFieldsEnabled}
 <tr valign="top">
 	<td class="label" width="20%">{fieldLabel name="to" key="email.to"}</td>
 	<td width="80%" class="value">
@@ -112,6 +113,8 @@ function deleteAttachment(fileId) {
 		{/if}
 	</td>
 </tr>
+{/if}{* addressFieldsEnabled *}
+
 {if $attachmentsEnabled}
 <tr valign="top">
 	<td colspan="2">&nbsp;</td>
