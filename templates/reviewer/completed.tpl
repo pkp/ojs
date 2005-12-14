@@ -10,18 +10,16 @@
  *}
 
 <table class="listing" width="100%">
-	<tr><td colspan="8" class="headseparator">&nbsp;</td></tr>
+	<tr><td colspan="6" class="headseparator">&nbsp;</td></tr>
 	<tr class="heading" valign="bottom">
 		<td width="5%">{translate key="common.id"}</td>
-		<td width="5%"><span class="disabled">MM-DD</span><br />{translate key="common.assigned"}</td>
-		<td width="5%">{translate key="submissions.sec"}</td>
+		<td width="10%"><span class="disabled">MM-DD</span><br />{translate key="common.assigned"}</td>
+		<td width="10%">{translate key="submissions.sec"}</td>
 		<td width="35%">{translate key="article.title"}</td>
-		<td width="25%">{translate key="editor.article.decision"}</td>
-		<td width="5%">{translate key="submissions.completed"}</td>
-		<td width="10%">{translate key="common.status"}</td>
-		<td width="10%">{translate key="submissions.reviewRound"}</td>
+		<td width="20%">{translate key="submission.review"}</td>
+		<td width="20%">{translate key="submission.editorDecision"}</td>
 	</tr>
-	<tr><td colspan="8" class="headseparator">&nbsp;</td></tr>
+	<tr><td colspan="6" class="headseparator">&nbsp;</td></tr>
 {iterate from=submissions item=submission}
 	{assign var="articleId" value=$submission->getArticleId()}
 	{assign var="reviewId" value=$submission->getReviewId()}
@@ -30,7 +28,29 @@
 		<td>{$articleId}</td>
 		<td>{$submission->getDateNotified()|date_format:$dateFormatTrunc}</td>
 		<td>{$submission->getSectionAbbrev()|escape}</td>
-		<td><a href="{url op="submission" path=$reviewId}" class="action">{$submission->getArticleTitle()|strip_unsafe_html|truncate:60:"..."}</a></td>
+		<td>{if !$submission->getDeclined()}<a href="{url op="submission" path=$reviewId}" class="action">{/if}{$submission->getArticleTitle()|strip_unsafe_html|truncate:60:"..."}{if !$submission->getDeclined()}</a>{/if}</td>
+		<td>
+			{if $submission->getDeclined()}
+				{translate key="sectionEditor.regrets"}
+			{else}
+				{assign var=recommendation value=$submission->getRecommendation()}
+				{if $recommendation == SUBMISSION_REVIEWER_RECOMMENDATION_ACCEPT}
+					{translate key="reviewer.article.decision.accept"}
+				{elseif $recommendation == SUBMISSION_REVIEWER_RECOMMENDATION_PENDING_REVISIONS}
+					{translate key="reviewer.article.decision.pendingRevisions"}
+				{elseif $recommendation == SUBMISSION_REVIEWER_RECOMMENDATION_RESUBMIT_HERE}
+					{translate key="reviewer.article.decision.resubmitHere"}
+				{elseif $recommendation == SUBMISSION_REVIEWER_RECOMMENDATION_RESUBMIT_ELSEWHERE}
+					{translate key="reviewer.article.decision.resubmitElsewhere"}
+				{elseif $recommendation == SUBMISSION_REVIEWER_RECOMMENDATION_DECLINE}
+					{translate key="reviewer.article.decision.decline"}
+				{elseif $recommendation == SUBMISSION_REVIEWER_RECOMMENDATION_SEE_COMMENTS}
+					{translate key="reviewer.article.decision.seeComments"}
+				{else}
+					&mdash;
+				{/if}
+			{/if}
+		</td>
 		<td>
 			{if $submission->getCancelled() || $submission->getDeclined()}
 				&mdash;
@@ -53,44 +73,18 @@
 			{/foreach}
 			{/if}
 		</td>
-		<td>
-			{if $submission->getDeclined()}
-				{translate key="submissions.declined"}
-			{elseif $submission->getCancelled()}
-				{translate key="common.cancelled"}
-			{else}
-				{$submission->getDateCompleted()|date_format:$dateFormatTrunc|default:"&mdash;"}
-			{/if}
-		</td>
-		<td>
-			{assign var="status" value=$submission->getStatus()}
-			{if $submission->getCancelled() || $submission->getDeclined()}
-				{translate  key="common.notApplicableShort"}
-			{elseif $status == STATUS_ARCHIVED}
-				{translate key="submissions.archived"}
-			{elseif $status == STATUS_QUEUED}
-				{translate key="submissions.queued"}
-			{elseif $status == STATUS_SCHEDULED}
-				{translate key="submissions.scheduled"}
-			{elseif $status == STATUS_PUBLISHED}
-				{print_issue_id articleId="$articleId"}			
-			{elseif $status == STATUS_DECLINED}
-				{translate key="submissions.declined"}								
-			{/if}
-		</td>
-		<td>{$submission->getRound()}</td>
 	</tr>
 
 	<tr>
-		<td colspan="8" class="{if $submissions->eof()}end{/if}separator">&nbsp;</td>
+		<td colspan="6" class="{if $submissions->eof()}end{/if}separator">&nbsp;</td>
 	</tr>
 {/iterate}
 {if $submissions->wasEmpty()}
 	<tr>
-		<td colspan="8" class="nodata">{translate key="submissions.noSubmissions"}</td>
+		<td colspan="6" class="nodata">{translate key="submissions.noSubmissions"}</td>
 	</tr>
 	<tr>
-		<td colspan="8" class="endseparator">&nbsp;</td>
+		<td colspan="6" class="endseparator">&nbsp;</td>
 	</tr>
 {else}
 	<tr>
