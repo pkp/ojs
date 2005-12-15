@@ -274,7 +274,7 @@ class SubmitHandler extends AuthorHandler {
 		$journal = &Request::getJournal();
 
 		if ($step !== false && ($step < 1 || $step > 5 || (!isset($articleId) && $step != 1))) {
-			Request::redirect(null, null, 'track');
+			Request::redirect(null, null, 'submit', array(1));
 		}
 
 		$article = null;
