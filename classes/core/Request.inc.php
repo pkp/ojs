@@ -576,7 +576,7 @@ class Request {
 		$pathString = '';
 		if ($pathInfoDisabled) {
 			if (!empty($path)) $pathString = '&path[]=' . implode('&path[]=', $path);
-			$baseParams = "$anchor?journal=$journalPath";
+			$baseParams = "?journal=$journalPath";
 			if (!empty($page)) {
 				$baseParams .= "&page=$page";
 				if (!empty($op)) {
@@ -592,10 +592,9 @@ class Request {
 					$baseParams .= "/$op";
 				}
 			}
-			$baseParams .= $anchor;
 		}
 
-		return Request::getIndexUrl() . $baseParams . $pathString . $additionalParams;
+		return Request::getIndexUrl() . $baseParams . $pathString . $additionalParams . $anchor;
 	}
 }
 

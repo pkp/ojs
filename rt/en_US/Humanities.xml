@@ -17,9 +17,9 @@
 	<version_description>The Reading Tools can help readers of this study consult a wide range of related resources that can provide a context for interpreting, situating and evaluating the study.</version_description>
 
 	<context>
-		<context_title>Author's Other Works</context_title>
+		<context_title>Author&#039;s Other Works</context_title>
 		<context_abbrev>Other Works</context_abbrev>
-		<context_description>Identify other works by the article's author(s) by using OAI engines.</context_description>
+		<context_description>Identify other works by the article&#039;s author(s) by using OAI engines.</context_description>
 		<author_terms />
 		<search>
 			<search_title>OAIster (Open Archives Inititive research databases)</search_title>
@@ -51,7 +51,7 @@
 		</search>
 		<search>
 			<search_title>IATH: Institute for Advanced Technology in the Humanities</search_title>
-			<search_description>IATH: Institute for Advanced Technology in the Humanities, from the University of Virginia at Charlottesville, provides access to web-based humanities research archives and reports, essays, and the current issue of Postmodern Culture, the Internet's oldest peer-reviewed electronic journal in the humanities.</search_description>
+			<search_description>IATH: Institute for Advanced Technology in the Humanities, from the University of Virginia at Charlottesville, provides access to web-based humanities research archives and reports, essays, and the current issue of Postmodern Culture, the Internet&#039;s oldest peer-reviewed electronic journal in the humanities.</search_description>
 			<url>http://jefferson.village.virginia.edu/</url>
 			<search_url>http://www.google.com/u/iath?sa=Google+Search+of+IATH&amp;domains=village.virginia.edu&amp;sitesearch=village.virginia.edu&amp;q=</search_url>
 			
@@ -92,7 +92,7 @@
 		</search>
 		<search>
 			<search_title>Merriam-Webster Online</search_title>
-			<search_description>A dictionary based on the Webster 10th Collegiate edition, 1993, with updates added annually. More than 160,000 entries. Each word is accompanied by definition, pronunciation, usage, grammatical function, and a brief etymology. Includes a thesaurus. Misspellings return suggested spellings. The dictionary's search system supports internal wildcards and right hand truncation searching. Includes an extensive pronunciation guide and sound files for the pronunciation of many terms.</search_description>
+			<search_description>A dictionary based on the Webster 10th Collegiate edition, 1993, with updates added annually. More than 160,000 entries. Each word is accompanied by definition, pronunciation, usage, grammatical function, and a brief etymology. Includes a thesaurus. Misspellings return suggested spellings. The dictionary&#039;s search system supports internal wildcards and right hand truncation searching. Includes an extensive pronunciation guide and sound files for the pronunciation of many terms.</search_description>
 			<url>http://www.merriam-webster.com/</url>
 			<search_url>http://www.merriam-webster.com/cgi-bin/dictionary?book=Dictionary&amp;va=</search_url>
 			
@@ -118,26 +118,15 @@
 			<search_url>http://www.cogsci.princeton.edu/cgi-bin/webwn2.0?stage=1&amp;word=</search_url>
 			
 		</search>
-		<search>
-			<search_title>Wikipedia: The Free Encyclopedia</search_title>
-			<search_description>"Wikipedia is a free content encyclopedia that is being written collaboratively by contributors from all around the world. The site is a WikiWiki, meaning that anyone ... can edit any article. ..." Without editorial oversight, the quality of the content on this site varies dramatically, but it is worth exploring. The English version has hundreds of thousands of entries. Spanish, French, and Esperanto are among the several other languages offered.</search_description>
-			<url>http://en.wikipedia.org/wiki/Main_Page</url>
-			<search_url>http://en.wikipedia.org/wiki/Special:Search?go=Go&amp;fulltext=Search&amp;search=</search_url>
-		</search>
-		<search>
-			<search_title>Infoplease.com</search_title>
-			<search_description>This site includes contents of the Information Please Almanacs, a biography database, a dictionary, an atlas, and articles from the Columbia Encyclopedia. You can search these ready reference works together or separately or browse the Almanacs. There are feature stories each week covering topics in the news, with links to pertinent Almanac content and other Web resources.</search_description>
-			<url>http://www.infoplease.com</url>
-			<search_url>http://www.infoplease.com/search?fr=iptn&amp;in=all&amp;x=0&amp;y=0&amp;query=</search_url>
-		</search>
 	</context>
 	<context>
-		<context_title>Government Policy</context_title>
-		<context_abbrev>Gov Policy</context_abbrev>
+		<context_title>Government</context_title>
+		<context_abbrev>Government</context_abbrev>
 		<context_description>Check various government resources.</context_description>
+
 		<search>
 			<search_title>Access to Australian Government Information and Services</search_title>
-			<search_description><![CDATA[The Australian Government Entry Point offers comprehensive and integrated access to Australian Government information and services.  You will find a concentrated body of Australian Government information through this site. <a href="http://www.australia.gov.au">www.australia.gov.au</a> currently signposts over 700 Australian Government web sites, indexes more than 5,000,000 pages and uses both metadata and full text indexing to ensure it is a comprehensive government portal.]]></search_description>
+			<search_description>The Australian Government Entry Point offers comprehensive and integrated access to Australian Government information and services.  You will find a concentrated body of Australian Government information through this site. &lt;a href=&quot;http://www.australia.gov.au&quot;&gt;www.australia.gov.au&lt;/a&gt; currently signposts over 700 Australian Government web sites, indexes more than 5,000,000 pages and uses both metadata and full text indexing to ensure it is a comprehensive government portal.</search_description>
 			<url>http://www.fed.gov.au</url>
 			<search_url>http://govsearch.australia.gov.au/search/search.cgi?collection=gov&amp;form=au&amp;query=&amp;query_phrase=&amp;query_or=&amp;query_not=&amp;meta_f_sand=&amp;scope=&amp;fscope=512&amp;num_ranks=20&amp;chksummary=chksummary&amp;query_and=</search_url>
 			
@@ -147,65 +136,103 @@
 			<search_description>Includes links to Canadian government libraries, federal documents and news releases, publications catalogues, and provincial governments. Most information is in English, but some of the linked material is in French, or a combination of French and English.</search_description>
 			<url>http://www.nlc-bnc.ca/8/4/index-e.html</url>
 			<search_url>http://www.collectionscanada.ca/search/006001-110.01-e.php?q%5B1%5D=pagelevel%3A1&amp;q%5B2%5D=&amp;x=15&amp;y=13&amp;q%5B0%5D=</search_url>
+			
 		</search>
 		<search>
 			<search_title>Directgov</search_title>
 			<search_description>Directgov is a government service giving people access to the latest and widest range of public service information in one place on the Web and on Digital TV. Directgov uses the specifications formulated and consulted on through UK GovTalk.</search_description>
 			<url>http://www.direct.gov.uk</url>
 			<search_url>http://www.direct.gov.uk/AdvancedSearch/SearchResults/fs/en?NP=1&amp;PO1=C&amp;PI1=W&amp;PF1=A&amp;PG=1&amp;RP=20&amp;SC=__dgov_site&amp;Z=1&amp;PT1=</search_url>
+			
 		</search>
 		<search>
 			<search_title>Info4local.gov.uk</search_title>
 			<search_description>Information for local government from central government.  This site gives local authorities a quick and easy way to find relevant information on the web sites of central government departments, agencies and public bodies. It includes extensive information on implementing electronic government.</search_description>
 			<url>http://www.info4local.gov.uk</url>
 			<search_url>http://www.info4local.gov.uk/searchresults.asp?formname=frmAdvanced&amp;keywordstype=1&amp;month=&amp;year=&amp;pub=1&amp;news=1&amp;links=1&amp;allsubjects=1&amp;alldepts=1&amp;alldoctypes=1&amp;keywords=</search_url>
+			
 		</search>
 		<search>
 			<search_title>The New Zealand government portal</search_title>
 			<search_description>The New Zealand government portal is a website providing search capability for, and links into the online and offline information and services of most government agencies.  This site is managed and maintained by the State Services Commission, a New Zealand government department.</search_description>
 			<url>http://www.govt.nz</url>
 			<search_url>http://www.govt.nz/search?type=spider&amp;t=spider&amp;q=</search_url>
+			
 		</search>
 		<search>
 			<search_title>Europa</search_title>
 			<search_description>Current information on the member countries of the European Union, including statistical data, policies, news, official documents, legal texts, and other publications.</search_description>
 			<url>http://europa.eu.int/index_en.htm</url>
 			<search_url>http://europa.eu.int/geninfo/query/engine/search/query.pl?action=FilterSearch&amp;filter=europaflt.hts&amp;Collection=fullEUROPA&amp;ResultTemplate=europarslt_ascii.hts&amp;ResultCount=25&amp;ResultMaxDocs=200&amp;DefaultLG=en&amp;ViewTemplate=europaview.hts&amp;QueryText=</search_url>
+			
 		</search>
 		<search>
 			<search_title>The Global Legal Information Network (GLIN)</search_title>
 			<search_description>The Global Legal Information Network (GLIN) is a database of laws, regulations, judicial decisions, and other complementary legal sources contributed by governmental agencies and international organizations. These GLIN members contribute the official full texts of published documents to the database in their original language. Each document is accompanied by a summary in English and subject terms selected from the multilingual index to GLIN.</search_description>
 			<url>http://www.glin.gov</url>
 			<search_url>http://www.glin.gov/search.do?refineQuery=&amp;offset=0&amp;refineQueryType=&amp;fromSearch=true&amp;queryType=ALL&amp;searchBtn=Search&amp;includeAllFields=on&amp;searchAll=on&amp;sumLanguage=any&amp;pubLanguage=any&amp;pubJurisdiction=any&amp;publicationJurisdictionExclude=false&amp;searchPublicationDate=true&amp;dateFromDay=01&amp;dateFromMonth=01&amp;dateFromYear=&amp;dateToDay=01&amp;dateToMonth=01&amp;dateToYear=&amp;subjTerm=&amp;subjTermConjunction%5B0%5D=AND&amp;subjTerm=&amp;subjTermConjunction%5B1%5D=AND&amp;subjTerm=&amp;subjTermConjunction%5B2%5D=AND&amp;subjTerm=&amp;subjTermConjunction%5B3%5D=AND&amp;subjTerm=&amp;searchOrder=default&amp;hitsPerPage=10&amp;showSummary=on&amp;queryString=</search_url>
+			
 		</search>
 	</context>
 	<context>
 		<context_title>Book</context_title>
 		<context_abbrev>Book</context_abbrev>
 		<context_description>Book-related Resources</context_description>
+
 		<search>
 			<search_title>Google Print</search_title>
-			<search_description>Google is working with libraries at the University of Michigan, Harvard University, Stanford University, Oxford University and the New York Public Library to digitize books in their collections and make them accessible via Google Print, a massive scanning project that will bring millions of volumes of printed books into the Google Print database.  Click a book title and you'll see the page of the book that has your search terms, your can search for more information within that specific book, find reviews, find related information, learn about the publisher, buy this book, and find nearby libraries that have it.</search_description>
+			<search_description>Google is working with libraries at the University of Michigan, Harvard University, Stanford University, Oxford University and the New York Public Library to digitize books in their collections and make them accessible via Google Print, a massive scanning project that will bring millions of volumes of printed books into the Google Print database.  Click a book title and you&#039;ll see the page of the book that has your search terms, your can search for more information within that specific book, find reviews, find related information, learn about the publisher, buy this book, and find nearby libraries that have it.</search_description>
 			<url>http://print.google.com</url>
 			<search_url>http://print.google.com/print?q=</search_url>
+			
 		</search>
 		<search>
 			<search_title>Online Books Page</search_title>
-			<search_description><![CDATA[Online Books Page, edited by John Mark Ockerbloom, at the University of Pennsylvania.  This is an excellent starting point in the search for full-text books on the Internet. Over 20,000 English works in various formats available online at different sites. Entries may be searched by author or title. An interesting feature allows browsing by Library of Congress call number categories. New listings are added regularly and are listed on a separate web page at <a href="http://onlinebooks.library.upenn.edu/new.html">http://onlinebooks.library.upenn.edu/new.html</a>.]]></search_description>
+			<search_description>Online Books Page, edited by John Mark Ockerbloom, at the University of Pennsylvania.  This is an excellent starting point in the search for full-text books on the Internet. Over 20,000 English works in various formats available online at different sites. Entries may be searched by author or title. An interesting feature allows browsing by Library of Congress call number categories. New listings are added regularly and are listed on a separate web page at &lt;a href=&quot;http://onlinebooks.library.upenn.edu/new.html&quot;&gt;http://onlinebooks.library.upenn.edu/new.html&lt;/a&gt;.</search_description>
 			<url>http://digital.library.upenn.edu/books/</url>
 			<search_url>http://onlinebooks.library.upenn.edu/webbin/book/search?tmode=words&amp;title=</search_url>
+			
 		</search>
 		<search>
 			<search_title>Books-On-Line</search_title>
 			<search_description>A collection of over 32935 titles, although some are only excerpts. Browse by subject or search by author or title. Not all items are free.</search_description>
 			<url>http://www.books-on-line.com/</url>
 			<search_url>http://www.books-on-line.com/bol/KeyWordSearch.cfm?RowCount=50&amp;Searchquery=</search_url>
+			
 		</search>
 		<search>
 			<search_title>Universal Library</search_title>
 			<search_description>The Universal Library is considerably more involved, and more ambitious -- it has amassed a collection of 100,000 e-books (some of them from Project Gutenberg), and is aiming for 1 million e-books by the end of 2006.</search_description>
 			<url>http://delta.ulib.org/html/index.html</url>
 			<search_url>http://serv.ul.cs.cmu.edu/cgi-bin/srcfull.pl?search=</search_url>
+			
+		</search>
+	</context>
+	<context>
+		<context_title>Dictionary</context_title>
+		<context_abbrev>Dictionary</context_abbrev>
+		<context_description>Find definitions for terms using these resources.</context_description>
+
+		<search>
+			<search_title>Wikipedia: The Free Encyclopedia</search_title>
+			<search_description>&quot;Wikipedia is a free content encyclopedia that is being written collaboratively by contributors from all around the world. The site is a WikiWiki, meaning that anyone ... can edit any article. ...&quot; Without editorial oversight, the quality of the content on this site varies dramatically, but it is worth exploring. The English version has hundreds of thousands of entries. Spanish, French, and Esperanto are among the several other languages offered.</search_description>
+			<url>http://en.wikipedia.org/wiki/Main_Page</url>
+			<search_url>http://en.wikipedia.org/wiki/Special:Search?go=Go&amp;fulltext=Search&amp;search=</search_url>
+			
+		</search>
+		<search>
+			<search_title>Infoplease.com</search_title>
+			<search_description>This site includes contents of the Information Please Almanacs, a biography database, a dictionary, an atlas, and articles from the Columbia Encyclopedia. You can search these ready reference works together or separately or browse the Almanacs. There are feature stories each week covering topics in the news, with links to pertinent Almanac content and other Web resources.</search_description>
+			<url>http://www.infoplease.com</url>
+			<search_url>http://www.infoplease.com/search?fr=iptn&amp;in=all&amp;x=0&amp;y=0&amp;query=</search_url>
+			
+		</search>
+		<search>
+			<search_title>Dictionary of Canadian Biography Online</search_title>
+			<search_description>A collection of authoritative biographies portraying noteworthy persons of both sexes (with the exception of those still living). This first phase presents persons who died between the years 1000 and 1920</search_description>
+			<url>http://www.biographi.ca/EN/index.html</url>
+			<search_url>http://www.biographi.ca/EN/Results.asp?ToDo=&amp;Show=&amp;Data1=&amp;Data2=&amp;Data3=&amp;Data4=&amp;Data5=&amp;Data6=&amp;&amp;Data7=&amp;Data8=&amp;Data9=&amp;Data10=&amp;txtSearch=</search_url>
+			
 		</search>
 	</context>
 	<context>
@@ -215,7 +242,7 @@
 
 		<search>
 			<search_title>Internet Public Library Online Literary Criticism Collection</search_title>
-			<search_description>Browse the Internet Public Library's collection of links to websites on western and non-western literary criticism. Organized by author, title of work studied and by literary period within a particular national tradition.</search_description>
+			<search_description>Browse the Internet Public Library&#039;s collection of links to websites on western and non-western literary criticism. Organized by author, title of work studied and by literary period within a particular national tradition.</search_description>
 			<url>http://www.ipl.org/div/litcrit/</url>
 			<search_url>http://www.ipl.org/div/searchresults/?where=searchresults&amp;words=</search_url>
 			
@@ -256,7 +283,7 @@
 		</search>
 		<search>
 			<search_title>Early Modern Literary Studies</search_title>
-			<search_description>Early Modern Literary Studies (ISSN 1201-2459) is a refereed journal serving as a formal arena for scholarly discussion and as an academic resource for researchers in the area. Articles in EMLS examine English literature, literary culture, and language during the sixteenth and seventeenth centuries; responses to published papers are also published as part of a Readers' Forum. Reviews evaluate recent work as well as academic tools of interest to scholars in the field. EMLS is committed to gathering and to maintaining links to the most useful and comprehensive internet resources for Renaissance scholars, including archives, electronic texts, discussion groups, and beyond.</search_description>
+			<search_description>Early Modern Literary Studies (ISSN 1201-2459) is a refereed journal serving as a formal arena for scholarly discussion and as an academic resource for researchers in the area. Articles in EMLS examine English literature, literary culture, and language during the sixteenth and seventeenth centuries; responses to published papers are also published as part of a Readers&#039; Forum. Reviews evaluate recent work as well as academic tools of interest to scholars in the field. EMLS is committed to gathering and to maintaining links to the most useful and comprehensive internet resources for Renaissance scholars, including archives, electronic texts, discussion groups, and beyond.</search_description>
 			<url>http://www.shu.ac.uk/emls/emlshome.html</url>
 			<search_url>http://www.shu.ac.uk/cgi-bin/htsearch?method=and&amp;format=builtin-long&amp;sort=score&amp;matchesperpage=10&amp;config=emls&amp;restrict=&amp;exclude=&amp;words=</search_url>
 			
@@ -267,18 +294,6 @@
 		<context_abbrev>Related Studies</context_abbrev>
 		<context_description>Access to related studies by establishing a working link with an open-access (free) database, with abstracts and/or full texts related to your topic.</context_description>
 
-		<search>
-			<search_title>Catholic Encyclopedia</search_title>
-			<search_description>Contains full and authoritative information on Catholic interests, action, and doctrine.</search_description>
-			<url>http://www.newadvent.org/cathen/</url>
-			<search_url>http://www.archiveshub.ac.uk/cgi-bin/deadsearch.cgi?server=SF&amp;fieldidx1=descriptionWord&amp;bool=AND&amp;numreq=25&amp;firstrec=1&amp;format=sgml&amp;norames=0&amp;fieldcont1=</search_url>
-		</search>
-		<search>
-			<search_title>Dictionary of Canadian Biography Online</search_title>
-			<search_description>A collection of authoritative biographies portraying noteworthy persons of both sexes (with the exception of those still living). This first phase presents persons who died between the years 1000 and 1920</search_description>
-			<url>http://www.biographi.ca/EN/index.html</url>
-			<search_url>http://www.biographi.ca/EN/Results.asp?ToDo=&amp;Show=&amp;Data1=&amp;Data2=&amp;Data3=&amp;Data4=&amp;Data5=&amp;Data6=&amp;&amp;Data7=&amp;Data8=&amp;Data9=&amp;Data10=&amp;txtSearch=</search_url>
-		</search>
 		<search>
 			<search_title>Anthropological index</search_title>
 			<search_description>The Anthropological Index is a regionally arranged subject and author index to periodical articles in all areas of anthropology. It is produced by the Museum of Mankind Library.</search_description>
@@ -294,15 +309,8 @@
 			
 		</search>
 		<search>
-			<search_title>Humbul Humanities Hub</search_title>
-			<search_description>Humbul Humanities Hub is a directory of Internet resources in each of the following areas: archaeology, classics, history, philosophy, history and philosophy of science, religion and theology, American studies, humanities computing, linguistics, languages, and literature. Developed for the United Kingdom's higher education community, it is a good tool for anyone doing research in the humanities on the Web.</search_description>
-			<url>http://www.humbul.ac.uk/about/</url>
-			<search_url>http://www.humbul.ac.uk/search/search2.php?go=Go&amp;type=and&amp;keyword=</search_url>
-			
-		</search>
-		<search>
 			<search_title>IATH: Institute for Advanced Technology in the Humanities</search_title>
-			<search_description>IATH: Institute for Advanced Technology in the Humanities, from the University of Virginia at Charlottesville, provides access to web-based humanities research archives and reports, essays, and the current issue of Postmodern Culture, the Internet's oldest peer-reviewed electronic journal in the humanities.</search_description>
+			<search_description>IATH: Institute for Advanced Technology in the Humanities, from the University of Virginia at Charlottesville, provides access to web-based humanities research archives and reports, essays, and the current issue of Postmodern Culture, the Internet&#039;s oldest peer-reviewed electronic journal in the humanities.</search_description>
 			<url>http://jefferson.village.virginia.edu/</url>
 			<search_url>http://www.google.com/u/iath?sa=Google+Search+of+IATH&amp;domains=village.virginia.edu&amp;sitesearch=village.virginia.edu&amp;q=</search_url>
 			
@@ -343,7 +351,7 @@
 
 		<search>
 			<search_title>CRL Foreign Doctoral Dissertation Database</search_title>
-			<search_description>The CRL's (Center For Research Libraries) database for dissertations published outside of the United States and Canada is still in the construction phase. At this point, a total of 15,000 of 750,000 records are loaded into the database. Searchable by author, institution name, title, year, translated title, subject keywords, language, and country, the database also provides instructions for interlibrary loan procedure.</search_description>
+			<search_description>The CRL&#039;s (Center For Research Libraries) database for dissertations published outside of the United States and Canada is still in the construction phase. At this point, a total of 15,000 of 750,000 records are loaded into the database. Searchable by author, institution name, title, year, translated title, subject keywords, language, and country, the database also provides instructions for interlibrary loan procedure.</search_description>
 			<url>http://www.crl.edu/content.asp?l1=5&amp;l2=23&amp;l3=44&amp;l4=25</url>
 			<search_url>http://www.crl.edu/DBSearch/dissertationsSummary.asp?language=English&amp;title=</search_url>
 			
@@ -363,7 +371,7 @@
 
 		<search>
 			<search_title>AAD</search_title>
-			<search_description>Access to archival Databases (AAD) System has approximately 350 data files with millions of records available online that are highly structured, such as in databases. The series selected for AAD identify specific persons, geographic areas, organizations, or dates. Some of these series serve as indexes to accessioned archival records in non-electronic formats. Includes a link to search descriptions of NARA's non-electronic records through NARA's online catalogue, ARC.</search_description>
+			<search_description>Access to archival Databases (AAD) System has approximately 350 data files with millions of records available online that are highly structured, such as in databases. The series selected for AAD identify specific persons, geographic areas, organizations, or dates. Some of these series serve as indexes to accessioned archival records in non-electronic formats. Includes a link to search descriptions of NARA&#039;s non-electronic records through NARA&#039;s online catalogue, ARC.</search_description>
 			<url>http://aad.archives.gov/aad/title_list.jsp</url>
 			<search_url>http://search.nara.gov/query.html?rq=0&amp;qp=&amp;rq=0&amp;col=4ardor&amp;col=3ourdoc&amp;col=2pres&amp;col=1arch&amp;qs=&amp;qc=&amp;pw=100%25&amp;ws=0&amp;la=&amp;qm=0&amp;st=1&amp;nh=10&amp;lk=1&amp;rf=0&amp;oq=&amp;rq=0&amp;qt=</search_url>
 			
@@ -386,67 +394,90 @@
 			<search_title>A2A - Access to Archives</search_title>
 			<search_description>Contains catalogues describing archives held throughout England and dating from the 900s to the present day.</search_description>
 			<url>http://www.a2a.org.uk/</url>
-			<search_url>http://www.a2a.org.uk/search/documentxsl.asp?com=1&amp;i=0&amp;nbKey=1&amp;stylesheet=xsl\A2A_com.xsl&amp;properties=0601#CC97/00804&amp;keyword=</search_url>
+			<search_url>http://www.a2a.org.uk/search/doclist.asp?nb=0&amp;nbKey=1&amp;com=1&amp;properties=0601&amp;keyword=</search_url>
+			
+		</search>
+		<search>
+			<search_title>Archives Hub (UK)</search_title>
+			<search_description>A national gateway to descriptions of archives in UK universities and colleges.</search_description>
+			<url>http://www.archiveshub.ac.uk/</url>
+			<search_url>http://www.archiveshub.ac.uk/cgi-bin/deadsearch.cgi?server=SF&amp;fieldidx1=descriptionWord&amp;bool=AND&amp;numreq=25&amp;firstrec=1&amp;format=sgml&amp;noframes=0&amp;maxrecs=50&amp;firstrec=1&amp;fieldcont1=</search_url>
+			
+		</search>
+		<search>
+			<search_title>Catholic Encyclopedia</search_title>
+			<search_description>Contains full and authoritative information on Catholic interests, action, and doctrine.</search_description>
+			<url>http://www.newadvent.org/cathen/</url>
+			<search_url>http://www.google.com/custom?domains=NewAdvent.org&amp;sa=Search+New+Advent&amp;sitesearch=NewAdvent.org&amp;client=pub-8168503353085287&amp;forid=1&amp;ie=ISO-8859-1&amp;oe=ISO-8859-1&amp;safe=active&amp;cof=GALT%3A%23008000%3BGL%3A1%3BDIV%3A%23336699%3BVLC%3A663399%3BAH%3Acenter%3BBGC%3AFFFFFF%3BLBGC%3A336699%3BALC%3A0000FF%3BLC%3A0000FF%3BT%3A000000%3BGFNT%3A0000FF%3BGIMP%3A0000FF%3BFORID%3A1%3B&amp;hl=en&amp;q=</search_url>
+			
 		</search>
 		<search>
 			<search_title>Literature, Arts, and Medicine Database</search_title>
 			<search_description>An annotated bibliography of prose, poetry, film, video, and art.</search_description>
 			<url>http://endeavor.med.nyu.edu/lit-med/lit-med-db/topview.html</url>
 			<search_url>http://mcrcr2.med.nyu.edu:8765/query.html?rq=0&amp;col=aes&amp;col=wwwmc&amp;charset=iso-8859-1&amp;style=lm&amp;qt=</search_url>
+			
 		</search>
 		<search>
 			<search_title>Map Collection, Perry-Castaneda</search_title>
 			<search_description>Displays selected digitized images from the printed map collection housed at the University of Texas at Austin.</search_description>
 			<url>http://www.lib.utexas.edu/maps/index.html</url>
 			<search_url>http://www.lib.utexas.edu:8080/search/utlol/search.jsp?collections=utlol&amp;collections=utdatabases&amp;queryText=</search_url>
+			
 		</search>
 	</context>
 	<context>
 		<context_title>Portals</context_title>
 		<context_abbrev>Portals</context_abbrev>
 		<context_description>Portals</context_description>
-		<search>
-			<search_title>Archives Hub (UK)</search_title>
-			<search_description>A national gateway to descriptions of archives in UK universities and colleges.</search_description>
-			<url>http://www.archiveshub.ac.uk/</url>
-			<search_url>http://www.archiveshub.ac.uk/bin/eadsearch2.cgi?server=SF&amp;maxrecs=50&amp;firstrec=1&amp;format=sgml&amp;fieldidx1=topic&amp;bool=and&amp;noframes=0&amp;fieldcont1=</search_url>
-		</search>
+
 		<search>
 			<search_title>Archives Portal</search_title>
 			<search_description>UNESCO, the United Nations Educational, Scientific, and Cultural Organization, provides a list of links to archives around the world with a Web presence.</search_description>
 			<url>http://portal.unesco.org/ci/en/ev.php-URL_ID=5761&amp;URL_DO=DO_TOPIC&amp;URL_SECTION=201.html</url>
 			<search_url>http://www.unesco.org/cgi-bin/webworld/portal_archives/cgi/search.cgi?search2=GO&amp;query=</search_url>
+			
 		</search>
 		<search>
 			<search_title>Digital South Asia Library</search_title>
 			<search_description>On-line information about contemporary and historical South Asia - including full-text documents, statistical data, electronic images, cartographic representations, and pedagogical resources for language instruction.</search_description>
 			<url>http://dsal.uchicago.edu/</url>
 			<search_url>http://www.google.com/u/dsal?sa=Search&amp;q=</search_url>
+			
 		</search>
 		<search>
 			<search_title>History Guide</search_title>
 			<search_description>Subject gateway to scholarly relevant information in history with a focus on Anglo-American history and the history of Central and Western Europe.</search_description>
 			<url>http://www.historyguide.de/</url>
 			<search_url>http://www.historyguide.de/allegrosuche.php?start=0&amp;suchterm=</search_url>
+			
 		</search>
 		<search>
 			<search_title>Dante Project (Dartmouth)</search_title>
 			<search_description>Searchable collection of texts including the Italian text of the Divine Comedy and commentaries.</search_description>
 			<url>http://dciswww.dartmouth.edu:50080/v3?db=7&amp;page=s&amp;conn=2078917053&amp;seq=1117997527</url>
-			<search_url>http://dciswww.dartmouth.edu:50080/v3?db=7&amp;conn=2078917053&amp;page=S</search_url>
-			<search_post>q1t=KEYWORDS_HERE&amp;q1f=All Indexes&amp;qop=and&amp;q2f=All Indexes&amp;q2t=&amp;srt=-1&amp;dfn=0</search_post>
+			<search_url>http://dante.dartmouth.edu/search_view.php?commentary[]=0&amp;language=any&amp;cantica=0&amp;canto=&amp;line=</search_url>
+			<search_post>Cmd=Search&amp;query=</search_post>			
 		</search>
 		<search>
-                        <search_title>Romantic Circles: Byron, the Shelleys, Keats and their Contemporaries</search_title>
-                        <search_description>A Web site that provides scholarly resources for the study of Romantic-period literature and culture.</search_description>
-                        <url>http://www.rc.umd.edu/</url>
-                        <search_url>http://www.rc.umd.edu/cgi-bin/search/search.pl?Match=1&amp;Realm=Editions&amp;Terms=Brockden+brown&amp;submit=Search</search_url>
-                </search>
+			<search_title>Romantic Circles: Byron, the Shelleys, Keats and their Contemporaries</search_title>
+			<search_description>A Web site that provides scholarly resources for the study of Romantic-period literature and culture.</search_description>
+			<url>http://www.rc.umd.edu/</url>
+			<search_url>http://www.rc.umd.edu/cgi-bin/search/search.pl?Match=1&amp;Realm=Editions&amp;Terms=Brockden+brown&amp;submit=Search</search_url>
+			
+		</search>
+		<search>
+			<search_title>Humbul Humanities Hub</search_title>
+			<search_description>Humbul Humanities Hub is a directory of Internet resources in each of the following areas: archaeology, classics, history, philosophy, history and philosophy of science, religion and theology, American studies, humanities computing, linguistics, languages, and literature. Developed for the United Kingdom&#039;s higher education community, it is a good tool for anyone doing research in the humanities on the Web.</search_description>
+			<url>http://www.humbul.ac.uk/about/</url>
+			<search_url>http://www.humbul.ac.uk/search/search2.php?go=Go&amp;type=and&amp;keyword=</search_url>
+			
+		</search>
 	</context>
 	<context>
 		<context_title>Pay-Per-View</context_title>
 		<context_abbrev>Pay-Per-View</context_abbrev>
-		<context_description>A pay-per-view service is for those who do not have direct access to electronic journal articles via subscriptions. The service allows customers to gain direct access to an article by paying by credit card using the RSC's secure payment mechanism. Immediately the payment details have been validated, the customer can gain access to the required article file for a period of 30 days.</context_description>
+		<context_description>A pay-per-view service is for those who do not have direct access to electronic journal articles via subscriptions. The service allows customers to gain direct access to an article by paying by credit card using the RSC&#039;s secure payment mechanism. Immediately the payment details have been validated, the customer can gain access to the required article file for a period of 30 days.</context_description>
 
 		<search>
 			<search_title>Ingenta</search_title>
@@ -514,12 +545,12 @@
 			<search_title>Project Gutenberg</search_title>
 			<search_description>Project Gutenberg is the definitive Web site for this project to put out-of-copyright books online in full-text. More than 6,000 texts online so far.</search_description>
 			<url>http://www.gutenberg.net/</url>
-			<search_url>http://www.gutenberg.net/cgi-bin/search/t9.cgi?author=&amp;subject=&amp;ntes=&amp;whole=yes&amp;language=&amp;filetype=&amp;class_lc=&amp;title=</search_url>
+			<search_url>http://www.gutenberg.org/catalog/world/results?author=&amp;etestnr=&amp;title=</search_url>
 			
 		</search>
 		<search>
 			<search_title>Questia</search_title>
-			<search_description>Questia is the first online library that provides 24/7 access to the world's largest online collection of books and journal articles in the humanities and social sciences, plus magazine and newspaper articles. You can search each and every word of all of the books and journal articles in the collection. You can read every title cover to cover. This rich, scholarly content -- selected by professional collection development librarians -- is not available elsewhere on the Internet.</search_description>
+			<search_description>Questia is the first online library that provides 24/7 access to the world&#039;s largest online collection of books and journal articles in the humanities and social sciences, plus magazine and newspaper articles. You can search each and every word of all of the books and journal articles in the collection. You can read every title cover to cover. This rich, scholarly content -- selected by professional collection development librarians -- is not available elsewhere on the Internet.</search_description>
 			<url>http://www.questia.com/?af=1</url>
 			<search_url>http://www.questia.com/SM.qst?act=search&amp;keywordsSearchType=1000&amp;mediaType=startpage&amp;mediaType=book&amp;mediaType=journal&amp;mediaType=magazine&amp;mediaType=newspaper&amp;mediaType=encyclopedia&amp;keywords=</search_url>
 			
@@ -562,7 +593,7 @@
 			<search_title>Liszt</search_title>
 			<search_description>Liszt, hosted by Topica, is a free service that allows you to find, manage and participate in email lists and discussion groups in humanities.</search_description>
 			<url>http://www.liszt.com/dir/?cid=0</url>
-			<search_url>http://www.liszt.com/search/?search_type=cat&amp;amp;query=</search_url>
+			<search_url>http://lists.topica.com/search/?x=28&amp;y=5&amp;search_type=cat&amp;query=</search_url>
 			
 		</search>
 	</context>
@@ -592,8 +623,8 @@
 			
 		</search>
 		<search>
-			<search_title>People's Daily</search_title>
-			<search_description>People's Daily, China (January 1999-)</search_description>
+			<search_title>People&#039;s Daily</search_title>
+			<search_description>People&#039;s Daily, China (January 1999-)</search_description>
 			<url>http://english.peopledaily.com.cn/</url>
 			<search_url>http://english.peopledaily.com.cn/cgi-bin/htsearch?method=boolean&amp;format=builtin-long&amp;sort=score&amp;config=english&amp;exclude=&amp;words=</search_url>
 			
@@ -623,8 +654,8 @@
 			<search_title>The Japan Times Online</search_title>
 			<search_description>The Japan Times Online, Japan (January 1999-)</search_description>
 			<url>http://www.japantimes.co.jp/search.htm</url>
-			<search_url>http://www.japantimes.co.jp/cgi-bin/search-intro3.pl5?</search_url>
-			<search_post>SUBMIT=Search&amp;term1=&amp;radio=and&amp;term2=</search_post>			
+			<search_url>http://search.japantimes.co.jp/cgi-bin/JTsearch4.pl5?which=and&amp;term2=&amp;term1=</search_url>
+			
 		</search>
 		<search>
 			<search_title>The Moscow Times</search_title>
@@ -642,7 +673,7 @@
 		</search>
 		<search>
 			<search_title>Newsdirectory</search_title>
-			<search_description>Newsdirectory is a comprehensive and searchable guide to the world's English-language online media. Currently over 8,000 newspapers and magazines are listed, as well as more than 1,000 U.S. television broadcasters.</search_description>
+			<search_description>Newsdirectory is a comprehensive and searchable guide to the world&#039;s English-language online media. Currently over 8,000 newspapers and magazines are listed, as well as more than 1,000 U.S. television broadcasters.</search_description>
 			<url>http://www.newsdirectory.com/</url>
 			<search_url>http://ask.elibrary.com/search.asp?refid=NEWSD&amp;datetype=all&amp;srcmags=checked&amp;srcnews=checked&amp;srcbooks=checked&amp;srctvrad=checked&amp;query=</search_url>
 			
@@ -662,21 +693,24 @@
 		</search>
 		<search>
 			<search_title>Google Scholar</search_title>
-			<search_description>Google Scholar enables specific searches of scholarly literature, including peer-reviewed papers, theses, books, pre-prints, abstracts, and technical reports. Content includes a range of publishers and aggregators with whom Google already has standing arrangements, e.g., the Association for Computing Machinery, IEEE, OCLC's Open WorldCat library locator service, etc. Result displays will show different version clusters, citation analysis, and library location (currently books only).</search_description>
+			<search_description>Google Scholar enables specific searches of scholarly literature, including peer-reviewed papers, theses, books, pre-prints, abstracts, and technical reports. Content includes a range of publishers and aggregators with whom Google already has standing arrangements, e.g., the Association for Computing Machinery, IEEE, OCLC&#039;s Open WorldCat library locator service, etc. Result displays will show different version clusters, citation analysis, and library location (currently books only).</search_description>
 			<url>http://scholar.google.com</url>
 			<search_url>http://scholar.google.com/scholar?ie=UTF-8&amp;oe=UTF-8&amp;hl=en&amp;q=</search_url>
+			
 		</search>
 		<search>
 			<search_title>Clusty the Clustering Engine</search_title>
 			<search_description>This search tool from Vivismo offers clustered results for a selection of searches.  Metasearch the whole web, or use tabs to search for news, gossip, images, orproducts via Bizrate or eBay.</search_description>
 			<url>http://clusty.com/</url>
 			<search_url>http://clusty.com/search?query=</search_url>
+			
 		</search>
 		<search>
 			<search_title>Vivisimo</search_title>
 			<search_description>The award-winning Vivisimo clustering technology, developed by Carnegie Mellon research scientists, is unlocking the value of stored information at Fortune 500 companies, top websites, prestigious publishers and government agencies by categorizing research results on the fly into meaningful orders, thus achieving breakthrough improvement in access to relevant information.</search_description>
 			<url>http://vivisimo.com</url>
 			<search_url>http://vivisimo.com/search?tb=homepage&amp;v%3Asources=Web&amp;query=</search_url>
+			
 		</search>
 	</context>
 </version>

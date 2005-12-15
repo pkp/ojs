@@ -48,7 +48,8 @@ class XMLParser {
 		
 		if (!isset($this->handler)) {
 			// Use default handler for parsing
-			$this->setHandler(new XMLParserDOMHandler());
+			$handler =& new XMLParserDOMHandler();
+			$this->setHandler($handler);
 		}
 		
 		xml_set_object($parser, $this->handler);
@@ -84,7 +85,7 @@ class XMLParser {
 	 * @param $handler XMLParserHandler
 	 */
 	function setHandler(&$handler) {
-		$this->handler = $handler;
+		$this->handler =& $handler;
 	}
 	
 	/**
@@ -190,6 +191,9 @@ class XMLParserHandler {
 	 * @return mixed
 	 */
 	function &getResult() {
+		// Default: Return null (must be by ref).
+		$nullVar = null;
+		return $nullVar;
 	}
 
 }
