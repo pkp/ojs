@@ -184,7 +184,7 @@ class MailTemplate extends Mail {
 			$site = &Request::getSite();
 			$paramArray['principalContactSignature'] = $site->getContactName();
 		}
-		if (!isset($paramArray['journalUrl'])) $paramArray['journalUrl'] = Request::getIndexUrl() . '/' . Request::getRequestedJournalPath();
+		if (!isset($paramArray['journalUrl'])) $paramArray['journalUrl'] = Request::url(Request::getRequestedJournalPath());
 
 		// Replace variables in message with values
 		foreach ($paramArray as $key => $value) {
