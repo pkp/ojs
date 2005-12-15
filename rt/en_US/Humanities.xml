@@ -633,8 +633,7 @@
 			<search_title>Mail &amp; Guardian Newspaper</search_title>
 			<search_description>Mail &amp; Guardian Newspaper, South Africa (1994-)</search_description>
 			<url>http://www.mg.co.za/</url>
-			<search_url>http://archive.mg.co.za/MGArchive/FrameSet.asp?f=xhitlist&amp;xhitlist_x=Advanced&amp;xhitlist_s=contents&amp;xhitlist_d=&amp;xhitlist_hc=&amp;xhitlist_xsl=xhitlist.xsl&amp;xhitlist_vpc=first&amp;xhitlist_sel=title%3Bpath%3Brelevance-weight%3Bcontent-type%3Bhom&amp;xhitlist_q=</search_url>
-			
+			<search_url>http://www.mg.co.za/mg_search_results.aspx?PrintEdition=PrintEdition&amp;DailyNews=DailyNews&amp;SearchSection=&amp;StartDay=&amp;StartMonth=&amp;StartYear=&amp;EndDay=&amp;EndMonth=&amp;EndYear=&amp;keywords=</search_url>
 		</search>
 		<search>
 			<search_title>National Public Radio</search_title>

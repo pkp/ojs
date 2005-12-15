@@ -134,6 +134,8 @@ class SectionForm extends Form {
 		if (!isset($section)) {
 			$section = &new Section();
 			$section->setJournalId($journal->getJournalId());
+			// Kludge: Move this section to the end of the list
+			$section->setSequence(10000);
 		}
 		
 		$section->setTitle($this->getData('title'));
