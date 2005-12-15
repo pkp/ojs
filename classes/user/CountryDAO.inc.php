@@ -94,7 +94,7 @@ class CountryDAO extends DAO {
 	 * @param $locale string Name of locale (optional)
 	 * @return array
 	 */
-	function &getCountry($code, $locale = null) {
+	function getCountry($code, $locale = null) {
 		$cache =& $this->_getCountryCache($locale);
 		return $cache->get($code);
 	}

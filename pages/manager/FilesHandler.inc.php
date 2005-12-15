@@ -156,12 +156,7 @@ class FilesHandler extends ManagerHandler {
 	}
 	
 	function fileMimeType($filePath) {
-		if (function_exists('mime_content_type')) {
-			return mime_content_type($filePath);
-		} else {
-			// FIXME?
-			return '';
-		}
+		return String::mime_content_type($filePath);
 	}
 	
 }

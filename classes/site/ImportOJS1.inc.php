@@ -1453,9 +1453,8 @@ class ImportOJS1 {
 			$fileType = ARTICLE_FILE_PUBLIC;
 			$oldPath = $this->importPath . '/images/articleimages/' . $file;
 			
-			if (function_exists('mime_content_type')) {
-				$mimeType = mime_content_type($oldPath);
-			} else {
+			$mimeType = String::mime_content_type($oldPath);
+			if (empty($mimeType)) {
 				$extension = $fileManager->getExtension($file);
 				if ($extension == 'jpg') {
 					$mimeType = 'image/jpeg';

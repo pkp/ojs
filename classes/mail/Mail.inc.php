@@ -168,11 +168,8 @@ class Mail extends DataObject {
 		}
 		
 		if (empty($contentType)) {
-			if (function_exists('mime_content_type')) {
-				$contentType = mime_content_type($filePath);
-			} else {
-				$contentType = 'application/x-unknown-content-type';
-			}
+			$contentType = String::mime_content_type($filePath);
+			if (empty($contentType)) $contentType = 'application/x-unknown-content-type';
 		}
 		
 		// Open the file and read contents into $attachment

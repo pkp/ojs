@@ -71,10 +71,8 @@ class FileManager {
 	 */
 	function getUploadedFileType($fileName) {
 		if (isset($_FILES[$fileName])) {
-			if (function_exists('mime_content_type')) {
-				$type = mime_content_type($_FILES[$fileName]['tmp_name']);
-				if (!empty($type)) return $type;
-			}
+			$type = String::mime_content_type($_FILES[$fileName]['tmp_name']);
+			if (!empty($type)) return $type;
 			return $_FILES[$fileName]['type'];
 		} else {
 			return false;
@@ -182,11 +180,8 @@ class FileManager {
 	function downloadFile($filePath, $type = null, $inline = false) {
 		if (is_readable($filePath)) {
 			if ($type == null) {
-				if (function_exists('mime_content_type')) {
-					$type = mime_content_type($filePath);
-				} else {
-					$type = 'application/octet-stream';
-				}
+				$type = String::mime_content_type($filePath);
+				if (empty($type)) $type = 'application/octet-stream';
 			}
 			
 			header("Content-Type: $type");
