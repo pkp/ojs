@@ -56,7 +56,7 @@
 {include file="sectionEditor/$pageToDisplay.tpl"}
 
 <form action="#">
-{translate key="section.section"}: <select name="section" class="selectMenu" onchange="location.href='{url path=$pageToDisplay section="SECTION_ID" searchField=$searchField searchMatch=$searchMatch search=$search dateFromDay=$dateFromDay dateFromYear=$dateFromYear dateFromMonth=$dateFromMonth dateToDay=$dateToDay dateToYear=$dateToYear dateToMonth=$dateToMonth}'.replace('SECTION_ID', this.options[this.selectedIndex].value)" size="1">{html_options options=$sectionOptions selected=$section}</select>
+{translate key="section.section"}: <select name="section" class="selectMenu" onchange="location.href='{url path=$pageToDisplay section="SECTION_ID" searchField=$searchField searchMatch=$searchMatch search=$search dateFromDay=$dateFromDay dateFromYear=$dateFromYear dateFromMonth=$dateFromMonth dateToDay=$dateToDay dateToYear=$dateToYear dateToMonth=$dateToMonth escape=false}'.replace('SECTION_ID', this.options[this.selectedIndex].value)" size="1">{html_options options=$sectionOptions selected=$section}</select>
 </form>
 
 {if ($pageToDisplay == "submissionsInReview")}

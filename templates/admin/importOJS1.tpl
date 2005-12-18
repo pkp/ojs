@@ -53,7 +53,7 @@
 	</tr>
 </table>
 
-<p><input type="submit" value="{translate key="common.import"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url page="admin" op="journals"}'" /></p>
+<p><input type="submit" value="{translate key="common.import"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url page="admin" op="journals" escape=false}'" /></p>
 
 </form>
 

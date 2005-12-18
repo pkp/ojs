@@ -472,7 +472,7 @@ class TemplateManager extends Smarty {
 		// Extract the variables named in $paramList, and remove them
 		// from the params array. Variables remaining in params will be
 		// passed along to Request::url as extra parameters.
-		$paramList = array('journal', 'page', 'op', 'path', 'anchor');
+		$paramList = array('journal', 'page', 'op', 'path', 'anchor', 'escape');
 		foreach ($paramList as $param) {
 			if (isset($params[$param])) {
 				$$param = $params[$param];
@@ -482,7 +482,11 @@ class TemplateManager extends Smarty {
 			}
 		}
 
-		return str_replace('&', '&amp;', Request::url($journal, $page, $op, $path, $params, $anchor));
+		$url = Request::url($journal, $page, $op, $path, $params, $anchor);
+		if (!isset($escape) || $escape) {
+			$url = str_replace('&', '&amp;', $url);
+		}
+		return $url;
 	}
 
 	/**
@@ -561,7 +565,7 @@ class TemplateManager extends Smarty {
 	function smartyAssign($value, $varName) {
 		if (isset($varName)) {
 			// NOTE: CANNOT use $this, as it's actually
-			// a COPY of the real template manager!
+			// a COPY of the real template manager for some PHPs!
 			// FIXME: Track this bug down. (Smarty?)
 			$templateMgr =& TemplateManager::getManager();
 			$templateMgr->assign($varName, $value);

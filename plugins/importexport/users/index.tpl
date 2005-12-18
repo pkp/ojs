@@ -56,7 +56,7 @@
 	</tr>
 </table>
 
-<p><input type="submit" value="{translate key="common.upload"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url page="manager" path="importexport"}'" /></p>
+<p><input type="submit" value="{translate key="common.upload"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url page="manager" path="importexport" escape=false}'" /></p>
 
 </form>
 

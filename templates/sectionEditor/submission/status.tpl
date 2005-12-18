@@ -17,9 +17,9 @@
 function confirmNotifyUnsuitable() {
 	$result = confirm("{/literal}{translate|escape:"quote" key="editor.article.emailAuthorOnArchive"}{literal}");
 	if ($result) {
-		document.location = "{/literal}{url op="unsuitableSubmission" articleId=$submission->getArticleId()}{literal}"
+		document.location = "{/literal}{url op="unsuitableSubmission" articleId=$submission->getArticleId() escape=false}{literal}"
 	} else {
-		document.location = "{/literal}{url op="archiveSubmission" path=$submission->getArticleId()}{literal}";
+		document.location = "{/literal}{url op="archiveSubmission" path=$submission->getArticleId() escape=false}{literal}";
 	}
 	return false;
 }
