@@ -52,7 +52,7 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
 		SubmissionProofreadHandler::validate($articleId);
 		parent::setupTemplate(true);
 
-		if (ProofreaderAction::proofreadEmail($articleId,'PROOFREAD_COMPLETE', Request::getUserVar('send')?'':'/proofreader/completeProofreader')) {
+		if (ProofreaderAction::proofreadEmail($articleId,'PROOFREAD_COMPLETE', Request::getUserVar('send')?'':Request::url(null, 'proofreader', 'completeProofreader'))) {
 			Request::redirect(null, null, 'submission', $articleId);
 		}		
 	}

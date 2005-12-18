@@ -154,7 +154,7 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 
 		import('submission.proofreader.ProofreaderAction');
 
-		if (ProofreaderAction::proofreadEmail($articleId,'PROOFREAD_AUTHOR_COMPLETE', $send?'':'/copyeditor/authorProofreadingComplete/send')) {
+		if (ProofreaderAction::proofreadEmail($articleId,'PROOFREAD_AUTHOR_COMPLETE', $send?'':Request::url(null, 'copyeditor', 'authorProofreadingComplete', 'send'))) {
 			Request::redirect(null, null, 'submission', $articleId);
 		}
 	}

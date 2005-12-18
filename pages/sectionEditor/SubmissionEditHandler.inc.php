@@ -1745,7 +1745,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		parent::setupTemplate(true, $articleId, 'editing');
 
 		import('submission.proofreader.ProofreaderAction');
-		if (ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_AUTHOR_REQUEST', $send?'':'/sectionEditor/notifyAuthorProofreader')) {
+		if (ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_AUTHOR_REQUEST', $send?'':Request::url(null, 'sectionEditor', 'notifyAuthorProofreader'))) {
 			Request::redirect(null, null, 'submissionEditing', $articleId);
 		}
 	}
@@ -1760,7 +1760,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		parent::setupTemplate(true, $articleId, 'editing');
 
 		import('submission.proofreader.ProofreaderAction');
-		if (ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_AUTHOR_ACK', $send?'':'/sectionEditor/thankAuthorProofreader')) {
+		if (ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_AUTHOR_ACK', $send?'':Request::url(null, 'sectionEditor', 'thankAuthorProofreader'))) {
 			Request::redirect(null, null, 'submissionEditing', $articleId);
 		}
 	}
@@ -1805,7 +1805,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		parent::setupTemplate(true, $articleId, 'editing');
 
 		import('submission.proofreader.ProofreaderAction');
-		if (ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_REQUEST', $send?'':'/sectionEditor/notifyProofreader')) {
+		if (ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_REQUEST', $send?'':Request::url(null, 'sectionEditor', 'notifyProofreader'))) {
 			Request::redirect(null, null, 'submissionEditing', $articleId);
 		}
 	}
@@ -1820,7 +1820,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		parent::setupTemplate(true, $articleId, 'editing');
 
 		import('submission.proofreader.ProofreaderAction');
-		if (ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_ACK', $send?'':'/sectionEditor/thankProofreader')) {
+		if (ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_ACK', $send?'':Request::url(null, 'sectionEditor', 'thankProofreader'))) {
 			Request::redirect(null, null, 'submissionEditing', $articleId);
 		}
 	}
@@ -1865,7 +1865,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		parent::setupTemplate(true, $articleId, 'editing');
 
 		import('submission.proofreader.ProofreaderAction');
-		if (ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_LAYOUT_REQUEST', $send?'':'/sectionEditor/notifyLayoutEditorProofreader')) {
+		if (ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_LAYOUT_REQUEST', $send?'':Request::url(null, 'sectionEditor', 'notifyLayoutEditorProofreader'))) {
 			Request::redirect(null, null, 'submissionEditing', $articleId);
 		}
 	}
@@ -1880,7 +1880,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		parent::setupTemplate(true, $articleId, 'editing');
 
 		import('submission.proofreader.ProofreaderAction');
-		if (ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_LAYOUT_ACK', $send?'':'/sectionEditor/thankLayoutEditorProofreader')) {
+		if (ProofreaderAction::proofreadEmail($articleId, 'PROOFREAD_LAYOUT_ACK', $send?'':Request::url(null, 'sectionEditor', 'thankLayoutEditorProofreader'))) {
 			Request::redirect(null, null, 'submissionEditing', $articleId);
 		}
 	}
