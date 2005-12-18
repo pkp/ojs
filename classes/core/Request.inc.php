@@ -516,11 +516,19 @@ class Request {
 
 	/**
 	 * Build a URL into OJS.
+	 * @param $journalPath string Optional path for journal to use
+	 * @param $page string Optional name of page to invoke
+	 * @param $op string Optional name of operation to invoke
+	 * @param $path mixed Optional string or array of args to pass to handler
+	 * @param $params array Optional set of name => value pairs to pass as user parameters
+	 * @param $anchor string Optional name of anchor to add to URL
+	 * @param $escape boolean Whether or not to escape ampersands for this URL; default true.
 	 */
-	function url($journalPath = null, $page = null, $op = null, $path = null, $params = null, $anchor = null) {
+	function url($journalPath = null, $page = null, $op = null, $path = null, $params = null, $anchor = null, $escape = true) {
 		$pathInfoDisabled = !Request::isPathInfoEnabled();
 
-		$prefix = $pathInfoDisabled?'&':'?';
+		$amp = $escape?'&amp;':'&';
+		$prefix = $pathInfoDisabled?$amp:'?';
 
 		// Establish defaults for page and op
 		$defaultPage = Request::getRequestedPage();
@@ -555,10 +563,10 @@ class Request {
 		if (!empty($params)) foreach ($params as $key => $value) {
 			if (is_array($value)) foreach($value as $element) {
 				$additionalParams .= $prefix . $key . '[]=' . rawurlencode($element);
-				$prefix = '&';
+				$prefix = $amp;
 			} else {
 				$additionalParams .= $prefix . $key . '=' . rawurlencode($value);
-				$prefix = '&';
+				$prefix = $amp;
 			}
 		}
 
@@ -575,12 +583,13 @@ class Request {
 
 		$pathString = '';
 		if ($pathInfoDisabled) {
-			if (!empty($path)) $pathString = '&path[]=' . implode('&path[]=', $path);
+			$joiner = $amp . 'path[]=';
+			if (!empty($path)) $pathString = $joiner . implode($joiner, $path);
 			$baseParams = "?journal=$journalPath";
 			if (!empty($page)) {
-				$baseParams .= "&page=$page";
+				$baseParams .= $amp . "page=$page";
 				if (!empty($op)) {
-					$baseParams .= "&op=$op";
+					$baseParams .= $amp . "op=$op";
 				}
 			}
 		} else {

@@ -482,11 +482,7 @@ class TemplateManager extends Smarty {
 			}
 		}
 
-		$url = Request::url($journal, $page, $op, $path, $params, $anchor);
-		if (!isset($escape) || $escape) {
-			$url = str_replace('&', '&amp;', $url);
-		}
-		return $url;
+		return Request::url($journal, $page, $op, $path, $params, $anchor, !isset($escape) || $escape);
 	}
 
 	/**
