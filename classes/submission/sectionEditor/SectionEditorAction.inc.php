@@ -228,10 +228,7 @@ class SectionEditorAction extends Action {
 					if ($preventAddressChanges) {
 						// Ensure that this messages goes to the reviewer, and the reviewer ONLY.
 						$email->clearAllRecipients();
-						$email->setRecipients(array(
-							'name' => $reviewer->getFullName(),
-							'email' => $reviewer->getEmail()
-						));
+						$email->addRecipient($reviewer->getEmail(), $reviewer->getFullName());
 					}
 					$email->send();
 				}
