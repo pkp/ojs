@@ -279,6 +279,7 @@ class AuthorSubmission extends Article {
 	 */
 	function &getInitialCopyeditFile() {
 		$returner =& $this->getData('initialCopyeditFile');
+		return $returner;
 	}
 	
 
