@@ -39,8 +39,8 @@
 <ul class="plain">
 	<li>&#187; <a href="{url op="submissions" anchor="onlineSubmissions"}">{translate key="about.onlineSubmissions"}</a></li>
 	{if !empty($journalSettings.authorGuidelines)}<li>&#187; <a href="{url op="submissions" anchor="authorGuidelines"}">{translate key="about.authorGuidelines"}</a></li>{/if}
-	{if !empty($journalSettings.copyrightNotice)}<li>&#187; <a href="{url page="submissions" anchor="copyrightNotice"}">{translate key="about.copyrightNotice"}</a></li>{/if}
-	{if !empty($journalSettings.privacyStatement)}<li>&#187; <a href="{url page="submissions" anchor="privacyStatement"}">{translate key="about.privacyStatement"}</a></li>{/if}
+	{if !empty($journalSettings.copyrightNotice)}<li>&#187; <a href="{url op="submissions" anchor="copyrightNotice"}">{translate key="about.copyrightNotice"}</a></li>{/if}
+	{if !empty($journalSettings.privacyStatement)}<li>&#187; <a href="{url op="submissions" anchor="privacyStatement"}">{translate key="about.privacyStatement"}</a></li>{/if}
 	{call_hook name="Templates::About::Index::Submissions"}
 </ul>
 

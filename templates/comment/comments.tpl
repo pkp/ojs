@@ -32,7 +32,7 @@
 	{/if}
 
 	{if $comment->getPosterEmail()}
-		{translate|assign:"emailReply key="comments.emailReply"}
+		{translate|assign:"emailReply" key="comments.emailReply"}
 		{mailto text=$emailReply encode="javascript" address=$comment->getPosterEmail() subject=$comment->getTitle() extra='class="action"'}&nbsp;&nbsp;
 	{/if}
 
@@ -64,7 +64,7 @@
 <h4><a href="{url op="view" path=$articleId|to_array:$galleyId:$childId}" target="_parent">{$child->getTitle()|escape}</a></h4>
 <h5>{if $user}{translate key="comments.authenticated" userName=$child->getPosterName()|escape}{elseif $child->getPosterName()}{translate key="comments.anonymousNamed" userName=$child->getPosterName()|escape}{else}{translate key="comments.anonymous"}{/if} ({$child->getDatePosted()|date_format:$dateFormatShort})</h5>
 {if $child->getPosterEmail()}
-	{translate|assign:"emailReply key="comments.emailReply"}
+	{translate|assign:"emailReply" key="comments.emailReply"}
 	{mailto text=$emailReply encode="javascript" address=$child->getPosterEmail()|escape subject=$child->getTitle()|escape extra='class="action"'}&nbsp;&nbsp;
 {/if}
 
@@ -76,7 +76,7 @@
 {/if}
 <br />
 
-{translate|assign:"readMore key="comments.readMore"}
+{translate|assign:"readMore" key="comments.readMore"}
 {url|assign:"moreUrl" op="view" path=$articleId|to_array:$galleyId:$childId}
 {assign var=moreLink value="<a href=\"$moreUrl\">$readMore</a>"}
 <p>{$child->getBody()|strip_unsafe_html|nl2br|truncate:300:"... $moreLink"}</p>
