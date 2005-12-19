@@ -78,12 +78,11 @@ class TemporaryFileDAO extends DAO {
 	function insertTemporaryFile(&$temporaryFile) {
 		$this->update(
 			sprintf('INSERT INTO temporary_files
-				(file_id, user_id, file_name, file_type, file_size, original_file_name, date_uploaded)
+				(user_id, file_name, file_type, file_size, original_file_name, date_uploaded)
 				VALUES
-				(?, ?, ?, ?, ?, ?, %s)',
+				(?, ?, ?, ?, ?, %s)',
 				$this->datetimeToDB($temporaryFile->getDateUploaded())),
 			array(
-				$temporaryFile->getFileId(),
 				$temporaryFile->getUserId(),
 				$temporaryFile->getFileName(),
 				$temporaryFile->getFileType(),
