@@ -140,9 +140,9 @@ class SubmissionCommentsHandler extends LayoutEditorHandler {
 		
 		// Redirect back to initial comments page
 		if ($comment->getCommentType() == COMMENT_TYPE_LAYOUT) {
-			Request::redirect(null, null, 'viewLayoutComments', $articleId));
+			Request::redirect(null, null, 'viewLayoutComments', $articleId);
 		} else if ($comment->getCommentType() == COMMENT_TYPE_PROOFREAD) {
-			Request::redirect(null, null, 'viewProofreadComments', $articleId));
+			Request::redirect(null, null, 'viewProofreadComments', $articleId);
 		}
 	}
 	
