@@ -524,7 +524,7 @@ class Request {
 	 * @param $anchor string Optional name of anchor to add to URL
 	 * @param $escape boolean Whether or not to escape ampersands for this URL; default true.
 	 */
-	function url($journalPath = null, $page = null, $op = null, $path = null, $params = null, $anchor = null, $escape = true) {
+	function url($journalPath = null, $page = null, $op = null, $path = null, $params = null, $anchor = null, $escape = false) {
 		$pathInfoDisabled = !Request::isPathInfoEnabled();
 
 		$amp = $escape?'&amp;':'&';

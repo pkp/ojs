@@ -327,7 +327,7 @@ class ProofreaderAction extends Action {
 				}
 				$email->assignParams($paramArray);
 			}
-			$email->displayEditForm(Request::url(null, $actionPath), array('articleId' => $articleId));
+			$email->displayEditForm($actionPath, array('articleId' => $articleId));
 			return false;
 		} else {
 			HookRegistry::call('ProofreaderAction::proofreaderEmail', array(&$proofAssignment, &$email, $mailType));
