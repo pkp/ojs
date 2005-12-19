@@ -461,6 +461,8 @@ class NativeImportDom {
 			}
 		}
 
+		if (($node = $articleNode->getChildByName('pages'))) $article->setPages($node->getValue());
+
 		$authors = array();
 		for ($index=0; ($authorNode = $articleNode->getChildByName('author', $index)); $index++) {
 			$author = &new Author();
