@@ -28,7 +28,7 @@
 			<a href="{get_help_id key="index.index" url="true"}">{translate key="navigation.home"}</a>
 			{foreach name=breadcrumbs from=$breadcrumbs item=breadcrumb key=key}
 				{if $breadcrumb != $topic->getId()}
-				 &gt; <a href="{url op="view" path=$breadcrumb}">{$key}</a>
+				 &gt; <a href="{url op="view" path=$breadcrumb|explode:"/"}">{$key}</a>
 				{/if}
 			{/foreach}		
 			&gt; <a href="{url op="view" path=$topic->getId()}" class="current">{$topic->getTitle()}</a>

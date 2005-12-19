@@ -343,7 +343,7 @@ class TemplateManager extends Smarty {
 			}
 			
 			if ($params['url'] == "true") {
-				return Request::url(null, 'help', 'view', $translatedKey);
+				return Request::url(null, 'help', 'view', explode('/', $translatedKey));
 			} else {
 				return $translatedKey;
 			}
@@ -361,7 +361,7 @@ class TemplateManager extends Smarty {
 	function smartyHelpTopic($params, &$smarty) {
 		if (isset($params) && !empty($params)) {
 			$translatedKey = isset($params['key']) ? Help::translate($params['key']) : Help::translate('');
-			$link = Request::url(null, 'help', 'view', $translatedKey);
+			$link = Request::url(null, 'help', 'view', explode('/', $translatedKey));
 			$text = isset($params['text']) ? $params['text'] : '';
 			return "<a href=\"$link\">$text</a>";
 		}

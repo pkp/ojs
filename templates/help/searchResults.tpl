@@ -32,17 +32,17 @@
 			{foreach name=results from=$searchResults item=result}
 				{assign var=sections value=$result.topic->getSections()}
 				<li>
-					<a href="{url op="view" path=$result.topic->getId()}">{$result.topic->getTitle()}</a>
+					<a href="{url op="view" path=$result.topic->getId()|explode:"/"}">{$result.topic->getTitle()}</a>
 					{eval var=$sections[0]->getContent()|strip_tags|truncate:200}
 					<div class="searchBreadcrumb">
 						<a href="{url op="view" path="index"|to_array:"topic":"000000"}">{translate key="navigation.home"}</a>
 						{foreach name=breadcrumbs from=$result.toc->getBreadcrumbs() item=breadcrumb key=key}
 							{if $breadcrumb != $result.topic->getId()}
-							 &gt; <a href="{url op="view" path=$breadcrumb}">{$key}</a>
+							 &gt; <a href="{url op="view" path=$breadcrumb|explode:"/"}">{$key}</a>
 							{/if}
 						{/foreach}
 						{if $result.topic->getId() != "index/topic/000000"}
-						&gt; <a href="{url op="view" path=$result.topic->getId()}" class="current">{$result.topic->getTitle()}</a>
+						&gt; <a href="{url op="view" path=$result.topic->getId()|explode:"/"}" class="current">{$result.topic->getTitle()}</a>
 						{/if}
 					</div>
 				</li>

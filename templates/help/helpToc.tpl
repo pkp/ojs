@@ -29,7 +29,7 @@
 			<ul>
 				<li><a href="{get_help_id key="index.index" url="true"}">{translate key="help.ojsHelp"}</a></li>
 				{foreach from=$helpToc item=topic key=topicId}
-				<li>{$topic.prefix}<a href="{url page="help" op="view" path=$topicId}">{$topic.title}</a></li>
+				<li>{$topic.prefix}<a href="{url page="help" op="view" path=$topicId|explode:"/"}">{$topic.title}</a></li>
 				{/foreach}
 			</ul>
 		</div>

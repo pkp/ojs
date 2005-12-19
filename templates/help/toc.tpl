@@ -22,7 +22,7 @@
 <br />
 
 {if $toc->getParentTopicId() && $toc->getParentTopicId() != $topic->getId()}
-{translate key="help.contents"}&nbsp;<a href="{url op="view" path=$toc->getParentTopicId()}">{translate key="help.upALevel"}</a>
+{translate key="help.contents"}&nbsp;<a href="{url op="view" path=$toc->getParentTopicId()|explode:"/"}">{translate key="help.upALevel"}</a>
 <br />
 {/if}
 
@@ -31,17 +31,17 @@
 	<ul>
 		{foreach from=$toc->getTopics() item=currTopic}
 			{if $currTopic->getId() == $topic->getId()}
-			<li><a href="{url op="view" path=$currTopic->getId()}" class="current">{$currTopic->getTitle()}</a>
+			<li><a href="{url op="view" path=$currTopic->getId()|explode:"/"}" class="current">{$currTopic->getTitle()}</a>
 			{if $subToc}
 			<ul>
 			{foreach from=$subToc->getTopics() item=currSubTopic}
-				<li><a href="{url op="view" path=$currSubTopic->getId()}">{$currSubTopic->getTitle()}</a></li>
+				<li><a href="{url op="view" path=$currSubTopic->getId()|explode:"/"}">{$currSubTopic->getTitle()}</a></li>
 			{/foreach}
 			</ul>
 			{/if}
 			</li>
 			{else}
-			<li><a href="{url op="view" path=$currTopic->getId()}">{$currTopic->getTitle()}</a></li>
+			<li><a href="{url op="view" path=$currTopic->getId()|explode:"/"}">{$currTopic->getTitle()}</a></li>
 			{/if}
 		{/foreach}
 	</ul>
