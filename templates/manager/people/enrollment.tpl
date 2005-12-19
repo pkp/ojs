@@ -56,6 +56,7 @@ function confirmAndPrompt(userId) {
 		<option {if $roleSymbolic=='reviewers'}selected="selected" {/if}value="reviewers">{translate key="user.role.reviewers"}</option>
 		<option {if $roleSymbolic=='authors'}selected="selected" {/if}value="authors">{translate key="user.role.authors"}</option>
 		<option {if $roleSymbolic=='readers'}selected="selected" {/if}value="readers">{translate key="user.role.readers"}</option>
+		<option {if $roleSymbolic=='subscriptionManagers'}selected="selected" {/if}value="subscriptionManagers">{translate key="user.role.subscriptionManagers"}</option>
 	</select>
 	<select name="searchField" size="1" class="selectMenu">
 		{html_options_translate options=$fieldOptions selected=$searchField}
@@ -80,6 +81,7 @@ function confirmAndPrompt(userId) {
 	<li><a href="{url path="reviewers"}">{translate key="user.role.reviewers"}</a></li>
 	<li><a href="{url path="authors"}">{translate key="user.role.authors"}</a></li>
 	<li><a href="{url path="readers"}">{translate key="user.role.readers"}</a></li>
+	<li><a href="{url path="subscriptionManagers"}">{translate key="user.role.subscriptionManagers"}</a></li>
 </ul>
 
 <br />

@@ -281,7 +281,7 @@ class RoleDAO extends DAO {
 	 * @param $journalId int optional
 	 * @param $roleId int optional
 	 */
-	function getRolesByJournalId($journalId = null, $roleId = null) {
+	function &getRolesByJournalId($journalId = null, $roleId = null) {
 		$params = array();
 		$conditions = array();
 		if (isset($journalId)) {

@@ -38,6 +38,7 @@
 					<option value="proofreader">{translate key="user.role.proofreader"}</option>
 					<option value="author">{translate key="user.role.author"}</option>
 					<option value="reader">{translate key="user.role.reader"}</option>
+					<option value="subscriptionManager">{translate key="user.role.subscriptionManager"}</option>
 				</select>
 			{/if}
 		</td>
