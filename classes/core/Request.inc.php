@@ -52,10 +52,12 @@ class Request {
 	 */
 	function redirectSSL() {
 		$url = 'https://' . Request::getServerHost() . Request::getRequestPath();
+		$queryString = Request::getQueryString();
+		if (!empty($queryString)) $url .= "?$queryString";
 		if (HookRegistry::call('Request::redirectSSL', array(&$url))) {
 			return;
 		}
-		Request::redirect($url);
+		Request::redirectUrl($url);
 	}
 	
 	/**
@@ -63,10 +65,12 @@ class Request {
 	 */
 	function redirectNonSSL() {
 		$url = 'http://' . Request::getServerHost() . Request::getRequestPath();
+		$queryString = Request::getQueryString();
+		if (!empty($queryString)) $url .= "?$queryString";
 		if (HookRegistry::call('Request::redirectNonSSL', array(&$url))) {
 			return;
 		}
-		Request::redirect($url);
+		Request::redirectUrl($url);
 	}	
 
 	/**
@@ -118,15 +122,16 @@ class Request {
 	}
 
 	/**
-	 * Get the complete URL to this page, including parameters
+	 * Get the complete URL to this page, including parameters.
 	 * @return string
 	 */
 	function getCompleteUrl() {
 		static $completeUrl;
 
 		if (!isset($completeUrl)) {
-			$queryString = &$_SERVER['QUERY_STRING'];
 			$completeUrl = Request::getRequestUrl() . (!empty($queryString)?"?$queryString":'');
+			$queryString = Request::getQueryString();
+			if (!empty($queryString)) $completeUrl .= "?$queryString";
 			HookRegistry::call('Request::getCompleteUrl', array(&$completeUrl));
 		}
 
@@ -147,7 +152,22 @@ class Request {
 		
 		return $requestUrl;
 	}
-	
+
+	/**
+	 * Get the complete set of URL parameters to the current request.
+	 * @return string
+	 */
+	function getQueryString() {
+		static $queryString;
+
+		if (!isset($queryString)) {
+			$queryString = isset($_SERVER['QUERY_STRING'])?$_SERVER['QUERY_STRING']:'';
+			HookRegistry::call('Request::getQueryString', array(&$queryString));
+		}
+
+		return $queryString;
+	}
+
 	/**
 	 * Get the completed path of the request.
 	 * @return string
@@ -155,7 +175,10 @@ class Request {
 	function getRequestPath() {
 		static $requestPath;
 		if (!isset($requestPath)) {
-			$requestPath = $_SERVER['SCRIPT_NAME'] . (isset($_SERVER['PATH_INFO']) ? $_SERVER['PATH_INFO'] : '');
+			$requestPath = $_SERVER['SCRIPT_NAME'];
+			if (Request::isPathInfoEnabled()) {
+				$requestPath .= isset($_SERVER['PATH_INFO']) ? $_SERVER['PATH_INFO'] : '';
+			}
 			HookRegistry::call('Request::getRequestPath', array(&$requestPath));
 		}
 		return $requestPath;
