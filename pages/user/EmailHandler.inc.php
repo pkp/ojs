@@ -51,7 +51,7 @@ class EmailHandler extends UserHandler {
 					}
 				}
 			}
-			$email->displayEditForm(Request::url(null, null, 'email'), array('redirectUrl' => Request::getUserVar('redirectUrl')));
+			$email->displayEditForm(Request::url(null, null, 'email'), array('redirectUrl' => Request::getUserVar('redirectUrl')), null, array('disableSkipButton' => true));
 		}
 	}
 }

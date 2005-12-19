@@ -155,7 +155,7 @@ function deleteAttachment(fileId) {
 </tr>
 </table>
 
-<p><input name="send" type="submit" value="{translate key="email.send"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="history.go(-1)" /> <input name="send[skip]" type="submit" value="{translate key="email.skip"}" class="button" /></p>
+<p><input name="send" type="submit" value="{translate key="email.send"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="history.go(-1)" />{if !$disableSkipButton} <input name="send[skip]" type="submit" value="{translate key="email.skip"}" class="button" />{/if}</p>
 </form>
 
 {include file="common/footer.tpl"}
