@@ -29,4 +29,4 @@
 <!ELEMENT biography (#PCDATA)>
 <!ELEMENT role EMPTY>
 	<!ATTLIST role
-		type (manager|editor|sectionEditor|layoutEditor|reviewer|copyeditor|proofreader|author|reader) #REQUIRED>
+		type (manager|editor|sectionEditor|layoutEditor|reviewer|copyeditor|proofreader|author|reader|subscriptionManager) #REQUIRED>
