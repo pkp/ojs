@@ -784,6 +784,9 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="plugins.categories.importexport">Import/Export Plugins</message>
 	<message key="plugins.categories.importexport.description">Import/Export Plugins can be used to transfer content to and from other systems.</message>
 
+	<message key="plugins.categories.gateways">Gateway Plugins</message>
+	<message key="plugins.categories.gateways.description">Gateway Plugins provide live data to external systems.</message>
+
 	<!-- Files Browser -->
 	<message key="manager.files.indexOfDir">Index of {$dir}</message>
 	<message key="manager.files.uploadedFiles">Uploaded Files</message>

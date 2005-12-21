@@ -102,6 +102,23 @@ class GatewayHandler extends Handler {
 		
 		$templateMgr->display('gateway/lockss.tpl');
 	}
+
+	/**
+	 * Handle requests for gateway plugins.
+	 */
+	function plugin($args) {
+		parent::validate();
+		$pluginName = array_shift($args);
+
+		$plugins =& PluginRegistry::loadCategory('gateways');
+		if (isset($pluginName) && isset($plugins[$pluginName])) {
+			$plugin =& $plugins[$pluginName];
+			if (!$plugin->fetch($args)) {
+				Request::redirect(null, 'index');
+			}
+		}
+		else Request::redirect(null, 'index');
+	}
 }
 
 ?>

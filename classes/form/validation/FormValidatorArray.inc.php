@@ -47,6 +47,7 @@ class FormValidatorArray extends FormValidator {
 		
 		$ret = true;
 		$data = $this->form->getData($this->field);
+		if (!is_array($data)) return false;
 		foreach ($data as $key => $value) {
 			if (count($this->fields) == 0) {
 				if (trim($value) == '') {

@@ -96,7 +96,8 @@ class PluginRegistry {
 		return array(
 			'generic',
 			'auth',
-			'importexport'
+			'importexport',
+			'gateways'
 		);
 	}
 }

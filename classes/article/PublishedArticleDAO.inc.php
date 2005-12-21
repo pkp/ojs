@@ -65,6 +65,35 @@ class PublishedArticleDAO extends DAO {
 	}
 
 	/**
+	 * Retrieve a count of published articles in a journal.
+	 */
+	function getPublishedArticleCountByJournalId($journalId) {
+		$result =& $this->retrieve(
+			'SELECT count(*) FROM published_articles pa, articles a WHERE pa.article_id = a.article_id AND a.journal_id = ?',
+			$journalId
+		);
+		list($count) = $result->fields;
+		$result->Close();
+		return $count;
+	}
+
+	/**
+	 * Retrieve all published articles in a journal.
+	 * @param $journalId int
+	 * @param $rangeInfo object
+	 */
+	function &getPublishedArticlesByJournalId($journalId, $rangeInfo = null) {
+		$result =& $this->retrieveRange(
+			'SELECT pa.*, a.*, s.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, s.abbrev AS section_abbrev, s.abbrev_alt1 AS section_abbrev_alt1, s.abbrev_alt2 AS section_abbrev_alt2 FROM published_articles pa, articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE pa.article_id = a.article_id AND a.journal_id = ?',
+			$journalId,
+			$rangeInfo
+		);
+
+		$returner =& new DAOResultFactory($result, $this, '_returnPublishedArticleFromRow');
+		return $returner;
+	}
+	
+	/**
 	 * Retrieve Published Articles by issue id
 	 * @param $issueId int
 	 * @return PublishedArticle objects array

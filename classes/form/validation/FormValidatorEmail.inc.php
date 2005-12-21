@@ -16,21 +16,22 @@
 import('form.validation.FormValidatorRegExp');
 
 class FormValidatorEmail extends FormValidatorRegExp {
+	function getRegexp() {
+		return	'/^' .
+			'[A-Z0-9]+([\-_\+\.][A-Z0-9]+)*' .	// Username
+			'@' .
+			'[A-Z0-9]+([\-_\.][A-Z0-9]+)*' .	// Domain name (excluding TLD)
+			'\.' .
+			'[A-Z]{2,}' .						// TLD
+			'$/i';
+	}
 
 	/**
 	 * Constructor.
 	 * @see FormValidatorRegExp::FormValidatorRegExp()
 	 */
 	function FormValidatorEmail(&$form, $field, $type, $message) {
-		parent::FormValidatorRegExp($form, $field, $type, $message,
-			'/^' .
-			'[A-Z0-9]+([\-_\+\.][A-Z0-9]+)*' .	// Username
-			'@' .
-			'[A-Z0-9]+([\-_\.][A-Z0-9]+)*' .	// Domain name (excluding TLD)
-			'\.' .
-			'[A-Z]{2,}' .						// TLD
-			'$/i'
-		);
+		parent::FormValidatorRegExp($form, $field, $type, $message, FormValidatorEmail::getRegexp());
 	}
 	
 }
