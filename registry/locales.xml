@@ -25,5 +25,5 @@
 <locales>
 	<locale key="en_US" name="English"/>
 	<locale key="es_ES" name="Español (España)"/>
-	<locale key="te_ST" name="Test Locale"/>
+	<locale key="pt_BR" name="Português (Brasil)"/>
 </locales>

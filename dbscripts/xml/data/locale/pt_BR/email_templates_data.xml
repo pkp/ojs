@@ -1,0 +1,744 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../../../dtd/xmldata.dtd">
+
+<!--
+  * email_templates_data.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Email templates data XML file (pt_BR).
+  *
+  * $Id$
+  -->
+
+<data>
+	<table name="email_templates_default_data">
+		<field_default name="locale">pt_BR</field_default>
+
+		<!--
+		  *
+		  * General
+		  *
+		  -->
+		<row>
+			<field name="email_key">PASSWORD_RESET_CONFIRM</field>
+			<field name="subject">Confirmar atualização de senha</field>
+			<field name="body">Recebemos uma solicitação para atualizar sua senha de acesso ao site do(a) {$siteTitle}.
+
+Caso não tenha feito a solicitação, ignore este email e sua senha não será alterada. 
+
+Se desejar atualizar sua senha, clique no link abaixo.
+
+Atualizar senha: {$url}
+
+{$principalContactSignature}</field>
+			<field name="description">Mensagem enviada a usuário cadastrado quando o mesmo solicita atualização da senha, quando esqueceu a senha ou encontra problemas para acessar o sistema. O link contido permite ao usuário concluir a atualização da senha de acesso.</field>
+		</row>
+		<row>
+			<field name="email_key">PASSWORD_RESET</field>
+			<field name="subject">Atualização de senha</field>
+			<field name="body">Sua senha de acesso ao site {$siteTitle} foi atualizada com sucesso. Guarde o login (nome de usuário) e a senha, uma vez que serão necessários para todos os trabalhos junto a revista.
+
+Seu login: {$username}
+Sua nova senha: {$password}
+
+{$principalContactSignature}</field>
+		<field name="description">Mensagem enviada a usuário cadastrado quando o mesmo informa que esqueceu sua senha ou encontra problemas para acessar o sistema. O link contido permite ao usuário atualizar a senha de acesso.</field>
+		</row>
+		<row>
+			<field name="email_key">USER_REGISTER</field>
+			<field name="subject">Novo Usuário Cadastrado</field>
+			<field name="body">Agradecemos o seu cadastro ho sistema web da revista {$journalName}. Guarde o login e a senha, pois serão necessários para todos os trabalhos junto à revista.
+
+Login: {$username}
+Senha: {$password}
+
+Agradecendo desde já sua atenção,
+{$principalContactSignature}</field>
+			<field name="description">Mensagem enviada aos usuários recém-cadastrados no sistema, para acolhê-los e proporcionar um registro pessoal do login e da senha.</field>
+		</row>
+		<row>
+			<field name="email_key">PUBLISH_NOTIFY</field>
+			<field name="subject">Publicação de nova edição</field>
+			<field name="body">Caros leitores,
+
+{$journalName} acaba de publicar seu último número em {$journalUrl}. Convidamos você a navegar no sumário da revista para acessar os artigos e itens de interesse.
+
+Agradecemos seu interesse em nosso trabalho,
+{$editorialContactSignature}</field>
+			<field name="description">Mensagem enviada a leitores cadastrados através da notificação do link de notificação de usuários na página do Editor. Ela convida os leitores a acessar o sistema web da revista para ler a edição mais recente, através da URL informada.</field>
+		</row>
+		<row>
+			<field name="email_key">SUBSCRIPTION_NOTIFY</field>
+			<field name="subject">Confirmação de assinatura</field>
+			<field name="body">Prezada(o) {$subscriberName},
+
+Seu cadastro de assinante para acessar {$journalName}, nossa revista online, com o seguinte tipo de assinatura:
+
+{$subscriptionType}
+
+Para acessar o conteúdo disponível para assinantes basta entrar no sistema com seu login "{$username}" e senha.
+
+Uma vez logado no sistema é possível modificar os dados do seu perfil e senha a qualquer momento.
+
+Em caso de assinatura institucional, não há necessidade de usuários de dentro da instituição logarem no sistema, já que o acesso ao conteúdo para assinantes é autenticado automaticamente pelo sistema.
+
+Em caso de dúvidas, envie suas questões para este email.
+
+{$subscriptionContactSignature}</field>
+		<field name="description">Mensagem notifica o leitor cadastrado que o Editor criou sua Assinatura. Proporciona todas as informações necessárias para acesso ao conteúdo.</field>
+		</row>
+		<row>
+			<field name="email_key">LOCKSS_EXISTING_ARCHIVE</field>
+			<field name="subject">Solicitação de Arquivamento de {$journalName}</field>
+			<field name="body"><![CDATA[Prezada(o) [Nome da(o) Bibliotecária(o) da Universidade]
+
+{$journalName} <{$journalUrl}>, é uma revista na qual um docente, [nome da pessoa], possui a função editorial de [título da função editorial]. Esta revista deseja estabelecer um arquivo LOCKSS (Lots of Copies Keep Stuff Safe - Muitas Cópias Mantém as Coisas Seguras) com esta e outras bibliotecas de instituições de ensino superior.
+
+[Breve descrição da revista]
+
+A URL do Manifesto LOCKSS da Editora da nossa revista é: {$journalUrl}/gateway/lockss
+
+Consta do nosso registro que esta biblioteca é participante do sistema LOCKSS. Estamos à disposição caso necessite de metadados adicionais para o cadastro da revista na sua versão do LOCKSS, os quais serão providenciados o mais rápido possível.
+
+Em caso de dúvias, envie suas questões para este email.
+
+Agradecendo desde já sua atenção,
+{$principalContactSignature}]]></field>
+			<field name="description">Mensagem solicita ao administrador de um repositório LOCKSS que considere armazenar a revista em seu arquivo, informando a URL para o Manifesto LOCKSS da Editora da revista.</field>
+		</row>
+		<row>
+			<field name="email_key">LOCKSS_NEW_ARCHIVE</field>
+			<field name="subject">Solicitação de Arquivamento de {$journalName}</field>
+			<field name="body"><![CDATA[Prezada(o) [Nome da(o) Bibliotecária(o) da Universidade]
+
+{$journalName} <{$journalUrl}> é uma revista na qual um docente, [nome da pessoa], possui a função editorial de [título da função editorial]. Esta revista deseja estabelecer um arquivo LOCKSS (Lots of Copies Keep Stuff Safe - Muitas Cópias Mantém as Coisas Seguras) com esta e outras bibliotecas de instituições de ensino superior.
+
+[Breve descrição da revista]
+
+O sistema LOCKSS <http://lockss.stanford.edu/>, uma initiativa internacional de bibliotecas e editores, é um exemplo funcional de um repositório digital de preservação e arquivamento distribuído. O sistema, que é operado em ambiente tecnológico idêntico ao de um computador pessoal, é gratuito, permite sua implementação e disponibilização online rápida, e sua manutenção é mínima.
+
+Para auxiliar no arquivamento de nossa revista, convidamos sua biblioteca a se tornar membro da comunidade LOCKSS, e ajudar a colecionar e preservar títulos produzidos mundialmente. Para isso, visite o site do LOCKSS para saber como funciona o sistema e como fazer parte da comunidade. Aguardamos sua resposta sobre sua disponibilidade para arquivamento desta revista site for information on how this system operates. 
+
+Agradecendo desde já sua atenção,
+{$principalContactSignature}]]></field>
+			<field name="description">Mensagem convida o destinatário a participar da iniciativa LOCKSS e incluir a revista no seu repositório, oferecendo informações iniciais e sobre como participar. O remetente deverá preencher as informações, substituindo o que estiver em colchetes!</field>
+		</row>
+
+
+		<!--
+		  *
+		  * Submission-related
+		  *
+		  -->
+		<row>
+			<field name="email_key">SUBMISSION_ACK</field>
+			<field name="subject">Agradecimento pela Submissão</field>
+			<field name="body">{$authorName},
+
+Agradecemos a submissão do seu manuscrito "{$articleTitle}" para {$journalName}. Através da interface de administração do sistema, utilizado para a submissão, será possível acompanhar o progresso do documento dentro do processo editorial, bastanto logar no sistema localizado em:
+
+URL do Manuscrito: {$submissionUrl}
+Login: {$authorUsername}
+
+Em caso de dúvidas, envie suas questões para este email. Agradecemos mais uma vez considerar nossa revista como meio de transmitir ao público seu trabalho.
+
+{$editorialContactSignature}</field>
+		<field name="description">Mensagem enviada automaticamente pelo sistema ao autor, quando habilitada, ao ser concluído o processo de submissão de um trabalho à revista. Oferece informações sobre os mecanismos para acompanhamento do trabalho durante o processo editorial, e serve como registro e confirmação da submissão.</field>
+		</row>
+		<row>
+			<field name="email_key">SUBMISSION_UNSUITABLE</field>
+			<field name="subject">Submissão Inadequada</field>
+			<field name="body">{$authorName},
+
+Uma avaliação inicial de "{$articleTitle}" demonstrou que esta submissão não se encaixa dentro do escopo e foco da revista {$journalName}. Recomendo que consulte a descrição da revista no Sobre, bem como seu conteúdo, para saber mais o tipo de trabalho publicado. O seu trabalho também pode ser submetido a outra revista cujo escopo e foco se encaixe melhor com sua proposta.
+{$editorialContactSignature}</field>
+			<field name="description">Mensagem notifica o autor que sua submissão não é adequada para a revista, por não estar dentro do seu escopo. Sugere que o autor altere o trabalho para atender às exigências da revista, ou submeter para outra onde se enquadre melhor.</field>
+		</row>
+		<row>
+			<field name="email_key">SUBMISSION_COMMENT</field>
+			<field name="subject">Comentário sobre Submissão</field>
+			<field name="body">{$name},
+
+{$commentName} enviou um comentário sobre a submissão "{$articleTitle}" em {$journalName}:
+
+{$comments}</field>
+			<field name="description">Mensagem notifica várias pessoas envolvidas no processo de edição de uma submissão que um comentário foi enviado.</field>
+		</row>
+		<row>
+			<field name="email_key">SUBMISSION_DECISION_REVIEWERS</field>
+			<field name="subject">Decisão sobre "{$articleTitle}"</field>
+			<field name="body">Como avaliador designado para a avaliação da submissão "{$articleTitle}" a {$journalName}, encaminho aqui as avaliações e decisão editorial enviados ao autor deste trabalho. Agradecemos sua contribuição, fundamental para este processo.
+ 
+{$editorialContactSignature}
+
+{$comments}</field>
+			<field name="description">Mensagem notifica os avaliadores de uma submissão que o processo de avaliação foi concluído. Inclui informações sobre o artigo e a decisão tomada, além de agradecer pela contribuição.</field>
+		</row>
+
+
+		<!--
+		  *
+		  * Editor
+		  *
+		  -->
+		<row>
+			<field name="email_key">EDITOR_ASSIGN</field>
+			<field name="subject">Tarefa Editorial</field>
+			<field name="body">{$editorialContactName},
+
+A submissão "{$articleTitle}" a {$journalName} lhe foi designada para acompanhamento durante o processo editorial, como parte de suas funções como Editor de Seção.  
+
+URL da Submissão: {$submissionEditingUrl}
+login: {$editorUsername}
+
+Agradecendo desde já sua atenção,
+{$editorialContactSignature}</field>
+			<field name="description">Mensagem notifica o Editor de Seção que uma nova tarefa de acompanhamento de submissão lhe foi designada pelo Editor Gerente. Oferece informações sobre a submissão e como acessar o sistema.</field>
+		</row>
+
+
+		<!--
+		  *
+		  * Peer Review
+		  *
+		  -->
+		<row>
+			<field name="email_key">REVIEW_REQUEST</field>
+			<field name="subject">Solicitação de Avaliação de Artigo</field>
+			<field name="body">{$reviewerName},
+
+Acredito que seu conhecimento será fundamental para realizar a avaliação do manuscrito "{$articleTitle}" submetido a {$journalName}. Informações sobre a submissão encontram-se abaixo, e espero que considere assumir esta importante responsabilidade.
+
+Acesse o sistema até {$weekLaterDate} para informar se estará disponível ou não para realizar a avaliação, bem como acessar os dados completos da submissão e registrar sua avaliação e recomendações, através da URL {$journalUrl}.
+
+A data de conclusão da avaliação é {$reviewDueDate}.
+
+Caso não tenha seu login e senha de acesso para acessar o sistema, use o link a seguir para que o sistema crie uma nova senha que lhe será enviada via email, junto com o seu login. {$passwordResetUrl}
+
+URL da Submissão: {$submissionReviewUrl}
+
+Agradecemos desde já sua atenção.
+
+{$editorialContactSignature}
+
+
+
+"{$articleTitle}"
+
+Resumo
+{$articleAbstract}</field>
+			<field name="description">Mensagem do Editor de Seção para solicitar ao Avaliador que indique disponibilidade ou não para realizar uma avaliação. Oferece informações sobre a submissão, como título e resumo, além da data para a conclusão dos trabalhos e como acessar o documento. Esta mensagem é usada quando se utiliza o Processo Padrão de Avaliação, definido no Passo 2 de Configuração da Revista. (Caso contrário veja REVIEW_REQ_MULTI_ATTACHED e REVIEW_REQUEST_ATTACHED.)</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEW_REQUEST_ONECLICK</field>
+			<field name="subject">Solicitação de Avaliação de Artigo</field>
+			<field name="body">{$reviewerName},
+
+Acredito que seu conhecimento será fundamental para realizar a avaliação do manuscrito "{$articleTitle}" submetido a {$journalName}. Informações sobre a submissão encontram-se abaixo, e espero que considere assumir esta importante responsabilidade.
+
+Acesse o sistema até {$weekLaterDate} para informar se estará disponível ou não para realizar a avaliação, bem como acessar os dados completos da submissão e registrar sua avaliação e recomendações, através da URL {$journalUrl}.
+
+A data de conclusão da avaliação é {$reviewDueDate}.
+
+Caso não tenha seu login e senha de acesso para acessar o sistema, use o link a seguir para que o sistema crie uma nova senha que lhe será enviada via email, junto com o seu login. {$passwordResetUrl}
+
+URL da Submissão: {$submissionReviewUrl}
+
+Agradecemos desde já sua atenção.
+
+{$editorialContactSignature}
+
+
+
+"{$articleTitle}"
+
+Resumo
+{$articleAbstract}</field>
+			<field name="description">Mensagem do Editor de Seção para solicitar ao Avaliador que indique disponibilidade ou não para realizar uma avaliação. Oferece informações sobre a submissão, como título e resumo, além da data para a conclusão dos trabalhos e como acessar o documento. Esta mensagem é usada quando se utiliza o Processo Padrão de Avaliação, definido no Passo 2 de Configuração da Revista e a opçõa de acesso one-click está habilitada (Caso contrário veja REVIEW_REQ_MULTI_ATTACHED e REVIEW_REQUEST_ATTACHED).</field>
+		</row>		
+		<row>
+			<field name="email_key">REVIEW_REQUEST_MULTIPLE</field>
+			<field name="subject">Solicitação de Avaliação de Artigo</field>
+			<field name="body">Caro Avaliador,
+
+Acredito que seu conhecimento será de grande valia para realizar a avaliação do manuscrito "{$articleTitle}" submetido a {$journalName}. Informações sobre a submissão encontram-se abaixo, e espero que considere assumir esta importante responsabilidade.
+
+O resumo da submissão está no final da mensagem e solicitamos que acesse o sistema até {$weekLaterDate} para informar se estará disponível ou não para realizar a avaliação, bem como acessar os dados completos da submissão e registrar sua avaliação e recomendações, através da URL {$journalUrl}.
+
+
+Agradecemos desde já sua atenção.
+
+{$editorialContactSignature}
+
+
+
+"{$articleTitle}"
+
+Resumo
+{$articleAbstract}</field>
+			<field name="description">Mensagem enviada pelo Editor de Seção a todos os Avaliadores que ainda não foram notificados que há uma tarefa de avaliação designada. Passa informações sobre o documento, como título e resumo. Esta mensagem é usada quando se utiliza o Processo Padrão de Avaliação, definido no Passo 2 de Configuração da Revista.(Caso contrário veja REVIEW_REQ_MULTI_ATTACHED e REVIEW_REQUEST_ATTACHED.)</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEW_REQ_MULTI_ATTACHED</field>
+			<field name="subject">Solicitação de Avaliação de Artigo</field>
+			<field name="body">Caro Avaliador,
+
+Acredito que seu conhecimento será de grande valia para realizar a avaliação do manuscrito "{$articleTitle}" submetido a {$journalName}. As Diretrizes para Avaliação encontram-se no final desta mensagem, enquanto o manuscrito está em anexo. Espero que considere assumir esta importante responsabilidade.
+
+Responda a esta mensagem até {$weekLaterDate} para informar se estará disponível ou não para realizar a avaliação.
+
+
+Agradecemos desde já sua atenção.
+
+{$editorialContactSignature}
+
+
+Diretrizes para Avaliação
+
+{$reviewGuidelines}
+			</field>
+			<field name="description">Mensagem enviada pelo Editor de Seção a todos os Avaliadores que ainda não foram notificados que há uma tarefa de avaliação designada. O documento da submissão está em anexo. Passa informações sobre o documento, como título e resumo. Esta mensagem é usada quando se utiliza o Processo de Avaliação via Email-Anexo, definido no Passo 2 de Configuração da Revista. (Caso contrário veja REVIEW_REQUEST_MULTIPLE e REVIEW_REQUEST.)</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEW_REQUEST_ATTACHED</field>
+			<field name="subject">Solicitação de Avaliação de Artigo</field>
+			<field name="body">{$reviewerName},
+
+Acredito que seu conhecimento será de grande valia para realizar a avaliação do manuscrito "{$articleTitle}" submetido a {$journalName}. As Diretrizes para Avaliação encontram-se no final desta mensagem, enquanto o manuscrito está em anexo. Sua avaliação, bem como as recomendações, devem ser enviados para este email até {$reviewDueDate}. Espero que considere assumir esta importante responsabilidade.
+
+Responda a esta mensagem até {$weekLaterDate} para informar se estará disponível ou não para realizar a avaliação.
+
+
+Agradecemos desde já sua atenção.
+
+{$editorialContactSignature}
+
+
+Diretrizes para Avaliação
+
+{$reviewGuidelines}
+			</field>
+			<field name="description">Mensagem enviada pelo Editor de Seção para solicitar ao avaliador que aceite ou não a tarefa de avaliação de uma submissão. Inclui o documento em anexo. Esta mensagem é usada quando se utiliza o Processo de Avaliação via Email-Anexo, definido no Passo 2 de Configuração da Revista. (Caso contrário veja REVIEW_REQUEST_MULTIPLE e REVIEW_REQUEST.)</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEW_CANCEL</field>
+			<field name="subject">Cancelamento de Solicitação de Avaliação</field>
+			<field name="body">{$reviewerName},
+
+Informamos o cancelamento da solicitação de avaliação da submissão "{$articleTitle}" a {$journalName}. Lamentamos qualquer inconveniente causado e esperamos poder contar com seu conhecimento em outra oportunidade.
+
+Em caso de dúvidas, envie suas questões para este email.
+
+{$editorialContactSignature}</field>
+			<field name="description">Mensagem enviada pelo Editor de Seção com um processo de avaliação em andamento, notificando que o processo em questão foi cancelado.</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEW_CONFIRM</field>
+			<field name="subject">Disponível para Avaliação</field>
+			<field name="body">{$editorialContactName},
+
+Estou disponível e interessado em avaliar a submissão "{$articleTitle}" a {$journalName}. Agradeço a consideração e pretendo concluir a avaliação até a data definida, {$reviewDueDate}, ou antes do prazo.
+
+{$reviewerName}</field>
+			<field name="description">Mensagem enviada pelo Avaliador ao Editor de Seção, em resposta à solicitação de avaliação, para notificar disponibilidade para realizar a tarefa e de que a mesma será concluída no prazo especificado.</field>
+
+		</row>
+		<row>
+			<field name="email_key">REVIEW_DECLINE</field>
+			<field name="subject">Indisponível para Avaliação</field>
+			<field name="body">{$editorialContactName},
+
+Sinto informar que não estou disponível no momento para realizar a avaliação da sumissão "{$articleTitle}" a {$journalName}. Agradeço sua consideração, e espero poder ser convocado e estar disponível em outra oportunidade.
+
+{$reviewerName}</field>
+			<field name="description">Mensagem enviada pelo Avaliador ao Editor de Seção, em resposta à solicitação de avaliação, para notificar sua NÃO disponibilidade para realizar a tarefa, rejeitando a solicitação.</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEW_COMPLETE</field>
+			<field name="subject">Conclusão de Avaliação</field>
+			<field name="body">{$editorialContactName},
+
+Concluí a avaliação da submissão "{$articleTitle}" a {$journalName}. Os comentários e recomendações estão registrados no sistema. Agradeço a oportunidade de prestar servições à revista e estou à disposição para esclarecer quaisquer dúvidas.
+
+{$reviewerName}</field>
+			<field name="description">Mensagem enviada pelo Avaliador ao Editor de Seção para notificar da conclusão de avaliação.</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEW_ACK</field>
+			<field name="subject">Agradecimento pela Avaliação</field>
+			<field name="body">{$reviewerName},
+
+Agradecemos ter concluído a avaliação da submissão "{$articleTitle}" a {$journalName}. Sua contribuição é fundamental para a qualidade do trabalho publicado.
+
+{$editorialContactSignature}</field>
+			<field name="description">Mensagem enviada pelo Editor de Seção ao Avaliador para confirmar recebimento e agradecer o avaliador pela conclusão da avaliação.</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEW_REMIND</field>
+			<field name="subject">Submission Review Reminder</field>
+			<field name="body">{$reviewerName},
+
+Esta mensagem é apenas um lembrete quanto à solicitação de avaliação da submissão "{$articleTitle}" a {$journalName}. Esperamos receber a avaliação até {$reviewDuedate}, e aguardamos o recebimento assim que for possível.
+
+Caso não possua um login e senha para acessar o sistema da revista, use o link a seguir para criar uma nova senha, que lhe será enviada via email junto com o seu login. {$passwordResetUrl}.
+
+URL da Submissão: {$submissionReviewUrl}
+
+Confirme sua disponibilidade para concluir sua avaliação, contribuição vital para a qualidade desta publicação. 
+
+Aguardando seu contato,
+
+{$editorialContactSignature}</field>
+			<field name="description">Mensagem enviada pelo Editor de Seção ao Avaliador como lembrete da tarefa de avaliação em andamento ainda não concluída.</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEW_REMIND_AUTO</field>
+			<field name="subject">Lembrete Automático de Avaliação de Submissão</field>
+			<field name="body">{$reviewerName},
+
+Esta mensagem é um lembrete quanto à solicitação de avaliação da submissão "{$articleTitle}" a {$journalName}. Esperávamos receber a avaliação até {$reviewDuedate}, e este email foi enviado automaticamente após ultrapassar a data limite. guardamos o recebimento da avaliação assim que for possível concluí-la.
+
+Caso não possua um login e senha para acessar o sistema da revista, use o link a seguir para criar uma nova senha, que lhe será enviada via email junto com o seu login. {$passwordResetUrl}.
+
+URL da Submissão: {$submissionReviewUrl}
+
+Confirme sua disponibilidade para concluir sua avaliação, contribuição vital para a qualidade desta publicação. 
+
+Aguardando seu contato,
+
+{$editorialContactSignature}</field>
+			<field name="description">Mensagem enviada automaticamente ao avaliador quando a data de conclusão de avaliação for ultrapassada (veja as Opções de Avaliação no Passo 2 da Configuração da Revista). Tarefas agendadas devem ser habilitadas e configuradas (veja o arquivo de configuração do sistema).</field>
+		</row>
+
+
+		<!--
+		  *
+		  * Editor Review
+		  *
+		  -->
+		<row>
+			<field name="email_key">EDITOR_REVIEW</field>
+			<field name="subject">Avaliação Editorial de Submissão</field>
+			<field name="body">{$authorName},
+
+Informamos a conclusão da avalição do manuscrito "{$articleTitle}." 
+
+Nossa decisão é a seguinte:
+
+{$comments}.
+
+Comentários adicionais sobre o manuscrito, baseados na avaliação editorial e pelos pares, estão disponíveis acessando o sistema:
+
+URL da Submisão: {$submissionUrl}
+Login: {$authorUsername}
+
+Em caso de dúvidas, envie suas questões para este email.
+
+{$editorialContactSignature}</field>
+			<field name="description">Mensagem enviada pelo Editor de Seção ao Autor de uma submissão, avisando da conclusão do processo de avaliação.</field>
+		</row>
+		<row>
+			<field name="email_key">COPYEDIT_REQUEST</field>
+			<field name="subject">Solicitação de Edição de Texto</field>
+			<field name="body">{$copyeditorName},
+
+Solicito a Edição de Texto do manuscrito "{$articleTitle}", submetido a {$journalName}. A submissão pode ser acessada através do sistema web, bem como um conjunto de Instruções para Edição de Texto.
+
+URL da Submissão: {$submissionCopyeditingUrl}
+Login: {$copyeditorUsername}
+
+Caso não esteja disponível para assumir esta responsabilidade no momento, ou em caso de dúvidas, entre em contato através deste email. 
+
+Agradecemos desde já sua colaboração, fundamental para a qualidade da revista.
+
+{$editorialContactSignature}</field>
+			<field name="description">Mensagem enviada pelo Editor de Seção solicitando a realização de uma tarefa de edição ao Editor de Texto, com informações sobre e como acessar o documento.</field>
+		</row>
+		<row>
+			<field name="email_key">COPYEDIT_COMPLETE</field>
+			<field name="subject">Edição de Texto Concluída</field>
+			<field name="body">{$editorialContactName},
+
+Concluí a primeira rodade de Edição de Texto do manuscrito "{$articleTitle}", submetido a {$journalName}. estando disponível ao autor e ao editor para avaliação das sugestões de alteração e comentários. 
+
+Agradecendo a atenção dispensada,
+{$copyeditorName}</field>
+			<field name="description">Mensagem enviada pelo Editor de Texto ao Editor de Seção, informando da conclusão da tarefa editorial.</field>
+		</row>
+		<row>
+			<field name="email_key">COPYEDIT_ACK</field>
+			<field name="subject">Agradecimento pela Edição de Texto</field>
+			<field name="body">{$copyeditorName},
+
+Agradecemos a conclusão de Edição de Texto do manuscrito "{$articleTitle}", submetido a {$journalName}. Sua contribuição é fundamental para a qualidade desta publicação.
+
+Obrigado,
+
+{$editorialContactSignature}</field>
+			<field name="description">Mensagem enviada pelo Editor de Seção ao Editor de Texto, agradecendo pela conclusão da tarefa editorial.</field>
+		</row>
+		<row>
+			<field name="email_key">COPYEDIT_AUTHOR_REQUEST</field>
+			<field name="subject">Solicitação de Avaliação da Edição de Texto</field>
+			<field name="body">{$authorName},
+
+Concluímos a Edição de Texto inicial do seu manuscrito "{$articleTitle}", submetido a {$journalName}. Acesso o sistema web da revista e responda às Perguntas ao Autor, incluídas no documento pelo editor de texto, e avalie as sugestões de alteração.
+
+Esta é a última oportunidade para realizar alterações substancias ao documento. Em seguida, será solicita a Leitura de Provas, porém as alterções permitidas nesse estágio são para correção mínima de erros tipográficos e de layout.
+
+URL da Submissão: {$submissionCopyeditingUrl}
+Login: {$authorUsername}
+ 
+Caso não esteja disponível para assumir esta responsabilidade no momento, ou em caso de dúvidas, entre em contato através deste email. 
+
+Agradecemos desde já sua colaboração, fundamental para a qualidade da revista.
+
+{$editorialContactSignature}</field>
+			<field name="description">Mensagem enviada pelo Editor de Seção ao autor, solicitando que verifique o trabalho realizado pelo Editor de Texto, com informações sobre acesso e avisando que é a última chance de realizar modificações no texto.</field>
+		</row>
+		<row>
+			<field name="email_key">COPYEDIT_AUTHOR_COMPLETE</field>
+			<field name="subject">Avaliação de Edição de Texto Concluída</field>
+			<field name="body">{$editorialContactName},
+
+Concluí a avaliação da Edição de Texto do manuscrito "{$articleTitle}", submetido a {$journalName}, a qual está pronta para a edição de texto final e preparação das Composições.
+
+Agradeceço as contribuições para a melhoria do manuscrito.
+
+Obrigado,
+
+{$authorName}</field>
+			<field name="description">Mensagem enviada pelo Autor ao Editor de Seção, informando da conclusão da avaliação da edição de texto e que o documento está pronto para composição e layout.</field>
+		</row>
+		<row>
+			<field name="email_key">COPYEDIT_AUTHOR_ACK</field>
+			<field name="subject">Agradecimento pela Avaliação de Edição de Texto</field>
+			<field name="body">{$authorName},
+
+Agradecemos sua avaliação da Edição de Texto do manuscrito "{$articleTitle}", submetido a {$journalName}. Em breve seu trabalho estará pronto para publicação.
+
+{$editorialContactSignature}</field>
+			<field name="description">Mensagem enviada pelo Editor de Seção ao autor, agradecendo pela avaliação da Edição de Texto.</field>
+		</row>
+		<row>
+			<field name="email_key">COPYEDIT_FINAL_REQUEST</field>
+			<field name="subject">Avaliação da Edição de Texto Final</field>
+			<field name="body">{$copyeditorName},
+
+O autor e editor concluíram a avalição da Edição de Texto do manuscrito "{$articleTitle}", submetido a {$journalName}. A vesrão final está pronta para Composição.
+
+URL da Submissão: {$submissionCopyeditingUrl}
+Login: {$copyeditorUsername}
+
+Em nome da Equipe Editorial, agradeço sua colaboração para a qualidade desta publicação,
+
+{$editorialContactSignature}</field>
+			<field name="description">Mensagem enviada pelo Editor de Seção ao Editor de Texto, solicitando que realize a última Edição de Texto, com informações sobre acesso.</field>
+		</row>
+		<row>
+			<field name="email_key">COPYEDIT_FINAL_COMPLETE</field>
+			<field name="subject">Avaliação da Edição de Texto Final Concluída</field>
+			<field name="body">{$editorialContactName},
+
+Concluí a edição da versão final do manuscrito "{$articleTitle}", submetido a {$journalName}, a qual está pronta para preparação das Composições.
+
+{$copyeditorName}</field>
+			<field name="description">Mensagem enviada pelo Editor de Texto ao Editor de Seção, solicitando que verifique o trabalho realizado pelo Editor de Texto, com informações sobre acesso e avisando que é a última chance de realizar modificações no texto.</field>
+		</row>
+		<row>
+			<field name="email_key">COPYEDIT_FINAL_ACK</field>
+			<field name="subject">Agradecimento pela Edição de Texto Final</field>
+			<field name="body">{$copyeditorName},
+
+Agradecemos a conclusão da Edição de Texto do manuscrito "{$articleTitle}", submetido a {$journalName}. A versão final para as Composições é fundamental para a qualidade da produção.
+
+Agradecendo mais uma vez pela sua contribuição,
+
+{$editorialContactSignature}</field>
+			<field name="description">Mensagem enviada pelo Editor de Seção ao Editor de Texto, agradecendo pela conclusão da última Edição de Texto solicitada.</field>
+		</row>
+
+
+		<!--
+		  *
+		  * Layout Editing
+		  *
+		  -->
+		<row>
+			<field name="email_key">LAYOUT_REQUEST</field>
+			<field name="subject">Solicitação de Composições</field>
+			<field name="body">{$layoutEditorName},
+
+Solicito a preparação das Composições do manuscrito "{$articleTitle}", submetido a {$journalName}.
+
+URL da Submissão: {$submissionLayoutUrl}
+Login: {$layoutEditorUsername}
+
+Caso não esteja disponível para assumir esta responsabilidade no momento, ou em caso de dúvidas, entre em contato através deste email. 
+
+Agradecemos desde já sua colaboração, fundamental para a qualidade da revista.
+
+{$editorialContactSignature}</field>
+			<field name="description">Mensagem enviada pelo Editor de Seção ao Editor de Layout, solicitando que sejam preparadas as Composições do texto final, com informações de acesso.</field>
+		</row>
+		<row>
+			<field name="email_key">LAYOUT_COMPLETE</field>
+			<field name="subject">Composições Concluídas</field>
+			<field name="body">{$editorialContactName},
+
+As composições do manuscrito "{$articleTitle}", submetido a {$journalName}, estão prontas para Leitura de Provas. 
+
+Em caso de dúvidas, envie suas questões para este email.
+
+{$layoutEditorName}</field>
+			<field name="description">Mensagem enviada pelo Editor de Layout ao Editor de Seção, informando sobre a conclusão das composições.</field>
+		</row>
+		<row>
+			<field name="email_key">LAYOUT_ACK</field>
+			<field name="subject">Agradecimento pelas Composições</field>
+			<field name="body">{$layoutEditorName},
+
+Agradecemos a preparação das composições do manuscrito "{$articleTitle}", submetido a {$journalName}. 
+
+Sua contribuição é fundamental para a qualidade desta publicação.
+
+{$editorialContactSignature}</field>
+			<field name="description">Mensagem enviada pelo Editor de Seção ao Editor de Layout, agradecendo pela conclusão das composições.</field>
+		</row>
+
+
+		<!--
+		  *
+		  * Proofreading
+		  *
+		  -->
+		<row>
+			<field name="email_key">PROOFREAD_AUTHOR_REQUEST</field>
+			<field name="subject">Solicitação de Leitura de Provas - Author</field>
+			<field name="body">{$authorName},
+
+Solicitamos a Leitura de Provas do manuscrito "{$articleTitle}", submetido a {$journalName}. Neste momento somente é possível registrar erros tipográficos e de layout. As Instruções para Leitura de Provas estão disponíveis junto com as composições.
+
+URL da Submissão: {$submissionUrl}
+Login: {$authorUsername}
+
+Em caso de dúvidas, entre em contato através deste email. 
+
+Agradecemos desde já sua colaboração, fundamental para a qualidade da revista.
+
+{$editorialContactSignature}</field>
+			<field name="description">Mensagem enviada pelo Editor de Seção ao autor, solicitando que verifique o trabalho realizado pelo Editor de Layou, com informações sobre acesso e avisando que somente é possível corrigir erros tipográficos de de layout.</field>
+		</row>
+		<row>
+			<field name="email_key">PROOFREAD_AUTHOR_COMPLETE</field>
+			<field name="subject">Conclusão da Leitura de Provas - Author</field>
+			<field name="body">{$editorialContactName},
+
+Concluí a Leitura de Provas do manuscrito "{$articleTitle}", submetido a {$journalName}. As composições estão prontas para as correções finais do Leitor de Prova e Editor de Layout.
+
+{$authorName}</field>
+			<field name="description">Mensagem enviada pelo Autor ao Editor de Seção, informando a conclusão da Leitura de Provas.</field>
+		</row>
+		<row>
+			<field name="email_key">PROOFREAD_AUTHOR_ACK</field>
+			<field name="subject">Agradecimento pela Leitura de Provas - Author</field>
+			<field name="body">{$authorName},
+
+Agradecemos pela Leitura de Provas do manuscrito, "{$articleTitle}" submetido a {$journalName}. Em breve seu trabalho estará pronto para publicação.
+
+Caso tenha habilitado o serviço de notificação, você receberá via email o Sumário da revista assim que for publicado. 
+
+Em caso de dúvidas, envie suas questões para este email.
+
+{$editorialContactSignature}</field>
+			<field name="description">Mensagem enviada pelo Editor de Seção ao autor, agradecendo a conclusão da Leitura de Provas.</field>
+		</row>
+		<row>
+			<field name="email_key">PROOFREAD_REQUEST</field>
+			<field name="subject">Solicitação de Leitura de Provas</field>
+			<field name="body">{$proofreaderName},
+
+Solicito a Leitura de Provas do manuscrito "{$articleTitle}", submetido a {$journalName}. 
+
+URL da Submissão: {$submissionUrl}
+Login: {$proofreaderUsername}
+
+Caso não esteja disponível para assumir esta responsabilidade no momento, ou em caso de dúvidas, entre em contato através deste email. 
+
+Agradecemos desde já sua colaboração, fundamental para a qualidade da revista.
+
+{$editorialContactSignature}</field>
+			<field name="description">Mensagem enviada pelo Editor de Seção ao Leitor de Provas, solicitando que verifique o trabalho realizado pelo Editor de Layout e o autor, verificando os comentários e alterações solicitadas. É o último momento para verificar a qualidade do documento e evitar possíveis erros antes da publicação.</field>
+		</row>
+		<row>
+			<field name="email_key">PROOFREAD_COMPLETE</field>
+			<field name="subject">Leitura de Provas Concluída</field>
+			<field name="body">{$editorialContactName},
+
+Concluí a Leitura de Provas do manuscrito "{$articleTitle}", submetido a {$journalName}. As composições estão prontas para as correções finais por parte do Editor de Layout.
+
+{$proofreaderName}</field>
+			<field name="description">Mensagem enviada pelo Leitor de Provas ao Editor de Seção, informando a conclusão da Leitura de Provas.</field>
+		</row>
+		<row>
+			<field name="email_key">PROOFREAD_ACK</field>
+			<field name="subject">Agradecimento pela Leitura de Provas</field>
+			<field name="body">{$proofreaderName},
+
+Agradecemos a Leitura de Provas do manuscrito "{$articleTitle}", submetido a {$journalName}. 
+
+Sua contribuição é fundamental para a qualidade desta publicação.
+
+{$editorialContactSignature}</field>
+			<field name="description">Mensagem enviada pelo Editor de Seção ao Leitor de Provas, agradecendo pelo trabalho concluído de Leitura de Provas.</field>
+		</row>
+		<row>
+			<field name="email_key">PROOFREAD_LAYOUT_REQUEST</field>
+			<field name="subject">Solicitação de Leitura de Provas - Editor de Layout</field>
+			<field name="body">{$layoutEditorName},
+
+Solicitamos que verifique as correções solicitadas, como resultado da Leitura de Provas do manuscrito "{$articleTitle}", submetido a {$journalName}.
+
+URL da Submissão: {$submissionUrl}
+Login: {$layoutEditorUsername}
+
+Caso não esteja disponível para assumir esta responsabilidade no momento, ou em caso de dúvidas, entre em contato através deste email. 
+
+Agradecemos desde já sua colaboração, fundamental para a qualidade da revista.
+
+{$editorialContactSignature}</field>
+			<field name="description">Mensagem enviada pelo Editor de Seção ao Editor de Layout, solicitando que verifique os comentários e realize as alterações solicitadas após a Leitura de Provas. Possui informações sobre acesso ao sistema e ao documento</field>
+		</row>
+		<row>
+			<field name="email_key">PROOFREAD_LAYOUT_COMPLETE</field>
+			<field name="subject">Leitura de Provas Concluída - Editor de Layout</field>
+			<field name="body">{$editorialContactName},
+
+As Composições do manuscrito "{$articleTitle}", submetido a {$journalName}, foram corrigidas, segundo as solicitações da Leitura de Provas, e estão prontas para publicação.
+
+{$layoutEditorName}</field>
+			<field name="description">Mensagem enviada pelo Editor de Layout ao Editor de Seção, informando a conclusão das novas composições, após Leitura de Provas</field>
+		</row>
+		<row>
+			<field name="email_key">PROOFREAD_LAYOUT_ACK</field>
+			<field name="subject">Agradecimento pela Leitura de Provas - Editor de Layout</field>
+			<field name="body">{$layoutEditorName},
+
+Agradecemos a conclusão da Leitura de Provas e correções realizadas às composições do manuscrito "{$articleTitle}", submetido a {$journalName}. 
+
+Sua contribuição é fundamental para a qualidade desta publicação.
+
+{$editorialContactSignature}</field>
+			<field name="description">Mensagem enviada pelo Editor de Seção ao Editor de Layout, agradecendo pela conclusão das composições, após a Leitura de Provas</field>
+		</row>
+		<row>
+			<field name="email_key">EMAIL_LINK</field>
+			<field name="subject">Artigo Interessante</field>
+			<field name="body">Acredito que o artigo "{$articleTitle}", de {$authorName}, publicado em {$journalName}, V. {$volume}, N. {$number}, Ano {$year}, disponível em "{$articleUrl}", representa uma leitura de seu interesse.</field>
+			<field name="description">Mensagem enviada por um leitor a um colega, sobre um artigo considerado de seu interesse, com link para acesso e informações sobre a revista e a edição onde o documento foi publicado.</field>
+		</row>
+
+	</table>
+</data>
