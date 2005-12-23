@@ -234,6 +234,10 @@ function moveAuthor(dir, authorIndex) {
 	{/if}
 	<tr valign="top">
 		<td>&nbsp;</td>
+		<td>{translate key="author.submit.keywords.note"}</td>
+	</tr>
+	<tr valign="top">
+		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 	</tr>
 	{/if}

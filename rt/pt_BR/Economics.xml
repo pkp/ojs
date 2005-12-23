@@ -58,9 +58,9 @@
 		</search>
 	</context>
 	<context>
-		<context_title>Define Terms</context_title>
-		<context_abbrev>Define Terms</context_abbrev>
-		<context_description>Double click on any word in the text and it will appear in the &quot;Define Terms&quot; box.  You can also type or paste a word into the box.  Then use the search function to find a definition for the word.  These resources have been selected because of their relevance and their open (free) access to all or part of their contents.</context_description>
+		<context_title>Definition of terms</context_title>
+		<context_abbrev>Definition of terms</context_abbrev>
+		<context_description>Double click on any word in the text and it will appear in the &quot;Definition of terms&quot; box.  You can also type or paste a word into the box.  Then use the search function to find a definition for the word.  These resources have been selected because of their relevance and their open (free) access to all or part of their contents.</context_description>
 		<define_terms />
 		<search>
 			<search_title>Online Glossary of Research Economics</search_title>
