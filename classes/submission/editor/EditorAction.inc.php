@@ -160,9 +160,9 @@ class EditorAction extends SectionEditorAction {
 			} else {
 				if (strstr($fileType, 'pdf')) {
 					$galley->setLabel('PDF');
-				} else if (strtr($fileType, 'postscript')) {
+				} else if (strstr($fileType, 'postscript')) {
 					$galley->setLabel('Postscript');
-				} else if (strtr($fileType, 'xml')) {
+				} else if (strstr($fileType, 'xml')) {
 					$galley->setLabel('XML');
 				} else {
 					$galley->setLabel(Locale::translate('common.untitled'));

@@ -988,6 +988,12 @@ Title of classification system]]></message>
 Note that if your site administrator has already registered this site with the PKP Harvester, your journal will be indexed automatically and you do not need to register your journal.
 <br /><br />
 <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Click here</a> and enter <span class="highlight">{$siteUrl}</span> under <b>Site URL</b>, and <span class="highlight">{$oaiUrl}</span> under <b>Base URL for OAI Archive</b>.]]></message>
+	<message key="manager.setup.notifications">Notifications</message>
+	<message key="manager.setup.notifications.description">When an Author completes a submission, a copy of the submission acknowledgement message can be sent to the address chosen below.</message>
+	<message key="manager.setup.notifications.disable">Don't copy anybody on submission acknowledgement messages</message>
+	<message key="manager.setup.notifications.copyPrimaryContact">Send a copy to the journal's primary contact</message>
+	<message key="manager.setup.notifications.copySpecifiedAddress">Send a copy to the specified address:</message>
+	<message key="manager.setup.notifications.submissionAckDisabled"><![CDATA[<strong>Note:</strong> The submission acknowledgement email is currently disabled. To use this feature, enable the SUBMISSION_ACK email in <a class="action" href="{$preparedEmailsUrl}">Prepared Emails</a>.]]></message>
 
 	<!-- Setup Step 4 -->
 	<message key="manager.setup.managingTheJournal">Step 4. Managing the Journal</message>

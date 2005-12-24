@@ -223,6 +223,33 @@
 
 <div class="separator"></div>
 
+<h3>3.5 {translate key="manager.setup.notifications"}</h3>
+
+<p>{translate key="manager.setup.notifications.description"}</p>
+
+<table width="100%" class="data">
+	<tr valign="top">
+		<td width="5%" class="label"><input {if !$submissionAckEnabled}disabled="disabled" {/if}type="radio" name="copySubmissionAckMode" id="copySubmissionAck-nobody" value="{$submissionAcknowledgeCopyNobody}" {if $copySubmissionAckMode != {$submissionAcknowledgeCopyPrimaryContact && $copySubmissionAckMode != $submissionAcknowledgeCopySpecified}checked="checked"{/if}/></td>
+		<td width="95%" class="value">{fieldLabel name="copySubmissionAck-nobody" key="manager.setup.notifications.disable"}</td>
+	</tr>
+	<tr valign="top">
+		<td class="label"><input {if !$submissionAckEnabled}disabled="disabled" {/if}type="radio" name="copySubmissionAckMode" id="copySubmissionAck-primaryContact" value="{$submissionAcknowledgeCopyPrimaryContact}" {if $copySubmissionAckMode == $submissionAcknowledgeCopyPrimaryContact}checked="checked"{/if}/></td>
+		<td class="value">{fieldLabel name="copySubmissionAck-primaryContact" key="manager.setup.notifications.copyPrimaryContact"}</td>
+	</tr>
+	<tr valign="top">
+		<td class="label"><input {if !$submissionAckEnabled}disabled="disabled" {/if}type="radio" name="copySubmissionAckMode" id="copySubmissionAck-specified" value="{$submissionAcknowledgeCopySpecified}" {if $copySubmissionAckMode == $submissionAcknowledgeCopySpecified}checked="checked"{/if}/></td>
+		<td class="value">{fieldLabel name="copySubmissionAckAddress" key="manager.setup.notifications.copySpecifiedAddress"}&nbsp;&nbsp;<input {if !$submissionAckEnabled}disabled="disabled" {/if}type="text" class="textField" name="copySubmissionAckAddress" value="{$copySubmissionAckAddress|escape}"/></td>
+	</tr>
+	{if !$submissionAckEnabled}
+	<tr valign="top">
+		<td>&nbsp;</td>
+		{url|assign:"preparedEmailsUrl" op="emails"}
+		<td>{translate key="manager.setup.notifications.submissionAckDisabled" preparedEmailsUrl=$preparedEmailsUrl}</td>
+	</tr>
+	{/if}
+</table>
+
+<div class="separator"></div>
 
 <p><input type="submit" value="{translate key="common.saveAndContinue"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url op="setup" escape=false}'" /></p>
 
