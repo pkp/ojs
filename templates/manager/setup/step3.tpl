@@ -229,15 +229,11 @@
 
 <table width="100%" class="data">
 	<tr valign="top">
-		<td width="5%" class="label"><input {if !$submissionAckEnabled}disabled="disabled" {/if}type="radio" name="copySubmissionAckMode" id="copySubmissionAck-nobody" value="{$submissionAcknowledgeCopyNobody}" {if $copySubmissionAckMode != {$submissionAcknowledgeCopyPrimaryContact && $copySubmissionAckMode != $submissionAcknowledgeCopySpecified}checked="checked"{/if}/></td>
-		<td width="95%" class="value">{fieldLabel name="copySubmissionAck-nobody" key="manager.setup.notifications.disable"}</td>
+		<td class="label"><input {if !$submissionAckEnabled}disabled="disabled" {/if}type="checkbox" name="copySubmissionAckPrimaryContact" id="copySubmissionAckPrimaryContact" value="true" {if $copySubmissionAckPrimaryContact}checked="checked"{/if}/></td>
+		<td class="value">{fieldLabel name="copySubmissionAckPrimaryContact" key="manager.setup.notifications.copyPrimaryContact"}</td>
 	</tr>
 	<tr valign="top">
-		<td class="label"><input {if !$submissionAckEnabled}disabled="disabled" {/if}type="radio" name="copySubmissionAckMode" id="copySubmissionAck-primaryContact" value="{$submissionAcknowledgeCopyPrimaryContact}" {if $copySubmissionAckMode == $submissionAcknowledgeCopyPrimaryContact}checked="checked"{/if}/></td>
-		<td class="value">{fieldLabel name="copySubmissionAck-primaryContact" key="manager.setup.notifications.copyPrimaryContact"}</td>
-	</tr>
-	<tr valign="top">
-		<td class="label"><input {if !$submissionAckEnabled}disabled="disabled" {/if}type="radio" name="copySubmissionAckMode" id="copySubmissionAck-specified" value="{$submissionAcknowledgeCopySpecified}" {if $copySubmissionAckMode == $submissionAcknowledgeCopySpecified}checked="checked"{/if}/></td>
+		<td class="label"><input {if !$submissionAckEnabled}disabled="disabled" {/if}type="checkbox" name="copySubmissionAckSpecified" id="copySubmissionAckSpecified" value="true" {if $copySubmissionAckSpecified}checked="checked"{/if}/></td>
 		<td class="value">{fieldLabel name="copySubmissionAckAddress" key="manager.setup.notifications.copySpecifiedAddress"}&nbsp;&nbsp;<input {if !$submissionAckEnabled}disabled="disabled" {/if}type="text" class="textField" name="copySubmissionAckAddress" value="{$copySubmissionAckAddress|escape}"/></td>
 	</tr>
 	{if !$submissionAckEnabled}

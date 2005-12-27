@@ -15,10 +15,6 @@
 
 import('submission.common.Action');
 
-define('SUBMISSION_ACKNOWLEDGE_COPY_NOBODY', 		0x0000001);
-define('SUBMISSION_ACKNOWLEDGE_COPY_PRIMARY_CONTACT', 	0x0000002);
-define('SUBMISSION_ACKNOWLEDGE_COPY_SPECIFIED',		0x0000003);
-
 class AuthorAction extends Action {
 
 	/**

@@ -87,22 +87,18 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 		$mail->setFrom($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
 		if ($mail->isEnabled()) {
 			$mail->addRecipient($user->getEmail(), $user->getFullName());
-			// Bring in SUBMISSION_ACKNOWLEDGE_COPY_... constants
-			import('submission.author.AuthorAction');
-
 			// If necessary, BCC the acknowledgement to someone.
-			switch($journal->getSetting('copySubmissionAckMode')) {
-				case SUBMISSION_ACKNOWLEDGE_COPY_PRIMARY_CONTACT:
-					$mail->addBcc(
-						$journal->getSetting('contactEmail'),
-						$journal->getSetting('contactName')
-					);
-					break;
-				case SUBMISSION_ACKNOWLEDGE_COPY_SPECIFIED:
-					$copyAddress = $journal->getSetting('copySubmissionAckAddress');
-					if (!empty($copyAddress)) $mail->addBcc($copyAddress);
-					break;
+			if($journal->getSetting('copySubmissionAckModePrimaryContact')) {
+				$mail->addBcc(
+					$journal->getSetting('contactEmail'),
+					$journal->getSetting('contactName')
+				);
 			}
+			if($journal->getSetting('copySubmissionAckModePrimaryContact')) {
+				$copyAddress = $journal->getSetting('copySubmissionAckAddress');
+				if (!empty($copyAddress)) $mail->addBcc($copyAddress);
+			}
+
 			$mail->assignParams(array(
 				'authorName' => $user->getFullName(),
 				'authorUsername' => $user->getUsername(),

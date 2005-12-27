@@ -38,7 +38,8 @@ class JournalSetupStep3Form extends JournalSetupForm {
 				'metaCoverageResearchSampleExamples' => 'string',
 				'metaType' => 'bool',
 				'metaTypeExamples' => 'string',
-				'copySubmissionAckMode' => 'int',
+				'copySubmissionAckPrimaryContact' => 'bool',
+				'copySubmissionAckSpecified' => 'bool',
 				'copySubmissionAckAddress' => 'string'
 			)
 		);
@@ -53,13 +54,7 @@ class JournalSetupStep3Form extends JournalSetupForm {
 		import('mail.MailTemplate');
 		$mail = &new MailTemplate('SUBMISSION_ACK');
 		if ($mail->isEnabled()) {
-			// Bring in SUBMISSION_ACKNOWLEDGE_COPY_... constants
-			// and make them available to the template
-			import('submission.author.AuthorAction');
 			$templateMgr =& TemplateManager::getManager();
-			$templateMgr->assign('submissionAcknowledgeCopyNobody', SUBMISSION_ACKNOWLEDGE_COPY_NOBODY);
-			$templateMgr->assign('submissionAcknowledgeCopyPrimaryContact', SUBMISSION_ACKNOWLEDGE_COPY_PRIMARY_CONTACT);
-			$templateMgr->assign('submissionAcknowledgeCopySpecified', SUBMISSION_ACKNOWLEDGE_COPY_SPECIFIED);
 			$templateMgr->assign('submissionAckEnabled', true);
 		}
 
