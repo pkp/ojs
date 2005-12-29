@@ -17,15 +17,9 @@
 	<meta http-equiv="Content-Type" content="text/html; charset={$defaultCharset}" />
 	<title>{translate key=$pageTitle}</title>
 	<link rel="stylesheet" href="{$baseUrl}/styles/common.css" type="text/css" />
-	{foreach from=$stylesheets item=cssFile}
-	<link rel="stylesheet" href="{$baseUrl}/styles/{$cssFile}" type="text/css" />
+	{foreach from=$stylesheets item=cssUrl}
+	<link rel="stylesheet" href="{$cssUrl}" type="text/css" />
 	{/foreach}
-	{if $pageStyleSheet}
-	<link rel="stylesheet" href="{$publicFilesDir}/{$pageStyleSheet.uploadName}" type="text/css" />
-	{/if}
-	{if $galley->getStyleFileId()}
-	<link rel="stylesheet" href="{url op="viewFile" path=$galley->getArticleId()|to_array:$galley->getGalleyId():$galley->getStyleFileId()}" type="text/css" />
-	{/if}
 </head>
 <body>
 	{$galley->getHTMLContents()}

@@ -147,6 +147,15 @@ class ArticleHandler extends Handler {
 		} else {
 			// Increment the galley's views count
 			$articleGalleyDao->incrementViews($galleyId);
+
+			// Use the article's CSS file, if set.
+			if ($galley->isHTMLGalley() && $styleFile =& $galley->getStyleFile()) {
+				$templateMgr->addStyleSheet(Request::url(null, 'article', 'viewFile', array(
+					$article->getArticleId(),
+					$galley->getGalleyId(),
+					$styleFile->getFileId()
+				)));
+			}
 		}
 
 		$templateMgr->assign_by_ref('issue', $issue);

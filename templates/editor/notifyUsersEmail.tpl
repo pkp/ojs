@@ -31,12 +31,9 @@ Content-Transfer-Encoding: quoted-printable
 <html>
 	<head>
 		<link rel="stylesheet" href="{$baseUrl}/styles/common.css" type="text/css" />
-		{foreach from=$stylesheets item=cssFile}
-		<link rel="stylesheet" href="{$baseUrl}/styles/{$cssFile}" type="text/css" />
+		{foreach from=$stylesheets item=cssUrl}
+		<link rel="stylesheet" href="{$cssUrl}" type="text/css" />
 		{/foreach}
-		{if $pageStyleSheet}
-		<link rel="stylesheet" href="{$publicFilesDir}/{$pageStyleSheet.uploadName}" type="text/css" />
-		{/if}
 		</head>
 	<body>
 

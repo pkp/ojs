@@ -22,12 +22,9 @@
 	<meta name="keywords" content="{$metaSearchKeywords}" />
 	{$metaCustomHeaders}
 	<link rel="stylesheet" href="{$baseUrl}/styles/common.css" type="text/css" />
-	{foreach from=$stylesheets item=cssFile}
-	<link rel="stylesheet" href="{$baseUrl}/styles/{$cssFile}" type="text/css" />
+	{foreach from=$stylesheets item=cssUrl}
+	<link rel="stylesheet" href="{$cssUrl}" type="text/css" />
 	{/foreach}
-	{if $pageStyleSheet}
-	<link rel="stylesheet" href="{$publicFilesDir}/{$pageStyleSheet.uploadName}" type="text/css" />
-	{/if}
 	<script type="text/javascript" src="{$baseUrl}/js/general.js"></script>
 	{$additionalHeadData}
 </head>

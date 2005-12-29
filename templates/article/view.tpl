@@ -19,12 +19,9 @@
 	<title>{$article->getFirstAuthor(true)|escape}</title>
 	<link rel="stylesheet" href="{$baseUrl}/styles/common.css" type="text/css" />
 	<link rel="stylesheet" href="{$baseUrl}/styles/articleView.css" type="text/css" />
-	{foreach from=$stylesheets item=cssFile}
-	<link rel="stylesheet" href="{$baseUrl}/styles/{$cssFile}" type="text/css" />
+	{foreach from=$stylesheets item=cssUrl}
+	<link rel="stylesheet" href="{$cssUrl}" type="text/css" />
 	{/foreach}
-	{if $pageStyleSheet}
-	<link rel="stylesheet" href="{$publicFilesDir}/{$pageStyleSheet.uploadName}" type="text/css" />
-	{/if}
 </head>
 <frameset cols="*,180" frameborder="0" framespacing="0" border="0">a
 	{if !$galley}

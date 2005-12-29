@@ -22,6 +22,8 @@ require_once('smarty/Smarty.class.php');
 import('search.ArticleSearch');
 
 class TemplateManager extends Smarty {
+	/** @var $styleSheets array of URLs to stylesheets */
+	var $styleSheets;
 
 	/**
 	 * Constructor.
@@ -46,6 +48,9 @@ class TemplateManager extends Smarty {
 		//$this->compile_check = true;
 		
 		// Assign common variables
+		$this->styleSheets = array();
+		$this->assign_by_ref('stylesheets', $this->styleSheets);
+
 		$this->assign('defaultCharset', Config::getVar('i18n', 'client_charset'));
 		$this->assign('baseUrl', Request::getBaseUrl());
 		$this->assign('pageTitle', 'common.openJournalSystems');
@@ -104,7 +109,11 @@ class TemplateManager extends Smarty {
 				$this->assign('itemsPerPage', $journal->getSetting('itemsPerPage'));
 				
 				// Assign stylesheet and footer
-				$this->assign('pageStyleSheet', $journal->getSetting('journalStyleSheet'));
+				$journalStyleSheet = $journal->getSetting('journalStyleSheet');
+				if ($journalStyleSheet) {
+					$this->addStyleSheet(Request::getBaseUrl() . '/' . PublicFileManager::getJournalFilesPath($journal->getJournalId()) . '/' . $journalStyleSheet['uploadName']);
+				}
+				
 				$this->assign('pageFooter', $journal->getSetting('journalPageFooter'));	
 				
 			} else {
@@ -148,6 +157,10 @@ class TemplateManager extends Smarty {
 		$this->register_function('assign_mailto', array(&$this, 'smartyAssignMailto'));
 
 		$this->register_function('url', array(&$this, 'smartyUrl'));
+	}
+
+	function addStyleSheet($url) {
+		array_push($this->styleSheets, $url);
 	}
 
 	/**
