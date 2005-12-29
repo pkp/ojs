@@ -182,6 +182,7 @@ class NativeExportDom {
 		$isIndexingNecessary = false;
 
 		if (XMLWriter::createChildWithText($doc, $indexingNode, 'discipline', $article->getDiscipline(), false)!== null) $isIndexingNecessary = true;
+		if (XMLWriter::createChildWithText($doc, $indexingNode, 'type', $article->getType(), false)!== null) $isIndexingNecessary = true;
 		if (XMLWriter::createChildWithText($doc, $indexingNode, 'subject_class', $article->getSubjectClass(), false)!== null) $isIndexingNecessary = true;
 		if (XMLWriter::createChildWithText($doc, $indexingNode, 'subject', $article->getSubject(), false)!== null) $isIndexingNecessary = true;
 

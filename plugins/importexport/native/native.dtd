@@ -89,8 +89,9 @@
 
 <!ELEMENT pages (#PCDATA)>
 
-<!ELEMENT indexing (discipline?, subject_class?, subject?, coverage?)>
+<!ELEMENT indexing (discipline?, type?, subject_class?, subject?, coverage?)>
 <!ELEMENT discipline (#PCDATA)>
+<!ELEMENT type (#PCDATA)>
 <!ELEMENT subject_class (#PCDATA)>
 
 <!ELEMENT coverage (geographical?, chronological?, sample?)>

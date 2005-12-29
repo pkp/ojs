@@ -452,6 +452,7 @@ class NativeImportDom {
 
 		if (($indexingNode = $articleNode->getChildByName('indexing'))) {
 			if (($node = $indexingNode->getChildByName('discipline'))) $article->setDiscipline($node->getValue());
+			if (($node = $indexingNode->getChildByName('type'))) $article->setType($node->getValue());
 			if (($node = $indexingNode->getChildByName('subject'))) $article->setSubject($node->getValue());
 			if (($node = $indexingNode->getChildByName('subject_class'))) $article->setSubjectClass($node->getValue());
 			if (($coverageNode = $indexingNode->getChildByName('coverage'))) {
