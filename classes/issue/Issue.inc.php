@@ -372,6 +372,38 @@ class Issue extends DataObject {
 	}
 
 	/**
+	 * get style file name
+	 * @return string
+	 */
+	function getStyleFileName() {
+		return $this->getData('styleFileName');
+	}
+
+	/**
+	 * set style file name
+	 * @param $styleFileName string
+	 */
+	function setStyleFileName($styleFileName) {
+		return $this->setData('styleFileName', $styleFileName);
+	}
+
+	/**
+	 * get original style file name
+	 * @return string
+	 */
+	function getOriginalStyleFileName() {
+		return $this->getData('originalStyleFileName');
+	}
+
+	/**
+	 * set original style file name
+	 * @param $originalStyleFileName string
+	 */
+	function setOriginalStyleFileName($originalStyleFileName) {
+		return $this->setData('originalStyleFileName', $originalStyleFileName);
+	}
+
+	/**
 	 * Get all authors
 	 * @return array Authors
 	 */

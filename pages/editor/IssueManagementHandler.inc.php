@@ -235,6 +235,26 @@ class IssueManagementHandler extends EditorHandler {
 	}
 
 	/**
+	 * Remove style file from issue
+	 */
+	function removeStyleFile($args) {
+		$issueId = isset($args[0]) ? (int)$args[0] : 0;
+		$issue = IssueManagementHandler::validate($issueId);
+
+		import('file.PublicFileManager');
+		$journal = &Request::getJournal();
+		$publicFileManager = &new PublicFileManager();
+		$publicFileManager->removeJournalFile($journal->getJournalId(),$issue->getStyleFileName());
+		$issue->setStyleFileName('');
+		$issue->setOriginalStyleFileName('');
+		
+		$issueDao = &DAORegistry::getDAO('IssueDAO');
+		$issueDao->updateIssue($issue);
+
+		Request::redirect(null, null, 'issueData', $issueId);
+	}
+
+	/**
 	 * Display the table of contents
 	 */
 	function issueToc($args) {

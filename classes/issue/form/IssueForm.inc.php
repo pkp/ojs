@@ -92,11 +92,19 @@ class IssueForm extends Form {
 
 		import('file.PublicFileManager');
 		$publicFileManager = &new PublicFileManager();
+
 		if ($publicFileManager->uploadedFileExists('coverPage')) {
 			$type = $publicFileManager->getUploadedFileType('coverPage');
 			if (!$publicFileManager->getImageExtension($type)) {
 				$this->addError('coverPage', 'editor.issues.invalidCoverPageFormat');
 				$this->addErrorField('coverPage');		
+			}
+		}
+
+		if ($publicFileManager->uploadedFileExists('styleFile')) {
+			$type = $publicFileManager->getUploadedFileType('styleFile');
+			if ($type != 'text/plain' && $type != 'text/css') {
+				$this->addError('styleFile', 'editor.issues.invalidStyleFile');
 			}
 		}
 
@@ -134,7 +142,9 @@ class IssueForm extends Form {
 				'fileName' => $issue->getFileName(),
 				'originalFileName' => $issue->getOriginalFileName(),
 				'coverPageDescription' => $issue->getCoverPageDescription(),
-				'showCoverPage' => $issue->getShowCoverPage()
+				'showCoverPage' => $issue->getShowCoverPage(),
+				'styleFileName' => $issue->getStyleFileName(),
+				'originalStyleFileName' => $issue->getOriginalStyleFileName()
 			);
 			return $issue->getIssueId();
 			
@@ -218,7 +228,9 @@ class IssueForm extends Form {
 			'originalFileName',
 			'coverPageDescription',
 			'showCoverPage',
-			'articles'
+			'articles',
+			'styleFileName',
+			'originalStyleFileName'
 		));
 	}
 	
@@ -289,6 +301,16 @@ class IssueForm extends Form {
 			$issue->setWidth($width);
 			$issue->setHeight($height);
 
+			$issueDao->updateIssue($issue);
+		}
+
+		if ($publicFileManager->uploadedFileExists('styleFile')) {
+			$journal = Request::getJournal();
+			$originalFileName = $publicFileManager->getUploadedFileName('styleFile');
+			$newFileName = 'style_' . $issueId . '.css';
+			$publicFileManager->uploadJournalFile($journal->getJournalId(), 'styleFile', $newFileName);
+			$issue->setStyleFileName($newFileName);
+			$issue->setOriginalStyleFileName($originalFileName);
 			$issueDao->updateIssue($issue);
 		}
 

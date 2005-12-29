@@ -174,6 +174,8 @@ class IssueDAO extends DAO {
 		$issue->setOriginalFileName($row['original_file_name']);
 		$issue->setCoverPageDescription($row['cover_page_description']);
 		$issue->setShowCoverPage($row['show_cover_page']);
+		$issue->setStyleFileName($row['style_file_name']);
+		$issue->setOriginalStyleFileName($row['original_style_file_name']);
 		$issue->setNumArticles($this->getNumArticles($row['issue_id']));
 
 		HookRegistry::call('IssueDAO::_returnIssueFromRow', array(&$issue, &$row));
@@ -204,9 +206,9 @@ class IssueDAO extends DAO {
 	function insertIssue(&$issue) {
 		$this->update(
 			sprintf('INSERT INTO issues
-				(journal_id, title, volume, number, year, published, current, date_published, date_notified, access_status, open_access_date, description, public_issue_id, label_format, file_name, width, height, original_file_name, cover_page_description, show_cover_page)
+				(journal_id, title, volume, number, year, published, current, date_published, date_notified, access_status, open_access_date, description, public_issue_id, label_format, file_name, width, height, original_file_name, cover_page_description, show_cover_page, style_file_name, original_style_file_name)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, %s, %s, ?, %s, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, %s, %s, ?, %s, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
 				$this->datetimeToDB($issue->getDatePublished()), $this->datetimeToDB($issue->getDateNotified()), $this->datetimeToDB($issue->getOpenAccessDate())),
 			array(
 				$issue->getJournalId(),
@@ -225,7 +227,9 @@ class IssueDAO extends DAO {
 				$issue->getHeight(),
 				$issue->getOriginalFileName(),
 				$issue->getCoverPageDescription(),
-				$issue->getShowCoverPage()
+				$issue->getShowCoverPage(),
+				$issue->getStyleFileName(),
+				$issue->getOriginalStyleFileName()
 			)
 		);
 
@@ -289,7 +293,9 @@ class IssueDAO extends DAO {
 					height = ?,
 					original_file_name = ?,
 					cover_page_description = ?,
-					show_cover_page = ?
+					show_cover_page = ?,
+					style_file_name = ?,
+					original_style_file_name = ?
 				WHERE issue_id = ?',
 			$this->datetimeToDB($issue->getDatePublished()), $this->datetimeToDB($issue->getDateNotified()), $this->datetimeToDB($issue->getOpenAccessDate())),
 			array(
@@ -310,6 +316,8 @@ class IssueDAO extends DAO {
 				$issue->getOriginalFileName(),
 				$issue->getCoverPageDescription(),
 				$issue->getShowCoverPage(),
+				$issue->getStyleFileName(),
+				$issue->getOriginalStyleFileName(),
 				$issue->getIssueId()
 			)
 		);

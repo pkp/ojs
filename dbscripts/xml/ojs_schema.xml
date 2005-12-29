@@ -466,6 +466,8 @@
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
 		</field>
+		<field name="style_file_name" type="C2" size="90"/>
+		<field name="original_style_file_name" type="C2" size="255"/>
 		<descr>Journal issues.</descr>
 		<index name="issues_journal_id">
 			<col>journal_id</col>

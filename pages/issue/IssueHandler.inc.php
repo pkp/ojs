@@ -38,6 +38,14 @@ class IssueHandler extends Handler {
 		$templateMgr = &TemplateManager::getManager();
 
 		if ($issue != null) {
+			if ($styleFileName = $issue->getStyleFileName()) {
+				import('file.PublicFileManager');
+				$publicFileManager = &new PublicFileManager();
+				$templateMgr->addStyleSheet(
+					Request::getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($journal->getJournalId()) . '/' . $styleFileName
+				);
+			}
+
 			$issueTitle = $issue->getIssueIdentification();
 			$issueCrumbTitle = $issue->getIssueIdentification(false, true);
 
@@ -167,6 +175,14 @@ class IssueHandler extends Handler {
 		} else {
 			$issueCrumbTitle = Locale::translate('archive.issueUnavailable');
 			$issueTitle = Locale::translate('archive.issueUnavailable');
+		}
+
+		if ($styleFileName = $issue->getStyleFileName()) {
+			import('file.PublicFileManager');
+			$publicFileManager = &new PublicFileManager();
+			$templateMgr->addStyleSheet(
+				Request::getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($journal->getJournalId()) . '/' . $styleFileName
+			);
 		}
 
 		$templateMgr->assign('issueCrumbTitle', $issueCrumbTitle);
