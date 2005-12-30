@@ -17,7 +17,7 @@
 	<version_description>The Reading Tools can help readers of this study consult a wide range of related resources that can provide a context for interpreting, situating and evaluating the study.</version_description>
 
 	<context>
-		<context_title>Author&#039;s Other Works</context_title>
+		<context_title>Author's work</context_title>
 		<context_abbrev>Other Works</context_abbrev>
 		<context_description>Identify other works by the article&#039;s author(s) by using OAI engines.</context_description>
 		<author_terms />
@@ -57,8 +57,8 @@
 			
 		</search>
 		<search>
-			<search_title>The Online Books Page</search_title>
-			<search_description>The Online Books Page is the most comprehensive website that facilitates access to books that are freely readable over the Internet.</search_description>
+			<search_title>The Online books Page</search_title>
+			<search_description>The Online books Page is the most comprehensive website that facilitates access to books that are freely readable over the Internet.</search_description>
 			<url>http://digital.library.upenn.edu/books/</url>
 			<search_url>http://onlinebooks.library.upenn.edu/webbin/book/search?amode=words&amp;tmode=words&amp;title=&amp;author=</search_url>
 			
@@ -187,8 +187,8 @@
 			
 		</search>
 		<search>
-			<search_title>Online Books Page</search_title>
-			<search_description>Online Books Page, edited by John Mark Ockerbloom, at the University of Pennsylvania.  This is an excellent starting point in the search for full-text books on the Internet. Over 20,000 English works in various formats available online at different sites. Entries may be searched by author or title. An interesting feature allows browsing by Library of Congress call number categories. New listings are added regularly and are listed on a separate web page at &lt;a href=&quot;http://onlinebooks.library.upenn.edu/new.html&quot;&gt;http://onlinebooks.library.upenn.edu/new.html&lt;/a&gt;.</search_description>
+			<search_title>Online books Page</search_title>
+			<search_description>Online books Page, edited by John Mark Ockerbloom, at the University of Pennsylvania.  This is an excellent starting point in the search for full-text books on the Internet. Over 20,000 English works in various formats available online at different sites. Entries may be searched by author or title. An interesting feature allows browsing by Library of Congress call number categories. New listings are added regularly and are listed on a separate web page at &lt;a href=&quot;http://onlinebooks.library.upenn.edu/new.html&quot;&gt;http://onlinebooks.library.upenn.edu/new.html&lt;/a&gt;.</search_description>
 			<url>http://digital.library.upenn.edu/books/</url>
 			<search_url>http://onlinebooks.library.upenn.edu/webbin/book/search?tmode=words&amp;title=</search_url>
 			
@@ -236,7 +236,7 @@
 		</search>
 	</context>
 	<context>
-		<context_title>Literary Critics</context_title>
+		<context_title>Literary critics</context_title>
 		<context_abbrev>Literacry Critics</context_abbrev>
 		<context_description>Search critical and biographical websites about authors and their works that can be browsed by author, by title, or by nationality and literary period.</context_description>
 
@@ -249,8 +249,8 @@
 		</search>
 	</context>
 	<context>
-		<context_title>Book Reviews</context_title>
-		<context_abbrev>Book Reviews</context_abbrev>
+		<context_title>Book reviews</context_title>
+		<context_abbrev>Book reviews</context_abbrev>
 		<context_description>Click on the search urls to check for book reviews.</context_description>
 
 		<search>
@@ -276,7 +276,7 @@
 		</search>
 		<search>
 			<search_title>The New York Times Books</search_title>
-			<search_description>The New York Times Books, updated daily, includes the entire Sunday Book Review and a searchable archive of over 50,000 NYT book reviews dating back to 1980, bestseller lists and more (Need to sign up).</search_description>
+			<search_description>The New York Times Books, updated daily, includes the entire Sunday Book reviews and a searchable archive of over 50,000 NYT book reviews dating back to 1980, bestseller lists and more (Need to sign up).</search_description>
 			<url>http://www.nytimes.com/auth/login?Tag=/&amp;URI=/books/</url>
 			<search_url>http://query.nytimes.com/search/query?ppds=ctaxAbodyS&amp;v1=Top%2FFeatures%2FBooks%2FBook+Reviews&amp;sort=closest_newest&amp;v2=</search_url>
 			
@@ -290,8 +290,8 @@
 		</search>
 	</context>
 	<context>
-		<context_title>Related Studies</context_title>
-		<context_abbrev>Related Studies</context_abbrev>
+		<context_title>Related studies</context_title>
+		<context_abbrev>Related studies</context_abbrev>
 		<context_description>Access to related studies by establishing a working link with an open-access (free) database, with abstracts and/or full texts related to your topic.</context_description>
 
 		<search>
@@ -323,8 +323,8 @@
 			<search_post>Search_Action=Process&amp;Phrase_required=You must provide a search phrase with this option.&amp;phrase=</search_post>			
 		</search>
 		<search>
-			<search_title>The Online Books Page</search_title>
-			<search_description>The Online Books Page is the most comprehensive website that facilitates access to books that are freely readable over the Internet.</search_description>
+			<search_title>The Online books Page</search_title>
+			<search_description>The Online books Page is the most comprehensive website that facilitates access to books that are freely readable over the Internet.</search_description>
 			<url>http://digital.library.upenn.edu/books/</url>
 			<search_url>http://onlinebooks.library.upenn.edu/webbin/book/search?author=&amp;amode=words&amp;tmode=words&amp;title=</search_url>
 			
@@ -350,7 +350,7 @@
 		<context_description>Provides access to a repository of rich graduate educational material contributed by a number of member institutions worldwide.</context_description>
 
 		<search>
-			<search_title>CRL Foreign Doctoral Dissertation Database</search_title>
+			<search_title>CRL Foreign Doctoral Dissertation Databases</search_title>
 			<search_description>The CRL&#039;s (Center For Research Libraries) database for dissertations published outside of the United States and Canada is still in the construction phase. At this point, a total of 15,000 of 750,000 records are loaded into the database. Searchable by author, institution name, title, year, translated title, subject keywords, language, and country, the database also provides instructions for interlibrary loan procedure.</search_description>
 			<url>http://www.crl.edu/content.asp?l1=5&amp;l2=23&amp;l3=44&amp;l4=25</url>
 			<search_url>http://www.crl.edu/DBSearch/dissertationsSummary.asp?language=English&amp;title=</search_url>
@@ -412,7 +412,7 @@
 			
 		</search>
 		<search>
-			<search_title>Literature, Arts, and Medicine Database</search_title>
+			<search_title>Literature, Arts, and Medicine Databases</search_title>
 			<search_description>An annotated bibliography of prose, poetry, film, video, and art.</search_description>
 			<url>http://endeavor.med.nyu.edu/lit-med/lit-med-db/topview.html</url>
 			<search_url>http://mcrcr2.med.nyu.edu:8765/query.html?rq=0&amp;col=aes&amp;col=wwwmc&amp;charset=iso-8859-1&amp;style=lm&amp;qt=</search_url>
@@ -475,8 +475,8 @@
 		</search>
 	</context>
 	<context>
-		<context_title>Pay-Per-View</context_title>
-		<context_abbrev>Pay-Per-View</context_abbrev>
+		<context_title>Pay-per-view</context_title>
+		<context_abbrev>Pay-per-view</context_abbrev>
 		<context_description>A pay-per-view service is for those who do not have direct access to electronic journal articles via subscriptions. The service allows customers to gain direct access to an article by paying by credit card using the RSC&#039;s secure payment mechanism. Immediately the payment details have been validated, the customer can gain access to the required article file for a period of 30 days.</context_description>
 
 		<search>
@@ -501,16 +501,16 @@
 			
 		</search>
 		<search>
-			<search_title>Wiley InterScience Pay-Per-View Service</search_title>
-			<search_description>Wiley InterScience Pay-Per-View affords instant, full-text access to an extensive collection of journal articles or book chapters available on Wiley InterScience without the need for a subscription. This service allows anyone to purchase access to individual journal articles or book chapters directly by using a credit card. Access is instant and available for 24 hours.</search_description>
+			<search_title>Wiley InterScience Pay-per-view Service</search_title>
+			<search_description>Wiley InterScience Pay-per-view affords instant, full-text access to an extensive collection of journal articles or book chapters available on Wiley InterScience without the need for a subscription. This service allows anyone to purchase access to individual journal articles or book chapters directly by using a credit card. Access is instant and available for 24 hours.</search_description>
 			<url>http://www3.interscience.wiley.com/aboutus/ppv-articleselect.html</url>
 			<search_url>http://www3.interscience.wiley.com/search/allsearch</search_url>
 			<search_post>allContentSearchForm=&amp;mode=quicksearch&amp;WISindexid1=WISall&amp;WISsearch1=</search_post>			
 		</search>
 	</context>
 	<context>
-		<context_title>Related Texts</context_title>
-		<context_abbrev>Related Texts</context_abbrev>
+		<context_title>Related texts</context_title>
+		<context_abbrev>Related texts</context_abbrev>
 		<context_description>Provide online access to full text resources in Humanities.</context_description>
 
 		<search>
@@ -571,8 +571,8 @@
 		</search>
 	</context>
 	<context>
-		<context_title>Online Forums</context_title>
-		<context_abbrev>Online Forums</context_abbrev>
+		<context_title>Online forums</context_title>
+		<context_abbrev>Online forums</context_abbrev>
 		<context_description>Choose online, open-access online forums that would enrich the context of the research studies on your site.</context_description>
 
 		<search>
@@ -598,7 +598,7 @@
 		</search>
 	</context>
 	<context>
-		<context_title>Instructional Materials</context_title>
+		<context_title>Teaching materials</context_title>
 		<context_abbrev>Instructional</context_abbrev>
 		<context_description>Immediately initiates a search based on the subject of the article or paper that connects users to free current and archival articles in the field from leading newspapers around the world.</context_description>
 
@@ -611,8 +611,8 @@
 		</search>
 	</context>
 	<context>
-		<context_title>Media Report</context_title>
-		<context_abbrev>Media Report</context_abbrev>
+		<context_title>Media reports</context_title>
+		<context_abbrev>Media reports</context_abbrev>
 		<context_description>Immediately initiates a search based on the subject of the article or paper that connects users to free current and archival articles in the field from leading newspapers around the world.</context_description>
 
 		<search>
@@ -679,8 +679,8 @@
 		</search>
 	</context>
 	<context>
-		<context_title>Search Engines</context_title>
-		<context_abbrev>Search Engines</context_abbrev>
+		<context_title>Web search</context_title>
+		<context_abbrev>Web search</context_abbrev>
 		<context_description>Enter a search term for Internet resources through various search engines.</context_description>
 
 		<search>

@@ -17,7 +17,7 @@
 	<version_description>The Reading Tools can help readers of this study consult a wide range of related resources that can provide a context for interpreting, situating and evaluating the study.</version_description>
 
 	<context>
-		<context_title>Author's Other Works</context_title>
+		<context_title>Author's work</context_title>
 		<context_abbrev>Other Works</context_abbrev>
 		<context_description>Identify other works by the article's author(s) by using OAI engines.</context_description>
 		<author_terms />
@@ -125,8 +125,8 @@
 		</search>
 	</context>
 	<context>
-		<context_title>Related Studies</context_title>
-		<context_abbrev>Related Studies</context_abbrev>
+		<context_title>Related studies</context_title>
+		<context_abbrev>Related studies</context_abbrev>
 		<context_description>Access to related studies by establishing a working link with an open-access (free) database, with abstracts and/or full texts related to your topic.</context_description>
 
 		<search>
@@ -187,13 +187,13 @@
 		</search>
 	</context>
 	<context>
-		<context_title>Book Reviews</context_title>
-		<context_abbrev>Book Reviews</context_abbrev>
+		<context_title>Book reviews</context_title>
+		<context_abbrev>Book reviews</context_abbrev>
 		<context_description>Click on the search urls to check for book reviews.</context_description>
 
 		<search>
-			<search_title>Anthropology Review Database (ARD)</search_title>
-			<search_description>The Anthropology Review Database is intended to improve the level of access of anthropologists to anthropological literature by making them more aware of what is being published and helping them to evaluate its relevance to their own interests.</search_description>
+			<search_title>Anthropology Review Databases (ARD)</search_title>
+			<search_description>The Anthropology Review Databases is intended to improve the level of access of anthropologists to anthropological literature by making them more aware of what is being published and helping them to evaluate its relevance to their own interests.</search_description>
 			<url>http://wings.buffalo.edu/ARD/</url>
 			<search_url>http://wings.buffalo.edu/ARD/cgi/search.cgi?authors=&amp;subject=&amp;date1=&amp;date2=&amp;medium=&amp;reviewer=&amp;title=</search_url>
 			
@@ -206,16 +206,16 @@
 			
 		</search>
 		<search>
-			<search_title>Law and Politics Book Review</search_title>
-			<search_description>The Law and Politics Book Review is sponsored by the Law and Courts Section of the American Political Science Association. The electronic medium enables us to review almost every book about the legal process and politics, to do longer reviews than are usually published, and to make the reviews available within six months of our receipt of the book.</search_description>
+			<search_title>Law and Politics Book reviews</search_title>
+			<search_description>The Law and Politics Book reviews is sponsored by the Law and Courts Section of the American Political Science Association. The electronic medium enables us to review almost every book about the legal process and politics, to do longer reviews than are usually published, and to make the reviews available within six months of our receipt of the book.</search_description>
 			<url>http://www.bsos.umd.edu/gvpt/lpbr/</url>
 			<search_url>http://www.bsos.umd.edu/gvpt/lpbr/titlesearch.asp?</search_url>
 			<search_post>txtSearchWords=</search_post>			
 		</search>
 	</context>
 	<context>
-		<context_title>Pay-Per-View</context_title>
-		<context_abbrev>Pay-Per-View</context_abbrev>
+		<context_title>Pay-per-view</context_title>
+		<context_abbrev>Pay-per-view</context_abbrev>
 		<context_description>A pay-per-view service is for those who do not have direct access to electronic journal articles via subscriptions. The service allows customers to gain direct access to an article by paying by credit card using the RSC's secure payment mechanism. Immediately the payment details have been validated, the customer can gain access to the required article file for a period of 30 days.</context_description>
 
 		<search>
@@ -240,8 +240,8 @@
 			
 		</search>
 		<search>
-			<search_title>Wiley InterScience Pay-Per-View Service</search_title>
-			<search_description>Wiley InterScience Pay-Per-View affords instant, full-text access to an extensive collection of journal articles or book chapters available on Wiley InterScience without the need for a subscription. This service allows anyone to purchase access to individual journal articles or book chapters directly by using a credit card. Access is instant and available for 24 hours.</search_description>
+			<search_title>Wiley InterScience Pay-per-view Service</search_title>
+			<search_description>Wiley InterScience Pay-per-view affords instant, full-text access to an extensive collection of journal articles or book chapters available on Wiley InterScience without the need for a subscription. This service allows anyone to purchase access to individual journal articles or book chapters directly by using a credit card. Access is instant and available for 24 hours.</search_description>
 			<url>http://www3.interscience.wiley.com/aboutus/ppv-articleselect.html</url>
 			<search_url>http://www3.interscience.wiley.com/search/allsearch</search_url>
 			<search_post>allContentSearchForm=&amp;mode=quicksearch&amp;WISindexid1=WISall&amp;WISsearch1=</search_post>			
@@ -275,8 +275,8 @@
 		</search>
 	</context>
 	<context>
-		<context_title>Social Sci Data</context_title>
-		<context_abbrev>Social Sci Data</context_abbrev>
+		<context_title>Social sci data</context_title>
+		<context_abbrev>Social sci data</context_abbrev>
 		<context_description>Provides access to a vast archive of social science data for research and instruction.</context_description>
 
 		<search>
@@ -309,8 +309,8 @@
 		</search>
 	</context>
 	<context>
-		<context_title>Social Theory</context_title>
-		<context_abbrev>Social Theory</context_abbrev>
+		<context_title>Social theory</context_title>
+		<context_abbrev>Social theory</context_abbrev>
 		<context_description>Search sites contain information on social theories.</context_description>
 
 		<search>
@@ -332,8 +332,8 @@
 			<search_url>http://print.google.com/print?q=</search_url>
 		</search>
 		<search>
-			<search_title>Online Books Page</search_title>
-			<search_description><![CDATA[Online Books Page, edited by John Mark Ockerbloom, at the University of Pennsylvania.  This is an excellent starting point in the search for full-text books on the Internet. Over 20,000 English works in various formats available online at different sites. Entries may be searched by author or title. An interesting feature allows browsing by Library of Congress call number categories. New listings are added regularly and are listed on a separate web page at <a href="http://onlinebooks.library.upenn.edu/new.html">http://onlinebooks.library.upenn.edu/new.html</a>.]]></search_description>
+			<search_title>Online books Page</search_title>
+			<search_description><![CDATA[Online books Page, edited by John Mark Ockerbloom, at the University of Pennsylvania.  This is an excellent starting point in the search for full-text books on the Internet. Over 20,000 English works in various formats available online at different sites. Entries may be searched by author or title. An interesting feature allows browsing by Library of Congress call number categories. New listings are added regularly and are listed on a separate web page at <a href="http://onlinebooks.library.upenn.edu/new.html">http://onlinebooks.library.upenn.edu/new.html</a>.]]></search_description>
 			<url>http://digital.library.upenn.edu/books/</url>
 			<search_url>http://onlinebooks.library.upenn.edu/webbin/book/search?tmode=words&amp;title=</search_url>
 		</search>
@@ -401,8 +401,8 @@
 		</search>
 	</context>
 	<context>
-		<context_title>Online Forums</context_title>
-		<context_abbrev>Online Forums</context_abbrev>
+		<context_title>Online forums</context_title>
+		<context_abbrev>Online forums</context_abbrev>
 		<context_description>Choose online, open-access online forums that would enrich the context of the research studies on your site.</context_description>
 
 		<search>
@@ -428,8 +428,8 @@
 		</search>
 	</context>
 	<context>
-		<context_title>Legal Materials</context_title>
-		<context_abbrev>Legal Materials</context_abbrev>
+		<context_title>Legal materials</context_title>
+		<context_abbrev>Legal materials</context_abbrev>
 		<context_description>Porvides free Internet access to legal materials of major countries.</context_description>
 
 		<search>
@@ -483,7 +483,7 @@
 		</search>
 	</context>
 	<context>
-		<context_title>Government Policy</context_title>
+		<context_title>Government policy</context_title>
 		<context_abbrev>Gov Policy</context_abbrev>
 		<context_description>Access to Information and services gateway run by the Government of the United States and Canada.</context_description>
 
@@ -573,8 +573,8 @@
 		</search>
 	</context>
 	<context>
-		<context_title>Media Reports</context_title>
-		<context_abbrev>Media Reports</context_abbrev>
+		<context_title>Media reports</context_title>
+		<context_abbrev>Media reports</context_abbrev>
 		<context_description>Immediately initiates a search based on the subject of the article or paper that connects users to free current and archival articles in the field from leading newspapers around the world.</context_description>
 
 		<search>
@@ -642,8 +642,8 @@
 		</search>
 	</context>
 	<context>
-		<context_title>Search Engines</context_title>
-		<context_abbrev>Search Engines</context_abbrev>
+		<context_title>Web search</context_title>
+		<context_abbrev>Web search</context_abbrev>
 		<context_description>Enter a search term for Internet resources through various search engines.</context_description>
 
 		<search>
