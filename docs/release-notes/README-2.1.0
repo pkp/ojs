@@ -11,6 +11,9 @@ See config.TEMPLATE.inc.php for a description and examples of all supported
 configuration parameters.
 
 New config.inc.php parameters:
+	- general:base_url[journal_path] - Override the base URL for the
+		specified journal (or "index" for pages not affiliated with
+		any particular journal)
 	- email:enable_attachments - enable or disable email attachments on
 		all email templates for which it is an optional feature
 
