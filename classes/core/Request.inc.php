@@ -569,6 +569,9 @@ class Request {
 			else $journalPath = 'index';
 		}
 
+		// Get overridden base URLs (if available).
+		$overriddenBaseUrl = Config::getVar('general', "base_url[$journalPath]");
+
 		// If a page has been specified, don't supply a default op.
 		if ($page) {
 			$page = rawurlencode($page);
@@ -608,16 +611,20 @@ class Request {
 		if ($pathInfoDisabled) {
 			$joiner = $amp . 'path[]=';
 			if (!empty($path)) $pathString = $joiner . implode($joiner, $path);
-			$baseParams = "?journal=$journalPath";
-			if (!empty($page)) {
-				$baseParams .= $amp . "page=$page";
+			if (empty($overriddenBaseUrl)) $baseParams = "?journal=$journalPath";
+			else $baseParams = '';
+
+			if (!empty($page) || !empty($overriddenBaseUrl)) {
+				$baseParams .= empty($baseParams)?'?':$amp . "page=$page";
 				if (!empty($op)) {
 					$baseParams .= $amp . "op=$op";
 				}
 			}
 		} else {
 			if (!empty($path)) $pathString = '/' . implode('/', $path);
-			$baseParams = "/$journalPath";
+			if (empty($overriddenBaseUrl)) $baseParams = "/$journalPath";
+			else $baseParams = '';
+
 			if (!empty($page)) {
 				$baseParams .= "/$page";
 				if (!empty($op)) {
@@ -626,7 +633,7 @@ class Request {
 			}
 		}
 
-		return Request::getIndexUrl() . $baseParams . $pathString . $additionalParams . $anchor;
+		return ((empty($overriddenBaseUrl)?Request::getIndexUrl():$overriddenBaseUrl) . $baseParams . $pathString . $additionalParams . $anchor);
 	}
 }
 

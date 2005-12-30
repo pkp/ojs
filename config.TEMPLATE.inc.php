@@ -61,6 +61,17 @@ datetime_format_long = "%B %e, %Y - %I:%M %p"
 ; variable.
 disable_path_info = Off
 
+; Base URL override settings: Entries like the following examples can
+; be used to override the base URLs used by OJS. If you want to use a
+; proxy to rewrite URLs to OJS, configure your proxy's URL here.
+; Syntax: base_url[journal_path] = http://www.myUrl.com
+; To override URLs that aren't part of a particular journal, use a
+; journal_path of "index".
+; Examples:
+; base_url[index] = http://www.myUrl.com
+; base_url[myJournal] = http://www.myUrl.com/myJournal
+; base_url[myOtherJournal] = http://myOtherJournal.myUrl.com
+
 ;;;;;;;;;;;;;;;;;;;;;
 ; Database Settings ;
 ;;;;;;;;;;;;;;;;;;;;;
