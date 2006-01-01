@@ -114,10 +114,13 @@ class RTContext {
 	/** @var $description string context description */
 	var $description;
 	
-	/** @var $isAuthorTerms boolean default search terms to author names */
+	/** @var $authorTerms boolean default search terms to author names */
 	var $authorTerms = false;
 	
-	/** @var $isDefineTerms boolean default use as define terms context */
+	/** @var $geoTerms boolean default search terms to geo indexing data */
+	var $geoTerms = false;
+	
+	/** @var $defineTerms boolean default use as define terms context */
 	var $defineTerms = false;
 	
 	/** @var $order int ordering of this context within version */
@@ -189,6 +192,14 @@ class RTContext {
 
 	function setAuthorTerms($authorTerms) {
 		$this->authorTerms = $authorTerms;
+	}
+
+	function getGeoTerms() {
+		return $this->geoTerms;
+	}
+
+	function setGeoTerms($geoTerms) {
+		$this->geoTerms = $geoTerms;
 	}
 
 	function getDefineTerms() {

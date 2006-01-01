@@ -41,19 +41,22 @@
 
 		// Add the search terms to the action URL if necessary
 		var oldAction = searchForm.action;
-		searchForm.action = oldAction.replace(/KEYWORDS_HERE/g, termsGet);
+		searchForm.action = oldAction.replace(/{\$formKeywords}/g, termsGet);
 
 		// Add the search terms to the POST fields if necessary
 		elements = searchForm.elements;
 		for (var i=0; i<elements.length; i++) {
-			if (elements[i].type=='hidden' && elements[i].value=='KEYWORDS_HERE') {
-				elements[i].value = termsPost;
+			if (elements[i].type=='hidden') {
+				elements[i].value.replace(/{\$formKeywords}/g, termsPost);
 			}
 		}
 
 		// Submit the form via POST or GET as appropriate.
-		if (searchForm.method=='post') searchForm.submit();
-		else document.location = searchForm.action;
+		if (searchForm.method=='post') {
+			searchForm.submit();
+		} else {
+			document.location = searchForm.action;
+		}
 		return true;
 	}
 // -->
@@ -62,11 +65,11 @@
 
 <h3>"{$article->getArticleTitle()|strip_unsafe_html}"</h3>
 
-<form name="terms">
 
 <p>{if $context->getDefineTerms()}{translate key="rt.context.defineTermsDescription"}{elseif $context->getAuthorTerms()}{translate key="rt.context.authorTermsDescription"}{else}{translate key="rt.context.searchDescription"}{/if}</p>
 
 <table class="data" width="100%">
+	<form name="terms">
 	{if $context->getDefineTerms()}
 		<tr valign="top">
 			<td width="20%" class="label">{translate key="rt.context.termToDefine"}</td>
@@ -83,6 +86,11 @@
 				</td>
 			</tr>
 		{/foreach}
+	{elseif $context->getGeoTerms()}
+		<tr valign="top">
+			<td width="20%" class="label">{translate key="rt.context.termToDefine"}</td>
+			<td width="80%" class="value"><input name="searchTerm" value="{$coverageGeo}" length="40" class="textField" />
+		</tr>
 	{else}
 		<tr valign="top">
 			<td width="20%" class="label">{translate key="rt.context.searchTerms"}</td>
@@ -95,21 +103,35 @@
 			</td>
 		</tr>
 	{/if}
-</table>
+	</form>
 
-</form>
+
+	<form name="additionalParams">
+	{foreach from=$additionalFormValues key=paramKey item=value}
+		<tr valign="top">
+			<td width="20%" class="label">
+				{if $paramKey == 'author'}{translate key="user.role.author"}
+				{elseif $paramKey == 'coverageGeo'}{translate key="article.coverageGeo"}
+				{/if}
+			</td>
+			<td width="80%" class="value">
+					<input name="{$paramKey}" value="{$value|escape}" length="40" class="textField" />
+			</td>
+	{/foreach}
+	</form>
+</table>
 
 <div class="separator"></div>
 
 <table class="listing" width="100%">
 	{foreach from=$searches item=search key=key name=searches}
-	<form method="post" name="search{$key+1}form" method="{if $search->getSearchPost()}post{else}get{/if}" action="{$search->getSearchUrl()|escape}{if !$search->getSearchPost()}KEYWORDS_HERE{/if}">
+	<form name="search{$key+1}form" method="{if $search->getSearchPost()}post{else}get{/if}" action="{$search->getSearchUrl()|escape}">
 	{foreach from=$search->postParams item=postParam}
-		<input type="hidden" name="{$postParam.name|escape}" value="{if $postParam.needsKeywords}KEYWORDS_HERE{else}{$postParam.value|escape}{/if}" />
+		<input type="hidden" name="{$postParam.name|escape}" value="{$postParam.value|escape}" />
 	{/foreach}
 	<tr valign="top">
 		<td width="10%">
-			<input value="{translate key="common.search"}" type="button" onclick="addKeywords({$key+1});" class="button" />
+			<input value="{translate key="common.search"}" type="button" onclick="addKeywords({$key+2});" class="button" />
 		</td>
 		<td width="2%">{$key+1}.</td>
 		<td width="88%">{$search->getTitle()|escape} <a target="_new" href="{$search->getUrl()|escape}" class="action">{translate key="navigation.about"}</a></td>

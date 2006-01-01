@@ -130,7 +130,7 @@
 			var range = document.selection.createRange();
 			term = range.text;
 		}
-		openRTWindow(url + '?defineTerm=' + term);
+		openRTWindowWithToolbar(url + '?defineTerm=' + term);
 	}
 
 	if(document.captureEvents) {

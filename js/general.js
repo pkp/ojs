@@ -44,10 +44,13 @@ function openWindow(url) {
 }
 
 /**
- * Open window for preview.
+ * Open window for reading tools.
  */
 function openRTWindow(url) {
 	window.open(url, 'RT', 'width=700,height=500,screenX=100,screenY=100,toolbar=0,resizable=1,scrollbars=1');
+}
+function openRTWindowWithToolbar(url) {
+	window.open(url, 'RT', 'width=700,height=500,screenX=100,screenY=100,toolbar=1,resizable=1,scrollbars=1');
 }
 
 /**

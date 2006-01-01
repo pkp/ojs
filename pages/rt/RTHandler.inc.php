@@ -87,9 +87,16 @@ class RTHandler extends ArticleHandler {
 		// so that the client browser can properly submit the forms
 		// with a minimum of client-side processing.
 		$searches = array();
+		// Some searches use parameters other than the "default" for
+		// the search (i.e. keywords, author name, etc). If additional
+		// parameters are used, they should be displayed as part of the
+		// form for ALL searches in that context.
+		$additionalFormParams = array();
 		foreach ($context->getSearches() as $search) {
 			$params = array();
+			$additionalFormParams += RTHandler::getParameterNames($search->getSearchUrl());
 			if ($search->getSearchPost()) {
+				$additionalFormParams += RTHandler::getParameterNames($search->getSearchPost());
 				$postParams = explode('&', $search->getSearchPost());
 				foreach ($postParams as $param) {
 					// Split name and value from each parameter
@@ -100,15 +107,25 @@ class RTHandler extends ArticleHandler {
 					$value = trim(isset($nameValue[1])?$nameValue[1]:'');
 					if (!empty($name)) $params[] = array('name' => $name, 'value' => $value);
 				}
-	
-				if (count($params)!=0) {
-					$lastElement = &$params[count($params)-1];
-					if ($lastElement['value']=='') $lastElement['needsKeywords'] = true;
-				}
 			}
 			
 			$search->postParams = $params;
 			$searches[] = $search;
+		}
+
+		// Remove duplicate extra form elements and get their values
+		$additionalFormParams = array_unique($additionalFormParams);
+		$additionalFormValues = array();
+		foreach ($additionalFormParams as $key => $param) switch ($param) {
+			case 'author':
+				$additionalFormValues[$param] = $article->getAuthorString();
+				break;
+			case 'coverageGeo':
+				$additionalFormValues[$param] = $article->getCoverageGeo();
+			default:
+				// UNKNOWN parameter! Remove it from the list.
+				unset($additionalFormParams[$key]);
+				break;
 		}
 
 		$templateMgr = &TemplateManager::getManager();
@@ -118,8 +135,10 @@ class RTHandler extends ArticleHandler {
 		$templateMgr->assign_by_ref('version', $version);
 		$templateMgr->assign_by_ref('context', $context);
 		$templateMgr->assign_by_ref('searches', $searches);
+		$templateMgr->assign('additionalFormParams', $additionalFormParams);
 		$templateMgr->assign('defineTerm', Request::getUserVar('defineTerm'));
 		$templateMgr->assign('keywords', explode(';', $article->getSubject()));
+		$templateMgr->assign('coverageGeo', $article->getCoverageGeo());
 		$templateMgr->assign_by_ref('journalSettings', $journal->getSettings());
 		$templateMgr->display('rt/context.tpl');
 	}
@@ -319,6 +338,21 @@ class RTHandler extends ArticleHandler {
 		$templateMgr->assign_by_ref('article', $article);
 		$templateMgr->assign_by_ref('journalSettings', $journal->getSettings());
 		$templateMgr->display('rt/suppFileView.tpl');
+	}
+
+	function getParameterNames($value) {
+		$matches = null;
+		String::regexp_match_get('/\{\$([a-zA-Z0-9]+)\}/', $value, $matches);
+		// Remove the entire string from the matches list
+		array_shift($matches);
+
+		// Remove the special case formKeywords
+		$key = array_search('formKeywords', $matches);
+		if ($key !== null && $key !== false) {
+			unset($matches[$key]);
+		}
+
+		return $matches;
 	}
 }
 

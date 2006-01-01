@@ -78,8 +78,17 @@ Please confirm your ability to complete this vital contribution to the work of t
 
 	<!-- Bug #1935 -->
 	<sql>
+		<!-- IS THIS NEEDED? If so, bring in the others too...
+		     If not, add a note recommending RT reload
 		<query>
 			UPDATE rt_contexts SET title = 'Definition of terms' WHERE title = 'Define Terms'
+		</query>
+		-->
+		<query>
+			UPDATE rt_searches SET search_url = CONCAT(search_url, '{$formKeywords}') WHERE search_url LIKE '%='
+		</query>
+		<query>
+			UPDATE rt_searches SET search_post = CONCAT(search_url, '{$formKeywords}') WHERE search_post LIKE '%='
 		</query>
 	</sql>
 </data>

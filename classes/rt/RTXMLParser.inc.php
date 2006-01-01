@@ -128,6 +128,9 @@ class RTXMLParser {
 				case 'author_terms':
 					$newContext->authorTerms = true;
 					break;
+				case 'geo_terms':
+					$newContext->geoTerms = true;
+					break;
 				case 'define_terms':
 					$newContext->defineTerms = true;
 					break;

@@ -26,7 +26,7 @@
 <!--
   * context - Grouping of related searches
   -->
-<!ELEMENT context (context_title,context_abbrev,context_description,author_terms?,define_terms?,search*)>
+<!ELEMENT context (context_title,context_abbrev,context_description,author_terms?,define_terms?,geo_terms?,search*)>
 
 <!-- Context information -->
 <!ELEMENT context_title (#PCDATA)>
@@ -34,6 +34,7 @@
 <!ELEMENT context_description (#PCDATA)>
 <!ELEMENT author_terms EMPTY> <!-- If present use authors as default search terms -->
 <!ELEMENT define_terms EMPTY> <!-- If present use as the "Define Terms" context -->
+<!ELEMENT geo_terms EMPTY> <!-- If present use geo context as default search terms -->
 
 
 <!--

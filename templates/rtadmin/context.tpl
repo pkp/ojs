@@ -46,6 +46,10 @@
 					<td><label for="authorTerms">{translate key="rt.admin.contexts.options.authorTerms"}</label></td>
 				</tr>
 				<tr valign="top">
+					<td width="3%"><input type="checkbox" name="geoTerms" id="geoTerms" {if $geoTerms}checked="checked"{/if} /></td>
+					<td><label for="geoTerms">{translate key="rt.admin.contexts.options.geoTerms"}</label></td>
+				</tr>
+				<tr valign="top">
 					<td><input type="checkbox" name="defineTerms" id="defineTerms" {if $defineTerms}checked="checked"{/if} /></td>
 					{url|assign:"url" page="rtadmin" op="settings"}
 					<td><label for="defineTerms">{translate key="rt.admin.contexts.options.defineTerms" settingsUrl=$url}</label></td>

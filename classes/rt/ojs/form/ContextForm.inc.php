@@ -54,6 +54,7 @@ class ContextForm extends Form {
 				'order' => $context->getOrder(),
 				'description' => $context->getDescription(),
 				'authorTerms' => $context->getAuthorTerms(),
+				'geoTerms' => $context->getGeoTerms(),
 				'defineTerms' => $context->getDefineTerms()
 			);
 		} else {
@@ -112,6 +113,7 @@ class ContextForm extends Form {
 		$context->setTitle($this->getData('title'));
 		$context->setAbbrev($this->getData('abbrev'));
 		$context->setAuthorTerms($this->getData('authorTerms')==true);
+		$context->setGeoTerms($this->getData('geoTerms')==true);
 		$context->setDefineTerms($this->getData('defineTerms')==true);
 		$context->setDescription($this->getData('description'));
 		if (!isset($this->context)) $context->setOrder(-1);

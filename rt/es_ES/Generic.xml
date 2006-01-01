@@ -22,64 +22,88 @@
 		<context_description>Identify other works by the article's author(s) by using OAI engines.</context_description>
 		<author_terms />
 		<search>
+			<search_title>Google Scholar</search_title>
+			<search_description>Google Scholar enables specific searches of scholarly literature, including peer-reviewed papers, theses, books, pre-prints, abstracts, and technical reports. Content includes a range of publishers and aggregators with whom Google already has standing arrangements, e.g., the Association for Computing Machinery, IEEE, OCLC&#039;s Open WorldCat library locator service, etc. Result displays will show different version clusters, citation analysis, and library location (currently books only).</search_description>
+			<url>http://scholar.google.com</url>
+			<search_url>http://scholar.google.com/scholar?ie=UTF-8&amp;oe=UTF-8&amp;hl=eng&amp;as_sauthors={$formKeywords}</search_url>
+		</search>
+		<search>
 			<search_title>OAIster (Open Archives Inititive research databases)</search_title>
 			<search_description>OAIster is a project of the University of Michigan Digital Library Production Services, and provides searching a wide variety of collections from a wide variety of institutions. These institutions have made the records of their digital resources available to access, and the project team has gathered and aggregated them into the OAIster service.</search_description>
 			<url>http://oaister.umdl.umich.edu/</url>
-			<search_url>http://oaister.umdl.umich.edu/cgi/b/bib/bib-idx?type=boolean&amp;size=10&amp;c=oaister&amp;q1=&amp;rgn1=entire+record&amp;op2=and&amp;q2=&amp;rgn2=entire+record&amp;op3=And&amp;q3=&amp;rgn3=title&amp;op4=And&amp;rgn4=author&amp;op5=And&amp;q5=&amp;rgn5=subject&amp;op6=And&amp;rgn6=norm&amp;q6=all+types&amp;sort=author%2Fcreator&amp;submit2=search&amp;q4=</search_url>
+			<search_url>http://oaister.umdl.umich.edu/cgi/b/bib/bib-idx?type=boolean&amp;size=10&amp;c=oaister&amp;q1=&amp;rgn1=entire+record&amp;op2=and&amp;q2=&amp;rgn2=entire+record&amp;op3=And&amp;q3=&amp;rgn3=title&amp;op4=And&amp;rgn4=author&amp;op5=And&amp;q5=&amp;rgn5=subject&amp;op6=And&amp;rgn6=norm&amp;q6=all+types&amp;sort=author%2Fcreator&amp;submit2=search&amp;q4={$formKeywords}</search_url>
 			
 		</search>
 		<search>
 			<search_title>Public Knowledge Project Open Archives Harvester</search_title>
 			<search_description>The PKP Open Archives Harvester is a free metadata indexing system developed by the Public Knowledge Project through its federally funded efforts to expand and improve access to research. The PKP OAI Harvester allows you to create a searchable index of the metadata from Open Archives Initiative-compliant archives, such as sites using Open Journal Systems or Open Conference Systems.</search_description>
 			<url>http://pkp.sfu.ca/harvester/</url>
-			<search_url>http://pkp.sfu.ca/harvester/search.php?limit=author&amp;query=</search_url>
+			<search_url>http://pkp.sfu.ca/harvester/search.php?limit=author&amp;query={$formKeywords}</search_url>
 			
 		</search>
 	</context>
 	<context>
-		<context_title>Definition of terms</context_title>
-		<context_abbrev>Definition of terms</context_abbrev>
+		<context_title>Definitions</context_title>
+		<context_abbrev>Definitions</context_abbrev>
 		<context_description>Double click on any word in the text and it will appear in the &quot;Definition of terms&quot; box. You can also type or paste a word into the box. Then use the search function to find a definition for the word. These resources have been selected because of their relevance and their open (free) access to all or part of their contents.</context_description>
 		<define_terms />
+		<search>
+			<search_title>Google</search_title>
+			<search_description>Search for definitions using the popular Google search engine.</search_description>
+			<url>http://www.google.com/</url>
+			<search_url>http://www.google.com/search?hl=en&amp;q=define%3A{$formKeywords}</search_url>
+		</search>
 		<search>
 			<search_title>Columbia Encyclopedia</search_title>
 			<search_description>Serving as a &quot;first aid&quot; for those who read, the sixth edition of the Columbia Encyclopedia contains over 51,000 entries with 80,000 hypertext links.</search_description>
 			<url>http://www.bartleby.com/65/</url>
-			<search_url>http://www.bartleby.com/cgi-bin/texis/webinator/65search?search_type=full&amp;query=</search_url>
+			<search_url>http://www.bartleby.com/cgi-bin/texis/webinator/65search?search_type=full&amp;query={$formKeywords}</search_url>
 			
 		</search>
 		<search>
 			<search_title>Encyclopedia.com</search_title>
 			<search_description>Online version of the Concise Electronic Encyclopedia. Entries are very short, so this site is better suited for fact checking than research.</search_description>
 			<url>http://www.encyclopedia.com/</url>
-			<search_url>http://www.encyclopedia.com/searchpool.asp?target=</search_url>
+			<search_url>http://www.encyclopedia.com/searchpool.asp?target={$formKeywords}</search_url>
 			
 		</search>
 		<search>
 			<search_title>Merriam-Webster Online</search_title>
 			<search_description>A dictionary based on the Webster 10th Collegiate edition, 1993, with updates added annually. More than 160,000 entries. Each word is accompanied by definition, pronunciation, usage, grammatical function, and a brief etymology. Includes a thesaurus. Misspellings return suggested spellings. The dictionary's search system supports internal wildcards and right hand truncation searching. Includes an extensive pronunciation guide and sound files for the pronunciation of many terms.</search_description>
 			<url>http://www.merriam-webster.com/</url>
-			<search_url>http://www.merriam-webster.com/cgi-bin/dictionary?book=Dictionary&amp;va=</search_url>
+			<search_url>http://www.merriam-webster.com/cgi-bin/dictionary?book=Dictionary&amp;va={$formKeywords}</search_url>
 			
 		</search>
 		<search>
 			<search_title>OneLook Dictionaries</search_title>
 			<search_description>OneLook is a meta-dictionary. Enter an English language word or acronym, and OneLook will search its index of 5,292,362 words in 934 dictionaries indexed in general and special interest dictionaries for the definition.</search_description>
 			<url>http://www.onelook.com/index.html</url>
-			<search_url>http://www.onelook.com/?ls=a&amp;w=</search_url>
+			<search_url>http://www.onelook.com/?ls=a&amp;w={$formKeywords}</search_url>
 			
 		</search>
 		<search>
 			<search_title>Wikipedia: The Free Encyclopedia</search_title>
 			<search_description>"Wikipedia is a free content encyclopedia that is being written collaboratively by contributors from all around the world. The site is a WikiWiki, meaning that anyone ... can edit any article. ..." Without editorial oversight, the quality of the content on this site varies dramatically, but it is worth exploring. The English version has hundreds of thousands of entries. Spanish, French, and Esperanto are among the several other languages offered.</search_description>
 			<url>http://en.wikipedia.org/wiki/Main_Page</url>
-			<search_url>http://en.wikipedia.org/wiki/Special:Search?go=Go&amp;fulltext=Search&amp;search=</search_url>
+			<search_url>http://en.wikipedia.org/wiki/Special:Search?go=Go&amp;fulltext=Search&amp;search={$formKeywords}</search_url>
 		</search>
 		<search>
 			<search_title>Infoplease.com</search_title>
 			<search_description>This site includes contents of the Information Please Almanacs, a biography database, a dictionary, an atlas, and articles from the Columbia Encyclopedia. You can search these ready reference works together or separately or browse the Almanacs. There are feature stories each week covering topics in the news, with links to pertinent Almanac content and other Web resources.</search_description>
 			<url>http://www.infoplease.com</url>
-			<search_url>http://www.infoplease.com/search?fr=iptn&amp;in=all&amp;x=0&amp;y=0&amp;query=</search_url>
+			<search_url>http://www.infoplease.com/search?fr=iptn&amp;in=all&amp;x=0&amp;y=0&amp;query={$formKeywords}</search_url>
+		</search>
+	</context>
+	<context>
+		<context_title>Find places</context_title>
+		<context_abbrev>Find places</context_abbrev>
+		<context_description>Search for locations relating to the article.</context_description>
+		<geo_terms/>
+		<search>
+			<search_title>Google Maps</search_title>
+			<search_description>Search for locations using the popular Google search engine's mapping features.</search_description>
+			<url>http://maps.google.com/</url>
+			<search_url>http://maps.google.com/maps?hl=en&amp;q={$formKeywords}</search_url>
 		</search>
 	</context>
 	<context>
@@ -90,44 +114,44 @@
 			<search_title>Access to Australian Government Information and Services</search_title>
 			<search_description><![CDATA[The Australian Government Entry Point offers comprehensive and integrated access to Australian Government information and services.  You will find a concentrated body of Australian Government information through this site. <a href="http://www.australia.gov.au">www.australia.gov.au</a> currently signposts over 700 Australian Government web sites, indexes more than 5,000,000 pages and uses both metadata and full text indexing to ensure it is a comprehensive government portal.]]></search_description>
 			<url>http://www.fed.gov.au</url>
-			<search_url>http://govsearch.australia.gov.au/search/search.cgi?collection=gov&amp;form=au&amp;query=&amp;query_phrase=&amp;query_or=&amp;query_not=&amp;meta_f_sand=&amp;scope=&amp;fscope=512&amp;num_ranks=20&amp;chksummary=chksummary&amp;query_and=</search_url>
+			<search_url>http://govsearch.australia.gov.au/search/search.cgi?collection=gov&amp;form=au&amp;query=&amp;query_phrase=&amp;query_or=&amp;query_not=&amp;meta_f_sand=&amp;scope=&amp;fscope=512&amp;num_ranks=20&amp;chksummary=chksummary&amp;query_and={$formKeywords}</search_url>
 			
 		</search>
 		<search>
 			<search_title>Canadian Government Information</search_title>
 			<search_description>Includes links to Canadian government libraries, federal documents and news releases, publications catalogues, and provincial governments. Most information is in English, but some of the linked material is in French, or a combination of French and English.</search_description>
 			<url>http://www.nlc-bnc.ca/8/4/index-e.html</url>
-			<search_url>http://www.collectionscanada.ca/search/006001-110.01-e.php?q%5B1%5D=pagelevel%3A1&amp;q%5B2%5D=&amp;x=15&amp;y=13&amp;q%5B0%5D=</search_url>
+			<search_url>http://www.collectionscanada.ca/search/006001-110.01-e.php?q%5B1%5D=pagelevel%3A1&amp;q%5B2%5D=&amp;x=15&amp;y=13&amp;q%5B0%5D={$formKeywords}</search_url>
 		</search>
 		<search>
 			<search_title>Directgov</search_title>
 			<search_description>Directgov is a government service giving people access to the latest and widest range of public service information in one place on the Web and on Digital TV. Directgov uses the specifications formulated and consulted on through UK GovTalk.</search_description>
 			<url>http://www.direct.gov.uk</url>
-			<search_url>http://www.direct.gov.uk/AdvancedSearch/SearchResults/fs/en?NP=1&amp;PO1=C&amp;PI1=W&amp;PF1=A&amp;PG=1&amp;RP=20&amp;SC=__dgov_site&amp;Z=1&amp;PT1=</search_url>
+			<search_url>http://www.direct.gov.uk/AdvancedSearch/SearchResults/fs/en?NP=1&amp;PO1=C&amp;PI1=W&amp;PF1=A&amp;PG=1&amp;RP=20&amp;SC=__dgov_site&amp;Z=1&amp;PT1={$formKeywords}</search_url>
 		</search>
 		<search>
 			<search_title>Info4local.gov.uk</search_title>
 			<search_description>Information for local government from central government.  This site gives local authorities a quick and easy way to find relevant information on the web sites of central government departments, agencies and public bodies. It includes extensive information on implementing electronic government.</search_description>
 			<url>http://www.info4local.gov.uk</url>
-			<search_url>http://www.info4local.gov.uk/searchresults.asp?formname=frmAdvanced&amp;keywordstype=1&amp;month=&amp;year=&amp;pub=1&amp;news=1&amp;links=1&amp;allsubjects=1&amp;alldepts=1&amp;alldoctypes=1&amp;keywords=</search_url>
+			<search_url>http://www.info4local.gov.uk/searchresults.asp?formname=frmAdvanced&amp;keywordstype=1&amp;month=&amp;year=&amp;pub=1&amp;news=1&amp;links=1&amp;allsubjects=1&amp;alldepts=1&amp;alldoctypes=1&amp;keywords={$formKeywords}</search_url>
 		</search>
 		<search>
 			<search_title>The New Zealand government portal</search_title>
 			<search_description>The New Zealand government portal is a website providing search capability for, and links into the online and offline information and services of most government agencies.  This site is managed and maintained by the State Services Commission, a New Zealand government department.</search_description>
 			<url>http://www.govt.nz</url>
-			<search_url>http://www.govt.nz/search?type=spider&amp;t=spider&amp;q=</search_url>
+			<search_url>http://www.govt.nz/search?type=spider&amp;t=spider&amp;q={$formKeywords}</search_url>
 		</search>
 		<search>
 			<search_title>Europa</search_title>
 			<search_description>Current information on the member countries of the European Union, including statistical data, policies, news, official documents, legal texts, and other publications.</search_description>
 			<url>http://europa.eu.int/index_en.htm</url>
-			<search_url>http://europa.eu.int/geninfo/query/engine/search/query.pl?action=FilterSearch&amp;filter=europaflt.hts&amp;Collection=fullEUROPA&amp;ResultTemplate=europarslt_ascii.hts&amp;ResultCount=25&amp;ResultMaxDocs=200&amp;DefaultLG=en&amp;ViewTemplate=europaview.hts&amp;QueryText=</search_url>
+			<search_url>http://europa.eu.int/geninfo/query/engine/search/query.pl?action=FilterSearch&amp;filter=europaflt.hts&amp;Collection=fullEUROPA&amp;ResultTemplate=europarslt_ascii.hts&amp;ResultCount=25&amp;ResultMaxDocs=200&amp;DefaultLG=en&amp;ViewTemplate=europaview.hts&amp;QueryText={$formKeywords}</search_url>
 		</search>
 		<search>
 			<search_title>The Global Legal Information Network (GLIN)</search_title>
 			<search_description>The Global Legal Information Network (GLIN) is a database of laws, regulations, judicial decisions, and other complementary legal sources contributed by governmental agencies and international organizations. These GLIN members contribute the official full texts of published documents to the database in their original language. Each document is accompanied by a summary in English and subject terms selected from the multilingual index to GLIN.</search_description>
 			<url>http://www.glin.gov</url>
-			<search_url>http://www.glin.gov/search.do?refineQuery=&amp;offset=0&amp;refineQueryType=&amp;fromSearch=true&amp;queryType=ALL&amp;searchBtn=Search&amp;includeAllFields=on&amp;searchAll=on&amp;sumLanguage=any&amp;pubLanguage=any&amp;pubJurisdiction=any&amp;publicationJurisdictionExclude=false&amp;searchPublicationDate=true&amp;dateFromDay=01&amp;dateFromMonth=01&amp;dateFromYear=&amp;dateToDay=01&amp;dateToMonth=01&amp;dateToYear=&amp;subjTerm=&amp;subjTermConjunction%5B0%5D=AND&amp;subjTerm=&amp;subjTermConjunction%5B1%5D=AND&amp;subjTerm=&amp;subjTermConjunction%5B2%5D=AND&amp;subjTerm=&amp;subjTermConjunction%5B3%5D=AND&amp;subjTerm=&amp;searchOrder=default&amp;hitsPerPage=10&amp;showSummary=on&amp;queryString=</search_url>
+			<search_url>http://www.glin.gov/search.do?refineQuery=&amp;offset=0&amp;refineQueryType=&amp;fromSearch=true&amp;queryType=ALL&amp;searchBtn=Search&amp;includeAllFields=on&amp;searchAll=on&amp;sumLanguage=any&amp;pubLanguage=any&amp;pubJurisdiction=any&amp;publicationJurisdictionExclude=false&amp;searchPublicationDate=true&amp;dateFromDay=01&amp;dateFromMonth=01&amp;dateFromYear=&amp;dateToDay=01&amp;dateToMonth=01&amp;dateToYear=&amp;subjTerm=&amp;subjTermConjunction%5B0%5D=AND&amp;subjTerm=&amp;subjTermConjunction%5B1%5D=AND&amp;subjTerm=&amp;subjTermConjunction%5B2%5D=AND&amp;subjTerm=&amp;subjTermConjunction%5B3%5D=AND&amp;subjTerm=&amp;searchOrder=default&amp;hitsPerPage=10&amp;showSummary=on&amp;queryString={$formKeywords}</search_url>
 		</search>
 	</context>
 	<context>
@@ -138,25 +162,25 @@
 			<search_title>Google Print</search_title>
 			<search_description>Google is working with libraries at the University of Michigan, Harvard University, Stanford University, Oxford University and the New York Public Library to digitize books in their collections and make them accessible via Google Print, a massive scanning project that will bring millions of volumes of printed books into the Google Print database.  Click a book title and you'll see the page of the book that has your search terms, your can search for more information within that specific book, find reviews, find related information, learn about the publisher, buy this book, and find nearby libraries that have it.</search_description>
 			<url>http://print.google.com</url>
-			<search_url>http://print.google.com/print?q=</search_url>
+			<search_url>http://print.google.com/print?q={$formKeywords}</search_url>
 		</search>
 		<search>
 			<search_title>Online books Page</search_title>
 			<search_description><![CDATA[Online books Page, edited by John Mark Ockerbloom, at the University of Pennsylvania.  This is an excellent starting point in the search for full-text books on the Internet. Over 20,000 English works in various formats available online at different sites. Entries may be searched by author or title. An interesting feature allows browsing by Library of Congress call number categories. New listings are added regularly and are listed on a separate web page at <a href="http://onlinebooks.library.upenn.edu/new.html">http://onlinebooks.library.upenn.edu/new.html</a>.]]></search_description>
 			<url>http://digital.library.upenn.edu/books/</url>
-			<search_url>http://onlinebooks.library.upenn.edu/webbin/book/search?tmode=words&amp;title=</search_url>
+			<search_url>http://onlinebooks.library.upenn.edu/webbin/book/search?tmode=words&amp;title={$formKeywords}</search_url>
 		</search>
 		<search>
 			<search_title>Books-On-Line</search_title>
 			<search_description>A collection of over 32935 titles, although some are only excerpts. Browse by subject or search by author or title. Not all items are free.</search_description>
 			<url>http://www.books-on-line.com/</url>
-			<search_url>http://www.books-on-line.com/bol/KeyWordSearch.cfm?RowCount=50&amp;Searchquery=</search_url>
+			<search_url>http://www.books-on-line.com/bol/KeyWordSearch.cfm?RowCount=50&amp;Searchquery={$formKeywords}</search_url>
 		</search>
 		<search>
 			<search_title>Universal Library</search_title>
 			<search_description>The Universal Library is considerably more involved, and more ambitious -- it has amassed a collection of 100,000 e-books (some of them from Project Gutenberg), and is aiming for 1 million e-books by the end of 2006.</search_description>
 			<url>http://delta.ulib.org/html/index.html</url>
-			<search_url>http://serv.ul.cs.cmu.edu/cgi-bin/srcfull.pl?search=</search_url>
+			<search_url>http://serv.ul.cs.cmu.edu/cgi-bin/srcfull.pl?search={$formKeywords}</search_url>
 		</search>
 	</context>
 	<context>
@@ -168,28 +192,28 @@
 			<search_title>H-Net Reviews</search_title>
 			<search_description>H-Net Reviews in the Humanities and Social Sciences is an online scholarly review resource. reviews are published online via discussion networks and the H-Net web site. This permits our reviews to reach scholars with a speed unmatched in any other medium. It also makes a new kind of interactivity possible, as reviewers, authors and readers engage in discussions of the reviews online. Through the power of e-mail and the web H-Net has helped pioneer online scholarly reviewing.</search_description>
 			<url>http://www2.h-net.msu.edu/reviews/</url>
-			<search_url>http://www2.h-net.msu.edu/reviews/search.cgi?maxlines=25&amp;maxfiles=25&amp;all=all&amp;query=</search_url>
+			<search_url>http://www2.h-net.msu.edu/reviews/search.cgi?maxlines=25&amp;maxfiles=25&amp;all=all&amp;query={$formKeywords}</search_url>
 			
 		</search>
 		<search>
 			<search_title>New York Review of Books</search_title>
 			<search_description>Lengthy reviews from the well-respected print publication. The keyword-searchable archive covers 1983 to the present, with some free, many pay-per-view.</search_description>
 			<url>http://www.nybooks.com/index</url>
-			<search_url>http://www.nybooks.com/archives/search?author_name=%20&amp;reviewed_author=&amp;reviewed_item=&amp;form=&amp;year=&amp;title=</search_url>
+			<search_url>http://www.nybooks.com/archives/search?author_name=%20&amp;reviewed_author=&amp;reviewed_item=&amp;form=&amp;year=&amp;title={$formKeywords}</search_url>
 			
 		</search>
 		<search>
 			<search_title>CM : Canadian Review of Materials</search_title>
 			<search_description>CM: Canadian Review of Materials is an electronic reviewing journal. CM reviews Canadiana of interest to children and young adults, including publications produced in Canada, or published elsewhere but of special interest or significance to Canada, such as those having a Canadian writer, illustrator or subject. We review books, video and audio recordings and CD-ROMs.</search_description>
 			<url>http://www.umanitoba.ca/cm/</url>
-			<search_url>http://www.umanitoba.ca/bin/AT/AT-CMsearch.cgi?mode=concept&amp;search=</search_url>
+			<search_url>http://www.umanitoba.ca/bin/AT/AT-CMsearch.cgi?mode=concept&amp;search={$formKeywords}</search_url>
 			
 		</search>
 		<search>
 			<search_title>Leonardo Digital Book reviews</search_title>
 			<search_description>Leonardo Digital Book reviews from the International Society for the Arts, Sciences and Technology</search_description>
 			<url>http://mitpress2.mit.edu/e-Journals/Leonardo/reviews/booksarc.html</url>
-			<search_url>http://mitpress2.mit.edu/cgi-bin/webglimpse.cgi?ID=1&amp;sp=sp&amp;query=</search_url>
+			<search_url>http://mitpress2.mit.edu/cgi-bin/webglimpse.cgi?ID=1&amp;sp=sp&amp;query={$formKeywords}</search_url>
 			
 		</search>
 	</context>
@@ -202,14 +226,14 @@
 			<search_title>CRL Foreign Doctoral Dissertation Databases</search_title>
 			<search_description>The CRL's (Center For Research Libraries) database for dissertations published outside of the United States and Canada is still in the construction phase. At this point, a total of 15,000 of 750,000 records are loaded into the database. Searchable by author, institution name, title, year, translated title, subject keywords, language, and country, the database also provides instructions for interlibrary loan procedure.</search_description>
 			<url>http://www.crl.edu/content.asp?l1=5&amp;l2=23&amp;l3=44&amp;l4=25</url>
-			<search_url>http://www.crl.edu/DBSearch/dissertationsSummary.asp?language=English&amp;title=</search_url>
+			<search_url>http://www.crl.edu/DBSearch/dissertationsSummary.asp?language=English&amp;title={$formKeywords}</search_url>
 			
 		</search>
 		<search>
 			<search_title>Electronic Thesis/Dissertation OAI Union Catalog</search_title>
 			<search_description>This Union Catalog serves as a repository of rich graduate educational material contributed by a number of member institutions worldwide. This is a service built by harvesting metadata from Open Archives of electronic theses and dissertations.</search_description>
 			<url>http://rocky.dlib.vt.edu/~etdunion/cgi-bin/index.pl</url>
-			<search_url>http://rocky.dlib.vt.edu/~etdunion/cgi-bin/search.pl?query=</search_url>
+			<search_url>http://rocky.dlib.vt.edu/~etdunion/cgi-bin/search.pl?query={$formKeywords}</search_url>
 			
 		</search>
 	</context>
@@ -222,7 +246,7 @@
 			<search_title>Liszt</search_title>
 			<search_description>Liszt, hosted by Topica, is a free service that allows you to find, manage and participate in email lists and discussion groups in many categories.</search_description>
 			<url>http://www.liszt.com/dir/?cid=0</url>
-			<search_url>http://www.liszt.com/search/?search_type=cat&amp;amp;query=</search_url>
+			<search_url>http://www.liszt.com/search/?search_type=cat&amp;amp;query={$formKeywords}</search_url>
 			
 		</search>
 		<search>
@@ -242,21 +266,21 @@
 			<search_title>Bartlett's Familiar Quotations</search_title>
 			<search_description>A collection of passages, phrases, and proverbs traced to their sources in ancient and modern literature (1919 edition).</search_description>
 			<url>http://www.bartleby.com/100/</url>
-			<search_url>http://www.bartleby.com/cgi-bin/texis/webinator/sitesearch?FILTER=col100%20&amp;x=9&amp;y=11&amp;query=</search_url>
+			<search_url>http://www.bartleby.com/cgi-bin/texis/webinator/sitesearch?FILTER=col100%20&amp;x=9&amp;y=11&amp;query={$formKeywords}</search_url>
 			
 		</search>
 		<search>
 			<search_title>Quotations Page</search_title>
 			<search_description>Searchable database of several quotation resources on the Internet. See the Quotations Collections for a description of each.</search_description>
 			<url>http://www.quotationspage.com/</url>
-			<search_url>http://www.quotationspage.com/search.php3?Author=&amp;C=mgm&amp;C=motivate&amp;C=classic&amp;C=coles&amp;C=lindsly&amp;C=poorc&amp;C=net&amp;C=devils&amp;C=contrib&amp;x=60&amp;y=11&amp;Search=</search_url>
+			<search_url>http://www.quotationspage.com/search.php3?Author=&amp;C=mgm&amp;C=motivate&amp;C=classic&amp;C=coles&amp;C=lindsly&amp;C=poorc&amp;C=net&amp;C=devils&amp;C=contrib&amp;x=60&amp;y=11&amp;Search={$formKeywords}</search_url>
 			
 		</search>
 		<search>
 			<search_title>Quotez</search_title>
 			<search_description>Created and maintained by Mark Fryer, the Quotez database includes more than 13,500 quotations. Author and subject indexes are available for browsing.</search_description>
 			<url>http://www.quotations.co.uk/</url>
-			<search_url>http://www.digiserve.co.uk/quotations/search.cgi?boolean=AND&amp;case=Insensitive&amp;terms=</search_url>
+			<search_url>http://www.digiserve.co.uk/quotations/search.cgi?boolean=AND&amp;case=Insensitive&amp;terms={$formKeywords}</search_url>
 			
 		</search>
 	</context>
@@ -269,21 +293,21 @@
 			<search_title>Ingenta</search_title>
 			<search_description>Ingenta restricts access to full text articles. Although access to the full text costs money, the site can be used as a free index.</search_description>
 			<url>http://www.ingenta.com/</url>
-			<search_url>http://www.ingenta.com/isis/searching/Search/ingenta?database=1&amp;title=</search_url>
+			<search_url>http://www.ingenta.com/isis/searching/Search/ingenta?database=1&amp;title={$formKeywords}</search_url>
 			
 		</search>
 		<search>
 			<search_title>ebrary</search_title>
 			<search_description>Independent researchers who do not have access to ebrary?s databases through their library may now set up an individual account for as little as $5. ebrary Discover spans multiple academic disciplines and provides anytime, anywhere access to over 20,000 authoritative titles including books in full-text, sheet music, reports and other authoritative documents from more than 175 leading publishers such as Cambridge University Press, Random House, Inc., and The McGraw-Hill Companies.</search_description>
 			<url>http://www.ebrary.com/company/</url>
-			<search_url>http://shop.ebrary.com/Top?layout=search&amp;f00=text&amp;p01=&amp;f01=subject&amp;d=journal&amp;l=en&amp;sch=%A0%A0%A0%A0%A0Search%A0%A0%A0%A0%A0&amp;frm=adv.x&amp;p00=</search_url>
+			<search_url>http://shop.ebrary.com/Top?layout=search&amp;f00=text&amp;p01=&amp;f01=subject&amp;d=journal&amp;l=en&amp;sch=%A0%A0%A0%A0%A0Search%A0%A0%A0%A0%A0&amp;frm=adv.x&amp;p00={$formKeywords}</search_url>
 			
 		</search>
 		<search>
 			<search_title>Questia</search_title>
 			<search_description>Questia provides access to over 47,000 books and 375,000 journal, magazine, and newspaper articles. All books and articles are available in their entirety - search every page. The subscription rate is ranging from 19.05 per month to 119.95 per year.</search_description>
 			<url>http://www.questia.com/</url>
-			<search_url>http://www.questia.com/SM.qst?act=search&amp;keywordsSearchType=1000&amp;mediaType=book&amp;mediaType=journal&amp;mediaType=magazine&amp;mediaType=newspaper&amp;mediaType=encyclopedia&amp;mediaType=startpage&amp;keywords=</search_url>
+			<search_url>http://www.questia.com/SM.qst?act=search&amp;keywordsSearchType=1000&amp;mediaType=book&amp;mediaType=journal&amp;mediaType=magazine&amp;mediaType=newspaper&amp;mediaType=encyclopedia&amp;mediaType=startpage&amp;keywords={$formKeywords}</search_url>
 			
 		</search>
 		<search>
@@ -291,7 +315,7 @@
 			<search_description>Wiley InterScience Pay-per-view affords instant, full-text access to an extensive collection of journal articles or book chapters available on Wiley InterScience without the need for a subscription. This service allows anyone to purchase access to individual journal articles or book chapters directly by using a credit card. Access is instant and available for 24 hours.</search_description>
 			<url>http://www3.interscience.wiley.com/aboutus/ppv-articleselect.html</url>
 			<search_url>http://www3.interscience.wiley.com/search/allsearch</search_url>
-			<search_post>allContentSearchForm=&amp;mode=quicksearch&amp;WISindexid1=WISall&amp;WISsearch1=</search_post>			
+			<search_post>allContentSearchForm=&amp;mode=quicksearch&amp;WISindexid1=WISall&amp;WISsearch1={$formKeywords}</search_post>			
 		</search>
 	</context>
 	<context>
@@ -302,59 +326,66 @@
 			<search_title>BBC Learning</search_title>
 			<search_description>BBC Online - Education BBC Education. Access to excellent learning resources for adults and children. Lots of subjects - history, science, languages, health, work skills, culture, technology, arts, literature, business, nature, life, leisure.</search_description>
 			<url>http://www.bbc.co.uk/learning/</url>
-			<search_url>http://www.bbc.co.uk/cgi-bin/search/results.pl?go.x=0&amp;go.y=0&amp;go=go&amp;uri=%2Flearning%2F&amp;q=</search_url>
+			<search_url>http://www.bbc.co.uk/cgi-bin/search/results.pl?go.x=0&amp;go.y=0&amp;go=go&amp;uri=%2Flearning%2F&amp;q={$formKeywords}</search_url>
 		</search>
 		<search>
 			<search_title>High Beam Research</search_title>
 			<search_description>High Beam Research is a single search engine for all subjects. Will search and deliver results by email. Abstract and text for subscribers only.</search_description>
 			<url>http://www.highbeam.com/library/index.asp</url>
-			<search_url>http://www.highbeam.com/library/search.asp?FN=HP&amp;ctrlInfo=Round9l%3AProdCtrl%3AHP%3ASearch&amp;search_documents=on&amp;search_images=on&amp;search_reference=on&amp;q=</search_url>
+			<search_url>http://www.highbeam.com/library/search.asp?FN=HP&amp;ctrlInfo=Round9l%3AProdCtrl%3AHP%3ASearch&amp;search_documents=on&amp;search_images=on&amp;search_reference=on&amp;q={$formKeywords}</search_url>
 		</search>
 		<search>
 			<search_title>RAND Research</search_title>
 			<search_description>For more than 50 years, the RAND Corporation has pursued its nonprofit mission by conducting research on importand and complicated problems. Initially, RAND (the name of which was derived from a contraction of the term research and development) focused on issues of national security. Eventually, RAND expanded its intellectual reserves to offer insight into other areas, such as business, education, health, law, and science. RAND's innovative approach to problem solving has become the benchmark for all other "think tanks" that followed. Hot Topics in RAND Research analyzes education and world issues.</search_description>
 			<url>http://www.rand.org/hot_topics/index.html</url>
-			<search_url>http://wwwsearch.rand.org/query.html?col=www&amp;qc=www+pubs&amp;qt=</search_url>
+			<search_url>http://wwwsearch.rand.org/query.html?col=www&amp;qc=www+pubs&amp;qt={$formKeywords}</search_url>
 		</search>
 	</context>
 	<context>
 		<context_title>Media reports</context_title>
 		<context_abbrev>Media reports</context_abbrev>
 		<context_description>Immediately initiates a search based on the subject of the article or paper that connects users to free current and archival articles in the field from leading newspapers around the world.</context_description>
+		<search>
+			<search_title>Google News</search_title>
+			<search_description>Search news reports using the popular search engine Google's news feature.</search_description>
+			<url>http://news.google.com/</url>
+			<search_url>http://news.google.com/news?hl=en&amp;q={$formKeywords}</search_url>
+			
+		</search>
 
 		<search>
 			<search_title>Globe and Mail</search_title>
 			<search_description>Globe and Mail, Toronto (last seven days)</search_description>
 			<url>http://www.globeandmail.com/</url>
-			<search_url>http://www.globeandmail.com/servlet/HTMLTemplate/search?tf=tgam/search/tgam/SearchResults.html&amp;cf=tgam/search/tgam/SearchResults.cfg&amp;current_row=1&amp;start_row=1&amp;num_rows=10&amp;keywords=</search_url>
+			<search_url>http://www.globeandmail.com/servlet/HTMLTemplate/search?tf=tgam/search/tgam/SearchResults.html&amp;cf=tgam/search/tgam/SearchResults.cfg&amp;current_row=1&amp;start_row=1&amp;num_rows=10&amp;keywords={$formKeywords}</search_url>
 			
 		</search>
 		<search>
 			<search_title>People's Daily</search_title>
 			<search_description>People's Daily, China (January 1999-)</search_description>
 			<url>http://english.peopledaily.com.cn/</url>
-			<search_url>http://english.peopledaily.com.cn/cgi-bin/htsearch?method=boolean&amp;format=builtin-long&amp;sort=score&amp;config=english&amp;exclude=&amp;words=</search_url>
+			<search_url>http://english.peopledaily.com.cn/cgi-bin/htsearch?method=boolean&amp;format=builtin-long&amp;sort=score&amp;config=english&amp;exclude=&amp;words={$formKeywords}</search_url>
 			
 		</search>
 		<search>
 			<search_title>Mail &amp; Guardian Newspaper</search_title>
 			<search_description>Mail &amp; Guardian Newspaper, South Africa (1994-)</search_description>
 			<url>http://www.mg.co.za/</url>
-			<search_url>http://archive.mg.co.za/MGArchive/FrameSet.asp?f=xhitlist&amp;xhitlist_x=Advanced&amp;xhitlist_s=contents&amp;xhitlist_d=&amp;xhitlist_hc=&amp;xhitlist_xsl=xhitlist.xsl&amp;xhitlist_vpc=first&amp;xhitlist_sel=title%3Bpath%3Brelevance-weight%3Bcontent-type%3Bhom&amp;xhitlist_q=</search_url>
+			<search_url>http://archive.mg.co.za/MGArchive/FrameSet.asp?f=xhitlist&amp;xhitlist_x=Advanced&amp;xhitlist_s=contents&amp;xhitlist_d=&amp;xhitlist_hc=&amp;xhitlist_xsl=xhitlist.xsl&amp;xhitlist_vpc=first&amp;xhitlist_sel=title%3Bpath%3Brelevance-weight%3Bcontent-type%3Bhom&amp;xhitlist_q={$formKeywords}</search_url>
 			
 		</search>
 		<search>
 			<search_title>National Public Radio</search_title>
 			<search_description>National Public Radio, United States (unlimited)</search_description>
 			<url>http://www.npr.org/archives/</url>
-			<search_url>http://search1.npr.org/search97cgi/s97_cgi?ResultTemplate=simple_date.hts&amp;SortSpec=Date+Desc+Score+Desc&amp;ViewTemplate=docview.hts&amp;collection=zeus&amp;collection=C1&amp;collection=WEB&amp;Action=FilterSearch&amp;filter=topic_filter.hts&amp;x=23&amp;y=13&amp;QueryText=</search_url>
+			<search_url>http://search1.npr.org/search97cgi/s97_cgi?ResultTemplate=simple_date.hts&amp;SortSpec=Date+Desc+Score+Desc&amp;ViewTemplate=docview.hts&amp;collection=zeus&amp;collection=C1&amp;collection=WEB&amp;Action=FilterSearch&amp;filter=topic_filter.hts&amp;x=23&amp;y=13&amp;QueryText={$formKeywords}</search_url>
 			
 		</search>
 		<search>
 			<search_title>New York Times</search_title>
 			<search_description>New York Times, New York (last seven days)</search_description>
 			<url>http://www.nytimes.com/</url>
-			<search_url>http://query.nytimes.com/search/query?date=past30days&amp;submit.x=11&amp;submit.y=12&amp;query=</search_url>
+			<search_url>http://query.nytimes.com/search/query?date=past30days&amp;submit.x=11&amp;submit.y=12&amp;query={$formKeywords}</search_url>
 			
 		</search>
 		<search>
@@ -362,27 +393,27 @@
 			<search_description>The Japan Times Online, Japan (January 1999-)</search_description>
 			<url>http://www.japantimes.co.jp/search.htm</url>
 			<search_url>http://www.japantimes.co.jp/cgi-bin/search-intro3.pl5?</search_url>
-			<search_post>SUBMIT=Search&amp;term1=&amp;radio=and&amp;term2=</search_post>			
+			<search_post>SUBMIT=Search&amp;term1=&amp;radio=and&amp;term2={$formKeywords}</search_post>			
 		</search>
 		<search>
 			<search_title>The Moscow Times</search_title>
 			<search_description>The Moscow Times, Russia (1994-)</search_description>
 			<url>http://www.moscowtimes.ru/doc/Search.html</url>
-			<search_url>http://www.moscowtimes.ru/cgi-bin/search?config=&amp;exclude=&amp;method=and&amp;format=long&amp;sort=score&amp;matchesperpage=10&amp;words=</search_url>
+			<search_url>http://www.moscowtimes.ru/cgi-bin/search?config=&amp;exclude=&amp;method=and&amp;format=long&amp;sort=score&amp;matchesperpage=10&amp;words={$formKeywords}</search_url>
 			
 		</search>
 		<search>
 			<search_title>Washington Post</search_title>
 			<search_description>Washington Post, Washington, DC (last two weeks)</search_description>
 			<url>http://www.washingtonpost.com/</url>
-			<search_url>http://www.washingtonpost.com/cgi-bin/search99.pl?searchsection=news&amp;searchdatabase=news&amp;x=11&amp;y=8&amp;searchtext=</search_url>
+			<search_url>http://www.washingtonpost.com/cgi-bin/search99.pl?searchsection=news&amp;searchdatabase=news&amp;x=11&amp;y=8&amp;searchtext={$formKeywords}</search_url>
 			
 		</search>
 		<search>
 			<search_title>Newsdirectory</search_title>
 			<search_description>Newsdirectory is a comprehensive and searchable guide to the world's English-language online media. Currently over 8,000 newspapers and magazines are listed, as well as more than 1,000 U.S. television broadcasters.</search_description>
 			<url>http://www.newsdirectory.com/</url>
-			<search_url>http://ask.elibrary.com/search.asp?refid=NEWSD&amp;datetype=all&amp;srcmags=checked&amp;srcnews=checked&amp;srcbooks=checked&amp;srctvrad=checked&amp;query=</search_url>
+			<search_url>http://ask.elibrary.com/search.asp?refid=NEWSD&amp;datetype=all&amp;srcmags=checked&amp;srcnews=checked&amp;srcbooks=checked&amp;srctvrad=checked&amp;query={$formKeywords}</search_url>
 			
 		</search>
 	</context>
@@ -395,26 +426,26 @@
 			<search_title>Google</search_title>
 			<search_description>Search using the popular Google search engine.</search_description>
 			<url>http://www.google.com/</url>
-			<search_url>http://www.google.com/search?q=</search_url>
+			<search_url>http://www.google.com/search?q={$formKeywords}</search_url>
 			
 		</search>
 		<search>
 			<search_title>Google Scholar</search_title>
 			<search_description>Google Scholar enables specific searches of scholarly literature, including peer-reviewed papers, theses, books, pre-prints, abstracts, and technical reports. Content includes a range of publishers and aggregators with whom Google already has standing arrangements, e.g., the Association for Computing Machinery, IEEE, OCLC's Open WorldCat library locator service, etc. Result displays will show different version clusters, citation analysis, and library location (currently books only).</search_description>
 			<url>http://scholar.google.com</url>
-			<search_url>http://scholar.google.com/scholar?ie=UTF-8&amp;oe=UTF-8&amp;hl=en&amp;q=</search_url>
+			<search_url>http://scholar.google.com/scholar?ie=UTF-8&amp;oe=UTF-8&amp;hl=en&amp;q={$formKeywords}</search_url>
 		</search>
 		<search>
 			<search_title>Clusty the Clustering Engine</search_title>
 			<search_description>This search tool from Vivismo offers clustered results for a selection of searches.  Metasearch the whole web, or use tabs to search for news, gossip, images, orproducts via Bizrate or eBay.</search_description>
 			<url>http://clusty.com/</url>
-			<search_url>http://clusty.com/search?query=</search_url>
+			<search_url>http://clusty.com/search?query={$formKeywords}</search_url>
 		</search>
 		<search>
 			<search_title>Vivisimo</search_title>
 			<search_description>The award-winning Vivisimo clustering technology, developed by Carnegie Mellon research scientists, is unlocking the value of stored information at Fortune 500 companies, top websites, prestigious publishers and government agencies by categorizing research results on the fly into meaningful orders, thus achieving breakthrough improvement in access to relevant information.</search_description>
 			<url>http://vivisimo.com</url>
-			<search_url>http://vivisimo.com/search?tb=homepage&amp;v%3Asources=Web&amp;query=</search_url>
+			<search_url>http://vivisimo.com/search?tb=homepage&amp;v%3Asources=Web&amp;query={$formKeywords}</search_url>
 		</search>
 	</context>
 </version>

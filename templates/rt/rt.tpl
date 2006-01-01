@@ -58,7 +58,7 @@
 		{if $journalRt->getDefineTerms()}
 			{foreach from=$version->getContexts() item=context}
 				{if $context->getDefineTerms()}
-					<li><a href="javascript:openRTWindow('{url page="rt" op="context" path=$articleId|to_array:$galleyId:$context->getContextId()}');">{$context->getTitle()|escape}</a></li>
+					<li><a href="javascript:openRTWindowWithToolbar('{url page="rt" op="context" path=$articleId|to_array:$galleyId:$context->getContextId()}');">{$context->getTitle()|escape}</a></li>
 				{/if}
 			{/foreach}
 		{/if}
@@ -98,7 +98,7 @@
 	<ul>
 		{foreach from=$version->getContexts() item=context}
 			{if !$context->getDefineTerms()}
-				<li><a href="javascript:openRTWindow('{url page="rt" op="context" path=$articleId|to_array:$galleyId:$context->getContextId()}');">{$context->getTitle()|escape}</a></li>
+				<li><a href="javascript:openRTWindowWithToolbar('{url page="rt" op="context" path=$articleId|to_array:$galleyId:$context->getContextId()}');">{$context->getTitle()|escape}</a></li>
 			{/if}
 		{/foreach}
 	</ul>

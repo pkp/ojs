@@ -2250,6 +2250,7 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="rt.admin.contexts.metadata">Metadata</message>
 	<message key="rt.admin.contexts.options">Options</message>
 	<message key="rt.admin.contexts.options.authorTerms">Use author names as default search terms to enable users to find other works by the authors for this item (e.g., for an "Other Works" context)</message>
+	<message key="rt.admin.contexts.options.geoTerms">Use geographical indexing data as default search terms.</message>
 	<message key="rt.admin.contexts.options.defineTerms"><![CDATA[Use the word highlighted by the reader as default search term or be left blank if none has been selected for this item (e.g., for a "Definition of terms" context). The "Definition of terms" option must be enabled in the <a href="{$settingsUrl}">RST Settings</a> to allow double-clicking on words to open this context.]]></message>
 
 	<!-- RT Searches -->
