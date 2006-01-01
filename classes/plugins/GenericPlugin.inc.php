@@ -34,10 +34,10 @@ class GenericPlugin extends Plugin {
 		$success = parent::register($category, $path);
 		if ($success) {
 			if ($this->getInstallSchemaFile()) {
-				HookRegistry::register ('Installer::postInstall', array($this, 'updateSchema'));
+				HookRegistry::register ('Installer::postInstall', array(&$this, 'updateSchema'));
 			}
 			if ($this->getInstallDataFile()) {
-				HookRegistry::register ('Installer::postInstall', array($this, 'installData'));
+				HookRegistry::register ('Installer::postInstall', array(&$this, 'installData'));
 			}
 		}
 		return $success;
@@ -68,11 +68,12 @@ class GenericPlugin extends Plugin {
 		return null;
 	}
 
-	function updateSchema($plugin, $args) {
+	function updateSchema(&$plugin, $args) {
 		$installer =& $args[0];
 		$result =& $args[1];
 
-		$sql = $installer->schemaXMLParser->parseSchema($this->getInstallSchemaFile());
+		$schemaXMLParser = &new adoSchema($installer->dbconn, $installer->dbconn->charSet);
+		$sql = $schemaXMLParser->parseSchema($this->getInstallSchemaFile());
 		if ($sql) {
 			$result = $installer->executeSQL($sql);
 		} else {
@@ -90,7 +91,7 @@ class GenericPlugin extends Plugin {
 		return null;
 	}
 
-	function installData($plugin, $args) {
+	function installData(&$plugin, $args) {
 		$installer =& $args[0];
 		$result =& $args[1];
 
