@@ -17,6 +17,19 @@
 	<version_description>The Reading Tools can help readers of this study consult a wide range of related resources that can provide a context for interpreting, situating and evaluating the study.</version_description>
 
 	<context>
+		<context_title>Work citing it</context_title>
+		<context_abbrev>Work citing it</context_abbrev>
+		<context_description>If the article is indexed in Google Scholar, it may be accompanied by a "Cited by X" link, which leads to a list of works that cite it. As well, Google Scholar will list all items quoting the the title and author. To access online resources that are only available through your research library, you may be able to go to Scholar Preferences in Google Scholar and activate the Library Links for your institution.
+		</context_description>
+		<author_terms/>
+		<search>
+			<search_title>Google Scholar</search_title>
+			<search_description>Search for resources citing this article using Google Scholar.</search_description>
+			<url>http://scholar.google.com</url>
+			<search_url>http://scholar.google.com/scholar?q={$title}+{$formKeywords}</search_url>
+		</search>
+	</context>
+	<context>
 		<context_title>Author's work</context_title>
 		<context_abbrev>Other Works</context_abbrev>
 		<context_description>Identify other works by the article&#039;s author(s) by using OAI engines.</context_description>
@@ -129,6 +142,18 @@
 			<url>http://www.cogsci.princeton.edu/~wn/</url>
 			<search_url>http://www.cogsci.princeton.edu/cgi-bin/webwn2.0?stage=1&amp;word={$formKeywords}</search_url>
 			
+		</search>
+	</context>
+	<context>
+		<context_title>Find places</context_title>
+		<context_abbrev>Find places</context_abbrev>
+		<context_description>Search for locations relating to the article.</context_description>
+		<geo_terms/>
+		<search>
+			<search_title>Google Maps</search_title>
+			<search_description>Search for locations using the popular Google search engine's mapping features.</search_description>
+			<url>http://maps.google.com/</url>
+			<search_url>http://maps.google.com/maps?hl=en&amp;q={$formKeywords}</search_url>
 		</search>
 	</context>
 	<context>
@@ -249,7 +274,7 @@
 	</context>
 	<context>
 		<context_title>Lit critics</context_title>
-		<context_abbrev>Literacry Critics</context_abbrev>
+		<context_abbrev>Literary Critics</context_abbrev>
 		<context_description>Search critical and biographical websites about authors and their works that can be browsed by author, by title, or by nationality and literary period.</context_description>
 
 		<search>
@@ -299,18 +324,6 @@
 			<url>http://www.shu.ac.uk/emls/emlshome.html</url>
 			<search_url>http://www.shu.ac.uk/cgi-bin/htsearch?method=and&amp;format=builtin-long&amp;sort=score&amp;matchesperpage=10&amp;config=emls&amp;restrict=&amp;exclude=&amp;words={$formKeywords}</search_url>
 			
-		</search>
-	</context>
-	<context>
-		<context_title>Find places</context_title>
-		<context_abbrev>Find places</context_abbrev>
-		<context_description>Search for locations relating to the article.</context_description>
-		<geo_terms/>
-		<search>
-			<search_title>Google Maps</search_title>
-			<search_description>Search for locations using the popular Google search engine's mapping features.</search_description>
-			<url>http://maps.google.com/</url>
-			<search_url>http://maps.google.com/maps?hl=en&amp;q={$formKeywords}</search_url>
 		</search>
 	</context>
 	<context>
@@ -645,7 +658,6 @@
 			<search_url>http://news.google.com/news?hl=en&amp;q={$formKeywords}</search_url>
 			
 		</search>
-
 		<search>
 			<search_title>Globe and Mail</search_title>
 			<search_description>Globe and Mail, Toronto (last seven days)</search_description>

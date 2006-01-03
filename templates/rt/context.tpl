@@ -40,14 +40,21 @@
 		}
 
 		// Add the search terms to the action URL if necessary
-		var oldAction = searchForm.action;
-		searchForm.action = oldAction.replace(/{\$formKeywords}/g, termsGet);
+		var newAction = searchForm.action;
+		newAction = newAction.replace(/{\$formKeywords}/g, termsGet);
+		{/literal}{foreach from=$searchParams item=param}{literal}
+		newAction = newAction.replace(/{\${/literal}{$param}{literal}}/g, document.additionalParams.{/literal}{$param}{literal}.value.replace(/ /g,'+'));
+		{/literal}{/foreach}{literal}
+		searchForm.action = newAction;
 
 		// Add the search terms to the POST fields if necessary
 		elements = searchForm.elements;
 		for (var i=0; i<elements.length; i++) {
 			if (elements[i].type=='hidden') {
 				elements[i].value.replace(/{\$formKeywords}/g, termsPost);
+				{/literal}{foreach from=$searchParams item=param}{literal}
+				elements[i].value.replace(/{\${/literal}{$param}{literal}}/g, document.additionalParams.{/literal}{$param}{literal}.value);
+				{/literal}{/foreach}{literal}
 			}
 		}
 
@@ -107,11 +114,12 @@
 
 
 	<form name="additionalParams">
-	{foreach from=$additionalFormValues key=paramKey item=value}
+	{foreach from=$searchValues key=paramKey item=value}
 		<tr valign="top">
 			<td width="20%" class="label">
 				{if $paramKey == 'author'}{translate key="user.role.author"}
 				{elseif $paramKey == 'coverageGeo'}{translate key="article.coverageGeo"}
+				{elseif $paramKey == 'title'}{translate key="article.title"}
 				{/if}
 			</td>
 			<td width="80%" class="value">

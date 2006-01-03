@@ -966,7 +966,7 @@ Escolha um modelo para administrar os aspectos do processo editorial. (Para desi
 	<message key="manager.setup.journalHomepageContent">Conteúdo da Página Inicial</message>
 	<message key="manager.setup.journalHomepageContentDescription">A página inicial consite de uma lista de atalhos (links). Conteúdo adicional à página inicial pode ser incluída através de uma ou mais opções a seguir, que aparecerão na ordem exibida. Note que a edição atual é sempre acessível pelo atalho Atual na barra de navegação.</message>
 	<message key="manager.setup.journalDescription">Descrição da Revista</message>
-	<message key="manager.setup.journalDescriptionDescription">Inclua uma breve descriçaõ de 20-25 palavras em texto/HTML que aparecerá abaixo dos itens de navegação.
+	<message key="manager.setup.journalDescriptionDescription">Inclua uma breve descriçaõ de 20-25 palavras em texto/HTML que aparecerá abaixo dos itens de navegação.</message>
 	<message key="manager.setup.homepageImageDescription">Inclua uma imagem para exibição no centro da página.</message>
 	<message key="manager.setup.homepageImage">Imagem da Página Inicial</message>
 	<message key="manager.setup.currentIssue">Edição Atual</message>

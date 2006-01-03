@@ -90,6 +90,7 @@ function confirmAndPrompt(userId) {
 {/if}
 
 <form name="people" action="{url page="user" op="email"}" method="post">
+<input type="hidden" name="redirectUrl" value="{url path=$roleSymbolic}"/>
 <table width="100%" class="listing">
 	<tr>
 		<td colspan="5" class="headseparator">&nbsp;</td>
@@ -112,7 +113,8 @@ function confirmAndPrompt(userId) {
 		<td>{$user->getFullName()|escape}</td>
 		<td class="nowrap">
 			{assign var=emailString value="`$user->getFullName()` <`$user->getEmail()`>"}
-			{url|assign:"url" page="user" op="email" to=$emailString|to_array}
+			{url|assign:"redirectUrl" path=$roleSymbolic}
+			{url|assign:"url" page="user" op="email" to=$emailString|to_array redirectUrl=$redirectUrl}
 			{$user->getEmail()|truncate:20:"..."|escape}&nbsp;{icon name="mail" url=$url}
 		</td>
 		<td align="right" class="nowrap">

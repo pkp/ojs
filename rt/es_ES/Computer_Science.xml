@@ -17,6 +17,19 @@
 	<version_description>The Reading Tools can help readers of this study consult a wide range of related resources that can provide a context for interpreting, situating and evaluating the study.</version_description>
 
 	<context>
+		<context_title>Work citing it</context_title>
+		<context_abbrev>Work citing it</context_abbrev>
+		<context_description>If the article is indexed in Google Scholar, it may be accompanied by a "Cited by X" link, which leads to a list of works that cite it. As well, Google Scholar will list all items quoting the the title and author. To access online resources that are only available through your research library, you may be able to go to Scholar Preferences in Google Scholar and activate the Library Links for your institution.
+		</context_description>
+		<author_terms/>
+		<search>
+			<search_title>Google Scholar</search_title>
+			<search_description>Search for resources citing this article using Google Scholar.</search_description>
+			<url>http://scholar.google.com</url>
+			<search_url>http://scholar.google.com/scholar?q={$title}+{$formKeywords}</search_url>
+		</search>
+	</context>
+	<context>
 		<context_title>Author's work</context_title>
 		<context_abbrev>Other Works</context_abbrev>
 		<context_description>Identify other works by the article's author(s) by using OAI engines.</context_description>
