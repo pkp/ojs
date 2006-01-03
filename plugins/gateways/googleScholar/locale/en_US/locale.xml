@@ -33,3 +33,4 @@
 	<message key="plugins.gateways.googleScholar.errors.noContacts">Contact emails are missing or invalid. At least one must be specified, and all must be valid.</message>
 	<message key="plugins.gateways.googleScholar.errors.noIssn">The journal's ISSN was not specified. See Journal Setup, step 1.</message>
 	<message key="plugins.gateways.googleScholar.errors.errorMessage">Unable to export Google Scholar data. The Google Scholar export plugin needs to be properly configured. For specific information, please use the Journal Manager's "Check Data" function.</message>
+</locale>
