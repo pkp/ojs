@@ -142,8 +142,9 @@ class AuthPlugin extends Plugin {
 	 * @param $authId int identifier for this instance
 	 * @return AuthPlugin
 	 */
-	function getInstance($settings, $authId) {
-		return null;
+	function &getInstance($settings, $authId) {
+		$returner = null;
+		return $returner;
 	}
 
 	/**
