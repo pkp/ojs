@@ -20,6 +20,7 @@
    <title>Articles</title>
    <article>
     <title>Jane Doe's Article</title>
+    <date_published>2004-10-05</date_published>
     <author>
      <firstname>Jane</firstname>
      <lastname>Doe</lastname>
@@ -57,6 +58,7 @@ BLAH BLAH BLAH
    <title>Articles</title>
    <article>
     <title>John Doe's Article</title>
+    <date_published>2003-10-05</date_published>
     <author>
      <firstname>John</firstname>
      <lastname>Doe</lastname>
