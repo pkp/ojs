@@ -58,7 +58,7 @@ class IssueDAO extends DAO {
 	 * @param $publicIssueId string
 	 * @return Issue object
 	 */
-	function getIssueByPublicIssueId($publicIssueId, $journalId = null) {
+	function &getIssueByPublicIssueId($publicIssueId, $journalId = null) {
 		if (isset($journalId)) {
 			$result = &$this->retrieve(
 				'SELECT i.* FROM issues i WHERE public_issue_id = ? AND journal_id = ?',
