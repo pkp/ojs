@@ -169,7 +169,7 @@ class IssueDAO extends DAO {
 		$issue->setPublicIssueId($row['public_issue_id']);
 		$issue->setLabelFormat($row['label_format']);
 		$issue->setFileName($row['file_name']);
-		$issue->setWIdth($row['width']);
+		$issue->setWidth($row['width']);
 		$issue->setHeight($row['height']);
 		$issue->setOriginalFileName($row['original_file_name']);
 		$issue->setCoverPageDescription($row['cover_page_description']);
