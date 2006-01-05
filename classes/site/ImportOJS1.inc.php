@@ -81,6 +81,8 @@ class ImportOJS1 {
 	var $options;
 	var $error;
 
+	/** @var $transcoder object The transcoder to use, if desired */
+	var $transcoder;
 
 	/**
 	 * Constructor.
@@ -94,7 +96,18 @@ class ImportOJS1 {
 		else
 			$this->indexUrl = Request::getIndexUrl();
 	}
-	
+
+	/**
+	 * Transcode a string as necessary.
+	 */
+	function trans($string) {
+		if (isset($this->transcoder)) {
+			return $this->transcoder->trans($string);
+		}
+		// No transcoder configured -- do nothing.
+		return $string;
+	}
+
 	/**
 	 * Record error message.
 	 * @return string;
@@ -129,7 +142,13 @@ class ImportOJS1 {
 		$this->journalPath = $journalPath;
 		$this->importPath = $importPath;
 		$this->options = $options;
-		
+
+		if ($this->hasOption('transcode')) {
+			$clientCharset = Config::getVar('i18n', 'client_charset');
+			import('core.Transcoder');
+			$this->transcoder =& new Transcoder('ISO-8859-1', $clientCharset);
+		}
+
 		// Force a new database connection
 		$dbconn = &DBConnection::getInstance();
 		$dbconn->reconnect(true);
@@ -254,9 +273,9 @@ class ImportOJS1 {
 		$result = &$this->importDao->retrieve('SELECT * FROM tblsponsors ORDER BY nSponsorID');
 		while (!$result->EOF) {
 			$row = &$result->fields;
-			$sponsors[] = array('institution' => $row['chName'], 'url' => $row['chWebpage']);
+			$sponsors[] = array('institution' => $this->trans($row['chName']), 'url' => $this->trans($row['chWebpage']));
 			if (empty($publisher)) {
-				$publisher = array('institution' => $row['chName'], 'url' => $row['chWebpage']);
+				$publisher = array('institution' => $this->trans($row['chName']), 'url' => $this->trans($row['chWebpage']));
 			}
 			$result->MoveNext();
 		}
@@ -266,7 +285,7 @@ class ImportOJS1 {
 		$result = &$this->importDao->retrieve('SELECT * FROM tblcontributors ORDER BY nContributorID');
 		while (!$result->EOF) {
 			$row = &$result->fields;
-			$contributors[] = array('name' => $row['chName'], 'url' => $row['chWebpage']);
+			$contributors[] = array('name' => $this->trans($row['chName']), 'url' => $this->trans($row['chWebpage']));
 			$result->MoveNext();
 		}
 		$result->Close();
@@ -276,7 +295,7 @@ class ImportOJS1 {
 		$result = &$this->importDao->retrieve('SELECT * FROM tblsubmissionchecklist ORDER BY nOrder');
 		while (!$result->EOF) {
 			$row = &$result->fields;
-			$submissionChecklist[] = array('order' => $row['nOrder'], 'content' => $row['chCheck']);
+			$submissionChecklist[] = array('order' => $row['nOrder'], 'content' => $this->trans($row['chCheck']));
 			$result->MoveNext();
 		}
 		$result->Close();
@@ -286,7 +305,7 @@ class ImportOJS1 {
 		$result = &$this->importDao->retrieve('SELECT * FROM tblaboutjournal ORDER BY nItemID');
 		while (!$result->EOF) {
 			$row = &$result->fields;
-			$customAboutItems[] = array('title' => $row['chTitle'], 'content' => $row['chContent']);
+			$customAboutItems[] = array('title' => $this->trans($row['chTitle']), 'content' => $this->trans($row['chContent']));
 			$result->MoveNext();
 		}
 		$result->Close();
@@ -294,7 +313,7 @@ class ImportOJS1 {
 		// Navigation items
 		$navItems = array();
 		if ($this->journalInfo['bDiscussion'] && !empty($this->journalInfo['chDiscussionURL'])) {
-			$navItems[] = array('name' => 'Forum', 'url' => $this->journalInfo['chDiscussionURL'], 'isLiteral' => '1', 'isAbsolute' => '1');
+			$navItems[] = array('name' => $this->trans('Forum'), 'url' => $this->trans($this->journalInfo['chDiscussionURL']), 'isLiteral' => '1', 'isAbsolute' => '1');
 		}
 		
 		$publicationFormat = ISSUE_LABEL_NUM_VOL_YEAR;
@@ -311,35 +330,39 @@ class ImportOJS1 {
 		$pageHeaderTitleImage = $this->copyJournalImage('chLargeLogo', 'pageHeaderTitleImage');
 		$homepageImage = $this->copyJournalImage('chTableOfContentImage', 'homepageImage');
 		
-		$translateParams = array('indexUrl' => $this->indexUrl, 'journalPath' => $this->journalPath, 'journalName' => $this->journalInfo['chTitle']);
-		
+		$translateParams = array('indexUrl' => $this->indexUrl, 'journalPath' => $this->journalPath, 'journalName' => $this->trans($this->journalInfo['chTitle']));
+
+		// Load the article comments DAO to bring in the related
+		// constants (COMMENTS_DISABLED, etc.)
+		$commentDao =& DAORegistry::getDAO('CommentDAO');
+
 		// Journal settings
 		// NOTE: Commented out settings do not have an equivalent in OJS 1.x
 		$journalSettings = array(
-			'journalInitials' => array('string', $this->journalInfo['chAbbrev']),
-			'issn' => array('string', $this->journalInfo['chISSN']),
-			'mailingAddress' => array('string', $this->journalInfo['chMailAddr']),
+			'journalInitials' => array('string', $this->trans($this->journalInfo['chAbbrev'])),
+			'issn' => array('string', $this->trans($this->journalInfo['chISSN'])),
+			'mailingAddress' => array('string', $this->trans($this->journalInfo['chMailAddr'])),
 			'useEditorialBoard' => array('bool', $this->journalInfo['bRevBoard']),
-			'contactName' => array('string', $this->journalInfo['chContactName']),
-			'contactTitle' => array('string', $this->journalInfo['chContactTitle']),
-			'contactAffiliation' => array('string', $this->journalInfo['chContactAffiliation']),
-			'contactEmail' => array('string', $this->journalInfo['chContactEmail']),
-			'contactPhone' => array('string', $this->journalInfo['chContactPhone']),
-			'contactFax' => array('string', $this->journalInfo['chContactFax']),
-			'contactMailingAddress' => array('string', $this->journalInfo['chContactMailAddr']),
-			'supportName' => array('string', $this->journalInfo['chSupportName']),
-			'supportEmail' => array('string', $this->journalInfo['chSupportEmail']),
-			'supportPhone' => array('string', $this->journalInfo['chSupportPhone']),
-			'sponsorNote' => array('string', $this->journalInfo['chSponsorNote']),
+			'contactName' => array('string', $this->trans($this->journalInfo['chContactName'])),
+			'contactTitle' => array('string', $this->trans($this->journalInfo['chContactTitle'])),
+			'contactAffiliation' => array('string', $this->trans($this->journalInfo['chContactAffiliation'])),
+			'contactEmail' => array('string', $this->trans($this->journalInfo['chContactEmail'])),
+			'contactPhone' => array('string', $this->trans($this->journalInfo['chContactPhone'])),
+			'contactFax' => array('string', $this->trans($this->journalInfo['chContactFax'])),
+			'contactMailingAddress' => array('string', $this->trans($this->journalInfo['chContactMailAddr'])),
+			'supportName' => array('string', $this->trans($this->journalInfo['chSupportName'])),
+			'supportEmail' => array('string', $this->trans($this->journalInfo['chSupportEmail'])),
+			'supportPhone' => array('string', $this->trans($this->journalInfo['chSupportPhone'])),
+			'sponsorNote' => array('string', $this->trans($this->journalInfo['chSponsorNote'])),
 			'sponsors' => array('object', $sponsors),
 			'publisher' => array('object', $publisher),
-			'contributorNote' => array('string', $this->journalInfo['chContribNote']),
+			'contributorNote' => array('string', $this->trans($this->journalInfo['chContribNote'])),
 			'contributors' => array('object', $contributors),
-			'searchDescription' => array('string', $this->journalInfo['chMetaDescription']),
-			'searchKeywords' => array('string', $this->journalInfo['chMetaKeywords']),
+			'searchDescription' => array('string', $this->trans($this->journalInfo['chMetaDescription'])),
+			'searchKeywords' => array('string', $this->trans($this->journalInfo['chMetaKeywords'])),
 		//	'customHeaders' => array('string', ''),
 			
-			'focusScopeDesc' => array('string', $this->journalInfo['chFocusScope']),
+			'focusScopeDesc' => array('string', $this->trans($this->journalInfo['chFocusScope'])),
 			'numWeeksPerReview' => array('int', $this->journalInfo['nReviewDueWeeks']),
 		//	'remindForInvite' => array('int', ''),
 		//	'remindForSubmit' => array('int', ''),
@@ -347,12 +370,12 @@ class ImportOJS1 {
 		//	'numDaysBeforeSubmitReminder' => array('int', ''),
 		//	'rateReviewerOnQuality' => array('int', ''),
 			'restrictReviewerFileAccess' => array('int', isset($this->journalInfo['bReviewerSubmissionRestrict']) ? $this->journalInfo['bReviewerSubmissionRestrict'] : 0),
-			'reviewPolicy' => array('string', $this->journalInfo['chReviewProcess']),
+			'reviewPolicy' => array('string', $this->trans($this->journalInfo['chReviewProcess'])),
 			'mailSubmissionsToReviewers' => array('int', isset($this->journalInfo['bReviewerMailSubmission']) ? $this->journalInfo['bReviewerMailSubmission'] : 0),
-			'reviewGuidelines' => array('string', $this->journalInfo['chReviewerGuideline']),
+			'reviewGuidelines' => array('string', $this->trans($this->journalInfo['chReviewerGuideline'])),
 			'authorSelectsEditor' => array('int', isset($this->journalInfo['bAuthorSelectEditor']) ? $this->journalInfo['bAuthorSelectEditor'] : 0),
-			'privacyStatement' => array('string', $this->journalInfo['chPrivacyStatement']),
-			'openAccessPolicy' => array('string', $this->journalInfo['chOpenAccess']),
+			'privacyStatement' => array('string', $this->trans($this->journalInfo['chPrivacyStatement'])),
+			'openAccessPolicy' => array('string', $this->trans($this->journalInfo['chOpenAccess'])),
 		//	'envelopeSender' => array('string', ''),
 			'emailSignature' => array('string', Locale::translate('default.journalSettings.emailSignature', $translateParams)),
 		//	'disableUserReg' => array('bool', ''),
@@ -364,44 +387,44 @@ class ImportOJS1 {
 		//	'articleEventLog' => array('bool', ''),
 		//	'articleEmailLog' => array('bool', ''),
 			'customAboutItems' => array('object', $customAboutItems),
-			'enableComments' => array('string', $this->journalInfo['bComments'] ? 'unauthenticated' : 'disabled'),
+			'enableComments' => array('int', $this->journalInfo['bComments'] ? COMMENTS_UNAUTHENTICATED : COMMENTS_DISABLED),
 			'enableLockss' => array('bool', isset($this->journalInfo['bEnableLOCKSS']) ? $this->journalInfo['bEnableLOCKSS'] : 0),
-			'lockssLicense' => array('string', isset($this->journalInfo['chLOCKSSLicense']) ? $this->journalInfo['chLOCKSSLicense'] : Locale::translate('default.journalSettings.lockssLicense')),
+			'lockssLicense' => array('string', isset($this->journalInfo['chLOCKSSLicense']) ? $this->trans($this->journalInfo['chLOCKSSLicense']) : Locale::translate('default.journalSettings.lockssLicense')),
 			
-			'authorGuidelines' => array('string', $this->journalInfo['chAuthorGuideline']),
+			'authorGuidelines' => array('string', $this->trans($this->journalInfo['chAuthorGuideline'])),
 			'submissionChecklist' => array('object', $submissionChecklist),
-			'copyrightNotice' => array('string', $this->journalInfo['chCopyrightNotice']),
+			'copyrightNotice' => array('string', $this->trans($this->journalInfo['chCopyrightNotice'])),
 			'metaDiscipline' => array('bool', $this->journalInfo['bMetaDiscipline']),
-			'metaDisciplineExamples' => array('string', $this->journalInfo['chDisciplineExamples']),
+			'metaDisciplineExamples' => array('string', $this->trans($this->journalInfo['chDisciplineExamples'])),
 			'metaSubjectClass' => array('bool', $this->journalInfo['bMetaSubjectClass']),
-			'metaSubjectClassTitle' => array('string', $this->journalInfo['chSubjectClassTitle']),
-			'metaSubjectClassUrl' => array('string', $this->journalInfo['chSubjectClassURL']),
+			'metaSubjectClassTitle' => array('string', $this->trans($this->journalInfo['chSubjectClassTitle'])),
+			'metaSubjectClassUrl' => array('string', $this->trans($this->journalInfo['chSubjectClassURL'])),
 			'metaSubject' => array('bool', $this->journalInfo['bMetaSubject']),
 			'metaSubjectExamples' => array('string', $this->journalInfo['chSubjectExamples']),
 			'metaCoverage' => array('bool', $this->journalInfo['bMetaCoverage']),
-			'metaCoverageGeoExamples' => array('string', $this->journalInfo['chCovGeoExamples']),
-			'metaCoverageChronExamples' => array('string', $this->journalInfo['chCovChronExamples']),
-			'metaCoverageResearchSampleExamples' => array('string', $this->journalInfo['chCovSampleExamples']),
+			'metaCoverageGeoExamples' => array('string', $this->trans($this->journalInfo['chCovGeoExamples'])),
+			'metaCoverageChronExamples' => array('string', $this->trans($this->journalInfo['chCovChronExamples'])),
+			'metaCoverageResearchSampleExamples' => array('string', $this->trans($this->journalInfo['chCovSampleExamples'])),
 			'metaType' => array('bool', $this->journalInfo['bMetaType']),
-			'metaTypeExamples' => array('string', $this->journalInfo['chDisciplineExamples']),
+			'metaTypeExamples' => array('string', $this->trans($this->journalInfo['chDisciplineExamples'])),
 			
 			'publicationFormat' => array('int', $publicationFormat),
 			'initialVolume' => array('int', $this->journalInfo['nInitVol']),
 			'initialNumber' => array('int', $this->journalInfo['nInitNum']),
 			'initialYear' => array('int', $this->journalInfo['nInitYear']),
-			'pubFreqPolicy' => array('string', $this->journalInfo['chFreqPublication']),
+			'pubFreqPolicy' => array('string', $this->trans($this->journalInfo['chFreqPublication'])),
 			'useCopyeditors' => array('bool', $this->journalInfo['bCopyEditor']),
-			'copyeditInstructions' => array('string', $this->journalInfo['chCopyeditInstructions']),
+			'copyeditInstructions' => array('string', $this->trans($this->journalInfo['chCopyeditInstructions'])),
 			'useLayoutEditors' => array('bool', $this->journalInfo['bLayoutEditor']),
 		//	'layoutInstructions' => array('string', ''),
 			'useProofreaders' => array('bool', $this->journalInfo['bProofReader']),
-			'proofInstructions' => array('string', $this->journalInfo['chProofingInstructions']),
+			'proofInstructions' => array('string', $this->trans($this->journalInfo['chProofingInstructions'])),
 			'enableSubscriptions' => array('bool', isset($this->journalInfo['bSubscriptions']) ? $this->journalInfo['bSubscriptions'] : 0),
-			'subscriptionName' => array('string', $this->journalInfo['chContactName']),
-			'subscriptionEmail' => array('string', $this->journalInfo['chContactEmail']),
-			'subscriptionPhone' => array('string', $this->journalInfo['chContactPhone']),
-			'subscriptionFax' => array('string', $this->journalInfo['chContactFax']),
-			'subscriptionMailingAddress' => array('string', $this->journalInfo['chContactMailAddr']),
+			'subscriptionName' => array('string', $this->trans($this->journalInfo['chContactName'])),
+			'subscriptionEmail' => array('string', $this->trans($this->journalInfo['chContactEmail'])),
+			'subscriptionPhone' => array('string', $this->trans($this->journalInfo['chContactPhone'])),
+			'subscriptionFax' => array('string', $this->trans($this->journalInfo['chContactFax'])),
+			'subscriptionMailingAddress' => array('string', $this->trans($this->journalInfo['chContactMailAddr'])),
 		//	'subscriptionAdditionalInformation' => array('string', ''),
 		//	'volumePerYear' => array('int', ''),
 		//	'issuePerVolume' => array('int', ''),
@@ -410,7 +433,7 @@ class ImportOJS1 {
 		//	'enablePageNumber' => array('bool', ''),
 		
 			'homeHeaderTitleType' => array('int', isset($homeHeaderTitleImage) ? 1 : 0),
-			'homeHeaderTitle' => array('string', $this->journalInfo['chTitle']),
+			'homeHeaderTitle' => array('string', $this->trans($this->journalInfo['chTitle'])),
 		//	'homeHeaderTitleTypeAlt1' => array('int', 0),
 		//	'homeHeaderTitleAlt1' => array('string', ''),
 		//	'homeHeaderTitleTypeAlt2' => array('int', 0),
@@ -429,11 +452,11 @@ class ImportOJS1 {
 			'readerInformation' => array('string', Locale::translate('default.journalSettings.forReaders', $translateParams)),
 			'authorInformation' => array('string', Locale::translate('default.journalSettings.forAuthors', $translateParams)),
 			'librarianInformation' => array('string', Locale::translate('default.journalSettings.forLibrarians', $translateParams)),
-			'journalPageHeader' => array('string', $this->journalInfo['chHeader']),
-			'journalPageFooter' => array('string', $this->journalInfo['chFooter']),
+			'journalPageHeader' => array('string', $this->trans($this->journalInfo['chHeader'])),
+			'journalPageFooter' => array('string', $this->trans($this->journalInfo['chFooter'])),
 			'displayCurrentIssue' => array('bool', $this->journalInfo['bHomepageCurrIssue']),
-			'additionalHomeContent' => array('string', $this->journalInfo['chTableOfContentText']),
-			'journalDescription' => array('string', $this->journalInfo['chHomepageIntro']),
+			'additionalHomeContent' => array('string', $this->trans($this->journalInfo['chTableOfContentText'])),
+			'journalDescription' => array('string', $this->trans($this->journalInfo['chHomepageIntro'])),
 			'navItems' => array('object', $navItems),
 			'itemsPerPage' => array('int', 25),
 			'numPageLinks' => array('int', 10),
@@ -467,6 +490,7 @@ class ImportOJS1 {
 				$versionId = $result->fields[0];
 			}
 		}
+		$result->Close();
 		
 		$result = &$this->importDao->retrieve('SELECT * FROM tblrst');
 		$row = &$result->fields;
@@ -484,7 +508,9 @@ class ImportOJS1 {
 		$rt->setEmailAuthor($row['bEmailAuthor']);
 		$rt->setEmailOthers($row['bEmailOthers']);
 		$rt->setBibFormat($this->journalInfo['chCitationStyle']);
-		
+
+		$result->Close();
+
 		$rtDao->insertJournalRT($rt);
 	}
 	
@@ -508,49 +534,56 @@ class ImportOJS1 {
 		$result = &$this->importDao->retrieve('SELECT *, DECODE(chPassword, ?) AS chPassword FROM tblusers ORDER BY nUserID', $this->journalConfigInfo['chPasswordSalt']);
 		while (!$result->EOF) {
 			$row = &$result->fields;
-			
-			$initials = substr($row['chFirstName'], 0, 1) . (empty($row['chMiddleInitial']) ? '' : substr($row['chMiddleInitial'], 0, 1)) . substr($row['chSurname'], 0, 1);
+
+			$chFirstName = $this->trans($row['chFirstName']);
+			$chMiddleInitial = $this->trans($row['chMiddleInitial']);
+			$chSurname = $this->trans($row['chSurname']);
+
+			$initials = substr($chFirstName, 0, 1) . (empty($chMiddleInitial) ? '' : substr($chMiddleInitial, 0, 1)) . substr($chSurname, 0, 1);
 			$interests = '';
 		
 			if ($row['fkEditorID']) {
 				$tmpResult = &$this->importDao->retrieve('SELECT chInitials, nEditorRole FROM tbleditors WHERE nEditorID = ?', $row['fkEditorID']);
-				list($initials, $editorRole) = $tmpResult->fields;
+				$initials = $this->trans($tmpResult->fields[0]);
+				$editorRole = $this->trans($tmpResult->fields[1]);
+				$tmpResult->Close();
 			}
 			
 			if ($row['fkReviewerID']) {
 				$tmpResult = &$this->importDao->retrieve('SELECT chInterests FROM tblreviewers WHERE nReviewerID = ?', $row['fkReviewerID']);
-				list($interests) = $tmpResult->fields;
+				$interests = $this->trans($tmpResult->fields[0]);
+				$tmpResult->Close();
 			}
 			
 			// Check for existing user with this username
-			$user = $userDao->getUserByUsername($row['chUsername']);
+			$user = $userDao->getUserByUsername($this->trans($row['chUsername']));
 			$existingUser = ($user != null);
 			
 			if (!isset($user)) {
 				// Create new user
 				$user = &new User();
-				$user->setUsername($row['chUsername']);
-				$user->setPassword(Validation::encryptCredentials($row['chUsername'], $row['chPassword']));
-				$user->setFirstName($row['chFirstName']);
-				$user->setMiddleName($row['chMiddleInitial']);
-				$user->setInitials($initials);
-				$user->setLastName($row['chSurname']);
-				$user->setAffiliation($row['chAffiliation']);
-				$user->setEmail($row['chEmail']);
-				$user->setPhone($row['chPhone']);
-				$user->setFax($row['chFax']);
-				$user->setMailingAddress($row['chMailAddr']);
-				$user->setBiography($row['chBiography']);
-				$user->setInterests($interests);
+				$user->setUsername($this->trans($row['chUsername']));
+				$user->setPassword(Validation::encryptCredentials($this->trans($row['chUsername']), $this->trans($row['chPassword'])));
+				$user->setFirstName($this->trans($row['chFirstName']));
+				$user->setMiddleName($this->trans($row['chMiddleInitial']));
+				$user->setInitials($this->trans($initials));
+				$user->setLastName($this->trans($row['chSurname']));
+				$user->setAffiliation($this->trans($row['chAffiliation']));
+				$user->setEmail($this->trans($row['chEmail']));
+				$user->setPhone($this->trans($row['chPhone']));
+				$user->setFax($this->trans($row['chFax']));
+				$user->setMailingAddress($this->trans($row['chMailAddr']));
+				$user->setBiography($this->trans($row['chBiography']));
+				$user->setInterests($this->trans($interests));
 				$user->setLocales(array());
 				$user->setDateRegistered($row['dtDateSignedUp']);
 				$user->setDateLastLogin($row['dtDateSignedUp']);
 				$user->setMustChangePassword(0);
 				$user->setDisabled(0);
 				
-				if ($userDao->userExistsByEmail($row['chEmail'])) {
+				if ($userDao->userExistsByEmail($this->trans($row['chEmail']))) {
 					// User exists with this email -- munge it to make unique
-					$user->setEmail('ojs-' . $row['chUsername'] . '+' . $row['chEmail']);
+					$user->setEmail('ojs-' . $this->trans($row['chUsername']) . '+' . $this->trans($row['chEmail']));
 				}
 				
 				$userDao->insertUser($user);
@@ -678,8 +711,8 @@ class ImportOJS1 {
 			
 			$subscriptionType = &new SubscriptionType();
 			$subscriptionType->setJournalId($this->journalId);
-			$subscriptionType->setTypeName($row['chSubscriptionType']);
-			$subscriptionType->setDescription($row['chSubscriptionTypeDesc']);
+			$subscriptionType->setTypeName($this->trans($row['chSubscriptionType']));
+			$subscriptionType->setDescription($this->trans($row['chSubscriptionTypeDesc']));
 			$subscriptionType->setCost($row['fCost']);
 			$subscriptionType->setCurrencyId(isset($currencyMap[$row['fkCurrencyID']]) ? $currencyMap[$row['fkCurrencyID']] : 160);
 			$subscriptionType->setDuration(12); // No equivalent in OJS 1.x
@@ -705,8 +738,8 @@ class ImportOJS1 {
 			$subscription->setTypeId(isset($subscriptionTypeMap[$row['fkSubscriptionTypeID']]) ? $subscriptionTypeMap[$row['fkSubscriptionTypeID']] : 0);
 			$subscription->setDateStart($row['dtDateStart']);
 			$subscription->setDateEnd($row['dtDateEnd']);
-			$subscription->setMembership($row['chMembership']);
-			$subscription->setDomain($row['chDomain']);
+			$subscription->setMembership($this->trans($row['chMembership']));
+			$subscription->setDomain($this->trans($row['chDomain']));
 			$subscription->setIPRange('');
 			
 			$subscriptionDao->insertSubscription($subscription);
@@ -743,7 +776,7 @@ class ImportOJS1 {
 			
 			$issue = &new Issue();
 			$issue->setJournalId($this->journalId);
-			$issue->setTitle($row['chIssueTitle']);
+			$issue->setTitle($this->trans($row['chIssueTitle']));
 			$issue->setVolume($row['nVolume']);
 			$issue->setNumber($row['nNumber']);
 			$issue->setYear($row['nYear']);
@@ -804,6 +837,7 @@ class ImportOJS1 {
 			if (isset($sectionId) && isset($issueId)) {
 				$sectionDao->_insertCustomSectionOrder($issueId, $sectionId, $count);
 			}
+			$result->MoveNext();
 		}
 		$result->Close();
 	}
@@ -826,12 +860,12 @@ class ImportOJS1 {
 			
 			$section = &new Section();
 			$section->setJournalId($this->journalId);
-			$section->setTitle($row['chTitle']);
-			$section->setAbbrev($row['chAbbrev']);
+			$section->setTitle($this->trans($row['chTitle']));
+			$section->setAbbrev($this->trans($row['chAbbrev']));
 			$section->setSequence(++$count);
 			$section->setMetaIndexed($row['bMetaIndex']);
 			$section->setEditorRestricted($row['bAcceptSubmissions'] ? 0 : 1);
-			$section->setPolicy($row['chPolicies']);
+			$section->setPolicy($this->trans($row['chPolicies']));
 			
 			$sectionId = $sectionDao->insertSection($section);
 			$this->sectionMap[$row['nSectionID']] = $sectionId;
@@ -905,22 +939,22 @@ class ImportOJS1 {
 			$article->setUserId(1);
 			$article->setJournalId($this->journalId);
 			$article->setSectionId(isset($this->sectionMap[$row['fkSectionID']]) ? $this->sectionMap[$row['fkSectionID']] : 0);
-			$article->setTitle($row['chMetaTitle']);
+			$article->setTitle($this->trans($row['chMetaTitle']));
 			$article->setTitleAlt1('');
 			$article->setTitleAlt2('');
-			$article->setAbstract($row['chMetaAbstract']);
+			$article->setAbstract($this->trans($row['chMetaAbstract']));
 			$article->setAbstractAlt1('');
 			$article->setAbstractAlt2('');
-			$article->setDiscipline($row['chMetaDiscipline']);
-			$article->setSubjectClass($row['chMetaSubjectClass']);
-			$article->setSubject($row['chMetaSubject']);
-			$article->setCoverageGeo($row['chMetaCoverageGeo']);
-			$article->setCoverageChron($row['chMetaCoverageChron']);
-			$article->setCoverageSample($row['chMetaCoverageSample']);
-			$article->setType($row['chMetaType_Author']);
-			$article->setLanguage($row['chMetaLanguage']);
-			$article->setSponsor($row['chMetaSponsor_Author']);
-			$article->setCommentsToEditor($row['chNotesToEditor']);
+			$article->setDiscipline($this->trans($row['chMetaDiscipline']));
+			$article->setSubjectClass($this->trans($row['chMetaSubjectClass']));
+			$article->setSubject($this->trans($row['chMetaSubject']));
+			$article->setCoverageGeo($this->trans($row['chMetaCoverageGeo']));
+			$article->setCoverageChron($this->trans($row['chMetaCoverageChron']));
+			$article->setCoverageSample($this->trans($row['chMetaCoverageSample']));
+			$article->setType($this->trans($row['chMetaType_Author']));
+			$article->setLanguage($this->trans($row['chMetaLanguage']));
+			$article->setSponsor($this->trans($row['chMetaSponsor_Author']));
+			$article->setCommentsToEditor($this->trans($row['chNotesToEditor']));
 			$article->setDateSubmitted($row['dtDateSubmitted']);
 			$article->setDateStatusModified($row['dtDateSubmitted']);
 			$article->setLastModified($row['dtDateSubmitted']);
@@ -935,12 +969,12 @@ class ImportOJS1 {
 				$authorRow = &$authorResult->fields;
 				
 				$author = &new Author();
-				$author->setFirstName($authorRow['chFirstName']);
-				$author->setMiddleName($authorRow['chMiddleInitial']);
-				$author->setLastName($authorRow['chSurname']);
-				$author->setAffiliation($authorRow['chAffiliation']);
-				$author->setEmail($authorRow['chEmail']);
-				$author->setBiography($authorRow['chBiography']);
+				$author->setFirstName($this->trans($authorRow['chFirstName']));
+				$author->setMiddleName($this->trans($authorRow['chMiddleInitial']));
+				$author->setLastName($this->trans($authorRow['chSurname']));
+				$author->setAffiliation($this->trans($authorRow['chAffiliation']));
+				$author->setEmail($this->trans($authorRow['chEmail']));
+				$author->setBiography($this->trans($authorRow['chBiography']));
 				$author->setPrimaryContact($authorRow['bPrimaryContact']);
 				
 				if ($authorRow['bPrimaryContact'] && isset($this->userMap[$authorRow['nUserID']])) {
@@ -1213,17 +1247,17 @@ class ImportOJS1 {
 			$suppFile = &new SuppFile();
 			$suppFile->setFileId($fileId);
 			$suppFile->setArticleId($this->articleMap[$row['fkArticleID']]);
-			$suppFile->setTitle($row['chTitle']);
-			$suppFile->setCreator($row['chCreator']);
-			$suppFile->setSubject($row['chSubject']);
-			$suppFile->setType($row['chType']);
-			$suppFile->setTypeOther($row['chTypeOther']);
-			$suppFile->setDescription($row['chDescription']);
-			$suppFile->setPublisher($row['chPublisher']);
-			$suppFile->setSponsor($row['chSponsor']);
+			$suppFile->setTitle($this->trans($row['chTitle']));
+			$suppFile->setCreator($this->trans($row['chCreator']));
+			$suppFile->setSubject($this->trans($row['chSubject']));
+			$suppFile->setType($this->trans($row['chType']));
+			$suppFile->setTypeOther($this->trans($row['chTypeOther']));
+			$suppFile->setDescription($this->trans($row['chDescription']));
+			$suppFile->setPublisher($this->trans($row['chPublisher']));
+			$suppFile->setSponsor($this->trans($row['chSponsor']));
 			$suppFile->setDateCreated($row['dtDateCreated']);
-			$suppFile->setSource($row['chSource']);
-			$suppFile->setLanguage($row['chLanguage']);
+			$suppFile->setSource($this->trans($row['chSource']));
+			$suppFile->setLanguage($this->trans($row['chLanguage']));
 			$suppFile->setShowReviewers($row['bShowReviewer']);
 			$suppFile->setDateSubmitted($row['dtDateCreated']);
 			
@@ -1241,16 +1275,16 @@ class ImportOJS1 {
 			$row = &$result->fields;
 			
 			if (!empty($row['chAffiliation'])) {
-				$row['chAuthor'] .= ', ' . $row['chAffiliation'];
+				$row['chAuthor'] .= ', ' . $this->trans($row['chAffiliation']);
 			}
 			
 			$comment = &new Comment();
 			$comment->setArticleId($this->articleMap[$row['fkArticleID']]);
 			$comment->setPosterIP('');
-			$comment->setPosterName($row['chAuthor']);
-			$comment->setPosterEmail($row['chEmail']);
-			$comment->setTitle($row['chCommentTitle']);
-			$comment->setBody($row['chComments']);
+			$comment->setPosterName($this->trans($row['chAuthor']));
+			$comment->setPosterEmail($this->trans($row['chEmail']));
+			$comment->setTitle($this->trans($row['chCommentTitle']));
+			$comment->setBody($this->trans($row['chComments']));
 			$comment->setDatePosted($row['dtDate']);
 			$comment->setDateModified($row['dtDate']);
 			$comment->setChildCommentCount(0);
@@ -1311,7 +1345,7 @@ class ImportOJS1 {
 			$articleComment->setAssocId($assocId);
 			$articleComment->setAuthorId($authorId);
 			$articleComment->setCommentTitle(''); // Not applicable to 1.x
-			$articleComment->setComments($row['chComment']);
+			$articleComment->setComments($this->trans($row['chComment']));
 			$articleComment->setDatePosted($row['dtDateCreated']);
 			$articleComment->setDateModified($row['dtDateCreated']);
 			$articleComment->setViewable(0);
@@ -1351,7 +1385,7 @@ class ImportOJS1 {
 			return null;
 		}
 		
-		$oldPath = $this->importPath . '/images/custom/' . $this->journalInfo[$oldName];
+		$oldPath = $this->importPath . '/images/custom/' . $this->trans($this->journalInfo[$oldName]);
 		if (!file_exists($oldPath)) {
 			return null;
 		}
@@ -1359,7 +1393,7 @@ class ImportOJS1 {
 		list($width, $height) = getimagesize($oldPath);
 		
 		$fileManager = &new PublicFileManager();
-		$extension = $fileManager->getExtension($this->journalInfo[$oldName]);
+		$extension = $fileManager->getExtension($this->trans($this->journalInfo[$oldName]));
 				
 		$uploadName = $newName . '.' . $extension;
 		if (!$fileManager->copyJournalFile($this->journalId, $oldPath, $uploadName)) {
@@ -1368,7 +1402,7 @@ class ImportOJS1 {
 		}
 		
 		return array(
-			'name' => $this->journalInfo[$oldName],
+			'name' => $this->trans($this->journalInfo[$oldName]),
 			'uploadName' => $uploadName,
 			'width' => $width,
 			'height' => $height,
@@ -1390,11 +1424,12 @@ class ImportOJS1 {
 		$result = &$this->importDao->retrieve('SELECT * FROM tblfiles WHERE nFileID = ?', $oldFileId);
 
 		if ($result->RecordCount() == 0) {
+			$result->Close();
 			return 0;
 		}
 		
 		$row = &$result->fields;
-		$oldPath = $this->journalConfigInfo['chFilePath'] . $row['chFilePath'];
+		$oldPath = $this->trans($this->journalConfigInfo['chFilePath']) . $this->trans($row['chFilePath']);
 		
 		$fileManager = &new ArticleFileManager($articleId);
 		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
@@ -1402,8 +1437,8 @@ class ImportOJS1 {
 		$articleFile = &new ArticleFile();
 		$articleFile->setArticleId($articleId);
 		$articleFile->setFileName('temp');
-		$articleFile->setOriginalFileName($row['chOldFileName']);
-		$articleFile->setFileType($row['chFileType']);
+		$articleFile->setOriginalFileName($this->trans($row['chOldFileName']));
+		$articleFile->setFileType($this->trans($row['chFileType']));
 		$articleFile->setFileSize(filesize($oldPath));
 		$articleFile->setType($fileManager->typeToPath($fileType));
 		$articleFile->setStatus('');
@@ -1418,12 +1453,15 @@ class ImportOJS1 {
 		if (!$fileManager->copyFile($oldPath, $fileManager->filesDir . $fileManager->typeToPath($fileType) . '/' . $newFileName)) {
 			$articleFileDao->deleteArticleFileById($articleFile->getFileId());
 			printf("Failed to copy file %s\n", $oldPath);
+			$result->Close();
 			return 0; // This should never happen
 		}
 		
 		$articleFileDao->updateArticleFile($articleFile);
 		$this->fileMap[$oldFileId] = $fileId;
-		
+
+		$result->Close();
+
 		return $fileId;
 	}
 	

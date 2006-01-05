@@ -13,10 +13,6 @@
  * Common HTML elements
  */
 
-html, body {
-	height: 100%;
-}
-
 body {
 	margin: 0;
 	padding: 0;
@@ -111,8 +107,6 @@ input.defaultButton {
  */
 
 #container {
-	width: 100%;
-	height: 100%;
 	line-height: 125%;
 	text-align: center;
 }
@@ -140,28 +134,16 @@ input.defaultButton {
 
 #body {
 	width: 800px;
-	margin: 0 auto -52px;
-	height: 100%;
-	min-height: 100%;
+	margin: 0 auto;
 }
 
 #footer {
 	width: 100%;
-	height: 50px;
+	min-height: 50px;
 	position: relative;
 	clear: both;
 	background-color: #ABA;
 	text-align: center;
-}
-
-#clearHeader {
-	clear: both;
-	height: 10px;
-}
-
-#clearFooter {
-	clear: both;
-	height: 10px;
 }
 
 #footerContent {
@@ -439,6 +421,15 @@ table.data td.heading {
 	padding-right: 0;
 }
 
+table.nested tr {
+	padding: 0;
+	margin: 0;
+}
+
+span.nested {
+	padding: 0 4px 0 0;
+	font-size: 1.2em;
+}
 
 /**
  * Form-specific elements

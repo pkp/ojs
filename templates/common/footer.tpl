@@ -15,13 +15,12 @@
 {/if}
 </div><!-- content -->
 </div><!-- main -->
-<div id="clearFooter"></div>
 </div><!-- body -->
 
+{get_debug_info}
+{if $enableDebugStats}
 <div id="footer">
 	<div id="footerContent">
-		{get_debug_info}
-		{if $enableDebugStats}
 		<div class="debugStats">
 		{translate key="debug.executionTime"}: {$debugExecutionTime|string_format:"%.4f"}s<br />
 		{translate key="debug.databaseQueries"}: {$debugNumDatabaseQueries}<br/>
@@ -32,9 +31,10 @@
 			{/foreach}
 		{/if}
 		</div>
-		{/if}
 	</div><!-- footerContent -->
 </div><!-- footer -->
+{/if}
+
 </div><!-- container -->
 </body>
 </html>

@@ -54,8 +54,6 @@
 
 <div id="body">
 
-<div id="clearHeader"></div>
-
 <div id="sidebar">
 	{include file="common/sidebar.tpl"}
 </div>
