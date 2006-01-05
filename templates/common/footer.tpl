@@ -13,10 +13,10 @@
 <br /><br />
 {$pageFooter}
 {/if}
-</div>
-</div>
-</div>
-</div>
+</div><!-- content -->
+</div><!-- main -->
+<div id="clearFooter"></div>
+</div><!-- body -->
 
 <div id="footer">
 	<div id="footerContent">
@@ -33,8 +33,8 @@
 		{/if}
 		</div>
 		{/if}
-	</div>
-</div>
-</div>
+	</div><!-- footerContent -->
+</div><!-- footer -->
+</div><!-- container -->
 </body>
 </html>

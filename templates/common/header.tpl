@@ -31,8 +31,6 @@
 <body>
 <div id="container">
 
-<div id="nonFooter">
-
 <div id="header">
 <div id="headerTitle">
 <h1>
@@ -55,6 +53,8 @@
 </div>
 
 <div id="body">
+
+<div id="clearHeader"></div>
 
 <div id="sidebar">
 	{include file="common/sidebar.tpl"}
