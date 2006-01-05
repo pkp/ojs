@@ -275,8 +275,10 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$articleId = Request::getUserVar('articleId');
 		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
 		parent::setupTemplate(true, $articleId);
-		
-		if (AuthorAction::saveMetadata($submission)) {
+
+		// If the copy editor has completed copyediting, disallow
+		// the author from changing the metadata.
+		if ($submission->getCopyeditorDateCompleted() != null || AuthorAction::saveMetadata($submission)) {
 			Request::redirect(null, null, 'submission', $articleId);
 		}
 	}

@@ -35,10 +35,18 @@ class MetadataForm extends Form {
 		$user = &Request::getUser();
 		$roleId = $roleDao->getRoleIdFromPath(Request::getRequestedPage());
 		
-		// If the user is an editor or an author of this article, make the form editable.
+		// If the user is an editor of this article, make the form editable.
 		$this->canEdit = false;
-		if ($roleId != null && ($roleId == ROLE_ID_EDITOR || $roleId == ROLE_ID_SECTION_EDITOR || $roleId == ROLE_ID_AUTHOR)) {
+		if ($roleId != null && ($roleId == ROLE_ID_EDITOR || $roleId == ROLE_ID_SECTION_EDITOR)) {
 			$this->canEdit = true;
+		}
+
+		// If the user is an author and the article hasn't passed the Copyediting stage, make the form editable.
+		if ($roleId == ROLE_ID_AUTHOR) {
+			$copyAssignment = $copyAssignmentDao->getCopyAssignmentByArticleId($article->getArticleId());
+			if ($copyAssignment == null || $copyAssignment->getDateCompleted() == null) {
+				$this->canEdit = true;
+			}
 		}
 
 		// Copy editors are also allowed to edit metadata, but only if they have

@@ -12,7 +12,7 @@
 <a name="metadata"></a>
 <h3>{translate key="submission.metadata"}</h3>
 
-<p><a href="{url op="viewMetadata" path=$submission->getArticleId()}" class="action">{translate key="submission.editMetadata"}</a></p>
+{if !$submission->getCopyeditorDateCompleted()}<p><a href="{url op="viewMetadata" path=$submission->getArticleId()}" class="action">{translate key="submission.editMetadata"}</a></p>{/if}
 
 
 <h4>{translate key="article.authors"}</h4>
