@@ -171,6 +171,7 @@ class UserManagementForm extends Form {
 	 */
 	function execute() {
 		$userDao = &DAORegistry::getDAO('UserDAO');
+		$journal = &Request::getJournal();
 		
 		if (isset($this->userId)) {
 			$user = &$userDao->getUser($this->userId);
@@ -258,7 +259,6 @@ class UserManagementForm extends Form {
 					$roleDao = &DAORegistry::getDAO('RoleDAO');
 					$roleId = $roleDao->getRoleIdFromPath($roleName);
 					if ($roleId != null) {
-						$journal = &Request::getJournal();
 						$role = &new Role();
 						$role->setJournalId($journal->getJournalId());
 						$role->setUserId($userId);
