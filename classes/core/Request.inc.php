@@ -129,7 +129,7 @@ class Request {
 		static $completeUrl;
 
 		if (!isset($completeUrl)) {
-			$completeUrl = Request::getRequestUrl() . (!empty($queryString)?"?$queryString":'');
+			$completeUrl = Request::getRequestUrl();
 			$queryString = Request::getQueryString();
 			if (!empty($queryString)) $completeUrl .= "?$queryString";
 			HookRegistry::call('Request::getCompleteUrl', array(&$completeUrl));

@@ -55,7 +55,7 @@ class TemplateManager extends Smarty {
 		$this->assign('baseUrl', Request::getBaseUrl());
 		$this->assign('pageTitle', 'common.openJournalSystems');
 		$this->assign('requestedPage', Request::getRequestedPage());
-		$this->assign('currentUrl', Request::getRequestUrl());
+		$this->assign('currentUrl', Request::getCompleteUrl());
 		$this->assign('dateFormatTrunc', Config::getVar('general', 'date_format_trunc'));
 		$this->assign('dateFormatShort', Config::getVar('general', 'date_format_short'));
 		$this->assign('dateFormatLong', Config::getVar('general', 'date_format_long'));
