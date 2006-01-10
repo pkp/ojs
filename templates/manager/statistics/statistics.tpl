@@ -52,10 +52,50 @@
 		<td width="20%" class="label">&nbsp;&nbsp;{translate key="manager.statistics.statistics.count.undecided"}</td>
 		<td width="80%" colspan="2" class="value">{translate key="manager.statistics.statistics.count.value" count=$articleStatistics.submissionsUndecided percentage=$articleStatistics.submissionsUndecidedPercent}</td>
 	</tr>
+	<tr valign="top">
+		<td width="20%" class="label">&nbsp;&nbsp;{translate key="manager.statistics.statistics.daysToPublication"}</td>
+		<td colspan="2" class="value">{$articleStatistics.daysToPublication}</td>
+	</tr>
+
+	{foreach from=$sectionStatistics item=sectionStats}
+	{assign var=section value=$sectionStats.section}
+	{assign var=stats value=$sectionStats.statistics}
+	<tr valign="top">
+		<td width="20%" colspan="3" class="label">{translate key="manager.statistics.statistics.forSection" sectionTitle=$section->getSectionTitle()}</td>
+	</tr>
+	<tr valign="top">
+		<td width="20%" class="label">&nbsp;&nbsp;{translate key="manager.statistics.statistics.numSubmissions"}</td>
+		<td width="80%" colspan="2" class="value">{$stats.numSubmissions}</td>
+	</tr>
+	<tr valign="top">
+		<td width="20%" class="label">&nbsp;&nbsp;&nbsp;&nbsp;{translate key="manager.statistics.statistics.count.accept"}</td>
+		<td width="80%" colspan="2" class="value">{translate key="manager.statistics.statistics.count.value" count=$stats.submissionsAccept percentage=$stats.submissionsAcceptPercent}</td>
+	</tr>
+	<tr valign="top">
+		<td width="20%" class="label">&nbsp;&nbsp;&nbsp;&nbsp;{translate key="manager.statistics.statistics.count.decline"}</td>
+		<td width="80%" colspan="2" class="value">{translate key="manager.statistics.statistics.count.value" count=$stats.submissionsDecline percentage=$stats.submissionsDeclinePercent}</td>
+	</tr>
+	<tr valign="top">
+		<td width="20%" class="label">&nbsp;&nbsp;&nbsp;&nbsp;{translate key="manager.statistics.statistics.count.revise"}</td>
+		<td width="80%" colspan="2" class="value">{translate key="manager.statistics.statistics.count.value" count=$stats.submissionsRevise percentage=$stats.submissionsRevisePercent}</td>
+	</tr>
+	<tr valign="top">
+		<td width="20%" class="label">&nbsp;&nbsp;&nbsp;&nbsp;{translate key="manager.statistics.statistics.count.undecided"}</td>
+		<td width="80%" colspan="2" class="value">{translate key="manager.statistics.statistics.count.value" count=$stats.submissionsUndecided percentage=$stats.submissionsUndecidedPercent}</td>
+	</tr>
+	<tr valign="top">
+		<td width="20%" class="label">&nbsp;&nbsp;&nbsp;&nbsp;{translate key="manager.statistics.statistics.daysToPublication"}</td>
+		<td colspan="2" class="value">{$stats.daysToPublication}</td>
+	</tr>
+	{/foreach}
 
 	<tr valign="top">
-		<td width="20%" class="label">{translate key="user.role.reviewers"}</td>
+		<td width="20%" class="label">{translate key="manager.statistics.statistics.reviewers"}</td>
 		<td colspan="2" class="value">{$userStatistics.reviewer}</td>
+	</tr>
+	<tr valign="top">
+		<td width="20%" class="label">&nbsp;&nbsp;{translate key="manager.statistics.statistics.reviewerAddedCount"}</td>
+		<td colspan="2" class="value">{$reviewerStatistics.reviewerAddedCount}</td>
 	</tr>
 	<tr valign="top">
 		<td width="20%" class="label">&nbsp;&nbsp;{translate key="manager.statistics.statistics.reviewerCount"}</td>
@@ -79,10 +119,6 @@
 			{assign var=daysPerReview value=$reviewerStatistics.daysPerReview}
 			{math equation="round($daysPerReview)"}
 		</td>
-	</tr>
-	<tr valign="top">
-		<td width="20%" class="label">{translate key="manager.statistics.statistics.daysToPublication"}</td>
-		<td colspan="2" class="value">{$articleStatistics.daysToPublication}</td>
 	</tr>
 	<tr valign="top">
 		<td width="20%" class="label">{translate key="manager.statistics.statistics.registeredUsers"}</td>

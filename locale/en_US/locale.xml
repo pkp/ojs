@@ -730,21 +730,24 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 
 	<!-- Statistics & Reports -->
 	<message key="manager.statistics.statistics">Statistics</message>
-	<message key="manager.statistics.statistics.itemsPublished">Items Published</message>
-	<message key="manager.statistics.statistics.numSubmissions">Submissions</message>
-	<message key="manager.statistics.statistics.count.accept">Accept (%)</message>
-	<message key="manager.statistics.statistics.count.decline">Decline (%)</message>
-	<message key="manager.statistics.statistics.count.revise">Revise (%)</message>
-	<message key="manager.statistics.statistics.count.undecided">Undecided (%)</message>
+	<message key="manager.statistics.statistics.itemsPublished">Items Published:</message>
+	<message key="manager.statistics.statistics.numSubmissions">Total submissions:</message>
+	<message key="manager.statistics.statistics.forSection">Journal Section {$sectionTitle}:</message>
+	<message key="manager.statistics.statistics.count.accept">Accept (%):</message>
+	<message key="manager.statistics.statistics.count.decline">Decline (%):</message>
+	<message key="manager.statistics.statistics.count.revise">Revise (%):</message>
+	<message key="manager.statistics.statistics.count.undecided">Undecided (%):</message>
 	<message key="manager.statistics.statistics.count.value">{$count} ({$percentage}%)</message>
-	<message key="manager.statistics.statistics.numIssues">Issues Published</message>
-	<message key="manager.statistics.statistics.reviewerCount">No. Assigned</message>
-	<message key="manager.statistics.statistics.reviewsPerReviewer">No. of Reviews</message>
-	<message key="manager.statistics.statistics.daysPerReview">Days Taken</message>
-	<message key="manager.statistics.statistics.reviewerScore">Editor Score</message>
-	<message key="manager.statistics.statistics.daysToPublication">Days To Publication</message>
-	<message key="manager.statistics.statistics.registeredUsers">Registered Users</message>
-	<message key="manager.statistics.statistics.countryDistribution">Country Distribution</message>
+	<message key="manager.statistics.statistics.numIssues">Issues Published:</message>
+	<message key="manager.statistics.statistics.reviewers">Reviewers:</message>
+	<message key="manager.statistics.statistics.reviewerCount">No. Assigned:</message>
+	<message key="manager.statistics.statistics.reviewerAddedCount">No. Added:</message>
+	<message key="manager.statistics.statistics.reviewsPerReviewer">No. of Reviews:</message>
+	<message key="manager.statistics.statistics.daysPerReview">Days Taken:</message>
+	<message key="manager.statistics.statistics.reviewerScore">Editor Score:</message>
+	<message key="manager.statistics.statistics.daysToPublication">Days To Publication:</message>
+	<message key="manager.statistics.statistics.registeredUsers">Registered Users:</message>
+	<message key="manager.statistics.statistics.countryDistribution">Country Distribution:</message>
 
 	<message key="manager.statistics.reports">Report Generator</message>
 	<message key="manager.statistics.reports.dateFrom">From</message>

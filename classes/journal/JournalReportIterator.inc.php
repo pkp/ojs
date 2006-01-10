@@ -172,7 +172,7 @@ class JournalReportIterator extends DBRowIterator {
 		}
 
 		// Fetch the last editorial decision for this article.
-		$editorDecisions =& $this->authorSubmissionDao->getEditorDecisions($row['article_id']);
+		$editorDecisions = $this->authorSubmissionDao->getEditorDecisions($row['article_id']);
 		$lastDecision = array_pop($editorDecisions);
 
 		if ($lastDecision) {
@@ -183,7 +183,11 @@ class JournalReportIterator extends DBRowIterator {
 
 			$decisionTime = strtotime($lastDecision['dateDecided']);
 			$submitTime = strtotime($ret['dateSubmitted']);
-			$ret['daysToDecision'] = round(($decisionTime - $submitTime) / 3600 / 24);
+			if ($decisionTime === false || $decisionTime === -1 || $submitTime === false || $submitTime === -1) {
+				$ret['daysToDecision'] = '';
+			} else {
+				$ret['daysToDecision'] = round(($decisionTime - $submitTime) / 3600 / 24);
+			}
 		} else {
 			$ret['decision'] = '';
 			$ret['daysToDecision'] = '';

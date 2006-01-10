@@ -34,8 +34,15 @@ class StatisticsHandler extends ManagerHandler {
 		$toDate = mktime(23, 59, 59, 12, 31, $statisticsYear);
 
 		$journalStatisticsDao =& DAORegistry::getDAO('JournalStatisticsDAO');
-		$articleStatistics = $journalStatisticsDao->getArticleStatistics($journal->getJournalId(), $fromDate, $toDate);
+		$articleStatistics = $journalStatisticsDao->getArticleStatistics($journal->getJournalId(), null, $fromDate, $toDate);
 		$templateMgr->assign('articleStatistics', $articleStatistics);
+		$sectionDao =& DAORegistry::getDAO('SectionDAO');
+		$sections =& $sectionDao->getJournalSections($journal->getJournalId());
+		$sectionStatistics = array();
+		while ($section =& $sections->next()) {
+			$sectionStatistics[] = array('section' => &$section, 'statistics' => $journalStatisticsDao->getArticleStatistics($journal->getJournalId(), $section->getSectionId(), $fromDate, $toDate));
+		}
+		$templateMgr->assign('sectionStatistics', $sectionStatistics);
 
 		$issueStatistics = $journalStatisticsDao->getIssueStatistics($journal->getJournalId(), $fromDate, $toDate);
 		$templateMgr->assign('issueStatistics', $issueStatistics);

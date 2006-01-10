@@ -206,7 +206,12 @@ class String {
 	function mime_content_type($filename) {
 		if (!function_exists('mime_content_type')) {
 			$f = escapeshellarg($filename);
-			return trim(`file -bi $f`);
+			$result = trim(`file -bi $f`);
+			// Make sure we just return the mime type.
+			if (($i = strpos($result, ';')) !== false) {
+				$result = trim(substr($result, 0, $i));
+			}
+			return $result;
 		}
 		return mime_content_type($filename);
 	}

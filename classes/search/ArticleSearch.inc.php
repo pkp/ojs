@@ -256,7 +256,7 @@ class ArticleSearch {
 					$issue = &$issueDao->getIssueById($issueId);
 					$issueCache[$issueId] = &$issue;
 					import('issue.IssueAction');
-					$issueAvailabilityCache[$issueId] = !IssueAction::subscriptionRequired($issue) || !IssueAction::subscribedUser();
+					$issueAvailabilityCache[$issueId] = !IssueAction::subscriptionRequired($issue) || IssueAction::subscribedUser() || IssueAction::subscribedDomain();
 				}
 
 				// Get the journal, storing in cache if necessary.
