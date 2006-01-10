@@ -141,14 +141,18 @@ class JournalStatisticsDAO extends DAO {
 	 * Get statistics about users in the system.
 	 * Returns a map of name => value pairs.
 	 * @param $journalId int The journal to fetch statistics for
+	 * @param $dateStart date optional
+	 * @param $dateEnd date optional
 	 * @return array
 	 */
-	function getUserStatistics($journalId) {
+	function getUserStatistics($journalId, $dateStart = null, $dateEnd = null) {
 		$roleDao =& DAORegistry::getDAO('RoleDAO');
 
 		// Get count of total users for this journal
 		$result = &$this->retrieve(
-			'SELECT COUNT(DISTINCT r.user_id) FROM roles r WHERE r.journal_id = ?',
+			'SELECT COUNT(DISTINCT r.user_id) FROM roles r, users u WHERE r.user_id = u.user_id AND r.journal_id = ?' .
+			($dateStart !== null ? ' AND u.date_registered >= ' . $this->datetimeToDB($dateStart) : '') .
+			($dateEnd !== null ? ' AND u.date_registered <= ' . $this->datetimeToDB($dateEnd) : ''),
 			$journalId
 		);
 
@@ -171,6 +175,38 @@ class JournalStatisticsDAO extends DAO {
 			$result->moveNext();
 		}
 
+		$result->Close();
+		unset($result);
+
+		return $returner;
+	}
+
+	/**
+	 * Get statistics about subscriptions.
+	 * @param $journalId int The journal to fetch statistics for
+	 * @param $dateStart date optional
+	 * @param $dateEnd date optional
+	 * @return array
+	 */
+	function getSubscriptionStatistics($journalId, $dateStart = null, $dateEnd = null) {
+		$result = &$this->retrieve(
+			'SELECT st.type_id, st.type_name, count(s.subscription_id) AS type_count FROM subscription_types st, subscriptions s WHERE st.journal_id = ? AND s.type_id = st.type_id' .
+			($dateStart !== null ? ' AND s.date_start >= ' . $this->datetimeToDB($dateStart) : '') .
+			($dateEnd !== null ? ' AND s.date_start <= ' . $this->datetimeToDB($dateEnd) : '') .
+			' GROUP BY st.type_id, st.type_name',
+			$journalId
+		);
+
+		$returner = array();
+
+		while (!$result->EOF) {
+			$row = $result->getRowAssoc(false);
+			$returner[$row['type_id']] = array(
+				'name' => $row['type_name'],
+				'count' => $row['type_count']
+			);
+			$result->moveNext();
+		}
 		$result->Close();
 		unset($result);
 

@@ -91,11 +91,7 @@
 
 	<tr valign="top">
 		<td width="20%" class="label">{translate key="manager.statistics.statistics.reviewers"}</td>
-		<td colspan="2" class="value">{$userStatistics.reviewer}</td>
-	</tr>
-	<tr valign="top">
-		<td width="20%" class="label">&nbsp;&nbsp;{translate key="manager.statistics.statistics.reviewerAddedCount"}</td>
-		<td colspan="2" class="value">{$reviewerStatistics.reviewerAddedCount}</td>
+		<td colspan="2" class="value">{translate key="manager.statistics.statistics.totalNewValue" numTotal=$allUserStatistics.reviewer|default:"0" numNew=$reviewerStatistics.reviewerAddedCount}</td>
 	</tr>
 	<tr valign="top">
 		<td width="20%" class="label">&nbsp;&nbsp;{translate key="manager.statistics.statistics.reviewerCount"}</td>
@@ -104,7 +100,7 @@
 
 	<tr valign="top">
 		<td width="20%" class="label">&nbsp;&nbsp;{translate key="manager.statistics.statistics.reviewsPerReviewer"}</td>
-		{assign var=reviewerCount value=$userStatistics.reviewer}
+		{assign var=reviewerCount value=$allUserStatistics.reviewer}
 		{assign var=reviewCount value=$reviewStatistics.reviewsCount}
 		{if $reviewCount != 0}{assign var=reviewsPerReviewer value=$reviewerCount/$reviewCount}{else}{assign var=reviewsPerReviewer value=0}{/if}
 		<td colspan="2" class="value">{math equation="round($reviewsPerReviewer)"}</td>
@@ -122,8 +118,23 @@
 	</tr>
 	<tr valign="top">
 		<td width="20%" class="label">{translate key="manager.statistics.statistics.registeredUsers"}</td>
-		<td colspan="2" class="value">{$userStatistics.totalUsersCount}</td>
+		<td colspan="2" class="value">{translate key="manager.statistics.statistics.totalNewValue" numTotal=$allUserStatistics.totalUsersCount numNew=$userStatistics.totalUsersCount}</td>
 	</tr>
+	<tr valign="top">
+		<td width="20%" class="label">{translate key="user.role.readers"}</td>
+		<td colspan="2" class="value">{translate key="manager.statistics.statistics.totalNewValue" numTotal=$allUserStatistics.readers|default:"0" numNew=$userStatistics.readers|default:"0"}</td>
+	</tr>
+	{if $enableSubscriptions}
+		<tr valign="top">
+			<td colspan="3" class="label">{translate key="manager.statistics.statistics.subscriptions"}</td>
+		</tr>
+		{foreach from=$allSubscriptionStatistics key=type_id item=stats}
+		<tr valign="top">
+			<td width="20%" class="label">&nbsp;&nbsp;{$stats.name}:</td>
+			<td colspan="2" class="value">{translate key="manager.statistics.statistics.totalNewValue" numTotal=$stats.count|default:"0" numNew=$subscriptionStatistics.$type_id.count|default:"0"}</td>
+		</tr>
+		{/foreach}
+	{/if}
 	<tr valign="top">
 		<td width="20%" class="label">{translate key="manager.statistics.statistics.countryDistribution"}</td>
 		<td colspan="2" class="value">

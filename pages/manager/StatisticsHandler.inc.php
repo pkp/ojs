@@ -50,8 +50,21 @@ class StatisticsHandler extends ManagerHandler {
 		$reviewerStatistics = $journalStatisticsDao->getReviewerStatistics($journal->getJournalId(), $fromDate, $toDate);
 		$templateMgr->assign('reviewerStatistics', $reviewerStatistics);
 
-		$userStatistics = $journalStatisticsDao->getUserStatistics($journal->getJournalId());
+		$allUserStatistics = $journalStatisticsDao->getUserStatistics($journal->getJournalId());
+		$templateMgr->assign('allUserStatistics', $allUserStatistics);
+
+		$userStatistics = $journalStatisticsDao->getUserStatistics($journal->getJournalId(), $fromDate, $toDate);
 		$templateMgr->assign('userStatistics', $userStatistics);
+
+		$enableSubscriptions = $journal->getSetting('enableSubscriptions');
+		if ($enableSubscriptions) {
+			$templateMgr->assign('enableSubscriptions', true);
+			$allSubscriptionStatistics = $journalStatisticsDao->getSubscriptionStatistics($journal->getJournalId());
+			$templateMgr->assign('allSubscriptionStatistics', $allSubscriptionStatistics);
+
+			$subscriptionStatistics = $journalStatisticsDao->getSubscriptionStatistics($journal->getJournalId(), $fromDate, $toDate);
+			$templateMgr->assign('subscriptionStatistics', $subscriptionStatistics);
+		}
 
 		$notificationStatusDao =& DAORegistry::getDAO('NotificationStatusDAO');
 		$notifiableUsers = $notificationStatusDao->getNotifiableUsersCount($journal->getJournalId());
