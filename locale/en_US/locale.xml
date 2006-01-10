@@ -1744,7 +1744,7 @@ The file can be viewed by clicking on the file name. A new or revised file can b
 	<message key="author.submit.filesSummary">File Summary</message>
 	<message key="author.submit.finishSubmission">Finish Submission</message>
 	<message key="author.submit.submissionComplete">Submission complete. Thank you for your interest in publishing with {$journalTitle}.</message>
-	<message key="author.submit.expedite"><![CDATA[As an Editor, you can choose to expedite a submission. This will bypass the editing process, create a galley from the original submission file (which should be HTML, PDF, or another publication-ready format), and move the submission directly to the scheduling queue. <a href="{$expediteUrl}" class="action">Click here</a> if you wish to expedite this submission.]]></message>
+	<message key="author.submit.expedite"><![CDATA[If this submission is in a format that is ready to be published, without further review, editing, or layout work, it can be sent directly to the Schedule Submissions queue by <a href="{$expediteUrl}" class="action">Clicking here</a>. (Note: Only journal editors have this option for their submissions.)]]></message>
 
 	<!-- Used in submission review / editing -->
 	<message key="submission.review.mustUploadFileForReview">Request email cannot be sent until a Review Version is in place.</message>
