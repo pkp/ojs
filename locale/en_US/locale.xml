@@ -1934,7 +1934,7 @@ current password.<br /><br />Enter your email address below to reset your passwo
 	<message key="search.dateFrom">From</message>
 	<message key="search.dateTo">Until</message>
 	<message key="search.discipline">Discipline(s)</message>
-	<message key="search.subject">Subject(s)</message>
+	<message key="search.subject">Keyword(s)</message>
 	<message key="search.typeMethodApproach">Type (method/approach)</message>
 	<message key="search.coverage">Coverage</message>
 	<message key="search.matchAll">Match all categories</message>
@@ -2327,7 +2327,7 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="rt.metadata.pkp.title">Title of document</message>
 	<message key="rt.metadata.pkp.primaryAuthor">Author's name, affiliation, country</message>
 	<message key="rt.metadata.pkp.discipline">Discipline(s)</message>
-	<message key="rt.metadata.pkp.subject">Subject(s)</message>
+	<message key="rt.metadata.pkp.subject">Keyword(s)</message>
 	<message key="rt.metadata.pkp.subjectClass">Subject classification</message>
 	<message key="rt.metadata.pkp.abstract">Abstract</message>
 	<message key="rt.metadata.pkp.publisher">Organizing agency, location</message>
