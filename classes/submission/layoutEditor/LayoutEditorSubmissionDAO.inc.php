@@ -232,9 +232,9 @@ class LayoutEditorSubmissionDAO extends DAO {
 				l.date_notified IS NOT NULL';
 		
 		if ($active) {
-			$sql .= ' AND ((l.date_notified IS NOT NULL AND l.date_completed IS NULL) OR (p.date_layouteditor_notified IS NOT NULL AND p.date_layouteditor_completed IS NULL))'; 
+			$sql .= ' AND (l.date_completed IS NULL OR p.date_layouteditor_completed IS NULL)'; 
 		} else {
-			$sql .= ' AND ((l.date_notified IS NULL OR l.date_completed IS NOT NULL) AND (p.date_layouteditor_notified IS NULL OR p.date_layouteditor_completed IS NOT NULL))';
+			$sql .= ' AND (l.date_completed IS NOT NULL AND p.date_layouteditor_completed IS NOT NULL)';
 		}
 
 		$result = &$this->retrieveRange($sql . ' ' . $searchSql . ' ORDER BY a.article_id ASC', $params, $rangeInfo);
