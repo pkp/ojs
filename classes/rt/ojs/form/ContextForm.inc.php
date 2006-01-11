@@ -54,6 +54,7 @@ class ContextForm extends Form {
 				'order' => $context->getOrder(),
 				'description' => $context->getDescription(),
 				'authorTerms' => $context->getAuthorTerms(),
+				'citedBy' => $context->getCitedBy(),
 				'geoTerms' => $context->getGeoTerms(),
 				'defineTerms' => $context->getDefineTerms()
 			);
@@ -92,6 +93,7 @@ class ContextForm extends Form {
 				'order',
 				'description',
 				'authorTerms',
+				'citedBy',
 				'defineTerms'
 			)
 		);
@@ -112,6 +114,7 @@ class ContextForm extends Form {
 
 		$context->setTitle($this->getData('title'));
 		$context->setAbbrev($this->getData('abbrev'));
+		$context->setCitedBy($this->getData('citedBy')==true);
 		$context->setAuthorTerms($this->getData('authorTerms')==true);
 		$context->setGeoTerms($this->getData('geoTerms')==true);
 		$context->setDefineTerms($this->getData('defineTerms')==true);
