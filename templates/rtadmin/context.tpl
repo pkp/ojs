@@ -54,6 +54,11 @@
 					{url|assign:"url" page="rtadmin" op="settings"}
 					<td><label for="defineTerms">{translate key="rt.admin.contexts.options.defineTerms" settingsUrl=$url}</label></td>
 				</tr>
+				<tr valign="top">
+					<td><input type="checkbox" name="citedBy" id="citedBy" {if $citedBy}checked="checked"{/if} /></td>
+					{url|assign:"url" page="rtadmin" op="settings"}
+					<td><label for="citedBy">{translate key="rt.admin.contexts.options.citedBy" settingsUrl=$url}</label></td>
+				</tr>
 			</table>
 		</td>
 	</tr>
