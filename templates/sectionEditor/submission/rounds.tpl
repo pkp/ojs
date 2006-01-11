@@ -196,8 +196,9 @@ name="viewable" value="1"{if $reviewerFile->getViewable()} checked="checked"{/if
 		</td>
 	</tr>
 	<tr valign="top">
-		<td class="label" width="20%">{translate key="submission.editorAuthorComments"}</td>
+		<td class="label" width="20%">{translate key="submission.notifyAuthor"}</td>
 		<td class="value" width="80%">
+			{translate key="submission.editorAuthorRecord"}
 			{if $submission->getMostRecentEditorDecisionComment()}
 				{assign var="comment" value=$submission->getMostRecentEditorDecisionComment()}
 				<a href="javascript:openComments('{url op="viewEditorDecisionComments" path=$submission->getArticleId() anchor=$comment->getCommentId()}');" class="icon">{icon name="comment"}</a> {$comment->getDatePosted()|date_format:$dateFormatShort}

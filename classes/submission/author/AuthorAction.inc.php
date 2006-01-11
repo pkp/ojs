@@ -280,28 +280,57 @@ class AuthorAction extends Action {
 	}
 	
 	/**
-	 * Post editor decision comment.
-	 * @param $article object
-	 * @param $emailComment boolean
+	 * Email editor decision comment.
+	 * @param $authorSubmission object
+	 * @param $send boolean
 	 */
-	function postEditorDecisionComment($article, $emailComment) {
-		if (!HookRegistry::call('AuthorAction::postEditorDecisionComment', array(&$article, &$emailComment))) {
-			import("submission.form.comment.EditorDecisionCommentForm");
-		
-			$commentForm = &new EditorDecisionCommentForm($article, ROLE_ID_AUTHOR);
-			$commentForm->readInputData();
-		
-			if ($commentForm->validate()) {
-				$commentForm->execute();
-			
-				if ($emailComment) {
-					$commentForm->email();
+	function emailEditorDecisionComment($authorSubmission, $send) {
+		$userDao = &DAORegistry::getDAO('UserDAO');
+		$journal = &Request::getJournal();
+
+		$user = &Request::getUser();
+		import('mail.ArticleMailTemplate');
+		$email = &new ArticleMailTemplate($authorSubmission);
+	
+		$editAssignments = $authorSubmission->getEditAssignments();
+		$editors = array();
+		foreach ($editAssignments as $editAssignment) {
+			array_push($editors, $userDao->getUser($editAssignment->getEditorId()));
+		}
+
+		if ($send && !$email->hasErrors()) {
+			HookRegistry::call('AuthorAction::emailEditorDecisionComment', array(&$authorSubmission, &$send));
+			$email->send();
+
+			$articleCommentDao =& DAORegistry::getDAO('ArticleCommentDAO');
+			$articleComment =& new ArticleComment();
+			$articleComment->setCommentType(COMMENT_TYPE_EDITOR_DECISION);
+			$articleComment->setRoleId(ROLE_ID_AUTHOR);
+			$articleComment->setArticleId($authorSubmission->getArticleId());
+			$articleComment->setAuthorId($authorSubmission->getUserId());
+			$articleComment->setCommentTitle($email->getSubject());
+			$articleComment->setComments($email->getBody());
+			$articleComment->setDatePosted(Core::getCurrentDate());
+			$articleComment->setViewable(true);
+			$articleComment->setAssocId($authorSubmission->getArticleId());
+			$articleCommentDao->insertArticleComment($articleComment);
+
+			return true;
+		} else {
+			if (!Request::getUserVar('continued')) {
+				$email->setSubject($authorSubmission->getArticleTitle());
+				if (!empty($editors)) {
+					foreach ($editors as $editor) {
+						$email->addCc($editor->getEmail(), $editor->getFullName());
+					}
+				} else {
+					$email->addCc($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
 				}
-			
-			} else {
-				parent::setupTemplate(true);
-				$commentForm->display();
 			}
+
+			$email->displayEditForm(Request::url(null, null, 'emailEditorDecisionComment', 'send'), array('articleId' => $authorSubmission->getArticleId()), 'submission/comment/editorDecisionEmail.tpl');
+
+			return false;
 		}
 	}
 	

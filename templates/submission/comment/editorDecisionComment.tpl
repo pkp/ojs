@@ -13,20 +13,6 @@
 {include file="submission/comment/header.tpl"}
 
 <table class="data" width="100%">
-{if $isEditor}
-<tr valign="top">
-	<td colspan="2" align="center">
-		<form method="post" action="{url op="importPeerReviews"}">
-			{if $hiddenFormParams}
-				{foreach from=$hiddenFormParams item=hiddenFormParam key=key}
-					<input type="hidden" name="{$key|escape}" value="{$hiddenFormParam|escape}" />
-				{/foreach}
-			{/if}
-			<input type="submit" value="{translate key="submission.comments.importPeerReviews"}" class="button defaultButton" />
-		</form>
-	</td>
-</tr>
-{/if}
 {foreach from=$articleComments item=comment}
 <tr valign="top">
 	<td width="25%">
@@ -35,7 +21,7 @@
 	</td>
 	<td width="75%">
 		{if $comment->getAuthorId() eq $userId and not $isLocked}
-			<div style="float: right"><a href="{url op="editComment" path=$articleId|to_array:$comment->getCommentId()}" class="action">{translate key="common.edit"}</a> <a href="{url op="deleteComment" path=$articleId|to_array:$comment->getCommentId()}" onclick="return confirm('{translate|escape:"javascript" key="submission.comments.confirmDelete"}')" class="action">{translate key="common.delete"}</a></div>
+			<div style="float: right"><a href="{url op="deleteComment" path=$articleId|to_array:$comment->getCommentId()}" onclick="return confirm('{translate|escape:"javascript" key="submission.comments.confirmDelete"}')" class="action">{translate key="common.delete"}</a></div>
 		{/if}
 		<a name="{$comment->getCommentId()}"></a>
 		{if $comment->getCommentTitle() neq ""}
@@ -54,7 +40,8 @@
 <br />
 <br />
 
-{if not $isLocked}
+{if not $isLocked and $isEditor}
+
 <form method="post" action="{url op=$commentAction}">
 {if $hiddenFormParams}
 	{foreach from=$hiddenFormParams item=hiddenFormParam key=key}
@@ -77,12 +64,7 @@
 </tr>
 </table>
 
-<p><input type="submit" name="save" value="{translate key="common.save"}" class="button defaultButton" /> <input type="submit" name="saveAndEmail" value="{if $isEditor}{translate key="submission.comments.saveAndEmailAuthor"}{else}{translate key="submission.comments.saveAndEmailEditor"}{/if}" class="button" /> <input type="button" value="{translate key="common.close"}" class="button" onclick="window.opener.location.reload(); window.close()" /></p>
-
-{if $isEditor}
-	{url|assign:"url" op="blindCcReviewsToReviewers" articleId=$articleId}
-	{icon name="mail" url=$url} {translate key="submission.comments.sendDecisionToReviewers"}
-{/if}
+<p><input type="submit" name="save" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.close"}" class="button" onclick="window.opener.location.reload(); window.close()" /></p>
 
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 

@@ -28,26 +28,6 @@ class SubmissionCommentsHandler extends AuthorHandler {
 		
 		list($journal, $authorSubmission) = TrackSubmissionHandler::validate($articleId);
 		AuthorAction::viewEditorDecisionComments($authorSubmission);
-	
-	}
-	
-	/**
-	 * Post editor decision comments.
-	 */
-	function postEditorDecisionComment() {
-		AuthorHandler::validate();
-		AuthorHandler::setupTemplate(true);
-		
-		$articleId = Request::getUserVar('articleId');
-		
-		// If the user pressed the "Save and email" button, then email the comment.
-		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;		
-		
-		list($journal, $authorSubmission) = TrackSubmissionHandler::validate($articleId);
-		AuthorAction::postEditorDecisionComment($authorSubmission, $emailComment);
-		
-		AuthorAction::viewEditorDecisionComments($authorSubmission);
-	
 	}
 	
 	/**
@@ -150,6 +130,19 @@ class SubmissionCommentsHandler extends AuthorHandler {
 	}
 
 	/**
+	 * Email an editor decision comment.
+	 */
+	function emailEditorDecisionComment() {
+		$articleId = (int) Request::getUserVar('articleId');
+		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
+
+		parent::setupTemplate(true);		
+		if (AuthorAction::emailEditorDecisionComment($submission, Request::getUserVar('send'))) {
+			Request::redirect(null, null, 'submissionReview', array($articleId));
+		}
+	}
+	
+	/**
 	 * Edit comment.
 	 */
 	function editComment($args) {
@@ -161,6 +154,12 @@ class SubmissionCommentsHandler extends AuthorHandler {
 		
 		list($journal, $authorSubmission) = TrackSubmissionHandler::validate($articleId);
 		list($comment) = SubmissionCommentsHandler::validate($commentId);
+
+		if ($comment->getCommentType() == COMMENT_TYPE_EDITOR_DECISION) {
+			// Cannot edit an editor decision comment.
+			Request::redirect(null, Request::getRequestedPage());
+		}
+
 		AuthorAction::editComment($authorSubmission, $comment);
 
 	}
@@ -180,6 +179,12 @@ class SubmissionCommentsHandler extends AuthorHandler {
 		
 		list($journal, $authorSubmission) = TrackSubmissionHandler::validate($articleId);
 		list($comment) = SubmissionCommentsHandler::validate($commentId);
+
+		if ($comment->getCommentType() == COMMENT_TYPE_EDITOR_DECISION) {
+			// Cannot edit an editor decision comment.
+			Request::redirect(null, Request::getRequestedPage());
+		}
+
 		AuthorAction::saveComment($authorSubmission, $comment, $emailComment);
 
 		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');

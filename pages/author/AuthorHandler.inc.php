@@ -241,11 +241,6 @@ class AuthorHandler extends Handler {
 		SubmissionCommentsHandler::viewEditorDecisionComments($args);
 	}
 	
-	function postEditorDecisionComment() {
-		import('pages.author.SubmissionCommentsHandler');
-		SubmissionCommentsHandler::postEditorDecisionComment();
-	}
-	
 	function viewCopyeditComments($args) {
 		import('pages.author.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::viewCopyeditComments($args);
@@ -254,6 +249,11 @@ class AuthorHandler extends Handler {
 	function postCopyeditComment() {
 		import('pages.author.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::postCopyeditComment();
+	}
+	
+	function emailEditorDecisionComment() {
+		import('pages.author.SubmissionCommentsHandler');
+		SubmissionCommentsHandler::emailEditorDecisionComment();
 	}
 	
 	function viewProofreadComments($args) {

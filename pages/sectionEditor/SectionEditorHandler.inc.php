@@ -627,6 +627,11 @@ class SectionEditorHandler extends Handler {
 		SubmissionCommentsHandler::postCopyeditComment();
 	}
 	
+	function emailEditorDecisionComment() {
+		import('pages.sectionEditor.SubmissionCommentsHandler');
+		SubmissionCommentsHandler::emailEditorDecisionComment();
+	}
+	
 	function viewLayoutComments($args) {
 		import('pages.sectionEditor.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::viewLayoutComments($args);
@@ -662,11 +667,6 @@ class SectionEditorHandler extends Handler {
 		SubmissionCommentsHandler::deleteComment($args);
 	}
 	
-	function importPeerReviews() {
-		import('pages.sectionEditor.SubmissionCommentsHandler');
-		SubmissionCommentsHandler::importPeerReviews();
-	}
-
 	/** Proof Assignment Functions */
 	function selectProofreader($args) {
 		import('pages.sectionEditor.SubmissionEditHandler');

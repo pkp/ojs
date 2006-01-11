@@ -12,21 +12,11 @@
  *
  * $Id$
  *
- *	TODO: blindCcReviewer stuff needs to be removed, after OK from John.
  */
  
 import("submission.form.comment.CommentForm");
 
 class EditorDecisionCommentForm extends CommentForm {
-
-	/** @var boolean import peer review comments */
-	var $importPeerReviews;
-
-	/** @var peer reviews to import into new comment */
-	var $peerReviews;
-	
-	/** @var boolean blind cc reviewers */
-	var $blindCcReviewers;
 
 	/**
 	 * Constructor.
@@ -34,8 +24,6 @@ class EditorDecisionCommentForm extends CommentForm {
 	 */
 	function EditorDecisionCommentForm($article, $roleId) {
 		parent::CommentForm($article, COMMENT_TYPE_EDITOR_DECISION, $roleId, $article->getArticleId());
-		
-		$this->importPeerReviews = false;
 	}
 	
 	/**
@@ -55,12 +43,6 @@ class EditorDecisionCommentForm extends CommentForm {
 		$isEditor = $this->roleId == ROLE_ID_EDITOR || $this->roleId == ROLE_ID_SECTION_EDITOR ? true : false;
 		$templateMgr->assign('isEditor', $isEditor);
 		
-		// Populate comment title and comments with imported peer review comments.
-		if ($this->importPeerReviews) {
-			$templateMgr->assign('commentTitle', strip_tags($this->article->getArticleTitle()));
-			$templateMgr->assign('comments', $this->peerReviews);
-		}
-		
 		parent::display();
 	}
 	
@@ -71,8 +53,7 @@ class EditorDecisionCommentForm extends CommentForm {
 		$this->readUserVars(
 			array(
 				'commentTitle',
-				'comments',
-				'blindCcReviewers'
+				'comments'
 			)
 		);
 	}
@@ -82,10 +63,6 @@ class EditorDecisionCommentForm extends CommentForm {
 	 */
 	function execute() {
 		parent::execute();
-		
-		if ($this->getData('blindCcReviewers') != null) {
-			$this->blindCcReviewers = true;
-		}
 	}
 	
 	/**

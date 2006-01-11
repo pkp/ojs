@@ -39,8 +39,12 @@
 	</td>
 </tr>
 <tr valign="top">
-	<td class="label">{translate key="submission.editorAuthorComments"}</td>
+	<td class="label">{translate key="submission.notifyAuthor"}</td>
 	<td class="value" colspan="2">
+		{url|assign:"notifyAuthorUrl" op="emailEditorDecisionComment" articleId=$submission->getArticleId()}
+		{icon name="mail" url=$notifyAuthorUrl}
+		&nbsp;&nbsp;&nbsp;&nbsp;
+		{translate key="submission.editorAuthorRecord"}
 		{if $submission->getMostRecentEditorDecisionComment()}
 			{assign var="comment" value=$submission->getMostRecentEditorDecisionComment()}
 			<a href="javascript:openComments('{url op="viewEditorDecisionComments" path=$submission->getArticleId() anchor=$comment->getCommentId()}');" class="icon">{icon name="comment"}</a>&nbsp;&nbsp;{$comment->getDatePosted()|date_format:$dateFormatShort}

@@ -1703,11 +1703,6 @@ class SectionEditorAction extends Action {
 			if ($emailComment) {
 				$commentForm->email();
 			}
-			
-			//if ($commentForm->blindCcReviewers) {
-			//	SectionEditorAction::blindCcReviewsToReviewers($commentForm->commentId);
-			//}
-			
 		} else {
 			parent::setupTemplate(true);
 			$commentForm->display();
@@ -1715,12 +1710,86 @@ class SectionEditorAction extends Action {
 	}
 	
 	/**
+	 * Email editor decision comment.
+	 * @param $sectionEditorSubmission object
+	 * @param $send boolean
+	 */
+	function emailEditorDecisionComment($sectionEditorSubmission, $send) {
+		$userDao = &DAORegistry::getDAO('UserDAO');
+		$articleCommentDao =& DAORegistry::getDAO('ArticleCommentDAO');
+		$journal = &Request::getJournal();
+
+		$user = &Request::getUser();
+		import('mail.ArticleMailTemplate');
+		$email = &new ArticleMailTemplate($sectionEditorSubmission);
+	
+		$copyeditor =& $sectionEditorSubmission->getCopyeditor();
+	
+		if ($send && !$email->hasErrors()) {
+			HookRegistry::call('AuthorAction::postEditorDecisionComment', array(&$sectionEditorSubmission, &$send));
+			$email->send();
+
+			$articleComment =& new ArticleComment();
+			$articleComment->setCommentType(COMMENT_TYPE_EDITOR_DECISION);
+			$articleComment->setRoleId(Validation::isEditor()?ROLE_ID_EDITOR:ROLE_ID_SECTION_EDITOR);
+			$articleComment->setArticleId($sectionEditorSubmission->getArticleId());
+			$articleComment->setAuthorId($sectionEditorSubmission->getUserId());
+			$articleComment->setCommentTitle($email->getSubject());
+			$articleComment->setComments($email->getBody());
+			$articleComment->setDatePosted(Core::getCurrentDate());
+			$articleComment->setViewable(true);
+			$articleComment->setAssocId($sectionEditorSubmission->getArticleId());
+			$articleCommentDao->insertArticleComment($articleComment);
+
+			return true;
+		} else {
+			if (!Request::getUserVar('continued')) {
+				$authorUser =& $userDao->getUser($sectionEditorSubmission->getUserId());
+				$email->setSubject($sectionEditorSubmission->getArticleTitle());
+				$email->addRecipient($authorUser->getEmail(), $authorUser->getFullName());
+			} else {
+				if (Request::getUserVar('importPeerReviews')) {
+					$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
+					$reviewAssignments = &$reviewAssignmentDao->getReviewAssignmentsByArticleId($sectionEditorSubmission->getArticleId(), $sectionEditorSubmission->getCurrentRound());
+					$reviewIndexes = &$reviewAssignmentDao->getReviewIndexesForRound($sectionEditorSubmission->getArticleId(), $sectionEditorSubmission->getCurrentRound());
+
+					$body = Locale::translate('submission.comments.importPeerReviews.note') . "\n\n";
+					foreach ($reviewAssignments as $reviewAssignment) {
+						// If the reviewer has completed the assignment, then import the review.
+						if ($reviewAssignment->getDateCompleted() != null && !$reviewAssignment->getCancelled()) {
+							// Get the comments associated with this review assignment
+							$articleComments = &$articleCommentDao->getArticleComments($sectionEditorSubmission->getArticleId(), COMMENT_TYPE_PEER_REVIEW, $reviewAssignment->getReviewId());
+							$body .= "------------------------------------------------------\n";
+							$body .= Locale::translate('submission.comments.importPeerReviews.reviewerLetter', array('reviewerLetter' => chr(ord('A') + $reviewIndexes[$reviewAssignment->getReviewId()]))) . "\n";
+							if (is_array($articleComments)) {
+								foreach ($articleComments as $comment) {
+									// If the comment is viewable by the author, then add the comment.
+									if ($comment->getViewable()) {
+										$body .= $comment->getComments() . "\n";
+									}
+								}
+							}
+							$body .= "------------------------------------------------------\n\n";
+						}
+					$email->setBody($body);
+					}
+				}
+			}
+
+			$email->displayEditForm(Request::url(null, null, 'emailEditorDecisionComment', 'send'), array('articleId' => $sectionEditorSubmission->getArticleId()), 'submission/comment/editorDecisionEmail.tpl', array('isAnEditor' => true));
+
+			return false;
+		}
+	}
+	
+	/**
 	 * Blind CC the reviews to reviewers.
 	 * @param $article object
 	 * @param $send boolean
+	 * @param $inhibitExistingEmail boolean
 	 * @return boolean true iff ready for redirect
 	 */
-	function blindCcReviewsToReviewers($article, $send = false) {
+	function blindCcReviewsToReviewers($article, $send = false, $inhibitExistingEmail = false) {
 		$commentDao = &DAORegistry::getDAO('ArticleCommentDAO');
 		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
@@ -1738,12 +1807,13 @@ class SectionEditorAction extends Action {
 		import('mail.ArticleMailTemplate');
 		$email = &new ArticleMailTemplate($article, 'SUBMISSION_DECISION_REVIEWERS');
 
-		if ($send && !$email->hasErrors()) {
+		if ($send && !$email->hasErrors() && !$inhibitExistingEmail) {
 			HookRegistry::call('SectionEditorAction::blindCcReviewsToReviewers', array(&$article, &$reviewAssignments, &$comments, &$email));
 			$email->send();
 			return true;
 		} else {
-			if (!Request::getUserVar('continued')) {
+			if ($inhibitExistingEmail || !Request::getUserVar('continued')) {
+				$email->clearRecipients();
 				foreach ($reviewAssignments as $reviewAssignment) {
 					if ($reviewAssignment->getDateCompleted() != null && !$reviewAssignment->getCancelled()) {
 						$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
@@ -1759,7 +1829,7 @@ class SectionEditorAction extends Action {
 				$email->assignParams($paramArray);
 			}
 			
-			$email->displayEditForm(Request::url(null, null, 'blindCcReviewsToReviewers'), array('articleId' => $article->getArticleId()), 'submission/comment/commentEmail.tpl');
+			$email->displayEditForm(Request::url(null, null, 'blindCcReviewsToReviewers'), array('articleId' => $article->getArticleId()));
 			return false;
 		}
 	}
@@ -1884,21 +1954,6 @@ class SectionEditorAction extends Action {
 		}
 	}	
 	
-	/**
-	 * Import Peer Review comments.
-	 * @param $article object
-	 */
-	function importPeerReviews($article) {
-		if (HookRegistry::call('SectionEditorAction::importPeerReviews', array(&$article))) return;
-
-		import('submission.form.comment.EditorDecisionCommentForm');
-		
-		$commentForm = &new EditorDecisionCommentForm($article, ROLE_ID_EDITOR);
-		$commentForm->initData();
-		$commentForm->importPeerReviews();
-		$commentForm->display();
-	}
-
 	/**
 	 * Accepts the review assignment on behalf of its reviewer.
 	 * @param $articleId int

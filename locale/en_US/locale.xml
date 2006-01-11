@@ -322,7 +322,8 @@
 	<message key="submission.editorDecision">Editor Decision</message>
 	<message key="submission.round">Round&amp;nbsp;{$round}</message>
 	<message key="submission.editorReview">Editor Review</message>
-	<message key="submission.editorAuthorComments">Editor/Author</message>
+	<message key="submission.notifyAuthor">Notify Author</message>
+	<message key="submission.editorAuthorRecord">Editor/Author Email Record</message>
 	<message key="submission.reviewersVersion">Reviewer's annotated version of file</message>
 	<message key="submission.postReviewVersion">Post-review version of file</message>
 	<message key="submission.editorVersion">Editor Version</message>
@@ -1491,7 +1492,6 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	<message key="editor.article.comments">Comments</message>
 	<message key="editor.article.saveRating">Save Rating</message>
 	<message key="editor.article.noneSelected">None Selected</message>
-	<message key="editor.article.editorAuthorComments">Editor/Author Comments</message>
 	<message key="editor.article.authorProofing">Author Proofing</message>
 	<message key="editor.article.archiveSubmission">Archive Submission</message>
 	<message key="editor.article.emailAuthorOnArchive">Email author about the archiving of this submission?</message>
@@ -1852,6 +1852,11 @@ The file can be viewed by clicking on the file name. A new or revised file can b
 	<message key="submission.comments.editComment">Edit Comment</message>
 	<message key="submission.comments.confirmDelete">Are you sure you would like to delete this comment?</message>
 	<message key="submission.comments.importPeerReviews">Import Peer Reviews</message>
+	<message key="submission.comments.blindCcReviewers">After sending, present a blind carbon copy of editorial decision for emailing to reviewers.</message>
+	<message key="submission.comments.importPeerReviews.note"><![CDATA[The editor should replace this text with the editorial decision and explanation for this submission.
+	
+	]]></message>
+	<message key="submission.comments.importPeerReviews.reviewerLetter">Reviewer {$reviewerLetter}:</message>
 	<message key="submission.comments.forAuthorEditor">For author and editor</message>
 	<message key="submission.comments.forEditor">For editor</message>
 	<message key="submission.comments.sendDecisionToReviewers">Send Reviewers editorial decision</message>
