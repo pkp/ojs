@@ -125,6 +125,9 @@ class RTXMLParser {
 				case 'context_description':
 					$newContext->description = $attrib->getValue();
 					break;
+				case 'cites_context':
+					$newContext->citedBy = true;
+					break;
 				case 'author_terms':
 					$newContext->authorTerms = true;
 					break;

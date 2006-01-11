@@ -122,6 +122,9 @@ class RTContext {
 	
 	/** @var $defineTerms boolean default use as define terms context */
 	var $defineTerms = false;
+
+	/** @var $citedBy boolean default use as "cited by" context */
+	var $citedBy = false;
 	
 	/** @var $order int ordering of this context within version */
 	var $order = 0;
@@ -184,6 +187,14 @@ class RTContext {
 
 	function getDescription() {
 		return $this->description;
+	}
+
+	function getCitedBy() {
+		return $this->citedBy;
+	}
+
+	function setCitedBy($citedBy) {
+		$this->citedBy = $citedBy;
 	}
 
 	function getAuthorTerms() {

@@ -67,7 +67,7 @@
 				{if $isUserLoggedIn}
 					<a href="javascript:openRTWindow('{url page="rt" op="emailColleague" path=$articleId|to_array:$galleyId}');">{translate key="rt.colleague"}</a>
 				{else}
-					{translate key="rt.colleague"}&nbsp;*
+					{translate key="rt.colleague"}*
 					{assign var=needsLoginNote value=1}
 				{/if}
 			</li>
@@ -75,7 +75,7 @@
 		{if $journalRt->getAddComment() && $postingAllowed}
 			<li><a href="{url page="comment" op="add" path=$article->getArticleId()|to_array:$galleyId}" target="_parent">{translate key="rt.addComment"}</a></li>
 		{elseif !$postingDisabled}
-			{translate key="rt.addComment"}&nbsp;*
+			{translate key="rt.addComment"}*
 			{assign var=needsLoginNote value=1}
 		{/if}
 		{if $journalRt->getEmailAuthor()}
@@ -83,7 +83,7 @@
 				{if $isUserLoggedIn}
 					<a href="javascript:openRTWindow('{url page="rt" op="emailAuthor" path=$articleId|to_array:$galleyId}');">{translate key="rt.emailAuthor"}</a>
 				{else}
-					{translate key="rt.emailAuthor"}&nbsp;*
+					{translate key="rt.emailAuthor"}*
 					{assign var=needsLoginNote value=1}
 				{/if}
 			</li>

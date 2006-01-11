@@ -1541,6 +1541,10 @@
 			<NOTNULL/>
 		</field>
 		<field name="description" type="X"/>
+		<field name="cited_by" type="I1">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
 		<field name="author_terms" type="I1">
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>

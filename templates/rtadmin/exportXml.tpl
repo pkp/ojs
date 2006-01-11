@@ -18,6 +18,8 @@
 		<context_description>{$context->getDescription()|escape}</context_description>
 {if $context->getAuthorTerms()}		<author_terms />{/if}
 {if $context->getDefineTerms()}		<define_terms />{/if}
+{if $context->getGeoTerms()}		<geo_terms />{/if}
+{if $context->getCitedBy()}		<cites_context />{/if}
 
 {foreach from=$context->getSearches() item=search}
 		<search>

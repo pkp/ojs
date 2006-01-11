@@ -21,7 +21,7 @@
 		<context_abbrev>Work citing it</context_abbrev>
 		<context_description>If the article is indexed in Google Scholar, it may be accompanied by a "Cited by X" link, which leads to a list of works that cite it. As well, Google Scholar will list all items quoting the the title and author. To access online resources that are only available through your research library, you may be able to go to Scholar Preferences in Google Scholar and activate the Library Links for your institution.
 		</context_description>
-		<author_terms/>
+		<cites_context/>
 		<search>
 			<search_title>Google Scholar</search_title>
 			<search_description>Search for resources citing this article using Google Scholar.</search_description>

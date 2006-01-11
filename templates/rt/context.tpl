@@ -73,7 +73,7 @@
 <h3>"{$article->getArticleTitle()|strip_unsafe_html}"</h3>
 
 
-<p>{if $context->getDefineTerms()}{translate key="rt.context.defineTermsDescription"}{elseif $context->getAuthorTerms()}{translate key="rt.context.authorTermsDescription"}{else}{translate key="rt.context.searchDescription"}{/if}</p>
+<p>{if $context->getDefineTerms()}{translate key="rt.context.defineTermsDescription"}{elseif $context->getAuthorTerms()}{translate key="rt.context.authorTermsDescription"}{elseif $isCitesContext}{translate key="rt.context.citesContextDescription}{else}{translate key="rt.context.searchDescription"}{/if}</p>
 
 <table class="data" width="100%">
 	<form name="terms">

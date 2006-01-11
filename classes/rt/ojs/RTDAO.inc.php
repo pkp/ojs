@@ -373,10 +373,10 @@ class RTDAO extends DAO {
 	function insertContext(&$context) {
 		$this->update(
 			'INSERT INTO rt_contexts
-			(version_id, title, abbrev, description, author_terms, geo_terms, define_terms, seq)
+			(version_id, title, abbrev, description, cited_by, author_terms, geo_terms, define_terms, seq)
 			VALUES
-			(?, ?, ?, ?, ?, ?, ?, ?)',
-			array($context->versionId, $context->title, $context->abbrev, $context->description, $context->authorTerms, $context->geoTerms, $context->defineTerms, $context->order)
+			(?, ?, ?, ?, ?, ?, ?, ?, ?)',
+			array($context->versionId, $context->title, $context->abbrev, $context->description, $context->citedBy, $context->authorTerms, $context->geoTerms, $context->defineTerms, $context->order)
 		);
 		
 		$context->contextId = $this->getInsertId('rt_contexts', 'context_id');
@@ -397,9 +397,9 @@ class RTDAO extends DAO {
 		// FIXME Update searches?
 		return $this->update(
 			'UPDATE rt_contexts
-			SET title = ?, abbrev = ?, description = ?, author_terms = ?, geo_terms = ?, define_terms = ?, seq = ?
+			SET title = ?, abbrev = ?, description = ?, cited_by = ?, author_terms = ?, geo_terms = ?, define_terms = ?, seq = ?
 			WHERE context_id = ? AND version_id = ?',
-			array($context->title, $context->abbrev, $context->description, $context->authorTerms, $context->geoTerms, $context->defineTerms, $context->order, $context->contextId, $context->versionId)
+			array($context->title, $context->abbrev, $context->description, $context->citedBy, $context->authorTerms, $context->geoTerms, $context->defineTerms, $context->order, $context->contextId, $context->versionId)
 		);
 	}
 	
@@ -469,6 +469,7 @@ class RTDAO extends DAO {
 		$context->setTitle($row['title']);
 		$context->setAbbrev($row['abbrev']);
 		$context->setDescription($row['description']);
+		$context->setCitedBy($row['cited_by']);
 		$context->setAuthorTerms($row['author_terms']);
 		$context->setGeoTerms($row['geo_terms']);
 		$context->setDefineTerms($row['define_terms']);
