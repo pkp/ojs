@@ -14,7 +14,7 @@
 <!DOCTYPE countries [
 	<!ELEMENT countries (country+)>
 	<!ELEMENT country EMPTY>
-		<!ATTLIST locale
+		<!ATTLIST country
 			code CDATA #REQUIRED
 			name CDATA #REQUIRED>
 ]>

@@ -856,8 +856,8 @@ Configurar o suporte ao LOCKSS para o SEER/OJS é necessário somente após a pu
 	<message key="manager.setup.disciplineProvideExamples">Informe exemplos de áreas do conhecimento relevantes para esta revista:</message>
 	<message key="manager.setup.disciplineExamples">(Ex.: História; Educação; Sociologia; Psicologia; Direito; Ciência da Informação)</message>
 	<message key="manager.setup.subjectClassification">Classificação de Assunto</message>
-	<message key="manager.setup.subjectClassificationDescription">A revista utiliza um sistema de classificação de assunto disponível na web.<br />
-Título do sistema de classificação: </message>
+	<message key="manager.setup.subjectClassificationDescription"><![CDATA[A revista utiliza um sistema de classificação de assunto disponível na web.<br />
+Título do sistema de classificação: ]]></message>
 	<message key="manager.setup.subjectClassificationExamples">(Ex.: Classificação de Assuntos da Matemática; Classificação da Biblioteca do Congresso)</message>
 	<message key="manager.setup.subjectKeywordTopic">Palavras-chave</message>
 	<message key="manager.setup.subjectProvideExamples">Informe exemplos de palavras-chave ou tópicos para auxiliar o autor:</message>
@@ -928,7 +928,7 @@ Escolha um modelo para administrar os aspectos do processo editorial. (Para desi
 	<message key="manager.setup.enablePublicArticleId">Idenficadores Personalizados serão utilizados para identificar itens publicados.</message>
 	<message key="manager.setup.pageNumberIdentifier">Opção de Número de Página</message>
 	<message key="manager.setup.enablePageNumber">A numeração de páginas para cada item publicado podem ser incluídos manualmente no Sumário da revista(Ex.: pg. 13-26).</message>
-	+	<message key="manager.setup.subscriptionDescription">When Subscription Management is activated, the Journal Manager is able to set up the Subscription Types (with a fee structure) and to manage subscribers (under Subscriptions on the Journal Management page). Subscription Management also enables the Editor to designate an article or issue for free access, whether immediately or up to 24 months after publication.</message>
+	<message key="manager.setup.subscriptionDescription">When Subscription Management is activated, the Journal Manager is able to set up the Subscription Types (with a fee structure) and to manage subscribers (under Subscriptions on the Journal Management page). Subscription Management also enables the Editor to designate an article or issue for free access, whether immediately or up to 24 months after publication.</message>
 	<message key="manager.setup.subscriptionDescription">Ao habilitar a opção Controle de Assinaturas, o editor gerente poderá definir Tipos de Assinatura (com estrutura de valores) e administrar os assinantes (no item Assinaturas na Administração da Revista). O Controle de Assinaturas permite também designar os padrões de acesso a um artigo ou edição, inclusive de acesso público, seja imediatamente ou até 24 meses após a publicação.</message>
 	<message key="manager.setup.subscriptionContactDescription">Caso a adminstração de assinaturas esteja habilitada, a pessoa cadastrada na seção Sobre a Revista será o contato principal para assinaturas.</message>
 	<message key="manager.setup.subscriptionAdditionalInformation">Informação Adicional</message>

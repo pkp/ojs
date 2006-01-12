@@ -287,14 +287,12 @@
 	<table name="plugin_settings">
 		<field name="plugin_name" type="C2" size="80">
 			<KEY/>
-			<NOTNULL/>
 		</field>
 		<field name="journal_id" type="I8">
 			<KEY/>
 		</field>
 		<field name="setting_name" type="C2" size="80">
 			<KEY/>
-			<NOTNULL/>
 		</field>
 		<field name="setting_value" type="X"/>
 		<field name="setting_type" type="C2" size="6">
@@ -480,11 +478,9 @@
 	<table name="custom_section_orders">
 		<field name="issue_id" type="I8">
 			<KEY/>
-			<NOTNULL/>
 		</field>
 		<field name="section_id" type="I8">
 			<KEY/>
-			<NOTNULL/>
 		</field>
 		<field name="seq" type="F">
 			<NOTNULL/>

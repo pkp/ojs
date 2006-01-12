@@ -301,8 +301,8 @@ Hemos decidido cancelar nuestra petición para que revisara el envío "{$article
 Si tiene cualquier pregunta, no dude en contactar con nosotros/as.
 
 {$editorialContactSignature}</field>
-		</row>
 			<field name="description">Este correo del / de la Editor/a de Sección a un/a Revisor/a que tiene la revisión de un envío en progreso para notificarles que la revisión se ha cancelado.</field>
+		</row>
 		<row>
 			<field name="email_key">REVIEW_CONFIRM</field>
 			<field name="subject">Acepto la revisión</field>
