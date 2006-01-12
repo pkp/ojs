@@ -231,47 +231,6 @@ Resumen
 			<field name="description">Este correo del / de la Editor/a de Sección a un/a revisor/a le solicita que acepte o rechace la revisión de un envío. Proporciona información sobre el envío como el título y el resumen, el plazo de revisión, y cómo acceder al envío propiamente dicho. Este mensaje se usa cuando se selecciona el Proceso de Envío Estándar en la configuración de la revista, paso 2. (En caso de haber seleccionado otra opción, véase REVIEW_REQ_MULTI_ATTACHED y REVIEW_REQUEST_ATTACHED.)</field>
 		</row>
 		<row>
-			<field name="email_key">REVIEW_REQUEST_MULTIPLE</field>
-			<field name="subject">Solicitud de revisión de artículo</field>
-			<field name="body">Estimado/a revisor/a:
-
-Tengo el convencimiento de que sería un/a excelente revisor/a del manuscrito, "{$articleTitle}," que ha sido enviado a {$journalName}. A continuación encontrará un extracto del envío, con la esperanza de que aceptará llevar a cabo esta importante tarea para nosotros.
-
-A continuación le mostramos el resumen del envío, le pido que se identifique en el la revista antes del {$weekLaterDate} y nos indique si podrá llevar o no a cabo la revisión. Ahí también podrá acceder al envío y registrar su revisión y su recomendación.
-
-Gracias por tener en cuenta nuestra solicitud.
-
-{$editorialContactSignature}
-
-
-
-"{$articleTitle}"
-
-Resumen
-{$articleAbstract}</field>
-			<field name="description">Este correo se envía por el/la Editor/a de Sección a todos/as los/as revisores de un envío que no hayan sido notificados/as aún de una asignación de revisión. Les proporciona información sobre el envío como el título y el resumen. Este mensaje se usa cuando se selecciona el Proceso de Envío Estándar en la configuración de la revista, paso 2. (En caso de haber seleccionado otra opción, véase REVIEW_REQ_MULTI_ATTACHED y REVIEW_REQUEST_ATTACHED.)</field>
-		</row>
-		<row>
-			<field name="email_key">REVIEW_REQ_MULTI_ATTACHED</field>
-			<field name="subject">Petición de revisión de artículo</field>
-			<field name="body">Estimado/a revisor/a:
-
-Tengo el convencimiento de que sería un/a excelente revisor/a del manuscrito, "{$articleTitle}," que ha sido enviado a {$journalName}. A continuación encontrará un extracto del envío, con la esperanza de que aceptará llevar a cabo esta importante tarea para nosotros. A continuación le mostramos las Normas de Revisión de esta revista y adjunto a este correo-e recibirá el envío.
-
-Por favor, responda a este correo antes del {$weekLaterDate} si puede y desea hacer la revisión.
-
-Gracias por tener en cuenta nuestra solicitud.
-
-{$editorialContactSignature}
-
-
-Normas de Revisión
-
-{$reviewGuidelines}
-</field>
-		<field name="description">Este correo se envía por el/la Editor/a de Sección a todos/as los/as revisores de un envío que no hayan sido notificados/as aún de una asignación de revisión. Contiene el envío propiamente dicho como adjunto. Este correo se usa cuando es seleccionado Proceso de Revisión mediante Adjuntos en Correo-e en la configuración de la revista, paso 2. (En caso de haber seleccionado otra opción, véase REVIEW_REQUEST_MULTIPLE y REVIEW_REQUEST.)</field>
-		</row>
-		<row>
 			<field name="email_key">REVIEW_REQUEST_ATTACHED</field>
 			<field name="subject">Petición de revisión de artículo</field>
 			<field name="body">{$reviewerName}:
