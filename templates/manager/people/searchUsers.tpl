@@ -71,8 +71,8 @@ function confirmAndPrompt(userId) {
 	<!--
 	function enrollUser(userId) {ldelim}
 		var fakeUrl = '{url op="enroll" path="ROLE_ID" userId="USER_ID"}';
-		fakeUrl.replace('ROLE_ID', document.enroll.roleId.options[document.enroll.roleId.selectedIndex]);
-		fakeUrl.replace('USER_ID', userId);
+		fakeUrl = fakeUrl.replace('ROLE_ID', document.enroll.roleId.options[document.enroll.roleId.selectedIndex].value);
+		fakeUrl = fakeUrl.replace('USER_ID', userId);
 		location.href = fakeUrl;
 	{rdelim}
 	// -->
