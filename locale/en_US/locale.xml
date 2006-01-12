@@ -1838,6 +1838,7 @@ The file can be viewed by clicking on the file name. A new or revised file can b
 	
 	<!-- Submission Comments -->
 	<message key="submission.comments.comments">Comments</message>
+	<message key="submission.comments.addComment">Add Comment</message>
 	<message key="submission.comments.review">Review</message>
 	<message key="submission.comments.editorAuthorCorrespondence">Editor/Author Correspondence</message>
 	<message key="submission.comments.copyeditComments">Copyedit Comments</message>
@@ -1854,9 +1855,6 @@ The file can be viewed by clicking on the file name. A new or revised file can b
 	<message key="submission.comments.confirmDelete">Are you sure you would like to delete this comment?</message>
 	<message key="submission.comments.importPeerReviews">Import Peer Reviews</message>
 	<message key="submission.comments.blindCcReviewers">After sending, present a blind carbon copy of editorial decision for emailing to reviewers.</message>
-	<message key="submission.comments.importPeerReviews.note"><![CDATA[The editor should replace this text with the editorial decision and explanation for this submission.
-	
-	]]></message>
 	<message key="submission.comments.importPeerReviews.reviewerLetter">Reviewer {$reviewerLetter}:</message>
 	<message key="submission.comments.forAuthorEditor">For author and editor</message>
 	<message key="submission.comments.forEditor">For editor</message>

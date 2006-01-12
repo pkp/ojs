@@ -59,7 +59,7 @@
 	<td class="value"><input type="text" name="commentTitle" id="commentTitle" value="{$commentTitle|escape}" size="50" maxlength="100" class="textField" /></td>
 </tr>
 <tr valign="top">
-	<td class="label">{fieldLabel name="comments" required="true" key="submission.comments.comments"}</td>
+	<td class="label">{fieldLabel name="comments" key="submission.comments.addComment"}</td>
 	<td class="value"><textarea id="comments" name="comments" rows="10" cols="50" class="textArea">{$comments|escape}</textarea></td>
 </tr>
 </table>

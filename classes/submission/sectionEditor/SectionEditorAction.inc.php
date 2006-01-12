@@ -1753,7 +1753,7 @@ class SectionEditorAction extends Action {
 					$reviewAssignments = &$reviewAssignmentDao->getReviewAssignmentsByArticleId($sectionEditorSubmission->getArticleId(), $sectionEditorSubmission->getCurrentRound());
 					$reviewIndexes = &$reviewAssignmentDao->getReviewIndexesForRound($sectionEditorSubmission->getArticleId(), $sectionEditorSubmission->getCurrentRound());
 
-					$body = Locale::translate('submission.comments.importPeerReviews.note') . "\n\n";
+					$body = '';
 					foreach ($reviewAssignments as $reviewAssignment) {
 						// If the reviewer has completed the assignment, then import the review.
 						if ($reviewAssignment->getDateCompleted() != null && !$reviewAssignment->getCancelled()) {
@@ -1765,7 +1765,7 @@ class SectionEditorAction extends Action {
 								foreach ($articleComments as $comment) {
 									// If the comment is viewable by the author, then add the comment.
 									if ($comment->getViewable()) {
-										$body .= $comment->getComments() . "\n";
+										$body .= $comment->getComments() . "\n\n";
 									}
 								}
 							}
