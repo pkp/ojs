@@ -1838,7 +1838,6 @@ The file can be viewed by clicking on the file name. A new or revised file can b
 	
 	<!-- Submission Comments -->
 	<message key="submission.comments.comments">Comments</message>
-	<message key="submission.comments.addComment">Add Comment</message>
 	<message key="submission.comments.review">Review</message>
 	<message key="submission.comments.editorAuthorCorrespondence">Editor/Author Correspondence</message>
 	<message key="submission.comments.copyeditComments">Copyedit Comments</message>

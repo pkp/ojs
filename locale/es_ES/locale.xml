@@ -15,7 +15,7 @@
   * Traducción de la versión original 1.365 por Sergio Ruiz (sruiz@revistaesalud.com) - 2005/09/29    
     -->
  
-<locale name="es_ES" full_name="Español_España">
+<locale name="es_ES" full_name="Español (España)">
 	<!--
 	 * This file is organized into several major sections, separated
 	 * by comments like this one. These sections are called:
@@ -589,7 +589,7 @@
 	<message key="admin.siteAdmin">Administración del sitio</message>
 	<message key="admin.siteSettings">Configuración del sitio</message>
 	<message key="admin.hostedJournals">Revistas alojadas</message>
-	<message key="admin.authSources">ADD HERE</messages>
+	<message key="admin.authSources">ADD HERE</message>
 	
 	<message key="admin.settings.siteTitle">Título</message>
 	<message key="admin.settings.introduction">Introducción</message>
@@ -619,7 +619,7 @@ Tenga en cuenta que el interfaz OAI se puede desactivar editando la configuraci�
 	<message key="admin.expireSessions">Caducidad de las sesiones</message>
 	<message key="admin.confirmExpireSessions">¿Seguro que desea cerrar todas las sesiones? Esto obligará a todos/as los/as usuarios/as logados en el sistema en este momento a identificarse de nuevo (incluyéndole a usted).</message>
 	<message key="admin.clearTemplateCache">Vaciar la cache de la plantilla</message>
-	<message key="admin.clearDataCache">ADD HERE</messages>
+	<message key="admin.clearDataCache">ADD HERE</message>
 	<message key="admin.confirmClearTemplateCache">¿Seguro que desea vaciar la caché de las plantillas compiladas?</message>
 	<message key="admin.systemInformation">Información del sistema</message>
 	
