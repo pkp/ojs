@@ -259,49 +259,6 @@ Resumo
 			<field name="description">Mensagem do Editor de Seção para solicitar ao Avaliador que indique disponibilidade ou não para realizar uma avaliação. Oferece informações sobre a submissão, como título e resumo, além da data para a conclusão dos trabalhos e como acessar o documento. Esta mensagem é usada quando se utiliza o Processo Padrão de Avaliação, definido no Passo 2 de Configuração da Revista e a opçõa de acesso one-click está habilitada (Caso contrário veja REVIEW_REQ_MULTI_ATTACHED e REVIEW_REQUEST_ATTACHED).</field>
 		</row>		
 		<row>
-			<field name="email_key">REVIEW_REQUEST_MULTIPLE</field>
-			<field name="subject">Solicitação de Avaliação de Artigo</field>
-			<field name="body">Caro Avaliador,
-
-Acredito que seu conhecimento será de grande valia para realizar a avaliação do manuscrito "{$articleTitle}" submetido a {$journalName}. Informações sobre a submissão encontram-se abaixo, e espero que considere assumir esta importante responsabilidade.
-
-O resumo da submissão está no final da mensagem e solicitamos que acesse o sistema até {$weekLaterDate} para informar se estará disponível ou não para realizar a avaliação, bem como acessar os dados completos da submissão e registrar sua avaliação e recomendações, através da URL {$journalUrl}.
-
-
-Agradecemos desde já sua atenção.
-
-{$editorialContactSignature}
-
-
-
-"{$articleTitle}"
-
-Resumo
-{$articleAbstract}</field>
-			<field name="description">Mensagem enviada pelo Editor de Seção a todos os Avaliadores que ainda não foram notificados que há uma tarefa de avaliação designada. Passa informações sobre o documento, como título e resumo. Esta mensagem é usada quando se utiliza o Processo Padrão de Avaliação, definido no Passo 2 de Configuração da Revista.(Caso contrário veja REVIEW_REQ_MULTI_ATTACHED e REVIEW_REQUEST_ATTACHED.)</field>
-		</row>
-		<row>
-			<field name="email_key">REVIEW_REQ_MULTI_ATTACHED</field>
-			<field name="subject">Solicitação de Avaliação de Artigo</field>
-			<field name="body">Caro Avaliador,
-
-Acredito que seu conhecimento será de grande valia para realizar a avaliação do manuscrito "{$articleTitle}" submetido a {$journalName}. As Diretrizes para Avaliação encontram-se no final desta mensagem, enquanto o manuscrito está em anexo. Espero que considere assumir esta importante responsabilidade.
-
-Responda a esta mensagem até {$weekLaterDate} para informar se estará disponível ou não para realizar a avaliação.
-
-
-Agradecemos desde já sua atenção.
-
-{$editorialContactSignature}
-
-
-Diretrizes para Avaliação
-
-{$reviewGuidelines}
-			</field>
-			<field name="description">Mensagem enviada pelo Editor de Seção a todos os Avaliadores que ainda não foram notificados que há uma tarefa de avaliação designada. O documento da submissão está em anexo. Passa informações sobre o documento, como título e resumo. Esta mensagem é usada quando se utiliza o Processo de Avaliação via Email-Anexo, definido no Passo 2 de Configuração da Revista. (Caso contrário veja REVIEW_REQUEST_MULTIPLE e REVIEW_REQUEST.)</field>
-		</row>
-		<row>
 			<field name="email_key">REVIEW_REQUEST_ATTACHED</field>
 			<field name="subject">Solicitação de Avaliação de Artigo</field>
 			<field name="body">{$reviewerName},
