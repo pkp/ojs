@@ -681,7 +681,7 @@ class SectionEditorAction extends Action {
 			// Add log
 			import('article.log.ArticleLog');
 			import('article.log.ArticleEventLogEntry');
-			ArticleLog::logEvent($articleId, ARTICLE_LOG_REVIEW_RECOMMENDATION, ARTICLE_LOG_TYPE_REVIEW, $reviewAssignment->getReviewId(), 'log.review.reviewRecommendationSet', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $articleId, 'round' => $reviewAssignment->getRound()));
+			ArticleLog::logEvent($articleId, ARTICLE_LOG_REVIEW_RECOMMENDATION_BY_PROXY, ARTICLE_LOG_TYPE_REVIEW, $reviewAssignment->getReviewId(), 'log.review.reviewRecommendationSetByProxy', array('editorName' => $user->getFullName(), 'reviewerName' => $reviewer->getFullName(), 'articleId' => $articleId, 'round' => $reviewAssignment->getRound()));
 		}
 	 }
 	 
@@ -770,7 +770,7 @@ class SectionEditorAction extends Action {
 			// Add log
 			import('article.log.ArticleLog');
 			import('article.log.ArticleEventLogEntry');
-			ArticleLog::logEvent($sectionEditorSubmission->getArticleId(), ARTICLE_LOG_REVIEW_RESUBMIT, ARTICLE_LOG_TYPE_EDITOR, $user->getUserId(), 'log.review.resubmitted', array('articleId' => $sectionEditorSubmission->getArticleId()));
+			ArticleLog::logEvent($sectionEditorSubmission->getArticleId(), ARTICLE_LOG_REVIEW_RESUBMIT, ARTICLE_LOG_TYPE_EDITOR, $user->getUserId(), 'log.review.resubmit', array('articleId' => $sectionEditorSubmission->getArticleId()));
 		}
 	}
 	 
@@ -1956,8 +1956,7 @@ class SectionEditorAction extends Action {
 	
 	/**
 	 * Accepts the review assignment on behalf of its reviewer.
-	 * @param $articleId int
-	 * @param $accept boolean
+	 * @param $reviewId int
 	 */
 	function acceptReviewForReviewer($reviewId) {
 		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
@@ -1987,6 +1986,64 @@ class SectionEditorAction extends Action {
 			$entry->setDateLogged(Core::getCurrentDate());
 			$entry->setEventType(ARTICLE_LOG_REVIEW_ACCEPT_BY_PROXY);
 			$entry->setLogMessage('log.review.reviewAcceptedByProxy', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $reviewAssignment->getArticleId(), 'round' => $reviewAssignment->getRound(), 'userName' => $user->getFullName()));
+			$entry->setAssocType(ARTICLE_LOG_TYPE_REVIEW);
+			$entry->setAssocId($reviewAssignment->getReviewId());
+
+			ArticleLog::logEventEntry($reviewAssignment->getArticleId(), $entry);
+		}
+	}
+
+	/**
+	 * Upload a review on behalf of its reviewer.
+	 * @param $reviewId int
+	 */
+	function uploadReviewForReviewer($reviewId) {
+		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
+		$userDao = &DAORegistry::getDAO('UserDAO');
+                $user = &Request::getUser();
+
+		$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($reviewId);
+		$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId(), true);
+		
+		if (HookRegistry::call('SectionEditorAction::uploadReviewForReviewer', array(&$reviewAssignment, &$reviewer))) return;
+
+		// Upload the review file.
+		import('file.ArticleFileManager');
+		$articleFileManager = &new ArticleFileManager($reviewAssignment->getArticleId());
+		// Only upload the file if the reviewer has yet to submit a recommendation
+		if ($reviewAssignment->getRecommendation() == null && !$reviewAssignment->getCancelled()) {
+			$fileName = 'upload';
+			if ($articleFileManager->uploadedFileExists($fileName)) {
+				if ($reviewAssignment->getReviewerFileId() != null) {
+					$fileId = $articleFileManager->uploadReviewFile($fileName, $reviewAssignment->getReviewerFileId());
+				} else {
+					$fileId = $articleFileManager->uploadReviewFile($fileName);
+				}
+			}
+		}
+
+		if (isset($fileId) && $fileId != 0) {
+			// Only confirm the review for the reviewer if 
+			// he has not previously done so.
+			if ($reviewAssignment->getDateConfirmed() == null) {
+				$reviewAssignment->setDeclined(0);
+				$reviewAssignment->setDateConfirmed(Core::getCurrentDate());
+			}
+
+			$reviewAssignment->setReviewerFileId($fileId);
+			$reviewAssignment->stampModified();
+			$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
+
+			// Add log
+			import('article.log.ArticleLog');
+			import('article.log.ArticleEventLogEntry');
+
+			$entry = &new ArticleEventLogEntry();
+			$entry->setArticleId($reviewAssignment->getArticleId());
+			$entry->setUserId($user->getUserId());
+			$entry->setDateLogged(Core::getCurrentDate());
+			$entry->setEventType(ARTICLE_LOG_REVIEW_FILE_BY_PROXY);
+			$entry->setLogMessage('log.review.reviewFileByProxy', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $reviewAssignment->getArticleId(), 'round' => $reviewAssignment->getRound(), 'userName' => $user->getFullName()));
 			$entry->setAssocType(ARTICLE_LOG_TYPE_REVIEW);
 			$entry->setAssocId($reviewAssignment->getReviewId());
 

@@ -1465,6 +1465,7 @@ Latest is date of most recently accepted review.<br/>
 Active is how many reviews are currently being considered or underway.]]></message>
 	<message key="editor.article.replaceReviewer">Replace Reviewer</message>
 	<message key="editor.article.editorToEnter">Editor to enter recommendation/comments for reviewer</message>
+	<message key="editor.article.uploadReviewForReviewer">Upload review</message>
 	<message key="editor.article.peerReviewOptions">Peer Review Options</message>	
 	<message key="editor.article.decision">Decision</message>	
 	<message key="editor.article.noEditorSelected">No editor selected.</message>
@@ -2184,10 +2185,12 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="log.review.reviewerRated">{$reviewerName} has been rated for the round {$round} review of submission {$articleId}.</message>
 	<message key="log.review.reviewDueDateSet">The due date for the round {$round} review of submission {$articleId} by {$reviewerName} has been set to {$dueDate}.</message>
 	<message key="log.review.reviewRecommendationSet">The recommendation for the round {$round} review of submission {$articleId} by {$reviewerName} has been set.</message>
+	<message key="log.review.reviewRecommendationSetByProxy">The recommendation for the round {$round} review of submission {$articleId} has been set by the editor, {$editorName}, on behalf of the reviewer, {$reviewerName}.</message>
 	<message key="log.review.resubmit">The submission {$articleId} has been resubmitted for review.</message>
 	<message key="log.review.reviewDeclined">{$reviewerName} has declined the round {$round} review for submission {$articleId}.</message>
 	<message key="log.review.reviewAccepted">{$reviewerName} has accepted the round {$round} review for submission {$articleId}.</message>
 	<message key="log.review.reviewAcceptedByProxy">{$userName} has accepted the round {$round} review for submission {$articleId} on behalf of {$reviewerName}.</message>
+	<message key="log.review.reviewFileByProxy">The Editor, {$userName}, has uploaded a review file for round {$round} of submission {$articleId} on behalf of the reviewer, {$reviewerName}.</message>
 	<message key="log.review.reviewerFile">A reviewer file has been uploaded.</message>
 
 

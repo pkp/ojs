@@ -532,12 +532,22 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	}
 
 	function acceptReviewForReviewer($args) {
-		$articleId = $args[0];
+		$articleId = (int) isset($args[0])?$args[0]:0;
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
 		
-		$reviewId = $args[1];
+		$reviewId = (int) isset($args[1])?$args[1]:0;
 		
 		SectionEditorAction::acceptReviewForReviewer($reviewId);
+		Request::redirect(null, null, 'submissionReview', $articleId);
+	}
+
+	function uploadReviewForReviewer($args) {
+		$articleId = (int) Request::getUserVar('articleId');
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
+		
+		$reviewId = (int) Request::getUserVar('reviewId');
+		
+		SectionEditorAction::uploadReviewForReviewer($reviewId);
 		Request::redirect(null, null, 'submissionReview', $articleId);
 	}
 

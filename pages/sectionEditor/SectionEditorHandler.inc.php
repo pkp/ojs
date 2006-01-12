@@ -283,6 +283,11 @@ class SectionEditorHandler extends Handler {
 		SubmissionEditHandler::acceptReviewForReviewer($args);
 	}
 	
+	function uploadReviewForReviewer($args) {
+		import('pages.sectionEditor.SubmissionEditHandler');
+		SubmissionEditHandler::uploadReviewForReviewer($args);
+	}
+	
 	function enterReviewerRecommendation($args) {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::enterReviewerRecommendation($args);

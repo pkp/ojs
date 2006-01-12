@@ -85,7 +85,7 @@
 		<td width="14%"><h4>{translate key="submission.round" round=$round}</h4></td>
 		<td width="64%" class="nowrap">
 			<a href="{url op="selectReviewer" path=$submission->getArticleId()}" class="action">{translate key="editor.article.selectReviewer"}</a>&nbsp;&nbsp;&nbsp;&nbsp;
-			<a href="{url op="submissionRegrets" path=$submission->getArticleId()}" class="action">{translate key="sectionEditor.regrets.link"}</a>
+			<a href="{url op="submissionRegrets" path=$submission->getArticleId()}" class="action">{translate|escape key="sectionEditor.regrets.link"}</a>
 		</td>
 	</tr>
 </table>
@@ -242,10 +242,16 @@
 			<td class="label">{translate key="reviewer.article.editorToEnter"}</td>
 			<td>
 				{if !$reviewAssignment->getDateConfirmed()}
-					<a href="{url op="acceptReviewForReviewer" path=$submission->getArticleId()|to_array:$reviewAssignment->getReviewId()}" class="action">{translate key="submission.acceptance"}</a>&nbsp;&nbsp;
+					<a href="{url op="acceptReviewForReviewer" path=$submission->getArticleId()|to_array:$reviewAssignment->getReviewId()}" class="action">{translate key="submission.acceptance"}</a><br />
 				{/if}
-				<a class="action" href="{url op="enterReviewerRecommendation" articleId=$submission->getArticleId() reviewId=$reviewAssignment->getReviewId()}">{translate key="editor.article.recommendation"}</a>
+				<form method="post" action="{url op="uploadReviewForReviewer"}" enctype="multipart/form-data">
+					{translate key="editor.article.uploadReviewForReviewer"}
+					<input type="hidden" name="articleId" value="{$submission->getArticleId()}" />
+					<input type="hidden" name="reviewId" value="{$reviewAssignment->getReviewId()}"/>
+					<input type="file" name="upload" class="uploadField" />
+					<input type="submit" name="submit" value="{translate key="common.upload"}" class="button" />
 				</form>
+				<a class="action" href="{url op="enterReviewerRecommendation" articleId=$submission->getArticleId() reviewId=$reviewAssignment->getReviewId()}">{translate key="editor.article.recommendation"}</a>
 			</td>
 		</tr>
 	{/if}
