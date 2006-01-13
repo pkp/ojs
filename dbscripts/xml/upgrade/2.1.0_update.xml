@@ -78,12 +78,41 @@ Please confirm your ability to complete this vital contribution to the work of t
 
 	<!-- Bug #1935 -->
 	<sql>
-		<!-- IS THIS NEEDED? If so, bring in the others too...
-		     If not, add a note recommending RT reload
-		<query>
-			UPDATE rt_contexts SET title = 'Definition of terms' WHERE title = 'Define Terms'
-		</query>
-		-->
+		<query>UPDATE rt_contexts SET title = 'Author''s works' WHERE title = 'Author&#039;s Other Works'</query>
+		<query>UPDATE rt_contexts SET title = 'Author''s works' WHERE title = 'Author''s Other Works'</query>
+		<query>UPDATE rt_contexts SET title = 'Books' WHERE title = 'Book'</query>
+		<query>UPDATE rt_contexts SET title = 'Book reviews' WHERE title = 'Book Review'</query>
+		<query>UPDATE rt_contexts SET title = 'Book reviews' WHERE title = 'Book Reviews'</query>
+		<query>UPDATE rt_contexts SET title = 'Cognitive theory' WHERE title = 'Cognitive Theory'</query>
+		<query>UPDATE rt_contexts SET title = 'Data sets' WHERE title = 'Data'</query>
+		<query>UPDATE rt_contexts SET title = 'Databases' WHERE title = 'Database'</query>
+		<query>UPDATE rt_contexts SET title = 'Definitions' WHERE title = 'Definition of terms'</query>
+		<query>UPDATE rt_contexts SET title = 'Dictionaries' WHERE title = 'Dictionary'</query>
+		<query>UPDATE rt_contexts SET title = 'Directories' WHERE title = 'Directory'</query>
+		<query>UPDATE rt_contexts SET title = 'e-Journals' WHERE title = 'e-journals'</query>
+		<query>UPDATE rt_contexts SET title = 'Gov''t documents' WHERE title = 'Government'</query>
+		<query>UPDATE rt_contexts SET title = 'Gov''t health' WHERE title = 'Government Health Sites'</query>
+		<query>UPDATE rt_contexts SET title = 'Gov''t documents' WHERE title = 'Government Policy'</query>
+		<query>UPDATE rt_contexts SET title = 'Teaching files' WHERE title = 'Instructional Materials'</query>
+		<query>UPDATE rt_contexts SET title = 'Legal materials' WHERE title = 'Legal Materials'</query>
+		<query>UPDATE rt_contexts SET title = 'Lit critics' WHERE title = 'Literary Critics'</query>
+		<query>UPDATE rt_contexts SET title = 'Math theory' WHERE title = 'Math Theory'</query>
+		<query>UPDATE rt_contexts SET title = 'Media reports' WHERE title = 'Media Report'</query>
+		<query>UPDATE rt_contexts SET title = 'Media reports' WHERE title = 'Media Reports'</query>
+		<query>UPDATE rt_contexts SET title = 'Nat''l statistics' WHERE title = 'Nat''l Statistics'</query>
+		<query>UPDATE rt_contexts SET title = 'Online books' WHERE title = 'Online Books'</query>
+		<query>UPDATE rt_contexts SET title = 'Online forums' WHERE title = 'Online Forum'</query>
+		<query>UPDATE rt_contexts SET title = 'Online forums' WHERE title = 'Online Forums'</query>
+		<query>UPDATE rt_contexts SET title = 'Pay-per-view' WHERE title = 'Pay-Per-View'</query>
+		<query>UPDATE rt_contexts SET title = 'Pay-per-view' WHERE title = 'Pay-per-View'</query>
+		<query>UPDATE rt_contexts SET title = 'Related studies' WHERE title = 'Related Studies'</query>
+		<query>UPDATE rt_contexts SET title = 'Related texts' WHERE title = 'Related Texts'</query>
+		<query>UPDATE rt_contexts SET title = 'Related theory' WHERE title = 'Related Theory'</query>
+		<query>UPDATE rt_contexts SET title = 'Search engines' WHERE title = 'Search Engines'</query>
+		<query>UPDATE rt_contexts SET title = 'Soc sci data' WHERE title = 'Social Sci Data'</query>
+		<query>UPDATE rt_contexts SET title = 'Social theories' WHERE title = 'Social Theory'</query>
+		<query>UPDATE rt_contexts SET title = 'Tech. reports' WHERE title = 'Tech. Reports'</query>
+		<query>UPDATE rt_contexts SET title = 'Working papers' WHERE title = 'Working Papers'</query>
 		<query>
 			UPDATE rt_searches SET search_url = CONCAT(search_url, '{$formKeywords}') WHERE search_url LIKE '%='
 		</query>
