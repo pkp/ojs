@@ -306,8 +306,8 @@ class SectionDAO extends DAO {
 		$returner = array();
 		
 		$result = &$this->retrieve(
-			'SELECT DISTINCT s.*, COALESCE(o.seq, s.seq) AS section_seq FROM sections s, published_articles pa, articles a LEFT JOIN custom_section_orders o ON (a.section_id = o.section_id) WHERE s.section_id = a.section_id AND pa.article_id = a.article_id AND pa.issue_id = ? AND (o.issue_id IS NULL OR pa.issue_id = o.issue_id) ORDER BY section_seq',
-			$issueId
+			'SELECT DISTINCT s.*, COALESCE(o.seq, s.seq) AS section_seq FROM sections s, published_articles pa, articles a LEFT JOIN custom_section_orders o ON (a.section_id = o.section_id AND o.issue_id = ?) WHERE s.section_id = a.section_id AND pa.article_id = a.article_id AND pa.issue_id = ? ORDER BY section_seq',
+			array($issueId, $issueId)
 		);
 		
 		while (!$result->EOF) {
