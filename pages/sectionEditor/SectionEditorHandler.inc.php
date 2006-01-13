@@ -133,6 +133,7 @@ class SectionEditorHandler extends Handler {
 	 */
 	function setupTemplate($subclass = false, $articleId = 0, $parentPage = null, $showSidebar = true) {
 		$templateMgr = &TemplateManager::getManager();
+		$isEditor = Validation::isEditor();
 
 		if (Request::getRequestedPage() == 'editor') {
 			EditorHandler::setupTemplate(EDITOR_SECTION_SUBMISSIONS, $showSidebar, $articleId, $parentPage);
@@ -141,8 +142,8 @@ class SectionEditorHandler extends Handler {
 		} else {
 			$templateMgr->assign('helpTopicId', 'editorial.sectionEditorsRole');
 
-			$pageHierarchy = $subclass ? array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, 'sectionEditor'), 'user.role.sectionEditor'), array(Request::url(null, 'sectionEditor'), 'article.submissions'))
-				: array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, 'sectionEditor'), 'user.role.sectionEditor'));
+			$pageHierarchy = $subclass ? array(array(Request::url(null, 'user'), 'navigation.usear'), array(Request::url(null, $isEditor?'editor':'sectionEditor'), $isEditor?'user.role.editor':'user.role.sectionEditor'), array(Request::url(null, $isEditor?'editor':'sectionEditor'), 'article.submissions'))
+				: array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, $isEditor?'editor':'sectionEditor'), $isEditor?'user.role.editor':'user.role.sectionEditor'));
 
 			import('submission.sectionEditor.SectionEditorAction');
 			$submissionCrumb = SectionEditorAction::submissionBreadcrumb($articleId, $parentPage, 'sectionEditor');
