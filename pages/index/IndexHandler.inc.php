@@ -31,8 +31,8 @@ class IndexHandler extends Handler {
 			$journal = &Request::getJournal();
 
 			// Assign header and content for home page
-			$templateMgr->assign('pageHeaderTitle', $journal->getJournalPageHeaderTitle(true));
-			$templateMgr->assign('pageHeaderLogo', $journal->getJournalPageHeaderLogo(true));
+			$templateMgr->assign('displayPageHeaderTitle', $journal->getJournalPageHeaderTitle(true));
+			$templateMgr->assign('displayPageHeaderLogo', $journal->getJournalPageHeaderLogo(true));
 			$templateMgr->assign('additionalHomeContent', $journal->getSetting('additionalHomeContent'));
 			$templateMgr->assign('homepageImage', $journal->getSetting('homepageImage'));
 			$templateMgr->assign('journalDescription', $journal->getSetting('journalDescription'));
