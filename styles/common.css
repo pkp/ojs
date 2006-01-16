@@ -198,7 +198,6 @@ input.defaultButton {
 	font-weight: normal;
 	font-size: 1.8em;
 	line-height: 1.35em;
-	padding: 0;
 }
 
 #content h4 {
@@ -503,7 +502,7 @@ ul.plain {
 div.separator {
 	width: 100%;
 	margin-top: 1em;
-	margin-bottom: 1em;
+	margin-bottom: 0.25em;
 	padding: 0;
 	border-bottom: 1px dotted #000;
 	font-size: 0.5em;

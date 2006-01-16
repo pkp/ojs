@@ -80,7 +80,7 @@
 
 <a name="peerReview"></a>
 <table class="data" width="100%">
-	<tr>
+	<tr valign="middle">
 		<td width="22%"><h3>{translate key="submission.peerReview"}</h3></td>
 		<td width="14%"><h4>{translate key="submission.round" round=$round}</h4></td>
 		<td width="64%" class="nowrap">
