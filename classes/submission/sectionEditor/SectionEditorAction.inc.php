@@ -597,6 +597,7 @@ class SectionEditorAction extends Action {
 				$email->setAssoc(ARTICLE_EMAIL_EDITOR_NOTIFY_AUTHOR_UNSUITABLE, ARTICLE_EMAIL_TYPE_EDITOR, $user->getUserId());
 				$email->send();
 			}
+			SectionEditorAction::archiveSubmission($sectionEditorSubmission);
 			return true;
 		} else {
 			if (!Request::getUserVar('continued')) {
