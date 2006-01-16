@@ -64,7 +64,7 @@ your OJS directory:
 
 "TAG" should be replaced with the CVS tag corresponding to the new release.
 OJS release version tags are of the form "ojs-MAJOR_MINOR_REVSION-BUILD".
-For example, the tag for the initial release of OJS 2.0.1 is "ojs-2_0_1-0".
+For example, the tag for the initial release of OJS 2.1.0 is "ojs-2_1_0-0".
 
 Consult the README of the latest OJS package or the OJS web site for the
 tag corresponding to the latest available OJS release.
@@ -87,7 +87,6 @@ latest release of OJS:
       installation:
         - config.inc.php
         - public/
-        - registry/*
         - Your uploaded files directory ("files_dir" in config.inc.php), if it
           resides within your OJS directory
     - Replace the current OJS directory with the new OJS directory, moving the

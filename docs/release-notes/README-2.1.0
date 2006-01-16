@@ -35,14 +35,101 @@ following directories are no longer used and can be deleted:
 
 New Features
 ------------
-
+	- #954# Added Editor/Review board feature (allows custom journal mastheads)
+	- #977# Added Journal Statistics and Report Generator
+	- #1478# Cache directories merged.
+	- #1654# Allow site URL to be overridden (for proxies)
+	- #1712# Mode to use query params instead of PATH_INFO
+	- #1718# Author agreement with Copyright Notice added to submission
+	- #1750# Issue-specific section ordering
+	- #1771# Create Subscription Manager role
+	- #1775# Allow Editors to search on author, reviewer, etc. in Archives
+	- #1799# Editors need indication of review due date
+	- #1877# Erudit export enhancements
+	- #1880# Optimization
+	- #1882# Remove reliance on allow_url_fopen
+	- #1883# Enable attachments in all emails
+	- #1887# Generic plugin support added
+	- #1888# Add "hooks" support for plugins
+	- #1889# Authentication plug-ins
+	- #1893# Additional URL rewriting in HTML galleys
+	- #1905# Warn authors when submitting without submission file
+	- #1906# One-click access for reviewers
+	- #1910# Allow inlining of some types of supplementary files
+	- #1911# Add support for issue-specific stylesheets
+	- #1913# Generic data caching infrastructure
+	- #1914# Add plugin settings infrastructure
+	- #1915# UI settings clobbered in Journal Setup
+	- #1920# Can designate both submission Section Editor and Editor
+	- #1922# Section titles should be localized
+	- #1930# Add Country to user/author profiles
+	- #1932# Allow limited HTML in author biography
+	- #1935# Reading Tools / Google Scholar updates
+	- #1939# Add "Expedite Submission" function
+	- #1960# Add support for Google Scholar gateway
+	- #1961# #2010# Add Portuguese (Brasil) locale
+	- #1968# Clean up template links to CSS files
+	- #1976# Added transcoding (iconv) support to OJS 1.x migration
+	- #1981# Editor/Author Correspondence changes
+	- #1987# Add link to Registration page after installation
+	- #2009# Add Spanish (Spain) translation
 
 Bug Fixes
 ---------
-
+	- #1184# Removed buggy page footer
+	- #1603# Make creator metadata field more accurate
+	- #1676# "Add New Reviewer" in Select Reviewers is ambiguous
+	- #1768# In Select Reviewers table, change + to actual number
+	- #1794# Export by role can export the same user multiple times
+	- #1809# In Sections (About the Journal), "Editors" should not appear if empty.
+	- #1837# restrictReviewerFileAccess option only affects template
+	- #1855# User list not sorted for "all users" and "enroll search"
+	- #1866# "Register for Other Journals" should display "none" if none exist
+	- #1875# Native import tool discards isCommandLine on import
+	- #1879# Boolean values in native import plugin cause PostgreSQL errors
+	- #1884# Remove additional public IDs from Erudit export plugin
+	- #1885# Plugins shouldn't be using require(...) or include(...)
+	- #1886# Release notes should be escaped
+	- #1898# Large imports can timeout
+	- #1907# Warning message when issue open access date is null
+	- #1908# numWeeksPerReview setting needs default value
+	- #1909# HTML galley img rewriting "src=" should be case insensitive
+	- #1902# Article title should be able to contain limited HTML
+	- #1917# PHP 5.0.5 reference errors
+	- #1918# Missing locale key icon.comment.alt
+	- #1919# Asterisk for required fields on forms can be orphaned
+	- #1923# Standardize "Log In"/"Login"/"Sign In" terminology
+	- #1928# Date Published should be optional in native.dtd
+	- #1929# Command-line tool chdir() forces XML imports to be in tree
+	- #1931# Change {translate_assign ...} to {translate|assign ...}
+	- #1933# Automated Reminders not using modified templates
+	- #1938# Manual install violates NOT NULL constraints
+	- #1940# Odd behavior when disabling emails
+	- #1944# Reviewer declining a review should send submission to archive
+	- #1945# Site Administrator should be able to access manager funcs
+	- #1948# mime_content_type calls should use String::mime_content_type
+	- #1954# DB Error in insertTemporaryFile
+	- #1956# DB Error in PublishedArticleDAO::getPublishedArticles
+	- #1957# Native import plugin ignores "pages" node
+	- #1966# Native import/export does not support article getType()
+	- #1973# #1974# Reference errors
+	- #1975# Authors should not be able to edit Metadata after Copyedit
+	- #1977# Migration still uses string constants for enableComments
+	- #1978# SELECT DISTINCT must select ORDER BY columns
+	- #1980# SE can't upload files for Setup 2.2 email reviewers
+	- #1984# Site admin validation not working
+	- #1985# Search Results page not determining access status properly
+	- #1986# Function called on non-object in UserManagementForm.inc.php
+	- #1989# #1990# #2006# Wording changes
+	- #1998# Subject vs. Keywords terminology confusion
+	- #2000# Change spacing of required fields in forms
+	- #2001# Missing locale key in article history
+	- #2002# Event log does not indicate "editor to enter"
+	- #2005# Corrected "Enroll User" function specifics
+	- #2007# xmllint validation errors for OJS XML
+	- #2011# Journal Logo in setup 5.1
 
 Removed Features
 ----------------
-
 	- #1396# Notify All Reviewers feature removed. The associated emails
 	  are now unused: REVIEW_REQ_MULTI_ATTACHED; REVIEW_REQUEST_MULTI
