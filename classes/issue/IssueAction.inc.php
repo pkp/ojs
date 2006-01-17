@@ -48,12 +48,15 @@ class IssueAction {
 	 * @param $issue
 	 * @return bool
 	 */
-	function subscriptionRequired($issue) {
-		$journal = &Request::getJournal();
-		if (!$journal) {
+	function subscriptionRequired(&$issue) {
+		$currentJournal =& Request::getJournal();
+		if (!$currentJournal || $currentJournal->getJournalId() !== $issue->getJournalId()) {
 			$journalDao = &DAORegistry::getDAO('JournalDAO');
-			$journal = $journalDao->getJournal($issue->getJournalId());
+			$journal =& $journalDao->getJournal($issue->getJournalId());
+		} else {
+			$journal =& $currentJournal;
 		}
+
 		$result = $journal->getSetting('enableSubscriptions') && ($issue->getAccessStatus() == SUBSCRIPTION && strtotime($issue->getOpenAccessDate()) > time());
 		HookRegistry::call('IssueAction::subscriptionRequired', array(&$journal, &$issue, &$result));
 		return $result;
@@ -63,9 +66,8 @@ class IssueAction {
 	 * Checks if user has subscription
 	 * @return bool
 	 */
-	function subscribedUser() {
+	function subscribedUser(&$journal) {
 		$user = &Request::getUser();
-		$journal = &Request::getJournal();
 		$subscriptionDao = &DAORegistry::getDAO('SubscriptionDAO');
 		$result = false;
 		if (isset($user) && isset($journal)) {
@@ -89,7 +91,7 @@ class IssueAction {
 
 			$result = $subscriptionDao->isValidSubscription(null, null, $user->getUserId(), $journal->getJournalId());
 		}
-		HookRegistry::call('IssueAction::subscribedUser', array(&$result));
+		HookRegistry::call('IssueAction::subscribedUser', array(&$journal, &$result));
 		return $result;
 	}
 	
@@ -97,11 +99,10 @@ class IssueAction {
 	 * Checks if remote client domain or ip is allowed
 	 * @return bool
 	 */
-	function subscribedDomain() {
-		$journal = &Request::getJournal();
+	function subscribedDomain(&$journal) {
 		$subscriptionDao = &DAORegistry::getDAO('SubscriptionDAO');
 		$result = $subscriptionDao->isValidSubscription(Request::getRemoteDomain(), Request::getRemoteAddr(), null, $journal->getJournalId());
-		HookRegistry::call('IssueAction::subscribedDomain', array(&$result));
+		HookRegistry::call('IssueAction::subscribedDomain', array(&$journal, &$result));
 		return $result;
 	}
 

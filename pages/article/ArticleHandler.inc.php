@@ -138,8 +138,8 @@ class ArticleHandler extends Handler {
 			// if access is open, we can display links to the full text.
 			import('issue.IssueAction');
 			$templateMgr->assign('subscriptionRequired', IssueAction::subscriptionRequired($issue));
-			$templateMgr->assign('subscribedUser', IssueAction::subscribedUser());
-			$templateMgr->assign('subscribedDomain', IssueAction::subscribedDomain());
+			$templateMgr->assign('subscribedUser', IssueAction::subscribedUser($journal));
+			$templateMgr->assign('subscribedDomain', IssueAction::subscribedDomain($journal));
 
 			// Increment the published article's abstract views count
 			$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
@@ -334,11 +334,11 @@ class ArticleHandler extends Handler {
 	
 			// bypass all validation if subscription based on domain or ip is valid
 			// or if the user is just requesting the abstract
-			if ( (!IssueAction::subscribedDomain() && $subscriptionRequired) &&
+			if ( (!IssueAction::subscribedDomain($journal) && $subscriptionRequired) &&
 			     (isset($galleyId) && $galleyId!=0) ) {
 				
 				// Subscription Access
-				$subscribedUser = IssueAction::subscribedUser();
+				$subscribedUser = IssueAction::subscribedUser($journal);
 	
 				if (!(!$subscriptionRequired || $article->getAccessStatus() || $subscribedUser)) {
 					if (!isset($galleyId) || $galleyId) {

@@ -80,8 +80,8 @@ class IssueHandler extends Handler {
 			// Subscription Access
 			import('issue.IssueAction');
 			$templateMgr->assign('subscriptionRequired', IssueAction::subscriptionRequired($issue));
-			$templateMgr->assign('subscribedUser', IssueAction::subscribedUser());
-			$templateMgr->assign('subscribedDomain', IssueAction::subscribedDomain());
+			$templateMgr->assign('subscribedUser', IssueAction::subscribedUser($journal));
+			$templateMgr->assign('subscribedDomain', IssueAction::subscribedDomain($journal));
 
 		} else {
 			$issueCrumbTitle = Locale::translate('current.noCurrentIssue');
@@ -169,8 +169,8 @@ class IssueHandler extends Handler {
 			// Subscription Access
 			import('issue.IssueAction');
 			$templateMgr->assign('subscriptionRequired', IssueAction::subscriptionRequired($issue));
-			$templateMgr->assign('subscribedUser', IssueAction::subscribedUser());
-			$templateMgr->assign('subscribedDomain', IssueAction::subscribedDomain());
+			$templateMgr->assign('subscribedUser', IssueAction::subscribedUser($journal));
+			$templateMgr->assign('subscribedDomain', IssueAction::subscribedDomain($journal));
 
 		} else {
 			$issueCrumbTitle = Locale::translate('archive.issueUnavailable');

@@ -152,7 +152,7 @@ class CommentHandler extends Handler {
 		if (isset($issue) && isset($article)) {
 			import('issue.IssueAction');
 			$subscriptionRequired = IssueAction::subscriptionRequired($issue);
-			$subscribedUser = IssueAction::subscribedUser();
+			$subscribedUser = IssueAction::subscribedUser($journal);
 
 			if (!(!$subscriptionRequired || $article->getAccessStatus() || $subscribedUser)) {
 				Request::redirect(null, 'index');

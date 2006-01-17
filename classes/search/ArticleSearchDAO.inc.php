@@ -61,7 +61,7 @@ class ArticleSearchDAO extends DAO {
 	 * @param $keywordId int
 	 * @return array of results (associative arrays)
 	 */
-	function &getPhraseResults($journal, $phrase, $publishedFrom = null, $publishedTo = null, $type = null, $limit = 500, $cacheHours = 24) {
+	function &getPhraseResults(&$journal, $phrase, $publishedFrom = null, $publishedTo = null, $type = null, $limit = 500, $cacheHours = 24) {
 		if (empty($phrase)) {
 			$results = false;
 			$returner = &new DBRowIterator($results);

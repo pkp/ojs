@@ -61,7 +61,7 @@ class SearchHandler extends Handler {
 		parent::validate();
 		SearchHandler::setupTemplate(true);
 
-		$journal = Request::getJournal();
+		$journal =& Request::getJournal();
 
 		$authorDao = &DAORegistry::getDAO('AuthorDAO');
 
@@ -90,7 +90,7 @@ class SearchHandler extends Handler {
 					import('issue.IssueAction');
 					$issue = &$issueDao->getIssueById($issueId);
 					$issues[$issueId] = &$issue;
-					$issuesUnavailable[$issueId] = IssueAction::subscriptionRequired($issue) && (!IssueAction::subscribedUser() && !IssueAction::subscribedDomain());
+					$issuesUnavailable[$issueId] = IssueAction::subscriptionRequired($issue) && (!IssueAction::subscribedUser($journal) && !IssueAction::subscribedDomain($journal));
 				}
 				if (!isset($sections[$sectionId])) $sections[$sectionId] = &$sectionDao->getSection($sectionId);
 			}
@@ -134,7 +134,7 @@ class SearchHandler extends Handler {
 		parent::validate();
 		SearchHandler::setupTemplate(true);
 
-		$journal = Request::getJournal();
+		$journal =& Request::getJournal();
 
 		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
 
@@ -159,11 +159,12 @@ class SearchHandler extends Handler {
 
 		$rangeInfo = Handler::getRangeInfo('search');
 
-		$journal = Request::getJournal();
-		$searchJournal = Request::getUserVar('searchJournal');
-		if (!empty($searchJournal)) {
+		$searchJournalId = Request::getUserVar('searchJournal');
+		if (!empty($searchJournalId)) {
 			$journalDao = &DAORegistry::getDAO('JournalDAO');
-			$journal = &$journalDao->getJournal($searchJournal);
+			$journal = &$journalDao->getJournal($searchJournalId);
+		} else {
+			$journal =& Request::getJournal();
 		}
 
 		$searchType = Request::getUserVar('searchField');
@@ -190,11 +191,12 @@ class SearchHandler extends Handler {
 
 		$rangeInfo = Handler::getRangeInfo('search');
 
-		$journal = Request::getJournal();
-		$searchJournal = Request::getUserVar('searchJournal');
-		if (!empty($searchJournal)) {
+		$searchJournalId = Request::getUserVar('searchJournal');
+		if (!empty($searchJournalId)) {
 			$journalDao = &DAORegistry::getDAO('JournalDAO');
-			$journal = &$journalDao->getJournal($searchJournal);
+			$journal = &$journalDao->getJournal($searchJournalId);
+		} else {
+			$journal =& Request::getJournal();
 		}
 
 		// Load the keywords array with submitted values
