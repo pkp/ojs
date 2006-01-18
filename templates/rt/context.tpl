@@ -51,9 +51,9 @@
 		elements = searchForm.elements;
 		for (var i=0; i<elements.length; i++) {
 			if (elements[i].type=='hidden') {
-				elements[i].value.replace(/{\$formKeywords}/g, termsPost);
+				elements[i].value = elements[i].value.replace(/{\$formKeywords}/g, termsPost);
 				{/literal}{foreach from=$searchParams item=param}{literal}
-				elements[i].value.replace(/{\${/literal}{$param}{literal}}/g, document.additionalParams.{/literal}{$param}{literal}.value);
+				elements[i].value = elements[i].value.replace(/{\${/literal}{$param}{literal}}/g, document.additionalParams.{/literal}{$param}{literal}.value);
 				{/literal}{/foreach}{literal}
 			}
 		}
