@@ -60,7 +60,7 @@ function ensureKeyword() {
 </tr>
 {/if}
 <tr valign="top">
-	<td class="label">{translate key="search.searchCategories"}</td>
+	<td class="label"><h4>{translate key="search.searchCategories"}</h4></td>
 	<td>&nbsp;</td>
 </tr>
 <tr valign="top">
@@ -80,7 +80,7 @@ function ensureKeyword() {
 	<td class="value"><input type="text" id="supplementaryFiles" name="supplementaryFiles" size="40" maxlength="255" value="{$supplementaryFiles|escape}" class="textField" /></td>
 </tr>
 <tr valign="top">
-	<td class="formSubLabel">{translate key="search.date"}</td>
+	<td class="formSubLabel"><h4>{translate key="search.date"}</h4></td>
 	<td>&nbsp;</td>
 </tr>
 <tr valign="top">
@@ -92,7 +92,7 @@ function ensureKeyword() {
 	<td class="value">{html_select_date prefix="dateTo" time=$dateTo all_extra="class=\"selectMenu\"" year_empty="" month_empty="" day_empty="" start_year="-5" end_year="+1"}</td>
 </tr>
 <tr valign="top">
-	<td class="label">{translate key="search.indexTerms"}</td>
+	<td class="label"><h4>{translate key="search.indexTerms"}</h4></td>
 	<td>&nbsp;</td>
 </tr>
 <tr valign="top">

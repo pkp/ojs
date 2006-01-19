@@ -1951,11 +1951,11 @@ current password.<br /><br />Enter your email address below to reset your passwo
 	<message key="search.syntaxInstructions"><![CDATA[Search tips: <ul>
 <li>Search terms are case-insensitive</li>
 <li>Common words are ignored</li>
-<li>By default only articles containing <i>all</i> terms in the query are returned (i.e., <b>AND</b> is implied)</li>
-<li>Combine multiple words with <b>OR</b> to find articles containing either term; e.g., <i>education OR research</i></li>
+<li>By default only articles containing <i>all</i> terms in the query are returned (i.e., <i>AND</i> is implied)</li>
+<li>Combine multiple words with <i>OR</i> to find articles containing either term; e.g., <i>education OR research</i></li>
 <li>Use parentheses to create more complex queries; e.g., <i>archive ((journal OR conference) NOT theses)</i></li>
 <li>Search for an exact phrase by putting it in quotes; e.g., <i>"open access publishing"</i></li>
-<li>Exclude a word by prefixing it with <b>-</b> or <b>NOT</b>; e.g. <i>online -politics</i> or <i>online NOT politics</i></li>
+<li>Exclude a word by prefixing it with <b>-</b> or <i>NOT</i>; e.g. <i>online -politics</i> or <i>online NOT politics</i></li>
 <li>Use <b>*</b> in a term as a wildcard to match any sequence of characters; e.g., <i>soci* morality</i> would match documents containing "sociological" or "societal"</li>
 </ul>]]></message>
 
