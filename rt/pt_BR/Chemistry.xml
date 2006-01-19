@@ -7,28 +7,15 @@
   * Copyright (c) 2003-2005 The Public Knowledge Project
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Reading Tools version: Chemistry (en_US)
+  * Reading Tools version: Chemistry (pt_BR)
   *
   * $Id$
   -->
 
-<version id="Chemistry" locale="en_US">
+<version id="Chemistry" locale="pt_BR">
 	<version_title>Chemistry</version_title>
 	<version_description>The Reading Tools can help readers of this study consult a wide range of related resources that can provide a context for interpreting, situating and evaluating the study.</version_description>
 
-	<context>
-		<context_title>Work citing it</context_title>
-		<context_abbrev>Work citing it</context_abbrev>
-		<context_description>If the article is indexed in Google Scholar, it may be accompanied by a "Cited by X" link, which leads to a list of works that cite it. As well, Google Scholar will list all items quoting the the title and author. To access online resources that are only available through your research library, you may be able to go to Scholar Preferences in Google Scholar and activate the Library Links for your institution.
-		</context_description>
-		<cites_context/>
-		<search>
-			<search_title>Google Scholar</search_title>
-			<search_description>Search for resources citing this article using Google Scholar.</search_description>
-			<url>http://scholar.google.com</url>
-			<search_url>http://scholar.google.com/scholar?q={$title}+{$formKeywords}</search_url>
-		</search>
-	</context>
 	<context>
 		<context_title>Author's work</context_title>
 		<context_abbrev>Other Works</context_abbrev>
@@ -36,12 +23,13 @@
 		<author_terms />
 		<search>
 			<search_title>Google Scholar</search_title>
-			<search_description>Google Scholar enables specific searches of scholarly literature, including peer-reviewed papers, theses, books, pre-prints, abstracts, and technical reports. Content includes a range of publishers and aggregators with whom Google already has standing arrangements, e.g., the Association for Computing Machinery, IEEE, OCLC&#039;s Open WorldCat library locator service, etc. Result displays will show different version clusters, citation analysis, and library location (currently books only).</search_description>
+			<search_description>Google Scholar enables specific searches of scholarly literature, including peer-reviewed papers, theses, books, pre-prints, abstracts, and technical reports. Content includes a range of publishers and aggregators with whom Google already has standing arrangements, e.g., the Association for Computing Machinery, IEEE, OCLC's Open WorldCat library locator service, etc. Result displays will show different version clusters, citation analysis, and library location (currently books only).</search_description>
 			<url>http://scholar.google.com</url>
 			<search_url>http://scholar.google.com/scholar?ie=UTF-8&amp;oe=UTF-8&amp;hl=eng&amp;as_sauthors={$formKeywords}</search_url>
+			
 		</search>
 		<search>
-			<search_title>OAIster (Open Archives Inititive research databases)</search_title>
+			<search_title>OAIster (Open Archives Initaitive research databases)</search_title>
 			<search_description>OAIster is a project of the University of Michigan Digital Library Production Services, and provides searching a wide variety of collections from a wide variety of institutions. These institutions have made the records of their digital resources available to access, and the project team has gathered and aggregated them into the OAIster service.</search_description>
 			<url>http://oaister.umdl.umich.edu/</url>
 			<search_url>http://oaister.umdl.umich.edu/cgi/b/bib/bib-idx?type=boolean&amp;size=10&amp;c=oaister&amp;q1=&amp;rgn1=entire+record&amp;op2=and&amp;q2=&amp;rgn2=entire+record&amp;op3=And&amp;q3=&amp;rgn3=title&amp;op4=And&amp;rgn4=author&amp;op5=And&amp;q5=&amp;rgn5=subject&amp;op6=And&amp;rgn6=norm&amp;q6=all+types&amp;sort=author%2Fcreator&amp;submit2=search&amp;q4={$formKeywords}</search_url>
@@ -51,8 +39,8 @@
 			<search_title>DOE Information Bridge</search_title>
 			<search_description>The Information Bridge provides the open source to full-text and bibliographic records of Department of Energy (DOE) research and development reports in physics, chemistry, materials, biology, environmental sciences, energy technologies, engineering, computer and information science, renewable energy, and other topics.</search_description>
 			<url>http://www.osti.gov/bridge/index.jsp</url>
-			<search_url>http://www.osti.gov/bridge/basicsearch.jsp</search_url>
-			<search_post>formname=basicsearch.jsp&amp;review=1&amp;row0_field=searchFor&amp;SortBy=RELV&amp;SortOrder=DESC&amp;querytype=Search&amp;row0_rvalue={$formKeywords}</search_post>			
+			<search_url>http://www.osti.gov/bridge/basicsearch.jsp?act=Search&amp;formname=basicsearch.jsp&amp;review=1&amp;SortBy=RELV&amp;SortOrder=DESC&amp;querytype=search&amp;searchFor={$formKeywords}</search_url>
+			
 		</search>
 		<search>
 			<search_title>Public Knowledge Project Open Archives Harvester</search_title>
@@ -66,7 +54,7 @@
 			<search_description>GrayLIT Network provides a full-text search across the gray literature of multiple government agencies within a science portal of technical reports. It taps into the search engines of distributed gray literature collections, enabling the user to find information without first having to know the sponsoring agency.</search_description>
 			<url>http://graylit.osti.gov/</url>
 			<search_url>http://graylit.osti.gov/cgi-bin/dexplcgi</search_url>
-			<search_post>pp=all&amp;INTERFACE=1WINDOW&amp;FORM=DistributedSearch.html&amp;COLLECTION=dticft&amp;COLLECTION=jpl&amp;COLLECTION=gpoinfo&amp;COLLECTION=langley&amp;MAXDOCS=50&amp;QUERY={$formKeywords}</search_post>			
+			<search_post>app=allGRAYLIT&amp;INTERFACE=1WINDOW&amp;FORM=/DistributedSearch.html&amp;$$AUTHOR=&amp;$$QTITLE=&amp;$$SUBJECT=&amp;$$ABSTRACT=&amp;$$START_YEAR=&amp;$$END_YEAR=&amp;COLLECTION=dticft&amp;COLLECTION=jpl&amp;COLLECTION=gpoinfo&amp;COLLECTION=langley&amp;COLLECTION=nepis&amp;MAXDOCS=50&amp;QUERY={$formKeywords}</search_post>			
 		</search>
 		<search>
 			<search_title>MEDLINE/PubMed</search_title>
@@ -88,6 +76,7 @@ journals.</search_description>
 			<search_description>Search for definitions using the popular Google search engine.</search_description>
 			<url>http://www.google.com/</url>
 			<search_url>http://www.google.com/search?hl=en&amp;q=define%3A{$formKeywords}</search_url>
+			
 		</search>
 		<search>
 			<search_title>General Chemistry Online: Glossary</search_title>
@@ -123,27 +112,30 @@ definition.</search_description>
 		</search>
 		<search>
 			<search_title>Wikipedia: The Free Encyclopedia</search_title>
-			<search_description>"Wikipedia is a free content encyclopedia that is being written collaboratively by contributors from all around the world. The site is a WikiWiki, meaning that anyone ... can edit any article. ..." Without editorial oversight, the quality of the content on this site varies dramatically, but it is worth exploring. The English version has hundreds of thousands of entries. Spanish, French, and Esperanto are among the several other languages offered.</search_description>
+			<search_description>&quot;Wikipedia is a free content encyclopedia that is being written collaboratively by contributors from all around the world. The site is a WikiWiki, meaning that anyone ... can edit any article. ...&quot; Without editorial oversight, the quality of the content on this site varies dramatically, but it is worth exploring. The English version has hundreds of thousands of entries. Spanish, French, and Esperanto are among the several other languages offered.</search_description>
 			<url>http://en.wikipedia.org/wiki/Main_Page</url>
 			<search_url>http://en.wikipedia.org/wiki/Special:Search?go=Go&amp;fulltext=Search&amp;search={$formKeywords}</search_url>
+			
 		</search>
 		<search>
 			<search_title>Infoplease.com</search_title>
 			<search_description>This site includes contents of the Information Please Almanacs, a biography database, a dictionary, an atlas, and articles from the Columbia Encyclopedia. You can search these ready reference works together or separately or browse the Almanacs. There are feature stories each week covering topics in the news, with links to pertinent Almanac content and other Web resources.</search_description>
 			<url>http://www.infoplease.com</url>
 			<search_url>http://www.infoplease.com/search?fr=iptn&amp;in=all&amp;x=0&amp;y=0&amp;query={$formKeywords}</search_url>
+			
 		</search>
 	</context>
 	<context>
 		<context_title>Find places</context_title>
 		<context_abbrev>Find places</context_abbrev>
 		<context_description>Search for locations relating to the article.</context_description>
-		<geo_terms/>
+		<geo_terms />
 		<search>
 			<search_title>Google Maps</search_title>
 			<search_description>Search for locations using the popular Google search engine's mapping features.</search_description>
 			<url>http://maps.google.com/</url>
 			<search_url>http://maps.google.com/maps?hl=en&amp;q={$formKeywords}</search_url>
+			
 		</search>
 	</context>
 	<context>
@@ -159,21 +151,21 @@ software, standards, and more. Users may rate and review sites. Some features
 require free registration. Based at the Department of Chemistry, University of
 Sheffield, England.</search_description>
 			<url>http://www.chemdex.org/</url>
-			<search_url>http://www.google.com/search?q=site:www.chemdex.org+</search_url>
-			
+			<search_url>http://www.chemdex.org/action.php?action=search</search_url>
+			<search_post>current_cat_id=&amp;table=link&amp;form_input_search_keyword={$formKeywords}</search_post>			
 		</search>
 		<search>
 			<search_title>DOE Information Bridge</search_title>
 			<search_description>The Information Bridge provides the open source to full-text and bibliographic records of Department of Energy (DOE) research and development reports in physics, chemistry, materials, biology, environmental sciences, energy technologies, engineering, computer and information science, renewable energy, and other topics.</search_description>
 			<url>http://www.osti.gov/bridge/index.jsp</url>
-			<search_url>http://www.osti.gov/bridge/basicsearch.jsp</search_url>
-			<search_post>formname=basicsearch.jsp&amp;review=1&amp;row0_field=searchFor&amp;SortBy=RELV&amp;SortOrder=DESC&amp;querytype=Search&amp;row0_rvalue={$formKeywords}</search_post>			
+			<search_url>http://www.osti.gov/bridge/basicsearch.jsp?act=Search&amp;formname=basicsearch.jsp&amp;review=1&amp;SortBy=RELV&amp;SortOrder=DESC&amp;querytype=search&amp;searchFor={$formKeywords}</search_url>
+			
 		</search>
 		<search>
 			<search_title>Eric Weisstein's World of Science--Chemistry</search_title>
 			<search_description>Includes extensive encyclopedias of astronomy, chemistry, mathematics, physics, and scientific biography. Entries include definitions, diagrams, formulas, cross-references, and related resources. Searchable, and browsable alphabetically or by topic. Also has a &quot;random entry&quot; feature. The author is a scientist with advanced degrees in physics and planetary science.</search_description>
 			<url>http://scienceworld.wolfram.com/chemistry/</url>
-			<search_url>http://scienceworld.wolfram.com/search/?config=scienceworld_wolfram_com&amp;restrict=http%3A%2F%2Fscienceworld.wolfram.com%2Fchemistry&amp;method=and&amp;matchesperpage=10&amp;format=wri-long&amp;x=7&amp;y=7&amp;words={$formKeywords}</search_url>
+			<search_url>http://scienceworld.wolfram.com/search/index.cgi?sitesearch=scienceworld.wolfram.com%2Fchemistry&amp;q={$formKeywords}</search_url>
 			
 		</search>
 		<search>
@@ -211,36 +203,41 @@ journals.</search_description>
 			<search_description>TOXNET provides a searchable collection of databases on toxicology, hazardous chemicals, and related areas.</search_description>
 			<url>http://toxnet.nlm.nih.gov/</url>
 			<search_url>http://toxnet.nlm.nih.gov/cgi-bin/sis/search</search_url>
-			<search_post>revisesearch=/var/http/sis/public/sis1/index.html&amp;second_search=1&amp;chemsyn=1&amp;database=toxline&amp;database=dart&amp;database=hsdb&amp;database=iris&amp;database=genetox&amp;database=ccris&amp;database=tri2000&amp;database=chemid&amp;Stemming=1&amp;and=1&amp;xfile=1&amp;submit2=&amp;queryxxx={$formKeywords}</search_post>			
+			<search_post>submit2=&amp;amp;basicsearch=/cgi-bin/sis/htmlgen?index.html&amp;revisesearch=/home/httpd/htdocs/index.html&amp;revisesearch=/home/httpd/htdocs/html/index.html&amp;second_search=1&amp;chemsyn=1&amp;database=toxline&amp;database=dart&amp;database=hsdb&amp;database=iris&amp;database=iter&amp;database=genetox&amp;database=ccris&amp;database=tri2003&amp;database=chemid&amp;database=hpd&amp;database=hazmap&amp;Stemming=1&amp;and=1&amp;xfile=1&amp;queryxxx={$formKeywords}</search_post>			
 		</search>
 	</context>
 	<context>
 		<context_title>Book</context_title>
 		<context_abbrev>Book</context_abbrev>
 		<context_description>Book-related Resources</context_description>
+
 		<search>
 			<search_title>Google Print</search_title>
 			<search_description>Google is working with libraries at the University of Michigan, Harvard University, Stanford University, Oxford University and the New York Public Library to digitize books in their collections and make them accessible via Google Print, a massive scanning project that will bring millions of volumes of printed books into the Google Print database.  Click a book title and you'll see the page of the book that has your search terms, your can search for more information within that specific book, find reviews, find related information, learn about the publisher, buy this book, and find nearby libraries that have it.</search_description>
 			<url>http://print.google.com</url>
 			<search_url>http://print.google.com/print?q={$formKeywords}</search_url>
+			
 		</search>
 		<search>
 			<search_title>Online books Page</search_title>
-			<search_description><![CDATA[Online books Page, edited by John Mark Ockerbloom, at the University of Pennsylvania.  This is an excellent starting point in the search for full-text books on the Internet. Over 20,000 English works in various formats available online at different sites. Entries may be searched by author or title. An interesting feature allows browsing by Library of Congress call number categories. New listings are added regularly and are listed on a separate web page at <a href="http://onlinebooks.library.upenn.edu/new.html">http://onlinebooks.library.upenn.edu/new.html</a>.]]></search_description>
+			<search_description>Online books Page, edited by John Mark Ockerbloom, at the University of Pennsylvania.  This is an excellent starting point in the search for full-text books on the Internet. Over 20,000 English works in various formats available online at different sites. Entries may be searched by author or title. An interesting feature allows browsing by Library of Congress call number categories. New listings are added regularly and are listed on a separate web page at &lt;a href=&quot;http://onlinebooks.library.upenn.edu/new.html&quot;&gt;http://onlinebooks.library.upenn.edu/new.html&lt;/a&gt;.</search_description>
 			<url>http://digital.library.upenn.edu/books/</url>
 			<search_url>http://onlinebooks.library.upenn.edu/webbin/book/search?tmode=words&amp;title={$formKeywords}</search_url>
+			
 		</search>
 		<search>
 			<search_title>Books-On-Line</search_title>
 			<search_description>A collection of over 32935 titles, although some are only excerpts. Browse by subject or search by author or title. Not all items are free.</search_description>
 			<url>http://www.books-on-line.com/</url>
 			<search_url>http://www.books-on-line.com/bol/KeyWordSearch.cfm?RowCount=50&amp;Searchquery={$formKeywords}</search_url>
+			
 		</search>
 		<search>
 			<search_title>Universal Library</search_title>
 			<search_description>The Universal Library is considerably more involved, and more ambitious -- it has amassed a collection of 100,000 e-books (some of them from Project Gutenberg), and is aiming for 1 million e-books by the end of 2006.</search_description>
-			<url>http://delta.ulib.org/html/index.html</url>
-			<search_url>http://serv.ul.cs.cmu.edu/cgi-bin/srcfull.pl?search={$formKeywords}</search_url>
+			<url>http://tera-3.ul.cs.cmu.edu/</url>
+			<search_url>http://tera-3.ul.cs.cmu.edu/cgi-bin/DBscripts/advsearch_db.cgi?perPage=25&amp;listStart=0&amp;author1=&amp;subject1=Any&amp;year1=&amp;year2=&amp;language1=Any&amp;scentre=Any&amp;search=Search&amp;title1={$formKeywords}</search_url>
+			
 		</search>
 	</context>
 	<context>
@@ -266,36 +263,28 @@ journals.</search_description>
 			<search_title>Chemistry.Org</search_title>
 			<search_description>Includes pages for chemistry professionals, educators, students at all levels, policy makers, and enthusiasts. Provides access to dozens of the print publications of the American Chemical Society, chemistry news, job listings, lesson plans, the &quot;Molecule of the Week,&quot; an interactive periodic table, and more. Searchable.</search_description>
 			<url>http://acs.chemindustry.com</url>
-			<search_url>http://acs.chemindustry.com/chem2ask.asp?cmd=search&amp;id=0</search_url>
-			<search_post>&amp;p0=0&amp;p1=10&amp;ps=10&amp;by={$formKeywords}</search_post>			
+			<search_url>http://acs.chemindustry.com/apps/search?category_id=&amp;go=go&amp;search_term={$formKeywords}</search_url>
+			
 		</search>
 		<search>
 			<search_title>Hazardous Chemical Databases</search_title>
 			<search_description>This database, created at the University of Akron, will allow the user to retrieve information for any of 23,495 hazardous chemicals or 'generic' entries based on a keyword search.</search_description>
 			<url>http://ull.chemistry.uakron.edu/erd/</url>
 			<search_url>http://ull.chemistry.uakron.edu/erd/index.search?template=/erd/Search_Template.xml&amp;numdocs30&amp;minscore=50&amp;query={$formKeywords}</search_url>
-		</search>	
+			
+		</search>
 	</context>
 	<context>
 		<context_title>Portals</context_title>
 		<context_abbrev>Portals</context_abbrev>
 		<context_description>Portals related to chemistry</context_description>
+
 		<search>
 			<search_title>ChemCenter</search_title>
 			<search_description>This is a pooling of Web resources from the American Chemical Society and Chemical Abstracts Service, including STNEasy, the ACS Graduate School Finder, Chemcyclopedia and more. It will eventually feature unique resources as well.</search_description>
 			<url>http://www.chemistry.org/portal/a/c/s/1/home.html</url>
 			<search_url>http://google.acs.org/search?by=&amp;site=americanchemical&amp;client=americanchemical&amp;proxystylesheet=americanchemical&amp;output=xml_no_dtd&amp;q={$formKeywords}</search_url>
-		</search>
-	</context>
-	<context>
-		<context_title>Education</context_title>
-		<context_abbrev>Education</context_abbrev>
-		<context_description>Education and teaching resources for chemistry</context_description>
-		<search>
-			<search_title>General Chemistry Online</search_title>
-			<search_description>An introduction that includes hyperlinked notes, guides, and articles for first semester chemistry. There is a glossary, FAQs and a trivia quiz. The Toolbox provides interactive graphing, a pop-up periodic table, and calculators. Additionally, Tutorials contains self-guided tutorials, quizzes, and drills on specific topics. There is one database of 800 common compound names, formulas, structures, and properties, and another for over 400 annotated Web sites. From a chemistry professor at Frostburg State University, Maryland.</search_description>
-			<url>http://antoine.frostburg.edu/chem/senese/101/</url>
-			<search_url>http://marie.frostburg.edu/cgi-bin/htsearch?method=and&amp;config=htdig&amp;restrict=101&amp;exclude=print-&amp;format=builtin-long&amp;sort=score&amp;words={$formKeywords}</search_url>
+			
 		</search>
 	</context>
 	<context>
@@ -355,7 +344,7 @@ journals.</search_description>
 			<search_title>All Conferences Directory</search_title>
 			<search_description>All Conferences Directory is a searchable database of Computer Science and Technology conferences that organizes conferences by category and offers information regarding paper submission deadlines.</search_description>
 			<url>http://all-conferences.com/Computers/</url>
-			<search_url>http://www.allconferences.com/Search/search.php3?Search={$formKeywords}</search_url>
+			<search_url>http://www.allconferences.com/Search/output.php?Title={$formKeywords}</search_url>
 			
 		</search>
 	</context>
@@ -397,9 +386,10 @@ Maryland. Searchable.</search_description>
 		<context_title>Government policy</context_title>
 		<context_abbrev>Gov Policy</context_abbrev>
 		<context_description>Access to Information and services gateway run by the Government of the United States and Canada.</context_description>
+
 		<search>
 			<search_title>Access to Australian Government Information and Services</search_title>
-			<search_description><![CDATA[The Australian Government Entry Point offers comprehensive and integrated access to Australian Government information and services.  You will find a concentrated body of Australian Government information through this site. <a href="http://www.australia.gov.au">www.australia.gov.au</a> currently signposts over 700 Australian Government web sites, indexes more than 5,000,000 pages and uses both metadata and full text indexing to ensure it is a comprehensive government portal.]]></search_description>
+			<search_description>The Australian Government Entry Point offers comprehensive and integrated access to Australian Government information and services.  You will find a concentrated body of Australian Government information through this site. &lt;a href=&quot;http://www.australia.gov.au&quot;&gt;www.australia.gov.au&lt;/a&gt; currently signposts over 700 Australian Government web sites, indexes more than 5,000,000 pages and uses both metadata and full text indexing to ensure it is a comprehensive government portal.</search_description>
 			<url>http://www.fed.gov.au</url>
 			<search_url>http://govsearch.australia.gov.au/search/search.cgi?collection=gov&amp;form=au&amp;query=&amp;query_phrase=&amp;query_or=&amp;query_not=&amp;meta_f_sand=&amp;scope=&amp;fscope=512&amp;num_ranks=20&amp;chksummary=chksummary&amp;query_and={$formKeywords}</search_url>
 			
@@ -409,38 +399,43 @@ Maryland. Searchable.</search_description>
 			<search_description>Includes links to Canadian government libraries, federal documents and news releases, publications catalogues, and provincial governments. Most information is in English, but some of the linked material is in French, or a combination of French and English.</search_description>
 			<url>http://www.nlc-bnc.ca/8/4/index-e.html</url>
 			<search_url>http://www.collectionscanada.ca/search/006001-110.01-e.php?q%5B1%5D=pagelevel%3A1&amp;q%5B2%5D=&amp;x=15&amp;y=13&amp;q%5B0%5D={$formKeywords}</search_url>
+			
 		</search>
 		<search>
 			<search_title>Directgov</search_title>
 			<search_description>Directgov is a government service giving people access to the latest and widest range of public service information in one place on the Web and on Digital TV. Directgov uses the specifications formulated and consulted on through UK GovTalk.</search_description>
 			<url>http://www.direct.gov.uk</url>
 			<search_url>http://www.direct.gov.uk/AdvancedSearch/SearchResults/fs/en?NP=1&amp;PO1=C&amp;PI1=W&amp;PF1=A&amp;PG=1&amp;RP=20&amp;SC=__dgov_site&amp;Z=1&amp;PT1={$formKeywords}</search_url>
+			
 		</search>
 		<search>
 			<search_title>Info4local.gov.uk</search_title>
 			<search_description>Information for local government from central government.  This site gives local authorities a quick and easy way to find relevant information on the web sites of central government departments, agencies and public bodies. It includes extensive information on implementing electronic government.</search_description>
 			<url>http://www.info4local.gov.uk</url>
 			<search_url>http://www.info4local.gov.uk/searchresults.asp?formname=frmAdvanced&amp;keywordstype=1&amp;month=&amp;year=&amp;pub=1&amp;news=1&amp;links=1&amp;allsubjects=1&amp;alldepts=1&amp;alldoctypes=1&amp;keywords={$formKeywords}</search_url>
+			
 		</search>
 		<search>
 			<search_title>The New Zealand government portal</search_title>
 			<search_description>The New Zealand government portal is a website providing search capability for, and links into the online and offline information and services of most government agencies.  This site is managed and maintained by the State Services Commission, a New Zealand government department.</search_description>
 			<url>http://www.govt.nz</url>
 			<search_url>http://www.govt.nz/search?type=spider&amp;t=spider&amp;q={$formKeywords}</search_url>
+			
 		</search>
 		<search>
 			<search_title>Europa</search_title>
 			<search_description>Current information on the member countries of the European Union, including statistical data, policies, news, official documents, legal texts, and other publications.</search_description>
 			<url>http://europa.eu.int/index_en.htm</url>
 			<search_url>http://europa.eu.int/geninfo/query/engine/search/query.pl?action=FilterSearch&amp;filter=europaflt.hts&amp;Collection=fullEUROPA&amp;ResultTemplate=europarslt_ascii.hts&amp;ResultCount=25&amp;ResultMaxDocs=200&amp;DefaultLG=en&amp;ViewTemplate=europaview.hts&amp;QueryText={$formKeywords}</search_url>
+			
 		</search>
 		<search>
 			<search_title>The Global Legal Information Network (GLIN)</search_title>
 			<search_description>The Global Legal Information Network (GLIN) is a database of laws, regulations, judicial decisions, and other complementary legal sources contributed by governmental agencies and international organizations. These GLIN members contribute the official full texts of published documents to the database in their original language. Each document is accompanied by a summary in English and subject terms selected from the multilingual index to GLIN.</search_description>
 			<url>http://www.glin.gov</url>
 			<search_url>http://www.glin.gov/search.do?refineQuery=&amp;offset=0&amp;refineQueryType=&amp;fromSearch=true&amp;queryType=ALL&amp;searchBtn=Search&amp;includeAllFields=on&amp;searchAll=on&amp;sumLanguage=any&amp;pubLanguage=any&amp;pubJurisdiction=any&amp;publicationJurisdictionExclude=false&amp;searchPublicationDate=true&amp;dateFromDay=01&amp;dateFromMonth=01&amp;dateFromYear=&amp;dateToDay=01&amp;dateToMonth=01&amp;dateToYear=&amp;subjTerm=&amp;subjTermConjunction%5B0%5D=AND&amp;subjTerm=&amp;subjTermConjunction%5B1%5D=AND&amp;subjTerm=&amp;subjTermConjunction%5B2%5D=AND&amp;subjTerm=&amp;subjTermConjunction%5B3%5D=AND&amp;subjTerm=&amp;searchOrder=default&amp;hitsPerPage=10&amp;showSummary=on&amp;queryString={$formKeywords}</search_url>
+			
 		</search>
-
 		<search>
 			<search_title>FirstGov</search_title>
 			<search_description>FirstGov (U.S. federal and state) is a public-private partnership, led by a cross-agency board.</search_description>
@@ -460,6 +455,7 @@ Maryland. Searchable.</search_description>
 		<context_title>Media reports</context_title>
 		<context_abbrev>Media reports</context_abbrev>
 		<context_description>Immediately initiates a search based on the subject of the article or paper that connects users to free current and archival articles in the field from leading newspapers around the world.</context_description>
+
 		<search>
 			<search_title>Google News</search_title>
 			<search_description>Search news reports using the popular search engine Google's news feature.</search_description>
@@ -467,20 +463,19 @@ Maryland. Searchable.</search_description>
 			<search_url>http://news.google.com/news?hl=en&amp;q={$formKeywords}</search_url>
 			
 		</search>
-
 		<search>
 			<search_title>Daily Science News from NewScientist</search_title>
 			<search_description>Daily Science News from NewScientist provides science news updated throughout the day.</search_description>
 			<url>http://www.newscientist.com/news/</url>
-			<search_url>http://www.newscientist.com/news/search/dosearch.jsp?searchtype=all&amp;x=22&amp;y=5&amp;advsearch={$formKeywords}</search_url>
+			<search_url>http://www.newscientist.com/search.ns?doSearch=true&amp;query={$formKeywords}</search_url>
 			
 		</search>
 		<search>
 			<search_title>Nature Science Update</search_title>
 			<search_description>Nature Science Update provides daily news stories written by the editors of the Nature Journal.</search_description>
 			<url>http://www.nature.com/nsu/</url>
-			<search_url>http://www.nature.com/DynaSearch/App/DynaSearch.taf?target=journals&amp;_action=search&amp;first_page=true&amp;site_source=nsu</search_url>
-			<search_post>CiMaxRecordsPerPage=20&amp;TemplateName=query&amp;CiSort=rank[d]&amp;HTMLQueryForm=DynaSearch/DynaSearch.taf&amp;select_journals=/nsu,/nsu_site&amp;simple_search={$formKeywords}</search_post>			
+			<search_url>http://search.nature.com/search/?sp-x-9=cat&amp;sp-q-9=NEWS&amp;submit=go&amp;sp-a=sp1001702d&amp;sp-sfvl-field=subject%7Cujournal&amp;sp-t=results&amp;sp-x-1=ujournal&amp;sp-p-1=phrase&amp;sp-p=all&amp;sp-q={$formKeywords}</search_url>
+			
 		</search>
 		<search>
 			<search_title>Science News Online</search_title>
@@ -514,18 +509,21 @@ Maryland. Searchable.</search_description>
 			<search_description>Google Scholar enables specific searches of scholarly literature, including peer-reviewed papers, theses, books, pre-prints, abstracts, and technical reports. Content includes a range of publishers and aggregators with whom Google already has standing arrangements, e.g., the Association for Computing Machinery, IEEE, OCLC's Open WorldCat library locator service, etc. Result displays will show different version clusters, citation analysis, and library location (currently books only).</search_description>
 			<url>http://scholar.google.com</url>
 			<search_url>http://scholar.google.com/scholar?ie=UTF-8&amp;oe=UTF-8&amp;hl=en&amp;q={$formKeywords}</search_url>
+			
 		</search>
 		<search>
 			<search_title>Clusty the Clustering Engine</search_title>
 			<search_description>This search tool from Vivismo offers clustered results for a selection of searches.  Metasearch the whole web, or use tabs to search for news, gossip, images, orproducts via Bizrate or eBay.</search_description>
 			<url>http://clusty.com/</url>
 			<search_url>http://clusty.com/search?query={$formKeywords}</search_url>
+			
 		</search>
 		<search>
 			<search_title>Vivisimo</search_title>
 			<search_description>The award-winning Vivisimo clustering technology, developed by Carnegie Mellon research scientists, is unlocking the value of stored information at Fortune 500 companies, top websites, prestigious publishers and government agencies by categorizing research results on the fly into meaningful orders, thus achieving breakthrough improvement in access to relevant information.</search_description>
 			<url>http://vivisimo.com</url>
 			<search_url>http://vivisimo.com/search?tb=homepage&amp;v%3Asources=Web&amp;query={$formKeywords}</search_url>
+			
 		</search>
 	</context>
 </version>

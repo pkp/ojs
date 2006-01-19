@@ -17,31 +17,19 @@
 	<version_description>The Reading Tools can help readers of this study consult a wide range of related resources that can provide a context for interpreting, situating and evaluating the study.</version_description>
 
 	<context>
-		<context_title>Work citing it</context_title>
-		<context_abbrev>Work citing it</context_abbrev>
-		<context_description>If the article is indexed in Google Scholar, it may be accompanied by a "Cited by X" link, which leads to a list of works that cite it. As well, Google Scholar will list all items quoting the the title and author. To access online resources that are only available through your research library, you may be able to go to Scholar Preferences in Google Scholar and activate the Library Links for your institution.
-		</context_description>
-		<cites_context/>
-		<search>
-			<search_title>Google Scholar</search_title>
-			<search_description>Search for resources citing this article using Google Scholar.</search_description>
-			<url>http://scholar.google.com</url>
-			<search_url>http://scholar.google.com/scholar?q={$title}+{$formKeywords}</search_url>
-		</search>
-	</context>
-	<context>
 		<context_title>Author's work</context_title>
 		<context_abbrev>Other Works</context_abbrev>
-		<context_description>Identify other works by the article&#039;s author(s) by using OAI engines.</context_description>
+		<context_description>Identify other works by the article's author(s) by using OAI engines.</context_description>
 		<author_terms />
 		<search>
 			<search_title>Google Scholar</search_title>
-			<search_description>Google Scholar enables specific searches of scholarly literature, including peer-reviewed papers, theses, books, pre-prints, abstracts, and technical reports. Content includes a range of publishers and aggregators with whom Google already has standing arrangements, e.g., the Association for Computing Machinery, IEEE, OCLC&#039;s Open WorldCat library locator service, etc. Result displays will show different version clusters, citation analysis, and library location (currently books only).</search_description>
+			<search_description>Google Scholar enables specific searches of scholarly literature, including peer-reviewed papers, theses, books, pre-prints, abstracts, and technical reports. Content includes a range of publishers and aggregators with whom Google already has standing arrangements, e.g., the Association for Computing Machinery, IEEE, OCLC's Open WorldCat library locator service, etc. Result displays will show different version clusters, citation analysis, and library location (currently books only).</search_description>
 			<url>http://scholar.google.com</url>
 			<search_url>http://scholar.google.com/scholar?ie=UTF-8&amp;oe=UTF-8&amp;hl=eng&amp;as_sauthors={$formKeywords}</search_url>
+			
 		</search>
 		<search>
-			<search_title>OAIster (Open Archives Inititive research databases)</search_title>
+			<search_title>OAIster (Open Archives Initiative research databases)</search_title>
 			<search_description>OAIster is a project of the University of Michigan Digital Library Production Services, and provides searching a wide variety of collections from a wide variety of institutions. These institutions have made the records of their digital resources available to access, and the project team has gathered and aggregated them into the OAIster service.</search_description>
 			<url>http://oaister.umdl.umich.edu/</url>
 			<search_url>http://oaister.umdl.umich.edu/cgi/b/bib/bib-idx?type=boolean&amp;size=10&amp;c=oaister&amp;q1=&amp;rgn1=entire+record&amp;op2=and&amp;q2=&amp;rgn2=entire+record&amp;op3=And&amp;q3=&amp;rgn3=title&amp;op4=And&amp;rgn4=author&amp;op5=And&amp;q5=&amp;rgn5=subject&amp;op6=And&amp;rgn6=norm&amp;q6=all+types&amp;sort=author%2Fcreator&amp;submit2=search&amp;q4={$formKeywords}</search_url>
@@ -59,7 +47,7 @@
 			<search_description>The Anthropological Index is a regionally arranged subject and author index to periodical articles in all areas of anthropology. It is produced by the Museum of Mankind Library.</search_description>
 			<url>http://aio.anthropology.org.uk/cgi-bin/uncgi/search_bib_ai/anthind_short</url>
 			<search_url>http://aio.anthropology.org.uk/cgi-bin/uncgi/search_bib_ai/anthind_short</search_url>
-			<search_post>Default_Years=2001#2002#2003#Recent&amp;Text_w=&amp;Author_w=&amp;Subject1=&amp;Subject2=&amp;Subject3=&amp;Email=You@whereever.edu&amp;Refer=on&amp;Text=&amp;Author={$formKeywords}</search_post>			
+			<search_post>Default_Years=#1957#1958#1959#1960#1961#1962#1963#1964#1965#1966#1967#1968#1969#1970#1971#1972#1973#1974#1975#1976#1977#1978#1979#1980#1981#1982#1983#1984#1985#1986#1987#1988#1989#1990#1991#1992#1993#1994#1995#1996#1997#1998#1999#2000#2001#2002#2003#2004#2005#Recent&amp;Year=Recent&amp;Text_w=&amp;Text=&amp;Author_w=&amp;Subject1=&amp;Subject2=&amp;Subject3=&amp;Email=You@whereever.edu&amp;Refer=on&amp;Author=</search_post>			
 		</search>
 		<search>
 			<search_title>The English Server</search_title>
@@ -70,7 +58,7 @@
 		</search>
 		<search>
 			<search_title>IATH: Institute for Advanced Technology in the Humanities</search_title>
-			<search_description>IATH: Institute for Advanced Technology in the Humanities, from the University of Virginia at Charlottesville, provides access to web-based humanities research archives and reports, essays, and the current issue of Postmodern Culture, the Internet&#039;s oldest peer-reviewed electronic journal in the humanities.</search_description>
+			<search_description>IATH: Institute for Advanced Technology in the Humanities, from the University of Virginia at Charlottesville, provides access to web-based humanities research archives and reports, essays, and the current issue of Postmodern Culture, the Internet's oldest peer-reviewed electronic journal in the humanities.</search_description>
 			<url>http://jefferson.village.virginia.edu/</url>
 			<search_url>http://www.google.com/u/iath?sa=Google+Search+of+IATH&amp;domains=village.virginia.edu&amp;sitesearch=village.virginia.edu&amp;q={$formKeywords}</search_url>
 			
@@ -107,26 +95,34 @@
 			<search_description>Search for definitions using the popular Google search engine.</search_description>
 			<url>http://www.google.com/</url>
 			<search_url>http://www.google.com/search?hl=en&amp;q=define%3A{$formKeywords}</search_url>
-		</search>
-		<search>
-			<search_title>The Internet Encyclopedia of Philosophy</search_title>
-			<search_description>This encyclopedia contains articles adapted from public domain sources, adaptations of material written by the editor for classroom purposes, and original contributions by professional philosophers around the Internet.</search_description>
-			<url>http://www.utm.edu/research/iep/</url>
-			<search_url>http://search.tennessee.edu/utk/query.html</search_url>
-			<search_post>col=utm&amp;qp=%0D%0A%09%09+-url%3A+http%3A%2F%2Fwww.utm.edu%2Fresearch%2Fiep%2F.cgi%0D%0A%09%09+-url%3A+http%3A%2F%2Fwww.utm.edu%2Fresearch%2Fiep%2Feditors%0D%0A+%09%09+%2Burl%3A+http%3A%2F%2Fwww.utm.edu%2Fresearch%2Fiep&amp;qt={$formKeywords}</search_post>			
+			
 		</search>
 		<search>
 			<search_title>Merriam-Webster Online</search_title>
-			<search_description>A dictionary based on the Webster 10th Collegiate edition, 1993, with updates added annually. More than 160,000 entries. Each word is accompanied by definition, pronunciation, usage, grammatical function, and a brief etymology. Includes a thesaurus. Misspellings return suggested spellings. The dictionary&#039;s search system supports internal wildcards and right hand truncation searching. Includes an extensive pronunciation guide and sound files for the pronunciation of many terms.</search_description>
+			<search_description>A dictionary based on the Webster 10th Collegiate edition, 1993, with updates added annually. More than 160,000 entries. Each word is accompanied by definition, pronunciation, usage, grammatical function, and a brief etymology. Includes a thesaurus. Misspellings return suggested spellings. The dictionary's search system supports internal wildcards and right hand truncation searching. Includes an extensive pronunciation guide and sound files for the pronunciation of many terms.</search_description>
 			<url>http://www.merriam-webster.com/</url>
 			<search_url>http://www.merriam-webster.com/cgi-bin/dictionary?book=Dictionary&amp;va={$formKeywords}</search_url>
 			
 		</search>
 		<search>
-			<search_title>OneLook Dictionaries</search_title>
-			<search_description>OneLook is a meta-dictionary. Enter an English language word or acronym, and OneLook will search its index of 5,292,362 words in 934 dictionaries indexed in general and special interest dictionaries for the definition.</search_description>
-			<url>http://www.onelook.com/index.html</url>
-			<search_url>http://www.onelook.com/?ls=a&amp;w={$formKeywords}</search_url>
+			<search_title>Wikipedia: The Free Encyclopedia</search_title>
+			<search_description>&quot;Wikipedia is a free content encyclopedia that is being written collaboratively by contributors from all around the world. The site is a WikiWiki, meaning that anyone ... can edit any article. ...&quot; Without editorial oversight, the quality of the content on this site varies dramatically, but it is worth exploring. The English version has hundreds of thousands of entries. Spanish, French, and Esperanto are among the several other languages offered.</search_description>
+			<url>http://en.wikipedia.org/wiki/Main_Page</url>
+			<search_url>http://en.wikipedia.org/wiki/Special:Search?go=Go&amp;fulltext=Search&amp;search={$formKeywords}</search_url>
+			
+		</search>
+		<search>
+			<search_title>Infoplease.com</search_title>
+			<search_description>This site includes contents of the Information Please Almanacs, a biography database, a dictionary, an atlas, and articles from the Columbia Encyclopedia. You can search these ready reference works together or separately or browse the Almanacs. There are feature stories each week covering topics in the news, with links to pertinent Almanac content and other Web resources.</search_description>
+			<url>http://www.infoplease.com</url>
+			<search_url>http://www.infoplease.com/search?fr=iptn&amp;in=all&amp;x=0&amp;y=0&amp;query={$formKeywords}</search_url>
+			
+		</search>
+		<search>
+			<search_title>The Internet Encyclopedia of Philosophy</search_title>
+			<search_description>This encyclopedia contains articles adapted from public domain sources, adaptations of material written by the editor for classroom purposes, and original contributions by professional philosophers around the Internet.</search_description>
+			<url>http://www.utm.edu/research/iep/</url>
+			<search_url>http://www.google.com/search?hl=en&amp;lr=&amp;q=site%3Awww.utm.edu%2Fresearch%2Fiep%2F+{$formKeywords}</search_url>
 			
 		</search>
 		<search>
@@ -134,6 +130,13 @@
 			<search_description>Stanford Encyclopedia of Philosophy is a searchable encyclopedia of philosophy providing in-depth explanations for terms.</search_description>
 			<url>http://plato.stanford.edu/</url>
 			<search_url>http://plato.stanford.edu/cgi-bin/webglimpse.cgi?nonascii=on&amp;errors=0&amp;maxfiles=50&amp;maxlines=30&amp;maxchars=10000&amp;ID=1&amp;query={$formKeywords}</search_url>
+			
+		</search>
+		<search>
+			<search_title>OneLook Dictionaries</search_title>
+			<search_description>OneLook is a meta-dictionary. Enter an English language word or acronym, and OneLook will search its index of 5,292,362 words in 934 dictionaries indexed in general and special interest dictionaries for the definition.</search_description>
+			<url>http://www.onelook.com/index.html</url>
+			<search_url>http://www.onelook.com/?ls=a&amp;w={$formKeywords}</search_url>
 			
 		</search>
 		<search>
@@ -148,17 +151,18 @@
 		<context_title>Find places</context_title>
 		<context_abbrev>Find places</context_abbrev>
 		<context_description>Search for locations relating to the article.</context_description>
-		<geo_terms/>
+		<geo_terms />
 		<search>
 			<search_title>Google Maps</search_title>
 			<search_description>Search for locations using the popular Google search engine's mapping features.</search_description>
 			<url>http://maps.google.com/</url>
 			<search_url>http://maps.google.com/maps?hl=en&amp;q={$formKeywords}</search_url>
+			
 		</search>
 	</context>
 	<context>
-		<context_title>Gov't documents</context_title>
-		<context_abbrev>Gov't documents</context_abbrev>
+		<context_title>Gov't policy</context_title>
+		<context_abbrev>Gov't policy</context_abbrev>
 		<context_description>Check various government resources.</context_description>
 
 		<search>
@@ -218,7 +222,7 @@
 
 		<search>
 			<search_title>Google Print</search_title>
-			<search_description>Google is working with libraries at the University of Michigan, Harvard University, Stanford University, Oxford University and the New York Public Library to digitize books in their collections and make them accessible via Google Print, a massive scanning project that will bring millions of volumes of printed books into the Google Print database.  Click a book title and you&#039;ll see the page of the book that has your search terms, your can search for more information within that specific book, find reviews, find related information, learn about the publisher, buy this book, and find nearby libraries that have it.</search_description>
+			<search_description>Google is working with libraries at the University of Michigan, Harvard University, Stanford University, Oxford University and the New York Public Library to digitize books in their collections and make them accessible via Google Print, a massive scanning project that will bring millions of volumes of printed books into the Google Print database.  Click a book title and you'll see the page of the book that has your search terms, your can search for more information within that specific book, find reviews, find related information, learn about the publisher, buy this book, and find nearby libraries that have it.</search_description>
 			<url>http://print.google.com</url>
 			<search_url>http://print.google.com/print?q={$formKeywords}</search_url>
 			
@@ -240,46 +244,19 @@
 		<search>
 			<search_title>Universal Library</search_title>
 			<search_description>The Universal Library is considerably more involved, and more ambitious -- it has amassed a collection of 100,000 e-books (some of them from Project Gutenberg), and is aiming for 1 million e-books by the end of 2006.</search_description>
-			<url>http://delta.ulib.org/html/index.html</url>
-			<search_url>http://serv.ul.cs.cmu.edu/cgi-bin/srcfull.pl?search={$formKeywords}</search_url>
-			
-		</search>
-	</context>
-	<context>
-		<context_title>Dictionaries</context_title>
-		<context_abbrev>Dictionaries</context_abbrev>
-		<context_description>Find definitions for terms using these resources.</context_description>
-
-		<search>
-			<search_title>Wikipedia: The Free Encyclopedia</search_title>
-			<search_description>&quot;Wikipedia is a free content encyclopedia that is being written collaboratively by contributors from all around the world. The site is a WikiWiki, meaning that anyone ... can edit any article. ...&quot; Without editorial oversight, the quality of the content on this site varies dramatically, but it is worth exploring. The English version has hundreds of thousands of entries. Spanish, French, and Esperanto are among the several other languages offered.</search_description>
-			<url>http://en.wikipedia.org/wiki/Main_Page</url>
-			<search_url>http://en.wikipedia.org/wiki/Special:Search?go=Go&amp;fulltext=Search&amp;search={$formKeywords}</search_url>
-			
-		</search>
-		<search>
-			<search_title>Infoplease.com</search_title>
-			<search_description>This site includes contents of the Information Please Almanacs, a biography database, a dictionary, an atlas, and articles from the Columbia Encyclopedia. You can search these ready reference works together or separately or browse the Almanacs. There are feature stories each week covering topics in the news, with links to pertinent Almanac content and other Web resources.</search_description>
-			<url>http://www.infoplease.com</url>
-			<search_url>http://www.infoplease.com/search?fr=iptn&amp;in=all&amp;x=0&amp;y=0&amp;query={$formKeywords}</search_url>
-			
-		</search>
-		<search>
-			<search_title>Dictionary of Canadian Biography Online</search_title>
-			<search_description>A collection of authoritative biographies portraying noteworthy persons of both sexes (with the exception of those still living). This first phase presents persons who died between the years 1000 and 1920</search_description>
-			<url>http://www.biographi.ca/EN/index.html</url>
-			<search_url>http://www.biographi.ca/EN/Results.asp?ToDo=&amp;Show=&amp;Data1=&amp;Data2=&amp;Data3=&amp;Data4=&amp;Data5=&amp;Data6=&amp;&amp;Data7=&amp;Data8=&amp;Data9=&amp;Data10=&amp;txtSearch={$formKeywords}</search_url>
+			<url>http://tera-3.ul.cs.cmu.edu/</url>
+			<search_url>http://tera-3.ul.cs.cmu.edu/cgi-bin/DBscripts/advsearch_db.cgi?perPage=25&amp;listStart=0&amp;author1=&amp;subject1=Any&amp;year1=&amp;year2=&amp;language1=Any&amp;scentre=Any&amp;search=Search&amp;title1={$formKeywords}</search_url>
 			
 		</search>
 	</context>
 	<context>
 		<context_title>Lit critics</context_title>
-		<context_abbrev>Literary Critics</context_abbrev>
+		<context_abbrev>Literacry Critics</context_abbrev>
 		<context_description>Search critical and biographical websites about authors and their works that can be browsed by author, by title, or by nationality and literary period.</context_description>
 
 		<search>
 			<search_title>Internet Public Library Online Literary Criticism Collection</search_title>
-			<search_description>Browse the Internet Public Library&#039;s collection of links to websites on western and non-western literary criticism. Organized by author, title of work studied and by literary period within a particular national tradition.</search_description>
+			<search_description>Browse the Internet Public Library's collection of links to websites on western and non-western literary criticism. Organized by author, title of work studied and by literary period within a particular national tradition.</search_description>
 			<url>http://www.ipl.org/div/litcrit/</url>
 			<search_url>http://www.ipl.org/div/searchresults/?where=searchresults&amp;words={$formKeywords}</search_url>
 			
@@ -305,13 +282,6 @@
 			
 		</search>
 		<search>
-			<search_title>The Medieval Review</search_title>
-			<search_description>Since 1993, The Medieval Review (TMR; formerly the Bryn Mawr Medieval Review) has been publishing reviews of current work in all areas of Medieval Studies.</search_description>
-			<url>http://www.hti.umich.edu/cgi/t/text/text-idx?c=tmr;cc=tmr;sid=4014c5800c60770394f14deda437f2bd;q1=war%20peace;cite1=royal;cite1restrict=title;rgn=full%20text;tpl=home.tpl</url>
-			<search_url>http://www.hti.umich.edu/cgi/t/text/text-idx?type=simple&amp;c=tmr&amp;cc=tmr&amp;sid=4014c5800c60770394f14deda437f2bd&amp;rgn=full+text&amp;Submit=Search&amp;cite1=&amp;cite1restrict=title&amp;cite2=&amp;cite2restrict=title&amp;q1={$formKeywords}</search_url>
-			
-		</search>
-		<search>
 			<search_title>The New York Times Books</search_title>
 			<search_description>The New York Times Books, updated daily, includes the entire Sunday Book reviews and a searchable archive of over 50,000 NYT book reviews dating back to 1980, bestseller lists and more (Need to sign up).</search_description>
 			<url>http://www.nytimes.com/auth/login?Tag=/&amp;URI=/books/</url>
@@ -320,7 +290,7 @@
 		</search>
 		<search>
 			<search_title>Early Modern Literary Studies</search_title>
-			<search_description>Early Modern Literary Studies (ISSN 1201-2459) is a refereed journal serving as a formal arena for scholarly discussion and as an academic resource for researchers in the area. Articles in EMLS examine English literature, literary culture, and language during the sixteenth and seventeenth centuries; responses to published papers are also published as part of a Readers&#039; Forum. Reviews evaluate recent work as well as academic tools of interest to scholars in the field. EMLS is committed to gathering and to maintaining links to the most useful and comprehensive internet resources for Renaissance scholars, including archives, electronic texts, discussion groups, and beyond.</search_description>
+			<search_description>Early Modern Literary Studies (ISSN 1201-2459) is a refereed journal serving as a formal arena for scholarly discussion and as an academic resource for researchers in the area. Articles in EMLS examine English literature, literary culture, and language during the sixteenth and seventeenth centuries; responses to published papers are also published as part of a Readers' Forum. Reviews evaluate recent work as well as academic tools of interest to scholars in the field. EMLS is committed to gathering and to maintaining links to the most useful and comprehensive internet resources for Renaissance scholars, including archives, electronic texts, discussion groups, and beyond.</search_description>
 			<url>http://www.shu.ac.uk/emls/emlshome.html</url>
 			<search_url>http://www.shu.ac.uk/cgi-bin/htsearch?method=and&amp;format=builtin-long&amp;sort=score&amp;matchesperpage=10&amp;config=emls&amp;restrict=&amp;exclude=&amp;words={$formKeywords}</search_url>
 			
@@ -336,7 +306,7 @@
 			<search_description>The Anthropological Index is a regionally arranged subject and author index to periodical articles in all areas of anthropology. It is produced by the Museum of Mankind Library.</search_description>
 			<url>http://aio.anthropology.org.uk/cgi-bin/uncgi/search_bib_ai/anthind_short</url>
 			<search_url>http://aio.anthropology.org.uk/cgi-bin/uncgi/search_bib_ai/anthind_short</search_url>
-			<search_post>Default_Years=2001#2002#2003#Recent&amp;Text_w=&amp;Author=&amp;Author_w=&amp;Subject1=&amp;Subject2=&amp;Subject3=&amp;Email=You@whereever.edu&amp;Refer=on&amp;Text={$formKeywords}</search_post>			
+			<search_post>Default_Years=2001#2002#2003#2004#2005#Recent&amp;Year=#1957#1958#1959#1960#1961#1962#1963#1964#1965#1966#1967#1968#1969#1970#1971#1972#1973#1974#1975#1976#1977#1978#1979#1980#1981#1982#1983#1984#1985#1986#1987#1988#1989#1990#1991#1992#1993#1994#1995#1996#1997#1998#1999#2000#2001#2002#2003#2004#2005#Recent&amp;Text_w=&amp;Author_w=&amp;Subject1=&amp;Subject2=&amp;Subject3=&amp;Email=You@whereever.edu&amp;Refer=on&amp;Author=&amp;Text={$formKeywords}</search_post>			
 		</search>
 		<search>
 			<search_title>The English Server</search_title>
@@ -347,7 +317,7 @@
 		</search>
 		<search>
 			<search_title>IATH: Institute for Advanced Technology in the Humanities</search_title>
-			<search_description>IATH: Institute for Advanced Technology in the Humanities, from the University of Virginia at Charlottesville, provides access to web-based humanities research archives and reports, essays, and the current issue of Postmodern Culture, the Internet&#039;s oldest peer-reviewed electronic journal in the humanities.</search_description>
+			<search_description>IATH: Institute for Advanced Technology in the Humanities, from the University of Virginia at Charlottesville, provides access to web-based humanities research archives and reports, essays, and the current issue of Postmodern Culture, the Internet's oldest peer-reviewed electronic journal in the humanities.</search_description>
 			<url>http://jefferson.village.virginia.edu/</url>
 			<search_url>http://www.google.com/u/iath?sa=Google+Search+of+IATH&amp;domains=village.virginia.edu&amp;sitesearch=village.virginia.edu&amp;q={$formKeywords}</search_url>
 			
@@ -356,8 +326,8 @@
 			<search_title>NetSERF: the Internet connection for medieval resources</search_title>
 			<search_description>Detailed topical arrangement of links to a large number of sites pertaining to medieval history and culture.</search_description>
 			<url>http://www.netserf.org/</url>
-			<search_url>http://www.netserf.org/Features/Search/default.cfm</search_url>
-			<search_post>Search_Action=Process&amp;Phrase_required=You must provide a search phrase with this option.&amp;phrase={$formKeywords}</search_post>			
+			<search_url>http://www.netserf.org/Features/Search/default.cfm?Search_Action=Process&amp;Phrase_required=You must provide a search phrase with this option.&amp;phrase={$formKeywords}</search_url>
+			
 		</search>
 		<search>
 			<search_title>The Online books Page</search_title>
@@ -380,6 +350,13 @@
 			<search_url>http://vos.ucsb.edu/search-results.asp?Submit=Go&amp;search={$formKeywords}</search_url>
 			
 		</search>
+		<search>
+			<search_title>Dictionary of Canadian Biography Online</search_title>
+			<search_description>A collection of authoritative biographies portraying noteworthy persons of both sexes (with the exception of those still living). This first phase presents persons who died between the years 1000 and 1920</search_description>
+			<url>http://www.biographi.ca/EN/index.html</url>
+			<search_url>http://www.biographi.ca/EN/Results.asp?ToDo=&amp;Show=&amp;Data1=&amp;Data2=&amp;Data3=&amp;Data4=&amp;Data5=&amp;Data6=&amp;&amp;Data7=&amp;Data8=&amp;Data9=&amp;Data10=&amp;txtSearch={$formKeywords}</search_url>
+			
+		</search>
 	</context>
 	<context>
 		<context_title>Dissertations</context_title>
@@ -388,7 +365,7 @@
 
 		<search>
 			<search_title>CRL Foreign Doctoral Dissertation Databases</search_title>
-			<search_description>The CRL&#039;s (Center For Research Libraries) database for dissertations published outside of the United States and Canada is still in the construction phase. At this point, a total of 15,000 of 750,000 records are loaded into the database. Searchable by author, institution name, title, year, translated title, subject keywords, language, and country, the database also provides instructions for interlibrary loan procedure.</search_description>
+			<search_description>The CRL's (Center For Research Libraries) database for dissertations published outside of the United States and Canada is still in the construction phase. At this point, a total of 15,000 of 750,000 records are loaded into the database. Searchable by author, institution name, title, year, translated title, subject keywords, language, and country, the database also provides instructions for interlibrary loan procedure.</search_description>
 			<url>http://www.crl.edu/content.asp?l1=5&amp;l2=23&amp;l3=44&amp;l4=25</url>
 			<search_url>http://www.crl.edu/DBSearch/dissertationsSummary.asp?language=English&amp;title={$formKeywords}</search_url>
 			
@@ -408,7 +385,7 @@
 
 		<search>
 			<search_title>AAD</search_title>
-			<search_description>Access to archival Databases (AAD) System has approximately 350 data files with millions of records available online that are highly structured, such as in databases. The series selected for AAD identify specific persons, geographic areas, organizations, or dates. Some of these series serve as indexes to accessioned archival records in non-electronic formats. Includes a link to search descriptions of NARA&#039;s non-electronic records through NARA&#039;s online catalogue, ARC.</search_description>
+			<search_description>Access to archival Databases (AAD) System has approximately 350 data files with millions of records available online that are highly structured, such as in databases. The series selected for AAD identify specific persons, geographic areas, organizations, or dates. Some of these series serve as indexes to accessioned archival records in non-electronic formats. Includes a link to search descriptions of NARA's non-electronic records through NARA's online catalogue, ARC.</search_description>
 			<url>http://aad.archives.gov/aad/title_list.jsp</url>
 			<search_url>http://search.nara.gov/query.html?rq=0&amp;qp=&amp;rq=0&amp;col=4ardor&amp;col=3ourdoc&amp;col=2pres&amp;col=1arch&amp;qs=&amp;qc=&amp;pw=100%25&amp;ws=0&amp;la=&amp;qm=0&amp;st=1&amp;nh=10&amp;lk=1&amp;rf=0&amp;oq=&amp;rq=0&amp;qt={$formKeywords}</search_url>
 			
@@ -431,7 +408,7 @@
 			<search_title>A2A - Access to Archives</search_title>
 			<search_description>Contains catalogues describing archives held throughout England and dating from the 900s to the present day.</search_description>
 			<url>http://www.a2a.org.uk/</url>
-			<search_url>http://www.a2a.org.uk/search/doclist.asp?nb=0&amp;nbKey=1&amp;com=1&amp;properties=0601&amp;keyword={$formKeywords}</search_url>
+			<search_url>http://www.a2a.org.uk/search/search.asp?Place_deposit=&amp;english_region=&amp;startdate=&amp;enddate=&amp;unidate=&amp;properties=&amp;keyword={$formKeywords}</search_url>
 			
 		</search>
 		<search>
@@ -500,12 +477,12 @@
 			<search_title>Romantic Circles: Byron, the Shelleys, Keats and their Contemporaries</search_title>
 			<search_description>A Web site that provides scholarly resources for the study of Romantic-period literature and culture.</search_description>
 			<url>http://www.rc.umd.edu/</url>
-			<search_url>http://www.rc.umd.edu/cgi-bin/search/search.pl?Match=1&amp;Realm=Editions&amp;Terms=Brockden+brown&amp;submit=Search</search_url>
+			<search_url>http://www.rc.umd.edu/cgi-bin/search/search.pl?Match=1&amp;Realm=Editions&amp;submit=Search&amp;Terms={$formKeywords}</search_url>
 			
 		</search>
 		<search>
 			<search_title>Humbul Humanities Hub</search_title>
-			<search_description>Humbul Humanities Hub is a directory of Internet resources in each of the following areas: archaeology, classics, history, philosophy, history and philosophy of science, religion and theology, American studies, humanities computing, linguistics, languages, and literature. Developed for the United Kingdom&#039;s higher education community, it is a good tool for anyone doing research in the humanities on the Web.</search_description>
+			<search_description>Humbul Humanities Hub is a directory of Internet resources in each of the following areas: archaeology, classics, history, philosophy, history and philosophy of science, religion and theology, American studies, humanities computing, linguistics, languages, and literature. Developed for the United Kingdom's higher education community, it is a good tool for anyone doing research in the humanities on the Web.</search_description>
 			<url>http://www.humbul.ac.uk/about/</url>
 			<search_url>http://www.humbul.ac.uk/search/search2.php?go=Go&amp;type=and&amp;keyword={$formKeywords}</search_url>
 			
@@ -514,7 +491,7 @@
 	<context>
 		<context_title>Pay-per-view</context_title>
 		<context_abbrev>Pay-per-view</context_abbrev>
-		<context_description>A pay-per-view service is for those who do not have direct access to electronic journal articles via subscriptions. The service allows customers to gain direct access to an article by paying by credit card using the RSC&#039;s secure payment mechanism. Immediately the payment details have been validated, the customer can gain access to the required article file for a period of 30 days.</context_description>
+		<context_description>A pay-per-view service is for those who do not have direct access to electronic journal articles via subscriptions. The service allows customers to gain direct access to an article by paying by credit card using the RSC's secure payment mechanism. Immediately the payment details have been validated, the customer can gain access to the required article file for a period of 30 days.</context_description>
 
 		<search>
 			<search_title>Ingenta</search_title>
@@ -568,7 +545,7 @@
 			<search_title>Linguistic Data Consortium</search_title>
 			<search_description>Linguistic Data Consortium supports language-related education, research and technology development by creating and sharing linguistic resources including data, tools and standards.</search_description>
 			<url>http://www.ldc.upenn.edu/</url>
-			<search_url>http://www.ldc.upenn.edu/servlet/search.WebSearch?Search+Now=&amp;q={$formKeywords}</search_url>
+			<search_url>http://www.ldc.upenn.edu/Catalog/catalogSearchResults.jsp?ldc_catalog_id=&amp;name=&amp;author=&amp;languages=&amp;years=&amp;types=&amp;datasources=&amp;projects=&amp;applications=&amp;and_or=1&amp;and_or2=1&amp;desc={$formKeywords}</search_url>
 			
 		</search>
 		<search>
@@ -583,20 +560,6 @@
 			<search_description>Project Gutenberg is the definitive Web site for this project to put out-of-copyright books online in full-text. More than 6,000 texts online so far.</search_description>
 			<url>http://www.gutenberg.net/</url>
 			<search_url>http://www.gutenberg.org/catalog/world/results?author=&amp;etestnr=&amp;title={$formKeywords}</search_url>
-			
-		</search>
-		<search>
-			<search_title>Questia</search_title>
-			<search_description>Questia is the first online library that provides 24/7 access to the world&#039;s largest online collection of books and journal articles in the humanities and social sciences, plus magazine and newspaper articles. You can search each and every word of all of the books and journal articles in the collection. You can read every title cover to cover. This rich, scholarly content -- selected by professional collection development librarians -- is not available elsewhere on the Internet.</search_description>
-			<url>http://www.questia.com/?af=1</url>
-			<search_url>http://www.questia.com/SM.qst?act=search&amp;keywordsSearchType=1000&amp;mediaType=startpage&amp;mediaType=book&amp;mediaType=journal&amp;mediaType=magazine&amp;mediaType=newspaper&amp;mediaType=encyclopedia&amp;keywords={$formKeywords}</search_url>
-			
-		</search>
-		<search>
-			<search_title>Perseus</search_title>
-			<search_description>Perseus is a digital library of resources for studying the ancient world, engineering interactions through time, space, and language. Includes ancient texts and translations.</search_description>
-			<url>http://www.perseus.tufts.edu/</url>
-			<search_url>http://www.perseus.tufts.edu/cgi-bin/vor?x=63&amp;y=12&amp;lookup={$formKeywords}</search_url>
 			
 		</search>
 		<search>
@@ -651,6 +614,7 @@
 		<context_title>Media reports</context_title>
 		<context_abbrev>Media reports</context_abbrev>
 		<context_description>Immediately initiates a search based on the subject of the article or paper that connects users to free current and archival articles in the field from leading newspapers around the world.</context_description>
+
 		<search>
 			<search_title>Google News</search_title>
 			<search_description>Search news reports using the popular search engine Google's news feature.</search_description>
@@ -666,8 +630,8 @@
 			
 		</search>
 		<search>
-			<search_title>People&#039;s Daily</search_title>
-			<search_description>People&#039;s Daily, China (January 1999-)</search_description>
+			<search_title>People's Daily</search_title>
+			<search_description>People's Daily, China (January 1999-)</search_description>
 			<url>http://english.peopledaily.com.cn/</url>
 			<search_url>http://english.peopledaily.com.cn/cgi-bin/htsearch?method=boolean&amp;format=builtin-long&amp;sort=score&amp;config=english&amp;exclude=&amp;words={$formKeywords}</search_url>
 			
@@ -677,12 +641,13 @@
 			<search_description>Mail &amp; Guardian Newspaper, South Africa (1994-)</search_description>
 			<url>http://www.mg.co.za/</url>
 			<search_url>http://www.mg.co.za/mg_search_results.aspx?PrintEdition=PrintEdition&amp;DailyNews=DailyNews&amp;SearchSection=&amp;StartDay=&amp;StartMonth=&amp;StartYear=&amp;EndDay=&amp;EndMonth=&amp;EndYear=&amp;keywords={$formKeywords}</search_url>
+			
 		</search>
 		<search>
 			<search_title>National Public Radio</search_title>
 			<search_description>National Public Radio, United States (unlimited)</search_description>
 			<url>http://www.npr.org/archives/</url>
-			<search_url>http://search1.npr.org/search97cgi/s97_cgi?ResultTemplate=simple_date.hts&amp;SortSpec=Date+Desc+Score+Desc&amp;ViewTemplate=docview.hts&amp;collection=zeus&amp;collection=C1&amp;collection=WEB&amp;Action=FilterSearch&amp;filter=topic_filter.hts&amp;x=23&amp;y=13&amp;QueryText={$formKeywords}</search_url>
+			<search_url>http://www.npr.org/search.php?text={$formKeywords}</search_url>
 			
 		</search>
 		<search>
@@ -696,7 +661,7 @@
 			<search_title>The Japan Times Online</search_title>
 			<search_description>The Japan Times Online, Japan (January 1999-)</search_description>
 			<url>http://www.japantimes.co.jp/search.htm</url>
-			<search_url>http://search.japantimes.co.jp/cgi-bin/JTsearch4.pl5?which=and&amp;term2=&amp;term1={$formKeywords}</search_url>
+			<search_url>http://search.japantimes.co.jp/cgi-bin/JTsearch4.pl5?term1={$formKeywords}</search_url>
 			
 		</search>
 		<search>
@@ -715,7 +680,7 @@
 		</search>
 		<search>
 			<search_title>Newsdirectory</search_title>
-			<search_description>Newsdirectory is a comprehensive and searchable guide to the world&#039;s English-language online media. Currently over 8,000 newspapers and magazines are listed, as well as more than 1,000 U.S. television broadcasters.</search_description>
+			<search_description>Newsdirectory is a comprehensive and searchable guide to the world's English-language online media. Currently over 8,000 newspapers and magazines are listed, as well as more than 1,000 U.S. television broadcasters.</search_description>
 			<url>http://www.newsdirectory.com/</url>
 			<search_url>http://ask.elibrary.com/search.asp?refid=NEWSD&amp;datetype=all&amp;srcmags=checked&amp;srcnews=checked&amp;srcbooks=checked&amp;srctvrad=checked&amp;query={$formKeywords}</search_url>
 			
@@ -735,7 +700,7 @@
 		</search>
 		<search>
 			<search_title>Google Scholar</search_title>
-			<search_description>Google Scholar enables specific searches of scholarly literature, including peer-reviewed papers, theses, books, pre-prints, abstracts, and technical reports. Content includes a range of publishers and aggregators with whom Google already has standing arrangements, e.g., the Association for Computing Machinery, IEEE, OCLC&#039;s Open WorldCat library locator service, etc. Result displays will show different version clusters, citation analysis, and library location (currently books only).</search_description>
+			<search_description>Google Scholar enables specific searches of scholarly literature, including peer-reviewed papers, theses, books, pre-prints, abstracts, and technical reports. Content includes a range of publishers and aggregators with whom Google already has standing arrangements, e.g., the Association for Computing Machinery, IEEE, OCLC's Open WorldCat library locator service, etc. Result displays will show different version clusters, citation analysis, and library location (currently books only).</search_description>
 			<url>http://scholar.google.com</url>
 			<search_url>http://scholar.google.com/scholar?ie=UTF-8&amp;oe=UTF-8&amp;hl=en&amp;q={$formKeywords}</search_url>
 			

@@ -7,28 +7,15 @@
   * Copyright (c) 2003-2005 The Public Knowledge Project
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Reading Tools version: Social Sciences (en_US)
+  * Reading Tools version: Social Sciences (pt_BR)
   *
   * $Id$
   -->
 
-<version id="Social_Sciences" locale="en_US">
+<version id="Social_Sciences" locale="pt_BR">
 	<version_title>Social Sciences</version_title>
 	<version_description>The Reading Tools can help readers of this study consult a wide range of related resources that can provide a context for interpreting, situating and evaluating the study.</version_description>
 
-	<context>
-		<context_title>Work citing it</context_title>
-		<context_abbrev>Work citing it</context_abbrev>
-		<context_description>If the article is indexed in Google Scholar, it may be accompanied by a "Cited by X" link, which leads to a list of works that cite it. As well, Google Scholar will list all items quoting the the title and author. To access online resources that are only available through your research library, you may be able to go to Scholar Preferences in Google Scholar and activate the Library Links for your institution.
-		</context_description>
-		<cites_context/>
-		<search>
-			<search_title>Google Scholar</search_title>
-			<search_description>Search for resources citing this article using Google Scholar.</search_description>
-			<url>http://scholar.google.com</url>
-			<search_url>http://scholar.google.com/scholar?q={$title}+{$formKeywords}</search_url>
-		</search>
-	</context>
 	<context>
 		<context_title>Author's work</context_title>
 		<context_abbrev>Other Works</context_abbrev>
@@ -36,12 +23,13 @@
 		<author_terms />
 		<search>
 			<search_title>Google Scholar</search_title>
-			<search_description>Google Scholar enables specific searches of scholarly literature, including peer-reviewed papers, theses, books, pre-prints, abstracts, and technical reports. Content includes a range of publishers and aggregators with whom Google already has standing arrangements, e.g., the Association for Computing Machinery, IEEE, OCLC&#039;s Open WorldCat library locator service, etc. Result displays will show different version clusters, citation analysis, and library location (currently books only).</search_description>
+			<search_description>Google Scholar enables specific searches of scholarly literature, including peer-reviewed papers, theses, books, pre-prints, abstracts, and technical reports. Content includes a range of publishers and aggregators with whom Google already has standing arrangements, e.g., the Association for Computing Machinery, IEEE, OCLC's Open WorldCat library locator service, etc. Result displays will show different version clusters, citation analysis, and library location (currently books only).</search_description>
 			<url>http://scholar.google.com</url>
 			<search_url>http://scholar.google.com/scholar?ie=UTF-8&amp;oe=UTF-8&amp;hl=eng&amp;as_sauthors={$formKeywords}</search_url>
+			
 		</search>
 		<search>
-			<search_title>OAIster (Open Archives Inititive research databases)</search_title>
+			<search_title>OAIster (Open Archives Initiative research databases)</search_title>
 			<search_description>OAIster is a project of the University of Michigan Digital Library Production Services, and provides searching a wide variety of collections from a wide variety of institutions. These institutions have made the records of their digital resources available to access, and the project team has gathered and aggregated them into the OAIster service.</search_description>
 			<url>http://oaister.umdl.umich.edu/</url>
 			<search_url>http://oaister.umdl.umich.edu/cgi/b/bib/bib-idx?type=boolean&amp;size=10&amp;c=oaister&amp;q1=&amp;rgn1=entire+record&amp;op2=and&amp;q2=&amp;rgn2=entire+record&amp;op3=And&amp;q3=&amp;rgn3=title&amp;op4=And&amp;rgn4=author&amp;op5=And&amp;q5=&amp;rgn5=subject&amp;op6=And&amp;rgn6=norm&amp;q6=all+types&amp;sort=author%2Fcreator&amp;submit2=search&amp;q4={$formKeywords}</search_url>
@@ -69,13 +57,6 @@
 			
 		</search>
 		<search>
-			<search_title>Questia</search_title>
-			<search_description>Questia is the first online library that provides 24/7 access to the world's largest online collection of books and journal articles in the humanities and social sciences, plus magazine and newspaper articles. You can search each and every word of all of the books and journal articles in the collection. You can read every title cover to cover. This rich, scholarly content -- selected by professional collection development librarians -- is not available elsewhere on the Internet.</search_description>
-			<url>http://www.questia.com/?af=1</url>
-			<search_url>http://www.questia.com/SM.qst?act=search&amp;title=&amp;titleSearchType=1000&amp;contributorsSearchType=1000&amp;subjects=&amp;subjectsSearchType=1000&amp;publisher=&amp;publisherSearchType=1000&amp;body=&amp;bodySearchType=1000&amp;publishedbefore=&amp;publishedafter=&amp;publishedexact=&amp;mediaType=book&amp;mediaType=journal&amp;mediaType=magazine&amp;mediaType=newspaper&amp;mediaType=encyclopedia&amp;mediaType=startpage&amp;contributors={$formKeywords}</search_url>
-			
-		</search>
-		<search>
 			<search_title>Social Science Information Gateway</search_title>
 			<search_description>Social Science Information Gateway provides selected Internet information in the social sciences, business, and law.</search_description>
 			<url>http://sosig.ac.uk/</url>
@@ -87,13 +68,6 @@
 			<search_description>SocioSite gives access to the worldwide scene of social sciences. The intention is to provide a comprehensive listing of all sociology resources on the Internet.</search_description>
 			<url>http://www.pscw.uva.nl/sociosite/</url>
 			<search_url>http://www.google.com/u/sociosite?sa=sociosite&amp;domains=www2.fmg.uva.nl&amp;sitesearch=www2.fmg.uva.nl&amp;hq=inurl:www2.fmg.uva.nl/sociosite&amp;q={$formKeywords}</search_url>
-			
-		</search>
-		<search>
-			<search_title>Statistical Resources on the Web</search_title>
-			<search_description>This site, created and maintained by University of Michigan Documents Center, is organized by broad subject area, such as Foreign or Statistics, in order to facilitate research. Frames indexes are comprehensive lists within a cluster for browsers compatible with Netscape 2.0 or higher.</search_description>
-			<url>http://www.lib.umich.edu/govdocs/statsnew.html</url>
-			<search_url>http://www.google.com/search?q=site%3Alib.umich.edu+%22Documents+Center%22+</search_url>
 			
 		</search>
 		<search>
@@ -114,6 +88,7 @@
 			<search_description>Search for definitions using the popular Google search engine.</search_description>
 			<url>http://www.google.com/</url>
 			<search_url>http://www.google.com/search?hl=en&amp;q=define%3A{$formKeywords}</search_url>
+			
 		</search>
 		<search>
 			<search_title>Online Dictionary of the Social Sciences</search_title>
@@ -138,27 +113,30 @@
 		</search>
 		<search>
 			<search_title>Wikipedia: The Free Encyclopedia</search_title>
-			<search_description>"Wikipedia is a free content encyclopedia that is being written collaboratively by contributors from all around the world. The site is a WikiWiki, meaning that anyone ... can edit any article. ..." Without editorial oversight, the quality of the content on this site varies dramatically, but it is worth exploring. The English version has hundreds of thousands of entries. Spanish, French, and Esperanto are among the several other languages offered.</search_description>
+			<search_description>&quot;Wikipedia is a free content encyclopedia that is being written collaboratively by contributors from all around the world. The site is a WikiWiki, meaning that anyone ... can edit any article. ...&quot; Without editorial oversight, the quality of the content on this site varies dramatically, but it is worth exploring. The English version has hundreds of thousands of entries. Spanish, French, and Esperanto are among the several other languages offered.</search_description>
 			<url>http://en.wikipedia.org/wiki/Main_Page</url>
 			<search_url>http://en.wikipedia.org/wiki/Special:Search?go=Go&amp;fulltext=Search&amp;search={$formKeywords}</search_url>
+			
 		</search>
 		<search>
 			<search_title>Infoplease.com</search_title>
 			<search_description>This site includes contents of the Information Please Almanacs, a biography database, a dictionary, an atlas, and articles from the Columbia Encyclopedia. You can search these ready reference works together or separately or browse the Almanacs. There are feature stories each week covering topics in the news, with links to pertinent Almanac content and other Web resources.</search_description>
 			<url>http://www.infoplease.com</url>
 			<search_url>http://www.infoplease.com/search?fr=iptn&amp;in=all&amp;x=0&amp;y=0&amp;query={$formKeywords}</search_url>
+			
 		</search>
 	</context>
 	<context>
 		<context_title>Find places</context_title>
 		<context_abbrev>Find places</context_abbrev>
 		<context_description>Search for locations relating to the article.</context_description>
-		<geo_terms/>
+		<geo_terms />
 		<search>
 			<search_title>Google Maps</search_title>
 			<search_description>Search for locations using the popular Google search engine's mapping features.</search_description>
 			<url>http://maps.google.com/</url>
 			<search_url>http://maps.google.com/maps?hl=en&amp;q={$formKeywords}</search_url>
+			
 		</search>
 	</context>
 	<context>
@@ -188,13 +166,6 @@
 			
 		</search>
 		<search>
-			<search_title>Questia</search_title>
-			<search_description>Questia is the first online library that provides 24/7 access to the world's largest online collection of books and journal articles in the humanities and social sciences, plus magazine and newspaper articles. You can search each and every word of all of the books and journal articles in the collection. You can read every title cover to cover. This rich, scholarly content -- selected by professional collection development librarians -- is not available elsewhere on the Internet.</search_description>
-			<url>http://www.questia.com/?af=1</url>
-			<search_url>http://www.questia.com/SM.qst?act=search&amp;keywordsSearchType=1000&amp;mediaType=startpage&amp;mediaType=book&amp;mediaType=journal&amp;mediaType=magazine&amp;mediaType=newspaper&amp;mediaType=encyclopedia&amp;keywords={$formKeywords}</search_url>
-			
-		</search>
-		<search>
 			<search_title>Social Science Information Gateway</search_title>
 			<search_description>Social Science Information Gateway provides selected Internet information in the social sciences, business, and law.</search_description>
 			<url>http://sosig.ac.uk/</url>
@@ -206,13 +177,6 @@
 			<search_description>SocioSite gives access to the worldwide scene of social sciences. The intention is to provide a comprehensive listing of all sociology resources on the Internet.</search_description>
 			<url>http://www.pscw.uva.nl/sociosite/</url>
 			<search_url>http://www.google.com/u/sociosite?sa=sociosite&amp;domains=www2.fmg.uva.nl&amp;sitesearch=www2.fmg.uva.nl&amp;hq=inurl:www2.fmg.uva.nl/sociosite&amp;q={$formKeywords}</search_url>
-			
-		</search>
-		<search>
-			<search_title>Statistical Resources on the Web</search_title>
-			<search_description>This site, created and maintained by University of Michigan Documents Center, is organized by broad subject area, such as Foreign or Statistics, in order to facilitate research. Frames indexes are comprehensive lists within a cluster for browsers compatible with Netscape 2.0 or higher.</search_description>
-			<url>http://www.lib.umich.edu/govdocs/statsnew.html</url>
-			<search_url>http://www.google.com/search?q=site%3Alib.umich.edu+%22Documents+Center%22+</search_url>
 			
 		</search>
 		<search>
@@ -246,8 +210,8 @@
 			<search_title>Law and Politics Book reviews</search_title>
 			<search_description>The Law and Politics Book reviews is sponsored by the Law and Courts Section of the American Political Science Association. The electronic medium enables us to review almost every book about the legal process and politics, to do longer reviews than are usually published, and to make the reviews available within six months of our receipt of the book.</search_description>
 			<url>http://www.bsos.umd.edu/gvpt/lpbr/</url>
-			<search_url>http://www.bsos.umd.edu/gvpt/lpbr/titlesearch.asp?</search_url>
-			<search_post>txtSearchWords={$formKeywords}</search_post>			
+			<search_url>http://www.searchum.umd.edu/search?btnG=Search&amp;output=xml_no_dtd&amp;proxystylesheet=UMCP&amp;as_sitesearch=http://www.bsos.umd.edu/gvpt/lpbr&amp;client=UMCP&amp;site=UMCP&amp;q={$formKeywords}</search_url>
+			
 		</search>
 	</context>
 	<context>
@@ -293,7 +257,7 @@
 			<search_title>The Gallup Organization</search_title>
 			<search_description>The Gallup site allows for topic keyword searches and also has a topic index, listing major issues such as Abortion, Campaign Finance, Illegal Drugs, and Taxes, with retrospective poll results, sometimes dating back to the 1950s, included for each.</search_description>
 			<url>http://www.gallup.com/</url>
-			<search_url>http://www.gallup.com/search/fullResults.asp?page=1&amp;SearchTextAll={$formKeywords}</search_url>
+			<search_url>http://www.gallup.com/search/results.aspx?SearchConType=&amp;SearchTypeAll=any&amp;SearchTypeExa=any&amp;SearchTypeAny=any&amp;SearchTypeNon=any&amp;SearchTextExa=&amp;SearchTextAny=&amp;SearchTextNon=&amp;SearchSiteInd=&amp;SearchSiteAll=&amp;SearchDateBef=&amp;SearchDateAft=&amp;SearchDateBMo=&amp;SearchDateAMo=&amp;SearchDateBDa=&amp;SearchDateADa=&amp;SearchDateBYe=&amp;SearchDateAYe=&amp;SearchTextAll={$formKeywords}</search_url>
 			
 		</search>
 		<search>
@@ -331,6 +295,13 @@
 			
 		</search>
 		<search>
+			<search_title>Australian Social Science Data Archive</search_title>
+			<search_description>ASSDA is a member of the International Federation of Data Organisations (IFDO) through which it maintains contacts with data organisations abroad actively engaged in providing the social science community with computerised data and documentation. Links to other data archives.</search_description>
+			<url>http://assda.anu.edu.au/</url>
+			<search_url>http://assda.anu.edu.au/htdig/htsearch?method=and&amp;format=builtin-long&amp;sort=score&amp;config=assda&amp;restrict=http://assda.anu.edu.au/&amp;exclude=&amp;words={$formKeywords}</search_url>
+			
+		</search>
+		<search>
 			<search_title>UK Data Archive</search_title>
 			<search_description>The Data Archive at the University of Essex houses the largest collection of accessible computer-readable data in the social sciences and humanities in the United Kingdom. It is a national resource centre, disseminating data throughout the United Kingdom and, by arrangement with other national archives, internationally. Founded in 1967, it now houses approximately seven thousand datasets of interest to researchers in all sectors and from many different disciplines.</search_description>
 			<url>http://www.data-archive.ac.uk/</url>
@@ -351,10 +322,10 @@
 		<context_description>Search sites contain information on social theories.</context_description>
 
 		<search>
-			<search_title>SocioSite</search_title>
-			<search_description>SocioSite is a multi-purpose guide for sociologists. Based in the Netherlands, it includes useful links to sites around the world.</search_description>
-			<url>http://www2.fmg.uva.nl/sociosite/</url>
-			<search_url>http://www.google.com/search?q=site:www2%2Efmg%2Euva%2Enl+</search_url>
+			<search_title>CTheory (Requires registration)</search_title>
+			<search_description>An international, electronic review of books on theory, technology and culture. Sponsored by the Canadian Journal of Political and Social Theory, reviews are posted periodically of key books in contemporary discourse as well as theorisations of major &quot;event-scenes&quot; in the mediascape.</search_description>
+			<url>http://www.ctheory.net/</url>
+			<search_url>http://www.google.com/search?q=site%3Awww.ctheory.net+{$formKeywords}</search_url>
 			
 		</search>
 	</context>
@@ -362,29 +333,34 @@
 		<context_title>Book</context_title>
 		<context_abbrev>Book</context_abbrev>
 		<context_description>Book-related Resources</context_description>
+
 		<search>
 			<search_title>Google Print</search_title>
 			<search_description>Google is working with libraries at the University of Michigan, Harvard University, Stanford University, Oxford University and the New York Public Library to digitize books in their collections and make them accessible via Google Print, a massive scanning project that will bring millions of volumes of printed books into the Google Print database.  Click a book title and you'll see the page of the book that has your search terms, your can search for more information within that specific book, find reviews, find related information, learn about the publisher, buy this book, and find nearby libraries that have it.</search_description>
 			<url>http://print.google.com</url>
 			<search_url>http://print.google.com/print?q={$formKeywords}</search_url>
+			
 		</search>
 		<search>
 			<search_title>Online books Page</search_title>
-			<search_description><![CDATA[Online books Page, edited by John Mark Ockerbloom, at the University of Pennsylvania.  This is an excellent starting point in the search for full-text books on the Internet. Over 20,000 English works in various formats available online at different sites. Entries may be searched by author or title. An interesting feature allows browsing by Library of Congress call number categories. New listings are added regularly and are listed on a separate web page at <a href="http://onlinebooks.library.upenn.edu/new.html">http://onlinebooks.library.upenn.edu/new.html</a>.]]></search_description>
+			<search_description>Online books Page, edited by John Mark Ockerbloom, at the University of Pennsylvania.  This is an excellent starting point in the search for full-text books on the Internet. Over 20,000 English works in various formats available online at different sites. Entries may be searched by author or title. An interesting feature allows browsing by Library of Congress call number categories. New listings are added regularly and are listed on a separate web page at &lt;a href=&quot;http://onlinebooks.library.upenn.edu/new.html&quot;&gt;http://onlinebooks.library.upenn.edu/new.html&lt;/a&gt;.</search_description>
 			<url>http://digital.library.upenn.edu/books/</url>
 			<search_url>http://onlinebooks.library.upenn.edu/webbin/book/search?tmode=words&amp;title={$formKeywords}</search_url>
+			
 		</search>
 		<search>
 			<search_title>Books-On-Line</search_title>
 			<search_description>A collection of over 32935 titles, although some are only excerpts. Browse by subject or search by author or title. Not all items are free.</search_description>
 			<url>http://www.books-on-line.com/</url>
 			<search_url>http://www.books-on-line.com/bol/KeyWordSearch.cfm?RowCount=50&amp;Searchquery={$formKeywords}</search_url>
+			
 		</search>
 		<search>
 			<search_title>Universal Library</search_title>
 			<search_description>The Universal Library is considerably more involved, and more ambitious -- it has amassed a collection of 100,000 e-books (some of them from Project Gutenberg), and is aiming for 1 million e-books by the end of 2006.</search_description>
-			<url>http://delta.ulib.org/html/index.html</url>
-			<search_url>http://serv.ul.cs.cmu.edu/cgi-bin/srcfull.pl?search={$formKeywords}</search_url>
+			<url>http://tera-3.ul.cs.cmu.edu/</url>
+			<search_url>http://tera-3.ul.cs.cmu.edu/cgi-bin/DBscripts/advsearch_db.cgi?perPage=25&amp;listStart=0&amp;author1=&amp;subject1=Any&amp;year1=&amp;year2=&amp;language1=Any&amp;scentre=Any&amp;search=Search&amp;title1={$formKeywords}</search_url>
+			
 		</search>
 	</context>
 	<context>
@@ -396,20 +372,22 @@
 			<search_title>Country Studies: Area Handbook Series</search_title>
 			<search_description>From the Library of Congress, this site provides extensive information on foreign countries.  The Country Studies Series presents a description and analysis of the historical setting and the social, economic, political, and national security systems and institutions of countries throughout the world.</search_description>
 			<url>http://lcweb2.loc.gov/frd/cs/cshome.html</url>
-			<search_url>http://lcweb2.loc.gov/cgi-bin/query?</search_url>
-			<search_post>directory=frd&amp;submit2=Search&amp;Stemming=Yes&amp;country=&amp;querycstdy={$formKeywords}</search_post>
+			<search_url>http://search.loc.gov:8765/query.html?col=loc&amp;qp=url%3A%2Frr%2Ffrd%2F&amp;submit.x=11&amp;submit.y=9&amp;qt={$formKeywords}</search_url>
+			
 		</search>
 		<search>
 			<search_title>International Monetary Fund (IMF)</search_title>
 			<search_description>International Monetary Fund (IMF). Searchable and browsable database of IMF publications, including IMF Country Reports, Working Papers, Occasional Papers, and Policy Discussion Papers. Some reports listed on the site are not full-text but are available in print in the UCB main library.</search_description>
 			<url>http://www.imf.org/external/pubind.htm</url>
 			<search_url>http://www.imf.org/external/pubs/cat/shortres.cfm?auth_ed=&amp;subject=&amp;ser_note=All&amp;datecrit=During&amp;YEAR=Year&amp;Lang_F=All&amp;brtype=Date&amp;submit=Search&amp;TITLE={$formKeywords}</search_url>
+			
 		</search>
 		<search>
 			<search_title>Inter-American Development Bank Project Documents</search_title>
 			<search_description>Inter-American Development Bank Project Documents. Project documents from the Inter-American Development Bank, browseable by country and economic sector. Includes both proposed and approved projects.</search_description>
 			<url>http://www.iadb.org/exr/pic/index.cfm?language=english</url>
 			<search_url>http://search.iadb.org/search.asp?ServerKey=Primary&amp;collection=newcoll&amp;language=English&amp;ResultTemplate=default1.hts&amp;ResultStyle=normal&amp;ViewTemplate=docview.hts&amp;Querytext={$formKeywords}</search_url>
+			
 		</search>
 		<search>
 			<search_title>CIA World Fact Book</search_title>
@@ -423,18 +401,34 @@
 		<context_title>Portals</context_title>
 		<context_abbrev>Portals</context_abbrev>
 		<context_description>Portals</context_description>
+
 		<search>
 			<search_title>Australian Social Science Data Archive</search_title>
 			<search_description>ASSDA is a member of the International Federation of Data Organisations (IFDO) through which it maintains contacts with data organisations abroad actively engaged in providing the social science community with computerised data and documentation. Links to other data archives.</search_description>
 			<url>http://assda.anu.edu.au/</url>
 			<search_url>http://assda.anu.edu.au/htdig/htsearch?method=and&amp;format=builtin-long&amp;sort=score&amp;config=assda&amp;restrict=http://assda.anu.edu.au/&amp;exclude=&amp;words={$formKeywords}</search_url>
+			
 		</search>
 		<search>
 			<search_title>Social Science Research Network - SSRN (Austin, Texas, USA)</search_title>
 			<search_description>Social Science Research Network (SSRN) is devoted to the rapid worldwide dissemination of social science research and is composed of a number of specialized research networks in each of the social sciences.</search_description>
 			<url>http://www.ssrn.com/</url>
-			<search_url>http://papers.ssrn.com/sol3/results.cfm?</search_url>
-			<search_post>searchTitle=Title&amp;txtAuthorsFName=&amp;txtAuthorsLName=&amp;optionDateLimit=0&amp;Form_Name=Abstract_Search&amp;txtKey_Words={$formKeywords}</search_post>
+			<search_url>http://papers.ssrn.com/sol3/results.cfm</search_url>
+			<search_post>searchTitle=Title&amp;searchAbstract=Abstract&amp;txtAuthorsFName=&amp;txtAuthorsLName=&amp;optionDateLimit=0&amp;Form_Name=Abstract_Search&amp;txtKey_Words={$formKeywords}</search_post>			
+		</search>
+		<search>
+			<search_title>SocioSite</search_title>
+			<search_description>SocioSite is a multi-purpose guide for sociologists. Based in the Netherlands, it includes useful links to sites around the world.</search_description>
+			<url>http://www2.fmg.uva.nl/sociosite/</url>
+			<search_url>http://www.google.com/search?q=site:www2%2Efmg%2Euva%2Enl%2Fsociosite%2F+</search_url>
+			
+		</search>
+		<search>
+			<search_title>Statistical Resources on the Web</search_title>
+			<search_description>This site, created and maintained by University of Michigan Documents Center, is organized by broad subject area, such as Foreign or Statistics, in order to facilitate research.</search_description>
+			<url>http://www.lib.umich.edu/govdocs/statsnew.html</url>
+			<search_url>http://www.google.com/u/umlib?hl=en&amp;lr=&amp;ie=ISO-8859-1&amp;domains=www.lib.umich.edu&amp;sitesearch=www.lib.umich.edu&amp;q=inurl%3Agovdocs+-govdocs%2Fadnotes%2F+%0D%0A-govdocs%2Fgodort%2F&amp;q={$formKeywords}</search_url>
+			
 		</search>
 	</context>
 	<context>
@@ -452,9 +446,9 @@
 		<search>
 			<search_title>Sociology Online</search_title>
 			<search_description>Sociology Online is a site for students of sociology, criminology and social theory. The site has slideshows, quizzes, and documents, as well as a Socio-News page.</search_description>
-			<url>http://www.sociologyonline.f9.co.uk/</url>
-			<search_url>http://cgi.sociologyonline.force9.co.uk/cgi-bin/search/search.pl?nocpp=1&amp;Match=0&amp;Realm=All&amp;Terms={$formKeywords}</search_url>
-			
+			<url>http://www.sociologyonline.co.uk/</url>
+			<search_url>http://ccgi.sociologyonline.force9.co.uk/cgi-bin/site/searchnews.pl?dosearch</search_url>
+			<search_post>match=keywords&amp;searchin=(All)&amp;author=(All)&amp;category=(All)&amp;newsfrom=(All)&amp;resultnumber=10&amp;sort=new&amp;multipage=on&amp;linkcompression=10&amp;highlight=on&amp;searchquery={$formKeywords}</search_post>			
 		</search>
 		<search>
 			<search_title>Liszt</search_title>
@@ -480,7 +474,7 @@
 			<search_title>The Legal Information Institute (US)</search_title>
 			<search_description>Legal Information Institute (US) is an extensive materials on the law that has overviews of more than 100 legal topics, including: links to the laws and related Web resources; Constitutions &amp; Codes has both state and federal; Court Opinions, available judicial opinion, federal and state; Law by Source, federal, state, and international; Current Awareness includes Eye on the Courts (news on important court decisions); Directories, links to organizations and journals (law reviews); as well as directories of judges, lawyers, and law schools.</search_description>
 			<url>http://www.law.cornell.edu/</url>
-			<search_url>http://www.law.cornell.edu/topics/search/index.html?query={$formKeywords}</search_url>
+			<search_url>http://www.law.cornell.edu/wex/index.php/Special:Search?fulltext=Search&amp;search={$formKeywords}</search_url>
 			
 		</search>
 		<search>
@@ -540,7 +534,7 @@
 		</search>
 		<search>
 			<search_title>Access to Australian Government Information and Services</search_title>
-			<search_description><![CDATA[The Australian Government Entry Point offers comprehensive and integrated access to Australian Government information and services.  You will find a concentrated body of Australian Government information through this site. <a href="http://www.australia.gov.au">www.australia.gov.au</a> currently signposts over 700 Australian Government web sites, indexes more than 5,000,000 pages and uses both metadata and full text indexing to ensure it is a comprehensive government portal.]]></search_description>
+			<search_description>The Australian Government Entry Point offers comprehensive and integrated access to Australian Government information and services.  You will find a concentrated body of Australian Government information through this site. &lt;a href=&quot;http://www.australia.gov.au&quot;&gt;www.australia.gov.au&lt;/a&gt; currently signposts over 700 Australian Government web sites, indexes more than 5,000,000 pages and uses both metadata and full text indexing to ensure it is a comprehensive government portal.</search_description>
 			<url>http://www.fed.gov.au</url>
 			<search_url>http://govsearch.australia.gov.au/search/search.cgi?collection=gov&amp;form=au&amp;query=&amp;query_phrase=&amp;query_or=&amp;query_not=&amp;meta_f_sand=&amp;scope=&amp;fscope=512&amp;num_ranks=20&amp;chksummary=chksummary&amp;query_and={$formKeywords}</search_url>
 			
@@ -550,42 +544,49 @@
 			<search_description>Includes links to Canadian government libraries, federal documents and news releases, publications catalogues, and provincial governments. Most information is in English, but some of the linked material is in French, or a combination of French and English.</search_description>
 			<url>http://www.nlc-bnc.ca/8/4/index-e.html</url>
 			<search_url>http://www.collectionscanada.ca/search/006001-110.01-e.php?q%5B1%5D=pagelevel%3A1&amp;q%5B2%5D=&amp;x=15&amp;y=13&amp;q%5B0%5D={$formKeywords}</search_url>
+			
 		</search>
 		<search>
 			<search_title>Directgov</search_title>
 			<search_description>Directgov is a government service giving people access to the latest and widest range of public service information in one place on the Web and on Digital TV. Directgov uses the specifications formulated and consulted on through UK GovTalk.</search_description>
 			<url>http://www.direct.gov.uk</url>
 			<search_url>http://www.direct.gov.uk/AdvancedSearch/SearchResults/fs/en?NP=1&amp;PO1=C&amp;PI1=W&amp;PF1=A&amp;PG=1&amp;RP=20&amp;SC=__dgov_site&amp;Z=1&amp;PT1={$formKeywords}</search_url>
+			
 		</search>
 		<search>
 			<search_title>Info4local.gov.uk</search_title>
 			<search_description>Information for local government from central government.  This site gives local authorities a quick and easy way to find relevant information on the web sites of central government departments, agencies and public bodies. It includes extensive information on implementing electronic government.</search_description>
 			<url>http://www.info4local.gov.uk</url>
 			<search_url>http://www.info4local.gov.uk/searchresults.asp?formname=frmAdvanced&amp;keywordstype=1&amp;month=&amp;year=&amp;pub=1&amp;news=1&amp;links=1&amp;allsubjects=1&amp;alldepts=1&amp;alldoctypes=1&amp;keywords={$formKeywords}</search_url>
+			
 		</search>
 		<search>
 			<search_title>The New Zealand government portal</search_title>
 			<search_description>The New Zealand government portal is a website providing search capability for, and links into the online and offline information and services of most government agencies.  This site is managed and maintained by the State Services Commission, a New Zealand government department.</search_description>
 			<url>http://www.govt.nz</url>
 			<search_url>http://www.govt.nz/search?type=spider&amp;t=spider&amp;q={$formKeywords}</search_url>
+			
 		</search>
 		<search>
 			<search_title>Europa</search_title>
 			<search_description>Current information on the member countries of the European Union, including statistical data, policies, news, official documents, legal texts, and other publications.</search_description>
 			<url>http://europa.eu.int/index_en.htm</url>
 			<search_url>http://europa.eu.int/geninfo/query/engine/search/query.pl?action=FilterSearch&amp;filter=europaflt.hts&amp;Collection=fullEUROPA&amp;ResultTemplate=europarslt_ascii.hts&amp;ResultCount=25&amp;ResultMaxDocs=200&amp;DefaultLG=en&amp;ViewTemplate=europaview.hts&amp;QueryText={$formKeywords}</search_url>
+			
 		</search>
 		<search>
 			<search_title>The Global Legal Information Network (GLIN)</search_title>
 			<search_description>The Global Legal Information Network (GLIN) is a database of laws, regulations, judicial decisions, and other complementary legal sources contributed by governmental agencies and international organizations. These GLIN members contribute the official full texts of published documents to the database in their original language. Each document is accompanied by a summary in English and subject terms selected from the multilingual index to GLIN.</search_description>
 			<url>http://www.glin.gov</url>
 			<search_url>http://www.glin.gov/search.do?refineQuery=&amp;offset=0&amp;refineQueryType=&amp;fromSearch=true&amp;queryType=ALL&amp;searchBtn=Search&amp;includeAllFields=on&amp;searchAll=on&amp;sumLanguage=any&amp;pubLanguage=any&amp;pubJurisdiction=any&amp;publicationJurisdictionExclude=false&amp;searchPublicationDate=true&amp;dateFromDay=01&amp;dateFromMonth=01&amp;dateFromYear=&amp;dateToDay=01&amp;dateToMonth=01&amp;dateToYear=&amp;subjTerm=&amp;subjTermConjunction%5B0%5D=AND&amp;subjTerm=&amp;subjTermConjunction%5B1%5D=AND&amp;subjTerm=&amp;subjTermConjunction%5B2%5D=AND&amp;subjTerm=&amp;subjTermConjunction%5B3%5D=AND&amp;subjTerm=&amp;searchOrder=default&amp;hitsPerPage=10&amp;showSummary=on&amp;queryString={$formKeywords}</search_url>
+			
 		</search>
 		<search>
 			<search_title>Eur-Lex -- The portal to European Union law</search_title>
 			<search_description>Eur-Lex (European Union Law). Free service with access to the The Official Journal of the European Union, full-text of EU Treaties, consolidated versions of existing legislation and recent judgments by the Court of Justice.</search_description>
 			<url>http://europa.eu.int/eur-lex/en/index.html</url>
 			<search_url>http://europa.eu.int/search/s97.vts?Action=FilterSearch&amp;COLLECTION=EURLEXfiles&amp;Filter=EUROPA_filter.hts&amp;ResultTemplate=eur-lex_res-en.hts&amp;QueryMode=Simple&amp;SearchPage=%2Feur-lex%2Fen%2Findex.html&amp;SearchIn=http%3A%2F%2Feuropa.eu.int%2Feur-lex%2Fen&amp;SortField=Score&amp;SortOrder=desc&amp;StartDate=&amp;HTMLonly=&amp;ResultCount=25&amp;queryText={$formKeywords}</search_url>
+			
 		</search>
 		<search>
 			<search_title>FirstGov</search_title>
@@ -605,14 +606,15 @@
 			<search_title>Thomas Legislative Information on the Internet</search_title>
 			<search_description>Through Thomas, the Library of Congress offers the text of bills in the United States Congress, the full text of the Congressional Record, House and Senate committee reports, and historical documents.</search_description>
 			<url>http://thomas.loc.gov/</url>
-			<search_url>http://thomas.loc.gov/cgi-bin/query</search_url>
-			<search_post>Stemming=Yes&amp;queryc108={$formKeywords}</search_post>			
+			<search_url>http://thomas.loc.gov/cgi-bin/thomas</search_url>
+			<search_post>congress=109&amp;database=text&amp;MaxDocs=1000&amp;querytype=phrase&amp;Search=SEARCH&amp;query={$formKeywords}</search_post>			
 		</search>
 	</context>
 	<context>
 		<context_title>Media reports</context_title>
 		<context_abbrev>Media reports</context_abbrev>
 		<context_description>Immediately initiates a search based on the subject of the article or paper that connects users to free current and archival articles in the field from leading newspapers around the world.</context_description>
+
 		<search>
 			<search_title>Google News</search_title>
 			<search_description>Search news reports using the popular search engine Google's news feature.</search_description>
@@ -620,7 +622,6 @@
 			<search_url>http://news.google.com/news?hl=en&amp;q={$formKeywords}</search_url>
 			
 		</search>
-
 		<search>
 			<search_title>Globe and Mail</search_title>
 			<search_description>Globe and Mail, Toronto (last seven days)</search_description>
@@ -639,14 +640,14 @@
 			<search_title>Mail &amp; Guardian Newspaper</search_title>
 			<search_description>Mail &amp; Guardian Newspaper, South Africa (1994-)</search_description>
 			<url>http://www.mg.co.za/</url>
-			<search_url>http://archive.mg.co.za/MGArchive/FrameSet.asp?f=xhitlist&amp;xhitlist_x=Advanced&amp;xhitlist_s=contents&amp;xhitlist_d=&amp;xhitlist_hc=&amp;xhitlist_xsl=xhitlist.xsl&amp;xhitlist_vpc=first&amp;xhitlist_sel=title%3Bpath%3Brelevance-weight%3Bcontent-type%3Bhom&amp;xhitlist_q={$formKeywords}</search_url>
+			<search_url>http://www.mg.co.za/mg_search_results.aspx?PrintEdition=PrintEdition&amp;DailyNews=DailyNews&amp;SearchSection=&amp;StartDay=&amp;StartMonth=&amp;StartYear=&amp;EndDay=&amp;EndMonth=&amp;EndYear=&amp;keywords={$formKeywords}</search_url>
 			
 		</search>
 		<search>
 			<search_title>National Public Radio</search_title>
 			<search_description>National Public Radio, United States (unlimited)</search_description>
 			<url>http://www.npr.org/archives/</url>
-			<search_url>http://search1.npr.org/search97cgi/s97_cgi?ResultTemplate=simple_date.hts&amp;SortSpec=Date+Desc+Score+Desc&amp;ViewTemplate=docview.hts&amp;collection=zeus&amp;collection=C1&amp;collection=WEB&amp;Action=FilterSearch&amp;filter=topic_filter.hts&amp;x=23&amp;y=13&amp;QueryText={$formKeywords}</search_url>
+			<search_url>http://www.npr.org/search.php?text={$formKeywords}</search_url>
 			
 		</search>
 		<search>
@@ -660,8 +661,8 @@
 			<search_title>The Japan Times Online</search_title>
 			<search_description>The Japan Times Online, Japan (January 1999-)</search_description>
 			<url>http://www.japantimes.co.jp/search.htm</url>
-			<search_url>http://www.japantimes.co.jp/cgi-bin/search-intro3.pl5</search_url>
-			<search_post>term1={$formKeywords}</search_post>			
+			<search_url>http://search.japantimes.co.jp/cgi-bin/JTsearch4.pl5?term1={$formKeywords}</search_url>
+			
 		</search>
 		<search>
 			<search_title>The Moscow Times</search_title>
@@ -697,23 +698,26 @@
 			<search_url>http://www.google.com/search?q={$formKeywords}</search_url>
 			
 		</search>
-			<search>
+		<search>
 			<search_title>Google Scholar</search_title>
 			<search_description>Google Scholar enables specific searches of scholarly literature, including peer-reviewed papers, theses, books, pre-prints, abstracts, and technical reports. Content includes a range of publishers and aggregators with whom Google already has standing arrangements, e.g., the Association for Computing Machinery, IEEE, OCLC's Open WorldCat library locator service, etc. Result displays will show different version clusters, citation analysis, and library location (currently books only).</search_description>
 			<url>http://scholar.google.com</url>
 			<search_url>http://scholar.google.com/scholar?ie=UTF-8&amp;oe=UTF-8&amp;hl=en&amp;q={$formKeywords}</search_url>
+			
 		</search>
 		<search>
 			<search_title>Clusty the Clustering Engine</search_title>
 			<search_description>This search tool from Vivismo offers clustered results for a selection of searches.  Metasearch the whole web, or use tabs to search for news, gossip, images, orproducts via Bizrate or eBay.</search_description>
 			<url>http://clusty.com/</url>
 			<search_url>http://clusty.com/search?query={$formKeywords}</search_url>
+			
 		</search>
 		<search>
 			<search_title>Vivisimo</search_title>
 			<search_description>The award-winning Vivisimo clustering technology, developed by Carnegie Mellon research scientists, is unlocking the value of stored information at Fortune 500 companies, top websites, prestigious publishers and government agencies by categorizing research results on the fly into meaningful orders, thus achieving breakthrough improvement in access to relevant information.</search_description>
 			<url>http://vivisimo.com</url>
 			<search_url>http://vivisimo.com/search?tb=homepage&amp;v%3Asources=Web&amp;query={$formKeywords}</search_url>
+			
 		</search>
 	</context>
 </version>
