@@ -89,12 +89,12 @@ class SuppFileForm extends Form {
 	/**
 	 * Validate the form
 	 */
-	function validate($suppId = 0) {
+	function validate() {
 		$journal = &Request::getJournal();
 		$suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
 
 		$publicSuppFileId = $this->getData('publicSuppFileId');
-		if ($publicSuppFileId && $suppFileDao->suppFileExistsByPublicId($publicSuppFileId, $suppId, $journal->getJournalId())) {
+		if ($publicSuppFileId && $suppFileDao->suppFileExistsByPublicId($publicSuppFileId, $this->suppFileId, $journal->getJournalId())) {
 			$this->addError('publicIssueId', 'author.suppFile.suppFilePublicIdentificationExists');
 			$this->addErrorField('publicSuppFileId');
 		}
@@ -178,7 +178,7 @@ class SuppFileForm extends Form {
 			}
 			
 			// Index metadata
-			ArticleSearchIndex::indexSuppFileMetadata($suppFile->getFileId());
+			ArticleSearchIndex::indexSuppFileMetadata($suppFile);
 
 			// Update existing supplementary file
 			$this->setSuppFileData($suppFile);

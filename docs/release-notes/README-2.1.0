@@ -128,6 +128,8 @@ Bug Fixes
 	- #2005# Corrected "Enroll User" function specifics
 	- #2007# xmllint validation errors for OJS XML
 	- #2011# Journal Logo in setup 5.1
+	- #2020# Searching/indexing updates
+	- #2022# Supplemental file public IDs cannot remain the same
 
 Removed Features
 ----------------
