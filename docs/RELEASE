@@ -1,6 +1,6 @@
-OJS 2.0.2 Release Notes
-CVS tag: ojs-2_0_2-0
-Release date: Sept 16, 2005
+OJS 2.1.0 Release Notes
+CVS tag: ojs-2_1_0-0
+Release date: [Month] [Day], [Year]
 =================================
 
 
@@ -11,156 +11,127 @@ See config.TEMPLATE.inc.php for a description and examples of all supported
 configuration parameters.
 
 New config.inc.php parameters:
-	- general:base_url - this is a REQUIRED parameter and must be added on
-	  existing OJS installations
-	- SMTP server configuration settings: email:smtp, smtp_server,
-	  smtp_port, smtp_auth, smtp_username, and smtp_password
-	- files:umask - umask for created files and directories
+	- general:base_url[journal_path] - Override the base URL for the
+		specified journal (or "index" for pages not affiliated with
+		any particular journal)
+	- email:enable_attachments - enable or disable email attachments on
+		all email templates for which it is an optional feature
 
-Modified config.inc.php parameters:
-	- security:dir_perm has been deprecated by files:umask
+	- cache:cache - This paramter is REQUIRED and must be added to
+	  existing deployments! Specifies the caching method to use (one of
+	  the following: memcache / file / none)
 
+	- cache:memcache_hostname - the hostname of the memcache server
+	- cache:memcache_port - the port of the memcache server
+
+The various data caches have been moved into the cache directory. The
+following directories are no longer used and can be deleted:
+	- templates/t_cache
+	- templates/t_compile
+	- templates/t_config
+	- locale/cache
+	- help/cache
+	- [files_dir]/_db
 
 New Features
 ------------
-
-	- #965# LOCKSS support added
-	- #1246# Added umask configuration option
-	- #1276# Added editor preview of unpublished issues
-	- #1289# Journal managers can now create custom email templates
-	- #1289# Sender/receiver role information added to system email templates
-	- #1289# Descriptions added to system email templates
-	- #1289# Most emails can now be disabled
-	- #1417# Added article view counter
-	- #1418# Added journal search to reading tools frame
-	- #1462# Enhanced Site Map
-	- #1489# Add stace backtrace to error display
-	- #1531# PHP-CGI support
-	- #1568# Optimized indexing of binary files
-	- #1590# Added option to CC emails to oneself
-	- #1622# Search enhancements: Phrase-based searching, boolean logic
-	- #1658# Section titles are now optional
-	- #1666# Tailored various pages for single-journal sites
-	- #1670# Installer now indicates database support
-	- #1678# Added feature allowing user merges amongst journals in an installation
-	- #1687# Added text field to indicate the reason an account was disabled
-	- #1693# Added command-line installer
-	- #1695# Added email to user search forms
-	- #1698# Canonical URLs now configurable
-	- #1701# Installer checks pre-conditions
-	- #1703# Creating a journal now creates a default section
-	- #1704# FAQ section added to help
-	- #1705# Added "Enroll Existing User" feature to All Users in People Management
-	- #1713# External SMTP server support added
-	- #1717# Sections can now indicate that abstracts are disabled
-	- #1719# RT updates
-	- #1726# Plugin templates now precompiled
-	- #1740# Added user bios for Editorial Team in About
-	- #1751# Added Erudit export plugin
-	- #1753# Article type identification added
-	- #1759# Subscription type ordering now uses up/down arrows
-	- #1761# Added "Unsuitable submission" template and button
-	- #1802# Select Reviewer notes should describe Days column
-	- #1811# Reviewer's Archive indicates declined reviews
-	- #1825# Help Author find Copyedit page
-	- #1831# Added help text for restoring archived submissions
-	- #1833# Added note to review page for submissions that have been sent to copyediting
-	- #1845# Wording changes and additions to help and instructions
-	- #1846# #1847# Windows / IIS support added
+	- #954# Added Editor/Review board feature (allows custom journal mastheads)
+	- #977# Added Journal Statistics and Report Generator
+	- #1478# Cache directories merged.
+	- #1654# Allow site URL to be overridden (for proxies)
+	- #1712# Mode to use query params instead of PATH_INFO
+	- #1718# Author agreement with Copyright Notice added to submission
+	- #1750# Issue-specific section ordering
+	- #1771# Create Subscription Manager role
+	- #1775# Allow Editors to search on author, reviewer, etc. in Archives
+	- #1799# Editors need indication of review due date
+	- #1877# Erudit export enhancements
+	- #1880# Optimization
+	- #1882# Remove reliance on allow_url_fopen
+	- #1883# Enable attachments in all emails
+	- #1887# Generic plugin support added
+	- #1888# Add "hooks" support for plugins
+	- #1889# Authentication plug-ins
+	- #1893# Additional URL rewriting in HTML galleys
+	- #1905# Warn authors when submitting without submission file
+	- #1906# One-click access for reviewers
+	- #1910# Allow inlining of some types of supplementary files
+	- #1911# Add support for issue-specific stylesheets
+	- #1913# Generic data caching infrastructure
+	- #1914# Add plugin settings infrastructure
+	- #1915# UI settings clobbered in Journal Setup
+	- #1920# Can designate both submission Section Editor and Editor
+	- #1922# Section titles should be localized
+	- #1930# Add Country to user/author profiles
+	- #1932# Allow limited HTML in author biography
+	- #1935# Reading Tools / Google Scholar updates
+	- #1939# Add "Expedite Submission" function
+	- #1960# Add support for Google Scholar gateway
+	- #1961# #2010# Add Portuguese (Brasil) locale
+	- #1968# Clean up template links to CSS files
+	- #1976# Added transcoding (iconv) support to OJS 1.x migration
+	- #1981# Editor/Author Correspondence changes
+	- #1987# Add link to Registration page after installation
+	- #2009# Add Spanish (Spain) translation
 
 Bug Fixes
 ---------
+	- #1184# Removed buggy page footer
+	- #1603# Make creator metadata field more accurate
+	- #1676# "Add New Reviewer" in Select Reviewers is ambiguous
+	- #1768# In Select Reviewers table, change + to actual number
+	- #1794# Export by role can export the same user multiple times
+	- #1809# In Sections (About the Journal), "Editors" should not appear if empty.
+	- #1837# restrictReviewerFileAccess option only affects template
+	- #1855# User list not sorted for "all users" and "enroll search"
+	- #1866# "Register for Other Journals" should display "none" if none exist
+	- #1875# Native import tool discards isCommandLine on import
+	- #1879# Boolean values in native import plugin cause PostgreSQL errors
+	- #1884# Remove additional public IDs from Erudit export plugin
+	- #1885# Plugins shouldn't be using require(...) or include(...)
+	- #1886# Release notes should be escaped
+	- #1898# Large imports can timeout
+	- #1907# Warning message when issue open access date is null
+	- #1908# numWeeksPerReview setting needs default value
+	- #1909# HTML galley img rewriting "src=" should be case insensitive
+	- #1902# Article title should be able to contain limited HTML
+	- #1917# PHP 5.0.5 reference errors
+	- #1918# Missing locale key icon.comment.alt
+	- #1919# Asterisk for required fields on forms can be orphaned
+	- #1923# Standardize "Log In"/"Login"/"Sign In" terminology
+	- #1928# Date Published should be optional in native.dtd
+	- #1929# Command-line tool chdir() forces XML imports to be in tree
+	- #1931# Change {translate_assign ...} to {translate|assign ...}
+	- #1933# Automated Reminders not using modified templates
+	- #1938# Manual install violates NOT NULL constraints
+	- #1940# Odd behavior when disabling emails
+	- #1944# Reviewer declining a review should send submission to archive
+	- #1945# Site Administrator should be able to access manager funcs
+	- #1948# mime_content_type calls should use String::mime_content_type
+	- #1954# DB Error in insertTemporaryFile
+	- #1956# DB Error in PublishedArticleDAO::getPublishedArticles
+	- #1957# Native import plugin ignores "pages" node
+	- #1966# Native import/export does not support article getType()
+	- #1973# #1974# Reference errors
+	- #1975# Authors should not be able to edit Metadata after Copyedit
+	- #1977# Migration still uses string constants for enableComments
+	- #1978# SELECT DISTINCT must select ORDER BY columns
+	- #1980# SE can't upload files for Setup 2.2 email reviewers
+	- #1984# Site admin validation not working
+	- #1985# Search Results page not determining access status properly
+	- #1986# Function called on non-object in UserManagementForm.inc.php
+	- #1989# #1990# #2006# Wording changes
+	- #1998# Subject vs. Keywords terminology confusion
+	- #2000# Change spacing of required fields in forms
+	- #2001# Missing locale key in article history
+	- #2002# Event log does not indicate "editor to enter"
+	- #2005# Corrected "Enroll User" function specifics
+	- #2007# xmllint validation errors for OJS XML
+	- #2011# Journal Logo in setup 5.1
+	- #2020# Searching/indexing updates
+	- #2022# Supplemental file public IDs cannot remain the same
 
-	- #1296# Improved user selection mechanism for subscriptions
-	- #1307# (Code cleanup) Default "From" to current user in system emails
-	- #1325# Verify safe-mode compatibility
-	- #1415# Remove unused article_search_results table
-	- #1453# Removed non-XHTML compliant "nobr" tag
-	- #1495# Deleting articles leaves orphaned directories
-	- #1526# Call-time pass-by-reference warnings
-	- #1558# Allow manager to view number of users who receive notifications
-	- #1569# Corrected inconsistent close links/buttons in pop-ups
-	- #1635# Removed section ordering in specific issue TOC
-	- #1688# Unused fields in edit_assignments table
-	- #1689# Duplicate code in CopyeditorSubmission and CopyAssignment
-	- #1691# Make "last insert ID" conventions consistent
-	- #1694# Database errors in issue/article view handlers when accessing non-existent IDs
-	- #1706# open_basedir / safe mode compatibility
-	- #1707# PHP 4.2.x incompatibilities
-	- #1708# Migration script fails if old and new DB connection parameters are identical
-	- #1710# SubmissionDAOs not setting pages field
-	- #1711# Migration script fails mysteriously on some systems
-	- #1714# Password reset email parameter not replaced
-	- #1716# Export fails if DOMXML extension not installed
-	- #1720# Reference abuses corrected
-	- #1721# Corrected broken PostgreSQL queries
-	- #1722# Proofreader comments functions missing
-	- #1723# Unable to create article note
-	- #1724# Updated ADODB and Smarty libraries for reference issues
-	- #1725# Installation fails due to fatal error in XMLParserDOMHandler
-	- #1727# SQL query failures on MySQL 3.23
-	- #1729# "Site Administrator" option disappears
-	- #1730# OJS 1.x import doesn't substitute variables properly
-	- #1731# Cannot view/download supplementary files
-	- #1734# Site/journal title displayed incorrectly in some cases
-	- #1735# Re-ordering authors when submitting paper changes identity of principal contact
-	- #1736# Bad link to My Journals
-	- #1737# Improper use of ADODB date functions
-	- #1738# OAI schema validation failures
-	- #1742# Inappropriately-placed redirect in SubmissionEditorHandler
-	- #1743# Support/principal shouldn't be required in Journal Setup page 1
-	- #1744# "Initiate All Reviews" can be used when no review version is in place
-	- #1746# "Enable this journal to appear" doesn't work when creating a journal
-	- #1748# Superfluous "editor to enter" line on co-editor's page after request declined
-	- #1749# No error is reported if referee does not choose recommendation
-	- #1754# Overhauled templates for XSS issues
-	- #1756# Database upgrade fails on PostgreSQL
-	- #1758# Imported articles not available for management
-	- #1762# REVIEW_COMPLETE template was unused
-	- #1763# Improved abstraction of template constants
-	- #1764# Copyeditor cannot upload initial copyedit file
-	- #1765# Cover page image width is hard-coded
-	- #1772# HTML indexing code does not strip entities
-	- #1776# User import ignores several fields
-	- #1777# Command-line upgrade fails with "pretend"
-	- #1778# Numerous XML files do not validate
-	- #1784# People ... (Specific Role) ... Create User should preserve role
-	- #1785# Review assignments can become trapped
-	- #1787# Duplicate reviewers on "Assign Reviewer"
-	- #1788# "Save and Email" error
-	- #1789# Error when completing layout editing
-	- #1790# Articles list not displayed in native export in some cases
-	- #1791# Incorrect calls to generateArticleDom
-	- #1792# Export: PHP warning when no issues/articles selected
-	- #1796# Duplicate "email" sections in config template
-	- #1797# Lack of ArticleSearchIndex::rebuildIndex return causes potential upgrade issues
-	- #1800# ARTICLE_EMAIL_REVIEW_COMPLETE constant not defined
-	- #1803# Equality user/submission search should be case insensitive
-	- #1804# PHP notice after "Import Peer Reviews"
-	- #1805# "Send Reviewers editorial decision" includes reviewers in previous rounds
-	- #1807# Author cannot download author copyedit file
-	- #1808# Archive Submission eliminates Unsuitable email
-	- #1815# PDF interstitial page shown for non-PDF files if RT disabled
-	- #1817# Number of users in journal count is wrong
-	- #1818# If reviewer declines, both "Start" and "Done" dates indicated
-	- #1819# Reviewer unable to enter review
-	- #1820# #1826# Error sending issue toc notification email
-	- #1821# Attempt to edit email template fails
-	- #1832# PDF listed in ToC is not available
-	- #1841# Issues with Crating Issue using Title Only
-	- #1849# "People" crumb link in Create User interpereted as form submission
-	- #1850# #1851# Avoid usage of SQL keywords for database compatibility
-	- #1852# Upgrades fail in PostgreSQL 7.1
-	- #1854# Upgrade from OJS 2.0.1 fails on PostgreSQL 8.0
-	- #1858# PostgreSQL 7.1 database error on JM ... People ... Send Email ... Select Template
-	- #1859# Improper escaping in Smarty templates
-	- #1861# Database error on article submission (PostgreSQL 7.1 issues)
-	- #1862# Column aliases too long for PostgreSQL 7.1
-	- #1863# Improper indexes created in PostgreSQL 7.1
-	- #1864# Duplicate indexes created in PostgreSQL 7.1
-	- #1869# Register as... functioning incorrectly
-	- #1871# Corrected reviewer acceptance/recommendation UI glitch
-	- #1872# Database error on Preview Issue
-	- #1873# Reading Tools displays Abstract link when Abstracts disabled
-	- #1874# PostgreSQL issues with invalid article/issue custom IDs
-
+Removed Features
+----------------
+	- #1396# Notify All Reviewers feature removed. The associated emails
+	  are now unused: REVIEW_REQ_MULTI_ATTACHED; REVIEW_REQUEST_MULTI
