@@ -176,6 +176,9 @@ class SuppFileForm extends Form {
 				import('search.ArticleSearchIndex');
 				ArticleSearchIndex::updateFileIndex($this->article->getArticleId(), ARTICLE_SEARCH_SUPPLEMENTARY_FILE, $suppFile->getFileId());
 			}
+			
+			// Index metadata
+			ArticleSearchIndex::indexSuppFileMetadata($suppFile->getFileId());
 
 			// Update existing supplementary file
 			$this->setSuppFileData($suppFile);

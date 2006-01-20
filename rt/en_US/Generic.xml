@@ -99,19 +99,6 @@
 		</search>
 	</context>
 	<context>
-		<context_title>Find places</context_title>
-		<context_abbrev>Find places</context_abbrev>
-		<context_description>Search for locations relating to the article.</context_description>
-		<geo_terms />
-		<search>
-			<search_title>Google Maps</search_title>
-			<search_description>Search for locations using the popular Google search engine's mapping features.</search_description>
-			<url>http://maps.google.com/</url>
-			<search_url>http://maps.google.com/maps?hl=en&amp;q={$formKeywords}</search_url>
-			
-		</search>
-	</context>
-	<context>
 		<context_title>Government policy</context_title>
 		<context_abbrev>Gov Policy</context_abbrev>
 		<context_description>Check various government resources.</context_description>

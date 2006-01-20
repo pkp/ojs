@@ -181,6 +181,28 @@ class ArticleSearchIndex {
 	}
 	
 	/**
+	 * Index supp file metadata.
+	 * @param $suppFile object
+	 */
+	function indexSuppFileMetadata(&$suppFile) {
+		// Update search index
+		$articleId = $suppFile->getArticleId();
+		ArticleSearchIndex::updateTextIndex(
+			$articleId,
+			ARTICLE_SEARCH_SUPPLEMENTARY_FILE,
+			array(
+				$suppFile->getTitle(),
+				$suppFile->getCreator(),
+				$suppFile->getSubject(),
+				$suppFile->getTypeOther(),
+				$suppFile->getDescription(),
+				$suppFile->getSource()
+			),
+			$suppFile->getFileId()
+		);
+	}
+	
+	/**
 	 * Index all article files (supplementary and galley).
 	 * @param $article Article
 	 */
@@ -192,6 +214,7 @@ class ArticleSearchIndex {
 			if ($file->getFileId()) {
 				ArticleSearchIndex::updateFileIndex($article->getArticleId(), ARTICLE_SEARCH_SUPPLEMENTARY_FILE, $file->getFileId());
 			}
+			ArticleSearchIndex::indexSuppFileMetadata($file);
 		}
 		
 		// Index galley files
