@@ -51,12 +51,16 @@ class ArticleSearch {
 	function _parseQuery($signTokens, $tokens, &$pos, $total) {
 		$return = array('+' => array(), '' => array(), '-' => array());
 		$postBool = $preBool = '';
+
+		$notOperator = Locale::translate('search.operator.not');
+		$andOperator = Locale::translate('search.operator.and');
+		$orOperator = Locale::translate('search.operator.or');
 		while ($pos < $total) {
 			if (!empty($signTokens[$pos])) $sign = $signTokens[$pos];
 			else if (empty($sign)) $sign = '+';
 			$token = String::strtolower($tokens[$pos++]);
 			switch ($token) {
-				case 'not':
+				case $notOperator:
 					$sign = '-';
 					break;
 				case ')':
@@ -67,10 +71,10 @@ class ArticleSearch {
 					$postBool = '';
 					if ($pos < $total) {
 						$peek = String::strtolower($tokens[$pos]);
-						if ($peek == 'or') {
+						if ($peek == $orOperator) {
 							$postBool = 'or';
 							$pos++;
-						} else if ($peek == 'and') {
+						} else if ($peek == $andOperator) {
 							$postBool = 'and';
 							$pos++;
 						}
