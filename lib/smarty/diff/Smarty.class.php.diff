@@ -1,7 +1,7 @@
---- Smarty-2.6.9/libs/Smarty.class.php	Thu Mar 31 06:41:24 2005
-+++ smarty/Smarty.class.php	Sun May  1 00:14:31 2005
+--- Smarty-2.6.12/libs/Smarty.class.php	2006-01-18 10:52:24.000000000 -0800
++++ smarty/Smarty.class.php	2006-01-23 15:07:45.000000000 -0800
 @@ -30,7 +30,7 @@
-  * @version 2.6.9
+  * @version 2.6.12
   */
  
 -/* $Id$ */
@@ -9,7 +9,7 @@
  
  /**
   * DIR_SEP isn't used anymore, but third party apps might
-@@ -1100,6 +1100,18 @@
+@@ -1107,6 +1107,18 @@
      {
          $this->fetch($resource_name, $cache_id, $compile_id, true);
      }
@@ -28,7 +28,7 @@
  
      /**
       * executes & returns or displays the template results
-@@ -1109,7 +1121,7 @@
+@@ -1116,7 +1128,7 @@
       * @param string $compile_id
       * @param boolean $display
       */
@@ -37,7 +37,7 @@
      {
          static $_cache_info = array();
          
-@@ -1255,7 +1267,7 @@
+@@ -1262,7 +1274,7 @@
              if ($this->_is_compiled($resource_name, $_smarty_compile_path)
                      || $this->_compile_resource($resource_name, $_smarty_compile_path))
              {

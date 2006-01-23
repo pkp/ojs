@@ -1,5 +1,5 @@
---- Smarty-2.6.6/libs/Smarty_Compiler.class.php    Fri Jan  7 18:10:09 2005
-+++ lib/smarty/Smarty_Compiler.class.php        Fri Jan  7 18:27:40 2005
+--- Smarty-2.6.12/libs/Smarty_Compiler.class.php	2006-01-18 10:52:32.000000000 -0800
++++ smarty/Smarty_Compiler.class.php	2006-01-23 15:07:45.000000000 -0800
 @@ -26,7 +26,7 @@
   * @package Smarty
   */
@@ -18,7 +18,7 @@
          
          // matches valid modifier syntax:
          // |foo
-@@ -1643,7 +1645,7 @@
+@@ -1666,7 +1668,7 @@
      function _expand_quoted_text($var_expr)
      {
          // if contains unescaped $, expand it
