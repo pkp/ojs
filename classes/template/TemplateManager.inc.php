@@ -320,18 +320,20 @@ class TemplateManager extends Smarty {
 			else $smarty->assign($params['key'], $smarty->get_template_vars($params['key'])+1);
 		}
 
-		if ($iterator && !$iterator->eof()) {
-			$repeat = true;
-
-			if (isset($params['key'])) {
-				list($key, $value) = $iterator->nextWithKey();
-				$smarty->assign_by_ref($params['item'], $value);
-				$smarty->assign_by_ref($params['key'], $key);
-			} else {
-				$smarty->assign_by_ref($params['item'], $iterator->next());
-			}
-		} else {
+		// If the iterator is empty, we're finished.
+		if (!$iterator || $iterator->eof()) {
 			$repeat = false;
+			return '';
+		}
+
+		$repeat = true;
+
+		if (isset($params['key'])) {
+			list($key, $value) = $iterator->nextWithKey();
+			$smarty->assign_by_ref($params['item'], $value);
+			$smarty->assign_by_ref($params['key'], $key);
+		} else {
+			$smarty->assign_by_ref($params['item'], $iterator->next());
 		}
 		return $content;
 	}
