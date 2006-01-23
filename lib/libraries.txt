@@ -7,5 +7,5 @@ ADOdb Database Library
 
 Smarty Template Engine
  * URL: <http://smarty.php.net/>
- * Version: 2.6.10 (August 5, 2005)
+ * Version: 2.6.12 (January 18, 2006)
  * License: LGPL (see lib/smarty/COPYING.lib)

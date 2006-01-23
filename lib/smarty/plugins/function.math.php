@@ -14,6 +14,7 @@
  * Purpose:  handle math computations in template<br>
  * @link http://smarty.php.net/manual/en/language.function.math.php {math}
  *          (Smarty online manual)
+ * @author   Monte Ohrt <monte at ohrt dot com>
  * @param array
  * @param Smarty
  * @return string
@@ -57,7 +58,7 @@ function smarty_function_math($params, &$smarty)
                 $smarty->trigger_error("math: parameter $key: is not numeric");
                 return;
             }
-            $equation = preg_replace("/\b$key\b/",$val, $equation);
+            $equation = preg_replace("/\b$key\b/", " \$params['$key'] ", $equation);
         }
     }
 
