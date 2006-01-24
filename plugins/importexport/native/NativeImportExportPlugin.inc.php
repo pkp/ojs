@@ -17,6 +17,9 @@ import('classes.plugins.ImportExportPlugin');
 
 import('xml.XMLCustomWriter');
 
+define('NATIVE_DTD_URL', 'http://pkp.sfu.ca/ojs/dtds/native.dtd');
+define('NATIVE_DTD_ID', '-//PKP//OJS Articles and Issues XML//EN');
+
 class NativeImportExportPlugin extends ImportExportPlugin {
 	/**
 	 * Called as a plugin is registered to the registry
@@ -165,7 +168,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 
 	function exportIssue(&$journal, &$issue, $outputFile = null) {
 		$this->import('NativeExportDom');
-		$doc = &XMLCustomWriter::createDocument('issue', 'native.dtd');
+		$doc = &XMLCustomWriter::createDocument('issue', NATIVE_DTD_ID, NATIVE_DTD_URL);
 		$issueNode = &NativeExportDom::generateIssueDom($doc, $journal, $issue);
 		XMLCustomWriter::appendChild($doc, $issueNode);
 
@@ -182,7 +185,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 
 	function exportArticle(&$journal, &$issue, &$section, &$article, $outputFile = null) {
 		$this->import('NativeExportDom');
-		$doc = &XMLCustomWriter::createDocument('article', '/native.dtd');
+		$doc = &XMLCustomWriter::createDocument('article', NATIVE_DTD_ID, NATIVE_DTD_URL);
 		$articleNode = &NativeExportDom::generateArticleDom($doc, $journal, $issue, $section, $article);
 		XMLCustomWriter::appendChild($doc, $articleNode);
 
@@ -199,7 +202,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 
 	function exportIssues(&$journal, &$issues, $outputFile = null) {
 		$this->import('NativeExportDom');
-		$doc = &XMLCustomWriter::createDocument('issues', '/native.dtd');
+		$doc = &XMLCustomWriter::createDocument('issues', NATIVE_DTD_ID, NATIVE_DTD_URL);
 		$issuesNode = &XMLCustomWriter::createElement($doc, 'issues');
 		XMLCustomWriter::appendChild($doc, $issuesNode);
 
@@ -221,7 +224,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 
 	function exportArticles(&$results, $outputFile = null) {
 		$this->import('NativeExportDom');
-		$doc = &XMLCustomWriter::createDocument('articles', '/native.dtd');
+		$doc = &XMLCustomWriter::createDocument('articles', NATIVE_DTD_ID, NATIVE_DTD_URL);
 		$articlesNode = &XMLCustomWriter::createElement($doc, 'articles');
 		XMLCustomWriter::appendChild($doc, $articlesNode);
 

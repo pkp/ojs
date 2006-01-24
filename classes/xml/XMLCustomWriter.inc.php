@@ -19,7 +19,7 @@ class XMLCustomWriter {
 	/**
 	 * Create a new XML document.
 	 * If $url is set, the DOCTYPE definition is treated as a PUBLIC
-	 * definition; $url should contain the ID, and $url should contain the
+	 * definition; $dtd should contain the ID, and $url should contain the
 	 * URL. Otherwise, $dtd should be the DTD name.
 	 */
 	function &createDocument($type, $dtd, $url = null) {
