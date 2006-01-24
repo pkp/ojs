@@ -13,128 +13,128 @@
  * $Id$
  */
 
-import('xml.XMLWriter');
+import('xml.XMLCustomWriter');
 
 class EruditExportDom {
 	function &generateArticleDom(&$doc, &$journal, &$issue, &$article, &$galley) {
 		$unavailableString = Locale::translate('plugins.importexport.erudit.unavailable');
 
-		$root = &XMLWriter::createElement($doc, 'article');
-		XMLWriter::setAttribute($root, 'idprop', $journal->getJournalId() . '-' . $issue->getIssueId() . '-' . $article->getArticleId() . '-' . $galley->getGalleyId(), false);
-		XMLWriter::setAttribute($root, 'arttype', 'article');
+		$root = &XMLCustomWriter::createElement($doc, 'article');
+		XMLCustomWriter::setAttribute($root, 'idprop', $journal->getJournalId() . '-' . $issue->getIssueId() . '-' . $article->getArticleId() . '-' . $galley->getGalleyId(), false);
+		XMLCustomWriter::setAttribute($root, 'arttype', 'article');
 
 		$lang = $article->getLanguage();
-		XMLWriter::setAttribute($root, 'lang', isset($lang)?$lang:'en');
-		XMLWriter::setAttribute($root, 'processing', 'cart');
+		XMLCustomWriter::setAttribute($root, 'lang', isset($lang)?$lang:'en');
+		XMLCustomWriter::setAttribute($root, 'processing', 'cart');
 
 		/* --- admin --- */
 
-		$adminNode = &XMLWriter::createElement($doc, 'admin');
-		XMLWriter::appendChild($root, $adminNode);
+		$adminNode = &XMLCustomWriter::createElement($doc, 'admin');
+		XMLCustomWriter::appendChild($root, $adminNode);
 
 		/* --- articleinfo --- */
 
-		$articleInfoNode = &XMLWriter::createElement($doc, 'articleinfo');
-		XMLWriter::appendChild($adminNode, $articleInfoNode);
+		$articleInfoNode = &XMLCustomWriter::createElement($doc, 'articleinfo');
+		XMLCustomWriter::appendChild($adminNode, $articleInfoNode);
 
 		// The first public ID should be a full URL to the article.
-		$urlIdNode = &XMLWriter::createChildWithText($doc, $articleInfoNode, 'idpublic', Request::url($journal->getPath(), 'article', 'view', array($article->getArticleId(), $galley->getGalleyId())));
-		XMLWriter::setAttribute($urlIdNode, 'scheme', 'sici');
+		$urlIdNode = &XMLCustomWriter::createChildWithText($doc, $articleInfoNode, 'idpublic', Request::url($journal->getPath(), 'article', 'view', array($article->getArticleId(), $galley->getGalleyId())));
+		XMLCustomWriter::setAttribute($urlIdNode, 'scheme', 'sici');
 
 		/* --- journal --- */
 
-		$journalNode = &XMLWriter::createElement($doc, 'journal');
-		XMLWriter::appendChild($adminNode, $journalNode);
-		XMLWriter::setAttribute($journalNode, 'id', 'ojs-' . $journal->getPath());
-		XMLWriter::createChildWithText($doc, $journalNode, 'jtitle', $journal->getTitle());
-		XMLWriter::createChildWithText($doc, $journalNode, 'jshorttitle', $journal->getSetting('journalInitials'), false);
+		$journalNode = &XMLCustomWriter::createElement($doc, 'journal');
+		XMLCustomWriter::appendChild($adminNode, $journalNode);
+		XMLCustomWriter::setAttribute($journalNode, 'id', 'ojs-' . $journal->getPath());
+		XMLCustomWriter::createChildWithText($doc, $journalNode, 'jtitle', $journal->getTitle());
+		XMLCustomWriter::createChildWithText($doc, $journalNode, 'jshorttitle', $journal->getSetting('journalInitials'), false);
 
 		if (!($issn = $journal->getSetting('issn'))) {
 			$issn = $unavailableString;
 		}
-		XMLWriter::createChildWithText($doc, $journalNode, 'idissn', $issn);
-		XMLWriter::createChildWithText($doc, $journalNode, 'iddigissn', $unavailableString);
+		XMLCustomWriter::createChildWithText($doc, $journalNode, 'idissn', $issn);
+		XMLCustomWriter::createChildWithText($doc, $journalNode, 'iddigissn', $unavailableString);
 
 		/* --- issue --- */
 
-		$issueNode = &XMLWriter::createElement($doc, 'issue');
-		XMLWriter::appendChild($adminNode, $issueNode);
-		XMLWriter::setAttribute($issueNode, 'id', 'ojs-' . $issue->getBestIssueId());
-		XMLWriter::createChildWithText($doc, $issueNode, 'volume', $issue->getVolume(), false);
-		XMLWriter::createChildWithText($doc, $issueNode, 'issueno', $issue->getNumber(), false);
+		$issueNode = &XMLCustomWriter::createElement($doc, 'issue');
+		XMLCustomWriter::appendChild($adminNode, $issueNode);
+		XMLCustomWriter::setAttribute($issueNode, 'id', 'ojs-' . $issue->getBestIssueId());
+		XMLCustomWriter::createChildWithText($doc, $issueNode, 'volume', $issue->getVolume(), false);
+		XMLCustomWriter::createChildWithText($doc, $issueNode, 'issueno', $issue->getNumber(), false);
 
-		$pubNode = &XMLWriter::createElement($doc, 'pub');
-		XMLWriter::appendChild($issueNode, $pubNode);
-		XMLWriter::createChildWithText($doc, $pubNode, 'year', $issue->getYear());
+		$pubNode = &XMLCustomWriter::createElement($doc, 'pub');
+		XMLCustomWriter::appendChild($issueNode, $pubNode);
+		XMLCustomWriter::createChildWithText($doc, $pubNode, 'year', $issue->getYear());
 
-		$digPubNode = &XMLWriter::createElement($doc, 'digpub');
-		XMLWriter::appendChild($issueNode, $digPubNode);
-		XMLWriter::createChildWithText($doc, $digPubNode, 'date', EruditExportDom::formatDate($issue->getDatePublished()));
+		$digPubNode = &XMLCustomWriter::createElement($doc, 'digpub');
+		XMLCustomWriter::appendChild($issueNode, $digPubNode);
+		XMLCustomWriter::createChildWithText($doc, $digPubNode, 'date', EruditExportDom::formatDate($issue->getDatePublished()));
 
 		/* --- Publisher & DTD --- */
 
 		$publisher = &$journal->getSetting('publisher');
-		$publisherNode = &XMLWriter::createElement($doc, 'publisher');
-		XMLWriter::setAttribute($publisherNode, 'id', 'ojs-' . $journal->getJournalId() . '-' . $issue->getIssueId() . '-' . $article->getArticleId());
-		XMLWriter::appendChild($adminNode, $publisherNode);
+		$publisherNode = &XMLCustomWriter::createElement($doc, 'publisher');
+		XMLCustomWriter::setAttribute($publisherNode, 'id', 'ojs-' . $journal->getJournalId() . '-' . $issue->getIssueId() . '-' . $article->getArticleId());
+		XMLCustomWriter::appendChild($adminNode, $publisherNode);
 		$publisherInstitution = $unavailableString;
 		if (isset($publisher) && isset($publisher['institution']) && $publisher['institution'] != '') {
 			$publisherInstitution = $publisher['institution'];
 		}
-		XMLWriter::createChildWithText($doc, $publisherNode, 'orgname', $publisherInstitution);
+		XMLCustomWriter::createChildWithText($doc, $publisherNode, 'orgname', $publisherInstitution);
 
-		$digprodNode = &XMLWriter::createElement($doc, 'digprod');
-		XMLWriter::createChildWithText($doc, $digprodNode, 'orgname', $publisherInstitution);
-		XMLWriter::setAttribute($digprodNode, 'id', 'ojs-prod-' . $journal->getJournalId() . '-' . $issue->getIssueId() . '-' . $article->getArticleId());
-		XMLWriter::appendChild($adminNode, $digprodNode);
+		$digprodNode = &XMLCustomWriter::createElement($doc, 'digprod');
+		XMLCustomWriter::createChildWithText($doc, $digprodNode, 'orgname', $publisherInstitution);
+		XMLCustomWriter::setAttribute($digprodNode, 'id', 'ojs-prod-' . $journal->getJournalId() . '-' . $issue->getIssueId() . '-' . $article->getArticleId());
+		XMLCustomWriter::appendChild($adminNode, $digprodNode);
 
-		$digdistNode = &XMLWriter::createElement($doc, 'digdist');
-		XMLWriter::createChildWithText($doc, $digdistNode, 'orgname', $publisherInstitution);
-		XMLWriter::setAttribute($digdistNode, 'id', 'ojs-dist-' . $journal->getJournalId() . '-' . $issue->getIssueId() . '-' . $article->getArticleId());
-		XMLWriter::appendChild($adminNode, $digdistNode);
+		$digdistNode = &XMLCustomWriter::createElement($doc, 'digdist');
+		XMLCustomWriter::createChildWithText($doc, $digdistNode, 'orgname', $publisherInstitution);
+		XMLCustomWriter::setAttribute($digdistNode, 'id', 'ojs-dist-' . $journal->getJournalId() . '-' . $issue->getIssueId() . '-' . $article->getArticleId());
+		XMLCustomWriter::appendChild($adminNode, $digdistNode);
 
 
-		$dtdNode = &XMLWriter::createElement($doc, 'dtd');
-		XMLWriter::appendChild($adminNode, $dtdNode);
-		XMLWriter::setAttribute($dtdNode, 'name', 'Erudit Article');
-		XMLWriter::setAttribute($dtdNode, 'version', '3.0.0');
+		$dtdNode = &XMLCustomWriter::createElement($doc, 'dtd');
+		XMLCustomWriter::appendChild($adminNode, $dtdNode);
+		XMLCustomWriter::setAttribute($dtdNode, 'name', 'Erudit Article');
+		XMLCustomWriter::setAttribute($dtdNode, 'version', '3.0.0');
 
 		/* --- copyright --- */
 		$copyright = $journal->getSetting('copyrightNotice');
-		XMLWriter::createChildWithText($doc, $adminNode, 'copyright', empty($copyright)?$unavailableString:$copyright);
+		XMLCustomWriter::createChildWithText($doc, $adminNode, 'copyright', empty($copyright)?$unavailableString:$copyright);
 
 		/* --- frontmatter --- */
 
-		$frontMatterNode = &XMLWriter::createElement($doc, 'frontmatter');
-		XMLWriter::appendChild($root, $frontMatterNode);
+		$frontMatterNode = &XMLCustomWriter::createElement($doc, 'frontmatter');
+		XMLCustomWriter::appendChild($root, $frontMatterNode);
 
-		$titleGroupNode = &XMLWriter::createElement($doc, 'titlegr');
-		XMLWriter::appendChild($frontMatterNode, $titleGroupNode);
+		$titleGroupNode = &XMLCustomWriter::createElement($doc, 'titlegr');
+		XMLCustomWriter::appendChild($frontMatterNode, $titleGroupNode);
 
-		XMLWriter::createChildWithText($doc, $titleGroupNode, 'title', strip_tags($article->getArticleTitle()));
+		XMLCustomWriter::createChildWithText($doc, $titleGroupNode, 'title', strip_tags($article->getArticleTitle()));
 
 
 		/* --- authorgr --- */
 
-		$authorGroupNode = &XMLWriter::createElement($doc, 'authorgr');
-		XMLWriter::appendChild($frontMatterNode, $authorGroupNode);
+		$authorGroupNode = &XMLCustomWriter::createElement($doc, 'authorgr');
+		XMLCustomWriter::appendChild($frontMatterNode, $authorGroupNode);
 		$authorNum = 1;
 		foreach ($article->getAuthors() as $author) {
-			$authorNode = &XMLWriter::createElement($doc, 'author');
-			XMLWriter::appendChild($authorGroupNode, $authorNode);
-			XMLWriter::setAttribute($authorNode, 'id', 'ojs-' . $journal->getJournalId() . '-' . $issue->getIssueId() . '-' . $article->getArticleId() . '-' . $galley->getGalleyId() . '-' . $authorNum);
+			$authorNode = &XMLCustomWriter::createElement($doc, 'author');
+			XMLCustomWriter::appendChild($authorGroupNode, $authorNode);
+			XMLCustomWriter::setAttribute($authorNode, 'id', 'ojs-' . $journal->getJournalId() . '-' . $issue->getIssueId() . '-' . $article->getArticleId() . '-' . $galley->getGalleyId() . '-' . $authorNum);
 
-			$persNameNode = &XMLWriter::createElement($doc, 'persname');
-			XMLWriter::appendChild($authorNode, $persNameNode);
+			$persNameNode = &XMLCustomWriter::createElement($doc, 'persname');
+			XMLCustomWriter::appendChild($authorNode, $persNameNode);
 
-			XMLWriter::createChildWithText($doc, $persNameNode, 'firstname', $author->getFirstName());
-			XMLWriter::createChildWithText($doc, $persNameNode, 'middlename', $author->getMiddleName(), false);
-			XMLWriter::createChildWithText($doc, $persNameNode, 'familyname', $author->getLastName());
+			XMLCustomWriter::createChildWithText($doc, $persNameNode, 'firstname', $author->getFirstName());
+			XMLCustomWriter::createChildWithText($doc, $persNameNode, 'middlename', $author->getMiddleName(), false);
+			XMLCustomWriter::createChildWithText($doc, $persNameNode, 'familyname', $author->getLastName());
 
 			if ($author->getAffiliation() != '') {
-				$affiliationNode = &XMLWriter::createElement($doc, 'affiliation');
-				XMLWriter::appendChild($authorNode, $affiliationNode);
-				XMLWriter::createChildWithText($doc, $affiliationNode, 'blocktext', $author->getAffiliation(), false);
+				$affiliationNode = &XMLCustomWriter::createElement($doc, 'affiliation');
+				XMLCustomWriter::appendChild($authorNode, $affiliationNode);
+				XMLCustomWriter::createChildWithText($doc, $affiliationNode, 'blocktext', $author->getAffiliation(), false);
 			}
 
 			$authorNum++;
@@ -143,38 +143,38 @@ class EruditExportDom {
 
 		/* --- abstract and keywords --- */
 		if ($abstract = $article->getAbstract()) {
-			$abstractNode = &XMLWriter::createElement($doc, 'abstract');
-			XMLWriter::setAttribute ($abstractNode, 'lang', ($language = $article->getLanguage())?$language:'en');
-			XMLWriter::appendChild($frontMatterNode, $abstractNode);
-			XMLWriter::createChildWithText($doc, $abstractNode, 'blocktext', $abstract);
+			$abstractNode = &XMLCustomWriter::createElement($doc, 'abstract');
+			XMLCustomWriter::setAttribute ($abstractNode, 'lang', ($language = $article->getLanguage())?$language:'en');
+			XMLCustomWriter::appendChild($frontMatterNode, $abstractNode);
+			XMLCustomWriter::createChildWithText($doc, $abstractNode, 'blocktext', $abstract);
 		}
 
 		if ($keywords = $article->getSubject()) {
-			$keywordGroupNode = &XMLWriter::createElement($doc, 'keywordgr');
+			$keywordGroupNode = &XMLCustomWriter::createElement($doc, 'keywordgr');
 			foreach (explode(';', $keywords) as $keyword) {
-				XMLWriter::createChildWithText($doc, $keywordGroupNode, 'keyword', trim($keyword), false);
+				XMLCustomWriter::createChildWithText($doc, $keywordGroupNode, 'keyword', trim($keyword), false);
 			}
-			XMLWriter::appendChild($frontMatterNode, $keywordGroupNode);
+			XMLCustomWriter::appendChild($frontMatterNode, $keywordGroupNode);
 		}
 
 		if ($abstract = $article->getAbstractAlt1()) {
-			$abstractNode = &XMLWriter::createElement($doc, 'abstract');
-			XMLWriter::setAttribute ($abstractNode, 'lang', $journal->getSetting('alternateLocale1'));
-			XMLWriter::appendChild($frontMatterNode, $abstractNode);
-			XMLWriter::createChildWithText($doc, $abstractNode, 'blocktext', $abstract);
+			$abstractNode = &XMLCustomWriter::createElement($doc, 'abstract');
+			XMLCustomWriter::setAttribute ($abstractNode, 'lang', $journal->getSetting('alternateLocale1'));
+			XMLCustomWriter::appendChild($frontMatterNode, $abstractNode);
+			XMLCustomWriter::createChildWithText($doc, $abstractNode, 'blocktext', $abstract);
 		}
 
 		if ($abstract = $article->getAbstractAlt2()) {
-			$abstractNode = &XMLWriter::createElement($doc, 'abstract');
-			XMLWriter::setAttribute ($abstractNode, 'lang', $journal->getSetting('alternateLocale2'));
-			XMLWriter::appendChild($frontMatterNode, $abstractNode);
-			XMLWriter::createChildWithText($doc, $abstractNode, 'blocktext', $abstract);
+			$abstractNode = &XMLCustomWriter::createElement($doc, 'abstract');
+			XMLCustomWriter::setAttribute ($abstractNode, 'lang', $journal->getSetting('alternateLocale2'));
+			XMLCustomWriter::appendChild($frontMatterNode, $abstractNode);
+			XMLCustomWriter::createChildWithText($doc, $abstractNode, 'blocktext', $abstract);
 		}
 
 		/* --- body --- */
 
-		$bodyNode = &XMLWriter::createElement($doc, 'body');
-		XMLWriter::appendChild($root, $bodyNode);
+		$bodyNode = &XMLCustomWriter::createElement($doc, 'body');
+		XMLCustomWriter::appendChild($root, $bodyNode);
 
 		import('file.ArticleFileManager');
 		$articleFileManager = &new ArticleFileManager($article->getArticleId());
@@ -184,12 +184,12 @@ class EruditExportDom {
 		if (isset($parser)) {
 			if ($parser->open()) {
 				// File supports text indexing.
-				$textNode = &XMLWriter::createElement($doc, 'text');
-				XMLWriter::appendChild($bodyNode, $textNode);
+				$textNode = &XMLCustomWriter::createElement($doc, 'text');
+				XMLCustomWriter::appendChild($bodyNode, $textNode);
 				
 				while(($line = $parser->read()) !== false) {
 					$line = trim($line);
-					if ($line != '') XMLWriter::createChildWithText($doc, $textNode, 'blocktext', $line, false);
+					if ($line != '') XMLCustomWriter::createChildWithText($doc, $textNode, 'blocktext', $line, false);
 				}
 				$parser->close();
 			}

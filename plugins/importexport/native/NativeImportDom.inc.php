@@ -13,7 +13,7 @@
  * $Id$
  */
 
-import('xml.XMLWriter');
+import('xml.XMLCustomWriter');
 
 class NativeImportDom {
 	function importArticles(&$journal, &$nodes, &$issue, &$section, &$articles, &$errors, &$user, $isCommandLine) {

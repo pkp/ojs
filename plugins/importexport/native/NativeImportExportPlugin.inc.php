@@ -15,7 +15,7 @@
 
 import('classes.plugins.ImportExportPlugin');
 
-import('xml.XMLWriter');
+import('xml.XMLCustomWriter');
 
 class NativeImportExportPlugin extends ImportExportPlugin {
 	/**
@@ -165,65 +165,65 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 
 	function exportIssue(&$journal, &$issue, $outputFile = null) {
 		$this->import('NativeExportDom');
-		$doc = &XMLWriter::createDocument('issue', 'native.dtd');
+		$doc = &XMLCustomWriter::createDocument('issue', 'native.dtd');
 		$issueNode = &NativeExportDom::generateIssueDom($doc, $journal, $issue);
-		XMLWriter::appendChild($doc, $issueNode);
+		XMLCustomWriter::appendChild($doc, $issueNode);
 
 		if (!empty($outputFile)) {
 			if (($h = fopen($outputFile, 'w'))===false) return false;
-			fwrite($h, XMLWriter::getXML($doc));
+			fwrite($h, XMLCustomWriter::getXML($doc));
 			fclose($h);
 		} else {
 			header("Content-Type: application/xml");
-			XMLWriter::printXML($doc);
+			XMLCustomWriter::printXML($doc);
 		}
 		return true;
 	}
 
 	function exportArticle(&$journal, &$issue, &$section, &$article, $outputFile = null) {
 		$this->import('NativeExportDom');
-		$doc = &XMLWriter::createDocument('article', '/native.dtd');
+		$doc = &XMLCustomWriter::createDocument('article', '/native.dtd');
 		$articleNode = &NativeExportDom::generateArticleDom($doc, $journal, $issue, $section, $article);
-		XMLWriter::appendChild($doc, $articleNode);
+		XMLCustomWriter::appendChild($doc, $articleNode);
 
 		if (!empty($outputFile)) {
 			if (($h = fopen($outputFile, 'w'))===false) return false;
-			fwrite($h, XMLWriter::getXML($doc));
+			fwrite($h, XMLCustomWriter::getXML($doc));
 			fclose($h);
 		} else {
 			header("Content-Type: application/xml");
-			XMLWriter::printXML($doc);
+			XMLCustomWriter::printXML($doc);
 		}
 		return true;
 	}
 
 	function exportIssues(&$journal, &$issues, $outputFile = null) {
 		$this->import('NativeExportDom');
-		$doc = &XMLWriter::createDocument('issues', '/native.dtd');
-		$issuesNode = &XMLWriter::createElement($doc, 'issues');
-		XMLWriter::appendChild($doc, $issuesNode);
+		$doc = &XMLCustomWriter::createDocument('issues', '/native.dtd');
+		$issuesNode = &XMLCustomWriter::createElement($doc, 'issues');
+		XMLCustomWriter::appendChild($doc, $issuesNode);
 
 		foreach ($issues as $issue) {
 			$issueNode = &NativeExportDom::generateIssueDom($doc, $journal, $issue);
-			XMLWriter::appendChild($issuesNode, $issueNode);
+			XMLCustomWriter::appendChild($issuesNode, $issueNode);
 		}
 
 		if (!empty($outputFile)) {
 			if (($h = fopen($outputFile, 'w'))===false) return false;
-			fwrite($h, XMLWriter::getXML($doc));
+			fwrite($h, XMLCustomWriter::getXML($doc));
 			fclose($h);
 		} else {
 			header("Content-Type: application/xml");
-			XMLWriter::printXML($doc);
+			XMLCustomWriter::printXML($doc);
 		}
 		return true;
 	}
 
 	function exportArticles(&$results, $outputFile = null) {
 		$this->import('NativeExportDom');
-		$doc = &XMLWriter::createDocument('articles', '/native.dtd');
-		$articlesNode = &XMLWriter::createElement($doc, 'articles');
-		XMLWriter::appendChild($doc, $articlesNode);
+		$doc = &XMLCustomWriter::createDocument('articles', '/native.dtd');
+		$articlesNode = &XMLCustomWriter::createElement($doc, 'articles');
+		XMLCustomWriter::appendChild($doc, $articlesNode);
 
 		foreach ($results as $result) {
 			$article = &$result['publishedArticle'];
@@ -231,16 +231,16 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 			$issue = &$result['issue'];
 			$journal = &$result['journal'];
 			$articleNode = &NativeExportDom::generateArticleDom($doc, $journal, $issue, $section, $article);
-			XMLWriter::appendChild($articlesNode, $articleNode);
+			XMLCustomWriter::appendChild($articlesNode, $articleNode);
 		}
 
 		if (!empty($outputFile)) {
 			if (($h = fopen($outputFile, 'w'))===false) return false;
-			fwrite($h, XMLWriter::getXML($doc));
+			fwrite($h, XMLCustomWriter::getXML($doc));
 			fclose($h);
 		} else {
 			header("Content-Type: application/xml");
-			XMLWriter::printXML($doc);
+			XMLCustomWriter::printXML($doc);
 		}
 		return true;
 	}

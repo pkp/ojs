@@ -15,7 +15,7 @@
 
 import('classes.plugins.GatewayPlugin');
 
-import('xml.XMLWriter');
+import('xml.XMLCustomWriter');
 
 define('GOOGLE_SCHOLAR_ITEMS_PER_PAGE', 20);
 
@@ -97,14 +97,14 @@ class GoogleScholarPlugin extends GatewayPlugin {
 	}
 
 	function &getPublisherList(&$pages, &$errors) {
-		import('xml.XMLWriter');
+		import('xml.XMLCustomWriter');
 		$falseVar = false;
 		$journal =& Request::getJournal();
 		$journalId = $journal->getJournalId();
 
-		$document =& XMLWriter::createDocument('publisher', 'publisher.dtd');
-		$publisherNode =& XMLWriter::createElement($document, 'publisher');
-		XMLWriter::appendChild($document, $publisherNode);
+		$document =& XMLCustomWriter::createDocument('publisher', 'publisher.dtd');
+		$publisherNode =& XMLCustomWriter::createElement($document, 'publisher');
+		XMLCustomWriter::appendChild($document, $publisherNode);
 
 		// Publisher information
 		$publisherName = $this->getSetting($journalId, 'publisher-name');
@@ -112,17 +112,17 @@ class GoogleScholarPlugin extends GatewayPlugin {
 			array_push($errors, Locale::translate('plugins.gateways.googleScholar.errors.noPublisherName'));
 			return $falseVar;
 		}
-		XMLWriter::createChildWithText($document, $publisherNode, 'publisher-name', $publisherName, true);
+		XMLCustomWriter::createChildWithText($document, $publisherNode, 'publisher-name', $publisherName, true);
 		$publisherLocation = $this->getSetting($journalId, 'publisher-location');
-		XMLWriter::createChildWithText($document, $publisherNode, 'publisher-location', $publisherLocation, false);
+		XMLCustomWriter::createChildWithText($document, $publisherNode, 'publisher-location', $publisherLocation, false);
 		$publisherResultName = $this->getSetting($journalId, 'publisher-result-name');
-		XMLWriter::createChildWithText($document, $publisherNode, 'publisher-result-name', $publisherResultName, false);
+		XMLCustomWriter::createChildWithText($document, $publisherNode, 'publisher-result-name', $publisherResultName, false);
 
 		// Contact information
 		$contactEmails = $this->getSetting($journal->getJournalId(), 'contact');
 		if (is_array($contactEmails) && !empty($contactEmails)) {
 			foreach ($contactEmails as $email) {
-				XMLWriter::createChildWithText($document, $publisherNode, 'contact', $email, true);
+				XMLCustomWriter::createChildWithText($document, $publisherNode, 'contact', $email, true);
 			}
 		} else {
 			array_push($errors, Locale::translate('plugins.gateways.googleScholar.errors.noContacts'));
@@ -130,15 +130,15 @@ class GoogleScholarPlugin extends GatewayPlugin {
 		}
 
 		// Metadata files
-		$metadataFilesNode =& XMLWriter::createElement($document, 'metadata-files');
-		XMLWriter::appendChild($publisherNode, $metadataFilesNode);
+		$metadataFilesNode =& XMLCustomWriter::createElement($document, 'metadata-files');
+		XMLCustomWriter::appendChild($publisherNode, $metadataFilesNode);
 
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 		$count = $publishedArticleDao->getPublishedArticleCountByJournalId($journal->getJournalId());
 		for ($i=1; ($i-1)*GOOGLE_SCHOLAR_ITEMS_PER_PAGE<$count; $i++) {
-			$fileNode =& XMLWriter::createElement($document, 'file');
-			XMLWriter::appendChild($metadataFilesNode, $fileNode);
-			XMLWriter::createChildWithText(
+			$fileNode =& XMLCustomWriter::createElement($document, 'file');
+			XMLCustomWriter::appendChild($metadataFilesNode, $fileNode);
+			XMLCustomWriter::createChildWithText(
 				$document,
 				$fileNode,
 				'url',
@@ -155,7 +155,7 @@ class GoogleScholarPlugin extends GatewayPlugin {
 	}
 
 	function &getMetadataPage($pageNum, &$errors) {
-		import('xml.XMLWriter');
+		import('xml.XMLCustomWriter');
 		import('db.DBResultRange');
 		$journal =& Request::getJournal();
 		$journalId = $journal->getJournalId();
@@ -164,9 +164,9 @@ class GoogleScholarPlugin extends GatewayPlugin {
 		if ($pageNum < 1) return $falseVar;
 
 		$rangeInfo =& new DBResultRange(GOOGLE_SCHOLAR_ITEMS_PER_PAGE, $pageNum);
-		$document =& XMLWriter::createDocument('articles', 'articles.dtd');
-		$articlesNode =& XMLWriter::createElement($document, 'articles');
-		XMLWriter::appendChild($document, $articlesNode);
+		$document =& XMLCustomWriter::createDocument('articles', 'articles.dtd');
+		$articlesNode =& XMLCustomWriter::createElement($document, 'articles');
+		XMLCustomWriter::appendChild($document, $articlesNode);
 
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 		$publishedArticles =& $publishedArticleDao->getPublishedArticlesByJournalId($journalId, $rangeInfo);
@@ -175,87 +175,87 @@ class GoogleScholarPlugin extends GatewayPlugin {
 		$issueCache = array();
 
 		while ($publishedArticle =& $publishedArticles->next()) {
-			$articleNode =& XMLWriter::createElement($document, 'article');
-			XMLWriter::appendChild($articlesNode, $articleNode);
+			$articleNode =& XMLCustomWriter::createElement($document, 'article');
+			XMLCustomWriter::appendChild($articlesNode, $articleNode);
 
-			$frontNode =& XMLWriter::createElement($document, 'front');
-			XMLWriter::appendChild($articleNode, $frontNode);
+			$frontNode =& XMLCustomWriter::createElement($document, 'front');
+			XMLCustomWriter::appendChild($articleNode, $frontNode);
 
-			$journalMetaNode =& XMLWriter::createElement($document, 'journal-meta');
-			XMLWriter::appendChild($frontNode, $journalMetaNode);
+			$journalMetaNode =& XMLCustomWriter::createElement($document, 'journal-meta');
+			XMLCustomWriter::appendChild($frontNode, $journalMetaNode);
 
 			// Journal Metadata
 			$journal =& Request::getJournal();
-			XMLWriter::createChildWithText($document, $journalMetaNode, 'journal-title', $journal->getTitle(), true);
-			XMLWriter::createChildWithText($document, $journalMetaNode, 'abbrev-journal-title', $journal->getSetting('journalInitials'), false);
+			XMLCustomWriter::createChildWithText($document, $journalMetaNode, 'journal-title', $journal->getTitle(), true);
+			XMLCustomWriter::createChildWithText($document, $journalMetaNode, 'abbrev-journal-title', $journal->getSetting('journalInitials'), false);
 
 			$issn = $journal->getSetting('issn');
 			if (empty($issn)) {
 				array_push($errors, Locale::translate('plugins.gateways.googleScholar.errors.noIssn'));
 				return $falseVar;
 			}
-			XMLWriter::createChildWithText($document, $journalMetaNode, 'issn', $journal->getSetting('issn'), false);
+			XMLCustomWriter::createChildWithText($document, $journalMetaNode, 'issn', $journal->getSetting('issn'), false);
 
-			$publisherNode =& XMLWriter::createElement($document, 'publisher');
+			$publisherNode =& XMLCustomWriter::createElement($document, 'publisher');
 			$publisherName = $this->getSetting($journalId, 'publisher-name');
 			if (empty($publisherName)) {
 				array_push($errors, Locale::translate('plugins.gateways.googleScholar.errors.noPublisherName'));
 				return $falseVar;
 			}
-			XMLWriter::createChildWithText($document, $publisherNode, 'publisher-name', $publisherName, true);
-			XMLWriter::appendChild($journalMetaNode, $publisherNode);
+			XMLCustomWriter::createChildWithText($document, $publisherNode, 'publisher-name', $publisherName, true);
+			XMLCustomWriter::appendChild($journalMetaNode, $publisherNode);
 			
-			$articleMetaNode =& XMLWriter::createElement($document, 'article-meta');
-			XMLWriter::appendChild($frontNode, $articleMetaNode);
+			$articleMetaNode =& XMLCustomWriter::createElement($document, 'article-meta');
+			XMLCustomWriter::appendChild($frontNode, $articleMetaNode);
 
 			// Article Metadata
-			$titleGroupNode =& XMLWriter::createElement($document, 'title-group');
-			XMLWriter::appendChild($articleMetaNode, $titleGroupNode);
-			XMLWriter::createChildWithText($document, $titleGroupNode, 'article-title', $publishedArticle->getTitle(), true);
+			$titleGroupNode =& XMLCustomWriter::createElement($document, 'title-group');
+			XMLCustomWriter::appendChild($articleMetaNode, $titleGroupNode);
+			XMLCustomWriter::createChildWithText($document, $titleGroupNode, 'article-title', $publishedArticle->getTitle(), true);
 			$altTitle = $publishedArticle->getTitleAlt1();
 			if (empty($altTitle)) $altTitle = $publishedArticle->getTitleAlt2();
-			XMLWriter::createChildWithText($document, $titleGroupNode, 'trans-title', $altTitle, false);
+			XMLCustomWriter::createChildWithText($document, $titleGroupNode, 'trans-title', $altTitle, false);
 
-			$contribGroupNode =& XMLWriter::createElement($document, 'contrib-group');
-			XMLWriter::appendChild($articleMetaNode, $contribGroupNode);
+			$contribGroupNode =& XMLCustomWriter::createElement($document, 'contrib-group');
+			XMLCustomWriter::appendChild($articleMetaNode, $contribGroupNode);
 			foreach ($publishedArticle->getAuthors() as $author) {
-				$contribNode =& XMLWriter::createElement($document, 'contrib');
-				XMLWriter::appendChild($contribGroupNode, $contribNode);
-				XMLWriter::setAttribute($contribNode, 'contrib-type', 'author');
-				$nameNode =& XMLWriter::createElement($document, 'name');
-				XMLWriter::appendChild($contribNode, $nameNode);
-				XMLWriter::createChildWithText($document, $nameNode, 'surname', $author->getLastName(), true);
+				$contribNode =& XMLCustomWriter::createElement($document, 'contrib');
+				XMLCustomWriter::appendChild($contribGroupNode, $contribNode);
+				XMLCustomWriter::setAttribute($contribNode, 'contrib-type', 'author');
+				$nameNode =& XMLCustomWriter::createElement($document, 'name');
+				XMLCustomWriter::appendChild($contribNode, $nameNode);
+				XMLCustomWriter::createChildWithText($document, $nameNode, 'surname', $author->getLastName(), true);
 
 				// Given names in the form: FirstName MiddleName, where MiddleName is optional
 				$name = $author->getFirstName();
 				if (($middleName = $author->getMiddleName()) != '') $name .= " $middleName";
 
-				XMLWriter::createChildWithText($document, $nameNode, 'given-names', $name, true);
+				XMLCustomWriter::createChildWithText($document, $nameNode, 'given-names', $name, true);
 
 			}
 
 			$dateParts = getdate(strtotime($publishedArticle->getDatePublished()));
-			$pubDateNode = XMLWriter::createElement($document, 'pub-date');
-			XMLWriter::appendChild($articleMetaNode, $pubDateNode);
-			XMLWriter::createChildWithText($document, $pubDateNode, 'day', $dateParts['mday']);
-			XMLWriter::createChildWithText($document, $pubDateNode, 'month', $dateParts['mon']);
-			XMLWriter::createChildWithText($document, $pubDateNode, 'year', $dateParts['year']);
+			$pubDateNode = XMLCustomWriter::createElement($document, 'pub-date');
+			XMLCustomWriter::appendChild($articleMetaNode, $pubDateNode);
+			XMLCustomWriter::createChildWithText($document, $pubDateNode, 'day', $dateParts['mday']);
+			XMLCustomWriter::createChildWithText($document, $pubDateNode, 'month', $dateParts['mon']);
+			XMLCustomWriter::createChildWithText($document, $pubDateNode, 'year', $dateParts['year']);
 
 			$issueId = $publishedArticle->getIssueId();
 			if (!isset($issueCache[$issueId])) {
 				$issueCache[$issueId] =& $issueDao->getIssueById($issueId);
 			}
 			$issue =& $issueCache[$issueId];
-			XMLWriter::createChildWithText($document, $articleMetaNode, 'volume', $issue->getVolume());
-			XMLWriter::createChildWithText($document, $articleMetaNode, 'issue', $issue->getNumber());
+			XMLCustomWriter::createChildWithText($document, $articleMetaNode, 'volume', $issue->getVolume());
+			XMLCustomWriter::createChildWithText($document, $articleMetaNode, 'issue', $issue->getNumber());
 
-			$canonicalUriNode =& XMLWriter::createElement($document, 'self-uri');
-			XMLWriter::setAttribute($canonicalUriNode, 'xlink:href', Request::url(null, 'article', 'view', array($publishedArticle->getArticleId())));
-			XMLWriter::appendChild($articleMetaNode, $canonicalUriNode);
+			$canonicalUriNode =& XMLCustomWriter::createElement($document, 'self-uri');
+			XMLCustomWriter::setAttribute($canonicalUriNode, 'xlink:href', Request::url(null, 'article', 'view', array($publishedArticle->getArticleId())));
+			XMLCustomWriter::appendChild($articleMetaNode, $canonicalUriNode);
 			foreach ($publishedArticle->getGalleys() as $galley) {
-				$galleyUriNode =& XMLWriter::createElement($document, 'self-uri');
-				XMLWriter::setAttribute($galleyUriNode, 'xlink:href', Request::url(null, 'article', 'view', array($publishedArticle->getArticleId(), $galley->getGalleyId())));
-				XMLWriter::appendChild($articleMetaNode, $galleyUriNode);
+				$galleyUriNode =& XMLCustomWriter::createElement($document, 'self-uri');
+				XMLCustomWriter::setAttribute($galleyUriNode, 'xlink:href', Request::url(null, 'article', 'view', array($publishedArticle->getArticleId(), $galley->getGalleyId())));
+				XMLCustomWriter::appendChild($articleMetaNode, $galleyUriNode);
 			}
 		}
 
@@ -276,7 +276,7 @@ class GoogleScholarPlugin extends GatewayPlugin {
 			$publisherList =& $this->getPublisherList($pages, $errors);
 			if ($publisherList) {
 				header('Content-Type: application/xml');
-				XMLWriter::printXML($publisherList);
+				XMLCustomWriter::printXML($publisherList);
 				return true;
 			}
 		} else {
@@ -285,7 +285,7 @@ class GoogleScholarPlugin extends GatewayPlugin {
 			$metadataPage =& $this->getMetadataPage($pageNum, $errors);
 			if ($metadataPage) {
 				header('Content-Type: application/xml');
-				XMLWriter::printXML($metadataPage);
+				XMLCustomWriter::printXML($metadataPage);
 				return true;
 			}
 		}

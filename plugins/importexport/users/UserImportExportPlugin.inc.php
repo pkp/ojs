@@ -15,7 +15,7 @@
 
 import('classes.plugins.ImportExportPlugin');
 
-import('xml.XMLWriter');
+import('xml.XMLCustomWriter');
 
 class UserImportExportPlugin extends ImportExportPlugin {
 	/**
@@ -155,7 +155,7 @@ class UserImportExportPlugin extends ImportExportPlugin {
 				$users = &$users->toArray();
 				$doc = &UserExportDom::exportUsers($journal, $users);
 				header("Content-Type: application/xml");
-				echo XMLWriter::getXML($doc);
+				echo XMLCustomWriter::getXML($doc);
 				break;
 			case 'exportByRole':
 				$this->import('UserExportDom');
@@ -172,7 +172,7 @@ class UserImportExportPlugin extends ImportExportPlugin {
 				$users = array_values($users);
 				$doc = &UserExportDom::exportUsers($journal, $users, $rolePaths);
 				header("Content-Type: application/xml");
-				echo XMLWriter::getXML($doc);
+				echo XMLCustomWriter::getXML($doc);
 				break;
 			default:
 				$this->setBreadcrumbs();
@@ -259,7 +259,7 @@ class UserImportExportPlugin extends ImportExportPlugin {
 					echo Locale::translate('plugins.importexport.users.export.couldNotWriteFile', array('fileName' => $xmlFile)) . "\n";
 					return false;
 				}
-				fwrite($h, XMLWriter::getXML($doc));
+				fwrite($h, XMLCustomWriter::getXML($doc));
 				fclose($h);
 				return true;
 		}

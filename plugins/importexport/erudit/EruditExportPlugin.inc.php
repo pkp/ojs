@@ -15,7 +15,7 @@
 
 import('classes.plugins.ImportExportPlugin');
 
-import('xml.XMLWriter');
+import('xml.XMLCustomWriter');
 
 class EruditExportPlugin extends ImportExportPlugin {
 	/**
@@ -84,17 +84,17 @@ class EruditExportPlugin extends ImportExportPlugin {
 
 	function exportArticle(&$journal, &$issue, &$article, &$galley, $outputFile = null) {
 		$this->import('EruditExportDom');
-		$doc = &XMLWriter::createDocument('article', '-//ERUDIT//Erudit Article DTD 3.0.0//EN', 'http://www.erudit.org/dtd/article/3.0.0/en/eruditarticle.dtd');
+		$doc = &XMLCustomWriter::createDocument('article', '-//ERUDIT//Erudit Article DTD 3.0.0//EN', 'http://www.erudit.org/dtd/article/3.0.0/en/eruditarticle.dtd');
 		$articleNode = &EruditExportDom::generateArticleDom($doc, $journal, $issue, $article, $galley);
-		XMLWriter::appendChild(&$doc, &$articleNode);
+		XMLCustomWriter::appendChild(&$doc, &$articleNode);
 
 		if (!empty($outputFile)) {
 			if (($h = fopen($outputFile, 'w'))===false) return false;
-			fwrite($h, XMLWriter::getXML(&$doc));
+			fwrite($h, XMLCustomWriter::getXML(&$doc));
 			fclose($h);
 		} else {
 			header("Content-Type: application/xml");
-			XMLWriter::printXML(&$doc);
+			XMLCustomWriter::printXML(&$doc);
 		}
 		return true;
 	}

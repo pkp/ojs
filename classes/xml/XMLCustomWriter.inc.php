@@ -1,7 +1,7 @@
 <?php
 
 /**
- * XMLWriter.inc.php
+ * XMLCustomWriter.inc.php
  *
  * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
@@ -15,7 +15,7 @@
 
 import ('xml.XMLNode');
 
-class XMLWriter {
+class XMLCustomWriter {
 	/**
 	 * Create a new XML document.
 	 * If $url is set, the DOCTYPE definition is treated as a PUBLIC
@@ -75,7 +75,7 @@ class XMLWriter {
 	function &hasAttribute(&$node, $name) {
 		if (is_callable(array($node, 'hasAttribute'))) $value = &$node->hasAttribute($name);
 		else {
-			$attribute = &XMLWriter::getAttribute($node, $name);
+			$attribute = &XMLCustomWriter::getAttribute($node, $name);
 			$value = ($attribute !== null);
 		}
 		return $value;
@@ -102,10 +102,10 @@ class XMLWriter {
 	function &createChildWithText(&$doc, &$node, $name, $value, $appendIfEmpty = true) {
 		$childNode = null;
 		if ($appendIfEmpty || $value != '') {
-			$childNode = &XMLWriter::createElement($doc, $name);
-			$textNode = &XMLWriter::createTextNode($doc, $value);
-			XMLWriter::appendChild($childNode, $textNode);
-			XMLWriter::appendChild($node, $childNode);
+			$childNode = &XMLCustomWriter::createElement($doc, $name);
+			$textNode = &XMLCustomWriter::createTextNode($doc, $value);
+			XMLCustomWriter::appendChild($childNode, $textNode);
+			XMLCustomWriter::appendChild($node, $childNode);
 		}
 		return $childNode;
 	}
