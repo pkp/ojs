@@ -322,6 +322,7 @@ class TemplateManager extends Smarty {
 
 		// If the iterator is empty, we're finished.
 		if (!$iterator || $iterator->eof()) {
+			if (!$repeat) return $content;
 			$repeat = false;
 			return '';
 		}
