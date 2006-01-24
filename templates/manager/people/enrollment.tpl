@@ -115,7 +115,7 @@ function confirmAndPrompt(userId) {
 			{assign var=emailString value="`$user->getFullName()` <`$user->getEmail()`>"}
 			{url|assign:"redirectUrl" path=$roleSymbolic}
 			{url|assign:"url" page="user" op="email" to=$emailString|to_array redirectUrl=$redirectUrl}
-			{$user->getEmail()|truncate:20:"..."|escape}&nbsp;{icon name="mail" url=$url}
+			{$user->getEmail()|truncate:15:"..."|escape}&nbsp;{icon name="mail" url=$url}
 		</td>
 		<td align="right" class="nowrap">
 			{if $roleId}
