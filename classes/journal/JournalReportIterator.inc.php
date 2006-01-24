@@ -106,9 +106,10 @@ class JournalReportIterator extends DBRowIterator {
 		if (empty($ret['section'])) $ret['section'] = $row['section_title'];
 
 		// Author Names & Affiliations
-		$ret['authors'] = array_fill(0, $this->getMaxAuthors(), '');
-		$ret['affiliations'] = array_fill(0, $this->getMaxAuthors(), '');
-		$ret['countries'] = array_fill(0, $this->getMaxAuthors(), '');
+		$maxAuthors = $this->getMaxAuthors();
+		$ret['authors'] = $maxAuthors==0?array():array_fill(0, $maxAuthors, '');
+		$ret['affiliations'] = $maxAuthors==0?array():array_fill(0, $maxAuthors, '');
+		$ret['countries'] = $maxAuthors==0?array():array_fill(0, $maxAuthors, '');
 		$authors =& $this->authorDao->getAuthorsByArticle($row['article_id']);
 		$authorIndex = 0;
 		foreach ($authors as $author) {
@@ -128,7 +129,8 @@ class JournalReportIterator extends DBRowIterator {
 			$ret['editor'] = $user?$user->getFullName():'';
 		} else {
 			$editAssignments =& $this->editAssignmentDao->getEditAssignmentsByArticleId($row['article_id']);
-			$ret['editors'] = array_fill(0, $this->getMaxEditors(), '');
+			$maxEditors = $this->getMaxEditors();
+			$ret['editors'] = $maxEditors==0?array():array_fill(0, $maxEditors, '');
 
 			$editorIndex = 0;
 			while ($editAssignment =& $editAssignments->next()) {
@@ -150,9 +152,10 @@ class JournalReportIterator extends DBRowIterator {
 			}
 			$ret['affiliation'] = $user?$user->getAffiliation():'';
 		} else {
-			$ret['reviewers'] = array_fill(0, $this->getMaxReviewers(), '');
-			$ret['scores'] = array_fill(0, $this->getMaxReviewers(), '');
-			$ret['recommendations'] = array_fill(0, $this->getMaxReviewers(), '');
+			$maxReviewers = $this->getMaxReviewers();
+			$ret['reviewers'] = $maxReviewers==0?array():array_fill(0, $maxReviewers, '');
+			$ret['scores'] = $maxReviewers==0?array():array_fill(0, $maxReviewers, '');
+			$ret['recommendations'] = $maxReviewers==0?array():array_fill(0, $maxReviewers, '');
 			$reviewAssignments =& $this->reviewAssignmentDao->getReviewAssignmentsByArticleId($row['article_id']);
 			$reviewerIndex = 0;
 			foreach ($reviewAssignments as $reviewAssignment) {
