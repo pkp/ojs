@@ -33,6 +33,9 @@ class UserHandler extends Handler {
 		$templateMgr->assign('helpTopicId', 'user.userHome');
 		
 		if ($journal == null) {
+			// Prevent variable clobbering
+			unset($journal);
+
 			// Show roles for all journals
 			$journalDao = &DAORegistry::getDAO('JournalDAO');
 			$journals = &$journalDao->getJournals();
