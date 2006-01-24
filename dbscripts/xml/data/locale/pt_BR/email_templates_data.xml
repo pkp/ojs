@@ -277,7 +277,7 @@ Diretrizes para Avaliação
 
 {$reviewGuidelines}
 			</field>
-			<field name="description">Mensagem enviada pelo Editor de Seção para solicitar ao avaliador que aceite ou não a tarefa de avaliação de uma submissão. Inclui o documento em anexo. Esta mensagem é usada quando se utiliza o Processo de Avaliação via Email-Anexo, definido no Passo 2 de Configuração da Revista. (Caso contrário veja REVIEW_REQUEST_MULTIPLE e REVIEW_REQUEST.)</field>
+			<field name="description">Mensagem enviada pelo Editor de Seção para solicitar ao avaliador que aceite ou não a tarefa de avaliação de uma submissão. Inclui o documento em anexo. Esta mensagem é usada quando se utiliza o Processo de Avaliação via Email-Anexo, definido no Passo 2 de Configuração da Revista. (Caso contrário veja REVIEW_REQUEST.)</field>
 		</row>
 		<row>
 			<field name="email_key">REVIEW_CANCEL</field>
@@ -334,8 +334,27 @@ Agradecemos ter concluído a avaliação da submissão "{$articleTitle}" a {$jou
 		</row>
 		<row>
 			<field name="email_key">REVIEW_REMIND</field>
-			<field name="subject">Submission Review Reminder</field>
+			<field name="subject">Lembrete de Avaliação de Submissão</field>
 			<field name="body">{$reviewerName},
+
+Esta mensagem é apenas um lembrete quanto à solicitação de avaliação da submissão "{$articleTitle}" a {$journalName}. Esperamos receber a avaliação até {$reviewDuedate}, e aguardamos o recebimento assim que for possível.
+
+Caso não possua um login e senha para acessar o sistema da revista, use o link a seguir para criar uma nova senha, que lhe será enviada via email junto com o seu login. {$passwordResetUrl}.
+
+URL da Submissão: {$submissionReviewUrl}
+
+Confirme sua disponibilidade para concluir sua avaliação, contribuição vital para a qualidade desta publicação. 
+
+Aguardando seu contato,
+
+{$editorialContactSignature}</field>
+			<field name="description">Mensagem enviada pelo Editor de Seção ao Avaliador como lembrete da tarefa de avaliação em andamento ainda não concluída.</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEW_REMIND_ONECLICK</field>
+			<field name="subject">Lembrete de Avaliação de Submissão</field>
+
+			<field name="body">$reviewerName},
 
 Esta mensagem é apenas um lembrete quanto à solicitação de avaliação da submissão "{$articleTitle}" a {$journalName}. Esperamos receber a avaliação até {$reviewDuedate}, e aguardamos o recebimento assim que for possível.
 
@@ -367,6 +386,25 @@ Aguardando seu contato,
 
 {$editorialContactSignature}</field>
 			<field name="description">Mensagem enviada automaticamente ao avaliador quando a data de conclusão de avaliação for ultrapassada (veja as Opções de Avaliação no Passo 2 da Configuração da Revista). Tarefas agendadas devem ser habilitadas e configuradas (veja o arquivo de configuração do sistema).</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEW_REMIND_AUTO_ONECLICK</field>
+			<field name="subject">Lembrete Automático de Avaliação de Submissão</field>
+			<field name="body">{$reviewerName},
+
+Esta mensagem é um lembrete quanto à solicitação de avaliação da submissão "{$articleTitle}" a {$journalName}. Esperávamos receber a avaliação até {$reviewDuedate}, e este email foi enviado automaticamente após ultrapassar a data limite. guardamos o recebimento da avaliação assim que for possível concluí-la.
+
+Caso não possua um login e senha para acessar o sistema da revista, use o link a seguir para criar uma nova senha, que lhe será enviada via email junto com o seu login. {$passwordResetUrl}.
+
+URL da Submissão: {$submissionReviewUrl}
+
+Confirme sua disponibilidade para concluir sua avaliação, contribuição vital para a qualidade desta publicação. 
+
+Aguardando seu contato,
+
+{$editorialContactSignature}</field>
+			<field name="description">Mensagem enviada automaticamente ao avaliador quando a data de conclusão de avaliação for ultrapassada (veja as Opções de Avaliação no Passo 2 da Configuração da Revista) e o acesso 1-Clique estiver ativado. Tarefas agendadas devem ser habilitadas e configuradas (veja o arquivo de configuração do sistema).</field>
+
 		</row>
 
 

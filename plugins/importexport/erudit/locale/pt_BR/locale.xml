@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the pt_BR locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="pt_BR" full_name="Português do Brasil">
+	<message key="plugins.importexport.erudit.displayName">Plugin de Exportação Formato Erudit</message>
+	<message key="plugins.importexport.erudit.description">Exporta artigos utilizando a DTD inglesa Erudit</message>
+
+	<message key="plugins.importexport.erudit.cliUsage"><![CDATA[Uso: {$scriptName} {$pluginName} [documentoXML] [caminhoRevista] [articleId]
+]]></message>
+	<message key="plugins.importexport.erudit.export">Exportar Dados</message>
+	<message key="plugins.importexport.erudit.export.issues">Exportar Edições</message>
+	<message key="plugins.importexport.erudit.export.sections">Exportar Seções</message>
+	<message key="plugins.importexport.erudit.export.articles">Exportar Artigos</message>
+
+	<message key="plugins.importexport.erudit.selectIssue">Escolher Edições</message>
+	<message key="plugins.importexport.erudit.selectArticle">Escolher Artigo</message>
+
+	<message key="plugins.importexport.erudit.cliError">ERRO:</message>
+	<message key="plugins.importexport.erudit.error.unknownJournal">Caminho da revista "{$journalPath}" inexistente.</message>
+	<message key="plugins.importexport.erudit.export.error.couldNotWrite">Não foi possível escrever no documento "{$fileName}".</message>
+	<message key="plugins.importexport.erudit.export.error.articleNotFound">Não há artigo compatível com ID "{$articleId}" especificado.</message>
+
+	<message key="plugins.importexport.erudit.unavailable">Indisponível</message>
+</locale>
