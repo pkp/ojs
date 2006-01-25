@@ -113,11 +113,21 @@ Please confirm your ability to complete this vital contribution to the work of t
 		<query>UPDATE rt_contexts SET title = 'Social theories' WHERE title = 'Social Theory'</query>
 		<query>UPDATE rt_contexts SET title = 'Tech. reports' WHERE title = 'Tech. Reports'</query>
 		<query>UPDATE rt_contexts SET title = 'Working papers' WHERE title = 'Working Papers'</query>
-		<query>
+
+		<!-- MySQL concatenation -->
+		<query driver="mysql">
 			UPDATE rt_searches SET search_url = CONCAT(search_url, '{$formKeywords}') WHERE search_url LIKE '%='
 		</query>
-		<query>
+		<query driver="mysql">
 			UPDATE rt_searches SET search_post = CONCAT(search_url, '{$formKeywords}') WHERE search_post LIKE '%='
+		</query>
+
+		<!-- PostgreSQL concatenation -->
+		<query driver="postgres7">
+			UPDATE rt_searches SET search_url = search_url || '{$formKeywords}' WHERE search_url LIKE '%='
+		</query>
+		<query driver="postgres7">
+			UPDATE rt_searches SET search_post = search_url || '{$formKeywords}' WHERE search_post LIKE '%='
 		</query>
 	</sql>
 </data>

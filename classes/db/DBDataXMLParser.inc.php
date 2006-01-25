@@ -141,7 +141,10 @@ class DBDataXMLParser {
 								$this->sql[] = $dbdict->RenameTableSQL($table, $to);
 							}
 						} else {
-							$this->sql[] = $query->getValue();
+							$driver = $query->getAttribute('driver');
+							if (empty($driver) || $this->dbconn->databaseType === $driver) {
+								$this->sql[] = $query->getValue();
+							}
 						}
 					}
 				}
