@@ -60,6 +60,6 @@
 <br />
 
 <a href="{url op="createEmail"}" class="action">{translate key="manager.emails.createEmail"}</a><br />
-<a href="{url op="resetAllEmails"}" onclick="return confirm('{translate|escape:"javascript" key="manager.emails.confirmResetAll"}')" class="action" onclick=>{translate key="manager.emails.resetAll"}</a>
+<a href="{url op="resetAllEmails"}" onclick="return confirm('{translate|escape:"javascript" key="manager.emails.confirmResetAll"}')" class="action">{translate key="manager.emails.resetAll"}</a>
 
 {include file="common/footer.tpl"}
