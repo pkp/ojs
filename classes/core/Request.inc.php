@@ -147,7 +147,7 @@ class Request {
 		
 		if (!isset($requestUrl)) {
 			$requestUrl = Request::getProtocol() . '://' . Request::getServerHost() . Request::getRequestPath();
-			HookRegistry::call('Request::getRequestUrl', array(&$completeUrl));
+			HookRegistry::call('Request::getRequestUrl', array(&$requestUrl));
 		}
 		
 		return $requestUrl;
