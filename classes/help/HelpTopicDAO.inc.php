@@ -30,7 +30,7 @@ class HelpTopicDAO extends XMLDAO {
 		if (!isset($cache)) {
 			import('cache.CacheManager');
 			$cacheManager =& CacheManager::getManager();
-			$cache =& $cacheManager->getFileCache('help-topic-' . Locale::getLocale(), $topicId, array($this, '_cacheMiss'));
+			$cache =& $cacheManager->getFileCache('help-topic-' . Help::getLocale(), $topicId, array($this, '_cacheMiss'));
 
 			// Check to see if the cache info is outdated.
 			$cacheTime = $cache->getCacheTime();
@@ -59,7 +59,7 @@ class HelpTopicDAO extends XMLDAO {
 	}
 	
 	function getFilename($topicId) {
-		return sprintf('help/%s/%s.xml', Locale::getLocale(), $topicId);
+		return sprintf('help/%s/%s.xml', Help::getLocale(), $topicId);
 	}
 
 	/**
@@ -113,7 +113,7 @@ class HelpTopicDAO extends XMLDAO {
 	function &getTopicsByKeyword($keyword) {
 		$keyword = String::strtolower($keyword);
 		$matchingTopics = array();
-		$topicsDir = sprintf('help/%s', Locale::getLocale());
+		$topicsDir = sprintf('help/%s', Help::getLocale());
 		$dir = opendir($topicsDir);
 		while (($file = readdir($dir)) !== false) {
 			$currFile = sprintf('%s/%s',$topicsDir,$file);

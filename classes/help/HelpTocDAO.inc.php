@@ -30,7 +30,7 @@ class HelpTocDAO extends XMLDAO {
 		if (!isset($cache)) {
 			import('cache.CacheManager');
 			$cacheManager =& CacheManager::getManager();
-			$cache =& $cacheManager->getFileCache('help-toc-' . Locale::getLocale(), $tocId, array($this, '_cacheMiss'));
+			$cache =& $cacheManager->getFileCache('help-toc-' . Help::getLocale(), $tocId, array($this, '_cacheMiss'));
 
 			// Check to see if the cache info is outdated.
 			$cacheTime = $cache->getCacheTime();
@@ -59,7 +59,7 @@ class HelpTocDAO extends XMLDAO {
 	}
 	
 	function getFilename($tocId) {
-		return sprintf('help/%s/%s.xml', Locale::getLocale(), $tocId);
+		return sprintf('help/%s/%s.xml', Help::getLocale(), $tocId);
 	}
 
 	/**

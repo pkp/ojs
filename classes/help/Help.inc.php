@@ -20,7 +20,20 @@ class Help {
 	 */
 	function Help() {
 	}
-	
+
+	/**
+	 * Get the locale to display help files in.
+	 * If help isn't available for the current locale,
+	 * defaults to en_US.
+	 */
+	function getLocale() {
+		$locale = Locale::getLocale();
+		if (!file_exists("help/$locale/.")) {
+			return 'en_US';
+		}
+		return $locale;
+	}
+
 	/**
 	 * Translate a help topic key to its numerical id.
 	 * @param $key string
@@ -74,7 +87,7 @@ class Help {
 
 			// Check to see if the cache info is outdated.
 			$cacheTime = $cache->getCacheTime();
-			if ($cacheTime !== null && $cacheTime < Help::dirmtime('help/'.Locale::getLocale().'/.', true)) {
+			if ($cacheTime !== null && $cacheTime < Help::dirmtime('help/'.Help::getLocale().'/.', true)) {
 				// The cached data is out of date.
 				$cache->flush();
 			}
