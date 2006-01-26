@@ -1127,7 +1127,7 @@ Escolha um modelo para administrar os aspectos do processo editorial. (Para desi
 	<message key="manager.languages.alternateLocale2">Idioma Alternativo #2</message>
 	<message key="manager.languages.alternateLocaleInstructions">O sistema permite que algumas informações críticas sejam incluídas em no máximo dois idiomas adicionais. Para habilitar esta opção, escolha um ou mais idiomas alternativos e escolha dentre as opções a seguir.</message>
 	<message key="manager.languages.alternativeLanguageOptions">Opções de Idioma</message>
-	<message key="manager.languages.journalTitleAltLanguages">Imagem títul, cabeçalho da página, entre outros, serão enviados em cada idioma escolhido.</message>
+	<message key="manager.languages.journalTitleAltLanguages">Imagem títuol, cabeçalho da página, entre outros, serão enviados em cada idioma escolhido.</message>
 	<message key="manager.languages.articleAltLanguages">Autores deverão incluir os títulos e resumos no(s) outro(s) idioma(s), com opção de solicitação da tarefa para a equipe editorial.</message>
 	<message key="manager.languages.noneAvailable">Nenhum idioma adicional disponível. Informe o administrador do sistema para inclusão de idiomas adicionais à revista.</message>
 		
