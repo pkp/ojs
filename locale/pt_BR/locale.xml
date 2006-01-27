@@ -1918,6 +1918,7 @@ O documento pode ser visualizado/baixado ao clicar no nome. Ao transferir uma no
 	<message key="user.register.form.passwordLengthTooShort">Senha digitada não contém o mínimo de caracteres.</message>
 	<message key="user.register.readerDescription">Notificado via email da publicação de nova edição da revista.</message>
 	<message key="user.register.authorDescription">Pode submeter à revista.</message>
+	<message key="user.register.reviewerDescriptionNoInterests">Disponível para realizar avaliação dos pares das submissões a esta revista.</message>	
 	<message key="user.register.reviewerDescription">Disponível para realizar avaliação dos pares das submissões a esta revista. Identifique a área de avaliação (áreas de interesses e metodologias de pesquisa).</message>	
 
 

@@ -1915,6 +1915,7 @@ current password.<br /><br />Enter your email address below to reset your passwo
 	<message key="user.register.form.passwordLengthTooShort">The password you entered is not long enough.</message>
 	<message key="user.register.readerDescription">Notified by email on publication of an issue of the journal.</message>
 	<message key="user.register.authorDescription">Able to submit items to the journal.</message>
+	<message key="user.register.reviewerDescriptionNoInterests">Willing to conduct peer review of submissions to the journal.</message>
 	<message key="user.register.reviewerDescription">Willing to conduct peer review of submissions to the journal. Identify reviewing interests (substantive areas and research methods).</message>
 
 
