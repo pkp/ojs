@@ -463,6 +463,7 @@ class TemplateManager extends Smarty {
 	 * Call hooks from a template.
 	 */
 	function smartyCallHook($params, &$smarty) {
+		$output = null;
 		HookRegistry::call($params['name'], array(&$params, &$smarty, &$output));
 		return $output;
 	}
