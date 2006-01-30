@@ -117,7 +117,7 @@ function confirmAndPrompt(userId) {
 			{url|assign:"url" page="user" op="email" to=$emailString|to_array redirectUrl=$redirectUrl}
 			{$user->getEmail()|truncate:15:"..."|escape}&nbsp;{icon name="mail" url=$url}
 		</td>
-		<td align="right" class="nowrap">
+		<td align="right">
 			{if $roleId}
 			<a href="{url op="unEnroll" path=$roleId userId=$user->getUserId()}" onclick="return confirm('{translate|escape:"javascript" key="manager.people.confirmUnenroll"}')" class="action">{translate key="manager.people.unenroll"}</a>&nbsp;|
 			{/if}
