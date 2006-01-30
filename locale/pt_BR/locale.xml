@@ -305,7 +305,7 @@
 	<message key="submission.initiated">Iniciado</message>
 	<message key="submission.lastModified">Última alterção</message>
 	<message key="submission.ask">Perguntar</message>
-	<message key="submission.request">Requerer</message>
+	<message key="submission.request">Solicitação</message>
 	<message key="submission.underway">Encaminhado</message>
 	<message key="submission.start">Iniciar</message>
 	<message key="submission.response">Resposta</message>
@@ -924,7 +924,7 @@ Note que a interface OAI pode ser desativada para este portal editando as config
 	<message key="manager.setup.addAboutItem">Incluir Item em Sobre</message>
 	<message key="manager.setup.form.numReviewersPerSubmission">Número de avaliadores por submissão obrigatório.</message>
 	<message key="manager.setup.securitySettings">Configurações de Segurança/Accesso</message>
-	<message key="manager.setup.securitySettingsDescription">O sistema permite uma variedade de opções d segurança possibilitando restrição ao acesso ao conteúdo da revista, mantendo informações adicionais sobre submissões para auditorias.</message>
+	<message key="manager.setup.securitySettingsDescription">O sistema permite uma variedade de opções de segurança possibilitando restrição ao acesso ao conteúdo da revista, mantendo informações adicionais sobre submissões para auditorias.</message>
 	<message key="manager.setup.userRegistration">Cadastro de Usuários</message>
 	<message key="manager.setup.enableUserRegistration">Opções de Cadastro de Usuários no sistema:</message>
 	<message key="manager.setup.disableUserRegistration">Desabilitar cadastro de usuários. Estes deverão ser incluídos manualmente pela equipe editorial.</message>
@@ -932,12 +932,12 @@ Note que a interface OAI pode ser desativada para este portal editando as config
 	<message key="manager.setup.noRestrictSiteAccess">Usuários não cadastrados terão acesso ao site da revista.</message>
 	<message key="manager.setup.restrictSiteAccess">Usuários deverão se cadastrar para acessar o portal da revista.</message>
 	<message key="manager.setup.articleAccess">Acesso aos Artigos</message>
-	<message key="manager.setup.noRestrictArticleAccess">Usuários não cadastrados terão acesso ao the texto completo dos artigos publicados.</message>
+	<message key="manager.setup.noRestrictArticleAccess">Usuários não cadastrados terão acesso ao texto completo dos artigos publicados.</message>
 	<message key="manager.setup.restrictArticleAccess">Usuários deverão acessar o sistema para ter acesso ao texto completo dos artigos publicados.</message>
 
 	<message key="manager.setup.comments">Comentários dos Leitores</message>
 	<message key="manager.setup.comments.disable">Comentários dos leitores está desabilitado.</message>
-	<message key="manager.setup.comments.authenticated">Uusuários cadastrados podem comentar; publicação anônima está desabilitada.</message>
+	<message key="manager.setup.comments.authenticated">Usuários cadastrados podem comentar; publicação anônima está desabilitada.</message>
 	<message key="manager.setup.comments.anonymous">Usuários podem publicar anonimamente, porém devem estar cadastrados.</message>
 	<message key="manager.setup.comments.unauthenticated">Permitir publicação anônima a qualquer pessoa.</message>
 
