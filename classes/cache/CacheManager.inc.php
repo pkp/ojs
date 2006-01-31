@@ -42,6 +42,7 @@ class CacheManager {
 					Config::getVar('cache','memcache_port')
 				);
 				break;
+			case '': // Provide a default if not specified
 			case 'file':
 				$cache =& $this->getFileCache($context, $cacheId, $fallback);
 				break;
