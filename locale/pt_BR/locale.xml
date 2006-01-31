@@ -325,6 +325,7 @@
 	<message key="submission.round">Rodada&amp;nbsp;{$round}</message>
 	<message key="submission.editorReview">Avaliação do Editor</message>
 	<message key="submission.notifyAuthor">Notificar Autor</message>
+	<message key="submission.notifyEditor">Notificar Editor</message>
 	<message key="submission.editorAuthorRecord">Registro de Emails Editor/Autor</message>
 	
 	<message key="submission.reviewersVersion">Versão anotada do Avaliador</message>

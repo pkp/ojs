@@ -29,7 +29,7 @@
 	</tr>
 	<tr valign="top">
 		<td class="label" width="20%">
-			{translate key="submission.notifyAuthor"}
+			{translate key="submission.notifyEditor"}
 		</td>
 		<td class="value" width="80%">
 			{url|assign:"notifyAuthorUrl" op="emailEditorDecisionComment" articleId=$submission->getArticleId()}

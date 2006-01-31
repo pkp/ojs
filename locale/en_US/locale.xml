@@ -323,6 +323,7 @@
 	<message key="submission.round">Round&amp;nbsp;{$round}</message>
 	<message key="submission.editorReview">Editor Review</message>
 	<message key="submission.notifyAuthor">Notify Author</message>
+	<message key="submission.notifyEditor">Notify Editor</message>
 	<message key="submission.editorAuthorRecord">Editor/Author Email Record</message>
 	<message key="submission.reviewersVersion">Reviewer's annotated version of file</message>
 	<message key="submission.postReviewVersion">Post-review version of file</message>
