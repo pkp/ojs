@@ -15,7 +15,7 @@
  */
 
 /* This definition is required by Smarty */
-define('SMARTY_DIR', Core::getBaseDir() . '/lib/smarty/');
+define('SMARTY_DIR', Core::getBaseDir() . DIRECTORY_SEPARATOR . 'lib' . DIRECTORY_SEPARATOR . 'smarty' . DIRECTORY_SEPARATOR);
 
 require_once('smarty/Smarty.class.php');
 

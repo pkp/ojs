@@ -36,7 +36,7 @@ class FileCache extends GenericCache {
 
 		// Load the cache data if it exists.
 		if (file_exists($this->filename)) {
-			$this->cache = require($this->filename);
+			$this->cache = include($this->filename);
 		} else {
 			$this->cache = null;
 		}
