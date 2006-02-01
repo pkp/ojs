@@ -178,7 +178,7 @@ class Installer {
 		// Ensure that the installation will not get interrupted if it takes
 		// longer than max_execution_time (php.ini). Note that this does not
 		// work under safe mode.
-		set_time_limit (0);
+		@set_time_limit (0);
 
 		if (!$this->preInstall()) {
 			return false;

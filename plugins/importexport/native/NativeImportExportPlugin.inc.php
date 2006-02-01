@@ -149,7 +149,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 					}
 				}
 
-				set_time_limit(0);
+				@set_time_limit(0);
 
 				if ($this->handleImport($context, $doc, $errors, $issues, $articles, false)) {
 					$templateMgr->assign_by_ref('issues', $issues);
