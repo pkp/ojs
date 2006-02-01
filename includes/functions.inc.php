@@ -151,7 +151,7 @@ function fatalError($reason) {
  * @return boolean
  */
 function checkPhpVersion($version) {
-	return (version_compare(PHP_VERSION, $version) !== 1);
+	return (version_compare(PHP_VERSION, $version) !== -1);
 }
 
 ?>
