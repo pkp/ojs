@@ -2405,6 +2405,7 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="icon.letter.alt">Letter</message>
 	<message key="icon.mail.alt">Mail</message>
 	<message key="icon.info.alt">Info</message>
+	<message key="icon.folder.alt">Folder</message>
 	
 	<!-- Debug messages -->
 	<message key="debug.executionTime">Page generated in</message>

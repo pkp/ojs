@@ -2407,6 +2407,7 @@ A validação pode falhar em URLs para pesquisa que requeiram dados via o métod
 	<message key="icon.letter.alt">Letra</message>
 	<message key="icon.mail.alt">Correio</message>
 	<message key="icon.info.alt">Informação</message>
+	<msesage key="icon.folder.alt">Diretório</message>
 	
 	<!-- Debug messages -->
 	<message key="debug.executionTime">Página gerada em</message>
