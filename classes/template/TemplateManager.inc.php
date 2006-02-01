@@ -38,10 +38,10 @@ class TemplateManager extends Smarty {
 		// Set up Smarty configuration
 		$baseDir = Core::getBaseDir();
 		$cachePath = CacheManager::getFileCachePath();
-		$this->template_dir = $baseDir . '/templates/';
-		$this->compile_dir = $cachePath . '/t_compile/';
-		$this->config_dir = $cachePath . '/t_config/';
-		$this->cache_dir = $cachePath . '/t_cache/';
+		$this->template_dir = $baseDir . DIRECTORY_SEPARATOR . 'templates';
+		$this->compile_dir = $cachePath . DIRECTORY_SEPARATOR . 't_compile';
+		$this->config_dir = $cachePath . DIRECTORY_SEPARATOR . 't_config';
+		$this->cache_dir = $cachePath . DIRECTORY_SEPARATOR . 't_cache';
 		
 		// TODO: Investigate caching behaviour and if OJS can take advantage of it
 		//$this->caching = true;
@@ -396,7 +396,7 @@ class TemplateManager extends Smarty {
 			if (isset($params['name'])) {
 				// build image tag with standarized size of 16x16
 				$disabled = (isset($params['disabled']) && !empty($params['disabled']));
-				$iconHtml = '<img src="' . $this->get_template_vars('baseUrl') . '/templates/images/icons/';			
+				$iconHtml = '<img src="' . $smarty->get_template_vars('baseUrl') . '/templates/images/icons/';			
 				$iconHtml .= $params['name'] . ($disabled ? '_disabled' : '') . '.gif" width="16" height="14" border="0" alt="';
 				
 				// if alt parameter specified use it, otherwise use localization version
@@ -473,11 +473,11 @@ class TemplateManager extends Smarty {
 	 */
 	function smartyGetDebugInfo($params, &$smarty) {
 		if (Config::getVar('debug', 'show_stats')) {
-			$this->assign('enableDebugStats', true);
-			$this->assign('debugExecutionTime', Core::microtime() - Registry::get('system.debug.startTime'));
+			$smarty->assign('enableDebugStats', true);
+			$smarty->assign('debugExecutionTime', Core::microtime() - Registry::get('system.debug.startTime'));
 			$dbconn = &DBConnection::getInstance();
-			$this->assign('debugNumDatabaseQueries', $dbconn->getNumQueries());
-			$this->assign_by_ref('debugNotes', Registry::get('system.debug.notes'));
+			$smarty->assign('debugNumDatabaseQueries', $dbconn->getNumQueries());
+			$smarty->assign_by_ref('debugNotes', Registry::get('system.debug.notes'));
 		}
 
 	}
