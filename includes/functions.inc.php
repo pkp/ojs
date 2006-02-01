@@ -82,7 +82,7 @@ function fatalError($reason) {
 
 	echo "<h1>$reason</h1>";
 
-	if ($showStackTrace) {
+	if ($showStackTrace && checkPhpVersion('4.3.0')) {
 		echo "<h4>Stack Trace:</h4>\n";
 		$trace = debug_backtrace();
 
@@ -143,6 +143,15 @@ function fatalError($reason) {
 
 	error_log("OJS: $reason");
 	die();
+}
+
+/**
+ * Check to see if the server meets a minimum version requirement for PHP.
+ * @param $version Name of version (see version_compare documentation)
+ * @return boolean
+ */
+function checkPhpVersion($version) {
+	return (version_compare(PHP_VERSION, $version) !== 1);
 }
 
 ?>
