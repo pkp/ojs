@@ -131,7 +131,7 @@ class ImportExportPlugin extends Plugin {
 	 */
 	function manage($verb, $args) {
 		if ($verb === 'importexport') {
-			Request::redirect(Request::url(null, 'manager', 'importexport', array('plugin', $this->getName())));
+			Request::redirect(null, 'manager', 'importexport', array('plugin', $this->getName()));
 		}
 		return false;
 	}
