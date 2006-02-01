@@ -60,7 +60,7 @@ class CacheManager {
 	}
 
 	function getFileCachePath() {
-		return Core::getBaseDir() . '/cache';
+		return Core::getBaseDir() . DIRECTORY_SEPARATOR . 'cache';
 	}
 
 	/**
