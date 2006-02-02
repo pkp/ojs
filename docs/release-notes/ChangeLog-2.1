@@ -1,3 +1,277 @@
+2006-02-02 13:02  alec
+
+	* registry/locale/es_ES/countries.xml: #2009# Updated Spanish
+	  countries list
+
+2006-02-02 12:41  alec
+
+	* dbscripts/xml/version.xml, docs/README, docs/RELEASE,
+	  docs/release-notes/README-2.1.0: #1481# Updated docs
+
+2006-02-02 11:57  alec
+
+	* classes/search/ArticleSearch.inc.php,
+	  dbscripts/xml/data/locale/es_ES/email_templates_data.xml,
+	  locale/es_ES/locale.xml, locale/pt_BR/locale.xml,
+	  plugins/auth/ldap/locale/es_ES/locale.xml,
+	  plugins/gateways/googleScholar/locale/es_ES/locale.xml,
+	  plugins/importexport/erudit/locale/es_ES/locale.xml: #2009#
+	  Updated Spanish locale #2010# Corrected missing Portuguese keys
+
+2006-02-01 15:07  alec
+
+	* locale/: en_US/locale.xml, pt_BR/locale.xml: #2057# Added missing
+	  locale info
+
+2006-02-01 14:36  alec
+
+	* classes/plugins/: AuthPlugin.inc.php, ImportExportPlugin.inc.php:
+	  #2056# Corrected broken redirects
+
+2006-02-01 14:21  alec
+
+	* classes/: cache/FileCache.inc.php,
+	  template/TemplateManager.inc.php: #2055# Corrected
+	  include/require problem
+
+2006-02-01 12:17  alec
+
+	* classes/cache/CacheManager.inc.php: #2054# Corrected dir
+	  separator problem
+
+2006-02-01 12:11  alec
+
+	* classes/: cache/CacheManager.inc.php, cache/FileCache.inc.php,
+	  template/TemplateManager.inc.php: #2054# DIRECTORY_SEPARATOR use
+	  preferred; #2053# Not using $this in TemplateManager
+
+2006-02-01 10:01  alec
+
+	* includes/functions.inc.php: #2048# Corrected oops -- wrong result
+	  checked in version compare
+
+2006-02-01 09:57  alec
+
+	* classes/db/DAO.inc.php, includes/functions.inc.php: #2048# Added
+	  PHP version checks for debug_backtrace
+
+2006-02-01 09:35  alec
+
+	* classes/install/Installer.inc.php,
+	  plugins/importexport/native/NativeImportExportPlugin.inc.php:
+	  #2047# Now suppressing warnings from set_time_limit
+
+2006-01-31 12:25  alec
+
+	* classes/submission/form/comment/PeerReviewCommentForm.inc.php:
+	  #2041# Removed "save and email" on reviews
+
+2006-01-31 11:28  alec
+
+	* locale/en_US/locale.xml, locale/pt_BR/locale.xml,
+	  templates/author/submission/editorDecision.tpl: #2040# Corrected
+	  terminology
+
+2006-01-30 16:08  alec
+
+	* classes/cache/CacheManager.inc.php: #1481# No more error message
+	  dealing with missing cache setting.
+
+2006-01-30 12:30  alec
+
+	* help/en_US/editorial/topic/000024.xml: #2044# Help updates
+
+2006-01-30 10:55  alec
+
+	* locale/pt_BR/locale.xml: #2010# Corrected typos
+
+2006-01-30 10:50  alec
+
+	* templates/: editor/notifyUsersEmail.tpl,
+	  manager/people/enrollment.tpl: #2043# Email character set
+	  problem; #1481# Removed "nowrap" -- may have to remove this
+	  elsewhere too.
+
+2006-01-27 17:02  alec
+
+	* classes/: db/DAO.inc.php,
+	  submission/sectionEditor/SectionEditorAction.inc.php,
+	  template/TemplateManager.inc.php: #2033# Corrected additional
+	  refer-to-unknown-variable-by-reference issues
+
+2006-01-27 12:27  alec
+
+	* locale/en_US/locale.xml, locale/pt_BR/locale.xml,
+	  templates/user/register.tpl: #2037# Removed "Interests" field
+	  when adding roles to an already-registered user
+
+2006-01-26 14:20  alec
+
+	* locale/pt_BR/locale.xml: #2010# Corrected typo in pt_BR
+
+2006-01-26 10:23  alec
+
+	* classes/help/Help.inc.php, classes/help/HelpTocDAO.inc.php,
+	  classes/help/HelpTopicDAO.inc.php,
+	  dbscripts/xml/data/locale/es_ES/email_templates_data.xml: #2036#
+	  Corrected missing help errors
+
+2006-01-25 15:42  alec
+
+	* templates/manager/emails/emails.tpl: #2023# Fixed minor HTML bug
+
+2006-01-25 15:36  alec
+
+	* templates/manager/emails/emailTemplateForm.tpl: #2024# Added
+	  reset button
+
+2006-01-25 13:11  alec
+
+	* dbscripts/xml/upgrade/2.1.0_update.xml: #2035# RT Upgrade mistake
+
+2006-01-25 12:16  alec
+
+	* classes/db/DBDataXMLParser.inc.php,
+	  dbscripts/xml/dtd/xmldata.dtd,
+	  dbscripts/xml/upgrade/2.1.0_update.xml: #2034# Added "driver"
+	  attribute to SQL queries
+
+2006-01-24 17:34  alec
+
+	* classes/core/Request.inc.php: #2033# Corrected typo in plugin
+	  call
+
+2006-01-24 15:25  alec
+
+	* templates/manager/people/enrollment.tpl: #1996# Shortened email
+	  address (was causing oversize problems in IE)
+
+2006-01-24 14:38  alec
+
+	* classes/xml/XMLCustomWriter.inc.php,
+	  plugins/importexport/native/NativeImportExportPlugin.inc.php,
+	  plugins/importexport/users/UserExportDom.inc.php: #2032# Using
+	  PUBLIC doctypes for xml exports
+
+2006-01-24 13:35  alec
+
+	* classes/journal/JournalReportIterator.inc.php: #2031# Corrected
+	  boundary condition -- reporting on empty journals
+
+2006-01-24 12:38  alec
+
+	* classes/xml/XMLCustomWriter.inc.php,
+	  classes/xml/XMLWriter.inc.php,
+	  plugins/gateways/googleScholar/GoogleScholarPlugin.inc.php,
+	  plugins/importexport/erudit/EruditExportDom.inc.php,
+	  plugins/importexport/erudit/EruditExportPlugin.inc.php,
+	  plugins/importexport/native/NativeExportDom.inc.php,
+	  plugins/importexport/native/NativeImportDom.inc.php,
+	  plugins/importexport/native/NativeImportExportPlugin.inc.php,
+	  plugins/importexport/users/UserExportDom.inc.php,
+	  plugins/importexport/users/UserImportExportPlugin.inc.php: #2030#
+	  Replaced XMLWriter with XMLCustomWriter
+
+2006-01-23 17:06  alec
+
+	* templates/admin/languages.tpl: #2029# Corrected HTML bug
+
+2006-01-23 17:01  alec
+
+	* pages/user/UserHandler.inc.php: #2028# Fixed variable clobbering
+
+2006-01-23 16:44  alec
+
+	* dbscripts/xml/data/locale/pt_BR/email_templates_data.xml,
+	  locale/pt_BR/locale.xml,
+	  plugins/auth/ldap/locale/pt_BR/locale.xml,
+	  plugins/gateways/googleScholar/locale/pt_BR/locale.xml,
+	  plugins/importexport/erudit/locale/pt_BR/locale.xml,
+	  plugins/importexport/native/locale/pt_BR/locale.xml,
+	  plugins/importexport/users/locale/pt_BR/locale.xml,
+	  registry/locale/pt_BR/countries.xml: #2019# Locale files for
+	  pt_BR added/updated
+
+2006-01-23 16:09  alec
+
+	* classes/template/TemplateManager.inc.php: #2027# Corrected block
+	  behavior
+
+2006-01-23 15:42  alec
+
+	* classes/template/TemplateManager.inc.php: #2027# Fixed odd
+	  behavior under Windows
+
+2006-01-23 15:08  alec
+
+	* lib/smarty/diff/: Smarty.class.php.diff,
+	  Smarty_Compiler.class.php.diff: #2027# Updated diffs
+
+2006-01-23 15:07  alec
+
+	* lib/: libraries.txt, smarty/Config_File.class.php,
+	  smarty/Smarty.class.php, smarty/Smarty_Compiler.class.php,
+	  smarty/internals/core.create_dir_structure.php,
+	  smarty/internals/core.is_secure.php,
+	  smarty/internals/core.is_trusted.php,
+	  smarty/internals/core.process_cached_inserts.php,
+	  smarty/internals/core.write_compiled_include.php,
+	  smarty/plugins/block.textformat.php,
+	  smarty/plugins/compiler.assign.php,
+	  smarty/plugins/function.assign_debug_info.php,
+	  smarty/plugins/function.config_load.php,
+	  smarty/plugins/function.counter.php,
+	  smarty/plugins/function.eval.php,
+	  smarty/plugins/function.fetch.php,
+	  smarty/plugins/function.html_image.php,
+	  smarty/plugins/function.html_options.php,
+	  smarty/plugins/function.html_select_date.php,
+	  smarty/plugins/function.html_select_time.php,
+	  smarty/plugins/function.math.php,
+	  smarty/plugins/function.popup.php,
+	  smarty/plugins/function.popup_init.php,
+	  smarty/plugins/modifier.capitalize.php,
+	  smarty/plugins/modifier.count_characters.php,
+	  smarty/plugins/modifier.count_paragraphs.php,
+	  smarty/plugins/modifier.count_sentences.php,
+	  smarty/plugins/modifier.count_words.php,
+	  smarty/plugins/modifier.date_format.php,
+	  smarty/plugins/modifier.debug_print_var.php,
+	  smarty/plugins/modifier.default.php,
+	  smarty/plugins/modifier.escape.php,
+	  smarty/plugins/modifier.indent.php,
+	  smarty/plugins/modifier.lower.php,
+	  smarty/plugins/modifier.regex_replace.php,
+	  smarty/plugins/modifier.replace.php,
+	  smarty/plugins/modifier.spacify.php,
+	  smarty/plugins/modifier.string_format.php,
+	  smarty/plugins/modifier.strip_tags.php,
+	  smarty/plugins/modifier.truncate.php,
+	  smarty/plugins/modifier.upper.php,
+	  smarty/plugins/modifier.wordwrap.php,
+	  smarty/plugins/shared.escape_special_chars.php,
+	  smarty/plugins/shared.make_timestamp.php: #2027# Upgrade Smarty
+	  library
+
+2006-01-23 12:28  alec
+
+	* templates/search/searchResults.tpl: #2026# Corrected variable
+	  clobbering
+
+2006-01-23 11:35  alec
+
+	* locale/en_US/locale.xml: #2010# Corrected typo
+
+2006-01-23 11:35  alec
+
+	* classes/search/ArticleSearch.inc.php, locale/en_US/locale.xml:
+	  #2025# Localized boolean ops in search
+
+2006-01-20 13:17  alec
+
+	* docs/: RELEASE, release-notes/ChangeLog-2.1: #1481# Preparation
+	  for beta
+
 2006-01-20 11:03  alec
 
 	* classes/submission/form/SuppFileForm.inc.php,
