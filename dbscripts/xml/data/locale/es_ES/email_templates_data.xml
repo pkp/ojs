@@ -444,7 +444,7 @@ Gracias,
 			<field name="subject">Acuse de recibo de corrección</field>
 			<field name="body">{$copyeditorName}:
 
-Gracias por corregir el manuscrito $articleTitle}," para {$journalName}. Supondrá una importante contribución a la calidad de la revista.
+Gracias por corregir el manuscrito {$articleTitle}," para {$journalName}. Supondrá una importante contribución a la calidad de la revista.
 
 {$editorialContactSignature}</field>
 			<field name="description">Este correo es enviado por el/la Editor/a de Sección al / a la corrector/a de un envío para comunicarle que ha recibido la corrección y agradecerle su contribución.</field>
