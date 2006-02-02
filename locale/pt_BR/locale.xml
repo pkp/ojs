@@ -1960,9 +1960,12 @@ O documento pode ser visualizado/baixado ao clicar no nome. Ao transferir uma no
 <li>Combine múltiplas palavras com <b>OU</b> para encontrar artigos contendo um ou outro termo; ex.: <i>educação OU pesquisa</i></li>
 <li>Use parênteses para criar buscas mais complexas; ex.: <i>arquivo ((revista OU conferência) NÃO teses)</i></li>
 <li>Use aspas duplas para recuperar a frase exata; ex.: <i>"acesso público à informação"</i></li>
-<li>Exclua palavras pré-fixando com o sinal <b>-</b> ou <b>NOT</b>; ex.: <i>online -políticas</i> ou <i>online NÃO políticas</i></li>
+<li>Exclua palavras pré-fixando com o sinal <b>-</b> ou <b>NÃO</b>; ex.: <i>online -políticas</i> ou <i>online NÃO políticas</i></li>
 <li>Use <b>*</b> como caracter curinga; ex.: <i>soci* moralidade</i> recuperaria documentos contendo "sociedade" ou "sociológico"</li>
 </ul>]]></message>	
+	<message key="search.operator.not">NÃO</message>
+	<message key="search.operator.and">E</message>
+	<message key="search.operator.or">OU</message>
 
 	<!-- Interstitial page for PDFs -->
 	<message key="article.pdf.title">Portable Document Format (PDF)</message>
@@ -2407,7 +2410,7 @@ A validação pode falhar em URLs para pesquisa que requeiram dados via o métod
 	<message key="icon.letter.alt">Letra</message>
 	<message key="icon.mail.alt">Correio</message>
 	<message key="icon.info.alt">Informação</message>
-	<msesage key="icon.folder.alt">Diretório</message>
+	<message key="icon.folder.alt">Diretório</message>
 	
 	<!-- Debug messages -->
 	<message key="debug.executionTime">Página gerada em</message>

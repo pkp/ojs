@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the es_ES locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="es_ES" full_name="Español (España)">
+	<message key="plugins.gateways.googleScholar.displayName">Plugin de pasarela con Google Scholar</message>
+	<message key="plugins.gateways.googleScholar.description">Este plugin proporciona información actualizada sobre una revista en particular a Google Scholar para indexación y búsqueda.</message>
+	<message key="plugins.gateways.googleScholar.settings">Configuración</message>
+	<message key="plugins.gateways.googleScholar.settings.description"><![CDATA[<p>El plugin de pasarela con Google Scholar Gateway Plugin pone la información a disposición del robot de Google Scholar para cada revista. Cuando este plugin está activado, el directorio de documentos (también conocido como información del / de la editor/a) estará disponible en <span class="highlight">{$directoryUrl}</span>.</p>
+<p>Google Scholar necesita cierta información que es opcional en OJS. Por favor, asegúrese de que sus datos cumplen con los requisitos de Google Scholar usando el botón Comprobar Información.</p>]]></message>
+	<message key="plugins.gateways.googleScholar.checkData">Comprobar información</message>
+	<message key="plugins.gateways.googleScholar.errors">Mensajes de error</message>
+	<message key="plugins.gateways.googleScholar.errors.noErrors">No se han encontrado errores.</message>
+
+	<message key="plugins.gateways.googleScholar.settings.publisherName">Nombre del / de la editor/a</message>
+	<message key="plugins.gateways.googleScholar.settings.publisherLocation">Lugar de publicación</message>
+	<message key="plugins.gateways.googleScholar.settings.publisherResultName">Nombre del Result Editor/a</message>
+	<message key="plugins.gateways.googleScholar.settings.contact">Correo-e de contacto</message>
+	<message key="plugins.gateways.googleScholar.settings.addContact">Añadir correo-e de contacto</message>
+
+	<!-- Error message -->
+	<message key="plugins.gateways.googleScholar.errors.noPublisherName">No se ha indicado el nombre del / de la editor/a. Este campo es necesario.</message>
+	<message key="plugins.gateways.googleScholar.errors.noContacts">Los correos-e de contacto no aparecen o no son válidos. Se debe especificar uno al menos, y todos deben ser válidos.</message>
+	<message key="plugins.gateways.googleScholar.errors.noIssn">No se ha indicado el ISSN de la revista. Véase configuración de la revista, paso 1.</message>
+	<message key="plugins.gateways.googleScholar.errors.errorMessage">No ha sido posible exportar la información a Google Scholar. El plugin de exportación a Google Scholar debe configurarse correctamente. Para obtener información más precisa, por favor use la función "Comprobar información" del gestor de la revista.</message>
+</locale>

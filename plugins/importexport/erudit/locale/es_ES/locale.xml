@@ -34,4 +34,6 @@
 	<message key="plugins.importexport.erudit.error.unknownJournal">La ruta de la revista especificada, "{$journalPath}", no existe.</message>
 	<message key="plugins.importexport.erudit.export.error.couldNotWrite">No ha sido posible escribir en el fichero "{$fileName}".</message>
 	<message key="plugins.importexport.erudit.export.error.articleNotFound">No hay ningún artículo con la ID "{$articleId}".</message>
+
+	<message key="plugins.importexport.erudit.unavailable">Inasequible</message>
 </locale>

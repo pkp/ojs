@@ -228,7 +228,34 @@ Gracias por tener en cuenta nuestra solicitud.
 
 Resumen
 {$articleAbstract}</field>
-			<field name="description">Este correo del / de la Editor/a de Sección a un/a revisor/a le solicita que acepte o rechace la revisión de un envío. Proporciona información sobre el envío como el título y el resumen, el plazo de revisión, y cómo acceder al envío propiamente dicho. Este mensaje se usa cuando se selecciona el Proceso de Envío Estándar en la configuración de la revista, paso 2. (En caso de haber seleccionado otra opción, véase REVIEW_REQ_MULTI_ATTACHED y REVIEW_REQUEST_ATTACHED.)</field>
+			<field name="description">Este correo del / de la Editor/a de Sección a un/a revisor/a le solicita que acepte o rechace la revisión de un envío. Proporciona información sobre el envío como el título y el resumen, el plazo de revisión, y cómo acceder al envío propiamente dicho. Este mensaje se usa cuando se selecciona el Proceso de Envío Estándar en la configuración de la revista, paso 2. (En caso de haber seleccionado otra opción, REVIEW_REQUEST_ATTACHED.)</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEW_REQUEST_ONECLICK</field>
+			<field name="subject">Petición de Revisión de Artículo</field>
+			<field name="body">{$reviewerName}:
+				
+Tengo el convencimiento de que sería un/a excelente revisor/a del manuscrito, "{$articleTitle}," que ha sido enviado a {$journalName}. A continuación encontrará un extracto del envío, con la esperanza de que aceptará llevar a cabo esta importante tarea para nosotros.
+
+Por favor, identifíquese en la revista antes de {$weekLaterDate} para decirnos si hará o no la revisión, así como para tener acceso al envío y para registrar su revisión y recomendación. La dirección es {$journalUrl}
+
+La revisión propiamente dicha debe estar lista para el {$reviewDueDate}.
+
+Si ha perdido su nombre de usuaria/o y contraseña puede pinchar en el siguiente enlace para cambiar su contraseña (le llegará por correo-e junto con su nombre de usuaria/o). {$passwordResetUrl}
+
+URL del envío: {$submissionReviewUrl}
+
+Gracias por tener en cuenta nuestra solicitud.
+
+{$editorialContactSignature}
+
+
+
+"{$articleTitle}"
+
+Resumen
+{$articleAbstract}</field>
+			<field name="description">Este correo del / de la Editor/a de Sección a un/a revisor/a le solicita que acepte o rechace la revisión de un envío. Proporciona información sobre el envío como el título y el resumen, el plazo de revisión, y cómo acceder al envío propiamente dicho. Este mensaje se usa cuando se selecciona el Proceso de Envío Estándar en la configuración de la revista, paso 2, y está activado el acceso a la revisión en un click.</field>
 		</row>
 		<row>
 			<field name="email_key">REVIEW_REQUEST_ATTACHED</field>
@@ -248,7 +275,7 @@ Normas de Revisión
 
 {$reviewGuidelines}
 </field>
-			<field name="description">Este correo del / de la Editor/a de Sección a un/a revisor/a le solicita que acepte o rechace la revisión de un envío. Contiene el envío propiamente dicho como adjunto. Este correo se usa cuando es seleccionado Proceso de Revisión mediante Adjuntos en Correo-e en la configuración de la revista, paso 2. (En caso de haber seleccionado otra opción, véase REVIEW_REQUEST_MULTIPLE y REVIEW_REQUEST.)</field>
+			<field name="description">Este correo del / de la Editor/a de Sección a un/a revisor/a le solicita que acepte o rechace la revisión de un envío. Contiene el envío propiamente dicho como adjunto. Este correo se usa cuando es seleccionado Proceso de Revisión mediante Adjuntos en Correo-e en la configuración de la revista, paso 2.</field>
 		</row>
 		<row>
 			<field name="email_key">REVIEW_CANCEL</field>
@@ -319,6 +346,20 @@ Le rogamos nos confirme su disponibilidad para completar esta contribución vita
 			<field name="description">Este correo es enviado por el/la Editor/a de Sección para recordar a un/a revisor/a que ya debe entregar su revisión.</field>
 		</row>
 		<row>
+			<field name="email_key">REVIEW_REMIND_ONECLICK</field>
+			<field name="subject">Recordatorio de envío de revisión</field>
+			<field name="body">{$reviewerName}:
+
+Le recordamos nuestra petición de revisión del envío "{$articleTitle}," para {$journalName}. Esperábamos su revisión antes del {$reviewDueDate}, esperamos nos la mande en cuanto la tenga lista.
+
+URL del envío: {$submissionReviewUrl}
+
+Le rogamos nos confirme su disponibilidad para completar esta contribución vital para el trabajo de la revista. Esperamos tener noticias suyas a la mayor brevedad.
+
+{$editorialContactSignature}</field>
+			<field name="description">Este correo es enviado por el/la Editor/a de Sección para recordar a un/a revisor/a que ya debe entregar su revisión.</field>
+		</row>
+		<row>
 			<field name="email_key">REVIEW_REMIND_AUTO</field>
 			<field name="subject">Recordatorio automático de revisión de envío</field>
 			<field name="body">{$reviewerName}:
@@ -334,7 +375,20 @@ Le rogamos nos confirme su disponibilidad para completar esta contribución vita
 {$editorialContactSignature}</field>
 			<field name="description">Este correo es enviado automáticamente cuando se supera la fecha de entrega de un/a revisor/a (véase Opciones de Revisión en Configuración de la revista, paso 2). Las tareas planificadas deben estar activadas y configuradas (ver fichero de configuración del sitio).</field>
 		</row>
+		<row>
+			<field name="email_key">REVIEW_REMIND_AUTO_ONECLICK</field>
+			<field name="subject">Recordatorio automático de revisión de envío</field>
+			<field name="body">{$reviewerName}:
+				
+Le recordamos nuestra petición de revisión del envío "{$articleTitle}," para {$journalName}. Esperábamos su revisión antes del {$reviewDueDate}, y se ha generado automáticamente este correo-e al haberse superado dicha fecha. Aún estaríamos encantados de recibirla una vez la tenga lista.
 
+URL del envío: {$submissionReviewUrl}
+
+Le rogamos nos confirme su disponibilidad para completar esta contribución vital para el trabajo de la revista. Esperamos tener noticias suyas a la mayor brevedad.
+				
+{$editorialContactSignature}</field>
+			<field name="description">This email is automatically sent when a reviewer's due date elapses (see Review Options under Journal Setup, Step 2) and one-click reviewer access is enabled. Scheduled tasks must be enabled and configured (see the site configuration file).</field>
+		</row>
 
 		<!--
 		  *
@@ -390,7 +444,7 @@ Gracias,
 			<field name="subject">Acuse de recibo de corrección</field>
 			<field name="body">{$copyeditorName}:
 
-Gracias por corregir el manuscrito {$articleTitle}," para {$journalName}. Supondrá una importante contribución a la calidad de la revista.
+Gracias por corregir el manuscrito $articleTitle}," para {$journalName}. Supondrá una importante contribución a la calidad de la revista.
 
 {$editorialContactSignature}</field>
 			<field name="description">Este correo es enviado por el/la Editor/a de Sección al / a la corrector/a de un envío para comunicarle que ha recibido la corrección y agradecerle su contribución.</field>

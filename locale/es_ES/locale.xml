@@ -137,15 +137,15 @@
 	<message key="common.active">Activo</message>
 	<message key="common.completed">Completado</message>
 	<message key="common.mailingAddress">Dirección postal</message>
-	<message key="common.country">ADD HERE</message>
+	<message key="common.country">País</message>
 	<message key="common.close">Cerrar</message>
 	<message key="common.closeWindow">Cerrar ventana</message>
 	<message key="common.initiate">Iniciar</message>
 	<message key="common.complete">Completar</message>
 	<message key="common.options">Opciones</message>
-	<message key="common.plugin">ADD HERE</message>
-	<message key="common.default">ADD HERE</message>
-	<message key="common.addSelf">ADD HERE</message>
+	<message key="common.plugin">Plugin</message>
+	<message key="common.default">Por defecto</message>
+	<message key="common.addSelf">Añadirse a si mismo</message>
 
 	<!-- Common Form Messages -->
 	<message key="form.errorsOccurred">Ha ocurrido un error. El formulario no se ha procesado.</message>
@@ -169,7 +169,7 @@
 	<message key="email.subject">Asunto</message>
 	<message key="email.body">Cuerpo</message>
 	<message key="email.send">Enviar</message>
-	<message key="email.skip">ADD HERE</message>
+	<message key="email.skip">Continuar sin enviar el correo-e</message>
 	<message key="email.compose">Enviar correo-e</message>
 	<message key="email.addToRecipient">Añadir destinataria/o</message>
 	<message key="email.addCcRecipient">Añadir CC</message>
@@ -249,7 +249,7 @@
 
 	<!-- Common Section Terms -->
 	<message key="section.section">Sección</message>
-	<message key="section.sections">Secciones</message>
+	<message key="section.sections">Secciones de la revista</message>
 	<message key="section.title">Título de sección</message>
 	<message key="section.abbreviation">Abreviatura</message>
 	<message key="section.abbreviation.example">(Por ejemplo, Artículos=ART)</message>
@@ -325,8 +325,9 @@
 	<message key="submission.editorDecision">Decisión editorial</message>
 	<message key="submission.round">Round&amp;nbsp;{$round}</message>
 	<message key="submission.editorReview">Revisión editorial</message>
-	<message key="submission.notifyAuthor">ADD HERE</message>
-	<message key="submission.editorAuthorRecord">ADD HERE</message>
+	<message key="submission.notifyAuthor">Notificar a autor/a</message>
+	<message key="submission.notifyEditor">Notificar a editor/a</message>
+	<message key="submission.editorAuthorRecord">Editar el registro de autor/a</message>
 	<message key="submission.reviewersVersion">Versión del fichero anotada por el/la revisor/a</message>
 	<message key="submission.postReviewVersion">Versión del fichero revisado</message>
 	<message key="submission.editorVersion">Versión del / de la editor/a</message>
@@ -430,7 +431,7 @@
 	<message key="user.lastName">Apellidos</message>
 	<message key="user.title">Tratamiento</message>
 	<message key="user.affiliation">Filiación</message>
-	<message key="user.affiliations">ADD HERE</message>
+	<message key="user.affiliations">Afiliaciones</message>
 	<message key="user.email">Correo-e</message>
 	<message key="user.phone">Teléfono</message>
 	<message key="user.fax">Fax</message>
@@ -460,7 +461,7 @@
 	<message key="user.role.proofreader">Corrector/a de pruebas</message>
 	<message key="user.role.author">Autor/a</message>
 	<message key="user.role.reader">Lector/a</message>
-	<message key="user.role.subscriptionManager">ADD HERE</message>
+	<message key="user.role.subscriptionManager">Gestor/a de suscripción</message>
 	<message key="user.role.siteAdmins">Administradoras/es</message>
 	<message key="user.role.managers">Gestores/as de revistas</message>
 	<message key="user.role.editors">Editores/as</message>
@@ -471,7 +472,7 @@
 	<message key="user.role.proofreaders">Correctores/as de pruebas</message>
 	<message key="user.role.authors">Autoras/es</message>
 	<message key="user.role.readers">Lectores/as</message>
-	<message key="user.role.subscriptionManagers">ADD HERE</message>
+	<message key="user.role.subscriptionManagers">Gestores/as de suscripción</message>
 	
 	<!-- Common Issue Terms -->
 	<message key="issue.issue">Número</message>
@@ -589,7 +590,7 @@
 	<message key="admin.siteAdmin">Administración del sitio</message>
 	<message key="admin.siteSettings">Configuración del sitio</message>
 	<message key="admin.hostedJournals">Revistas alojadas</message>
-	<message key="admin.authSources">ADD HERE</message>
+	<message key="admin.authSources">Fuentes de autentificación</message>
 	
 	<message key="admin.settings.siteTitle">Título</message>
 	<message key="admin.settings.introduction">Introducción</message>
@@ -619,7 +620,7 @@ Tenga en cuenta que el interfaz OAI se puede desactivar editando la configuraci�
 	<message key="admin.expireSessions">Caducidad de las sesiones</message>
 	<message key="admin.confirmExpireSessions">¿Seguro que desea cerrar todas las sesiones? Esto obligará a todos/as los/as usuarios/as logados en el sistema en este momento a identificarse de nuevo (incluyéndole a usted).</message>
 	<message key="admin.clearTemplateCache">Vaciar la cache de la plantilla</message>
-	<message key="admin.clearDataCache">ADD HERE</message>
+	<message key="admin.clearDataCache">Vaciar la cache de datos</message>
 	<message key="admin.confirmClearTemplateCache">¿Seguro que desea vaciar la caché de las plantillas compiladas?</message>
 	<message key="admin.systemInformation">Información del sistema</message>
 	
@@ -640,14 +641,17 @@ Tenga en cuenta que el interfaz OAI se puede desactivar editando la configuraci�
 	<message key="admin.languages.noLocalesAvailable">No existen locales adicionales disponibles para la instalación.</message>
 	<message key="admin.languages.installLocales">Instalar</message>
 
-	<message key="admin.auth.ojs">ADD HERE</message>
-	<message key="admin.auth.create">ADD HERE</message>
-	<message key="admin.auth.confirmDelete">ADD HERE</message>
-	<message key="admin.auth.noneCreated">ADD HERE</message>
-	<message key="admin.auth.enableSyncProfiles">ADD HERE</message>
-	<message key="admin.auth.enableSyncPasswords">ADD HERE</message>
-	<message key="admin.auth.enableCreateUsers">ADD HERE</message>
-	<message key="admin.auth.defaultSourceDescription">ADD HERE</message>
+	<message key="admin.auth.ojs">Base de datos de usuarios/as de OJS</message>
+	<message key="admin.auth.create">Crear fuente de autentificación</message>
+	<message key="admin.auth.confirmDelete">¿Seguro que quiere borrar esta fuente de autentificación definitivamente?</message>
+	<message key="admin.auth.noneCreated">No se ha definido ninguna fuente de autentificación.</message>
+	<message key="admin.auth.enableSyncProfiles">Activar la sincronización de perfiles de usuario/a (si está soportado por este plugin de autentificación). La información del perfil de usuario se actualizará automáticamente desde la fuente remota cuando un/a usuario/a se identifica, y los cambios en el perfil (incluyendo cambios en la contraseña) realizados en OJS se actualizarán automáticamente en la fuente remota. Si no se activa esta opción, la información del perfil de OJS se mantendrá separada del perfil remoto.</message>
+	<message key="admin.auth.enableSyncPasswords">Permitir la modificación de contraseñas de usuarios/as (si está soportado por este plugin de autentificación). Al activar esta opción se permite a las/os usuarias/os modificar su contraseña de OJS y usar la opción "he olvidado mi contraseña" para restablecer una contraseña olvidada. Estas funciones no estarán disponibles para las/os usuarias/os con esta fuente de autentificación si no está activada esta opción.</message>
+	<message key="admin.auth.enableCreateUsers">Permitir la creación de usuarias/os (si está soportada por este plugin de autentificación). Los/as usuarios/as creados dentro de OJS con esta fuente de autentificación se añadirán automáticamente a la fuente de autentificación remota si no existen ya. Además, si esta es la fuente de autentificación por defecto, también se añadirán a la fuente de autentificación remota las cuentas de OJS creadas a través del registro de usuaria/o.</message>
+	<message key="admin.auth.defaultSourceDescription"><![CDATA[Indicar una fuente de autentificación por defecto distinta de OJS produce los siguientes efectos:
+<ul>
+	<li>Si un/a usuario/a intenta registrar una cuenta nueva en este sitio con un nombre de usuario/a que ya existe en la fuente de autentificación (pero no existe en la base de datos de OJS), sólo se permite el registro si la contraseña es válida para dicho nombre de usuaria/o.</li>
+</ul>]]></message>
 
 	<!-- System Information -->
 	<message key="admin.systemVersion">Versión de OJS</message>
@@ -706,22 +710,22 @@ Tenga en cuenta que el interfaz OAI se puede desactivar editando la configuraci�
 	<message key="admin.journal.importPath">Ruta de OJS 1</message>
 	<message key="admin.journal.importPathInstructions">Ruta local completa de la instalación de OJS 1 (p.e., "/var/www/ojs").</message>
 	<message key="admin.journals.importSubscriptions">Importar suscripciones</message>
-	<message key="admin.journals.transcode">ADD HERE</message>
+	<message key="admin.journals.transcode">Artículos transcode de metadatos de ISO8859-1</message>
 	<message key="admin.journals.form.importPathRequired">La ruta de importación es necesaria.</message>
 	<message key="admin.journals.importErrors">La importación no se ha podido completar.</message>
 	
 	<!-- Subscription Management -->
-	<message key="subscriptionManager.subscriptionManagement">ADD HERE</message>
+	<message key="subscriptionManager.subscriptionManagement">Gestión de las suscripciones</message>
 
 	<!-- Journal Management -->
 	<message key="manager.journalManagement">Gestión de la revista</message>
 	<message key="manager.setup">Configuración</message>
-	<message key="manager.emails">Correos-e</message>
-	<message key="manager.statistics">Estadísticas</message>
+	<message key="manager.emails">Plantillas de correos-e</message>
+	<message key="manager.statistics">Estadísticas e informes</message>
 	<message key="manager.readingTools">Herramientas de lectura</message>
 	<message key="manager.people">Personas</message>
 	<message key="manager.filesBrowser">Navegación de ficheros</message>
-	<message key="manager.groups">ADD HERE</message>
+	<message key="manager.groups">Equipo de trabajo</message>
 	<message key="manager.managementPages">Páginas de gestión</message>
 	<message key="manager.plugins">System Plugins</message>
 	<message key="manager.users">Usuarios/as</message>
@@ -730,68 +734,68 @@ Tenga en cuenta que el interfaz OAI se puede desactivar editando la configuraci�
 	<message key="manager.subscriptions">Suscripciones</message>
 
 	<!-- Statistics & Reports -->
-	<message key="manager.statistics.statistics">ADD HERE</message>
-	<message key="manager.statistics.statistics.itemsPublished">ADD HERE</message>
-	<message key="manager.statistics.statistics.numSubmissions">ADD HERE</message>
-	<message key="manager.statistics.statistics.forSection">ADD HERE</message>
-	<message key="manager.statistics.statistics.count.accept">ADD HERE</message>
-	<message key="manager.statistics.statistics.count.decline">ADD HERE</message>
-	<message key="manager.statistics.statistics.count.revise">ADD HERE</message>
-	<message key="manager.statistics.statistics.count.undecided">ADD HERE</message>
-	<message key="manager.statistics.statistics.count.value">ADD HERE</message>
-	<message key="manager.statistics.statistics.numIssues">ADD HERE</message>
-	<message key="manager.statistics.statistics.reviewers">ADD HERE</message>
-	<message key="manager.statistics.statistics.reviewerCount">ADD HERE</message>
-	<message key="manager.statistics.statistics.reviewsPerReviewer">ADD HERE</message>
-	<message key="manager.statistics.statistics.daysPerReview">ADD HERE</message>
-	<message key="manager.statistics.statistics.reviewerScore">ADD HERE</message>
-	<message key="manager.statistics.statistics.daysToPublication">ADD HERE</message>
-	<message key="manager.statistics.statistics.registeredUsers">ADD HERE</message>
-	<message key="manager.statistics.statistics.totalNewValue">ADD HERE</message>
-	<message key="manager.statistics.statistics.countryDistribution">ADD HERE</message>
-	<message key="manager.statistics.statistics.subscriptions">ADD HERE</message>
+	<message key="manager.statistics.statistics">Estadísticas</message>
+	<message key="manager.statistics.statistics.itemsPublished">Números publicados:</message>
+	<message key="manager.statistics.statistics.numSubmissions">Envíos totales:</message>
+	<message key="manager.statistics.statistics.forSection">Sección de la revista {$sectionTitle}:</message>
+	<message key="manager.statistics.statistics.count.accept">Aceptados (%):</message>
+	<message key="manager.statistics.statistics.count.decline">Rechazados (%):</message>
+	<message key="manager.statistics.statistics.count.revise">Revisados (%):</message>
+	<message key="manager.statistics.statistics.count.undecided">Sin decidir (%):</message>
+	<message key="manager.statistics.statistics.count.value">{$count} ({$percentage}%)</message>
+	<message key="manager.statistics.statistics.numIssues">Números publicados:</message>
+	<message key="manager.statistics.statistics.reviewers">Revisores/as:</message>
+	<message key="manager.statistics.statistics.reviewerCount">Número de asignaciones:</message>
+	<message key="manager.statistics.statistics.reviewsPerReviewer">Número de revisiones:</message>
+	<message key="manager.statistics.statistics.daysPerReview">Días tomados:</message>
+	<message key="manager.statistics.statistics.reviewerScore">Puntuación de editor/a:</message>
+	<message key="manager.statistics.statistics.daysToPublication">Días hasta la publicación:</message>
+	<message key="manager.statistics.statistics.registeredUsers">Usuarios/as registrados/as:</message>
+	<message key="manager.statistics.statistics.totalNewValue">{$numTotal} ({$numNew} nuevos)</message>
+	<message key="manager.statistics.statistics.countryDistribution">Distribución por países:</message>
+	<message key="manager.statistics.statistics.subscriptions">Subscripciones:</message>
 
-	<message key="manager.statistics.reports">ADD HERE</message>
-	<message key="manager.statistics.reports.dateFrom">ADD HERE</message>
-	<message key="manager.statistics.reports.dateTo">ADD HERE</message>
-	<message key="manager.statistics.reports.includeInReportType">ADD HERE</message>
-	<message key="manager.statistics.reports.type.journal">ADD HERE</message>
-	<message key="manager.statistics.reports.type.editor">ADD HERE</message>
-	<message key="manager.statistics.reports.type.reviewer">ADD HERE</message>
-	<message key="manager.statistics.reports.type.section">ADD HERE</message>
-	<message key="manager.statistics.reports.generate">ADD HERE</message>
-	<message key="manager.statistics.reports.csvNote">ADD HERE</message>
-	<message key="manager.statistics.reports.status">ADD HERE</message>
-	<message key="manager.statistics.reports.dateDecided">ADD HERE</message>
-	<message key="manager.statistics.reports.author">ADD HERE</message>
-	<message key="manager.statistics.reports.affiliation">ADD HERE</message>
-	<message key="manager.statistics.reports.country">ADD HERE</message>
-	<message key="manager.statistics.reports.reviewer">ADD HERE</message>
-	<message key="manager.statistics.reports.editor">ADD HERE</message>
-	<message key="manager.statistics.reports.score">ADD HERE</message>
-	<message key="manager.statistics.reports.singleScore">ADD HERE</message>
-	<message key="manager.statistics.reports.recommendation">ADD HERE</message>
-	<message key="manager.statistics.reports.daysToDecision">ADD HERE</message>
-	<message key="manager.statistics.reports.daysToPublication">ADD HERE</message>
+	<message key="manager.statistics.reports">Generador de informes</message>
+	<message key="manager.statistics.reports.dateFrom">Desde</message>
+	<message key="manager.statistics.reports.dateTo">Hasta</message>
+	<message key="manager.statistics.reports.includeInReportType">Incluir los siguientes en</message>
+	<message key="manager.statistics.reports.type.journal">Informe de revistas</message>
+	<message key="manager.statistics.reports.type.editor">Informe de editores/as</message>
+	<message key="manager.statistics.reports.type.reviewer">Informe de revisores/as</message>
+	<message key="manager.statistics.reports.type.section">Informe de secciones</message>
+	<message key="manager.statistics.reports.generate">Generar informe</message>
+	<message key="manager.statistics.reports.csvNote"><![CDATA[<strong>Nota:</strong> Los informes se generan en formato CSV y deberían ser abiertos en una hoja de cálculo.]]></message>
+	<message key="manager.statistics.reports.status">Estado (Aceptado, rechazado, otro)</message>
+	<message key="manager.statistics.reports.dateDecided">Fecha de decisión</message>
+	<message key="manager.statistics.reports.author">Autor/a #{$num}</message>
+	<message key="manager.statistics.reports.affiliation">Afiliación #{$num}</message>
+	<message key="manager.statistics.reports.country">País #{$num}</message>
+	<message key="manager.statistics.reports.reviewer">Revisor/a #{$num}</message>
+	<message key="manager.statistics.reports.editor">Editor/a #{$num}</message>
+	<message key="manager.statistics.reports.score">Puntuación #{$num}</message>
+	<message key="manager.statistics.reports.singleScore">Puntuación</message>
+	<message key="manager.statistics.reports.recommendation">Recomendación #{$num}</message>
+	<message key="manager.statistics.reports.daysToDecision">Días hasta tomar decisión</message>
+	<message key="manager.statistics.reports.daysToPublication">Días hasta publicar</message>
 
 	<!-- Plugin Management -->
-	<message key="manager.plugins.pluginManagement">ADD HERE</message>
-	<message key="manager.plugins.sitePlugin">ADD HERE</message>
-	<message key="manager.plugins.action">ADD HERE</message>
-	<message key="manager.plugins.disable">ADD HERE</message>
-	<message key="manager.plugins.enable">ADD HERE</message>
+	<message key="manager.plugins.pluginManagement">Gestión de plugins</message>
+	<message key="manager.plugins.sitePlugin">Este es un sitio que emplea plugins. Sólo el/la gestor/a del sitio puede gestionar este plugin.</message>
+	<message key="manager.plugins.action">Acción:</message>
+	<message key="manager.plugins.disable">Desactivar</message>
+	<message key="manager.plugins.enable">Activar</message>
 
 	<!-- General plugin information -->
-	<message key="plugins.categories.generic">ADD HERE</message>
-	<message key="plugins.categories.generic.description">ADD HERE</message>
-	<message key="plugins.categories.auth">ADD HERE</message>
-	<message key="plugins.categories.auth.description">ADD HERE</message>
+	<message key="plugins.categories.generic">Plugins genéricos</message>
+	<message key="plugins.categories.generic.description">Los plugins genéricos se usan para ampliar las características de Open Journal Systems de diversas maneras que no son soportadas por otras categorías de plugins.</message>
+	<message key="plugins.categories.auth">Plugins de autorización</message>
+	<message key="plugins.categories.auth.description">Los plugins de autorización permiten a Open Journal Systems delegar las tareas de autentificación de usuarios/as a otros sistemas, como pueden ser servidores LDAP.</message>
 
-	<message key="plugins.categories.importexport">ADD HERE</message>
-	<message key="plugins.categories.importexport.description">ADD HERE</message>
+	<message key="plugins.categories.importexport">Plugins de importación/exportación</message>
+	<message key="plugins.categories.importexport.description">Los plugins de importación/exportación se pueden usar para transferir contenido entre sistemas.</message>
 
-	<message key="plugins.categories.gateways">ADD HERE</message>
-	<message key="plugins.categories.gateways.description">ADD HERE</message>
+	<message key="plugins.categories.gateways">Plugins de pasarela</message>
+	<message key="plugins.categories.gateways.description">Los plugins de pasarela proporcionan datos en directo a sistemas externos.</message>
 
 	<!-- Files Browser -->
 	<message key="manager.files.indexOfDir">Índice de {$dir}</message>
@@ -876,18 +880,18 @@ Tenga en cuenta que el interfaz OAI se puede desactivar editando la configuraci�
 	<message key="manager.setup.reviewOptions.numWeeksPerReview">El tiempo que tendrán los/as revisores/as</message>
         <message key="manager.setup.reviewOptions.noteOnModification">Puede ser modificado durante el proceso editorial.</message>
 	<message key="manager.setup.reviewOptions.reviewerReminders">Recordatorios a los/as revisores/as</message>
-        <message key="manager.setup.reviewOptions.automatedReminders">Se enviará a los/as revisores/as recordatorios por correo-e automáticamente (el/la editor/a también puede escribir al revisor/a)</message>
+	<message key="manager.setup.reviewOptions.automatedReminders">Se pueden enviar correos electrónicos de recordatorio automáticamente (disponible en Plantillas de correos-e en OJS) a los revisores/as en dos sitios diferentes (aunque el/la editor/a siempre puede enviar correos-e directamente)</message>
         <message key="manager.setup.reviewOptions.remindForInvite1">Si el/la revisor/a no ha respondido a una petición de revisión en</message>
         <message key="manager.setup.reviewOptions.remindForInvite2">días.</message>
         <message key="manager.setup.reviewOptions.remindForSubmit1">Si el/la revisor/a no ha enviado su recomendación en</message>
         <message key="manager.setup.reviewOptions.remindForSubmit2">días después de la fecha fijada.</message>
-	<message key="manager.setup.reviewOptions.automatedRemindersDisabled">ADD HERE</message>
+	<message key="manager.setup.reviewOptions.automatedRemindersDisabled"><![CDATA[<strong>Nota:</strong> Para activar estas opciones, el/la administrador/a del sitio debe habilitar la opción <tt>scheduled_tasks</tt> en el fichero de configuración de OJS. Es posible que se necesite configuración adicional en el servidor para soportar esta funcionalidad (lo cual puede no ser posible en todos los servidores), tal y como se indica en la documentación de OJS.]]></message>
 	<message key="manager.setup.reviewOptions.reviewerRatings">Puntuación de revisor/a</message>
         <message key="manager.setup.reviewOptions.onQuality">Los/as editores/as puntuarán a los/as revisores/as de 1 a 5 en cada revisión.</message>
 	<message key="manager.setup.reviewOptions.reviewerAccess">Acceso de los/as revisores/as</message>
         <message key="manager.setup.reviewOptions.restrictReviewerFileAccess">Los revisores/as tendrán acceso al fichero enviado sólo cuando hayan aceptado su revisión.</message>
-	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled">ADD HERE</message>
-	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description">ADD HERE</message>
+	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled">Activar el acceso a revisor/a con un click.</message>
+	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"><![CDATA[<strong>Nota:</strong> La invitación por correo-e a los/as revisores/as contendrá una URL especial que lleva a los/as revisores/as invitados directamente a la página de revisión para los envíos (con acceso a otras páginas que requieren la identificación). Por motivos de seguridad los/as editores/as no pueden modificar su dirección de correo-e o añadir CCs o BCCs antes de enviar la invitación a revisores/as con esta opción.]]></message>
 
 	<message key="manager.setup.peerReviewPolicy2">Política de revisión por pares</message>
 	<message key="manager.setup.reviewGuidelines">Directrices de revisión</message>
@@ -910,7 +914,7 @@ Tenga en cuenta que el interfaz OAI se puede desactivar editando la configuraci�
 	<message key="manager.setup.emails">Identificación por Correo-e</message>
 	<message key="manager.setup.emailBounceAddress">Dirección de Rebote</message>
 	<message key="manager.setup.emailBounceAddressDescription">Se enviará un mensaje de error a esta dirección por cada correo que no haya podido ser entregado.</message>
-	<message key="manager.setup.emailBounceAddressDisabled">ADD HERE</message>
+	<message key="manager.setup.emailBounceAddressDisabled">Dirección de rebotes</message>
 	<message key="manager.setup.emailSignature">Firma</message>
 	<message key="manager.setup.emailSignatureDescription">Los correos predeterminados que se envíen desde el sistema tendrán la siguiente firma. En Gestión de la Revista se puede editar el cuerpo de los mensajes predeterminados.</message>
 
@@ -959,9 +963,10 @@ Configurar el soporte LOCKSS para Open Journal Systems no es necesario hasta que
 	<message key="manager.setup.addChecklistItem">Añadir elemento a la lista</message>
 	<message key="manager.setup.addItem">Añadir elemento</message>
 	<message key="manager.setup.authorCopyrightNotice">Nota de copyright</message>
-	<message key="manager.setup.authorCopyrightNoticeDescription"><![CDATA[Esta nota de copyright aparecerá en Acerca de la Revista y será incluida en los metadatos de cada elemento. Entre las opciones de copyright, es posible permitir a los/as autores/as mantener el copyright de su trabajo, otorgando a la revista el derecho exclusivo para su primera publicación. Alternativamente, la revista puede solicitar que se le transfiera el copyright, otorgando permiso de uso no-comercial del trabajo, entre los que se incluye la posibilidad de enviar el trabajo a un archivo de acceso abierto. Además, la <a href="http://www.creativecommons.org" target="_blank">Licencia Creative Commons</a> se puede consultar para licencias de copyright flexibles.]]></message>
+	<message key="manager.setup.authorCopyrightNoticeDescription"><![CDATA[Esta Nota de Copyright aparecerá en Acerca de la Revista y en los metadatos de cada elemento publicado. Los/as autores/as pueden mantener el copyright, concediendo a la revista el derecho de primera publicación. Alternativamente, las/os autoras/es puede transferir el copyright a la revista, la cual permitirá a las/os autoras/es el uso no-comercial del trabajo, 
+incluyendo el derecho a colocarlo en un archivo de acceso libre. Además, se puede consultar <a href="http://www.creativecommons.org" target="_blank">Creative Commons</a> sobre licencias de copyright flexibles.]]></message>
 	<message key="manager.setup.copyrightNotice">Nota de copyright</message>
-	<message key="manager.setup.authorCopyrightNoticeAgree">ADD HERE</message>
+	<message key="manager.setup.authorCopyrightNoticeAgree">Nota de copyright</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWork">Para que los/as autores/as indexen su trabajo</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWorkDescription"><![CDATA[OJS se adhiere al protocolo de Recogida de Metadatos de la <a href="http://www.openarchives.org/" target="_blank">Iniciativa de Archivos Abiertos</a> , que es la norma emergente para proporcionar acceso a recursos electrónicos de investigación bien indexados a escala global. Se usaran plantillas similares para proporcionar los metadatos de los envíos. La persona encargada de la gestión de la revista debería seleccionar las categorías para indexar y presentar a los/as autores/as ejemplos relevantes que le faciliten la indexación de su trabajo, separando los términos con punto y coma (p.e., término1; término2). Las entradas deberían ser introducidas como ejemplos usando "P.e.," o "Por ejemplo,".]]></message>
 	<message key="manager.setup.discipline">Disciplina y Sub-Disciplinas Académicas</message>
@@ -991,11 +996,11 @@ Configurar el soporte LOCKSS para Open Journal Systems no es necesario hasta que
 Tenga en cuenta que si su administrador/a ya ha registrado este sitio en el PKP Harvester, su revista será indexada automáticamente si necesidad de registrarla.
 <br /><br />
 <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Haga click aquí</a> e introduzca <span class="highlight">{$siteUrl}</span> en <b>Site URL</b>, y <span class="highlight">{$oaiUrl}</span> en <b>Base URL for OAI Archive</b>.]]></message>
-	<message key="manager.setup.notifications">ADD HERE</message>
-	<message key="manager.setup.notifications.description">ADD HERE</message>
-	<message key="manager.setup.notifications.copyPrimaryContact">ADD HERE</message>
-	<message key="manager.setup.notifications.copySpecifiedAddress">ADD HERE</message>
-	<message key="manager.setup.notifications.submissionAckDisabled">ADD HERE</message>
+	<message key="manager.setup.notifications">Notificación de envío de autor/a</message>
+	<message key="manager.setup.notifications.description">Al completar el proceso de envío, se manda automáticamente un correo-e de recepción a los autores/as (que puede ser consultado y modificado en Correos-e). Además, se puede enviar una copia del correo de notificación de las siguientes maneras:</message>
+	<message key="manager.setup.notifications.copyPrimaryContact">Enviar copia al contacto primario de la revista, identificado en el paso 1 de la configuración.</message>
+	<message key="manager.setup.notifications.copySpecifiedAddress">Enviar copia a esta dirección de correo-e:</message>
+	<message key="manager.setup.notifications.submissionAckDisabled"><![CDATA[<strong>Nota:</strong> El envío de correo-e de recepción está desactivado. Para usar esta característica, active el correo-e de recepción en <a class="action" href="{$preparedEmailsUrl}">Prepared Emails</a>.]]></message>
 
 	<!-- Setup Step 4 -->
 	<message key="manager.setup.managingTheJournal">Paso 4. Gestión de la Revista</message>
@@ -1043,7 +1048,7 @@ Seleccione un modelo para manejar aquellos aspectos del proceso editorial. (Para
 	<message key="manager.setup.uniqueIdentifierDescription">Artículos y elementos que pueden ser etiquetados con un número de identificación o cadena, usando un sistema de registro como el Sistema de Identificación de Objetos Digital (DOI).</message>
 	<message key="manager.setup.enablePublicIssueId">Se usarán identificadores a medida para los números.</message>
 	<message key="manager.setup.enablePublicArticleId">Se usarán identificadores a medida para identificar los elementos publicados.</message>
-	<message key="manager.setup.enablePublicSuppFileId">ADD HERE</message>
+	<message key="manager.setup.enablePublicSuppFileId">Se usarán identificadores a medida para identificar ficheros de artículo suplementarios.</message>
 	<message key="manager.setup.pageNumberIdentifier">Opción de número de página</message>
 	<message key="manager.setup.enablePageNumber">Se incluirán en la tabla de contenidos de la revista números de página para cada elemento publicado (p.e., pág. 13-26).</message>
 	<message key="manager.setup.subscriptionDescription">Una revista con tarifas de suscripción necesita designar un/a gestor/a de suscripciones. Esta persona formará parte de la revista como Gestor/a de la Revista para que pueda configurar los tipos de suscripción y gestionar los/as suscriptores/as (en Suscripciones en la página de gestión de la revista). Aunque trabaje con suscripciones, el/la editor/a puede designar artículos concretos para que estén disponibles bajo acceso libre, así como números completos pasado un cierto tiempo desde su publicación (de 0 a 24 meses).</message>
@@ -1137,14 +1142,13 @@ Seleccione un modelo para manejar aquellos aspectos del proceso editorial. (Para
 	<message key="manager.sections.unassignEditor">Desasignar editor/a</message>
 	<message key="manager.sections.form.titleRequired">Es necesario el título para la sección.</message>
 	<message key="manager.sections.form.abbrevRequired">Es necesario un título abreviado para la sección.</message>
-	<message key="manager.sections.peerReviewed">Revisado por pares</message>
 	<message key="manager.sections.submissionIndexing">Elementos de esta sección que deben ser incluidos en el contenido indexado de la revista.</message>
 	<message key="manager.section.sectionEditorInstructions">Seleccione uno/a de entre los/as Editores/as de Sección disponibles y "Asigne editor/a" a esta sección.</message>
 	<message key="manager.sections.editorRestriction">Sólo los/as editores/as y editores/as de sección pueden enviar elementos.</message>
 	<message key="manager.sections.hideTocTitle">Omita el título de esta sección en la tabla de contenidos de los números.</message>	
 	<message key="manager.sections.readingTools">Herramientas de lectura</message>
 	<message key="manager.sections.indexed">Indexado</message>
-	<message key="manager.sections.open">ADD HERE</message>
+	<message key="manager.sections.open">Envíos abiertos</message>
 	<message key="manager.sections.policy">Política de sección</message>
 	<message key="manager.sections.identifyType">En sus metadatos, identificar los elementos de esta sección como</message>
 	<message key="manager.sections.identifyTypeExamples">(Por ejemplo, "Artículo revisado por pares", "Artículo no evaluado", "Artículo invitado", etc.)</message>
@@ -1154,23 +1158,23 @@ Seleccione un modelo para manejar aquellos aspectos del proceso editorial. (Para
 	<message key="manager.importExport">Importar/exportar información</message>
 
 	<!-- Groups / Masthead -->
-	<message key="manager.groups.editTitle">ADD HERE</message>
-	<message key="manager.groups.createTitle">ADD HERE</message>
-	<message key="manager.groups.title">ADD HERE</message>
-	<message key="manager.groups.confirmDelete">ADD HERE</message>
-	<message key="manager.groups.noneCreated">ADD HERE</message>
-	<message key="manager.groups.create">ADD HERE</message>
-	<message key="manager.groups.form.groupTitleRequired">ADD HERE</message>
+	<message key="manager.groups.editTitle">Editar título</message>
+	<message key="manager.groups.createTitle">Crear título</message>
+	<message key="manager.groups.title">Título</message>
+	<message key="manager.groups.confirmDelete">¿Seguro que quiere eliminar este grupo?</message>
+	<message key="manager.groups.noneCreated">No se ha creado ningún cargo del equipo editorial.</message>
+	<message key="manager.groups.create">Crear cargo del equipo editorial</message>
+	<message key="manager.groups.form.groupTitleRequired">Se necesita un título de grupo.</message>
 
-	<message key="manager.groups.enableBoard.description">ADD HERE</message>
-	<message key="manager.groups.enableBoard">ADD HERE</message>
-	<message key="manager.groups.disableBoard">ADD HERE</message>
+	<message key="manager.groups.enableBoard.description"><![CDATA[Para el <a href="{$aboutEditorialTeamUrl}">Equipo Editorial</a> en Acerca de la revista:]]></message>
+	<message key="manager.groups.enableBoard">El/la gestor/a de la revista creará cargos del equipo editorial, y añadirá los nombres de las personas para cada cargo.</message>
+	<message key="manager.groups.disableBoard">El sistema generará una lista de personas bajo el rol editorial asignado (gestor/a de la revista, editor/a, editor/a de sección, corrector/a, etc.)</message>
 
-	<message key="manager.groups.membership">ADD HERE</message>
-	<message key="manager.groups.membership.confirmDelete">ADD HERE</message>
-	<message key="manager.groups.membership.noneCreated">ADD HERE</message>
-	<message key="manager.groups.membership.addMember">ADD HERE</message>
-	<message key="manager.groups.membership.noUsers">ADD HERE</message>
+	<message key="manager.groups.membership">Miembros</message>
+	<message key="manager.groups.membership.confirmDelete">¿Seguro que quiere borrar los miembros de este grupo?</message>
+	<message key="manager.groups.membership.noneCreated">Este grupo no tiene miembros.</message>
+	<message key="manager.groups.membership.addMember">Añadir miembro</message>
+	<message key="manager.groups.membership.noUsers">No se han encontrado usuarios/as.</message>
 
 	<!-- People Management -->
 	<message key="manager.people.allUsers">Todas/os las/os usuarios/as</message>
@@ -1189,10 +1193,10 @@ Seleccione un modelo para manejar aquellos aspectos del proceso editorial. (Para
 	<message key="manager.people.noMatchingUsers">No se han encontrado usuarias/os.</message>
 	<message key="manager.people.saveAndCreateAnotherUser">Guardar y crear otra/o</message>
 	<message key="manager.people.userCreatedSuccessfully">Usuaria/o creado.</message>
-	<message key="manager.people.authSource">ADD HERE</message>
+	<message key="manager.people.authSource">Fuente de autentificación</message>
 	<message key="manager.people.enrollUserAs">Inscribir usuaria/o como</message>
-	<message key="manager.people.doNotEnroll">No inscribir</message>
-	<message key="manager.people.enrollUserAsDescription">ADD HERE</message>
+	<message key="manager.people.doNotEnroll">Sin rol asignado</message>
+	<message key="manager.people.enrollUserAsDescription">Si no se seleccional el rol el/la usuario/a será creado en el sistema, pero no se le asignará ningún rol en esta revista. Una vez creado el/la usuario/a se le puede asignar un rol en cualquier momento.</message>
 	<message key="manager.people.invalidUser">Lo sentimos, la/el usuaria/o solicitada/o no existe.</message>
 	<message key="manager.people.noAdministrativeRights"><![CDATA[Lo sentimos, no tiene derechos administrativos sobre esta/e usuaria/o. Esto puede ser porque:
 		<ul>
@@ -1349,7 +1353,7 @@ Seleccione un modelo para manejar aquellos aspectos del proceso editorial. (Para
 	<message key="editor.submissionArchive.saveChanges">¿Guardar cambios a los envíos archivados? Los envíos marcados para borrado serán eliminados del sistema.</message>
 	<message key="editor.submissionArchive.confirmDelete">¿Seguro que quiere eliminar este envío?</message>
 	<message key="editor.submissionReview.confirmDecision">¿Seguro que quiere guardar esta decisión?</message>
-	<message key="editor.submissionReview.notes">ADD HERE</message>
+	<message key="editor.submissionReview.notes">Entrega indica el número de semanas que faltan hasta la fecha de entrega de la revisión o (-) las semanas de más que han transcurrido. Se completa cuando un/a revisor/a acepta la petición de revisión.</message>
 	<message key="editor.notifyUsers">Notificar usuarias/os</message>
 	<message key="editor.usersNotified">Usuarias/os notificados</message>
 	<message key="editor.notifyUsers.allUsers">Enviar este mensaje a todas/os las/os usuarias/os asociados con la revista ({$count} usuarios/as)</message>
@@ -1400,9 +1404,9 @@ Seleccione un modelo para manejar aquellos aspectos del proceso editorial. (Para
 	<message key="editor.issues.remove">Eliminar</message>
 	<message key="editor.issues.removeCoverPage">¿Eliminar imagen de cubierta?</message>
 	<message key="editor.issues.invalidCoverPageFormat">Formato de cubierta no válido. Los formatos aceptados son .gif, .jpg, o .png.</message>
-	<message key="editor.issues.styleFile">ADD HERE</message>
-	<message key="editor.issues.invalidStyleFormat">ADD HERE</message>
-	<message key="editor.issues.removeStyleFile">ADD HERE</message>
+	<message key="editor.issues.styleFile">Hoja de estilos</message>
+	<message key="editor.issues.invalidStyleFormat">El formato de la hoja de estilos no es válido. Asegúrese de que el fichero enviado contiene CSS válido.</message>
+	<message key="editor.issues.removeStyleFile">¿Eliminar hoja de estilo?</message>
 	<message key="editor.issues.coverPageCaption">Leyenda de cubierta</message>
 	<message key="editor.issues.showCoverPage">Crear cubierta personalizada para este número.</message>
 	<message key="editor.issues.openAccess">Acceso libre</message>
@@ -1411,7 +1415,7 @@ Seleccione un modelo para manejar aquellos aspectos del proceso editorial. (Para
 	<message key="editor.issues.access">Acceso</message>
 	<message key="editor.issues.cover">Cubierta</message>
 	<message key="editor.issues.confirmIssueDelete">Todos los artículos serán devueltos a la cola de planificación y se eliminarán todos los ficheros asociados ¿Seguro que quiere eliminar este número?</message>
-	<message key="editor.issues.resetSectionOrder">ADD HERE</message>
+	<message key="editor.issues.resetSectionOrder"><![CDATA[Este número usa una ordenación de secciones personalizada. <a href="{$url}" class="action">Reset to defaults</a>]]></message>
 
 	<!-- Live Issues -->
 	<message key="editor.issues.issueData">Información del número</message>
@@ -1456,17 +1460,17 @@ Seleccione un modelo para manejar aquellos aspectos del proceso editorial. (Para
 	<message key="editor.article.selectReviewer">Seleccionar revisor/a</message>
 	<message key="editor.article.selectReviewerNotes"><![CDATA[El nombre enlaza con el perfil de / de la revisor/a.<br/>
 La puntuación es sobre 5 (excelente).<br/>
-Días se refiere al periodo de tiempo medio empleado para completar una revisión.<br />
-La última fecha es la de la revisión aceptada más reciente,<br/>
-con un signo más (+) se indica revisión en progreso.]]></message>
+Semanas se refiere al periodo de tiempo medio empleado para completar una revisión.<br />
+La última fecha es la de la revisión aceptada más reciente.<br/>
+Activas es el número de revisiones que en este momento están consideradas como en proceso.]]></message>
 	<message key="editor.article.replaceReviewer">Reemplazar revisor/a</message>
 	<message key="editor.article.editorToEnter">Introducción de recomendaciones/comentarios para revisor/a por editor/a</message>
-	<message key="editor.article.uploadReviewForReviewer">ADD HERE</message>
+	<message key="editor.article.uploadReviewForReviewer">Subir revisión</message>
 	<message key="editor.article.peerReviewOptions">Opciones de revisión por pares</message>	
 	<message key="editor.article.decision">Decisión</message>	
 	<message key="editor.article.noEditorSelected">No se ha seleccionado editor/a.</message>
 	<message key="editor.article.recordDecision">Registrar decisión</message>
-	<message key="editor.article.cannotRecord">Los envíos se deben asignar a un/a editor/a de sección y debe existir una versión de editor/a antes de poder registrar una decisión. No se pueden registrar más decisiones una vez que un envío ha sido mandado a corrección.</message>
+	<message key="editor.article.cannotRecord">Los envíos se deben asignar a un/a editor/a de sección antes de poder registrar una decisión. La versión de revisión se convierte, por defecto, en la versión de editor/a.</message>
 	<message key="editor.article.reviewersSeeAuthorsVersion">Revisores ven versión de autor/a</message>
 	<message key="editor.article.designateDueDate">Designar fecha de entrega</message>
 	<message key="editor.article.designateDueDateDescription">Para cambiar la fecha de entrega para este/a revisor/a, introduzca otra fecha o borre la fecha e introduzca el número de semanas que faltan para la entrega de la revisión.</message>
@@ -1493,8 +1497,8 @@ con un signo más (+) se indica revisión en progreso.]]></message>
 	<message key="editor.article.archiveSubmission">Envío de archivo</message>
 	<message key="editor.article.emailAuthorOnArchive">¿Mandar un correo-e avisando al / a la autor/a de que este envío ha sido archivado?</message>	
 	<message key="editor.article.restoreToQueue">Devolver a lista activa</message>
-	<message key="editor.article.assignSectionEditor">ADD HERE</message>
-	<message key="editor.article.assignEditor">ADD HERE</message>
+	<message key="editor.article.assignSectionEditor">Añadir editor/a de sección</message>
+	<message key="editor.article.assignEditor">Añadir editor/a</message>
 	<message key="editor.article.selectSectionEditor">Seleccionar editor/a de sección</message>
 	<message key="editor.article.selectDecision">Seleccionar decisión</message>
 	<message key="editor.article.decision.accept">Aceptar envíos</message>
@@ -1525,7 +1529,7 @@ con un signo más (+) se indica revisión en progreso.]]></message>
 	<message key="editor.submissions.accept">Aceptar</message>
 	<message key="editor.submissions.noSubmissions">No hay envíos</message>
 	<message key="editor.submissions.lastAssigned">Último</message>
-	<message key="editor.submissions.averageTime">Días</message>
+	<message key="editor.submissions.averageTime">Semanas</message>
 	<message key="editor.submissions.lastCompleted">Último completado</message>
 	
 	<!-- Section Editor -->
@@ -1546,8 +1550,8 @@ con un signo más (+) se indica revisión en progreso.]]></message>
 	<message key="sectionEditor.regrets.regretsAndCancels">Excusas de revisor/a &amp; cancelaciones</message>
 	<message key="sectionEditor.regrets.regret">Excusas</message>
 	<message key="sectionEditor.regrets.result">Resultado</message>
-	<message key="sectionEditor.review.enrollReviewer">ADD HERE</message>
-	<message key="sectionEditor.review.createReviewer">ADD HERE</message>
+	<message key="sectionEditor.review.enrollReviewer">Asignar el rol de revisor/a a un/a usuario/a existente</message>
+	<message key="sectionEditor.review.createReviewer">Crear nuevo/a revisor/a</message>
 
 	<!-- Layout Editor -->
 	<message key="layoutEditor.activeEditorialAssignments">Asignaciones editoriales activas</message>
@@ -1653,9 +1657,9 @@ con un signo más (+) se indica revisión en progreso.]]></message>
 	<message key="author.submit.selectSection">Seleccione una sección ...</message>
 	
 	<message key="author.submit.submissionChecklist">Lista de comprobación de envío</message>
-	<message key="author.submit.submissionChecklistDescription">Los/as autores/as deben indicar con una marca que su envío cumple todos los requisitos siguientes antes de pasar al paso 2 en el proceso de envío.</message>
-	<message key="author.submit.copyrightNoticeAgree">ADD HERE</message>
-	<message key="author.submit.copyrightNoticeAgreeRequired">ADD HERE</message>
+	<message key="author.submit.submissionChecklistDescription">Indica que este envío está listo para ser considerado por esta revista marcando los siguientes puntos (a continuación se pueden enviar comentarios al / a la editor/a).</message>
+	<message key="author.submit.copyrightNoticeAgree">Los/as autores/as están de acuerdo con los términos de esta nota de copyright, que se aplicará a su envío si y cuando sea publicado por esta revista (a continuación se pueden hacer comentarios al / a la editor/a).</message>
+	<message key="author.submit.copyrightNoticeAgreeRequired">Antes de continuar debe aceptar los términos de la nota de copyright.</message>
 	<message key="author.submit.verifyChecklist">Debe asegurarse de que cumple todos los requisitos de la lista antes de continuar</message>
 	<message key="author.submit.commentsForEditor">Comentarios para el/la editor/a</message>
 	<message key="author.submit.comments">Introduzca el texto (opcional)</message>
@@ -1698,7 +1702,7 @@ Este fichero puede ser consultado haciendo click en su nombre. Se puede enviar u
 	<message key="author.submit.uploadSubmissionFile">Subir fichero</message>
 	<message key="author.submit.replaceSubmissionFile">Reemplazar fichero</message>
 	<message key="author.submit.noSubmissionFile">No se ha subido ningún fichero.</message>
-	<message key="author.submit.noSubmissionConfirm">ADD HERE</message>
+	<message key="author.submit.noSubmissionConfirm">¿Seguro que quiere continuar sin enviar un fichero?</message>
 	
 	<!-- Article Submission Step 4 -->
 	<message key="author.submit.supplementaryFilesInstructions">Este paso es opcional. Los ficheros complementarios actúan como apéndice al envío, con la intención de mejor la contribución del envío. Los ficheros complementarios pueden ser, entre otros: (a) instrumentos de investigación, (b) conjuntos de datos, que cumplen con los términos de la revisión ética de estudios de investigación, (c) fuentes que de otra manera serían inaccesibles para los/as lectores/as, o (d) números o tablas que no pueden ser integrados en el propio texto. Estos ficheros también son indexados por el/la autor/a, identificando su relación con el envío, así como su propiedad. Los ficheros complementarios pueden ser subidos en cualquier formato y se pondrán a disposición de los/as lectores/as en su formato original.</message>
@@ -1732,8 +1736,8 @@ Este fichero puede ser consultado haciendo click en su nombre. Se puede enviar u
 	<message key="author.submit.suppFile.form.titleRequired">Por favor, introduzca el título de este fichero complementario.</message>
 	<message key="author.submit.suppFile.form.subjectRequired">Por favor, introduzca la materia.</message>
 	<message key="author.submit.suppFile.form.descriptionRequired">Por favor, introduzca una descripción.</message>
-	<message key="author.suppFile.suppFilePublicIdentificationExists">ADD HERE</message>
-	<message key="author.suppFile.publicSuppFileIdentifier">ADD HERE</message>
+	<message key="author.suppFile.suppFilePublicIdentificationExists">Ya existen ficheros de identificación públicos adicionales.</message>
+	<message key="author.suppFile.publicSuppFileIdentifier">Identificador de fichero de identificación público</message>
 	
 	<!-- Article Submission Step 5 -->
 	<message key="author.submit.confirmationDescription">Una vez haya completado los cuatro pasos previos del proceso de envío, haga click en "Finalizar envío" para enviar su manuscrito a {$journalTitle}. Recibirá una notificación por correo-e y podrá ver el progreso de su envío a través del proceso editorial identificándose en el sitio web. Gracias por su interés en publicar en {$journalTitle}.</message>
@@ -1741,7 +1745,7 @@ Este fichero puede ser consultado haciendo click en su nombre. Se puede enviar u
 	<message key="author.submit.filesSummary">Resumen de ficheros</message>
 	<message key="author.submit.finishSubmission">Finalizar envío</message>
 	<message key="author.submit.submissionComplete">Envío completado. Gracias por su interés en publicar en {$journalTitle}.</message>
-	<message key="author.submit.expedite">ADD HERE</message>
+	<message key="author.submit.expedite"><![CDATA[Si este envío está en un formato listo para ser publicado, sin necesidad de más revisiones, edición, o maquetación, se puede enviar directamente a la cola de Planificación de Envíos <a href="{$expediteUrl}" class="action">pinchando aquí</a>. (Nota: Sólo los/as editores/as de revista cuentan con esta opción para sus envíos.)]]></message>
 
 	<!-- Used in submission review / editing -->
 	<message key="submission.review.mustUploadFileForReview">En correo-e solicitado no se puede enviar hasta que haya una versión de revisión.</message>
@@ -1834,7 +1838,7 @@ Este fichero puede ser consultado haciendo click en su nombre. Se puede enviar u
 	
 	<!-- Submission Comments -->
 	<message key="submission.comments.comments">Comentarios</message>
-	<message key="submission.comments.addComment">ADD HERE</message>
+	<message key="submission.comments.addComment">Añadir comentario</message>
 	<message key="submission.comments.review">Revisión</message>
 	<message key="submission.comments.editorAuthorCorrespondence">Correspondencia editor/a / autor/a</message>
 	<message key="submission.comments.copyeditComments">Comentarios de corrección</message>
@@ -1850,8 +1854,8 @@ Este fichero puede ser consultado haciendo click en su nombre. Se puede enviar u
 	<message key="submission.comments.editComment">Editar comentario</message>
 	<message key="submission.comments.confirmDelete">¿Seguro que quiere eliminar este comentario?</message>
 	<message key="submission.comments.importPeerReviews">Importar revisiones por pares</message>
-	<message key="submission.comments.blindCcReviewers">ADD HERE</message>
-	<message key="submission.comments.importPeerReviews.reviewerLetter">ADD HERE</message>
+	<message key="submission.comments.blindCcReviewers">Después de enviar, mandar una copia oculta con la decisión editorial para mandar por correo-e a los/as revisores/as.</message>
+	<message key="submission.comments.importPeerReviews.reviewerLetter">Revisor/a {$reviewerLetter}:</message>
 	
 	<message key="submission.comments.forAuthorEditor">Para autor/a y editor/a</message>
 	<message key="submission.comments.forEditor">Para editor/a</message>
@@ -1900,7 +1904,7 @@ la contraseña actual.<br /><br />Introduzca su dirección de correo-e para camb
 	<message key="user.register.form.emailExists">La dirección de correo-e seleccionada ya está en uso por otra persona.</message>
 	<message key="user.register.form.passwordsDoNotMatch">Las contraseñas no coinciden.</message>
 	<message key="user.register.selectJournal">Seleccione una revista para registrarse</message>
-	<message key="user.register.noJournals">ADD HERE</message>
+	<message key="user.register.noJournals">En este sitio no hay revistas en las que se pueda registrar.</message>
 	<message key="user.register.registerAs">Registrarse como</message>
 	<message key="user.register.privacyStatement">Declaración de privacidad</message>
 	<message key="user.register.completeForm">Complete este formulario para registrarse en la revista.</message>
@@ -1913,6 +1917,7 @@ la contraseña actual.<br /><br />Introduzca su dirección de correo-e para camb
 	<message key="user.register.form.passwordLengthTooShort">La contraseña que ha introducido no es suficientemente larga.</message>
 	<message key="user.register.readerDescription">Recibirá una notificación cuando aparezca un nuevo número de la revista.</message>
 	<message key="user.register.authorDescription">Puede enviar artículos a la revista.</message>
+	<message key="user.register.reviewerDescriptionNoInterests">Deseo hacer revisiones ciegas de envíos a la revista.</message>
 	<message key="user.register.reviewerDescription">Deseo hacer revisiones ciegas de envíos a la revista. Introduzca sus áreas de interés (áreas substantivas y métodos de investigación).</message>
 
 
@@ -1935,7 +1940,7 @@ la contraseña actual.<br /><br />Introduzca su dirección de correo-e para camb
 	<message key="search.dateFrom">Desde</message>
 	<message key="search.dateTo">Hasta</message>
 	<message key="search.discipline">Disciplina(s)</message>
-	<message key="search.subject">Materia(s)</message>
+	<message key="search.subject">Palabra(s) clave(s)</message>
 	<message key="search.typeMethodApproach">Tipo (método/enfoque)</message>
 	<message key="search.coverage">Cobertura</message>
 	<message key="search.matchAll">Coincidencia en todas las categorías</message>
@@ -1956,7 +1961,10 @@ la contraseña actual.<br /><br />Introduzca su dirección de correo-e para camb
 <li>Si quiere excluir una palabra póngale como prefijo <b>-</b> o <b>NOT</b>; p.e. <i>online -política</i> or <i>online NOT política</i></li>
 <li>Use <b>*</b> en un término como comodín para encontrar cualquier secuencia de caracteres; p.e., <i>moralidad soci* </i> encontraría documentos que contengan "sociológico" o "sociología"</li>
 </ul>]]></message>
-
+	<message key="search.operator.not">not</message>
+	<message key="search.operator.and">and</message>
+	<message key="search.operator.or">or</message>
+	
 	<!-- Interstitial page for PDFs -->
 	<message key="article.pdf.title">Portable Document Format (PDF)</message>
 	<message key="article.pdf.note"><![CDATA[El fichero PDF que ha seleccionado se debería cargar aquí si su navegador cuenta con un plug-in  para ficheros PDF (por ejemplo, una versión reciente de <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>). Alternativamente, el fichero PDF se bajará a su ordenador, donde puede ser abierto usando un lector de ficheros PDF. Si quiere obtener más información sobre como imprimir, guardar, y trabajar con PDFs, Highwire Press cuenta con una útil sección de <a href="http://highwire.stanford.edu/help/pdf-faq.dtl">Preguntas Frecuentes sobre PDFs</a> (en inglés).<br /><br />Si el fichero no se descarga automáticamente, <a href="{$url}">haga click aquí</a>.]]></message>
@@ -1993,7 +2001,7 @@ la contraseña actual.<br /><br />Introduzca su dirección de correo-e para camb
 	<message key="about.journalContact">Contacto de la revista</message>
 	<message key="about.aboutTheJournal">Acerca de la revista</message>
 	<message key="about.editorialTeam">Equipo editorial</message>
-	<message key="about.editorialTeam.biography">ADD HERE</message>
+	<message key="about.editorialTeam.biography">Biografía</message>
 	<message key="about.editorialPolicies">Política editorial</message>
 	<message key="about.focusAndScope">Temática y alcance</message>
 	<message key="about.sectionPolicies">Política de secciones</message>
@@ -2157,9 +2165,11 @@ Su servidor soporta mbstring en este momento: <strong>{$supportsMBString}</stron
 <p>A continuación se muestran las sentencias SQL para crear el esquema de base de datos de OJS y los datos iniciales. Tenga en cuenta que el sistema no se podrá usar hasta que se hayan ejecutado manualmente estas sentencias. También tendrá que configurar manualmente el fichero de configuración <tt>config.inc.php</tt>.</p>]]></message>
 	<message key="installer.installerSQLStatements">Sentencias SQL para la instalación</message>
 	<message key="installer.installationComplete"><![CDATA[<p>La instalación de OJS se ha completado con éxito.</p>
-<p>Para empezar a usar el sistema, <a href="{$loginUrl}">lóguese</a> con el nombre de usuaria/o y contraseña introducidos en la página anterior.</p>]]></message>
+<p>Para empezar a usar el sistema, <a href="{$loginUrl}">lóguese</a> con el nombre de usuaria/o y contraseña introducidos en la página anterior.</p>
+<p>Si quiere recibir noticias y actualización, por favor, regístrese en <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>. Si tiene preguntas o comentarios, por favor, visite el <a href="http://pkp.sfu.ca/support/forum" target="_new">foro de soporte</a>.</p>]]></message>
 	<message key="installer.upgradeComplete"><![CDATA[<p>La actualización a la versión de OJS {$version} se ha completado con éxito.</p>
-<p>No olvide cambiar la opción "installed" en su fichero de configuración config.inc.php y ponerla en <i>On</i>.</p>]]></message>
+<p>No olvide cambiar la opción "installed" en su fichero de configuración config.inc.php y ponerla en <i>On</i>.</p>
+<p>Si no se ha registrado ya y quieres recibir noticias y actualizaciones, por favor, regístrese en <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>. Si tiene preguntas o comentarios, visite el <a href="http://pkp.sfu.ca/support/forum" target="_new">foro de soporte</a>.</p>]]></message>
 	<message key="installer.skipFilesDir">No crear subdirectorios (sólo tiene utilidad en la instalación manual)</message>
 	<message key="installer.releaseNotes">Notas de lanzamiento</message>
 	<message key="installer.checkYes">Sí</message>
@@ -2177,12 +2187,12 @@ Su servidor soporta mbstring en este momento: <strong>{$supportsMBString}</stron
 	<message key="log.review.reviewerRated">{$reviewerName} ha sido puntuado/a por la ronda {$round} de revisión del envío {$articleId}.</message>
 	<message key="log.review.reviewDueDateSet">La fecha de entrega para la ronda {$round} de revisión del envío {$articleId} por {$reviewerName} se ha fijado para el {$dueDate}.</message>
 	<message key="log.review.reviewRecommendationSet">Se ha establecido la revisión para la ronda {$round} de revisión del envío {$articleId} por {$reviewerName}.</message>
-	<message key="log.review.reviewRecommendationSetByProxy">ADD HERE</message>
+	<message key="log.review.reviewRecommendationSetByProxy">La recomendación para la ronda de revisión {$round} del envío {$articleId} ha sido establecida por el/la editor/a {$editorName}, a cargo del / de la revisor/a, {$reviewerName}.</message>
 	<message key="log.review.resubmit">El envío {$articleId} ha sido reenviado para revisión.</message>
 	<message key="log.review.reviewDeclined">{$reviewerName} ha rechazado la ronda {$round} de revisión para el envío {$articleId}.</message>
 	<message key="log.review.reviewAccepted">{$reviewerName} ha aceptado la ronda {$round} de revisión para el envío {$articleId}.</message>
 	<message key="log.review.reviewAcceptedByProxy">{$userName} ha aceptado la ronda {$round} de revisión para el envío {$articleId} en nombre de {$reviewerName}.</message>
-	<message key="log.review.reviewFileByProxy">ADD HERE</message>
+	<message key="log.review.reviewFileByProxy">El/la editor/a, {$userName}, ha subido un fichero de revisión para la ronda {$round} de revisión del artículo {$articleId} a cargo del / de la revisor/a, {$reviewerName}.</message>
 	<message key="log.review.reviewerFile">Se ha subido un fichero de revisor/a.</message>
 
 
@@ -2203,7 +2213,7 @@ Su servidor soporta mbstring en este momento: <strong>{$supportsMBString}</stron
 	<message key="log.editor.archived">Se ha archivado el envío {$articleId}.</message>
 	<message key="log.editor.restored">El envío {$articleId} ha sido devuelto a la cola.</message>
 	<message key="log.editor.editorAssigned">Se ha asignado a {$editorName} como editor/a para el envío {$articleId}.</message>
-	<message key="log.editor.submissionExpedited">ADD HERE</message>
+	<message key="log.editor.submissionExpedited">{$editorName} ha acelerado el proceso de edición para el artículo {$articleId}.</message>
 
 	<message key="log.proofread.assign">{$assignerName} ha asignado a {$proofreaderName} para corregir las pruebas del envío {$articleId}.</message>
 	<message key="log.proofread.complete">{$proofreaderName} ha enviado {$articleId} a planificación.</message>
@@ -2229,13 +2239,13 @@ Su servidor soporta mbstring en este momento: <strong>{$supportsMBString}</stron
 	<message key="rt.admin.options">Opciones</message>
 
 	<message key="rt.admin.settings.disable">Desactivar Herramientas de Lectura</message>
-	<message key="rt.admin.settings.bibFormat">Formato bibliográfico</message>
-	<message key="rt.admin.settings.captureCite">Capturar la cita (Muestra la cita de un artículo en formato estandar, con soporte para estas herramientas de gestión de citas: EndNote, Reference Manager, y ProCite)</message>
-	<message key="rt.admin.settings.viewMetadata">Ver los metadatos del elemento (Muestra la información de indexación de un elemento generada por el/la autor/a y el sistema)</message>
+	<message key="rt.admin.settings.bibFormat">Formato bibliográfico para captura de citas</message>
+	<message key="rt.admin.settings.captureCite">Información bibliográfica (Muestra la cita de un artículo en formato estandar, con soporte para estas herramientas de gestión de citas: EndNote, Reference Manager, y ProCite)</message>
+	<message key="rt.admin.settings.viewMetadata">Información de indexación (Muestra la información de indexación de un elemento generada por el/la autor/a y el sistema)</message>
 	<message key="rt.admin.settings.supplementaryFiles">Ver ficheros complementarios (Muestra una lista de ficheros complementarios incluidos por el/la autor/a)</message>
 	<message key="rt.admin.settings.printerFriendly">Ir a versión para imprimir (le lleva a una versión imprimible del elemento)</message>
-	<message key="rt.admin.settings.authorBio">Mostrar la biografía del / de la autor/a (muestra los datos biográficos introducidos por el/la autor/a)</message>
-	<message key="rt.admin.settings.defineTerms">Buscar una palabra (permite a los/as lectores/as hacer doble click en cualquier palabra y enviarla a un diccionario)</message>
+	<message key="rt.admin.settings.authorBio">Acerca del / de la autor/a (muestra los datos biográficos introducidos por el/la autor/a)</message>
+	<message key="rt.admin.settings.defineTerms">Definición de términos (permite a los/as lectores/as hacer doble click en cualquier palabra y enviarla a un diccionario)</message>
 	<message key="rt.admin.settings.addComment">Añadir comentario al elemento (Permite al / a la lector/a enviar comentarios, que pueden ser borrados por el/la gestor/a de la revista). Deben estar activos los comentarios de lectores/as en la configuración de la revista</message>
 	<message key="rt.admin.settings.emailAuthor">Mandar correo-e a los/as autores/as (Permite al / a la lector/a escribir un correo-e al / a la autor/a en una plantilla)</message>
 	<message key="rt.admin.settings.emailOthers">Mandar a un/a colega (Permite al / a la lector/a escribir un correo-e en una plantilla que tiene como asunto el título del artículo)</message>
@@ -2256,9 +2266,9 @@ Su servidor soporta mbstring en este momento: <strong>{$supportsMBString}</stron
 	<message key="rt.admin.contexts.confirmDelete">¿Seguro que quiere borrar este contexto y todas las búsquedas asociadas?</message>
 	<message key="rt.admin.contexts.metadata">Metadatos</message>
 	<message key="rt.admin.contexts.options">Opciones</message>
-	<message key="rt.admin.contexts.options.citedBy">ADD HERE</message>
+	<message key="rt.admin.contexts.options.citedBy">Use los nombres de autor/a como términos de búsqueda por defecto y describa el contexto como búsqueda para citas al artículo.</message>
 	<message key="rt.admin.contexts.options.authorTerms">Usar los nombres los/as autores/as como términos de búsqueda por defecto para permitir a los/as usuarios/as encontrar otros trabajos de las/os mismas/os autoras/es de este artículo (p.e., para un contexto de "Otros trabajos")</message>
-	<message key="rt.admin.contexts.options.geoTerms">ADD HERE</message>
+	<message key="rt.admin.contexts.options.geoTerms">Utilice información geográfica de indexación como términos de búsqueda por defecto.</message>
 	<message key="rt.admin.contexts.options.defineTerms"><![CDATA[Usa la palabra resaltada por el/la lector/a como término de búsqueda por defecto o se deja en blanco se no se ha seleccionado ninguna para este elemento (p.e., para un contexto de "Definir términos"). La opción "Definir términos" debe estar activada en la <a href="{$settingsUrl}">configuración de HL</a> para permitir que se abra este contexto al hacer doble click en una palabra.]]></message>
 
 	<!-- RT Searches -->
@@ -2301,10 +2311,10 @@ La validación puede fallar en URLs de búsque que necesitan el envío de formul
 
 	<message key="rt.peerReviewed">Para este artículo revisado por pares</message>		
 	<message key="rt.forThis">Para este {$identifyType}</message>	
-	<message key="rt.authorBio">Mostrar la biografía del / de la autor/a</message>
+	<message key="rt.authorBio">Acerca del / de la autor/a</message>
 	<message key="rt.aboutAuthor">Acerca de las/os autoras/es</message>
 
-	<message key="rt.viewMetadata">Ver los metadatos</message>
+	<message key="rt.viewMetadata">Información de indexación</message>
 	<message key="rt.articleMetadata">Metadatos del artículo</message>
 	<message key="rt.metadata.dublinCore">Dublin Core</message>
 	<message key="rt.metadata.pkpItem">Elementos de metadatos de PKP</message>
@@ -2326,9 +2336,9 @@ La validación puede fallar en URLs de búsque que necesitan el envío de formul
 	<message key="rt.metadata.dublinCore.rights">Derechos</message>
 
 	<message key="rt.metadata.pkp.title">Título del documento</message>
-	<message key="rt.metadata.pkp.primaryAuthor">Nombre de autor/a, afiliación</message>
+	<message key="rt.metadata.pkp.primaryAuthor">Nombre de autor/a, afiliación, país</message>
 	<message key="rt.metadata.pkp.discipline">Disciplina(s)</message>
-	<message key="rt.metadata.pkp.subject">Materia(s)</message>
+	<message key="rt.metadata.pkp.subject">Palabra(s) clave(s)</message>
 	<message key="rt.metadata.pkp.subjectClass">Clasificación de asunto</message>
 	<message key="rt.metadata.pkp.abstract">Resumen</message>
 	<message key="rt.metadata.pkp.publisher">Agencia organizadora, ubicación</message>
@@ -2346,10 +2356,10 @@ La validación puede fallar en URLs de búsque que necesitan el envío de formul
 	<message key="rt.metadata.pkp.copyright">Copyright y permisos</message>
 
 	<message key="rt.suppFiles">Ficheros adicionales</message>
-	<message key="rt.suppFiles.viewMetadata">Ver metadatos</message>
+	<message key="rt.suppFiles.viewMetadata">Información de indexación</message>
 	<message key="rt.suppFiles.download">Descargar</message>
 
-	<message key="rt.captureCite">Captura de cita</message>
+	<message key="rt.captureCite">Información bibliográfica</message>
 	<message key="rt.captureCite.online">Online</message>
 	<message key="rt.captureCite.available">Disponible:</message>
 	<message key="rt.captureCite.capture">Descargar cita</message>
@@ -2373,10 +2383,10 @@ La validación puede fallar en URLs de búsque que necesitan el envío de formul
 
 	<message key="rt.context.searchTerms">Términos de búsqueda</message>
 	<message key="rt.context.termToDefine">Definir palabra</message>
-	<message key="rt.context.searchDescription">El/la autor/a ha seleccionado los términos de búsqueda y el/la lector/a puede cambiarlos. Para saber más sobre el recurso buscado, pinche en el símbolo de información. Se han seleccionado estos recursos debido a su relevancia y a que son de acceso libre, total o parcialmente.</message>
+	<message key="rt.context.searchDescription">El/la autor/a ha seleccionado los términos de búsqueda y el/la lector/a puede cambiarlos, como mucho dos o tres términos o fraces producidas por las mejores búsquedas booleanas (AND - Y). Para saber más sobre el recurso buscado, pinche en ACERCA DE. Se han seleccionado estos recursos debido a su relevancia y a que son de acceso libre, total o parcialmente.</message>
 	<message key="rt.context.defineTermsDescription">Haga doble click en cualquier palabra en el texto y aparecerá en la caja "Definir-palabra". También puede escribir o pegar una palabra en la caja. A continuación use la función de búsqueda para encontrar una definición de la palabra. Para saber más sobre el recurso consultado, haga click en el símbolo de información. Se han seleccionado estos recursos debido a su relevancia y a que son de acceso libre, total o parcialmente.</message>
 	<message key="rt.context.authorTermsDescription">Para elementos con más de un/a autor/a, deje todos los nombres marcados para buscar trabajos con la misma co-autoría, o busque de uno en uno marcando sólo un nombre. Para saber más sobre el recurso consultado, haga click en el símbolo de información. Se han seleccionado estos recursos debido a su relevancia y a que son de acceso libre, total o parcialmente.</message>
-	<message key="rt.context.citesContextDescription">ADD HERE</message>
+	<message key="rt.context.citesContextDescription">Si Google Scholar indexa el artículo, este puede estar acompañado por un enlace "Citador por X", que llevaría a una lista de trabajos que lo citan. De igual manera Google Scholar sacará un listado de todos los elementos citando el título y autoría. Para acceder a recursos online sólo disponibles a través de su biblioteca de investigación, podría ir a las preferencias de Google Scholar y activar los Library Links para su institución.</message>
 
 	<message key="rt.context.and">Y</message>
 
@@ -2387,22 +2397,23 @@ La validación puede fallar en URLs de búsque que necesitan el envío de formul
 	-->
 	<!-- Icons: Default "alt" text -->
 	<message key="icon.view.alt">Ver</message>
-	<message key="icon.checked.alt">ADD HERE</message>
-	<message key="icon.unchecked.alt">ADD HERE</message>
-	<message key="icon.comment.alt">ADD HERE</message>
+	<message key="icon.checked.alt">Marcado</message>
+	<message key="icon.unchecked.alt">Sin marcar</message>
+	<message key="icon.comment.alt">Comentario</message>
 	<message key="icon.edit.alt">Editar</message>
 	<message key="icon.delete.alt">Borrar</message>
 	<message key="icon.letter.alt">Letra</message>
 	<message key="icon.mail.alt">Correo</message>
 	<message key="icon.info.alt">Información</message>
+	<message key="icon.folder.alt">Directorio</message>
 	
 	<!-- Debug messages -->
 	<message key="debug.executionTime">Página generada en</message>
 	<message key="debug.databaseQueries">Número de consultas a la base de datos</message>
-	<message key="debug.notes">ADD HERE</message>
-	<message key="debug.notes.localeLoad">ADD HERE</message>
-	<message key="debug.notes.localeListLoad">ADD HERE</message>
-	<message key="debug.notes.missingLocaleKey">ADD HERE</message>
+	<message key="debug.notes">Notas:</message>
+	<message key="debug.notes.localeLoad">Fichero de locales "{$localeFile}" cargado desde XML</message>
+	<message key="debug.notes.localeListLoad">Lista de locales "{$localeList}" cargada desde XML</message>
+	<message key="debug.notes.missingLocaleKey">No se encuentra la clave de locales "{$key}".</message>
 
 
 	<!--
@@ -2514,6 +2525,7 @@ El párrafo que comienza con "Este último tema ..." no está sangrado.]]></mess
 ]]></message>
 	<message key="default.journalSettings.forReaders"><![CDATA[Recomendamos a los/as lectores/as que se den de alta en el servicio de notificación de publicación de esta revista. Use  el enlace de <a href="{$indexUrl}/{$journalPath}/user/register">Registro</a> que se encuentra arriba en la home de la revista. Este registro permitirá al / a la lector/a recibir la Tabla de contenidos por correo-e cada vez que se publique un nuevo número de la revista. Esto también permitirá a la revista conseguir un cierto nivel de soporte y número de lectores/as. Consulte la <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">Política de Privacidad</a> de la revista, que asegura a los/as lectores/as que su nombre y dirección de correo-e no serán usados para otros propósitos.]]></message>
 	<message key="default.journalSettings.forAuthors"><![CDATA[¿Tiene interés en hacer un envío a esta revista? Le recomendamos que revise la sección <a href="{$indexUrl}/{$journalPath}/about">Acerca de la revista<a> para consultar la política de la misma, así como las <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Normas de autores/as</a>. Los/as autores/as necesitan <a href="{$indexUrl}/{$journalPath}/user/register">registrarse</a> en la revista para poder hacer envíos, o si ya están registrados pueden simplemente <a href="{$indexUrl}/index/login">identificarse</a> y empezar el proceso de 5 pasos.]]></message>
-	<message key="default.journalSettings.forLibrarians"><![CDATA[Recomendamos a las bibliotecas que listen esta revista de acceso abierto en su listado de revistas electrónicas. Este sistema de publicación también está diseñado para ser alojado y operado por bibliotecas de investigación como soporte del trabajo de publicación de revistas de su facultad asociada. Para obtener más información sobre cómo usar Open Journal Systems para gestionar y publicar revistas revisadas por pares, consulte <a href="http://pkp.sfu.ca">Public Knowledge Project</a>.]]></message>
+	<message key="default.journalSettings.forLibrarians"><![CDATA[Recomendamos a las bibliotecas de investigación que listen esta revista en su listado de revistas electrónicas. Este sistema de publicación también está diseñado para ser alojado y operado por bibliotecas de investigación como soporte del trabajo de publicación de revistas de su facultad asociada. Para obtener más información sobre cómo usar Open Journal Systems para gestionar y publicar revistas revisadas por pares, consulte <a href="http://pkp.sfu.ca">Public Knowledge Project</a>.]]></message>
+	<message key="default.journalSettings.lockssLicense"></message>
 
 </locale>
