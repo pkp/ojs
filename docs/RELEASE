@@ -73,6 +73,9 @@ New Features
 	- #1981# Editor/Author Correspondence changes
 	- #1987# Add link to Registration page after installation
 	- #2009# Add Spanish (Spain) translation
+	- #2024# Added reset button to Manager's email edit
+	- #2025# Added localization of search operators
+	- #2032# Export XML now includes web-accessible DTDs
 
 Bug Fixes
 ---------
@@ -96,7 +99,7 @@ Bug Fixes
 	- #1909# HTML galley img rewriting "src=" should be case insensitive
 	- #1902# Article title should be able to contain limited HTML
 	- #1917# PHP 5.0.5 reference errors
-	- #1918# Missing locale key icon.comment.alt
+	- #1918# #2057# Missing locale keys
 	- #1919# Asterisk for required fields on forms can be orphaned
 	- #1923# Standardize "Log In"/"Login"/"Sign In" terminology
 	- #1928# Date Published should be optional in native.dtd
@@ -120,7 +123,7 @@ Bug Fixes
 	- #1984# Site admin validation not working
 	- #1985# Search Results page not determining access status properly
 	- #1986# Function called on non-object in UserManagementForm.inc.php
-	- #1989# #1990# #2006# Wording changes
+	- #1989# #1990# #2006# #2044# Wording changes
 	- #1998# Subject vs. Keywords terminology confusion
 	- #2000# Change spacing of required fields in forms
 	- #2001# Missing locale key in article history
@@ -130,6 +133,15 @@ Bug Fixes
 	- #2011# Journal Logo in setup 5.1
 	- #2020# Searching/indexing updates
 	- #2022# Supplemental file public IDs cannot remain the same
+	- #2026# Corrected variable clobbering
+	- #2029# Admin languages page over-width on IE
+	- #2030# XMLWriter is now a reserved PHP keyword
+	- #2036# Missing help for current locale causes errors
+	- #2037# "Interests" field ignored when existing user self-registers
+	- #2047# Safe mode complaints about set_time_limit
+	- #2053# $this / $smarty changes and reference bug avoision
+	- #2054# DIRECTORY_SEPARATOR preferred to slash or backslash
+	- #2055# PHP <4.3.1 doesn't return proper values from require
 
 Removed Features
 ----------------
