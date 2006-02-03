@@ -22,6 +22,17 @@ Upgrading to the latest version of OJS involves two steps:
 It is highly recommended that you also review the release notes (docs/RELEASE)
 and other documentation in the docs directory before performing an upgrade.
 
+New in OJS 2.1
+--------------
+
+In OJS 2.1, the caching directories for help, locale data, database queries,
+templates, etc. have been moved into a single "cache" directory. If you are
+upgrading from a prior release of OJS 2.x to OJS 2.1, you will need to ensure
+that the new cache directory exists and can be written by the web server. With-
+out doing this, your installation may work, but it may perform poorly. See
+docs/README, under Installation, for a list of directories that must be
+writeable by the web server.
+
 
 Obtaining the latest OJS code
 -----------------------------

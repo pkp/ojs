@@ -122,7 +122,7 @@ class ProofreaderAction extends Action {
 				$setDateField = 'setDateAuthorCompleted';
 				$getDateField = 'getDateAuthorCompleted';
 
-				$editAssignments = $sectionEditorSubmission->getEditAssignments();
+				$editAssignments =& $sectionEditorSubmission->getEditAssignments();
 
 				if ($proofAssignment->getProofreaderId() != 0) {
 					$setNextDateField = 'setDateProofreaderNotified';
@@ -131,7 +131,9 @@ class ProofreaderAction extends Action {
 					$receiverAddress = $proofAssignment->getProofreaderEmail();
 
 					if (!empty($editAssignments)) {
-						$ccs[$editAssignment->getEditorEmail()] = $editAssignment->getEditorFullName();
+						foreach ($editAssignments as $editAssignment) {
+							$ccs[$editAssignment->getEditorEmail()] = $editAssignment->getEditorFullName();
+						}
 					} else {
 						$ccs[$journal->getSetting('contactEmail')] = $journal->getSetting('contactName');
 					}
@@ -330,7 +332,7 @@ class ProofreaderAction extends Action {
 			$email->displayEditForm($actionPath, array('articleId' => $articleId));
 			return false;
 		} else {
-			HookRegistry::call('ProofreaderAction::proofreaderEmail', array(&$proofAssignment, &$email, $mailType));
+			HookRegistry::call('ProofreaderAction::proofreadEmail', array(&$proofAssignment, &$email, $mailType));
 			if ($email->isEnabled()) {
 				$email->setAssoc($eventType, $assocType, $articleId);
 				$email->send();

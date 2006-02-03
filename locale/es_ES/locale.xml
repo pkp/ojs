@@ -1838,7 +1838,6 @@ Este fichero puede ser consultado haciendo click en su nombre. Se puede enviar u
 	
 	<!-- Submission Comments -->
 	<message key="submission.comments.comments">Comentarios</message>
-	<message key="submission.comments.addComment">Añadir comentario</message>
 	<message key="submission.comments.review">Revisión</message>
 	<message key="submission.comments.editorAuthorCorrespondence">Correspondencia editor/a / autor/a</message>
 	<message key="submission.comments.copyeditComments">Comentarios de corrección</message>
@@ -2526,6 +2525,6 @@ El párrafo que comienza con "Este último tema ..." no está sangrado.]]></mess
 	<message key="default.journalSettings.forReaders"><![CDATA[Recomendamos a los/as lectores/as que se den de alta en el servicio de notificación de publicación de esta revista. Use  el enlace de <a href="{$indexUrl}/{$journalPath}/user/register">Registro</a> que se encuentra arriba en la home de la revista. Este registro permitirá al / a la lector/a recibir la Tabla de contenidos por correo-e cada vez que se publique un nuevo número de la revista. Esto también permitirá a la revista conseguir un cierto nivel de soporte y número de lectores/as. Consulte la <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">Política de Privacidad</a> de la revista, que asegura a los/as lectores/as que su nombre y dirección de correo-e no serán usados para otros propósitos.]]></message>
 	<message key="default.journalSettings.forAuthors"><![CDATA[¿Tiene interés en hacer un envío a esta revista? Le recomendamos que revise la sección <a href="{$indexUrl}/{$journalPath}/about">Acerca de la revista<a> para consultar la política de la misma, así como las <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Normas de autores/as</a>. Los/as autores/as necesitan <a href="{$indexUrl}/{$journalPath}/user/register">registrarse</a> en la revista para poder hacer envíos, o si ya están registrados pueden simplemente <a href="{$indexUrl}/index/login">identificarse</a> y empezar el proceso de 5 pasos.]]></message>
 	<message key="default.journalSettings.forLibrarians"><![CDATA[Recomendamos a las bibliotecas de investigación que listen esta revista en su listado de revistas electrónicas. Este sistema de publicación también está diseñado para ser alojado y operado por bibliotecas de investigación como soporte del trabajo de publicación de revistas de su facultad asociada. Para obtener más información sobre cómo usar Open Journal Systems para gestionar y publicar revistas revisadas por pares, consulte <a href="http://pkp.sfu.ca">Public Knowledge Project</a>.]]></message>
-	<message key="default.journalSettings.lockssLicense"></message>
+	<message key="default.journalSettings.lockssLicense"><![CDATA[Esta revista utiliza el sistema LOCKSS para crear un archivo distribuido entre las bibliotecas participante, permitiendo a dichas bibliotecas crear archivos permanentes de la revista con fines de preservación y restauración. <a href="http://lockss.stanford.edu">Ampliar información...</a>]]></message>
 
 </locale>
