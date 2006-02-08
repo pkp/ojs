@@ -29,7 +29,7 @@ class DAO {
 			// Call hooks based on the calling entity, assuming
 			// this method is only called by a subclass. Results
 			// in hook calls named e.g. "SessionDAO::Constructor"
-			if (HookRegistry::call($trace[1]['class'] . '::Constructor', array(&$dataSource))) {
+			if (HookRegistry::call($trace[1]['class'] . '::Constructor', array(&$this, &$dataSource))) {
 				return;
 			}
 		}

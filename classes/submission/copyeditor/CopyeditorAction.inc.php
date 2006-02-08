@@ -388,7 +388,7 @@ class CopyeditorAction extends Action {
 		}
 
 		$result = false;
-		if (!HookRegistry::call('CopyeditorAction::postCopyeditComment', array(&$submission, &$fileId, &$revision, &$result))) {
+		if (!HookRegistry::call('CopyeditorAction::downloadCopyeditorFile', array(&$submission, &$fileId, &$revision, &$result))) {
 			if ($canDownload) {
 				return Action::downloadFile($submission->getArticleId(), $fileId, $revision);
 			} else {

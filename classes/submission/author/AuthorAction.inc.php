@@ -299,7 +299,7 @@ class AuthorAction extends Action {
 		}
 
 		if ($send && !$email->hasErrors()) {
-			HookRegistry::call('AuthorAction::emailEditorDecisionComment', array(&$authorSubmission, &$send));
+			HookRegistry::call('AuthorAction::emailEditorDecisionComment', array(&$authorSubmission, &$email));
 			$email->send();
 
 			$articleCommentDao =& DAORegistry::getDAO('ArticleCommentDAO');
