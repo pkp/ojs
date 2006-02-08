@@ -64,9 +64,6 @@ class Request {
 		$url = 'http://' . Request::getServerHost() . Request::getRequestPath();
 		$queryString = Request::getQueryString();
 		if (!empty($queryString)) $url .= "?$queryString";
-		if (HookRegistry::call('Request::redirectNonSSL', array(&$url))) {
-			return;
-		}
 		Request::redirectUrl($url);
 	}	
 
