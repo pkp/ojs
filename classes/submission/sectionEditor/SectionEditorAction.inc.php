@@ -1727,7 +1727,7 @@ class SectionEditorAction extends Action {
 		$copyeditor =& $sectionEditorSubmission->getCopyeditor();
 	
 		if ($send && !$email->hasErrors()) {
-			HookRegistry::call('AuthorAction::postEditorDecisionComment', array(&$sectionEditorSubmission, &$send));
+			HookRegistry::call('SectionEditorAction::emailEditorDecisionComment', array(&$sectionEditorSubmission, &$send));
 			$email->send();
 
 			$articleComment =& new ArticleComment();

@@ -81,7 +81,7 @@ class EditAssignmentDAO extends DAO {
 		$editAssignment->setDateUnderway($this->datetimeFromDB($row['date_underway']));
 		$editAssignment->setDateNotified($this->datetimeFromDB($row['date_notified']));
 
-		HookRegistry::call('EditAssignmentsDAO::_returnEditAssignmentFromRow', array(&$editAssignment, &$row));
+		HookRegistry::call('EditAssignmentDAO::_returnEditAssignmentFromRow', array(&$editAssignment, &$row));
 
 		return $editAssignment;
 	}

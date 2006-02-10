@@ -17,7 +17,7 @@ New config.inc.php parameters:
 	- email:enable_attachments - enable or disable email attachments on
 		all email templates for which it is an optional feature
 
-	- cache:cache - This paramter is REQUIRED and must be added to
+	- cache:cache - This parameter is REQUIRED and must be added to
 	  existing deployments! Specifies the caching method to use (one of
 	  the following: memcache / file / none)
 
