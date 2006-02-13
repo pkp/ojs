@@ -142,7 +142,7 @@ class SectionEditorHandler extends Handler {
 		} else {
 			$templateMgr->assign('helpTopicId', 'editorial.sectionEditorsRole');
 
-			$pageHierarchy = $subclass ? array(array(Request::url(null, 'user'), 'navigation.usear'), array(Request::url(null, $isEditor?'editor':'sectionEditor'), $isEditor?'user.role.editor':'user.role.sectionEditor'), array(Request::url(null, $isEditor?'editor':'sectionEditor'), 'article.submissions'))
+			$pageHierarchy = $subclass ? array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, $isEditor?'editor':'sectionEditor'), $isEditor?'user.role.editor':'user.role.sectionEditor'), array(Request::url(null, $isEditor?'editor':'sectionEditor'), 'article.submissions'))
 				: array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, $isEditor?'editor':'sectionEditor'), $isEditor?'user.role.editor':'user.role.sectionEditor'));
 
 			import('submission.sectionEditor.SectionEditorAction');
