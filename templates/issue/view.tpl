@@ -12,7 +12,7 @@
 
 {if !$showToc && $issue}
 	<ul class="menu">
-		<li><a href="{url op="view" path=$issueId|to_array:"showToc"}">{translate key="issue.toc"}</a></li>
+		<li><a href="{url page="issue" op="view" path=$issueId|to_array:"showToc"}">{translate key="issue.toc"}</a></li>
 	</ul>
 	<br />
 	{if $coverPagePath}<div><a href="{url op="view" path=$issueId|to_array:"showToc"}"><img src="{$coverPagePath|escape}" border="0" alt=""{if $width} width="{$width}"{/if}{if $height} height="{$height}"{/if}/></a></div>{/if}
