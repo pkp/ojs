@@ -91,7 +91,7 @@ class Request {
 		
 		if (!isset($basePath)) {
 			$basePath = dirname($_SERVER['SCRIPT_NAME']);
-			if ($basePath == '/') {
+			if ($basePath == '/' || $basePath == '\\') {
 				$basePath = '';
 			}
 			HookRegistry::call('Request::getBasePath', array(&$basePath));
