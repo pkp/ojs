@@ -52,7 +52,7 @@ Content-Transfer-Encoding: quoted-printable
 					<tr>
 						<td>{$article->getArticleTitle()|strip_unsafe_html}</td>
 						<td align="right">
-							<a href="{url page="author" op="view" path=$article->getBestArticleId($currentJournal)}" class="file">{if $section.abstractsDisabled}{translate key="article.details"}{else}{translate key="article.abstract"}{/if}</a>
+							<a href="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)}" class="file">{if $section.abstractsDisabled}{translate key="article.details"}{else}{translate key="article.abstract"}{/if}</a>
 							{if (!$subscriptionRequired || $article->getAccessStatus() || $subscribedUser)}
 								{foreach from=$article->getGalleys() item=galley name=galleyList}
 									&nbsp;
