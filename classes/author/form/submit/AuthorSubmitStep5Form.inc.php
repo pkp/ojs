@@ -88,13 +88,13 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 		if ($mail->isEnabled()) {
 			$mail->addRecipient($user->getEmail(), $user->getFullName());
 			// If necessary, BCC the acknowledgement to someone.
-			if($journal->getSetting('copySubmissionAckModePrimaryContact')) {
+			if($journal->getSetting('copySubmissionAckPrimaryContact')) {
 				$mail->addBcc(
 					$journal->getSetting('contactEmail'),
 					$journal->getSetting('contactName')
 				);
 			}
-			if($journal->getSetting('copySubmissionAckModePrimaryContact')) {
+			if($journal->getSetting('copySubmissionAckSpecified')) {
 				$copyAddress = $journal->getSetting('copySubmissionAckAddress');
 				if (!empty($copyAddress)) $mail->addBcc($copyAddress);
 			}
