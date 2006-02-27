@@ -76,11 +76,12 @@ class SubscriptionForm extends Form {
 
 		// If provided, IP range has IP address format; IP addresses may contain wildcards
 		$this->addCheck(new FormValidatorRegExp($this, 'ipRange', 'optional', 'manager.subscriptions.form.ipRangeValid','/^' .
-				// IP4 address or an IP4 address range
-				'([0-9]{1,3}|[' . SUBSCRIPTION_IP_RANGE_WILDCARD . '])([.]([0-9]{1,3}|[' . SUBSCRIPTION_IP_RANGE_WILDCARD . '])){3}((\s)*[' . SUBSCRIPTION_IP_RANGE_RANGE . '](\s)*([0-9]{1,3}|[' . SUBSCRIPTION_IP_RANGE_WILDCARD . '])([.]([0-9]{1,3}|[' . SUBSCRIPTION_IP_RANGE_WILDCARD . '])){3}){0,1}' .
-				// followed by 0 or more delimited IP4 addresses or IP4 address ranges
+				// IP4 address (with or w/o wildcards) or IP4 address range (with or w/o wildcards) or CIDR IP4 address
+				'((([0-9]{1,3}|[' . SUBSCRIPTION_IP_RANGE_WILDCARD . '])([.]([0-9]{1,3}|[' . SUBSCRIPTION_IP_RANGE_WILDCARD . '])){3}((\s)*[' . SUBSCRIPTION_IP_RANGE_RANGE . '](\s)*([0-9]{1,3}|[' . SUBSCRIPTION_IP_RANGE_WILDCARD . '])([.]([0-9]{1,3}|[' . SUBSCRIPTION_IP_RANGE_WILDCARD . '])){3}){0,1})|(([0-9]{1,3})([.]([0-9]{1,3})){3}([\/](([3][0-2]{0,1})|([1-2]{0,1}[0-9])))))' .
+				// followed by 0 or more delimited IP4 addresses (with or w/o wildcards) or IP4 address ranges
+				// (with or w/o wildcards) or CIDR IP4 addresses
 				'((\s)*' . SUBSCRIPTION_IP_RANGE_SEPERATOR . '(\s)*' .
-				'([0-9]{1,3}|[' . SUBSCRIPTION_IP_RANGE_WILDCARD . '])([.]([0-9]{1,3}|[' . SUBSCRIPTION_IP_RANGE_WILDCARD . '])){3}((\s)*[' . SUBSCRIPTION_IP_RANGE_RANGE . '](\s)*([0-9]{1,3}|[' . SUBSCRIPTION_IP_RANGE_WILDCARD . '])([.]([0-9]{1,3}|[' . SUBSCRIPTION_IP_RANGE_WILDCARD . '])){3}){0,1}' .
+				'((([0-9]{1,3}|[' . SUBSCRIPTION_IP_RANGE_WILDCARD . '])([.]([0-9]{1,3}|[' . SUBSCRIPTION_IP_RANGE_WILDCARD . '])){3}((\s)*[' . SUBSCRIPTION_IP_RANGE_RANGE . '](\s)*([0-9]{1,3}|[' . SUBSCRIPTION_IP_RANGE_WILDCARD . '])([.]([0-9]{1,3}|[' . SUBSCRIPTION_IP_RANGE_WILDCARD . '])){3}){0,1})|(([0-9]{1,3})([.]([0-9]{1,3})){3}([\/](([3][0-2]{0,1})|([1-2]{0,1}[0-9])))))' .
 				')*' .
 			'$/i'));
 
@@ -203,6 +204,7 @@ class SubscriptionForm extends Form {
 			$subscriptionTypeDao = &DAORegistry::getDAO('SubscriptionTypeDAO');
 			$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
 
+			$journalName = $journal->getTitle();
 			$journalId = $journal->getJournalId();
 			$user = &$userDao->getUser($this->getData('userId'));
 			$subscriptionType = &$subscriptionTypeDao->getSubscriptionType($this->getData('typeId'));
@@ -228,6 +230,7 @@ class SubscriptionForm extends Form {
 
 			$paramArray = array(
 				'subscriberName' => $user->getFullName(),
+				'journalName' => $journalName,
 				'subscriptionType' => $subscriptionType->getSummaryString(),
 				'username' => $user->getUsername(),
 				'subscriptionContactSignature' => $subscriptionContactSignature 

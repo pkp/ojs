@@ -402,7 +402,6 @@ class SubscriptionDAO extends DAO {
 
 		if ($result->RecordCount() != 0) {
 			$matchFound = false;
-			$IP = sprintf('%u', ip2long($IP)); 
 
 			while (!$returner && !$result->EOF) {
 				$ipRange = $result->fields[3];
@@ -417,16 +416,29 @@ class SubscriptionDAO extends DAO {
 
 						// Check for wildcards in IP
 						if (strpos($curIPString, SUBSCRIPTION_IP_RANGE_WILDCARD) === false) {
-							$curIPString = sprintf('%u', ip2long(trim($curIPString)));
 
-							if ($curIPString == $IP) {
-								$matchFound = true;
-								break;
+							// Check non-CIDR IP
+							if (strpos($curIPString, '/') === false) {
+								if (ip2long(trim($curIPString)) == ip2long($IP)) {
+									$matchFound = true;
+									break;
+								}
+							// Check CIDR IP
+							} else {
+								list($curIPString, $cidrMask) = explode('/', trim($curIPString));
+								$cidrMask = 0xffffffff << (32 - $cidrMask);
+
+								if ((ip2long($IP) & $cidrMask) == (ip2long($curIPString) & $cidrMask)) {
+									$matchFound = true;
+									break;
+								}
 							}
+
 						} else {
 							// Turn wildcard IP into IP range
 							$ipStart = sprintf('%u', ip2long(str_replace(SUBSCRIPTION_IP_RANGE_WILDCARD, '0', trim($curIPString))));
 							$ipEnd = sprintf('%u', ip2long(str_replace(SUBSCRIPTION_IP_RANGE_WILDCARD, '255', trim($curIPString)))); 
+							$IP = sprintf('%u', ip2long($IP)); 
 
 							if ($IP >= $ipStart && $IP <= $ipEnd) {
 								$matchFound = true;
@@ -435,11 +447,12 @@ class SubscriptionDAO extends DAO {
 						}
 					// Parse and check IP range string
 					} else {
-						$ipStartAndEnd = explode(SUBSCRIPTION_IP_RANGE_RANGE, $curIPString);
+						list($ipStart, $ipEnd) = explode(SUBSCRIPTION_IP_RANGE_RANGE, $curIPString);
 
 						// Replace wildcards in start and end of range
-						$ipStart = sprintf('%u', ip2long(str_replace(SUBSCRIPTION_IP_RANGE_WILDCARD, '0', trim($ipStartAndEnd[0]))));
-						$ipEnd = sprintf('%u', ip2long(str_replace(SUBSCRIPTION_IP_RANGE_WILDCARD, '255', trim($ipStartAndEnd[1]))));
+						$ipStart = sprintf('%u', ip2long(str_replace(SUBSCRIPTION_IP_RANGE_WILDCARD, '0', trim($ipStart))));
+						$ipEnd = sprintf('%u', ip2long(str_replace(SUBSCRIPTION_IP_RANGE_WILDCARD, '255', trim($ipEnd))));
+						$IP = sprintf('%u', ip2long($IP)); 
 
 						if ($IP >= $ipStart && $IP <= $ipEnd) {
 							$matchFound = true;
