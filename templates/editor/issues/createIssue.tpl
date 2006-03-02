@@ -109,8 +109,6 @@
 
 <p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" onclick="document.location.href='{url op="index" escape=false}'" class="button" /></p>
 
-<p><span class="formRequired">{translate key="common.requiredField"}</span></p>
-
 </form>
 
 {include file="common/footer.tpl"}
