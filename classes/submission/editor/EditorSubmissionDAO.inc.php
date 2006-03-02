@@ -558,12 +558,12 @@ class EditorSubmissionDAO extends DAO {
 			$editAssignments = $editorSubmission->getEditAssignments();
 
 			if (!$editorSubmission->getSubmissionProgress()) {
-				if (empty($editAssignments)) {
+				if ($editorSubmission->getStatus() == STATUS_SCHEDULED) {
+					// scheduled submissions
+					$submissionsCount[3] += 1;
+				} elseif (empty($editAssignments)) {
 					// unassigned submissions
 					$submissionsCount[0] += 1;
-				} elseif ($editorSubmission->getStatus() == STATUS_SCHEDULED) {
-					// scheduled submissions
-					$submissionsCount[3] += 1;			
 				} elseif ($editorSubmission->getStatus() == STATUS_QUEUED) {
 					if ($inReview) {
 						if ($notDeclined) {
