@@ -107,6 +107,12 @@
 						<element key="order">6</element>
 					</array>
 				</element>
+				<element>
+					<array>
+						<element key="content">{translate key="default.journalSettings.checklist.personalInformationRemoved"}</element>
+						<element key="order">7</element>
+					</array>
+				</element>
 			</array>
 		</value>
 	</setting>
