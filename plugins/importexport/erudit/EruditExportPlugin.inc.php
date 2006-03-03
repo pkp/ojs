@@ -107,6 +107,7 @@ class EruditExportPlugin extends ImportExportPlugin {
 		$xmlFile = array_shift($args);
 		$journalPath = array_shift($args);
 		$articleId = array_shift($args);
+		$galleyLabel = array_shift($args);
 
 		$journalDao = &DAORegistry::getDAO('JournalDAO');
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
@@ -131,8 +132,18 @@ class EruditExportPlugin extends ImportExportPlugin {
 			echo Locale::translate('plugins.importexport.erudit.export.error.articleNotFound', array('articleId' => $articleId)) . "\n\n";
 			return;
 		}
+		foreach ($publishedArticle->getGalleys() as $thisGalley) {
+			if ($thisGalley->getLabel() == $galleyLabel) {
+				$galley =& $thisGalley;
+				break;
+			}
+		}
+		if (!isset($galley)) {
+			echo Locale::translate('plugins.importexport.erudit.export.error.galleyNotFound', array('galleyLabel' => $galleyLabel)) . "\n\n";
+			return;
+		}
 		$issue = &$issueDao->getIssueById($publishedArticle->getIssueId());
-		if (!$this->exportArticle(&$journal, &$issue, &$publishedArticle, $xmlFile)) {
+		if (!$this->exportArticle(&$journal, &$issue, &$publishedArticle, $galley, $xmlFile)) {
 			echo Locale::translate('plugins.importexport.erudit.cliError') . "\n";
 			echo Locale::translate('plugins.importexport.erudit.export.error.couldNotWrite', array('fileName' => $xmlFile)) . "\n\n";
 		}

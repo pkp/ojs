@@ -16,7 +16,7 @@
 	<message key="plugins.importexport.erudit.displayName">Erudit Article Export Plugin</message>
 	<message key="plugins.importexport.erudit.description">Export articles using the English Erudit DTD</message>
 
-	<message key="plugins.importexport.erudit.cliUsage"><![CDATA[Usage: {$scriptName} {$pluginName} [xmlFileName] [journalPath] [articleId]
+	<message key="plugins.importexport.erudit.cliUsage"><![CDATA[Usage: {$scriptName} {$pluginName} [xmlFileName] [journalPath] [articleId] [galleyLabel]
 ]]></message>
 	<message key="plugins.importexport.erudit.export">Export Data</message>
 	<message key="plugins.importexport.erudit.export.issues">Export Issues</message>
@@ -30,6 +30,7 @@
 	<message key="plugins.importexport.erudit.error.unknownJournal">The specified journal path, "{$journalPath}", does not exist.</message>
 	<message key="plugins.importexport.erudit.export.error.couldNotWrite">Could not write to the file "{$fileName}".</message>
 	<message key="plugins.importexport.erudit.export.error.articleNotFound">No article matched the specified article ID "{$articleId}".</message>
+	<message key="plugins.importexport.erudit.export.error.galleyNotFound">No galley matched the specified galley label "{$galleyLabel}".</message>
 
 	<message key="plugins.importexport.erudit.unavailable">Unavailable</message>
 </locale>

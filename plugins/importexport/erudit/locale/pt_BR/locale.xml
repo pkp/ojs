@@ -16,7 +16,7 @@
 	<message key="plugins.importexport.erudit.displayName">Plugin de Exportação Formato Erudit</message>
 	<message key="plugins.importexport.erudit.description">Exporta artigos utilizando a DTD inglesa Erudit</message>
 
-	<message key="plugins.importexport.erudit.cliUsage"><![CDATA[Uso: {$scriptName} {$pluginName} [documentoXML] [caminhoRevista] [articleId]
+	<message key="plugins.importexport.erudit.cliUsage"><![CDATA[Uso: {$scriptName} {$pluginName} [documentoXML] [caminhoRevista] [articleId] [galleyLabel]
 ]]></message>
 	<message key="plugins.importexport.erudit.export">Exportar Dados</message>
 	<message key="plugins.importexport.erudit.export.issues">Exportar Edições</message>
@@ -30,6 +30,8 @@
 	<message key="plugins.importexport.erudit.error.unknownJournal">Caminho da revista "{$journalPath}" inexistente.</message>
 	<message key="plugins.importexport.erudit.export.error.couldNotWrite">Não foi possível escrever no documento "{$fileName}".</message>
 	<message key="plugins.importexport.erudit.export.error.articleNotFound">Não há artigo compatível com ID "{$articleId}" especificado.</message>
+	<message key="plugins.importexport.erudit.export.error.galleyNotFound">Não há composição compatível com rótulo "{$galleyLabel}".</message>
+	
 
 	<message key="plugins.importexport.erudit.unavailable">Indisponível</message>
 </locale>
