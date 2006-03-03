@@ -511,7 +511,6 @@ class TemplateManager extends Smarty {
 	 * 	iterator=$myIterator
 	 *	additional_param=myAdditionalParameterValue
 	 * }
-	 * Pages requiring POST parameters WILL NOT work properly.
 	 */
 	function smartyPageLinks($params, &$smarty) {
 		$iterator = $params['iterator'];
@@ -575,7 +574,7 @@ class TemplateManager extends Smarty {
 	/**
 	 * Assign a value to a template variable.
 	 */
-	function smartyAssign($value, $varName) {
+	function smartyAssign($value, $varName, $passThru = false) {
 		if (isset($varName)) {
 			// NOTE: CANNOT use $this, as it's actually
 			// a COPY of the real template manager for some PHPs!
@@ -583,6 +582,7 @@ class TemplateManager extends Smarty {
 			$templateMgr =& TemplateManager::getManager();
 			$templateMgr->assign($varName, $value);
 		}
+		if ($passThru) return $value;
 	}
 }
 

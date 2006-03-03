@@ -245,6 +245,7 @@ class ArticleSearch {
 				$publishedArticleCache[$articleId] = &$publishedArticleDao->getPublishedArticleByArticleId($articleId);
 				$articleCache[$articleId] = &$articleDao->getArticle($articleId);
 			}
+			unset($article);
 			$article = &$articleCache[$articleId];
 			$publishedArticle = &$publishedArticleCache[$articleId];
 
@@ -263,6 +264,7 @@ class ArticleSearch {
 				// Get the issue, storing in cache if necessary.
 				$issueId = $publishedArticle->getIssueId();
 				if (!isset($issueCache[$issueId])) {
+					unset($issue);
 					$issue = &$issueDao->getIssueById($issueId);
 					$issueCache[$issueId] = &$issue;
 					import('issue.IssueAction');
@@ -271,12 +273,12 @@ class ArticleSearch {
 
 				// Store the retrieved objects in the result array.
 				$returner[] = array(
-					'article' => $article,
-					'publishedArticle' => $publishedArticleCache[$articleId],
-					'issue' => $issueCache[$issueId],
-					'journal' => $journalCache[$journalId],
+					'article' => &$article,
+					'publishedArticle' => &$publishedArticleCache[$articleId],
+					'issue' => &$issueCache[$issueId],
+					'journal' => &$journalCache[$journalId],
 					'issueAvailable' => $issueAvailabilityCache[$issueId],
-					'section' => $sectionCache[$sectionId]
+					'section' => &$sectionCache[$sectionId]
 				);
 			}
 		}

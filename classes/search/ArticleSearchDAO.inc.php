@@ -26,9 +26,9 @@ class ArticleSearchDAO extends DAO {
 	
 	/**
 	 * Add a word to the keyword list (if it doesn't already exist).
-     * @param $keyword string
-     * @return int the keyword ID
-     */
+	 * @param $keyword string
+	 * @return int the keyword ID
+	 */
 	function insertKeyword($keyword) {
 		static $articleSearchKeywordIds = array();
 		if (isset($articleSearchKeywordIds[$keyword])) return $articleSearchKeywordIds[$keyword];
