@@ -51,7 +51,7 @@
 		<td>{$submission->getSectionAbbrev()|escape}</td>
 		<td>{$submission->getAuthorString(true)|truncate:40:"..."|escape}</td>
 		<td><a href="{url op="submission" path=$submission->getArticleId()}" class="action">{$submission->getArticleTitle()|strip_unsafe_html|truncate:40:"..."}</a></td>
-		<td><select name="schedule[{$submission->getArticleID()}]" size="40" class="selectMenu">{html_options options=$issueOptions|truncate:40:"..."}</select></td>
+		<td><select name="schedule[{$submission->getArticleID()}]" class="selectMenu">{html_options options=$issueOptions|truncate:40:"..."}</select></td>
 		<td width="10%"><input type="checkbox" name="remove[]" value="{$submission->getArticleID()}" /></td>
 	</tr>
 	<tr>
