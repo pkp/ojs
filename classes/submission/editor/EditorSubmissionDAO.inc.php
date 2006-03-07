@@ -619,6 +619,17 @@ class EditorSubmissionDAO extends DAO {
 	}
 	
 	/**
+	 * Get the editor decisions for an editor.
+	 * @param $userId int
+	 */
+	function transferEditorDecisions($oldUserId, $newUserId) {
+		$this->update(
+			'UPDATE edit_decisions SET editor_id = ? WHERE editor_id = ?',
+			array($newUserId, $oldUserId)
+		);
+	}
+	
+	/**
 	 * Retrieve a list of all users in the specified role not assigned as editors to the specified article.
 	 * @param $journalId int
 	 * @param $articleId int

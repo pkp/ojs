@@ -61,6 +61,21 @@ class EditAssignmentDAO extends DAO {
 	}
 
 	/**
+	 * Retrieve edit assignments by user id.
+	 * @param $articleId int
+	 * @return EditAssignment
+	 */
+	function &getEditAssignmentsByUserId($userId) {
+		$result = &$this->retrieve(
+			'SELECT e.*, u.first_name, u.last_name, u.email, u.initials, r.role_id AS editor_role_id FROM articles a, edit_assignments e LEFT JOIN users u ON (e.editor_id = u.user_id) LEFT JOIN roles r ON (r.user_id = e.editor_id AND r.role_id = ' . ROLE_ID_EDITOR . ') WHERE e.editor_id = ? AND (r.journal_id IS NULL OR r.journal_id = a.journal_id) AND a.article_id = e.article_id ORDER BY e.date_notified ASC',
+			$userId
+			);
+
+		$returner = &new DAOResultFactory($result, $this, '_returnEditAssignmentFromRow');
+		return $returner;
+	}
+
+	/**
 	 * Internal function to return an edit assignment object from a row.
 	 * @param $row array
 	 * @return EditAssignment

@@ -161,6 +161,18 @@ class AccessKeyDAO extends DAO {
 	}
 	
 	/**
+	 * Transfer access keys to another user ID.
+	 * @param $oldUserId int
+	 * @param $newUserId int
+	 */
+	function transferAccessKeys($oldUserId, $newUserId) {
+		return $this->update(
+			'UPDATE access_keys SET user_id = ? WHERE user_id = ?',
+			array($newUserId, $oldUserId)
+		);
+	}
+	
+	/**
 	 * Delete expired access keys.
 	 */
 	function deleteExpiredKeys() {

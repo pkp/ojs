@@ -120,6 +120,7 @@ class ProofreaderSubmissionDAO extends DAO {
 	/**
 	 * Get set of proofreader assignments assigned to the specified proofreader.
 	 * @param $proofreaderId int
+	 * @param $journalId int optional
 	 * @param $searchField int SUBMISSION_FIELD_... constant
 	 * @param $searchMatch String 'is' or 'contains'
 	 * @param $search String Search string
@@ -129,8 +130,9 @@ class ProofreaderSubmissionDAO extends DAO {
 	 * @param $active boolean true to select active assignments, false to select completed assignments
 	 * @return array ProofreaderSubmission
 	 */
-	function &getSubmissions($proofreaderId, $journalId, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $active = true, $rangeInfo = null) {
-		$params = array($proofreaderId, $journalId);
+	function &getSubmissions($proofreaderId, $journalId = null, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $active = true, $rangeInfo = null) {
+		if (isset($journalId)) $params = array($proofreaderId, $journalId);
+		else $params = array($proofreaderId);
 
 		$searchSql = '';
 
@@ -226,7 +228,7 @@ class ProofreaderSubmissionDAO extends DAO {
 				LEFT JOIN layouted_assignments l ON (l.article_id = a.article_id)
 			WHERE
 				p.proofreader_id = ? AND
-				a.journal_id = ? AND
+				' . (isset($journalId)?'a.journal_id = ? AND':'') . '
 				p.date_proofreader_notified IS NOT NULL';
 		
 		if ($active) {
@@ -235,7 +237,10 @@ class ProofreaderSubmissionDAO extends DAO {
 			$sql .= ' AND p.date_proofreader_completed IS NOT NULL';		
 		}
 
-		$result = &$this->retrieveRange($sql . ' ' . $searchSql, $params, $rangeInfo);
+		$result = &$this->retrieveRange(
+			$sql . ' ' . $searchSql,
+			count($params)==1?array_shift($params):$params,
+			$rangeInfo);
 
 		$returner = &new DAOResultFactory ($result, $this, '_returnSubmissionFromRow');
 		return $returner;

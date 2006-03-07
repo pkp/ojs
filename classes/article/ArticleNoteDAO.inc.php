@@ -30,10 +30,24 @@ class ArticleNoteDAO extends DAO {
 	 * @param $articleId int
 	 * @return DAOResultFactory containing ArticleNotes
 	 */
-	function getArticleNotes($articleId, $rangeInfo = NULL) {
+	function &getArticleNotes($articleId, $rangeInfo = NULL) {
 		$sql = 'SELECT n.*, a.file_name, a.original_file_name FROM article_notes n LEFT JOIN article_files a ON (n.file_id = a.file_id) WHERE a.article_id = ? OR (n.file_id = 0 AND n.article_id = ?) ORDER BY n.date_created DESC';
 
 		$result = &$this->retrieveRange($sql, array($articleId, $articleId), $rangeInfo);
+		
+		$returner = &new DAOResultFactory($result, $this, '_returnArticleNoteFromRow');
+		return $returner;
+	}
+
+	/**
+	 * Retrieve Article Notes by user id.
+	 * @param $userId int
+	 * @return DAOResultFactory containing ArticleNotes
+	 */
+	function &getArticleNotesByUserId($userId, $rangeInfo = NULL) {
+		$sql = 'SELECT n.*, a.file_name, a.original_file_name FROM article_notes n LEFT JOIN article_files a ON (n.file_id = a.file_id) WHERE n.user_id = ? ORDER BY n.date_created DESC';
+
+		$result = &$this->retrieveRange($sql, $userId, $rangeInfo);
 		
 		$returner = &new DAOResultFactory($result, $this, '_returnArticleNoteFromRow');
 		return $returner;

@@ -225,7 +225,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$articleNoteDao = &DAORegistry::getDAO('ArticleNoteDAO');
 		
 		$rangeInfo = &Handler::getRangeInfo('submissionNotes');
-		$submissionNotes = $articleNoteDao->getArticleNotes($articleId, $rangeInfo);
+		$submissionNotes =& $articleNoteDao->getArticleNotes($articleId, $rangeInfo);
 
 		import('article.log.ArticleLog');
 		$rangeInfo = &Handler::getRangeInfo('eventLogEntries');
@@ -1604,7 +1604,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		$rangeInfo = &Handler::getRangeInfo('submissionNotes');
 		$articleNoteDao = &DAORegistry::getDAO('ArticleNoteDAO');
-		$submissionNotes = $articleNoteDao->getArticleNotes($articleId, $rangeInfo);
+		$submissionNotes =& $articleNoteDao->getArticleNotes($articleId, $rangeInfo);
 
 		// submission note edit
 		if ($noteViewType == 'edit') {

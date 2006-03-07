@@ -215,6 +215,16 @@ class SubscriptionDAO extends DAO {
 	}
 
 	/**
+	 * Delete subscriptions by user ID.
+	 * @param $userId int
+	 */
+	function deleteSubscriptionsByUserId($userId) {
+		return $this->update(
+			'DELETE FROM subscriptions WHERE user_id = ?', $userId
+		);
+	}
+
+	/**
 	 * Delete all subscriptions by subscription type ID.
 	 * @param $subscriptionTypeId int
 	 * @return boolean

@@ -37,9 +37,9 @@ class RoleDAO extends DAO {
 		$result = &$this->retrieve(
 			'SELECT * FROM roles WHERE journal_id = ? AND user_id = ? AND role_id = ?',
 			array(
-				$journalId,
-				$userId,
-				$roleId
+				(int) $journalId,
+				(int) $userId,
+				(int) $roleId
 			)
 		);
 
@@ -81,9 +81,9 @@ class RoleDAO extends DAO {
 				VALUES
 				(?, ?, ?)',
 			array(
-				$role->getJournalId(),
-				$role->getUserId(),
-				$role->getRoleId()
+				(int) $role->getJournalId(),
+				(int) $role->getUserId(),
+				(int) $role->getRoleId()
 			)
 		);
 	}
@@ -96,9 +96,9 @@ class RoleDAO extends DAO {
 		return $this->update(
 			'DELETE FROM roles WHERE journal_id = ? AND user_id = ? AND role_id = ?',
 			array(
-				$role->getJournalId(),
-				$role->getUserId(),
-				$role->getRoleId()
+				(int) $role->getJournalId(),
+				(int) $role->getUserId(),
+				(int) $role->getRoleId()
 			)
 		);
 	}
@@ -114,7 +114,7 @@ class RoleDAO extends DAO {
 				
 		$result = &$this->retrieve(
 			'SELECT * FROM roles WHERE user_id = ?' . (isset($journalId) ? ' AND journal_id = ?' : ''),
-			isset($journalId) ? array($userId, $journalId) : $userId
+			isset($journalId) ? array((int) $userId, (int) $journalId) : ((int) $userId)
 		);
 		
 		while (!$result->EOF) {
@@ -142,8 +142,8 @@ class RoleDAO extends DAO {
 		$users = array();
 
 		$paramArray = array();
-		if (isset($roleId)) $paramArray[] = $roleId;
-		if (isset($journalId)) $paramArray[] = $journalId;
+		if (isset($roleId)) $paramArray[] = (int) $roleId;
+		if (isset($journalId)) $paramArray[] = (int) $journalId;
 
 		// For security / resource usage reasons, a role or journal ID
 		// must be specified. Don't allow calls supplying neither.
@@ -208,7 +208,7 @@ class RoleDAO extends DAO {
 	function &getUsersByJournalId($journalId, $searchType = null, $search = null, $searchMatch = null, $dbResultRange = null) {
 		$users = array();
 
-		$paramArray = array($journalId);
+		$paramArray = array((int) $journalId);
 		$searchSql = '';
 
 		if (isset($search)) switch ($searchType) {
@@ -265,7 +265,7 @@ class RoleDAO extends DAO {
 				
 		$result = &$this->retrieve(
 			'SELECT COUNT(DISTINCT(user_id)) FROM roles WHERE journal_id = ?',
-			$journalId
+			(int) $journalId
 		);
 
 		$returner = $result->fields[0];
@@ -285,11 +285,11 @@ class RoleDAO extends DAO {
 		$params = array();
 		$conditions = array();
 		if (isset($journalId)) {
-			$params[] = $journalId;
+			$params[] = (int) $journalId;
 			$conditions[] = 'journal_id = ?';
 		}
 		if (isset($roleId)) {
-			$params[] = $roleId;
+			$params[] = (int) $roleId;
 			$conditions[] = 'role_id = ?';
 		}
 		
@@ -308,7 +308,7 @@ class RoleDAO extends DAO {
 	 */
 	function deleteRoleByJournalId($journalId) {
 		return $this->update(
-			'DELETE FROM roles WHERE journal_id = ?', $journalId
+			'DELETE FROM roles WHERE journal_id = ?', (int) $journalId
 		);
 	}
 	
@@ -321,9 +321,9 @@ class RoleDAO extends DAO {
 	function deleteRoleByUserId($userId, $journalId  = null, $roleId = null) {
 		return $this->update(
 			'DELETE FROM roles WHERE user_id = ?' . (isset($journalId) ? ' AND journal_id = ?' : '') . (isset($roleId) ? ' AND role_id = ?' : ''),
-			isset($journalId) && isset($roleId) ? array($userId, $journalId, $roleId)
-			: (isset($journalId) ? array($userId, $journalId)
-			: (isset($roleId) ? array($userId, $roleId) : $userId))
+			isset($journalId) && isset($roleId) ? array((int) $userId, (int) $journalId, (int) $roleId)
+			: (isset($journalId) ? array((int) $userId, (int) $journalId)
+			: (isset($roleId) ? array((int) $userId, (int) $roleId) : (int) $userId))
 		);
 	}
 	
@@ -336,7 +336,7 @@ class RoleDAO extends DAO {
 	 */
 	function roleExists($journalId, $userId, $roleId) {
 		$result = &$this->retrieve(
-			'SELECT COUNT(*) FROM roles WHERE journal_id = ? AND user_id = ? AND role_id = ?', array($journalId, $userId, $roleId)
+			'SELECT COUNT(*) FROM roles WHERE journal_id = ? AND user_id = ? AND role_id = ?', array((int) $journalId, (int) $userId, (int) $roleId)
 		);
 		$returner = isset($result->fields[0]) && $result->fields[0] == 1 ? true : false;
 

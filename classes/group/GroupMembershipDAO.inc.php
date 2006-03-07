@@ -142,7 +142,7 @@ class GroupMembershipDAO extends DAO {
 	}
 	
 	/**
-	 * Delete a membership, including membership info
+	 * Delete a membership
 	 * @param $groupId int
 	 * @param $userId int
 	 */
@@ -154,13 +154,24 @@ class GroupMembershipDAO extends DAO {
 	}
 	
 	/**
-	 * Delete group membership by journal ID, including membership info
-	 * @param $journalId int
+	 * Delete group membership by group ID
+	 * @param $groupId int
 	 */
 	function deleteMembershipByGroupId($groupId) {
 		return $this->update(
 			'DELETE FROM group_memberships WHERE group_id = ?',
 			$groupId
+		);
+	}
+	
+	/**
+	 * Delete group membership by user ID
+	 * @param $userId int
+	 */
+	function deleteMembershipByUserId($userId) {
+		return $this->update(
+			'DELETE FROM group_memberships WHERE user_id = ?',
+			$userId
 		);
 	}
 	

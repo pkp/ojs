@@ -202,7 +202,7 @@ class CopyeditorSubmissionDAO extends DAO {
 	/**
 	 * Get all submissions for a copyeditor of a journal.
 	 * @param $copyeditorId int
-	 * @param $journalId int
+	 * @param $journalId int optional
 	 * @param $searchField int SUBMISSION_FIELD_... constant
 	 * @param $searchMatch String 'is' or 'contains'
 	 * @param $search String Search string
@@ -211,8 +211,9 @@ class CopyeditorSubmissionDAO extends DAO {
 	 * @param $dateTo int Search to timestamp
 	 * @return array CopyeditorSubmissions
 	 */
-	function &getCopyeditorSubmissionsByCopyeditorId($copyeditorId, $journalId, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $active = true, $rangeInfo = null) {
-		$params = array($journalId, $copyeditorId);
+	function &getCopyeditorSubmissionsByCopyeditorId($copyeditorId, $journalId = null, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $active = true, $rangeInfo = null) {
+		if (isset($journalId)) $params = array($journalId, $copyeditorId);
+		else $params = array($copyeditorId);
 
 		$searchSql = '';
 
@@ -309,13 +310,16 @@ class CopyeditorSubmissionDAO extends DAO {
 			LEFT JOIN layouted_assignments l ON (l.article_id = a.article_id)
 			LEFT JOIN proof_assignments p ON (p.article_id = a.article_id)
 			WHERE
-				a.journal_id = ? AND
+				' . (isset($journalId)?'a.journal_id = ? AND':'') . '
 				c.copyeditor_id = ? AND
 				c.date_notified IS NOT NULL AND
 				c.date_final_completed ';
 		$sql .= $active ? 'IS NULL' : 'IS NOT NULL';
 
-		$result = &$this->retrieveRange($sql . ' ' . $searchSql . ' ORDER BY a.article_id ASC', $params, $rangeInfo);
+		$result = &$this->retrieveRange(
+			$sql . ' ' . $searchSql . ' ORDER BY a.article_id ASC',
+			count($params)==1?array_shift($params):$params,
+			$rangeInfo);
 
 		$returner = &new DAOResultFactory($result, $this, '_returnCopyeditorSubmissionFromRow');
 		return $returner;

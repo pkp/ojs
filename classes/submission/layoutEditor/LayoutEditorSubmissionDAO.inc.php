@@ -129,8 +129,9 @@ class LayoutEditorSubmissionDAO extends DAO {
 	 * @param $active boolean true to select active assignments, false to select completed assignments
 	 * @return array LayoutEditorSubmission
 	 */
-	function &getSubmissions($editorId, $journalId, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $active = true, $rangeInfo = null) {
-		$params = array($editorId, $journalId);
+	function &getSubmissions($editorId, $journalId = null, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $active = true, $rangeInfo = null) {
+		if (isset($journalId)) $params = array($editorId, $journalId);
+		else $params = array($editorId);
 
 		$searchSql = '';
 
@@ -228,7 +229,7 @@ class LayoutEditorSubmissionDAO extends DAO {
 			LEFT JOIN copyed_assignments c ON (a.article_id = c.article_id)
 			WHERE
 				l.editor_id = ? AND
-				 a.journal_id = ? AND
+				' . (isset($journalId)?'a.journal_id = ? AND':'') . '
 				l.date_notified IS NOT NULL';
 		
 		if ($active) {
@@ -237,7 +238,11 @@ class LayoutEditorSubmissionDAO extends DAO {
 			$sql .= ' AND (l.date_completed IS NOT NULL AND p.date_layouteditor_completed IS NOT NULL)';
 		}
 
-		$result = &$this->retrieveRange($sql . ' ' . $searchSql . ' ORDER BY a.article_id ASC', $params, $rangeInfo);
+		$result = &$this->retrieveRange(
+			$sql . ' ' . $searchSql . ' ORDER BY a.article_id ASC',
+			count($params)==1?array_shift($params):$params,
+			$rangeInfo
+		);
 
 		$returner = &new DAOResultFactory($result, $this, '_returnSubmissionFromRow');
 		return $returner;

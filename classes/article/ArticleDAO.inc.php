@@ -192,6 +192,7 @@ class ArticleDAO extends DAO {
 		$this->update(
 			sprintf('UPDATE articles
 				SET
+					user_id = ?,
 					section_id = ?,
 					title = ?,
 					title_alt1 = ?,
@@ -224,6 +225,7 @@ class ArticleDAO extends DAO {
 				WHERE article_id = ?',
 				$this->datetimeToDB($article->getDateSubmitted()), $this->datetimeToDB($article->getDateStatusModified()), $this->datetimeToDB($article->getLastModified())),
 			array(
+				$article->getUserId(),
 				$article->getSectionId(),
 				$article->getTitle(),
 				$article->getTitleAlt1(),
@@ -389,15 +391,15 @@ class ArticleDAO extends DAO {
 	/**
 	 * Get all articles for a user.
 	 * @param $userId int
-	 * @param $journalId int
+	 * @param $journalId int optional
 	 * @return array Articles
 	 */
-	function &getArticlesByUserId($userId, $journalId) {
+	function &getArticlesByUserId($userId, $journalId = null) {
 		$articles = array();
 		
 		$result = &$this->retrieve(
-			'SELECT a.*, s.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, s.abbrev AS section_abbrev, s.abbrev_alt1 AS section_abbrev_alt1, s.abbrev_alt2 AS section_abbrev_alt2 FROM articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE a.user_id = ? AND a.journal_id = ?',
-			array($userId, $journalId)
+			'SELECT a.*, s.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, s.abbrev AS section_abbrev, s.abbrev_alt1 AS section_abbrev_alt1, s.abbrev_alt2 AS section_abbrev_alt2 FROM articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE a.user_id = ?' . (isset($journalId)?' AND a.journal_id = ?':''),
+			isset($journalId)?array($userId, $journalId):$userId
 		);
 		
 		while (!$result->EOF) {

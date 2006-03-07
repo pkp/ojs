@@ -127,6 +127,16 @@ class SessionDAO extends DAO {
 	}
 	
 	/**
+	 * Delete sessions by user ID.
+	 * @param $userId string
+	 */
+	function deleteSessionsByUserId($userId) {
+		return $this->update(
+			'DELETE FROM sessions WHERE user_id = ?', $userId
+		);
+	}
+	
+	/**
 	 * Delete all sessions older than the specified time.
 	 * @param $lastUsed int cut-off time in seconds for not-remembered sessions
 	 * @param $lastUsedRemember int optional, cut-off time in seconds for remembered sessions

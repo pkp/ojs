@@ -63,6 +63,29 @@ class ArticleCommentDAO extends DAO {
 	}
 	
 	/**
+	 * Retrieve ArticleComments by user id
+	 * @param $userId int
+	 * @return ArticleComment objects array
+	 */
+	function &getArticleCommentsByUserId($userId) {
+		$articleComments = array();
+		
+		$result = &$this->retrieve(
+			'SELECT a.* FROM article_comments a WHERE author_id = ? ORDER BY date_posted',	$userId
+		);
+		
+		while (!$result->EOF) {
+			$articleComments[] = &$this->_returnArticleCommentFromRow($result->GetRowAssoc(false));
+			$result->moveNext();
+		}
+
+		$result->Close();
+		unset($result);
+		
+		return $articleComments;
+	}
+	
+	/**
 	 * Retrieve most recent ArticleComment
 	 * @param $articleId int
 	 * @param $commentType int

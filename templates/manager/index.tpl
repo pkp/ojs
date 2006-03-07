@@ -37,6 +37,7 @@
 <ul class="plain">
 	<li>&#187; <a href="{url op="people" path="all"}">{translate key="manager.people.allUsers"}</a></li>
 	<li>&#187; <a href="{url op="createUser"}">{translate key="manager.people.createUser"}</a></li>
+	<li>&#187; <a href="{url op="mergeUsers"}">{translate key="manager.people.mergeUsers"}</a></li>
 	{call_hook name="Templates::Manager::Index::Users"}
 </ul>
 

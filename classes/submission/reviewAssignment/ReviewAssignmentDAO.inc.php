@@ -160,6 +160,30 @@ class ReviewAssignmentDAO extends DAO {
 	}
 
 	/**
+	 * Get all review assignments for a reviewer.
+	 * @param $userId int
+	 * @return array ReviewAssignments
+	 */
+	function &getReviewAssignmentsByUserId($userId) {
+		$reviewAssignments = array();
+		
+		$result = &$this->retrieve(
+			'SELECT r.*, r2.review_revision, a.review_file_id, u.first_name, u.last_name FROM review_assignments r LEFT JOIN users u ON (r.reviewer_id = u.user_id) LEFT JOIN review_rounds r2 ON (r.article_id = r2.article_id AND r.round = r2.round) LEFT JOIN articles a ON (r.article_id = a.article_id) WHERE r.reviewer_id = ? ORDER BY round, review_id',
+			$userId
+		);
+		
+		while (!$result->EOF) {
+			$reviewAssignments[] = &$this->_returnReviewAssignmentFromRow($result->GetRowAssoc(false));
+			$result->MoveNext();
+		}
+
+		$result->Close();
+		unset($result);
+		
+		return $reviewAssignments;
+	}
+
+	/**
 	 * Get a review file for an article for each round.
 	 * @param $articleId int
 	 * @return array ArticleFiles

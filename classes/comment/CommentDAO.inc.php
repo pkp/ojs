@@ -76,6 +76,27 @@ class CommentDAO extends DAO {
 	}
 	
 	/**
+	 * Retrieve comments by user id
+	 * @param $userId int
+	 * @return Comment objects array
+	 */
+	function &getCommentsByUserId($userId) {
+		$comments = array();
+		
+		$result = &$this->retrieve('SELECT * FROM comments WHERE user_id = ?', $userId);
+		
+		while (!$result->EOF) {
+			$comments[] = &$this->_returnCommentFromRow($result->GetRowAssoc(false));
+			$result->moveNext();
+		}
+
+		$result->Close();
+		unset($result);
+		
+		return $comments;
+	}
+	
+	/**
 	 * Retrieve Comment by comment id
 	 * @param $commentId int
 	 * @return Comment object

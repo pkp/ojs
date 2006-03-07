@@ -156,6 +156,11 @@ class ManagerHandler extends Handler {
 		import('pages.manager.PeopleHandler');
 		PeopleHandler::createUser();
 	}
+
+	function mergeUsers($args) {
+		import('pages.manager.PeopleHandler');
+		PeopleHandler::mergeUsers($args);
+	}
 	
 	function disableUser($args) {
 		import('pages.manager.PeopleHandler');

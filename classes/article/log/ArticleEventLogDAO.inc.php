@@ -176,6 +176,17 @@ class ArticleEventLogDAO extends DAO {
 	}
 	
 	/**
+	 * Transfer all article log entries to another user.
+	 * @param $articleId int
+	 */
+	function transferArticleLogEntries($oldUserId, $newUserId) {
+		return $this->update(
+			'UPDATE article_event_log SET user_id = ? WHERE user_id = ?',
+			array($newUserId, $oldUserId)
+		);
+	}
+	
+	/**
 	 * Get the ID of the last inserted log entry.
 	 * @return int
 	 */
