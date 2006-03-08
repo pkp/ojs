@@ -463,6 +463,7 @@ class NativeImportDom {
 		}
 
 		if (($node = $articleNode->getChildByName('pages'))) $article->setPages($node->getValue());
+		if (($language = $articleNode->getAttribute('language'))) $article->setLanguage($language); 
 
 		$authors = array();
 		for ($index=0; ($authorNode = $articleNode->getChildByName('author', $index)); $index++) {
