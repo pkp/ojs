@@ -354,7 +354,48 @@ class SubscriptionManagerHandler extends Handler {
 				Request::redirect(null, null, 'subscriptionTypes');
 		}
 	}
+
+	/**
+	 * Display subscription policies for the current journal.
+	 */
+	function subscriptionPolicies() {
+		SubscriptionManagerHandler::validate();
+		SubscriptionManagerHandler::setupTemplate(true);
+
+		import('subscription.form.SubscriptionPolicyForm');
+
+		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign('helpTopicId', 'journal.managementPages.subscriptions');
+
+		$subscriptionPolicyForm = &new SubscriptionPolicyForm();
+		$subscriptionPolicyForm->initData();
+		$subscriptionPolicyForm->display();
+	}
 	
+	/**
+	 * Save subscription policies for the current journal.
+	 */
+	function saveSubscriptionPolicies($args = array()) {
+		SubscriptionManagerHandler::validate();
+
+		import('subscription.form.SubscriptionPolicyForm');
+
+		$subscriptionPolicyForm = &new SubscriptionPolicyForm();
+		$subscriptionPolicyForm->readInputData();
+			
+		if ($subscriptionPolicyForm->validate()) {
+			$subscriptionPolicyForm->execute();
+
+			SubscriptionManagerHandler::setupTemplate(true);
+
+			$templateMgr = &TemplateManager::getManager();
+			$templateMgr->assign('helpTopicId', 'journal.managementPages.subscriptions');
+			$templateMgr->assign('subscriptionPoliciesSaved', '1');
+
+			$subscriptionPolicyForm->display();
+		}
+	}
+
 	/**
 	 * Validate that user has permissions to manage subscriptions for the
 	 * selected journal. Redirects to user index page if not properly

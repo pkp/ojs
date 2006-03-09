@@ -38,7 +38,6 @@ class JournalSetupStep4Form extends JournalSetupForm {
 				'subscriptionPhone' => 'string',
 				'subscriptionFax' => 'string',
 				'subscriptionMailingAddress' => 'string',
-				'subscriptionAdditionalInformation' => 'string',
 				'volumePerYear' => 'int',
 				'issuePerVolume' => 'int',
 				'enablePublicIssueId' => 'bool',

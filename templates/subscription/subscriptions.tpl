@@ -16,6 +16,7 @@
 <ul class="menu">
 	<li class="current"><a href="{url op="subscriptions"}">{translate key="manager.subscriptions"}</a></li>
 	<li><a href="{url op="subscriptionTypes"}">{translate key="manager.subscriptionTypes"}</a></li>
+	<li><a href="{url op="subscriptionPolicies"}">{translate key="manager.subscriptionPolicies"}</a></li>
 </ul>
 
 <br />

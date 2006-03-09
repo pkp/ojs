@@ -155,15 +155,6 @@
 	</tr>
 </table>
 
-<p>{translate key="manager.setup.subscriptionAdditionalInformationDescription"}</p>
-
-<table width="100%" class="data">
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="subscriptionAdditionalInformation" key="manager.setup.subscriptionAdditionalInformation"}</td>
-		<td width="80%" class="value"><textarea name="subscriptionAdditionalInformation" id="subscriptionAdditionalInformation" rows="3" cols="40" class="textArea">{$subscriptionAdditionalInformation|escape}</textarea></td>
-	</tr>
-</table>
-
 
 <div class="separator"></div>
 

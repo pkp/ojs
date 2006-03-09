@@ -729,6 +729,7 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="manager.roles">Roles</message>
 	<message key="manager.subscriptionTypes">Subscription Types</message>
 	<message key="manager.subscriptions">Subscriptions</message>
+	<message key="manager.subscriptionPolicies">Subscription Policies</message>
 
 	<!-- Statistics & Reports -->
 	<message key="manager.statistics.statistics">Statistics</message>
@@ -909,15 +910,15 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="manager.setup.privacyStatementDescription">This statement will appear in About the Journal, as well as on the Author Submission and Notification sign-up pages. Below is a recommended privacy policy, which can be revised at any point.</message>
 	<message key="manager.setup.privacyStatement2">Privacy statement</message>
 	<message key="manager.setup.openAccessPolicy">Open Access Policy</message>
+	<message key="manager.setup.openAccessPolicy2">Open access policy</message>
+	<message key="manager.setup.openAccessPolicyDescription">The journal can operate under an open access or a subscription model, or some combination of the two. The subscription module is activated under Journal Management (and includes options for Delayed Open Access and Author Self-Archiving).</message>
+	<message key="manager.setup.enableOpenAccess">This is an open access journal (without subscriptions), with the following policy statement, which will appear in About the Journal.</message>
 	<message key="manager.setup.emails">Email Identification</message>
 	<message key="manager.setup.emailBounceAddress">Bounce Address</message>
 	<message key="manager.setup.emailBounceAddressDescription">Any undeliverable emails will result in an error message to this address.</message>
 	<message key="manager.setup.emailBounceAddressDisabled"><![CDATA[<strong>Note:</strong> To activate this option, the site administrator must enable the <tt>allow_envelope_sender</tt> option in the OJS configuration file. Additional server configuration may be required to support this functionality (which may not be possible on all servers), as indicated in the OJS documentation.]]></message>
 	<message key="manager.setup.emailSignature">Signature</message>
 	<message key="manager.setup.emailSignatureDescription">The prepared emails that are sent by the system on behalf of the journal will have the following signature added to the end. The body of the prepared emails are available for editing under Journal Management.</message>
-
-	<message key="manager.setup.openAccessPolicyDescription">OJS supports "open access" by reducing management and publishing costs and can be implemented in a variety of ways. The journal's content can be made free to readers or OJS's subscription module can be used to support (a) partial open access, with select items made available immediately, (b) delayed open access, with contents made available some time after initial publication, and (c) developing-nation open access, based on registering IP addresses from local institutions. In addition, editors are encouraged to join the overwhelming majority of journals that have a policy permitting authors to archive the work published in this journal in institutional repositories and eprint archives. If some form of open access can be granted or permitted, this should be described below, and it will appear in About the Journal.</message>
-	<message key="manager.setup.openAccessPolicy2">Open access policy</message>
 	<message key="manager.setup.addItemtoAboutJournal">Add Item to Appear in "About the Journal"</message>
 	<message key="manager.setup.aboutItemContent">Content</message>
 	<message key="manager.setup.addAboutItem">Add About Item</message>
@@ -1053,8 +1054,6 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.setup.enablePageNumber">Page numbers for items will be calculated and entered manually in the Table of Contents (e.g., pp. 13-26).</message>
 	<message key="manager.setup.subscriptionDescription">When Subscription Management is activated, the Journal Manager is able to set up the Subscription Types (with a fee structure) and to manage subscribers (under Subscriptions on the Journal Management page). Subscription Management also enables the Editor to designate an article or issue for free access, whether immediately or up to 24 months after publication.</message>
 	<message key="manager.setup.subscriptionContactDescription">If subscription management has been enabled, this person will be listed on the journal's About page as the primary contact for subscriptions.</message>
-	<message key="manager.setup.subscriptionAdditionalInformation">Additional information</message>
-	<message key="manager.setup.subscriptionAdditionalInformationDescription">Any additional information about subscriptions, including method of payment  and special programs of support for developing countries, will be made available, along with the subscription types and fee structure, under Subscriptions in About the Journal.</message>
 	<message key="manager.setup.subscription">Subscription Management</message>
 	<message key="manager.setup.enableSubscriptions">Enable the Subscription Management component for this journal.</message>
 
@@ -1255,6 +1254,23 @@ You may optionally provide the user with a reason for disabling their account.</
 	<message key="manager.emails.form.subjectRequired">A subject is required for the email.</message>
 	<message key="manager.emails.form.bodyRequired">A body is required for the email.</message>
 	<message key="manager.emails.editTestExample">Edit Email Test Example</message>
+
+	<!-- Subscription Policy Management -->
+	<message key="manager.subscriptionPolicies.subscriptionAdditionalInformation">Subscription Information</message>
+	<message key="manager.subscriptionPolicies.subscriptionAdditionalInformationDescription">The Subscription Types and fee structure will be automatically placed under Subscriptions on the About the Journal page, along with the name and contact information for the Subscription Manager. Additional information about subscriptions, such as methods of payment or support for subscribers in developing countries, can be added here.</message>
+	<message key="manager.subscriptionPolicies.htmlInstructions"><![CDATA[If using HTML in the text box (for font size, bold, color, etc.), note that "returns" in the text are automatically treated as <tt>&lt;br&gt;</tt>.]]></message>
+	<message key="manager.subscriptionPolicies.openAccessOptions">Open Access Options</message>
+	<message key="manager.subscriptionPolicies.openAccessOptionsDescription">Subscription journals can provide two forms of open access (free access) to their content, which will increase readership and citation of content. Note that even with delayed open access, Editors will still be able to designate specific articles within an issue for open access. The selected policies will appear in About the Journal.</message>
+	<message key="manager.subscriptionPolicies.delayedOpenAccess">Delayed Open Access</message>
+	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription1">Make the contents of this journal available in an open access format</message>
+	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription2">month(s) after an issue is published.</message>
+	<message key="manager.subscriptionPolicies.delayedOpenAccessValid">Please use the checkbox provided.</message>
+	<message key="manager.subscriptionPolicies.delayedOpenAccessDurationValid">Please select a valid duration length.</message>
+	<message key="manager.subscriptionPolicies.authorSelfArchive">Author Self-Archiving</message>
+	<message key="manager.subscriptionPolicies.authorSelfArchiveDescription">Post the following policy, permitting authors to post their work in open access archives.</message>
+	<message key="manager.subscriptionPolicies.authorSelfArchiveValid">Please use the checkbox provided.</message>
+	<message key="manager.subscriptionPolicies.authorSelfArchivePolicy">Self-Archiving Policy</message>
+	<message key="manager.subscriptionPolicies.subscriptionPoliciesSaved">Your subscription policy settings have been updated.</message>
 
 	<!-- Subscription Type Management -->
 	<message key="manager.subscriptionTypes.createTitle">Create</message>
@@ -2026,6 +2042,10 @@ current password.<br /><br />Enter your email address below to reset your passwo
 	<message key="about.peerReviewProcess">Peer Review Process</message>
 	<message key="about.publicationFrequency">Publication Frequency</message>
 	<message key="about.openAccessPolicy">Open Access Policy</message>
+	<message key="about.delayedOpenAccess">Delayed Open Access</message>
+	<message key="about.delayedOpenAccessDescription1">The contents of this journal will be available in an open access format</message>
+	<message key="about.delayedOpenAccessDescription2">month(s) after an issue is published.</message>
+	<message key="about.authorSelfArchive">Author Self-Archiving</message>
 	<message key="about.archiving">Archiving</message>
 	<message key="about.subscriptions">Subscriptions</message>
 	<message key="about.subscriptionsContact">Subscriptions Contact</message>
@@ -2434,6 +2454,8 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="default.journalSettings.checklist.anonymous">If submitting to a peer-reviewed section of the journal, authors' names are removed from submission, with "Author" and year used in the bibliography and footnotes, instead of authors' name, paper title, etc.</message>
 	<message key="default.journalSettings.checklist.personalInformationRemoved">If submitting to peer review, all Microsoft Office documents (including Supplementary Files) have been saved by going to File and selecting Save As; clicking Tools (or Options in a Mac); clicking Security; selecting "Remove personal information from file properties on save"; clicking Save.</message>
 	<message key="default.journalSettings.privacyStatement">The names and email addresses entered in this journal site will be used exclusively for the stated purposes of this journal and will not be made available for any other purpose or to any other party.</message>
+	<message key="default.journalSettings.openAccessPolicy">This journal provides immediate open access to its content on the principle that making research freely available to the public supports a greater global exchange of knowledge.</message>
+	<message key="default.journalSettings.authorSelfArchivePolicy">Authors are permitted to post their articles on personal or institutional websites prior to and after publication by this journal (while providing the bibliographic details of that publication).</message>
 	<message key="default.journalSettings.copyeditInstructions"><![CDATA[The copyediting stage is intended to improve the flow, clarity, grammar, wording, and formatting of the article. It represents the last chance for the author to make any substantial changes to the text, as the next stage is restricted to typos and formatting corrections. 
 
 The file to be copyedited is in Word or .rtf format and therefore can be easily edited as a word processing document. This set of  instructions displayed here proposes two approaches to copyediting. The one is based on Microsoft Word's Track Changes feature and requires that the copyeditor, editor and author have access to this program. A second system, that is software independent, has been borrowed, with permission, from the Harvard Educational Review. The journal editor is in a position to modify these instructions, so suggestions can be made to improve the process for this journal. 

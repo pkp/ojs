@@ -352,6 +352,47 @@ class SubscriptionHandler extends ManagerHandler {
 		}
 	}
 	
+	/**
+	 * Display subscription policies for the current journal.
+	 */
+	function subscriptionPolicies() {
+		parent::validate();
+		SubscriptionHandler::setupTemplate(true);
+
+		import('subscription.form.SubscriptionPolicyForm');
+
+		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign('helpTopicId', 'journal.managementPages.subscriptions');
+
+		$subscriptionPolicyForm = &new SubscriptionPolicyForm();
+		$subscriptionPolicyForm->initData();
+		$subscriptionPolicyForm->display();
+	}
+	
+	/**
+	 * Save subscription policies for the current journal.
+	 */
+	function saveSubscriptionPolicies($args = array()) {
+		parent::validate();
+
+		import('subscription.form.SubscriptionPolicyForm');
+
+		$subscriptionPolicyForm = &new SubscriptionPolicyForm();
+		$subscriptionPolicyForm->readInputData();
+			
+		if ($subscriptionPolicyForm->validate()) {
+			$subscriptionPolicyForm->execute();
+
+			SubscriptionHandler::setupTemplate(true);
+
+			$templateMgr = &TemplateManager::getManager();
+			$templateMgr->assign('helpTopicId', 'journal.managementPages.subscriptions');
+			$templateMgr->assign('subscriptionPoliciesSaved', '1');
+
+			$subscriptionPolicyForm->display();
+		}
+	}
+
 	function setupTemplate($subclass = false) {
 		parent::setupTemplate(true);
 		if ($subclass) {

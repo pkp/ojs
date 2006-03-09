@@ -150,7 +150,10 @@
 <h3>2.4 {translate key="manager.setup.openAccessPolicy"}</h3>
 
 <p>{translate key="manager.setup.openAccessPolicyDescription"}</p>
-
+<p>
+	<input type="checkbox" name="enableOpenAccess" id="enableOpenAccess" value="1"{if $enableOpenAccess} checked="checked"{/if} />&nbsp;
+	<label for="enableOpenAccess">{translate key="manager.setup.enableOpenAccess"}</label>
+</p>
 <p><textarea name="openAccessPolicy" id="openAccessPolicy" rows="12" cols="60" class="textArea">{$openAccessPolicy|escape}</textarea></p>
 
 

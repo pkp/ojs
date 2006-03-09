@@ -430,6 +430,25 @@ class IssueManagementHandler extends EditorHandler {
 		$issue->setPublished(1);
 		$issue->setDatePublished(Core::getCurrentDate());
 
+		// If journal is not open access and subscriptions with delayed open access are enabled then
+		// update open access date according to open access delay policy
+		if (!$journal->getSetting('enableOpenAccess') && $journal->getSetting('enableSubscriptions') && $journal->getSetting('enableDelayedOpenAccess')) {
+
+			$delayDuration = $journal->getSetting('delayedOpenAccessDuration');
+			$delayYears = (int)floor($delayDuration/12);
+			$delayMonths = (int)fmod($delayDuration,12);
+
+			$curYear = date('Y');
+			$curMonth = date('n');
+			$curDay = date('j');
+
+			$delayOpenAccessYear = $curYear + $delayYears + (int)floor(($curMonth+$delayMonths)/12);
+ 			$delayOpenAccessMonth = (int)fmod($curMonth+$delayMonths,12);
+
+			$issue->setAccessStatus(SUBSCRIPTION);
+			$issue->setOpenAccessDate(date('Y-m-d H:i:s',mktime(0,0,0,$delayOpenAccessMonth,$curDay,$delayOpenAccessYear)));
+		}
+
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
 		$issueDao->updateCurrentIssue($journalId,$issue);
 

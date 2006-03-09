@@ -30,10 +30,8 @@ class AboutHandler extends Handler {
 			$journal = &Request::getJournal();
 			
 			$customAboutItems = &$journalSettingsDao->getSetting($journal->getJournalId(), 'customAboutItems');
-			$enableSubscriptions = &$journalSettingsDao->getSetting($journal->getJournalId(), 'enableSubscriptions');
 
 			$templateMgr->assign('customAboutItems', $customAboutItems);
-			$templateMgr->assign('enableSubscriptions', $enableSubscriptions);
 			$templateMgr->assign('helpTopicId', 'user.about');
 			$templateMgr->assign_by_ref('journalSettings', $journalSettingsDao->getJournalSettings($journal->getJournalId()));
 			$templateMgr->display('about/index.tpl');
@@ -290,7 +288,7 @@ class AboutHandler extends Handler {
 		$templateMgr->assign('subscriptionTypes', $subscriptionTypes);
 		$templateMgr->display('about/subscriptions.tpl');
 	}
-	
+
 	/**
 	 * Display submissions page.
 	 */

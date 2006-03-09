@@ -21,7 +21,7 @@
 	<li>&#187; <a href="{url page="editorialPolicies" anchor="sectionPolicies"}">{translate key="about.sectionPolicies"}</a></li>
 	{if !empty($journalSettings.reviewPolicy)}<li>&#187; <a href="{url page="editorialPolicies" anchor="peerReviewProcess"}">{translate key="about.peerReviewProcess"}</a></li>{/if}
 	{if !empty($journalSettings.pubFreqPolicy)}<li>&#187; <a href="{url page="editorialPolicies" anchor="publicationFrequency"}">{translate key="about.publicationFrequency"}</a></li>{/if}
-	{if !empty($journalSettings.openAccessPolicy)}<li>&#187; <a href="{url page="editorialPolicies" anchor="openAccessPolicy"}">{translate key="about.openAccessPolicy"}</a></li>{/if}
+	{if !empty($journalSettings.enableOpenAccess) || !empty($journalSettings.enableDelayedOpenAccess) || !empty($journalSettings.enableAuthorSelfArchive)}<li>&#187; <a href="{url page="editorialPolicies" anchor="openAccessPolicy"}">{translate key="about.openAccessPolicy"}</a></li>{/if}
 	{if $journalSettings.enableLockss && !empty($journalSettings.lockssLicense)}<li>&#187; <a href="{url page="editorialPolicies" anchor="archiving"}">{translate key="about.archiving"}</a></li>{/if}
 	{foreach key=key from=$journalSettings.customAboutItems item=customAboutItem}
 		{if !empty($customAboutItem.title)}
@@ -81,9 +81,19 @@
 <div class="separator">&nbsp;</div>
 {/if}
 
-{if !empty($journalSettings.openAccessPolicy)}
+{if !empty($journalSettings.enableOpenAccess) || !empty($journalSettings.enableDelayedOpenAccess) || !empty($journalSettings.enableAuthorSelfArchive)}
 <a name="openAccessPolicy"></a><h3>{translate key="about.openAccessPolicy"}</h3>
-<p>{$journalSettings.openAccessPolicy|nl2br}</p>
+	{if !empty($journalSettings.enableOpenAccess)} 
+		<p>{$journalSettings.openAccessPolicy|nl2br}</p>
+	{/if}
+	{if empty($journalSettings.enableOpenAccess) && !empty($journalSettings.enableDelayedOpenAccess)}
+		<h4>{translate key="about.delayedOpenAccess"}</h4> 
+		<p>{translate key="about.delayedOpenAccessDescription1"} {$journalSettings.delayedOpenAccessDuration} {translate key="about.delayedOpenAccessDescription2"}</p>
+	{/if}
+	{if empty($journalSettings.enableOpenAccess) && !empty($journalSettings.enableAuthorSelfArchive)} 
+		<h4>{translate key="about.authorSelfArchive"}</h4> 
+		<p>{$journalSettings.authorSelfArchivePolicy|nl2br}</p>
+	{/if}
 
 <div class="separator">&nbsp;</div>
 {/if}

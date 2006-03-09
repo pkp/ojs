@@ -334,6 +334,21 @@ class ManagerHandler extends Handler {
 
 
 	//
+	// Subscription Policies 
+	//
+
+	function subscriptionPolicies() {
+		import('pages.manager.SubscriptionHandler');
+		SubscriptionHandler::subscriptionPolicies();
+	}
+
+	function saveSubscriptionPolicies($args) {
+		import('pages.manager.SubscriptionHandler');
+		SubscriptionHandler::saveSubscriptionPolicies($args);
+	}
+
+
+	//
 	// Subscription Types
 	//
 
@@ -371,6 +386,7 @@ class ManagerHandler extends Handler {
 		import('pages.manager.SubscriptionHandler');
 		SubscriptionHandler::moveSubscriptionType($args);
 	}
+
 
 	//
 	// Subscriptions

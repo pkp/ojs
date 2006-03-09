@@ -68,7 +68,7 @@
 	</tr>
 </table>
 
-{if $enableSubscriptions}
+{if $enableSubscriptions && !$enableDelayedOpenAccess}
 <div class="separator"></div>
 <h3>{translate key="editor.issues.access"}</h3>
 <table width="100%" class="data">

@@ -35,6 +35,7 @@ class JournalSetupStep2Form extends JournalSetupForm {
 				'reviewGuidelines' => 'string',
 				'authorSelectsEditor' => 'int',
 				'privacyStatement' => 'string',
+				'enableOpenAccess' => 'int',
 				'openAccessPolicy' => 'string',
 				'disableUserReg' => 'bool',
 				'allowRegReader' => 'bool',

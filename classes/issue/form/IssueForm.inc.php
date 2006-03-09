@@ -35,6 +35,7 @@ class IssueForm extends Form {
 		
 		// set up the accessibility options pulldown
 		$templateMgr->assign('enableSubscriptions', $journal->getSetting('enableSubscriptions'));
+		$templateMgr->assign('enableDelayedOpenAccess', $journal->getSetting('enableDelayedOpenAccess'));
 
 		$accessOptions = array();
 		$accessOptions[OPEN_ACCESS] = Locale::Translate('editor.issues.openAccess');
@@ -78,9 +79,17 @@ class IssueForm extends Form {
 		}
 
 		// check if date open access date is correct if subscription is selected and enabled
+		// and delayed open access is not set
 		$subscription = $journal->getSetting('enableSubscriptions');
+		$delayedOpenAccess = $journal->getSetting('enableDelayedOpenAccess');
+		if (!empty($issueId)) {
+			$issue = &$issueDao->getIssueById($issueId);
+			$issuePublished = $issue->getPublished();
+		} else {
+			$issuePublished = 0;
+		}
 
-		if ($subscription) {
+		if (($subscription && !$delayedOpenAccess) || ($subscription && $delayedOpenAccess && $issuePublished)) {
 			$month = $this->getData('Date_Month');
 			$day = $this->getData('Date_Day');
 			$year = $this->getData('Date_Year');
@@ -192,19 +201,28 @@ class IssueForm extends Form {
 						}
 						break;
 				}
+
+				if ($journal->getSetting('enableSubscriptions')) {
+					$accessStatus = SUBSCRIPTION;
+				} else {
+					$accessStatus = OPEN_ACCESS;
+				}
 				
 			} else {
 				$volume = $journal->getSetting('initialVolume');
 				$number = $journal->getSetting('initialNumber');
 				$year = $journal->getSetting('initialYear');
 			}
-			
+
+
 			$this->_data = array(
 				'labelFormat' => $labelFormat,
 				'volume' => $volume,
 				'number' => $number,
-				'year' => $year
+				'year' => $year,
+				'accessStatus' => $accessStatus
 			);
+
 		}
 	}
 	
