@@ -374,7 +374,7 @@ class SectionEditorAction extends Action {
 
 				// Key lifetime is the typical review period plus four weeks
 				$keyLifetime = ($journal->getSetting('numWeeksPerReview') + 4) * 7;
-
+				$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
 				$email->addPrivateParam('ACCESS_KEY', $accessKeyManager->createKey('ReviewerContext', $reviewer->getUserId(), $reviewId, $keyLifetime));
 			}
 			$email->send();
