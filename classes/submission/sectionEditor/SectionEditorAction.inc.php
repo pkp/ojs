@@ -360,13 +360,25 @@ class SectionEditorAction extends Action {
 		$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($reviewId);
 		$reviewerAccessKeysEnabled = $journal->getSetting('reviewerAccessKeysEnabled');
 
+		// If we're using access keys, disable the address fields
+		// for this message. (Prevents security issue: section editor
+		// could CC or BCC someone else, or change the reviewer address,
+		// in order to get the access key.)
+		$preventAddressChanges = $reviewerAccessKeysEnabled;
+
 		import('mail.ArticleMailTemplate');
 		$email = &new ArticleMailTemplate($sectionEditorSubmission, $reviewerAccessKeysEnabled?'REVIEW_REMIND_ONECLICK':'REVIEW_REMIND');
+
+		if ($preventAddressChanges) {
+			$email->setAddressFieldsEnabled(false);
+		}
 
 		if ($send && !$email->hasErrors()) {
 			HookRegistry::call('SectionEditorAction::remindReviewer', array(&$sectionEditorSubmission, &$reviewAssignment, &$email));
 			$email->setAssoc(ARTICLE_EMAIL_REVIEW_REMIND, ARTICLE_EMAIL_TYPE_REVIEW, $reviewId);
-			
+
+			$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
+
 			if ($reviewerAccessKeysEnabled) {
 				import('security.AccessKeyManager');
 				import('pages.reviewer.ReviewerHandler');
@@ -374,9 +386,15 @@ class SectionEditorAction extends Action {
 
 				// Key lifetime is the typical review period plus four weeks
 				$keyLifetime = ($journal->getSetting('numWeeksPerReview') + 4) * 7;
-				$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
 				$email->addPrivateParam('ACCESS_KEY', $accessKeyManager->createKey('ReviewerContext', $reviewer->getUserId(), $reviewId, $keyLifetime));
 			}
+
+			if ($preventAddressChanges) {
+				// Ensure that this messages goes to the reviewer, and the reviewer ONLY.
+				$email->clearAllRecipients();
+				$email->addRecipient($reviewer->getEmail(), $reviewer->getFullName());
+			}
+
 			$email->send();
 
 			$reviewAssignment->setDateReminded(Core::getCurrentDate());
