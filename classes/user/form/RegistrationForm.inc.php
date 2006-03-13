@@ -225,12 +225,12 @@ class RegistrationForm extends Form {
 		}
 
 		// By default, self-registering readers will receive
-		// journal updates. (The delete is here to prevent a
+		// journal updates. (The double set is here to prevent a
 		// duplicate insert error msg if there was a notification entry
 		// left over from a previous role.)
 		if (isset($allowedRoles['reader']) && $this->getData($allowedRoles['reader'])) {
 			$notificationStatusDao = &DAORegistry::getDAO('NotificationStatusDAO');
-			$notificationStatusDao->deleteNotificationStatusByJournal($journal->getJournalId());
+			$notificationStatusDao->setJournalNotifications($journal->getJournalId(), $userId, false);
 			$notificationStatusDao->setJournalNotifications($journal->getJournalId(), $userId, true);
 		}
 	}
