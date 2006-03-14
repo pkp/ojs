@@ -85,12 +85,7 @@ class DAO {
 			}
 		}
 
-		static $cacheDir;
-		if (!isset($cacheDir)) {
-			import('cache.CacheManager');
-			$cacheDir = CacheManager::getFileCachePath() . '/_db';
-			$this->setCacheDir($cacheDir);
-		}
+		$this->setCacheDir();
 
 		$result = &$this->_dataSource->CacheExecute($secsToCache, $sql, $params !== false && !is_array($params) ? array($params) : $params);
 		if ($this->_dataSource->errorNo()) {
@@ -196,13 +191,27 @@ class DAO {
 	 * Configure the caching directory for database results
 	 * NOTE: This is implemented as a GLOBAL setting and cannot
 	 * be set on a per-connection basis.
-	 * @param $path string
 	 */
-	function setCacheDir($path) {
-		global $ADODB_CACHE_DIR;
-		$ADODB_CACHE_DIR = $path;
+	function setCacheDir() {
+		static $cacheDir;
+		if (!isset($cacheDir)) {
+			global $ADODB_CACHE_DIR;
+
+			import('cache.CacheManager');
+			$cacheDir = CacheManager::getFileCachePath() . '/_db';
+
+			$ADODB_CACHE_DIR = $cacheDir;
+		}
 	}
-	
+
+	/**
+	 * Flush the system cache.
+	 */
+	function flushCache() {
+		$this->setCacheDir();
+		$this->_dataSource->CacheFlush();
+	}
+
 	/**
 	 * Return datetime formatted for DB insertion.
 	 * @param $dt int/string *nix timestamp or ISO datetime string

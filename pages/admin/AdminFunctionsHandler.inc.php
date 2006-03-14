@@ -164,9 +164,16 @@ class AdminFunctionsHandler extends AdminHandler {
 	 */
 	function clearDataCache() {
 		parent::validate();
+
+		// Clear the CacheManager's caches
 		import('cache.CacheManager');
 		$cacheManager =& CacheManager::getManager();
 		$cacheManager->flush();
+
+		// Clear ADODB's cache
+		$userDao =& DAORegistry::getDAO('UserDAO'); // As good as any
+		$userDao->flushCache();
+		
 		Request::redirect(null, 'admin');
 	}
 }
