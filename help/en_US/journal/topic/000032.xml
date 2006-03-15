@@ -12,7 +12,7 @@
   * $Id$
   -->
 
-<topic id="journal/topic/000015" locale="en_US" title="Subscription Manager" toc="journal/toc/000032" key="journal.roles.subscriptionManager">
+<topic id="journal/topic/000032" locale="en_US" title="Subscription Manager" toc="journal/toc/000003" key="journal.roles.subscriptionManager">
 	<section>
 		<![CDATA[<p>The Subscription Manager manages the journal's Subscriptions and Subscription Types.</p>]]>
 	</section>

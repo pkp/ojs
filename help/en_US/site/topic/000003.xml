@@ -17,6 +17,7 @@
 		<![CDATA[<p>Several administrative functions are available in the site administration area. These functions should generally be used with caution, as improper use could lead to unexpected results.</p>
 		<p><em>System Information.</em> General information about the server environment  and OJS version history (including past upgrades). A web-based interface to modify the OJS configuration file is also provided.</p>
 		<p><em>Expire User Sessions.</em> Clears all active user sessions in the system, requiring any user that is currently logged in to sign in to the system again.</p>
-		<p><em>Clear Template Cache.</em> Clears all cached versions of HTML templates. This function may be useful to force templates to be reloaded after customizations have been made.</p>]]>	
+		<p><em>Clear Data Caches.</em> Clears all cached data, including locale information, help cache, and search cache.
+		<p><em>Clear Template Cache.</em> Clears all cached versions of HTML templates. This function may be useful to force templates to be reloaded after customizations have been made.</p>]]>
 	</section>
 </topic>

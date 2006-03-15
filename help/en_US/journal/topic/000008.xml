@@ -4,17 +4,21 @@
 <!--
   * 000008.xml
   *
-  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Copyright (c) 2003-2006 The Public Knowledge Project
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Management Pages - Statistics 
+  * Management Pages - Stats & Reports
   *
   * $Id$
   -->
 
-<topic id="journal/topic/000008" locale="en_US" title="Statistics" toc="journal/toc/000001" key="journal.managementPages.statistics">
+<topic id="journal/topic/000008" locale="en_US" title="Stats &amp; Reports" toc="journal/toc/000001" key="journal.managementPages.statsAndReports">
 	<section>
-		<![CDATA[<p>The Journal Manager is able to consult a series of statistics that are commonly used by journals to monitor their progress and standards (for example, rejection rate, through-put time, reviewer load, etc.). The Journal Manager has the option of making some or all of these statistics available to Readers. (The statistics will be presented under the title of Statistics in About the Journal.) On occasion, Authors are asked to provide this information when applying for tenure and promotion, and it is helpful for informing potential contributors of how the journal is performing. Journal Managers may wish to wait until the journal has been in operation for a year or so before making the statistics public, so that the figures have greater reliability.</p>
-<p>Note that the Journal Statistics component is currently not implemented, but is planned for a future release of OJS.</p>]]>	
+		<![CDATA[<p>Statics &amp; Reports provides the Journal Manager with the ability to extract information about the history of the journal's usage in two forms. First, under Statistics, year-by-year statistics are available for at-a-glance data on submissions, editorial practices, and users. Second, the Journal Manager can generate one of several types of reports on a specific range of dates.</p><p>There are four types of reports available:<ul>
+			<li><strong>Journal Report</strong>: Reports on all journal submissions in the given period.</li>
+			<li><strong>Editor Report</strong>: Reports on submissions, grouped by Editor.</li>
+			<li><strong>Review Report</strong>: Reports on submissions, grouped by Reviewer.</li>
+			<li><strong>Section Report</strong>: Reports on submissions, grouped by Section.</li>
+		</ul>These reports are generated in Comma-Seperated Values (CSV) format and should be opened using a spreadsheet application.]]>
 	</section>
 </topic>

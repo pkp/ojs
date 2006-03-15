@@ -80,6 +80,7 @@ class StatisticsHandler extends ManagerHandler {
 			REPORT_TYPE_SECTION => 'manager.statistics.reports.type.section'
 		));
 
+		$templateMgr->assign('helpTopicId', 'journal.managementPages.statsAndReports');
 
 		$templateMgr->display('manager/statistics/index.tpl');
 	}

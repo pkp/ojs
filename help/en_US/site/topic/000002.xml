@@ -14,7 +14,7 @@
 
 <topic id="site/topic/000002" locale="en_US" title="Site Management" toc="site/toc/000000" key="site.siteManagement">
 	<section>
-		<![CDATA[<p>OJS is designed to be a multi-journal system, and the Site Administrator is responsible for configuring site-level settings and creating new journals to be hosted within a single site.</p>]]>	
+		<![CDATA[<p>OJS is designed to be a multi-journal system, and the Site Administrator is responsible for configuring site-level settings and creating new journals to be hosted within a single site. Journal sites are entirely independent, with the exception of user accounts; while a user may participate in any combination of roles and journals, the same email address and username will refer to the same user regardless of journal.</p>]]>
 	</section>
 	
 	<section title="Site Settings">
@@ -23,7 +23,7 @@
 	</section>
 	
 	<section title="Hosted Journals">
-		<![CDATA[<p>As OJS allows any number of individual and distinct journal web sites to be generated, new journals can be created and managed at any time. Each journal that is created can be accessed through a unique URL of the main OJS site that is based on a path name entered by the Site Administrator. Journals that are currently in the process of being set up and configured can be hidden from the main site until such time that they are ready to go live.</p>]]>
+		<![CDATA[<p>As OJS allows any number of individual and distinct journal web sites to be generated, new journals can be created and managed at any time. Each journal that is created can be accessed through a unique URL based on a path name entered by the Site Administrator. Journals that are currently in the process of being set up and configured can be hidden from the main site until such time that they are ready to go live.</p>]]>
 	</section>
 	
 	<section title="Languages">

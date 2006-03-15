@@ -33,7 +33,7 @@
 	<topic key="journal.managementPages.sections" id="journal/topic/000005"></topic>
 	<topic key="journal.managementPages.emails" id="journal/topic/000006"></topic>
 	<topic key="journal.managementPages.languages" id="journal/topic/000007"></topic>
-	<topic key="journal.managementPages.statistics" id="journal/topic/000008"></topic>
+	<topic key="journal.managementPages.statsAndReports" id="journal/topic/000008"></topic>
 	<topic key="journal.managementPages.readingTools" id="journal/topic/000009"></topic>
 	<topic key="journal.managementPages.readingTools.settings" id="journal/topic/000026"></topic>
 	<topic key="journal.managementPages.readingTools.versions" id="journal/topic/000027"></topic>
@@ -43,7 +43,7 @@
 	<topic key="journal.managementPages.groups" id="journal/topic/000029"></topic>
 	<topic key="journal.managementPages.plugins" id="journal/topic/000030"></topic>
 	<topic key="journal.managementPages.importExport" id="journal/topic/000031"></topic>
-	<topic key="journal.managementPages.mergeUsers" id="journal/topic/000044"></topic>
+	<topic key="journal.managementPages.mergeUsers" id="journal/topic/000033"></topic>
 
 	<topic key="journal.users.index" id="journal/topic/000002"></topic>
 	<topic key="journal.users.allUsers" id="journal/topic/000011"></topic>

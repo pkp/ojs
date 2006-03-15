@@ -2,7 +2,7 @@
 <!DOCTYPE topic SYSTEM "../../../topic.dtd">
 
 <!--
-  * 000044.xml
+  * 000033.xml
   *
   * Copyright (c) 2003-2006 The Public Knowledge Project
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
@@ -12,7 +12,7 @@
   * $Id$
   -->
 
-<topic id="journal/topic/000044" locale="en_US" title="Merge Users" toc="journal/toc/000002" key="journal.managementPages.mergeUsers">
+<topic id="journal/topic/000033" locale="en_US" title="Merge Users" toc="journal/toc/000002" key="journal.managementPages.mergeUsers">
 	<section>
 		<![CDATA[<p>The Merge Users feature, available from Journal Management under the Users heading, allows the Journal Manager to merge two user accounts into a single account, transferring edit assignments, submissions, and numerous other records from one account to the other and effectively deleting the first.</p>
 		<p>The following items are transferred:

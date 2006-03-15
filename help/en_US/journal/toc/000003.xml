@@ -16,12 +16,13 @@
 	<topic id="journal/topic/000015" title="Journal Manager" />
 	<topic id="journal/topic/000016" title="Editor" />
 	<topic id="journal/topic/000017" title="Section Editor" />
-	<topic id="journal/topic/000018" title="Layout Editor" />
 	<topic id="journal/topic/000019" title="Copyeditor" />
+	<topic id="journal/topic/000018" title="Layout Editor" />
 	<topic id="journal/topic/000020" title="Proofreader" />
 	<topic id="journal/topic/000021" title="Reviewer" />
 	<topic id="journal/topic/000022" title="Author" />
 	<topic id="journal/topic/000023" title="Reader" />
+	<topic id="journal/topic/000032" title="Subscription Manager" />
 
 	<breadcrumb url="journal/topic/000000" title="Journal Management" />
 	<breadcrumb url="journal/topic/000003" title="Roles" />
