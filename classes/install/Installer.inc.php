@@ -370,8 +370,9 @@ class Installer {
 	function executeAction($action) {
 		switch ($action['type']) {
 			case 'schema':
+				$fileName = INSTALLER_DATA_DIR . '/'. $action['file'];
 				$this->log(sprintf('schema: %s', $action['file']));
-				$sql = $this->schemaXMLParser->parseSchema(INSTALLER_DATA_DIR . '/'. $action['file']);
+				$sql = $this->schemaXMLParser->parseSchema($fileName);
 				if ($sql) {
 					return $this->executeSQL($sql);
 				} else {
@@ -380,12 +381,13 @@ class Installer {
 				}
 				break;
 			case 'data':
+				$fileName = INSTALLER_DATA_DIR . '/'. $action['file'];
 				$this->log(sprintf('data: %s', $action['file']));
-				$sql = $this->dataXMLParser->parseData(INSTALLER_DATA_DIR . '/'. $action['file']);
+				$sql = $this->dataXMLParser->parseData($fileName);
 				if ($sql) {
 					return $this->executeSQL($sql);
 				} else {
-					$this->setError(INSTALLER_ERROR_DB, str_replace('{$file}', INSTALLER_DATA_DIR . '/'. $action['file'], Locale::translate('installer.installParseDBFileError')));
+					$this->setError(INSTALLER_ERROR_DB, str_replace('{$file}', $fileName, Locale::translate('installer.installParseDBFileError')));
 					return false;
 				}
 				break;
