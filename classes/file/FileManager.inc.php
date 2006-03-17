@@ -145,7 +145,7 @@ class FileManager {
 	 */
 	function &readFile($filePath, $output = false) {
 		if (is_readable($filePath)) {
-			$f = fopen($filePath, 'r');
+			$f = fopen($filePath, 'rb');
 			$data = '';
 			while (!feof($f)) {
 				$data .= fread($f, 4096);

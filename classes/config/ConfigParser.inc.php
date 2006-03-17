@@ -39,7 +39,7 @@ class ConfigParser {
 			return $falseValue;
 		}
 		
-		$fp = fopen($file, 'r');
+		$fp = fopen($file, 'rb');
 		if (!$fp) {
 			return $falseValue;
 		}
@@ -195,7 +195,7 @@ class ConfigParser {
 			return false;
 		}
 		
-		$fp = @fopen($file, 'w');
+		$fp = @fopen($file, 'wb');
 		if (!$fp) {
 			return false;
 		}

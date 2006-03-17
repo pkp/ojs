@@ -59,7 +59,7 @@ class FileWrapper {
 	 * @param $mode string only 'r' (read-only) is currently supported
 	 * @return boolean
 	 */
-	function open($mode = 'r') {
+	function open($mode = 'rb') {
 		$this->fp = fopen($this->url, $mode);
 		return $this->fp;
 	}
@@ -100,10 +100,10 @@ class FileWrapper {
 	 * @return FileWrapper
 	 */
 	function &wrapper($url) {
+		$info = parse_url($url);
 		if (ini_get('allow_url_fopen')) {
 			$wrapper = &new FileWrapper($url, $info);
 		} else {
-			$info = parse_url($url);
 			switch (@$info['scheme']) {
 				case 'http':
 					$wrapper = &new HTTPFileWrapper($url, $info);

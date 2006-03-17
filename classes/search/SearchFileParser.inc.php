@@ -50,7 +50,7 @@ class SearchFileParser {
 	 * @return boolean
 	 */
 	function open() {
-		$this->fp = @fopen($this->filePath, 'r');
+		$this->fp = @fopen($this->filePath, 'rb');
 		return $this->fp ? true : false;
 	}
 	

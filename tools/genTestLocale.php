@@ -81,7 +81,7 @@ class genTestLocale extends CommandLineTool {
 		}
 		
 		$outFile = sprintf('locale/%s/locale.xml', $this->outLocale);
-		$fp = fopen($outFile, 'w');
+		$fp = fopen($outFile, 'wb');
 		if (!$fp) {
 			printf('Failed to write to \'%s\'', $outFile);
 			exit(1);

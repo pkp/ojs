@@ -173,7 +173,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 		XMLCustomWriter::appendChild($doc, $issueNode);
 
 		if (!empty($outputFile)) {
-			if (($h = fopen($outputFile, 'w'))===false) return false;
+			if (($h = fopen($outputFile, 'wb'))===false) return false;
 			fwrite($h, XMLCustomWriter::getXML($doc));
 			fclose($h);
 		} else {

@@ -254,7 +254,7 @@ class UserImportExportPlugin extends ImportExportPlugin {
 					$users = array_values($users);
 				}
 				$doc = &UserExportDom::exportUsers($journal, $users, $rolePaths);
-				if (($h = fopen($xmlFile, 'w'))===false) {
+				if (($h = fopen($xmlFile, 'wb'))===false) {
 					echo Locale::translate('plugins.importexport.users.export.errorsOccurred') . ":\n";
 					echo Locale::translate('plugins.importexport.users.export.couldNotWriteFile', array('fileName' => $xmlFile)) . "\n";
 					return false;

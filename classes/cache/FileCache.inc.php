@@ -77,7 +77,7 @@ class FileCache extends GenericCache {
 	 * Set the entire contents of the cache.
 	 */
 	function setEntireCache(&$contents) {
-		$fp = @fopen($this->filename, 'w');
+		$fp = @fopen($this->filename, 'wb');
 		// If the cache can be written, write it. If not, fall
 		// back on NO CACHING AT ALL.
 		if ($fp) {
