@@ -188,6 +188,7 @@ class EditorHandler extends SectionEditorHandler {
 		// remove all selected articles from the scheduling queue
 		$articleDao = &DAORegistry::getDAO('ArticleDAO');
 		$proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
+		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 		if (isset($removedArticles)) {
 			foreach ($removedArticles as $articleId) {
 				$article = $articleDao->getArticle($articleId);
@@ -199,6 +200,8 @@ class EditorHandler extends SectionEditorHandler {
 					$proofAssignment->setDateSchedulingQueue(null);
 					$proofAssignmentDao->updateProofAssignment($proofAssignment);
 
+					$publishedArticleDao->deletePublishedArticleByArticleId($articleId);
+
 					// used later for scheduledArticles
 					$articlesRemovedCheck[$articleId] = $article;
 				}
@@ -206,7 +209,6 @@ class EditorHandler extends SectionEditorHandler {
 		}
 
 		// add selected articles to their respective issues
-		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
 		if (isset($scheduledArticles)) {
 			while (list($articleId,$issueId) = each($scheduledArticles)) {
@@ -222,16 +224,30 @@ class EditorHandler extends SectionEditorHandler {
 						$article->setStatus(STATUS_PUBLISHED);
 						$article->stampStatusModified();
 						$articleDao->updateArticle($article);
-	
-						$publishedArticle = &new PublishedArticle();
+
+						// This is a work-around for bug #2111 and potential OJS 1.x
+						// issues: It's possible for an article that's being scheduled
+						// to already have a published article entry. This can happen,
+						// for example, if an article is returned to the scheduling
+						// queue after being "published" against an issue, and then is
+						// published again.
+						$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($articleId);
+						if (!$publishedArticle) {
+							$publishedArticle = &new PublishedArticle();
+						}
 						$publishedArticle->setArticleId($articleId);
 						$publishedArticle->setIssueId($issueId);
 						$publishedArticle->setDatePublished(Core::getCurrentDate());
 						$publishedArticle->setSeq(0);
 						$publishedArticle->setViews(0);
 						$publishedArticle->setAccessStatus(0);
-						
-						$publishedArticleDao->insertPublishedArticle($publishedArticle);
+
+						// See above note on bug #2111.
+						if ($publishedArticle->getPubId()) {
+							$publishedArticleDao->updatePublishedArticle($publishedArticle);
+						} else {
+							$publishedArticleDao->insertPublishedArticle($publishedArticle);
+						}
 						$publishedArticleDao->resequencePublishedArticles($article->getSectionId(),$issueId);
 					}
 				}
