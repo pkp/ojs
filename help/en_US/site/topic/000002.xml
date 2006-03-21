@@ -30,4 +30,8 @@
 		<![CDATA[<p>OJS is designed to be a multilingual system, allowing journals supporting a wide variety of languages to be hosted under a single site. The Site Administrator can specify the default language of the site and install additional locales as they become available to make other languages available for use by journals.</p>
 		<p>Additional language packages will typically be available for download from the Open Journal Systems <a href="http://pkp.sfu.ca/" target="_blank">web site</a> as user-contributed translations are received. These packages can be installed into an existing OJS system to make them available to journals.</p>]]>
 	</section>
+	
+	<section title="Authentication Sources">
+		<![CDATA[<p>By default, OJS authenticates users against its internal database. It is possible, however, to use other methods of authentication, such as LDAP. Additional authentication sources are implemented as OJS plugins; refer to the documentation shipped with each plugin for details.</p>]]>
+	</section>
 </topic>
