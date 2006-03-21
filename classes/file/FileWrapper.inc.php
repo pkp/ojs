@@ -3,7 +3,7 @@
 /**
  * FileWrapper.inc.php
  *
- * Copyright (c) 2005 The Public Knowledge Project
+ * Copyright (c) 2005-2006 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package file
@@ -12,7 +12,6 @@
  * (for when allow_url_fopen is disabled).
  *
  * TODO:
- *     - HTTPS
  *     - Other protocols?
  *     - Write mode (where possible)
  *
@@ -59,7 +58,8 @@ class FileWrapper {
 	 * @param $mode string only 'r' (read-only) is currently supported
 	 * @return boolean
 	 */
-	function open($mode = 'rb') {
+	function open($mode = 'r') {
+		$this->fp = null;
 		$this->fp = fopen($this->url, $mode);
 		return $this->fp;
 	}
@@ -101,12 +101,23 @@ class FileWrapper {
 	 */
 	function &wrapper($url) {
 		$info = parse_url($url);
-		if (ini_get('allow_url_fopen')) {
+		if (ini_get('allow_url_fopen') && Config::getVar('general', 'allow_url_fopen')) {
 			$wrapper = &new FileWrapper($url, $info);
 		} else {
+			static $version;
+			if (!isset($version)) {
+				$versionDao =& DAORegistry::getDAO('VersionDAO');
+				$version =& $versionDao->getCurrentVersion();
+			}
+
 			switch (@$info['scheme']) {
 				case 'http':
 					$wrapper = &new HTTPFileWrapper($url, $info);
+					$wrapper->addHeader('User-Agent', 'PKP-OJS/' . $version->getVersionString());
+					break;
+				case 'https':
+					$wrapper = &new HTTPSFileWrapper($url, $info);
+					$wrapper->addHeader('User-Agent', 'PKP-OJS/' . $version->getVersionString());
 					break;
 				case 'ftp':
 					$wrapper = &new FTPFileWrapper($url, $info);
@@ -125,17 +136,54 @@ class FileWrapper {
  * HTTP protocol class.
  */
 class HTTPFileWrapper extends FileWrapper {
-	
+	var $headers;
+	var $defaultPort;
+	var $defaultHost;
+	var $defaultPath;
+
+	function HTTPFileWrapper($url, &$info) {
+		parent::FileWrapper($url, $info);
+		$this->setDefaultPort(80);
+		$this->setDefaultHost('localhost');
+		$this->setDefaultPath('/');
+	}
+
+	function setDefaultPort($port) {
+		$this->defaultPort = $port;
+	}
+
+	function setDefaultHost($host) {
+		$this->defaultHost = $host;
+	}
+
+	function setDefaultPath($path) {
+		$this->defaultPath = $path;
+	}
+
+	function addHeader($name, $value) {
+		if (!isset($this->headers)) {
+			$this->headers = array();
+		}
+		$this->headers[$name] = $value;
+	}
+
 	function open($mode = 'r') {
-		$host = isset($this->info['host']) ? $this->info['host'] : 'localhost';
-		$port = isset($this->info['port']) ? (int)$this->info['port'] : 80;
-		$path = isset($this->info['path']) ? $this->info['path'] : '/';
+		$host = isset($this->info['host']) ? $this->info['host'] : $this->defaultHost;
+		$port = isset($this->info['port']) ? (int)$this->info['port'] : $this->defaultPort;
+		$path = isset($this->info['path']) ? $this->info['path'] : $this->defaultPath;
+		if (isset($this->info['query'])) $path .= '?' . $this->info['query'];
 		
 		if (!($this->fp = fsockopen($host, $port, $errno, $errstr)))
 			return false;
-		
-		$request = "GET $path HTTP/1.1\r\n" .
+
+		$additionalHeadersString = '';
+		if (is_array($this->headers)) foreach ($this->headers as $name => $value) {
+			$additionalHeadersString .= "$name: $value\r\n";
+		}
+
+		$request = "GET $path HTTP/1.0\r\n" .
 			"Host: $host\r\n" .
+			$additionalHeadersString .
 			"Connection: Close\r\n\r\n";
 		fwrite($this->fp, $request);
 		
@@ -151,6 +199,19 @@ class HTTPFileWrapper extends FileWrapper {
 	}
 }
 
+/**
+ * HTTPS protocol class.
+ */
+class HTTPSFileWrapper extends HTTPFileWrapper {
+	function HTTPSFileWrapper($url, &$info) {
+		parent::HTTPFileWrapper($url, $info);
+		$this->setDefaultPort(443);
+		$this->setDefaultHost('ssl://localhost');
+		if (isset($this->info['host'])) {
+			$this->info['host'] = 'ssl://' . $this->info['host'];
+		}
+	}
+}
 	
 /**
  * FTP protocol class.
