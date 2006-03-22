@@ -420,7 +420,7 @@ class NativeImportDom {
 
 		for ($index=0; ($node = $articleNode->getChildByName('title', $index)); $index++) {
 			$locale = $node->getAttribute('locale');
-			if ($locale == '' || $locale == Locale::getLocale()) {
+			if ($locale == '' || $locale == $journal->getLocale()) {
 				$article->setTitle($node->getValue());
 			} elseif ($locale == $journal->getSetting('alternateLocale1')) {
 				$article->setTitleAlt1($node->getValue());
@@ -438,7 +438,7 @@ class NativeImportDom {
 
 		for ($index=0; ($node = $articleNode->getChildByName('abstract', $index)); $index++) {
 			$locale = $node->getAttribute('locale');
-			if ($locale == '' || $locale == Locale::getLocale()) {
+			if ($locale == '' || $locale == $journal->getLocale()) {
 				$article->setAbstract($node->getValue());
 			} elseif ($locale == $journal->getSetting('alternateLocale1')) {
 				$article->setAbstractAlt1($node->getValue());
