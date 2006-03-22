@@ -25,6 +25,7 @@ class ReviewReminder extends ScheduledTask {
 	function sendReminder ($reviewAssignment, $article, $journal) {
 		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
+		$reviewId = $reviewAssignment->getReviewId();
 
 		$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
 		if (!isset($reviewer)) return false;
@@ -37,7 +38,7 @@ class ReviewReminder extends ScheduledTask {
 		$email->setJournal($journal);
 		$email->setFrom($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
 		$email->addRecipient($reviewer->getEmail(), $reviewer->getFullName());
-		$email->setAssoc(ARTICLE_EMAIL_REVIEW_REMIND, ARTICLE_EMAIL_TYPE_REVIEW, $reviewAssignment->getReviewId());
+		$email->setAssoc(ARTICLE_EMAIL_REVIEW_REMIND, ARTICLE_EMAIL_TYPE_REVIEW, $reviewId);
 
 		$email->setSubject($email->getSubject($journal->getLocale()));
 		$email->setBody($email->getBody($journal->getLocale()));
@@ -51,7 +52,7 @@ class ReviewReminder extends ScheduledTask {
 			$keyLifetime = ($journal->getSetting('numWeeksPerReview') + 4) * 7;
 			$urlParams['key'] = $accessKeyManager->createKey('ReviewerContext', $reviewer->getUserId(), $reviewId, $keyLifetime);
 		}
-		$submissionReviewUrl = Request::url($journal->getPath(), 'reviewer', 'submission', $reviewAssignment->getReviewId(), $urlParams);
+		$submissionReviewUrl = Request::url($journal->getPath(), 'reviewer', 'submission', $reviewId, $urlParams);
 
 		$paramArray = array(
 			'reviewerName' => $reviewer->getFullName(),
@@ -60,7 +61,7 @@ class ReviewReminder extends ScheduledTask {
 			'reviewerPassword' => $reviewer->getPassword(),
 			'reviewDueDate' => date('Y-m-d', strtotime($reviewAssignment->getDateDue())),
 			'editorialContactSignature' => $journal->getSetting('contactName') . "\n" . $journal->getTitle(),
-			'passwordResetUrl' => Request::url($journal->getPath(), 'login', 'resetPassword', $reviewer->getUsername(), Validation::generatePasswordResetHash($reviewer->getUserId())),
+			'passwordResetUrl' => Request::url($journal->getPath(), 'login', 'resetPassword', $reviewer->getUsername(), array('confirm' => Validation::generatePasswordResetHash($reviewer->getUserId()))),
 			'submissionReviewUrl' => $submissionReviewUrl
 		);
 		$email->assignParams($paramArray);
