@@ -104,20 +104,14 @@ class FileWrapper {
 		if (ini_get('allow_url_fopen') && Config::getVar('general', 'allow_url_fopen')) {
 			$wrapper = &new FileWrapper($url, $info);
 		} else {
-			static $version;
-			if (!isset($version)) {
-				$versionDao =& DAORegistry::getDAO('VersionDAO');
-				$version =& $versionDao->getCurrentVersion();
-			}
-
 			switch (@$info['scheme']) {
 				case 'http':
 					$wrapper = &new HTTPFileWrapper($url, $info);
-					$wrapper->addHeader('User-Agent', 'PKP-OJS/' . $version->getVersionString());
+					$wrapper->addHeader('User-Agent', 'PKP-OJS/2.x');
 					break;
 				case 'https':
 					$wrapper = &new HTTPSFileWrapper($url, $info);
-					$wrapper->addHeader('User-Agent', 'PKP-OJS/' . $version->getVersionString());
+					$wrapper->addHeader('User-Agent', 'PKP-OJS/2.x');
 					break;
 				case 'ftp':
 					$wrapper = &new FTPFileWrapper($url, $info);

@@ -110,7 +110,7 @@ class MailTemplate extends Mail {
 		// Default "From" to user if available, otherwise site/journal principal contact
 		$user = &Request::getUser();
 		if ($user) {
-			$this->setFrom($user->getEMail(), $user->getFullName());
+			$this->setFrom($user->getEmail(), $user->getFullName());
 		} elseif ($journal == null) {
 			$site = &Request::getSite();
 			$this->setFrom($site->getContactEmail(), $site->getContactName());
