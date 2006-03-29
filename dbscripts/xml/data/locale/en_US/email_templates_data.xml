@@ -68,26 +68,6 @@ Thanks for the continuing interest in our work,
 			<field name="description">This email is sent to registered readers via the "Notify Users" link in the Editor's User Home. It notifies readers of a new issue and invites them to visit the journal at a supplied URL.</field>
 		</row>
 		<row>
-			<field name="email_key">SUBSCRIPTION_NOTIFY</field>
-			<field name="subject">Subscription Notification</field>
-			<field name="body">{$subscriberName}:
-
-You have now been registered as a subscriber in our online journal management system for {$journalName}, with the following subscription:
-
-{$subscriptionType}
-
-To access content that is available only to subscribers, simply log in to the system with your username, "{$username}".
-
-Once you have logged in to the system you can change your profile details and password at any point.
-
-Please note that if you have an institutional subscription, there is no need for users at your institution to log in, since requests for subscription content will be automatically authenticated by the system.
-
-If you have any questions, please feel free to contact me.
-
-{$subscriptionContactSignature}</field>
-			<field name="description">This email notifies a registered reader that the Manager has created a subscription for them. It provides the journal's URL along with instructions for access.</field>
-		</row>
-		<row>
 			<field name="email_key">LOCKSS_EXISTING_ARCHIVE</field>
 			<field name="subject">Archiving Request for {$journalName}</field>
 			<field name="body"><![CDATA[Dear [University Librarian]
@@ -683,5 +663,83 @@ Thank you for completing the proofreading corrections for the galleys associated
 			<field name="description">This email template provides a registered reader with the opportunity to send information about an article to somebody who may be interested. It is available via the Reading Tools and must be enabled by the Journal Manager in the Reading Tools Administration page.</field>
 		</row>
 
+
+		<!--
+		  *
+		  * Subscriptions 
+		  *
+		  -->
+		<row>
+			<field name="email_key">SUBSCRIPTION_NOTIFY</field>
+			<field name="subject">Subscription Notification</field>
+			<field name="body">{$subscriberName}:
+
+You have now been registered as a subscriber in our online journal management system for {$journalName}, with the following subscription:
+
+{$subscriptionType}
+
+To access content that is available only to subscribers, simply log in to the system with your username, "{$username}".
+
+Once you have logged in to the system you can change your profile details and password at any point.
+
+Please note that if you have an institutional subscription, there is no need for users at your institution to log in, since requests for subscription content will be automatically authenticated by the system.
+
+If you have any questions, please feel free to contact me.
+
+{$subscriptionContactSignature}</field>
+			<field name="description">This email notifies a registered reader that the Manager has created a subscription for them. It provides the journal's URL along with instructions for access.</field>
+		</row>
+		<row>
+			<field name="email_key">SUBSCRIPTION_BEFORE_EXPIRY_REMIND</field>
+			<field name="subject">Notice of Subscription Expiry</field>
+			<field name="body">{$subscriberName}:
+
+Your {$journalName} subscription is about to expire.
+
+{$subscriptionType}
+Expiry date: {$expiryDate}
+
+To ensure the continuity of your access to this journal, please go to the journal website and renew your subscription. You are able to log in to the system with your username, "{$username}".
+
+If you have any questions, please feel free to contact me.
+
+{$subscriptionContactSignature}</field>
+			<field name="description">This email notifies a subscriber that their subscription will soon expire. It provides the journal's URL along with instructions for access.</field>
+		</row>
+		<row>
+			<field name="email_key">SUBSCRIPTION_AFTER_EXPIRY_REMIND</field>
+			<field name="subject">Subscription Expired</field>
+			<field name="body">{$subscriberName}:
+
+Your {$journalName} subscription has expired.
+
+{$subscriptionType}
+Expiry date: {$expiryDate}
+
+To renew your subscription, please go to the journal website. You are able to log in to the system with your username, "{$username}".
+
+If you have any questions, please feel free to contact me.
+
+{$subscriptionContactSignature}</field>
+			<field name="description">This email notifies a subscriber that their subscription has expired. It provides the journal's URL along with instructions for access.</field>
+		</row>
+		<row>
+			<field name="email_key">SUBSCRIPTION_AFTER_EXPIRY_REMIND_FINAL</field>
+			<field name="subject">Subscription Expired - Final Reminder</field>
+			<field name="body">{$subscriberName}:
+
+Your {$journalName} subscription has expired.
+Please note that this is the final reminder that will be emailed to you.
+
+{$subscriptionType}
+Expiry date: {$expiryDate}
+
+To renew your subscription, please go to the journal website. You are able to log in to the system with your username, "{$username}".
+
+If you have any questions, please feel free to contact me.
+
+{$subscriptionContactSignature}</field>
+			<field name="description">This email notifies a subscriber that their subscription has expired. It provides the journal's URL along with instructions for access.</field>
+		</row>
 	</table>
 </data>

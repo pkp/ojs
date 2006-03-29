@@ -1271,6 +1271,25 @@ You may optionally provide the user with a reason for disabling their account.</
 	<message key="manager.subscriptionPolicies.authorSelfArchiveValid">Please use the checkbox provided.</message>
 	<message key="manager.subscriptionPolicies.authorSelfArchivePolicy">Self-Archiving Policy</message>
 	<message key="manager.subscriptionPolicies.subscriptionPoliciesSaved">Your subscription policy settings have been updated.</message>
+	<message key="manager.subscriptionPolicies.expiryReminders">Subscription Expiry Reminders</message>
+	<message key="manager.subscriptionPolicies.expiryRemindersDescription">Automated email reminders (available in OJS's default Emails) can be sent to subscribers both before and after a subscription has expired.</message>
+	<message key="manager.subscriptionPolicies.expiryRemindersDisabled"><![CDATA[<strong>Note:</strong> To activate these options, the site administrator must enable the <tt>scheduled_tasks</tt> option in the OJS configuration file. Additional server configuration may be required to support this functionality (which may not be possible on all servers), as indicated in the OJS documentation.]]></message>
+	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths1">Notify subscribers by email</message>
+	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths2">month(s) before subscription expiry.</message>
+	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks1">Notify subscribers by email</message>
+	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks2">week(s) before subscription expiry.</message>
+	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths1">Notify subscribers by email</message>
+	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths2">month(s) after subscription expiry.</message>
+	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks1">Notify subscribers by email</message>
+	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks2">week(s) after subscription expiry.</message>
+	<message key="manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid">Please use the checkbox provided.</message>
+	<message key="manager.subscriptionPolicies.numMonthsBeforeSubscriptionExpiryReminderValid">Please select a valid value for the number of months before subscription expiry.</message>
+	<message key="manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeWeeksValid">Please use the checkbox provided.</message>
+	<message key="manager.subscriptionPolicies.numWeeksBeforeSubscriptionExpiryReminderValid">Please select a valid value for the number of weeks before subscription expiry.</message>
+	<message key="manager.subscriptionPolicies.enableSubscriptionExpiryReminderAfterMonthsValid">Please use the checkbox provided.</message>
+	<message key="manager.subscriptionPolicies.numMonthsAfterSubscriptionExpiryReminderValid">Please select a valid value for the number of months after subscription expiry.</message>
+	<message key="manager.subscriptionPolicies.enableSubscriptionExpiryReminderAfterWeeksValid">Please use the checkbox provided.</message>
+	<message key="manager.subscriptionPolicies.numWeeksAfterSubscriptionExpiryReminderValid">Please select a valid value for the number of weeks after subscription expiry.</message>
 
 	<!-- Subscription Type Management -->
 	<message key="manager.subscriptionTypes.createTitle">Create</message>

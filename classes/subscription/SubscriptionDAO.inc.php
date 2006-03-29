@@ -251,6 +251,34 @@ class SubscriptionDAO extends DAO {
 	}
 
 	/**
+	 * Retrieve an array of subscriptions matching a particular end date and journal ID.
+	 * @param $dateEnd date (YYYY-MM-DD)
+	 * @param $journalId int
+	 * @return object DAOResultFactory containing matching Subscriptions
+	 */
+	function &getSubscriptionsByDateEnd($dateEnd, $journalId, $rangeInfo = null) {
+		$dateEnd = explode('-', $dateEnd);
+
+		$result = &$this->retrieveRange(
+			'SELECT * FROM subscriptions
+				WHERE EXTRACT(YEAR FROM date_end) = ?
+				AND   EXTRACT(MONTH FROM date_end) = ?
+				AND   EXTRACT(DAY FROM date_end) = ?
+				AND   journal_id = ?',
+			array(
+				$dateEnd[0],
+				$dateEnd[1],
+				$dateEnd[2],
+				$journalId
+			), $rangeInfo
+		);
+
+		$returner = &new DAOResultFactory($result, $this, '_returnSubscriptionFromRow');
+
+		return $returner;
+	}
+
+	/**
 	 * Check whether there is a valid subscription for a given journal.
 	 * @param $domain string
 	 * @param $IP string
