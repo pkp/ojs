@@ -140,6 +140,7 @@ class TemplateManager extends Smarty {
 		
 		// Register custom functions
 		$this->register_modifier('strip_unsafe_html', array('String', 'stripUnsafeHtml'));
+		$this->register_modifier('String_substr', array('String', 'substr'));
 		$this->register_modifier('to_array', array(&$this, 'smartyToArray'));
 		$this->register_modifier('explode', array(&$this, 'smartyExplode'));
 		$this->register_modifier('assign', array(&$this, 'smartyAssign'));

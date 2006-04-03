@@ -18,8 +18,7 @@
 
 {iterate from=authors item=author}
 	{assign var=lastFirstLetter value=$firstLetter}
-	{assign var=firstLetter value=$author->getLastName()}
-	{assign var=firstLetter value=$firstLetter[0]}
+	{assign var=firstLetter value=$author->getLastName()|String_substr:0:1}
 
 	{if $lastFirstLetter != $firstLetter}
 		<a name="{$firstLetter|escape}"></a>
