@@ -33,7 +33,7 @@
 {/iterate}
 {if !$authors->wasEmpty()}
 	<br />
-	{page_info iterator=$authors}&nbsp;&nbsp;&nbsp;&nbsp;{page_links iterator=$authors name="authors"}
+	{page_info iterator=$authors}&nbsp;&nbsp;&nbsp;&nbsp;{page_links iterator=$authors name="authors" searchInitial=$searchInitial}
 {else}
 {/if}
 
