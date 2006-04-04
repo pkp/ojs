@@ -328,9 +328,12 @@ class IssueDAO extends DAO {
 	 * @param $issue object issue
 	 */
 	function deleteIssue(&$issue) {
+		import('file.PublicFileManager');
+		$publicFileManager = &new PublicFileManager();
 		if (($fileName = $issue->getFileName()) != '') {
-			import('file.PublicFileManager');
-			$publicFileManager = &new PublicFileManager();
+			$publicFileManager->removeJournalFile($issue->getJournalId(), $fileName);
+		}
+		if (($fileName = $issue->getStyleFileName()) != '') {
 			$publicFileManager->removeJournalFile($issue->getJournalId(), $fileName);
 		}
 
