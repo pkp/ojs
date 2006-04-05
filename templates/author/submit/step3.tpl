@@ -65,8 +65,6 @@
 
 <p><input type="submit"{if !$submissionFile} onclick="return confirm('{translate|escape:"javascript" key="author.submit.noSubmissionConfirm"}')"{/if} value="{translate key="common.saveAndContinue"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="confirmAction('{url page="author"}', '{translate|escape:"javascript" key="author.submit.cancelSubmission"}')" /></p>
 
-<p><span class="formRequired">{translate key="common.requiredField"}</span></p>
-
 </form>
 
 {include file="common/footer.tpl"}
