@@ -212,6 +212,7 @@ class OAIRecord extends OAIIdentifier {
 	var $relation;
 	var $coverage;
 	var $rights;
+	var $pages;
 }
 
 ?>

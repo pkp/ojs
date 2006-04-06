@@ -292,6 +292,7 @@ class OAIDAO extends DAO {
 		$record->relation = array();
 		$record->coverage = array($row['coverage_geo'], $row['coverage_chron'], $row['coverage_sample']);
 		$record->rights = $this->journalSettingsDao->getSetting($row['journal_id'], 'copyrightNotice');
+		$record->pages = $row['pages'];
 		
 		// Get publisher
 		$publisher = $this->journalSettingsDao->getSetting($row['journal_id'], 'publisher');
