@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000029.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Section Editor's Role Index - Editing - Proofreading
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000029" locale="fr_CA" title="Correction des épreuves" toc="editorial/toc/000007" key="editorial.sectionEditorsRole.editing.proofreading">
+	<section>
+<![CDATA[<p>L’éditeur de rubrique, quand il sera informé par l’éditeur de la mise en page que les galées ont été achevées, choisit le correcteur d’épreuves, si ce n’est pas déjà fait. L’éditeur de la rubrique envoie alors le courriel Demande à l’auteur pour commencer le processus de la correction d’épreuves. L’auteur, au moment de compléter la révision des galées et des fichiers supplémentaires s’il y en a, envoie un courriel avisant que le travail est terminé au correcteur d’épreuve, avec une copie conforme à l’éditeur de la rubrique. Toute erreur typographique ou erreur de formatage est notée par l’auteur et le lecteur d’épreuves dans la zone de texte dans Lecture d’épreuves parce que les auteurs et les correcteurs d’épreuves ne peuvent pas ajouter d’indications typographiques sur les galées.	Le correcteur d’épreuves, une fois que la révision des galées et des fichiers supplémentaires, s’il y en a, est terminée, avise l’éditeur de la mise en page, avec une copie conforme à l’éditeur de la rubrique, et l’éditeur de la mise en page procède à la correction des galées et des fichiers supplémentaires s’il y en a. Finalement, l’éditeur de la mise en page avise l’éditeur de la rubrique que la soumission est prête à être mise au calendrier pour publication. A ce stage l’éditeur de la rubrique peut encore désirer revoir les fichiers, et s’il est satisfait, mettre la soumission au calendrier pour publication en cliquant le bouton Envoyer (envoyer la soumission au calendrier) au bas de la page.</p>]]>					
+	</section>
+</topic>

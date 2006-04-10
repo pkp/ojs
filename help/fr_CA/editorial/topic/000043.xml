@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000043.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Proofreader's Role - Proofreading
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000043" locale="fr_CA" title="Correction d’épreuves" toc="editorial/toc/000014" key="editorial.proofreadersRole.proofreading">
+	<section>
+		<![CDATA[<p>Le correcteur d’épreuves a besoin de travailler dans l’un ou plusieurs formats listés sous «Formats d’épreuves» dans la section de «Mise en page». A cette étape, seulement les erreurs typographiques et de formatage sont identifiées. En suivant la méthode expliquée dans les instructions de corrections d’épreuves du journal, ces erreurs sont identifiées dans la zone de texte «Corrections». Étant donné l’expertise du correcteur d’épreuves dans les standards de formatage du journal, le correcteur d’épreuves peut aussi  désirer réviser les corrections faites par l’auteur lors de sa correction d’épreuves, de façon à fournir des conseils à l’éditeur de la mise en page (I.e. ignorer les erreurs identifiées qui n’en sont pas selon les standards de ce journal).</p><p><i>Fichiers supplémentaires</i>.Le correcteur d’épreuves devrait réviser les fichiers supplémentaires, s’il y en a, pour toute erreur typographique. Les fichiers supplémentaires sont publiés dans leur format original, mais il y a peut-être encore des aspects qui peuvent être améliorés, ou rendus plus conformes au style du journal.</p>]]>	
+	</section>
+</topic>

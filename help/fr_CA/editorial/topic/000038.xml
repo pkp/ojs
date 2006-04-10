@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000038.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Copyeditor's Role - Copyediting
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000038" locale="fr_CA" title="Révision de copie" toc="editorial/toc/000012" key="editorial.copyeditorsRole.copyediting">
+	<section>
+		<![CDATA[<p>Sur la page de révision de copie de la soumission, la révision de copie est divisée en trois étapes. La révision de copie est faite directement dans le fichier de la soumission, avec des suggestions pour améliorer la fluidité du langage et la clarté du texte, et avec des modifications pour assurer que la soumission respecte le style et le format du journal. Le fichier est alors sauvegardé sur l’ordinateur du réviseur de copie ou de l’auteur, et téléchargé vers le serveur à l’étape appropriée. Ceci rend le fichier révisé disponible pour l’étape suivante, ou dans le cas de l’étape 3, pour l’étape de la mise en page.</p><p><i>Étape 1</i><br />À la première étape le réviseur de copie clique sur le nom du fichier pour le télécharger et l’ouvrir. Après avoir ouvert la soumission à l’étape 1, le réviseur de copie révise le texte, en suivant les normes de révision de copie du journal auxquelles il a agrée. (Celles-ci peuvent être individualisées par le directeur du journal dans Setup). Le réviseur de copie enregistre toute modification et correction, ainsi que les Questions à l’auteur (i.e. numéro de page manquant) et/ou les questions de l’éditeur (i.e. questions de style et standards du journal). Quand il a terminé la révision initiale, le réviseur de copie sauvegarde le fichier à l’ordinateur et  le télécharge vers le serveur pour l’étape suivante, laquelle est la révision de copie par l’auteur.</p><p><i>Achèvement de l’étape 1 </i>.Une fois que le fichier révisé a été téléchargé vers le serveur et les métadonnées révisées, le réviseur de copie clique l’icône de courriel sous «Complet pour étape 1». Ceci mène à un courriel à l’auteur et à l’éditeur les informant que l’étape 1 est terminée. Le réviseur de copie devrait noter dans le courriel s’il n’y a aucune demandes à «Demandes à l’éditeur» pour l’éditeur de rubrique à considérer.</p><p><i>Étape 2</i><br />L’auteur télécharge et ouvre la version révisée de l’étape 1 et révise la révision, et répond à toute question à l’auteur directement dans le fichier. L’auteur sauvegarde le fichier et le télécharge vers le serveur à l’étape 2, ce qui rend le fichier disponible au réviseur de copie pour une révision finale. L’éditeur répondra à toute questions à l’éditeur par courriel pour assurer que l’auteur et l’éditeur ne télécharge pas vers le serveur des versions du fichier l’une par-dessus l’autre. L’auteur envoie un courriel préparé au réviseur de copie et à l’éditeur, ce qui initialise en effet la troisième étape.</p><p><i>Étape 3</i><br />Le réviseur de copie télécharge et ouvre le fichier révisé à l’étape 2 et crée une version épurée (avec toutes traces du processus de révision enlevées) basé sur les réactions de l’auteur et de l’éditeur, lequel est prêt pour l’éditeur de la mise en page à le transformer dans la version à publier	de la soumission. Le reviseur de copie télécharge vers le serveur la copie épurée à l’étape 3, laquelle devient aussi la version de mise en page pour la page d’édition. Le reviseur de copie alors utilise l’icône sous «Complet» pour aviser l’éditeur de mise en page et l’éditeur de la rubrique que la révision de copie est maintenant terminée.</p>]]>	
+	</section>
+</topic>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000027.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Section Editor's Role Index - Editing - Copyediting
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000027" locale="fr_CA" title="Révision" toc="editorial/toc/000007" key="editorial.sectionEditorsRole.editing.copyediting">
+	<section>
+		<![CDATA[<p>Une fois que le réviseur a été sélectionné, et un courriel envoyé demandant que le processus commence, le réviseur travaillera directement sur la soumission, annotant les changements proposés selon les instructions de révision du journal. A la première étape, révision initiale, le réviseur va réviser la soumission et télécharger vers le serveur la première version révisée, et le fichier édité sera envoyé à la deuxième étape, Auteur révision. Le réviseur enverra alors le courriel ‘’à compléter’’ à l’auteur, avec une copie conforme à l’éditeur de la rubrique, demandant que la deuxième étape commence. Après que l’auteur aura revu les changements, répondu à toute question, et téléchargé le fichier à la deuxième étape, le réviseur crée une version révisée, épurée et finale révisée à la troisième étape. Cette version révisée et finale est envoyé à la mise en page, où elle sert de version de mise en page. Avant que l’éditeur de mise en page commence la préparation des galées basé sur cette version, l’éditeur de la rubrique peut souhaiter d’y jeter un coup d’œil pour s’assurer que çà rencontre les normes et les lignes directrices du journal.</p><p><i>Questions de l’éditeur en regard de la révision</i>Au stage initial de la révision, le réviseur peut souhaiter poser des questions ou avoir des éclaircissements (par exemple, le style du journal) lesquels le réviseur fera référence dans le courriel envoyé à l’auteur et à l’éditeur de la rubrique à la fin de la première étape. L’éditeur de la rubrique devrait revoir les questions à l’éditeur en cliquant sur nom du dossier à la deuxième étape, et en envoyant une réponse par courriel, directement au réviseur (en cliquant sur l’icône sous Demandes). Ceci évitera d’avoir à télécharger vers le serveur une version du fichier par-dessus les réponses de l’auteur à la soumission initiale de révision de la soumission..</p><p><i>Options de révision</i>Si jamais il le fallait, (disons que l’éditeur de la rubrique agit aussi comme réviseur), l’éditeur de la rubrique peut télécharger vers le serveur une version de la soumission à chaque étape de la révision. Il faut faire attention de ne pas écraser une version qui aurait été téléchargée par le réviseur ou l’auteur.</p>]]>	
+	</section>
+</topic>

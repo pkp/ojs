@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000006.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Section Editor's Role Index - Review 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000006" locale="fr_CA" title="Révision" toc="editorial/toc/000004" subtoc="editorial/toc/000006" key="editorial.sectionEditorsRole.review">
+	<section>
+		<![CDATA[<p>L’éditeur de rubrique demande à des pairs de réviser une soumission, bien que certaines rubriques du journal n’utilisent pas une révision par les pairs. (i.e. le livre des révisions), et l’éditeur de rubriques entre une décision éditoriale pour la soumission dans la page des révisions.</p>]]>	
+	</section>
+</topic>

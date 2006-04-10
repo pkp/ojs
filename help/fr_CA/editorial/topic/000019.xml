@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000019.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Editor's Role Submission Summary - Submission Management
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000019" locale="fr_CA" title="Gestion des soumissions" toc="editorial/toc/000003" key="editorial.editorsRole.submissionSummary.submissionManagement">
+	<section>
+		<![CDATA[<p>Avant d’assigner un éditeur de rubrique  à gérer la révision de la soumission, l’éditeur devrait cliquer sur le nom du fichier pour l’ouvrir et s’assurer que le texte semble être convenable pour être réviser par le journal, et qu’il est dans la bonne rubrique pour le journal.</p><p><i>Soumissions inappropriées</i>.Si la soumission est manifestement non-appropriée pour le journal, l’éditeur peut envoyer un courriel à l’auteur et lui indiquer que sa soumission ne sera pas soumise à la révision. L’éditeur peut alors l’envoyer aux archives. L’éditeur assigné à la rubrique peut aussi faire de même.</p><p><i>Assigner un éditeur de rubrique à une soumission </i>.L’éditeur choisit un éditeur de rubrique à partir d’une liste contenant tous les éditeurs de rubriques associés à la rubrique (articles, livres, revues, etc.) à laquelle la soumission appartient. Cette action enverra un courriel automatisé à l’éditeur de rubrique avec un avis de l’assignation.</p>]]>	
+	</section>
+</topic>

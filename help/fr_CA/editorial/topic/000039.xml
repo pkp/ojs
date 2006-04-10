@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000039.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Layout Editor's Role - Submissions
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000039" locale="fr_CA" title="Soumissions" toc="editorial/toc/000013" key="editorial.layoutEditorsRole.submissions">
+	<section>
+		<![CDATA[<p>Un fois que l’éditeur de la mise en page est connecté, cliquer sur le lien «Éditeur de mise en page»  sur la page d’accueil de l’usager l’amène à la file d’attente des soumissions. Cette file d’attente montre la liste des ouvrages pour lesquels on lui a demandé de faire la mise en page. Il peut aussi accéder aux soumissions qu’il a complétées dans le passé. L’éditeur de mise en page clique sur le titre de l’ouvrage ce qui mène à la page d’éditeur de mise en page pour cette soumission.</p>]]>	
+	</section>
+</topic>

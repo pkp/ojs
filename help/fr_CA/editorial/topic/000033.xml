@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000033.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author's Role Review Index - Peer Review
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000033" locale="fr_CA" title="Révision par les pairs" toc="editorial/toc/000010" key="editorial.authorsRole.review.peerReview">
+	<section>
+		<![CDATA[<p>Plusieurs dates sont enregistrées sur cette page, incluant la date de la demande de l’éditeur aux réviseurs, les dates quand les révisions ont débutées, et les dates où les révisions sont complétées par chaque réviseur. L’auteur peut consulter la politique de révision pour en connaître plus sur comment les soumissions sont révisées par le journal. Les réviseurs peuvent télécharger vers le serveur des fichiers à consulter par l’auteur, incluant des versions annotées de la soumission. (pour consulter les fichiers téléchargés, l’auteur clique sur le nom du fichier, et ouvre le fichier ou sauvegarde le fichier sur son ordinateur et l’ouvre ensuite.</p>]]>	
+	</section>
+</topic>

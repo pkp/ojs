@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000008.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Reviewer's Role Index 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000008" locale="fr_CA" title="Rôle du critique" toc="editorial/toc/000000" subtoc="editorial/toc/000008" key="editorial.reviewersRole">
+	<section>
+		<![CDATA[<p>Le critique est invité par courriel à examiner une soumission, incluant son titre et son résumé, ainsi que l’adresse URL du journal, le nom d’usager et le mot de passe que le critique utilisera pour entrer dans le journal. Le journal a l’option d’utiliser l’option d’un critique qui envoie la soumission comme une pièce attachée à un courriel au critique en y incluant une invitation à faire une critique. Dans ce cas, le critique répond par courriel. Ce qui est décrit ici est la principale façon de faire une critique (et assure un enregistrement complet du processus, ce qui implique le critique faisant la critique sur le site Web du journal.</p>]]>	
+	</section>
+</topic>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000022.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Section Editor's Role Index - In Editing
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000022" locale="fr_CA" title="En édition" toc="editorial/toc/000005" key="editorial.sectionEditorsRole.submissions.inEditing">
+	<section>
+		<![CDATA[<p>Les soumissions dans cette file d’attente passent par la révision, la mise en page et la correction d’épreuves. Quand l’éditeur de la rubrique ou un éditeur clique sur le titre de la soumission dans la file d’attente de En édition, ils sont dirigés à la page d’édition de la soumission. Quand une soumission a passée par l’étape de l’édition, elle est envoyée au calendrier (pour être mise dans un numéro), elle est enlevée de cette liste et entre dans la file d’attente de l’éditeur de la mise au calendrier.</p>]]>	
+	</section>
+</topic>

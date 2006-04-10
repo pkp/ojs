@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000023.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Section Editor's Role Index - Archives
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000023" locale="fr_CA" title="Archives" toc="editorial/toc/000005" key="editorial.sectionEditorsRole.submissions.archives">
+	<section>
+		<![CDATA[<p>Les soumissions dans cette file d’attente sont passées par le processus éditorial, soit qu’elles ont été refusées, mise au  calendrier pour publication, ou déjà publiées. Cette file d’attente donne aux éditeurs et à l’éditeur assigné à la rubrique un accès complet à l’historique éditorial de la soumission. (le sommaire, la soumission, la révision, l’édition et l’historique.</p>]]>	
+	</section>
+</topic>

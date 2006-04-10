@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000011.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author's Role Editing Index 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000011" locale="fr_CA" title="Édition" toc="editorial/toc/000009" subtoc="editorial/toc/000011" key="editorial.authorsRole.editing">
+	<section>
+		<![CDATA[<p>L’auteur contribue  à la révision et à la correction d’épreuves de sa soumission au stade de l’édition quand celle-ci est en préparation pour publication électronique ou imprimée.</p>]]>	
+	</section>
+</topic>

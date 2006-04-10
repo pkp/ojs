@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000004.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Section Editor's Role Index 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000004" locale="fr_CA" title="Rôle de l’éditeur de rubrique" toc="editorial/toc/000000" subtoc="editorial/toc/000004" key="editorial.sectionEditorsRole">
+	<section>
+		<![CDATA[<p>Les éditeurs de rubriques gèrent habituellement la révision des soumissions et la révision de celles qui sont acceptées. Cependant, dépendant des politiques du journal, un éditeur de rubrique initialement assigné à une soumissions par un éditeur, peut être appelé à seulement la voir à l’étape de révision, après laquelle, si la soumission est acceptée, l’éditeur la prend en charge (dons le rôle d’éditeur de rubrique). Les éditeurs envoient leurs demandes à l’éditeur de rubrique pour voir une soumission passer au processus éditorial.</p>]]>	
+	</section>
+</topic>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000030.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Reviewer's Role Index - Submissions 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000030" locale="fr_CA" title="Soumissions" toc="editorial/toc/000008" key="editorial.reviewersRole.submissions">
+	<section>
+		<![CDATA[<p>En entrant sur le site du Journal, le réviseur arrive à la page d’accueil. En cliquant sur le rôle de reviseur (il se peut qu’un réviseur soit inscrit sous d’autres rôles, tel celui d’auteur), le réviseur est alors dirigé vers les pages des soumissions. Cette page énumère les soumissions que le reviseur a été invité à réviser, ou est actuellement en train de réviser. La ligne d’attente des révisions indique aussi à quelle étape la révisions en est, car certaines révisions en sont peut-être à la deuxième étape, après que l’éditeur de la rubrique eut décidé qu’une soumission devait être soumise à nouveau pour être revue. Cette page donne aussi accès aux révisions antérieures que le reviseur a déjà faites pour le Journal.</p>]]>	
+	</section>
+</topic>

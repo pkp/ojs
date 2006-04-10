@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000018.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Editor's Role Submissions - Archives 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000018" locale="fr_CA" title="Archives" toc="editorial/toc/000002" key="editorial.editorsRole.submissions.archives">
+	<section>
+		<![CDATA[
+		<p>Les soumissions dans cette file d’attente sont déjà passées par le processus éditorial, soit qu’elles ont été refusées, mises au calendrier pour publication, ou déjà publiées. Cette file d’attente permet aux éditeurs, et aux éditeurs de rubriques assignés, d’accéder à l’historique éditorial de la soumission (le sommaire, la soumission, la révision et l’histoire).</p>	<p><i>Pour restaurer un article archivé à la liste active </i>.Un clic sur le titre de la soumission va vous diriger vers les pages du sommaire, des révisions, de l’édition et de l’historique de celle-ci. Sur la page du sommaire il y a un lien «Restaurer à la liste active» qui amènera la soumission dans la liste de «en révision» ou «en édition» selon l’étape à laquelle la soumission était avant d’être archivée.</p>
+		]]>	
+	</section>
+</topic>
