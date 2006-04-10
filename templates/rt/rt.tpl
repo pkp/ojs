@@ -32,7 +32,7 @@
 
 <h5>{$journal->getSetting('journalInitials')|escape}<br />{$issue->getIssueIdentification()|escape}</h5>
 
-<p><a href="{url page="issue" op="view" path=$issue->getBestIssueId($journal)}" target="_parent" class="rtAction">{translate key="issue.toc"}</a></p>
+<p><a href="{url page="issue" op="view" path=$issue->getBestIssueId($journal)|to_array:"showToc"}" target="_parent" class="rtAction">{translate key="issue.toc"}</a></p>
 
 <div class="rtSeparator"></div>
 
