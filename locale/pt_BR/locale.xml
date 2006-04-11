@@ -2125,7 +2125,7 @@ O servidor atualmente tem suporte a mbstring: <strong>{$supportsMBString}</stron
 	<message key="installer.locale">Idioma</message>
 	<message key="installer.fileSettings">Configuração de Documento</message>
 	<message key="installer.filesDir">Diretório para Submissão de Documentos</message>
-	<message key="installer.filesDirInstructions"><![CDATA[Digite o caminho físico completo para um diretório existente no servidor onde serão armazenados os documentos submetidos. Este diretório não deve possuir acesso direto via web. Verifique se o diretório existe e se possui permissões de escrita antes da instalação. Os caminhos no Windows devem utilizar a barra delimitadora para frente, ex.: "C:/myjournal/files".]]</message>
+	<message key="installer.filesDirInstructions"><![CDATA[Digite o caminho físico completo para um diretório existente no servidor onde serão armazenados os documentos submetidos. Este diretório não deve possuir acesso direto via web. Verifique se o diretório existe e se possui permissões de escrita antes da instalação. Os caminhos no Windows devem utilizar a barra delimitadora para frente, ex.: "C:/myjournal/files".]]></message>
 	<message key="installer.securitySettings">Configurações de Segurança</message>
 	<message key="installer.encryption">Algoritmo de Critografia de Senha</message>
 	<message key="installer.encryptionInstructions">SHA1 é recomendado caso o sistema suporte (requer PHP >= 4.3.0).</message>
