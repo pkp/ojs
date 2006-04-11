@@ -32,6 +32,9 @@
 	{if !empty($journalSettings.enableSubscriptions)}
 		<li>&#187; <a href="{url op="subscriptions"}">{translate key="about.subscriptions"}</a></li>
 	{/if}
+	{foreach key=key from=$customAboutItems item=customAboutItem}
+		{if $customAboutItem.title!=''}<li>&#187; <a href="{url op="editorialPolicies" anchor=custom`$key`}">{$customAboutItem.title|escape}</a></li>{/if}
+	{/foreach}
 	{call_hook name="Templates::About::Index::Policies"}
 </ul>
 
@@ -47,9 +50,6 @@
 <h3>{translate key="about.other"}</h3>
 <ul class="plain">
 	{if not (empty($journalSettings.publisher) && empty($journalSettings.contributorNote) && empty($journalSettings.contributors) && empty($journalSettings.sponsorNote) && empty($journalSettings.sponsors))}<li>&#187; <a href="{url op="journalSponsorship"}">{translate key="about.journalSponsorship"}</a></li>{/if}
-	{foreach key=key from=$customAboutItems item=customAboutItem}
-		{if $customAboutItem.title!=''}<li>&#187; <a href="{url op="editorialPolicies" anchor=custom`$key`}">{$customAboutItem.title|escape}</a></li>{/if}
-	{/foreach}
 	<li>&#187; <a href="{url op="siteMap"}">{translate key="about.siteMap"}</a></li>
 	<li>&#187; <a href="{url op="aboutThisPublishingSystem"}">{translate key="about.aboutThisPublishingSystem"}</a></li>
 	{call_hook name="Templates::About::Index::Other"}
