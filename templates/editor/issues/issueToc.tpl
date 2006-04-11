@@ -46,7 +46,7 @@
 <form method="post" action="{url op="updateIssueToc" path=$issueId}" onsubmit="return confirm('{translate|escape:"javascript" key="editor.issues.saveChanges"}')">
 
 {foreach from=$sections item=section}
-<h4>{$section[1]}<a href="{url op="moveSectionToc" path=$issueId d=u sectionId=$section[0]}" class="plain">&uarr;</a> <a href="{url op="moveSectionToc" path=$issueId d=d sectionId=$section[0]}" class="plain">&darr;</a></h4>
+<h4>{$section[1]}{if $section[4]}<a href="{url op="moveSectionToc" path=$issueId d=u newPos=$section[4] sectionId=$section[0]}" class="plain">&uarr;</a>{else}&uarr;{/if} {if $section[5]}<a href="{url op="moveSectionToc" path=$issueId d=d newPos=$section[5] sectionId=$section[0]}" class="plain">&darr;</a>{else}&darr;{/if}</h4>
 
 <table width="100%" class="listing">
 	<tr>

@@ -290,12 +290,22 @@ class IssueManagementHandler extends EditorHandler {
 		$currSection = 0;
 		$counter = 0;
 		$sections = array();
+		$sectionDao =& DAORegistry::getDAO('SectionDAO');
 		foreach ($publishedArticles as $article) {
 			$sectionId = $article->getSectionId();
 			if ($currSection != $sectionId) {
+				$lastSectionId = $currSection;
+				if ($lastSectionId !== 0) $sections[$lastSectionId][5] = $sectionDao->getCustomSectionOrder($issueId, $sectionId); // Store next custom order
 				$currSection = $sectionId;
 				$counter++;
-				$sections[$sectionId] = array($sectionId, $article->getSectionTitle(), array($article), $counter);
+				$sections[$sectionId] = array(
+					$sectionId,
+					$article->getSectionTitle(),
+					array($article),
+					$counter,
+					$sectionDao->getCustomSectionOrder($issueId, $lastSectionId), // Last section custom ordering
+					null // Later populated with next section ordering
+				);
 			} else {
 				$sections[$article->getSectionId()][2][] = $article;
 			}
@@ -376,7 +386,7 @@ class IssueManagementHandler extends EditorHandler {
 				$sectionDao->setDefaultCustomSectionOrders($issueId);
 			}
 
-			$sectionDao->moveCustomSectionOrder($issueId, $section->getSectionId(), Request::getUserVar('d')==='u');
+			$sectionDao->moveCustomSectionOrder($issueId, $section->getSectionId(), Request::getUserVar('newPos'), Request::getUserVar('d') == 'u');
 		}
 
 		Request::redirect(null, null, 'issueToc', $issueId);

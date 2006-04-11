@@ -476,6 +476,28 @@ class SectionDAO extends DAO {
 	}
 
 	/**
+	 * Get the custom section order of a section.
+	 * @param $issueId int
+	 * @param $sectionId int
+	 * @return int
+	 */
+	function getCustomSectionOrder($issueId, $sectionId) {
+		$result = &$this->retrieve(
+			'SELECT seq FROM custom_section_orders WHERE issue_id = ? AND section_id = ?',
+			array($issueId, $sectionId)
+		);
+		
+		$returner = null;
+		if (!$result->EOF) {
+			list($returner) = $result->fields;
+		}
+		$result->Close();
+		unset($result);
+
+		return $returner;
+	}
+
+	/**
 	 * Import the current section orders into the specified issue as custom
 	 * issue orderings.
 	 * @param $issueId int
@@ -517,12 +539,13 @@ class SectionDAO extends DAO {
 	 * Move a custom issue ordering up or down, resequencing as necessary.
 	 * @param $issueId int
 	 * @param $sectionId int
-	 * @param $up boolean Move this section up iff true; otherwise down
+	 * @param $newPos int The new position (0-based) of this section
+	 * @param $up boolean Whether we're moving the section up or down
 	 */
-	function moveCustomSectionOrder($issueId, $sectionId, $up) {
+	function moveCustomSectionOrder($issueId, $sectionId, $newPos, $up) {
 		$this->update(
-			'UPDATE custom_section_orders SET seq = seq ' . ($up?'-':'+') . ' 1.5 WHERE issue_id = ? AND section_id = ?',
-			array($issueId, $sectionId)
+			'UPDATE custom_section_orders SET seq = ? ' . ($up?'-':'+') . ' 0.5 WHERE issue_id = ? AND section_id = ?',
+			array($newPos, $issueId, $sectionId)
 		);
 		$this->resequenceCustomSectionOrders($issueId);
 	}
