@@ -10,8 +10,6 @@
  *
  *}
 
-{assign var="start" value="A"|ord}
-
 {if $subscriptionId}
 	{assign var="pageTitle" value="manager.subscriptions.selectSubscriber"}
 {else}
@@ -36,7 +34,7 @@
 	<input type="text" size="15" name="search" class="textField" value="{$search|escape}" />&nbsp;<input type="submit" value="{translate key="common.search"}" class="button" />
 </form>
 
-<p>{section loop=26 name=letters}<a href="{if $subscriptionId}{url op="selectSubscriber" searchInitial=$smarty.section.letters.index+$start|chr subscriptionId=$subscriptionId}{else}{url op="selectSubscriber" searchInitial=$smarty.section.letters.index+$start|chr}{/if}">{if chr($smarty.section.letters.index+$start) == $searchInitial}<strong>{$smarty.section.letters.index+$start|chr}</strong>{else}{$smarty.section.letters.index+$start|chr}{/if}</a> {/section}<a href="{if $subscriptionId}{url op="selectSubscriber" subscriptionId=$subscriptionId}{else}{url op="selectSubscriber"}{/if}">{if $searchInitial==''}<strong>{translate key="common.all"}</strong>{else}{translate key="common.all"}{/if}</a></p>
+<p>{foreach from=$alphaList item=letter}<a href="{if $subscriptionId}{url op="selectSubscriber" searchInitial=$letter subscriptionId=$subscriptionId}{else}{url op="selectSubscriber" searchInitial=$letter}{/if}">{if $letter == $searchInitial}<strong>{$letter}</strong>{else}{$letter}{/if}</a> {/foreach}<a href="{if $subscriptionId}{url op="selectSubscriber" subscriptionId=$subscriptionId}{else}{url op="selectSubscriber"}{/if}">{if $searchInitial==''}<strong>{translate key="common.all"}</strong>{else}{translate key="common.all"}{/if}</a></p>
 
 <table width="100%" class="listing">
 <tr><td colspan="4" class="headseparator">&nbsp;</td></tr>

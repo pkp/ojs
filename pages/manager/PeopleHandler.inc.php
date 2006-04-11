@@ -127,6 +127,7 @@ class PeopleHandler extends ManagerHandler {
 			USER_FIELD_INTERESTS => 'user.interests'
 		));
 		$templateMgr->assign('rolePath', $roleDao->getRolePath($roleId));
+		$templateMgr->assign('alphaList', explode(' ', Locale::translate('common.alphaList')));
 		$templateMgr->assign('roleSymbolic', $roleSymbolic);
 		$templateMgr->display('manager/people/enrollment.tpl');
 	}
@@ -181,6 +182,7 @@ class PeopleHandler extends ManagerHandler {
 		));
 		$templateMgr->assign_by_ref('users', $users);
 		$templateMgr->assign_by_ref('thisUser', Request::getUser());
+		$templateMgr->assign('alphaList', explode(' ', Locale::translate('common.alphaList')));
 		$templateMgr->assign('helpTopicId', 'journal.users.index');
 		$templateMgr->display('manager/people/searchUsers.tpl');
 	}
@@ -536,6 +538,7 @@ class PeopleHandler extends ManagerHandler {
 			USER_FIELD_EMAIL => 'user.email',
 			USER_FIELD_INTERESTS => 'user.interests'
 		));
+		$templateMgr->assign('alphaList', explode(' ', Locale::translate('common.alphaList')));
 		$templateMgr->assign('oldUserId', $oldUserId);
 		$templateMgr->assign('rolePath', $roleDao->getRolePath($roleId));
 		$templateMgr->assign('roleSymbolic', $roleSymbolic);

@@ -145,6 +145,7 @@ class SubscriptionManagerHandler extends Handler {
 		$templateMgr->assign_by_ref('users', $users);
 		$templateMgr->assign('helpTopicId', 'journal.managementPages.subscriptions');
 		$templateMgr->assign('subscriptionId', Request::getUserVar('subscriptionId'));
+		$templateMgr->assign('alphaList', explode(' ', Locale::translate('common.alphaList')));
 		$templateMgr->display('subscription/users.tpl');
 	}
 

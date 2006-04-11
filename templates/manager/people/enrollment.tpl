@@ -43,7 +43,6 @@ function confirmAndPrompt(userId) {
 </script>
 
 <h3>{translate key=$roleName}</h3>
-{assign var="start" value="A"|ord}
 <form method="post" action="{url path=$roleSymbolic}">
 	<select name="roleSymbolic" class="selectMenu">
 		<option {if $roleSymbolic=='all'}selected="selected" {/if}value="all">{translate key="manager.people.allUsers"}</option>
@@ -68,7 +67,7 @@ function confirmAndPrompt(userId) {
 	<input type="text" size="10" name="search" class="textField" value="{$search|escape}" />&nbsp;<input type="submit" value="{translate key="common.search"}" class="button" />
 </form>
 
-<p>{section loop=26 name=letters}<a href="{url path=$roleSymbolic searchInitial=$smarty.section.letters.index+$start|chr}">{if chr($smarty.section.letters.index+$start) == $searchInitial}<strong>{$smarty.section.letters.index+$start|chr}</strong>{else}{$smarty.section.letters.index+$start|chr}{/if}</a> {/section}<a href="{url path=$roleSymbolic}">{if $searchInitial==''}<strong>{translate key="common.all"}</strong>{else}{translate key="common.all"}{/if}</a></p>
+<p>{foreach from=$alphaList item=letter}<a href="{url path=$roleSymbolic searchInitial=$letter}">{if $letter == $searchInitial}<strong>{$letters}</strong>{else}{$letter}{/if}</a> {/foreach}<a href="{url path=$roleSymbolic}">{if $searchInitial==''}<strong>{translate key="common.all"}</strong>{else}{translate key="common.all"}{/if}</a></p>
 
 {if not $roleId}
 <ul>

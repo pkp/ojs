@@ -346,6 +346,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$templateMgr->assign('averageQualityRatings', $reviewAssignmentDao->getAverageQualityRatings($journal->getJournalId()));
 
 			$templateMgr->assign('helpTopicId', 'journal.roles.reviewer');
+			$templateMgr->assign('alphaList', explode(' ', Locale::translate('common.alphaList')));
 			$templateMgr->display('sectionEditor/selectReviewer.tpl');
 		}
 	}
@@ -424,6 +425,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		));
 		$templateMgr->assign('roleId', $roleId);
 		$templateMgr->assign_by_ref('users', $users);
+		$templateMgr->assign('alphaList', explode(' ', Locale::translate('common.alphaList')));
 
 		$templateMgr->assign('helpTopicId', 'journal.roles.index');
 		$templateMgr->display('sectionEditor/searchUsers.tpl');
@@ -792,6 +794,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$templateMgr->assign('articleId', $args[0]);
 
 			$templateMgr->assign('helpTopicId', 'journal.roles.copyeditor');
+			$templateMgr->assign('alphaList', explode(' ', Locale::translate('common.alphaList')));
 			$templateMgr->display('sectionEditor/selectUser.tpl');
 		}
 	}

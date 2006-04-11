@@ -143,6 +143,7 @@
 	<message key="common.plugin">Plugin</message>
 	<message key="common.default">Default</message>
 	<message key="common.addSelf">Add Self</message>
+	<message key="common.alphaList">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</message>
 
 	<!-- Common Form Messages -->
 	<message key="form.errorsOccurred">Errors occurred processing this form</message>

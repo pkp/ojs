@@ -9,12 +9,10 @@
  * $Id$
  *}
 
-{assign var="start" value="A"|ord}
-
 {assign var="pageTitle" value="search.authorIndex"}
 {include file="common/header.tpl"}
 
-<p>{section loop=26 name=letters}<a href="{url op="authors" searchInitial=$smarty.section.letters.index+$start|chr}">{if chr($smarty.section.letters.index+$start) == $searchInitial}<strong>{$smarty.section.letters.index+$start|chr}</strong>{else}{$smarty.section.letters.index+$start|chr}{/if}</a> {/section}<a href="{url op="authors"}">{if $searchInitial==''}<strong>{translate key="common.all"}</strong>{else}{translate key="common.all"}{/if}</a></p>
+<p>{foreach from=$alphaList item=letter}<a href="{url op="authors" searchInitial=$letter}">{if $letter == $searchInitial}<strong>{$letter}</strong>{else}{$letter}{/if}</a> {/foreach}<a href="{url op="authors"}">{if $searchInitial==''}<strong>{translate key="common.all"}</strong>{else}{translate key="common.all"}{/if}</a></p>
 
 {iterate from=authors item=author}
 	{assign var=lastFirstLetter value=$firstLetter}

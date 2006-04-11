@@ -9,7 +9,6 @@
  * $Id$
  *}
 
-{assign var="start" value="A"|ord}
 {assign var=pageTitle value="manager.groups.membership.addMember"}
 
 {include file="common/header.tpl"}
@@ -24,7 +23,7 @@
 	<input type="text" size="15" name="search" class="textField" value="{$search|escape}" />&nbsp;<input type="submit" value="{translate key="common.search"}" class="button" />
 </form>
 
-<p>{section loop=26 name=letters}<a href="{url op="groupMembership" path=$group->getGroupId() searchInitial=$smarty.section.letters.index+$start|chr}">{if chr($smarty.section.letters.index+$start) == $searchInitial}<strong>{$smarty.section.letters.index+$start|chr}</strong>{else}{$smarty.section.letters.index+$start|chr}{/if}</a> {/section}<a href="{url op="groupMembership" path=$group->getGroupId()}">{if $searchInitial==''}<strong>{translate key="common.all"}</strong>{else}{translate key="common.all"}{/if}</a></p>
+<p>{foreach from=$alphaList item=letter}<a href="{url path=$group->getGroupId() searchInitial=$letter}">{if $letter == $searchInitial}<strong>{$letter}</strong>{else}{$letter}{/if}</a> {/foreach}<a href="{url op="groupMembership" path=$group->getGroupId()}">{if $searchInitial==''}<strong>{translate key="common.all"}</strong>{else}{translate key="common.all"}{/if}</a></p>
 
 <table width="100%" class="listing">
 <tr><td colspan="2" class="headseparator">&nbsp;</td></tr>

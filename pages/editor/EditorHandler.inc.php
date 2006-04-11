@@ -396,6 +396,7 @@ class EditorHandler extends SectionEditorHandler {
 				USER_FIELD_USERNAME => 'user.username',
 				USER_FIELD_EMAIL => 'user.email'
 			));
+			$templateMgr->assign('alphaList', explode(' ', Locale::translate('common.alphaList')));
 			$templateMgr->assign('helpTopicId', 'editorial.editorsRole.submissionSummary.submissionManagement');	
 			$templateMgr->display('editor/selectSectionEditor.tpl');
 		}

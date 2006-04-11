@@ -218,6 +218,7 @@ class GroupHandler extends ManagerHandler {
 				USER_FIELD_USERNAME => 'user.username',
 				USER_FIELD_EMAIL => 'user.email'
 			));
+			$templateMgr->assign('alphaList', explode(' ', Locale::translate('common.alphaList')));
 			$templateMgr->assign_by_ref('group', $group);
 
 			$templateMgr->display('manager/groups/selectUser.tpl');
