@@ -321,10 +321,10 @@ class AuthorAction extends Action {
 				$email->setSubject($authorSubmission->getArticleTitle());
 				if (!empty($editors)) {
 					foreach ($editors as $editor) {
-						$email->addCc($editor->getEmail(), $editor->getFullName());
+						$email->addRecipient($editor->getEmail(), $editor->getFullName());
 					}
 				} else {
-					$email->addCc($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
+					$email->addRecipient($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
 				}
 			}
 
