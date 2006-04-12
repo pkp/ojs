@@ -34,7 +34,7 @@
 
 	<!-- Common Messages -->
 	<message key="common.and">et</message>
-	<message key="common.entre">entre</message>
+	<message key="common.between">entre</message>
 	<message key="common.all">Tout</message>
 	<message key="common.on">Ouvert</message>
 	<message key="common.off">Fermé</message>
@@ -139,13 +139,7 @@
 	<message key="common.initiate">Commencer</message>
 	<message key="common.complete">Complet</message>
 	<message key="common.options">Options</message>
-	<message key="common.between">entre</message>
-	<message key="common.news">Nouvelles</message>
-	<message key="news.NewsEditor">Rédacteur de Nouvelles</message>
-	<message key="news.newsUpdated">Nouvelles mis à jour</message>
-	<message key="news.AddNews">Ajouter un nouvelles</message>
-	
-	
+
 	<!-- Common Form Messages -->
 	<message key="form.errorsOccurred">Des erreurs se sont produites lors du traitement de ce formulaire</message>
 	<message key="form.saveToUpload">Utiliser Enregistrer pour télécharger le fichier .</message>
@@ -188,7 +182,7 @@
 	<!-- Navigation -->
 	<message key="navigation.journalHelp">Aide pour la revue</message>
 	<message key="navigation.loggedInAs">Vous êtes en connexion sous le nom...</message>
-	<message key="navigation.signOut">Fermer la session</message>
+	<message key="navigation.logout">Fermer la session</message>
 	<message key="navigation.home">Page d'accueil</message>
 	<message key="navigation.about">À propos de</message>
 	<message key="navigation.userHome">Page d'accueil de l'utilisateur</message>
@@ -407,8 +401,8 @@
 	<message key="user.login">Ouverture de session</message>
 	<message key="user.profile">Profil</message>
 	<message key="user.register">S'inscrire</message>
-	<message key="user.signIn">Ouvrir la session</message>
-	<message key="user.signOut">Fermer la session</message>
+	<message key="user.logIn">Ouvrir la session</message>
+	<message key="user.logOut">Fermer la session</message>
 	<message key="user.username">Nom d'utilisateur</message>
 	<message key="user.password">Mot de passe</message>
 	<message key="user.name">Nom</message>
@@ -565,7 +559,7 @@
 	<message key="comments.enterComment">Entrer le commentaire</message>
 	<message key="comments.name">Afficher le nom</message>
 	<message key="comments.email">Afficher le courriel</message>
-	<message key="comments.titre">Titre</message>
+	<message key="comments.title">Titre</message>
 	<message key="comments.body">Corps du message</message>
 	<message key="comments.postAnonymously">Afficher ce commentaire de façon anonyme</message>
 	<message key="comments.readMore">Complément de texte</message>
@@ -696,10 +690,8 @@ Prendre note que l'interface OAI peut être désactivée pour ce site en éditan
 	<message key="manager.managementPages">Pages de gestion</message>
 	<message key="manager.users">Utilisateurs</message>
 	<message key="manager.roles">Rôle</message>
-	<message key="manager.expertises">Expertises</message>
 	<message key="manager.subscriptionTypes">Types d'abonnement</message>
 	<message key="manager.subscriptions">Abonnements</message>
-	<message key="manager.reports">Reports</message>
 
 	<!-- Files Browser -->
 	<message key="manager.files.indexOfDir">Index de {$dir}</message>
@@ -740,7 +732,7 @@ Prendre note que l'interface OAI peut être désactivée pour ce site en éditan
 	<message key="manager.setup.mailingAddressDescription">Emplacement physique et adresse postale de la revue.</message>
 	<message key="manager.setup.sectionsAndSectionEditors">Sections et rédacteurs de section</message>
 	<message key="manager.setup.editorialReviewBoard">Comité de rédaction et de révision </message>
-	<message key="manager.setup.useÉditorialReviewBoard">La revue aura recours à un comité de rédaction et de révision.</message>
+	<message key="manager.setup.useEditorialReviewBoard">La revue aura recours à un comité de rédaction et de révision.</message>
 	<message key="manager.setup.editorialReviewBoardDescription">Les revues disposent de comités de rédaction pour superviser la direction de la rédaction de la revue, participer à la nomination des rédacteurs, et, grâce à la réputation des membres du comité, impartir à la revue un certain standing dans le domaine. Les comités d'évaluation jouent un rôle similaire mais, en outre, ils dirigent la procédure d'évaluation. Les membres du comité de lecture n'auront pas accès au système de gestion de la revue mais ils feront partie de la liste des personnes disponibles pour effectuer une évaluation par les pairs.</message>
 	<message key="manager.setup.editorialMembers">Aller à Membres du comité et ajouter les noms des membres du comité de rédaction et du comité de lecture. Cela peut être fait à n'importe que moment de l'exploitation de la revue.</message>
 	<message key="manager.setup.principalContact">Contact principal</message>
@@ -790,7 +782,6 @@ est obligatoire.</message>
         <message key="manager.setup.reviewOptions.remindForInvite2">jours.</message>
         <message key="manager.setup.reviewOptions.remindForSubmit1">Si le réviseur n'a pas soumis de recommandation dans les</message>
         <message key="manager.setup.reviewOptions.remindForSubmit2">jours après la date d'échéance de l'évaluation.</message>
-        <message key="manager.setup.reviewOptions.noteOnEmailWording">Le libellé des rappels peut être révisé dans Courriels, Gestion des revues.</message>
 	<message key="manager.setup.reviewOptions.reviewerRatings">Cotes du réviseur</message>
         <message key="manager.setup.reviewOptions.onQuality">Les rédacteurs classeront les réviseurs sur une échelle de qualité de cinq points après chaque révision.</message>
 	<message key="manager.setup.reviewOptions.reviewerAccess">Accès du réviseur</message>
@@ -826,7 +817,7 @@ personnelles</message>
 	<message key="manager.setup.addItemtoAboutJournal">Ajouter un article pour insérer dans " À propos de la revue "</message>
 	<message key="manager.setup.aboutItemContent">Contenu</message>
 	<message key="manager.setup.addAboutItem">Ajouter des articles À propos </message>
-	<message key="manager.setup.form.numRéviseursPerSubmission">Le nombre de réviseurs par soumission est obligatoire.</message>
+	<message key="manager.setup.form.numReviewersPerSubmission">Le nombre de réviseurs par soumission est obligatoire.</message>
 	<message key="manager.setup.securitySettings">Paramètres visant la sécurité et l'accès</message>
 	<message key="manager.setup.securitySettingsDescription">OJS offre certaines options de sécurité qui peuvent être utilisées pour limiter le contenu de la revue et garder des renseignements supplémentaires sur les soumissions à des fins de vérification.</message>
 	<message key="manager.setup.userRegistration">Enregistrement de l'utilisateur</message>
@@ -910,8 +901,8 @@ Prendre note que si votre webmestre a déjà inscrit ce site auprès de PKP Harv
 	<message key="manager.setup.frequencyOfPublicationDescription">Déterminer les premiers numéro de la revue ou des volume et année de la première publication de la revue, ainsi que la fréquence prévue pour le numéro et le volume.</message>
 	<message key="manager.setup.frequencyOfPublicationNote">Note: Laisser des postes en blanc s'ils ne sont pas utilisés avec cette revue, et les rédacteurs peuvent réinsérer les numéros lors de la publication.</message>
 	<message key="manager.setup.appearInAboutJournal">(Apparaîtra dans À propos de la revue) </message>
-	<message key="manager.setup.managementOfBasicÉditorialSteps">Gestion des étapes éditoriales de base </message>
-	<message key="manager.setup.basicÉditorialStepsDescription"><![CDATA[Étapes : File d'attente des soumissions &gt; Révision des soumissions &gt; Édition des soumissions &gt; File d'attente de l'ordonnancement &gt; Table des matières.<br /><br />
+	<message key="manager.setup.managementOfBasicEditorialSteps">Gestion des étapes éditoriales de base </message>
+	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[Étapes : File d'attente des soumissions &gt; Révision des soumissions &gt; Édition des soumissions &gt; File d'attente de l'ordonnancement &gt; Table des matières.<br /><br />
 Sélectionner un modèle pour traiter ces aspects du processus éditorial. (Pour désigner un rédacteur en chef et des rédacteurs de section, aller à Rédacteurs dans Gestion des revues.)]]></message>
 	<message key="manager.setup.editorialProcess1">Un ou plusieurs rédacteurs s'occupent des étapes de base sans rôle désigné.</message>
 	<message key="manager.setup.editorialProcess2">Le rédacteur en chef s'occupe de la file d'attente des soumissions, de la file d'attente de l'ordonnancement, et de la table des matières, tandis que les rédacteurs de section s'occupent de la révision des soumissions et de l'édition des soumissions.</message>
@@ -927,7 +918,7 @@ Sélectionner un modèle pour traiter ces aspects du processus éditorial. (Pour
 	<message key="manager.setup.layoutInstructions">Instructions pour la mise en page</message>
 	<message key="manager.setup.layoutInstructionsDescription">Les instructions pour la mise en page peuvent être préparées pour le formatage d'articles à publier dans la revue et être entrés ci-dessous en HTML ou en texte en clair. Elles seront mises à la disposition du préparateur de copie et du réviseur de section dans la page éditoriale de chaque soumission. (Comme chaque revue peut utiliser ses propres formats de fichier, normes bibliographiques, feuille de styles, etc., un ensemble d'instructions par défaut n'est pas fourni.)</message>
 	<message key="manager.setup.proofreading">Correcteurs d'épreuves</message>
-	<message key="manager.setup.useCorrecteurs d'épreuves">La revue désignera des correcteurs d'épreuves qui (de concert avec les auteurs) vérifieront les épreuves de galée.</message>
+	<message key="manager.setup.useProofreaders">La revue désignera des correcteurs d'épreuves qui (de concert avec les auteurs) vérifieront les épreuves de galée.</message>
 	<message key="manager.setup.noUseProofreaders">Les rédacteurs et les auteurs corrigeront les épreuves de galée.</message>
 	<message key="manager.setup.proofingInstructions">Instructions pour le tirage d'épreuves</message>
 	<message key="manager.setup.proofingInstructionsDescription">Les instructions pour la correction d'épreuve seront mises à la disposition des correcteurs d'épreuves, auteurs, préparateurs de copie, et réviseurs de section à l'étape de l'édition de la soumission. Voir ci-dessous un ensemble d'instructions par défaut en HTML, qui peuvent être modifiées ou remplacées par le gestionnaire de revue en tout temps (en HTML ou texte en clair).</message>
@@ -939,13 +930,11 @@ Sélectionner un modèle pour traiter ces aspects du processus éditorial. (Pour
 	<message key="manager.setup.enablePublicIssueId">Des identificateurs personnalisés seront utilisés pour identifier les numéros.</message>
 	<message key="manager.setup.enablePublicArticleId">Des identificateurs 
 personnalisés seront utilisés pour identifier les articles publiés.</message>
-	<message key="manager.setup.pageNumberIdentifiant">Option Numéros de page </message>
+	<message key="manager.setup.pageNumberIdentifier">Option Numéros de page </message>
 	<message key="manager.setup.enablePageNumber">Des numéros de page pour 
 chaque article publié seront inclus dans la table des matières de cette revue (par ex., p. 13-26).</message>
 	<message key="manager.setup.subscriptionDescription">Une revue avec frais d'abonnement doit désigner un chef des abonnements. Le chef des abonnements est inscrit dans le système comme un gestionnaire de revue afin de pouvoir établir les types d'abonnement et de gérer les abonnés (sous Abonnements dans la page de gestion des revues). En utilisant Abonnements, le rédacteur peut désigner les articles qui seront offerts pour consultation libre, ainsi que des numéros complets un certain temps après la publication (de 0 à 24 mois).</message>
 	<message key="manager.setup.subscriptionContactDescription">Si la gestion des abonnements est activée, le nom de cette personne figurera dans la page À propos de la revue comme premier contact pour les abonnements.</message>
-	<message key="manager.setup.subscriptionAdditionalInformation">Renseignements supplémentaires</message>
-	<message key="manager.setup.subscriptionAdditionalInformationDescription">Tout renseignement supplémentaire sur les abonnements, y compris le mode de paiment  et les programmes spéciaux de soutien aux pays en développement, seront mis à disposition, avec les types d'abonnement et une structure de frais, sous Abonnements dans À propos de la revue.</message>
 	<message key="manager.setup.subscription">Gestion des abonnements</message>
 	<message key="manager.setup.enableSubscriptions">Activer l'élément Gestion des abonnements pour cette revue.</message>
 
@@ -1039,7 +1028,7 @@ chaque article publié seront inclus dans la table des matières de cette revue 
 	<message key="manager.sections.submissionIndexing">Les articles dans cette section doivent être inclus dans le contenu indexé de la revue.</message>
 	<message key="manager.sections.editorRestriction">Les articles ne peuvent être soumis que par les rédacteurs et les rédacteurs de section.</message>
 	<message key="manager.sections.readingTools">Outils de lecture</message>
-	<message key="manager.sections.Indexed">Indexé</message>
+	<message key="manager.sections.indexed">Indexé</message>
 	<message key="manager.sections.policy">Politique de la section </message>
 
 	<!-- Import/Export -->
@@ -1135,8 +1124,6 @@ chaque article publié seront inclus dans la table des matières de cette revue 
 	<message key="manager.subscriptionTypes.form.institutionalValid">Veuillez utiliser la case à cocher fournie.</message>
 	<message key="manager.subscriptionTypes.form.membershipValid">Veuillez utiliser la case à cocher fournie.</message>
 	<message key="manager.subscriptionTypes.form.publicValid">Veuillez utiliser la case à cocher fournie.</message>
-	<message key="manager.subscriptionTypes.form.seqRequired">Un ordre séquentiel est obligatoire.</message>
-	<message key="manager.subscriptionTypes.form.seqNumeric">L'ordre séquentiel doit être une valeur numérique positive.</message>
 	<message key="manager.subscriptionTypes.form.typeName">Nom</message>
 	<message key="manager.subscriptionTypes.form.description">Description</message>
 	<message key="manager.subscriptionTypes.form.cost">Coût</message>
@@ -1148,8 +1135,6 @@ chaque article publié seront inclus dans la table des matières de cette revue 
 	<message key="manager.subscriptionTypes.form.institutional">Les abonnés doivent être validés par une authentification IP ou un domaine.</message>
 	<message key="manager.subscriptionTypes.form.membership">Les abonnés doivent être membres d'une association ou d'une organization.</message>
 	<message key="manager.subscriptionTypes.form.public">Ce type d'abonnement doit être publiquement visible.</message>
-	<message key="manager.subscriptionTypes.form.seq">Séquence</message>
-	<message key="manager.subscriptionTypes.form.seqInstructions">À des fins d'affichage, l'ordre de ce type d'abonnement par rapport aux autres types d'abonnement.</message>
 	<message key="manager.subscriptionTypes.form.saveAndCreateAnotherType">Enregistrer et créer un autre</message>
 	<message key="manager.subscriptionTypes.format.online">En ligne</message>
 	<message key="manager.subscriptionTypes.format.print">Imprimer</message>
@@ -1303,7 +1288,6 @@ chaque article publié seront inclus dans la table des matières de cette revue 
 	<message key="editor.article.toReviewer">Au réviseur</message>
 	<message key="editor.article.notifyReviewer">Informer le réviseur</message>
 	<message key="editor.article.initiateReview">Commencer la révision</message>
-	<message key="editor.article.initiateAllReviews">Commencer toutes les révisions</message>
 	<message key="editor.article.cancelReview">Annuler la demande de révision </message>
 	<message key="editor.article.clearReview">Effacer le réviseur</message>
 	<message key="editor.article.enterRecommendation">Entrer la recommandation</message>
@@ -1382,8 +1366,8 @@ avec un signe plus (+) indiquant que la révision est en cours.]]></message>
 	<message key="editor.submissions.lastCompleted">Dernier complet </message>
 	
 	<!-- Section Editor -->
-	<message key="sectionEditor.activeÉditorialAssignments">Travail éditorial en cours </message>
-	<message key="sectionEditor.completedÉditorialAssignments">Travail éditorial terminé </message>
+	<message key="sectionEditor.activeEditorialAssignments">Travail éditorial en cours </message>
+	<message key="sectionEditor.completedEditorialAssignments">Travail éditorial terminé </message>
 	<message key="sectionEditor.noneAssigned">Aucune soumission assignée.</message>
 	<message key="sectionEditor.copyedit.confirmRenotify">Informer ce préparateur de copie encore une fois redémarrera son assignation. Êtes-vous certain de vouloir le faire?</message>
 	<message key="sectionEditor.author.confirmRenotify">Informer cet auteur encore une fois redémarrera son assignation. Êtes-vous certain de vouloir le faire?</message>
@@ -1402,8 +1386,8 @@ avec un signe plus (+) indiquant que la révision est en cours.]]></message>
 	<message key="sectionEditor.review.addReviewer">Ajouter un nouveau réviseur </message>
 
 	<!-- Layout Editor -->
-	<message key="layoutEditor.activeÉditorialAssignments">Travail éditorial en cours</message>
-	<message key="layoutEditor.completedÉditorialAssignments">Travail éditorial terminé </message>
+	<message key="layoutEditor.activeEditorialAssignments">Travail éditorial en cours</message>
+	<message key="layoutEditor.completedEditorialAssignments">Travail éditorial terminé </message>
 	<message key="layoutEditor.noActiveAssignments">Aucun travail éditorial en cours.</message>
 	<message key="layoutEditor.layoutEditingAssignments">Travail éditorial de mise en page </message>
 	<message key="layoutEditor.galley.uploadGalleyFormat">Télécharger le format de l'épreuve de galée</message>
@@ -1547,9 +1531,7 @@ On peut visualiser le fichier en cliquant sur le nom du fichier. Un fichier nouv
 	<message key="author.submit.uploadSubmissionFile">Télécharger le fichier de présentation</message>
 	<message key="author.submit.replaceSubmissionFile">Remplacer le fichier de présentation</message>
 	<message key="author.submit.noSubmissionFile">Aucun fichier de présentation téléchargé.</message>
-	
-	<message key="author.activeSubmissionIntro">Cette page traque votre soumission par l'évaluation et éditer traite. Au côté à droite extrême de la table au dessous, vous remarquerez à ce que monte votre soumission est dans la revue et l'éditorial traite. S'il vous plaît cliqueter le titre de votre soumission pour obtenir plus de détails sur son statut.</message>
-	
+
 	<!-- Article Submission Step 4 -->
 	<message key="author.submit.supplementaryFilesInstructions">Cette étape est une étape optionnelle du processus de soumission. Les fichiers supplémentaires agissent comme une annexe à une soumission, et visent à améliorer la contribution de la soumission. Les fichiers supplémentaires peuvent comprendre des instruments de recherche; des ensembles de données qui sont conformes aux termes de la révision éthique de la recherche de l'étude; des sources auxquelles les lecteurs n'auraient pas autrement accès; ou des figures ou des tables qui ne peuvent être intégrées dans le texte même. Ces fichiers sont aussi indexés par l'auteur, qui identifie leur relation avec la soumission, de même que leur propriété. Les fichiers supplémentaires peuvent être téléchargés dans n'importe quel format de fichier et ils seront mis à la disposition des lecteurs dans leur format original.</message>
 	<message key="author.submit.noSupplementaryFiles">Aucun fichier supplémentaire n'a été ajouté à cette soumission.</message>
@@ -2102,8 +2084,6 @@ La validation peut faire défaut pour les URL de recherche qui exigent que les d
 	<message key="rt.peerReviewed">Pour cet article évalué par les pairs</message>		
 	<message key="rt.authorBio">Voir la biographie de l'auteur</message>
 	<message key="rt.aboutAuthor">À propos des auteurs</message>
-
-	<message key="rt.captureCitation">Capturer la citation</message>
 
 	<message key="rt.viewMetadata">Visualiser les métadonnées de l'article</message>
 	<message key="rt.articleMetadata">Métadonnées de l'article</message>
