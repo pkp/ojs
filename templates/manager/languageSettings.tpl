@@ -75,7 +75,7 @@
 </tr>
 </table>
 
-<p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{$url page="manager"}'" /></p>
+<p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url page="manager"}'" /></p>
 
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 

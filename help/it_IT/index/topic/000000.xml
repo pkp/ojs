@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Index Help Page 
+  *
+  * $Id$
+  -->
+
+<topic id="index/topic/000000" locale="it_IT" title="OJS Help" toc="index/toc/000000" key="index.index">
+	<section>
+		<![CDATA[<p>Il documento di Help per Open Journal Systems (OJS) &#x00E8; progettato  per aiutare gli utenti nel processo di lettura, submission , edit, e pubblicazione di item in journal di studi e di interesse generale. Inoltre &#x00E8; dovrebbe servire come  manuale  per OJS che descrive lo scopo e i funzionamento di questo programma di amministrazione del journal. L'Help fornisce inoltre consigli editoriali su pratiche comuni in pubblicazioni di ricerca journal. in aggiunta all'Help, gli uteni hanno accesso al personale tecnico di supporto del journal, che sar&#x00E0; elencato nell'About the Journal, sotto Contatti.</p><p>Poich&#x00E8; OJS impiega i ruoli o i titoli di pubblicazione indicati per ogni funzione e processo - dal Journal Manager il quale vede dal Setup del journal all'autore che corregge le bozze - ogni soggetto trattato nell'Help a cosa un rolo dovrebbe fare. Sullo stesso principio, l'accesso al documento &#x00E8; determinato da chi fecendo  cosa dove all'interno del sistema. Che &#x00E8;, l'Help &#x00E8; specifico nei contesti. Ci&#00F2; che uno vede dipende dal suo ruolo; una persona pu&#x00F2; avere pi&#x00F9; di un ruolo in OJS (un revisore pu&#00F2; anche essere un autore o un Journal Manager pu&#00F2; anche essere curatore). Ci&#x00F2; che si vede dipende inoltre da dove si sta lavorando all'interno di OJS. il ruolo e il luogo determinano quale soggetto dell'Help viene fuori, nonostante l'utente possa arrivare a soggetti correlati in modo da esplorare ogni aspetto del sistema.</p>]]>	
+	</section>
+</topic>

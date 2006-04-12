@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../toc.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for User Interface. 
+  *
+  * $Id$
+  -->
+
+<toc id="user/toc/000000" locale="it_IT" title="Journal Web Site" parent_topic="user/topic/000000">
+	<topic id="user/topic/000001" title="Home" />
+	<topic id="user/topic/000002" title="About" />
+	<topic id="user/topic/000007" title="User Home" />
+	<topic id="user/topic/000003" title="Register &amp; Profile" />
+	<topic id="user/topic/000004" title="Current &amp; Archives" />
+	<topic id="user/topic/000005" title="Search &amp; Browse" />
+	<topic id="user/topic/000006" title="Reading Tools" />
+
+	<breadcrumb url="user/topic/000000" title="Journal Web Site" />
+</toc>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000022.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Author 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000022" locale="it_IT" title="Author" toc="journal/toc/000003" key="journal.roles.author">
+	<section>
+		<![CDATA[<p>Gli autori possono registrare e sottomettere item al journal direttamente dal sito web del journal. All'autore &#x00E8; richiesto di caricare l'item e di fornire i metadata o indicizzare le informazioni sull'item. (I metadata migliorano la capacit&#x00E0; delle richerche online e di questo journal.) L'autore pu&#x00F2; caricare file supplementari, sottoforma di dati, strumenti di ricerca, o testi originali che arricchiranno l'item, oltre che contribuire a forme pi&#00F9; aperte e robuste di ricerca e competenza. L'autore pu&#x00F2; seguire la submission lungo il processo editoriale -- oltre che partcepare al copyediting e alla correzione delle bozze delle submission accettate per la pubblicazione -- facendo il log in al sito web del journal.</p>]]>	
+	</section>
+</topic>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000003.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * User Interface - Register and Profile
+  *
+  * $Id$
+  -->
+
+<topic id="user/topic/000003" locale="it_IT" title="Register and Profile" toc="user/toc/000000" key="user.registerAndProfile">
+	<section>
+		<![CDATA[<p>Il journal usa un sistema di registrazione per tutti gli utenti coinvolti nel processo editoriale e di pubblicazione. La politica di privacy del journal si applica a tutti gli utenti registrati. Ogni utente registrato ha un profilo, che pu&#x00F2; essere modificato o completato dopo che l'utente ha effettuato il log in al journal. Il link per il profilo si trova nel margine destro  sotto utente e su la Home page utente.</p>
+
+<p>Per tutti gli utenti, c'&#x00E8; una opzione di aggiornarnamento email, che risulta con la notifica tramite mail di ogni nuovo indice di un'uscita. Per i journal che operano in pi&#x00F9; di una lingua, i revisori possono indicare nel loro profilo la lingua in cui si sentono pi&#x00F9; a loro agio nel revisionare le submission.</p>]]>	
+	</section>
+</topic>

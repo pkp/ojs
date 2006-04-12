@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * User Interface Index 
+  *
+  * $Id$
+  -->
+
+<topic id="user/topic/000000" locale="it_IT" title="Journal Web Site" toc="index/toc/000000" subtoc="user/toc/000000" key="user.index">
+	<section>
+		<![CDATA[<p>Questo journal offre all'utente una serie di funzioni disegnate per migliorare la loro esperienza di lettura con la ricerca e la scienza. Queste funzioni sono comunemente usati dai journal online e la familirit&#x00E0; con questi nel caso di questo journal faciliter&#x00E0; ad ottenere il valore di altri journal online. Queste funzioni sono genralmente disponibili a tutti i lettori.</p>]]>	
+	</section>
+</topic>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000033.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author's Role Review Index - Peer Review
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000033" locale="it_IT" title="Peer Review" toc="editorial/toc/000010" key="editorial.authorsRole.review.peerReview">
+	<section>
+		<![CDATA[<p>Le date per la richiesta del curatore ai revisori, per quando la revsione sar&#x00E0; in corso, e quando la revisione sar&#x00E0; completata da ogni revisore sono registrate in questa pagina. L'autore pu&#x00F2; consultare i permessi revisione {help_topic key="user.about" text="About the Journal"} per saperne di pi&#x00F9; su come le submission sono revisionate dal journal. I revisore possono caricare file da consultare per l'autore, includendo versioni annotate della submission. (Per consultare file caricati, l'autore clicca sul nome del file, e apre il file o lo salva sul pc  e quindi lo apre.)</p>]]>	
+	</section>
+</topic>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000015.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Editor's Role Submissions - Unassigned 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000015" locale="it_IT" title="Unassigned" toc="editorial/toc/000002" key="editorial.editorsRole.submissions.unassigned">
+	<section>
+		<![CDATA[<p>Ogni submission al journal inizia il processo nella coda dei non assegati del curatore. Per assegnare una submission in questa lista a un curatore di sezione, il curatore clicca sul titolo della submission. Questo manda il curatore nella oagina di submission appropriata dove viene assegnato il curatore di sezione. Quando una submission &#x00E8; assegnata a un curatore di sezione, questa passa dalla coda non assegnata  alla coda in revisione. Se c'&#x00E8; solo un curatore di sezione associato ad un sezione, allora le submission a quella sezione sono automaticamente assegnate a quella persona, and go immediately on submission from Unassigned to the In Review Queue.</p>]]>	
+	</section>
+</topic>

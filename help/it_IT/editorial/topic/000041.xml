@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000041.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Layout Editor's Role - Proofreading
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000041" locale="it_IT" title="Proofreading" toc="editorial/toc/000013" key="editorial.layoutEditorsRole.proofreading">
+	<section>
+		<![CDATA[<p>L'autore e il correttore di bozze proveranno i file nei loro vari formati per errori tipografici e di formattazione. Registreranno le correzioni necessarie nel riquadro di testo correzioni, seguendo le istruzioni di correzione di bozze. Non appena il correttore di bozze manda una email al curatore del layout che la correzione &#x00E8; completa, il curatore del layout rimanda i formati corretti in layout e fa i cambiamenti necessari, cancellando i files corretti e caricando la versione corretta. Nel completare questo compito, il curatore del layout potrebbe voler aggiungere commenti al riqudro di testo Correzioni (e.g. spiegando un cambiamento), prima di cliccare sull'icona dell'email sotto completo il che porter&#x00E0; ad una email per informare il curatore di sezione che la submission &#x00E8; pronta per essere messa in lista per la pubblicazione.</p>]]>	
+	</section>
+</topic>

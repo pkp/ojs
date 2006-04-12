@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000022.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Section Editor's Role Index - In Editing
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000022" locale="it_IT" title="In Editing" toc="editorial/toc/000005" key="editorial.sectionEditorsRole.submissions.inEditing">
+	<section>
+		<![CDATA[<p>Le submission in questa coda apsseranno attraverso il copyedit, il layout e la correzione di bozze. Quando un curatore di sezione o un curatore clicca sul titolo di una submission nella coda in revsione, vengono mandati nella pagina di editing della submission. Quando una submission &#x00E8; passata attraverso la fase di editing e viene inviata in catalogazione (per essere messa in un volume), viene rimossa da questa lista e entra coda di scheduling.</p>]]>	
+	</section>
+</topic>

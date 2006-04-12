@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000011.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Users - All Users 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000011" locale="it_IT" title="All Users" toc="journal/toc/000002" key="journal.users.allUsers">
+	<section>
+		<![CDATA[<p>Questo elenco include utti coloro che sono registrati a questo journal o l'inseme dei journal in questo sito. Pu&#x00F2; essere ordinato per ruolo. Il Journal Manager ha la possibilt&#x00E0; di segnarsi come un qualsiasi utente registrato. Questo pu&#x00F2; essere estremamente utile quando si prova fornire assistenza a distanza all'utente, poich&#x00E8; permette al Journal Manager di capire in senso pi&#x00F9; preciso cosa sta andando male.</p>]]>	
+	</section>
+</topic>

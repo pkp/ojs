@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000004.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Publishing Process - Publish
+  *
+  * $Id$
+  -->
+
+<topic id="publishing/topic/000004" locale="it_IT" title="Publish" toc="publishing/toc/000000" key="publishing.publish">
+	<section>
+		<![CDATA[<p>Quando &#x00E8; il momento di pubblicare una uscita, il curatore clicca su "Publish Issue" nella pagina delle uscite attive, cio&#x00E8;, la pagina con l'indice del'uscita. Pubblicare una uscita ha come effeto che l'indice appaia quando viene cliccato Current dai lettori, e la sua copertina, se ce ne &#x00E8; una, appaia nella homepage del journal. L'uscita che precedentemente era Corrente va in Archiviata. Se non c'&#x00E8; nessuna copertina, l'indice apparir&#x00E8; nella homepage, a meno che questa non sia occupata da un'immagine o un testo che &#x00E8; stato caricato nel Setup dal Journal Manager. Pubblicare una uscita inoltre comporta l'invio di una email di notifica a tutti i lettori registrati che include l'indice dell'uscita e un link al sitoweb del journal.</p>]]>	
+	</section>
+</topic>

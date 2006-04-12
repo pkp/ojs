@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000001.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages Index 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000001" locale="it_IT" title="Management Pages" toc="journal/toc/000000" subtoc="journal/toc/000001" key="journal.managementPages.index">
+	<section>
+		<![CDATA[<p>Il Journal Manager configura e personalizza il sistema per accomodare il journal tramite una serie di pagine di amministrazione. Il processo inizia con i cinque passi del setup, ma inoltre include le sezioni che verranno pubblicate, il tono e la formulazione delle email standard del journal, le lingue disponibili per il journal, le statistiche che pubblica, e le utility che rende disponibili ai lettori.</p>]]>	
+	</section>
+</topic>

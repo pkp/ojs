@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000020.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Editor's Role Submission Summary - Submission Metadata
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000020" locale="it_IT" title="Submission Metadata" toc="editorial/toc/000003" key="editorial.editorsRole.submissionSummary.submissionMetadata">
+	<section>
+		<![CDATA[<p>I metadata che saranno usati per indicizzare la submission sulla pubblicazione &#x00E8; stata inserita dall'autore, e pu&#x00F2; essere modificata dal curatore di sezione, tant quanto dall'autore e il copyeditor durante il processo editoriale.</p>]]>	
+	</section>
+</topic>

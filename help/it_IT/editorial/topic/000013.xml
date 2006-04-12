@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000013.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Layout Editor's Role Index 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000013" locale="it_IT" title="Layout Editor's Role" toc="editorial/toc/000000" subtoc="editorial/toc/000013" key="editorial.layoutEditorsRole">
+	<section>
+		<![CDATA[<p>Il curatore di layout  riceve una email di richiesta dal copyeditor o dal curatore di sezione chiedendo il layout di una submission che ha completato la fase di copyedit. Un curatore di layout che non &#x00E8; in grado di fare il layout, semplicemente risponde tramite email al curatore di sezione.</p>]]>	
+	</section>
+</topic>

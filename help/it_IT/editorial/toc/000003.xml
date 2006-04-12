@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../toc.dtd">
+
+<!--
+  * 000003.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Editorial Process - Editor's Role - Submission Summary
+  *
+  * $Id$
+  -->
+
+<toc id="editorial/toc/000003" locale="it_IT" title="Submission Summary" parent_topic="editorial/topic/000003">
+	<topic id="editorial/topic/000019" title="Submission Management" />
+	<topic id="editorial/topic/000020" title="Submission Metadata" />
+
+	<breadcrumb url="editorial/topic/000000" title="Editorial Process" />
+	<breadcrumb url="editorial/topic/000001" title="Editor's Role" />
+	<breadcrumb url="editorial/topic/000003" title="Submission Summary" />
+</toc>

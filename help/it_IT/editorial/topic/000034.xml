@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000034.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author's Role Review Index - Peer Review
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000034" locale="it_IT" title="Editor Decision" toc="editorial/toc/000010" key="editorial.authorsRole.review.editorDecision">
+	<section>
+		<![CDATA[<p>Con la decisione del curatore, l'autore sar&#x00E0; contattato per email dal curatore di sezione con un a decisione, basata sulle revisioni e sul giudizio del curatore di sezione. La decisione vien inoltre registrata nella corrispondenza curatore/autore nella pagina di revisione dell'autore. Se il curatore richiede revisioni prima di arrivare ad una decisione finale, l'autore l'autore pu&#xooF2; caricare una versione revisionata della submission su questa pagina, oltre che file supplementari revisionati o aggiuntivi (insiemi di dati, strumenti di ricerca, documenti originali, etc.). Il curatore inoltre pu&#x00F2;  caricare e presentare versioni della submission o altri documenti da consultare per l'autore. (Per consultare file caricati, l'autore clicca sul nome del file, e apre il file o salva il file sul suo pc e lo apre.) Se e quando la submission &#x00E8; accettata, proceder&#x00E0; alla fase {help_topic key="editorial.editorsRole.submissions.inEditing" text="Editing"} del processo editoriale.</p><p><i>Risubmit per revisione</i>. Se la decisione del curatore di sezione&#x00E8; che la submission debba essere rivista e poi rifare la submission per la peer review, l'autore dovrebbe prima indicare il benestare a prendersi in carico le revisioni, usando la corrispondenza curatore/autore. Quindi, quando le revisioni sono state completate, l'autore carica la versione per un secondo turno di revisioni. Il curatore di sezione la sottporr&#x00E0; agli stessi revisori oppure ad un o pi&#x00F9; nuovi revisori, e informare l'autore quando una decisione &#x00E8; stata raggiunta in una maniera simile alla revisione iniziale.</p>]]>	
+	</section>
+</topic>

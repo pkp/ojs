@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000008.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Reviewer's Role Index 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000008" locale="it_IT" title="Reviewer's Role" toc="editorial/toc/000000" subtoc="editorial/toc/000008" key="editorial.reviewersRole">
+	<section>
+		<![CDATA[<p>Il revisore viene invitato con una email a revisionare una submission, che include il suo titolo e l'abstract, tanto quanto la URL del journal e una username e password per il revisore da usare per entrare nel journal. Il journal ha la possibilit&#x00E0; di unsare una opzione del revisore che manda una submission comee allegato email al revisore insieme con un invito di revisione. Il revisore quindi risponde con una email. Quello che viene descritto qui &#x00E8; il metodo principale di revisione (e assicurarsi una registraione completa del processo), il quale coinvolge il revisore che conduce la revisione sul sito web del journal.</p>]]>	
+	</section>
+</topic>

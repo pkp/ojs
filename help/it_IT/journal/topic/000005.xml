@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000005.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Sections 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000005" locale="it_IT" title="Sections" toc="journal/toc/000001" key="journal.managementPages.sections">
+	<section>
+	<![CDATA[<p>Il Journal Manager pu&#x00F2; creare differenti sezioni all'interno del journal in Sezioni, sotto Amministrazione del Journal. Un journal pu&#x00F2; includere titpicamente sezioni come articoli, Rassegne di libri, Note di ricerca, Applicazioni cliniche, Commenti, Editoriale, etc. Nell'impostare una sezione per il journal, il Journal Manager pu&#x00F2; specificare i Section Editor a cui sar&#x00E0; assegnato di controllare attraverso il processo editoriale quelle submission inserite in quella sezione. (Il curatore assegna le submission nella {help_topic key="editorial.editorsRole.submissions.unassigned" text="Unassigned"} coda delle submission ad uno dei Section Editor designati come parte del processo editoriale). Le sezioni possono esser presentate in diversi formati o layout design all'interno journal. L'indice, che il curatore organizza per ogni uscita, sar&#x00E0; divisi nelle sezioni che sono state create, bench&#x00E8; se non c'&#x00E8; nesun contenuto per una particolare sezione in quell'uscita, la sezione non apparir&#x00E0; nell'indice.</p><p><i>Creating a Section policy</i>. Nell'impostare una sezione, il Journal Manager dovrebbe inserire una breve dichiarazione dei permessi per la sezione, la quale sar&#x00E0; disponibile agli autori e ai lettori nell'About del Journal sotto permessi sezione. La dichiarazione dovrebbe descrivere lo scopo della sezionee il tipo di submission cercato. Dovrebbe includere informazioni se le submission alla sezione sono state peer review e indicizzate, sia sela sezione &#x00E8; aperta o ristratta a lavori su invito (o ai curatori), la lunghezza desiderata per gli articoli, etc.</p><p><i>Indiczzare la sezione</i>. Gli item in una sezione dovrebbero essere indicizzati se contribuiscono alle pubblicazioni(che non &#x00E8; il caso, per esempio, con una sezione dedicata a annunci di conferenze o notizie di lavoro). L'opzione di indicizzazione  abiliter&#x00E8; gli autori a inserire i relativi metadata per indicizzaree gli item che sottomettono. I metadata sarano resi disponibili ai motori di ricerca che aderiscono al Open Archives Initiative Metadata Harvesting Protocol e a altri servizi di indicizzazione non appena l'item &#x00E8; stato pubblicato. Gli item nelle sezioni con indice avranno i loro autori aggiunti alla lista degli autori nella pagina di ricerca e saranno accompagnati dalle utility di ricerca selezionate dal Journal Manager per questo journal.</p><p><i>Limitazione del contenuto di una sezione</i>. I riquadri delle restrizioni dovrebbero essere segnati per quelle sezioni del journal (come Editoriali o Interviste) che non sono aperte alle submission dell'autore in un regime senza limitazioni. Submission limitate devono venire dai curatori o su invito. In una tale sezione possono inserire solo gli autori che sono registrati pure come curatori  Section Editor.</p>]]>
+	</section>
+</topic>

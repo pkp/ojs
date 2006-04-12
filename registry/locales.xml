@@ -26,4 +26,5 @@
 	<locale key="en_US" name="English"/>
 	<locale key="es_ES" name="Español (España)"/>
 	<locale key="pt_BR" name="Português (Brasil)"/>
+	<locale key="it_IT" name="Italiano"/>
 </locales>

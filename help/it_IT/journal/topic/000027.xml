@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000027.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Reading Tools - Versions
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000027" locale="it_IT" title="Versions" toc="journal/toc/000005" key="journal.managementPages.readingTools.versions">
+	<section>
+		<![CDATA[<p>I Journal Manager possono modificare, aggiungere, e controllare ognuna delle discipline- e insiemi area-based di Reading Tools. Questi Tools usano database che sono stati selezionati per la loro rilevanza e accessibilt&#x00E0; per tutti i lettori. Poich&#x00E8; l'allocazione e la URL di questi database subisce cambiamenti, il Journal Manager ha bisogno di poter cambiare e anche cancellare elenchi. I tools sono raggruppati in categorie (e.g., Studi correlati, dissertazioni, etc.), con un certo numero di database in ognuna. Locale si riferisce alla lingua in cui operano i reading tool  in termini di etichette usate dal journal (nonostante il database stesso pu&#x00F2; essere in qualche altra lingua) in modo che i tool possono essere preparati in altre lingue, se il journal &#x00E8; impostato per operare in quella lingua (vedi Languages sotto Journal Management).</p><p><i>Convalidare Reading Tools</i>. Questa caratteristica controller&#x00E0; la le ricerche di URL che sono usate con ogni database per trovare gli item che sono rilevanti per quello che i tools accompagnano (usando l'indicazzazione dei termini dell'autore). Se la URL non &#x00E8; valida il Journal Manager pu&#x00F2; sistemare le impostazioni trovando la nuova URL, cercare aiuto da qualcun'altro, di cancellare il database dall'insieme dei Reading Tools. Quando questa funzione opera su ognuno dei database, ci mette un po' di tempo per completare e produrr&#x00E0; una dichiarazione per ogni database che ne attesta la validit&#x00E0; o l'origine dei problemi.</p><p><i>Metadata perr ogni insieme di Reading Tools</i>. I metadata per ogni insieme di tools fornisocno il titolo dei tool, e una breve descrizione, permettendo al Journal Manager di modificare l'organizzazione dei tool o creare nuovi insiemi.</p><p><i>Contesti per l'insieme</i>. Ogni insieme di tools consiste di vari raggruppamenti di database (e.g., studi correlati, Forum Online , etc.) con ogni gruppo consistente di un certo numero di relativi database. Questi database possono essere aggiunti, modificati o cancellati. I raggruppamenti possono essere anche riordinati.</p><p><i>Esportare i dati</i>. Se il Journal Manager sviluppa reading tools aggiuntivi, questi possono essere esportati al Public Knowledge Project ad uso di altri journal in campi correlati.</p>]]>
+	</section>
+</topic>

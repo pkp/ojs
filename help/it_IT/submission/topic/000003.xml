@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000003.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author Submission Process - Indexing and Metadata 
+  *
+  * $Id$
+  -->
+
+<topic id="submission/topic/000003" locale="it_IT" title="Indexing and Metadata" toc="submission/toc/000000" key="submission.indexingAndMetadata">
+	<section>
+		<![CDATA[<p>Questo journal system ha gli autori che partecipano nell'indicizzazione delle submission al journal. Il sistema stesso genera alcuni degli indici o elementi dei metadata (come il titolo del journal, la data, URL, etc.). I Metadata, o i dati riguardanti i dati, sono una serie di termini che descrivono il documento o i dati dell'uscita, cos&#236 l'uso comparabile di termini di indicizzazione fa la stessa cosa. Il journal usa un protocollo per i metadata per indicizzare le submission che &#x00E8; stato sviluppato e mantenuto dall' Open Archives Initiative (OAI) che traccia, a turno, sul Dublin Core Metadata Initiative. L' OAI Metadata Harvesting Protocol &#x00E8; lo standard emergente per la ricerca, abilitando OAI motori di ricerca per creare indici di ricerca basati sulle risorse provenienti da tutto il mondo. Comunuque, i contenuti del journal sono disponibili tramite Google e altri standard, motori di ricera.</p><p><i>Metadata elementi</i>. Il Dublin Core consiste di 15 elementi di metadata che sono usati per identificare e descrivere un documento. Gli elementi includono termini tradizionali di indicizzazione per identificare documenti, such as autore, Titolo, Descrizione (Abstract), Materia, permettendo una indicizzazione pi&#x00F9; dettagliata o granulare inserendo inoltre elementi come Tipo, trattamento, e Sponsor. Il Journal Manager e il curatore del journal hanno selezionato quali elementi di metadata sono appropriati per questo journal e hanno fornito esempi di ognuno - basati sugli scopi e l'argomento del journal - per guidare l'autore.</p><p>Quando si inserisce l'abstract, pu&#x0F2; essere usato HTML per ottenere una formattazione pi&#x00F2; complessa; interruzioni di linea, se desiderato, devono pure essere inserite usando HTML, dato che OJS non traduce automaticamente le interruzioni di linea nell'abstracts in HTML.</p><p><i>Vantaggi dell'indicizzazione</i>. Gli autori sono incoraggiati a completare l'indicizzazione delle loro submission nel passo 2 del processo di Submission, e avranno l'opportunit&#x00E0; di rivedere e revisionare metadata come parte del proceso editoriale. I metadata saranno pure revisionati come parte della fase di Copyedit. I metadata per questo journal saranno "raccolti" da un certo numero di motori di ricerca specializzati che creano, in effetti, un indice o guida di ricerca. Il lavoro ben indicizzato sar&#x00E0; trovato pi&#x00F9; facilmente da coloro i quali ne ahanno bisogno e pi&#x00F9; verosimilmente di citarlo. Mentre esistono limiti al numero di termini da cui un lavoro &#x00E8; indicizzato, gli autori sono incoraggiati a pensare su come il loro lavoro &#x00E8; posizionato e e trovato in virt&#x00F9; di questo indice dettagliato.</p>]]>	
+	</section>
+</topic>

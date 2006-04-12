@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="it_IT" full_name="Italiano">
+	<message key="plugins.importexport.sample.displayName">Sample Import/Export Plugin</message>
+	<message key="plugins.importexport.sample.description">Questo plugin fornisce un esempio di implementazione da usare quando si sviluppano plugins import/export. Non &#x00E8; di per se steso propriamente utile.</message>
+
+	<message key="plugins.importexport.sample.selectIssue.short">Seleziona Issue</message>
+	<message key="plugins.importexport.sample.selectIssue.long">Seleziona un Issue da esportare.</message>
+</locale>

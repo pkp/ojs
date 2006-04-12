@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000002.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Publishing Process - Schedule Submissions
+  *
+  * $Id$
+  -->
+
+<topic id="publishing/topic/000002" locale="it_IT" title="Schedule Submissions" toc="publishing/toc/000000" key="publishing.scheduleSubmissions">
+	<section>
+		<![CDATA[<p>Non appena una submission accettata ha completato il processo di editing, il Section Editor la invia in porgrammazione. Dove apparenella coda di programmazione, e il curatore pu&#x00F2; mettere la submission in una delle uscite attive che sono state create. Tipicamente, il curatore metter&#x00E0; la submission nella prima uscita disponibile, ma potrebbe succedere che una uscita &#x00E8; piena prima della sua pubblicazione, oppure che un curatore voglia mettere la submission in una uscita successiva per assicurare una gamma di argomenti in ogni uscita oppure, d'altra parte, di riunire una serie di submissions in un singolo argomento.</p><p><i>Pubblicazione continua delle submission</i>. Se le submission vengono pubblicate continuamente, non appena sono pronte, allora il curatore proggramma le submission in quello che, in effetti, &#x00E8; l'uscita corrente, e verr&#x00E0; pubblicato non appena sra&#x00E0; stato controllato la sua posizione nell'indice. Alla fine di un volume annuale, la successiva submission sar&#x00E0; programmata per apparire nel nuovo Volume, per cui l'indice sar&#x00E0; pubblicato o reso corrente con questa submission iniziale.</p>]]>	
+	</section>
+</topic>

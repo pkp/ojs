@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="it_IT" full_name="Italiano">
+	<message key="plugins.importexport.native.displayName">Articoli &amp; Issues XML Plugin</message>
+	<message key="plugins.importexport.native.description">Importa e esporta articoli e issues</message>
+
+	<message key="plugins.importexport.native.cliUsage"><![CDATA[Usage: {$scriptName} {$pluginName} [command] ...
+Commands:
+	import [xmlFileName] [journal_path] [user_name] ...
+	export [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
+	export [xmlFileName] [journal_path] article [articleId]
+	export [xmlFileName] [journal_path] issues [issueId1] [issueId2] ...
+	export [xmlFileName] [journal_path] issue [issueId]
+
+Sono richiesti parametri addzionali per importare i file come segue, a seconda
+del root node del documento XML document.
+
+Se il root node è <article> o <articles>, sono richiesti parametri addzionali.
+I seguenti formati sono accettati:
+
+{$scriptName} {$pluginName} import [xmlFileName] [journal_path] [user_name]
+	issue_id [issueId] section_id [sectionId]
+
+{$scriptName} {$pluginName} import [xmlFileName] [journal_path] [user_name]
+	issue_id [issueId] section_name [name]
+
+{$scriptName} {$pluginName} import [xmlFileName] [journal_path]
+	issue_id [issueId] section_abbrev [abbrev]
+]]></message>
+	<message key="plugins.importexport.native.export">Esporta Dati</message>
+	<message key="plugins.importexport.native.export.issues">Esporta Issues</message>
+	<message key="plugins.importexport.native.export.sections">Esporta Sezioni</message>
+	<message key="plugins.importexport.native.export.articles">Esporta Articoli</message>
+
+	<message key="plugins.importexport.native.selectIssue">Seleziona Issue</message>
+	<message key="plugins.importexport.native.selectArticle">Seleziona Articolo</message>
+
+	<message key="plugins.importexport.native.import.articles">Importa Articoli</message>
+	<message key="plugins.importexport.native.import.articles.description">Il file che stai importando contiene uno o pi&#x00F9; articoli. Devi scegliere un issue e una sezione per importare questi articoli; se non desideri importarli tutti dentro la stessa sezione e issue, puoi separarli in diversi file XML o spostarli nelle sezioni e issue appropriate dopo l'importazione.</message>
+
+	<message key="plugins.importexport.native.import">Importa Dati</message>
+	<message key="plugins.importexport.native.import.description">Questo plugin supporta l'import dei dati basato su native.dtd Document Type Definition. I root nodes supportati sono &amp;lt;article&amp;gt;, &amp;lt;articles&amp;gt;, &amp;lt;issue&amp;gt;, and &amp;lt;issues&amp;gt;.</message>
+
+	<message key="plugins.importexport.native.import.error">Errore Importazione</message>
+	<message key="plugins.importexport.native.import.error.description">Uno o pi&#x00F9; errori si sono presentati durante l'import. Si prega di controllare che il formato del file importato si adatti alle richieste. Specifici dettagli degli errori di importazione sono elencati di sotto.</message>
+
+	<message key="plugins.importexport.native.cliError">ERRORE:</message>
+	<message key="plugins.importexport.native.error.unknownUser">Lutente specificato, "{$userName}", non esiste.</message>
+	<message key="plugins.importexport.native.error.unknownJournal">La path specificata del journal, "{$journalPath}", non esiste.</message>
+	<message key="plugins.importexport.native.export.error.couldNotWrite">Non puoi scrivere sul file "{$fileName}".</message>
+	<message key="plugins.importexport.native.export.error.sectionNotFound">Nessuna sezione si accorda con le specifiche "{$sectionIdentifier}".</message>
+	<message key="plugins.importexport.native.export.error.issueNotFound">Nessun issue si accorda con l'ID "{$issueId}".</message>
+	<message key="plugins.importexport.native.export.error.articleNotFound">Nessun articolo si accorda con l'ID "{$articleId}".</message>
+	<message key="plugins.importexport.native.import.error.unsupportedRoot">Questo plugin non supporta questo root node "{$rootName}". Si prega di assicurarsi che il file sia correttamente formattato e provare ancora.</message>
+
+	<message key="plugins.importexport.native.import.error.titleMissing">Manca il titolo di un issue.</message>
+	<message key="plugins.importexport.native.import.error.defaultTitle">TITOLO MANCANTE</message>
+	<message key="plugins.importexport.native.import.error.unknownIdentificationType">Un tipo di identificazione sconosciuta "{$identificationType}" è stato specificato nel'attributo "identification" all'elemento "issue"  "{$issueTitle}" dell'issue stesso.</message>
+	<message key="plugins.importexport.native.import.error.invalidBooleanValue">Un valore booleano non valido "{$value}" è stato specificato. Si prega di usare "true" o "false".</message>
+	<message key="plugins.importexport.native.import.error.invalidDate">È; stata specificata una data "{$value}" non valida.</message>
+	<message key="plugins.importexport.native.import.error.unknownEncoding">Idati sono stati inclusi usando un tipo di codifica sconosciuto "{$type}".</message>
+	<message key="plugins.importexport.native.import.error.couldNotWriteFile">Non si pu&#x00F2; salvare una copia in locale di "{$originalName}".</message>
+	<message key="plugins.importexport.native.import.error.illegalUrl">La URL "{$url}" specificata per l'issue "{$issueTitle}" non è lecita. Le importazioni web-submitted supportano sol http, https, ftp, o ftps.</message>
+	<message key="plugins.importexport.native.import.error.unknownSuppFileType">Un tipo di file supplementare "{$suppFileType}" è stato specificato.</message>
+	<message key="plugins.importexport.native.import.error.couldNotCopy">Una URL "{$url}" specificata non pu&#x00F2; essere  copiata in un file locale.</message>
+	<message key="plugins.importexport.native.import.error.duplicatePublicId">L'ID dato per l'import dell'issue "{$issueTitle}" è gi&#x00E0; in uso, "{$otherIssueTitle}".</message>
+	<message key="plugins.importexport.native.import.error.sectionTitleMissing">Manca il titolo di una sezione per l'issue "{$issueTitle}". Si prega di assicurarsi che il documento XML sia conforme all'appropriato DTD.</message>
+	<message key="plugins.importexport.native.import.error.sectionMismatch">Il "{$sectionTitle}" della sezione di "{$issueTitle}" è uguale a una sezione di questo journal, ma l'abbreviazione specificata ("{$sectionAbbrev}") si abbina ad un'altra sezione.</message>
+	<message key="plugins.importexport.native.import.error.articleTitleMissing">Manca il titolo di una rticolo per l'issue "{$issueTitle}" nella sezione "{$sectionTitle}". Si prega di assicurarsi che il documento XML sia conforme all'appropriato DTD, e che un titolo sia fornito per il journal.</message>
+	<message key="plugins.importexport.native.import.error.articleTitleLocaleUnsupported">È; stat5o fornito il titolo di un articolo ("{$articleTitle}") per l'issue "{$issueTitle}" in un locale ("{$locale}") che questo journal non supporta.</message>
+	<message key="plugins.importexport.native.import.error.articleAbstractLocaleUnsupported">È; stato fornito l'abstract di un articolo ("{$articleTitle}") per l'issue "{$issueTitle}" in un locale ("{$locale}") che questo journal non supporta.</message>
+	<message key="plugins.importexport.native.import.error.galleyLabelMissing">L'articolo "{$articleTitle}" nella sezione "{$sectionTitle}" dell'issue "{$issueTitle}" manca dell'etichetta alle bozze.</message>
+	<message key="plugins.importexport.native.import.error.suppFileMissing">L'articolo "{$articleTitle}" nella sezione "{$sectionTitle}" dell'issue "{$issueTitle}" manca del file supplemetare.</message>
+	<message key="plugins.importexport.native.import.error.galleyFileMissing">L'articolo "{$articleTitle}" nella sezione "{$sectionTitle}" dell'issue "{$issueTitle}" manca del file delle bozze.</message>
+
+	<message key="plugins.importexport.native.import.success">Importazione Avvenuta</message>
+	<message key="plugins.importexport.native.import.success.description">L'importazione è finita con successo. Gli item importati sono elencati sotto.</message>
+</locale>

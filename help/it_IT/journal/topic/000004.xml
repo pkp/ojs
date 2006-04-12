@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000004.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Setup 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000004" locale="it_IT" title="Setup" toc="journal/toc/000001" key="journal.managementPages.setup">
+	<section>
+		<![CDATA[<p>Il Journal Manager imposta il journal, dopo che il sistema &#x00E8; stato installato su un web server, lavorando lungo cinque fasi, riempiendo  le form e configurando l'amministrazione del journal. Il setu non deve essere fatto tutto in una volta: le form possono essere riempite e salvate; poi il Journal Manager pu&#x00F2; ritornare al setup per completare il compito o fare cambiamenti in qualsiasi momento.</p><p>Il Setup disponibile per il Journal Manager nella pagina di amministrazione del Journal, e contiene il prorpio insieme di testi dell'help  posto in ognuna delle form. Impostare questo sito web del journal richieder&#x00E0; decisioni e testi per i seguenti item, tra gli altri, che possono essere preparati in anticipo d'accordo con i curatori o aggiunti in un punto successivo.</p><ul><li>Contatto principale per il journal</li><li>Contatto tecnico</li><li>Dichiarazione dello scopo e argomento del journal</li><li>Sezioni e permessi del Journal</li><li>Linee guida dell'autore</li><li>Richieste di submission per l'autore</li><li>Indicizzare elementi ed esempi appropriati</li><li>politica di Peer Review</li><li>Linee guida del revisore</li><li>Copyright Policy</li><li>Open Access Policy</li><li>Editorial Board/Review Board</li><li>Uso di layout editor, copyeditor, e/o correttori di bozze</li></ul>]]>	
+	</section>
+</topic>

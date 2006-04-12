@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000001.xml
+  *
+  * Copyright (c) 2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Frequently Asked Questions 
+  *
+  * $Id$
+  -->
+
+<topic id="intro/topic/000001" locale="it_IT" title="Frequently Asked Questions" toc="intro/toc/000000" key="intro.faq">
+	<section>
+		<![CDATA[
+<ol>
+	<li><a href="#section1">Come inizio un journal con OJS?</a></li>
+	<li><a href="#section2">Dove posso trovare supporto tecnico, bug, e miglioramenti suggeriti in OJS?</a></li>
+	<li><a href="#section3">Come riuscirei a tradurre OJS in un'altra lingua?</a></li>
+	<li><a href="#section4">Perch&#x00E8; gli autori stanno ricevendo il messaggio che il journal  "non sta accettando submission in questo momento"?</a></li>
+	<li><a href="#section5">Cosa possiamo fare se volessimo fornire accesso a monoscritti che sono sotto revisione allo stadio "pre-print" precendte alla pubblicazione da parte del journal?</a></li>
+	<li><a href="#section6">Come posso far sapere del mio journal sul Web?</a></li>
+	<li><a href="#section7">How can the journal present a record the history of who served on its editorial team?</a></li>
+	<li><a href="#section8">In che modo posso lasciare che i lettori si registrino come revisori per il journal?</a></li>
+	<li><a href="#section9">Come posso trovare revisori aggiuntivi per una submission al journal oltre la lista attuale di revisori disponibili?</a></li>
+	<li><a href="#section10">Quali sono le maniere differenti in cui un journal pu&#x00F2; essere in grado di pubblicare in formato open access, mettendo i contenuti del journal liberi ai lettori?</a></li>
+</ol>
+		]]>	
+	</section>
+	<section title="1. How do I start a journal with OJS?">
+		<![CDATA[
+<ol type="a">
+	<li><a href="http://pkp.sfu.ca/ojs/ojs_download.html" target="_blank">Scarica</a> OJS e installa il software, seguendo le istruzioni di installazione, su un web server che soddisfa le richieste del software.</li>
+	<li>Usa la username e password di amministrazione genarata nell'istallazione di OJS per effettuare il log in.</li>
+	<li>Crea un nuovo journal sotto Hosted Journals.</li>
+	<li>L'amministratore del sito sar&#x00E0; automaticamente incaricato come Journal Manager per il nuovo journal, ma se necessario, crea un nuovo utente (o utenti) nel ruolo di Journal Manager.</li>
+	<li>Il Journal Manager allora entra nel Setup e levora attraverso cique passi (bench&#00E8; non tutti allo stesso momento), il risultato di tutto questo  sar&#x00E0; un sito web pronto per ricevere submission, condurre il processso editoriale e pubblicare il journal online.</li>
+	<li>Consulta <a href="http://pkp.sfu.ca/ojs/OJSinanHour.pdf" target="_blank">OJS in an Hour </a> per ulteriori informazioni nell'introduzione a OJS.</li>
+</ol>
+		]]>
+	</section>
+	<section title="2. Where can I find technical support, pose bugs, and suggest improvements in using OJS?">
+		<![CDATA[
+<p>Il Public Knowledge Project opera un <a href="http://pkp.sfu.ca/support/forum/" target="_blank">Forum di supporto</a> con ben oltre un migliaio di scambi dove le risposte possono essere cercate e si possono porre domande. Per esempio, possono essere ricercati messaggi di errore, che portano alle soluzioni proposte per problemi conosciuti. Se fallisce questo, gli utenti possono inviare interrogazioni a <a href="mailto:pkp-support@sfu.ca">pkp-support@sfu.ca</a>. I report dei Bug dovrebbero essere sootomesi tramite il<a href="http://pkp.sfu.ca/bugzilla/" target="_blank">Bugzilla</a> di PKP.</p>
+		]]>
+	</section>
+	<section title="3. How would I go about translating OJS in another language?">
+		<![CDATA[
+<p>Le istruzioni sono fornite nel file docs/README  che &#x00E8; incluso nell'OJS download. Informazioni aggiuntive su problemi comuni di traduzione possono inoltre essere trovati nel <a href="http://pkp.sfu.ca/support/forum/" target="_blank">PKP Support Forum</a>.</p>
+		]]>
+	</section>
+	<section title='4. Why are authors getting the message that the journal is "not accepting submissions at this time"?'>
+		<![CDATA[
+<p>Se il Journal Manager deve ancora creare tutte le sezioni (e.g., Articoli, Rassegne di libri, etc.) per il journal, allora gli autori riceveranno questo messaggio. Inoltre, se il Journal Manager ha deselezionato l'opzione di sezione, "Items possono essere solo sottomessi dai curatori e dai Section Editors," per tutte le sezioni create, allora solo curatori e Section Editors potranno fare la submission.</p>
+		]]>
+	</section>
+	<section title='5. What can we do if we want to provide access to manuscripts that are under review or at the "pre-print" stage prior to being published by the journal?'>
+		<![CDATA[
+<p>Attualmente non c'&#x00E8; nessuna via formale per offrire accesso al pre-print o pre-published a singoli articoli. Comunque, tutto quello che un curatore necessita  di fare per l'articolo in questione &#x00E8; di usare la URL per il "Vedi Proof" dalla fase di Layout nella pagina di editing dell'articolo. Quella URL fornir&#x00E0; un accesso "preview" all'articolo (per utenti privilegiati) prima che venga pubblicato in una uscita del journal. Nel frattempo, PKP sta tracciando l'interesse in questa caratteristica e potrbbe considerare una opzione espicita per questo.</p>
+		]]>
+	</section>
+	<section title="6. How can I get word out on the web about my journal?">
+		<![CDATA[
+<p>Il vostro journal incomincer&#x00E8; a presentarsi in Google e negli motori di ricerca pi&#x00F9; importanti prima di molto tempo, ma potete anche prendere altre strade. Assicurarsi di registrare il journal con il PKP Harvester nel Setup Passo 3, il che porter&#x00E0; il tuo journal a essere indicizzato negli indici della Open Archives Initiative, incluso il <a href="http://pkp.sfu.ca/harvester/" target="_blank">PKP Harvester</a> e <a href="http://oaister.umdl.umich.edu/o/oaister/" target="_blank">OAIster</a>. Se il vostro journal &#x00E8; open access, parlate con la vostra biblioteca universistaria su come il vostro journal pu&#x00F2; essere messo in lista tra i journal elettronici delle biblioteche e su come puoi contattare attraverso unaserie di liste di biblioteche un buon numero di altre biblioteche di ricerca. Controllatre se  il sito web o lista servizi delle relative associazioni professionali per annunciare una "richiesta per articoli" o il lancio del journal. Infine, nel Setup sotto Sicurezza e impostazioni di accesso (2.5), il Journal Manager potrebbe abilitare i lettori a segnarsi come Lettore in modo che possano essere informati regolarmente sulle nuove uscite.</p>
+		]]>
+	</section>
+	<section title="7. How can the journal present a record the history of who served on its editorial team?">
+		<![CDATA[
+<p>Il Journal Manager pu&#x00F2; creare una pagina  "Storico dell'Editorial Team"  come nuovo item nell'About del Journal (item 2.6 nel Setup). In una tale pagina, puoi registrare il nome, titolo editoriale e anni di servizio per i membri dell'editorial team.</p>
+		]]>
+	</section>
+	<section title="8. How can let readers sign up as reviewers for the journal?">
+		<![CDATA[
+<p>Nel Setup sotto Sicurezza e impostazioni di accesso (2.5), il Journal Manager Pu&#x00F2; abilitare i lettori a segnarsi come revisore, nonch&#x00E8; come lettore. I revisori allora appriranno tra coloro i quali possono essere selezionati dal Section Editor e  essere invitati a revisionare le submission. Nel Setup 5.7, il Journal Manager pu&#x00F2; aggiungere una nota a  "Per i lettori" sull'interesse del journal nell'avere lettori che lavorano come revisori per il journal. Nella stessa maniera, il journal pu&#x00F2; incoraggiare i lettori a prendere il rolo di lettori per ragioni di informazione e per poter essere in grado di sapere quanti lettori regolari ci sono.</p>
+		]]>
+	</section>
+	<section title="9. How can I find additional reviewers for a submission to the journal beyond the current list of available reviewers?">
+		<![CDATA[
+<p>Ci sono molte tecniche da usare. Non appena un potenziale revisore viene identificato dal nome, allora la email e affiliation pu&#x00F2; essere identificata usando una ulteriore ricerca sul nome.</p>
+<ol type="a">
+	<li>Usa la bibliografia del lavoro che deve essere revisionato per identificare le persone idonee, e quindi usa il loro nome per intero in Google per trovare il loro istituo e uindi il loro indirizzo email.</li>
+	<li>Usa ricerche booleane in Google basate sulle parole chiavi dell'auotore (e.g., postcolonialismo + letteratura + "Sud Africa") per trovare materiali online  e persone che lavorano nello stesso campo.</li>
+	<li>A seconda di come l'autore ha identificato l'argomento del lavoro (vedere i Metadata nel riassunto della submission), invia interrogazioni ai colleghi per avere dei nomi di esperti nei campi identificati.</li>
+	<li>Visita altri journal online in questo campo per trovre gli autori che potrebbero servire come revisori per uno lavoro specifico in assenza di un revisore.</li>
+</ol>
+		]]>
+	</section>
+	<section title="10. What are the different ways in which a journal might be able to publish in an open access format, making the journal's contents free to readers?">
+		<![CDATA[
+<p>Potresti consultare di John Willinsky <a href="http://www.jpgmonline.com/article.asp?issn=0022-3859;year=2003;volume=49;issue=3;spage=263;epage=267;aulast=Willinsky;type=0" target="_blank">"The Nine Flavours of Open Access Scholarly Publishing"</a> nel Journal di Postgraduate Medicine. Inoltre, la Soros Foundation ha preparato una <a href="http://www.soros.org/openaccess/scholarly_guide.shtml" target="_blank">Guida alla pubblicazione Open Access  e alle societ&#x00E0; accademiche</a> che &#x00E0; "una guida intesa ad aiutare le societ&#x00E0; accademiche - e piccoli editori - a valutare le opzioni disponibili per il futuro dei programmi di pubblicazione del journal." <a href="http://www.arl.org/sparc/" target="_blank">SPARC</a>, la Scholarly Publishing and Academic Resources Coalition, inoltre fornisce un buon numero di risorse collegate alla pubblicazione open access.</p>
+		]]>
+	</section>
+</topic>

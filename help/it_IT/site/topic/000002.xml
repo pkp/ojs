@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000002.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Site Administration - Site Management 
+  *
+  * $Id$
+  -->
+
+<topic id="site/topic/000002" locale="it_IT" title="Site Management" toc="site/toc/000000" key="site.siteManagement">
+	<section>
+		<![CDATA[<p>OJS &#x00E8; costruito per essere un sistema multi-journal, e l'amministratore del sito &#x00E8; responsabile per configurare i livelli del sito  e creare nuovi journal che saranno ospitati nel sito.</p>]]>	
+	</section>
+	
+	<section title="Site Settings">
+		<![CDATA[<p>L'informazione basilare &#x00E8; inserita dall'amministratore del sito che &#x00E8; applcabile a tutti i journals ospitati, incluso i titolo del sito e la descrizione, e le informazioni per il contatto.</p>
+		<p><em>Journal Redirect.</em> Questa impostazione pu&#x00F2; esssere usata per assicurarsi che tutte le richieste siano reindirizzate al sito web del journal. Tipicamente questa impostazione viene utilizzata quando il sito web ospita un solo journal.</p>]]>
+	</section>
+	
+	<section title="Hosted Journals">
+		<![CDATA[<p>Dato che OJS permette di generare qualsiasi numero di siti web di journal distinti, possono essere creati e gestiti nuovi journal in ogni momento. Ogni journal che &#x00E8; stato creato pu&#00F2; essere reggiunto tramite un URL unica dal sito OJS pricipale che &#x00E8; basato su un path inserito dall'amministratore del sito. I Journal che sono attualmente nel processo di impostazione e configurazione possono essere nascosti dal sito principale  fino a che sono pronti per essere attivi.</p>]]>
+	</section>
+	
+	<section title="Languages">
+		<![CDATA[<p>OJS &#x00E8; costruito per essere un sistema multilingua, permettendo ai journal il supporto di una vasta gamma di lingue da ospitare in un singolo sito. L'amministratore del sito pu&#x00F2; specificare la lingua di default del sito e installare locales addizionali quando sono disonibili per rendere altr lingue usufruibili dai journal.</p>
+		<p>Pacchetti di lingue aggiuntive tipicamente saranno disponibil per essere scaricate da Open Journal Systems <a href="http://pkp.sfu.ca/" target="_blank">web site</a> non appena vengono ricevute traduzioni dagli utetni contributori. Questi pacchetti possono essere installati in sistema OJS esistente per renderle disponibili ai journal.</p>]]>
+	</section>
+</topic>

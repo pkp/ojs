@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000002.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * User Interface - About
+  *
+  * $Id$
+  -->
+
+<topic id="user/topic/000002" locale="it_IT" title="About" toc="user/toc/000000" key="user.about">
+	<section>
+		<![CDATA[<p>In About the Journal, il journal presenta i permessi, procedure e altro materiale importante, con l'intenzione di fare i lavori del journal il pi&#x00F9; trasparenti possibile. Questo &#x00E8; il materiale a cui tipicamente ci si riferisce come parte introduttiva del journals. La parte dove potenziali autori per questo journal possono conoscerne lo scopo e l'argomento, la politica di Peer Review, e come formattare e preparare una submission, oltre che come fare la submit di un article al journal.</p>]]>	
+	</section>
+</topic>

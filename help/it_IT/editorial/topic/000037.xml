@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000037.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Copyeditor's Role - Submissions
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000037" locale="it_IT" title="Submissions" toc="editorial/toc/000012" key="editorial.copyeditorsRole.submissions">
+	<section>
+		<![CDATA[<p>Una volta che il Copyeditor effettua il log in, cliccando sul link del copyeditor nella Home page dell'utente si arriva alla coda dell submission. Questa coda elenca quei lavori che sono stati richiesti per il copyedit, oltre che accede a quelle submission che hanno completato in passato.  Il copyeditor clicca sul titolo dei lavori il che porta alla pagina di copyediting del copyeditor  per quella submission.</p>]]>	
+	</section>
+</topic>

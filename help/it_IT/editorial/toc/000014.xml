@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../toc.dtd">
+
+<!--
+  * 000014.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Editorial Process - Proofreader's Role
+  *
+  * $Id$
+  -->
+
+<toc id="editorial/toc/000014" locale="it_IT" title="Proofreader's Role" parent_topic="editorial/topic/000014">
+	<topic id="editorial/topic/000042" title="Submissions" />
+	<topic id="editorial/topic/000043" title="Proofreading" />
+
+	<breadcrumb url="editorial/topic/000000" title="Editorial Process" />
+	<breadcrumb url="editorial/topic/000014" title="Proofreader's Role" />
+</toc>

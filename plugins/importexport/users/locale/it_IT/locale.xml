@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="it_IT" full_name="Italiano">
+	<message key="plugins.importexport.users.displayName">XML Plugin Utenti</message>
+	<message key="plugins.importexport.users.description">Importa e esporta utenti</message>
+
+	<message key="plugins.importexport.users.cliUsage"><![CDATA[Usage: {$scriptName} {$pluginName} [command] ...
+Commands:
+	import [xmlFileName] [journal_path] [optional flags]
+	export [xmlFileName] [journal_path]
+	export [xmlFileName] [journal_path] [role_path1] [role_path2] ...
+
+Optional flags:
+	continue_on_error: If specified, do not stop importing users if an error occurs
+
+	send_notify: If specified, send notification emails containing usernames
+		and passwords to imported users
+
+Examples:
+	Import users into myJournal from myImportFile.xml, continuing on error:
+	{$scriptName} {$pluginName} import myImportFile.xml myJournal continue_on_error
+
+	Export all users from myJournal:
+	{$scriptName} {$pluginName} export myExportFile.xml myJournal
+
+	Export all users registered as reviewers, along with their reviewer roles only:
+	{$scriptName} {$pluginName} export myExportFile.xml myJournal reviewer
+]]></message>
+	<message key="plugins.importexport.users.import.importUsers">Importa Utenti</message>
+	<message key="plugins.importexport.users.import.instructions"><![CDATA[Seleziona un file di dati XML contenente informazioni sull'utente da importare in questo journal. Vedi l'help del journal per dettagli sul formato di questo file.<br /><br />Nota che se il importato file contiene ogni username o indirizzo email gi&#x00E0; esistente nel sistema, i dati per quegli utenti non saranno importati e ogni nuovo ruolo da creare sar&#x00E0; assegnato agli utenti esisenti.]]></message>
+	<message key="plugins.importexport.users.import.failedToImportUser">Importazione utente fallita</message>
+	<message key="plugins.importexport.users.import.failedToImportRole">Assegnazionee ruolo all'utene fallita</message>
+	<message key="plugins.importexport.users.import.dataFile">File di Dati utente</message>
+	<message key="plugins.importexport.users.import.sendNotify">invia un email di notifica ad ogni utente importato contenente la username e password.</message>
+	<message key="plugins.importexport.users.import.continueOnError">Continua a importare altri utenti se si presenta un erore.</message>
+	<message key="plugins.importexport.users.import.noFileError">Nessun file uploaded!</message>
+	<message key="plugins.importexport.users.import.usersWereImported">I seguenti utenti sono stati importati nel sistema con successo.</message>
+	<message key="plugins.importexport.users.import.errorsOccurred">Si sono presentati errori durante l'importazione</message>
+	<message key="plugins.importexport.users.import.confirmUsers">Conferma che questi sono gli utenti che vuoi importare nel sistema</message>
+	<message key="plugins.importexport.users.unknownJournal">&#x00C8; stata specificata una path del journal sconosciuta "{$journalPath}".</message>
+
+	<message key="plugins.importexport.users.export.exportUsers">Esporta Utenti</message>
+	<message key="plugins.importexport.users.export.exportByRole">Esporta per ruolo</message>
+	<message key="plugins.importexport.users.export.exportAllUsers">Esporta tutti</message>
+	<message key="plugins.importexport.users.export.errorsOccurred">Si sono presentati errori durante l'esportazione</message>
+	<message key="plugins.importexport.users.export.couldNotWriteFile">Non si pu&#x00F2; scrivere sul file "{$fileName}".</message>
+</locale>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000004.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * User Interface - Current and Archives
+  *
+  * $Id$
+  -->
+
+<topic id="user/topic/000004" locale="it_IT" title="Current and Archives" toc="user/toc/000000" key="user.currentAndArchives">
+	<section>
+		<![CDATA[<p>Le uscite del journal sono rese disponibili come una uscita o una edizione corrente, e un insieme di archivi di uscite precedenti. Il Journal Manager pu&#x00F2; portare nel sito web di questo journal precedenti uscite che erano state pubblicate precedentemente all'uso di questo sistema cos&#236 formino parte degli archivi che sono disponibili al lettore nel sito web del journal.</p>]]>	
+	</section>
+</topic>

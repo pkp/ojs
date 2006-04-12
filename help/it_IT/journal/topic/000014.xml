@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000014.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Users - Email Users
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000014" locale="it_IT" title="Email Users" toc="journal/toc/000002" key="journal.users.emailUsers">
+	<section>
+		<![CDATA[<p>Il Journal Manager &#00F2; inviare email a tutti gli tenti o a sottoinsiemi di questi. Da notare che tutti i Lettori ricevono una email di notifica sulla pubblicazione di ogni uscita con un a copia dell'indice  o, nel caso di continui {help_topic key="publishing.index" text="publishing"}, con il titolo e l'autore della submission. Il journal inoltre dovrebbe avere una politica di Privacy , inserita nel setup e disponibile nell'About del Journal, che descrive come la privacy di utenti registrati a questo journal sar&#x00E0; rispettata.</p>]]>	
+	</section>
+</topic>

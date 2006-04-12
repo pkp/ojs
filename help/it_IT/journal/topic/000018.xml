@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000018.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Layout Editor 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000018" locale="it_IT" title="Layout Editor" toc="journal/toc/000003" key="journal.roles.layoutEditor">
+	<section>
+		<![CDATA[<p>Il Layout Editor trasforma le versioni di copyedit della submission in bozze in file HTML, PDF, PS, etc., che il journal ha scelto di usare per la pubblicazione elettronica. Questo sistema non fornisce un software per convertire documenti word processing in formati di bozza, cos&#236; il Layout Editor dovrebbe aver accesso ed essere in grado di usare software packages esterni per la creazione di bozze (con Adobe Acrobat per PDFs, per esempio; o Dreamweaver per HTML), che presentano gli articoli a video con layout ben formattato e leggibile, come nei journal accademici, e ponendo attenzione a questo mezzo nuovo di pubblicazione (consultando il layout usato da altri editori di journal online, come Highwire Press, per esempio, nelle scienze biologiche o Project Muse nella letteratura classica).</p>]]>	
+	</section>
+</topic>

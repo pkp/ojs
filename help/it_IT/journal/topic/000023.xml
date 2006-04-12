@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000023.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Reader 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000023" locale="it_IT" title="Reader" toc="journal/toc/000003" key="journal.roles.reader">
+	<section>
+		<![CDATA[<p>I lettori includono sottoscrizioni per i journal per cui l'accesso &#x00E8; basato sulla subscription e i lettori che scelgono di registrarsi per  i journal open access (sia da subito open access sia open dopoun periodo di tempo dalla pubblicazione iniziale del contenuto del journal). I lettori registrati ricevono una notifica con con la pubblicazione di opgni uscita che include l'indice del journal. Gli autori nel registrarsi al journal hanno l'opzione di prendere anche di lettori.</p>]]>	
+	</section>
+</topic>

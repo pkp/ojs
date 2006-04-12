@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000025.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Subscriptions 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000025" locale="it_IT" title="Subscriptions" toc="journal/toc/000001" key="journal.managementPages.subscriptions">
+	<section>
+		<![CDATA[<p>OJS supporta subscription journal fornendo un  componente di gestione delle subscription  e una corrispondente password per i contenuti online del journal. Le subscription possono essere gestite per utenti singoli, organizzazioni o istituzioni. Un subscription journal pu&#x00F2; offrire inoltre accesso alle uscite arretrate attraverso una forma di open access ritardato. Nella gestione dei volumi, il curatore concede libero accesso ai lettori ai contenuti di un volume o singoli articoli da 0 a 24 mesi dopo la  pubblicazione e disponibilit&#x00E0; per subscribers.</p></p><p>I Managers, curatori, Section Editors, Layout Editors, Copyeditors, e correttori di bozze del journal hano sempre lòibero accesso al journal anche se sono subscribers.</p><p><i>Depositare il modulo di subscription</i>. Il Journal Manager deve indicare nel Setup, 4.3 Subscription Management, che il journal user&#x00E0; questo sistema per gestire le sue subscriptions e che qualcuno, nel ruolo di Journal Manager, &#x00E8; designato per gestire questa funzione.</p>]]>	
+	</section>
+	
+	<section title="Subscription Types">
+		<![CDATA[<p><i>Impostare i tipi di Subscription</i>. il primo passo nell'impostare il subscription management &#x00E8; di designare i tipi di subscription che il journal offre. I Journal tipicamente offrono, per esempio, abbonamenti per  singole subscription e istituzionali. Alcuni journal potrebbero avere offerte speciali per membri di una organizzazione o per gli studenti. OJS supporter&#x00E0; la gestione della stampa e/o online subscription. Si possono creare pi&#x00F9; di un tipo di subscription per ricoprire lunghi periodi di tempo (12 mesi, 36 mesi).</p><p><i>Opzioni per tipi di subscription</i>. Per subscription istituzionali, usa l'opzione "validated via domain or IP authentication", come tutti  membri dell'istituzione, che entrano tutti dallo stesso dominio o indirizzo IP , sar&#x00E0; loro permesso accedere senza password. Similmente, l'opzione "members of an association or organization" dovrebbe essere usata per subscription di associazioni, sia libera per i membri o a sconto. Usa l'opzione "publicly visible" per rendere il tipo di subscription e il suo costo appare sotto Subscriptions nell'About the Journal. Mentre molti tipi di subscription tipicamente sono disposti nell'About, un tipo creato per la contabilt&#x00E0; interna, staff subscriptions, e/o ragioni di management, per esempio, non apparir&#x00E0; nella pagina dell'About.</p>]]>
+	</section>
+
+	<section title="Subscriptions">
+		<![CDATA[<p><i>Creare Subscriptions</i>. Per singoli subscriber, il Journal (Subscription) Manager deve registrare il subscriber come lettore, se non &#x00E8; gi&#x00E0; registrato, e poi nella pagina Creare Subscription, inserisce il tipo e le date per la subscription. Quando viene salvata questa informazione, il subscriber ricever&#x00E0; per email una username, che acceder&#x000; a tutti i contenuti che il journal pubblica fino a che l'utente ven cancellato dalla lista delle Subscription dal Journal Manager.</p><p><i>Subscriptions istituzionali e di organizzazioni</i>. Per subscription istituzionali, il contatto dell'istituo deve avere il ruolo di lettore, e poi selezionato dal Journal (Subscription) Manager nella pagina Creare Subscriptions. Il contatto dovr&#x00E0; fornire il dominio e/o gli indirizzi IP dell'istituto, che saranno usati per convalidare account, risparmiando gli utenti singoli dall'avere account per accedere al contenuto della subscription. Le organizzazioni che hanno una lista di soci possono importare questa lista nel sistema, tramite la funzione Import User nel Journal Management.</p>]]>
+	</section>
+
+</topic>

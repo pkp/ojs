@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author Submission Process Index 
+  *
+  * $Id$
+  -->
+
+<topic id="submission/topic/000000" locale="it_IT" title="Submission Process" toc="index/toc/000000" subtoc="submission/toc/000000" key="submission.index">
+	<section>
+		<![CDATA[<p>Il journal fornisce agli autori la possibilt&#x00F2; di caricare le porprie submission direttamente al sito web del journal. A seconda delle opzioi scelte dal Journal Manager per questo journal (Step 2.6), gli autori possono avere l'opzione, nel registrarsi come autore, di farlo anche come revisore (da chiamare per prednere in carico peer reviews di altre submission) e/o come lettore (per essere informato dell'indice di nuove uscite del journal). Nel completare il processo di registrazione, l'autore viene mandato direttamente alla Home utente, che elenca i vari ruoli dell'utente con questo journal (e.g., autore, Revisore, etc.). Cliccando sul ruolo di autore, gli utenti verrano mandati alla pagina delle loro submission, dove sono elencate le submission correnti e passate, e dove pu&#x00F2; essere iniziata una nuova submission al journal. Il processo di submission per gli autori &#x00E8; spezzato in cinque parti, con guida fornita ad ogni passo. Gli autori non devono completare i cinque passi tutti in una volta, ma possono ritornare a quello che era elencato similmente alla tebella delle submission come "Incomplete".</p>]]>	
+	</section>
+</topic>

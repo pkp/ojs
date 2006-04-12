@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000016.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Editor 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000016" locale="it_IT" title="Editor" toc="journal/toc/000003" key="journal.roles.editor">
+	<section>
+		<![CDATA[<p>Il curatore supervisiona l'intero processo editoriale e di pubblicazione. Il curatore, lavorando col Journal Manager, tipicamente stabilisce i permessi e le procedure del journal, le quali sono usate nell'impostare il journal in {help_topic key="journal.managementPages.setup" text="Setup"}. Nel processo editoriale, il curatore assegna le submission al Section Editor per controllare attraverso la revisione la submission e il Submission Editing. Il curatore mantiene sotto osservazione il porgresso della submission e  da assistenza per qualsiasi  difficolt&#x00E0; durante il processo. Tipicamente, il curatore ha anche il ruolo di Section Editor nel preocesso {help_topic key="editorial.sectionEditorsRole.editing" text="Editing"}  (controllare che vengano accettate le submission attraverso il copyediting, layout, e la correzione delle bozze) anche se in alcuni journal questo rimane una responsabilit&#x00E0; del Section Editor il quale controlla la submission lungo il processo {help_topic key="editorial.sectionEditorsRole.review" text="Review"}. Il curatore inoltre programma le submission per la pubblicazione, organizza l'indice e pubblica i volumi come una parte del {help_topic key="publishing.index" text="Publishing Process"}. Il curatore pu&#x00F2; riportare submission archiviate in attivo nelle liste In Review o In Editing come spiegato in {help_topic key="editorial.editorsRole.submissions.archives" text="Archives"}.</p>]]>	
+	</section>
+</topic>

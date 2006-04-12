@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000003.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles Index 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000003" locale="it_IT" title="Roles" toc="journal/toc/000000" subtoc="journal/toc/000003" key="journal.roles.index">
+	<section>
+		<![CDATA[<p>Questo journal system usa una serie di ruoli di tradizionali per la pubblicazione di journal per portare avanti il processo di pubblicazione. Una persona pu&#x00F2; essere registrata con pi&#x00F9; di una funzione, in modo che il journal potrebbe, per esempio, essere mandato avanti da un sola persona che funge da tutti i ruoli eccetto  revisore e autore. Pi&#x00F9; tipicamente, un Journal Manager pu&#x00F2; fungere da curatore e Section Editor. I revisori sono spesso registrati come autori.</p><p><i>Accesso limitato dal ruolo</i>. Ogni ruolo ha il porprio dominio di accesso al processo editoriale e di pubblicazione. Autori e revisori vanno nel loro spazio personale all'interno del sito web del journal. I Section Editor hanno solo il permesso di vedere le submission a cui sono stati assegnati. Questo significa che in principio, almeno, non c'&#x00E8; nessun potenziale conflitto se un Section Editor sottomette un articolo al journal per revisione o possibile pubblicazione.</p>]]>	
+	</section>
+</topic>

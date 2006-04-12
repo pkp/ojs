@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000002.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Editor's Role Submissions Index 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000002" locale="it_IT" title="Submissions" toc="editorial/toc/000001" subtoc="editorial/toc/000002" key="editorial.editorsRole.submissions">
+	<section>
+		<![CDATA[<p>Tutte le submission al journal devono trovarsi in una delle quattro code nella pagina di submission, a seconda della fase del processo editoriale in cui sono. I curatori hanno accesso a tutte le submissions del journal tramite questa pagina, mentre i curatori di sezione hanno accesso solo a quelle submission a cui sono stati assegnati.</p>]]>	
+	</section>
+</topic>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000012.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Copyeditor's Role Index 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000012" locale="it_IT" title="Copyeditor's Role" toc="editorial/toc/000000" subtoc="editorial/toc/000012" key="editorial.copyeditorsRole">
+	<section>
+		<![CDATA[<p>Il copyeditor riceve una email di richiesta curatore di sezione per il copyedit di una submission, la quale poi apparre nella coda delle submission copyeditor. Un copyeditor che non pu&#x00F2; fre il copyedit, semplicemente risponde tramite mail al curatore di sezione.</p>]]>	
+	</section>
+</topic>

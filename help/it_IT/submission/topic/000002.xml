@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000002.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author Submission Process - Submission Requirements 
+  *
+  * $Id$
+  -->
+
+<topic id="submission/topic/000002" locale="it_IT" title="Submission Requirements" toc="submission/toc/000000" key="submission.submissionRequirements">
+	<section>
+		<![CDATA[<p>Per accertarsi che le submission al journal siano effettuate correttamente e siano in un formato idoneo per il processo, il Journal Manager e il curatore hanno sviluppato un insieme di richieste di Submission che l'autore deve controllare come se fossero soddisfatte, prima di avere il permesso di passare al passo due de processo di Submission dell'autore. Se l'autore non &#x00E8; in grado di soddisfare una delle richieste per qualche ragione, pu&#x00F2; segnare la richiesta e fornire una spiegazione nei commenti al curatore.</p>]]>	
+	</section>
+</topic>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000004.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Section Editor's Role Index 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000004" locale="it_IT" title="Section Editor's Role" toc="editorial/toc/000000" subtoc="editorial/toc/000004" key="editorial.sectionEditorsRole">
+	<section>
+		<![CDATA[<p>I curatori di sezione di solito dirigono le revisioni delle submission a l'editing di quelle accettate. A seconda delle politiche del journal, in ogni caso, un curatore di sezione inizialmente assegnato a una submission da un curatore pu&#x00F9; essergli richiesto di osservare solo la fase di revisione, dopo la quale, se la submission viene accettata, il curatore assume il controllo (nel ruolo i curatore di sezione). I curatori inviano richieste a curatori di sezione per controllare una submission lungo il processo editoriale.</p>]]>	
+	</section>
+</topic>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000014.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Proofreader's Role Index 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000014" locale="it_IT" title="Proofreader's Role" toc="editorial/toc/000000" subtoc="editorial/toc/000014" key="editorial.proofreadersRole">
+	<section>
+		<![CDATA[<p>Il correttore di bozze riceve una email di richiesta dall'autore o dal curatore di sezione chiedendo di fare una correzione finale della submission nei suopi formati di prova preparati per la pubblicazione. Un curatore di layout che non &#x00E8; in grado di fare il layout, semplicemente risponde tramite email al curatore di sezione.</p>]]>	
+	</section>
+</topic>

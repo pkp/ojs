@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000017.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Section Editor 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000017" locale="it_IT" title="Section Editor" toc="journal/toc/000003" key="journal.roles.sectionEditor">
+	<section>
+		<![CDATA[<p>Il Section Editor gestisce la revisione e l'editing delle submission a cui sono stati assegnati. In alcuni casi, un Section Editor che deve controllare le submission lungo il {help_topic key="editorial.sectionEditorsRole.review" text="Review"} Process sar&#x00E0; inoltre responsabile di controllare che le submission  vengano accettate durante il {help_topic key="editorial.sectionEditorsRole.editing" text="Editing"} process (cio&#x00E8;, attraverso il copyediting, layout, e correzione di bozze). Spesso, comunque, i Section Editor lavorano solo con il proceso di revisione, e un curatore, nel ruolo di Section Editor, controlla le submission lungo il processo di editing. Il journal avr&#x00E0; una politica su come vengono divisi i compiti.</p>]]>	
+	</section>
+</topic>

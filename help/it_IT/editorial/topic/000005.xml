@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000005.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Section Editor's Role Index - Submissions 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000005" locale="it_IT" title="Submissions" toc="editorial/toc/000004" subtoc="editorial/toc/000005" key="editorial.sectionEditorsRole.submissions">
+	<section>
+		<![CDATA[<p>Le submissions al journal che sono state assegnate al curatore di sezione dal curatore Editor appaiono nella coda di revisione in entrata del curatore di sezione. I curatori di sezione hanno accesso solo a quelle submissions a cui sono stati assegnati. a seconda delle politiche del journal, i curatori di sezione possono essere responsabili solo per la revisione della submission oppure sia per la revisione che per l'Editing della submission.</p>]]>	
+	</section>
+</topic>

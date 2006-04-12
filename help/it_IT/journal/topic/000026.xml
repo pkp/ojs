@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000026.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Reading Tools - Settings
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000026" locale="it_IT" title="Settings" toc="journal/toc/000005" key="journal.managementPages.readingTools.settings">
+	<section>
+		<![CDATA[<p>Il Journal Manager pu&#x00F2; selezionare una materia o un area di riferimento di Reading Tools per apparire in un frame a sinistra di tutti gli item nella sezione del journal che &#x00E8; stata indicizzata (e.g., Articoli e non annunci di conferenze). Il Journal Manager pu&#x00F2; esaminare, modificare, cancellare o aggiungere le utility andando in Versions, sotto Reading Tools. Il Journal Manager inoltre pu&#x00F2; selezionare uno o tutti i link generici opzionali per fari apparire come una parte dell'insieme delle utility. Lo stesso inieme di Reading Tools appare con ogni item nelle sezioni indicizzate del journal. Comunque, i Reading Tools usano termini per l'indice forniti dall'autore per assicurarsi che i materiali trovati nei database suìiano corrispondenti. Il Journal Manager pu&#x00F2; cambiare i Reading Tools selezionati ad ogni punto.</p>]]>
+	</section>
+</topic>

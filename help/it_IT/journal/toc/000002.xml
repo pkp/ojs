@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../toc.dtd">
+
+<!--
+  * 000002.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Journal Management - Users. 
+  *
+  * $Id$
+  -->
+
+<toc id="journal/toc/000002" locale="it_IT" title="Users" parent_topic="journal/topic/000002">
+	<topic id="journal/topic/000011" title="All Users" />
+	<topic id="journal/topic/000012" title="Create New User" />
+	<topic id="journal/topic/000013" title="Import Users" />
+	<topic id="journal/topic/000014" title="Email Users" />
+
+	<breadcrumb url="journal/topic/000000" title="Journal Management" />
+	<breadcrumb url="journal/topic/000002" title="Users" />
+</toc>

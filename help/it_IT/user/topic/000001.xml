@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000001.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * User Interface - Home
+  *
+  * $Id$
+  -->
+
+<topic id="user/topic/000001" locale="it_IT" title="Home" toc="user/toc/000000" key="user.home">
+	<section>
+		<![CDATA[<p>La homepage del journal o la Home nella barra di navigazione in alto alla pagine del journal p&#x00F2; essere usata dal Journal Manager per mostrare l'indice per l'edizione corrente del journal o la copertina. Pu&#x00F2; anche portare annunci per il journal, o news di eventi incombenti relativi al journal e forse l'organizzazione degli sponsor. I lettori devono solo cliccare su corrente nella barra di navigazione in alto sulla Homepage e tutte le altre pagine per essere mandati alla copertina o all'indice dell'uscita corrente.</p>]]>	
+	</section>
+</topic>

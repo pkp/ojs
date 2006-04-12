@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000020.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Proofreader 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000020" locale="it_IT" title="Proofreader" toc="journal/toc/000003" key="journal.roles.proofreader">
+	<section>
+		<![CDATA[<p>Il correttore legge attentamente le bozze nei vari formati in cui il journal pubblica (cos&#236 come l'autore). Il correttore di bozze (e l'autore) registra ogni errore tipografico e di formattazione da sistemare per il layout editor. Nel caso di alcuni journal, il curatore o il Section Editor lavoreranno pure come correttore di bozze.</p>]]>	
+	</section>
+</topic>

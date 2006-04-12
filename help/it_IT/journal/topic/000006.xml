@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000006.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Emails 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000006" locale="it_IT" title="Emails" toc="journal/toc/000001" key="journal.managementPages.emails">
+	<section>
+		<![CDATA[<p>Il journal usa una variet&#x00E0; di email preparate per dirigere i processi editoriale e di pubblicazione. Le email sono indirizzate ai destinatari appropriati in anticipo (per esempio, il Section Editor infomra il Copyeditor che il copyediting per una submission &#x00E8; pronto per cominciare). Il Journal Manager pu&#x00F2; modificare le versioni di default di queste email (disponibili sotto Email nella pagin di amministrazione del Journal). Inoltre, le email possono esser modificate dagli utenti prima di essere inviate. il sistema automaticamente inserisce le informazioni relative e specifiche nell'email prima di presentarla all'utente per inviarla (per esempio, il titolo e l'abstract della submission in questione o la data in cui si apetta la revisione). L'email inoltre fornisce le istruzioni al destinatario pr irtorvare la pagina web appropriata, in modo che possano prendere in carico il compito richiesto loro.</p>]]>	
+	</section>
+	
+	<section title="Sending Emails">
+		<![CDATA[<p>OJS usa le email per cooridnare il funzionamento del processo editoriale e di pubblicazione. Tutte le email preparate hanno una versione di default, che salta fuori ogni volta che viene cliccata la relativa icona email. Le emails default possono essere modificate dal Journal Manager in goni punto. inoltre, un email pu&#x00F2; esseere modificata dal mittente prima di inviarla. Quando una icona email viene cliccata, avr&#x00E0; la casella del destinatario voluto automaticamente riempita, insieme con tutte le informazioni pertinenti necessarie per le funzioni editoriali e di pubblicazione. Il mittente  &#x00F2; aggiungere commenti o ulteriori direzioni, se necessario. Il mittente pu&#x00F2; modificare l'indirizzo email del destinatario e di quelli addizionali, eccetto in quei casi in cui non sia coinvolto l'invio di password (per ragioni di sicurezza). Nota che correggere un indirizzo del mittente non vambia l'indirizzoe email elencato nella pagina dei profili del sistema. Correggere l'indirizzo email  in maniera permanente per questo sistema richiede la notifica al Journal Manager, che ha l'autorit&#x00E0, per fare tali cambiamenti ai profili degli utenti.</p>]]>
+	</section>
+</topic>

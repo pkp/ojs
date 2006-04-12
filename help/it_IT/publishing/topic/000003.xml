@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000003.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Publishing Process - Table of Contents
+  *
+  * $Id$
+  -->
+
+<topic id="publishing/topic/000003" locale="it_IT" title="Table of Contents" toc="publishing/toc/000000" key="publishing.tableOfContents">
+	<section>
+		<![CDATA[<p>Una volta che una submission &#x00E8; messa in programma, apparir&#x00E0; nell'indice di quella uscita sotto l'intastazione della sua sezione. Se non ci sono submission in una sezione, quella sezione non apparir&#x00E0; nell'indice. Il curatore pu&#x00F2; riordinare le sezioni, e le submission possono essere riordinate all'interno di una sezione.</p>]]>	
+	</section>
+</topic>

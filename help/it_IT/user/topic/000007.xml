@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000007.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * User Interface - User Home
+  *
+  * $Id$
+  -->
+
+<topic id="user/topic/000007" locale="it_IT" title="User Home" toc="user/toc/000000" key="user.userHome">
+	<section>
+		<![CDATA[<p>La Home utente appare nella barra di navigazione nella pagina, dopo che l'utente ha fatto il log in. Questa elenca tutti i ruoli che l'utente ricopre attualmente (e.g., revisore, autore, lettore, etc.). Questo inoltre include l'account dell'utente, il quale include  link ad altri journal in cui l'utente &#x00E8; registrato in uno o pi&#x00F9; ruoli. My Account da accesso al profilo dell'utente dove il contatto e informazioni biografiche possono essere aggiunte o modificate. L'utente pu&#x00F2; anche creare una nuova password come parte della gestione di account nella Home utente.</p>]]>	
+	</section>
+</topic>

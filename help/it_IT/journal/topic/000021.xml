@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000021.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Reviewer 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000021" locale="it_IT" title="Reviewer" toc="journal/toc/000003" key="journal.roles.reviewer">
+	<section>
+		<![CDATA[<p>Il revisore viene selezionato dal Section Editor per revisionare una submission. Ai revisori &#x00E8; richiesto di sottomettere revisioni al sito web del journal (nonstante alcuni journal optino per una politica di revisione per email) e possono carica allegati ad uso del curatore e dell'autore. I revisori possono essere valutati dai section editor, a seconda sempre delle politiche del journal.</p>]]>	
+	</section>
+</topic>

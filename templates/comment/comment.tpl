@@ -35,6 +35,8 @@ function handleAnonymousCheckbox(theBox) {
 {/literal}
 </script>
 
+{assign var=parentId value=$parentId|default:"0"}
+
 <form name="submit" action="{if $commentId}{url op="edit" path=$articleId|to_array:$galleyId:$commentId}{else}{url op="add" path=$articleId|to_array:$galleyId:$parentId:"save"}{/if}" method="post">
 <table class="data" width="100%">
 	<tr valign="top">
@@ -66,7 +68,7 @@ function handleAnonymousCheckbox(theBox) {
 	</tr>
 </table>
 
-<p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{$url op="comments" path=$articleId|to_array:$galleyId:$parentId}" /></p>
+<p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="location.href='{url page="comment" op="view" path=$articleId|to_array:$galleyId:$parentId}';" /></p>
 
 </form>
 

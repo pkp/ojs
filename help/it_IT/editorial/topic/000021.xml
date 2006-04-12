@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000021.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Section Editor's Role Index - In Review
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000021" locale="it_IT" title="In Review" toc="editorial/toc/000005" key="editorial.sectionEditorsRole.submissions.inReview">
+	<section>
+		<![CDATA[<p>Le submission che stanno nella lista in Revisione sono soggette ad un processo di revisione che porta a una decisione del curatore di sezione di accettazione o rifiuto della submission. Il limiti del processo di revisione, incluso quali sezioni del journal hanno una peer review condotta sulle submission e quanti revisori vengono utilizzati, viene spiegato nella politica di revisione del journal preparata dai curatori e dal manager del journal. Quando un curatore di sezione o un curatore clicca su una submission nella coda in revisione , vengono mandati alla pagina di revisione della  submission, dove la viene fatta la peer review e viene raggiunta una decisione editoriale per l'item. Se il curatore di sezione accetta una submission per la pubblicazione, questa allora va nella coda In Editing. Se la submission viene rifiutata, viene mandata negli archivi.</p>]]>	
+	</section>
+</topic>

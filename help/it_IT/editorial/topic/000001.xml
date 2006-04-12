@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000001.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Editor's Role Index 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000001" locale="it_IT" title="Editor's Role" toc="editorial/toc/000000" subtoc="editorial/toc/000001" key="editorial.editorsRole">
+	<section>
+		<![CDATA[<p>Il curatore supervisiona il processo editoriale, cominciando con l'assegnamento di un curaotre di sezione a una submission. Il curatore spsso ha il ruolo, a seconda delle politiche del journal, di curatore di sezione nel vedere accettate le submissions nella fase di editing del processo editoriale.</p>]]>	
+	</section>
+</topic>

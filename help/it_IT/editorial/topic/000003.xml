@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000003.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Editor's Role Submission Summary Index 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000003" locale="it_IT" title="Submission Summary" toc="editorial/toc/000001" subtoc="editorial/toc/000003" key="editorial.editorsRole.submissionSummary">
+	<section>
+		<![CDATA[<p>La pagina di submission  &#x00E8; usata dal curatore per ogni submission per amministrrne i file e i metadata associati o indicizzare informazioni.</p>]]>	
+	</section>
+</topic>

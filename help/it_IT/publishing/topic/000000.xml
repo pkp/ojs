@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Publishing Process Index 
+  *
+  * $Id$
+  -->
+
+<topic id="publishing/topic/000000" locale="it_IT" title="Publishing Process" toc="index/toc/000000" subtoc="publishing/toc/000000" key="publishing.index">
+	<section>
+		<![CDATA[<p>Il curatore controlla il processo di pubblicazione creando uscite e/o volumi per il journal, mettendo in programma le submission per quelle uscite, e poi organizzando l'indice, e infine pubblicando l'uscita. Il journal pu&#x00F2; essere pubblicato in un certo numero di formati. Lo schema tipico &#x00E8; riunire le submission in una uscita che viene pubblicata trimestralmente (o mensilmente o due volte l'anno). Ad ogni modo, alcuni journal elettronici preferiscono pubblicare le submission non appena sono pronte, come parte di un volume annuale, che inizia con la prima submission e chiude a fine anno, quando comincia un altro volume. Per gli scopi di questo Help, viene usato il termine uscita, nonstante una uscita consiste dellindice che pu&#x00F2; essere identificato da (a) uscita, volume, anno; (b) volume, anno; (c) anno; o (d) titolo. Come si posnno modificare le uscite fa parte del Setup del journal che il Journal Manager ha configurato.</p>]]>	
+	</section>
+</topic>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000028.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Section Editor's Role Index - Editing - Layout
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000028" locale="it_IT" title="Layout" toc="editorial/toc/000007" key="editorial.sectionEditorsRole.editing.layout">
+	<section>
+		<![CDATA[<p>Non appena il copyeditor completa la copia "pulita" nella fase 3 del copyedit, quella versione della submission passa alla fase di layout. Il curatore di sezione, nel ricevere la notizia del completamento del copyedit, deve poi selezionare un curatore del layout, se non è stato già fatto, e richiedere che il curatore del layout  cominci il lavoro, usando l'icona della email sotto Request ion Layout. Il curatore del layout preparerà le bozze per la submission in ognuno dei formati di pubblicazione del journal (e.g., HTML, PDF, PS, etc.). I file supplementari, che rimangono nel formato originale del file in cui avevano fatto la submission, saranno revisionati dal curatore del layout e dal correttore di bozze per assicurarsi che la formattazione base sia a posto, e che il file sia conforme quanto più possibile agli standard del journal. Quando il curatore del layout ha completato la produzione iniziale delle bozze, che sono i file che verranno pubblicati online, il curatore del layout manderà una email al curatore di sezione.</p>]]>	
+	</section>
+</topic>

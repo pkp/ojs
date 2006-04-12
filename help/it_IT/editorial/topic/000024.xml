@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000024.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Section Editor's Role Index - Review - Review Version 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000024" locale="it_IT" title="Review Version" toc="editorial/toc/000006" key="editorial.sectionEditorsRole.review.reviewVersion">
+	<section>
+		<![CDATA[<p>Il primo compito per il curatore di sezione con ogni submission &#x00E8; di controllare il testo per accesrtare se pu&#x00F2; servire la versione originale come versione di revisione o se deve essere caricata una copia modificata. Per vedere il file originale, il curatore di sezione clicca nome del file di colore blue.</p><p><i>Accertare una blind Peer Review</i>. per le submission che stanno per effettuare una blind Peer Review, il curatore di sezione dovrebbe controllare che tutti gli identificativi dell'autore siano sati rimossi dal file: (a) i riferimenti degli autor iai loro stessi lavori dovrebbero usare la convezione "autore" pi&#x00F9; l'anno, e (b) le propriet&#x00E0; del documento non dovrebbero includere il nome dell'autore (con MS Word, guarda sotto il menu per i file). Il curatore di sezione dovrebbe inoltre controllare la pagina di submission per controllare  se file supplementari possono essere condivisi coi revisori. Se l'autore ritiene che i file possano essere presentati ai revisori, saranno esaminati; Il curaotre di sezione pu&#x00F2; metterle in non controllate se non sono idonee per la condivisione coi revisori.</p><p><i>Stabilire la versione di revisione della submission</i>. Il curatore di sezione imposta le versione di revisione che i revisori vedranno, tramite (a) selezione della versione originale, se &#x00E8; idonea, oppure (b) tramite il caricamento di una versione pi&#x00F9; idonea. Il curatore di sezione pu&#x00F2; scegliere di sistemare problemi minori con il file originale file usando un programma di trattamento dei test per farei cambiamenti, salvando il file sul desktop e quindi caricando il file, usando i bottoni Browse/Upload nella versione di revisione.</p><p><i>Submissions preparate inadeguatamente</i>. Se l'autore ha chiaramente fallito nell'assicurarsi che la submission aderisca alle linee guida dell'autore del journal, inclusa la necessit&#x00E0; che la submission supporti una revisione cieca, il curatore di sezione pu&#x00F2; scegliere di informare l'autore che il lavoro deve rieffettuare la submission. L'autore quindi pu&#x00F2; rieffettuare la submission della versione migliorata direttamente tramite email al curatore, che pu&#x00F2; quindi caricarla come versione di revisione. Il curatore di sezione pu&#x00F2; decidere inoltre che la submission non &#x00E8; idonea per il journal e informare l'autore della conseguenza. Andando alla pagina della submission e cliccando "Archivia submission" si invia la submission agli archivi.</p>]]>	
+	</section>
+</topic>

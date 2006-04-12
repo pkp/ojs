@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * LDAP authentication plugin localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="it_IT" full_name="Italiano">
+	<message key="plugins.auth.ldap.displayName">LDAP</message>
+	<message key="plugins.auth.ldap.description">LDAP plugin di autenticazione.</message>
+	
+	<message key="plugins.auth.ldap.settings">LDAP inpostazioni</message>
+	<message key="plugins.auth.ldap.settings.hostname">Server hostname</message>
+	<message key="plugins.auth.ldap.settings.hostname.description">E.g., "ldap.example.com", o "ldaps://ldap.example.com" (per usare SSL)</message>
+	<message key="plugins.auth.ldap.settings.port">Server port</message>
+	<message key="plugins.auth.ldap.settings.port.description">Opzionale. Default a 389 (LDAP) o 636 (LDAP su SSL)</message>
+	<message key="plugins.auth.ldap.settings.basedn">Base DN</message>
+	<message key="plugins.auth.ldap.settings.basedn.description">E.g., "ou=people,dc=example,dc=com"</message>
+	<message key="plugins.auth.ldap.settings.managerdn">Manager DN</message>
+	<message key="plugins.auth.ldap.settings.managerdn.description">E.g., "cn=Manager,dc=example,dc=com"</message>
+	<message key="plugins.auth.ldap.settings.managerpwd">Manager password</message>
+	<message key="plugins.auth.ldap.settings.managerpwd.description">Il manager DN e password sono richiesti solo se la sincronizzazione profilo/password utente o le opzioni di creazione utente sono disabilitate. Se LDAP verr&#x00E0; usato solamente per l'autenticazione allora queste opzioni possono essere omesse.</message>
+	<message key="plugins.auth.ldap.settings.pwhash">Password criptata</message>
+	<message key="plugins.auth.ldap.settings.pwhash.description">formato Hash per le password immagazziante nel server. &#x00C8; raccomandato SSHA (requires PHP >= 4.3.0).</message>
+	<message key="plugins.auth.ldap.settings.saslopt">Impostazioni SASL (opzionale)</message>
+	<message key="plugins.auth.ldap.settings.sasl">Usa SASL invece di semplice autenticazione (richiede PHP >= 5)</message>
+	<message key="plugins.auth.ldap.settings.saslmech">SASL mechanism</message>
+	<message key="plugins.auth.ldap.settings.saslmech.description">E.g., "DIGEST-MD5"</message>
+	<message key="plugins.auth.ldap.settings.saslrealm">Realm</message>
+	<message key="plugins.auth.ldap.settings.saslauthzid">Richiesto ID di autorizzazione</message>
+	<message key="plugins.auth.ldap.settings.saslprop">SASL propriet&#x00E0; di sicurezza</message>
+</locale>
