@@ -172,6 +172,13 @@ input.defaultButton {
 	font-weight: normal;
 }
 
+#main h3 {
+	margin: 0em 1em 0.5em 0em;
+	padding-top: 0em;
+	font-family: Georgia,'Times New Roman',Times,serif;
+	font-weight: normal;
+}
+
 #navbar {
 	margin-right: 0;
 	padding-bottom: 0.5em;

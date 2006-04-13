@@ -9,10 +9,9 @@
  * $Id$
  *}
 
-{assign var="pageTitleTranslated" value=$issueTitle}
 {assign var="pageCrumbTitleTranslated" value=$issueCrumbTitle}
 {url|assign:"currentUrl" op="current"}
-{include file="common/header.tpl"}
+{include file="issue/header.tpl"}
 
 {if !$showToc && $issue}
 	<ul class="menu">
