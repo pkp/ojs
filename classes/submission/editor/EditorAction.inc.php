@@ -50,7 +50,7 @@ class EditorAction extends SectionEditorAction {
 
 		if ($user->getUserId() === $sectionEditorId || !$email->isEnabled() || ($send && !$email->hasErrors())) {
 			HookRegistry::call('EditorAction::assignEditor', array(&$editorSubmission, &$sectionEditor, &$email));
-			if ($email->isEnabled()) {
+			if ($email->isEnabled() && $user->getUserId() !== $sectionEditorId) {
 				$email->setAssoc(ARTICLE_EMAIL_EDITOR_ASSIGN, ARTICLE_EMAIL_TYPE_EDITOR, $sectionEditor->getUserId());
 				$email->send();
 			}
