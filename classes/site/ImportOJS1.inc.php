@@ -84,6 +84,9 @@ class ImportOJS1 {
 	/** @var $transcoder object The transcoder to use, if desired */
 	var $transcoder;
 
+	/** @var $conflicts array List of conflicting user accounts */
+	var $conflicts;
+
 	/**
 	 * Constructor.
 	 */
@@ -95,6 +98,8 @@ class ImportOJS1 {
 			$this->indexUrl .= '/' . INDEX_SCRIPTNAME;
 		else
 			$this->indexUrl = Request::getIndexUrl();
+
+		$this->conflicts = array();
 	}
 
 	/**
@@ -580,11 +585,14 @@ class ImportOJS1 {
 				$user->setDateLastLogin($row['dtDateSignedUp']);
 				$user->setMustChangePassword(0);
 				$user->setDisabled(0);
-				
-				if ($userDao->userExistsByEmail($this->trans($row['chEmail']))) {
+
+				$otherUser =& $userDao->getUserByEmail($this->trans($row['chEmail']));
+				if ($otherUser !== null) {
 					// User exists with this email -- munge it to make unique
 					$user->setEmail('ojs-' . $this->trans($row['chUsername']) . '+' . $this->trans($row['chEmail']));
+					$this->conflicts[] = array(&$otherUser, &$user);
 				}
+				unset($otherUser);
 				
 				$userDao->insertUser($user);
 			}
@@ -676,6 +684,7 @@ class ImportOJS1 {
 			$this->userMap[$row['nUserID']] = $userId;
 			$this->userCount++;
 			$result->MoveNext();
+			unset($user);
 		}
 		$result->Close();
 	}
@@ -1529,7 +1538,13 @@ class ImportOJS1 {
 		
 		closedir($dir);
 	}
-	
+
+	/**
+	 * Get the list of conflicting user accounts.
+	 */
+	function getConflicts() {
+		return $this->conflicts;
+	}
 }
 
 ?>

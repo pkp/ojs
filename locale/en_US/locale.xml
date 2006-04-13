@@ -703,6 +703,9 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="admin.journals.enableJournalInstructions">Enable this journal to appear publicly on the site</message>
 	<message key="admin.journals.journalDescription">Journal description</message>
 	<message key="admin.journals.importOJS1">Import from OJS 1</message>
+	<message key="admin.journals.importOJS1.editMigratedJournal">Edit Migrated Journal</message>
+	<message key="admin.journals.importOJS1.conflict.desc">Some user accounts had conflicting information. OJS 1.x allows multiple user accounts to share the same email address, while OJS 2.x does not. In the list below, the second account listed has had a temporary email account assigned to it. These should be corrected by hand, either by assigning a different email account, or by merging accounts.</message>
+	<message key="admin.journals.importOJS1.conflict">{$firstUsername} ({$firstName}) and {$secondUsername} ({$secondName})</message>
 	<message key="admin.journals.importOJS1Instructions">Consult the UPGRADE document distributed with OJS for detailed information on migrating data from OJS 1 to OJS 2.</message>
 	<message key="admin.journal.pathImportInstructions">Existing journal path or path to create (e.g., "ojs").</message>
 	<message key="admin.journal.importPath">OJS 1 path</message>

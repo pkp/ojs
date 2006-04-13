@@ -28,7 +28,7 @@ class ImportOJS1Form extends Form {
 	function ImportOJS1Form() {
 		parent::Form('admin/importOJS1.tpl');
 		$this->importer = &new ImportOJS1();
-		
+
 		// Validation checks for this form
 		$this->addCheck(new FormValidator($this, 'journalPath', 'required', 'admin.journals.form.pathRequired'));
 		$this->addCheck(new FormValidator($this, 'importPath', 'required', 'admin.journals.form.importPathRequired'));
@@ -59,7 +59,10 @@ class ImportOJS1Form extends Form {
 		$journalId = $this->importer->import($this->getData('journalPath'), $this->getData('importPath'), is_array($options) ? $options : array());
 		return $journalId;
 	}
-	
+
+	function getConflicts() {
+		return $this->importer->getConflicts();
+	}
 }
 
 ?>
