@@ -1295,8 +1295,17 @@ class SectionEditorAction extends Action {
 		if (HookRegistry::call('SectionEditorAction::restoreToQueue', array(&$sectionEditorSubmission))) return;
 
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
-		
-		$sectionEditorSubmission->setStatus(STATUS_QUEUED);
+
+		// Determine whether the submission was scheduled or not.
+		// If it was scheduled, return it to the scheduling queue;
+		// otherwise return to the editing queues.
+		$proofAssignment =& $sectionEditorSubmission->getProofAssignment();
+		if ($proofAssignment->getDateSchedulingQueue()) {
+			$sectionEditorSubmission->setStatus(STATUS_SCHEDULED);
+		} else {
+			$sectionEditorSubmission->setStatus(STATUS_QUEUED);
+		}
+
 		$sectionEditorSubmission->stampStatusModified();
 		
 		$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);

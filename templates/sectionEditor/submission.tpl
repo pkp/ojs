@@ -22,7 +22,7 @@
 
 {include file="sectionEditor/submission/management.tpl"}
 
-<div class="separator"></div
+<div class="separator"></div>
 
 {include file="sectionEditor/submission/editors.tpl"}
 

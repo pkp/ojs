@@ -45,11 +45,11 @@ class PublishedArticleDAO extends DAO {
 
 		if (isset($limit)) {
 			$result = &$this->retrieveLimit(
-				'SELECT DISTINCT pa.*, a.*, s.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, s.abbrev AS section_abbrev, s.abbrev_alt1 AS section_abbrev_alt1, s.abbrev_alt2 AS section_abbrev_alt2, COALESCE(o.seq, s.seq) AS section_seq, pa.seq FROM published_articles pa, articles a LEFT JOIN sections s ON s.section_id = a.section_id LEFT JOIN custom_section_orders o ON (a.section_id = o.section_id AND o.issue_id = ?) WHERE pa.article_id = a.article_id AND pa.issue_id = ? ORDER BY section_seq ASC, pa.seq ASC', array($issueId, $issueId), $limit
+				'SELECT DISTINCT pa.*, a.*, s.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, s.abbrev AS section_abbrev, s.abbrev_alt1 AS section_abbrev_alt1, s.abbrev_alt2 AS section_abbrev_alt2, COALESCE(o.seq, s.seq) AS section_seq, pa.seq FROM published_articles pa, articles a LEFT JOIN sections s ON s.section_id = a.section_id LEFT JOIN custom_section_orders o ON (a.section_id = o.section_id AND o.issue_id = ?) WHERE pa.article_id = a.article_id AND pa.issue_id = ? AND a.status <> ' . STATUS_ARCHIVED . ' ORDER BY section_seq ASC, pa.seq ASC', array($issueId, $issueId), $limit
 			);
 		} else {
 			$result = &$this->retrieve(
-				'SELECT DISTINCT pa.*, a.*, s.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, s.abbrev AS section_abbrev, s.abbrev_alt1 AS section_abbrev_alt1, s.abbrev_alt2 AS section_abbrev_alt2, COALESCE(o.seq, s.seq) AS section_seq, pa.seq FROM published_articles pa, articles a LEFT JOIN sections s ON s.section_id = a.section_id LEFT JOIN custom_section_orders o ON (a.section_id = o.section_id AND o.issue_id = ?) WHERE pa.article_id = a.article_id AND pa.issue_id = ? ORDER BY section_seq ASC, pa.seq ASC', array($issueId, $issueId)
+				'SELECT DISTINCT pa.*, a.*, s.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, s.abbrev AS section_abbrev, s.abbrev_alt1 AS section_abbrev_alt1, s.abbrev_alt2 AS section_abbrev_alt2, COALESCE(o.seq, s.seq) AS section_seq, pa.seq FROM published_articles pa, articles a LEFT JOIN sections s ON s.section_id = a.section_id LEFT JOIN custom_section_orders o ON (a.section_id = o.section_id AND o.issue_id = ?) WHERE pa.article_id = a.article_id AND pa.issue_id = ? AND a.status <> ' . STATUS_ARCHIVED . ' ORDER BY section_seq ASC, pa.seq ASC', array($issueId, $issueId)
 			);
 		}
 
@@ -69,7 +69,7 @@ class PublishedArticleDAO extends DAO {
 	 */
 	function getPublishedArticleCountByJournalId($journalId) {
 		$result =& $this->retrieve(
-			'SELECT count(*) FROM published_articles pa, articles a WHERE pa.article_id = a.article_id AND a.journal_id = ?',
+			'SELECT count(*) FROM published_articles pa, articles a WHERE pa.article_id = a.article_id AND a.journal_id = ? AND a.status <> ' . STATUS_ARCHIVED,
 			$journalId
 		);
 		list($count) = $result->fields;
@@ -84,7 +84,7 @@ class PublishedArticleDAO extends DAO {
 	 */
 	function &getPublishedArticlesByJournalId($journalId, $rangeInfo = null) {
 		$result =& $this->retrieveRange(
-			'SELECT pa.*, a.*, s.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, s.abbrev AS section_abbrev, s.abbrev_alt1 AS section_abbrev_alt1, s.abbrev_alt2 AS section_abbrev_alt2 FROM published_articles pa, articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE pa.article_id = a.article_id AND a.journal_id = ?',
+			'SELECT pa.*, a.*, s.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, s.abbrev AS section_abbrev, s.abbrev_alt1 AS section_abbrev_alt1, s.abbrev_alt2 AS section_abbrev_alt2 FROM published_articles pa, articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE pa.article_id = a.article_id AND a.journal_id = ? AND a.status <> ' . STATUS_ARCHIVED,
 			$journalId,
 			$rangeInfo
 		);
@@ -102,7 +102,7 @@ class PublishedArticleDAO extends DAO {
 		$publishedArticles = array();
 
 		$result = &$this->retrieve(
-			'SELECT DISTINCT pa.*, a.*, s.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, s.abbrev AS section_abbrev, s.abbrev_alt1 AS section_abbrev_alt1, s.abbrev_alt2 AS section_abbrev_alt2, s.abstracts_disabled AS abstracts_disabled, s.hide_title AS section_hide_title, COALESCE(o.seq, s.seq) AS section_seq, pa.seq FROM published_articles pa, articles a LEFT JOIN sections s ON s.section_id = a.section_id LEFT JOIN custom_section_orders o ON (a.section_id = o.section_id AND o.issue_id = ?) WHERE pa.article_id = a.article_id AND pa.issue_id = ? ORDER BY section_seq ASC, pa.seq ASC', array($issueId, $issueId)
+			'SELECT DISTINCT pa.*, a.*, s.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, s.abbrev AS section_abbrev, s.abbrev_alt1 AS section_abbrev_alt1, s.abbrev_alt2 AS section_abbrev_alt2, s.abstracts_disabled AS abstracts_disabled, s.hide_title AS section_hide_title, COALESCE(o.seq, s.seq) AS section_seq, pa.seq FROM published_articles pa, articles a LEFT JOIN sections s ON s.section_id = a.section_id LEFT JOIN custom_section_orders o ON (a.section_id = o.section_id AND o.issue_id = ?) WHERE pa.article_id = a.article_id AND pa.issue_id = ? AND a.status <> ' . STATUS_ARCHIVED . ' ORDER BY section_seq ASC, pa.seq ASC', array($issueId, $issueId)
 		);
 
 		$currSectionId = 0;
@@ -140,7 +140,7 @@ class PublishedArticleDAO extends DAO {
 		$publishedArticles = array();
 
 		$result = &$this->retrieve(
-			'SELECT pa.*, a.*, s.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, s.abbrev AS section_abbrev, s.abbrev_alt1 AS section_abbrev_alt1, s.abbrev_alt2 AS section_abbrev_alt2 FROM published_articles pa, articles a, sections s WHERE a.section_id = s.section_id AND pa.article_id = a.article_id AND a.section_id = ? AND pa.issue_id = ? ORDER BY pa.seq ASC', array($sectionId, $issueId)
+			'SELECT pa.*, a.*, s.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, s.abbrev AS section_abbrev, s.abbrev_alt1 AS section_abbrev_alt1, s.abbrev_alt2 AS section_abbrev_alt2 FROM published_articles pa, articles a, sections s WHERE a.section_id = s.section_id AND pa.article_id = a.article_id AND a.section_id = ? AND pa.issue_id = ? AND a.status <> ' . STATUS_ARCHIVED . ' ORDER BY pa.seq ASC', array($sectionId, $issueId)
 		);
 
 		$currSectionId = 0;
