@@ -68,7 +68,11 @@ class Action {
 			import("submission.form.MetadataForm");
 			$metadataForm = &new MetadataForm($article);
 			$metadataForm->readInputData();
-		
+
+			if (!$metadataForm->validate()) {
+				return $metadataForm->display();
+			}
+
 			// Check for any special cases before trying to save
 			if (Request::getUserVar('addAuthor')) {
 				// Add an author

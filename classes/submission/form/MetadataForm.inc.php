@@ -62,6 +62,7 @@ class MetadataForm extends Form {
 
 		if ($this->canEdit) {
 			parent::Form('submission/metadata/metadataEdit.tpl');
+			$this->addCheck(new FormValidator($this, 'title', 'required', 'author.submit.form.titleRequired'));
 		} else {
 			parent::Form('submission/metadata/metadataView.tpl');
 		}
