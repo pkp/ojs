@@ -19,7 +19,7 @@
 	<tr>
 		<td width="20%" class="label">{translate key="article.authors"}</td>
 		<td width="80%" colspan="2" class="value">
-			{url|assign:"url" page="user" op="email" redirectUrl=$currentUrl authorsArticleId=$submission->getArticleId()}
+			{url|assign:"url" page="user" op="email" redirectUrl=$currentUrl authorsArticleId=$submission->getArticleId() articleId=$submission->getArticleId()}
 			{$submission->getAuthorString()|escape} {icon name="mail" url=$url}
 		</td>
 	</tr>
@@ -53,7 +53,7 @@
 		<td colspan="2" class="value">
 			{assign var="submitter" value=$submission->getUser()}
 			{assign var=emailString value="`$submitter->getFullName()` <`$submitter->getEmail()`>"}
-			{url|assign:"url" page="user" op="email" redirectUrl=$currentUrl to=$emailString|to_array subject=$submission->getArticleTitle|strip_tags}
+			{url|assign:"url" page="user" op="email" redirectUrl=$currentUrl to=$emailString|to_array subject=$submission->getArticleTitle|strip_tags articleId=$submission->getArticleId()}
 			{$submitter->getFullName()|escape} {icon name="mail" url=$url}
 		</td>
 	</tr>

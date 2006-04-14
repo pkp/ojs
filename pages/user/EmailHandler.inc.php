@@ -26,8 +26,57 @@ class EmailHandler extends UserHandler {
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 
-		import('mail.MailTemplate');
-		$email = &new MailTemplate();
+		$email = null;
+		if ($articleId = Request::getUserVar('articleId')) {
+			// This message is in reference to an article.
+			// Determine whether the current user has access
+			// to the article in some form, and if so, use an
+			// ArticleMailTemplate.
+			$articleDao =& DAORegistry::getDAO('ArticleDAO');
+
+			$article =& $articleDao->getArticle($articleId);
+			$hasAccess = false;
+
+			// First, conditions where access is OK.
+			// 1. User is submitter
+			if ($article && $article->getUserId() == $user->getUserId()) $hasAccess = true;
+			// 2. User is editor
+			$editAssignmentDao =& DAORegistry::getDAO('EditAssignmentDAO');
+			$editAssignments =& $editAssignmentDao->getEditAssignmentsByArticleId($articleId);
+			while ($editAssignment =& $editAssignments->next()) {
+				if ($editAssignment->getEditorId() === $user->getUserId()) $hasAccess = true;
+			}
+			// 3. User is reviewer
+			$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
+			foreach ($reviewAssignmentDao->getReviewAssignmentsByArticleId($articleId) as $reviewAssignment) {
+				if ($reviewAssignment->getReviewerId() === $user->getUserId()) $hasAccess = true;
+			}
+			// 4. User is copyeditor
+			$copyAssignmentDao =& DAORegistry::getDAO('CopyAssignmentDAO');
+			$copyAssignment =& $copyAssignmentDao->getCopyAssignmentByArticleId($articleId);
+			if ($copyAssignment && $copyAssignment->getCopyeditorId() === $user->getUserId()) $hasAccess = true;
+			// 5. User is layout editor
+			$layoutAssignmentDao =& DAORegistry::getDAO('LayoutAssignmentDAO');
+			$layoutAssignment =& $layoutAssignmentDao->getLayoutAssignmentByArticleId($articleId);
+			if ($layoutAssignment && $layoutAssignment->getEditorId() === $user->getUserId()) $hasAccess = true;
+			// 6. User is proofreader
+			$proofAssignmentDao =& DAORegistry::getDAO('ProofAssignmentDAO');
+			$proofAssignment =& $proofAssignmentDao->getProofAssignmentByArticleId($articleId);
+			if ($proofAssignment && $proofAssignment->getProofreaderId() === $user->getUserId()) $hasAccess = true;
+
+			// Last, "deal-breakers" -- access is not allowed.
+			if ($article && $article->getJournalId() !== $journal->getJournalId()) $hasAccess = false;
+
+			if ($hasAccess) {
+				import('mail.ArticleMailTemplate');
+				$email =& new ArticleMailTemplate($articleDao->getArticle($articleId));
+			}
+		}
+
+		if ($email === null) {
+			import('mail.MailTemplate');
+			$email = &new MailTemplate();
+		}
 		
 		if (Request::getUserVar('send') && !$email->hasErrors()) {
 			$email->send();
@@ -51,7 +100,7 @@ class EmailHandler extends UserHandler {
 					}
 				}
 			}
-			$email->displayEditForm(Request::url(null, null, 'email'), array('redirectUrl' => Request::getUserVar('redirectUrl')), null, array('disableSkipButton' => true));
+			$email->displayEditForm(Request::url(null, null, 'email'), array('redirectUrl' => Request::getUserVar('redirectUrl'), 'articleId' => $articleId), null, array('disableSkipButton' => true));
 		}
 	}
 }

@@ -49,7 +49,7 @@
 		<td class="value">
 			{if $logEntry->getSenderFullName()}
 				{assign var=emailString value="`$logEntry->getSenderFullName()` <`$logEntry->getSenderEmail()`>"}
-				{url|assign:"url" page="user" op="email" to=$emailString|to_array redirectUrl=$currentUrl subject=$logEntry->getSubject()}
+				{url|assign:"url" page="user" op="email" to=$emailString|to_array redirectUrl=$currentUrl subject=$logEntry->getSubject() articleId=$submission->getArticleId()}
 				{$logEntry->getSenderFullName()|escape} {icon name="mail" url=$url}
 			{else}
 				{translate key="common.notApplicable"}

@@ -16,7 +16,7 @@
 	<tr>
 		<td width="20%" class="label">{translate key="article.authors"}</td>
 		<td width="80%">
-			{url|assign:"url" page="user" op="email" redirectUrl=$currentUrl authorsArticleId=$submission->getArticleId()}
+			{url|assign:"url" page="user" op="email" redirectUrl=$currentUrl authorsArticleId=$submission->getArticleId() articleId=$submission->getArticleId()}
 			{$submission->getAuthorString()|escape} {icon name="mail" url=$url}
 		</td>
 	</tr>
@@ -34,7 +34,7 @@
 			{assign var=editAssignments value=$submission->getEditAssignments()}
 			{foreach from=$editAssignments item=editAssignment}
 				{assign var=emailString value="`$editAssignment->getEditorFullName()` <`$editAssignment->getEditorEmail()`>"}
-				{url|assign:"url" page="user" op="email" to=$emailString|to_array redirectUrl=$currentUrl subject=$submission->getArticleTitle()|strip_tags}
+				{url|assign:"url" page="user" op="email" to=$emailString|to_array redirectUrl=$currentUrl subject=$submission->getArticleTitle()|strip_tags articleId=$submission->getArticleId()}
 				{$editAssignment->getEditorFullName()|escape} {icon name="mail" url=$url}<br />
 			{foreachelse}
 				{translate key="common.noneAssigned"}

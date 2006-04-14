@@ -25,7 +25,7 @@
 		<td width="20%" class="label">{translate key="user.name"}</td>
 		<td width="80%" class="value">
 			{assign var=emailString value="`$author->getFullName()` <`$author->getEmail()`>"}
-			{url|assign:"url" page="user" op="email" redirectUrl=$currentUrl to=$emailString|to_array subject=$submission->getArticleTitle|strip_tags}
+			{url|assign:"url" page="user" op="email" redirectUrl=$currentUrl to=$emailString|to_array subject=$submission->getArticleTitle|strip_tags articleId=$submission->getArticleId()}
 			{$author->getFullName()|escape} {icon name="mail" url=$url}
 		</td>
 	</tr>

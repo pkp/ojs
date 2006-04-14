@@ -21,7 +21,7 @@
 		<td width="20%" class="label">{translate key="user.name"}</td>
 		<td width="80%" class="value">
 			{assign var=emailString value="`$author.firstName` `$author.middleName` `$author.lastName` <`$author.email`>"}
-			{url|assign:"url" page="user" op="email" to=$emailString|to_array redirectUrl=$currentUrl}
+			{url|assign:"url" page="user" op="email" to=$emailString|to_array redirectUrl=$currentUrl articleId=$articleId}
 			{$author.firstName|escape} {$author.middleName|escape} {$author.lastName|escape} {icon name="mail" url=$url}
 		</td>
 	</tr>
