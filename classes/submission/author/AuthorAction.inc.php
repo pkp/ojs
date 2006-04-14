@@ -29,6 +29,31 @@ class AuthorAction extends Action {
 	 */
 	 
 	/**
+	 * Designates the original file the review version.
+	 * @param $authorSubmission object
+	 * @param $designate boolean
+	 */
+	function designateReviewVersion($authorSubmission, $designate = false) {
+		import('file.ArticleFileManager');
+		$articleFileManager = &new ArticleFileManager($authorSubmission->getArticleId());
+		$authorSubmissionDao = &DAORegistry::getDAO('AuthorSubmissionDAO');
+		
+		if ($designate && !HookRegistry::call('AuthorAction::designateReviewVersion', array(&$authorSubmission))) {
+			$submissionFile =& $authorSubmission->getSubmissionFile();
+			$reviewFileId = $articleFileManager->copyToReviewFile($submissionFile->getFileId());
+			$editorFileId = $articleFileManager->copyToEditorFile($reviewFileId, null, null);
+
+			$authorSubmission->setReviewFileId($reviewFileId);
+			$authorSubmission->setEditorFileId($editorFileId);
+			
+			$authorSubmissionDao->updateAuthorSubmission($authorSubmission);
+
+			$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
+			$sectionEditorSubmissionDao->createReviewRound($authorSubmission->getArticleId(), 1, 1);
+		}
+	}
+	 
+	/**
 	 * Delete an author file from a submission.
 	 * @param $article object
 	 * @param $fileId int

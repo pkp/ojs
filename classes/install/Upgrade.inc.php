@@ -46,7 +46,30 @@ class Upgrade extends Installer {
 		ArticleSearchIndex::rebuildIndex();
 		return true;
 	}
-	
+
+	/**
+	 * For upgrade to 2.1.1: Designate original versions as review versions
+	 * in all cases where review versions aren't designated. (#2144)
+	 */
+	function designateReviewVersions() {
+		$journalDao =& DAORegistry::getDAO('JournalDAO');
+		$articleDao =& DAORegistry::getDAO('ArticleDAO');
+		$authorSubmissionDao =& DAORegistry::getDAO('AuthorSubmissionDAO');
+		import('submission.author.AuthorAction');
+
+		$journals =& $journalDao->getJournals();
+		while ($journal =& $journals->next()) {
+			$articles =& $articleDao->getArticlesByJournalId($journal->getJournalId());
+			while ($article =& $articles->next()) {
+				if (!$article->getReviewFileId() && $article->getSubmissionProgress() == 0) {
+					$authorSubmission =& $authorSubmissionDao->getAuthorSubmission($article->getArticleId());
+					AuthorAction::designateReviewVersion($authorSubmission, true);
+				}
+				unset($article);
+			}
+			unset($journal);
+		}
+	}
 }
 
 ?>

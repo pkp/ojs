@@ -54,7 +54,13 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 		$article->setSubmissionProgress(0);
 		$article->stampStatusModified();
 		$articleDao->updateArticle($article);
-		
+
+		// Designate this as the review version by default.
+		$authorSubmissionDao =& DAORegistry::getDAO('AuthorSubmissionDAO');
+		$authorSubmission =& $authorSubmissionDao->getAuthorSubmission($article->getArticleId());
+		AuthorAction::designateReviewVersion($authorSubmission, true);
+		unset($authorSubmission);
+
 		// Create additional submission mangement records
 		$copyeditorSubmissionDao = &DAORegistry::getDAO('CopyeditorSubmissionDAO');
 		$copyeditorSubmission = &new CopyeditorSubmission();

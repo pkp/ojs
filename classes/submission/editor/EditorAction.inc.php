@@ -122,13 +122,7 @@ class EditorAction extends SectionEditorAction {
 			EditorAction::assignEditor($article->getArticleId(), $user->getUserId());
 		}
 
-		// 2. Ensure there's a review version in place.
-		if (!$sectionEditorSubmission->getReviewFile()) {
-			// No review version; designate original.
-			SectionEditorAction::designateReviewVersion($sectionEditorSubmission, true);
-		}
-
-		// 3. Accept the submission and send to copyediting.
+		// 2. Accept the submission and send to copyediting.
 		$sectionEditorSubmission =& $sectionEditorSubmissionDao->getSectionEditorSubmission($article->getArticleId());
 		if (!$sectionEditorSubmission->getCopyeditFile()) {
 			SectionEditorAction::recordDecision($sectionEditorSubmission, SUBMISSION_EDITOR_DECISION_ACCEPT);
@@ -136,7 +130,7 @@ class EditorAction extends SectionEditorAction {
 			SectionEditorAction::setCopyeditFile($sectionEditorSubmission, $editorFile->getFileId(), $editorFile->getRevision());
 		}
 
-		// 4. Add a galley.
+		// 3. Add a galley.
 		$sectionEditorSubmission =& $sectionEditorSubmissionDao->getSectionEditorSubmission($article->getArticleId());
 		$galleys =& $sectionEditorSubmission->getGalleys();
 		if (empty($galleys)) {
@@ -173,7 +167,7 @@ class EditorAction extends SectionEditorAction {
 			$galleyDao->insertGalley($galley);
 		}
 
-		// 5. Send to scheduling
+		// 4. Send to scheduling
 		ProofreaderAction::queueForScheduling($sectionEditorSubmission);
 	}
 }

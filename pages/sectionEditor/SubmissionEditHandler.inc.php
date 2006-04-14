@@ -244,17 +244,6 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->display('sectionEditor/submissionHistory.tpl');
 	}
 	
-	function designateReviewVersion() {
-		$articleId = Request::getUserVar('articleId');
-		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
-		
-		$designate = Request::getUserVar('designate');
-
-		SectionEditorAction::designateReviewVersion($submission, $designate);
-		
-		Request::redirect(null, null, 'submissionReview', $articleId);
-	}
-	
 	function changeSection() {
 		$articleId = Request::getUserVar('articleId');
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId);

@@ -20,10 +20,6 @@
 	<li><a href="{url op="submissionHistory" path=$submission->getArticleId()}">{translate key="submission.history"}</a></li>
 </ul>
 
-{include file="sectionEditor/submission/summary.tpl"}
-
-<div class="separator"></div>
-
 {include file="sectionEditor/submission/peerReview.tpl"}
 
 <div class="separator"></div>

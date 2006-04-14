@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../dtd/xmldata.dtd">
+
+<!--
+  * 2.1.1_update.xml
+  *
+  * Copyright (c) 2005-2006 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * 2.1.1 database updates XML file.
+  *
+  * $Id$
+  -->
+
+<data>
+</data>

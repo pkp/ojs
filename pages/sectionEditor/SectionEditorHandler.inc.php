@@ -219,11 +219,6 @@ class SectionEditorHandler extends Handler {
 		SubmissionEditHandler::submissionHistory($args);
 	}
 	
-	function designateReviewVersion() {
-		import('pages.sectionEditor.SubmissionEditHandler');
-		SubmissionEditHandler::designateReviewVersion();
-	}
-		
 	function changeSection() {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::changeSection();

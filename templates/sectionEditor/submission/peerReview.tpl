@@ -9,64 +9,77 @@
  * $Id$
  *}
 
-<h3>{translate key="submission.reviewVersion"}</h3>
+<a name="submission"></a>
+<h3>{translate key="article.submission"}</h3>
 
 <table width="100%" class="data">
-<tr valign="top">
-	<td colspan="2">
-		<form method="post" action="{url op="designateReviewVersion"}">
-			<input type="hidden" name="articleId" value="{$submission->getArticleId()}" />
-			{if $submission->getSubmissionFile()}
-				<label for="reviewDesignate">{translate key="editor.article.designateReviewVersion"}</label>
-				<input type="checkbox" name="designate" id="reviewDesignate" value="1" /> 
-				<input type="submit" value="{translate key="common.record"}" class="button" />
-			{else}
-				{translate key="editor.article.designateReviewVersion"}
-				<input type="checkbox" disabled="disabled" name="designate" value="1" /> 
-				<input type="submit" disabled="disabled" value="{translate key="common.record"}" class="button" />
-			{/if}
-		</form>
-	</td>
-</tr>
-<tr valign="top">
-	<td colspan="2">
-		<form method="post" action="{url op="uploadReviewVersion"}" enctype="multipart/form-data">
-			{translate key="editor.article.uploadReviewVersion"}
-			<input type="hidden" name="articleId" value="{$submission->getArticleId()}" />
-			<input type="file" name="upload" class="uploadField" />
-			<input type="submit" name="submit" value="{translate key="common.upload"}" class="button" />
-		</form>
-	</td>
-</tr>
-<tr valign="top">
-	<td class="label" width="20%">{translate key="submission.reviewVersion"}</td>
-	{if $reviewFile}
-		<td width="80%" class="value">
-			<a href="{url op="downloadFile" path=$submission->getArticleId()|to_array:$reviewFile->getFileId():$reviewFile->getRevision()}" class="file">{$reviewFile->getFileName()|escape}</a>&nbsp;&nbsp;
-			{$reviewFile->getDateModified()|date_format:$dateFormatShort}
-		</td>
-	{else}
-		<td width="80%" class="nodata">{translate key="common.none"}</td>
-	{/if}
-</tr>
-{foreach from=$suppFiles item=suppFile}
-	<form method="post" action="{url op="setSuppFileVisibility"}">
-	<input type="hidden" name="articleId" value="{$submission->getArticleId()}" />
-	<input type="hidden" name="fileId" value="{$suppFile->getSuppFileId()}" />
-
-	<tr valign="top">
-		{if !$notFirstSuppFile}
-			<td class="label" rowspan="{$suppFiles|@count}">{translate key="article.suppFilesAbbrev"}</td>
-			{assign var=notFirstSuppFile value=1}
-		{/if}
-		<td width="80%" class="value nowrap">
-			<a href="{url op="downloadFile" path=$submission->getArticleId()|to_array:$suppFile->getFileId():$suppFile->getRevision()}" class="file">{$suppFile->getFileName()|escape}</a>&nbsp;&nbsp;
-			{$suppFile->getDateModified()|date_format:$dateFormatShort}
-				<label for="show">{translate key="editor.article.showSuppFile"}</label>
-				<input type="checkbox" name="show" id="show" value="1"{if $suppFile->getShowReviewers()==1} checked="checked"{/if}/>
-				<input type="submit" name="submit" value="{translate key="common.record"}" class="button" />
+	<tr>
+		<td width="20%" class="label">{translate key="article.authors"}</td>
+		<td width="80%">
+			{url|assign:"url" page="user" op="email" redirectUrl=$currentUrl authorsArticleId=$submission->getArticleId() articleId=$submission->getArticleId()}
+			{$submission->getAuthorString()|escape} {icon name="mail" url=$url}
 		</td>
 	</tr>
+	<tr>
+		<td class="label">{translate key="article.title"}</td>
+		<td>{$submission->getArticleTitle()|strip_unsafe_html}</td>
+	</tr>
+	<tr>
+		<td class="label">{translate key="section.section"}</td>
+		<td>{$submission->getSectionTitle()|escape}</td>
+	</tr>
+	<tr>
+		<td class="label">{translate key="user.role.editor"}</td>
+		<td>
+			{assign var=editAssignments value=$submission->getEditAssignments()}
+			{foreach from=$editAssignments item=editAssignment}
+				{assign var=emailString value="`$editAssignment->getEditorFullName()` <`$editAssignment->getEditorEmail()`>"}
+				{url|assign:"url" page="user" op="email" redirectUrl=$currentUrl to=$emailString|to_array subject=$submission->getArticleTitle|strip_tags articleId=$submission->getArticleId()}
+				{$editAssignment->getEditorFullName()|escape} {icon name="mail" url=$url}<br/>
+			{foreachelse}
+				{translate key="common.noneAssigned"}
+			{/foreach}
+		</td>
+	</tr>
+	<tr valign="top">
+		<td class="label" width="20%">{translate key="submission.reviewVersion"}</td>
+		{if $reviewFile}
+			<td width="80%" class="value">
+				<a href="{url op="downloadFile" path=$submission->getArticleId()|to_array:$reviewFile->getFileId():$reviewFile->getRevision()}" class="file">{$reviewFile->getFileName()|escape}</a>&nbsp;&nbsp;
+				{$reviewFile->getDateModified()|date_format:$dateFormatShort}
+			</td>
+		{else}
+			<td width="80%" class="nodata">{translate key="common.none"}</td>
+		{/if}
+	</tr>
+	<tr valign="top">
+		<td colspan="2">
+			<form method="post" action="{url op="uploadReviewVersion"}" enctype="multipart/form-data">
+				{translate key="editor.article.uploadReviewVersion"}
+				<input type="hidden" name="articleId" value="{$submission->getArticleId()}" />
+				<input type="file" name="upload" class="uploadField" />
+				<input type="submit" name="submit" value="{translate key="common.upload"}" class="button" />
+			</form>
+		</td>
+	</tr>
+	{foreach from=$suppFiles item=suppFile}
+		<form method="post" action="{url op="setSuppFileVisibility"}">
+		<input type="hidden" name="articleId" value="{$submission->getArticleId()}" />
+		<input type="hidden" name="fileId" value="{$suppFile->getSuppFileId()}" />
+
+		<tr valign="top">
+			{if !$notFirstSuppFile}
+				<td class="label" rowspan="{$suppFiles|@count}">{translate key="article.suppFilesAbbrev"}</td>
+				{assign var=notFirstSuppFile value=1}
+			{/if}
+			<td width="80%" class="value nowrap">
+				<a href="{url op="downloadFile" path=$submission->getArticleId()|to_array:$suppFile->getFileId():$suppFile->getRevision()}" class="file">{$suppFile->getFileName()|escape}</a>&nbsp;&nbsp;
+				{$suppFile->getDateModified()|date_format:$dateFormatShort}
+					<label for="show">{translate key="editor.article.showSuppFile"}</label>
+					<input type="checkbox" name="show" id="show" value="1"{if $suppFile->getShowReviewers()==1} checked="checked"{/if}/>
+					<input type="submit" name="submit" value="{translate key="common.record"}" class="button" />
+			</td>
+		</tr>
 	</form>
 {foreachelse}
 	<tr valign="top">

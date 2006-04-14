@@ -220,16 +220,10 @@ class SectionEditorSubmissionDAO extends DAO {
 				)
 			);
 		} elseif ($sectionEditorSubmission->getReviewRevision()!=null) {
-			$this->update(
-				'INSERT INTO review_rounds
-					(article_id, round, review_revision)
-					VALUES
-					(?, ?, ?)',
-				array(
-					$sectionEditorSubmission->getArticleId(),
-					$sectionEditorSubmission->getCurrentRound() === null ? 1 : $sectionEditorSubmission->getCurrentRound(),
-					$sectionEditorSubmission->getReviewRevision()
-				)
+			$this->createReviewRound(
+				$sectionEditorSubmission->getArticleId(),
+				$sectionEditorSubmission->getCurrentRound() === null ? 1 : $sectionEditorSubmission->getCurrentRound(),
+				$sectionEditorSubmission->getReviewRevision()
 			);
 		}
 		
@@ -313,7 +307,17 @@ class SectionEditorSubmissionDAO extends DAO {
 		}
 		
 	}
-	
+
+	function createReviewRound($articleId, $round, $reviewRevision) {
+		$this->update(
+			'INSERT INTO review_rounds
+				(article_id, round, review_revision)
+				VALUES
+				(?, ?, ?)',
+			array($articleId, $round, $reviewRevision)
+		);
+	}
+
 	/**
 	 * Get all section editor submissions for a section editor.
 	 * @param $sectionEditorId int

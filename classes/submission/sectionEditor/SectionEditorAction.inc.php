@@ -29,34 +29,6 @@ class SectionEditorAction extends Action {
 	 */
 	 
 	/**
-	 * Designates the original file the review version.
-	 * @param $sectionEditorSubmission object
-	 * @param $designate boolean
-	 */
-	function designateReviewVersion($sectionEditorSubmission, $designate = false) {
-		import('file.ArticleFileManager');
-		$articleFileManager = &new ArticleFileManager($sectionEditorSubmission->getArticleId());
-		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
-		
-		if ($designate && !HookRegistry::call('SectionEditorAction::designateReviewVersion', array(&$sectionEditorSubmission))) {
-			$submissionFile =& $sectionEditorSubmission->getSubmissionFile();
-			$reviewFileId = $articleFileManager->copyToReviewFile($submissionFile->getFileId());
-			
-			// $editorFileId may or may not be null after assignment
-			$editorFileId = $sectionEditorSubmission->getEditorFileId() != null ? $sectionEditorSubmission->getEditorFileId() : null;
-			
-			// $editorFileId definitely will not be null after assignment
-			$editorFileId = $articleFileManager->copyToEditorFile($reviewFileId, null, $editorFileId);
-			
-			$sectionEditorSubmission->setReviewFileId($reviewFileId);
-			$sectionEditorSubmission->setReviewRevision(1);
-			$sectionEditorSubmission->setEditorFileId($editorFileId);
-			
-			$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
-		}
-	}
-	 
-	/**
 	 * Changes the section an article belongs in.
 	 * @param $sectionEditorSubmission int
 	 * @param $sectionId int

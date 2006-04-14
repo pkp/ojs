@@ -97,7 +97,7 @@ class AuthorSubmissionDAO extends DAO {
 		for ($i = 1; $i <= $row['current_round']; $i++) {
 			$authorSubmission->setReviewAssignments($this->reviewAssignmentDao->getReviewAssignmentsByArticleId($row['article_id'], $i), $i);
 		}
-		
+
 		// Comments
 		$authorSubmission->setMostRecentEditorDecisionComment($this->articleCommentDao->getMostRecentArticleComment($row['article_id'], COMMENT_TYPE_EDITOR_DECISION, $row['article_id']));
 		$authorSubmission->setMostRecentCopyeditComment($this->articleCommentDao->getMostRecentArticleComment($row['article_id'], COMMENT_TYPE_COPYEDIT, $row['article_id']));
@@ -175,6 +175,11 @@ class AuthorSubmissionDAO extends DAO {
 			$article->setRevisedFileId($authorSubmission->getRevisedFileId());
 			$article->setDateStatusModified($authorSubmission->getDateStatusModified());
 			$article->setLastModified($authorSubmission->getLastModified());
+			// FIXME: These two are necessary for designating the
+			// original as the review version, but they are probably
+			// best not exposed like this.
+			$article->setReviewFileId($authorSubmission->getReviewFileId());
+			$article->setEditorFileId($authorSubmission->getEditorFileId());
 			
 			$this->articleDao->updateArticle($article);
 		}
