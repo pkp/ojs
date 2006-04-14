@@ -4,15 +4,15 @@
  * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * List copyeditors and give the ability to select a copyeditor.
+ * List editors or section editors and give the ability to select one.
  *
  * $Id$
  *}
 
-{assign var="pageTitle" value="user.role.sectionEditors"}
+{assign var="pageTitle" value=`$roleName`s}
 {include file="common/header.tpl"}
 
-<h3>{translate key="editor.article.selectSectionEditor"}</h3>
+<h3>{translate key="editor.article.selectEditor" roleName=$roleName|translate}</h3>
 
 <form name="submit" method="post" action="{url op="assignEditor" articleId=$articleId}">
 	<select name="searchField" size="1" class="selectMenu">

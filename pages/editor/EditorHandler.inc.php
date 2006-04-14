@@ -364,16 +364,17 @@ class EditorHandler extends SectionEditorHandler {
 			$editorSubmissionDao = &DAORegistry::getDAO('EditorSubmissionDAO');
 
 			if (isset($args[0]) && $args[0] === 'editor') {
-				$roleName = 'user.role.editors';
+				$roleName = 'user.role.editor';
 				$editors = &$editorSubmissionDao->getUsersNotAssignedToArticle($journal->getJournalId(), $articleId, RoleDAO::getRoleIdFromPath('editor'), $searchType, $search, $searchMatch, $rangeInfo);
 			} else {
-				$roleName = 'user.role.sectionEditors';
+				$roleName = 'user.role.sectionEditor';
 				$editors = &$editorSubmissionDao->getUsersNotAssignedToArticle($journal->getJournalId(), $articleId, RoleDAO::getRoleIdFromPath('sectionEditor'), $searchType, $search, $searchMatch, $rangeInfo);
 			}
 	
 			$templateMgr = &TemplateManager::getManager();
 	
 			$templateMgr->assign_by_ref('editors', $editors);
+			$templateMgr->assign('roleName', $roleName);
 			$templateMgr->assign('articleId', $articleId);
 	
 			$sectionDao = &DAORegistry::getDAO('SectionDAO');
