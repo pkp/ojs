@@ -105,7 +105,7 @@
 				{else}
 					{icon name="mail" disabled="disable"}
 				{/if}
-				{$proofAssignment->getDateAuthorAcknowledged()|date_format:$dateFormatShort|default:""}
+				{$proofAssignment->getDateProofreaderAcknowledged()|date_format:$dateFormatShort|default:""}
 			{else}
 				{translate key="common.notApplicableShort"}
 			{/if}
