@@ -23,9 +23,9 @@
 			{translate key="submission.peerReview"}
 			<table width="100%" class="nested">
 				<tr valign="top">
-					<td class="padded"><span class="nested">{translate key="submission.ask"}</span></td>
-					<td class="padded"><span class="nested">{translate key="submission.due"}</span></td>
-					<td class="padded"><span class="nested">{translate key="submission.done"}</span></td>
+					<td width="33%" style="padding: 0 4px 0 0; font-size: 1.0em">{translate key="submission.ask"}</td>
+					<td width="33%" style="padding: 0 4px 0 0; font-size: 1.0em">{translate key="submission.due"}</td>
+					<td width="34%" style="padding: 0 4px 0 0; font-size: 1.0em">{translate key="submission.done"}</td>
 				</tr>
 			</table>
 		</td>

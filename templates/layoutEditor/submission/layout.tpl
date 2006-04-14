@@ -12,8 +12,12 @@
 <a name="layout"></a>
 <h3>{translate key="submission.layout"}</h3>
 
-<p>{translate key="user.role.layoutEditor"}:
-&nbsp; {$layoutAssignment->getEditorFullName()}</p>
+<table class="data" width="100%">
+	<tr>
+		<td class="label" width="20%">{translate key="user.role.layoutEditor"}</td>
+		<td class="value" width="80%">{$layoutAssignment->getEditorFullName()}</td>
+	</tr>
+</table>
 
 <table width="100%" class="info">
 	<tr>

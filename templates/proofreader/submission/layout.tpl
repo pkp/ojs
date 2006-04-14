@@ -15,8 +15,12 @@
 <h3>{translate key="submission.layout"}</h3>
 
 {if $useLayoutEditors}
-<p>{translate key="user.role.layoutEditor"}:
-&nbsp; {if $layoutAssignment->getEditorId()}{$layoutAssignment->getEditorFullName()|escape}{else}{translate key="common.none"}{/if}</p>
+<table class="data" width="100%">
+	<tr>
+		<td class="label" width="20%">{translate key="user.role.layoutEditor"}</td>
+		<td class="value" width="80%">{if $layoutAssignment->getEditorId()}{$layoutAssignment->getEditorFullName()|escape}{else}{translate key="common.none"}{/if}</td>
+	</tr>
+</table>
 {/if}
 
 <table width="100%" class="info">

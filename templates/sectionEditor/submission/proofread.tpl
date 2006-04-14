@@ -13,9 +13,13 @@
 <h3>{translate key="submission.proofreading"}</h3>
 
 {if $useProofreaders}
-<p>{translate key="user.role.proofreader"}:
-{if $proofAssignment->getProofreaderId()}&nbsp; {$proofAssignment->getProofreaderFullName()|escape}{/if}
-&nbsp; <a href="{url op="selectProofreader" path=$submission->getArticleId()}" class="action">{translate key="editor.article.selectProofreader"}</a></p>
+<table class="data" width="100%">
+	<tr>
+		<td width="20%" class="label">{translate key="user.role.proofreader"}</td>
+		{if $proofAssignment->getProofreaderId()}<td class="value" width="20%">{$proofAssignment->getProofreaderFullName()|escape}</td>{/if}
+		<td class="value"><a href="{url op="selectProofreader" path=$submission->getArticleId()}" class="action">{translate key="editor.article.selectProofreader"}</a></td>
+	</tr>
+</table>
 {/if}
 
 <table width="100%" class="info">

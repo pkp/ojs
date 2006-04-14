@@ -9,8 +9,6 @@
  * $Id$
  *}
 
-<br />
-
 <script type="text/javascript">
 {literal}
 <!--

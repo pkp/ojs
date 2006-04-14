@@ -13,9 +13,13 @@
 <h3>{translate key="submission.copyediting"}</h3>
 
 {if $useCopyeditors}
-<p>{translate key="user.role.copyeditor"}:
-{if $submission->getCopyeditorId()}&nbsp; {$copyeditor->getFullName()|escape}{/if}
-&nbsp; <a href="{url op="selectCopyeditor" path=$submission->getArticleId()}" class="action">{translate key="editor.article.selectCopyeditor"}</a></p>
+<table width="100%" class="data">
+	<tr>
+		<td width="20%" class="label">{translate key="user.role.copyeditor"}</td>
+		{if $submission->getCopyeditorId()}<td width="20%" class="value">{$copyeditor->getFullName()|escape}</td>{/if}
+		<td class="value"><a href="{url op="selectCopyeditor" path=$submission->getArticleId()}" class="action">{translate key="editor.article.selectCopyeditor"}</a></td>
+	</tr>
+</table>
 {/if}
 
 <table width="100%" class="info">
@@ -215,7 +219,6 @@
 	<input type="submit" value="{translate key="common.upload"}" class="button"{if !$canUploadCopyedit} disabled="disabled"{/if} />
 </form>
 
-<p>
 {translate key="submission.copyedit.copyeditComments"}
 {if $submission->getMostRecentCopyeditComment()}
 	{assign var="comment" value=$submission->getMostRecentCopyeditComment()}
@@ -228,4 +231,3 @@
 &nbsp;&nbsp;
 <a href="javascript:openHelp('{url op="instructions" path="copy"}')" class="action">{translate key="submission.copyedit.instructions"}</a>
 {/if}
-</p>

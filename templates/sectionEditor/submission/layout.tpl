@@ -15,9 +15,13 @@
 <h3>{translate key="submission.layout"}</h3>
 
 {if $useLayoutEditors}
-<p>{translate key="user.role.layoutEditor"}:
-{if $layoutAssignment->getEditorId()}&nbsp; {$layoutAssignment->getEditorFullName()|escape}{/if}
-&nbsp; <a href="{url op="assignLayoutEditor" path=$submission->getArticleId()}" class="action">{translate key="submission.layout.assignLayoutEditor"}</a></p>
+<table class="data" width="100%">
+	<tr>
+		<td width="20%" class="label">{translate key="user.role.layoutEditor"}</td>
+		{if $layoutAssignment->getEditorId()}<td width="20%" class="value">{$layoutAssignment->getEditorFullName()|escape}</td>{/if}
+		<td class="value"><a href="{url op="assignLayoutEditor" path=$submission->getArticleId()}" class="action">{translate key="submission.layout.assignLayoutEditor"}</a></td>
+	</tr>
+</table>
 {/if}
 
 <table width="100%" class="info">
@@ -154,7 +158,6 @@
 	<input type="submit" value="{translate key="common.upload"}" class="button" />
 </form>
 
-<p>
 {translate key="submission.layout.layoutComments"}
 {if $submission->getMostRecentLayoutComment()}
 	{assign var="comment" value=$submission->getMostRecentLayoutComment()}
@@ -167,4 +170,3 @@
 &nbsp;&nbsp;
 <a href="javascript:openHelp('{url op="instructions" path="layout"}')" class="action">{translate key="submission.layout.instructions"}</a>
 {/if}
-</p>

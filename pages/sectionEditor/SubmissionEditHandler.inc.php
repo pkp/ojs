@@ -1143,6 +1143,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$templateMgr->assign('searchMatch', $searchMatch);
 			$templateMgr->assign('search', $searchQuery);
 			$templateMgr->assign('searchInitial', $searchInitial);
+			$templateMgr->assign('alphaList', explode(' ', Locale::translate('common.alphaList')));
 			
 			$templateMgr->assign('pageTitle', 'user.role.layoutEditors');
 			$templateMgr->assign('pageSubTitle', 'editor.article.selectLayoutEditor');

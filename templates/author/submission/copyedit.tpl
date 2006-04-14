@@ -13,8 +13,12 @@
 <h3>{translate key="submission.copyediting"}</h3>
 
 {if $useCopyeditors}
-<p>{translate key="user.role.copyeditor"}:
-{if $submission->getCopyeditorId()}&nbsp; {$copyeditor->getFullName()|escape}{else}{translate key="common.none"}{/if}</p>
+<table class="data" width="100%">
+	<tr>
+		<td class="label" width="20%">{translate key="user.role.copyeditor"}</td>
+		<td class="label" width="80%">{if $submission->getCopyeditorId()}{$copyeditor->getFullName()|escape}{else}{translate key="common.none"}{/if}</td>
+	</tr>
+</table>
 {/if}
 
 <table width="100%" class="info">

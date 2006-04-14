@@ -347,7 +347,6 @@
 	<message key="submission.restrictions">Restrições</message>
 	<message key="submission.supportingAgencies">Agências de Financiamento</message>
 	<message key="submission.saveMetadata">Salvar Metadados</message>
-	<message key="submission.schedule">Agendar</message>
 	
 	<message key="submissions.copyeditComplete">Texto editado</message>
 	<message key="submissions.layoutComplete">Layout concluído</message>

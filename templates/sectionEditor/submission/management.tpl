@@ -59,7 +59,7 @@
 	</tr>
 	<tr>
 		<td class="label">{translate key="common.dateSubmitted"}</td>
-		<td>{$submission->getDateSubmitted()|date_format:$datetimeFormatLong}</td>
+		<td>{$submission->getDateSubmitted()|date_format:$dateFormatShort}</td>
 	</tr>
 	<tr>
 		<td class="label">{translate key="section.section"}</td>

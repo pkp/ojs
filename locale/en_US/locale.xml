@@ -345,7 +345,6 @@
 	<message key="submission.restrictions">Restrictions</message>
 	<message key="submission.supportingAgencies">Supporting Agencies</message>
 	<message key="submission.saveMetadata">Save Metadata</message>
-	<message key="submission.schedule">Schedule</message>
 	
 	<message key="submissions.sec">Sec</message>
 	<message key="submissions.step1">Step 1</message>
@@ -1590,7 +1589,7 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	<message key="sectionEditor.regrets.breadcrumb">Regrets</message>
 	<message key="sectionEditor.regrets.title">#{$articleId} Reviewer Regrets, Cancellations &amp; Earlier Rounds</message>
 	<message key="sectionEditor.regrets">Regrets</message>
-	<message key="sectionEditor.regrets.link">Regrets, Cancels &amp; Previous Rounds</message>
+	<message key="sectionEditor.regrets.link">View Regrets, Cancels, Previous Rounds</message>
 	<message key="sectionEditor.regrets.reviewRound">Peer Review, Round {$round}</message>
 	<message key="sectionEditor.regrets.decisionRound">Editor Decision, Round {$round}</message>
 	<message key="sectionEditor.regrets.regretsAndCancels">Reviewer Regrets &amp; Cancellations</message>

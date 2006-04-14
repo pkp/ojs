@@ -9,13 +9,13 @@
  * $Id$
  *}
 
-<br />
-
 <a name="metadata"></a>
-<h3>{translate key="submission.metadata"}</h3>
-
-<p><a href="{url op="viewMetadata" path=$submission->getArticleId()}" class="action">{translate key="submission.editMetadata"}</a></p>
-
+<table class="data">
+	<tr valign="middle">
+		<td><h3>{translate key="submission.metadata"}</h3></td>
+		<td>&nbsp;<br/><a href="{url op="viewMetadata" path=$submission->getArticleId()}" class="action">{translate key="submission.editMetadata"}</a></td>
+	</tr>
+</table>
 
 <h4>{translate key="article.authors"}</h4>
 	
@@ -49,10 +49,6 @@
 	{/if}
 	{/foreach}
 </table>
-
-
-<br />
-
 
 <h4>{if $section->getAbstractsDisabled()}{translate key="article.title"}{else}{translate key="submission.titleAndAbstract"}{/if}</h4>
 
@@ -96,10 +92,6 @@
 	{/if}
 	{/if}
 </table>
-
-
-<br />
-
 
 <h4>{translate key="submission.indexing"}</h4>
 	
@@ -168,10 +160,6 @@
 		<td width="80%" class="value">{$submission->getLanguage()|escape|default:"&mdash;"}</td>
 	</tr>
 </table>
-
-
-<br />
-
 
 <h4>{translate key="submission.supportingAgencies"}</h4>
 	

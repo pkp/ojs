@@ -12,8 +12,12 @@
 <a name="proofread"></a>
 <h3>{translate key="submission.proofreading"}</h3>
 
-<p>{translate key="user.role.proofreader"}:
-&nbsp; {$proofAssignment->getProofreaderFullName()}</p>
+<table width="100%" class="data">
+	<tr>
+		<td class="label" width="20%">{translate key="user.role.proofreader"}</td>
+		<td class="value" width="80%">{$proofAssignment->getProofreaderFullName()}</td>
+	</tr>
+</table>
 
 <table width="100%" class="info">
 	<tr>

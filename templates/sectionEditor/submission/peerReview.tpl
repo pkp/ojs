@@ -90,8 +90,6 @@
 	</tr>
 </table>
 
-<br />
-
 {* Determine whether any review assignments are available to initiate
    so that we know whether or not to display the Initiate All Reviews button *}
 {assign var=reviewAvailable value=0}
@@ -125,7 +123,7 @@
 
 	<table width="100%" class="data">
 	<tr valign="top">
-		<td class="label" width="20%">{translate key="submission.schedule"}</td>
+		<td class="label" width="20%">&nbsp;</td>
 		<td width="80%">
 			<table width="100%" class="info">
 				<tr>

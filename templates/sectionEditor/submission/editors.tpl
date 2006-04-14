@@ -9,24 +9,19 @@
  * $Id$
  *}
 
-<br />
-
 <a name="editors"></a>
 <h3>{translate key="user.role.editors"}</h3>
-
 <form action="{url op="setEditorFlags"}" method="post">
 <input type="hidden" name="articleId" value="{$submission->getArticleId()}"/>
 <table width="100%" class="listing">
-	<tr><td colspan="{if $isEditor}6{else}5{/if}" class="headseparator">&nbsp;</td></tr>
 	<tr class="heading" valign="bottom">
 		<td width="{if $isEditor}20%{else}25%{/if}">&nbsp;</td>
 		<td width="30%">&nbsp;</td>
-		<td align="center" width="10%">{translate key="submission.review"}</td>
-		<td align="center" width="10%">{translate key="submission.editing"}</td>
+		<td width="10%">{translate key="submission.review"}</td>
+		<td width="10%">{translate key="submission.editing"}</td>
 		<td width="{if $isEditor}20%{else}25%{/if}">{translate key="submission.request"}</td>
 		{if $isEditor}<td width="10%">{translate key="common.action"}</td>{/if}
 	</tr>
-	<tr><td colspan="{if $isEditor}6{else}5{/if}" class="headseparator">&nbsp;</td></tr>
 	{assign var=editAssignments value=$submission->getEditAssignments()}
 	{foreach from=$editAssignments item=editAssignment name=editAssignments}
 	{if $editAssignment->getEditorId() == $userId}
@@ -39,8 +34,8 @@
 				{url|assign:"url" page="user" op="email" redirectUrl=$currentUrl to=$emailString|to_array subject=$submission->getArticleTitle|strip_tags}
 				{$editAssignment->getEditorFullName()|escape} {icon name="mail" url=$url}
 			</td>
-			<td align="center">
-				<input
+			<td>
+				&nbsp;&nbsp;<input
 					type="checkbox"
 					name="canReview-{$editAssignment->getEditId()}"
 					{if $editAssignment->getIsEditor()}
@@ -52,8 +47,8 @@
 					{/if}
 				/>
 			</td>
-			<td align="center">
-				<input
+			<td>
+				&nbsp;&nbsp;<input
 					type="checkbox"
 					name="canEdit-{$editAssignment->getEditId()}"
 					{if $editAssignment->getIsEditor()}
@@ -70,10 +65,8 @@
 				<td><a href="{url op="deleteEditAssignment" path=$editAssignment->getEditId()}" class="action">{translate key="common.delete"}</a></td>
 			{/if}
 		</tr>
-		<tr><td colspan="{if $isEditor}6{else}5{/if}" class="{if $smarty.foreach.editAssignments.last}end{/if}separator">&nbsp;</td></tr>
 	{foreachelse}
 		<tr><td colspan="{if $isEditor}6{else}5{/if}" class="nodata">{translate key="common.noneAssigned"}</td></tr>
-		<tr><td colspan="{if $isEditor}6{else}5{/if}" class="endseparator">&nbsp;</td></tr>
 	{/foreach}
 </table>
 {if $isEditor}

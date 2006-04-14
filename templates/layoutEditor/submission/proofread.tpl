@@ -13,8 +13,12 @@
 <h3>{translate key="submission.proofreading"}</h3>
 
 {if $useProofreaders}
-<p>{translate key="user.role.proofreader"}:
-&nbsp; {if $proofAssignment->getProofreaderId()}{$proofAssignment->getProofreaderFullName()|escape}{else}{translate key="common.none"}{/if}</p>
+<table width="100%" class="data">
+	<tr>
+		<td class="label" width="20%">{translate key="user.role.proofreader"}</td>
+		<td class="value" width="80%">{if $proofAssignment->getProofreaderId()}{$proofAssignment->getProofreaderFullName()|escape}{else}{translate key="common.none"}{/if}</td>
+	</tr>
+</table>
 {/if}
 
 <table width="100%" class="info">
