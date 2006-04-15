@@ -690,7 +690,7 @@ If you have any questions, please feel free to contact me.
 			<field name="description">This email notifies a registered reader that the Manager has created a subscription for them. It provides the journal's URL along with instructions for access.</field>
 		</row>
 		<row>
-			<field name="email_key">SUBSCRIPTION_BEFORE_EXPIRY_REMIND</field>
+			<field name="email_key">SUBSCRIPTION_BEFORE_EXPIRY</field>
 			<field name="subject">Notice of Subscription Expiry</field>
 			<field name="body">{$subscriberName}:
 
@@ -707,7 +707,7 @@ If you have any questions, please feel free to contact me.
 			<field name="description">This email notifies a subscriber that their subscription will soon expire. It provides the journal's URL along with instructions for access.</field>
 		</row>
 		<row>
-			<field name="email_key">SUBSCRIPTION_AFTER_EXPIRY_REMIND</field>
+			<field name="email_key">SUBSCRIPTION_AFTER_EXPIRY</field>
 			<field name="subject">Subscription Expired</field>
 			<field name="body">{$subscriberName}:
 
@@ -724,7 +724,7 @@ If you have any questions, please feel free to contact me.
 			<field name="description">This email notifies a subscriber that their subscription has expired. It provides the journal's URL along with instructions for access.</field>
 		</row>
 		<row>
-			<field name="email_key">SUBSCRIPTION_AFTER_EXPIRY_REMIND_FINAL</field>
+			<field name="email_key">SUBSCRIPTION_AFTER_EXPIRY_LAST</field>
 			<field name="subject">Subscription Expired - Final Reminder</field>
 			<field name="body">{$subscriberName}:
 

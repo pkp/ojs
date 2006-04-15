@@ -387,19 +387,19 @@
 			<field name="to_role_id">1048576<!-- Reader --></field>
 		</row>
 		<row>
-			<field name="email_key">SUBSCRIPTION_BEFORE_EXPIRY_REMIND</field>
+			<field name="email_key">SUBSCRIPTION_BEFORE_EXPIRY</field>
 			<field name="can_edit">1</field>
 			<field name="can_disable">0</field>
 			<field name="to_role_id">1048576<!-- Reader --></field>
 		</row>
 		<row>
-			<field name="email_key">SUBSCRIPTION_AFTER_EXPIRY_REMIND</field>
+			<field name="email_key">SUBSCRIPTION_AFTER_EXPIRY</field>
 			<field name="can_edit">1</field>
 			<field name="can_disable">0</field>
 			<field name="to_role_id">1048576<!-- Reader --></field>
 		</row>
 		<row>
-			<field name="email_key">SUBSCRIPTION_AFTER_EXPIRY_REMIND_FINAL</field>
+			<field name="email_key">SUBSCRIPTION_AFTER_EXPIRY_LAST</field>
 			<field name="can_edit">1</field>
 			<field name="can_disable">0</field>
 			<field name="to_role_id">1048576<!-- Reader --></field>

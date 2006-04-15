@@ -100,7 +100,7 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 
 				while (!$subscriptions->eof()) {
 					$subscription = $subscriptions->next();
-					$this->sendReminder($subscription, $journal, 'SUBSCRIPTION_BEFORE_EXPIRY_REMIND');
+					$this->sendReminder($subscription, $journal, 'SUBSCRIPTION_BEFORE_EXPIRY');
 				}
 			}
 
@@ -122,7 +122,7 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 
 				while (!$subscriptions->eof()) {
 					$subscription = $subscriptions->next();
-					$this->sendReminder($subscription, $journal, 'SUBSCRIPTION_BEFORE_EXPIRY_REMIND');
+					$this->sendReminder($subscription, $journal, 'SUBSCRIPTION_BEFORE_EXPIRY');
 				}
 			}
 
@@ -152,7 +152,7 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 					$subscription = $subscriptions->next();
 					// Ensure that user does not have another, valid subscription
 					if (!$subscriptionDao->isValidSubscriptionByUser($subscription->getUserId(), $journal->getJournalId())) {
-						$this->sendReminder($subscription, $journal, 'SUBSCRIPTION_AFTER_EXPIRY_REMIND_FINAL');
+						$this->sendReminder($subscription, $journal, 'SUBSCRIPTION_AFTER_EXPIRY_LAST');
 					}
 				}
 			}
@@ -190,7 +190,7 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 					$subscription = $subscriptions->next();
 					// Ensure that user does not have another, valid subscription
 					if (!$subscriptionDao->isValidSubscriptionByUser($subscription->getUserId(), $journal->getJournalId())) {
-						$this->sendReminder($subscription, $journal, 'SUBSCRIPTION_AFTER_EXPIRY_REMIND');
+						$this->sendReminder($subscription, $journal, 'SUBSCRIPTION_AFTER_EXPIRY');
 					}
 				}
 			}
