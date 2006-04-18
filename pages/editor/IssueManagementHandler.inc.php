@@ -507,7 +507,7 @@ class IssueManagementHandler extends EditorHandler {
 				$templateMgr->assign_by_ref('issue', $issue);
 				$templateMgr->assign('body', $email->getBody());
 				$templateMgr->assign('mimeBoundary', $mimeBoundary);
-                                $templateMgr->assign_by_ref('publishedArticles', $publishedArticles);
+				$templateMgr->assign_by_ref('publishedArticles', $publishedArticles);
 
 				$email->addHeader('MIME-Version', '1.0');
 				$email->setContentType('multipart/alternative; boundary="'.$mimeBoundary.'"');
