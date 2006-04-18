@@ -202,16 +202,17 @@ class IssueForm extends Form {
 						break;
 				}
 
-				if ($journal->getSetting('enableSubscriptions')) {
-					$accessStatus = SUBSCRIPTION;
-				} else {
-					$accessStatus = OPEN_ACCESS;
-				}
-				
 			} else {
 				$volume = $journal->getSetting('initialVolume');
 				$number = $journal->getSetting('initialNumber');
 				$year = $journal->getSetting('initialYear');
+			}
+
+
+			if ($journal->getSetting('enableSubscriptions')) {
+				$accessStatus = SUBSCRIPTION;
+			} else {
+				$accessStatus = OPEN_ACCESS;
 			}
 
 
