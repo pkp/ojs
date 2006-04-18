@@ -55,6 +55,18 @@ class ProfileForm extends Form {
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
 		$journalDao = &DAORegistry::getDAO('JournalDAO');
 		$notificationStatusDao = &DAORegistry::getDAO('NotificationStatusDAO');
+		$userSettingsDao = &DAORegistry::getDAO('UserSettingsDAO');
+
+		$journals = &$journalDao->getJournals();
+		$journals = &$journals->toArray();
+
+		foreach ($journals as $thisJournal) {
+			if ($thisJournal->getSetting('enableSubscriptions') == true && $thisJournal->getSetting('enableOpenAccessNotification') == true) {
+				$templateMgr->assign('displayOpenAccessNotification', true);
+				$templateMgr->assign_by_ref('user', $user);
+				break;
+			}
+		}
 
 		$journals = &$journalDao->getJournals();
 		$journals = &$journals->toArray();
@@ -75,7 +87,7 @@ class ProfileForm extends Form {
 	 */
 	function initData() {
 		$user = &Request::getUser();
-		
+
 		$this->_data = array(
 			'firstName' => $user->getFirstName(),
 			'middleName' => $user->getMiddleName(),
@@ -171,7 +183,23 @@ class ProfileForm extends Form {
 				$notificationStatusDao->setJournalNotifications($thisJournalId, $user->getUserId(), $shouldReceive);
 			}
 		}
-		
+
+		$openAccessNotify = Request::getUserVar('openAccessNotify');
+
+		$userSettingsDao = &DAORegistry::getDAO('UserSettingsDAO');
+		$journals = &$journalDao->getJournals();
+		$journals = &$journals->toArray();
+
+		foreach ($journals as $thisJournal) {
+			if (($thisJournal->getSetting('enableSubscriptions') == true) && ($thisJournal->getSetting('enableOpenAccessNotification') == true)) {
+				$currentlyReceives = $user->getSetting('openAccessNotification', $thisJournal->getJournalId());
+				$shouldReceive = !empty($openAccessNotify) && in_array($thisJournal->getJournalId(), $openAccessNotify);
+				if ($currentlyReceives != $shouldReceive) {
+					$userSettingsDao->updateSetting($user->getUserId(), 'openAccessNotification', $shouldReceive, 'bool', $thisJournal->getJournalId());
+				}
+			}
+		}
+
 		if ($user->getAuthId()) {
 			$authDao = &DAORegistry::getDAO('AuthSourceDAO');
 			$auth = &$authDao->getPlugin($user->getAuthId());

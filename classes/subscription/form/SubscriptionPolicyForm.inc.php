@@ -71,35 +71,17 @@ class SubscriptionPolicyForm extends Form {
 
 		parent::Form('subscription/subscriptionPolicyForm.tpl');
 
-		// If provided delayed open access flag is valid value
-		$this->addCheck(new FormValidatorInSet($this, 'enableDelayedOpenAccess', 'optional', 'manager.subscriptionPolicies.delayedOpenAccessValid', array('1')));
-
 		// If provided delayed open access duration is valid value
 		$this->addCheck(new FormValidatorInSet($this, 'delayedOpenAccessDuration', 'optional', 'manager.subscriptionPolicies.delayedOpenAccessDurationValid', array_keys($this->validDuration)));
-
-		// If provided author self-archive flag is valid value
-		$this->addCheck(new FormValidatorInSet($this, 'enableAuthorSelfArchive', 'optional', 'manager.subscriptionPolicies.authorSelfArchiveValid', array('1')));
-
-		// If provided expiry reminder months before flag is valid value
-		$this->addCheck(new FormValidatorInSet($this, 'enableSubscriptionExpiryReminderBeforeMonths', 'optional', 'manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid', array('1')));
 
 		// If provided expiry reminder months before value is valid value
 		$this->addCheck(new FormValidatorInSet($this, 'numMonthsBeforeSubscriptionExpiryReminder', 'optional', 'manager.subscriptionPolicies.numMonthsBeforeSubscriptionExpiryReminderValid', array_keys($this->validNumMonthsBeforeExpiry)));
 
-		// If provided expiry reminder weeks before flag is valid value
-		$this->addCheck(new FormValidatorInSet($this, 'enableSubscriptionExpiryReminderBeforeWeeks', 'optional', 'manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeWeeksValid', array('1')));
-
 		// If provided expiry reminder weeks before value is valid value
 		$this->addCheck(new FormValidatorInSet($this, 'numWeeksBeforeSubscriptionExpiryReminder', 'optional', 'manager.subscriptionPolicies.numWeeksBeforeSubscriptionExpiryReminderValid', array_keys($this->validNumWeeksBeforeExpiry)));
 
-		// If provided expiry reminder months after flag is valid value
-		$this->addCheck(new FormValidatorInSet($this, 'enableSubscriptionExpiryReminderAfterMonths', 'optional', 'manager.subscriptionPolicies.enableSubscriptionExpiryReminderAfterMonthsValid', array('1')));
-
 		// If provided expiry reminder months after value is valid value
 		$this->addCheck(new FormValidatorInSet($this, 'numMonthsAfterSubscriptionExpiryReminder', 'optional', 'manager.subscriptionPolicies.numMonthsAfterSubscriptionExpiryReminderValid', array_keys($this->validNumMonthsAfterExpiry)));
-
-		// If provided expiry reminder weeks after flag is valid value
-		$this->addCheck(new FormValidatorInSet($this, 'enableSubscriptionExpiryReminderAfterWeeks', 'optional', 'manager.subscriptionPolicies.enableSubscriptionExpiryReminderAfterWeeksValid', array('1')));
 
 		// If provided expiry reminder weeks after value is valid value
 		$this->addCheck(new FormValidatorInSet($this, 'numWeeksAfterSubscriptionExpiryReminder', 'optional', 'manager.subscriptionPolicies.numWeeksAfterSubscriptionExpiryReminderValid', array_keys($this->validNumWeeksAfterExpiry)));
@@ -131,6 +113,7 @@ class SubscriptionPolicyForm extends Form {
 			'subscriptionAdditionalInformation' => $journalSettingsDao->getSetting($journalId, 'subscriptionAdditionalInformation'),
 			'enableDelayedOpenAccess' => $journalSettingsDao->getSetting($journalId, 'enableDelayedOpenAccess'),
 			'delayedOpenAccessDuration' => $journalSettingsDao->getSetting($journalId, 'delayedOpenAccessDuration'),
+			'enableOpenAccessNotification' => $journalSettingsDao->getSetting($journalId, 'enableOpenAccessNotification'),
 			'enableAuthorSelfArchive' => $journalSettingsDao->getSetting($journalId, 'enableAuthorSelfArchive'),
 			'authorSelfArchivePolicy' => $journalSettingsDao->getSetting($journalId, 'authorSelfArchivePolicy'),
 			'enableSubscriptionExpiryReminderBeforeMonths' => $journalSettingsDao->getSetting($journalId, 'enableSubscriptionExpiryReminderBeforeMonths'),
@@ -148,7 +131,7 @@ class SubscriptionPolicyForm extends Form {
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->readUserVars(array('subscriptionAdditionalInformation', 'enableDelayedOpenAccess', 'delayedOpenAccessDuration', 'enableAuthorSelfArchive', 'authorSelfArchivePolicy', 'enableSubscriptionExpiryReminderBeforeMonths', 'numMonthsBeforeSubscriptionExpiryReminder', 'enableSubscriptionExpiryReminderBeforeWeeks', 'numWeeksBeforeSubscriptionExpiryReminder', 'enableSubscriptionExpiryReminderAfterWeeks', 'numWeeksAfterSubscriptionExpiryReminder', 'enableSubscriptionExpiryReminderAfterMonths', 'numMonthsAfterSubscriptionExpiryReminder'));
+		$this->readUserVars(array('subscriptionAdditionalInformation', 'enableDelayedOpenAccess', 'delayedOpenAccessDuration', 'enableOpenAccessNotification', 'enableAuthorSelfArchive', 'authorSelfArchivePolicy', 'enableSubscriptionExpiryReminderBeforeMonths', 'numMonthsBeforeSubscriptionExpiryReminder', 'enableSubscriptionExpiryReminderBeforeWeeks', 'numWeeksBeforeSubscriptionExpiryReminder', 'enableSubscriptionExpiryReminderAfterWeeks', 'numWeeksAfterSubscriptionExpiryReminder', 'enableSubscriptionExpiryReminderAfterMonths', 'numMonthsAfterSubscriptionExpiryReminder'));
 
 		// If delayed open access selected, ensure a valid duration is provided
 		if ($this->_data['enableDelayedOpenAccess'] == 1) {
@@ -185,17 +168,18 @@ class SubscriptionPolicyForm extends Form {
 		$journalId = $journal->getJournalId();
 	
 		$journalSettingsDao->updateSetting($journalId, 'subscriptionAdditionalInformation', $this->getData('subscriptionAdditionalInformation'), 'string');
-		$journalSettingsDao->updateSetting($journalId, 'enableDelayedOpenAccess', $this->getData('enableDelayedOpenAccess') == null ? 0 : $this->getData('enableDelayedOpenAccess'), 'int');
+		$journalSettingsDao->updateSetting($journalId, 'enableDelayedOpenAccess', $this->getData('enableDelayedOpenAccess') == null ? 0 : $this->getData('enableDelayedOpenAccess'), 'bool');
 		$journalSettingsDao->updateSetting($journalId, 'delayedOpenAccessDuration', $this->getData('delayedOpenAccessDuration'), 'int');
-		$journalSettingsDao->updateSetting($journalId, 'enableAuthorSelfArchive', $this->getData('enableAuthorSelfArchive') == null ? 0 : $this->getData('enableAuthorSelfArchive'), 'int');
+		$journalSettingsDao->updateSetting($journalId, 'enableOpenAccessNotification', $this->getData('enableOpenAccessNotification') == null ? 0 : $this->getData('enableOpenAccessNotification'), 'bool');
+		$journalSettingsDao->updateSetting($journalId, 'enableAuthorSelfArchive', $this->getData('enableAuthorSelfArchive') == null ? 0 : $this->getData('enableAuthorSelfArchive'), 'bool');
 		$journalSettingsDao->updateSetting($journalId, 'authorSelfArchivePolicy', $this->getData('authorSelfArchivePolicy'), 'string');
-		$journalSettingsDao->updateSetting($journalId, 'enableSubscriptionExpiryReminderBeforeMonths', $this->getData('enableSubscriptionExpiryReminderBeforeMonths') == null ? 0 : $this->getData('enableSubscriptionExpiryReminderBeforeMonths'), 'int');
+		$journalSettingsDao->updateSetting($journalId, 'enableSubscriptionExpiryReminderBeforeMonths', $this->getData('enableSubscriptionExpiryReminderBeforeMonths') == null ? 0 : $this->getData('enableSubscriptionExpiryReminderBeforeMonths'), 'bool');
 		$journalSettingsDao->updateSetting($journalId, 'numMonthsBeforeSubscriptionExpiryReminder', $this->getData('numMonthsBeforeSubscriptionExpiryReminder'), 'int');
-		$journalSettingsDao->updateSetting($journalId, 'enableSubscriptionExpiryReminderBeforeWeeks', $this->getData('enableSubscriptionExpiryReminderBeforeWeeks') == null ? 0 : $this->getData('enableSubscriptionExpiryReminderBeforeWeeks'), 'int');
+		$journalSettingsDao->updateSetting($journalId, 'enableSubscriptionExpiryReminderBeforeWeeks', $this->getData('enableSubscriptionExpiryReminderBeforeWeeks') == null ? 0 : $this->getData('enableSubscriptionExpiryReminderBeforeWeeks'), 'bool');
 		$journalSettingsDao->updateSetting($journalId, 'numWeeksBeforeSubscriptionExpiryReminder', $this->getData('numWeeksBeforeSubscriptionExpiryReminder'), 'int');
-		$journalSettingsDao->updateSetting($journalId, 'enableSubscriptionExpiryReminderAfterMonths', $this->getData('enableSubscriptionExpiryReminderAfterMonths') == null ? 0 : $this->getData('enableSubscriptionExpiryReminderAfterMonths'), 'int');
+		$journalSettingsDao->updateSetting($journalId, 'enableSubscriptionExpiryReminderAfterMonths', $this->getData('enableSubscriptionExpiryReminderAfterMonths') == null ? 0 : $this->getData('enableSubscriptionExpiryReminderAfterMonths'), 'bool');
 		$journalSettingsDao->updateSetting($journalId, 'numMonthsAfterSubscriptionExpiryReminder', $this->getData('numMonthsAfterSubscriptionExpiryReminder'), 'int');
-		$journalSettingsDao->updateSetting($journalId, 'enableSubscriptionExpiryReminderAfterWeeks', $this->getData('enableSubscriptionExpiryReminderAfterWeeks') == null ? 0 : $this->getData('enableSubscriptionExpiryReminderAfterWeeks'), 'int');
+		$journalSettingsDao->updateSetting($journalId, 'enableSubscriptionExpiryReminderAfterWeeks', $this->getData('enableSubscriptionExpiryReminderAfterWeeks') == null ? 0 : $this->getData('enableSubscriptionExpiryReminderAfterWeeks'), 'bool');
 		$journalSettingsDao->updateSetting($journalId, 'numWeeksAfterSubscriptionExpiryReminder', $this->getData('numWeeksAfterSubscriptionExpiryReminder'), 'int');
 	}
 	

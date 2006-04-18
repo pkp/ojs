@@ -690,6 +690,17 @@ If you have any questions, please feel free to contact me.
 			<field name="description">This email notifies a registered reader that the Manager has created a subscription for them. It provides the journal's URL along with instructions for access.</field>
 		</row>
 		<row>
+			<field name="email_key">OPEN_ACCESS_NOTIFY</field>
+			<field name="subject">Issue Now Open Access</field>
+			<field name="body">Readers:
+
+{$journalName} has just made available in an open access format the following issue. We invite you to review the Table of Contents here and then visit our web site ({$journalUrl}) to review articles and items of interest.
+
+Thanks for the continuing interest in our work,
+{$editorialContactSignature}</field>
+			<field name="description">This email is sent to registered readers who have requested to receive a notification email when an issue becomes open access.</field>
+		</row>
+		<row>
 			<field name="email_key">SUBSCRIPTION_BEFORE_EXPIRY</field>
 			<field name="subject">Notice of Subscription Expiry</field>
 			<field name="body">{$subscriberName}:

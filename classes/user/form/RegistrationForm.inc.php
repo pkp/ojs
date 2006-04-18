@@ -73,6 +73,8 @@ class RegistrationForm extends Form {
 		$journal = &Request::getJournal();
 		$templateMgr->assign('privacyStatement', $journal->getSetting('privacyStatement'));
 		$templateMgr->assign('allowRegReader', $journal->getSetting('allowRegReader')==1?1:0);
+		$templateMgr->assign('enableSubscriptions', $journal->getSetting('enableSubscriptions')==1?1:0);
+		$templateMgr->assign('enableOpenAccessNotification', $journal->getSetting('enableOpenAccessNotification')==1?1:0);
 		$templateMgr->assign('allowRegAuthor', $journal->getSetting('allowRegAuthor')==1?1:0);
 		$templateMgr->assign('allowRegReviewer', $journal->getSetting('allowRegReviewer')==1?1:0);
 		$templateMgr->assign('profileLocalesEnabled', $this->profileLocalesEnabled);
@@ -103,8 +105,8 @@ class RegistrationForm extends Form {
 				'firstName', 'middleName', 'lastName', 'initials',
 				'affiliation', 'email', 'phone', 'fax',
 				'mailingAddress', 'biography', 'interests', 'userLocales',
-				'registerAsReader', 'registerAsAuthor', 'registerAsReviewer',
-				'existingUser'
+				'registerAsReader', 'openAccessNotification', 'registerAsAuthor',
+				'registerAsReviewer', 'existingUser'
 			)
 		);
 		
@@ -232,6 +234,11 @@ class RegistrationForm extends Form {
 			$notificationStatusDao = &DAORegistry::getDAO('NotificationStatusDAO');
 			$notificationStatusDao->setJournalNotifications($journal->getJournalId(), $userId, false);
 			$notificationStatusDao->setJournalNotifications($journal->getJournalId(), $userId, true);
+		}
+
+		if (isset($allowedRoles['reader']) && $this->getData('openAccessNotification')) {
+			$userSettingsDao = &DAORegistry::getDAO('UserSettingsDAO');
+			$userSettingsDao->updateSetting($userId, 'openAccessNotification', true, 'bool', $journal->getJournalId());
 		}
 	}
 	

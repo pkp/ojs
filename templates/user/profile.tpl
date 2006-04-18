@@ -90,17 +90,42 @@
 	{if !$notFirstJournal}
 		{assign var=notFirstJournal value=1}
 		<tr valign="top">
-			<td class="label">{translate key="user.profile.form.notifications"}</td>
+			<td class="label">{translate key="user.profile.form.publishedNotifications"}</td>
 			<td class="value">
 	{/if}
 
-		<input type="checkbox" name="journalNotify[]" {if $notificationEnabled}checked="checked" {/if}id="journalNotify-{$thisJournalId}" value="{$thisJournalId}" /> <label for="journalNotify-{$thisJournalId}">{$thisJournal->getTitle()|escape}</label><br/>
+			<input type="checkbox" name="journalNotify[]" {if $notificationEnabled}checked="checked" {/if}id="journalNotify-{$thisJournalId}" value="{$thisJournalId}" /> <label for="journalNotify-{$thisJournalId}">{$thisJournal->getTitle()|escape}</label><br/>
 
 	{if $smarty.foreach.journalNotifications.last}
 			</td>
 		</tr>
 	{/if}
 {/foreach}
+
+{if $displayOpenAccessNotification}
+	{assign var=notFirstJournal value=0}
+	{foreach from=$journals name=journalOpenAccessNotifications key=thisJournalId item=thisJournal}
+		{assign var=thisJournalId value=$thisJournal->getJournalId()}
+		{assign var=enableSubscriptions value=$thisJournal->getSetting('enableSubscriptions')}
+		{assign var=enableOpenAccessNotification value=$thisJournal->getSetting('enableOpenAccessNotification')}
+		{assign var=notificationEnabled value=$user->getSetting('openAccessNotification', $thisJournalId)}
+		{if !$notFirstJournal}
+			{assign var=notFirstJournal value=1}
+			<tr valign="top">
+				<td class="label">{translate key="user.profile.form.openAccessNotifications"}</td>
+				<td class="value">
+		{/if}
+
+		{if $enableSubscriptions && $enableOpenAccessNotification}
+			<input type="checkbox" name="openAccessNotify[]" {if $notificationEnabled}checked="checked" {/if}id="openAccessNotify-{$thisJournalId}" value="{$thisJournalId}" /> <label for="openAccessNotify-{$thisJournalId}">{$thisJournal->getTitle()|escape}</label><br/>
+		{/if}
+
+		{if $smarty.foreach.journalOpenAccessNotifications.last}
+				</td>
+			</tr>
+		{/if}
+	{/foreach}
+{/if}
 
 </table>
 <p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url page="user" escape=false}'" /></p>

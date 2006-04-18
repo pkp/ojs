@@ -1267,11 +1267,11 @@ You may optionally provide the user with a reason for disabling their account.</
 	<message key="manager.subscriptionPolicies.delayedOpenAccess">Delayed Open Access</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription1">Make the contents of this journal available in an open access format</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription2">month(s) after an issue is published.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessValid">Please use the checkbox provided.</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDurationValid">Please select a valid duration length.</message>
+	<message key="manager.subscriptionPolicies.openAccessNotificationDescription">Give registered readers an option for table of contents email notification when issue becomes open access.</message>
+	<message key="manager.subscriptionPolicies.openAccessNotificationDisabled"><![CDATA[<strong>Note:</strong> To activate this option, the site administrator must enable the <tt>scheduled_tasks</tt> option in the OJS configuration file. Additional server configuration may be required to support this functionality (which may not be possible on all servers), as indicated in the OJS documentation.]]></message>
 	<message key="manager.subscriptionPolicies.authorSelfArchive">Author Self-Archiving</message>
 	<message key="manager.subscriptionPolicies.authorSelfArchiveDescription">Post the following policy, permitting authors to post their work in open access archives.</message>
-	<message key="manager.subscriptionPolicies.authorSelfArchiveValid">Please use the checkbox provided.</message>
 	<message key="manager.subscriptionPolicies.authorSelfArchivePolicy">Self-Archiving Policy</message>
 	<message key="manager.subscriptionPolicies.subscriptionPoliciesSaved">Your subscription policy settings have been updated.</message>
 	<message key="manager.subscriptionPolicies.expiryReminders">Subscription Expiry Reminders</message>
@@ -1287,11 +1287,8 @@ You may optionally provide the user with a reason for disabling their account.</
 	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks2">week(s) after subscription expiry.</message>
 	<message key="manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid">Please use the checkbox provided.</message>
 	<message key="manager.subscriptionPolicies.numMonthsBeforeSubscriptionExpiryReminderValid">Please select a valid value for the number of months before subscription expiry.</message>
-	<message key="manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeWeeksValid">Please use the checkbox provided.</message>
 	<message key="manager.subscriptionPolicies.numWeeksBeforeSubscriptionExpiryReminderValid">Please select a valid value for the number of weeks before subscription expiry.</message>
-	<message key="manager.subscriptionPolicies.enableSubscriptionExpiryReminderAfterMonthsValid">Please use the checkbox provided.</message>
 	<message key="manager.subscriptionPolicies.numMonthsAfterSubscriptionExpiryReminderValid">Please select a valid value for the number of months after subscription expiry.</message>
-	<message key="manager.subscriptionPolicies.enableSubscriptionExpiryReminderAfterWeeksValid">Please use the checkbox provided.</message>
 	<message key="manager.subscriptionPolicies.numWeeksAfterSubscriptionExpiryReminderValid">Please select a valid value for the number of weeks after subscription expiry.</message>
 
 	<!-- Subscription Type Management -->
@@ -1938,7 +1935,8 @@ current password.<br /><br />Enter your email address below to reset your passwo
 	<message key="user.profile.changePasswordInstructions">Enter your current and new passwords below to change the password for your account.</message>
 	<message key="user.profile.form.oldPasswordInvalid">The current password you entered was incorrect.</message>
 	<message key="user.profile.form.newPasswordRequired">You must enter your new password.</message>
-	<message key="user.profile.form.notifications">Email Updates</message>
+	<message key="user.profile.form.publishedNotifications">New issue published email notifications</message>
+	<message key="user.profile.form.openAccessNotifications">Issue open access email notifications</message>
 	
 	<!-- Registration -->
 	<message key="user.register.repeatPassword">Repeat password</message>
@@ -1959,6 +1957,7 @@ current password.<br /><br />Enter your email address below to reset your passwo
 	<message key="user.register.passwordLengthRestriction">The password must be at least {$length} characters.</message>
 	<message key="user.register.form.passwordLengthTooShort">The password you entered is not long enough.</message>
 	<message key="user.register.readerDescription">Notified by email on publication of an issue of the journal.</message>
+	<message key="user.register.openAccessNotificationDescription">Notified by email when an issue of the journal is made open access.</message>
 	<message key="user.register.authorDescription">Able to submit items to the journal.</message>
 	<message key="user.register.reviewerDescriptionNoInterests">Willing to conduct peer review of submissions to the journal.</message>
 	<message key="user.register.reviewerDescription">Willing to conduct peer review of submissions to the journal. Identify reviewing interests (substantive areas and research methods).</message>

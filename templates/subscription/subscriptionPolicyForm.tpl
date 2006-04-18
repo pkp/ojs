@@ -27,16 +27,45 @@
 <form method="post" action="{url op="saveSubscriptionPolicies"}">
 {include file="common/formErrors.tpl"}
 
+	<script type="text/javascript">
+		{literal}
+		<!--
+			function toggleAllowSetDelayedOpenAccessDuration(form) {
+				form.delayedOpenAccessDuration.disabled = !form.delayedOpenAccessDuration.disabled;
+			}
+			function toggleAllowSetBeforeMonthsReminder(form) {
+				form.numMonthsBeforeSubscriptionExpiryReminder.disabled = !form.numMonthsBeforeSubscriptionExpiryReminder.disabled;
+			}
+			function toggleAllowSetBeforeWeeksReminder(form) {
+				form.numWeeksBeforeSubscriptionExpiryReminder.disabled = !form.numWeeksBeforeSubscriptionExpiryReminder.disabled;
+			}
+			function toggleAllowSetAfterMonthsReminder(form) {
+				form.numMonthsAfterSubscriptionExpiryReminder.disabled = !form.numMonthsAfterSubscriptionExpiryReminder.disabled;
+			}
+			function toggleAllowSetAfterWeeksReminder(form) {
+				form.numWeeksAfterSubscriptionExpiryReminder.disabled = !form.numWeeksAfterSubscriptionExpiryReminder.disabled;
+			}
+		// -->
+		{/literal}
+	</script>
+
 <h3>{translate key="manager.subscriptionPolicies.openAccessOptions"}</h3>
 <p>{translate key="manager.subscriptionPolicies.openAccessOptionsDescription"}</p>
 
 	<h4>{translate key="manager.subscriptionPolicies.delayedOpenAccess"}</h4>
-	<input type="checkbox" name="enableDelayedOpenAccess" id="enableDelayedOpenAccess" value="1"{if $enableDelayedOpenAccess} checked="checked"{/if} />&nbsp;
+	<input type="checkbox" name="enableDelayedOpenAccess" id="enableDelayedOpenAccess" value="1" onclick="toggleAllowSetDelayedOpenAccessDuration(this.form)" {if $enableDelayedOpenAccess} checked="checked"{/if} />&nbsp;
 	<label for="enableDelayedOpenAccess">{translate key="manager.subscriptionPolicies.delayedOpenAccessDescription1"}</label>
-	<select name="delayedOpenAccessDuration" id="delayedOpenAccessDuration" class="selectMenu" />{html_options options=$validDuration selected=$delayedOpenAccessDuration}</select>
+	<select name="delayedOpenAccessDuration" id="delayedOpenAccessDuration" class="selectMenu" {if not $enableDelayedOpenAccess} disabled="disabled"{/if} />{html_options options=$validDuration selected=$delayedOpenAccessDuration}</select>
 	{translate key="manager.subscriptionPolicies.delayedOpenAccessDescription2"}
 
-
+	<p>
+	<input type="checkbox" name="enableOpenAccessNotification" id="enableOpenAccessNotification" value="1"{if !$scheduledTasksEnabled} disabled="disabled" {elseif $enableOpenAccessNotification} checked="checked"{/if} />&nbsp;
+	<label for="enableOpenAccessNotification">{translate key="manager.subscriptionPolicies.openAccessNotificationDescription"}</label>
+	{if !$scheduledTasksEnabled}
+		<br/>
+		{translate key="manager.subscriptionPolicies.openAccessNotificationDisabled"}
+	{/if}
+	</p>
 <p>
 	<h4>{translate key="manager.subscriptionPolicies.authorSelfArchive"}</h4>
 	<input type="checkbox" name="enableAuthorSelfArchive" id="enableAuthorSelfArchive" value="1"{if $enableAuthorSelfArchive} checked="checked"{/if} />&nbsp;
@@ -63,25 +92,6 @@
 
 <h3>{translate key="manager.subscriptionPolicies.expiryReminders"}</h3>
 <p>{translate key="manager.subscriptionPolicies.expiryRemindersDescription"}</p>
-
-	<script type="text/javascript">
-		{literal}
-		<!--
-			function toggleAllowSetBeforeMonthsReminder(form) {
-				form.numMonthsBeforeSubscriptionExpiryReminder.disabled = !form.numMonthsBeforeSubscriptionExpiryReminder.disabled;
-			}
-			function toggleAllowSetBeforeWeeksReminder(form) {
-				form.numWeeksBeforeSubscriptionExpiryReminder.disabled = !form.numWeeksBeforeSubscriptionExpiryReminder.disabled;
-			}
-			function toggleAllowSetAfterMonthsReminder(form) {
-				form.numMonthsAfterSubscriptionExpiryReminder.disabled = !form.numMonthsAfterSubscriptionExpiryReminder.disabled;
-			}
-			function toggleAllowSetAfterWeeksReminder(form) {
-				form.numWeeksAfterSubscriptionExpiryReminder.disabled = !form.numWeeksAfterSubscriptionExpiryReminder.disabled;
-			}
-		// -->
-		{/literal}
-	</script>
 
 <p>
 	<input type="checkbox" name="enableSubscriptionExpiryReminderBeforeMonths" id="enableSubscriptionExpiryReminderBeforeMonths" value="1" onclick="toggleAllowSetBeforeMonthsReminder(this.form)"{if !$scheduledTasksEnabled} disabled="disabled" {elseif $enableSubscriptionExpiryReminderBeforeMonths} checked="checked"{/if} />&nbsp;
