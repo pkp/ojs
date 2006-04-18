@@ -112,7 +112,7 @@ class SubscriptionHandler extends ManagerHandler {
 		$searchMatch = null;
 		$search = $searchQuery = Request::getUserVar('search');
 		$searchInitial = Request::getUserVar('searchInitial');
-		if (isset($search)) {
+		if (!empty($search)) {
 			$searchType = Request::getUserVar('searchField');
 			$searchMatch = Request::getUserVar('searchMatch');
 			
