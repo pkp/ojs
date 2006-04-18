@@ -121,6 +121,7 @@ class DAORegistry {
 			case 'ReviewerSubmissionDAO': return 'submission.reviewer.ReviewerSubmissionDAO';
 			case 'SectionEditorSubmissionDAO': return 'submission.sectionEditor.SectionEditorSubmissionDAO';
 			case 'UserDAO': return 'user.UserDAO';
+			case 'UserSettingsDAO': return 'user.UserSettingsDAO';
 			case 'RTDAO': return 'rt.ojs.RTDAO';
 			case 'CurrencyDAO': return 'subscription.CurrencyDAO';
 			case 'SubscriptionDAO': return 'subscription.SubscriptionDAO';

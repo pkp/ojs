@@ -379,6 +379,29 @@ class User extends DataObject {
 	}
 	
 	/**
+	 * Retrieve array of user settings.
+	 * @param journalId int
+	 * @return array
+	 */
+	function &getSettings($journalId = null) {
+		$userSettingsDao = &DAORegistry::getDAO('UserSettingsDAO');
+		$settings = &$userSettingsDao->getSettingsByJournal($this->getData('userId'), $journalId);
+		return $settings;
+	}
+	
+	/**
+	 * Retrieve a user setting value.
+	 * @param $name
+	 * @param $journalId int
+	 * @return mixed
+	 */
+	function &getSetting($name, $journalId = null) {
+		$userSettingsDao = &DAORegistry::getDAO('UserSettingsDAO');
+		$setting = &$userSettingsDao->getSetting($this->getData('userId'), $name, $journalId);
+		return $setting;
+	}
+
+	/**
 	 * Get the user's complete name.
 	 * Includes first name, middle name (if applicable), and last name.
 	 * @param $lastFirst boolean return in "LastName, FirstName" format
