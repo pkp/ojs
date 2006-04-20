@@ -55,6 +55,7 @@ class RTVersionHandler extends RTAdminHandler {
 	}
 
 	function importVersion() {
+		RTAdminHandler::validate();
 		$journal = &Request::getJournal();
 
 		$fileField = 'versionFile';

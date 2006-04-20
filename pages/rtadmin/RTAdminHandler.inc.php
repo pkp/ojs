@@ -22,9 +22,10 @@ class RTAdminHandler extends Handler {
 	 * Otherwise, display the index page for the selected journal.
 	 */
 	function index() {
+		RTAdminHandler::validate();
 		$journal = Request::getJournal();
 		$user = Request::getUser();
-		if ($user && $journal) {
+		if ($journal) {
 			$rtDao = &DAORegistry::getDAO('RTDAO');
 			$rt = $rtDao->getJournalRTByJournalId($journal->getJournalId());
 			if (isset($rt)) {
