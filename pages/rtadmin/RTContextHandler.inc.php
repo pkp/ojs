@@ -144,7 +144,7 @@ class RTContextHandler extends RTAdminHandler {
 			$rtDao->resequenceContexts($version->getVersionId());
 		}
 
-		Request::redirect(null, null, 'rtadmin', $versionId);
+		Request::redirect(null, null, 'contexts', $versionId);
 	}
 }
 
