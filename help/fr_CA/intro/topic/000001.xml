@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000001.xml
+  *
+  * Copyright (c) 2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Frequently Asked Questions 
+  *
+  * $Id$
+  -->
+
+<topic id="intro/topic/000001" locale="fr_CA" title="Questions fréquentes" toc="intro/toc/000000" key="intro.faq">
+	<section>
+		<![CDATA[
+<ol>
+	<li><a href="#section1">Comment puis-je commencer un journal avec OJS?</a></li>
+	<li><a href="#section2">Où puis-je trouver un support technique, soumettre les bogues et suggérer des améliorations possibles en utilisant OJS?</a></li>
+	<li><a href="#section3">Comment faire pour traduire OJS dans une autre langue?</a></li>
+	<li><a href="#section4">Pourquoi les auteurs reçoivent-ils un message à l’effet que le journal «n’accepte pas de présentations pour le moment »?</a></li>
+	<li><a href="#section5">Que puis-je faire si  je veux donner accès à des manuscrits qui sont en révision ou à l’étape «pré-impression» avant qu’ils soient publiés par le journal?</a></li>
+	<li><a href="#section6">Comment puis-je faire connaître mon journal sur le Web?</a></li>
+	<li><a href="#section7">Comment le journal peut-il présenter un historique de ceux qui ont participé à l’équipe éditoriale?</a></li>
+	<li><a href="#section8">Comment puis-je laisser des lecteurs s’inscrire comme réviseurs pour le journal?</a></li>
+	<li><a href="#section9">Comment puis- trouver des réviseurs additionnels pour une présentation, au-delà de la liste courante des réviseurs disponibles?</a></li>
+	<li><a href="#section10">Qu’elles sont les différentes façons par lesquelles un journal  pourrait  être capable de publier  dans un format libre-accès, ce faisant, rendant le contenu du journal gratuit pour les lecteurs?</a></li>
+</ol>
+		]]>	
+	</section>
+	<section title="1. Comment commencer un journal avec OJS?">
+		<![CDATA[
+<ol type="a">
+	<li><a href="http://pkp.sfu.ca/ojs/ojs_download.html" target="_blank">Télécharger </a> OJS  et  procéder à l’installation  en suivant les instructions d’installation, sur un serveur Web qui rencontre les conditions requises par le logiciel. </li>
+	<li>Utiliser le nom d’usager d’administrateur et le mot de passe générés lors de l’installation d’OJS  pour ouvrir une session.</li>
+	<li>Créer un nouveau journal sous un journal hébergé.</li>
+	<li>L’administrateur du site sera automatiquement porté sur la liste comme directeur de journal pour le nouveau journal, mais si nécessaire, voir à créer un nouveau nom d’usager(s) ayant le rôle de directeur du journal.</li>
+	<li>Le directeur du journal va alors à la mise en marche (Setup) et procède à travers les cinq étapes (bien que pas nécessairement en une fois) ce qui résultera en un site Web prêt à recevoir des présentations, avec la capacité de gérer le processus éditorial et de publier un journal en ligne.</li>
+	<li>Consultez <a href="http://pkp.sfu.ca/ojs/OJSinanHour.pdf" target="_blank">OJS en une heure </a> pour plus d’information sur comment débuter avec OJS</li>
+</ol>
+		]]>
+	</section>
+	<section title="2.Où puis-je trouver du support technique, poser des questions sur les bogues, et suggérer des améliorations en utilisant OJS?">
+		<![CDATA[
+<p> Le projet Public Knowledge  entretient un<a href="http://pkp.sfu.ca/support/forum/" target="_blank">forum de support </a> avec plus d’un millier d’échanges où les réponses peuvent être recherchées, ou une question posée. Par exemple, les messages d’erreur peuvent être recherchés, ce qui vous amène  à des solutions pour des problèmes connus. Si insuffisant, les usagers peuvent envoyer des questions à <a href="mailto:pkp-support@sfu.ca">pkp-support@sfu.ca</a>. Les rapports de bogues devraient être soumis via  PKP <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">Bugzilla</a>.</p>
+		]]>
+	</section>
+	<section title="3. Comment faire pour traduire OJS dans une autre langue?">
+		<![CDATA[
+<p>Les instructions sont fournies dans le fichier docs/README lequel est inclus lors du téléchargement d’OJS. Des informations supplémentaires sur des problèmes de traductions courants peuvent être trouvés à <a href="http://pkp.sfu.ca/support/forum/" target="_blank">PKP Support Forum</a>.</p>
+		]]>
+	</section>
+	<section title="4. Pourquoi les auteurs reçoivent-ils un message à l’effet que le journal n’accepte pas de présentations  à ce moment-ci?">
+		<![CDATA[
+<p>Si le directeur du journal  a décoché la section libellée «Les articles peuvent être seulement soumis par des éditeurs et des éditeurs de rubriques»  pour toutes les rubriques créées, alors seulement les éditeurs et les éditeurs de rubriques pourront soumettre. Autrement, si toutes les rubriques ont été supprimées, les auteurs peuvent recevoir ce message.</p>
+		]]>
+	</section>
+	<section title="5.Que pouvons-nous faire si nous voulons donner accès à des manuscrits qui sont en révision ou à l’étape de pré-impression, avant qu’ils soient publiés par le journal?">
+		<![CDATA[
+<p>Il n’y a pas actuellement  pas de façon précise d’accéder à des articles en particulier à l’étape de pré-impression ou de prépublication. Cependant, tout ce qu’un éditeur a besoin de faire pour l’article en question  est d’utiliser l’adresse URL pour «Voir l’épreuve» à partir de l’étape de la «Mise en page» sur la page «Edition» de l’article. Cette adresse URL donne accès à une prévisualisation de l’article (aux usagers qui en ont le privilège), avant qu’il soit publié dans un numéro du journal. Entretemps, PKP prend note de l’intérêt à cette fonction et peut considérer créer un option précise à cet effet.</p>
+		]]>
+	</section>
+	<section title="6.Comment puis-je faire connaître mon journal sur le Web?">
+		<![CDATA[
+<p>Votre journal commencera à apparaitre dans Google et les autres principaux  moteurs de recherche avant longtemps, mais vous pouvez aussi faire d’autres démarches. Assurez-vous d’enregistrer votre journal avec le «Harvester» de PKP dans la mise en place (Setup) à l’étape 3, ce qui fera que votre journal sera indexé dans les index d’Open Archives Initiatives, incluant le <a href="http://pkp.sfu.ca/harvester/" target="_blank">PKP Harvester</a> et <a href="http://oaister.umdl.umich.edu/o/oaister/" target="_blank">OAIster</a>. Si votre journal	est à accès ouvert, demandez au bibliothécaire de votre université comment votre journal peut être listé parmi les journaux électroniques de la bibliothèque, et comment vous pouvez communiquer avec de nombreuses autres bibliothèques de recherches par une série d’annuaires de bibliothécaires. Voir aussi si vous pouvez utiliser le site Web ou l’annuaire d’associations professionnelles ayant un rapport avec votre journal, pour annoncer son lancement. Finalement, dans la mise en place (Setup), sous « Sécurité » et « Réglages » (2.7), le directeur du journal devrait permettre aux usagers de s’enregistrer comme lecteurs, de façon à être avisés des nouveaux numéros.</p>
+		]]>
+	</section>
+	<section title="7. Comment le journal peut-il présenter un historique de qui a contribué à son équipe éditoriale?">
+		<![CDATA[
+<p>Le directeur du journal peut entrer cette information en suivant le lien «générique» (Masthead) dans «Gestion du journal». Ou encore, le directeur du journal peut créer une page «Historique de l’équipe éditoriale» comme nouveau sujet dans «Au sujet du journal»(item 2.5 dans Réglages (Setup)). Sur une telle page, vous pouvez enregistrer le nom, la fonction occupée dans l’équipe éditoriale, et les années de service avec celle-ci.</p>
+		]]>
+	</section>
+	<section title="8. Comment les lecteurs peuvent-ils s’enregistrer comme réviseurs pour le journal?">
+		<![CDATA[
+<p>Dans «Réglages» (Setup), sous «Sécurité» et «Accès aux réglages» (2.7), le directeur du journal peut permettre aux lecteurs de s’inscrire comme réviseurs, ainsi que comme lecteurs et/ou auteurs. Les réviseurs apparaitront alors parmi ceux que l’éditeur de rubrique peut choisir et inviter à réviser les présentations. Dans «Réglages» 5.7, le directeur du journal peut ajouter une note ‘’Pour les lecteurs’’ indiquant l’intérêt du journal à avoir des lecteurs pour servir comme réviseurs pour le journal. Du même coup, le journal peut encourager les usagers à s’inscrire comme lecteurs afin qu’ils reçoivent les avis et de pouvoir identifier combien de lecteurs réguliers il y a.</p>
+		]]>
+	</section>
+	<section title="9. Comment puis-je trouver des réviseurs additionnels pour une présentation au journal, au-delà de la liste courante des réviseurs disponibles?">
+		<![CDATA[
+<p>Il y a de nombreuses techniques à utiliser. Une fois qu’un réviseur potentiel est identifié par son nom,  alors son adresse de courriel et son affiliation peuvent être trouvées en faisant une recherche sur le nom.</p>
+<ol type="a">
+	<li>Utilisez la bibliographie  du mémoire à être réviser pour identifier les gens convenables, et puis faites une recherche de leur nom complet avec Google pour trouver leur institution et leur adresse de courriel.</li>
+	<li>Utilisez des recherches booléennes dans Google basées sur des mots-clés de l’auteur (i.e. post-colonialisme+ littérature + ‘’Afrique du Sud’’ pour identifier matières connexes en ligne et des gens travaillant dans le même domaine.</li>
+	<li>Basé sur comment l’auteur a identifié le sujet du mémoire (voir les métadonnées dans le Sommaire de la présentation), envoyez des demandes à des collègues pour avoir des noms de collègues ayant de l’expertise dans les domaines trouvés.</li>
+	<li>Visitez d’autres journaux en ligne dans ce domaine, pour trouver des auteurs qui pourraient servir de réviseurs pour un journal spécifique ayant besoin d’un réviseur.</li>
+</ol>
+		]]>
+	</section>
+	<section title="10.Quelles sont les différentes méthodes par lesquelles un journal pourrait être capable de publier dans un format de libre accès, rendant le contenu du journal gratuit pour les lecteurs?">
+		<![CDATA[
+<p>Vous pourriez consulter John Willinsky's <a href="http://www.jpgmonline.com/article.asp?issn=0022-3859;year=2003;volume=49;issue=3;spage=263;epage=267;aulast=Willinsky;type=0" target="_blank">"The Nine Flavours of Open Access Scholarly Publishing"</a>dans le journal de Postgraduate Medicine. Aussi, la Fondation Soros a préparé un<a href="http://www.soros.org/openaccess/scholarly_guide.shtml" target="_blank">Guide to Open Access Publishing and Scholarly Societies</a> lequel est un guide dédié à aider les sociétés académiques &mdash; et les petits éditeurs &mdash; à évaluer les options qui leur sont disponibles pour l’avenir de leurs programmes d’édition de leur journal." <a href="http://www.arl.org/sparc/" target="_blank">SPARC</a>, La Scholarly Publishing and Academic Resources Coalition, fournit aussi de nombreuses ressources reliées à la publication en code d’accès libre.</p>
+		]]>
+	</section>
+</topic>

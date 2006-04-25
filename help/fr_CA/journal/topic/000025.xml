@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000025.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Subscriptions 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000025" locale="fr_CA" title="Abonnements" toc="journal/toc/000001" key="journal.managementPages.subscriptions">
+	<section>
+		<![CDATA[<p>OJS supporte les journaux par abonnement en fournissant une composante de gestion et  la protection correspondante par mot de passe pour le contenu du journal en ligne. Les abonnements peuvent être gérés pour chaque usager individuel, les organisations ou les institutions. Un journal avec abonnements peut aussi offrir un libre accès à ses numéros antérieurs par une forme d’accès libre différé. Dans «Gestion des numéros» l’éditeur permet aux lecteurs d’avoir un libre accès au contenu d’un numéro ou à des articles en particulier, de 0 à 24 mois après leur publication initiale et de leur mise à la disponibilité aux abonnés.</p></p><p>Un directeur de journal, les éditeurs, les éditeurs de rubrique, les éditeurs de la mise en page, les reviseurs de copie et les correcteurs d’épreuves  ont toujours un libre accès au journal comme s’ils étaient des abonnés.</p><p><i>Déploiement du module d’abonnements</i>. Le directeur du journal doit indiquer dans la mise en place (Setup) 4.3 «Gestion des abonnements» que les journal utilisera ce système pour gérer ses abonnements, et que quelqu’un enrôlé comme directeur de journal ou directeur des abonnements, a été désigné pour gérer cette option.</p>]]>	
+	</section>
+	
+	<section title="Types d’abonnements">
+		<![CDATA[<p><i>Mise en place des types d’abonnements</i>. La première étape dans la mise en place de la gestion des abonnements est de déterminer quels types d’abonnements le journal offre. Généralement, les journaux offrent, par exemple, des taux d’abonnements individuels, et des taux d’abonnements institutionnels. Des journaux peuvent avoir des offres spéciales pour les membres d’une organisation ou pour les étudiants. OJS supporte la gestion des abonnements pour les versions imprimées et/ou en ligne. Plus d’un type d’abonnement peut être crée pour couvrir des périodes de temps plus longues, par exemple 12 mois, 36 mois, etc..</p><p><i>Options pour les types d’abonnement</i>. Pour les abonnements ‘’institutionnels’’ utiliser le ‘’validé via le domaine’’ ou l’authentification de l’adresse IP,  parce que tous les membres de l’institution, arrivant de son domaine associé ou de l’adresse IP, auront la permission d’accéder sans avoir un mot de passe. De même,  l’option ‘’membres d’une association ou d’une organisation’’ devrait être utilisée pour l’abonnement du sociétariat, qu’il soit gratuit ou à prix réduit. Utiliser l’option ‘’visible à tous’’ pour faire apparaître le type d’abonnement, et les droits d’abonnement payés seront visibles sous «Abonnements» dans «Au sujet du journal». Bien que la plupart des types d’abonnements soient généralement visibles dans <b>Au sujet du journal</b>, un type crée pour usage interne à la comptabilité, les abonnements pour le personnel, et/ou pour des besoins de gestion, par exemple, ne seront pas visibles sur la page «Au sujet du journal».</p>]]>
+	</section>
+
+	<section title="Abonnements">
+		<![CDATA[<p><i>Création des abonnements</i>. Pour les abonnés particuliers, le directeur du journal  (Abonnements) doit enregistrer l’abonné comme un lecteur, s’il n’est pas déjà enregistré, et puis sur  la page «Créer un abonnement», entrer le type d’abonnement et les dates pour celui-ci. Lors de la sauvegarde de cette information, un courriel sera envoyé à l’abonné avec son nom d’usager, lequel sera utilisable pour tout le contenu que le journal publie jusqu’à ce que l’usager soit enlevé de la liste des abonnés par le directeur du journal.</p><p><i>Abonnements institutionnels et d’organisations</i>. Pour les abonnements institutionnels, la personne contact à l’institution doit être enrôlée comme lecteur, et puis sélectionnée par le directeur du journal (Abonnement) sur la page «Créer un abonnement». Le contact devra fournir le domaine et/ou l’adresse IP de l’institution, lesquels sont utilisés pour valider le compte, évitant ainsi pour les autres usagers de l’institution le besoin d’avoir un compte d’usager pour accéder le contenu de l’abonnement. Les organisations avec une liste de leurs membres peuvent avoir ces listes importées dans le système, via la fonction Importation d’usagers dans «Gestion du journal».</p>]]>
+	</section>
+
+</topic>

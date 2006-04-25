@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../toc.dtd">
+
+<!--
+  * 000005.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Journal Management - Management Pages - Reading Tools.
+  *
+  * $Id$
+  -->
+
+<toc id="journal/toc/000005" locale="fr_CA" title="Outils de lecture" parent_topic="journal/topic/000009">
+	<topic id="journal/topic/000026" title="Réglages" />
+	<topic id="journal/topic/000027" title="Versions" />
+	<topic id="journal/topic/000028" title="Contextes" />
+
+	<breadcrumb url="journal/topic/000000" title="Gestion du journal" />
+	<breadcrumb url="journal/topic/000001" title="Pages de gestion" />
+	<breadcrumb url="journal/topic/000009" title="Outils de lecture" />
+</toc>

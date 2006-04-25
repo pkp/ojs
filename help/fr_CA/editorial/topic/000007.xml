@@ -12,7 +12,7 @@
   * $Id$
   -->
 
-<topic id="editorial/topic/000007" locale="fr_CA" title="Révisions" toc="editorial/toc/000004" subtoc="editorial/toc/000007" key="editorial.sectionEditorsRole.editing">
+<topic id="editorial/topic/000007" locale="fr_CA" title="En édition" toc="editorial/toc/000004" subtoc="editorial/toc/000007" key="editorial.sectionEditorsRole.editing">
 	<section>
 		<![CDATA[
 		<p>L’éditeur d’une rubrique supervise la révision, la mise en page et la correction des épreuves en choisissant et en assignant des membres de l’équipe éditoriale à voir la soumission à chaque étape, en s’assurant que celle-ci suit le processus sans aucun délai. Le processus commence quand l’éditeur de la rubrique choisit le reviseur et lui demande de réviser une soumission. L’éditeur de la rubrique peut vouloir choisir l’éditeur de la mise en page et le correcteur d’épreuves en même temps (dépendant de combien de ces rôles distincts le journal utilise) ou attend que l’étape précédente soit complétée. Pour remplacer ceux qui ont été choisis, l’éditeur de la rubrique clique simplement «Choisir» à nouveau et assigne une nouvelle personne qui remplacera celle qui avait été assignée. L’étape de révision est complète lorsque la soumission est passée par l’étape de révision. C’est à ce point que l’éditeur de la rubrique l’envoie pour être mise au calendrier pour publication. Noter que «Views» indique le nombre de fois que cette galée a été vue après sa publication.</p>

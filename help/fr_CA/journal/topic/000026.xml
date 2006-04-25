@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000026.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Reading Tools - Settings
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000026" locale="fr_CA" title="Réglages" toc="journal/toc/000005" key="journal.managementPages.readingTools.settings">
+	<section>
+		<![CDATA[<p>Le directeur du journal peut choisir une série d’outils de lecture basée sur une discipline ou un domaine qui apparaitront dans un cadre à gauche de tous les articles dans les rubriques du journal qui sont indexées. (i.e. les articles mais non les annonces de conférence) Le directeur du journal peut examiner, éditer, supprimer ou ajouter aux outils dans chaque série en allant à «Versions», sous «Outils de lecture». Le directeur du journal peut aussi choisir un ou touts les liens génériques optionnels pour être montrés comme faisant partie du jeu d’outils. Le même jeu d’outils de lecture apparaît avec chacun des articles dans les rubriques indexées du journal. Cependant, les outils de lecture utilisent les termes d’index fournis par l’auteur pour assurer que le matériel trouvé dans les banques de données préparées est pertinent. Le directeur du journal peut changer les outils de lecture sélectionnés en tout temps.</p>]]>
+	</section>
+</topic>

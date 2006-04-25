@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000005.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * User Interface - Search and Browse
+  *
+  * $Id$
+  -->
+
+<topic id="user/topic/000005" locale="fr_CA" title="Recherche et Navigation" toc="user/toc/000000" key="user.searchAndBrowse">
+	<section>
+		<![CDATA[<p>Le contenu du journal peut être recherché par auteur, titre, résumé, et par termes de l’index. Le texte entier du contenu peut être recherché en formats HTML ou PDF. Alternativement, en utilisant le lien de navigation dans la marge droite de la page, les lecteurs peuvent naviguer le contenu du journal par numéro, auteur et titre. D’autres journaux publiés grâce à Open Journal Systems peuvent aussi être consultés.</p>]]>
+	</section>
+</topic>

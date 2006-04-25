@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../toc.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Publishing Process. 
+  *
+  * $Id$
+  -->
+
+<toc id="publishing/toc/000000" locale="fr_CA" title="Processus de publication" parent_topic="publishing/topic/000000">
+	<topic id="publishing/topic/000001" title="Création d’un numéro" />
+	<topic id="publishing/topic/000002" title="Mise au calendrier des présentations" />
+	<topic id="publishing/topic/000003" title="Table des matières" />
+	<topic id="publishing/topic/000004" title="Publication" />
+	<breadcrumb url="publishing/topic/000000" title="Processus de publication" />
+</toc>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000010.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Files Browser
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000010" locale="fr_CA" title="Navigateur de fichiers" toc="journal/toc/000001" key="journal.managementPages.fileBrowser">
+	<section>
+		<![CDATA[<p> Le navigateur de fichiers permet au directeur du journal d’examiner et gérer la hiérarchie des fichiers téléchargés pour le journal (incluant tous les fichiers téléchargés pour la gestion des présentations). Les fichiers peuvent être vus, supprimés, ou changés de place comme s’ils avaient une interaction avec un fichier local du système.</p>
+		<p>Noter que ceci se veut comme étant un outil de gestion seulement et n’est généralement pas nécessaire dans la gestion quotidienne du journal. L’information sur les présentations est conservée  comme une combinaison de fichiers et de records and la banque de données; Supprimer les fichiers de présentations avec le navigateur de fichiers ne supprimera pas les records associés dans la banque de données.</p>]]>
+	</section>
+</topic>

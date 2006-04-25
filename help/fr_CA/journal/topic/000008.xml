@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000008.xml
+  *
+  * Copyright (c) 2003-2006 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Stats & Reports
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000008" locale="fr_CA" title="Statistiques et Rapports" toc="journal/toc/000001" key="journal.managementPages.statsAndReports">
+	<section>
+		<![CDATA[<p>Les statistiques et les rapports donnent la possibilité au directeur du journal d’extraire de l’information en regard de l’historique de l’usage du journal de deux manières. Premièrement, sous Statistiques, les statistiques annuelles son disponibles en un coup d’œil pour voir les données des présentations, des pratiques éditoriales et les usagers. Deuxièmement, le directeur du journal peut générer un des plusieurs types de rapports pour une période spécifique.</p><p>Il y a quatre types de rapports disponibles.:<ul>
+			<li><strong>Le rapport du journal</strong>: Rapport sur toutes les présentations au journal pour une période donnée.</li>
+			<li><strong>Le rapport de l’éditeur</strong>: Rapport sur les présentations, regroupées par éditeur.</li>
+			<li><strong>Rapport des révisions</strong>: Rapport sur les présentations, regroupées par réviseur.</li>
+			<li><strong>Rapport de rubrique</strong>: Rapport sur les présentations, regroupées par rubrique.</li>
+		</ul>Ces rapports sont générés en format séparé par une virgule (CSV) et devraient être ouverts en utilisant un logiciel de tableur, comme Excel.]]>
+	</section>
+</topic>

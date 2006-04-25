@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000002.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * User Interface - About
+  *
+  * $Id$
+  -->
+
+<topic id="user/topic/000002" locale="fr_CA" title="Au sujet du journal" toc="user/toc/000000" key="user.about">
+	<section>
+		<![CDATA[<p>Dans <b>Au sujet du journal</b> le journal présente ses politiques, procédures et autres sujets pertinents, dont l’intention de rendre le travail dans le journal aussi transparent que possible. Ce sont les informations qui typiquement  font partie des pages liminaires des journaux. C’est aussi là que les auteurs potentiels pour ce journal peuvent connaître le domaine et le focus du journal, sa politique de révision par les pairs, et comment formater et préparer une présentation, ainsi que comment soumettre un article au journal.</p>]]>	
+	</section>
+</topic>

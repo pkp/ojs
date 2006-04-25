@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000016.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Editor 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000016" locale="fr_CA" title="Éditeur" toc="journal/toc/000003" key="journal.roles.editor">
+	<section>
+		<![CDATA[<p>L’éditeur supervise le processus éditorial et de publication dans son entier. L’éditeur, travaillant conjointement avec le directeur du journal, typiquement établit les politiques et les procédures pour le journal, lesquelles sont entrées dans {help_topic key="journal.managementPages.setup" text="Setup"}. Dans le processus éditorial, l’éditeur assigne les présentations aux éditeurs de rubriques à ce qu’ils voient à la révision des présentations et l’édition des présentations. L’éditeur garde un œil sur la progression de la présentation et aide s’il y a des difficultés. Une fois que la révision est complétée, l’éditeur typiquement voit la présentation par le {help_topic key="editorial.sectionEditorsRole.editing" text="Editing"} processus (incluant la révision des copies, la mise en page et la correction des épreuves), bien que dans certains journaux ceci demeure la responsabilité de l’éditeur de rubrique en charge du processus {help_topic key="editorial.sectionEditorsRole.review" text="Review"} de la présentation. L’éditeur met les présentations au calendrier pour publication, organise la table des matières et publie le numéro comme partie de {help_topic key="publishing.index" text="Publishing Process"}. L’éditeur peut remettre comme étant actives les présentations archivées dans «En révision» ou dans «En édition» tel que détaillé dans {help_topic key="editorial.editorsRole.submissions.archives" text="Archives"}.</p>]]>	
+	</section>
+</topic>

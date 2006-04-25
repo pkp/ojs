@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Site Administration Main 
+  *
+  * $Id$
+  -->
+
+<topic id="site/topic/000000" locale="fr_CA" title="Site de l’administration" toc="index/toc/000000" subtoc="site/toc/000000" key="site.index">
+	<section>
+		<![CDATA[<p>Ce système de gestion et de publication de journal est conçu pour être installé et administré sur un serveur Web local. Une fois installé, l’administrateur du site peut l’utiliser pour créer autant de journaux individuels que requis, et surveiller l’administration du site de chaque journal qui aura été crée.</p>]]>	
+	</section>
+</topic>

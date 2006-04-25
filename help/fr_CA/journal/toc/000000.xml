@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../toc.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Journal Management. 
+  *
+  * $Id$
+  -->
+
+<toc id="journal/toc/000000" locale="fr_CA" title="Gestion du journal" parent_topic="journal/topic/000000">
+	<topic id="journal/topic/000001" title="Pages de gestion" />
+	<topic id="journal/topic/000002" title="Usagers" />
+	<topic id="journal/topic/000003" title="Rôles" />
+	<breadcrumb url="journal/topic/000000" title="Gestion du journal" />
+</toc>

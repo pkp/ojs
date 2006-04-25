@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../toc.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Author Submission Process. 
+  *
+  * $Id$
+  -->
+
+<toc id="submission/toc/000000" locale="fr_CA" title="Processus des présentations" parent_topic="submission/topic/000000">
+	<topic id="submission/topic/000001" title="Guide pour les auteurs" />
+	<topic id="submission/topic/000002" title="Conditions requises pour les présentations" />
+	<topic id="submission/topic/000003" title="Création de l’index et des métadonnées" />
+	<topic id="submission/topic/000004" title="Fichiers supplémentaires" />
+	<breadcrumb url="submission/topic/000000" title="Processus des présentations" />
+</toc>

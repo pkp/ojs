@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000021.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Reviewer 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000021" locale="fr_CA" title="Reviseur" toc="journal/toc/000003" key="journal.roles.reviewer">
+	<section>
+		<![CDATA[<p>Le reviseur est choisi par l’éditeur de la rubrique pour réviser une présentation. On demande aux reviseurs de soumettre les révisions au site Web du journal (bien que certains journaux optent pour une politique de révision par courriel) et peuvent télécharger vers le serveur des pièces jointes à l’usage de l’éditeur et de l’auteur. Les reviseurs peuvent aussi être évalués par l’éditeur de la rubrique, encore selon les politiques pour ce journal.</p>]]>	
+	</section>
+</topic>

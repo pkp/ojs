@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000011.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Users - All Users 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000011" locale="fr_CA" title="Tous les usagers" toc="journal/toc/000002" key="journal.users.allUsers">
+	<section>
+		<![CDATA[<p>Cette liste inclut tous ceux qui sont inscrits au journal en une capacité quelconque. Le directeur du journal peut ouvrir une séance comme n’importe quel usager inscrit. Ceci peut s’avérer extrêmement utile pour aider un usager à distance, parce que çà permet au directeur du journal d’obtenir un meilleur sens de ce qui peut mal fonctionner.</p>]]>	
+	</section>
+</topic>

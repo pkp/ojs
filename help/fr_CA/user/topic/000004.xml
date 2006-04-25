@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000004.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * User Interface - Current and Archives
+  *
+  * $Id$
+  -->
+
+<topic id="user/topic/000004" locale="fr_CA" title="Courant et Archives" toc="user/toc/000000" key="user.currentAndArchives">
+	<section>
+		<![CDATA[<p>Les numéros du journal sont rendus disponibles comme numéro courant ou par une série d’archives des numéros antérieurs. Le directeur du journal est capable d’apporter dans le site Web de ce journal, des numéros antérieurs du journal qui ont été publiés avant que le système OJS soit en place, afin qu’ils fassent partie des archives qui sont mises à la disposition des lecteurs sur la page Web du journal.</p>]]>	
+	</section>
+</topic>

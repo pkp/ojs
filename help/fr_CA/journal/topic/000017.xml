@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000017.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Section Editor 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000017" locale="fr_CA" title="Éditeur de rubrique" toc="journal/toc/000003" key="journal.roles.sectionEditor">
+	<section>
+		<![CDATA[<p>L’éditeur de rubrique gère la révision et l’édition des présentations auxquelles il a été assigné. Dans certains cas, un éditeur de rubrique qui est assigné de voir les présentations par le processus de {help_topic key="editorial.sectionEditorsRole.review" text="Review"} sera aussi responsable de voir les présentations qui sont acceptées par le processus de {help_topic key="editorial.sectionEditorsRole.editing" text="Editing"} (c’est à dire par la révision de copie, la mise en page et la correction d’épreuves) Souvent, toutefois, les éditeurs de rubriques travaillent seulement sur le processus de la révision, et un éditeur, agissant dans le rôle d’un éditeur de rubrique, voit les présentations par le processus d’édition. Le journal aura une politique sur comment les tâches sont divisées.</p>]]>	
+	</section>
+</topic>

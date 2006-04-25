@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000020.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Proofreader 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000020" locale="fr_CA" title="Correcteur d’épreuves" toc="journal/toc/000003" key="journal.roles.proofreader">
+	<section>
+		<![CDATA[<p>Le correcteur d’épreuves relit attentivement les galées dans les divers formats dans lesquels je journal publie (tout comme le fait l’auteur). Le correcteur d’épreuves (et l’auteur) enregistrent toute erreur typographique ou de formatage pour l’éditeur de la mise en page qui les corrigera. Dans le cas de certains journaux, l’éditeur ou l’éditeur de la rubrique vont aussi agir comme correcteur d’épreuves.</p>]]>	
+	</section>
+</topic>

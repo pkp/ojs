@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000006.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Prepared Emails 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000006" locale="fr_CA" title="Courriels pré-écrits" toc="journal/toc/000001" key="journal.managementPages.emails">
+	<section>
+		<![CDATA[<p>Le journal utilise une variété de courriels déjà préparés pour administrer divers processus de l’édition et de la publication. Ces courriels sont déjà adressés à l’avance vers le ou les récipiendaires concerné (s), (par exemple, l’éditeur de rubrique avise le réviseur de copies que la révision des copies  pour une présentation est prête à commencer). Le directeur du journal peut éditer les versions par défaut de ces courriels  (disponibles sous «Courriels préparés» sur la page de gestion du journal). Aussi, les courriels peuvent être modifiés par l’usager avant d’être envoyés. Le système insère automatiquement les informations pertinentes ou spécifiques dans le courriel, avant de le présenter à l’usager pour envoi. (Par exemple le titre et un résumé de la présentation en question, ou la date à laquelle la révision est due.) Le courriel donne aussi aux récipiendaires des instructions pour trouver leur chemin vers la page Web appropriée, afin qu’ils puissent mettre en marche la tâche qui leur est demandée.</p>]]>	
+	</section>
+	
+	<section title="Envoyer des courriels">
+		<![CDATA[<p> L’OJS utilise le courriel pour coordonner le fonctionnement du processus éditorial et de la publication. Tous les courriels préparés à l’avance ont leur version par défaut,  laquelle  apparaît  chaque fois que l’icône de courriel est cliquée. Les courriels par défaut peuvent être modifiés par le directeur du journal en tout temps. Aussi bien qu’un courriel peut être modifié par l’envoyeur avant de l’envoyer. Lorsqu’un icône de courriel est cliqué, l’adresse du destinataire sera déjà inscrite, ainsi que les infirmations pertinentes requises pour la fonction éditoriale ou de publication. L’envoyeur peut ajouter des commentaires ou d’autres instructions si requis. L’envoyeur peut aussi modifier l’adresse de courriel du récipiendaire et celles des récipiendaires additionnels, excepté dans les cas qui ne demandent pas l’envoi de mots de passe (pour des raisons de sécurité). Notez que la correction de l’adresse d’un récipiendaire ne modifie pas l’adresse de courriel listée dans la page de son profil dans le système. Pour modifier l’adresse du récipiendaire de façon permanente dans le système demande que le directeur du journal en soit avisé, car c’est lui qui a l’autorité de faire un tel changement au profil des usagers.</p>]]>
+	</section>
+</topic>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000002.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Users Index 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000002" locale="fr_CA" title="Usagers" toc="journal/toc/000000" subtoc="journal/toc/000002" key="journal.users.index">
+	<section>
+		<![CDATA[<p>Il est de la responsabilité du directeur du journal de gérer les usagers dans OJS. Ceci inclut la création d’usagers, l’inactivation des comptes, gérer les rôles, etc.. Le directeur du journal peut naviguer et ajouter aux inscriptions existantes, modifier des profils, fusionner des comptes, et communiquer avec des groupes d’usagers.</p>]]>	
+	</section>
+</topic>

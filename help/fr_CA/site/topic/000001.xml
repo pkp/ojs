@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000001.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Site Administration - Installation 
+  *
+  * $Id$
+  -->
+
+<topic id="site/topic/000001" locale="fr_CA" title="Installation" toc="site/toc/000000" key="site.installation">
+	<section>
+		<![CDATA[<p>L’Open Journal Systems est un système de gestion de base de données à code source libre qui peut être téléchargé gratuitement et installé sur la plupart des ordinateurs de bureau ou serveurs.</p>]]>	
+	</section>
+	
+	<section title="License">
+		<![CDATA[<p>Le système OJS est distribué sous les conditions du<a href="http://www.gnu.org/copyleft/gpl.html" target="_blank">GNU General Public License</a>. Une copie des conditions de la licence pour redistribuer le code original ou modifié d’OJS  est incluse avec le téléchargement d’OJS.</p>]]>
+	</section>
+	
+	<section title="Spécifications minimales de système">
+		<![CDATA[<p>Un environnement de serveur rencontrant les spécifications suivantes est recommandé :</p>
+		<ul>
+			<li><a href="http://www.php.net/" target="_blank">PHP</a> >= 4.2.x</li>
+			<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 3.23.23 (including 4.x) or <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 7.1</li>
+			<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x or >= 2.0.4x or Microsoft IIS 6+</li>
+			<li>Système d’exploitation: Tout système d’exploitation qui supporte les logiciels ci-haut, incluant<a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.sun.com/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, and <a href="http://www.microsoft.com/">Windows</a></li>
+		</ul>
+		<p>À ce jour, OJS a été testé seulement sur MySQL et PostgreSQL, bien que d’autres systèmes de gestion de banques de données supportés par<a href="http://php.weblogs.com/adodb/" target="_blank">ADOdb</a>puissent fonctionner (entièrement ou partiellement). Des rapports de compatibilité et/ou des rustines (code patches) pour d’autres systèmes de gestion de banques de données sont bienvenus.</p>
+		]]>
+	</section>
+	
+	<section title="Téléchargement">
+		<![CDATA[<p>OJS peut être téléchargé de  Public Knowledge Project <a href="http://pkp.sfu.ca/ojs/" target="_blank">web site</a>.</p>]]>
+	</section>
+	
+	<section title="Installation">
+		<![CDATA[<p>OJS vient avec un document d’installation disponible sur le Web  qui guide l’administrateur du système à travers le procédé d’installation. Alternativement, un outil de lignes de commande est aussi disponible.</p>
+		<ol>
+			<li>
+				Télécharger les archives d’OJS.
+			</li>
+			<li>
+				Décompresser les archives d’OJS sur votre serveur Web et les mettre dans le dossier désiré dans l’arbre arborescent  de vos documents Web.<br />
+				<tt>$ tar -zxf ojs-2.*.tar.gz<br />
+				$ mv ojs-* /var/www/myjournal</tt>
+			</li>
+			<li>
+				Rendez les fichiers et répertoires suivants inscriptibles (i.e., en utilisant chown ou chmod):<br />
+				- config.inc.php (optional)<br />
+				- public<br />
+				- cache<br />
+				- cache/t_cache<br />
+				- cache/t_config<br />
+				- cache/t_compile<br />
+				- cache/_db
+			</li>
+			<li>
+				Ouvrir un navigateur Web à la location de votre installation d’OJS (i.e. http://www.mydomain.com/myjournal/) et suivre les instructions apparaissant sur l’écran pour compléter l’installation. Voir docs/README  pour plus d’informations sur le procédé d’installation.
+			</li>
+		</ol>
+		]]>
+	</section>
+</topic>

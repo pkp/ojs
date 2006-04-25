@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000006.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * User Interface - Reading Tools
+  *
+  * $Id$
+  -->
+
+<topic id="user/topic/000006" locale="fr_CA" title="Outils de lecture" toc="user/toc/000000" key="user.readingTools">
+	<section>
+		<![CDATA[<p>Les journaux qui utilisent ce système peuvent fournir une série d’outils de lecture pour accompagner les articles publiés dans les diverses rubriques du journal. Les outils de lecture sont destinés à assister autant le lecteur expert que le lecteur novice du journal à se construire un contexte pour interpréter, évaluer et utiliser les recherches qu’ils lisent. Des jeux d’outils de lecture ont été développés pour un large éventail de disciplines académiques, et desquels le directeur du journal peut choisir, aussi bien que de les mettre à jour et les modifier, en support à l’environnement de lecture du journal. Les outils de lectures permettent aussi de se joindre à des forums pertinents, ainsi que de communiquer avec l’auteur ou de partager l’article avec un autre lecteur.</p><p><i>Comment les outils de lecture fonctionnent</i>. Les outils de lecture sont conçus pour fournir un contexte pour l’article spécifique qu’ils accompagnent. Les outils ouvrent un cadre dans le navigateur du lecteur, à la droite de l’article étant lu. Premièrement les outils donnent accès au lecteur à l’information d’indexation de l’article, la version imprimée, et à la déclaration bibliographique de l’auteur. Les outils permettent au lecteur de rechercher des mots dans l’article (en double-cliquant sur n’importe quel mot en version HTML de l’article), d’envoyer un courriel à l’auteur ou à un autre lecteur. Les outils sont aussi conçus pour prendre des mots clés de l’article et de les alimenter dans des moteurs de recherche  de banques de données à libre accès et d’autres ressources regroupées en catégories comme  des recherches d’études, les autres ouvrages de l’auteur, les organes de presse, les sites Web gouvernementaux, etc., dépendant du jeu d’outils sélectionné. Les lecteurs ont aussi accès à de l’information d’arrière plan pour chacune des ressources sélectionnées. Dans chaque catégorie, soit Études, Média, ou Instruction, les outils fournissent des choix multiples ou des banques de données à consulter, tout en permettant au lecteur d’en apprendre plus sur chaque banque de données en fournissant un lien à la page <b>A notre sujet’’</b> de la ressource. (Le directeur du journal peut modifier ou supprimer des ressources existantes et en ajouter de nouvelles).</p>]]>	
+	</section>
+</topic>

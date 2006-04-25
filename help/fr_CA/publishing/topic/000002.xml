@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000002.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Publishing Process - Schedule Submissions
+  *
+  * $Id$
+  -->
+
+<topic id="publishing/topic/000002" locale="fr_CA" title="Mise au calendrier des présentations" toc="publishing/toc/000000" key="publishing.scheduleSubmissions">
+	<section>
+		<![CDATA[<p>Une fois qu’une présentation acceptée a complété le processus éditorial, l’éditeur de la rubrique l’envoie pour la mise au calendrier. Là, elle apparaît dans la file d’attente du calendrier, et l’éditeur peut alors placer la présentation dans un des numéros en progression qui ont été crées. Typiquement, l’éditeur placera la présentation dans le premier numéro disponible, mais il peut arriver qu’un numéro soit complet avant sa parution, ou qu’un éditeur désire mettre la présentation dans un numéro ultérieur pour assurer un éventail de sujets dans chaque numéro, ou de réunir une série de présentations sur un même sujet.</p><p><i>Publication des présentations en continue</i>. Si les présentations sont publiées en continue, aussitôt qu’elles sont prêtes, alors l’éditeur met les présentations au calendrier de ce qui est en effet le numéro courant,  et elles seront publiées dès que sa place dans la table des matières aura été cochée. À la fin d’un volume annuel, la prochaine présentation sera mise au calendrier pour paraître dans le nouveau volume, pour lequel la table des matières sera publiée ou mise à jour avec cette présentation initiale.</p>]]>	
+	</section>
+</topic>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Publishing Process Index 
+  *
+  * $Id$
+  -->
+
+<topic id="publishing/topic/000000" locale="fr_CA" title="Processus de publication" toc="index/toc/000000" subtoc="publishing/toc/000000" key="publishing.index">
+	<section>
+		<![CDATA[<p>L’éditeur voit à tout le processus de la publication en créant des numéros et/ou des volumes pour le journal, met au calendrier les présentations pour ces numéros, organise leur table de matières, et finalement publie le numéro. Le journal peut être publié sous divers formats. Le modèle typique est d’assembler les présentations dans un numéro qui est publié trimestriellement (ou mensuellement ou semi-annuellement). Cependant, certains journaux électroniques préfèrent publier les présentations dès qu’elles sont prêtes, comme partie d’un volume annuel, lequel commence avec la première présentation de l’année et se termine à la fin de l’année, quand un autre volume annuel débute. Pour les besoins de ce texte d’aide, le terme numéro est utilisé, bien qu’un numéro consiste d’une table des matières qui peut être identifiée par (a) numéro, volume, année, (b) volume, année, (c) année; ou (d) le titre. Comment les numéros seront identifiés fait partie de la mise en marche (Setup) pour le journal, lequel le directeur du journal aura configuré.</p>]]>	
+	</section>
+</topic>

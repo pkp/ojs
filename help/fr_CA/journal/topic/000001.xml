@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000001.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages Index 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000001" locale="fr_CA" title="Pages de gestion" toc="journal/toc/000000" subtoc="journal/toc/000001" key="journal.managementPages.index">
+	<section>
+		<![CDATA[<p>Le directeur du journal configure et personnalise le système pour l’adapter au journal par une série de pages de gestion. Le processus débute par les cinq étapes de la mise en place (Setup), mais inclut aussi les rubriques à être publiées, le ton et libellé des courriels standards du journal, les langues disponibles au journal, les statistiques qu’il publie, et tous les outils qu’il met à la disposition des lecteurs.</p>]]>	
+	</section>
+</topic>

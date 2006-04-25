@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000033.xml
+  *
+  * Copyright (c) 2003-2006 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Merge Users
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000033" locale="fr_CA" title="Amalgamation des usagers" toc="journal/toc/000002" key="journal.managementPages.mergeUsers">
+	<section>
+		<![CDATA[<p>La fonction d’amalgamation des usagers, disponible depuis «Gestion du journal», sous l’entête ‘’usagers’’, permet au directeur du journal d’amalgamer deux comptes d’un usager en un seul, transférant les assignations éditoriales, les présentations et nombre d’autres records d’un compte à l’autre et supprime effectivement le premier compte.</p>
+		<p>Les items suivants sont transférés:
+			<ul>
+				<li>La paternité des articles</li>
+				<li>Les commentaires publiques sur les articles</li>
+				<li>Les notes sur les articles</li>
+				<li>Les assignations et décisions de l’éditeur</li>
+				<li>Les assignations de révision</li>
+				<li>Les assignations à l’éditeur de la mise en page</li>
+				<li>Les assignations au correcteur d’épreuves</li>
+				<li>Les courriels de l’article et le registre des entrées</li>
+				<li>Les clés d’accès du réviseur</li>
+			</ul>
+		Les items suivants <strong>ne sont pas</strong> transférés
+			<ul>
+				<li>Les séances</li>
+				<li>Les abonnements</li>
+				<li>Le statut des notifications (i.e. si l’usager s’est inscrit pour recevoir les notifications au sujet des nouvelles du journal)</li>
+				<li>Le générique des effectifs</li>
+				<li>Le statut de l’éditeur de rubrique sur les rubriques.</li>
+				<li>Les rôles</li>
+				<li>L’information sur le profil de l’usager (i.e. prénom, nom de famille, etc,)</li>
+			</ul>
+		</p>
+		<p>Cette fonction devrait être utilisée avec précaution, car elle est irréversible et implique le transfert  du dossier d’un usager à un autre.</p>]]>
+	</section>
+</topic>

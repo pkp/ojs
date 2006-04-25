@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000022.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Author 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000022" locale="fr_CA" title="Auteurs" toc="journal/toc/000003" key="journal.roles.author">
+	<section>
+		<![CDATA[<p>Les auteurs peuvent inscrire et soumettre des articles pour le journal directement par le site Web du journal. L’auteur est demandé de télécharger l’article vers le serveur et de fournir les métadonnées ou l’information pour l’index pour l’article. (Les métadonnées améliorent la capacité de recherche pour les recherches en ligne pour ce journal). L’auteur peut télécharger vers le serveur des fichiers supplémentaires, sous la forme de jeux de données, d’instruments de recherche, ou la source des textes qui enrichiront l’article, en plus de contribuer à des formes plus ouvertes et robustes  pour la recherche et la science. L’auteur peut garder la trace de sa présentation à travers le processus éditorial &mdash; ainsi que participer à la révision de copie et la correction d’épreuves des présentations acceptées pour publication &mdash; en allant au site Web du journal.</p>]]>	
+	</section>
+</topic>

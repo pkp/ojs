@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000002.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author Submission Process - Submission Requirements 
+  *
+  * $Id$
+  -->
+
+<topic id="submission/topic/000002" locale="fr_CA" title="Conditions requises pour les présentations" toc="submission/toc/000000" key="submission.submissionRequirements">
+	<section>
+		<![CDATA[<p>Afin de s’assurer que les présentations au journal ont été adéquatement préparées et sont en un format convenable pour le processus d’édition, le directeur du journal et l’éditeur ont élaboré une série conditions avec lesquelles l’auteur doit indiquer son intention de s’y conformer avant d’être admis à procéder à l’étape 2 du processus de présentation par l’auteur. Si l’auteur ne peut se conformer à l’une des conditions pour une raison ou une autre, l’auteur peut cocher "conditions" et fournir une explication dans "Commentaires à l’éditeur".</p>]]>	
+	</section>
+</topic>

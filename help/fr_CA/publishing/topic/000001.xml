@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000001.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Publishing Process - Create Issue
+  *
+  * $Id$
+  -->
+
+<topic id="publishing/topic/000001" locale="fr_CA" title="Création d’un numéro" toc="publishing/toc/000000" key="publishing.createIssue">
+	<section>
+		<![CDATA[
+		<p>Avant d’utiliser «Mises de présentations au calendrier» pour y en mettre dans un numéro pour publication, l’éditeur doit utiliser «Créer un numéro» pour assurer qu’il y a bien un numéro dans lequel mettre les présentations. Le numéro doit être identifié avec les chiffres appropriés et/ou les titres, selon les options choisies dans la mise en place (Setup) (i.e. Vol 2, No 5, 2008). Bien que le système enverra une invite de commande à l’éditeur dans «Créer un numéro» avec le prochain numéro, chaque fois qu’un numéro doit être crée, l’éditeur peut outrepasser ces réglages et entrer une nouvelle série de chiffres ou une année différente. Les numéros ont aussi l’option d’y ajouter un titre, lequel apparaitra au dessus de la table des matières, et peut être employé, par exemple, pour des numéros spéciaux du journal.</p>
+		<p><i>Création d’une page couverture</i>. Il y a aussi l’option de télécharger vers le serveur une couverture illustrée pour le journal, dans la forme d’un fichier .jpg, png, ou .gif.  Ce fichier sera accessible à travers la table des matières où il sera listé comme ‘’Page couverture’’. Elle apparaitra sur la page d’accueil du journal tant que le numéro sera courant, et peut être cliquée pour atteindre la table des matières de ce numéro. Une fois que ce numéro est archivé, la page couverture demeure disponible avec le numéro dans la table des matières.</p>
+		<p><i>Numéros courants, prochains et antérieurs</i>. Le numéro courant est le numéro le plus récemment publié. Les prochains numéros sont là où l’éditeur met au calendrier les présentations qui seront publiées, soit dans le prochain numéro, ou plus tard. L’éditeur peut désirer s’assurer qu’il y ait toujours deux ou trois numéros non encore publiés, ce qui permet d’y mettre des présentations au calendrier pour une couple de numéros à l’avance, pour balancer les articles par exemple. Les numéros antérieurs sont des numéros qui ne sont plus courants et qui ont déjà été publiés.</p>
+		]]>
+	</section>
+</topic>

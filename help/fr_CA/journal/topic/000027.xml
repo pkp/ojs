@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000027.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Reading Tools - Versions
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000027" locale="fr_CA" title="Versions" toc="journal/toc/000005" key="journal.managementPages.readingTools.versions">
+	<section>
+		<![CDATA[<p>Le directeur du journal peut éditer, ajouter et vérifier  les jeux d’outils basés sur la discipline ou le domaine. Ces outils utilisent des banques de données qui ont été choisies à cause de leur pertinence et leur accessibilité  par tous les lecteurs. Parce que la location et l’adresse URL de ces banques de données changent, le directeur du journal doit être capable de modifier ou même supprimer des inscriptions. Les outils sont regroupés par catégories (i.e. études apparentées, dissertations, etc.),  avec de nombreuses banques de données dans chacun d’eux. <p><i>Valider les outils de lecture </i>. Cette fonction vérifiera la validité de l’adresse URL de recherche qui est utilisée par chaque banque de données pour trouver des articles qui ont un rapport à l’article que les outils suivent (en employant les termes d’indexation de l’auteur). Si l’adresse URL est invalide, le directeur du journal peut ajuster les réglages en trouvant la nouvelle adresse URL , en demandant de l’aide à quelqu’un d’autre, ou en supprimant la banque de données du jeu d’outils de recherche. Comme cette fonction s’exécute  à travers chaque banque de données, çà prend un peu de temps à compléter et résultera en un rapport pour chacune des banques de données attestant de sa validité ou de la source du problème.</p><p><i>Les métadonnées pour chacun des outils de lecture</i>. Les métadonnées pour chacun des outils de lecture donnent le nom de l’outil, une brève description de l’outil, ce qui permet au directeur du journal de modifier l’organisation des outils ou d’en créer de nouvelles séries.</p><p><i>Contextes pour le jeu d’outil</i>. Chaque jeu d’outil consiste de regroupements variés, ou de contextes, de banques de données (i.e. Études apparentées, Forums en ligne, etc.) avec chacun des contextes consistant d’un nombre de banques de données pertinentes. Ces banques de données peuvent être crées, éditées ou supprimées. Les regroupements peuvent aussi être réarrangés.</p><p><i>Exportation des données</i>. Si le directeur du journal développe des outils de lecture additionnels, ceux-ci sont exportés au Public Knowledge Project pour utilisation par d’autres journaux reliés aux mêmes domaines.</p>]]>
+	</section>
+</topic>
