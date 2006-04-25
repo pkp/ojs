@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../toc.dtd">
+
+<!--
+  * 000006.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Editorial Process - Section Editor's Role - Review
+  *
+  * $Id$
+  -->
+
+<toc id="editorial/toc/000006" locale="fr_CA" title="Révision" parent_topic="editorial/topic/000006">
+	<topic id="editorial/topic/000024" title="Version de la révision" />
+	<topic id="editorial/topic/000025" title="Revue des pairs" />
+	<topic id="editorial/topic/000026" title="Décision de l’éditeur" />
+
+	<breadcrumb url="editorial/topic/000000" title="Processus éditorial" />
+	<breadcrumb url="editorial/topic/000004" title="Rôle de l’éditeur de rubrique" />
+	<breadcrumb url="editorial/topic/000006" title="Révision" />
+</toc>
