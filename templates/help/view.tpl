@@ -31,7 +31,7 @@
 				 &gt; <a href="{url op="view" path=$breadcrumb|explode:"/"}">{$key}</a>
 				{/if}
 			{/foreach}		
-			&gt; <a href="{url op="view" path=$topic->getId()}" class="current">{$topic->getTitle()}</a>
+			&gt; <a href="{url op="view" path=$topic->getId()|explode:"/"}" class="current">{$topic->getTitle()}</a>
 		{/if}
 	</div>
 	
