@@ -440,9 +440,9 @@ class IssueManagementHandler extends EditorHandler {
 		$issue->setPublished(1);
 		$issue->setDatePublished(Core::getCurrentDate());
 
-		// If journal is not open access and subscriptions with delayed open access are enabled then
+		// If subscriptions with delayed open access are enabled then
 		// update open access date according to open access delay policy
-		if (!$journal->getSetting('enableOpenAccess') && $journal->getSetting('enableSubscriptions') && $journal->getSetting('enableDelayedOpenAccess')) {
+		if ($journal->getSetting('enableSubscriptions') && $journal->getSetting('enableDelayedOpenAccess')) {
 
 			$delayDuration = $journal->getSetting('delayedOpenAccessDuration');
 			$delayYears = (int)floor($delayDuration/12);

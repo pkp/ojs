@@ -119,39 +119,77 @@
 <div class="separator"></div>
 
 
-<h3>4.3 {translate key="manager.setup.subscription"}</h3>
+<h3>4.3 {translate key="manager.setup.onlineAccessManagement"}</h3>
 
-<p>{translate key="manager.setup.subscriptionDescription"}</p>
+	<script type="text/javascript">
+		{literal}
+		<!--
+			function toggleEnableSubscriptions(form) {
+				if (form.enableSubscriptions[0].checked) {
+					form.openAccessPolicy.disabled = false;
+					form.subscriptionName.disabled = true;
+					form.subscriptionEmail.disabled = true;
+					form.subscriptionPhone.disabled = true;
+					form.subscriptionFax.disabled = true;
+					form.subscriptionMailingAddress.disabled = true;
+				} else {
+					form.openAccessPolicy.disabled = true;
+					form.subscriptionName.disabled = false;
+					form.subscriptionEmail.disabled = false;
+					form.subscriptionPhone.disabled = false;
+					form.subscriptionFax.disabled = false;
+					form.subscriptionMailingAddress.disabled = false;
+				}
+			}
+		// -->
+		{/literal}
+	</script>
 
 <table width="100%" class="data">
 	<tr valign="top">
-		<td width="5%" class="label"><input type="checkbox" name="enableSubscriptions" id="enableSubscriptions" value="1"{if $enableSubscriptions} checked="checked"{/if} /></td>
-		<td width="95%" class="value"><label for="enableSubscriptions">{translate key="manager.setup.enableSubscriptions"}</label></td>
+		<td width="5%" class="label" align="right">
+			<input type="radio" name="enableSubscriptions" id="enableSubscriptions-0" value="0" onClick="toggleEnableSubscriptions(this.form)"{if not $enableSubscriptions} checked="checked"{/if} />
+		</td>
+		<td width="95%" class="value">
+			<label for="enableSubscriptions-0"><strong>{translate key="manager.setup.openAccess"}</strong></label>
+			<h4>{translate key="manager.setup.openAccessPolicy"}</h4>
+			<p><textarea name="openAccessPolicy" id="openAccessPolicy" rows="12" cols="60" class="textArea"{if $enableSubscriptions} disabled="disabled"{/if}>{$openAccessPolicy|escape}</textarea></p>
+		</td>
 	</tr>
-</table>
-
-<p>{translate key="manager.setup.subscriptionContactDescription"}</p>
-
-<table width="100%" class="data">
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="subscriptionName" key="user.name"}</td>
-		<td width="80%" class="value"><input type="text" name="subscriptionName" id="subscriptionName" value="{$subscriptionName|escape}" size="30" maxlength="60" class="textField" /></td>
-	</tr>
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="subscriptionEmail" key="user.email"}</td>
-		<td width="80%" class="value"><input type="text" name="subscriptionEmail" id="subscriptionEmail" value="{$subscriptionEmail|escape}" size="30" maxlength="90" class="textField" /></td>
+	<tr>
+		<td colspan="2" class="separator">&nbsp;</td>
 	</tr>
 	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="subscriptionPhone" key="user.phone"}</td>
-		<td width="80%" class="value"><input type="text" name="subscriptionPhone" id="subscriptionPhone" value="{$subscriptionPhone|escape}" size="15" maxlength="24" class="textField" /></td>
-	</tr>
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="subscriptionFax" key="user.fax"}</td>
-		<td width="80%" class="value"><input type="text" name="subscriptionFax" id="subscriptionFax" value="{$subscriptionFax|escape}" size="15" maxlength="24" class="textField" /></td>
-	</tr>
-	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="subscriptionMailingAddress" key="common.mailingAddress"}</td>
-		<td width="80%" class="value"><textarea name="subscriptionMailingAddress" id="subscriptionMailingAddress" rows="3" cols="40" class="textArea">{$subscriptionMailingAddress|escape}</textarea></td>
+		<td width="5%" class="label" align="right">
+			<input type="radio" name="enableSubscriptions" id="enableSubscriptions-1" value="1" onClick="toggleEnableSubscriptions(this.form)"{if $enableSubscriptions} checked="checked"{/if} />
+		</td>
+		<td width="95%" class="value">
+			<label for="enableSubscriptions-1"><strong>{translate key="manager.setup.subscription"}</strong></label>
+			<p><span class="instruct">{translate key="manager.setup.subscriptionDescription"}</span></p>
+			<p>{translate key="manager.setup.subscriptionContactDescription"}</p>
+			<table width="100%" class="data">
+				<tr valign="top">
+					<td width="20%" class="label">{fieldLabel name="subscriptionName" key="user.name"}</td>
+					<td width="80%" class="value"><input type="text" name="subscriptionName" id="subscriptionName"{if not $enableSubscriptions} disabled="disabled"{/if} value="{$subscriptionName|escape}" size="30" maxlength="60" class="textField" /></td>
+				</tr>
+				<tr valign="top">
+					<td width="20%" class="label">{fieldLabel name="subscriptionEmail" key="user.email"}</td>
+					<td width="80%" class="value"><input type="text" name="subscriptionEmail" id="subscriptionEmail"{if not $enableSubscriptions} disabled="disabled"{/if} value="{$subscriptionEmail|escape}" size="30" maxlength="90" class="textField" /></td>
+				</tr>
+				<tr valign="top">
+					<td width="20%" class="label">{fieldLabel name="subscriptionPhone" key="user.phone"}</td>
+					<td width="80%" class="value"><input type="text" name="subscriptionPhone" id="subscriptionPhone"{if not $enableSubscriptions} disabled="disabled"{/if} value="{$subscriptionPhone|escape}" size="15" maxlength="24" class="textField" /></td>
+				</tr>
+				<tr valign="top">
+					<td width="20%" class="label">{fieldLabel name="subscriptionFax" key="user.fax"}</td>
+					<td width="80%" class="value"><input type="text" name="subscriptionFax" id="subscriptionFax"{if not $enableSubscriptions} disabled="disabled"{/if} value="{$subscriptionFax|escape}" size="15" maxlength="24" class="textField" /></td>
+				</tr>
+				<tr valign="top">
+					<td width="20%" class="label">{fieldLabel name="subscriptionMailingAddress" key="common.mailingAddress"}</td>
+					<td width="80%" class="value"><textarea name="subscriptionMailingAddress" id="subscriptionMailingAddress"{if not $enableSubscriptions} disabled="disabled"{/if} rows="3" cols="40" class="textArea">{$subscriptionMailingAddress|escape}</textarea></td>
+				</tr>
+			</table>
+		</td>
 	</tr>
 </table>
 

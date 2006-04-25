@@ -75,8 +75,8 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 
 	function sendJournalReminders ($journal, $curDate) {
 
-		// Only send reminders if journal is not open access and subscriptions are enabled
-		if (!$journal->getSetting('enableOpenAccess') && $journal->getSetting('enableSubscriptions')) {
+		// Only send reminders if subscriptions are enabled
+		if ($journal->getSetting('enableSubscriptions')) {
 
 			$curYear = $curDate['year'];
 			$curMonth = $curDate['month'];

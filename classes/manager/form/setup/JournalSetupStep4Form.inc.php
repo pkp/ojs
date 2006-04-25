@@ -33,6 +33,7 @@ class JournalSetupStep4Form extends JournalSetupForm {
 				'useProofreaders' => 'bool',
 				'proofInstructions' => 'string',
 				'enableSubscriptions' => 'bool',
+				'openAccessPolicy' => 'string',
 				'subscriptionName' => 'string',
 				'subscriptionEmail' => 'string',
 				'subscriptionPhone' => 'string',

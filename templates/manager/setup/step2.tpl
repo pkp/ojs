@@ -147,20 +147,7 @@
 <div class="separator"></div>
 
 
-<h3>2.4 {translate key="manager.setup.openAccessPolicy"}</h3>
-
-<p>{translate key="manager.setup.openAccessPolicyDescription"}</p>
-<p>
-	<input type="checkbox" name="enableOpenAccess" id="enableOpenAccess" value="1"{if $enableOpenAccess} checked="checked"{/if} />&nbsp;
-	<label for="enableOpenAccess">{translate key="manager.setup.enableOpenAccess"}</label>
-</p>
-<p><textarea name="openAccessPolicy" id="openAccessPolicy" rows="12" cols="60" class="textArea">{$openAccessPolicy|escape}</textarea></p>
-
-
-<div class="separator"></div>
-
-
-<h3>2.5 {translate key="manager.setup.addItemtoAboutJournal"}</h3>
+<h3>2.4 {translate key="manager.setup.addItemtoAboutJournal"}</h3>
 
 <table width="100%" class="data">
 {foreach name=customAboutItems from=$customAboutItems key=aboutId item=aboutItem}
@@ -194,7 +181,7 @@
 <div class="separator"></div>
 
 
-<h3>2.6 {translate key="manager.setup.journalArchiving"}</h3>
+<h3>2.5 {translate key="manager.setup.journalArchiving"}</h3>
 
 <p>{translate key="manager.setup.lockssDescription"}</p>
 
@@ -215,7 +202,7 @@
 <div class="separator"></div>
 
 
-<h3>2.7 {translate key="manager.setup.securitySettings"}</h3>
+<h3>2.6 {translate key="manager.setup.securitySettings"}</h3>
 
 <p>{translate key="manager.setup.securitySettingsDescription"}</p>
 
