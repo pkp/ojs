@@ -13,4 +13,13 @@
   -->
 
 <data>
+	<!-- Bug #2114: Scheduled articles sent to Archive and returned to active get stuck. Unstick them. -->
+	<sql>
+		<query driver="mysql">
+			UPDATE articles a, proof_assignments pa SET a.status = 2 WHERE a.article_id = pa.article_id AND a.status=1 AND pa.date_scheduling_queue IS NOT NULL
+		</query>
+		<query driver="postgres7">
+			UPDATE articles SET status = 2 FROM articles a, proof_assignments pa WHERE a.article_id = pa.article_id AND a.status = 1 AND pa.date_scheduling_queue IS NOT NULL
+		</query>
+	</sql>
 </data>
