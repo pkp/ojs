@@ -193,6 +193,7 @@ class RTDAO extends DAO {
 	
 	/**
 	 * Update an exisiting verison.
+	 * @param $journalId int
 	 * @param $version RTVersion
 	 */
 	function updateVersion($journalId, &$version) {
