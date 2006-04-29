@@ -1280,10 +1280,10 @@ chaque article publié seront inclus dans la table des matières de ce journal (
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths2">nombre de mois a avant l’expiration de l’abonnement</message>
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks1">Aviser les abonnés par courriel</message>
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks2">semaine (s) avant la date d’expiration.</message>
-	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths1">Aviser les abonnés par  courriel</message>
+	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths1">Aviser les abonnés par courriel</message>
 	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths2">mois après la date d’expiration.</message>
 	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks1">Aviser les abonnés par courriel</message>
-	<message y="manager.subscriptionPolicies.expiryReminderAfterWeeks2">week(s) after subscription expiry.</message>
+	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks2">week(s) after subscription expiry.</message>
 	<message key="manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid">SVP utiliser la case à cocher.</message>
 	<message key="manager.subscriptionPolicies.numMonthsBeforeSubscriptionExpiryReminderValid">SVP choisir une valeur pour le nombre de mois avant l’expiration de l’abonnement.</message>
 	<message key="manager.subscriptionPolicies.numWeeksBeforeSubscriptionExpiryReminderValid">SVP choisir une valeur pour le nombre de semaines avant l’expiration de l’abonnement.</message>
