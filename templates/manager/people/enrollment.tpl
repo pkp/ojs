@@ -146,7 +146,7 @@ function confirmAndPrompt(userId) {
 {else}
 	<tr>
 		<td colspan="4" align="left">{page_info iterator=$users}</td>
-		<td align="right">{page_links name="users" iterator=$users searchField=$searchField searchMatch=$searchMatch search=$search dateFromDay=$dateFromDay dateFromYear=$dateFromYear dateFromMonth=$dateFromMonth dateToDay=$dateToDay dateToYear=$dateToYear dateToMonth=$dateToMonth roleSymbolic=$roleSymbolic}</td>
+		<td align="right">{page_links name="users" iterator=$users searchField=$searchField searchMatch=$searchMatch search=$search dateFromDay=$dateFromDay dateFromYear=$dateFromYear dateFromMonth=$dateFromMonth dateToDay=$dateToDay dateToYear=$dateToYear dateToMonth=$dateToMonth roleSymbolic=$roleSymbolic searchInitial=$searchInitial}</td>
 	</tr>
 {/if}
 </table>
