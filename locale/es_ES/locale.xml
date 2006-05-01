@@ -146,6 +146,7 @@
 	<message key="common.plugin">Plugin</message>
 	<message key="common.default">Por defecto</message>
 	<message key="common.addSelf">Añadirse a si mismo</message>
+	<message key="common.alphaList">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</message>
 
 	<!-- Common Form Messages -->
 	<message key="form.errorsOccurred">Ha ocurrido un error. El formulario no se ha procesado.</message>
