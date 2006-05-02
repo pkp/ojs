@@ -15,6 +15,9 @@
 <h3>{translate key="manager.managementPages"}</h3>
 
 <ul class="plain">
+	{if $announcementsEnabled}
+		<li>&#187; <a href="{url op="announcements"}">{translate key="manager.announcements"}</a></li>
+	{/if}
 	<li>&#187; <a href="{url op="files"}">{translate key="manager.filesBrowser"}</a></li>
 	<li>&#187; <a href="{url op="sections"}">{translate key="section.sections"}</a></li>
 	<li>&#187; <a href="{url op="languages"}">{translate key="common.languages"}</a></li>

@@ -45,6 +45,18 @@ class IndexHandler extends Handler {
 				// The current issue TOC/cover page should be displayed below the custom home page.
 				IssueHandler::setupIssueTemplate($issue);
 			}
+
+			$enableAnnouncements = $journal->getSetting('enableAnnouncements');
+			if ($enableAnnouncements) {
+				$enableAnnouncementsHomepage = $journal->getSetting('enableAnnouncementsHomepage');
+				if ($enableAnnouncementsHomepage) {
+					$numAnnouncementsHomepage = $journal->getSetting('numAnnouncementsHomepage');
+					$announcementDao = &DAORegistry::getDAO('AnnouncementDAO');
+					$announcements = &$announcementDao->getNumAnnouncementsNotExpiredByJournalId($journal->getJournalId(), $numAnnouncementsHomepage);
+					$templateMgr->assign('announcements', $announcements);
+					$templateMgr->assign('enableAnnouncementsHomepage', $enableAnnouncementsHomepage);
+				}
+			} 
 			$templateMgr->display('index/journal.tpl');
 		} else {
 			$siteDao = &DAORegistry::getDAO('SiteDAO');

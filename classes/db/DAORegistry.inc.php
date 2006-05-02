@@ -126,6 +126,8 @@ class DAORegistry {
 			case 'CurrencyDAO': return 'subscription.CurrencyDAO';
 			case 'SubscriptionDAO': return 'subscription.SubscriptionDAO';
 			case 'SubscriptionTypeDAO': return 'subscription.SubscriptionTypeDAO';
+			case 'AnnouncementDAO': return 'announcement.AnnouncementDAO';
+			case 'AnnouncementTypeDAO': return 'announcement.AnnouncementTypeDAO';
 			case 'TemporaryFileDAO': return 'file.TemporaryFileDAO';
 			case 'CommentDAO': return 'comment.CommentDAO';
 			case 'AuthSourceDAO': return 'security.AuthSourceDAO';

@@ -25,9 +25,11 @@ class ManagerHandler extends Handler {
 		$journal = &Request::getJournal();
 		$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
 		$subscriptionsEnabled = $journalSettingsDao->getSetting($journal->getJournalId(), 'enableSubscriptions'); 
+		$announcementsEnabled = $journalSettingsDao->getSetting($journal->getJournalId(), 'enableAnnouncements'); 
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('subscriptionsEnabled', $subscriptionsEnabled);
+		$templateMgr->assign('announcementsEnabled', $announcementsEnabled);
 		$templateMgr->assign('helpTopicId','journal.index');
 		$templateMgr->display('manager/index.tpl');
 	}
@@ -415,6 +417,66 @@ class ManagerHandler extends Handler {
 	function updateSubscription($args) {
 		import('pages.manager.SubscriptionHandler');
 		SubscriptionHandler::updateSubscription($args);
+	}
+
+
+	//
+	// Announcement Types 
+	//
+
+	function announcementTypes() {
+		import('pages.manager.AnnouncementHandler');
+		AnnouncementHandler::announcementTypes();
+	}
+
+	function deleteAnnouncementType($args) {
+		import('pages.manager.AnnouncementHandler');
+		AnnouncementHandler::deleteAnnouncementType($args);
+	}
+
+	function createAnnouncementType() {
+		import('pages.manager.AnnouncementHandler');
+		AnnouncementHandler::createAnnouncementType();
+	}
+
+	function editAnnouncementType($args) {
+		import('pages.manager.AnnouncementHandler');
+		AnnouncementHandler::editAnnouncementType($args);
+	}
+
+	function updateAnnouncementType($args) {
+		import('pages.manager.AnnouncementHandler');
+		AnnouncementHandler::updateAnnouncementType($args);
+	}
+
+
+	//
+	// Announcements 
+	//
+
+	function announcements() {
+		import('pages.manager.AnnouncementHandler');
+		AnnouncementHandler::announcements();
+	}
+
+	function deleteAnnouncement($args) {
+		import('pages.manager.AnnouncementHandler');
+		AnnouncementHandler::deleteAnnouncement($args);
+	}
+
+	function createAnnouncement() {
+		import('pages.manager.AnnouncementHandler');
+		AnnouncementHandler::createAnnouncement();
+	}
+
+	function editAnnouncement($args) {
+		import('pages.manager.AnnouncementHandler');
+		AnnouncementHandler::editAnnouncement($args);
+	}
+
+	function updateAnnouncement($args) {
+		import('pages.manager.AnnouncementHandler');
+		AnnouncementHandler::updateAnnouncement($args);
 	}
 
 	//

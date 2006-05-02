@@ -24,6 +24,20 @@
 
 {$additionalHomeContent}
 
+{if $enableAnnouncementsHomepage}
+	{* Display announcements *}
+	<br />
+	<center><h3>{translate key="announcement.announcementsHome"}</h3></center>
+	{include file="announcement/list.tpl"}	
+	<table width="100%">
+		<tr>
+			<td>&nbsp;</td>
+		<tr>
+			<td align="right"><a href="{url page="announcement"}">{translate key="announcement.moreAnnouncements"}</a></td>
+		</tr>
+	</table>
+{/if}
+
 {if $issue}
 	{* Display the table of contents or cover page of the current issue. *}
 	<h3>{$issue->getIssueIdentification()|escape}</h3>

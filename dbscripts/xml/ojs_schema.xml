@@ -1740,6 +1740,63 @@
 	</table>
 
 	<!--
+	 *
+	 * TABLE announcement_types 
+	 *
+	 -->
+	<table name="announcement_types">
+		<field name="type_id" type="I8">
+			<KEY/>
+			<AUTOINCREMENT/>
+		</field>
+		<field name="journal_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="type_name" type="C2" size="80">
+			<NOTNULL/>
+		</field>
+		<descr>Journal announcement types.</descr>
+		<index name="announcement_types_journal_id">
+			<col>journal_id</col>
+		</index>
+	</table>
+
+	<!--
+	 *
+	 * TABLE announcements 
+	 *
+	 -->
+	<table name="announcements">
+		<field name="announcement_id" type="I8">
+			<KEY/>
+			<AUTOINCREMENT/>
+		</field>
+		<field name="journal_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="type_id" type="I8"/>
+		<field name="title" type="C2" size="255">
+			<NOTNULL/>
+		</field>
+		<field name="description_short" type="X">
+			<NOTNULL/>
+			<DEFAULT VALUE=""/>
+		</field>
+		<field name="description" type="X">
+			<NOTNULL/>
+			<DEFAULT VALUE=""/>
+		</field>
+		<field name="date_expire" type="T"/>
+		<field name="date_posted" type="T">
+			<NOTNULL/>
+		</field>
+		<descr>Journal announcements.</descr>
+		<index name="announcements_journal_id">
+			<col>journal_id</col>
+		</index>
+	</table>
+
+	<!--
 	  *
 	  * TABLE temporary_files
 	  *

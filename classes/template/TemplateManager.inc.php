@@ -107,6 +107,7 @@ class TemplateManager extends Smarty {
 				$this->assign('metaCustomHeaders', $journal->getSetting('customHeaders'));
 				$this->assign('numPageLinks', $journal->getSetting('numPageLinks'));
 				$this->assign('itemsPerPage', $journal->getSetting('itemsPerPage'));
+				$this->assign('enableAnnouncements', $journal->getSetting('enableAnnouncements'));
 				
 				// Assign stylesheet and footer
 				$journalStyleSheet = $journal->getSetting('journalStyleSheet');
