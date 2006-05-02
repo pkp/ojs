@@ -136,6 +136,7 @@ class MailTemplate extends Mail {
 		}
 
 		$this->addressFieldsEnabled = true;
+		$this->journal =& $journal;
 	}
 
 	/**
