@@ -143,6 +143,7 @@
 	<message key="common.plugin">Plugin</message>
 	<message key="common.default">Default</message>
 	<message key="common.addSelf">Segui personalmente</message>
+	<message key="common.alphaList">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</message>
 
 	<!-- Common Form Messages -->
 	<message key="form.errorsOccurred">Si &#x00E8; verificato un errore durante l'elaborazione del modulo.</message>
@@ -415,7 +416,7 @@
 	<message key="user.login">Login</message>
 	<message key="user.profile">Profilo</message>
 	<message key="user.register">Iscrizione</message>
-	<message key="user.signIn">Sign In</message>
+	<message key="user.logIn">Sign In</message>
 	<message key="user.logOut">Log Out</message>
 	<message key="user.username">Nome utente</message>
 	<message key="user.password">Password</message>
@@ -1145,7 +1146,7 @@ Fate <a href="http://www.pkp.ubc.ca/harvester/add.php" target="_blank">click qui
 	<message key="manager.sections.editorRestriction">Gli articoli possono essere inviati solo dagli editor e dai section editor.</message>
 	<message key="manager.sections.hideTocTitle">Ometti il titolo di questa sezione dall'indice dell'uscita.</message>
 	<message key="manager.sections.readingTools">Strumenti di lettura</message>
-	<message key="manager.sections.Indexed">Indicizzato</message>
+	<message key="manager.sections.indexed">Indicizzato</message>
 	<message key="manager.sections.open">Submission libera</message>
 	<message key="manager.sections.policy">Policy di sezione</message>
 	<message key="manager.sections.identifyType">Nei metadata, identifica gli items in questa sezione come</message>
@@ -1522,7 +1523,7 @@ Attivo &#x00E8; il numero di quante revisioni si stanno considerando o stanno an
 	<message key="editor.article.archiveSubmission">Archivia la submission</message>
 	<message key="editor.article.emailAuthorOnArchive">Mandare una Email all'autore circa questa submission?</message>
 	<message key="editor.article.restoreToQueue">Ripristina nella lista attiva</message>
-	<message key="editor.article.selectSectionEditor">Aggiungi il section editor</message>
+	<message key="editor.article.selectEditor">Aggiungi il {$roleName}</message>
 	<message key="editor.article.assignEditor">Assegna ad un editor</message>
 	<message key="editor.article.assignSectionEditor">Assegna ad un section editor</message>
 	<message key="editor.article.selectDecision">Seleziona la decisione</message>
