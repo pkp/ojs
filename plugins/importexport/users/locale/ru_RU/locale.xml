@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ru_RU (Russian) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="ru_RU" full_name="Russian">
+	<!-- FIXME: We need a Russian translation. -->
+</locale>

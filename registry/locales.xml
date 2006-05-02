@@ -28,4 +28,5 @@
 	<locale key="fr_CA" name="Français (Canada)"/>
 	<locale key="it_IT" name="Italiano"/>
 	<locale key="pt_BR" name="Português (Brasil)"/>
+	<locale key="ru_RU" name="Russian"/>
 </locales>
