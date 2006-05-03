@@ -55,15 +55,17 @@ class localeCheck extends CommandLineTool {
 		$cacheManager->flush('locale');
 
 		// Load plugins so that their locale data is included too
+		$plugins = array();
 		foreach (PluginRegistry::getCategories() as $category) {
-			PluginRegistry::loadCategory($category);
+			echo "Loading plugin category \"$category\"...\n";
+			$plugins += PluginRegistry::loadCategory($category);
 		}
 
 		foreach (Locale::getAllLocales() as $locale => $name) {
 			if (!empty($this->locales) && !in_array($locale, $this->locales)) continue;
 			if ($locale != MASTER_LOCALE) {
 				echo "Testing locale \"$name\" ($locale) against reference locale " . MASTER_LOCALE . ".\n";
-				$this->testLocale($locale, MASTER_LOCALE);
+				$this->testLocale($locale, MASTER_LOCALE, $plugins);
 				$this->testEmails($locale, MASTER_LOCALE);
 			}
 		}
@@ -182,7 +184,7 @@ class localeCheck extends CommandLineTool {
 		}
 	}
 
-	function testLocale($locale, $referenceLocale) {
+	function testLocale($locale, $referenceLocale, $plugins) {
 		$errors = array(
 			LOCALE_ERROR_MISSING_KEY => array(),
 			LOCALE_ERROR_EXTRA_KEY => array(),
@@ -195,6 +197,14 @@ class localeCheck extends CommandLineTool {
 
 		$localeContents =& $localeCache->getContents();
 		$referenceContents =& $referenceLocaleCache->getContents();
+
+		// Add locale data for plugins
+		foreach ($plugins as $plugin) {
+			$pluginCache = $plugin->_getCache($locale);
+			$referencePluginCache = $plugin->_getCache($referenceLocale);
+			$localeContents += $pluginCache->getContents();
+			$referenceContents += $referencePluginCache->getContents();
+		}
 
 		foreach ($referenceContents as $key => $referenceValue) {
 			if (!isset($localeContents[$key])) {

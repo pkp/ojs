@@ -2027,7 +2027,7 @@ On peut visualiser le fichier en cliquant sur le nom du fichier. Un fichier nouv
 	<message key="archive.browse">Explorer en utilisant les anciens numéros</message>
 	<message key="archive.issueUnavailable">Numéro non disponible</message>
 	
-	<!—Au sujet du journal -->
+	<!-- Au sujet du journal -->
 	<message key="about.aboutSite">À propos du site</message>
 	<message key="about.contact">Contact</message>
 	<message key="about.contact.principalContact">Contact principal </message>

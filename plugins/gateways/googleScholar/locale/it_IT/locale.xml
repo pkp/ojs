@@ -13,5 +13,24 @@
   -->
  
 <locale name="it_IT" full_name="Italiano">
-	<!-- FIXME: We need an Italian translation. -->
+	<message key="plugins.gateways.googleScholar.displayName">Google Scholar Gateway Plugin</message>
+	<message key="plugins.gateways.googleScholar.description">Questo plugin fornisce a Google Scholar i dati necessari per l'indicizzazione e la ricerca all'interno delle riviste.</message>
+	<message key="plugins.gateways.googleScholar.settings">Impostazioni</message>
+	<message key="plugins.gateways.googleScholar.settings.description"><![CDATA[<p>Il Google Scholar Gateway Plugin rende i dati disponibili al Google Scholar harvester per ogni rivista. Quando questo plugin &#x00E8; abilitato, la directory document (cio&#x00E8; le informazioni dell'editore) sar&#x00E0; disponibile su <span class="highlight">{$directoryUrl}</span>.</p>
+<p>Google Scholar richiede alcune informazioni opzionali in OJS. Per verificare che i propri dati siano conformi con le richieste di Google Scholar puoi utilizzare il pulsante Check Data.</p>]]></message>
+	<message key="plugins.gateways.googleScholar.checkData">Check Data</message>
+	<message key="plugins.gateways.googleScholar.errors">Messaggi di errore</message>
+	<message key="plugins.gateways.googleScholar.errors.noErrors">Nessun errore trovato.</message>
+
+	<message key="plugins.gateways.googleScholar.settings.publisherName">Nome dell'editore</message>
+	<message key="plugins.gateways.googleScholar.settings.publisherLocation">Sede dell'editore</message>
+	<message key="plugins.gateways.googleScholar.settings.publisherResultName">Editore</message>
+	<message key="plugins.gateways.googleScholar.settings.contact">Contatto Email</message>
+	<message key="plugins.gateways.googleScholar.settings.addContact">Aggiungi Contatto Email</message>
+
+	<!-- Error message -->
+	<message key="plugins.gateways.googleScholar.errors.noPublisherName">Il nome dell'editore non &#x00E8; stato specificato. Questo &#x00E8; un campo obbligatorio.</message>
+	<message key="plugins.gateways.googleScholar.errors.noContacts">Contatti email mancanti o non validi. Deve esserne specificato almeno uno, e tutti devono essere validi.</message>
+	<message key="plugins.gateways.googleScholar.errors.noIssn">L'ISSN della rivista non &#x00E8; stato specificato. Vedi la Configurazione della rivista, passo 1.</message>
+	<message key="plugins.gateways.googleScholar.errors.errorMessage">Non &#x00E8; possibile esportare i dati a Google Scholar. Il Google Scholar export plugin deve essere configurato in maniera appropriata. Per informazioni specifiche, si prega di usare la funzione "Check Data" disponibile all'Amministratore della rivista.</message>
 </locale>
