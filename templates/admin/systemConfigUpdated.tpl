@@ -11,7 +11,7 @@
  *}
 
 {assign var="pageTitle" value="admin.systemConfiguration"}
-{assign var="currentUrl" value="{url op="editSystemConfig"}"}
+{assign var="currentUrl" value="{url op="editSystemConfig"}"
 {include file="common/header.tpl"}
 
 <br/>
