@@ -2449,9 +2449,6 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="rt.search.searchUrl">Поиск URL</message>
 	<message key="rt.search.searchPost">Данные</message>
 
-	<message key="rt.peerReviewed">для этой статьи</message>
-
-	<message key="rt.forThis">Тип {$identifyType}</message>
 	<message key="rt.authorBio">Данные об авторе</message>
 	<message key="rt.aboutAuthor">Об авторах</message>
 

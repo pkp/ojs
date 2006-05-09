@@ -20,6 +20,7 @@
 	<meta name="keywords" content="" />
 	<link rel="stylesheet" href="{$baseUrl}/styles/common.css" type="text/css" />
 	<link rel="stylesheet" href="{$baseUrl}/styles/articleView.css" type="text/css" />
+	<link rel="stylesheet" href="{$baseUrl}/styles/rt.css" type="text/css" />
 	{foreach from=$stylesheets item=cssUrl}
 	<link rel="stylesheet" href="{$cssUrl}" type="text/css" />
 	{/foreach}
@@ -34,22 +35,22 @@
 
 <p><a href="{url page="issue" op="view" path=$issue->getBestIssueId($journal)|to_array:"showToc"}" target="_parent" class="rtAction">{translate key="issue.toc"}</a></p>
 
+<h5>{translate key="rt.readingTools"}</h5>
+
 <div class="rtSeparator"></div>
 
-<h6>{$article->getArticleTitle()|strip_unsafe_html|truncate:20}</h6>
+<h6>{$article->getArticleTitle()|strip_unsafe_html|truncate:20:"...":true}</h6>
 <p><i>{$article->getAuthorString(true)|escape}</i></p>
 
 <div class="rtSeparator"></div>
 
 <br />
 
-<h5>{translate key="rt.readingTools"}</h5>
-
 {if $journalRt && $journalRt->getVersion()}
 <div class="rtBlock">
-	<span class="rtSubtitle">{if $section && $section->getIdentifyType()}{translate key="rt.forThis" identifyType=$section->getIdentifyType()|escape}{else}{translate key="rt.peerReviewed"}{/if}</span>
 	<ul>
 		{if $galley && !$section->getAbstractsDisabled()}<li><a href="{url page="article" op="view" path=$articleId}" target="_parent">{translate key="article.abstract"}</a></li>{/if}
+		<li><a href="{url page="about" op="editorialPolicies" anchor="peerReviewProcess"}" target="_parent">{translate key="rt.reviewPolicy"}</a></li>
 		{if $journalRt->getAuthorBio()}<li><a href="javascript:openRTWindow('{url page="rt" op="bio" path=$articleId|to_array:$galleyId}');">{translate key="rt.authorBio"}</a></li>{/if}
 		{if $journalRt->getCaptureCite()}<li><a href="javascript:openRTWindow('{url page="rt" op="captureCite" path=$articleId|to_array:$galleyId}');">{translate key="rt.captureCite"}</a></li>{/if}
 		{if $journalRt->getViewMetadata()}<li><a href="javascript:openRTWindow('{url page="rt" op="metadata" path=$articleId|to_array:$galleyId}');">{translate key="rt.viewMetadata"}</a></li>{/if}

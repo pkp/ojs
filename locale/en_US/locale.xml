@@ -2412,8 +2412,6 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="rt.search.searchUrl">Search URL</message>
 	<message key="rt.search.searchPost">Post data</message>
 
-	<message key="rt.peerReviewed">For this peer-reviewed article</message>
-	<message key="rt.forThis">For this {$identifyType}</message>
 	<message key="rt.authorBio">About the author</message>
 	<message key="rt.aboutAuthor">About the Authors</message>
 
@@ -2471,6 +2469,7 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="rt.captureCite.capture.referenceManager"><![CDATA[<a href="]]>{$url}<![CDATA[">Reference Manager</a> - RIS format (Windows only)]]></message>
 	<message key="rt.captureCite.capture.proCite"><![CDATA[<a href="]]>{$url}<![CDATA[">ProCite</a> - RIS format (Macintosh &amp; Windows)]]></message>
 
+	<message key="rt.reviewPolicy">Review policy</message>
 	<message key="rt.printVersion">Go to print-version</message>
 	<message key="rt.lookUp">Look up a word</message>
 	<message key="rt.colleague">Send link to colleague</message>
@@ -2478,8 +2477,8 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="rt.emailAuthor">Email the author</message>
 	<message key="rt.beNotifiedWhen">Be notified when...</message>
 
-	<message key="rt.relatedItems">Find related items among</message>
-	<message key="rt.thisJournal">Find items in this journal</message>
+	<message key="rt.relatedItems">Related items</message>
+	<message key="rt.thisJournal">Search journal</message>
 	
 	<message key="rt.email.sent">Your message has been sent.</message>
 	<message key="rt.email.needLogin"><![CDATA[* Requires <a target="_parent" href="{$loginUrl}">registration</a>]]></message>
@@ -2487,8 +2486,8 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="rt.context.searchTerms">Search Terms</message>
 	<message key="rt.context.termToDefine">Word to define</message>
 	<message key="rt.context.searchDescription">The search terms have been selected by the author(s). They can be altered or deleted by the reader, as two or three short, precise terms or phrases produced the best Boolean (AND) searches. To learn more about the resources searched, click on ABOUT. These resources have been selected for their relevance and open (free) access to all or part of their contents.</message>
-	<message key="rt.context.defineTermsDescription">Double click on any word in the text and it will appear in the Word-to-Define box. You can also type or paste a word into the box. Then use the search function to find a definition for the word. To learn more about the resource searched, click on the information symbol. These resources have been selected because of their relevance and their open (free) access to all or part of their contents.</message>
-	<message key="rt.context.authorTermsDescription">For items with more than one author, leave all names checked to search for similarly co-authored work, or search one at a time by checking only a single name. To learn more about the resource searched, click on the information symbol. These resources have been selected because of their relevance and their open (free) access to all or part of their contents.</message>
+	<message key="rt.context.defineTermsDescription">Double click on any word in the published text and it will appear in the Word-to-Define box. You can also type or paste a word into the box. To see a definition for the word, click on any of the Search buttons, and to learn more about the resource searched, click on ABOUT. These resources have been selected because of their relevance and their open (free) access to all or part of their contents.</message>
+	<message key="rt.context.authorTermsDescription">For items with more than one author, leave all names checked to search for similarly co-authored work, or search one at a time by checking only a single name. To learn more about the resource searched, click on ABOUT. These resources have been selected because of their relevance and their open (free) access to all or part of their contents.</message>
 	<message key="rt.context.citesContextDescription">If the article is indexed in Google Scholar, it may be accompanied by a "Cited by X" link, which leads to a list of works that cite it. As well, Google Scholar will list all items quoting the title and author. To access online resources that are only available through your research library, you may be able to go to Scholar Preferences in Google Scholar and activate the Library Links for your institution.</message>
 
 	<message key="rt.context.and">AND</message>

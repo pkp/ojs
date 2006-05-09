@@ -1958,8 +1958,6 @@ Vålîðåtîóñ måý fåîl óñ þèårçh ÜRLþ thåt rèqüîrè póþtè
 	<message key="rt.search.description">Ðèþçrîptîóñ</message>
 	<message key="rt.search.searchUrl">ßèårçh ÜRL</message>
 	<message key="rt.search.searchPost">Póþt ðåtå</message>
-	<message key="rt.peerReviewed">Fór thîþ pèèr-rèvîèwèð årtîçlè</message>
-	<message key="rt.forThis">Fór thîþ {$identifyType}</message>
 	<message key="rt.authorBio">ßèè thè åüthór bîó</message>
 	<message key="rt.aboutAuthor">Æbóüt thè Æüthórþ</message>
 	<message key="rt.captureCitation">Çåptürè thè çîtåtîóñ</message>

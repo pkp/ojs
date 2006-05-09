@@ -2308,8 +2308,6 @@ La validación puede fallar en URLs de búsque que necesitan el envío de formul
 	<message key="rt.search.searchUrl">Buscar URL</message>
 	<message key="rt.search.searchPost">Enviar información</message>
 
-	<message key="rt.peerReviewed">Para este artículo revisado por pares</message>		
-	<message key="rt.forThis">Para este {$identifyType}</message>	
 	<message key="rt.authorBio">Acerca del / de la autor/a</message>
 	<message key="rt.aboutAuthor">Acerca de las/os autoras/es</message>
 

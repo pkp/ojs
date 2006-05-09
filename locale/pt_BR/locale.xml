@@ -2313,8 +2313,6 @@ A validação pode falhar em URLs para pesquisa que requeiram dados via o métod
 	<message key="rt.search.searchUrl">Pesquisar URL</message>
 	<message key="rt.search.searchPost">Dados via Post</message>
 
-	<message key="rt.peerReviewed">Para este artigo avaliado por pares</message>
-	<message key="rt.forThis">Para este {$identifyType}</message>		
 	<message key="rt.authorBio">Exibir biografia do autor</message>
 	<message key="rt.aboutAuthor">Sobre os Autores</message>
 

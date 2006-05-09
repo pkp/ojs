@@ -2341,9 +2341,7 @@ Il processo di validazione pu&#x00F2; non funzionare sugli URL di ricerca che ri
 	<message key="rt.search.searchUrl">URL di ricerca</message>
 	<message key="rt.search.searchPost">Dati da inviare</message>
 
-	<message key="rt.peerReviewed">Per la peer review di questo articolo</message>
-	<message key="rt.forThis">Per questo {$identifyType}</message>
-    <message key="rt.authorBio">Informazioni sull'autore</message>
+	<message key="rt.authorBio">Informazioni sull'autore</message>
 	<message key="rt.aboutAuthor">Riguardo gli autori</message>
 
 

@@ -50,6 +50,9 @@ class ReviewerAction extends Action {
 		if ($reviewAssignment->getDateConfirmed() == null) {
 			import('mail.ArticleMailTemplate');
 			$email = &new ArticleMailTemplate($reviewerSubmission, $decline?'REVIEW_DECLINE':'REVIEW_CONFIRM');
+			// Must explicitly set sender because we may be here on an access
+			// key, in which case the user is not technically logged in
+			$email->setFrom($reviewer->getEmail(), $reviewer->getFullName());
 			if (!$email->isEnabled() || ($send && !$email->hasErrors())) {
 				HookRegistry::call('ReviewerAction::confirmReview', array(&$reviewerSubmission, &$email, $decline));
 				if ($email->isEnabled()) {
@@ -94,9 +97,6 @@ class ReviewerAction extends Action {
 						$editorialContactName = $journal->getSetting('contactName');
 					}
 
-					// Must explicitly set sender because we may be here on an access
-					// key, in which case the user is not technically logged in
-					$email->setFrom($reviewer->getEmail(), $reviewer->getFullName());
 					$email->assignParams(array(
 						'editorialContactName' => $editorialContactName,
 						'reviewerName' => $reviewer->getFullName(),
@@ -133,6 +133,10 @@ class ReviewerAction extends Action {
 		if ($reviewAssignment->getRecommendation() == null) {
 			import('mail.ArticleMailTemplate');
 			$email = &new ArticleMailTemplate($reviewerSubmission, 'REVIEW_COMPLETE');
+			// Must explicitly set sender because we may be here on an access
+			// key, in which case the user is not technically logged in
+			$email->setFrom($reviewer->getEmail(), $reviewer->getFullName());
+
 			if (!$email->isEnabled() || ($send && !$email->hasErrors())) {
 				HookRegistry::call('ReviewerAction::recordRecommendation', array(&$reviewerSubmission, &$email, $recommendation));
 				if ($email->isEnabled()) {
@@ -176,10 +180,6 @@ class ReviewerAction extends Action {
 					}
 
 					$reviewerRecommendationOptions = &ReviewAssignment::getReviewerRecommendationOptions();
-
-					// Must explicitly set sender because we may be here on an access
-					// key, in which case the user is not technically logged in
-					$email->setFrom($reviewer->getEmail(), $reviewer->getFullName());
 
 					$email->assignParams(array(
 						'editorialContactName' => $editorialContactName,

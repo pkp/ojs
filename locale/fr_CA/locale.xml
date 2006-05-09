@@ -2331,8 +2331,6 @@ La validation peut faire défaut pour les URL de recherche qui exigent que les d
 	<message key="rt.search.searchUrl">Recherche URL</message>
 	<message key="rt.search.searchPost">Afficher les données</message>
 
-	<message key="rt.peerReviewed">Pour cet article évalué par les pairs</message>		
-	<message key="rt.forThis">Pour ce {$identifyType}</message>
 	<message key="rt.authorBio">Voir la biographie de l'auteur</message>
 	<message key="rt.aboutAuthor">À propos des auteurs</message>
 
