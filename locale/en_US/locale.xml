@@ -1464,7 +1464,7 @@ You may optionally provide the user with a reason for disabling their account.</
 	<message key="editor.issues.backIssues">Back Issues</message>
 	<message key="editor.issues.futureIssues">Future Issues</message>
 	<message key="editor.issues.currentIssue">Current Issue</message>
-	<message key="editor.issues.numArticles">No. Articles</message>
+	<message key="editor.issues.numArticles">Items</message>
 	<message key="editor.issues.noArticles">No items are currently scheduled for this issue.</message>
 	<message key="editor.issues.confirmDelete">Are you sure you want to permanently delete this issue?</message>
 
