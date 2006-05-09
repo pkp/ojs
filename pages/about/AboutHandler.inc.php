@@ -376,7 +376,11 @@ class AboutHandler extends Handler {
 		
 		AboutHandler::setupTemplate(true);
 		
+		$versionDao =& DAORegistry::getDAO('VersionDAO');
+		$version =& $versionDao->getCurrentVersion();
+
 		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign('ojsVersion', $version->getVersionString());
 		$templateMgr->display('about/aboutThisPublishingSystem.tpl');
 	}
 	

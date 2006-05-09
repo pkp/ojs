@@ -42,8 +42,8 @@ For contributions that are distributed separately as patches or plugins:
   distribute additional features as patches or plugins. However, the OJS team
   won't be able to provide support in this case.
 * If the option is available, coding a feature as a plugin is the preferred
-  method. The OJS team intends to make a more general plugin infrastructure
-  available in upcoming releases.
+  method. The OJS team is continuing to refine the plugin infrastructure and
+  welcomes discussion with plugin developers.
 
 
 General Conventions
@@ -295,7 +295,7 @@ Note that these should apply to parameters supplied to {translate key="..."} and
 
 Other Tips
 ----------
-* Use Request::redirect($url) for HTTP redirects instead of
-  header('Location: ...');
+* Use Request::redirectUrl($url), or better yet, Request::redirect(...) for
+  HTTP redirects instead of header('Location: ...');
 * For additional coding convention information, see the OJS Design Document
   at <http://pkp.sfu.ca/ojs/OJSTechnicalReference.pdf>.

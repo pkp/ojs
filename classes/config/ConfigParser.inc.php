@@ -93,10 +93,10 @@ class ConfigParser {
 							$value = (int) $value;
 						}
 						
-					} else if (strtolower($value) == 'true' || strtolower($value) == String::strtolower(Locale::translate('common.on'))) {
+					} else if (strtolower($value) == 'true' || strtolower($value) == 'on') {
 						$value = true;
 						
-					} else if (strtolower($value) == 'false' || String::strtolower($value) == String::strtolower(Locale::translate('common.off'))) {
+					} else if (strtolower($value) == 'false' || strtolower($value) == 'off') {
 						$value = false;
 						
 					} else if (defined($value)) {

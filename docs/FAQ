@@ -91,7 +91,7 @@ A: It is strongly recommended that an OJS system be periodically backed up to
      - The base OJS directory
      - The non-public files directory (the directory specified by the
        "files_dir" configuration option), which is typically outside of the base
-       OJS directroy.
+       OJS directory.
        
    This backup procedure can be easily integrated into any automated backup
    mechanism.

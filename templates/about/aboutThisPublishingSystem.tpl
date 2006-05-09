@@ -16,9 +16,9 @@
 
 <p>
 {if $currentJournal}
-{translate key="about.aboutOJSJournal"}
+{translate key="about.aboutOJSJournal" ojsVersion=$ojsVersion}
 {else}
-{translate key="about.aboutOJSSite"}
+{translate key="about.aboutOJSSite" ojsVersion=$ojsVersion}
 {/if}
 </p>
 

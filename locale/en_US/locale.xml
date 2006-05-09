@@ -2125,8 +2125,8 @@ current password.<br /><br />Enter your email address below to reset your passwo
 	<message key="about.people">People</message>
 	<message key="about.policies">Policies</message>
 	<message key="about.other">Other</message>
-	<message key="about.aboutOJSJournal"><![CDATA[This journal uses Open Journal Systems, which is open source journal management and publishing software developed, supported, and freely distributed by the <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> under the GNU General Public License.]]></message>
-	<message key="about.aboutOJSSite"><![CDATA[This site uses Open Journal Systems, which is open source journal management and publishing software developed, supported, and freely distributed by the <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> under the GNU General Public License.]]></message>
+	<message key="about.aboutOJSJournal"><![CDATA[This journal uses Open Journal Systems {$ojsVersion}, which is open source journal management and publishing software developed, supported, and freely distributed by the <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> under the GNU General Public License.]]></message>
+	<message key="about.aboutOJSSite"><![CDATA[This site uses Open Journal Systems {$ojsVersion}, which is open source journal management and publishing software developed, supported, and freely distributed by the <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> under the GNU General Public License.]]></message>
 	
 	<!-- Announcement -->
 	<message key="announcement.announcements">Announcements</message>

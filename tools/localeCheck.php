@@ -58,7 +58,8 @@ class localeCheck extends CommandLineTool {
 		$plugins = array();
 		foreach (PluginRegistry::getCategories() as $category) {
 			echo "Loading plugin category \"$category\"...\n";
-			$plugins += PluginRegistry::loadCategory($category);
+			$morePlugins = PluginRegistry::loadCategory($category);
+			if (is_array($morePlugins)) $plugins += $morePlugins;
 		}
 
 		foreach (Locale::getAllLocales() as $locale => $name) {
