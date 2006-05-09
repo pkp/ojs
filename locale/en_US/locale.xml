@@ -1875,7 +1875,7 @@ The file can be viewed by clicking on the file name. A new or revised file can b
 	<message key="submission.layout.addGalley">Add a Layout Galley</message>
 	<message key="submission.layout.galleyFileData">Galley File Information</message>
 	<message key="submission.layout.galleyLabel">Label</message>
-	<message key="submission.layout.galleyLabelInstructions">The galley label is used to identify this file in the list of this article's galleys. Typically this label will indicate the file type (e.g., HTML, PDF, PostScript).</message>
+	<message key="submission.layout.galleyLabelInstructions">The galley label is used to identify the item's file format (e.g. HTML, PDF, etc.).</message>
 	<message key="submission.layout.galleyHTMLData">HTML Galley Files</message>
 	<message key="submission.layout.galleyStylesheet">Stylesheet File</message>
 	<message key="submission.layout.noStyleFile">No stylesheet file has been added to this galley.</message>
