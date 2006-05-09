@@ -811,7 +811,7 @@ Note que a interface OAI pode ser desativada para este portal editando as config
 	<message key="manager.setup.stepsToJournalSite">Cinco passos para ter uma Revista na Web</message>
 	<message key="manager.setup.managingPublishingSetup">Configurações de Administração e Publicação</message>
 	<message key="manager.setup.details">Detalhes</message>
-	<message key="manager.setup.details.description">Nome da revista, ISBN, contatos, editora e patrocinadores e sistemas de busca.</message>
+	<message key="manager.setup.details.description">Nome da revista, ISSN, contatos, editora e patrocinadores e sistemas de busca.</message>
 	<message key="manager.setup.policies">Políticas</message>
 	<message key="manager.setup.policies.description">Foco, avaliação por pares, seções, privacidade, acesso, segurança e itens sobre a revista adicionais.</message>
 	<message key="manager.setup.submissions">Submissões</message>
