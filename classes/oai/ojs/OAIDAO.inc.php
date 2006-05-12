@@ -278,10 +278,10 @@ class OAIDAO extends DAO {
 		$record->sets = array($row['journal_path'] . ':' . $row['section_abbrev']);
 		
 		$record->url = Request::url($row['journal_path'], 'article', 'view', array($articleId));
-		$record->title = $row['title']; // FIXME include localized titles as well?
+		$record->title = strip_tags($row['title']); // FIXME include localized titles as well?
 		$record->creator = array();
 		$record->subject = array($row['discipline'], $row['subject'], $row['subject_class']);
-		$record->description = $row['abstract'];
+		$record->description = strip_tags($row['abstract']);
 		$record->publisher = $row['journal_title'];
 		$record->contributor = array($row['sponsor']);
 		$record->date = date('Y-m-d', strtotime($this->datetimeFromDB($row['issue_published'])));
