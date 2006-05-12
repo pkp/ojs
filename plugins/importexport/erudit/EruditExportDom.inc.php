@@ -142,11 +142,13 @@ class EruditExportDom {
 
 
 		/* --- abstract and keywords --- */
-		if ($abstract = $article->getAbstract()) {
+		$abstract = strip_tags($article->getAbstract());
+		if (!empty($abstract)) {
 			$abstractNode = &XMLCustomWriter::createElement($doc, 'abstract');
 			XMLCustomWriter::setAttribute ($abstractNode, 'lang', ($language = $article->getLanguage())?$language:'en');
 			XMLCustomWriter::appendChild($frontMatterNode, $abstractNode);
 			XMLCustomWriter::createChildWithText($doc, $abstractNode, 'blocktext', $abstract);
+			unset($abstractNode);
 		}
 
 		if ($keywords = $article->getSubject()) {
@@ -157,18 +159,22 @@ class EruditExportDom {
 			XMLCustomWriter::appendChild($frontMatterNode, $keywordGroupNode);
 		}
 
-		if ($abstract = $article->getAbstractAlt1()) {
+		$abstract = strip_tags($article->getAbstractAlt1());
+		if (!empty($abstract)) {
 			$abstractNode = &XMLCustomWriter::createElement($doc, 'abstract');
 			XMLCustomWriter::setAttribute ($abstractNode, 'lang', $journal->getSetting('alternateLocale1'));
 			XMLCustomWriter::appendChild($frontMatterNode, $abstractNode);
 			XMLCustomWriter::createChildWithText($doc, $abstractNode, 'blocktext', $abstract);
+			unset($abstractNode);
 		}
 
-		if ($abstract = $article->getAbstractAlt2()) {
+		$abstract = strip_tags($article->getAbstractAlt2());
+		if (!empty($abstract)) {
 			$abstractNode = &XMLCustomWriter::createElement($doc, 'abstract');
 			XMLCustomWriter::setAttribute ($abstractNode, 'lang', $journal->getSetting('alternateLocale2'));
 			XMLCustomWriter::appendChild($frontMatterNode, $abstractNode);
 			XMLCustomWriter::createChildWithText($doc, $abstractNode, 'blocktext', $abstract);
+			unset($abstractNode);
 		}
 
 		/* --- body --- */
