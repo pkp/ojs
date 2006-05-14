@@ -73,9 +73,10 @@
 		{if $currentJournal}
 		<li><a href="{url page="issue" op="current"}">{translate key="navigation.current"}</a></li>
 		<li><a href="{url page="issue" op="archive"}">{translate key="navigation.archives"}</a></li>
-		{/if}
 		{if $enableAnnouncements}
 		<li><a href="{url page="announcement"}">{translate key="announcement.announcements"}</a></li>
+		{/if}
+		{call_hook name="Templates::Common::Header::Navbar::CurrentJournal"}
 		{/if}
 		{foreach from=$navMenuItems item=navItem}
 		<li><a href="{if $navItem.isAbsolute}{$navItem.url|escape}{else}{$navItem.url|escape}{/if}">{if $navItem.isLiteral}{$navItem.name|escape}{else}{translate key=$navItem.name}{/if}</a></li>
