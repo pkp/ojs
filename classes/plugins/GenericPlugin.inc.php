@@ -95,17 +95,12 @@ class GenericPlugin extends Plugin {
 		$installer =& $args[0];
 		$result =& $args[1];
 
-		if (!$this->getSetting('dataInstalled')) {
-			$sql = $installer->dataXMLParser->parseData($this->getInstallDataFile());
-			if ($sql) {
-				$result = $installer->executeSQL($sql);
-				if ($result) {
-					$this->updateSetting('dataInstalled', true);
-				}
-			} else {
-				$installer->setError(INSTALLER_ERROR_DB, str_replace('{$file}', $this->getInstallDataFile(), Locale::translate('installer.installParseDBFileError')));
-				$result = false;
-			}
+		$sql = $installer->dataXMLParser->parseData($this->getInstallDataFile());
+		if ($sql) {
+			$result = $installer->executeSQL($sql);
+		} else {
+			$installer->setError(INSTALLER_ERROR_DB, str_replace('{$file}', $this->getInstallDataFile(), Locale::translate('installer.installParseDBFileError')));
+			$result = false;
 		}
 		return false;
 	}
