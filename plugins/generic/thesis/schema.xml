@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE schema SYSTEM "dtd/xmlschema.dtd">
+
+<!--
+  * schema.xml
+  *
+  * Copyright (c) 2003-2006 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Thesis Abstracts plugin schema in XML.
+  *
+  * $Id$
+  -->
+
+<schema version="0.2">
+
+	<!--
+	 *
+	 * TABLE theses 
+	 *
+	 -->
+	<table name="theses">
+		<field name="thesis_id" type="I8">
+			<KEY/>
+			<AUTOINCREMENT/>
+		</field>
+		<field name="journal_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="status" type="I2">
+			<NOTNULL/>
+		</field>
+		<field name="degree" type="I2">
+			<NOTNULL/>
+		</field>
+		<field name="department" type="C2" size="255">
+			<NOTNULL/>
+		</field>
+		<field name="university" type="C2" size="255">
+			<NOTNULL/>
+		</field>
+		<field name="date_approved" type="T">
+			<NOTNULL/>
+		</field>
+		<field name="title" type="C2" size="255">
+			<NOTNULL/>
+		</field>
+		<field name="abstract" type="X">
+			<NOTNULL/>
+			<DEFAULT VALUE=""/>
+		</field>
+		<field name="url" type="X"/>
+		<field name="student_first_name" type="C2" size="40">
+			<NOTNULL/>
+		</field>
+		<field name="student_middle_name" type="C2" size="40"/>
+		<field name="student_last_name" type="C2" size="90">
+			<NOTNULL/>
+		</field>
+		<field name="student_email" type="C2" size="90">
+			<NOTNULL/>
+		</field>
+		<field name="supervisor_first_name" type="C2" size="40">
+			<NOTNULL/>
+		</field>
+		<field name="supervisor_middle_name" type="C2" size="40"/>
+		<field name="supervisor_last_name" type="C2" size="90">
+			<NOTNULL/>
+		</field>
+		<field name="supervisor_email" type="C2" size="90">
+			<NOTNULL/>
+		</field>
+		<descr>Thesis and dissertation abstracts.</descr>
+		<index name="theses_journal_id">
+			<col>journal_id</col>
+		</index>
+	</table>
+
+</schema>
