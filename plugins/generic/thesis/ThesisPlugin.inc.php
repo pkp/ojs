@@ -27,8 +27,8 @@ class ThesisPlugin extends GenericPlugin {
 		$success = parent::register($category, $path);
 		$this->addLocaleData();
 		if ($success) {
-			$this->import('ThesisDao');
-			$thesisDao = &new ThesisDao();
+			$this->import('ThesisDAO');
+			$thesisDao = &new ThesisDAO();
 			$returner = &DAORegistry::registerDAO('ThesisDAO', $thesisDao);
 
 			// Handler for public thesis abstract pages
