@@ -570,6 +570,16 @@ class ManagerHandler extends Handler {
 		StatisticsHandler::statistics($args);
 	}
 	
+	function saveStatisticsSections() {
+		import('pages.manager.StatisticsHandler');
+		StatisticsHandler::saveStatisticsSections();
+	}
+
+	function savePublicStatisticsList() {
+		import('pages.manager.StatisticsHandler');
+		StatisticsHandler::savePublicStatisticsList();
+	}
+
 	function reportGenerator($args) {
 		import('pages.manager.StatisticsHandler');
 		StatisticsHandler::reportGenerator($args);

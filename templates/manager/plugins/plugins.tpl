@@ -22,7 +22,7 @@
 		{assign var=notFirst value=1}
 	{/if}
 	<li>
-		<strong>{$plugin->getDisplayName()|escape}</strong>:&nbsp;{$plugin->getDescription()|escape}<br/>
+		<strong>{$plugin->getDisplayName()|escape}</strong>:&nbsp;{$plugin->getDescription()}<br/>
 		{assign var=managementVerbs value=$plugin->getManagementVerbs()}
 		{if $managementVerbs && $plugin->isSitePlugin() && !$isSiteAdmin}
 			<i>{translate key="manager.plugins.sitePlugin"}</i>

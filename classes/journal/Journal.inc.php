@@ -258,7 +258,14 @@ class Journal extends DataObject {
 		$setting = &$journalSettingsDao->getSetting($this->getData('journalId'), $name);
 		return $setting;
 	}
-	
+
+	/**
+	 * Update a journal setting value.
+	 */
+	function updateSetting($name, $value, $type = null) {
+		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
+		return $journalSettingsDao->updateSetting($this->getJournalId(), $name, $value, $type);
+	}
 }
 
 ?>

@@ -36,15 +36,25 @@ class JournalStatisticsDAO extends DAO {
 	 * @param $dateEnd date The submit date to search to; optional
 	 * @return array
 	 */
-	function getArticleStatistics($journalId, $sectionId = null, $dateStart = null, $dateEnd = null) {
-		$result = &$this->retrieve(
-			'SELECT a.article_id AS article_id, a.date_submitted AS date_submitted, pa.date_published AS date_published, pa.pub_id AS pub_id, d.decision FROM articles a LEFT JOIN published_articles pa ON (a.article_id = pa.article_id) LEFT JOIN edit_decisions d ON (d.article_id = a.article_id) WHERE a.journal_id = ?' .
-			($sectionId !== null ? ' AND a.section_id = ?' : '') .
+	function getArticleStatistics($journalId, $sectionIds = null, $dateStart = null, $dateEnd = null) {
+		$params = array($journalId);
+		if (!empty($sectionIds)) {
+			$sectionSql = ' AND (a.section_id = ?';
+			$params[] = array_shift($sectionIds);
+			foreach ($sectionIds as $sectionId) {
+				$sectionSql .= ' OR a.section_id = ?';
+				$params[] = $sectionId;
+			}
+			$sectionSql .= ')';
+		} else $sectionSql = '';
+
+		$sql =	'SELECT a.article_id AS article_id, a.date_submitted AS date_submitted, pa.date_published AS date_published, pa.pub_id AS pub_id, d.decision FROM articles a LEFT JOIN published_articles pa ON (a.article_id = pa.article_id) LEFT JOIN edit_decisions d ON (d.article_id = a.article_id) WHERE a.journal_id = ?' .
 			($dateStart !== null ? ' AND a.date_submitted >= ' . $this->datetimeToDB($dateStart) : '') .
 			($dateEnd !== null ? ' AND a.date_submitted <= ' . $this->datetimeToDB($dateEnd) : '') .
-			' ORDER BY a.article_id, d.date_decided DESC',
-			($sectionId !== null ? array($journalId, $sectionId) : $journalId)
-		);
+			$sectionSql .
+			' ORDER BY a.article_id, d.date_decided DESC';
+
+		$result = &$this->retrieve($sql, $params);
 
 		$returner = array(
 			'numSubmissions' => 0,
@@ -165,7 +175,10 @@ class JournalStatisticsDAO extends DAO {
 
 		// Get user counts for each role.
 		$result = &$this->retrieve(
-			'SELECT r.role_id, COUNT(r.user_id) AS role_count FROM roles r WHERE r.journal_id = ? GROUP BY r.role_id',
+			'SELECT r.role_id, COUNT(r.user_id) AS role_count FROM roles r LEFT JOIN users u ON (r.user_id = u.user_id) WHERE r.journal_id = ?' .
+			($dateStart !== null ? ' AND u.date_registered >= ' . $this->datetimeToDB($dateStart) : '') .
+			($dateEnd !== null ? ' AND u.date_registered <= ' . $this->datetimeToDB($dateEnd) : '') .
+			'GROUP BY r.role_id',
 			$journalId
 		);
 
@@ -262,20 +275,31 @@ class JournalStatisticsDAO extends DAO {
 	 * @param $dateEnd date The publish date to search to; optional
 	 * @return array
 	 */
-	function getReviewerStatistics($journalId, $dateStart = null, $dateEnd = null) {
-		$result = &$this->retrieve(
-			'SELECT r.review_id AS review_id, u.date_registered AS date_registered, r.reviewer_id AS reviewer_id, r.quality AS quality, r.date_assigned AS date_assigned, r.date_completed AS date_completed FROM articles a, review_assignments r LEFT JOIN users u ON (u.user_id = r.reviewer_id) WHERE a.journal_id = ? AND r.article_id = a.article_id' .
+	function getReviewerStatistics($journalId, $sectionIds, $dateStart = null, $dateEnd = null) {
+		$params = array($journalId);
+		if (!empty($sectionIds)) {
+			$sectionSql = ' AND (a.section_id = ?';
+			$params[] = array_shift($sectionIds);
+			foreach ($sectionIds as $sectionId) {
+				$sectionSql .= ' OR a.section_id = ?';
+				$params[] = $sectionId;
+			}
+			$sectionSql .= ')';
+		} else $sectionSql = '';
+
+		$sql =	'SELECT a.article_id, af.date_uploaded AS date_rv_uploaded, r.review_id AS review_id, u.date_registered AS date_registered, r.reviewer_id AS reviewer_id, r.quality AS quality, r.date_assigned AS date_assigned, r.date_completed AS date_completed FROM articles a, article_files af, review_assignments r LEFT JOIN users u ON (u.user_id = r.reviewer_id) WHERE a.journal_id = ? AND r.article_id = a.article_id AND af.article_id = a.article_id AND af.file_id = a.review_file_id AND af.revision = 1' .
 			($dateStart !== null ? ' AND a.date_submitted >= ' . $this->datetimeToDB($dateStart) : '') .
-			($dateEnd !== null ? ' AND a.date_submitted <= ' . $this->datetimeToDB($dateEnd) : ''),
-			$journalId
-		);
+			($dateEnd !== null ? ' AND a.date_submitted <= ' . $this->datetimeToDB($dateEnd) : '') .
+			$sectionSql;
+		$result = &$this->retrieve($sql, $params);
 
 		$returner = array(
 			'reviewsCount' => 0,
 			'reviewerScore' => 0,
 			'daysPerReview' => 0,
 			'reviewerAddedCount' => 0,
-			'reviewerCount' => 0
+			'reviewerCount' => 0,
+			'reviewedSubmissionsCount' => 0
 		);
 
 		$scoredReviewsCount = 0;
@@ -283,6 +307,7 @@ class JournalStatisticsDAO extends DAO {
 		$completedReviewsCount = 0;
 		$totalElapsedTime = 0;
 		$reviewerList = array();
+		$articleIds = array();
 
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
@@ -291,6 +316,8 @@ class JournalStatisticsDAO extends DAO {
 				$scoredReviewsCount++;
 				$totalScore += $row['quality'];
 			}
+
+			$articleIds[] = $row['article_id'];
 
 			if (!empty($row['reviewer_id']) && !in_array($row['reviewer_id'], $reviewerList)) {
 				$returner['reviewerCount']++;
@@ -302,10 +329,12 @@ class JournalStatisticsDAO extends DAO {
 			}
 
 			if (!empty($row['date_assigned']) && !empty($row['date_completed'])) {
-				$timeAssigned = strtotime($this->datetimeFromDB($row['date_assigned']));
+				$timeReviewVersionUploaded = strtotime($this->datetimeFromDB($row['date_rv_uploaded']));
 				$timeCompleted = strtotime($this->datetimeFromDB($row['date_completed']));
-				$completedReviewsCount++;
-				$totalElapsedTime += ($timeCompleted - $timeAssigned);
+				if ($timeCompleted > $timeReviewVersionUploaded) {
+					$completedReviewsCount++;
+					$totalElapsedTime += ($timeCompleted - $timeReviewVersionUploaded);
+				}
 			}
 			$result->moveNext();
 		}
@@ -321,6 +350,9 @@ class JournalStatisticsDAO extends DAO {
 			$seconds = $totalElapsedTime / $completedReviewsCount;
 			$returner['daysPerReview'] = $seconds / 60 / 60 / 24;
 		}
+
+		$articleIds = array_unique($articleIds);
+		$returner['reviewedSubmissionsCount'] = count($articleIds);
 
 		return $returner;
 	}

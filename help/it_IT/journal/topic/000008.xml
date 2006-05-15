@@ -12,7 +12,7 @@
   * $Id$
   -->
 
-<topic id="journal/topic/000008" locale="it_IT" title="Statistics" toc="journal/toc/000001" key="journal.managementPages.statistics">
+<topic id="journal/topic/000008" locale="it_IT" title="Statistics" toc="journal/toc/000001" key="journal.managementPages.statsAndReports">
 	<section>
 		<![CDATA[<p>Il Journal Manager pu&#x00F2; anche consultare una serie di statistiche che sono comunemente utilizzate dai journal per monitorare i loro progressi e gli standard (per esempio, il tasso di rifiuti, il tempo do immissione, revisioni, etc.). il Journal Manager ha la possibilt&#x00E0; di rendere alcune di queste statistiche disponibili per i lettori. (le statistiche saranno pesentate sotto il titolo di statistiche nell'About del Journal.) A volte, agli autori viene richiesto di fornire queste informazioni fanno domanda per il possesso e promozione, ed &#x00E8; utile per informare potenziali collaboratori su come il journal opera. I Journal Manager potrebbe voler aspettare fino che il journal sia operativo da un anno circa prima di rendere le statistiche pubbliche, in modo che i diagrammi abbiano maggior attendibilit&#x00E0;.</p>
 <p>Da notare che il componente delle statistiche del Journal attualmente non &#x00E8; implementato, ma &#x00E8; in programma per future uscite di OJS.</p>]]>	

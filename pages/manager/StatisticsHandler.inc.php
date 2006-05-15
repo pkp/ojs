@@ -14,9 +14,10 @@
  */
 
 class StatisticsHandler extends ManagerHandler {
-
 	/**
-	 * Display a list of the emails within the current journal.
+	 * Display a list of journal statistics.
+	 * WARNING: This implementation should be kept roughly synchronized
+	 * with the reader's statistics view in the About pages.
 	 */
 	function statistics() {
 		parent::validate();
@@ -24,33 +25,42 @@ class StatisticsHandler extends ManagerHandler {
 
 		$journal = &Request::getJournal();
 		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign('helpTopicId','journal.managementPages.statistics');
 
 		$statisticsYear = Request::getUserVar('statisticsYear');
 		if (empty($statisticsYear)) $statisticsYear = date('Y');
 		$templateMgr->assign('statisticsYear', $statisticsYear);
-		
+
+		$sectionIds = $journal->getSetting('statisticsSectionIds');
+		if (!is_array($sectionIds)) $sectionIds = array();
+		$templateMgr->assign('sectionIds', $sectionIds);
+
+		foreach (StatisticsHandler::getPublicStatisticsNames() as $name) {
+			$templateMgr->assign($name, $journal->getSetting($name));
+		}
 		$fromDate = mktime(0, 0, 1, 1, 1, $statisticsYear);
 		$toDate = mktime(23, 59, 59, 12, 31, $statisticsYear);
 
 		$journalStatisticsDao =& DAORegistry::getDAO('JournalStatisticsDAO');
 		$articleStatistics = $journalStatisticsDao->getArticleStatistics($journal->getJournalId(), null, $fromDate, $toDate);
 		$templateMgr->assign('articleStatistics', $articleStatistics);
+
+		$limitedArticleStatistics = $journalStatisticsDao->getArticleStatistics($journal->getJournalId(), $sectionIds, $fromDate, $toDate);
+		$templateMgr->assign('limitedArticleStatistics', $limitedArticleStatistics);
+
+		$limitedArticleStatistics = $journalStatisticsDao->getArticleStatistics($journal->getJournalId(), $sectionIds, $fromDate, $toDate);
+		$templateMgr->assign('articleStatistics', $articleStatistics);
+
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
 		$sections =& $sectionDao->getJournalSections($journal->getJournalId());
-		$sectionStatistics = array();
-		while ($section =& $sections->next()) {
-			$sectionStatistics[] = array('section' => &$section, 'statistics' => $journalStatisticsDao->getArticleStatistics($journal->getJournalId(), $section->getSectionId(), $fromDate, $toDate));
-		}
-		$templateMgr->assign('sectionStatistics', $sectionStatistics);
-
+		$templateMgr->assign('sections', $sections->toArray());
+		
 		$issueStatistics = $journalStatisticsDao->getIssueStatistics($journal->getJournalId(), $fromDate, $toDate);
 		$templateMgr->assign('issueStatistics', $issueStatistics);
 
-		$reviewerStatistics = $journalStatisticsDao->getReviewerStatistics($journal->getJournalId(), $fromDate, $toDate);
+		$reviewerStatistics = $journalStatisticsDao->getReviewerStatistics($journal->getJournalId(), $sectionIds, $fromDate, $toDate);
 		$templateMgr->assign('reviewerStatistics', $reviewerStatistics);
 
-		$allUserStatistics = $journalStatisticsDao->getUserStatistics($journal->getJournalId());
+		$allUserStatistics = $journalStatisticsDao->getUserStatistics($journal->getJournalId(), null, $toDate);
 		$templateMgr->assign('allUserStatistics', $allUserStatistics);
 
 		$userStatistics = $journalStatisticsDao->getUserStatistics($journal->getJournalId(), $fromDate, $toDate);
@@ -59,7 +69,7 @@ class StatisticsHandler extends ManagerHandler {
 		$enableSubscriptions = $journal->getSetting('enableSubscriptions');
 		if ($enableSubscriptions) {
 			$templateMgr->assign('enableSubscriptions', true);
-			$allSubscriptionStatistics = $journalStatisticsDao->getSubscriptionStatistics($journal->getJournalId());
+			$allSubscriptionStatistics = $journalStatisticsDao->getSubscriptionStatistics($journal->getJournalId(), null, $toDate);
 			$templateMgr->assign('allSubscriptionStatistics', $allSubscriptionStatistics);
 
 			$subscriptionStatistics = $journalStatisticsDao->getSubscriptionStatistics($journal->getJournalId(), $fromDate, $toDate);
@@ -69,9 +79,6 @@ class StatisticsHandler extends ManagerHandler {
 		$notificationStatusDao =& DAORegistry::getDAO('NotificationStatusDAO');
 		$notifiableUsers = $notificationStatusDao->getNotifiableUsersCount($journal->getJournalId());
 		$templateMgr->assign('notifiableUsers', $notifiableUsers);
-
-		$countries = $journalStatisticsDao->getCountryDistribution($journal->getJournalId());
-		$templateMgr->assign_by_ref('countryDistribution', $countries);
 
 		$templateMgr->assign('reportTypes', array(
 			REPORT_TYPE_JOURNAL => 'manager.statistics.reports.type.journal',
@@ -85,6 +92,51 @@ class StatisticsHandler extends ManagerHandler {
 		$templateMgr->display('manager/statistics/index.tpl');
 	}
 
+	function saveStatisticsSections() {
+		// The manager wants to save the list of sections used to
+		// generate statistics.
+
+		parent::validate();
+
+		$journal = &Request::getJournal();
+
+		$sectionIds = Request::getUserVar('sectionIds');
+		if (!is_array($sectionIds)) {
+			if (empty($sectionIds)) $sectionIds = array();
+			else $sectionIds = array($sectionIds);
+		}
+
+		$journal->updateSetting('statisticsSectionIds', $sectionIds);
+		Request::redirect(null, null, 'statistics', null, array('statisticsYear' => Request::getUserVar('statisticsYear')));
+	}
+
+	function getPublicStatisticsNames() {
+		return array(
+			'statNumPublishedIssues',
+			'statItemsPublished',
+			'statNumSubmissions',
+			'statPeerReviewed',
+			'statCountAccept',
+			'statCountDecline',
+			'statCountRevise',
+			'statDaysPerReview',
+			'statDaysToPublication',
+			'statRegisteredUsers',
+			'statRegisteredReaders',
+			'statSubscriptions'
+		);
+	}
+
+	function savePublicStatisticsList() {
+		parent::validate();
+
+		$journal =& Request::getJournal();
+		foreach (StatisticsHandler::getPublicStatisticsNames() as $name) {
+			$journal->updateSetting($name, Request::getUserVar($name)?true:false);
+		}
+		Request::redirect(null, null, 'statistics', null, array('statisticsYear' => Request::getUserVar('statisticsYear')));
+	}
+	
 	function csvEscape($value) {
 		$value = str_replace('"', '""', $value);
 		return '"' . $value . '"';

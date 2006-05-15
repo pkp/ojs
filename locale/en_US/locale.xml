@@ -737,37 +737,39 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="manager.announcementTypes">Announcement Types</message>
 
 	<!-- Statistics & Reports -->
-	<message key="manager.statistics.statistics">Statistics</message>
+	<message key="manager.statistics.statistics">Journal Statistics</message>
+	<message key="manager.statistics.statistics.description">OJS calculates the following statistics for each journal. The "days to review" is calculated from date of submission (or designation of Review Version) to the initial Editor Decision, while the "days to publish" is measured for accepted submissions from its original uploading to its publication.</message>
+	<message key="manager.statistics.statistics.makePublic">Check items to be made available to readers in About the Journal.</message>
+	<message key="manager.statistics.statistics.selectSections">Select the sections for calculating this journal's peer-reviewed statistics.</message>
 	<message key="manager.statistics.statistics.itemsPublished">Items Published:</message>
 	<message key="manager.statistics.statistics.numSubmissions">Total submissions:</message>
-	<message key="manager.statistics.statistics.forSection">Journal Section {$sectionTitle}:</message>
+	<message key="manager.statistics.statistics.peerReviewed">Peer reviewed:</message>
 	<message key="manager.statistics.statistics.count.accept">Accept (%):</message>
 	<message key="manager.statistics.statistics.count.decline">Decline (%):</message>
-	<message key="manager.statistics.statistics.count.revise">Revise (%):</message>
-	<message key="manager.statistics.statistics.count.undecided">Undecided (%):</message>
+	<message key="manager.statistics.statistics.count.revise">Resubmit (%):</message>
 	<message key="manager.statistics.statistics.count.value">{$count} ({$percentage}%)</message>
 	<message key="manager.statistics.statistics.numIssues">Issues Published:</message>
 	<message key="manager.statistics.statistics.reviewers">Reviewers:</message>
 	<message key="manager.statistics.statistics.reviewerCount">No. Assigned:</message>
 	<message key="manager.statistics.statistics.reviewsPerReviewer">No. of Reviews:</message>
-	<message key="manager.statistics.statistics.daysPerReview">Days Taken:</message>
+	<message key="manager.statistics.statistics.daysPerReview">Days To Review:</message>
 	<message key="manager.statistics.statistics.reviewerScore">Editor Score:</message>
 	<message key="manager.statistics.statistics.daysToPublication">Days To Publication:</message>
 	<message key="manager.statistics.statistics.registeredUsers">Registered Users:</message>
+	<message key="manager.statistics.statistics.registeredReaders">Registered Readers:</message>
 	<message key="manager.statistics.statistics.totalNewValue">{$numTotal} ({$numNew} new)</message>
-	<message key="manager.statistics.statistics.countryDistribution">Country Distribution:</message>
 	<message key="manager.statistics.statistics.subscriptions">Subscriptions:</message>
 
 	<message key="manager.statistics.reports">Report Generator</message>
+	<message key="manager.statistics.reports.description">OJS generates reports that track the details associated with processing submissions to the journal from the perspective of submissions, editors, reviewers, and sections, over a given period of time. Reports are generated in CSV format which require a spreadsheet application to view.</message>
 	<message key="manager.statistics.reports.dateFrom">From</message>
 	<message key="manager.statistics.reports.dateTo">Until</message>
-	<message key="manager.statistics.reports.includeInReportType">Include the following in</message>
+	<message key="manager.statistics.reports.reportType">Type of report</message>
 	<message key="manager.statistics.reports.type.journal">Journal Report</message>
 	<message key="manager.statistics.reports.type.editor">Editor Report</message>
 	<message key="manager.statistics.reports.type.reviewer">Reviewer Report</message>
 	<message key="manager.statistics.reports.type.section">Section Report</message>
 	<message key="manager.statistics.reports.generate">Generate Report</message>
-	<message key="manager.statistics.reports.csvNote"><![CDATA[<strong>Note:</strong> Reports are generated in CSV format and should be viewed using a spreadsheet application.]]></message>
 	<message key="manager.statistics.reports.status">Status (Accepted, declined, other)</message>
 	<message key="manager.statistics.reports.dateDecided">Date Decided</message>
 	<message key="manager.statistics.reports.author">Author #{$num}</message>
@@ -2088,6 +2090,7 @@ current password.<br /><br />Enter your email address below to reset your passwo
 	<message key="about.contact.phone">Phone</message>
 	<message key="about.contact.fax">Fax</message>
 	<message key="about.contact.email">Email</message>
+	<message key="about.statistics">Statistics</message>
 	<message key="about.journalContact">Journal Contact</message>
 	<message key="about.aboutTheJournal">About the Journal</message>
 	<message key="about.editorialTeam">Editorial Team</message>

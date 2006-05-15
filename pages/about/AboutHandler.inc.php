@@ -31,6 +31,13 @@ class AboutHandler extends Handler {
 			
 			$customAboutItems = &$journalSettingsDao->getSetting($journal->getJournalId(), 'customAboutItems');
 
+			foreach (AboutHandler::getPublicStatisticsNames() as $name) {
+				if ($journal->getSetting($name)) {
+					$templateMgr->assign('publicStatisticsEnabled', true);
+					break;
+				} 
+			}
+
 			$templateMgr->assign('customAboutItems', $customAboutItems);
 			$templateMgr->assign('helpTopicId', 'user.about');
 			$templateMgr->assign_by_ref('journalSettings', $journalSettingsDao->getJournalSettings($journal->getJournalId()));
@@ -384,6 +391,81 @@ class AboutHandler extends Handler {
 		$templateMgr->display('about/aboutThisPublishingSystem.tpl');
 	}
 	
+	/**
+	 * Display a list of public stats for the current journal.
+	 * WARNING: This implementation should be kept roughly synchronized
+	 * with the reader's statistics view in the About pages.
+	 */
+	function statistics() {
+		parent::validate();
+		AboutHandler::setupTemplate(true);
+
+		$journal = &Request::getJournal();
+		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign('helpTopicId','user.about');
+
+		$statisticsYear = Request::getUserVar('statisticsYear');
+		if (empty($statisticsYear)) $statisticsYear = date('Y');
+		$templateMgr->assign('statisticsYear', $statisticsYear);
+
+		$sectionIds = $journal->getSetting('statisticsSectionIds');
+		if (!is_array($sectionIds)) $sectionIds = array();
+		$templateMgr->assign('sectionIds', $sectionIds);
+
+		foreach (AboutHandler::getPublicStatisticsNames() as $name) {
+			$templateMgr->assign($name, $journal->getSetting($name));
+		}
+		$fromDate = mktime(0, 0, 1, 1, 1, $statisticsYear);
+		$toDate = mktime(23, 59, 59, 12, 31, $statisticsYear);
+
+		$journalStatisticsDao =& DAORegistry::getDAO('JournalStatisticsDAO');
+		$articleStatistics = $journalStatisticsDao->getArticleStatistics($journal->getJournalId(), null, $fromDate, $toDate);
+		$templateMgr->assign('articleStatistics', $articleStatistics);
+
+		$limitedArticleStatistics = $journalStatisticsDao->getArticleStatistics($journal->getJournalId(), $sectionIds, $fromDate, $toDate);
+		$templateMgr->assign('limitedArticleStatistics', $limitedArticleStatistics);
+
+		$limitedArticleStatistics = $journalStatisticsDao->getArticleStatistics($journal->getJournalId(), $sectionIds, $fromDate, $toDate);
+		$templateMgr->assign('articleStatistics', $articleStatistics);
+
+		$sectionDao =& DAORegistry::getDAO('SectionDAO');
+		$sections =& $sectionDao->getJournalSections($journal->getJournalId());
+		$templateMgr->assign('sections', $sections->toArray());
+		
+		$issueStatistics = $journalStatisticsDao->getIssueStatistics($journal->getJournalId(), $fromDate, $toDate);
+		$templateMgr->assign('issueStatistics', $issueStatistics);
+
+		$reviewerStatistics = $journalStatisticsDao->getReviewerStatistics($journal->getJournalId(), $sectionIds, $fromDate, $toDate);
+		$templateMgr->assign('reviewerStatistics', $reviewerStatistics);
+
+		$allUserStatistics = $journalStatisticsDao->getUserStatistics($journal->getJournalId(), null, $toDate);
+		$templateMgr->assign('allUserStatistics', $allUserStatistics);
+
+		$userStatistics = $journalStatisticsDao->getUserStatistics($journal->getJournalId(), $fromDate, $toDate);
+		$templateMgr->assign('userStatistics', $userStatistics);
+
+		$enableSubscriptions = $journal->getSetting('enableSubscriptions');
+		if ($enableSubscriptions) {
+			$templateMgr->assign('enableSubscriptions', true);
+			$allSubscriptionStatistics = $journalStatisticsDao->getSubscriptionStatistics($journal->getJournalId(), null, $toDate);
+			$templateMgr->assign('allSubscriptionStatistics', $allSubscriptionStatistics);
+
+			$subscriptionStatistics = $journalStatisticsDao->getSubscriptionStatistics($journal->getJournalId(), $fromDate, $toDate);
+			$templateMgr->assign('subscriptionStatistics', $subscriptionStatistics);
+		}
+
+		$notificationStatusDao =& DAORegistry::getDAO('NotificationStatusDAO');
+		$notifiableUsers = $notificationStatusDao->getNotifiableUsersCount($journal->getJournalId());
+		$templateMgr->assign('notifiableUsers', $notifiableUsers);
+
+		$templateMgr->display('about/statistics.tpl');
+	}
+
+	function getPublicStatisticsNames() {
+		import ('pages.manager.ManagerHandler');
+		import ('pages.manager.StatisticsHandler');
+		return StatisticsHandler::getPublicStatisticsNames();
+	}
 
 }
 
