@@ -22,4 +22,100 @@
 			UPDATE articles SET status = 2 FROM articles a, proof_assignments pa WHERE a.article_id = pa.article_id AND a.status = 1 AND pa.date_scheduling_queue IS NOT NULL
 		</query>
 	</sql>
+
+	<!-- Bug #1739: Automated open access notification emails and subscription expiry emails. -->
+	<table name="email_templates_default">
+		<row>
+			<field name="email_key">OPEN_ACCESS_NOTIFY</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">0</field>
+			<field name="to_role_id">1048576<!-- Reader --></field>
+		</row>
+		<row>
+			<field name="email_key">SUBSCRIPTION_BEFORE_EXPIRY</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">0</field>
+			<field name="to_role_id">1048576<!-- Reader --></field>
+		</row>
+		<row>
+			<field name="email_key">SUBSCRIPTION_AFTER_EXPIRY</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">0</field>
+			<field name="to_role_id">1048576<!-- Reader --></field>
+		</row>
+		<row>
+			<field name="email_key">SUBSCRIPTION_AFTER_EXPIRY_LAST</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">0</field>
+			<field name="to_role_id">1048576<!-- Reader --></field>
+		</row>
+	</table>
+
+	<table name="email_templates_default_data">
+		<field_default name="locale">en_US</field_default>
+		<row>
+			<field name="email_key">OPEN_ACCESS_NOTIFY</field>
+			<field name="subject">Issue Now Open Access</field>
+			<field name="body">Readers:
+
+{$journalName} has just made available in an open access format the following issue. We invite you to review the Table of Contents here and then visit our web site ({$journalUrl}) to review articles and items of interest.
+
+Thanks for the continuing interest in our work,
+{$editorialContactSignature}</field>
+			<field name="description">This email is sent to registered readers who have requested to receive a notification email when an issue becomes open access.</field>
+		</row>
+		<row>
+			<field name="email_key">SUBSCRIPTION_BEFORE_EXPIRY</field>
+			<field name="subject">Notice of Subscription Expiry</field>
+			<field name="body">{$subscriberName}:
+
+Your {$journalName} subscription is about to expire.
+
+{$subscriptionType}
+Expiry date: {$expiryDate}
+
+To ensure the continuity of your access to this journal, please go to the journal website and renew your subscription. You are able to log in to the system with your username, "{$username}".
+
+If you have any questions, please feel free to contact me.
+
+{$subscriptionContactSignature}</field>
+			<field name="description">This email notifies a subscriber that their subscription will soon expire. It provides the journal's URL along with instructions for access.</field>
+		</row>
+		<row>
+			<field name="email_key">SUBSCRIPTION_AFTER_EXPIRY</field>
+			<field name="subject">Subscription Expired</field>
+			<field name="body">{$subscriberName}:
+
+Your {$journalName} subscription has expired.
+
+{$subscriptionType}
+Expiry date: {$expiryDate}
+
+To renew your subscription, please go to the journal website. You are able to log in to the system with your username, "{$username}".
+
+If you have any questions, please feel free to contact me.
+
+{$subscriptionContactSignature}</field>
+			<field name="description">This email notifies a subscriber that their subscription has expired. It provides the journal's URL along with instructions for access.</field>
+		</row>
+		<row>
+			<field name="email_key">SUBSCRIPTION_AFTER_EXPIRY_LAST</field>
+			<field name="subject">Subscription Expired - Final Reminder</field>
+			<field name="body">{$subscriberName}:
+
+Your {$journalName} subscription has expired.
+Please note that this is the final reminder that will be emailed to you.
+
+{$subscriptionType}
+Expiry date: {$expiryDate}
+
+To renew your subscription, please go to the journal website. You are able to log in to the system with your username, "{$username}".
+
+If you have any questions, please feel free to contact me.
+
+{$subscriptionContactSignature}</field>
+			<field name="description">This email notifies a subscriber that their subscription has expired. It provides the journal's URL along with instructions for access.</field>
+		</row>
+	</table>
+
 </data>
