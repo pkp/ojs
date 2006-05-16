@@ -26,6 +26,10 @@
 		</td>
 	</tr>
 	<tr valign="top">
+		<td class="label">{translate key="user.url"}</td>
+		<td class="value">{$author.url|escape|default:"&mdash;"}</td>
+	</tr>
+	<tr valign="top">
 		<td class="label">{translate key="user.affiliation"}</td>
 		<td class="value">{$author.affiliation|escape|default:"&mdash;"}</td>
 	</tr>

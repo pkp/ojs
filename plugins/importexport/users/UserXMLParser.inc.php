@@ -24,6 +24,7 @@
 			<last_name>LastName</last_name>
 			<affiliation>Affiliation</affiliation>
 			<email>user@pkp.sfu.ca</email>
+			<url>http://www.mysite.com</url>
 			<role type="editor"/>
 			<role type="sectionEditor"/>
 		</user>
@@ -104,6 +105,9 @@ class UserXMLParser {
 								break;
 							case 'email':
 								$newUser->setEmail($attrib->getValue());
+								break;
+							case 'url':
+								$newUser->setUrl($attrib->getValue());
 								break;
 							case 'phone':
 								$newUser->setPhone($attrib->getValue());

@@ -22,6 +22,7 @@ define('USER_FIELD_FIRSTNAME', 'first_name');
 define('USER_FIELD_LASTNAME', 'last_name');
 define('USER_FIELD_USERNAME', 'username');
 define('USER_FIELD_EMAIL', 'email');
+define('USER_FIELD_URL', 'url');
 define('USER_FIELD_INTERESTS', 'interests');
 define('USER_FIELD_INITIAL', 'initial');
 define('USER_FIELD_NONE', null);
@@ -132,6 +133,7 @@ class UserDAO extends DAO {
 		$user->setLastName($row['last_name']);
 		$user->setAffiliation($row['affiliation']);
 		$user->setEmail($row['email']);
+		$user->setUrl($row['url']);
 		$user->setPhone($row['phone']);
 		$user->setFax($row['fax']);
 		$user->setMailingAddress($row['mailing_address']);
@@ -164,9 +166,9 @@ class UserDAO extends DAO {
 		}
 		$this->update(
 			sprintf('INSERT INTO users
-				(username, password, first_name, middle_name, initials, last_name, affiliation, email, phone, fax, mailing_address, country, biography, interests, locales, date_registered, date_last_login, must_change_password, disabled, disabled_reason, auth_id)
+				(username, password, first_name, middle_name, initials, last_name, affiliation, email, url, phone, fax, mailing_address, country, biography, interests, locales, date_registered, date_last_login, must_change_password, disabled, disabled_reason, auth_id)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, %s, %s, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, %s, %s, ?, ?, ?, ?)',
 				$this->datetimeToDB($user->getDateRegistered()), $this->datetimeToDB($user->getDateLastLogin())),
 			array(
 				$user->getUsername(),
@@ -177,6 +179,7 @@ class UserDAO extends DAO {
 				$user->getLastName(),
 				$user->getAffiliation(),
 				$user->getEmail(),
+				$user->getUrl(),
 				$user->getPhone(),
 				$user->getFax(),
 				$user->getMailingAddress(),
@@ -214,6 +217,7 @@ class UserDAO extends DAO {
 					last_name = ?,
 					affiliation = ?,
 					email = ?,
+					url = ?,
 					phone = ?,
 					fax = ?,
 					mailing_address = ?,
@@ -237,6 +241,7 @@ class UserDAO extends DAO {
 				$user->getLastName(),
 				$user->getAffiliation(),
 				$user->getEmail(),
+				$user->getUrl(),
 				$user->getPhone(),
 				$user->getFax(),
 				$user->getMailingAddress(),
@@ -386,6 +391,10 @@ class UserDAO extends DAO {
 				break;
 			case USER_FIELD_EMAIL:
 				$sql .= ' WHERE LOWER(email) ' . ($match == 'is' ? '=' : 'LIKE') . ' LOWER(?)';
+				$var = $match == 'is' ? $value : "%$value%";
+				break;
+			case USER_FIELD_URL:
+				$sql .= ' WHERE LOWER(url) ' . ($match == 'is' ? '=' : 'LIKE') . ' LOWER(?)';
 				$var = $match == 'is' ? $value : "%$value%";
 				break;
 			case USER_FIELD_FIRSTNAME:

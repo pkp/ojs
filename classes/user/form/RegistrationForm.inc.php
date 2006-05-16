@@ -103,7 +103,7 @@ class RegistrationForm extends Form {
 			array(
 				'username', 'password', 'password2',
 				'firstName', 'middleName', 'lastName', 'initials',
-				'affiliation', 'email', 'phone', 'fax',
+				'affiliation', 'email', 'userUrl', 'phone', 'fax',
 				'mailingAddress', 'biography', 'interests', 'userLocales',
 				'registerAsReader', 'openAccessNotification', 'registerAsAuthor',
 				'registerAsReviewer', 'existingUser'
@@ -145,6 +145,7 @@ class RegistrationForm extends Form {
 			$user->setLastName($this->getData('lastName'));
 			$user->setAffiliation($this->getData('affiliation'));
 			$user->setEmail($this->getData('email'));
+			$user->setUrl($this->getData('userUrl'));
 			$user->setPhone($this->getData('phone'));
 			$user->setFax($this->getData('fax'));
 			$user->setMailingAddress($this->getData('mailingAddress'));

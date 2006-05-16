@@ -123,6 +123,7 @@ class UserManagementForm extends Form {
 					'initials' => $user->getInitials(),
 					'affiliation' => $user->getAffiliation(),
 					'email' => $user->getEmail(),
+					'userUrl' => $user->getUrl(),
 					'phone' => $user->getPhone(),
 					'fax' => $user->getFax(),
 					'mailingAddress' => $user->getMailingAddress(),
@@ -187,6 +188,7 @@ class UserManagementForm extends Form {
 		$user->setInitials($this->getData('initials'));
 		$user->setAffiliation($this->getData('affiliation'));
 		$user->setEmail($this->getData('email'));
+		$user->setUrl($this->getData('userUrl'));
 		$user->setPhone($this->getData('phone'));
 		$user->setFax($this->getData('fax'));
 		$user->setMailingAddress($this->getData('mailingAddress'));

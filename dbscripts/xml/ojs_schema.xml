@@ -133,6 +133,7 @@
 		<field name="email" type="C2" size="90">
 			<NOTNULL/>
 		</field>
+		<field name="url" type="C2" size="255"/>
 		<field name="phone" type="C2" size="24"/>
 		<field name="fax" type="C2" size="24"/>
 		<field name="mailing_address" type="C2" size="255"/>
@@ -698,6 +699,7 @@
 		<field name="email" type="C2" size="90">
 			<NOTNULL/>
 		</field>
+		<field name="url" type="C2" size="255"/>
 		<field name="biography" type="X"/>
 		<field name="primary_contact" type="I1">
 			<NOTNULL/>

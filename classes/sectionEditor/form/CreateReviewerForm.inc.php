@@ -74,7 +74,7 @@ class CreateReviewerForm extends Form {
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->readUserVars(array('firstName', 'middleName', 'lastName', 'initials', 'affiliation', 'email', 'phone', 'fax', 'mailingAddress', 'country', 'biography', 'interests', 'userLocales', 'sendNotify', 'username'));
+		$this->readUserVars(array('firstName', 'middleName', 'lastName', 'initials', 'affiliation', 'email', 'userUrl', 'phone', 'fax', 'mailingAddress', 'country', 'biography', 'interests', 'userLocales', 'sendNotify', 'username'));
 
 		if ($this->getData('userLocales') == null || !is_array($this->getData('userLocales'))) {
 			$this->setData('userLocales', array());
@@ -99,6 +99,7 @@ class CreateReviewerForm extends Form {
 		$user->setInitials($this->getData('initials'));
 		$user->setAffiliation($this->getData('affiliation'));
 		$user->setEmail($this->getData('email'));
+		$user->setUrl($this->getData('userUrl'));
 		$user->setPhone($this->getData('phone'));
 		$user->setFax($this->getData('fax'));
 		$user->setMailingAddress($this->getData('mailingAddress'));

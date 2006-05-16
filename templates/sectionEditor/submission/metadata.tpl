@@ -29,6 +29,10 @@
 			{$author->getFullName()|escape} {icon name="mail" url=$url}
 		</td>
 	</tr>
+	{if $author->getEmail()}<tr valign="top">
+		<td class="label">{translate key="user.url"}</td>
+		<td class="value"><a href="{$author->getUrl()|escape:"quotes"}">{$author->getUrl()|escape}</a></td>
+	</tr>{/if}
 	<tr valign="top">
 		<td class="label">{translate key="user.affiliation"}</td>
 		<td class="value">{$author->getAffiliation()|escape|default:"&mdash;"}</td>

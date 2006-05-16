@@ -42,6 +42,7 @@
 		<td>
 			<input type="checkbox" name="userKeys[]" value="{$userKey}" checked="checked" />
 			<input type="hidden" name="{$userKey}_fax" value="{$user->getFax()|escape}" />
+			<input type="hidden" name="{$userKey}_url" value="{$user->getUrl()|escape}" />
 			<input type="hidden" name="{$userKey}_phone" value="{$user->getPhone()|escape}" />
 			<input type="hidden" name="{$userKey}_affiliation" value="{$user->getAffiliation()|escape}" />
 			<input type="hidden" name="{$userKey}_mailingAddress" value="{$user->getMailingAddress()|escape}" />

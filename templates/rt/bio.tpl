@@ -18,6 +18,7 @@
 {foreach from=$article->getAuthors() item=author name=authors}
 <p>
 	<i>{$author->getFullName()|escape}</i><br />
+	{if $author->getUrl()}<a href="{$author->getUrl()|escape:"quotes"}">{$author->getUrl()|escape}</a><br/>{/if}
 	{if $author->getAffiliation()}{$author->getAffiliation()|escape}{/if}
 	{if $author->getCountry()}<br/>{$author->getCountryLocalized()|escape}{/if}
 </p>

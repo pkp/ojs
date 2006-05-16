@@ -40,16 +40,18 @@ class AuthorAction extends Action {
 		
 		if ($designate && !HookRegistry::call('AuthorAction::designateReviewVersion', array(&$authorSubmission))) {
 			$submissionFile =& $authorSubmission->getSubmissionFile();
-			$reviewFileId = $articleFileManager->copyToReviewFile($submissionFile->getFileId());
-			$editorFileId = $articleFileManager->copyToEditorFile($reviewFileId, null, null);
+			if ($submissionFile) {
+				$reviewFileId = $articleFileManager->copyToReviewFile($submissionFile->getFileId());
+				$editorFileId = $articleFileManager->copyToEditorFile($reviewFileId, null, null);
 
-			$authorSubmission->setReviewFileId($reviewFileId);
-			$authorSubmission->setEditorFileId($editorFileId);
+				$authorSubmission->setReviewFileId($reviewFileId);
+				$authorSubmission->setEditorFileId($editorFileId);
 			
-			$authorSubmissionDao->updateAuthorSubmission($authorSubmission);
+				$authorSubmissionDao->updateAuthorSubmission($authorSubmission);
 
-			$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
-			$sectionEditorSubmissionDao->createReviewRound($authorSubmission->getArticleId(), 1, 1);
+				$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
+				$sectionEditorSubmissionDao->createReviewRound($authorSubmission->getArticleId(), 1, 1);
+			}
 		}
 	}
 	 

@@ -170,6 +170,22 @@ class User extends DataObject {
 	}
 	
 	/**
+	 * Get URL.
+	 * @return string
+	 */
+	function getUrl() {
+		return $this->getData('url');
+	}
+	
+	/**
+	 * Set URL.
+	 * @param $url string
+	 */
+	function setUrl($url) {
+		return $this->setData('url', $url);
+	}
+	
+	/**
 	 * Get phone number.
 	 * @return string
 	 */

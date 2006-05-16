@@ -69,6 +69,7 @@ class Upgrade extends Installer {
 			}
 			unset($journal);
 		}
+		return true;
 	}
 }
 

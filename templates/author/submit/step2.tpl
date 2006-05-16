@@ -82,6 +82,10 @@ function moveAuthor(dir, authorIndex) {
 	<td width="80%" class="value"><input type="text" class="textField" name="authors[{$authorIndex}][email]" id="authors-{$authorIndex}-email" value="{$author.email|escape}" size="30" maxlength="90" /></td>
 </tr>
 <tr valign="top">
+	<td width="20%" class="label">{fieldLabel name="authors-$authorIndex-url" required="true" key="user.url"}</td>
+	<td width="80%" class="value"><input type="text" class="textField" name="authors[{$authorIndex}][url]" id="authors-{$authorIndex}-url" value="{$author.url|escape}" size="30" maxlength="90" /></td>
+</tr>
+<tr valign="top">
 	<td width="20%" class="label">{fieldLabel name="authors-$authorIndex-biography" key="user.biography"}<br />{translate key="user.biography.description"}</td>
 	<td width="80%" class="value"><textarea name="authors[{$authorIndex}][biography]" class="textArea" id="authors-{$authorIndex}-biography" rows="5" cols="40">{$author.biography|escape}</textarea></td>
 </tr>

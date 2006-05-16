@@ -53,6 +53,10 @@
 		</td>
 	</tr>
 	<tr valign="top">
+		<td class="label">{translate key="user.url"}</td>
+		<td class="value"><a href="{$user->getUrl()|escape:"quotes"}">{$user->getUrl()|escape}</a></td>
+	</tr>
+	<tr valign="top">
 		<td class="label">{translate key="user.phone"}</td>
 		<td class="value">{$user->getPhone()|escape|default:"&mdash;"}</td>
 	</tr>
