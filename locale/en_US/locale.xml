@@ -1692,7 +1692,6 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	<message key="reviewer.article.decision.decline">Decline Submission</message>
 	<message key="reviewer.article.decision.seeComments">See Comments</message>
 	<message key="reviewer.article.schedule">Schedule</message>
-        <message key="reviewer.article.noteOnUploads">Remove all reviewer identification from uploaded files, by checking the document's Properties (under File in Word and Acrobat).</message>
         <message key="reviewer.article.submissionToBeReviewed">Submission To Be Reviewed</message>
         <message key="reviewer.article.reviewSchedule">Review Schedule</message>
         <message key="reviewer.article.reviewSteps">Review Steps</message>
@@ -1707,6 +1706,7 @@ Active is how many reviews are currently being considered or underway.]]></messa
         <message key="reviewer.article.reviewerInstruction6">Select a recommendation and submit the review to complete the process. You must enter a review or upload a file before selecting a recommendation.</message>
 	<message key="reviewer.article.mustSelectDecision">No recommendation was selected. You must choose a recommendation to submit.</message>
 	<message key="reviewer.article.confirmDecision">Once you have recorded a decision you will no longer be able to make changes to this review. Are you sure you wish to continue?</message>
+	<message key="reviewer.article.ensuringBlindReview">Ensuring a Blind Review</message>
 
 	<!-- Used in submission editing -->
 	<message key="copyeditor.article.fileToCopyedit">File To C/E</message>
@@ -1791,7 +1791,7 @@ To upload a manuscript to this journal, complete the following steps.
 <li>Once the submission is uploaded, click Save and Continue at the bottom of this page.</li>
 </ol>
 
-The file can be viewed by clicking on the file name. A new or revised file can be uploaded, deleting the one that currently appears. If you have difficulties uploading the submission, contact <a href="mailto:{$supportEmail}">{$supportName}</a> by email or phone {$supportPhone} for assistance. ]]></message>
+The file can be viewed by clicking on the file name. A new or revised file can be uploaded, deleting the one that currently appears. Additional files can be added using Supplementary Files (next step). If you have difficulties uploading the submission, contact <a href="mailto:{$supportEmail}">{$supportName}</a> by email or phone {$supportPhone} for assistance. ]]></message>
 	<message key="author.submit.submissionFile">Submission File</message>
 	<message key="author.submit.uploadSubmissionFile">Upload submission file</message>
 	<message key="author.submit.replaceSubmissionFile">Replace submission file</message>
@@ -1799,7 +1799,7 @@ The file can be viewed by clicking on the file name. A new or revised file can b
 	<message key="author.submit.noSubmissionConfirm">Are you sure you wish to continue without uploading a submission file?</message>
 	
 	<!-- Article Submission Step 4 -->
-	<message key="author.submit.supplementaryFilesInstructions">This is an optional step in the submission process. Supplementary Files operate like an appendix to the submission, intended to improve the contribution which the submission makes. Supplementary Files might include (a) research instruments, (b) data sets, which comply with the terms of the study's research ethics review, (c) sources that otherwise would be unavailable to readers, or (d) figures or tables that cannot be integrated into the text itself. These files are also indexed by the author, identifying their relation to the submission, as well as their ownership. Supplementary Files can be uploaded in any file format and will be made available to readers in their original format.</message>
+	<message key="author.submit.supplementaryFilesInstructions">This optional step in the submission process allows authors to add files to the submission which improve the contribution which the submission makes. Supplementary Files might include (a) research instruments, (b) data sets, which comply with the terms of the study's research ethics review, (c) sources that otherwise would be unavailable to readers, or (d) figures or tables that cannot be integrated into the text itself. These files are also indexed by the author, identifying their relation to the submission, as well as their ownership. Supplementary Files can be uploaded in any file format and will be made available to readers in their original format. They can be shared with peer reviewers, if they do not compromise the blind review.</message>
 	<message key="author.submit.noSupplementaryFiles">No supplementary files have been added to this submission.</message>
 	<message key="author.submit.backToSupplementaryFiles">Back to Supplementary Files</message>
 	<message key="author.submit.confirmDeleteSuppFile">Are you sure you want to delete this supplementary file?</message>

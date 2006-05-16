@@ -249,7 +249,7 @@ function confirmSubmissionCheck() {
 				<input type="submit" name="submit" value="{translate key="common.upload"}" {if not $confirmedStatus or $declined or $submission->getCancelled()}disabled="disabled"{/if} class="button" />
 			</form>
 			<span class="instruct">
-				{translate key="reviewer.article.noteOnUploads"}
+				<a class="action" href="javascript:openHelp('{get_help_id key="editorial.sectionEditorsRole.review.blindPeerReview" url="true"}')">{translate key="reviewer.article.ensuringBlindReview"}</a>
 			</span>
 		{/if}
 	</td>

@@ -16,7 +16,8 @@
 <input type="hidden" name="articleId" value="{$articleId}" />
 {include file="common/formErrors.tpl"}
 
-<p>{translate key="author.submit.supplementaryFilesInstructions"}</p>
+<p>{translate key="author.submit.supplementaryFilesInstructions"}<br/>
+<a class="action" href="javascript:openHelp('{get_help_id key="editorial.sectionEditorsRole.review.blindPeerReview" url="true"}')">{translate key="reviewer.article.ensuringBlindReview"}</a></p>
 
 <table class="listing" width="100%">
 <tr>

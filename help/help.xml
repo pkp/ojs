@@ -96,6 +96,7 @@
 	<topic key="editorial.sectionEditorsRole.editing.copyediting" id="editorial/topic/000027"></topic>
 	<topic key="editorial.sectionEditorsRole.editing.layout" id="editorial/topic/000028"></topic>
 	<topic key="editorial.sectionEditorsRole.editing.proofreading" id="editorial/topic/000029"></topic>
+	<topic key="editorial.sectionEditorsRole.review.blindPeerReview" id="editorial/topic/000044"></topic>
 
 	<topic key="editorial.reviewersRole" id="editorial/topic/000008"></topic>
 	<topic key="editorial.reviewersRole.submissions" id="editorial/topic/000030"></topic>
