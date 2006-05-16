@@ -430,7 +430,8 @@
 	<message key="user.affiliation">Affiliation</message>
 	<message key="user.affiliations">Affiliations</message>
 	<message key="user.email">Email</message>
-	<message key="user.url">Url</message>
+	<message key="user.url">URL</message>
+	<message key="user.url.description">This will appear as a hyperlinked URL at the bottom of the bio statement on the "About the author" pop-up and "Editorial team" page.</message>
 	<message key="user.phone">Phone</message>
 	<message key="user.fax">Fax</message>
 	<message key="user.interests">Reviewing interests</message>
