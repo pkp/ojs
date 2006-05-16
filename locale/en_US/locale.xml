@@ -727,7 +727,7 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="manager.readingTools">Reading Tools</message>
 	<message key="manager.people">People</message>
 	<message key="manager.filesBrowser">Files Browser</message>
-	<message key="manager.groups">Masthead</message>
+	<message key="manager.groups">Editorial Team</message>
 	<message key="manager.managementPages">Management Pages</message>
 	<message key="manager.plugins">System Plugins</message>
 	<message key="manager.users">Users</message>
@@ -1170,7 +1170,7 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<!-- Import/Export -->
 	<message key="manager.importExport">Import/Export Data</message>
 
-	<!-- Groups / Masthead -->
+	<!-- Groups / Editorial Team -->
 	<message key="manager.groups.editTitle">Edit Title</message>
 	<message key="manager.groups.createTitle">Create Title</message>
 	<message key="manager.groups.title">Title</message>

@@ -1156,7 +1156,7 @@ Fate <a href="http://www.pkp.ubc.ca/harvester/add.php" target="_blank">click qui
 	<!-- Import/Export -->
 	<message key="manager.importExport">Importa/Exporta i Dati</message>
 
-	<!-- Groups / Masthead -->
+	<!-- Groups / Editorial Team -->
 	<message key="manager.groups.editTitle">Modifica il Gruppo</message>
 	<message key="manager.groups.createTitle">Crea il Gruppo</message>
 	<message key="manager.groups.title">Titolo</message>
