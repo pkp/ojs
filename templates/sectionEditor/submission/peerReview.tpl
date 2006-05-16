@@ -267,26 +267,24 @@
 		</tr>
 	{/if}
 
-	{if $reviewAssignment->getDateConfirmed() && !$reviewAssignment->getDeclined()}
-		{if $rateReviewerOnQuality}
-			<tr valign="top">
-				<td class="label">{translate key="editor.article.rateReviewer"}</td>
-				<td>
-				<form method="post" action="{url op="rateReviewer"}">
-					<input type="hidden" name="reviewId" value="{$reviewAssignment->getReviewId()}" />
-					<input type="hidden" name="articleId" value="{$submission->getArticleId()}" />
-					{translate key="editor.article.quality"}&nbsp;
-					<select name="quality" size="1" class="selectMenu"{if not $reviewAssignment->getRecommendation()} disabled="disabled"{/if}>
-						{html_options_translate options=$reviewerRatingOptions selected=$reviewAssignment->getQuality()}
-					</select>&nbsp;&nbsp;
-					<input type="submit" value="{translate key="common.record"}"{if not $reviewAssignment->getRecommendation()} disabled="disabled"{/if} class="button" />
-					{if $reviewAssignment->getDateRated()}
-						&nbsp;&nbsp;{$reviewAssignment->getDateRated()|date_format:$dateFormatShort}
-					{/if}
-				</form>
-				</td>
-			</tr>
-		{/if}
+	{if $reviewAssignment->getDateNotified() && !$reviewAssignment->getDeclined() && $rateReviewerOnQuality}
+		<tr valign="top">
+			<td class="label">{translate key="editor.article.rateReviewer"}</td>
+			<td>
+			<form method="post" action="{url op="rateReviewer"}">
+				<input type="hidden" name="reviewId" value="{$reviewAssignment->getReviewId()}" />
+				<input type="hidden" name="articleId" value="{$submission->getArticleId()}" />
+				{translate key="editor.article.quality"}&nbsp;
+				<select name="quality" size="1" class="selectMenu">
+					{html_options_translate options=$reviewerRatingOptions selected=$reviewAssignment->getQuality()}
+				</select>&nbsp;&nbsp;
+				<input type="submit" value="{translate key="common.record"}" class="button" />
+				{if $reviewAssignment->getDateRated()}
+					&nbsp;&nbsp;{$reviewAssignment->getDateRated()|date_format:$dateFormatShort}
+				{/if}
+			</form>
+			</td>
+		</tr>
 	{/if}
 	{if $needsReviewFileNote}
 		<tr valign="top">

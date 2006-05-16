@@ -310,7 +310,7 @@
 	<message key="submission.response">Response</message>
 	<message key="submission.accepted">Accepted</message>
 	<message key="submission.rejected">Rejected</message>
-	<message key="submission.acceptance">Acceptance</message>
+	<message key="submission.acceptance">Agreed to Review</message>
 	<message key="submission.due">Due</message>
 	<message key="submission.complete">Complete</message>
 	<message key="submission.acknowledge">Acknowledge</message>
