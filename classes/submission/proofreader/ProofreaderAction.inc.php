@@ -285,6 +285,7 @@ class ProofreaderAction extends Action {
 				$getDateField = 'getDateLayoutEditorCompleted';
 
 				// FIXME: Should be able to designate primary editorial contact.
+				$editAssignments =& $sectionEditorSubmission->getEditAssignments();
 				$assignmentIndex = 0;
 				foreach ($editAssignments as $editAssignment) {
 					if ($assignmentIndex++ == 0) {
