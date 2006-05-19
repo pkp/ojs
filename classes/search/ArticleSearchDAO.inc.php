@@ -37,6 +37,8 @@ class ArticleSearchDAO extends DAO {
 			$keyword
 		);
 		if($result->RecordCount() == 0) {
+			$result->Close();
+			unset($result);
 			$this->update(
 				'INSERT INTO article_search_keyword_list (keyword_text) VALUES (?)',
 				$keyword
@@ -45,13 +47,12 @@ class ArticleSearchDAO extends DAO {
 			
 		} else {
 			$keywordId = $result->fields[0];
+			$result->Close();
+			unset($result);
 		}
 		
 		$articleSearchKeywordIds[$keyword] = $keywordId;
 
-		$result->Close();
-		unset($result);
-		
 		return $keywordId;
 	}
 	

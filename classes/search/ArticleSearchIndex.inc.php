@@ -216,6 +216,7 @@ class ArticleSearchIndex {
 			}
 			ArticleSearchIndex::indexSuppFileMetadata($file);
 		}
+		unset($files);
 		
 		// Index galley files
 		$fileDao = &DAORegistry::getDAO('ArticleGalleyDAO');
@@ -261,9 +262,11 @@ class ArticleSearchIndex {
 					ArticleSearchIndex::indexArticleFiles($article);
 					$numIndexed++;
 				}
+				unset($article);
 			}
 			
 			if ($log) echo $numIndexed, " articles indexed\n";
+			unset($journal);
 		}
 	}
 	

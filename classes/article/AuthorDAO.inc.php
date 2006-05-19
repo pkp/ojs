@@ -73,18 +73,21 @@ class AuthorDAO extends DAO {
 	/**
 	 * Retrieve all published articles associated with authors with
 	 * the given first name, middle name, last name, and affiliation.
+	 * @param $journalId int (null if no restriction desired)
 	 * @param firstName string
 	 * @param middleName string
 	 * @param lastName string
 	 * @param affiliation string
 	 */
-	function &getPublishedArticlesForAuthor($firstName, $middleName, $lastName, $affiliation) {
+	function &getPublishedArticlesForAuthor($journalId, $firstName, $middleName, $lastName, $affiliation) {
 		$publishedArticles = array();
 		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
+		$params = array($firstName, $middleName, $lastName, $affiliation);
+		if ($journalId !== null) $params[] = $journalId;
 
 		$result = &$this->retrieve(
-			'SELECT DISTINCT article_id FROM article_authors WHERE first_name = ? AND (middle_name = ?' . (empty($middleName)?' OR middle_name IS NULL':'') . ') AND last_name = ? AND (affiliation = ?' . (empty($affiliation)?' OR affiliation IS NULL':'') . ')',
-			array($firstName, $middleName, $lastName, $affiliation)
+			'SELECT DISTINCT aa.article_id FROM article_authors aa LEFT JOIN articles a ON (aa.article_id = a.article_id) WHERE aa.first_name = ? AND (aa.middle_name = ?' . (empty($middleName)?' OR aa.middle_name IS NULL':'') . ') AND aa.last_name = ? AND (aa.affiliation = ?' . (empty($affiliation)?' OR aa.affiliation IS NULL':'') . ')' . ($journalId!==null?(' AND a.journal_id = ?'):''),
+			$params
 		);
 
 		while (!$result->EOF) {

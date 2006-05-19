@@ -72,7 +72,7 @@ class SearchHandler extends Handler {
 			$lastName = Request::getUserVar('lastName');
 			$affiliation = Request::getUserVar('affiliation');
 
-			$publishedArticles = $authorDao->getPublishedArticlesForAuthor($firstName, $middleName, $lastName, $affiliation);
+			$publishedArticles = $authorDao->getPublishedArticlesForAuthor($journal?$journal->getJournalId():null, $firstName, $middleName, $lastName, $affiliation);
 
 			// Load information associated with each article.
 			$issues = array();
