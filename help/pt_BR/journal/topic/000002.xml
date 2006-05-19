@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000002.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Users Index 
+  *
+  * Translation by Suporte Técnico SER, UFPR
+  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000002" locale="pt_BR" title="Usuários" toc="journal/toc/000000" subtoc="journal/toc/000002" key="journal.users.index">
+	<section>
+		<![CDATA[<p>O Gerente da Revista está apto a relacionar pessoas no sistema e associa-las a uma ou mais funções dos processos Editorial e de Publicação. Ao logar no sistema, o Gerente da Revista é levado ao Gerenciamento da Revista, onde as opções incluem a criação de novos usuários, importar um conjunto de novos usuários, e enviar emails a usuários. O Gerente da Revista também pode acessar os registros de cada usuário sob cada Função, assim como adicionar pessoas a estas Funções. O Gerente da Revista é aquele que pode associar pessoas em diferentes Funções, embora Editores e Editores de Seção poderem associar Avaliadores. Por outro lado, Autores e Leitores podem associar-se, como Avaliadores voluntários (se as permissões apropriadas foram feitas em Configurações 2.6).</p>]]>	
+	</section>
+</topic>

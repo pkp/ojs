@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000006.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * User Interface - Reading Tools
+  *
+  * Translation by Suporte Técnico SER, UFPR
+  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
+  *
+  * $Id$
+  -->
+
+<topic id="user/topic/000006" locale="pt_BR" title="Ferramentas de Leitura" toc="user/toc/000000" key="user.readingTools">
+	<section>
+		<![CDATA[
+		<p>Revistas usando este sistema estão aptas a disponibilizar uma série de Ferramentas de Leitura para acompanhar itens publicados nas várias seções da revista. As Ferramentas de Leitura tem a função de ajudar tanto usuários avançados quanto iniciantes a criar um contexto para interpretar, avaliar e utilizar a pesquisa que estão lendo. Conjuntos de ferramentas de Leitura foram desenvolvidas para uma vasta gama de disciplinas acadêmicas, e das quais o Gerente da Revista pode escolher, assim como atualizar e editar, para ser suportada pela revista. As Ferramentas de Leitura também possibilitam que os Leitores entrem em foruns relevantes, assim como contactar os autores ou compartilhar itens com outros Leitores.</p>
+		<p><i>Como as Ferramntas de Leitura funcionam</i>. As Ferramentas de Leitura foram projetadas para prover um contexto para um artigo ou item que elas acompanham. As Ferramentas abrem em uma janela no navegador do usuário ao lado direito do artigo ou item sendo lido. Primeiro, as Ferramentas oferecem aos Leitores com acesso às informações de indexadação do itens, versões de impressão, e indicações biográficas do autor. As Ferramentas permitem que Leitores pesquisem palavras no item (clicando em qualquer palavra na versão HTML do item) e encaminhem por email ao autor ou outros Leitores. As Ferramentas foram projetadas para pegar as duas primeiras palavras-chave do item e alimentar sistemas de busca de base de dados livre e outros recursos agrupados sob Estudos de Pesquisa, Outros Trabalhos do Autor, Impresso e Mídia, Portais Web Governamentais, Recursos Instrucionais, Discussões e Foruns, e outras categorias, dependendo do conjunto de Ferramentas escolhido. Os Leitores também estão aptos a acessar informações por trás de cada recurso selecionado. Em cada categoria, Estudo, Mídia ou Instrução, as Ferramentas dispõe muitas escolhas de bases de dados para consultar, enquanto permitem ao Leitor aprender mais sobre cada base de dados disponibilizando um link para uma página Sobre o recurso. (O Gerente da Revista está apto a editar e apagar recursos existentes e incluir novos também).</p>]]>
+	</section>
+</topic>

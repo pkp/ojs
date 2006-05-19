@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000024.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Section Editor's Role Index - Review - Review Version 
+  *
+  * Translation by Suporte Técnico SER, UFPR
+  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000024" locale="pt_BR" title="Versão de Avaliação" toc="editorial/toc/000006" key="editorial.sectionEditorsRole.review.reviewVersion">
+	<section>
+		<![CDATA[<p>O primeiro passo para o Editor de Seção para cada submissão é verificar o texto para garantir que a Versão Original serve como Versão de Avaliação ou se um Texto revisada precisa ser carregada. Para ver o Arquivo Original, o Editor de Seção clica no link do nome do arquivo.</p>
+		<p><i>Garantindo uma Avaliação aos Pares Sega</i>. Para submissões sob uma Avaliação aos Pares Sega, o Editor de Seção deve verificar se todas as referências aos autores forma removidas do arquivo: (a) referências dos autores aos seus próprios trabalhos devem usar a convenção de "Autor" mais Ano, e (b) as Propriedades do documento não devem incluir o nome dos autores (com MS Word, olhe no menu Arquivos). O Editor de Seção deve também consultar a página de Submissão para verificar se Arquivos Suplementares podem ser compartilhados com os Avaliadores. Se o Autor sentir que os arquivos podem ser apresentados aos Avaliadores, eles serão assinalados; o Editor de Seção pode desassinalar os arquivos se eles não forem adequados para compartilhamento com os Avalidores.</p>
+		<p><i>Estabelecendo a Versão de Avaliação da Submissão</i>. O Editor de Seção ajusta a Versão de Avaliação que os Avaliadores vão ver, (a) selecionando a Versão Original, se ela é adequada, ou (b) carregando uma versão mais adequada. O Editor de Seção pode escolher corrigir problemas menores com o arquivo original usando um processador de texto para fazer as mudanças, salvando o arquivo na área de trabalho do seu computador e carregando o arquivo para o sistema, usando os botões Arquivo.. e Transferir na Versão de Avaliação.</p>
+		<p><i>Submissões Inadequadamente Preparadas</i>. Se o Autor claramente falhou em garantir que a submissão respeita as Diretrizes ao Autor da revista, incluindo o necessário para garantir que a submissão suporta uma Avaliação Sega, o Editor de Seção pode eleger notificar o Autor que o trabalho precisa ser resubmetido. O autor pode então resubmeter uma versão melhorada por email diretamente ao editor, que pode depois carregá-lo como a Versão de Revisão. O Editor de Seção pode também decidir que a submissão  é simplesmente inadequada para a revista e notificar o Autor deste fato. Indo para página de Submissão e clicando em "Arquivar Submissão" envia a submissão para Arquivo.</p>]]>	
+	</section>
+</topic>

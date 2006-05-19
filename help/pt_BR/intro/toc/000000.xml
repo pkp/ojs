@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../toc.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Table of contents for Introduction to OJS. 
+  *
+  * Translation by Suporte Técnico SER, UFPR
+  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
+  *
+  * $Id$
+  -->
+
+<toc id="intro/toc/000000" locale="pt_BR" title="Introdução ao OJS" parent_topic="intro/topic/000000">
+	<topic id="intro/topic/000001" title="FAQ" />
+	<breadcrumb url="intro/topic/000000" title="Introdução ao OJS" />
+</toc>

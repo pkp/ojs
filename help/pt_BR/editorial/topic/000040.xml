@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000040.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Layout Editor's Role - Layout
+  *
+  * Translation by Suporte Técnico SER, UFPR
+  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000040" locale="pt_BR" title="Layout" toc="editorial/toc/000013" key="editorial.layoutEditorsRole.layout">
+	<section><![CDATA[<p>A versão de Layout da submissão foi preparada pelo Editor de Texto para os padrões da revista. O Editor de Layout vai formatar a submissão nos formatos de arquivo e estilos apropriados para a revista. O Editor de Layout vai precisar usar um software externo para preparar os arquivos HTML, PDF, Postscript, etc. (por exemplo, Dreamweaver, Front Page, Acrobat, etc.). É possível disponibilizar na revista um conjunto de Instruções de Layout para os Editores de Layout para ajudar na elaboração das composições para publicação.</p>
+		<p><i>Carregando Composições</i>. Quando um Editor de Layout carrega um arquivo para um formato de Composição, o sistema vai tipicamente identificar o tipo do arquivo baseado em sua extensão (por exemplo, PDF, HTML), assim como fornecer informações sobre o tamanho do arquivo e nome original. Esta etiqueta vai aparecer na tabela de conteúdos da revista associado ao item publicado. O Editor de Layout tem a opção de etiquetar manualmente o arquivo. O Editor de Layout pode carregar mais de um formato de Composição, deletar arquivos que foram carregados, e editar informações tais como nome do arquivo. Ao carregar arquivos HTML, as imagens e folhas de estilo também devem ser carregadas com os arquivos .htm ou .html.</p>
+		<p><i>Arquivos Suplementares</i>. Se o Autor carregou algum arquivo suplementar, eles também devem estar disponíveis. Eles deve ser publicados na revista em seus formatos originais, a menos que a revista tenha uma política que considera sua preparação (como com figuras e ilustrações). Se a política for de publicar os arquivos em seus formatos originais, o Editor de Layout pode desejar consultar os arquivos para garantir que estejam legíveis. Arquivos Suplementares podem ser apagados, trabalhados, e carregados novamente pelo Editor de Layout (assim como pelo Autor, se necessário devido a aspectos do formato do arquivo).</p>
+		]]>
+	
+	</section>
+</topic>

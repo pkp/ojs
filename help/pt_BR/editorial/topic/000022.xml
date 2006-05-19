@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000022.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Section Editor's Role Index - In Editing
+  *
+  * Translation by Suporte Técnico SER, UFPR
+  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000022" locale="pt_BR" title="Em Edição" toc="editorial/toc/000005" key="editorial.sectionEditorsRole.submissions.inEditing">
+	<section>
+		<![CDATA[<p>Submissões nesta fila estão passando pela Edição de Texto, Layout e Leitura de Prova. Quando um Editor de Seção ou Editor clica no título da submissão na fila Em Revisão, são levados à página de Edição da submissão. Quando uma submissão passou do estágio de edição e é enviado para Agendar Submissão (para ser colocado em uma Edição), ela é removida desta lista e entra na fila Agendar Submissão do Editor.</p>]]>	
+	</section>
+</topic>

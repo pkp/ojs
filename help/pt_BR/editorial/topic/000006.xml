@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000006.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Section Editor's Role Index - Review 
+  *
+  * Translation by Suporte Técnico SER, UFPR
+  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000006" locale="pt_BR" title="Revisão" toc="editorial/toc/000004" subtoc="editorial/toc/000006" key="editorial.sectionEditorsRole.review">
+	<section>
+		<![CDATA[<p>O Editor de Seção conduz a revisão aos pares da submissão, embora algumas Seções possam não usar revisão aos pares (por exemplo, Revisão de Livros), e o Editor de Seção entra com uma decisão editorial para a submissão na página de Avalição.</p>]]>	
+	</section>
+</topic>

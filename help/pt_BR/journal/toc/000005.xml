@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE toc SYSTEM "../../../toc.dtd">
+
+<!--
+  * 000005.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Journal Management - Management Pages - Reading Tools.
+  *
+  * Translation by Suporte Técnico SER, UFPR
+  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
+  *
+  * $Id$
+  -->
+
+<toc id="journal/toc/000005" locale="pt_BR" title="Ferramentas de Leitura" parent_topic="journal/topic/000009">
+	<topic id="journal/topic/000026" title="Configurações" />
+	<topic id="journal/topic/000027" title="Versões" />
+	<topic id="journal/topic/000028" title="Contextos" />
+
+	<breadcrumb url="journal/topic/000000" title="Gerenciamento das Revistas" />
+	<breadcrumb url="journal/topic/000001" title="Páginas de Gerenciamento" />
+	<breadcrumb url="journal/topic/000009" title="Ferramentas de Leitura" />
+</toc>

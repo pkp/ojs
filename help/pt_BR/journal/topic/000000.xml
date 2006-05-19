@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Journal Management Main 
+  *
+  * Translation by Suporte Técnico SER, UFPR
+  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000000" locale="pt_BR" title="Gerenciamento da Revista" toc="index/toc/000000" subtoc="journal/toc/000000" key="journal.index">
+	<section>
+		<![CDATA[<p>O Gerente da Revista age em todos os aspectos de Gerenciamento da Revista, em conjunto com os Editores, ajustando e configurando o sistema da revista para associar usuários às várias funções necessárias para rodar a revista. O Gerenciamento da Revista começa ajustando a revista e inclui a criação de usuários e associando-os às várias funções necessárias para produzir uma revista, assim como ajustando as várias Seções da revista.</p>]]>	
+	</section>
+</topic>

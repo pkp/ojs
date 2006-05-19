@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Introduction to OJS Main 
+  *
+  * Translation by Suporte Técnico SER, UFPR
+  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
+  *
+  * $Id$
+  -->
+
+<topic id="intro/topic/000000" locale="pt_BR" title="Introdução ao OJS" toc="index/toc/000000" subtoc="intro/toc/000000" key="intro.index">
+	<section>
+		<![CDATA[<p>Esta revista o programa Open Journal System para gerenciamento e suporte a publicação. OJS é uma solução em código aberto para gerenciamento e publicação de revistas acadêmicas online. OJS é um editor, gerenciador e sistema de publicação altamente flexível, que pode ser baixado gratuitamente e instalado em um servidor Web local. Ele foi projetado para reduzir o tempo e energia devotados  às tarefas de escritório e gerenciamento associadas à edição de uma revista, enquanto melhora a eficiência do processo editorial. Procura melhorar a qualidade das publicações acadêmicas através de um número de inovações, fazendo as políticas da revista mais transparentes para melhorar a indexação.</p>]]>	
+	</section>
+	<section title="Por Trás do Sistema">
+		<![CDATA[
+		<p><i>O OJS é um sistema para gerenciamento e publicação de revistas em uma página na web</i>. O OJS cobre todos os aspectos de publicação online de revistas, ajustando a página da revista, às submissões dos autores para revisão aos pares, edição, arquivamento, e indexação da revista. O OJS também ajuda a gerenciar aspectos pessoais de como organizar uma revista, incluindo tomar trexos do trabalho do editor, revisores, e autores, notificando leitores, e ajudando na comunicação.</p>
+		<p><i>O OJS é Flexível e Escalável</i>. Uma única instalação do OJS pode suportar a operação de muitas revistas. Cada revista tem seu próprio URL (Universal Resource Identifire) assim como seu próprio visual e formato. O OJS pode habilitar um único editor para gerenciar uma revista e a página da revista. Ou o OJS poderá suportar um time internacional de editores com responsabilidades para múltiplas seções da revista.</p>
+		<p><i>O OJS suporta o principio de Extensão de Acesso</i>. Este sistema não apenas ajuda na publicação da revista, mas demonstra o quanto o custo de publicação de revistas pode ser reduzido ao ponto onde fornece aos leitores com "acesso livre" ao conteúdo da revista pode ser uma opção viável. O caso para acesso livre é descrito em uma série de artigos originados deste projeto que está publicado para acesso livre em <a href="http://pkp.sfu.ca/" target="_blank">Public Knowledge Project</a>.</p>
+		<p><i>A origen do OJS</i>. O sistema foi primeiramente liberado em 2002 como uma pesquisa e iniciativa desenvolvida pelo Public Knowledge Project na University of British Columbia, com o suporte do Social Sciences and Humanities Research Council do Canadá, Max Bell Foundation, do Pacific Press Endowment, e do MacArthur Foundation. Para mais informações, veja <a href="http://pkp.sfu.ca/" target="_blank">Public Knowledge Project</a>.</p>]]>
+	</section>
+	<section title="Estrutura de Gerenciamento">
+		<![CDATA[
+		<p><h5>Processo Editorial</h5><p> O OJS move submissões à revista através de cinco passos no processo editorial, que serão gerenciados por um ou mais editores.</p>
+		<ol><li><em>Fila de Submissões:</em> Os itens começam aqui e são associados a um editor.</li>
+			<li><em>Revisão da Submissão:</em> Os itens passam por uma revisão aos pares e uma decisão editorial.</li>
+			<li><em>Edição da Submissão:</em> Os itens passam por um Editor de Texto, um Editor de Layout e Leitores de Prova.</li>
+			<li><em>Fila de Agendamento:</em> Os itens são associados a uma edição e/ou volume.</li>
+			<li><em>Tabela de Conteúdo:</em> Os itens ordenados para publicação e edições publicadas.</li></ol>
+		<h5>Funções Editoriais</h5>(Associada na Administração da Revista)
+		<ul><li><em>Gerente da Revista:</em> Configura a revista e funções editoriais (pode também servir como um Editor e outras funções também).</li>
+			<li><em>Editor:</em> supervisiona o processo editorial; pode associar submissões para Editores de Seção para acompanharem através da Revisão da Submissão e Edição da Submissão; administra o agendamento dos conteúdos e publica da revista.</li>
+			<li><em>Editor de Seção:</em> Supervisiona a Revisão das Submissões e possivelmente a Edição das Submissões para aquelas que lhe forma atribuídas.</li>
+			<li><em>Editor de Texto:</em> Trabalha com as submissões para melhorar a gramática e clareza, formula questões ao autor sobre possíveis erros, e garante que o estilo do texto obedeça fielmente às normas bibliográficas e textuais da revista.</li>
+			<li><em>Editor de Layout:</em> Transforma o texto editado da submissão nas composições em arquivos HTML, PDF, e/ou PS, formatos adequados para publicação eletrônica.</li>
+			<li><em>Leitor de Prova:</em> Lê as composições procurando por erros tipográficos e de formatação.</li></ul></p>
+		<p align="center"><a href="{$baseUrl}/templates/images/edprocesslarge.png"><img src="{$baseUrl}/templates/images/edprocess.png" width="480" height="542" border="0" alt="" /></a></p>
+]]>
+	</section>
+	<section title="Suporte">
+		<![CDATA[<p>Um Forum para suporte técnico e submissão de bugs do sistema pode ser acessado via página eletrônica do <a href="http://pkp.sfu.ca/support/forum/" target="_blank">PKP</a>.</p>
+		<p>Usuários que possuem perguntas sobre como interagir com uma revista eletrônica particular que usa o sistema OJS ou sobre a política de tal revista, sã encorajados a entrar em contato com o suporte, listado na página "Sobre" da revista.</p>]]>
+	</section>
+</topic>

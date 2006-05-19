@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000039.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Layout Editor's Role - Submissions
+  *
+  * Translation by Suporte Técnico SER, UFPR
+  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000039" locale="pt_BR" title="Submissões" toc="editorial/toc/000013" key="editorial.layoutEditorsRole.submissions">
+	<section>
+		<![CDATA[<p>Uma vez que o Editor de Layout logou, clicando no link Editor de Layout na Página do Usuário é levado à fila de Submissões. Esta fila lista os trabalhos que forma solicitados que o Editor de Layout formate, bem como atalhos às submissões que ele formatou no passado. O Editor de Layout clica no título do trabalho e é levado para página de Edição de Layout para esta submissão.</p>]]>	
+	</section>
+</topic>

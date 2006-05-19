@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../toc.dtd">
+
+<!--
+  * 000013.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Editorial Process - Layout Editor's Role
+  *
+  * Translation by Suporte Técnico SER, UFPR
+  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
+  *
+  * $Id$
+  -->
+
+<toc id="editorial/toc/000013" locale="pt_BR" title="Funções do Editor de Layout" parent_topic="editorial/topic/000013">
+	<topic id="editorial/topic/000039" title="Submissões" />
+	<topic id="editorial/topic/000040" title="Layout" />
+	<topic id="editorial/topic/000041" title="Leitura de Prova" />
+
+	<breadcrumb url="editorial/topic/000000" title="Processo Editorial" />
+	<breadcrumb url="editorial/topic/000013" title="Funções do Editor de Layout" />
+</toc>

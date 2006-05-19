@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000014.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Users - Email Users
+  *
+  * Translation by Suporte Técnico SER, UFPR
+  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000014" locale="pt_BR" title="Enviar Email" toc="journal/toc/000002" key="journal.users.emailUsers">
+	<section>
+		<![CDATA[
+<p>O Gerente da Revista pode enviar emails aos usuários ou a um sub-conjunto deles. Note que a todos os Leitores é enviado um email notificando a publicação de uma nova edição com uma cópia do Sumário desta Edição ou, no caso de {help_topic key="publishing.index" text="publicações"} contínuas, com o título e autor da submissão. A revista deve ter uma Política de Privacidade, cadastrada em Configurações e disponível em Sobre a revista, que descreve como a privacidade dos usuários desta revista será respeitada.</p>]]>
+	</section>
+</topic>

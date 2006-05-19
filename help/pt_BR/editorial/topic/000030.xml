@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000030.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Reviewer's Role Index - Submissions 
+  *
+  * Translation by Suporte Técnico SER, UFPR
+  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000030" locale="pt_BR" title="Submissões" toc="editorial/toc/000008" key="editorial.reviewersRole.submissions">
+	<section>
+		<![CDATA[<p>Ao logar na Revista, o Avaliador é direcionado à Página do Usuário. Clicando na Função de Avaliador (já que um Avaliador  pode ser registrado dentre outras funções, com um Autor), o Avaliador é conduzido à página de Submissões. Esta página lista as submissões que foram designadas ao Avaliador ou estão em processo de Avaliação. A fila de Submissões também indica qual rodada de Avaliação a submissão está, como alguns Avaliadores podem ter entrado em uma segunda rodada de revisão, seguindo a decisão do Editor de Seção de que a submissão deve ser "Submetida novamente para Avaliação". Esta página também fornece acesso a Avaliações já realizadas pelo Avaliador na revista. </p>]]>	
+	</section>
+</topic>

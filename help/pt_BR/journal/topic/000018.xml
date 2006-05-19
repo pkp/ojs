@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000018.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Layout Editor 
+  *
+  * Translation by Suporte Técnico SER, UFPR
+  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000018" locale="pt_BR" title="Editor de Layout" toc="journal/toc/000003" key="journal.roles.layoutEditor">
+	<section>
+		<![CDATA[<p>O Editor de Layout transforma a versão editada da submissão em composições HTML, PDF, PS, etc., que a revista elegeu como formatos para publicações eletrônicas. Este sistema não dispõe de programas para conversão de documentos editáveis para os formatos de composição, mas o Editor de Layout deve ter acesso a pacotes de programas que façam este trabalho (com Adobe Acrobat para PDF, por exemplo; ou Dreamweaver for HTML), que apresentam os artigos na tela com um layout legível e bem formatado.</p>]]>	
+	</section>
+</topic>

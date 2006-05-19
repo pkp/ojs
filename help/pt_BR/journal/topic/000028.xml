@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000028.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Reading Tools - Contexts
+  *
+  * Translation by Suporte Técnico SER, UFPR
+  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000028" locale="pt_BR" title="Contextos" toc="journal/toc/000005" key="journal.managementPages.readingTools.contexts">
+	<section>
+		<![CDATA[
+		<p>Cada conjunto de Ferramentas de Leitura é composto de ferramentas individuais (por exemplo, Estudos Relacionados, Forum Online, etc.) com cada ferramenta consistindo de um número de bases de dados relevantes. Estas bases de dados podem ser adicionadas, editadas ou removidas. O grupo também pode ser gravado.</p>
+		<p><i>Metadados par um Item em um Grupo</i>. O Gerente da Reviusta pode alterar o nome da ferramenta. Está também disponível uma opção para determinar se as palavras-chave do autor (as padrão) ou o nome do autor (por exemplo, para uso com Outros Trabalhos do Autor) vão ser usadas na busca da base de dados. Uma segunda opção, usada com Definir Termos, permite ao Leitor selecionar o termo de busca com um clique duplo sobre qualquer palavra do texto do item sendo lido na revista. O Gerente da Revista pode usar estas opções para construir suas próprias ferramentas de busca.</p>
+		<p><i>Editar Buscas para cada Ferramenta</i>. Usando Buscar, o Gerente da Revista pode editar ou remover a URL de busca para cada base de dados em uma ferramenta, assim como reordenar as bases de dados que aparecem na ferramenta. Para cada base de dados, uma URL é fornecida e vai permitir que o Leitor aprenda mais sobre a base de dados, e uma URL para permitir que a busca seja conduzida usando as palavras-chave do autor ou nome do autor (Veja Metadados sob Contexto em Ferramentas de Leitura). Existem dois tipos de de buscas que podem ser configuradas, uma busca por GET, e se esta não funcionar com a base de dados uma busca POST. </p>
+		]]>
+	</section>
+	<section title="Buscas por GET">
+		<![CDATA[
+		<p>Para uma busca por GET, execute uma busca e observe a URL resultante. Por exemplo, no Google, uma busca por "FOOBAR" resulta na URL</p>
+		<p><samp class="code">http://www.google.ca/search?hl=en&q=FOOBAR&meta=</samp></p>
+		<p>Já que nós precisamos que o parâmentro que especifica a busca apareceça no final da URL, nós podemos mudar a ordem dos parâmetros na consulta GET para resultar</p>
+		<p><samp class="code">http://www.google.ca/search?hl=en&meta=&q=FOOBAR</samp></p>
+		<p>nos dando a seguinte URL de busca</p>
+		<p><samp class="code">http://www.google.ca/search?hl=en&meta=&q=</samp></p>
+		<p>para a Ferramenta de Leitura. Entretanto, já que os outros parâmentros são desnecessários neste caso, nós podemos usar a seguinte URL simplificada</p>
+		<p><samp class="code">http://www.google.ca/search?q=</samp></p>
+		<p>para Ferramenta de Leitura.</p>
+		]]>
+	</section>
+	<section title="Buscas por POST">
+		<![CDATA[
+		<p>Para consultas por POST, é mais complicado. Novamente, olhando para o Google, você pode ver os codigos fonte das páginas, e note <samp class="code">&lt;form action="/search" ...&gt;</samp>, nos dando uma base da URL inicial <samp class="code">http://www.google.com/search</samp>. Você pode então olhar para cada elemento <samp class="code">&lt;input ...&gt;</samp> e <samp class="code">&lt;select ... &gt;</samp> no formulário, e adicioná-los como pares <samp class="code">name=value</samp> separados por <samp class="code">&</samp> ao final da URL. O elemento que especifica a caixa de texto que permite a entrada de texto pelo usuário (no caso do Google, chamado <samp class="code">q</samp>), deve ir ao fim da URL como <samp class="code">name=</samp>. Assim para o Google nós obtemos <samp class="code">http://www.google.com/search?q=</samp>.</p>
+		<p>Uma forma mais fácil para formularios POST seria copiar o codigo HTML para um arquivo, mudar <samp class="code">method=post</samp> para <samp class="code">method=get</samp> no campo apropriado do formulario, e mudar o valor de <samp class="code">action=</samp> no formulário para formar uma URL completa, por exemplo, <samp class="code">http://www.google.com/search</samp> em vez de apenas <samp class="code">/search</samp>. Você pode ver depois o arquivo HTML modificado em seu navegador e usar o metodo GET acima para construir a URL.</p>
+		<p>Já que algumas sistemas não suportam consultas GET, se você achar que o metodo acima não funciona, você pode usar o campo de dados "Dados via POST". Se o exemplo dado acima precisar que os dados sejam postados, você precisará entrar com <samp class="code">http://www.google.com/search</samp> para URL de busca e <samp class="code">q=</samp> para os dados de POST. Note que o parâmentro especicando o termo a ser pesquisado deve sempre vir no final dos dados POST, se aplicável, e em outro caso por último no campo da URL de pesquisa.</p>
+		<p>Esteja certo de testar sua URL para garantir que ela funciona corretamente, adicionando um termo ao fim da URL e testando-a para verificar se ela mostra o resultado esperado da busca. note que com formularios POST isto não será sempre possívle, dependendo do site. Para URLs que não tenham um sistema de busca apropriado, outra possibilidade é usar o Google e restringir por site. Você pode usar uma consulta como <samp class="code">site:mysite.com FOOBAR</samp> no Google para encontrar o termo "FOOBAR" somente em eumesmo.com.br. Isso é usado na atual Ferramenta de Leitura para varios sites.</p>
+		]]>
+	</section>
+</topic>

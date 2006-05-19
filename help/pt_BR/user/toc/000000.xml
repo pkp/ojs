@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE toc SYSTEM "../../../toc.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for User Interface. 
+  *
+  * Translation by Suporte Técnico SER, UFPR
+  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
+  *
+  * $Id$
+  -->
+
+<toc id="user/toc/000000" locale="pt_BR" title="Web Site da Revista" parent_topic="user/topic/000000">
+	<topic id="user/topic/000001" title="Página Inicial" />
+	<topic id="user/topic/000002" title="Sobre" />
+	<topic id="user/topic/000007" title="Página do Usuário" />
+	<topic id="user/topic/000003" title="Cadastro &amp; Perfil" />
+	<topic id="user/topic/000004" title="Atual &amp; Arquivos" />
+	<topic id="user/topic/000005" title="Pesquisa &amp; Procura" />
+	<topic id="user/topic/000006" title="Ferramentas de Leitura" />
+
+	<breadcrumb url="user/topic/000000" title="Web Site da Revista" />
+</toc>

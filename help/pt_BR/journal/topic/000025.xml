@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000025.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Subscriptions 
+  *
+  * Translation by Suporte Técnico SER, UFPR
+  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000025" locale="pt_BR" title="Assinaturas" toc="journal/toc/000001" key="journal.managementPages.subscriptions">
+	<section>
+		<![CDATA[<p>O OJS suporta assinatura em revistas fornecendo um componente de gerenciamento de assinaturas e uma proteção de senha correspondente a cada conteúdo da revista online. As assinaturas podem ser gerenciadas por cada usuário individualmente, organização ou instituição. Uma assinatura na revista pode também oferecer acesso a edições anteriores. Em Gerenciamento de Edições, o Editor permite acesso livre aos leitores do conteúdo de uma edição ou artigos de zero a 24 meses depois de sua publicação inicial e disponibilidade aos assinantes.</p>
+		<p>Os Gerentes de Revistas, Editores, Editores de Seção, Editores de Layout, Editores de Texto e Leitores de Prova sempre têm acesso livre à revista que são assinantes.</p>
+		<p><i>Distribuindo o Módulo de Assinatura</i>. O Gerente da Revista deve indicar em Configuração, 4.3 Administração de Assinaturas, que a revista vai usar este sistema para gerenciar suas assinaturas e que alguns, associados como Gerentes de Revista, foram designados para gerenciar estas características.</p>]]>
+	</section>
+	
+	<section title="Tipos de Assinatura">
+		<![CDATA[<p><i>Configurando os Tipos de Assinatura</i>. O primeiro passo na configuração do gerenciamento de assinaturas é designar os tipos de assinaturas que a revista oferece. As Revista tipicamente oferecem, por exemplo, assinaturas individuais e assinaturas institucionais. Algumas revistas podem ter ofertas especiais para membros de uma organização ou estudantes. O OJS suporta o gerenciamento de impressão e/ou assinaturas online. Mais de um tipo de assinatura pode ser criada para cobrir longos períodos de tempo (12 meses, 36 meses).</p>
+		<p><i>Opções para tipos de Assinatura</i>. Para assinaturas "institucionais", use a opção "validar via domínio ou autenticação IP", como todos os membros de uma instituição acessam a revista de um domínio comum ou endereço IP, vai ser permitido acesso sem senha. Similarmente, a opção "membros de uma associação ou organização" deve ser usada para assinatura de membros, se livre para membros ou em um desconto. Use a opção "Visível Publicamente" para fazer o tipo de assinatura e sua taxa aparecerem sob Assinaturas em Sobre a Revista. Enquanto a maioria das assinaturas são tipicamente mostradas em Sobre, um tipo criado para contas internas, assinatura da equipe, e/ou para propósito de gerenciamento, por exemplo, não vão aparecer na página Sobre.</p>]]>
+	</section>
+
+	<section title="Assinaturas">
+		<![CDATA[<p><i>Criando Assinaturas</i>. Para assinantes individuais, o Gerente (de Assianturas) da Revista deve registrar o assinante como um Leitor, se não estiver ainda registrado, e depois na página de Criar Assinaturas, entre com o tipo e datas para assinatura. Ao salvar esta informação, o assinante receberá um email com um usuário, que vai funcionar com todo conteúdo que a revista publica até que o usuário seja removido da lista de Assinaturas pelo Gerente da Revista.</p>
+		<p><i>Assinaturas Institucionais e Organizacionais</i>. Para assinaturas institucionais, a pessoa contato na instituição deve ser associada como um leitor, e depois escolhida pelo Gerente (de Assinaturas) da Revista na página de Criar Assinaturas. A pessoa contato deve fornecer o domínio e/ou endereço IP da instituição, que são usados para validar a conta, poupando os usuários da instituição a necessidade de ter contas de usuário individuais para acessar o conteúdo assinado. Organizações com lista de membros podem ter suas listas importadas para o sistema, através da função Importar Usuários em Gerenciamento da Revista.</p>]]>
+	</section>
+</topic>

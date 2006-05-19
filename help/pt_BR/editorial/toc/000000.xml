@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../toc.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Editorial Process. 
+  *
+  * Translation by Suporte Técnico SER, UFPR
+  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
+  *
+  * $Id$
+  -->
+
+<toc id="editorial/toc/000000" locale="pt_BR" title="Processo Editorial" parent_topic="editorial/topic/000000">
+	<topic id="editorial/topic/000001" title="Funções do Editor" />
+	<topic id="editorial/topic/000004" title="Funções do Editor de Seção" />
+	<topic id="editorial/topic/000008" title="Funções do Avaliador" />
+	<topic id="editorial/topic/000009" title="Funções do Autor" />
+	<topic id="editorial/topic/000012" title="Funções do Editor de Texto" />
+	<topic id="editorial/topic/000013" title="Funções do Editor de Layout" />
+	<topic id="editorial/topic/000014" title="Funções do Leitor de Prova" />
+
+	<breadcrumb url="editorial/topic/000000" title="Processo Editorial" />
+</toc>

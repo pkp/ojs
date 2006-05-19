@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000004.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author Submission Process - Supplementary Files 
+  *
+  * Translation by Suporte Técnico SER, UFPR
+  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
+  *
+  * $Id$
+  -->
+
+<topic id="submission/topic/000004" locale="pt_BR" title="Arquivos Suplementares" toc="submission/toc/000000" key="submission.supplementaryFiles">
+	<section>
+		<![CDATA[
+		<p>O Autor tem a possibilidade de carregar Arquivos Suplementares no passo 4 do Processo de Submissão. Os Arquivos Suplementares compreendem conjuntos de dados de pesquisa, instrumentos de pesquisa, textos fonte ou outro material que podem formar se não um apêndice para submissão, garantir que sejam tratados como documentos separados já que eles deve ter seu valor e seus próprios méritos. Complementando, o Autor vai indexar os Arquivos Suplementares independente da submissão assim permitindo que o Arquivo seja parte do grande índice e ser encontrado por aqueles que procuram por este tipo particular de item.</p>
+		<p><i>Formatos de Arquivos Suplementares</i>. Os Arquivos Suplementares são carregados em seus formatos originais - onde não há restrições - e permanecem neste formato, em oposição ao resto da submissão que deve estar em um formato manuscrito padrão e serão transformados em um formato padrão de publicação. Isto significa que conjuntos de dados que estão disponíveis em planilhas ou aprsentações em Flash podem ser carregadas e preservadas naqueles formatos; isso pode gerar desafios para os Leitores. Os Autores precisam ter isso em mente talvez fornecendo, na descrição do Arquivo Suplementar, locais onde baixar gratuitamente programas para abrir e ver o Arquivo Suplementar.</p>]]>
+	</section>
+</topic>

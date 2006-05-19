@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../toc.dtd">
+
+<!--
+  * 000011.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Editorial Process - Author's Role - Editing
+  *
+  * Translation by Suporte Técnico SER, UFPR
+  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
+  *
+  * $Id$
+  -->
+
+<toc id="editorial/toc/000011" locale="pt_BR" title="Edição" parent_topic="editorial/topic/000011">
+	<topic id="editorial/topic/000035" title="Edição de Texto" />
+	<topic id="editorial/topic/000036" title="Leitura de Prova" />
+
+	<breadcrumb url="editorial/topic/000000" title="Processo Editorial" />
+	<breadcrumb url="editorial/topic/000009" title="Funções do Autor" />
+	<breadcrumb url="editorial/topic/000011" title="Edição" />
+</toc>

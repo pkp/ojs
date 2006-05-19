@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000002.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Site Administration - Site Management 
+  *
+  * Translation by Suporte Técnico SER, UFPR
+  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
+  *
+  * $Id$
+  -->
+
+<topic id="site/topic/000002" locale="pt_BR" title="Gerenciamento do Portal" toc="site/toc/000000" key="site.siteManagement">
+	<section>
+		<![CDATA[<p>O OJS foi projetado para ser um sistema multi-revistas, e o Administrador do Portal é responsável pelas configurações em nível de portal e criação de novas revistas a serem hospedados no mesmo portal.</p>]]>	
+	</section>
+	
+	<section title="Ajustes do Portal">
+		<![CDATA[<p>Informações básicas são cadastradas pelo administrador do Portal e são aplicaveias a todas as revistas hospedadas no portal, incluindo o Título e a Descrição do portal, e informações de contato.</p>
+		<p><em>Redirecionamento da Revista.</em> Esta configuração pode ser usada para garantir que todas as requisições são redirecionadas para um portal de revista específico. Tipicamente esta configuração é usada quando um site está hospedando apenas uma revista.</p>]]>
+	</section>
+	
+	<section title="Revistas Hospedadas">
+		<![CDATA[<p>Como o OJS permite qualquer número individual e distinto de portais de revistas a serem gerados, novas revistas podem ser criadas a qualquer momento. Cada revista que foi criada pode ser acessada por uma única URL do portal do OJS que é baseado em um nome de caminho definido pelo Administrador do Portal. Revistas que estão atualmente em processo de configuração podem ser escondidas do portal principal do OJS até que estejam prontas para serem colocadas no ar.</p>]]>
+	</section>
+	
+	<section title="Idiomas">
+		<![CDATA[<p>O OJS foi projetado para ser um sistema multi-lingüe, permitindo que as revistas suportem uma variedade de idiomas hospedadas em um único portal. O Administrador do Portal pode especificar o idioma padrão para o sistema e instalar traduções para que se tornem disponiveis nas revistas.</p>
+		<p>Pacotes adicionais de idiomas tipicamente estarão disponíveis no <a href="http://pkp.sfu.ca/" target="_blank">portal web</a> do Open Journal System assim que as traduções (contribuição dos usuários) são recebidas. Estes pacotes podem ser instalados em um sistema OJS existente para fazê-lo disponível às revistas.</p>]]>
+	</section>
+</topic>

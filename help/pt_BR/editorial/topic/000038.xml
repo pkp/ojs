@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000038.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Copyeditor's Role - Copyediting
+  *
+  * Translation by Suporte Técnico SER, UFPR
+  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000038" locale="pt_BR" title="Edição de Texto" toc="editorial/toc/000012" key="editorial.copyeditorsRole.copyediting">
+	<section>
+<![CDATA[<p>Na página de Edição de Texto, a edição de texto é dividida em três passos. A Edição de Texto é feita diretamente no arquivo da submissão, com sugestões para melhorar o entendimento do conteúdo, e com mudanças para garantir que a submissão atende ao formato e estilo da revista. O arquivo é então salvo no computador do Autor ou Editor de Texto, e carregado para o Passo apropriado. Isso torna o texto editado disponível para o próximo passo, ou no caso do Passo 3, para o estágio de Layout.</p>
+		<p><i>Passo 1</i><br>No primeiro passo, o Editor de Texto clica no nome do arquivo para baixa-lo e abri-lo. Depois de abrir a submissão no Passo 1, o Editor de Texto edita o texto, seguindo os padrões de edição de texto da revista. (O sistema vem com dois conjuntos padrão de instruções de edição de texto, que o Editor pode selecionar ou pode carregar um novo conjunto de instruções de edição de texto). O Editor de Texto grava todas as mudanças e correções sugeridas, assim como Perguntas ao Autor (por exemplo, faltando numeração de página) e/ou Perguntas ao Editor (por exemplo, material de estilo e padrões da revista). Quando concluída a edição inicial do texto, o Editor de Texto salva o arquivo no computador. Uma vez que a edição de texto foi finalizada, o Editor de Texto carrega o texto editado para o Autor.</p>
+		<p><i>Conclusão do Passo 1</i><br>Uma vez que o texto editado foi carregado e os metadados revisados, o Editor de Texto clica no ícone de email sob "Concluída" para o Passo 1. Isso leva a um email para o Autor e Editor, informando eles que o Passo 1 esta completo. O Editor de Texto deve anotar no email se existe alguma Pergunta ao Editor para o Editore de Seção considerar.</p>
+		<p><i>Passo 2</i><br>O autor abre a versão editada do texto e revisa o texto, assim como responde a qualquer Pergunta ao Autor, diretamente no arquivo. O Autor salva o arquivo e carrega-o no Passo 2, que coloca o arquivo no Passo 3 para o Editor de Texto fazer a edição final do texto. O editor vai responder qualquer Pergunta do Editor pr email para garantir que o autor e o Editor não carreguem versões do arquivo sobrescrevendo um ao outro. O Autor envia um email de conclusão ao Editor de Texto e Editor, iniciando, de fato, o terceiro passo.</p>
+		<p><i>Passo 3</i><br>O Editor de Texto abre o arquivo editado no Passo 3 e cria uma versão limpa (com todas as anotações removidas) das respostas do Editor e Autor, que está pronta para ser transformada no estagio de Layout para a versão de publicação da submissão. O editor de Texto carrega a o texto limpo (formatada para os padrões da revista) no Passo 3, que cria a versão de Layout para o Editor de Layout da página de Edição, e usa o ícone de email sobre "Concluída" para notificar o Editor de Layout e Editor de Seção que a Edição de Texto agora está concluída.</p>
+]]>
+	</section>
+</topic>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000011.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Users - All Users 
+  *
+  * Translation by Suporte Técnico SER, UFPR
+  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000011" locale="pt_BR" title="Todos os Usuários" toc="journal/toc/000002" key="journal.users.allUsers">
+	<section>
+		<![CDATA[<p>Esta lista inclui cada usuário que estiver registrado nesta revista ou em um conjunto de revistas neste portal. Ela pode ser ordenada por Funções. O Gerente da Revista tem a capacidade de se registrar como qualquer usuário. Isso pode ser extremamente útil quando for necessário prestar assistência ao usuário à distância, porque isso permite que o Gerente da Revista ganhe a percepção mais precisa do que está dando errado.</p>]]>	
+	</section>
+</topic>

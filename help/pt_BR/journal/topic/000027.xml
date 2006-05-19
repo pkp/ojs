@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000027.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Reading Tools - Versions
+  *
+  * Translation by Suporte Técnico SER, UFPR
+  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000027" locale="pt_BR" title="Versões" toc="journal/toc/000005" key="journal.managementPages.readingTools.versions">
+	<section>
+		<![CDATA[
+		<p>O Gerente da Revista pode editar, incluir e verificar qualquer disciplina e conjunto de áreas de Ferramentas de Leitura. Essas Ferramentas usam uma base de dados que foi selecionada por causa de sua relevancia e acessibilidade por todos os leitores. Por causa da mudança de localização e URL dessas bases de dados, o Gerente da Revista precisa poder mudar ou até mesmo remover algumas localidades. As ferramentas são agrupadas em categorias (por exemplo, Estudos Relacionados, Dissertações, etc.), com um número de bases de dados em cada. Localização refere-se ao idioma em que a Ferramenta de Leitura opera em termos de etiquetas usadas pela revista (embora a base de dados possa estar em algum outro idioma) então esta ferramenta pode ser preparada em outros idiomas, se a revista estiver configurada para operar em tal idioma (veja Idiomas sob Gerenciamento da Revista).</p>
+		<p><i>Validar Ferramentas de Leitura</i>. Esta opção vai verificar se a URL de busca que está sendo usada com cada base de dados para encontrar itens que são relevantes para o item que a ferramenta acompanha (usando os termos de indexação do autor). Se a URL for inválida o Gerente da Revista pode corrigir esta configuração procurando a nova URL, pedindo ajuda para outras pessoas, ou removendo a base de dados do conjunto de Ferramentas de Leitura. Assim como esta opção roda em todas as bases de dados, ela leva algum tempo para completar e vai resultar em uma indicação para cada base de dados atestando sua validade ou o núcleo do problema.</p>
+		<p><i>Metadados para cada Ferramenta de Leitura</i>. O metadado para cada conjunto de ferramentas prove o título da ferramenta e uma breve descrição, permitindo que o Gerente da Revista modifique a organização das ferramentas ou criar novos conjuntos.</p>
+		<p><i>Contexto para o Conjunto</i>. Cada conjunto de ferramentas consiste de varios grupos de bases de dados (por exemplo, Estudos Relacionados, Forum Online, etc.) com cada grupo consistindo de um número de bases de dados relevantes. Estas bases de dados podem ser incluidas, editadas ou removidas. O grupo pode também ser reordenado.</p>
+		<p><i>Exportar os Dados</i>. Se o Gerente da Revista desenvolver Ferramentas de Leitura adicionais, estas podem ser exportadas ao Public Knowlege Project para uso por outras revista em campos relacionados.</p>
+		]]>
+	</section>
+</topic>

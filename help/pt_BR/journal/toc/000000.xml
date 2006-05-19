@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE toc SYSTEM "../../../toc.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Journal Management. 
+  *
+  * Translation by Suporte Técnico SER, UFPR
+  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
+  *
+  * $Id$
+  -->
+
+<toc id="journal/toc/000000" locale="pt_BR" title="Gerenciamento das Revistas" parent_topic="journal/topic/000000">
+	<topic id="journal/topic/000001" title="Páginas de Gerenciamento" />
+	<topic id="journal/topic/000002" title="Usuários" />
+	<topic id="journal/topic/000003" title="Funções" />
+	<breadcrumb url="journal/topic/000000" title="Gerenciamento das Revistas" />
+</toc>

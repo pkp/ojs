@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000015.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Journal Manager 
+  *
+  * Translation by Suporte Técnico SER, UFPR
+  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000015" locale="pt_BR" title="Gerente da Revista" toc="journal/toc/000003" key="journal.roles.journalManager">
+	<section>
+		<![CDATA[<p>O que o Gerente da Revista gerencia é o sistema de publicação. Isso não envolve nenhuma habilidade especial, mas envolve o preenximento de modelos e carga de arquivos. O Gerente da Revista realiza a {help_topic key="journal.managementPages.setup" text="Configuração"} da revista, envolve Editores, Editores de Seção, Editores de Texto, Editores de Layout, Leitores de Prova, e Avaliadores. Atualmente, o nome e email dos Avaliadores, podem ser importados para o sistema se elese existem em uma base de dados, através da função Importar Pessoas em {help_topic key="journal.users.index" text="Pessoas"}. O Gerente da revista também tem acesso aos outros sistemas de gerenciamento da revista, e pode criar novas seções para revista, editar o conjunto padrão de emails que o sistema usa, gerenciar as {help_topic key="journal.managementPages.readingTools" text="Ferramentas de Leitura"} que estão disponíveis com esta revista, e ver as {help_topic key="journal.managementPages.statistics" text="Estatísticas da Revista"} que o sistema pode gerar.</p>
+		<p>Note que embora a função de Gerente da Revista seja ostencivamente uma função por-jornal, gerentes de revistas podem ser considerados um super-usuário nesta versão do OJS. Em atualizações futuras, restrições de segurança adicionais podem ser implementadas para reforçar uma restrita separação de forças entre resvistas individuais hospedadas dentro de um único sistema OJS.
+		</p> ]]>	
+	</section>
+</topic>

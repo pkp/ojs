@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000013.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Layout Editor's Role Index 
+  *
+  * Translation by Suporte Técnico SER, UFPR
+  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000013" locale="pt_BR" title="Funções do Editor de Layout" toc="editorial/toc/000000" subtoc="editorial/toc/000013" key="editorial.layoutEditorsRole">
+	<section>
+		<![CDATA[<p>O Editor de Layout recebe um pedido por email do Editor de Texto ou do Editor de Seção solicitando a formatação do layout de uma submissão que tenha completado o estágio de edição de Texto. Um Editor de Layout que não está apto a fazê-lo, simplesmente responde por email ao Editor de Seção.</p>]]>	
+	</section>
+</topic>

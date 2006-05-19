@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Index Help Page 
+  *
+  * Translation by Suporte Técnico SER, UFPR
+  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
+  *
+  * $Id$
+  -->
+
+<topic id="index/topic/000000" locale="pt_BR" title="Ajuda do OJS" toc="index/toc/000000" key="index.index">
+	<section>
+		<![CDATA[<p>O documento de ajuda ao Open Journal Sistem (OJS) foi projetado para assistir o usuário no processo de leitura, submissão, edição, e publicação de itens em revistas acadêmicas e de interesse geral. Pode também ser compreendido como um manual para o OJS que descreve o escopo e trabalhos deste programa de gerenciamento de revistas. O documento de Ajuda também fornece conselhos editoriais em praticas comuns para publicação em revistas acadêmicas. Complementando este documento, usuários têm acesso ao pessoal do suporte técnico da revista, que estarão listados em "Sobre" a Revista, sob Contatos.</p>
+		<p>Devido ao OJS empregar funções de publicação designadas ou títulos para cada função e processo - do Gerente da Revista que vê as Configurações da Revista ao Autor que faz leitura de prova das composições - cada tópico coberto na Ajuda refere-se a que função deve fazer o quê. Com o mesmo principio, acesso aos documentos são determinados por quem está trabalhando com eles no sistema. Isto é, a Ajuda no contexto específico. O que cada um vê depende de suas funções; pessoas podem ter mais de uma função no OJS (um Avaliador pode também ser um Autor ou um Gerente da Revista pode ser um Editor). O que um vê também depende de onde ele está trabalhando no OJS. A função e localização determinam qual tópico de Ajuda vai aparecer, embora o usuário possa trabalhar em outros tópicos relacionados para explorar pontos relacionados no sistema.</p>
+		]]>
+	</section>
+</topic>

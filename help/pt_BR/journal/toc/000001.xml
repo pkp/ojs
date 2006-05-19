@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE toc SYSTEM "../../../toc.dtd">
+
+<!--
+  * 000001.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Journal Management - Management Pages. 
+  *
+  * Translation by Suporte Técnico SER, UFPR
+  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
+  *
+  * $Id$
+  -->
+
+<toc id="journal/toc/000001" locale="pt_BR" title="Páginas de Gerenciamento" parent_topic="journal/topic/000001">
+	<topic id="journal/topic/000004" title="Configurações" />
+	<topic id="journal/topic/000005" title="Seções" />
+	<topic id="journal/topic/000006" title="Emails" />
+	<topic id="journal/topic/000007" title="Idiomas" />
+	<topic id="journal/topic/000008" title="Estatísticas" />
+	<topic id="journal/topic/000009" title="Ferramentas de Leitura" />
+	<topic id="journal/topic/000010" title="Navegador de Documentos" />
+	<topic id="journal/topic/000025" title="Assinaturas" />
+
+	<breadcrumb url="journal/topic/000000" title="Gerenciamento das Revistas" />
+	<breadcrumb url="journal/topic/000001" title="Páginas de Gerenciamento" />
+</toc>

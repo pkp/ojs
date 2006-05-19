@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000008.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Statistics 
+  *
+  * Translation by Suporte Técnico SER, UFPR
+  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000008" locale="pt_BR" title="Estatísticas" toc="journal/toc/000001" key="journal.managementPages.statistics">
+	<section>
+		<![CDATA[
+		<p>O Gerente da Revista tem permissão para consultar uma série de estatísticas que são geralmente consultados para monitorar seu progresso e padrão (por exemplo, taxa de regeição, tempo para publicação, etc.). O Gerente da Revista tem a opção de fazer algumas ou todas estas estatísticas disponiveis aos leitores. (As estatísticas serão apresentadas sob o título Estatísticas em Sobre a revista). Em certa ocasião, o Autor será questionado para disponibilizar estas informações quando se aplicar para promoção, e isso ajuda a informar contribuidores potenciais de como está o desempenho da revista, o que dá uma imágem mais segura.</p>
+		]]>	
+	</section>
+</topic>

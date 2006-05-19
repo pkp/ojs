@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000036.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author's Role Editing - Proofreading
+  *
+  * Translation by Suporte Técnico SER, UFPR
+  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000036" locale="pt_BR" title="Leitura de Prova" toc="editorial/toc/000011" key="editorial.authorsRole.editing.proofreading">
+	<section>
+		<![CDATA[<p>O Autor faz uma Leitura de Prova das versões em HTML, PDF e/ou Postscript que vão aparecer no editorial online da revista. Para ver estes arquivos, o Autor clica em cada em cada Formato de Prova (e não no nome do arquivo) para ver a submissão em cada um dos formatos em que ele vai ser publicado. No estágio de Leitura de Prova, somente erros tipográficos e de formatação são corrigidos pelo Editor de Layout. Obviamente, se mais de um formato de arquivo for criado, o Autor só verifica um para checar erros de escrita, mas todos para checar erros de formatação. O Autor deve seguir as instruções para Leitura de Prova quando salva as correções na caixa de texto de Correções. O autor também deve revisar qualquer arquivo suplementar que acompanhem a submissão publicada. Estes arquivos são apresentados em seus formatos originais, e podem ser modificados ou carregados novamente, bem como ter seus títulos alterados usando a função de Edição. Qualquer mudança feita a estes arquivos deve ser anotada na caixa de texto de Correções.</p>]]>	
+
+	</section>
+</topic>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000021.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Reviewer 
+  *
+  * Translation by Suporte Técnico SER, UFPR
+  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000021" locale="pt_BR" title="Avaliador" toc="journal/toc/000003" key="journal.roles.reviewer">
+	<section>
+		<![CDATA[<p>O Avaliador é selecionado pelo Editro de Seção para avaliar uma submissão. Avaliadores são convidados a submeter avaliações ao portal da revista (embora algumas revistas optem por uma política de avaliação por email) e estão aptos a carregar anexos para o uso do Editor e Autor. Avaliadores podem ser avaliados pelos Editores de Seção, dependendo da política da revista.</p>]]>	
+	</section>
+</topic>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000005.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Section Editor's Role Index - Submissions 
+  *
+  * Translation by Suporte Técnico SER, UFPR
+  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000005" locale="pt_BR" title="Submissões" toc="editorial/toc/000004" subtoc="editorial/toc/000005" key="editorial.sectionEditorsRole.submissions">
+	<section>
+		<![CDATA[<p>Submissões à revista que são designadas ao Editor de Seção pelo Editor aparecem nesta fila Em Avalição do Editor de seção. Editores de Seção têm acesso apenas a submissões que lhes foram designadas. Dependendo da política da revista, os Editores de Seção podem ser responsáveis apenas pela Avaliação da submissão ou por ambas Revisão e Edição da Submissão.</p>]]>	
+	</section>
+</topic>

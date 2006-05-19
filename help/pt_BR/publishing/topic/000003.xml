@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000003.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Publishing Process - Table of Contents
+  *
+  * Translation by Suporte Técnico SER, UFPR
+  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
+  *
+  * $Id$
+  -->
+
+<topic id="publishing/topic/000003" locale="pt_BR" title="Sumário" toc="publishing/toc/000000" key="publishing.tableOfContents">
+	<section>
+		<![CDATA[<p>Uma vez que a submissão é agendada, ela vai aparecer no Sumário desta Edição sob sua Seção. Se não houver submissões em uma Seção, esta Seção não vai aparecer no Sumário. O Editor pode reordenar as Seções e submissões podem ser reordenadas em uma Seção.]]>
+	</section>
+</topic>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000001.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages Index 
+  *
+  * Translation by Suporte Técnico SER, UFPR
+  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000001" locale="pt_BR" title="Páginas de Gerenciamento" toc="journal/toc/000000" subtoc="journal/toc/000001" key="journal.managementPages.index">
+	<section>
+		<![CDATA[<p>O Gerente da Revista configura e customiza o sistema para ajustar a revista através de uma série de Páginas de Gerenciamento. O processo começa com os cinco passos de Configuração, mas também inclui as Seções que precisam ser publicadas, o tom e os textos dos emails padrão da revista, os idiomas disponíveis na revista, as estatísticas que são publicadas, e as ferramentas disponíveis aos leitores.</p>]]>	
+	</section>
+</topic>

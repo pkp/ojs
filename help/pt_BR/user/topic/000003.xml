@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000003.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * User Interface - Register and Profile
+  *
+  * Translation by Suporte Técnico SER, UFPR
+  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
+  *
+  * $Id$
+  -->
+
+<topic id="user/topic/000003" locale="pt_BR" title="Registro e Perfil" toc="user/toc/000000" key="user.registerAndProfile">
+	<section>
+		<![CDATA[<p>A Revista usa um sistema de Cadastramento para todos os usuários envolvidos no Processo Editorial e de Publicação. A Política de Privacidade da revista abrange todos os usuários registrados. Cada usuário registrado tem um Perfil, que pode ser editado ou preenxido após o usuário ter logado na revista. O link para o Perfil é encontrado na margem direita da página, abaixo de Usuário e na Página do Usuário.</p>
+		<p>Para todos os usuários, existe uma opção de atualização por email, que resulta em ser notificado por email de cada Sumário de nova Edição. Para revistas operando em mais de um idioma, Avaliadores podem indicar em seus perfis os idiomas em que se sentem confortaveis para revisar submissões.</p>]]>
+	</section>
+</topic>

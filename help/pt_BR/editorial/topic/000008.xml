@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000008.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Reviewer's Role Index 
+  *
+  * Translation by Suporte Técnico SER, UFPR
+  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000008" locale="pt_BR" title="Funções do Avaliador" toc="editorial/toc/000000" subtoc="editorial/toc/000008" key="editorial.reviewersRole">
+	<section>
+		<![CDATA[<p>O Avaliador é convocado por email a avaliar uma submissão, que inclui seu Título e Resumo, assim como a URL da revista, um Nome de Usuário e uma senha para o Avaliador entrar na revista. A revista permite o uso de uma opção do avaliador que envia a submissão como um anexo de email para o Avaliador juntamente com a convocação para avaliação. O Avaliador então responde por email. O que está descrito aqui é o principal método para avaliação (e garantir registros completos do processo), que envolve o Avaliador conduzindo a Avalação no site da revista.</p>]]>	
+	</section>
+</topic>

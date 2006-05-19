@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../toc.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Main table of contents for help. 
+  *
+  * Translation by Suporte Técnico SER, UFPR
+  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
+  *
+  * $Id$
+  -->
+
+<toc id="index/toc/000000" locale="pt_BR" title="Ajuda do OJS" parent_topic="index/topic/000000">
+	<topic id="intro/topic/000000" title="Introdução ao OJS" />
+	<topic id="site/topic/000000" title="Administração do Sistema" />
+	<topic id="journal/topic/000000" title="Gerenciamento das Revistas" />
+	<topic id="submission/topic/000000" title="Processo de Submissão" />
+	<topic id="editorial/topic/000000" title="Processo Editorial" />
+	<topic id="publishing/topic/000000" title="Processo de Publicação" />
+	<topic id="user/topic/000000" title="Web Site da Revista" />
+</toc>

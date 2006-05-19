@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000015.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Editor's Role Submissions - Unassigned 
+  *
+  * Translation by Suporte Técnico SER, UFPR
+  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000015" locale="pt_BR" title="Não Designado" toc="editorial/toc/000002" key="editorial.editorsRole.submissions.unassigned">
+	<section>
+		<![CDATA[<p>Cada submissão à revista entra no processo na fila Não Designado do Editor. Para designar uma submissão nesta fila a um Editor de Seção, o Editor clica no título da submissão. Isso leva o Editor à página da Submissão apropriada em que o Editor de Seção é designado. Quando uma submissão é designada a um Editor de Seção, ela move-se da fila Não Designado para fila Em Avaliação. Se existir apenas um Editor de Seção associado a uma seção, a submissão para esta Seção é automaticamente designada para esta pessoa, e a submissão vai imediatamente da fila Não Designado para fila Em Avaliação.</p>]]>	
+	</section>
+</topic>

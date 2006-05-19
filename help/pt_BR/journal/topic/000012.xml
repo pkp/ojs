@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000012.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Users - Create New User 
+  *
+  * Translation by Suporte Técnico SER, UFPR
+  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000012" locale="pt_BR" title="Criar novo Usuário" toc="journal/toc/000002" key="journal.users.createNewUser">
+	<section>
+		<![CDATA[<p>O Gerente da Revista pode usar o link Criar novo Usuário para registrar alguém e atribuir-lhe uma função, de Gerente da Revista a Leitor. O usuário pode, ao logar na revista, completar e mudar as informações do seu perfil cadastradas pelo Gerente da Revista.</p>
+		<p><i>Mudando uma Senha</i>. Os Usuários podem mudar suas senhas uma vez que tenham logado na revista. O Gerente da Revista não pode acessar a senha do usuário. Entretanto, o sistema pode gerar uma nova senha e envia-la por email aos usuários que clicarem no link "Esqueceu sua senha?" abaixo da caixa de login.</p>]]>	
+	</section>
+</topic>

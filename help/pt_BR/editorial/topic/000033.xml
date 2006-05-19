@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000033.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author's Role Review Index - Peer Review
+  *
+  * Translation by Suporte Técnico SER, UFPR
+  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000033" locale="pt_BR" title="Avaliação aos Pares" toc="editorial/toc/000010" key="editorial.authorsRole.review.peerReview">
+	<section>
+		<![CDATA[<p>As datas das Requisições para Avaliadores feitasv pelo Editor, para quando a Avaliação está em curso, e quando a Avaliação está completa por cada Avaliador são gravadas nesta página. O Autor pode consultar a Política da Revista em {help_topic key="user.about" text="Sobre a Revista"} para aprender como submissões são avaliadas pela revista. Avaliadores estão aptos a carregar arquivos para que o Autor consulte, incluindo versões anotadas da submissão. (Para consultar arquivos carregados, o Autor clica no nome do arquivo, e abre o arquivo ou salva-o em seu computador e depois abre-o).</p>]]>	
+	</section>
+</topic>

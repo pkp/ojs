@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000005.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Sections 
+  *
+  * Translation by Suporte Técnico SER, UFPR
+  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000005" locale="pt_BR" title="Seções" toc="journal/toc/000001" key="journal.managementPages.sections">
+	<section>
+		<![CDATA[
+		<p>O Gerente da Revista está apto a criar diferentes seções dentro de Seções na revista, sob Gerente da Revista. Uma revista deve tipicamente incluir seções como Artigos, Revisões de livros, Notas de Pesquisa, Aplicação Clínica, Comentários, Editorial, etc. Ao ajustar uma seção para uma Revistam, o Gerente a Revista está apto a especificar Editores de Seção que serão associados a submissões, enviadas a determinada Seção, que poderão ser vistas durante o Processo Editorial (O Editor Associa submissões na fila de Submissões {help_topic key="editorial.editorsRole.submissions.unassigned" text="Não Designadas"} a um dos Editores de Seção como parte do Processo Editorial). Seções podem ser apresentadas de diversos formatos e layouts dentro da revista. O Sumário, que o Editor organiza para cada Edição, será dividida nas Seções que foram criadas, embora se não houver conteúdo para uma Seção em particular que foi criada, a Seção não vai aparecer no Sumário.</p>
+		<p><i>Criando uma Política de Seção</i>. Ao ajustar uma Seção, o Gerente da Revista deve dar entrada com um breve indicativo de Política para a Seção, que estará disponível aos Autores e Leitores em "Sobre" a revista sob Políticas de Seção. O indicativo deve descrever o escopo da seção e o tipo de submissões procuradas. Ele deve incluir informações sobre se as submissões serão revisadas ao pares e indexadas, se a Seção está aberta ou restrita para trabalhos convidados (ou apenas para Editores), o tamanho desejado para o artigo, etc.</p>
+		<p><i>Indexando o Conteúdo de uma Seção</i>. Itens em uma seção devem ser indexados se contribuírem para literatura (que não é o caso, por exemplo, para uma seção criada para anúncios de conferências ou noticias de trabalhos). As opções de indexação vão permitir que os autores entrem com os Metadados relevantes para indexar os itens em que foram submetidos. Os Metadados serão disponibilizados para pesquisa em sistemas de busca que atendam ao protocolo Open Archives Initiative Metadata Harvesting e a outros sistemas de busca uma vez que o item foi publicado. Itens em Seções Indexadas também terão seus autores na lista na página de Busca e serão acompanhados pelas Ferramentas de Leitura escolhidas pelo Gerente da Revista para esta Revista.</p>
+		<p><i>Restringindo o Conteúdo de uma Seção</i>. A caixa de restrição deve ser selecionada para Seções da revista (tais como Editorial e Entrevistas) que não estão abertas para submissão de Autores de forma irrestrita. Submissões restritas devem vir do Editor ou convocadas. Para tais Seções só podem ser submetidas por Autores que também estão cadastrados como Editores ou Editores de Seção.</p>
+]]>
+	</section>
+</topic>

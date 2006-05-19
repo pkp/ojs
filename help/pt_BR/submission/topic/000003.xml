@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000003.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author Submission Process - Indexing and Metadata 
+  *
+  * Translation by Suporte Técnico SER, UFPR
+  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
+  *
+  * $Id$
+  -->
+
+<topic id="submission/topic/000003" locale="pt_BR" title="Indexação e Metadados" toc="submission/toc/000000" key="submission.indexingAndMetadata">
+	<section>
+		<![CDATA[
+		<p>Esta sistema de revistas tem a participação do Autor na indexação da submissão para revista. O sistema gera automaticamente alguns dos índices ou elementos de metadados (tais como título da revista, data, URL, etc.). Metadados, ou dados sobre dados, agrupam uma série de termos que descrevem o documento ou dado na Edição, assim o uso comparável de termos de indexação que fazem a mesma coisa. A revista usa um protocolo de metadados para indexar submissões que foi desenvolvido e é mantido pela Open Journal Initiative (OAI) que extrai, por sua vez, para Dublin Core Metadata Initiative. O OAI Metadata Harvesting Protocol é o padrão emergente para pesquisa, possibilitando núcleos de busca OAI complacentes a criar índices de pesquisa baseadas em recursos ao redor do mundo. Entretanto, os conteúdos das revistas estão disponiveis no Google e em outros sistemas de busca padrão na web.</p>
+		<p><i>Elementos de Metadados</i>. O Dublin Core consite de 15 elementos de metadados que são usados para identificar e descrever documentos. Dentre os elementos estão inclusos termos de indexação transicional para identificação de documentos, tais como Autor, Título, Descrição (Resumo), Assuntos, permitindo indexação mais detalhada ou granular também incluem elementos como Tipo, Cobertura, e Patrocinador. O Gerente da Revista e o Editor da Revista selecionaram quais elementos de metadados são apropriados para esta revista e disponibilizaram exemplos de cada - baseado no escopo e foco da revista - para guiar o Autor.</p>	
+		<p>Quando dando entrada com o resumo, código HTML pode ser usado para conseguir uma formatação mais complexa; quebras de linha, se desejado, deve também ser digitado em HTML, já que o OJS não traduz automaticamente quebras de linha dos resumos para o formato HTML.</p>
+		<p><i>Vantágens da Indexação</i>. Autores são encorajados a completar a indexação de suas submissões no Passo 2 do processo de Submissão, e vai ter a oportunidade de rever e revisar os metadados como parte do Processo Editorial. Os metadados também serão revisados como parte do passo de Edição de Texto. O metadado para esta revista vai ser coletado por um número de sistemas dedicados de busca e pesquisa que criam, de fato, um índice de pesquisa ou guia. Trabalhos que são bem indexados serão muito mais facilmente encontrados por aqueles que precisam e torna-se mais fácil que apareçam em citações. Enquanto há limites no número de termos pelos quais um trabalho é indexado, Autores são encorajados a pensar sobre seu trabalho será posicionado e localizado em virtude desta indexação detalhada.</p>]]>
+	</section>
+</topic>

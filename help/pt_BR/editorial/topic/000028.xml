@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000028.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Section Editor's Role Index - Editing - Layout
+  *
+  * Translation by Suporte Técnico SER, UFPR
+  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000028" locale="pt_BR" title="Layout" toc="editorial/toc/000007" key="editorial.sectionEditorsRole.editing.layout">
+	<section>
+		<![CDATA[<p>Uma vez  que o Editor de Texto complete a versão "limpa" no Passo 3 da Edição de Texto, esta versão da submissão vai para o estágio de Layout. O Editor de Seção, ao receber notificação da conclusão da Edição de Texto, precisa escolher um Editor de Layout, se isto ainda não tiver sido feito, e solicitar que o Editor de Layout inicie os trabalhos, usando o ícone de email sob Requisição de Layout. O Editor de Layout deve preparar  s composições para cada um dos formatos adequados à revista (por exemplo, HTML, PDF, OS, etc.). Os arquivos suplementares, que permanecem na versão em que foram submetidos, serão revisados pelo Editor de Layout e Leitor de Prova para garantir que esteja em seu formato correto, e que o arquivo esteja em conformidade com os padrões da revista. Quando o Editor de Layout terminou a versão que será publicada na revista, o Editor de Layout comunica o Editor de Seção por email.</p>]]>	
+	</section>
+</topic>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000026.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Section Editor's Role Index - Review - Editor Decision
+  *
+  * Translation by Suporte Técnico SER, UFPR
+  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000026" locale="pt_BR" title="Decisão do Editor" toc="editorial/toc/000006" key="editorial.sectionEditorsRole.review.editorDecision">
+	<section>
+		<![CDATA[
+		<p>Uma vez que todas as Avaliações foram feitas, o Editor de Seção deve tomar uma decisão sobre a submissão. Para ajudar o Editor de Seção, as Avaliações dos Avaliadores foram colocadas automaticamente em Correspondências do Editor/Autor (exceto para aquelas partes que os Avaliadores definiram como apenas para o Editor de Seção). O Editor de Seção pode editar estes comentários, que estão identificados por letras (por exemplo, Avaliador A, etc.). O Editor de Seção deve descrever o embasamento de sua decisão ao Autor na Correspondência ao Editor/Autor (como o Autor não pode ver a Decisão recomendada pelo Editor). O Editor de Seção pode salvar e editar estes comentários antes de enviá-los por email ao autor. Cada vez que o Editor de Seção envia um email ao Autor apenas os comentários atuais são enviados. O conjunto acumulado de comentários apermanece disponível ao Editor de Seção a ao Autor nos sites das respectivas revistas para Avaliação da submissão. O Editor de Seção pode também carregar uma versão da submissão possivelmente com comentários ou sugestões.</p>
+		<p><i>Gravando a Decisão</i>. O Editor de Seção seleciona uma Decisão dentre Aceitar, Avaliações Solicitadas, Submeter novamente para Avaliação ou Rejeitar. O  Editor de Seção pode tomar uma decisão inicial, Aceitar dependendo da Avaliação, e depois de satisfeito com a Versão do Autor carregada pelo Autor, fazer uma segunda decisão de Aceitar. Se o Editor de Seção selecionar Aceitar, então o próximo passo é designar uma versão da submissão para encaminhar ao Editor de Texto na página de Edição, dentre a do Editor e Autor. A versão padrão do Editor é simplesmente a Versão de Avaliação, e o Editor de Seção pode fazer mudanças nesta versão -- restaurando o nome do Autor, por exemplo -- e carregá-la como adequada a ir para  Edição de Texto. Se o Editor de Seção selecionar Rejeitar, a submissão move-se para lista Arquivo, com seu status salvo como Recusado.</p>
+		<p><i>Submeter novamente para Avaliação</i>. O Editor de Seção pode iniciar uma segunda rodada de Avaliações para uma submissão. O  Editor de Seção salva Submeter novametne para Avaliação como a Decisão. O  Editor de Seção então envia um email para o Autor comunicando isso (já que o Autor não pode ver a Decisão) e inclui um comentário do que precisa ser feito com a submissão antes de submete-la para Avaliação. Quando o Autor Submeter novamente a versão para Avaliação, ela aparecerá sob Versão do Autor, e o  Editor de Seção a encaminha para resubmissão. Ela então se torna a Versão de Avaliação para a Rodada 2 (e deve ser verificada novamente de forma anônima, e se precisar, carregada novamente sob Versão de Avaliação). Os Avaliadores da Rodada 1 permanecerão, enquanto seus comentários e recomendações serão limpos e colocados sob Arrependido, Cancelado, e Versões Anteriores desta Submissão". O Editor de Seção pode ativar a convocação para cada Avaliador da Rodada 1 clicando sobre o ícone de email sob Convocar, ou o Editor de Seção pode usar Limpar Avaliadores e selecionar outros Avaliadores para a rodada 2. A Correspondência de Editor/Autor é também colocada sob "Arrependido, Cancelado, e Versões de Rodadas Anteriores" desta submissão, onde o Editor de Seção pode revisar como quiser.</p>
+		]]>	
+	</section>
+</topic>

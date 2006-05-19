@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000017.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Section Editor 
+  *
+  * Translation by Suporte Técnico SER, UFPR
+  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000017" locale="pt_BR" title="Editor de Seção" toc="journal/toc/000003" key="journal.roles.sectionEditor">
+	<section>
+		<![CDATA[<p>O Editor de Seção gerencia a Avaliação e Edição da submissão a que foram associados. Em alguns casos, um Editor de Seção a que foi solicitado que supervisione uma submissão através do Processo de {help_topic key="editorial.sectionEditorsRole.review" text="Avaliação"} vai também ser responsável por supervisionar as submissões que foram aceitas pelo processo de {help_topic key="editorial.sectionEditorsRole.editing" text="Edição"} (que são a Edição de Texto, Layout e Leitura de Prova). Entretanto, o Editor de Seção só trabalha com o processo de Avaliação, e um Editor, atuando com função de Editor de Seção, supervisiona submissões pelo Processo Editorial. A revista tem uma política de como as tarefas são divididas.</p>]]>	
+	</section>
+</topic>

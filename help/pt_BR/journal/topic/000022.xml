@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000022.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Author 
+  *
+  * Translation by Suporte Técnico SER, UFPR
+  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000022" locale="pt_BR" title="Autores" toc="journal/toc/000003" key="journal.roles.author">
+	<section>
+		<![CDATA[<p>Autores estão aptos a registrar e submeter itens à revista diretamente pelo portal da revista na web. O Autor é convidado a carregar o item e fornecer os metadados e informações de indexação sobre o item. (Os metadados melhoram a capacidade de busca em pesquisas online na revista). O Autor pode carregar arquivos suplementares, no formato de conjuntos de dados, instrumentos de pesquisa, ou textos fonter que vão enriquecer o item, assim como contribuir para formas mais robustas de pesquisa.</p>]]>	
+	</section>
+</topic>

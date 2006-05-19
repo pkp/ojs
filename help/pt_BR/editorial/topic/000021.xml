@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000021.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Section Editor's Role Index - In Review
+  *
+  * Translation by Suporte Técnico SER, UFPR
+  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000021" locale="pt_BR" title="Em Avaliação" toc="editorial/toc/000005" key="editorial.sectionEditorsRole.submissions.inReview">
+	<section>
+		<![CDATA[<p>Submissões que estão listadas Em Avaliação estão sujeitas ao processo de revisão que leva a uma decisão pelo Editor de Seção de aceitar ou recusar a submissão. A continuação do processo de avaliação, incluindo qual seção da revista é conduzida por uma revisão aos pares das submissões e quantos revisores são usados, é estabelecido em Políticas de Avaliação da revista pelo Editor e Gerente da Revista. Quando um Editor de Seção ou Editor clica no título de uma submissão na fila Em Avaliação, são levados à página de Avaliação da submissão, onde a revisão aos pares é conduzida e as são enriquecidas as decisões editoriais para o item. Se o Editor de Seção aceita uma submissão para publicação, ela então é movida para fila Em Edição. Se a submissão e recusada, ela é movida para Arquivos.</p>]]>
+	</section>
+</topic>

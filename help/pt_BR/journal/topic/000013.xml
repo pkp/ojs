@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000013.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Users - Import Users
+  *
+  * Translation by Suporte Técnico SER, UFPR
+  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000013" locale="pt_BR" title="Importar Usuários" toc="journal/toc/000002" key="journal.users.importUsers">
+	<section>
+		<![CDATA[<p>O OJS fornece uma facilidade para importar dados de usuários de uma arquivo no formato XML, que podem ser facilmente gerado por outras bases de dados de informações de usuários. Consulte a documentação incluída como o OJS para mais informações sobre o formato XML e XML DTD para dados de usuários.</p>]]>	
+	</section>
+</topic>

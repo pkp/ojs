@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000023.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Reader 
+  *
+  * Translation by Suporte Técnico SER, UFPR
+  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000023" locale="pt_BR" title="Leitor" toc="journal/toc/000003" key="journal.roles.reader">
+	<section>
+		<![CDATA[<p>Leitores incluem os assinantes das refistas cujo acesso é permitido apenas a usuários cadastrados e leitores que escolheram criar um registro nas revistas de acesso livre. Leitores registrados recebem uma notificação da publicação de cada edição da revista que inclui a Sumário da revista. Autores ao se registrarem na revista podem escolher se desejam ser cadastrados como Leitores também.</p>]]>	
+	</section>
+</topic>

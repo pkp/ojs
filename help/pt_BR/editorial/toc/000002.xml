@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../toc.dtd">
+
+<!--
+  * 000002.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Editorial Process - Editor's Role - Submissions
+  *
+  * Translation by Suporte Técnico SER, UFPR
+  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
+  *
+  * $Id$
+  -->
+
+<toc id="editorial/toc/000002" locale="pt_BR" title="Submissões" parent_topic="editorial/topic/000002">
+	<topic id="editorial/topic/000015" title="Não Designado" />
+	<topic id="editorial/topic/000016" title="Em Avaliação" />
+	<topic id="editorial/topic/000017" title="Em Edição" />
+	<topic id="editorial/topic/000018" title="Arquivos" />
+
+	<breadcrumb url="editorial/topic/000000" title="Processo Editorial" />
+	<breadcrumb url="editorial/topic/000001" title="Funções do Editor" />
+	<breadcrumb url="editorial/topic/000002" title="Submissões" />
+</toc>

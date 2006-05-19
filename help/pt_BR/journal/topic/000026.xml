@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000026.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Reading Tools - Settings
+  *
+  * Translation by Suporte Técnico SER, UFPR
+  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000026" locale="pt_BR" title="Configurações" toc="journal/toc/000005" key="journal.managementPages.readingTools.settings">
+	<section>
+		<![CDATA[<p>O Gerente da Revista pode selecionar uma disciplina ou um conjuto de áreas de Ferramentas de Leitura para aparecer no quadro à esquerda de todos os itens em Seções da Revista que estão indexadas (por exemplo, Artigos e não Anúncios de Conferências). O Gerente da Revista pode examinar, editar, apagar ou incluir em cada conjunto de ferramenta de leitura, indo em Versões, sob Ferramentas de Leitura. O Gerente da Revista pode também selecionar uma ou mais das opções de links Genéricos para aparecer como parte do conjunto de ferramentas. O Mesmo conjunto de Ferramntas de Leitora aparece com todo item na seção indexada da revista. Entretanto, as Ferramentas de Leitura usam os termos de indexação fornecidos pelo autor para garantir que o material encontrado na base de dados disponível é relevante. O Gerente da Revista pode mudar a Ferramenta de Leitura selecionada a qualquer momento.</p>]]>
+	</section>
+</topic>

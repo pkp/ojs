@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../toc.dtd">
+
+<!--
+  * 000006.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Editorial Process - Section Editor's Role - Review
+  *
+  * Translation by Suporte Técnico SER, UFPR
+  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
+  *
+  * $Id$
+  -->
+
+<toc id="editorial/toc/000006" locale="pt_BR" title="Avaliação" parent_topic="editorial/topic/000006">
+	<topic id="editorial/topic/000024" title="Versão de Avaliação" />
+	<topic id="editorial/topic/000025" title="Avaliação aos Pares" />
+	<topic id="editorial/topic/000026" title="Decisão do Editor" />
+
+	<breadcrumb url="editorial/topic/000000" title="Processo Editorial" />
+	<breadcrumb url="editorial/topic/000004" title="Funções do Editor de Seção" />
+	<breadcrumb url="editorial/topic/000006" title="Avaliação" />
+</toc>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000004.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Setup 
+  *
+  * Translation by Suporte Técnico SER, UFPR
+  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000004" locale="pt_BR" title="Configurações" toc="journal/toc/000001" key="journal.managementPages.setup">
+	<section>
+		<![CDATA[<p>O Gerente da Revista ajusta a revista, depois que o sistema foi instalado em um servidor web, trabalhando em cinco passos, preenchendo modelos e configurando o gerenciamento da revista. As configurações não precisam ser feitas todas de uma vez: os modelos podem ser preenchidos e salvos; o Gerente da Revista pode retornar às Configurações para completar as tarefas ou fazer mudanças a qualquer momento.</p>
+<p>Configurações está disponível para o Gerente da Revista na página de Gerenciamento da Revista, e contém seu próprio conjunto de textos de Ajuda construídos em cada um dos modelos. Configurar o portar na web da revista vai exigir decisões e textos para os seguintes itens, dentre outros, que podem ser preparados em conjunto com os Editores ou incluídos mais tarde.</p>
+<ul>
+<li>Contato Principal da Revista</li>
+<li>Contato Técnico</li>
+<li>Indicação de Escopo e Foco para Revista</li>
+<li>Políticas e Seções da Revista</li>
+<li>Diretrizes ao Autor</li>
+<li>Requisitos de Submissão para o Autor</li>
+<li>Elementos de Indexação e exemplos apropriados</li>
+<li>Política de Avaliação aos Pares</li>
+<li>Diretrizes ao Avaliador</li>
+<li>Política de Direitos Autorais</li>
+<li>Política de Acesso Aberto</li>
+<li>Quadro Editorial/Quadro de Avaliação</li>
+<li>Uso de Editores de Layout, Editores de Texto, e/ou Leitores de Prova</li>
+</ul>]]>	
+	</section>
+</topic>

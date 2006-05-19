@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000005.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * User Interface - Search and Browse
+  *
+  * Translation by Suporte Técnico SER, UFPR
+  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
+  *
+  * $Id$
+  -->
+
+<topic id="user/topic/000005" locale="pt_BR" title="Pesquisa e Procura" toc="user/toc/000000" key="user.searchAndBrowse">
+	<section>
+		<![CDATA[<p>O conteúdo da revista pode ser pesquisado por Autor, Título, Resumo, e Termos de Indexação. O texto completo do conteúdo pode ser pesquisado em ambos formatos HTML e PDF. Alternativamente, usando o link Procurar na margem direita da página, leitores podem procurar no conteúdo da revista por Edição, Autor, e Título. Outras revistas publicadas neste mesmo sistema de revistas também podem ser pesquisados.</p>]]>
+	</section>
+</topic>

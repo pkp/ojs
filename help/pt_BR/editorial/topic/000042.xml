@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000042.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Proofreader's Role - Submissions
+  *
+  * Translation by Suporte Técnico SER, UFPR
+  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000042" locale="pt_BR" title="Submissões" toc="editorial/toc/000014" key="editorial.proofreadersRole.submissions">
+	<section><![CDATA[<p>Uma vez que o Leitor de Prova loga, clicando no link de Leitor de Prova na Página do Usuário ele é levado para fila de Submissões. Esta fila lista os trabalhos que foram solicitados aos usuários para editar o Layou, bem como acesso às submissões que eles editaram no passado. O Leitor de Prova clica sobre o título do trabalho e é levado para página de Leitura de Prova desta submissão.</p>]]>	
+	</section>
+</topic>

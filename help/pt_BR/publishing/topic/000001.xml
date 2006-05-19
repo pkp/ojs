@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000001.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Publishing Process - Create Issue
+  *
+  * Translation by Suporte Técnico SER, UFPR
+  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
+  *
+  * $Id$
+  -->
+
+<topic id="publishing/topic/000001" locale="pt_BR" title="Criação de Edição" toc="publishing/toc/000000" key="publishing.createIssue">
+	<section>
+		<![CDATA[
+		<p>Antes de usar as Agendar Submiassões para escalonar uma submissão em uma Edição para publicação, o Editor precisa criar uma Edição para garantir que existe uma Edição na qual colocar a submissão. A Edição precisa estar identificada com o Número e/ou Título adequado, dependendo da opção escolhida em configurações (por exemplo, Vol 2, No 5, 2008). Enquanto o sistema apresenta ao Editor, em Criar Edição, a próxima Edição, cada vez que uma Edição deve ser criada, o Editor pode sobrescrever as informações e dar entrada com um novo conjúnto de Números ou um Ano diferente. Edições também podem possuir um Título, que vai aparecer acima do Sumário, e pode ser usado, por exemplo, para Edições especiais para revista.</p>
+		<p><i>Crianda uma Capa</i>. Existe também uma opção de carregar uma ilustração de capa para revista, nos formatos de arquivo .JPG, .PNG ou .GIF. Estes arquivos serão acessíveis através do Sumário onde ela será listada como Página de Capa. Ela vai aparecer na página principal da revista enquanto a Edição for a Atual, e pode ser clicada para alcançar o Sumário desta Edição. Uma vez que a Edição é arquivada, a capa vai permanecer disponível com a Edição Através do Sumário.</p>
+	<p><i>Edições Atuais, Futuras e Anteriores</i>. A Edição Atual é a Edição mais recentemente publicada. As Edições Futuras são as que o Editor deve escalonar submissões que devem ser publicadas nas próximas Edições. O Editor deve desejar ter certeza de que sempre existem uma série de duas ou três Edições não publicadas, que possibilitam submissões serem escalonadas em outras Edições para balanceamento de publicações, por exemplo. As Edições Anteriores são edições não mais Atuais, que já foram publicadas.<p>	
+		]]>
+	</section>
+</topic>

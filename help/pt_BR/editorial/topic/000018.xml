@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000018.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Editor's Role Submissions - Archives 
+  *
+  * Translation by Suporte Técnico SER, UFPR
+  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000018" locale="pt_BR" title="Arquivos" toc="editorial/toc/000002" key="editorial.editorsRole.submissions.archives">
+	<section>
+		<![CDATA[
+		<p>Submissões nesta fila estão passando pelo processo editorial, quando elas foram recusadas, escalonadas para serem publicadas, ou são publicadas. Esta fila oferece aos Editores e aos Editores de Seção designados, completo acesso ao histórico editorial das submissões (sumário, Submissão, Avaliação, Edição, e Histórico).</p>
+		<p><i>Para Restaurar um Item Arquivado para Lista Ativa</i>. O Editor deve ir para Arquivos na página do Editor e encontrar a submissão. Clicando no título da submissão leva-o à página de Avaliação, Sumário , Edição e Histórico da submissão, e na página de Sumário tem um link, "Restaurar para Lista Ativa", que vai mover a submissão para lista Em Revisão ou Em Edição, dependendo de qual estágio a submissão estava quando foi Arquivada.</p>
+		]]>	
+	</section>
+</topic>
