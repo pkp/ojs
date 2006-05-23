@@ -35,7 +35,8 @@ class TinyMCEPlugin extends GenericPlugin {
 			'email/email.tpl',
 			'rt/email.tpl',
 			'submission/comment/commentEmail.tpl',
-			'submission/comment/editorDecisionEmail.tpl'
+			'submission/comment/editorDecisionEmail.tpl',
+			'editor/notifyUsers.tpl'
 		);
 		HookRegistry::call('TinyMCEPlugin::getDisableTemplates', array(&$this, &$disableTemplates));
 		return $disableTemplates;
