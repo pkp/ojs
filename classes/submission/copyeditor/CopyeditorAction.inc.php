@@ -71,9 +71,8 @@ class CopyeditorAction extends Action {
 		} else {
 			if (!Request::getUserVar('continued')) {
 				$email->addRecipient($author->getEmail(), $author->getFullName());
-				foreach ($editAssignments as $editAssignment) {
-					$email->addCc($editAssignment->getEditorEmail(), $editAssignment->getEditorFullName());
-				}
+				$email->ccAssignedEditingSectionEditors($copyeditorSubmission->getArticleId());
+				$email->ccAssignedEditors($copyeditorSubmission->getArticleId());
 
 				$paramArray = array(
 					'editorialContactName' => $author->getFullName(),
@@ -140,23 +139,21 @@ class CopyeditorAction extends Action {
 
 		} else {
 			if (!Request::getUserVar('continued')) {
-				if (!empty($editAssignments)) {
-					foreach ($editAssignments as $editAssignment) {
-						$email->addRecipient($editAssignment->getEditorEmail(), $editAssignment->getEditorFullName());
-					}
-					// FIXME: Should be able to designate
-					// primary contact editor.
-					$editAssignment = $editAssignments[0];
-
-					$paramArray = array(
-						'editorialContactName' => $editAssignment->getEditorFullName(),
-						'copyeditorName' => $user->getFullName()
-					);
-				} else {
+				$assignedSectionEditors = $email->toAssignedEditingSectionEditors($copyeditorSubmission->getArticleId());
+				$assignedEditors = $email->ccAssignedEditors($copyeditorSubmission->getArticleId());
+				if (empty($assignedSectionEditors) && empty($assignedEditors)) {
 					$email->addRecipient($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
 					$paramArray = array(
 						'editorialContactName' => $journal->getSetting('contactName'),
-						'copyeditorName' => $journal->getSetting('contactEmail')
+						'copyeditorName' => $user->getFullName()
+					);
+				} else {
+					$editorialContact = array_shift($assignedSectionEditors);
+					if (!$editorialContact) $editorialContact = array_shift($assignedEditors);
+
+					$paramArray = array(
+						'editorialContactName' => $editorialContact->getEditorFullName(),
+						'copyeditorName' => $user->getFullName()
 					);
 				}
 				$email->assignParams($paramArray);

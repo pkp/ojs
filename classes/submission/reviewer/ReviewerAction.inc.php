@@ -83,18 +83,16 @@ class ReviewerAction extends Action {
 				return true;
 			} else {
 				if (!Request::getUserVar('continued')) {
-					$editAssignments = &$reviewerSubmission->getEditAssignments();
-					if (!empty($editAssignments)) {
-						// FIXME: Should be able to designate primary editorial contact.
-						foreach ($editAssignments as $editAssignment) {
-							$email->addRecipient($editAssignment->getEditorEmail(), $editAssignment->getEditorFullName());
-						}
-						$editAssignment = $editAssignments[0];
-						$editorialContactName = $editAssignment->getEditorFullName();
-					} else {
+					$assignedEditors = $email->ccAssignedEditors($reviewerSubmission->getArticleId());
+					$reviewingSectionEditors = $email->toAssignedReviewingSectionEditors($reviewerSubmission->getArticleId());
+					if (empty($assignedEditors) && empty($reviewingSectionEditors)) {
 						$journal = &Request::getJournal();
 						$email->addRecipient($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
 						$editorialContactName = $journal->getSetting('contactName');
+					} else {
+						if (!empty($reviewingSectionEditors)) $editorialContact = array_shift($reviewingSectionEditors);
+						else $editorialContact = array_shift($assignedEditors);
+						$editorialContactName = $editorialContact->getEditorFullName();
 					}
 
 					$email->assignParams(array(
@@ -165,18 +163,16 @@ class ReviewerAction extends Action {
 				ArticleLog::logEventEntry($reviewAssignment->getArticleId(), $entry);
 			} else {
 				if (!Request::getUserVar('continued')) {
-					$editAssignments = &$reviewerSubmission->getEditAssignments();
-					if (!empty($editAssignments)) {
-						// FIXME: Should be able to designate primary editorial contact.
-						foreach ($editAssignments as $editAssignment) {
-							$email->addRecipient($editAssignment->getEditorEmail(), $editAssignment->getEditorFullName());
-						}
-						$editAssignment = $editAssignments[0];
-						$editorialContactName = $editAssignment->getEditorFullName();
-					} else {
+					$assignedEditors = $email->ccAssignedEditors($reviewerSubmission->getArticleId());
+					$reviewingSectionEditors = $email->toAssignedReviewingSectionEditors($reviewerSubmission->getArticleId());
+					if (empty($assignedEditors) && empty($reviewingSectionEditors)) {
 						$journal = &Request::getJournal();
 						$email->addRecipient($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
 						$editorialContactName = $journal->getSetting('contactName');
+					} else {
+						if (!empty($reviewingSectionEditors)) $editorialContact = array_shift($reviewingSectionEditors);
+						else $editorialContact = array_shift($assignedEditors);
+						$editorialContactName = $editorialContact->getEditorFullName();
 					}
 
 					$reviewerRecommendationOptions = &ReviewAssignment::getReviewerRecommendationOptions();

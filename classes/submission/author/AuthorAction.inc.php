@@ -136,10 +136,6 @@ class AuthorAction extends Action {
 		$email = &new ArticleMailTemplate($authorSubmission, 'COPYEDIT_AUTHOR_COMPLETE');
 		
 		$editAssignments = $authorSubmission->getEditAssignments();
-		$editors = array();
-		foreach ($editAssignments as $editAssignment) {
-			array_push($editors, $userDao->getUser($editAssignment->getEditorId()));
-		}
 
 		$copyeditor =& $authorSubmission->getCopyeditor();
 		
@@ -165,29 +161,27 @@ class AuthorAction extends Action {
 			if (!Request::getUserVar('continued')) {
 				if (isset($copyeditor)) {
 					$email->addRecipient($copyeditor->getEmail(), $copyeditor->getFullName());
-					if (!empty($editors)) {
-						foreach ($editors as $editor) {
-							$email->addCc($editor->getEmail(), $editor->getFullName());
-						}
-					} else {
+					$assignedSectionEditors = $email->ccAssignedEditingSectionEditors($copyeditorSubmission->getArticleId());
+					$assignedEditors = $email->ccAssignedEditors($copyeditorSubmission->getArticleId());
+					if (empty($assignedSectionEditors) && empty($assignedEditors)) {
 						$email->addCc($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
-					}
-				} else {
-					if (!empty($editors)) {
-						foreach ($editors as $editor) {
-							$email->addRecipient($editor->getEmail(), $editor->getFullName());
-						}
+						$editorName = $journal->getSetting('contactName');
 					} else {
-						$email->addRecipient($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
+						$editor = array_shift($assignedSectionEditors);
+						if (!$editor) $editor = array_shift($assignedEditors);
+						$editorName = $editor->getEditorFullName();
 					}
-				}
-
-				if (!empty($editors)) {
-					// FIXME: Should be able to designate a primary editor!
-					$editor =& $editors[0];
-					$editorName = $editor->getFullName();
 				} else {
-					$editorName = $journal->getSetting($contactName);
+					$assignedSectionEditors = $email->toAssignedEditingSectionEditors($copyeditorSubmission->getArticleId());
+					$assignedEditors = $email->ccAssignedEditors($copyeditorSubmission->getArticleId());
+					if (empty($assignedSectionEditors) && empty($assignedEditors)) {
+						$email->addRecipient($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
+						$editorName = $journal->getSetting('contactName');
+					} else {
+						$editor = array_shift($assignedSectionEditors);
+						if (!$editor) $editor = array_shift($assignedEditors);
+						$editorName = $editor->getEditorFullName();
+					}
 				}
 
 				$paramArray = array(

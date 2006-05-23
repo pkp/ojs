@@ -900,7 +900,6 @@ class SectionEditorSubmission extends Article {
 		);
 		return $editorDecisionOptions;
 	}
-
 }
 
 ?>

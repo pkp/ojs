@@ -61,6 +61,53 @@ class EditAssignmentDAO extends DAO {
 	}
 
 	/**
+	 * Retrieve those edit assignments that relate to full editors.
+	 * @param $articleId int
+	 * @return EditAssignment
+	 */
+	function &getEditorAssignmentsByArticleId($articleId) {
+		$result = &$this->retrieve(
+			'SELECT e.*, u.first_name, u.last_name, u.email, u.initials, r.role_id AS editor_role_id FROM articles a, edit_assignments e, users u, roles r WHERE r.user_id = e.editor_id AND r.role_id = ' . ROLE_ID_EDITOR . ' AND e.article_id = ? AND r.journal_id = a.journal_id AND a.article_id = e.article_id AND e.editor_id = u.user_id ORDER BY e.date_notified ASC',
+			$articleId
+			);
+
+		$returner = &new DAOResultFactory($result, $this, '_returnEditAssignmentFromRow');
+		return $returner;
+	}
+
+	/**
+	 * Retrieve those edit assignments that relate to section editors with
+	 * review access.
+	 * @param $articleId int
+	 * @return EditAssignment
+	 */
+	function &getReviewingSectionEditorAssignmentsByArticleId($articleId) {
+		$result = &$this->retrieve(
+			'SELECT e.*, u.first_name, u.last_name, u.email, u.initials, r.role_id AS editor_role_id FROM articles a, edit_assignments e LEFT JOIN users u ON (e.editor_id = u.user_id) LEFT JOIN roles r ON (r.user_id = e.editor_id AND r.role_id = ' . ROLE_ID_EDITOR . ') WHERE e.article_id = ? AND (r.journal_id IS NULL OR r.journal_id = a.journal_id) AND a.article_id = e.article_id AND r.role_id IS NULL AND e.can_review = 1 ORDER BY e.date_notified ASC',
+			$articleId
+			);
+
+		$returner = &new DAOResultFactory($result, $this, '_returnEditAssignmentFromRow');
+		return $returner;
+	}
+
+	/**
+	 * Retrieve those edit assignments that relate to section editors with
+	 * editing access.
+	 * @param $articleId int
+	 * @return EditAssignment
+	 */
+	function &getEditingSectionEditorAssignmentsByArticleId($articleId) {
+		$result = &$this->retrieve(
+			'SELECT e.*, u.first_name, u.last_name, u.email, u.initials, r.role_id AS editor_role_id FROM articles a, edit_assignments e LEFT JOIN users u ON (e.editor_id = u.user_id) LEFT JOIN roles r ON (r.user_id = e.editor_id AND r.role_id = ' . ROLE_ID_EDITOR . ') WHERE e.article_id = ? AND (r.journal_id IS NULL OR r.journal_id = a.journal_id) AND a.article_id = e.article_id AND r.role_id IS NULL AND e.can_edit = 1 ORDER BY e.date_notified ASC',
+			$articleId
+			);
+
+		$returner = &new DAOResultFactory($result, $this, '_returnEditAssignmentFromRow');
+		return $returner;
+	}
+
+	/**
 	 * Retrieve edit assignments by user id.
 	 * @param $articleId int
 	 * @return EditAssignment
@@ -212,7 +259,6 @@ class EditAssignmentDAO extends DAO {
 
 		return $statistics;
 	}
-
 }
 
 ?>

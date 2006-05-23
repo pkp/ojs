@@ -149,14 +149,18 @@ class LayoutEditorAction extends Action {
 		} else {
 			$user = &Request::getUser();
 			if (!Request::getUserVar('continued')) {
-				foreach ($editAssignments as $editAssignment) {
-					$email->addRecipient($editAssignment->getEditorEmail(), $editAssignment->getEditorFullName());
+				$assignedSectionEditors = $email->toAssignedEditingSectionEditors($copyeditorSubmission->getArticleId());
+				$assignedEditors = $email->ccAssignedEditors($copyeditorSubmission->getArticleId());
+				if (empty($assignedSectionEditors) && empty($assignedEditors)) {
+					$email->addRecipient($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
+					$editorialContactName = $journal->getSetting('contactName');
+				} else {
+					$editorialContact = array_shift($assignedSectionEditors);
+					if (!$editorialContact) $editorialContact = array_shift($assignedEditors);
+					$editorialContactName = $editorialContact->getEditorFullName();
 				}
-				// FIXME: Should be able to designate primary
-				// contact
-				$editAssignment = $editAssignments[0];
 				$paramArray = array(
-					'editorialContactName' => $editAssignment->getEditorFullName(),
+					'editorialContactName' => $editorialContactName,
 					'layoutEditorName' => $user->getFullName()
 				);
 				$email->assignParams($paramArray);
