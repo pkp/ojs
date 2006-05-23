@@ -118,4 +118,27 @@ If you have any questions, please feel free to contact me.
 		</row>
 	</table>
 
+	<!-- Bug #2182: Review acceptance acknowledgement / review encouragement email. -->
+	<table name="email_templates_default">
+		<row>
+			<field name="email_key">REVIEW_CONFIRM_ACK</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">1</field>
+			<field name="to_role_id">4096<!-- Reviewer --></field>
+			<field name="from_role_id">512<!-- Section Editor --></field>
+		</row>
+	</table>
+	<table name="email_templates_default_data">
+		<field_default name="locale">en_US</field_default>
+		<row>
+			<field name="email_key">REVIEW_CONFIRM_ACK</field>
+			<field name="subject">Review Underway Acknowledgement</field>
+			<field name="body">{$reviewerName}:
+
+Thank you for agreeing to review the manuscript "{$articleTitle}" for {$journalName} by {$reviewDueDate}.
+
+{$editorialContactSignature}</field>
+			<field name="description">This email is sent from the Section Editor to the Reviewer to acknowledge their acceptance of a review or encourage them to complete the review.</field>
+		</row>
+	</table>
 </data>

@@ -264,6 +264,11 @@ class SectionEditorHandler extends Handler {
 		SubmissionEditHandler::remindReviewer($args);
 	}
 
+	function acknowledgeReviewerUnderway($args) {
+		import('pages.sectionEditor.SubmissionEditHandler');
+		SubmissionEditHandler::acknowledgeReviewerUnderway($args);
+	}
+
 	function thankReviewer($args) {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::thankReviewer($args);

@@ -411,6 +411,62 @@ class SectionEditorAction extends Action {
 	}
 	
 	/**
+	 * Acknowledges that a review is now underway.
+	 * @param $sectionEditorSubmission object
+	 * @param $reviewId int
+	 * @return boolean true iff no error was encountered
+	 */
+	function acknowledgeReviewerUnderway($sectionEditorSubmission, $reviewId, $send = false) {
+		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
+		$userDao = &DAORegistry::getDAO('UserDAO');
+			
+		$journal = &Request::getJournal();
+		$user = &Request::getUser();
+		$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($reviewId);
+
+		import('mail.ArticleMailTemplate');
+		$email = &new ArticleMailTemplate($sectionEditorSubmission, 'REVIEW_CONFIRM_ACK');
+
+		if (!$email->isEnabled() || ($send && !$email->hasErrors())) {
+			HookRegistry::call('SectionEditorAction::acknowledgeReviewerUnderway', array(&$sectionEditorSubmission, &$reviewAssignment, &$email));
+			$email->setAssoc(ARTICLE_EMAIL_REVIEW_CONFIRM_ACK, ARTICLE_EMAIL_TYPE_REVIEW, $reviewId);
+
+			$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
+
+			if ($email->isEnabled()) $email->send();
+			return true;
+		} elseif ($reviewAssignment->getArticleId() == $sectionEditorSubmission->getArticleId()) {
+			$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
+		
+			if (!Request::getUserVar('continued')) {
+				if (!isset($reviewer)) return true;
+				$email->addRecipient($reviewer->getEmail(), $reviewer->getFullName());
+
+				$submissionUrl = Request::url(null, 'reviewer', 'submission', $reviewId);
+				
+				$paramArray = array(
+					'reviewerName' => $reviewer->getFullName(),
+					'reviewDueDate' => date('Y-m-d', strtotime($reviewAssignment->getDateDue())),
+					'editorialContactSignature' => $user->getContactSignature()
+				);
+				$email->assignParams($paramArray);
+	
+			}
+			$email->displayEditForm(
+				Request::url(null, null, 'acknowledgeReviewerUnderway', 'send'),
+				array(
+					'reviewerId' => $reviewer->getUserId(),
+					'articleId' => $sectionEditorSubmission->getArticleId(),
+					'reviewId' => $reviewId
+				)
+			);
+			return false;
+		}
+		return true;
+	}
+	
+	/**
 	 * Thanks a reviewer for completing a review assignment.
 	 * @param $sectionEditorSubmission object
 	 * @param $reviewId int

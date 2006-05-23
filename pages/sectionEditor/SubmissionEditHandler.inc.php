@@ -495,6 +495,18 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		}
 	}
 	
+	function acknowledgeReviewerUnderway($args = null) {
+		$articleId = Request::getUserVar('articleId');
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
+		
+		$reviewId = Request::getUserVar('reviewId');
+		parent::setupTemplate(true, $articleId, 'review');
+		
+		if (SectionEditorAction::acknowledgeReviewerUnderway($submission, $reviewId, Request::getUserVar('send'))) {
+			Request::redirect(null, null, 'submissionReview', $articleId);
+		}
+	}
+	
 	function thankReviewer($args = array()) {
 		$articleId = Request::getUserVar('articleId');
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);

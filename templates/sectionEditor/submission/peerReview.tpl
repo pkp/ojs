@@ -161,10 +161,16 @@
 						{/if}
 					</td>
 					<td>
+						{url|assign:"acknowledgeReviewerUnderwayUrl" op="acknowledgeReviewerUnderway" reviewId=$reviewAssignment->getReviewId() articleId=$submission->getArticleId()}
 						{if $reviewAssignment->getDateConfirmed()}
 							{$reviewAssignment->getDateConfirmed()|date_format:$dateFormatShort}
+							{if !$reviewAssignment->getDateCompleted()}
+								{icon name="mail" url=$acknowledgeReviewerUnderwayUrl}
+							{else}
+								{icon name="mail" disabled="disabled" url=$acknowledgeReviewerUnderwayUrl}
+							{/if}
 						{else}
-							&mdash;
+							{icon name="mail" disabled="disabled" url=$acknowledgeReviewerUnderwayUrl}
 						{/if}
 					</td>
 					<td>
