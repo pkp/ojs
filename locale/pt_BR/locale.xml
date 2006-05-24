@@ -1569,9 +1569,8 @@ com sinal positivo (+) indicando avaliação em progresso.]]></message>
 	
 	<!-- Reviewer -->
 	<message key="reviewer.pendingReviews">Artigo Aguardando Avaliação</message>
-	<message key="reviewer.completedReviews">Avaliações Concluídas</message>
+	<message key="reviewer.completedReviews">Realizadas</message>
 	<message key="reviewer.averageQuality">Classificação</message>
-	<message key="reviewer.numberOfRatings">Realizadas</message>
 	
 	<!-- Used in submission review -->
 	<message key="reviewer.article.fileToBeReviewed">Documento a ser avaliado</message>

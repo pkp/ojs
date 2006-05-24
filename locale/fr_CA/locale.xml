@@ -1606,9 +1606,8 @@ avec un signe plus (+) indiquant que la révision est en cours.]]></message>
 	
 	<!-- Reviewer -->
 	<message key="reviewer.pendingReviews">Articles en attente de révision</message>
-	<message key="reviewer.completedReviews">Révisions terminées</message>
+	<message key="reviewer.completedReviews">Terminé</message>
 	<message key="reviewer.averageQuality">Classification</message>
-	<message key="reviewer.numberOfRatings">Terminé</message>
 	
 	<!-- Used in submission review -->
 	<message key="reviewer.article.fileToBeReviewed">Fichier à être évalué</message>

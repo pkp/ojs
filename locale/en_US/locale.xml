@@ -1659,9 +1659,8 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	
 	<!-- Reviewer -->
 	<message key="reviewer.pendingReviews">Articles Pending Review</message>
-	<message key="reviewer.completedReviews">Completed Reviews</message>
+	<message key="reviewer.completedReviews">Done</message>
 	<message key="reviewer.averageQuality">Rating</message>
-	<message key="reviewer.numberOfRatings">Done</message>
 	
 	<!-- Used in submission review -->
 	<message key="reviewer.article.fileToBeReviewed">File to be reviewed</message>

@@ -1592,9 +1592,8 @@ Attivo &#x00E8; il numero di quante revisioni si stanno considerando o stanno an
 	
 	<!-- Reviewer -->
 	<message key="reviewer.pendingReviews">Review in corso degli articoli</message>
-	<message key="reviewer.completedReviews">Review completate</message>
+	<message key="reviewer.completedReviews">Eseguito</message>
 	<message key="reviewer.averageQuality">Valutazione</message>
-	<message key="reviewer.numberOfRatings">Eseguito</message>
 	
 	<!-- Used in submission review -->
 	<message key="reviewer.article.fileToBeReviewed">File per la fase di review</message>

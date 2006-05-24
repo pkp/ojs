@@ -1565,9 +1565,8 @@ Activas es el número de revisiones que en este momento están consideradas como
 	
 	<!-- Reviewer -->
 	<message key="reviewer.pendingReviews">Revisión de artículos pendientes</message>
-	<message key="reviewer.completedReviews">Revisiones completadas</message>
+	<message key="reviewer.completedReviews">Hecho</message>
 	<message key="reviewer.averageQuality">Puntuación</message>
-	<message key="reviewer.numberOfRatings">Hecho</message>
 	
 	<!-- Used in submission review -->
 	<message key="reviewer.article.fileToBeReviewed">Fichero a revisar</message>

@@ -473,9 +473,9 @@ class ReviewAssignmentDAO extends DAO {
 	}
 	
 	/**
-	* Get the average quality ratings and number of ratings for all users of a journal.
-	* @return array
-	*/
+	 * Get the average quality ratings and number of ratings for all users of a journal.
+	 * @return array
+	 */
 	function getAverageQualityRatings($journalId) {
 		$averageQualityRatings = Array();
 		$result = &$this->retrieve(
@@ -493,6 +493,29 @@ class ReviewAssignmentDAO extends DAO {
 		unset($result);
 
 		return $averageQualityRatings;
+	}
+
+	/**
+	 * Get the average quality ratings and number of ratings for all users of a journal.
+	 * @return array
+	 */
+	function getCompletedReviewCounts($journalId) {
+		$returner = Array();
+		$result = &$this->retrieve(
+			'SELECT r.reviewer_id, COUNT(r.review_id) AS count FROM review_assignments r, articles a WHERE r.article_id = a.article_id AND a.journal_id = ? AND r.date_completed IS NOT NULL GROUP BY r.reviewer_id',
+			$journalId
+			);
+
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+			$returner[$row['reviewer_id']] = $row['count'];
+			$result->MoveNext();
+		}
+
+		$result->Close();
+		unset($result);
+
+		return $returner;
 	}
 }
 ?>

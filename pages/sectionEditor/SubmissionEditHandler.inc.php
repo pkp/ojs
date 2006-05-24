@@ -331,6 +331,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 				USER_FIELD_EMAIL => 'user.email',
 				USER_FIELD_INTERESTS => 'user.interests'
 			));
+			$templateMgr->assign('completedReviewCounts', $reviewAssignmentDao->getCompletedReviewCounts($journal->getJournalId()));
 			$templateMgr->assign('rateReviewerOnQuality', $journal->getSetting('rateReviewerOnQuality'));
 			$templateMgr->assign('averageQualityRatings', $reviewAssignmentDao->getAverageQualityRatings($journal->getJournalId()));
 

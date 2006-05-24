@@ -39,8 +39,8 @@
 	<td>{translate key="user.interests"}</td>
 	{if $rateReviewerOnQuality}
 		<td width="7%">{translate key="reviewer.averageQuality"}</td>
-		<td width="7%">{translate key="reviewer.numberOfRatings"}</td>
 	{/if}
+	<td width="7%">{translate key="reviewer.completedReviews"}</td>
 	<td width="7%">{translate key="editor.submissions.averageTime"}</td>
 	<td width="13%">{translate key="editor.submissions.lastAssigned"}</td>
 	<td width="5%">{translate key="common.active"}</td>
@@ -60,15 +60,13 @@
 		{else}{translate key="common.notApplicableShort"}{/if}
 	</td>{/if}
 
-	{if $rateReviewerOnQuality}
-		<td>
-			{if $averageQualityRatings[$userId].count}
-				{$averageQualityRatings[$userId].count}
-			{else}
-				0
-			{/if}
-		</td>
-	{/if}
+	<td>
+		{if $completedReviewCounts[$userId]}
+			{$completedReviewCounts[$userId]}
+		{else}
+			0
+		{/if}
+	</td>
 
 	<td>
 		{if $reviewerStats.average_span}
