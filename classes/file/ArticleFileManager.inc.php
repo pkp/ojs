@@ -346,25 +346,6 @@ class ArticleFileManager extends FileManager {
 	}
 	
 	/**
-	 * Parse the file extension from a filename/path.
-	 * @param $fileName string
-	 * @return string
-	 */
-	function parseFileExtension($fileName) {
-		$fileParts = explode('.', $fileName);
-		if (is_array($fileParts)) {
-			$fileExtension = $fileParts[count($fileParts) - 1];
-		}
-		
-		// FIXME Check for evil
-		if (!isset($fileExtension) || strstr($fileExtension, 'php') || strlen($fileExtension) > 6 || !preg_match('/^\w+$/', $fileExtension)) {
-			$fileExtension = 'txt';
-		}
-		
-		return $fileExtension;
-	}
-	
-	/**
 	 * Copies an existing ArticleFile and renames it.
 	 * @param $sourceFileId int
 	 * @param $sourceRevision int

@@ -233,6 +233,11 @@ class LayoutEditorHandler extends Handler {
 		SubmissionLayoutHandler::viewFile($args);
 	}
 
+	function downloadLayoutTemplate($args) {
+		import('pages.layoutEditor.SubmissionLayoutHandler');
+		SubmissionLayoutHandler::downloadLayoutTemplate($args);
+	}
+
 	//
 	// Proofreading Actions
 	//

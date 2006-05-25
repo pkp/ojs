@@ -118,7 +118,11 @@ class ManagerHandler extends Handler {
 		import('pages.manager.SetupHandler');
 		SetupHandler::saveSetup($args);
 	}
-	
+
+	function downloadLayoutTemplate($args) {
+		import('pages.manager.SetupHandler');
+		SetupHandler::downloadLayoutTemplate($args);
+	}
 	
 	//
 	// People Management

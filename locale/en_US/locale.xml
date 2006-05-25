@@ -1042,6 +1042,10 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.setup.noUseLayoutEditors">The editors will prepare the galleys in the appropriate format for electronic publication.</message>
 	<message key="manager.setup.layoutInstructions">Layout Instructions</message>
 	<message key="manager.setup.layoutInstructionsDescription">Layout Instructions can be prepared for the formatting of publishing items in the journal and be entered below in HTML or plain text. They will be made available to  the Layout Editor and Section Editor on the Editing page of each submission. (As each journal may employ its own file formats, bibliographic standards, style sheets, etc., a default set of instructions is not provided.)</message>
+	<message key="manager.setup.layoutTemplates">Layout Templates</message>
+	<message key="manager.setup.layoutTemplatesDescription">Templates can be uploaded to appear in Layout for each of the standard formats published in the journal (e.g., article, book review, etc.) using any file format (e.g., pdf, doc, etc.) with annotations added specifying font, size, margins, etc. to serve as a guide for Layout Editors and Proofreaders.</message>
+	<message key="manager.setup.layoutTemplates.title">Title</message>
+	<message key="manager.setup.layoutTemplates.file">Template File</message>
 	<message key="manager.setup.proofreading">Proofreaders</message>
 	<message key="manager.setup.useProofreaders">The journal will designate Proofreaders who will (along with the authors) check galleys.</message>
 	<message key="manager.setup.noUseProofreaders">The editors and authors will proofread the galleys.</message>

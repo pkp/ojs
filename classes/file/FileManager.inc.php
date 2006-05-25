@@ -362,6 +362,25 @@ class FileManager {
 		return chmod($path, $mask & ~$umask);
 	}
 	
+	/**
+	 * Parse the file extension from a filename/path.
+	 * @param $fileName string
+	 * @return string
+	 */
+	function parseFileExtension($fileName) {
+		$fileParts = explode('.', $fileName);
+		if (is_array($fileParts)) {
+			$fileExtension = $fileParts[count($fileParts) - 1];
+		}
+		
+		// FIXME Check for evil
+		if (!isset($fileExtension) || strstr($fileExtension, 'php') || strlen($fileExtension) > 6 || !preg_match('/^\w+$/', $fileExtension)) {
+			$fileExtension = 'txt';
+		}
+		
+		return $fileExtension;
+	}
+	
 }
 
 ?>

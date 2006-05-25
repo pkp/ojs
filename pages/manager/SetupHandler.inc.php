@@ -150,7 +150,41 @@ class SetupHandler extends ManagerHandler {
 						$setupForm->setData('submissionChecklist', $checklist);
 					}
 					break;
-					
+
+				case 4:
+					$journal =& Request::getJournal();
+					$templates = $journal->getSetting('templates');
+					import('file.JournalFileManager');
+					$journalFileManager =& new JournalFileManager($journal);
+					if (Request::getUserVar('addTemplate')) {
+						// Add a layout template
+						$editData = true;
+						if (!is_array($templates)) $templates = array();
+						$templateId = count($templates);
+						$originalFilename = $_FILES['template-file']['name'];
+						$fileType = $_FILES['template-file']['type'];
+						$filename = "template-$templateId." . $journalFileManager->parseFileExtension($originalFilename);
+						$journalFileManager->uploadFile('template-file', $filename);
+						$templates[$templateId] = array(
+							'originalFilename' => $originalFilename,
+							'fileType' => $fileType,
+							'filename' => $filename,
+							'title' => Request::getUserVar('template-title')
+						);
+						$journal->updateSetting('templates', $templates);
+					} else if (($delTemplate = Request::getUserVar('delTemplate')) && count($delTemplate) == 1) {
+						// Delete a template
+						$editData = true;
+						list($delTemplate) = array_keys($delTemplate);
+						$delTemplate = (int) $delTemplate;
+						$template = $templates[$delTemplate];
+						$filename = "template-$delTemplate." . $journalFileManager->parseFileExtension($template['originalFilename']);
+						$journalFileManager->deleteFile($filename);
+						array_splice($templates, $delTemplate, 1);
+						$journal->updateSetting('templates', $templates);
+					}
+					$setupForm->setData('templates', $templates);
+					break;
 				case 5:	
 					if (Request::getUserVar('uploadHomeHeaderTitleImage')) {
 						if ($setupForm->uploadImage('homeHeaderTitleImage')) {
@@ -341,5 +375,18 @@ class SetupHandler extends ManagerHandler {
 		}
 	}
 	
+	function downloadLayoutTemplate($args) {
+		parent::validate();
+		$journal =& Request::getJournal();
+		$templates = $journal->getSetting('templates');
+		import('file.JournalFileManager');
+		$journalFileManager =& new JournalFileManager($journal);
+		$templateId = (int) array_shift($args);
+		if ($templateId >= count($templates) || $templateId < 0) Request::redirect(null, null, 'setup');
+		$template =& $templates[$templateId];
+
+		$filename = "template-$templateId." . $journalFileManager->parseFileExtension($template['originalFilename']);
+		$journalFileManager->downloadFile($filename, $template['fileType']);
+	}
 }
 ?>

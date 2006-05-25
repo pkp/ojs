@@ -52,7 +52,6 @@ class JournalSetupStep4Form extends JournalSetupForm {
 			)
 		);
 	}
-	
 }
 
 ?>

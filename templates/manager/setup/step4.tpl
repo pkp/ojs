@@ -12,7 +12,7 @@
 {assign var="pageTitle" value="manager.setup.managingTheJournal}
 {include file="manager/setup/setupHeader.tpl"}
 
-<form method="post" action="{url op="saveSetup" path="4"}">
+<form method="post" action="{url op="saveSetup" path="4"}" enctype="multipart/form-data">
 {include file="common/formErrors.tpl"}
 
 <h3>4.1 {translate key="manager.setup.publicationScheduling"}</h3>
@@ -148,7 +148,7 @@
 <table width="100%" class="data">
 	<tr valign="top">
 		<td width="5%" class="label" align="right">
-			<input type="radio" name="enableSubscriptions" id="enableSubscriptions-0" value="0" onClick="toggleEnableSubscriptions(this.form)"{if not $enableSubscriptions} checked="checked"{/if} />
+			<input type="radio" name="enableSubscriptions" id="enableSubscriptions-0" value="0" onclick="toggleEnableSubscriptions(this.form)"{if not $enableSubscriptions} checked="checked"{/if} />
 		</td>
 		<td width="95%" class="value">
 			<label for="enableSubscriptions-0"><strong>{translate key="manager.setup.openAccess"}</strong></label>
@@ -161,7 +161,7 @@
 	</tr>
 	<tr valign="top">
 		<td width="5%" class="label" align="right">
-			<input type="radio" name="enableSubscriptions" id="enableSubscriptions-1" value="1" onClick="toggleEnableSubscriptions(this.form)"{if $enableSubscriptions} checked="checked"{/if} />
+			<input type="radio" name="enableSubscriptions" id="enableSubscriptions-1" value="1" onclick="toggleEnableSubscriptions(this.form)"{if $enableSubscriptions} checked="checked"{/if} />
 		</td>
 		<td width="95%" class="value">
 			<label for="enableSubscriptions-1"><strong>{translate key="manager.setup.subscription"}</strong></label>
@@ -214,7 +214,7 @@
 <p>
 	<input type="checkbox" name="enableAnnouncements" id="enableAnnouncements" value="1" {if $enableAnnouncements} checked="checked"{/if} />&nbsp;
 	<label for="enableAnnouncements">{translate key="manager.setup.enableAnnouncements"}</label>
-<p>
+</p>
 
 <p>
 	<input type="checkbox" name="enableAnnouncementsHomepage" id="enableAnnouncementsHomepage" value="1" onclick="toggleEnableAnnouncementsHomepage(this.form)"{if $enableAnnouncementsHomepage} checked="checked"{/if} />&nbsp;
@@ -225,7 +225,7 @@
 		{/section}
 	</select>
 	{translate key="manager.setup.enableAnnouncementsHomepage2"}
-<p>
+</p>
 
 <h4>{translate key="manager.setup.announcementsIntroduction"}</h4>
 
@@ -291,6 +291,26 @@
 	<span class="instruct">{translate key="manager.setup.htmlSetupInstructions"}</span>
 </p>
 
+<h4>{translate key="manager.setup.layoutTemplates"}</h4>
+
+<p>{translate key="manager.setup.layoutTemplatesDescription"}</p>
+
+<table width="100%" class="data">
+{foreach name=templates from=$templates key=templateId item=template}
+	<tr valign="top">
+		<td width="20%" class="label"><a href="{url op="downloadLayoutTemplate" path=$templateId}" class="action">{$template.filename|escape}</a></td>
+		<td width="50%" class="value">{$template.title|escape}</td>
+		<td width="30%"><input type="submit" name="delTemplate[{$templateId}]" value="{translate key="common.delete"}" class="button" /></td>
+{/foreach}
+	<tr valign="top">
+		<td width="20%" class="label">{fieldLabel name="template-title" key="manager.setup.layoutTemplates.title"}</td>
+		<td width="80%" colspan="2" class="value"><input type="text" name="template-title" id="template-title" size="40" maxlength="90" class="textField" /></td>
+	</tr>
+	<tr valign="top">
+		<td width="20%" class="label">{fieldLabel name="template-file" key="manager.setup.layoutTemplates.file"}</td>
+		<td width="80%" colspan="2" class="value"><input type="file" name="template-file" id="template-file" class="uploadField" /><input type="submit" name="addTemplate" value="{translate key="common.upload"}" class="button" /></td>
+	</tr>
+</table>
 
 <div class="separator"></div>
 

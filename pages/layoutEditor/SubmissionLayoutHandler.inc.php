@@ -47,6 +47,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		$templateMgr->assign_by_ref('submission', $submission);
 		$templateMgr->assign('disableEdit', $disableEdit);
 		$templateMgr->assign('useProofreaders', $journal->getSetting('useProofreaders'));
+		$templateMgr->assign('templates', $journal->getSetting('templates'));
 		$templateMgr->assign('helpTopicId', 'editorial.layoutEditorsRole.layout');
 		$templateMgr->display('layoutEditor/submission.tpl');
 	}
@@ -468,6 +469,20 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 			&& $layoutAssignment->getDateCompleted() == null)
 		|| ($proofAssignment->getDateLayoutEditorNotified() != null
 			&& $proofAssignment->getDateLayoutEditorCompleted() == null));
+	}
+
+	function downloadLayoutTemplate($args) {
+		parent::validate();
+		$journal =& Request::getJournal();
+		$templates = $journal->getSetting('templates');
+		import('file.JournalFileManager');
+		$journalFileManager =& new JournalFileManager($journal);
+		$templateId = (int) array_shift($args);
+		if ($templateId >= count($templates) || $templateId < 0) Request::redirect(null, null, 'setup');
+		$template =& $templates[$templateId];
+
+		$filename = "template-$templateId." . $journalFileManager->parseFileExtension($template['originalFilename']);
+		$journalFileManager->downloadFile($filename, $template['fileType']);
 	}
 }
 
