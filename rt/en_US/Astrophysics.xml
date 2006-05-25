@@ -57,8 +57,8 @@
 			
 		</search>
 		<search>
-			<search_title>AstroWeb: Astronomical Internet Resources</search_title>
-			<search_description>AstroWeb: Astronomical Internet Resources contains pointers to potentially relevant resources available via Internet and is a product of the AstroWeb Consortium.</search_description>
+			<search_title>Astronomy Resources from STScI</search_title>
+			<search_description>Astronomical Internet resources by the Space Telescope Science Institute.</search_description>
 			<url>http://www.stsci.edu/science/net-resources.html</url>
 			<search_url>http://www.stsci.edu/resources/WebSearch?uq=&amp;notq=&amp;command=Submit&amp;query={$formKeywords}</search_url>
 			
@@ -93,8 +93,8 @@
 		</search>
 	</context>
 	<context>
-		<context_title>Definitions</context_title>
-		<context_abbrev>Definitions</context_abbrev>
+		<context_title>Look up terms</context_title>
+		<context_abbrev>Look up terms</context_abbrev>
 		<context_description>Double click on any word in the text and it will appear in the &quot;Definition of terms&quot; box.  You can also type or paste a word into the box.  Then use the search function to find a definition for the word.  These resources have been selected because of their relevance and their open (free) access to all or part of their contents.</context_description>
 		<define_terms />
 		<search>
@@ -170,10 +170,10 @@ definition.</search_description>
 			
 		</search>
 		<search>
-			<search_title>AstroWeb: Astronomical Internet Resources</search_title>
-			<search_description>AstroWeb: Astronomical Internet Resources contains pointers to potentially relevant resources available via Internet and is a product of the AstroWeb Consortium.</search_description>
+			<search_title>Astronomy Resources from STScI</search_title>
+			<search_description>Astronomical Internet resources by the Space Telescope Science Institute.</search_description>
 			<url>http://www.stsci.edu/science/net-resources.html</url>
-			<search_url>http://www.stsci.edu/cgi-bin/search-master?</search_url>
+			<search_url>http://www.stsci.edu/resources/WebSearch?uq=&amp;notq=&amp;command=Submit&amp;query={$formKeywords}</search_url>
 			
 		</search>
 		<search>
@@ -200,8 +200,8 @@ definition.</search_description>
 		<search>
 			<search_title>NASA Technical Reports Server</search_title>
 			<search_description>NASA Technical Reports Server allows users to search available online NASA published documents, including meeting presentations, journal articles, conference proceedings, and technical reports. Many documents are available in compressed PostScript and PDF formats. All documents are unclassified and publicly available.</search_description>
-			<url>http://techreports.larc.nasa.gov/ltrs/ltrs.html</url>
-			<search_url>http://ntrs.nasa.gov/index.cgi?method=search&amp;offset=0&amp;mode=advanced&amp;title=&amp;date=&amp;type=&amp;description=&amp;accessionID=&amp;docID=&amp;boolean=and&amp;orderby=date&amp;order=DESC&amp;limit=25&amp;archives=genesis.jpl.nasa.gov&amp;archives=atrs&amp;archives=casi&amp;archives=dtrs.dfrc.nasa.gov&amp;archives=gtrs&amp;archives=jpl-trs.jpl.nasa.gov&amp;archives=jtrs&amp;archives=ktrs&amp;archives=ltrs.larc.nasa.gov&amp;archives=mtrs&amp;archives=ssctrs&amp;archives=naca.larc.nasa.gov&amp;creator={$formKeywords}</search_url>
+			<url>http://ntrs.nasa.gov/?method=aboutntrs</url>
+			<search_url>http://ntrs.nasa.gov/index.cgi?method=search&amp;limit=25&amp;offset=0&amp;mode=simple&amp;order=DESC&amp;keywords={$formKeywords}</search_url>
 			
 		</search>
 	</context>
@@ -254,7 +254,7 @@ definition.</search_description>
 		<search>
 			<search_title>ebrary</search_title>
 			<search_description>Independent researchers who do not have access to ebrary_ databases through their library may now set up an individual account for as little as $5. ebrary Discover spans multiple academic disciplines and provides anytime, anywhere access to over 20,000 authoritative titles including books in full-text, sheet music, reports and other authoritative documents from more than 175 leading publishers such as Cambridge University Press, Random House, Inc., and The McGraw-Hill Companies.</search_description>
-			<url>http://www.ebrary.com/company/</url>
+			<url>http://www.ebrary.com/corp/content.htm</url>
 			<search_url>http://shop.ebrary.com/Top?layout=search&amp;frm=smp.x&amp;sch=%A0%A0%A0%A0%A0Search%A0%A0%A0%A0%A0&amp;p00={$formKeywords}</search_url>
 			
 		</search>
@@ -404,8 +404,8 @@ definition.</search_description>
 			<search_title>Europa</search_title>
 			<search_description>Current information on the member countries of the European Union, including statistical data, policies, news, official documents, legal texts, and other publications.</search_description>
 			<url>http://europa.eu.int/index_en.htm</url>
-			<search_url>http://europa.eu.int/geninfo/query/engine/search/query.pl?action=FilterSearch&amp;filter=europaflt.hts&amp;Collection=fullEUROPA&amp;ResultTemplate=europarslt_ascii.hts&amp;ResultCount=25&amp;ResultMaxDocs=200&amp;DefaultLG=en&amp;ViewTemplate=europaview.hts&amp;QueryText={$formKeywords}</search_url>
-			
+			<search_url>http://europa.eu.int/geninfo/query/resultaction.jsp?page=1</search_url>
+			<search_post>Collection=EuropaFull&amp;ResultTemplate=/result_en.jsp&amp;ResultCount=25&amp;qtype=simple&amp;ResultMaxDocs=200&amp;DefaultLG=en&amp;QueryText={$formKeywords}</search_post>			
 		</search>
 		<search>
 			<search_title>The Global Legal Information Network (GLIN)</search_title>
@@ -425,7 +425,7 @@ definition.</search_description>
 			<search_title>Canada Sites</search_title>
 			<search_description>Canada Sites provides an information and services gateway run by the Government of Canada and each of the provinces.</search_description>
 			<url>http://www.canada.gc.ca/main_e.html</url>
-			<search_url>http://search-recherche.gc.ca/cgi-bin/query?mss=canada%2Fen%2Fsimple.html&amp;enc=iso88591&amp;pg=q&amp;kl=en&amp;site=main&amp;browser=IE&amp;mss=canada%2Fen%2Fsimple.html&amp;q={$formKeywords}</search_url>
+			<search_url>http://search-recherche.gc.ca/cgi-bin/query?mss=canada%2Fen%2Fsimple.html&amp;enc=iso88591&amp;pg=q&amp;kl=en&amp;site=main&amp;q={$formKeywords}</search_url>
 			
 		</search>
 	</context>
@@ -473,7 +473,7 @@ definition.</search_description>
 			<search_title>Scientific American Archive</search_title>
 			<search_description>Scientific American Archive is the online science and technology resource offering access to every page and every issue of Scientific American magazine from 1993 to the present.</search_description>
 			<url>http://www.sciamdigital.com/</url>
-			<search_url>http://www.sciamdigital.com/searchresults.cfm?datapacketXMLO=&amp;methodnameCHAR=search_searchlog&amp;interfacenameCHAR=searchresults.cfm&amp;sequencenameCHAR=listresults&amp;calltypeCHAR=Formcall&amp;AUTHOR_CHAR=&amp;TITLE_CHAR=&amp;REQUESTERIDCHAR=anonymous&amp;REQUESTERGROUPCHAR=.1.2.0&amp;FullText_CHAR={$formKeywords}</search_url>
+			<search_url>http://www.sciamdigital.com/index.cfm?fa=Search.ViewSearchForItemResultList&amp;AUTHOR_CHAR=&amp;TITLE_CHAR=&amp;FullText_CHAR={$formKeywords}</search_url>
 			
 		</search>
 		<search>
@@ -506,7 +506,7 @@ definition.</search_description>
 		<search>
 			<search_title>Clusty the Clustering Engine</search_title>
 			<search_description>This search tool from Vivismo offers clustered results for a selection of searches.  Metasearch the whole web, or use tabs to search for news, gossip, images, orproducts via Bizrate or eBay.</search_description>
-			<url>http://clusty.com/</url>
+			<url>http://clusty.com/about</url>
 			<search_url>http://clusty.com/search?query={$formKeywords}</search_url>
 			
 		</search>

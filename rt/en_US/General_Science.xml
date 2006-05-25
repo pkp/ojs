@@ -79,8 +79,8 @@
 		</search>
 	</context>
 	<context>
-		<context_title>Definitions</context_title>
-		<context_abbrev>Definitions</context_abbrev>
+		<context_title>Look up terms</context_title>
+		<context_abbrev>Look up terms</context_abbrev>
 		<context_description>Double click on any word in the text and it will appear in the &quot;Definition of terms&quot; box. You can also type or paste a word into the box. Then use the search function to find a definition for the word. These resources have been selected because of their relevance and their open (free) access to all or part of their contents.</context_description>
 		<define_terms />
 		<search>
@@ -124,6 +124,13 @@
 		<context_abbrev>Book</context_abbrev>
 		<context_description>Book-related Resources</context_description>
 
+		<search>
+			<search_title>Science Books and Films</search_title>
+			<search_description>Science Books and Films is the AAAS review journal for science materials for all ages, including reviews and recommendations for books, videos, software, and web sites.</search_description>
+			<url>http://sbfonline.com/</url>
+			<search_url>http://sbfonline.com/sample/search.cgi?title_query_type=all&amp;author_query_type&amp;author=&amp;other=&amp;type=B&amp;type=F&amp;type=S&amp;title={$formKeywords}</search_url>
+			
+		</search>
 		<search>
 			<search_title>Google Print</search_title>
 			<search_description>Google is working with libraries at the University of Michigan, Harvard University, Stanford University, Oxford University and the New York Public Library to digitize books in their collections and make them accessible via Google Print, a massive scanning project that will bring millions of volumes of printed books into the Google Print database.  Click a book title and you'll see the page of the book that has your search terms, your can search for more information within that specific book, find reviews, find related information, learn about the publisher, buy this book, and find nearby libraries that have it.</search_description>
@@ -173,6 +180,13 @@
 		<context_description>General Science resource portals</context_description>
 
 		<search>
+			<search_title>SciTechResources.gov</search_title>
+			<search_description>SciTechResources.gov is an annotated directory of nearly 700 science and technology resources on U.S. government sites. Searchable by agency and searchable by subject, agency, and resource type (including bibliographic databases, computer software, current research, laboratories, maps, photographs, research and development, publications, and satellite data).</search_description>
+			<url>http://www.scitechresources.gov/</url>
+			<search_url>http://www.scitechresources.gov/./Results/Hitlist.php?2ndquerystring=&amp;3rdquerystring=&amp;opt1=AND&amp;limit=10&amp;order=score=&amp;1stquerystring={$formKeywords}</search_url>
+			
+		</search>
+		<search>
 			<search_title>SciCentral</search_title>
 			<search_description>A directory of links to &quot;today's breaking science news.&quot; Browsable by topic, including biosciences, health sciences, physics, chemistry, earth and space, and engineering. Also includes links to related journals, databases, job opportunities, and conferences.</search_description>
 			<url>http://scicentral.com/</url>
@@ -214,13 +228,6 @@
 			
 		</search>
 		<search>
-			<search_title>SciTechResources.gov</search_title>
-			<search_description>SciTechResources.gov is an annotated directory of nearly 700 science and technology resources on U.S. government sites. Searchable by agency and searchable by subject, agency, and resource type (including bibliographic databases, computer software, current research, laboratories, maps, photographs, research and development, publications, and satellite data).</search_description>
-			<url>http://www.scitechresources.gov/</url>
-			<search_url>http://www.scitechresources.gov/./Results/Hitlist.php?2ndquerystring=&amp;3rdquerystring=&amp;opt1=AND&amp;limit=10&amp;order=score=&amp;1stquerystring={$formKeywords}</search_url>
-			
-		</search>
-		<search>
 			<search_title>CASI Technical Report Server</search_title>
 			<search_description>CASI Technical Report Server contains bibliographic citations and abstracts to unclassified documents announced in Scientific and technical aerospace reports, plus the document series produced by NASA's predecessor, The National Advisory Committee for Aeronautics, and the NASA open literature file containing citations and abstracts to literature in the fields of aeronautics, space science, chemistry, engineering, geosciences, life sciences, mathematics, computer sciences, and physics.</search_description>
 			<url>http://www.sti.nasa.gov/RECONselect.html</url>
@@ -248,13 +255,6 @@
 			<search_url>http://philsci-archive.pitt.edu/perl/search?_order=bytitle&amp;abstract%2Fkeywords%2Ftitle_srchtype=ALL&amp;_satisfyall=ALL&amp;_action_search=Search&amp;abstract%2Fkeywords%2Ftitle={$formKeywords}</search_url>
 			
 		</search>
-		<search>
-			<search_title>Science Books and Films</search_title>
-			<search_description>Science Books and Films is the AAAS review journal for science materials for all ages, including reviews and recommendations for books, videos, software, and web sites.</search_description>
-			<url>http://sbfonline.com/</url>
-			<search_url>http://sbfonline.com/sample/search.cgi?title_query_type=all&amp;author_query_type&amp;author=&amp;other=&amp;type=B&amp;type=F&amp;type=S&amp;title={$formKeywords}</search_url>
-			
-		</search>
 	</context>
 	<context>
 		<context_title>Pay-per-view</context_title>
@@ -271,7 +271,7 @@
 		<search>
 			<search_title>ebrary</search_title>
 			<search_description>Independent researchers who do not have access to ebrary?s databases through their library may now set up an individual account for as little as $5. ebrary Discover spans multiple academic disciplines and provides anytime, anywhere access to over 20,000 authoritative titles including books in full-text, sheet music, reports and other authoritative documents from more than 175 leading publishers such as Cambridge University Press, Random House, Inc., and The McGraw-Hill Companies.</search_description>
-			<url>http://www.ebrary.com/company/</url>
+			<url>http://www.ebrary.com/corp/content.htm</url>
 			<search_url>http://shop.ebrary.com/Top?layout=search&amp;f00=text&amp;p01=&amp;f01=subject&amp;d=journal&amp;l=en&amp;sch=%A0%A0%A0%A0%A0Search%A0%A0%A0%A0%A0&amp;frm=adv.x&amp;p00={$formKeywords}</search_url>
 			
 		</search>
@@ -353,7 +353,7 @@
 			<search_title>Research Channel Programs: Stanford Science Online videos</search_title>
 			<search_description>ResearchChannel is a consortium of research universities and corporate research divisions dedicated to broadening the access to and appreciation of our individual and collective activities, ideas, and opportunities in basic and applied research.</search_description>
 			<url>http://www.researchchannel.org/program/displayseries.asp?collid=134</url>
-			<search_url>http://www.researchchannel.org/sitesearch.asp?RecordsPerPage=5&amp;Order=Rank&amp;keywords=/&amp;Query={$formKeywords}</search_url>
+			<search_url>http://www.researchchannel.org/prog/sitesearch.asp?RecordsPerPage=5&amp;Order=Rank&amp;keywords=program&amp;Query={$formKeywords}</search_url>
 			
 		</search>
 		<search>
@@ -435,8 +435,8 @@
 			<search_title>Europa</search_title>
 			<search_description>Current information on the member countries of the European Union, including statistical data, policies, news, official documents, legal texts, and other publications.</search_description>
 			<url>http://europa.eu.int/index_en.htm</url>
-			<search_url>http://europa.eu.int/geninfo/query/engine/search/query.pl?action=FilterSearch&amp;filter=europaflt.hts&amp;Collection=fullEUROPA&amp;ResultTemplate=europarslt_ascii.hts&amp;ResultCount=25&amp;ResultMaxDocs=200&amp;DefaultLG=en&amp;ViewTemplate=europaview.hts&amp;QueryText={$formKeywords}</search_url>
-			
+			<search_url>http://europa.eu.int/geninfo/query/resultaction.jsp?page=1</search_url>
+			<search_post>Collection=EuropaFull&amp;ResultTemplate=/result_en.jsp&amp;ResultCount=25&amp;qtype=simple&amp;ResultMaxDocs=200&amp;DefaultLG=en&amp;QueryText={$formKeywords}</search_post>			
 		</search>
 		<search>
 			<search_title>The Global Legal Information Network (GLIN)</search_title>
@@ -456,7 +456,7 @@
 			<search_title>Canada Sites</search_title>
 			<search_description>Canada Sites provides an information and services gateway run by the Government of Canada and each of the provinces.</search_description>
 			<url>http://www.canada.gc.ca/main_e.html</url>
-			<search_url>http://search-recherche.gc.ca/cgi-bin/query?mss=canada%2Fen%2Fsimple.html&amp;enc=iso88591&amp;pg=q&amp;kl=en&amp;site=main&amp;browser=IE&amp;mss=canada%2Fen%2Fsimple.html&amp;q={$formKeywords}</search_url>
+			<search_url>http://search-recherche.gc.ca/cgi-bin/query?mss=canada%2Fen%2Fsimple.html&amp;enc=iso88591&amp;pg=q&amp;kl=en&amp;site=main&amp;q={$formKeywords}</search_url>
 			
 		</search>
 	</context>
@@ -544,7 +544,7 @@
 		<search>
 			<search_title>Clusty the Clustering Engine</search_title>
 			<search_description>This search tool from Vivismo offers clustered results for a selection of searches.  Metasearch the whole web, or use tabs to search for news, gossip, images, orproducts via Bizrate or eBay.</search_description>
-			<url>http://clusty.com/</url>
+			<url>http://clusty.com/about</url>
 			<search_url>http://clusty.com/search?query={$formKeywords}</search_url>
 			
 		</search>

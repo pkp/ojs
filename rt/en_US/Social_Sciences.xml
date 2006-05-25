@@ -79,8 +79,8 @@
 		</search>
 	</context>
 	<context>
-		<context_title>Definitions</context_title>
-		<context_abbrev>Definitions</context_abbrev>
+		<context_title>Look up terms</context_title>
+		<context_abbrev>Look up terms</context_abbrev>
 		<context_description>Double click on any word in the text and it will appear in the &quot;Definition of terms&quot; box. You can also type or paste a word into the box. Then use the search function to find a definition for the word. These resources have been selected because of their relevance and their open (free) access to all or part of their contents.</context_description>
 		<define_terms />
 		<search>
@@ -216,7 +216,7 @@
 		<search>
 			<search_title>ebrary</search_title>
 			<search_description>Independent researchers who do not have access to ebrary?s databases through their library may now set up an individual account for as little as $5. ebrary Discover spans multiple academic disciplines and provides anytime, anywhere access to over 20,000 authoritative titles including books in full-text, sheet music, reports and other authoritative documents from more than 175 leading publishers such as Cambridge University Press, Random House, Inc., and The McGraw-Hill Companies.</search_description>
-			<url>http://www.ebrary.com/company/</url>
+			<url>http://www.ebrary.com/corp/content.htm</url>
 			<search_url>http://shop.ebrary.com/Top?layout=search&amp;f00=text&amp;p01=&amp;f01=subject&amp;d=journal&amp;l=en&amp;sch=%A0%A0%A0%A0%A0Search%A0%A0%A0%A0%A0&amp;frm=adv.x&amp;p00={$formKeywords}</search_url>
 			
 		</search>
@@ -496,7 +496,7 @@
 			<search_title>Jurist: The Law Professors' Network</search_title>
 			<search_description>Jurist-Law professors on the web provides links to the home pages of over fifty law professors, to over fifty pre- and post-prints of articles (in nine subjects from business law to regulation), and to twenty meta-pages, maintained by law professors, on topics from administrative to tax law. Also included are a large list of online law course pages, three lectures, and pointers to other resources. Essentially an annotated tour through the law resources of the Internet conducted by professors of law.</search_description>
 			<url>http://www.law.pitt.edu/hibbitts/jurist.htm</url>
-			<search_url>http://www.picosearch.com/cgi-bin/ts.pl?index=110412&amp;opt=EXACT&amp;SEARCH=Search+JURIST+5000&amp;query={$formKeywords}</search_url>
+			<search_url>http://www.picosearch.com/cgi-bin/ts.pl?index=110412&amp;opt=ALL&amp;SEARCH=Search+JURIST+5000&amp;query={$formKeywords}</search_url>
 			
 		</search>
 	</context>
@@ -505,20 +505,6 @@
 		<context_abbrev>Gov Policy</context_abbrev>
 		<context_description>Access to Information and services gateway run by the Government of the United States and Canada.</context_description>
 
-		<search>
-			<search_title>Frequently Used Sites Related to U.S. Federal Government Information</search_title>
-			<search_description>Collection of online sites pertaining to government information. Scope is national and international.</search_description>
-			<url>http://www.library.vanderbilt.edu/romans/fdtf/</url>
-			<search_url>http://lib11.library.vanderbilt.edu/diglib/godort.pl?Type=KW&amp;Resource=DB&amp;Website=FDTF&amp;selectsearch=general&amp;sort=alpha&amp;action=search&amp;submit=Search&amp;searchtext={$formKeywords}</search_url>
-			
-		</search>
-		<search>
-			<search_title>Rulers</search_title>
-			<search_description>This site contains lists of heads of state and heads of government (and, in certain cases, de facto leaders not occupying either of those formal positions) of all countries and territories, going back to about 1700 in most cases. Also included are the subdivisions of various countries, recent foreign ministers of all countries, and a selection of international organizations, religious leaders and a chronicle of relevant events since 1996.</search_description>
-			<url>http://www.rulers.org/</url>
-			<search_url>http://www.google.com/search?q=site%3Arulers.org&amp;q={$formKeywords}</search_url>
-			
-		</search>
 		<search>
 			<search_title>Access to Australian Government Information and Services</search_title>
 			<search_description>The Australian Government Entry Point offers comprehensive and integrated access to Australian Government information and services.  You will find a concentrated body of Australian Government information through this site. &lt;a href=&quot;http://www.australia.gov.au&quot;&gt;www.australia.gov.au&lt;/a&gt; currently signposts over 700 Australian Government web sites, indexes more than 5,000,000 pages and uses both metadata and full text indexing to ensure it is a comprehensive government portal.</search_description>
@@ -530,7 +516,14 @@
 			<search_title>Canadian Government Information</search_title>
 			<search_description>Includes links to Canadian government libraries, federal documents and news releases, publications catalogues, and provincial governments. Most information is in English, but some of the linked material is in French, or a combination of French and English.</search_description>
 			<url>http://www.nlc-bnc.ca/8/4/index-e.html</url>
-			<search_url>http://www.collectionscanada.ca/search/006001-110.01-e.php?q%5B1%5D=pagelevel%3A1&amp;q%5B2%5D=&amp;x=15&amp;y=13&amp;q%5B0%5D={$formKeywords}</search_url>
+			<search_url>http://search-recherche.collectionscanada.ca/fed/searchResults.jsp?SourceQuery=&amp;ResultCount=5&amp;PageNum=1&amp;MaxDocs=-1&amp;SortSpec=score+desc&amp;Language=eng&amp;Sources=amicus&amp;Sources=mikan&amp;Sources=web&amp;QueryText.x=11&amp;QueryText.y=13&amp;QueryText={$formKeywords}</search_url>
+			
+		</search>
+		<search>
+			<search_title>Canada Sites</search_title>
+			<search_description>Canada Sites provides an information and services gateway run by the Government of Canada and each of the provinces.</search_description>
+			<url>http://www.canada.gc.ca/main_e.html</url>
+			<search_url>http://search-recherche.gc.ca/cgi-bin/query?mss=canada%2Fen%2Fsimple.html&amp;enc=iso88591&amp;pg=q&amp;kl=en&amp;site=main&amp;q={$formKeywords}</search_url>
 			
 		</search>
 		<search>
@@ -538,6 +531,13 @@
 			<search_description>Directgov is a government service giving people access to the latest and widest range of public service information in one place on the Web and on Digital TV. Directgov uses the specifications formulated and consulted on through UK GovTalk.</search_description>
 			<url>http://www.direct.gov.uk</url>
 			<search_url>http://www.direct.gov.uk/AdvancedSearch/SearchResults/fs/en?NP=1&amp;PO1=C&amp;PI1=W&amp;PF1=A&amp;PG=1&amp;RP=20&amp;SC=__dgov_site&amp;Z=1&amp;PT1={$formKeywords}</search_url>
+			
+		</search>
+		<search>
+			<search_title>FirstGov</search_title>
+			<search_description>FirstGov (U.S. federal and state) is a public-private partnership, led by a cross-agency board.</search_description>
+			<url>http://www.firstgov.gov/</url>
+			<search_url>http://www.firstgov.gov/fgsearch/index.jsp?db=www-fed-all&amp;st=AS&amp;ms0=should&amp;mt0=all&amp;rn=2&amp;parsed=true&amp;x=5&amp;y=16&amp;mw0={$formKeywords}</search_url>
 			
 		</search>
 		<search>
@@ -558,8 +558,8 @@
 			<search_title>Europa</search_title>
 			<search_description>Current information on the member countries of the European Union, including statistical data, policies, news, official documents, legal texts, and other publications.</search_description>
 			<url>http://europa.eu.int/index_en.htm</url>
-			<search_url>http://europa.eu.int/geninfo/query/engine/search/query.pl?action=FilterSearch&amp;filter=europaflt.hts&amp;Collection=fullEUROPA&amp;ResultTemplate=europarslt_ascii.hts&amp;ResultCount=25&amp;ResultMaxDocs=200&amp;DefaultLG=en&amp;ViewTemplate=europaview.hts&amp;QueryText={$formKeywords}</search_url>
-			
+			<search_url>http://europa.eu.int/geninfo/query/resultaction.jsp?page=1</search_url>
+			<search_post>Collection=EuropaFull&amp;ResultTemplate=/result_en.jsp&amp;ResultCount=25&amp;qtype=simple&amp;ResultMaxDocs=200&amp;DefaultLG=en&amp;QueryText={$formKeywords}</search_post>			
 		</search>
 		<search>
 			<search_title>The Global Legal Information Network (GLIN)</search_title>
@@ -576,17 +576,10 @@
 			
 		</search>
 		<search>
-			<search_title>FirstGov</search_title>
-			<search_description>FirstGov (U.S. federal and state) is a public-private partnership, led by a cross-agency board.</search_description>
-			<url>http://www.firstgov.gov/</url>
-			<search_url>http://www.firstgov.gov/fgsearch/index.jsp?db=www-fed-all&amp;st=AS&amp;ms0=should&amp;mt0=all&amp;rn=2&amp;parsed=true&amp;x=5&amp;y=16&amp;mw0={$formKeywords}</search_url>
-			
-		</search>
-		<search>
-			<search_title>Canada Sites</search_title>
-			<search_description>Canada Sites provides an information and services gateway run by the Government of Canada and each of the provinces.</search_description>
-			<url>http://www.canada.gc.ca/main_e.html</url>
-			<search_url>http://search-recherche.gc.ca/cgi-bin/query?mss=canada%2Fen%2Fsimple.html&amp;enc=iso88591&amp;pg=q&amp;kl=en&amp;site=main&amp;q={$formKeywords}</search_url>
+			<search_title>Rulers</search_title>
+			<search_description>This site contains lists of heads of state and heads of government (and, in certain cases, de facto leaders not occupying either of those formal positions) of all countries and territories, going back to about 1700 in most cases. Also included are the subdivisions of various countries, recent foreign ministers of all countries, and a selection of international organizations, religious leaders and a chronicle of relevant events since 1996.</search_description>
+			<url>http://www.rulers.org/</url>
+			<search_url>http://www.google.com/search?q=site%3Arulers.org&amp;q={$formKeywords}</search_url>
 			
 		</search>
 		<search>
@@ -620,7 +613,7 @@
 			<search_title>People's Daily</search_title>
 			<search_description>People's Daily, China (January 1999-)</search_description>
 			<url>http://english.peopledaily.com.cn/</url>
-			<search_url>http://english.peopledaily.com.cn/cgi-bin/htsearch?method=boolean&amp;format=builtin-long&amp;sort=score&amp;config=english&amp;exclude=&amp;words={$formKeywords}</search_url>
+			<search_url>http://202.99.23.197/cgi-bin/htsearch/?method=and&amp;format=builtin-long&amp;sort=score&amp;config=english&amp;exclude=&amp;words={$formKeywords}</search_url>
 			
 		</search>
 		<search>
@@ -648,7 +641,7 @@
 			<search_title>The Japan Times Online</search_title>
 			<search_description>The Japan Times Online, Japan (January 1999-)</search_description>
 			<url>http://www.japantimes.co.jp/search.htm</url>
-			<search_url>http://search.japantimes.co.jp/cgi-bin/JTsearch4.pl5?term1={$formKeywords}</search_url>
+			<search_url>http://www.google.co.jp/custom?domains=japantimes.co.jp&amp;client=pub-4223870936880387&amp;forid=1&amp;ie=Shift_JIS&amp;oe=Shift_JIS&amp;term1=&amp;cof=GALT%3A%23008000%3BGL%3A1%3BDIV%3A%23336699%3BVLC%3A663399%3BAH%3Acenter%3BBGC%3AFFFFFF%3BLBGC%3AFFFFFF%3BALC%3A0000FF%3BLC%3A0000FF%3BT%3A000000%3BGFNT%3A0000FF%3BGIMP%3A0000FF%3BLH%3A60%3BLW%3A200%3BL%3Ahttp%3A%2F%2Fwww.japantimes.co.jp%2Fimages%2Fheader_title.gif%3BS%3Ahttp%3A%2F%2Fwww.japantimes.co.jp%2F%3BFORID%3A1%3B&amp;hl=ja&amp;advancesearch=&amp;q={$formKeywords}</search_url>
 			
 		</search>
 		<search>
@@ -695,7 +688,7 @@
 		<search>
 			<search_title>Clusty the Clustering Engine</search_title>
 			<search_description>This search tool from Vivismo offers clustered results for a selection of searches.  Metasearch the whole web, or use tabs to search for news, gossip, images, orproducts via Bizrate or eBay.</search_description>
-			<url>http://clusty.com/</url>
+			<url>http://clusty.com/about</url>
 			<search_url>http://clusty.com/search?query={$formKeywords}</search_url>
 			
 		</search>

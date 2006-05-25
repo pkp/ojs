@@ -53,7 +53,7 @@
 			<search_title>Math Archives: Topics in Mathematics</search_title>
 			<search_description>A large, searchable collection of categorized teaching materials, software, and Web links. While not annotated, keywords for each site provide insight into the site's offerings.</search_description>
 			<url>http://archives.math.utk.edu/topics/</url>
-			<search_url>http://www.google.com/search?q=site%3Aarchives.math.utk.edu+topics+</search_url>
+			<search_url>http://www.google.com/search?q=site%3Aarchives.math.utk.edu+topics+{$formKeywords}</search_url>
 			
 		</search>
 		<search>
@@ -67,7 +67,7 @@
 			<search_title>MPRESS/MATHNET</search_title>
 			<search_description>MPRESS/MathNet is a concept/installation to provide quality indexing of mathematical preprints (servers). It is in itself operated in a distributed way. MPRESS improves access to the full texts of preprints in mathematics by means of metadata and provides comprehensive and easily searchable information on the preprints available.</search_description>
 			<url>http://mathnet.preprints.org/</url>
-			<search_url>http://mathnet.preprints.org/cgi-bin/harvest/MPRESS.pl.cgi?keyword=&amp;title=&amp;metaquery=&amp;broker=FraGer&amp;errorflag=0&amp;wordflag=off&amp;opaqueflag=off&amp;csumflag=off&amp;maxobjflag=10000&amp;maxlineflag=10000&amp;maxresultflag=10000&amp;query=&amp;author={$formKeywords}</search_url>
+			<search_url>http://mathnet.preprints.org/cgi-bin/harvest/MPRESS.pl.cgi?title=&amp;metaquery=&amp;keyword=&amp;query=&amp;broker=FraGer&amp;errorflag=0&amp;wordflag=off&amp;opaqueflag=off&amp;csumflag=off&amp;maxobjflag=10000&amp;maxlineflag=10000&amp;maxresultflag=10000&amp;author={$formKeywords}</search_url>
 			
 		</search>
 		<search>
@@ -79,8 +79,8 @@
 		</search>
 	</context>
 	<context>
-		<context_title>Definitions</context_title>
-		<context_abbrev>Definitions</context_abbrev>
+		<context_title>Look up terms</context_title>
+		<context_abbrev>Look up terms</context_abbrev>
 		<context_description>Double click on any word in the text and it will appear in the &quot;Definition of terms&quot; box. You can also type or paste a word into the box. Then use the search function to find a definition for the word. These resources have been selected because of their relevance and their open (free) access to all or part of their contents.</context_description>
 		<define_terms />
 		<search>
@@ -209,8 +209,8 @@
 			<search_title>Math Archives: Topics in Mathematics</search_title>
 			<search_description>A large, searchable collection of categorized teaching materials, software, and Web links. While not annotated, keywords for each site provide insight into the site's offerings.</search_description>
 			<url>http://archives.math.utk.edu/topics/</url>
-			<search_url>http://archives.math.utk.edu/cgi-bin/searchTopics.pl</search_url>
-			<search_post>text={$formKeywords}</search_post>			
+			<search_url>http://www.google.com/search?q=site%3Aarchives.math.utk.edu+topics+{$formKeywords}</search_url>
+			
 		</search>
 		<search>
 			<search_title>MathSearch</search_title>
@@ -230,8 +230,8 @@
 			<search_title>SIAM Review</search_title>
 			<search_description>The SIAM Review consists of five sections, all containing articles of broad interest. Survey and Review features papers with a deliberately integrative and up-to-date perspective on a major topic in applied or computational mathematics or scientific computing.</search_description>
 			<url>http://epubs.siam.org/sam-bin/dbq/toclist/SIREV</url>
-			<search_url>http://epubs.siam.org:9999/?EPUBS+EPUBSHTML&amp;submit=Search SIAM Journals Online&amp;quant=10&amp;other=opt:and&amp;search={$formKeywords}</search_url>
-			
+			<search_url>http://epubs.siam.org/search/search.pl</search_url>
+			<search_post>field1=anyfield&amp;jrnlname=all&amp;boolean1=and&amp;search_field=anyfield&amp;quicksearchstring={$formKeywords}</search_post>			
 		</search>
 		<search>
 			<search_title>Zentralblatt MATH</search_title>
@@ -256,7 +256,7 @@
 		<search>
 			<search_title>ebrary</search_title>
 			<search_description>Independent researchers who do not have access to ebrary?s databases through their library may now set up an individual account for as little as $5. ebrary Discover spans multiple academic disciplines and provides anytime, anywhere access to over 20,000 authoritative titles including books in full-text, sheet music, reports and other authoritative documents from more than 175 leading publishers such as Cambridge University Press, Random House, Inc., and The McGraw-Hill Companies.</search_description>
-			<url>http://www.ebrary.com/company/</url>
+			<url>http://www.ebrary.com/corp/content.htm</url>
 			<search_url>http://shop.ebrary.com/Top?layout=search&amp;f00=text&amp;p01=&amp;f01=subject&amp;d=journal&amp;l=en&amp;sch=%A0%A0%A0%A0%A0Search%A0%A0%A0%A0%A0&amp;frm=adv.x&amp;p00={$formKeywords}</search_url>
 			
 		</search>
@@ -415,8 +415,8 @@
 			<search_title>Europa</search_title>
 			<search_description>Current information on the member countries of the European Union, including statistical data, policies, news, official documents, legal texts, and other publications.</search_description>
 			<url>http://europa.eu.int/index_en.htm</url>
-			<search_url>http://europa.eu.int/geninfo/query/engine/search/query.pl?action=FilterSearch&amp;filter=europaflt.hts&amp;Collection=fullEUROPA&amp;ResultTemplate=europarslt_ascii.hts&amp;ResultCount=25&amp;ResultMaxDocs=200&amp;DefaultLG=en&amp;ViewTemplate=europaview.hts&amp;QueryText={$formKeywords}</search_url>
-			
+			<search_url>http://europa.eu.int/geninfo/query/resultaction.jsp?page=1</search_url>
+			<search_post>Collection=EuropaFull&amp;ResultTemplate=/result_en.jsp&amp;ResultCount=25&amp;qtype=simple&amp;ResultMaxDocs=200&amp;DefaultLG=en&amp;QueryText={$formKeywords}</search_post>			
 		</search>
 		<search>
 			<search_title>The Global Legal Information Network (GLIN)</search_title>
@@ -436,7 +436,7 @@
 			<search_title>Canada Sites</search_title>
 			<search_description>Canada Sites provides an information and services gateway run by the Government of Canada and each of the provinces.</search_description>
 			<url>http://www.canada.gc.ca/main_e.html</url>
-			<search_url>http://search-recherche.gc.ca/cgi-bin/query?mss=canada%2Fen%2Fsimple.html&amp;enc=iso88591&amp;pg=q&amp;kl=en&amp;site=main&amp;browser=IE&amp;mss=canada%2Fen%2Fsimple.html&amp;q={$formKeywords}</search_url>
+			<search_url>http://search-recherche.gc.ca/cgi-bin/query?mss=canada%2Fen%2Fsimple.html&amp;enc=iso88591&amp;pg=q&amp;kl=en&amp;site=main&amp;q={$formKeywords}</search_url>
 			
 		</search>
 	</context>
@@ -456,7 +456,7 @@
 			<search_title>Notice of the American Mathematical Society</search_title>
 			<search_description>Notices of the American Mathematical Society is one of the world's most widely read periodicals for professional mathematicians.</search_description>
 			<url>http://www.ams.org/noticessearch/</url>
-			<search_url>http://www.ams.org/cgi-bin/htdig/htsearch?method=and&amp;sort=score&amp;config=notices&amp;restrict=&amp;exclude=&amp;words={$formKeywords}</search_url>
+			<search_url>http://www.google.com/custom?sa=Search+Notices&amp;cof=S%3Ahttp%3A%2F%2Fwww.ams.org%2Fnotices%3BGL%3A0%3BVLC%3A%23004080%3BAH%3Aleft%3BBGC%3A%23ffffff%3BLH%3A55%3BLC%3A+%23004080%3BL%3Ahttp%3A%2F%2Fwww.ams.org%2Fimages%2Fnotices-search-banner.gif%3BALC%3A%23ff2b2b%3BLW%3A1200%3BT%3A%23000000%3BAWFID%3A39742761a368da0f%3B&amp;domains=www.ams.org%2Fnotices&amp;sitesearch=www.ams.org%2Fnotices&amp;q={$formKeywords}</search_url>
 			
 		</search>
 		<search>
@@ -477,7 +477,7 @@
 			<search_title>Scientific American Archive</search_title>
 			<search_description>Scientific American Archive is the online science and technology resource offering access to every page and every issue of Scientific American magazine from 1993 to the present.</search_description>
 			<url>http://www.sciamdigital.com/</url>
-			<search_url>http://www.sciamdigital.com/searchresults.cfm?datapacketXMLO=&amp;methodnameCHAR=search_searchlog&amp;interfacenameCHAR=searchresults.cfm&amp;sequencenameCHAR=listresults&amp;calltypeCHAR=Formcall&amp;AUTHOR_CHAR=&amp;TITLE_CHAR=&amp;REQUESTERIDCHAR=anonymous&amp;REQUESTERGROUPCHAR=.1.2.0&amp;FullText_CHAR={$formKeywords}</search_url>
+			<search_url>http://www.sciamdigital.com/index.cfm?fa=Search.ViewSearchForItemResultList&amp;AUTHOR_CHAR=&amp;TITLE_CHAR=&amp;FullText_CHAR={$formKeywords}</search_url>
 			
 		</search>
 		<search>
@@ -510,7 +510,7 @@
 		<search>
 			<search_title>Clusty the Clustering Engine</search_title>
 			<search_description>This search tool from Vivismo offers clustered results for a selection of searches.  Metasearch the whole web, or use tabs to search for news, gossip, images, orproducts via Bizrate or eBay.</search_description>
-			<url>http://clusty.com/</url>
+			<url>http://clusty.com/about</url>
 			<search_url>http://clusty.com/search?query={$formKeywords}</search_url>
 			
 		</search>

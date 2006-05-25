@@ -67,8 +67,8 @@ journals.</search_description>
 		</search>
 	</context>
 	<context>
-		<context_title>Definitions</context_title>
-		<context_abbrev>Definitions</context_abbrev>
+		<context_title>Look up terms</context_title>
+		<context_abbrev>Look up terms</context_abbrev>
 		<context_description>Double click on any word in the text and it will appear in the &quot;Definition of terms&quot; box.  You can also type or paste a word into the box.  Then use the search function to find a definition for the word.  These resources have been selected because of their relevance and their open (free) access to all or part of their contents.</context_description>
 		<define_terms />
 		<search>
@@ -248,9 +248,9 @@ journals.</search_description>
 		</search>
 		<search>
 			<search_title>Chemistry.Org</search_title>
-			<search_description>Includes pages for chemistry professionals, educators, students at all levels, policy makers, and enthusiasts. Provides access to dozens of the print publications of the American Chemical Society, chemistry news, job listings, lesson plans, the &quot;Molecule of the Week,&quot; an interactive periodic table, and more. Searchable.</search_description>
+			<search_description>chemistry.org is the online gateway to ACS resources, products, and services for members, chemists, scientists, chemical industry professionals, educators, students, children and science enthusiasts.</search_description>
 			<url>http://acs.chemindustry.com</url>
-			<search_url>http://acs.chemindustry.com/apps/search?category_id=&amp;go=go&amp;search_term={$formKeywords}</search_url>
+			<search_url>http://google.acs.org/search?site=americanchemical&amp;client=americanchemical&amp;proxystylesheet=americanchemical&amp;output=xml_no_dtd&amp;q={$formKeywords}</search_url>
 			
 		</search>
 		<search>
@@ -289,7 +289,7 @@ journals.</search_description>
 		<search>
 			<search_title>ebrary</search_title>
 			<search_description>Independent researchers who do not have access to ebrary_ databases through their library may now set up an individual account for as little as $5. ebrary Discover spans multiple academic disciplines and provides anytime, anywhere access to over 20,000 authoritative titles including books in full-text, sheet music, reports and other authoritative documents from more than 175 leading publishers such as Cambridge University Press, Random House, Inc., and The McGraw-Hill Companies.</search_description>
-			<url>http://www.ebrary.com/company/</url>
+			<url>http://www.ebrary.com/corp/content.htm</url>
 			<search_url>http://shop.ebrary.com/Top?layout=search&amp;f00=text&amp;p01=&amp;f01=subject&amp;d=journal&amp;l=en&amp;sch=%A0%A0%A0%A0%A0Search%A0%A0%A0%A0%A0&amp;frm=adv.x&amp;p00={$formKeywords}</search_url>
 			
 		</search>
@@ -320,6 +320,13 @@ journals.</search_description>
 		<context_abbrev>Online forums</context_abbrev>
 		<context_description>Choose online, open-access online forums that would enrich the context of the research studies on your site.</context_description>
 
+		<search>
+			<search_title>chemistry.org Meeting Locator</search_title>
+			<search_description>chemistry.org’s Meeting Locator will allow you to find details about meetings, workshops, short courses, and symposia of interest to practitioners of the chemical-related sciences.</search_description>
+			<url>http://acswebapplications.acs.org/applications/meetinglocator/home.cfm</url>
+			<search_url>http://google.acs.org/search?site=americanchemical&amp;client=americanchemical&amp;proxystylesheet=americanchemical&amp;output=xml_no_dtd&amp;q=meetings+{$formKeywords}</search_url>
+			
+		</search>
 		<search>
 			<search_title>MInd: the Meetings Index</search_title>
 			<search_description>Use this service to identify and locate the organizers and sponsors for future conferences, congresses, meetings and symposia, as well as conference proceedings (for future and past conferences).</search_description>
@@ -413,8 +420,8 @@ Maryland. Searchable.</search_description>
 			<search_title>Europa</search_title>
 			<search_description>Current information on the member countries of the European Union, including statistical data, policies, news, official documents, legal texts, and other publications.</search_description>
 			<url>http://europa.eu.int/index_en.htm</url>
-			<search_url>http://europa.eu.int/geninfo/query/engine/search/query.pl?action=FilterSearch&amp;filter=europaflt.hts&amp;Collection=fullEUROPA&amp;ResultTemplate=europarslt_ascii.hts&amp;ResultCount=25&amp;ResultMaxDocs=200&amp;DefaultLG=en&amp;ViewTemplate=europaview.hts&amp;QueryText={$formKeywords}</search_url>
-			
+			<search_url>http://europa.eu.int/geninfo/query/resultaction.jsp?page=1</search_url>
+			<search_post>Collection=EuropaFull&amp;ResultTemplate=/result_en.jsp&amp;ResultCount=25&amp;qtype=simple&amp;ResultMaxDocs=200&amp;DefaultLG=en&amp;QueryText={$formKeywords}</search_post>			
 		</search>
 		<search>
 			<search_title>The Global Legal Information Network (GLIN)</search_title>
@@ -434,7 +441,7 @@ Maryland. Searchable.</search_description>
 			<search_title>Canada Sites</search_title>
 			<search_description>Canada Sites provides an information and services gateway run by the Government of Canada and each of the provinces.</search_description>
 			<url>http://www.canada.gc.ca/main_e.html</url>
-			<search_url>http://search-recherche.gc.ca/cgi-bin/query?mss=canada%2Fen%2Fsimple.html&amp;enc=iso88591&amp;pg=q&amp;kl=en&amp;site=main&amp;browser=IE&amp;mss=canada%2Fen%2Fsimple.html&amp;q={$formKeywords}</search_url>
+			<search_url>http://search-recherche.gc.ca/cgi-bin/query?mss=canada%2Fen%2Fsimple.html&amp;enc=iso88591&amp;pg=q&amp;kl=en&amp;site=main&amp;q={$formKeywords}</search_url>
 			
 		</search>
 	</context>
@@ -501,7 +508,7 @@ Maryland. Searchable.</search_description>
 		<search>
 			<search_title>Clusty the Clustering Engine</search_title>
 			<search_description>This search tool from Vivismo offers clustered results for a selection of searches.  Metasearch the whole web, or use tabs to search for news, gossip, images, orproducts via Bizrate or eBay.</search_description>
-			<url>http://clusty.com/</url>
+			<url>http://clusty.com/about</url>
 			<search_url>http://clusty.com/search?query={$formKeywords}</search_url>
 			
 		</search>
