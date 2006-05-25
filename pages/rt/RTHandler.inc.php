@@ -259,7 +259,7 @@ class RTHandler extends ArticleHandler {
 					'articleUrl' => Request::url(null, 'article', 'view', $article->getBestArticleId())
 				));
 			}
-			$email->displayEditForm(Request::url(null, null, 'emailColleague', array($articleId, $galleyId)), null, 'rt/email.tpl');
+			$email->displayEditForm(Request::url(null, null, 'emailColleague', array($articleId, $galleyId)), null, 'rt/email.tpl', array('op' => 'emailColleague'));
 		}
 	}
 
@@ -292,7 +292,7 @@ class RTHandler extends ArticleHandler {
 				$author = &$authors[0];
 				$email->addRecipient($author->getEmail(), $author->getFullName());
 			}
-			$email->displayEditForm(Request::url(null, null, 'emailAuthor', array($articleId, $galleyId)), null, 'rt/email.tpl');
+			$email->displayEditForm(Request::url(null, null, 'emailAuthor', array($articleId, $galleyId)), null, 'rt/email.tpl', array('op' => 'emailAuthor'));
 		}
 	}
 

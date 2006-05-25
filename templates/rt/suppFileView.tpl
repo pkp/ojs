@@ -12,7 +12,7 @@
 {assign var="pageTitle" value="article.suppFile"}
 {include file="rt/header.tpl"}
 
-<h3>"{$article->getArticleTitle()|strip_unsafe_html}"</h3>
+<h3>{$article->getArticleTitle()|strip_unsafe_html}</h3>
 
 <br />
 

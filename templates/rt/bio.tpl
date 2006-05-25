@@ -9,11 +9,11 @@
  * $Id$
  *}
 
-{assign var=pageTitle value="rt.aboutAuthor"}
+{assign var=pageTitle value="rt.authorBio"}
 
 {include file="rt/header.tpl"}
 
-<h3>"{$article->getArticleTitle()|strip_unsafe_html}"</h3>
+<h3>{$article->getArticleTitle()|strip_unsafe_html}</h3>
 
 {foreach from=$article->getAuthors() item=author name=authors}
 <p>

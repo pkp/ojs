@@ -4,7 +4,7 @@
  * Copyright (c) 2003-2004 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * Article reading tools -- article metadata page.
+ * Article reading tools -- context view page.
  *
  * $Id$
  *}
@@ -70,7 +70,7 @@
 {/literal}
 </script>
 
-<h3>"{$article->getArticleTitle()|strip_unsafe_html}"</h3>
+<h3>{$article->getArticleTitle()|strip_unsafe_html}</h3>
 
 
 <p>{if $context->getDefineTerms()}{translate key="rt.context.defineTermsDescription"}{elseif $context->getAuthorTerms()}{translate key="rt.context.authorTermsDescription"}{elseif $context->getCitedBy()}{translate key="rt.context.citesContextDescription}{else}{translate key="rt.context.searchDescription"}{/if}</p>

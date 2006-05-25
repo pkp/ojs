@@ -2425,10 +2425,8 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="rt.search.searchPost">Post data</message>
 
 	<message key="rt.authorBio">About the author</message>
-	<message key="rt.aboutAuthor">About the Authors</message>
 
 	<message key="rt.viewMetadata">Indexing metadata</message>
-	<message key="rt.articleMetadata">Article Metadata</message>
 	<message key="rt.metadata.dublinCore">Dublin Core</message>
 	<message key="rt.metadata.pkpItem">PKP Metadata Items</message>
 	<message key="rt.metadata.forThisDocument">Metadata for this Document</message>
@@ -2498,7 +2496,7 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="rt.context.searchTerms">Search Terms</message>
 	<message key="rt.context.termToDefine">Word to define</message>
 	<message key="rt.context.searchDescription">The search terms have been selected by the author(s). They can be altered or deleted by the reader, as two or three short, precise terms or phrases produced the best Boolean (AND) searches. To learn more about the resources searched, click on ABOUT. These resources have been selected for their relevance and open (free) access to all or part of their contents.</message>
-	<message key="rt.context.defineTermsDescription">Double click on any word in the published text and it will appear in the Word-to-Define box. You can also type or paste a word into the box. To see a definition for the word, click on any of the Search buttons, and to learn more about the resource searched, click on ABOUT. These resources have been selected because of their relevance and their open (free) access to all or part of their contents.</message>
+	<message key="rt.context.defineTermsDescription">If the item is a HTML file (rather than a PDF), double clicking on any word in the text will make it appear in the Word-to-Define box. Otherwise, words can be typed or pasted in the box. To learn more about the resource searched, click on ABOUT. These resources have been selected because of their relevance and their open (free) access to all or part of their contents.</message>
 	<message key="rt.context.authorTermsDescription">For items with more than one author, leave all names checked to search for similarly co-authored work, or search one at a time by checking only a single name. To learn more about the resource searched, click on ABOUT. These resources have been selected because of their relevance and their open (free) access to all or part of their contents.</message>
 	<message key="rt.context.citesContextDescription">If the article is indexed in Google Scholar, it may be accompanied by a "Cited by X" link, which leads to a list of works that cite it. As well, Google Scholar will list all items quoting the title and author. To access online resources that are only available through your research library, you may be able to go to Scholar Preferences in Google Scholar and activate the Library Links for your institution.</message>
 

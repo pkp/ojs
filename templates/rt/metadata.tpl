@@ -9,11 +9,11 @@
  * $Id$
  *}
 
-{assign var=pageTitle value="rt.articleMetadata"}
+{assign var=pageTitle value="rt.viewMetadata"}
 
 {include file="rt/header.tpl"}
 
-<h3>"{$article->getArticleTitle()|strip_unsafe_html}"</h3>
+<h3>{$article->getArticleTitle()|strip_unsafe_html}</h3>
 
 <br />
 

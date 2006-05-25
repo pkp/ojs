@@ -19,7 +19,7 @@
 	{url|assign:"articleUrl" page="article" op="view" path=$articleId}
 {/if}
 
-<h3>"{$article->getArticleTitle()|strip_unsafe_html}"</h3>
+<h3>{$article->getArticleTitle()|strip_unsafe_html}</h3>
 
 {if $bibFormat == 'MLA'}
 	{assign var=authors value=$article->getAuthors()}

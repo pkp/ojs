@@ -4,12 +4,17 @@
  * Copyright (c) 2003-2005 The Public Knowledge Project
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * Generic email template form
+ * Reading Tools email template form
  *
  * $Id$
  *}
 
-{assign var="pageTitle" value="email.compose"}
+{if $op=="emailColleague"}
+	{assign var="pageTitle" value="rt.colleague"}
+{else}
+	{assign var="pageTitle" value="rt.emailAuthor"}
+{/if}
+
 {include file="rt/header.tpl"}
 
 <script type="text/javascript">
