@@ -1464,59 +1464,6 @@
 	
 	<!--
 	 *
-	 * TABLE rt_settings
-	 *
-	 -->
-	<table name="rt_settings">
-		<field name="journal_id" type="I8">
-			<KEY/>
-		</field>
-		<field name="version_id" type="I8"/>
-		<field name="capture_cite" type="I1">
-			<NOTNULL/>
-			<DEFAULT VALUE="0"/>
-		</field>
-		<field name="bib_format" type="C2" size="20">
-			<NOTNULL/>
-			<DEFAULT VALUE="APA"/>
-		</field>
-		<field name="view_metadata" type="I1">
-			<NOTNULL/>
-			<DEFAULT VALUE="0"/>
-		</field>
-		<field name="supplementary_files" type="I1">
-			<NOTNULL/>
-			<DEFAULT VALUE="0"/>
-		</field>
-		<field name="printer_friendly" type="I1">
-			<NOTNULL/>
-			<DEFAULT VALUE="0"/>
-		</field>
-		<field name="author_bio" type="I1">
-			<NOTNULL/>
-			<DEFAULT VALUE="0"/>
-		</field>
-		<field name="define_terms" type="I1">
-			<NOTNULL/>
-			<DEFAULT VALUE="0"/>
-		</field>
-		<field name="add_comment" type="I1">
-			<NOTNULL/>
-			<DEFAULT VALUE="0"/>
-		</field>
-		<field name="email_author" type="I1">
-			<NOTNULL/>
-			<DEFAULT VALUE="0"/>
-		</field>
-		<field name="email_others" type="I1">
-			<NOTNULL/>
-			<DEFAULT VALUE="0"/>
-		</field>
-		<descr>Per-journal settings for the Reading Tools.</descr>
-	</table>
-	
-	<!--
-	 *
 	 * TABLE rt_versions
 	 *
 	 -->
