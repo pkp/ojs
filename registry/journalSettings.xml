@@ -124,4 +124,44 @@
 			</array>
 		</value>
 	</setting>
+	<setting type="bool">
+		<name>rtAbstract</name>
+		<value>true</value>
+	</setting>
+	<setting type="bool">
+		<name>rtCaptureCite</name>
+		<value>true</value>
+	</setting>
+	<setting type="bool">
+		<name>rtViewMetadata</name>
+		<value>true</value>
+	</setting>
+	<setting type="bool">
+		<name>rtSupplementaryFiles</name>
+		<value>true</value>
+	</setting>
+	<setting type="bool">
+		<name>rtPrinterFriendly</name>
+		<value>true</value>
+	</setting>
+	<setting type="bool">
+		<name>rtAuthorBio</name>
+		<value>true</value>
+	</setting>
+	<setting type="bool">
+		<name>rtDefineTerms</name>
+		<value>true</value>
+	</setting>
+	<setting type="bool">
+		<name>rtAddComment</name>
+		<value>true</value>
+	</setting>
+	<setting type="bool">
+		<name>rtEmailAuthor</name>
+		<value>true</value>
+	</setting>
+	<setting type="bool">
+		<name>rtEmailOthers</name>
+		<value>true</value>
+	</setting>
 </journal_settings>

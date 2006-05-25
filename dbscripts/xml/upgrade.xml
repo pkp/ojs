@@ -47,6 +47,7 @@
 		<!-- 2.1.0.x to 2.1.1 -->
 		<data file="upgrade/2.1.1_update.xml"/>
 		<code function="designateReviewVersions"/>
+		<code function="migrateRtSettings"/>
 		<code function="rebuildSearchIndex"/>
 		<note file="release-notes/README-2.1.1"/>
 	</upgrade>

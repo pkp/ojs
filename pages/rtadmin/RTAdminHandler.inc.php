@@ -27,7 +27,7 @@ class RTAdminHandler extends Handler {
 		$user = Request::getUser();
 		if ($journal) {
 			$rtDao = &DAORegistry::getDAO('RTDAO');
-			$rt = $rtDao->getJournalRTByJournalId($journal->getJournalId());
+			$rt = $rtDao->getJournalRTByJournal($journal);
 			if (isset($rt)) {
 				$version = $rtDao->getVersion($rt->getVersion(), $journal->getJournalId());
 			}
@@ -38,6 +38,7 @@ class RTAdminHandler extends Handler {
 			$templateMgr = &TemplateManager::getManager();
 			$templateMgr->assign('helpTopicId', 'journal.managementPages.readingTools');
 			$templateMgr->assign('versionTitle', isset($version)?$version->getTitle():null);
+			$templateMgr->assign('enabled', $rt->getEnabled());
 
 			$templateMgr->display('rtadmin/index.tpl');
 		} elseif ($user) {

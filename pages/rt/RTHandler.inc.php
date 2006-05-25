@@ -27,7 +27,7 @@ class RTHandler extends ArticleHandler {
 		list($journal, $issue, $article) = RTHandler::validate($articleId, $galleyId);
 
 		$rtDao = &DAORegistry::getDAO('RTDAO');
-		$journalRt = &$rtDao->getJournalRTByJournalId($journal->getJournalId());
+		$journalRt = &$rtDao->getJournalRTByJournal($journal);
 
 		if (!$journalRt || $journalRt->getVersion()==null || !$journalRt->getAuthorBio()) {
 			Request::redirect(null, Request::getRequestedPage());
@@ -46,7 +46,7 @@ class RTHandler extends ArticleHandler {
 		list($journal, $issue, $article) = RTHandler::validate($articleId, $galleyId);
 
 		$rtDao = &DAORegistry::getDAO('RTDAO');
-		$journalRt = &$rtDao->getJournalRTByJournalId($journal->getJournalId());
+		$journalRt = &$rtDao->getJournalRTByJournal($journal);
 
 		if (!$journalRt || $journalRt->getVersion()==null || !$journalRt->getViewMetadata()) {
 			Request::redirect(null, Request::getRequestedPage());
@@ -74,7 +74,7 @@ class RTHandler extends ArticleHandler {
 		list($journal, $issue, $article) = RTHandler::validate($articleId, $galleyId);
 
 		$rtDao = &DAORegistry::getDAO('RTDAO');
-		$journalRt = &$rtDao->getJournalRTByJournalId($journal->getJournalId());
+		$journalRt = &$rtDao->getJournalRTByJournal($journal);
 
 		$context = &$rtDao->getContext($contextId);
 		if ($context) $version = &$rtDao->getVersion($context->getVersionId(), $journal->getJournalId());
@@ -157,7 +157,7 @@ class RTHandler extends ArticleHandler {
 		list($journal, $issue, $article) = RTHandler::validate($articleId, $galleyId);
 
 		$rtDao = &DAORegistry::getDAO('RTDAO');
-		$journalRt = &$rtDao->getJournalRTByJournalId($journal->getJournalId());
+		$journalRt = &$rtDao->getJournalRTByJournal($journal);
 
 		if (!$journalRt || $journalRt->getVersion()==null || !$journalRt->getCaptureCite()) {
 			Request::redirect(null, Request::getRequestedPage());
@@ -199,7 +199,7 @@ class RTHandler extends ArticleHandler {
 		list($journal, $issue, $article) = RTHandler::validate($articleId, $galleyId);
 
 		$rtDao = &DAORegistry::getDAO('RTDAO');
-		$journalRt = &$rtDao->getJournalRTByJournalId($journal->getJournalId());
+		$journalRt = &$rtDao->getJournalRTByJournal($journal);
 
 		if (!$journalRt || $journalRt->getVersion()==null || !$journalRt->getPrinterFriendly()) {
 			Request::redirect(null, Request::getRequestedPage());
@@ -229,7 +229,7 @@ class RTHandler extends ArticleHandler {
 		list($journal, $issue, $article) = RTHandler::validate($articleId, $galleyId);
 
 		$rtDao = &DAORegistry::getDAO('RTDAO');
-		$journalRt = &$rtDao->getJournalRTByJournalId($journal->getJournalId());
+		$journalRt = &$rtDao->getJournalRTByJournal($journal);
 		$user = &Request::getUser();
 
 		if (!$journalRt || $journalRt->getVersion()==null || !$journalRt->getEmailOthers() || !$user) {
@@ -270,7 +270,7 @@ class RTHandler extends ArticleHandler {
 		list($journal, $issue, $article) = RTHandler::validate($articleId, $galleyId);
 
 		$rtDao = &DAORegistry::getDAO('RTDAO');
-		$journalRt = &$rtDao->getJournalRTByJournalId($journal->getJournalId());
+		$journalRt = &$rtDao->getJournalRTByJournal($journal);
 		$user = &Request::getUser();
 
 		if (!$journalRt || $journalRt->getVersion()==null || !$journalRt->getEmailAuthor() || !$user) {
@@ -305,7 +305,7 @@ class RTHandler extends ArticleHandler {
 		list($journal, $issue, $article) = RTHandler::validate($articleId, $galleyId);
 
 		$rtDao = &DAORegistry::getDAO('RTDAO');
-		$journalRt = &$rtDao->getJournalRTByJournalId($journal->getJournalId());
+		$journalRt = &$rtDao->getJournalRTByJournal($journal);
 
 		if (!$journalRt || $journalRt->getVersion()==null || !$journalRt->getSupplementaryFiles()) {
 			Request::redirect(null, Request::getRequestedPage());
@@ -327,7 +327,7 @@ class RTHandler extends ArticleHandler {
 		list($journal, $issue, $article) = RTHandler::validate($articleId, $galleyId);
 
 		$rtDao = &DAORegistry::getDAO('RTDAO');
-		$journalRt = &$rtDao->getJournalRTByJournalId($journal->getJournalId());
+		$journalRt = &$rtDao->getJournalRTByJournal($journal);
 
 		$suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
 		$suppFile = $suppFileDao->getSuppFile($suppFileId, $article->getArticleId());

@@ -23,64 +23,45 @@ class RTDAO extends DAO {
 	
 	/**
 	 * Retrieve an RT configuration.
-	 * @param $versionId int
+	 * @param $journalId int
 	 * @return RT
 	 */
-	function &getJournalRTByJournalId($journalId) {
-		$result = &$this->retrieve(
-			'SELECT * FROM rt_settings WHERE journal_id = ?',
-			$journalId
-		);
-
-		$returner = null;
-		if ($result->RecordCount() != 0) {
-			$returner = &$this->_returnJournalRTFromRow($result->GetRowAssoc(false));
-		}
-
-		$result->Close();
-		unset($result);
-
-		return $returner;
+	function &getJournalRTByJournal(&$journal) {
+		$rt = &new JournalRT($journal->getJournalId());
+		$rt->setEnabled($journal->getSetting('rtEnabled')?true:false);
+		$rt->setVersion((int) $journal->getSetting('rtVersionId'));
+		$rt->setAbstract($journal->getSetting('rtAbstract')?true:false);
+		$rt->setCaptureCite($journal->getSetting('rtCaptureCite')?true:false);
+		$rt->setViewMetadata($journal->getSetting('rtViewMetadata')?true:false);
+		$rt->setSupplementaryFiles($journal->getSetting('rtSupplementaryFiles')?true:false);
+		$rt->setPrinterFriendly($journal->getSetting('rtPrinterFriendly')?true:false);
+		$rt->setAuthorBio($journal->getSetting('rtAuthorBio')?true:false);
+		$rt->setDefineTerms($journal->getSetting('rtDefineTerms')?true:false);
+		$rt->setAddComment($journal->getSetting('rtAddComment')?true:false);
+		$rt->setEmailAuthor($journal->getSetting('rtEmailAuthor')?true:false);
+		$rt->setEmailOthers($journal->getSetting('rtEmailOthers')?true:false);
+		$rt->setBibFormat($journal->getSetting('rtBibFormat'));
+		return $rt;
 	}
 
-	function updateJournalRT($rt) {
-		return $this->update(
-			'UPDATE rt_settings
-			SET
-				version_id = ?,
-				capture_cite = ?,
-				view_metadata = ?,
-				supplementary_files = ?,
-				printer_friendly = ?,
-				author_bio = ?,
-				define_terms = ?,
-				add_comment = ?,
-				email_author = ?,
-				email_others = ?,
-				bib_format = ?
-			WHERE journal_id = ?',
-			array(
-				$rt->getVersion(),
-				$rt->getCaptureCite(),
-				$rt->getViewMetadata(),
-				$rt->getSupplementaryFiles(),
-				$rt->getPrinterFriendly(),
-				$rt->getAuthorBio(),
-				$rt->getDefineTerms(),
-				$rt->getAddComment(),
-				$rt->getEmailAuthor(),
-				$rt->getEmailOthers(),
-				$rt->getBibFormat(),
-				$rt->getJournalId()
-			)
-		);
-	}
-	
-	function deleteJournalRT($journalId) {
-		return $this->update(
-			'DELETE FROM rt_settings WHERE journal_id = ?',
-			$journalId
-		);
+	function updateJournalRT(&$rt) {
+		$journalDao =& DAORegistry::getDAO('JournalDAO');
+		$journal =& $journalDao->getJournal($rt->getJournalId());
+
+		$journal->updateSetting('rtEnabled', $rt->getEnabled(), 'bool');
+		$journal->updateSetting('rtVersionId', $rt->getVersion(), 'int');
+		$journal->updateSetting('rtAbstract', $rt->getAbstract(), 'bool');
+		$journal->updateSetting('rtCaptureCite', $rt->getCaptureCite(), 'bool');
+		$journal->updateSetting('rtViewMetadata', $rt->getViewMetadata(), 'bool');
+		$journal->updateSetting('rtSupplementaryFiles', $rt->getSupplementaryFiles(), 'bool');
+		$journal->updateSetting('rtPrinterFriendly', $rt->getPrinterFriendly(), 'bool');
+		$journal->updateSetting('rtAuthorBio', $rt->getAuthorBio(), 'bool');
+		$journal->updateSetting('rtDefineTerms', $rt->getDefineTerms(), 'bool');
+		$journal->updateSetting('rtAddComment', $rt->getAddComment(), 'bool');
+		$journal->updateSetting('rtEmailAuthor', $rt->getEmailAuthor(), 'bool');
+		$journal->updateSetting('rtEmailOthers', $rt->getEmailOthers(), 'bool');
+		$journal->updateSetting('rtBibFormat', $rt->getBibFormat());
+		return true;
 	}
 	
 	/**
@@ -88,38 +69,8 @@ class RTDAO extends DAO {
 	 * @param $rt object
 	 */
 	function insertJournalRT(&$rt) {
-		return $this->update(
-			'INSERT INTO rt_settings (
-				journal_id,
-				version_id,
-				capture_cite,
-				view_metadata,
-				supplementary_files,
-				printer_friendly,
-				author_bio,
-				define_terms,
-				add_comment,
-				email_author,
-				email_others,
-				bib_format
-			) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
-			array(
-				$rt->getJournalId(),
-				$rt->getVersion(),
-				$rt->getCaptureCite(),
-				$rt->getViewMetadata(),
-				$rt->getSupplementaryFiles(),
-				$rt->getPrinterFriendly(),
-				$rt->getAuthorBio(),
-				$rt->getDefineTerms(),
-				$rt->getAddComment(),
-				$rt->getEmailAuthor(),
-				$rt->getEmailOthers(),
-				$rt->getBibFormat()
-			)
-		);
+		return $this->updateJournalRT($rt);
 	}
-	
 
 	//
 	// RT Versions

@@ -20,6 +20,12 @@ class RT {
 	/** @var $version RTVersion current version */
 	var $version;
 
+	/** @var $enabled boolean */
+	var $enabled;
+
+	/** @var $abstract boolean */
+	var $abstract;
+
 	/** @var $captureCite boolean */
 	var $captureCite;
 
@@ -54,6 +60,14 @@ class RT {
 	 * Getter/Setter functions
 	 */
 
+	function setEnabled($enabled) {
+		$this->enabled = $enabled;
+	}
+
+	function getEnabled() {
+		return $this->enabled;
+	}
+
 	function setVersion($version) {
 		$this->version = $version;
 	}
@@ -69,6 +83,14 @@ class RT {
 
 	function getCaptureCite() {
 		return $this->captureCite;
+	}
+
+	function setAbstract($abstract) {
+		$this->abstract = $abstract;
+	}
+
+	function getAbstract() {
+		return $this->abstract;
 	}
 
 	function setBibFormat($bibFormat) {

@@ -28,12 +28,12 @@ class ArticleHandler extends Handler {
 		list($journal, $issue, $article) = ArticleHandler::validate($articleId, $galleyId);
 
 		$rtDao = &DAORegistry::getDAO('RTDAO');
-		$journalRt = $rtDao->getJournalRTByJournalId($journal->getJournalId());
+		$journalRt = $rtDao->getJournalRTByJournal($journal);
 
 		$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
 		$galley = &$galleyDao->getGalley($galleyId, $article->getArticleId());
 
-		if (!$journalRt || $journalRt->getVersion()==null) {
+		if (!$journalRt->getEnabled()) {
 			if (!$galley || $galley->isHtmlGalley()) return ArticleHandler::viewArticle($args);
 			else if ($galley->isPdfGalley()) return ArticleHandler::viewPDFInterstitial($args, $galley);
 			else return ArticleHandler::viewDownloadInterstitial($args, $galley);
@@ -106,12 +106,12 @@ class ArticleHandler extends Handler {
 		list($journal, $issue, $article) = ArticleHandler::validate($articleId, $galleyId);
 
 		$rtDao = &DAORegistry::getDAO('RTDAO');
-		$journalRt = $rtDao->getJournalRTByJournalId($journal->getJournalId());
+		$journalRt = $rtDao->getJournalRTByJournal($journal);
 
 		$sectionDao = &DAORegistry::getDAO('SectionDAO');
 		$section = &$sectionDao->getSection($article->getSectionId());
 
-		if ($journalRt && $journalRt->getVersion()!=null && $journalRt->getDefineTerms()) {
+		if ($journalRt->getVersion()!=null && $journalRt->getDefineTerms()) {
 			// Determine the "Define Terms" context ID.
 			$version = $rtDao->getVersion($journalRt->getVersion(), $journalRt->getJournalId());
 			if ($version) foreach ($version->getContexts() as $context) {
@@ -185,7 +185,7 @@ class ArticleHandler extends Handler {
 		list($journal, $issue, $article) = ArticleHandler::validate($articleId, $galleyId);
 
 		$rtDao = &DAORegistry::getDAO('RTDAO');
-		$journalRt = $rtDao->getJournalRTByJournalId($journal->getJournalId());
+		$journalRt = $rtDao->getJournalRTByJournal($journal);
 
 		// The RST needs to know whether this galley is HTML or not. Fetch the galley.
 		$articleGalleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
@@ -215,11 +215,11 @@ class ArticleHandler extends Handler {
 		));
 		$templateMgr->assign('postingDisabled', $enableComments == COMMENTS_DISABLED);
 
-		if ($journalRt && $journalRt->getVersion()!=null) {
+		$templateMgr->assign_by_ref('journalRt', $journalRt);
+		if ($journalRt->getEnabled()) {
 			$version = $rtDao->getVersion($journalRt->getVersion(), $journalRt->getJournalId());
 			if ($version) {
 				$templateMgr->assign_by_ref('version', $version);
-				$templateMgr->assign_by_ref('journalRt', $journalRt);
 			}
 		}
 

@@ -71,6 +71,41 @@ class Upgrade extends Installer {
 		}
 		return true;
 	}
+
+	/**
+	 * For upgrade to 2.1.1: Migrate the RT settings from the rt_settings
+	 * table to journal settings and drop the rt_settings table.
+	 */
+	function migrateRtSettings() {
+		$rtDao =& DAORegistry::getDAO('RTDAO');
+		$result =& $rtDao->retrieve('SELECT * FROM rt_settings');
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+			$rt =& new JournalRT($row['journal_id']);
+			$rt->setEnabled(true); // No toggle in prior OJS; assume true
+			$rt->setVersion($row['version_id']);
+			$rt->setAbstract(true); // No toggle in prior OJS; assume true
+			$rt->setCaptureCite($row['capture_cite']);
+			$rt->setBibFormat($row['bib_format']);
+			$rt->setViewMetadata($row['view_metadata']);
+			$rt->setSupplementaryFiles($row['supplementary_files']);
+			$rt->setPrinterFriendly($row['printer_friendly']);
+			$rt->setAuthorBio($row['author_bio']);
+			$rt->setDefineTerms($row['define_terms']);
+			$rt->setAddComment($row['add_comment']);
+			$rt->setEmailAuthor($row['email_author']);
+			$rt->setEmailOthers($row['email_others']);
+			$rtDao->updateJournalRT($rt);
+			unset($rt);
+			$result->MoveNext();
+		}
+		$result->Close();
+		unset($result);
+
+		// Drop the table once all settings are migrated.
+		$rtDao->update('DROP TABLE rt_settings');
+		return true;
+	}
 }
 
 ?>

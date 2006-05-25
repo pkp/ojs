@@ -159,7 +159,6 @@ class JournalDAO extends DAO {
 		$emailTemplateDao->deleteEmailTemplatesByJournal($journalId);
 
 		$rtDao = &DAORegistry::getDAO('RTDAO');
-		$rtDao->deleteJournalRT($journalId);
 		$rtDao->deleteVersionsByJournal($journalId);
 
 		$subscriptionDao = &DAORegistry::getDAO('SubscriptionDAO');

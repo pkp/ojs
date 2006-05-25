@@ -28,7 +28,7 @@ class RTSetupHandler extends RTAdminHandler {
 			$templateMgr->assign_by_ref('journals', $journals);
 
 			$rtDao = &DAORegistry::getDAO('RTDAO');
-			$rt = $rtDao->getJournalRTByJournalId($journal->getJournalId());
+			$rt = $rtDao->getJournalRTByJournal($journal);
 
 			$versionOptions = array();
 			$versions = $rtDao->getVersions($journal->getJournalId());
@@ -46,32 +46,19 @@ class RTSetupHandler extends RTAdminHandler {
 				'ABNT' => 'ABNT 10520'
 			));
 
-			if ($rt) {
-				$templateMgr->assign_by_ref('version', $rt->getVersion());
-				$templateMgr->assign('captureCite', $rt->getCaptureCite());
-				$templateMgr->assign('viewMetadata', $rt->getViewMetadata());
-				$templateMgr->assign('supplementaryFiles', $rt->getSupplementaryFiles());
-				$templateMgr->assign('printerFriendly', $rt->getPrinterFriendly());
-				$templateMgr->assign('authorBio', $rt->getAuthorBio());
-				$templateMgr->assign('defineTerms', $rt->getDefineTerms());
-				$templateMgr->assign('addComment', $rt->getAddComment());
-				$templateMgr->assign('emailAuthor', $rt->getEmailAuthor());
-				$templateMgr->assign('emailOthers', $rt->getEmailOthers());
-				$templateMgr->assign('bibFormat', $rt->getBibFormat());
-			} else {
-				// No current configuration exists; provide
-				// all options enabled as a default configuration.
-				$templateMgr->assign('captureCite', true);
-				$templateMgr->assign('viewMetadata', true);
-				$templateMgr->assign('supplementaryFiles', true);
-				$templateMgr->assign('printerFriendly', true);
-				$templateMgr->assign('authorBio', true);
-				$templateMgr->assign('defineTerms', true);
-				$templateMgr->assign('addComment', true);
-				$templateMgr->assign('emailAuthor', true);
-				$templateMgr->assign('emailOthers', true);
-				$templateMgr->assign('bibFormat', true);
-			}
+			$templateMgr->assign_by_ref('version', $rt->getVersion());
+			$templateMgr->assign('enabled', $rt->getEnabled());
+			$templateMgr->assign('abstract', $rt->getAbstract());
+			$templateMgr->assign('captureCite', $rt->getCaptureCite());
+			$templateMgr->assign('viewMetadata', $rt->getViewMetadata());
+			$templateMgr->assign('supplementaryFiles', $rt->getSupplementaryFiles());
+			$templateMgr->assign('printerFriendly', $rt->getPrinterFriendly());
+			$templateMgr->assign('authorBio', $rt->getAuthorBio());
+			$templateMgr->assign('defineTerms', $rt->getDefineTerms());
+			$templateMgr->assign('addComment', $rt->getAddComment());
+			$templateMgr->assign('emailAuthor', $rt->getEmailAuthor());
+			$templateMgr->assign('emailOthers', $rt->getEmailOthers());
+			$templateMgr->assign('bibFormat', $rt->getBibFormat());
 
 			$templateMgr->assign('helpTopicId', 'journal.managementPages.readingTools.settings');
 			$templateMgr->display('rtadmin/settings.tpl');
@@ -87,18 +74,12 @@ class RTSetupHandler extends RTAdminHandler {
 
 		if ($journal) {
 			$rtDao = &DAORegistry::getDAO('RTDAO');
-			$rt = $rtDao->getJournalRTByJournalId($journal->getJournalId());
-			$isNewConfig = false;
-
-			if (!$rt) {
-				// This journal doesn't yet have reading tools configured.
-				$rt = &new JournalRT($journal->getJournalId());
-				$isNewConfig = true;
-			}
+			$rt = $rtDao->getJournalRTByJournal($journal);
 
 			if (Request::getUserVar('version')=='') $rt->setVersion(null);
 			else $rt->setVersion(Request::getUserVar('version'));
-
+			$rt->setEnabled(Request::getUserVar('enabled')==true);
+			$rt->setAbstract(Request::getUserVar('abstract')==true);
 			$rt->setCaptureCite(Request::getUserVar('captureCite')==true);
 			$rt->setViewMetadata(Request::getUserVar('viewMetadata')==true);
 			$rt->setSupplementaryFiles(Request::getUserVar('supplementaryFiles')==true);
@@ -110,11 +91,7 @@ class RTSetupHandler extends RTAdminHandler {
 			$rt->setEmailOthers(Request::getUserVar('emailOthers')==true);
 			$rt->setBibFormat(Request::getUserVar('bibFormat'));
 
-			if ($isNewConfig) {
-				$rtDao->insertJournalRT($rt);
-			} else {
-				$rtDao->updateJournalRT($rt);
-			}
+			$rtDao->updateJournalRT($rt);
 		}
 		Request::redirect(null, Request::getRequestedPage());
 	}
