@@ -2423,6 +2423,7 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="rt.search.description">Description</message>
 	<message key="rt.search.searchUrl">Search URL</message>
 	<message key="rt.search.searchPost">Post data</message>
+	<message key="rt.search.suggest">Suggest a source</message>
 
 	<message key="rt.authorBio">About the author</message>
 

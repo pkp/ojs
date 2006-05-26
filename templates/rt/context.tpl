@@ -149,4 +149,6 @@
 	{/foreach}
 </table>
 
+<a href="http://pkp.sfu.ca/ojs/suggestRt" target="_new" class="action">{translate key="rt.search.suggest"}</a><br/>
+
 {include file="rt/footer.tpl"}
