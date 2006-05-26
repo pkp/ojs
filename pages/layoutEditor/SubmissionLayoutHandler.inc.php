@@ -70,18 +70,38 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 	//
 	
 	/**
-	 * Create a new galley with the uploaded file.
+	 * Create a new layout file (layout version, galley, or supp file) with the uploaded file.
 	 */
-	function uploadGalley() {
+	function uploadLayoutFile() {
 		$articleId = Request::getUserVar('articleId');
 		list($journal, $submission) = SubmissionLayoutHandler::validate($articleId, true);
-		
-		import('submission.form.ArticleGalleyForm');
-		
-		$galleyForm = &new ArticleGalleyForm($articleId);
-		$galleyId = $galleyForm->execute();
-		
-		Request::redirect(null, null, 'editGalley', array($articleId, $galleyId));
+
+		switch (Request::getUserVar('layoutFileType')) {
+			case 'submission':
+				LayoutEditorAction::uploadLayoutVersion($submission);
+				Request::redirect(null, null, 'submission', $articleId);
+				break;
+			case 'galley':
+				import('submission.form.ArticleGalleyForm');
+
+				$galleyForm = &new ArticleGalleyForm($articleId);
+				$galleyId = $galleyForm->execute('layoutFile');
+
+				Request::redirect(null, null, 'editGalley', array($articleId, $galleyId));
+				break;
+			case 'supp':
+				import('submission.form.SuppFileForm');
+
+				$suppFileForm = &new SuppFileForm($submission);
+				$suppFileForm->setData('title', Locale::translate('common.untitled'));
+				$suppFileId = $suppFileForm->execute('layoutFile');
+
+				Request::redirect(null, null, 'editSuppFile', array($articleId, $suppFileId));
+				break;
+			default:
+				// Invalid upload type.
+				Request::redirect(null, 'layoutEditor');
+		}
 	}
 	
 	/**
@@ -252,21 +272,6 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 	// Supplementary File Management
 	//
 	
-	/**
-	 * Upload a new supplementary file.
-	 */
-	function uploadSuppFile() {
-		$articleId = Request::getUserVar('articleId');
-		list($journal, $submission) = SubmissionLayoutHandler::validate($articleId, true);
-		
-		import('submission.form.SuppFileForm');
-		
-		$suppFileForm = &new SuppFileForm($submission);
-		$suppFileForm->setData('title', Locale::translate('common.untitled'));
-		$suppFileId = $suppFileForm->execute();
-		
-		Request::redirect(null, null, 'editSuppFile', array($articleId, $suppFileId));
-	}
 	
 	/**
 	 * Edit a supplementary file.
@@ -478,7 +483,7 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		import('file.JournalFileManager');
 		$journalFileManager =& new JournalFileManager($journal);
 		$templateId = (int) array_shift($args);
-		if ($templateId >= count($templates) || $templateId < 0) Request::redirect(null, null, 'setup');
+		if ($templateId >= count($templates) || $templateId < 0) Request::redirect(null, 'layoutEditor');
 		$template =& $templates[$templateId];
 
 		$filename = "template-$templateId." . $journalFileManager->parseFileExtension($template['originalFilename']);

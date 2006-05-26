@@ -171,6 +171,26 @@ class LayoutEditorAction extends Action {
 		}
 	}
 	
+	/**
+	 * Upload the layout version of an article.
+	 * @param $submission object
+	 */
+	function uploadLayoutVersion($submission) {
+		import('file.ArticleFileManager');
+		$articleFileManager = &new ArticleFileManager($submission->getArticleId());
+		$layoutEditorSubmissionDao = &DAORegistry::getDAO('LayoutEditorSubmissionDAO');
+		
+		$layoutDao = &DAORegistry::getDAO('LayoutAssignmentDAO');
+		$layoutAssignment = &$layoutDao->getLayoutAssignmentByArticleId($submission->getArticleId());
+		
+		$fileName = 'layoutFile';
+		if ($articleFileManager->uploadedFileExists($fileName) && !HookRegistry::call('LayoutEditorAction::uploadLayoutVersion', array(&$submission, &$layoutAssignment))) {
+			$layoutFileId = $articleFileManager->uploadLayoutFile($fileName, $layoutAssignment->getLayoutFileId());
+			$layoutAssignment->setLayoutFileId($layoutFileId);
+			$layoutDao->updateLayoutAssignment($layoutAssignment);
+		}
+	}
+	
 	//
 	// Comments
 	//

@@ -87,18 +87,6 @@
 	</tr>
 	{/foreach}
 	<tr>
-		<td>&nbsp;</td>
-		<td colspan="5">
-			<form method="post" action="{url op="uploadGalley"}" enctype="multipart/form-data">
-				{translate key="layoutEditor.galley.uploadGalleyFormat"}
-				&nbsp;
-				<input type="hidden" name="articleId" value="{$submission->getArticleId()}" />
-				<input type="file" name="galleyFile"{if $disableEdit} disabled="disabled"{/if} class="uploadField" />
-				<input type="submit" name="submit" value="{translate key="common.upload"}"{if $disableEdit} disabled="disabled"{/if} class="button" />
-			</form>
-		</td>
-	</tr>
-	<tr>
 		<td colspan="6" class="separator">&nbsp;</td>
 	</tr>
 	<tr>
@@ -134,21 +122,16 @@
 	</tr>
 	{/foreach}
 	<tr>
-		<td>&nbsp;</td>
-		<td colspan="5">
-			<form method="post" action="{url op="uploadSuppFile"}" enctype="multipart/form-data">
-				{translate key="layoutEditor.galley.uploadSuppFile"}
-				&nbsp;
-				<input type="hidden" name="articleId" value="{$submission->getArticleId()}" />
-				<input type="file" name="uploadSuppFile"{if $disableEdit} disabled="disabled"{/if} class="uploadField" />
-				<input type="submit" name="submit" value="{translate key="common.upload"}"{if $disableEdit} disabled="disabled"{/if} class="button" />
-			</form>
-		</td>
-	</tr>
-	<tr>
 		<td colspan="6" class="separator">&nbsp;</td>
 	</tr>
 </table>
+
+<form method="post" action="{url op="uploadLayoutFile"}"  enctype="multipart/form-data">
+	<input type="hidden" name="articleId" value="{$submission->getArticleId()}" />
+	{translate key="submission.uploadFileTo"} <input type="radio" {if $disableEdit}disabled="disabled" {/if}name="layoutFileType" id="layoutFileTypeSubmission" value="submission" checked="checked" /><label for="layoutFileTypeSubmission">{translate key="submission.layout.layoutVersion"}</label>, <input type="radio" {if $disableEdit}disabled="disabled" {/if}name="layoutFileType" id="layoutFileTypeGalley" value="galley" /><label for="layoutFileTypeGalley">{translate key="submission.galley"}</label>, <input type="radio" {if $disableEdit}disabled="disabled" {/if}name="layoutFileType" id="layoutFileTypeSupp" value="supp" /><label for="layoutFileTypeSupp">{translate key="article.suppFilesAbbrev"}</label>
+	<input type="file" name="layoutFile" size="10" class="uploadField" />
+	<input type="submit" {if $disableEdit}disabled="disabled" {/if}value="{translate key="common.upload"}" class="button" />
+</form>
 
 {translate key="submission.layout.layoutComments"}
 {if $submission->getMostRecentLayoutComment()}

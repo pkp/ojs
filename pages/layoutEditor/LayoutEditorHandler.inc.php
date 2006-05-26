@@ -158,9 +158,9 @@ class LayoutEditorHandler extends Handler {
 		SubmissionLayoutHandler::completeAssignment($args);
 	}
 	
-	function uploadGalley() {
+	function uploadLayoutFile() {
 		import('pages.layoutEditor.SubmissionLayoutHandler');
-		SubmissionLayoutHandler::uploadGalley();
+		SubmissionLayoutHandler::uploadLayoutFile();
 	}
 	
 	function editGalley($args) {
@@ -198,11 +198,6 @@ class LayoutEditorHandler extends Handler {
 		SubmissionLayoutHandler::proofGalleyFile($args);
 	}
 	
-	function uploadSuppFile() {
-		import('pages.layoutEditor.SubmissionLayoutHandler');
-		SubmissionLayoutHandler::uploadSuppFile();
-	}
-
 	function editSuppFile($args) {
 		import('pages.layoutEditor.SubmissionLayoutHandler');
 		SubmissionLayoutHandler::editSuppFile($args);
