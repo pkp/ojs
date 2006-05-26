@@ -4,7 +4,8 @@ Frequently Asked Questions
 This document contains frequently asked questions about OJS, primarily dealing
 with common technical and support questions. For information about using or
 interacting with the OJS journal management system, consult the system's
-built-in help.
+built-in help. The README document contains introductory information and
+installation instructions.
 
 
 =================
@@ -71,11 +72,11 @@ A: OJS is known to work reasonably well with PHP's safe mode restrictions
    3) Will OJS work in a Microsoft IIS environment, or on other non-Apache web
       servers?
 
-A: OJS 2.0.2 has been tested on Microsoft Windows Server 2003 with IIS 6.0;
-   earlier versions of OJS will need to be upgraded before they will function.
-   PHP 5.x is required because of an issue with the $_SERVER[PATH_INFO]
-   variable. We welcome feedback from users who have successfully installed and
-   used OJS in other server environments.
+A: OJS 2.0.2 and newer have been tested on Microsoft Windows Server 2003 with
+   IIS 6.0; earlier versions of OJS will need to be upgraded before they will
+   function. PHP 5.x is required because of an issue with the
+   $_SERVER[PATH_INFO] variable. We welcome feedback from users who have
+   successfully installed and used OJS in other server environments.
 
    -----------------------------------------------------------------------------
 
