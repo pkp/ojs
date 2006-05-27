@@ -24,7 +24,7 @@ class ThesisPlugin extends GenericPlugin {
 	 * 	the plugin will not be registered.
 	 */
 	function register($category, $path) {
-		if (Request::getRequestedPage() === 'install') return false;
+		if (!Config::getVar('general', 'installed')) return false;
 		$success = parent::register($category, $path);
 		$this->addLocaleData();
 		if ($success) {
