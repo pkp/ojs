@@ -75,8 +75,17 @@ class Plugin {
 				'locale-' . $this->getName(), $locale,
 				array($this, '_cacheMiss')
 			);
+			$cacheTime = $caches[$locale]->getCacheTime();
+			if ($cacheTime !== null && $cacheTime < filemtime($this->getLocaleFilename($locale))) {
+				// This cache is out of date; flush it.
+				$caches[$locale]->flush();
+			}
 		}
 		return $caches[$locale];
+	}
+
+	function getLocaleFilename($locale) {
+		return $this->getPluginPath() . "/locale/$locale/locale.xml";
 	}
 
 	function _cacheMiss(&$cache, $id) {
@@ -88,7 +97,7 @@ class Plugin {
 		}
 
 		if (!isset($pluginLocales[$locale])) {
-			$pluginLocales[$locale] =& Locale::loadLocale($locale, $this->getPluginPath() . "/locale/$locale/locale.xml");
+			$pluginLocales[$locale] =& Locale::loadLocale($locale, $this->getLocaleFilename($locale));
 			$cache->setEntireCache($pluginLocales[$locale]);
 		}
 
