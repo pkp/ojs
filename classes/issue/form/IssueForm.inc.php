@@ -68,7 +68,7 @@ class IssueForm extends Form {
 				$this->addCheck(new FormValidator($this, 'year', 'required', 'editor.issues.yearRequired'));
 		}
 
-		// check if volume, number, and year combo have already been used
+		// check if public issue ID has already used
 		$journal = &Request::getJournal();
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
 

@@ -82,6 +82,36 @@ class IssueDAO extends DAO {
 	}
 
 	/**
+	 * Retrieve Issue by some combination of volume, number, and year
+	 * @param $journalId int
+	 * @param $volume int
+	 * @param $number int
+	 * @param $year int
+	 * @return Iterator object
+	 */
+	function &getPublishedIssuesByNumber($journalId, $volume = null, $number = null, $year = null) {
+		$sql = 'SELECT i.* FROM issues i WHERE i.published = 1 AND i.journal_id = ?';
+		$params = array($journalId);
+
+		if ($volume !== null) {
+			$sql .= ' AND i.volume = ?';
+			$params[] = $volume;
+		}
+		if ($number !== null) {
+			$sql .= ' AND i.number = ?';
+			$params[] = $number;
+		}
+		if ($year !== null) {
+			$sql .= ' AND i.year = ?';
+			$params[] = $year;
+		}
+
+		$result = &$this->retrieve($sql, $params);
+		$returner = &new DAOResultFactory($result, $this, '_returnPublishedIssueFromRow');
+		return $returner;
+	}
+
+	/**
 	 * Retrieve Issue by "best" issue id -- public ID if it exists,
 	 * falling back on the internal issue ID otherwise.
 	 * @param $issueId string
