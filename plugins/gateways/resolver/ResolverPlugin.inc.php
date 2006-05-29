@@ -53,18 +53,22 @@ class ResolverPlugin extends GatewayPlugin {
 			return false;
 		}
 
-		switch (array_shift($args)) {
+		$scheme = array_shift($args);
+		switch ($scheme) {
 			case 'vnp': // Volume, number, page
-				$skipYear = true;
-			case 'vnyp': // Volume, number, year, page
+			case 'ynp': // Volume, number, year, page
 				// This can only be used from within a journal context
 				$journal =& Request::getJournal();
 				if (!$journal) break;
 
-				$volume = (int) array_shift($args);
-				$number = (int) array_shift($args);
-				if (!isset($skipYear) || !$skipYear) $year = (int) array_shift($args);
-				else $year = null;
+				if ($scheme == 'vnp') {
+					$volume = (int) array_shift($args);
+					$year = null;
+				} elseif ($scheme == 'ynp') {
+					$year = (int) array_shift($args);
+					$volume = null;
+				}
+				$number = array_shift($args);
 				$page = (int) array_shift($args);
 
 				$issueDao =& DAORegistry::getDAO('IssueDAO');

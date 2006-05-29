@@ -22,11 +22,11 @@ The resolver accepts parameters after the given URL pattern in the following
 formats:
 
 http://.../vnp/[volume]/[number]/[page]
-http://.../vnyp/[volume]/[number]/[year]/[page]
+http://.../ynp/[year]/[number]/[page]
 
 ...where [volume], [number], [year], and [page] are integers identifying the
 issue and page number of the desired content. (Future releases will introduce
-additional resolving methods in addition to "vnp" and "vnyp".)
+additional resolving methods in addition to "vnp" and "ynp".)
 
 This plugin ships with current releases of OJS 2.x and the PKP support
 team may be contacted for more information. See docs/README.
