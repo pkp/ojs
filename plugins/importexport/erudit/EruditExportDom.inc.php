@@ -153,6 +153,7 @@ class EruditExportDom {
 
 		if ($keywords = $article->getSubject()) {
 			$keywordGroupNode = &XMLCustomWriter::createElement($doc, 'keywordgr');
+			XMLCustomWriter::setAttribute ($keywordGroupNode, 'lang', ($language = $article->getLanguage())?$language:'en');
 			foreach (explode(';', $keywords) as $keyword) {
 				XMLCustomWriter::createChildWithText($doc, $keywordGroupNode, 'keyword', trim($keyword), false);
 			}
