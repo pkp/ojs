@@ -1,0 +1,197 @@
+Perguntas e Respostas Frequentes
+--------------------------------
+
+Este documento contém perguntas frequentes sobre o SEER/OJS, que lidam 
+incialmente com questões técnicas e de suporte mais comuns. Para informações 
+sobre uso ou interação com o SEER/OJS - Sistema de Editoração de Revistas -, 
+consulte a ajuda do sistema.
+
+=================
+Questões Gerais
+=================
+
+1) Quem eu posso contactar para suporte?
+
+A: Um forum de apoio do SEER/OJS em inglês está disponível em 
+   <http://pkp.sfu.ca/support/forum/>.
+   Erros de sistema (bugs) ou solicitação de melhorias ou funcionalidades podem 
+   ser postadas em <http://pkp.sfu.ca/bugzilla/>.
+   Perguntas sobre o SEER/OJS podem ser enviadas para:
+   equipe PKP: <pkp-support@sfu.ca>.
+   equipe Ibict: <ramon@ibict.br;meinert@ibict.br;miguel@ibict.br>
+   
+   Embora o esforço seja o máximo para assistir e resolver erros encontrados no 
+   sistema, note que o SEER/OJS não possui garantia de suporte.
+
+   -----------------------------------------------------------------------------
+   
+2) Posso modificar o código fonte do SEER/OJS?
+   
+A: Sendo o SEER/OJS um sistema de código aberto, os usuários têm liberdade para 
+   modificar o sistema que forem consideradas pertinentes. Códigos com novas 
+   funcionalidades ou correções são bem-vindos, e sugere-se enviá-las a 
+   <pkp-support@sfu.ca>, caso considere as modificações benéficas a outros usuários 
+   do sistema.
+
+   Note que em caso de redistribuição do sistema (seja o original ou versões 
+   híbridas), os termos da GNU General Public License v2 devem ser seguidas. Veja 
+   docs/COPYING_pt ou docs/Copying para os termos completos da licença.
+
+
+============================
+Perguntas/Problemas Técnicos
+============================
+
+   1) Quando tento acessar o site SEER/OJS o sistema exibe uma mensagem de erro:
+      "Warning: Smarty error: problem creating directory '/./templates' in
+      ./lib/smarty/Smarty.class.php"
+
+A: Isto pode ocorrer caso um nível de diretório hierarquicamente superior tenha 
+   permissões de execução, mas não de leitura ou gravação. Nestes casos, o valor 
+   de _FILE_ aparenta ser relativo ao local de onde se está incluindo o arquivo. 
+   A solução para o problema é assegurar que todos os diretórios de maior nível 
+   (pais) tenham permissão de leitura, escrita e execução.
+
+   Veja também este aviso de erro do PHP: 
+   <http://bugs.php.net/bug.php?id=16231>.
+
+   -----------------------------------------------------------------------------
+
+   2) Envio de arquivos (upload) grandes falha sem explicação.
+ 
+A: A causa pode estar em algumas configurações do Apache ou do PHP.
+
+   Apache 2.x possui a diretiva LimitRequestBody directive que, se definida com 
+   um valor baixo, pode levar a esse comportamento. Em particular, as instalções 
+   padrão do PHP para versões recentes do Red Hat Linux setam o LimitRequestBody 
+   para 524288 bytes no arquivo /etc/httpd/conf.d/php.conf.
+
+   Valores baixos para as configurações do php.ini como post_max_size (padrão é 
+   "8M"), upload_max_filesize (padrão é "8M"), e memory_limit (padrão "8M") 
+   também podem causar o comportamento descrito.
+
+   -----------------------------------------------------------------------------
+
+   3) Estou usando um servidor Windows, e os emails disparados não são recebidos 
+      nunca.
+
+A: No Windows você deve configurar o PHP para enviar mensagens através de um 
+   servidor SMTP (rodando na máquina ou outro servidor).
+   
+   Veja <http://www.php.net/mail> para maiores detalhes sobre configurações das 
+   funcionalidades do PHP mail no Windows.
+
+   -----------------------------------------------------------------------------
+
+   4) Estou usando Apache 2.0.x, e as páginas do SEER/OJS não são carregadas, 
+      gerando um erro do tipo "File does not exist: .../index.php/index/...".
+
+A: Em algumas versões ou configurações do Apache 2.0.x, pode ser necessário 
+   explicitamente habilitar a diretiva AcceptPathInfo no arquivo de configuração 
+   do Apache.
+   
+   Veja http://httpd.apache.org/docs-2.0/mod/core.html para maiores informações
+   sobre esta diretiva.
+
+   -----------------------------------------------------------------------------
+
+   5) Grande quantidade de avisos "Warning: Call-time pass-by-reference has been 
+      deprecated" aparecem quando executo o instalador do SEER/OJS.
+
+A: Estes avisos podem ser removidos setando a variável 
+   allow_call_time_pass_reference para "On" no arquivo php.ini; este é o valor 
+   padrão em versões atuais do PHP, porém algumas distribuições podem setar a 
+   variável para "Off" inicialmente.   
+   Está prevista a remoção do requisito que obriga ter 
+   allow_call_time_pass_reference em "On" em futuras versões do SEER/OJS.
+
+   -----------------------------------------------------------------------------
+
+   6) O SEER/OJS funciona em ambiente PHP-CGI?
+      O SEER/OJS funciona em ambiente Microsoft IIS?
+
+A: Testes limitados do PKP indicam que o SEER/OJS não funcionará corretamente 
+   nesses ambientes. Não se sabe qual o impacto de modificações necessárias para 
+   que o SEER/OJS funcione nessse ambientes, porém solicitamos a desenvolvedores 
+   experientes nos ambientes em questão que contribuam com soluções para este 
+   problema.
+   
+   Atualmente, a configuração recomendada é do Apache com o PHP como módulo 
+   distribuído. Outras configurações podem ou não ser melhor suportads em futuras 
+   versões.
+
+   -----------------------------------------------------------------------------
+
+   7) A instalação do SEER/OJS falha, exibindo a mensagem de erro do MySQL "Client does not 
+      support authentication protocol requested by server; consider upgrading MySQL client".
+
+A: Este problema é causado por uma mudança no protocolo de autenticação do MySQL 4.1, e pode 
+   ocorrer se o ambiente está usando um vesão antiga da biblioteca do cliente MySQL com uma 
+   versão mais nova do servidor MySQL.
+
+   Veja http://dev.mysql.com/doc/mysql/en/Old_client.html para sugestões de solução do problema.
+
+   -----------------------------------------------------------------------------
+
+   8) Como faço para criar uma cópia de segurança (backup) do site SEER/OJS?
+
+A: É altamente recomendado que o sistema seja feita uma cópia de segurança regularmente para
+   prevenir contra falhas no sisetma, no servidor ou no hardware que possam causar perda de dados.
+  
+   Para executar uma cópia de segurança corretamente, execute os seguintes passos:
+     - A base de dados, utilizando as ferramentas do DBMS (ex.: mysqldump for MySQL, 
+       pg_dump for PostgreSQL)
+     - O diretório base do SEER/OJS
+     - Os diretórios de arquivos não-públicos (o diretório especificado na opção de configuração "files_dir")
+       
+   Este procedimento pode ser facilmente integrado com qualquer mecanismo automático de backup.
+
+   -----------------------------------------------------------------------------
+
+   9) Como faço para migrar uma instalação existente do SEER/OJS para um servidor diferente?
+
+A: Para migrar o sistema para outro servidor, é necessário:
+
+   - Copiar a base de dados com os dados e importar o arquivo para o novo servidor(ex.: usando as ferramentas
+     de linha de comando do DBMS)
+   - Copiar o diretório base do sistema e os diretórios de arquivos não-públicos
+   - Atualizar o arquivo config.inc.php com as configurações do novo servidor (normalmente, as configurações 
+     de autenticação/acesso da base de dados e o caminho para a pasta de arquivos não-públicos)
+
+
+
+================================
+Opções de Configuração Avançadas
+================================
+
+   1) Como posso controlar o endereço para onde serão enviadas as mensagens devolvidas?
+      Porque as mensagens são enviadas com um cabeçalho de envelope de envio 'X-Warning'?
+
+A: Para controlar o endereço para o envio de emails retornados, é necessário setar o 
+   endereço do envelope de destino. Habilite a opção "allow_envelope_sender" na seção
+   [email] do arquivo de configuração do SEER/OJS 2.x; quando habilitada, um campo para
+   "Endereço de Emails Retornados" aparece na Página 2 das Configurações da Revista.
+
+   Note que esta opção pode requerer modificações nas configurações do servidor de email
+   para que o usuário do servidor web (ex.:www-data) seja de confiança do servidor de email,
+   ou um cabeçalho de aviso "X-Warning" será adicionado às mensagens enviadas pelo sistema.
+   Consulte a documentação do servidor de email caso esse cabeçalho esteja sendo incluído.
+   
+   Por exemplo, o Sendmail mantém uma lista de usuários confiáveis no arquivo 
+   "/etc/mail/trusted-users";  outros sistemas possuem arquivos similares.
+   A opção de linha de comando utilizada pelo SEER/OJS 2.x que seta o envelope 
+   de envio é "-f".
+
+   -----------------------------------------------------------------------------
+
+   2) Como posso permitir busca em arquivos fechados que não são de texto, como o 
+      PDF ou MS Word?
+
+A: O SEER/OJS suporta a indexação de arquivos fechados através de aplicações de 
+   conversão externa. Na seção "Opções de Busca" do arquivo de configuração 
+   config.inc.php pode ser modificado para permitir a indexação de alguns formatos
+   binários de arquivo, setando o índice "index_XXX" para o conversor externo específico
+   do formato apropriado.
+
+   Note que software de terceiros deve ser instalado para permitir o uso desta opção, 
+  (ex.: "pdftotext" para arquivos PDF).

@@ -1,0 +1,15 @@
+Acesso ao CVS
+-------------
+O PKP prove acesso CVS anônimo ao último código do OJS.
+
+Interface web do CVS: <http://pkp.sfu.ca/cvs/>
+
+Utilizando CVS anônimo:
+
+$ cvs -d :pserver:anonymous@research2.csci.educ.ubc.ca:/cvs login
+(Logging in to anonymous@research2.csci.educ.ubc.ca)
+CVS password: <Enter>
+$ cvs -d :pserver:anonymous@research2.csci.educ.ubc.ca:/cvs co ojs2
+
+Note que você precisa renomear config.TEMPLATE.inc.php para config.inc.php
+antes de rodar o script de instalação do SEER/OJS

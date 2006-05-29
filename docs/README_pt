@@ -1,0 +1,168 @@
+	================================
+	=== Open Journal Systems
+	=== The Public Knowledge Project
+	=== Version: 2.0
+	=== Release date: May 15, 2005
+	================================
+	================================================
+	=== Sistema Eletrônico de Editoração de Revistas
+	=== Tradução do Sistema para português
+	=== Versão: 2.0
+	=== Data de lançamento: 2005
+	===============================================
+
+
+Sobre
+-----
+Sistema Eletrônico de Editoração de Revistas(SEER)/Open Journal Systems(OJS) 
+foi desenvolvido pelo Public Knowledge Project.
+Para informações gerais sobre o OJS e outros sistemas abertos de pesquisa,
+acesse o portal do PKP em <http://pkp.sfu.ca/>.
+
+
+Licença
+-------
+O OJS é licenciado sob o GNU General Public License v2. Veja no arquivo
+docs/COPYING_pt os termos completos desta licença. 
+
+Participação de terceiros são bem-vindas para modificar e redistribuir o SEER/OJS
+por inteiro ou em partes de acôrdo com os termos desta licença. O PKP também aceita
+códigos com melhorias ou correção de erros para o software.
+
+
+Requisitos de Sistema
+---------------------
+Requisitos de servidor recomendados:
+
+	* PHP >= 4.2.x (incluindo PHP 5.x)
+	* MySQL >= 3.23.23 (incluindo MySQL 4.x) ou PostgreSQL >= 7.1
+	* Apache >= 1.3.2x ou >= 2.0.4x
+	* Sistema Operacional: Um SO que suporte os software acima, incluindo
+	  Linux, BSD, Solaris, Mac OS X, Windows
+
+Como o PKP não possui recursos para testar todas as possíveis combinações de
+vesões do software e plataformas, nenhuma garantia do correto funcionamento ou
+suporte está implícita.
+
+
+Instalação
+-----------
+Leia este documento antes de instalar o sistema. Em caso de problemas, leia o
+arquivo FAQ_pt localizado neste diretório.
+
+Para instalar o sistema:
+
+	1. Extraia o arquivo compactado do sistema no local desejado do diretório 
+         web do servidor
+	
+	2. Modifique as permissões para escrita dos seguintes diretórios (e seus 
+         conteúdos), modificando o dono da pasta e permissões através dos 
+         comandos "chown" e "chmod", por exemplo:
+	   
+	     * config.inc.php (opcional -- caso não tenha permissão, o sistema 
+             solicitará a substituição do conteúdo durante a instalação)
+	     * help/cache
+	     * locale/cache
+	     * public
+	     * templates/t_cache
+	     * templates/t_compile
+	
+	3. Crie um diretório para armazenar arquivos submetidos ao servidor 
+         (arquivos de submissão, arquivos suplementares, etc.) e mude as 
+         permissões deste diretório para escrita. É recomendado que este 
+         diretório esteja fora de acesso via web (ou com proteção para acesso
+         direto, utilizando regras no .htaccess).
+	   
+	4. Digite no navegador a "url" do site 
+         (ex.: http://seudomínio.com/caminho/do/ojs/> e siga as instruções na 
+         tela.
+	   
+	   O instalador oferece uma opção de "instalação manual" que mostrará os 
+         comandos SQL necessários para criar a base de dados do sistema, porém 
+         deverão ser executados manualmente.
+	 
+	5. Passos adicionais recomendados pós-instalação:
+	
+	     * Verificar config.inc.php para configurações adicionais
+	     * Verificar o FAQ_pt para perguntas técnicas frequentes sobre 
+             configurações de servidor, entre outras.
+
+
+Atualização
+-----------
+Atualmente SEER/OJS 2.0 não possui um processo de atualização de versões do 
+SEER/OJS 1.x. Uma ferramente de migração está em desenvolvimento e será lançada 
+nas próximas versões do SEER/OJS 2.x.
+	   
+
+Localização (Tradução)
+----------------------
+Para adicionar suporte a outros idiomas, é necessário traduzir o seguinte 
+conjunto arquivos, que devem ser inseridos em diretórios com nomenclatura apropriada
+(utilizar códigos ISO de idiomas, como "pt_BR", é o recomendado):
+
+	* locale/en_US -> locale/pt_BR
+	* dbscripts/xml/data/locale/en_US -> dbscripts/xml/data/locale/pt_BR
+	* help/en_US/toc -> help/pt_BR/toc
+	* help/en_US/topic -> help/pt_BR/topic
+	* rt/en_US -> rt/pt_BR
+
+Novos idiomas devem ser adicionados ao arquivo registry/locales.xml, após o que 
+podem ser instalados no sistema através da interface de administração web.
+	
+Traduções podem ser enviadas para a equipe do PKP para distribuição em futuros 
+lançamentos do sistema.
+
+Requisitos de servidor para suporte total a Unicode (UTF-8):
+
+	* MySQL >= 4.1.1 ou PostgreSQL >= 7.1
+	* PHP >= 4.3.0 compilado com suporte a biblioteca de mbstring
+
+
+Tarefas Agendadas
+-----------------
+O SEER/OJS possui mecanismo para executar uma variedade de tarefas agendadas em 
+períodos determinados (como disparo automático de lembretes ou notificação via 
+email).
+
+Para permitir suporte a Tarefas Agendadas, edite o arquivo config.inc.php e 
+defina a variável scheduled_tasks para "On", e defina também seu sistema 
+operacional (o servidor onde está rodando o sistema) para executar periodicamente 
+o código PHP em tools/runScheduledTasks.php no diretório do sistema:
+
+Em sistemas operacionais de base unix, isto pode ser adicionado a tarefas da 
+cron:
+	# crontab -e www
+	0 * * * *	php /path/to/ojs2/tools/runScheduledTasks.php
+Neste exemplo o código seria executado a cada hora.
+
+Em sistemas Windows XP, isto pode ser adicionado no Tarefas Agendadas do Windows 
+(Windows Task Scheduler):
+	1) No Painel de Controle, escolha explorar Tarefas Agendadas.
+	2) Na janela do Windows Explorer escolha no menu Arquivo, ou clique com o
+         botão direito do mouse na janela e escolha:
+		Novo > Tarefa Agendada
+	3) Edite a nova tarefa, na aba de Tarefa, no campo Executar, digitando:
+		php c:\path\to\ojs2\tools\runScheduledTasks.php
+	4) Deverá ser especificado também a pasta de execução da tarefa (a pasta
+         onde foi instalado o PHP) e o usuário que executará a tarefa.
+	5) Nas abas Agendar e Configurções, pode-se configurar com mais detalhes 
+         a tarefa, como escolher datas para execução e repetições da mesma.
+	   
+Caso o código de tarefa agendada seja utilizado, recomenda-se que seja executado 
+pelo menos uma vez ao dia.
+
+Note que utilizar o código também exige que o interpretador de linha de comando 
+do PHP esteja instalado no servidor.
+
+
+Bibliotecas de terceiros
+------------------------
+      * Veja em lib/libraries.txt lista de bibliotecas de terceiros usadas pelo SEER/OJS.
+
+
+Contato/Suporte
+---------------
+Forum: <http://pkp.sfu.ca/support/forum>,<http://forum.ibict.br>
+Problemas: <http://pkp.sfu.ca/bugzilla/>
+Email: <pkp-support@sfu.ca>
