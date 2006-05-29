@@ -1,0 +1,24 @@
+	=================================
+	=== Google Scholar Gateway Plugin
+	=================================
+
+
+The Google Scholar gateway plugin generates an XML digest of the various
+articles in an OJS installation. It can be addressed at the following
+URL pattern:
+
+http://localhost/ojs2/index.php/myJournal/gateway/plugin/GoogleScholarPlugin
+
+...where, of course, localhost is the local server name, ojs2 is the path
+to the OJS 2.x installation, and myJournal is the path to a particular
+journal.
+
+The plugin must be enabled and the journal must supply certain pieces of
+information that are not required by default by OJS but are necessary for
+Google Scholar. To enable the plugin, or ensure that it is sufficiently
+configured, log into the Journal Manager's "System Plugins" page, find the
+Google Scholar Gateway Plugin under the "Gateway Plugins" heading, and
+click "Enable" or "Settings", respectively.
+
+This plugin ships with current releases of OJS 2.x and the PKP support
+team may be contacted for more information. See docs/README.
