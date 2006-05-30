@@ -1136,7 +1136,6 @@
 		<field name="proofreader_id" type="I8">
 			<NOTNULL/>
 		</field>
-		<field name="date_scheduling_queue" type="T"/>
 		<field name="date_author_notified" type="T"/>
 		<field name="date_author_underway" type="T"/>
 		<field name="date_author_completed" type="T"/>

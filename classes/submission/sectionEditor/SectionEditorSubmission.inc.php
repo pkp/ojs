@@ -123,9 +123,9 @@ class SectionEditorSubmission extends Article {
 
 	/**
 	 * Get the submission status. Returns one of the defined constants
-	 * (STATUS_INCOMPLETE, STATUS_ARCHIVED, STATUS_SCHEDULED,
-	 * STATUS_PUBLISHED, STATUS_DECLINED, STATUS_QUEUED_UNASSIGNED,
-	 * STATUS_QUEUED_REVIEW, or STATUS_QUEUED_EDITING). Note that this function never returns
+	 * (STATUS_INCOMPLETE, STATUS_ARCHIVED, STATUS_PUBLISHED,
+	 * STATUS_DECLINED, STATUS_QUEUED_UNASSIGNED, STATUS_QUEUED_REVIEW,
+	 * or STATUS_QUEUED_EDITING). Note that this function never returns
 	 * a value of STATUS_QUEUED -- the three STATUS_QUEUED_... constants
 	 * indicate a queued submission.
 	 * NOTE that this code is similar to getSubmissionStatus in
@@ -134,7 +134,7 @@ class SectionEditorSubmission extends Article {
 	function getSubmissionStatus() {
 		$status = $this->getStatus();
 		if ($status == STATUS_ARCHIVED || $status == STATUS_PUBLISHED ||
-		    $status == STATUS_DECLINED || $status == STATUS_SCHEDULED) return $status;
+		    $status == STATUS_DECLINED) return $status;
 
 		// The submission is STATUS_QUEUED or the author's submission was STATUS_INCOMPLETE.
 		if ($this->getSubmissionProgress()) return (STATUS_INCOMPLETE);

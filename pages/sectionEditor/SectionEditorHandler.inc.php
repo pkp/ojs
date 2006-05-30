@@ -679,11 +679,6 @@ class SectionEditorHandler extends Handler {
 		SubmissionEditHandler::selectProofreader($args);
 	}
 
-	function queueForScheduling($args) {
-		import('pages.sectionEditor.SubmissionEditHandler');
-		SubmissionEditHandler::queueForScheduling($args);
-	}
-
 	function notifyAuthorProofreader($args) {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::notifyAuthorProofreader($args);
@@ -734,6 +729,14 @@ class SectionEditorHandler extends Handler {
 		SubmissionEditHandler::thankLayoutEditorProofreader($args);
 	}
 
+	/**
+	 * Scheduling functions
+	 */
+
+	function scheduleForPublication($args) {
+		import('pages.sectionEditor.SubmissionEditHandler');
+		SubmissionEditHandler::scheduleForPublication($args);
+	}
 }
 
 ?>

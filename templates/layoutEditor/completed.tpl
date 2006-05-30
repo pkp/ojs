@@ -68,8 +68,6 @@
 				{translate key="submissions.archived"}
 			{elseif $status == STATUS_QUEUED}
 				{translate key="submissions.queued"}
-			{elseif $status == STATUS_SCHEDULED}
-				{translate key="submissions.scheduled"}
 			{elseif $status == STATUS_PUBLISHED}
 				{print_issue_id articleId="$articleId"}			
 			{elseif $status == STATUS_DECLINED}

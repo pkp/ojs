@@ -141,4 +141,11 @@ Thank you for agreeing to review the manuscript "{$articleTitle}" for {$journalN
 			<field name="description">This email is sent from the Section Editor to the Reviewer to acknowledge their acceptance of a review or encourage them to complete the review.</field>
 		</row>
 	</table>
+	<!-- Bug #2187: Removal of the scheduling queue. NOTE: This obsoletes
+	     the fix for #2114 above; that fix is left in for consistency. -->
+	<sql>
+		<query>
+			UPDATE articles SET status = 1 WHERE status = 2
+		</query>
+	</sql>
 </data>

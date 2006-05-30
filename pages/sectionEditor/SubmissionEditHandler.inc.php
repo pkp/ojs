@@ -201,6 +201,13 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->assign_by_ref('finalCopyeditFile', $submission->getFinalCopyeditFile());
 		$templateMgr->assign_by_ref('suppFiles', $submission->getSuppFiles());
 		$templateMgr->assign_by_ref('copyeditor', $submission->getCopyeditor());
+
+		import('issue.IssueAction');
+		$templateMgr->assign('issueOptions', IssueAction::getIssueOptions());
+		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+		$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($submission->getArticleId());
+		$templateMgr->assign_by_ref('publishedArticle', $publishedArticle);
+
 		$templateMgr->assign('useCopyeditors', $useCopyeditors);
 		$templateMgr->assign('useLayoutEditors', $useLayoutEditors);
 		$templateMgr->assign('useProofreaders', $useProofreaders);
@@ -1743,20 +1750,6 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	}
 
 	/**
-	 * Queue submission for scheduling
-	 * @param $args array ($articleId)
-	 */
-	function queueForScheduling($args) {
-		$articleId = isset($args[0]) ? (int) $args[0] : 0;
-		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
-
-		import('submission.proofreader.ProofreaderAction');
-		ProofreaderAction::queueForScheduling($submission);
-
-		Request::redirect(null, null, 'submissionEditing', $articleId);
-	}
-
-	/**
 	 * Notify author for proofreading
 	 */
 	function notifyAuthorProofreader($args) {
@@ -1905,7 +1898,43 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			Request::redirect(null, null, 'submissionEditing', $articleId);
 		}
 	}
-				
+
+	/**
+	 * Schedule/unschedule an article for publication.
+	 */
+	function scheduleForPublication($args) {
+		$articleId = (int) array_shift($args);
+		$issueId = (int) Request::getUserVar('issueId');
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
+		$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+		if ($issueId) {
+			// Schedule against an issue.
+			$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($articleId);
+			if ($publishedArticle) {
+				$publishedArticle->setIssueId($issueId);
+				$publishedArticleDao->updatePublishedArticle($publishedArticle);
+			} else {
+				$publishedArticle =& new PublishedArticle();
+				$publishedArticle->setArticleId($submission->getArticleId());
+				$publishedArticle->setIssueId($issueId);
+				$publishedArticle->setDatePublished(Core::getCurrentDate());
+				$publishedArticle->setSeq(0);
+				$publishedArticle->setViews(0);
+				$publishedArticle->setAccessStatus(0);
+
+				$publishedArticleDao->insertPublishedArticle($publishedArticle);
+			}
+		} else {
+			// Remove from scheduling.
+			$submission->setStatus(STATUS_QUEUED);
+			$publishedArticleDao->deletePublishedArticleByArticleId($articleId);
+		}
+		$submission->stampStatusModified();
+		$sectionEditorSubmissionDao->updateSectionEditorSubmission($submission);
+
+		Request::redirect(null, null, 'submissionEditing', array($articleId), null, 'scheduling');
+	}
 
 	//
 	// Validation

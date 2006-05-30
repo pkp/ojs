@@ -1324,15 +1324,16 @@ class SectionEditorAction extends Action {
 
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 
-		// Determine whether the submission was scheduled or not.
-		// If it was scheduled, return it to the scheduling queue;
-		// otherwise return to the editing queues.
-		$proofAssignment =& $sectionEditorSubmission->getProofAssignment();
-		if ($proofAssignment->getDateSchedulingQueue()) {
-			$sectionEditorSubmission->setStatus(STATUS_SCHEDULED);
+		// Determine which queue to return the article to: the
+		// scheduling queue or the editing queue.
+		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+		$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($sectionEditorSubmission->getArticleId());
+		if ($publishedArticle) {
+			$sectionEditorSubmission->setStatus(STATUS_PUBLISHED);
 		} else {
 			$sectionEditorSubmission->setStatus(STATUS_QUEUED);
 		}
+		unset($publishedArticle);
 
 		$sectionEditorSubmission->stampStatusModified();
 		

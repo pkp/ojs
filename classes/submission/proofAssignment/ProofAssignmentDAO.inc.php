@@ -81,7 +81,6 @@ class ProofAssignmentDAO extends DAO {
 		$proofAssignment->setProofId($row['proof_id']);
 		$proofAssignment->setArticleId($row['article_id']);
 		$proofAssignment->setProofreaderId($row['proofreader_id']);
-		$proofAssignment->setDateSchedulingQueue($this->datetimeFromDB($row['date_scheduling_queue']));
 
 		$proofAssignment->setDateAuthorNotified($this->datetimeFromDB($row['date_author_notified']));
 		$proofAssignment->setDateAuthorUnderway($this->datetimeFromDB($row['date_author_underway']));
@@ -114,10 +113,9 @@ class ProofAssignmentDAO extends DAO {
 	function insertProofAssignment(&$proofAssignment) {
 		$this->update(
 			sprintf('INSERT INTO proof_assignments
-				(article_id, proofreader_id, date_scheduling_queue, date_author_notified, date_author_underway, date_author_completed, date_author_acknowledged, date_proofreader_notified, date_proofreader_underway, date_proofreader_completed, date_proofreader_acknowledged, date_layouteditor_notified, date_layouteditor_underway, date_layouteditor_completed, date_layouteditor_acknowledged)
+				(article_id, proofreader_id, date_author_notified, date_author_underway, date_author_completed, date_author_acknowledged, date_proofreader_notified, date_proofreader_underway, date_proofreader_completed, date_proofreader_acknowledged, date_layouteditor_notified, date_layouteditor_underway, date_layouteditor_completed, date_layouteditor_acknowledged)
 				VALUES
-				(?, ?, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)',
-				$this->datetimeToDB($proofAssignment->getDateSchedulingQueue()),
+				(?, ?, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)',
 				$this->datetimeToDB($proofAssignment->getDateAuthorNotified()),
 				$this->datetimeToDB($proofAssignment->getDateAuthorUnderway()),
 				$this->datetimeToDB($proofAssignment->getDateAuthorCompleted()),
@@ -149,7 +147,6 @@ class ProofAssignmentDAO extends DAO {
 			sprintf('UPDATE proof_assignments
 				SET	article_id = ?,
 					proofreader_id = ?,
-					date_scheduling_queue = %s,
 					date_author_notified = %s,
 					date_author_underway = %s,
 					date_author_completed = %s,
@@ -163,7 +160,6 @@ class ProofAssignmentDAO extends DAO {
 					date_layouteditor_completed = %s,
 					date_layouteditor_acknowledged = %s
 				WHERE proof_id = ?',
-				$this->datetimeToDB($proofAssignment->getDateSchedulingQueue()),
 				$this->datetimeToDB($proofAssignment->getDateAuthorNotified()),
 				$this->datetimeToDB($proofAssignment->getDateAuthorUnderway()),
 				$this->datetimeToDB($proofAssignment->getDateAuthorCompleted()),

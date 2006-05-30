@@ -134,9 +134,9 @@ class IssueHandler extends Handler {
 	 */
 	function setupIssueTemplate(&$issue, $showToc = false) {
 		$journal = &Request::getJournal();
+		$journalId = $journal->getJournalId();
 		$templateMgr = &TemplateManager::getManager();
-
-		if (isset($issue) && ($issue->getPublished() || Validation::isEditor($journal->getJournalId())) && $issue->getJournalId() == $journal->getJournalId()) {
+		if (isset($issue) && ($issue->getPublished() || Validation::isEditor($journalId) || Validation::isLayoutEditor($journalId) || Validation::isProofreader($journalId)) && $issue->getJournalId() == $journalId) {
 
 			$issueTitle = $issue->getIssueIdentification();
 			$issueCrumbTitle = $issue->getIssueIdentification(false, true);
@@ -150,7 +150,7 @@ class IssueHandler extends Handler {
 				import('file.PublicFileManager');
 				$publicFileManager = &new PublicFileManager();
 				$coverPagePath = Request::getBaseUrl() . '/';
-				$coverPagePath .= $publicFileManager->getJournalFilesPath($journal->getJournalId()) . '/';
+				$coverPagePath .= $publicFileManager->getJournalFilesPath($journalId) . '/';
 				$coverPagePath .= $issue->getFileName();
 				$templateMgr->assign('coverPagePath', $coverPagePath);
 
@@ -181,7 +181,7 @@ class IssueHandler extends Handler {
 			import('file.PublicFileManager');
 			$publicFileManager = &new PublicFileManager();
 			$templateMgr->addStyleSheet(
-				Request::getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($journal->getJournalId()) . '/' . $styleFileName
+				Request::getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($journalId) . '/' . $styleFileName
 			);
 		}
 

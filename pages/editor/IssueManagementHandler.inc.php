@@ -56,13 +56,13 @@ class IssueManagementHandler extends EditorHandler {
 		$issueId = isset($args[0]) ? (int) $args[0] : 0;
 		$issue = IssueManagementHandler::validate($issueId);
 
-		// remove all published articles and return original articles to scheduling queue
+		// remove all published articles and return original articles to editing queue
 		$articleDao = &DAORegistry::getDAO('ArticleDAO');
 		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
 		$publishedArticles = $publishedArticleDao->getPublishedArticles($issueId);
 		if (isset($publishedArticles) && !empty($publishedArticles)) {
 			foreach ($publishedArticles as $article) {
-				$articleDao->changeArticleStatus($article->getArticleId(),STATUS_SCHEDULED);
+				$articleDao->changeArticleStatus($article->getArticleId(),STATUS_QUEUED);
 				$publishedArticleDao->deletePublishedArticleById($article->getPubId());
 			}
 		}
@@ -100,7 +100,8 @@ class IssueManagementHandler extends EditorHandler {
 		import('issue.form.IssueForm');
 
 		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign('issueOptions', IssueManagementHandler::getIssueOptions());
+		import('issue.IssueAction');
+		$templateMgr->assign('issueOptions', IssueAction::getIssueOptions());
 		$templateMgr->assign('helpTopicId', 'publishing.createIssue');
 		$templateMgr->assign('articles', join(':', $articles));
 
@@ -152,10 +153,11 @@ class IssueManagementHandler extends EditorHandler {
 				}
 			}
 
-			EditorHandler::schedulingQueue();
+			EditorHandler::backIssues();
 		} else {
 			$templateMgr = &TemplateManager::getManager();
-			$templateMgr->assign('issueOptions', IssueManagementHandler::getIssueOptions());
+			import('issue.IssueAction');
+			$templateMgr->assign('issueOptions', IssueAction::getIssueOptions());
 			$templateMgr->assign('helpTopicId', 'publishing.createIssue');
 			$issueForm->display();
 		}
@@ -170,7 +172,8 @@ class IssueManagementHandler extends EditorHandler {
 		IssueManagementHandler::setupTemplate(EDITOR_SECTION_ISSUES);
 
 		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign('issueOptions', IssueManagementHandler::getIssueOptions());
+		import('issue.IssueAction');
+		$templateMgr->assign('issueOptions', IssueAction::getIssueOptions());
 
 		import('issue.form.IssueForm');
 		$issueForm = &new IssueForm('editor/issues/issueData.tpl');
@@ -197,7 +200,8 @@ class IssueManagementHandler extends EditorHandler {
 		$journal = &Request::getJournal();
 		$journalId = $journal->getJournalId();
 
-		$templateMgr->assign('issueOptions', IssueManagementHandler::getIssueOptions());
+		import('issue.IssueAction');
+		$templateMgr->assign('issueOptions', IssueAction::getIssueOptions());
 
 		import('issue.form.IssueForm');
 		$issueForm = &new IssueForm('editor/issues/issueData.tpl');
@@ -287,6 +291,10 @@ class IssueManagementHandler extends EditorHandler {
 		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
 		$publishedArticles = $publishedArticleDao->getPublishedArticles($issueId);
 
+		$layoutAssignmentDao =& DAORegistry::getDAO('LayoutAssignmentDAO');
+		$proofedArticleIds = $layoutAssignmentDao->getProofedArticlesByIssueId($issueId);
+		$templateMgr->assign('proofedArticleIds', $proofedArticleIds);
+
 		$currSection = 0;
 		$counter = 0;
 		$sections = array();
@@ -316,7 +324,8 @@ class IssueManagementHandler extends EditorHandler {
 		$accessOptions[OPEN_ACCESS] = Locale::Translate('editor.issues.open');
 		$templateMgr->assign('accessOptions',$accessOptions);
 
-		$templateMgr->assign('issueOptions', IssueManagementHandler::getIssueOptions());
+		import('issue.IssueAction');
+		$templateMgr->assign('issueOptions', IssueAction::getIssueOptions());
 		$templateMgr->assign('helpTopicId', 'publishing.tableOfContents');
 		$templateMgr->display('editor/issues/issueToc.tpl');
 	}
@@ -359,7 +368,7 @@ class IssueManagementHandler extends EditorHandler {
 					$publishedArticleDao->updatePublishedArticleField($pubId, 'access_status', $accessStatus[$pubId]);
 				}
 			} else {
-				$article->setStatus(STATUS_SCHEDULED);
+				$article->setStatus(STATUS_QUEUED);
 				$article->stampStatusModified();
 				$publishedArticleDao->deletePublishedArticleById($pubId);
 			}
@@ -541,40 +550,6 @@ class IssueManagementHandler extends EditorHandler {
 				)
 			);
 		}
-	}
-
-	/**
-	 * builds the issue options pulldown for published and unpublished issues
-	 * @param $current bool retrieve current or not
-	 * @param $published bool retrieve published or non-published issues
-	 */
-	function getIssueOptions() {
-		$issueOptions = array();
-
-		$journal = &Request::getJournal();
-		$journalId = $journal->getJournalId();
-
-		$issueDao = &DAORegistry::getDAO('IssueDAO');
-
-		$issueOptions['-100'] =  '------    ' . Locale::translate('editor.issues.futureIssues') . '    ------';
-		$issueIterator = $issueDao->getUnpublishedIssues($journalId);
-		while (!$issueIterator->eof()) {
-			$issue = &$issueIterator->next();
-			$issueOptions[$issue->getIssueId()] = $issue->getIssueIdentification();
-		}
-		$issueOptions['-101'] = '------    ' . Locale::translate('editor.issues.currentIssue') . '    ------';
-		$issuesIterator = $issueDao->getPublishedIssues($journalId, true);
-		$issues = $issuesIterator->toArray();
-		if (isset($issues[0]) && $issues[0]->getCurrent()) {
-			$issueOptions[$issues[0]->getIssueId()] = $issues[0]->getIssueIdentification();
-			array_shift($issues);
-		}
-		$issueOptions['-102'] = '------    ' . Locale::translate('editor.issues.backIssues') . '    ------';
-		foreach ($issues as $issue) {
-			$issueOptions[$issue->getIssueId()] = $issue->getIssueIdentification();
-		}
-
-		return $issueOptions;
 	}
 
 	/**

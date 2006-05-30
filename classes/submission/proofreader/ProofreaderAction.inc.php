@@ -40,30 +40,6 @@ class ProofreaderAction extends Action {
 	}
 
 	/**
-	 * Queue the submission for scheduling
-	 */
-	function queueForScheduling($article) {
-		$articleDao = &DAORegistry::getDAO('ArticleDAO');
-		$proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
-		$proofAssignment =& $proofAssignmentDao->getProofAssignmentByArticleId($article->getArticleId());
-
-		if (!HookRegistry::call('ProofreaderAction::queueForScheduling', array(&$article, &$proofAssignment))) {
-			$article->setStatus(STATUS_SCHEDULED);
-			$article->stampStatusModified();
-			$articleDao->updateArticle($article);
-
-			$proofAssignment->setDateSchedulingQueue(Core::getCurrentDate());
-			$proofAssignmentDao->updateProofAssignment($proofAssignment);
-
-			// Add log entry
-			$user = &Request::getUser();
-			import('article.log.ArticleLog');
-			import('article.log.ArticleEventLogEntry');
-			ArticleLog::logEvent($article->getArticleId(), ARTICLE_LOG_PROOFREAD_COMPLETE, ARTICLE_LOG_TYPE_PROOFREAD, $user->getUserId(), 'log.proofread.complete', Array('proofreaderName' => $user->getFullName(), 'articleId' => $article->getArticleId()));
-		}
-	}
-
-	/**
 	 * Proofread Emails
 	 * @param $articleId int
 	 * @param $mailType defined string - type of proofread mail being sent

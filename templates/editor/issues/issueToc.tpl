@@ -20,7 +20,6 @@
 
 <ul class="menu">
 	<li><a href="{url op="createIssue"}">{translate key="editor.navigation.createIssue"}</a></li>
-	<li><a href="{url op="schedulingQueue"}">{translate key="common.queue.short.submissionsInScheduling"}</a></li>
 	<li{if $unpublished} class="current"{/if}><a href="{url op="futureIssues"}">{translate key="editor.navigation.futureIssues"}</a></li>
 	<li{if !$unpublished} class="current"{/if}><a href="{url op="backIssues"}">{translate key="editor.navigation.issueArchive"}</a></li>
 </ul>
@@ -45,24 +44,30 @@
 {if $customSectionOrderingExists}{translate key="editor.issues.resetSectionOrder" url=$url}<br/>{/if}
 <form method="post" action="{url op="updateIssueToc" path=$issueId}" onsubmit="return confirm('{translate|escape:"javascript" key="editor.issues.saveChanges"}')">
 
+{assign var=numCols value=6}
+{if ($issueAccess == 2 && $enableSubscriptions)}{assign var=numCols value=$numCols+1}{/if}
+{if $enablePublicArticleId}{assign var=numCols value=$numCols+1}{/if}
+{if $enablePageNumber}{assign var=numCols value=$numCols+1}{/if}
+
 {foreach from=$sections item=section}
 <h4>{$section[1]}{if $section[4]}<a href="{url op="moveSectionToc" path=$issueId d=u newPos=$section[4] sectionId=$section[0]}" class="plain">&uarr;</a>{else}&uarr;{/if} {if $section[5]}<a href="{url op="moveSectionToc" path=$issueId d=d newPos=$section[5] sectionId=$section[0]}" class="plain">&darr;</a>{else}&darr;{/if}</h4>
 
 <table width="100%" class="listing">
 	<tr>
-		<td colspan="8" class="headseparator">&nbsp;</td>
+		<td colspan="{$numCols}" class="headseparator">&nbsp;</td>
 	</tr>
 	<tr class="heading" valign="bottom">
 		<td width="10%" colspan="2">{translate key="editor.issues.order"}</td>
-		<td width="20%">{translate key="article.authors"}</td>
+		<td width="15%">{translate key="article.authors"}</td>
 		<td>{translate key="article.title"}</td>
-		{if (($issueAccess == 2) && $enableSubscriptions)}<td width="10%">{translate key="editor.issues.access"}</td>{/if}
-		{if $enablePublicArticleId}<td width="10%">{translate key="editor.issues.publicId"}</td>{/if}
-		{if $enablePageNumber}<td width="10%">{translate key="editor.issues.pages"}</td>{/if}
+		{if ($issueAccess == 2 && $enableSubscriptions)}<td width="10%">{translate key="editor.issues.access"}</td>{/if}
+		{if $enablePublicArticleId}<td width="7%">{translate key="editor.issues.publicId"}</td>{/if}
+		{if $enablePageNumber}<td width="7%">{translate key="editor.issues.pages"}</td>{/if}
 		<td width="5%">{translate key="common.remove"}</td>
+		<td width="5%">{translate key="editor.issues.proofed"}</td>
 	</tr>
 	<tr>
-		<td colspan="8" class="headseparator">&nbsp;</td>
+		<td colspan="{$numCols}" class="headseparator">&nbsp;</td>
 	</tr>
 
 	{foreach from=$section[2] item=article name="currSection"}
@@ -81,13 +86,14 @@
 		<td><select name="accessStatus[{$article->getPubId()}]" size="1" class="selectMenu">{html_options options=$accessOptions selected=$article->getAccessStatus()}</select></td>
 		{/if}
 		{if $enablePublicArticleId}
-		<td><input type="text" name="publishedArticles[{$article->getArticleId()}]" value="{$article->getPublicArticleId()|escape}" size="10" maxlength="255" class="textField" /></td>
+		<td><input type="text" name="publishedArticles[{$article->getArticleId()}]" value="{$article->getPublicArticleId()|escape}" size="7" maxlength="255" class="textField" /></td>
 		{/if}
-		{if $enablePageNumber}<td width="12%"><input type="text" name="pages[{$article->getArticleId()}]" value="{$article->getPages()|escape}" size="10" maxlength="255" class="textField" /></td>{/if}
+		{if $enablePageNumber}<td><input type="text" name="pages[{$article->getArticleId()}]" value="{$article->getPages()|escape}" size="7" maxlength="255" class="textField" /></td>{/if}
 		<td><input type="checkbox" name="remove[{$article->getArticleId()}]" value="{$article->getPubId()}" /></td>
+		<td><input name="proofed[{$article->getArticleId()}]" type="checkbox" disabled="disabled" {if in_array($article->getArticleId(), $proofedArticleIds)}checked="checked" {/if}/></td>
 	</tr>
 	<tr>
-		<td colspan="8" class="{if $smarty.foreach.currSection.last}end{/if}separator">&nbsp;</td>
+		<td colspan="{$numCols}" class="{if $smarty.foreach.currSection.last}end{/if}separator">&nbsp;</td>
 	</tr>
 
 	{/foreach}

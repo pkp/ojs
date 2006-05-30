@@ -181,7 +181,26 @@ class LayoutAssignmentDAO extends DAO {
 	function getInsertLayoutId() {
 		return $this->getInsertId('layouted_assignments', 'layouted_id');
 	}
-	
+
+	function getProofedArticlesByIssueId($issueId) {
+		$articleIds = array();
+
+		$result = &$this->retrieve(
+			'SELECT pa.article_id AS article_id FROM published_articles pa, proof_assignments pra WHERE pa.article_id = pra.article_id AND pa.issue_id = ? AND pra.date_layouteditor_completed IS NOT NULL',
+			array($issueId)
+		);
+
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+			$articleIds[] = $row['article_id'];
+			$result->MoveNext();
+		}
+
+		$result->Close();
+		unset($result);
+
+		return $articleIds;
+	}
 }
 
 ?>

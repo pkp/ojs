@@ -184,14 +184,3 @@
 <a href="javascript:openHelp('{url op="instructions" path="proof"}')" class="action">{translate key="submission.proofread.instructions"}</a>
 {/if}
 
-
-<div class="separator"></div>
-
-{if $proofAssignment->getDateSchedulingQueue()}
-{translate key="editor.article.placeSubmissionInSchedulingQueue"} {$proofAssignment->getDateSchedulingQueue()|date_format:$dateFormatShort}
-{else}
-<form method="post" action="{url op="queueForScheduling" path=$submission->getArticleId()}">
-{translate key="editor.article.placeSubmissionInSchedulingQueue"} 
-<input type="submit" value="{translate key="editor.article.scheduleSubmission"}"{if !$submissionAccepted} disabled="disabled"{/if} class="button defaultButton" />
-</form>
-{/if}

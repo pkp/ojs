@@ -27,4 +27,8 @@
 
 {include file="layoutEditor/submission/proofread.tpl"}
 
+<div class="separator"></div>
+
+{include file="layoutEditor/submission/scheduling.tpl"}
+
 {include file="common/footer.tpl"}

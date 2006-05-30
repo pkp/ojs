@@ -106,6 +106,40 @@ class IssueAction {
 		return $result;
 	}
 
+	/**
+	 * builds the issue options pulldown for published and unpublished issues
+	 * @param $current bool retrieve current or not
+	 * @param $published bool retrieve published or non-published issues
+	 */
+	function getIssueOptions() {
+		$issueOptions = array();
+
+		$journal = &Request::getJournal();
+		$journalId = $journal->getJournalId();
+
+		$issueDao = &DAORegistry::getDAO('IssueDAO');
+
+		$issueOptions['-100'] =  '------    ' . Locale::translate('editor.issues.futureIssues') . '    ------';
+		$issueIterator = $issueDao->getUnpublishedIssues($journalId);
+		while (!$issueIterator->eof()) {
+			$issue = &$issueIterator->next();
+			$issueOptions[$issue->getIssueId()] = $issue->getIssueIdentification();
+		}
+		$issueOptions['-101'] = '------    ' . Locale::translate('editor.issues.currentIssue') . '    ------';
+		$issuesIterator = $issueDao->getPublishedIssues($journalId, true);
+		$issues = $issuesIterator->toArray();
+		if (isset($issues[0]) && $issues[0]->getCurrent()) {
+			$issueOptions[$issues[0]->getIssueId()] = $issues[0]->getIssueIdentification();
+			array_shift($issues);
+		}
+		$issueOptions['-102'] = '------    ' . Locale::translate('editor.issues.backIssues') . '    ------';
+		foreach ($issues as $issue) {
+			$issueOptions[$issue->getIssueId()] = $issue->getIssueIdentification();
+		}
+
+		return $issueOptions;
+	}
+
 }
 
 ?>

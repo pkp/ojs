@@ -472,8 +472,10 @@ class SectionEditorSubmissionDAO extends DAO {
 			WHERE
 				a.journal_id = ? AND e.editor_id = ?';
 
-		if ($status) $sql .= ' AND a.status = 1';
-		else $sql .= ' AND a.status <> 1';
+		// "Active" submissions have a status of STATUS_QUEUED and
+		// the layout editor has not yet been acknowledged.
+		if ($status) $sql .= ' AND (a.status = ' . STATUS_QUEUED . ' OR (a.status = ' . STATUS_PUBLISHED . ' AND l.date_acknowledged IS NULL))';
+		else $sql .= ' AND ((a.status <> ' . STATUS_QUEUED . ' AND a.status <> ' . STATUS_PUBLISHED . ') OR (a.status = ' . STATUS_PUBLISHED . ' AND l.date_acknowledged IS NOT NULL))';
 
 		if ($sectionId) {
 			$params[] = $sectionId;

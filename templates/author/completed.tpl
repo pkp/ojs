@@ -34,7 +34,6 @@
 			{elseif $status==STATUS_QUEUED_UNASSIGNED}{translate key="submissions.queuedUnassigned"}
 			{elseif $status==STATUS_QUEUED_EDITING}{translate key="submissions.queuedEditing"}
 			{elseif $status==STATUS_QUEUED_REVIEW}{translate key="submissions.queuedReview"}
-			{elseif $status==STATUS_SCHEDULED}{translate key="submissions.scheduled"}
 			{elseif $status==STATUS_PUBLISHED}{print_issue_id articleId="$articleId"}
 			{elseif $status==STATUS_DECLINED}{translate key="submissions.declined"}
 			{/if}

@@ -95,7 +95,7 @@ class EditorAction extends SectionEditorAction {
 	}
 
 	/**
-	 * Rush a new submission into the Scheduling queue.
+	 * Rush a new submission into the end of the editing queue.
 	 * @param $article object
 	 */
 	function expediteSubmission($article) {
@@ -167,8 +167,8 @@ class EditorAction extends SectionEditorAction {
 			$galleyDao->insertGalley($galley);
 		}
 
-		// 4. Send to scheduling
-		ProofreaderAction::queueForScheduling($sectionEditorSubmission);
+		$sectionEditorSubmission->setStatus(STATUS_QUEUED);
+		$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
 	}
 }
 

@@ -43,7 +43,7 @@ class importExport extends CommandLineTool {
 	}
 	
 	/**
-	 * Parse and execute the scheduled tasks.
+	 * Parse and execute the import/export task.
 	 */
 	function execute() {
 		$plugins = PluginRegistry::loadCategory('importexport');

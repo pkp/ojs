@@ -24,7 +24,6 @@
 	<span class="blockSubtitle">{translate key="editor.navigation.issues"}</span>
 	<ul>
 		<li><a href="{url op="createIssue"}">{translate key="editor.navigation.createIssue"}</a></li>
-		<li><a href="{url op="schedulingQueue"}">{translate key="common.queue.short.submissionsInScheduling"}</a>&nbsp;({if $submissionsCount[3]}{$submissionsCount[3]}{else}0{/if})</li>
 		<li><a href="{url op="notifyUsers"}">{translate key="editor.notifyUsers"}</a></li>
 		<li><a href="{url op="futureIssues"}">{translate key="editor.navigation.futureIssues"}</a></li>
 		<li><a href="{url op="backIssues"}">{translate key="editor.navigation.issueArchive"}</a></li>

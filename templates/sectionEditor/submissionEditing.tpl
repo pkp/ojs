@@ -34,4 +34,8 @@
 
 {include file="sectionEditor/submission/proofread.tpl"}
 
+<div class="separator"></div>
+
+{include file="sectionEditor/submission/scheduling.tpl"}
+
 {include file="common/footer.tpl"}

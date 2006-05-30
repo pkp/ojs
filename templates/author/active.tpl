@@ -38,7 +38,6 @@
 				{elseif $status==STATUS_QUEUED_UNASSIGNED}{translate key="submissions.queuedUnassigned"}
 				{elseif $status==STATUS_QUEUED_EDITING}<a href="{url op="submissionEditing" path=$articleId}" class="action">{translate key="submissions.queuedEditing"}</a>
 				{elseif $status==STATUS_QUEUED_REVIEW}<a href="{url op="submissionReview" path=$articleId}" class="action">{translate key="submissions.queuedReview"}</a>
-				{elseif $status==STATUS_SCHEDULED}{translate key="submissions.scheduled"}
 				{elseif $status==STATUS_PUBLISHED}{translate key="submissions.published"}
 				{elseif $status==STATUS_DECLINED}{translate key="submissions.declined"}
 				{/if}

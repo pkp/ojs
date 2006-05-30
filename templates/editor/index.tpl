@@ -28,7 +28,6 @@
 
 <ul class="plain">
 	<li>&#187; <a href="{url op="createIssue"}">{translate key="editor.navigation.createIssue"}</a></li>
-	<li>&#187; <a href="{url op="schedulingQueue"}">{translate key="common.queue.long.submissionsInScheduling"}</a>&nbsp;({if $submissionsCount[3]}{$submissionsCount[3]}{else}0{/if})</li>
 	<li>&#187; <a href="{url op="notifyUsers"}">{translate key="editor.notifyUsers"}</a></li>
 	<li>&#187; <a href="{url op="futureIssues"}">{translate key="editor.navigation.futureIssues"}</a></li>
 	<li>&#187; <a href="{url op="backIssues"}">{translate key="editor.navigation.issueArchive"}</a></li>

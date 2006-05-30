@@ -231,8 +231,6 @@
 	<message key="common.queue.short.submissionsInEditing">In Editing</message>
 	<message key="common.queue.long.submissionsInReview">Submissions in Review</message>
 	<message key="common.queue.short.submissionsInReview">In Review</message>
-	<message key="common.queue.long.submissionsInScheduling">Schedule Submissions</message>
-	<message key="common.queue.short.submissionsInScheduling">Scheduling</message>
 	<message key="common.queue.long.submissionsArchives">Archives</message>
 	<message key="common.queue.short.submissionsArchives">Archives</message>
 	<message key="common.queue.long.active">Active Submissions</message>
@@ -337,6 +335,9 @@
 	<message key="submission.copyedit">Copyedit</message>
 	<message key="submission.layout">Layout</message>
 	<message key="submission.proofreading">Proofreading</message>
+	<message key="submission.scheduling">Scheduling</message>
+	<message key="submission.scheduledIn">Scheduled for publication in {$issueName}.</message>
+	<message key="submission.scheduledIn.tba">(TBA)</message>
 	<message key="submission.files">Files</message>
 	<message key="submission.viewMetadata">View Metadata</message>
 	<message key="submission.editMetadata">Edit Metadata</message>
@@ -1029,11 +1030,11 @@ Note that if your site administrator has already registered this site with the P
 	<message key="manager.setup.frequencyOfPublicationNote">Note: Leave items blank if not used with this journal, and editors can re-set numbers in the publishing process.</message>
 	<message key="manager.setup.appearInAboutJournal">(To appear in About the Journal) </message>
 	<message key="manager.setup.managementOfBasicEditorialSteps">Management of Basic Editorial Steps</message>
-	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[Steps: Submission Queue &gt; Submission Review &gt; Submission Editing &gt; Scheduling Queue &gt; Table of Contents.<br /><br />
+	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[Steps: Submission Queue &gt; Submission Review &gt; Submission Editing &gt; Table of Contents.<br /><br />
 Select a model for handling these aspects of the editorial process. (To designate a Managing Editor and Section Editors, go to Editors in Journal Management.)]]></message>
 	<message key="manager.setup.editorialProcess1">One or more editors handle the basic steps without designated roles.</message>
-	<message key="manager.setup.editorialProcess2">Managing Editor handles Submission Queue, Scheduling Queue, and Table of Contents, while Section Editors handle Submission Review and Submission Editing.</message>
-	<message key="manager.setup.editorialProcess3">Managing Editor handles Submission Queue, Submission Editing, Scheduling Queue, and Table of Contents, while the Section Editors handle Submission Review.</message>
+	<message key="manager.setup.editorialProcess2">Managing Editor handles Submission Queue, and Table of Contents, while Section Editors handle Submission Review and Submission Editing.</message>
+	<message key="manager.setup.editorialProcess3">Managing Editor handles Submission Queue, Submission Editing, and Table of Contents, while the Section Editors handle Submission Review.</message>
 	<message key="manager.setup.copyediting">Copyeditors</message>
 	<message key="manager.setup.useCopyeditors">The journal will designate Copyeditors for working with each submission.</message>
 	<message key="manager.setup.noUseCopyeditors">Copyediting will be undertaken by the editor.</message>
@@ -1447,8 +1448,6 @@ You may optionally provide the user with a reason for disabling their account.</
 	<message key="editor.publishing">Publishing</message>
 	<message key="editor.publishedIssues">Published Issues</message>
 	<message key="editor.allSections">All Sections</message>
-	<message key="editor.submissionQueue.noSubmissions">No submissions in the queue.</message>
-	<message key="editor.submissionQueue.saveChanges">Save changes to queued submissions?</message>
 	<message key="editor.submissionArchive.noSubmissions">No submissions in the archive.</message>
 	<message key="editor.submissionArchive.saveChanges">Save changes to archived submissions? Submissions marked for deletion will be permanently deleted from the system.</message>
 	<message key="editor.submissionArchive.confirmDelete">Are you sure you want to permanently delete this submission?</message>
@@ -1459,14 +1458,6 @@ You may optionally provide the user with a reason for disabling their account.</
 	<message key="editor.notifyUsers.allUsers">Send this message to all users associated with this journal ({$count} users)</message>
 	<message key="editor.notifyUsers.interestedUsers">Send this message to the users associated with this journal who have indicated that they wish to receive updates ({$count} users)</message>
 	<message key="editor.notifyUsers.includeToc">Include the table of contents from this issue:</message>
-
-	<!-- Scheduling Queue -->
-	<message key="editor.schedulingQueue">Scheduling Queue</message>
-	<message key="editor.schedulingQueue.noSubmissions">No articles in the scheduling queue.</message>
-	<message key="editor.schedulingQueue.saveChanges">Save changes to queued articles? Articles marked for removal will return to the submission queue.</message>
-	<message key="editor.schedulingQueue.schedule">Schedule</message>
-	<message key="editor.schedulingQueue.unscheduled">Unscheduled</message>
-	<message key="editor.schedulingQueue.newIssue">New Issue</message>
 
 	<!-- Editor Index Page -->
 	<message key="editor.editorAdministration">Editor Administration</message>
@@ -1502,6 +1493,7 @@ You may optionally provide the user with a reason for disabling their account.</
 	<message key="editor.issues.coverPageInstructions">(Allowed formats: .gif, .jpg, or .png )</message>
 	<message key="editor.issues.uploaded">Uploaded</message>
 	<message key="editor.issues.remove">Remove</message>
+	<message key="editor.issues.proofed">Proofed</message>
 	<message key="editor.issues.removeCoverPage">Remove cover page image?</message>
 	<message key="editor.issues.invalidCoverPageFormat">Invalid cover page format. Accepted formats are .gif, .jpg, or .png.</message>
 	<message key="editor.issues.styleFile">Stylesheet</message>
@@ -1514,7 +1506,7 @@ You may optionally provide the user with a reason for disabling their account.</
 	<message key="editor.issues.identification">Identification</message>
 	<message key="editor.issues.access">Access</message>
 	<message key="editor.issues.cover">Cover</message>
-	<message key="editor.issues.confirmIssueDelete">All articles will be returned to the scheduling queue and all associated files will be permanently removed.  Are you sure you want to remove this issue?</message>
+	<message key="editor.issues.confirmIssueDelete">All articles will be returned to the editing queue and all associated files will be permanently removed.  Are you sure you want to remove this issue?</message>
 	<message key="editor.issues.resetSectionOrder"><![CDATA[This issue uses custom section ordering. <a href="{$url}" class="action">Reset to defaults</a>]]></message>
 
 	<!-- Live Issues -->
@@ -1618,8 +1610,6 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	<message key="editor.article.authorComments">Author Comments</message>
 	<message key="editor.article.proofreaderComments">Proofreader Comments</message>
 	<message key="editor.article.layoutEditorFinal">Layout Editor Final</message>
-	<message key="editor.article.placeSubmissionInSchedulingQueue">Send submission to scheduling</message>
-	<message key="editor.article.scheduleSubmission">Send</message>
 	<message key="editor.article.noDate">(date)</message>
 
 	<message key="editor.submissions.showBy">Show By</message>
@@ -1631,6 +1621,9 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	<message key="editor.submissions.lastAssigned">Latest</message>
 	<message key="editor.submissions.averageTime">Weeks</message>
 	<message key="editor.submissions.lastCompleted">Last Complete</message>
+
+	<message key="editor.article.scheduleForPublication">Schedule for publication in</message>
+	<message key="editor.article.scheduleForPublication.toBeAssigned">To Be Assigned</message>
 	
 	<!-- Section Editor -->
 	<message key="sectionEditor.activeEditorialAssignments">Active Editorial Assignments</message>
@@ -1844,7 +1837,7 @@ The file can be viewed by clicking on the file name. A new or revised file can b
 	<message key="author.submit.filesSummary">File Summary</message>
 	<message key="author.submit.finishSubmission">Finish Submission</message>
 	<message key="author.submit.submissionComplete">Submission complete. Thank you for your interest in publishing with {$journalTitle}.</message>
-	<message key="author.submit.expedite"><![CDATA[If this submission is in a format that is ready to be published, without further review, editing, or layout work, it can be sent directly to the Schedule Submissions queue by <a href="{$expediteUrl}" class="action">Clicking here</a>. (Note: Only journal editors have this option for their submissions.)]]></message>
+	<message key="author.submit.expedite"><![CDATA[If this submission is in a format that is ready to be published without further review, editing, or layout work, it can be placed directly in the last stage of the Editing queue by <a href="{$expediteUrl}" class="action">Clicking here</a>. (Note: Only journal editors have this option for their submissions.)]]></message>
 
 	<!-- Used in submission review / editing -->
 	<message key="submission.review.mustUploadFileForReview">Request email cannot be sent until a Review Version is in place.</message>
@@ -1901,7 +1894,6 @@ The file can be viewed by clicking on the file name. A new or revised file can b
 	
 	<!-- Submission Tracking - Proofread Specific -->
 	<message key="submission.proofreadingComments">Proofreading Comments</message>
-	<message key="submission.queueForScheduling">Queue for Scheduling</message>
 	<message key="submission.archiveSubmission">Archive Submission</message>
 	<message key="submission.proofread.corrections">Proofreading Corrections</message>
 	<message key="submission.proofread.instructions">Proofing Instructions</message>

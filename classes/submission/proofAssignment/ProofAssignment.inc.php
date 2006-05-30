@@ -72,22 +72,6 @@ class ProofAssignment extends DataObject {
 	}
 
 	/**
-	 * Get the scheduling queue date.
-	 * @return string
-	 */
-	function getDateSchedulingQueue() {
-		return $this->getData('dateSchedulingQueue');
-	}
-	
-	/**
-	 * Set the scheduling queue date.
-	 * @param $dateSchedulingQueue string
-	 */
-	function setDateSchedulingQueue($dateSchedulingQueue) {
-		return $this->setData('dateSchedulingQueue', $dateSchedulingQueue);
-	}
-
-	/**
 	 * Get the author notified date.
 	 * @return string
 	 */

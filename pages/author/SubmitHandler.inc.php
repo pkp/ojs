@@ -256,7 +256,7 @@ class SubmitHandler extends AuthorHandler {
 		if (Validation::isEditor($journal->getJournalId()) && $article->getSubmissionFileId()) {
 			import('submission.editor.EditorAction');
 			EditorAction::expediteSubmission($article);
-			Request::redirect(null, 'editor', 'schedulingQueue');
+			Request::redirect(null, 'editor', 'submissionEditing', array($article->getArticleId()));
 		}
 
 		Request::redirect(null, null, 'track');

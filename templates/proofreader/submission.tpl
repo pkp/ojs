@@ -25,4 +25,8 @@
 
 {include file="proofreader/submission/proofread.tpl"}
 
+<div class="separator"></div>
+
+{include file="proofreader/submission/scheduling.tpl"}
+
 {include file="common/footer.tpl"}

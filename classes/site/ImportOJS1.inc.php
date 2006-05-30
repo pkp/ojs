@@ -940,7 +940,8 @@ class ImportOJS1 {
 				} else if($row['bPublished']) {
 					$status = STATUS_PUBLISHED;
 				} else if($row['bSchedule']) {
-					$status = STATUS_SCHEDULED;
+					// #2187: Scheduling queue removed.
+					$status = STATUS_QUEUED;
 				}
 			}
 			
@@ -1165,7 +1166,8 @@ class ImportOJS1 {
 					}
 					
 					$proofAssignment->setProofreaderId($this->userMap[$proofRow['nUserID']]);
-					$proofAssignment->setDateSchedulingQueue($proofRow['dtDateSchedule']);
+					// The scheduling queue has been removed! (Bug #2187)
+					// $proofAssignment->setDateSchedulingQueue($proofRow['dtDateSchedule']);
 					$proofAssignment->setDateAuthorNotified($proofRow['dtDateNotified_Author']);
 					$proofAssignment->setDateAuthorUnderway($proofRow['dtDateNotified_Author']);
 					$proofAssignment->setDateAuthorCompleted($proofRow['dtDateCompleted_Author']);
