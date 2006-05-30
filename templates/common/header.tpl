@@ -55,7 +55,7 @@
 <div id="body">
 
 <div id="sidebar">
-	{include file="common/sidebar.tpl"}
+	{display_template template="common/sidebar.tpl" hookname="Templates::Common::Header::Sidebar"}
 </div>
 
 <div id="main">
