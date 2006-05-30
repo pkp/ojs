@@ -158,6 +158,7 @@ class TemplateManager extends Smarty {
 		$this->register_function('help_topic', array(&$this, 'smartyHelpTopic'));
 		$this->register_function('get_debug_info', array(&$this, 'smartyGetDebugInfo'));
 		$this->register_function('assign_mailto', array(&$this, 'smartyAssignMailto'));
+		$this->register_function('display_template', array(&$this, 'smartyDisplayTemplate'));
 
 		$this->register_function('url', array(&$this, 'smartyUrl'));
 	}
@@ -167,24 +168,46 @@ class TemplateManager extends Smarty {
 	}
 
 	/**
-	 * Dislay the template.
+	 * Display the template.
 	 */
-	function display($template, $sendContentType = 'text/html') {
+	function display($template, $sendContentType = 'text/html', $hookName = 'TemplateManager::display') {
 		$charset = Config::getVar('i18n', 'client_charset');
 
 		// Give any hooks registered against the TemplateManager
 		// the opportunity to modify behavior; otherwise, display
 		// the template as usual.
-		if (!HookRegistry::call('TemplateManager::display', array(&$this, &$template, &$sendContentType, &$charset))) {
+
+		$output = null;
+		if (!HookRegistry::call($hookName, array(&$this, &$template, &$sendContentType, &$charset, &$output))) {
+
 			// Explicitly set the character encoding
 			// Required in case server is using Apache's AddDefaultCharset directive
 			// (which can prevent browser auto-detection of the proper character set)
-			header('Content-Type: ' . $sendContentType . '; charset=' . $charset);
+			if ($hookName == 'TemplateManager::display') {
+				header('Content-Type: ' . $sendContentType . '; charset=' . $charset);
+			}
 
 			// Actually display the template.
 			parent::display($template);
+		} else {
+			// Display the results of the plugin.
+			echo $output;
 		}
 	}
+
+	/**
+	 * Display templates from Smarty and allow hook overrides
+	 * 
+	 * Smarty usage: {display_template template="name.tpl" hookname="My::Hook::Name"}
+	 */
+	function smartyDisplayTemplate($params, &$smarty) {
+
+		// This is basically a wrapper for display()
+		if (isset($params['template'])) {
+			$this->display($params['template'], "", $params['hookname']);
+		}
+	}
+
 
 	/**
 	 * Clear template compile and cache directories.
