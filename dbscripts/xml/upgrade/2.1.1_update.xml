@@ -13,16 +13,6 @@
   -->
 
 <data>
-	<!-- Bug #2114: Scheduled articles sent to Archive and returned to active get stuck. Unstick them. -->
-	<sql>
-		<query driver="mysql">
-			UPDATE articles a, proof_assignments pa SET a.status = 2 WHERE a.article_id = pa.article_id AND a.status=1 AND pa.date_scheduling_queue IS NOT NULL
-		</query>
-		<query driver="postgres7">
-			UPDATE articles SET status = 2 FROM articles a, proof_assignments pa WHERE a.article_id = pa.article_id AND a.status = 1 AND pa.date_scheduling_queue IS NOT NULL
-		</query>
-	</sql>
-
 	<!-- Bug #1739: Automated open access notification emails and subscription expiry emails. -->
 	<table name="email_templates_default">
 		<row>
@@ -142,7 +132,7 @@ Thank you for agreeing to review the manuscript "{$articleTitle}" for {$journalN
 		</row>
 	</table>
 	<!-- Bug #2187: Removal of the scheduling queue. NOTE: This obsoletes
-	     the fix for #2114 above; that fix is left in for consistency. -->
+	     the fix for #2114 that was previously included in this file. -->
 	<sql>
 		<query>
 			UPDATE articles SET status = 1 WHERE status = 2
