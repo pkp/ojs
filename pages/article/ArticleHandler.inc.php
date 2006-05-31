@@ -70,6 +70,7 @@ class ArticleHandler extends Handler {
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->assign_by_ref('galley', $galley);
+		$templateMgr->assign_by_ref('article', $article);
 
 		$templateMgr->display('article/pdfInterstitial.tpl');
 	}
@@ -92,6 +93,7 @@ class ArticleHandler extends Handler {
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->assign_by_ref('galley', $galley);
+		$templateMgr->assign_by_ref('article', $article);
 
 		$templateMgr->display('article/interstitial.tpl');
 	}
