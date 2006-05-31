@@ -274,6 +274,34 @@ class PublishedArticleDAO extends DAO {
 	}
 
 	/**
+	 * Retrieve "article_id"s for published articles for a journal, sorted
+	 * by reverse publish date.
+	 * Note that if journalId is null, alphabetized article IDs for all
+	 * journals are returned.
+	 * @param $journalId int
+	 * @return Array
+	 */
+	function &getPublishedArticleIdsByJournal($journalId = null, $rangeInfo = null) {
+		$articleIds = array();
+		
+		$result = &$this->retrieveCached(
+			'SELECT a.article_id AS pub_id FROM published_articles pa, articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE pa.article_id = a.article_id' . (isset($journalId)?' AND a.journal_id = ?':'') . ' ORDER BY pa.date_published DESC',
+			isset($journalId)?$journalId:false
+		);
+		
+		while (!$result->EOF) {
+			$row = $result->getRowAssoc(false);
+			$articleIds[] = $row['pub_id'];
+			$result->moveNext();
+		}
+
+		$result->Close();
+		unset($result);
+
+		return $articleIds;
+	}
+
+	/**
 	 * creates and returns a published article object from a row
 	 * @param $row array
 	 * @return PublishedArticle object
