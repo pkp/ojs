@@ -123,13 +123,13 @@
 </tr>
 {if $alternateLocale1}
 <tr valign="top">
-	<td class="label">{fieldLabel name="abbrevAlt1" required="true" key="section.abbreviation"}&nbsp;({$languageToggleLocales.$alternateLocale1|escape})</td>
+	<td class="label">{fieldLabel name="abbrevAlt1" key="section.abbreviation"}&nbsp;({$languageToggleLocales.$alternateLocale1|escape})</td>
 	<td class="value"><input type="text" name="abbrevAlt1" id="abbrevAlt1" value="{$abbrevAlt1|escape}" size="20" maxlength="20" class="textField" /></td>
 </tr>
 {/if}
 {if $alternateLocale2}
 <tr valign="top">
-	<td class="label">{fieldLabel name="abbrevAlt2" required="true" key="section.abbreviation"}&nbsp;({$languageToggleLocales.$alternateLocale2|escape})</td>
+	<td class="label">{fieldLabel name="abbrevAlt2" key="section.abbreviation"}&nbsp;({$languageToggleLocales.$alternateLocale2|escape})</td>
 	<td class="value"><input type="text" name="abbrevAlt2" id="abbrevAlt2" value="{$abbrevAlt2|escape}" size="20" maxlength="20" class="textField" /></td>
 </tr>
 {/if}
