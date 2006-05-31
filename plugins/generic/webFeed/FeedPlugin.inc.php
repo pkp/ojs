@@ -53,12 +53,22 @@ class FeedPlugin extends GenericPlugin {
 			// for the current issue
 			if ($templateManager->get_template_vars('showToc') ) {
 				$additionalHeadData = $templateManager->get_template_vars('additionalHeadData');
+				$sidebarTemplate = $templateManager->get_template_vars('sidebarTemplate');
 				$currentUrl = $templateManager->get_template_vars('currentUrl');
 	
 				$feedUrl1 = '<link rel="alternate" type="application/atom+xml" href="'.$baseUrl.'/index.php/'.$currentJournal->getPath().'/feed/atom">';
 				$feedUrl2 = '<link rel="alternate" type="application/rdf+xml" href="'.$baseUrl.'/index.php/'.$currentJournal->getPath().'/feed/rss">';
+
+				$imageLinks = $this->getTemplatePath().'templates/links.tpl';
 	
 				$templateManager->assign('additionalHeadData', $additionalHeadData."\n".$feedUrl1."\n".$feedUrl2);
+				
+				// if no explicit sidebar template is specified,
+				// include the web feed links on the sidebar
+				if ($sidebarTemplate == "") {
+					$templateManager->assign('sidebarTemplate', $imageLinks);
+				}
+
 			}
 		
 		}
