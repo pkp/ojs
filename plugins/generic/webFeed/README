@@ -1,0 +1,40 @@
+================================
+=== OJS Web Feeds Plugin
+=== Version: 1.1
+=== Release date: May 30, 2006
+=== Author: Alf Eaton <alf@hubmed.org>
+=== Contribution: Juan Alperin <juan@geeky.net>
+================================
+
+About
+-----
+This plugin for OJS 2 provides a set of syndication feeds for the current issue in RSS1.0/RDF and Atom formats.  Feed links are embedded into the HTML header for the current issue and are available to all RSS/Atom-aware browsers and aggregators as per standard web specifications.
+
+License
+-------
+This plugin is licensed under the GNU General Public License v2. See the file COPYING for the complete terms of this license.
+
+System Requirements
+-------------------
+Same requirements as the OJS 2.1.x core.
+
+Installation
+------------
+To install the plugin:
+ - copy the webFeed folder into OJS/plugins/generic
+ - enable the plugin by going to:  Home > User > Journal Management > Plugin Management  and selecting "ENABLE" under "Feed Plugin"
+
+
+Known Issues/Limitations
+---------
+- the plugin does not currently support the RSS2.0 feed format.
+
+Localization
+------------
+Currently in en_US (U.S. English) and es_ES (Espaol Espaa) locales
+
+Contact/Support
+---------------
+Please email the author for support, bugfixes, or comments.
+
+Email: <alf@hubmed.org> AND/OR <juan@geeky.net>

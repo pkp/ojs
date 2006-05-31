@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_ES (Español España) locale.
+  *
+  * Traducción de la version original 1.0 por Juan Pablo Alperin (juan@geeky.net) 2006/05/30
+  -->
+ 
+<locale name="es_ES" full_name="Español (España)">
+	<message key="plugins.generic.webfeed.displayName">Plugin Feed</message>
+	<message key="plugins.generic.webfeed.description">Este plugin produce feeds RSS/Atom para Número en curso.</message>	
+</locale>
