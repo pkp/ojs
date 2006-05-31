@@ -1908,9 +1908,10 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 		$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+		$sectionDao =& DAORegistry::getDAO('SectionDAO');
+		$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($articleId);
 		if ($issueId) {
 			// Schedule against an issue.
-			$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($articleId);
 			if ($publishedArticle) {
 				$publishedArticle->setIssueId($issueId);
 				$publishedArticleDao->updatePublishedArticle($publishedArticle);
@@ -1919,16 +1920,35 @@ class SubmissionEditHandler extends SectionEditorHandler {
 				$publishedArticle->setArticleId($submission->getArticleId());
 				$publishedArticle->setIssueId($issueId);
 				$publishedArticle->setDatePublished(Core::getCurrentDate());
-				$publishedArticle->setSeq(0);
+				$publishedArticle->setSeq(100000); // KLUDGE: End of list
 				$publishedArticle->setViews(0);
 				$publishedArticle->setAccessStatus(0);
 
 				$publishedArticleDao->insertPublishedArticle($publishedArticle);
+
+				// Resequence the articles.
+				$publishedArticleDao->resequencePublishedArticles($submission->getSectionId(), $issueId);
+
+				// If we're using custom section ordering, and if this is the first
+				// article published in a section, make sure we enter a custom ordering
+				// for it. (Default at the end of the list.)
+				if ($sectionDao->customSectionOrderingExists($issueId)) {
+					if ($sectionDao->getCustomSectionOrder($issueId, $submission->getSectionId()) === null) {
+						$sectionDao->insertCustomSectionOrder($issueId, $submission->getSectionId(), 10000); // KLUDGE: End of list
+						$sectionDao->resequenceCustomSectionOrders($issueId);
+					}
+				}
 			}
 		} else {
+			if ($publishedArticle) {
+				// This was published elsewhere; make sure we don't
+				// mess up sequencing information.
+				$publishedArticleDao->resequencePublishedArticles($submission->getSectionId(), $publishedArticle->getIssueId());
+				$publishedArticleDao->deletePublishedArticleByArticleId($articleId);
+			}
+
 			// Remove from scheduling.
 			$submission->setStatus(STATUS_QUEUED);
-			$publishedArticleDao->deletePublishedArticleByArticleId($articleId);
 		}
 		$submission->stampStatusModified();
 		$sectionEditorSubmissionDao->updateSectionEditorSubmission($submission);

@@ -93,7 +93,7 @@ class IssueManagementHandler extends EditorHandler {
 	/**
 	 * Displays the create issue form
 	 */
-	function createIssue($articles = array()) {
+	function createIssue() {
 		IssueManagementHandler::validate();
 		IssueManagementHandler::setupTemplate(EDITOR_SECTION_ISSUES);
 
@@ -103,7 +103,6 @@ class IssueManagementHandler extends EditorHandler {
 		import('issue.IssueAction');
 		$templateMgr->assign('issueOptions', IssueAction::getIssueOptions());
 		$templateMgr->assign('helpTopicId', 'publishing.createIssue');
-		$templateMgr->assign('articles', join(':', $articles));
 
 		$issueForm = &new IssueForm('editor/issues/createIssue.tpl');
 		$issueForm->initData();
@@ -122,37 +121,7 @@ class IssueManagementHandler extends EditorHandler {
 		$issueForm->readInputData();
 
 		if ($issueForm->validate()) {
-			$issueId = $issueForm->execute();
-			$articles = $issueForm->getData('articles');
-
-			if (isset($articles) && !empty($articles)) {
-				$journal = &Request::getJournal();
-				$articles = explode(':', $articles);
-				$articleDao = &DAORegistry::getDAO('ArticleDAO');
-				$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
-
-				foreach ($articles as $articleId) {
-					$article = $articleDao->getArticle($articleId);
-					
-					if (isset($article) && $journal->getJournalId() == $article->getJournalId()) {
-						$article->setStatus(STATUS_PUBLISHED);
-						$article->stampStatusModified();
-						$articleDao->updateArticle($article);
-	
-						$publishedArticle = &new PublishedArticle();
-						$publishedArticle->setArticleId($article->getArticleId());
-						$publishedArticle->setIssueId($issueId);
-						$publishedArticle->setDatePublished(Core::getCurrentDate());
-						$publishedArticle->setSeq(0);
-						$publishedArticle->setViews(0);
-						$publishedArticle->setAccessStatus(0);
-	
-						$publishedArticleDao->insertPublishedArticle($publishedArticle);
-						$publishedArticleDao->resequencePublishedArticles($article->getSectionId(),$issueId);
-					}
-				}
-			}
-
+			$issueForm->execute();
 			EditorHandler::backIssues();
 		} else {
 			$templateMgr = &TemplateManager::getManager();
@@ -280,7 +249,7 @@ class IssueManagementHandler extends EditorHandler {
 		$templateMgr->assign('enableSubscriptions', $enableSubscriptions);
 		$enablePageNumber = $journalSettingsDao->getSetting($journalId, 'enablePageNumber');
 		$templateMgr->assign('enablePageNumber', $enablePageNumber);
-		$templateMgr->assign('customSectionOrderingExists', $sectionDao->customSectionOrderingExists($issueId));
+		$templateMgr->assign('customSectionOrderingExists', $customSectionOrderingExists = $sectionDao->customSectionOrderingExists($issueId));
 		
 		$templateMgr->assign('issueId', $issueId);
 		$templateMgr->assign_by_ref('issue', $issue);
@@ -298,12 +267,14 @@ class IssueManagementHandler extends EditorHandler {
 		$currSection = 0;
 		$counter = 0;
 		$sections = array();
+		$sectionCount = 0;
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
 		foreach ($publishedArticles as $article) {
 			$sectionId = $article->getSectionId();
 			if ($currSection != $sectionId) {
 				$lastSectionId = $currSection;
-				if ($lastSectionId !== 0) $sections[$lastSectionId][5] = $sectionDao->getCustomSectionOrder($issueId, $sectionId); // Store next custom order
+				$sectionCount++;
+				if ($lastSectionId !== 0) $sections[$lastSectionId][5] = $customSectionOrderingExists?$sectionDao->getCustomSectionOrder($issueId, $sectionId):$sectionCount; // Store next custom order
 				$currSection = $sectionId;
 				$counter++;
 				$sections[$sectionId] = array(
@@ -311,7 +282,9 @@ class IssueManagementHandler extends EditorHandler {
 					$article->getSectionTitle(),
 					array($article),
 					$counter,
-					$sectionDao->getCustomSectionOrder($issueId, $lastSectionId), // Last section custom ordering
+					$customSectionOrderingExists?
+						$sectionDao->getCustomSectionOrder($issueId, $lastSectionId): // Last section custom ordering
+						($sectionCount-1),
 					null // Later populated with next section ordering
 				);
 			} else {
@@ -371,6 +344,7 @@ class IssueManagementHandler extends EditorHandler {
 				$article->setStatus(STATUS_QUEUED);
 				$article->stampStatusModified();
 				$publishedArticleDao->deletePublishedArticleById($pubId);
+				$publishedArticleDao->resequencePublishedArticles($article->getSectionId(), $issueId);
 			}
 			$articleDao->updateArticle($article);
 		}

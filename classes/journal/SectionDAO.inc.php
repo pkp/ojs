@@ -443,11 +443,7 @@ class SectionDAO extends DAO {
 			list($sectionId) = $result->fields;
 			$this->update(
 				'UPDATE custom_section_orders SET seq = ? WHERE section_id = ? AND issue_id = ?',
-				array(
-					$i,
-					$sectionId,
-					$issueId
-				)
+				array($i, $sectionId, $issueId)
 			);
 			
 			$result->moveNext();
@@ -510,7 +506,7 @@ class SectionDAO extends DAO {
 		
 		for ($i=1; !$result->EOF; $i++) {
 			list($sectionId) = $result->fields;
-			$this->_insertCustomSectionOrder($issueId, $sectionId, $i);
+			$this->insertCustomSectionOrder($issueId, $sectionId, $i);
 			$result->moveNext();
 		}
 		
@@ -524,7 +520,7 @@ class SectionDAO extends DAO {
 	 * @param $sectionId int
 	 * @param $seq int
 	 */
-	function _insertCustomSectionOrder($issueId, $sectionId, $seq) {
+	function insertCustomSectionOrder($issueId, $sectionId, $seq) {
 		$this->update(
 			'INSERT INTO custom_section_orders (section_id, issue_id, seq) VALUES (?, ?, ?)',
 			array(

@@ -70,11 +70,13 @@
 		<td colspan="{$numCols}" class="headseparator">&nbsp;</td>
 	</tr>
 
+	{assign var="articleSeq" value=0}
 	{foreach from=$section[2] item=article name="currSection"}
 
+	{assign var="articleSeq" value=$articleSeq+1}
 	{assign var="articleId" value=$article->getArticleID()}
 	<tr>
-		<td>{$article->getSeq()}.</td>
+		<td>{$articleSeq}.</td>
 		<td><a href="{url op="moveArticleToc" path=$issueId d=u sectionId=$section[0] pubId=$article->getPubId()}" class="plain">&uarr;</a>&nbsp;<a href="{url op="moveArticleToc" path=$issueId d=d sectionId=$section[0] pubId=$article->getPubId()}" class="plain">&darr;</a></td>
 		<td>
 			{foreach from=$article->getAuthors() item=author name=authorList}
