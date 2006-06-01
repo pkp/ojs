@@ -137,8 +137,8 @@ class ResolverPlugin extends GatewayPlugin {
 			unset($issues);
 
 			echo $this->sanitize($journal->getTitle()) . "\t";
-			echo $this->sanitize($journal->getSetting('issn')) . "\t";
-			echo $this->sanitize($journal->getSetting('eissn')) . "\t";
+			echo $this->sanitize($journal->getSetting('printIssn')) . "\t";
+			echo $this->sanitize($journal->getSetting('onlineIssn')) . "\t";
 			echo $this->sanitize($startDate===null?'':strftime('%Y-%m-%d', $startDate)) . "\t"; // start_date
 			echo $this->sanitize($endDate===null?'':strftime('%Y-%m-%d', $endDate)) . "\t"; // end_date
 			echo $this->sanitize('') . "\t"; // embargo_months

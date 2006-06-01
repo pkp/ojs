@@ -345,7 +345,7 @@ class ImportOJS1 {
 		// NOTE: Commented out settings do not have an equivalent in OJS 1.x
 		$journalSettings = array(
 			'journalInitials' => array('string', $this->trans($this->journalInfo['chAbbrev'])),
-			'issn' => array('string', $this->trans($this->journalInfo['chISSN'])),
+			'onlineIssn' => array('string', $this->trans($this->journalInfo['chISSN'])),
 			'mailingAddress' => array('string', $this->trans($this->journalInfo['chMailAddr'])),
 			'useEditorialBoard' => array('bool', $this->journalInfo['bRevBoard']),
 			'contactName' => array('string', $this->trans($this->journalInfo['chContactName'])),

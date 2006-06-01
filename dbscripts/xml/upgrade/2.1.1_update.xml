@@ -138,4 +138,10 @@ Thank you for agreeing to review the manuscript "{$articleTitle}" for {$journalN
 			UPDATE articles SET status = 1 WHERE status = 2
 		</query>
 	</sql>
+	<!-- Bug #2197: Add a distinction between print and online ISSNs. The existing ISSN is assumed to be online. -->
+	<sql>
+		<query>
+			UPDATE journal_settings SET setting_name = 'onlineIssn' WHERE journal_setting = 'issn'
+		</query>
+	</sql>
 </data>

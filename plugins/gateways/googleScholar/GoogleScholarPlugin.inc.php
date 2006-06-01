@@ -189,12 +189,12 @@ class GoogleScholarPlugin extends GatewayPlugin {
 			XMLCustomWriter::createChildWithText($document, $journalMetaNode, 'journal-title', $journal->getTitle(), true);
 			XMLCustomWriter::createChildWithText($document, $journalMetaNode, 'abbrev-journal-title', $journal->getSetting('journalInitials'), false);
 
-			$issn = $journal->getSetting('issn');
+			$issn = $journal->getSetting('onlineIssn');
 			if (empty($issn)) {
 				array_push($errors, Locale::translate('plugins.gateways.googleScholar.errors.noIssn'));
 				return $falseVar;
 			}
-			XMLCustomWriter::createChildWithText($document, $journalMetaNode, 'issn', $journal->getSetting('issn'), false);
+			XMLCustomWriter::createChildWithText($document, $journalMetaNode, 'issn', $issn, false);
 
 			$publisherNode =& XMLCustomWriter::createElement($document, 'publisher');
 			$publisherName = $this->getSetting($journalId, 'publisher-name');

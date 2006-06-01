@@ -59,7 +59,7 @@ class PubMedExportDom {
 		$publisherNode = XMLCustomWriter::createChildWithText($doc, $journalNode, 'PublisherName', $publisherArray['institution']);
 
 		XMLCustomWriter::createChildWithText($doc, $journalNode, 'JournalTitle', $journal->getTitle());
-		XMLCustomWriter::createChildWithText($doc, $journalNode, 'Issn', $journal->getSetting('issn'));
+		XMLCustomWriter::createChildWithText($doc, $journalNode, 'Issn', $journal->getSetting('printIssn'));
 		XMLCustomWriter::createChildWithText($doc, $journalNode, 'Volume', $issue->getVolume());
 		XMLCustomWriter::createChildWithText($doc, $journalNode, 'Issue', $issue->getNumber(), false);
 

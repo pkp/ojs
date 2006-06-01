@@ -22,7 +22,8 @@ class JournalSetupStep1Form extends JournalSetupForm {
 			1,
 			array(
 				'journalInitials' => 'string',
-				'issn' => 'string',
+				'printIssn' => 'string',
+				'onlineIssn' => 'string',
 				'mailingAddress' => 'string',
 				'useEditorialBoard' => 'bool',
 				'contactName' => 'string',

@@ -106,8 +106,8 @@ class CounterPlugin extends GenericPlugin {
 				$logEntry->setSite($site->getTitle());
 				$logEntry->setJournal($journal->getTitle());
 				$logEntry->setJournalUrl(Request::url(null, 'index'));
-				$logEntry->setPrintIssn($journal->getSetting('issn'));
-				$logEntry->setOnlineIssn($journal->getSetting('issn'));
+				$logEntry->setPrintIssn($journal->getSetting('printIssn'));
+				$logEntry->setOnlineIssn($journal->getSetting('onlineIssn'));
 				$publisher = $journal->getSetting('publisher');
 				if (is_array($publisher) && isset($publisher['institution'])) $publisher = $publisher['institution'];
 				$logEntry->setPublisher($publisher);

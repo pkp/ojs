@@ -49,11 +49,14 @@ class EruditExportDom {
 		XMLCustomWriter::createChildWithText($doc, $journalNode, 'jtitle', $journal->getTitle());
 		XMLCustomWriter::createChildWithText($doc, $journalNode, 'jshorttitle', $journal->getSetting('journalInitials'), false);
 
-		if (!($issn = $journal->getSetting('issn'))) {
-			$issn = $unavailableString;
+		if (!($printIssn = $journal->getSetting('printIssn'))) {
+			$printIssn = $unavailableString;
 		}
-		XMLCustomWriter::createChildWithText($doc, $journalNode, 'idissn', $issn);
-		XMLCustomWriter::createChildWithText($doc, $journalNode, 'iddigissn', $unavailableString);
+		XMLCustomWriter::createChildWithText($doc, $journalNode, 'idissn', $printIssn);
+		if (!($onlineIssn = $journal->getSetting('onlineIssn'))) {
+			$onlineIssn = $unavailableString;
+		}
+		XMLCustomWriter::createChildWithText($doc, $journalNode, 'iddigissn', $onlineIssn);
 
 		/* --- issue --- */
 
