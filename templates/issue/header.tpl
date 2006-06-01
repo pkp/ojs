@@ -15,7 +15,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset={$defaultCharset}" />
-	<title>{$issueTitle}{if !$issue->getPublished()} {translate key="key="editor.issues.preview"}{/if}</title>
+	<title>{$issueTitle}{if $issue && !$issue->getPublished()} {translate key="key="editor.issues.preview"}{/if}</title>
 	<meta name="description" content="{$metaSearchDescription}" />
 	<meta name="keywords" content="{$metaSearchKeywords}" />
 	{$metaCustomHeaders}
@@ -86,9 +86,9 @@
 	<a href="{$currentUrl}" class="current">{$issueCrumbTitle}</a>
 </div>
 
-<h2>{$issueTitle}{if !$issue->getPublished()} {translate key="key="editor.issues.preview"}{/if}</h2>
+<h2>{$issueTitle}{if $issue && !$issue->getPublished()} {translate key="key="editor.issues.preview"}{/if}</h2>
 
-{if $issue->getTitle() && $issue->getLabelFormat() != ISSUE_LABEL_TITLE}
+{if $issue && $issue->getTitle() && $issue->getLabelFormat() != ISSUE_LABEL_TITLE}
 	{* If the primary issue ID isn't the title but a title is specified,
 	   display the title as a sub-heading. *}
 	<h3>{$issue->getTitle()}</h3>
