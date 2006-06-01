@@ -30,6 +30,7 @@ class FeedPlugin extends GenericPlugin {
 	}   
 
 	function register($category, $path) {
+		if (!Config::getVar('general', 'installed')) return false;
 		if (parent::register($category, $path)) {
 			HookRegistry::register('TemplateManager::display',array(&$this, 'callbackAddLinks'));
 			
