@@ -36,7 +36,11 @@ class ArticleHandler extends Handler {
 		if (!$journalRt->getEnabled()) {
 			if (!$galley || $galley->isHtmlGalley()) return ArticleHandler::viewArticle($args);
 			else if ($galley->isPdfGalley()) return ArticleHandler::viewPDFInterstitial($args, $galley);
-			else return ArticleHandler::viewDownloadInterstitial($args, $galley);
+			else if ($galley->isInlineable()) {
+				import('file.ArticleFileManager');
+				$articleFileManager = &new ArticleFileManager($article->getArticleId());
+				$articleFileManager->viewFile($galley->getFileId());
+			} else return ArticleHandler::viewDownloadInterstitial($args, $galley);
 		}
 
 		if (!$article) {
