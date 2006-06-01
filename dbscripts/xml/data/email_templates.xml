@@ -144,7 +144,6 @@
 			<field name="can_disable">1</field>
 			<field name="to_role_id">4096<!-- Reviewer --></field>
 			<field name="from_role_id">512<!-- Section Editor --></field>
-			<field name="description">This email is sent from the Section Editor to the Reviewer to acknowledge their acceptance of a review or encourage them to complete the review.</field>
 		</row>
 		<row>
 			<field name="email_key">REVIEW_DECLINE</field>

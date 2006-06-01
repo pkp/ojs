@@ -25,14 +25,15 @@
 
 <version>
 	<application>ojs2</application>
-	<release>2.1.0.1</release>
-	<tag>ojs-2_1_0-1</tag>
-	<date>2006-02-03</date>
+	<release>2.1.1.0</release>
+	<tag>ojs-2_1_1-0</tag>
+	<date>2006-06-01</date>
 	<info>http://pkp.sfu.ca/ojs/</info>
-	<package>http://pkp.sfu.ca/ojs/download/ojs-2.1.0-1.tar.gz</package>
-	<patch from="2.0.0.0">http://pkp.sfu.ca/ojs/download/patch/ojs-2.0_to_2.1.0-1.patch.gz</patch>
-	<patch from="2.0.1.0">http://pkp.sfu.ca/ojs/download/patch/ojs-2.0.1_to_2.1.0-1.patch.gz</patch>
-	<patch from="2.0.2.0">http://pkp.sfu.ca/ojs/download/patch/ojs-2.0.2_to_2.1.0-1.patch.gz</patch>
-	<patch from="2.0.2.1">http://pkp.sfu.ca/ojs/download/patch/ojs-2.0.2-1_to_2.1.0-1.patch.gz</patch>
-	<patch from="2.1.0.0">http://pkp.sfu.ca/ojs/download/patch/ojs-2.1_to_2.1.0-1.patch.gz</patch>
+	<package>http://pkp.sfu.ca/ojs/download/ojs-2.1.1-0.tar.gz</package>
+	<patch from="2.0.0.0">http://pkp.sfu.ca/ojs/download/patch/ojs-2.0_to_2.1.1.patch.gz</patch>
+	<patch from="2.0.1.0">http://pkp.sfu.ca/ojs/download/patch/ojs-2.0.1_to_2.1.1.patch.gz</patch>
+	<patch from="2.0.2.0">http://pkp.sfu.ca/ojs/download/patch/ojs-2.0.2_to_2.1.1.patch.gz</patch>
+	<patch from="2.0.2.1">http://pkp.sfu.ca/ojs/download/patch/ojs-2.0.2-1_to_2.1.1.patch.gz</patch>
+	<patch from="2.1.0.0">http://pkp.sfu.ca/ojs/download/patch/ojs-2.1_to_2.1.1.patch.gz</patch>
+	<patch from="2.1.0.1">http://pkp.sfu.ca/ojs/download/patch/ojs-2.1.0-1_to_2.1.1.patch.gz</patch>
 </version>
