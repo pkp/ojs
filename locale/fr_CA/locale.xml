@@ -526,11 +526,12 @@
 	<message key="submission.event.reviewer.reviewRecommendation">Fichier des recommandations après révision</message>
 	<message key="submission.event.reviewer.reviewerRated">Évaluation du réviseur</message>
 	<message key="submission.event.reviewer.reviewDueDate">Date d'échéance de la révision modifiée</message>
-	<message key="submission.event.reviewer.reviewResubmitted">Révision soumise Ã  nouveau</message>
+	<message key="submission.event.reviewer.reviewResubmitted">Révision soumisé à nouveau</message>
 	<message key="submission.event.reviewer.reviewFile">Fichier de révision mis à jour</message>
 	
 	<message key="submission.event.copyedit.copyeditorAssigned">Éditeur de copie assigné à la soumission</message>
-	<message key="submission.event.copyedit.copyeditorUnassigned">Éditeur de copie non-assigné à une soumission<message key="submission.event.copyedit.copyeditInitiated">Travail de correction de texte commencé</message>
+	<message key="submission.event.copyedit.copyeditorUnassigned">Éditeur de copie non-assigné à une soumission</message>
+	<message key="submission.event.copyedit.copyeditInitiated">Travail de correction de texte commencé</message>
 	<message key="submission.event.copyedit.copyeditRevision">Fichier des révisions du réviseur mis à jour</message>
 	<message key="submission.event.copyedit.copyeditInitialCompleted">Correction de texte initiale terminée</message>
 	<message key="submission.event.copyedit.copyeditFinalCompleted">Correction de texte finale terminée</message>
@@ -2037,7 +2038,7 @@ On peut visualiser le fichier en cliquant sur le nom du fichier. Un fichier nouv
 	<message key="about.journalContact">Contact du journal</message>
 	<message key="about.aboutTheJournal">Au sujet du journal</message>
 	<message key="about.editorialTeam">Comité éditorial</message>
-	<message key="about.editorialTeam.biography">Biographie/message>
+	<message key="about.editorialTeam.biography">Biographie</message>
 	<message key="about.editorialPolicies">Politiques éditoriales</message>
 	<message key="about.focusAndScope">Politique éditoriale</message>
 	<message key="about.sectionPolicies">Rubriques</message>

@@ -14,7 +14,7 @@
 <!DOCTYPE journal_settings [
 	<!ELEMENT journal_settings (setting+)>
 	<!ELEMENT setting (name, value)>
-	<!ATTLIST setting type (int|string|object) #REQUIRED>
+	<!ATTLIST setting type (int|string|object|bool) #REQUIRED>
 	<!ELEMENT name (#PCDATA)>
 	<!ELEMENT value (#PCDATA | array)*>
 	<!ELEMENT element (#PCDATA | array)*>
