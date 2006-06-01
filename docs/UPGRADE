@@ -39,7 +39,7 @@ Obtaining the latest OJS code
 
 The OJS source code is available in three forms: as patches against older
 releases of OJS, from an anonymous CVS repository, and as a complete
-standalone package.
+stand-alone package.
 
 Patching or updating from CVS is the recommended approach if you have made local
 modifications to the system.
