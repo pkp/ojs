@@ -104,6 +104,77 @@ class ResolverPlugin extends GatewayPlugin {
 		$templateMgr->display('common/message.tpl');
 		exit;
 	}
+
+	function sanitize($string) {
+		return str_replace("\t", " ", strip_tags($string));
+	}
+
+	function exportHoldings() {
+		$journalDao =& DAORegistry::getDAO('JournalDAO');
+		$issueDao =& DAORegistry::getDAO('IssueDAO');
+		$journals =& $journalDao->getEnabledJournals();
+		header('content-type: text/plain');
+		header('content-disposition: attachment; filename=holdings.txt');
+		echo "title\tissn\te_issn\tstart_date\tend_date\tembargo_months\tembargo_days\tjournal_url\tvol_start\tvol_end\tiss_start\tiss_end\n";
+		while ($journal =& $journals->next()) {
+			$issues =& $issueDao->getPublishedIssues($journal->getJournalId());
+			$startDate = $endDate = null;
+			$startNumber = $endNumber = null;
+			$startVolume = $endVolume = null;
+			while ($issue =& $issues->next()) {
+				$datePublished = $issue->getDatePublished();
+				if ($datePublished !== null) $datePublished = strtotime($datePublished);
+				if ($startDate === null || $startDate > $datePublished) $startDate = $datePublished;
+				if ($endDate === null || $endDate < $datePublished) $endDate = $datePublished;
+				$volume = $issue->getVolume();
+				if ($startVolume === null || $startVolume > $volume) $startVolume = $volume;
+				if ($endVolume === null || $endVolume < $volume) $endVolume = $volume;
+				$number = $issue->getNumber();
+				if ($startNumber === null || $startNumber > $number) $startNumber = $number;
+				if ($endNumber === null || $endNumber < $number) $endNumber = $number;
+				unset($issue);
+			}
+			unset($issues);
+
+			echo $this->sanitize($journal->getTitle()) . "\t";
+			echo $this->sanitize($journal->getSetting('issn')) . "\t";
+			echo $this->sanitize($journal->getSetting('eissn')) . "\t";
+			echo $this->sanitize($startDate===null?'':strftime('%Y-%m-%d', $startDate)) . "\t"; // start_date
+			echo $this->sanitize($endDate===null?'':strftime('%Y-%m-%d', $endDate)) . "\t"; // end_date
+			echo $this->sanitize('') . "\t"; // embargo_months
+			echo $this->sanitize('') . "\t"; // embargo_days
+			echo Request::url($journal->getPath()) . "\t"; // journal_url
+			echo $this->sanitize($startVolume) . "\t"; // vol_start
+			echo $this->sanitize($endVolume) . "\t"; // vol_end
+			echo $this->sanitize($startNumber) . "\t"; // iss_start
+			echo $this->sanitize($endNumber) . "\n"; // iss_end
+
+			unset($journal);
+		}
+	}
+
+	function getManagementVerbs() {
+		$verbs = parent::getManagementVerbs();
+		if (Validation::isSiteAdmin() && $this->getEnabled()) {
+			$verbs[] = array(
+				'exportHoldings',
+				Locale::translate('plugins.gateways.resolver.exportHoldings')
+			);
+		}
+		return $verbs;
+	}
+
+	function manage($verb, $args) {
+		switch ($verb) {
+			case 'exportHoldings':
+				if (Validation::isSiteAdmin() && $this->getEnabled()) {
+					$this->exportHoldings();
+					return true;
+				}
+				break;
+		}
+		return parent::manage($verb, $args);
+	}
 }
 
 ?>

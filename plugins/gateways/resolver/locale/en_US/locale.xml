@@ -16,4 +16,5 @@
 	<message key="plugins.gateways.resolver.displayName">Resolver Plugin</message>
 	<message key="plugins.gateways.resolver.description">This plugin resolves issues and articles based on citation information.</message>
 	<message key="plugins.gateways.resolver.errors.errorMessage">Unable to resolve a single entity using the specified citation information. Please ensure that the citation information is comprehensive and refers to an entity in this deployment of OJS.</message>
+	<message key="plugins.gateways.resolver.exportHoldings">Export Holdings</message>
 </locale>

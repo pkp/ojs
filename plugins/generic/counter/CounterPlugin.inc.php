@@ -72,10 +72,10 @@ class CounterPlugin extends GenericPlugin {
 	}
 
 	/**
-	 Log the request.
-	 This follows a convoluted execution path in order to obtain the
-	 page title *after* the template has been displayed, even though
-	 the hook is called before execution.
+	 * Log the request.
+	 * This follows a convoluted execution path in order to obtain the
+	 * page title *after* the template has been displayed, even though
+	 * the hook is called before execution.
 	 */
 	function logRequest($hookName, $args) {
 		$templateManager =& $args[0];
