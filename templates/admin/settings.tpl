@@ -12,7 +12,7 @@
 {assign var="pageTitle" value="admin.siteSettings"}
 {include file="common/header.tpl"}
 
-<form method="post" action="{url op="saveSettings"}">
+<form name="settings" method="post" action="{url op="saveSettings"}">
 {include file="common/formErrors.tpl"}
 
 <table class="data" width="100%">

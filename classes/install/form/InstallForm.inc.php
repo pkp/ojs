@@ -179,8 +179,6 @@ class InstallForm extends Form {
 		$templateMgr = &TemplateManager::getManager();
 		$installer = &new Install($this->_data);
 		
-		// FIXME Use logger?
-		
 		if ($installer->execute()) {
 			if ($this->getData('manualInstall')) {
 				// Display SQL statements that would have been executed during installation
@@ -232,6 +230,7 @@ class InstallForm extends Form {
 	function installError($errorMsg) {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign(array('isInstallError' => true, 'errorMsg' => $errorMsg));
+		error_log($errorMsg);
 		$this->display();
 	}
 	
@@ -241,7 +240,9 @@ class InstallForm extends Form {
 	 */
 	function dbInstallError($errorMsg) {
 		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign(array('isInstallError' => true, 'dbErrorMsg' => empty($errorMsg) ? Locale::translate('common.error.databaseErrorUnknown') : $errorMsg));
+		if (empty($errorMsg)) $errorMsg = Locale::translate('common.error.databaseErrorUnknown');
+		$templateMgr->assign(array('isInstallError' => true, 'dbErrorMsg' => $errorMsg));
+		error_log($errorMsg);
 		$this->display();
 	}
 	

@@ -14,7 +14,7 @@
 
 <br />
 
-<form method="post" action="{url op="updateJournal"}">
+<form name="journal" method="post" action="{url op="updateJournal"}">
 {if $journalId}
 <input type="hidden" name="journalId" value="{$journalId}" />
 {/if}

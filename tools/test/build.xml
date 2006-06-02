@@ -23,6 +23,8 @@
 	<target name="test" depends="compile">
 		<junit fork="yes" haltonfailure="yes" printsummary="yes" >
 			<jvmarg value="-Dojs.baseurl=${ojs.baseurl}"/>
+			<jvmarg value="-Dojs.filesdir=${ojs.filesdir}"/>
+			<jvmarg value="-Dojs.databasedriver=${ojs.databasedriver}"/>
 			<formatter type="plain" usefile="false"/>
 			<classpath>
 				<path refid="junit.classpath"/>

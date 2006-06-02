@@ -44,7 +44,7 @@
 	</tr>
 	<tr>
 		<td colspan="4" class="endseparator">&nbsp;</td>
-	<tr>
+	</tr>
 	{else}
 		<tr>
 			<td colspan="2" align="left">{page_info iterator=$journals}</td>

@@ -26,7 +26,7 @@
 <div class="separator"></div>
 
 
-<form method="post" action="{url op="install"}">
+<form method="post" name="install" action="{url op="install"}">
 {include file="common/formErrors.tpl"}
 
 {if $isInstallError}

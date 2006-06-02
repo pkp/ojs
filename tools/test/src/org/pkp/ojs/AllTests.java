@@ -10,6 +10,8 @@ public class AllTests extends TestSuite {
 	public static Test suite() {
 		TestSuite suite = new TestSuite();
 		suite.addTestSuite(BaseUrlExists.class);
+		// suite.addTestSuite(DoInstall.class);
+		suite.addTestSuite(FreshInstallTests.class);
 		return suite;
 	}
 
