@@ -161,8 +161,8 @@ class AuthorAction extends Action {
 			if (!Request::getUserVar('continued')) {
 				if (isset($copyeditor)) {
 					$email->addRecipient($copyeditor->getEmail(), $copyeditor->getFullName());
-					$assignedSectionEditors = $email->ccAssignedEditingSectionEditors($copyeditorSubmission->getArticleId());
-					$assignedEditors = $email->ccAssignedEditors($copyeditorSubmission->getArticleId());
+					$assignedSectionEditors = $email->ccAssignedEditingSectionEditors($authorSubmission->getArticleId());
+					$assignedEditors = $email->ccAssignedEditors($authorSubmission->getArticleId());
 					if (empty($assignedSectionEditors) && empty($assignedEditors)) {
 						$email->addCc($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
 						$editorName = $journal->getSetting('contactName');
@@ -172,8 +172,8 @@ class AuthorAction extends Action {
 						$editorName = $editor->getEditorFullName();
 					}
 				} else {
-					$assignedSectionEditors = $email->toAssignedEditingSectionEditors($copyeditorSubmission->getArticleId());
-					$assignedEditors = $email->ccAssignedEditors($copyeditorSubmission->getArticleId());
+					$assignedSectionEditors = $email->toAssignedEditingSectionEditors($authorSubmission->getArticleId());
+					$assignedEditors = $email->ccAssignedEditors($authorSubmission->getArticleId());
 					if (empty($assignedSectionEditors) && empty($assignedEditors)) {
 						$email->addRecipient($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
 						$editorName = $journal->getSetting('contactName');
