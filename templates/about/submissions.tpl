@@ -40,6 +40,7 @@
 {/if}
 
 <a name="submissionPreparationChecklist"></a><h3>{translate key="about.submissionPreparationChecklist"}</h3>
+<p>{translate key="about.submissionPreparationChecklist.description"}</p>
 <ol>
 	{foreach from=$journalSettings.submissionChecklist item=checklistItem}
 		<li>{$checklistItem.content|nl2br}</li>	
