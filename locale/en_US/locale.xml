@@ -1209,7 +1209,7 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.people.enrollment">Enrollment</message>
 	<message key="manager.people.unenroll">Unenroll</message>
 	<message key="manager.people.confirmUnenroll">Unenroll this user?</message>
-	<message key="manager.people.mergeUsers.from.description">Select a user to merge into another account. The account you select here will be deleted and any submissions, editing assignments, etc. will be attributed to another account.</message>
+	<message key="manager.people.mergeUsers.from.description">Select a user to merge into another user account (e.g., when someone has two user accounts). The account selected first will be deleted and its submissions, assignments, etc. will be attributed to the second account.</message>
 	<message key="manager.people.mergeUsers.into.description">Select a user to whom to attribute the previous user's authorships, editing assignments, etc.</message>
 	<message key="manager.people.mergeUsers.confirm">Are you sure you wish to merge the account with the username "{$oldUsername}" into the account with the username "{$newUsername}"? The account with the username "{$oldUsername}" will not exist afterwards. This action is not reversible.</message>
 	<message key="manager.people.confirmRemove">Remove this user from this journal? This action will unenroll the user from all roles within this journal.</message>
