@@ -97,6 +97,8 @@
 		{/foreach}
 	{/if}
 </table>
+<p>{translate key="manager.statistics.statistics.note"}</p>
+
 {translate key="manager.statistics.statistics.makePublic"}<br/>
 <input type="submit" class="button defaultButton" value="{translate key="common.record"}"/>
 </form>
