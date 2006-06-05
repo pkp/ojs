@@ -1566,7 +1566,7 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	<message key="editor.article.cannotRecord">Before a decision can be recorded, a submission must be assigned to a Section Editor. The Review Version becomes, by default, the Editor Version.</message>
 	<message key="editor.article.reviewersSeeAuthorsVersion">Reviewers to see author version</message>
 	<message key="editor.article.designateDueDate">Designate a Due Date</message>
-	<message key="editor.article.designateDueDateDescription">To change the due date for this Reviewer, enter another date or delete the date and enter the number of weeks until the review is due.</message>
+	<message key="editor.article.designateDueDateDescription">Enter the date or number of weeks for the new due date.</message>
 	<message key="editor.article.todaysDate">Today's Date</message>
 	<message key="editor.article.requestedByDate">Requested By Date</message>
 	<message key="editor.article.dueDateFormat">Format: YYYY-MM-DD</message>
