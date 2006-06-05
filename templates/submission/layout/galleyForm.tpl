@@ -63,7 +63,7 @@
 
 <h3>{translate key="submission.layout.galleyHTMLData"}</h3>
 
-<p><strong>{translate key="submission.layout.galleyStylesheet"}</strong></p>
+<h4>{translate key="submission.layout.galleyStylesheet"}</h4>
 
 {assign var=styleFile value=$galley->getStyleFile()}
 
@@ -106,7 +106,7 @@
 
 <br />
 
-<p><strong>{translate key="submission.layout.galleyImages"}</strong></p>
+<h4>{translate key="submission.layout.galleyImages"}</h4>
 
 <table width="100%" class="listing">
 <tr><td colspan="6" class="headseparator">&nbsp;</td></tr>
