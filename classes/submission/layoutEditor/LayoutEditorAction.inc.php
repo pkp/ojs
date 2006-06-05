@@ -149,8 +149,8 @@ class LayoutEditorAction extends Action {
 		} else {
 			$user = &Request::getUser();
 			if (!Request::getUserVar('continued')) {
-				$assignedSectionEditors = $email->toAssignedEditingSectionEditors($copyeditorSubmission->getArticleId());
-				$assignedEditors = $email->ccAssignedEditors($copyeditorSubmission->getArticleId());
+				$assignedSectionEditors = $email->toAssignedEditingSectionEditors($submission->getArticleId());
+				$assignedEditors = $email->ccAssignedEditors($submission->getArticleId());
 				if (empty($assignedSectionEditors) && empty($assignedEditors)) {
 					$email->addRecipient($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
 					$editorialContactName = $journal->getSetting('contactName');
