@@ -17,8 +17,21 @@
 <tr valign="top">
 	<td width="75%">{$article->getArticleTitle()|strip_unsafe_html}</td>
 	<td align="right" width="25%">
-		<a href="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)}" class="file">{if $section.abstractsDisabled}{translate key="article.details"}{else}{translate key="article.abstract"}{/if}</a>
+		{if $section.abstractsDisabled || $article->getAbstract() == ""}
+			{assign var=abstractLabel value="article.details"}
+		{else}
+			{assign var=abstractLabel value="article.abstract"}
+		{/if}
+
 		{if (!$subscriptionRequired || $article->getAccessStatus() || $subscribedUser || $subscribedDomain)}
+			{assign var=hasAccess value=1}
+		{else}
+			{assign var=hasAccess value=0}
+		{/if}
+
+		{if !$hasAccess || $article->getAbstract() != ""}<a href="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)}" class="file">{translate key=$abstractLabel}</a>{/if}
+
+		{if $hasAccess}
 		{foreach from=$article->getGalleys() item=galley name=galleyList}
 			<a href="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)|to_array:$galley->getGalleyId()}" class="file">{$galley->getLabel()|escape}</a>
 		{/foreach}
