@@ -117,7 +117,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$lastDecision = count($editorDecisions) >= 1 ? $editorDecisions[count($editorDecisions) - 1]['decision'] : null;				
 
 		$editAssignments =& $submission->getEditAssignments();
-		$allowRecommendation = $submission->getCurrentRound() == $round && $submission->getReviewFileId() != null && $submission->getCopyeditFileId() == null && !empty($editAssignments);
+		$allowRecommendation = $submission->getCurrentRound() == $round && $submission->getReviewFileId() != null && !empty($editAssignments);
 		$allowResubmit = $lastDecision == SUBMISSION_EDITOR_DECISION_RESUBMIT && $sectionEditorSubmissionDao->getMaxReviewRound($articleId) == $round ? true : false;
 		$allowCopyedit = $lastDecision == SUBMISSION_EDITOR_DECISION_ACCEPT && $submission->getCopyeditFileId() == null ? true : false;
 		
