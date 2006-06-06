@@ -1939,6 +1939,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 					}
 				}
 			}
+			$submission->setStatus(STATUS_PUBLISHED);
 		} else {
 			if ($publishedArticle) {
 				// This was published elsewhere; make sure we don't
