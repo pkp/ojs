@@ -1205,7 +1205,7 @@ class SectionEditorAction extends Action {
 		
 		// Perform validity checks.
 		if ($copyeditStage == 'initial' && $sectionEditorSubmission->getCopyeditorDateCompleted() != null) return;
-		if ($copyeditStage == 'final' && ($sectionEditorSubmission->getCopyeditorDateAuthorCompleted() == null || $sectionEditorSubmission->getCopyeditorDateFinalCompleted() != null)) return;
+		if ($copyeditStage == 'final' && $sectionEditorSubmission->getCopyeditorDateAuthorCompleted() == null) return;
 		if ($copyeditStage == 'author' && ($sectionEditorSubmission->getCopyeditorDateCompleted() == null || $sectionEditorSubmission->getCopyeditorDateAuthorCompleted() != null)) return;
 
 		$fileName = 'upload';

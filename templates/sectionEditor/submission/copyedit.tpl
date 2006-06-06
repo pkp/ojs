@@ -205,7 +205,7 @@
 	</tr>
 </table>
 
-{if $submission->getCopyeditorDateAuthorCompleted() && !$submission->getCopyeditorDateFinalCompleted()}
+{if $submission->getCopyeditorDateAuthorCompleted()}
 {assign var="canUploadCopyedit" value="3"}
 {elseif $submission->getCopyeditorDateCompleted() && !$submission->getCopyeditorDateAuthorCompleted()}
 {assign var="canUploadCopyedit" value="2"}
