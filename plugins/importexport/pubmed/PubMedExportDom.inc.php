@@ -59,7 +59,14 @@ class PubMedExportDom {
 		$publisherNode = XMLCustomWriter::createChildWithText($doc, $journalNode, 'PublisherName', $publisherArray['institution']);
 
 		XMLCustomWriter::createChildWithText($doc, $journalNode, 'JournalTitle', $journal->getTitle());
-		XMLCustomWriter::createChildWithText($doc, $journalNode, 'Issn', $journal->getSetting('printIssn'));
+		
+		// check various ISSN fields to create the ISSN tag
+		if ($journal->getSetting('printIssn') != "") $ISSN = $journal->getSetting('printIssn');
+		elseif ($journal->getSetting('issn') != "") $ISSN = $journal->getSetting('issn');
+		elseif ($journal->getSetting('onlineIssn') != "") $ISSN = $journal->getSetting('onlineIssn');
+		
+		if ($ISSN != "") XMLCustomWriter::createChildWithText($doc, $journalNode, 'Issn', $ISSN);
+
 		XMLCustomWriter::createChildWithText($doc, $journalNode, 'Volume', $issue->getVolume());
 		XMLCustomWriter::createChildWithText($doc, $journalNode, 'Issue', $issue->getNumber(), false);
 
@@ -143,11 +150,15 @@ class PubMedExportDom {
 
 		// accepted for publication
 		$editordecisions = &$editorSubmissionDao->getEditorDecisions($article->getArticleId());
+
 		// if there are multiple decisions, make sure we get the accepted date
 		$editordecision = array_pop($editordecisions);
-		while ($editordecision['decision'] != SUBMISSION_EDITOR_DECISION_ACCEPT) $editordecision = array_pop($editordecisions);
-		$acceptedNode =& PubMedExportDom::generatePubDateDom($doc, $editordecision['dateDecided'], 'accepted');
-		XMLCustomWriter::appendChild($historyNode, $acceptedNode);
+		while ($editordecision['decision'] != SUBMISSION_EDITOR_DECISION_ACCEPT && count($editordecisions) > 0) $editordecision = array_pop($editordecisions);
+		
+		if ($editordecision != "") {
+			$acceptedNode =& PubMedExportDom::generatePubDateDom($doc, $editordecision['dateDecided'], 'accepted');
+			XMLCustomWriter::appendChild($historyNode, $acceptedNode);
+		}
 
 		// article revised by publisher or author
 		// check if there is a revised version; if so, generate a revised tag
