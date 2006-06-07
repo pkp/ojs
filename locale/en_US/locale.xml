@@ -882,7 +882,7 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="manager.setup.focusAndScopeOfJournal">Focus and Scope of Journal</message>
 	<message key="manager.setup.focusAndScopeDescription">Enter a statement below, which will appear in About the Journal, that speaks to authors, readers, and librarians about the range of articles and other items which the journal will publish.</message>
 	<message key="manager.setup.focusAndScope">Focus and scope</message>
-	<message key="manager.setup.htmlSetupInstructions"><![CDATA[If using HTML in Setup text boxes (for font size, bold, color, etc.), note that "returns" in the text are automatically treated as <tt>&lt;br&gt;</tt>.]]></message>
+	<message key="manager.setup.htmlSetupInstructions"><![CDATA[HTML can be used in textarea (for font size, color, etc.), with "returns" treated as <tt>&lt;br&gt;</tt>; HTML editor works with Firefox browsers.]]></message>
 	<message key="manager.setup.peerReviewPolicy">Peer Review</message>
 	<message key="manager.setup.peerReviewDescription">Outline the journal's peer review policy and processes for readers and authors, including the number of reviewers typically used in reviewing a submission, the criteria by which reviewers are asked to judge submissions, typical time taken to conduct the reviews, and the principles for recruiting reviewers. This will appear in About the Journal.</message>
 	<message key="manager.setup.reviewPolicy">Review Policy</message>
@@ -1281,7 +1281,7 @@ You may optionally provide the user with a reason for disabling their account.</
 	<!-- Subscription Policy Management -->
 	<message key="manager.subscriptionPolicies.subscriptionAdditionalInformation">Subscription Information</message>
 	<message key="manager.subscriptionPolicies.subscriptionAdditionalInformationDescription">The Subscription Types and fee structure will be automatically placed under Subscriptions on the About the Journal page, along with the name and contact information for the Subscription Manager. Additional information about subscriptions, such as methods of payment or support for subscribers in developing countries, can be added here.</message>
-	<message key="manager.subscriptionPolicies.htmlInstructions"><![CDATA[If using HTML in the text box (for font size, bold, color, etc.), note that "returns" in the text are automatically treated as <tt>&lt;br&gt;</tt>.]]></message>
+	<message key="manager.subscriptionPolicies.htmlInstructions"><![CDATA[HTML can be used in textarea (for font size, color, etc.), with "returns" treated as <tt>&lt;br&gt;</tt>; HTML editor works with Firefox browsers.]]></message>
 	<message key="manager.subscriptionPolicies.openAccessOptions">Open Access Options</message>
 	<message key="manager.subscriptionPolicies.openAccessOptionsDescription">Subscription journals can provide two forms of open access (free access) to their content, which will increase readership and citation of content. Note that even with delayed open access, Editors will still be able to designate specific articles within an issue for open access. The selected policies will appear in About the Journal.</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccess">Delayed Open Access</message>
