@@ -49,11 +49,11 @@
 		<td>{$logEntry->getAssocTypeString()}</td>
 		<td>
 			{assign var=emailString value="`$logEntry->getUserFullName()` <`$logEntry->getUserEmail()`>"}
-			{url|assign:"url" page="user" op="email" to=$emailString|to_array redirectUrl=$currentUrl subject=$logEntry->getEventTitle() articleId=$submission->getArticleId()}
+			{url|assign:"url" page="user" op="email" to=$emailString|to_array redirectUrl=$currentUrl subject=$logEntry->getEventTitle()|translate articleId=$submission->getArticleId()}
 			{$logEntry->getUserFullName()|escape} {icon name="mail" url=$url}
 		</td>
 		<td>
-			<strong>{translate key=$logEntry->getEventTitle()|escape}</strong>
+			<strong>{translate key=$logEntry->getEventTitle()}</strong>
 			<br />
 			{$logEntry->getMessage()|strip_unsafe_html|truncate:60:"..."|escape}
 		</td>

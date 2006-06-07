@@ -52,14 +52,14 @@
 		<td class="label">{translate key="common.user"}</td>
 		<td class="value">
 			{assign var=emailString value="`$logEntry->getUserFullName()` <`$logEntry->getUserEmail()`>"}
-			{url|assign:"url" page="user" op="email" to=$emailString|to_array redirectUrl=$currentUrl subject=$logEntry->getEventTitle() articleId=$submission->getArticleId()}
+			{url|assign:"url" page="user" op="email" to=$emailString|to_array redirectUrl=$currentUrl subject=$logEntry->getEventTitle()|translate articleId=$submission->getArticleId()}
 			{$logEntry->getUserFullName()|escape} {icon name="mail" url=$url}
 		</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="common.event"}</td>
 		<td class="value">
-			<strong>{translate key=$logEntry->getEventTitle()|escape}</strong>
+			<strong>{translate key=$logEntry->getEventTitle()}</strong>
 			<br /><br />
 			{$logEntry->getMessage()|strip_unsafe_html|nl2br}
 		</td>
