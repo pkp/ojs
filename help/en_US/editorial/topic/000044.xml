@@ -14,10 +14,10 @@
 
 <topic id="editorial/topic/000044" locale="en_US" title="Ensuring a Blind Peer Review" toc="editorial/toc/000001" key="editorial.sectionEditorsRole.review.blindPeerReview">
 	<section>
-		<![CDATA[<p>To ensure that the identities of the authors and reviewers are not known to each other, the following steps should be taken: 
-<ol><li>The authors of the document should ensure that their names are deleted from the text, with "Author" and year used in the references and footnotes, instead of authors' name, title, etc.</li>
-<li>With Microsoft Office documents, author identification should also be removed from the document's Properties by clicking on the following, beginning with File on the main menu of the Microsoft application: File > Save As > Tools (or Options with a Mac) > Security > Remove personal information from file properties on save > Save.</li>
-<li>With PDFs, the authors’ names should also be removed from Document Properties found under File on Adobe Acrobat's main menu.</li>
+		<![CDATA[<p>To ensure the integrity of the blind peer-review for submission to this journal, every effort should be made to prevent the identities of the authors and reviewers from being known to each other. This involves the authors, editors, and reviewers (who upload documents as part of their review) checking to see if the following steps have been taken with regard to the text and the file properties:
+<ol><li>The authors of the document have deleted their names from the text, with "Author" and year used in the references and footnotes, instead of the authors' name, article title, etc.</li>
+<li>With Microsoft Office documents, author identification should also be removed from the properties for the file (see under File in Word), by clicking on the following, beginning with File on the main menu of the Microsoft application: File &gt; Save As &gt; Tools (or Options with a Mac) &gt; Security &gt; Remove personal information from file properties on save &gt; Save.</li>
+<li>With PDFs, the authors' names should also be removed from Document Properties found under File on Adobe Acrobat's main menu.</li>
 </ol></p>]]>
 	</section>
 </topic>
