@@ -14,7 +14,7 @@
  
 <locale name="en_US" full_name="U.S. English">
 	<message key="plugins.auth.ldap.displayName">LDAP</message>
-	<message key="plugins.auth.ldap.description">LDAP authentication plugin.</message>
+	<message key="plugins.auth.ldap.description">This plugin allows for authentication and synchronization of user accounts against an external LDAP data source.</message>
 	
 	<message key="plugins.auth.ldap.settings">LDAP Settings</message>
 	<message key="plugins.auth.ldap.settings.hostname">Server hostname</message>
