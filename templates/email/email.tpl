@@ -35,7 +35,7 @@ function deleteAttachment(fileId) {
 {if $attachmentsEnabled}
 	<input type="hidden" name="deleteAttachment" value="">
 	{foreach from=$persistAttachments item=temporaryFile}
-		<input type="hidden" name="persistAttachments[]" value="{$temporaryFile->getFileId()}" />
+		{if is_object($temporaryFile)}<input type="hidden" name="persistAttachments[]" value="{$temporaryFile->getFileId()}" />{/if}
 	{/foreach}
 {/if}
 
@@ -125,11 +125,13 @@ function deleteAttachment(fileId) {
 	<td class="value">
 		{assign var=attachmentNum value=1}
 		{foreach from=$persistAttachments item=temporaryFile}
-			{$attachmentNum}.&nbsp;{$temporaryFile->getOriginalFileName()|escape}&nbsp;
-			({$temporaryFile->getNiceFileSize()})&nbsp;
-			<a href="javascript:deleteAttachment({$temporaryFile->getFileId()})" class="action">{translate key="common.delete"}</a>
-			<br/>
-			{assign var=attachmentNum value=$attachmentNum+1}
+			{if is_object($temporaryFile)}
+				{$attachmentNum}.&nbsp;{$temporaryFile->getOriginalFileName()|escape}&nbsp;
+				({$temporaryFile->getNiceFileSize()})&nbsp;
+				<a href="javascript:deleteAttachment({$temporaryFile->getFileId()})" class="action">{translate key="common.delete"}</a>
+				<br/>
+				{assign var=attachmentNum value=$attachmentNum+1}
+			{/if}
 		{/foreach}
 
 		{if $attachmentNum != 1}<br/>{/if}
