@@ -159,10 +159,12 @@ class XMLNode {
 		if ($this->parent === null) {
 			// This is the root node. Output information about the document.
 			$out .= "<?xml version=\"" . $this->getAttribute('version') . "\" encoding=\"UTF-8\"?>\n";
-			if ($this->getAttribute('url') != '') {
-				$out .= "<!DOCTYPE " . $this->getAttribute('type') . " PUBLIC \"" . $this->getAttribute('dtd') . "\" \"" . $this->getAttribute('url') . "\">";
-			} else {
-				$out .= "<!DOCTYPE " . $this->getAttribute('type') . " SYSTEM \"" . $this->getAttribute('dtd') . "\">";
+			if ($this->getAttribute('type') != '') {
+				if ($this->getAttribute('url') != '') {
+					$out .= "<!DOCTYPE " . $this->getAttribute('type') . " PUBLIC \"" . $this->getAttribute('dtd') . "\" \"" . $this->getAttribute('url') . "\">";
+				} else {
+					$out .= "<!DOCTYPE " . $this->getAttribute('type') . " SYSTEM \"" . $this->getAttribute('dtd') . "\">";
+				}
 			}
 		}
 
