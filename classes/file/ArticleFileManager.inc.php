@@ -20,6 +20,7 @@
  * [article id]/submission/copyedit
  * [article id]/submission/layout
  * [article id]/supp
+ * [article id]/attachment
  *
  * $Id$
  */
@@ -35,6 +36,7 @@ define('ARTICLE_FILE_LAYOUT',		'LE');
 define('ARTICLE_FILE_PUBLIC',		'PB');
 define('ARTICLE_FILE_SUPP',		'SP');
 define('ARTICLE_FILE_NOTE',		'NT');
+define('ARTICLE_FILE_ATTACHMENT',	'AT');
 
 class ArticleFileManager extends FileManager {
 	
@@ -192,6 +194,17 @@ class ArticleFileManager extends FileManager {
 	}
 
 	/**
+	 * Copy an attachment file.
+	 * @param $url string The source URL/filename
+	 * @param $mimeType string The mime type of the original file
+	 * @param $fileId int
+	 * @param $overwrite boolean
+	 */
+	function copyAttachmentFile($url, $mimeType, $fileId = null, $overwrite = true, $assocId = null) {
+		return $this->handleCopy($url, $mimeType, ARTICLE_FILE_ATTACHMENT, $fileId, $overwrite, $assocId);
+	}
+
+	/**
 	 * Retrieve file information by file ID.
 	 * @return ArticleFile
 	 */
@@ -341,6 +354,7 @@ class ArticleFileManager extends FileManager {
 			case ARTICLE_FILE_EDITOR: return 'submission/editor';
 			case ARTICLE_FILE_COPYEDIT: return 'submission/copyedit';
 			case ARTICLE_FILE_LAYOUT: return 'submission/layout';
+			case ARTICLE_FILE_ATTACHMENT: return 'attachment';
 			case ARTICLE_FILE_SUBMISSION: default: return 'submission/original';
 		}
 	}
@@ -616,6 +630,41 @@ class ArticleFileManager extends FileManager {
 		else $articleFileDao->insertArticleFile($articleFile);
 
 		if ($overwrite) $this->removePriorRevisions($articleFile->getFileId(), $articleFile->getRevision());
+		
+		return $articleFile->getFileId();
+	}
+
+	/**
+	 * Copy a temporary file to an article file.
+	 * @param TemporaryFile
+	 * @return int the file ID (false if upload failed)
+	 */
+	function temporaryFileToArticleFile(&$temporaryFile, $type, $assocId = null) {
+		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
+		
+		$typePath = $this->typeToPath($type);
+		$dir = $this->filesDir . $typePath . '/';
+		
+		$articleFile = &$this->generateDummyFile($this->article);
+		$articleFile->setFileType($temporaryFile->getFileType());
+		$articleFile->setOriginalFileName($temporaryFile->getOriginalFileName());
+		$articleFile->setType($typePath);
+		$articleFile->setStatus(''); // FIXME wtf is this for?
+		$articleFile->setRound($this->article->getCurrentRound());
+		$articleFile->setAssocId($assocId);
+
+		$newFileName = $this->generateFilename($articleFile, $type, $articleFile->getOriginalFileName());
+
+		if (!$this->copyFile($temporaryFile->getFilePath(), $dir.$newFileName)) {
+			// Delete the dummy file we inserted
+			$articleFileDao->deleteArticleFileById($articleFile->getFileId());
+			
+			return false;
+		}
+
+		$articleFile->setFileSize(filesize($dir.$newFileName));
+		$articleFileDao->updateArticleFile($articleFile);
+		$this->removePriorRevisions($articleFile->getFileId(), $articleFile->getRevision());
 		
 		return $articleFile->getFileId();
 	}

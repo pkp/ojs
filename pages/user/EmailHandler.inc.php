@@ -40,12 +40,14 @@ class EmailHandler extends UserHandler {
 			// First, conditions where access is OK.
 			// 1. User is submitter
 			if ($article && $article->getUserId() == $user->getUserId()) $hasAccess = true;
-			// 2. User is editor
+			// 2. User is section editor of article or full editor
 			$editAssignmentDao =& DAORegistry::getDAO('EditAssignmentDAO');
 			$editAssignments =& $editAssignmentDao->getEditAssignmentsByArticleId($articleId);
 			while ($editAssignment =& $editAssignments->next()) {
 				if ($editAssignment->getEditorId() === $user->getUserId()) $hasAccess = true;
 			}
+			if (Validation::isEditor($journal->getJournalId())) $hasAccess = true;
+
 			// 3. User is reviewer
 			$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
 			foreach ($reviewAssignmentDao->getReviewAssignmentsByArticleId($articleId) as $reviewAssignment) {
@@ -65,7 +67,7 @@ class EmailHandler extends UserHandler {
 			if ($proofAssignment && $proofAssignment->getProofreaderId() === $user->getUserId()) $hasAccess = true;
 
 			// Last, "deal-breakers" -- access is not allowed.
-			if ($article && $article->getJournalId() !== $journal->getJournalId()) $hasAccess = false;
+			if (!$article || ($article && $article->getJournalId() !== $journal->getJournalId())) $hasAccess = false;
 
 			if ($hasAccess) {
 				import('mail.ArticleMailTemplate');
@@ -100,7 +102,7 @@ class EmailHandler extends UserHandler {
 					}
 				}
 			}
-			$email->displayEditForm(Request::url(null, null, 'email'), array('redirectUrl' => Request::getUserVar('redirectUrl'), 'articleId' => $articleId), null, array('disableSkipButton' => true));
+			$email->displayEditForm(Request::url(null, null, 'email'), array('redirectUrl' => Request::getUserVar('redirectUrl'), 'articleId' => $articleId), null, array('disableSkipButton' => true, 'articleId' => $articleId));
 		}
 	}
 }

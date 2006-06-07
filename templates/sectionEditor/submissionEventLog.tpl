@@ -32,48 +32,46 @@
 
 <h3>{translate key="submission.history.submissionEventLog"}</h3>
 <table width="100%" class="listing">
-	<tr><td class="headseparator" colspan="6">&nbsp;</td></tr>
+	<tr><td class="headseparator" colspan="5">&nbsp;</td></tr>
 	<tr valign="top" class="heading">
-		<td width="5%">{translate key="common.date"}</td>
+		<td width="7%">{translate key="common.date"}</td>
 		<td width="5%">{translate key="submission.event.logLevel"}</td>
-		<td width="5%">{translate key="common.type"}</td>
 		<td width="25%">{translate key="common.user"}</td>
 		<td>{translate key="common.event"}</td>
 		<td width="56" align="right">{translate key="common.action"}</td>
 	</tr>
-	<tr><td class="headseparator" colspan="6">&nbsp;</td></tr>
+	<tr><td class="headseparator" colspan="5">&nbsp;</td></tr>
 {iterate from=eventLogEntries item=logEntry}
 	<tr valign="top">
-		<td>{$logEntry->getDateLogged()|date_format:$dateFormatTrunc}</td>
+		<td>{$logEntry->getDateLogged()|date_format:$dateFormatShort}</td>
 		<td>{$logEntry->getLogLevel()|escape}</td>
-		<td>{$logEntry->getAssocTypeString()}</td>
 		<td>
 			{assign var=emailString value="`$logEntry->getUserFullName()` <`$logEntry->getUserEmail()`>"}
 			{url|assign:"url" page="user" op="email" to=$emailString|to_array redirectUrl=$currentUrl subject=$logEntry->getEventTitle()|translate articleId=$submission->getArticleId()}
 			{$logEntry->getUserFullName()|escape} {icon name="mail" url=$url}
 		</td>
 		<td>
-			<strong>{translate key=$logEntry->getEventTitle()}</strong>
+			{translate key=$logEntry->getEventTitle()}
 			<br />
 			{$logEntry->getMessage()|strip_unsafe_html|truncate:60:"..."|escape}
 		</td>
 		<td align="right">{if $logEntry->getAssocType()}<a href="{url op="submissionEventLogType" path=$submission->getArticleId()|to_array:$logEntry->getAssocType():$logEntry->getAssocId()}" class="action">{translate key="common.related"}</a>&nbsp;|&nbsp;{/if}<a href="{url op="submissionEventLog" path=$submission->getArticleId()|to_array:$logEntry->getLogId()}" class="action">{translate key="common.view"}</a>{if $isEditor}&nbsp;|&nbsp;<a href="{url op="clearSubmissionEventLog" path=$submission->getArticleId()|to_array:$logEntry->getLogId()}" class="action" onclick="return confirm('{translate|escape:"javascript" key="submission.event.confirmDeleteLogEntry"}')" class="icon">{translate key="common.delete"}</a>{/if}</td>
 	</tr>
 	<tr valign="top">
-		<td colspan="6" class="{if $eventLogEntries->eof()}end{/if}separator">&nbsp;</td>
+		<td colspan="5" class="{if $eventLogEntries->eof()}end{/if}separator">&nbsp;</td>
 	</tr>
 {/iterate}
 {if $eventLogEntries->wasEmpty()}
 	<tr valign="top">
-		<td colspan="6" class="nodata">{translate key="submission.history.noLogEntries"}</td>
+		<td colspan="5" class="nodata">{translate key="submission.history.noLogEntries"}</td>
 	</tr>
 	<tr valign="top">
-		<td colspan="6" class="endseparator">&nbsp;</td>
+		<td colspan="5" class="endseparator">&nbsp;</td>
 	</tr>
 {else}
 	<tr>
 		<td colspan="3" align="left">{page_info iterator=$eventLogEntries}</td>
-		<td colspan="3" align="right">{page_links name="eventLogEntries" iterator=$eventLogEntries}</td>
+		<td colspan="2" align="right">{page_links name="eventLogEntries" iterator=$eventLogEntries}</td>
 	</tr>
 {/if}
 </table>

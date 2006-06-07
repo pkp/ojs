@@ -757,6 +757,7 @@
 		<field name="round" type="I1">
 			<NOTNULL/>
 		</field>
+		<field name="assoc_id" type="I8"/>
 		<descr>Files associated with articles. Includes submission files, supplementary files, etc.</descr>
 		<index name="article_files_article_id">
 			<col>article_id</col>

@@ -285,7 +285,7 @@ class MailTemplate extends Mail {
 	 * Aside from calling the parent method, this actually attaches
 	 * the persistent attachments if they are used.
 	 */
-	function send() {
+	function send($clearAttachments = true) {
 		$journal = Request::getJournal();
 		if (isset($journal)) {
 			//If {$templateSignature} exists in the body of the
@@ -326,7 +326,7 @@ class MailTemplate extends Mail {
 			$result = parent::send();
 		}
 
-		if ($this->attachmentsEnabled) {
+		if ($clearAttachments && $this->attachmentsEnabled) {
 			$this->_clearAttachments($user->getUserId());
 		}
 
@@ -409,6 +409,11 @@ class MailTemplate extends Mail {
 
 			$this->persistAttachments[] = $temporaryFileManager->handleUpload('newAttachment', $user->getUserId());
 		}
+	}
+
+	function getAttachmentFiles() {
+		if ($this->attachmentsEnabled) return $this->persistAttachments;
+		return array();
 	}
 
 	/**

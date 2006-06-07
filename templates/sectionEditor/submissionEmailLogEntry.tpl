@@ -72,6 +72,14 @@
 		<td class="label">{translate key="email.bcc"}</td>
 		<td class="value">{$logEntry->getBccs()|escape}</td>
 	</tr>
+	{if !empty($attachments)}
+		<tr valign="top">
+			<td class="label">{translate key="email.attachments"}</td>
+			<td class="value">{foreach from=$attachments item=attachment}
+				<a href="{url op="downloadFile" path=$attachment->getArticleId()|to_array:$attachment->getFileId()}" class="action">{$attachment->getOriginalFilename()|escape}</a>
+			{/foreach}</td>
+		</tr>
+	{/if}
 	<tr valign="top">
 		<td class="label">{translate key="email.subject"}</td>
 		<td class="value">{$logEntry->getSubject()|escape}</td>

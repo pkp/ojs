@@ -65,8 +65,10 @@ class ArticleMailTemplate extends MailTemplate {
 	 * @see parent::send()
 	 */
 	function send() {
-		if (parent::send()) {
+		if (parent::send(false)) {
 			$this->log();
+			$user =& Request::getUser();
+			if ($this->attachmentsEnabled) $this->_clearAttachments($user->getUserId());
 			return true;
 			
 		} else {
@@ -118,6 +120,7 @@ class ArticleMailTemplate extends MailTemplate {
 		import('article.log.ArticleEmailLogEntry');
 		import('article.log.ArticleLog');
 		$entry = &new ArticleEmailLogEntry();
+		$article = &$this->article;
 		
 		// Log data
 		$entry->setEventType($this->eventType);
@@ -133,8 +136,18 @@ class ArticleMailTemplate extends MailTemplate {
 		$entry->setBccs($this->getBccString());
 
 		// Add log entry
-		$article = &$this->article;
-		ArticleLog::logEmailEntry($article->getArticleId(), $entry);
+		$logEntryId = ArticleLog::logEmailEntry($article->getArticleId(), $entry);
+
+		// Add attachments
+		import('file.ArticleFileManager');
+		$articleFileManager =& new ArticleFileManager($article->getArticleId());
+		foreach ($this->getAttachmentFiles() as $attachment) {
+			$articleFileManager->temporaryFileToArticleFile(
+				$attachment,
+				ARTICLE_FILE_ATTACHMENT,
+				$logEntryId
+			);
+		}
 	}
 
 	function ccAssignedEditors($articleId) {

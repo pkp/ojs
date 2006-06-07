@@ -55,6 +55,22 @@ class ArticleFile extends DataObject {
 	}
 	
 	/**
+	 * Get associated ID of file. (Used, e.g., for email log attachments.)
+	 * @return int
+	 */
+	function getAssocId() {
+		return $this->getData('assocId');
+	}
+	
+	/**
+	 * Set associated ID of file. (Used, e.g., for email log attachments.)
+	 * @param $assocId int
+	 */
+	function setAssocId($assocId) {
+		return $this->setData('assocId', $assocId);
+	}
+	
+	/**
 	 * Get revision number.
 	 * @return int
 	 */

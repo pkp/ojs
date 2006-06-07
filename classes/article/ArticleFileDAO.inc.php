@@ -191,6 +191,32 @@ class ArticleFileDAO extends DAO {
 	}
 	
 	/**
+	 * Retrieve all article files for a type and assoc ID.
+	 * @param $assocId int
+	 * @param $type int
+	 * @return array ArticleFiles
+	 */
+	function &getArticleFilesByAssocId($assocId, $type) {
+		import('file.ArticleFileManager');
+		$articleFiles = array();
+		
+		$result = &$this->retrieve(
+			'SELECT * FROM article_files WHERE assoc_id = ? AND type = ?',
+			array($assocId, ArticleFileManager::typeToPath($type))
+		);
+		
+		while (!$result->EOF) {
+			$articleFiles[] = &$this->_returnArticleFileFromRow($result->GetRowAssoc(false));
+			$result->moveNext();
+		}
+
+		$result->Close();
+		unset($result);
+	
+		return $articleFiles;
+	}
+
+	/**
 	 * Internal function to return an ArticleFile object from a row.
 	 * @param $row array
 	 * @return ArticleFile
@@ -205,6 +231,7 @@ class ArticleFileDAO extends DAO {
 		$articleFile->setFileSize($row['file_size']);
 		$articleFile->setOriginalFileName($row['original_file_name']);
 		$articleFile->setType($row['type']);
+		$articleFile->setAssocId($row['assoc_id']);
 		$articleFile->setStatus($row['status']);
 		$articleFile->setDateUploaded($this->datetimeFromDB($row['date_uploaded']));
 		$articleFile->setDateModified($this->datetimeFromDB($row['date_modified']));
@@ -231,7 +258,8 @@ class ArticleFileDAO extends DAO {
 			$articleFile->getType(),
 			$articleFile->getStatus(),
 			$articleFile->getRound(),
-			$articleFile->getViewable()
+			$articleFile->getViewable(),
+			$articleFile->getAssocId()
 		);
 		
 		if ($fileId) {
@@ -240,9 +268,9 @@ class ArticleFileDAO extends DAO {
 		
 		$this->update(
 			sprintf('INSERT INTO article_files
-				(' . ($fileId ? 'file_id, ' : '') . 'revision, article_id, file_name, file_type, file_size, original_file_name, type, status, date_uploaded, date_modified, round, viewable)
+				(' . ($fileId ? 'file_id, ' : '') . 'revision, article_id, file_name, file_type, file_size, original_file_name, type, status, date_uploaded, date_modified, round, viewable, assoc_id)
 				VALUES
-				(' . ($fileId ? '?, ' : '') . '?, ?, ?, ?, ?, ?, ?, ?, %s, %s, ?, ?)',
+				(' . ($fileId ? '?, ' : '') . '?, ?, ?, ?, ?, ?, ?, ?, %s, %s, ?, ?, ?)',
 				$this->datetimeToDB($articleFile->getDateUploaded()), $this->datetimeToDB($articleFile->getDateModified())),
 			$params
 		);
@@ -272,7 +300,8 @@ class ArticleFileDAO extends DAO {
 					date_uploaded = %s,
 					date_modified = %s,
 					round = ?,
-					viewable = ?
+					viewable = ?,
+					assoc_id = ?
 				WHERE file_id = ? AND revision = ?',
 				$this->datetimeToDB($articleFile->getDateUploaded()), $this->datetimeToDB($articleFile->getDateModified())),
 			array(
@@ -285,6 +314,7 @@ class ArticleFileDAO extends DAO {
 				$articleFile->getStatus(),
 				$articleFile->getRound(),
 				$articleFile->getViewable(),
+				$articleFile->getAssocId(),
 				$articleFile->getFileId(),
 				$articleFile->getRevision()
 			)
