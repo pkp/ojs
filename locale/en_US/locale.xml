@@ -1946,7 +1946,7 @@ The file can be viewed by clicking on the file name. A new or revised file can b
 	<message key="submission.comments.editComment">Edit Comment</message>
 	<message key="submission.comments.confirmDelete">Are you sure you would like to delete this comment?</message>
 	<message key="submission.comments.importPeerReviews">Import Peer Reviews</message>
-	<message key="submission.comments.blindCcReviewers">After sending, present a blind carbon copy of editorial decision for emailing to reviewers.</message>
+	<message key="submission.comments.blindCcReviewers">After sending, present an editable BCC copy to send to reviewers.</message>
 	<message key="submission.comments.importPeerReviews.reviewerLetter">Reviewer {$reviewerLetter}:</message>
 	<message key="submission.comments.forAuthorEditor">For author and editor</message>
 	<message key="submission.comments.forEditor">For editor</message>

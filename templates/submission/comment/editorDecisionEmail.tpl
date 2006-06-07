@@ -163,9 +163,12 @@ function deleteAttachment(fileId) {
 	<td class="label">{fieldLabel name="body" key="email.body"}</td>
 	<td class="value"><textarea name="body" cols="60" rows="15" class="textArea">{$body|escape}</textarea></td>
 </tr>
-</table>
 
-{if $isAnEditor}<input type="checkbox" name="blindCcReviewers" value="1" id="blindCcReviewers"/>&nbsp;&nbsp;<label for="blindCcReviewers">{translate key="submission.comments.blindCcReviewers"}</label>{/if}
+{if $isAnEditor}
+	<td class="label">&nbsp;</td>
+	<td class="value"><input type="checkbox" name="blindCcReviewers" value="1" id="blindCcReviewers"/>&nbsp;&nbsp;<label for="blindCcReviewers">{translate key="submission.comments.blindCcReviewers"}</label></td>
+{/if}
+</table>
 
 <p><input name="send" type="submit" value="{translate key="email.send"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="history.go(-1)" />{if !$disableSkipButton} <input name="send[skip]" type="submit" value="{translate key="email.skip"}" class="button" />{/if}</p>
 </form>
