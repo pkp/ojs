@@ -20,7 +20,7 @@
 <table class="data" width="100%">
 <tr valign="top">
 	<td width="20%" class="label">{fieldLabel suppressId="true" name="username" key="user.username"}</td>
-	<td width="100%" class="value">{$username|escape}</td>
+	<td width="80%" class="value">{$username|escape}</td>
 </tr>
 <tr valign="top">
 	<td class="label">{fieldLabel name="firstName" required="true" key="user.firstName"}</td>

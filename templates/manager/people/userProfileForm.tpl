@@ -135,7 +135,7 @@
 	</tr>
 	<tr valign="top">
 		<td class="label">{fieldLabel name="lastName" required="true" key="user.lastName"}</td>
-		<td class="value"><input type="text" name="lastName" id="lastName" value="{$lastName|escape}" size="20" maxlength="60" class="textField" /></td>
+		<td class="value"><input type="text" name="lastName" id="lastName" value="{$lastName|escape}" size="20" maxlength="90" class="textField" /></td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{fieldLabel name="initials" key="user.initials"}</td>

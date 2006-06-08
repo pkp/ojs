@@ -28,7 +28,7 @@
 <table class="data">
 <tr valign="top">
 	<td width="20%" class="label">{fieldLabel name="commentTitle" key="submission.comments.subject"}</td>
-	<td width="80%" class="value"><input type="text" id="commentTitle" name="commentTitle" value="{$commentTitle|escape}" size="50" maxlength="100" class="textField" /></td>
+	<td width="80%" class="value"><input type="text" id="commentTitle" name="commentTitle" value="{$commentTitle|escape}" size="50" maxlength="90" class="textField" /></td>
 </tr>
 <tr valign="top">
 	<td class="label">{fieldLabel name="comments" key="submission.comments.comments" required="true"}</td>

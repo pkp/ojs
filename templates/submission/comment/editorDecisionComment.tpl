@@ -56,7 +56,7 @@
 <table class="data" width="100%">
 <tr valign="top">
 	<td class="label">{fieldLabel name="commentTitle" key="submission.comments.subject"}</td>
-	<td class="value"><input type="text" name="commentTitle" id="commentTitle" value="{$commentTitle|escape}" size="50" maxlength="100" class="textField" /></td>
+	<td class="value"><input type="text" name="commentTitle" id="commentTitle" value="{$commentTitle|escape}" size="50" maxlength="90" class="textField" /></td>
 </tr>
 <tr valign="top">
 	<td class="label">{fieldLabel name="comments" key="submission.comments.addComment"}</td>
