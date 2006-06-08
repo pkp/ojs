@@ -1070,11 +1070,11 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.setup.pageNumberIdentifier">Page Number Option</message>
 	<message key="manager.setup.enablePageNumber">Page numbers for items will be calculated and entered manually in the Table of Contents (e.g., pp. 13-26).</message>
 	<message key="manager.setup.onlineAccessManagement">Online Access Management</message>
-	<message key="manager.setup.openAccess">Provide open access to the journal's contents as each issue or item is published.</message>
-	<message key="manager.setup.openAccessPolicy">Open Access Policy (to appear in About the Journal)</message>
-	<message key="manager.setup.subscription">Restrict access to the journal's contents to subscribers.</message>
-	<message key="manager.setup.subscriptionDescription">The Subscription Management module is operated by the Subscription Manager and includes additional open access, self-archiving, and email notification options.</message>
-	<message key="manager.setup.subscriptionContactDescription">If subscription management has been enabled, this person will be listed on the journal's About page as the primary contact for subscriptions.</message>
+	<message key="manager.setup.openAccess">The journal will provide open access to its contents.</message>
+	<message key="manager.setup.openAccessPolicy">Open Access Policy</message>
+	<message key="manager.setup.openAccessPolicyDescription">Enter a statement on the journal's open access policy that will appear in About the Journal.</message>
+	<message key="manager.setup.subscription">The journal will require subscriptions to access some or all of its contents.</message>
+	<message key="manager.setup.subscriptionDescription">The Subscription Management module requires that a Subscription Manager be assigned who has access to the module, which includes additional open access, self-archiving, and email notification options.</message>
 	<message key="manager.setup.announcements">Announcements</message>
 	<message key="manager.setup.announcementsDescription">Announcements may be published to inform readers of journal news and events. Published announcements will appear on the Announcements page.</message>
 	<message key="manager.setup.enableAnnouncements">Enable Journal Managers to add journal announcements.</message>
@@ -1282,23 +1282,26 @@ You may optionally provide the user with a reason for disabling their account.</
 	<message key="manager.emails.editTestExample">Edit Email Test Example</message>
 
 	<!-- Subscription Policy Management -->
+	<message key="manager.subscriptionPolicies.subscriptionContact">Subscription Manager</message>
+	<message key="manager.subscriptionPolicies.subscriptionContactDescription">The contact listed under Subscriptions in About the Journal.</message>
 	<message key="manager.subscriptionPolicies.subscriptionAdditionalInformation">Subscription Information</message>
 	<message key="manager.subscriptionPolicies.subscriptionAdditionalInformationDescription">The Subscription Types and fee structure will be automatically placed under Subscriptions on the About the Journal page, along with the name and contact information for the Subscription Manager. Additional information about subscriptions, such as methods of payment or support for subscribers in developing countries, can be added here.</message>
 	<message key="manager.subscriptionPolicies.htmlInstructions"><![CDATA[HTML can be used in textarea (for font size, color, etc.), with "returns" treated as <tt>&lt;br&gt;</tt>; HTML editor works with Firefox browsers.]]></message>
-	<message key="manager.subscriptionPolicies.openAccessOptions">Open Access Options</message>
-	<message key="manager.subscriptionPolicies.openAccessOptionsDescription">Subscription journals can provide two forms of open access (free access) to their content, which will increase readership and citation of content. Note that even with delayed open access, Editors will still be able to designate specific articles within an issue for open access. The selected policies will appear in About the Journal.</message>
+	<message key="manager.subscriptionPolicies.openAccessOptions">Open Access Options For Subscription Journals</message>
+	<message key="manager.subscriptionPolicies.openAccessOptionsDescription">Subscription journals can provide "delayed open access" and/or "author self-archiving" (which increase readership and citation of content). The selected policies will appear in About the Journal.</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccess">Delayed Open Access</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription1">Make the contents of this journal available in an open access format</message>
+	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription">With delayed open access, editors are still able to designate specific articles within an issue for immediate open access.</message>
+	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription1">The back issues of this journal will be available in an open access format</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription2">month(s) after an issue is published.</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDurationValid">Please select a valid duration length.</message>
-	<message key="manager.subscriptionPolicies.openAccessNotificationDescription">Give registered readers an option for table of contents email notification when issue becomes open access.</message>
+	<message key="manager.subscriptionPolicies.openAccessNotificationDescription">Registered readers will have the option of receiving the table of contents by email when an issue becomes open access.</message>
+	<message key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription">The following statement will be posted in About the Journal under Delayed Open Access.</message>
 	<message key="manager.subscriptionPolicies.openAccessNotificationDisabled"><![CDATA[<strong>Note:</strong> To activate this option, the site administrator must enable the <tt>scheduled_tasks</tt> option in the OJS configuration file. Additional server configuration may be required to support this functionality (which may not be possible on all servers), as indicated in the OJS documentation.]]></message>
-	<message key="manager.subscriptionPolicies.authorSelfArchive">Author Self-Archiving</message>
-	<message key="manager.subscriptionPolicies.authorSelfArchiveDescription">Post the following policy, permitting authors to post their work in open access archives.</message>
-	<message key="manager.subscriptionPolicies.authorSelfArchivePolicy">Self-Archiving Policy</message>
+	<message key="manager.subscriptionPolicies.authorSelfArchive">Author Self-Archiving Policy</message>
+	<message key="manager.subscriptionPolicies.authorSelfArchiveDescription">The following policy will be included in About the Journal.</message>
 	<message key="manager.subscriptionPolicies.subscriptionPoliciesSaved">Your subscription policy settings have been updated.</message>
 	<message key="manager.subscriptionPolicies.expiryReminders">Subscription Expiry Reminders</message>
-	<message key="manager.subscriptionPolicies.expiryRemindersDescription">Automated email reminders (available in OJS's default Emails) can be sent to subscribers both before and after a subscription has expired.</message>
+	<message key="manager.subscriptionPolicies.expiryRemindersDescription">Automated email reminders (available for editing by Journal Managers in OJS's Prepared Emails) can be sent to subscribers both before and after a subscription has expired.</message>
 	<message key="manager.subscriptionPolicies.expiryRemindersDisabled"><![CDATA[<strong>Note:</strong> To activate these options, the site administrator must enable the <tt>scheduled_tasks</tt> option in the OJS configuration file. Additional server configuration may be required to support this functionality (which may not be possible on all servers), as indicated in the OJS documentation.]]></message>
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths1">Notify subscribers by email</message>
 	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths2">month(s) before subscription expiry.</message>
@@ -1308,6 +1311,7 @@ You may optionally provide the user with a reason for disabling their account.</
 	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths2">month(s) after subscription expiry.</message>
 	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks1">Notify subscribers by email</message>
 	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks2">week(s) after subscription expiry.</message>
+	<message key="manager.subscriptionPolicies.subscriptionContactEmailValid">Please enter a valid email.</message>
 	<message key="manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid">Please use the checkbox provided.</message>
 	<message key="manager.subscriptionPolicies.numMonthsBeforeSubscriptionExpiryReminderValid">Please select a valid value for the number of months before subscription expiry.</message>
 	<message key="manager.subscriptionPolicies.numWeeksBeforeSubscriptionExpiryReminderValid">Please select a valid value for the number of weeks before subscription expiry.</message>
@@ -1354,7 +1358,7 @@ You may optionally provide the user with a reason for disabling their account.</
 	<message key="manager.subscriptionTypes.form.format">Format</message>
 	<message key="manager.subscriptionTypes.form.institutional">Subscribers should be validated via domain or IP authentication.</message>
 	<message key="manager.subscriptionTypes.form.membership">Subscribers must be members of an association or organization.</message>
-	<message key="manager.subscriptionTypes.form.public">This subscription type should be publicly visible.</message>
+	<message key="manager.subscriptionTypes.form.public">This subscription type will not appear under Subscriptions in About the Journal.</message>
 	<message key="manager.subscriptionTypes.form.saveAndCreateAnotherType">Save and Create Another</message>
 	<message key="manager.subscriptionTypes.format.online">Online</message>
 	<message key="manager.subscriptionTypes.format.print">Print</message>
@@ -1363,9 +1367,10 @@ You may optionally provide the user with a reason for disabling their account.</
 	<!-- Subscription Management -->
 	<message key="manager.subscriptions.createTitle">Create</message>
 	<message key="manager.subscriptions.create">Create New Subscription</message>
+	<message key="manager.subscriptions.select">Enroll Subscriber</message>
 	<message key="manager.subscriptions.selectSubscriber">Select Subscriber</message>
-	<message key="manager.subscriptions.selectSubscriber.desc">Choose which user you wish to subscribe to the journal. Note that a journal's Managers, Editors, Section Editors, Layout Editors, Copyeditors, and Proofreaders are always free to browse the journal as if they were subscribers.</message>
-	<message key="manager.subscriptions.subscribe">Subscribe</message>
+	<message key="manager.subscriptions.selectSubscriber.desc">Subscription access privileges are automatically granted to the journal's Journal Managers, Editors, Section Editors, Layout Editors, Copyeditors, and Proofreaders.</message>
+	<message key="manager.subscriptions.subscribe">Enroll</message>
 	<message key="manager.subscriptions.confirmDelete">Are you sure you want to delete this subscription?</message>
 	<message key="manager.subscriptions.noneCreated">No subscriptions have been created.</message>
 	<message key="manager.subscriptions.user">User</message>
@@ -1401,7 +1406,7 @@ You may optionally provide the user with a reason for disabling their account.</
 	<message key="manager.subscriptions.form.domainInstructions">Enter a domain if the subscription type is for institutions. If a domain is entered here, the IP range is optional. Valid values are domain names (e.g. lib.sfu.ca).</message>
 	<message key="manager.subscriptions.form.ipRange">IP range</message>
 	<message key="manager.subscriptions.form.ipRangeInstructions">Enter an IP range if the subscription type is for institutions. If an IP range is entered here, the domain is optional. Valid values include an IP (e.g. 142.58.103.1), a CIDR IP range (e.g. 142.58.100.0/24), an IP range (e.g. 142.58.103.1 - 142.58.103.4), an IP range with '*' (e.g. 142.58.103.*), or any combination of these separated by a ';' (e.g. 142.58.103.* - 142.58.107.* ; 142.58.108.1/24 ; 142.58.106.*)</message>
-	<message key="manager.subscriptions.form.notifyEmail">Send the user a notification email containing their username and subscription details.</message>
+	<message key="manager.subscriptions.form.notifyEmail">Send the user an email with their username and subscription details.</message>
 	<message key="manager.subscriptions.form.saveAndCreateAnother">Save and Create Another</message>
 
 	<!-- Announcement Type Management -->
@@ -2118,6 +2123,8 @@ current password.<br /><br />Enter your email address below to reset your passwo
 	<message key="about.peerReviewProcess">Peer Review Process</message>
 	<message key="about.publicationFrequency">Publication Frequency</message>
 	<message key="about.openAccessPolicy">Open Access Policy</message>
+	<message key="about.delayedOpenAccessPolicy">Delayed Open Access</message>
+	<message key="about.authorSelfArchivePolicy">Author Self-Archiving</message>
 	<message key="about.delayedOpenAccess">Delayed Open Access</message>
 	<message key="about.delayedOpenAccessDescription1">The contents of this journal will be available in an open access format</message>
 	<message key="about.delayedOpenAccessDescription2">month(s) after an issue is published.</message>
@@ -2538,7 +2545,7 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="default.journalSettings.checklist.anonymous"><![CDATA[If submitting to a peer-reviewed section of the journal, the instructions in <a href="javascript:openHelp('{$indexUrl}/{$journalPath}/help/view/editorial/topic/000044')">Ensuring a Blind Review</a>) have been followed.]]></message>
 	<message key="default.journalSettings.privacyStatement">The names and email addresses entered in this journal site will be used exclusively for the stated purposes of this journal and will not be made available for any other purpose or to any other party.</message>
 	<message key="default.journalSettings.openAccessPolicy">This journal provides immediate open access to its content on the principle that making research freely available to the public supports a greater global exchange of knowledge.</message>
-	<message key="default.journalSettings.authorSelfArchivePolicy">Authors are permitted to post their articles on personal or institutional websites prior to and after publication by this journal (while providing the bibliographic details of that publication).</message>
+	<message key="default.journalSettings.authorSelfArchivePolicy">Authors are permitted and encouraged to post items submitted to this journal on personal or institutional websites, prior to and after publication (while providing the bibliographic details of that publication).</message>
 	<message key="default.journalSettings.copyeditInstructions"><![CDATA[The copyediting stage is intended to improve the flow, clarity, grammar, wording, and formatting of the article. It represents the last chance for the author to make any substantial changes to the text, as the next stage is restricted to typos and formatting corrections. 
 
 The file to be copyedited is in Word or .rtf format and therefore can be easily edited as a word processing document. This set of  instructions displayed here proposes two approaches to copyediting. The one is based on Microsoft Word's Track Changes feature and requires that the copyeditor, editor and author have access to this program. A second system, that is software independent, has been borrowed, with permission, from the Harvard Educational Review. The journal editor is in a position to modify these instructions, so suggestions can be made to improve the process for this journal. 

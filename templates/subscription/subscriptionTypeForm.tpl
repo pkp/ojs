@@ -39,7 +39,7 @@
 </tr>
 <tr valign="top">
 	<td class="label">{fieldLabel name="description" key="manager.subscriptionTypes.form.description"}</td>
-	<td class="value"><textarea name="description" id="description" cols="40" rows="2" class="textArea" />{$description|escape}</textarea></td>
+	<td class="value"><textarea name="description" id="description" cols="40" rows="4" class="textArea" />{$description|escape}</textarea></td>
 </tr>
 <tr valign="top">
 	<td class="label">{fieldLabel name="cost" required="true" key="manager.subscriptionTypes.form.cost"}</td>

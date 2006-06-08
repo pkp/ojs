@@ -53,6 +53,17 @@
 	<td class="value">{html_select_date prefix="dateEnd" start_year="$yearOffsetPast" all_extra="class=\"selectMenu\"" end_year="$yearOffsetFuture" time="$dateEnd"}</td>
 </tr>
 <tr valign="top">
+	<td>&nbsp;</td>
+	<td class="value">
+		<table width="100%">
+			<tr valign="top">
+				<td width="5%"><input type="checkbox" name="notifyEmail" id="notifyEmail" value="1"{if $notifyEmail} checked="checked"{/if} /></td>
+				<td width="95%"><label for="">{translate key="manager.subscriptions.form.notifyEmail"}</label></td>
+			</tr>
+		</table>
+	</td>
+</tr>
+<tr valign="top">
 	<td class="label">{fieldLabel name="membership" key="manager.subscriptions.form.membership"}</td>
 	<td class="value">
 		<input type="text" name="membership" value="{$membership|escape}" id="membership" size="40" maxlength="40" class="textField" />
@@ -74,17 +85,6 @@
 		<input type="text" id="ipRange" name="ipRange" value="{$ipRange|escape}" size="40" maxlength="255" class="textField" />
 		<br />
 		<span class="instruct">{translate key="manager.subscriptions.form.ipRangeInstructions"}</span>
-	</td>
-</tr>
-<tr valign="top">
-	<td>&nbsp;</td>
-	<td class="value">
-		<table width="100%">
-			<tr valign="top">
-				<td width="5%"><input type="checkbox" name="notifyEmail" id="notifyEmail" value="1"{if $notifyEmail} checked="checked"{/if} /></td>
-				<td width="95%"><label for="">{translate key="manager.subscriptions.form.notifyEmail"}</label></td>
-			</tr>
-		</table>
 	</td>
 </tr>
 </table>

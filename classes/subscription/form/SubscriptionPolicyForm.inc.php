@@ -71,6 +71,9 @@ class SubscriptionPolicyForm extends Form {
 
 		parent::Form('subscription/subscriptionPolicyForm.tpl');
 
+		// If provided, subscription contact email is valid
+		$this->addCheck(new FormValidatorEmail($this, 'subscriptionEmail', 'optional', 'manager.subscriptionPolicies.subscriptionContactEmailValid'));
+
 		// If provided delayed open access duration is valid value
 		$this->addCheck(new FormValidatorInSet($this, 'delayedOpenAccessDuration', 'optional', 'manager.subscriptionPolicies.delayedOpenAccessDurationValid', array_keys($this->validDuration)));
 
@@ -110,9 +113,15 @@ class SubscriptionPolicyForm extends Form {
 		$journalId = $journal->getJournalId();
 
 		$this->_data = array(
+			'subscriptionName' => $journalSettingsDao->getSetting($journalId, 'subscriptionName'),
+			'subscriptionEmail' => $journalSettingsDao->getSetting($journalId, 'subscriptionEmail'),
+			'subscriptionPhone' => $journalSettingsDao->getSetting($journalId, 'subscriptionPhone'),
+			'subscriptionFax' => $journalSettingsDao->getSetting($journalId, 'subscriptionFax'),
+			'subscriptionMailingAddress' => $journalSettingsDao->getSetting($journalId, 'subscriptionMailingAddress'),
 			'subscriptionAdditionalInformation' => $journalSettingsDao->getSetting($journalId, 'subscriptionAdditionalInformation'),
 			'enableDelayedOpenAccess' => $journalSettingsDao->getSetting($journalId, 'enableDelayedOpenAccess'),
 			'delayedOpenAccessDuration' => $journalSettingsDao->getSetting($journalId, 'delayedOpenAccessDuration'),
+			'delayedOpenAccessPolicy' => $journalSettingsDao->getSetting($journalId, 'delayedOpenAccessPolicy'),
 			'enableOpenAccessNotification' => $journalSettingsDao->getSetting($journalId, 'enableOpenAccessNotification'),
 			'enableAuthorSelfArchive' => $journalSettingsDao->getSetting($journalId, 'enableAuthorSelfArchive'),
 			'authorSelfArchivePolicy' => $journalSettingsDao->getSetting($journalId, 'authorSelfArchivePolicy'),
@@ -131,7 +140,7 @@ class SubscriptionPolicyForm extends Form {
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->readUserVars(array('subscriptionAdditionalInformation', 'enableDelayedOpenAccess', 'delayedOpenAccessDuration', 'enableOpenAccessNotification', 'enableAuthorSelfArchive', 'authorSelfArchivePolicy', 'enableSubscriptionExpiryReminderBeforeMonths', 'numMonthsBeforeSubscriptionExpiryReminder', 'enableSubscriptionExpiryReminderBeforeWeeks', 'numWeeksBeforeSubscriptionExpiryReminder', 'enableSubscriptionExpiryReminderAfterWeeks', 'numWeeksAfterSubscriptionExpiryReminder', 'enableSubscriptionExpiryReminderAfterMonths', 'numMonthsAfterSubscriptionExpiryReminder'));
+		$this->readUserVars(array('subscriptionName', 'subscriptionEmail', 'subscriptionPhone', 'subscriptionFax', 'subscriptionMailingAddress', 'subscriptionAdditionalInformation', 'enableDelayedOpenAccess', 'delayedOpenAccessDuration', 'delayedOpenAccessPolicy', 'enableOpenAccessNotification', 'enableAuthorSelfArchive', 'authorSelfArchivePolicy', 'enableSubscriptionExpiryReminderBeforeMonths', 'numMonthsBeforeSubscriptionExpiryReminder', 'enableSubscriptionExpiryReminderBeforeWeeks', 'numWeeksBeforeSubscriptionExpiryReminder', 'enableSubscriptionExpiryReminderAfterWeeks', 'numWeeksAfterSubscriptionExpiryReminder', 'enableSubscriptionExpiryReminderAfterMonths', 'numMonthsAfterSubscriptionExpiryReminder'));
 
 		// If delayed open access selected, ensure a valid duration is provided
 		if ($this->_data['enableDelayedOpenAccess'] == 1) {
@@ -167,9 +176,15 @@ class SubscriptionPolicyForm extends Form {
 		$journal = &Request::getJournal();
 		$journalId = $journal->getJournalId();
 	
+		$journalSettingsDao->updateSetting($journalId, 'subscriptionName', $this->getData('subscriptionName'), 'string');
+		$journalSettingsDao->updateSetting($journalId, 'subscriptionEmail', $this->getData('subscriptionEmail'), 'string');
+		$journalSettingsDao->updateSetting($journalId, 'subscriptionPhone', $this->getData('subscriptionPhone'), 'string');
+		$journalSettingsDao->updateSetting($journalId, 'subscriptionFax', $this->getData('subscriptionFax'), 'string');
+		$journalSettingsDao->updateSetting($journalId, 'subscriptionMailingAddress', $this->getData('subscriptionMailingAddress'), 'string');
 		$journalSettingsDao->updateSetting($journalId, 'subscriptionAdditionalInformation', $this->getData('subscriptionAdditionalInformation'), 'string');
 		$journalSettingsDao->updateSetting($journalId, 'enableDelayedOpenAccess', $this->getData('enableDelayedOpenAccess') == null ? 0 : $this->getData('enableDelayedOpenAccess'), 'bool');
 		$journalSettingsDao->updateSetting($journalId, 'delayedOpenAccessDuration', $this->getData('delayedOpenAccessDuration'), 'int');
+		$journalSettingsDao->updateSetting($journalId, 'delayedOpenAccessPolicy', $this->getData('delayedOpenAccessPolicy'), 'string');
 		$journalSettingsDao->updateSetting($journalId, 'enableOpenAccessNotification', $this->getData('enableOpenAccessNotification') == null ? 0 : $this->getData('enableOpenAccessNotification'), 'bool');
 		$journalSettingsDao->updateSetting($journalId, 'enableAuthorSelfArchive', $this->getData('enableAuthorSelfArchive') == null ? 0 : $this->getData('enableAuthorSelfArchive'), 'bool');
 		$journalSettingsDao->updateSetting($journalId, 'authorSelfArchivePolicy', $this->getData('authorSelfArchivePolicy'), 'string');

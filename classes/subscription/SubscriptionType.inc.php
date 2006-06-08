@@ -302,7 +302,7 @@ class SubscriptionType extends DataObject {
 	 * @return string
 	 */
 	function getSummaryString() {
-		return $this->getTypeName() . ' - ' . $this->getDurationYearsMonths() . ' - ' . sprintf('%.2f', $this->getCost()) . '(' . $this->getCurrencyStringShort() . ')';
+		return $this->getTypeName() . ' - ' . $this->getDurationYearsMonths() . ' - ' . sprintf('%.2f', $this->getCost()) . ' ' . $this->getCurrencyStringShort();
 	}
 }
 

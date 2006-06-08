@@ -106,6 +106,31 @@ class Upgrade extends Installer {
 		$rtDao->update('DROP TABLE rt_settings');
 		return true;
 	}
+
+`	/**
+	 * For upgrade to 2.1.1: Toggle public display flag for subscription types
+	 * to match UI update (#2213)
+	 */
+	function togglePublicDisplaySubscriptionTypes() {
+		$journalDao =& DAORegistry::getDAO('JournalDAO');
+		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
+
+		$journals =& $journalDao->getJournals();
+		while ($journal =& $journals->next()) {
+			$subscriptionTypes =& $subscriptionTypeDao->getSubscriptionTypesByJournalId($journal->getJournalId());
+			while ($subscriptionType =& $subscriptionTypes->next()) {
+				if ($subscriptionType->getPublic()) {
+					$subscriptionType->setPublic(0);
+				} else {
+					$subscriptionType->setPublic(1);
+				}
+				$subscriptionTypeDao->updateSubscriptionType($subscriptionType);
+				unset($subscriptionType);
+			}
+			unset($journal);
+		}
+		return true;
+	}
 }
 
 ?>

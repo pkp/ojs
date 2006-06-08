@@ -13,7 +13,7 @@
 {if $subscriptionId}
 	{assign var="pageTitle" value="manager.subscriptions.selectSubscriber"}
 {else}
-	{assign var="pageTitle" value="manager.subscriptions.create"}
+	{assign var="pageTitle" value="manager.subscriptions.select"}
 {/if}
 
 {include file="common/header.tpl"}

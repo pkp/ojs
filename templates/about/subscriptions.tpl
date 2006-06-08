@@ -50,7 +50,7 @@
 		<td colspan="4" class="headseparator">&nbsp;</td>
 	</tr>
 {iterate from=subscriptionTypes item=subscriptionType}
-	{if $subscriptionType->getPublic()}
+	{if !$subscriptionType->getPublic()}
 		<tr valign="top">
 			<td>{$subscriptionType->getTypeName()|escape}<br />{$subscriptionType->getDescription()|escape|nl2br}</td>
 			<td>{translate key=$subscriptionType->getFormatString()}</td>

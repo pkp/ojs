@@ -49,36 +49,34 @@
 		{/literal}
 	</script>
 
-<h3>{translate key="manager.subscriptionPolicies.openAccessOptions"}</h3>
-<p>{translate key="manager.subscriptionPolicies.openAccessOptionsDescription"}</p>
-
-	<h4>{translate key="manager.subscriptionPolicies.delayedOpenAccess"}</h4>
-	<input type="checkbox" name="enableDelayedOpenAccess" id="enableDelayedOpenAccess" value="1" onclick="toggleAllowSetDelayedOpenAccessDuration(this.form)" {if $enableDelayedOpenAccess} checked="checked"{/if} />&nbsp;
-	<label for="enableDelayedOpenAccess">{translate key="manager.subscriptionPolicies.delayedOpenAccessDescription1"}</label>
-	<select name="delayedOpenAccessDuration" id="delayedOpenAccessDuration" class="selectMenu" {if not $enableDelayedOpenAccess} disabled="disabled"{/if} />{html_options options=$validDuration selected=$delayedOpenAccessDuration}</select>
-	{translate key="manager.subscriptionPolicies.delayedOpenAccessDescription2"}
-
-	<p>
-	<input type="checkbox" name="enableOpenAccessNotification" id="enableOpenAccessNotification" value="1"{if !$scheduledTasksEnabled} disabled="disabled" {elseif $enableOpenAccessNotification} checked="checked"{/if} />&nbsp;
-	<label for="enableOpenAccessNotification">{translate key="manager.subscriptionPolicies.openAccessNotificationDescription"}</label>
-	{if !$scheduledTasksEnabled}
-		<br/>
-		{translate key="manager.subscriptionPolicies.openAccessNotificationDisabled"}
-	{/if}
-	</p>
-<p>
-	<h4>{translate key="manager.subscriptionPolicies.authorSelfArchive"}</h4>
-	<input type="checkbox" name="enableAuthorSelfArchive" id="enableAuthorSelfArchive" value="1"{if $enableAuthorSelfArchive} checked="checked"{/if} />&nbsp;
-	<label for="enableAuthorSelfArchive">{translate key="manager.subscriptionPolicies.authorSelfArchiveDescription"}</label>
-</p>
-<p>
-	<textarea name="authorSelfArchivePolicy" id="authorSelfArchivePolicy" rows="12" cols="60" class="textArea">{$authorSelfArchivePolicy|escape}</textarea>
-	<br />
-	<span class="instruct">{translate key="manager.subscriptionPolicies.htmlInstructions"}</span>
-</p>
+<h3>{translate key="manager.subscriptionPolicies.subscriptionContact"}</h3>
+<p>{translate key="manager.subscriptionPolicies.subscriptionContactDescription"}</p>
+<table width="100%" class="data">
+	<tr valign="top">
+		<td width="20%" class="label">{fieldLabel name="subscriptionName" key="user.name"}</td>
+		<td width="80%" class="value"><input type="text" name="subscriptionName" id="subscriptionName" value="{$subscriptionName|escape}" size="30" maxlength="60" class="textField" /></td>
+	</tr>
+	<tr valign="top">
+		<td width="20%" class="label">{fieldLabel name="subscriptionEmail" key="user.email"}</td>
+		<td width="80%" class="value"><input type="text" name="subscriptionEmail" id="subscriptionEmail" value="{$subscriptionEmail|escape}" size="30" maxlength="90" class="textField" /></td>
+	</tr>
+	<tr valign="top">
+		<td width="20%" class="label">{fieldLabel name="subscriptionPhone" key="user.phone"}</td>
+		<td width="80%" class="value"><input type="text" name="subscriptionPhone" id="subscriptionPhone" value="{$subscriptionPhone|escape}" size="15" maxlength="24" class="textField" /></td>
+	</tr>
+	<tr valign="top">
+		<td width="20%" class="label">{fieldLabel name="subscriptionFax" key="user.fax"}</td>
+		<td width="80%" class="value"><input type="text" name="subscriptionFax" id="subscriptionFax" value="{$subscriptionFax|escape}" size="15" maxlength="24" class="textField" /></td>
+	</tr>
+	<tr valign="top">
+		<td width="20%" class="label">{fieldLabel name="subscriptionMailingAddress" key="common.mailingAddress"}</td>
+		<td width="80%" class="value"><textarea name="subscriptionMailingAddress" id="subscriptionMailingAddress" rows="6" cols="40" class="textArea">{$subscriptionMailingAddress|escape}</textarea></td>
+	</tr>
+</table>
 
 
 <div class="separator"></div>
+
 
 <h3>{translate key="manager.subscriptionPolicies.subscriptionAdditionalInformation"}</h3>
 <p>{translate key="manager.subscriptionPolicies.subscriptionAdditionalInformationDescription"}</p>
@@ -88,7 +86,9 @@
 	<span class="instruct">{translate key="manager.subscriptionPolicies.htmlInstructions"}</span>
 </p>
 
+
 <div class="separator"></div>
+
 
 <h3>{translate key="manager.subscriptionPolicies.expiryReminders"}</h3>
 <p>{translate key="manager.subscriptionPolicies.expiryRemindersDescription"}</p>
@@ -123,7 +123,50 @@
 	{translate key="manager.subscriptionPolicies.expiryRemindersDisabled"}
 {/if}
 
+
 <div class="separator"></div>
+
+
+<h3>{translate key="manager.subscriptionPolicies.openAccessOptions"}</h3>
+<p>{translate key="manager.subscriptionPolicies.openAccessOptionsDescription"}</p>
+
+	<h4>{translate key="manager.subscriptionPolicies.delayedOpenAccess"}</h4>
+	<p>{translate key="manager.subscriptionPolicies.delayedOpenAccessDescription"}</p>
+	<input type="checkbox" name="enableDelayedOpenAccess" id="enableDelayedOpenAccess" value="1" onclick="toggleAllowSetDelayedOpenAccessDuration(this.form)" {if $enableDelayedOpenAccess} checked="checked"{/if} />&nbsp;
+	<label for="enableDelayedOpenAccess">{translate key="manager.subscriptionPolicies.delayedOpenAccessDescription1"}</label>
+	<select name="delayedOpenAccessDuration" id="delayedOpenAccessDuration" class="selectMenu" {if not $enableDelayedOpenAccess} disabled="disabled"{/if} />{html_options options=$validDuration selected=$delayedOpenAccessDuration}</select>
+	{translate key="manager.subscriptionPolicies.delayedOpenAccessDescription2"}
+
+	<p>
+	<input type="checkbox" name="enableOpenAccessNotification" id="enableOpenAccessNotification" value="1"{if !$scheduledTasksEnabled} disabled="disabled" {elseif $enableOpenAccessNotification} checked="checked"{/if} />&nbsp;
+	<label for="enableOpenAccessNotification">{translate key="manager.subscriptionPolicies.openAccessNotificationDescription"}</label>
+	{if !$scheduledTasksEnabled}
+		<br/>
+		{translate key="manager.subscriptionPolicies.openAccessNotificationDisabled"}
+	{/if}
+	</p>
+
+	<p>{translate key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription"}</p>
+	<p>
+	<textarea name="delayedOpenAccessPolicy" id="delayedOpenAccessPolicy" rows="12" cols="60" class="textArea">{$delayedOpenAccessPolicy|escape}</textarea>
+	<br />
+	<span class="instruct">{translate key="manager.subscriptionPolicies.htmlInstructions"}</span>
+	</p>
+
+<p>
+	<h4>{translate key="manager.subscriptionPolicies.authorSelfArchive"}</h4>
+	<input type="checkbox" name="enableAuthorSelfArchive" id="enableAuthorSelfArchive" value="1"{if $enableAuthorSelfArchive} checked="checked"{/if} />&nbsp;
+	<label for="enableAuthorSelfArchive">{translate key="manager.subscriptionPolicies.authorSelfArchiveDescription"}</label>
+</p>
+<p>
+	<textarea name="authorSelfArchivePolicy" id="authorSelfArchivePolicy" rows="12" cols="60" class="textArea">{$authorSelfArchivePolicy|escape}</textarea>
+	<br />
+	<span class="instruct">{translate key="manager.subscriptionPolicies.htmlInstructions"}</span>
+</p>
+
+
+<div class="separator"></div>
+
 
 <p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url op="subscriptionPolicies" escape=false}'" /></p>
 
