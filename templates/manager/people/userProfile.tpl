@@ -70,7 +70,7 @@
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="common.mailingAddress"}</td>
-		<td class="value">{$user->getMailingAddress()|escape|nl2br|default:"&mdash;"}</td>
+		<td class="value">{$user->getMailingAddress()|strip_unsafe_html|nl2br|default:"&mdash;"}</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="common.country"}</td>
