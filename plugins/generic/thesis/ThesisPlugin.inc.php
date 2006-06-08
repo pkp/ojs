@@ -24,8 +24,8 @@ class ThesisPlugin extends GenericPlugin {
 	 * 	the plugin will not be registered.
 	 */
 	function register($category, $path) {
-		if (!Config::getVar('general', 'installed')) return false;
 		$success = parent::register($category, $path);
+		if (!Config::getVar('general', 'installed')) return false;
 		$this->addLocaleData();
 		if ($success) {
 			$this->import('ThesisDAO');
