@@ -70,16 +70,15 @@
 
 <table width="100%" class="data">
 	<tr valign="top">
-		<td width="5%" class="label"><input type="checkbox" name="metaDiscipline" id="metaDiscipline" value="1"{if $metaDiscipline} checked="checked"{/if} /></td>
+		<td width="5%" class="label" valign="bottom"><input type="checkbox" name="metaDiscipline" id="metaDiscipline" value="1"{if $metaDiscipline} checked="checked"{/if} /></td>
 		<td width="95%" class="value">
-			<strong>{fieldLabel name="metaDiscipline" key="manager.setup.discipline"}</strong>
-			<br />
-			<span class="instruct">{translate key="manager.setup.disciplineDescription"}</span>
+			<h4>{fieldLabel name="metaDiscipline" key="manager.setup.discipline"}</h4>
 		</td>
 	</tr>
 	<tr valign="top">
 		<td>&nbsp;</td>
 		<td class="value">
+			<span class="instruct">{translate key="manager.setup.disciplineDescription"}</span><br/>
 			<span class="instruct">{translate key="manager.setup.disciplineProvideExamples"}:</span>
 			<br />
 			<input type="text" name="metaDisciplineExamples" id="metaDisciplineExamples" value="{$metaDisciplineExamples|escape}" size="60" maxlength="255" class="textField" />
@@ -93,9 +92,9 @@
 	</tr>
 	
 	<tr valign="top">
-		<td width="5%" class="label"><input type="checkbox" name="metaSubjectClass" id="metaSubjectClass" value="1"{if $metaSubjectClass} checked="checked"{/if} /></td>
+		<td width="5%" class="label" valign="bottom"><input type="checkbox" name="metaSubjectClass" id="metaSubjectClass" value="1"{if $metaSubjectClass} checked="checked"{/if} /></td>
 		<td width="95%" class="value">
-			<strong>{fieldLabel name="metaSubjectClass" key="manager.setup.subjectClassification"}</strong>
+			<h4>{fieldLabel name="metaSubjectClass" key="manager.setup.subjectClassification"}</h4>
 		</td>
 	</tr>
 	<tr valign="top">
@@ -120,9 +119,9 @@
 	</tr>
 	
 	<tr valign="top">
-		<td width="5%" class="label"><input type="checkbox" name="metaSubject" id="metaSubject" value="1"{if $metaSubject} checked="checked"{/if} /></td>
+		<td width="5%" class="label" valign="bottom"><input type="checkbox" name="metaSubject" id="metaSubject" value="1"{if $metaSubject} checked="checked"{/if} /></td>
 		<td width="95%" class="value">
-			<strong>{fieldLabel name="metaSubject" key="manager.setup.subjectKeywordTopic"}</strong>
+			<h4>{fieldLabel name="metaSubject" key="manager.setup.subjectKeywordTopic"}</h4>
 		</td>
 	</tr>
 	<tr valign="top">
@@ -141,11 +140,9 @@
 	</tr>
 	
 	<tr valign="top">
-		<td width="5%" class="label"><input type="checkbox" name="metaCoverage" id="metaCoverage" value="1"{if $metaCoverage} checked="checked"{/if} /></td>
+		<td width="5%" class="label" valign="bottom"><input type="checkbox" name="metaCoverage" id="metaCoverage" value="1"{if $metaCoverage} checked="checked"{/if} /></td>
 		<td width="95%" class="value">
-			<strong>{fieldLabel name="metaCoverage" key="manager.setup.coverage"}</strong>
-			<br />
-			<span class="instruct">{translate key="manager.setup.coverageDescription"}</span>
+			<h4>{fieldLabel name="metaCoverage" key="manager.setup.coverage"}</h4>
 		</td>
 	</tr>
 	<tr>
@@ -154,6 +151,7 @@
 	<tr valign="top">
 		<td>&nbsp;</td>
 		<td class="value">
+			<span class="instruct">{translate key="manager.setup.coverageDescription"}</span><br/>
 			<span class="instruct">{translate key="manager.setup.coverageGeoProvideExamples"}:</span>
 			<br />
 			<input type="text" name="metaCoverageGeoExamples" id="metaCoverageGeoExamples" value="{$metaCoverageGeoExamples|escape}" size="60" maxlength="255" class="textField" />
@@ -193,9 +191,9 @@
 	</tr>
 	
 	<tr valign="top">
-		<td width="5%" class="label"><input type="checkbox" name="metaType" id="metaType" value="1"{if $metaType} checked="checked"{/if} /></td>
+		<td width="5%" class="label" valign="bottom"><input type="checkbox" name="metaType" id="metaType" value="1"{if $metaType} checked="checked"{/if} /></td>
 		<td width="95%" class="value">
-			<strong>{fieldLabel name="metaType" key="manager.setup.typeMethodApproach"}</strong>
+			<h4>{fieldLabel name="metaType" key="manager.setup.typeMethodApproach"}</h4>
 		</td>
 	</tr>
 	<tr valign="top">
