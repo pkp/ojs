@@ -332,11 +332,11 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$templateMgr->assign('articleId', $articleId);
 			$templateMgr->assign('reviewerStatistics', $sectionEditorSubmissionDao->getReviewerStatistics($journal->getJournalId()));
 			$templateMgr->assign('fieldOptions', Array(
+				USER_FIELD_INTERESTS => 'user.interests',
 				USER_FIELD_FIRSTNAME => 'user.firstName',
 				USER_FIELD_LASTNAME => 'user.lastName',
 				USER_FIELD_USERNAME => 'user.username',
-				USER_FIELD_EMAIL => 'user.email',
-				USER_FIELD_INTERESTS => 'user.interests'
+				USER_FIELD_EMAIL => 'user.email'
 			));
 			$templateMgr->assign('completedReviewCounts', $reviewAssignmentDao->getCompletedReviewCounts($journal->getJournalId()));
 			$templateMgr->assign('rateReviewerOnQuality', $journal->getSetting('rateReviewerOnQuality'));
@@ -415,10 +415,10 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('fieldOptions', Array(
+			USER_FIELD_INTERESTS => 'user.interests',
 			USER_FIELD_FIRSTNAME => 'user.firstName',
 			USER_FIELD_LASTNAME => 'user.lastName',
 			USER_FIELD_USERNAME => 'user.username',
-			USER_FIELD_INTERESTS => 'user.interests',
 			USER_FIELD_EMAIL => 'user.email'
 		));
 		$templateMgr->assign('roleId', $roleId);

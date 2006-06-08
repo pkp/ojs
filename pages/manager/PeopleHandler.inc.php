@@ -119,13 +119,14 @@ class PeopleHandler extends ManagerHandler {
 			$templateMgr->assign('qualityRatings', $journal->getSetting('rateReviewerOnQuality') ? $reviewAssignmentDao->getAverageQualityRatings($journal->getJournalId()) : null);
 		}
 		$templateMgr->assign('helpTopicId', $helpTopicId);
-		$templateMgr->assign('fieldOptions', Array(
+		$fieldOptions = Array(
 			USER_FIELD_FIRSTNAME => 'user.firstName',
 			USER_FIELD_LASTNAME => 'user.lastName',
 			USER_FIELD_USERNAME => 'user.username',
-			USER_FIELD_EMAIL => 'user.email',
-			USER_FIELD_INTERESTS => 'user.interests'
-		));
+			USER_FIELD_EMAIL => 'user.email'
+		);
+		if ($roleId == ROLE_ID_REVIEWER) $fieldOptions = array_merge(array(USER_FIELD_INTERESTS => 'user.interests'), $fieldOptions);
+		$templateMgr->assign('fieldOptions', $fieldOptions);
 		$templateMgr->assign('rolePath', $roleDao->getRolePath($roleId));
 		$templateMgr->assign('alphaList', explode(' ', Locale::translate('common.alphaList')));
 		$templateMgr->assign('roleSymbolic', $roleSymbolic);
@@ -174,13 +175,14 @@ class PeopleHandler extends ManagerHandler {
 		$templateMgr->assign('searchInitial', $searchInitial);
 
 		$templateMgr->assign('roleId', $roleId);
-		$templateMgr->assign('fieldOptions', Array(
+		$fieldOptions = Array(
 			USER_FIELD_FIRSTNAME => 'user.firstName',
 			USER_FIELD_LASTNAME => 'user.lastName',
 			USER_FIELD_USERNAME => 'user.username',
-			USER_FIELD_INTERESTS => 'user.interests',
 			USER_FIELD_EMAIL => 'user.email'
-		));
+		);
+		if ($roleId == ROLE_ID_REVIEWER) $fieldOptions = array_merge(array(USER_FIELD_INTERESTS => 'user.interests'), $fieldOptions);
+		$templateMgr->assign('fieldOptions', $fieldOptions);
 		$templateMgr->assign_by_ref('users', $users);
 		$templateMgr->assign_by_ref('thisUser', Request::getUser());
 		$templateMgr->assign('alphaList', explode(' ', Locale::translate('common.alphaList')));
