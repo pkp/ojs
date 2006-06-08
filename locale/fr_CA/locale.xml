@@ -1528,7 +1528,7 @@ avec un signe plus (+) indiquant que la révision est en cours.]]></message>
 	<message key="editor.article.rateReviewer">Classer le réviseur</message>
 	<message key="editor.article.reviewerRating.veryGood">5 Excellent</message>
 	<message key="editor.article.reviewerRating.good">4 Bon</message>
-	<message key="editor.article.reviewerRating.average">3 Moyen</message>
+	<message key="editor.article.reviewerRating.average">3</message>
 	<message key="editor.article.reviewerRating.poor">2 Pauvre</message>
 	<message key="editor.article.reviewerRating.veryPoor">1 Faible</message>
 	<message key="editor.article.quality">Classification</message>

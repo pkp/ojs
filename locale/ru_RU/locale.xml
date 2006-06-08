@@ -1549,7 +1549,7 @@ with a plus sign (+) indicating review-in-progress.]]></message>
 	<message key="editor.article.rateReviewer">Оценить работу рецензента</message>
 	<message key="editor.article.reviewerRating.veryGood">5 Отл</message>
 	<message key="editor.article.reviewerRating.good">4 Хор</message>
-	<message key="editor.article.reviewerRating.average">3 Удовл</message>
+	<message key="editor.article.reviewerRating.average">3</message>
 	<message key="editor.article.reviewerRating.poor">2 Плохо</message>
 	<message key="editor.article.reviewerRating.veryPoor">1 Хуже некуда</message>
 

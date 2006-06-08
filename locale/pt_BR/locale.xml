@@ -1490,7 +1490,7 @@ com sinal positivo (+) indicando avaliação em progresso.]]></message>
 	<message key="editor.article.rateReviewer">Classificar Avaliador</message>
 	<message key="editor.article.reviewerRating.veryGood">5 Bom</message>
 	<message key="editor.article.reviewerRating.good">4</message>
-	<message key="editor.article.reviewerRating.average">3 Médio</message>
+	<message key="editor.article.reviewerRating.average">3</message>
 	<message key="editor.article.reviewerRating.poor">2</message>
 	<message key="editor.article.reviewerRating.veryPoor">1 Fraco</message>
 	<message key="editor.article.quality">Classificação</message>
