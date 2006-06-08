@@ -842,9 +842,12 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="manager.setup.gettingDownTheDetails">Step 1. Getting Down the Details</message>
 	<message key="manager.setup.generalInformation">General Information</message>
 	<message key="manager.setup.journalInitials">Journal initials</message>
+	<message key="manager.setup.journalAbbreviation">Journal Abbreviation</message>	
 	<message key="manager.setup.printIssn">Print ISSN</message>
 	<message key="manager.setup.onlineIssn">Online ISSN</message>
 	<message key="manager.setup.issnDescription"><![CDATA[The ISSN (International Standard Serial Number) is an eight-digit number which identifies periodical publications as such, including electronic serials. It is managed by a world wide network of National Centres coordinated by an International Centre based in Paris, backed by Unesco and the French Government. A number can be obtained from the <a href="http://www.issn.org" target="_blank">ISSN web site</a>.  This can be done at any point in operating the journal.]]></message>
+	<message key="manager.setup.doiPrefix">DOI Prefix</message>
+	<message key="manager.setup.doiPrefixDescription"><![CDATA[The DOI (Digital Object Identifier) Prefix is assigned by <a href="http://www.crossref.org">CrossRef</a> and is in the format 10.xxxx (e.g. 10.1234).]]></message>
 	<message key="manager.setup.mailingAddressDescription">The journal's physical location and mailing address.</message>
 	<message key="manager.setup.sectionsAndSectionEditors">Sections and Section Editors</message>
 	<message key="manager.setup.editorialReviewBoard">Editorial / Review Board</message>

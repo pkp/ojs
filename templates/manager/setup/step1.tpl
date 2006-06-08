@@ -27,6 +27,10 @@
 		<td width="80%" class="value"><input type="text" name="journalInitials" id="journalInitials" value="{$journalInitials|escape}" size="8" maxlength="16" class="textField" /></td>
 	</tr>
 	<tr valign="top">
+		<td width="20%" class="label">{fieldLabel name="journalAbbreviation" key="manager.setup.journalAbbreviation"}</td>
+		<td width="80%" class="value"><input type="text" name="journalAbbreviation" id="journalAbbreviation" value="{$journalAbbreviation|escape}" size="40" maxlength="120" class="textField" /></td>
+	</tr>
+	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="printIssn" key="manager.setup.printIssn"}</td>
 		<td width="80%" class="value"><input type="text" name="printIssn" id="onlineIssn" value="{$printIssn|escape}" size="8" maxlength="16" class="textField" /></td>
 	</tr>
@@ -37,6 +41,13 @@
 			<br />
 			<span class="instruct">{translate key="manager.setup.issnDescription"}</span>
 		</td>
+	</tr>
+	<tr valign="top">
+		<td width="20%" class="label">{fieldLabel name="doiPrefix" key="manager.setup.doiPrefix"}</td>
+		<td width="80%" class="value"><input type="text" name="doiPrefix" value="{$doiPrefix|escape}" size="8" maxlength="8" id="doiPrefix" class="textField" />
+		<br />
+		<span class="instruct">{translate key="manager.setup.doiPrefixDescription"}</span>
+		</td>		
 	</tr>
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="mailingAddress" key="common.mailingAddress"}</td>
