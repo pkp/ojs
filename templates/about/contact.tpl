@@ -32,7 +32,7 @@
 		{$journalSettings.contactAffiliation|escape}<br />
 	{/if}
 	{if !empty($journalSettings.contactMailingAddress)}
-		{$journalSettings.contactMailingAddress|escape|nl2br}<br />
+		{$journalSettings.contactMailingAddress|nl2br}<br />
 	{/if}
 	{if !empty($journalSettings.contactPhone)}
 		{translate key="about.contact.phone"}: {$journalSettings.contactPhone|escape}<br />
