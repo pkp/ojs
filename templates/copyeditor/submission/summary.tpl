@@ -35,7 +35,15 @@
 			{foreach from=$editAssignments item=editAssignment}
 				{assign var=emailString value="`$editAssignment->getEditorFullName()` <`$editAssignment->getEditorEmail()`>"}
 				{url|assign:"url" page="user" op="email" redirectUrl=$currentUrl to=$emailString|to_array subject=$submission->getArticleTitle()|strip_tags articleId=$submission->getArticleId()}
-				{$editAssignment->getEditorFullName()|escape} {icon name="mail" url=$url}<br/>
+				{$editAssignment->getEditorFullName()|escape} {icon name="mail" url=$url}
+				{if !$editAssignment->getCanEdit() || !$editAssignment->getCanReview()}
+					{if $editAssignment->getCanEdit()}
+						({translate key="submission.editing"})
+					{else}
+						({translate key="submission.review"})
+					{/if}
+				{/if}
+				<br/>
 			{foreachelse}
 				{translate key="common.noneAssigned"}
 			{/foreach}
