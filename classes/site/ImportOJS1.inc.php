@@ -834,7 +834,6 @@ class ImportOJS1 {
 		}
 
 		// Import custom section ordering
-		$count = 0;
 		$sectionDao = &DAORegistry::getDAO('SectionDAO');
 		$result = &$this->importDao->retrieve('SELECT * FROM tblissuestosections ORDER BY nSectionRank');
 		while (!$result->EOF) {
@@ -844,7 +843,7 @@ class ImportOJS1 {
 			$issueId = isset($this->issueMap[$row['fkIssueID']])?$this->issueMap[$row['fkIssueID']]:null;
 
 			if (isset($sectionId) && isset($issueId)) {
-				$sectionDao->_insertCustomSectionOrder($issueId, $sectionId, $count);
+				$sectionDao->_insertCustomSectionOrder($issueId, $sectionId, $row['nSectionRank']);
 			}
 			$result->MoveNext();
 		}
