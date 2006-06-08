@@ -52,7 +52,7 @@ class FeedHandler extends Handler {
             //Get the associated Plugin so we can then grab its TemplatePath
 			$webFeedPlugin = &PluginRegistry::getPlugin('generic', 'FeedPlugin');
 			
-            $templateMgr->display($webFeedPlugin->getTemplatePath() . "/templates/atom.tpl", 'text/xml');
+            $templateMgr->display($webFeedPlugin->getTemplatePath() . "/templates/atom.tpl", 'application/atom+xml');
         }
         
     }
@@ -82,7 +82,7 @@ class FeedHandler extends Handler {
             
            	//Get the associated Plugin so we can then grab its TemplatePath
 			$webFeedPlugin = &PluginRegistry::getPlugin('generic', 'FeedPlugin');
-            $templateMgr->display($webFeedPlugin->getTemplatePath() . "/templates/rss2.tpl", 'text/xml');
+            $templateMgr->display($webFeedPlugin->getTemplatePath() . "/templates/rss2.tpl", 'application/rss+xml');
         }
     }
     
@@ -107,7 +107,7 @@ class FeedHandler extends Handler {
             
            	//Get the associated Plugin so we can then grab its TemplatePath
 			$webFeedPlugin = &PluginRegistry::getPlugin('generic', 'FeedPlugin');
-            $templateMgr->display($webFeedPlugin->getTemplatePath() . "/templates/rss.tpl", 'text/xml');
+            $templateMgr->display($webFeedPlugin->getTemplatePath() . "/templates/rss.tpl", 'application/rdf+xml');
         }
     }
     
