@@ -59,10 +59,11 @@ class FeedPlugin extends GenericPlugin {
 	
 				$feedUrl1 = '<link rel="alternate" type="application/atom+xml" href="'.$baseUrl.'/index.php/'.$currentJournal->getPath().'/feed/atom">';
 				$feedUrl2 = '<link rel="alternate" type="application/rdf+xml" href="'.$baseUrl.'/index.php/'.$currentJournal->getPath().'/feed/rss">';
+				$feedUrl3 = '<link rel="alternate" type="application/rss+xml" href="'.$baseUrl.'/index.php/'.$currentJournal->getPath().'/feed/rss2">';
 
 				$imageLinks = $this->getTemplatePath().'templates/links.tpl';
 	
-				$templateManager->assign('additionalHeadData', $additionalHeadData."\n".$feedUrl1."\n".$feedUrl2);
+				$templateManager->assign('additionalHeadData', $additionalHeadData."\n".$feedUrl1."\n".$feedUrl2."\n".$feedUrl3);
 				
 				// if no explicit sidebar template is specified,
 				// include the web feed links on the sidebar

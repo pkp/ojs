@@ -32,7 +32,11 @@ class FeedHandler extends Handler {
         $issue = &$issueDao->getCurrentIssue($journal->getJournalId());
         
         $templateMgr = &TemplateManager::getManager();
-        
+
+		$versionDao =& DAORegistry::getDAO('VersionDAO');
+		$version =& $versionDao->getCurrentVersion();
+        $templateMgr->assign('ojsVersion', $version->getVersionString());
+
         $publisher = $journal->getSetting('publisher');
         $institution = $publisher['institution'];
         
@@ -45,12 +49,41 @@ class FeedHandler extends Handler {
             $templateMgr->assign('publisher', $institution);
             $templateMgr->assign('showToc', true);
             
-            	//Get the associated Plugin so we can then grab its TemplatePath
+            //Get the associated Plugin so we can then grab its TemplatePath
 			$webFeedPlugin = &PluginRegistry::getPlugin('generic', 'FeedPlugin');
 			
-            $templateMgr->display($webFeedPlugin->getTemplatePath() . "/templates/atom.tpl", 'application/atom+xml');
+            $templateMgr->display($webFeedPlugin->getTemplatePath() . "/templates/atom.tpl", 'text/xml');
         }
         
+    }
+
+    /**
+    * Display current issue page as RSS 2.0
+    */    
+    function rss2() {        
+        $journal = &Request::getJournal();
+
+        $issueDao = &DAORegistry::getDAO('IssueDAO');
+        $issue = &$issueDao->getCurrentIssue($journal->getJournalId());
+        
+        $templateMgr = &TemplateManager::getManager();
+
+		$versionDao =& DAORegistry::getDAO('VersionDAO');
+		$version =& $versionDao->getCurrentVersion();
+        $templateMgr->assign('ojsVersion', $version->getVersionString());
+
+        if ($issue != null) {
+            $publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
+            $publishedArticles = &$publishedArticleDao->getPublishedArticlesInSections($issue->getIssueId());
+            $templateMgr->assign_by_ref('publishedArticles', $publishedArticles);
+            $templateMgr->assign_by_ref('journal', $journal);
+            $templateMgr->assign_by_ref('issue', $issue);
+            $templateMgr->assign('showToc', true);
+            
+           	//Get the associated Plugin so we can then grab its TemplatePath
+			$webFeedPlugin = &PluginRegistry::getPlugin('generic', 'FeedPlugin');
+            $templateMgr->display($webFeedPlugin->getTemplatePath() . "/templates/rss2.tpl", 'text/xml');
+        }
     }
     
     /**
@@ -58,7 +91,7 @@ class FeedHandler extends Handler {
     */    
     function rss() {        
         $journal = &Request::getJournal();
-        
+
         $issueDao = &DAORegistry::getDAO('IssueDAO');
         $issue = &$issueDao->getCurrentIssue($journal->getJournalId());
         
@@ -74,7 +107,7 @@ class FeedHandler extends Handler {
             
            	//Get the associated Plugin so we can then grab its TemplatePath
 			$webFeedPlugin = &PluginRegistry::getPlugin('generic', 'FeedPlugin');
-            $templateMgr->display($webFeedPlugin->getTemplatePath() . "/templates/rss.tpl", 'application/rdf+xml');
+            $templateMgr->display($webFeedPlugin->getTemplatePath() . "/templates/rss.tpl", 'text/xml');
         }
     }
     
