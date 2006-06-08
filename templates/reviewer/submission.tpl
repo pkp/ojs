@@ -55,7 +55,15 @@ function confirmSubmissionCheck() {
 	{/if}
 			{assign var=emailString value="`$editAssignment->getEditorFullName()` <`$editAssignment->getEditorEmail()`>"}
 			{url|assign:"url" page="user" op="email" to=$emailString|to_array redirectUrl=$currentUrl subject=$submission->getArticleTitle()|strip_tags articleId=$submission->getArticleId()}
-			{$editAssignment->getEditorFullName()|escape} {icon name="mail" url=$url}<br/>
+			{$editAssignment->getEditorFullName()|escape} {icon name="mail" url=$url}
+			{if !$editAssignment->getCanEdit() || !$editAssignment->getCanReview()}
+				{if $editAssignment->getCanEdit()}
+					({translate key="submission.editing"})
+				{else}
+					({translate key="submission.review"})
+				{/if}
+			{/if}
+			<br/>
 {/foreach}
 {if $notFirstEditAssignment}
 		</td>
