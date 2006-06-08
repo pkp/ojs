@@ -1546,7 +1546,7 @@ You may optionally provide the user with a reason for disabling their account.</
 	<message key="editor.article.toReviewer">To Reviewer</message>
 	<message key="editor.article.notifyReviewer">Notify Reviewer</message>
 	<message key="editor.article.initiateReview">Initiate Review</message>
-	<message key="editor.article.cancelReview">Cancel Review Request</message>
+	<message key="editor.article.cancelReview">Cancel Request</message>
 	<message key="editor.article.clearReview">Clear Reviewer</message>
 	<message key="editor.article.enterRecommendation">Enter Recommendation</message>
 	<message key="editor.article.enterReviewerRecommendation">Enter Reviewer Recommendation</message>
@@ -1577,13 +1577,12 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	<message key="editor.article.editorsCopyedit">Editor's Copyedit</message>
 	<message key="editor.article.showAuthor">Let author view file</message>
 	<message key="editor.article.showCopyeditor">Show version to copyeditor</message>
-	<message key="editor.article.rateReviewer">Rate Reviewer</message>
+	<message key="editor.article.rateReviewer">Reviewer rating</message>
 	<message key="editor.article.reviewerRating.veryGood">5 High</message>
 	<message key="editor.article.reviewerRating.good">4</message>
-	<message key="editor.article.reviewerRating.average">3 Average</message>
+	<message key="editor.article.reviewerRating.average">3</message>
 	<message key="editor.article.reviewerRating.poor">2</message>
 	<message key="editor.article.reviewerRating.veryPoor">1 Low</message>
-	<message key="editor.article.quality">Rating</message>
 	<message key="editor.article.comments">Comments</message>
 	<message key="editor.article.saveRating">Save Rating</message>
 	<message key="editor.article.noneSelected">None Selected</message>

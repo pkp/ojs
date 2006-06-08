@@ -74,10 +74,10 @@
 			{/if}
 			<td width="80%" class="value nowrap">
 				<a href="{url op="downloadFile" path=$submission->getArticleId()|to_array:$suppFile->getFileId():$suppFile->getRevision()}" class="file">{$suppFile->getFileName()|escape}</a>&nbsp;&nbsp;
-				{$suppFile->getDateModified()|date_format:$dateFormatShort}
-					<label for="show">{translate key="editor.article.showSuppFile"}</label>
-					<input type="checkbox" name="show" id="show" value="1"{if $suppFile->getShowReviewers()==1} checked="checked"{/if}/>
-					<input type="submit" name="submit" value="{translate key="common.record"}" class="button" />
+				{$suppFile->getDateModified()|date_format:$dateFormatShort}&nbsp;&nbsp;
+				<label for="show">{translate key="editor.article.showSuppFile"}</label>
+				<input type="checkbox" name="show" id="show" value="1"{if $suppFile->getShowReviewers()==1} checked="checked"{/if}/>
+				<input type="submit" name="submit" value="{translate key="common.record"}" class="button" />
 			</td>
 		</tr>
 	</form>
@@ -280,7 +280,6 @@
 			<form method="post" action="{url op="rateReviewer"}">
 				<input type="hidden" name="reviewId" value="{$reviewAssignment->getReviewId()}" />
 				<input type="hidden" name="articleId" value="{$submission->getArticleId()}" />
-				{translate key="editor.article.quality"}&nbsp;
 				<select name="quality" size="1" class="selectMenu">
 					{html_options_translate options=$reviewerRatingOptions selected=$reviewAssignment->getQuality()}
 				</select>&nbsp;&nbsp;
