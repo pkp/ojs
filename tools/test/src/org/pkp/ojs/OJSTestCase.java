@@ -35,12 +35,10 @@ abstract class OJSTestCase extends WebTestCase {
 	}
 
 	public void setUp() throws Exception {
-		final String baseUrlPropertyName = "ojs.baseurl";
-
 		p = new Properties();
 		p.load(new FileInputStream("testing.properties"));
 
-		String baseUrl = assumeProperty(baseUrlPropertyName, "Specify a base URL to the JUnit testing installation of OJS.");
+		String baseUrl = assumeProperty("baseUrl", "Specify a base URL to the JUnit testing installation of OJS.");
 
 		getTestContext().setBaseUrl(baseUrl);
 	}
@@ -65,6 +63,8 @@ abstract class OJSTestCase extends WebTestCase {
 	}
 
 	public void validate() throws Exception {
+		if (assumeProperty("disableValidator", "Set this property to true to disable validation.").equals("true")) return;
+
 		final String w3cUrl = "http://validator.w3.org/check";
 		ByteArrayOutputStream ba = new ByteArrayOutputStream();
 		dumpResponse(new PrintStream(ba));

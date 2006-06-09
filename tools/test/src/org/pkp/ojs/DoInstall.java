@@ -9,8 +9,10 @@ public class DoInstall extends OJSTestCase {
 	}
 
 	public void testInstall() throws Exception {
-		String filesDir = assumeProperty("ojs.filesdir", "Set this property to the files dir of the OJS install.");
-		String databaseDriver = assumeProperty("ojs.databasedriver", "Set this property to the PHP database driver name (e.g. mysql).");
+		if (assumeProperty("disableInstall", "Set this property to true to disable installation of OJS.").equals("true")) return;
+
+		String filesDir = assumeProperty("filesDir", "Set this property to the files dir of the OJS install.");
+		String databaseDriver = assumeProperty("databaseDriver", "Set this property to the PHP database driver name (e.g. mysql).");
 
 		log("Going to install page... ");
 		beginAt("/");

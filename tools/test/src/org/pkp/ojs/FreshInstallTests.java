@@ -63,6 +63,8 @@ public class FreshInstallTests extends OJSTestCase {
 		clickAndTest("Home");
 		assertTextPresent(siteIntro);
 
+		if (assumeProperty("disableJournalCreateDel", "Set this property to true to disable journal creation and deletion.").equals("true")) return;
+
 		logIn(adminLogin, adminPassword);
 		clickLinkWithText("User Home");
 		clickLinkWithText("Site Administrator");
@@ -81,15 +83,4 @@ public class FreshInstallTests extends OJSTestCase {
 		clickAndTest(journalTitle); // Go into management
 	}
 
-	public void testDeleteJournal() throws Exception {
-		log("Deleting test journal... ");
-		beginAt("/");
-		logIn(adminLogin, adminPassword);
-		clickLinkWithText("User Home");
-		clickLinkWithText("Site Administrator");
-		clickLinkWithText("Hosted Journals");
-		clickLinkWithText("Delete");
-		assertTextPresent("No journals have been created");
-		log("Done.\n");
-	}
 }
