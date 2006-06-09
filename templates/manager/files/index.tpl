@@ -71,7 +71,7 @@
 	<input type="submit" value="{translate key="manager.files.uploadFile"}" class="button" />
 </form>
 
-<form method="post" action="{url op="fileMakeDir" path=$currentDirexplode:"/"}" enctype="multipart/form-data">
+<form method="post" action="{url op="fileMakeDir" path=$currentDir|explode:"/"}" enctype="multipart/form-data">
 	<input type="text" size="20" maxlength="255" name="dirName" class="textField" />
 	<input type="submit" value="{translate key="manager.files.createDir"}" class="button" />
 </form>
