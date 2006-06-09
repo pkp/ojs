@@ -1729,8 +1729,7 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	<message key="author.track">Active Submissions</message>
 	<message key="author.submit.submitArticle">Submit an Article</message>
 	<message key="author.submit.stepsToSubmit">Five Steps to Submit</message>
-	<message key="author.submit.startHere">Start here to submit a manuscript to this journal.</message>
-	<message key="author.submit.startHereLink">Step one of the submission process</message>
+	<message key="author.submit.startHereLink">Click here to start the submission process</message>
 	<message key="author.submit.step1">Step 1. Starting the Submission</message>
 	<message key="author.submit.step2">Step 2. Entering the Submission's Metadata</message>
 	<message key="author.submit.step3">Step 3. Uploading the Submission</message>

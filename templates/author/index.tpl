@@ -21,7 +21,6 @@
 
 {include file="author/$pageToDisplay.tpl"}
 
-<p>{translate key="author.submit.startHere"}<br/>
 <a href="{url op="submit"}" class="action">{translate key="author.submit.startHereLink"}</a><br />
 </p>
 
