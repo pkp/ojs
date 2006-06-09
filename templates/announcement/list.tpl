@@ -16,9 +16,9 @@
 {iterate from=announcements item=announcement}
 	<tr valign="top">
 	{if $announcement->getTypeId() != null}
-		<td width="80%"><h4>{$announcement->getTypeName()}: {$announcement->getTitle()}</h4></td>
+		<td width="80%"><h4>{$announcement->getTypeName()|escape}: {$announcement->getTitle()|escape}</h4></td>
 	{else}
-		<td width="80%"><h4>{$announcement->getTitle()}</h4></td>
+		<td width="80%"><h4>{$announcement->getTitle()|escape}</h4></td>
 	{/if}
 		<td width="20%">&nbsp;</td>
 	</tr>

@@ -18,7 +18,7 @@
 		<strong>{$subscriptionName|escape}</strong><br />
 	{/if}
 	{if !empty($subscriptionMailingAddress)}
-		{$subscriptionMailingAddress|escape|nl2br}<br />
+		{$subscriptionMailingAddress|nl2br}<br />
 	{/if}
 	{if !empty($subscriptionPhone)}
 		{translate key="user.phone"}: {$subscriptionPhone|escape}<br />
@@ -52,7 +52,7 @@
 {iterate from=subscriptionTypes item=subscriptionType}
 	{if !$subscriptionType->getPublic()}
 		<tr valign="top">
-			<td>{$subscriptionType->getTypeName()|escape}<br />{$subscriptionType->getDescription()|escape|nl2br}</td>
+			<td>{$subscriptionType->getTypeName()|escape}<br />{$subscriptionType->getDescription()|nl2br}</td>
 			<td>{translate key=$subscriptionType->getFormatString()}</td>
 			<td>{$subscriptionType->getDurationYearsMonths()|escape}</td>
 			<td>{$subscriptionType->getCost()|string_format:"%.2f"}&nbsp;({$subscriptionType->getCurrencyStringShort()|escape})</td>
