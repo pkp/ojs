@@ -27,8 +27,13 @@ class XMLCustomWriter {
 		if (class_exists('DOMImplementation')) {
 			// Use the new (PHP 5.x) DOM
 			$impl = &new DOMImplementation();
-			$domdtd = $impl->createDocumentType($type, isset($url)?$dtd:'', isset($url)?$url:$dtd);
-			$doc = $impl->createDocument($version, '', $domdtd);
+			// only generate a DOCTYPE if type is non-empty 
+			if ($type != '') {
+				$domdtd = $impl->createDocumentType($type, isset($url)?$dtd:'', isset($url)?$url:$dtd);
+				$doc = $impl->createDocument($version, '', $domdtd);
+			} else {
+				$doc = $impl->createDocument($version, '');
+			}
 		} else {
 			// Use the XMLNode class
 			$doc = &new XMLNode();
