@@ -24,7 +24,6 @@ public class FreshInstallTests extends OJSTestCase {
 		clickAndTest("Not a user?");
 		clickAndTest("Register");
 		clickAndTest("Search");
-		clickAndTest("Journal Help");
 	}
 
 	public void testAdminFunctions() throws Exception {
@@ -80,5 +79,17 @@ public class FreshInstallTests extends OJSTestCase {
 		assertTextNotPresent("Errors occurred processing this form");
 		
 		clickAndTest(journalTitle); // Go into management
+	}
+
+	public void testDeleteJournal() throws Exception {
+		log("Deleting test journal... ");
+		beginAt("/");
+		logIn(adminLogin, adminPassword);
+		clickLinkWithText("User Home");
+		clickLinkWithText("Site Administrator");
+		clickLinkWithText("Hosted Journals");
+		clickLinkWithText("Delete");
+		assertTextPresent("No journals have been created");
+		log("Done.\n");
 	}
 }

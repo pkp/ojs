@@ -19,11 +19,16 @@ import org.apache.commons.httpclient.methods.multipart.StringPart;
 import java.io.File;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+import java.io.FileInputStream;
+
+import java.util.Properties;
 
 abstract class OJSTestCase extends WebTestCase {
 	final static String adminLogin = "test_admin";
 	final static String adminPassword = "test_admin_pass";
 	final static String adminEmail = "ojs-junit-admin@mailinator.com";
+
+	Properties p;
 
 	public OJSTestCase(String name) {
 		super(name);
@@ -31,14 +36,17 @@ abstract class OJSTestCase extends WebTestCase {
 
 	public void setUp() throws Exception {
 		final String baseUrlPropertyName = "ojs.baseurl";
-		String baseUrl = System.getProperty(baseUrlPropertyName);
-		if (baseUrl == null) throw new Exception(baseUrlPropertyName + " property not defined! Set this property to the base URL of the OJS web site to be tested.");
+
+		p = new Properties();
+		p.load(new FileInputStream("testing.properties"));
+
+		String baseUrl = assumeProperty(baseUrlPropertyName, "Specify a base URL to the JUnit testing installation of OJS.");
 
 		getTestContext().setBaseUrl(baseUrl);
 	}
 
 	public String assumeProperty(String name, String message) throws Exception {
-		String value = System.getProperty(name);
+		String value = p.getProperty(name);
 		if (value == null || value == "") throw new Exception(name + " property not defined! " + message);
 		return value;
 	}
@@ -103,5 +111,6 @@ abstract class OJSTestCase extends WebTestCase {
 
 	public void log(String text) {
 		System.err.print(text);
+		System.err.flush();
 	}
 }

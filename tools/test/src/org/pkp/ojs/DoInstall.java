@@ -1,5 +1,7 @@
 package org.pkp.ojs;
 
+import java.io.PrintStream;
+
 public class DoInstall extends OJSTestCase {
 
 	public DoInstall(String name) {
@@ -9,7 +11,8 @@ public class DoInstall extends OJSTestCase {
 	public void testInstall() throws Exception {
 		String filesDir = assumeProperty("ojs.filesdir", "Set this property to the files dir of the OJS install.");
 		String databaseDriver = assumeProperty("ojs.databasedriver", "Set this property to the PHP database driver name (e.g. mysql).");
-		
+
+		log("Going to install page... ");
 		beginAt("/");
 		usualTests();
 		assertLinkPresentWithText("OJS Installation");
@@ -31,8 +34,12 @@ public class DoInstall extends OJSTestCase {
 		setFormElement("databasePassword", "ojs2");
 		setFormElement("databaseName", "ojs2-junit");
 		setFormElement("oaiRepositoryId", "junit.ojs.localhost");
+		log("Done.\nSubmitting install form... ");
 		submit();
+		log("Done.\nTesting result...");
+		dumpResponse(new PrintStream(System.out));
 		assertTextPresent("Installation of OJS has completed successfully.");
 		usualTests();
+		log("Done.\n");
 	}
 }
