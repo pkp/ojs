@@ -1507,7 +1507,7 @@ You may optionally provide the user with a reason for disabling their account.</
 	<message key="editor.issues.removeCoverPage">Remove cover page image?</message>
 	<message key="editor.issues.invalidCoverPageFormat">Invalid cover page format. Accepted formats are .gif, .jpg, or .png.</message>
 	<message key="editor.issues.styleFile">Stylesheet</message>
-	<message key="editor.issues.invalidStyleFormat">Invalid stylesheet format. Ensure that the submitted file is a valid CSS.</message>
+	<message key="editor.issues.invalidStyleFormat">Invalid stylesheet format. Ensure that the submitted file is a valid CSS. (Note that stylesheets with comments at the beginning may be rejected.)</message>
 	<message key="editor.issues.removeStyleFile">Remove stylesheet?</message>
 	<message key="editor.issues.coverPageCaption">Cover caption</message>
 	<message key="editor.issues.showCoverPage">Create custom cover page for this issue.</message>
