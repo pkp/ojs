@@ -107,7 +107,7 @@ class Upgrade extends Installer {
 		return true;
 	}
 
-`	/**
+	/**
 	 * For upgrade to 2.1.1: Toggle public display flag for subscription types
 	 * to match UI update (#2213)
 	 */
