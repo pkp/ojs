@@ -233,6 +233,11 @@ class LayoutEditorHandler extends Handler {
 		SubmissionLayoutHandler::downloadLayoutTemplate($args);
 	}
 
+	function deleteArticleImage($args) {
+		import('pages.layoutEditor.SubmissionLayoutHandler');
+		SubmissionLayoutHandler::deleteArticleImage($args);
+	}
+	
 	//
 	// Proofreading Actions
 	//

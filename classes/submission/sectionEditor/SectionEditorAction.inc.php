@@ -1563,6 +1563,28 @@ class SectionEditorAction extends Action {
 	}
 
 	/**
+	 * Delete an image from an article galley.
+	 * @param $submission object
+	 * @param $fileId int
+	 * @param $revision int (optional)
+	 */
+	function deleteArticleImage($submission, $fileId, $revision) {
+		import('file.ArticleFileManager');
+		$articleGalleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
+		if (HookRegistry::call('SectionEditorAction::deleteArticleImage', array(&$submission, &$fileId, &$revision))) return;
+		foreach ($submission->getGalleys() as $galley) {
+			$images =& $articleGalleyDao->getGalleyImages($galley->getGalleyId());
+			foreach ($images as $imageFile) {
+				if ($imageFile->getArticleId() == $submission->getArticleId() && $fileId == $imageFile->getFileId() && $imageFile->getRevision() == $revision) {
+					$articleFileManager = &new ArticleFileManager($submission->getArticleId());
+					$articleFileManager->deleteFile($imageFile->getFileId(), $imageFile->getRevision());
+				}
+			}
+			unset($images);
+		}
+	}
+
+	/**
 	 * Add Submission Note
 	 * @param $articleId int
 	 */

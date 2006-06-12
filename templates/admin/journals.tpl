@@ -14,7 +14,7 @@
 
 <br />
 
-<table width="100%" class="listing">
+<table width="100%" class="listing" id="adminJournals">
 	<tr>
 		<td colspan="4" class="headseparator">&nbsp;</td>
 	</tr>

@@ -444,6 +444,11 @@ class SectionEditorHandler extends Handler {
 	// Layout Editing
 	//
 	
+	function deleteArticleImage($args) {
+		import('pages.sectionEditor.SubmissionEditHandler');
+		SubmissionEditHandler::deleteArticleImage($args);
+	}
+	
 	function uploadLayoutFile() {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::uploadLayoutFile();

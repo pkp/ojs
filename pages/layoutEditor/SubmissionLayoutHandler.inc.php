@@ -277,6 +277,21 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		}
 	}
 	
+	/**
+	 * Delete an article image.
+	 * @param $args array ($articleId, $fileId)
+	 */
+	function deleteArticleImage($args) {
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
+		$fileId = isset($args[2]) ? (int) $args[2] : 0;
+		$revisionId = isset($args[3]) ? (int) $args[3] : 0;
+		list($journal, $submission) = SubmissionLayoutHandler::validate($articleId);
+		LayoutEditorAction::deleteArticleImage($submission, $fileId, $revisionId);
+		
+		Request::redirect(null, null, 'editGalley', array($articleId, $galleyId));
+	}
+	
 	
 	//
 	// Supplementary File Management

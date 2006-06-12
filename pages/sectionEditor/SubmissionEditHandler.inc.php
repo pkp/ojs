@@ -1112,6 +1112,22 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	}
 	
 	/**
+	 * Delete an article image.
+	 * @param $args array ($articleId, $fileId)
+	 */
+	function deleteArticleImage($args) {
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
+		$fileId = isset($args[2]) ? (int) $args[2] : 0;
+		$revisionId = isset($args[3]) ? (int) $args[3] : 0;
+
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
+		SectionEditorAction::deleteArticleImage($submission, $fileId, $revisionId);
+		
+		Request::redirect(null, null, 'editGalley', array($articleId, $galleyId));
+	}
+	
+	/**
 	 * Assign/reassign a layout editor to the submission.
 	 * @param $args array ($articleId, [$userId])
 	 */
