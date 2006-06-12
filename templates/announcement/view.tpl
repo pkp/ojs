@@ -1,7 +1,7 @@
 {**
  * view.tpl
  *
- * Copyright (c) 1003-1001 The Public Knowledge Project
+ * Copyright (c) 2003-2006 John Willinsky
  * Distributed under the GNU GPL v1. For full terms see the file docs/COPYING.
  *
  * View full announcement text. 

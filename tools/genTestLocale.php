@@ -3,7 +3,7 @@
 /**
  * genTestLocale.php
  *
- * Copyright (c) 2003-2004 The Public Knowledge Project
+ * Copyright (c) 2003-2006 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package tools
@@ -93,7 +93,7 @@ class genTestLocale extends CommandLineTool {
 					"<!--\n" .
 					"  * locale.xml\n" .
 					"  *\n" .
-					"  * Copyright (c) 2003-2004 The Public Knowledge Project\n" .
+					"  * Copyright (c) 2003-2006 John Willinsky\n" .
 					"  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.\n" .
 					"  *\n" .
 					sprintf("  * Localization strings for the %s (%s) locale.\n", $this->outLocale, DEFAULT_OUT_LOCALE_NAME) .
