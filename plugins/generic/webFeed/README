@@ -1,9 +1,9 @@
 ================================
 === OJS Web Feeds Plugin
-=== Version: 1.1
-=== Release date: May 30, 2006
+=== Version: 1.2
+=== Release date: June 8, 2006
 === Author: Alf Eaton <alf@hubmed.org>
-=== Contribution: Juan Alperin <juan@geeky.net>
+=== Contributions: Juan Alperin <juan@geeky.net>, MJ Suhonos <mj@robotninja.com>
 ================================
 
 About
@@ -21,13 +21,7 @@ Same requirements as the OJS 2.1.x core.
 Installation
 ------------
 To install the plugin:
- - copy the webFeed folder into OJS/plugins/generic
  - enable the plugin by going to:  Home > User > Journal Management > Plugin Management  and selecting "ENABLE" under "Feed Plugin"
-
-
-Known Issues/Limitations
----------
-- the plugin does not currently support the RSS2.0 feed format.
 
 Localization
 ------------
@@ -35,6 +29,4 @@ Currently in en_US (U.S. English) and es_ES (Espaol Espaa) locales
 
 Contact/Support
 ---------------
-Please email the author for support, bugfixes, or comments.
-
-Email: <alf@hubmed.org> AND/OR <juan@geeky.net>
+Please email the authors for support, bugfixes, or comments.
