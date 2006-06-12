@@ -32,9 +32,9 @@
 <tr class="heading" valign="bottom">
 	<td width="5%">&nbsp;</td>
 	<td width="25%">{translate key="user.username"}</td>
-	<td width="30%">{translate key="user.name"}</td>
+	<td width="27%">{translate key="user.name"}</td>
 	<td width="30%">{translate key="user.email"}</td>
-	<td width="10%">{translate key="common.action"}</td>
+	<td width="13%">{translate key="common.action"}</td>
 </tr>
 <tr><td colspan="5" class="headseparator">&nbsp;</td></tr>
 {iterate from=users item=user}

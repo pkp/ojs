@@ -29,9 +29,9 @@
 <p><a class="action" href="{url op="enrollSearch" path=$articleId}">{translate key="sectionEditor.review.enrollReviewer"}</a>&nbsp;|&nbsp;<a class="action" href="{url op="createReviewer" path=$articleId}">{translate key="sectionEditor.review.createReviewer"}</a></p>
 
 <table class="listing" width="100%">
-{assign var=numCols value=6}
+{assign var=numCols value=7}
 {if $rateReviewerOnQuality}
-	{assign var=numCols value=$numCols+2}
+	{assign var=numCols value=$numCols+1}
 {/if}
 <tr><td colspan="{$numCols}" class="headseparator">&nbsp;</td></tr>
 <tr class="heading" valign="bottom">

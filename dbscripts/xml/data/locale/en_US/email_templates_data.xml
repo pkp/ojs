@@ -203,7 +203,7 @@ Thank you for considering this request.
 
 "{$articleTitle}"
 
-Abstract
+{$abstractTermIfEnabled}
 {$articleAbstract}</field>
 			<field name="description">This email from the Section Editor to a Reviewer requests that the reviewer accept or decline the task of reviewing a submission. It provides information about the submission such as the title and abstract, a review due date, and how to access the submission itself. This message is used when the Standard Review Process is selected in Journal Setup, Step 2. (Otherwise see REVIEW_REQUEST_ATTACHED.)</field>
 		</row>
@@ -228,7 +228,7 @@ Thank you for considering this request.
 
 "{$articleTitle}"
 
-Abstract
+{$abstractTermIfEnabled}
 {$articleAbstract}</field>
 			<field name="description">This email from the Section Editor to a Reviewer requests that the reviewer accept or decline the task of reviewing a submission. It provides information about the submission such as the title and abstract, a review due date, and how to access the submission itself. This message is used when the Standard Review Process is selected in Journal Setup, Step 2, and one-click reviewer access is enabled.</field>
 		</row>

@@ -231,6 +231,7 @@ class SectionEditorAction extends Action {
 						'editorialContactSignature' => $user->getContactSignature(),
 						'reviewGuidelines' => $journal->getSetting('reviewGuidelines'),
 						'submissionReviewUrl' => $submissionUrl,
+						'abstractTermIfEnabled' => ($sectionEditorSubmission->getAbstract() == ''?'':Locale::translate('article.abstract')),
 						'passwordResetUrl' => Request::url(null, 'login', 'resetPassword', $reviewer->getUsername(), array('confirm' => Validation::generatePasswordResetHash($reviewer->getUserId())))
 					);
 					$email->assignParams($paramArray);
