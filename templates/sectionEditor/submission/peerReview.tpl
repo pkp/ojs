@@ -61,7 +61,8 @@
 		{/if}
 	</tr>
 	<tr valign="top">
-		<td colspan="2">
+		<td>&nbsp;</td>
+		<td>
 			<form method="post" action="{url op="uploadReviewVersion"}" enctype="multipart/form-data">
 				{translate key="editor.article.uploadReviewVersion"}
 				<input type="hidden" name="articleId" value="{$submission->getArticleId()}" />
