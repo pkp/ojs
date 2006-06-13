@@ -92,7 +92,13 @@
 		{/if}
 		{if $enablePageNumber}<td><input type="text" name="pages[{$article->getArticleId()}]" value="{$article->getPages()|escape}" size="7" maxlength="255" class="textField" /></td>{/if}
 		<td><input type="checkbox" name="remove[{$article->getArticleId()}]" value="{$article->getPubId()}" /></td>
-		<td><input name="proofed[{$article->getArticleId()}]" type="checkbox" disabled="disabled" {if in_array($article->getArticleId(), $proofedArticleIds)}checked="checked" {/if}/></td>
+		<td>
+			{if in_array($article->getArticleId(), $proofedArticleIds)}
+				{icon name="checked"}
+			{else}
+				{icon name="unchecked"}
+			{/if}
+		</td>
 	</tr>
 	<tr>
 		<td colspan="{$numCols}" class="{if $smarty.foreach.currSection.last}end{/if}separator">&nbsp;</td>
