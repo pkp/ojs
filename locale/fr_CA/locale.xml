@@ -1484,7 +1484,6 @@ chaque article publié seront inclus dans la table des matières de ce journal (
 	<!-- Used by editor in submission review / editing -->
 	<message key="editor.article.designateReviewVersion">Désigner le fichier original comme le fichier révisé</message>
 	<message key="editor.article.uploadReviewVersion">Télécharger un fichier après révision pour servir de fichier révisé</message>
-	<message key="editor.article.uploadEditorVersion">Télécharger le texte de l’éditeur</message>
 	<message key="editor.article.showSuppFile">Présenter le fichier aux réviseurs</message>
 	<message key="editor.article.layoutAndProof">Mise en page &amp; Épreuves</message>
 	<message key="editor.article.clear">Supprimer</message>

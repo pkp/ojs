@@ -1468,7 +1468,6 @@ Puoi facoltativamente fornire all'utente una ragione per disattivare il loro acc
 	<!-- Used by editor in submission review / editing -->
 	<message key="editor.article.designateReviewVersion">Imposta il file originale come la versione di review</message>
 	<message key="editor.article.uploadReviewVersion">Invia, tramite upload, una versione modificata del file come versione di review</message>
-	<message key="editor.article.uploadEditorVersion">Invia, tramite upload, la versione dell'editor</message>
 	<message key="editor.article.showSuppFile">Invia il file ai reviewer</message>
 	<message key="editor.article.layoutAndProof">Layout &amp; bozze</message>
 	<message key="editor.article.clear">Rimuovi</message>

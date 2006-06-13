@@ -1543,7 +1543,6 @@ You may optionally provide the user with a reason for disabling their account.</
 	<!-- Used by editor in submission review / editing -->
 	<message key="editor.article.designateReviewVersion">Designate the original file as the Review Version</message>
 	<message key="editor.article.uploadReviewVersion">Upload a revised Review Version</message>
-	<message key="editor.article.uploadEditorVersion">Upload Editor Version</message>
 	<message key="editor.article.showSuppFile">Present file to reviewers</message>
 	<message key="editor.article.layoutAndProof">Layout &amp; Proof</message>
 	<message key="editor.article.clear">Clear</message>

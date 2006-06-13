@@ -1445,7 +1445,6 @@ Pode ser incluído o motivo da desabilitação da conta.
 	<!-- Used by editor in submission review / editing -->
 	<message key="editor.article.designateReviewVersion">Designar documento original como Versão de Avaliação</message>
 	<message key="editor.article.uploadReviewVersion">Enviar documento avaliado como Versão de Avaliação</message>
-	<message key="editor.article.uploadEditorVersion">Enviar Versão do Editor</message>
 	<message key="editor.article.showSuppFile">Habilitar documento aos avaliadores</message>
 	<message key="editor.article.layoutAndProof">Layout &amp; Leitura de Prova</message>
 	<message key="editor.article.clear">Liberar</message>

@@ -70,17 +70,34 @@
 	{assign var="editorRevisionExists" value=true}
 {/foreach}
 
-
-{if $lastDecision == SUBMISSION_EDITOR_DECISION_RESUBMIT}
-{translate key="editor.article.resubmitFileForPeerReview"}
-<input type="submit" name="resubmit" {if !($editorRevisionExists or $authorRevisionExists)}disabled="disabled" {/if}value="{translate key="form.resubmit"}" class="button" />
-
-{elseif $lastDecision == SUBMISSION_EDITOR_DECISION_ACCEPT}
-{translate key="editor.article.sendFileToCopyedit"}
-<input type="submit" {if !($editorRevisionExists or $authorRevisionExists)}disabled="disabled" {/if}name="setCopyeditFile" value="{translate key="form.send"}" class="button" />
-{/if}
-
 <table class="data" width="100%">
+	{if $lastDecision == SUBMISSION_EDITOR_DECISION_RESUBMIT}
+		<tr>
+			<td width="20%">&nbsp;</td>
+			<td width="80%" colspan="3">
+				{translate key="editor.article.resubmitFileForPeerReview"}
+				<input type="submit" name="resubmit" {if !($editorRevisionExists or $authorRevisionExists)}disabled="disabled" {/if}value="{translate key="form.resubmit"}" class="button" />
+			</td>
+		</tr>
+	{elseif $lastDecision == SUBMISSION_EDITOR_DECISION_ACCEPT}
+		<tr valign="top">
+			<td width="20%">&nbsp;</td>
+			<td width="80%" colspan="3">
+				{translate key="editor.article.sendFileToCopyedit"}
+				<input type="submit" {if !($editorRevisionExists or $authorRevisionExists)}disabled="disabled" {/if}name="setCopyeditFile" value="{translate key="form.send"}" class="button" />
+			</td>
+		</tr>
+	{/if}
+
+	{if $reviewFile}
+		<tr valign="top">
+			<td width="20%" class="label">{translate key="submission.reviewVersion"}</td>
+			<td width="50%" class="value" colspan="3">
+				{if $lastDecision == SUBMISSION_EDITOR_DECISION_ACCEPT || $lastDecision == SUBMISSION_EDITOR_DECISION_RESUBMIT}<input type="radio" name="editorDecisionFile" value="{$reviewFile->getFileId()},{$reviewFile->getRevision()}" /> {/if}<a href="{url op="downloadFile" path=$submission->getArticleId()|to_array:$reviewFile->getFileId():$reviewFile->getRevision()}" class="file">{$reviewFile->getFileName()}</a>&nbsp;&nbsp;
+				{$reviewFile->getDateModified()|date_format:$dateFormatShort}
+			</td>
+		</tr>
+	{/if}
 	{assign var="firstItem" value=true}
 	{foreach from=$editorFiles item=editorFile key=key}
 		<tr valign="top">
@@ -88,11 +105,11 @@
 				{assign var="firstItem" value=false}
 				<td width="20%" rowspan="{$editorFiles|@count}" class="label">{translate key="submission.editorVersion"}</td>
 			{/if}
-			<td width="50%" class="value" colspan="2">
+			<td width="50%" class="value" colspan="3">
 				{if $lastDecision == SUBMISSION_EDITOR_DECISION_ACCEPT || $lastDecision == SUBMISSION_EDITOR_DECISION_RESUBMIT}<input type="radio" name="editorDecisionFile" value="{$editorFile->getFileId()},{$editorFile->getRevision()}" /> {/if}<a href="{url op="downloadFile" path=$submission->getArticleId()|to_array:$editorFile->getFileId():$editorFile->getRevision()}" class="file">{$editorFile->getFileName()}</a>&nbsp;&nbsp;
-				{$editorFile->getDateModified()|date_format:$dateFormatShort}
+				{$editorFile->getDateModified()|date_format:$dateFormatShort}&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="{url op="deleteArticleFile" path=$submission->getArticleId()|to_array:$editorFile->getFileId():$editorFile->getRevision()}" class="action">{translate key="common.delete"}</a>
 			</td>
-			<td width="30%" class="value"><a href="{url op="deleteArticleFile" path=$submission->getArticleId()|to_array:$editorFile->getFileId():$editorFile->getRevision()}" class="action">{translate key="common.delete"}</a></td>
 		</tr>
 	{foreachelse}
 		<tr valign="top">
@@ -100,6 +117,13 @@
 			<td width="80%" colspan="3" class="nodata">{translate key="common.none"}</td>
 		</tr>
 	{/foreach}
+	<tr valign="top">
+		<td class="label">&nbsp;</td>
+		<td class="value">
+			<input type="file" name="upload" class="uploadField" />
+			<input type="submit" name="submit" value="{translate key="common.upload"}" class="button" />
+		</td>
+	</tr>
 	{assign var="firstItem" value=true}
 	{foreach from=$authorFiles item=authorFile key=key}
 		<tr valign="top">
@@ -119,11 +143,6 @@
 		</tr>
 	{/foreach}
 
-	<td class="label">{translate key="editor.article.uploadEditorVersion"}</td>
-	<td class="value">
-		<input type="file" name="upload" class="uploadField" />
-		<input type="submit" name="submit" value="{translate key="common.upload"}" class="button" />
-	</td>
 </table>
 
 </form>

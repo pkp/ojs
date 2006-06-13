@@ -1497,7 +1497,6 @@ You may optionally provide the user with a reason for disabling their account.</
 	<!-- Used by editor in submission review / editing -->
 	<message key="editor.article.designateReviewVersion">Отметить оригинальный файл как версию для рецензии</message>
 	<message key="editor.article.uploadReviewVersion">Загрузить отредактированный файл в качестве версии для рецензии</message>
-	<message key="editor.article.uploadEditorVersion">Загрузить редакторскую версию</message>
 	<message key="editor.article.showSuppFile">Предложить файл рецензентам</message>
 
 	<message key="editor.article.layoutAndProof">Вид &amp; Правка</message>

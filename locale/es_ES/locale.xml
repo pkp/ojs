@@ -1441,7 +1441,6 @@ Seleccione un modelo para manejar aquellos aspectos del proceso editorial. (Para
 	<!-- Used by editor in submission review / editing -->
 	<message key="editor.article.designateReviewVersion">Designar el fichero original como la versión de revisión</message>
 	<message key="editor.article.uploadReviewVersion">Subir un fichero revisado para que sirva como versión de revisión</message>
-	<message key="editor.article.uploadEditorVersion">Subir versión del editor</message>
 	<message key="editor.article.showSuppFile">Presentar fichero a los/as revisores/as</message>
 	<message key="editor.article.layoutAndProof">Maquetación &amp; prueba</message>
 	<message key="editor.article.clear">Eliminar</message>
