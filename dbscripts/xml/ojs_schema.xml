@@ -403,6 +403,10 @@
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
 		</field>
+		<field name="meta_reviewed" type="I1">
+			<NOTNULL/>
+			<DEFAULT VALUE="1"/>
+		</field>
 		<field name="abstracts_disabled" type="I1">
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>

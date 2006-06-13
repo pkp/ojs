@@ -220,6 +220,22 @@ class Section extends DataObject {
 	}
 	
 	/**
+	 * Get peer-reviewed setting of section.
+	 * @return boolean
+	 */
+	function getMetaReviewed() {
+		return $this->getData('metaReviewed');
+	}
+	
+	/**
+	 * Set peer-reviewed setting of section.
+	 * @param $metaReviewed boolean
+	 */
+	function setMetaReviewed($metaReviewed) {
+		return $this->setData('metaReviewed', $metaReviewed);
+	}
+	
+	/**
 	 * Get boolean indicating whether abstracts are disabled
 	 * @return boolean
 	 */

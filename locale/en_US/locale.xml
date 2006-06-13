@@ -1168,16 +1168,19 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.sections.form.titleRequired">A title is required for the section.</message>
 	<message key="manager.sections.form.abbrevRequired">An abbreviated title is required for the section</message>
 	<message key="manager.section.sectionEditorInstructions">Select from among the available Section Editors and "Assign Editor" to this section.</message>
-	<message key="manager.sections.submissionIndexing">Items in this section to be included in the indexed content of journal.</message>
+	<message key="manager.section.submissionsToThisSection">Submissions made to this section of the journal</message>
+	<message key="manager.sections.submissionIndexing">Will not be included in the indexing of the journal</message>
+	<message key="manager.sections.submissionReview">Will not be peer-reviewed</message>
 	<message key="manager.sections.editorRestriction">Items can only be submitted by Editors and Section Editors.</message>
 	<message key="manager.sections.hideTocTitle">Omit the title of this section from issues' table of contents.</message>
 	<message key="manager.sections.readingTools">Reading Tools</message>
 	<message key="manager.sections.indexed">Indexed</message>
+	<message key="manager.sections.reviewed">Peer Reviewed</message>
 	<message key="manager.sections.open">Open Submissions</message>
 	<message key="manager.sections.policy">Section Policy</message>
-	<message key="manager.sections.identifyType">In their metadata, identify items in this section as</message>
+	<message key="manager.sections.identifyType">For metadata purposes, identify every item in this section as a</message>
 	<message key="manager.sections.identifyTypeExamples">(For example, "Peer-reviewed Article", "Non-refereed Article", "Invited Article", etc.)</message>
-	<message key="manager.sections.abstractsDisabled">Items published in this Section will not have abstracts.</message>
+	<message key="manager.sections.abstractsDisabled">Do not require abstracts</message>
 
 	<!-- Import/Export -->
 	<message key="manager.importExport">Import/Export Data</message>

@@ -138,16 +138,23 @@
 	<td class="value"><textarea name="policy" rows="4" cols="40" id="policy" class="textArea">{$policy|escape}</textarea></td>
 </tr>
 <tr valign="top">
-	<td rowspan="3" class="label">{fieldLabel suppressId="true" key="submission.indexing"}</td>
+	<td rowspan="4" class="label">{fieldLabel suppressId="true" key="submission.indexing"}</td>
 	<td class="value">
-		<input type="checkbox" name="metaIndexed" id="metaIndexed" value="1" {if $metaIndexed}checked="checked"{/if} />
-		{fieldLabel name="metaIndexed" key="manager.sections.submissionIndexing"}
+		{translate key="manager.section.submissionsToThisSection"}<br/>
+		<input type="checkbox" name="metaReviewed" id="metaReviewed" value="1" {if $metaReviewed}checked="checked"{/if} />
+		{fieldLabel name="metaReviewed" key="manager.sections.submissionReview"}
 	</td>
 </tr>
 <tr valign="top">
 	<td class="value">
 		<input type="checkbox" name="abstractsDisabled" id="abstractsDisabled" value="1" {if $abstractsDisabled}checked="checked"{/if} />
 		{fieldLabel name="abstractsDisabled" key="manager.sections.abstractsDisabled"}
+	</td>
+</tr>
+<tr valign="top">
+	<td class="value">
+		<input type="checkbox" name="metaIndexed" id="metaIndexed" value="1" {if $metaIndexed}checked="checked"{/if} />
+		{fieldLabel name="metaIndexed" key="manager.sections.submissionIndexing"}
 	</td>
 </tr>
 <tr valign="top">

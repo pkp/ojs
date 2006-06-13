@@ -130,6 +130,7 @@ class SectionDAO extends DAO {
 		$section->setAbbrevAlt2($row['abbrev_alt2']);
 		$section->setSequence($row['seq']);
 		$section->setMetaIndexed($row['meta_indexed']);
+		$section->setMetaReviewed($row['meta_reviewed']);
 		$section->setAbstractsDisabled($row['abstracts_disabled']);
 		$section->setIdentifyType($row['identify_type']);
 		$section->setEditorRestricted($row['editor_restricted']);
@@ -148,9 +149,9 @@ class SectionDAO extends DAO {
 	function insertSection(&$section) {
 		$this->update(
 			'INSERT INTO sections
-				(journal_id, title, title_alt1, title_alt2, abbrev, abbrev_alt1, abbrev_alt2, seq, meta_indexed, abstracts_disabled, identify_type, policy, editor_restricted, hide_title)
+				(journal_id, title, title_alt1, title_alt2, abbrev, abbrev_alt1, abbrev_alt2, seq, meta_indexed, meta_reviewed, abstracts_disabled, identify_type, policy, editor_restricted, hide_title)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
 				$section->getJournalId(),
 				$section->getTitle(),
@@ -161,6 +162,7 @@ class SectionDAO extends DAO {
 				$section->getAbbrevAlt2(),
 				$section->getSequence() == null ? 0 : $section->getSequence(),
 				$section->getMetaIndexed() ? 1 : 0,
+				$section->getMetaReviewed() ? 1 : 0,
 				$section->getAbstractsDisabled() ? 1 : 0,
 				$section->getIdentifyType(),
 				$section->getPolicy(),
@@ -189,6 +191,7 @@ class SectionDAO extends DAO {
 					abbrev_alt2 = ?,
 					seq = ?,
 					meta_indexed = ?,
+					meta_reviewed = ?,
 					abstracts_disabled = ?,
 					identify_type = ?,
 					policy = ?,
@@ -204,6 +207,7 @@ class SectionDAO extends DAO {
 				$section->getAbbrevAlt2(),
 				$section->getSequence(),
 				$section->getMetaIndexed(),
+				$section->getMetaReviewed(),
 				$section->getAbstractsDisabled(),
 				$section->getIdentifyType(),
 				$section->getPolicy(),

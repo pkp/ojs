@@ -101,7 +101,8 @@ class SectionForm extends Form {
 					'abbrev' => $section->getAbbrev(),
 					'abbrevAlt1' => $section->getAbbrevAlt1(),
 					'abbrevAlt2' => $section->getAbbrevAlt2(),
-					'metaIndexed' => $section->getMetaIndexed(),
+					'metaIndexed' => !$section->getMetaIndexed(), // #2066: Inverted
+					'metaReviewed' => !$section->getMetaReviewed(), // #2066: Inverted
 					'abstractsDisabled' => $section->getAbstractsDisabled(),
 					'identifyType' => $section->getIdentifyType(),
 					'editorRestriction' => $section->getEditorRestricted(),
@@ -116,7 +117,7 @@ class SectionForm extends Form {
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->readUserVars(array('title', 'titleAlt1', 'titleAlt2', 'abbrev', 'abbrevAlt1', 'abbrevAlt2', 'metaIndexed', 'abstractsDisabled', 'identifyType', 'editorRestriction', 'hideTitle', 'policy'));
+		$this->readUserVars(array('title', 'titleAlt1', 'titleAlt2', 'abbrev', 'abbrevAlt1', 'abbrevAlt2', 'metaIndexed', 'metaReviewed', 'abstractsDisabled', 'identifyType', 'editorRestriction', 'hideTitle', 'policy'));
 	}
 	
 	/**
@@ -144,7 +145,8 @@ class SectionForm extends Form {
 		$section->setAbbrev($this->getData('abbrev'));
 		$section->setAbbrevAlt1($this->getData('abbrevAlt1'));
 		$section->setAbbrevAlt2($this->getData('abbrevAlt2'));
-		$section->setMetaIndexed($this->getData('metaIndexed') ? 1 : 0);
+		$section->setMetaIndexed($this->getData('metaIndexed') ? 0 : 1); // #2066: Inverted
+		$section->setMetaReviewed($this->getData('metaReviewed') ? 0 : 1); // #2066: Inverted
 		$section->setAbstractsDisabled($this->getData('abstractsDisabled') ? 1 : 0);
 		$section->setIdentifyType($this->getData('identifyType'));
 		$section->setEditorRestricted($this->getData('editorRestriction') ? 1 : 0);
