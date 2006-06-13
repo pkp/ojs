@@ -2346,17 +2346,19 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="rt.admin.management">Management</message>
 
 	<!-- RT Settings -->
-	<message key="rt.admin.settings">Reading Tool Settings</message>
+	<message key="rt.admin.settings">Reading Tool Options</message>
 
 	<message key="rt.admin.readingToolsEnabled">Reading tools</message>
 	<message key="rt.admin.selectedVersion">Related items</message>
-	<message key="rt.admin.rtEnable">To enable Reading Tools, select options and choose field for related items, enter Settings.</message>
+	<message key="rt.admin.rtEnable">To enable Reading Tools for this journal, go to Reading Tool Options.</message>
 	<message key="rt.admin.settings.description">The reading tools appear in a frame beside published items in the sections of the journal that have been designated for indexing. The reading tools consist of a set of optional tools related to the published item, listed below, and a set of tools that provide access to related items, organized by field and discipline.</message>
 	<message key="rt.admin.settings.enableReadingTools">Enable Reading Tools for designated sections of journal.</message>
 	<message key="rt.admin.settings.abstract">Abstract (presents the item's abstract).</message>
-	<message key="rt.admin.settings.relatedItems">Related Items Field</message>
+	<message key="rt.admin.settings.relatedItems">Field</message>
+	<message key="rt.admin.settings.relatedItemsLink"><![CDATA[See <a href="{$relatedItemsLink}" class="action">Related Items Sets</a> to view, add, correct, or delete related items for each field.]]></message>
 
-	<message key="rt.admin.options">Optional Tools</message>
+	<message key="rt.admin.options">Journal Item Tools</message>
+	<message key="rt.admin.relatedItems">Related Item Tools</message>
 
 	<message key="rt.admin.settings.disableRelatedItems">Disable Related Items</message>
 	<message key="rt.admin.settings.bibFormat">Bibliographic format</message>
@@ -2407,7 +2409,7 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	
 	<!-- RT Entities -->
 	<message key="rt.version">Version</message>
-	<message key="rt.versions">Versions</message>
+	<message key="rt.versions">Related Item Sets</message>
 	<message key="rt.version.title">Title</message>
 	<message key="rt.version.locale">Locale</message>
 	<message key="rt.version.key">Key</message>

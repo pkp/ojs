@@ -9,7 +9,7 @@
  * $Id$
  *}
 
-{assign var=pageTitleTranslated value=$context->getTitle()}
+{assign var=pageTitleTranslated value=$context->getTitle()|capitalize}
 
 {include file="rt/header.tpl"}
 

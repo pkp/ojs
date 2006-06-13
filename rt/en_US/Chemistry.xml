@@ -194,8 +194,8 @@ journals.</search_description>
 		</search>
 	</context>
 	<context>
-		<context_title>Book</context_title>
-		<context_abbrev>Book</context_abbrev>
+		<context_title>Book searches</context_title>
+		<context_abbrev>Book searches</context_abbrev>
 		<context_description>Book-related Resources</context_description>
 
 		<search>
@@ -262,8 +262,8 @@ journals.</search_description>
 		</search>
 	</context>
 	<context>
-		<context_title>Portals</context_title>
-		<context_abbrev>Portals</context_abbrev>
+		<context_title>Relevant portals</context_title>
+		<context_abbrev>Relevant portals</context_abbrev>
 		<context_description>Portals related to chemistry</context_description>
 
 		<search>
