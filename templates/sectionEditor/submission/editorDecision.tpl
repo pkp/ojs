@@ -99,6 +99,24 @@
 		</tr>
 	{/if}
 	{assign var="firstItem" value=true}
+	{foreach from=$authorFiles item=authorFile key=key}
+		<tr valign="top">
+			{if $firstItem}
+				{assign var="firstItem" value=false}
+				<td width="20%" rowspan="{$authorFiles|@count}" class="label">{translate key="submission.authorVersion"}</td>
+			{/if}
+			<td width="80%" class="value" colspan="3">
+				{if $lastDecision == SUBMISSION_EDITOR_DECISION_ACCEPT || $lastDecision == SUBMISSION_EDITOR_DECISION_RESUBMIT}<input type="radio" name="editorDecisionFile" value="{$authorFile->getFileId()},{$authorFile->getRevision()}" /> {/if}<a href="{url op="downloadFile" path=$submission->getArticleId()|to_array:$authorFile->getFileId():$authorFile->getRevision()}" class="file">{$authorFile->getFileName()}</a>&nbsp;&nbsp;
+				{$authorFile->getDateModified()|date_format:$dateFormatShort}
+			</td>
+		</tr>
+	{foreachelse}
+		<tr valign="top">
+			<td width="20%" class="label">{translate key="submission.authorVersion"}</td>
+			<td width="80%" colspan="3" class="nodata">{translate key="common.none"}</td>
+		</tr>
+	{/foreach}
+	{assign var="firstItem" value=true}
 	{foreach from=$editorFiles item=editorFile key=key}
 		<tr valign="top">
 			{if $firstItem}
@@ -124,24 +142,6 @@
 			<input type="submit" name="submit" value="{translate key="common.upload"}" class="button" />
 		</td>
 	</tr>
-	{assign var="firstItem" value=true}
-	{foreach from=$authorFiles item=authorFile key=key}
-		<tr valign="top">
-			{if $firstItem}
-				{assign var="firstItem" value=false}
-				<td width="20%" rowspan="{$authorFiles|@count}" class="label">{translate key="submission.authorVersion"}</td>
-			{/if}
-			<td width="80%" class="value" colspan="3">
-				{if $lastDecision == SUBMISSION_EDITOR_DECISION_ACCEPT || $lastDecision == SUBMISSION_EDITOR_DECISION_RESUBMIT}<input type="radio" name="editorDecisionFile" value="{$authorFile->getFileId()},{$authorFile->getRevision()}" /> {/if}<a href="{url op="downloadFile" path=$submission->getArticleId()|to_array:$authorFile->getFileId():$authorFile->getRevision()}" class="file">{$authorFile->getFileName()}</a>&nbsp;&nbsp;
-				{$authorFile->getDateModified()|date_format:$dateFormatShort}
-			</td>
-		</tr>
-	{foreachelse}
-		<tr valign="top">
-			<td width="20%" class="label">{translate key="submission.authorVersion"}</td>
-			<td width="80%" colspan="3" class="nodata">{translate key="common.none"}</td>
-		</tr>
-	{/foreach}
 
 </table>
 
