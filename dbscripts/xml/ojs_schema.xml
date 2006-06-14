@@ -1771,9 +1771,6 @@
 			<NOTNULL/>
 		</field>
 		<field name="original_file_name" type="C2" size="90"/>
-		<field name="type" type="C2" size="40">
-			<NOTNULL/>
-		</field>
 		<field name="date_uploaded" type="T">
 			<NOTNULL/>
 		</field>
