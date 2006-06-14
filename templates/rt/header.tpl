@@ -40,7 +40,7 @@
 
 <div id="header">
 <div id="headerTitle">
-<h1>{translate key="rt.readingTools"}</h1>
+<h1>{if $currentJournal && $currentJournal->getSetting('journalInitials')}{$currentJournal->getSetting('journalInitials')}&nbsp;{/if}{translate key="rt.readingTools"}</h1>
 </div>
 </div>
 
