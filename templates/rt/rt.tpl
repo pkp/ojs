@@ -138,6 +138,8 @@
 	{else}
 		<a href="{url op="viewDownloadInterstitial" path=$articleId|to_array:$galleyId}" target="_parent" class="rtAction">{translate key="common.close"}</a>
 	{/if}
+{else}
+	<a href="{url op="viewArticle" path=$articleId}" target="_parent" class="rtAction">{translate key="common.close"}</a>
 {/if}
 
 {if $needsLoginNote}
