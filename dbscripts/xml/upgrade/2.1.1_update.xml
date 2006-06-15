@@ -141,7 +141,7 @@ Thank you for agreeing to review the manuscript "{$articleTitle}" for {$journalN
 	<!-- Bug #2197: Add a distinction between print and online ISSNs. The existing ISSN is assumed to be online. -->
 	<sql>
 		<query>
-			UPDATE journal_settings SET setting_name = 'onlineIssn' WHERE journal_setting = 'issn'
+			UPDATE journal_settings SET setting_name = 'onlineIssn' WHERE setting_name = 'issn'
 		</query>
 	</sql>
 </data>
