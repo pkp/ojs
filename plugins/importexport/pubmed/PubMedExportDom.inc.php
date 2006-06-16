@@ -149,7 +149,7 @@ class PubMedExportDom {
 		XMLCustomWriter::appendChild($historyNode, $receivedNode);
 
 		// accepted for publication
-		$editordecisions = &$editorSubmissionDao->getEditorDecisions($article->getArticleId());
+		$editordecisions = $editorSubmissionDao->getEditorDecisions($article->getArticleId());
 
 		// if there are multiple decisions, make sure we get the accepted date
 		$editordecision = array_pop($editordecisions);
