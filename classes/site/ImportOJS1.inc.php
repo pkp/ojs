@@ -843,7 +843,7 @@ class ImportOJS1 {
 			$issueId = isset($this->issueMap[$row['fkIssueID']])?$this->issueMap[$row['fkIssueID']]:null;
 
 			if (isset($sectionId) && isset($issueId)) {
-				$sectionDao->_insertCustomSectionOrder($issueId, $sectionId, $row['nSectionRank']);
+				$sectionDao->insertCustomSectionOrder($issueId, $sectionId, $row['nSectionRank']);
 			}
 			$result->MoveNext();
 		}
