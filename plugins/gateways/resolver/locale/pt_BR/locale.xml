@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the pt_BR locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="pt_BR" full_name="Português (Brasil)">
+	<message key="plugins.gateways.resolver.displayName">Resolver Plugin</message>
+	<message key="plugins.gateways.resolver.description">Este plugin encontra edições e artigos baseados na informação da citação.</message>
+	<message key="plugins.gateways.resolver.errors.errorMessage">Não foi possível encontrar uma entidade única com a informação de citação especificada. Certifique-se de que a citação seja completa e se refira a uma entidade nesta instalação do sistema.</message>
+	<message key="plugins.gateways.resolver.exportHoldings">Ações de Exportação</message>
+</locale>

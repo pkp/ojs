@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the pt_BR locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="pt_BR" full_name="Português (Brasil)">
+	<message key="plugins.importexport.crossref.displayName">Plugin Exportador CrossRef XML</message>
+	<message key="plugins.importexport.crossref.description">Exporta metadados dos artigos no formato CrossRef XML.</message>
+	
+	<message key="plugins.importexport.crossref.export">Exportar Dados</message>
+	<message key="plugins.importexport.crossref.export.issues">Exportar Edições</message>
+	<message key="plugins.importexport.crossref.export.selectIssue">Escolher uma Edição para exportar.</message>
+	<message key="plugins.importexport.crossref.export.articles">Exportar Artigos</message>
+	<message key="plugins.importexport.crossref.export.selectArticle">Selecionar Artigos para exportar.</message>
+	
+	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[Modo de Usar: 
+{$scriptName} {$pluginName} [xmlFileName] [journal_path] artigos [articleId1] [articleId2] ...
+{$scriptName} {$pluginName} [xmlFileName] [journal_path] edição [issueId]
+]]></message>
+	<message key="plugins.importexport.crossref.cliError">ERRO:</message>
+
+	<message key="plugins.importexport.crossref.export.error.issueNotFound">Nenhuma edição encontrada com o ID "{$issueId}".</message>
+	<message key="plugins.importexport.crossref.export.error.articleNotFound">Nenhum artigo encontrado com o ID "{$articleId}".</message>
+
+	<message key="plugins.importexport.crossref.errors.noDOIprefix">Um prefixo DOI válido deve ser especificado na Configuração da revista para usar este plugin.</message>
+</locale>
