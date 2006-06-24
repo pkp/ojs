@@ -90,6 +90,69 @@ Em caso de dúvidas, envie suas questões para este email.
 		<field name="description">Mensagem notifica o leitor cadastrado que o Editor criou sua Assinatura. Proporciona todas as informações necessárias para acesso ao conteúdo.</field>
 		</row>
 		<row>
+			<field name="email_key">OPEN_ACCESS_NOTIFY</field>
+			<field name="subject">Edição de Acesso Livre</field>
+			<field name="body">Caros Leitores,
+
+A {$journalName} acaba de tornar disponível para acesso público mais uma edição. Convidamos a verificar o Sumário a seguir e acessar o portal da revista ({$journalUrl}) em seguida, para ler os artigos e outros itens interessantes.
+
+Agradecemos o interesse e apoio à revista,
+{$editorialContactSignature}</field>
+			<field name="description">Esta mensagem é enviada a leitores cadastrados que solicitam o recebimento do sumário de uma nova edição de acesso público.</field>
+		</row>
+		<row>
+			<field name="email_key">SUBSCRIPTION_BEFORE_EXPIRY</field>
+			<field name="subject">Aviso de Expiração de Assinatura</field>
+			<field name="body">{$subscriberName},
+
+Sua assinatura a {$journalName} está prestes a expirar.
+
+{$subscriptionType}
+Data de Expiração: {$expiryDate}
+
+Para garantir a continuidade de acesso à revista, acesse o sistema e renove sua assinatura, com o seu login "{$username}".
+
+Em caso de dúvidas, envie suas questões para este email.
+
+{$subscriptionContactSignature}</field>
+			<field name="description">Esta mensagem avisa o assinante da proximidade do término da assinatura. Informa a URL da revista e instruções de acesso.</field>
+		</row>
+		<row>
+			<field name="email_key">SUBSCRIPTION_AFTER_EXPIRY</field>
+			<field name="subject">Expiração de Assinatura</field>
+			<field name="body">{$subscriberName},
+
+Sua assinatura da revista {$journalName} expirou.
+
+{$subscriptionType}
+Data de Expiração: {$expiryDate}
+
+Para renovar sua assinatura, acesse o portal da revista, com seu login "{$username}".
+
+Em caso de dúvidas, envie suas questões para este email.
+
+{$subscriptionContactSignature}</field>
+			<field name="description">Esta mensagem avisa o assinante da expiração da assinatura. Informa a URL da revista e instruções de acesso.</field>
+		</row>
+		<row>
+			<field name="email_key">SUBSCRIPTION_AFTER_EXPIRY_LAST</field>
+			<field name="subject">Expiração de Assinatura - Lembrete Final</field>
+			<field name="body">{$subscriberName},
+
+Sua assinatura da revista {$journalName} expirou.
+Este é o último lembrete enviado pelo sistema.
+
+{$subscriptionType}
+Data de Expiração: {$expiryDate}
+
+Para renovar sua assinatura, acesse o portal da revista, com seu login "{$username}".
+
+Em caso de dúvidas, envie suas questões para este email.
+
+{$subscriptionContactSignature}</field>
+			<field name="description">Esta mensagem é o último aviso ao assinante da expiração da assinatura. Informa a URL da revista e instruções de acesso.</field>
+		</row>
+		<row>
 			<field name="email_key">LOCKSS_EXISTING_ARCHIVE</field>
 			<field name="subject">Solicitação de Arquivamento de {$journalName}</field>
 			<field name="body"><![CDATA[Prezada(o) [Nome da(o) Bibliotecária(o) da Universidade]
@@ -303,6 +366,16 @@ Estou disponível e interessado em avaliar a submissão "{$articleTitle}" a {$jo
 
 		</row>
 		<row>
+			<field name="email_key">REVIEW_CONFIRM_ACK</field>
+			<field name="subject">Notificação de Avaliação em Andamento</field>
+			<field name="body">{$reviewerName},
+
+Agradecemos por aceitar realizar a avaliação do manuscrito "{$articleTitle}", submetido a {$journalName} até a data {$reviewDueDate}.
+
+{$editorialContactSignature}</field>
+			<field name="description">Mensagem enviada pelo Editor de Seção ao Avaliador, notificando o recebimento da aceitação de avaliação e reafirmando o interesse na conclusão da tarefa.</field>
+		</row>
+		<row>
 			<field name="email_key">REVIEW_DECLINE</field>
 			<field name="subject">Indisponível para Avaliação</field>
 			<field name="body">{$editorialContactName},
@@ -354,7 +427,7 @@ Aguardando seu contato,
 			<field name="email_key">REVIEW_REMIND_ONECLICK</field>
 			<field name="subject">Lembrete de Avaliação de Submissão</field>
 
-			<field name="body">$reviewerName},
+			<field name="body">{$reviewerName},
 
 Esta mensagem é apenas um lembrete quanto à solicitação de avaliação da submissão "{$articleTitle}" a {$journalName}. Esperamos receber a avaliação até {$reviewDuedate}, e aguardamos o recebimento assim que for possível.
 

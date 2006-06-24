@@ -13,5 +13,9 @@
   -->
  
 <locale name="pt_BR" full_name="Português (Brasil)">
-	<!-- FIXME: We need a Portuguese translation. -->
+	<message key="plugins.importexport.sample.displayName">Plugin Exemplo de Importação/Exportação</message>
+	<message key="plugins.importexport.sample.description">Este plugin proporciona uma exemplo de implementação para o desenvolvimento de plugins de importação/exportação plugins. Não é um plugin útil ou utilizável no seu estado atual.</message>
+
+	<message key="plugins.importexport.sample.selectIssue.short">Escolher Edição</message>
+	<message key="plugins.importexport.sample.selectIssue.long">Escolher uma Edição para exportar.</message>
 </locale>
