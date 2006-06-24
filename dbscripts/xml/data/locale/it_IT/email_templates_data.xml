@@ -295,6 +295,16 @@ Posso e voglio fare la revisione alla submission, "{$articleTitle}," per {$journ
 			<field name="description">Questa email viene mandata dal revisore  al section editor in risposta a una richiesta di revisione per far sapere a quest'ultimo che la richiesta &#x00E8; stata accettata e sar&#x00E0; completata alla data specificata.</field>
 		</row>
 		<row>
+			<field name="email_key">REVIEW_CONFIRM_ACK</field>
+			<field name="subject">Ringraziamento per revisione in corso</field>
+			<field name="body">{$reviewerName}:
+
+Grazie per aver accettato di rivedere il manoscritto di "{$articleTitle}" per {$journalName} bda {$reviewDueDate}.
+
+{$editorialContactSignature}</field>
+			<field name="description">Questa mail viene inviata dal Section Editor al revisore per ringraziarlo di aver accettato di occuparsi di una revisione o incoraggiarlo a completare una revisione.</field>
+		</row>
+		<row>
 			<field name="email_key">REVIEW_DECLINE</field>
 			<field name="subject">Non in grado di fare la revisione</field>
 			<field name="body">{$editorialContactName}:
@@ -681,6 +691,69 @@ Grazie per aver completato la correzione delle bozze associate al manoscritto, "
 			<field name="subject">Articoli di possibile interesse</field>
 			<field name="body">Ho pensato che potrsti essere interessato a vedere "{$articleTitle}" di {$authorName} pubblicato nel Vol {$volume}, No {$number} ({$year}) di {$journalName} a "{$articleUrl}".</field>
 			<field name="description">Questo modello  email fornisce ad un utente registrato l'opprtunit&#x00E0; di inviare informazioni su un articolo a qualcuno che potrebbe essere interessato. &#x00E8; disponibile via utility di lettura e e deve essere abilitata dall'amministratore del journal nella pagina di amministrazione delle utility di lettura.</field>
+		</row>
+				<row>
+			<field name="email_key">OPEN_ACCESS_NOTIFY</field>
+			<field name="subject">Uscita ad accesso aperto</field>
+			<field name="body">Gentili lettori,
+
+{$journalName} ha appena reso disponibile un numero ad accesso aperto. Vi invitiamo dunque a guardare il sommario qui o sul nostro sito web ({$journalUrl}) per trovare articoli e altre risorse di vostro interesse.
+
+Grazie per l'interesse dimolstrato nei nostri confronti,
+{$editorialContactSignature}</field>
+			<field name="description">Questa email viene inviata ai lettori registrati che hanno chiesto di ricevere un'email di notifica in caso di uscite ad accesso aperto.</field>
+		</row>
+		<row>
+			<field name="email_key">SUBSCRIPTION_BEFORE_EXPIRY</field>
+			<field name="subject">Avviso di scadenza abbonamento</field>
+			<field name="body">{$subscriberName}:
+
+Il suo abbonamento a {$journalName} sta per scadere.
+
+{$subscriptionType}
+Data di scadenza: {$expiryDate}
+
+Per continuare ad accedere a questa rivista, si rechi sul nostro sito e rinnovi l'abbonamento. Per l'accesso utilizzi la sua username, "{$username}".
+
+Per qualsiasi domanda e ulteriore informazione, non esiti a contattarmi.
+
+{$subscriptionContactSignature}</field>
+			<field name="description">Questa email informa un abbonato della prossima scadenza del suo abbonamento. Fornisce la URL della rivista e le istruzioni per l'accesso.</field>
+		</row>
+		<row>
+			<field name="email_key">SUBSCRIPTION_AFTER_EXPIRY</field>
+			<field name="subject">Abbonamento scaduto</field>
+			<field name="body">{$subscriberName}:
+
+Il suo abbonamento a  {$journalName} &#x00E8; scaduto.
+
+{$subscriptionType}
+Data di scadenza: {$expiryDate}
+
+Per rinnovare l'abbonamento, si rechi sul nostro sito e rinnovi l'abbonamento. Per l'accesso utilizzi la sua username, "{$username}".
+
+Per qualsiasi domanda e ulteriore informazione, non esiti a contattarmi.
+
+{$subscriptionContactSignature}</field>
+			<field name="description">Questa email informa un abbonato che il suo abbonamento a  &#x00E8; scaduto. Fornisce la URL della rivista e le istruzioni per l'accesso.</field>
+		</row>
+		<row>
+			<field name="email_key">SUBSCRIPTION_AFTER_EXPIRY_LAST</field>
+			<field name="subject">Abbonamento scaduto - Ultimo avviso</field>
+			<field name="body">{$subscriberName}:
+
+Il suo abbonamento a  {$journalName} &#x00E8; scaduto.
+Questo &#x00E8; l'ultimo avviso che le inviamo.
+
+{$subscriptionType}
+Data di scadenza: {$expiryDate}
+
+Per rinnovare l'abbonamento, si rechi sul nostro sito e rinnovi l'abbonamento. Per l'accesso utilizzi la sua username, "{$username}".
+
+Per qualsiasi domanda e ulteriore informazione, non esiti a contattarmi.
+
+{$subscriptionContactSignature}</field>
+			<field name="description">Questa email informa un abbonato che il suo abbonamento a  &#x00E8; scaduto. Fornisce la URL della rivista e le istruzioni per l'accesso.</field>
 		</row>
 
 	</table>

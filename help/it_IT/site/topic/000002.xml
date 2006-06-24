@@ -28,7 +28,10 @@
 	</section>
 	
 	<section title="Languages">
-		<![CDATA[<p>OJS &#x00E8; costruito per essere un sistema multilingua, permettendo ai journal il supporto di una vasta gamma di lingue da ospitare in un singolo sito. L'amministratore del sito pu&#x00F2; specificare la lingua di default del sito e installare locales addizionali quando sono disonibili per rendere altr lingue usufruibili dai journal.</p>
+		<![CDATA[<p>OJS &#x00E8; costruito per essere un sistema multilingua, permettendo ai journal il supporto di una vasta gamma di lingue da ospitare in un singolo sito. L'amministratore del sito pu&#x00F2; specificare la lingua di default del sito e installare locales addizionali quando sono disonibili per rendere altr lingue usufruibili dai journal. I siti dei journal sono completamente indipendenti, ad esscezione degli account degli utenti; sebbene ogni utente possa asssociare al suo account diversi ruoli e journal diversi, in ogni combinazione, email e username saranno le stesse per ogni journal</p>
 		<p>Pacchetti di lingue aggiuntive tipicamente saranno disponibil per essere scaricate da Open Journal Systems <a href="http://pkp.sfu.ca/" target="_blank">web site</a> non appena vengono ricevute traduzioni dagli utetni contributori. Questi pacchetti possono essere installati in sistema OJS esistente per renderle disponibili ai journal.</p>]]>
+	</section>
+		<section title="Authentication Sources">
+		<![CDATA[<p>Per default, OJS autentica gli utentio sul suo database interno. &#200; tuttavia possibile usare altri metodi di autenticazione, come LDAP. ALtri metodi di autenticazione sono forniti dai plugin di OJS; si veda la documentazione di questi ultimi per ulteriori informazioni</p>]]>
 	</section>
 </topic>

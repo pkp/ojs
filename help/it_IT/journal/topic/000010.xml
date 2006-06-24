@@ -16,6 +16,6 @@
 <topic id="journal/topic/000010" locale="it_IT" title="File Browser" toc="journal/toc/000001" key="journal.managementPages.fileBrowser">
 	<section>
 		<![CDATA[<p>Il Files Browser permette ai journal manager per esaminaree amministrare la gerarchia dei file caricati per il journal (inclusi tutti i file caricati attraverso la amministrazione delle submission). I File possono essere visti, cancellati, e mossi come se interagissero con un local file system.</p>
-		<p>Danotare che questo &#x00E8; inteso solo come una facilitazione amministrativa e in generale non sar&#x00E0; necessario nell'amministrazione giornaliera del journal.</p>]]>	
+		<p>Danotare che questo &#x00E8; inteso solo come una facilitazione amministrativa e in generale non sar&#x00E0; necessario nell'amministrazione giornaliera del journal. Le informazioni sulla submission sono un insieme di file e record di database; cancellando i file di submission con Navigazione tra i file, non verranno cancellati i record di database ad essi associati.</p>]]>	
 	</section>
 </topic>

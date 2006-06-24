@@ -27,10 +27,10 @@
 		<ul>
 			<li><a href="http://www.php.net/" target="_blank">PHP</a> >= 4.2.x</li>
 			<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 3.23.23 (including 4.x) o <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 7.1</li>
-			<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x or >= 2.0.4x</li>
+			<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x or >= 2.0.4x o Microsoft IIS 6+</li>
 			<li>Sistema operativo: Ogni OS che supporti i software sopra, incluso <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.sun.com/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
 		</ul>
-		<p>OJS attualmente &#x00E8; stato solamente su MySQL e PostgreSQL, nonostante  altri database management systems supportati da <a href="http://php.weblogs.com/adodb/" target="_blank">ADOdb</a> potrebbero funzionare (pienamente o in parte). Rapporti di compatibilt&#x00E0; e/o patch per DBMS alternativi pu&#00F2; essere inviato al team OJS.</p>
+		<p>OJS attualmente &#x00E8; stato solamente su MySQL e PostgreSQL, nonostante  altri database management systems supportati da <a href="http://php.weblogs.com/adodb/" target="_blank">ADOdb</a> potrebbero funzionare (pienamente o in parte). Rapporti di compatibilt&#x00E0; e/o patch per DBMS alternativi sono benvenuti.</p>
 		]]>
 	</section>
 	
@@ -39,26 +39,30 @@
 	</section>
 	
 	<section title="Installation">
-		<![CDATA[<p>OJS si trova coun uno script diinstallazione che guida l'amministratore del sistema durante il processo di installazione.</p>
+		<![CDATA[<p>OJS si trova coun uno script diinstallazione che guida l'amministratore del sistema durante il processo di installazione. In alternativa, &#232; utilizzabile un'installazione command-line</p>
 		<ol>
 			<li>
 				Scarica l'archivio OJS.
 			</li>
 			<li>
 				Scompatta l'archivio OJS sul tuo web server e mettila nella posizione desiderata nel tua lista di documenti web:<br />
-				<tt>$ tar -zxf ojs-2.0.tar.gz<br />
-				$ mv ojs-2.0 /var/www/myjournal</tt>
+				<tt>$ tar -zxf ojs-2.*.tar.gz<br />
+				$ mv ojs-* /var/www/myjournal</tt>
 			</li>
 			<li>
 				Rendi iseguenti file e directroy scrivibili (i.e., using chown or chmod):<br />
 				- config.inc.php (optional)<br />
-				- locale/cache<br />
+				- cache<br />
+				- cache/t_cache<br />
+				- cache/t_config<br />
+				- cache/t_compile<br />
+				- cache/_db
 				- public<br />
 				- templates/t_cache<br />
 				- templates/t_compile<br />
 			</li>
 			<li>
-				Aprire un browser dove c'è l'installazione di OJS (e.g., http://www.mydomain.com/myjournal/) e segui le istruzioni a video per completare l'installazione.
+				Aprire un browser dove c'è l'installazione di OJS (e.g., http://www.mydomain.com/myjournal/) e segui le istruzioni a video per completare l'installazione. Per ulteriori informazioni sull'installazione, si veda la documentazione e il file README
 			</li>
 		</ol>
 		]]>

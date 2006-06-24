@@ -15,14 +15,22 @@
 
 <toc id="journal/toc/000001" locale="it_IT" title="Management Pages" parent_topic="journal/topic/000001">
 	<topic id="journal/topic/000004" title="Setup" />
-	<topic id="journal/topic/000005" title="Sections" />
+	<topic id="journal/topic/000005" title="Sezioni" />
 	<topic id="journal/topic/000006" title="Emails" />
-	<topic id="journal/topic/000007" title="Languages" />
-	<topic id="journal/topic/000008" title="Statistics" />
-	<topic id="journal/topic/000009" title="Reading Tools" />
-	<topic id="journal/topic/000010" title="File Browser" />
-	<topic id="journal/topic/000025" title="Subscriptions" />
+		<topic id="journal/topic/000010" title="Navigazione tra i file" />
 
-	<breadcrumb url="journal/topic/000000" title="Journal Management" />
-	<breadcrumb url="journal/topic/000001" title="Management Pages" />
+	<topic id="journal/topic/000007" title="Lingua" />
+	<topic id="journal/topic/000029" title="Redazione" />
+	<topic id="journal/topic/000006" title="Email standard" />
+	<topic id="journal/topic/000009" title="Reading Tools" />
+	<topic id="journal/topic/000008" title="Stats &amp; Reports" />
+	<topic id="journal/topic/000009" title="Reading Tools" />
+	<topic id="journal/topic/000025" title="Sottoscrizioni" />
+	<topic id="journal/topic/000034" title="Anvvisi" />
+	<topic id="journal/topic/000030" title="Plugin" />
+	<topic id="journal/topic/000031" title="Import/Export dei dati" />
+	
+	
+	<breadcrumb url="journal/topic/000000" title="Amministrazione del Journal" />
+	<breadcrumb url="journal/topic/000001" title="Amministrazione delle pagine" />
 </toc>
