@@ -631,9 +631,6 @@
 			<col>article_id</col>
 			<UNIQUE/>
 		</index>
-		<index name="published_articles_journal_id">
-			<col>journal_id</col>
-		</index>
 		<index name="published_articles_issue_id">
 			<col>issue_id</col>
 		</index>
