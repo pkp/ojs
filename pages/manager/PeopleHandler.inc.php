@@ -462,6 +462,8 @@ class PeopleHandler extends ManagerHandler {
 			$temporaryFileDao->deleteTemporaryFilesByUserId($oldUserId);
 			$notificationStatusDao =& DAORegistry::getDAO('NotificationStatusDAO');
 			$notificationStatusDao->deleteNotificationStatusByUserId($oldUserId);
+			$userSettingsDao =& DAORegistry::getDAO('UserSettingsDAO');
+			$userSettingsDao->deleteSettings($oldUserId);
 			$groupMembershipDao =& DAORegistry::getDAO('GroupMembershipDAO');
 			$groupMembershipDao->deleteMembershipByUserId($oldUserId);
 			$sectionEditorsDao =& DAORegistry::getDAO('SectionEditorsDAO');
