@@ -29,6 +29,7 @@
 
 	<message key="plugins.importexport.erudit.cliError">ERRORE:</message>
 	<message key="plugins.importexport.erudit.error.unknownJournal">Il path specificata del journal, "{$journalPath}", non esiste.</message>
+	<message key="plugins.importexport.erudit.export.error.galleyNotFound">plugins.importexport.erudit.export.error.galleyNotFound: Nessuna bozza corrisponde all'etichetta specificata "{$galleyLabel}".</message>
 	<message key="plugins.importexport.erudit.export.error.couldNotWrite">Non puoi scrivere sul file "{$fileName}".</message>
 	<message key="plugins.importexport.erudit.export.error.articleNotFound">Nessun articolo corrisponde all'ID  "{$articleId}".</message>
 

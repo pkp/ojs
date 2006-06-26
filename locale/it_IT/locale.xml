@@ -768,6 +768,7 @@ Da notare che l'interfaccia OAI pu&#x00F2; essere disabilitata per questo sito t
 	<message key="manager.statistics.statistics.note">Nota: Le percentuali per le submission peer reviewed non possono raggiungere il 100%, dato che gli items risottomessi sono accettati, rifiutati, o ancora nel processo editoriale.</message>	
 
 	<message key="manager.statistics.reports">Generatore di rapporti</message>
+	<message key="manager.statistics.reports.reportType">Tipo di rapporto</message>
 	<message key="manager.statistics.reports.description">OJS genera rapporti che tiene traccia dei dettagli associati alle submission al journal in progresso dalla prospettiva delle submission, degli editor, dei reviewer, e  delle sezioni, lungo un dato periodo di tempo. I rapporti sono generati in formato CSV che richiede un software per l'elaborazione testi per essere visto.</message>
 	<message key="manager.statistics.reports.dateFrom">Da</message>
 	<message key="manager.statistics.reports.dateTo">Fino a</message>
@@ -1206,7 +1207,7 @@ Fate <a href="http://www.pkp.ubc.ca/harvester/add.php" target="_blank">click qui
 	<message key="manager.groups.form.groupTitleRequired">&#x00C8; richiesto un titolo di gruppo.</message>
 
 	<message key="manager.groups.enableBoard.description"><![CDATA[Per elencare la composizione della <a href="{$aboutEditorialTeamUrl}">Redazione</a> nelle informazioni della rivista:]]></message>
-	<message key="manager.groups.enableBoard"><![CDATA[Usa delle descrizioni personalizzate per creare le informazioni sulla <a href="{$aboutEditorialTeamUrl}">Redazione</a>.]]></message>
+	<message key="manager.groups.enableBoard">Il Journal Manager creerà altri ruoli del tem editoriale, e vi inserirà le persone appropriate.</message>
 	<message key="manager.groups.disableBoard">Il sistema genera una lista di persone mostrandone l'attribuzione dei ruoli editoriali (Journal Manager, Editor, Section Editor, Copyeditor, etc.)</message>
 
 	<message key="manager.groups.membership">Componenti</message>
@@ -1305,6 +1306,7 @@ Puoi facoltativamente fornire all'utente una ragione per disattivare il loro acc
 	<message key="manager.subscriptionPolicies.openAccessOptions">Opzioni Open Access</message>
 	<message key="manager.subscriptionPolicies.openAccessOptionsDescription">Le riviste in abbonamento possono fornire due forme di open access (accesso libero) ai loro contenuti, che incrementer&#x00E0; la leggibilit&#x00E0; e la citazione di contenuti. Nota che anche con il delayed open access, gli editors saranno ancora in grado di designare articoli specifici all'interno di un fascicolo per l'open access. Le policies selezionate appariranno nelle informazioni della rivista.</message>
 	<message key="manager.subscriptionPolicies.openAccessOptionsDescription">L'abbonamento ai journal pu&#x00F2; fornire "delayed open access" e/o "author self-archiving" (che incremetna la leggibilit&#x00E0; e le citazioni dei contenuti). Le politiche selezionate verranno mostrate nell'About the Journal.</message>
+	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription">Con il delayed open access, gli editor possono ancora decidere quali articoli all'interno di un fascicolo siano immediatamente disponibili in open access.</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccess">Delayed Open Access</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription1">Rendere i contenuti di questa rivista disponibili in un formato open access</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription2">mese(i) dopo la pubblicazione di un fascicolo.</message>
@@ -1348,6 +1350,7 @@ Puoi facoltativamente fornire all'utente una ragione per disattivare il loro acc
 	<message key="manager.subscriptionTypes.format">Formato</message>
 	<message key="manager.subscriptionTypes.duration">Durata</message>
 	<message key="manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully">Tipo di abbonamento creato con successo.</message>
+	<message key="manager.subscriptionTypes.form.publicValid">Si prega di usare la checkbox.</message>
 	<message key="manager.subscriptionTypes.editTitle">Modifica</message>
 	<message key="manager.subscriptionTypes.edit">Modifica il tipo di abbonamento</message>
 	<message key="manager.subscriptionTypes.year">Anno</message>
