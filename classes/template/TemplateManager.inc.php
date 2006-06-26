@@ -201,10 +201,10 @@ class TemplateManager extends Smarty {
 	 * Smarty usage: {display_template template="name.tpl" hookname="My::Hook::Name"}
 	 */
 	function smartyDisplayTemplate($params, &$smarty) {
-
+		$templateMgr =& TemplateManager::getManager();
 		// This is basically a wrapper for display()
 		if (isset($params['template'])) {
-			$this->display($params['template'], "", $params['hookname']);
+			$templateMgr->display($params['template'], "", $params['hookname']);
 		}
 	}
 
