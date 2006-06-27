@@ -213,7 +213,7 @@ class Request {
 	 */
 	function getRemoteAddr() {
 		static $ipaddr;
-		if (!isset($remoteAddr)) {
+		if (!isset($ipaddr)) {
 			if (isset($_SERVER['HTTP_X_FORWARDED_FOR'])) {
 				$ipaddr = $_SERVER['HTTP_X_FORWARDED_FOR'];
 			} else if (isset($_SERVER['REMOTE_ADDR'])) {
@@ -240,6 +240,7 @@ class Request {
 			$remoteDomain = getHostByAddr(Request::getRemoteAddr());
 			HookRegistry::call('Request::getRemoteDomain', array(&$remoteDomain));
 		}
+		return $remoteDomain;
 	}
 	
 	/**
