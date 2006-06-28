@@ -791,7 +791,15 @@ class ImportOJS1 {
 			$issue->setYear($row['nYear']);
 			$issue->setPublished($row['bPublished']);
 			$issue->setCurrent($row['bLive']);
-			$issue->setDatePublished($row['dtDatePublished']);
+			if (isset($row['dtDatePublished'])) {
+				$issue->setDatePublished($row['dtDatePublished']);
+			} elseif (isset($row['nYear']) && isset($row['nNumber']) && ($row['nNumber'] <= 31)) {
+				$issue->setDatePublished($row['nYear'] . '-' . $row['nNumber'] . '-1');
+			} elseif (isset($row['nYear'])) {
+				$issue->setDatePublished($row['nYear'] . '-1-1');
+			} else {
+				$issue->setDatePublished(null);
+			}
 			$issue->setAccessStatus(OPEN_ACCESS);
 			$issue->setOpenAccessDate(isset($row['dtDateOpenAccess']) ? $row['dtDateOpenAccess'] : null);
 			$issue->setLabelFormat($this->issueLabelFormat);
