@@ -187,9 +187,9 @@ class SubscriptionForm extends Form {
 		$subscription->setTypeId($this->getData('typeId'));
 		$subscription->setDateStart($this->getData('dateStartYear') . '-' . $this->getData('dateStartMonth'). '-' . $this->getData('dateStartDay'));
 		$subscription->setDateEnd($this->getData('dateEndYear') . '-' . $this->getData('dateEndMonth'). '-' . $this->getData('dateEndDay'));
-		$subscription->setMembership($this->getData('membership'));
-		$subscription->setDomain($this->getData('domain'));
-		$subscription->setIPRange($this->getData('ipRange'));
+		$subscription->setMembership($this->getData('membership') ? $this->getData('membership') : null);
+		$subscription->setDomain($this->getData('domain') ? $this->getData('domain') : null);
+		$subscription->setIPRange($this->getData('ipRange') ? $this->getData('ipRange') : null);
 
 		// Update or insert subscription
 		if ($subscription->getSubscriptionId() != null) {
