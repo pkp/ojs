@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the es_ES locale.
+  *
+  * $Id$
+	*
+	* Traducción de la versión original 1.2 por Juan Pablo Alperin - 2006/06/29
+  -->
+ 
+<locale name="es_ES" full_name="Español (España)">
+	<message key="plugins.generic.counter.description"><![CDATA[El plugin COUNTER (CONTADOR) permite grabar y obtener reportes en formatos de acuerdo con  <a href="http://www.projectcounter.org/about.html" target="_new">COUNTER</a> sobre actividades del sitio.]]></message>
+	<message key="plugins.generic.counter">Estadísticas COUNTER (contardor)</message>
+
+	<message key="plugins.generic.counter.clearLog">Vaciar Registro</message>
+	<message key="plugins.generic.counter.confirmClear">¿Esta seguro que desea vaciar el registro? Esta acción no se puede deshacer.</message>
+	<message key="plugins.generic.counter.browseLog">Hojear Registro</message>
+	<message key="plugins.generic.counter.browseLog.logBrowser">Lector de Registro</message>
+
+	<message key="plugins.generic.counter.entry.timestamp">Cello del Tiempo</message>
+	<message key="plugins.generic.counter.entry.site">Sitio</message>
+	<message key="plugins.generic.counter.entry.journal">Revista</message>
+	<message key="plugins.generic.counter.entry.user">Usuario</message>
+	<message key="plugins.generic.counter.sessionNumber">Sesión #{$sessionNumber}</message>
+	<message key="plugins.generic.counter.entry.type">Tipo</message>
+	<message key="plugins.generic.counter.entry.type.article">Artículo</message>
+	<message key="plugins.generic.counter.entry.type.search">Buscar</message>
+	<message key="plugins.generic.counter.entry.value">Valor</message>
+
+	<message key="plugins.generic.counter.1a.title">Report de Revista 1 (R2): Pedidos de Texto completo por Mes y por Revista</message>
+	<message key="plugins.generic.counter.1a.title1">Report de Revista 1 (R2)</message>
+	<message key="plugins.generic.counter.1a.title2">Número de Pedidos exitosos de Articulos de Texto Completo por Mes y Revista (Año {$year})</message>
+	<message key="plugins.generic.counter.1a.dateRun">Efectuado en:</message>
+	<message key="plugins.generic.counter.1a.publisher">Publicador</message>
+	<message key="plugins.generic.counter.1a.platform">Plataforma</message>
+	<message key="plugins.generic.counter.1a.printIssn">ISSN Impreso</message>
+	<message key="plugins.generic.counter.1a.onlineIssn">ISSN En-linea</message>
+	<message key="plugins.generic.counter.1a.ytdTotal">Total del Año Corriente</message>
+	<message key="plugins.generic.counter.1a.ytdHtml">HTML del Año Corriente</message>
+	<message key="plugins.generic.counter.1a.ytdPdf">PDF del Año Corriente</message>
+	<message key="plugins.generic.counter.1a.totalForAllJournals">Total para todas las revistas</message>
+</locale>

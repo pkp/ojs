@@ -10,8 +10,12 @@
   * Localization strings for the es_ES locale.
   *
   * $Id$
+	*
+	* Traducción de la versión original 1.2 por Juan Pablo Alperin - 2006/06/29
   -->
  
 <locale name="es_ES" full_name="Español (España)">
-	<!-- FIXME: We need a Spanish translation. -->
+	<message key="plugins.generic.tinymce.name">Plugin TinyMCE</message>
+	<message key="plugins.generic.tinymce.description"><![CDATA[Este plugin activa un editor WSYWIG (What You See is What You Get - Lo Que Ve es lo Que Es) para las casillas de texto de OJS usando el editor de contenido <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a>.]]></message>
+	<message key="plugins.generic.tinymce.descriptionDisabled"><![CDATA[Este plugin activa un editor WSYWIG (What You See is What You Get - Lo Que Ve es lo Que Es) para las casillas de texto de OJS usando el editor de contenido <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a>. <strong>TinyMCE no esta instalado; por favor instalelo en {$tinyMcePath}.</strong>]]></message>
 </locale>
