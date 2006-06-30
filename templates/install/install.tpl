@@ -233,7 +233,7 @@
 <div class="separator"></div>
 
 
-<p><input type="submit" value="{translate key="installer.installOJS"}" class="button defaultButton" /> <input type="submit" name="manualInstall" value="{translate key="installer.manualInstall"}" class="button" /></p>
+<p><input name="install" type="submit" value="{translate key="installer.installOJS"}" class="button defaultButton" onclick="this.disabled = true" /> <input type="submit" name="manualInstall" value="{translate key="installer.manualInstall"}" class="button" /></p>
 
 </form>
 
