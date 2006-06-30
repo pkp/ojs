@@ -12,6 +12,16 @@
 
 {include file="submission/comment/header.tpl"}
 
+<script type="text/javascript">
+{literal}
+<!--
+// In case this page is the result of a comment submit, reload the parent
+// so that the necessary buttons will be activated.
+window.opener.location.reload();
+// -->
+{/literal}
+</script>
+
 <table class="data" width="100%">
 {foreach from=$articleComments item=comment}
 <tr valign="top">
@@ -63,7 +73,7 @@
 </tr>
 </table>
 
-<p><input type="submit" name="save" value="{translate key="common.save"}" class="button defaultButton" /> <input type="submit" name="saveAndEmail" value="{translate key="common.saveAndEmail"}" class="button" /> <input type="button" value="{translate key="common.close"}" class="button" onclick="window.opener.location.reload(); window.close()" /></p>
+<p><input type="submit" name="save" value="{translate key="common.save"}" class="button defaultButton" /> <input type="submit" name="saveAndEmail" value="{translate key="common.saveAndEmail"}" class="button" /> <input type="button" value="{translate key="common.close"}" class="button" onclick="window.close()" /></p>
 
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 
