@@ -91,14 +91,7 @@ class ImportOJS1 {
 	 * Constructor.
 	 */
 	function ImportOJS1() {
-		// Note: generally Request's auto-detection won't work correctly
-		// when run via CLI so use config setting if available
-		$this->indexUrl = Config::getVar('general', 'base_url');
-		if ($this->indexUrl)
-			$this->indexUrl .= '/' . INDEX_SCRIPTNAME;
-		else
-			$this->indexUrl = Request::getIndexUrl();
-
+		$this->indexUrl = Request::getIndexUrl();
 		$this->conflicts = array();
 	}
 

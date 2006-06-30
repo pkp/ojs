@@ -75,7 +75,14 @@ class Request {
 		static $baseUrl;
 		
 		if (!isset($baseUrl)) {
-			$baseUrl = Request::getProtocol() . '://' . Request::getServerHost() . Request::getBasePath();
+			$serverHost = Request::getServerHost(null);
+			if ($serverHost !== null) {
+				// Auto-detection worked.
+				$baseUrl = Request::getProtocol() . '://' . Request::getServerHost() . Request::getBasePath();
+			} else {
+				// Auto-detection didn't work (e.g. this is a command-line call); use configuration param
+				$baseUrl = Config::getVar('general', 'base_url');
+			}
 			HookRegistry::call('Request::getBaseUrl', array(&$baseUrl));
 		}
 		
@@ -182,13 +189,13 @@ class Request {
 	 * Get the server hostname in the request.
 	 * @return string
 	 */
-	function getServerHost() {
+	function getServerHost($default = 'localhost') {
 		static $serverHost;
 		if (!isset($serverHost)) {
 			$serverHost = isset($_SERVER['HTTP_X_FORWARDED_HOST']) ? $_SERVER['HTTP_X_FORWARDED_HOST']
 				: (isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST']
 				: (isset($_SERVER['HOSTNAME']) ? $_SERVER['HOSTNAME']
-				: 'localhost'));
+				: $default));
 			HookRegistry::call('Request::getServerHost', array(&$serverHost));
 		}
 		return $serverHost;
