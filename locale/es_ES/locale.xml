@@ -1295,6 +1295,7 @@ Seleccione un modelo para manejar aquellos aspectos del proceso editorial. (Para
 
 	<!-- Subscription Policy Management -->
 	<message key="manager.subscriptionPolicies.subscriptionContact">Gestor de Subscripciones</message>
+	<message key="manager.subscriptionPolicies.subscriptionPoliciesSaved">Se han puesto al día sus ajustes de la política de la suscripción.</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactDescription">El contacto que se lista bajo Subscripciones en Acerca de la Revista.</message>
 	<message key="manager.subscriptionPolicies.subscriptionAdditionalInformation">Información de la Subscrición</message>
 	<message key="manager.subscriptionPolicies.subscriptionAdditionalInformationDescription">El Tipo de Subscripción y The Subscription Types and la estructura de los costos serán automáticamente puestos bajo Subscripciones en la pagina Acerca de la Revista, junto con el nombre y los datos para contactar al Gestor de Subscripciones.  Información adicional sobre subscripciones, como métodos de pago o apoyo para países en vías de desarrollo, pudén ser añadidas aquí.</message>

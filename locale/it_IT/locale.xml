@@ -1299,6 +1299,7 @@ Puoi facoltativamente fornire all'utente una ragione per disattivare il loro acc
 
 	<!-- Subscription Policy Management -->
 	<message key="manager.subscriptionPolicies.subscriptionContact">Amministratore Abbonamenti</message>
+	<message key="manager.subscriptionPolicies.subscriptionPoliciesSaved">Le vostre regolazioni di politica di abbonamento sono state aggiornate.</message>
 	<message key="manager.subscriptionPolicies.subscriptionContactDescription">Contatto elencato sotto abboanementi in About the Journal.</message>
 	<message key="manager.subscriptionPolicies.subscriptionAdditionalInformation">Informazioni sull'abbonamento</message>
 	<message key="manager.subscriptionPolicies.subscriptionAdditionalInformationDescription">I tipi di abbonamento e strutture di pagamento saranno automaticamente messi sotto abbonamenti nella pagina informazioni della rivista, insieme con il nome e le informazioni del contatto per il responsabile degli abbonamenti. Informazioni aggiuntive sugli abbonamenti, come i metodi di pagamento o supporto per gli abbonati nei paesi in via di sviluppo, possono essere aggiunti qui.</message>

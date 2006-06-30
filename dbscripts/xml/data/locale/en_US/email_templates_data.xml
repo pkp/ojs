@@ -185,7 +185,7 @@ Thank you,
 			<field name="subject">Article Review Request</field>
 			<field name="body">{$reviewerName}:
 
-I believe that you would serve as an excellent reviewer of the manuscript, "{$articleTitle}," which has been submitted to {$journalName}. The submission's extract is inserted below, and I hope that you will consider undertaking this important task for us.
+I believe that you would serve as an excellent reviewer of the manuscript, "{$articleTitle}," which has been submitted to {$journalName}. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.
 
 Please log into the journal web site by {$weekLaterDate} to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation. The web site is {$journalUrl}
 
@@ -212,7 +212,7 @@ Thank you for considering this request.
 			<field name="subject">Article Review Request</field>
 			<field name="body">{$reviewerName}:
 
-I believe that you would serve as an excellent reviewer of the manuscript, "{$articleTitle}," which has been submitted to {$journalName}. The submission's extract is inserted below, and I hope that you will consider undertaking this important task for us.
+I believe that you would serve as an excellent reviewer of the manuscript, "{$articleTitle}," which has been submitted to {$journalName}. The submission's abstract is inserted below, and I hope that you will consider undertaking this important task for us.
 
 Please log into the journal web site by {$weekLaterDate} to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.
 

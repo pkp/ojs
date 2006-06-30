@@ -2026,7 +2026,6 @@ current password.<br /><br />Enter your email address below to reset your passwo
 	<!-- Search -->
 	<message key="search.browseAuthorIndex">Browse Author Index</message>
 	<message key="search.searchFor">Search articles for</message>
-	<message key="search.inField">In</message>
 	<message key="search.allFields">All</message>
 	<message key="search.author">Authors</message>
 	<message key="search.title">Title</message>
@@ -2118,14 +2117,12 @@ current password.<br /><br />Enter your email address below to reset your passwo
 	<message key="about.onlineSubmissions.registrationRequired">Registration and login are required to submit items online and to check the status of current submissions.</message>
 	<message key="about.authorGuidelines">Author Guidelines</message>
 	<message key="about.submissionPreparationChecklist">Submission Preparation Checklist</message>
-	<message key="about.submissionPreparationChecklist.description">As part of the submission process, authors will required to check off their submission's compliance with all of the following items, and submissions may be returned to authors that do not adhere to these guidelines.</message>
+	<message key="about.submissionPreparationChecklist.description">As part of the submission process, authors are required to check off their submission's compliance with all of the following items, and submissions may be returned to authors that do not adhere to these guidelines.</message>
 	<message key="about.copyrightNotice">Copyright Notice</message>
 	<message key="about.privacyStatement">Privacy Statement</message>
 	<message key="about.peerReviewProcess">Peer Review Process</message>
 	<message key="about.publicationFrequency">Publication Frequency</message>
 	<message key="about.openAccessPolicy">Open Access Policy</message>
-	<message key="about.delayedOpenAccessPolicy">Delayed Open Access</message>
-	<message key="about.authorSelfArchivePolicy">Author Self-Archiving</message>
 	<message key="about.delayedOpenAccess">Delayed Open Access</message>
 	<message key="about.delayedOpenAccessDescription1">The contents of this journal will be available in an open access format</message>
 	<message key="about.delayedOpenAccessDescription2">month(s) after an issue is published.</message>
