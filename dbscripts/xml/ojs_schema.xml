@@ -99,9 +99,7 @@
 		<field name="class_name" type="C2" size="255">
 			<KEY/>
 		</field>
-		<field name="last_run" type="T">
-			<NOTNULL/>
-		</field>
+		<field name="last_run" type="T" />
 		<descr>The last run times of all scheduled tasks.</descr>
 	</table>
 

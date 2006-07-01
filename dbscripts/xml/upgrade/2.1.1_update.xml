@@ -144,4 +144,13 @@ Thank you for agreeing to review the manuscript "{$articleTitle}" for {$journalN
 			UPDATE journal_settings SET setting_name = 'onlineIssn' WHERE setting_name = 'issn'
 		</query>
 	</sql>
+	<!-- Bug #1739: Add support for additional reminders -->
+	<table name="scheduled_tasks">
+		<row>
+			<field name="class_name">tasks.SubscriptionExpiryReminder</field>
+		</row>
+		<row>
+			<field name="class_name">tasks.OpenAccessNotification</field>
+		</row>
+	</table>
 </data>
