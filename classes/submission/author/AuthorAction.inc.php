@@ -42,10 +42,8 @@ class AuthorAction extends Action {
 			$submissionFile =& $authorSubmission->getSubmissionFile();
 			if ($submissionFile) {
 				$reviewFileId = $articleFileManager->copyToReviewFile($submissionFile->getFileId());
-				$editorFileId = $articleFileManager->copyToEditorFile($reviewFileId, null, null);
 
 				$authorSubmission->setReviewFileId($reviewFileId);
-				$authorSubmission->setEditorFileId($editorFileId);
 			
 				$authorSubmissionDao->updateAuthorSubmission($authorSubmission);
 
