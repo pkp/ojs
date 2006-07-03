@@ -15,7 +15,7 @@
 <table width="100%" class="data">
 <tr valign="top">
 	<td class="label" width="20%">{translate key="editor.article.selectDecision"}</td>
-	<td width="80%" class="value" colspan="2">
+	<td width="80%" class="value">
 		<form method="post" action="{url op="recordDecision"}">
 			<input type="hidden" name="articleId" value="{$submission->getArticleId()}" />
 			<select name="decision" size="1" class="selectMenu"{if not $allowRecommendation} disabled="disabled"{/if}>
@@ -28,7 +28,7 @@
 </tr>
 <tr valign="top">
 	<td class="label">{translate key="editor.article.decision"}</td>
-	<td class="value" colspan="2">
+	<td class="value">
 		{foreach from=$submission->getDecisions($round) item=editorDecision key=decisionKey}
 			{if $decisionKey neq 0} | {/if}
 			{assign var="decision" value=$editorDecision.decision}
@@ -40,7 +40,7 @@
 </tr>
 <tr valign="top">
 	<td class="label">{translate key="submission.notifyAuthor"}</td>
-	<td class="value" colspan="2">
+	<td class="value">
 		{url|assign:"notifyAuthorUrl" op="emailEditorDecisionComment" articleId=$submission->getArticleId()}
 		{icon name="mail" url=$notifyAuthorUrl}
 		&nbsp;&nbsp;&nbsp;&nbsp;
@@ -74,7 +74,7 @@
 	{if $lastDecision == SUBMISSION_EDITOR_DECISION_RESUBMIT}
 		<tr>
 			<td width="20%">&nbsp;</td>
-			<td width="80%" colspan="3">
+			<td width="80%">
 				{translate key="editor.article.resubmitFileForPeerReview"}
 				<input type="submit" name="resubmit" {if !($editorRevisionExists or $authorRevisionExists)}disabled="disabled" {/if}value="{translate key="form.resubmit"}" class="button" />
 			</td>
@@ -82,7 +82,7 @@
 	{elseif $lastDecision == SUBMISSION_EDITOR_DECISION_ACCEPT}
 		<tr valign="top">
 			<td width="20%">&nbsp;</td>
-			<td width="80%" colspan="3">
+			<td width="80%">
 				{translate key="editor.article.sendFileToCopyedit"}
 				<input type="submit" {if !($editorRevisionExists or $authorRevisionExists)}disabled="disabled" {/if}name="setCopyeditFile" value="{translate key="form.send"}" class="button" />
 			</td>
@@ -92,7 +92,7 @@
 	{if $reviewFile}
 		<tr valign="top">
 			<td width="20%" class="label">{translate key="submission.reviewVersion"}</td>
-			<td width="50%" class="value" colspan="3">
+			<td width="50%" class="value">
 				{if $lastDecision == SUBMISSION_EDITOR_DECISION_ACCEPT || $lastDecision == SUBMISSION_EDITOR_DECISION_RESUBMIT}<input type="radio" name="editorDecisionFile" value="{$reviewFile->getFileId()},{$reviewFile->getRevision()}" /> {/if}<a href="{url op="downloadFile" path=$submission->getArticleId()|to_array:$reviewFile->getFileId():$reviewFile->getRevision()}" class="file">{$reviewFile->getFileName()}</a>&nbsp;&nbsp;
 				{$reviewFile->getDateModified()|date_format:$dateFormatShort}
 			</td>
@@ -105,7 +105,7 @@
 				{assign var="firstItem" value=false}
 				<td width="20%" rowspan="{$authorFiles|@count}" class="label">{translate key="submission.authorVersion"}</td>
 			{/if}
-			<td width="80%" class="value" colspan="3">
+			<td width="80%" class="value">
 				{if $lastDecision == SUBMISSION_EDITOR_DECISION_ACCEPT || $lastDecision == SUBMISSION_EDITOR_DECISION_RESUBMIT}<input type="radio" name="editorDecisionFile" value="{$authorFile->getFileId()},{$authorFile->getRevision()}" /> {/if}<a href="{url op="downloadFile" path=$submission->getArticleId()|to_array:$authorFile->getFileId():$authorFile->getRevision()}" class="file">{$authorFile->getFileName()}</a>&nbsp;&nbsp;
 				{$authorFile->getDateModified()|date_format:$dateFormatShort}
 			</td>
@@ -113,7 +113,7 @@
 	{foreachelse}
 		<tr valign="top">
 			<td width="20%" class="label">{translate key="submission.authorVersion"}</td>
-			<td width="80%" colspan="3" class="nodata">{translate key="common.none"}</td>
+			<td width="80%" class="nodata">{translate key="common.none"}</td>
 		</tr>
 	{/foreach}
 	{assign var="firstItem" value=true}
@@ -123,7 +123,7 @@
 				{assign var="firstItem" value=false}
 				<td width="20%" rowspan="{$editorFiles|@count}" class="label">{translate key="submission.editorVersion"}</td>
 			{/if}
-			<td width="50%" class="value" colspan="3">
+			<td width="80%" class="value">
 				{if $lastDecision == SUBMISSION_EDITOR_DECISION_ACCEPT || $lastDecision == SUBMISSION_EDITOR_DECISION_RESUBMIT}<input type="radio" name="editorDecisionFile" value="{$editorFile->getFileId()},{$editorFile->getRevision()}" /> {/if}<a href="{url op="downloadFile" path=$submission->getArticleId()|to_array:$editorFile->getFileId():$editorFile->getRevision()}" class="file">{$editorFile->getFileName()}</a>&nbsp;&nbsp;
 				{$editorFile->getDateModified()|date_format:$dateFormatShort}&nbsp;&nbsp;&nbsp;&nbsp;
 				<a href="{url op="deleteArticleFile" path=$submission->getArticleId()|to_array:$editorFile->getFileId():$editorFile->getRevision()}" class="action">{translate key="common.delete"}</a>
@@ -132,7 +132,7 @@
 	{foreachelse}
 		<tr valign="top">
 			<td width="20%" class="label">{translate key="submission.editorVersion"}</td>
-			<td width="80%" colspan="3" class="nodata">{translate key="common.none"}</td>
+			<td width="80%" class="nodata">{translate key="common.none"}</td>
 		</tr>
 	{/foreach}
 	<tr valign="top">
