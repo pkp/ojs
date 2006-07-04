@@ -37,7 +37,7 @@
 	</setting>
 	<setting type="string">
 		<name>primaryLocale</name>
-		<value>en_US</value>
+		<value>{$primaryLocale}</value>
 	</setting>
 	<setting type="string">
 		<name>privacyStatement</name>

@@ -110,6 +110,8 @@ class JournalSiteSettingsForm extends Form {
 		if ($journal->getJournalId() != null) {
 			$journalDao->updateJournal($journal);
 		} else {
+			$site =& Request::getSite();
+
 			$journalId = $journalDao->insertJournal($journal);
 			$journalDao->resequenceJournals();
 			
@@ -138,7 +140,8 @@ class JournalSiteSettingsForm extends Form {
 			$journalSettingsDao->installSettings($journalId, 'registry/journalSettings.xml', array(
 				'indexUrl' => Request::getIndexUrl(),
 				'journalPath' => $this->getData('path'),
-				'journalName' => $this->getData('title')
+				'journalName' => $this->getData('title'),
+				'primaryLocale' => $site->getLocale()
 			));
 
 			// Install the default RT versions.
