@@ -366,12 +366,13 @@ class EmailTemplateDAO extends DAO {
 	 * Retrieve all journals.
 	 * @param $locale string
 	 * @param $journalId int
+	 * @param $rangeInfo object optional
 	 * @return array Journals ordered by sequence
 	 */
-	function &getEmailTemplates($locale, $journalId) {
+	function &getEmailTemplates($locale, $journalId, $rangeInfo = null) {
 		$emailTemplates = array();
 		
-		$result = &$this->retrieve(
+		$result = &$this->retrieveRange(
 			'SELECT COALESCE(ed.subject, dd.subject) AS subject, COALESCE(ed.body, dd.body) AS body, COALESCE(e.enabled, 1) AS enabled,
 		 	d.email_key, d.can_edit, d.can_disable, e.journal_id, e.email_id, dd.locale,
 			d.from_role_id, d.to_role_id
@@ -379,7 +380,8 @@ class EmailTemplateDAO extends DAO {
 		 	LEFT JOIN email_templates AS e ON (d.email_key = e.email_key AND e.journal_id = ?)
 			LEFT JOIN email_templates_data AS ed ON (ed.email_key = e.email_key AND ed.journal_id = e.journal_id AND ed.locale = dd.locale)
 		 	WHERE dd.locale = ?',
-			array($journalId, $locale)
+			array($journalId, $locale),
+			$rangeInfo
 		);
 		
 		while (!$result->EOF) {

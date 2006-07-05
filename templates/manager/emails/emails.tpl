@@ -22,7 +22,7 @@
 		<td width="15%" align="right">{translate key="common.action"}</td>
 	</tr>
 	<tr><td colspan="5" class="headseparator">&nbsp;</td></tr>
-{foreach name=emailTemplates from=$emailTemplates item=emailTemplate}
+{iterate from=emailTemplates item=emailTemplate}
 	<tr valign="top">
 		<td>{$emailTemplate->getEmailKey()|escape|truncate:20:"..."}</td>
 		<td>{translate key=$emailTemplate->getFromRoleName()}</td>
@@ -45,16 +45,22 @@
 		</td>
 	</tr>
 	<tr>
-		<td colspan="5" class="{if $smarty.foreach.emailTemplates.last}end{/if}separator">&nbsp;</td>
+		<td colspan="5" class="{if !$emailTemplates->eof()}end{/if}separator">&nbsp;</td>
 	</tr>
-{foreachelse}
+{/iterate}
+{if $emailTemplates->wasEmpty()}
 	<tr>
 		<td colspan="5" class="nodata">{translate key="common.none"}</td>
 	</tr>
 	<tr>
 		<td colspan="5" class="endseparator">&nbsp;</td>
 	</tr>
-{/foreach}
+{else}
+	<tr>
+		<td colspan="3" align="left">{page_info iterator=$emailTemplates}</td>
+		<td align="right" colspan="2">{page_links name="emails" iterator=$emailTemplates}</td>
+	</tr>
+{/if}
 </table>
 
 <br />
