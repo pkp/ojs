@@ -232,6 +232,11 @@ class Request {
 			if (!isset($ipaddr) || $ipaddr == false) {
 				$ipaddr = '';
 			}
+
+			// If multiple addresses are listed, take the first. (Supports ipv6.)
+			if (preg_match('/^([0-9.a-fA-F:]+)/', $ipaddr, $matches)) {
+				$ipaddr = $matches[1];
+			}
 			HookRegistry::call('Request::getRemoteAddr', array(&$ipaddr));
 		}
 		return $ipaddr;
