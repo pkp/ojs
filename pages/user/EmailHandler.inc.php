@@ -26,6 +26,16 @@ class EmailHandler extends UserHandler {
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
 
+		// See if this is the Editor or Manager and an email template has been chosen
+		$template = Request::getUserVar('template');
+		if (	empty($template) || (
+			!Validation::isJournalManager($journal->getJournalId()) &&
+			!Validation::isEditor($journal->getJournalId()) &&
+			!Validation::isSectionEditor($journal->getJournalId())
+		)) {
+			$template = null;
+		}
+
 		$email = null;
 		if ($articleId = Request::getUserVar('articleId')) {
 			// This message is in reference to an article.
@@ -71,18 +81,20 @@ class EmailHandler extends UserHandler {
 
 			if ($hasAccess) {
 				import('mail.ArticleMailTemplate');
-				$email =& new ArticleMailTemplate($articleDao->getArticle($articleId));
+				$email =& new ArticleMailTemplate($articleDao->getArticle($articleId, $template));
 			}
 		}
 
 		if ($email === null) {
 			import('mail.MailTemplate');
-			$email = &new MailTemplate();
+			$email = &new MailTemplate($template);
 		}
 		
 		if (Request::getUserVar('send') && !$email->hasErrors()) {
 			$email->send();
-			Request::redirectUrl(Request::getUserVar('redirectUrl'));
+			$redirectUrl = Request::getUserVar('redirectUrl');
+			if (empty($redirectUrl)) $redirectUrl = Request::url(null, 'user');
+			Request::redirectUrl($redirectUrl);
 		} else {
 			if (!Request::getUserVar('continued')) {
 				// Check for special cases.
