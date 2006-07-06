@@ -185,7 +185,7 @@ class CounterPlugin extends GenericPlugin {
 				$this->updateSetting(0, 'enabled', false);
 				break;
 			case 'counter':
-				if ($isEnabled) Request::redirect(null, null, 'counter');
+				if ($isEnabled) Request::redirect(null, 'counter');
 		}
 		return false;
 	}
