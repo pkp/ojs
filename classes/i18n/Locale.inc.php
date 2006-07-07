@@ -92,7 +92,7 @@ class Locale {
 			$locale = Locale::getLocale();
 		}
 
-		
+
 		$key = trim($key);
 		if (empty($key)) {
 			return '';
@@ -113,6 +113,9 @@ class Locale {
 				}
 			}
 			
+			// if client encoding is set to iso-8859-1, transcode string from utf8 since we store all XML files in utf8
+			if (LOCALE_ENCODING == "iso-8859-1") $message = utf8_decode($message);
+
 			return $message;
 			
 		} else {
@@ -310,7 +313,19 @@ class Locale {
 	 */
 	function &getAllLocales() {
 		$cache =& Locale::_getAllLocalesCache();
-		return $cache->getContents();
+
+		// if client encoding is set to iso-8859-1, transcode locales from utf8
+		if (LOCALE_ENCODING == "iso-8859-1") {
+			foreach ($cache->getContents() as $locale => $language) {
+				$cache_contents[$locale] = utf8_decode($language);
+			}
+			return $cache_contents;
+
+		} else {
+
+			return $cache->getContents();
+		}
+
 	}
 	
 	/**
