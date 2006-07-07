@@ -86,8 +86,13 @@ class FeedPlugin extends GenericPlugin {
 		if ( $this->getEnabled() ) {
 			$page =& $args[0];
 			$op =& $args[1];
-			
-			if ( $page == 'feed' ) {
+
+			// only display feed if the journal has a current issue
+	        $journal = &Request::getJournal();        
+    	    $issueDao = &DAORegistry::getDAO('IssueDAO');
+        	$issue = &$issueDao->getCurrentIssue($journal->getJournalId());
+
+			if ( $page == 'feed' && !is_null($issue)) {
 				define('HANDLER_CLASS', 'FeedHandler');
 				$this->import('FeedHandler');
 				return true;
