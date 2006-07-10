@@ -54,11 +54,9 @@
 
 <div id="body">
 
-<div id="sidebar">
-	{display_template template="common/sidebar.tpl" hookname="Templates::Common::Header::Sidebar"}
-</div>
+{display_template template="common/sidebar.tpl" hookname="Templates::Common::Header::sidebar"}
 
-<div id="main">
+<div id="main" >
 <div id="navbar">
 	<ul class="menu">
 		<li><a href="{url page="index"}">{translate key="navigation.home"}</a></li>
