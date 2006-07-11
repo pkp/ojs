@@ -12,6 +12,21 @@
 {assign var="pageTitle" value="installer.ojsInstallation"}
 {include file="common/header.tpl"}
 
+<script type="text/javascript">
+{literal}
+<!--
+// Ensure that the form submit button cannot be double-clicked
+function doSubmit() {
+	if (document.install.installing.value != (int) 1) {
+		document.install.installing.value = 1;
+		document.install.submit();
+	}
+	return true;
+}
+// -->
+{/literal}
+</script>
+
 {if is_writeable('config.inc.php')}{translate|assign:"writable_config" key="installer.checkYes"}{else}{translate|assign:"writable_config" key="installer.checkNo"}{/if}
 {if is_writeable('cache')}{translate|assign:"writable_cache" key="installer.checkYes"}{else}{translate|assign:"writable_cache" key="installer.checkNo"}{/if}
 {if is_writeable('public')}{translate|assign:"writable_public" key="installer.checkYes"}{else}{translate|assign:"writable_public" key="installer.checkNo"}{/if}
@@ -27,6 +42,7 @@
 
 
 <form method="post" name="install" action="{url op="install"}">
+<input type="hidden" name="installing" value="0" />
 {include file="common/formErrors.tpl"}
 
 {if $isInstallError}
@@ -233,7 +249,7 @@
 <div class="separator"></div>
 
 
-<p><input name="install" type="submit" value="{translate key="installer.installOJS"}" class="button defaultButton" onclick="this.disabled = true" /> <input type="submit" name="manualInstall" value="{translate key="installer.manualInstall"}" class="button" /></p>
+<p><input name="install" type="button" value="{translate key="installer.installOJS"}" class="button defaultButton" onclick="doSubmit()" /> <input type="submit" name="manualInstall" value="{translate key="installer.manualInstall"}" class="button" /></p>
 
 </form>
 
