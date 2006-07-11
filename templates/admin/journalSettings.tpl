@@ -14,7 +14,23 @@
 
 <br />
 
+<script type="text/javascript">
+{literal}
+<!--
+// Ensure that the form submit button cannot be double-clicked
+function doSubmit() {
+	if (document.journal.submitted.value != 1) {
+		document.journal.submitted.value = 1;
+		document.journal.submit();
+	}
+	return true;
+}
+// -->
+{/literal}
+</script>
+
 <form name="journal" method="post" action="{url op="updateJournal"}">
+<input type="hidden" name="submitted" value="0" />
 {if $journalId}
 <input type="hidden" name="journalId" value="{$journalId}" />
 {/if}
@@ -50,7 +66,7 @@
 	</tr>
 </table>
 
-<p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" onclick="this.disabled = true" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url op="journals" escape=false}'" /></p>
+<p><input type="button" value="{translate key="common.save"}" class="button defaultButton" onclick="doSubmit()" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url op="journals" escape=false}'" /></p>
 
 </form>
 
