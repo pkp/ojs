@@ -17,7 +17,7 @@
 <!--
 // Ensure that the form submit button cannot be double-clicked
 function doSubmit() {
-	if (document.install.installing.value != (int) 1) {
+	if (document.install.installing.value != 1) {
 		document.install.installing.value = 1;
 		document.install.submit();
 	}
