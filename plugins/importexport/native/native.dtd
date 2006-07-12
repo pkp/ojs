@@ -65,7 +65,7 @@
 <!ELEMENT access_date (#PCDATA)>
 
 <!-- Section-related elements -->
-<!ELEMENT section (title+, abbrev?, article+)>
+<!ELEMENT section (title+, abbrev+, article+)>
 <!ELEMENT abbrev (#PCDATA)>
 	<!ATTLIST abbrev
 		locale CDATA #IMPLIED>
