@@ -18,6 +18,7 @@
   <access_date>01-01-2001</access_date>
   <section>
    <title>Articles</title>
+   <abbrev>ART</abbrev>
    <article>
     <title>Jane Doe's Article</title>
     <date_published>2004-10-05</date_published>
@@ -56,6 +57,7 @@ BLAH BLAH BLAH
   <open_access/>
   <section>
    <title>Articles</title>
+   <abbrev>ART</abbrev>
    <article>
     <title>John Doe's Article</title>
     <date_published>2003-10-05</date_published>
