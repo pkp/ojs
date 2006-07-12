@@ -791,7 +791,7 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 
 	<!-- Plugin Management -->
 	<message key="manager.plugins.pluginManagement">Plugin Management</message>
-	<message key="manager.plugins.sitePlugin">This is a site-wide plugin. Only the Site Manager may manage this plugin.</message>
+	<message key="manager.plugins.sitePlugin">This is a site-wide plugin. Only the Site Administrator may manage this plugin.</message>
 	<message key="manager.plugins.action">Action:</message>
 	<message key="manager.plugins.disable">Disable</message>
 	<message key="manager.plugins.enable">Enable</message>
