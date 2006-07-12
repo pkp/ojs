@@ -89,7 +89,7 @@
 
 <!ELEMENT pages (#PCDATA)>
 
-<!ELEMENT indexing (discipline?, type?, subject?, subject_class?, subject?, coverage?)>
+<!ELEMENT indexing (discipline?, type?, subject?, subject_class?, coverage?)>
 <!ELEMENT discipline (#PCDATA)>
 <!ELEMENT type (#PCDATA)>
 <!ELEMENT subject_class (#PCDATA)>

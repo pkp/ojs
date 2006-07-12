@@ -185,8 +185,8 @@ class NativeExportDom {
 
 		if (XMLCustomWriter::createChildWithText($doc, $indexingNode, 'discipline', $article->getDiscipline(), false)!== null) $isIndexingNecessary = true;
 		if (XMLCustomWriter::createChildWithText($doc, $indexingNode, 'type', $article->getType(), false)!== null) $isIndexingNecessary = true;
-		if (XMLCustomWriter::createChildWithText($doc, $indexingNode, 'subject_class', $article->getSubjectClass(), false)!== null) $isIndexingNecessary = true;
 		if (XMLCustomWriter::createChildWithText($doc, $indexingNode, 'subject', $article->getSubject(), false)!== null) $isIndexingNecessary = true;
+		if (XMLCustomWriter::createChildWithText($doc, $indexingNode, 'subject_class', $article->getSubjectClass(), false)!== null) $isIndexingNecessary = true;
 
 		$coverageNode = &XMLCustomWriter::createElement($doc, 'coverage');
 		$isCoverageNecessary = false;
@@ -209,7 +209,7 @@ class NativeExportDom {
 		/* --- Galleys --- */
 		foreach ($article->getGalleys() as $galley) {
 			$galleyNode =& NativeExportDom::generateGalleyDom($doc, $journal, $issue, $article, $galley);
-			XMLCustomWriter::appendChild($root, $galleyNode);
+			if ($galleyNode !== null) XMLCustomWriter::appendChild($root, $galleyNode);
 			unset($galleyNode);
 			
 		}
@@ -308,7 +308,7 @@ class NativeExportDom {
 		XMLCustomWriter::appendChild($root, $fileNode);
 		$embedNode = &XMLCustomWriter::createChildWithText($doc, $fileNode, 'embed', base64_encode($articleFileManager->readFile($galley->getFileId())));
 		$articleFile = &$articleFileDao->getArticleFile($galley->getFileId());
-		if (!$articleFile) return $root; // Stupidity check
+		if (!$articleFile) return $articleFile; // Stupidity check
 		XMLCustomWriter::setAttribute($embedNode, 'filename', $articleFile->getOriginalFileName());
 		XMLCustomWriter::setAttribute($embedNode, 'encoding', 'base64');
 		XMLCustomWriter::setAttribute($embedNode, 'mime_type', $articleFile->getFileType());
@@ -323,6 +323,7 @@ class NativeExportDom {
 				$embedNode = &XMLCustomWriter::createChildWithText($doc, $styleNode, 'embed', base64_encode($articleFileManager->readFile($styleFile->getFileId())));
 				XMLCustomWriter::setAttribute($embedNode, 'filename', $styleFile->getOriginalFileName());
 				XMLCustomWriter::setAttribute($embedNode, 'encoding', 'base64');
+				XMLCustomWriter::setAttribute($embedNode, 'mime_type', 'text/css');
 			}
 
 			foreach ($galley->getImageFiles() as $imageFile) {
@@ -331,6 +332,7 @@ class NativeExportDom {
 				$embedNode = &XMLCustomWriter::createChildWithText($doc, $imageNode, 'embed', base64_encode($articleFileManager->readFile($imageFile->getFileId())));
 				XMLCustomWriter::setAttribute($embedNode, 'filename', $imageFile->getOriginalFileName());
 				XMLCustomWriter::setAttribute($embedNode, 'encoding', 'base64');
+				XMLCustomWriter::setAttribute($embedNode, 'mime_type', $imageFile->getFileType());
 				unset($imageNode);
 				unset($embedNode);
 			}
