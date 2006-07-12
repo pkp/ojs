@@ -304,6 +304,7 @@ class NativeExportDom {
 		XMLCustomWriter::appendChild($root, $fileNode);
 		$embedNode = &XMLCustomWriter::createChildWithText($doc, $fileNode, 'embed', base64_encode($articleFileManager->readFile($galley->getFileId())));
 		$articleFile = &$articleFileDao->getArticleFile($galley->getFileId());
+		if (!$articleFile) return $root; // Stupidity check
 		XMLCustomWriter::setAttribute($embedNode, 'filename', $articleFile->getOriginalFileName());
 		XMLCustomWriter::setAttribute($embedNode, 'encoding', 'base64');
 		XMLCustomWriter::setAttribute($embedNode, 'mime_type', $articleFile->getFileType());
