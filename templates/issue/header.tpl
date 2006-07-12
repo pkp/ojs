@@ -52,9 +52,7 @@
 
 <div id="body">
 
-<div id="sidebar">
-	{include file="common/sidebar.tpl"}
-</div>
+{display_template template="common/sidebar.tpl" hookname="Templates::Common::Header::sidebar"}
 
 <div id="main">
 <div id="navbar">
