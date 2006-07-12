@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the it_IT locale.
+  * Contributed by AePIC Team CILEA.
+  *
+  * $Id$
+  -->
+ 
+<locale name="it_IT" full_name="Italiano">
+	<message key="plugins.generic.counter.description"><![CDATA[Il plugin COUNTER permette la registrazione e il report in <a href="http://www.projectcounter.org/about.html" target="_new">COUNTER</a> sull'attività nel sito.]]></message>
+	<message key="plugins.generic.counter">Statistiche COUNTER </message>
+
+	<message key="plugins.generic.counter.clearLog">Elimina i Log</message>
+	<message key="plugins.generic.counter.confirmClear">Sei sicuro di voler cancellare i log? Questa azione non può essere annullata.</message>
+	<message key="plugins.generic.counter.browseLog">Naviga i Log</message>
+	<message key="plugins.generic.counter.browseLog.logBrowser">Log Browser</message>
+
+	<message key="plugins.generic.counter.entry.timestamp">Timestamp</message>
+	<message key="plugins.generic.counter.entry.site">Sito</message>
+	<message key="plugins.generic.counter.entry.journal">Journal</message>
+	<message key="plugins.generic.counter.entry.user">User</message>
+	<message key="plugins.generic.counter.sessionNumber">Sessione #{$sessionNumber}</message>
+	<message key="plugins.generic.counter.entry.type">Type</message>
+	<message key="plugins.generic.counter.entry.type.article">Articolo</message>
+	<message key="plugins.generic.counter.entry.type.search">Cerca</message>
+	<message key="plugins.generic.counter.entry.value">Valore</message>
+
+	<message key="plugins.generic.counter.1a.title">Journal Report 1 (R2): Articoli Full-Text richiesti per mese e Journal</message>
+	<message key="plugins.generic.counter.1a.title1">Journal Report 1 (R2)</message>
+	<message key="plugins.generic.counter.1a.title2">Articoli ottenuti Full-Text Article per mese e Journal (Year {$year})</message>
+	<message key="plugins.generic.counter.1a.dateRun">Data:</message>
+	<message key="plugins.generic.counter.1a.publisher">Editore</message>
+	<message key="plugins.generic.counter.1a.platform">Piattaforma</message>
+	<message key="plugins.generic.counter.1a.printIssn">ISSN della versione cartacea</message>
+	<message key="plugins.generic.counter.1a.onlineIssn">ISSN della versione </message>
+	<message key="plugins.generic.counter.1a.ytdTotal">YTD Total</message>
+	<message key="plugins.generic.counter.1a.ytdHtml">YTD HTML</message>
+	<message key="plugins.generic.counter.1a.ytdPdf">YTD PDF</message>
+	<message key="plugins.generic.counter.1a.totalForAllJournals">Totale per tutti i journals</message>
+</locale>

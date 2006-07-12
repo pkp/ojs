@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the it_IT locale.
+  * Contributed by AePIC Team CILEA.
+  *
+  * $Id$
+  -->
+ 
+<locale name="it_IT" full_name="Italiano">
+	<message key="plugins.importexport.crossref.displayName">CrossRef XML Export Plugin</message>
+	<message key="plugins.importexport.crossref.description">Esporta i metadati degli articoli in formato CrossRef.</message>
+	
+	<message key="plugins.importexport.crossref.export">Esporta i dati</message>
+	<message key="plugins.importexport.crossref.export.issues">Esporta il fascicolo</message>
+	<message key="plugins.importexport.crossref.export.selectIssue">Seleziona i fascicoli da esportare.</message>
+	<message key="plugins.importexport.crossref.export.articles">Esporta Articoli</message>
+	<message key="plugins.importexport.crossref.export.selectArticle">Seleziona gli articoli da esportare.</message>
+	
+	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[Uso: 
+{$scriptName} {$pluginName} [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
+{$scriptName} {$pluginName} [xmlFileName] [journal_path] issue [issueId]
+]]></message>
+	<message key="plugins.importexport.crossref.cliError">ERRORE:</message>
+
+	<message key="plugins.importexport.crossref.export.error.issueNotFound">Non esiste corrispondenza per lo specifico ID di fasciolo "{$issueId}".</message>
+	<message key="plugins.importexport.crossref.export.error.articleNotFound">Non esiste corrispondenza per lo specifico ID di articolo "{$articleId}".</message>
+
+	<message key="plugins.importexport.crossref.errors.noDOIprefix">Per usare questo plugin, nel setup del journal deve essere specificato un prefisso DOI valido.</message>
+</locale>

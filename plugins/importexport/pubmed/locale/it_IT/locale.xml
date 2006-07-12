@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the it_IT locale.
+  * Contributed by AePIC Team CILEA.
+  *
+  * $Id$
+  -->
+ 
+<locale name="it_IT" full_name="Italiano">
+	<message key="plugins.importexport.pubmed.displayName">PubMed XML Export Plugin</message>
+	<message key="plugins.importexport.pubmed.description">Esporta i metadati degli articoli in formato PubMed XML per l'indicizzazione in MEDLINE.</message>
+	
+	<message key="plugins.importexport.pubmed.export">Esporta i dati</message>
+	<message key="plugins.importexport.pubmed.export.issues">Esporta fascicoli</message>
+	<message key="plugins.importexport.pubmed.export.selectIssue">Selezioona i fascicoli da esportare.</message>
+	<message key="plugins.importexport.pubmed.export.articles">Esporta articoli</message>
+	<message key="plugins.importexport.pubmed.export.selectArticle">Seleziona gli articoli da esportare.</message>
+	
+	<message key="plugins.importexport.pubmed.cliUsage"><![CDATA[Uso: 
+{$scriptName} {$pluginName} [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
+{$scriptName} {$pluginName} [xmlFileName] [journal_path] issue [issueId]
+]]></message>
+	<message key="plugins.importexport.pubmed.cliError">ERRORE:</message>
+
+	<message key="plugins.importexport.pubmed.export.error.issueNotFound">Non esiste corrispondenza per lo specifico ID di fasciolo "{$issueId}".</message>
+	<message key="plugins.importexport.pubmed.export.error.articleNotFound">Non esiste corrispondenza per lo specifico ID di articolo "{$articleId}".</message>
+
+
+</locale>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Thesis abstracts plugin localization strings for the it_IT locale.
+  * Contributed by AePIC Team CILEA.
+  *
+  * $Id$
+  -->
+ 
+<locale name="it_IT" full_name="Italiano">
+	<message key="plugins.generic.thesis.displayName">Thesis Abstracts</message>
+	<message key="plugins.generic.thesis.description">Solicit and publish thesis abstracts.</message>
+
+	<!-- Thesis Abstract Management -->
+	<message key="plugins.generic.thesis.manager.settings">Impostazioni</message>
+	<message key="plugins.generic.thesis.manager.theses">Abstracts della tesi</message>
+	<message key="plugins.generic.thesis.manager.status">Stato</message>
+	<message key="plugins.generic.thesis.manager.status.inactive">Inattivo</message>
+	<message key="plugins.generic.thesis.manager.status.active">Attivo</message>
+	<message key="plugins.generic.thesis.manager.degree">Livello</message>
+	<message key="plugins.generic.thesis.manager.degree.masters">Master</message>
+	<message key="plugins.generic.thesis.manager.degree.doctorate">Dottorato</message>
+	<message key="plugins.generic.thesis.manager.dateApproved">Data di approvazione</message>
+	<message key="plugins.generic.thesis.manager.studentName">Nome dello studente</message>
+	<message key="plugins.generic.thesis.manager.title">Titolo della tesi</message>
+	<message key="plugins.generic.thesis.manager.confirmDelete">Sei sicuro di voler cancellare definitivamente tl'abstract di questa tesi?</message>
+	<message key="plugins.generic.thesis.manager.noneCreated">L'abstract della tesi non &#232; stato creato.</message>
+	<message key="plugins.generic.thesis.manager.create">Crea un nuovo abstract della tesi</message>
+	<message key="plugins.generic.thesis.manager.createTitle">Crea</message>
+	<message key="plugins.generic.thesis.manager.edit">Modifica l'abstract della tesi</message>
+	<message key="plugins.generic.thesis.manager.editTitle">Modifica</message>
+	<message key="plugins.generic.thesis.manager.form.status">Stato</message>
+	<message key="plugins.generic.thesis.manager.form.statusRequired">Inserire l'abstract della tesi.</message>
+	<message key="plugins.generic.thesis.manager.form.statusValid">Selezionare uno stato valido.</message>
+	<message key="plugins.generic.thesis.manager.form.degree">Livello</message>
+	<message key="plugins.generic.thesis.manager.form.degreeRequired">Indicare il livello della tesi.</message>
+	<message key="plugins.generic.thesis.manager.form.degreeValid">Selezionare un livello valido .</message>
+	<message key="plugins.generic.thesis.manager.form.department">Dipartimento</message>
+	<message key="plugins.generic.thesis.manager.form.departmentRequired">Indicare il dipartimento.</message>
+	<message key="plugins.generic.thesis.manager.form.university">Universit&#225;</message>
+	<message key="plugins.generic.thesis.manager.form.universityRequired">Inserire l'universi&#225;.</message>
+	<message key="plugins.generic.thesis.manager.form.dateApproved">Data di approvazione</message>
+	<message key="plugins.generic.thesis.manager.form.dateApprovedRequired">Inserire la data d'approvazione.</message>
+	<message key="plugins.generic.thesis.manager.form.dateApprovedValid">Selezionare una data di approvazione valida.</message>
+	<message key="plugins.generic.thesis.manager.form.title">Titolo</message>
+	<message key="plugins.generic.thesis.manager.form.titleRequired">Inserire il titolo della tesi.</message>
+	<message key="plugins.generic.thesis.manager.form.abstract">Abstract</message>
+	<message key="plugins.generic.thesis.manager.form.abstractRequired">Inserire l'abstract della tesi.</message>
+	<message key="plugins.generic.thesis.manager.form.abstractInstructions"><![CDATA[Inserire righe vuote per separare i paragrafi. Inserire il testo tra &lt;b&gt;&lt;/b&gt;, &lt;i&gt;&lt;/i&gt;, e &lt;u&gt;&lt;/u&gt; tag per la formattazione (ad esempio, questo &lt;i&gt;word&lt;/i&gt; rende il testo corsivo.)]]></message>
+	<message key="plugins.generic.thesis.manager.form.url">URL</message>
+	<message key="plugins.generic.thesis.manager.form.urlInstructions">Se la tesi &#232; pubblicata online. Includi http://, ftp://, etc.  (ad esempio http://www.sfu.ca/path/to/thesis.pdf).</message>
+	<message key="plugins.generic.thesis.manager.form.studentFirstName">Nome dello studente</message>
+	<message key="plugins.generic.thesis.manager.form.studentFirstNameRequired">Inserire il nome dello studente.</message>
+	<message key="plugins.generic.thesis.manager.form.studentLastName">Cognome dello studente</message>
+	<message key="plugins.generic.thesis.manager.form.studentLastNameRequired">Inserire il cognome dello studente.</message>
+	<message key="plugins.generic.thesis.manager.form.studentMiddleName">Secondo nome dello studente</message>
+	<message key="plugins.generic.thesis.manager.form.studentEmail">Email dello studente</message>
+	<message key="plugins.generic.thesis.manager.form.studentEmailValid">Inserire un'email valida.</message>
+	<message key="plugins.generic.thesis.manager.form.supervisorFirstName">Nome del relatore</message>
+	<message key="plugins.generic.thesis.manager.form.supervisorFirstNameRequired">Inserire il nome del relatore.</message>
+	<message key="plugins.generic.thesis.manager.form.supervisorLastName">Cognome del relatore</message>
+	<message key="plugins.generic.thesis.manager.form.supervisorLastNameRequired">Inserire il cognome del relatore.</message>
+	<message key="plugins.generic.thesis.manager.form.supervisorMiddleName">Secondo nome del relatore</message>
+	<message key="plugins.generic.thesis.manager.form.supervisorEmail">Email del relatore</message>
+	<message key="plugins.generic.thesis.manager.form.supervisorEmailValid">Inserire un'email valida.</message>
+	<message key="plugins.generic.thesis.manager.form.saveAndCreateAnother">Salva e crea un'altro</message>
+
+	<!-- Thesis Abstract Settings Management -->
+	<message key="plugins.generic.thesis.settings.description"><![CDATA[<p>Questo plugin abilita gli studenti a inviare un abstracts della loro tesi al journal usando una form on line.</p><p>Dopo la submission, il relatore viene automaticamente informato via email of della e gli viene chiesto di inviare una mail in cui confermi le informazioni inserite all'indirizzo per gli Absracts di tesi che deve appartenere a un Journal Manager. Una volta ricevute queste informazioni, il responsabile per gli abstract di tesi attiva la sottomissione, modificando il record corrispondente e modificando lo stato da 'Inattivo' a 'Attivo'). L'abstract della tesi viene quindi reso disponibile ai lettori.]]></message>
+	<message key="plugins.generic.thesis.settings.thesisContact">Contatto per gli abstrac di tesi</message>
+	<message key="plugins.generic.thesis.settings.thesisIntroduction">Precisazioni introduttive</message>
+	<message key="plugins.generic.thesis.settings.thesisIntroductionDescription">Precisazioni introduttive appaiono in cima alla pagina degli abstract delle tesi.</message>
+	<message key="plugins.generic.thesis.settings.thesisNameRequired">Va specificato il nome del contatto per gli abstract di tesi.</message>
+	<message key="plugins.generic.thesis.settings.thesisEmailRequired">Va specificato un indirizzo email del contatto per gli abstract di tesi.</message>
+
+	<!-- Thesis Abstracts -->
+	<message key="plugins.generic.thesis.theses">Abstract di tesi</message>
+	<message key="plugins.generic.thesis.headerLink"><![CDATA[Abstract&nbsp;di&nbsp;tesi]]></message>
+	<message key="plugins.generic.thesis.submit">Invia l'abstract di una tesi</message>
+	<message key="plugins.generic.thesis.submitLink">Invia l'abstract di una tesi</message>
+	<message key="plugins.generic.thesis.submitButton">Invia</message>
+	<message key="plugins.generic.thesis.view">Abstract</message>
+	<message key="plugins.generic.thesis.viewTitle">Abstract</message>
+	<message key="plugins.generic.thesis.noneExist">Non sono stati pubblicati abstract di tesi.</message>
+	<message key="plugins.generic.thesis.abstract">Abstract</message>
+	<message key="plugins.generic.thesis.studentFullName">{$lastName}, {$firstName} {$middleName}</message>
+	<message key="plugins.generic.thesis.form.introduction">Dopo la compilazione del seguente form, al relatore della tesi verr&#224; chiesto di verificare l'accuratezza delle informazioni fornite. Dopo tale verifica verr&#224; pubblicato l'abstract.</message>
+	<message key="plugins.generic.thesis.form.status">Status</message>
+	<message key="plugins.generic.thesis.form.statusValid">Inserire uno stato valido.</message>
+	<message key="plugins.generic.thesis.form.degree">Livello</message>
+	<message key="plugins.generic.thesis.form.degreeRequired">Inserire un livello di tesi valido.</message>
+	<message key="plugins.generic.thesis.form.degreeValid">Please select a valid degree.</message>
+	<message key="plugins.generic.thesis.form.department">Dipartimento</message>
+	<message key="plugins.generic.thesis.form.departmentRequired">Inserire il Dipartimento.</message>
+	<message key="plugins.generic.thesis.form.university">Universit&#224;</message>
+	<message key="plugins.generic.thesis.form.universityRequired">Inserire l'universit&#224;.</message>
+	<message key="plugins.generic.thesis.form.dateApproved">Data di approvazione</message>
+	<message key="plugins.generic.thesis.form.dateApprovedRequired">Inserire la data.</message>
+	<message key="plugins.generic.thesis.form.dateApprovedValid">Inserire una data valida.</message>
+	<message key="plugins.generic.thesis.form.title">Titolo</message>
+	<message key="plugins.generic.thesis.form.titleRequired">Inserire il titolo della tesi.</message>
+	<message key="plugins.generic.thesis.form.abstract">Abstract</message>
+	<message key="plugins.generic.thesis.form.abstractRequired">Inserire l'abstract della tesi.</message>
+	<message key="plugins.generic.thesis.form.abstractInstructions"><![CDATA[Inserire righe vuote per separare i paragrafi. Inserire il testo tra &lt;b&gt;&lt;/b&gt;, &lt;i&gt;&lt;/i&gt;, e &lt;u&gt;&lt;/u&gt; tag per la formattazione (ad esempio, questo &lt;i&gt;word&lt;/i&gt; rende il testo corsivo.]]></message>
+	<message key="plugins.generic.thesis.form.url">URL</message>
+	<message key="plugins.generic.thesis.form.urlInstructions">Se la tesi &#232; pubblicata online. Includi http://, ftp://, etc.  (ad esempio http://www.sfu.ca/path/to/thesis.pdf).</message>
+	<message key="plugins.generic.thesis.form.studentFirstName">Nome dello studente</message>
+	<message key="plugins.generic.thesis.form.studentFirstNameRequired">Inserire il nome dello studente.</message>
+	<message key="plugins.generic.thesis.form.studentLastName">Cognome dello studente</message>
+	<message key="plugins.generic.thesis.form.studentLastNameRequired">inserire il cognome dello studente.</message>
+	<message key="plugins.generic.thesis.form.studentMiddleName">Secondo nome dello studente</message>
+	<message key="plugins.generic.thesis.form.studentEmail">Email dello studente</message>
+	<message key="plugins.generic.thesis.form.studentEmailValid">Inserire un'email valida.</message>
+	<message key="plugins.generic.thesis.form.supervisorFirstName">Nome del relatore</message>
+	<message key="plugins.generic.thesis.form.supervisorFirstNameRequired">Inserire il nome del relatore.</message>
+	<message key="plugins.generic.thesis.form.supervisorLastName">Cognome del relatore</message>
+	<message key="plugins.generic.thesis.form.supervisorLastNameRequired">Inserire il cognome del relatore.</message>
+	<message key="plugins.generic.thesis.form.supervisorMiddleName">Secondo nome del relatore</message>
+	<message key="plugins.generic.thesis.form.supervisorEmail">Email del relatore</message>
+	<message key="plugins.generic.thesis.form.supervisorEmailValid">Inserire un'email valida.</message>
+	<message key="plugins.generic.thesis.form.saveAndCreateAnother">Salva e crea un altro</message>
+
+</locale>

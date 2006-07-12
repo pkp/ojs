@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the it_IT locale.
+  * Contributed by AePIC Team CILEA.
+  *
+  * $Id$
+  -->
+ 
+<locale name="it_IT" full_name="Italiano">
+	<message key="plugins.gateways.resolver.displayName">Resolver Plugin</message>
+	<message key="plugins.gateways.resolver.description">Questo plugin resolve fascicoli e articoli basati sulle citazioni.</message>
+	<message key="plugins.gateways.resolver.errors.errorMessage">Abilita la risoluzione di una singolo olggetto. una specifica citazione. Assicurarsi che la citazione comprenda e si riferisca a un oggetto ospitato in OJS.</message>
+	<message key="plugins.gateways.resolver.exportHoldings">Esporta posseduto</message>
+</locale>
