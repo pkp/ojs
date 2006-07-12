@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the fr_CA locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="fr_CA" full_name="Français (Canada)">
+	<message key="plugins.generic.counter.description"><![CDATA[Le plugiciel COUNTER permet un enregistrement et un compte rendu conforme au <a href="http://www.projectcounter.org/about.html" target="_new">COUNTER</a> sur les activités du site.]]></message>
+	<message key="plugins.generic.counter">Statistiques du COUNTER</message>
+
+	<message key="plugins.generic.counter.clearLog">Effacer le journal</message>
+	<message key="plugins.generic.counter.confirmClear">Êtes-vous certain de vouloir effacer ce journal? Cette action ne peut pas être annulée.</message>
+	<message key="plugins.generic.counter.browseLog">Naviguer le journal</message>
+	<message key="plugins.generic.counter.browseLog.logBrowser">Navigateur du journal</message>
+
+	<message key="plugins.generic.counter.entry.timestamp">Estampille temporelle</message>
+	<message key="plugins.generic.counter.entry.site">Site</message>
+	<message key="plugins.generic.counter.entry.journal">Revue</message>
+	<message key="plugins.generic.counter.entry.user">Usager</message>
+	<message key="plugins.generic.counter.sessionNumber">Session #{$sessionNumber}</message>
+	<message key="plugins.generic.counter.entry.type">Type</message>
+	<message key="plugins.generic.counter.entry.type.article">Article</message>
+	<message key="plugins.generic.counter.entry.type.search">Rechercher</message>
+	<message key="plugins.generic.counter.entry.value">Valeur</message>
+
+	<message key="plugins.generic.counter.1a.title">Rapport de revue 1 (R2): Demandes d'articles en texte intégral par mois et par revue</message>
+	<message key="plugins.generic.counter.1a.title1">Rapport de revue 1 (R2)</message>
+	<message key="plugins.generic.counter.1a.title2">Nombre de demandes d'article réussies par mois et revue (Année {$year})</message>
+	<message key="plugins.generic.counter.1a.dateRun">Éventail de dates:</message>
+	<message key="plugins.generic.counter.1a.publisher">Maison d'édition</message>
+	<message key="plugins.generic.counter.1a.platform">Plate forme</message>
+	<message key="plugins.generic.counter.1a.printIssn">Imprimer l'ISSN</message>
+	<message key="plugins.generic.counter.1a.onlineIssn">ISSN en ligne</message>
+	<message key="plugins.generic.counter.1a.ytdTotal">Cumul annuel jusqu'à ce jour - total</message>
+	<message key="plugins.generic.counter.1a.ytdHtml">Cumul annuel jusqu'à ce jour - HTML</message>
+	<message key="plugins.generic.counter.1a.ytdPdf">Cumul annuel jusqu'à ce jour -PDF</message>
+	<message key="plugins.generic.counter.1a.totalForAllJournals">Total pour toutes les revues</message>
+</locale>

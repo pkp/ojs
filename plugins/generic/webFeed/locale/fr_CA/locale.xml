@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the fr_CA locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="fr_CA" full_name="Français (Canada)">
+	<message key="plugins.generic.webfeed.displayName">Plugiciel d'alimentation</message>
+	<message key="plugins.generic.webfeed.description">Ce plugiciel assure une syndication en Atom et en RSS pour le numéro actuel.</message>
+</locale>
+

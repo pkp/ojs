@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the fr_CA locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="fr_CA" full_name="Français (Canada)">
+	<message key="plugins.importexport.crossref.displayName">Plugiciel d'exportation en XML pour renvois</message>
+	<message key="plugins.importexport.crossref.description">Exporter les métadonnées de l'article en format XML pour renvois.</message>
+	
+	<message key="plugins.importexport.crossref.export">Exporter les données</message>
+	<message key="plugins.importexport.crossref.export.issues">Exporter les numéros</message>
+	<message key="plugins.importexport.crossref.export.selectIssue">Choisir un numéro pour l'exporter.</message>
+	<message key="plugins.importexport.crossref.export.articles">Exporter des articles</message>
+	<message key="plugins.importexport.crossref.export.selectArticle">Choisir des articles pour les exporter.</message>
+	
+	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[Utilisation : 
+{$scriptName} {$pluginName} [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
+{$scriptName} {$pluginName} [xmlFileName] [journal_path] numéro [issueId]
+]]></message>
+	<message key="plugins.importexport.crossref.cliError">ERREUR:</message>
+
+	<message key="plugins.importexport.crossref.export.error.issueNotFound">Aucun numéro ne correspond à l'identification de numéro spécifié "{$issueId}".</message>
+	<message key="plugins.importexport.crossref.export.error.articleNotFound">Aucun numéro ne correspond à l'identification d'article spécifié "{$articleId}".</message>
+
+	<message key="plugins.importexport.crossref.errors.noDOIprefix">Il faut spécifier un préfixe DOI valable dans la mise en place de la revue pour pouvoir utiliser ce plugiciel.</message>
+</locale>
