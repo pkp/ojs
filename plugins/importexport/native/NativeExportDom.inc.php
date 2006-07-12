@@ -63,8 +63,9 @@ class NativeExportDom {
 
 		$sectionDao = &DAORegistry::getDAO('SectionDAO');
 		foreach ($sectionDao->getSectionsForIssue($issue->getIssueId()) as $section) {
-			$sectionNode = NativeExportDom::generateSectionDom($doc, $journal, $issue, $section);
+			$sectionNode =& NativeExportDom::generateSectionDom($doc, $journal, $issue, $section);
 			XMLCustomWriter::appendChild($root, $sectionNode);
+			unset($sectionNode);
 		}
 
 		return $root;
@@ -105,8 +106,9 @@ class NativeExportDom {
 
 		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
 		foreach ($publishedArticleDao->getPublishedArticlesBySectionId($section->getSectionId(), $issue->getIssueId()) as $article) {
-			$articleNode = NativeExportDom::generateArticleDom($doc, $journal, $issue, $section, $article);
+			$articleNode =& NativeExportDom::generateArticleDom($doc, $journal, $issue, $section, $article);
 			XMLCustomWriter::appendChild($root, $articleNode);
+			unset($articleNode);
 		}
 		return $root;
 	}
@@ -173,7 +175,7 @@ class NativeExportDom {
 		foreach ($article->getAuthors() as $author) {
 			$authorNode =& NativeExportDom::generateAuthorDom($doc, $journal, $issue, $article, $author);
 			XMLCustomWriter::appendChild($root, $authorNode);
-			
+			unset($authorNode);
 		}
 
 		/* --- Indexing --- */
@@ -206,8 +208,9 @@ class NativeExportDom {
 
 		/* --- Galleys --- */
 		foreach ($article->getGalleys() as $galley) {
-			$galleyNode = NativeExportDom::generateGalleyDom($doc, $journal, $issue, $article, $galley);
+			$galleyNode =& NativeExportDom::generateGalleyDom($doc, $journal, $issue, $article, $galley);
 			XMLCustomWriter::appendChild($root, $galleyNode);
+			unset($galleyNode);
 			
 		}
 
@@ -267,7 +270,8 @@ class NativeExportDom {
 			XMLCustomWriter::setAttribute($embedNode, 'filename', $suppFile->getOriginalFileName());
 			XMLCustomWriter::setAttribute($embedNode, 'encoding', 'base64');
 			XMLCustomWriter::setAttribute($embedNode, 'mime_type', $suppFile->getFileType());
-
+			unset($suppNode);
+			unset($fileNode);
 		}
 
 		return $root;
@@ -327,6 +331,8 @@ class NativeExportDom {
 				$embedNode = &XMLCustomWriter::createChildWithText($doc, $imageNode, 'embed', base64_encode($articleFileManager->readFile($imageFile->getFileId())));
 				XMLCustomWriter::setAttribute($embedNode, 'filename', $imageFile->getOriginalFileName());
 				XMLCustomWriter::setAttribute($embedNode, 'encoding', 'base64');
+				unset($imageNode);
+				unset($embedNode);
 			}
 		}
 
