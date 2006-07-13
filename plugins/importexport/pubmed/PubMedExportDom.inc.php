@@ -61,11 +61,12 @@ class PubMedExportDom {
 		XMLCustomWriter::createChildWithText($doc, $journalNode, 'JournalTitle', $journal->getTitle());
 		
 		// check various ISSN fields to create the ISSN tag
-		if ($journal->getSetting('printIssn') != "") $ISSN = $journal->getSetting('printIssn');
-		elseif ($journal->getSetting('issn') != "") $ISSN = $journal->getSetting('issn');
-		elseif ($journal->getSetting('onlineIssn') != "") $ISSN = $journal->getSetting('onlineIssn');
+		if ($journal->getSetting('printIssn') != '') $ISSN = $journal->getSetting('printIssn');
+		elseif ($journal->getSetting('issn') != '') $ISSN = $journal->getSetting('issn');
+		elseif ($journal->getSetting('onlineIssn') != '') $ISSN = $journal->getSetting('onlineIssn');
+		else $ISSN = '';
 		
-		if ($ISSN != "") XMLCustomWriter::createChildWithText($doc, $journalNode, 'Issn', $ISSN);
+		if ($ISSN != '') XMLCustomWriter::createChildWithText($doc, $journalNode, 'Issn', $ISSN);
 
 		XMLCustomWriter::createChildWithText($doc, $journalNode, 'Volume', $issue->getVolume());
 		XMLCustomWriter::createChildWithText($doc, $journalNode, 'Issue', $issue->getNumber(), false);
@@ -155,7 +156,7 @@ class PubMedExportDom {
 		$editordecision = array_pop($editordecisions);
 		while ($editordecision['decision'] != SUBMISSION_EDITOR_DECISION_ACCEPT && count($editordecisions) > 0) $editordecision = array_pop($editordecisions);
 		
-		if ($editordecision != "") {
+		if ($editordecision != '') {
 			$acceptedNode =& PubMedExportDom::generatePubDateDom($doc, $editordecision['dateDecided'], 'accepted');
 			XMLCustomWriter::appendChild($historyNode, $acceptedNode);
 		}
