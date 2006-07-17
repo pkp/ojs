@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000044.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Ensuring a blind peer review
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000044" locale="en_US" title="Ensuring a Blind Peer Review" toc="editorial/toc/000001" key="editorial.sectionEditorsRole.review.blindPeerReview">
+	<section>
+		<![CDATA[<p>Per assicurare una peer review cieca, per le submission a questo journal, si utilizza ogni metodo per mantenere sconosciute le identit&#224; di autori e revisori. Questo riguarda autori, editor e revisori (coloro che caricano documenti come parte della loro revisione) controllando che i passi successivi siano fatti con riguardo al testo e alle propriet&#224; del file:
+<ol><li>Gli autori abbiano cancellato i loro nomi dal testo del file, utilizzando "Author" e anno (in bibliografia e nelle note) al posto del nome dell'autore, del titolo dell'articolo etc.</li>
+<li>Nei documenti di Microsoft Office vanno inoltre rimossi gli elementi di identificazione presneti nelle propriet&#224; del file (menu File in Word), in questo modo, iniziando su File nel menui principale delle applicazioni MicrosoftFile &gt; Salva con nome &gt; Tools (o Options con un Mac) &gt; Sicurezza &gt; Rimuovi informazioni personali salvando &gt; Salva.</li>
+<li>Con i PDF, i nomi degli autori dovrebbero essere rimossi anche dalle propriet&#224; del documento nel menu File di Adobe Acrobat.</li>
+</ol></p>]]>
+	</section>
+</topic>

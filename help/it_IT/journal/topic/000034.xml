@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000034.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Announcements 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000034" locale="en_US" title="Announcements" toc="journal/toc/000001" key="journal.managementPages.announcements">
+	<section>
+		<![CDATA[<p>OJS permette al Journal Managers di fare annunci visibili da coloro che visitano il sito. Tali avvisi compaiono sulla Pagina degli avvisi e, facoltativamente, sull'homepage del journal.</p><p><i>Spiegazione del modulo Avvisi</i>. Il Journal Manager deve indicare in Setup, Management, 4.4 Avvisi, che il journal pubblicher&#224; avvisi. Inoltre, il Journal Manager deve indicare se tali avvisi andranno visualizzati sulla homepage o meno. Si pu&#242; stabilire qui se gli avvisi appariranno in cima alla Pagina degli avvisi.</p><p><i>Creare un avviso</i>. Il Journal Manager crea un avviso selezionando il tipo d'avviso (se esiste), indicandone il titolo, e inserendone il testo completo e una breve descrizione. la descrizione breve viene visualizzata dai lettori come sommario dell'avviso, mentre il testo completo viene visualizzato dai lettori che cliccano sui dettagli dell'avviso. Si pu&#242; inserire anche una data di scadenza, facoltativa. Gli avvisi che hanno una data di scadenza, verranno mostrati solo fino a tale data.</p>]]>
+	</section>
+
+</topic>

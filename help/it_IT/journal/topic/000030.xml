@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000030.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - System Plugins
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000030" locale="en_US" title="System Plugins" toc="journal/toc/000001" key="journal.managementPages.plugins">
+	<section>
+		<![CDATA[<p>La pagina Plugin di sistema permette al Journal Manager di vedere una lista di plugin installati OJS e permette di eseguire ogni azione prevista dai plugin. Per maggiorni informazioni, si veda la documentazione di ciascun plugin.</p>]]>
+	</section>
+</topic>

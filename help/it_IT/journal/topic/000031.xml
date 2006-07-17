@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000031.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Import/Export
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000031" locale="en_US" title="Import/Export Data" toc="journal/toc/000001" key="journal.managementPages.importExport">
+	<section>
+		<![CDATA[<p>The Import/Export Data feature, available from Journal Management, allows the Journal Manager to inject data into and extract data from OJS.</p><p>Data import/export is implemented using plugins, with each format or type of data being provided by a different plugin. For specific information, refer to each plugin's documentation.</p><p>Three Import/Export plugins ship with OJS: the Articles &amp; Issues XML Plugin, the Users XML Plugin, and the Erudit Article Export Plugin. These are documented below.</p><p>Import/export functionality is also available as a command-line tool; see tools/importExport.php for more information.</p>]]>
+	</section>
+	<section title="Articles &amp; Issues XML Plugin">
+			<![CDATA[<p>The Articles &amp; Issues XML Plugin &#232; il metodo principale per importare/esportare dati. Pu&#242; essere utilizzato per importare/esportare singoli articoli, pi&#249; articoli, uscite singole o pi&#249; uscite, compresi i relativi metadati. Per informazioni su questo plugin, si veda XML DTD in "plugins/importexport/native/native.dtd".</p>]]>
+	</section>
+	<section title="Users XML Plugin">
+			<![CDATA[<p>The Users XML Plugin pu&#242; essere utilizzato per importare/esportare gli utenti e i loro ruoli. Si veda XML DTD in "plugins/importexport/users/users.dtd" per maggiori informazioni.</p>]]>
+	</section>
+	<section title="Erudit Article Export Plugin">
+			<![CDATA[<p>The Erudit Article Export Plugin implementa l'esportazione di articoli singoli per l'indicizzazione full-text attraverso Erudit's XML DTD. Si veda <a href="http://www.erudit.org">http://www.erudit.org</a> per maggiori informazioni.</p>]]>
+	</section>
+</topic>

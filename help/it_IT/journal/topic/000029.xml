@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000029.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Groups
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000029" locale="en_US" title="Editorial Team" toc="journal/toc/000001" key="journal.managementPages.groups">
+	<section>
+		<![CDATA[<p>Il Journal Manager pu&#242; usare due metodi per definire il comitato editoriale, che appare nella pagina delle informazioni sul comitato editoriale, sotto About the Journal: usando ruoli editoriali assegnati, o creando titoli di ruoli personalizzati.</p>]]>
+	</section>
+	<section title="Generating The Editorial Team Using Assigned Editorial Roles">
+		<![CDATA[<p>Quando quest'opzione &#232; selezionata, le informazioni sul Comitato editoriale in About the Journal verranno generate automaticamente usando i ruoli definiti nelle pagine dei ruoli dal Journal Manager. Gli utenti registrati come Editors, Section Editors, Layout Editors, Copyeditors, e correttori di bozze vengono elencati qui.</p>]]>
+	</section>
+	<section title="Generating The Editorial Team Using Custom Editorial Team Titles">
+		<![CDATA[<p>Se un Journal Manager vuole avere un controllo maggiore delle informazioni presentate nella pagina delle informazioni sul comitato editoriale sotto About the Journal, pu&#242; abilitare quest'opzione dalla pagina del comitato editoriale (Vedi Amministrazione del Journal). Quando questa opzione &#232; abilitata, i diversi titoli del Comitato editoriale verranno utilizzatiper generare la pagina pubblica di informazioni sul comitato editoriale.</p>]]>
+	</section>
+</topic>

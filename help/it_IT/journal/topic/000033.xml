@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000033.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Merge Users
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000033" locale="en_US" title="Merge Users" toc="journal/toc/000002" key="journal.managementPages.mergeUsers">
+	<section>
+		<![CDATA[<p>La funzione di unione utenti, raggiungibile dal Journal Management sotto Utenti, permette al Journal Manager di unire gli account di due utenti in uno solo, trasferendo sottomissioni, incarichi e numerosi altri record da uno all'altro e cancellando poi definitivamente il primo.</p>
+		<p>Vengono trasferiti i seguenti oggetti:
+			<ul>
+				<li>Paternita degli articoli</li>
+				<li>Commenti pubblici agli articoli</li>
+				<li>Note agli articoli</li>
+				<li>Incarichi agli editor e note</li>
+				<li>Assegnazione di review</li>
+				<li>Incarichi al Layout editor</li>
+				<li>Incarichi al correttore di bozze</li>
+				<li>Email degli articoli e note di log</li>
+				<li>Chiavi d'accesso dei revisori</li>
+			</ul>
+		I seguenti oggetti <strong>NON</strong> sono trasferiti:
+			<ul>
+				<li>Sessioni</li>
+				<li>Sottoscrizioni</li>
+				<li>Notifiche di status (se un utente ha chiesto di ricevere notifiche sulle news del journal)</li>
+				<li>Appartenenza a comitati editoriali</li>
+				<li>Ruolo di editor o editor di sezione</li>
+				<li>Ruoli</li>
+				<li>Informazioni sul profilo utente (ad esempio Nome, Cognome etc.)</li>
+			</ul>
+		</p>
+		<p>Questa funzione va usata con molta attenzione, non essendo annullabile e riguardando il trasferimento di dati da un utente a un altro.</p>]]>
+	</section>
+</topic>
