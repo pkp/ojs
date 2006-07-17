@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000026.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Reading Tools - Settings
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000026" locale="tr_TR" title="Ayarlar" toc="journal/toc/000005" key="journal.managementPages.readingTools.settings">
+	<section>
+		<![CDATA[<p>Dergi yöneticisi derginin dizine giren bölümlerinin tümünün solunda yayınlanan okuma araçları için dergi içeriğine uygun bir alan seçer. Yönetici okuma araçları içindeki sürüm bölümünden dilediğinde seçilen kaynakları ekleyebilir, silebilir veya düzenleyebilir. Verilen genel bağlantıların tümünü veya bir bölümünü etkinleştirebilir. Etkinleştirilen okuma araçları seti dizinlenen tüm bölümlerde hizmete sunulur. Her sayfada yazarlarca verilen dizin bilgileri ile çalışmak üzere ayarlanırlar. Dergi yöneticisi Okuma Araçlarını her hangi bir zamanda değiştirebilir.</p>]]>
+	</section>
+</topic>

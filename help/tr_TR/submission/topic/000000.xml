@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author Submission Process Index 
+  *
+  * $Id$
+  -->
+
+<topic id="submission/topic/000000" locale="tr_TR" title="Başvuru Süreci" toc="index/toc/000000" subtoc="submission/toc/000000" key="submission.index">
+	<section>
+		<![CDATA[<p>Dergi, yazarların başvurularını doğrudan derginin websitesine yüklemeleri imkanını sağlar. Bu dergi için Dergi Yöneticisi tarafından belirlenen seçeneğe bağlı olarak (Adım 2.7), Yazarlar yazar, Eleştirmen (diğer başvuruların incelenmesi) ve/veya Okuyucu (derginin yeni sayısının İçindekiler Bölümü'nün bildirilmesi) olarak kayıt olma seçeneklerine sahip olabilirler. Yazarlar, kayıt sürecinin tamamlanmasında kullanıcının bu dergideki çeşitli rollerinin listelendiği (Yazar, Eleştirmen, vs.) Kullanıcı Oturumu'nu doğrudan alabilirler. Yazarın rolüne tıklamak, kullanıcıların yeni ve eski başvurularının listelendiği, dergiye yeni bir başvurunun başlatıldığı ve kendi başvurularının sayfasını almalarını sağlar. Yazarlar için başvuru süreci her adımda sağlanan rehberlikle beş adımda çözülebilir. Yazarların bir girişte beş adımı tamamlamaları gerekmez ama başvuru tablosu "Tamamlanmadı" olarak göründüğünde geri dönüş yapabilirler.</p>]]>	
+	</section>
+</topic>

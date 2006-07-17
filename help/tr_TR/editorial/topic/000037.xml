@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000037.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Copyeditor's Role - Submissions
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000037" locale="tr_TR" title="Başvurular" toc="editorial/toc/000012" key="editorial.copyeditorsRole.submissions">
+	<section>
+		<![CDATA[<p>Sayfa düzenleyici sisteme girdikten sonra, sayfa düzenleyici bağlantısını izleyerek başvuru listesine erişebilir. Bu sayfa, şu anda üzerinde çalışması istenilen başvuruların yanı sıra, geçmişte sayfa düzenini tamamlanmış yazılarada ulaşımı sağlar. Sayfa düzenleyici bir başvurunun başlığına tıklarsa, bu başvurunun sayfa düzenleme sayfasına gider.</p>]]>	
+	</section>
+</topic>

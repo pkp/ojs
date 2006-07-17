@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000002.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Users Index 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000002" locale="tr_TR" title="Üyeler" toc="journal/toc/000000" subtoc="journal/toc/000002" key="journal.users.index">
+	<section>
+		<![CDATA[<p>Dergi yöneticisi kullanıcı yönetiminden sorumludur. Kullanıcıların eklenmesi, onlara yönetsel görev verilmesi, hesapların kapatılması vb görevleri yürütür. Yönetici kişi bilgilerini değiştirebilir, hesapları birleştirebilir, kullanıcı grupları ile yazışabilir.</p>]]>	
+	</section>
+</topic>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000026.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Section Editor's Role Index - Review - Editor Decision
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000026" locale="tr_TR" title="Editör Kararı" toc="editorial/toc/000006" key="editorial.sectionEditorsRole.review.editorDecision">
+	<section>
+		<![CDATA[<p>Bütün hakem değerlendirmeleri tamamlandıktan sonra bölüm Editörü başvuru ile ilgili bir karar vermelidir. Bölüm Editörüne yardımcısı olması için Hakem raporları Editör/Yazar yazışmaları kısmına (hakemin Yalnızca Bölüm Editörü içindir diye tanımladıkları hariç) otomatik olarak konulur. Bölüm editörü harflerle tanımlanan bu yorumları düzenleyebilir (örn: Hakem A vs...). Editör hakemler tarafından kaydedilen tüm yorumları göremeyeceği için kararının dayanağını Editör/Yazar Yazışmaları kısmında yazara özetlemelidir. Bölüm editörü, yazara hakemlerden gelen yazışmaları göndermeden önce düzenleyebilir. Bölüm editörünün Yazara gönderdiği her mesajda yalnızca son yorumlar gönderilmektedir. Bölüm editörü ve yazar yorumların tamamına ilgili makalenin "Hakemlik" sayfasından ulaşabilirler. Bölüm editörü başvurunun yorumlar ve öneriler dikkate alınarak oluşturulmuş bir kopyasını sisteme yükleyebilir. </p><p><i>Kararı Kaydetmek</i>. Bölüm editörü Kabul Et, Düzeltme Gerekli, Hakemlik için Yeniden Başvur, veya Reddet seçenekleri arasından bir kararı seçer. Bölüm editörü önce Düzeltme Gerekli kararını verdi  ve yazar tarafından gönderilen düzeltmelerden tatmin oldu ise, ikinci bir karar vererek Kabul Et kararını seçebilir. Eğer bölüm editörü Kabul kararı verirse, bir sonraki adım başvurunun sayfa düzenine gönderilecek kopyasını editör ve yazar kopyaları arasından seçmektir. Varsayılan Editör kopyası Hakem kopyasıdır ve bölüm editörü bu kopyada düzenlemeler yapabilir (örneğin Yazar isimlerini eklemek gibi) ve sayfa düzenine gidecek kopya olarak sisteme yükleyebilir. Eğer Bölüm Editörü "Reddet" kararı verirse başvuru, durumu "Reddedilmiş" olarak kaydedilip Arşiv listesine taşınır. </p><p><i>Hakemlik için Yeniden göndermek</i>. Bölüm editörü ikinci tur hakemlik sürecini başlatabilir. Bölüm editörü Hakemlik için Yeniden Gönder seçeneğini seçer. Bundan sonra Bölüm editörü, yazar kararı göremeyeceği için, yazara bir e-posta göndererek makalesinin yeniden hakemlik sürecine girebilmesi için neler yapılması gerektiğini yazara iletir. Yazar yeniden hakeme gönderilmek üzere sisteme yeni bir kopya yüklediği zaman bu kopya Yazar kopyaları altında görünür ve Bölüm editörü bu kopyayı yeniden hakemilk sürecine sokar. Bundan sonra bu kopya 2. Tur için Hakem kopyası olur ve bu kopyanın da yazarların isimlerini içermemesinden emin olunması için kontrol edilmesi ve gerekli düzeltmeler yapıldıktan sonra Hakem kopyası olarak sisteme yüklenmesi gerekir. Birinci turdaki hakemler, ilk turdaki yorumları silinerek bu başvurunun "Geri çevirmeler, İptaller ve Önceki Turlar" kısmına gönderilmiş olsa da, ikinci turda da geçerli olacaklardır. Bölüm editörü birinci turdaki hakemlerden "Hakemlik İstemi"nin altındaki e-posta ikonuna tıklayarak ikinci turda da hakemlik yapmalarını isteyebilir veya hakemi hakemlik sürecinden çıkarıp yerine yeni bir hakem eklemek için Hakemi Kaldır seçeneğini kullanarak ikinci tur için yeni bir hakem atayabilir. Birinci Turdaki Editör/Yazar yazışmaları da bu başvurunun "Geri Çevirmeler, İptaller ve önceki Turlar" kısmına gönderilir. Bölüm editörü bunlara ihtiyacı olduğunda buradan ulaşabilir.</p>]]>	
+	</section>
+</topic>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000001.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * User Interface - Home
+  *
+  * $Id$
+  -->
+
+<topic id="user/topic/000001" locale="tr_TR" title="Giriş" toc="user/toc/000000" key="user.home">
+	<section>
+		<![CDATA[<p>Dergi sayfasının en üstünde bulunan gezinme çubuğunda Derginin Anasayfası son sayının İçindekiler Bölümünün ya da o baskının içeriğinin görüntülenmesinde Dergi Yöneticisi tarafından kullanılabilir. Derginin duyuruları ya da dergiyle ilgili yeni haberlerde ve belki de sponsor edilen organizasyonlarda da kullanılabilir. Okuyucuların son sayının İçindekiler Bölümü ve bu sayının içeriğindeki diğer tüm sayfalara ulaşmak için sadece Anasayfanın en üstünde bulunan gezinme çubuğundaki Son Sayı'ya tıklamaları yeterlidir.</p>]]>	
+	</section>
+</topic>

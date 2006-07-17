@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000015.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Journal Manager 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000015" locale="tr_TR" title="Dergi Yöneticisi" toc="journal/toc/000003" key="journal.roles.journalManager">
+	<section>
+		<![CDATA[<p>Dergi yöneticisi bir yayın sisteminin yönetiminden sorumludur. Bu iş ileri teknik bilgi ve beceri gerektirmez, formların doldurulması, bazı dosyaların gönderilip, alınması gibi temel kullanım bilgisi yeterlidir. Dergi yöneticisi dergiyi {help_topic key="journal.managementPages.setup" text="Kurar"}, editör ve bölüm editörlerini atar, yayın ile ilgili mizanpajcı vd görevlileri atar. Hakemler başka bir veritabanında mevcut ise sisteme {help_topic key="journal.users.index" text="kişiler"} bağlantısı altındaki "kişi al" bağlantısı kullanılarak eklenebilir. Dergi yöneticisi derginin diğer yönetsel özelliklerine de ulaşabilir. Dergiye yeni bölüm ekleyebilir, kullanılan e-posta şablonlarını geliştirebilir, {help_topic key="journal.managementPages.readingTools" text="Okuma Araçları"} için ayarları yapabiir, sistemin oluşturduğu {help_topic key="journal.managementPages.statsAndReports" text="Dergi İstatistikleri"} sonuçlarını görebilir.</p>
+<p>Gerçekte dergi yöneticiliği dergi bazında bir görev olsa da, ADS'nin şimdiki sürümünde yöneticilik site geneline uzanan bir yetki taşır, dergi ile sınırlı değildir.</p>]]>	
+	</section>
+</topic>

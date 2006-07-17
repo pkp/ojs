@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000009.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Reading Tools
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000009" locale="tr_TR" title="Okuma Araçları" toc="journal/toc/000001" subtoc="journal/toc/000005" key="journal.managementPages.readingTools">
+	<section>
+		<![CDATA[<p>Dergi yöneticisi okuyuculara sunulacak okuma araçlarından istediklerini etkinleştirebilir. Derginin dizine giren sayfalarında (Kongre duyurusu, iş ilanı vb. bölümler dışında) etkinleştirilen okuma araçları, sayfanın solunda okuyuculara sunulur. Okuma araçları deneyimli ve yeni başlayan okuyuculara açık ulaşımlı kaynaklardan okunan yazı ile ilgili geniş bir bilgi demetine ulaşma olanağı tanır. Araçlardan bir tanesi yazarın ilk iki anahtar sözcüğü ile ilgili bir veritabanında ilişkili yayınların taranmasını ve ikinci bir pencerede sonuçlarının gösterilmesini sağlar. Okuyucular aranacak sözcükleri ve ulaşılacak veritabanını değiştirme olanağına sahiptirler.</p><p>Dergi yöneticisi ayarları yaparken "Kütüphanecilik Bilgisi", "Dizinleme Bilgisi" gibi genel yardımcılar yanı sıra, dergi alanına uygun özgün kaynakları seçebilir veya yeni kaynaklar ekleyebilir. Lütfen dergi sitesinde {help_topic key="user.readingTools" text="Okuma Araçları"} sayfasına da bakınız.</p>]]>
+	</section>
+</topic>

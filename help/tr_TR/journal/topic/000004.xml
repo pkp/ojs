@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000004.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Setup 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000004" locale="tr_TR" title="Yapılandırma" toc="journal/toc/000001" key="journal.managementPages.setup">
+	<section>
+		<![CDATA[<p>Web sunucusuna sistem kurulduktan sonra, dergi yöneticisi beş adımdan oluşan bir süreçte formları doldurarak dergiyi oluşturur ve yönetimini belirler. Derginin bir seferde oluşturulması da gerekmez. Yönetici herhangi bir zamanda yapılandırmaya dönüp, gerekli formları kullanarak yapılandırmayı tamamlayabilir.</p><p>Yapılandırma dergi yöneticisi için dergi yönetimi sayfasından ulaşılabilir durumdadır ve her formda o forma özgü yardım sayfalarına bağlantılar içerir. Yapılandırma aşağıdaki konularda kararlar ve metinler oluşturmayı içerir. Dergi yöneticisi dergi editörleri ile görüşerek başlangıçta veya istenildiğinde anılan özellikleri istenilen biçime getirebilir.</p><ul><li>Dergi için ana iletişim noktaları</li><li>Teknik konularda iletişim noktaları</li><li>Derginin içeriği ve odaklandığı konu</li><li>Dergi Bölümleri ve Politikaları</li><li>Yazarlara notlar</li><li>Başvuruda yazarların uyacağı kurallar</li><li>Dizin için kullanılacak araçlar ve bu konuda örnekler</li><li>Meslekdaş görüşü alınması ile ilgili politikalar</li><li>Hakemler için rehberler</li><li>Telif hakkı politikası</li><li>Açık ulaşım politikası</li><li>Editörler kurulu, Hakemler kurulu</li><li>Abonelik Politikaları</li><li>Sayfa dizgicisi, mizanpajcı, prova dizgi okuyucu gibi görevlilerin kullanılıp, kullanılmayacağı</li></ul>]]>	
+	</section>
+</topic>

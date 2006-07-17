@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000012.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Users - Create New User 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000012" locale="tr_TR" title="Yeni Kullanıcı Oluştur" toc="journal/toc/000002" key="journal.users.createNewUser">
+	<section>
+		<![CDATA[<p>Dergi yöneticisi "Yeni kullanıcı Oluştur" bağlantısı ile sisteme yeni kullanıcı ekleyip, dergi yöneticiliğinden, okuyucuya dek dilediği rolü verebilir. Eklenen kullanıcı sisteme girdiğinde dilerse kişisel bilgilerini güncelleyebilir ve şifresini değiştirebilir.</p><p><i>Şifre Değiştirilmesi</i>. Kullanıcılar sisteme girdiklerinde şifrelerini değiştirebilirler. Dergi yöneticisi kullanıcı şifrelerine erişemez. Ancak kullanıcılar şifrelerini unuttuklarında, giriş sayfasındaki "Şifremi unuttum" bağlantısını tıklatarak, sistemin oluşturduğu yeni bir şifrenin e-posta adreslerine gönderilmesini sağlayabilirler.</p>]]>	
+	</section>
+        <section title="Yeni Görev Ver"> 
+                   <![CDATA[<p>Dergi yöneticisi kullanıcılara bir veya daha fazla rol veya görev verebilir.</p>]]> 
+           </section> 
+    
+           <section title="Kullanıcıları Senkronize Et"> 
+                   <![CDATA[<p>Kullanıcıların senkrone edilmesi bir dergi için düzenlenmiş görev grubunun diğer dergi için de benzer biçime  getirilmesini kapsar. Örneğin bir derginin hakem listesi diğer dergi için de aynen atanabilir.</p>]]> 
+           </section> 
+</topic>

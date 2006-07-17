@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000004.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * User Interface - Current and Archives
+  *
+  * $Id$
+  -->
+
+<topic id="user/topic/000004" locale="tr_TR" title="Son Sayı ve Arşiv" toc="user/toc/000000" key="user.currentAndArchives">
+	<section>
+		<![CDATA[<p>Derginin sayılarına son sayı ya da baskı biçiminde ve eski sayıların bir arşiv seti biçiminde ulaşılabilir. Dergi websitesinde okuyucular için ulaşılabilir Arşiv kısmının biçimlenmesi için Dergi Yöneticisi bu dergiyi bu sistemin kullanılmasına öncelik vermek için dergi websitesine getirebilir.</p>]]>	
+	</section>
+</topic>

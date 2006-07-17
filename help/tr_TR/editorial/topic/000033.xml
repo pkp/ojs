@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000033.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author's Role Review Index - Peer Review
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000033" locale="tr_TR" title="Hakem Değerlendirmesi" toc="editorial/toc/000010" key="editorial.authorsRole.review.peerReview">
+	<section>
+		<![CDATA[<p>Bu sayfada çeşitli tarihler gösterilir. Editörün hakemlerden talepte bulunduğu tarih, hakemlerin kabul tarihi ve raporlarını tamamladıkları tarihler bu sayfada gösterilmektedir. Dergide makalelerin nasıl bir değerelendirme sürecinden geçtikleri ile ilgili daha detaylı bilgi almak için yazar {help_topic key="user.about" text="Dergi Hakkında"} sayfasında bulunan Değerlendirme Politikasına başvurabilirler. Hakemler, başvurunun kenarlarına notlar düşülerek düzeltilmiş olan bir versiyonu da dahil olmak üzere,  yazarların başvurabilecekleri dosyaları sisteme yükleyebilirler. (Bu dosyalardan yararlanmak için hakem dosya ismine tıklayarak dosyayı doğrudan açar veya bilgisayarına kaydettikten sonra açabilir.)</p>]]>	
+	</section>
+</topic>

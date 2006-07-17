@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000019.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Editor's Role Submission Summary - Submission Management
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000019" locale="tr_TR" title="Başvuru Yönetimi" toc="editorial/toc/000003" key="editorial.editorsRole.submissionSummary.submissionManagement">
+	<section>
+		<![CDATA[<p> Editör, hakemlik sürecini yönetmesi için bir bölüm editörü atamadan önce gönderilen metnin değerlendirme sürecine girebileceğinden ve başvurunun derginin doğru bölümüne gönderildiğinden emin olmak için dosya ismini tıklayarak başvuruyu incelemelidir.</p><p><i>Uygun Olmayan Başvurular</i>. Eğer makale dergide yayımlanmak için uygun değilse, Editör yazara çalışmasının değerlendirme sürecine alınmayacağı konusunda e-posta gönderebilir. Bundan sonra Editör, makaleyi arşive gönderebilir. Atanmış bölüm editörleri de bu işlemi yapabilirler.</p><p><i>Başvuruya Bölüm Editörü Atamak</i>. Editör başvurunun yapıldığı bölümle (Makale, Kitap Eleştirisi vs...) ilgili tüm bölüm editörlerinin tam listesinden değerlendirme sürecini takip edecek bir bölüm editörü seçer. Bu seçim işlemi, ilgili bölüm editörüne atama ile ilgili otomatik bir e-posta gönderir.</p>]]>	
+	</section>
+</topic>

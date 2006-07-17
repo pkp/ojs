@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Editorial Process Index 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000000" locale="tr_TR" title="Derleme Süreci" toc="index/toc/000000" subtoc="editorial/toc/000000" key="editorial.index">
+	<section>
+		<![CDATA[<p>Dergiye yapılmış yayın başvurusu için gerçekleşecek olan derleme süreci hakemlik, genellikle bir yeniden gözden geçirme ve bunu takip edecen bölüm editörünün kabul veya red kararından oluşmaktadır.  Eğer başvuru yazar bağımsız değerlendirme aşamasında kabul edildiyse, başvuru sayfa düzenleme, mizanpaj ve  prova okuma süreçlerinden oluşan yayına hazırlık sürecine girer. Bundan sonra ise başvuru derginin bir sayısında yayınlanmak üzere sıraya konulur.  Derginin nasıl organize edildiğine bağlı olarak, derleme süreci tek bir editör veya editörler, bölüm editörleri ve  baskı editörlerinden oluşan bir takım tarafından yürütülebilir.</p>]]>	
+	</section>
+</topic>

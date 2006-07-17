@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000033.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Merge Users
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000033" locale="tr_TR" title="Kullanıcıları birleştirme" toc="journal/toc/000002" key="journal.managementPages.mergeUsers">
+	<section>
+		<![CDATA[<p>Kullanıcıları birleştirme olanağı Dergi Yönetimi altında kullanıcılar seçeneği içinde yer alır. Dergi yöneticisine iki kullanıcı hesabını bir hesapta birleştirme olanağı tanır. Bir hesap kapatılıp, tüm bağlantıları diğer hesaba aktarılır.</p>
+		<p>Şu bağlantılar diğer hesaba aktarılır:
+			<ul>
+				<li>Makale yazarlığı</li>
+				<li>Makalelere yazılan yaınlanmış yorumlar</li>
+				<li>Makale notları</li>
+				<li>Editorlük görevlerine bağlı kararları</li>
+				<li>Değerlendirme kararları</li>
+				<li>Sayfa düzeni kararları</li>
+				<li>Prova dizgi kararları</li>
+				<li>Yazı e-posta ve olay kayıtları</li>
+				<li>Hakem ulaşım anahtarları</li>
+			</ul>
+		Şu maddeler ise <strong>aktarılmayacaktır</strong> :
+			<ul>
+				<li>Oturumlar</li>
+				<li>Abonelik</li>
+				<li>Uyarı ayarları (örneğin yeni sayıdan haber alma)</li>
+				<li>Editorlük görevleri</li>
+				<li>Bölümler üzerindeki bölüm editörü yetkileri</li>
+				<li>Roller</li>
+				<li>Kullanıcı bilgileri</li>
+			</ul>
+		</p>
+		<p>Bu olanak dikkatle kullanılmalıdır, geri dönüşü yoktur, ana amacı çift üyelikleri birleştirmektir.</p>]]>
+	</section>
+</topic>

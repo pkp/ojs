@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000002.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Editor's Role Submissions Index 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000002" locale="tr_TR" title="Başvurular" toc="editorial/toc/000001" subtoc="editorial/toc/000002" key="editorial.editorsRole.submissions">
+	<section>
+		<![CDATA[<p> Dergiye gönderilen bütün makaleler derleme sürecinin neresinde olduklarına bağlı olarak Başvurular sayfasındaki dört sıradan birisinde yer alırlar. Editörler, bu sayfa üzerinden dergiye gönderilmiş olan bütün makalelere ulaşabilirken, Bölüm Editörleri sadece kendilerine verilmiş olan makalelere ulaşabilirler.</p>]]>	
+	</section>
+</topic>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000004.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Publishing Process - Publish
+  *
+  * $Id$
+  -->
+
+<topic id="publishing/topic/000004" locale="tr_TR" title="Yayınlama" toc="publishing/toc/000000" key="publishing.publish">
+	<section>
+		<![CDATA[<p>Bir sayının yayın zamanı geldiğinde, Editör sayının yayınlanması için sayı çıkar sayfasındaki "Sayı Yayınla"yı tıklar. Bu sayfada sayının İçindekiler Bölümü vardır. Bir sayıyı yayınlanınca okuyucular tarafından derginin son sayısı tıklandığında, yayınlanan sayının İçindekiler Bölümü ve kapağı görünür. Bir kapak varsa derginin ana sayfası görünür. Eski sayılar arşiv kısmına gönderilir. Anasayfa Dergi Yöneticisi tarafından orada görünmesi için bir görüntü ya da metin ile doldurulmamışsa ve eğer kiç kapak yoksa İçindekiler Bölümü anasayfada görünecektir. Bir sayı yayınlanınca sayının İçindekiler Bölümü ve dergi web sayfasının bir linkini içeren bilgilendirici bir mesaj ile tüm kayıtlı Okuyuculara gönderilir.</p>]]>	
+	</section>
+</topic>

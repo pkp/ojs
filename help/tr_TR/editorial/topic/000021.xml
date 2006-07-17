@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000021.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Section Editor's Role Index - In Review
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000021" locale="tr_TR" title="Değerlendirmede" toc="editorial/toc/000005" key="editorial.sectionEditorsRole.submissions.inReview">
+	<section>
+		<![CDATA[<p>Değerlendirme listesindeki başvurular Bölüm editörü tarafından verilecek olan red veya kabul kararı ile sonuçlanacak olan bir değerlendirme sürecine içindedirler. Editörler ve Dergi Yöneticisi tarafından hazırlanan Dergi Değerlendirme Politikası değerlendirme uygulanacak dergi bölümleri ve kaç hakemin görüşünün alınacağı gibi değerlendirme süreci ile ilgili konuları anlatır. Editör veya Bölüm Editörü değerlendirme listesindeki bir başvurunun başlığına tıkladığında ön değerlendirmenin yapıldığı ve değerlendirme süreci ile ilgili kararın verildiği Değerlendirme sayfasına girerler. Eğer bölüm editörü başvuruyu kabul ederse, başvuru Yayına Hazırlık listesine alınır. Eğer başvuru reddedilirse, Arşivler listesine taşınır.</p>]]>	
+	</section>
+</topic>

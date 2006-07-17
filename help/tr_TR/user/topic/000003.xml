@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000003.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * User Interface - Register and Profile
+  *
+  * $Id$
+  -->
+
+<topic id="user/topic/000003" locale="tr_TR" title="Kayıt ve Profil" toc="user/toc/000000" key="user.registerAndProfile">
+	<section>
+		<![CDATA[<p>Dergi, tüm kullanıcıların derleme ve yayımlama sürecinde olmalarını gerektiren bir kayıt sistemini kullanır. Derginin Gizlilik Politikası kayıtlı tüm kullanıcılar için geçerlidir. Kayıtlı her kullanıcı değiştirilebilen ya da kullanıcı dergi oturumunu açtığında eklenen bir Profile sahiptir. Profil linki, Kullanıcı sayfasında ve Kullanıcı'nın altında sağ kenarda bulunur.</p><p>Tüm kullanıcılar için, bir e-posta yenileme seçeneği vardır ve bu her yeni sayının İçindekiler Bölümü'nün kullanıcıya bildirilmesini sağlar. Birden fazla dil seçeneği olan Dergilerin işleyişinde, Eleştirmenler kendi başvuruları rahatça incelemek için Profillerinde bu dilleri gösterebilirler.</p>]]>	
+	</section>
+</topic>

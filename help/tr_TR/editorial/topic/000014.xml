@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000014.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Proofreader's Role Index 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000014" locale="tr_TR" title="Prova Dizgi Okuyucunun Rolü" toc="editorial/toc/000000" subtoc="editorial/toc/000014" key="editorial.proofreadersRole">
+	<section>
+		<![CDATA[<p>Prova Dizgi Okuyucu yazardan veya Bölüm editöründen prova dizgisi yapılmış yazının son okunması ve hatalarının düzeltilmesini isteyen bir e-posta alır. Son okumayı yapamayacak ise, bir Prova Dizgi Okuyucu, bölüm editörüne e-posta ile durumu bildirir.</p>]]>	
+	</section>
+</topic>

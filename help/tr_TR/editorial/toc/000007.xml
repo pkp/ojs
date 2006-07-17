@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../toc.dtd">
+
+<!--
+  * 000007.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Editorial Process - Section Editor's Role - Editing
+  *
+  * $Id$
+  -->
+
+<toc id="editorial/toc/000007" locale="tr_TR" title="Yayına Hazırlık" parent_topic="editorial/topic/000007">
+	<topic id="editorial/topic/000027" title="Sayfa Düzeni" />
+	<topic id="editorial/topic/000028" title="Mizanpaj" />
+	<topic id="editorial/topic/000029" title="Prova Dizgi" />
+
+	<breadcrumb url="editorial/topic/000000" title="Editöryal Süreç" />
+	<breadcrumb url="editorial/topic/000004" title="Bölüm Editörünün Rolü" />
+	<breadcrumb url="editorial/topic/000007" title="Yayına Hazırlık" />
+</toc>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000025.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Subscriptions 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000025" locale="tr_TR" title="Abonelik" toc="journal/toc/000001" key="journal.managementPages.subscriptions">
+	<section>
+		<![CDATA[<p>ADS yazılımı bir abonelik izleme parçası ile, abonelerin dergi içeriğine şifre ile ulaşımına izin verecek yapıyı içerir. Abonelik bireysel kullanıcı, kuruluş veya enstitü bazında olabilir. Abonelik ile ulaşılan bir dergi eski sayılarına yayından bir süre sonra açık erişimi de uygulayabilir. Sayı yönetimini kullanarak editör bir sayı veya seçilmiş makalelere yayından 0 ile 24 ay sonra açık erişimi olası kılabilir.</p><p>Dergi yöneticileri, editörler, bölüm editörleri, sayfa düzenleyiciler, mizanpajcılar ve prova okuyucular, sanki aboneymiş gibi, dergiye ulaşabilirler.</p><p><i>Abonelik Modülünün etkinleştirilmesi</i>. Dergi yöneticisi Kurulum sırasında (4.3) Abonelik Yönetim sistemini etkinleştirmelidir, bu sırada abonelik işlemlerini yürütmek üzere de dergi yöneticisi veya abonelik yöneticisi görevlendirilir.</p>]]>	
+	</section>
+	
+	<section title="Abonelik Tipleri">
+		<![CDATA[<p><i>Abonelik Tiplerinin oluşturulması</i>. Abonelik yönetimi kurulurken ilk adım derginin sunacağı abonelik tiplerinin belirlenmesidir. Dergiler sıklıkla bireysel ve kurumsal abonelikler için fiyatlar belirlerler. Bazı dergilerin belirli kurum mensuplarına ve öğrencilere özel abonelik fiyatları vardır. ADS basılı ve internet ulaşımlı abonelikleri yürütme olanğına sahiptir. Dilenir ise abonelik süresi de birden çok çeşit içerebilir (örneğin 6 aylık, 1 yıllık). </p><p><i>Abonelik tipi seçenekleri</i>. "Kurumsal" abonelikler için "IP tanımı veya alan adı tanımlı ulaşım" seçeneği uygundur. Böylelikle ilgili kurumun tüm mensupları tanımlanan IP adreslerinden veya alan adı içeren makinalardan dergiye şifresiz ulaşabilirler. Benzer olarak bir organizasyonn üyelerine indirimli veya bedava abonelik için "Bir dernek veya kurum üyesi" seçeneği kullanılır. "Sitede görülebilir" seçeneği işaretlendiğinde önerilen abonelik tipleri ile ilgili bilgiler derginin "Dergi Hakkında" sayfasında yayınlanır. Bir çok abonelik tipinin açık olarak duyurulması doğaldır, ancak dergi mensuplarına, veya başka özel gruplara tanınan ayrıcalıkların duyurulması istenmeyebilir.</p>]]>
+	</section>
+
+	<section title="Abonelik">
+		<![CDATA[<p><i>Abonelik Oluşturulması</i>. Bireysel aboneler için dergi veya abone yöneticisi kişiyi abone kullanıcı olarak işaretler. Eğer kullanıcı üye olarak kayıtlı değil ise, siteye ekler. "Abone oluştur" sayfasında aboneniliğin süresi ve tipi işaretlenir. İşlem tamamlanınca aboneye e-posta ile kullanıcı adı gönderilir ve aboneliğinin sonuna dek, yönetici abonelik listesinden çıkarmadıkça, kullanıcı derginin tüm sayfalarına ulaşır.</p><p><i>Kurumsal veya organizasyon abonelik</i>. Kurumsal abonelik için kurumun ilgili kişisi sisteme okuyucu olarak eklenir ve abone yöneticisi tarafından abone olarak işaretlenir. Kurum yetkilisi kurumun dergiye ulaşmak için kullanılacak IP listesini veya alan adını vermek durumundadır. Eğer kuruma kişisel ulaşım için de izin verilecek ise, "Kullanıcı alma" işlevine uygun bir kullanıcı listesi oluşturularak dergi yönetimine iletilmesi istenir. Bu liste sisteme alınarak, eklenen kullanıcılar abone olarak tanımlanırlar.</p>]]>
+	</section>
+
+</topic>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000043.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Proofreader's Role - Proofreading
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000043" locale="tr_TR" title="Prova Dizgi Kontrolü" toc="editorial/toc/000014" key="editorial.proofreadersRole.proofreading">
+	<section>
+		<![CDATA[<p>Prova dizgi okuyucu mizanpaj bölümünde prova dizgi listesinde listelenen bir veya daha fazla dosya biçimi ile çalışmalıdır. Bu aşamada sadece yazım ve biçim hataları tanımlanır. Derginin prova dizgi kontrolü yönergesini izleyerek, bu hatalar tanımlanır ve Düzeltmeler metin kutusuna girilir. Prova dizgi okuyucunun derginin standartları konusunda uzmanlaşmış olduğu göz önüne alınırsa, prova dizgi okuyucu mizanpajcıya önerilerde bulunmak için (örn: bu derginin standartlarına göre hata olmamasına rağmen hata olarak belirlenmiş düzletmeleri ihmal ediniz) yazarın yaptığı düzeltmeleri de gözden geçirmek isteyebilir.</p><p><i> Ek Dosyalar</i>. Prova dizgi okuyucu ek dosyaları yazım hatalarına karşı kontrol etmelidir. Ek dosyalar özgün biçimlerinde yayınlanmaktadır, ancak yine de düzeltilmesi gereken ya da derginin genel biçimine uygun hale getirilmesi gereken kısımları olabilir.</p>]]>	
+	</section>
+</topic>

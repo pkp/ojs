@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000031.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Import/Export
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000031" locale="tr_TR" title="Veri Alma Verme" toc="journal/toc/000001" key="journal.managementPages.importExport">
+	<section>
+		<![CDATA[<p>Dergi yöneticisinin ulaşabildiği veri alma verme sayfası sisteme veri eklenmesi veya verilerin dışarı iletilmesine olanak sağlar.</p><p>Veri alma verme için eklentiler kullanılarak, farklı yapıda veri alma verme sağlanmıştır. Özel bilgi için eklentilerin sayfalarına bakınız.</p><p>ADS içindeki üç önemli veri alma verme eklentisi Makaleler &amp; Sayılar XML Eklentisi, Kullanıcılar XML Eklentisi ve Erudit Makale verisi verme eklentisidir. Bu eklentiler ile ilgili bilgiler aşağıda verilmiştir.</p><p>Veri alma verme işlevi komut satırı aracı olarak da hizmete hazırdır, tools/importexport.php sayfasında daha fazla bilgi bulabilirsiniz.</p>]]>
+	</section>
+	<section title="Makaleler &amp; Sayılar XML Eklentisi">
+			<![CDATA[<p>Makaleler &amp; Sayılar XML Eklentisi toplu veri alma ve verme için temel eklentidir. Tek bir makale için kullanılabileceği gibi, tüm sayılar için, ilgili meta veriler ile birlikte ver ialma ve verme için kullanılabilir. Daha fazla XML ve DTD bilgisi için "plugins/importexport/native/native.dtd". dosyasına bakınız</p>]]>
+	</section>
+	<section title="Kullanıcılar XML Eklentisi">
+			<![CDATA[<p>Kullanıcılar XML Eklentisi kullanıcılar ve görevlerinin veri olarak alınıp, verilmesini sağlar. Daha fazla XML ve DTD bilgisi için "plugins/importexport/users/users.dtd" dosyasına bakınız.</p>]]>
+	</section>
+	<section title="Erudit Makale verisi verme eklentisi">
+			<![CDATA[<p>Erudit Makale verisi verme eklentisi tek bir makalenin Erudit XML ve DTD özellikleri ile dizin için verilmesini sağlar. Daha fazla bilgi için <a href="http://www.erudit.org">http://www.erudit.org</a> adresine bakınız.</p>]]>
+	</section>
+</topic>

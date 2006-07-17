@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000016.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Editor's Role Submissions - In Review 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000016" locale="tr_TR" title="Değerlendirmede" toc="editorial/toc/000002" key="editorial.editorsRole.submissions.inReview">
+	<section>
+		<![CDATA[<p>Bu aşamadaki başvurular hakemlik süreci ve bölüm editörünün kabul veya red kararını beklemektedirler. Değerlendirme sürecinin kapsamı derginin Hakemlik politikası bölümünde anlatılmaktadır (örn: Derginin her bölümünde meslekdaş görüşü gerekli midir? Her başvuru kaç hakem tarafından incelenmektedir?) Bir bölüm editörü veya Editör başvuru başlığına tıkladığı zaman başvurunun değerlendirme sayfasına girer. Eğer bölüm editörü başvuruyu kabul ederse başvuru Yayına Hazırlık Aşaması listesine taşınır; eğer reddedildiyse, Arşiv listesine taşınır.</p>]]>	
+	</section>
+</topic>

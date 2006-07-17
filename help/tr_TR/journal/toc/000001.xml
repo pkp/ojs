@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../toc.dtd">
+
+<!--
+  * 000001.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Journal Management - Management Pages. 
+  *
+  * $Id$
+  -->
+
+<toc id="journal/toc/000001" locale="en_US" title="Yönetim Sayfaları" parent_topic="journal/topic/000001">
+	<topic id="journal/topic/000010" title="Dosya Tarayıcı" />
+	<topic id="journal/topic/000005" title="Dergi Bölümleri" />
+	<topic id="journal/topic/000007" title="Diller" />
+	<topic id="journal/topic/000029" title="Yöneticiler Listesi" />
+	<topic id="journal/topic/000006" title="E-posta Şablonları" />
+	<topic id="journal/topic/000009" title="Okuma Araçları" />
+	<topic id="journal/topic/000004" title="Kurulum" />
+	<topic id="journal/topic/000008" title="İstatistik ve Raporlar" />
+	<topic id="journal/topic/000025" title="Abonelik" />
+	<topic id="journal/topic/000034" title="Duyurular" />
+	<topic id="journal/topic/000030" title="Sistem Eklentileri" />
+	<topic id="journal/topic/000031" title="Veri Alma Verme" />
+
+	<breadcrumb url="journal/topic/000000" title="Dergi Yönetimi" />
+	<breadcrumb url="journal/topic/000001" title="Yönetim Sayfaları" />
+</toc>

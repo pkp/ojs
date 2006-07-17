@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000022.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Section Editor's Role Index - In Editing
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000022" locale="tr_TR" title="Yayına Hazırlık" toc="editorial/toc/000005" key="editorial.sectionEditorsRole.submissions.inEditing">
+	<section>
+		<![CDATA[<p>Bu listedeki başvurular sayfa düzeni, mizanpaj ve prova dizgi değerlendirilmesi aşamalarından geçmektedir. Bir editör veya bölüm editörü Yayına Hazırlık listesindeki bir başvurunun başlığına tıkladığında başvurunun Yayına Hazırlık sayfasına ulaşır. Bir başvuru Yayına Hazırlık aşamasını geçip bir sayıda yayımlanmak üzere yayın bekleme kuyruğuna gönderildiğine, bu listeden kaldırılarak, arşive alınır.</p>]]>	
+	</section>
+</topic>

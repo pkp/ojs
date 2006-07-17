@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000003.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Publishing Process - Table of Contents
+  *
+  * $Id$
+  -->
+
+<topic id="publishing/topic/000003" locale="tr_TR" title="İçindekiler" toc="publishing/toc/000000" key="publishing.tableOfContents">
+	<section>
+		<![CDATA[<p>Bir başvuru yayınlandığı anda o sayının İçindekiler Bölümü'nde ilgili bölüm başlığının altındaki  görünecektir. Bir bölüm için hiç başvuru yoksa o bölüm, İçindekiler sayfasında görünmeyecektir. Editör bölümleri yeniden düzenleyebilir ve bir bölüm içindeki başvurular yeniden düzenlenebilir.</p>]]>	
+	</section>
+</topic>

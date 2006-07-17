@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000004.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Section Editor's Role Index 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000004" locale="tr_TR" title="Bölüm Editörünün Rolü" toc="editorial/toc/000000" subtoc="editorial/toc/000004" key="editorial.sectionEditorsRole">
+	<section>
+		<![CDATA[<p> Bölüm editörleri genellikle başvuruların gözden geçirme sürecini yönetmek ve bu başvurulardan kabul edilenlerin düzenlenmesi ile ilgilenirler. Ancak, dergi yayım politkasına göre, bir makaleye atanan bölüm editörü makaleyi sadece makale ile ilgili hakemlik sürecinde görmesi ve bundan sonra makale ile ilgili işlemleri editörün üstlenmesi istenebilir. Yeni başvuruyu editör Bölüm Editörlerine göndererek, başvuruyu görmelerini sağlar. </p>]]>	
+	</section>
+</topic>

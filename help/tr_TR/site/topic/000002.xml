@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000002.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Site Administration - Site Management 
+  *
+  * $Id$
+  -->
+
+<topic id="site/topic/000002" locale="tr_TR" title="Site Yönetimi" toc="site/toc/000000" key="site.siteManagement">
+	<section>
+		<![CDATA[<p>ADS çoklu dergi sistemi olarak düzenlenir ve Site Yöneticisi tüm site düzeyinde ayarlardan ve sitede yayınlanacak yeni dergilerin oluşturmasından sorumludur. Dergi alanları tümü ile birbirinden bağımsızdır, tek istisna kullanıcıları paylaşmalarıdır. Aynı kullanıcılar farklı dergilerde farklı, ya da benzer görevler üstlenebilirler.</p>]]>	
+	</section>
+	
+	<section title="Site Ayarları">
+		<![CDATA[<p>Site başlığını, tanımlamasını ve iletişim bilgilerini içeren ve sitenin sahip olduğu tüm dergilere uygulanabilen temel kurulum ayarları Site Yöneticisi tarafından girilir.</p>
+		<p><em>Dergiye Yönlendirme.</em>Bu ayar ADS sitesine girişte, ziyaretçinin doğrudan belirli bir derginin ana sayfasına yönlendirilmesini sağlar. Özellikle site tek bir dergi barındırıyorsa, bu seçim kullanılır.</p>]]>
+	</section>
+	
+	<section title="Sistemdeki Dergiler">
+		<![CDATA[<p>ADS istenilen sayıda tek ya da çeşitli konularda dergi yayınlanmasına izin verir, herhangi bir zamanda yeni dergiler oluşturulabilir ve yayınlanabilir. Site Yöneticisi dergi yaratılmasınadan sorumludur. Her dergi için kurulumda verilen dizin adına dayanan ayrı bir web adresi oluşur. Kurulum ve yapılandırma sürecinde olan yeni dergiler hazır olana kadar okuyuculardan saklanabilir.</p>]]>
+	</section>
+	
+	<section title="Diller">
+		<![CDATA[<p>ADS çoklu bir dil sistemi desteği ile geliştirilmiştir, tek bir sitede barındırılan çeşitli dergilerde çeşitli dillerin birlikte kullanabilmesine izin verir. Site Yöneticisi sitenin varsayılan dilini belirler ve dergiler tarafından kullanılmak üzere istenilen diğer dilleri sisteme yükleyebilir.</p>
+		<p>Kullanıcı katkılı ile çeviriler yapıldıkça, ek dil paketleri Açık Dergi Sistemi ana web sitesinden indirilebilir biçimde yayınlanır, site adresi: <a href="http://pkp.sfu.ca/" target="_blank">http://pkp.sfu.ca/</a>. Bu paketlerin Site Yöneticisinin sitesine dili yüklemesi ile dergiler için kullanılabilir olurlar.</p>]]>
+	</section>
+        <section title="Kullanıcı Kaynağı"> 
+                   <![CDATA[<p>Ön tanımlı olarak ADS yazılımı kullanıcı girişi için kendi iç veritabanını kullanır. Ancak ak kullanıcı kaynakları da kullanılabilir. Örneğin LDAP ve benzeri kullanıcı kaynakları ayrıntılarını görmek için ADS eklentilerine bakınız.</p>]]> 
+           </section> 
+</topic>

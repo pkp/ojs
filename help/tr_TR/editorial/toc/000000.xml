@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../toc.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Editorial Process. 
+  *
+  * $Id$
+  -->
+
+<toc id="editorial/toc/000000" locale="tr_TR" title="Derleme Süreci" parent_topic="editorial/topic/000000">
+	<topic id="editorial/topic/000001" title="Editörün Rolü" />
+	<topic id="editorial/topic/000004" title="Bölüm Editörünün Rolü" />
+	<topic id="editorial/topic/000008" title="Hakemin Rolü" />
+	<topic id="editorial/topic/000009" title="Yazarın Rolü" />
+	<topic id="editorial/topic/000012" title="Sayfa Düzenleyicinin Rolü" />
+	<topic id="editorial/topic/000013" title="Mizanpajcının Rolü" />
+	<topic id="editorial/topic/000014" title="Prova Dizgi Okuyucunun Rolü" />
+
+	<breadcrumb url="editorial/topic/000000" title="Derleme Süreci" />
+</toc>

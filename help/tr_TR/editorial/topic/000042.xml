@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000042.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Proofreader's Role - Submissions
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000042" locale="tr_TR" title="Başvurular" toc="editorial/toc/000014" key="editorial.proofreadersRole.submissions">
+	<section>
+		<![CDATA[<p> Prova dizgi okuyucu sisteme giriş yaptıktan sonra, Kullanıcı sayfasında yer alan Prova dizgi okuyucu bağlantısına tıklayarak başvurular listesine ulaşabilir. Liste üzerinde çalışması istenilen başvuruları gösterir. Geçmişte düzlettiği başvurulara da ulaşabilir. Prova dizgi okuyucu bir başvurunun başlığına tıklarsa, bu başvurunun prova dizgi kontrolü sayfasına gider.</p>]]>	
+	</section>
+</topic>

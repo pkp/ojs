@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000032.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author's Role Index - Submissions
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000032" locale="tr_TR" title="Başvurular" toc="editorial/toc/000009" key="editorial.authorsRole.submissions">
+	<section>
+		<![CDATA[<p>Dergi web sitesine girilip, kullanıcı sayfasından Yazar bağlantısı seçilince (bir yazarın hakemlik gibi diğer rolleri de olabilir), Yazar başvurularını içeren listeye girer. Bu sayfa güncel olarak değerlendirme ve yayına hazırlık aşamasındaki makaleleri listelemektedir. Yazar dergiye geçmişte yaptığı başvurulara da ulaşabilir.</p>]]>	
+	</section>
+</topic>

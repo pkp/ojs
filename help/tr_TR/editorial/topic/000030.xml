@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000030.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Reviewer's Role Index - Submissions 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000030" locale="tr_TR" title="Başvurular" toc="editorial/toc/000008" key="editorial.reviewersRole.submissions">
+	<section>
+		<![CDATA[<p>Hakem dergi sitesinde oturum açıp, Kullanıcı Sayfasına girer. Hakem bağlantısını  tıklayarak (bir hakemin yazarlık gibi diğer rolleri de olabileceğinden) Başvurular kısmına ulaşır. Bu liste hakemin inclemek üzere davet edildiği veya incelemekte olduğu başvuruları göstermektedir. Başvurular listesi ayrıca bazı başvurular bölüm editörünün "Hakemlik için Yeniden Gönderilsin" kararından sonra ikinci tur değerlendirmede olabileceğinden değerlendirmenin kaçıncı turda olduğunu da gösterir. Bu sayfa ayrıca hakemin değerlendirmesini tamamladığı eski makaleleri de gösterir.</p>]]>	
+	</section>
+</topic>

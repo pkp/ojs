@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Site Administration Main 
+  *
+  * $Id$
+  -->
+
+<topic id="site/topic/000000" locale="tr_TR" title="Site Yönetimi" toc="index/toc/000000" subtoc="site/toc/000000" key="site.index">
+	<section>
+		<![CDATA[<p>Bu derginin yönetimi ve yayım sistemi yerel bir web sunucusu üzerinde yüklenmesi ve yönetimi ile düzenlenir. Bir yükleme olduğunda site yöneticisi gerektiği kadar dergi siteleri oluşturabilir ve her bir dergi sitesinin yöneticisini denetleyebilir.</p>]]>	
+	</section>
+</topic>

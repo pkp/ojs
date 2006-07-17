@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000027.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Section Editor's Role Index - Editing - Copyediting
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000027" locale="tr_TR" title="Sayfa Düzeni" toc="editorial/toc/000007" key="editorial.sectionEditorsRole.editing.copyediting">
+	<section>
+		<![CDATA[<p>Sayfa düzenleyici seçilip sayfa düzeni sürecini başlatmasını isteyen bir e-posta gönderildikten sonra sayfa düzenleyici derginin sayfa düzeni kurallarına göre gerekli olan değişiklikleri yapmak üzere doğrudan makale üzerinde çalışmaya başlayacaktır. Birinci adım olan Ön sayfa düzeninde sayfa düzenleyici makalede gerekli düzeltmeleri yaparak ayfa düzeni kopyası olarak sisteme yükleyecek ve bu kopya ikinci adım olan Yazar sayfa düzeni değerlendirilmesine gönderilecektir. Bu aşamada sayfa düzenleyici "Tamamla" e-postasını ikinci adımı başlatması isteğiyle yazara ve bir kopyasını da bilgi için bölüm editörüne gönderecektir. Yazar değişiklikleri yaparak tüm sorulara yanıt verdikten ve makalesinin son halini sisteme yükledikten sonra sayfa düzenleyici üçüncü adım olan Son sayfa düzeni adımında temiz bir son düzenlenmiş kopya oluşturur. Bu kopya Mizanpaj kopyası olarak mizanpajcıya gönderilir. Mizanpajcıya kopya gönderilmeden önce bölüm editörü sayfa düzeni kopyasının dergi standartlarında olup olmadığını görmesi ve onaylaması yararlıdır.</p><p><i>Sayfa Düzeni ile ilgili Editöre Sorular</i>. Sayfa düzenleyici ön sayfa düzenleme sırasında Editöre Sorularını (örneğin dergi stili ile ilgili) birinci aşamanın tamalanmasında yazara ve bölüm editörüne yolladığı e-postada dile getirebilir. Bölüm editörü ikinci adımda dosya ismine tıklayarak Editör Sorularını gözden geçirmeli ve İstek kısmının altında bulunan e-posta simgesine tıklayarak bu sorgularla ilgili cevabını doğrudan sayfa düzenleyiciye göndermelidir. Bu sisteme yazarın başvurunun ön sayfa düzeni ile ilgili cevaplarının üzerinde bir dosya yüklenmesini engelleyecektir. </p><p><i>Sayfa Düzeni Seçenekleri</i>. Eğer gerek duyulursa (mesela bölüm editörü sayfa düzenini de yapıyorsa) bölüm editörü sayfa düzenlemenin her aşamasında makalenin yeni bir kopyasını yükleyebilir. Yazarın ya da sayfa düzenleyicinin yüklediği kopyaların silinmemesi için dikkatli olunmalıdır.</p>]]>	
+	</section>
+</topic>

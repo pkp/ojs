@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000012.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Copyeditor's Role Index 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000012" locale="tr_TR" title="Sayfa Düzenleyicinin Rolü" toc="editorial/toc/000000" subtoc="editorial/toc/000012" key="editorial.copyeditorsRole">
+	<section>
+		<![CDATA[<p>Sayfa Düzenleyici başvuruya sayfa düzenini yapmasını isteyen e-postayı bölüm editöründen alır ve bundan sonra başvuru sayfa düzeni listesinde görünür. Sayfa düzenini yapamayacak ise, sayfa düzenleyici durumu bölüm editörüne e-posta yoluyla bildirir.</p>]]>	
+	</section>
+</topic>

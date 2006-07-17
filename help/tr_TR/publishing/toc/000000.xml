@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../toc.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Publishing Process. 
+  *
+  * $Id$
+  -->
+
+<toc id="publishing/toc/000000" locale="tr_TR" title="Yayınlama Süreci" parent_topic="publishing/topic/000000">
+	<topic id="publishing/topic/000001" title="Yeni Sayı Oluştuma" />
+	<topic id="publishing/topic/000002" title="Yayına Sunulma" />
+	<topic id="publishing/topic/000003" title="İçindekiler" />
+	<topic id="publishing/topic/000004" title="Yayınlama" />
+	<breadcrumb url="publishing/topic/000000" title="Yayınlama Süreci" />
+</toc>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000023.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Reader 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000023" locale="tr_TR" title="Okuyucu" toc="journal/toc/000003" key="journal.roles.reader">
+	<section>
+		<![CDATA[<p>Okuyucu olarak abonelik gerektiren dergilerde abone olanlar, açık erişimli dergilerde ise siteye okuyucu olarak üye olmuş kişiler anılmaktadır (bazı dergiler yayından belli süre sonra açık erişimi etkileştirirler). Üye olan okuyuculara her yeni sayı çıktığında derginin içindekiler sayfasını içeren bir e-posta gönderilir. DErgiye yazar olarak üye olan kişilere de kendilerini okuyucu olarak kayıt etme olanağı tanınır.</p>]]>	
+	</section>
+</topic>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000029.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Section Editor's Role Index - Editing - Proofreading
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000029" locale="tr_TR" title="Prova Dizgi Kontrolü" toc="editorial/toc/000007" key="editorial.sectionEditorsRole.editing.proofreading">
+	<section>
+		<![CDATA[<p>Mizanpajcı tarafından yerleştirmenin bittiğine dair bir uyarı alan bölüm editörü, eğer henüz seçilmediyse bir Düzeltmen seçer. Bundan sonra bölüm editörü yazara prova dizgi kontrolü sürecini başlatması için bir e-posta gönderir. Yazar, basılacak olan dosyaları ve ek dosyaları gözden geçirdikten sonra, eğer düzeltmek istedği herhangi bir şey varsa, düzeltmen'e bir tamamlama e-postası gönderir. Bu mesajın bir kopyası da karbon kopya (cc) olarak bölüm editörüne gönderilir. Yazar veya Düzeltmen tarafından bulunan yazım hataları ve biçimlendirme ile ilgili düzeltmeler, yazar ve düzeltmen basılacak olan dosyalara ulaşamayacağı için Prova Dizgi Kontrolü kısmında bulunan Düzeltmeler metin kutusuna girilir. Düzeltmen, basım dosyalarını ve ek dosyaları inceledikten sonra eğer düzeltme varsa, Mizanpajcıyı e-posta ile haberdar eder ve bu mesajin bir kopyasi da karbon kopya (cc) olarak bölüm editörüne gönderilir. Bundan sonra Mizanpajcı basım dosyaları üzerinde istenilen düzeltmeleri yapar. Son olarak Mizanpajcı bölüm editörüne makalenin yayıma hazır olduğuna dair bir mesaj gönderir. Bu noktada bölüm editörü 	dosyaları yeniden gözden geçirmek isteyebilir ve eğer tatmin olursa sayfanın sonundaki "Gönder" (Makaleyi Yayıma Gönder) düğmesine tıklayarak makaleyi yayıma gönderebilir.  Bundan sonra makale {help_topic key="publishing.index" text="Yayınlama"} sürecine girer.</p><p>Editör yayına hazırlık sürecinin her hangi bir basamağında olan yazıyı yayınlamak istiyebilir. Bu bilgi mizanpajcı ve prova dizgi kontrolörüne ulaştırılarak, yayın öncesi kontrol etmeleri istenir.</p>]]>	
+	</section>
+</topic>

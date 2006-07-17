@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000015.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Editor's Role Submissions - Unassigned 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000015" locale="tr_TR" title="Editöre Ulaşmamış" toc="editorial/toc/000002" key="editorial.editorsRole.submissions.unassigned">
+	<section>
+		<![CDATA[<p>Dergiye gönderilen her makale Editörün "Editöre Ulaşmamış" listesine girer. Editör  bu listedeki bir makaleyi, bir bölüm editörüne atamak için, makalenin başlığına tıklar. Editör bölüm editörünün atamasının yapıldığı Başvurular sayfasına ulaşarak, yazıya bölüm editörünü seçer. Başvuruya bir bölüm editörü atandığı zaman, başvuru Editöre Ulaşmamışlar listesinden Değerlendirme listesine geçer.</p>]]>	
+	</section>
+</topic>

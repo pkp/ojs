@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000028.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Reading Tools - Contexts
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000028" locale="tr_TR" title="Grupların Yapısı" toc="journal/toc/000005" key="journal.managementPages.readingTools.contexts">
+	<section>
+		<![CDATA[<p>Her okuma aracı grubu ayrı araçların birleştirilmesi ile oluşur, her araç konusuna göre çeşitli veritabanları içerir.  Gruplara yeni veritabanları eklenip, çıkarılabilir, gruplama sırası değiştirilebilir.</p><p><i>Gruptaki Maddelerin metaverileri</i>. Dergi yöneticisi okuma aracının adını değiştirebilir. Ayrıca bu araç için yazar adı veya anahtar sözcük kullanımı ile ilgili seçim yapabilir. Diğer bir seçenek ile, okuyucunun seçtiği sözcüğü çift tıklatması ile ilgili sözcük kullanılarak aramanın başlatılmasıdır. Dergi yöneticisi bu seçeneği kullanarak kendi okuma aracını geliştirebilir.</p><p><i>Her araç için arama sözcüğünün düzenlenmesi</i>. Aramayı kullanarak dergi yöneticisi her veritabanı için arama adresini düzenleyebilir veya silebilir, araç içinde kullanım sıralarını değiştirebilir. Her veritabanı için ulaşım adresi verilerek, okuyucunun veritabanı konusunda daha fazla bilgiye ulaşabilmesi amaçlanmıştır. Ayrıca ilgili kaynakta yazar adı ve anahtar sözcükler ile arama yapılabilmesi içinde iki tane bağlantı okuyucunun hizmetine verilir. Ayar yapılır iken veritabanında bir "GET" araması ayarlanır, çalışmaz ise arama "POST" aramasına çevrilir.</p>]]>
+	</section>
+	<section title="GET Araması">
+		<![CDATA[<p>"GET" araması için bir arama yapıp, oluşan adres satırına bakınız. Örneğin Google'da "FOOBAR" araması yapıldığında oluşan adres satırı </p><p><samp class="code">http://www.google.ca/search?hl=en&q=FOOBAR&meta=</samp></p><p>biçimindedir. Aramma yapılır iken &#123;$formKeywords&#125; değişkeni arama sözcüğü olarak kullanılır ise ADS yazılımı yazının metaverisini arama sözcüğü olarak düzenler. </p><p>Eğer ayrıntılar gerekli değil ise, okuma araçları için </p><p><samp class="code">http://www.google.ca/search?q=&#123;$formKeywords&#125;</samp></p><p>biçiminde basit bir arama satırı kullanabiliriz.</p>]]>
+	</section>
+	<section title="POST Araması">
+		<![CDATA[<p>Post aramaları internet formlarının kullandığı yapıyı kullandığı için biraz daha karmaşıktır. Yine Google örneğine bakar isek <samp class="code">&lt;form action="/search" ...&gt;</samp>, ile bira aramanın yapılacağı sayfa verilir:<samp class="code">http://www.google.com/search</samp>. Kaynakta<samp class="code">&lt;input ...&gt;</samp> ve <samp class="code">&lt;select ... &gt;</samp> biçiminde form elemanları görürsünüz, ve bunların <samp class="code">name=değer</samp> gibi adları verilmiştir.<samp class="code">&</samp>. Google örneğinde okuyucunun aramak istediği bilgiyi gireceği alanın adı <samp class="code">q</samp>), kullanılan adres satırının sonuna eklenmelidir<samp class="code">name=</samp>. Google için <samp class="code">http://www.google.com/search?q=</samp> ortaya çıkar.</p><p>Yine aranacak sözcük yerine &#123;$formKeywords&#125; değişkeni girilerek metaveriler ile arma sözcüğü oluşturulabilir.</p><p>POST from için kolay yöntem ilgili sayfanın HTML kodunu kaydedip, <samp class="code">method=post</samp> yerine <samp class="code">method=get</samp> yazılmalı ve formun <samp class="code">action=</samp> değeri tam internet adresi ile değiştirilmelidir, örneğin <samp class="code">/search</samp> yerine <samp class="code">http://www.google.com/search</samp> yazılmalıdır. Tarayıcınızca arama için oluşan adresi kullanarak, GET yöntemi çin kullanılacak arama adresini geliştirebilirsiniz.</p><p>Bazı arama motorları "GET" aramalarını kabul etmezler, "POST verisini ara" alanına POST form verisi biçiminde giriş yapmalısınız. Eğer yukardaki örnekte "POST" yöntemi gerekli ise, arama adresine <samp class="code">http://www.google.com/search</samp> ve aranacak sözcük alanı adı için <samp class="code">q=</samp> girmelisiniz. Dikkat edilir ise aranacak sözcük alanı en sonda olmalıdır.</p><p>Yaptığınız ayarın çalışıp, çalışmadığını mutlaka kontrol ediniz. Özellikle POST formlarında sorun çıkma olasılığı yüksektir. Eğer çıkan sorunlar nedeni ile düzgün işleyen bir araç oluşturamaz iseniz, Google'dan yararlanabilirsiniz. Google araması ilgili site ile sınırlandırılarak, arama yapılabilir. Bu amaçla <samp class="code">site:mysite.com FOOBAR</samp> biçiminde bir Google araması yapılır. Bir kaç site günümüzde bu yöntemi kullanmaktadır.</p>]]>
+	</section>
+</topic>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000014.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Users - Email Users
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000014" locale="tr_TR" title="Üyelere E-Posta Gönder" toc="journal/toc/000002" key="journal.users.emailUsers">
+	<section>
+		<![CDATA[<p>Dergi yöneticisi kullanıcıların tümüne veya bir bölümüne e-posta gönderebilir. Ayrıca her okuyucuya yeni sayı çıktığında derginin içindekiler bölümünü içeren bir e-posta da gönderilir {help_topic key="publishing.index" text="yayınlama"}. Derginin kişisel bilgilerin korunması yönünde bir politikası olmalı ve okuyucuların güvenleri açısından bu politika Dergi Hakkında sayfasında yayınlanmalıdır.</p>]]>	
+	</section>
+</topic>

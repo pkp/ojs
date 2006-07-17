@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../toc.dtd">
+
+<!--
+  * 000014.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Editorial Process - Proofreader's Role
+  *
+  * $Id$
+  -->
+
+<toc id="editorial/toc/000014" locale="tr_TR" title="Prova Dizgi Okuyucunun Rolü" parent_topic="editorial/topic/000014">
+	<topic id="editorial/topic/000042" title="Başvurular" />
+	<topic id="editorial/topic/000043" title="Prova Dizgi" />
+
+	<breadcrumb url="editorial/topic/000000" title="Editöryal Süreç" />
+	<breadcrumb url="editorial/topic/000014" title="Prova Dizgi Okuyucunun Rolü" />
+</toc>

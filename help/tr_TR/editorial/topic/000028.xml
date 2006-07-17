@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000028.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Section Editor's Role Index - Editing - Layout
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000028" locale="tr_TR" title="Mizanpaj" toc="editorial/toc/000007" key="editorial.sectionEditorsRole.editing.layout">
+	<section>
+		<![CDATA[<p>Sayfa düzenleyici sayfa düenlemenin üçüncü aşamasındaki "temiz" kopyayı tamamladıktan sonra, bu kopya mizanpaj aşamasına gider. Sayfa düzeninin tamamlandığı uyarısını alan böülm editörü, eğer henüz seçilmediyse bir Mizanpajcı seçer ve Mizanpaj bölümündeki "İstek" kısmının altında bulunan e-posta simgesini tıklayarak çalışmaya başlamasını ister. Mizanpajcı makalenin tüm yayın biçimleri için (örn: HTML, PDF, PS vs...) yayım kalıplarını (dosyalarını) hazırlar. Başvuru sırasındaki orjinal formatlarında olan Ek Dosyaların basit formatları ve dergi standartlarına olabildiğince uydurulması Mizanpajcı ve sayfa düzenleyici tarafından kontrol edilecektir. Mizanpajcı, çevrimiçi olarak yayımlanacak olan dosyaları hazırladıktan sonra Bölüm Editörüne e-posta gönderecektir.</p>]]>	
+	</section>
+</topic>

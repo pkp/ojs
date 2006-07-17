@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000001.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Site Administration - Installation 
+  *
+  * $Id$
+  -->
+
+<topic id="site/topic/000001" locale="tr_TR" title="Kurulum" toc="site/toc/000000" key="site.installation">
+	<section>
+		<![CDATA[<p>Açık Dergi Sistemi hemen hemen her masaüstüne ya da sunucu bilgisayarına ücretsiz biçimde indirilebilen ve yüklenebilen açık kaynaklı bir uygulamadır.</p>]]>	
+	</section>
+	
+	<section title="Lisans">
+		<![CDATA[<p>ADS <a href="http://www.gnu.org/copyleft/gpl.html" target="_blank">GNU Genel Kamu Lisansı</a> koşulları altında dağıtılmaktadır. Orijinal ya da değiştirilmiı biçimdeki ADS kodunun yeniden dağıtımı için lisans koşullarının bir kopyası ADS yüklemesi ile alınır.</p>]]>
+	</section>
+	
+	<section title="Sistem Gereksinimleri">
+		<![CDATA[<p>Bir sunucu çevresi buluşmasında aşağıdaki gereksinimler önerilmektedir:</p>
+		<ul>
+			<li><a href="http://www.php.net/" target="_blank">PHP</a> >= 4.2.x</li>
+			<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 3.23.23 (including 4.x) or <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 7.1</li>
+			<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x or >= 2.0.4x</li>
+			<li>İşletim Sistemi: Yukarıdaki yazılımları destekleyen herhangi bir işletim sistemi yeterlidir.  <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.sun.com/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a> işletim sistemleri olabilir.</li>
+		</ul>
+		<p>Veritabanı yönetim sistemleri (VTYS) <a href="http://php.weblogs.com/adodb/" target="_blank">ADOdb</a> tarafından desteklenen VTYS'nde tam ya da kısmi olarak çalışabilmesi beklenmekle birlikte, ADS yalnızca MySQL ve PostgreSQL üzerinde test edilmektedir. Alternatif VTYS'ler için Uyumluluk raporları ve/veya kod yamaları ADS geliştiricilerine  gönderilebilir.</p>]]>
+	</section>
+	
+	<section title="İndirme">
+		<![CDATA[<p>ADS, Kamu Bilgi Projesi'nden indirilebilir <a href="http://pkp.sfu.ca/ojs/" target="_blank">web site</a>.</p>]]>
+	</section>
+	
+	<section title="Yükleme">
+		<![CDATA[<p>ADS, yükleme süreci boyunca sistem yöneticisine rehberlik eden web tabanlı bir yükleme programcığı içerir. Ayrıca veri satırından da kurulum aracı da vardır.</p>
+		<ol>
+			<li>
+				ADS arşivini indirme.
+			</li>
+			<li>
+				Web sunucunuzdaki sıkıştırılmış ADS arşivini çözme ve web belgeleri ağacınızda istediğiniz yere koymak için:<br />
+				<tt>$ tar -zxf ojs-2.*.tar.gz<br />
+				$ mv ojs-2.* /var/www/myjournal</tt>
+			</li>
+			<li>
+				Aşağıdaki dosyaları ve dizinleri yazılabilir hale getirin (yani, chown ya da chmod kullanarak):<br />
+				- config.inc.php (optional)<br />
+				- public<br />
+				- cache<br />
+				- cache/t_cache<br /> 
+                - cache/t_config<br /> 
+                - cache/t_compile<br /> 
+                - cache/_db 
+
+			</li>
+			<li>
+				Bir web tarayıcısı ile ADS yüklediğiniz dizini açın (yani, http://www.mydomain.com/myjournal/) ve yüklemeyi tamamlamak için ekrandaki komutları takip edin. doc/README dosyası kurulum ile ilgili ek bilgiler verir.
+			</li>
+		</ol>
+		]]>
+	</section>
+</topic>

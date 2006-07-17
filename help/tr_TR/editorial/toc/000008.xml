@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../toc.dtd">
+
+<!--
+  * 000008.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Editorial Process - Reviewer's Role
+  *
+  * $Id$
+  -->
+
+<toc id="editorial/toc/000008" locale="tr_TR" title="Hakemin Rolü" parent_topic="editorial/topic/000008">
+	<topic id="editorial/topic/000030" title="Başvurular" />
+	<topic id="editorial/topic/000031" title="Değerlendirme" />
+
+	<breadcrumb url="editorial/topic/000000" title="Editöryal Süreç" />
+	<breadcrumb url="editorial/topic/000008" title="Hakemin Rolü" />
+</toc>

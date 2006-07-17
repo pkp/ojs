@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000001.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Publishing Process - Create Issue
+  *
+  * $Id$
+  -->
+
+<topic id="publishing/topic/000001" locale="tr_TR" title="Yeni Sayı Oluştuma" toc="publishing/toc/000000" key="publishing.createIssue">
+	<section>
+		<![CDATA[<p>Yayın için bir sayı içinde bir başvuruyu zamanlama, Başvuru Zamanlamasını kullanmadan önce, Editörün başvuruda yer alan bir sayıyı sağlamak için Sayı Yaratmayı kullanması gerekir. Bir sayının Kurulumda seçilen tercihe göre uygun numaralar ve/veya başlık ile tanımlanması gerekir (örneğin, Cilt 2, No 5, 2008). Sistem, bir sonraki sayı ile Sayı Yaratma'da Editör'ü yönlendirdiğinde her zaman bir sayı yaratılır, Editör bu ayarları geçersiz kılabilir ve yeni bir numara seti ya da farklı bir yıl girebilir. Aynı zamanda, sayılar İçindekiler bölümünün üstünde görünenve kullanılabilen (öreneğin dergi özel sayısı için) ve eklenen bir başlığa sahip olma seçeneğine sahiptir.</p><p><i>Kapak sayfası oluşturma</i>. Dergi için aynı zamanda, .jpg, .png ya da .gif dosyaları biçiminde bir kapak gösterimi yüklemesi seçeneği vardır. Bu dosya Kapak Sayfası olarak listelenecek İçindekiler Bölümü boyunca ulaşılabilir olacaktır. Derginin en son sayısı derginin anasayfasında olduğunda bu dosya görünecektir ve bu sayı için İçindekiler bölümüne erişmek için burası tıklanabilecektir. Sayı bir kez arşivlenince, İçindekiler Bölümü sayesinde sayı ile kapak kullanılır olarak kalacaktır.</p><p><i>En Son Sayı, Gelecek Sayılar ve Eski Sayılar</i>. En Son Sayı en son yayınlanan sayıdır. Gelecek Sayılar, Editörün sonra yayınlanacak başvuruların zamanlamasını yaptıkları sayılardır.Örneğin, Editör basılabilecek ama basılmamış olan ve belli bir denge nedeniyle başvuruları sayı çiftleri üzerine zamanlama için başvuruları yürürlüğe konabilir 2-3 seriyi her zaman elinde tutmayı isteyebilir. Eski Sayılar artık güncel olmayan ve zaten basılmış olan sayılardır.</p>]]>
+	</section>
+</topic>

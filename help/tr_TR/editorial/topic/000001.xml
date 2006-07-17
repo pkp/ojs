@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000001.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Editor's Role Index 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000001" locale="tr_TR" title="Editörün Rolü" toc="editorial/toc/000000" subtoc="editorial/toc/000001" key="editorial.editorsRole">
+	<section>
+		<![CDATA[<p> Editör, Bölüm editörünün atanmasından başlayarak derleme sürecinin tamamını takip edebilir.  Editör genellikle derginin yayım politikasına bağlı olarak, derleme sürecinin Son Derleme sürecini kendisi yaparak, Bölüm editörünün görevlerini de üstlenebilir.</p>]]>	
+	</section>
+</topic>

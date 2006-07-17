@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000018.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Layout Editor 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000018" locale="tr_TR" title="Mizanpajcı" toc="journal/toc/000003" key="journal.roles.layoutEditor">
+	<section>
+		<![CDATA[<p>Mizanpajcı sayfa düzeni tamamlanmış yazıyı derginin elektronik yayın için kullanacağı biçime (HTML, PDF, PS vb.) getiren kişidir. Bu yazılımda başvuruyu yayınlanacak dosyaya çeviren bir parça yoktur. Bu nedenle sayfa düzenleyicinin amaca uygun bir üçüncü parti yazılıma sahip olması ve kullanabilmesi gerekir (PDF için Adobe Acrobat, HTML için Dreamweaver gibi). Bu yazılımlar ile makalenin ekranda göze hoş gelecek ve kolay okunacak forma getirilmesi dergi için önemlidir. Diğer dergiler incelenerek derginin görünümü konusunda geliştirme yapılıp, dergiye özgü bir sonuç geliştirilebilir.</p>]]>	
+	</section>
+</topic>

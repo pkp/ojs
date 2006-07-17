@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000007.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Languages 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000007" locale="tr_TR" title="Diller" toc="journal/toc/000001" key="journal.managementPages.languages">
+	<section>
+		<![CDATA[<p>Bu sistem çok dilli dergileri desteklemektedir, ayrıca İngilizce dışında dillerde de dergi yayını desteklenmektedir. Kullanılacak diller dergi yöneticisi tarafından dergi yönetimi sayfasındaki diller bağlantısı izlenerek kullanıcılara ulaşılır kılınabilir. Dergiler için yayın dili seçilebildiği gibi, site kullanıcıları da dergi yöneticisi tarafından açılan dilleren istediklerini seçerek siteyi izleyebilirler.</p>]]>	
+	</section>
+</topic>

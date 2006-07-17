@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000005.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * User Interface - Search and Browse
+  *
+  * $Id$
+  -->
+
+<topic id="user/topic/000005" locale="tr_TR" title="Ara ve Tara" toc="user/toc/000000" key="user.searchAndBrowse">
+	<section>
+		<![CDATA[<p>Derginin içindekiler yazara, başlığa, özete ve dizin terimlerine göre aranabilir. İçindekilerin tüm metni hem HTML hem de PDF dosya biçimlerinde aranabilir. Alternatif olarak sayfanın sağ kenarındaki Tara linkinin kullanılmasıyla okuyucular dergi içeriğini sayı, yazar ve başlığa göre tarayabilirler. Aynı zamanda, Açık Dergi Sistemlerinin içinde basılan diğer dergiler taranabilir.</p>]]>
+	</section>
+</topic>

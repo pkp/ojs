@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../toc.dtd">
+
+<!--
+  * 000003.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Journal Management - Roles. 
+  *
+  * $Id$
+  -->
+
+<toc id="journal/toc/000003" locale="en_US" title="Görevler" parent_topic="journal/topic/000003">
+	<topic id="journal/topic/000015" title="Dergi Yöneticisi" />
+	<topic id="journal/topic/000016" title="Editör" />
+	<topic id="journal/topic/000017" title="Bölüm Editörü" />
+	<topic id="journal/topic/000019" title="Sayfa Düzenleyici" />
+	<topic id="journal/topic/000018" title="Mizanpajcı" />
+	<topic id="journal/topic/000020" title="Prova Dizgi Okuyucu" />
+	<topic id="journal/topic/000021" title="Hakem" />
+	<topic id="journal/topic/000022" title="Yazar" />
+	<topic id="journal/topic/000023" title="Okuyucu" />
+	<topic id="journal/topic/000032" title="Abonelik Yöneticisi" />
+	
+	<breadcrumb url="journal/topic/000000" title="Dergi Yönetimi" />
+	<breadcrumb url="journal/topic/000003" title="Görevler" />
+</toc>

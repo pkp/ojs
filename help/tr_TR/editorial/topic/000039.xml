@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000039.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Layout Editor's Role - Submissions
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000039" locale="tr_TR" title="Başvurular" toc="editorial/toc/000013" key="editorial.layoutEditorsRole.submissions">
+	<section>
+		<![CDATA[<p> Mizanpajcı sisteme giriş yaptıktan sonra, Kullanıcı sayfasında yer alan mizanpajcı bağlantısına tıklayarak başvurular listesine ulaşabilir. Liste mizanpaj yapması istenilen başvuruları gösterir. Ayrıca geçmişte mizanpaj işlemi yaptığı başvurulara da ulaşabilir. Mizanpajcı bir başvurunun başlığına tıklarsa, bu başvurunun mizanpaj sayfasına gider.</p>]]>	
+	</section>
+</topic>

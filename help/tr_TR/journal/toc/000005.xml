@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../toc.dtd">
+
+<!--
+  * 000005.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Journal Management - Management Pages - Reading Tools.
+  *
+  * $Id$
+  -->
+
+<toc id="journal/toc/000005" locale="en_US" title="Okuma Araçları" parent_topic="journal/topic/000009">
+	<topic id="journal/topic/000026" title="Ayarlar" />
+	<topic id="journal/topic/000027" title="Sürüm" />
+	<topic id="journal/topic/000028" title="Grupların Yapısı" />
+
+	<breadcrumb url="journal/topic/000000" title="Dergi Yönetimi" />
+	<breadcrumb url="journal/topic/000001" title="Yönetim Sayfaları" />
+	<breadcrumb url="journal/topic/000009" title="Okuma Araçları" />
+</toc>

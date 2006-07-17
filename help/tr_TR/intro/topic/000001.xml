@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000001.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Frequently Asked Questions 
+  *
+  * $Id$
+  -->
+
+<topic id="intro/topic/000001" locale="tr_TR" title="Sık Sorulan Sorular" toc="intro/toc/000000" key="intro.faq">
+	<section>
+		<![CDATA[
+<ol>
+	<li><a href="#section1">ADS ile bir dergiyi nasıl başlatabilirim?</a></li>
+	<li><a href="#section2">ADS ile ilgili teknik konular, geliştirme önerilerim ve hata bildirimlerim için nerede destek bulabilirim?</a></li>
+	<li><a href="#section3">ADS yazılımını başka bir dile nasıl çeviririm?</a></li>
+	<li><a href="#section4">Niye yazarlar "dergi şimdilik başvuru kabul etmiyor" mesajı alıyorlar?</a></li>
+	<li><a href="#section5">Dergide daha basılmamış hazır makaleler ile, değerlendirmedeki makalelere ulaşımı nasıl sağlarım?</a></li>
+	<li><a href="#section6">Dergimin internet ortamında tanınmasını nasıl sağlarım?</a></li>
+	<li><a href="#section7">Dergi tarihi ve önceki editörlerinin listesi gibi bilgileri nasıl yayınlayabilir?</a></li>
+	<li><a href="#section8">Okuyucuların kendilerini hakem olarak önermelerini nasıl sağlayabilirim?</a></li>
+	<li><a href="#section9">Listedekiler dışında başka hakemleri nasıl bulabilirim?</a></li>
+	<li><a href="#section10">Derginin içeriğini okuyuculara ücretsiz serbest ulaştırma için hangi yöntemler vardır?</a></li>
+</ol>
+		]]>	
+	</section>
+	<section title="1. ADS ile bir dergiyi nasıl başlatabilirim?">
+		<![CDATA[
+<ol type="a">
+	<li><a href="http://pkp.sfu.ca/ojs/ojs_download.html" target="_blank">ADS yazılımını indir</a> ve sitene yazılımın gereksinimlerine uygun web sunucuna kur.</li>
+	<li>Kurulumda verdiğin yönetici kullanıcı adı ve şifresi ile siteye gir.</li>
+	<li>Yayınlanan Dergiler bağlantısını izleyip, dergi oluştur bağlantısı ile yeni dergi oluşturun.</li>
+	<li>Site yöneticisi yeni dergi için kendiliğinden dergi yöneticisi olarak görelendirilir. Eğer gerekli ise, dergi yöneticisi olmak üzere bir kullanıcı ekleyin.</li>
+	<li>Dergi yöneticisi beş basamaklı bir formlar süreci ile yeni dergi için gerekli ayarları yapar ve dergi başvuru kabul edip, editöryal süreci sürdürebilir ve yayınlanabilir hale gelir. Tüm ayarların bir seferde yapılması gerekmez, sonradan da ayarlar geliştirilebilir.</li>
+	<li>Kurulum ve ayarlar ile ilgili daha fazla bilgi için <a href="http://pkp.sfu.ca/ojs/OJSinanHour.pdf" target="_blank">Bir saatte ADS </a> sayfasına bakabilirsiniz.</li>
+</ol>
+		]]>
+	</section>
+	<section title="2. ADS ile ilgili teknik konular, geliştirme önerilerim ve hata bildirimlerim için nerede destek bulabilirim?">
+		<![CDATA[
+<p>The Public Knowledge Project bir <a href="http://pkp.sfu.ca/support/forum/" target="_blank">Destek Forumu</a> yürütmektedir. Bu formda binin üzerinde bilgi alışverişine ulaşabilir, arama olanağı ile aradığınızı kolayca bulabilirsiniz. Örneğin hata raporlarını arama alanına girerek, o konuda daha önceki bilgi alışverişlerine ulaşabilirsiniz. Eğer bu yöntem sonuç vermez ise, sorunuzu <a href="mailto:pkp-support@sfu.ca">pkp-support@sfu.ca</a> adresine gönderebilirsiniz. Hata bildirimleri PKP tarafından yürütülen <a href="http://pkp.sfu.ca/bugzilla/" target="_blank">Bugzilla</a> aracılığı ile yapılmalıdır.</p>
+		]]>
+	</section>
+	<section title="3. ADS yazılımını başka bir dile nasıl çeviririm?">
+		<![CDATA[
+<p>Yazılım indirilir iken gelen doc/README dosyası gereken başlangıç bilgilerini içerir. Çeviri için gerekli ek bilgilere ve çeviri ile ilgili genel konulara <a href="http://pkp.sfu.ca/support/forum/" target="_blank">PKP Destek Forumundan</a> ulaşabilirsiniz.</p>
+		]]>
+	</section>
+	<section title='4. Niye yazarlar "dergi şimdilik başvuru kabul etmiyor" mesajı alıyorlar?'>
+		<![CDATA[
+<p>Eğer dergi yöneticisi yarattığı tüm bölümleri "Yalnızca editörler yazı ekleyebilir" olarak işaretledi ise, yazarlar bu mesajı alırlar. Eğer dergi yöneticisi tüm bölümleri sildi ise yazarlar aynı mesajı alırlar.</p>
+		]]>
+	</section>
+	<section title='5. Dergide daha basılmamış hazır makaleler ile, değerlendirmedeki makalelere ulaşımı nasıl sağlarım?'>
+		<![CDATA[
+<p>Şu anda yayınlanmamış veya değerlendirilen makalelerin açık ulaşımı için yapılandırılmış bir yol yoktur. Editör ancak mizanpaj aşamasındaki makale için verilen "Prova Dizgiyi Gör" bağlantısını dilediği okuyuculara ileterek, prova dizgi aşamasında makaleye ulaşabilmelerini sağlayabilir. PKP grubu bu olanak ile ilgilenmektedir, gelecek sürümlerde bu tür bir düzenleme eklenecektir.</p>
+		]]>
+	</section>
+	<section title="6. Dergimin internet ortamında tanınmasını nasıl sağlarım?">
+		<![CDATA[
+<p>Derginizin Google ve diğer büyük arama motorlarında yer alması gecikmeden gerçekleşir, ancak yine de bilimsel dizinler için bir şeyler yapmanız yararlı olur. Kurulumun 3. basamağında derginizi PKP veri madencisine kaydetmeyi unutmayınız. Bu kayıt ile derginiz Open Archives Initiative dizinleri olan <a href="http://pkp.sfu.ca/harvester/" target="_blank">PKP Harvester</a> ve <a href="http://oaister.umdl.umich.edu/o/oaister/" target="_blank">OAIster</a> dizinlerine eklenmiş olur. Eğer derginiz açık ulaşım olanağı sunuyor ise, üniversitenizin kütüphanecisi ile görüşüp, derginizinin elektronik kütüphanelere eklenmesi için kütüphaneciler listesi ile ilişki kurmasını isteyiniz. Bilimsel dernek siteleri ve listelerinde derginize yazı gönderilmesi ve derginizdeki makalelerin okunması için duyurular yayınlayın. Kurulumun 2.5 basamağında okuyucuların kayıt olması gerekir seçeneği ile okuyucularınızın kayıt olmasını ve her yeni sayı çıktığında e-posta ile habedar olmalarını sağlayınız.</p>
+		]]>
+	</section>
+	<section title="7. Dergi tarihi ve önceki editörlerinin listesi gibi bilgileri nasıl yayınlayabilir?">
+		<![CDATA[
+<p>Dergi yöneticisi bu bilgileri Yöneticiler Sayfası açıklamalarına ekleyebilir. Başka bir yol ise Dergi Yöneticisinin Dergi Hakkında sayfasında "Dergi Tarihi ve Önceki Editörler" bölümü oluşturmasıdır (kurulumun 2.5 basamağı). Bu sayfada derginin önceki görevlileri ve hizmet tarihlerini listeleyebilirsiniz.</p>
+		]]>
+	</section>
+	<section title="8. Okuyucuların kendilerini hakem olarak önermelerini nasıl sağlayabilirim?">
+		<![CDATA[
+<p>Kurulumun Güvenlik ve ulaşım basamağında (2.7) dergi yöneticisi site ziyaretçilerinin kendileri okuyucu ve hakem olarak kaydetmeleri için izin verebilir. Kendini kaydedenler bölüm editörünün hakem seçme listesinde yer alırlar. Kurulumun 5.7 basamağını kullanarak dergi yöneticisi "Okuyucular için" bölümüne okuyucularından hakem olarak katkı beklediklerini açıklayan bir mesaj ekleyebilir. Aynı sayfadan okuyucuların kayıt olması gerekir seçeneği ile okuyuculara haber verilmesi ve düzenli okuyucu sayısının belirlenmesi sağlanabilir.</p>
+		]]>
+	</section>
+	<section title="9. Listedekiler dışında başka hakemleri nasıl bulabilirim?">
+		<![CDATA[
+<p>Kullanılabilecek bir dizi teknik vardır. Bir olası hakem adını aşağıdaki yöntemlerden birisi ile bularak, internette e-posta adresi ve kurumunu araştırın. Daha sonra kendisine bir davet iletin.</p>
+<ol type="a">
+	<li>Değerlendirilecek makalenin kaynaklarında geçen isimleri Google gibi arama motorlarında arayarak e-posta adresi ve kurumlarını bulmaya çalışın.</li>
+	<li>Yazarın verdiği anahtar sözcükleri birlikte kullanıp Google araması yaparak, aynı konuda çalışan kişileri araştırın.</li>
+	<li>Yazarın yazının konusu için verdiği metaveri bilgilerini (Başvuru özeti metaverisi bağlantısı) kullanarak meslekdaşlarına konu ile ilgilenen kişileri sorun.</li>
+	<li>Diğer çevrimiçi yayınlanan dergileri ziyaret edip, o konuda yayın yapan yazarları araştırın.</li>
+</ol>
+		]]>
+	</section>
+	<section title="10. Derginin içeriğini okuyuculara ücretsiz serbest ulaştırma için hangi yöntemler vardır?">
+		<![CDATA[
+<p>John Willinsky'nin the Journal of Postgraduate Medicine dergisinde yayınlanan <a href="http://www.jpgmonline.com/article.asp?issn=0022-3859;year=2003;volume=49;issue=3;spage=263;epage=267;aulast=Willinsky;type=0" target="_blank">"The Nine Flavours of Open Access Scholarly Publishing"</a> makalesine bakın. Ayrıca Soros Vakfının hazırladığı <a href="http://www.soros.org/openaccess/scholarly_guide.shtml" target="_blank">Guide to Open Access Publishing and Scholarly Societies</a> belgesi açık erişimin geleceği konusunda dergi çıkaran bilimsel kuruluş ve küçük yayıncılar bilgi ve ön görüler içermektedir. <a href="http://www.arl.org/sparc/" target="_blank">SPARC</a>, "the Scholarly Publishing and Academic Resources Coalition" de açık erişimli yayıncılık konusunda bir dizi kaynağa ulaşım sağlamaktadır.</p>
+		]]>
+	</section>
+</topic>

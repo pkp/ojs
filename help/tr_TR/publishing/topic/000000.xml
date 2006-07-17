@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Publishing Process Index 
+  *
+  * $Id$
+  -->
+
+<topic id="publishing/topic/000000" locale="tr_TR" title="Yayınlama Süreci" toc="index/toc/000000" subtoc="publishing/toc/000000" key="publishing.index">
+	<section>
+		<![CDATA[<p>Editör, yayınlama süreci boyunca dergi için sayılar ve/veya ciltler oluşturma, dergi için makale başvurularının zamanlaması, dergi sayılarının içindekiler tablosunun düzenlenmesi ve sayının yayınlanması yoluyla kontrol yapmaktadır. Dergi birkaç biçimde yayınlanabilir. Tipik örnek, üç ayda bir (ya da ayda bir ya da yılda iki kez) yayınlanan bir sayıya yapılan başvuruları toplamaktır. Bununla birlikte bazı elektronik dergiler, yılın ilk makale başvurusu ile başlayan ve diıer cilt başladığında  yıl sonunda biten yıllık bir cildin parçası olarak yapılan ve makale hazır olur olmaz yapılan yayın başvurularını tercih  etmektedirler. Bir sayı (a) sayı, cilt, yıl; (b) cilt, yıl; (c) yıl; ya da (d) başlık ile tanımlanan bir ıçindekiler bölümü içermesine rağmen bu Yardım metninin amaçları çerçevesinde sayı terimi kullanılmaktadır. Dergi için nasıl sayıların tanımlanacağı, Dergi yöneticisinin yapılandırmakta olacağı Kurulumun parçasıdır.</p>]]>	
+	</section>
+</topic>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000010.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author's Role Review Index 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000010" locale="tr_TR" title="Değerlendirme" toc="editorial/toc/000009" subtoc="editorial/toc/000010" key="editorial.authorsRole.review">
+	<section>
+		<![CDATA[<p> Yazar, değerlendirme süreci boyunca makalesini izleyebilir, hakem veya editörlerce yüklenen sürümleri görebilir. Hakemlik sürecini kontrol eden Bölüm editörünün isteği doğrultusunda, geliştirilmiş gözden geçirilmiş sürümleri kendisi sisteme yükleyebilir. </p>]]>	
+	</section>
+</topic>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000013.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Layout Editor's Role Index 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000013" locale="tr_TR" title="Mizanpajcının Rolü" toc="editorial/toc/000000" subtoc="editorial/toc/000013" key="editorial.layoutEditorsRole">
+	<section>
+		<![CDATA[<p>Mizanpajcı sayfa düzenleyici veya Bölüm editöründen sayfa düzeni aşamasını tamamlamış bir makalenin yayınlanacak biçimde yerleştirilmesini isteyen bir e-posta alır. Yerleştirme işlemini yapamayacak ise, Mizanpajcı bölüm editörüne e-posta ile durumu bildirir.</p>]]>	
+	</section>
+</topic>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000002.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Publishing Process - Schedule Submissions
+  *
+  * $Id$
+  -->
+
+<topic id="publishing/topic/000002" locale="tr_TR" title="Yayına Sunulma" toc="publishing/toc/000000" key="publishing.scheduleSubmissions">
+	<section>
+		<![CDATA[<p>Hazırlık sürecinin herhangi bir aşamasında Bölüm Editörü başvuruyu belirli bir sayıda yayınlanmak üzere işaretleyebilir. Tipik olarak, Editör başvuruya geçerli olan ilk sayıda yer verecektir ama bir sayı yayın için "dolu" olabilir ya da Editör her sayı içinde bir konu düzenlemesini sağlamak için başvuruya daha sonraki sayılarda yer vermeyi isteyebilir, ya da diğer taraftan bir başvuru serisini tek bir konu içinde toplayabilir.</p>
+		<p><i>Başvuruların Sürekli Yayımlanması</i>. Başvuru hazır olur olmaz, beklemeden yayınlandığında, Editör başvuruyu son sayının içindekiler bölümüne ekler ise o sayı, eklemez ise bir sonraki sayı içinde yayınlanır. Bir cilt yılının sonunda ise, bir sonraki cilt ilk sayısının İçindekiler Bölümünde görünecek biçimde yayınlanır.</p>
+		<p>Başvuru bir sayı için planlanınca sayı adı ve o sayının içindekiler bölümine bir bağlantı mizanpajcılar ve prova dizgi okuyuculara sunulur.</p>]]>	
+	</section>
+</topic>

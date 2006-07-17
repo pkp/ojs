@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000008.xml
+  *
+  * Copyright (c) 2003-2006 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Stats & Reports
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000008" locale="tr_TR" title="İstatistik ve Raporlar" toc="journal/toc/000001" key="journal.managementPages.statistics">
+	<section>
+		<![CDATA[<p>İstatistik ve Raporlar Dergi yöneticisine dergi kullanımı ile ilgili iki biçimde veri sağlar. İstatistikler bir yıllık süreler ile dergiye başvurular, editöryal süreç rakamları ve kullanıcılar gibi konularda rakamlar oluşturarak sunarlar. Ayrıca istenilen tarihler arasında çeşitli konulardaki rakamları içeren raporlar oluşturulabilir.</p><p>Dört tip raporlama olanağı vardır:<ul>
+         <li><strong>Dergi Raporu</strong>: Verilen aralıktaki tüm başvurular.</li>
+         <li><strong>Editor Raporu</strong>: Editörlere göre gruplanarak başvuruların raporu.</li>
+        <li><strong>Hakem Raporu</strong>: Hakemlere göre gruplanarak başvuruların raporu.</li>
+       <li><strong>Bölüm Raporu</strong>: Bölümlere göre gruplanarak başvuruların raporu.</li>
+       </ul>Bu raporlar "Comma-Seperated Values" (CSV) biçimindedir ve görülmeleri için bir tablolama (spreadsheet) uygulaması gerekir.]]>
+	</section>
+</topic>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000008.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Reviewer's Role Index 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000008" locale="tr_TR" title="Hakemin Rolü" toc="editorial/toc/000000" subtoc="editorial/toc/000008" key="editorial.reviewersRole">
+	<section>
+		<![CDATA[<p> Hakemler, bir başvuruyu değerlendirmek için makalenin başlığı ve özeti yanı sıra, derginin adresi, hakemin dergiye girmesini sağlayacak kullanıcı adı ve şifreyi de içeren bir e-posta ile davet edilirler. Sistem hakeme makaleyi e-posta eki olarak olarak gönderen ve bir hakemliğe daveti metni içeren bir diğer yöntemi de içerir. Bu yöntemde hakem cevabını e-posta ile gönderir. Burada anlatılacak olan, hakemlik için (ve hakemlik sürecinin tam bir kaydının tutulması için) kullanılan ve hakemlik süreçlerinin dergi sitesi üzerinden yapılmasını içeren temel yöntemdir.</p>]]>	
+	</section>
+</topic>

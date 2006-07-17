@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000020.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Editor's Role Submission Summary - Submission Metadata
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000020" locale="tr_TR" title="Başvuru Metaverisi" toc="editorial/toc/000003" key="editorial.editorsRole.submissionSummary.submissionMetadata">
+	<section>
+		<![CDATA[<p> Makalenin yayın sonrası dizinlenmesi için gerekli metaveri, yazar tarafından başvuru ile birlikte sisteme girilir ve yayına dek geçen süreçte bölüm editörü, yazar veya sayfa düzenleyicisi tarafından değiştirilebilir.</p>]]>	
+	</section>
+</topic>

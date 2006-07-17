@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000003.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Site Administration - Administration Functions 
+  *
+  * $Id$
+  -->
+
+<topic id="site/topic/000003" locale="tr_TR" title="Yönetsel İşlevler" toc="site/toc/000000" key="site.administrativeFunctions">
+	<section>
+		<![CDATA[<p>Pek çok yönetim işlevine site yönetim alanından ulaşılabilir. Uygunsuz kullanım beklenmedik sonuçlara yol açacağı için bu işlevler genel olarak dikkatlice kullanılmalıdır.</p>
+		<p><em>Sistem Bilgisi.</em> Sunucu özelliklerini ve eski güncelleştirmeleri kapsar biçimde ADS sürümleri hakkında sitedeki durum konusunda genel bilgi verir. ADS yapılandırması için web tabanlı bir arayüz de sağlar.</p>
+		<p><em>Kullanıcı Oturumlarını Kapat.</em> Etkin kullanıcı oturumlarının tümünü kapatarak, etkin kullanıcıları sisteme yeniden giriş yapmaları için sistemden çıkartır.</p>
+	 <p><em>Hazırlanmış Verileri Temizleme.</em> Hazırlanmış verileri, dil bilgilerini, yardım sayfalarını ve arama verilerini temizler ve istenildiğinde yeniden hazırlayarak sunulmasına yol açar.</p><p><em>Hazırlanmış Sayfaları Temizleme.</em> Site özelliklerine göre şablonlardan hazırlanmış HTML sayfaları istenildiğinde kullanılmak üzere hazır bekletilir. Bu bağlantı ile hazırlanmış sayfalar silinerek, yapılan uyarlamalara göre yeniden oluşturulması sağlanır.</p>]]>	
+	</section>
+</topic>

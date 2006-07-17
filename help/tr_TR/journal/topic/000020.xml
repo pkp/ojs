@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000020.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Proofreader 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000020" locale="tr_TR" title="Prova dizgi okuyucu" toc="journal/toc/000003" key="journal.roles.proofreader">
+	<section>
+		<![CDATA[<p>Prova dizgi okuyucu derginin yayınlayacağı biçimdeki prova dizgiyi, yazarın da yapacağı gibi, dikkatle okuyarak, olası hataları yakalamak durumundadır. Yazar ve prova dizgi okuyucu prova dizgideki yazım hatalarını, biçimlendirme hatalarını mizanpajcıya bildirerek düzeltmesini sağlarlar. Bazı dergilerde bir editör veya bölüm editörü bu görevi üstlenir.</p>]]>	
+	</section>
+</topic>

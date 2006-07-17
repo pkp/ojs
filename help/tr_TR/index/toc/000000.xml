@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../toc.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Main table of contents for help. 
+  *
+  * $Id$
+  -->
+
+<toc id="index/toc/000000" locale="tr_TR" title="ADS Yardım" parent_topic="index/topic/000000">
+	<topic id="intro/topic/000000" title="ADS Giriş" />
+	<topic id="site/topic/000000" title="Site Yönetimi" />
+	<topic id="journal/topic/000000" title="Dergi Yönetimi" />
+	<topic id="submission/topic/000000" title="Başvuru Süreci" />
+	<topic id="editorial/topic/000000" title="Editöryal Süreç" />
+	<topic id="publishing/topic/000000" title="Yayın Süreci" />
+	<topic id="user/topic/000000" title="Dergi Web Sitesi" />
+</toc>

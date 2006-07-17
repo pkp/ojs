@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000018.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Editor's Role Submissions - Archives 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000018" locale="tr_TR" title="Arşivler" toc="editorial/toc/000002" key="editorial.editorsRole.submissions.archives">
+	<section>
+		<![CDATA[<p>Bu listedeki başvurular değerlendirme sürecinden geçmiş, reddedilmiş, basım için sıraya konulmuş veya basılmışlardır. Bu liste editörlere ve bölüm editörlerine başvurunun tüm geçmişine (özet, başvuru, hakemlik, yayına hazırlık ve geçmiş) ulaşabilme imkanı vermektedir.</p>
+		<p><i>Arşivlenmiş bir Öğeyi Etkin Listeye Geri Almak</i>. Editör, Editör Anasayfasındaki Arşivler Bölümüne giderek başvuruyu bulmalıdır. Burada başvurunun başlığına tıklanırsa başvurunun Özet, Hakemlik, Yayına Hazırlık ve Geçmiş sayfalarına ulaşılır. Özet sayfasında "Etkin Listeye Geri Al" bağlantısı bulunmaktadır ve bu bağlantı tıklanırsa başvuru arşive gönderildiği sırada içinde bulunduğu aşamaya göre değerlendirme veya Yayına Hazırlık listesine geri alınır.</p>]]>	
+	</section>
+</topic>

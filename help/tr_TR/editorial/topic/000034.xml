@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000034.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author's Role Review Index - Peer Review
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000034" locale="tr_TR" title="Editor Kararı" toc="editorial/toc/000010" key="editorial.authorsRole.review.editorDecision">
+	<section>
+		<![CDATA[<p>Editör kararı ile birlikte, Yazara bölüm editörünün hakem raporları ve kendi yargısına dayanan kararı ile ilgili bir e-posta gönderilir. Bu karar ayrıca Yazar'ın sayfasındaki Editör/Yazar Yazışmaları kısmına da kaydedilir. Eğer Bölüm Editörü son kararını vermeden önce yazardan düzeltme yapmasını istediyse, Yazar bu sayfadan başvurunun gözden geçirilmiş bir sürümünü veya diğer ek dosyaları (veri dosyları, araştırma araçları veya diğer ek dosyalar gibi) sisteme yükleyebilir. Editör de, Yazarın yararlanması için başvurunun veya diğer dosyaların gözden geçirilmiş sürümlerini sisteme yükleyerek sunabilir. (Sisteme yüklenmiş olan dosyalardan yararlanmak için Yazar dosya ismine tıklayarak Dosyayı doğrudan veya bilgisayarına kaydettikten sonra açabilir.) Başvuru kabul edililir ise, yayın sürecinin {help_topic key="editorial.editorsRole.submissions.inEditing" text="yayına hazırlık"} aşamasına geçilir. </p><p><i>Değerlendirme sürecinin yeniden başlaması için başvuruyu tekrar gönderme </i>. Eğer Bölüm Editörünün kararı başvurunun gözden geçirilirek değerlendirme için yeniden gönderilmesi ise yazarlar öncelikle yeniden gözden geçirmeyi kabul edip, etmediklerini Editör/Yazar yazışmaları sayfasından Editöre bildirmelidirler. Daha sonra, gözden geçirme bitince, Yazar ikinci tur değerlendirme için yeni sürümü sisteme yükler. Bölüm editörü bu yeni sürümü değerlendirmeleri için aynı hakemleri veya bir veya daha fazla sayıda farklı hakemi görevlendirir ve bir karar alındığı zaman ilk turda olduğu gibi Yazara bilgi verir.</p>]]>	
+	</section>
+</topic>

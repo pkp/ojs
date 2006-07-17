@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000009.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author's Role Index 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000009" locale="tr_TR" title="Yazarın Rolü" toc="editorial/toc/000000" subtoc="editorial/toc/000009" key="editorial.authorsRole">
+	<section>
+		<![CDATA[<p> Bir makalenin yazarı derleme sürecine katılmak ve makalenin hangi süreçte olduğunu görebilmek için dergi sitesine girebilir. Birden fazla yazar varsa, başvuruyu yapan yazardan ilişki kurulacak kişiyi belirlemesi istenir, ve bütün süreç boyunca bu kişi ile ilişki kurulur ve derleme süreci ile ilgili olarak dergi sitesine erişim bu kişi tarafından yapılır.</p>]]>	
+	</section>
+</topic>

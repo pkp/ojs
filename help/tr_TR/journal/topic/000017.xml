@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000017.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Section Editor 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000017" locale="tr_TR" title="Bölüm Editörü" toc="journal/toc/000003" key="journal.roles.sectionEditor">
+	<section>
+		<![CDATA[<p>Bölüm editörü kendisine yönlendirilen başvuruların değerlendirilmesi ve düzenlenmesinden sorumludur. Kimi zaman başvurunun yalnızca {help_topic key="editorial.sectionEditorsRole.review" text="Değerlendirme"} sürecinden, bazen de ek olarak ilgili başvuruların {help_topic key="editorial.sectionEditorsRole.editing" text="Yayına Hazırlık"} sürecinden de (sayfa düzeni, mizanpaj, vb.) sorumlu olur. Sıklıkla değerlendirme süreci bölüm editörünün, yayına hazırlık süreci ise editörün sorumluluğundadır. Dergi sorumlulukların nasıl paylaşılacağı konusunda kendi yöntemini geliştirebilir.</p>]]>	
+	</section>
+</topic>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000015.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Subscription Manager 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000032" locale="tr_TR" title="Abonelik Yöneticisi" toc="journal/toc/000032" key="journal.roles.subscriptionManager">
+	<section>
+		<![CDATA[<p>Abonelik yöneticisi derginin abonelik tiplerini ve abonelik işlemlerini yürütür.</p>]]>
+	</section>
+</topic>

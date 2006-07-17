@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000038.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Copyeditor's Role - Copyediting
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000038" locale="tr_TR" title="Sayfa Düzenleme" toc="editorial/toc/000012" key="editorial.copyeditorsRole.copyediting">
+	<section>
+		<![CDATA[<p>Başvurunun sayfa düzenleme sayfasında, sayfa düzenleme süreci üç aşamaya ayrılmıştır. Sayfa düzenleme başvurunun elektronik dosyaları üzerinde doğrudan çalışılarak, dil akıcılığı ile anlam iletişimini arttıracak ve yazının derginin genel biçimine ve stiline (özellikle bibliografik stiline) uygunluğunu sağlayacak düzeltme önerileri ile yapılır. Bu düzletmelerden sonra dosya sayfa düzenleyicinin veya Yazarın bilgisayarına kaydedilir ve ilgili aşamaya  yüklenir. Bu, sayfa düzeni yapılmış olan dosyayı bir sonraki turda (eğer üçüncü turda ise mizanpaj aşamasında) erişilebilir hale getirir.</p><p><i>Birinci Aşama</i><br /> Birinci aşamada, sayfa düzenleyici başvuruyu indirip açmak için dosya ismine tıklar. Birinci aşamada dosyayı açtıktan sonra sayfa düzenleyici derginin önceden belirlenmiş olan sayfa düzenleme standartlarına göre başvuruyu düzeltir. (Dergi yöneticisi standartları ayar sayfaları ile düzenleyebilir) Sayfa düzenleyici Yazardan (sayfa sayılarının eksik olması vb...) veya Editörden (dergi standart ve stili ile ilgili sorunlar vb...) istekleri ile beraber tavisye edilen tüm düzletmeleri kaydeder. İlk sayfa düzenlemeyi bitirdikten sonra, sayfa düzenleyici dosyayı bilgisayarına kaydeder. Ön sayfa düzenleme tamamlandıktan sonra sayfa düzenleyici yazarın bakması için sayfa düzenlemesi yaptığı dosyayı sisteme yükler. </p><p><i>Birinci Aşamanın Tamamlanması</i>. Sayfa düzenlemesi yapılmış olan dosya tamamlandıktan ve metaverisi gözden geçirildikten sonra, sayfa düzenleyici birinci aşama için Tamamla kısmının altında yer alan e-posta ikonuna tıklar. Editör ve yazara bir mesaj göndererek onlara birinci aşamanın bittiğini haber verir. Sayfa düzenleyici Bölüm editörünün dikkate almasını istediği isteklerini bu mesajda belirtmelidir. </p><p><i>İkinci Aşama</i><br /> Yazar birinci turda hazırlanmış olan sayfa düzenlemesi yapılmış dosyayı bilgisayarına indirerek açar ve kendisine yöneltilmiş olan isteklere de doğrudan dosyanın üzerinde cevap verir. Yazar, bu düzeltmelerden sonra dosyayı kaydeder ve ikinci adımda sisteme yükler ve bu şekilde üçüncü aşamadaki dosya bu dosya ile değiştirilir ve sayfa düzenleyici bu son dosya üzerinde son sayfa düzenlemesini yapar. Editör, Yazar ve Editörün birbirlerinin düzeltilmiş dosyaları üzerine yükleme yapmalarının önüne geçilebilmesi için kendisine yöneltilen istekleri e-posta ile yanıtlamalıdır. Yazar, Editöre ve sayfa düzenleyiciye bir mesaj göndererek sayfa düzenlemenin üçüncü aşamasını başlatır. </p><p><i>Üçüncü Aşama</i><br /> Sayfa düzenleyici üçüncü aşamada, ikinci aşamada sayfa düzenlemesi yapılmış olan dosyayı bilgisayarına indirerek açar ve (sayfa düzenleme sürecinde dosya üzerinde yapılan değişikliklerle ilgili bütün kayıtları dosyadan çıkarak) Yazarın ve Editörün düzeltmeleri doğrultusunda mizanpaj sürecinde yayınlanacak olan sürüme dönüştürülmeye hazır olacak biçimde başvurunun temiz bir kopyasını hazırlar. Sayfa düzenleyici Derleme sayfasında Mizanpaj kopyası olacak olan bu temiz kopyayı sisteme yükler. Daha sonra sayfa düzenleyici mizanpajcıyı ve Bölüm editörünü, başvurunun sayfa düzenlemesinin bittiği konusunda bilgilendiren bir e-posta gönderir.</p>]]>	
+	</section>
+</topic>

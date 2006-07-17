@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000011.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author's Role Editing Index 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000011" locale="tr_TR" title="Son Derleme" toc="editorial/toc/000009" subtoc="editorial/toc/000011" key="editorial.authorsRole.editing">
+	<section>
+		<![CDATA[<p>Yazar, makalenin elektronik veya basılı yayıma hazırlandığı son derleme aşamasında hem sayfa düzenine, hem de prova dizgi okuma işlemine katkıda bulunur.</p>]]>	
+	</section>
+</topic>

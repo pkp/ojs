@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000040.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Layout Editor's Role - Layout
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000040" locale="tr_TR" title="Mizanpaj" toc="editorial/toc/000013" key="editorial.layoutEditorsRole.layout">
+	<section>
+		<![CDATA[<p> Başvurunun mizanpaj sürümü dergi standartlarına uygun bir şekilde sayfa düzenleyici tarafından hazırlanır. Mizanpajcı başvurunun uygun dosya biçimine ve mizanpaj stiline uygun bir şekilde yerleştirmesini yapar. Mizanpajcı başvuruyu PDF, HTML, Post Script vb... gibi dosya biçimlerine çevirmek için çeşitli programlar kullanmak zorundadır (Dreamweaver, Frontpage, Acrobat vb...). DErgi yöneticisi mizanpajcılara dosyaları yayına uygun şekilde biçimlendirmeleri konusunda yardımcı olması için bir Mizanpaj Yönergesi hazırlayabilir. </p><p><i>Prova Dizgiyi Yüklemek</i>. Mizanpajcı prova dizgi kısmına bir dosya yüklediği zaman, sistem genellikle bu dosyayı uzantısına (örn: PDF, HTML vs...) dayanan bir etiketle tanımlayacak ve özgün dosya ismi ve dosya boyutu bilgilerini de verecektir. Derginin İçindekiler kısmında da yer alacak olan bu etiket, okuyucuya makalenin hangi biçimlerde erişilebilir olduğunu anlatacaktır. Mizanpajcı dosyaya kendisi de bir etiket verebilir. Mizanpajcı birden fazla prova dizgi biçimi yükleyebilir, daha önceden yüklenmiş olan biçimleri silebilir ya da dosya ismi gibi bilgileri değiştirebilir. HTML dosyaları kullanılıyorsa resim veya stil ve biçem dosyaları da bunlarla birlikte sisteme yüklenmelidir.</p><p><i>Ek Dosyalar</i>. Eğer yazar herhangi bir ek dosya yüklediyse, bunlar zaten olmaları gereken yerde olacakalrdır. Eğer derginin bu dosyalarda yer alan verilerin formatı ile ilgili özel bir politikası yoksa (Şekiller veya Resimler gibi) bu dosylar orjinal formatlarında yayımlanmalıdır. Derginin politikası bu dosyaları özgün formatlarında basmak olsa bile mizanpajcı bu dosyaların içinde yer alan materyallerin dergi standartlarına uygun olup olmadığını kontrol etmelidir. Ek dosyalar da mizanpajcı tarafından silinebilir, üzerlerinde çalışılabilir ve yeniden yüklenebilir (dosya biçimi ile ilgili ortaya çıkabilecek durumlar nedeniyle Yazar da bunları yapbilir.)</p>]]>	
+	</section>
+</topic>

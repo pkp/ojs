@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000044.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Ensuring a blind peer review
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000044" locale="tr_TR" title="Yazar bağımsız hakem değerlendirmesinin sağlanması" toc="editorial/toc/000001" key="editorial.sectionEditorsRole.review.blindPeerReview">
+	<section>
+		<![CDATA[<p>Başvuruların yazar bağımsız değerlendirilmesi, yazar ve hakem kimliklerinin birbirlerine bildirilmemesi için gayret gösterilmektedir. Bu amaçla sisteme dosya gönderen yazar, editör, hakem gibi kişilerin metin ve dosyalar ile ilgili aşağıdaki noktalara dikkat etmeleri gerekir.
+<ol><li>Yazarlar metinde adları ve kurumları geçen yerleri silmelidirler. Sayfa altı notları vb yan metinler dahil olmak üzere.</li>
+<li>Mikrosoft belgeleri saklanır iken dosya bilgileri içine kişisel bilgiler de yazılır. Bu nedenle ya bu kişisel bilgiler belge özelliklerinden bulunup silinmeli, ya da aşağıdaki sıra ile belge kişisel bilgi içermeyecek biçimde yeniden kaydedilmelidir. ( File &gt; Save As &gt; Tools (or Options with a Mac) &gt; Security &gt; Remove personal information from file properties on save &gt; Save) (Dosya &gt; Farklı Kaydet &gt; Araçlar &gt; Güvenlik &gt; Kişisel bilgileri silerek kaydet &gt; Kaydet)</li>
+<li>PDF dosyalarda da Adoba Acrobat ana menusunden belge özellikleri seçilerek, yazar adı silinmelidir.</li>
+</ol></p>]]>
+	</section>
+</topic>

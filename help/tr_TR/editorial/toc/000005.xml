@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../toc.dtd">
+
+<!--
+  * 000005.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Editorial Process - Section Editor's Role - Submissions
+  *
+  * $Id$
+  -->
+
+<toc id="editorial/toc/000005" locale="tr_TR" title="Başvurular" parent_topic="editorial/topic/000005">
+	<topic id="editorial/topic/000021" title="Değerlendirmede" />
+	<topic id="editorial/topic/000022" title="Yayına Hazırlık Aşamasında" />
+	<topic id="editorial/topic/000023" title="Arşivde" />
+
+	<breadcrumb url="editorial/topic/000000" title="Editöryal Süreç" />
+	<breadcrumb url="editorial/topic/000004" title="Bölüm Editörünün Rolü" />
+	<breadcrumb url="editorial/topic/000005" title="Başvurular" />
+</toc>

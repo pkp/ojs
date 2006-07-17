@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000010.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Files Browser
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000010" locale="tr_TR" title="Dosya Tarayıcı" toc="journal/toc/000001" key="journal.managementPages.fileBrowser">
+	<section>
+		<![CDATA[<p>Dergi yöneticisi dosya tarayıcısı ile sistemdeki tüm dosyalara ulaşıp, görebilir, silebilir, taşıyabilir.</p>
+		<p>Bu özellik yalnızca bakım amaçlıdır, günlük kullanımda kullanımına gerek yoktur.</p>]]>	
+	</section>
+</topic>

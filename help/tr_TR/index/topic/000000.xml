@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Index Help Page 
+  *
+  * $Id$
+  -->
+
+<topic id="index/topic/000000" locale="tr_TR" title="Açık Dergi Sistemi Yardım Dosyaları" toc="index/toc/000000" key="index.index">
+	<section>
+		<![CDATA[<p> Açık Dergi Sistemi (ADS)'nin Yardım dosyaları kullanıcılara akademik veya genel amaçlı dergileri okuma, başvurma, derleme ve yayımlama süreçlerinde yardım etmek için hazırlanmıştır. Ayrıca bir dergi yönetim yazılımı olan ADS'nin kapsam ve çalışmalarını anlatan bir kullanma klavuzu olarak da tasarlanmıştır. Yardım dosyaları aynı zamanda akademik dergilerin derleme süreçlerindeki uygulamalar ile ilgili tavsiyeler de içermektedir. Bu yardım dosyalarının yanı sıra kullanıcılar bu derginin İletişim bölümünün altındaki Hakkında kısmında listelenmiş olan teknik yardım elemanlarına da başvurabilirler. </p><p> ADS her işlev ve süreç için önceden belirlenmiş roller ve ünvanlar kullandığı için, &mdash; derginin kurulumunu yapan dergi yöneticisinden basım kalıplarının son okumasını yapan Yazarlara kadar &mdash; Yardım dosyalarında bulunan her konu hangi rolün ne yapmasını gerektiğini anlatmaktadır. Aynı mantıkla Yardım dosyalarına ulaşım da kimin nerede ne yaptığına göre belirlenmiştir. Yani yardım içeriğe özeldir. Bir kişinin yardım dosyalarına tıkladığında ne gördüğü rolüne bağlıdır. Kullanıcıların ADS'de birden fazla rolleri olabilir (bir hakem aynı zaman da yazar veya bir dergi yöneticisi aynı zaman da editör olabilir). Bir kişinin yardım dosyalarına tıladığında ne göreceği ADS'nin neresinde bulunduğuna da bağlıdır. Rol ve Konum hangi yardım dosyalarının geleceğini belirlemektedir. Ancak kullanıcı, yardım dosyalarındaki ilişkili konuları izleyerek sistemin diğer boyutlarını da görebilir.</p>]]>	
+	</section>
+</topic>

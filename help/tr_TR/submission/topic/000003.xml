@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000003.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author Submission Process - Indexing and Metadata 
+  *
+  * $Id$
+  -->
+
+<topic id="submission/topic/000003" locale="tr_TR" title="Dizinleme ve Metaveri" toc="submission/toc/000000" key="submission.indexingAndMetadata">
+	<section>
+		<![CDATA[<p>Bu dergi sisteminde Yazarlar başvurularının dizinlenmesi için düzenlemeye katılırlar. Aynı zamanda sistem kendisi de dergi başlığı, tarih, bağlantı gibi bazı dizinleme ve metaveri parçalarını oluşturur. Metaveri (ya da veri hakkında bilgi), bir sayıdaki belge ya da verileri tanımlayan kavramların toplamıdır, dolayısıyla dizinleme koşullarının karşılaştırmalı kullanımı ile aynı şeyi yapar. Dergi, başvuru dizinlemeleri için Dublin Temel Metaveri Girişimi içindeki Açık Arşiv Girişimi (AAG) tarafından geliştirilen ve sürdürülen bir metaveri protokolünü kullanmaktadır. AAG Metaveri Ürünlendirme Protokolü, dünya çapında kaynaklara dayanan araştırma dizinleri yaratmak için AAG uyumlu arama motorlarına olanak tanıyan, araştırmalar için ortaya çıkan bir standarttır. Bununla birlikte, derginin içeriğine Google ve diğer geniş web arama motorları standartları ile de ulaşılabilir.</p><p><i>Metaveri parçaları</i>. Dublin Esası, belgeleri tanıma ve tanımlamada kullanılan 15 metaveri parçası içerir. Bu parçalar daha ayrıntılı olarak aynı zamanda Tür, Kapsam ve Sponsor ile ayrı ayrı dizinlenmesine izin veren Yazar, Başlık, Tanımlama (Özet), Konu gibi geleneksel tanımlayıcı terimleri içerir. Derginin kapsamına ve ilgisine göre, Dergi Yöneticisi ve Editör dergi için uygun olan metaveri parçalarını seçerler ve Yazarlara yardımcı olmak için herbirinin örneğini sunarlar.</p><p>Özetler düzenlenirken ne kadar az HTML biçimlemesi kullanılır ise, ADS o özeti o denli iyi dizinler.</p><p><i>Dizinleme Avantajları</i>. Başvuru sürecinin 2. adımında başvurularının dizinlemesini tamamlamaları için Yazarlara destek verilir ve düzenleme sürecinin bir parçası olarak Yazarlar metaveri için gözden geçirme ve düzeltme olanağına sahiptirler. Aynı zamanda, Metaveri düzeltme adımının parçası olarak gözden geçirilir. Bu dergi için metaveri, etkili bir araştırma dizini ya da rehberi yaratan çok sayıda araştırma sunan arama motorları tarafından "ürünlendirilir". Çalışmalar iyi biçimde dizinlendiği için onları arayanlar ve alıntı yapmak isteyenlerce çok kolay biçimde bulunacaktır. Dizinlenen bir çalışma için kullanılan terimler az olduğundan, Yazarlar çalışmalarının nasıl yerleştirileceği konusunda düşünmeye özendirilirler ve böylelikle ayrınıtlı dizinlemenin önemini kavrarlar.</p>]]>	
+	</section>
+</topic>

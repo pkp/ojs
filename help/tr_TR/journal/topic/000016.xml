@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000016.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Editor 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000016" locale="tr_TR" title="Editör" toc="journal/toc/000003" key="journal.roles.editor">
+	<section>
+		<![CDATA[<p>Editör tüm editöryal ve yayın sürecini izler. Dergi yöneticisi ile birlikte, dergi için gerekli işlemleri ve politikaları oluşturur, yönetici {help_topic key="journal.managementPages.setup" text="Kurulum"} sayfaları ile bu kararları uygular. Editöryal süreçte başvuruları karşılayıp, bölüm editörlerine dağıtır. Bir gözü başvuru işlemlerindedir, olabilecek aksaklıkları izleyip, makale gönderiminin sorunsuz sürdürülmesine çalışır. Tipik olarak bir çok editör bölüm editörü rolü de alarak, bir bölüm başvurunun {help_topic key="editorial.sectionEditorsRole.editing" text="yayına hazırlık"} sürecinde de görev alır. Daha ileri giderek temel olarak bölüm editörlerince sürdürülen {help_topic key="editorial.sectionEditorsRole.review" text="hakem değerlendirmesi"} sürecinde de görev alabilir. Editör {help_topic key="publishing.index" text="Yayın Sürecinde"} temel yetkilidir, yeni sayının oluşturulması, içindekiler tablosunun hazırlanması onun sorumluluğundadır. Editör {help_topic key="editorial.editorsRole.submissions.archives" text="Arşiv"} içinde dizinlenen yazılararı etkin yayın veya değerlendirme listesine alabilir.</p>]]>	
+	</section>
+</topic>

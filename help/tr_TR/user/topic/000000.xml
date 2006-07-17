@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * User Interface Index 
+  *
+  * $Id$
+  -->
+
+<topic id="user/topic/000000" locale="tr_TR" title="Dergi Web Sitesi" toc="index/toc/000000" subtoc="user/toc/000000" key="user.index">
+	<section>
+		<![CDATA[<p>Bu dergi, araştırma ve çalışmalarında okuma tecrübelerini iyileştirmeleri için kullanıcılarına çok sayıda tasarlanmış özellik sunmaktadır. Bu özellikler internette çevrimiçi olan dergilerce yaygın olarak kullanılır ve diğer dergilerden tam anlamıyla yararlanabilmeyi kolaylaştırır. Bu özellikler genelde tüm okuyucular için geçerlidir.</p>]]>	
+	</section>
+</topic>

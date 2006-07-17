@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000022.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Author 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000022" locale="tr_TR" title="Yazar" toc="journal/toc/000003" key="journal.roles.author">
+	<section>
+		<![CDATA[<p>Yazarlar dergi sitesini kullanarak üye olabilir ve yazılarını doğrudan gönderebilirler. Yazarlardan yazılarını yüklemeleri ve dizin işlemleri için kullanılacak metaverileri girmeleri beklenmektedir (metaveriler genel olarak veya dergi bazında bilgiye ulaşmak için yapılan aramaları kolaylaştırırlar). Yazarlar yazı dışında ayrıntılı resimler, veri setleri, deney araçları gibi yazı ile ilgili ek dosyalar da yükleyebilirler, bu dosyalar yazıyı zengişleştirdiği gibi çalışmaların meslakdaşlar ile tüm açıklığıyla paylaşılmasını kolaylaştırır. Yazarlar yazının editöryal süreçte hangi basamakta olduğunu izleyebilirler, basıma hazırlıkta sayfa düzeni ve prova baskının kontrolüne katılırlar.</p>]]>	
+	</section>
+</topic>

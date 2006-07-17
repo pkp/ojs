@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000005.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Section Editor's Role Index - Submissions 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000005" locale="tr_TR" title="Başvurular" toc="editorial/toc/000004" subtoc="editorial/toc/000005" key="editorial.sectionEditorsRole.submissions">
+	<section>
+		<![CDATA[<p>Editör tarafından bölüm editörüne incelemesi için verilen makaleler, bölüm editörünün incelemesi listesinde görünür. Bölüm Editörlerini sadece kendilerine verilen makalelere ulaşabilirler. Dergi yayım politkasına göre, bölüm editörleri sadece gözden geçirmeden ya da hem gözden geçirmeden hem de son düzenlemelerden sorumlu olabilirler.</p>]]>	
+	</section>
+</topic>

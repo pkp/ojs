@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000041.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Layout Editor's Role - Proofreading
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000041" locale="tr_TR" title="Prova Dizgi kontrolü" toc="editorial/toc/000013" key="editorial.layoutEditorsRole.proofreading">
+	<section>
+		<![CDATA[<p> Yazar ve prova dizgi okuyucu, yazım ve biçim hatalarına karşı dosyaların değişik biçimlerdeki (PDF, HTML vs...) kopyalarını düzeltirler. Prova Dizgi kontrolü yönergeleri çerçevesinde gerekli gördükleri düzeltmeleri Düzeltmeler metin kutusuna girerler. Prova dizgi okuyucu mizanpajcıya son düzeltmenin bittiğini bildirdiği zaman, mizanpajcı mizanpaj bölümündeki Düzeltme Biçimlerine gider ve düzeltilen dosyaları silip yerlerine yeni dosyaları yükleyerek gerekli düzeltmeleri yapar. Bu işlemi tamamladıktan sonra, mizanpajcı, Bölüm Editörü ve Yazara başvurunun basım için sıraya konulmaya hazır olduğuna dair bir mesaj gönderecek olan Tamamla kısmının altında yer alan e-posta simgesine tıklamadan önce Yorumlar metin kutusuna yorumlarını (örn: bir değişiklikle ilgili açıklama) girmek isteyebilir.</p>]]>	
+	</section>
+</topic>

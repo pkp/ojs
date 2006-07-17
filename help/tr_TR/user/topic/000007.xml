@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000007.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * User Interface - User Home
+  *
+  * $Id$
+  -->
+
+<topic id="user/topic/000007" locale="tr_TR" title="Kullanıcı Sayfası" toc="user/toc/000000" key="user.userHome">
+	<section>
+		<![CDATA[<p>Kullanıcı sisteme girdikten sonra sayfadaki gezinme çubuğunda Kullanıcı Sayfası görünür. Kullanıcının son olarak yaptığı tüm görevler listelenir (Eleştirmen, Yazar, Okuyucu, vs.). Aynı zamanda, kullanıcının bir ya da birden fazla görevinin olduğu kayıtlı olduğu diğer dergilere linkleri içeren kullanıcı hesabını da içerir. Hesabım, eklenebilen ve değiştirilebilen iletişim ve biyografik bilgilerinin olduğu kullanıcı Profili'ne ulaşımı da sağlar. Kullanıcının kendi hesap yönetiminin bir parçası olarak yeni bir şifre oluşturma olanağı vardır.</p><p>Aynı zamanda dernek sitesine üye olan dergi sitesi üyelerinin, şifrelerini sitedeki odalarından değiştirmelerini öneririz. Değişim siteden yapılınca, her iki taraftada aynı şifre geçerli olacaktır. Dergi sitesinden değişimlerde, site şifresi eskisi gibi kalacaktır.</p>]]>	
+	</section>
+</topic>

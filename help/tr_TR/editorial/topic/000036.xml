@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000036.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author's Role Editing - Proofreading
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000036" locale="tr_TR" title="Prova Dizgi Kontrolü" toc="editorial/toc/000011" key="editorial.authorsRole.editing.proofreading">
+	<section>
+		<![CDATA[<p>Yazar, derginin yayınlayacağı HTML, PDF veya PS biçimindeki son provaların son kontrolünü yaparak düzeltir. Bu dosyalara ulaşabilmek için, makalesinin yayınlanacağı prova dizgi biçimine (dosya isminin değil) tıklar. Prova dizgi kontrolü aşamasında mizanpajcı tarafından yalnızca yazım ve biçim hatları düzeltilir. Eğer birden fazla prova dizgi varsa, Yazarın yalnızca birisini yazım hataları için denetlemesi yeterlidir ancak biçim hataları için her birini kontrol etmelidir. Yazar Düzletmeler metin kutusuna düzeltme önerilerini girerken prova dizgi düzeltme yönergesini izlemelidir. Yazar ayrıca yayınlanacak olan ek dosyaları da kontrol etmelidir. Bu dosyalar orjinal biçimlerinde yayınlanacağı için Düzenle işlevi kullanılarak yeniden düzenlenebilirler ve ayrıca başlıkları da değiştirilebilir. Bu dosyalarda yapılan herhangi bir düzeltme Düzletmeler Metin Kutusunda da belirtilmelidir.</p>]]>
+	</section>
+</topic>

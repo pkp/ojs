@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../toc.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Site Administration. 
+  *
+  * $Id$
+  -->
+
+<toc id="site/toc/000000" locale="tr_TR" title="Site Yönetimi" parent_topic="site/topic/000000">
+	<topic id="site/topic/000001" title="Kurulum" />
+	<topic id="site/topic/000002" title="Site Yönetimi" />
+	<topic id="site/topic/000003" title="Yönetsel İşlevler" />
+	<breadcrumb url="site/topic/000000" title="Site Yönetimi" />
+</toc>

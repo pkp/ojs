@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000006.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * User Interface - Reading Tools
+  *
+  * $Id$
+  -->
+
+<topic id="user/topic/000006" locale="tr_TR" title="Okuma Araçları" toc="user/toc/000000" key="user.readingTools">
+	<section>
+		<![CDATA[<p>Dergilerin bu sistemdeki kullanımı, derginin çeşitli bölümlerinde yayımlanan parçaların oluşması için bir Okuma Araçları seti sağlar. Okuma Araçları, bir yorumlama, değerlendirme ve okunanların araştırılması kullanımı bağlamının oluşmasında hem tecrübeli hem de tecrübesiz okuyuculara yardımcı olmayı amaçlar. Okuma Araçları seti, güncelleme ve derlemenin yanısıra derginin okuma ortamını desteklemek için Dergi Yöneticisi'nin seçebileceği geniş bir yelpazedeki akademik disiplinler için geliştirilmektedir. Okuma Araçları yazarla iletişim kurdurma ya da diğer Okuyucularla paylaşım sağlama gibi, Okuyuculara ilgili forumlara katılma imkanı sunar.</p><p><i>Okuma Araçları Nasıl Çalışır</i>. Okuma Araçları belirli makale ya da kalemler için bir bağlam sağlamak için tasarlanmıştır. Araçlar, kullanıcı tarayıcısının içinde makalenin sağ tarafında ya da okunan malzemelerde bir pencere içinde açılır. İlk olarak Araçlar, Okuyucuların malzemelerin dizinleme bilgisi, baskı sürümü ve bibliyografik yazar ifadelerine ulaşmalarını sağlar. Araçlar, malzemenin HTML sürümündeki herhangi bir sözcüğe çift tıklayarak malzeme içinde sözcük araması yapabilmelerini ve yazara ya da başka bir Okuyucuya e-posta gönderebilmelerini sağlar. Bunların yanı sıra Araçlar, seçilen araçlara bağlı olarak, yazının anahtar sözcüklerini alarak ve bunları açık erişim veritabanı arama motorlarına, Araştırma Çalışmaları, Yazarın Diğer Çalışmaları, Basın ve Medya, Devlet Websiteleri, Eğitici Kaynaklar, Tartışmalar ve Forumlarına ve diğer kategoriler altında gruplanan diğer kaynaklara vermek için tasarlanmıştır Okuyucular seçilen her kaynak için aynı zamanda arka plan bilgisine ulaşabilirler. Çalışmalar, Medya ya da Eğitim olmak üzere her bir kategoride kaynak hakkında bir Hakkında sayfasına link sağlayarak Okuyucu için her veritabanı hakkında öğretici bilgiler sunmak suretiyle Araçlar, danışmak için çoklu seçenekler ya da veritabanları sağlar. (Dergi Yöneticisi varolan kaynakları düzeltme ya da silme ve yeni bir tanesini ekleme imkanına sahiptir.)</p>]]>	
+	</section>
+</topic>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000006.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Prepared Emails 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000006" locale="tr_TR" title="Hazırlanmış E-Postalar" toc="journal/toc/000001" key="journal.managementPages.emails">
+	<section>
+		<![CDATA[<p>Dergi editöryal süreç ve yayın süreci ile ilgili bir dizi önceden hazırlanmış e-posta kalıbı kullanır. Bu e-postalar uygun alıcılara, gerekli haberleri iletmek üzere, örneğin bölüm editörünün sayfa dizgicisine, bir yazının kabul edildiğini ve baskı için dizilmesi gerektiğini haber vermesi gibi, düzenlenmişlerdir. Dergi yöneticisi bu e-posta şablonlarını dergi yönetimi sayfasındaki e-posta şablonları bağlantısını kullanarak düzenleyebilir. Ayrıca kullanıcılar da gönderdikleri e-postayı göndereceklerinde de düzenleyebilirler. Sistem e-posta oluştururken yazının başlığı, işlemin yapılması beklenen zaman gibi uygun değişkenleri de kendisi düzenler. Yine istenilen iş ile ilgili internet ulaşımı bağlantıları da oluşturularak, e-posta içeriğine eklenir.</p>]]>	
+	</section>
+	
+	<section title="E-posta Gönderilmesi">
+		<![CDATA[<p>ADS yayın sürecindeki işlevlerin sürdürülmesi için ana haber yöntemi olarak e-postaları kullanır. Tüm e-posta şablonlarının bir ön tanımlı biçimi vardır ve ilgili e-posta ikonu tıklatıldığında servise verilirler. Ön tnaımlı e-posta şablonları dergi yöneticisi tarafından herhangi bir zamanda düzenlenebilirler. Ayrıca kullanıcılar da gönderdikleri e-postayı göndereceklerinde de düzenleyebilirler. E-posta ikonu tıklatıldığında, e-posta alıcısı, gönderilme amacına uygun geçici bilgileri ile hazır olarak kullanıcıya sunulur. Kullanıcı ister ise başka şeyler ekleyip, düzenleyebilir. Eğer gönderi şifre içermiyor ise (güvenlik nedeni ile), gönderici alıcı veya bilgi için gönderilecek kişiler ekleyebilir. Alıcının adresinin değiştirilmesi ilginin sistemdeki adresini değiştirmez. Eğer alıcının adresinin kalıcı olarak değişmesi gerekiyor ise, değiştirmeye yetkili olan dergi yöneticisine haber verilmelidir.</p>]]>
+	</section>
+</topic>

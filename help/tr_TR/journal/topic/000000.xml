@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Journal Management Main 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000000" locale="tr_TR" title="Dergi Yönetimi" toc="index/toc/000000" subtoc="journal/toc/000000" key="journal.index">
+	<section>
+		<![CDATA[<p>Dergi yöneticisi dergi yönetiminin tüm yönlerine ulaşabilir. Dergi editörleri ile görüşerek, dergi sistemini kurup, ayarlamaktan, kullanıcı eklemek, kullanıcılara görev vermek, dergi bölümlerini oluşturmak gibi tüm yönetsel görevleri sürdürür.</p>]]>	
+	</section>
+</topic>

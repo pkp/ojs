@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000004.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author Submission Process - Supplementary Files 
+  *
+  * $Id$
+  -->
+
+<topic id="submission/topic/000004" locale="tr_TR" title="Ek Dosyalar" toc="submission/toc/000000" key="submission.supplementaryFiles">
+	<section>
+		<![CDATA[<p>Başvuru Sürecinin 4. adımında Yazarlar sisteme Ek Dosyalar yükleyebilirler. Ek Dosyalar, araştırma verisi seti, araştırma araçları, kaynak metinleri ya da kendi önemlerini değerlendirebilecek ayrı belgeler olarak işleme sokulacak şekilde temin edilen başvuruya başka biçimlerde bir ilave diğer materyalleri içerme amaçlıdır. Ek olarak, Yazar başvurudan bağımsız olarak Ek Dosyaları dizinleyecektir, Dosyalar böylece daha geniş bir dizinin parçası haline geleceklerdir ve ögelerin bu belli türlerini aramada bulunacaktır.</p><p><i>Ek Dosya Biçimleri</i>. Ek Dosyalar aynı zamanda kendi orijinal biçimlerinde kısıtlama olmaksızın sisteme yüklenirler ve standart bir müsvedde biçiminde olması gereken başvurunun kalan kısmının aksine orijinal biçimde kalırlar ve oldukları gibi yayın biçimine dönüşürler. Bunun anlamı, veri setlerinin yaygın sayfalar içinde ulaşılabilir olması ya da flash gösterimlerinin sisteme yüklenebilmesi ve o biçimde korunmasıdır; bu okuyucuların karşılacakları güçlükleri giderebilir. Bu husus, kısıtlanmadan indirilebilen yazılım ile açılan ve görülen Ek Dosyaların tanımlanmasında Yazarlara olanak sağlayabilir.</p>]]>	
+	</section>
+</topic>

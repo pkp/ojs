@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../toc.dtd">
+
+<!--
+  * 000009.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Editorial Process - Author's Role
+  *
+  * $Id$
+  -->
+
+<toc id="editorial/toc/000009" locale="tr_TR" title="Yazarın Rolü" parent_topic="editorial/topic/000009">
+	<topic id="editorial/topic/000032" title="Başvurular" />
+	<topic id="editorial/topic/000010" title="Değerlendirme" />
+	<topic id="editorial/topic/000011" title="Yayına Hazırlık" />
+
+	<breadcrumb url="editorial/topic/000000" title="Editöryal Süreç" />
+	<breadcrumb url="editorial/topic/000009" title="Yazarın Rolü" />
+</toc>

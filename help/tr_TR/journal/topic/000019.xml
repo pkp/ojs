@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000019.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Copyeditor 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000019" locale="tr_TR" title="Sayfa Düzenleyici" toc="journal/toc/000003" key="journal.roles.copyeditor">
+	<section>
+		<![CDATA[<p>Sayfa düzenleyici kabul edilen yazıların grameri, açıklığı, derginin bibliyografik stili, sayfa düzeni özellikleri gibi konularda yazar ile birlikte çalışarak, mizanpazcıya teslim edilecek sayfa düzenini geliştirir. Bu temiz kopyadan dergide yayınlanacak son makale biçimlendirilir. Bazı dergilerde bir editör veya bölüm editörü bu görevi yürütür.</p>]]>	
+	</section>
+</topic>

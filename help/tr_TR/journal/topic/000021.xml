@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000021.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Reviewer 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000021" locale="tr_TR" title="Hakem" toc="journal/toc/000003" key="journal.roles.reviewer">
+	<section>
+		<![CDATA[<p>Hakem bir başvuruyu değerlendirmek üzere bölüm editörü tarafından seçilir. Hakemlerden dergi sitesini kullanarak başvuruyu değerlendirmeleri istenir, ancak bazı dergiler yazıyı e-posta ekinde göndererek de değerlendirme isteyebilirler. Hakemler editörler ve yazarlar için istenilen elektronik dosyaları siteye yükleyebilirler. Dergi politikalarına uygun ise, hakemler editörler tarafından puanlanarak, hakem havuzu izlenebilir.</p>]]>	
+	</section>
+</topic>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000029.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Groups
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000029" locale="tr_TR" title="Yöneticiler Listesi" toc="journal/toc/000001" key="journal.managementPages.groups">
+	<section>
+		<![CDATA[<p>Dergi Yöneticisinin yöneticiler listesi oluşturmak için iki yöntemi verdır, editörlerin kullanılan görevleri ile veya özel editör sıfatları oluşturarak. Oluşan liste Dergi Hakkında Sayfasında Editörler başlığı altında yayınlanır.</p>]]>
+	</section>
+	<section title="Tanımlanmış görevler kullanılarak Yönetici Listesi Hazırlanması">
+		<![CDATA[<p>Bu olasılık seçildi ise, Dergi Yöneticisi sayfasındaki Görevler bağlantısıdan ulaşılan görevlendirmeler kullanılarak liste hazırlanır. Editörler, bölüm editörleri, Sayfa Düzenleyici vd. görevliler listelenir.</p>]]>
+	</section>
+	<section title="Özel editör sıfatları ile yönetici listesi hazırlanması">
+		<![CDATA[<p>Eğer yönetici yayınlanan liste üzerinde daha fazla kontrol ister ise, bu seçeneği seçmelidir. Eğer bu seçenek etkinleştirildi ise, editörler listesinde değişik başlıklar kullanılabilir.</p>]]>
+	</section>
+</topic>

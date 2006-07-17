@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000002.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * User Interface - About
+  *
+  * $Id$
+  -->
+
+<topic id="user/topic/000002" locale="tr_TR" title="Hakkında" toc="user/toc/000000" key="user.about">
+	<section>
+		<![CDATA[<p>Dergi Hakkında'da, elden geldiğince şeffaf biçimde çalışmaların amacıyla birlikte dergi, politikalarını, işleyişlerini ve ilgili diğer malzemeleri sunar. Bu malzemeler tipik olarak dergilerdeki asıl konuyla ilgili olur. Bu kısım, bu dergi için muhtemel yazarların derginin kapsamı ve ilgisiyle ilgili öğrenebilecekleri bilgileri (Gözatma İnceleme Politikası) ve bir makalenin dergiye nasıl gönderilebileceğinin yanısıra başvurunun biçimi ve hazırlanmasının nasıl yapılacağı konularını içerir.</p>]]>	
+	</section>
+</topic>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000002.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author Submission Process - Submission Requirements 
+  *
+  * $Id$
+  -->
+
+<topic id="submission/topic/000002" locale="tr_TR" title="Başvuru Gereksinimleri" toc="submission/toc/000000" key="submission.submissionRequirements">
+	<section>
+		<![CDATA[<p>Yazar Başvurusu sürecinin ikinci adımının işlemesine izin verilmeden önce dergiye yapılan başvuruların düzgün biçimde hazırlanmasını ve süreç için uygun bir biçimi garantilemek için Dergi Yöneticisi ve Editör Yazarın doldurmak zorunda olduğu bir Başvuru Gereksinimleri setini geliştirmişlerdir. Yazar herhangi bir nedenle Gereksinimlerden birini yerine getiremezse Gereksinim formunu işaretleyip, editöre durumun açıklamasını gönderebilir.</p>]]>	
+	</section>
+</topic>
