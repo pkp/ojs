@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE topic SYSTEM "../../../topic.dtd">
 
 <!--
@@ -8,15 +8,12 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Author's Role Review Index - Peer Review
-  *
-  * Translation by Suporte Técnico SER, UFPR
-  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
-  *
+
   * $Id$
   -->
 
-<topic id="editorial/topic/000033" locale="pt_BR" title="Avaliação aos Pares" toc="editorial/toc/000010" key="editorial.authorsRole.review.peerReview">
+<topic id="editorial/topic/000033" locale="pt_BR" title="Avaliação por Pares" toc="editorial/toc/000010" key="editorial.authorsRole.review.peerReview">
 	<section>
-		<![CDATA[<p>As datas das Requisições para Avaliadores feitasv pelo Editor, para quando a Avaliação está em curso, e quando a Avaliação está completa por cada Avaliador são gravadas nesta página. O Autor pode consultar a Política da Revista em {help_topic key="user.about" text="Sobre a Revista"} para aprender como submissões são avaliadas pela revista. Avaliadores estão aptos a carregar arquivos para que o Autor consulte, incluindo versões anotadas da submissão. (Para consultar arquivos carregados, o Autor clica no nome do arquivo, e abre o arquivo ou salva-o em seu computador e depois abre-o).</p>]]>	
+		<![CDATA[<p>Várias datas são armazenadas nesta página, incluindo a de Solicitação de Avaliação, de Avaliação em Curso e de Conclusão da avaliação. O Autor pode consultar a Política da Revista em {help_topic key="user.about" text="Sobre a Revista"} para conhecer o processo de avaliação da revista. Avaliadores podem enviar arquivos para que o Autor consulte, incluindo versões anotadas da submissão. (Para consultar arquivos enviados, o Autor clica no nome do arquivo, e abre o arquivo na pasta temporária ou salva-o em seu computador em uma pasta específica para depois abrí-lo).</p>]]>	
 	</section>
 </topic>

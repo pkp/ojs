@@ -8,15 +8,12 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Site Administration Main 
-  *
-  * Translation by Suporte Técnico SER, UFPR
-  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
-  *
+
   * $Id$
   -->
 
 <topic id="site/topic/000000" locale="pt_BR" title="Administração do Portal" toc="index/toc/000000" subtoc="site/toc/000000" key="site.index">
 	<section>
-		<![CDATA[<p>Este sistema de gerenciamento e publicação foi projetado para ser instalado e administrado em um servidor web local. Uma vez instalado, a administração do portal pode ser usada para criar tantas revistas quantas forem desejadas, e supervisionar a administração de cada revista que foi criada.</p>]]>	
+		<![CDATA[<p>Este sistema de gerenciamento e publicação de revistas foi desenvolvido para instalação e administração via um servidor Web local. Uma vez instalado, o Administrador do Sistema poderá utilizar sua interface para criar quantas revistas forem necessárias, a qualquer tempo, e verificar a administradção de cada revista hospedada.</p>]]>
 	</section>
 </topic>

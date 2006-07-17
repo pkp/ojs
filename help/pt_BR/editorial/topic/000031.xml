@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE topic SYSTEM "../../../topic.dtd">
 
 <!--
@@ -8,23 +8,20 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Reviewer's Role Index - Review
-  *
-  * Translation by Suporte Técnico SER, UFPR
-  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
-  *
+
   * $Id$
   -->
 
 <topic id="editorial/topic/000031" locale="pt_BR" title="Avaliação" toc="editorial/toc/000008" key="editorial.reviewersRole.review">
 	<section>
-		<![CDATA[<p>O processo de Avaliação é dividido em seis partes para orientar o Avaliador através do processo de Avaliação.</p>
-		<p><i>Passo 1</i><br>O Avaliador deve primeiramente indicar ao Editor de Seção que vai aceitar revisar esta submissão. A decisão deve ser tomada depois de revisar o Resumo da submissão e talvez ter visto a submissão, clicando no nome do arquivo no Passo 3 (dependendo da política da revista, o arquivo pode não estar disponível a priori para que o Avaliador concorde em revisa-lo).</p>
-		<p><i>Se o Avaliador não for apto para fazer a Avaliação</i>. O Avaliador que não está apto para avaliar uma submissão deve clicar em "Indisponível para Avaliação" que direciona para um email padrão para o Editor de Seção, que o Avaliador pode editar para indicar, se desejar, o motivo de não poder fazer a Avaliação (por exemplo, tempo, conflito de interesses, etc.)</p>
-		<p><i>Se o Avaliador estiver Disponível para Avaliação</i>. O Avaliador que for apto para fazer a Avaliação clica em "Disponível para Avaliação", que direciona para um email padrão para o Editor de Seção, e que vai comunicar o Editor de Seção e Autor que a Avaliação está em curso.</p>
-		<p><i>Passo 2</i><br>As Diretrizes do Avaliador foram preparadas pelos Editores da revista para garantir que a Avaliação está tão documentada quanto possível para os Avaliadores e Autor.</p>
-		<p><i>Passo 3</i><br>O Autor carregou o arquivo da submissão, que o Avaliador pode baixar do site da revista para seu computados clicando sobre o nome do arquivo. O arquivo pode ser aberto ou salvo para o computador e aberto, usando programas típicos disponíveis como Word e Acrobat. Ele pode ser impresso ou lido na tela. Os Arquivos Suplementares referem-se ao material que o Autor também carregou como adendo à submissão, como conjuntos de dados, instrumentos de pesquisa, textos fonte, outros.</p>
-		<p><i>Passo 4</i><br>O Avaliador prepara uma Avaliação da submissão, seguindo as Diretrizes do Avaliador da revista, em um processador de texto e depois copiando o texto produzido para a caixa de texto da Avaliação, ou criando o texto diretamente na caixa de texto da Avaliação, que é obtida clicando no ícone da Avaliação. O Avaliador pode entrar com o texto todo de uma vez, ou em partes, salvando-o cada vez. Desta forma, o Avaliador pode indicar na caixa de texto da Avaliação quais partes podem ou não ser compartilhadas  com o Autor. Seguindo as restrições dos Avaliadores, se existir alguma, o Editor de Seção tem a opção de compartilhar todas as partes da Avaliação com o Autor.</p>
-		<p><i>Passo 5</i><br>O Avaliador tem a opção de, em complemento ao texto da Avaliação, carregar arquivos para o Editor de Seção e/ou Autor ver. Estes arquivos devem ser uma versão com notas da submissão ou algum dado relevante ou outro material que ajude o Editor e/ou Autor. Fica a critério do Editor se estes arquivos são mostrados ao Autor, mas os Avaliadores podem certamente comentar sobre isso em suas Avaliações (Passo 4).
-		<p><i>Passo 6</i><br>O Avaliador deve selecionar uma Recomendação para submissão dentre as seguintes opções: Aceitar, Revisões Solicitadas, Submeter novamente para Avaliação, Submeter a outra Revista, Rejeitar, Ver Comentários. Quando o Avaliador clica em "Submeter Avaliação ao Editor", ele é direcionado para um email preparado ao Editor de Seção, para que o Editor veja a Recomendação, Avaliação e qualquer arquivo carregado. O email pode ser editado pelo Avaliador antes do envio.</p>]]>	
+		<![CDATA[<p>O processo de Avaliação é dividido em seis passos, que guiam o Avaliador durante o processo de Avaliação.</p>
+		<p><i>Passo 1</i><br>O Avaliador deve primeiramente informar o Editor de Seção se está disponível para avaliar a submissão. A decisão deve ser tomada depois de verficar se possui o conhecimento necessário para avaliar o conteúdo disponível, clicando no nome do arquivo no Passo 3 (geralmente o Resumo da submissão e possivelmente o texto completo, dependendo da política da revista).</p>
+		<p><i>Caso o Avaliador não estiver apto a realizar a Avaliação</i>. O Avaliador que não estiver em condições de avaliar uma submissão deve clicar em "Indisponível para Avaliação", para notificar via e-mail que o Avaliador informe o Editor de Seção o motivo de sua indisponibilidade (tempo, conflito de interesses, etc.)</p>
+		<p><i>Caso o Avaliador esteja Disponível para Avaliação</i>. O Avaliador disponível para avaliar uma submissão clica em "Disponível para Avaliação", notificando via e-mail o Editor de Seção de que assumiu a responsabilidade, e o sistema informará ao Editor de Seção e Autor, nas suas páginas de usuário, que o processo está em curso.</p>
+		<p><i>Passo 2</i><br>As Diretrizes para Avaliação foram preparadas pelos Editores da revista para garantir a publicidade do processo de Avaliação, documentando-a tanto quanto possível para Avaliadores e Autores.</p>
+		<p><i>Passo 3</i><br>O arquivo da submissão enviado pelo Autor, estará disponível ao Avaliador para baixar do site da revista para seu computador, clicando no nome do arquivo. O arquivo deverá ser salvo no computador, em uma pasta específica para fácil acesso posterior, e aberto, usando processadores de texto comuns como Word ou OpenOffice. Ele pode ser impresso ou lido na tela. Os Documentos Suplementares podem ser documentos úteis para o processo de avaliação, que o próprio Autor ou o Editor de Seção enviou para o sistema, como conjuntos de dados, instrumentos de pesquisa, textos fonte, formulário de avaliação, e outros.</p>
+		<p><i>Passo 4</i><br>O Avaliador prepara uma Avaliação da submissão, seguindo as Diretrizes para Avaliação da revista, em um processador de texto e depois copiando o texto produzido para a caixa de texto da Avaliação, ou criando o texto diretamente na caixa de texto da Avaliação, que é obtida clicando no ícone da Avaliação. O Avaliador pode inserir o texto todo de uma vez, ou em partes, salvando-o a cada vez. Desta forma, o Avaliador pode indicar na caixa de texto da Avaliação quais partes podem ou não ser compartilhadas com o Autor. Seguindo as restrições dos Avaliadores, se existir alguma, o Editor de Seção tem a opção de compartilhar as partes da Avaliação com o Autor.</p>
+		<p><i>Passo 5</i><br>O Avaliador tem a opção de enviar arquivos e disponibilizá-los para o Editor de Seção e/ou Autor, para complementar a Avaliação. Estes arquivos podem ser uma versão com notas da submissão ou algum dado relevante ou outro material que ajude o Editor e/ou Autor. Fica a critério do Editor se estes arquivos estarão disponíveis ao Autor, mas os Avaliadores podem certamente comentar sobre isso em suas Avaliações (Passo 4).
+		<p><i>Passo 6</i><br>O Avaliador deve escolher uma Recomendação para a submissão dentre as seguintes opções: Aceitar, Aceitar com revisões, Submeter novamente para Avaliação, Submeter a outra Revista, Rejeitar, Ver Comentários. Quando o Avaliador clica em "Submeter Avaliação ao Editor", ele é direcionado para um e-mail preparado ao Editor de Seção, para que o Editor veja a Recomendação, Avaliação e qualquer arquivo enviado. O e-mail pode ser editado pelo Avaliador antes do envio.</p>]]>	
 	</section>
 </topic>

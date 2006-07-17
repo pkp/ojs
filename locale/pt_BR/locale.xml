@@ -222,8 +222,8 @@
 	<message key="navigation.previousStep">Voltar</message>
 	<message key="navigation.nextStep">Avançar</message>
 	<message key="navigation.stepNumber">Passo {$step}</message>
-	<message key="navigation.previousPage">&lt;&lt;</message>
-	<message key="navigation.nextPage">&gt;&gt;</message>
+	<message key="navigation.previousPage">&lt;</message>
+	<message key="navigation.nextPage">&gt;</message>
 	<message key="navigation.items">{$from} a {$to} de {$total} Itens</message>
 	
 	<!-- Article Queues -->
@@ -322,7 +322,7 @@
 	<message key="submission.noReviewAssignments">Sem Avaliações</message>
 	<message key="submission.reviewVersion">Versão da Avaliação</message>
 	<message key="submission.peerReview">Por&amp;nbsp;Pares</message>
-	<message key="submission.editorDecision">Decisão do Editor</message>
+	<message key="submission.editorDecision">Decisão Editorial</message>
 	<message key="submission.round">Rodada&amp;nbsp;{$round}</message>
 	<message key="submission.editorReview">Avaliação do Editor</message>
 	<message key="submission.notifyAuthor">Notificar Autor</message>
@@ -377,7 +377,7 @@
 	<message key="submissions.proof">Prova</message>
 	<message key="submissions.submit">Enviar</message>
 	<message key="submissions.submitted">Enviado</message>
-	<message key="submissions.editorDecision">Decisão do Editor</message>
+	<message key="submissions.editorDecision">Decisão Editorial</message>
 	<message key="submissions.editorRuling">Julgamento do Editor</message>
 	<message key="submissions.ruling">Julgamento</message>
 	<message key="submissions.noSubmissions">Sem Submissões</message>
@@ -515,7 +515,7 @@
 	
 	<message key="submission.event.editor.editorAssigned">Editor designado à submissão</message>
 	<message key="submission.event.editor.editorUnassigned">Editor liberado da submissão</message>
-	<message key="submission.event.editor.editorDecision">Decisão do Editor enviada</message>
+	<message key="submission.event.editor.editorDecision">Decisão Editorial enviada</message>
 	<message key="submission.event.editor.editorFile">Versão do Editor atualizada</message>
 	<message key="submission.event.editor.submissionArchived">Submissão enviada para o Arquivo</message>
 	<message key="submission.event.editor.submissionRestored">Submissão restaurada do Arquivo</message>
@@ -533,7 +533,7 @@
 	<message key="submission.event.reviewer.reviewerRated">Classificação do Avaliador enviada</message>
 	<message key="submission.event.reviewer.reviewDueDate">Data de Conclusão de Avaliação alterada</message>
 	<message key="submission.event.reviewer.reviewResubmitted">Avaliação reenviada</message>
-	<message key="submission.event.reviewer.reviewFile">Versão de Avaliação atualizada</message>
+	<message key="submission.event.reviewer.reviewFile">Versão para Avaliação atualizada</message>
 	
 	<message key="submission.event.copyedit.copyeditorAssigned">Editor de Texto designado à submissão</message>
 	<message key="submission.event.copyedit.copyeditorUnassigned">Editor de Texto liberado da submissão</message>
@@ -620,7 +620,7 @@ Note que a interface OAI pode ser desativada para este portal editando as config
 	
 	<message key="admin.siteManagement">Adminstração da Revista</message>
 	<message key="admin.adminFunctions">Funções Administrativas</message>
-	<message key="admin.expireSessions">Expirar Sessão do Usuário</message>
+	<message key="admin.expireSessions">Expirar Sessões de Usuários</message>
 	<message key="admin.confirmExpireSessions">Deseja realmente expirar todas as sessões de todos os usuários? Todos os usuário conectados serão forçados a acessar novamente (incluindo o usuário corrente).</message>
 	<message key="admin.clearTemplateCache">Limpar Cache de Template</message>
 	<message key="admin.clearDataCache">Limpar Cache de Dados</message>
@@ -705,7 +705,7 @@ Note que a interface OAI pode ser desativada para este portal editando as config
 	<message key="admin.journals.form.pathRequired">Caminho obrigatório.</message>
 	<message key="admin.journals.form.pathAlphaNumeric">O caminho pode conter apenas caracteres alfanuméricos, sublinhado, hífens, e deve começar e terminar com um caractere alfanumérico.</message>
 	<message key="admin.journals.form.pathExists">O caminho selecionado já está em uso por outra revista.</message>
-	<message key="admin.journals.enableJournalInstructions">Permitir acesso público a esta revista no portal</message>
+	<message key="admin.journals.enableJournalInstructions">Permitir Acesso Livre a esta revista no portal</message>
 	<message key="admin.journals.journalDescription">Descrição da Revista</message>
 
 	<message key="admin.journals.transcode">Transcodificar metadados do artigo de ISO8859-1</message>
@@ -745,7 +745,7 @@ Note que a interface OAI pode ser desativada para este portal editando as config
 
 	<!-- Statistics & Reports -->
 	<message key="manager.statistics.statistics">Estatísticas da Revista</message>
-	<message key="manager.statistics.statistics.description">O sistema calcula as seguintes estatíticas para cada revista hospedada. A média "tempo de decisão" é calculada do dia da submissão (ou desingação de Versão de Avaliação) até o dia da Decisão Editorial inicial, enquanto que a média "tempo para publicação" é calculada para submissões aceitas desde a data de envio para o sistema até sua publicação.</message>
+	<message key="manager.statistics.statistics.description">O sistema calcula as seguintes estatíticas para cada revista hospedada. A média "tempo de decisão" é calculada do dia da submissão (ou desingação de Versão para Avaliação) até o dia da Decisão Editorial inicial, enquanto que a média "tempo para publicação" é calculada para submissões aceitas desde a data de envio para o sistema até sua publicação.</message>
 	<message key="manager.statistics.statistics.makePublic">Marcar itens a serem disponibilizados aos leitores no Sobre da revista.</message>
 	<message key="manager.statistics.statistics.selectSections">Escolha as seções para calcular as estatísicas de avaliação por pares.</message>
 	<message key="manager.statistics.statistics.itemsPublished">Itens Publicados: </message>
@@ -978,7 +978,7 @@ Configurar o suporte ao LOCKSS para o SEER/OJS é necessário somente após a pu
 	<message key="manager.setup.addChecklistItem">Incluir Item de Verificação</message>
 	<message key="manager.setup.addItem">Incluir Item</message>
 	<message key="manager.setup.authorCopyrightNotice">Declaração de Direito Autoral</message>
-	<message key="manager.setup.authorCopyrightNoticeDescription"><![CDATA[Este aviso será apresentado na seção Sobre a Revista e pode ser incluido nos metadados de cada item. Dentre as opções de direito autoral, pode-se permitir aos autores podem manter os direitos autorais pelo seu trabalho, enquanto repassam direitos de primeira publicação à revista. Em contrapartida, a revista também pode usar a opção de solicitar transferência de direitos autorais, permitindo uso do trabalho para fins não-comerciais, incluindo direito de enviar o trabalho em bases de dados de acesso público. Inclusive, o <a href="http://www.creativecommons.org" target="_blank">Creative Commons</a> pode ser consultado para licenças de direito autoral mais flexíveis.]]></message>
+	<message key="manager.setup.authorCopyrightNoticeDescription"><![CDATA[Este aviso será apresentado na seção Sobre a Revista e pode ser incluido nos metadados de cada item. Dentre as opções de direito autoral, pode-se permitir aos autores podem manter os direitos autorais pelo seu trabalho, enquanto repassam direitos de primeira publicação à revista. Em contrapartida, a revista também pode usar a opção de solicitar transferência de direitos autorais, permitindo uso do trabalho para fins não-comerciais, incluindo direito de enviar o trabalho em bases de dados de Acesso Livre. Inclusive, o <a href="http://www.creativecommons.org" target="_blank">Creative Commons</a> pode ser consultado para licenças de direito autoral mais flexíveis.]]></message>
 	<message key="manager.setup.authorCopyrightNoticeAgree">Obrigar autores a aceitar a Declaração de Direito Autoral como parte do processo de submissão.</message>
 	<message key="manager.setup.copyrightNotice">Declaração de Direito Autoral</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWork">Indexação da submissão</message>
@@ -1073,8 +1073,8 @@ Escolha um modelo para administrar os aspectos do processo editorial. (Para desi
 	<message key="manager.setup.enablePageNumber">A numeração de páginas para cada item publicado podem ser incluídos manualmente no Sumário da revista(Ex.: pg. 13-26).</message>
 	<message key="manager.setup.onlineAccessManagement">Administração de Acesso Online</message>
 	<message key="manager.setup.openAccess">A revista oferecerá acesso livre ao seu conteúdo.</message>	
-	<message key="manager.setup.openAccessPolicy">Política de Acesso Público</message>
-	<message key="manager.setup.openAccessPolicyDescription">Digte a política de acesso público da revista, que estará disponível no Sobre da revista.</message>
+	<message key="manager.setup.openAccessPolicy">Política de Acesso Livre</message>
+	<message key="manager.setup.openAccessPolicyDescription">Digte a política de Acesso Livre da revista, que estará disponível no Sobre da revista.</message>
 	<message key="manager.setup.subscription">A revista terá controle de assinaturas para acesso ao seu conteúdo, ou parte dele.</message>
 	<message key="manager.setup.subscriptionDescription">Ao habilitar o Controle de Assinaturas, deverá ser designado um Editor de Assinaturas que terá acesso ao componente, permitindo definir as formas de acesso ao conteúdo, auto-arquivamento e notificações via e-mail.</message>
 	<message key="manager.setup.announcements">Notícias</message>
@@ -1292,17 +1292,17 @@ Pode ser incluído o motivo da desabilitação da conta.
 	<message key="manager.subscriptionPolicies.subscriptionContactDescription">O contato a seguir será exibido em Assinaturas, no Sobre da revista.</message>
 	<message key="manager.subscriptionPolicies.subscriptionPoliciesSaved">Seus ajustes da política da subscrição foram atualizados.</message>
 	<message key="manager.subscriptionPolicies.subscriptionAdditionalInformation">Informação sobre Assinatura</message>
-	<message key="manager.subscriptionPolicies.subscriptionAdditionalInformationDescription">Os Tipos de Assinatura e a estrutura de valores é exibida automaticamente na página Assinaturas, no Sobre da revista, junto com o nome do Editor de Assintauras e as formas de contato. Outras informações para assinantes, como as formas de pagamento ou auxílio a assinantes de países em desenvolvimento, por exemplo, podem ser adicionadas aqui.</message>
+	<message key="manager.subscriptionPolicies.subscriptionAdditionalInformationDescription">Os Tipos de Assinaturas e a estrutura de valores é exibida automaticamente na página Assinaturas, no Sobre da revista, junto com o nome do Editor de Assintauras e as formas de contato. Outras informações para assinantes, como as formas de pagamento ou auxílio a assinantes de países em desenvolvimento, por exemplo, podem ser adicionadas aqui.</message>
 	<message key="manager.subscriptionPolicies.htmlInstructions"><![CDATA[Em caso de utilização de código HTML nas caixas de texto nas Configurações (para tamanho de fonte, estilo da fonte, cor, entre outros), as quebras de linha "automáticas (return/enter)" no texto serão automaticamente tratados como <tt>&lt;br&gt;</tt>. O Editor HTML funciona no Firefox.]]></message>
-	<message key="manager.subscriptionPolicies.openAccessOptions">Opções de Acesso Público para Revistas com Assinaturas</message>
-	<message key="manager.subscriptionPolicies.openAccessOptionsDescription">Revistas com Assinaturas podem oferecer "acesso público adiado" e/ou "auto-arquivamento pelo autor" (o que aumenta a leitura e citação do conteúdo!). As políticas escolhidas serão exibidas no Sobre da revista.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccess">Acesso Público Adiado</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription">Com acesso público adiado, os editores poderão escolher artigos de qualquer edição para acesso público imediato.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription1">As edições passadas desta revistas estarão disponíveis para acesso público</message>
+	<message key="manager.subscriptionPolicies.openAccessOptions">Opções de Acesso Livre para Revistas com Assinaturas</message>
+	<message key="manager.subscriptionPolicies.openAccessOptionsDescription">Revistas com Assinaturas podem oferecer "Acesso Livre adiado" e/ou "auto-arquivamento pelo autor" (o que aumenta a leitura e citação do conteúdo!). As políticas escolhidas serão exibidas no Sobre da revista.</message>
+	<message key="manager.subscriptionPolicies.delayedOpenAccess">Acesso Livre Adiado</message>
+	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription">Com Acesso Livre adiado, os editores poderão escolher artigos de qualquer edição para Acesso Livre imediato.</message>
+	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription1">As edições passadas desta revistas estarão disponíveis para Acesso Livre</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription2">mês(es) após a pulicação da edição.</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDurationValid">Escolha um tempo de duração válido.</message>
-	<message key="manager.subscriptionPolicies.openAccessNotificationDescription">Leitores cadastrados terão a opção de receber o sumário via e-mail quando a edição se tornar de acesso público.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription">O texto a seguir será exibido no Sobre da revista, no item Acesso Público Adiado.</message>
+	<message key="manager.subscriptionPolicies.openAccessNotificationDescription">Leitores cadastrados terão a opção de receber o sumário via e-mail quando a edição se tornar de Acesso Livre.</message>
+	<message key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription">O texto a seguir será exibido no Sobre da revista, no item Acesso Livre Adiado.</message>
 	<message key="manager.subscriptionPolicies.openAccessNotificationDisabled"><![CDATA[<strong>Aviso:</strong> Para ativar esta opção, o administrador do sistema deverá habilitar a opção <tt>scheduled_tasks</tt> no arquivo de configuração do sistema. Configurações adicionais no servidor podem ser necessárias para o funcionamento correto da opção (que pode não ser possível em todos os servidores!), como indicado na documentação do sistema.]]></message>
 	<message key="manager.subscriptionPolicies.authorSelfArchive">Política de Auto-arquivamento</message>
 	<message key="manager.subscriptionPolicies.authorSelfArchiveDescription">A política a seguir será exibida no Sobre da revista.</message>
@@ -1343,7 +1343,7 @@ Pode ser incluído o motivo da desabilitação da conta.
 	<message key="manager.subscriptionTypes.months">meses</message>
 	<message key="manager.subscriptionTypes.form.typeNameRequired">Nome obrigatório.</message>
 	<message key="manager.subscriptionTypes.form.typeNameExists">Nome do tipo de assinatura já existente.</message>
-	<message key="manager.subscriptionTypes.form.costRequired">Valor da assinatura obrigatório.</message>
+	<message key="manager.subscriptionTypes.form.costRequired">Taxa da assinatura obrigatória</message>
 	<message key="manager.subscriptionTypes.form.costNumeric">O valor deve ser um número positivo.</message>
 	<message key="manager.subscriptionTypes.form.durationRequired">Vigência obrigatória.</message>
 	<message key="manager.subscriptionTypes.form.durationNumeric">A vigência deve ser um número positivo.</message>
@@ -1356,7 +1356,7 @@ Pode ser incluído o motivo da desabilitação da conta.
 	<message key="manager.subscriptionTypes.form.publicValid">Utilize a caixa de opção.</message>
 	<message key="manager.subscriptionTypes.form.typeName">Nome</message>
 	<message key="manager.subscriptionTypes.form.description">Descrição</message>
-	<message key="manager.subscriptionTypes.form.cost">Valor</message>
+	<message key="manager.subscriptionTypes.form.cost">Taxa</message>
 	<message key="manager.subscriptionTypes.form.costInstructions">Digite um valor numérico(ex.: 40 ou 40.00). Não incluir textos ou símbolos como "$".</message>
 	<message key="manager.subscriptionTypes.form.currency">Moeda</message>
 	<message key="manager.subscriptionTypes.form.duration">Vigência</message>
@@ -1502,7 +1502,7 @@ Pode ser incluído o motivo da desabilitação da conta.
 	<message key="editor.issues.publicIssueIdentifier">Identificador Público de edição</message>
 	<message key="editor.issues.description">Descrição</message>
 	<message key="editor.issues.accessStatus">Tipo de Acesso</message>
-	<message key="editor.issues.accessDate">Data de Acesso Público</message>
+	<message key="editor.issues.accessDate">Data de Acesso Livre</message>
 	<message key="editor.issues.invalidAccessDate">Data de acesso inválida.</message>
 	<message key="editor.issues.issuePublicIdentificationExists">Identificador Público de edição já existe.</message>
 	<message key="editor.issues.coverPage">Capa</message>
@@ -1517,7 +1517,7 @@ Pode ser incluído o motivo da desabilitação da conta.
 	<message key="editor.issues.removeStyleFile">Excluir Folha de Estilos?</message>
 	<message key="editor.issues.coverPageCaption">Legenda da capa</message>
 	<message key="editor.issues.showCoverPage">Incluir capa personalizada para esta edição.</message>
-	<message key="editor.issues.openAccess">Acesso Público</message>
+	<message key="editor.issues.openAccess">Acesso Livre</message>
 	<message key="editor.issues.subscription">Assinatura</message>
 	<message key="editor.issues.identification">Identificação</message>
 	<message key="editor.issues.access">Acesso</message>
@@ -1547,8 +1547,8 @@ Pode ser incluído o motivo da desabilitação da conta.
 	<message key="editor.navigation.issueArchive">Edições Anteriores</message>
 	
 	<!-- Used by editor in submission review / editing -->
-	<message key="editor.article.designateReviewVersion">Designar documento original como Versão de Avaliação</message>
-	<message key="editor.article.uploadReviewVersion">Enviar Versão de Avaliação atualizada</message>
+	<message key="editor.article.designateReviewVersion">Designar documento original como Versão para Avaliação</message>
+	<message key="editor.article.uploadReviewVersion">Enviar Versão para Avaliação atualizada</message>
 	<message key="editor.article.showSuppFile">Habilitar documento aos avaliadores</message>
 	<message key="editor.article.layoutAndProof">Layout &amp; Leitura de Prova</message>
 	<message key="editor.article.clear">Liberar</message>
@@ -1649,11 +1649,11 @@ com sinal positivo (+) indicando avaliação em progresso.]]></message>
 	<message key="sectionEditor.proofreader.confirmRenotify">Notificar o leitor de prova novamente reiniciará a tarefa. Deseja realmente reiniciar a tarefa?</message>
 
 	<message key="sectionEditor.regrets.breadcrumb">Arrependimentos</message>
-	<message key="sectionEditor.regrets.title">#{$articleId} Arrependimentos do avaliador, Cancelamentos &amp; Rodadas Iniciais</message>
+	<message key="sectionEditor.regrets.title">#{$articleId} Arrependimentos do avaliador, Cancelamentos &amp; Rodadas Anteriores</message>
 	<message key="sectionEditor.regrets">Arrependimentos</message>
-	<message key="sectionEditor.regrets.link">Visualizar Arrependimentos, Cancelamentos, Rodadas Iniciais</message>
+	<message key="sectionEditor.regrets.link">Visualizar Arrependimentos, Cancelamentos, Rodadas Anteriores</message>
 	<message key="sectionEditor.regrets.reviewRound">Avaliação por Pares, Rodada {$round}</message>
-	<message key="sectionEditor.regrets.decisionRound">Decisão do Editor, Rodada {$round}</message>
+	<message key="sectionEditor.regrets.decisionRound">Decisão Editorial, Rodada {$round}</message>
 	<message key="sectionEditor.regrets.regretsAndCancels">Arrependimentos do avaliador &amp;  Cancelamentos</message>
 	<message key="sectionEditor.regrets.regret">Arrependimento</message>
 	<message key="sectionEditor.regrets.result">Resultado</message>
@@ -1698,7 +1698,7 @@ com sinal positivo (+) indicando avaliação em progresso.]]></message>
         <message key="reviewer.article.schedule.submitted">Avaliação Enviada</message>
         <message key="reviewer.article.schedule.due">Avaliação não Concluída</message>
 	<message key="reviewer.article.decision.accept">Aceitar</message>
-	<message key="reviewer.article.decision.pendingRevisions">Revisões Solicitadas</message>
+	<message key="reviewer.article.decision.pendingRevisions">Correções Obrigatórias</message>
 	<message key="reviewer.article.decision.resubmitHere">Submeter novamente para avaliação</message>
         <message key="reviewer.article.decision.resubmitElsewhere">Enviar para outra revista</message>
 	<message key="reviewer.article.decision.decline">Rejeitar</message>
@@ -1715,7 +1715,7 @@ com sinal positivo (+) indicando avaliação em progresso.]]></message>
         <message key="reviewer.article.reviewerInstruction4a">Clique no ícone para digitar (ou colar) a avaliação da submissão</message>
         <message key="reviewer.article.reviewerInstruction4b">seguindo as Diretrizes para Avaliadores a seguir.</message>
         <message key="reviewer.article.reviewerInstruction5">Opcionalmente, é possível transferir uma versão do documento com seus comentários para consulta pelo editor e/ou autor.</message>
-        <message key="reviewer.article.reviewerInstruction6">Escolha a recomendação adequada e submeta a avaliação para concluir o processo. É obrigatório incluir os comentários da avaliação ou transferir uma versão de avaliação do documento antes de definir sua avaliação..</message>
+        <message key="reviewer.article.reviewerInstruction6">Escolha a recomendação adequada e submeta a avaliação para concluir o processo. É obrigatório incluir os comentários da avaliação ou transferir uma Versão para Avaliação do documento antes de definir sua avaliação..</message>
 	<message key="reviewer.article.mustSelectDecision">Não foi selecionada nenhuma recomendação. Deve-se escolher uma recomendação para submeter a avaliação.</message>				
 	<message key="reviewer.article.confirmDecision">Uma vez registrada a decisão não será mais possível modificar a avaliação. Deseja realmente proceder?</message>
 	<message key="reviewer.article.ensuringBlindReview">Assegurando uma Avaliação Cega segura</message>
@@ -1853,13 +1853,13 @@ O documento pode ser visualizado/baixado ao clicar no nome. Ao transferir uma no
 	<message key="author.submit.expedite"><![CDATA[Caso a submissão já esteja em um formato pronto para publicação, sem a necessidade de revisão, edição ou layout, ela pode ser enviada diretamente para o último passa da Edição da Submissão <a href="{$expediteUrl}" class="action">clicando aqui!</a>. (Aviso: Apenas Editores da revista possuem esta opção para as suas submissões.)]]></message>
 
 	<!-- Used in submission review / editing -->
-	<message key="submission.review.mustUploadFileForReview">E-mail de solicitação será enviado somente após a inclusão de uma Versão de Avaliação.</message>
+	<message key="submission.review.mustUploadFileForReview">E-mail de solicitação será enviado somente após a inclusão de uma Versão para Avaliação.</message>
 	<message key="author.article.uploadAuthorVersion">Transferir Versão do Autor</message>
 	<message key="author.article.copyeditedFile">Documento Editado</message>
 	<message key="author.article.authorRevisedFile">Versão do Autor</message>
 
 	<!-- Submission Tracking - Copyedit Specific -->
-	<message key="submission.copyedit.mustUploadFileForInitialCopyedit">E-mail de solicitação será enviado somente após enviar o documento para edição em Decisão do Editor, na página de Avaliação.</message>
+	<message key="submission.copyedit.mustUploadFileForInitialCopyedit">E-mail de solicitação será enviado somente após enviar o documento para edição em Decisão Editorial, na página de Avaliação.</message>
 	<message key="submission.copyedit.mustUploadFileForCopyedit">E-mail de solicitação será enviado somente após a transferência de um documento para edição.</message>
 	<message key="submission.copyedit.initialCopyedit">Edição de Texto Inicial</message>
 	<message key="submission.copyedit.editorsCopyedit">Edição de Texto do Editor</message>
@@ -1997,7 +1997,7 @@ O documento pode ser visualizado/baixado ao clicar no nome. Ao transferir uma no
 	<message key="user.profile.form.oldPasswordInvalid">Senha Atual incorreta.</message>
 	<message key="user.profile.form.newPasswordRequired">Nova Senha obrigatória.</message>
 	<message key="user.profile.form.publishedNotifications">Notificações via e-mail de Nova Edição publicada</message>	
-	<message key="user.profile.form.openAccessNotifications">Notificações via e-mail de Edição de Acesso Público</message>
+	<message key="user.profile.form.openAccessNotifications">Notificações via e-mail de Edição de Acesso Livre</message>
 	
 	<!-- Registration -->
 	<message key="user.register.repeatPassword">Repetir Senha</message>
@@ -2018,7 +2018,7 @@ O documento pode ser visualizado/baixado ao clicar no nome. Ao transferir uma no
 	<message key="user.register.passwordLengthRestriction">A senha deve ter no mínimo {$length} caracteres.</message>
 	<message key="user.register.form.passwordLengthTooShort">Senha digitada não contém o mínimo de caracteres.</message>
 	<message key="user.register.readerDescription">Notificado via e-mail da publicação de nova edição da revista.</message>
-	<message key="user.register.openAccessNotificationDescription">Notificado via e-mail quando a edição da revista se tornar de acesso público.</message>
+	<message key="user.register.openAccessNotificationDescription">Notificado via e-mail quando a edição da revista se tornar de Acesso Livre.</message>
 	<message key="user.register.authorDescription">Pode submeter à revista.</message>
 	<message key="user.register.reviewerDescriptionNoInterests">Disponível para realizar avaliação dos pares das submissões a esta revista.</message>	
 	<message key="user.register.reviewerDescription">Disponível para realizar avaliação dos pares das submissões a esta revista. Identifique a área de avaliação (áreas de interesses e metodologias de pesquisa).</message>	
@@ -2059,7 +2059,7 @@ O documento pode ser visualizado/baixado ao clicar no nome. Ao transferir uma no
 <li>São recuperados por padrão apenas artigos contendo <i>todos</i> os termos de busca (ex.: <b>E</b> é implícito)</li>
 <li>Combine múltiplas palavras com <b>OU</b> para encontrar artigos contendo um ou outro termo; ex.: <i>educação OU pesquisa</i></li>
 <li>Use parênteses para criar buscas mais complexas; ex.: <i>arquivo ((revista OU conferência) NÃO teses)</i></li>
-<li>Use aspas duplas para recuperar a frase exata; ex.: <i>"acesso público à informação"</i></li>
+<li>Use aspas duplas para recuperar a frase exata; ex.: <i>"Acesso Livre à informação"</i></li>
 <li>Exclua palavras pré-fixando com o sinal <b>-</b> ou <b>NÃO</b>; ex.: <i>online -políticas</i> ou <i>online NÃO políticas</i></li>
 <li>Use <b>*</b> como caracter curinga; ex.: <i>soci* moralidade</i> recuperaria documentos contendo "sociedade" ou "sociológico"</li>
 </ul>]]></message>	
@@ -2124,9 +2124,9 @@ O documento pode ser visualizado/baixado ao clicar no nome. Ao transferir uma no
 	<message key="about.privacyStatement">Política de Privacidade</message>
 	<message key="about.peerReviewProcess">Processo de Avaliação por Pares</message>
 	<message key="about.publicationFrequency">Periodicidade</message>
-	<message key="about.openAccessPolicy">Política de Acesso Público</message>
-	<message key="about.delayedOpenAccess">Acesso Público Adiado</message>
-	<message key="about.delayedOpenAccessDescription1">O conteúdo desta revista estará disponível para acesso público</message>
+	<message key="about.openAccessPolicy">Política de Acesso Livre</message>
+	<message key="about.delayedOpenAccess">Acesso Livre Adiado</message>
+	<message key="about.delayedOpenAccessDescription1">O conteúdo desta revista estará disponível para Acesso Livre</message>
 	<message key="about.delayedOpenAccessDescription2">mês(es) após a publicação da edição.</message>
 	<message key="about.authorSelfArchive">Auto-arquivamento</message>
 	<message key="about.archiving">Arquivamento</message>
@@ -2244,7 +2244,7 @@ O servidor atualmente tem suporte a mbstring: <strong>{$supportsMBString}</stron
 	<message key="installer.encryption">Algoritmo de Critografia de Senha</message>
 	<message key="installer.encryptionInstructions">SHA1 é recomendado caso o sistema suporte (requer PHP >= 4.3.0).</message>
 	<message key="installer.administratorAccount">Conta de Administrador</message>
-	<message key="installer.administratorAccountInstructions">Este usuário será o administrador do portal e terá acesso completo ao sistema. Contas adicionais podem ser criadas após a instalação.</message>
+	<message key="installer.administratorAccountInstructions">Este usuário será o Administrador do Sistema e terá acesso completo ao sistema. Contas adicionais podem ser criadas após a instalação.</message>
 	<message key="installer.databaseSettings">Configurações de Bases de Dados</message>
 	<message key="installer.databaseDriver">Driver da Base de Dados</message>
 	<message key="installer.databaseHost">Servidor</message>
@@ -2312,7 +2312,7 @@ O servidor atualmente tem suporte a mbstring: <strong>{$supportsMBString}</stron
 	<message key="log.review.reviewAccepted">{$reviewerName} está disponível para a rodada de avaliação {$round} da submissão {$articleId}.</message>
 	<message key="log.review.reviewAcceptedByProxy">{$userName} está disponível para a rodada de avaliação {$round} da submissão {$articleId}, substituindo {$reviewerName}.</message>
 	<message key="log.review.reviewFileByProxy">O Editor {$userName} enviou um documento de avaliação em nome do Avaliador {$reviewerName}, para a rodada {$round} da submissão {$articleId}.</message>
-	<message key="log.review.reviewerFile">Versão de avaliação obrigatória.</message>
+	<message key="log.review.reviewerFile">Versão para Avaliação obrigatória.</message>
 
 
 	<message key="log.copyedit.initiate">Iniciada a Edição de Texto da submissão {$articleId} por {$copyeditorName}.</message>
@@ -2644,7 +2644,7 @@ O parágrafo iniciado em "Este último elemento..." não está recuado.]]></mess
 ]]></message>
 	<message key="default.journalSettings.forReaders"><![CDATA[Convidamos os leitores a se cadastrarem no serviço de notificação de publicação da revista. Clique em <a href="{$indexUrl}/{$journalPath}/user/register">Cadastro</a> no menu superior da página. O cadastro permitirá ao leitor receber o Sumário via e-mail para cada nova edição. A lista procura também oferecer um nível básico de suporte ou leitura. Leia a <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">Política de Privacidade</a> da revista, que assegura aos leitores que os nomes e endereços informados não serão utilizados para outros fins.]]></message>
 	<message key="default.journalSettings.forAuthors"><![CDATA[Deseja enviar contribuições à revista? Convidamos todos a conferir a seção <a href="{$indexUrl}/{$journalPath}/about">Sobre a Revista</a> e ler as políticas de seão, bem como as <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Diretrizes para Autores</a>. É necessário que os autores se <a href="{$indexUrl}/{$journalPath}/user/register">cadastrem</a> no sistema  antes de submeter um novo artigo; caso já tenha sido cadastrado ou publicado anteriormente basta <a href="{$indexUrl}/index/login">acessar</a> o sistema e iniciar o processo dos 5 passos de de submissão.]]></message>
-	<message key="default.journalSettings.forLibrarians"><![CDATA[Convidamos as bibliotecas a listar revistas de acesso público em seus catálogos de revistas eletrônicas. Este sistema de publicação é desenvolvido também para ser hospedado e operado por bibliotecas de pesquisa em apoio ao trabalho de publicação de revistas de corpo acadêmico. Para maiores informações sobre o Sistema Eletrônico de Editoração de Revistas - SEER / Open Journal Systems - OJS, e o gerenciamento e publicação de revistas avaliadas por pares visite o <a href="http://pkp.ubc.ca">Public Knowledge Project</a>.]]></message>
+	<message key="default.journalSettings.forLibrarians"><![CDATA[Convidamos as bibliotecas a listar revistas de Acesso Livre em seus catálogos de revistas eletrônicas. Este sistema de publicação é desenvolvido também para ser hospedado e operado por bibliotecas de pesquisa em apoio ao trabalho de publicação de revistas de corpo acadêmico. Para maiores informações sobre o Sistema Eletrônico de Editoração de Revistas - SEER / Open Journal Systems - OJS, e o gerenciamento e publicação de revistas avaliadas por pares visite o <a href="http://pkp.ubc.ca">Public Knowledge Project</a>.]]></message>
 	<message key="default.journalSettings.lockssLicense"><![CDATA[Esta revista utiliza o sistema LOCKSS para criar um sistema de arquivo distribuído entre as bibliotecas participantes e permite às mesmas criar arquivos permanentes da revista para a preservação e restauração. <a href="http://lockss.stanford.edu/">Saiba mais...</a>]]></message>
 
 </locale>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE toc SYSTEM "../../../toc.dtd">
 
 <!--
@@ -8,10 +8,7 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * table of contents for Editorial Process - Editor's Role - Submissions
-  *
-  * Translation by Suporte Técnico SER, UFPR
-  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
-  *
+
   * $Id$
   -->
 
@@ -22,6 +19,6 @@
 	<topic id="editorial/topic/000018" title="Arquivos" />
 
 	<breadcrumb url="editorial/topic/000000" title="Processo Editorial" />
-	<breadcrumb url="editorial/topic/000001" title="Funções do Editor" />
+	<breadcrumb url="editorial/topic/000001" title="Papel do Editor" />
 	<breadcrumb url="editorial/topic/000002" title="Submissões" />
 </toc>

@@ -8,17 +8,13 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Index Help Page 
-  *
-  * Translation by Suporte Técnico SER, UFPR
-  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
-  *
+
   * $Id$
   -->
 
-<topic id="index/topic/000000" locale="pt_BR" title="Ajuda do OJS" toc="index/toc/000000" key="index.index">
+<topic id="index/topic/000000" locale="pt_BR" title="Ajuda do sistema" toc="index/toc/000000" key="index.index">
 	<section>
-		<![CDATA[<p>O documento de ajuda ao Open Journal Sistem (OJS) foi projetado para assistir o usuário no processo de leitura, submissão, edição, e publicação de itens em revistas acadêmicas e de interesse geral. Pode também ser compreendido como um manual para o OJS que descreve o escopo e trabalhos deste programa de gerenciamento de revistas. O documento de Ajuda também fornece conselhos editoriais em praticas comuns para publicação em revistas acadêmicas. Complementando este documento, usuários têm acesso ao pessoal do suporte técnico da revista, que estarão listados em "Sobre" a Revista, sob Contatos.</p>
-		<p>Devido ao OJS empregar funções de publicação designadas ou títulos para cada função e processo - do Gerente da Revista que vê as Configurações da Revista ao Autor que faz leitura de prova das composições - cada tópico coberto na Ajuda refere-se a que função deve fazer o quê. Com o mesmo principio, acesso aos documentos são determinados por quem está trabalhando com eles no sistema. Isto é, a Ajuda no contexto específico. O que cada um vê depende de suas funções; pessoas podem ter mais de uma função no OJS (um Avaliador pode também ser um Autor ou um Gerente da Revista pode ser um Editor). O que um vê também depende de onde ele está trabalhando no OJS. A função e localização determinam qual tópico de Ajuda vai aparecer, embora o usuário possa trabalhar em outros tópicos relacionados para explorar pontos relacionados no sistema.</p>
-		]]>
+		<![CDATA[<p>A Ajuda do sistema tem como objetivo assistir o usuário na leitura, submissão, edição, e publicação de itens em revistas científicas e de interesse geral. É também um manual de uso do sistema, descrevendo seu escopo e funcionamento. A Ajuda também fornece dicas editoriais para as práticas comuns na publicação de revistas científicas. Complementando a ajuda, os usuários têm acesso ao suporte técnico da revista, listado no "Sobre" da revista, sob Contatos.</p>
+		<p>Cada tópico da Ajuda se refere a uma função e seu funcionamento pois o sistema utiliza funções editoriais designadas ou títulos definidos para cada função e processo &mdash; desde o Editor Gerente, que controla a Configuração da revista, ao Autor, que submete artigos e faz a leitura de prova das composições. Seguindo o mesmo princípio, o acesso aos documentos é determinado pelo responsável designado a uma tarefa naquele momento. A Ajuda é ativada no contexto específico onde se encontra o usuário: a ajuda é específica para cada função editorial. Cada usuário pode acumular mais de uma função editorial (um Avaliador pode também ser um Autor, ou um Editor Gerente pode ser um Editor). O conteúdo também depende em que área do sisetma se encontra o usuário. A função e localização determinam qual tópico de Ajuda estará disponível automaticamente, embora o sistema de Ajuda permita navegar de qualquer ponto para tópicos relacionados e explorar o funcionamento do sistema.</p>]]>
 	</section>
 </topic>

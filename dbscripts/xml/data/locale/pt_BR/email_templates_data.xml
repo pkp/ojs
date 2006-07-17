@@ -63,7 +63,7 @@ Agradecendo desde já sua atenção,
 			<field name="subject">Publicação de nova edição</field>
 			<field name="body">Caros leitores,
 
-{$journalName} acaba de publicar seu último número em {$journalUrl}. Convidamos você a navegar no sumário da revista para acessar os artigos e itens de interesse.
+{$journalName} acaba de publicar seu último número em {$journalUrl}. Convidamos a navegar no sumário da revista para acessar os artigos e itens de interesse.
 
 Agradecemos seu interesse em nosso trabalho,
 {$editorialContactSignature}</field>
@@ -94,11 +94,11 @@ Em caso de dúvidas, envie suas questões para este email.
 			<field name="subject">Edição de Acesso Livre</field>
 			<field name="body">Caros Leitores,
 
-A {$journalName} acaba de tornar disponível para acesso público mais uma edição. Convidamos a verificar o Sumário a seguir e acessar o portal da revista ({$journalUrl}) em seguida, para ler os artigos e outros itens interessantes.
+A {$journalName} acaba de tornar disponível para Acesso Livre mais uma edição. Convidamos a verificar o Sumário a seguir e acessar o portal da revista ({$journalUrl}) em seguida, para ler os artigos e outros itens interessantes.
 
 Agradecemos o interesse e apoio à revista,
 {$editorialContactSignature}</field>
-			<field name="description">Esta mensagem é enviada a leitores cadastrados que solicitam o recebimento do sumário de uma nova edição de acesso público.</field>
+			<field name="description">Esta mensagem é enviada a leitores cadastrados que solicitam o recebimento do sumário de uma nova edição de Acesso Livre.</field>
 		</row>
 		<row>
 			<field name="email_key">SUBSCRIPTION_BEFORE_EXPIRY</field>
@@ -340,7 +340,7 @@ Diretrizes para Avaliação
 
 {$reviewGuidelines}
 			</field>
-			<field name="description">Mensagem enviada pelo Editor de Seção para solicitar ao avaliador que aceite ou não a tarefa de avaliação de uma submissão. Inclui o documento em anexo. Esta mensagem é usada quando se utiliza o Processo de Avaliação via Email-Anexo, definido no Passo 2 de Configuração da Revista. (Caso contrário veja REVIEW_REQUEST.)</field>
+			<field name="description">Mensagem enviada pelo Editor de Seção para solicitar ao avaliador que aceite ou não a tarefa de avaliação de uma submissão. Inclui o documento em anexo. Esta mensagem é usada quando se utiliza o Processo de Avaliação via Email/Anexo, definido no Passo 2 de Configuração da Revista. (Caso contrário veja REVIEW_REQUEST.)</field>
 		</row>
 		<row>
 			<field name="email_key">REVIEW_CANCEL</field>
@@ -684,7 +684,7 @@ Sua contribuição é fundamental para a qualidade desta publicação.
 		  -->
 		<row>
 			<field name="email_key">PROOFREAD_AUTHOR_REQUEST</field>
-			<field name="subject">Solicitação de Leitura de Provas - Author</field>
+			<field name="subject">Solicitação de Leitura de Provas - Autor</field>
 			<field name="body">{$authorName},
 
 Solicitamos a Leitura de Provas do manuscrito "{$articleTitle}", submetido a {$journalName}. Neste momento somente é possível registrar erros tipográficos e de layout. As Instruções para Leitura de Provas estão disponíveis junto com as composições.
@@ -701,7 +701,7 @@ Agradecemos desde já sua colaboração, fundamental para a qualidade da revista
 		</row>
 		<row>
 			<field name="email_key">PROOFREAD_AUTHOR_COMPLETE</field>
-			<field name="subject">Conclusão da Leitura de Provas - Author</field>
+			<field name="subject">Conclusão da Leitura de Provas - Autor</field>
 			<field name="body">{$editorialContactName},
 
 Concluí a Leitura de Provas do manuscrito "{$articleTitle}", submetido a {$journalName}. As composições estão prontas para as correções finais do Leitor de Prova e Editor de Layout.
@@ -711,7 +711,7 @@ Concluí a Leitura de Provas do manuscrito "{$articleTitle}", submetido a {$jour
 		</row>
 		<row>
 			<field name="email_key">PROOFREAD_AUTHOR_ACK</field>
-			<field name="subject">Agradecimento pela Leitura de Provas - Author</field>
+			<field name="subject">Agradecimento pela Leitura de Provas - Autor</field>
 			<field name="body">{$authorName},
 
 Agradecemos pela Leitura de Provas do manuscrito, "{$articleTitle}" submetido a {$journalName}. Em breve seu trabalho estará pronto para publicação.

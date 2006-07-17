@@ -1,36 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
 
+
+
 <!--
+
   * locale.xml
+
   *
+
   * Copyright (c) 2003-2006 John Willinsky
+
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+
   *
+
   * Localization strings for the pt_BR locale.
+
   *
+
   * $Id$
+
   -->
+
  
+
 <locale name="pt_BR" full_name="Português do Brasil">
+
 	<message key="plugins.gateways.googleScholar.displayName">Plugin de Comunicação Google Acadêmico</message>
+
 	<message key="plugins.gateways.googleScholar.description">Este plugin proporciona o envio de dados sobre uma revista ao Google Acadêmico para indexação e pesquisa.</message>
+
 	<message key="plugins.gateways.googleScholar.settings">Configurações</message>
+
 	<message key="plugins.gateways.googleScholar.settings.description"><![CDATA[<p>O Plugin de Comunicação Google Acadêmico torna disponíveis informações individuais sobre cada revista ao coletador do Google Acadêmico. Ao habilitar este plugin, o diretório do documento (vulgo informações do publicador) estarão disponíveis no endereço <span class="highlight">{$directoryUrl}</span>.</p>
+
 <p>Google Acadêmico requer algumas informações obrigatórias que são opcionais no sistema. Certifique-se que os dados estão de acordo com os requisitos do Google Acadêmico's clicando no botão Verificar Dados.</p>]]></message>
+
 	<message key="plugins.gateways.googleScholar.checkData">Verificar Dados</message>
+
 	<message key="plugins.gateways.googleScholar.errors">Mensagens de Erro</message>
+
 	<message key="plugins.gateways.googleScholar.errors.noErrors">Nenhum erro encontrado.</message>
 
+
+
 	<message key="plugins.gateways.googleScholar.settings.publisherName">Fonte</message>
+
 	<message key="plugins.gateways.googleScholar.settings.publisherLocation">Local</message>
+
 	<message key="plugins.gateways.googleScholar.settings.publisherResultName">Nome de Resultado da Fonte</message>
+
 	<message key="plugins.gateways.googleScholar.settings.contact">Email</message>
+
 	<message key="plugins.gateways.googleScholar.settings.addContact">Incluir Email para contato</message>
 
+
+
 	<!-- Error message -->
+
 	<message key="plugins.gateways.googleScholar.errors.noPublisherName">O nome da fonte é obrigatório.</message>
+
 	<message key="plugins.gateways.googleScholar.errors.noContacts">Pelo menos um email para contato deve ser informado. Todos os emails informados devem ser válidos.</message>
+
 	<message key="plugins.gateways.googleScholar.errors.noIssn">O ISSN não foi informado. Verifique as Configurações da Revista, no Passo 1.</message>
+
 	<message key="plugins.gateways.googleScholar.errors.errorMessage">Não foi possível exportar dados para o Google Acadêmico. O plugin de comunicação Google Acadêmico deve estar configurado corretamente. Para maiores informações, veja a função "Verificar Dados" do Editor Gerente.</message>
+
 </locale>
+

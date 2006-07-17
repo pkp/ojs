@@ -8,18 +8,14 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Publishing Process - Schedule Submissions
-  *
-  * Translation by Suporte Técnico SER, UFPR
-  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
-  *
+
   * $Id$
   -->
 
-<topic id="publishing/topic/000002" locale="pt_BR" title="Agendar Submissões" toc="publishing/toc/000000" key="publishing.scheduleSubmissions">
+<topic id="publishing/topic/000002" locale="pt_BR" title="Agendando Submissões" toc="publishing/toc/000000" key="publishing.scheduleSubmissions">
 	<section>
-		<![CDATA[
-		<p>uma vez que uma submissão completou seu processo de Edição, o Editor de Seção a envia para Agendamento. Lá ela aparece em uma fila de Agendar Submissões, e o Editor pode colocar a submissão em uma das Edições vivas, que foram criadas. Tipicamente, o Editro vai colocar a submissão na primeira Edição disponível, mas pode acontecer de uma Edição estar "cheia" para sua publicação, ou o Editor deseja colocá-la em uma Edição posterior para garantir um escala de tópicos em cada Edição ou, por outro lado, para agrupar uma série de Edições em um único tópico.</p>
-		<p><i>Publicação Contínua de Submissões</i>. Se submissões estão sendo publicadas continuamente, assim que elas estiverem prontas, então o Editor escalona a submissão para Edição corrente, e ela vai ser publicada assim que for verificada sua entrada no Sumário. Ao final do ano de um Volume, a próxima submissão vai ser escalonada para aparecer em um novo Volume, para que o Sumário seja publicada ou se torne Atual com esta submissão inicial.</p>
-		]]>	
+		<![CDATA[<p>A qualquer tempo, duranto o processo de Edição, o Editor de Seção pode agendar uma submissão para publicação, em uma edição específica. Normalmente, o Editor envia a submissão para a primeira Edição disponível, porém a edição pode estar "fechada" antes de sua publicação, ou o artigo pode ser mais apropriado para uma edição futura para garantir a continuidade do assunto em todas as edições, ou ainda, agrupar submissões por assunto.</p>
+		<p><i>Publicação Contínua de Submissões</i>. Se submissões estão sendo publicadas continuamente, no momemento em que estiverem prontas, o Editor agenda a submissão para a Edição atual, sendo publicada imediatamente. Ao final de um Volume, a próxima submissão será agendada em um novo Volume, para o qual o Sumário será publicado ou se torne Atual com esta submissão inicial.</p>
+		<p>Ao agendar uma submissão em uma edição, o nome da edição e o link para seu sumário estarão disponíveis a Editores e Leitores de Prova.</p>]]>	
 	</section>
 </topic>

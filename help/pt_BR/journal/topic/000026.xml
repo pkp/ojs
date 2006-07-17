@@ -8,15 +8,12 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Management Pages - Reading Tools - Settings
-  *
-  * Translation by Suporte Técnico SER, UFPR
-  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
-  *
+
   * $Id$
   -->
 
 <topic id="journal/topic/000026" locale="pt_BR" title="Configurações" toc="journal/toc/000005" key="journal.managementPages.readingTools.settings">
 	<section>
-		<![CDATA[<p>O Gerente da Revista pode selecionar uma disciplina ou um conjuto de áreas de Ferramentas de Leitura para aparecer no quadro à esquerda de todos os itens em Seções da Revista que estão indexadas (por exemplo, Artigos e não Anúncios de Conferências). O Gerente da Revista pode examinar, editar, apagar ou incluir em cada conjunto de ferramenta de leitura, indo em Versões, sob Ferramentas de Leitura. O Gerente da Revista pode também selecionar uma ou mais das opções de links Genéricos para aparecer como parte do conjunto de ferramentas. O Mesmo conjunto de Ferramntas de Leitora aparece com todo item na seção indexada da revista. Entretanto, as Ferramentas de Leitura usam os termos de indexação fornecidos pelo autor para garantir que o material encontrado na base de dados disponível é relevante. O Gerente da Revista pode mudar a Ferramenta de Leitura selecionada a qualquer momento.</p>]]>
+		<![CDATA[<p>O Editor Gerente pode definir um conjunto baseado em área do conhecimento ou disciplina dentre as Ferramentas de Leitura, disponíveis ao leitor em uma coluna ao lado de todos os itens de Seções indexadas (por exemplo, Artigos e não em Notícias de Eventos). O Editor Gerente pode examinar, editar, excluir ou incluir itens e conjuntos, acessando Versões, sob Ferramentas de Leitura. O Editor Gerente tambémp ode selecionar um ou mais dos links genéricos opcionais como parte do conjunto de ferramentas. O Mesmo conjunto de Ferramentas de Leitura é utilizado com todos os itens de seções indexadas. Entretanto, as Ferramentas de Leitura fazem uso dos termos de indexação alimentados pelo autor para garantir que o material encontrado na base de dados disponível seja relevante. O Editor Gerente pode alterar a Ferramenta de Leitura selecionada a qualquer momento.</p>]]>
 	</section>
 </topic>

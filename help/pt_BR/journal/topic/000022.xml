@@ -8,15 +8,12 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Roles - Author 
-  *
-  * Translation by Suporte Técnico SER, UFPR
-  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
-  *
+
   * $Id$
   -->
 
 <topic id="journal/topic/000022" locale="pt_BR" title="Autores" toc="journal/toc/000003" key="journal.roles.author">
 	<section>
-		<![CDATA[<p>Autores estão aptos a registrar e submeter itens à revista diretamente pelo portal da revista na web. O Autor é convidado a carregar o item e fornecer os metadados e informações de indexação sobre o item. (Os metadados melhoram a capacidade de busca em pesquisas online na revista). O Autor pode carregar arquivos suplementares, no formato de conjuntos de dados, instrumentos de pesquisa, ou textos fonter que vão enriquecer o item, assim como contribuir para formas mais robustas de pesquisa.</p>]]>	
+		<![CDATA[<p>É permitido a Autores se cadastrar e submeter itens à revista diretamente pelo sistema Web da revista, seguindo a filosofia do auto-arquivamento dos Arquivos Abertos. O Autor envia o documento e alimenta os metadados, ou informações de indexação, sobre o item (Os metadados aumentam a capacidade de recuperação do documento em sistema de pesquisa on-line e na revista). O Autor pode enviar documentos suplementares, no formato de conjuntos de dados, instrumentos de pesquisa, ou registros textuais que enriquecem a submissão, e contribuem para formas mais transparentes e robustas de pesquisa e conhecimento. O Autor acompanha o andamento da submissão dentro do processo editorial da reivsta &mdash; bem como pode participar da Edição de Texto e Leitura de Provas das submissões aprovadas para publicação &mdash; acessando o sistema da revista, com o login e senha criados.</p>]]>
 	</section>
 </topic>

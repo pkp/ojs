@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE topic SYSTEM "../../../topic.dtd">
 
 <!--
@@ -8,15 +8,12 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Section Editor's Role Index - Archives
-  *
-  * Translation by Suporte Técnico SER, UFPR
-  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
-  *
+
   * $Id$
   -->
 
 <topic id="editorial/topic/000023" locale="pt_BR" title="Arquivos" toc="editorial/toc/000005" key="editorial.sectionEditorsRole.submissions.archives">
 	<section>
-		<![CDATA[<p>Submissões nesta fila passaram pelo processo editorial, onde foram recusados, estão aguardando publicados, ou foram publicados. Esta fila oferece ao Editor e ao Editor de Seção designado completo acesso ao histórico editorial completo (Sumário, Submissão, Avaliação, Edição, e Histórico).</p>]]>	
+		<![CDATA[<p>O Processo Editorial para Submissões nesta fila foi concluído, tenham sio recusadas ou publicadas. Esta fila oferece ao Editor e ao Editor de Seção designado acesso completo ao histórico da submissão (Resumo, Submissão, Avaliação, Edição, e Histórico da Submissão.</p>]]>	
 	</section>
 </topic>

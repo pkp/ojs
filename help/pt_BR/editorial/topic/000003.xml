@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE topic SYSTEM "../../../topic.dtd">
 
 <!--
@@ -8,15 +8,12 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Editor's Role Submission Summary Index 
-  *
-  * Translation by Suporte Técnico SER, UFPR
-  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
-  *
+
   * $Id$
   -->
 
-<topic id="editorial/topic/000003" locale="pt_BR" title="Sumário de Submissão" toc="editorial/toc/000001" subtoc="editorial/toc/000003" key="editorial.editorsRole.submissionSummary">
+<topic id="editorial/topic/000003" locale="pt_BR" title="Resumo da Submissão" toc="editorial/toc/000001" subtoc="editorial/toc/000003" key="editorial.editorsRole.submissionSummary">
 	<section>
-		<![CDATA[<p>A página de Submissão para cada submissão é usada pelo Editor para gerenciar os arquivos submetidos e seus metadados associados ou informações de indexação.</p>]]>	
+		<![CDATA[<p>A página de Resumo da Submissão é usada pelo Editor para gerenciar os arquivos submetidos e seus metadados associados ou informações de indexação.</p>]]>	
 	</section>
 </topic>

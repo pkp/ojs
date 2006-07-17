@@ -1,89 +1,89 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
-
-<!--
-  * locale.xml
-  *
-  * Copyright (c) 2003-2006 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Localization strings for the pt_BR locale.
-  *
-  * $Id$
-  -->
- 
-<locale name="pt_BR" full_name="Português do Brasil">
-	<message key="plugins.importexport.native.displayName">Plugin XML de Artigos e Edições</message>
-	<message key="plugins.importexport.native.description">Importar e exportar artigos e edições</message>
-
-	<message key="plugins.importexport.native.cliUsage"><![CDATA[Uso: {$scriptName} {$pluginName} [comando] ...
-Comandos:
-	import [xmlFileName] [journal_path] [user_name] ...
-	export [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
-	export [xmlFileName] [journal_path] article [articleId]
-	export [xmlFileName] [journal_path] issues [issueId1] [issueId2] ...
-	export [xmlFileName] [journal_path] issue [issueId]
-
-Parâmetros adicionais são obrigatórios para importar dados, dependendo da nodo raíz do documento XML, conforme a seguir:
-
-Se o nodo ráis é <article> ou <articles>, parâmetros adicionais são obrigatórios.
-Os seguintes formatos são aceitos:
-
-{$scriptName} {$pluginName} import [xmlFileName] [journal_path] [user_name]
-	issue_id [issueId] section_id [sectionId]
-
-{$scriptName} {$pluginName} import [xmlFileName] [journal_path] [user_name]
-	issue_id [issueId] section_name [name]
-
-{$scriptName} {$pluginName} import [xmlFileName] [journal_path]
-	issue_id [issueId] section_abbrev [abbrev]
-]]></message>
-	<message key="plugins.importexport.native.export">Exportar Dados</message>
-	<message key="plugins.importexport.native.export.issues">Exportar Edições</message>
-	<message key="plugins.importexport.native.export.sections">Exportar Seções</message>
-	<message key="plugins.importexport.native.export.articles">Exportar Artigos</message>
-
-	<message key="plugins.importexport.native.selectIssue">Escolher Edição</message>
-	<message key="plugins.importexport.native.selectArticle">Escolher Artigo</message>
-
-	<message key="plugins.importexport.native.import.articles">Importar Artigos</message>
-	<message key="plugins.importexport.native.import.articles.description">O arquivo importado contém um ou mais artigos. Escolha a edição e a seção para a qual deseja importar os dados; caso não deseje importar todos para a mesma seção e/ou edição, os mesmos podem ser separados em documentos XML diferentes ou movê-los às seções e edições corretas após a importação.</message>
-
-	<message key="plugins.importexport.native.import">Importar Dados</message>
-	<message key="plugins.importexport.native.import.description">Este plugin suporta a importação de dados baseados no native.dtd Document Type Definition. Nodos raís suportados são &amp;lt;article&amp;gt;, &amp;lt;articles&amp;gt;, &amp;lt;issue&amp;gt;, and &amp;lt;issues&amp;gt;.</message>
-
-	<message key="plugins.importexport.native.import.error">Erro na Importação</message>
-	<message key="plugins.importexport.native.import.error.description">Um ou mais erros ocorreram durante o processo. Certifique-se que o arquivo esteja no formato correto. O detalhamento dos erros está listado a seguir.</message>
-
-	<message key="plugins.importexport.native.cliError">ERRO:</message>
-	<message key="plugins.importexport.native.error.unknownUser">Usuário "{$userName}" inexistente.</message>
-	<message key="plugins.importexport.native.error.unknownJournal">Caminho da revista "{$journalPath}" inexistente.</message>
-	<message key="plugins.importexport.native.export.error.couldNotWrite">Não foi possível escrever no documento "{$fileName}".</message>
-	<message key="plugins.importexport.native.export.error.sectionNotFound">Não há seção compatível com a seção "{$sectionIdentifier}".</message>
-	<message key="plugins.importexport.native.export.error.issueNotFound">Não há edição compatível com o ID "{$issueId}".</message>
-	<message key="plugins.importexport.native.export.error.articleNotFound">Nenhum artigo é compatível com o ID "{$articleId}".</message>
-	<message key="plugins.importexport.native.import.error.unsupportedRoot">Este plugin não suporta o nodo raíz "{$rootName}". Certifique-se de que o documento está bem formado e tente novamente.</message>
-
-	<message key="plugins.importexport.native.import.error.titleMissing">Título para edição não informado.</message>
-	<message key="plugins.importexport.native.import.error.defaultTitle">TÍTULO NÃO INFORMADO</message>
-	<message key="plugins.importexport.native.import.error.unknownIdentificationType">Identificação "{$identificationType}" desconhecida informada no atributo "identification", do elemento "issue" da edição "{$issueTitle}".</message>
-	<message key="plugins.importexport.native.import.error.invalidBooleanValue">Valor boleano "{$value}" é inválido. Utilize apenas "true" ou "false".</message>
-	<message key="plugins.importexport.native.import.error.invalidDate">Data "{$value}" inválida.</message>
-	<message key="plugins.importexport.native.import.error.unknownEncoding">Data  "{$type}" embutida possui codificação desconhecida.</message>
-	<message key="plugins.importexport.native.import.error.couldNotWriteFile">Não foi possivel salvar cópia de "{$originalName}".</message>
-	<message key="plugins.importexport.native.import.error.illegalUrl">URL "{$url}" da edição "{$issueTitle}" ilegal. Importações via Web suportam apenas métodos http, https, ftp, ou ftps.</message>
-	<message key="plugins.importexport.native.import.error.unknownSuppFileType">Tipo de arquivo suplementar "{$suppFileType}" é desconhecido .</message>
-	<message key="plugins.importexport.native.import.error.couldNotCopy">A URL "{$url}" não pôde ser copiada para um documento local.</message>
-	<message key="plugins.importexport.native.import.error.duplicatePublicId">O ID público para importar a edição "{$issueTitle}" já está em uso pela edição "{$otherIssueTitle}".</message>
-	<message key="plugins.importexport.native.import.error.sectionTitleMissing">Título de seção não informado para a edição "{$issueTitle}". Certifique-se que o documento XML esteja conforme a DTD apropriada.</message>
-	<message key="plugins.importexport.native.import.error.sectionMismatch">A seção "{$sectionTitle}" da edição "{$issueTitle}" é compatível com uma revista existente, mas a abreviação ("{$sectionAbbrev}") é compatível com outra seção.</message>
-	<message key="plugins.importexport.native.import.error.articleTitleMissing">Um título de artigo naõ informado na edição "{$issueTitle}", seção "{$sectionTitle}". Certifique-se de que o documento XML está de acordo com a DTD apropriada, e que um título foi informado para o idioma da revista.</message>
-	<message key="plugins.importexport.native.import.error.articleTitleLocaleUnsupported">O idioma ("{$locale}") do Título do artigo ("{$articleTitle}"), da edição "{$issueTitle}", não é suportado pela revista.</message>
-	<message key="plugins.importexport.native.import.error.articleAbstractLocaleUnsupported">O idioma ("{$locale}") do resumo do artigo "{$articleTitle}", da edição "{$issueTitle}", não é suportado pela revista.</message>
-	<message key="plugins.importexport.native.import.error.galleyLabelMissing">Falta uma informação de composição no artigo "{$articleTitle}", da seção "{$sectionTitle}" da edição "{$issueTitle}".</message>
-	<message key="plugins.importexport.native.import.error.suppFileMissing">Falta um documento suplementar no artigo "{$articleTitle}",  da seção "{$sectionTitle}" da edição "{$issueTitle}".</message>
-	<message key="plugins.importexport.native.import.error.galleyFileMissing">Falta um documento de composição do artigo "{$articleTitle}", da seção "{$sectionTitle}" da edição "{$issueTitle}".</message>
-
-	<message key="plugins.importexport.native.import.success">Importação de dados concluída com sucesso.</message>
-	<message key="plugins.importexport.native.import.success.description">A importação de dados ocorreu sem problemas. Os itens importados estão listados a seguir.</message>
-</locale>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the pt_BR locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="pt_BR" full_name="Português do Brasil">
+	<message key="plugins.importexport.native.displayName">Plugin XML de Artigos e Edições</message>
+	<message key="plugins.importexport.native.description">Importar e exportar artigos e edições</message>
+
+	<message key="plugins.importexport.native.cliUsage"><![CDATA[Uso: {$scriptName} {$pluginName} [comando] ...
+Comandos:
+	import [xmlFileName] [journal_path] [user_name] ...
+	export [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
+	export [xmlFileName] [journal_path] article [articleId]
+	export [xmlFileName] [journal_path] issues [issueId1] [issueId2] ...
+	export [xmlFileName] [journal_path] issue [issueId]
+
+Parâmetros adicionais são obrigatórios para importar dados, dependendo da nodo raíz do documento XML, conforme a seguir:
+
+Se o nodo ráis é <article> ou <articles>, parâmetros adicionais são obrigatórios.
+Os seguintes formatos são aceitos:
+
+{$scriptName} {$pluginName} import [xmlFileName] [journal_path] [user_name]
+	issue_id [issueId] section_id [sectionId]
+
+{$scriptName} {$pluginName} import [xmlFileName] [journal_path] [user_name]
+	issue_id [issueId] section_name [name]
+
+{$scriptName} {$pluginName} import [xmlFileName] [journal_path]
+	issue_id [issueId] section_abbrev [abbrev]
+]]></message>
+	<message key="plugins.importexport.native.export">Exportar Dados</message>
+	<message key="plugins.importexport.native.export.issues">Exportar Edições</message>
+	<message key="plugins.importexport.native.export.sections">Exportar Seções</message>
+	<message key="plugins.importexport.native.export.articles">Exportar Artigos</message>
+
+	<message key="plugins.importexport.native.selectIssue">Escolher Edição</message>
+	<message key="plugins.importexport.native.selectArticle">Escolher Artigo</message>
+
+	<message key="plugins.importexport.native.import.articles">Importar Artigos</message>
+	<message key="plugins.importexport.native.import.articles.description">O arquivo importado contém um ou mais artigos. Escolha a edição e a seção para a qual deseja importar os dados; caso não deseje importar todos para a mesma seção e/ou edição, os mesmos podem ser separados em documentos XML diferentes ou movê-los às seções e edições corretas após a importação.</message>
+
+	<message key="plugins.importexport.native.import">Importar Dados</message>
+	<message key="plugins.importexport.native.import.description">Este plugin suporta a importação de dados baseados no native.dtd Document Type Definition. Nodos raís suportados são &amp;lt;article&amp;gt;, &amp;lt;articles&amp;gt;, &amp;lt;issue&amp;gt;, and &amp;lt;issues&amp;gt;.</message>
+
+	<message key="plugins.importexport.native.import.error">Erro na Importação</message>
+	<message key="plugins.importexport.native.import.error.description">Um ou mais erros ocorreram durante o processo. Certifique-se que o arquivo esteja no formato correto. O detalhamento dos erros está listado a seguir.</message>
+
+	<message key="plugins.importexport.native.cliError">ERRO:</message>
+	<message key="plugins.importexport.native.error.unknownUser">Usuário "{$userName}" inexistente.</message>
+	<message key="plugins.importexport.native.error.unknownJournal">Caminho da revista "{$journalPath}" inexistente.</message>
+	<message key="plugins.importexport.native.export.error.couldNotWrite">Não foi possível escrever no documento "{$fileName}".</message>
+	<message key="plugins.importexport.native.export.error.sectionNotFound">Não há seção compatível com a seção "{$sectionIdentifier}".</message>
+	<message key="plugins.importexport.native.export.error.issueNotFound">Não há edição compatível com o ID "{$issueId}".</message>
+	<message key="plugins.importexport.native.export.error.articleNotFound">Nenhum artigo é compatível com o ID "{$articleId}".</message>
+	<message key="plugins.importexport.native.import.error.unsupportedRoot">Este plugin não suporta o nodo raíz "{$rootName}". Certifique-se de que o documento está bem formado e tente novamente.</message>
+
+	<message key="plugins.importexport.native.import.error.titleMissing">Título para edição não informado.</message>
+	<message key="plugins.importexport.native.import.error.defaultTitle">TÍTULO NÃO INFORMADO</message>
+	<message key="plugins.importexport.native.import.error.unknownIdentificationType">Identificação "{$identificationType}" desconhecida informada no atributo "identification", do elemento "issue" da edição "{$issueTitle}".</message>
+	<message key="plugins.importexport.native.import.error.invalidBooleanValue">Valor boleano "{$value}" é inválido. Utilize apenas "true" ou "false".</message>
+	<message key="plugins.importexport.native.import.error.invalidDate">Data "{$value}" inválida.</message>
+	<message key="plugins.importexport.native.import.error.unknownEncoding">Data  "{$type}" embutida possui codificação desconhecida.</message>
+	<message key="plugins.importexport.native.import.error.couldNotWriteFile">Não foi possivel salvar cópia de "{$originalName}".</message>
+	<message key="plugins.importexport.native.import.error.illegalUrl">URL "{$url}" da edição "{$issueTitle}" ilegal. Importações via Web suportam apenas métodos http, https, ftp, ou ftps.</message>
+	<message key="plugins.importexport.native.import.error.unknownSuppFileType">Tipo de arquivo suplementar "{$suppFileType}" é desconhecido .</message>
+	<message key="plugins.importexport.native.import.error.couldNotCopy">A URL "{$url}" não pôde ser copiada para um documento local.</message>
+	<message key="plugins.importexport.native.import.error.duplicatePublicId">O ID público para importar a edição "{$issueTitle}" já está em uso pela edição "{$otherIssueTitle}".</message>
+	<message key="plugins.importexport.native.import.error.sectionTitleMissing">Título de seção não informado para a edição "{$issueTitle}". Certifique-se que o documento XML esteja conforme a DTD apropriada.</message>
+	<message key="plugins.importexport.native.import.error.sectionMismatch">A seção "{$sectionTitle}" da edição "{$issueTitle}" é compatível com uma revista existente, mas a abreviação ("{$sectionAbbrev}") é compatível com outra seção.</message>
+	<message key="plugins.importexport.native.import.error.articleTitleMissing">Um título de artigo naõ informado na edição "{$issueTitle}", seção "{$sectionTitle}". Certifique-se de que o documento XML está de acordo com a DTD apropriada, e que um título foi informado para o idioma da revista.</message>
+	<message key="plugins.importexport.native.import.error.articleTitleLocaleUnsupported">O idioma ("{$locale}") do Título do artigo ("{$articleTitle}"), da edição "{$issueTitle}", não é suportado pela revista.</message>
+	<message key="plugins.importexport.native.import.error.articleAbstractLocaleUnsupported">O idioma ("{$locale}") do resumo do artigo "{$articleTitle}", da edição "{$issueTitle}", não é suportado pela revista.</message>
+	<message key="plugins.importexport.native.import.error.galleyLabelMissing">Falta uma informação de composição no artigo "{$articleTitle}", da seção "{$sectionTitle}" da edição "{$issueTitle}".</message>
+	<message key="plugins.importexport.native.import.error.suppFileMissing">Falta um documento suplementar no artigo "{$articleTitle}",  da seção "{$sectionTitle}" da edição "{$issueTitle}".</message>
+	<message key="plugins.importexport.native.import.error.galleyFileMissing">Falta um documento de composição do artigo "{$articleTitle}", da seção "{$sectionTitle}" da edição "{$issueTitle}".</message>
+
+	<message key="plugins.importexport.native.import.success">Importação de dados concluída com sucesso.</message>
+	<message key="plugins.importexport.native.import.success.description">A importação de dados ocorreu sem problemas. Os itens importados estão listados a seguir.</message>
+</locale>

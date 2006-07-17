@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE toc SYSTEM "../../../toc.dtd">
 
 <!--
@@ -9,16 +9,14 @@
   *
   * table of contents for Editorial Process - Editor's Role 
   *
-  * Translation by Suporte Técnico SER, UFPR
-  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
-  *
   * $Id$
   -->
 
-<toc id="editorial/toc/000001" locale="pt_BR" title="Funções do Editor" parent_topic="editorial/topic/000001">
+<toc id="editorial/toc/000001" locale="pt_BR" title="Papel do Editor" parent_topic="editorial/topic/000001">
 	<topic id="editorial/topic/000002" title="Submissões" />
-	<topic id="editorial/topic/000003" title="Sumário de Submissão" />
+	<topic id="editorial/topic/000003" title="Resumo de Submissão" />	
+	<topic id="editorial/topic/000044" title="Assegurando a Avaliação por Pares Cega" />
 
 	<breadcrumb url="editorial/topic/000000" title="Processo Editorial" />
-	<breadcrumb url="editorial/topic/000001" title="Funções do Editor" />
+	<breadcrumb url="editorial/topic/000001" title="Papel do Editor" />
 </toc>

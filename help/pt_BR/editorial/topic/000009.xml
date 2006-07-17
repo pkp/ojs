@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE topic SYSTEM "../../../topic.dtd">
 
 <!--
@@ -8,14 +8,11 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Author's Role Index 
-  *
-  * Translation by Suporte Técnico SER, UFPR
-  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
-  *
+
   * $Id$
   -->
 
-<topic id="editorial/topic/000009" locale="pt_BR" title="Funções do Autor" toc="editorial/toc/000000" subtoc="editorial/toc/000009" key="editorial.authorsRole">
+<topic id="editorial/topic/000009" locale="pt_BR" title="Papel do Autor" toc="editorial/toc/000000" subtoc="editorial/toc/000009" key="editorial.authorsRole">
 	<section>
 		<![CDATA[<p>O Autor de uma submissão está aod a acessar o site da revista para acompanhar o progresso da submissão e participar no processo editorial. Se existe mais de um autor, é solicitado ao autor que submeteu o item a identificar o contato principal que vai ser o único a quem as correspondências editoriais serão encaminhadas e que vai acessar o site da revista.</p>]]>	
 	</section>

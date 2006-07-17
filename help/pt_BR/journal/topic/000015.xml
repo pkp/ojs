@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE topic SYSTEM "../../../topic.dtd">
 
 <!--
@@ -8,17 +8,13 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Roles - Journal Manager 
-  *
-  * Translation by Suporte Técnico SER, UFPR
-  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
-  *
+
   * $Id$
   -->
 
-<topic id="journal/topic/000015" locale="pt_BR" title="Gerente da Revista" toc="journal/toc/000003" key="journal.roles.journalManager">
+<topic id="journal/topic/000015" locale="pt_BR" title="Editor Gerente" toc="journal/toc/000003" key="journal.roles.journalManager">
 	<section>
-		<![CDATA[<p>O que o Gerente da Revista gerencia é o sistema de publicação. Isso não envolve nenhuma habilidade especial, mas envolve o preenximento de modelos e carga de arquivos. O Gerente da Revista realiza a {help_topic key="journal.managementPages.setup" text="Configuração"} da revista, envolve Editores, Editores de Seção, Editores de Texto, Editores de Layout, Leitores de Prova, e Avaliadores. Atualmente, o nome e email dos Avaliadores, podem ser importados para o sistema se elese existem em uma base de dados, através da função Importar Pessoas em {help_topic key="journal.users.index" text="Pessoas"}. O Gerente da revista também tem acesso aos outros sistemas de gerenciamento da revista, e pode criar novas seções para revista, editar o conjunto padrão de emails que o sistema usa, gerenciar as {help_topic key="journal.managementPages.readingTools" text="Ferramentas de Leitura"} que estão disponíveis com esta revista, e ver as {help_topic key="journal.managementPages.statistics" text="Estatísticas da Revista"} que o sistema pode gerar.</p>
-		<p>Note que embora a função de Gerente da Revista seja ostencivamente uma função por-jornal, gerentes de revistas podem ser considerados um super-usuário nesta versão do OJS. Em atualizações futuras, restrições de segurança adicionais podem ser implementadas para reforçar uma restrita separação de forças entre resvistas individuais hospedadas dentro de um único sistema OJS.
-		</p> ]]>	
+		<![CDATA[<p>O Editor Gerente é responsável por gerenciar o sistema de publicação. Isso não exige nenhuma habilidade especial, porém exige saber trabalhar com sistema Web com formulários e trabalhar com transferência de arquivos via Web. O Editor Gerente realiza a {help_topic key="journal.managementPages.setup" text="Configuração"} da revista, cadastra Editores, Editores de Seção, Editores de Texto, Editores de Layout, Leitores de Prova, e Avaliadores. Opcionalmente, o nome e e-mail de Avaliadores podem ser importados para o sistema caso existam em alguma uma base de dados, através da função Importar Cadastros em {help_topic key="journal.users.index" text="Pessoas"}. O Gerente da revista também tem acesso aos outros sistemas de gerenciamento da revista, pode criar novas seções, editar o conjunto de e-mails padrão do sistema, gerenciar as {help_topic key="journal.managementPages.readingTools" text="Ferramentas de Leitura"} disponíveis, e acessar as {help_topic key="journal.managementPages.statistics" text="Estatísticas da Revista"} que o sistema pode gerar.</p>
+		<p>Embora a função de Editor Gerente seja supostamente uma função individual por revista, Editores Gerentes deveriam ser considerados usuários de confiança com acesso geral dentro do sistema, já que podem assumir as identidades de outros usuários cadastrados em outras revistas do sistema.</p>]]>	
 	</section>
 </topic>

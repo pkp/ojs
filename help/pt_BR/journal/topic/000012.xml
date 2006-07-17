@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE topic SYSTEM "../../../topic.dtd">
 
 <!--
@@ -8,16 +8,20 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Users - Create New User 
-  *
-  * Translation by Suporte Técnico SER, UFPR
-  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
-  *
+
   * $Id$
   -->
 
-<topic id="journal/topic/000012" locale="pt_BR" title="Criar novo Usuário" toc="journal/toc/000002" key="journal.users.createNewUser">
+<topic id="journal/topic/000012" locale="pt_BR" title="Incluir Novo Usuário" toc="journal/toc/000002" key="journal.users.createNewUser">
 	<section>
-		<![CDATA[<p>O Gerente da Revista pode usar o link Criar novo Usuário para registrar alguém e atribuir-lhe uma função, de Gerente da Revista a Leitor. O usuário pode, ao logar na revista, completar e mudar as informações do seu perfil cadastradas pelo Gerente da Revista.</p>
-		<p><i>Mudando uma Senha</i>. Os Usuários podem mudar suas senhas uma vez que tenham logado na revista. O Gerente da Revista não pode acessar a senha do usuário. Entretanto, o sistema pode gerar uma nova senha e envia-la por email aos usuários que clicarem no link "Esqueceu sua senha?" abaixo da caixa de login.</p>]]>	
+		<![CDATA[<p>O Editor Gerente pode usar o link Incluir Novo Usuário para registrar alguém e atribuir-lhe uma função, de Editor Gerente a Leitor. O usuário pode, ao logar na revista, completar e mudar as informações do seu perfil cadastradas pelo Editor Gerente.</p><p><i>Mudando uma Senha</i>. Os Usuários podem mudar suas senhas uma vez que tenham logado na revista. O Editor Gerente não pode acessar a senha do usuário. Entretanto, o sistema pode gerar uma nova senha e envia-la via e-mail aos usuários que clicarem no link "Esqueceu sua senha?" abaixo da caixa de login.</p>]]>	
+	</section>
+	
+	<section title="Cadastrar Usuário Existente">
+		<![CDATA[<p>O Editor Gerente pode designar uma ou mais funções a qualquer usuário cadastrado.</p>]]>
+	</section>
+
+	<section title="Sincronizar cadastro de usuários">
+		<![CDATA[<p>Sincronizar cadastros fará com que um usuário com função específica em uma revista seja cadastrado com a mesma função em outra revista, acessada no momento da execução. Esta função permite compartilhar um grupo de usuários entre as revistas (por exemplo, Avaliadores) e sincronizar seus cadastros entre revistas.</p>]]>
 	</section>
 </topic>

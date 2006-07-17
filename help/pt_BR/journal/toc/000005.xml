@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE toc SYSTEM "../../../toc.dtd">
 
 <!--
@@ -8,10 +8,7 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * table of contents for Journal Management - Management Pages - Reading Tools.
-  *
-  * Translation by Suporte Técnico SER, UFPR
-  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
-  *
+
   * $Id$
   -->
 
@@ -20,7 +17,7 @@
 	<topic id="journal/topic/000027" title="Versões" />
 	<topic id="journal/topic/000028" title="Contextos" />
 
-	<breadcrumb url="journal/topic/000000" title="Gerenciamento das Revistas" />
+	<breadcrumb url="journal/topic/000000" title="Gerenciamento da Revista" />
 	<breadcrumb url="journal/topic/000001" title="Páginas de Gerenciamento" />
 	<breadcrumb url="journal/topic/000009" title="Ferramentas de Leitura" />
 </toc>

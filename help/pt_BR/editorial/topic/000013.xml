@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE topic SYSTEM "../../../topic.dtd">
 
 <!--
@@ -7,16 +7,13 @@
   * Copyright (c) 2003-2006 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Layout Editor's Role Index 
-  *
-  * Translation by Suporte Técnico SER, UFPR
-  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
-  *
+  * Editor's Role Index 
+
   * $Id$
   -->
 
-<topic id="editorial/topic/000013" locale="pt_BR" title="Funções do Editor de Layout" toc="editorial/toc/000000" subtoc="editorial/toc/000013" key="editorial.layoutEditorsRole">
+<topic id="editorial/topic/000013" locale="pt_BR" title="Papel do Editor de Layout" toc="editorial/toc/000000" subtoc="editorial/toc/000013" key="editorial.layoutEditorsRole">
 	<section>
-		<![CDATA[<p>O Editor de Layout recebe um pedido por email do Editor de Texto ou do Editor de Seção solicitando a formatação do layout de uma submissão que tenha completado o estágio de edição de Texto. Um Editor de Layout que não está apto a fazê-lo, simplesmente responde por email ao Editor de Seção.</p>]]>	
+		<![CDATA[<p>O Editor de Layout recebe a solicitação de formatação do layout via e-mail, encaminhada pelo Editor de Texto ou Editor de Seção para uma submissão que tenha concluído o estágio de Edição de Texto. Caso o Editor de não esteja disponível para realizar a tarefa, simplesmente responde via e-mail ao Editor de Seção.</p>]]>	
 	</section>
 </topic>

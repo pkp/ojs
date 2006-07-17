@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE toc SYSTEM "../../../toc.dtd">
 
 <!--
@@ -8,17 +8,14 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * table of contents for Editorial Process - Reviewer's Role
-  *
-  * Translation by Suporte Técnico SER, UFPR
-  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
-  *
+
   * $Id$
   -->
 
-<toc id="editorial/toc/000008" locale="pt_BR" title="Funções do Avaliador" parent_topic="editorial/topic/000008">
+<toc id="editorial/toc/000008" locale="pt_BR" title="Papel do Avaliador" parent_topic="editorial/topic/000008">
 	<topic id="editorial/topic/000030" title="Submissões" />
 	<topic id="editorial/topic/000031" title="Avaliação" />
 
 	<breadcrumb url="editorial/topic/000000" title="Processo Editorial" />
-	<breadcrumb url="editorial/topic/000008" title="Funções do Avaliador" />
+	<breadcrumb url="editorial/topic/000008" title="Papel do Avaliador" />
 </toc>

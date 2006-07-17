@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE topic SYSTEM "../../../topic.dtd">
 
 <!--
@@ -8,17 +8,14 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Editor's Role Submission Summary - Submission Management
-  *
-  * Translation by Suporte Técnico SER, UFPR
-  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
-  *
+
   * $Id$
   -->
 
 <topic id="editorial/topic/000019" locale="pt_BR" title="Gerenciamento de Submissão" toc="editorial/toc/000003" key="editorial.editorsRole.submissionSummary.submissionManagement">
 	<section>
 		<![CDATA[<p>Antes de designar um Editor de Seção para gerenciar a Avaliação da submissão, o editor deve clicar no nome do arquivo da submissão para abri-lo e garantir que o texto aparece adequadamente para ser revisado pela revista, e se está na Seção correta da revista.</p>
-		<p><i>Submissões Inapropriadas</i>. Se a submissão é obviamente inapropriada para revista, o Editor pode enviar um email ao Autor e comunicar que ela não vai ser enviada para Avaliação. O Editor pode então arquivar a submissão, enviando-a para Arquivo. O Editor de Seção designado também está em posição de tomar esta ação.</p>
-		<p><i>Designar um Editor de Seção a uma submissão</i>. O Editor seleciona um Editor de Seção de uma lista de todos os Editores de Seção associados a esta Seção (Artigo, Revisão de Livro, etc.) a quem a submissão deve pertencer. Esta ação vai enviar um email automaticamente ao Editor de Seção com a notificação da designação.</p>]]>	
+		<p><i>Submissões Inapropriadas</i>. Se a submissão é obviamente inapropriada para revista, o Editor pode enviar um e-mail ao Autor e comunicar que ela não vai ser enviada para Avaliação. O Editor pode então arquivar a submissão, enviando-a para Arquivo. O Editor de Seção designado também está em posição de tomar esta ação.</p>
+		<p><i>Designar um Editor de Seção a uma submissão</i>. O Editor seleciona um Editor de Seção de uma lista de todos os Editores de Seção associados a esta Seção (Artigo, Revisão de Livro, etc.) a quem a submissão deve pertencer. Esta ação vai enviar um e-mail automaticamente ao Editor de Seção com a notificação da designação.</p>]]>	
 	</section>
 </topic>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE topic SYSTEM "../../../topic.dtd">
 
 <!--
@@ -8,15 +8,12 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Author's Role Editing Index 
-  *
-  * Translation by Suporte Técnico SER, UFPR
-  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
-  *
+
   * $Id$
   -->
 
 <topic id="editorial/topic/000011" locale="pt_BR" title="Edição" toc="editorial/toc/000009" subtoc="editorial/toc/000011" key="editorial.authorsRole.editing">
 	<section>
-		<![CDATA[<p>O Autor contribui com ambas Edição de Texto e Leitura de Prova da submissão no estágio de Edição, enquanto a submissão é preparada para publicação eletrônica e/ou impressa.</p>]]>	
+		<![CDATA[<p>O Autor contribui com ambas Edição de Texto e Leitura de Provas da submissão no estágio de Edição, enquanto a submissão é preparada para publicação eletrônica e/ou impressa.</p>]]>	
 	</section>
 </topic>

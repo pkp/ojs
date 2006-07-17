@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE topic SYSTEM "../../../topic.dtd">
 
 <!--
@@ -8,14 +8,11 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Editor's Role Index 
-  *
-  * Translation by Suporte Técnico SER, UFPR
-  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
-  *
+
   * $Id$
   -->
 
-<topic id="editorial/topic/000001" locale="pt_BR" title="Funções do Editor" toc="editorial/toc/000000" subtoc="editorial/toc/000001" key="editorial.editorsRole">
+<topic id="editorial/topic/000001" locale="pt_BR" title="Papel do Editor" toc="editorial/toc/000000" subtoc="editorial/toc/000001" key="editorial.editorsRole">
 	<section>
 		<![CDATA[<p>O Editor supervisiona o processo editorial, começando com a designação do Editor de Seção para uma submissão. O Editor freqüentemente desempenha a funções, dependendo da política da revista, de Editor de Seção vendo submissões aceitas através do estágio de Edição do processo editorial.</p>]]>	
 	</section>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE topic SYSTEM "../../../topic.dtd">
 
 <!--
@@ -8,15 +8,12 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Reviewer's Role Index 
-  *
-  * Translation by Suporte Técnico SER, UFPR
-  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
-  *
+
   * $Id$
   -->
 
-<topic id="editorial/topic/000008" locale="pt_BR" title="Funções do Avaliador" toc="editorial/toc/000000" subtoc="editorial/toc/000008" key="editorial.reviewersRole">
+<topic id="editorial/topic/000008" locale="pt_BR" title="Papel do Avaliador" toc="editorial/toc/000000" subtoc="editorial/toc/000008" key="editorial.reviewersRole">
 	<section>
-		<![CDATA[<p>O Avaliador é convocado por email a avaliar uma submissão, que inclui seu Título e Resumo, assim como a URL da revista, um Nome de Usuário e uma senha para o Avaliador entrar na revista. A revista permite o uso de uma opção do avaliador que envia a submissão como um anexo de email para o Avaliador juntamente com a convocação para avaliação. O Avaliador então responde por email. O que está descrito aqui é o principal método para avaliação (e garantir registros completos do processo), que envolve o Avaliador conduzindo a Avalação no site da revista.</p>]]>	
+		<![CDATA[<p>O Avaliador é solicitado via e-mail a avaliar uma submissão, que inclui seu Título e Resumo, assim como a URL da revista e os dados de acesso à revista. O sistema possui uma opção de envio da submissão com o artigo em anexo para o Avaliador, juntamente com a solicitação para avaliação. Neste último, o Avaliador então responde via e-mail. O processo descrito aqui é o método padrão para avaliação (que garante registros completos do processo), conduzindo o Avaliador a realizar a Avaliação no sistema on-line da revista.</p>]]>	
 	</section>
 </topic>

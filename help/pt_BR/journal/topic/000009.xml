@@ -8,18 +8,12 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Management Pages - Reading Tools
-  *
-  * Translation by Suporte Técnico SER, UFPR
-  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
-  *
+
   * $Id$
   -->
 
 <topic id="journal/topic/000009" locale="pt_BR" title="Ferramentas de Leitura" toc="journal/toc/000001" subtoc="journal/toc/000005" key="journal.managementPages.readingTools">
 	<section>
-		<![CDATA[
-<p>O Gerente da Revista tem a possibilidade de escolher um conjunto de Ferramentas de Leitura que vão aparecer em uma coluna à esquerda de todos os itens em Seções da revista que são indexadas (por exemplo, Artigos e não em Anúncios de Conferências). As Ferramentas de Leitura foram projetadas para auxiliar leitores novatos e experientes fornecendo um contexto rico de materiais relacionados de uma grande variedade de fontes de acesso aberto. As ferramentas, usando as primeiras duas palavras-chave do autor para encontrar automaticamente bases de dados de acesso aberto relevantes, apresentam ao leitor fontes de pesquisa em outra janela. Os Leitores podem escolher dentre as ferramentas, e dentro de cada ferramenta as bases de dados, para acessar informações sobre o tema.</p>
-<p>Em Ajustes, o Gerente da Revista pode selecionar ferramentas genéricas, tais como "Capturar a citação" e "Ver os metadados do item", assim como selecionar um conjunto de disciplinas ou recursos de áreas específicas (por exemplo, Humanas, Educação, Física, etc.). O Gerente da Revista pode editar ou apagar recursos existentes e adicionar novos também. Veja também {help_topic key="user.readingTools" text="Ferramentas de Leitura"} no Portal da Revista.</p>
-]]>
+		<![CDATA[<p>O Editor Gerente pode definir um conjunto de Ferramentas de Leitura que estarão disponíveis em uma coluna ao lado de todos os itens de Seções indexadas (por exemplo, Artigos e não em Notícias de Eventos). As Ferramentas de Leitura foram desenvolvidas para auxiliar leitores novatos e experientes oferecendo um rico contexto de materiais relacionados, de uma variedade de fontes de Acesso Livre. As ferramentas usam as palavras-chave do autor para pesquisar automaticamente em bases de dados de Acesso Livre relevantes, apresentadando ao leitor os resultados em outra janela. Os Leitores podem escolher dentre as ferramentas, e dentro de cada ferramenta as bases de dados, bem como informações sobre a base escolhida.</p><p>Em Configurações, o Editor Gerente pode definir ferramentas básicas, tais como "Informação Bibliográfica" e "Indexação", bem como definir um conjunto de áreas do conhecimento ou recursos de áreas específicas (por exemplo, Humanas, Educação, Física, etc.). O Editor Gerente pode editar ou excluir recursos existentes e incluir novos recursos. Veja mais em {help_topic key="user.readingTools" text="Ferramentas de Leitura"} no Portal da Revista.</p>]]>
 	</section>
 </topic>

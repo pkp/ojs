@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE toc SYSTEM "../../../toc.dtd">
 
 <!--
@@ -8,17 +8,14 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * table of contents for Author Submission Process. 
-  *
-  * Translation by Suporte Técnico SER, UFPR
-  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
-  *
+
   * $Id$
   -->
 
 <toc id="submission/toc/000000" locale="pt_BR" title="Processo de Submissão" parent_topic="submission/topic/000000">
-	<topic id="submission/topic/000001" title="Diretrizes para o Autor" />
+	<topic id="submission/topic/000001" title="Diretrizes para Submissão" />
 	<topic id="submission/topic/000002" title="Requisitos para Submissão" />
 	<topic id="submission/topic/000003" title="Indexação e Metadados" />
-	<topic id="submission/topic/000004" title="Arquivos Suplementares" />
+	<topic id="submission/topic/000004" title="Documentos Suplementares" />
 	<breadcrumb url="submission/topic/000000" title="Processo de Submissão" />
 </toc>

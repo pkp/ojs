@@ -29,4 +29,5 @@
 	<locale key="it_IT" name="Italiano"/>
 	<locale key="pt_BR" name="Português (Brasil)"/>
 	<locale key="ru_RU" name="Russian"/>
+	<locale key="tr_TR" name="Türkiye Türkçesi"/>
 </locales>

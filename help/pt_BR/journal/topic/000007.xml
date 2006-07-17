@@ -8,17 +8,14 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Management Pages - Languages 
-  *
-  * Translation by Suporte Técnico SER, UFPR
-  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
-  *
+
   * $Id$
   -->
 
 <topic id="journal/topic/000007" locale="pt_BR" title="Idiomas" toc="journal/toc/000001" key="journal.managementPages.languages">
 	<section>
 		<![CDATA[
-		<p>Este sistema pode suportar revistas multi-idioma, bem como revistas em outros idiomas além do Inglês. Os idiomas que foram disponibilizados no sistema pelo Administrador do Sistema estão listadas sob Idiomas na página de Gerenciamento da Revista, e podem ser selecionados para uso na revista.</p>
+		<p>O sistema pode administrar revistas em vários idiomas, bem como revistas em outros idiomas além do Inglês. Os idiomas que foram disponibilizados no sistema pelo Administrador do Sistema estão listadas sob Idiomas na página de Gerenciamento da Revista, e podem ser selecionados para uso em cada revista, de forma independente.</p>
 		]]>	
 	</section>
 </topic>

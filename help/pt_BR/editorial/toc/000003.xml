@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE toc SYSTEM "../../../toc.dtd">
 
 <!--
@@ -8,18 +8,15 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * table of contents for Editorial Process - Editor's Role - Submission Summary
-  *
-  * Translation by Suporte Técnico SER, UFPR
-  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
-  *
+
   * $Id$
   -->
 
-<toc id="editorial/toc/000003" locale="pt_BR" title="Sumário de Submissão" parent_topic="editorial/topic/000003">
+<toc id="editorial/toc/000003" locale="pt_BR" title="Resumo da Submissão" parent_topic="editorial/topic/000003">
 	<topic id="editorial/topic/000019" title="Gerenciamento de Submissão" />
 	<topic id="editorial/topic/000020" title="Metadados de Submissão" />
 
 	<breadcrumb url="editorial/topic/000000" title="Processo Editorial" />
-	<breadcrumb url="editorial/topic/000001" title="Funções do Editor" />
-	<breadcrumb url="editorial/topic/000003" title="Sumário de Submissão" />
+	<breadcrumb url="editorial/topic/000001" title="Papel do Editor" />
+	<breadcrumb url="editorial/topic/000003" title="Resumo da Submissão" />
 </toc>

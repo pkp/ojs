@@ -8,17 +8,14 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Author Submission Process - Supplementary Files 
-  *
-  * Translation by Suporte Técnico SER, UFPR
-  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
-  *
+
   * $Id$
   -->
 
-<topic id="submission/topic/000004" locale="pt_BR" title="Arquivos Suplementares" toc="submission/toc/000000" key="submission.supplementaryFiles">
+<topic id="submission/topic/000004" locale="pt_BR" title="Documentos Suplementares" toc="submission/toc/000000" key="submission.supplementaryFiles">
 	<section>
 		<![CDATA[
-		<p>O Autor tem a possibilidade de carregar Arquivos Suplementares no passo 4 do Processo de Submissão. Os Arquivos Suplementares compreendem conjuntos de dados de pesquisa, instrumentos de pesquisa, textos fonte ou outro material que podem formar se não um apêndice para submissão, garantir que sejam tratados como documentos separados já que eles deve ter seu valor e seus próprios méritos. Complementando, o Autor vai indexar os Arquivos Suplementares independente da submissão assim permitindo que o Arquivo seja parte do grande índice e ser encontrado por aqueles que procuram por este tipo particular de item.</p>
-		<p><i>Formatos de Arquivos Suplementares</i>. Os Arquivos Suplementares são carregados em seus formatos originais - onde não há restrições - e permanecem neste formato, em oposição ao resto da submissão que deve estar em um formato manuscrito padrão e serão transformados em um formato padrão de publicação. Isto significa que conjuntos de dados que estão disponíveis em planilhas ou aprsentações em Flash podem ser carregadas e preservadas naqueles formatos; isso pode gerar desafios para os Leitores. Os Autores precisam ter isso em mente talvez fornecendo, na descrição do Arquivo Suplementar, locais onde baixar gratuitamente programas para abrir e ver o Arquivo Suplementar.</p>]]>
+		<p>O Autor pode enviar Documentos Suplementares no passo 4 do Processo de Submissão. Os Documentos Suplementares compreendem conjuntos de dados de pesquisa, instrumentos de pesquisa, textos fonte ou outras informações que poderiam ser o apêndice à submissão, porém garantindo que sejam também tratados como documentos independentes por seu valor diferenciado. o Autor também indexará os Documentos Suplementares independentemente da submissão, permitindo assim que os Documentos sejam parte de um índice maior e possa ser recuperado pesquisadores deste tipo particular de documento.</p>
+		<p><i>Formatos de Documentos Suplementares</i>. Os Documentos Suplementares são enviados em seus formatos originais &mdash; onde não há restrições &mdash; e permanecem nesse formato, enquanto o resto da submissão deve estar em um formato de texto padrão e serão transformados em um formato padrão de publicação. Isto significa que conjuntos de dados disponíveis em planilhas ou aprsentações em Flash podem ser enviadas e preservadas naqueles formatos; isso pode gerar desafios para os Leitores. Os Autores devem levar isso em consideração talvez fornecendo, na descrição do Documento Suplementar, locais onde baixar gratuitamente programas para visualização do mesmo.</p>]]>
 	</section>
 </topic>

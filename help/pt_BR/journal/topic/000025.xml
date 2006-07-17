@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE topic SYSTEM "../../../topic.dtd">
 
 <!--
@@ -8,27 +8,22 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Subscriptions 
-  *
-  * Translation by Suporte Técnico SER, UFPR
-  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
-  *
+
   * $Id$
   -->
 
 <topic id="journal/topic/000025" locale="pt_BR" title="Assinaturas" toc="journal/toc/000001" key="journal.managementPages.subscriptions">
 	<section>
-		<![CDATA[<p>O OJS suporta assinatura em revistas fornecendo um componente de gerenciamento de assinaturas e uma proteção de senha correspondente a cada conteúdo da revista online. As assinaturas podem ser gerenciadas por cada usuário individualmente, organização ou instituição. Uma assinatura na revista pode também oferecer acesso a edições anteriores. Em Gerenciamento de Edições, o Editor permite acesso livre aos leitores do conteúdo de uma edição ou artigos de zero a 24 meses depois de sua publicação inicial e disponibilidade aos assinantes.</p>
-		<p>Os Gerentes de Revistas, Editores, Editores de Seção, Editores de Layout, Editores de Texto e Leitores de Prova sempre têm acesso livre à revista que são assinantes.</p>
-		<p><i>Distribuindo o Módulo de Assinatura</i>. O Gerente da Revista deve indicar em Configuração, 4.3 Administração de Assinaturas, que a revista vai usar este sistema para gerenciar suas assinaturas e que alguns, associados como Gerentes de Revista, foram designados para gerenciar estas características.</p>]]>
+		<![CDATA[<p>O sistema permite o uso de assinaturas de revistas, fornecendo um componente de gerenciamento de assinaturas e uma senha de segurança correspondente para o conteúdo on-line da revista. As assinaturas podem ser para indivíduos, organizações ou  instituições. Uma assinatura de revista pode oferecer acesso a edições anteriores através da publicação de Acesso Livre adiado. Em Gerenciamento de Edições, o Editor define para os leitores o acesso livre ao conteúdo de uma edição ou artigos de zero a 24 meses após sua publicação inicial e disponibilidade aos assinantes.</p><p>Os Editores Gerentes, Editores, Editores de Seção, Editores de Layout, Editores de Texto e Leitores de Prova sempre têm acesso livre à revista como se fossem assinantes.</p><p><i>Habilitando o Módulo de Assinaturas</i>. O Editor Gerente deve indicar em Configuração, 4.3 Administração de Assinaturas, que a revista utilizará este sistema para gerenciar suas assinaturas e que uma pessoa, designado como Editor Gerente ou Gerente de Assinaturas, assumirá a responsabilidade de gerenciar a ferramenta.</p>]]>
 	</section>
 	
-	<section title="Tipos de Assinatura">
-		<![CDATA[<p><i>Configurando os Tipos de Assinatura</i>. O primeiro passo na configuração do gerenciamento de assinaturas é designar os tipos de assinaturas que a revista oferece. As Revista tipicamente oferecem, por exemplo, assinaturas individuais e assinaturas institucionais. Algumas revistas podem ter ofertas especiais para membros de uma organização ou estudantes. O OJS suporta o gerenciamento de impressão e/ou assinaturas online. Mais de um tipo de assinatura pode ser criada para cobrir longos períodos de tempo (12 meses, 36 meses).</p>
-		<p><i>Opções para tipos de Assinatura</i>. Para assinaturas "institucionais", use a opção "validar via domínio ou autenticação IP", como todos os membros de uma instituição acessam a revista de um domínio comum ou endereço IP, vai ser permitido acesso sem senha. Similarmente, a opção "membros de uma associação ou organização" deve ser usada para assinatura de membros, se livre para membros ou em um desconto. Use a opção "Visível Publicamente" para fazer o tipo de assinatura e sua taxa aparecerem sob Assinaturas em Sobre a Revista. Enquanto a maioria das assinaturas são tipicamente mostradas em Sobre, um tipo criado para contas internas, assinatura da equipe, e/ou para propósito de gerenciamento, por exemplo, não vão aparecer na página Sobre.</p>]]>
+	<section title="Tipos de Assinaturas">
+		<![CDATA[<p><i>Configurando Tipos de Assinaturas</i>. O primeiro passo na configuração do gerenciamento de assinaturas é designar os Tipos de Assinaturas que a revista oferece. As revistas oferecem, geralmente, tipos de assinaturas individuais e institucionais. Algumas revistas podem oferecer assinaturas especiais para membros de uma organização ou estudantes. O sistema permite gerenciar assinaturas impressas e/ou assinaturas on-line. Mais de um tipo de assinatura pode ser criada para cobrir períodos maiores (12 meses, 36 meses).</p><p><i>Opções para Tipos de Assinaturas</i>. Para assinaturas "institucionais", use a opção "Assinantes serão validados através do domínio ou autenticação de IP", já que todos os membros de uma instituição acessam a revista a partir de um domínio comum ou endereço de IP,permitindo o acesso sem senha. Da mesma forma, a opção "Assinantes deverão ser membros de uma associação, organização ou entidade de classe" deve ser usada para assinaturas deste tipo, seja gratuita ou com algum desconto para seus membros. Use a opção "Tipo de assinatura NÃO será exibido em Assinturas, no Sobre a revista" para fazer o tipo de assinatura e sua taxa serem exibidas ou não sob Assinaturas no Sobre da revista. Enquanto a maioria das assinaturas são geralmente exibidas no Sobre, algum tipo criado para contas internas, assinatura da equipe, e/ou para propósito de gerenciamento, por exemplo, podem não precisar ser publicadas no Sobre.</p>]]>
 	</section>
+	
 
 	<section title="Assinaturas">
-		<![CDATA[<p><i>Criando Assinaturas</i>. Para assinantes individuais, o Gerente (de Assianturas) da Revista deve registrar o assinante como um Leitor, se não estiver ainda registrado, e depois na página de Criar Assinaturas, entre com o tipo e datas para assinatura. Ao salvar esta informação, o assinante receberá um email com um usuário, que vai funcionar com todo conteúdo que a revista publica até que o usuário seja removido da lista de Assinaturas pelo Gerente da Revista.</p>
-		<p><i>Assinaturas Institucionais e Organizacionais</i>. Para assinaturas institucionais, a pessoa contato na instituição deve ser associada como um leitor, e depois escolhida pelo Gerente (de Assinaturas) da Revista na página de Criar Assinaturas. A pessoa contato deve fornecer o domínio e/ou endereço IP da instituição, que são usados para validar a conta, poupando os usuários da instituição a necessidade de ter contas de usuário individuais para acessar o conteúdo assinado. Organizações com lista de membros podem ter suas listas importadas para o sistema, através da função Importar Usuários em Gerenciamento da Revista.</p>]]>
+		<![CDATA[<p><i>Criando Assinaturas</i>. Para assinantes individuais, o Gerente de Assinaturas deve registrar o assinante como um Leitor, caso não esteja ainda registrado, e então definir o tipo e datas para assinatura, na página Criar Assinaturas. O assinante receberá um e-mail com o login, ao salvar o formulário, que permitirá acesso a todo o conteúdo publicado pela revista enquanto o usuário não for removido da lista de Assinaturas pelo Gerente de Assinaturas.</p><p><i>Assinaturas Institucionais e Organizacionais</i>. Para assinaturas institucionais, a pessoa para contato na instituição deve ser cadastrada como Leitor, e depois escolhida pelo Gerente de Assinaturas na página Criar Assinaturas. Essa pessoa deverá fornecer o domínio e/ou endereço de IP da instituição, utilizados para validar a conta, eliminando a necessidade dos membros da instituição possuirem cadastros individuais para acessar o conteúdo assinado. Organizações com listas de membros podem ter suas listas importadas para o sistema, através da função Importar Usuários em Gerenciamento da Revista.</p>]]>
 	</section>
+
 </topic>

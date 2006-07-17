@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE toc SYSTEM "../../../toc.dtd">
 
 <!--
@@ -8,17 +8,14 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * table of contents for Editorial Process - Proofreader's Role
-  *
-  * Translation by Suporte Técnico SER, UFPR
-  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
-  *
+
   * $Id$
   -->
 
-<toc id="editorial/toc/000014" locale="pt_BR" title="Funções do Leitor de Prova" parent_topic="editorial/topic/000014">
+<toc id="editorial/toc/000014" locale="pt_BR" title="Papel do Leitor de Prova" parent_topic="editorial/topic/000014">
 	<topic id="editorial/topic/000042" title="Submissões" />
-	<topic id="editorial/topic/000043" title="Leitura de Prova" />
+	<topic id="editorial/topic/000043" title="Leitura de Provas" />
 
 	<breadcrumb url="editorial/topic/000000" title="Processo Editorial" />
-	<breadcrumb url="editorial/topic/000014" title="Funções do Leitor de Prova" />
+	<breadcrumb url="editorial/topic/000014" title="Papel do Leitor de Prova" />
 </toc>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE topic SYSTEM "../../../topic.dtd">
 
 <!--
@@ -8,15 +8,12 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Copyeditor's Role Index 
-  *
-  * Translation by Suporte Técnico SER, UFPR
-  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
-  *
+
   * $Id$
   -->
 
-<topic id="editorial/topic/000012" locale="pt_BR" title="Funções do Editor de Texto" toc="editorial/toc/000000" subtoc="editorial/toc/000012" key="editorial.copyeditorsRole">
+<topic id="editorial/topic/000012" locale="pt_BR" title="Papel do Editor de Texto" toc="editorial/toc/000000" subtoc="editorial/toc/000012" key="editorial.copyeditorsRole">
 	<section>
-		<![CDATA[<p>O Editor de Texto recebe um pedido por email do Editor de Seção para fazer a edição de Texto da submissão, que vai aparecer na fila de submissões do Editor de Texto. Um Editor de Texto que não está apto a fazer a Edição de Texto, simplesmente responde por email ao Editor de Seção.</p>]]>	
+		<![CDATA[<p>O Editor de Texto recebe a solicitação de Edição de Texto da submissão via e-mail, encaminhada pelo Editor de Seção, disponível para acesso na Fila de Submissões do Editor de Texto. Caso não esteja disponível para realizar a tarefa, o Editor de Texto simplesmente responde via e-mail ao Editor de Seção.</p>]]>	
 	</section>
 </topic>

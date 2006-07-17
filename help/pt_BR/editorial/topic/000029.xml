@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE topic SYSTEM "../../../topic.dtd">
 
 <!--
@@ -8,15 +8,13 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Section Editor's Role Index - Editing - Proofreading
-  *
-  * Translation by Suporte Técnico SER, UFPR
-  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
-  *
+
   * $Id$
   -->
 
-<topic id="editorial/topic/000029" locale="pt_BR" title="Leitura de Prova" toc="editorial/toc/000007" key="editorial.sectionEditorsRole.editing.proofreading">
+<topic id="editorial/topic/000029" locale="pt_BR" title="Leitura de Provas" toc="editorial/toc/000007" key="editorial.sectionEditorsRole.editing.proofreading">
 	<section>
-		<![CDATA[<p>O Editor de Seção, ao ser notificado pelo Editor de Layout do encerramento da versão de publicação, seleciona o Leitor de Prova, se isto ainda não foi feito. O Editor de Seção então envia um email de Requisição ao Autor para iniciar o processo de Leitura de Prova. O Autor, ao completar a revisão da versão de publicação e documentos suplementares, se houver algum, envia um email de encerramento ao Leitor de Prova, com CC. para o Editor de Seção. Qualquer erro de formatação encontrado pelo Autor ou Leitor de Prova é anotado na caixa de texto de Correções em Leitura de Prova porque nem o Autor nem o Leitor de Prova podem fazer anotações no documento da versão de publicação. O Leitor de Prova, ao terminar a revisão na versão de publicação e arquivos suplementares, se existirem, notifica o Editor de Layout, com CC. para o Editor de Seção, e o Editor de Layout corrige os erros anotados, se houver. Finalmente, o Editor de Layout notifica o Editor de Seção que a submissão está pronta para ser escalonada para Publicação. Neste ponto, o Editor de Seção pode desejar revisar novamente os arquivos, e se satisfeito, escalonar a submissão para publicação clicando no botão Enviar (Enviar submissão para agendamento) no final da página. A submissão então entra no {help_topic key="publishing.index" text="Processo de Publicação"}. </p>]]>	
+		<![CDATA[<p>O Editor de Seção, ao ser notificado pelo Editor de Layout do encerramento da versão para publicação, seleciona o Leitor de Prova, se isto ainda não foi feito. O Editor de Seção então envia um e-mail solicitando ao Autor a Leitura de Provas. O Autor, ao concluir a revisão da versão para publicação e documentos suplementares, caso disponíveis, comunica via e-mail ao Leitor de Prova da conclusão da tarefa, com cópia para o Editor de Seção.Erros de formatação encontrados pelo Autor ou Leitor de Prova são anotados no campo Correções disponível na Leitura de Provas, já que o Autor e o Leitor de Prova não podem alterar a versão para publicação. O Leitor de Prova, ao terminar a revisão da versão para publicação e documentos suplementares, caso disponíveis, notifica o Editor de Layout, com cópia para o Editor de Seção, e o Editor de Layout corrige os erros anotados, se houverem. Finalmente, o Editor de Layout notifica o Editor de Seção que a submissão está pronta para agendadamento e publicação. Neste momento, o Editor de Seção pode revisar novamente os arquivos e, caso deseje, agendar a submissão para publicação clicando no botão Gravar (Enviar submissão para agendamento) no final da página. A submissão então entra no {help_topic key="publishing.index" text="Processo de Publicação"}.</p>
+		<p>Note que o Editor pode agendar a submissão para publicação a qualquer momento do processo editorial; esta informação estará disponível a Editores de e Leitores de Prova, permitindo-lhes visualizar a edição antes de sua publicação.</p>]]>
 	</section>
 </topic>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE toc SYSTEM "../../../toc.dtd">
 
 <!--
@@ -8,18 +8,15 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * table of contents for Editorial Process - Author's Role - Editing
-  *
-  * Translation by Suporte Técnico SER, UFPR
-  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
-  *
+
   * $Id$
   -->
 
 <toc id="editorial/toc/000011" locale="pt_BR" title="Edição" parent_topic="editorial/topic/000011">
 	<topic id="editorial/topic/000035" title="Edição de Texto" />
-	<topic id="editorial/topic/000036" title="Leitura de Prova" />
+	<topic id="editorial/topic/000036" title="Leitura de Provas" />
 
 	<breadcrumb url="editorial/topic/000000" title="Processo Editorial" />
-	<breadcrumb url="editorial/topic/000009" title="Funções do Autor" />
+	<breadcrumb url="editorial/topic/000009" title="Papel do Autor" />
 	<breadcrumb url="editorial/topic/000011" title="Edição" />
 </toc>

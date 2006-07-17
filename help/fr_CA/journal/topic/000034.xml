@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000034.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Announcements 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000034" locale="en_US" title="Announcements" toc="journal/toc/000001" key="journal.managementPages.announcements">
+	<section>
+		<![CDATA[<p>OJS permet aux rédacteurs de revues d’afficher des annonces qui deviennent ainsi disponibles aux lecteurs visitant le site de la revue. Les annonces affichées apparaissent à la page des annonces et, facultativement, à la page d’accueil de la revue.</p><p><i>Le déploiement du module d’annonces</i>. Le rédacteur de la revue doit indiquer dans Setup, Management, 4.4. Announcements (Mise en place, Gestion, 4.4 Annonces), que la revue affichera des annonces. En outre, le rédacteur doit indiquer si oui ou non ces annonces devraient paraître à la page d’accueil de la revue. Le rédacteur peut aussi fournir un texte d’introduction qui paraîtra en haut de la page d’annonces.</p><p><i>Créer des annonces</i>. Le rédacteur de la revue crée une annonce en choisissant le type d’annonce (s’il y en a un), en indiquant un titre pour l’annonce et en fournissant un description brève ainsi qu’une description détaillée de l’annonce. La description brève apparaît aux lecteurs comme un sommaire de l’annonce, tandis que la description détaillée leur apparaît quand ceux-ci choisissent l’option pour la lire. On peut aussi inclure facultativement une date d’échéance. Les annonces comportant une date d’échéance cessent d’être disponibles aux lecteurs une fois que l’échéance est passée.</p>]]>
+	</section>
+
+</topic>

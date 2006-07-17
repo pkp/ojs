@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE topic SYSTEM "../../../topic.dtd">
 
 <!--
@@ -8,14 +8,11 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Copyeditor's Role - Submissions
-  *
-  * Translation by Suporte Técnico SER, UFPR
-  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
-  *
+
   * $Id$
   -->
 
 <topic id="editorial/topic/000037" locale="pt_BR" title="Submissões" toc="editorial/toc/000012" key="editorial.copyeditorsRole.submissions">
-	<section><![CDATA[<p>Uma vez que o Editor de Texto loga na revista, clicando no link de Editor de Texto na Página do Usuário, ele é levado à fila de Submissões. Esta fila lista os trabalhos que lhe foram solicitados para editar,  assim como acesso às submissões que ele completou no passado. O Editor de Texto clica sobre os títulos dos trabalhos e é levado à página de Edição de Texto para esta submissão.</p>]]>	
+	<section><![CDATA[<p>Ao acessar o sistema, o Editor de Texto entra na fila de Submissões, clicando no link de Editor de Texto na sua Página do Usuário. Esta fila lista os trabalhos solicitados para edição,  assim como o histórico de submissões concluídas. O Editor de Texto clica sobre os títulos dos trabalhos para acessar cada submissão em processo de Edição de Texto.</p>]]>	
 	</section>
 </topic>

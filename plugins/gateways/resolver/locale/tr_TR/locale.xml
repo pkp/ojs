@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="tr_TR" full_name="Türkiye Türkçesi">
+	<message key="plugins.gateways.resolver.displayName">Çözümleme Eklentisi</message>
+	<message key="plugins.gateways.resolver.description">Bu eklenti sayı ve makalelerin kaynak bilgilerini çözümlemek içindir.</message>
+	<message key="plugins.gateways.resolver.errors.errorMessage">Verilenkaynak formatı ile bir tek giriş bile bulamadım. Verdiğiniz kaynak bilgisinin bu ADS sürümüne uygun olup, olmadığını kontrol ediniz.</message>
+	<message key="plugins.gateways.resolver.exportHoldings">Veriyi dışarı ver</message>
+</locale>

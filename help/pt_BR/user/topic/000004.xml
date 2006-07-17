@@ -8,15 +8,12 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * User Interface - Current and Archives
-  *
-  * Translation by Suporte Técnico SER, UFPR
-  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
-  *
+
   * $Id$
   -->
 
 <topic id="user/topic/000004" locale="pt_BR" title="Atual e Arquivo" toc="user/toc/000000" key="user.currentAndArchives">
 	<section>
-		<![CDATA[<p>As Edições da revista são disponibilizadas como Edições Atuais, e um conjunto de Edições Anteriores Arquivadas. O Gerente da Revista está apto a trazer para esta portal da revista Edições que forma publicadas antes da implantação deste sistema para que façam parte do Arquivo que será disponibilizado aos leitores no portal da revista.</p>]]>	
+		<![CDATA[<p>As Edições da revista são disponibilizadas como Edições Atuais, e um conjunto de Edições Anteriores Arquivadas. O Editor Gerente está apto a trazer para esta portal da revista Edições que forma publicadas antes da implantação deste sistema para que façam parte do Arquivo que será disponibilizado aos leitores no portal da revista.</p>]]>	
 	</section>
 </topic>

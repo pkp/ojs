@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE topic SYSTEM "../../../topic.dtd">
 
 <!--
@@ -7,15 +7,12 @@
   * Copyright (c) 2003-2006 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Layout Editor's Role - Proofreading
-  *
-  * Translation by Suporte Técnico SER, UFPR
-  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
-  *
+  * Editor's Role - Proofreading
+
   * $Id$
   -->
 
-<topic id="editorial/topic/000041" locale="pt_BR" title="Leitura de Prova" toc="editorial/toc/000013" key="editorial.layoutEditorsRole.proofreading">
-	<section><![CDATA[<p>O Autor e o Leitor de Prova vão aprovar os arquivos em suas versões formatadas devido a erros tipográficos e de formatação. Eles vão anotar as correções necessárias na caixa de texto de Correções, seguindo as instruções de Leitura de Prova. Uma vez que o Leitor de Prova comunica o Editor de Layout por email de que a leitura de prova foi concluída, o Editor de Layout retorna para aos Formatos de Prova e realiza as mudanças necessárias, deletando os arquivos que foram corrigidos e carregando as novas versões. Completando esta tarefa, o Editor de Layout pode desejar adicionar comentários à caixa de texto Correções (por exemplo explicando as mudanças), antes de clicar no ícone de email sob "Concluida" que vai direcionar um email para notificar o Editor de Seção que a submissão está pronta para ser escalonada para publicação.</p>]]>
+<topic id="editorial/topic/000041" locale="pt_BR" title="Leitura de Provas" toc="editorial/toc/000013" key="editorial.layoutEditorsRole.proofreading">
+	<section><![CDATA[<p>O Autor e o Leitor de Prova verificarão as versões formatadas por erros tipográficos e de formatação. Eles devem anotar as correções necessárias no campo Correções, seguindo as instruções de Leitura de Provas. Uma vez que o Leitor de Prova comunica o Editor de Layout via e-mail de que a leitura da prova foi concluída, o Editor de Layout retorna para os Formatos de Prova e realiza as mudanças necessárias, deletando os arquivos antigos e enviando as novas versões. Concluindo esta tarefa, o Editor de Layout pode desejar adicionar comentários ao campo Correções (por exemplo explicando as mudanças), antes de clicar no ícone de e-mail sob "Concluida" que vai direcionar um e-mail para notificar o Editor de Seção que a submissão está pronta para ser agendada para publicação.</p>]]>
 	</section>
 </topic>

@@ -8,15 +8,12 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Publishing Process Index 
-  *
-  * Translation by Suporte Técnico SER, UFPR
-  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
-  *
+
   * $Id$
   -->
 
 <topic id="publishing/topic/000000" locale="pr_BR" title="Processo de Publicação" toc="index/toc/000000" subtoc="publishing/toc/000000" key="publishing.index">
 	<section>
-		<![CDATA[<p>O Editor administra o Processo de Publicação criando Edições e/ou Volumes para revista, escalonando submissões para tais Edições, e então organizando seus Sumários, e então finalmente publicando a Edição. A revista pode ser publicada em vários formatos. O padrão típico é reunir submissões em uma edição que é publicada mensalmente (ou bimestralmente, ou semestralmente). em todo caso, algumas revistas eletrônicas preferem publicar submissões assim que elas estiverem prontas, como parte de um volume anual, que começa com a primenra submissão do ano e encerra com a última do ano, quando outro volume começa. Para o propósito deste texto de ajuda, o termo Edição é usado, embora uma edição consista de um Sumário que pode ser identificada por (a) Edição, Volume, Ano; (b) Volume, Ano; (c) Ano; ou (d) Título. A forma como as Edições devem ser identificadas é parte das configurações da revista que o Gerente da Revista deve ter configurado.</p>]]>	
+		<![CDATA[<p>O Editor administra o Processo de Publicação criando Edições e/ou Volumes para revista, agendando submissões para as Edições, organizando os Sumários, e finalmente publicando a Edição. A revista pode ser publicada em vários formatos. O padrão típico é reunir submissões em uma edição que é publicada mensalmente (ou bimestralmente, ou semestralmente). No entanto, algumas revistas eletrônicas preferem publicar submissões assim que elas estiverem prontas, como parte de um volume anual, que começa com a primenra submissão do ano e encerra com a última do ano, quando outro volume começa. Para o propósito desta Ajuda, é usado o termo Edição, embora uma edição consista de um Sumário que pode ser identificado por (a) Edição, Volume, Ano; (b) Volume, Ano; (c) Ano; ou (d) Título. A forma como as Edições serão identificadas é parte da configuração da revista que o Editor Gerente deve escolher.</p>]]>
 	</section>
 </topic>

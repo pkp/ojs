@@ -8,31 +8,12 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Management Pages - Setup 
-  *
-  * Translation by Suporte Técnico SER, UFPR
-  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
-  *
+
   * $Id$
   -->
 
-<topic id="journal/topic/000004" locale="pt_BR" title="Configurações" toc="journal/toc/000001" key="journal.managementPages.setup">
+<topic id="journal/topic/000004" locale="pt_BR" title="Configuração" toc="journal/toc/000001" key="journal.managementPages.setup">
 	<section>
-		<![CDATA[<p>O Gerente da Revista ajusta a revista, depois que o sistema foi instalado em um servidor web, trabalhando em cinco passos, preenchendo modelos e configurando o gerenciamento da revista. As configurações não precisam ser feitas todas de uma vez: os modelos podem ser preenchidos e salvos; o Gerente da Revista pode retornar às Configurações para completar as tarefas ou fazer mudanças a qualquer momento.</p>
-<p>Configurações está disponível para o Gerente da Revista na página de Gerenciamento da Revista, e contém seu próprio conjunto de textos de Ajuda construídos em cada um dos modelos. Configurar o portar na web da revista vai exigir decisões e textos para os seguintes itens, dentre outros, que podem ser preparados em conjunto com os Editores ou incluídos mais tarde.</p>
-<ul>
-<li>Contato Principal da Revista</li>
-<li>Contato Técnico</li>
-<li>Indicação de Escopo e Foco para Revista</li>
-<li>Políticas e Seções da Revista</li>
-<li>Diretrizes ao Autor</li>
-<li>Requisitos de Submissão para o Autor</li>
-<li>Elementos de Indexação e exemplos apropriados</li>
-<li>Política de Avaliação aos Pares</li>
-<li>Diretrizes ao Avaliador</li>
-<li>Política de Direitos Autorais</li>
-<li>Política de Acesso Aberto</li>
-<li>Quadro Editorial/Quadro de Avaliação</li>
-<li>Uso de Editores de Layout, Editores de Texto, e/ou Leitores de Prova</li>
-</ul>]]>	
+		<![CDATA[<p>Depois de concluída a instalação do sistema em um servidor Web, o Editor Gerente configura o sistema através dos cinco passos, preenchendo formulários e definindo o gerenciamento da revista. Não é obrigatório configurar a revista de uma vez: os formulários podem ser preenchidos aos poucos e salvos; o Editor Gerente pode retornar à Configuração para concluir as tarefas ou alterar informações a qualquer momento.</p><p>A Configuração está disponível para o Editor Gerente na página de Gerenciamento da Revista, e contém seu próprio conjunto de textos de Ajuda construídos em cada um dos formulários. Configurar o portal da revista vai exigir decisões e textos para os seguintes itens, dentre outros, que podem ser preparados em conjunto com os Editores ou incluídos mais tarde.</p><ul><li>Contato Principal da Revista</li><li>Contato Técnico</li><li>Indicação de Escopo e Foco para Revista</li><li>Políticas e Seções da Revista</li><li>Diretrizes para Submissão</li><li>Requisitos de Submissão para o Autor</li><li>Elementos de Indexação e exemplos apropriados</li><li>Política de Avaliação por Pares</li><li>Diretrizes para Avaliação</li><li>Política de Direito Autoral</li><li>Política de Acesso Livre</li><li>Comitê Editorial/Comitê Avaliador</li><li>Política de Assinaturas</li><li>Uso de Editores de Layout, Editores de Texto, e/ou Leitores de Prova</li></ul>]]>	
 	</section>
 </topic>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE toc SYSTEM "../../../toc.dtd">
 
 <!--
@@ -8,24 +8,22 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * table of contents for Journal Management - Roles. 
-  *
-  * Translation by Suporte Técnico SER, UFPR
-  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
-  *
+
   * $Id$
   -->
 
-<toc id="journal/toc/000003" locale="pt_BR" title="Funções" parent_topic="journal/topic/000003">
-	<topic id="journal/topic/000015" title="Gerente da Revista" />
+<toc id="journal/toc/000003" locale="pt_BR" title="Funções Editoriais" parent_topic="journal/topic/000003">
+	<topic id="journal/topic/000015" title="Editor Gerente" />
 	<topic id="journal/topic/000016" title="Editor" />
 	<topic id="journal/topic/000017" title="Editor de Seção" />
-	<topic id="journal/topic/000018" title="Editor de Layout" />
 	<topic id="journal/topic/000019" title="Editor de Texto" />
+	<topic id="journal/topic/000018" title="Editor de Layout" />
 	<topic id="journal/topic/000020" title="Leitor de Prova" />
 	<topic id="journal/topic/000021" title="Avaliador" />
 	<topic id="journal/topic/000022" title="Autor" />
 	<topic id="journal/topic/000023" title="Leitor" />
+	<topic id="journal/topic/000032" title="Gerente de Assinaturas" />
 
-	<breadcrumb url="journal/topic/000000" title="Gerenciamento das Revistas" />
-	<breadcrumb url="journal/topic/000003" title="Funções" />
+	<breadcrumb url="journal/topic/000000" title="Gerenciamento da Revista" />
+	<breadcrumb url="journal/topic/000003" title="Funções Editoriais" />
 </toc>

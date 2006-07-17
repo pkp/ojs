@@ -18,7 +18,7 @@
 		<![CDATA[<p>Molte funzioni amministrative sono dipsonibili nell'area di amministrazione del sito. Queste funzioni generalmente dovrebbero essere usate con cautela, dato che un uso improrpio potrebbe portare a risultati inaspettati.</p>
 		<p><em>Informazioni sul Sistema.</em> Informazioni generali sull'ambinte server e lo storici della versione di OJS  (inclusi passati upgrade). Viene fornita inoltre una interfaccia web per modificare il file di configurazione di OJS.</p>
 		<p><em>Expire User Sessions.</em> Elimina tutte le sessioni utente attive nel sistema, richiedendo ad ogni utente che attualmente &#x00E8; autenticato di rifare di nuov il log in al sistema.</p>
-		<p><em>Elimina i dati della Cache.</em> Elimina tutti i dati della cache, comprese informazioni locali, aiuto cache, e cerca nella cache.
-		<p><em>Elimina i Template Cache.</em> Elimina tutte le versioni nell memoria cache dei templates HTML. Questa funzione pu&#x00F2; essere utile a forzare di ricaricare i templates dopo che sono stati modificati.</p>]]>	
+		<p><em>Elimina i dati della Cache.</em> Elimina tutti i dati della cache, comprese informazioni locali, aiuto cache, e cerca nella cache.</p>
+		<p><em>Elimina i Template Cache.</em> Elimina tutte le versioni nell memoria cache dei templates HTML. Questa funzione pu&#x00F2; essere utile a forzare di ricaricare i templates dopo che sono stati modificati.</p>]]>
 	</section>
 </topic>

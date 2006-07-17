@@ -8,15 +8,12 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Users - All Users 
-  *
-  * Translation by Suporte Técnico SER, UFPR
-  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
-  *
+
   * $Id$
   -->
 
 <topic id="journal/topic/000011" locale="pt_BR" title="Todos os Usuários" toc="journal/toc/000002" key="journal.users.allUsers">
 	<section>
-		<![CDATA[<p>Esta lista inclui cada usuário que estiver registrado nesta revista ou em um conjunto de revistas neste portal. Ela pode ser ordenada por Funções. O Gerente da Revista tem a capacidade de se registrar como qualquer usuário. Isso pode ser extremamente útil quando for necessário prestar assistência ao usuário à distância, porque isso permite que o Gerente da Revista ganhe a percepção mais precisa do que está dando errado.</p>]]>	
+		<![CDATA[<p>Esta lista inclui todo usuário cadastrado no sistema de alguma forma. O Editor Gerente tem a permissão de assumir o papel de qualquer usuário, o que pode ser extremamente útil quando ao prestar assistência ao usuário à distância, pois permite ao Editor Gerente ter uma perspectiva mais precisa do problema relatado.</p>]]>	
 	</section>
 </topic>

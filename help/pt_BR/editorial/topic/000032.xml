@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE topic SYSTEM "../../../topic.dtd">
 
 <!--
@@ -8,15 +8,12 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Author's Role Index - Submissions
-  *
-  * Translation by Suporte Técnico SER, UFPR
-  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
-  *
+
   * $Id$
   -->
 
 <topic id="editorial/topic/000032" locale="pt_BR" title="Submissões" toc="editorial/toc/000009" key="editorial.authorsRole.submissions">
 	<section>
-		<![CDATA[<p>Logando na revista e selecionando a Função de Autor (um Autor pode também ter outras Funções, tais como Revisor) na Página do Usuário, o Autor é direcionado à fila de Submissões. O Autor também tem acesso a submissões passadas feitas à revista.</p>]]>	
+		<![CDATA[<p>Ao acessar o sistem e selecionando a Função de Autor (um Autor pode também ter outras Funções, tais como Avaliador) na Página do Usuário, o Autor é direcionado à fila de Submissões. O Autor também pode acessar o histórico de suas submissões.</p>]]>	
 	</section>
 </topic>

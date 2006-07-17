@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE topic SYSTEM "../../../topic.dtd">
 
 <!--
@@ -8,15 +8,12 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Editorial Process Index 
-  *
-  * Translation by Suporte Técnico SER, UFPR
-  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
-  *
+
   * $Id$
   -->
 
 <topic id="editorial/topic/000000" locale="pt_BR" title="Processo Editorial" toc="index/toc/000000" subtoc="editorial/toc/000000" key="editorial.index">
 	<section>
-		<![CDATA[<p>O Processo Editorial para uma submissão para uma revista consiste de uma revisão, tipicamente uma revisão cega aos pares, seguida de uma decisão do editor de aceitar ou recusar a submissão. Se aceita no estágio de Revisão do Processo Editorial, a submissão então vai para o estágio de Edição que consistem na Edição do Texto, Layout e Leitura de Prova. A submissão é enviada para fila de Agendar Submissão para ser publicada em uma edição da revista. Dependendo de como a revista é organizada, o Processo Editorial pode ser conduzido por um único Editor ou por um time de Editores, Editores de Seção, Editores de Texto, Editores de Layout, e Leitores de Prova.</p>]]>	
+		<![CDATA[<p>O Processo Editorial para uma submissão para uma revista consiste de uma revisão, tipicamente uma revisão cega aos pares, seguida de uma Decisão Editorial de aceitar ou recusar a submissão. Se aceita no estágio de Revisão do Processo Editorial, a submissão então vai para o estágio de Edição que consistem na Edição do Texto, e Leitura de Provas. A submissão é agendada para publicação em uma edição da revista. Dependendo de como a revista é organizada, o Processo Editorial pode ser conduzido por um único Editor ou por um time de Editores, Editores de Seção, Editores de Texto, Editores de e Leitores de Prova.</p>]]>	
 	</section>
 </topic>

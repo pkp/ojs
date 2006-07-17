@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE topic SYSTEM "../../../topic.dtd">
 
 <!--
@@ -8,18 +8,15 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Author's Role Editing - Copyediting 
-  *
-  * Translation by Suporte Técnico SER, UFPR
-  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
-  *
+
   * $Id$
   -->
 
 <topic id="editorial/topic/000035" locale="pt_BR" title="Edição de Texto" toc="editorial/toc/000011" key="editorial.authorsRole.editing.copyediting">
 	<section>
-		<![CDATA[<p>O Editor de Texto prepara um texto inicial da submissão trabalhando diretamente no arquivo eletrônico da submissão, com sugestões para melhorar a floência da linguagem e a comunicação do significado, e com mudanças para garantir que a submissão atenda ao formato e estilo da revista. O Editor de Texto carrega o texto da submissão e envia um email ao Autor e Editor de Seção indicando que versão inicial está pronta. O Autor pode acessar esta versão no Passo 2 da Edição de Texto clicando no nome do arquivo (para consultar arquivos carregados, o Autor clica no nome do arquivo, e abre ou salva o arquivo).</p>
-		<p><i>Revisão do Texto pelo Autor</i>. O Autor revisa todas as propostas de mudanças e pode fazer novas sugestões ou mudanças na submissão de acordo com as instruções do Editor de Texto descritas por esta revista. (esta é a última chance de fazer tais mudanças, durante a Leitura de Prova, somente erros tipográficos e de formatação podem ser corrigidos). O Autor deve então responder qualquer Pergunta ao Autor (por exemplo, faltando numeração de página, etc.) do Editor de Texto. Quando terminado, o Autor salva o arquivo no computador e então o carrega no Passo 2 da Edição de Texto, que o torna disponível para o Editor de Texto.</p>
-		<p><i>Revisar Metadados</i>. O Autor deve revisar os Metadados da submissão procurando por erros ou omissões. O metadado é usado para indexar a submissão em uma publicação e vai ajudar, dependendo de como é indexado, os leitores a localizarem o item. Finalmente, o Autor clica no ícone do email sob "Completo" para notificar o Editor de Seção e Editor de Seção que o Passo esta concluído.<p>
+		<![CDATA[<p>O Editor de Texto edita o texto da submissão, trabalhando diretamente no arquivo eletrônico da submissão (baixando do sistema e salvando na sua máquina, em uma pasta específica para fácil controle e acesso), com sugestões para melhorar a fluência da leitura e compreensão do texto, e com alterações necessárias para garantir a conformidade da submissão com as normas da revista. O Editor de Texto envia sua versão para o sistema e comunica via e-mail o Autor e o Editor de Seção, indicando que sua versão está disponível. O Autor pode acessar esta versão no Passo 2 da Edição de Texto clicando no nome do arquivo (para consultar arquivos enviados, o Autor clica no nome, e escolhe abrir &mdash; salvando o documento em uma pasta temporária do seu computador &mdash; ou salvar &mdash; escolhendo onde deverá ser salvo o documento).</p>
+		<p><i>Revisão do Texto pelo Autor</i>. O Autor revisa todas as sugestões de alteração, baixando para seu computador o documento disponibilizado pelo Editor de Texto, podendo incluir novas sugestões ou alterações na submissão, seguindo as instruções de Edição de Texto definidas pela revista (esta é a última chance de realizar alterações substanciais, pois durante a Leitura de Provas somente erros tipográficos e de formatação deverão ser corrigidos). O Autor deve também responder às Questões para o Autor (por exemplo, faltando numeração de imagens, etc.) do Editor de Texto. Ao concluir, o Autor salva o arquivo e então envia a versão atualizada no Passo 2 da Edição de Texto, disponibilizando-o para o Editor de Texto.</p>
+		<p><i>Revisar Metadados</i>. O Autor deve também revisar os Metadados da submissão procurando por erros ou omissões. O metadado é fundamental para indexar a submissão em uma publicação, auxiliando na sua recuperação mais rápida, dependendo de como é indexado, pelos leitores, aumentando o acesso e possível impacto da pesquisa. Finalmente, o Autor clica no ícone do e-mail sob "Completo" para notificar o Editor de Texto e Editor de Seção que concluiu sua tarefa.<p>
 		]]>	
 	</section>
 </topic>

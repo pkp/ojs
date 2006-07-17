@@ -8,29 +8,30 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Site Administration - Site Management 
-  *
-  * Translation by Suporte Técnico SER, UFPR
-  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
-  *
+
   * $Id$
   -->
 
 <topic id="site/topic/000002" locale="pt_BR" title="Gerenciamento do Portal" toc="site/toc/000000" key="site.siteManagement">
 	<section>
-		<![CDATA[<p>O OJS foi projetado para ser um sistema multi-revistas, e o Administrador do Portal é responsável pelas configurações em nível de portal e criação de novas revistas a serem hospedados no mesmo portal.</p>]]>	
+		<![CDATA[<p>O sistema foi desenvolvido para gerenciar várias revistas, sendo o Administrador do Sistema o responsável pelas configurações em nível de portal e criação de novas revistas a serem hospedados no sistema. Cada revista é independente, com a exceção dos cadastros de usuários: enquanto um usuário pode assumir várias funções em várias revistas, o usuário utilizará o mesmo endereço de e-mail e login independente da revista.</p>]]>	
 	</section>
 	
-	<section title="Ajustes do Portal">
-		<![CDATA[<p>Informações básicas são cadastradas pelo administrador do Portal e são aplicaveias a todas as revistas hospedadas no portal, incluindo o Título e a Descrição do portal, e informações de contato.</p>
-		<p><em>Redirecionamento da Revista.</em> Esta configuração pode ser usada para garantir que todas as requisições são redirecionadas para um portal de revista específico. Tipicamente esta configuração é usada quando um site está hospedando apenas uma revista.</p>]]>
+	<section title="Configurações do Portal">
+		<![CDATA[<p>Informações básicas são cadastradas pelo Administrador do Sistema, aplicáveis a todas as revistas hospedadas no portal, incluindo o Título e a Descrição do portal, além das informações para contato.</p>
+		<p><em>Redirecionamento da Revista.</em> Esta opção pode ser usada para garantir o redirecionamento do portal para uma revista específica. Tipicamente esta opção é utlizada para hospedar uma única revista no sistema.</p>]]>
 	</section>
 	
 	<section title="Revistas Hospedadas">
-		<![CDATA[<p>Como o OJS permite qualquer número individual e distinto de portais de revistas a serem gerados, novas revistas podem ser criadas a qualquer momento. Cada revista que foi criada pode ser acessada por uma única URL do portal do OJS que é baseado em um nome de caminho definido pelo Administrador do Portal. Revistas que estão atualmente em processo de configuração podem ser escondidas do portal principal do OJS até que estejam prontas para serem colocadas no ar.</p>]]>
+		<![CDATA[<p>Como o sistema permite gerar qualquer número individual e distinto de revistas, novas revistas podem ser criadas a qualquer tempo. Cada revista criada pode ser acessada por uma URL única baseada no caminho definido pelo Administrador do Sistema. Revistas em processo de configuração podem permanecer indisponíveis ao público até estarem prontas para lançamento.</p>]]>
 	</section>
 	
 	<section title="Idiomas">
-		<![CDATA[<p>O OJS foi projetado para ser um sistema multi-lingüe, permitindo que as revistas suportem uma variedade de idiomas hospedadas em um único portal. O Administrador do Portal pode especificar o idioma padrão para o sistema e instalar traduções para que se tornem disponiveis nas revistas.</p>
-		<p>Pacotes adicionais de idiomas tipicamente estarão disponíveis no <a href="http://pkp.sfu.ca/" target="_blank">portal web</a> do Open Journal System assim que as traduções (contribuição dos usuários) são recebidas. Estes pacotes podem ser instalados em um sistema OJS existente para fazê-lo disponível às revistas.</p>]]>
+		<![CDATA[<p>O sistema foi desenvolvido como um sistema multilingue, permitindo que revistas que trabalhem com conteúdo multilingue sejam hospedadas em um único sistema. O Administrador do Sistema pode especificar o idioma padrão para o sistema e instalar novas traduções para uso nas revistas.</p>
+		<p>Pacotes adicionais de idiomas estarão normalmente disponíveis no <a href="http://pkp.sfu.ca/" target="_blank">portal web</a> do sistema assim que as contribuições da comunidade forem recebidas. Estes pacotes podem ser instalados em um sistema existente para disponibilização às revistas.</p>]]>
+	</section>
+	
+	<section title="Fontes de Autenticação">
+		<![CDATA[<p>O sistema normalmente autentica usuários por sua base de dados interna. No entanto, é possível utilizar outros métodos de autenticação, como LDAP. Outras fontes são implementadas na forma de plugins; veja a documentação disponível com o sistema e cada plugin para maiores detalhes.</p>]]>
 	</section>
 </topic>

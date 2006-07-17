@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE topic SYSTEM "../../../topic.dtd">
 
 <!--
@@ -8,15 +8,12 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Editor's Role Submissions - In Editing 
-  *
-  * Translation by Suporte Técnico SER, UFPR
-  * Eduardo da Rocha Ruthes (eruthes@gmail.com)
-  *
+
   * $Id$
   -->
 
 <topic id="editorial/topic/000017" locale="pt_BR" title="Em Edição" toc="editorial/toc/000002" key="editorial.editorsRole.submissions.inEditing">
 	<section>
-		<![CDATA[<p>Submissões nesta fila estão indo para Edição de Texto, Layout e Leitura de Prova. Quando um Editor de Seção ou Editor clica no título de uma submissão na fila Em Avaliação, eles são direcionados para página de Submissões em Edição.</p>]]>	
+		<![CDATA[<p>Submissões nesta fila estão em Edição de Texto, e Leitura de Provas. Quando um Editor de Seção ou Editor clica no título de uma submissão neste estado, eles são encaminhados para a página de Submissões em Edição.</p>]]>	
 	</section>
 </topic>
