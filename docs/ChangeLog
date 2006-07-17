@@ -1,3 +1,15 @@
+2006-07-17 15:58  alec
+
+	* tools/buildpkg.sh: #2131# Added missing empty directories to
+	  buildpkg.sh
+
+2006-07-17 13:12  alec
+
+	* dbscripts/xml/install.xml, dbscripts/xml/upgrade.xml,
+	  dbscripts/xml/version.xml, docs/ChangeLog, docs/README,
+	  docs/RELEASE, docs/release-notes/README-2.1.1: #2131# Final
+	  commits for smoke-test release candidate
+
 2006-07-17 10:32  alec
 
 	* dbscripts/xml/data/locale/tr_TR/email_templates_data.xml,
