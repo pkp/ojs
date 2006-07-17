@@ -37,19 +37,18 @@
 		<note file="release-notes/README-2.0.2"/>
 	</upgrade>
 
-	<upgrade minversion="2.0.2.0" maxversion="2.0.2.1">
-		<!-- 2.0.2.x to 2.1.0 -->
+	<upgrade minversion="2.0.0.0" maxversion="2.0.2.1">
+		<!-- 2.0.2.x (or below) to 2.1.0 -->
 		<data file="upgrade/2.1.0_update.xml"/>
 		<note file="release-notes/README-2.1.0"/>
 	</upgrade>
 
-	<upgrade minversion="2.1.0.0" maxversion="2.1.0.1">
-		<!-- 2.1.0.x to 2.1.1 -->
+	<upgrade minversion="2.0.0.0" maxversion="2.1.0.1">
+		<!-- 2.1.0.x (or below) to 2.1.1 -->
 		<data file="upgrade/2.1.1_update.xml"/>
 		<code function="togglePublicDisplaySubscriptionTypes"/>
 		<code function="designateReviewVersions"/>
 		<code function="migrateRtSettings"/>
-		<code function="rebuildSearchIndex"/>
 		<note file="release-notes/README-2.1.1"/>
 	</upgrade>
 </install>

@@ -12,7 +12,7 @@
   * $Id$
   -->
 
-<install version="2.1.1.1">
+<install version="2.1.1.0">
 	<code function="createDirectories"/>
 	<code function="createDatabase"/>
 	<schema file="ojs_schema.xml"/>

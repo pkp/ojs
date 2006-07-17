@@ -1,6 +1,6 @@
-OJS 2.1.0 Release Notes
-CVS tag: ojs-2_1_0-1
-Release date: February 3, 2006
+OJS 2.1.1 Release Notes
+CVS tag: ojs-2_1_1-0
+Release date: July 17, 2006
 =================================
 
 
@@ -11,139 +11,135 @@ See config.TEMPLATE.inc.php for a description and examples of all supported
 configuration parameters.
 
 New config.inc.php parameters:
-	- general:base_url[journal_path] - Override the base URL for the
-		specified journal (or "index" for pages not affiliated with
-		any particular journal)
-	- email:enable_attachments - enable or disable email attachments on
-		all email templates for which it is an optional feature
-
-	- cache:cache - This paramter is REQUIRED and must be added to
-	  existing deployments! Specifies the caching method to use (one of
-	  the following: memcache / file / none)
-
-	- cache:memcache_hostname - the hostname of the memcache server
-	- cache:memcache_port - the port of the memcache server
-
-The various data caches have been moved into the cache directory. The
-following directories are no longer used and can be deleted:
-	- templates/t_cache
-	- templates/t_compile
-	- templates/t_config
-	- locale/cache
-	- help/cache
-	- [files_dir]/_db
+	- general:allow_url_fopen - Allows disabling of url-based fopen calls,
+	          even if the feature is available in PHP. If this is disabled,
+		  the FileWrapper.inc.php class (classes/file) will be used.
 
 New Features
 ------------
-	- #954# Added Editor/Review board feature (allows custom journal mastheads)
-	- #977# Added Journal Statistics and Report Generator
-	- #1478# Cache directories merged.
-	- #1654# Allow site URL to be overridden (for proxies)
-	- #1712# Mode to use query params instead of PATH_INFO
-	- #1718# Author agreement with Copyright Notice added to submission
-	- #1750# Issue-specific section ordering
-	- #1771# Create Subscription Manager role
-	- #1775# Allow Editors to search on author, reviewer, etc. in Archives
-	- #1799# Editors need indication of review due date
-	- #1877# Erudit export enhancements
-	- #1880# Optimization
-	- #1882# Remove reliance on allow_url_fopen
-	- #1883# Enable attachments in all emails
-	- #1887# Generic plugin support added
-	- #1888# Add "hooks" support for plugins
-	- #1889# Authentication plug-ins
-	- #1893# Additional URL rewriting in HTML galleys
-	- #1905# Warn authors when submitting without submission file
-	- #1906# One-click access for reviewers
-	- #1910# Allow inlining of some types of supplementary files
-	- #1911# Add support for issue-specific stylesheets
-	- #1913# Generic data caching infrastructure
-	- #1914# Add plugin settings infrastructure
-	- #1915# UI settings clobbered in Journal Setup
-	- #1920# Can designate both submission Section Editor and Editor
-	- #1922# Section titles should be localized
-	- #1930# Add Country to user/author profiles
-	- #1932# Allow limited HTML in author biography
-	- #1935# Reading Tools / Google Scholar updates
-	- #1939# Add "Expedite Submission" function
-	- #1960# Add support for Google Scholar gateway
-	- #1961# #2010# Add Portuguese (Brasil) locale
-	- #1968# Clean up template links to CSS files
-	- #1976# Added transcoding (iconv) support to OJS 1.x migration
-	- #1981# Editor/Author Correspondence changes
-	- #1987# Add link to Registration page after installation
-	- #2009# Add Spanish (Spain) translation
-	- #2024# Added reset button to Manager's email edit
-	- #2025# Added localization of search operators
-	- #2032# Export XML now includes web-accessible DTDs
-
+	- #977# #2218# Statistics and reports updates
+	- #1632# RSS/RSS2/Atom support added
+	- #1633# Announcements feature added
+	- #2115# Added duplicate account list for OJS 1.x migrations
+	- #2082# Added "Merge Users" feature
+	- #2125# Counter report 1a
+	- #2126# Abstracted alpha lists
+	- #2134# Editorial process modifications
+	- #2151# Added simple article resolver
+	- #2172# Added URL to user/author profiles
+	- #2178# Thesis abstract plugin
+	- #2184# TinyMCE WYSIWYG editor support added
+	- #2185# Layout template support added
+	- #2187# Layout Editors need to know submission's issue
+	- #2197# Add electronic vs. print ISSN distinction
+	- #2200# Make registry/inlineTypes.txt apply to article galleys
+	- #2206# Reviewing Interests added to Reviewer Enrollment
+	- #2335# CrossRef export support added
+	- #2335# Pubmed export support added
+	- #1458# Help files updated
+	- #2090# #2234# #2310# Editor decision refinements
+	- #2100# #2101# Native import/export tune-ups (XSL etc)
+	- #2119# Add pages info into OAI feeds
+	- #2143# #2222# Editorial assignment modifications
+	- #2144# #2182# Editorial page refinements
+	- #2154# #2236# "Ensuring a Blind Review" instructions/help refactoring
+	- #2159# Added locale checker
+	- #2162# #2250# #2254# Reading Tools layout refinements
+	- #2166# "About this publishing system" should include version
+	- #2213# #1243# #1739# Subscription module updates
+	- #2220# Plugins page layout changes
+	- #2225# Galley edit layout changes
+	- #2230# "Details" link should not be displayed when unnecessary
+	- #2233# History refinements
+	- #2240# Setup layout changes for 3.3
+	- #2286# Added sup and sub to allowed HTML
+	- #2297# Added switch de-bouncer to install and journal create forms
+	
 Bug Fixes
 ---------
-	- #1184# Removed buggy page footer
-	- #1603# Make creator metadata field more accurate
-	- #1676# "Add New Reviewer" in Select Reviewers is ambiguous
-	- #1768# In Select Reviewers table, change + to actual number
-	- #1794# Export by role can export the same user multiple times
-	- #1809# In Sections (About the Journal), "Editors" should not appear if empty.
-	- #1837# restrictReviewerFileAccess option only affects template
-	- #1855# User list not sorted for "all users" and "enroll search"
-	- #1866# "Register for Other Journals" should display "none" if none exist
-	- #1875# Native import tool discards isCommandLine on import
-	- #1879# Boolean values in native import plugin cause PostgreSQL errors
-	- #1884# Remove additional public IDs from Erudit export plugin
-	- #1885# Plugins shouldn't be using require(...) or include(...)
-	- #1886# Release notes should be escaped
-	- #1898# Large imports can timeout
-	- #1907# Warning message when issue open access date is null
-	- #1908# numWeeksPerReview setting needs default value
-	- #1909# HTML galley img rewriting "src=" should be case insensitive
-	- #1902# Article title should be able to contain limited HTML
-	- #1917# PHP 5.0.5 reference errors
-	- #1918# #2057# Missing locale keys
-	- #1919# Asterisk for required fields on forms can be orphaned
-	- #1923# Standardize "Log In"/"Login"/"Sign In" terminology
-	- #1928# Date Published should be optional in native.dtd
-	- #1929# Command-line tool chdir() forces XML imports to be in tree
-	- #1931# Change {translate_assign ...} to {translate|assign ...}
-	- #1933# Automated Reminders not using modified templates
-	- #1938# Manual install violates NOT NULL constraints
-	- #1940# Odd behavior when disabling emails
-	- #1944# Reviewer declining a review should send submission to archive
-	- #1945# Site Administrator should be able to access manager funcs
-	- #1948# mime_content_type calls should use String::mime_content_type
-	- #1954# DB Error in insertTemporaryFile
-	- #1956# DB Error in PublishedArticleDAO::getPublishedArticles
-	- #1957# Native import plugin ignores "pages" node
-	- #1966# Native import/export does not support article getType()
-	- #1973# #1974# Reference errors
-	- #1975# Authors should not be able to edit Metadata after Copyedit
-	- #1977# Migration still uses string constants for enableComments
-	- #1978# SELECT DISTINCT must select ORDER BY columns
-	- #1980# SE can't upload files for Setup 2.2 email reviewers
-	- #1984# Site admin validation not working
-	- #1985# Search Results page not determining access status properly
-	- #1986# Function called on non-object in UserManagementForm.inc.php
-	- #1989# #1990# #2006# #2044# Wording changes
-	- #1998# Subject vs. Keywords terminology confusion
-	- #2000# Change spacing of required fields in forms
-	- #2001# Missing locale key in article history
-	- #2002# Event log does not indicate "editor to enter"
-	- #2005# Corrected "Enroll User" function specifics
-	- #2007# xmllint validation errors for OJS XML
-	- #2011# Journal Logo in setup 5.1
-	- #2020# Searching/indexing updates
-	- #2022# Supplemental file public IDs cannot remain the same
-	- #2026# Corrected variable clobbering
-	- #2029# Admin languages page over-width on IE
-	- #2030# XMLWriter is now a reserved PHP keyword
-	- #2036# Missing help for current locale causes errors
-	- #2037# "Interests" field ignored when existing user self-registers
-	- #2047# Safe mode complaints about set_time_limit
-	- #2053# $this / $smarty changes and reference bug avoision
-	- #2054# DIRECTORY_SEPARATOR preferred to slash or backslash
-	- #2055# PHP <4.3.1 doesn't return proper values from require
-
-Removed Features
-----------------
-	- #1396# Notify All Reviewers feature removed. The associated emails
-	  are now unused: REVIEW_REQ_MULTI_ATTACHED; REVIEW_REQUEST_MULTI
+	- #1814# Removed abstract heading from emails when abstracts disabled
+	- #2045# #2214# #2237# Default submission checklist modified
+	- #2061# #2066# #2064# #2157# #2158# #2174# #2202# #2209# #2210# #2211#
+	  #2221# #2232# #2301# Wording changes
+	- #2062# #2063# #2271# Asterisks / required fields modifications
+	- #2067# #2127# #2150# #2161# #2173# #2315# Paging issues
+	- #2068# #2069# Hook name corrections & updates
+	- #2072# Typo in Section Editor's interface
+	- #2076# "Select All" email bug in People Management
+	- #2077# "Table of Contents" link from issue title page on journal home
+	- #2078# Issue title not displayed on cover or ToC
+	- #2080# Template pre-compile tune-ups
+	- #2083# Dirname peculiarity with webroot installations on Windows
+	- #2085# #2164# Notify Users email update
+	- #2086# Author acknowledgement BCCs
+	- #2087# Submission counts not always correct
+	- #2092# Code cleanup -- references and commenting
+	- #2095# Cancel button behaving unexpectedly
+	- #2096# Erudit command-line export
+	- #2097# Installer error message uses incorrect variable name
+	- #2102# Reminder email cannot be sent to reviewer
+	- #2103# Prevent editors from modifying addresses on one-click emails
+	- #2104# "About" link corrections
+	- #2105# Moved custom items
+	- #2106# Email update registrations
+	- #2107# OAI with path_info disabled
+	- #2109# ADODB cache should be flushed with data caches
+	- #2113# fopen should use binary mode
+	- #2116# #2148# Proofreading dates not showing up as expected
+	- #2118# Automated reminders and one-click access
+	- #2120# Multi-language import/export
+	- #2123# Open access policy display
+	- #2124# Author index and UTF-8
+	- #2128# Issue CSS not deleted when issue deleted
+	- #2129# Citation tool export updates
+	- #2130# #2195# #2245# #2302# Custom section ordering
+	- #2132# Handling of double-slashes in URLs
+	- #2135# Author/editor email addressing changes
+	- #2136# Submission page email icons should result in log additions
+	- #2142# Editorial assignment notification email problem
+	- #2145# Published article archive/restore problem
+	- #2146# Articles without titles
+	- #2147# Editor becomes Section Editor
+	- #2152# Main RT admin page does not check credentials
+	- #2153# Corrected bad redirect
+	- #2156# Corrected breadcrumb
+	- #2163# Email sender not correctly set
+	- #2165# Mail template not storing journal param correctly
+	- #2169# Typo in systemConfigUpdated.tpl
+	- #2179# OAI output should not include HTML
+	- #2180# Erudit export should not include HTML
+	- #2183# GenericPlugin::installData tune-up
+	- #2186# Proofreader email error
+	- #2188# Authors index not limited to journal
+	- #2189# Layout Editor needs to be able to upload Layout Version
+	- #2190# Define Terms does not work with path_info disabled
+	- #2191# Plugin locale files not automatically flushed when necessary
+	- #2192# Generic plugins must check installed status before using DB
+	- #2196# Section form incorrectly lists other languages' abbreviations
+	- #2198# templates/issue/header.tpl accesses $issue without checking
+	- #2201# XML file validation problems
+	- #2212# Cannot send layout version complete message
+	- #2215# Issue preview title
+	- #2216# Copyedit Step 3 upload
+	- #2217# Article should be moved to archive
+	- #2228# Reviewer email error
+	- #2235# Field lengths mismatch between UI and DB
+	- #2238# Email link in email history has key instead of text
+	- #2241# Plugin schema installation
+	- #2246# Journal Manager's "Make Directory" in files browser
+	- #2247# Advisory comment for invalid CSS
+	- #2248# Image problem with HTML galleys
+	- #2250# "type" column for temporary files unused and not null
+	- #2262# Section deletion violates constraint
+	- #2276# Suprious index in XML schema
+	- #2279# Site primary locale not used for journal creation
+	- #2281# Request::getRemoteDomain does not return domain
+	- #2282# Subscription domain and ip range should be set to null ...
+	- #2284# Imported issues without publication date
+	- #2285# URL not working in reminder email to reviewers
+	- #2300# Reviewer cannot record recommendation
+	- #2314# "Select template" feature not working for editorial team
+	- #2316# Remove additional browser IPs if multiple addresses reported
+	- #2328# Reference abuse in native export
+	- #2329# BCCs not received when screen names included
+	- #2333# User import links do not work
