@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * LDAP authentication plugin localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="tr_TR" full_name="Türkiye Türkçesi">
+	<message key="plugins.auth.ldap.displayName">LDAP</message>
+	<message key="plugins.auth.ldap.description">LDAP kullanıcı tanıma eklentisi.</message>
+	
+	<message key="plugins.auth.ldap.settings">LDAP Ayarları</message>
+	<message key="plugins.auth.ldap.settings.hostname">Sunucu adı</message>
+	<message key="plugins.auth.ldap.settings.hostname.description">Örneğin "ldap.example.com", veya "ldaps://ldap.example.com" (SSL erişimi var ise)</message>
+	<message key="plugins.auth.ldap.settings.port">Sunucu portu</message>
+	<message key="plugins.auth.ldap.settings.port.description">İsteğe bağlı. Ön tanımlı değerler: 389 (LDAP) veya 636 (LDAP over SSL)</message>
+	<message key="plugins.auth.ldap.settings.basedn">Base DN</message>
+	<message key="plugins.auth.ldap.settings.basedn.description">Örnek, "ou=people,dc=example,dc=com"</message>
+	<message key="plugins.auth.ldap.settings.managerdn">Manager DN</message>
+	<message key="plugins.auth.ldap.settings.managerdn.description">Örnek, "cn=Manager,dc=example,dc=com"</message>
+	<message key="plugins.auth.ldap.settings.managerpwd">Manager şifresi</message>
+	<message key="plugins.auth.ldap.settings.managerpwd.description">The manager DN ve şifresi yalnız kullanıcı profili, şifresi bilgilerinin senkronizasyonu seçildi ise gereklidir. Eğer LDAP yalnızca siteye giriş için kullanılacak ise gerekli değildir.</message>
+	<message key="plugins.auth.ldap.settings.pwhash">Şifre encryption</message>
+	<message key="plugins.auth.ldap.settings.pwhash.description">Hash biçimi şifrenin sunucuda saklanması için kullanılır. SSHA önerilir (PHP >= 4.3.0 gerektirir).</message>
+	<message key="plugins.auth.ldap.settings.saslopt">SASL Ayarları (opsiyonel)</message>
+	<message key="plugins.auth.ldap.settings.sasl">Basit tanımlama yerine SASL kullan (PHP >= 5  gerektirir.)</message>
+	<message key="plugins.auth.ldap.settings.saslmech">SASL mekanizması</message>
+	<message key="plugins.auth.ldap.settings.saslmech.description">Örnek, "DIGEST-MD5"</message>
+	<message key="plugins.auth.ldap.settings.saslrealm">Realm</message>
+	<message key="plugins.auth.ldap.settings.saslauthzid">Requested authorization ID</message>
+	<message key="plugins.auth.ldap.settings.saslprop">SASL güvenlik seçenekleri</message>
+</locale>

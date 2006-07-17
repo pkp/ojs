@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="tr_TR" full_name="Türkiye Türkçesi">
+	<message key="plugins.importexport.erudit.displayName">Erudit Makale Dışarı Verme Eklentisi</message>
+	<message key="plugins.importexport.erudit.description">Makaleleri İngiliz Erudit DTD sistemi ile sistemden vermek için kullanılır</message>
+
+	<message key="plugins.importexport.erudit.cliUsage"><![CDATA[Kullanımı: {$scriptName} {$pluginName} [xmlFileName] [journalPath] [articleId]
+]]></message>
+	<message key="plugins.importexport.erudit.export">Dışarı Veri Ver</message>
+	<message key="plugins.importexport.erudit.export.issues">Sayının tüm verisini dışarı ver</message>
+	<message key="plugins.importexport.erudit.export.sections">Tüm bölüm verisini  dışarı ver</message>
+	<message key="plugins.importexport.erudit.export.articles">Makale Verisini dışarı ver</message>
+
+	<message key="plugins.importexport.erudit.selectIssue">Sayıyı Seçin</message>
+	<message key="plugins.importexport.erudit.selectArticle">Makaleyi Seçin</message>
+
+	<message key="plugins.importexport.erudit.cliError">HATA:</message>
+	<message key="plugins.importexport.erudit.error.unknownJournal">Belirtilen "{$journalPath}" sistemde bulunmayan bir dizin.</message>
+	<message key="plugins.importexport.erudit.export.error.couldNotWrite">"{$fileName}" dosyasına yazamıyorum.</message>
+	<message key="plugins.importexport.erudit.export.error.articleNotFound">"{$articleId}" tanımı ile makale bulamadım.</message>
+</locale>

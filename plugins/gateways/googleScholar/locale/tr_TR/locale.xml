@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="tr_TR" full_name="Türkiye Türkçesi">
+	<message key="plugins.gateways.googleScholar.displayName">Google Scholar Geçiş Eklentisi</message>
+	<message key="plugins.gateways.googleScholar.description">Bu eklenti belirtilen dergiden Google Scholar sitesine veri transferi için geçiş sağlar.</message>
+	<message key="plugins.gateways.googleScholar.settings">Ayarlar</message>
+	<message key="plugins.gateways.googleScholar.settings.description"><![CDATA[<p>Google Scholar Geçiş Eklentisi Google Scholar veri toplayıcısının dergideki verileri toplamasını sağlar. Bu eklenti etkinleştiğinde <span class="highlight">{$directoryUrl}</span> dizininde dizin belgesi bulunmalıdır (aka publisher's information).</p>
+<p>Google Scholar ADS'lerinde isteğe bağlı olan bazı bilgileri "gerekli" olarak istemektedir.
+Verinizin Google Scholar standardına uyup, uymadığını "Veriyi Kontrol Et" düğmesini kullanarak görebilirsiniz.</p>]]></message>
+	<message key="plugins.gateways.googleScholar.checkData">Veriyi Kontrol Et</message>
+	<message key="plugins.gateways.googleScholar.errors">Hata mesajları</message>
+	<message key="plugins.gateways.googleScholar.errors.noErrors">Hata bulunamadı.</message>
+
+	<message key="plugins.gateways.googleScholar.settings.publisherName">Yayıncı adı</message>
+	<message key="plugins.gateways.googleScholar.settings.publisherLocation">Yayıncı yeri</message>
+	<message key="plugins.gateways.googleScholar.settings.publisherResultName">Yayıncı Result Name</message>
+	<message key="plugins.gateways.googleScholar.settings.contact">İletişim içim e-posta adresi</message>
+	<message key="plugins.gateways.googleScholar.settings.addContact">İletişim içim e-posta adresi ekle</message>
+
+	<!-- Error message -->
+	<message key="plugins.gateways.googleScholar.errors.noPublisherName">Yayıncı adı verilmemeiş, bu alanın doldurulması gereklidir.</message>
+	<message key="plugins.gateways.googleScholar.errors.noContacts">İletişim içim e-posta adresi verilmemiş veya verilenler uygun değil.</message>
+	<message key="plugins.gateways.googleScholar.errors.noIssn">Dergi ISSN numarası verilmemiş. Lütfen dergi kurulumu 1. adıma bakınız. .</message>
+	<message key="plugins.gateways.googleScholar.errors.errorMessage">Google Schlar için veri veremedim. Eklenti tam olarak yapılandırılmamış. Özgün bilgi için Dergi Yöneticisi bölümünde Veriyi Kontrol Et işlevine başvurunuz.</message>
+</locale>

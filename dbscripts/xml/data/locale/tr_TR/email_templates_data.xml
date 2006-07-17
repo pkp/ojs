@@ -1,0 +1,789 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../../../dtd/xmldata.dtd">
+
+<!--
+ * email_templates_data.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Email templates data XML file (English).
+  *
+  * $Id$
+  -->
+
+<data>
+	<table name="email_templates_default_data">
+		<field_default name="locale">tr_TR</field_default>
+
+		<!--
+		  *
+		  * General
+		  *
+		  -->
+		<row>
+			<field name="email_key">PASSWORD_RESET_CONFIRM</field>
+			<field name="subject">Şifre Değiştirme Onayı</field>
+			<field name="body">{$siteTitle} sitesindeki şifrenizi değiştirmek istemişsiniz.
+
+Bu istek sizin dışınızda oluştu ise, lütfen bu mesajı dikkate almayınız; eski şifrenizi kullanabilirsiniz.
+Eğer şifrenizi değiştirmek istiyorsanız aşağıdaki bağlantıyı tıklayınız.
+
+Şifre değiştirmek için: {$url}
+
+{$principalContactSignature}</field>
+			<field name="description">Bu e-posta şifrelerini unuttuğunu beyan eden ve/veya giriş yapamayan kayıtlı kullanıcılara gönderilmektedir. Şifre değiştirme işlemlerini yapabilecekleri bir internet adresi bildirir.</field>
+		</row>
+		<row>
+			<field name="email_key">PASSWORD_RESET</field>
+			<field name="subject">Şifre Değiştirme</field>
+			<field name="body">{$siteTitle} sitesinde kullanacağınız şifreniz değiştirilmiştir. Kullanıcı adı ve şifre dergi ile yapacağınız tüm çalışmalarda gerekli olduğundan güvenli bir yere not ediniz. 
+
+Kullanıcı adı: {$username}
+Yeni şifreniz: {$password}
+
+{$principalContactSignature}</field>
+			<field name="description">Bu e-posta PASSWORD_RESET_CONFIRM mesajında aktarılan süreç doğrultusunda şifre değişikliği yapmış kayıtlı kullanıcılara gönderilmektedir.</field>
+		</row>
+		<row>
+			<field name="email_key">USER_REGISTER</field>
+			<field name="subject">Yeni kullanıcı kaydı</field>
+			<field name="body">{$journalName} dergisine kayıt yaptırdığınız için teşekkür ederiz. Kullanıcı adı ve şifre dergi ile yapacağınız tüm çalışmalarda gerekli olduğundan güvenli bir yere not ediniz.
+
+Kullanıcı adı: {$username}
+Şifre: {$password}
+
+Teşekkür ederiz,
+{$principalContactSignature}</field>
+			<field name="description">Bu e-posta yeni kaydolmuş kullanıcıya sisteme kabul edildiğini belirtmek ve kullanıcı adı ile şifresini bildirmek amacı ile gönderilmektedir.</field>
+		</row>
+		<row>
+			<field name="email_key">PUBLISH_NOTIFY</field>
+			<field name="subject">Yeni sayı yayınlandı</field>
+			<field name="body">Sayın Okuyucumuz:
+
+{$journalName} yeni saysını yayınladı. Yeni sayımıza {$journalUrl} adresinden ulaşabilirsiniz.
+Sizi dergimizin içindekiler sayfasını incelemeye, beğendiğiniz makaleleri okumaya ve değerli görüşlerinizi diğer okuyucularımız ile paylaşmaya çağırıyoruz.
+
+Dergimize gösterdiğiniz ilgi için teşekkür ederiz.
+Saygılarımızla,
+
+{$editorialContactSignature}</field>
+			<field name="description">Bu e-posta “Bana Haber Ver” seçeneğini işaretlemiş okuyuculara yeni sayıyı haber vermek ve son sayının adresini vererek okumaya çağrı için kullanılır.</field>
+		</row>
+
+		<row>
+			<field name="email_key">SUBSCRIPTION_NOTIFY</field>
+			<field name="subject">Abonelik Bilgilendirme</field>
+			<field name="body">{$subscriberName}:
+
+Internet dergilerimizden {$journalName} dergisi için abonelik kaydınız yapılmıştır. Abonelik türünüz aşağıdadır:
+
+{$subscriptionType}
+
+Sadece kayıtlı kullanıcılara sunulan içeriği izlemek üzere "{$username}" kullanıcı adınız ile sisteme giriş yapınız.
+
+Sisteme giriş yaptıktan sonra kişisel bilgilerinizi ve şifrenizi dilediğiniz anda değiştirebilirsiniz.
+
+Eğer kurumsal abone iseniz, kurum çalışanlarının giriş yapmasına gerek olmayacağını, abonelere açık içerik taleplerinde sistemin otomatik olarak onay vereceğini gözönünde bulundurunuz.
+
+Herhangi bir sorunuz olursa lütfen çekinmeden benimle irtibat kurun.
+
+{$subscriptionContactSignature}</field>
+			<field name="description">Bu mesaj kayıtlı kullanıcıya yönetici tarafından abonelik işleminin yapıldığını bildirir. Derginin internet adresi ve giriş bilgileri sunulmaktadır.</field>
+		</row>
+		<row>
+			<field name="email_key">OPEN_ACCESS_NOTIFY</field>
+			<field name="subject">Sayı açık erişime açıldı</field>
+			<field name="body">Sayın Okuyucu,
+
+{$journalName} aşağıdaki sayıyı açık erişime açmıştır. Sizi sayının içindekiler bölümünü incelemeye ve dilediğiniz yazıları okumak üzere web sitemize davet ediyoruz ({$journalUrl}).
+
+Çalışmalarımıza süren ilginiz için teşekkür ederiz,
+{$editorialContactSignature}</field>
+			<field name="description">Bu mesaj sayı açık erişime açıldığında haberdar olmak isteyen okuyuculara gönderilir.</field>
+		</row>
+		<row>
+			<field name="email_key">LOCKSS_EXISTING_ARCHIVE</field>
+			<field name="subject">{$journalName}dergisi arşivleme talebi </field>
+			<field name="body"><![CDATA[Değerli [University Librarian]
+
+{$journalName} <{$journalUrl}> dergisi için fakültenizin üyesi [name of member] [title of position] görevini üstlenmiştir. Dergi bu ve diğer üniversite kütüphaneleri ile LOCKSS (Lots of Copies Keep Stuff Safe – çok sayıda kopya güvenliğini koruma) uyumlu arşiv oluşturmayı hedeflemektedir. 
+
+[Brief description of journal]
+
+Dergimizin LOCKSS yayınevi bildirgesi internet adresi: {$journalUrl}/gateway/lockss
+
+LOCKSS sistemini kullandığınızı tespit etmiş bulunuyoruz. Dergimizin sizin kullandığınız LOCKSS sürümüne kaydedilebilmesi için gerekli her türlü meta veriyi sağlamaktan mutluluk duyarız.
+
+Teşekkür ederiz,
+{$principalContactSignature}]]></field>
+			<field name="description">Bu e-posta LOCKSS arşiv yöneticisine bu dergiyi arşivlerine ekleme olanağını hatırlatmayı amaçlar ve derginin LOCKSS yayımcı bildirgesi internet adresini içermektedir.</field>
+		</row>
+		<row>
+			<field name="email_key">LOCKSS_NEW_ARCHIVE</field>
+			<field name="subject">{$journalName} dergisi arşivleme talebi </field>
+			<field name="body"><![CDATA[Değerli [University Librarian]
+
+{$journalName} <{$journalUrl}> dergisi için fakültenizin üyesi [name of member] [title of position] görevini üstlenmiştir. Dergi bu ve diğer üniversite kütüphaneleri ile LOCKSS (Lots of Copies Keep Stuff Safe – çok sayıda kopya güvenliğini koruma) uyumlu arşiv oluşturmayı hedeflemektedir. 
+
+
+[Brief description of journal]
+
+LOCKSS programı <http://lockss.stanford.edu/>, uluslararası bir kütüphane/yayımcı organizasyonu olup bir arşivin yaygın ve güvenilir olarak kullanılmasını sağlayan etkin bir örnektir. Diğer detaylar aşağıda belirtilmiştir. Standart kişisel bilgisayarlarda kullanılabilen yazılım ücretsizdir, sistem kolaylıkla aktif olabilmekte ve çok az bakım gerektirmektedir. 
+
+Derginizin arşivlenebilmesi için sizi LOCKSS topluluğunun üyesi olmaya davet ediyoruz. Böylelikle gerek fakültenizden gerek dünya çapında diğer araştırma birimlerinden çalışmaları toplayabilir ve güvenle saklayabilirsiniz. Bu amaçla bir çalışanınızı görevlendirerek LOCKSS sitesini ziyaret etmesini ve sistem çalışması ile ilgili bilgileri edinmesini sağlayınız. Sizden bu derginin arşiv desteğinin fizibilitesi ile ilgili haber bekliyor olacağım.
+
+Teşekkür ederim
+{$principalContactSignature}]]></field>
+			<field name="description">Bu e-posta alıcının dergisini LOCKSS arşiv sistemine dahil etmeye yönelik önerme içermektedir. LOCKSS çalşıma biçimi ve katılımcı olma ile ilgili bilgiler sağlamaktadır.</field>
+		</row>
+
+
+		<!--
+		  *
+		  * Submission-related
+		  *
+		  -->
+	<row>
+			<field name="email_key">SUBMISSION_ACK</field>
+			<field name="subject">Başvuru Kayıt Onayı</field>
+			<field name="body">Sayın {$authorName},
+
+{$journalName} dergisine gönderdiğiniz "{$articleTitle}" yazısı için teşekkür ederiz. Kullanmakta olduğumuz internet erişimli dergi yönetim sistemiile, dergi web sitesine aşağıdaki bilgilerle giriş yaparak yazınızı bütün yayın işlemleri boyunca takip edebileceksiniz:
+
+Bu başvurunuz için ulaşım: {$submissionUrl}
+Kullanıcı Adı: {$authorUsername}
+
+Eğer herhangi bir soru veya sorununuz olursa lütfen bizimle iletişime geçin. Bu dergiyi mesleğinizle ilgili bir buluşma yeri olarak gördüğünüz için teşekkür ederiz.
+
+{$editorialContactSignature}</field>
+			<field name="description">Bu eposta, etkinleştirilmişse, bir yazar dergiye yazı gönderme işlemini tamamladığında otomatik olarak gönderilir. Bu posta yazara gönderisi için teşekkür mesajını ve gönderisinin durumunu takip edebilmesi için gerekli olan bilgileri iletir.</field>
+		</row>
+		<row>
+			<field name="email_key">SUBMISSION_UNSUITABLE</field>
+			<field name="subject">Uygun Olmayan Çalışma</field>
+			<field name="body">Sayın {$authorName},
+
+"{$articleTitle}" başlıklı başvurunuz, "{$journalName}" dergimizin ilgi alanı ile uyuşmadığı için ilk değerlendirme sonucunda yayınlanamayacağına karar verilmiştir. Çalışmanızı konusu ile ilgili bir dergide yayınlayabileceğinizi düşünüyoruz.
+Dergi Hakkında bölümünde dergimiz ile ilgili tanımlamayı gözden geçirmenizi öneririz. Ayrıca daha ayrıntılı bilgi edinmek için mevcut içeriğimizi de inceleyebilirsiniz. 
+İleride dergimiz içeriği ile daha uyumlu çalışmalarınızı bizimle paylaşmanızı rica ederiz.
+
+
+{$editorialContactSignature}</field>
+		</row>
+		<row>
+			<field name="email_key">SUBMISSION_COMMENT</field>
+			<field name="subject">Başvuru ile ilgili yeni yorum</field>
+			<field name="body">Sayın {$name},
+
+{$journalName} için değerlendirilen "{$articleTitle}" başlıklı çalışma için {$commentName} aşağıdaki yorumu ekledi:
+
+{$comments}</field>
+			<field name="description">Bu e-posta bir başvurunun yayın sürecinde değişik kişiler tarafından gönderilen yeni açıklamaları bildirir.</field>
+		</row>
+		<row>
+			<field name="email_key">SUBMISSION_DECISION_REVIEWERS</field>
+			<field name="subject">"{$articleTitle}" Hakkındaki Karar</field>
+			<field name="body">{$journalName} için yayınlanmak üzere gönderilen "{$articleTitle}" başlıklı yazının hakemi olarak, başvuru ile ilgili yazara yollanan eleştiri ve yayın kararını bilgilerinize sunuyorum. 
+Bu süreçteki değerli yardımlarınız için tekrar teşekkür ederim.
+ 
+{$editorialContactSignature}
+
+{$comments}</field>
+			<field name="description">Bu eposta gönderinin eleştirmenlerinin değerlendirme sürecini tamamladığını belirtir. Makale hakkında sonucu ve eleştirmenlere yardımları için teşekkür mesajını içerir.</field>
+		</row>
+
+
+		<!--
+		  *
+		  * Editor
+		  *
+		  -->
+		<row>
+			<field name="email_key">EDITOR_ASSIGN</field>
+			<field name="subject">Yazı İşleri Havalesi</field>
+			<field name="body">{$editorialContactName}:
+
+{$journalName} için gönderilen "{$articleTitle}" başlıklı başvuru editörü olduğunuz dergi bölümünde yayınlanmak için değerlendirilecektir. Yayına hazırlık sürecininde başarılar dileriz. 
+
+Başvuru ulaşım bağlantısı: {$submissionUrl}
+Kullanıcı Adı: {$editorUsername}
+
+Teşekkürler,
+{$editorialContactSignature}</field>
+			<field name="description">Bu eposta, bir Bölüm Editörüne bir gönderinin yayınlanma sürecinde supervizörlük görevi verildiğini bildirir. Gönderi hakkındaki bilgileri ve dergi internet sitesine girişte gerekli olan bilgileri içerir.</field>
+		</row>
+
+
+		<!--
+		  *
+		  * Peer Review
+		  *
+		  -->
+		<row>
+			<field name="email_key">REVIEW_REQUEST</field>
+			<field name="subject">Makale Değerlendirme Talebi</field>
+			<field name="body">Sayın {$reviewerName},
+
+{$journalName} için gönderilen "{$articleTitle}" başlıklı çalışmanın sizin ilgi alanlarınız ile uyuştuğunu ve dergimizde yayınlanabilirliği açısından inceleyebileceğinize inanoyoruz. Başvurunun içeriği aşağıya eklenmiştir. Bu görevin bizim için ne kadar önemli olduğunu gözönünde bulunduracağınızı umuyorum.
+
+{$weekLaterDate} tarihine kadar, bu çalışmanın hakemliğini kabul edip etmediğinizi belirtmek, ilgili çalışmaya ulaşmak, eleştiri ve önerilerinizi kaydetmek için dergi internet sitesine giriş yapabilirsiniz. Dergi sitesi adresi: {$journalUrl} 
+
+Değerlendirmenizi tamamlamanız gereken tarih: {$reviewDueDate}.
+
+Eğer derginin web sitesine giriş için kullanıcı adı ve şifreniz yoksa veya unuttunuz ise, şifrenizi yenilemek için bu bağlantıyı kullanabilirsiniz (Kullanıcı adınızla birlikte şifreniz size postalanacaktır). {$passwordResetUrl}
+
+Başvuru ulaşım adresi: {$submissionReviewUrl}
+
+Bu dileğimizi değerlendirdiğiniz için teşekkür ederiz.
+
+{$editorialContactSignature}
+
+
+
+"{$articleTitle}"
+
+Özet:
+{$articleAbstract}</field>
+			<field name="description">Bu eposta Bölüm Editöründen bir hakeme bir çalışmanın hakemlik görevine cavet amacı ile iletir. Gönderiyle ilgili başlık ve özet gibi bilgileri, değerlendirme sona erme tarihini ve kendisinin başvuruya nasıl erişilebileceği ile ilgili bilgileri içerir.	Bu mesaj Dergi Ayarları Adım 2'de seçilen Standart Değerlendirme Sürecinde kullanılır. (Ayrıca bkz.: REVIEW_REQ_MULTI_ATTACHED ve REVIEW_REQUEST_ATTACHED.)</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEW_REQUEST_ONECLICK</field>
+			<field name="subject">Makaleyi değerlendirmenizi rica ederiz</field>
+			<field name="body">Sayın {$reviewerName},
+
+{$journalName} için yayınlanmak üzere gönderilen "{$articleTitle}" başlıklı bildiriyi değerlendiremek için en uygun hakemlerden birisi olarak, yazı hakkındaki değerli görüşlerinizi bize ileteceğinizi umuyorum. Başvurunun önemli özellikleri aşağıda iletilmiştir. Dergimiz için çok değerli olan görüşlerinizden bizi mahrum etmeyeceğinizi umuyorum.
+
+Dergimiz web sitesine girerek, {$weekLaterDate} süresinde gözden geçirme isteğimizi kabul ettiğinizi bildiriniz. İlgili sayfadan yazının tam metnine ulaşabileceksiniz.
+
+Değerlendirme raporunuz için son tarih {$reviewDueDate}.
+
+Başvuruya ulaşım için adres: {$submissionReviewUrl}
+
+İsteğimize olumlu yaklaşımınız için şimdiden teşekkür ederiz.
+
+{$editorialContactSignature}
+
+
+
+"{$articleTitle}"
+
+Özet
+{$articleAbstract}</field>
+			<field name="description">Yazının hakemlere önerilmesi için kullanılan mesajdır. Ayarlarda "tek tıklama özelliği" etkinleştirildi ise kullanılır..</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEW_REQUEST_ATTACHED</field>
+			<field name="subject">Ekteki makaleyi değerlendirmenizi rica ederiz</field>
+			<field name="body">Sayın {$reviewerName},
+
+{$journalName} için yayınlanmak üzere gönderilen "{$articleTitle}" başlıklı bildiriyi değerlendiremek için en uygun hakemlerden birisi olarak, yazı hakkındaki değerli görüşlerinizi bize ileteceğinizi umuyorum. Yazı e-posta ekinde gönderilmiştir ve dergimizin hakemlerimizden beklentileri aşağıda verilmektedir. Dergimiz için çok değerli olan görüşlerinizden bizi mahrum etmeyeceğinizi umuyorum. Değerlendirme raporunuzun {$reviewDueDate} tarihinde bana gönderilmiş olması gerekmektedir.
+
+Lütfen değerlendirmeyi kabul edip, etmediğinizi {$weekLaterDate} süresinde e-posta mesajı ile bana bildiriniz.
+
+
+İsteğimize olumlu yaklaşımınız için şimdiden teşekkür ederiz.
+
+{$editorialContactSignature}
+
+
+Değerlendirme Rahberi
+
+{$reviewGuidelines}
+</field>
+			<field name="description">Yazının hakemlere önerilmesi için kullanılan mesajdır. Ayarlarda e-posta eki ile değerlendirme seçeneği seçili ise kullanılacaktır.</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEW_CANCEL</field>
+			<field name="subject">Değerlendirmenin iptalini rica ederiz</field>
+			<field name="body">Sayın {$reviewerName},
+
+{$journalName} için yayınlanmak üzere gönderilen "{$articleTitle}" başlıklı bildiriyi değerlendiremek üzere sizden rica etmiştik. Ancak gelinen noktada değerlendirmeye gerek kalmamıştır. Şu ana dek size verdiğimiz zahmetlerden dolayı teşekkür ederiz.
+
+
+{$editorialContactSignature}</field>
+			<field name="description">Değerlendirme süreci sona ermeden editörün değerlendirmeyi iptal için hakeme gönderdiği mesaj.</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEW_CONFIRM</field>
+			<field name="subject">Değerlendirmeyi yapabileceğim</field>
+			<field name="body">Sayın {$editorialContactName},
+
+{$journalName} için yayınlanmak üzere gönderilen "{$articleTitle}" başlıklı bildiriyi değerlendiremeyi kabul ediyorum. Değerlendirme raporumu daha önce olmaz ise, en geç {$reviewDueDate} tarihinde ileteceğim.
+
+Bu çalışmayı değerlendirmek üzere seçildiğim için teşekkür ederim.
+
+{$reviewerName}</field>
+			<field name="description">Hakemin değerlendirmeyi kabul ettiğini editöre bildirmek üzere kullandığı mesaj</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEW_CONFIRM_ACK</field>
+			<field name="subject">Değerlendirmeyi kabul için teşekkür</field>
+			<field name="body">{$reviewerName}:
+
+{$journalName} dergisi için {$reviewDueDate} tarihine dek "{$articleTitle}" başlıklı makaleyi değerlendirmeyi kabul ettiğiniz için teşekkür ederiz.
+
+{$editorialContactSignature}</field>
+			<field name="description">Bu e-posta bölüm editörü tarafından değerlendirmeyi kabul eden hakeme teşekkür ve anımsatma için gönderilir.</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEW_DECLINE</field>
+			<field name="subject">DEĞERLENDİREMEYECEĞİM...</field>
+			<field name="body">Sayın {$editorialContactName},
+{$journalName} için yayınlanmak üzere gönderilen "{$articleTitle}" başlıklı bildiriyi şu anda değerlendiremeyeceğim. Beni düşündüğünüz için teşekkür ederim, başka bir zaman beni rahatlıkla arayabilirsiniz.
+
+{$reviewerName}</field>
+			<field name="description">Bu elektronik posta gözden geçirme talebine cevap olarak,gözden geçirmenin red edildiğini bildirmek amacıyla Bölüm Editörüne gözden geçirmeyi yapan kişi tarafından gönderilir.</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEW_COMPLETE</field>
+			<field name="subject">Makalenin Değerlendirme İşlemi Tamamlandı</field>
+			<field name="body">Sayın {$editorialContactName},
+
+{$journalName} için yayınlanmak üzere gönderilen "{$articleTitle}" başlıklı çalışmanın değerlendirme işlemini tamamladım. Önerim: "{$recommendation}" biçimine kaydedildi.
+
+{$reviewerName}</field>
+			<field name="description">Bu elektronik posta gözden geçirme işleminin tamamlanarak öneri ve yorumların derginin web sitesine kayıt edildiğini bildirmek için gözden geçirmeyi yapan kişi tarafından Bölüm Editörüne gönderilmiştir.</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEW_ACK</field>
+			<field name="subject">Çalışmayı değerlendirdiğiniz için teşekkürler</field>
+			<field name="body">Sayın {$reviewerName},
+
+{$journalName} için yayınlanmak üzere gönderilen "{$articleTitle}" başlıklı çalışmanın değerlendirme işlemini tamamladığınız için teşekkür ederiz. Yayınlarımızın kalitesine yaptığınız katkıyı takdirle anıyoruz.
+
+{$editorialContactSignature}</field>
+			<field name="description">Bu elektronik posta gözden geçirme işlemi bitirilen makalenin alındığını haber vermek ve gözden geçirmeyi yapan kişiye katkılarından dolayı teşekkür etmek için Bölüm Editörü tarafından gönderilmiştir.</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEW_REMIND</field>
+			<field name="subject">Yazı değerlendirilmesi konusunda anımsatma</field>
+			<field name="body">Sayın {$reviewerName},
+
+{$journalName} için yayınlanmak üzere gönderilen "{$articleTitle}" başlıklı çalışmanın değerlendirmesini {$reviewDueDate} tarihinden önce tamamlayacağınızı ümit ediyoruz, yoğun işleriniz arasında değerlendirme raporunuzu tamamlayıp, bize bir an önce ileteceğiniz inancı ile dergimiz sitesindeki ulaşım bilgilerini size iletmeyi istedik.
+
+Eğer derginin web sitesine giriş için kullanıcı adı ve şifreniz yoksa veya unuttunuz ise, şifrenizi yenilemek için bu bağlantıyı kullanabilirsiniz (Kullanıcı adınızla birlikte şifreniz size postalanacaktır). {$passwordResetUrl}
+
+Başvuru ulaşım adresi: {$submissionReviewUrl}
+
+Derginin kalitesini arttıracak bu önemli katkıyı yapabileceğinizi lütfen onaylayınız. Bunu sizden duymayı dört gözle bekliyorum.
+
+{$editorialContactSignature}</field>
+			<field name="description">Bu elektronik posta gözden geçirmeyi yapan kişiye işlemin zamanının dolmakta olduğunu hatırlatmak için Bölüm Editörü tarafından gönderilir.</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEW_REMIND_ONECLICK</field>
+			<field name="subject">Yazı değerlendirilmesi konusunda anımsatma</field>
+			<field name="body">Sayın {$reviewerName},
+
+{$journalName} için yayınlanmak üzere gönderilen "{$articleTitle}" başlıklı çalışmanın değerlendirmesini {$reviewDueDate} tarihinden önce tamamlayacağınızı ümit ediyoruz, yoğun işleriniz arasında değerlendirme raporunuzu tamamlayıp, bize bir an önce ileteceğiniz inancı ile dergimiz sitesindeki ulaşım bilgilerini size iletmeyi istedik.
+
+Başvuru ulaşım adresi: {$submissionReviewUrl}
+
+Derginin kalitesini arttıracak bu önemli katkıyı yapabileceğinizi lütfen onaylayınız. Bunu sizden duymayı dört gözle bekliyorum.
+
+{$editorialContactSignature}</field>
+			<field name="description">Bu elektronik posta hakemler için tek tıklama özelliği açık ise, gözden geçirmeyi yapan kişiye işlemin zamanının dolmakta olduğunu hatırlatmak için Bölüm Editörü tarafından gönderilir.</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEW_REMIND_AUTO</field>
+			<field name="subject">Yazı değerlendirilmesi konusunda otomatik anımsatma</field>
+			<field name="body">Sayın {$reviewerName},
+
+{$journalName} için yayınlanmak üzere gönderilen "{$articleTitle}" başlıklı çalışmanın değerlendirmesini {$reviewDueDate} tarihinden önce tamamlayacağınızı ümit ediyorduk, yoğun işleriniz nedeni ile oluşan minik gecikme nedeni ile sistemimiz tarafından bu mesaj tarafınıza otomatik olarak gönderilmişitir. 
+Değerlendirme raporunuzu bize bir an önce ileteceğiniz inancı ile dergimiz sitesindeki ulaşım bilgilerini size iletmeyi istedik.
+
+Eğer derginin web sitesine giriş için kullanıcı adı ve şifreniz yoksa veya unuttunuz ise, şifrenizi yenilemek için bu bağlantıyı kullanabilirsiniz (Kullanıcı adınızla birlikte şifreniz size postalanacaktır). {$passwordResetUrl}
+
+Başvuru ulaşım adresi: {$submissionReviewUrl}
+
+Derginin kalitesini arttıracak bu önemli katkıyı yapabileceğinizi lütfen onaylayınız. Raporunuzun tamamlanacağı günü sizden duymayı dört gözle bekliyorum.
+
+{$editorialContactSignature}</field>
+			<field name="description">Gözden geçirme işlemi için verilen süre geçtiğinde bu elektronik posta otomatik olarak gönderilir(Derginin Kurulum Bölümü altındaki Gözden Geçirme seçeneklerine bakınız, Adım 2). Zamanlanmış görevler aktif hale getirilmeli ve düzenlenmelidir(alan düzenleme dosyasına bakınız).</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEW_REMIND_AUTO_ONECLICK</field>
+			<field name="subject">Automated Submission Review Reminder</field>
+			<field name="body">Sayın {$reviewerName},
+
+{$journalName} için yayınlanmak üzere gönderilen "{$articleTitle}" başlıklı çalışmanın değerlendirmesini {$reviewDueDate} tarihinden önce tamamlayacağınızı ümit ediyorduk, yoğun işleriniz nedeni ile oluşan minik gecikme nedeni ile sistemimiz tarafından bu mesaj tarafınıza otomatik olarak gönderilmişitir. 
+Değerlendirme raporunuzu bize bir an önce ileteceğiniz inancı ile dergimiz sitesindeki ulaşım bilgilerini size iletmeyi istedik.
+
+Eğer derginin web sitesine giriş için kullanıcı adı ve şifreniz yoksa veya unuttunuz ise, şifrenizi yenilemek için bu bağlantıyı kullanabilirsiniz (Kullanıcı adınızla birlikte şifreniz size postalanacaktır). {$passwordResetUrl}
+
+Başvuru ulaşım adresi: {$submissionReviewUrl}
+
+Derginin kalitesini arttıracak bu önemli katkıyı yapabileceğinizi lütfen onaylayınız. Raporunuzun tamamlanacağı günü sizden duymayı dört gözle bekliyorum.
+
+
+{$editorialContactSignature}</field>
+			<field name="description">Gözden geçirme işlemi için verilen süre geçtiğinde ve hakemler için tek tıklama özelliği açıldığında bu elektronik posta otomatik olarak gönderilir(Derginin Kurulum Bölümü altındaki Gözden Geçirme seçeneklerine bakınız, Adım 2). Zamanlanmış görevler aktif hale getirilmeli ve düzenlenmelidir(alan düzenleme dosyasına bakınız).</field>
+		</row>
+
+
+		<!--
+		  *
+		  * Editor Review
+		  *
+		  -->
+		<row>
+			<field name="email_key">EDITOR_REVIEW</field>
+			<field name="subject">Çalışmanızın değerlendirilmesi</field>
+			<field name="body">Sayın {$authorName},
+
+Dergimizde yayınlanmak üzere gönderdiğiniz "{$articleTitle}" başlıklı çalışmanız ile ilgili kararımız aşağıda sunulmuştur.
+
+{$comments}.
+
+Yazınız hakkında editöryal süreç ve hakem değerlendirmeleri sonucundaki ek yorumları dergimiz istesini ziyaret ederek öğrenebilirsiniz.
+
+Başvuru ulaşım adresi: {$submissionUrl}
+Kullanıcı adı: {$authorUsername}
+
+Lütfen soru ve sorunlarınız için benimle ilişkiye geçiniz.
+
+{$editorialContactSignature}</field>
+			<field name="description">Yayın konusunda bir karar oluşunca editörün yazara bildirmesi için kullanılan e-posta.</field>
+		</row>
+		<row>
+			<field name="email_key">COPYEDIT_REQUEST</field>
+			<field name="subject">Sayfa düzeni için rica</field>
+			<field name="body">Sayın {$copyeditorName},
+
+{$journalName} ileri sayılarında yayınlanmak üzere kabul edilen "{$articleTitle}" başlıklı çalışmanın sayfa düzenini tamamlamanızı rica ederim. Dergi sitesinde yazıyı , sayfa düzeni konusundaki özel açıklamalar ile birlikte bulabilirsiniz. 
+
+Yazı ulaşım adresi: {$submissionCopyeditingUrl}
+Kullanıcı adı: {$copyeditorUsername}
+
+Lütfen eğer sayfa düzenini yapmanız konusunda bir sorun var ise bana bildiriniz.
+DErgimizin kalitesini arttıran değerli katkılarınız için teşekkür ederiz.
+
+{$editorialContactSignature}</field>
+			<field name="description">Yayınlanması için karar verilen yazının sayfa düzeni için gönderilmesinde kullanılır.</field>
+		</row>
+		<row>
+			<field name="email_key">COPYEDIT_COMPLETE</field>
+			<field name="subject">Sayfa düzeni tamamlandı</field>
+			<field name="body">Sayın {$editorialContactName},
+
+{$journalName} için kabul edilen "{$articleTitle}" başlıklı çalışmanın ilk sayfa düzenini tamamladım.
+
+Yazar ve editörün değerlendirmesine hazırdır.
+
+Teşekkürler,
+{$copyeditorName}</field>
+		</row>
+		<row>
+			<field name="email_key">COPYEDIT_ACK</field>
+			<field name="subject">Sayfa düzeni için teşekkürler</field>
+			<field name="body">{$copyeditorName}:
+
+{$journalName} için kabul edilen "{$articleTitle}" başlıklı çalışmanın sayfa düzenini için teşekkür ederim.
+
+{$editorialContactSignature}</field>
+			<field name="description">Bölüm editörü sayfa düzenini inceleyerek, yapan kişiye teşşkür için kullanır.</field>
+		</row>
+		<row>
+			<field name="email_key">COPYEDIT_AUTHOR_REQUEST</field>
+			<field name="subject">Sayfa düzenini inceler misiniz?</field>
+			<field name="body">Sayın {$authorName},
+
+{$journalName} için kabul edilen "{$articleTitle}" başlıklı çalışmanızın sayfa düzenini tamamlandı. Lütfen aşağıdaki bağlantıdan ilk sayfa düzeni çalışmasını alıp, gözden geçiriniz. Değerlendirme sonrası 2. Basamak sayfasına gidip, geliştirdiğiniz dosyayı sisteme gönderiniz ve tamamladığınızı bildiren e-postayı editöre gönderiniz.
+
+Bu yazıda ciddi değişiklikler için son şansınızdır. Sonraki basamakta prova dizgi üzerinde küçük yazım hatası benzeri düzeltmeler dışında değiştirme yapma olasılığı yoktur.
+
+Sayfa düzeni kopyası için bağlantı: {$submissionCopyeditingUrl}
+Kullanıcı adınız: {$authorUsername}
+ 
+Eğer değerlendirmeyi yapamayacaksanız veya sorunuz olur ise bana yazmaya çekinmeyiniz. Dergimize katkılarınız için teşekkür ederiz.
+
+{$editorialContactSignature}</field>
+			<field name="description">Bölüm editörü tarafından yazara sayfa düzenini incelemesi için gönderilen ve yazıda değişiklikler için son şansı olduğunu bildiren mesaj.</field>
+		</row>
+		<row>
+			<field name="email_key">COPYEDIT_AUTHOR_COMPLETE</field>
+			<field name="subject">Sayfa düzeni incelemesi tamamlandı</field>
+			<field name="body">Sayın {$editorialContactName},
+
+{$journalName} için kabul edilen "{$articleTitle}" başlıklı çalışmamın sayfa düzenini gözden geçirdim. Gönderdiğim dosya mizanpaj için hazırdır.
+
+{$authorName}</field>
+			<field name="description">Yazarca editöre sayfa düzenini gözden geçirdiğini bildirmek üzere gönderilir.</field>
+		</row>
+		<row>
+			<field name="email_key">COPYEDIT_AUTHOR_ACK</field>
+			<field name="subject">Sayfa düzenini incelemesi için teşekkürler</field>
+			<field name="body">Sayın {$authorName},
+
+{$journalName} için "{$articleTitle}" başlıklı çalışmanızın sayfa düzenini değerlendirdiğiniz için teşekkür ederiz. Çalışmanız yayına bir adım daha yaklaşmıştır.
+
+{$editorialContactSignature}</field>
+			<field name="description">Editör sayfa düzenini incelediği için yazara teşkkür etmek üzere gönderir.</field>
+		</row>
+		<row>
+			<field name="email_key">COPYEDIT_FINAL_REQUEST</field>
+			<field name="subject">Sayfa düzenini son biçimi</field>
+			<field name="body">{$copyeditorName}:
+
+{$journalName} için "{$articleTitle}" başlıklı çalışmanın sayfa düzenini yazar ve editörce gözden geçirilmiştir. Mizanpaja hazır son "temiz kopya" için ilginizi rica ederim.
+
+Sayfa düzeni kopyası için bağlantı: {$submissionCopyeditingUrl}
+Kullanıcı adı: {$copyeditorUsername}
+
+Dergimiz adına teşkkür ederiz,
+
+{$editorialContactSignature}</field>
+			<field name="description">Bölüm editörünce son temiz sayfa düzeni hazırlığı için haber mesajı.</field>
+		</row>
+		<row>
+			<field name="email_key">COPYEDIT_FINAL_COMPLETE</field>
+			<field name="subject">Sayfa düzenini son biçimi tamamlandı</field>
+			<field name="body">Sayın {$editorialContactName},
+
+{$journalName} için "{$articleTitle}" başlıklı çalışmanın son sayfa düzenini tamamladım. Yazı mizanpaj için hazırdır.
+
+{$copyeditorName}</field>
+			<field name="description">Sayfa düzeninin son biçimini aldığını editöre bildirmek için kullanılır.</field>
+		</row>
+		<row>
+			<field name="email_key">COPYEDIT_FINAL_ACK</field>
+			<field name="subject">Sayfa düzenini son biçimi için teşekkür ederim.</field>
+			<field name="body">Sayın {$copyeditorName},
+
+{$journalName} için "{$articleTitle}" başlıklı çalışmanın son sayfa düzenini için teşkkür ederim. Sayenizde yazı sürecin en önemli basamaklarından birisini tamamladı.
+
+{$editorialContactSignature}</field>
+			<field name="description">Bölüm editörü son sayfa düzeni tamamlanınca teşekkür için kullanır.</field>
+		</row>
+
+
+		<!--
+		  *
+		  * Layout Editing
+		  *
+		  -->
+		<row>
+			<field name="email_key">LAYOUT_REQUEST</field>
+			<field name="subject">Prova dizgi rica olunur</field>
+			<field name="body">{$layoutEditorName}:
+
+{$journalName} için "{$articleTitle}" başlıklı çalışmanın mizanpajının tamamlanarak, prova dizginin tarafımıza gönderilmesi için rica ederiz.
+
+Sayfa düzeni kopyası için bağlantı: {$submissionLayoutUrl}
+Kullanıcı adı: {$layoutEditorUsername}
+
+İşin gerçekleştirilmesi ile ilgili bir sorununuz veya diğer sorularınız için bana yazabilirsiniz.
+Dergimizin kalitesine katkılarınız için teşekkür ederiz..
+
+{$editorialContactSignature}</field>
+			<field name="description">Saon sayfa düzeni kopyasının mizanpaj için gönderilmesinde kullanılan mesaj.</field>
+		</row>
+		<row>
+			<field name="email_key">LAYOUT_COMPLETE</field>
+			<field name="subject">Prova dizgi tamamlandı</field>
+			<field name="body">Sayın {$editorialContactName},
+
+{$journalName} için "{$articleTitle}" başlıklı çalışmanın prova dizgisi gözden geçirme için hazırdır.
+
+Sorunuz olur ise bana yazabilirsiniz.
+
+{$layoutEditorName}</field>
+			<field name="description">Editöre prova dizginin tamamlandığını bildirir.</field>
+		</row>
+		<row>
+			<field name="email_key">LAYOUT_ACK</field>
+			<field name="subject">Dizgi için teşekkürler</field>
+			<field name="body">Sayın {$layoutEditorName},
+
+{$journalName} için "{$articleTitle}" başlıklı çalışmanın prova dizgisinin tamamlanması nedeni ile teşekkür ederim.
+
+{$editorialContactSignature}</field>
+			<field name="description">Dizgi için mizanpazcıya teşekkür mesajı.</field>
+		</row>
+
+
+		<!--
+		  *
+		  * Proofreading
+		  *
+		  -->
+		<row>
+			<field name="email_key">PROOFREAD_AUTHOR_REQUEST</field>
+			<field name="subject">Sayın yazar, prova dizginin gözden geçirilmesini rica ederiz</field>
+			<field name="body">Sayın {$authorName},
+
+{$journalName} için "{$articleTitle}" başlıklı çalışmanızın mizanpajı tamamlanarak, prova dizgisi değerlendirmenize hazır hale gelmiştir. Lütfen dergi sitemize aşağıdaki bağlantıdan girip, "PROVA DİZGİYİ GÖR" bağlantısını izleyerek yazınızın yayınlanacak biçimini gözden geçiriniz. Lütfen saptadığınız hatalar veya dilediğiniz geliştirmeleri prova dizgi düzeltme yönergesini izleyerek, sayfadaki Prova Dizgi Düzeltme kutusuna yazarak, form aracılığı ile bize iletiniz.
+
+Makalenize ulaşım bağlantısı: {$submissionUrl}
+Kullanıcı adınız: {$authorUsername}
+
+Eğer bu işlem ile ilgili soru veya sorunlarınız olur ise bana iletiniz.
+Dergimize değerli katkılarınız için teşekkür ederiz.
+
+{$editorialContactSignature}</field>
+			<field name="description">Yazardan prova dizgiyi değerlendirmesi için istekte bulunan ve bu işlemi nasıl yapacağı konusunda bilgi veren mesaj.</field>
+		</row>
+		<row>
+			<field name="email_key">PROOFREAD_AUTHOR_COMPLETE</field>
+			<field name="subject">Makalemizin prova dizgisini inceledik</field>
+			<field name="body">Sayın {$editorialContactName},
+
+{$journalName} için "{$articleTitle}" başlıklı çalışmamızın prova dizgisi değerlendirdim. Prova dizgi son düzeltmeler ve mizanpaj tamamlanmasına hazırdır.
+
+{$authorName}</field>
+			<field name="description">Yazarın prova dizgiyi gözden geçirdiğini editöre bildirdiği mesaj.</field>
+		</row>
+		<row>
+			<field name="email_key">PROOFREAD_AUTHOR_ACK</field>
+			<field name="subject">Prova dizgiyi değerlendirdiğiniz için teşkkürler</field>
+			<field name="body">Sayın {$authorName},
+
+{$journalName} için "{$articleTitle}" başlıklı çalışmanızın prova dizgisini gözden geçirdiğiniz için teşekkür ederiz.
+
+Yazınızın yayınlanmış kopyasını en kısa sürede size sunmayı umuyoruz.
+
+Eğer sitemizin erken uyarı servisine üye olursanız, yeni sayılar çıkar çıkmaz, derginin içindekiler bölümünü içeren bir uyarı mesajını e-posta yolu ile alabilirsiniz.
+
+Dergimize değerli katkılarınız için tekrar teşekkür ederiz.
+
+{$editorialContactSignature}</field>
+			<field name="description">Editörüm yazara prova dizgi ve genel tüm katkıları için teşekkür ettiği mesaj..</field>
+		</row>
+		<row>
+			<field name="email_key">PROOFREAD_REQUEST</field>
+			<field name="subject">Prova dizginin gözden geçirilmesini rica ederiz</field>
+			<field name="body">Sayın {$proofreaderName}:
+
+{$journalName} için "{$articleTitle}" başlıklı çalışmanın prova dizgisinin son biçimini değerlendirmenizi rica ederim.
+
+Makaleye ulaşım bağlantısı: {$submissionUrl}
+Kullanıcı adınız: {$proofreaderUsername}
+
+İşin gerçekleştirilmesi ile ilgili bir sorununuz veya diğer sorularınız için bana yazabilirsiniz.
+Dergimizin kalitesine katkılarınız için teşekkür ederiz.
+
+{$editorialContactSignature}</field>
+			<field name="description">Son dizginin gözden geçirilmesini istemek için editörün Prova dizgi okuyucuya mesajı</field>
+		</row>
+		<row>
+			<field name="email_key">PROOFREAD_COMPLETE</field>
+			<field name="subject">Prova dizgi onaylandı</field>
+			<field name="body">Sayın {$editorialContactName},
+
+{$journalName} için "{$articleTitle}" başlıklı çalışmanın prova dizgisini onaylıyorum. Son kez mizanpaj kontrolü için mizanpajcıya gidebilir.
+
+{$proofreaderName}</field>
+			<field name="description">Prova dizgi okuyucunun işinin tamamlandığını editöre bildirdiği mesaj.</field>
+		</row>
+		<row>
+			<field name="email_key">PROOFREAD_ACK</field>
+			<field name="subject">Prova dizgi onayınız için teşekkürler</field>
+			<field name="body">Sayın {$proofreaderName},
+
+{$journalName} için "{$articleTitle}" başlıklı çalışmanın prova dizgisini onayladığınız için teşekkürler.
+Çalışmalarınız dergimizin kalitesini önemli olçüde arttırmaktadır.
+
+{$editorialContactSignature}</field>
+			<field name="description">Editörün Prova dizgi okuyucuya teşekkür mesajı.</field>
+		</row>
+		<row>
+			<field name="email_key">PROOFREAD_LAYOUT_REQUEST</field>
+			<field name="subject">Son mizanpaj kontrolü için rica</field>
+			<field name="body">sayın {$layoutEditorName},
+
+{$journalName} için "{$articleTitle}" başlıklı çalışmanın prova dizgisi son biçimini almıştır. Tarafınızdan yayınlanmadan önceki son kontrolün yapılmasını rica ederim.
+
+Makaleye ulaşım bağlantısı: {$submissionUrl}
+Kullanıcı adınız: {$layoutEditorUsername}
+
+İşin gerçekleştirilmesi ile ilgili bir sorununuz veya diğer sorularınız için bana yazabilirsiniz.
+Dergimizin kalitesine katkılarınız için teşekkür ederiz.
+
+{$editorialContactSignature}</field>
+			<field name="description">Yayın öncesi son mizanpaj kontrolü için editörün haber mesajı</field>
+		</row>
+		<row>
+			<field name="email_key">PROOFREAD_LAYOUT_COMPLETE</field>
+			<field name="subject">Son mizanpaj kontrolü tamamdır</field>
+			<field name="body">Sayın {$editorialContactName},
+
+{$journalName} için "{$articleTitle}" başlıklı çalışmanın dizgisi son biçimini almıştır. Yazı artık yayınlanmak üzere hazırdır.
+
+{$layoutEditorName}</field>
+			<field name="description">Yayın öncesi son mizanpaj kontrolünün tamamlandığını, yazının yayına hazır olduğunu editöre bildiren mesaj .</field>
+		</row>
+		<row>
+			<field name="email_key">PROOFREAD_LAYOUT_ACK</field>
+			<field name="subject">Son mizanpaj kontrolü için teşekkürler</field>
+			<field name="body">Sayın {$layoutEditorName},
+
+{$journalName} için "{$articleTitle}" başlıklı çalışmanın son biçimi için teşekkürler. Değerli katkılarınız dergimizin kalitesini yükseltmektedir.
+
+{$editorialContactSignature}</field>
+			<field name="description">Yayın öncesi son mizanpaj kontrolü için editörün teşekkür mesajı.</field>
+		</row>
+		<row>
+			<field name="email_key">EMAIL_LINK</field>
+			<field name="subject">İlginizi çekebilecek bir makale</field>
+			<field name="body">
+			{$journalName} {$volume}. cilt {$number}. sayısında ({$year}) {$authorName} tarafından yazılan 
+			"{$articleTitle}" başlıklı bir makale yayınlamış.
+			Bu çalışmanın ilgini çekeceğini umuyorum.</field>
+			<field name="description">Okuyucuların, meslekdaşlarına ilgi çekici makaleleri haber vermeleri için hazır şablon mesaj. Dergi yöneticisi tarafında "Okuma Araçları" sayfasında bu özellik etkinleştirilince hizmete sunulur.</field>
+		</row>
+		<row>
+			<field name="email_key">SUBSCRIPTION_BEFORE_EXPIRY</field>
+			<field name="subject">Abonelik sona erme uyarısı</field>
+			<field name="body">{$subscriberName}:
+
+{$journalName} dergisi abonelik süreniz bitmek üzeredir.
+
+{$subscriptionType}
+Bitiş tarihi: {$expiryDate}
+
+Dergiye erişiminizin aksamaması için dergi web sitesine girerek aboneliğinizi yenileyiniz. Dergiye  "{$username}" olan kullanıcı adınızı kullanarak girebilirsiniz.
+
+Eğer bir sorununuz olur ise, bana bildirebilirsiniz.
+
+{$subscriptionContactSignature}</field>
+			<field name="description">Bu mesaj aboneliği bitmek üzere olan abonelere gönderilir.</field>
+		</row>
+		<row>
+			<field name="email_key">SUBSCRIPTION_AFTER_EXPIRY</field>
+			<field name="subject">Aboneliğiniz sona erdi</field>
+			<field name="body">{$subscriberName},
+
+{$journalName} dergisi abonelik süreniz doldu.
+
+{$subscriptionType}
+Bitiş tarihi: {$expiryDate}
+
+Aboneliğinizi yenilemek için dergi sitesine giriniz. Sisteme "{$username}" olan kullanıcı adınızı kullanarak girebilirsiniz.
+
+Eğer bir sorununuz olur ise, bana bildirebilirsiniz.
+
+{$subscriptionContactSignature}</field>
+			<field name="description">Bu mesaj aboneliği biten abonelere gönderilir.</field>
+		</row>
+		<row>
+			<field name="email_key">SUBSCRIPTION_AFTER_EXPIRY_LAST</field>
+			<field name="subject">Aboneliğiniz sona erdi - Son anımsatma</field>
+			<field name="body">{$subscriberName}:
+
+{$journalName} dergisi abonelik süreniz doldu.
+Bu size gönderdiğimiz son anımsatma olacaktır.
+
+{$subscriptionType}
+Bitiş tarihi: {$expiryDate}
+
+Aboneliğinizi yenilemek için dergi sitesine giriniz. Sisteme "{$username}" olan kullanıcı adınızı kullanarak girebilirsiniz.
+
+Eğer bir sorununuz olur ise, bana bildirebilirsiniz.
+
+{$subscriptionContactSignature}</field>
+			<field name="description">Bu mesaj aboneliği biten abonelere gönderilir. SOn mesajdır...</field>
+		</row>
+	</table>
+</data>

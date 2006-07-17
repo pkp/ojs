@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="tr_TR" full_name="Türkiye Türkçesi">
+	<message key="plugins.importexport.users.displayName">Kullanıcı XML Eklentisi</message>
+	<message key="plugins.importexport.users.description">Kullanıcı verilerinin alış verişi için</message>
+
+	<message key="plugins.importexport.users.cliUsage"><![CDATA[Kullanım: {$scriptName} {$pluginName} [komut] ...
+Komutlar:
+	import [xmlFileName] [journal_path] [optional flags]
+	export [xmlFileName] [journal_path]
+	export [xmlFileName] [journal_path] [role_path1] [role_path2] ...
+
+Optional flags:
+	continue_on_error: If specified, do not stop importing users if an error occurs
+
+	send_notify: If specified, send notification emails containing usernames
+		and passwords to imported users
+
+Examples:
+	Import users into myJournal from myImportFile.xml, continuing on error:
+	{$scriptName} {$pluginName} import myImportFile.xml myJournal continue_on_error
+
+	Export all users from myJournal:
+	{$scriptName} {$pluginName} export myExportFile.xml myJournal
+
+	Export all users registered as reviewers, along with their reviewer roles only:
+	{$scriptName} {$pluginName} export myExportFile.xml myJournal reviewer
+]]></message>
+	<message key="plugins.importexport.users.import.importUsers">Kullanıcı verilerini Ekle</message>
+	<message key="plugins.importexport.users.import.instructions"><![CDATA[Bu dergiye eklenecek kullanıcı bilgilerini içeren veri dosyasını seçiniz. Dergi yardım sayfalarından ilgili dosya yapısı ile ilgili bilgilere bakınız.<br /><br />Not: veri alınırken sistemde kayıtlı kullanıcı adı veya e-posta adresi ile aynı olan kullanıcılar yendiden kaydedilmez, eğer bu kullanıcıların ek rolleri tanımlı ise, bu roller kayıtlı kullanıcıya eklenir.]]></message>
+	<message key="plugins.importexport.users.import.failedToImportUser">Kullanıcı verisi alınamadı</message>
+	<message key="plugins.importexport.users.import.failedToImportRole">Kullanıcının rolünü belirlemede hata oluştu</message>
+	<message key="plugins.importexport.users.import.dataFile">Kullanıcı veri dosyası</message>
+	<message key="plugins.importexport.users.import.sendNotify">Sistme kaydedilen her kullanıcıya kullanıcı adı ve şifrelerini içeren bir mesaj gönder.</message>
+	<message key="plugins.importexport.users.import.continueOnError">Bir hata oluşur ise diğer kullanıcıları yüklemeyi sürdür.</message>
+	<message key="plugins.importexport.users.import.noFileError">Sisteme dosya göndermediniz!</message>
+	<message key="plugins.importexport.users.import.usersWereImported">Aşağıdaki kullanıcılar sisteme başarı ile eklendi</message>
+	<message key="plugins.importexport.users.import.errorsOccurred">Veri alınırken hata oldu</message>
+	<message key="plugins.importexport.users.import.confirmUsers">Bu kullanıcıların sisteme eklenmesini istediğiniz kullanıcılar olduğunu onaylayınız.</message>
+	<message key="plugins.importexport.users.unknownJournal">Belirtilen "{$journalPath}" sistemde bulunmayan bir dizin.</message>
+
+	<message key="plugins.importexport.users.export.exportUsers">Kullanıcı verilerini dışarı ver</message>
+	<message key="plugins.importexport.users.export.exportByRole">Kullanıcıları rollerine göre ver</message>
+	<message key="plugins.importexport.users.export.exportAllUsers">Tümünü ver</message>
+	<message key="plugins.importexport.users.export.errorsOccurred">Veriler verilmeye hazırlanırken hata oldu</message>
+	<message key="plugins.importexport.users.export.couldNotWriteFile">"{$fileName}" dosyasına yazamıyorum.</message>
+</locale>
