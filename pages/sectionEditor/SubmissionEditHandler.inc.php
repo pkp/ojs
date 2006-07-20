@@ -1270,16 +1270,19 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		import('submission.form.ArticleGalleyForm');
 		
 		$submitForm = &new ArticleGalleyForm($articleId, $galleyId);
-		$submitForm->readInputData();
 		
 		if (Request::getUserVar('uploadImage')) {
+			$submitForm->initData();
+
 			// Attach galley image
 			$submitForm->uploadImage();
 			
 			parent::setupTemplate(true, $articleId, 'editing');
 			$submitForm->display();
-		
+
 		} else if(($deleteImage = Request::getUserVar('deleteImage')) && count($deleteImage) == 1) {
+			$submitForm->initData();
+
 			// Delete galley image
 			list($imageId) = array_keys($deleteImage);
 			$submitForm->deleteImage($imageId);
@@ -1288,10 +1291,12 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$submitForm->display();
 			
 		} else if ($submitForm->validate()) {
+			$submitForm->readInputData();
 			$submitForm->execute();
 			Request::redirect(null, null, 'submissionEditing', $articleId);
 
 		} else {
+			$submitForm->readInputData();
 			parent::setupTemplate(true, $articleId, 'editing');
 			$submitForm->display();
 		}

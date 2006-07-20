@@ -58,8 +58,6 @@ echo -n "Preparing package ... "
 cp config.TEMPLATE.inc.php config.inc.php
 find . -name .cvsignore -exec rm {} \;
 rm -r $EXCLUDE
-mkdir cache/t_cache
-mkdir cache/_db
 echo "Done"
 
 if [ ! -z "$PRECOMPILE" ]; then

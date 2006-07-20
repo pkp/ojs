@@ -205,6 +205,7 @@ class ArticleGalleyForm extends Form {
 			$type = $fileManager->getUploadedFileType($fileName);
 			$extension = $fileManager->getImageExtension($type);
 			if (!$extension) {
+				$this->addError('imageFile', 'submission.layout.imageInvalid');
 				return false;
 			}
 

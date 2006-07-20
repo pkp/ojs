@@ -139,7 +139,7 @@
 {/foreach}
 </table>
 
-<input type="file" name="imageFile" class="uploadField" />&nbsp;
+<input type="file" name="imageFile" id="imageFile" class="uploadField" />&nbsp;
 <input type="submit" name="uploadImage" class="button" value="{translate key="common.upload"}" />
 
 {/if}
