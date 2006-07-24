@@ -126,8 +126,8 @@ class EditorAction extends SectionEditorAction {
 		$sectionEditorSubmission =& $sectionEditorSubmissionDao->getSectionEditorSubmission($article->getArticleId());
 		if (!$sectionEditorSubmission->getCopyeditFile()) {
 			SectionEditorAction::recordDecision($sectionEditorSubmission, SUBMISSION_EDITOR_DECISION_ACCEPT);
-			$editorFile = $sectionEditorSubmission->getEditorFile();
-			SectionEditorAction::setCopyeditFile($sectionEditorSubmission, $editorFile->getFileId(), $editorFile->getRevision());
+			$reviewFile = $sectionEditorSubmission->getReviewFile();
+			SectionEditorAction::setCopyeditFile($sectionEditorSubmission, $reviewFile->getFileId(), $reviewFile->getRevision());
 		}
 
 		// 3. Add a galley.
