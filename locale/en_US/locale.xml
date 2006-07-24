@@ -2238,6 +2238,7 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="installer.administratorAccount">Administrator Account</message>
 	<message key="installer.administratorAccountInstructions">This user account will become the site administrator and have complete access to the system. Additional user accounts can be created after installation.</message>
 	<message key="installer.databaseSettings">Database Settings</message>
+	<message key="installer.databaseSettingsInstructions">OJS requires access to a SQL database to store its data. See the system requirements above for a list of supported databases. In the fields below, provide the settings to be used to connect to the database.</message>
 	<message key="installer.databaseDriver">Database driver</message>
 	<message key="installer.databaseHost">Host</message>
 	<message key="installer.databaseUsername">Username</message>

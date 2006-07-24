@@ -185,7 +185,7 @@ function doSubmit() {
 
 <h3>{translate key="installer.databaseSettings"}</h3>
 
-<p>{translate key="installer.administratorAccountInstructions"}</p>
+<p>{translate key="installer.databaseSettingsInstructions"}</p>
 
 <table width="100%" class="data">
 	<tr valign="top">
