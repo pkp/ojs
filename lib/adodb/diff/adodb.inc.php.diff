@@ -1,5 +1,20 @@
-281a282
-> 	var $numQueries = 0;
-794a796,797
-> 		$this->numQueries++;
-> 		
+diff -u -r adodb-new-tmp/adodb.inc.php adodb/adodb.inc.php
+--- adodb-new-tmp/adodb.inc.php	2006-06-07 23:20:16.000000000 -0700
++++ adodb/adodb.inc.php	2006-07-25 12:29:59.000000000 -0700
+@@ -278,6 +278,7 @@
+ 	var $arrayClass = 'ADORecordSet_array'; /// name of class used to generate array recordsets, which are pre-downloaded recordsets
+ 	
+ 	var $noNullStrings = false; /// oracle specific stuff - if true ensures that '' is converted to ' '
++	var $numQueries = 0;
+ 	var $numCacheHits = 0; 
+ 	var $numCacheMisses = 0;
+ 	var $pageExecuteCountRows = true;
+@@ -791,6 +792,8 @@
+ 	 */
+ 	function &Execute($sql,$inputarr=false) 
+ 	{
++		$this->numQueries++;
++		
+ 		if ($this->fnExecute) {
+ 			$fn = $this->fnExecute;
+ 			$ret =& $fn($this,$sql,$inputarr);

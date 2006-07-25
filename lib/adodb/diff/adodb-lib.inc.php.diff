@@ -1,16 +1,16 @@
-587,590c587,588
-< 			else {
-< 				preg_match("/FROM\s+".ADODB_TABLE_REGEX."/is", $rs->sql, $tableName);
-< 				$tableName = $tableName[1];
-< 			}
----
-> 			else preg_match("/FROM\s+".ADODB_TABLE_REGEX."/is", $rs->sql, $tableName);
-> 	
-607c605
-< 			$sql = 'UPDATE '.$tableName.' SET '.substr($setFields, 0, -2);
----
-> 		$sql = 'UPDATE '.$tableName[1].' SET '.substr($setFields, 0, -2);
-953c951
-< 	if ((float) PHPVERSION() < 4.3) return '';
----
-> 	if (PHPVERSION() < 4.3) return '';
+diff -u -r adodb-new-tmp/adodb-lib.inc.php adodb/adodb-lib.inc.php
+--- adodb-new-tmp/adodb-lib.inc.php	2006-06-07 23:20:17.000000000 -0700
++++ adodb/adodb-lib.inc.php	2006-07-25 12:29:59.000000000 -0700
+@@ -604,10 +604,8 @@
+ 		if ($fieldUpdatedCount > 0 || $forceUpdate) {
+ 					// Get the table name from the existing query.
+ 			if (!empty($rs->tableName)) $tableName = $rs->tableName;
+-			else {
+-				preg_match("/FROM\s+".ADODB_TABLE_REGEX."/is", $rs->sql, $tableName);
+-				$tableName = $tableName[1];
+-			}
++			else preg_match("/FROM\s+".ADODB_TABLE_REGEX."/is", $rs->sql, $tableName);
++	
+ 			// Get the full where clause excluding the word "WHERE" from
+ 			// the existing query.
+ 			preg_match('/\sWHERE\s(.*)/is', $rs->sql, $whereClause);
