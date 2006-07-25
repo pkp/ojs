@@ -7,7 +7,7 @@ global $ADODB_INCLUDED_LIB;
 $ADODB_INCLUDED_LIB = 1;
 
 /* 
- @version V4.65 22 July 2005 (c) 2000-2005 John Lim (jlim\@natsoft.com.my). All rights reserved.
+ @version V4.90 8 June 2006 (c) 2000-2006 John Lim (jlim\@natsoft.com.my). All rights reserved.
   Released under both BSD license and Lesser GPL library license. 
   Whenever there is any discrepancy between the two licenses, 
   the BSD license will take precedence. See License.txt. 
@@ -57,8 +57,10 @@ function _adodb_replace(&$zthis, $table, $fieldArray, $keyCol, $autoQuote, $has_
 		 
 		$where = false;
 		foreach ($keyCol as $v) {
-			if ($where) $where .= " and $v=$fieldArray[$v]";
-			else $where = "$v=$fieldArray[$v]";
+			if (isset($fieldArray[$v])) {
+				if ($where) $where .= ' and '.$v.'='.$fieldArray[$v];
+				else $where = $v.'='.$fieldArray[$v];
+			}
 		}
 		
 		if ($uSet && $where) {
@@ -281,9 +283,15 @@ function _adodb_getmenu_gp(&$zthis, $name,$defstr='',$blank1stItem=true,$multipl
 
 /*
 	Count the number of records this sql statement will return by using
-	query rewriting techniques...
+	query rewriting heuristics...
 	
 	Does not work with UNIONs, except with postgresql and oracle.
+	
+	Usage:
+	
+	$conn->Connect(...);
+	$cnt = _adodb_getcount($conn, $sql);
+	
 */
 function _adodb_getcount(&$zthis, $sql,$inputarr=false,$secs2cache=0) 
 {
@@ -317,12 +325,22 @@ function _adodb_getcount(&$zthis, $sql,$inputarr=false,$secs2cache=0)
 		$rewritesql = preg_replace(
 					'/^\s*SELECT\s.*\s+FROM\s/Uis','SELECT COUNT(*) FROM ',$sql);
 
+		
+		
 		// fix by alexander zhukov, alex#unipack.ru, because count(*) and 'order by' fails 
 		// with mssql, access and postgresql. Also a good speedup optimization - skips sorting!
-		$rewritesql = preg_replace('/(\sORDER\s+BY\s[^)]*)/is','',$rewritesql);
+		// also see http://phplens.com/lens/lensforum/msgs.php?id=12752
+		if (preg_match('/\sORDER\s+BY\s*\(/i',$rewritesql))
+			$rewritesql = preg_replace('/(\sORDER\s+BY\s.*)/is','',$rewritesql);
+		else
+			$rewritesql = preg_replace('/(\sORDER\s+BY\s[^)]*)/is','',$rewritesql);
 	}
 	
+	
+	
 	if (isset($rewritesql) && $rewritesql != $sql) {
+		if (preg_match('/\sLIMIT\s+[0-9]+/i',$sql,$limitarr)) $rewritesql .= $limitarr[1];
+		 
 		if ($secs2cache) {
 			// we only use half the time of secs2cache because the count can quickly
 			// become inaccurate if new records are added
@@ -341,6 +359,8 @@ function _adodb_getcount(&$zthis, $sql,$inputarr=false,$secs2cache=0)
 	if (preg_match('/\s*UNION\s*/is', $sql)) $rewritesql = $sql;
 	else $rewritesql = preg_replace('/(\sORDER\s+BY\s.*)/is','',$sql); 
 	
+	if (preg_match('/\sLIMIT\s+[0-9]+/i',$sql,$limitarr)) $rewritesql .= $limitarr[0];
+		
 	$rstest = &$zthis->Execute($rewritesql,$inputarr);
 	if (!$rstest) $rstest = $zthis->Execute($sql,$inputarr);
 	
@@ -593,20 +613,22 @@ function _adodb_getupdatesql(&$zthis,&$rs, $arrFields,$forceUpdate=false,$magicq
 			$discard = false;
 			// not a good hack, improvements?
 			if ($whereClause) {
+			#var_dump($whereClause);
 				if (preg_match('/\s(ORDER\s.*)/is', $whereClause[1], $discard));
 				else if (preg_match('/\s(LIMIT\s.*)/is', $whereClause[1], $discard));
-				else preg_match('/\s(FOR UPDATE.*)/is', $whereClause[1], $discard);
+				else if (preg_match('/\s(FOR UPDATE.*)/is', $whereClause[1], $discard));
+				else preg_match('/\s.*(\) WHERE .*)/is', $whereClause[1], $discard); # see http://sourceforge.net/tracker/index.php?func=detail&aid=1379638&group_id=42718&atid=433976
 			} else
 				$whereClause = array(false,false);
 				
 			if ($discard)
 				$whereClause[1] = substr($whereClause[1], 0, strlen($whereClause[1]) - strlen($discard[1]));
 			
-		$sql = 'UPDATE '.$tableName[1].' SET '.substr($setFields, 0, -2);
-		if (strlen($whereClause[1]) > 0) 
-			$sql .= ' WHERE '.$whereClause[1];
+			$sql = 'UPDATE '.$tableName.' SET '.substr($setFields, 0, -2);
+			if (strlen($whereClause[1]) > 0) 
+				$sql .= ' WHERE '.$whereClause[1];
 
-		return $sql;
+			return $sql;
 
 		} else {
 			return false;
@@ -917,11 +939,13 @@ function _adodb_debug_execute(&$zthis, $sql, $inputarr)
 	$dbt = $zthis->databaseType;
 	if (isset($zthis->dsnType)) $dbt .= '-'.$zthis->dsnType;
 	if ($inBrowser) {
-		$ss = htmlspecialchars($ss);
+		if ($ss) {
+			$ss = '<code>'.htmlspecialchars($ss).'</code>';
+		}
 		if ($zthis->debug === -1)
-			ADOConnection::outp( "<br>\n($dbt): ".htmlspecialchars($sqlTxt)." &nbsp; <code>$ss</code>\n<br>\n",false);
+			ADOConnection::outp( "<br />\n($dbt): ".htmlspecialchars($sqlTxt)." &nbsp; $ss\n<br />\n",false);
 		else 
-			ADOConnection::outp( "<hr>\n($dbt): ".htmlspecialchars($sqlTxt)." &nbsp; <code>$ss</code>\n<hr>\n",false);
+			ADOConnection::outp( "<hr />\n($dbt): ".htmlspecialchars($sqlTxt)." &nbsp; $ss\n<hr />\n",false);
 	} else {
 		ADOConnection::outp("-----\n($dbt): ".$sqlTxt."\n-----\n",false);
 	}
@@ -945,10 +969,10 @@ function _adodb_debug_execute(&$zthis, $sql, $inputarr)
 	return $qID;
 }
 
-
+# pretty print the debug_backtrace function
 function _adodb_backtrace($printOrArr=true,$levels=9999,$skippy=0)
 {
-	if (PHPVERSION() < 4.3) return '';
+	if (!function_exists('debug_backtrace')) return '';
 	 
 	$html =  (isset($_SERVER['HTTP_USER_AGENT']));
 	$fmt =  ($html) ? "</font><font color=#808080 size=-1> %% line %4d, file: <a href=\"file:/%s\">%s</a></font>" : "%% line %4d, file: %s";
@@ -998,5 +1022,47 @@ function _adodb_backtrace($printOrArr=true,$levels=9999,$skippy=0)
 	
 	return $s;
 }
+/*
+function _adodb_find_from($sql) 
+{
+
+	$sql = str_replace(array("\n","\r"), ' ', $sql);
+	$charCount = strlen($sql);
+	
+	$inString = false;
+	$quote = '';
+	$parentheseCount = 0;
+	$prevChars = '';
+	$nextChars = '';
+	
+
+	for($i = 0; $i < $charCount; $i++) {
+
+    	$char = substr($sql,$i,1);
+	    $prevChars = substr($sql,0,$i);
+    	$nextChars = substr($sql,$i+1);
+
+		if((($char == "'" || $char == '"' || $char == '`') && substr($prevChars,-1,1) != '\\') && $inString === false) {
+			$quote = $char;
+			$inString = true;
+		}
+
+		elseif((($char == "'" || $char == '"' || $char == '`') && substr($prevChars,-1,1) != '\\') && $inString === true && $quote == $char) {
+			$quote = "";
+			$inString = false;
+		}
+
+		elseif($char == "(" && $inString === false)
+			$parentheseCount++;
+
+		elseif($char == ")" && $inString === false && $parentheseCount > 0)
+			$parentheseCount--;
+
+		elseif($parentheseCount <= 0 && $inString === false && $char == " " && strtoupper(substr($prevChars,-5,5)) == " FROM")
+			return $i;
+
+	}
+}
+*/
 
 ?>

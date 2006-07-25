@@ -1,7 +1,7 @@
 <?php
 /**
 ADOdb Date Library, part of the ADOdb abstraction library
-Download: http://php.weblogs.com/adodb_date_time_library
+Download: http://phplens.com/phpeverywhere/
 
 PHP native date functions use integer timestamps for computations.
 Because of this, dates are restricted to the years 1901-2038 on Unix 
@@ -108,7 +108,7 @@ The format fields that adodb_date supports:
 	n - month without leading zeros; i.e. "1" to "12" 
 	O - Difference to Greenwich time in hours; e.g. "+0200" 
 	Q - Quarter, as in 1, 2, 3, 4 
-	r - RFC 822 formatted date; e.g. "Thu, 21 Dec 2000 16:01:07 +0200" 
+	r - RFC 2822 formatted date; e.g. "Thu, 21 Dec 2000 16:01:07 +0200" 
 	s - seconds; i.e. "00" to "59" 
 	S - English ordinal suffix for the day of the month, 2 characters; 
 	   			i.e. "st", "nd", "rd" or "th" 
@@ -241,12 +241,21 @@ b. Implement daylight savings, which looks awfully complicated, see
 
 
 CHANGELOG
+- 19 March 2006 0.24
+Changed strftime() locale detection, because some locales prepend the day of week to the date when %c is used.
 
-- 18 July  2005  0.18
-- In PHP 4.3.11, the 'r' format has changed. Leading 0 in day is added. Changed for compat.
-- Added support for negative months in adodb_mktime().
+- 10 Feb 2006 0.23
+PHP5 compat: when we detect PHP5, the RFC2822 format for gmt 0000hrs is changed from -0000 to +0000. 
+	In PHP4, we will still use -0000 for 100% compat with PHP4.
 
-- 24 Feb 2005 
+- 08 Sept 2005 0.22
+In adodb_date2(), $is_gmt not supported properly. Fixed.
+
+- 18 July  2005 0.21
+In PHP 4.3.11, the 'r' format has changed. Leading 0 in day is added. Changed for compat.
+Added support for negative months in adodb_mktime().
+
+- 24 Feb 2005 0.20
 Added limited strftime/gmstrftime support. x10 improvement in performance of adodb_date().
 
 - 21 Dec 2004 0.17
@@ -359,7 +368,7 @@ First implementation.
 /*
 	Version Number
 */
-define('ADODB_DATE_VERSION',0.18);
+define('ADODB_DATE_VERSION',0.24);
 
 /*
 	This code was originally for windows. But apparently this problem happens 
@@ -471,7 +480,7 @@ function adodb_date_test()
 	
 	// Test string formating
 	print "<p>Testing date formating</p>";
-	$fmt = '\d\a\t\e T Y-m-d H:i:s a A d D F g G h H i j l L m M n O \R\F\C822 r s t U w y Y z Z 2003';
+	$fmt = '\d\a\t\e T Y-m-d H:i:s a A d D F g G h H i j l L m M n O \R\F\C2822 r s t U w y Y z Z 2003';
 	$s1 = date($fmt,0);
 	$s2 = adodb_date($fmt,0);
 	if ($s1 != $s2) {
@@ -689,11 +698,33 @@ adodb_date_gentable();
 
 for ($i=1970; $i > 1500; $i--) {
 
-echo "<hr>$i ";
+echo "<hr />$i ";
 	adodb_date_test_date($i,1,1);
 }
 
 */
+
+
+$_month_table_normal = array("",31,28,31,30,31,30,31,31,30,31,30,31);
+$_month_table_leaf = array("",31,29,31,30,31,30,31,31,30,31,30,31);
+	
+function adodb_validdate($y,$m,$d)
+{
+global $_month_table_normal,$_month_table_leaf;
+
+	if (_adodb_is_leap_year($y)) $marr =& $_month_table_leaf;
+	else $marr =& $_month_table_normal;
+	
+	if ($m > 12 || $m < 1) return false;
+	
+	if ($d > 31 || $d < 1) return false;
+	
+	if ($marr[$m] < $d) return false;
+	
+	if ($y < 1000 && $y > 3000) return false;
+	
+	return true;
+}
 
 /**
 	Low-level function that returns the getdate() array. We have a special
@@ -703,6 +734,7 @@ echo "<hr>$i ";
 function _adodb_getdate($origd=false,$fast=false,$is_gmt=false)
 {
 static $YRS;
+global $_month_table_normal,$_month_table_leaf;
 
 	$d =  $origd - ($is_gmt ? 0 : adodb_get_gmt_diff());
 	
@@ -912,8 +944,8 @@ function adodb_date2($fmt, $d=false, $is_gmt=false)
 		if ($rr[1] <= 100 && $rr[2]<= 1) return adodb_date($fmt,false,$is_gmt);
 	
 		// h-m-s-MM-DD-YY
-		if (!isset($rr[5])) $d = adodb_mktime(0,0,0,$rr[2],$rr[3],$rr[1]);
-		else $d = @adodb_mktime($rr[5],$rr[6],$rr[7],$rr[2],$rr[3],$rr[1]);
+		if (!isset($rr[5])) $d = adodb_mktime(0,0,0,$rr[2],$rr[3],$rr[1],false,$is_gmt);
+		else $d = @adodb_mktime($rr[5],$rr[6],$rr[7],$rr[2],$rr[3],$rr[1],false,$is_gmt);
 	}
 	
 	return adodb_date($fmt,$d,$is_gmt);
@@ -952,6 +984,8 @@ static $daylight;
 	$max = strlen($fmt);
 	$dates = '';
 	
+	$isphp5 = PHP_VERSION >= 5;
+	
 	/*
 		at this point, we have the following integer vars to manipulate:
 		$year, $month, $day, $hour, $min, $secs
@@ -975,7 +1009,11 @@ static $daylight;
 			if ($secs < 10) $dates .= ':0'.$secs; else $dates .= ':'.$secs;
 			
 			$gmt = adodb_get_gmt_diff();
-			$dates .= sprintf(' %s%04d',($gmt<0)?'+':'-',abs($gmt)/36); break;
+			if ($isphp5) 
+				$dates .= sprintf(' %s%04d',($gmt<=0)?'+':'-',abs($gmt)/36); 
+			else
+				$dates .= sprintf(' %s%04d',($gmt<0)?'+':'-',abs($gmt)/36); 
+			break;
 				
 		case 'Y': $dates .= $year; break;
 		case 'y': $dates .= substr($year,strlen($year)-2,2); break;
@@ -1006,7 +1044,12 @@ static $daylight;
 			$dates .= ($is_gmt) ? 0 : -adodb_get_gmt_diff(); break;
 		case 'O': 
 			$gmt = ($is_gmt) ? 0 : adodb_get_gmt_diff();
-			$dates .= sprintf('%s%04d',($gmt<0)?'+':'-',abs($gmt)/36); break;
+			
+			if ($isphp5)
+				$dates .= sprintf('%s%04d',($gmt<=0)?'+':'-',abs($gmt)/36); 
+			else
+				$dates .= sprintf('%s%04d',($gmt<0)?'+':'-',abs($gmt)/36); 
+			break;
 			
 		case 'H': 
 			if ($hour < 10) $dates .= '0'.$hour; 
@@ -1199,8 +1242,15 @@ global $ADODB_DATE_LOCALE;
 	}
 	
 	if (empty($ADODB_DATE_LOCALE)) {
+	/*
 		$tstr = strtoupper(gmstrftime('%c',31366800)); // 30 Dec 1970, 1 am
 		$sep = substr($tstr,2,1);
+		$hasAM = strrpos($tstr,'M') !== false;
+	*/
+		# see http://phplens.com/lens/lensforum/msgs.php?id=14865 for reasoning, and changelog for version 0.24
+		$dstr = gmstrftime('%x',31366800); // 30 Dec 1970, 1 am
+		$sep = substr($dstr,2,1);
+		$tstr = strtoupper(gmstrftime('%X',31366800)); // 30 Dec 1970, 1 am
 		$hasAM = strrpos($tstr,'M') !== false;
 		
 		$ADODB_DATE_LOCALE = array();
@@ -1262,11 +1312,11 @@ global $ADODB_DATE_LOCALE;
 			case 'S': $fmtdate .= 's'; break;
 			case 't': $fmtdate .= "\t"; break;
 			case 'T': $fmtdate .= 'H:i:s'; break;
-			case 'u': $fmtdate .= '?u'; $parseu = true; break; // wrong strftime=1-based, date=0-basde
+			case 'u': $fmtdate .= '?u'; $parseu = true; break; // wrong strftime=1-based, date=0-based
 			case 'U': $fmtdate .= '?U'; $parseU = true; break;// wrong strftime=1-based, date=0-based
 			case 'x': $fmtdate .= $ADODB_DATE_LOCALE[0]; break;
 			case 'X': $fmtdate .= $ADODB_DATE_LOCALE[1]; break;
-			case 'w': $fmtdate .= '?w'; $parseu = true; break; // wrong strftime=1-based, date=0-basde
+			case 'w': $fmtdate .= '?w'; $parseu = true; break; // wrong strftime=1-based, date=0-based
 			case 'W': $fmtdate .= '?W'; $parseU = true; break;// wrong strftime=1-based, date=0-based
 			case 'y': $fmtdate .= 'y'; break;
 			case 'Y': $fmtdate .= 'Y'; break;

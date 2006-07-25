@@ -1,6 +1,6 @@
 <?php
 /* 
-V4.65 22 July 2005  (c) 2000-2005 John Lim (jlim#natsoft.com.my). All rights reserved.
+V4.90 8 June 2006  (c) 2000-2006 John Lim (jlim#natsoft.com.my). All rights reserved.
   Released under both BSD license and Lesser GPL library license. 
   Whenever there is any discrepancy between the two licenses, 
   the BSD license will take precedence. 
@@ -20,31 +20,31 @@ if (!defined('ADODB_DIR')) die();
 
 /*
 enum pdo_param_type {
-PDO_PARAM_NULL, 0
+PDO::PARAM_NULL, 0
 
 /* int as in long (the php native int type).
  * If you mark a column as an int, PDO expects get_col to return
  * a pointer to a long 
-PDO_PARAM_INT, 1
+PDO::PARAM_INT, 1
 
 /* get_col ptr should point to start of the string buffer 
-PDO_PARAM_STR, 2
+PDO::PARAM_STR, 2
 
 /* get_col: when len is 0 ptr should point to a php_stream *,
  * otherwise it should behave like a string. Indicate a NULL field
  * value by setting the ptr to NULL 
-PDO_PARAM_LOB, 3
+PDO::PARAM_LOB, 3
 
 /* get_col: will expect the ptr to point to a new PDOStatement object handle,
  * but this isn't wired up yet 
-PDO_PARAM_STMT, 4 /* hierarchical result set 
+PDO::PARAM_STMT, 4 /* hierarchical result set 
 
 /* get_col ptr should point to a zend_bool 
-PDO_PARAM_BOOL, 5
+PDO::PARAM_BOOL, 5
 
 
 /* magic flag to denote a parameter as being input/output 
-PDO_PARAM_INPUT_OUTPUT = 0x80000000
+PDO::PARAM_INPUT_OUTPUT = 0x80000000
 };
 */
 	
@@ -66,10 +66,14 @@ function adodb_pdo_type($t)
 
 class ADODB_pdo_base extends ADODB_pdo {
 
+	var $sysDate = "'?'";
+	var $sysTimeStamp = "'?'";
+	
+
 	function _init($parentDriver)
 	{
-		$parentDriver->_bindInputArray = false;
-		#$parentDriver->_connectionID->setAttribute(PDO_MYSQL_ATTR_USE_BUFFERED_QUERY,true);
+		$parentDriver->_bindInputArray = true;
+		#$parentDriver->_connectionID->setAttribute(PDO::MYSQL_ATTR_USE_BUFFERED_QUERY,true);
 	}
 	
 	function ServerInfo()
@@ -77,7 +81,7 @@ class ADODB_pdo_base extends ADODB_pdo {
 		return ADOConnection::ServerInfo();
 	}
 	
-	function &SelectLimit($sql,$nrows=-1,$offset=-1,$inputarr=false,$secs2cache=0)
+	function SelectLimit($sql,$nrows=-1,$offset=-1,$inputarr=false,$secs2cache=0)
 	{
 		$ret = ADOConnection::SelectLimit($sql,$nrows,$offset,$inputarr,$secs2cache);
 		return $ret;
@@ -128,12 +132,19 @@ class ADODB_pdo extends ADOConnection {
 		$this->sysTimeStamp = $d->sysTimeStamp;
 		$this->random = $d->random;
 		$this->concat_operator = $d->concat_operator;
+		$this->nameQuote = $d->nameQuote;
 		
 		$d->_init($this);
 	}
 	
 	function Time()
 	{
+		if (!empty($this->_driver->_hasdual)) $sql = "select $this->sysTimeStamp from dual";
+		else $sql = "select $this->sysTimeStamp";
+		
+		$rs =& $this->_Execute($sql);
+		if ($rs && !$rs->EOF) return $this->UnixTimeStamp(reset($rs->fields));
+		
 		return false;
 	}
 	
@@ -143,6 +154,9 @@ class ADODB_pdo extends ADOConnection {
 		$at = strpos($argDSN,':');
 		$this->dsnType = substr($argDSN,0,$at);
 
+		if ($argDatabasename) {
+			$argDSN .= ';dbname='.$argDatabasename;
+		}
 		try {
 			$this->_connectionID = new PDO($argDSN, $argUsername, $argPassword);
 		} catch (Exception $e) {
@@ -155,21 +169,22 @@ class ADODB_pdo extends ADOConnection {
 		
 		if ($this->_connectionID) {
 			switch(ADODB_ASSOC_CASE){
-			case 0: $m = PDO_CASE_LOWER; break;
-			case 1: $m = PDO_CASE_UPPER; break;
+			case 0: $m = PDO::CASE_LOWER; break;
+			case 1: $m = PDO::CASE_UPPER; break;
 			default:
-			case 2: $m = PDO_CASE_NATURAL; break;
+			case 2: $m = PDO::CASE_NATURAL; break;
 			}
 			
-			//$this->_connectionID->setAttribute(PDO_ATTR_ERRMODE,PDO_ERRMODE_SILENT );
-			$this->_connectionID->setAttribute(PDO_ATTR_CASE,$m);
+			//$this->_connectionID->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_SILENT );
+			$this->_connectionID->setAttribute(PDO::ATTR_CASE,$m);
 			
 			$class = 'ADODB_pdo_'.$this->dsnType;
-			//$this->_connectionID->setAttribute(PDO_ATTR_AUTOCOMMIT,true);
+			//$this->_connectionID->setAttribute(PDO::ATTR_AUTOCOMMIT,true);
 			switch($this->dsnType) {
 			case 'oci':
 			case 'mysql':
 			case 'pgsql':
+			case 'mssql':
 				include_once(ADODB_DIR.'/drivers/adodb-pdo_'.$this->dsnType.'.inc.php');
 				break;
 			}
@@ -195,10 +210,11 @@ class ADODB_pdo extends ADOConnection {
 	/*------------------------------------------------------------------------------*/
 	
 	
-	function &SelectLimit($sql,$nrows=-1,$offset=-1,$inputarr=false,$secs2cache=0) 
+	function SelectLimit($sql,$nrows=-1,$offset=-1,$inputarr=false,$secs2cache=0) 
 	{	
 		$save = $this->_driver->fetchMode;
 		$this->_driver->fetchMode = $this->fetchMode;
+	 	$this->_driver->debug = $this->debug;
 		$ret = $this->_driver->SelectLimit($sql,$nrows,$offset,$inputarr,$secs2cache);
 		$this->_driver->fetchMode = $save;
 		return $ret;
@@ -265,7 +281,7 @@ class ADODB_pdo extends ADOConnection {
 		if ($this->transOff) return true; 
 		$this->transCnt += 1;
 		$this->_autocommit = false;
-		$this->_connectionID->setAttribute(PDO_ATTR_AUTOCOMMIT,false);
+		$this->_connectionID->setAttribute(PDO::ATTR_AUTOCOMMIT,false);
 		return $this->_connectionID->beginTransaction();
 	}
 	
@@ -278,7 +294,7 @@ class ADODB_pdo extends ADOConnection {
 		$this->_autocommit = true;
 		
 		$ret = $this->_connectionID->commit();
-		$this->_connectionID->setAttribute(PDO_ATTR_AUTOCOMMIT,true);
+		$this->_connectionID->setAttribute(PDO::ATTR_AUTOCOMMIT,true);
 		return $ret;
 	}
 	
@@ -290,7 +306,7 @@ class ADODB_pdo extends ADOConnection {
 		$this->_autocommit = true;
 		
 		$ret = $this->_connectionID->rollback();
-		$this->_connectionID->setAttribute(PDO_ATTR_AUTOCOMMIT,true);
+		$this->_connectionID->setAttribute(PDO::ATTR_AUTOCOMMIT,true);
 		return $ret;
 	}
 	
@@ -320,6 +336,7 @@ class ADODB_pdo extends ADOConnection {
 		}
 		
 		if ($stmt) {
+			$this->_driver->debug = $this->debug;
 			if ($inputarr) $ok = $stmt->execute($inputarr);
 			else $ok = $stmt->execute();
 		} 
@@ -440,11 +457,11 @@ class ADORecordSet_pdo extends ADORecordSet {
 		}
 		$this->adodbFetchMode = $mode;
 		switch($mode) {
-		case ADODB_FETCH_NUM: $mode = PDO_FETCH_NUM; break;
-		case ADODB_FETCH_ASSOC:  $mode = PDO_FETCH_ASSOC; break;
+		case ADODB_FETCH_NUM: $mode = PDO::FETCH_NUM; break;
+		case ADODB_FETCH_ASSOC:  $mode = PDO::FETCH_ASSOC; break;
 		
 		case ADODB_FETCH_BOTH: 
-		default: $mode = PDO_FETCH_BOTH; break;
+		default: $mode = PDO::FETCH_BOTH; break;
 		}
 		$this->fetchMode = $mode;
 		

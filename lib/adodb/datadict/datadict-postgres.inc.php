@@ -1,7 +1,7 @@
 <?php
 
 /**
-  V4.65 22 July 2005  (c) 2000-2005 John Lim (jlim@natsoft.com.my). All rights reserved.
+  V4.90 8 June 2006  (c) 2000-2006 John Lim (jlim#natsoft.com.my). All rights reserved.
   Released under both BSD license and Lesser GPL library license. 
   Whenever there is any discrepancy between the two licenses, 
   the BSD license will take precedence.
@@ -21,6 +21,7 @@ class ADODB2_postgres extends ADODB_DataDict {
 	var $addCol = ' ADD COLUMN';
 	var $quote = '"';
 	var $renameTable = 'ALTER TABLE %s RENAME TO %s'; // at least since 7.1
+	var $dropTable = 'DROP TABLE %s CASCADE';
 	
 	function MetaType($t,$len=-1,$fieldobj=false)
 	{
@@ -38,7 +39,7 @@ class ADODB2_postgres extends ADODB_DataDict {
 			case 'CHARACTER':
 			case 'VARCHAR':
 			case 'NAME':
-	   		case 'BPCHAR':
+			case 'BPCHAR':
 				if ($len <= $this->blobSize) return 'C';
 			
 			case 'TEXT':
@@ -134,10 +135,11 @@ class ADODB2_postgres extends ADODB_DataDict {
 			if (($not_null = preg_match('/NOT NULL/i',$v))) {
 				$v = preg_replace('/NOT NULL/i','',$v);
 			}
-			if (preg_match('/^([^ ]+) .*(DEFAULT [^ ]+)/',$v,$matches)) {
+			if (preg_match('/^([^ ]+) .*DEFAULT ([^ ]+)/',$v,$matches)) {
 				list(,$colname,$default) = $matches;
-				$sql[] = $alter . str_replace($default,'',$v);
-				$sql[] = 'ALTER TABLE '.$tabname.' ALTER COLUMN '.$colname.' SET ' . $default;
+				$sql[] = $alter . str_replace('DEFAULT '.$default,'',$v);
+				$sql[] = 'UPDATE '.$tabname.' SET '.$colname.'='.$default;
+				$sql[] = 'ALTER TABLE '.$tabname.' ALTER COLUMN '.$colname.' SET DEFAULT ' . $default;
 			} else {				
 				$sql[] = $alter . $v;
 			}
@@ -220,15 +222,15 @@ class ADODB2_postgres extends ADODB_DataDict {
 				if (((is_array($tableflds)
 					&& in_array($tableflds[strtoupper($fld->name)]['TYPE'], array('I', 'I2', 'I4', 'I8', 'N', 'F')))
 					|| (!is_array($tableflds)
-					&& preg_match('/'.$fld->name.' (I|I2|I4|I8|N|F)/i',$tableflds,$matches))) && 
+					&& preg_match('/'.$fld->name.' (I|I2|I4|I8|N|F)/i',$tableflds,$matches))) &&
 					in_array($fld->type,array('varchar','char','text','bytea'))) {
-					$copyflds[] = "to_number($fld->name,'S99D99')";
+					$copyflds[] = "to_number($fld->name,'S9999999999999D99')";
 				} else {
 					$copyflds[] = $fld->name;
 				}
 				$insertflds[] = $fld->name;
 				// identify the sequence name and the fld its on
-				if (isset($fld->primary_key) && $fld->primary_key && $fld->has_default && 
+				if (isset($fld->primary_key) && $fld->primary_key && $fld->has_default &&
 					preg_match("/nextval\('(?:[^']+\.)*([^']+)'::text\)/",$fld->default_value,$matches)) {
 					$seq_name = $matches[1];
 					$seq_fld = $fld->name;
@@ -262,16 +264,16 @@ class ADODB2_postgres extends ADODB_DataDict {
 		$aSql[] = 'COMMIT';
 		return $aSql;
 	}
-
+	
 	/* --- Added by Alec 2005-09-14:
-               In PostgreSQL <7.3, SERIAL columns can't be used because they
-	       impose UNIQUE constraints on the column. In the best case (when
-	       we want a UNIQUE constraint), this means that the index is
-	       created twice -- once by ADODB, once by PostgreSQL -- and in
-	       the worst case, an unwanted UNIQUE condition is imposed.
+		In PostgreSQL <7.3, SERIAL columns can't be used because they
+		impose UNIQUE constraints on the column. In the best case (when
+		we want a UNIQUE constraint), this means that the index is
+		created twice -- once by ADODB, once by PostgreSQL -- and in
+		the worst case, an unwanted UNIQUE condition is imposed.
 
-	       The makeObjectName function was ported from PostgreSQL 7.1's
-	       analyse.c.
+		The makeObjectName function was ported from PostgreSQL 7.1's
+		analyse.c.
 	   --- */
 
 	function makeObjectName($name1, $name2, $typename) {
@@ -464,6 +466,16 @@ CREATE [ UNIQUE ] INDEX index_name ON table
 		$sql[] = $s;
 		
 		return $sql;
+	}
+	
+	function _GetSize($ftype, $ty, $fsize, $fprec)
+	{
+		if (strlen($fsize) && $ty != 'X' && $ty != 'B' && $ty  != 'I' && strpos($ftype,'(') === false) {
+			$ftype .= "(".$fsize;
+			if (strlen($fprec)) $ftype .= ",".$fprec;
+			$ftype .= ')';
+		}
+		return $ftype;
 	}
 	
 	// Functions for managing the database character encoding

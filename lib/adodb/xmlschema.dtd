@@ -3,7 +3,8 @@
 <!ELEMENT schema (table*, sql*)>
 <!ATTLIST schema version CDATA #REQUIRED>
 <!ELEMENT table ((field+|DROP), CONSTRAINT*, descr?, index*, data*)>
-<!ELEMENT field ((NOTNULL|KEY|PRIMARY)?, (AUTO|AUTOINCREMENT)?, (DEFAULT|DEFDATE|DEFTIMESTAMP)?, NOQUOTE?, CONSTRAINT*, descr?)>
+<!ELEMENT field ((NOTNULL|KEY|PRIMARY)?, (AUTO|AUTOINCREMENT)?, (DEFAULT|DEFDATE|DEFTIMESTAMP)?, 
+NOQUOTE?, CONSTRAINT*, descr?)>
 <!ELEMENT data (row+)>
 <!ELEMENT row (f+)>
 <!ELEMENT f (#CDATA)>

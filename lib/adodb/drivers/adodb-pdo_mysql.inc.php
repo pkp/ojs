@@ -2,7 +2,7 @@
 
 
 /*
-V4.65 22 July 2005  (c) 2000-2005 John Lim (jlim@natsoft.com.my). All rights reserved.
+V4.90 8 June 2006  (c) 2000-2006 John Lim (jlim#natsoft.com.my). All rights reserved.
   Released under both BSD license and Lesser GPL library license. 
   Whenever there is any discrepancy between the two licenses, 
   the BSD license will take precedence.
@@ -21,8 +21,9 @@ class ADODB_pdo_mysql extends ADODB_pdo {
 	{
 	
 		$parentDriver->hasTransactions = false;
-		$parentDriver->_bindInputArray = false;
-		$parentDriver->_connectionID->setAttribute(PDO_MYSQL_ATTR_USE_BUFFERED_QUERY,true);
+		$parentDriver->_bindInputArray = true;
+		$parentDriver->hasInsertID = true;
+		$parentDriver->_connectionID->setAttribute(PDO::MYSQL_ATTR_USE_BUFFERED_QUERY,true);
 	}
 	
 	function ServerInfo()
@@ -47,6 +48,17 @@ class ADODB_pdo_mysql extends ADODB_pdo {
 		
 		$this->metaTablesSQL = $save;
 		return $ret;
+	}
+	
+	function SetTransactionMode( $transaction_mode ) 
+	{
+		$this->_transmode  = $transaction_mode;
+		if (empty($transaction_mode)) {
+			$this->Execute('SET TRANSACTION ISOLATION LEVEL REPEATABLE READ');
+			return;
+		}
+		if (!stristr($transaction_mode,'isolation')) $transaction_mode = 'ISOLATION LEVEL '.$transaction_mode;
+		$this->Execute("SET SESSION TRANSACTION ".$transaction_mode);
 	}
 	
  	function &MetaColumns($table) 

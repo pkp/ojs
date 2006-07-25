@@ -1,6 +1,6 @@
 <?php
 /*
-V4.65 22 July 2005  (c) 2000-2005 John Lim (jlim@natsoft.com.my). All rights reserved.
+V4.90 8 June 2006  (c) 2000-2006 John Lim (jlim#natsoft.com.my). All rights reserved.
   Released under both BSD license and Lesser GPL library license. 
   Whenever there is any discrepancy between the two licenses, 
   the BSD license will take precedence.
@@ -76,6 +76,49 @@ class ADODB_sqlite extends ADOConnection {
 		if ($this->transCnt>0)$this->transCnt -= 1;
 		return !empty($ret);
 	}
+	
+	// mark newnham
+	function &MetaColumns($tab)
+	{
+	  global $ADODB_FETCH_MODE;
+	  $false = false;
+	  $save = $ADODB_FETCH_MODE;
+	  $ADODB_FETCH_MODE = ADODB_FETCH_ASSOC;
+	  if ($this->fetchMode !== false) $savem = $this->SetFetchMode(false);
+	  $rs = $this->Execute("PRAGMA table_info('$tab')");
+	  if (isset($savem)) $this->SetFetchMode($savem);
+	  if (!$rs) {
+	    $ADODB_FETCH_MODE = $save; 
+	    return $false;
+	  }
+	  $arr = array();
+	  while ($r = $rs->FetchRow()) {
+	    $type = explode('(',$r['type']);
+	    $size = '';
+	    if (sizeof($type)==2)
+	    $size = trim($type[1],')');
+	    $fn = strtoupper($r['name']);
+	    $fld = new ADOFieldObject;
+	    $fld->name = $r['name'];
+	    $fld->type = $type[0];
+	    $fld->max_length = $size;
+	    $fld->not_null = $r['notnull'];
+	    $fld->default_value = $r['dflt_value'];
+	    $fld->scale = 0;
+	    if ($save == ADODB_FETCH_NUM) $arr[] = $fld;	
+	    else $arr[strtoupper($fld->name)] = $fld;
+	  }
+	  $rs->Close();
+	  $ADODB_FETCH_MODE = $save;
+	  return $arr;
+	}
+	
+	function _init($parentDriver)
+	{
+	
+		$parentDriver->hasTransactions = false;
+		$parentDriver->hasInsertID = true;
+	}
 
 	function _insertid()
 	{
@@ -104,24 +147,6 @@ class ADODB_sqlite extends ADOConnection {
 		return ($col) ? "adodb_date2($fmt,$col)" : "adodb_date($fmt)";
 	}
 	
-	function &MetaColumns($tab)
-	{
-	global $ADODB_FETCH_MODE;
-	
-		$rs = $this->Execute("select * from $tab limit 1");
-		if (!$rs) {
-			$false = false;
-			return $false;
-		}
-		$arr = array();
-		for ($i=0,$max=$rs->_numOfFields; $i < $max; $i++) {
-			$fld =& $rs->FetchField($i);
-			if ($ADODB_FETCH_MODE == ADODB_FETCH_NUM) $retarr[] =& $fld;	
-			else $arr[strtoupper($fld->name)] =& $fld;
-		}
-		$rs->Close();
-		return $arr;
-	}
 	
 	function _createFunctions()
 	{
@@ -236,7 +261,7 @@ class ADODB_sqlite extends ADOConnection {
 		return @sqlite_close($this->_connectionID);
 	}
 
-	function &MetaIndexes ($table, $primary = FALSE, $owner=false)
+	function &MetaIndexes($table, $primary = FALSE, $owner=false)
 	{
 		$false = false;
 		// save old fetch mode

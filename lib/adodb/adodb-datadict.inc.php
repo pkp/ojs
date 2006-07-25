@@ -1,7 +1,7 @@
 <?php
 
 /**
-  V4.65 22 July 2005  (c) 2000-2005 John Lim (jlim@natsoft.com.my). All rights reserved.
+  V4.90 8 June 2006  (c) 2000-2006 John Lim (jlim#natsoft.com.my). All rights reserved.
   Released under both BSD license and Lesser GPL library license. 
   Whenever there is any discrepancy between the two licenses, 
   the BSD license will take precedence.
@@ -61,6 +61,7 @@ function Lens_ParseArgs($args,$endstmtchar=',',$tokenchars='_.-')
 	$tokens[$stmtno] = array();
 	$max = strlen($args);
 	$quoted = false;
+	$tokarr = array();
 	
 	while ($pos < $max) {
 		$ch = substr($args,$pos,1);
@@ -734,6 +735,7 @@ class ADODB_DataDict {
 		
 		$tableflds = $flds;
 		
+/* #2343: Null / Not Null column flag changes not respected by this code.
 		if (is_array($flds)) {
 		// Cycle through the update fields, comparing
 		// existing fields to fields to update.
@@ -742,6 +744,11 @@ class ADODB_DataDict {
 			$holdflds = array();
 			foreach($flds as $k=>$v) {
 				if ( isset($cols[$k]) && is_object($cols[$k]) ) {
+					// If already not allowing nulls, then don't change
+					$obj = $cols[$k];
+					if (isset($obj->not_null) && $obj->not_null)
+						$v = str_replace('NOT NULL','',$v);
+
 					$c = $cols[$k];
 					$ml = $c->max_length;
 					$mt = $this->MetaType($c->type,$ml);
@@ -755,8 +762,8 @@ class ADODB_DataDict {
 				}		
 			}
 			$flds = $holdflds;
-		}
-
+		} */
+	
 		// already exists, alter table instead
 		list($lines,$pkey) = $this->_GenFields($flds);
 		$sql = array();
@@ -770,7 +777,10 @@ class ADODB_DataDict {
 				$flds = Lens_ParseArgs($v,',');
 				
 				//  We are trying to change the size of the field, if not allowed, simply ignore the request.
-				if ($flds && in_array(strtoupper(substr($flds[0][1],0,4)),$this->invalidResizeTypes4)) continue;	 
+
+/* #2343: Null / Not Null column flag changes not respected by this code.
+				if ($flds && in_array(strtoupper(substr($flds[0][1],0,4)),$this->invalidResizeTypes4)) continue;
+*/
 	 		
 	 			$alter = $this->AlterColumnSQL($tablename, array($id => $tableflds[$id]));
 	 			if (empty($alter)) {
