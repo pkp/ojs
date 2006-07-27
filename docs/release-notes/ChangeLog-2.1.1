@@ -1,0 +1,4004 @@
+2006-07-17 15:58  alec
+
+	* tools/buildpkg.sh: #2131# Added missing empty directories to
+	  buildpkg.sh
+
+2006-07-17 13:12  alec
+
+	* dbscripts/xml/install.xml, dbscripts/xml/upgrade.xml,
+	  dbscripts/xml/version.xml, docs/ChangeLog, docs/README,
+	  docs/RELEASE, docs/release-notes/README-2.1.1: #2131# Final
+	  commits for smoke-test release candidate
+
+2006-07-17 10:32  alec
+
+	* dbscripts/xml/data/locale/tr_TR/email_templates_data.xml,
+	  locale/tr_TR/locale.xml,
+	  plugins/gateways/googleScholar/locale/tr_TR/locale.xml,
+	  plugins/importexport/erudit/locale/tr_TR/locale.xml,
+	  plugins/importexport/native/locale/tr_TR/locale.xml,
+	  plugins/importexport/sample/locale/tr_TR/locale.xml,
+	  plugins/importexport/users/locale/tr_TR/locale.xml,
+	  plugins/auth/ldap/locale/tr_TR/locale.xml: #2168# Added tr_TR
+	  files to CVS
+
+2006-07-17 10:30  alec
+
+	* help/it_IT/editorial/topic/000044.xml,
+	  help/it_IT/journal/topic/000029.xml,
+	  help/it_IT/journal/topic/000030.xml,
+	  help/it_IT/journal/topic/000031.xml,
+	  help/it_IT/journal/topic/000032.xml,
+	  help/it_IT/journal/topic/000033.xml,
+	  help/it_IT/journal/topic/000034.xml,
+	  help/pt_BR/editorial/topic/000044.xml,
+	  help/pt_BR/journal/topic/000029.xml,
+	  help/pt_BR/journal/topic/000030.xml,
+	  help/pt_BR/journal/topic/000031.xml,
+	  help/pt_BR/journal/topic/000032.xml,
+	  help/pt_BR/journal/topic/000033.xml,
+	  help/pt_BR/journal/topic/000034.xml,
+	  tools/test/src/org/pkp/ojs/CreateTestJournal.java: #2168# Added
+	  tr_TR, pt_BR, it_IT various files
+
+2006-07-17 10:26  alec
+
+	* help/tr_TR/: editorial/toc/000000.xml, editorial/toc/000001.xml,
+	  editorial/toc/000002.xml, editorial/toc/000003.xml,
+	  editorial/toc/000004.xml, editorial/toc/000005.xml,
+	  editorial/toc/000006.xml, editorial/toc/000007.xml,
+	  editorial/toc/000008.xml, editorial/toc/000009.xml,
+	  editorial/toc/000010.xml, editorial/toc/000011.xml,
+	  editorial/toc/000012.xml, editorial/toc/000013.xml,
+	  editorial/toc/000014.xml, editorial/topic/000000.xml,
+	  editorial/topic/000001.xml, editorial/topic/000002.xml,
+	  editorial/topic/000003.xml, editorial/topic/000004.xml,
+	  editorial/topic/000005.xml, editorial/topic/000006.xml,
+	  editorial/topic/000007.xml, editorial/topic/000008.xml,
+	  editorial/topic/000009.xml, editorial/topic/000010.xml,
+	  editorial/topic/000011.xml, editorial/topic/000012.xml,
+	  editorial/topic/000013.xml, editorial/topic/000014.xml,
+	  editorial/topic/000015.xml, editorial/topic/000016.xml,
+	  editorial/topic/000017.xml, editorial/topic/000018.xml,
+	  editorial/topic/000019.xml, editorial/topic/000020.xml,
+	  editorial/topic/000021.xml, editorial/topic/000022.xml,
+	  editorial/topic/000023.xml, editorial/topic/000024.xml,
+	  editorial/topic/000025.xml, editorial/topic/000026.xml,
+	  editorial/topic/000027.xml, editorial/topic/000028.xml,
+	  editorial/topic/000029.xml, editorial/topic/000030.xml,
+	  editorial/topic/000031.xml, editorial/topic/000032.xml,
+	  editorial/topic/000033.xml, editorial/topic/000034.xml,
+	  editorial/topic/000035.xml, editorial/topic/000036.xml,
+	  editorial/topic/000037.xml, editorial/topic/000038.xml,
+	  editorial/topic/000039.xml, editorial/topic/000040.xml,
+	  editorial/topic/000041.xml, editorial/topic/000042.xml,
+	  editorial/topic/000043.xml, editorial/topic/000044.xml,
+	  index/toc/000000.xml, index/topic/000000.xml,
+	  intro/toc/000000.xml, intro/topic/000000.xml,
+	  intro/topic/000001.xml, journal/toc/000000.xml,
+	  journal/toc/000001.xml, journal/toc/000002.xml,
+	  journal/toc/000003.xml, journal/toc/000005.xml,
+	  journal/topic/000000.xml, journal/topic/000001.xml,
+	  journal/topic/000002.xml, journal/topic/000003.xml,
+	  journal/topic/000004.xml, journal/topic/000005.xml,
+	  journal/topic/000006.xml, journal/topic/000007.xml,
+	  journal/topic/000008.xml, journal/topic/000009.xml,
+	  journal/topic/000010.xml, journal/topic/000011.xml,
+	  journal/topic/000012.xml, journal/topic/000013.xml,
+	  journal/topic/000014.xml, journal/topic/000015.xml,
+	  journal/topic/000016.xml, journal/topic/000017.xml,
+	  journal/topic/000018.xml, journal/topic/000019.xml,
+	  journal/topic/000020.xml, journal/topic/000021.xml,
+	  journal/topic/000022.xml, journal/topic/000023.xml,
+	  journal/topic/000025.xml, journal/topic/000026.xml,
+	  journal/topic/000027.xml, journal/topic/000028.xml,
+	  journal/topic/000029.xml, journal/topic/000030.xml,
+	  journal/topic/000031.xml, journal/topic/000032.xml,
+	  journal/topic/000033.xml, journal/topic/000034.xml,
+	  publishing/toc/000000.xml, publishing/topic/000000.xml,
+	  publishing/topic/000001.xml, publishing/topic/000002.xml,
+	  publishing/topic/000003.xml, publishing/topic/000004.xml,
+	  site/toc/000000.xml, site/topic/000000.xml,
+	  site/topic/000001.xml, site/topic/000002.xml,
+	  site/topic/000003.xml, submission/toc/000000.xml,
+	  submission/topic/000000.xml, submission/topic/000001.xml,
+	  submission/topic/000002.xml, submission/topic/000003.xml,
+	  submission/topic/000004.xml, user/toc/000000.xml,
+	  user/topic/000000.xml, user/topic/000001.xml,
+	  user/topic/000002.xml, user/topic/000003.xml,
+	  user/topic/000004.xml, user/topic/000005.xml,
+	  user/topic/000006.xml, user/topic/000007.xml: #2168# Added tr_TR
+	  help
+
+2006-07-17 10:24  alec
+
+	* dbscripts/xml/data/locale/pt_BR/email_templates_data.xml,
+	  help/en_US/journal/topic/000031.xml,
+	  help/fr_CA/editorial/topic/000044.xml,
+	  help/fr_CA/journal/topic/000031.xml,
+	  help/fr_CA/journal/topic/000033.xml,
+	  help/fr_CA/journal/topic/000034.xml,
+	  help/it_IT/site/topic/000003.xml,
+	  help/pt_BR/editorial/toc/000000.xml,
+	  help/pt_BR/editorial/toc/000001.xml,
+	  help/pt_BR/editorial/toc/000002.xml,
+	  help/pt_BR/editorial/toc/000003.xml,
+	  help/pt_BR/editorial/toc/000004.xml,
+	  help/pt_BR/editorial/toc/000005.xml,
+	  help/pt_BR/editorial/toc/000006.xml,
+	  help/pt_BR/editorial/toc/000007.xml,
+	  help/pt_BR/editorial/toc/000008.xml,
+	  help/pt_BR/editorial/toc/000009.xml,
+	  help/pt_BR/editorial/toc/000010.xml,
+	  help/pt_BR/editorial/toc/000011.xml,
+	  help/pt_BR/editorial/toc/000012.xml,
+	  help/pt_BR/editorial/toc/000013.xml,
+	  help/pt_BR/editorial/toc/000014.xml,
+	  help/pt_BR/editorial/topic/000000.xml,
+	  help/pt_BR/editorial/topic/000001.xml,
+	  help/pt_BR/editorial/topic/000002.xml,
+	  help/pt_BR/editorial/topic/000003.xml,
+	  help/pt_BR/editorial/topic/000004.xml,
+	  help/pt_BR/editorial/topic/000005.xml,
+	  help/pt_BR/editorial/topic/000006.xml,
+	  help/pt_BR/editorial/topic/000007.xml,
+	  help/pt_BR/editorial/topic/000008.xml,
+	  help/pt_BR/editorial/topic/000009.xml,
+	  help/pt_BR/editorial/topic/000010.xml,
+	  help/pt_BR/editorial/topic/000011.xml,
+	  help/pt_BR/editorial/topic/000012.xml,
+	  help/pt_BR/editorial/topic/000013.xml,
+	  help/pt_BR/editorial/topic/000014.xml,
+	  help/pt_BR/editorial/topic/000015.xml,
+	  help/pt_BR/editorial/topic/000016.xml,
+	  help/pt_BR/editorial/topic/000017.xml,
+	  help/pt_BR/editorial/topic/000018.xml,
+	  help/pt_BR/editorial/topic/000019.xml,
+	  help/pt_BR/editorial/topic/000020.xml,
+	  help/pt_BR/editorial/topic/000021.xml,
+	  help/pt_BR/editorial/topic/000022.xml,
+	  help/pt_BR/editorial/topic/000023.xml,
+	  help/pt_BR/editorial/topic/000024.xml,
+	  help/pt_BR/editorial/topic/000025.xml,
+	  help/pt_BR/editorial/topic/000026.xml,
+	  help/pt_BR/editorial/topic/000027.xml,
+	  help/pt_BR/editorial/topic/000028.xml,
+	  help/pt_BR/editorial/topic/000029.xml,
+	  help/pt_BR/editorial/topic/000030.xml,
+	  help/pt_BR/editorial/topic/000031.xml,
+	  help/pt_BR/editorial/topic/000032.xml,
+	  help/pt_BR/editorial/topic/000033.xml,
+	  help/pt_BR/editorial/topic/000034.xml,
+	  help/pt_BR/editorial/topic/000035.xml,
+	  help/pt_BR/editorial/topic/000036.xml,
+	  help/pt_BR/editorial/topic/000037.xml,
+	  help/pt_BR/editorial/topic/000038.xml,
+	  help/pt_BR/editorial/topic/000039.xml,
+	  help/pt_BR/editorial/topic/000040.xml,
+	  help/pt_BR/editorial/topic/000041.xml,
+	  help/pt_BR/editorial/topic/000042.xml,
+	  help/pt_BR/editorial/topic/000043.xml,
+	  help/pt_BR/index/toc/000000.xml,
+	  help/pt_BR/index/topic/000000.xml,
+	  help/pt_BR/intro/toc/000000.xml,
+	  help/pt_BR/intro/topic/000000.xml,
+	  help/pt_BR/intro/topic/000001.xml,
+	  help/pt_BR/journal/toc/000000.xml,
+	  help/pt_BR/journal/toc/000001.xml,
+	  help/pt_BR/journal/toc/000002.xml,
+	  help/pt_BR/journal/toc/000003.xml,
+	  help/pt_BR/journal/toc/000005.xml,
+	  help/pt_BR/journal/topic/000000.xml,
+	  help/pt_BR/journal/topic/000001.xml,
+	  help/pt_BR/journal/topic/000002.xml,
+	  help/pt_BR/journal/topic/000003.xml,
+	  help/pt_BR/journal/topic/000004.xml,
+	  help/pt_BR/journal/topic/000005.xml,
+	  help/pt_BR/journal/topic/000006.xml,
+	  help/pt_BR/journal/topic/000007.xml,
+	  help/pt_BR/journal/topic/000008.xml,
+	  help/pt_BR/journal/topic/000009.xml,
+	  help/pt_BR/journal/topic/000010.xml,
+	  help/pt_BR/journal/topic/000011.xml,
+	  help/pt_BR/journal/topic/000012.xml,
+	  help/pt_BR/journal/topic/000013.xml,
+	  help/pt_BR/journal/topic/000014.xml,
+	  help/pt_BR/journal/topic/000015.xml,
+	  help/pt_BR/journal/topic/000016.xml,
+	  help/pt_BR/journal/topic/000017.xml,
+	  help/pt_BR/journal/topic/000018.xml,
+	  help/pt_BR/journal/topic/000019.xml,
+	  help/pt_BR/journal/topic/000020.xml,
+	  help/pt_BR/journal/topic/000021.xml,
+	  help/pt_BR/journal/topic/000022.xml,
+	  help/pt_BR/journal/topic/000023.xml,
+	  help/pt_BR/journal/topic/000025.xml,
+	  help/pt_BR/journal/topic/000026.xml,
+	  help/pt_BR/journal/topic/000027.xml,
+	  help/pt_BR/journal/topic/000028.xml,
+	  help/pt_BR/publishing/toc/000000.xml,
+	  help/pt_BR/publishing/topic/000000.xml,
+	  help/pt_BR/publishing/topic/000001.xml,
+	  help/pt_BR/publishing/topic/000002.xml,
+	  help/pt_BR/publishing/topic/000003.xml,
+	  help/pt_BR/publishing/topic/000004.xml,
+	  help/pt_BR/site/toc/000000.xml, help/pt_BR/site/topic/000000.xml,
+	  help/pt_BR/site/topic/000001.xml,
+	  help/pt_BR/site/topic/000002.xml,
+	  help/pt_BR/site/topic/000003.xml,
+	  help/pt_BR/submission/toc/000000.xml,
+	  help/pt_BR/submission/topic/000000.xml,
+	  help/pt_BR/submission/topic/000001.xml,
+	  help/pt_BR/submission/topic/000002.xml,
+	  help/pt_BR/submission/topic/000003.xml,
+	  help/pt_BR/submission/topic/000004.xml,
+	  help/pt_BR/user/toc/000000.xml, help/pt_BR/user/topic/000000.xml,
+	  help/pt_BR/user/topic/000001.xml,
+	  help/pt_BR/user/topic/000002.xml,
+	  help/pt_BR/user/topic/000003.xml,
+	  help/pt_BR/user/topic/000004.xml,
+	  help/pt_BR/user/topic/000005.xml,
+	  help/pt_BR/user/topic/000006.xml,
+	  help/pt_BR/user/topic/000007.xml, locale/pt_BR/locale.xml,
+	  plugins/auth/ldap/locale/pt_BR/locale.xml,
+	  plugins/gateways/googleScholar/locale/pt_BR/locale.xml,
+	  plugins/gateways/resolver/locale/pt_BR/locale.xml,
+	  plugins/gateways/resolver/locale/tr_TR/locale.xml,
+	  plugins/generic/counter/locale/pt_BR/locale.xml,
+	  plugins/generic/thesis/locale/pt_BR/locale.xml,
+	  plugins/generic/tinymce/locale/pt_BR/locale.xml,
+	  plugins/generic/webFeed/locale/pt_BR/locale.xml,
+	  plugins/importexport/crossref/locale/pt_BR/locale.xml,
+	  plugins/importexport/erudit/locale/pt_BR/locale.xml,
+	  plugins/importexport/native/native.dtd,
+	  plugins/importexport/native/locale/pt_BR/locale.xml,
+	  plugins/importexport/pubmed/locale/pt_BR/locale.xml,
+	  plugins/importexport/sample/locale/pt_BR/locale.xml,
+	  plugins/importexport/users/locale/pt_BR/locale.xml,
+	  registry/locales.xml, registry/locale/pt_BR/countries.xml: #2168#
+	  Translation updates -- fr_CA, tr_TR, pt_BR
+
+2006-07-13 16:56  alec
+
+	* help/en_US/site/topic/000003.xml: #2131# Corrected help missing
+	  close p tag
+
+2006-07-13 14:24  alec
+
+	* docs/release-notes/README-2.1.1: #2131# Updated release notes
+
+2006-07-13 11:57  alec
+
+	* plugins/importexport/pubmed/PubMedExportDom.inc.php: #2334#
+	  Corrected missing variable definition
+
+2006-07-13 11:43  alec
+
+	* plugins/importexport/users/importUsersResults.tpl: #2333#
+	  Corrected links
+
+2006-07-12 15:20  alec
+
+	* locale/en_US/locale.xml: #2131# Corrected minor wording issue
+	  (translations?)
+
+2006-07-12 15:05  alec
+
+	* plugins/generic/tinymce/: TinyMCEPlugin.inc.php, index.php:
+	  #2131# Updated code headers
+
+2006-07-12 14:19  alec
+
+	* plugins/: gateways/resolver/locale/it_IT/locale.xml,
+	  generic/counter/locale/it_IT/locale.xml,
+	  generic/thesis/locale/it_IT/locale.xml,
+	  generic/webFeed/locale/it_IT/locale.xml,
+	  importexport/crossref/locale/it_IT/locale.xml,
+	  importexport/pubmed/locale/it_IT/locale.xml: #2168# Italian files
+	  committed
+
+2006-07-12 14:17  alec
+
+	* plugins/importexport/native/sample.xml: #2168# Translation
+	  updates #2131# Corrected sample XML
+
+2006-07-12 14:10  alec
+
+	* dbscripts/xml/data/locale/fr_CA/email_templates_data.xml,
+	  locale/fr_CA/locale.xml,
+	  plugins/auth/ldap/locale/fr_CA/locale.xml,
+	  plugins/gateways/googleScholar/locale/fr_CA/locale.xml,
+	  plugins/gateways/resolver/locale/fr_CA/locale.xml,
+	  plugins/generic/counter/.cvsignore,
+	  plugins/generic/counter/log.txt,
+	  plugins/generic/counter/locale/fr_CA/locale.xml,
+	  plugins/generic/thesis/locale/fr_CA/locale.xml,
+	  plugins/generic/tinymce/locale/fr_CA/locale.xml,
+	  plugins/generic/webFeed/locale/fr_CA/locale.xml,
+	  plugins/importexport/crossref/locale/fr_CA/locale.xml,
+	  plugins/importexport/erudit/locale/fr_CA/locale.xml,
+	  plugins/importexport/native/locale/fr_CA/locale.xml,
+	  plugins/importexport/pubmed/locale/fr_CA/locale.xml,
+	  plugins/importexport/users/locale/fr_CA/locale.xml: #2168#
+	  Updated French translation
+
+2006-07-11 18:34  alec
+
+	* plugins/importexport/native/: NativeExportDom.inc.php,
+	  native.dtd: #2328# Export tune-ups
+
+2006-07-11 18:34  alec
+
+	* classes/mail/Mail.inc.php: #2329# Corrected BCC problem
+
+2006-07-11 17:43  alec
+
+	* plugins/importexport/native/NativeExportDom.inc.php: #2328#
+	  Corrected reference abuses
+
+2006-07-11 17:29  alec
+
+	* templates/issue/header.tpl: #2327# Corrected div nesting.
+
+2006-07-11 17:19  alec
+
+	* plugins/importexport/native/native.dtd: #2131# Added multiple
+	  abbreviation support
+
+2006-07-11 17:18  alec
+
+	* plugins/importexport/native/NativeExportDom.inc.php: #2131# Added
+	  stupidity check
+
+2006-07-11 16:33  alec
+
+	* templates/admin/journalSettings.tpl: #2297# Fixed fix.
+
+2006-07-11 16:29  alec
+
+	* templates/install/install.tpl: #2297# Re-re-fixed
+
+2006-07-11 16:19  alec
+
+	* templates/install/install.tpl: #2297# Re-fixed bug. (IE doesn't
+	  like submitting disabled forms.)
+
+2006-07-10 12:02  mj
+
+	* templates/common/: header.tpl, sidebar.tpl: - minor edit (moved
+	  div tag) to facilitate layout manager plugin in 2.1.1
+
+2006-07-07 13:06  alec
+
+	* classes/plugins/PluginRegistry.inc.php: #2321# Corrected mixed
+	  dir separators
+
+2006-07-07 12:41  alec
+
+	* plugins/generic/counter/README: #2320# Updated documentation
+
+2006-07-07 12:39  alec
+
+	* plugins/generic/counter/: .cvsignore, log.txt: #2320# Added blank
+	  log.txt
+
+2006-07-07 10:59  mj
+
+	* classes/i18n/Locale.inc.php: #2278#- properly transcode utf-8 to
+	  clients set as iso-8859-1
+
+2006-07-07 10:17  mj
+
+	* plugins/generic/webFeed/FeedPlugin.inc.php: #2299#- fixed empty
+	  display for non-existing current issue
+
+2006-07-05 17:08  alec
+
+	* plugins/generic/counter/CounterPlugin.inc.php: #2317# Corrected
+	  counter plugin redirect
+
+2006-07-05 16:59  alec
+
+	* classes/core/Request.inc.php: #2316# Dropping additional IP
+	  addresses if necessary from Request::getRemoteAddr()
+
+2006-07-05 13:00  alec
+
+	* classes/mail/EmailTemplateDAO.inc.php,
+	  pages/manager/EmailHandler.inc.php,
+	  templates/manager/emails/emails.tpl: #2315# Added paging to
+	  emails list.
+
+2006-07-05 12:43  alec
+
+	* pages/user/EmailHandler.inc.php: #2314# Corrected "select
+	  template" feature
+
+2006-07-04 11:05  alec
+
+	* classes/admin/form/JournalSiteSettingsForm.inc.php,
+	  registry/journalSettings.xml: #2279# Corrected primary locale on
+	  journal creation
+
+2006-07-03 13:56  alec
+
+	* classes/submission/author/AuthorAction.inc.php: #2208# No Editor
+	  Version by default.
+
+2006-07-03 13:01  alec
+
+	* templates/sectionEditor/submission/editorDecision.tpl: #2310#
+	  Editor decision table corrections
+
+2006-07-01 10:36  alec
+
+	* styles/common.css: #2131# Stylesheet tweak for IE
+
+2006-06-30 17:09  alec
+
+	* dbscripts/xml/: ojs_schema.xml, upgrade/2.1.1_update.xml: #2303#
+	  Added scheduled tasks to upgrade
+
+2006-06-30 16:54  alec
+
+	* dbscripts/xml/data/locale/en_US/email_templates_data.xml,
+	  locale/en_US/locale.xml, locale/es_ES/locale.xml,
+	  locale/fr_CA/locale.xml, locale/it_IT/locale.xml,
+	  locale/pt_BR/locale.xml,
+	  pages/sectionEditor/SubmissionEditHandler.inc.php,
+	  templates/about/editorialPolicies.tpl, templates/about/index.tpl:
+	  #2168# Language updates
+
+2006-06-30 14:24  alec
+
+	* classes/: core/Request.inc.php, site/ImportOJS1.inc.php: #2285#
+	  Corrected reminder URLs #2302# Corrected custom section
+	  ordering/1.x migration bug
+
+2006-06-30 13:41  alec
+
+	* dbscripts/xml/ojs_schema.xml: #2262# Removed not null constraint
+	  from articles->section_id
+
+2006-06-30 08:22  alec
+
+	* templates/submission/comment/: comment.tpl,
+	  editorDecisionComment.tpl, peerReviewComment.tpl: #2300# Updated
+	  parent refreshing on comments page
+
+2006-06-29 17:05  alec
+
+	* templates/: admin/journalSettings.tpl, install/install.tpl:
+	  #2297# Added button disable code to installer and journal create
+	  form
+
+2006-06-29 16:57  alec
+
+	* dbscripts/xml/install.xml: #2298# Updated version number
+
+2006-06-29 15:22  mj
+
+	* dbscripts/xml/data/locale/es_ES/email_templates_data.xml,
+	  locale/es_ES/locale.xml,
+	  plugins/gateways/resolver/locale/es_ES/locale.xml,
+	  plugins/generic/counter/locale/es_ES/locale.xml,
+	  plugins/generic/thesis/locale/es_ES/locale.xml,
+	  plugins/generic/tinymce/locale/es_ES/locale.xml,
+	  plugins/importexport/crossref/locale/es_ES/locale.xml: - Spanish
+	  translation updates (by Juan)
+
+2006-06-29 12:04  alec
+
+	* config.TEMPLATE.inc.php: #2131# Added note for Windows users to
+	  use forward slashes
+
+2006-06-28 23:22  alec
+
+	* classes/core/String.inc.php: #2286# Extended allowed HTML
+
+2006-06-27 22:21  michaelf
+
+	* classes/site/ImportOJS1.inc.php: #2284# Imported issues without
+	  publication date are displayed in random order
+
+2006-06-27 18:13  michaelf
+
+	* classes/subscription/form/SubscriptionForm.inc.php: #2282#
+	  Subscription domain and ip range should be set to null when not
+	  used
+
+2006-06-27 16:15  michaelf
+
+	* classes/core/Request.inc.php: #2281# getRemoteDomain does not
+	  return domain and getRemoteAddr relies on undefined/unused
+	  variable
+
+2006-06-26 13:36  michaelf
+
+	* pages/manager/PeopleHandler.inc.php: #2149# Delete user settings
+	  of old user during user merge
+
+2006-06-26 12:14  alec
+
+	* classes/template/TemplateManager.inc.php: #2272# Corrected odd
+	  instance bug
+
+2006-06-26 11:54  alec
+
+	* dbscripts/xml/ojs_schema.xml: #2276# Removed spurious index
+
+2006-06-26 10:31  alec
+
+	* locale/it_IT/locale.xml,
+	  plugins/importexport/erudit/locale/it_IT/locale.xml: #2168#
+	  Completed Italian updates
+
+2006-06-24 13:37  alec
+
+	* dbscripts/xml/data/locale/it_IT/email_templates_data.xml,
+	  help/en_US/index/topic/000000.xml,
+	  help/it_IT/editorial/toc/000001.xml,
+	  help/it_IT/editorial/topic/000000.xml,
+	  help/it_IT/editorial/topic/000003.xml,
+	  help/it_IT/editorial/topic/000007.xml,
+	  help/it_IT/editorial/topic/000008.xml,
+	  help/it_IT/editorial/topic/000013.xml,
+	  help/it_IT/editorial/topic/000015.xml,
+	  help/it_IT/editorial/topic/000017.xml,
+	  help/it_IT/editorial/topic/000022.xml,
+	  help/it_IT/editorial/topic/000023.xml,
+	  help/it_IT/editorial/topic/000024.xml,
+	  help/it_IT/editorial/topic/000025.xml,
+	  help/it_IT/editorial/topic/000026.xml,
+	  help/it_IT/editorial/topic/000031.xml,
+	  help/it_IT/editorial/topic/000032.xml,
+	  help/it_IT/editorial/topic/000037.xml,
+	  help/it_IT/editorial/topic/000039.xml,
+	  help/it_IT/editorial/topic/000040.xml,
+	  help/it_IT/editorial/topic/000042.xml,
+	  help/it_IT/intro/topic/000000.xml,
+	  help/it_IT/intro/topic/000001.xml,
+	  help/it_IT/journal/toc/000001.xml,
+	  help/it_IT/journal/toc/000002.xml,
+	  help/it_IT/journal/toc/000003.xml,
+	  help/it_IT/journal/topic/000004.xml,
+	  help/it_IT/journal/topic/000008.xml,
+	  help/it_IT/journal/topic/000009.xml,
+	  help/it_IT/journal/topic/000010.xml,
+	  help/it_IT/journal/topic/000011.xml,
+	  help/it_IT/journal/topic/000012.xml,
+	  help/it_IT/journal/topic/000016.xml,
+	  help/it_IT/journal/topic/000022.xml,
+	  help/it_IT/journal/topic/000025.xml,
+	  help/it_IT/journal/topic/000028.xml,
+	  help/it_IT/publishing/topic/000002.xml,
+	  help/it_IT/site/topic/000001.xml,
+	  help/it_IT/site/topic/000002.xml,
+	  help/it_IT/site/topic/000003.xml,
+	  help/it_IT/submission/topic/000002.xml,
+	  help/it_IT/submission/topic/000003.xml,
+	  help/it_IT/submission/topic/000004.xml,
+	  help/it_IT/user/topic/000006.xml, locale/it_IT/locale.xml,
+	  plugins/generic/tinymce/locale/it_IT/locale.xml: #2168#
+	  Translation changes for Italian
+
+2006-06-24 12:36  alec
+
+	* plugins/: gateways/resolver/locale/pt_BR/locale.xml,
+	  generic/thesis/locale/pt_BR/locale.xml,
+	  generic/webFeed/locale/pt_BR/locale.xml,
+	  importexport/crossref/locale/pt_BR/locale.xml,
+	  importexport/pubmed/locale/pt_BR/locale.xml,
+	  generic/counter/locale/pt_BR/locale.xml: #2168# Portuguese
+	  updates
+
+2006-06-24 12:29  alec
+
+	* dbscripts/xml/data/locale/pt_BR/email_templates_data.xml,
+	  plugins/generic/tinymce/locale/pt_BR/locale.xml,
+	  plugins/importexport/sample/locale/pt_BR/locale.xml: #2168# Added
+	  Portuguese updates
+
+2006-06-16 15:16  alec
+
+	* docs/dev/Test_Plan.rtf: #2131# Updated tech testing plan
+
+2006-06-16 13:37  michaelf
+
+	* classes/site/ImportOJS1.inc.php: #2245# Fix insert of custom
+	  section ordering
+
+2006-06-16 08:09  alec
+
+	* plugins/importexport/pubmed/PubMedExportDom.inc.php: #2255#
+	  Corrected reference problem
+
+2006-06-15 17:37  alec
+
+	* dbscripts/xml/upgrade.xml: #2131# Updated version
+
+2006-06-15 16:50  alec
+
+	* dbscripts/xml/upgrade/2.1.1_update.xml: #2197# Corrected upgrade
+	  typo.
+
+2006-06-15 15:01  alec
+
+	* templates/rt/rt.tpl: #2254# Added close button for abstracts
+
+2006-06-14 16:08  alec
+
+	* dbscripts/xml/ojs_schema.xml, locale/fr_CA/locale.xml: #2251#
+	  Removed "type" column; #2168# French locale update
+
+2006-06-13 19:24  alec
+
+	* styles/rt.css, templates/rt/header.tpl: #2250# RT styles tune-up
+
+2006-06-13 19:19  alec
+
+	* lib/smarty/plugins/modifier.capitalize.php, styles/common.css,
+	  templates/sectionEditor/submission/editorDecision.tpl: #2208#
+	  Editor decision tune-ups
+
+2006-06-13 13:14  alec
+
+	* locale/en_US/locale.xml, rt/en_US/Agriculture.xml,
+	  rt/en_US/Art_Architecture.xml, rt/en_US/Astrophysics.xml,
+	  rt/en_US/Biology.xml, rt/en_US/Business.xml,
+	  rt/en_US/Chemistry.xml, rt/en_US/Cognitive_Science.xml,
+	  rt/en_US/Computer_Science.xml, rt/en_US/Economics.xml,
+	  rt/en_US/Education.xml, rt/en_US/Environment.xml,
+	  rt/en_US/General_Science.xml, rt/en_US/Generic.xml,
+	  rt/en_US/Humanities.xml, rt/en_US/Life_Sciences.xml,
+	  rt/en_US/Mathematics.xml, rt/en_US/Music.xml,
+	  rt/en_US/Physics.xml, rt/en_US/Social_Sciences.xml,
+	  templates/rt/context.tpl, templates/rtadmin/settings.tpl: #2250#
+	  Reading tools updates
+
+2006-06-13 12:50  alec
+
+	* templates/editor/issues/issueToc.tpl: #2131# Corrected checkbox
+	  style.
+
+2006-06-13 12:48  alec
+
+	* classes/journal/Section.inc.php,
+	  classes/journal/SectionDAO.inc.php,
+	  classes/manager/form/SectionForm.inc.php,
+	  dbscripts/xml/ojs_schema.xml, locale/en_US/locale.xml,
+	  templates/about/editorialPolicies.tpl,
+	  templates/manager/sections/sectionForm.tpl: #2066# Wording of
+	  section options
+
+2006-06-13 12:24  alec
+
+	* locale/en_US/locale.xml, locale/es_ES/locale.xml,
+	  locale/fr_CA/locale.xml, locale/it_IT/locale.xml,
+	  locale/pt_BR/locale.xml, locale/ru_RU/locale.xml,
+	  locale/te_ST/locale.xml,
+	  templates/sectionEditor/submission/editorDecision.tpl: #2208#
+	  Wording for Editor Decision
+
+2006-06-13 10:21  michaelf
+
+	* plugins/generic/thesis/locale/en_US/locale.xml: Dangling ) in
+	  introductory text
+
+2006-06-12 16:31  alec
+
+	* plugins/importexport/crossref/: CrossRefExportDom.inc.php,
+	  articles.tpl, index.php, index.tpl, issues.tpl,
+	  locale/en_US/locale.xml: #2199# Updated copyright notice
+
+2006-06-12 16:25  alec
+
+	* config.TEMPLATE.inc.php, index.php,
+	  classes/admin/form/ImportOJS1Form.inc.php,
+	  classes/admin/form/JournalSiteSettingsForm.inc.php,
+	  classes/admin/form/SiteSettingsForm.inc.php,
+	  classes/announcement/Announcement.inc.php,
+	  classes/announcement/AnnouncementDAO.inc.php,
+	  classes/announcement/AnnouncementType.inc.php,
+	  classes/announcement/AnnouncementTypeDAO.inc.php,
+	  classes/article/Article.inc.php,
+	  classes/article/ArticleComment.inc.php,
+	  classes/article/ArticleCommentDAO.inc.php,
+	  classes/article/ArticleDAO.inc.php,
+	  classes/article/ArticleFile.inc.php,
+	  classes/article/ArticleFileDAO.inc.php,
+	  classes/article/ArticleGalley.inc.php,
+	  classes/article/ArticleGalleyDAO.inc.php,
+	  classes/article/ArticleHTMLGalley.inc.php,
+	  classes/article/ArticleNote.inc.php,
+	  classes/article/ArticleNoteDAO.inc.php,
+	  classes/article/Author.inc.php,
+	  classes/article/AuthorDAO.inc.php,
+	  classes/article/PublishedArticle.inc.php,
+	  classes/article/PublishedArticleDAO.inc.php,
+	  classes/article/SuppFile.inc.php,
+	  classes/article/SuppFileDAO.inc.php,
+	  classes/article/log/ArticleEmailLogDAO.inc.php,
+	  classes/article/log/ArticleEmailLogEntry.inc.php,
+	  classes/article/log/ArticleEventLogDAO.inc.php,
+	  classes/article/log/ArticleEventLogEntry.inc.php,
+	  classes/article/log/ArticleLog.inc.php,
+	  classes/author/form/submit/AuthorSubmitForm.inc.php,
+	  classes/author/form/submit/AuthorSubmitStep1Form.inc.php,
+	  classes/author/form/submit/AuthorSubmitStep2Form.inc.php,
+	  classes/author/form/submit/AuthorSubmitStep3Form.inc.php,
+	  classes/author/form/submit/AuthorSubmitStep4Form.inc.php,
+	  classes/author/form/submit/AuthorSubmitStep5Form.inc.php,
+	  classes/author/form/submit/AuthorSubmitSuppFileForm.inc.php,
+	  classes/cache/CacheManager.inc.php,
+	  classes/cache/FileCache.inc.php,
+	  classes/cache/GenericCache.inc.php,
+	  classes/cache/MemcacheCache.inc.php,
+	  classes/comment/Comment.inc.php,
+	  classes/comment/CommentDAO.inc.php,
+	  classes/comment/form/CommentForm.inc.php,
+	  classes/config/Config.inc.php,
+	  classes/config/ConfigParser.inc.php,
+	  classes/core/ArrayItemIterator.inc.php,
+	  classes/core/Core.inc.php, classes/core/DataObject.inc.php,
+	  classes/core/Handler.inc.php, classes/core/ItemIterator.inc.php,
+	  classes/core/Registry.inc.php, classes/core/Request.inc.php,
+	  classes/core/String.inc.php, classes/core/Transcoder.inc.php,
+	  classes/core/VirtualArrayIterator.inc.php,
+	  classes/db/DAO.inc.php, classes/db/DAORegistry.inc.php,
+	  classes/db/DAOResultFactory.inc.php,
+	  classes/db/DBConnection.inc.php,
+	  classes/db/DBDataXMLParser.inc.php,
+	  classes/db/DBResultRange.inc.php,
+	  classes/db/DBRowIterator.inc.php, classes/db/SQLParser.inc.php,
+	  classes/db/XMLDAO.inc.php,
+	  classes/file/ArticleFileManager.inc.php,
+	  classes/file/FileManager.inc.php,
+	  classes/file/FileWrapper.inc.php,
+	  classes/file/JournalFileManager.inc.php,
+	  classes/file/PublicFileManager.inc.php,
+	  classes/file/TemporaryFile.inc.php,
+	  classes/file/TemporaryFileDAO.inc.php,
+	  classes/file/TemporaryFileManager.inc.php,
+	  classes/form/Form.inc.php, classes/form/FormError.inc.php,
+	  classes/form/validation/FormValidator.inc.php,
+	  classes/form/validation/FormValidatorAlphaNum.inc.php,
+	  classes/form/validation/FormValidatorArray.inc.php,
+	  classes/form/validation/FormValidatorCustom.inc.php,
+	  classes/form/validation/FormValidatorEmail.inc.php,
+	  classes/form/validation/FormValidatorInSet.inc.php,
+	  classes/form/validation/FormValidatorLength.inc.php,
+	  classes/form/validation/FormValidatorRegExp.inc.php,
+	  classes/group/Group.inc.php, classes/group/GroupDAO.inc.php,
+	  classes/group/GroupMembership.inc.php,
+	  classes/group/GroupMembershipDAO.inc.php,
+	  classes/help/Help.inc.php, classes/help/HelpToc.inc.php,
+	  classes/help/HelpTocDAO.inc.php, classes/help/HelpTopic.inc.php,
+	  classes/help/HelpTopicDAO.inc.php,
+	  classes/help/HelpTopicSection.inc.php,
+	  classes/i18n/Locale.inc.php, classes/install/Install.inc.php,
+	  classes/install/Installer.inc.php,
+	  classes/install/Upgrade.inc.php,
+	  classes/install/form/InstallForm.inc.php,
+	  classes/install/form/UpgradeForm.inc.php,
+	  classes/issue/Issue.inc.php, classes/issue/IssueAction.inc.php,
+	  classes/issue/IssueDAO.inc.php,
+	  classes/issue/form/IssueForm.inc.php,
+	  classes/journal/Journal.inc.php,
+	  classes/journal/JournalDAO.inc.php,
+	  classes/journal/JournalReportIterator.inc.php,
+	  classes/journal/JournalSettingsDAO.inc.php,
+	  classes/journal/JournalStatisticsDAO.inc.php,
+	  classes/journal/NotificationStatusDAO.inc.php,
+	  classes/journal/Section.inc.php,
+	  classes/journal/SectionDAO.inc.php,
+	  classes/journal/SectionEditorsDAO.inc.php,
+	  classes/mail/ArticleMailTemplate.inc.php,
+	  classes/mail/EmailTemplate.inc.php,
+	  classes/mail/EmailTemplateDAO.inc.php, classes/mail/Mail.inc.php,
+	  classes/mail/MailTemplate.inc.php,
+	  classes/mail/SMTPMailer.inc.php,
+	  classes/manager/form/AnnouncementForm.inc.php,
+	  classes/manager/form/AnnouncementTypeForm.inc.php,
+	  classes/manager/form/EmailTemplateForm.inc.php,
+	  classes/manager/form/GroupForm.inc.php,
+	  classes/manager/form/LanguageSettingsForm.inc.php,
+	  classes/manager/form/SectionForm.inc.php,
+	  classes/manager/form/UserManagementForm.inc.php,
+	  classes/manager/form/setup/JournalSetupForm.inc.php,
+	  classes/manager/form/setup/JournalSetupStep1Form.inc.php,
+	  classes/manager/form/setup/JournalSetupStep2Form.inc.php,
+	  classes/manager/form/setup/JournalSetupStep3Form.inc.php,
+	  classes/manager/form/setup/JournalSetupStep4Form.inc.php,
+	  classes/manager/form/setup/JournalSetupStep5Form.inc.php,
+	  classes/oai/OAI.inc.php, classes/oai/OAIStruct.inc.php,
+	  classes/oai/format/OAIMetadataFormat_DC.inc.php,
+	  classes/oai/format/OAIMetadataFormat_MARC.inc.php,
+	  classes/oai/format/OAIMetadataFormat_MARC21.inc.php,
+	  classes/oai/format/OAIMetadataFormat_RFC1807.inc.php,
+	  classes/oai/ojs/JournalOAI.inc.php,
+	  classes/oai/ojs/OAIDAO.inc.php,
+	  classes/plugins/AuthPlugin.inc.php,
+	  classes/plugins/GatewayPlugin.inc.php,
+	  classes/plugins/GenericPlugin.inc.php,
+	  classes/plugins/HookRegistry.inc.php,
+	  classes/plugins/ImportExportPlugin.inc.php,
+	  classes/plugins/Plugin.inc.php,
+	  classes/plugins/PluginRegistry.inc.php,
+	  classes/plugins/PluginSettingsDAO.inc.php, classes/rt/RT.inc.php,
+	  classes/rt/RTAdmin.inc.php, classes/rt/RTStruct.inc.php,
+	  classes/rt/RTXMLParser.inc.php, classes/rt/ojs/JournalRT.inc.php,
+	  classes/rt/ojs/JournalRTAdmin.inc.php,
+	  classes/rt/ojs/RTDAO.inc.php,
+	  classes/rt/ojs/form/ContextForm.inc.php,
+	  classes/rt/ojs/form/SearchForm.inc.php,
+	  classes/rt/ojs/form/VersionForm.inc.php,
+	  classes/scheduledTask/ScheduledTask.inc.php,
+	  classes/scheduledTask/ScheduledTaskDAO.inc.php,
+	  classes/search/ArticleSearch.inc.php,
+	  classes/search/ArticleSearchDAO.inc.php,
+	  classes/search/ArticleSearchIndex.inc.php,
+	  classes/search/SearchFileParser.inc.php,
+	  classes/search/SearchHTMLParser.inc.php,
+	  classes/search/SearchHelperParser.inc.php,
+	  classes/sectionEditor/form/CreateReviewerForm.inc.php,
+	  classes/security/AccessKey.inc.php,
+	  classes/security/AccessKeyDAO.inc.php,
+	  classes/security/AccessKeyManager.inc.php,
+	  classes/security/AuthSource.inc.php,
+	  classes/security/AuthSourceDAO.inc.php,
+	  classes/security/Role.inc.php, classes/security/RoleDAO.inc.php,
+	  classes/security/Validation.inc.php,
+	  classes/security/form/AuthSourceSettingsForm.inc.php,
+	  classes/session/Session.inc.php,
+	  classes/session/SessionDAO.inc.php,
+	  classes/session/SessionManager.inc.php,
+	  classes/site/ImportOJS1.inc.php, classes/site/Site.inc.php,
+	  classes/site/SiteDAO.inc.php, classes/site/Version.inc.php,
+	  classes/site/VersionCheck.inc.php,
+	  classes/site/VersionDAO.inc.php,
+	  classes/submission/author/AuthorAction.inc.php,
+	  classes/submission/author/AuthorSubmission.inc.php,
+	  classes/submission/author/AuthorSubmissionDAO.inc.php,
+	  classes/submission/common/Action.inc.php,
+	  classes/submission/copyAssignment/CopyAssignment.inc.php,
+	  classes/submission/copyAssignment/CopyAssignmentDAO.inc.php,
+	  classes/submission/copyeditor/CopyeditorAction.inc.php,
+	  classes/submission/copyeditor/CopyeditorSubmission.inc.php,
+	  classes/submission/copyeditor/CopyeditorSubmissionDAO.inc.php,
+	  classes/submission/editAssignment/EditAssignment.inc.php,
+	  classes/submission/editAssignment/EditAssignmentDAO.inc.php,
+	  classes/submission/editor/EditorAction.inc.php,
+	  classes/submission/editor/EditorSubmission.inc.php,
+	  classes/submission/editor/EditorSubmissionDAO.inc.php,
+	  classes/submission/form/ArticleGalleyForm.inc.php,
+	  classes/submission/form/MetadataForm.inc.php,
+	  classes/submission/form/SuppFileForm.inc.php,
+	  classes/submission/form/comment/CommentForm.inc.php,
+	  classes/submission/form/comment/CopyeditCommentForm.inc.php,
+	  classes/submission/form/comment/EditCommentForm.inc.php,
+	  classes/submission/form/comment/EditorDecisionCommentForm.inc.php,
+	  classes/submission/form/comment/LayoutCommentForm.inc.php,
+	  classes/submission/form/comment/PeerReviewCommentForm.inc.php,
+	  classes/submission/form/comment/ProofreadCommentForm.inc.php,
+	  classes/submission/layoutAssignment/LayoutAssignment.inc.php,
+	  classes/submission/layoutAssignment/LayoutAssignmentDAO.inc.php,
+	  classes/submission/layoutEditor/LayoutEditorAction.inc.php,
+	  classes/submission/layoutEditor/LayoutEditorSubmission.inc.php,
+	  classes/submission/layoutEditor/LayoutEditorSubmissionDAO.inc.php,
+	  classes/submission/proofAssignment/ProofAssignment.inc.php,
+	  classes/submission/proofAssignment/ProofAssignmentDAO.inc.php,
+	  classes/submission/proofreader/ProofreaderAction.inc.php,
+	  classes/submission/proofreader/ProofreaderSubmission.inc.php,
+	  classes/submission/proofreader/ProofreaderSubmissionDAO.inc.php,
+	  classes/submission/reviewAssignment/ReviewAssignment.inc.php,
+	  classes/submission/reviewAssignment/ReviewAssignmentDAO.inc.php,
+	  classes/submission/reviewer/ReviewerAction.inc.php,
+	  classes/submission/reviewer/ReviewerSubmission.inc.php,
+	  classes/submission/reviewer/ReviewerSubmissionDAO.inc.php,
+	  classes/submission/sectionEditor/SectionEditorAction.inc.php,
+	  classes/submission/sectionEditor/SectionEditorSubmission.inc.php,
+	  classes/submission/sectionEditor/SectionEditorSubmissionDAO.inc.php,
+	  classes/subscription/Currency.inc.php,
+	  classes/subscription/CurrencyDAO.inc.php,
+	  classes/subscription/Subscription.inc.php,
+	  classes/subscription/SubscriptionDAO.inc.php,
+	  classes/subscription/SubscriptionType.inc.php,
+	  classes/subscription/SubscriptionTypeDAO.inc.php,
+	  classes/subscription/form/SubscriptionForm.inc.php,
+	  classes/subscription/form/SubscriptionPolicyForm.inc.php,
+	  classes/subscription/form/SubscriptionTypeForm.inc.php,
+	  classes/tasks/OpenAccessNotification.inc.php,
+	  classes/tasks/ReviewReminder.inc.php,
+	  classes/tasks/SubscriptionExpiryReminder.inc.php,
+	  classes/template/TemplateManager.inc.php,
+	  classes/user/CountryDAO.inc.php, classes/user/User.inc.php,
+	  classes/user/UserDAO.inc.php,
+	  classes/user/UserSettingsDAO.inc.php,
+	  classes/user/form/ChangePasswordForm.inc.php,
+	  classes/user/form/LoginChangePasswordForm.inc.php,
+	  classes/user/form/ProfileForm.inc.php,
+	  classes/user/form/RegistrationForm.inc.php,
+	  classes/xml/XMLCustomWriter.inc.php, classes/xml/XMLNode.inc.php,
+	  classes/xml/XMLParser.inc.php,
+	  classes/xml/XMLParserDOMHandler.inc.php,
+	  dbscripts/xml/install.xml, dbscripts/xml/ojs_schema.xml,
+	  dbscripts/xml/upgrade.xml, dbscripts/xml/version.xml,
+	  dbscripts/xml/data/currencies.xml,
+	  dbscripts/xml/data/email_templates.xml,
+	  dbscripts/xml/data/sample.xml,
+	  dbscripts/xml/data/locale/en_US/email_templates_data.xml,
+	  dbscripts/xml/data/locale/en_US/sample.xml,
+	  dbscripts/xml/data/locale/es_ES/email_templates_data.xml,
+	  dbscripts/xml/data/locale/fr_CA/email_templates_data.xml,
+	  dbscripts/xml/data/locale/it_IT/email_templates_data.xml,
+	  dbscripts/xml/data/locale/pt_BR/email_templates_data.xml,
+	  dbscripts/xml/data/locale/ru_RU/email_templates_data.xml,
+	  dbscripts/xml/data/locale/te_ST/email_templates_data.xml,
+	  dbscripts/xml/upgrade/2.0.1_update.xml,
+	  dbscripts/xml/upgrade/2.0.2_preupdate.xml,
+	  dbscripts/xml/upgrade/2.0.2_update.xml,
+	  dbscripts/xml/upgrade/2.1.0_update.xml,
+	  dbscripts/xml/upgrade/2.1.1_update.xml, docs/README-DEV,
+	  help/help.dtd, help/help.xml, help/toc.dtd, help/topic.dtd,
+	  help/en_US/editorial/toc/000000.xml,
+	  help/en_US/editorial/toc/000001.xml,
+	  help/en_US/editorial/toc/000002.xml,
+	  help/en_US/editorial/toc/000003.xml,
+	  help/en_US/editorial/toc/000004.xml,
+	  help/en_US/editorial/toc/000005.xml,
+	  help/en_US/editorial/toc/000006.xml,
+	  help/en_US/editorial/toc/000007.xml,
+	  help/en_US/editorial/toc/000008.xml,
+	  help/en_US/editorial/toc/000009.xml,
+	  help/en_US/editorial/toc/000010.xml,
+	  help/en_US/editorial/toc/000011.xml,
+	  help/en_US/editorial/toc/000012.xml,
+	  help/en_US/editorial/toc/000013.xml,
+	  help/en_US/editorial/toc/000014.xml,
+	  help/en_US/editorial/topic/000000.xml,
+	  help/en_US/editorial/topic/000001.xml,
+	  help/en_US/editorial/topic/000002.xml,
+	  help/en_US/editorial/topic/000003.xml,
+	  help/en_US/editorial/topic/000004.xml,
+	  help/en_US/editorial/topic/000005.xml,
+	  help/en_US/editorial/topic/000006.xml,
+	  help/en_US/editorial/topic/000007.xml,
+	  help/en_US/editorial/topic/000008.xml,
+	  help/en_US/editorial/topic/000009.xml,
+	  help/en_US/editorial/topic/000010.xml,
+	  help/en_US/editorial/topic/000011.xml,
+	  help/en_US/editorial/topic/000012.xml,
+	  help/en_US/editorial/topic/000013.xml,
+	  help/en_US/editorial/topic/000014.xml,
+	  help/en_US/editorial/topic/000015.xml,
+	  help/en_US/editorial/topic/000016.xml,
+	  help/en_US/editorial/topic/000017.xml,
+	  help/en_US/editorial/topic/000018.xml,
+	  help/en_US/editorial/topic/000019.xml,
+	  help/en_US/editorial/topic/000020.xml,
+	  help/en_US/editorial/topic/000021.xml,
+	  help/en_US/editorial/topic/000022.xml,
+	  help/en_US/editorial/topic/000023.xml,
+	  help/en_US/editorial/topic/000024.xml,
+	  help/en_US/editorial/topic/000025.xml,
+	  help/en_US/editorial/topic/000026.xml,
+	  help/en_US/editorial/topic/000027.xml,
+	  help/en_US/editorial/topic/000028.xml,
+	  help/en_US/editorial/topic/000029.xml,
+	  help/en_US/editorial/topic/000030.xml,
+	  help/en_US/editorial/topic/000031.xml,
+	  help/en_US/editorial/topic/000032.xml,
+	  help/en_US/editorial/topic/000033.xml,
+	  help/en_US/editorial/topic/000034.xml,
+	  help/en_US/editorial/topic/000035.xml,
+	  help/en_US/editorial/topic/000036.xml,
+	  help/en_US/editorial/topic/000037.xml,
+	  help/en_US/editorial/topic/000038.xml,
+	  help/en_US/editorial/topic/000039.xml,
+	  help/en_US/editorial/topic/000040.xml,
+	  help/en_US/editorial/topic/000041.xml,
+	  help/en_US/editorial/topic/000042.xml,
+	  help/en_US/editorial/topic/000043.xml,
+	  help/en_US/editorial/topic/000044.xml,
+	  help/en_US/index/toc/000000.xml,
+	  help/en_US/index/topic/000000.xml,
+	  help/en_US/intro/toc/000000.xml,
+	  help/en_US/intro/topic/000000.xml,
+	  help/en_US/intro/topic/000001.xml,
+	  help/en_US/journal/toc/000000.xml,
+	  help/en_US/journal/toc/000001.xml,
+	  help/en_US/journal/toc/000002.xml,
+	  help/en_US/journal/toc/000003.xml,
+	  help/en_US/journal/toc/000005.xml,
+	  help/en_US/journal/topic/000000.xml,
+	  help/en_US/journal/topic/000001.xml,
+	  help/en_US/journal/topic/000002.xml,
+	  help/en_US/journal/topic/000003.xml,
+	  help/en_US/journal/topic/000004.xml,
+	  help/en_US/journal/topic/000005.xml,
+	  help/en_US/journal/topic/000006.xml,
+	  help/en_US/journal/topic/000007.xml,
+	  help/en_US/journal/topic/000008.xml,
+	  help/en_US/journal/topic/000009.xml,
+	  help/en_US/journal/topic/000010.xml,
+	  help/en_US/journal/topic/000011.xml,
+	  help/en_US/journal/topic/000012.xml,
+	  help/en_US/journal/topic/000013.xml,
+	  help/en_US/journal/topic/000014.xml,
+	  help/en_US/journal/topic/000015.xml,
+	  help/en_US/journal/topic/000016.xml,
+	  help/en_US/journal/topic/000017.xml,
+	  help/en_US/journal/topic/000018.xml,
+	  help/en_US/journal/topic/000019.xml,
+	  help/en_US/journal/topic/000020.xml,
+	  help/en_US/journal/topic/000021.xml,
+	  help/en_US/journal/topic/000022.xml,
+	  help/en_US/journal/topic/000023.xml,
+	  help/en_US/journal/topic/000025.xml,
+	  help/en_US/journal/topic/000026.xml,
+	  help/en_US/journal/topic/000027.xml,
+	  help/en_US/journal/topic/000028.xml,
+	  help/en_US/journal/topic/000029.xml,
+	  help/en_US/journal/topic/000030.xml,
+	  help/en_US/journal/topic/000031.xml,
+	  help/en_US/journal/topic/000032.xml,
+	  help/en_US/journal/topic/000033.xml,
+	  help/en_US/journal/topic/000034.xml,
+	  help/en_US/publishing/toc/000000.xml,
+	  help/en_US/publishing/topic/000000.xml,
+	  help/en_US/publishing/topic/000001.xml,
+	  help/en_US/publishing/topic/000002.xml,
+	  help/en_US/publishing/topic/000003.xml,
+	  help/en_US/publishing/topic/000004.xml,
+	  help/en_US/site/toc/000000.xml, help/en_US/site/topic/000000.xml,
+	  help/en_US/site/topic/000001.xml,
+	  help/en_US/site/topic/000002.xml,
+	  help/en_US/site/topic/000003.xml,
+	  help/en_US/submission/toc/000000.xml,
+	  help/en_US/submission/topic/000000.xml,
+	  help/en_US/submission/topic/000001.xml,
+	  help/en_US/submission/topic/000002.xml,
+	  help/en_US/submission/topic/000003.xml,
+	  help/en_US/submission/topic/000004.xml,
+	  help/en_US/user/toc/000000.xml, help/en_US/user/topic/000000.xml,
+	  help/en_US/user/topic/000001.xml,
+	  help/en_US/user/topic/000002.xml,
+	  help/en_US/user/topic/000003.xml,
+	  help/en_US/user/topic/000004.xml,
+	  help/en_US/user/topic/000005.xml,
+	  help/en_US/user/topic/000006.xml,
+	  help/en_US/user/topic/000007.xml,
+	  help/fr_CA/editorial/toc/000000.xml,
+	  help/fr_CA/editorial/toc/000001.xml,
+	  help/fr_CA/editorial/toc/000002.xml,
+	  help/fr_CA/editorial/toc/000003.xml,
+	  help/fr_CA/editorial/toc/000004.xml,
+	  help/fr_CA/editorial/toc/000005.xml,
+	  help/fr_CA/editorial/toc/000006.xml,
+	  help/fr_CA/editorial/toc/000007.xml,
+	  help/fr_CA/editorial/toc/000008.xml,
+	  help/fr_CA/editorial/toc/000009.xml,
+	  help/fr_CA/editorial/toc/000010.xml,
+	  help/fr_CA/editorial/toc/000011.xml,
+	  help/fr_CA/editorial/toc/000012.xml,
+	  help/fr_CA/editorial/toc/000013.xml,
+	  help/fr_CA/editorial/toc/000014.xml,
+	  help/fr_CA/editorial/topic/000000.xml,
+	  help/fr_CA/editorial/topic/000001.xml,
+	  help/fr_CA/editorial/topic/000002.xml,
+	  help/fr_CA/editorial/topic/000003.xml,
+	  help/fr_CA/editorial/topic/000004.xml,
+	  help/fr_CA/editorial/topic/000005.xml,
+	  help/fr_CA/editorial/topic/000006.xml,
+	  help/fr_CA/editorial/topic/000007.xml,
+	  help/fr_CA/editorial/topic/000008.xml,
+	  help/fr_CA/editorial/topic/000009.xml,
+	  help/fr_CA/editorial/topic/000010.xml,
+	  help/fr_CA/editorial/topic/000011.xml,
+	  help/fr_CA/editorial/topic/000012.xml,
+	  help/fr_CA/editorial/topic/000013.xml,
+	  help/fr_CA/editorial/topic/000014.xml,
+	  help/fr_CA/editorial/topic/000015.xml,
+	  help/fr_CA/editorial/topic/000016.xml,
+	  help/fr_CA/editorial/topic/000017.xml,
+	  help/fr_CA/editorial/topic/000018.xml,
+	  help/fr_CA/editorial/topic/000019.xml,
+	  help/fr_CA/editorial/topic/000020.xml,
+	  help/fr_CA/editorial/topic/000021.xml,
+	  help/fr_CA/editorial/topic/000022.xml,
+	  help/fr_CA/editorial/topic/000023.xml,
+	  help/fr_CA/editorial/topic/000024.xml,
+	  help/fr_CA/editorial/topic/000025.xml,
+	  help/fr_CA/editorial/topic/000026.xml,
+	  help/fr_CA/editorial/topic/000027.xml,
+	  help/fr_CA/editorial/topic/000028.xml,
+	  help/fr_CA/editorial/topic/000029.xml,
+	  help/fr_CA/editorial/topic/000030.xml,
+	  help/fr_CA/editorial/topic/000031.xml,
+	  help/fr_CA/editorial/topic/000032.xml,
+	  help/fr_CA/editorial/topic/000033.xml,
+	  help/fr_CA/editorial/topic/000034.xml,
+	  help/fr_CA/editorial/topic/000035.xml,
+	  help/fr_CA/editorial/topic/000036.xml,
+	  help/fr_CA/editorial/topic/000037.xml,
+	  help/fr_CA/editorial/topic/000038.xml,
+	  help/fr_CA/editorial/topic/000039.xml,
+	  help/fr_CA/editorial/topic/000040.xml,
+	  help/fr_CA/editorial/topic/000041.xml,
+	  help/fr_CA/editorial/topic/000042.xml,
+	  help/fr_CA/editorial/topic/000043.xml,
+	  help/fr_CA/index/toc/000000.xml,
+	  help/fr_CA/index/topic/000000.xml,
+	  help/fr_CA/intro/toc/000000.xml,
+	  help/fr_CA/intro/topic/000000.xml,
+	  help/fr_CA/intro/topic/000001.xml,
+	  help/fr_CA/journal/toc/000000.xml,
+	  help/fr_CA/journal/toc/000001.xml,
+	  help/fr_CA/journal/toc/000002.xml,
+	  help/fr_CA/journal/toc/000003.xml,
+	  help/fr_CA/journal/toc/000005.xml,
+	  help/fr_CA/journal/topic/000000.xml,
+	  help/fr_CA/journal/topic/000001.xml,
+	  help/fr_CA/journal/topic/000002.xml,
+	  help/fr_CA/journal/topic/000003.xml,
+	  help/fr_CA/journal/topic/000004.xml,
+	  help/fr_CA/journal/topic/000005.xml,
+	  help/fr_CA/journal/topic/000006.xml,
+	  help/fr_CA/journal/topic/000007.xml,
+	  help/fr_CA/journal/topic/000008.xml,
+	  help/fr_CA/journal/topic/000009.xml,
+	  help/fr_CA/journal/topic/000010.xml,
+	  help/fr_CA/journal/topic/000011.xml,
+	  help/fr_CA/journal/topic/000012.xml,
+	  help/fr_CA/journal/topic/000013.xml,
+	  help/fr_CA/journal/topic/000014.xml,
+	  help/fr_CA/journal/topic/000015.xml,
+	  help/fr_CA/journal/topic/000016.xml,
+	  help/fr_CA/journal/topic/000017.xml,
+	  help/fr_CA/journal/topic/000018.xml,
+	  help/fr_CA/journal/topic/000019.xml,
+	  help/fr_CA/journal/topic/000020.xml,
+	  help/fr_CA/journal/topic/000021.xml,
+	  help/fr_CA/journal/topic/000022.xml,
+	  help/fr_CA/journal/topic/000023.xml,
+	  help/fr_CA/journal/topic/000025.xml,
+	  help/fr_CA/journal/topic/000026.xml,
+	  help/fr_CA/journal/topic/000027.xml,
+	  help/fr_CA/journal/topic/000028.xml,
+	  help/fr_CA/journal/topic/000029.xml,
+	  help/fr_CA/journal/topic/000030.xml,
+	  help/fr_CA/journal/topic/000031.xml,
+	  help/fr_CA/journal/topic/000032.xml,
+	  help/fr_CA/journal/topic/000033.xml,
+	  help/fr_CA/publishing/toc/000000.xml,
+	  help/fr_CA/publishing/topic/000000.xml,
+	  help/fr_CA/publishing/topic/000001.xml,
+	  help/fr_CA/publishing/topic/000002.xml,
+	  help/fr_CA/publishing/topic/000003.xml,
+	  help/fr_CA/publishing/topic/000004.xml,
+	  help/fr_CA/site/toc/000000.xml, help/fr_CA/site/topic/000000.xml,
+	  help/fr_CA/site/topic/000001.xml,
+	  help/fr_CA/site/topic/000002.xml,
+	  help/fr_CA/site/topic/000003.xml,
+	  help/fr_CA/submission/toc/000000.xml,
+	  help/fr_CA/submission/topic/000000.xml,
+	  help/fr_CA/submission/topic/000001.xml,
+	  help/fr_CA/submission/topic/000002.xml,
+	  help/fr_CA/submission/topic/000003.xml,
+	  help/fr_CA/submission/topic/000004.xml,
+	  help/fr_CA/user/toc/000000.xml, help/fr_CA/user/topic/000000.xml,
+	  help/fr_CA/user/topic/000001.xml,
+	  help/fr_CA/user/topic/000002.xml,
+	  help/fr_CA/user/topic/000003.xml,
+	  help/fr_CA/user/topic/000004.xml,
+	  help/fr_CA/user/topic/000005.xml,
+	  help/fr_CA/user/topic/000006.xml,
+	  help/fr_CA/user/topic/000007.xml,
+	  help/it_IT/editorial/toc/000000.xml,
+	  help/it_IT/editorial/toc/000001.xml,
+	  help/it_IT/editorial/toc/000002.xml,
+	  help/it_IT/editorial/toc/000003.xml,
+	  help/it_IT/editorial/toc/000004.xml,
+	  help/it_IT/editorial/toc/000005.xml,
+	  help/it_IT/editorial/toc/000006.xml,
+	  help/it_IT/editorial/toc/000007.xml,
+	  help/it_IT/editorial/toc/000008.xml,
+	  help/it_IT/editorial/toc/000009.xml,
+	  help/it_IT/editorial/toc/000010.xml,
+	  help/it_IT/editorial/toc/000011.xml,
+	  help/it_IT/editorial/toc/000012.xml,
+	  help/it_IT/editorial/toc/000013.xml,
+	  help/it_IT/editorial/toc/000014.xml,
+	  help/it_IT/editorial/topic/000000.xml,
+	  help/it_IT/editorial/topic/000001.xml,
+	  help/it_IT/editorial/topic/000002.xml,
+	  help/it_IT/editorial/topic/000003.xml,
+	  help/it_IT/editorial/topic/000004.xml,
+	  help/it_IT/editorial/topic/000005.xml,
+	  help/it_IT/editorial/topic/000006.xml,
+	  help/it_IT/editorial/topic/000007.xml,
+	  help/it_IT/editorial/topic/000008.xml,
+	  help/it_IT/editorial/topic/000009.xml,
+	  help/it_IT/editorial/topic/000010.xml,
+	  help/it_IT/editorial/topic/000011.xml,
+	  help/it_IT/editorial/topic/000012.xml,
+	  help/it_IT/editorial/topic/000013.xml,
+	  help/it_IT/editorial/topic/000014.xml,
+	  help/it_IT/editorial/topic/000015.xml,
+	  help/it_IT/editorial/topic/000016.xml,
+	  help/it_IT/editorial/topic/000017.xml,
+	  help/it_IT/editorial/topic/000018.xml,
+	  help/it_IT/editorial/topic/000019.xml,
+	  help/it_IT/editorial/topic/000020.xml,
+	  help/it_IT/editorial/topic/000021.xml,
+	  help/it_IT/editorial/topic/000022.xml,
+	  help/it_IT/editorial/topic/000023.xml,
+	  help/it_IT/editorial/topic/000024.xml,
+	  help/it_IT/editorial/topic/000025.xml,
+	  help/it_IT/editorial/topic/000026.xml,
+	  help/it_IT/editorial/topic/000027.xml,
+	  help/it_IT/editorial/topic/000028.xml,
+	  help/it_IT/editorial/topic/000029.xml,
+	  help/it_IT/editorial/topic/000030.xml,
+	  help/it_IT/editorial/topic/000031.xml,
+	  help/it_IT/editorial/topic/000032.xml,
+	  help/it_IT/editorial/topic/000033.xml,
+	  help/it_IT/editorial/topic/000034.xml,
+	  help/it_IT/editorial/topic/000035.xml,
+	  help/it_IT/editorial/topic/000036.xml,
+	  help/it_IT/editorial/topic/000037.xml,
+	  help/it_IT/editorial/topic/000038.xml,
+	  help/it_IT/editorial/topic/000039.xml,
+	  help/it_IT/editorial/topic/000040.xml,
+	  help/it_IT/editorial/topic/000041.xml,
+	  help/it_IT/editorial/topic/000042.xml,
+	  help/it_IT/editorial/topic/000043.xml,
+	  help/it_IT/index/toc/000000.xml,
+	  help/it_IT/index/topic/000000.xml,
+	  help/it_IT/intro/toc/000000.xml,
+	  help/it_IT/intro/topic/000000.xml,
+	  help/it_IT/intro/topic/000001.xml,
+	  help/it_IT/journal/toc/000000.xml,
+	  help/it_IT/journal/toc/000001.xml,
+	  help/it_IT/journal/toc/000002.xml,
+	  help/it_IT/journal/toc/000003.xml,
+	  help/it_IT/journal/toc/000005.xml,
+	  help/it_IT/journal/topic/000000.xml,
+	  help/it_IT/journal/topic/000001.xml,
+	  help/it_IT/journal/topic/000002.xml,
+	  help/it_IT/journal/topic/000003.xml,
+	  help/it_IT/journal/topic/000004.xml,
+	  help/it_IT/journal/topic/000005.xml,
+	  help/it_IT/journal/topic/000006.xml,
+	  help/it_IT/journal/topic/000007.xml,
+	  help/it_IT/journal/topic/000008.xml,
+	  help/it_IT/journal/topic/000009.xml,
+	  help/it_IT/journal/topic/000010.xml,
+	  help/it_IT/journal/topic/000011.xml,
+	  help/it_IT/journal/topic/000012.xml,
+	  help/it_IT/journal/topic/000013.xml,
+	  help/it_IT/journal/topic/000014.xml,
+	  help/it_IT/journal/topic/000015.xml,
+	  help/it_IT/journal/topic/000016.xml,
+	  help/it_IT/journal/topic/000017.xml,
+	  help/it_IT/journal/topic/000018.xml,
+	  help/it_IT/journal/topic/000019.xml,
+	  help/it_IT/journal/topic/000020.xml,
+	  help/it_IT/journal/topic/000021.xml,
+	  help/it_IT/journal/topic/000022.xml,
+	  help/it_IT/journal/topic/000023.xml,
+	  help/it_IT/journal/topic/000025.xml,
+	  help/it_IT/journal/topic/000026.xml,
+	  help/it_IT/journal/topic/000027.xml,
+	  help/it_IT/journal/topic/000028.xml,
+	  help/it_IT/publishing/toc/000000.xml,
+	  help/it_IT/publishing/topic/000000.xml,
+	  help/it_IT/publishing/topic/000001.xml,
+	  help/it_IT/publishing/topic/000002.xml,
+	  help/it_IT/publishing/topic/000003.xml,
+	  help/it_IT/publishing/topic/000004.xml,
+	  help/it_IT/site/toc/000000.xml, help/it_IT/site/topic/000000.xml,
+	  help/it_IT/site/topic/000001.xml,
+	  help/it_IT/site/topic/000002.xml,
+	  help/it_IT/site/topic/000003.xml,
+	  help/it_IT/submission/toc/000000.xml,
+	  help/it_IT/submission/topic/000000.xml,
+	  help/it_IT/submission/topic/000001.xml,
+	  help/it_IT/submission/topic/000002.xml,
+	  help/it_IT/submission/topic/000003.xml,
+	  help/it_IT/submission/topic/000004.xml,
+	  help/it_IT/user/toc/000000.xml, help/it_IT/user/topic/000000.xml,
+	  help/it_IT/user/topic/000001.xml,
+	  help/it_IT/user/topic/000002.xml,
+	  help/it_IT/user/topic/000003.xml,
+	  help/it_IT/user/topic/000004.xml,
+	  help/it_IT/user/topic/000005.xml,
+	  help/it_IT/user/topic/000006.xml,
+	  help/it_IT/user/topic/000007.xml,
+	  help/pt_BR/editorial/toc/000000.xml,
+	  help/pt_BR/editorial/toc/000001.xml,
+	  help/pt_BR/editorial/toc/000002.xml,
+	  help/pt_BR/editorial/toc/000003.xml,
+	  help/pt_BR/editorial/toc/000004.xml,
+	  help/pt_BR/editorial/toc/000005.xml,
+	  help/pt_BR/editorial/toc/000006.xml,
+	  help/pt_BR/editorial/toc/000007.xml,
+	  help/pt_BR/editorial/toc/000008.xml,
+	  help/pt_BR/editorial/toc/000009.xml,
+	  help/pt_BR/editorial/toc/000010.xml,
+	  help/pt_BR/editorial/toc/000011.xml,
+	  help/pt_BR/editorial/toc/000012.xml,
+	  help/pt_BR/editorial/toc/000013.xml,
+	  help/pt_BR/editorial/toc/000014.xml,
+	  help/pt_BR/editorial/topic/000000.xml,
+	  help/pt_BR/editorial/topic/000001.xml,
+	  help/pt_BR/editorial/topic/000002.xml,
+	  help/pt_BR/editorial/topic/000003.xml,
+	  help/pt_BR/editorial/topic/000004.xml,
+	  help/pt_BR/editorial/topic/000005.xml,
+	  help/pt_BR/editorial/topic/000006.xml,
+	  help/pt_BR/editorial/topic/000007.xml,
+	  help/pt_BR/editorial/topic/000008.xml,
+	  help/pt_BR/editorial/topic/000009.xml,
+	  help/pt_BR/editorial/topic/000010.xml,
+	  help/pt_BR/editorial/topic/000011.xml,
+	  help/pt_BR/editorial/topic/000012.xml,
+	  help/pt_BR/editorial/topic/000013.xml,
+	  help/pt_BR/editorial/topic/000014.xml,
+	  help/pt_BR/editorial/topic/000015.xml,
+	  help/pt_BR/editorial/topic/000016.xml,
+	  help/pt_BR/editorial/topic/000017.xml,
+	  help/pt_BR/editorial/topic/000018.xml,
+	  help/pt_BR/editorial/topic/000019.xml,
+	  help/pt_BR/editorial/topic/000020.xml,
+	  help/pt_BR/editorial/topic/000021.xml,
+	  help/pt_BR/editorial/topic/000022.xml,
+	  help/pt_BR/editorial/topic/000023.xml,
+	  help/pt_BR/editorial/topic/000024.xml,
+	  help/pt_BR/editorial/topic/000025.xml,
+	  help/pt_BR/editorial/topic/000026.xml,
+	  help/pt_BR/editorial/topic/000027.xml,
+	  help/pt_BR/editorial/topic/000028.xml,
+	  help/pt_BR/editorial/topic/000029.xml,
+	  help/pt_BR/editorial/topic/000030.xml,
+	  help/pt_BR/editorial/topic/000031.xml,
+	  help/pt_BR/editorial/topic/000032.xml,
+	  help/pt_BR/editorial/topic/000033.xml,
+	  help/pt_BR/editorial/topic/000034.xml,
+	  help/pt_BR/editorial/topic/000035.xml,
+	  help/pt_BR/editorial/topic/000036.xml,
+	  help/pt_BR/editorial/topic/000037.xml,
+	  help/pt_BR/editorial/topic/000038.xml,
+	  help/pt_BR/editorial/topic/000039.xml,
+	  help/pt_BR/editorial/topic/000040.xml,
+	  help/pt_BR/editorial/topic/000041.xml,
+	  help/pt_BR/editorial/topic/000042.xml,
+	  help/pt_BR/editorial/topic/000043.xml,
+	  help/pt_BR/index/toc/000000.xml,
+	  help/pt_BR/index/topic/000000.xml,
+	  help/pt_BR/intro/toc/000000.xml,
+	  help/pt_BR/intro/topic/000000.xml,
+	  help/pt_BR/intro/topic/000001.xml,
+	  help/pt_BR/journal/toc/000000.xml,
+	  help/pt_BR/journal/toc/000001.xml,
+	  help/pt_BR/journal/toc/000002.xml,
+	  help/pt_BR/journal/toc/000003.xml,
+	  help/pt_BR/journal/toc/000005.xml,
+	  help/pt_BR/journal/topic/000000.xml,
+	  help/pt_BR/journal/topic/000001.xml,
+	  help/pt_BR/journal/topic/000002.xml,
+	  help/pt_BR/journal/topic/000003.xml,
+	  help/pt_BR/journal/topic/000004.xml,
+	  help/pt_BR/journal/topic/000005.xml,
+	  help/pt_BR/journal/topic/000006.xml,
+	  help/pt_BR/journal/topic/000007.xml,
+	  help/pt_BR/journal/topic/000008.xml,
+	  help/pt_BR/journal/topic/000009.xml,
+	  help/pt_BR/journal/topic/000010.xml,
+	  help/pt_BR/journal/topic/000011.xml,
+	  help/pt_BR/journal/topic/000012.xml,
+	  help/pt_BR/journal/topic/000013.xml,
+	  help/pt_BR/journal/topic/000014.xml,
+	  help/pt_BR/journal/topic/000015.xml,
+	  help/pt_BR/journal/topic/000016.xml,
+	  help/pt_BR/journal/topic/000017.xml,
+	  help/pt_BR/journal/topic/000018.xml,
+	  help/pt_BR/journal/topic/000019.xml,
+	  help/pt_BR/journal/topic/000020.xml,
+	  help/pt_BR/journal/topic/000021.xml,
+	  help/pt_BR/journal/topic/000022.xml,
+	  help/pt_BR/journal/topic/000023.xml,
+	  help/pt_BR/journal/topic/000025.xml,
+	  help/pt_BR/journal/topic/000026.xml,
+	  help/pt_BR/journal/topic/000027.xml,
+	  help/pt_BR/journal/topic/000028.xml,
+	  help/pt_BR/publishing/toc/000000.xml,
+	  help/pt_BR/publishing/topic/000000.xml,
+	  help/pt_BR/publishing/topic/000001.xml,
+	  help/pt_BR/publishing/topic/000002.xml,
+	  help/pt_BR/publishing/topic/000003.xml,
+	  help/pt_BR/publishing/topic/000004.xml,
+	  help/pt_BR/site/toc/000000.xml, help/pt_BR/site/topic/000000.xml,
+	  help/pt_BR/site/topic/000001.xml,
+	  help/pt_BR/site/topic/000002.xml,
+	  help/pt_BR/site/topic/000003.xml,
+	  help/pt_BR/submission/toc/000000.xml,
+	  help/pt_BR/submission/topic/000000.xml,
+	  help/pt_BR/submission/topic/000001.xml,
+	  help/pt_BR/submission/topic/000002.xml,
+	  help/pt_BR/submission/topic/000003.xml,
+	  help/pt_BR/submission/topic/000004.xml,
+	  help/pt_BR/user/toc/000000.xml, help/pt_BR/user/topic/000000.xml,
+	  help/pt_BR/user/topic/000001.xml,
+	  help/pt_BR/user/topic/000002.xml,
+	  help/pt_BR/user/topic/000003.xml,
+	  help/pt_BR/user/topic/000004.xml,
+	  help/pt_BR/user/topic/000005.xml,
+	  help/pt_BR/user/topic/000006.xml,
+	  help/pt_BR/user/topic/000007.xml, includes/driver.inc.php,
+	  includes/functions.inc.php, js/general.js, locale/locale.dtd,
+	  locale/en_US/locale.xml, locale/es_ES/locale.xml,
+	  locale/fr_CA/locale.xml, locale/it_IT/locale.xml,
+	  locale/pt_BR/locale.xml, locale/ru_RU/locale.xml,
+	  locale/te_ST/locale.xml, pages/about/AboutHandler.inc.php,
+	  pages/about/index.php, pages/admin/AdminFunctionsHandler.inc.php,
+	  pages/admin/AdminHandler.inc.php,
+	  pages/admin/AdminJournalHandler.inc.php,
+	  pages/admin/AdminLanguagesHandler.inc.php,
+	  pages/admin/AdminSettingsHandler.inc.php,
+	  pages/admin/AuthSourcesHandler.inc.php, pages/admin/index.php,
+	  pages/announcement/AnnouncementHandler.inc.php,
+	  pages/announcement/index.php,
+	  pages/article/ArticleHandler.inc.php, pages/article/index.php,
+	  pages/author/AuthorHandler.inc.php,
+	  pages/author/SubmissionCommentsHandler.inc.php,
+	  pages/author/SubmitHandler.inc.php,
+	  pages/author/TrackSubmissionHandler.inc.php,
+	  pages/author/index.php, pages/comment/CommentHandler.inc.php,
+	  pages/comment/index.php,
+	  pages/copyeditor/CopyeditorHandler.inc.php,
+	  pages/copyeditor/SubmissionCommentsHandler.inc.php,
+	  pages/copyeditor/SubmissionCopyeditHandler.inc.php,
+	  pages/copyeditor/index.php, pages/editor/EditorHandler.inc.php,
+	  pages/editor/IssueManagementHandler.inc.php,
+	  pages/editor/index.php, pages/gateway/GatewayHandler.inc.php,
+	  pages/gateway/index.php, pages/help/HelpHandler.inc.php,
+	  pages/help/index.php, pages/index/IndexHandler.inc.php,
+	  pages/index/index.php,
+	  pages/information/InformationHandler.inc.php,
+	  pages/information/index.php,
+	  pages/install/InstallHandler.inc.php, pages/install/index.php,
+	  pages/issue/IssueHandler.inc.php, pages/issue/index.php,
+	  pages/layoutEditor/LayoutEditorHandler.inc.php,
+	  pages/layoutEditor/SubmissionCommentsHandler.inc.php,
+	  pages/layoutEditor/SubmissionLayoutHandler.inc.php,
+	  pages/layoutEditor/index.php, pages/login/LoginHandler.inc.php,
+	  pages/login/index.php, pages/manager/AnnouncementHandler.inc.php,
+	  pages/manager/EmailHandler.inc.php,
+	  pages/manager/FilesHandler.inc.php,
+	  pages/manager/GroupHandler.inc.php,
+	  pages/manager/ImportExportHandler.inc.php,
+	  pages/manager/JournalLanguagesHandler.inc.php,
+	  pages/manager/ManagerHandler.inc.php,
+	  pages/manager/PeopleHandler.inc.php,
+	  pages/manager/PluginHandler.inc.php,
+	  pages/manager/SectionHandler.inc.php,
+	  pages/manager/SetupHandler.inc.php,
+	  pages/manager/StatisticsHandler.inc.php,
+	  pages/manager/SubscriptionHandler.inc.php,
+	  pages/manager/index.php, pages/oai/OAIHandler.inc.php,
+	  pages/oai/index.php,
+	  pages/proofreader/ProofreaderHandler.inc.php,
+	  pages/proofreader/SubmissionCommentsHandler.inc.php,
+	  pages/proofreader/SubmissionProofreadHandler.inc.php,
+	  pages/proofreader/index.php,
+	  pages/reviewer/ReviewerHandler.inc.php,
+	  pages/reviewer/SubmissionCommentsHandler.inc.php,
+	  pages/reviewer/SubmissionReviewHandler.inc.php,
+	  pages/reviewer/index.php, pages/rt/RTHandler.inc.php,
+	  pages/rt/index.php, pages/rtadmin/RTAdminHandler.inc.php,
+	  pages/rtadmin/RTContextHandler.inc.php,
+	  pages/rtadmin/RTSearchHandler.inc.php,
+	  pages/rtadmin/RTSetupHandler.inc.php,
+	  pages/rtadmin/RTVersionHandler.inc.php, pages/rtadmin/index.php,
+	  pages/search/SearchHandler.inc.php, pages/search/index.php,
+	  pages/sectionEditor/SectionEditorHandler.inc.php,
+	  pages/sectionEditor/SubmissionCommentsHandler.inc.php,
+	  pages/sectionEditor/SubmissionEditHandler.inc.php,
+	  pages/sectionEditor/index.php,
+	  pages/subscriptionManager/SubscriptionManagerHandler.inc.php,
+	  pages/subscriptionManager/index.php,
+	  pages/user/EmailHandler.inc.php,
+	  pages/user/ProfileHandler.inc.php,
+	  pages/user/RegistrationHandler.inc.php,
+	  pages/user/UserHandler.inc.php, pages/user/index.php,
+	  plugins/auth/ldap/LDAPAuthPlugin.inc.php,
+	  plugins/auth/ldap/index.php, plugins/auth/ldap/settings.tpl,
+	  plugins/auth/ldap/locale/en_US/locale.xml,
+	  plugins/auth/ldap/locale/es_ES/locale.xml,
+	  plugins/auth/ldap/locale/fr_CA/locale.xml,
+	  plugins/auth/ldap/locale/it_IT/locale.xml,
+	  plugins/auth/ldap/locale/pt_BR/locale.xml,
+	  plugins/auth/ldap/locale/ru_RU/locale.xml,
+	  plugins/gateways/googleScholar/GoogleScholarPlugin.inc.php,
+	  plugins/gateways/googleScholar/GoogleScholarSettingsForm.inc.php,
+	  plugins/gateways/googleScholar/errors.tpl,
+	  plugins/gateways/googleScholar/index.php,
+	  plugins/gateways/googleScholar/settingsForm.tpl,
+	  plugins/gateways/googleScholar/locale/en_US/locale.xml,
+	  plugins/gateways/googleScholar/locale/es_ES/locale.xml,
+	  plugins/gateways/googleScholar/locale/fr_CA/locale.xml,
+	  plugins/gateways/googleScholar/locale/it_IT/locale.xml,
+	  plugins/gateways/googleScholar/locale/pt_BR/locale.xml,
+	  plugins/gateways/googleScholar/locale/ru_RU/locale.xml,
+	  plugins/gateways/resolver/ResolverPlugin.inc.php,
+	  plugins/gateways/resolver/index.php,
+	  plugins/gateways/resolver/locale/en_US/locale.xml,
+	  plugins/generic/counter/LogEntry.inc.php,
+	  plugins/generic/thesis/SettingsForm.inc.php,
+	  plugins/generic/thesis/StudentThesisForm.inc.php,
+	  plugins/generic/thesis/Thesis.inc.php,
+	  plugins/generic/thesis/ThesisDAO.inc.php,
+	  plugins/generic/thesis/ThesisForm.inc.php,
+	  plugins/generic/thesis/ThesisHandler.inc.php,
+	  plugins/generic/thesis/ThesisPlugin.inc.php,
+	  plugins/generic/thesis/data.xml,
+	  plugins/generic/thesis/index.php,
+	  plugins/generic/thesis/index.tpl,
+	  plugins/generic/thesis/schema.xml,
+	  plugins/generic/thesis/settingsForm.tpl,
+	  plugins/generic/thesis/studentThesisForm.tpl,
+	  plugins/generic/thesis/theses.tpl,
+	  plugins/generic/thesis/thesisForm.tpl,
+	  plugins/generic/thesis/view.tpl,
+	  plugins/generic/thesis/locale/en_US/locale.xml,
+	  plugins/generic/tinymce/locale/en_US/locale.xml,
+	  plugins/generic/tinymce/locale/es_ES/locale.xml,
+	  plugins/generic/tinymce/locale/fr_CA/locale.xml,
+	  plugins/generic/tinymce/locale/it_IT/locale.xml,
+	  plugins/generic/tinymce/locale/pt_BR/locale.xml,
+	  plugins/generic/tinymce/locale/ru_RU/locale.xml,
+	  plugins/generic/webFeed/FeedHandler.inc.php,
+	  plugins/generic/webFeed/FeedPlugin.inc.php,
+	  plugins/generic/webFeed/index.php,
+	  plugins/generic/webFeed/locale/en_US/locale.xml,
+	  plugins/generic/webFeed/locale/es_ES/locale.xml,
+	  plugins/importexport/erudit/EruditExportDom.inc.php,
+	  plugins/importexport/erudit/EruditExportPlugin.inc.php,
+	  plugins/importexport/erudit/index.php,
+	  plugins/importexport/erudit/index.tpl,
+	  plugins/importexport/erudit/locale/en_US/locale.xml,
+	  plugins/importexport/erudit/locale/es_ES/locale.xml,
+	  plugins/importexport/erudit/locale/fr_CA/locale.xml,
+	  plugins/importexport/erudit/locale/it_IT/locale.xml,
+	  plugins/importexport/erudit/locale/pt_BR/locale.xml,
+	  plugins/importexport/erudit/locale/ru_RU/locale.xml,
+	  plugins/importexport/native/NativeExportDom.inc.php,
+	  plugins/importexport/native/NativeImportDom.inc.php,
+	  plugins/importexport/native/NativeImportExportPlugin.inc.php,
+	  plugins/importexport/native/articleContext.tpl,
+	  plugins/importexport/native/articles.tpl,
+	  plugins/importexport/native/importError.tpl,
+	  plugins/importexport/native/importSuccess.tpl,
+	  plugins/importexport/native/index.php,
+	  plugins/importexport/native/index.tpl,
+	  plugins/importexport/native/issues.tpl,
+	  plugins/importexport/native/native.dtd,
+	  plugins/importexport/native/ojs1-to-ojs2.xsl,
+	  plugins/importexport/native/sample.xml,
+	  plugins/importexport/native/locale/en_US/locale.xml,
+	  plugins/importexport/native/locale/es_ES/locale.xml,
+	  plugins/importexport/native/locale/fr_CA/locale.xml,
+	  plugins/importexport/native/locale/it_IT/locale.xml,
+	  plugins/importexport/native/locale/pt_BR/locale.xml,
+	  plugins/importexport/native/locale/ru_RU/locale.xml,
+	  plugins/importexport/pubmed/PubMedExportDom.inc.php,
+	  plugins/importexport/pubmed/articles.tpl,
+	  plugins/importexport/pubmed/index.php,
+	  plugins/importexport/pubmed/index.tpl,
+	  plugins/importexport/pubmed/issues.tpl,
+	  plugins/importexport/pubmed/locale/en_US/locale.xml,
+	  plugins/importexport/pubmed/locale/es_ES/locale.xml,
+	  plugins/importexport/sample/SampleImportExportPlugin.inc.php,
+	  plugins/importexport/sample/index.php,
+	  plugins/importexport/sample/issues.tpl,
+	  plugins/importexport/sample/locale/en_US/locale.xml,
+	  plugins/importexport/sample/locale/es_ES/locale.xml,
+	  plugins/importexport/sample/locale/fr_CA/locale.xml,
+	  plugins/importexport/sample/locale/it_IT/locale.xml,
+	  plugins/importexport/sample/locale/pt_BR/locale.xml,
+	  plugins/importexport/sample/locale/ru_RU/locale.xml,
+	  plugins/importexport/users/UserExportDom.inc.php,
+	  plugins/importexport/users/UserImportExportPlugin.inc.php,
+	  plugins/importexport/users/UserXMLParser.inc.php,
+	  plugins/importexport/users/importUsersConfirm.tpl,
+	  plugins/importexport/users/importUsersResults.tpl,
+	  plugins/importexport/users/index.php,
+	  plugins/importexport/users/index.tpl,
+	  plugins/importexport/users/sample.xml,
+	  plugins/importexport/users/locale/en_US/locale.xml,
+	  plugins/importexport/users/locale/es_ES/locale.xml,
+	  plugins/importexport/users/locale/fr_CA/locale.xml,
+	  plugins/importexport/users/locale/it_IT/locale.xml,
+	  plugins/importexport/users/locale/pt_BR/locale.xml,
+	  plugins/importexport/users/locale/ru_RU/locale.xml,
+	  registry/journalSettings.xml, registry/locales.xml,
+	  registry/scheduledTasks.xml, registry/locale/en_US/countries.xml,
+	  registry/locale/es_ES/countries.xml,
+	  registry/locale/fr_CA/countries.xml,
+	  registry/locale/it_IT/countries.xml,
+	  registry/locale/pt_BR/countries.xml,
+	  registry/locale/ru_RU/countries.xml, rt/rt-version.dtd,
+	  rt/en_US/Agriculture.xml, rt/en_US/Art_Architecture.xml,
+	  rt/en_US/Astrophysics.xml, rt/en_US/Biology.xml,
+	  rt/en_US/Business.xml, rt/en_US/Chemistry.xml,
+	  rt/en_US/Cognitive_Science.xml, rt/en_US/Computer_Science.xml,
+	  rt/en_US/Economics.xml, rt/en_US/Education.xml,
+	  rt/en_US/Environment.xml, rt/en_US/General_Science.xml,
+	  rt/en_US/Generic.xml, rt/en_US/Humanities.xml,
+	  rt/en_US/Life_Sciences.xml, rt/en_US/Mathematics.xml,
+	  rt/en_US/Music.xml, rt/en_US/Physics.xml,
+	  rt/en_US/Social_Sciences.xml, styles/articleView.css,
+	  styles/comments.css, styles/common.css, styles/help.css,
+	  styles/rt.css, templates/about/aboutThisPublishingSystem.tpl,
+	  templates/about/contact.tpl,
+	  templates/about/editorialPolicies.tpl,
+	  templates/about/editorialTeam.tpl,
+	  templates/about/editorialTeamBio.tpl,
+	  templates/about/editorialTeamBoard.tpl,
+	  templates/about/index.tpl,
+	  templates/about/journalSponsorship.tpl, templates/about/site.tpl,
+	  templates/about/siteMap.tpl, templates/about/statistics.tpl,
+	  templates/about/submissions.tpl,
+	  templates/about/subscriptions.tpl,
+	  templates/admin/importConflicts.tpl,
+	  templates/admin/importOJS1.tpl, templates/admin/index.tpl,
+	  templates/admin/journalSettings.tpl,
+	  templates/admin/journals.tpl, templates/admin/languages.tpl,
+	  templates/admin/settings.tpl, templates/admin/systemConfig.tpl,
+	  templates/admin/systemConfigUpdated.tpl,
+	  templates/admin/systemInfo.tpl,
+	  templates/admin/auth/sourceSettings.tpl,
+	  templates/admin/auth/sources.tpl,
+	  templates/announcement/index.tpl,
+	  templates/announcement/list.tpl, templates/announcement/view.tpl,
+	  templates/article/article.tpl,
+	  templates/article/interstitial.tpl,
+	  templates/article/pdfInterstitial.tpl,
+	  templates/article/view.tpl, templates/author/active.tpl,
+	  templates/author/completed.tpl, templates/author/index.tpl,
+	  templates/author/navsidebar.tpl, templates/author/submission.tpl,
+	  templates/author/submissionEditing.tpl,
+	  templates/author/submissionReview.tpl,
+	  templates/author/submission/copyedit.tpl,
+	  templates/author/submission/editorDecision.tpl,
+	  templates/author/submission/layout.tpl,
+	  templates/author/submission/management.tpl,
+	  templates/author/submission/metadata.tpl,
+	  templates/author/submission/peerReview.tpl,
+	  templates/author/submission/proofread.tpl,
+	  templates/author/submission/status.tpl,
+	  templates/author/submission/summary.tpl,
+	  templates/author/submit/complete.tpl,
+	  templates/author/submit/step1.tpl,
+	  templates/author/submit/step2.tpl,
+	  templates/author/submit/step3.tpl,
+	  templates/author/submit/step4.tpl,
+	  templates/author/submit/step5.tpl,
+	  templates/author/submit/submitHeader.tpl,
+	  templates/author/submit/submitSidebar.tpl,
+	  templates/author/submit/suppFile.tpl,
+	  templates/comment/comment.tpl, templates/comment/comments.tpl,
+	  templates/common/error.tpl, templates/common/footer.tpl,
+	  templates/common/formErrors.tpl, templates/common/header.tpl,
+	  templates/common/message.tpl, templates/common/sidebar.tpl,
+	  templates/copyeditor/active.tpl,
+	  templates/copyeditor/completed.tpl,
+	  templates/copyeditor/index.tpl,
+	  templates/copyeditor/navsidebar.tpl,
+	  templates/copyeditor/submission.tpl,
+	  templates/copyeditor/submission/copyedit.tpl,
+	  templates/copyeditor/submission/layout.tpl,
+	  templates/copyeditor/submission/summary.tpl,
+	  templates/editor/index.tpl, templates/editor/navsidebar.tpl,
+	  templates/editor/notifyUsers.tpl,
+	  templates/editor/schedulingQueue.tpl,
+	  templates/editor/selectSectionEditor.tpl,
+	  templates/editor/submissions.tpl,
+	  templates/editor/submissionsArchives.tpl,
+	  templates/editor/submissionsInEditing.tpl,
+	  templates/editor/submissionsInReview.tpl,
+	  templates/editor/submissionsUnassigned.tpl,
+	  templates/editor/issues/backIssues.tpl,
+	  templates/editor/issues/createIssue.tpl,
+	  templates/editor/issues/futureIssues.tpl,
+	  templates/editor/issues/issueData.tpl,
+	  templates/editor/issues/issueToc.tpl, templates/email/email.tpl,
+	  templates/gateway/lockss.tpl, templates/help/footer.tpl,
+	  templates/help/header.tpl, templates/help/helpToc.tpl,
+	  templates/help/searchResults.tpl, templates/help/toc.tpl,
+	  templates/help/topic.tpl, templates/help/view.tpl,
+	  templates/index/journal.tpl, templates/index/site.tpl,
+	  templates/information/information.tpl,
+	  templates/install/install.tpl,
+	  templates/install/installComplete.tpl,
+	  templates/install/upgrade.tpl,
+	  templates/install/upgradeComplete.tpl,
+	  templates/issue/archive.tpl, templates/issue/current.tpl,
+	  templates/issue/header.tpl, templates/issue/issue.tpl,
+	  templates/issue/view.tpl, templates/issue/viewPage.tpl,
+	  templates/layoutEditor/active.tpl,
+	  templates/layoutEditor/completed.tpl,
+	  templates/layoutEditor/index.tpl,
+	  templates/layoutEditor/navsidebar.tpl,
+	  templates/layoutEditor/submission.tpl,
+	  templates/layoutEditor/submission/layout.tpl,
+	  templates/layoutEditor/submission/proofread.tpl,
+	  templates/layoutEditor/submission/summary.tpl,
+	  templates/manager/index.tpl,
+	  templates/manager/languageSettings.tpl,
+	  templates/manager/announcement/announcementForm.tpl,
+	  templates/manager/announcement/announcementTypeForm.tpl,
+	  templates/manager/announcement/announcementTypes.tpl,
+	  templates/manager/announcement/announcements.tpl,
+	  templates/manager/emails/emailTemplateForm.tpl,
+	  templates/manager/emails/emails.tpl,
+	  templates/manager/files/index.tpl,
+	  templates/manager/groups/groupForm.tpl,
+	  templates/manager/groups/groups.tpl,
+	  templates/manager/groups/memberships.tpl,
+	  templates/manager/groups/selectUser.tpl,
+	  templates/manager/importexport/plugins.tpl,
+	  templates/manager/people/email.tpl,
+	  templates/manager/people/enrollSync.tpl,
+	  templates/manager/people/enrollment.tpl,
+	  templates/manager/people/searchUsers.tpl,
+	  templates/manager/people/selectMergeUser.tpl,
+	  templates/manager/people/selectTemplate.tpl,
+	  templates/manager/people/userProfile.tpl,
+	  templates/manager/people/userProfileForm.tpl,
+	  templates/manager/plugins/plugins.tpl,
+	  templates/manager/sections/sectionForm.tpl,
+	  templates/manager/sections/sections.tpl,
+	  templates/manager/setup/index.tpl,
+	  templates/manager/setup/settingsSaved.tpl,
+	  templates/manager/setup/setupHeader.tpl,
+	  templates/manager/setup/step1.tpl,
+	  templates/manager/setup/step2.tpl,
+	  templates/manager/setup/step3.tpl,
+	  templates/manager/setup/step4.tpl,
+	  templates/manager/setup/step5.tpl,
+	  templates/manager/statistics/index.tpl,
+	  templates/manager/statistics/reportGenerator.tpl,
+	  templates/manager/statistics/statistics.tpl,
+	  templates/proofreader/active.tpl,
+	  templates/proofreader/completed.tpl,
+	  templates/proofreader/index.tpl,
+	  templates/proofreader/navsidebar.tpl,
+	  templates/proofreader/submission.tpl,
+	  templates/proofreader/submission/layout.tpl,
+	  templates/proofreader/submission/proofread.tpl,
+	  templates/proofreader/submission/summary.tpl,
+	  templates/reviewer/active.tpl, templates/reviewer/completed.tpl,
+	  templates/reviewer/index.tpl, templates/reviewer/navsidebar.tpl,
+	  templates/reviewer/submission.tpl, templates/rt/bio.tpl,
+	  templates/rt/captureCite.tpl, templates/rt/citeEndNote.tpl,
+	  templates/rt/citeProCite.tpl,
+	  templates/rt/citeReferenceManager.tpl, templates/rt/context.tpl,
+	  templates/rt/email.tpl, templates/rt/footer.tpl,
+	  templates/rt/header.tpl, templates/rt/metadata.tpl,
+	  templates/rt/printerFriendly.tpl, templates/rt/rt.tpl,
+	  templates/rt/sent.tpl, templates/rt/suppFileView.tpl,
+	  templates/rt/suppFiles.tpl, templates/rtadmin/context.tpl,
+	  templates/rtadmin/contexts.tpl, templates/rtadmin/index.tpl,
+	  templates/rtadmin/journals.tpl, templates/rtadmin/search.tpl,
+	  templates/rtadmin/searches.tpl, templates/rtadmin/settings.tpl,
+	  templates/rtadmin/validate.tpl, templates/rtadmin/version.tpl,
+	  templates/rtadmin/versions.tpl,
+	  templates/search/advancedSearch.tpl,
+	  templates/search/authorDetails.tpl,
+	  templates/search/authorIndex.tpl,
+	  templates/search/searchResults.tpl,
+	  templates/search/titleIndex.tpl,
+	  templates/sectionEditor/createReviewerForm.tpl,
+	  templates/sectionEditor/index.tpl,
+	  templates/sectionEditor/navsidebar.tpl,
+	  templates/sectionEditor/reviewerRecommendation.tpl,
+	  templates/sectionEditor/searchUsers.tpl,
+	  templates/sectionEditor/selectReviewer.tpl,
+	  templates/sectionEditor/selectUser.tpl,
+	  templates/sectionEditor/setDueDate.tpl,
+	  templates/sectionEditor/submission.tpl,
+	  templates/sectionEditor/submissionEditing.tpl,
+	  templates/sectionEditor/submissionEmailLog.tpl,
+	  templates/sectionEditor/submissionEmailLogEntry.tpl,
+	  templates/sectionEditor/submissionEventLog.tpl,
+	  templates/sectionEditor/submissionEventLogEntry.tpl,
+	  templates/sectionEditor/submissionHistory.tpl,
+	  templates/sectionEditor/submissionNotes.tpl,
+	  templates/sectionEditor/submissionRegrets.tpl,
+	  templates/sectionEditor/submissionReview.tpl,
+	  templates/sectionEditor/submissionsArchives.tpl,
+	  templates/sectionEditor/submissionsInEditing.tpl,
+	  templates/sectionEditor/submissionsInReview.tpl,
+	  templates/sectionEditor/userProfile.tpl,
+	  templates/sectionEditor/submission/copyedit.tpl,
+	  templates/sectionEditor/submission/editorDecision.tpl,
+	  templates/sectionEditor/submission/editors.tpl,
+	  templates/sectionEditor/submission/layout.tpl,
+	  templates/sectionEditor/submission/management.tpl,
+	  templates/sectionEditor/submission/metadata.tpl,
+	  templates/sectionEditor/submission/peerReview.tpl,
+	  templates/sectionEditor/submission/proofread.tpl,
+	  templates/sectionEditor/submission/rounds.tpl,
+	  templates/sectionEditor/submission/status.tpl,
+	  templates/sectionEditor/submission/summary.tpl,
+	  templates/submission/instructions.tpl,
+	  templates/submission/comment/comment.tpl,
+	  templates/submission/comment/commentEmail.tpl,
+	  templates/submission/comment/editComment.tpl,
+	  templates/submission/comment/editorDecisionComment.tpl,
+	  templates/submission/comment/editorDecisionEmail.tpl,
+	  templates/submission/comment/footer.tpl,
+	  templates/submission/comment/header.tpl,
+	  templates/submission/comment/peerReviewComment.tpl,
+	  templates/submission/layout/galleyForm.tpl,
+	  templates/submission/layout/galleyView.tpl,
+	  templates/submission/layout/proofGalley.tpl,
+	  templates/submission/layout/proofGalleyHTML.tpl,
+	  templates/submission/layout/proofGalleyTop.tpl,
+	  templates/submission/metadata/metadataEdit.tpl,
+	  templates/submission/metadata/metadataView.tpl,
+	  templates/submission/suppFile/suppFile.tpl,
+	  templates/submission/suppFile/suppFileView.tpl,
+	  templates/subscription/subscriptionForm.tpl,
+	  templates/subscription/subscriptionPolicyForm.tpl,
+	  templates/subscription/subscriptionTypeForm.tpl,
+	  templates/subscription/subscriptionTypes.tpl,
+	  templates/subscription/subscriptions.tpl,
+	  templates/subscription/users.tpl,
+	  templates/user/changePassword.tpl, templates/user/index.tpl,
+	  templates/user/login.tpl, templates/user/loginChangePassword.tpl,
+	  templates/user/lostPassword.tpl, templates/user/profile.tpl,
+	  templates/user/register.tpl, templates/user/registerSite.tpl,
+	  tools/buildpkg.sh, tools/dbXMLtoSQL.php,
+	  tools/genLocaleReport.sh, tools/genTestLocale.php,
+	  tools/importExport.php, tools/install.php, tools/migrate.php,
+	  tools/preCompile.php, tools/rebuildSearchIndex.php,
+	  tools/runScheduledTasks.php, tools/upgrade.php,
+	  tools/includes/cliTool.inc.php: #2199# Updated copyright notice.
+
+2006-06-12 14:53  alec
+
+	* classes/submission/sectionEditor/SectionEditorAction.inc.php,
+	  dbscripts/xml/data/locale/en_US/email_templates_data.xml,
+	  templates/sectionEditor/searchUsers.tpl,
+	  templates/sectionEditor/selectReviewer.tpl: #1814# Abstracts no
+	  longer referenced in emails if not necessary.
+
+2006-06-12 14:25  alec
+
+	* locale/en_US/locale.xml,
+	  templates/sectionEditor/submission/editorDecision.tpl,
+	  templates/sectionEditor/submission/peerReview.tpl: #2208# Editor
+	  Decision/Peer Review wording changes
+
+2006-06-12 13:24  alec
+
+	* classes/submission/layoutEditor/LayoutEditorAction.inc.php,
+	  classes/submission/sectionEditor/SectionEditorAction.inc.php,
+	  docs/dev/TechnicalReference.odt,
+	  pages/article/ArticleHandler.inc.php,
+	  pages/layoutEditor/LayoutEditorHandler.inc.php,
+	  pages/layoutEditor/SubmissionLayoutHandler.inc.php,
+	  pages/sectionEditor/SectionEditorHandler.inc.php,
+	  pages/sectionEditor/SubmissionEditHandler.inc.php,
+	  templates/admin/journals.tpl,
+	  templates/submission/layout/galleyForm.tpl: #2248# Corrected
+	  image problems #1881# Added ID to journals table for
+	  administrator
+
+2006-06-12 11:22  mj
+
+	* plugins/importexport/crossref/: CrossRefExportPlugin.inc.php,
+	  README, index.php, CrossRefExportDom.inc.php, articles.tpl,
+	  index.tpl, issues.tpl, locale/en_US/locale.xml: - added crossref
+	  export plugin
+
+2006-06-12 11:17  mj
+
+	* plugins/generic/: counter/locale/en_US/locale.xml,
+	  webFeed/README: - update to webfeed readme (attribution /
+	  features) - updated counter locale to link to counter website
+
+2006-06-09 14:28  alec
+
+	* tools/test/lib/: commons-codec-1.3.jar,
+	  commons-httpclient-3.0.1.jar, commons-logging-1.1.jar: #1881#
+	  Added Apache Commons JAR files
+
+2006-06-09 14:27  alec
+
+	* tools/test/: testing.TEMPLATE.properties,
+	  src/org/pkp/ojs/AllTests.java, src/org/pkp/ojs/CleanupTests.java,
+	  src/org/pkp/ojs/DoInstall.java,
+	  src/org/pkp/ojs/FreshInstallTests.java,
+	  src/org/pkp/ojs/OJSTestCase.java: #1881# Continued adding JUnit
+	  testing
+
+2006-06-09 13:54  alec
+
+	* tools/test/: .cvsignore, testing.TEMPLATE.properties,
+	  src/org/pkp/ojs/AllTests.java, src/org/pkp/ojs/DoInstall.java,
+	  src/org/pkp/ojs/FreshInstallTests.java,
+	  src/org/pkp/ojs/OJSTestCase.java: #1881# Continued adding tests
+
+2006-06-09 13:50  michaelf
+
+	* templates/: about/subscriptions.tpl, announcement/list.tpl:
+	  #2242# Escape HTML tags updates
+
+2006-06-09 12:14  mj
+
+	* classes/xml/XMLCustomWriter.inc.php: - modified PHP5 DOM method
+	  call to allow creation of XML documents without DOCTYPE (rather
+	  than error)
+
+2006-06-09 12:00  mj
+
+	* classes/install/Upgrade.inc.php: - removed a stray ` character
+	  from previous commit (unparseable)
+
+2006-06-09 11:45  alec
+
+	* locale/en_US/locale.xml: #2247# Added note regarding invalid CSS
+
+2006-06-09 11:14  alec
+
+	* classes/submission/editor/EditorSubmissionDAO.inc.php: #2217#
+	  Reverted "archive" behavior
+
+2006-06-09 10:33  alec
+
+	* templates/manager/files/index.tpl: #2246# Corrected files browser
+	  typo
+
+2006-06-08 21:37  alec
+
+	* locale/en_US/locale.xml, templates/author/index.tpl: #2211#
+	  Wording changes
+
+2006-06-08 16:32  alec
+
+	* templates/: manager/people/userProfileForm.tpl,
+	  sectionEditor/createReviewerForm.tpl,
+	  submission/comment/comment.tpl,
+	  submission/comment/commentEmail.tpl,
+	  submission/comment/editComment.tpl,
+	  submission/comment/editorDecisionComment.tpl,
+	  submission/comment/editorDecisionEmail.tpl,
+	  submission/comment/peerReviewComment.tpl, user/profile.tpl:
+	  #2235# Corrected maximum length of comment title fields
+
+2006-06-08 15:31  michaelf
+
+	* classes/site/ImportOJS1.inc.php: #2245# Fix import of custom
+	  section ordering
+
+2006-06-08 15:03  michaelf
+
+	* classes/install/Upgrade.inc.php,
+	  classes/manager/form/setup/JournalSetupStep4Form.inc.php,
+	  classes/subscription/SubscriptionType.inc.php,
+	  classes/subscription/form/SubscriptionPolicyForm.inc.php,
+	  dbscripts/xml/upgrade.xml, locale/en_US/locale.xml,
+	  templates/about/editorialPolicies.tpl, templates/about/index.tpl,
+	  templates/about/subscriptions.tpl,
+	  templates/manager/setup/step4.tpl,
+	  templates/subscription/subscriptionForm.tpl,
+	  templates/subscription/subscriptionPolicyForm.tpl,
+	  templates/subscription/subscriptionTypeForm.tpl,
+	  templates/subscription/users.tpl: #2213# Updates to subscription
+	  related UIs
+
+2006-06-08 13:09  mj
+
+	* registry/journalSettings.xml: #2243# - created default locale of
+	  'en_US'
+
+2006-06-08 13:04  alec
+
+	* plugins/generic/thesis/ThesisPlugin.inc.php: #2241# Thesis plugin
+	  schema installation fix
+
+2006-06-08 12:26  mj
+
+	* classes/manager/form/setup/JournalSetupStep1Form.inc.php,
+	  locale/en_US/locale.xml, templates/manager/setup/step1.tpl: -
+	  added DOI prefix and journal abbreviation settings to journal
+	  setup page
+
+2006-06-08 12:26  alec
+
+	* templates/: manager/people/userProfile.tpl,
+	  sectionEditor/userProfile.tpl: #2242# Corrected user mailing
+	  address and bio escaping
+
+2006-06-08 12:17  alec
+
+	* templates/about/contact.tpl: #2242# Corrected overly strict
+	  escaping
+
+2006-06-08 12:13  alec
+
+	* pages/: manager/PeopleHandler.inc.php,
+	  sectionEditor/SubmissionEditHandler.inc.php: #2206# Made
+	  "Reviewing Interests" available and default only for
+	  reviewer-related enrollment tasks
+
+2006-06-08 12:05  alec
+
+	* pages/: manager/PeopleHandler.inc.php,
+	  sectionEditor/SubmissionEditHandler.inc.php: #2206# Added
+	  reviewing interests to user search forms
+
+2006-06-08 11:58  mj
+
+	* plugins/generic/webFeed/FeedHandler.inc.php: - corrected MIME
+	  types for feeds (application/<feedtype>+xml)
+
+2006-06-08 11:54  mj
+
+	* plugins/generic/webFeed/: FeedHandler.inc.php,
+	  FeedPlugin.inc.php, templates/atom.tpl, templates/links.tpl,
+	  templates/rss.tpl, templates/rss2.tpl,
+	  templates/images/rss20_logo.gif: - added RSS2.0 feed (and gif
+	  image) - cleaned up templates, revalidated everything against the
+	  RSS1.0/2.0/Atom specs
+
+2006-06-08 11:37  alec
+
+	* templates/: reviewer/submission.tpl,
+	  sectionEditor/submission/peerReview.tpl: #2222# Added notes for
+	  editing and review to editor list
+
+2006-06-08 11:19  alec
+
+	* locale/: es_ES/locale.xml, fr_CA/locale.xml, it_IT/locale.xml,
+	  pt_BR/locale.xml, ru_RU/locale.xml, te_ST/locale.xml: #2168#
+	  Syncing some changes
+
+2006-06-08 11:16  alec
+
+	* locale/en_US/locale.xml,
+	  templates/sectionEditor/submission/peerReview.tpl: #2210# Wording
+	  changes
+
+2006-06-08 10:59  alec
+
+	* templates/: author/submission/management.tpl,
+	  author/submission/summary.tpl, copyeditor/submission/summary.tpl,
+	  layoutEditor/submission/summary.tpl,
+	  proofreader/submission/summary.tpl,
+	  sectionEditor/submission/summary.tpl: #2222# Added information on
+	  editor's role to editor list for all editing roles
+
+2006-06-08 10:45  alec
+
+	* locale/en_US/locale.xml, registry/journalSettings.xml: #2237#
+	  Updated checklist.
+
+2006-06-08 10:26  alec
+
+	* templates/manager/setup/step3.tpl: #2240# Corrected font sizes.
+
+2006-06-07 16:19  alec
+
+	* help/en_US/editorial/topic/000044.xml: #2236# Blind Review help
+	  updates
+
+2006-06-07 16:10  mj
+
+	* classes/xml/XMLNode.inc.php: - fix to allow XML documents with no
+	  DOCTYPE declaration
+
+2006-06-07 15:54  alec
+
+	* plugins/auth/ldap/LDAPAuthPlugin.inc.php,
+	  plugins/auth/ldap/locale/en_US/locale.xml,
+	  templates/manager/plugins/plugins.tpl: #2220# UI updates
+
+2006-06-07 15:37  alec
+
+	* templates/email/email.tpl: #2228# Empty attachment upload
+
+2006-06-07 15:27  alec
+
+	* locale/en_US/locale.xml,
+	  templates/submission/comment/editorDecisionEmail.tpl: #2232#
+	  Wording changes
+
+2006-06-07 15:17  alec
+
+	* classes/article/ArticleFile.inc.php,
+	  classes/article/ArticleFileDAO.inc.php,
+	  classes/file/ArticleFileManager.inc.php,
+	  classes/mail/ArticleMailTemplate.inc.php,
+	  classes/mail/MailTemplate.inc.php, dbscripts/xml/ojs_schema.xml,
+	  pages/sectionEditor/SubmissionEditHandler.inc.php,
+	  pages/user/EmailHandler.inc.php,
+	  registry/locale/en_US/countries.xml,
+	  registry/locale/fr_CA/countries.xml,
+	  registry/locale/pt_BR/countries.xml,
+	  templates/sectionEditor/submissionEmailLog.tpl,
+	  templates/sectionEditor/submissionEmailLogEntry.tpl,
+	  templates/sectionEditor/submissionEventLog.tpl,
+	  templates/sectionEditor/submissionHistory.tpl: #2131# Taiwan
+	  politics #2233# History refinements
+
+2006-06-07 13:56  mj
+
+	* locale/: en_US/locale.xml, ru_RU/locale.xml: #2205 # updated copy
+	  regarding textareas
+
+2006-06-07 13:44  mj
+
+	* classes/article/: ArticleFile.inc.php, ArticleGalleyDAO.inc.php:
+	  - fixed unreachable code (eclipse kept bugging me) - one of these
+	  is marked as a FIXME
+
+2006-06-07 13:10  alec
+
+	* templates/sectionEditor/: submissionEventLog.tpl,
+	  submissionEventLogEntry.tpl, submissionHistory.tpl: #2238#
+	  Corrected key/value problem with email subjects
+
+2006-06-07 11:30  mj
+
+	* plugins/importexport/pubmed/PubMedExportDom.inc.php: - enabled
+	  detection of onlineIssn and printIssn journal settings - fixed
+	  bug for articles with no editor "accepted" decision date
+	  (infinite loop, empty tag)
+
+2006-06-06 12:34  alec
+
+	* templates/issue/issue.tpl: #2230# Corrected abstract/details link
+	  handling.
+
+2006-06-06 10:58  alec
+
+	* pages/sectionEditor/SubmissionEditHandler.inc.php: #2234# Should
+	  allow editor decisions after sending to copyedit. (ALSO resolves
+	  discrepancy between UI and logic.)
+
+2006-06-06 10:22  alec
+
+	* classes/submission/sectionEditor/SectionEditorAction.inc.php,
+	  templates/sectionEditor/submission/copyedit.tpl: #2216# Removed
+	  restriction on copyediting file upload
+
+2006-06-06 09:26  alec
+
+	* dbscripts/xml/data/locale/it_IT/email_templates_data.xml,
+	  help/it_IT/editorial/toc/000000.xml,
+	  help/it_IT/editorial/toc/000001.xml,
+	  help/it_IT/editorial/toc/000002.xml,
+	  help/it_IT/editorial/toc/000003.xml,
+	  help/it_IT/editorial/toc/000004.xml,
+	  help/it_IT/editorial/toc/000005.xml,
+	  help/it_IT/editorial/toc/000006.xml,
+	  help/it_IT/editorial/toc/000007.xml,
+	  help/it_IT/editorial/toc/000008.xml,
+	  help/it_IT/editorial/toc/000009.xml,
+	  help/it_IT/editorial/toc/000010.xml,
+	  help/it_IT/editorial/toc/000011.xml,
+	  help/it_IT/editorial/toc/000012.xml,
+	  help/it_IT/editorial/toc/000013.xml,
+	  help/it_IT/editorial/toc/000014.xml,
+	  help/it_IT/editorial/topic/000000.xml,
+	  help/it_IT/editorial/topic/000001.xml,
+	  help/it_IT/editorial/topic/000002.xml,
+	  help/it_IT/editorial/topic/000003.xml,
+	  help/it_IT/editorial/topic/000004.xml,
+	  help/it_IT/editorial/topic/000005.xml,
+	  help/it_IT/editorial/topic/000006.xml,
+	  help/it_IT/editorial/topic/000007.xml,
+	  help/it_IT/editorial/topic/000008.xml,
+	  help/it_IT/editorial/topic/000009.xml,
+	  help/it_IT/editorial/topic/000010.xml,
+	  help/it_IT/editorial/topic/000011.xml,
+	  help/it_IT/editorial/topic/000012.xml,
+	  help/it_IT/editorial/topic/000013.xml,
+	  help/it_IT/editorial/topic/000014.xml,
+	  help/it_IT/editorial/topic/000015.xml,
+	  help/it_IT/editorial/topic/000016.xml,
+	  help/it_IT/editorial/topic/000017.xml,
+	  help/it_IT/editorial/topic/000018.xml,
+	  help/it_IT/editorial/topic/000019.xml,
+	  help/it_IT/editorial/topic/000020.xml,
+	  help/it_IT/editorial/topic/000021.xml,
+	  help/it_IT/editorial/topic/000022.xml,
+	  help/it_IT/editorial/topic/000023.xml,
+	  help/it_IT/editorial/topic/000024.xml,
+	  help/it_IT/editorial/topic/000025.xml,
+	  help/it_IT/editorial/topic/000026.xml,
+	  help/it_IT/editorial/topic/000027.xml,
+	  help/it_IT/editorial/topic/000028.xml,
+	  help/it_IT/editorial/topic/000029.xml,
+	  help/it_IT/editorial/topic/000030.xml,
+	  help/it_IT/editorial/topic/000031.xml,
+	  help/it_IT/editorial/topic/000032.xml,
+	  help/it_IT/editorial/topic/000033.xml,
+	  help/it_IT/editorial/topic/000034.xml,
+	  help/it_IT/editorial/topic/000035.xml,
+	  help/it_IT/editorial/topic/000036.xml,
+	  help/it_IT/editorial/topic/000037.xml,
+	  help/it_IT/editorial/topic/000038.xml,
+	  help/it_IT/editorial/topic/000039.xml,
+	  help/it_IT/editorial/topic/000040.xml,
+	  help/it_IT/editorial/topic/000041.xml,
+	  help/it_IT/editorial/topic/000042.xml,
+	  help/it_IT/editorial/topic/000043.xml,
+	  help/it_IT/index/toc/000000.xml,
+	  help/it_IT/index/topic/000000.xml,
+	  help/it_IT/intro/toc/000000.xml,
+	  help/it_IT/intro/topic/000000.xml,
+	  help/it_IT/intro/topic/000001.xml,
+	  help/it_IT/journal/toc/000000.xml,
+	  help/it_IT/journal/toc/000001.xml,
+	  help/it_IT/journal/toc/000002.xml,
+	  help/it_IT/journal/toc/000003.xml,
+	  help/it_IT/journal/toc/000005.xml,
+	  help/it_IT/journal/topic/000000.xml,
+	  help/it_IT/journal/topic/000001.xml,
+	  help/it_IT/journal/topic/000002.xml,
+	  help/it_IT/journal/topic/000003.xml,
+	  help/it_IT/journal/topic/000004.xml,
+	  help/it_IT/journal/topic/000005.xml,
+	  help/it_IT/journal/topic/000006.xml,
+	  help/it_IT/journal/topic/000007.xml,
+	  help/it_IT/journal/topic/000008.xml,
+	  help/it_IT/journal/topic/000009.xml,
+	  help/it_IT/journal/topic/000010.xml,
+	  help/it_IT/journal/topic/000011.xml,
+	  help/it_IT/journal/topic/000012.xml,
+	  help/it_IT/journal/topic/000013.xml,
+	  help/it_IT/journal/topic/000014.xml,
+	  help/it_IT/journal/topic/000015.xml,
+	  help/it_IT/journal/topic/000016.xml,
+	  help/it_IT/journal/topic/000017.xml,
+	  help/it_IT/journal/topic/000018.xml,
+	  help/it_IT/journal/topic/000019.xml,
+	  help/it_IT/journal/topic/000020.xml,
+	  help/it_IT/journal/topic/000021.xml,
+	  help/it_IT/journal/topic/000022.xml,
+	  help/it_IT/journal/topic/000023.xml,
+	  help/it_IT/journal/topic/000025.xml,
+	  help/it_IT/journal/topic/000026.xml,
+	  help/it_IT/journal/topic/000027.xml,
+	  help/it_IT/journal/topic/000028.xml,
+	  help/it_IT/publishing/toc/000000.xml,
+	  help/it_IT/publishing/topic/000000.xml,
+	  help/it_IT/publishing/topic/000001.xml,
+	  help/it_IT/publishing/topic/000002.xml,
+	  help/it_IT/publishing/topic/000003.xml,
+	  help/it_IT/publishing/topic/000004.xml,
+	  help/it_IT/site/toc/000000.xml, help/it_IT/site/topic/000000.xml,
+	  help/it_IT/site/topic/000001.xml,
+	  help/it_IT/site/topic/000002.xml,
+	  help/it_IT/site/topic/000003.xml,
+	  help/it_IT/submission/toc/000000.xml,
+	  help/it_IT/submission/topic/000000.xml,
+	  help/it_IT/submission/topic/000001.xml,
+	  help/it_IT/submission/topic/000002.xml,
+	  help/it_IT/submission/topic/000003.xml,
+	  help/it_IT/submission/topic/000004.xml,
+	  help/it_IT/user/toc/000000.xml, help/it_IT/user/topic/000000.xml,
+	  help/it_IT/user/topic/000001.xml,
+	  help/it_IT/user/topic/000002.xml,
+	  help/it_IT/user/topic/000003.xml,
+	  help/it_IT/user/topic/000004.xml,
+	  help/it_IT/user/topic/000005.xml,
+	  help/it_IT/user/topic/000006.xml,
+	  help/it_IT/user/topic/000007.xml, locale/it_IT/locale.xml,
+	  plugins/auth/ldap/locale/it_IT/locale.xml,
+	  plugins/gateways/googleScholar/locale/it_IT/locale.xml,
+	  plugins/generic/tinymce/locale/it_IT/locale.xml,
+	  plugins/importexport/erudit/locale/it_IT/locale.xml,
+	  plugins/importexport/native/locale/it_IT/locale.xml,
+	  plugins/importexport/sample/locale/it_IT/locale.xml,
+	  plugins/importexport/users/locale/it_IT/locale.xml: #2168#
+	  Corrected Italian contribution
+
+2006-06-05 17:02  alec
+
+	* classes/submission/editor/EditorSubmissionDAO.inc.php,
+	  classes/submission/sectionEditor/SectionEditorSubmissionDAO.inc.php,
+	  pages/sectionEditor/SubmissionEditHandler.inc.php: #2217#
+	  Corrected Archives trigger for Editors.
+
+2006-06-05 15:42  alec
+
+	* templates/submission/layout/galleyForm.tpl: #2225# Corrected
+	  galley form layout consistency problem
+
+2006-06-05 15:39  alec
+
+	* locale/en_US/locale.xml,
+	  templates/manager/statistics/statistics.tpl: #2218# Updated
+	  Statistics for consistency
+
+2006-06-05 10:31  alec
+
+	* locale/en_US/locale.xml: #2209# Wording changes for due date
+	  change
+
+2006-06-05 10:28  alec
+
+	* templates/: author/submit/step2.tpl,
+	  manager/people/userProfileForm.tpl: #2203# URL is not required
+
+2006-06-05 10:08  alec
+
+	* templates/issue/header.tpl: #2215# Corrected translation key typo
+
+2006-06-05 10:03  alec
+
+	* locale/en_US/locale.xml: #2221# Wording changes for merge users
+
+2006-06-05 09:59  alec
+
+	* locale/en_US/locale.xml, templates/about/submissions.tpl: #2214#
+	  Added warning note
+
+2006-06-05 09:50  alec
+
+	* classes/submission/layoutEditor/LayoutEditorAction.inc.php:
+	  #2212# Corrected wrong variable name
+
+2006-06-02 19:03  alec
+
+	* classes/submission/author/AuthorAction.inc.php: #2207# Corrected
+	  badly named variable (copyeditorSubmission vs. authorSubmission)
+
+2006-06-02 12:27  alec
+
+	* classes/install/form/InstallForm.inc.php,
+	  templates/admin/journalSettings.tpl,
+	  templates/admin/journals.tpl, templates/admin/settings.tpl,
+	  templates/install/install.tpl, tools/test/build.xml,
+	  tools/test/src/org/pkp/ojs/AllTests.java,
+	  tools/test/src/org/pkp/ojs/DoInstall.java,
+	  tools/test/src/org/pkp/ojs/FreshInstallTests.java,
+	  tools/test/src/org/pkp/ojs/OJSTestCase.java: #1881# Adding
+	  automated testing; corrected numerous minor validation issues
+
+2006-06-01 16:14  alec
+
+	* tools/test/: build.xml, src/org/pkp/ojs/OJSTestCase.java: #1881#
+	  Resuming JUnit testing development.
+
+2006-06-01 14:32  alec
+
+	* docs/README, docs/UPGRADE, help/en_US/journal/topic/000008.xml,
+	  locale/en_US/locale.xml: #2202# Spell checking corrections
+
+2006-06-01 13:59  alec
+
+	* locale/fr_CA/locale.xml, plugins/generic/thesis/schema.xml,
+	  registry/journalSettings.xml: #2201# XML files corrected.
+
+2006-06-01 11:57  alec
+
+	* pages/article/ArticleHandler.inc.php: #2200# Added inlining of
+	  inlineable galleys
+
+2006-06-01 09:59  alec
+
+	* templates/issue/header.tpl: #2198# Corrected missing $issue check
+
+2006-06-01 00:21  alec
+
+	* classes/manager/form/setup/JournalSetupStep1Form.inc.php,
+	  classes/site/ImportOJS1.inc.php,
+	  dbscripts/xml/upgrade/2.1.1_update.xml, locale/en_US/locale.xml,
+	  plugins/gateways/googleScholar/GoogleScholarPlugin.inc.php,
+	  plugins/gateways/resolver/ResolverPlugin.inc.php,
+	  plugins/generic/counter/CounterPlugin.inc.php,
+	  plugins/importexport/erudit/EruditExportDom.inc.php,
+	  plugins/importexport/pubmed/PubMedExportDom.inc.php,
+	  templates/manager/setup/step1.tpl: #2197# Added electronic ISSN
+
+2006-06-01 00:04  alec
+
+	* dbscripts/xml/: version.xml, data/email_templates.xml: #2131#
+	  Corrected version info and oddball description entry typo
+
+2006-05-31 23:56  alec
+
+	* plugins/generic/: counter/CounterPlugin.inc.php,
+	  webFeed/FeedPlugin.inc.php: #2192# Corrected generic plugin
+	  behavior for install
+
+2006-05-31 23:21  alec
+
+	* classes/submission/reviewer/ReviewerSubmissionDAO.inc.php,
+	  classes/submission/sectionEditor/SectionEditorSubmissionDAO.inc.php,
+	  plugins/gateways/resolver/ResolverPlugin.inc.php,
+	  plugins/gateways/resolver/locale/en_US/locale.xml,
+	  plugins/generic/counter/CounterPlugin.inc.php: #2090# Corrected
+	  editor decision sorting (code cleanliness, not function) #2151#
+	  Added export for constructible URL holding list
+
+2006-05-31 15:19  mj
+
+	* plugins/importexport/pubmed/: PubMedExportDom.inc.php,
+	  PubMedExportPlugin.inc.php, README, articles.tpl, index.php,
+	  index.tpl, issues.tpl, locale/en_US/locale.xml,
+	  locale/es_ES/locale.xml: - added pubmed XML export 1.0 plugin for
+	  inclusion in 2.1.1
+
+2006-05-31 15:17  alec
+
+	* locale/it_IT/locale.xml, pages/article/ArticleHandler.inc.php,
+	  plugins/generic/counter/CounterHandler.inc.php,
+	  plugins/generic/counter/CounterPlugin.inc.php,
+	  plugins/generic/counter/LogEntry.inc.php,
+	  plugins/generic/counter/LogEntryDAO.inc.php,
+	  plugins/generic/counter/README,
+	  plugins/generic/counter/browser.tpl,
+	  plugins/generic/counter/index.php,
+	  plugins/generic/counter/index.tpl,
+	  plugins/generic/counter/locale/en_US/locale.xml: #2125# Added
+	  COUNTER-compliant stats.
+
+2006-05-31 15:16  mj
+
+	* classes/article/PublishedArticleDAO.inc.php: - added function
+	  getPublishedArticleIdsByJournal (ordered by reverse
+	  chronological) to support pubmed export plugin (and any others)
+
+2006-05-31 15:13  mj
+
+	* plugins/generic/webFeed/: FeedPlugin.inc.php,
+	  templates/links.tpl, templates/images/atom10_logo.gif,
+	  templates/images/rss10_logo.gif: - included hook for
+	  $sidebarTemplate to show rss/atom feed icons on the sidebar
+
+2006-05-31 12:26  mj
+
+	* plugins/generic/webFeed/: FeedHandler.inc.php,
+	  FeedPlugin.inc.php, README, index.php, locale/en_US/locale.xml,
+	  locale/es_ES/locale.xml, templates/atom.tpl, templates/rss.tpl: -
+	  added webFeeds 1.0 plugin for inclusion in 2.1.1
+
+2006-05-30 17:32  alec
+
+	* templates/manager/sections/sectionForm.tpl: #2196# Corrected
+	  required fields
+
+2006-05-30 17:30  alec
+
+	* classes/journal/SectionDAO.inc.php,
+	  pages/editor/IssueManagementHandler.inc.php,
+	  pages/sectionEditor/SubmissionEditHandler.inc.php,
+	  templates/editor/issues/createIssue.tpl,
+	  templates/editor/issues/issueToc.tpl: #2195# Fixed.
+
+2006-05-30 16:37  alec
+
+	* dbscripts/xml/upgrade/2.1.1_update.xml,
+	  help/en_US/editorial/topic/000000.xml,
+	  help/en_US/editorial/topic/000007.xml,
+	  help/en_US/editorial/topic/000022.xml,
+	  help/en_US/editorial/topic/000023.xml,
+	  help/en_US/editorial/topic/000029.xml,
+	  help/en_US/intro/topic/000000.xml,
+	  help/en_US/publishing/topic/000001.xml,
+	  help/en_US/publishing/topic/000002.xml: #2187# Updated help.
+
+2006-05-30 12:30  alec
+
+	* classes/article/Article.inc.php,
+	  classes/issue/IssueAction.inc.php,
+	  classes/site/ImportOJS1.inc.php,
+	  classes/submission/author/AuthorSubmission.inc.php,
+	  classes/submission/editor/EditorAction.inc.php,
+	  classes/submission/editor/EditorSubmissionDAO.inc.php,
+	  classes/submission/layoutAssignment/LayoutAssignmentDAO.inc.php,
+	  classes/submission/proofAssignment/ProofAssignment.inc.php,
+	  classes/submission/proofAssignment/ProofAssignmentDAO.inc.php,
+	  classes/submission/proofreader/ProofreaderAction.inc.php,
+	  classes/submission/sectionEditor/SectionEditorAction.inc.php,
+	  classes/submission/sectionEditor/SectionEditorSubmission.inc.php,
+	  classes/submission/sectionEditor/SectionEditorSubmissionDAO.inc.php,
+	  dbscripts/xml/ojs_schema.xml,
+	  dbscripts/xml/upgrade/2.1.1_update.xml, locale/en_US/locale.xml,
+	  pages/author/SubmitHandler.inc.php,
+	  pages/editor/EditorHandler.inc.php,
+	  pages/editor/IssueManagementHandler.inc.php,
+	  pages/issue/IssueHandler.inc.php,
+	  pages/layoutEditor/SubmissionLayoutHandler.inc.php,
+	  pages/proofreader/SubmissionProofreadHandler.inc.php,
+	  pages/sectionEditor/SectionEditorHandler.inc.php,
+	  pages/sectionEditor/SubmissionEditHandler.inc.php,
+	  templates/author/active.tpl, templates/author/completed.tpl,
+	  templates/author/submission/status.tpl,
+	  templates/copyeditor/completed.tpl, templates/editor/index.tpl,
+	  templates/editor/navsidebar.tpl,
+	  templates/editor/submissionsArchives.tpl,
+	  templates/editor/issues/backIssues.tpl,
+	  templates/editor/issues/createIssue.tpl,
+	  templates/editor/issues/futureIssues.tpl,
+	  templates/editor/issues/issueData.tpl,
+	  templates/editor/issues/issueToc.tpl,
+	  templates/layoutEditor/completed.tpl,
+	  templates/layoutEditor/submission.tpl,
+	  templates/layoutEditor/submission/scheduling.tpl,
+	  templates/proofreader/completed.tpl,
+	  templates/proofreader/submission.tpl,
+	  templates/proofreader/submission/scheduling.tpl,
+	  templates/sectionEditor/submissionEditing.tpl,
+	  templates/sectionEditor/submissionsArchives.tpl,
+	  templates/sectionEditor/submission/proofread.tpl,
+	  templates/sectionEditor/submission/scheduling.tpl,
+	  templates/sectionEditor/submission/status.tpl,
+	  tools/importExport.php: #2187# Removed scheduling queue.
+
+2006-05-30 12:25  mj
+
+	* templates/common/header.tpl: - updated to use new
+	  display_template Smarty function when displaying the sidebar
+
+2006-05-30 12:23  mj
+
+	* classes/template/TemplateManager.inc.php: - new function
+	  smartyDisplayTemplate (exposed as display_template) - extended
+	  dispay() to take an optional, hookName - modified
+	  hookRegistry::call to return $output from display plugins - minor
+	  modification to header content-type sending (as appropriate)
+
+2006-05-29 13:56  alec
+
+	* docs/: COPYING_pt, FAQ_pt, INSTALL_pt, LICENSE_pt, README-CVS_pt,
+	  README_pt, REPORTING-BUGS_pt, UPGRADE_pt: #2168# Added Portuguese
+	  documents.
+
+2006-05-29 13:48  alec
+
+	* plugins/importexport/erudit/EruditExportDom.inc.php: #2193# Added
+	  missing language information
+
+2006-05-29 13:43  alec
+
+	* plugins/gateways/resolver/: README, ResolverPlugin.inc.php:
+	  #2151# Updated resolving methods to sane ones.
+
+2006-05-29 13:00  alec
+
+	* plugins/gateways/: googleScholar/README, resolver/README: #2151#
+	  Added plugin README document #2131# Added plugin README document
+
+2006-05-29 12:36  alec
+
+	* classes/issue/IssueDAO.inc.php,
+	  classes/issue/form/IssueForm.inc.php,
+	  plugins/gateways/resolver/ResolverPlugin.inc.php,
+	  plugins/gateways/resolver/index.php,
+	  plugins/gateways/resolver/locale/en_US/locale.xml: #2151# Added
+	  basic resolver plugin; #2131# Corrected comment.
+
+2006-05-27 07:43  alec
+
+	* plugins/generic/: thesis/ThesisPlugin.inc.php,
+	  tinymce/TinyMCEPlugin.inc.php: #2192# Corrected install check
+
+2006-05-27 07:37  alec
+
+	* plugins/generic/: thesis/ThesisPlugin.inc.php,
+	  tinymce/TinyMCEPlugin.inc.php: #2192# Added installed checks to
+	  plugins
+
+2006-05-26 17:17  alec
+
+	* classes/plugins/Plugin.inc.php: #2191# Added plugin locale file
+	  out-of-date check.
+
+2006-05-26 16:48  alec
+
+	* docs/FAQ: #2131# FAQ update
+
+2006-05-26 14:41  alec
+
+	* locale/en_US/locale.xml, templates/rt/context.tpl: #2162# Added
+	  RT suggest link
+
+2006-05-26 13:43  alec
+
+	* templates/article/article.tpl: #2190# Corrected incorrectly
+	  escaped URL
+
+2006-05-26 13:39  alec
+
+	* templates/rt/rt.tpl: #2162# Corrected bug when RT enabled but
+	  related items disabled
+
+2006-05-25 17:08  alec
+
+	* classes/submission/layoutEditor/LayoutEditorAction.inc.php,
+	  pages/layoutEditor/LayoutEditorHandler.inc.php,
+	  pages/layoutEditor/SubmissionLayoutHandler.inc.php,
+	  templates/layoutEditor/submission/layout.tpl: #2189# Allowing
+	  layout version uploads by layout editors
+
+2006-05-25 16:32  alec
+
+	* classes/rt/ojs/JournalRTAdmin.inc.php, rt/en_US/Agriculture.xml,
+	  rt/en_US/Art_Architecture.xml, rt/en_US/Astrophysics.xml,
+	  rt/en_US/Biology.xml, rt/en_US/Business.xml,
+	  rt/en_US/Chemistry.xml, rt/en_US/Cognitive_Science.xml,
+	  rt/en_US/Computer_Science.xml, rt/en_US/Economics.xml,
+	  rt/en_US/Education.xml, rt/en_US/Environment.xml,
+	  rt/en_US/General_Science.xml, rt/en_US/Generic.xml,
+	  rt/en_US/Humanities.xml, rt/en_US/Life_Sciences.xml,
+	  rt/en_US/Mathematics.xml, rt/en_US/Music.xml,
+	  rt/en_US/Physics.xml, rt/en_US/Social_Sciences.xml,
+	  rt/es_ES/Agriculture.xml, rt/es_ES/Art_Architecture.xml,
+	  rt/es_ES/Astrophysics.xml, rt/es_ES/Biology.xml,
+	  rt/es_ES/Business.xml, rt/es_ES/Chemistry.xml,
+	  rt/es_ES/Cognitive_Science.xml, rt/es_ES/Computer_Science.xml,
+	  rt/es_ES/Economics.xml, rt/es_ES/Education.xml,
+	  rt/es_ES/Environment.xml, rt/es_ES/General_Science.xml,
+	  rt/es_ES/Generic.xml, rt/es_ES/Humanities.xml,
+	  rt/es_ES/Life_Sciences.xml, rt/es_ES/Mathematics.xml,
+	  rt/es_ES/Music.xml, rt/es_ES/Physics.xml,
+	  rt/es_ES/Social_Sciences.xml, rt/pt_BR/Agriculture.xml,
+	  rt/pt_BR/Art_Architecture.xml, rt/pt_BR/Astrophysics.xml,
+	  rt/pt_BR/Biology.xml, rt/pt_BR/Business.xml,
+	  rt/pt_BR/Chemistry.xml, rt/pt_BR/Cognitive_Science.xml,
+	  rt/pt_BR/Computer_Science.xml, rt/pt_BR/Economics.xml,
+	  rt/pt_BR/Education.xml, rt/pt_BR/Environment.xml,
+	  rt/pt_BR/General_Science.xml, rt/pt_BR/Generic.xml,
+	  rt/pt_BR/Humanities.xml, rt/pt_BR/Life_Sciences.xml,
+	  rt/pt_BR/Mathematics.xml, rt/pt_BR/Music.xml,
+	  rt/pt_BR/Physics.xml, rt/pt_BR/Social_Sciences.xml: #2162# RT
+	  enhancements
+
+2006-05-25 13:58  alec
+
+	* dbscripts/xml/ojs_schema.xml: #2162# Removed obsolete rt_settings
+	  table; journal_settings used instead.
+
+2006-05-25 13:54  alec
+
+	* locale/en_US/locale.xml, pages/rt/RTHandler.inc.php,
+	  styles/rt.css, templates/rt/bio.tpl,
+	  templates/rt/captureCite.tpl, templates/rt/citeProCite.tpl,
+	  templates/rt/context.tpl, templates/rt/email.tpl,
+	  templates/rt/metadata.tpl, templates/rt/rt.tpl,
+	  templates/rt/sent.tpl, templates/rt/suppFileView.tpl,
+	  templates/rt/suppFiles.tpl: #2162# Comment #5 implemented.
+
+2006-05-25 12:45  alec
+
+	* classes/install/Upgrade.inc.php,
+	  classes/journal/JournalDAO.inc.php, classes/rt/RT.inc.php,
+	  classes/rt/ojs/RTDAO.inc.php, dbscripts/xml/upgrade.xml,
+	  locale/en_US/locale.xml, pages/article/ArticleHandler.inc.php,
+	  pages/rt/RTHandler.inc.php, pages/rtadmin/RTAdminHandler.inc.php,
+	  pages/rtadmin/RTSetupHandler.inc.php,
+	  pages/rtadmin/RTVersionHandler.inc.php,
+	  registry/journalSettings.xml, templates/rt/rt.tpl,
+	  templates/rtadmin/index.tpl, templates/rtadmin/settings.tpl:
+	  #2162# Comment 2 implemented.
+
+2006-05-25 09:40  alec
+
+	* dbscripts/xml/upgrade.xml: Corrected accidental commit.
+
+2006-05-24 17:06  alec
+
+	* classes/file/ArticleFileManager.inc.php,
+	  classes/file/FileManager.inc.php,
+	  classes/file/JournalFileManager.inc.php,
+	  classes/manager/form/setup/JournalSetupStep4Form.inc.php,
+	  dbscripts/xml/upgrade.xml, locale/en_US/locale.xml,
+	  pages/layoutEditor/LayoutEditorHandler.inc.php,
+	  pages/layoutEditor/SubmissionLayoutHandler.inc.php,
+	  pages/manager/ManagerHandler.inc.php,
+	  pages/manager/SetupHandler.inc.php,
+	  templates/layoutEditor/submission/layout.tpl,
+	  templates/manager/setup/step4.tpl: #2185# Added layout templates.
+
+2006-05-24 14:26  alec
+
+	* classes/submission/reviewAssignment/ReviewAssignmentDAO.inc.php,
+	  locale/en_US/locale.xml, locale/es_ES/locale.xml,
+	  locale/fr_CA/locale.xml, locale/it_IT/locale.xml,
+	  locale/pt_BR/locale.xml, locale/ru_RU/locale.xml,
+	  pages/sectionEditor/SubmissionEditHandler.inc.php,
+	  templates/sectionEditor/selectReviewer.tpl: #2134# Changed "Done"
+	  from number of review ratings completed to number of reviews
+	  completed
+
+2006-05-23 16:22  alec
+
+	* classes/article/log/ArticleEmailLogEntry.inc.php,
+	  classes/submission/sectionEditor/SectionEditorAction.inc.php,
+	  dbscripts/xml/data/email_templates.xml,
+	  dbscripts/xml/data/locale/en_US/email_templates_data.xml,
+	  dbscripts/xml/upgrade/2.1.1_update.xml,
+	  pages/sectionEditor/SectionEditorHandler.inc.php,
+	  pages/sectionEditor/SubmissionEditHandler.inc.php,
+	  templates/sectionEditor/submission/peerReview.tpl: #2182# Added
+	  REVIEW_CONFIRM_ACK email.
+
+2006-05-23 15:28  alec
+
+	* classes/: mail/ArticleMailTemplate.inc.php,
+	  submission/author/AuthorAction.inc.php,
+	  submission/copyeditor/CopyeditorAction.inc.php,
+	  submission/editAssignment/EditAssignmentDAO.inc.php,
+	  submission/layoutEditor/LayoutEditorAction.inc.php,
+	  submission/proofreader/ProofreaderAction.inc.php,
+	  submission/reviewer/ReviewerAction.inc.php,
+	  submission/sectionEditor/SectionEditorSubmission.inc.php: #2143#
+	  Changed email handling for assigned editors.
+
+2006-05-23 11:41  alec
+
+	* pages/editor/IssueManagementHandler.inc.php,
+	  plugins/generic/tinymce/TinyMCEPlugin.inc.php,
+	  templates/editor/notifyUsersEmail.tpl: #2164# Removed HTML
+	  message; #2184# Added "notify users" template to TinyMCE
+	  exclusion list
+
+2006-05-19 14:27  alec
+
+	* help/pt_BR/: editorial/toc/000000.xml, editorial/toc/000001.xml,
+	  editorial/toc/000002.xml, editorial/toc/000003.xml,
+	  editorial/toc/000004.xml, editorial/toc/000005.xml,
+	  editorial/toc/000006.xml, editorial/toc/000007.xml,
+	  editorial/toc/000008.xml, editorial/toc/000009.xml,
+	  editorial/toc/000010.xml, editorial/toc/000011.xml,
+	  editorial/toc/000012.xml, editorial/toc/000013.xml,
+	  editorial/toc/000014.xml, editorial/topic/000000.xml,
+	  editorial/topic/000001.xml, editorial/topic/000002.xml,
+	  editorial/topic/000003.xml, editorial/topic/000004.xml,
+	  editorial/topic/000005.xml, editorial/topic/000006.xml,
+	  editorial/topic/000007.xml, editorial/topic/000008.xml,
+	  editorial/topic/000009.xml, editorial/topic/000010.xml,
+	  editorial/topic/000011.xml, editorial/topic/000012.xml,
+	  editorial/topic/000013.xml, editorial/topic/000014.xml,
+	  editorial/topic/000015.xml, editorial/topic/000016.xml,
+	  editorial/topic/000017.xml, editorial/topic/000018.xml,
+	  editorial/topic/000019.xml, editorial/topic/000020.xml,
+	  editorial/topic/000021.xml, editorial/topic/000022.xml,
+	  editorial/topic/000023.xml, editorial/topic/000024.xml,
+	  editorial/topic/000025.xml, editorial/topic/000026.xml,
+	  editorial/topic/000027.xml, editorial/topic/000028.xml,
+	  editorial/topic/000029.xml, editorial/topic/000030.xml,
+	  editorial/topic/000031.xml, editorial/topic/000032.xml,
+	  editorial/topic/000033.xml, editorial/topic/000034.xml,
+	  editorial/topic/000035.xml, editorial/topic/000036.xml,
+	  editorial/topic/000037.xml, editorial/topic/000038.xml,
+	  editorial/topic/000039.xml, editorial/topic/000040.xml,
+	  editorial/topic/000041.xml, editorial/topic/000042.xml,
+	  editorial/topic/000043.xml, index/toc/000000.xml,
+	  index/topic/000000.xml, intro/toc/000000.xml,
+	  intro/topic/000000.xml, intro/topic/000001.xml,
+	  journal/toc/000000.xml, journal/toc/000001.xml,
+	  journal/toc/000002.xml, journal/toc/000003.xml,
+	  journal/toc/000005.xml, journal/topic/000000.xml,
+	  journal/topic/000001.xml, journal/topic/000002.xml,
+	  journal/topic/000003.xml, journal/topic/000004.xml,
+	  journal/topic/000005.xml, journal/topic/000006.xml,
+	  journal/topic/000007.xml, journal/topic/000008.xml,
+	  journal/topic/000009.xml, journal/topic/000010.xml,
+	  journal/topic/000011.xml, journal/topic/000012.xml,
+	  journal/topic/000013.xml, journal/topic/000014.xml,
+	  journal/topic/000015.xml, journal/topic/000016.xml,
+	  journal/topic/000017.xml, journal/topic/000018.xml,
+	  journal/topic/000019.xml, journal/topic/000020.xml,
+	  journal/topic/000021.xml, journal/topic/000022.xml,
+	  journal/topic/000023.xml, journal/topic/000025.xml,
+	  journal/topic/000026.xml, journal/topic/000027.xml,
+	  journal/topic/000028.xml, publishing/toc/000000.xml,
+	  publishing/topic/000000.xml, publishing/topic/000001.xml,
+	  publishing/topic/000002.xml, publishing/topic/000003.xml,
+	  publishing/topic/000004.xml, site/toc/000000.xml,
+	  site/topic/000000.xml, site/topic/000001.xml,
+	  site/topic/000002.xml, site/topic/000003.xml,
+	  submission/toc/000000.xml, submission/topic/000000.xml,
+	  submission/topic/000001.xml, submission/topic/000002.xml,
+	  submission/topic/000003.xml, submission/topic/000004.xml,
+	  user/toc/000000.xml, user/topic/000000.xml,
+	  user/topic/000001.xml, user/topic/000002.xml,
+	  user/topic/000003.xml, user/topic/000004.xml,
+	  user/topic/000005.xml, user/topic/000006.xml,
+	  user/topic/000007.xml: #2168# Added pt_BR help files
+
+2006-05-19 13:41  alec
+
+	* classes/article/AuthorDAO.inc.php,
+	  classes/search/ArticleSearchDAO.inc.php,
+	  classes/search/ArticleSearchIndex.inc.php,
+	  pages/search/SearchHandler.inc.php: #2188# Limited author index
+	  to specific journal
+
+2006-05-17 11:53  alec
+
+	* classes/submission/proofreader/ProofreaderAction.inc.php: #2186#
+	  Added missing variable fetch
+
+2006-05-16 13:10  alec
+
+	* help/help.xml, help/en_US/editorial/toc/000001.xml,
+	  help/en_US/editorial/topic/000024.xml,
+	  help/en_US/editorial/topic/000044.xml, locale/en_US/locale.xml,
+	  templates/author/submit/step3.tpl,
+	  templates/author/submit/step4.tpl,
+	  templates/reviewer/submission.tpl,
+	  templates/sectionEditor/submission/peerReview.tpl: #2154# Added
+	  "Ensuring a Blind Peer Review" texts
+
+2006-05-16 11:32  alec
+
+	* locale/en_US/locale.xml,
+	  templates/sectionEditor/submission/peerReview.tpl: #2182#
+	  Terminology changes; reviewer ratings allowed earlier
+
+2006-05-16 11:03  alec
+
+	* help/en_US/intro/topic/000001.xml,
+	  help/en_US/journal/toc/000001.xml,
+	  help/en_US/journal/topic/000029.xml,
+	  help/en_US/journal/topic/000033.xml,
+	  help/fr_CA/intro/topic/000001.xml, locale/en_US/locale.xml,
+	  locale/es_ES/locale.xml, locale/fr_CA/locale.xml,
+	  locale/it_IT/locale.xml, locale/pt_BR/locale.xml: #2174# Changed
+	  Masthead to Editorial Team
+
+2006-05-16 10:10  alec
+
+	* plugins/generic/tinymce/: README, TinyMCEPlugin.inc.php,
+	  index.php, locale/en_US/locale.xml, locale/es_ES/locale.xml,
+	  locale/fr_CA/locale.xml, locale/it_IT/locale.xml,
+	  locale/pt_BR/locale.xml, locale/ru_RU/locale.xml: #2184# Added
+	  TinyMCE plugin support
+
+2006-05-16 09:42  alec
+
+	* locale/en_US/locale.xml, templates/about/editorialTeamBio.tpl,
+	  templates/author/submit/step2.tpl: #2172# Added note and URL to
+	  editorial team pop-up
+
+2006-05-16 09:38  alec
+
+	* classes/article/Author.inc.php,
+	  classes/article/AuthorDAO.inc.php,
+	  classes/author/form/submit/AuthorSubmitStep1Form.inc.php,
+	  classes/author/form/submit/AuthorSubmitStep2Form.inc.php,
+	  classes/install/Upgrade.inc.php,
+	  classes/manager/form/UserManagementForm.inc.php,
+	  classes/sectionEditor/form/CreateReviewerForm.inc.php,
+	  classes/submission/author/AuthorAction.inc.php,
+	  classes/submission/form/MetadataForm.inc.php,
+	  classes/user/User.inc.php, classes/user/UserDAO.inc.php,
+	  classes/user/form/ProfileForm.inc.php,
+	  classes/user/form/RegistrationForm.inc.php,
+	  dbscripts/xml/ojs_schema.xml, locale/en_US/locale.xml,
+	  plugins/importexport/users/UserExportDom.inc.php,
+	  plugins/importexport/users/UserImportExportPlugin.inc.php,
+	  plugins/importexport/users/UserXMLParser.inc.php,
+	  plugins/importexport/users/importUsersConfirm.tpl,
+	  plugins/importexport/users/users.dtd,
+	  templates/author/submit/step2.tpl,
+	  templates/manager/people/userProfile.tpl,
+	  templates/manager/people/userProfileForm.tpl,
+	  templates/rt/bio.tpl,
+	  templates/sectionEditor/createReviewerForm.tpl,
+	  templates/sectionEditor/userProfile.tpl,
+	  templates/sectionEditor/submission/metadata.tpl,
+	  templates/submission/metadata/metadataEdit.tpl,
+	  templates/submission/metadata/metadataView.tpl,
+	  templates/user/profile.tpl, templates/user/register.tpl: #2172#
+	  Added URL to user accounts and authors #2144# Added
+	  no-submission-file check
+
+2006-05-15 13:41  alec
+
+	* plugins/generic/thesis/ThesisPlugin.inc.php: #2178# Corrected
+	  capitalization problem
+
+2006-05-15 13:41  michaelf
+
+	* dbscripts/xml/upgrade/2.1.1_update.xml: #1739# Support for open
+	  access and subscription expiry email reminders
+
+2006-05-15 13:24  alec
+
+	* classes/journal/Journal.inc.php,
+	  classes/journal/JournalStatisticsDAO.inc.php,
+	  help/it_IT/journal/topic/000008.xml,
+	  help/it_IT/journal/topic/000015.xml, locale/en_US/locale.xml,
+	  pages/about/AboutHandler.inc.php,
+	  pages/manager/ManagerHandler.inc.php,
+	  pages/manager/StatisticsHandler.inc.php,
+	  templates/about/index.tpl, templates/about/statistics.tpl,
+	  templates/manager/plugins/plugins.tpl,
+	  templates/manager/statistics/reportGenerator.tpl,
+	  templates/manager/statistics/statistics.tpl: #977# Stats updates
+
+2006-05-14 09:41  michaelf
+
+	* templates/common/header.tpl: #2178# Initial implementation of
+	  Thesis Abstracts plugin
+
+2006-05-13 23:06  michaelf
+
+	* classes/plugins/GenericPlugin.inc.php: #2183# installData get/set
+	  plugin setting error
+
+2006-05-13 22:44  michaelf
+
+	* plugins/generic/thesis/: SettingsForm.inc.php,
+	  StudentThesisForm.inc.php, Thesis.inc.php, ThesisDAO.inc.php,
+	  ThesisForm.inc.php, ThesisHandler.inc.php, ThesisPlugin.inc.php,
+	  data.xml, index.php, index.tpl, schema.xml, settingsForm.tpl,
+	  studentThesisForm.tpl, theses.tpl, thesisForm.tpl, view.tpl,
+	  locale/en_US/locale.xml: #2178# Initial implementation of Thesis
+	  Abstracts plugin
+
+2006-05-12 10:50  alec
+
+	* plugins/importexport/erudit/EruditExportDom.inc.php: #2180#
+	  Corrected Erudit export embedding of HTML
+
+2006-05-12 10:40  alec
+
+	* classes/oai/ojs/OAIDAO.inc.php: #2179# Stripping tags from OAI
+	  data.
+
+2006-05-10 10:48  alec
+
+	* templates/editor/selectSectionEditor.tpl: #2173# Added missing
+	  articleId propagation on paging
+
+2006-05-09 15:42  alec
+
+	* tools/preCompile.php: #2080# Corrected precompile problems
+
+2006-05-09 13:28  alec
+
+	* locale/pt_BR/locale.xml: #2010# Locale string fix
+
+2006-05-09 13:27  alec
+
+	* classes/submission/reviewer/ReviewerAction.inc.php,
+	  locale/en_US/locale.xml, locale/es_ES/locale.xml,
+	  locale/fr_CA/locale.xml, locale/it_IT/locale.xml,
+	  locale/pt_BR/locale.xml, locale/ru_RU/locale.xml,
+	  locale/te_ST/locale.xml, styles/rt.css, templates/rt/rt.tpl:
+	  #2162# Reading Tools refinements
+
+2006-05-09 11:34  alec
+
+	* locale/en_US/locale.xml: #2158# Changed wording
+
+2006-05-09 11:33  alec
+
+	* locale/en_US/locale.xml: #2157# Changed wording
+
+2006-05-09 11:09  alec
+
+	* classes/config/ConfigParser.inc.php, docs/FAQ, docs/README-DEV,
+	  locale/en_US/locale.xml, pages/about/AboutHandler.inc.php,
+	  templates/about/aboutThisPublishingSystem.tpl,
+	  tools/localeCheck.php: #2166# Added version to about page #2131#
+	  Various docs updated
+
+2006-05-08 13:07  alec
+
+	* templates/admin/systemConfig.tpl: #2010# Removed localization of
+	  config booleans
+
+2006-05-08 12:58  alec
+
+	* classes/config/ConfigParser.inc.php: #2010# Not using English
+	  constants for config "on" and "off".
+
+2006-05-05 08:35  alec
+
+	* templates/admin/systemConfigUpdated.tpl: #2169# Corrected
+	  template typo
+
+2006-05-03 10:17  alec
+
+	* registry/locale/: it_IT/countries.xml, ru_RU/countries.xml:
+	  #2168# Added missing country lists
+
+2006-05-03 09:48  alec
+
+	* locale/fr_CA/locale.xml,
+	  plugins/auth/ldap/LDAPAuthPlugin.inc.php,
+	  plugins/auth/ldap/locale/fr_CA/locale.xml,
+	  plugins/gateways/googleScholar/locale/it_IT/locale.xml,
+	  tools/localeCheck.php: #2168# Added Russian locale #2159#
+	  Corrected plugin locale data fetching
+
+2006-05-02 16:58  alec
+
+	* dbscripts/xml/data/locale/ru_RU/email_templates_data.xml,
+	  locale/ru_RU/locale.xml,
+	  plugins/auth/ldap/locale/ru_RU/locale.xml,
+	  plugins/gateways/googleScholar/locale/ru_RU/locale.xml,
+	  plugins/importexport/erudit/locale/ru_RU/locale.xml,
+	  plugins/importexport/native/locale/ru_RU/locale.xml,
+	  plugins/importexport/sample/locale/ru_RU/locale.xml,
+	  plugins/importexport/users/locale/ru_RU/locale.xml,
+	  registry/locales.xml: #2167# Add Russian locale
+
+2006-05-02 16:39  michaelf
+
+	* classes/announcement/Announcement.inc.php,
+	  classes/announcement/AnnouncementDAO.inc.php,
+	  classes/announcement/AnnouncementType.inc.php,
+	  classes/announcement/AnnouncementTypeDAO.inc.php,
+	  classes/manager/form/AnnouncementForm.inc.php,
+	  classes/manager/form/AnnouncementTypeForm.inc.php,
+	  classes/db/DAORegistry.inc.php,
+	  classes/manager/form/setup/JournalSetupStep4Form.inc.php,
+	  classes/template/TemplateManager.inc.php,
+	  dbscripts/xml/ojs_schema.xml, help/help.xml,
+	  help/en_US/journal/toc/000001.xml,
+	  help/en_US/journal/topic/000034.xml, locale/en_US/locale.xml,
+	  pages/announcement/AnnouncementHandler.inc.php,
+	  pages/announcement/index.php, pages/index/IndexHandler.inc.php,
+	  pages/manager/AnnouncementHandler.inc.php,
+	  pages/manager/ManagerHandler.inc.php,
+	  templates/announcement/index.tpl,
+	  templates/announcement/list.tpl, templates/announcement/view.tpl,
+	  templates/common/header.tpl, templates/index/journal.tpl,
+	  templates/manager/index.tpl,
+	  templates/manager/announcement/announcementForm.tpl,
+	  templates/manager/announcement/announcementTypeForm.tpl,
+	  templates/manager/announcement/announcementTypes.tpl,
+	  templates/manager/announcement/announcements.tpl,
+	  templates/manager/setup/step4.tpl: #1633# Support for
+	  announcements
+
+2006-05-02 16:17  alec
+
+	* locale/it_IT/locale.xml: #2141# Updated it_IT locale
+
+2006-05-02 15:56  alec
+
+	* classes/mail/MailTemplate.inc.php: #2165# Corrected missing
+	  variable store
+
+2006-05-01 11:55  alec
+
+	* locale/es_ES/locale.xml, tools/localeCheck.php: #2159# Finished
+	  locale checker.
+
+2006-04-30 14:06  alec
+
+	* pages/manager/PeopleHandler.inc.php,
+	  templates/manager/people/enrollment.tpl: #2161# Corrected
+	  alphalist and paging
+
+2006-04-28 17:36  alec
+
+	* locale/fr_CA/locale.xml,
+	  plugins/gateways/googleScholar/locale/fr_CA/locale.xml,
+	  plugins/gateways/googleScholar/locale/it_IT/locale.xml,
+	  plugins/importexport/erudit/locale/fr_CA/locale.xml,
+	  plugins/importexport/native/locale/fr_CA/locale.xml,
+	  plugins/importexport/sample/locale/fr_CA/locale.xml,
+	  plugins/importexport/sample/locale/pt_BR/locale.xml,
+	  plugins/importexport/users/locale/fr_CA/locale.xml,
+	  tools/localeCheck.php: #2159# Added locale checker #2131# Locale
+	  placeholders
+
+2006-04-28 16:33  alec
+
+	* classes/rt/ojs/RTDAO.inc.php,
+	  dbscripts/xml/data/locale/fr_CA/email_templates_data.xml,
+	  locale/fr_CA/locale.xml, templates/rt/context.tpl,
+	  templates/rtadmin/index.tpl: #2133# French locale updates; #2131#
+	  Comment updates etc
+
+2006-04-27 13:17  alec
+
+	* dbscripts/xml/upgrade/2.1.1_update.xml: #2114# Unstick articles
+	  that got stuck.
+
+2006-04-25 15:39  alec
+
+	* help/fr_CA/editorial/toc/: 000000.xml, 000001.xml, 000002.xml,
+	  000003.xml, 000004.xml, 000005.xml, 000006.xml, 000007.xml,
+	  000008.xml, 000009.xml, 000010.xml, 000011.xml, 000012.xml,
+	  000013.xml, 000014.xml: #2133# Added French help
+
+2006-04-25 15:38  alec
+
+	* help/fr_CA/: editorial/topic/000007.xml,
+	  editorial/topic/000017.xml, editorial/topic/000027.xml,
+	  index/toc/000000.xml, index/topic/000000.xml,
+	  intro/toc/000000.xml, intro/topic/000000.xml,
+	  intro/topic/000001.xml, journal/toc/000000.xml,
+	  journal/toc/000001.xml, journal/toc/000002.xml,
+	  journal/toc/000003.xml, journal/toc/000005.xml,
+	  journal/topic/000000.xml, journal/topic/000001.xml,
+	  journal/topic/000002.xml, journal/topic/000003.xml,
+	  journal/topic/000004.xml, journal/topic/000005.xml,
+	  journal/topic/000006.xml, journal/topic/000007.xml,
+	  journal/topic/000008.xml, journal/topic/000009.xml,
+	  journal/topic/000010.xml, journal/topic/000011.xml,
+	  journal/topic/000012.xml, journal/topic/000013.xml,
+	  journal/topic/000014.xml, journal/topic/000015.xml,
+	  journal/topic/000016.xml, journal/topic/000017.xml,
+	  journal/topic/000018.xml, journal/topic/000019.xml,
+	  journal/topic/000020.xml, journal/topic/000021.xml,
+	  journal/topic/000022.xml, journal/topic/000023.xml,
+	  journal/topic/000025.xml, journal/topic/000026.xml,
+	  journal/topic/000027.xml, journal/topic/000028.xml,
+	  journal/topic/000029.xml, journal/topic/000030.xml,
+	  journal/topic/000031.xml, journal/topic/000032.xml,
+	  journal/topic/000033.xml, publishing/toc/000000.xml,
+	  publishing/topic/000000.xml, publishing/topic/000001.xml,
+	  publishing/topic/000002.xml, publishing/topic/000003.xml,
+	  publishing/topic/000004.xml, site/toc/000000.xml,
+	  site/topic/000000.xml, site/topic/000001.xml,
+	  site/topic/000002.xml, site/topic/000003.xml,
+	  submission/toc/000000.xml, submission/topic/000000.xml,
+	  submission/topic/000001.xml, submission/topic/000002.xml,
+	  submission/topic/000003.xml, submission/topic/000004.xml,
+	  user/toc/000000.xml, user/topic/000000.xml,
+	  user/topic/000001.xml, user/topic/000002.xml,
+	  user/topic/000003.xml, user/topic/000004.xml,
+	  user/topic/000005.xml, user/topic/000006.xml,
+	  user/topic/000007.xml: #2133# Added French help files.
+
+2006-04-25 15:26  alec
+
+	* templates/help/view.tpl: #2156# Corrected URL
+
+2006-04-25 15:17  michaelf
+
+	* classes/manager/form/setup/JournalSetupStep2Form.inc.php,
+	  classes/manager/form/setup/JournalSetupStep4Form.inc.php,
+	  classes/tasks/SubscriptionExpiryReminder.inc.php,
+	  pages/editor/IssueManagementHandler.inc.php,
+	  templates/about/editorialPolicies.tpl, templates/about/index.tpl,
+	  templates/manager/index.tpl, templates/manager/setup/step2.tpl,
+	  templates/manager/setup/step4.tpl: #1739# Combine open access and
+	  subscription settings in Setup
+
+2006-04-20 16:47  alec
+
+	* pages/rtadmin/RTContextHandler.inc.php: #2153# Corrected bad
+	  redirect
+
+2006-04-20 12:58  alec
+
+	* docs/dev/TechnicalReference.odt,
+	  pages/rtadmin/RTAdminHandler.inc.php,
+	  pages/rtadmin/RTVersionHandler.inc.php, pages/rtadmin/index.php:
+	  #2152# Added credential checks on RT admin main page and
+	  importVersion; #2131# Comment and admin document updates
+
+2006-04-18 14:57  michaelf
+
+	* pages/editor/IssueManagementHandler.inc.php: Minor formatting
+	  fix: tabs in place of spaces
+
+2006-04-18 14:53  michaelf
+
+	* classes/tasks/SubscriptionExpiryReminder.inc.php: Assign by
+	  reference fixes
+
+2006-04-18 14:51  michaelf
+
+	* classes/issue/form/IssueForm.inc.php: Default access status not
+	  set when new issue created
+
+2006-04-18 14:46  michaelf
+
+	* classes/subscription/form/SubscriptionPolicyForm.inc.php,
+	  classes/tasks/OpenAccessNotification.inc.php,
+	  classes/user/form/ProfileForm.inc.php,
+	  classes/user/form/RegistrationForm.inc.php,
+	  dbscripts/xml/data/email_templates.xml,
+	  dbscripts/xml/data/locale/en_US/email_templates_data.xml,
+	  locale/en_US/locale.xml, registry/scheduledTasks.xml,
+	  templates/subscription/openAccessNotifyEmail.tpl,
+	  templates/subscription/subscriptionPolicyForm.tpl,
+	  templates/user/profile.tpl, templates/user/register.tpl: #1739#
+	  Support for issue open access automated email notifications
+
+2006-04-18 14:40  michaelf
+
+	* classes/db/DAORegistry.inc.php, classes/user/User.inc.php,
+	  classes/user/UserSettingsDAO.inc.php,
+	  dbscripts/xml/ojs_schema.xml: #2149# Support for user settings
+
+2006-04-18 12:44  alec
+
+	* pages/manager/SubscriptionHandler.inc.php,
+	  pages/subscriptionManager/SubscriptionManagerHandler.inc.php,
+	  templates/subscription/users.tpl: #2150# Corrected paging
+	  problems with user selections & initials
+
+2006-04-15 11:35  michaelf
+
+	* classes/tasks/SubscriptionExpiryReminder.inc.php,
+	  dbscripts/xml/data/email_templates.xml,
+	  dbscripts/xml/data/locale/en_US/email_templates_data.xml:
+	  Subscription expiry reminder email keys too long for db
+
+2006-04-14 15:15  alec
+
+	* classes/author/form/submit/AuthorSubmitStep5Form.inc.php,
+	  classes/install/Upgrade.inc.php,
+	  classes/submission/author/AuthorAction.inc.php,
+	  classes/submission/author/AuthorSubmissionDAO.inc.php,
+	  classes/submission/editor/EditorAction.inc.php,
+	  classes/submission/sectionEditor/SectionEditorAction.inc.php,
+	  classes/submission/sectionEditor/SectionEditorSubmissionDAO.inc.php,
+	  dbscripts/xml/upgrade.xml,
+	  dbscripts/xml/upgrade/2.0.2_preupdate.xml,
+	  dbscripts/xml/upgrade/2.0.2_update.xml,
+	  dbscripts/xml/upgrade/2.1.0_update.xml,
+	  dbscripts/xml/upgrade/2.1.1_update.xml,
+	  docs/dev/TechnicalReference.odt,
+	  pages/sectionEditor/SectionEditorHandler.inc.php,
+	  pages/sectionEditor/SubmissionEditHandler.inc.php,
+	  templates/sectionEditor/submissionReview.tpl,
+	  templates/sectionEditor/submission/peerReview.tpl: #2144# Added
+	  automatic designation of review version.  #2131# Numerous typos
+
+2006-04-14 13:55  alec
+
+	* templates/sectionEditor/submission/proofread.tpl: #2148#
+	  Corrected wrong display date
+
+2006-04-14 13:17  alec
+
+	* pages/user/EmailHandler.inc.php,
+	  templates/author/submission/management.tpl,
+	  templates/author/submission/metadata.tpl,
+	  templates/author/submission/summary.tpl,
+	  templates/copyeditor/submission/summary.tpl,
+	  templates/layoutEditor/submission/summary.tpl,
+	  templates/proofreader/submission/summary.tpl,
+	  templates/reviewer/submission.tpl,
+	  templates/sectionEditor/submissionEmailLogEntry.tpl,
+	  templates/sectionEditor/submissionEventLog.tpl,
+	  templates/sectionEditor/submissionEventLogEntry.tpl,
+	  templates/sectionEditor/submissionHistory.tpl,
+	  templates/sectionEditor/submission/editors.tpl,
+	  templates/sectionEditor/submission/management.tpl,
+	  templates/sectionEditor/submission/metadata.tpl,
+	  templates/sectionEditor/submission/summary.tpl,
+	  templates/submission/metadata/metadataView.tpl: #2136# Article
+	  email log now gets emails from article-specific arbitrary email
+	  links from all roles related to the article.	Modified Files:
+	  pages/user/EmailHandler.inc.php
+	  templates/author/submission/management.tpl
+	  templates/author/submission/metadata.tpl
+	  templates/author/submission/summary.tpl
+	  templates/copyeditor/submission/summary.tpl
+	  templates/email/email.tpl
+	  templates/layoutEditor/submission/summary.tpl
+	  templates/proofreader/submission/summary.tpl
+	  templates/reviewer/submission.tpl
+	  templates/sectionEditor/submissionEmailLogEntry.tpl
+	  templates/sectionEditor/submissionEventLog.tpl
+	  templates/sectionEditor/submissionEventLogEntry.tpl
+	  templates/sectionEditor/submissionHistory.tpl
+	  templates/sectionEditor/submission/editors.tpl
+	  templates/sectionEditor/submission/management.tpl
+	  templates/sectionEditor/submission/metadata.tpl
+	  templates/sectionEditor/submission/summary.tpl
+	  templates/submission/metadata/metadataView.tpl
+
+2006-04-14 11:52  alec
+
+	* locale/en_US/locale.xml, locale/es_ES/locale.xml,
+	  locale/fr_CA/locale.xml, locale/it_IT/locale.xml,
+	  locale/pt_BR/locale.xml, locale/te_ST/locale.xml,
+	  pages/sectionEditor/SubmissionEditHandler.inc.php,
+	  templates/author/submission/copyedit.tpl,
+	  templates/author/submission/layout.tpl,
+	  templates/author/submission/proofread.tpl,
+	  templates/copyeditor/submission/copyedit.tpl,
+	  templates/copyeditor/submission/layout.tpl,
+	  templates/editor/submissionsInReview.tpl,
+	  templates/layoutEditor/submission/layout.tpl,
+	  templates/layoutEditor/submission/proofread.tpl,
+	  templates/proofreader/submission/layout.tpl,
+	  templates/proofreader/submission/proofread.tpl,
+	  templates/sectionEditor/submission/copyedit.tpl,
+	  templates/sectionEditor/submission/editors.tpl,
+	  templates/sectionEditor/submission/layout.tpl,
+	  templates/sectionEditor/submission/management.tpl,
+	  templates/sectionEditor/submission/metadata.tpl,
+	  templates/sectionEditor/submission/peerReview.tpl,
+	  templates/sectionEditor/submission/proofread.tpl,
+	  templates/sectionEditor/submission/status.tpl: #2144# Various UI
+	  changes
+
+2006-04-14 10:23  alec
+
+	* classes/template/TemplateManager.inc.php,
+	  locale/en_US/locale.xml, pages/editor/EditorHandler.inc.php,
+	  templates/editor/selectSectionEditor.tpl: #2147# Corrected
+	  mislabeling of editor assign
+
+2006-04-13 16:39  alec
+
+	* classes/submission/editor/EditorAction.inc.php: #2142# Fixed "add
+	  self" email sending
+
+2006-04-13 16:08  alec
+
+	* classes/submission/: common/Action.inc.php,
+	  form/MetadataForm.inc.php: #2146# Added checks to metadata from
+
+2006-04-13 14:09  alec
+
+	* templates/issue/header.tpl: #2078# Removed overly paranoid
+	  escaping -- editor should be able to use HTML
+
+2006-04-13 14:05  alec
+
+	* styles/common.css, templates/issue/current.tpl,
+	  templates/issue/header.tpl, templates/issue/viewPage.tpl: #2078#
+	  Added issue title as subheading when not primary ID.
+
+2006-04-13 13:31  alec
+
+	* classes/article/PublishedArticleDAO.inc.php,
+	  classes/submission/sectionEditor/SectionEditorAction.inc.php,
+	  templates/sectionEditor/submission.tpl: #2114# Corrected
+	  restoration of archived articles to scheduling queue/published
+	  list #2145# Corrected display of archived articles in published
+	  issues #2131# Corrected HTML typo
+
+2006-04-13 13:03  alec
+
+	* dbscripts/xml/data/locale/fr_CA/email_templates_data.xml: #2133#
+	  Initial commit of French translation of email templates
+
+2006-04-13 11:46  alec
+
+	* classes/admin/form/ImportOJS1Form.inc.php,
+	  classes/site/ImportOJS1.inc.php, locale/en_US/locale.xml,
+	  pages/admin/AdminJournalHandler.inc.php,
+	  templates/admin/importConflicts.tpl: #2115# Generating conflict
+	  list at end of migration.
+
+2006-04-12 16:33  alec
+
+	* templates/submission/comment/editorDecisionEmail.tpl: #2140#
+	  Removed link in inappropriate Author case
+
+2006-04-12 16:22  alec
+
+	* classes/mail/ArticleMailTemplate.inc.php,
+	  locale/fr_CA/locale.xml: #2137# Corrected enable_attachments
+	  handling
+
+2006-04-12 15:16  alec
+
+	* registry/: locales.xml, locale/fr_CA/countries.xml: #2133# Added
+	  French countries list and locale entry
+
+2006-04-12 14:55  alec
+
+	* dbscripts/xml/data/locale/it_IT/email_templates_data.xml: #2141#
+	  Added email template data for Italian translation
+
+2006-04-12 14:53  alec
+
+	* docs/dev/TechnicalReference.odt,
+	  help/it_IT/editorial/toc/000000.xml,
+	  help/it_IT/editorial/toc/000001.xml,
+	  help/it_IT/editorial/toc/000002.xml,
+	  help/it_IT/editorial/toc/000003.xml,
+	  help/it_IT/editorial/toc/000004.xml,
+	  help/it_IT/editorial/toc/000005.xml,
+	  help/it_IT/editorial/toc/000006.xml,
+	  help/it_IT/editorial/toc/000007.xml,
+	  help/it_IT/editorial/toc/000008.xml,
+	  help/it_IT/editorial/toc/000009.xml,
+	  help/it_IT/editorial/toc/000010.xml,
+	  help/it_IT/editorial/toc/000011.xml,
+	  help/it_IT/editorial/toc/000012.xml,
+	  help/it_IT/editorial/toc/000013.xml,
+	  help/it_IT/editorial/toc/000014.xml,
+	  help/it_IT/editorial/topic/000000.xml,
+	  help/it_IT/editorial/topic/000001.xml,
+	  help/it_IT/editorial/topic/000002.xml,
+	  help/it_IT/editorial/topic/000003.xml,
+	  help/it_IT/editorial/topic/000004.xml,
+	  help/it_IT/editorial/topic/000005.xml,
+	  help/it_IT/editorial/topic/000006.xml,
+	  help/it_IT/editorial/topic/000007.xml,
+	  help/it_IT/editorial/topic/000008.xml,
+	  help/it_IT/editorial/topic/000009.xml,
+	  help/it_IT/editorial/topic/000010.xml,
+	  help/it_IT/editorial/topic/000011.xml,
+	  help/it_IT/editorial/topic/000012.xml,
+	  help/it_IT/editorial/topic/000013.xml,
+	  help/it_IT/editorial/topic/000014.xml,
+	  help/it_IT/editorial/topic/000015.xml,
+	  help/it_IT/editorial/topic/000016.xml,
+	  help/it_IT/editorial/topic/000017.xml,
+	  help/it_IT/editorial/topic/000018.xml,
+	  help/it_IT/editorial/topic/000019.xml,
+	  help/it_IT/editorial/topic/000020.xml,
+	  help/it_IT/editorial/topic/000021.xml,
+	  help/it_IT/editorial/topic/000022.xml,
+	  help/it_IT/editorial/topic/000023.xml,
+	  help/it_IT/editorial/topic/000024.xml,
+	  help/it_IT/editorial/topic/000025.xml,
+	  help/it_IT/editorial/topic/000026.xml,
+	  help/it_IT/editorial/topic/000027.xml,
+	  help/it_IT/editorial/topic/000028.xml,
+	  help/it_IT/editorial/topic/000029.xml,
+	  help/it_IT/editorial/topic/000030.xml,
+	  help/it_IT/editorial/topic/000031.xml,
+	  help/it_IT/editorial/topic/000032.xml,
+	  help/it_IT/editorial/topic/000033.xml,
+	  help/it_IT/editorial/topic/000034.xml,
+	  help/it_IT/editorial/topic/000035.xml,
+	  help/it_IT/editorial/topic/000036.xml,
+	  help/it_IT/editorial/topic/000037.xml,
+	  help/it_IT/editorial/topic/000038.xml,
+	  help/it_IT/editorial/topic/000039.xml,
+	  help/it_IT/editorial/topic/000040.xml,
+	  help/it_IT/editorial/topic/000041.xml,
+	  help/it_IT/editorial/topic/000042.xml,
+	  help/it_IT/editorial/topic/000043.xml,
+	  help/it_IT/index/toc/000000.xml,
+	  help/it_IT/index/topic/000000.xml,
+	  help/it_IT/intro/toc/000000.xml,
+	  help/it_IT/intro/topic/000000.xml,
+	  help/it_IT/intro/topic/000001.xml,
+	  help/it_IT/journal/toc/000000.xml,
+	  help/it_IT/journal/toc/000001.xml,
+	  help/it_IT/journal/toc/000002.xml,
+	  help/it_IT/journal/toc/000003.xml,
+	  help/it_IT/journal/toc/000005.xml,
+	  help/it_IT/journal/topic/000000.xml,
+	  help/it_IT/journal/topic/000001.xml,
+	  help/it_IT/journal/topic/000002.xml,
+	  help/it_IT/journal/topic/000003.xml,
+	  help/it_IT/journal/topic/000004.xml,
+	  help/it_IT/journal/topic/000005.xml,
+	  help/it_IT/journal/topic/000006.xml,
+	  help/it_IT/journal/topic/000007.xml,
+	  help/it_IT/journal/topic/000008.xml,
+	  help/it_IT/journal/topic/000009.xml,
+	  help/it_IT/journal/topic/000010.xml,
+	  help/it_IT/journal/topic/000011.xml,
+	  help/it_IT/journal/topic/000012.xml,
+	  help/it_IT/journal/topic/000013.xml,
+	  help/it_IT/journal/topic/000014.xml,
+	  help/it_IT/journal/topic/000015.xml,
+	  help/it_IT/journal/topic/000016.xml,
+	  help/it_IT/journal/topic/000017.xml,
+	  help/it_IT/journal/topic/000018.xml,
+	  help/it_IT/journal/topic/000019.xml,
+	  help/it_IT/journal/topic/000020.xml,
+	  help/it_IT/journal/topic/000021.xml,
+	  help/it_IT/journal/topic/000022.xml,
+	  help/it_IT/journal/topic/000023.xml,
+	  help/it_IT/journal/topic/000025.xml,
+	  help/it_IT/journal/topic/000026.xml,
+	  help/it_IT/journal/topic/000027.xml,
+	  help/it_IT/journal/topic/000028.xml,
+	  help/it_IT/publishing/toc/000000.xml,
+	  help/it_IT/publishing/topic/000000.xml,
+	  help/it_IT/publishing/topic/000001.xml,
+	  help/it_IT/publishing/topic/000002.xml,
+	  help/it_IT/publishing/topic/000003.xml,
+	  help/it_IT/publishing/topic/000004.xml,
+	  help/it_IT/site/toc/000000.xml, help/it_IT/site/topic/000000.xml,
+	  help/it_IT/site/topic/000001.xml,
+	  help/it_IT/site/topic/000002.xml,
+	  help/it_IT/site/topic/000003.xml,
+	  help/it_IT/submission/toc/000000.xml,
+	  help/it_IT/submission/topic/000000.xml,
+	  help/it_IT/submission/topic/000001.xml,
+	  help/it_IT/submission/topic/000002.xml,
+	  help/it_IT/submission/topic/000003.xml,
+	  help/it_IT/submission/topic/000004.xml,
+	  help/it_IT/user/toc/000000.xml, help/it_IT/user/topic/000000.xml,
+	  help/it_IT/user/topic/000001.xml,
+	  help/it_IT/user/topic/000002.xml,
+	  help/it_IT/user/topic/000003.xml,
+	  help/it_IT/user/topic/000004.xml,
+	  help/it_IT/user/topic/000005.xml,
+	  help/it_IT/user/topic/000006.xml,
+	  help/it_IT/user/topic/000007.xml, locale/fr_CA/locale.xml,
+	  locale/it_IT/locale.xml,
+	  plugins/auth/ldap/locale/it_IT/locale.xml,
+	  plugins/importexport/erudit/locale/it_IT/locale.xml,
+	  plugins/importexport/native/locale/it_IT/locale.xml,
+	  plugins/importexport/sample/locale/it_IT/locale.xml,
+	  plugins/importexport/users/locale/it_IT/locale.xml,
+	  registry/locales.xml, templates/comment/comment.tpl,
+	  templates/manager/languageSettings.tpl,
+	  templates/rt/citeEndNote.tpl, templates/rt/citeProCite.tpl,
+	  templates/rt/citeReferenceManager.tpl: #2141# #2133# Adding
+	  translations #2131# Misc updates
+
+2006-04-12 10:25  alec
+
+	* templates/about/editorialPolicies.tpl: #2131# Corrected UI
+	  missing end tag
+
+2006-04-11 15:06  alec
+
+	* locale/pt_BR/locale.xml: #2010# Corrected locale bug
+
+2006-04-11 14:45  alec
+
+	* locale/pt_BR/locale.xml: #2010# Corrected locale typo
+
+2006-04-11 12:04  alec
+
+	* locale/en_US/locale.xml, pages/editor/EditorHandler.inc.php,
+	  pages/manager/GroupHandler.inc.php,
+	  pages/manager/PeopleHandler.inc.php,
+	  pages/manager/SubscriptionHandler.inc.php,
+	  pages/search/SearchHandler.inc.php,
+	  pages/sectionEditor/SubmissionEditHandler.inc.php,
+	  pages/subscriptionManager/SubscriptionManagerHandler.inc.php,
+	  templates/editor/selectSectionEditor.tpl,
+	  templates/manager/groups/selectUser.tpl,
+	  templates/manager/people/enrollment.tpl,
+	  templates/manager/people/searchUsers.tpl,
+	  templates/manager/people/selectMergeUser.tpl,
+	  templates/search/authorIndex.tpl,
+	  templates/sectionEditor/searchUsers.tpl,
+	  templates/sectionEditor/selectReviewer.tpl,
+	  templates/sectionEditor/selectUser.tpl,
+	  templates/subscription/users.tpl: #2126# Alpha lists abstracted
+
+2006-04-11 10:54  alec
+
+	* templates/editor/issues/issueToc.tpl,
+	  classes/journal/SectionDAO.inc.php,
+	  pages/editor/IssueManagementHandler.inc.php: #1260# Corrected
+	  custom section reordering problem
+
+2006-04-11 10:23  alec
+
+	* plugins/importexport/native/issues.tpl: #2136# Corrected broken
+	  link to issue view
+
+2006-04-11 10:01  alec
+
+	* classes/submission/author/AuthorAction.inc.php: #2135# Changed
+	  CCs to recipients in editor decision email
+
+2006-04-11 00:00  alec
+
+	* templates/about/index.tpl: #2105# Moved custom about items into
+	  Policies
+
+2006-04-10 11:25  alec
+
+	* help/fr_CA/editorial/topic/: 000000.xml, 000001.xml, 000002.xml,
+	  000003.xml, 000004.xml, 000005.xml, 000006.xml, 000007.xml,
+	  000008.xml, 000009.xml, 000010.xml, 000011.xml, 000012.xml,
+	  000013.xml, 000014.xml, 000015.xml, 000016.xml, 000017.xml,
+	  000018.xml, 000019.xml, 000020.xml, 000021.xml, 000022.xml,
+	  000023.xml, 000024.xml, 000025.xml, 000026.xml, 000027.xml,
+	  000028.xml, 000029.xml, 000030.xml, 000031.xml, 000032.xml,
+	  000033.xml, 000034.xml, 000035.xml, 000036.xml, 000037.xml,
+	  000038.xml, 000039.xml, 000040.xml, 000041.xml, 000042.xml,
+	  000043.xml: #2133# Adding French translation of help
+
+2006-04-10 09:39  alec
+
+	* templates/rt/rt.tpl: #2077# Corrected TOC link from RT
+
+2006-04-07 09:38  alec
+
+	* plugins/importexport/native/native.dtd: #2131# Added forgotten
+	  subject tag to DTD
+
+2006-04-06 13:22  alec
+
+	* classes/oai/format/OAIMetadataFormat_MARC.inc.php: #2119#
+	  Corrected typo
+
+2006-04-06 13:13  alec
+
+	* classes/oai/: OAIStruct.inc.php,
+	  format/OAIMetadataFormat_DC.inc.php,
+	  format/OAIMetadataFormat_MARC.inc.php,
+	  format/OAIMetadataFormat_MARC21.inc.php, ojs/OAIDAO.inc.php:
+	  #2119# Added pages info to OAI feeds
+
+2006-04-06 12:19  alec
+
+	* templates/manager/people/userProfileForm.tpl: #2095# Made profile
+	  cancel button go back
+
+2006-04-05 16:53  alec
+
+	* templates/about/siteMap.tpl: #2131# Corrected navbar URL typo
+
+2006-04-05 16:27  alec
+
+	* templates/author/submit/: step3.tpl, step4.tpl, step5.tpl:
+	  Removed required field note if no fields are required
+
+2006-04-04 13:03  alec
+
+	* classes/issue/IssueDAO.inc.php: #2128# Corrected missing delete
+	  of style file on issue delete
+
+2006-04-04 12:22  alec
+
+	* templates/search/authorIndex.tpl: #2127# Corrected alphalist
+	  problem when paging
+
+2006-04-03 16:47  alec
+
+	* classes/template/TemplateManager.inc.php,
+	  templates/search/authorIndex.tpl: #2124# Corrected multibyte
+	  author name problem
+
+2006-03-29 11:47  michaelf
+
+	* classes/subscription/SubscriptionDAO.inc.php,
+	  classes/subscription/form/SubscriptionPolicyForm.inc.php,
+	  classes/tasks/SubscriptionExpiryReminder.inc.php,
+	  dbscripts/xml/data/email_templates.xml,
+	  dbscripts/xml/data/locale/en_US/email_templates_data.xml,
+	  locale/en_US/locale.xml,
+	  pages/manager/SubscriptionHandler.inc.php,
+	  pages/subscriptionManager/SubscriptionManagerHandler.inc.php,
+	  registry/scheduledTasks.xml,
+	  templates/subscription/subscriptionPolicyForm.tpl: #1739# Support
+	  for automated subscription expiry email reminders
+
+2006-03-24 14:16  alec
+
+	* classes/: file/FileWrapper.inc.php, mail/MailTemplate.inc.php:
+	  #2117# Cannot fetch version or installer problems ensue.
+
+2006-03-22 11:21  alec
+
+	* plugins/importexport/native/NativeImportDom.inc.php: #2120#
+	  Corrected locale comparison
+
+2006-03-22 10:40  alec
+
+	* classes/tasks/ReviewReminder.inc.php: #2118# Corrected one-click
+	  problem
+
+2006-03-21 15:23  alec
+
+	* help/en_US/: intro/topic/000001.xml, journal/topic/000004.xml,
+	  journal/topic/000012.xml, site/topic/000002.xml: #1458#
+	  Incorporated Kevin's edits
+
+2006-03-21 13:57  alec
+
+	* classes/file/FileWrapper.inc.php,
+	  docs/release-notes/README-2.1.1: #2117# FileWrapper back-port;
+	  added release notes
+
+2006-03-20 11:36  alec
+
+	* pages/editor/EditorHandler.inc.php: #2111# Corrected scheduling
+	  queue problem
+
+2006-03-17 09:58  alec
+
+	* classes/cache/FileCache.inc.php,
+	  classes/config/ConfigParser.inc.php,
+	  classes/file/FileManager.inc.php,
+	  classes/file/FileWrapper.inc.php,
+	  classes/search/SearchFileParser.inc.php,
+	  plugins/importexport/erudit/EruditExportPlugin.inc.php,
+	  plugins/importexport/native/NativeImportExportPlugin.inc.php,
+	  plugins/importexport/users/UserImportExportPlugin.inc.php,
+	  tools/genTestLocale.php, tools/upgrade.php: #2113# Corrected
+	  fopen to use binary by default (fixes Windows badness)
+
+2006-03-16 13:07  alec
+
+	* classes/install/Installer.inc.php: #2097# Corrected error msgs
+
+2006-03-14 17:39  alec
+
+	* tools/buildClassHeirarchy.php: #2110# Added class heirarchy tool
+
+2006-03-14 17:38  alec
+
+	* help/help.xml, help/en_US/editorial/topic/000003.xml,
+	  help/en_US/editorial/topic/000008.xml,
+	  help/en_US/editorial/topic/000012.xml,
+	  help/en_US/editorial/topic/000013.xml,
+	  help/en_US/editorial/topic/000014.xml,
+	  help/en_US/editorial/topic/000015.xml,
+	  help/en_US/editorial/topic/000017.xml,
+	  help/en_US/editorial/topic/000022.xml,
+	  help/en_US/editorial/topic/000025.xml,
+	  help/en_US/editorial/topic/000026.xml,
+	  help/en_US/editorial/topic/000029.xml,
+	  help/en_US/editorial/topic/000030.xml,
+	  help/en_US/editorial/topic/000031.xml,
+	  help/en_US/editorial/topic/000032.xml,
+	  help/en_US/editorial/topic/000033.xml,
+	  help/en_US/editorial/topic/000036.xml,
+	  help/en_US/editorial/topic/000037.xml,
+	  help/en_US/editorial/topic/000038.xml,
+	  help/en_US/editorial/topic/000039.xml,
+	  help/en_US/editorial/topic/000040.xml,
+	  help/en_US/editorial/topic/000042.xml,
+	  help/en_US/index/topic/000000.xml,
+	  help/en_US/intro/topic/000000.xml,
+	  help/en_US/intro/topic/000001.xml,
+	  help/en_US/journal/toc/000001.xml,
+	  help/en_US/journal/toc/000002.xml,
+	  help/en_US/journal/toc/000003.xml,
+	  help/en_US/journal/topic/000000.xml,
+	  help/en_US/journal/topic/000002.xml,
+	  help/en_US/journal/topic/000004.xml,
+	  help/en_US/journal/topic/000005.xml,
+	  help/en_US/journal/topic/000006.xml,
+	  help/en_US/journal/topic/000008.xml,
+	  help/en_US/journal/topic/000009.xml,
+	  help/en_US/journal/topic/000010.xml,
+	  help/en_US/journal/topic/000011.xml,
+	  help/en_US/journal/topic/000015.xml,
+	  help/en_US/journal/topic/000016.xml,
+	  help/en_US/journal/topic/000022.xml,
+	  help/en_US/journal/topic/000025.xml,
+	  help/en_US/journal/topic/000026.xml,
+	  help/en_US/journal/topic/000027.xml,
+	  help/en_US/journal/topic/000028.xml,
+	  help/en_US/journal/topic/000032.xml,
+	  help/en_US/journal/topic/000033.xml,
+	  help/en_US/journal/topic/000044.xml,
+	  help/en_US/publishing/topic/000000.xml,
+	  help/en_US/publishing/topic/000001.xml,
+	  help/en_US/site/topic/000000.xml,
+	  help/en_US/site/topic/000001.xml,
+	  help/en_US/site/topic/000002.xml,
+	  help/en_US/site/topic/000003.xml,
+	  help/en_US/submission/topic/000000.xml,
+	  help/en_US/submission/topic/000002.xml,
+	  help/en_US/submission/topic/000003.xml,
+	  help/en_US/submission/topic/000004.xml,
+	  help/en_US/user/topic/000006.xml, lib/adodb/adodb.inc.php,
+	  pages/manager/StatisticsHandler.inc.php: #1458# Help updates.
+
+2006-03-14 13:22  alec
+
+	* classes/db/DAO.inc.php,
+	  pages/admin/AdminFunctionsHandler.inc.php: #2109# Added ADODB
+	  cache flush
+
+2006-03-13 12:34  alec
+
+	* classes/oai/OAI.inc.php: #2107# Corrected path_info disabled
+	  behavior of OAI
+
+2006-03-13 10:08  alec
+
+	* classes/user/form/RegistrationForm.inc.php: #2106# Corrected
+	  notifications problem
+
+2006-03-10 14:51  alec
+
+	* templates/about/editorialPolicies.tpl: #2104# Corrected bad
+	  editorialPolicy links
+
+2006-03-09 18:16  alec
+
+	* classes/submission/sectionEditor/SectionEditorAction.inc.php:
+	  #2103# Corrected security problem with review reminders
+
+2006-03-09 16:25  alec
+
+	* classes/submission/sectionEditor/SectionEditorAction.inc.php:
+	  #2102# Missing user fetch added
+
+2006-03-09 14:08  alec
+
+	* plugins/importexport/native/ojs1-to-ojs2.xsl: #2101# Added
+	  stylesheet
+
+2006-03-08 20:56  michaelf
+
+	* classes/issue/form/IssueForm.inc.php,
+	  classes/manager/form/setup/JournalSetupStep2Form.inc.php,
+	  classes/manager/form/setup/JournalSetupStep4Form.inc.php,
+	  classes/subscription/form/SubscriptionPolicyForm.inc.php,
+	  locale/en_US/locale.xml, registry/journalSettings.xml,
+	  templates/subscription/subscriptionPolicyForm.tpl,
+	  templates/subscription/subscriptionTypes.tpl,
+	  templates/subscription/subscriptions.tpl,
+	  pages/about/AboutHandler.inc.php,
+	  pages/editor/IssueManagementHandler.inc.php,
+	  pages/manager/ManagerHandler.inc.php,
+	  pages/manager/SubscriptionHandler.inc.php,
+	  pages/subscriptionManager/SubscriptionManagerHandler.inc.php,
+	  templates/about/editorialPolicies.tpl, templates/about/index.tpl,
+	  templates/editor/issues/createIssue.tpl,
+	  templates/editor/issues/issueData.tpl,
+	  templates/manager/setup/step2.tpl,
+	  templates/manager/setup/step4.tpl: #1739# Initial support for
+	  subscription policies
+
+2006-03-08 12:49  alec
+
+	* plugins/importexport/native/NativeImportDom.inc.php: #2100# Added
+	  forgotten "language" attribute on import
+
+2006-03-08 12:03  alec
+
+	* templates/manager/people/selectMergeUser.tpl: #2082# Prevent
+	  merging of user with same user
+
+2006-03-07 17:23  alec
+
+	* templates/manager/people/selectMergeUser.tpl: #2082# Forgotten
+	  add
+
+2006-03-07 15:27  alec
+
+	* classes/article/ArticleCommentDAO.inc.php,
+	  classes/article/ArticleDAO.inc.php,
+	  classes/article/ArticleNoteDAO.inc.php,
+	  classes/article/log/ArticleEmailLogDAO.inc.php,
+	  classes/article/log/ArticleEventLogDAO.inc.php,
+	  classes/comment/CommentDAO.inc.php,
+	  classes/file/TemporaryFileDAO.inc.php,
+	  classes/group/GroupMembershipDAO.inc.php,
+	  classes/journal/NotificationStatusDAO.inc.php,
+	  classes/security/AccessKeyDAO.inc.php,
+	  classes/security/RoleDAO.inc.php,
+	  classes/session/SessionDAO.inc.php,
+	  classes/submission/copyeditor/CopyeditorSubmissionDAO.inc.php,
+	  classes/submission/editAssignment/EditAssignmentDAO.inc.php,
+	  classes/submission/editor/EditorSubmissionDAO.inc.php,
+	  classes/submission/layoutEditor/LayoutEditorSubmissionDAO.inc.php,
+	  classes/submission/proofreader/ProofreaderSubmissionDAO.inc.php,
+	  classes/submission/reviewAssignment/ReviewAssignmentDAO.inc.php,
+	  classes/subscription/SubscriptionDAO.inc.php, help/help.xml,
+	  help/en_US/journal/toc/000002.xml,
+	  help/en_US/journal/topic/000044.xml, locale/en_US/locale.xml,
+	  pages/manager/ManagerHandler.inc.php,
+	  pages/manager/PeopleHandler.inc.php,
+	  pages/sectionEditor/SubmissionEditHandler.inc.php,
+	  templates/manager/index.tpl: #2082# Added Merge Users function
+
+2006-03-07 09:38  alec
+
+	* templates/editor/schedulingQueue.tpl: #2098# Corrected template
+	  problem
+
+2006-03-06 09:09  alec
+
+	* classes/install/Installer.inc.php: #2097# Corrected installer
+	  typo
+
+2006-03-03 13:46  alec
+
+	* plugins/importexport/erudit/: EruditExportPlugin.inc.php,
+	  locale/en_US/locale.xml, locale/es_ES/locale.xml,
+	  locale/pt_BR/locale.xml: #2096# Updated Erudit export
+	  command-line
+
+2006-03-03 09:53  alec
+
+	* classes/submission/editor/EditorSubmissionDAO.inc.php: #2090#
+	  Added sorting to editor decisions fetch
+
+2006-03-02 16:10  alec
+
+	* classes/search/ArticleSearch.inc.php,
+	  classes/search/ArticleSearchDAO.inc.php,
+	  classes/template/TemplateManager.inc.php,
+	  templates/issue/view.tpl: #2092# Code cleanup
+
+2006-03-02 15:54  alec
+
+	* locale/en_US/locale.xml, registry/journalSettings.xml: #2045#
+	  Updated default submission checklist
+
+2006-03-02 15:47  alec
+
+	* templates/editor/issues/createIssue.tpl: #2063# Removed asterisk
+	  from create issue form
+
+2006-03-02 15:32  alec
+
+	* locale/en_US/locale.xml: #2064# Corrected wording
+
+2006-03-02 15:21  alec
+
+	* classes/submission/editor/EditorSubmissionDAO.inc.php: #2087#
+	  Corrected submission count problem
+
+2006-02-26 21:26  michaelf
+
+	* classes/subscription/SubscriptionDAO.inc.php,
+	  classes/subscription/form/SubscriptionForm.inc.php,
+	  locale/en_US/locale.xml: #1243# Support for subscription IP
+	  authentication via CIDR
+
+2006-02-24 11:39  alec
+
+	* classes/author/form/submit/AuthorSubmitStep5Form.inc.php: #2086#
+	  Corrected submission ack BCC bug.
+
+2006-02-22 12:56  alec
+
+	* templates/editor/notifyUsersEmail.tpl: #2085# Corrected broken
+	  abstract link
+
+2006-02-21 12:44  alec
+
+	* classes/core/Request.inc.php: #2083# Corrected Windows problem
+
+2006-02-16 09:28  alec
+
+	* templates/issue/view.tpl: #2077# Corrected URL problem
+
+2006-02-15 16:44  alec
+
+	* templates/manager/people/enrollment.tpl: #2076# Broken "select
+	  all" in manager's email send feature
+
+2006-02-12 19:09  alec
+
+	* pages/sectionEditor/SectionEditorHandler.inc.php: #2072#
+	  Corrected locale key typo
+
+2006-02-10 11:13  alec
+
+	* docs/dev/TechnicalReference.sxw: #2068# The Technical Reference
+	  has been moved to open document format.
+
+2006-02-10 11:11  alec
+
+	* classes/submission/editAssignment/EditAssignmentDAO.inc.php,
+	  classes/submission/sectionEditor/SectionEditorAction.inc.php,
+	  docs/dev/TechnicalReference.odt, docs/dev/TechnicalReference.pdf,
+	  docs/release-notes/README-2.1.0: #2068# Hook typo corrections and
+	  documentation update
+
+2006-02-08 11:26  alec
+
+	* classes/: db/DAO.inc.php, submission/author/AuthorAction.inc.php,
+	  submission/copyeditor/CopyeditorAction.inc.php: #2069# Corrected
+	  hook name typo
+
+2006-02-07 16:27  alec
+
+	* classes/core/Request.inc.php: #2068# Removed redundant hook
+
+2006-02-07 15:00  alec
+
+	* classes/core/Request.inc.php: #2068# Removed redundant hook
+
+2006-02-07 11:18  alec
+
+	* plugins/importexport/native/articleContext.tpl: #2067# Corrected
+	  loss of context on article import and page switching
+
