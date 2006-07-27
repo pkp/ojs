@@ -1290,15 +1290,16 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			parent::setupTemplate(true, $articleId, 'editing');
 			$submitForm->display();
 			
-		} else if ($submitForm->validate()) {
-			$submitForm->readInputData();
-			$submitForm->execute();
-			Request::redirect(null, null, 'submissionEditing', $articleId);
-
 		} else {
 			$submitForm->readInputData();
-			parent::setupTemplate(true, $articleId, 'editing');
-			$submitForm->display();
+			if ($submitForm->validate()) {
+				$submitForm->execute();
+				Request::redirect(null, null, 'submissionEditing', $articleId);
+
+			} else {
+				parent::setupTemplate(true, $articleId, 'editing');
+				$submitForm->display();
+			}
 		}
 	}
 	
