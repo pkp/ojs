@@ -12,3 +12,7 @@ Smarty.class.php
 
 [ Changes expand object method calls within backticks ]
 Smarty_Compiler.class.php
+
+[ Changed to correct capitalize modifier; this has been contributed to Smarty
+  but is not currently released. ]
+modifier.capitalize.php

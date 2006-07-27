@@ -1,14 +1,5 @@
 --- Smarty-2.6.12/libs/Smarty_Compiler.class.php	2006-01-18 10:52:32.000000000 -0800
 +++ smarty/Smarty_Compiler.class.php	2006-01-23 15:07:45.000000000 -0800
-@@ -26,7 +26,7 @@
-  * @package Smarty
-  */
- 
--/* $Id$ */
-+/* $Id$ */
- 
- /**
-  * Template compiling class
 @@ -162,6 +162,8 @@
                  . '(?:\s*,\s*' . $this->_obj_single_param_regexp . ')*)?\)';
          $this->_obj_start_regexp = '(?:' . $this->_dvar_regexp . '(?:' . $this->_obj_ext_regexp . ')+)';

@@ -1,14 +1,5 @@
 --- Smarty-2.6.12/libs/Smarty.class.php	2006-01-18 10:52:24.000000000 -0800
 +++ smarty/Smarty.class.php	2006-01-23 15:07:45.000000000 -0800
-@@ -30,7 +30,7 @@
-  * @version 2.6.12
-  */
- 
--/* $Id$ */
-+/* $Id$ */
- 
- /**
-  * DIR_SEP isn't used anymore, but third party apps might
 @@ -1107,6 +1107,18 @@
      {
          $this->fetch($resource_name, $cache_id, $compile_id, true);
