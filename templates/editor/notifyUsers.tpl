@@ -58,15 +58,6 @@
 		<label for="allUsers">{translate key="editor.notifyUsers.allUsers" count=$allUsersCount}</label>
 	</td>
 </tr>
-{if $senderEmail}
-	<tr valign="top">
-		<td width="5%">
-			<input type="checkbox" name="bccSender" value="1"{if $bccSender} checked{/if}/>
-		<td width="95%" class="label">
-			{translate key="email.bccSender" address=$senderEmail|escape}
-		</td>
-	</tr>
-{/if}
 </table>
 
 <br/>
