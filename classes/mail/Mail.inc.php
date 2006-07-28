@@ -357,7 +357,7 @@ class Mail extends DataObject {
 			if (!empty($headers)) {
 				$headers .= MAIL_EOL;
 			}
-			$headers .= $header['name'].': '.$header['content'];
+			$headers .= $header['name'].': '. str_replace(array("\r", "\n"), '', $header['content']);
 		}
 		
 		if ($this->hasAttachments()) {
@@ -406,7 +406,7 @@ class Mail extends DataObject {
 				$smtp = new SMTPMailer();
 			}
 			return $smtp->mail($this, $recipients, $subject, $mailBody, $headers);
-		} else {
+		} else {echo "RECIPIENTS:<br/>\n"; echo "&nbsp;&nbsp;$recipients<br/>\n";echo"BODY: " . $mailBody . "\n"; echo "HEADER: $headers<br/>\n";
 			return String::mail($recipients, $subject, $mailBody, $headers, $additionalParameters);
 		}
 	}
