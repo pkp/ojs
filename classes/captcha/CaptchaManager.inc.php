@@ -104,7 +104,7 @@ class CaptchaManager {
 			$captchaDao =& DAORegistry::getDAO('CaptchaDAO');
 			$expiredCaptchas = $captchaDao->getExpiredCaptchas();
 			foreach ($expiredCaptchas as $expiredCaptcha) {
-				$this->deleteCaptcha($expiredCaptcha);
+				$captchaDao->deleteCaptcha($expiredCaptcha);
 			}
 		}
 	}
