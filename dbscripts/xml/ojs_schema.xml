@@ -1744,6 +1744,27 @@
 
 	<!--
 	  *
+	  * TABLE captchas
+	  *
+	  -->
+	<table name="captchas">
+		<field name="captcha_id" type="I8">
+			<KEY/>
+			<AUTOINCREMENT/>
+		</field>
+		<field name="session_id" type="C2" size="32">
+			<NOTNULL/>
+		</field>
+		<field name="value" type="C2" size="20">
+			<NOTNULL/>
+		</field>
+		<field name="date_created" type="T">
+			<NOTNULL/>
+		</field>
+	</table>
+
+	<!--
+	  *
 	  * TABLE temporary_files
 	  *
 	  -->

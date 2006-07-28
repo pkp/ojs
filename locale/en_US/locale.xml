@@ -146,6 +146,8 @@
 	<message key="common.default">Default</message>
 	<message key="common.addSelf">Add Self</message>
 	<message key="common.alphaList">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</message>
+	<message key="common.captchaField">Validation</message>
+	<message key="common.captchaField.description">Please enter the letters as they appear in the image above.</message>
 
 	<!-- Common Form Messages -->
 	<message key="form.errorsOccurred">Errors occurred processing this form</message>
@@ -2003,6 +2005,7 @@ current password.<br /><br />Enter your email address below to reset your passwo
 	<message key="user.register.form.usernameExists">The selected username is already in use by another user.</message>
 	<message key="user.register.form.usernameAlphaNumeric">The username can contain only alphanumeric characters, underscores, and hyphens, and must begin and end with an alphanumeric character.</message>
 	<message key="user.register.form.emailExists">The selected email address is already in use by another user.</message>
+	<message key="user.register.form.badCaptcha">The characters you entered did not match the characters in the image. Please check the characters and try again.</message>
 	<message key="user.register.form.passwordsDoNotMatch">The passwords do not match.</message>
 	<message key="user.register.selectJournal">Select a journal to register with</message>
 	<message key="user.register.noJournals">There are no journals you may register with on this site.</message>

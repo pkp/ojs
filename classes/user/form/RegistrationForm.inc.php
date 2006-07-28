@@ -25,7 +25,10 @@ class RegistrationForm extends Form {
 	
 	/** @var AuthPlugin default authentication source, if specified */
 	var $defaultAuth;
-	
+
+	/** @var boolean whether or not captcha is enabled for this form */
+	var $captchaEnabled;
+
 	/**
 	 * Constructor.
 	 */
@@ -33,7 +36,9 @@ class RegistrationForm extends Form {
 		parent::Form('user/register.tpl');
 		
 		$this->existingUser = Request::getUserVar('existingUser') ? 1 : 0;
-		
+
+		$this->captchaEnabled = Config::getVar('captcha', 'captcha_on_register')?true:false;
+
 		// Validation checks for this form
 		$this->addCheck(new FormValidator($this, 'username', 'required', 'user.profile.form.usernameRequired'));
 		$this->addCheck(new FormValidator($this, 'password', 'required', 'user.profile.form.passwordRequired'));
@@ -52,8 +57,11 @@ class RegistrationForm extends Form {
 			$this->addCheck(new FormValidatorCustom($this, 'password', 'required', 'user.register.form.passwordsDoNotMatch', create_function('$password,$form', 'return $password == $form->getData(\'password2\');'), array(&$this)));
 			$this->addCheck(new FormValidator($this, 'firstName', 'required', 'user.profile.form.firstNameRequired'));
 			$this->addCheck(new FormValidator($this, 'lastName', 'required', 'user.profile.form.lastNameRequired'));
-	$this->addCheck(new FormValidatorEmail($this, 'email', 'required', 'user.profile.form.emailRequired'));
+			$this->addCheck(new FormValidatorEmail($this, 'email', 'required', 'user.profile.form.emailRequired'));
 			$this->addCheck(new FormValidatorCustom($this, 'email', 'required', 'user.register.form.emailExists', array(DAORegistry::getDAO('UserDAO'), 'userExistsByEmail'), array(), true));
+			if ($this->captchaEnabled) {
+				$this->addCheck(new FormValidatorCaptcha($this, 'captcha', 'captchaId', 'user.register.form.badCaptcha'));
+			}
 
 			$authDao = &DAORegistry::getDAO('AuthSourceDAO');
 			$this->defaultAuth = &$authDao->getDefaultPlugin();
@@ -71,6 +79,17 @@ class RegistrationForm extends Form {
 		$site = &Request::getSite();
 		$templateMgr->assign('minPasswordLength', $site->getMinPasswordLength());
 		$journal = &Request::getJournal();
+
+		if ($this->captchaEnabled) {
+			import('captcha.CaptchaManager');
+			$captchaManager =& new CaptchaManager();
+			$captcha =& $captchaManager->createCaptcha();
+			if ($captcha) {
+				$templateMgr->assign('captchaEnabled', $this->captchaEnabled);
+				$this->setData('captchaId', $captcha->getCaptchaId());
+			}
+		}
+
 		$templateMgr->assign('privacyStatement', $journal->getSetting('privacyStatement'));
 		$templateMgr->assign('allowRegReader', $journal->getSetting('allowRegReader')==1?1:0);
 		$templateMgr->assign('enableSubscriptions', $journal->getSetting('enableSubscriptions')==1?1:0);
@@ -99,16 +118,20 @@ class RegistrationForm extends Form {
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->readUserVars(
-			array(
-				'username', 'password', 'password2',
-				'firstName', 'middleName', 'lastName', 'initials',
-				'affiliation', 'email', 'userUrl', 'phone', 'fax',
-				'mailingAddress', 'biography', 'interests', 'userLocales',
-				'registerAsReader', 'openAccessNotification', 'registerAsAuthor',
-				'registerAsReviewer', 'existingUser'
-			)
+		$userVars = array(
+			'username', 'password', 'password2',
+			'firstName', 'middleName', 'lastName', 'initials',
+			'affiliation', 'email', 'userUrl', 'phone', 'fax',
+			'mailingAddress', 'biography', 'interests', 'userLocales',
+			'registerAsReader', 'openAccessNotification', 'registerAsAuthor',
+			'registerAsReviewer', 'existingUser'
 		);
+		if ($this->captchaEnabled) {
+			$userVars[] = 'captchaId';
+			$userVars[] = 'captcha';
+		}
+
+		$this->readUserVars($userVars);
 		
 		if ($this->getData('userLocales') == null || !is_array($this->getData('userLocales'))) {
 			$this->setData('userLocales', array());

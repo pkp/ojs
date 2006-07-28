@@ -86,6 +86,7 @@ class DAORegistry {
 			case 'ArticleGalleyDAO': return 'article.ArticleGalleyDAO';
 			case 'ArticleNoteDAO': return 'article.ArticleNoteDAO';
 			case 'AuthorDAO': return 'article.AuthorDAO';
+			case 'CaptchaDAO': return 'captcha.CaptchaDAO';
 			case 'PublishedArticleDAO': return 'article.PublishedArticleDAO';
 			case 'SuppFileDAO': return 'article.SuppFileDAO';
 			case 'DAO': return 'db.DAO';

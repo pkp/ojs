@@ -267,6 +267,22 @@ items_per_page = 25
 page_links = 10
 
 
+;;;;;;;;;;;;;;;;;;;;
+; Captcha Settings ;
+;;;;;;;;;;;;;;;;;;;;
+
+[captcha]
+
+; Whether or not to enable Captcha features
+captcha = off
+
+; Whether or not to use Captcha on user registration
+captcha_on_register = on
+
+; Font location for font to use in Captcha images
+font_location = /usr/share/fonts/truetype/freefont/FreeSerif.ttf
+
+
 ;;;;;;;;;;;;;;;;;;
 ; Debug Settings ;
 ;;;;;;;;;;;;;;;;;;

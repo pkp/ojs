@@ -20,6 +20,7 @@ import('form.validation.FormValidatorInSet');
 import('form.validation.FormValidatorArray');
 import('form.validation.FormValidatorLength');
 import('form.validation.FormValidatorCustom');
+import('form.validation.FormValidatorCaptcha');
 
 class FormValidator {
 
