@@ -406,7 +406,7 @@ class Mail extends DataObject {
 				$smtp = new SMTPMailer();
 			}
 			return $smtp->mail($this, $recipients, $subject, $mailBody, $headers);
-		} else {echo "RECIPIENTS:<br/>\n"; echo "&nbsp;&nbsp;$recipients<br/>\n";echo"BODY: " . $mailBody . "\n"; echo "HEADER: $headers<br/>\n";
+		} else {
 			return String::mail($recipients, $subject, $mailBody, $headers, $additionalParameters);
 		}
 	}
