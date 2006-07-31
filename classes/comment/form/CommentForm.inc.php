@@ -46,7 +46,9 @@ class CommentForm extends Form {
 		$commentDao = &DAORegistry::getDAO('CommentDAO');
 		$this->comment = &$commentDao->getComment($commentId, $articleId);
 
-		$this->captchaEnabled = Config::getVar('captcha', 'captcha_on_comments')?true:false;
+		import('captcha.CaptchaManager');
+		$captchaManager =& new CaptchaManager();
+		$this->captchaEnabled = ($captchaManager->isEnabled() && Config::getVar('captcha', 'captcha_on_comments'))?true:false;
 
 		if (isset($this->comment)) {
 			$this->commentId = $commentId;

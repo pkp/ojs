@@ -37,7 +37,9 @@ class RegistrationForm extends Form {
 		
 		$this->existingUser = Request::getUserVar('existingUser') ? 1 : 0;
 
-		$this->captchaEnabled = Config::getVar('captcha', 'captcha_on_register')?true:false;
+		import('captcha.CaptchaManager');
+		$captchaManager =& new CaptchaManager();
+		$this->captchaEnabled = ($captchaManager->isEnabled() && Config::getVar('captcha', 'captcha_on_register'))?true:false;
 
 		// Validation checks for this form
 		$this->addCheck(new FormValidator($this, 'username', 'required', 'user.profile.form.usernameRequired'));
