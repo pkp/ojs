@@ -89,12 +89,14 @@ class CommentHandler extends Handler {
 
 		if (isset($args[3]) && $args[3]=='save') {
 			$commentForm->readInputData();
-			$commentForm->execute();
-			Request::redirect(null, null, 'view', array($articleId, $galleyId, $parentId));
-		} else {
-			CommentHandler::setupTemplate($article, $galleyId, $parent);
-			$commentForm->display();
+			if ($commentForm->validate()) {
+				$commentForm->execute();
+				Request::redirect(null, null, 'view', array($articleId, $galleyId, $parentId));
+			}
 		}
+
+		CommentHandler::setupTemplate($article, $galleyId, $parent);
+		$commentForm->display();
 	}
 
 	/**

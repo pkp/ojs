@@ -35,6 +35,7 @@ function handleAnonymousCheckbox(theBox) {
 {/literal}
 </script>
 
+{include file="common/formErrors.tpl"}
 {assign var=parentId value=$parentId|default:"0"}
 
 <form name="submit" action="{if $commentId}{url op="edit" path=$articleId|to_array:$galleyId:$commentId}{else}{url op="add" path=$articleId|to_array:$galleyId:$parentId:"save"}{/if}" method="post">
@@ -66,6 +67,17 @@ function handleAnonymousCheckbox(theBox) {
 			<textarea class="textArea" name="body" id="bodyField" rows="5" cols="60">{$body|escape}</textarea>
 		</td>
 	</tr>
+
+{if $captchaEnabled}
+	<td class="label" valign="top">{fieldLabel name="captcha" required="true" key="common.captchaField"}</td>
+	<td class="value">
+		<img src="{url page="user" op="viewCaptcha" path=$captchaId}" alt="" /><br />
+		<span class="instruct">{translate key="common.captchaField.description"}</span><br />
+		<input name="captcha" id="captcha" value="" size="20" maxlength="32" class="textField" />
+		<input type="hidden" name="captchaId" value="{$captchaId|escape:"quoted"}" />
+	</td>
+{/if}
+
 </table>
 
 <p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="location.href='{url page="comment" op="view" path=$articleId|to_array:$galleyId:$parentId}';" /></p>

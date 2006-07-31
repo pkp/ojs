@@ -60,7 +60,7 @@ class RegistrationForm extends Form {
 			$this->addCheck(new FormValidatorEmail($this, 'email', 'required', 'user.profile.form.emailRequired'));
 			$this->addCheck(new FormValidatorCustom($this, 'email', 'required', 'user.register.form.emailExists', array(DAORegistry::getDAO('UserDAO'), 'userExistsByEmail'), array(), true));
 			if ($this->captchaEnabled) {
-				$this->addCheck(new FormValidatorCaptcha($this, 'captcha', 'captchaId', 'user.register.form.badCaptcha'));
+				$this->addCheck(new FormValidatorCaptcha($this, 'captcha', 'captchaId', 'common.captchaField.badCaptcha'));
 			}
 
 			$authDao = &DAORegistry::getDAO('AuthSourceDAO');

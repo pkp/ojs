@@ -20,6 +20,9 @@ class CommentForm extends Form {
 	/** @var int the ID of the comment */
 	var $commentId;
 
+	/** @var boolean Whether or not Captcha support is enabled */
+	var $captchaEnabled;
+
 	/** @var int the ID of the article */
 	var $articleId;
 
@@ -43,12 +46,18 @@ class CommentForm extends Form {
 		$commentDao = &DAORegistry::getDAO('CommentDAO');
 		$this->comment = &$commentDao->getComment($commentId, $articleId);
 
+		$this->captchaEnabled = Config::getVar('captcha', 'captcha_on_comments')?true:false;
+
 		if (isset($this->comment)) {
 			$this->commentId = $commentId;
 		}
 
 		$this->parentId = $parentId;
 		$this->galleyId = $galleyId;
+
+		if ($this->captchaEnabled) {
+			$this->addCheck(new FormValidatorCaptcha($this, 'captcha', 'captchaId', 'common.captchaField.badCaptcha'));
+		}
 	}
 	
 	/**
@@ -92,6 +101,16 @@ class CommentForm extends Form {
 			$templateMgr->assign('userEmail', $user->getEmail());
 		}
 
+		if ($this->captchaEnabled) {
+			import('captcha.CaptchaManager');
+			$captchaManager =& new CaptchaManager();
+			$captcha =& $captchaManager->createCaptcha();
+			if ($captcha) {
+				$templateMgr->assign('captchaEnabled', $this->captchaEnabled);
+				$this->setData('captchaId', $captcha->getCaptchaId());
+			}
+		}
+
 		$templateMgr->assign('parentId', $this->parentId);
 		$templateMgr->assign('articleId', $this->articleId);
 		$templateMgr->assign('galleyId', $this->galleyId);
@@ -105,14 +124,18 @@ class CommentForm extends Form {
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->readUserVars(
-			array(
-				'body',
-				'title',
-				'posterName',
-				'posterEmail'
-			)
+		$userVars = array(
+			'body',
+			'title',
+			'posterName',
+			'posterEmail'
 		);
+		if ($this->captchaEnabled) {
+			$userVars[] = 'captchaId';
+			$userVars[] = 'captcha';
+		}
+
+		$this->readUserVars($userVars);
 	}
 
 	/**
