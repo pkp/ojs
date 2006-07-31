@@ -217,11 +217,14 @@ class Validation {
 	 * @return string
 	 */
 	function generatePassword($length = 8) {
-        $password = "";
+		$letters = 'abcdefghijkmnpqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ';
+		$numbers = '23456789';
+
+		$password = "";
 		for ($i=0; $i<$length; $i++) {
-			$password .= mt_rand(1, 4) == 4 ? mt_rand(0,9) : (mt_rand(0,1) == 0 ? chr(mt_rand(65, 90)) : chr(mt_rand(97, 122)));
+			$password .= mt_rand(1, 4) == 4 ? $numbers[mt_rand(0,strlen($numbers)-1)] : $letters[mt_rand(0, strlen($letters)-1)];
 		}
-        return $password;
+		return $password;
 	}
 	
 	/**
