@@ -39,12 +39,16 @@ class ArticleSearchDAO extends DAO {
 		if($result->RecordCount() == 0) {
 			$result->Close();
 			unset($result);
-			$this->update(
+			if ($this->update(
 				'INSERT INTO article_search_keyword_list (keyword_text) VALUES (?)',
-				$keyword
-			);
-			$keywordId = $this->getInsertId('article_search_keyword_list', 'keyword_id');
-			
+				$keyword,
+				true,
+				false
+			)) {
+				$keywordId = $this->getInsertId('article_search_keyword_list', 'keyword_id');
+			} else {
+				$keywordId = null; // Bug #2324
+			}
 		} else {
 			$keywordId = $result->fields[0];
 			$result->Close();
@@ -194,15 +198,17 @@ class ArticleSearchDAO extends DAO {
 	 * @param $objectId int
 	 * @param $keyword string
 	 * @param $position int
-	 * @return $keyword
+	 * @return $keywordId
 	 */
 	function insertObjectKeyword($objectId, $keyword, $position) {
 		// FIXME Cache recently retrieved keywords?
 		$keywordId = $this->insertKeyword($keyword);
+		if ($keywordId === null) return null; // Bug #2324
 		$this->update(
 			'INSERT INTO article_search_object_keywords (object_id, keyword_id, pos) VALUES (?, ?, ?)',
 			array($objectId, $keywordId, $position)
 		);
+		return $keywordId;
 	}
 	
 }

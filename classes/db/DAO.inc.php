@@ -156,9 +156,11 @@ class DAO {
 	 * Execute an INSERT, UPDATE, or DELETE SQL statement.
 	 * @param $sql the SQL statement the execute
 	 * @param $params an array of parameters for the SQL statement
+	 * @param $callHooks boolean Whether or not to call hooks
+	 * @param $dieOnError boolean Whether or not to die if an error occurs
 	 * @return boolean
 	 */
-	function update($sql, $params = false, $callHooks = true) {
+	function update($sql, $params = false, $callHooks = true, $dieOnError = true) {
 		if ($callHooks === true && checkPhpVersion('4.3.0')) {
 			$trace = debug_backtrace();
 			// Call hooks based on the calling entity, assuming
@@ -171,7 +173,7 @@ class DAO {
 		}
 		
 		$this->_dataSource->execute($sql, $params !== false && !is_array($params) ? array($params) : $params);
-		if ($this->_dataSource->errorNo()) {
+		if ($dieOnError && $this->_dataSource->errorNo()) {
 			fatalError('DB Error: ' . $this->_dataSource->errorMsg());
 		}
 		return $this->_dataSource->errorNo() == 0 ? true : false;
