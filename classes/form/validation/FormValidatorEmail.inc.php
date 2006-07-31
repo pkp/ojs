@@ -17,14 +17,19 @@ import('form.validation.FormValidatorRegExp');
 
 class FormValidatorEmail extends FormValidatorRegExp {
 	function getRegexp() {
-		return	'/^' .
-			'[A-Z0-9]+([\-_\+\.][A-Z0-9]+)*' .	// Username
-			'@' .
-			'[A-Z0-9]+([\-_\.][A-Z0-9]+)*' .	// Domain name (excluding TLD)
-			'\.' .
-			'[A-Z]{2,}' .						// TLD
-			'$/i';
-	}
+
+		$atom = '[-a-z0-9!#\$%&\'\*\+\/=\?\^_\`\{\|\}~]';    	// allowed characters for part before "at" character
+		$domain = '([a-z]([-a-z0-9]*[a-z0-9]+)?)';							// allowed characters for part after "at" character
+		
+		$regex = '^' . $atom . '+' . 			// One or more atom characters.
+		'(\.' . $atom . '+)*'.              			// Followed by zero or more dot separated sets of one or more atom characters.
+		'@'.                                					// Followed by an "at" character.
+		'(' . $domain . '{1,63}\.)+'.        		// Followed by one or max 63 domain characters (dot separated).
+		$domain . '{2,63}'.                 			// Must be followed by one set consisting a period of two
+		'$';                                					// or max 63 domain characters.
+
+		return '/' .$regex. '$/i';
+		}
 
 	/**
 	 * Constructor.
