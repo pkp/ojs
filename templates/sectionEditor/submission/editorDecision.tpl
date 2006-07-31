@@ -83,8 +83,13 @@
 		<tr valign="top">
 			<td width="20%">&nbsp;</td>
 			<td width="80%">
+				{if !($editorRevisionExists or $authorRevisionExists) or !$submission->getMostRecentEditorDecisionComment()}{assign var=copyeditingUnavailable value=1}{else}{assign var=copyeditingUnavailable value=0}{/if}
 				{translate key="editor.article.sendFileToCopyedit"}
-				<input type="submit" {if !($editorRevisionExists or $authorRevisionExists)}disabled="disabled" {/if}name="setCopyeditFile" value="{translate key="form.send"}" class="button" />
+				<input type="submit" {if $copyeditingUnavailable}disabled="disabled" {/if}name="setCopyeditFile" value="{translate key="form.send"}" class="button" />
+				{if $copyeditingUnavailable}
+					<br/>
+					<span class="instruct">{translate key="editor.submissionReview.cannotSendToCopyediting"}</span>
+				{/if}
 			</td>
 		</tr>
 	{/if}
