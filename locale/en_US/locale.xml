@@ -1208,10 +1208,10 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.groups.membership.noUsers">No users were found.</message>
 
 	<!-- People Management -->
-	<message key="manager.people.allUsers">All Users</message>
+	<message key="manager.people.allUsers">All Enrolled Users</message>
 	<message key="manager.people.allJournals">All Journals</message>
 	<message key="manager.people.editUser">Edit User</message>
-	<message key="manager.people.enrollExistingUser">Enroll Existing User</message>
+	<message key="manager.people.enrollExistingUser">Enroll an Existing User</message>
 	<message key="manager.people.createUser">Create New User</message>
 	<message key="manager.people.mergeUsers">Merge Users</message>
 	<message key="manager.people.mergeUser">Merge User</message>
@@ -1658,7 +1658,7 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	<message key="sectionEditor.regrets.regretsAndCancels">Reviewer Regrets &amp; Cancellations</message>
 	<message key="sectionEditor.regrets.regret">Regret</message>
 	<message key="sectionEditor.regrets.result">Result</message>
-	<message key="sectionEditor.review.enrollReviewer">Enroll Existing User As Reviewer</message>
+	<message key="sectionEditor.review.enrollReviewer">Enroll an Existing User As Reviewer</message>
 	<message key="sectionEditor.review.createReviewer">Create New Reviewer</message>
 
 	<!-- Layout Editor -->
