@@ -15,6 +15,6 @@
  
 <locale name="it_IT" full_name="Italiano">
 	<message key="plugins.generic.tinymce.name">TinyMCE Plugin</message>
-	<message key="plugins.generic.tinymce.description"><![CDATA[Questo plugin attiva la modifica WSYWIG delle caselle di testo in OJS usando <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a>.]]></message>
-	<message key="plugins.generic.tinymce.descriptionDisabled"><![CDATA[Questo plugin attiva la modifica WSYWIG delle caselle di testo in OJS usando <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a>. <strong>TinyMCE non &#233; correntemente installato, si prega di installarlo in {$tinyMcePath}.</strong>]]></message>
+	<message key="plugins.generic.tinymce.description"><![CDATA[Questo plugin attiva la modifica WYSIWYG delle caselle di testo in OJS usando <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a>.]]></message>
+	<message key="plugins.generic.tinymce.descriptionDisabled"><![CDATA[Questo plugin attiva la modifica WYSIWYG delle caselle di testo in OJS usando <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a>. <strong>TinyMCE non &#233; correntemente installato, si prega di installarlo in {$tinyMcePath}.</strong>]]></message>
 </locale>
