@@ -1602,7 +1602,6 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	<message key="editor.article.noneSelected">None Selected</message>
 	<message key="editor.article.authorProofing">Author Proofing</message>
 	<message key="editor.article.archiveSubmission">Archive Submission</message>
-	<message key="editor.article.emailAuthorOnArchive">Email author about the archiving of this submission?</message>
 	<message key="editor.article.restoreToQueue">Restore to Active List</message>
 	<message key="editor.article.assignSectionEditor">Add Section Editor</message>
 	<message key="editor.article.assignEditor">Add Editor</message>

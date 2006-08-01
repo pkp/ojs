@@ -9,22 +9,6 @@
  * $Id$
  *}
 
-<script type="text/javascript">
-{literal}
-<!--
-function confirmNotifyUnsuitable() {
-	$result = confirm("{/literal}{translate|escape:"quote" key="editor.article.emailAuthorOnArchive"}{literal}");
-	if ($result) {
-		document.location = "{/literal}{url op="unsuitableSubmission" articleId=$submission->getArticleId() escape=false}{literal}"
-	} else {
-		document.location = "{/literal}{url op="archiveSubmission" path=$submission->getArticleId() escape=false}{literal}";
-	}
-	return false;
-}
-// -->
-{/literal}
-</script>
-
 <a name="status"></a>
 <h3>{translate key="common.status"}</h3>
 
@@ -43,7 +27,7 @@ function confirmNotifyUnsuitable() {
 		</td>
 		<td width="50%" class="value">
 			{if $status != STATUS_ARCHIVED}
-				<a onclick="confirmNotifyUnsuitable()" href="#" class="action">{translate key="editor.article.archiveSubmission"}</a>
+				<a href="{url op="unsuitableSubmission" articleId=$submission->getArticleId()}" class="action">{translate key="editor.article.archiveSubmission"}</a>
 			{else}
 				<a href="{url op="restoreToQueue" path=$submission->getArticleId()}" class="action">{translate key="editor.article.restoreToQueue"}</a>
 			{/if}
