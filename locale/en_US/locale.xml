@@ -226,6 +226,7 @@
 	<message key="navigation.previousPage">&lt;&lt;</message>
 	<message key="navigation.nextPage">&gt;&gt;</message>
 	<message key="navigation.items">{$from} - {$to} of {$total} Items</message>
+	<message key="navigation.fontSize">Font Size</message>
 	
 	<!-- Article Queues -->
 	<message key="common.queue.long.submissionsUnassigned">Unassigned</message>
@@ -2528,6 +2529,9 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="icon.mail.alt">Mail</message>
 	<message key="icon.info.alt">Info</message>
 	<message key="icon.folder.alt">Folder</message>
+	<message key="icon.small.alt">Small</message>
+	<message key="icon.medium.alt">Medium</message>
+	<message key="icon.large.alt">Large</message>
 	
 	<!-- Debug messages -->
 	<message key="debug.executionTime">Page generated in</message>
