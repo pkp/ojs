@@ -30,10 +30,14 @@ class SectionDAO extends DAO {
 	 * @param $sectionId int
 	 * @return Section
 	 */
-	function &getSection($sectionId) {
-		$result = &$this->retrieve(
-			'SELECT * FROM sections WHERE section_id = ?', $sectionId
-		);
+	function &getSection($sectionId, $journalId = null) {
+		$sql = 'SELECT * FROM sections WHERE section_id = ?';
+		$params = array($sectionId);
+		if ($journalId !== null) {
+			$sql .= ' AND journal_id = ?';
+			$params[] = $journalId;
+		}
+		$result = &$this->retrieve($sql, $params);
 
 		$returner = null;
 		if ($result->RecordCount() != 0) {
