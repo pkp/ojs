@@ -49,6 +49,8 @@ Examples:
 	<message key="plugins.importexport.users.import.usersWereImported">The following users were successfully imported into the system</message>
 	<message key="plugins.importexport.users.import.errorsOccurred">Errors occurred during the import</message>
 	<message key="plugins.importexport.users.import.confirmUsers">Confirm that these are the users you would like to import into the system</message>
+	<message key="plugins.importexport.users.import.warning">Warning</message>
+	<message key="plugins.importexport.users.import.encryptionMismatch">Cannot use passwords hashed with {$importHash}; OJS is configured to use {$ojsHash}. If you continue, you will need to reset the imported users' passwords.</message>
 	<message key="plugins.importexport.users.unknownJournal">An unknown journal path "{$journalPath}" was specified.</message>
 
 	<message key="plugins.importexport.users.export.exportUsers">Export Users</message>

@@ -68,6 +68,7 @@ class UserXMLParser {
 	function &parseData($file) {	
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
 
+		$success = true;
 		$this->usersToImport = array();
 		$tree = $this->parser->parse($file);
 		
@@ -85,7 +86,11 @@ class UserXMLParser {
 								break;
 							case 'password':
 								$encrypted = $attrib->getAttribute('encrypted');
-								if (isset($encrypted) && $encrypted == 'md5') {
+								if (isset($encrypted) && $encrypted !== 'plaintext') {
+									$ojsEncryptionScheme = Config::getVar('security', 'encryption');
+									if ($encrypted != $ojsEncryptionScheme) {
+										$this->errors[] = Locale::translate('plugins.importexport.users.import.encryptionMismatch', array('importHash' => $encrypted, 'ojsHash' => $ojsEncryptionScheme));
+									}
 									$newUser->setPassword($attrib->getValue());
 								} else {
 									$newUser->setUnencryptedPassword($attrib->getValue());

@@ -97,6 +97,7 @@ class UserImportExportPlugin extends ImportExportPlugin {
 					$templateMgr->assign_by_ref('usersRoles', $usersRoles);
 					$templateMgr->assign('sendNotify', $sendNotify);
 					$templateMgr->assign('continueOnError', $continueOnError);
+					$templateMgr->assign('errors', $parser->errors);
 
 					// Show confirmation form
 					$templateMgr->display($this->getTemplatePath() . 'importUsersConfirm.tpl');

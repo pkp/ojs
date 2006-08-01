@@ -29,8 +29,8 @@ class UserExportDom {
 			$userNode = &XMLCustomWriter::createElement($doc, 'user');
 
 			XMLCustomWriter::createChildWithText($doc, $userNode, 'username', $user->getUserName(), false);
-			$passwordNode = XMLCustomWriter::createChildWithText($doc, $userNode, 'password', $user->getPassword());
-			XMLCustomWriter::setAttribute($passwordNode, 'encrypted', 'md5');
+			$passwordNode =& XMLCustomWriter::createChildWithText($doc, $userNode, 'password', $user->getPassword());
+			XMLCustomWriter::setAttribute($passwordNode, 'encrypted', Config::getVar('security', 'encryption'));
 			XMLCustomWriter::createChildWithText($doc, $userNode, 'first_name', $user->getFirstName());
 			XMLCustomWriter::createChildWithText($doc, $userNode, 'middle_name', $user->getMiddleName(), false);
 			XMLCustomWriter::createChildWithText($doc, $userNode, 'last_name', $user->getLastName());

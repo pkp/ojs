@@ -21,6 +21,17 @@
 	<input type="hidden" name="continueOnError" value="{$continueOnError|escape}" />
 {/if}
 
+{if $errors}
+	<p>
+		<span class="formError">{translate key="plugins.importexport.users.import.warning"}:</span>
+		<ul class="formErrorList">
+			{foreach key=field item=message from=$errors}
+				<li>{$message}</li>
+			{/foreach}
+		</ul>
+	</p>
+{/if}
+
 <table width="100%" class="listing">
 	<tr>
 		<td colspan="7" class="headseparator">&nbsp;</td>
