@@ -45,7 +45,10 @@
 		<td width="100%"><input type="submit" name="delChecklist[{$checklistId}]" value="{translate key="common.delete"}" class="button" /></td>
 	</tr>
 {/foreach}
-</table>
+
+{if $notFirstChecklistItem}
+	</table>
+{/if}
 
 <p><input type="submit" name="addChecklist" value="{translate key="manager.setup.addChecklistItem"}" class="button" /></p>
 
