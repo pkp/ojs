@@ -13,7 +13,10 @@
   -->
  
 <locale name="en_US" full_name="U.S. English">
-	<message key="plugins.generic.webfeed.displayName">Feed Plugin</message>
+	<message key="plugins.generic.webfeed.displayName">Web Feed Plugin</message>
 	<message key="plugins.generic.webfeed.description">This plugin produces RSS/Atom web syndication feeds for the current issue.</message>
-</locale>
 
+	<message key="plugins.generic.webfeed.settings">Settings</message>
+	<message key="plugins.generic.webfeed.settings.issue">Display web feed links on issue pages only.</message>
+	<message key="plugins.generic.webfeed.settings.all">Display web feed links on all journal pages.</message>
+</locale>

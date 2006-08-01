@@ -48,37 +48,29 @@ class FeedPlugin extends GenericPlugin {
 	
 			$currentJournal =& $templateManager->get_template_vars('currentJournal');
 			$baseUrl = $templateManager->get_template_vars('baseUrl');
+			$displayPage = $this->getSetting($currentJournal->getJournalId(), 'displayPage');
+			$templateManager->assign('displayPage', $displayPage);
 	
-			// if we have a journal selected,
-			// append feed meta-links into the header
-			// for the current issue
-			if ($templateManager->get_template_vars('showToc') ) {
-				$additionalHeadData = $templateManager->get_template_vars('additionalHeadData');
-				$sidebarTemplate = $templateManager->get_template_vars('sidebarTemplate');
-				$currentUrl = $templateManager->get_template_vars('currentUrl');
+			// if we have a journal selected, append feed meta-links into the header
+			$additionalHeadData = $templateManager->get_template_vars('additionalHeadData');
 	
-				$feedUrl1 = '<link rel="alternate" type="application/atom+xml" href="'.$baseUrl.'/index.php/'.$currentJournal->getPath().'/feed/atom">';
-				$feedUrl2 = '<link rel="alternate" type="application/rdf+xml" href="'.$baseUrl.'/index.php/'.$currentJournal->getPath().'/feed/rss">';
-				$feedUrl3 = '<link rel="alternate" type="application/rss+xml" href="'.$baseUrl.'/index.php/'.$currentJournal->getPath().'/feed/rss2">';
+			$feedUrl1 = '<link rel="alternate" type="application/atom+xml" href="'.$baseUrl.'/index.php/'.$currentJournal->getPath().'/feed/atom">';
+			$feedUrl2 = '<link rel="alternate" type="application/rdf+xml" href="'.$baseUrl.'/index.php/'.$currentJournal->getPath().'/feed/rss">';
+			$feedUrl3 = '<link rel="alternate" type="application/rss+xml" href="'.$baseUrl.'/index.php/'.$currentJournal->getPath().'/feed/rss2">';
 
-				$imageLinks = $this->getTemplatePath().'templates/links.tpl';
-	
-				$templateManager->assign('additionalHeadData', $additionalHeadData."\n".$feedUrl1."\n".$feedUrl2."\n".$feedUrl3);
-				
-				// if no explicit sidebar template is specified,
-				// include the web feed links on the sidebar
-				if ($sidebarTemplate == "") {
-					$templateManager->assign('sidebarTemplate', $imageLinks);
-				}
+			$templateManager->assign('additionalHeadData', $additionalHeadData."\n".$feedUrl1."\n".$feedUrl2."\n".$feedUrl3);
 
+			// if no explicit sidebar template is specified, include the web feed links on the sidebar
+			$sidebarTemplate = $templateManager->get_template_vars('sidebarTemplate');
+			if ($sidebarTemplate == "") {
+				$templateManager->assign('sidebarTemplate', $this->getTemplatePath().'templates/links.tpl');
 			}
-		
 		}
 
 		return false;
 	}
 	
-	/*
+	/**
 	 * Declare the handler function to process the actual feed URL
 	 */
 	function callbackHandleFeed($hookName, $args) {
@@ -117,6 +109,23 @@ class FeedPlugin extends GenericPlugin {
 		$journal = &Request::getJournal();
 		if ($journal) {
 			$this->updateSetting($journal->getJournalId(), 'enabled', $enabled ? true : false);
+
+			// set default settings
+			if ($this->getSetting($journal->getJournalId(), 'displayPage') == "") {
+				$this->updateSetting($journal->getJournalId(), 'displayPage', 'issue');
+			}
+
+			// register against the Layout Manager plugin if it's installed
+			$LayoutManagerPlugin = &PluginRegistry::getPlugin('generic', 'LayoutManager');
+
+			if ($LayoutManagerPlugin) {
+				// register or deregister the sidebar links
+	  			if ( $enabled )
+					$LayoutManagerPlugin->registerBlock($this->getName(), $this->getTemplatePath().'templates/links.tpl', 4);
+				else
+					$LayoutManagerPlugin->deRegisterBlock($this->getName());
+			}
+
 			return true;
 		}
 		return false;
@@ -131,6 +140,10 @@ class FeedPlugin extends GenericPlugin {
 			$verbs[] = array(
 				'disable',
 				Locale::translate('manager.plugins.disable')
+			);
+			$verbs[] = array(
+				'settings',
+				Locale::translate('plugins.generic.webfeed.settings')
 			);
 		} else {
 			$verbs[] = array(
@@ -148,6 +161,28 @@ class FeedPlugin extends GenericPlugin {
 		$returner = true;
 
 		switch ($verb) {
+			case 'settings':
+				$templateMgr = &TemplateManager::getManager();
+				$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
+
+				$journal =& Request::getJournal();
+
+				$this->import('SettingsForm');
+				$form =& new SettingsForm($this, $journal->getJournalId());
+
+				if (Request::getUserVar('save')) {
+					$form->readInputData();
+					if ($form->validate()) {
+						$form->execute();
+						Request::redirect(null, null, 'plugins');
+					} else {
+						$form->display();
+					}
+				} else {
+					$form->initData();
+					$form->display();
+				}
+				break;
 			case 'enable':
 				$this->setEnabled(true);
 				$returner = false;

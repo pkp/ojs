@@ -1,9 +1,9 @@
 ================================
 === OJS Web Feeds Plugin
-=== Version: 1.2
-=== Release date: June 8, 2006
-=== Author: Alf Eaton <alf@hubmed.org>
-=== Contributions: Juan Alperin <juan@geeky.net>, MJ Suhonos <mj@robotninja.com>
+=== Version: 1.3
+=== Release date: July 27, 2006
+=== Author: MJ Suhonos <mj@robotninja.com>
+=== Contributions: Juan Alperin <juan@geeky.net>, Alf Eaton <alf@hubmed.org>
 ================================
 
 About
@@ -23,9 +23,13 @@ Installation
 To install the plugin:
  - enable the plugin by going to:  Home > User > Journal Management > Plugin Management  and selecting "ENABLE" under "Feed Plugin"
 
-Localization
+Configuration
 ------------
-Currently in en_US (U.S. English) and es_ES (Espaol Espaa) locales
+The plugin can be configured to display feed links on all journal pages, or only current issue pages.
+
+Known Issues
+------------
+Improperly-formatted (non-RFC2822) email addresses within OJS articles or contact addresses may cause invalid feeds to be generated.
 
 Contact/Support
 ---------------
