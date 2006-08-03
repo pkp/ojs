@@ -23,18 +23,6 @@ define('ISSUE_LABEL_YEAR', 3);
 define('ISSUE_LABEL_TITLE', 4);
 
 class Issue extends DataObject {
- 
- 	/** @var array Authors of this issue */
-	var $authors;
-
-	/**
-	 * Constructor.
-	 */
-	function Issue() {
-		parent::DataObject();
-		$this->authors = array();
-	}
-	
 	/**
 	 * get issue id
 	 * @return int
@@ -404,22 +392,6 @@ class Issue extends DataObject {
 	}
 
 	/**
-	 * Get all authors
-	 * @return array Authors
-	 */
-	function &getAuthors() {
-		return $this->authors;
-	}
-
-	/**
-	 * Set authors
-	 * @param $authors array Authors
-	 */
-	function setAuthors($authors) {
-		return $this->authors = $authors;
-	}
-
-	/**
 	 * Return string of author names, separated by the specified token
 	 * @param $lastOnly boolean return list of lastnames only (default false)
 	 * @param $separator string separator for names (default comma+space)
@@ -427,23 +399,13 @@ class Issue extends DataObject {
 	 */
 	function getAuthorString($lastOnly = false, $separator = ', ') {
 		$str = '';
-		foreach ($this->authors as $a) {
+		foreach ($this->getAuthors() as $a) {
 			if (!empty($str)) {
 				$str .= $separator;
 			}
 			$str .= $lastOnly ? $a->getLastName() : $a->getFullName();
 		}
 		return $str;
-	}
-
-	/**
-	 * Return first author
-	 * @param $lastOnly boolean return lastname only (default false)
-	 * @return string
-	 */
-	function getFirstAuthor($lastOnly = false) {
-		$author = $this->authors[0];
-		return $lastOnly ? $author->getLastName() : $author->getFullName();
 	}
 
 	/**

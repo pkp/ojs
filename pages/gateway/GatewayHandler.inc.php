@@ -61,7 +61,7 @@ class GatewayHandler extends Handler {
 				$showInfo = false;
 			}
 			
-			$issues = &new DAOResultFactory($result, $issueDao, '_returnPublishedIssueFromRow');
+			$issues = &new DAOResultFactory($result, $issueDao, '_returnIssueFromRow');
 			
 			$prevYear = null;
 			$nextYear = null;

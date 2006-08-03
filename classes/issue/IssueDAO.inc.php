@@ -107,7 +107,7 @@ class IssueDAO extends DAO {
 		}
 
 		$result = &$this->retrieve($sql, $params);
-		$returner = &new DAOResultFactory($result, $this, '_returnPublishedIssueFromRow');
+		$returner = &new DAOResultFactory($result, $this, '_returnIssueFromRow');
 		return $returner;
 	}
 
@@ -209,21 +209,6 @@ class IssueDAO extends DAO {
 		$issue->setNumArticles($this->getNumArticles($row['issue_id']));
 
 		HookRegistry::call('IssueDAO::_returnIssueFromRow', array(&$issue, &$row));
-
-		return $issue;
-	}
-	
-	/**
-	 * Returns issue object from a database row, with some extra publishing info.
-	 * @param $row array
-	 * @return Issue object
-	 */
-	function &_returnPublishedIssueFromRow(&$row) { // FIXME?
-		$issue = &$this->_returnIssueFromRow($row);
-		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
-		$issue->setAuthors($publishedArticleDao->getPublishedArticleAuthors($issue->getIssueId()));
-
-		HookRegistry::call('IssueDAO::_returnPublishedIssueFromRow', array(&$issue, &$row));
 
 		return $issue;
 	}
@@ -433,7 +418,6 @@ class IssueDAO extends DAO {
 		if ($result->RecordCount() != 0) {
 			$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
 			$issue = &$this->_returnIssueFromRow($result->GetRowAssoc(false));
-			$issue->setAuthors($publishedArticleDao->getPublishedArticleAuthors($issue->getIssueId()));
 		}
 
 		$result->Close();
@@ -454,7 +438,7 @@ class IssueDAO extends DAO {
 		$sql = 'SELECT i.* FROM issues i WHERE journal_id = ? ORDER BY current DESC, date_published DESC';
 		$result = &$this->retrieveRange($sql, $journalId, $rangeInfo);
 		
-		$returner = &new DAOResultFactory($result, $this, '_returnPublishedIssueFromRow');
+		$returner = &new DAOResultFactory($result, $this, '_returnIssueFromRow');
 		return $returner;
 	}
 
@@ -475,7 +459,7 @@ class IssueDAO extends DAO {
 		}
 		$result = &$this->retrieveRange($sql, $journalId, $rangeInfo);
 		
-		$returner = &new DAOResultFactory($result, $this, '_returnPublishedIssueFromRow');
+		$returner = &new DAOResultFactory($result, $this, '_returnIssueFromRow');
 		return $returner;
 	}
 
