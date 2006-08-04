@@ -57,7 +57,11 @@ class ArrayItemIterator extends ItemIterator {
 	 * @return object
 	 */
 	function &next() {
-		$value = &current($this->theArray);
+		if (!is_array($this->theArray)) {
+			$value = null;
+			return $value;
+		}
+		$value = current($this->theArray);
 		if (next($this->theArray)==null) {
 			$this->theArray = null;
 		}
