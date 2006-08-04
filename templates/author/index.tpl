@@ -21,7 +21,9 @@
 
 {include file="author/$pageToDisplay.tpl"}
 
-<a href="{url op="submit"}" class="action">{translate key="author.submit.startHereLink"}</a><br />
+<h4>{translate key="author.submit.startHereTitle"}</h4>
+{url|assign:"submitUrl" op="submit"}
+{translate submitUrl=$submitUrl key="author.submit.startHereLink"}<br />
 </p>
 
 {include file="common/footer.tpl"}
