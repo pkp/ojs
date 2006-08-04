@@ -92,17 +92,43 @@ function loadUrl(url) {
 	document.location.href=url;	
 }
 
+function getStylesheets() {
+	var linkNodes, styleNodes, x, sheets = [];
+	if (!window.ScriptEngine && navigator.__ice_version ) {
+		return document.styleSheets;
+	}
+	if (document.getElementsByTagName) {
+		linkNodes = document.getElementsByTagName('link');
+		styleNodes = document.getElementsByTagName('style');
+	} else if (document.styleSheets && document.all) {
+		linkNodes = document.all.tags('LINK');
+		styleNodes = document.all.tags('STYLE');
+	} else {
+		return [];
+	}
+	for (x = 0; linkNodes[x]; x++) {
+		var rel = linkNodes[x].rel ? linkNodes[x].rel : linkNodes[x].getAttribute ? linkNodes[x].getAttribute('rel') : '';
+		if (typeof(rel) == 'string' && rel.toLowerCase().indexOf('style') != -1) {
+			sheets[sheets.length] = linkNodes[x];
+		}
+	}
+	for (x = 0; styleNodes[x]; x++) {
+		sheets[sheets.length] = styleNodes[x];
+	}
+	return sheets;
+}
+
+
 /**
  * Set the font size to the named stylesheet.
  * Thanks to www.alistsapart.com for the basic design.
  */
 function setFontSize(size) {
-	var i, a;
-
-	for (i=0; (a = document.getElementsByTagName("link")[i]); i++) {
-		if (a.getAttribute("rel").indexOf("style") != -1 && a.getAttribute("title")) {
-			a.disabled = true;
-			if(a.getAttribute("title") == size) a.disabled = false;
+	var s = getStylesheets();
+	for (var i=0; i < s.length; i++) {
+		if (s[i].getAttribute("rel").indexOf("style") != -1 && s[i].getAttribute("title")) {
+			s[i].disabled = true;
+			if(s[i].getAttribute("title") == size) s[i].disabled = false;
 		}
 	}
 }
@@ -112,9 +138,9 @@ function setFontSize(size) {
  * Thanks to www.alistapart.com for the basic design.
  */
 function getFontSize() {
-	var i, a;
-	for (i=0; (a = document.getElementsByTagName("link")[i]); i++) {
-		if(a.getAttribute("rel").indexOf("style") != -1 && a.getAttribute("title") && !a.disabled) return a.getAttribute("title");
+	var s = getStylesheets();
+	for (var i=0; i < s.length; i++) {
+		if(s[i].getAttribute("rel").indexOf("style") != -1 && s[i].getAttribute("title") && !s[i].disabled) return s[i].getAttribute("title");
 	}
 	return null;
 }
@@ -141,10 +167,9 @@ function readCookie(name) {
 }
 
 function getPreferredFontSize() {
-	var i, a;
-	for(i=0; (a = document.getElementsByTagName("link")[i]); i++) {
-		if(a.getAttribute("rel").indexOf("style") != -1 && a.getAttribute("rel").indexOf("alt") == -1
-&& a.getAttribute("title")) return a.getAttribute("title");
+	var s = getStylesheets();
+	for (var i=0; i < s.length; i++) {
+		if(s[i].getAttribute("rel").indexOf("style") != -1 && s[i].getAttribute("rel").indexOf("alt") == -1 && s[i].getAttribute("title")) return s[i].getAttribute("title");
 	}
 	return null;
 }
