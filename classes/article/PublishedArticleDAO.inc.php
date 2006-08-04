@@ -38,9 +38,11 @@ class PublishedArticleDAO extends DAO {
 	 * Retrieve Published Articles by issue id.  Limit provides number of records to retrieve
 	 * @param $issueId int
 	 * @param $limit int, default NULL
+	 * @param $simple boolean Whether or not to skip fetching dependent objects; default false
 	 * @return PublishedArticle objects array
 	 */
-	function &getPublishedArticles($issueId, $limit = NULL) {
+	function &getPublishedArticles($issueId, $limit = NULL, $simple = false) {
+		$func = $simple?'_returnSimplePublishedArticleFromRow':'_returnPublishedArticleFromRow';
 		$publishedArticles = array();
 
 		if (isset($limit)) {
@@ -54,7 +56,7 @@ class PublishedArticleDAO extends DAO {
 		}
 
 		while (!$result->EOF) {
-			$publishedArticles[] = &$this->_returnPublishedArticleFromRow($result->GetRowAssoc(false));
+			$publishedArticles[] = &$this->$func($result->GetRowAssoc(false));
 			$result->moveNext();
 		}
 
@@ -81,24 +83,29 @@ class PublishedArticleDAO extends DAO {
 	 * Retrieve all published articles in a journal.
 	 * @param $journalId int
 	 * @param $rangeInfo object
+	 * @param $simple boolean Whether or not to skip fetching dependent objects; default false
+	 * @return object
 	 */
-	function &getPublishedArticlesByJournalId($journalId, $rangeInfo = null) {
+	function &getPublishedArticlesByJournalId($journalId, $rangeInfo = null, $simple = false) {
+		$func = $simple?'_returnSimplePublishedArticleFromRow':'_returnPublishedArticleFromRow';
 		$result =& $this->retrieveRange(
 			'SELECT pa.*, a.*, s.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, s.abbrev AS section_abbrev, s.abbrev_alt1 AS section_abbrev_alt1, s.abbrev_alt2 AS section_abbrev_alt2 FROM published_articles pa, articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE pa.article_id = a.article_id AND a.journal_id = ? AND a.status <> ' . STATUS_ARCHIVED,
 			$journalId,
 			$rangeInfo
 		);
 
-		$returner =& new DAOResultFactory($result, $this, '_returnPublishedArticleFromRow');
+		$returner =& new DAOResultFactory($result, $this, $func);
 		return $returner;
 	}
 	
 	/**
 	 * Retrieve Published Articles by issue id
 	 * @param $issueId int
+	 * @param $simple boolean Whether or not to skip fetching dependent objects; default false
 	 * @return PublishedArticle objects array
 	 */
-	function &getPublishedArticlesInSections($issueId) {
+	function &getPublishedArticlesInSections($issueId, $simple = false) {
+		$func = $simple?'_returnSimplePublishedArticleFromRow':'_returnPublishedArticleFromRow';
 		$publishedArticles = array();
 
 		$result = &$this->retrieve(
@@ -108,7 +115,7 @@ class PublishedArticleDAO extends DAO {
 		$currSectionId = 0;
 		while (!$result->EOF) {
 			$row = &$result->GetRowAssoc(false);
-			$publishedArticle = &$this->_returnPublishedArticleFromRow($row);
+			$publishedArticle = &$this->$func($row);
 			if ($publishedArticle->getSectionId() != $currSectionId) {
 				$currSectionId = $publishedArticle->getSectionId();
 				$publishedArticles[$currSectionId] = array(
@@ -134,9 +141,12 @@ class PublishedArticleDAO extends DAO {
 	/**
 	 * Retrieve Published Articles by section id
 	 * @param $sectionId int
+	 * @param $issueId int
+	 * @param $simple boolean Whether or not to skip fetching dependent objects; default false
 	 * @return PublishedArticle objects array
 	 */
-	function &getPublishedArticlesBySectionId($sectionId, $issueId) {
+	function &getPublishedArticlesBySectionId($sectionId, $issueId, $simple = false) {
+		$func = $simple?'_returnSimplePublishedArticleFromRow':'_returnPublishedArticleFromRow';
 		$publishedArticles = array();
 
 		$result = &$this->retrieve(
@@ -145,7 +155,7 @@ class PublishedArticleDAO extends DAO {
 
 		$currSectionId = 0;
 		while (!$result->EOF) {
-			$publishedArticle = &$this->_returnPublishedArticleFromRow($result->GetRowAssoc(false));
+			$publishedArticle = &$this->$func($result->GetRowAssoc(false));
 			$publishedArticles[] = $publishedArticle;
 			$result->moveNext();
 		}
@@ -159,9 +169,10 @@ class PublishedArticleDAO extends DAO {
 	/**
 	 * Retrieve Published Article by pub id
 	 * @param $pubId int
+	 * @param $simple boolean Whether or not to skip fetching dependent objects; default false
 	 * @return PublishedArticle object
 	 */
-	function &getPublishedArticleById($pubId) {
+	function &getPublishedArticleById($pubId, $simple = false) {
 		$result = &$this->retrieve(
 			'SELECT * FROM published_articles WHERE pub_id = ?', $pubId
 		);
@@ -176,7 +187,7 @@ class PublishedArticleDAO extends DAO {
 		$publishedArticle->setViews($row['views']);
 		$publishedArticle->setAccessStatus($row['access_status']);
 
-		$publishedArticle->setSuppFiles($this->suppFileDao->getSuppFilesByArticle($row['article_id']));
+		if (!$simple) $publishedArticle->setSuppFiles($this->suppFileDao->getSuppFilesByArticle($row['article_id']));
 
 		$result->Close();
 		unset($result);
@@ -188,9 +199,11 @@ class PublishedArticleDAO extends DAO {
 	 * Retrieve published article by article id
 	 * @param $articleId int
 	 * @param $journalId int optional
+	 * @param $simple boolean Whether or not to skip fetching dependent objects; default false
 	 * @return PublishedArticle object
 	 */
-	function &getPublishedArticleByArticleId($articleId, $journalId = null) {
+	function &getPublishedArticleByArticleId($articleId, $journalId = null, $simple = false) {
+		$func = $simple?'_returnSimplePublishedArticleFromRow':'_returnPublishedArticleFromRow';
 		$result = &$this->retrieve(
 			'SELECT pa.*, a.*, s.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, s.abbrev AS section_abbrev, s.abbrev_alt1 AS section_abbrev_alt1, s.abbrev_alt2 AS section_abbrev_alt2 FROM published_articles pa, articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE pa.article_id = a.article_id AND a.article_id = ?' . (isset($journalId)?' AND a.journal_id = ?':''),
 			isset($journalId)?
@@ -200,7 +213,7 @@ class PublishedArticleDAO extends DAO {
 
 		$publishedArticle = null;
 		if ($result->RecordCount() != 0) {
-			$publishedArticle = &$this->_returnPublishedArticleFromRow($result->GetRowAssoc(false));
+			$publishedArticle = &$this->$func($result->GetRowAssoc(false));
 		}
 
 		$result->Close();
@@ -213,9 +226,11 @@ class PublishedArticleDAO extends DAO {
 	 * Retrieve published article by public article id
 	 * @param $journalId int
 	 * @param $publicArticleId string
+	 * @param $simple boolean Whether or not to skip fetching dependent objects; default false
 	 * @return PublishedArticle object
 	 */
-	function &getPublishedArticleByPublicArticleId($journalId, $publicArticleId) {
+	function &getPublishedArticleByPublicArticleId($journalId, $publicArticleId, $simple = false) {
+		$func = $simple?'_returnSimplePublishedArticleFromRow':'_returnPublishedArticleFromRow';
 		$result = &$this->retrieve(
 			'SELECT pa.*, a.*, s.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, s.abbrev AS section_abbrev, s.abbrev_alt1 AS section_abbrev_alt1, s.abbrev_alt2 AS section_abbrev_alt2 FROM published_articles pa, articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE pa.article_id = a.article_id AND pa.public_article_id = ? AND a.journal_id = ?',
 			array($publicArticleId, $journalId)
@@ -223,7 +238,7 @@ class PublishedArticleDAO extends DAO {
 
 		$publishedArticle = null;
 		if ($result->RecordCount() != 0) {
-			$publishedArticle = &$this->_returnPublishedArticleFromRow($result->GetRowAssoc(false));
+			$publishedArticle = &$this->$func($result->GetRowAssoc(false));
 		}
 
 		$result->Close();
@@ -237,11 +252,12 @@ class PublishedArticleDAO extends DAO {
 	 * internal article ID; public article ID takes precedence.
 	 * @param $journalId int
 	 * @param $articleId string
+	 * @param $simple boolean Whether or not to skip fetching dependent objects; default false
 	 * @return PublishedArticle object
 	 */
-	function &getPublishedArticleByBestArticleId($journalId, $articleId) {
-		$article = &$this->getPublishedArticleByPublicArticleId($journalId, $articleId);
-		if (!isset($article)) $article = &$this->getPublishedArticleByArticleId((int) $articleId, $journalId);
+	function &getPublishedArticleByBestArticleId($journalId, $articleId, $simple = false) {
+		$article = &$this->getPublishedArticleByPublicArticleId($journalId, $articleId, $simple);
+		if (!isset($article)) $article = &$this->getPublishedArticleByArticleId((int) $articleId, $journalId, $simple);
 		return $article;
 	}
 
@@ -302,11 +318,26 @@ class PublishedArticleDAO extends DAO {
 	}
 
 	/**
-	 * creates and returns a published article object from a row
+	 * creates and returns a published article object from a row, including all supp files etc.
 	 * @param $row array
 	 * @return PublishedArticle object
 	 */
 	function &_returnPublishedArticleFromRow($row) {
+		$publishedArticle =& $this->_returnSimplePublishedArticleFromRow($row, false);
+
+		$publishedArticle->setSuppFiles($this->suppFileDao->getSuppFilesByArticle($row['article_id']));
+
+		if ($callHooks) HookRegistry::call('PublishedArticleDAO::_returnPublishedArticleFromRow', array(&$publishedArticle, &$row));
+		return $publishedArticle;
+	}
+
+	/**
+	 * creates and returns a published article object from a row, omitting supp files etc.
+	 * @param $row array
+	 * @param $callHooks boolean Whether or not to call hooks
+	 * @return PublishedArticle object
+	 */
+	function &_returnSimplePublishedArticleFromRow($row, $callHooks = true) {
 		$publishedArticle = &new PublishedArticle();
 		$publishedArticle->setPubId($row['pub_id']);
 		$publishedArticle->setIssueId($row['issue_id']);
@@ -316,14 +347,12 @@ class PublishedArticleDAO extends DAO {
 		$publishedArticle->setAccessStatus($row['access_status']);
 		$publishedArticle->setPublicArticleId($row['public_article_id']);
 
+		$publishedArticle->setGalleys($this->galleyDao->getGalleysByArticle($row['article_id']));
+
 		// Article attributes
 		$this->articleDao->_articleFromRow($publishedArticle, $row);
 
-		$publishedArticle->setGalleys($this->galleyDao->getGalleysByArticle($row['article_id']));
-
-		$publishedArticle->setSuppFiles($this->suppFileDao->getSuppFilesByArticle($row['article_id']));
-
-		HookRegistry::call('PublishedArticleDAO::_returnPublishedArticleFromRow', array(&$publishedArticle, &$row));
+		if ($callHooks) HookRegistry::call('PublishedArticleDAO::_returnSimplePublishedArticleFromRow', array(&$publishedArticle, &$row));
 
 		return $publishedArticle;
 	}

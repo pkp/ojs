@@ -68,7 +68,7 @@ class IssueHandler extends Handler {
 			} else {
 
 				$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
-				$publishedArticles = &$publishedArticleDao->getPublishedArticlesInSections($issue->getIssueId());
+				$publishedArticles = &$publishedArticleDao->getPublishedArticlesInSections($issue->getIssueId(), true);
 				$templateMgr->assign_by_ref('publishedArticles', $publishedArticles);
 				$issueTitle = $issueTitle;
 				$showToc = true;
@@ -157,7 +157,7 @@ class IssueHandler extends Handler {
 				$showToc = false;
 			} else {
 				$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
-				$publishedArticles = &$publishedArticleDao->getPublishedArticlesInSections($issue->getIssueId());
+				$publishedArticles = &$publishedArticleDao->getPublishedArticlesInSections($issue->getIssueId(), true);
 
 				$templateMgr->assign('publishedArticles', $publishedArticles);
 				$showToc = true;
