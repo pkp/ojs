@@ -320,9 +320,10 @@ class PublishedArticleDAO extends DAO {
 	/**
 	 * creates and returns a published article object from a row, including all supp files etc.
 	 * @param $row array
+	 * @param $callHooks boolean Whether or not to call hooks
 	 * @return PublishedArticle object
 	 */
-	function &_returnPublishedArticleFromRow($row) {
+	function &_returnPublishedArticleFromRow($row, $callHooks = true) {
 		$publishedArticle =& $this->_returnSimplePublishedArticleFromRow($row, false);
 
 		$publishedArticle->setSuppFiles($this->suppFileDao->getSuppFilesByArticle($row['article_id']));
