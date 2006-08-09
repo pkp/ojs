@@ -90,15 +90,17 @@ class TinyMCEPlugin extends GenericPlugin {
 		return file_exists(TINYMCE_JS_PATH . '/tiny_mce.js');
 	}
 
-	function getManagementVerbs() {
+	function getEnabled() {
 		$journal =& Request::getJournal();
 		$journalId = $journal?$journal->getJournalId():0;
-		$isEnabled = $this->getSetting($journalId, 'enabled');
+		return $this->getSetting($journalId, 'enabled');
+	}
 
+	function getManagementVerbs() {
 		$verbs = array();
 		if ($this->isMCEInstalled()) $verbs[] = array(
-			($isEnabled?'disable':'enable'),
-			Locale::translate($isEnabled?'manager.plugins.disable':'manager.plugins.enable')
+			($this->getEnabled()?'disable':'enable'),
+			Locale::translate($this->getEnabled()?'manager.plugins.disable':'manager.plugins.enable')
 		);
 		return $verbs;
 	}
@@ -106,7 +108,6 @@ class TinyMCEPlugin extends GenericPlugin {
 	function manage($verb, $args) {
 		$journal =& Request::getJournal();
 		$journalId = $journal?$journal->getJournalId():0;
-		$isEnabled = $this->getSetting($journalId, 'enabled');
 		switch ($verb) {
 			case 'enable':
 				$this->updateSetting($journalId, 'enabled', true);
