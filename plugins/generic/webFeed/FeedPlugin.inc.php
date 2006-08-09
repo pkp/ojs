@@ -18,7 +18,7 @@ import('classes.plugins.GenericPlugin');
 class FeedPlugin extends GenericPlugin {
 
 	function getName() {
-		return 'WebFeedsPlugin';
+		return 'WebFeedPlugin';
 	}
 	
 	function getDisplayName() {
@@ -121,9 +121,9 @@ class FeedPlugin extends GenericPlugin {
 			if ($LayoutManagerPlugin) {
 				// register or deregister the sidebar links
 	  			if ( $enabled )
-					$LayoutManagerPlugin->registerBlock($this->getName(), $this->getTemplatePath().'templates/links.tpl', 10);
+					$LayoutManagerPlugin->registerBlock($this->getDisplayName(), $this->getTemplatePath().'templates/links.tpl', 10);
 				else
-					$LayoutManagerPlugin->deRegisterBlock($this->getName());
+					$LayoutManagerPlugin->deRegisterBlock($this->getDisplayName());
 			}
 
 			return true;
