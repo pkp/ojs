@@ -43,21 +43,6 @@ class GatewayPlugin extends Plugin {
 	}
 
 	/**
-	 * Extend the {url ...} smarty to support gateway plugins.
-	 */
-	function smartyPluginUrl($params, &$smarty) {
-		$path = array($this->getCategory(), $this->getName());
-		if (is_array($params['path'])) {
-			$params['path'] = array_merge($path, $params['path']);
-		} elseif (!empty($params['path'])) {
-			$params['path'] = array_merge($path, array($params['path']));
-		} else {
-			$params['path'] = $path;
-		}
-		return $smarty->smartyUrl($params, $smarty);
-	}
-
-	/**
 	 * Display verbs for the management interface.
 	 */
 	function getManagementVerbs() {

@@ -74,21 +74,6 @@ class ImportExportPlugin extends Plugin {
 	}
 
 	/**
-	 * Extend the {url ...} smarty to support import/export plugins.
-	 */
-	function smartyPluginUrl($params, &$smarty) {
-		$path = array('plugin', $this->getName());
-		if (is_array($params['path'])) {
-			$params['path'] = array_merge($path, $params['path']);
-		} elseif (!empty($params['path'])) {
-			$params['path'] = array_merge($path, array($params['path']));
-		} else {
-			$params['path'] = $path;
-		}
-		return $smarty->smartyUrl($params, $smarty);
-	}
-
-	/**
 	 * Display the import/export plugin UI.
 	 * @param $args Array The array of arguments the user supplied.
 	 */
