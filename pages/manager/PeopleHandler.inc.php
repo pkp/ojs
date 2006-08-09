@@ -321,7 +321,7 @@ class PeopleHandler extends ManagerHandler {
 
 		$templateMgr = &TemplateManager::getManager();
 
-		if (!Validation::canAdminister($journal->getJournalId(), $userId)) {
+		if ($userId !== null && !Validation::canAdminister($journal->getJournalId(), $userId)) {
 			// We don't have administrative rights
 			// over this user. Display an error.
 			$templateMgr->assign('pageTitle', 'manager.people');
