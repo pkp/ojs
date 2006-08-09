@@ -341,6 +341,11 @@ span.highlight {
 	white-space: nowrap;
 }
 
+pre {
+	background-color: #F0F0E8;
+	color: #000;
+	font-size: 1.25em;
+}
 
 /**
  * Table styles
