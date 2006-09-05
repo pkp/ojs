@@ -59,6 +59,7 @@ class migrate extends CommandLineTool {
 			. "                  (E.g., \"/var/www/ojs\")\n"
 			. "options           importSubscriptions - import subscription type and subscriber\n"
 			. "                  data\n"
+			. "                  transcode - convert journal metadata from Latin1 to UTF8\n"
 			. "                  verbose - print additional debugging information\n";
 	}
 	
