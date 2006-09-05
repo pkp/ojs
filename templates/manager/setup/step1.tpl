@@ -32,7 +32,7 @@
 	</tr>
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="printIssn" key="manager.setup.printIssn"}</td>
-		<td width="80%" class="value"><input type="text" name="printIssn" id="onlineIssn" value="{$printIssn|escape}" size="8" maxlength="16" class="textField" /></td>
+		<td width="80%" class="value"><input type="text" name="printIssn" id="printIssn" value="{$printIssn|escape}" size="8" maxlength="16" class="textField" /></td>
 	</tr>
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="onlineIssn" key="manager.setup.onlineIssn"}</td>
