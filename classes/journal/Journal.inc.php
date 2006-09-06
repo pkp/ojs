@@ -45,7 +45,7 @@ class Journal extends DataObject {
 	 * @return array
 	 */
 	function &getSupportedLocaleNames() {
-		static $supportedLocales;
+		$supportedLocales =& $this->getData('supportedLocales');
 		
 		if (!isset($supportedLocales)) {
 			$supportedLocales = array();
