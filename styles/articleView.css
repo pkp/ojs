@@ -10,12 +10,12 @@
  */
 
 #body {
-	width: 580px;
+	width: 95%;
 	margin: 0 auto;
 }
 
 #main {
-	width: 580px;
+	width: 95%;
 	margin: 0;
 }
 
@@ -83,4 +83,21 @@ a.rtAction {
 	font-size: 0.9em;
 	text-transform: uppercase;
 	text-decoration: none;
+}
+
+/*
+*  Styles for XSLT Article Rendering
+*  (based on NLM DTD classes)
+*/
+
+table {
+	background-color: #F0F0E8;
+}
+
+table.bm {
+	border: 1px solid #000;
+}
+
+.tl-default, .tl-main-part {
+	font-weight: bold;
 }
