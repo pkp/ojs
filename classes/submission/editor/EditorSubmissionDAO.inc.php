@@ -330,8 +330,9 @@ class EditorSubmissionDAO extends DAO {
 			$editAssignments =& $editorSubmission->getEditAssignments();
 
 			if (empty($editAssignments) && !$editorSubmission->getSubmissionProgress()) {
-				$editorSubmissions[] = $editorSubmission;
+				$editorSubmissions[] =& $editorSubmission;
 			}
+			unset($editorSubmission);
 			$result->MoveNext();
 		}
 		$result->Close();
@@ -390,8 +391,9 @@ class EditorSubmissionDAO extends DAO {
 			$editAssignments =& $editorSubmission->getEditAssignments();
 
 			if (!empty($editAssignments) && $inReview && !$editorSubmission->getSubmissionProgress()) {
-				$editorSubmissions[] = $editorSubmission;
+				$editorSubmissions[] =& $editorSubmission;
 			}
+			unset($editorSubmission);
 			$result->MoveNext();
 		}
 		$result->Close();
@@ -458,8 +460,9 @@ class EditorSubmissionDAO extends DAO {
 			$editAssignments = $editorSubmission->getEditAssignments();
 
 			if ($inEditing && !empty($editAssignments) && !$editorSubmission->getSubmissionProgress()) {
-				$editorSubmissions[] = $editorSubmission;
+				$editorSubmissions[] =& $editorSubmission;
 			}
+			unset($editorSubmission);
 			$result->MoveNext();
 		}
 		$result->Close();
@@ -511,8 +514,9 @@ class EditorSubmissionDAO extends DAO {
 			$editorSubmission->setProofAssignment($proofAssignment);
 
 			if (!$editorSubmission->getSubmissionProgress()) {
-				$editorSubmissions[] = $editorSubmission;
+				$editorSubmissions[] =& $editorSubmission;
 			}
+			unset($editorSubmission);
 			$result->MoveNext();
 		}
 		$result->Close();
@@ -575,7 +579,7 @@ class EditorSubmissionDAO extends DAO {
 					}
 				}
 			}
-
+			unset($editorSubmission);
 			$result->MoveNext();
 		}
 		$result->Close();

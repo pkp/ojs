@@ -526,8 +526,9 @@ class SectionEditorSubmissionDAO extends DAO {
 			}
 
 			if ($row['can_review'] && $inReview && !$submission->getSubmissionProgress()) {
-				$submissions[] = $submission;
+				$submissions[] =& $submission;
 			}
+			unset($submission);
 			$result->MoveNext();
 		}
 
@@ -578,8 +579,9 @@ class SectionEditorSubmissionDAO extends DAO {
 			}
 
 			if ($row['can_edit'] && $notInReview && !$submission->getSubmissionProgress()) {
-				$submissions[] = $submission;
+				$submissions[] =& $submission;
 			}
+			unset($submission);
 			$result->MoveNext();
 		}
 
@@ -617,8 +619,9 @@ class SectionEditorSubmissionDAO extends DAO {
 			$submission = &$this->_returnSectionEditorSubmissionFromRow($result->GetRowAssoc(false));
 
 			if (!$submission->getSubmissionProgress()) {
-				$submissions[] = $submission;
+				$submissions[] =& $submission;
 			}
+			unset($submission);
 			$result->MoveNext();
 		}
 
@@ -676,7 +679,7 @@ class SectionEditorSubmissionDAO extends DAO {
 					}
 				}
 			}
-
+			unset($sectionEditorSubmission);
 			$result->MoveNext();
 		}
 
