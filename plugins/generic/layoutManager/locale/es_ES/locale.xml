@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2005 The Public Knowledge Project
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_ES (Español España) locale.
+  *
+  * Traducción de la version original 1.0 por Juan Pablo Alperin (juan@geeky.net) 2006/05/30
+  -->
+ 
+<locale name="es_ES" full_name="Español (España)">
+	<message key="plugins.generic.layoutmanager.displayName">Plugin de Gestión de Maquetación</message>
+	<message key="plugins.generic.layoutmanager.description">Este plugin le permite reordenar los distintos componentes de la maquetación.</message>
+	<message key="plugins.generic.layoutmanager.settings">Configuración</message>	
+	
+	<message key="plugins.generic.layoutmanager.form.twosidebars.description">Utilize las flechas para mover los componentes entre las tres áreas.  Elementos en el área izquierda apareceran en la barra izquierda, elementos en el área derecha apareceran en la barra derecha y elementos en el área superior no aparecerán en ningún lado.  Las flechas arriba y abajo de las áreas se pueden utilizar para cambiar el orden de los elementos.</message>	
+	<message key="plugins.generic.layoutmanager.form.onesidebar.description">Utilize las flechas para mover los componentes entre las dos áreas.  Elementos en el área derecha apareceran en la barra derecha y elementos en el área izquierda no aparecerán en ningún lado.  Las flechas arriba y abajo del área se pueden utilizar para cambiar el orden de los elementos.</message>	
+	<message key="plugins.generic.layoutmanager.form.onesidebar">Cambiar a solo una barra de costado (maquetación de dos columnas)</message>	
+	<message key="plugins.generic.layoutmanager.form.twosidebars">Agregar una segunda barra de costado (maquetación de tres columnas)</message>	
+
+	<message key="plugins.generic.layoutmanager.form.unselected">No Seleccionados</message>	
+	<message key="plugins.generic.layoutmanager.form.leftsidebar">Barra Izquierda</message>	
+	<message key="plugins.generic.layoutmanager.form.rightsidebar">Barra Derecha</message>	
+	<message key="plugins.generic.layoutmanager.form.OK">OK</message>	
+	<message key="plugins.generic.layoutmanager.form.preview">Previsualizar</message>		
+</locale>
