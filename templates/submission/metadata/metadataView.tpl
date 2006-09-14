@@ -34,6 +34,10 @@
 		<td class="value">{$author.affiliation|escape|default:"&mdash;"}</td>
 	</tr>
 	<tr valign="top">
+		<td class="label">{translate key="common.country"}</td>
+		<td class="value">{$author->getCountryLocalized()|escape|default:"&mdash;"}</td>
+	</tr>
+	<tr valign="top">
 		<td class="label">{translate key="user.biography"}</td>
 		<td class="value">{$author.biography|strip_unsafe_html|nl2br|default:"&mdash;"}</td>
 	</tr>

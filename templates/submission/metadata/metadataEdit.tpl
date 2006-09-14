@@ -65,6 +65,15 @@ function moveAuthor(dir, authorIndex) {
 		<td class="value"><input type="text" name="authors[{$authorIndex}][affiliation]" id="authors-{$authorIndex}-affiliation" value="{$author.affiliation|escape}" size="30" maxlength="255" class="textField" /></td>
 	</tr>
 	<tr valign="top">
+		<td class="label">{fieldLabel name="authors-$authorIndex-country" key="common.country"}</td>
+		<td class="value">
+			<select name="authors[{$authorIndex}][country]" id="authors-{$authorIndex}-country" class="selectMenu">
+				<option value=""></option>
+				{html_options options=$countries selected=$author.country|escape}
+			</select>
+		</td>
+	</tr>
+	<tr valign="top">
 		<td class="label">{fieldLabel name="authors-$authorIndex-email" required="true" key="user.email"}</td>
 		<td class="value"><input type="text" name="authors[{$authorIndex}][email]" id="authors-{$authorIndex}-email" value="{$author.email|escape}" size="30" maxlength="90" class="textField" /></td>
 	</tr>

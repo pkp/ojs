@@ -111,6 +111,7 @@ class MetadataForm extends Form {
 						'middleName' => $authors[$i]->getMiddleName(),
 						'lastName' => $authors[$i]->getLastName(),
 						'affiliation' => $authors[$i]->getAffiliation(),
+						'country' => $authors[$i]->getCountry(),
 						'email' => $authors[$i]->getEmail(),
 						'url' => $authors[$i]->getUrl(),
 						'biography' => $authors[$i]->getBiography()
@@ -131,12 +132,14 @@ class MetadataForm extends Form {
 		$settingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
 		$sectionDao = &DAORegistry::getDAO('SectionDAO');
+		$countryDao =& DAORegistry::getDAO('CountryDAO');
 		
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('articleId', isset($this->article)?$this->article->getArticleId():null);
 		$templateMgr->assign('journalSettings', $settingsDao->getJournalSettings($journal->getJournalId()));
 		$templateMgr->assign('rolePath', Request::getRequestedPage());
 		$templateMgr->assign('canViewAuthors', $this->canViewAuthors);
+		$templateMgr->assign('countries', $countryDao->getCountries());
 		$templateMgr->assign('helpTopicId','submission.indexingAndMetadata');
 		if ($this->article) {
 			$templateMgr->assign_by_ref('section', $sectionDao->getSection($this->article->getSectionId()));
@@ -226,6 +229,7 @@ class MetadataForm extends Form {
 				$author->setMiddleName($authors[$i]['middleName']);
 				$author->setLastName($authors[$i]['lastName']);
 				$author->setAffiliation($authors[$i]['affiliation']);
+				$author->setCountry($authors[$i]['country']);
 				$author->setEmail($authors[$i]['email']);
 				$author->setUrl($authors[$i]['url']);
 				$author->setBiography($authors[$i]['biography']);
