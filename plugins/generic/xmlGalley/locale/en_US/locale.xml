@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.generic.xmlGalley.displayName">XML Galley Plugin</message>
+	<message key="plugins.generic.xmlGalley.description">This plugin generates XHTML galleys from an XML article using XSLT.</message>
+
+	<message key="plugins.generic.xmlGalley.manager.settings">Settings</message>
+
+	<!-- XML Article Galleys Settings Management -->
+	<message key="plugins.generic.xmlGalley.settings.description"><![CDATA[<p>With this plugin, article galleys will be automatically rendered from an uploaded XML source file, using a specific XSL stylesheet transformation.</p>]]></message>
+	<message key="plugins.generic.xmlGalley.settings.renderer">XSLT Rendering Method</message>
+	<message key="plugins.generic.xmlGalley.settings.PHP5">PHP 5.0.0+ with XSL functions (libxslt)</message>
+	<message key="plugins.generic.xmlGalley.settings.PHP4">PHP 4.0.3+ with XSLT functions (Sablotron)</message>
+	<message key="plugins.generic.xmlGalley.settings.notAvailable">Not Available</message>
+
+	<message key="plugins.generic.xmlGalley.settings.externalXSLT">External command-line XSLT renderer (eg. Xalan)</message>
+	<message key="plugins.generic.xmlGalley.settings.externalXSLTDescription"><![CDATA[Enter the complete path to the XSLT renderer tool, with any required arguments.  Use %xsl to substitute the location of the XSL stylesheet file, and %xml to substitute the location of the XML source file; eg: <br/><pre>/usr/bin/java -jar ~/java/xalan.jar -HTML -IN %xml -XSL %xsl</pre>]]></message>
+	<message key="plugins.generic.xmlGalley.settings.externalXSLTTest">Test XSLT</message>
+	<message key="plugins.generic.xmlGalley.settings.externalXSLTSuccess">External XSLT test successful.</message>
+	<message key="plugins.generic.xmlGalley.settings.externalXSLTFailure">External XSLT test failed.</message>
+	<message key="plugins.generic.xmlGalley.settings.externalXSLTRequired">An external command-line XSLT processor must be specified.</message>
+
+	<message key="plugins.generic.xmlGalley.settings.stylesheet">XSL Stylesheet</message>
+	<message key="plugins.generic.xmlGalley.settings.xslNLM"><![CDATA[<a href="http://dtd.nlm.nih.gov/publishing/">NLM Journal Publishing DTD</a> &rarr; XHTML]]></message>
+	<message key="plugins.generic.xmlGalley.settings.customXSL">Custom XSL stylesheet</message>
+	<message key="plugins.generic.xmlGalley.settings.customXSLRequired">A custom XSL stylesheet file must be specified.</message>
+	<message key="plugins.generic.xmlGalley.settings.customXSLInvalid">The uploaded XSL file was not valid. Please check the file and try again.</message>
+
+</locale>
+

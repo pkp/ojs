@@ -1,0 +1,71 @@
+================================
+=== OJS XML Galley Plugin
+=== Version: 1.0
+=== Release date: September 1, 2006
+=== Author: MJ Suhonos <mj@robotninja.com>
+=== Contributions: Alf Eaton <alf@hubmed.org>
+================================
+
+About
+-----
+This plugin for OJS 2 allows for article galleys to be dynamically generated from an XML source file using XSLT.  The plugin contains built-in support for the NCBI/NLM Journal Publishing DTD ("Blue2" http://dtd.nlm.nih.gov/publishing/tag-library/2.2/), but can be used with any XSL that generates valid (X)HTML from an XML schema.
+
+License
+-------
+This plugin is licensed under the GNU General Public License v2. See the file COPYING for the complete terms of this license.
+
+System Requirements
+-------------------
+This plugin requires an XSLT processor; in order of preference:
+
+PHP 4.0.3+ with XSLT functions (Sablotron) - http://www.php.net/manual/en/ref.xslt.php
+-OR-
+PHP 5.0.0+ with XSL functions (libxslt) - http://www.php.net/manual/en/ref.xsl.php
+-OR-
+Any external XSLT processor, including (in order of preference):
+- libxslt (http://xmlsoft.org/XSLT/)
+- Sablotron (http://www.gingerall.org/sablotron.html)
+- Xalan-C / Xalan-Java (http://xalan.apache.org/index.html)
+- SAXON (http://saxon.sourceforge.net/)
+
+If you are using an external XSLT processor, you must know the proper syntax to execute an XSLT transformation from the command-line, including the full path to the executable, eg.
+- for libxslt:   "xsltproc [options] <stylesheet file> <xml file>"
+- for Sablotron: "~/bin/sabcmd [options] <stylesheet file> <xml file>"
+- for Xalan-J:   "/usr/bin/java -jar ~/java/xalan.jar -HTML -IN <xml file> -XSL <stylesheet file>"
+- etc.
+
+If you wish to use an XML schema other than the Blue2 DTD (eg. Erudit), you will require an XSL stylesheet that generates valid XHTML from that schema.  Please note that the XSL transformation must be contained within a single stylesheet; xsl:include and xsl:import elements will not work.
+
+Installation
+------------
+To install the plugin:
+- as Journal Manager, go into the "System Plugins" page and enable the XML Galley plugin.
+
+If either XSL or XSLT built-in PHP functions are available, dynamic XML article galleys will be enabled using the NLM Blue2 DTD XSL.  Otherwise you will have to configure an external XSLT processor via the plugin's "settings" page.
+
+Configuration
+------------
+Even if built-in PHP functions are available, the plugin can be configured to perform XSLT transformations using an external processor if desired. Please note that this is not recommended for performance reasons.  In addition, the plugin allows a custom XSL stylesheet file to be uploaded and used in lieu of the built-in DTD.
+
+This plugin makes use of the caching mechanisms built into OJS - It is *HIGHLY RECOMMENDED* that caching be enabled for OJS by the Site Manager when using this plugin.  XSLT is a very CPU-intensive process and you are likely to see poor performance if caching is not used.
+
+Usage
+-----
+Once enabled, the Journal Editor may upload XML files as article galleys during the submission editing process.  In addition, a custom CSS stylesheet, article images, and supplementary files may be uploaded as with a "regular" HTML galley.  As well, note that CSS styles and ids are produced in the XHTML output from the built-in XSL for use by style designers.  XML files that do not adhere to the NLM Blue2 DTD will not render correctly (or at all) with the built-in XSL.
+
+Known Issues
+------------
+- Due to the complexity of the NLM Blue2 DTD, there are likely XML implementations which do not render correctly using the built-in XSL.  In some cases, XHTML appearance may be incorrect, while unmatched XML elements will appear in red in the XHTML.  Please contact the author with the XML source file to help improve the XSL for future updates.
+- When using PHP 5.x with XSL functions, DTD definitions are requested over the network in order to resolve external entities.  This can cause a significant delay in the XSLT transform.  A possible solution using local catalog files for entity resolution is being investigated.
+- Dynamic generation of PDF using XSL-FO and an external FO processor (eg. Apache FOP) is not yet implemented.  This will be available in a future release.
+- All XSL is done using UTF-8 assuming that source XML documents are also UTF-8.  XML sources in other encodings (eg. Windows-1252), browser clients with different character sets (eg. ISO-8859-1), and strange combinations of these may produce unexpected results with special characters.
+- 
+
+Localization
+------------
+The built-in NLM Blue2 DTD XSL is currently only available in English.  Full localization is planned for a future release.
+
+Contact/Support
+---------------
+Please email the author for support, bugfixes, or comments.
+Email: <mj@robotninja.com>
