@@ -38,6 +38,7 @@ class HookRegistry {
 	function clear($hookName) {
 		$hooks = &HookRegistry::getHooks();
 		unset($hooks[$hookName]);
+		return $hooks;
 	}
 
 	/**
