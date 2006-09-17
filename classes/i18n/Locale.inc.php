@@ -14,139 +14,94 @@
  * $Id$
  */
 
+import('i18n.LocaleFile');
+
 define('LOCALE_REGISTRY_FILE', Config::getVar('general', 'registry_dir') . '/locales.xml');
 define('LOCALE_DEFAULT', Config::getVar('i18n', 'locale'));
 define('LOCALE_ENCODING', Config::getVar('i18n', 'client_charset'));
 
-class Locale {
-	var $caches;
+define('MASTER_LOCALE', 'en_US');
 
+// Error types for locale checking.
+// Note: Cannot use numeric symbols for the constants below because
+// array_merge_recursive doesn't treat numeric keys nicely.
+define('LOCALE_ERROR_MISSING_KEY',		'LOCALE_ERROR_MISSING_KEY');
+define('LOCALE_ERROR_EXTRA_KEY',		'LOCALE_ERROR_EXTRA_KEY');
+define('LOCALE_ERROR_SUSPICIOUS_LENGTH',	'LOCALE_ERROR_SUSPICIOUS_LENGTH');
+define('LOCALE_ERROR_DIFFERING_PARAMS',		'LOCALE_ERROR_DIFFERING_PARAMS');
+define('LOCALE_ERROR_MISSING_FILE',		'LOCALE_ERROR_MISSING_FILE');
+
+define('EMAIL_ERROR_MISSING_EMAIL',		'EMAIL_ERROR_MISSING_EMAIL');
+define('EMAIL_ERROR_EXTRA_EMAIL',		'EMAIL_ERROR_EXTRA_EMAIL');
+define('EMAIL_ERROR_DIFFERING_PARAMS',		'EMAIL_ERROR_DIFFERING_PARAMS');
+
+class Locale {
 	/**
 	 * Constructor.
 	 */
 	function Locale() {
 	}
 
-	function &_getCache($locale) {
-		static $caches;
-		if (!isset($caches)) {
-			$caches = array();
+	/**
+	 * Get a list of locale files currently registered, either in all
+	 * locales (in an array for each locale), or for a specific locale.
+	 * @param $locale string Locale identifier (optional)
+	 */
+	function &getLocaleFiles($locale = null) {
+		static $localeFiles;
+		if (!isset($localeFiles)) {
+			$localeFiles = array();
 		}
 
-		if (!isset($caches[$locale])) {
-			import('cache.CacheManager');
-			$cacheManager =& CacheManager::getManager();
-			$caches[$locale] =& $cacheManager->getCache(
-				'locale', $locale,
-				array('Locale', '_cacheMiss')
-			);
-
-			// Check to see if the cache is outdated.
-			// Only some kinds of caches track cache dates;
-			// if there's no date available (ie cachedate is
-			// null), we have to assume it's up to date.
-			$cacheTime = $caches[$locale]->getCacheTime();
-			if ($cacheTime !== null && $cacheTime < filemtime(Locale::getLocaleFilename($locale))) {
-				// This cache is out of date; flush it.
-				$caches[$locale]->flush();
-			}
+		if ($locale !== null) {
+			if (!isset($localeFiles[$locale])) $localeFiles[$locale] = array();
+			return $localeFiles[$locale];
 		}
-		return $caches[$locale];
-	}
-
-	function _cacheMiss(&$cache, $id) {
-		// Keep a secondary in-memory cache of all the cache-miss
-		// locales so that a couple of missed locale strings won't destroy
-		// the server.
-		static $missedLocales;
-		$locale = $cache->getCacheId();
-
-		$value = null;
-		if (!HookRegistry::call('Locale::_cacheMiss', array(&$id, &$locale, &$value))) {
-			if (!isset($missedLocales)) {
-				$missedLocales = array();
-			}
-
-			if (!isset($missedLocales[$locale])) {
-				$missedLocales[$locale] =& Locale::loadLocale($locale);
-				$cache->setEntireCache($missedLocales[$locale]);
-			}
-
-			$value = isset($missedLocales[$locale][$id])?$missedLocales[$locale][$id]:null;
-		}
-
-		return $value;
+		return $localeFiles;
 	}
 
 	/**
 	 * Translate a string using the selected locale.
-	 * Substitution works by replacing tokens like "{$foo}" with the value of
-	 * the parameter named "foo" (if supplied).
+	 * Substitution works by replacing tokens like "{$foo}" with the value
+	 * of the parameter named "foo" (if supplied).
 	 * @param $key string
 	 * @params $params array named substitution parameters
 	 * @params $locale string the locale to use
 	 * @return string
 	 */
 	function translate($key, $params = array(), $locale = null) {
-		if (!isset($locale)) {
-			$locale = Locale::getLocale();
+		if (!isset($locale)) $locale = Locale::getLocale();
+		if (($key = trim($key)) == '') return '';
+
+		$localeFiles =& Locale::getLocaleFiles($locale);
+		$value = '';
+		for ($i = 0; $i < count($localeFiles); $i++) { // By reference
+			$value = $localeFiles[$i]->translate($key, $params);
+			if ($value !== null) return $value;
 		}
 
-
-		$key = trim($key);
-		if (empty($key)) {
-			return '';
-		}
-		
-		$cache =& Locale::_getCache($locale);
-		$message = $cache->get($key);
-		if (!isset($message)) {
-			// Try to force loading the plugin locales.
-			$message = Locale::_cacheMiss($cache, $key);
-		}
-
-		if (isset($message)) {
-			if (!empty($params)) {
-				// Substitute custom parameters
-				foreach ($params as $key => $value) {
-					$message = str_replace("{\$$key}", $value, $message);
-				}
-			}
-			
-			// if client encoding is set to iso-8859-1, transcode string from utf8 since we store all XML files in utf8
-			if (LOCALE_ENCODING == "iso-8859-1") $message = utf8_decode($message);
-
-			return $message;
-			
-		} else {
-			// Add a missing key to the debug notes.
-			$notes =& Registry::get('system.debug.notes');
-			$notes[] = array('debug.notes.missingLocaleKey', array('key' => $key));
-		
-			// Add some octothorpes to missing keys to make them more obvious
-			return '##' . $key . '##';
-		}
+		// Add a missing key to the debug notes.
+		$notes =& Registry::get('system.debug.notes');
+		$notes[] = array('debug.notes.missingLocaleKey', array('key' => $key));
+	
+		// Add some octothorpes to missing keys to make them more obvious
+		return '##' . $key . '##';
 	}
 
 	/**
 	 * Get the filename for the locale file given a locale name.
 	 */
-	function getLocaleFilename($locale) {
+	function getMainLocaleFilename($locale) {
 		return "locale/$locale/locale.xml";
 	}
 
 	/**
-	 * Load localized strings for the user's current locale from an XML file.
-	 * TODO: Split across several XML files for easier maintainability?
-	 * @param $locale string the locale to load
-	 * @return array associative array of keys and localized strings
+	 * Initialize the locale system.
 	 */
-	function &loadLocale($locale = null, $localeFile = null) {
-		$localeData = array();
-
-		if (!isset($locale)) {
-			$locale = Locale::getLocale();
-		}
+	function initialize() {
+		// Use defaults if locale info unspecified.
+		$locale = Locale::getLocale();
+		$localeFile = Locale::getMainLocaleFilename($locale);
 
 		$sysLocale = $locale . '.' . LOCALE_ENCODING;
 		if (!@setlocale(LC_ALL, $sysLocale, $locale)) {
@@ -155,38 +110,37 @@ class Locale {
 				setlocale(LC_ALL, $locale);
 			}
 		}
-		
-		if ($localeFile === null) $localeFile = Locale::getLocaleFilename($locale);
-		
-		// Add a locale load to the debug notes.
-		$notes =& Registry::get('system.debug.notes');
-		$notes[] = array('debug.notes.localeLoad', array('localeFile' => $localeFile));
-		
-		// Reload localization XML file
-		$xmlDao = &new XMLDAO();
-		$data = $xmlDao->parseStruct($localeFile, array('message'));
-	
-		// Build array with ($key => $string)
-		if (isset($data['message'])) {
-			foreach ($data['message'] as $messageData) {
-				$localeData[$messageData['attributes']['key']] = $messageData['value'];
-			}
-		}
-		
-		return $localeData;	
+
+		Locale::registerLocaleFile($locale, $localeFile);
 	}
-	
+
 	/**
-	 * Check if a locale is valid.
-	 * @param $locale string
-	 * @return boolean
+	 * Register a locale file against the current list.
+	 * @param $locale string Locale key
+	 * @param $filename string Filename to new locale XML file
+	 * @param $addToTop boolean Whether to add to the top of the list (true)
+	 * 	or the bottom (false). Allows overriding.
 	 */
-	function isLocaleValid($locale) {
-		return isset($locale) && !empty($locale) && file_exists('locale/' . $locale . '/locale.xml');
+	function &registerLocaleFile ($locale, $filename, $addToTop = false) {
+		$localeFiles =& Locale::getLocaleFiles($locale);
+		$localeFile =& new LocaleFile($locale, $filename);
+		if (!$localeFile->isValid()) {
+			$localeFile = null;
+			return $localeFile;
+		}
+		if ($addToTop) {
+			// Work-around: unshift by reference.
+			array_unshift($localeFiles, '');
+			$localeFiles[0] =& $localeFile;
+		} else {
+			$localeFiles[] =& $localeFile;
+		}
+		return $localeFile;
 	}
-	
+
 	/**
-	 * Return the key name of the user's currently selected locale (default is "en_US" for U.S. English).
+	 * Return the key name of the user's currently selected locale (default
+	 * is "en_US" for U.S. English).
 	 * @return string 
 	 */
 	function getLocale() {
@@ -240,7 +194,17 @@ class Locale {
 		}
 		return $currentLocale;
 	}
-	
+
+	/**
+	 * Check if the supplied locale is currently installable.
+	 * @param $locale string
+	 * @return boolean
+	 */
+	function isLocaleValid($locale) {
+		if (empty($locale)) return false;
+		if (file_exists(Locale::getMainLocaleFilename($locale))) return true;
+		return false;
+	}
 	
 	/**
 	 * Retrieve the primary locale of the current context.
@@ -265,6 +229,9 @@ class Locale {
 		return $locale;
 	}
 
+	/**
+	 * Get the cache object for the current list of all locales.
+	 */
 	function &_getAllLocalesCache() {
 		static $cache;
 		if (!isset($cache)) {
@@ -329,7 +296,7 @@ class Locale {
 	}
 	
 	/**
-	 * Check if the current locale is one of the journal's alternate locales.
+	 * Check if the current locale is one of the journal's alternate locales
 	 * @return int the alternate # (or 0, if no match).
 	 */
 	function isAlternateJournalLocale($journalId) {
@@ -358,7 +325,6 @@ class Locale {
 		return $alternateLocaleNum;
 	}
 	
-	// FIXME Make this more flexible by determining what to do from an XML file?
 	/**
 	 * Uninstall support for an existing locale.
 	 * @param $locale string
@@ -400,7 +366,163 @@ class Locale {
 		Locale::uninstallLocale($locale);
 		Locale::installLocale($locale);
 	}
-	
+
+	/**
+	 * Test all locale files for the supplied locale against the supplied
+	 * reference locale, returning an array of errors.
+	 * @param $locale string Name of locale to test
+	 * @param $referenceLocale string Name of locale to test against
+	 * @return array
+	 */
+	function testLocale($locale, $referenceLocale) {
+		$localeFile =& new LocaleFile($locale, Locale::getMainLocaleFilename($locale));
+		$referenceLocaleFile =& new LocaleFile($referenceLocale, Locale::getMainLocaleFilename($referenceLocale));
+
+		$errors = $localeFile->testLocale($referenceLocaleFile);
+		unset($localeFile);
+		unset($referenceLocaleFile);
+
+		$plugins =& PluginRegistry::loadAllPlugins();
+		foreach (array_keys($plugins) as $key) {
+			$plugin =& $plugins[$key];
+			$localeFile =& new LocaleFile($locale, $plugin->getLocaleFilename($locale));
+			$referenceLocaleFile =& new LocaleFile($referenceLocale, $plugin->getLocaleFilename($referenceLocale));
+			$errors = array_merge_recursive($errors, $localeFile->testLocale($referenceLocaleFile));
+			unset($localeFile);
+			unset($referenceLocaleFile);
+			unset($plugin);
+		}
+		return $errors;
+	}
+
+	/**
+	 * Test the emails in the supplied locale against those in the supplied
+	 * reference locale.
+	 * @param $locale string
+	 * @param $referenceLocale string
+	 * @return array List of errors
+	 */
+	function testEmails($locale, $referenceLocale) {
+		import('install.Installer'); // Bring in data dir
+
+		$errors = array(
+		);
+
+		$xmlParser =& new XMLParser();
+		$referenceEmails =& $xmlParser->parse(
+			INSTALLER_DATA_DIR . "/data/locale/$referenceLocale/email_templates_data.xml"
+		);
+		$emails =& $xmlParser->parse(
+			INSTALLER_DATA_DIR . "/data/locale/$locale/email_templates_data.xml"
+		);
+		$emailsTable =& $emails->getChildByName('table');
+		$referenceEmailsTable =& $referenceEmails->getChildByName('table');
+		$matchedReferenceEmails = array();
+
+		// Pass 1: For all translated emails, check that they match
+		// against reference translations.
+		for ($emailIndex = 0; ($email =& $emailsTable->getChildByName('row', $emailIndex)) !== null; $emailIndex++) { 
+			// Extract the fields from the email to be tested.
+			$fields = Locale::extractFields($email);
+
+			// Locate the reference email and extract its fields.
+			for ($referenceEmailIndex = 0; ($referenceEmail =& $referenceEmailsTable->getChildByName('row', $referenceEmailIndex)) !== null; $referenceEmailIndex++) {
+				$referenceFields = Locale::extractFields($referenceEmail);
+				if ($referenceFields['email_key'] == $fields['email_key']) break;
+			}
+
+			// Check if a matching reference email was found.
+			if (!isset($referenceEmail) || $referenceEmail === null) {
+				$errors[EMAIL_ERROR_EXTRA_EMAIL][] = array(
+					'key' => $fields['email_key']
+				);
+				continue;
+			}
+
+			// We've successfully found a matching reference email.
+			// Compare it against the translation.
+			$bodyParams = Locale::getParameterNames($fields['body']);
+			$referenceBodyParams = Locale::getParameterNames($referenceFields['body']);
+			if ($bodyParams !== $referenceBodyParams) {
+				$errors[EMAIL_ERROR_DIFFERING_PARAMS][] = array(
+					'key' => $fields['email_key'],
+					'mismatch' => array_diff($bodyParams, $referenceBodyParams)
+				);
+			}
+
+			$subjectParams = Locale::getParameterNames($fields['subject']);
+			$referenceSubjectParams = Locale::getParameterNames($referenceFields['subject']);
+
+			if ($subjectParams !== $referenceSubjectParams) {
+				$errors[EMAIL_ERROR_DIFFERING_PARAMS][] = array(
+					'key' => $fields['email_key'],
+					'mismatch' => array_diff($subjectParams, $referenceSubjectParams)
+				);
+			}
+
+			$matchedReferenceEmails[] = $fields['email_key'];
+
+			unset($email);
+			unset($referenceEmail);
+		}
+
+		// Pass 2: Make sure that there are no missing translations.
+		for ($referenceEmailIndex = 0; ($referenceEmail =& $referenceEmailsTable->getChildByName('row', $referenceEmailIndex)) !== null; $referenceEmailIndex++) {
+			// Extract the fields from the email to be tested.
+			$referenceFields = Locale::extractFields($referenceEmail);
+			if (!in_array($referenceFields['email_key'], $matchedReferenceEmails)) {
+				$errors[EMAIL_ERROR_MISSING_EMAIL][] = array(
+					'key' => $referenceFields['email_key']
+				);
+			}
+		}
+
+		return $errors;
+	}
+
+	/**
+	 * Given a parent XML node, extract child nodes of the following form:
+	 * <field name="something">some_value</field>
+	 * ... into an associate array $array['something'] = 'some_value';
+	 * @param $node object
+	 * @return array
+	 */
+	function extractFields(&$node) {
+		$returner = array();
+		foreach ($node->getChildren() as $field) if ($field->getName() === 'field') {
+			$returner[$field->getAttribute('name')] = $field->getValue();
+		}
+		return $returner;
+	}
+
+	/**
+	 * Determine whether or not the lengths of the two supplied values are
+	 * "similar".
+	 * @param $reference string
+	 * @param $value string
+	 * @return boolean True if the lengths match very roughly.
+	 */
+	function checkLengths($reference, $value) {
+		$referenceLength = String::strlen($reference);
+		$length = String::strlen($value);
+		$lengthDifference = abs($referenceLength - $length);
+		if ($referenceLength == 0) return false;
+		if ($lengthDifference / $referenceLength > 1 && $lengthDifference > 10) return false;
+		return true;
+	}
+
+	/**
+	 * Given a locale string, get the list of parameter references of the
+	 * form {$myParameterName}.
+	 * @param $source string
+	 * @return array
+	 */
+	function getParameterNames($source) {
+		$matches = null;
+		String::regexp_match_get('/({\$[^}]+})/' /* '/{\$[^}]+})/' */, $source, $matches);
+		array_shift($matches); // Knock the top element off the array
+		return $matches;
+	}
 }
 
 ?>
