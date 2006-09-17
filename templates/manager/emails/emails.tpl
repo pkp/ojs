@@ -48,7 +48,7 @@
 		</td>
 	</tr>
 	<tr>
-		<td colspan="5" class="{if !$emailTemplates->eof()}end{/if}separator">&nbsp;</td>
+		<td colspan="5" class="{if $emailTemplates->eof()}end{/if}separator">&nbsp;</td>
 	</tr>
 {/iterate}
 {if $emailTemplates->wasEmpty()}
