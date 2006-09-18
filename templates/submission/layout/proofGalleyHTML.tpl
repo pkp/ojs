@@ -23,6 +23,7 @@
 	{foreach from=$stylesheets item=cssUrl}
 	<link rel="stylesheet" href="{$cssUrl}" type="text/css" />
 	{/foreach}
+	{$additionalHeadData}
 </head>
 <body>
 	{$galley->getHTMLContents()}

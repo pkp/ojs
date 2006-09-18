@@ -23,6 +23,7 @@
 	{foreach from=$stylesheets item=cssUrl}
 	<link rel="stylesheet" href="{$cssUrl}" type="text/css" />
 	{/foreach}
+	{$additionalHeadData}
 </head>
 <body>
 	<table width="100%" height="100%">

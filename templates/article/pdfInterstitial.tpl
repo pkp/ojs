@@ -27,6 +27,7 @@
 	<link rel="stylesheet" href="{$cssUrl}" type="text/css" />
 	{/foreach}
 	<meta http-equiv="refresh" content="2;URL={url op="viewFile" path=$articleId|to_array:$galley->getGalleyId()}"/>
+	{$additionalHeadData}
 
 </head>
 <body>

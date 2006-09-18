@@ -88,6 +88,9 @@ import('plugins.HookRegistry');
 // Initialize string wrapper library
 String::init();
 
+// Load the main locale file
+Locale::initialize();
+
 // Load the generic plugins
 PluginRegistry::loadCategory('generic');
 

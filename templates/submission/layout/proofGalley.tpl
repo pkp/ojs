@@ -25,6 +25,7 @@
 	{foreach from=$stylesheets item=cssUrl}
 	<link rel="stylesheet" href="{$cssUrl}" type="text/css" />
 	{/foreach}
+	{$additionalHeadData}
 </head>
 {url|assign:"galleyUrl" op="proofGalleyFile" path=$articleId|to_array:$galleyId}
 <frameset rows="40,*" frameborder="0" framespacing="0" border="0">

@@ -29,6 +29,18 @@ class PluginRegistry {
 	}
 
 	/**
+	 * Get all plugins in a single array.
+	 */
+	function getAllPlugins() {
+		$plugins =& PluginRegistry::getPlugins();
+		$allPlugins = array();
+		foreach ($plugins as $category => $list) {
+			if (is_array($list)) $allPlugins += $list;
+		}
+		return $allPlugins;
+	}
+
+	/**
 	 * Register a plugin with the registry in the given category.
 	 * @param $category String the name of the category to extend
 	 * @param $plugin The instantiated plugin to add
@@ -82,7 +94,10 @@ class PluginRegistry {
 					// is in a CVS tree; in this case the CVS
 					// directory will throw an error.)
 					$plugin = @include("$pluginPath/index.php");
-					if ($plugin) PluginRegistry::register($category, $plugin, $pluginPath);
+					if ($plugin) {
+						PluginRegistry::register($category, $plugin, $pluginPath);
+						unset($plugin);
+					}
 				}
 			}
 			closedir($handle);
@@ -101,6 +116,16 @@ class PluginRegistry {
 			'importexport',
 			'gateways'
 		);
+	}
+
+	/**
+	 * Load all plugins in the system and return them in a single array.
+	 */
+	function loadAllPlugins() {
+		foreach (PluginRegistry::getCategories() as $category) {
+			PluginRegistry::loadCategory($category);
+		}
+		return PluginRegistry::getAllPlugins();
 	}
 }
 ?>
