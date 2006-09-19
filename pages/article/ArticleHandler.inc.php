@@ -334,7 +334,7 @@ class ArticleHandler extends Handler {
 			$subscriptionRequired = IssueAction::subscriptionRequired($issue);
 			
 			// Check if login is required for viewing.
-			if (!Validation::isLoggedIn() && $journalSettingsDao->getSetting($journalId,'restrictArticleAccess')) {
+			if (!Validation::isLoggedIn() && $journalSettingsDao->getSetting($journalId,'restrictArticleAccess') && isset($galleyId) && $galleyId != 0) {
 				Validation::redirectLogin();
 			}
 	
