@@ -156,6 +156,31 @@ class CmsSettingsForm extends Form {
 			$currentHeading = "";
 		}
 
+		// Enable TinyMCE with specific params
+		$additionalHeadData = $templateMgr->get_template_vars('additionalHeadData');
+
+		$journal =& Request::getJournal();
+
+		import('file.JournalFileManager');
+		$journalFileManager =& new JournalFileManager($journal);
+		
+		$tinyMCE_script = '
+		<script language="javascript" type="text/javascript" src="'.Request::getBaseUrl().'/'.TINYMCE_JS_PATH.'/tiny_mce.js"></script>
+		<script language="javascript" type="text/javascript">
+			tinyMCE.init({
+			mode : "textareas",
+			plugins: "save, table, advimage",
+			relative_urls : false, 		
+			document_base_url : "'.Request::url('', 'manager', 'files').'/content/", 
+			theme : "advanced",
+			theme_advanced_layout_manager : "SimpleLayout",
+			theme_advanced_buttons1 : "save, formatselect, bold, italic, underline, justifyleft, justifycenter, justifyright, justifyfull, bullist, numlist, outdent, indent, code",
+			theme_advanced_buttons2 : "image, link, unlink",
+			theme_advanced_buttons3 : "tablecontrols"
+			});
+		</script>';
+
+		$templateMgr->assign('additionalHeadData', $additionalHeadData."\n".$tinyMCE_script);
 		$templateMgr->assign('cmsPluginToc', $headings);		
 		$templateMgr->assign('currentHeading', $currentHeading );
 		$templateMgr->assign('currentContent', $currentContent );
