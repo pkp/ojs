@@ -210,8 +210,9 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 		while (!$journals->eof()) {
 			$journal = &$journals->next();
 
-			// Send reminders based on current date			
-			$this->sendJournalReminders($journal, $todayDate);	
+			// Send reminders based on current date
+			$this->sendJournalReminders($journal, $todayDate);
+			unset($journal);
 		}
 
 		// If it is the first day of a month but previous month had only
@@ -235,8 +236,9 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 			while (!$journals->eof()) {
 				$journal = &$journals->next();
 
-				// Send reminders for simulated 31st day of short month		
-				$this->sendJournalReminders($journal, $curDate);	
+				// Send reminders for simulated 31st day of short month
+				$this->sendJournalReminders($journal, $curDate);
+				unset($journal);
 			}
 		}
 
@@ -253,8 +255,9 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 			while (!$journals->eof()) {
 				$journal = &$journals->next();
 
-				// Send reminders for simulated 30th day of February		
-				$this->sendJournalReminders($journal, $curDate);	
+				// Send reminders for simulated 30th day of February
+				$this->sendJournalReminders($journal, $curDate);
+				unset($journal);
 			}
 
 			// Check if it's a leap year
@@ -267,8 +270,9 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 				while (!$journals->eof()) {
 					$journal = &$journals->next();
 
-					// Send reminders for simulated 29th day of February		
-					$this->sendJournalReminders($journal, $curDate);	
+					// Send reminders for simulated 29th day of February
+					$this->sendJournalReminders($journal, $curDate);
+					unset($journal);
 				}
 			}
 		}

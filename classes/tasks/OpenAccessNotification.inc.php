@@ -108,7 +108,8 @@ class OpenAccessNotification extends ScheduledTask {
 			$journal = &$journals->next();
 
 			// Send notifications based on current date			
-			$this->sendNotifications($journal, $todayDate);	
+			$this->sendNotifications($journal, $todayDate);
+			unset($journal);
 		}
 
 		// If it is the first day of a month but previous month had only
@@ -133,7 +134,8 @@ class OpenAccessNotification extends ScheduledTask {
 				$journal = &$journals->next();
 
 				// Send reminders for simulated 31st day of short month		
-				$this->sendNotifications($journal, $curDate);	
+				$this->sendNotifications($journal, $curDate);
+				unset($journal);
 			}
 		}
 
@@ -151,7 +153,8 @@ class OpenAccessNotification extends ScheduledTask {
 				$journal = &$journals->next();
 
 				// Send reminders for simulated 30th day of February		
-				$this->sendNotifications($journal, $curDate);	
+				$this->sendNotifications($journal, $curDate);
+				unset($journal);
 			}
 
 			// Check if it's a leap year
@@ -165,7 +168,8 @@ class OpenAccessNotification extends ScheduledTask {
 					$journal = &$journals->next();
 
 					// Send reminders for simulated 29th day of February		
-					$this->sendNotifications($journal, $curDate);	
+					$this->sendNotifications($journal, $curDate);
+					unset($journal);
 				}
 			}
 		}
