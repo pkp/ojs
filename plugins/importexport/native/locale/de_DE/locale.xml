@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Weitergabe nach GNU GPL v2. Vollständiger Text s. docs/COPYING.
+  *
+  * Regionalisierungszeichenketten für die de_DE (deutsche) Regionaleinstellung.
+  *
+  * $Id$
+  -->
+ 
+<locale name="de_DE" full_name="German">
+	<message key="plugins.importexport.native.displayName">Beiträge &amp; Ausgaben XML Einschub</message>
+	<message key="plugins.importexport.native.description">Beiträge und Ausgaben exportieren</message>
+
+	<message key="plugins.importexport.native.cliUsage"><![CDATA[Usage: {$scriptName} {$pluginName} [command] ...
+Befehle:
+	import [xmlDateiname] [Zeitschriftpfad] [Benutzername] ...
+	export [xmlDateiname] [Zeitschriftpfad] Beiträge [Beitragssignatur1] [Beitragssignatur2] ...
+	export [xmlDateiname] [Zeitschriftpfad] Beitrag [Beitragssignatur]
+	export [xmlDateiname] [Zeitschriftpfad] Ausgaben [Ausgabesignatur1] [Ausgabesignatur2] ...
+	export [xmlDateiname] [Zeitschriftpfad] Ausgabe [Ausgabesignatur]
+
+Der Import von Daten erfordert weitere Parameter, je nach dem Wurzelelement (Root Node) des XML Dokuments.
+
+Falls das Wurzelelement <article> oder <articles> sind zusätzliche Parameter vonnöten.
+Folgende Formate sind gültig:
+
+{$scriptName} {$pluginName} import [xmlDateiname] [Zeitschriftpfad] [Benutzername]
+	Ausgabesignatur [Ausgabesignatur] Rubrikbezeichnung [Rubrikbezeichnung]
+
+{$scriptName} {$pluginName} import [xmlDateiname] [Zeitschriftpfad] [Benutzername]
+	Ausgabesignatur [Ausgabesignatur] Rubrikbezeichnung [Bezeichnung]
+
+{$scriptName} {$pluginName} import [xmlDateiname] [Zeitschriftpfad]
+	Ausgabesignatur [Ausgabesignatur] Rubrikabkürzung [Abkürz]
+]]></message>
+	<message key="plugins.importexport.native.export">Daten exportieren</message>
+	<message key="plugins.importexport.native.export.issues">Ausgaben exportieren</message>
+	<message key="plugins.importexport.native.export.sections">Rubriken exportieren</message>
+	<message key="plugins.importexport.native.export.articles">Beiträge exportieren</message>
+
+	<message key="plugins.importexport.native.selectIssue">Ausgabe auswählen</message>
+	<message key="plugins.importexport.native.selectArticle">Beitrag auswählen</message>
+
+	<message key="plugins.importexport.native.import.articles">Beiträge importieren</message>
+	<message key="plugins.importexport.native.import.articles.description">Die zu importierende Datei enthält einen oder mehrere Beiträge. Sie müssen eine Ausgabe und eine Rubrik wählen, in die Sie die Beiträge importieren wollen; falls Sie nicht alle in dieselbe Rubrik oder Ausgabe importieren wollen, müssen Sie sie in einzelne XML Dateien trennen oder nach dem Import in die gewünschten Rubriken und Ausgaben verschieben.</message>
+
+	<message key="plugins.importexport.native.import">Daten importieren</message>
+	<message key="plugins.importexport.native.import.description">Dieser Einschub unterstützt Datenimport definiert durch den native.dtd Documententyp. Unterstützte Wurzelelemente sind &amp;lt;Beitrag&amp;gt;, &amp;lt;Beiträge&amp;gt;, &amp;lt;Ausgabe&amp;gt;, und &amp;lt;Ausgaben&amp;gt;.</message>
+
+	<message key="plugins.importexport.native.import.error">Importfehler</message>
+	<message key="plugins.importexport.native.import.error.description">Ein Fehler oder mehrere beim Import. Prüfen Sie bitte, ob das Format der Importdatei den Angaben entspricht. Einzelheiten zu Importfehlern weiter unten.</message>
+
+	<message key="plugins.importexport.native.cliError">FEHLER:</message>
+	<message key="plugins.importexport.native.error.unknownUser">Der angegebene Benutzer "{$userName}" existiert nicht.</message>
+	<message key="plugins.importexport.native.error.unknownJournal">Der angegebene Zeitschriftpfad  "{$journalPath}" existiert nicht.</message>
+	<message key="plugins.importexport.native.export.error.couldNotWrite">Konnte nicht in die Datei "{$fileName}" schreiben.</message>
+	<message key="plugins.importexport.native.export.error.sectionNotFound">Keine dem Kennzeichen "{$sectionIdentifier}" entsprechende Rubrik.</message>
+	<message key="plugins.importexport.native.export.error.issueNotFound">Keine der Signatur "{$issueId}" entsprechende Ausgabe.</message>
+	<message key="plugins.importexport.native.export.error.articleNotFound">Kein der Signatur "{$articleId}" entsprechender Beitrag.</message>
+	<message key="plugins.importexport.native.import.error.unsupportedRoot">Der Einschub unterstützt das eingegebene Wurzelelement  "{$rootName}" nicht. Prüfen Sie, ob die Datei in der korrekten Form vorliegt und versuchen Sie's erneut.</message>
+
+	<message key="plugins.importexport.native.import.error.titleMissing">Der Titel der Ausgabe fehlte.</message>
+	<message key="plugins.importexport.native.import.error.defaultTitle">FEHLENDER TITEL</message>
+	<message key="plugins.importexport.native.import.error.unknownIdentificationType">Unbekannter Signaturtyp "{$identificationType}" angegeben im "Signatur" Attribut des "Ausgabe" Elementes der Ausgabe "{$issueTitle}".</message>
+	<message key="plugins.importexport.native.import.error.invalidBooleanValue">Ungültiger Boolscher Wert  "{$value}" angegeben. Verwenden Sie bitte  "true" oder "false".</message>
+	<message key="plugins.importexport.native.import.error.invalidDate">Ungültiges Datum "{$value}".</message>
+	<message key="plugins.importexport.native.import.error.unknownEncoding">Daten in unbekannter Kodierung "{$type}".</message>
+	<message key="plugins.importexport.native.import.error.couldNotWriteFile">Speicherung lokaler Kopie von "{$originalName}" nicht möglich.</message>
+	<message key="plugins.importexport.native.import.error.illegalUrl">Die angegebene URL "{$url}" für die Ausgabe "{$issueTitle}" war ungültig. Web-Importe unterstützen nur http, https, ftp, or ftps.</message>
+	<message key="plugins.importexport.native.import.error.unknownSuppFileType">Unbekannte Zusatzdatei "{$suppFileType}".</message>
+	<message key="plugins.importexport.native.import.error.couldNotCopy">Angegebene URL "{$url}" konnte nicht in lokaler Datei gespeichert werden.</message>
+	<message key="plugins.importexport.native.import.error.duplicatePublicId">Die öffentliche Signatur für die Import-Ausgabe "{$issueTitle}" wird bereits von einer anderen Ausgabe "{$otherIssueTitle}" verwendet.</message>
+	<message key="plugins.importexport.native.import.error.sectionTitleMissing">Rubriktitel fehlte für Ausgabe "{$issueTitle}". Prüfen Sie bitte, ob das  XML Dokument der richtigen  DTD entspricht.</message>
+	<message key="plugins.importexport.native.import.error.sectionMismatch">Die Rubrik "{$sectionTitle}" der Ausgabe "{$issueTitle}" existiert in der Zeitschrift, aber die angegebene Abkürzung ("{$sectionAbbrev}") ist die einer anderen Rubrik.</message>
+	<message key="plugins.importexport.native.import.error.articleTitleMissing">Beitragtitel fehlte in Ausgabe "{$issueTitle}" , Rubrik "{$sectionTitle}". Prüfen Sie bitte, dass das XML-Dokument mit der entsprechenden DTD in Einklang steht, und dass ein Titel in der Regionaleinstellung der Zeitschrift eingegeben wurde.</message>
+	<message key="plugins.importexport.native.import.error.articleTitleLocaleUnsupported">Beitragstitel ("{$articleTitle}") für Ausgabe "{$issueTitle}" wurde in einer Regionaleinstellung ("{$locale}") eingegeben, die diese Zeitschrift nicht unterstützt.</message>
+	<message key="plugins.importexport.native.import.error.articleAbstractLocaleUnsupported">Kurzfassung für Beitrag "{$articleTitle}" in Ausgabe "{$issueTitle}" wurde in einer Regionaleinstellung ("{$locale}") eingegeben, die diese Zeitschrift nicht unterstützt.</message>
+	<message key="plugins.importexport.native.import.error.galleyLabelMissing">Beitrag "{$articleTitle}" in Rubrik "{$sectionTitle}" der Ausgabe "{$issueTitle}" hatte kein Fahnenkennzeichen.</message>
+	<message key="plugins.importexport.native.import.error.suppFileMissing">Für Beitrag "{$articleTitle}" in Rubrik "{$sectionTitle}" der Ausgabe "{$issueTitle}" fehlte eine Zusatzdatei.</message>
+	<message key="plugins.importexport.native.import.error.galleyFileMissing">Beitrag "{$articleTitle}" in Rubrik "{$sectionTitle}" der Ausgabe "{$issueTitle}" hatte keine Fahnendatei.</message>
+
+	<message key="plugins.importexport.native.import.success">Import erfolgreich</message>
+	<message key="plugins.importexport.native.import.success.description">Der Import war erfolgreich. Liste der importierten Elemente untenstehend.</message>
+</locale>

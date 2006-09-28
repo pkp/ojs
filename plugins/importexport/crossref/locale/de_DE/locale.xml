@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Weitergabe nach GNU GPL v2. Vollständiger Text s. docs/COPYING.
+  *
+  * Regionalisierungszeichenketten für die de_DE (deutsche) Regionaleinstellung.
+  *
+  * $Id$
+  -->
+ 
+<locale name="de_DE" full_name="German">
+	<message key="plugins.importexport.crossref.displayName">CrossRef XML Export Einschub</message>
+	<message key="plugins.importexport.crossref.description">Metadaten des Beitrags im CrossRef XML Format exportieren.</message>
+	
+	<message key="plugins.importexport.crossref.export">Daten exportieren</message>
+	<message key="plugins.importexport.crossref.export.issues">Bände exportieren</message>
+	<message key="plugins.importexport.crossref.export.selectIssue">Zu exportierenden Band auswählen.</message>
+	<message key="plugins.importexport.crossref.export.articles">Beitrag exportieren</message>
+	<message key="plugins.importexport.crossref.export.selectArticle">Zu exportierenden Beitrag auswählen.</message>
+	
+	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[Gebrauch: 
+{$scriptName} {$pluginName} [xmlFileName] [journal_path] Beiträge [articleId1] [articleId2] ...
+{$scriptName} {$pluginName} [xmlFileName] [journal_path] Band [issueId]
+]]></message>
+	<message key="plugins.importexport.crossref.cliError">FEHLER:</message>
+
+	<message key="plugins.importexport.crossref.export.error.issueNotFound">Kein Band unter der angegebenen Signatur "{$issueId}" gefunden.</message>
+	<message key="plugins.importexport.crossref.export.error.articleNotFound">Kein Beitrag unter der angegebenen Signatur "{$articleId}" gefunden.</message>
+
+	<message key="plugins.importexport.crossref.errors.noDOIprefix">Zur Verwendung dieses Einschubs muss ein gültiges DOI Präfix bei der Einrichtung der Zeitschrift angegeben werden.</message>
+</locale>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Weitergabe nach GNU GPL v2. Vollständiger Text s. docs/COPYING..
+  *
+  * Regionalisierungszeichenketten für die de_DE (deutsche) Regionaleinstellung.
+  *
+  * $Id$
+  -->
+ 
+<locale name="de_DE" full_name="German">
+	<message key="plugins.gateways.resolver.displayName">Auflöser Einschub</message>
+	<message key="plugins.gateways.resolver.description">Dieser Einschub löst Verweise auf</message>
+	<message key="plugins.gateways.resolver.errors.errorMessage">Kann zum gelieferten Verweis nichts finden. Vergewissern Sie sich, dass die Angabe vollständig ist und sich auf ein Element in dieser OJS-Anwendung bezieht.</message>
+	<message key="plugins.gateways.resolver.exportHoldings">Exportangaben</message>
+</locale>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Weitergabe nach GNU GPL v2. Vollständiger Text s. docs/COPYING.
+  *
+  * Regionlasierungszeichenketten für die de_DE (deutsche) Regionaleinstellung.
+  *
+  * $Id$
+  -->
+ 
+<locale name="de_DE" full_name="German">
+	<message key="plugins.gateways.googleScholar.displayName">Einschub für Google Scholar Portal</message>
+	<message key="plugins.gateways.googleScholar.description">Der Einschub liefert direkt Daten über eine bestimmte Zeitschrift an Google Scholar zur Indexierung und für die Suche.</message>
+	<message key="plugins.gateways.googleScholar.settings">Einstellungen</message>
+	<message key="plugins.gateways.googleScholar.settings.description"><![CDATA[<p>Der Google Scholar Einschub macht dem Datensammler von Google Daten für jeweils eine Zeitschrift zugänglich. Wenn der Einschub aktiviert ist, ist das Inhaltsseite (die aka Herausgeberinformation) über <span class="highlight">{$directoryUrl}</span> zugänglich.</p>
+<p>Google Scholar verlangt bestimmte Angaben, die in OJS optional sind. Vergewissern Sie sich, dass ihre Angaben mit Googles Erfordernissen im Einklang stehen: Klicken Sie auf Datenprüfung.</p>]]></message>
+	<message key="plugins.gateways.googleScholar.checkData">Datenprüfung</message>
+	<message key="plugins.gateways.googleScholar.errors">Fehlermeldungen</message>
+	<message key="plugins.gateways.googleScholar.errors.noErrors">Keine Fehler.</message>
+
+	<message key="plugins.gateways.googleScholar.settings.publisherName">Herausgebername</message>
+	<message key="plugins.gateways.googleScholar.settings.publisherLocation">Herausgeberstandort</message>
+	<message key="plugins.gateways.googleScholar.settings.publisherResultName">Herausgeberproduktname</message>
+	<message key="plugins.gateways.googleScholar.settings.contact">Emailkontakt</message>
+	<message key="plugins.gateways.googleScholar.settings.addContact">Emailkontakt hinzufügen</message>
+
+	<!-- Error message -->
+	<message key="plugins.gateways.googleScholar.errors.noPublisherName">Herausgeber nicht angegeben. Angabe ist erforderlich.</message>
+	<message key="plugins.gateways.googleScholar.errors.noContacts">Emailkontakte fehlen oder sind ungültig. Wenigstens ein Kontakt muss angegeben werden und alle angegebenen müssen gültig sein.</message>
+	<message key="plugins.gateways.googleScholar.errors.noIssn">ISSN der Zeitschrift nicht angegeben. S. Zeitschrifteinrichtung, Schritt 1.</message>
+	<message key="plugins.gateways.googleScholar.errors.errorMessage">Google Scholar Daten können nicht exportiert werden. Der Google Scholar Einschub muss richtig konfiguriert sein. Für entsprechende Hinweise verwenden Sie bitte die Datenprüffunktion des Zeitschriftverwalters.</message>
+</locale>

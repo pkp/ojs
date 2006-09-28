@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Weitergabe nach GNU GPL v2. Vollständiger Text s. docs/COPYING.
+  *
+  * Regionalisierungszeichenketten für die de_DE (deutsche) Regionaleinstellung.
+  *
+  * $Id$
+  -->
+ 
+<locale name="de_DE" full_name="German">
+	<message key="plugins.importexport.pubmed.displayName">PubMed XML Exporteinschub</message>
+	<message key="plugins.importexport.pubmed.description">Beitragsmetadaten im PubMed XML Format für die Indexierung in MEDLINE exportieren.</message>
+	
+	<message key="plugins.importexport.pubmed.export">Daten exportieren</message>
+	<message key="plugins.importexport.pubmed.export.issues">Ausgaben exportieren</message>
+	<message key="plugins.importexport.pubmed.export.selectIssue">Ausgabe für Export auswählen.</message>
+	<message key="plugins.importexport.pubmed.export.articles">Beiträge exportieren</message>
+	<message key="plugins.importexport.pubmed.export.selectArticle">Beiträge für Export auswählen.</message>
+	
+	<message key="plugins.importexport.pubmed.cliUsage"><![CDATA[Gebrauch: 
+{$scriptName} {$pluginName} [xmlDateiname] [Zeitschriftpfad] Beiträge [Beitragssignatur1] [Beitragssignatur2] ...
+{$scriptName} {$pluginName} [xmlDateiname] [Zeitschriftpfad] Ausgabe [Ausgabesignatur]
+]]></message>
+	<message key="plugins.importexport.pubmed.cliError">FEHLER:</message>
+
+	<message key="plugins.importexport.pubmed.export.error.issueNotFound">Keine Ausgabe mit der eingegebenen Signatur "{$issueId}".</message>
+	<message key="plugins.importexport.pubmed.export.error.articleNotFound">Kein Beitrag mit der eingegebenen Signatur "{$articleId}".</message>
+
+
+</locale>

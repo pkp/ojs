@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Weitergabe nach GNU GPL v2. Vollständiger Text s. docs/COPYING.
+  *
+  * Regionalisierungszeichenketten für die de_DE (Deutsche) Regionaleinstellung.
+  *
+  * $Id$
+  -->
+ 
+<locale name="de_DE" full_name="German">
+	<message key="plugins.importexport.sample.displayName">Beispiel Import/Exporteinschub</message>
+	<message key="plugins.importexport.sample.description">Dieser Einschub liefert ein Beispiel für die Implementierung bei der Entwicklung von Import/Exporteinschüben. Nur so und für sich allein macht er wenig Sinn.</message>
+
+	<message key="plugins.importexport.sample.selectIssue.short">Ausgabe auswählen</message>
+	<message key="plugins.importexport.sample.selectIssue.long">Wählen Sie eine zu exportierende Ausgabe.</message>
+</locale>

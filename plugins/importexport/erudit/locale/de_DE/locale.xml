@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Weitergabe nach GNU GPL v2. Vollständiger Text s. docs/COPYING.
+  *
+  * Regionalisierungszeichenketten für die de_DE (deutsche) Regionaleinstellung.
+  *
+  * $Id$
+  -->
+ 
+<locale name="de_DE" full_name="German">
+	<message key="plugins.importexport.erudit.displayName">Erudit Beitrag Export Einschub</message>
+	<message key="plugins.importexport.erudit.description">Beiträge über die englische Erudit DTD exportieren</message>
+
+	<message key="plugins.importexport.erudit.cliUsage"><![CDATA[Gebrauch: {$scriptName} {$pluginName} [xmlFileName] [journalPath] [articleId] [galleyLabel]
+]]></message>
+	<message key="plugins.importexport.erudit.export">Daten exportieren</message>
+	<message key="plugins.importexport.erudit.export.issues">Ausgaben exportieren</message>
+	<message key="plugins.importexport.erudit.export.sections">Rubriken exportieren</message>
+	<message key="plugins.importexport.erudit.export.articles">Beiträge exportieren</message>
+
+	<message key="plugins.importexport.erudit.selectIssue">Ausgabe auswählen</message>
+	<message key="plugins.importexport.erudit.selectArticle">Beitrag auswählen</message>
+
+	<message key="plugins.importexport.erudit.cliError">FEHLER:</message>
+	<message key="plugins.importexport.erudit.error.unknownJournal">Der angegebene Zeitschriftenpfad  "{$journalPath}", existiert nicht.</message>
+	<message key="plugins.importexport.erudit.export.error.couldNotWrite">Konnte in die Datei "{$fileName}" nicht schreiben.</message>
+	<message key="plugins.importexport.erudit.export.error.articleNotFound">Kein Beitrag zur angegebenen Signatur "{$articleId}".</message>
+	<message key="plugins.importexport.erudit.export.error.galleyNotFound">Keine Fahne zum angegebenen Fahnenkennzeichen "{$galleyLabel}".</message>
+
+	<message key="plugins.importexport.erudit.unavailable">Nicht verfügbar</message>
+</locale>

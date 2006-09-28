@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Weitergabe nach GNU GPL v2. Vollständiger Text s. docs/COPYING.
+  *
+  * LDAP Berechtigungsnachweiseinschub, Regionalisierungszeichenketten für die de_DE (deutsche) Regionaleinstellung.
+  *
+  * $Id$
+  -->
+ 
+<locale name="de_DE" full_name="German">
+	<message key="plugins.auth.ldap.displayName">LDAP</message>
+	<message key="plugins.auth.ldap.description">Dieser Einschub ermöglicht es, den Berechtigungsnachweis über eine externe LDAP Datenquelle zu beziehen und Benutzerkonten mit dieser Quelle zu synchronisieren.</message>
+	
+	<message key="plugins.auth.ldap.settings">LDAP Einstellungen</message>
+	<message key="plugins.auth.ldap.settings.hostname">Name des Hostservers</message>
+	<message key="plugins.auth.ldap.settings.hostname.description">z.B. "ldap.beispiel.com", or "ldaps://ldap.beispiel.com" (bei Verwendung von SSL)</message>
+	<message key="plugins.auth.ldap.settings.port">Serverport</message>
+	<message key="plugins.auth.ldap.settings.port.description">Optional. Standardeinstellungen 389 (LDAP) oder 636 (LDAP über SSL))</message>
+	<message key="plugins.auth.ldap.settings.basedn">Basis-DN</message>
+	<message key="plugins.auth.ldap.settings.basedn.description">z.B. "ou=people,dc=beispiel,dc=com"</message>
+	<message key="plugins.auth.ldap.settings.managerdn">Verwalter DN</message>
+	<message key="plugins.auth.ldap.settings.managerdn.description">z.B., "cn=Verwalter,dc=beispiel,dc=com"</message>
+	<message key="plugins.auth.ldap.settings.managerpwd">Verwalter-Passwort</message>
+	<message key="plugins.auth.ldap.settings.managerpwd.description">Verwalter DN und Passwort werden nur gebraucht, wenn die Profil/Passwort Synchronisierung oder Benutzer-Einrichtungsoptionen aktiviert sind. Falls LDAP nur zum Berechtigungsnachweis verwendet wird, können diese Optionen entfallen.</message>
+	<message key="plugins.auth.ldap.settings.pwhash">Passwortverschlüsselung</message>
+	<message key="plugins.auth.ldap.settings.pwhash.description">Hashformat für im Server zu speichernde Passwörter. SSHA wird empfohlen (erfordert PHP >= 4.3.0).</message>
+	<message key="plugins.auth.ldap.settings.saslopt">SASL Einstellungen (optional)</message>
+	<message key="plugins.auth.ldap.settings.sasl">Verwenden Sie SASL anstelle von einfachem Berechtigungsnachweis(PHP >= 5 erforderlich)</message>
+	<message key="plugins.auth.ldap.settings.saslmech">SASL-Mechanismus</message>
+	<message key="plugins.auth.ldap.settings.saslmech.description">z.B., "DIGEST-MD5"</message>
+	<message key="plugins.auth.ldap.settings.saslrealm">Bereich</message>
+	<message key="plugins.auth.ldap.settings.saslauthzid">Erforderliche Berechtigungs ID</message>
+	<message key="plugins.auth.ldap.settings.saslprop">SASL Sicherheitseigenschaften</message>
+</locale>

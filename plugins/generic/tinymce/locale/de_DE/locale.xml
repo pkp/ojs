@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Weitergabe nach GNU GPL v2. Vollständiger Text s. docs/COPYING.
+  *
+  * Regionalisierungszeichenketten für die de_DE (deutsche) Regionaleinstellung.
+  *
+  * $Id$
+  -->
+ 
+<locale name="de_DE" full_name="German">
+	<message key="plugins.generic.tinymce.name">TinyMCE Einschub</message>
+	<message key="plugins.generic.tinymce.description"><![CDATA[Dieser Einschub aktiviert die WSYWIG Redaktion von OJS Textfeldern mit der <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a> Textverarbeitung.]]></message>
+	<message key="plugins.generic.tinymce.descriptionDisabled"><![CDATA[Dieser Einschub aktiviert die WSYWIG Redaktion von OJS Textfeldern mit der <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a> Textverarbeitung. <strong>TinyMCE ist nicht unbedingt eingerichtet; installieren Sie bitte die Textverarbeitung in {$tinyMcePath}.</strong>]]></message>
+</locale>

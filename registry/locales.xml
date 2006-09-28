@@ -23,6 +23,7 @@
 ]>
 
 <locales>
+	<locale key="de_DE" name="Deutsch (Deutschland)"/>
 	<locale key="en_US" name="English"/>
 	<locale key="es_ES" name="Español (España)"/>
 	<locale key="fr_CA" name="Français (Canada)"/>

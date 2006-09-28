@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Weitergabe nach GNU GPL v2. Vollständiger Text s. docs/COPYING.
+  *
+  * Einschub Kurzfassungen Dissertationen Regionalisierungszeichenketten für die de_DE (deutsche) Regionaleinstellung.
+  *
+  * $Id$
+  -->
+ 
+<locale name="de_DE" full_name="German">
+	<message key="plugins.generic.thesis.displayName">Dissertationen Kurzfassungen</message>
+	<message key="plugins.generic.thesis.description">Anregen und Veröffentlichen von Kurzfassungen von Dissertationen.</message>
+
+	<!-- Dissertationen Kurzfassungen Verwaltung -->
+	<message key="plugins.generic.thesis.manager.settings">Einstellungen</message>
+	<message key="plugins.generic.thesis.manager.theses">Dissertationenkurzfassungen</message>
+	<message key="plugins.generic.thesis.manager.status">Status</message>
+	<message key="plugins.generic.thesis.manager.status.inactive">Inaktiv</message>
+	<message key="plugins.generic.thesis.manager.status.active">Aktiv</message>
+	<message key="plugins.generic.thesis.manager.degree">Grad</message>
+	<message key="plugins.generic.thesis.manager.degree.masters">Masters</message>
+	<message key="plugins.generic.thesis.manager.degree.doctorate">Doktor</message>
+	<message key="plugins.generic.thesis.manager.dateApproved">Datum der Annahme</message>
+	<message key="plugins.generic.thesis.manager.studentName">Name der/des Dissertantin/en</message>
+	<message key="plugins.generic.thesis.manager.title">Titel</message>
+	<message key="plugins.generic.thesis.manager.confirmDelete">Sind Sie sicher, dass Sie diese Kurzfassung dauerhaft löschen wollen?</message>
+	<message key="plugins.generic.thesis.manager.noneCreated">Keine Kurzfassung erstellt.</message>
+	<message key="plugins.generic.thesis.manager.create">Neue Kurzfassung erstellen</message>
+	<message key="plugins.generic.thesis.manager.createTitle">Erstellen</message>
+	<message key="plugins.generic.thesis.manager.edit">Kurzfassung ändern</message>
+	<message key="plugins.generic.thesis.manager.editTitle">Ändern</message>
+	<message key="plugins.generic.thesis.manager.form.status">Status</message>
+	<message key="plugins.generic.thesis.manager.form.statusRequired">Die Statusangabe für eine Kurzfassung ist erforderlich.</message>
+	<message key="plugins.generic.thesis.manager.form.statusValid">Wählen Sie bitte eine gültige Angabe.</message>
+	<message key="plugins.generic.thesis.manager.form.degree">Grad</message>
+	<message key="plugins.generic.thesis.manager.form.degreeRequired">Die Gradangabe ist erforderlich.</message>
+	<message key="plugins.generic.thesis.manager.form.degreeValid">Wählen Sie bitte eine gültige Gradangabe.</message>
+	<message key="plugins.generic.thesis.manager.form.department">Institut</message>
+	<message key="plugins.generic.thesis.manager.form.departmentRequired">Die Institutsangabe ist erforderlich.</message>
+	<message key="plugins.generic.thesis.manager.form.university">Universität</message>
+	<message key="plugins.generic.thesis.manager.form.universityRequired">Die Angabe der Universität ist erforderlich.</message>
+	<message key="plugins.generic.thesis.manager.form.dateApproved">Datum der Annahme</message>
+	<message key="plugins.generic.thesis.manager.form.dateApprovedRequired">Die Datumsangabe ist erforderlich.</message>
+	<message key="plugins.generic.thesis.manager.form.dateApprovedValid">Wählen Sie bitte ein gültiges Datum.</message>
+	<message key="plugins.generic.thesis.manager.form.title">Titel</message>
+	<message key="plugins.generic.thesis.manager.form.titleRequired">Die Titelangabe ist erforderlich.</message>
+	<message key="plugins.generic.thesis.manager.form.abstract">Kurzfassung</message>
+	<message key="plugins.generic.thesis.manager.form.abstractRequired">Eine Kurzfassung ist erforderlich.</message>
+	<message key="plugins.generic.thesis.manager.form.abstractInstructions"><![CDATA[Absätze durch freie Zeilen trennen. Setzen Sie den Text zwischen &lt;b&gt;&lt;/b&gt;, &lt;i&gt;&lt;/i&gt;, und &lt;u&gt;&lt;/u&gt; Kode für Fettschrift, Kursiv und Unterstreichen (i.e. dieses &lt;i&gt;Wort&lt;/i&gt; erscheint kursiv.)]]></message>
+	<message key="plugins.generic.thesis.manager.form.url">URL</message>
+	<message key="plugins.generic.thesis.manager.form.urlInstructions">Falls die Dissertation im Internet veröffentlicht, Angabe mit http://, ftp://, usw. beginnen (i.e. http://www.sfu.ca/Pfad/zu/Diss.pdf).</message>
+	<message key="plugins.generic.thesis.manager.form.studentFirstName">Dissertant Vorname</message>
+	<message key="plugins.generic.thesis.manager.form.studentFirstNameRequired">Der Vorname ist erforderlich.</message>
+	<message key="plugins.generic.thesis.manager.form.studentLastName">Dissertant Nachname</message>
+	<message key="plugins.generic.thesis.manager.form.studentLastNameRequired">Der Nachname ist erforderlich.</message>
+	<message key="plugins.generic.thesis.manager.form.studentMiddleName">Dissertant zweiter Vorname</message>
+	<message key="plugins.generic.thesis.manager.form.studentEmail">Dissertant Email</message>
+	<message key="plugins.generic.thesis.manager.form.studentEmailValid">Gültige Emailangabe erforderlich.</message>
+	<message key="plugins.generic.thesis.manager.form.supervisorFirstName">Betreuer Vorname</message>
+	<message key="plugins.generic.thesis.manager.form.supervisorFirstNameRequired">Der Vorname ist erforderlich.</message>
+	<message key="plugins.generic.thesis.manager.form.supervisorLastName">Betreuer Nachname</message>
+	<message key="plugins.generic.thesis.manager.form.supervisorLastNameRequired">Der Nachname ist erforderlich.</message>
+	<message key="plugins.generic.thesis.manager.form.supervisorMiddleName">Betreuer zweiter Vorname</message>
+	<message key="plugins.generic.thesis.manager.form.supervisorEmail">Betreuer Email</message>
+	<message key="plugins.generic.thesis.manager.form.supervisorEmailValid">Gültige Emailadresse erforderlich.</message>
+	<message key="plugins.generic.thesis.manager.form.saveAndCreateAnother">Speichern und weitere erstellen</message>
+
+	<!-- Dissertationen Kurzfassungen Einstellungsverwaltung -->
+	<message key="plugins.generic.thesis.settings.description"><![CDATA[<p>Mit diesem Einschub können Dissertanten Kurzfassungen ihrer Dissertationen über ein Internetformular bei der Zeitschrift einreichen.</p><p>Der Betreuer der Dissertation wird automatisch per Email in Kenntnis gesetzt und gebeten, die Richtigkeit der übermittelten Information zu bestätigen. Sie/er wird aufgefordert, eine Email an untenstehende Adresse für Dissertationen Kurzfassungen zu schicken. Dies muss die Adresse eines Zeitschriftverwalters sein. Der kann dann das Protokoll redigieren und den Status von 'Inaktiv' zu 'Aktiv' ändern. Damit steht die Kurzfassung den Lesern der Zeitschrift zur Verfügung.]]></message>
+	<message key="plugins.generic.thesis.settings.thesisContact">Dissertationen-Kurzfassungen-Adresse</message>
+	<message key="plugins.generic.thesis.settings.thesisIntroduction">Einleitende Bemerkung</message>
+	<message key="plugins.generic.thesis.settings.thesisIntroductionDescription">Eine einleitende Bemerkung erscheint oben auf der Seite der Dissertationen-Kurzfassungen.</message>
+	<message key="plugins.generic.thesis.settings.thesisNameRequired">Eine Adresse für Kurzfassungen muss angegeben werden.</message>
+	<message key="plugins.generic.thesis.settings.thesisEmailRequired">Eine Emailadresse für Kurzfassungen ist erforderlich.</message>
+
+	<!-- Dissertationen Kurzfassungen -->
+	<message key="plugins.generic.thesis.theses">Dissertationen Kurzfassungen</message>
+	<message key="plugins.generic.thesis.headerLink"><![CDATA[Dissertationen&nbsp;Kurzfassungen]]></message>
+	<message key="plugins.generic.thesis.submit">Kurzfassung einreichen</message>
+	<message key="plugins.generic.thesis.submitLink">Kurzfassungen Webadresse</message>
+	<message key="plugins.generic.thesis.submitButton">Einreichen</message>
+	<message key="plugins.generic.thesis.view">Kurzfassung ansehen</message>
+	<message key="plugins.generic.thesis.viewTitle">Kurzfassung Titel</message>
+	<message key="plugins.generic.thesis.noneExist">Keine Kurzfassungen veröffentlicht.</message>
+	<message key="plugins.generic.thesis.abstract">Kurzfassung</message>
+	<message key="plugins.generic.thesis.studentFullName">{$lastName}, {$firstName} {$middleName}</message>
+	<message key="plugins.generic.thesis.form.introduction">Bei Eingang des folgenden Formulars geht eine Email an den Betreuer der Dissertation. Er wird gebeten, die Richtigkeit der Angaben zu prüfen. Sobald seine bestätigende Antwort vorliegt, wird die Kurzfassung im Internet erscheinen. </message>
+	<message key="plugins.generic.thesis.form.status">Status</message>
+	<message key="plugins.generic.thesis.form.statusValid">Wählen Sie bitte einen gültigen Status.</message>
+	<message key="plugins.generic.thesis.form.degree">Grad</message>
+	<message key="plugins.generic.thesis.form.degreeRequired">Die Gradangabe ist erforderlich.</message>
+	<message key="plugins.generic.thesis.form.degreeValid">Wählen Sie bitte eine gültige Gradangabe.</message>
+	<message key="plugins.generic.thesis.form.department">Institut</message>
+	<message key="plugins.generic.thesis.form.departmentRequired">Die Institutsangabe ist erforderlich.</message>
+	<message key="plugins.generic.thesis.form.university">Universität</message>
+	<message key="plugins.generic.thesis.form.universityRequired">Die Angabe der Universität ist erforderlich.</message>
+	<message key="plugins.generic.thesis.form.dateApproved">Annahmedatum</message>
+	<message key="plugins.generic.thesis.form.dateApprovedRequired">Das Annahmedatum muss angegeben werden.</message>
+	<message key="plugins.generic.thesis.form.dateApprovedValid">Wählen Sie bitte ein gültiges Datum.</message>
+	<message key="plugins.generic.thesis.form.title">Titel</message>
+	<message key="plugins.generic.thesis.form.titleRequired">Ein Titel muss angegeben werden.</message>
+	<message key="plugins.generic.thesis.form.abstract">Kurzfassung</message>
+	<message key="plugins.generic.thesis.form.abstractRequired">Die Kurzfassung ist erforderlich.</message>
+	<message key="plugins.generic.thesis.form.abstractInstructions"><![CDATA[Absätze durch freie Zeilen trennen. Setzen Sie den Text zwischen &lt;b&gt;&lt;/b&gt;, &lt;i&gt;&lt;/i&gt;, und &lt;u&gt;&lt;/u&gt; Kode für Fettschrift, Kursiv und Unterstreichen (i.e. dieses &lt;i&gt;Wort&lt;/i&gt; erscheint kursiv.)]]></message>
+	<message key="plugins.generic.thesis.form.url">URL</message>
+	<message key="plugins.generic.thesis.form.urlInstructions">Falls die Dissertation im Internet veröffentlicht, Angabe mit http://, ftp://, usw. beginnen (i.e. http://www.sfu.ca/Pfad/zu/Diss.pdf).</message>
+	<message key="plugins.generic.thesis.form.studentFirstName">Dissertant Vorname</message>
+	<message key="plugins.generic.thesis.form.studentFirstNameRequired">Ein Vorname ist erforderlich.</message>
+	<message key="plugins.generic.thesis.form.studentLastName">Dissertant Nachname</message>
+	<message key="plugins.generic.thesis.form.studentLastNameRequired">Der Nachname muss angegeben werden.</message>
+	<message key="plugins.generic.thesis.form.studentMiddleName">Dissertant zweiter Vorname</message>
+	<message key="plugins.generic.thesis.form.studentEmail">Dissertant Email</message>
+	<message key="plugins.generic.thesis.form.studentEmailValid">Eine gültige Emailadresse ist erforderlich.</message>
+	<message key="plugins.generic.thesis.form.supervisorFirstName">Betreuer Vorname</message>
+	<message key="plugins.generic.thesis.form.supervisorFirstNameRequired">Ein Vorname muss angegeben werden.</message>
+	<message key="plugins.generic.thesis.form.supervisorLastName">Betreuer Nachname</message>
+	<message key="plugins.generic.thesis.form.supervisorLastNameRequired">Ein Nachname muss angegeben werden.</message>
+	<message key="plugins.generic.thesis.form.supervisorMiddleName">Betreuer zweiter Vorname</message>
+	<message key="plugins.generic.thesis.form.supervisorEmail">Betreuer Email</message>
+	<message key="plugins.generic.thesis.form.supervisorEmailValid">Eine gültige Emailadresse ist erforderlich.</message>
+	<message key="plugins.generic.thesis.form.saveAndCreateAnother">Speichern und weitere erstellen</message>
+
+</locale>
