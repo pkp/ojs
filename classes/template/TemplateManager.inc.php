@@ -541,6 +541,12 @@ class TemplateManager extends Smarty {
 	function smartyPageLinks($params, &$smarty) {
 		$iterator = $params['iterator'];
 		$name = $params['name'];
+		if (isset($params['anchor'])) {
+			$anchor = $params['anchor'];
+			unset($params['anchor']);
+		} else {
+			$anchor = null;
+		}
 		unset($params['iterator']);
 		unset($params['name']);
 
@@ -570,14 +576,14 @@ class TemplateManager extends Smarty {
 				$value .= "<b>$i</b>&nbsp;";
 			} else {
 				$params[$paramName] = $i;
-				$value .= '<a href="' . Request::url(null, null, null, Request::getRequestedArgs(), $params) . '">' . $i . '</a>&nbsp;';
+				$value .= '<a href="' . Request::url(null, null, null, Request::getRequestedArgs(), $params, $anchor) . '">' . $i . '</a>&nbsp;';
 			}
 		}
 		if ($page < $pageCount) {
 			$params[$paramName] = $page + 1;
-			$value .= '<a href="' . Request::url(null, null, null, Request::getRequestedArgs(), $params) . '">&gt;</a>&nbsp;';
+			$value .= '<a href="' . Request::url(null, null, null, Request::getRequestedArgs(), $params, $anchor) . '">&gt;</a>&nbsp;';
 			$params[$paramName] = $pageCount;
-			$value .= '<a href="' . Request::url(null, null, null, Request::getRequestedArgs(), $params) . '">&gt;&gt;</a>&nbsp;';
+			$value .= '<a href="' . Request::url(null, null, null, Request::getRequestedArgs(), $params, $anchor) . '">&gt;&gt;</a>&nbsp;';
 		}
 
 		return $value;
