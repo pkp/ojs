@@ -28,6 +28,8 @@
 
 <p><a class="action" href="{url op="enrollSearch" path=$articleId}">{translate key="sectionEditor.review.enrollReviewer"}</a>&nbsp;|&nbsp;<a class="action" href="{url op="createReviewer" path=$articleId}">{translate key="sectionEditor.review.createReviewer"}</a></p>
 
+<a name="reviewers"></a>
+
 <table class="listing" width="100%">
 {assign var=numCols value=7}
 {if $rateReviewerOnQuality}
@@ -95,7 +97,7 @@
 {else}
 	<tr>
 		<td colspan="2" align="left">{page_info iterator=$reviewers}</td>
-		<td colspan="{$numCols-2}" align="right">{page_links name="reviewers" iterator=$reviewers searchField=$searchField searchMatch=$searchMatch search=$search dateFromDay=$dateFromDay dateFromYear=$dateFromYear dateFromMonth=$dateFromMonth dateToDay=$dateToDay dateToYear=$dateToYear dateToMonth=$dateToMonth}</td>
+		<td colspan="{$numCols-2}" align="right">{page_links anchor="reviewers" name="reviewers" iterator=$reviewers searchField=$searchField searchMatch=$searchMatch search=$search dateFromDay=$dateFromDay dateFromYear=$dateFromYear dateFromMonth=$dateFromMonth dateToDay=$dateToDay dateToYear=$dateToYear dateToMonth=$dateToMonth}</td>
 	</tr>
 {/if}
 </table>

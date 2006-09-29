@@ -62,6 +62,7 @@
 
 <div class="separator"></div>
 
+<a name="submissionNotes"></a>
 
 {if $noteViewType == "edit"}
 <h3>{translate key="submission.notes"}</h3>
@@ -158,7 +159,7 @@
 {else}
 	<tr>
 		<td colspan="3" align="left">{page_info iterator=$submissionNotes}</td>
-		<td colspan="3" align="right">{page_links name="submissionNotes" iterator=$submissionNotes}</td>
+		<td colspan="3" align="right">{page_links anchor="submissionNotes" name="submissionNotes" iterator=$submissionNotes}</td>
 	</tr>
 {/if}
 </table>

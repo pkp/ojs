@@ -27,6 +27,8 @@
 
 <p>{foreach from=$alphaList item=letter}<a href="{url op="assignEditor" articleId=$articleId searchInitial=$letter}">{if $letter == $searchInitial}<strong>{$letter}</strong>{else}{$letter}{/if}</a> {/foreach}<a href="{url op="assignEditor" articleId=$articleId}">{if $searchInitial==''}<strong>{translate key="common.all"}</strong>{else}{translate key="common.all"}{/if}</a></p>
 
+<a name="editors"></a>
+
 <table width="100%" class="listing">
 <tr><td colspan="5" class="headseparator">&nbsp;</td></tr>
 <tr valign="bottom">
@@ -75,7 +77,7 @@
 {else}
 	<tr>
 		<td colspan="2" align="left">{page_info iterator=$editors}</td>
-		<td colspan="3" align="right">{page_links name="editors" iterator=$editors searchField=$searchField searchMatch=$searchMatch search=$search dateFromDay=$dateFromDay dateFromYear=$dateFromYear dateFromMonth=$dateFromMonth dateToDay=$dateToDay dateToYear=$dateToYear dateToMonth=$dateToMonth articleId=$articleId}</td>
+		<td colspan="3" align="right">{page_links anchor="editors" name="editors" iterator=$editors searchField=$searchField searchMatch=$searchMatch search=$search dateFromDay=$dateFromDay dateFromYear=$dateFromYear dateFromMonth=$dateFromMonth dateToDay=$dateToDay dateToYear=$dateToYear dateToMonth=$dateToMonth articleId=$articleId}</td>
 	</tr>
 {/if}
 </table>

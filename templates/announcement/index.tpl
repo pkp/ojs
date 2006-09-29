@@ -13,6 +13,8 @@
 {assign var="pageId" value="announcement.announcements"}
 {include file="common/header.tpl"}
 
+<a name="announcements"></a>
+
 <table width="100%" class="listing">
 {if $announcementsIntroduction != null}
 	<tr>
@@ -52,7 +54,7 @@
 {else}
 	<tr>
 		<td align="left">{page_info iterator=$announcements}</td>
-		<td align="right">{page_links name="announcements" iterator=$announcements}</td>
+		<td align="right">{page_links anchor="announcements" name="announcements" iterator=$announcements}</td>
 	</tr>
 {/if}
 </table>

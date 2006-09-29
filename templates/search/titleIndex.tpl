@@ -21,6 +21,8 @@
 	{assign var=numCols value=4}
 {/if}
 
+<a name="results"></a>
+
 <table width="100%" class="listing">
 <tr><td colspan="{$numCols}" class="headseparator">&nbsp;</td></tr>
 <tr class="heading" valign="bottom">
@@ -68,7 +70,7 @@
 {else}
 	<tr>
 		<td {if !$currentJournal}colspan="2" {/if}align="left">{page_info iterator=$results}</td>
-		<td colspan="2" align="right">{page_links iterator=$results name="search"}</td>
+		<td colspan="2" align="right">{page_links anchor="results" iterator=$results name="search"}</td>
 	</tr>
 {/if}
 </table>

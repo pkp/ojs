@@ -16,6 +16,8 @@
 
 <form method="post" action="{url op="updateAuthSources"}">
 
+<a name="sources"></a>
+
 <table width="100%" class="listing">
 	<tr>
 		<td colspan="4" class="headseparator">&nbsp;</td>
@@ -50,7 +52,7 @@
 	{else}
 		<tr>
 			<td colspan="2" align="left">{page_info iterator=$sources}</td>
-			<td colspan="2" align="right">{page_links name="sources" iterator=$sources}</td>
+			<td colspan="2" align="right">{page_links anchor="sources" name="sources" iterator=$sources}</td>
 		</tr>
 	{/if}
 	<tr valign="top">

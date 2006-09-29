@@ -19,6 +19,8 @@
 
 <br />
 
+<a name="contexts"></a>
+
 <table class="listing" width="100%">
 	<tr><td class="headseparator" colspan="3">&nbsp;</td></tr>
 	<tr valign="top">
@@ -43,7 +45,7 @@
 	{else}
 		<tr>
 			<td align="left">{page_info iterator=$contexts}</td>
-			<td colspan="2" align="right">{page_links name="contexts" iterator=$contexts}</td>
+			<td colspan="2" align="right">{page_links anchor="contexts" name="contexts" iterator=$contexts}</td>
 		</tr>
 	{/if}
 	</table>

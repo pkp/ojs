@@ -65,6 +65,8 @@ function ensureKeyword() {
 	{assign var=numCols value=4}
 {/if}
 
+<a name="results"></a>
+
 <table width="100%" class="listing">
 <tr><td colspan="{$numCols}" class="headseparator">&nbsp;</td></tr>
 <tr class="heading" valign="bottom">
@@ -107,9 +109,9 @@ function ensureKeyword() {
 	<tr>
 		<td {if !$currentJournal}colspan="2" {/if}align="left">{page_info iterator=$results}</td>
 		{if $basicQuery}
-			<td colspan="2" align="right">{page_links iterator=$results name="search" query=$basicQuery searchField=$searchField}</td>
+			<td colspan="2" align="right">{page_links anchor="results" iterator=$results name="search" query=$basicQuery searchField=$searchField}</td>
 		{else}
-			<td colspan="2" align="right">{page_links iterator=$results name="search" query=$query searchJournal=$searchJournal author=$author title=$title fullText=$fullText supplementaryFiles=$supplementaryFiles discipline=$discipline subject=$subject type=$type coverage=$coverage dateFromMonth=$dateFromMonth dateFromDay=$dateFromDay dateFromYear=$dateFromYear dateToMonth=$dateToMonth dateToDay=$dateToDay dateToYear=$dateToYear}</td>
+			<td colspan="2" align="right">{page_links anchor="results" iterator=$results name="search" query=$query searchJournal=$searchJournal author=$author title=$title fullText=$fullText supplementaryFiles=$supplementaryFiles discipline=$discipline subject=$subject type=$type coverage=$coverage dateFromMonth=$dateFromMonth dateFromDay=$dateFromDay dateFromYear=$dateFromYear dateToMonth=$dateToMonth dateToDay=$dateToDay dateToYear=$dateToYear}</td>
 		{/if}
 	</tr>
 {/if}

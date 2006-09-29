@@ -21,6 +21,8 @@
 
 <br />
 
+<a name="subscriptionTypes"></a>
+
 <table width="100%" class="listing">
 	<tr>
 		<td colspan="3" class="headseparator">&nbsp;</td>
@@ -51,7 +53,7 @@
 {else}
 	<tr>
 		<td align="left">{page_info iterator=$subscriptionTypes}</td>
-		<td colspan="2" align="right">{page_links name="subscriptionTypes" iterator=$subscriptionTypes}</td>
+		<td colspan="2" align="right">{page_links anchor="subscriptionTypes" name="subscriptionTypes" iterator=$subscriptionTypes}</td>
 	</tr>
 {/if}
 </table>

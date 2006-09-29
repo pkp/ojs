@@ -12,6 +12,8 @@
 {assign var="pageTitle" value="plugins.generic.counter.browseLog.logBrowser"}
 {include file="common/header.tpl"}
 
+<a name="entries"></a>
+
 <table width="100%" class="listing">
 <tr><td colspan="6" class="headseparator">&nbsp;</td></tr>
 <tr class="heading" valign="bottom">
@@ -50,7 +52,7 @@
 {else}
 	<tr>
 		<td colspan="3" align="left">{page_info iterator=$entries}</td>
-		<td colspan="2" align="right">{page_links name="entries" iterator=$entries}</td>
+		<td colspan="2" align="right">{page_links anchor="entries" name="entries" iterator=$entries}</td>
 	</tr>
 {/if}
 </table>

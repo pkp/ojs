@@ -14,6 +14,8 @@
 
 <br />
 
+<a name="journals"></a>
+
 <table width="100%" class="listing" id="adminJournals">
 	<tr>
 		<td colspan="4" class="headseparator">&nbsp;</td>
@@ -48,7 +50,7 @@
 	{else}
 		<tr>
 			<td colspan="2" align="left">{page_info iterator=$journals}</td>
-			<td colspan="2" align="right">{page_links name="journals" iterator=$journals}</td>
+			<td colspan="2" align="right">{page_links anchor="journals" name="journals" iterator=$journals}</td>
 		</tr>
 	{/if}
 </table>

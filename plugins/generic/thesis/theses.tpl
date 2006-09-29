@@ -12,6 +12,8 @@
 {assign var="pageTitle" value="plugins.generic.thesis.manager.theses"}
 {include file="common/header.tpl"}
 
+<a name="theses"></a>
+
 <ul class="menu">
 	<li class="current"><a href="{plugin_url path="theses"}">{translate key="plugins.generic.thesis.manager.theses"}</a></li>
 	<li><a href="{plugin_url path="settings"}">{translate key="plugins.generic.thesis.manager.settings"}</a></li>
@@ -55,7 +57,7 @@
 {else}
 	<tr>
 		<td colspan="2" align="left">{page_info iterator=$theses}</td>
-		<td colspan="3" align="right">{page_links name="theses" iterator=$theses}</td>
+		<td colspan="3" align="right">{page_links anchor="theses" name="theses" iterator=$theses}</td>
 	</tr>
 {/if}
 </table>

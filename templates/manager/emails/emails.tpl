@@ -11,7 +11,11 @@
 
 {assign var="pageTitle" value="manager.emails"}
 {include file="common/header.tpl"}
+
 <br/>
+
+<a name="emails"></a>
+
 <table class="listing" width="100%">
 	<tr><td colspan="5" class="headseparator">&nbsp;</td></tr>
 	<tr class="heading" valign="bottom">
@@ -61,7 +65,7 @@
 {else}
 	<tr>
 		<td colspan="3" align="left">{page_info iterator=$emailTemplates}</td>
-		<td align="right" colspan="2">{page_links name="emails" iterator=$emailTemplates}</td>
+		<td align="right" colspan="2">{page_links anchor="emails" name="emails" iterator=$emailTemplates}</td>
 	</tr>
 {/if}
 </table>

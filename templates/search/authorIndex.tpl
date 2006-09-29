@@ -14,6 +14,8 @@
 
 <p>{foreach from=$alphaList item=letter}<a href="{url op="authors" searchInitial=$letter}">{if $letter == $searchInitial}<strong>{$letter}</strong>{else}{$letter}{/if}</a> {/foreach}<a href="{url op="authors"}">{if $searchInitial==''}<strong>{translate key="common.all"}</strong>{else}{translate key="common.all"}{/if}</a></p>
 
+<a name="authors"></a>
+
 {iterate from=authors item=author}
 	{assign var=lastFirstLetter value=$firstLetter}
 	{assign var=firstLetter value=$author->getLastName()|String_substr:0:1}
@@ -31,7 +33,7 @@
 {/iterate}
 {if !$authors->wasEmpty()}
 	<br />
-	{page_info iterator=$authors}&nbsp;&nbsp;&nbsp;&nbsp;{page_links iterator=$authors name="authors" searchInitial=$searchInitial}
+	{page_info iterator=$authors}&nbsp;&nbsp;&nbsp;&nbsp;{page_links anchor="authors" iterator=$authors name="authors" searchInitial=$searchInitial}
 {else}
 {/if}
 

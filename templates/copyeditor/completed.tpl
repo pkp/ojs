@@ -39,6 +39,8 @@
 </form>
 &nbsp;
 
+<a name="submissions"></a>
+
 <table width="100%" class="listing">
 	<tr><td colspan="8" class="headseparator">&nbsp;</td></tr>
 	<tr class="heading" valign="bottom">
@@ -88,7 +90,7 @@
 {else}
 	<tr>
 		<td colspan="5" align="left">{page_info iterator=$submissions}</td>
-		<td colspan="3" align="right">{page_links name="submissions" iterator=$submissions searchField=$searchField searchMatch=$searchMatch search=$search dateFromDay=$dateFromDay dateFromYear=$dateFromYear dateFromMonth=$dateFromMonth dateToDay=$dateToDay dateToYear=$dateToYear dateToMonth=$dateToMonth}</td>
+		<td colspan="3" align="right">{page_links anchor="submissions" name="submissions" iterator=$submissions searchField=$searchField searchMatch=$searchMatch search=$search dateFromDay=$dateFromDay dateFromYear=$dateFromYear dateFromMonth=$dateFromMonth dateToDay=$dateToDay dateToYear=$dateToYear dateToMonth=$dateToMonth}</td>
 	</tr>
 {/if}
 </table>

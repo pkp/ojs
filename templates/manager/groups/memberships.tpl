@@ -20,6 +20,8 @@
 
 <br/>
 
+<a name="membership"></a>
+
 <table width="100%" class="listing">
 	<tr>
 		<td colspan="2" class="headseparator">&nbsp;</td>
@@ -53,7 +55,7 @@
 {else}
 	<tr>
 		<td align="left">{page_info iterator=$memberships}</td>
-		<td align="right">{page_links name="membership" iterator=$memberships}</td>
+		<td align="right">{page_links anchor="membership" name="membership" iterator=$memberships}</td>
 	</tr>
 {/if}
 </table>

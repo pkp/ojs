@@ -9,6 +9,8 @@
  * $Id$
  *}
 
+<a name="submissions"></a>
+
 <table class="listing" width="100%">
 	<tr><td class="headseparator" colspan="6">&nbsp;</td></tr>
 	<tr valign="bottom" class="heading">
@@ -54,7 +56,7 @@
 {else}
 	<tr>
 		<td colspan="4" align="left">{page_info iterator=$submissions}</td>
-		<td colspan="2" align="right">{page_links name="submissions" iterator=$submissions}</td>
+		<td colspan="2" align="right">{page_links anchor="submissions" name="submissions" iterator=$submissions}</td>
 	</tr>
 {/if}
 </table>

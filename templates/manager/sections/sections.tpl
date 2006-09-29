@@ -12,6 +12,9 @@
 {assign var="pageTitle" value="section.sections"}
 {include file="common/header.tpl"}
 <br/>
+
+<a name="sections"></a>
+
 <table width="100%" class="listing">
 	<tr>
 		<td class="headseparator" colspan="3">&nbsp;</td>
@@ -46,7 +49,7 @@
 {else}
 	<tr>
 		<td align="left">{page_info iterator=$sections}</td>
-		<td colspan="2" align="right">{page_links name="sections" iterator=$sections}</td>
+		<td colspan="2" align="right">{page_links anchor="sections" name="sections" iterator=$sections}</td>
 	</tr>
 {/if}
 </table>

@@ -30,6 +30,8 @@
 
 <div class="separator"></div>
 
+<a name="eventLogEntries"></a>
+
 <h3>{translate key="submission.history.submissionEventLog"}</h3>
 <table width="100%" class="listing">
 	<tr><td class="headseparator" colspan="5">&nbsp;</td></tr>
@@ -71,7 +73,7 @@
 {else}
 	<tr>
 		<td colspan="3" align="left">{page_info iterator=$eventLogEntries}</td>
-		<td colspan="2" align="right">{page_links name="eventLogEntries" iterator=$eventLogEntries}</td>
+		<td colspan="2" align="right">{page_links anchor="eventLogEntries" name="eventLogEntries" iterator=$eventLogEntries}</td>
 	</tr>
 {/if}
 </table>

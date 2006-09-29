@@ -36,6 +36,8 @@
 
 <p>{foreach from=$alphaList item=letter}<a href="{if $subscriptionId}{url op="selectSubscriber" searchInitial=$letter subscriptionId=$subscriptionId}{else}{url op="selectSubscriber" searchInitial=$letter}{/if}">{if $letter == $searchInitial}<strong>{$letter}</strong>{else}{$letter}{/if}</a> {/foreach}<a href="{if $subscriptionId}{url op="selectSubscriber" subscriptionId=$subscriptionId}{else}{url op="selectSubscriber"}{/if}">{if $searchInitial==''}<strong>{translate key="common.all"}</strong>{else}{translate key="common.all"}{/if}</a></p>
 
+<a name="users"></a>
+
 <table width="100%" class="listing">
 <tr><td colspan="4" class="headseparator">&nbsp;</td></tr>
 <tr class="heading" valign="bottom">
@@ -69,7 +71,7 @@
 {else}
 	<tr>
 		<td colspan="3" align="left">{page_info iterator=$users}</td>
-		<td colspan="2" align="right">{page_links name="users" iterator=$users searchField=$searchField searchMatch=$searchMatch search=$search dateFromDay=$dateFromDay dateFromYear=$dateFromYear dateFromMonth=$dateFromMonth dateToDay=$dateToDay dateToYear=$dateToYear dateToMonth=$dateToMonth searchInitial=$searchInitial}</td>
+		<td colspan="2" align="right">{page_links anchor="users" name="users" iterator=$users searchField=$searchField searchMatch=$searchMatch search=$search dateFromDay=$dateFromDay dateFromYear=$dateFromYear dateFromMonth=$dateFromMonth dateToDay=$dateToDay dateToYear=$dateToYear dateToMonth=$dateToMonth searchInitial=$searchInitial}</td>
 	</tr>
 {/if}
 </table>

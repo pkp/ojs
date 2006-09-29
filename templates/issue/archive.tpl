@@ -12,6 +12,8 @@
 {assign var="pageTitle" value="archive.archives"} 
 {include file="common/header.tpl"}
 
+<a name="issues"></a>
+
 {iterate from=issues item=issue}
 	{if $issue->getYear() != $lastYear}
 		{if !$notFirstYear}
@@ -31,7 +33,7 @@
 
 {if !$issues->wasEmpty()}
 	{page_info iterator=$issues}&nbsp;&nbsp;&nbsp;&nbsp;
-	{page_links name="issues" iterator=$issues}
+	{page_links anchor="issues" name="issues" iterator=$issues}
 {else}
 	{translate key="current.noCurrentIssueDesc"}
 {/if}

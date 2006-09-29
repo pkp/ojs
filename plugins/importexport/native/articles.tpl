@@ -30,6 +30,8 @@ function toggleChecked() {
 
 <br/>
 
+<a name="articles"></a>
+
 <form action="{plugin_url path="exportArticles"}" method="post" name="articles">
 <table width="100%" class="listing">
 	<tr>
@@ -70,7 +72,7 @@ function toggleChecked() {
 {else}
 	<tr>
 		<td colspan="2" align="left">{page_info iterator=$articles}</td>
-		<td colspan="3" align="right">{page_links name="articles" iterator=$articles}</td>
+		<td colspan="3" align="right">{page_links anchor="articles" name="articles" iterator=$articles}</td>
 	</tr>
 {/if}
 </table>
