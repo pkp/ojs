@@ -143,7 +143,6 @@ class GoogleScholarPlugin extends GatewayPlugin {
 				$fileNode,
 				'url',
 				Request::url(null, null, null, array(
-					'plugin',
 					$this->getName(),
 					$i
 				)),
