@@ -161,7 +161,7 @@ class HTTPFileWrapper extends FileWrapper {
 		$this->headers[$name] = $value;
 	}
 
-	function open($mode = 'r') {
+	function open($mode = 'r', $redirects = 5) {
 		$host = isset($this->info['host']) ? $this->info['host'] : $this->defaultHost;
 		$port = isset($this->info['port']) ? (int)$this->info['port'] : $this->defaultPort;
 		$path = isset($this->info['path']) ? $this->info['path'] : $this->defaultPath;
@@ -188,8 +188,34 @@ class HTTPFileWrapper extends FileWrapper {
 			while(fgets($this->fp, 4096) !== "\r\n");
 			return true;
 		}
+		if(preg_match('!^3\d\d$!', $rc) && $redirects >= 1) {
+			for($response = '', $time = time(); !feof($this->fp) && $time >= time() - 15; ) $response .= fgets($this->fp, 128);
+			if (preg_match('!^(?:(?:Location)|(?:URI)|(?:location)): ([^\s]+)[\r\n]!m', $response, $matches)) {
+				$location = $matches[1];
+				$newPath = ($this->info['path'] !== '' && strpos($location, '/') !== 0  ? dirname($this->info['path']) . '/' : (strpos($location, '/') === 0 ? '' : '/')) . $location;
+				$this->info['path'] = $newPath;
+				$this->url = $this->glue_url($this->info);
+				$this->close();
+				$this->HTTPFileWrapper($this->url, $this->info);
+				return $this->open($mode, $redirects - 1);
+			}
+		}
 		$this->close();
 		return false;
+	}
+
+	function glue_url ($parsed) {
+		// Thanks to php dot net at NOSPAM dot juamei dot com
+		// See http://www.php.net/manual/en/function.parse-url.php
+		if (! is_array($parsed)) return false;
+		$uri = isset($parsed['scheme']) ? $parsed['scheme'].':'.((strtolower($parsed['scheme']) == 'mailto') ? '':'//'): '';
+		$uri .= isset($parsed['user']) ? $parsed['user'].($parsed['pass']? ':'.$parsed['pass']:'').'@':'';
+		$uri .= isset($parsed['host']) ? $parsed['host'] : '';
+		$uri .= isset($parsed['port']) ? ':'.$parsed['port'] : '';
+		$uri .= isset($parsed['path']) ? $parsed['path'] : '';
+		$uri .= isset($parsed['query']) ? '?'.$parsed['query'] : '';
+		$uri .= isset($parsed['fragment']) ? '#'.$parsed['fragment'] : '';
+		return $uri;
 	}
 }
 
