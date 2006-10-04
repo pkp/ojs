@@ -58,7 +58,14 @@ class XMLParser {
 		
 		import('file.FileWrapper');
 		$wrapper = &FileWrapper::wrapper($file);
-		if (!$wrapper->open()) {
+
+		while (is_object($newWrapper = $wrapper->open())) if (is_object($newWrapper)) { // Handle redirects
+			unset($wrapper);
+			$wrapper =& $newWrapper;
+			unset ($newWrapper);
+		}
+
+		if (!$wrapper) {
 			$result = false;
 			return $result;
 		}
