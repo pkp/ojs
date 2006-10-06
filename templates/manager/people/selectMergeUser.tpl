@@ -87,14 +87,12 @@
 			{$user->getEmail()|truncate:15:"..."|escape}&nbsp;{icon name="mail" url=$url}
 		</td>
 		<td align="right">
-			{if $thisUser->getUserId() != $user->getUserId()}
-				{if $oldUserId != ''}
-					{if $oldUserId != $user->getUserId()}
-						<a href="#" onclick="confirmAction('{url oldUserId=$oldUserId newUserId=$user->getUserId()}', '{translate|escape:"htmlall" key="manager.people.mergeUsers.confirm" oldUsername=$oldUsername newUsername=$user->getUsername()}')" class="action">{translate key="manager.people.mergeUser"}</a>
-					{/if}
-				{else}
-					<a href="{url oldUserId=$user->getUserId()}" class="action">{translate key="manager.people.mergeUser"}</a>
+			{if $oldUserId != ''}
+				{if $oldUserId != $user->getUserId()}
+					<a href="#" onclick="confirmAction('{url oldUserId=$oldUserId newUserId=$user->getUserId()}', '{translate|escape:"htmlall" key="manager.people.mergeUsers.confirm" oldUsername=$oldUsername newUsername=$user->getUsername()}')" class="action">{translate key="manager.people.mergeUser"}</a>
 				{/if}
+			{elseif $thisUser->getUserId() != $user->getUserId()}
+				<a href="{url oldUserId=$user->getUserId()}" class="action">{translate key="manager.people.mergeUser"}</a>
 			{/if}
 		</td>
 	</tr>
