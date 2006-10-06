@@ -1177,6 +1177,7 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.sections.submissionReview">Will not be peer-reviewed</message>
 	<message key="manager.sections.editorRestriction">Items can only be submitted by Editors and Section Editors.</message>
 	<message key="manager.sections.hideTocTitle">Omit the title of this section from issues' table of contents.</message>
+	<message key="manager.sections.hideAbout">Omit this section from About the Journal.</message>
 	<message key="manager.sections.readingTools">Reading Tools</message>
 	<message key="manager.sections.indexed">Indexed</message>
 	<message key="manager.sections.reviewed">Peer Reviewed</message>
