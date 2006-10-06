@@ -36,7 +36,7 @@
 {/if}
 
 <a name="sectionPolicies"></a><h3>{translate key="about.sectionPolicies"}</h3>
-{foreach from=$sections item=section}
+{foreach from=$sections item=section}{if !$section->getHideAbout()}
 	<h4>{$section->getSectionTitle()}</h4>
 	{if strlen($section->getPolicy()) > 0}
 		<p>{$section->getPolicy()|nl2br}</p>
@@ -63,7 +63,7 @@
 			<td width="34%">{if $section->getMetaReviewed()}{icon name="checked"}{else}{icon name="unchecked"}{/if} {translate key="manager.sections.reviewed"}</td>
 		</tr>
 	</table>
-{/foreach}
+{/if}{/foreach}
 
 <div class="separator">&nbsp;</div>
 

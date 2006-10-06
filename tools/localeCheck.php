@@ -104,6 +104,12 @@ class localeCheck extends CommandLineTool {
 						echo "   \"" . $value . "\" ($locale)\n";
 					}
 					break;
+				case LOCALE_ERROR_MISSING_FILE:
+					echo "\nThe following locale files are missing:\n";
+					foreach ($errorList as $error) {
+						echo " - " . $error['filename'] . "\n";
+					}
+					break;
 				case LOCALE_ERROR_DIFFERING_PARAMS:
 					echo "\nThe following keys are missing parameters or have extra parameters and need\n";
 					echo "correcting against the master translation:\n";
