@@ -414,6 +414,10 @@
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
 		</field>
+		<field name="hide_about" type="I1">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
 		<field name="policy" type="X"/>
 		<descr>Journal sections.</descr>
 		<index name="sections_journal_id">

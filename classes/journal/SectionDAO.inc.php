@@ -139,6 +139,7 @@ class SectionDAO extends DAO {
 		$section->setIdentifyType($row['identify_type']);
 		$section->setEditorRestricted($row['editor_restricted']);
 		$section->setHideTitle($row['hide_title']);
+		$section->setHideAbout($row['hide_about']);
 		$section->setPolicy($row['policy']);
 		
 		HookRegistry::call('SectionDAO::_returnSectionFromRow', array(&$section, &$row));
@@ -153,9 +154,9 @@ class SectionDAO extends DAO {
 	function insertSection(&$section) {
 		$this->update(
 			'INSERT INTO sections
-				(journal_id, title, title_alt1, title_alt2, abbrev, abbrev_alt1, abbrev_alt2, seq, meta_indexed, meta_reviewed, abstracts_disabled, identify_type, policy, editor_restricted, hide_title)
+				(journal_id, title, title_alt1, title_alt2, abbrev, abbrev_alt1, abbrev_alt2, seq, meta_indexed, meta_reviewed, abstracts_disabled, identify_type, policy, editor_restricted, hide_title, hide_about)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
 				$section->getJournalId(),
 				$section->getTitle(),
@@ -171,7 +172,8 @@ class SectionDAO extends DAO {
 				$section->getIdentifyType(),
 				$section->getPolicy(),
 				$section->getEditorRestricted() ? 1 : 0,
-				$section->getHideTitle() ? 1 : 0
+				$section->getHideTitle() ? 1 : 0,
+				$section->getHideAbout() ? 1 : 0
 			)
 		);
 		
@@ -200,7 +202,8 @@ class SectionDAO extends DAO {
 					identify_type = ?,
 					policy = ?,
 					editor_restricted = ?,
-					hide_title = ?
+					hide_title = ?,
+					hide_about = ?
 				WHERE section_id = ?',
 			array(
 				$section->getTitle(),
@@ -217,6 +220,7 @@ class SectionDAO extends DAO {
 				$section->getPolicy(),
 				$section->getEditorRestricted(),
 				$section->getHideTitle(),
+				$section->getHideAbout(),
 				$section->getSectionId()
 			)
 		);

@@ -300,6 +300,22 @@ class Section extends DataObject {
 	}
 	
 	/**
+	 * Return boolean indicating if title should be hidden in About.
+	 * @return boolean
+	 */
+	function getHideAbout() {
+		return $this->getData('hideAbout');
+	}
+	
+	/**
+	 * Set if title should be hidden in About.
+	 * @param $hideAbout boolean
+	 */
+	function setHideAbout($hideAbout) {
+		return $this->setData('hideAbout', $hideAbout);
+	}
+	
+	/**
 	 * Get policy.
 	 * @return string
 	 */

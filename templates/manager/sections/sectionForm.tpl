@@ -178,6 +178,13 @@
 		{fieldLabel name="hideTitle" key="manager.sections.hideTocTitle"}
 	</td>
 </tr>
+<tr valign="top">
+	<td class="label">{fieldLabel name="hideAbout" key="navigation.about"}</td>
+	<td class="value">
+		<input type="checkbox" name="hideAbout" id="hideAbout" value="1" {if $hideAbout}checked="checked"{/if} />
+		{fieldLabel name="hideAbout" key="manager.sections.hideAbout"}
+	</td>
+</tr>
 </table>
 <div class="separator"></div>
 
