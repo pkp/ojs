@@ -165,7 +165,8 @@ class LocaleFile {
 				$errors[LOCALE_ERROR_MISSING_KEY][] = array(
 					'key' => $key,
 					'locale' => $this->locale,
-					'filename' => $this->filename
+					'filename' => $this->filename,
+					'reference' => $referenceValue
 				);
 				continue;
 			}
@@ -190,7 +191,8 @@ class LocaleFile {
 					'key' => $key,
 					'locale' => $this->locale,
 					'mismatch' => array_diff($referenceParams, $params),
-					'filename' => $this->filename
+					'filename' => $this->filename,
+					'value' => $value
 				);
 			}
 			// After processing a key, remove it from the list;

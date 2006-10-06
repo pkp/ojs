@@ -202,6 +202,7 @@ class Locale {
 	 */
 	function isLocaleValid($locale) {
 		if (empty($locale)) return false;
+		if (!preg_match('/^[a-z][a-z]_[A-Z][A-Z]$/', $locale)) return false;
 		if (file_exists(Locale::getMainLocaleFilename($locale))) return true;
 		return false;
 	}
@@ -324,7 +325,23 @@ class Locale {
 		
 		return $alternateLocaleNum;
 	}
-	
+
+	/**
+	 * Get the path and filename for the email templates data for the
+	 * given locale
+	 * @param $locale string
+	 * @return string
+	 */
+	function getEmailTemplateFilename($locale) {
+		return 'dbscripts/xml/data/locale/' . $locale . '/email_templates_data.xml';
+	}
+
+	function getFilesToInstall($locale) {
+		return array(
+			Locale::getEmailTemplateFilename($locale)
+		);
+	}
+
 	/**
 	 * Uninstall support for an existing locale.
 	 * @param $locale string
@@ -333,9 +350,7 @@ class Locale {
 		// Install default locale-specific data
 		import('db.DBDataXMLParser');
 		
-		$filesToInstall = array(
-			'dbscripts/xml/data/locale/' . $locale . '/email_templates_data.xml'
-		);
+		$filesToInstall = Locale::getFilesToInstall($locale);
 		
 		$dataXMLParser = &new DBDataXMLParser();
 		foreach ($filesToInstall as $fileName) {
@@ -403,18 +418,12 @@ class Locale {
 	 * @return array List of errors
 	 */
 	function testEmails($locale, $referenceLocale) {
-		import('install.Installer'); // Bring in data dir
-
 		$errors = array(
 		);
 
 		$xmlParser =& new XMLParser();
-		$referenceEmails =& $xmlParser->parse(
-			INSTALLER_DATA_DIR . "/data/locale/$referenceLocale/email_templates_data.xml"
-		);
-		$emails =& $xmlParser->parse(
-			INSTALLER_DATA_DIR . "/data/locale/$locale/email_templates_data.xml"
-		);
+		$referenceEmails =& $xmlParser->parse(Locale::getEmailTemplateFilename($referenceLocale));
+		$emails =& $xmlParser->parse(Locale::getEmailTemplateFilename($locale));
 		$emailsTable =& $emails->getChildByName('table');
 		$referenceEmailsTable =& $referenceEmails->getChildByName('table');
 		$matchedReferenceEmails = array();
