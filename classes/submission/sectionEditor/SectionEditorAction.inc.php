@@ -70,6 +70,12 @@ class SectionEditorAction extends Action {
 		
 			$sectionEditorSubmission->addDecision($editorDecision, $sectionEditorSubmission->getCurrentRound());
 			$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
+
+			$decisions = SectionEditorSubmission::getEditorDecisionOptions();
+			// Add log
+			import('article.log.ArticleLog');
+			import('article.log.ArticleEventLogEntry');
+			ArticleLog::logEvent($sectionEditorSubmission->getArticleId(), ARTICLE_LOG_EDITOR_DECISION, ARTICLE_LOG_TYPE_EDITOR, $user->getUserId(), 'log.editor.decision', array('editorName' => $user->getFullName(), 'articleId' => $sectionEditorSubmission->getArticleId(), 'decision' => Locale::translate($decisions[$decision])));
 		}
 	}
 	
