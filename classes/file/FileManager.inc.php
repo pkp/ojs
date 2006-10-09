@@ -342,7 +342,7 @@ class FileManager {
 	function truncateFileName($fileName, $length = 127) {
 		if (String::strlen($fileName) <= $length) return $fileName;
 		$ext = FileManager::getExtension($fileName);
-		$truncated = String::substr($ext, 0, $length - String::strlen($ext)) . $ext;
+		$truncated = String::substr($fileName, 0, $length - 1 - String::strlen($ext)) . '.' . $ext;
 		return String::substr($truncated, 0, $length);
 	}
 
