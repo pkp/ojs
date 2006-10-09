@@ -515,7 +515,7 @@ class Locale {
 		$referenceLength = String::strlen($reference);
 		$length = String::strlen($value);
 		$lengthDifference = abs($referenceLength - $length);
-		if ($referenceLength == 0) return false;
+		if ($referenceLength == 0) return ($length == 0);
 		if ($lengthDifference / $referenceLength > 1 && $lengthDifference > 10) return false;
 		return true;
 	}
