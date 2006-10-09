@@ -79,7 +79,7 @@ class CopyeditCommentForm extends CommentForm {
 		$editAssignments =& $editAssignments->toArray();
 		$editorAddresses = array();
 		foreach ($editAssignments as $editAssignment) {
-			$editorAddresses[$editAssignment->getEditorEmail()] = $editAssignment->getEditorFullName();
+			if ($editAssignment->getCanEdit()) $editorAddresses[$editAssignment->getEditorEmail()] = $editAssignment->getEditorFullName();
 		}
 
 		// If no editors are currently assigned, send this message to

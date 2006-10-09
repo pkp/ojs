@@ -88,7 +88,8 @@ class LayoutCommentForm extends CommentForm {
 			$editorAddresses = array();
 			while (!$editAssignments->eof()) {
 				$editAssignment =& $editAssignments->next();
-				$editorAddresses[$editAssignment->getEditorEmail()] = $editAssignment->getEditorFullName();
+				if ($editAssignment->getCanEdit()) $editorAddresses[$editAssignment->getEditorEmail()] = $editAssignment->getEditorFullName();
+				unset($editAssignment);
 			}
 
 			// If no editors are currently assigned to this article,
