@@ -284,7 +284,7 @@ class NativeImportDom {
 						$hasErrors = true;
 					}
 					$issue->setFileName($newName);
-					$issue->setOriginalFileName($originalName);
+					$issue->setOriginalFileName($publicFileManager->truncateFileName($originalName, 127));
 				}
 			}
 			if (($embed = $node->getChildByName('embed'))) {
@@ -295,7 +295,7 @@ class NativeImportDom {
 					$originalName = $embed->getAttribute('filename');
 					$newName .= $publicFileManager->getExtension($originalName);
 					$issue->setFileName($newName);
-					$issue->setOriginalFileName($originalName);
+					$issue->setOriginalFileName($publicFileManager->truncateFileName($originalName, 127));
 					if ($publicFileManager->writeJournalFile($journal->getJournalId(), $newName, base64_decode($embed->getValue()))===false) {
 						$errors[] = array('plugins.importexport.native.import.error.couldNotWriteFile', array('originalName' => $originalName));
 						$hasErrors = true;

@@ -138,7 +138,7 @@ class TemporaryFileManager extends FileManager {
 			$temporaryFile->setFileName($newFileName);
 			$temporaryFile->setFileType($_FILES[$fileName]['type']);
 			$temporaryFile->setFileSize($_FILES[$fileName]['size']);
-			$temporaryFile->setOriginalFileName($_FILES[$fileName]['name']);
+			$temporaryFile->setOriginalFileName(TemporaryFileManager::truncateFileName($_FILES[$fileName]['name'], 127));
 			$temporaryFile->setDateUploaded(Core::getCurrentDate());
 		
 			$temporaryFileDao->insertTemporaryFile($temporaryFile);

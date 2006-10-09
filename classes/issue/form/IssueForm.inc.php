@@ -312,7 +312,7 @@ class IssueForm extends Form {
 			$originalFileName = $publicFileManager->getUploadedFileName('coverPage');
 			$newFileName = 'cover_' . $issueId . '.' . $publicFileManager->getExtension($originalFileName);
 			$publicFileManager->uploadJournalFile($journal->getJournalId(), 'coverPage', $newFileName);
-			$issue->setOriginalFileName($originalFileName);
+			$issue->setOriginalFileName($publicFileManager->truncateFileName($originalFileName, 127));
 			$issue->setFileName($newFileName);
 
 			// Store the image dimensions.
@@ -329,7 +329,7 @@ class IssueForm extends Form {
 			$newFileName = 'style_' . $issueId . '.css';
 			$publicFileManager->uploadJournalFile($journal->getJournalId(), 'styleFile', $newFileName);
 			$issue->setStyleFileName($newFileName);
-			$issue->setOriginalStyleFileName($originalFileName);
+			$issue->setOriginalStyleFileName($publicFileManager->truncateFileName($originalFileName, 127));
 			$issueDao->updateIssue($issue);
 		}
 

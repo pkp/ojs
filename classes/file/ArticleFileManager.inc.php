@@ -504,7 +504,7 @@ class ArticleFileManager extends FileManager {
 		
 		$articleFile->setFileType($_FILES[$fileName]['type']);
 		$articleFile->setFileSize($_FILES[$fileName]['size']);
-		$articleFile->setOriginalFileName($_FILES[$fileName]['name']);
+		$articleFile->setOriginalFileName(ArticleFileManager::truncateFileName($_FILES[$fileName]['name'], 127));
 		$articleFile->setType($typePath);
 		$articleFile->setStatus(''); // FIXME wtf is this for?
 		$articleFile->setRound($this->article->getCurrentRound());
@@ -558,7 +558,7 @@ class ArticleFileManager extends FileManager {
 		
 		$articleFile->setFileType($mimeType);
 		$articleFile->setFileSize(strlen($contents));
-		$articleFile->setOriginalFileName($fileName);
+		$articleFile->setOriginalFileName(ArticleFileManager::truncateFileName($fileName, 127));
 		$articleFile->setType($typePath);
 		$articleFile->setStatus(''); // FIXME wtf is this for?
 		$articleFile->setRound($this->article->getCurrentRound());
@@ -610,7 +610,7 @@ class ArticleFileManager extends FileManager {
 		}
 		
 		$articleFile->setFileType($mimeType);
-		$articleFile->setOriginalFileName(basename($url));
+		$articleFile->setOriginalFileName(ArticleFileManager::truncateFileName(basename($url), 127));
 		$articleFile->setType($typePath);
 		$articleFile->setStatus(''); // FIXME wtf is this for?
 		$articleFile->setRound($this->article->getCurrentRound());

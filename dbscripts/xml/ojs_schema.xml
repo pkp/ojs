@@ -491,7 +491,7 @@
 			<DEFAULT VALUE="0"/>
 		</field>
 		<field name="file_name" type="C2" size="90"/>
-		<field name="original_file_name" type="C2" size="255"/>
+		<field name="original_file_name" type="C2" size="127"/>
 		<field name="width" type="I2"/>
 		<field name="height" type="I2"/>
 		<field name="cover_page_description" type="X"/>
@@ -741,7 +741,7 @@
 		<field name="file_size" type="I8">
 			<NOTNULL/>
 		</field>
-		<field name="original_file_name" type="C2" size="90"/>
+		<field name="original_file_name" type="C2" size="127"/>
 		<field name="type" type="C2" size="40">
 			<NOTNULL/>
 		</field>
@@ -1788,7 +1788,7 @@
 		<field name="file_size" type="I8">
 			<NOTNULL/>
 		</field>
-		<field name="original_file_name" type="C2" size="90"/>
+		<field name="original_file_name" type="C2" size="127"/>
 		<field name="date_uploaded" type="T">
 			<NOTNULL/>
 		</field>
