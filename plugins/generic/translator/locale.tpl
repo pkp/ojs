@@ -32,7 +32,7 @@
 
 {assign var=needsAsteriskNote value=0}
 {iterate from=localeFiles item=filename}
-{assign var=filenameEscaped value=$filename|escape:"url"}
+{assign var=filenameEscaped value=$filename|escape:"url"|escape:"url"}
 {if file_exists($filename)}
 	{assign var=fileExists value=1}
 {else}
@@ -94,7 +94,7 @@
 
 {assign var=needsAsteriskNote value=0}
 {iterate from=miscFiles item=filename}
-{assign var=filenameEscaped value=$filename|escape:"url"}
+{assign var=filenameEscaped value=$filename|escape:"url"|escape:"url"}
 {if file_exists($filename)}
 	{assign var=fileExists value=1}
 {else}

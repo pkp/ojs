@@ -12,7 +12,7 @@
 {translate|assign:"pageTitleTranslated" key="plugins.generic.translator.locale" locale=$locale}
 {include file="common/header.tpl"}
 
-{assign var=filenameEscaped value=$filename|escape:"url"}
+{assign var=filenameEscaped value=$filename|escape:"url"|escape:"url"}
 
 <form name="reference">
 {foreach from=referenceLocaleContents key=key item=value}<input type="hidden" name="{$key|escape:"quotes"}" value="{$key|escape:"quotes"}"/>{/foreach}
@@ -34,7 +34,7 @@
 	<tr><td colspan="3" class="headseparator">&nbsp;</td></tr>
 
 {iterate from=localeContents key=key item=value}
-{assign var=filenameEscaped value=$filename|escape:"url"}
+{assign var=filenameEscaped value=$filename|escape:"url"|escape:"url"}
 	<tr valign="top">
 		<td>{$key|escape}</td>
 		<td>

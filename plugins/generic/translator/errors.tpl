@@ -41,10 +41,10 @@
 			{if $type == 'LOCALE_ERROR_EXTRA_KEY'}
 				<br />
 				{assign var=counter value=$counter+1}
-				<input type="checkbox" name="deleteKey[]" id="checkbox-{$counter}" value="{$error.filename|escape:"url"}/{$error.key|escape:"quotes"}" />
+				<input type="checkbox" name="deleteKey[]" id="checkbox-{$counter}" value="{$error.filename|escape:"url"|escape:"url"}/{$error.key|escape:"quotes"}" />
 				<label for="checkbox-{$counter}">{translate key="plugins.generic.translator.deleteKey"}</label>
 			{elseif $type == 'LOCALE_ERROR_MISSING_FILE'}
-				{assign var=filenameEscaped value=$error.filename|escape:"url"}
+				{assign var=filenameEscaped value=$error.filename|escape:"url"|escape:"url"}
 				{if in_array($error.filename, $localeFiles)}
 					{url|assign:"redirectUrl" op="editLocaleFile" path=$locale|to_array:$filenameEscaped}
 				{else}

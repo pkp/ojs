@@ -136,7 +136,7 @@ class TranslatorHandler extends Handler {
 			if (!is_array($deleteKeys)) $deleteKeys = array($deleteKeys);
 			foreach ($deleteKeys as $deleteKey) { // FIXME Optimize!
 				list($filename, $key) = explode('/', $deleteKey, 2);
-				$filename = urldecode($filename);
+				$filename = urldecode(urldecode($filename));
 				if (!in_array($filename, $localeFiles)) continue;
 				$file =& new EditableLocaleFile($locale, $filename);
 				$file->delete($key);
@@ -166,7 +166,7 @@ class TranslatorHandler extends Handler {
 		$locale = array_shift($args);
 		if (!Locale::isLocaleValid($locale)) Request::redirect(null, null, 'index');
 
-		$filename = rawurldecode(array_shift($args));
+		$filename = urldecode(urldecode(array_shift($args)));
 		if (!TranslatorAction::isLocaleFile($locale, $filename)) {
 			Request::redirect(null, null, 'edit', $locale);
 		}
@@ -184,7 +184,7 @@ class TranslatorHandler extends Handler {
 		$locale = array_shift($args);
 		if (!Locale::isLocaleValid($locale)) Request::redirect(null, null, 'index');
 
-		$filename = rawurldecode(array_shift($args));
+		$filename = urldecode(urldecode(array_shift($args)));
 		if (!TranslatorAction::isLocaleFile($locale, $filename)) {
 			Request::redirect(null, null, 'edit', $locale);
 		}
@@ -210,7 +210,7 @@ class TranslatorHandler extends Handler {
 		$locale = array_shift($args);
 		if (!Locale::isLocaleValid($locale)) Request::redirect(null, null, 'index');
 
-		$filename = rawurldecode(array_shift($args));
+		$filename = urldecode(urldecode(array_shift($args)));
 		if (!TranslatorAction::isLocaleFile($locale, $filename)) {
 			Request::redirect(null, null, 'edit', $locale);
 		}
@@ -231,7 +231,7 @@ class TranslatorHandler extends Handler {
 		$locale = array_shift($args);
 		if (!Locale::isLocaleValid($locale)) Request::redirect(null, null, 'index');
 
-		$filename = rawurldecode(array_shift($args));
+		$filename = urldecode(urldecode(array_shift($args)));
 		if (!TranslatorAction::isLocaleFile($locale, $filename)) {
 			Request::redirect(null, null, 'edit', $locale);
 		}
@@ -257,7 +257,7 @@ class TranslatorHandler extends Handler {
 		$locale = array_shift($args);
 		if (!Locale::isLocaleValid($locale)) Request::redirect(null, null, 'index');
 
-		$filename = rawurldecode(array_shift($args));
+		$filename = urldecode(urldecode(array_shift($args)));
 		if (!TranslatorAction::isLocaleFile($locale, $filename)) {
 			Request::redirect(null, null, 'edit', $locale);
 		}
@@ -266,7 +266,7 @@ class TranslatorHandler extends Handler {
 		$file =& new EditableLocaleFile($locale, $filename);
 
 		if ($file->delete(array_shift($args))) $file->write();
-		Request::redirect(null, null, 'editLocaleFile', array($locale, urlencode($filename)));
+		Request::redirect(null, null, 'editLocaleFile', array($locale, urlencode(urlencode($filename))));
 	}
 
 	function saveMiscFile($args) {
@@ -276,7 +276,7 @@ class TranslatorHandler extends Handler {
 		$locale = array_shift($args);
 		if (!Locale::isLocaleValid($locale)) Request::redirect(null, null, 'index');
 
-		$filename = rawurldecode(array_shift($args));
+		$filename = urldecode(urldecode(array_shift($args)));
 		if (!TranslatorAction::isLocaleFile($locale, $filename)) {
 			Request::redirect(null, null, 'edit', $locale);
 		}
@@ -318,7 +318,7 @@ class TranslatorHandler extends Handler {
 		$locale = array_shift($args);
 		if (!Locale::isLocaleValid($locale)) Request::redirect(null, null, 'index');
 
-		$filename = rawurldecode(array_shift($args));
+		$filename = urldecode(urldecode(array_shift($args)));
 		if (!TranslatorAction::isLocaleFile($locale, $filename)) {
 			Request::redirect(null, null, 'edit', $locale);
 		}
