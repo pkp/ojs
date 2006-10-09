@@ -78,7 +78,20 @@ class ProfileForm extends Form {
 		$templateMgr->assign_by_ref('journals', $journals);
 		$templateMgr->assign_by_ref('countries', $countries);
 		$templateMgr->assign_by_ref('journalNotifications', $journalNotifications);
-		$templateMgr->assign('helpTopicId', 'user.registerAndProfile');		
+		$templateMgr->assign('helpTopicId', 'user.registerAndProfile');
+
+		$journal =& Request::getJournal();
+		if ($journal) {
+			$roleDao =& DAORegistry::getDAO('RoleDAO');
+			$roles =& $roleDao->getRolesByUserId($user->getUserId(), $journal->getJournalId());
+			$roleNames = array();
+			foreach ($roles as $role) $roleNames[$role->getRolePath()] = $role->getRoleName();
+			$templateMgr->assign('allowRegReviewer', $journal->getSetting('allowRegReviewer'));
+			$templateMgr->assign('allowRegAuthor', $journal->getSetting('allowRegAuthor'));
+			$templateMgr->assign('allowRegReader', $journal->getSetting('allowRegReader'));
+			$templateMgr->assign('roles', $roleNames);
+		}
+
 		parent::display();
 	}
 	
@@ -102,7 +115,10 @@ class ProfileForm extends Form {
 			'country' => $user->getCountry(),
 			'biography' => $user->getBiography(),
 			'interests' => $user->getInterests(),
-			'userLocales' => $user->getLocales()
+			'userLocales' => $user->getLocales(),
+			'isAuthor' => Validation::isAuthor(),
+			'isReader' => Validation::isReader(),
+			'isReviewer' => Validation::isReviewer()
 		);
 	}
 	
@@ -124,7 +140,10 @@ class ProfileForm extends Form {
 			'country',
 			'biography',
 			'interests',
-			'userLocales'
+			'userLocales',
+			'readerRole',
+			'authorRole',
+			'reviewerRole'
 		));
 		
 		if ($this->getData('userLocales') == null || !is_array($this->getData('userLocales'))) {
@@ -164,13 +183,42 @@ class ProfileForm extends Form {
 			}
 			$user->setLocales($locales);
 		}
- 		
+ 
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$userDao->updateUser($user);
 
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
 		$journalDao = &DAORegistry::getDAO('JournalDAO');
 		$notificationStatusDao = &DAORegistry::getDAO('NotificationStatusDAO');
+
+		// Roles
+		$journal =& Request::getJournal();
+		if ($journal) {
+			$role =& new Role();
+			$role->setUserId($user->getUserId());
+			$role->setJournalId($journal->getJournalId());
+			if ($journal->getSetting('allowRegReviewer')) {
+				$role->setRoleId(ROLE_ID_REVIEWER);
+				$hasRole = Validation::isReviewer();
+				$wantsRole = Request::getUserVar('reviewerRole');
+				if ($hasRole && !$wantsRole) $roleDao->deleteRole($role);
+				if (!$hasRole && $wantsRole) $roleDao->insertRole($role);
+			}
+			if ($journal->getSetting('allowRegAuthor')) {
+				$role->setRoleId(ROLE_ID_AUTHOR);
+				$hasRole = Validation::isAuthor();
+				$wantsRole = Request::getUserVar('authorRole');
+				if ($hasRole && !$wantsRole) $roleDao->deleteRole($role);
+				if (!$hasRole && $wantsRole) $roleDao->insertRole($role);
+			}
+			if ($journal->getSetting('allowRegReader')) {
+				$role->setRoleId(ROLE_ID_READER);
+				$hasRole = Validation::isReader();
+				$wantsRole = Request::getUserVar('readerRole');
+				if ($hasRole && !$wantsRole) $roleDao->deleteRole($role);
+				if (!$hasRole && $wantsRole) $roleDao->insertRole($role);
+			}
+		}
 
 		$journals = &$journalDao->getJournals();
 		$journals = &$journals->toArray();
