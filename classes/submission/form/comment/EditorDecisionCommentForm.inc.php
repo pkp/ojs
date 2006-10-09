@@ -108,43 +108,6 @@ class EditorDecisionCommentForm extends CommentForm {
 		
 		parent::email($recipients);	
 	}
-	
-	/**
-	 * Imports Peer Review comments.
-	 * FIXME: Need to apply localization to these strings.
-	 */
-	function importPeerReviews() {
-		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
-		$reviewAssignments = &$reviewAssignmentDao->getReviewAssignmentsByArticleId($this->article->getArticleId(), $this->article->getCurrentRound());
-		$reviewIndexes = &$reviewAssignmentDao->getReviewIndexesForRound($this->article->getArticleId(), $this->article->getCurrentRound());	
-		
-		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
-				
-		$this->importPeerReviews = true;
-		$this->peerReviews = "The editor should replace this text with the editorial decision and explanation for this submission.\n\n";
-		
-		foreach ($reviewAssignments as $reviewAssignment) {
-			// If the reviewer has completed the assignment, then import the review.
-			if ($reviewAssignment->getDateCompleted() != null && !$reviewAssignment->getCancelled()) {
-				// Get the comments associated with this review assignment
-				$articleComments = &$articleCommentDao->getArticleComments($this->article->getArticleId(), COMMENT_TYPE_PEER_REVIEW, $reviewAssignment->getReviewId());
-			
-				$this->peerReviews .= "------------------------------------------------------\n";
-				$this->peerReviews .= "Reviewer " . chr(ord('A') + $reviewIndexes[$reviewAssignment->getReviewId()]) . ":\n";
-				
-				if (is_array($articleComments)) {
-					foreach ($articleComments as $comment) {
-						// If the comment is viewable by the author, then add the comment.
-						if ($comment->getViewable()) {
-							$this->peerReviews .= $comment->getComments() . "\n";
-						}
-					}
-				}
-				
-				$this->peerReviews .= "------------------------------------------------------\n\n";
-			}
-		}			
-	}
 }
 
 ?>

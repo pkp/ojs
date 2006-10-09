@@ -1857,7 +1857,9 @@ class SectionEditorAction extends Action {
 							}
 							$body .= "------------------------------------------------------\n\n";
 						}
-					$email->setBody($body);
+					$oldBody = $email->getBody();
+					if (!empty($oldBody)) $oldBody .= "\n";
+					$email->setBody($oldBody . $body);
 					}
 				}
 			}
