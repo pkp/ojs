@@ -74,6 +74,7 @@ class TranslatorHandler extends Handler {
 		$templateMgr->assign('locale', $locale);
 		$templateMgr->assign('errors', Locale::testLocale($locale, MASTER_LOCALE));
 		$templateMgr->assign('emailErrors', Locale::testEmails($locale, MASTER_LOCALE));
+		$templateMgr->assign('localeFiles', TranslatorAction::getLocaleFiles($locale));
 		$templateMgr->display($plugin->getTemplatePath() . 'errors.tpl');
 	}
 
@@ -109,7 +110,7 @@ class TranslatorHandler extends Handler {
 			$key = array_shift($stack);
 			$value = array_shift($stack);
 			if (in_array($filename, $localeFiles)) {
-				$changesByFile[$filename][$key] = $value;
+				$changesByFile[$filename][$key] = str_replace("\r\n", "\n", $value);
 			}
 		}
 
@@ -129,7 +130,33 @@ class TranslatorHandler extends Handler {
 			unset($file);
 		}
 
-		Request::redirect(null, null, null, $locale);
+		// Deal with key removals
+		$deleteKeys = Request::getUserVar('deleteKey');
+		if (!empty($deleteKeys)) {
+			if (!is_array($deleteKeys)) $deleteKeys = array($deleteKeys);
+			foreach ($deleteKeys as $deleteKey) { // FIXME Optimize!
+				list($filename, $key) = explode('/', $deleteKey, 2);
+				$filename = urldecode($filename);
+				if (!in_array($filename, $localeFiles)) continue;
+				$file =& new EditableLocaleFile($locale, $filename);
+				$file->delete($key);
+				$file->write();
+				unset($file);
+			}
+		}
+
+		// Deal with email removals
+		$deleteEmails = Request::getUserVar('deleteEmail');
+		if (!empty($deleteEmails)) {
+			$file =& new EditableEmailFile($locale, Locale::getEmailTemplateFilename($locale));
+			foreach ($deleteEmails as $key) {
+				$file->delete($key);
+			}
+			$file->write();
+			unset($file);
+		}
+
+		Request::redirectUrl(Request::getUserVar('redirectUrl'));
 	}
 
 	function downloadLocaleFile($args) {
@@ -214,14 +241,32 @@ class TranslatorHandler extends Handler {
 
 		while (!empty($changes)) {
 			$key = array_shift($changes);
-			$value = array_shift($changes);
-			$file->update($key, $value);
+			$value = str_replace("\r\n", "\n", array_shift($changes));
 			if (!$file->update($key, $value)) {
 				$file->insert($key, $value);
 			}
 		}
 		$file->write();
 		Request::redirectUrl(Request::getUserVar('redirectUrl'));
+	}
+
+	function deleteLocaleKey($args) {
+		list($plugin) = TranslatorHandler::validate();
+		TranslatorHandler::setupTemplate();
+		
+		$locale = array_shift($args);
+		if (!Locale::isLocaleValid($locale)) Request::redirect(null, null, 'index');
+
+		$filename = rawurldecode(array_shift($args));
+		if (!TranslatorAction::isLocaleFile($locale, $filename)) {
+			Request::redirect(null, null, 'edit', $locale);
+		}
+
+		$changes = Request::getUserVar('changes');
+		$file =& new EditableLocaleFile($locale, $filename);
+
+		if ($file->delete(array_shift($args))) $file->write();
+		Request::redirect(null, null, 'editLocaleFile', array($locale, urlencode($filename)));
 	}
 
 	function saveMiscFile($args) {
@@ -255,12 +300,13 @@ class TranslatorHandler extends Handler {
 		$referenceEmails = TranslatorAction::getEmailTemplates(MASTER_LOCALE);
 		$emailKey = array_shift($args);
 
-		if (!in_array($emailKey, array_keys($emails))) Request::redirect(null, null, 'index');
+		if (!in_array($emailKey, array_keys($referenceEmails)) && !in_array($emailKey, array_keys($emails))) Request::redirect(null, null, 'index');
 
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('emailKey', $emailKey);
 		$templateMgr->assign('locale', $locale);
 		$templateMgr->assign('email', isset($emails[$emailKey])?$emails[$emailKey]:'');
+		$templateMgr->assign('returnToCheck', Request::getUserVar('returnToCheck'));
 		$templateMgr->assign('referenceEmail', isset($referenceEmails[$emailKey])?$referenceEmails[$emailKey]:'');
 		$templateMgr->display($plugin->getTemplatePath() . 'editEmail.tpl');
 	}
@@ -282,7 +328,7 @@ class TranslatorHandler extends Handler {
 		Request::redirectUrl(Request::getUserVar('redirectUrl'));
 	}
 
-	function saveEmail($args) {
+	function deleteEmail($args) {
 		list($plugin) = TranslatorHandler::validate();
 		TranslatorHandler::setupTemplate();
 		
@@ -301,11 +347,35 @@ class TranslatorHandler extends Handler {
 		$body = Request::getUserVar('body');
 		$description = Request::getUserVar('description');
 
+		if ($file->delete($emailKey)) $file->write();
+		Request::redirect(null, null, 'edit', $locale, null, 'emails');
+	}
+
+	function saveEmail($args) {
+		list($plugin) = TranslatorHandler::validate();
+		TranslatorHandler::setupTemplate();
+		
+		$locale = array_shift($args);
+		if (!Locale::isLocaleValid($locale)) Request::redirect(null, null, 'index');
+
+		$emails = TranslatorAction::getEmailTemplates($locale);
+		$referenceEmails = TranslatorAction::getEmailTemplates(MASTER_LOCALE);
+		$emailKey = array_shift($args);
+
+		if (!in_array($emailKey, array_keys($referenceEmails)) && !in_array($emailKey, array_keys($emails))) Request::redirect(null, null, 'index');
+
+		$file =& new EditableEmailFile($locale, Locale::getEmailTemplateFilename($locale));
+
+		$subject = str_replace("\r\n", "\n", Request::getUserVar('subject'));
+		$body = str_replace("\r\n", "\n", Request::getUserVar('body'));
+		$description = str_replace("\r\n", "\n", Request::getUserVar('description'));
+
 		if (!$file->update($emailKey, $subject, $body, $description))
 			$file->insert($emailKey, $subject, $body, $description);
 
 		$file->write();
-		Request::redirect(null, null, 'edit', $locale);
+		if (Request::getUserVar('returnToCheck')==1) Request::redirect(null, null, 'check', $locale);
+		else Request::redirect(null, null, 'edit', $locale);
 	}
 
 	function validate() {

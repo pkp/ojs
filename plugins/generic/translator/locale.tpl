@@ -160,7 +160,7 @@
 		<td>{$emailKey|escape}</td>
 		<td>{$email.subject|escape}</td>
 		<td>
-			<a href="{url op="editEmail" path=$locale|to_array:$emailKey}" class="action">{translate key="common.edit"}</a>
+			<a href="{url op="editEmail" path=$locale|to_array:$emailKey}" class="action">{translate key="common.edit"}</a>&nbsp;|&nbsp;<a href="{url op="deleteEmail" path=$locale|to_array:$emailKey}" class="action" onclick="return confirm('{translate key="plugins.generic.translator.confirmDelete"}')">{translate key="common.delete"}</a>
 		</td>
 	</tr>
 	<tr>

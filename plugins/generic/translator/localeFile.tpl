@@ -25,12 +25,13 @@
 
 <h3>{translate key="plugins.generic.translator.file.edit" filename=$filename}</h3>
 <table class="listing" width="100%">
-	<tr><td colspan="2" class="headseparator">&nbsp;</td></tr>
+	<tr><td colspan="3" class="headseparator">&nbsp;</td></tr>
 	<tr class="heading" valign="bottom">
-		<td width="40%">{translate key="plugins.generic.translator.localeKey"}</td>
+		<td width="35%">{translate key="plugins.generic.translator.localeKey"}</td>
 		<td width="60%">{translate key="plugins.generic.translator.localeKeyValue"}</td>
+		<td width="5%">{translate key="common.action"}</td>
 	</tr>
-	<tr><td colspan="2" class="headseparator">&nbsp;</td></tr>
+	<tr><td colspan="3" class="headseparator">&nbsp;</td></tr>
 
 {iterate from=localeContents key=key item=value}
 {assign var=filenameEscaped value=$filename|escape:"url"}
@@ -47,23 +48,26 @@
 				<input name="changes[]" class="textField" class="textField" type="text" size="50" value="{$value|escape:"quotes"}" />
 			{/if}
 		</td>
+		<td>
+			<a href="{url op="deleteLocaleKey" path=$locale|to_array:$filenameEscaped:$key}" onclick='if (confirm("{translate|escape:"javascript" key="plugins.generic.translator.confirmDelete" filename=$filename}")) {literal}{document.locale.redirectUrl.value=this.href;this.href="javascript:document.locale.submit()";return true;} else {return false;}{/literal}' class="action">{translate key="common.delete"}</a>
+		</td>
 	</tr>
 	<tr>
-		<td colspan="2" class="{if $localeContents->eof()}end{/if}separator">&nbsp;</td>
+		<td colspan="3" class="{if $localeContents->eof()}end{/if}separator">&nbsp;</td>
 	</tr>
 {/iterate}
 
 {if $localeContents->wasEmpty()}
 	<tr>
-		<td colspan="2" class="nodata">{translate key="common.none"}</td>
+		<td colspan="3" class="nodata">{translate key="common.none"}</td>
 	</tr>
 	<tr>
-		<td colspan="2" class="endseparator">&nbsp;</td>
+		<td colspan="3" class="endseparator">&nbsp;</td>
 	</tr>
 {else}
 	<tr>
 		<td align="left">{page_info iterator=$localeContents}</td>
-		<td align="right">{page_links all_extra="onclick=\"document.locale.redirectUrl.value=this.href;this.href='javascript:document.locale.submit()';return true;\"" anchor="localeContents" name="localeContents" iterator=$localeContents}</td>
+		<td colspan="2" align="right">{page_links all_extra="onclick=\"document.locale.redirectUrl.value=this.href;this.href='javascript:document.locale.submit()';return true;\"" anchor="localeContents" name="localeContents" iterator=$localeContents}</td>
 	</tr>
 {/if}
 

@@ -15,9 +15,10 @@
 <p>{translate key="plugins.generic.translator.email.description"}</p>
 
 <form method="post" action="{url op="saveEmail" path=$locale|to_array:$emailKey}" name="editor">
+<input type="hidden" name="returnToCheck" value="{$returnToCheck|default:0}" />
 
 <h3>{translate key="plugins.generic.translator.email.reference"}</h3>
-<input type="text" class="textField" name="referenceSubject" value="{$referenceEmail.subject|escape}" size="80" />
+<input type="text" class="textField" name="referenceSubject" value="{$referenceEmail.subject|escape}" size="80" readonly="true" />
 <textarea readonly="true" name="referenceBody" rows="12" cols="80" class="textArea">
 {$referenceEmail.body|escape}
 </textarea><br/>

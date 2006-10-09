@@ -35,13 +35,34 @@ class EditableLocaleFile extends LocaleFile {
 		);
 		if (!isset($matches[0])) return false;
 
-		$matchedString = $matches[0][0];
 		$offset = $matches[0][1];
 		$closeOffset = strpos($this->contents, '</message>', $offset);
 		if ($closeOffset === FALSE) return false;
 
 		$newContents = substr($this->contents, 0, $offset);
 		$newContents .= "<message key=\"$key\">" . $this->xmlEscape($value);
+		$newContents .= substr($this->contents, $closeOffset);
+		$this->contents =& $newContents;
+		return true;
+	}
+
+	function delete($key) {
+		$matches = null;
+		$quotedKey = String::regexp_quote($key);
+	 	preg_match(
+			"/[ \t]*<message[\W]+key=\"$quotedKey\">/",
+			$this->contents,
+			$matches,
+			PREG_OFFSET_CAPTURE
+		);
+		if (!isset($matches[0])) return false;
+		$offset = $matches[0][1];
+
+		preg_match("/<\/message>[\W]*[\r]?\n/", $this->contents, $matches, PREG_OFFSET_CAPTURE, $offset);
+		if (!isset($matches[0])) return false;
+		$closeOffset = $matches[0][1] + strlen($matches[0][0]);
+
+		$newContents = substr($this->contents, 0, $offset);
 		$newContents .= substr($this->contents, $closeOffset);
 		$this->contents =& $newContents;
 		return true;

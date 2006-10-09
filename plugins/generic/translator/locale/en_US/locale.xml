@@ -77,4 +77,8 @@
 	<message key="plugins.generic.translator.file.doesNotExistNote">* This file has not yet been translated.</message>
 	<message key="plugins.generic.translator.file.confirmCreate">The file "{$filename}" will be created using the English version; you will need to translate all strings in the file. Do you wish to continue?</message>
 	<message key="plugins.generic.translator.email.description">In the following fields, translate the email template's Title, Body, and Description. The Description is for the Journal Manager's reference only.</message>
+	<message key="plugins.generic.translator.confirmDelete">Are you sure you wish to delete this item? This action cannot be undone.</message>
+	<message key="plugins.generic.translator.deleteKey">Delete this key</message>
+	<message key="plugins.generic.translator.deleteEmail">Delete this email</message>
+	<message key="plugins.generic.translator.saveBeforeContinuing">Be sure to save any changes made on this page before continuing or they will be lost. Do you wish to continue? If so, any unsaved changes will be lost.</message>
 </locale>
