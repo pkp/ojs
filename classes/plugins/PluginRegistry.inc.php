@@ -31,7 +31,7 @@ class PluginRegistry {
 	/**
 	 * Get all plugins in a single array.
 	 */
-	function getAllPlugins() {
+	function &getAllPlugins() {
 		$plugins =& PluginRegistry::getPlugins();
 		$allPlugins = array();
 		foreach ($plugins as $category => $list) {
@@ -121,7 +121,7 @@ class PluginRegistry {
 	/**
 	 * Load all plugins in the system and return them in a single array.
 	 */
-	function loadAllPlugins() {
+	function &loadAllPlugins() {
 		foreach (PluginRegistry::getCategories() as $category) {
 			PluginRegistry::loadCategory($category);
 		}

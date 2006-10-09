@@ -45,7 +45,7 @@ class FileWrapper {
 	 */
 	function contents() {
 		$contents = '';
-		if ($retval =& $this->open()) {
+		if ($retval = $this->open()) {
 			if (is_object($retval)) { // It may be a redirect
 				return $retval->contents();
 			}
