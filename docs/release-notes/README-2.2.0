@@ -1,0 +1,19 @@
+OJS 2.2.0 Release Notes
+CVS tag: ojs-2_2_0-0
+Release date: [month] [day], [year]
+=================================
+
+
+Configuration Changes
+---------------------
+
+See config.TEMPLATE.inc.php for a description and examples of all supported
+configuration parameters.
+
+New config.inc.php parameters:
+
+New Features
+------------
+	
+Bug Fixes
+---------

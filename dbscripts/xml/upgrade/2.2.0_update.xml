@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../dtd/xmldata.dtd">
+
+<!--
+  * 2.2.0_update.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * 2.2.0 database updates XML file.
+  *
+  * $Id$
+  -->
+
+<data>
+	<!-- #2424# Drop the currencies table after the FKs have been kept. -->
+	<sql>
+		<drop table="currencies" />
+	</sql>
+</data>
