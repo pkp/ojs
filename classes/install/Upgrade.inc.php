@@ -131,6 +131,22 @@ class Upgrade extends Installer {
 		}
 		return true;
 	}
+
+	/**
+	 * For upgrade to OJS 2.2.0: Migrate the currency settings so the
+	 * currencies table can be dropped in favour of XML.
+	 */
+	function correctCurrencies() {
+		$currencyDao =& DAORegistry::getDAO('CurrencyDAO');
+		$result =& $currencyDao->retrieve('SELECT st.type_id AS type_id, c.code_alpha AS code_alpha FROM subscription_types st LEFT JOIN currencies c ON (c.currency_id = st.currency_id)');
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+			$currencyDao->update('UPDATE subscription_types SET currency_code_alpha = ? WHERE type_id = ?', array($row['code_alpha'], $row['type_id']));
+			$result->MoveNext();
+		}
+		unset($result);
+		return true;
+	}
 }
 
 ?>

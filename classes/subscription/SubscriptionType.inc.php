@@ -113,19 +113,19 @@ class SubscriptionType extends DataObject {
 	}
 
 	/**
-	 * Get subscription type currency.
-	 * @return int
+	 * Get subscription type currency code.
+	 * @return string
 	 */
-	function getCurrencyId() {
-		return $this->getData('currencyId');
+	function getCurrencyCodeAlpha() {
+		return $this->getData('currencyCodeAlpha');
 	}
 	
 	/**
-	 * Set subscription type currency.
-	 * @param $currencyId int
+	 * Set subscription type currency code.
+	 * @param $currencyCodeAlpha string
 	 */
-	function setCurrencyId($currencyId) {
-		return $this->setData('currencyId', $currencyId);
+	function setCurrencyCodeAlpha($currencyCodeAlpha) {
+		return $this->setData('currencyCodeAlpha', $currencyCodeAlpha);
 	}
 
 	/**
@@ -134,7 +134,7 @@ class SubscriptionType extends DataObject {
 	 */
 	function getCurrencyString() {
 		$currencyDao = &DAORegistry::getDAO('CurrencyDAO');
-		$currency = $currencyDao->getCurrency($this->getData('currencyId'));
+		$currency =& $currencyDao->getCurrencyByAlphaCode($this->getData('currencyCodeAlpha'));
 
 		if ($currency != null) {
 			return $currency->getName();
@@ -149,7 +149,7 @@ class SubscriptionType extends DataObject {
 	 */
 	function getCurrencyStringShort() {
 		$currencyDao = &DAORegistry::getDAO('CurrencyDAO');
-		$currency = $currencyDao->getCurrency($this->getData('currencyId'));
+		$currency =& $currencyDao->getCurrencyByAlphaCode($this->getData('currencyCodeAlpha'));
 
 		if ($currency != null) {
 			return $currency->getCodeAlpha();

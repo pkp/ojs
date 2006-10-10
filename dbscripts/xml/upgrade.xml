@@ -19,6 +19,13 @@
 		<data file="upgrade/2.0.2_preupdate.xml"/>
 	</upgrade>
 
+	<!-- #2424: Make sure currencies are maintained as table is dropped -->
+	<upgrade minversion="2.0.0.0" maxversion="2.1.1.0">
+		<!-- 2.0.x to 2.2.0 -->
+		<data file="upgrade/2.2.0_preupdate.xml"/>
+		<code function="correctCurrencies"/>
+	</upgrade>
+
 
 	<!-- Common upgrade files -->
 	<schema file="ojs_schema.xml"/>
@@ -50,5 +57,10 @@
 		<code function="designateReviewVersions"/>
 		<code function="migrateRtSettings"/>
 		<note file="release-notes/README-2.1.1"/>
+	</upgrade>
+
+	<upgrade minversion="2.0.0.0" maxversion="2.1.1.0">
+		<data file="upgrade/2.2.0_update.xml"/>
+		<note file="release-notes/README-2.2.0"/>
 	</upgrade>
 </install>

@@ -1591,7 +1591,7 @@
 		<field name="cost" type="F">
 			<NOTNULL/>
 		</field>
-		<field name="currency_id" type="I8">
+		<field name="currency_code_alpha" type="C2" size="3">
 			<NOTNULL/>
 		</field>
 		<field name="duration" type="I2">
@@ -1661,31 +1661,6 @@
 		</index>
 		<index name="subscription_ip_range">
 			<col>ip_range</col>
-		</index>
-	</table>
-
-	<!--
-	 *
-	 * TABLE currencies 
-	 *
-	 -->
-	<table name="currencies">
-		<field name="currency_id" type="I8">
-			<KEY/>
-			<AUTOINCREMENT/>
-		</field>
-		<field name="name" type="C2" size="60">
-			<NOTNULL/>
-		</field>
-		<field name="code_alpha" type="C2" size="10">
-			<NOTNULL/>
-		</field>
-		<field name="code_numeric" type="I2">
-			<NOTNULL/>
-		</field>
-		<descr>Currencies based on ISO 4217.</descr>
-		<index name="currencies_currency_id">
-			<col>currency_id</col>
 		</index>
 	</table>
 

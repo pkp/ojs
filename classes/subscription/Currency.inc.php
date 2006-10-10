@@ -25,22 +25,6 @@ class Currency extends DataObject {
 	//
 	
 	/**
-	 * Get the ID of the currency.
-	 * @return int
-	 */
-	function getCurrencyId() {
-		return $this->getData('currencyId');
-	}
-	
-	/**
-	 * Set the ID of the currency.
-	 * @param $currencyId int
-	 */
-	function setCurrencyId($currencyId) {
-		return $this->setData('currencyId', $currencyId);
-	}
-
-	/**
 	 * Get the name of the currency.
 	 * @return string
 	 */
@@ -87,7 +71,6 @@ class Currency extends DataObject {
 	function setCodeNumeric($codeNumeric) {
 		return $this->setData('codeNumeric', $codeNumeric);
 	}
-
 }
 
 ?>

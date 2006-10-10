@@ -702,8 +702,8 @@ class ImportOJS1 {
 		);
 		
 		$currencyMap = array(
-			1 => 22,	// CDN
-			2 => 160	// USD
+			1 => 'CDN',	// CDN
+			2 => 'USD'	// USD
 		);
 		
 		$result = &$this->importDao->retrieve('SELECT * FROM tblsubscriptiontype ORDER BY nOrder');
@@ -716,7 +716,7 @@ class ImportOJS1 {
 			$subscriptionType->setTypeName($this->trans($row['chSubscriptionType']));
 			$subscriptionType->setDescription($this->trans($row['chSubscriptionTypeDesc']));
 			$subscriptionType->setCost($row['fCost']);
-			$subscriptionType->setCurrencyId(isset($currencyMap[$row['fkCurrencyID']]) ? $currencyMap[$row['fkCurrencyID']] : 160);
+			$subscriptionType->setCurrencyCodeAlpha(isset($currencyMap[$row['fkCurrencyID']]) ? $currencyMap[$row['fkCurrencyID']] : 'USD');
 			$subscriptionType->setDuration(12); // No equivalent in OJS 1.x
 			$subscriptionType->setFormat(isset($subscriptionFormatMap[$row['fkSubscriptionFormatID']]) ? $subscriptionFormatMap[$row['fkSubscriptionFormatID']] : SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE);
 			$subscriptionType->setInstitutional($row['bInstitutional']);

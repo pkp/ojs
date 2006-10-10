@@ -42,7 +42,7 @@ class SubscriptionTypeForm extends Form {
 		$currencies = &$currencyDao->getCurrencies();
 		$this->validCurrencies = array();
 		while (list(, $currency) = each($currencies)) {
-			$this->validCurrencies[$currency->getCurrencyId()] = $currency->getName() . ' (' . $currency->getCodeAlpha() . ')';
+			$this->validCurrencies[$currency->getCodeAlpha()] = $currency->getName() . ' (' . $currency->getCodeAlpha() . ')';
 		}
 
 		$this->typeId = isset($typeId) ? (int) $typeId : null;
@@ -112,7 +112,7 @@ class SubscriptionTypeForm extends Form {
 					'typeName' => $subscriptionType->getTypeName(),
 					'description' => $subscriptionType->getDescription(),
 					'cost' => $subscriptionType->getCost(),
-					'currency' => $subscriptionType->getCurrencyId(),
+					'currency' => $subscriptionType->getCurrencyCodeAlpha(),
 					'duration' => $subscriptionType->getDuration(),
 					'format' => $subscriptionType->getFormat(),
 					'institutional' => $subscriptionType->getInstitutional(),
@@ -152,7 +152,7 @@ class SubscriptionTypeForm extends Form {
 		$subscriptionType->setTypeName($this->getData('typeName'));
 		$subscriptionType->setDescription($this->getData('description'));
 		$subscriptionType->setCost(round($this->getData('cost'), 2));
-		$subscriptionType->setCurrencyId($this->getData('currency'));
+		$subscriptionType->setCurrencyCodeAlpha($this->getData('currency'));
 		$subscriptionType->setDuration((int)$this->getData('duration'));
 		$subscriptionType->setFormat($this->getData('format'));
 		$subscriptionType->setInstitutional($this->getData('institutional') == null ? 0 : $this->getData('institutional'));

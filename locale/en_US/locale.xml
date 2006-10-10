@@ -2542,6 +2542,7 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="debug.notes">Notes:</message>
 	<message key="debug.notes.localeLoad">Loaded locale file "{$localeFile}" from XML</message>
 	<message key="debug.notes.localeListLoad">Loaded locale list "{$localeList}" from XML</message>
+	<message key="debug.notes.currencyListLoad">Loaded currency list "{$filename}" from XML</message>
 	<message key="debug.notes.missingLocaleKey">Missing locale key "{$key}".</message>
 
 	<!--

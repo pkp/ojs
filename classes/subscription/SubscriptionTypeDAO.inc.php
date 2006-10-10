@@ -223,7 +223,7 @@ class SubscriptionTypeDAO extends DAO {
 		$subscriptionType->setTypeName($row['type_name']);
 		$subscriptionType->setDescription($row['description']);
 		$subscriptionType->setCost($row['cost']);
-		$subscriptionType->setCurrencyId($row['currency_id']);
+		$subscriptionType->setCurrencyCodeAlpha($row['currency_code_alpha']);
 		$subscriptionType->setDuration($row['duration']);
 		$subscriptionType->setFormat($row['format']);
 		$subscriptionType->setInstitutional($row['institutional']);
@@ -244,7 +244,7 @@ class SubscriptionTypeDAO extends DAO {
 	function insertSubscriptionType(&$subscriptionType) {
 		$ret = $this->update(
 			'INSERT INTO subscription_types
-				(journal_id, type_name, description, cost, currency_id, duration, format, institutional, membership, pub, seq)
+				(journal_id, type_name, description, cost, currency_code_alpha, duration, format, institutional, membership, pub, seq)
 				VALUES
 				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
@@ -252,7 +252,7 @@ class SubscriptionTypeDAO extends DAO {
 				$subscriptionType->getTypeName(),
 				$subscriptionType->getDescription(),
 				$subscriptionType->getCost(),
-				$subscriptionType->getCurrencyId(),
+				$subscriptionType->getCurrencyCodeAlpha(),
 				$subscriptionType->getDuration(),
 				$subscriptionType->getFormat(),
 				$subscriptionType->getInstitutional(),
@@ -279,7 +279,7 @@ class SubscriptionTypeDAO extends DAO {
 					type_name = ?,
 					description = ?,
 					cost = ?,
-					currency_id = ?,
+					currency_code_alpha = ?,
 					duration = ?,
 					format = ?,
 					institutional = ?,
@@ -292,7 +292,7 @@ class SubscriptionTypeDAO extends DAO {
 				$subscriptionType->getTypeName(),
 				$subscriptionType->getDescription(),
 				$subscriptionType->getCost(),
-				$subscriptionType->getCurrencyId(),
+				$subscriptionType->getCurrencyCodeAlpha(),
 				$subscriptionType->getDuration(),
 				$subscriptionType->getFormat(),
 				$subscriptionType->getInstitutional(),

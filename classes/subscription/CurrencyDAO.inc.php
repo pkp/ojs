@@ -25,25 +25,64 @@ class CurrencyDAO extends DAO {
 		parent::DAO();
 	}
 
+	function _getCache() {
+		$locale = Locale::getLocale();
+		static $cache;
+		if (!isset($cache)) {
+			import('cache.CacheManager');
+			$cacheManager =& CacheManager::getManager();
+			$cache =& $cacheManager->getFileCache(
+				'currencies', $locale,
+				array(&$this, '_cacheMiss')
+			);
+			$cacheTime = $cache->getCacheTime();
+			if ($cacheTime !== null && $cacheTime < filemtime($this->getCurrencyFilename($locale))) {
+				$cache->flush();
+			}
+		}
+
+		return $cache;
+	}
+
+	function _cacheMiss(&$cache, $id) {
+		static $allCurrencies;
+		if (!isset($allCurrencies)) {
+			// Add a locale load to the debug notes.
+			$notes =& Registry::get('system.debug.notes');
+			$filename = $this->getCurrencyFilename(Locale::getLocale());
+			$notes[] = array('debug.notes.currencyListLoad', array('filename' => $filename));
+
+			// Reload locale registry file
+			$xmlDao = &new XMLDAO();
+			$data = $xmlDao->parseStruct($filename, array('currency'));
+	
+			// Build array with ($charKey => array(stuff))
+			if (isset($data['currency'])) {
+				foreach ($data['currency'] as $currencyData) {
+					$allCurrencies[$currencyData['attributes']['code_alpha']] = array(
+						$currencyData['attributes']['name'],
+						$currencyData['attributes']['code_numeric']
+					);
+				}
+			}
+			asort($allCurrencies);
+			$cache->setEntireCache($allCurrencies);
+		}
+		return null;
+	}
+
+	function getCurrencyFilename($locale) {
+		return "locale/$locale/currencies.xml";
+	}
+
 	/**
-	 * Retrieve a currency by currency ID.
+	 * Retrieve a currency by alpha currency ID.
 	 * @param $currencyId int
 	 * @return Currency
 	 */
-	function &getCurrency($currencyId) {
-		$result = &$this->retrieve(
-			'SELECT * FROM currencies WHERE currency_id = ?', $currencyId
-		);
-
-		$returner = null;
-		if ($result->RecordCount() != 0) {
-			$returner = &$this->_returnCurrencyFromRow($result->GetRowAssoc(false));
-		}
-
-		$result->Close();
-		unset($result);
-
-		return $returner;
+	function &getCurrencyByAlphaCode($codeAlpha) {
+		$cache =& $this->_getCache();
+		return $this->_returnCurrencyFromRow($codeAlpha, $cache->get($codeAlpha));
 	}
 
 	/**
@@ -51,21 +90,12 @@ class CurrencyDAO extends DAO {
 	 * @return array of Currencies
 	 */
 	function &getCurrencies() {
-		$result = &$this->retrieve(
-			'SELECT * FROM currencies ORDER BY name'
-		);
-	
-		$currencies = array();
-		
-		while (!$result->EOF) {
-			$currencies[] = &$this->_returnCurrencyFromRow($result->GetRowAssoc(false));
-			$result->moveNext();
+		$cache =& $this->_getCache();
+		$returner = array();
+		foreach ($cache->getContents() as $codeAlpha => $entry) {
+			$returner[] =& $this->_returnCurrencyFromRow($codeAlpha, $entry);
 		}
-
-		$result->Close();
-		unset($result);
-	
-		return $currencies;
+		return $returner;
 	}
 
 	/**
@@ -73,14 +103,13 @@ class CurrencyDAO extends DAO {
 	 * @param $row array
 	 * @return Currency
 	 */
-	function &_returnCurrencyFromRow(&$row) {
+	function &_returnCurrencyFromRow($codeAlpha, &$entry) {
 		$currency = &new Currency();
-		$currency->setCurrencyId($row['currency_id']);
-		$currency->setName($row['name']);
-		$currency->setCodeAlpha($row['code_alpha']);
-		$currency->setCodeNumeric($row['code_numeric']);
+		$currency->setCodeAlpha($codeAlpha);
+		$currency->setName($entry[0]);
+		$currency->setCodeNumeric($entry[1]);
 		
-		HookRegistry::call('CurrencyDAO::_returnCurrencyFromRow', array(&$currency, &$row));
+		HookRegistry::call('CurrencyDAO::_returnCurrencyFromRow', array(&$currency, &$codeAlpha, &$entry));
 
 		return $currency;
 	}
