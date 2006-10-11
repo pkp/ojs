@@ -67,6 +67,14 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
 		}		
 	}
 
+	function viewMetadata($args) {
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		list($journal, $submission) = SubmissionProofreadHandler::validate($articleId);
+		parent::setupTemplate(true, $articleId, 'summary');
+		
+		ProofreaderAction::viewMetadata($submission, ROLE_ID_PROOFREADER);
+	}
+	
 	/**
 	 * Validate that the user is the assigned proofreader for the submission.
 	 * Redirects to proofreader index page if validation fails.

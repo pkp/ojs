@@ -35,7 +35,7 @@
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="common.country"}</td>
-		<td class="value">{$author->getCountryLocalized()|escape|default:"&mdash;"}</td>
+		<td class="value">{$author.countryLocalized|escape|default:"&mdash;"}</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="user.biography"}</td>

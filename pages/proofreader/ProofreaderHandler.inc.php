@@ -205,6 +205,11 @@ class ProofreaderHandler extends Handler {
 		SubmissionProofreadHandler::proofGalleyFile($args);
 	}	
 
+	function viewMetadata($args) {
+		import('pages.proofreader.SubmissionProofreadHandler');
+		SubmissionProofreadHandler::viewMetadata($args);
+	}
+	
 	function editComment($args) {
 		import('pages.proofreader.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::editComment($args);
@@ -219,6 +224,7 @@ class ProofreaderHandler extends Handler {
 		import('pages.proofreader.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::saveComment($args);
 	}
+
 }
 
 ?>

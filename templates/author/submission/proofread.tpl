@@ -21,6 +21,8 @@
 </table>
 {/if}
 
+<a href="{url op="viewMetadata" path=$proofAssignment->getArticleId()}" class="action" target="_new">{translate key="submission.reviewMetadata"}</a>
+
 <table width="100%" class="info">
 	<tr>
 		<td width="40%" colspan="2">&nbsp;</td>

@@ -21,6 +21,8 @@
 </table>
 {/if}
 
+<a href="{url op="viewMetadata" path=$proofAssignment->getArticleId()}" class="action" target="_new">{translate key="submission.reviewMetadata"}</a>
+
 <table width="100%" class="info">
 	<tr>
 		<td width="40%" colspan="2">&nbsp;</td>
@@ -71,8 +73,9 @@
 			{if not $proofAssignment->getDateLayoutEditorNotified() or $proofAssignment->getDateLayoutEditorCompleted()}
 				{icon name="mail" disabled="disabled"}
 			{else}
+				{translate|assign:"confirmMessage" key="common.confirmComplete"}
 				{url|assign:"url" op="layoutEditorProofreadingComplete" articleId=$submission->getArticleId()}
-				{icon name="mail" url=$url}
+				{icon name="mail" onclick="return confirm('$confirmMessage')" url=$url}
 			{/if}
 			{$proofAssignment->getDateLayoutEditorCompleted()|date_format:$dateFormatShort|default:""}
 		</td>

@@ -112,6 +112,7 @@ class MetadataForm extends Form {
 						'lastName' => $authors[$i]->getLastName(),
 						'affiliation' => $authors[$i]->getAffiliation(),
 						'country' => $authors[$i]->getCountry(),
+						'countryLocalized' => $authors[$i]->getCountryLocalized(),
 						'email' => $authors[$i]->getEmail(),
 						'url' => $authors[$i]->getUrl(),
 						'biography' => $authors[$i]->getBiography()
