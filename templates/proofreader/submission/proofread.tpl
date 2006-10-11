@@ -43,7 +43,8 @@
 			{if not $proofAssignment->getDateProofreaderNotified() or not $useProofreaders or $proofAssignment->getDateProofreaderCompleted()}
 				{icon name="mail" disabled="disabled" url=$url}
 			{else}
-				{icon name="mail" url=$url}
+				{translate|assign:"confirmMessage" key="common.confirmComplete"}
+				{icon name="mail" onclick="return confirm('$confirmMessage')" url=$url}
 			{/if}
 			{$proofAssignment->getDateProofreaderCompleted()|date_format:$dateFormatShort|default:""}
 		</td>

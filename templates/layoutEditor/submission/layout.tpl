@@ -46,7 +46,8 @@
 				{icon name="mail" disabled="disabled"}
 			{else}
 				{url|assign:"url" op="completeAssignment" articleId=$submission->getArticleId()}
-				{icon name="mail" url=$url}
+				{translate|assign:"confirmMessage" key="common.confirmComplete"}
+				{icon name="mail" onclick="return confirm('$confirmMessage')" url=$url}
 			{/if}
 						{$layoutAssignment->getDateCompleted()|date_format:$dateFormatShort|default:""}
 		</td>
