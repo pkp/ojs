@@ -231,25 +231,23 @@ class Mail extends DataObject {
 	
 	/**
 	 * Return a string containing the from address.
-	 * @param $encode boolean encode the data (e.g., when sending)
 	 * @return string
 	 */
-	function getFromString($encode = true) {
+	function getFromString() {
 		$from = $this->getFrom();
 		if ($from == null) {
 			return null;
 		} else {
-			return ($encode ? String::encode_mime_header($from['name']) : $from['name']) . ' <'.$from['email'].'>';
+			return Mail::encodeDisplayName($from['name']) . ' <'.$from['email'].'>';
 		}
 	}
 	
 	/**
 	 * Return a string from an array of (name, email) pairs.
-	 * @param $encode boolean
 	 * @param $includeNames boolean
 	 * @return string;
 	 */
-	function getAddressArrayString($addresses, $encode = true, $includeNames = true) {
+	function getAddressArrayString($addresses, $includeNames = true) {
 		if ($addresses == null) {
 			return null;
 			
@@ -265,7 +263,7 @@ class Mail extends DataObject {
 					$addressString .= $address['email'];
 					
 				} else {
-					$addressString .= ($encode ? String::encode_mime_header($address['name']) : $address['name']) . ' <'.$address['email'].'>';
+					$addressString .= Mail::encodeDisplayName($address['name']) . ' <'.$address['email'].'>';
 				}
 			}
 			
@@ -275,29 +273,26 @@ class Mail extends DataObject {
 	
 	/**
 	 * Return a string containing the recipients.
-	 * @param $encode boolean
 	 * @return string
 	 */
-	function getRecipientString($encode = true) {
-		return $this->getAddressArrayString($this->getRecipients(), $encode);
+	function getRecipientString() {
+		return $this->getAddressArrayString($this->getRecipients());
 	}
 	
 	/**
 	 * Return a string containing the Cc recipients.
-	 * @param $encode boolean
 	 * @return string
 	 */
-	function getCcString($encode = true) {
-		return $this->getAddressArrayString($this->getCcs(), $encode);
+	function getCcString() {
+		return $this->getAddressArrayString($this->getCcs());
 	}
 	
 	/**
 	 * Return a string containing the Bcc recipients.
-	 * @param $encode boolean
 	 * @return string
 	 */
-	function getBccString($encode = true) {
-		return $this->getAddressArrayString($this->getBccs(), $encode, false);
+	function getBccString() {
+		return $this->getAddressArrayString($this->getBccs(), false);
 	}
 	
 
@@ -308,6 +303,7 @@ class Mail extends DataObject {
 	function send() {
 		$recipients = $this->getRecipientString();
 		$from = $this->getFromString();
+
 		$subject = String::encode_mime_header($this->getSubject());
 		$body = $this->getBody();
 		
@@ -410,6 +406,16 @@ class Mail extends DataObject {
 		} else {
 			return String::mail($recipients, $subject, $mailBody, $headers, $additionalParameters);
 		}
+	}
+
+	function encodeDisplayName($displayName) {
+		if (String::regexp_match('!^[-A-Za-z0-9\!#\$%&\'\*\+\/=\?\^_\`\{\|\}~]+$!', $displayName)) return $displayName;
+		return ('"' . str_replace(
+			array('"', '\\'),
+			'',
+			$displayName
+		) . '"');
+
 	}
 }
 
