@@ -114,6 +114,7 @@ class RegistrationForm extends Form {
 		$this->setData('registerAsReader', 1);
 		$this->setData('existingUser', $this->existingUser);
 		$this->setData('userLocales', array());
+		$this->setData('sendPassword', 1);
 	}
 	
 	/**
@@ -126,7 +127,7 @@ class RegistrationForm extends Form {
 			'affiliation', 'email', 'userUrl', 'phone', 'fax',
 			'mailingAddress', 'biography', 'interests', 'userLocales',
 			'registerAsReader', 'openAccessNotification', 'registerAsAuthor',
-			'registerAsReviewer', 'existingUser'
+			'registerAsReviewer', 'existingUser', 'sendPassword'
 		);
 		if ($this->captchaEnabled) {
 			$userVars[] = 'captchaId';
@@ -242,7 +243,7 @@ class RegistrationForm extends Form {
 			}
 		}
 		
-		if (!$this->existingUser) {
+		if (!$this->existingUser && $this->getData('sendPassword')) {
 			// Send welcome email to user
 			import('mail.MailTemplate');
 			$mail = &new MailTemplate('USER_REGISTER');

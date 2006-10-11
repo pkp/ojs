@@ -427,6 +427,8 @@
 	<message key="user.logOut">Log Out</message>
 	<message key="user.username">Username</message>
 	<message key="user.password">Password</message>
+	<message key="user.sendPassword">Confirmation</message>
+	<message key="user.sendPassword.description">Send me a confirmation email including my username and password</message>
 	<message key="user.name">Name</message>
 	<message key="user.firstName">First name</message>
 	<message key="user.middleName">Middle name</message>

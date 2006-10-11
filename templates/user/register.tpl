@@ -124,6 +124,13 @@
 	<td class="value"><textarea name="biography" id="biography" rows="5" cols="40" class="textArea">{$biography|escape}</textarea></td>
 </tr>
 
+<tr valign="top">
+	<td class="label">{fieldLabel name="sendPassword" key="user.sendPassword"}</td>
+	<td class="value">
+		<input type="checkbox" name="sendPassword" id="sendPassword" value="1"{if $sendPassword} checked="checked"{/if} /> <label for="sendPassword">{translate key="user.sendPassword.description"}</label>
+	</td>
+</td>
+
 {if $profileLocalesEnabled && count($availableLocales) > 1}
 <tr valign="top">
 	<td class="label">{translate key="user.workingLanguages"}</td>
