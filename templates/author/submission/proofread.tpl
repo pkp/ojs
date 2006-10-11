@@ -37,8 +37,9 @@
 			{if not $proofAssignment->getDateAuthorNotified() or $proofAssignment->getDateAuthorCompleted()}
 				{icon name="mail" disabled="disabled"}
 			{else}
+				{translate|assign:"confirmMessage" key="common.confirmComplete"}
 				{url|assign:"url" op="authorProofreadingComplete" articleId=$submission->getArticleId()}
-				{icon name="mail" url=$url}
+				{icon name="mail" onclick="return confirm('$confirmMessage')" url=$url}
 			{/if}
 			{$proofAssignment->getDateAuthorCompleted()|date_format:$dateFormatShort|default:""}
 		</td>
