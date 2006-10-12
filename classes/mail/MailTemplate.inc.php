@@ -23,7 +23,10 @@ class MailTemplate extends Mail {
 	
 	/** @var $locale string locale of this template */
 	var $locale;
-	
+
+	/** @var $journal object The journal this message relates to */
+	var $journal;
+
 	/** @var $enabled boolean email template is enabled */
 	var $enabled;
 
@@ -176,11 +179,10 @@ class MailTemplate extends Mail {
 		$body = $this->getBody();
 
 		// Add commonly-used variables to the list
-		$journal = &Request::getJournal();
-		if (isset($journal)) {
+		if (isset($this->journal)) {
 			// FIXME Include affiliation, title, etc. in signature?
-			$paramArray['journalName'] = $journal->getTitle();
-			$paramArray['principalContactSignature'] = $journal->getSetting('contactName');
+			$paramArray['journalName'] = $this->journal->getTitle();
+			$paramArray['principalContactSignature'] = $this->journal->getSetting('contactName');
 		} else {
 			$site = &Request::getSite();
 			$paramArray['principalContactSignature'] = $site->getContactName();
@@ -235,7 +237,6 @@ class MailTemplate extends Mail {
 	 * @return void
 	 */
 	function displayEditForm($formActionUrl, $hiddenFormParams = null, $alternateTemplate = null, $additionalParameters = array()) {
-		$journal = &Request::getJournal();
 		import('form.Form');
 		$form = &new Form($alternateTemplate!=null?$alternateTemplate:'email/email.tpl');
 
@@ -284,10 +285,10 @@ class MailTemplate extends Mail {
 	 * Send the email.
 	 * Aside from calling the parent method, this actually attaches
 	 * the persistent attachments if they are used.
+	 * @param $clearAttachments boolean Whether to delete attachments after
 	 */
 	function send($clearAttachments = true) {
-		$journal = Request::getJournal();
-		if (isset($journal)) {
+		if (isset($this->journal)) {
 			//If {$templateSignature} exists in the body of the
 			// message, replace it with the journal signature;
 			// otherwise just append it. This is here to
@@ -295,12 +296,12 @@ class MailTemplate extends Mail {
 			// where the signature cannot just be appended.
 			$searchString = '{$templateSignature}';
 			if (strstr($this->getBody(), $searchString) === false) {
-				$this->setBody($this->getBody() . "\n" . $journal->getSetting('emailSignature'));
+				$this->setBody($this->getBody() . "\n" . $this->journal->getSetting('emailSignature'));
 			} else {
-				$this->setBody(str_replace($searchString, $journal->getSetting('emailSignature'), $this->getBody()));
+				$this->setBody(str_replace($searchString, $this->journal->getSetting('emailSignature'), $this->getBody()));
 			}
 	
-			$envelopeSender = $journal->getSetting('envelopeSender');
+			$envelopeSender = $this->journal->getSetting('envelopeSender');
 			if (!empty($envelopeSender) && Config::getVar('email', 'allow_envelope_sender')) $this->setEnvelopeSender($envelopeSender);
 		}
 
