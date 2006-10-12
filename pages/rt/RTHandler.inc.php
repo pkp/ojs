@@ -103,7 +103,7 @@ class RTHandler extends ArticleHandler {
 					$nameValue = explode('=', $param);
 					if (!isset($nameValue[0])) break;
 	
-					$name = trim($nameValue[0]);
+					$name = $nameValue[0];
 					$value = trim(isset($nameValue[1])?$nameValue[1]:'');
 					if (!empty($name)) $params[] = array('name' => $name, 'value' => $value);
 				}

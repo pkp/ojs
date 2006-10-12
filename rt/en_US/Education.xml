@@ -492,14 +492,14 @@
 			<search_title>Gateway to Educational Materials (GEM)</search_title>
 			<search_description>This site offers a one-stop educational resource to Internet lesson plans, curriculum units, and activities pertaining to all K-12 subjects. Users can browse sites by subject or keyword, desired grade or education level. They can also search by subject, keyword, title, and full-text of the site description. Sources include the AskERIC Virtual Library, the Eisenhower National Clearinghouse, Math Forum, Microsoft Encarta, the North Carolina Department of Public Instruction, and the US Department of Education.</search_description>
 			<url>http://www.thegateway.org/</url>
-			<search_url>http://128.208.131.111/portal_seamarksearch/makesearch?isliteral=yes&amp;operator=contains&amp;form.subitted=1&amp;dimension=fulltext&amp;searchType=within&amp;value={$formKeywords}</search_url>
+			<search_url>http://64.119.44.148/portal_seamarksearch/makesearch?isliteral=yes&amp;operator=contains&amp;form.submitted=1&amp;dimension=fulltext&amp;ss=Go&amp;value={$formKeywords}</search_url>
 			
 		</search>
 		<search>
 			<search_title>Merlot</search_title>
 			<search_description>Merlot is a free and open resource designed primarily for faculty and students in higher education. With a continually growing collection of online learning materials, peer reviews and assignments, MERLOT helps faculty enhance instruction.</search_description>
 			<url>http://www.merlot.org/Home.po</url>
-			<search_url>http://www.merlot.org/search/ArtifactList.po?scope=1&amp;search=search&amp;keyword={$formKeywords}</search_url>
+			<search_url>http://www.merlot.org/merlot/materials.htm?keywords={$formKeywords}</search_url>
 			
 		</search>
 		<search>
@@ -519,7 +519,7 @@
 			<search_title>National Center for Education Statistics</search_title>
 			<search_description>The site of the Department of Education's major statistical agency has a catalog of publications available, with text and tables from some of the publications.</search_description>
 			<url>http://nces.ed.gov/</url>
-			<search_url>http://nces.ed.gov/pubsearch/search.asp?searchcat=keyword&amp;searchtype=AND&amp;searchmonth=Junesearchyear=1990&amp;&amp;datetype=&amp;gt;&amp;pubtype=&amp;surveyid=&amp;searchstring={$formKeywords}</search_url>
+			<search_url>http://search.nces.ed.gov/search?output=xml_no_dtd&amp;client=nces&amp;proxystylesheet=nces&amp;site=nces&amp;q={$formKeywords}</search_url>
 			
 		</search>
 		<search>
@@ -701,7 +701,8 @@ ENC.ORG is now goENC.COM!</search_description>
 			<search_title>Newsdirectory</search_title>
 			<search_description>Newsdirectory is a comprehensive and searchable guide to the world's English-language online media. Currently over 8,000 newspapers and magazines are listed, as well as more than 1,000 U.S. television broadcasters.</search_description>
 			<url>http://www.newsdirectory.com/</url>
-			<search_url>http://ask.elibrary.com/search.asp?refid=NEWSD&amp;datetype=all&amp;srcmags=checked&amp;srcnews=checked&amp;srcbooks=checked&amp;srctvrad=checked&amp;query={$formKeywords}</search_url>
+			<search_url>http://www.newsdirectory.com/hbSearch.php</search_url>
+			<search_post>s={$formKeywords}&amp; submit=Go</search_post>
 			
 		</search>
 	</context>
