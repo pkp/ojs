@@ -350,6 +350,7 @@ class PeopleHandler extends ManagerHandler {
 		$userDao =& DAORegistry::getDAO('UserDAO');
 
 		$journal =& Request::getJournal();
+		$journalId = $journal->getJournalId();
 		$templateMgr =& TemplateManager::getManager();
 
 		$oldUserId = Request::getUserVar('oldUserId');
@@ -357,8 +358,8 @@ class PeopleHandler extends ManagerHandler {
 
 		// Ensure that we have administrative priveleges over the specified user(s).
 		if (
-			(!empty($oldUserId) && !Validation::canAdminister($journal->getJournalId(), $oldUserId)) ||
-			(!empty($newUserId) && !Validation::canAdminister($journal->getJournalId(), $newUserId))
+			(!empty($oldUserId) && !Validation::canAdminister($journalId, $oldUserId)) ||
+			(!empty($newUserId) && !Validation::canAdminister($journalId, $newUserId))
 		) {
 			$templateMgr->assign('pageTitle', 'manager.people');
 			$templateMgr->assign('errorMsg', 'manager.people.noAdministrativeRights');
@@ -468,7 +469,17 @@ class PeopleHandler extends ManagerHandler {
 			$groupMembershipDao->deleteMembershipByUserId($oldUserId);
 			$sectionEditorsDao =& DAORegistry::getDAO('SectionEditorsDAO');
 			$sectionEditorsDao->deleteEditorsByUserId($oldUserId);
+
+			// Transfer old user's roles
+			$roles =& $roleDao->getRolesByUserId($oldUserId);
+			foreach ($roles as $role) {
+				if (!$roleDao->roleExists($role->getJournalId(), $newUserId, $role->getRoleId())) {
+					$role->setUserId($newUserId);
+					$roleDao->insertRole($role);
+				}
+			}
 			$roleDao->deleteRoleByUserId($oldUserId);
+
 			$userDao->deleteUserById($oldUserId);
 
 			Request::redirect(null, 'manager');
@@ -513,10 +524,10 @@ class PeopleHandler extends ManagerHandler {
 		$rangeInfo = Handler::getRangeInfo('users');
 
 		if ($roleId) {
-			$users = &$roleDao->getUsersByRoleId($roleId, $journal->getJournalId(), $searchType, $search, $searchMatch, $rangeInfo);
+			$users = &$roleDao->getUsersByRoleId($roleId, $journalId, $searchType, $search, $searchMatch, $rangeInfo);
 			$templateMgr->assign('roleId', $roleId);
 		} else {
-			$users = &$roleDao->getUsersByJournalId($journal->getJournalId(), $searchType, $search, $searchMatch, $rangeInfo);
+			$users = &$roleDao->getUsersByJournalId($journalId, $searchType, $search, $searchMatch, $rangeInfo);
 		}
 
 		$templateMgr->assign('currentUrl', Request::url(null, null, 'people', 'all'));
@@ -534,7 +545,7 @@ class PeopleHandler extends ManagerHandler {
 		if ($roleId == ROLE_ID_REVIEWER) {
 			$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
 			$templateMgr->assign('rateReviewerOnQuality', $journal->getSetting('rateReviewerOnQuality'));
-			$templateMgr->assign('qualityRatings', $journal->getSetting('rateReviewerOnQuality') ? $reviewAssignmentDao->getAverageQualityRatings($journal->getJournalId()) : null);
+			$templateMgr->assign('qualityRatings', $journal->getSetting('rateReviewerOnQuality') ? $reviewAssignmentDao->getAverageQualityRatings($journalId) : null);
 		}
 		$templateMgr->assign('fieldOptions', Array(
 			USER_FIELD_FIRSTNAME => 'user.firstName',
