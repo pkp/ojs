@@ -99,6 +99,7 @@ class RegistrationForm extends Form {
 		$templateMgr->assign('allowRegAuthor', $journal->getSetting('allowRegAuthor')==1?1:0);
 		$templateMgr->assign('allowRegReviewer', $journal->getSetting('allowRegReviewer')==1?1:0);
 		$templateMgr->assign('profileLocalesEnabled', $this->profileLocalesEnabled);
+		$templateMgr->assign('source', Request::getUserVar('source'));
 		if ($this->profileLocalesEnabled) {
 			$site = &Request::getSite();
 			$templateMgr->assign('availableLocales', $site->getSupportedLocaleNames());

@@ -55,11 +55,11 @@ class AuthorHandler extends Handler {
 	 * Validate that user has author permissions in the selected journal.
 	 * Redirects to user index page if not properly authenticated.
 	 */
-	function validate() {
+	function validate($reason = null) {
 		parent::validate();
 		$journal = &Request::getJournal();
 		if (!isset($journal) || !Validation::isAuthor($journal->getJournalId())) {
-			Validation::redirectLogin();
+			Validation::redirectLogin($reason);
 		}
 
 		return array(&$journal);

@@ -13,6 +13,12 @@
 {assign var="helpTopicId" value="user.registerAndProfile"}
 {include file="common/header.tpl"}
 
+{if $loginMessage}
+	<span class="instruct">{translate key="$loginMessage"}</span>
+	<br />
+	<br />
+{/if}
+
 {if $error}
 	<span class="formError">{translate key="$error" reason=$reason}</span>
 	<br />
@@ -43,7 +49,7 @@
 </table>
 
 <p>
-&#187; <a href="{url page="user" op="register"}">{translate key="user.login.registerNewAccount"}</a><br />
+&#187; <a href="{url page="user" op="register" source=$source|escape}">{translate key="user.login.registerNewAccount"}</a><br />
 &#187; <a href="{url page="login" op="lostPassword"}">{translate key="user.login.forgotPassword"}</a>
 </p>
 

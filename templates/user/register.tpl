@@ -25,6 +25,10 @@
 	<input type="hidden" name="existingUser" value="1"/>
 {/if}
 
+{if $source}
+	<input type="hidden" name="source" value="{$source|escape}" />
+{/if}
+
 <h3>{translate key="user.profile"}</h3>
 {include file="common/formErrors.tpl"}
 

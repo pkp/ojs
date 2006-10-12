@@ -35,6 +35,7 @@ class RegistrationHandler extends UserHandler {
 			$journalDao = &DAORegistry::getDAO('JournalDAO');
 			$journals = &$journalDao->getEnabledJournals(); //Enabled added
 			$templateMgr = &TemplateManager::getManager();
+			$templateMgr->assign('source', Request::getUserVar('source'));
 			$templateMgr->assign_by_ref('journals', $journals);
 			$templateMgr->display('user/registerSite.tpl');
 		}
@@ -63,7 +64,10 @@ class RegistrationHandler extends UserHandler {
 				$templateMgr->assign('backLinkLabel', 'user.login');
 				$templateMgr->display('common/error.tpl');
 			}
-			Request::redirect(null, 'login');
+			if($source = Request::getUserVar('source'))
+				Request::redirectUrl($source);
+
+			else Request::redirect(null, 'login');
 			
 		} else {
 			parent::setupTemplate(true);

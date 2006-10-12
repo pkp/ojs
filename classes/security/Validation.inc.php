@@ -122,13 +122,19 @@ class Validation {
 	
 	/**
 	 * Redirect to the login page, appending the current URL as the source.
+	 * @param $message string Optional name of locale key to add to login page
 	 */
-	function redirectLogin() {
+	function redirectLogin($message = null) {
+		$args = array();
+
 		if (isset($_SERVER['REQUEST_URI'])) {
-			Request::redirect(null, 'login', null, null, array('source' => $_SERVER['REQUEST_URI']));
-		} else {
-			Request::redirect(null, 'login');
+			$args['source'] = $_SERVER['REQUEST_URI'];
 		}
+		if ($message !== null) {
+			$args['loginMessage'] = $message;
+		}
+
+		Request::redirect(null, 'login', null, null, $args);
 	}
 	
 	/**

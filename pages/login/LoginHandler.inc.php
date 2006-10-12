@@ -32,8 +32,15 @@ class LoginHandler extends Handler {
 		
 		$sessionManager = &SessionManager::getManager();
 		$session = &$sessionManager->getUserSession();
-		
+
 		$templateMgr = &TemplateManager::getManager();
+
+		// If the user wasn't expecting a login page, i.e. if they're new to the
+		// site and want to submit a paper, it helps to explain why they need to
+		// register.
+		if(Request::getUserVar('loginMessage'))
+			$templateMgr->assign('loginMessage', Request::getUserVar('loginMessage'));
+
 		$templateMgr->assign('username', $session->getSessionVar('username'));
 		$templateMgr->assign('remember', Request::getUserVar('remember'));
 		$templateMgr->assign('source', Request::getUserVar('source'));
