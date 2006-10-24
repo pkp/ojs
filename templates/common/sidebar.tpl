@@ -48,7 +48,7 @@
 			<td colspan="2"><input type="checkbox" id="remember" name="remember" value="1" /> <label for="remember">{translate key="user.login.rememberMe"}</label></td>
 		</tr>
 		<tr>
-			<td><input type="submit" value="{translate key="user.login"}" class="button" /></td>
+			<td colspan="2"><input type="submit" value="{translate key="user.login"}" class="button" /></td>
 		</tr>
 		</table>
 		</form>
