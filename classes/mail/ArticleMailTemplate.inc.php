@@ -53,6 +53,7 @@ class ArticleMailTemplate extends MailTemplate {
 		$journal = isset($this->journal)?$this->journal:Request::getJournal();
 
 		$paramArray['articleTitle'] = strip_tags($article->getArticleTitle());
+		$paramArray['articleId'] = $article->getArticleId();
 		$paramArray['journalName'] = strip_tags($journal->getTitle());
 		$paramArray['sectionName'] = strip_tags($article->getSectionTitle());
 		$paramArray['articleAbstract'] = strip_tags($article->getArticleAbstract());

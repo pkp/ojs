@@ -35,8 +35,7 @@
       <href src="myfile.xsl" mime_type="text/xsl" />
      </stylesheet>
      <image>
-      <embed encoding="base64" filename="myfilename.png" mime_type="application/png">
-BLAH BLAH BLAH
+      <embed encoding="base64" filename="myfilename.png" mime_type="application/png">(base64-encoded data would appear here)
       </embed>
      </image>
      <image>
@@ -49,22 +48,6 @@ BLAH BLAH BLAH
       <href src="mygalley.pdf" mime_type="application/pdf" />
      </file>
     </galley>
-   </article>
-  </section>
- </issue>
- <issue>
-  <title>Existing journal Issue</title>
-  <open_access/>
-  <section>
-   <title>Articles</title>
-   <abbrev>ART</abbrev>
-   <article>
-    <title>John Doe's Article</title>
-    <date_published>2003-10-05</date_published>
-    <author>
-     <firstname>John</firstname>
-     <lastname>Doe</lastname>
-    </author>
    </article>
   </section>
  </issue>

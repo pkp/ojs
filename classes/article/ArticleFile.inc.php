@@ -55,6 +55,22 @@ class ArticleFile extends DataObject {
 	}
 	
 	/**
+	 * Get source file ID of this file.
+	 * @return int
+	 */
+	function getSourceFileId() {
+		return $this->getData('sourceFileId');
+	}
+	
+	/**
+	 * Set source file ID of this file.
+	 * @param $sourceFileId int
+	 */
+	function setSourceFileId($sourceFileId) {
+		return $this->setData('sourceFileId', $sourceFileId);
+	}
+	
+	/**
 	 * Get associated ID of file. (Used, e.g., for email log attachments.)
 	 * @return int
 	 */

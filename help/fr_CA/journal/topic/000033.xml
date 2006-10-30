@@ -12,9 +12,9 @@
   * $Id$
   -->
 
-<topic id="journal/topic/000033" locale="en_US" title="Merge Users" toc="journal/toc/000002" key="journal.managementPages.mergeUsers">
+<topic id="journal/topic/000033" locale="fr_CA" title="Merge Users" toc="journal/toc/000002" key="journal.managementPages.mergeUsers">
 	<section>
-<![CDATA[<p>[<p>La fonction Merge Users (Fusionner usagers), disponible dans Journal Management (Gestion de la revue) sous l’entête Users (Usagers), permet au rédacteur de la revue de fusionner deux comptes d’usagers en un seul, en transférant les tâches de révision, les soumissions et plusieurs autres données d’un compte à un autre tout en éliminant le premier compte.</p>
+<![CDATA[<p>La fonction Merge Users (Fusionner usagers), disponible dans Journal Management (Gestion de la revue) sous l’entête Users (Usagers), permet au rédacteur de la revue de fusionner deux comptes d’usagers en un seul, en transférant les tâches de révision, les soumissions et plusieurs autres données d’un compte à un autre tout en éliminant le premier compte.</p>
 	<p>Les items suivants sont transférés :
 		<ul>
 			<li>Identité de l’auteur d’un article</li>

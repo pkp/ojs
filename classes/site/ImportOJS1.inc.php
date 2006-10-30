@@ -702,7 +702,7 @@ class ImportOJS1 {
 		);
 		
 		$currencyMap = array(
-			1 => 'CDN',	// CDN
+			1 => 'CAD',	// CAD
 			2 => 'USD'	// USD
 		);
 		

@@ -142,7 +142,7 @@ class String {
 	
 	function encode_mime_header($string) {
 		if (defined('ENABLE_MBSTRING')) {
-			return mb_encode_mimeheader($string);
+			return mb_encode_mimeheader($string, ini_get('mbstring.internal_encoding'), 'B', MAIL_EOL);
 		}  else {
 			return $string;
 		}

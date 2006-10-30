@@ -62,6 +62,14 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		$templateMgr->display('layoutEditor/submission.tpl');
 	}
 	
+	function viewMetadata($args) {
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		list($journal, $submission) = SubmissionLayoutHandler::validate($articleId);
+		parent::setupTemplate(true, $articleId, 'summary');
+		
+		LayoutEditorAction::viewMetadata($submission, ROLE_ID_LAYOUT_EDITOR);
+	}
+	
 	/**
 	 * Mark assignment as complete.
 	 */

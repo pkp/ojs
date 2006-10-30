@@ -726,6 +726,7 @@
 			<KEY/>
 			<AUTOINCREMENT/>
 		</field>
+		<field name="source_file_id" type="I8" />
 		<field name="revision" type="I8">
 			<KEY/>
 		</field>

@@ -138,6 +138,11 @@ class LayoutEditorHandler extends Handler {
 		}
 	}
 	
+	function viewMetadata($args) {
+		import('pages.layoutEditor.SubmissionLayoutHandler');
+		SubmissionLayoutHandler::viewMetadata($args);
+	}
+	
 	
 	//
 	// Submission Layout Editing
