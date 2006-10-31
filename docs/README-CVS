@@ -6,10 +6,10 @@ CVS web interface: <http://pkp.sfu.ca/cvs/>
 
 Using anonymous CVS:
 
-$ cvs -d :pserver:anonymous@research2.csci.educ.ubc.ca:/cvs login
-(Logging in to anonymous@research2.csci.educ.ubc.ca)
+$ cvs -d :pserver:anonymous@lib-pkp.lib.sfu.ca:/cvs login
+(Logging in to anonymous@lib-pkp.lib.sfu.ca)
 CVS password: <Enter>
-$ cvs -d :pserver:anonymous@research2.csci.educ.ubc.ca:/cvs co ojs2
+$ cvs -d :pserver:anonymous@lib-pkp.lib.sfu.ca:/cvs co ojs2
 
 Note that you must rename config.TEMPLATE.inc.php to config.inc.php prior to
 running the OJS installation script.
