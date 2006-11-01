@@ -125,7 +125,7 @@ class RegistrationForm extends Form {
 		$userVars = array(
 			'username', 'password', 'password2',
 			'firstName', 'middleName', 'lastName', 'initials',
-			'affiliation', 'email', 'userUrl', 'phone', 'fax',
+			'affiliation', 'email', 'userUrl', 'phone', 'fax', 'signature',
 			'mailingAddress', 'biography', 'interests', 'userLocales',
 			'registerAsReader', 'openAccessNotification', 'registerAsAuthor',
 			'registerAsReviewer', 'existingUser', 'sendPassword'
@@ -171,6 +171,7 @@ class RegistrationForm extends Form {
 			$user->setInitials($this->getData('initials'));
 			$user->setLastName($this->getData('lastName'));
 			$user->setAffiliation($this->getData('affiliation'));
+			$user->setSignature($this->getData('signature'));
 			$user->setEmail($this->getData('email'));
 			$user->setUrl($this->getData('userUrl'));
 			$user->setPhone($this->getData('phone'));

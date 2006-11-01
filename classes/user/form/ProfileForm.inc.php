@@ -107,6 +107,7 @@ class ProfileForm extends Form {
 			'initials' => $user->getInitials(),
 			'lastName' => $user->getLastName(),
 			'affiliation' => $user->getAffiliation(),
+			'signature' => $user->getSignature(),
 			'email' => $user->getEmail(),
 			'userUrl' => $user->getUrl(),
 			'phone' => $user->getPhone(),
@@ -132,6 +133,7 @@ class ProfileForm extends Form {
 			'lastName',
 			'initials',
 			'affiliation',
+			'signature',
 			'email',
 			'userUrl',
 			'phone',
@@ -162,6 +164,7 @@ class ProfileForm extends Form {
 		$user->setInitials($this->getData('initials'));
 		$user->setLastName($this->getData('lastName'));
 		$user->setAffiliation($this->getData('affiliation'));
+		$user->setSignature($this->getData('signature'));
 		$user->setEmail($this->getData('email'));
 		$user->setUrl($this->getData('userUrl'));
 		$user->setPhone($this->getData('phone'));

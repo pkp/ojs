@@ -10,7 +10,7 @@
   -->
 
 <!ELEMENT users (user*)>
-<!ELEMENT user (username?, password?, first_name, middle_name?, last_name, affiliation?, email, url?, phone?, fax?, mailing_address?, biography?, role*)>
+<!ELEMENT user (username?, password?, first_name, middle_name?, last_name, affiliation?, signature?, email, url?, phone?, fax?, mailing_address?, biography?, role*)>
 <!ELEMENT username (#PCDATA)>
 <!ELEMENT password (#PCDATA)>
 	<!ATTLIST password encrypted (plaintext|md5|sha1) #IMPLIED>
@@ -27,6 +27,7 @@
 <!ELEMENT phone (#PCDATA)>
 <!ELEMENT fax (#PCDATA)>
 <!ELEMENT mailing_address (#PCDATA)>
+<!ELEMENT signature (#PCDATA)>
 <!ELEMENT biography (#PCDATA)>
 <!ELEMENT role EMPTY>
 	<!ATTLIST role

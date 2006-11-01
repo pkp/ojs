@@ -56,6 +56,7 @@
 			<input type="hidden" name="{$userKey}_url" value="{$user->getUrl()|escape}" />
 			<input type="hidden" name="{$userKey}_phone" value="{$user->getPhone()|escape}" />
 			<input type="hidden" name="{$userKey}_affiliation" value="{$user->getAffiliation()|escape}" />
+			<input type="hidden" name="{$userKey}_signature" value="{$user->getSignature()|escape}" />
 			<input type="hidden" name="{$userKey}_mailingAddress" value="{$user->getMailingAddress()|escape}" />
 			<input type="hidden" name="{$userKey}_biography" value="{$user->getBiography()|escape}" />
 			<input type="hidden" name="{$userKey}_password" value="{$user->getPassword()|escape}" />

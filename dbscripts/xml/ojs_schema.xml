@@ -126,6 +126,7 @@
 		<field name="last_name" type="C2" size="90">
 			<NOTNULL/>
 		</field>
+		<field name="signature" type="X"/>
 		<field name="initials" type="C2" size="5"/>
 		<field name="affiliation" type="C2" size="255"/>
 		<field name="email" type="C2" size="90">

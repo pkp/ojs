@@ -71,9 +71,16 @@ class MailTemplate extends Mail {
 			$emailTemplate = &$emailTemplateDao->getEmailTemplate($this->emailKey, $this->locale, $journal == null ? 0 : $journal->getJournalId());
 		}
 
+		$userSig = '';
+		$user =& Request::getUser();
+		if ($user) {
+			$userSig = $user->getSignature();
+			if (!empty($userSig)) $userSig = "\n" . $userSig;
+		}
+
 		if (isset($emailTemplate) && Request::getUserVar('subject')==null && Request::getUserVar('body')==null) {
 			$this->setSubject($emailTemplate->getSubject());
-			$this->setBody($emailTemplate->getBody());
+			$this->setBody($emailTemplate->getBody() . $userSig);
 			$this->enabled = $emailTemplate->getEnabled();
 
 			if (Request::getUserVar('usePostedAddresses')) {
@@ -92,7 +99,9 @@ class MailTemplate extends Mail {
 			}
 		} else {
 			$this->setSubject(Request::getUserVar('subject'));
-			$this->setBody(Request::getUserVar('body'));
+			$body = Request::getUserVar('body');
+			if (empty($body)) $this->setBody($userSig);
+			else $this->setBody($body);
 			$this->skip = (($tmp = Request::getUserVar('send')) && is_array($tmp) && isset($tmp['skip']));
 			$this->enabled = true;
 

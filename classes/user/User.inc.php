@@ -57,6 +57,22 @@ class User extends DataObject {
 	}
 	
 	/**
+	 * Get email signature.
+	 * @return string
+	 */
+	function getSignature() {
+		return $this->getData('signature');
+	}
+	
+	/**
+	 * Set signature.
+	 * @param $signature string
+	 */
+	function setSignature($signature) {
+		return $this->setData('signature', $signature);
+	}
+	
+	/**
 	 * Get password (encrypted).
 	 * @return string
 	 */

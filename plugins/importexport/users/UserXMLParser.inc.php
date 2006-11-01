@@ -23,6 +23,7 @@
 			<first_name>FirstName</first_name>
 			<last_name>LastName</last_name>
 			<affiliation>Affiliation</affiliation>
+			<signature>Email Signature</signature>
 			<email>user@pkp.sfu.ca</email>
 			<url>http://www.mysite.com</url>
 			<role type="editor"/>
@@ -107,6 +108,9 @@ class UserXMLParser {
 								break;
 							case 'affiliation':
 								$newUser->setAffiliation($attrib->getValue());
+								break;
+							case 'signature':
+								$newUser->setSignature($attrib->getValue());
 								break;
 							case 'email':
 								$newUser->setEmail($attrib->getValue());

@@ -437,6 +437,7 @@
 	<message key="user.initialsExample">Joan Alice Smith = JAS</message>
 	<message key="user.lastName">Last name</message>
 	<message key="user.title">Title</message>
+	<message key="user.signature">Signature</message>
 	<message key="user.affiliation">Affiliation</message>
 	<message key="user.affiliations">Affiliations</message>
 	<message key="user.email">Email</message>

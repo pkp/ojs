@@ -146,6 +146,10 @@
 		<td class="value"><input type="text" name="affiliation" id="affiliation" value="{$affiliation|escape}" size="30" maxlength="90" class="textField" /></td>
 	</tr>
 	<tr valign="top">
+		<td class="label">{fieldLabel name="signature" key="user.signature"}</td>
+		<td class="value"><textarea name="signature" id="signature" rows="5" cols="40" class="textArea">{$signature|escape}</textarea></td>
+	</tr>
+	<tr valign="top">
 		<td class="label">{fieldLabel name="email" required="true" key="user.email"}</td>
 		<td class="value"><input type="text" name="email" id="email" value="{$email|escape}" size="30" maxlength="90" class="textField" /></td>
 	</tr>

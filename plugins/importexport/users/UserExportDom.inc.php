@@ -35,6 +35,7 @@ class UserExportDom {
 			XMLCustomWriter::createChildWithText($doc, $userNode, 'middle_name', $user->getMiddleName(), false);
 			XMLCustomWriter::createChildWithText($doc, $userNode, 'last_name', $user->getLastName());
 			XMLCustomWriter::createChildWithText($doc, $userNode, 'affiliation', $user->getAffiliation(), false);
+			XMLCustomWriter::createChildWithText($doc, $userNode, 'signature', $user->getSignature(), false);
 			XMLCustomWriter::createChildWithText($doc, $userNode, 'email', $user->getEmail());
 			XMLCustomWriter::createChildWithText($doc, $userNode, 'url', $user->getUrl(), false);
 			XMLCustomWriter::createChildWithText($doc, $userNode, 'phone', $user->getPhone(), false);
