@@ -39,7 +39,8 @@
 			<search_title>SearchERIC</search_title>
 			<search_description>Tools to search the abstracts and Digests produced by the ERICSM system.</search_description>
 			<url>http://searcheric.org/</url>
-			<search_url>http://searcheric.org/scripts/texis.exe/scripts/asearch1?db=ericdb&amp;expa=no&amp;disp=snote&amp;proximity=rank&amp;lmt=nul&amp;nsz=20&amp;arg={$formKeywords}</search_url>
+			<search_url>http://searcheric.org/google/asearch2.asp</search_url>
+			<search_post>db=ericft&amp;proximity=rank&amp;lmt=nul&amp;nsz=20&amp;disp=snote&amp;expa=no&amp;arg={$formKeywords}
 			
 		</search>
 		<search>
@@ -349,7 +350,8 @@
 			<search_title>SearchERIC</search_title>
 			<search_description>Tools to search the abstracts and Digests produced by the ERICSM system.</search_description>
 			<url>http://searcheric.org/</url>
-			<search_url>http://searcheric.org/scripts/texis.exe/scripts/asearch1?db=ericdb&amp;expa=no&amp;disp=snote&amp;proximity=rank&amp;lmt=nul&amp;nsz=20&amp;arg={$formKeywords}</search_url>
+			<search_url>http://searcheric.org/google/asearch2.asp</search_url>
+			<search_post>db=ericft&amp;proximity=rank&amp;lmt=nul&amp;nsz=20&amp;disp=snote&amp;expa=no&amp;arg={$formKeywords}
 			
 		</search>
 		<search>
