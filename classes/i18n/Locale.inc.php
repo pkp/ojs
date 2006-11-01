@@ -146,7 +146,7 @@ class Locale {
 	function getLocale() {
 		static $currentLocale;
 		if (!isset($currentLocale)) {
-			if (defined('SESSION_DISABLE_INIT')) {
+			if (defined('SESSION_DISABLE_INIT') || !Config::getVar('general', 'installed')) {
 				$locale = Request::getCookieVar('currentLocale');
 			
 			} else {
