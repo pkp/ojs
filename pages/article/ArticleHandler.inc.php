@@ -328,7 +328,8 @@ class ArticleHandler extends Handler {
 
 		// if issue or article do not exist, are not published, or are
 		// not parts of the same journal, redirect to index.
-		if (isset($issue) && isset($article) && ($issue->getPublished() || Validation::isEditor($journal->getJournalId()) || Validation::isSectionEditor($journal->getJournalId())) && $issue->getJournalId() == $journal->getJournalId()) {
+		$layoutAssignmentDao =& DAORegistry::getDAO('LayoutAssignmentDAO');
+		if (isset($issue) && isset($article) && ($issue->getPublished() || Validation::isEditor($journal->getJournalId()) || Validation::isSectionEditor($journal->getJournalId()) || ($layoutAssignmentDao->getLayoutEditorIdByArticleId($article->getArticleId()))) && $issue->getJournalId() == $journal->getJournalId()) {
 
 			import('issue.IssueAction');
 			$subscriptionRequired = IssueAction::subscriptionRequired($issue);

@@ -51,7 +51,25 @@ class LayoutAssignmentDAO extends DAO {
 
 		return $returner;
 	}
-	
+
+	/**
+	 * Retrieve the ID of the layout editor for an article.
+	 * @param $articleId int
+	 * @return int
+	 */
+	function getLayoutEditorIdByArticleId($articleId) {
+		$result =& $this->retrieve(
+			'SELECT editor_id FROM layouted_assignments WHERE article_id = ?',
+			$articleId
+		);
+		$returner = null;
+		if ($result->RecordCount() != 0) {
+			$row = $result->GetRowAssoc(false);
+			$returner = $row['editor_id'];
+		}
+		$result->Close();
+		return $returner;
+	}
 
 	/**
 	 * Retrieve the layout editing assignment for an article.
