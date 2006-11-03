@@ -1223,6 +1223,7 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.people.mergeUser">Merge User</message>
 	<message key="manager.people.enroll">Enroll User</message>
 	<message key="manager.people.enrollment">Enrollment</message>
+	<message key="manager.people.roleEnrollment">{$role} Enrollment</message>
 	<message key="manager.people.unenroll">Unenroll</message>
 	<message key="manager.people.confirmUnenroll">Unenroll this user?</message>
 	<message key="manager.people.mergeUsers.from.description">Select a user to merge into another user account (e.g., when someone has two user accounts). The account selected first will be deleted and its submissions, assignments, etc. will be attributed to the second account.</message>

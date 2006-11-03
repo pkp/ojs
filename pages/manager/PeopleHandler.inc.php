@@ -175,6 +175,7 @@ class PeopleHandler extends ManagerHandler {
 		$templateMgr->assign('searchInitial', $searchInitial);
 
 		$templateMgr->assign('roleId', $roleId);
+		$templateMgr->assign('roleName', $roleDao->getRoleName($roleId));
 		$fieldOptions = Array(
 			USER_FIELD_FIRSTNAME => 'user.firstName',
 			USER_FIELD_LASTNAME => 'user.lastName',

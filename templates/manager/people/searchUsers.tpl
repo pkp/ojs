@@ -10,7 +10,7 @@
  *
  *}
 
-{assign var="pageTitle" value="manager.people.enrollment"}
+{translate|assign:"pageTitleTranslated" key="manager.people.roleEnrollment" role=$roleName|translate}
 {include file="common/header.tpl"}
 
 <form name="disableUser" method="post" action="{url op="disableUser"}">
