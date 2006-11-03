@@ -46,7 +46,9 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$revisionId = isset($args[2]) ? (int) $args[2] : 0;
 
 		list($journal, $authorSubmission) = TrackSubmissionHandler::validate($articleId);
-		AuthorAction::deleteArticleFile($authorSubmission, $fileId, $revisionId);
+		if ($authorSubmission->getStatus() != STATUS_PUBLISHED) {
+			AuthorAction::deleteArticleFile($authorSubmission, $fileId, $revisionId);
+		}
 		
 		Request::redirect(null, null, 'submissionReview', $articleId);
 	}
@@ -170,14 +172,18 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$suppFileId = isset($args[1]) ? (int) $args[1] : 0;
 		list($journal, $authorSubmission) = TrackSubmissionHandler::validate($articleId);
-		parent::setupTemplate(true, $articleId, 'summary');
+		if ($authorSubmission->getStatus() != STATUS_PUBLISHED) {
+			parent::setupTemplate(true, $articleId, 'summary');
 		
-		import('submission.form.SuppFileForm');
+			import('submission.form.SuppFileForm');
 		
-		$submitForm = &new SuppFileForm($authorSubmission, $suppFileId);
+			$submitForm = &new SuppFileForm($authorSubmission, $suppFileId);
 		
-		$submitForm->initData();
-		$submitForm->display();
+			$submitForm->initData();
+			$submitForm->display();
+		} else {
+			Request::redirect(null, null, 'submission', $articleId);
+		}
 	}
 	
 	/**
@@ -188,13 +194,15 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$articleId = Request::getUserVar('articleId');
 		list($journal, $authorSubmission) = TrackSubmissionHandler::validate($articleId);
 		
-		$suppFileId = Request::getUserVar('fileId');
-		$suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
-		$suppFile = $suppFileDao->getSuppFile($suppFileId, $articleId);
+		if ($authorSubmission->getStatus() != STATUS_PUBLISHED) {
+			$suppFileId = Request::getUserVar('fileId');
+			$suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
+			$suppFile = $suppFileDao->getSuppFile($suppFileId, $articleId);
 
-		if (isset($suppFile) && $suppFile != null) {
-			$suppFile->setShowReviewers(Request::getUserVar('hide')==1?0:1);
-			$suppFileDao->updateSuppFile($suppFile);
+			if (isset($suppFile) && $suppFile != null) {
+				$suppFile->setShowReviewers(Request::getUserVar('hide')==1?0:1);
+				$suppFileDao->updateSuppFile($suppFile);
+			}
 		}
 		Request::redirect(null, null, 'submissionReview', $articleId);
 	}
@@ -207,19 +215,23 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$articleId = Request::getUserVar('articleId');
 		list($journal, $authorSubmission) = TrackSubmissionHandler::validate($articleId);
 
-		$suppFileId = isset($args[0]) ? (int) $args[0] : 0;
+		if ($authorSubmission->getStatus() != STATUS_PUBLISHED) {
+			$suppFileId = isset($args[0]) ? (int) $args[0] : 0;
 
-		import('submission.form.SuppFileForm');
+			import('submission.form.SuppFileForm');
 
-		$submitForm = &new SuppFileForm($authorSubmission, $suppFileId);
-		$submitForm->readInputData();
+			$submitForm = &new SuppFileForm($authorSubmission, $suppFileId);
+			$submitForm->readInputData();
 
-		if ($submitForm->validate()) {
-			$submitForm->execute();
-			Request::redirect(null, null, 'submission', $articleId);
+			if ($submitForm->validate()) {
+				$submitForm->execute();
+				Request::redirect(null, null, 'submission', $articleId);
+			} else {
+				parent::setupTemplate(true, $articleId, 'summary');
+				$submitForm->display();
+			}
 		} else {
-			parent::setupTemplate(true, $articleId, 'summary');
-			$submitForm->display();
+			Request::redirect(null, null, 'submission', $articleId);
 		}
 	}
 
