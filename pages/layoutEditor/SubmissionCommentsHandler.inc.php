@@ -44,9 +44,9 @@ class SubmissionCommentsHandler extends LayoutEditorHandler {
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 		
 		list($journal, $submission) = SubmissionLayoutHandler::validate($articleId);
-		LayoutEditorAction::postLayoutComment($submission, $emailComment);
-		
-		LayoutEditorAction::viewLayoutComments($submission);
+		if (LayoutEditorAction::postLayoutComment($submission, $emailComment)) {
+			LayoutEditorAction::viewLayoutComments($submission);
+		}
 	
 	}
 
@@ -77,9 +77,9 @@ class SubmissionCommentsHandler extends LayoutEditorHandler {
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 		
 		list($journal, $submission) = SubmissionLayoutHandler::validate($articleId);
-		LayoutEditorAction::postProofreadComment($submission, $emailComment);
-		
-		LayoutEditorAction::viewProofreadComments($submission);
+		if (LayoutEditorAction::postProofreadComment($submission, $emailComment)) {
+			LayoutEditorAction::viewProofreadComments($submission);
+		}
 	
 	}
 

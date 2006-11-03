@@ -471,9 +471,10 @@ class ProofreaderAction extends Action {
 				}
 			
 			} else {
-				parent::setupTemplate(true);
 				$commentForm->display();
+				return false;
 			}
+			return true;
 		}
 	}
 	
@@ -511,9 +512,10 @@ class ProofreaderAction extends Action {
 				}
 
 			} else {
-				parent::setupTemplate(true);
 				$commentForm->display();
+				return false;
 			}
+			return true;
 		}
 	}
 	

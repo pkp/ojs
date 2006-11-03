@@ -44,10 +44,9 @@ class SubmissionCommentsHandler extends ProofreaderHandler {
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 		
 		list($journal, $submission) = SubmissionProofreadHandler::validate($articleId);
-		ProofreaderAction::postProofreadComment($submission, $emailComment);
-		
-		ProofreaderAction::viewProofreadComments($submission);
-	
+		if (ProofreaderAction::postProofreadComment($submission, $emailComment)) {
+			ProofreaderAction::viewProofreadComments($submission);
+		}
 	}
 	
 	/**
@@ -77,9 +76,9 @@ class SubmissionCommentsHandler extends ProofreaderHandler {
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 		
 		list($journal, $submission) = SubmissionProofreadHandler::validate($articleId);
-		ProofreaderAction::postLayoutComment($submission, $emailComment);
-		
-		ProofreaderAction::viewLayoutComments($submission);
+		if (ProofreaderAction::postLayoutComment($submission, $emailComment)) {
+			ProofreaderAction::viewLayoutComments($submission);
+		}
 	
 	}
 	

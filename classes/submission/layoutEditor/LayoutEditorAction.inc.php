@@ -250,9 +250,10 @@ class LayoutEditorAction extends Action {
 				}
 			
 			} else {
-				parent::setupTemplate(true);
 				$commentForm->display();
+				return false;
 			}
+			return true;
 		}
 	}
 	
@@ -289,9 +290,10 @@ class LayoutEditorAction extends Action {
 				}
 			
 			} else {
-				parent::setupTemplate(true);
 				$commentForm->display();
+				return false;
 			}
+			return true;
 		}
 	}
 	

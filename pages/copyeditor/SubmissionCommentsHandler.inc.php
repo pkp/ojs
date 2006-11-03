@@ -44,9 +44,9 @@ class SubmissionCommentsHandler extends CopyeditorHandler {
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 
 		list($journal, $submission) = SubmissionCopyeditHandler::validate($articleId);
-		CopyeditorAction::postLayoutComment($submission, $emailComment);
-		
-		CopyeditorAction::viewLayoutComments($submission);
+		if (CopyeditorAction::postLayoutComment($submission, $emailComment)) {
+			CopyeditorAction::viewLayoutComments($submission);
+		}
 	
 	}
 
@@ -77,9 +77,9 @@ class SubmissionCommentsHandler extends CopyeditorHandler {
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 		
 		list($journal, $submission) = SubmissionCopyeditHandler::validate($articleId);
-		CopyeditorAction::postCopyeditComment($submission, $emailComment);
-		
-		CopyeditorAction::viewCopyeditComments($submission);
+		if (CopyeditorAction::postCopyeditComment($submission, $emailComment)) {
+			CopyeditorAction::viewCopyeditComments($submission);
+		}
 	
 	}
 

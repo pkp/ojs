@@ -43,8 +43,9 @@ class SubmissionCommentsHandler extends ReviewerHandler {
 		list($journal, $submission, $user) = SubmissionReviewHandler::validate($reviewId);
 
 		ReviewerHandler::setupTemplate(true);
-		ReviewerAction::postPeerReviewComment($user, $submission, $reviewId, $emailComment);
-		ReviewerAction::viewPeerReviewComments($user, $submission, $reviewId);
+		if (ReviewerAction::postPeerReviewComment($user, $submission, $reviewId, $emailComment)) {
+			ReviewerAction::viewPeerReviewComments($user, $submission, $reviewId);
+		}
 	}
 	
 	/**

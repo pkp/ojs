@@ -1751,9 +1751,10 @@ class SectionEditorAction extends Action {
 			}
 			
 		} else {
-			parent::setupTemplate(true);
 			$commentForm->display();
+			return false;
 		}
+		return true;
 	}
 	
 	/**
@@ -1790,9 +1791,10 @@ class SectionEditorAction extends Action {
 				$commentForm->email();
 			}
 		} else {
-			parent::setupTemplate(true);
 			$commentForm->display();
+			return false;
 		}
+		return true;
 	}
 	
 	/**
@@ -1957,9 +1959,10 @@ class SectionEditorAction extends Action {
 			}
 			
 		} else {
-			parent::setupTemplate(true);
 			$commentForm->display();
+			return false;
 		}
+		return true;
 	}	
 	
 	/**
@@ -1997,9 +2000,10 @@ class SectionEditorAction extends Action {
 			}
 			
 		} else {
-			parent::setupTemplate(true);
 			$commentForm->display();
+			return false;
 		}
+		return true;
 	}
 	
 	/**
@@ -2037,9 +2041,10 @@ class SectionEditorAction extends Action {
 			}
 			
 		} else {
-			parent::setupTemplate(true);
 			$commentForm->display();
+			return false;
 		}
+		return true;
 	}	
 	
 	/**

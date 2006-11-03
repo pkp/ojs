@@ -46,9 +46,9 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 		
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
-		SectionEditorAction::postPeerReviewComment($submission, $reviewId, $emailComment);
-
-		SectionEditorAction::viewPeerReviewComments($submission, $reviewId);
+		if (SectionEditorAction::postPeerReviewComment($submission, $reviewId, $emailComment)) {
+			SectionEditorAction::viewPeerReviewComments($submission, $reviewId);
+		}
 
 	}
 	
@@ -79,9 +79,9 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 		
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
-		SectionEditorAction::postEditorDecisionComment($submission, $emailComment);
-		
-		SectionEditorAction::viewEditorDecisionComments($submission);
+		if (SectionEditorAction::postEditorDecisionComment($submission, $emailComment)) {
+			SectionEditorAction::viewEditorDecisionComments($submission);
+		}
 	
 	}
 	
@@ -128,9 +128,9 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 		
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
-		SectionEditorAction::postCopyeditComment($submission, $emailComment);
-		
-		SectionEditorAction::viewCopyeditComments($submission);
+		if (SectionEditorAction::postCopyeditComment($submission, $emailComment)) {
+			SectionEditorAction::viewCopyeditComments($submission);
+		}
 	
 	}
 	
@@ -161,9 +161,9 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 		
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
-		SectionEditorAction::postLayoutComment($submission, $emailComment);
-		
-		SectionEditorAction::viewLayoutComments($submission);
+		if (SectionEditorAction::postLayoutComment($submission, $emailComment)) {
+			SectionEditorAction::viewLayoutComments($submission);
+		}
 	
 	}
 	
@@ -194,9 +194,9 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 		
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
-		SectionEditorAction::postProofreadComment($submission, $emailComment);
-		
-		SectionEditorAction::viewProofreadComments($submission);
+		if (SectionEditorAction::postProofreadComment($submission, $emailComment)) {
+			SectionEditorAction::viewProofreadComments($submission);
+		}
 	
 	}
 	

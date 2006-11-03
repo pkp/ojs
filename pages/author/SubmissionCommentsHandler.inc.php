@@ -57,9 +57,9 @@ class SubmissionCommentsHandler extends AuthorHandler {
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 		
 		list($journal, $authorSubmission) = TrackSubmissionHandler::validate($articleId);
-		AuthorAction::postCopyeditComment($authorSubmission, $emailComment);
-		
-		AuthorAction::viewCopyeditComments($authorSubmission);
+		if (AuthorAction::postCopyeditComment($authorSubmission, $emailComment)) {
+			AuthorAction::viewCopyeditComments($authorSubmission);
+		}
 	
 	}
 	
@@ -90,9 +90,9 @@ class SubmissionCommentsHandler extends AuthorHandler {
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 		
 		list($journal, $authorSubmission) = TrackSubmissionHandler::validate($articleId);
-		AuthorAction::postProofreadComment($authorSubmission, $emailComment);
-		
-		AuthorAction::viewProofreadComments($authorSubmission);
+		if (AuthorAction::postProofreadComment($authorSubmission, $emailComment)) {
+			AuthorAction::viewProofreadComments($authorSubmission);
+		}
 	
 	}
 
@@ -123,9 +123,9 @@ class SubmissionCommentsHandler extends AuthorHandler {
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
 		
 		list($journal, $authorSubmission) = TrackSubmissionHandler::validate($articleId);
-		AuthorAction::postLayoutComment($authorSubmission, $emailComment);
-		
-		AuthorAction::viewLayoutComments($authorSubmission);
+		if (AuthorAction::postLayoutComment($authorSubmission, $emailComment)) {
+			AuthorAction::viewLayoutComments($authorSubmission);
+		}
 	
 	}
 
