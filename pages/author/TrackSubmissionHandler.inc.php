@@ -148,14 +148,18 @@ class TrackSubmissionHandler extends AuthorHandler {
 	function addSuppFile($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		list($journal, $authorSubmission) = TrackSubmissionHandler::validate($articleId);
-		parent::setupTemplate(true, $articleId, 'summary');
+		if ($authorSubmission->getStatus() != STATUS_PUBLISHED) {
+			parent::setupTemplate(true, $articleId, 'summary');
 
-		import('submission.form.SuppFileForm');
+			import('submission.form.SuppFileForm');
 
-		$submitForm = &new SuppFileForm($authorSubmission);
+			$submitForm = &new SuppFileForm($authorSubmission);
 
-		$submitForm->initData();
-		$submitForm->display();
+			$submitForm->initData();
+			$submitForm->display();
+		} else {
+			Request::redirect(null, null, 'submission', $articleId);
+		}
 	}
 
 	/**

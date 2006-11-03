@@ -39,7 +39,13 @@
 				{translate key="common.none"}
 			{/foreach}
 		</td>
-		<td width="50%" class="value"><a href="{url op="addSuppFile" path=$submission->getArticleId()}" class="action">{translate key="submission.addSuppFile"}</a></td>
+		<td width="50%" class="value">
+			{if $submission->getStatus() != STATUS_PUBLISHED}
+				<a href="{url op="addSuppFile" path=$submission->getArticleId()}" class="action">{translate key="submission.addSuppFile"}</a>
+			{else}
+				&nbsp;
+			{/if}
+		</td>
 	</tr>
 	<tr>
 		<td class="label">{translate key="submission.submitter"}</td>
