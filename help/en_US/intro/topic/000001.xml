@@ -58,7 +58,7 @@
 	</section>
 	<section title='5. What can we do if we want to provide access to manuscripts that are under review or at the "pre-print" stage prior to being published by the journal?'>
 		<![CDATA[
-<p>There is currently no formal way to offer pre-print or pre-published access to individual articles. However, all that an Editor needs to do for the article in question is to use the URL for the "View Proof" from the Layout stage on the article's Editing page. That URL will provide "preview" access to the article (to privileged users) prior to its being published in an issue of the journal. In the meantime, PKP is tracking interest in this feature and may consider creating an explicit option for it.</p>
+	<p>Editors have two options for offering "preprint accesss." They can create a pre-print section, to which are added articles that are approved for a later issue, which are not yet ready to publish. The preprint articles are added to the table of contents of the current issue. Once the new issue is ready to publish, the editor removes the articles from the previous issue and moves them to the new issue. Alternatively, the editors can use the URL for the "View Proof" of a submission from the Layout stage on the article's Editing page to create a preprint view. That URL will provide "preview" access to the article (to privileged users) prior to it being published in an issue of the journal. In the meantime, PKP is tracking interest in this feature and may consider creating a formal process for this.</p>
 		]]>
 	</section>
 	<section title="6. How can I get word out on the web about my journal?">
