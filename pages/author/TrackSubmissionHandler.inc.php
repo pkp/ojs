@@ -46,7 +46,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$revisionId = isset($args[2]) ? (int) $args[2] : 0;
 
 		list($journal, $authorSubmission) = TrackSubmissionHandler::validate($articleId);
-		if ($authorSubmission->getStatus() != STATUS_PUBLISHED) {
+		if ($authorSubmission->getStatus() != STATUS_PUBLISHED && $authorSubmission->getStatus() != STATUS_ARCHIVED) {
 			AuthorAction::deleteArticleFile($authorSubmission, $fileId, $revisionId);
 		}
 		
@@ -150,7 +150,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 	function addSuppFile($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		list($journal, $authorSubmission) = TrackSubmissionHandler::validate($articleId);
-		if ($authorSubmission->getStatus() != STATUS_PUBLISHED) {
+		if ($authorSubmission->getStatus() != STATUS_PUBLISHED && $authorSubmission->getStatus() != STATUS_ARCHIVED) {
 			parent::setupTemplate(true, $articleId, 'summary');
 
 			import('submission.form.SuppFileForm');
@@ -172,7 +172,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$suppFileId = isset($args[1]) ? (int) $args[1] : 0;
 		list($journal, $authorSubmission) = TrackSubmissionHandler::validate($articleId);
-		if ($authorSubmission->getStatus() != STATUS_PUBLISHED) {
+		if ($authorSubmission->getStatus() != STATUS_PUBLISHED && $authorSubmission->getStatus() != STATUS_ARCHIVED) {
 			parent::setupTemplate(true, $articleId, 'summary');
 		
 			import('submission.form.SuppFileForm');
@@ -194,7 +194,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$articleId = Request::getUserVar('articleId');
 		list($journal, $authorSubmission) = TrackSubmissionHandler::validate($articleId);
 		
-		if ($authorSubmission->getStatus() != STATUS_PUBLISHED) {
+		if ($authorSubmission->getStatus() != STATUS_PUBLISHED && $authorSubmission->getStatus() != STATUS_ARCHIVED) {
 			$suppFileId = Request::getUserVar('fileId');
 			$suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
 			$suppFile = $suppFileDao->getSuppFile($suppFileId, $articleId);
@@ -215,7 +215,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$articleId = Request::getUserVar('articleId');
 		list($journal, $authorSubmission) = TrackSubmissionHandler::validate($articleId);
 
-		if ($authorSubmission->getStatus() != STATUS_PUBLISHED) {
+		if ($authorSubmission->getStatus() != STATUS_PUBLISHED && $authorSubmission->getStatus() != STATUS_ARCHIVED) {
 			$suppFileId = isset($args[0]) ? (int) $args[0] : 0;
 
 			import('submission.form.SuppFileForm');
