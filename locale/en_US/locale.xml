@@ -1688,7 +1688,7 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	<message key="reviewer.article.notifyTheEditor">Notify The Editor</message>
 	<message key="reviewer.article.canDoReview">Will do the review</message>
 	<message key="reviewer.article.cannotDoReview">Unable to do the review</message>
-	<message key="reviewer.article.restrictedFileAccess">Files can only be viewed if the review is undertaken</message>
+	<message key="reviewer.article.restrictedFileAccess">Submission will be made available, if and when reviewer agrees to undertake review</message>
 	<message key="reviewer.article.submissionEditor">Submission Editor</message>
 	<message key="reviewer.article.reviewerCommentsDescription">Type or paste in review comments here</message>
 	<message key="reviewer.article.editorToEnter">Editor To Enter</message>
