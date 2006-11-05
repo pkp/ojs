@@ -123,7 +123,7 @@ class ProofreaderAction extends Action {
 					$editorAdded = false;
 					$assignmentIndex = 0;
 					foreach ($editAssignments as $editAssignment) {
-						if (!$editAssignment->getIsEditor() || $editAssignment->getCanEdit()) {
+						if ($editAssignment->getIsEditor() || $editAssignment->getCanEdit()) {
 							if ($assignmentIndex++ == 0) {
 								$receiverName = $editAssignment->getEditorFullName();
 								$receiverAddress = $editAssignment->getEditorEmail();
@@ -196,7 +196,7 @@ class ProofreaderAction extends Action {
 
 				$editorAdded = false;
 				foreach ($editAssignments as $editAssignment) {
-					if (!$editAssignment->getIsEditor() || $editAssignment->getCanEdit()) {
+					if ($editAssignment->getIsEditor() || $editAssignment->getCanEdit()) {
 						$ccs[$editAssignment->getEditorEmail()] = $editAssignment->getEditorFullName();
 						$editorAdded = true;
 					}
@@ -273,7 +273,7 @@ class ProofreaderAction extends Action {
 				$assignmentIndex = 0;
 				$editorAdded = false;
 				foreach ($editAssignments as $editAssignment) {
-					if (!$editAssignment->getIsEditor() || $editAssignment->getCanEdit()) {
+					if ($editAssignment->getIsEditor() || $editAssignment->getCanEdit()) {
 						if ($assignmentIndex++ == 0) {
 							$receiverName = $editAssignment->getEditorFullName();
 							$receiverAddress = $editAssignment->getEditorEmail();
