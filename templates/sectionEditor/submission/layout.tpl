@@ -26,7 +26,7 @@
 
 <table width="100%" class="info">
 	<tr>
-		<td width="28%" colspan="2">{translate key="submission.layout.layoutVersion"}</td>
+		<td width="28%" colspan="2">&nbsp;</td>
 		<td width="18%" class="heading">{translate key="submission.request"}</td>
 		<td width="16%" class="heading">{translate key="submission.underway"}</td>
 		<td width="16%" class="heading">{translate key="submission.complete"}</td>
@@ -34,12 +34,7 @@
 	</tr>
 	<tr>
 		<td colspan="2">
-			{if $layoutFile}
-				<a href="{url op="downloadFile" path=$submission->getArticleId()|to_array:$layoutFile->getFileId()}" class="file">{$layoutFile->getFileName()|escape}</a>&nbsp;&nbsp;{$layoutFile->getDateModified()|date_format:$dateFormatShort}
-			{else}
-				{translate key="common.none"}
-				{assign var=needsLayoutFileNote value=1}
-			{/if}
+			{translate key="submission.layout.layoutVersion"}
 		</td>
 		<td>
 			{if $useLayoutEditors}
@@ -87,14 +82,16 @@
 			{/if}
 		</td>
 	</tr>
-	{if $needsLayoutFileNote}
-		<tr valign="top">
-			<td colspan="2">&nbsp;</td>
-			<td colspan="4">
-				{translate key="submission.layout.mustUploadFileForLayout"}
-			</td>
-		</tr>
-	{/if}
+	<tr valign="top">
+		<td colspan="6">
+			{translate key="common.file"}:&nbsp;&nbsp;&nbsp;&nbsp;
+			{if $layoutFile}
+				<a href="{url op="downloadFile" path=$submission->getArticleId()|to_array:$layoutFile->getFileId()}" class="file">{$layoutFile->getFileName()|escape}</a>&nbsp;&nbsp;{$layoutFile->getDateModified()|date_format:$dateFormatShort}
+			{else}
+				{translate key="submission.layout.noLayoutFile"}
+			{/if}
+		</td>
+	</tr>
 	<tr>
 		<td colspan="7" class="separator">&nbsp;</td>
 	</tr>
@@ -109,7 +106,7 @@
 	{foreach name=galleys from=$submission->getGalleys() item=galley}
 	<tr>
 		<td width="2%">{$smarty.foreach.galleys.iteration}.</td>
-		<td width="26%">{$galley->getLabel()|escape} &nbsp; <a href="{url op="proofGalley" path=$submission->getArticleId()|to_array:$galley->getGalleyId()}" class="action">{translate key="submission.layout.viewProof"}</td>
+		<td width="26%">{$galley->getLabel()|escape} &nbsp; <a href="{url op="proofGalley" path=$submission->getArticleId()|to_array:$galley->getGalleyId()}" class="action">{translate key="submission.layout.viewProof"}</a></td>
 		<td colspan="2"><a href="{url op="downloadFile" path=$submission->getArticleId()|to_array:$galley->getFileId()}" class="file">{$galley->getFileName()|escape}</a>&nbsp;&nbsp;{$galley->getDateModified()|date_format:$dateFormatShort}</td>
 		<td><a href="{url op="orderGalley" d=u articleId=$submission->getArticleId() galleyId=$galley->getGalleyId()}" class="plain">&uarr;</a> <a href="{url op="orderGalley" d=d articleId=$submission->getArticleId() galleyId=$galley->getGalleyId()}" class="plain">&darr;</a></td>
 		<td>

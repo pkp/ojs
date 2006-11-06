@@ -1883,7 +1883,7 @@ The file can be viewed by clicking on the file name. A new or revised file can b
 	<message key="submission.copyedit.instructions">Copyedit Instructions</message>
 	
 	<!-- Submission Tracking - Layout Specific -->
-	<message key="submission.layout.mustUploadFileForLayout">Request email cannot be sent until a Layout Version is in place.</message>
+	<message key="submission.layout.noLayoutFile">None (Upload final copyedit version as Layout Version prior to sending request)</message>
 	<message key="submission.layout.layoutVersion">Layout Version</message>
 	<message key="submission.layout.layoutFile">Layout File</message>
 	<message key="submission.layout.galleys">Galleys</message>
