@@ -470,7 +470,7 @@ class SectionEditorSubmissionDAO extends DAO {
 			LEFT JOIN review_rounds r2 ON (a.article_id = r2.article_id and a.current_round = r2.round)
 			LEFT JOIN layouted_assignments l ON (l.article_id = a.article_id) LEFT JOIN users le ON (le.user_id = l.editor_id)
 			WHERE
-				a.journal_id = ? AND e.editor_id = ?';
+				a.journal_id = ? AND e.editor_id = ? AND a.submission_progress = 0';
 
 		// "Active" submissions have a status of STATUS_QUEUED and
 		// the layout editor has not yet been acknowledged.
@@ -525,7 +525,7 @@ class SectionEditorSubmissionDAO extends DAO {
 				}
 			}
 
-			if ($row['can_review'] && $inReview && !$submission->getSubmissionProgress()) {
+			if ($row['can_review'] && $inReview) {
 				$submissions[] =& $submission;
 			}
 			unset($submission);
@@ -578,7 +578,7 @@ class SectionEditorSubmissionDAO extends DAO {
 				}
 			}
 
-			if ($row['can_edit'] && $notInReview && !$submission->getSubmissionProgress()) {
+			if ($row['can_edit'] && $notInReview) {
 				$submissions[] =& $submission;
 			}
 			unset($submission);
@@ -612,27 +612,24 @@ class SectionEditorSubmissionDAO extends DAO {
 	function &getSectionEditorSubmissionsArchives($sectionEditorId, $journalId, $sectionId, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $rangeInfo = null) {
 		$submissions = array();
 	
-		// FIXME Does not pass $rangeInfo else we only get partial results
-		$result = $this->getUnfilteredSectionEditorSubmissions($sectionEditorId, $journalId, $sectionId, $searchField, $searchMatch, $search, $dateField, $dateFrom, $dateTo, false);
+		$result = $this->getUnfilteredSectionEditorSubmissions($sectionEditorId, $journalId, $sectionId, $searchField, $searchMatch, $search, $dateField, $dateFrom, $dateTo, false, $rangeInfo);
 
 		while (!$result->EOF) {
 			$submission = &$this->_returnSectionEditorSubmissionFromRow($result->GetRowAssoc(false));
-
-			if (!$submission->getSubmissionProgress()) {
-				$submissions[] =& $submission;
-			}
+			$submissions[] =& $submission;
 			unset($submission);
 			$result->MoveNext();
+		}
+
+		if (isset($rangeInfo) && $rangeInfo->isValid()) {
+			$returner = &new VirtualArrayIterator($submissions, $result->MaxRecordCount(), $rangeInfo->getPage(), $rangeInfo->getCount());
+		} else {
+			$returner = &new ArrayItemIterator($submissions);
 		}
 
 		$result->Close();
 		unset($result);
 		
-		if (isset($rangeInfo) && $rangeInfo->isValid()) {
-			$returner = &new ArrayItemIterator($submissions, $rangeInfo->getPage(), $rangeInfo->getCount());
-		} else {
-			$returner = &new ArrayItemIterator($submissions);
-		}
 		return $returner;
 	}
 
@@ -666,17 +663,15 @@ class SectionEditorSubmissionDAO extends DAO {
 				}
 			}
 
-			if (!$sectionEditorSubmission->getSubmissionProgress()) {
-				if ($inReview) {
-					if ($notDeclined && $row['can_review']) {
-						// in review submissions
-						$submissionsCount[0] += 1;
-					}
-				} else {
-					// in editing submissions
-					if ($row['can_edit']) {
-						$submissionsCount[1] += 1;
-					}
+			if ($inReview) {
+				if ($notDeclined && $row['can_review']) {
+					// in review submissions
+					$submissionsCount[0] += 1;
+				}
+			} else {
+				// in editing submissions
+				if ($row['can_edit']) {
+					$submissionsCount[1] += 1;
 				}
 			}
 			unset($sectionEditorSubmission);

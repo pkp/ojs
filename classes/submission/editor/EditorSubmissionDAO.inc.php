@@ -254,7 +254,7 @@ class EditorSubmissionDAO extends DAO {
 			LEFT JOIN review_assignments r ON (r.article_id = a.article_id)
 			LEFT JOIN users re ON (re.user_id = r.reviewer_id AND cancelled = 0)
 			WHERE
-				a.journal_id = ?';
+				a.journal_id = ? AND a.submission_progress = 0';
 
 		// "Active" submissions have a status of STATUS_QUEUED and
 		// the layout editor has not yet been acknowledged.
@@ -329,7 +329,7 @@ class EditorSubmissionDAO extends DAO {
 			// used to check if editor exists for this submission
 			$editAssignments =& $editorSubmission->getEditAssignments();
 
-			if (empty($editAssignments) && !$editorSubmission->getSubmissionProgress()) {
+			if (empty($editAssignments)) {
 				$editorSubmissions[] =& $editorSubmission;
 			}
 			unset($editorSubmission);
@@ -390,7 +390,7 @@ class EditorSubmissionDAO extends DAO {
 			// used to check if editor exists for this submission
 			$editAssignments =& $editorSubmission->getEditAssignments();
 
-			if (!empty($editAssignments) && $inReview && !$editorSubmission->getSubmissionProgress()) {
+			if (!empty($editAssignments) && $inReview) {
 				$editorSubmissions[] =& $editorSubmission;
 			}
 			unset($editorSubmission);
@@ -459,7 +459,7 @@ class EditorSubmissionDAO extends DAO {
 			// used to check if editor exists for this submission
 			$editAssignments = $editorSubmission->getEditAssignments();
 
-			if ($inEditing && !empty($editAssignments) && !$editorSubmission->getSubmissionProgress()) {
+			if ($inEditing && !empty($editAssignments)) {
 				$editorSubmissions[] =& $editorSubmission;
 			}
 			unset($editorSubmission);
@@ -492,8 +492,7 @@ class EditorSubmissionDAO extends DAO {
 	function &getEditorSubmissionsArchives($journalId, $sectionId, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $rangeInfo = null) {
 		$editorSubmissions = array();
 	
-		// FIXME Does not pass $rangeInfo else we only get partial results
-		$result = $this->getUnfilteredEditorSubmissions($journalId, $sectionId, $searchField, $searchMatch, $search, $dateField, $dateFrom, $dateTo, false);
+		$result = $this->getUnfilteredEditorSubmissions($journalId, $sectionId, $searchField, $searchMatch, $search, $dateField, $dateFrom, $dateTo, false, $rangeInfo);
 		while (!$result->EOF) {
 			$editorSubmission = &$this->_returnEditorSubmissionFromRow($result->GetRowAssoc(false));
 			$articleId = $editorSubmission->getArticleId();
@@ -513,20 +512,20 @@ class EditorSubmissionDAO extends DAO {
 			$proofAssignment =& $proofAssignmentDao->getProofAssignmentByArticleId($articleId);
 			$editorSubmission->setProofAssignment($proofAssignment);
 
-			if (!$editorSubmission->getSubmissionProgress()) {
-				$editorSubmissions[] =& $editorSubmission;
-			}
+			$editorSubmissions[] =& $editorSubmission;
 			unset($editorSubmission);
 			$result->MoveNext();
 		}
-		$result->Close();
-		unset($result);
 		
 		if (isset($rangeInfo) && $rangeInfo->isValid()) {
-			$returner = &new ArrayItemIterator($editorSubmissions, $rangeInfo->getPage(), $rangeInfo->getCount());
+			$returner = &new VirtualArrayIterator($editorSubmissions, $result->MaxRecordCount(), $rangeInfo->getPage(), $rangeInfo->getCount());
 		} else {
 			$returner = &new ArrayItemIterator($editorSubmissions);
 		}
+
+		$result->Close();
+		unset($result);
+
 		return $returner;
 	}
 
@@ -563,20 +562,18 @@ class EditorSubmissionDAO extends DAO {
 			// used to check if editor exists for this submission
 			$editAssignments = $editorSubmission->getEditAssignments();
 
-			if (!$editorSubmission->getSubmissionProgress()) {
-				if (empty($editAssignments)) {
-					// unassigned submissions
-					$submissionsCount[0] += 1;
-				} else {
-					if ($inReview) {
-						if ($notDeclined) {
-							// in review submissions
-							$submissionsCount[1] += 1;
-						}
-					} else {
-						// in editing submissions
-						$submissionsCount[2] += 1;					
+			if (empty($editAssignments)) {
+				// unassigned submissions
+				$submissionsCount[0] += 1;
+			} else {
+				if ($inReview) {
+					if ($notDeclined) {
+						// in review submissions
+						$submissionsCount[1] += 1;
 					}
+				} else {
+					// in editing submissions
+					$submissionsCount[2] += 1;					
 				}
 			}
 			unset($editorSubmission);
