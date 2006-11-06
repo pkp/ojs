@@ -393,6 +393,7 @@ class ArticleFileManager extends FileManager {
 		}
 		$articleFile->setArticleId($this->articleId);
 		$articleFile->setSourceFileId($sourceFileId);
+		$articleFile->setSourceRevision($sourceRevision);
 		$articleFile->setFileName($sourceArticleFile->getFileName());
 		$articleFile->setFileType($sourceArticleFile->getFileType());
 		$articleFile->setFileSize($sourceArticleFile->getFileSize());

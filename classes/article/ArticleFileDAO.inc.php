@@ -225,6 +225,7 @@ class ArticleFileDAO extends DAO {
 		$articleFile = &new ArticleFile();
 		$articleFile->setFileId($row['file_id']);
 		$articleFile->setSourceFileId($row['source_file_id']);
+		$articleFile->setSourceRevision($row['source_revision']);
 		$articleFile->setRevision($row['revision']);
 		$articleFile->setArticleId($row['article_id']);
 		$articleFile->setFileName($row['file_name']);
@@ -253,6 +254,7 @@ class ArticleFileDAO extends DAO {
 			$articleFile->getRevision() === null ? 1 : $articleFile->getRevision(),
 			$articleFile->getArticleId(),
 			$articleFile->getSourceFileId(),
+			$articleFile->getSourceRevision(),
 			$articleFile->getFileName(),
 			$articleFile->getFileType(),
 			$articleFile->getFileSize(),
@@ -270,9 +272,9 @@ class ArticleFileDAO extends DAO {
 		
 		$this->update(
 			sprintf('INSERT INTO article_files
-				(' . ($fileId ? 'file_id, ' : '') . 'revision, article_id, source_file_id, file_name, file_type, file_size, original_file_name, type, status, date_uploaded, date_modified, round, viewable, assoc_id)
+				(' . ($fileId ? 'file_id, ' : '') . 'revision, article_id, source_file_id, source_revision, file_name, file_type, file_size, original_file_name, type, status, date_uploaded, date_modified, round, viewable, assoc_id)
 				VALUES
-				(' . ($fileId ? '?, ' : '') . '?, ?, ?, ?, ?, ?, ?, ?, ?, %s, %s, ?, ?, ?)',
+				(' . ($fileId ? '?, ' : '') . '?, ?, ?, ?, ?, ?, ?, ?, ?, ?, %s, %s, ?, ?, ?)',
 				$this->datetimeToDB($articleFile->getDateUploaded()), $this->datetimeToDB($articleFile->getDateModified())),
 			$params
 		);
@@ -294,6 +296,7 @@ class ArticleFileDAO extends DAO {
 				SET
 					article_id = ?,
 					source_file_id = ?,
+					source_revision = ?,
 					file_name = ?,
 					file_type = ?,
 					file_size = ?,
@@ -310,6 +313,7 @@ class ArticleFileDAO extends DAO {
 			array(
 				$articleFile->getArticleId(),
 				$articleFile->getSourceFileId(),
+				$articleFile->getSourceRevision(),
 				$articleFile->getFileName(),
 				$articleFile->getFileType(),
 				$articleFile->getFileSize(),

@@ -323,6 +323,7 @@
 	<message key="submission.views">Views</message>
 	<message key="submission.abstractViews">Abstract Views</message>
 	<message key="submission.noReviewAssignments">No Review Assignments</message>
+	<message key="submission.sent">Sent</message>
 	<message key="submission.reviewVersion">Review Version</message>
 	<message key="submission.peerReview">Peer&amp;nbsp;Review</message>
 	<message key="submission.editorDecision">Editor Decision</message>

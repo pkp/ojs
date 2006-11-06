@@ -727,10 +727,11 @@
 			<KEY/>
 			<AUTOINCREMENT/>
 		</field>
-		<field name="source_file_id" type="I8" />
 		<field name="revision" type="I8">
 			<KEY/>
 		</field>
+		<field name="source_file_id" type="I8" />
+		<field name="source_revision" type="I8" />
 		<field name="article_id" type="I8">
 			<NOTNULL/>
 		</field>

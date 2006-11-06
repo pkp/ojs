@@ -71,6 +71,22 @@ class ArticleFile extends DataObject {
 	}
 	
 	/**
+	 * Get source revision of this file.
+	 * @return int
+	 */
+	function getSourceRevision() {
+		return $this->getData('sourceRevision');
+	}
+	
+	/**
+	 * Set source revision of this file.
+	 * @param $sourceRevision int
+	 */
+	function setSourceRevision($sourceRevision) {
+		return $this->setData('sourceRevision', $sourceRevision);
+	}
+	
+	/**
 	 * Get associated ID of file. (Used, e.g., for email log attachments.)
 	 * @return int
 	 */
