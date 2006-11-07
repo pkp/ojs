@@ -349,7 +349,7 @@ class SectionEditorSubmissionDAO extends DAO {
 	/**
 	 * Retrieve unfiltered section editor submissions
 	 */
-	function &getUnfilteredSectionEditorSubmissions($sectionEditorId, $journalId, $sectionId = 0, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $status = true, $rangeInfo = null) {
+	function &getUnfilteredSectionEditorSubmissions($sectionEditorId, $journalId, $sectionId = 0, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $status = true, $additionalWhereSql = '', $rangeInfo = null) {
 		$params = array($journalId, $sectionEditorId);
 
 		$searchSql = '';
@@ -470,7 +470,7 @@ class SectionEditorSubmissionDAO extends DAO {
 			LEFT JOIN review_rounds r2 ON (a.article_id = r2.article_id and a.current_round = r2.round)
 			LEFT JOIN layouted_assignments l ON (l.article_id = a.article_id) LEFT JOIN users le ON (le.user_id = l.editor_id)
 			WHERE
-				a.journal_id = ? AND e.editor_id = ? AND a.submission_progress = 0';
+				a.journal_id = ? AND e.editor_id = ? AND a.submission_progress = 0' . (!empty($additionalWhereSql)?" AND ($additionalWhereSql)":"");
 
 		// "Active" submissions have a status of STATUS_QUEUED and
 		// the layout editor has not yet been acknowledged.
@@ -507,7 +507,7 @@ class SectionEditorSubmissionDAO extends DAO {
 		$submissions = array();
 	
 		// FIXME Does not pass $rangeInfo else we only get partial results
-		$result = $this->getUnfilteredSectionEditorSubmissions($sectionEditorId, $journalId, $sectionId, $searchField, $searchMatch, $search, $dateField, $dateFrom, $dateTo, true);
+		$result = $this->getUnfilteredSectionEditorSubmissions($sectionEditorId, $journalId, $sectionId, $searchField, $searchMatch, $search, $dateField, $dateFrom, $dateTo, true, 'e.can_review = 1');
 
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
@@ -521,13 +521,11 @@ class SectionEditorSubmissionDAO extends DAO {
 			if (!empty($decision)) {
 				$latestDecision = array_pop($decision);
 				if ($latestDecision['decision'] == SUBMISSION_EDITOR_DECISION_ACCEPT || $latestDecision['decision'] == SUBMISSION_EDITOR_DECISION_DECLINE) {
-					$inReview = false;			
+					$inReview = false;
 				}
 			}
+			if ($inReview) $submissions[] =& $submission;
 
-			if ($row['can_review'] && $inReview) {
-				$submissions[] =& $submission;
-			}
 			unset($submission);
 			$result->MoveNext();
 		}
@@ -561,26 +559,24 @@ class SectionEditorSubmissionDAO extends DAO {
 		$submissions = array();
 	
 		// FIXME Does not pass $rangeInfo else we only get partial results
-		$result = $this->getUnfilteredSectionEditorSubmissions($sectionEditorId, $journalId, $sectionId, $searchField, $searchMatch, $search, $dateField, $dateFrom, $dateTo, true);
+		$result = $this->getUnfilteredSectionEditorSubmissions($sectionEditorId, $journalId, $sectionId, $searchField, $searchMatch, $search, $dateField, $dateFrom, $dateTo, true, 'e.can_edit = 1');
 
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
 			$submission = &$this->_returnSectionEditorSubmissionFromRow($row);
 
 			// check if submission is still in review
-			$notInReview = false;
+			$inReview = true;
 			$decisions = $submission->getDecisions();
 			$decision = array_pop($decisions);
 			if (!empty($decision)) {
 				$latestDecision = array_pop($decision);
 				if ($latestDecision['decision'] == SUBMISSION_EDITOR_DECISION_ACCEPT || $latestDecision['decision'] == SUBMISSION_EDITOR_DECISION_DECLINE) {
-					$notInReview = true;	
+					$inReview = false;
 				}
 			}
+			if (!$inReview) $submissions[] =& $submission;
 
-			if ($row['can_edit'] && $notInReview) {
-				$submissions[] =& $submission;
-			}
 			unset($submission);
 			$result->MoveNext();
 		}
@@ -612,7 +608,7 @@ class SectionEditorSubmissionDAO extends DAO {
 	function &getSectionEditorSubmissionsArchives($sectionEditorId, $journalId, $sectionId, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $rangeInfo = null) {
 		$submissions = array();
 	
-		$result = $this->getUnfilteredSectionEditorSubmissions($sectionEditorId, $journalId, $sectionId, $searchField, $searchMatch, $search, $dateField, $dateFrom, $dateTo, false, $rangeInfo);
+		$result = $this->getUnfilteredSectionEditorSubmissions($sectionEditorId, $journalId, $sectionId, $searchField, $searchMatch, $search, $dateField, $dateFrom, $dateTo, false, '', $rangeInfo);
 
 		while (!$result->EOF) {
 			$submission = &$this->_returnSectionEditorSubmissionFromRow($result->GetRowAssoc(false));

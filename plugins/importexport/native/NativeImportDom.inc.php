@@ -496,6 +496,7 @@ class NativeImportDom {
 		$layoutAssignment = &new LayoutAssignment();
 		$layoutAssignment->setArticleId($article->getArticleId());
 		$layoutAssignment->setEditorId(0);
+		$layoutAssignment->setDateAcknowledged(Core::getCurrentDate()); // Make sure that imported articles go directly into the Archive. FIXME?
 		$layoutDao->insertLayoutAssignment($layoutAssignment);
 
 		$proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');

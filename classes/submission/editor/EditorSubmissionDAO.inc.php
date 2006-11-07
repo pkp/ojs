@@ -160,6 +160,7 @@ class EditorSubmissionDAO extends DAO {
 	 * @param $dateField int Symbolic SUBMISSION_FIELD_DATE_... identifier
 	 * @param $dateFrom String date to search from
 	 * @param $dateTo String date to search to
+	 * @param $status boolean whether to return active or not
 	 * @param $rangeInfo object
 	 * @return array result
 	 */
@@ -258,8 +259,8 @@ class EditorSubmissionDAO extends DAO {
 
 		// "Active" submissions have a status of STATUS_QUEUED and
 		// the layout editor has not yet been acknowledged.
-		if ($status) $sql .= ' AND a.status = ' . STATUS_QUEUED;
-		else $sql .= ' AND a.status <> ' . STATUS_QUEUED;
+		if ($status === true) $sql .= ' AND (a.status = ' . STATUS_QUEUED . ' OR (a.status = ' . STATUS_PUBLISHED . ' AND p.date_layouteditor_acknowledged IS NULL))';
+		else $sql .= ' AND ((a.status <> ' . STATUS_QUEUED . ' AND a.status <> ' . STATUS_PUBLISHED . ') OR (a.status = ' . STATUS_PUBLISHED . ' AND p.date_layouteditor_acknowledged IS NOT NULL))';
 
 		if ($sectionId) {
 			$searchSql .= ' AND a.section_id = ?';
@@ -539,8 +540,7 @@ class EditorSubmissionDAO extends DAO {
 			$submissionsCount[$i] = 0;
 		}
 
-		$sql = 'SELECT a.*, s.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, s.abbrev AS section_abbrev, s.abbrev_alt1 AS section_abbrev_alt1, s.abbrev_alt2 AS section_abbrev_alt2 from articles a LEFT JOIN proof_assignments p ON (p.article_id = a.article_id) LEFT JOIN sections s ON (s.section_id = a.section_id) WHERE a.journal_id = ? AND a.status = ' . STATUS_QUEUED . ' ORDER BY article_id ASC';
-		$result = &$this->retrieve($sql, $journalId);
+		$result =& $this->getUnfilteredEditorSubmissions($journalId);
 
 		while (!$result->EOF) {
 			$editorSubmission = &$this->_returnEditorSubmissionFromRow($result->GetRowAssoc(false));
@@ -552,10 +552,8 @@ class EditorSubmissionDAO extends DAO {
 			$decision = array_pop($decisions);
 			if (!empty($decision)) {
 				$latestDecision = array_pop($decision);
-				if ($latestDecision['decision'] == 1) {
+				if ($latestDecision['decision'] == SUBMISSION_EDITOR_DECISION_ACCEPT || $latestDecision['decision'] == SUBMISSION_EDITOR_DECISION_DECLINE) {
 					$inReview = false;
-				} elseif ($latestDecision['decision'] == 4) {
-					$notDeclined = false;
 				}
 			}
 
