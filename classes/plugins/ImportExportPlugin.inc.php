@@ -120,5 +120,21 @@ class ImportExportPlugin extends Plugin {
 		}
 		return false;
 	}
+
+	/**
+	 * Extend the {url ...} smarty to support import/export plugins.
+	 */
+	function smartyPluginUrl($params, &$smarty) {
+		$path = array('plugin', $this->getName());
+		if (is_array($params['path'])) {
+			$params['path'] = array_merge($path, $params['path']);
+		} elseif (!empty($params['path'])) {
+			$params['path'] = array_merge($path, array($params['path']));
+		} else {
+			$params['path'] = $path;
+		}
+		return $smarty->smartyUrl($params, $smarty);
+	}
+	
 }
 ?>

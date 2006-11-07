@@ -137,7 +137,7 @@ class Plugin {
 	}
 
 	/**
-	 * Extend the {url ...} smarty to support gateway plugins.
+	 * Extend the {url ...} smarty to support plugins.
 	 */
 	function smartyPluginUrl($params, &$smarty) {
 		$path = array($this->getCategory(), $this->getName());

@@ -233,7 +233,7 @@ class NativeImportDom {
 
 		/* --- Handle sections --- */
 		for ($index = 0; ($node = $issueNode->getChildByName('section', $index)); $index++) {
-			if (!NativeImportDom::handleSectionNode($journal, $node, $issue, $sectionErrors, $user, $isCommandLine, $dependentItems)) {
+			if (!NativeImportDom::handleSectionNode($journal, $node, $issue, $sectionErrors, $user, $isCommandLine, $dependentItems, $index)) {
 				$errors = array_merge($errors, $sectionErrors);
 				$hasErrors = true;
 			}
@@ -330,7 +330,7 @@ class NativeImportDom {
 		return false;
 	}
 
-	function handleSectionNode(&$journal, &$sectionNode, &$issue, &$errors, &$user, $isCommandLine, &$dependentItems) {
+	function handleSectionNode(&$journal, &$sectionNode, &$issue, &$errors, &$user, $isCommandLine, &$dependentItems, $sectionIndex = null) {
 		$sectionDao = &DAORegistry::getDAO('SectionDAO');
 
 		$errors = array();
@@ -391,6 +391,12 @@ class NativeImportDom {
 
 		// $section *must* now contain a valid section, whether it was
 		// found amongst existing sections or created anew.
+
+		// Handle custom ordering, if necessary.
+		if ($sectionIndex !== null) {
+			$sectionDao->insertCustomSectionOrder($issue->getIssueId(), $section->getSectionId(), $sectionIndex);
+		}
+
 		$hasErrors = false;
 		for ($index = 0; ($node = $sectionNode->getChildByName('article', $index)); $index++) {
 			if (!NativeImportDom::handleArticleNode($journal, $node, $issue, $section, $article, $publishedArticle, $articleErrors, $user, $isCommandLine, $dependentItems)) {
