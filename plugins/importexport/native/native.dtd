@@ -57,7 +57,7 @@
 		current (true|false) "false"
 		public_id CDATA #IMPLIED>
 		
-<!ELEMENT cover (caption, image?)>
+<!ELEMENT cover (caption?, image?)>
 <!ELEMENT caption (#PCDATA)>
 <!ELEMENT volume (#PCDATA)>
 <!ELEMENT number (#PCDATA)>
