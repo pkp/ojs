@@ -67,6 +67,22 @@ class Site extends DataObject {
 	}
 	
 	/**
+	 * Get original site stylesheet filename.
+	 * @return string
+	 */
+	function getOriginalStyleFilename() {
+		return $this->getData('originalStyleFilename');
+	}
+	
+	/**
+	 * Set original site stylesheet filename.
+	 * @param $originalStyleFilename string
+	 */
+	function setOriginalStyleFilename($originalStyleFilename) {
+		return $this->setData('originalStyleFilename', $originalStyleFilename);
+	}
+	
+	/**
 	 * Get site introduction.
 	 * @return string
 	 */
@@ -227,7 +243,10 @@ class Site extends DataObject {
 	function setProfileLocalesEnabled($profileLocalesEnabled) {
 		return $this->setData('profileLocalesEnabled', $profileLocalesEnabled);
 	}
-	
+
+	function getSiteStyleFilename() {
+		return 'sitestyle.css';
+	}
 }
 
 ?>

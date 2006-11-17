@@ -83,6 +83,9 @@ class TemplateManager extends Smarty {
 			
 			$journal = &Request::getJournal();
 			$site = &Request::getSite();
+
+			$siteStyleFilename = PublicFileManager::getSiteFilesPath() . '/' . $site->getSiteStyleFilename();
+			if (file_exists($siteStyleFilename)) $this->addStyleSheet(Request::getBaseUrl() . '/' . $siteStyleFilename);
 			
 			if (isset($journal)) {
 				$this->assign_by_ref('currentJournal', $journal);
@@ -109,7 +112,7 @@ class TemplateManager extends Smarty {
 				$this->assign('itemsPerPage', $journal->getSetting('itemsPerPage'));
 				$this->assign('enableAnnouncements', $journal->getSetting('enableAnnouncements'));
 				
-				// Assign stylesheet and footer
+				// Assign stylesheets and footer
 				$journalStyleSheet = $journal->getSetting('journalStyleSheet');
 				if ($journalStyleSheet) {
 					$this->addStyleSheet(Request::getBaseUrl() . '/' . PublicFileManager::getJournalFilesPath($journal->getJournalId()) . '/' . $journalStyleSheet['uploadName']);

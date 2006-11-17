@@ -40,8 +40,17 @@ class AdminSettingsHandler extends AdminHandler {
 		
 		$settingsForm = &new SiteSettingsForm();
 		$settingsForm->readInputData();
-		
-		if ($settingsForm->validate()) {
+
+		if (Request::getUserVar('uploadSiteStyleSheet')) {
+			$site =& Request::getSite();
+			if (!$settingsForm->uploadSiteStyleSheet()) {
+				$settingsForm->addError('siteStyleSheet', 'admin.settings.siteStyleSheetInvalid');
+			}
+		} elseif (Request::getUserVar('deleteSiteStyleSheet')) {
+			$site =& Request::getSite();
+			$publicFileManager =& new PublicFileManager();
+			$publicFileManager->removeSiteFile($site->getSiteStyleFilename());
+		} elseif ($settingsForm->validate()) {
 			$settingsForm->execute();
 		
 			$templateMgr = &TemplateManager::getManager();
@@ -53,10 +62,9 @@ class AdminSettingsHandler extends AdminHandler {
 				'backLinkLabel' => 'admin.siteAdmin'
 			));
 			$templateMgr->display('common/message.tpl');
-			
-		} else {
-			$settingsForm->display();
+			exit();
 		}
+		$settingsForm->display();
 	}
 	
 }

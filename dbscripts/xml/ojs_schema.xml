@@ -87,6 +87,7 @@
 			<DEFAULT VALUE="0"/>
 			<descr>Allow users to select their working languages in their user profile.</descr>
 		</field>
+		<field name="original_style_file_name" type="C2" size="255"/>
 		<descr>Common site settings.</descr>
 	</table>
 	
