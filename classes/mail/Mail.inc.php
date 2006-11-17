@@ -26,6 +26,10 @@ class Mail extends DataObject {
 	function Mail() {
 		parent::DataObject();
 		$this->privateParams = array();
+		if (Config::getVar('email', 'allow_envelope_sender')) {
+			$defaultEnvelopeSender = Config::getVar('email', 'default_envelope_sender');
+			if (!empty($defaultEnvelopeSender)) $this->setEnvelopeSender($defaultEnvelopeSender);
+		}
 	}
 
 	/**

@@ -57,6 +57,7 @@ class MailTemplate extends Mail {
 	 * @param $journal object optional The journal this message relates to
 	 */
 	function MailTemplate($emailKey = null, $locale = null, $enableAttachments = null, $journal = null) {
+		parent::Mail();
 		$this->emailKey = isset($emailKey) ? $emailKey : null;
 
 		

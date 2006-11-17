@@ -198,6 +198,9 @@ encryption = md5
 ; (may not be possible with some server configurations)
 ; allow_envelope_sender = Off
 
+; Default envelope sender to use if none is specified elsewhere
+; default_envelope_sender = my_address@my_host.com
+
 ; Enable attachments in the various "Send Email" pages.
 ; (Disabling here will not disable attachments on features that
 ; require them, e.g. attachment-based reviews)
