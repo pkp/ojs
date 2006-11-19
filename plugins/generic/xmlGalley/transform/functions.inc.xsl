@@ -1,5 +1,16 @@
 <?xml version="1.0"?>
 
+<!--
+  * functions.inc.xsl
+  *
+  * Copyright (c) 2006 MJ Suhonos
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * External XSL functions to support XSL within the XML Galleys plugin.
+  *
+  * $Id$
+  -->
+
 <xsl:transform version="1.0"
         xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
         xmlns:xlink="http://www.w3.org/1999/xlink"
