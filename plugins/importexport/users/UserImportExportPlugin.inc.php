@@ -157,6 +157,8 @@ class UserImportExportPlugin extends ImportExportPlugin {
 				$users = &$users->toArray();
 				$doc = &UserExportDom::exportUsers($journal, $users);
 				header("Content-Type: application/xml");
+				header("Cache-Control: private");
+				header("Content-Disposition: attachment; filename=\"users.xml\"");
 				echo XMLCustomWriter::getXML($doc);
 				break;
 			case 'exportByRole':
@@ -174,6 +176,8 @@ class UserImportExportPlugin extends ImportExportPlugin {
 				$users = array_values($users);
 				$doc = &UserExportDom::exportUsers($journal, $users, $rolePaths);
 				header("Content-Type: application/xml");
+				header("Cache-Control: private");
+				header("Content-Disposition: attachment; filename=\"users.xml\"");
 				echo XMLCustomWriter::getXML($doc);
 				break;
 			default:

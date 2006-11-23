@@ -160,6 +160,8 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 			fclose($h);
 		} else {
 			header("Content-Type: application/xml");
+			header("Cache-Control: private");
+			header("Content-Disposition: attachment; filename=\"crossref.xml\"");
 			XMLCustomWriter::printXML($doc);
 		}
 		return true;
@@ -218,6 +220,8 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 			fclose($h);
 		} else {
 			header("Content-Type: application/xml");
+			header("Cache-Control: private");
+			header("Content-Disposition: attachment; filename=\"crossref.xml\"");
 			XMLCustomWriter::printXML($doc);
 		}
 

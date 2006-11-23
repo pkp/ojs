@@ -178,6 +178,8 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 			fclose($h);
 		} else {
 			header("Content-Type: application/xml");
+			header("Cache-Control: private");
+			header("Content-Disposition: attachment; filename=\"issue-" . $issue->getIssueId() . ".xml\"");
 			XMLCustomWriter::printXML($doc);
 		}
 		return true;
@@ -195,6 +197,8 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 			fclose($h);
 		} else {
 			header("Content-Type: application/xml");
+			header("Cache-Control: private");
+			header("Content-Disposition: attachment; filename=\"article-" . $article->getArticleId() . ".xml\"");
 			XMLCustomWriter::printXML($doc);
 		}
 		return true;
@@ -217,6 +221,8 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 			fclose($h);
 		} else {
 			header("Content-Type: application/xml");
+			header("Cache-Control: private");
+			header("Content-Disposition: attachment; filename=\"issues.xml\"");
 			XMLCustomWriter::printXML($doc);
 		}
 		return true;
@@ -243,6 +249,8 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 			fclose($h);
 		} else {
 			header("Content-Type: application/xml");
+			header("Cache-Control: private");
+			header("Content-Disposition: attachment; filename=\"articles.xml\"");
 			XMLCustomWriter::printXML($doc);
 		}
 		return true;

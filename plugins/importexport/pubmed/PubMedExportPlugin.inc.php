@@ -130,6 +130,8 @@ class PubMedExportPlugin extends ImportExportPlugin {
 			fclose($h);
 		} else {
 			header("Content-Type: application/xml");
+			header("Cache-Control: private");
+			header("Content-Disposition: attachment; filename=\"pubmed.xml\"");
 			XMLCustomWriter::printXML($doc);
 		}
 		return true;
@@ -158,6 +160,8 @@ class PubMedExportPlugin extends ImportExportPlugin {
 			fclose($h);
 		} else {
 			header("Content-Type: application/xml");
+			header("Cache-Control: private");
+			header("Content-Disposition: attachment; filename=\"pubmed.xml\"");
 			XMLCustomWriter::printXML($doc);
 		}
 		return true;
