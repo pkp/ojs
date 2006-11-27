@@ -35,12 +35,12 @@ class DAORegistry {
 	 *    name, if one was already registered; null otherwise
 	 */
 	function &registerDAO($name, &$dao) {
+		$daos = &DAORegistry::getDAOs();
 		if (isset($daos[$name])) {
 			$returner = &$daos[$name];
 		} else {
 			$returner = null;
 		}
-		$daos = &DAORegistry::getDAOs();
 		$daos[$name] = &$dao;
 		return $returner;
 	}
