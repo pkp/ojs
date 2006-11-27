@@ -275,16 +275,6 @@ I am able and willing to review the submission, "{$articleTitle}," for {$journal
 			<field name="description">This email is sent by a Reviewer to the Section Editor in response to a review request to notify the Section Editor that the review request has been accepted and will be completed by the specified date.</field>
 		</row>
 		<row>
-			<field name="email_key">REVIEW_CONFIRM_ACK</field>
-			<field name="subject">Review Underway Acknowledgement</field>
-			<field name="body">{$reviewerName}:
-
-Thank you for agreeing to review the manuscript "{$articleTitle}" for {$journalName} by {$reviewDueDate}.
-
-{$editorialContactSignature}</field>
-			<field name="description">This email is sent from the Section Editor to the Reviewer to acknowledge their acceptance of a review or encourage them to complete the review.</field>
-		</row>
-		<row>
 			<field name="email_key">REVIEW_DECLINE</field>
 			<field name="subject">Unable to Review</field>
 			<field name="body">{$editorialContactName}:

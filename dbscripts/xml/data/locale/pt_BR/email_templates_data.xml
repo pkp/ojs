@@ -366,16 +366,6 @@ Estou disponível e interessado em avaliar a submissão "{$articleTitle}" a {$jo
 
 		</row>
 		<row>
-			<field name="email_key">REVIEW_CONFIRM_ACK</field>
-			<field name="subject">Notificação de Avaliação em Andamento</field>
-			<field name="body">{$reviewerName},
-
-Agradecemos por aceitar realizar a avaliação do manuscrito "{$articleTitle}", submetido a {$journalName} até a data {$reviewDueDate}.
-
-{$editorialContactSignature}</field>
-			<field name="description">Mensagem enviada pelo Editor de Seção ao Avaliador, notificando o recebimento da aceitação de avaliação e reafirmando o interesse na conclusão da tarefa.</field>
-		</row>
-		<row>
 			<field name="email_key">REVIEW_DECLINE</field>
 			<field name="subject">Indisponível para Avaliação</field>
 			<field name="body">{$editorialContactName},

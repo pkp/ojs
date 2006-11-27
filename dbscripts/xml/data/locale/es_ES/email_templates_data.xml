@@ -364,16 +364,6 @@ Tengo la capacidad y deseo revisar el envío, "{$articleTitle}," para {$journalN
 			<field name="description">Este correo es enviado por un/a revisor/a al / a la Editor/a de Sección en respuesta a una petición de revisión para notificarle que ha aceptado la petición y que será completada antes de la fecha especificada.</field>
 		</row>
 		<row>
-			<field name="email_key">REVIEW_CONFIRM_ACK</field>
-			<field name="subject">Confirmación de Revisión en Progreso</field>
-			<field name="body">{$reviewerName}:
-
-Gracias por aceptar la revisión de "{$articleTitle}" para la revista {$journalName} antes de {$reviewDueDate}.
-
-{$editorialContactSignature}</field>
-			<field name="description">Este correo es enviado por un/a revisor/a al / a la Editor/a de Sección al Revisor/a para confirmar que han aceptado la revisión y para motivarlos a completarla.</field>
-		</row>		
-		<row>
 			<field name="email_key">REVIEW_DECLINE</field>
 			<field name="subject">Rechazo la revisión</field>
 			<field name="body">{$editorialContactName}:

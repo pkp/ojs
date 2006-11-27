@@ -295,16 +295,6 @@ Posso e voglio fare la revisione alla submission, "{$articleTitle}," per {$journ
 			<field name="description">Questa email viene mandata dal revisore  al section editor in risposta a una richiesta di revisione per far sapere a quest'ultimo che la richiesta &#x00E8; stata accettata e sar&#x00E0; completata alla data specificata.</field>
 		</row>
 		<row>
-			<field name="email_key">REVIEW_CONFIRM_ACK</field>
-			<field name="subject">Ringraziamento per revisione in corso</field>
-			<field name="body">{$reviewerName}:
-
-Grazie per aver accettato di rivedere il manoscritto di "{$articleTitle}" per {$journalName} bda {$reviewDueDate}.
-
-{$editorialContactSignature}</field>
-			<field name="description">Questa mail viene inviata dal Section Editor al revisore per ringraziarlo di aver accettato di occuparsi di una revisione o incoraggiarlo a completare una revisione.</field>
-		</row>
-		<row>
 			<field name="email_key">REVIEW_DECLINE</field>
 			<field name="subject">Non in grado di fare la revisione</field>
 			<field name="body">{$editorialContactName}:

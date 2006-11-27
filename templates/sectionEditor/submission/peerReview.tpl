@@ -170,17 +170,7 @@
 						{/if}
 					</td>
 					<td>
-						{url|assign:"acknowledgeReviewerUnderwayUrl" op="acknowledgeReviewerUnderway" reviewId=$reviewAssignment->getReviewId() articleId=$submission->getArticleId()}
-						{if $reviewAssignment->getDateConfirmed()}
-							{$reviewAssignment->getDateConfirmed()|date_format:$dateFormatShort}
-							{if !$reviewAssignment->getDateCompleted()}
-								{icon name="mail" url=$acknowledgeReviewerUnderwayUrl}
-							{else}
-								{icon name="mail" disabled="disabled" url=$acknowledgeReviewerUnderwayUrl}
-							{/if}
-						{else}
-							{icon name="mail" disabled="disabled" url=$acknowledgeReviewerUnderwayUrl}
-						{/if}
+						{$reviewAssignment->getDateConfirmed()|date_format:$dateFormatShort|default:"&mdash;"}
 					</td>
 					<td>
 						{if $reviewAssignment->getDeclined()}
@@ -268,7 +258,7 @@
 			<td class="label">{translate key="reviewer.article.editorToEnter"}</td>
 			<td>
 				{if !$reviewAssignment->getDateConfirmed()}
-					<a href="{url op="acceptReviewForReviewer" path=$submission->getArticleId()|to_array:$reviewAssignment->getReviewId()}" class="action">{translate key="submission.acceptance"}</a><br />
+					<a href="{url op="confirmReviewForReviewer" path=$submission->getArticleId()|to_array:$reviewAssignment->getReviewId() accept=1}" class="action">{translate key="reviewer.article.canDoReview"}</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="{url op="confirmReviewForReviewer" path=$submission->getArticleId()|to_array:$reviewAssignment->getReviewId() accept=0}" class="action">{translate key="reviewer.article.cannotDoReview"}</a><br />
 				{/if}
 				<form method="post" action="{url op="uploadReviewForReviewer"}" enctype="multipart/form-data">
 					{translate key="editor.article.uploadReviewForReviewer"}

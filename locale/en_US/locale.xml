@@ -315,7 +315,6 @@
 	<message key="submission.response">Response</message>
 	<message key="submission.accepted">Accepted</message>
 	<message key="submission.rejected">Rejected</message>
-	<message key="submission.acceptance">Agreed to Review</message>
 	<message key="submission.due">Due</message>
 	<message key="submission.complete">Complete</message>
 	<message key="submission.acknowledge">Acknowledge</message>
@@ -2324,6 +2323,7 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="log.review.resubmit">The submission {$articleId} has been resubmitted for review.</message>
 	<message key="log.review.reviewDeclined">{$reviewerName} has declined the round {$round} review for submission {$articleId}.</message>
 	<message key="log.review.reviewAccepted">{$reviewerName} has accepted the round {$round} review for submission {$articleId}.</message>
+	<message key="log.review.reviewDeclinedByProxy">{$userName} has declined the round {$round} review for submission {$articleId} on behalf of {$reviewerName}.</message>
 	<message key="log.review.reviewAcceptedByProxy">{$userName} has accepted the round {$round} review for submission {$articleId} on behalf of {$reviewerName}.</message>
 	<message key="log.review.reviewFileByProxy">The Editor, {$userName}, has uploaded a review file for round {$round} of submission {$articleId} on behalf of the reviewer, {$reviewerName}.</message>
 	<message key="log.review.reviewerFile">A reviewer file has been uploaded.</message>

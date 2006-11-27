@@ -264,11 +264,6 @@ class SectionEditorHandler extends Handler {
 		SubmissionEditHandler::remindReviewer($args);
 	}
 
-	function acknowledgeReviewerUnderway($args) {
-		import('pages.sectionEditor.SubmissionEditHandler');
-		SubmissionEditHandler::acknowledgeReviewerUnderway($args);
-	}
-
 	function thankReviewer($args) {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::thankReviewer($args);
@@ -279,9 +274,9 @@ class SectionEditorHandler extends Handler {
 		SubmissionEditHandler::rateReviewer();
 	}
 	
-	function acceptReviewForReviewer($args) {
+	function confirmReviewForReviewer($args) {
 		import('pages.sectionEditor.SubmissionEditHandler');
-		SubmissionEditHandler::acceptReviewForReviewer($args);
+		SubmissionEditHandler::confirmReviewForReviewer($args);
 	}
 	
 	function uploadReviewForReviewer($args) {

@@ -275,16 +275,6 @@ Ich bin willens und in der Lage, den Beitrag "{$articleTitle}," zu {$journalName
 			<field name="description">Diese Email geht von einem Guachter an den Rubrikredakteur als Antwort auf ein Gutachterersuchen. Diesem wird die Einwilligung mitgeteilt und die Bereitschaft, das Gutachten bis zu Fälligkeitsdatum abzugeben.</field>
 		</row>
 		<row>
-			<field name="email_key">REVIEW_CONFIRM_ACK</field>
-			<field name="subject">Bestätigung der Bereitschaft zu Gutachten</field>
-			<field name="body">{$reviewerName}:
-
-Vielen Dank für Ihre Bereitschaft, das Manuskript "{$articleTitle}" für {$journalName} bis zum {$reviewDueDate} zu begutachten.
-
-{$editorialContactSignature}</field>
-			<field name="description">Diese Email geht vom Rubrikredakteur an den Gutachter. Sie bestätigt den Empfang seiner Einwilligungserklärung und erinnert an das Fälligkeitsdatum des Gutachtens.</field>
-		</row>
-		<row>
 			<field name="email_key">REVIEW_DECLINE</field>
 			<field name="subject">Nicht in der Lage zu begutachten</field>
 			<field name="body">{$editorialContactName}:

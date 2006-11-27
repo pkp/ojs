@@ -505,18 +505,6 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		}
 	}
 	
-	function acknowledgeReviewerUnderway($args = null) {
-		$articleId = Request::getUserVar('articleId');
-		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
-		
-		$reviewId = Request::getUserVar('reviewId');
-		parent::setupTemplate(true, $articleId, 'review');
-		
-		if (SectionEditorAction::acknowledgeReviewerUnderway($submission, $reviewId, Request::getUserVar('send'))) {
-			Request::redirect(null, null, 'submissionReview', $articleId);
-		}
-	}
-	
 	function thankReviewer($args = array()) {
 		$articleId = Request::getUserVar('articleId');
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
@@ -544,13 +532,14 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		Request::redirect(null, null, 'submissionReview', $articleId);
 	}
 
-	function acceptReviewForReviewer($args) {
+	function confirmReviewForReviewer($args) {
 		$articleId = (int) isset($args[0])?$args[0]:0;
+		$accept = Request::getUserVar('accept')?true:false;
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
 		
 		$reviewId = (int) isset($args[1])?$args[1]:0;
 		
-		SectionEditorAction::acceptReviewForReviewer($reviewId);
+		SectionEditorAction::confirmReviewForReviewer($reviewId, $accept);
 		Request::redirect(null, null, 'submissionReview', $articleId);
 	}
 

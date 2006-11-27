@@ -418,62 +418,6 @@ class SectionEditorAction extends Action {
 	}
 	
 	/**
-	 * Acknowledges that a review is now underway.
-	 * @param $sectionEditorSubmission object
-	 * @param $reviewId int
-	 * @return boolean true iff no error was encountered
-	 */
-	function acknowledgeReviewerUnderway($sectionEditorSubmission, $reviewId, $send = false) {
-		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
-		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
-		$userDao = &DAORegistry::getDAO('UserDAO');
-			
-		$journal = &Request::getJournal();
-		$user = &Request::getUser();
-		$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($reviewId);
-
-		import('mail.ArticleMailTemplate');
-		$email = &new ArticleMailTemplate($sectionEditorSubmission, 'REVIEW_CONFIRM_ACK');
-
-		if (!$email->isEnabled() || ($send && !$email->hasErrors())) {
-			HookRegistry::call('SectionEditorAction::acknowledgeReviewerUnderway', array(&$sectionEditorSubmission, &$reviewAssignment, &$email));
-			$email->setAssoc(ARTICLE_EMAIL_REVIEW_CONFIRM_ACK, ARTICLE_EMAIL_TYPE_REVIEW, $reviewId);
-
-			$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
-
-			if ($email->isEnabled()) $email->send();
-			return true;
-		} elseif ($reviewAssignment->getArticleId() == $sectionEditorSubmission->getArticleId()) {
-			$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());
-		
-			if (!Request::getUserVar('continued')) {
-				if (!isset($reviewer)) return true;
-				$email->addRecipient($reviewer->getEmail(), $reviewer->getFullName());
-
-				$submissionUrl = Request::url(null, 'reviewer', 'submission', $reviewId);
-				
-				$paramArray = array(
-					'reviewerName' => $reviewer->getFullName(),
-					'reviewDueDate' => date('Y-m-d', strtotime($reviewAssignment->getDateDue())),
-					'editorialContactSignature' => $user->getContactSignature()
-				);
-				$email->assignParams($paramArray);
-	
-			}
-			$email->displayEditForm(
-				Request::url(null, null, 'acknowledgeReviewerUnderway', 'send'),
-				array(
-					'reviewerId' => $reviewer->getUserId(),
-					'articleId' => $sectionEditorSubmission->getArticleId(),
-					'reviewId' => $reviewId
-				)
-			);
-			return false;
-		}
-		return true;
-	}
-	
-	/**
 	 * Thanks a reviewer for completing a review assignment.
 	 * @param $sectionEditorSubmission object
 	 * @param $reviewId int
@@ -2048,10 +1992,11 @@ class SectionEditorAction extends Action {
 	}	
 	
 	/**
-	 * Accepts the review assignment on behalf of its reviewer.
+	 * Confirms the review assignment on behalf of its reviewer.
 	 * @param $reviewId int
+	 * @param $accept boolean True === accept; false === decline
 	 */
-	function acceptReviewForReviewer($reviewId) {
+	function confirmReviewForReviewer($reviewId, $accept) {
 		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
                 $user = &Request::getUser();
@@ -2059,12 +2004,12 @@ class SectionEditorAction extends Action {
 		$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($reviewId);
 		$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId(), true);
 		
-		if (HookRegistry::call('SectionEditorAction::acceptReviewForReviewer', array(&$reviewAssignment, &$reviewer))) return;
+		if (HookRegistry::call('SectionEditorAction::acceptReviewForReviewer', array(&$reviewAssignment, &$reviewer, &$accept))) return;
 
 		// Only confirm the review for the reviewer if 
 		// he has not previously done so.
 		if ($reviewAssignment->getDateConfirmed() == null) {
-			$reviewAssignment->setDeclined(0);
+			$reviewAssignment->setDeclined($accept?0:1);
 			$reviewAssignment->setDateConfirmed(Core::getCurrentDate());
 			$reviewAssignment->stampModified();
 			$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
@@ -2077,8 +2022,8 @@ class SectionEditorAction extends Action {
 			$entry->setArticleId($reviewAssignment->getArticleId());
 			$entry->setUserId($user->getUserId());
 			$entry->setDateLogged(Core::getCurrentDate());
-			$entry->setEventType(ARTICLE_LOG_REVIEW_ACCEPT_BY_PROXY);
-			$entry->setLogMessage('log.review.reviewAcceptedByProxy', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $reviewAssignment->getArticleId(), 'round' => $reviewAssignment->getRound(), 'userName' => $user->getFullName()));
+			$entry->setEventType(ARTICLE_LOG_REVIEW_CONFIRM_BY_PROXY);
+			$entry->setLogMessage($accept?'log.review.reviewAcceptedByProxy':'log.review.reviewDeclinedByProxy', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $reviewAssignment->getArticleId(), 'round' => $reviewAssignment->getRound(), 'userName' => $user->getFullName()));
 			$entry->setAssocType(ARTICLE_LOG_TYPE_REVIEW);
 			$entry->setAssocId($reviewAssignment->getReviewId());
 

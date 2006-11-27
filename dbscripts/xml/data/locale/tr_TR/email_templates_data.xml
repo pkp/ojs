@@ -318,16 +318,6 @@ Bu çalışmayı değerlendirmek üzere seçildiğim için teşekkür ederim.
 			<field name="description">Hakemin değerlendirmeyi kabul ettiğini editöre bildirmek üzere kullandığı mesaj</field>
 		</row>
 		<row>
-			<field name="email_key">REVIEW_CONFIRM_ACK</field>
-			<field name="subject">Değerlendirmeyi kabul için teşekkür</field>
-			<field name="body">{$reviewerName}:
-
-{$journalName} dergisi için {$reviewDueDate} tarihine dek "{$articleTitle}" başlıklı makaleyi değerlendirmeyi kabul ettiğiniz için teşekkür ederiz.
-
-{$editorialContactSignature}</field>
-			<field name="description">Bu e-posta bölüm editörü tarafından değerlendirmeyi kabul eden hakeme teşekkür ve anımsatma için gönderilir.</field>
-		</row>
-		<row>
 			<field name="email_key">REVIEW_DECLINE</field>
 			<field name="subject">DEĞERLENDİREMEYECEĞİM...</field>
 			<field name="body">Sayın {$editorialContactName},

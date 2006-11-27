@@ -68,7 +68,7 @@ define('ARTICLE_LOG_REVIEW_SET_DUE_DATE', 	0x40000011);
 define('ARTICLE_LOG_REVIEW_RESUBMIT', 		0x40000012);
 define('ARTICLE_LOG_REVIEW_FILE', 		0x40000013);
 define('ARTICLE_LOG_REVIEW_CLEAR', 		0x40000014);
-define('ARTICLE_LOG_REVIEW_ACCEPT_BY_PROXY', 	0x40000015);
+define('ARTICLE_LOG_REVIEW_CONFIRM_BY_PROXY', 	0x40000015);
 define('ARTICLE_LOG_REVIEW_RECOMMENDATION_BY_PROXY', 	0x40000016);
 define('ARTICLE_LOG_REVIEW_FILE_BY_PROXY', 	0x40000017);
 
@@ -348,7 +348,7 @@ class ArticleEventLogEntry extends DataObject {
 				return 'submission.event.reviewer.reviewCancelled';
 			case ARTICLE_LOG_REVIEW_REINITIATE:
 				return 'submission.event.reviewer.reviewReinitiated';
-			case ARTICLE_LOG_REVIEW_ACCEPT_BY_PROXY:
+			case ARTICLE_LOG_REVIEW_CONFIRM_BY_PROXY:
 				return 'submission.event.reviewer.reviewAcceptedByProxy';
 			case ARTICLE_LOG_REVIEW_ACCEPT:
 				return 'submission.event.reviewer.reviewAccepted';

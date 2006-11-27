@@ -268,16 +268,6 @@ Je suis en mesure d'évaluer la soumission intitulée « {$articleTitle} » po
 			<field name="description">Ce courriel est envoyé par l'évaluateur au chef de rubrique en réponse à la demande d'évaluation faite, pour aviser ce dernier que la demande a été acceptée et que l'évaluation sera complétée au plus tard à la date spécifiée.</field>
 		</row>
 		<row>
-			<field name="email_key">REVIEW_CONFIRM_ACK</field>
-			<field name="subject">Reconnaissance que l'évaluation est en cours</field>
-			<field name="body">{$reviewerName} :
-
-Merci d'avoir accepté d'évaluer le manuscrit intitulé "{$articleTitle}" pour {$journalName} avant le {$reviewDueDate}.
-
-{$editorialContactSignature}</field>
-			<field name="description">Le chef de rubrique envoie ce courriel à l'évaluateur pour reconnaître son acceptation ou pour l'encourager à compléter l'évaluation.</field>
-		</row>
-		<row>
 			<field name="email_key">REVIEW_DECLINE</field>
 			<field name="subject">Refus d'évaluer le manuscrit</field>
 			<field name="body">{$editorialContactName},
