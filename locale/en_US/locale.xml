@@ -967,6 +967,9 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="manager.setup.loggingAndAuditing">Logging and Auditing</message>
 	<message key="manager.setup.submissionEventLogging">Enable submission event logging, which maintains a log of all actions on a submission (accessible via each submission's "History" page).</message>
 	<message key="manager.setup.submissionEmailLogging">Enable submission email logging, which maintains a log of all emails sent out related to a submission (accessible via each submission's "History" page).</message>
+	<message key="manager.setup.reviewerDatabaseLink">Potential Reviewer Database</message>
+	<message key="manager.setup.reviewerDatabaseLink.desc">Add to the Select Reviewer page a link to a relevant literature database that can be searched for potential reviewers and is open to editors without subscription.</message>
+	<message key="manager.setup.addReviewerDatabaseLink">Add New Database Link</message>
 
 	<message key="manager.setup.journalArchiving">Journal Archiving</message>
 	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems supports the <a href="http://lockss.stanford.edu/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) system to ensure a secure and permanent archive for the journal. LOCKSS is open source software developed at Stanford University Library that enables libraries to preserve selected web journals by regularly polling registered journal websites for newly published content and archiving it. Each archive is continually validated against other library caches, and if content is found to be corrupted or lost, the other caches or the journal is used to restore it.

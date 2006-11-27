@@ -115,6 +115,22 @@ class SetupHandler extends ManagerHandler {
 						array_splice($customAboutItems, $delCustomAboutItem, 1);
 						$setupForm->setData('customAboutItems', $customAboutItems);
 					}
+					if (Request::getUserVar('addReviewerDatabaseLink')) {
+						// Add a reviewer database link
+						$editData = true;
+						$reviewerDatabaseLinks = $setupForm->getData('reviewerDatabaseLinks');
+						array_push($reviewerDatabaseLinks, array());
+						$setupForm->setData('reviewerDatabaseLinks', $reviewerDatabaseLinks);
+						
+					} else if (($delReviewerDatabaseLink = Request::getUserVar('delReviewerDatabaseLink')) && count($delReviewerDatabaseLink) == 1) {
+						// Delete a custom about item
+						$editData = true;
+						list($delReviewerDatabaseLink) = array_keys($delReviewerDatabaseLink);
+						$delReviewerDatabaseLink = (int) $delReviewerDatabaseLink;
+						$reviewerDatabaseLinks = $setupForm->getData('reviewerDatabaseLinks');
+						array_splice($reviewerDatabaseLinks, $delReviewerDatabaseLink, 1);
+						$setupForm->setData('reviewerDatabaseLinks', $reviewerDatabaseLinks);
+					}
 					break;
 					
 				case 3:

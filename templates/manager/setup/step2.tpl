@@ -159,7 +159,7 @@
 		<td width="20%" class="label">{fieldLabel name="customAboutItems-$aboutId-content" key="manager.setup.aboutItemContent"}</td>
 		<td width="80%" class="value"><textarea name="customAboutItems[{$aboutId}][content]" id="customAboutItems-{$aboutId}-content" rows="12" cols="40" class="textArea">{$aboutItem.content|escape}</textarea></td>
 	</tr>
-	{if !$smarty.foreach.contributors.last}
+	{if !$smarty.foreach.customAboutItems.last}
 	<tr valign="top">
 		<td colspan="2" class="separator">&nbsp;</td>
 	</tr>
@@ -297,6 +297,41 @@ function toggleRegAllowOpts(form) {
 	</tr>
 </table>
 
+
+<div class="separator"></div>
+
+<h3>2.7 {translate key="manager.setup.reviewerDatabaseLink"}</h3>
+
+<p>{translate key="manager.setup.reviewerDatabaseLink.desc"}</p>
+
+<table width="100%" class="data">
+{foreach name=reviewerDatabaseLinks from=$reviewerDatabaseLinks key=reviewerDatabaseLinkId item=reviewerDatabaseLink}
+	<tr valign="top">
+		<td width="5%" class="label">{fieldLabel name="reviewerDatabaseLinks-$reviewerDatabaseLinkId-title" key="common.title"}</td>
+		<td width="95%" class="value"><input type="text" name="reviewerDatabaseLinks[{$reviewerDatabaseLinkId}][title]" id="reviewerDatabaseLinks-{$reviewerDatabaseLinkId}-title" value="{$reviewerDatabaseLink.title|escape}" size="40" maxlength="255" class="textField" />{if $smarty.foreach.reviewerDatabaseLinks.total > 1} <input type="submit" name="delReviewerDatabaseLink[{$reviewerDatabaseLinkId}]" value="{translate key="common.delete"}" class="button" />{/if}</td>
+	</tr>
+	<tr valign="top">
+		<td width="20%" class="label">{fieldLabel name="reviewerDatabaseLinks-$reviewerDatabaseLinkId-url" key="common.url"}</td>
+		<td width="80%" class="value"><input type="text" name="reviewerDatabaseLinks[{$reviewerDatabaseLinkId}][url]" id="reviewerDatabaseLinks-{$reviewerDatabaseLinkId}-url" value="{$reviewerDatabaseLink.url|escape}" size="40" maxlength="255" class="textField" /></td>
+	</tr>
+	{if !$smarty.foreach.reviewerDatabaseLinks.last}
+	<tr valign="top">
+		<td colspan="2" class="separator">&nbsp;</td>
+	</tr>
+	{/if}
+{foreachelse}
+	<tr valign="top">
+		<td width="20%" class="label">{fieldLabel name="reviewerDatabaseLinks-0-title" key="common.title"}</td>
+		<td width="80%" class="value"><input type="text" name="reviewerDatabaseLinks[0][title]" id="reviewerDatabaseLinks-0-title" value="" size="40" maxlength="255" class="textField" /></td>
+	</tr>
+	<tr valign="top">
+		<td width="20%" class="label">{fieldLabel name="reviewerDatabaseLinks-0-url" key="common.url"}</td>
+		<td width="80%" class="value"><input type="text" name="reviewerDatabaseLinks[0][url]" id="reviewerDatabaseLinks-0-url" value="" size="40" maxlength="255" class="textField" /></td>
+	</tr>
+{/foreach}
+</table>
+
+<p><input type="submit" name="addReviewerDatabaseLink" value="{translate key="manager.setup.addReviewerDatabaseLink"}" class="button" /></p>
 
 <div class="separator"></div>
 

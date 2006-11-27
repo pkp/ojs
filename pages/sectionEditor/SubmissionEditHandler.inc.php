@@ -345,6 +345,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 			$templateMgr->assign('helpTopicId', 'journal.roles.reviewer');
 			$templateMgr->assign('alphaList', explode(' ', Locale::translate('common.alphaList')));
+			$templateMgr->assign('reviewerDatabaseLinks', $journal->getSetting('reviewerDatabaseLinks'));
 			$templateMgr->display('sectionEditor/selectReviewer.tpl');
 		}
 	}
