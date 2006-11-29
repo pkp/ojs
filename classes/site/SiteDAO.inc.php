@@ -79,7 +79,7 @@ class SiteDAO extends DAO {
 			'INSERT INTO site
 				(title, intro, about, journal_redirect, contact_name, contact_email, min_password_length, locale, installed_locales, supported_locales, profile_locales, original_style_file_name)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
 				$site->getTitle(),
 				$site->getIntro(),
