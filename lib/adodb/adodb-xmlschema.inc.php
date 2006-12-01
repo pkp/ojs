@@ -2219,4 +2219,3 @@ function logMsg( $msg, $title = NULL, $force = FALSE ) {
 	}
 }
 ?>
-
