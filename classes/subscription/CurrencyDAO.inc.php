@@ -25,7 +25,7 @@ class CurrencyDAO extends DAO {
 		parent::DAO();
 	}
 
-	function _getCache() {
+	function &_getCache() {
 		$locale = Locale::getLocale();
 		static $cache;
 		if (!isset($cache)) {
