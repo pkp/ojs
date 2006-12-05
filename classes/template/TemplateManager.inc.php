@@ -576,9 +576,9 @@ class TemplateManager extends Smarty {
 
 		if ($page>1) {
 			$params[$paramName] = 1;
-			$value .= '<a href="' . Request::url(null, null, null, Request::getRequestedArgs(), $params) . '"' . $allExtra . '>&lt;&lt;</a>&nbsp;';
+			$value .= '<a href="' . Request::url(null, null, null, Request::getRequestedArgs(), $params, $anchor) . '"' . $allExtra . '>&lt;&lt;</a>&nbsp;';
 			$params[$paramName] = $page - 1;
-			$value .= '<a href="' . Request::url(null, null, null, Request::getRequestedArgs(), $params) . '"' . $allExtra . '>&lt;</a>&nbsp;';
+			$value .= '<a href="' . Request::url(null, null, null, Request::getRequestedArgs(), $params, $anchor) . '"' . $allExtra . '>&lt;</a>&nbsp;';
 		}
 
 		for ($i=$pageBase; $i<min($pageBase+$numPageLinks, $pageCount+1); $i++) {
