@@ -11,6 +11,12 @@ See config.TEMPLATE.inc.php for a description and examples of all supported
 configuration parameters.
 
 New config.inc.php parameters:
+	- captcha.captcha: "On" indicates that Captcha testing should be enabled
+	- captcha.font_location: Full path and filename to ttf file for Captcha
+	- proxy.http_host: Host name for HTTP proxy
+	- proxy.http_port: Port number for HTTP proxy
+	- proxy.proxy_username: Username for HTTP proxy
+	- proxy.proxy_password: Password for HTTP proxy
 
 New Features
 ------------

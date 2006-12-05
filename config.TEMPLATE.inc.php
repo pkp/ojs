@@ -290,6 +290,22 @@ font_location = /usr/share/fonts/truetype/freefont/FreeSerif.ttf
 
 
 ;;;;;;;;;;;;;;;;;;
+; Proxy Settings ;
+;;;;;;;;;;;;;;;;;;
+
+[proxy]
+
+; Note that allow_url_fopen must be set to Off before these proxy settings
+; will take effect.
+
+; The HTTP proxy configuration to use
+; http_host = localhost
+; http_port = 80
+; proxy_username = username
+; proxy_password = password
+
+
+;;;;;;;;;;;;;;;;;;
 ; Debug Settings ;
 ;;;;;;;;;;;;;;;;;;
 
