@@ -28,14 +28,14 @@ class XMLGalleySettingsForm extends Form {
 	 * @param $journalId int
 	 */
 	function XMLGalleySettingsForm(&$plugin, $journalId) {
-        $templateMgr = &TemplateManager::getManager();
+		$templateMgr = &TemplateManager::getManager();
 
 		parent::Form($plugin->getTemplatePath() . 'settingsForm.tpl');
 
 		$this->journalId = $journalId;
 		$this->plugin = &$plugin;
 	}
-	
+
 	/**
 	 * Initialize form data.
 	 */
@@ -43,7 +43,7 @@ class XMLGalleySettingsForm extends Form {
 		$journalId = $this->journalId;
 		$plugin =& $this->plugin;
 
-        $templateMgr = &TemplateManager::getManager();
+		$templateMgr = &TemplateManager::getManager();
 
 		// set form variables for available XSLT renderers
 		$xsltPHP5 = ( version_compare(PHP_VERSION,'5','>=') && extension_loaded('xsl') && extension_loaded('dom') );
@@ -61,7 +61,7 @@ class XMLGalleySettingsForm extends Form {
 		$this->setData('customXSL', $plugin->getSetting($journalId, 'customXSL'));
 
 	}
-	
+
 	/**
 	 * Assign form data to user-submitted data.
 	 */
@@ -73,7 +73,7 @@ class XMLGalleySettingsForm extends Form {
 			$this->addCheck(new FormValidator($this, 'externalXSLT', 'required', 'plugins.generic.xmlGalley.settings.externalXSLTRequired'));
 		}
 
-		// if we have the custom stylesheet button enabled, then check that an XSL is 
+		// if we have the custom stylesheet button enabled, then check that an XSL is
 		if ($this->getData('XSLstylesheet') == "custom") {
 			$this->addCheck(new FormValidator($this, 'customXSL', 'required', 'plugins.generic.xmlGalley.settings.customXSLRequired'));
 		}
@@ -81,7 +81,7 @@ class XMLGalleySettingsForm extends Form {
 	}
 
 	/**
-	 * Save settings. 
+	 * Save settings.
 	 */
 	function execute() {
 		$plugin = &$this->plugin;
@@ -104,7 +104,6 @@ class XMLGalleySettingsForm extends Form {
 		$plugin->updateSetting($journalId, 'externalXSLT', $this->getData('externalXSLT'));
 		$plugin->updateSetting($journalId, 'customXSL', $this->getData('customXSL'));
 	}
-	
 }
 
 ?>

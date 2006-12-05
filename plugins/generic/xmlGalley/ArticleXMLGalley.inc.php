@@ -12,31 +12,31 @@
  *
  * $Id$
  */
- 
+
 import('article.ArticleHTMLGalley');
 import('article.SuppFileDAO');
 
 class ArticleXMLGalley extends ArticleHTMLGalley {
-    
+
 	/**
-    * Constructor.
-    */
+	 * Constructor.
+	 */
 	function ArticleXMLGalley() {
 		parent::ArticleHTMLGalley();
 	}
-	
+
 	/**
-    * Check if galley is an XML galley.
-    * @return boolean
-    */
+	 * Check if galley is an XML galley.
+	 * @return boolean
+	 */
 	function isXMLGalley() {
 		return true;
 	}
 
 	/**
-    * Get results of XSLT transform from file cache
-    * @return cache object
-    */
+	 * Get results of XSLT transform from file cache
+	 * @return cache object
+	 */
 	function &_getXSLTCache($key) {
 		static $caches;
 		if (!isset($caches)) {
@@ -63,11 +63,10 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 	}
 
 	/**
-    * Re-run the XSLT transformation on a stale (or missing) cache
-    * @return boolean
-    */
+	 * Re-run the XSLT transformation on a stale (or missing) cache
+	 * @return boolean
+	 */
 	function _xsltCacheMiss(&$cache, $id) {
-
 		static $contents;
 
 		if (!isset($contents)) {
@@ -77,7 +76,7 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 
 			// get command for external XSLT tool
 			if ($xsltRenderer == "external") $xsltRenderer = $this->xmlGalleyPlugin->getSetting($journal->getJournalId(), 'externalXSLT');
-	
+
 			// choose the configured stylesheet: built-in, or custom
 			$xslStylesheet = $this->xmlGalleyPlugin->getSetting($journal->getJournalId(), 'XSLstylesheet');
 			switch ($xslStylesheet) {
@@ -98,17 +97,15 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 			$cache->setEntireCache($contents);
 		}
 		return null;
-
 	}
 
 	/**
-    * Return string containing an XHTML fragment generated from the XML/XSL source
-    * This function performs any necessary filtering, like image URL replacement.
-    * @param $baseImageUrl string base URL for image references
-    * @return string
-    */
-    function getHTMLContents() {
-
+	 * Return string containing an XHTML fragment generated from the XML/XSL source
+	 * This function performs any necessary filtering, like image URL replacement.
+	 * @param $baseImageUrl string base URL for image references
+	 * @return string
+	 */
+	function getHTMLContents() {
 		$this->xmlGalleyPlugin = &PluginRegistry::getPlugin('generic', 'XMLGalleyPlugin');
 
 		// if the XML Galley plugin is not installed or enabled,
@@ -123,16 +120,16 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 		// return the straight XML contents instead
 		if ($contents == "") return parent::getHTMLContents();
 
-		//Replace image references
+		// Replace image references
 		$images = &$this->getImageFiles();
 
 		if ($images !== null) {
 			foreach ($images as $image) {
 				$imageUrl = Request::url(null, 'article', 'viewFile', array($this->getArticleId(), $this->getGalleyId(), $image->getFileId()));
 				$contents = preg_replace(
-	            '/(src|href)\s*=\s*"([^"]*' . preg_quote($image->getOriginalFileName()) .    ')"/i', 
-	            '$1="' . $imageUrl . '"',
-	            $contents
+					'/(src|href)\s*=\s*"([^"]*' . preg_quote($image->getOriginalFileName()) . ')"/i',
+					'$1="' . $imageUrl . '"',
+					$contents
 				);
 			}
 		}
@@ -144,23 +141,23 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 			$contents
 		);
 
-        //Replace supplementary file references    
-        //$suppFiles = &$this->getSuppFiles($this->getArticleId());
-        $this->suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
-        $suppFiles = $this->suppFileDao->getSuppFilesByArticle($this->getArticleId());
-        
-        if ($suppFiles){
-            foreach ($suppFiles as $supp) {
-				$journal = &Request::getJournal();
-                $suppUrl = Request::url(null, 'article', 'downloadSuppFile', array($this->getArticleId(), $supp->getBestSuppFileId($journal)));
+		// Replace supplementary file references
+		// $suppFiles = &$this->getSuppFiles($this->getArticleId());
+		$this->suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
+		$suppFiles = $this->suppFileDao->getSuppFilesByArticle($this->getArticleId());
 
-                $contents = preg_replace(
-                    '/href="' . preg_quote($supp->getOriginalFileName()) .    '"/', 
-                    'href="' . $suppUrl . '"',
-                    $contents
-                    );
-            }
-        }
+		if ($suppFiles) {
+			foreach ($suppFiles as $supp) {
+				$journal = &Request::getJournal();
+				$suppUrl = Request::url(null, 'article', 'downloadSuppFile', array($this->getArticleId(), $supp->getBestSuppFileId($journal)));
+
+				$contents = preg_replace(
+					'/href="' . preg_quote($supp->getOriginalFileName()) . '"/',
+					'href="' . $suppUrl . '"',
+					$contents
+				);
+			}
+		}
 
 		// if client encoding is set to iso-8859-1, transcode string from utf8 since we transform all XML in utf8
 		// FIXME: this doesn't seem to work as expected - perhaps two XSL sheets?
@@ -171,23 +168,22 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 	}
 
 	/**
-    * Return string containing the transformed XML output.
-    * This function applies an XSLT transform to a given XML source.
-    * @param $xmlFile pathnae to the XML source file (absolute)
-    * @param $xslFile pathname to the XSL stylesheet (absolute)
-    * @param (optional) $xsltType type of XSLT renderer to use (PHP4, PHP5, or XSLT shell command)
-    * @return string
-    */
+	 * Return string containing the transformed XML output.
+	 * This function applies an XSLT transform to a given XML source.
+	 * @param $xmlFile pathnae to the XML source file (absolute)
+	 * @param $xslFile pathname to the XSL stylesheet (absolute)
+	 * @param (optional) $xsltType type of XSLT renderer to use (PHP4, PHP5, or XSLT shell command)
+	 * @return string
+	 */
 	function transformXSLT($xmlFile, $xslFile, $xsltType = "") {
 
 		// Determine the appropriate XSLT processor for the system
 		if ( version_compare(PHP_VERSION,'5','>=') && extension_loaded('xsl') && extension_loaded('dom') ) {
 			// PHP5.x with XSL/DOM modules present
 
-			if ( $xsltType == "PHP5"  || $xsltType == "" ) {			
-	
-		        // load the XML file as a domdocument
-		        $xmlDom = new DOMDocument("1.0", "UTF-8");
+			if ( $xsltType == "PHP5"  || $xsltType == "" ) {
+				// load the XML file as a domdocument
+				$xmlDom = new DOMDocument("1.0", "UTF-8");
 
 				// these are required for external entity resolution (eg. &nbsp;)
 				// it slows loading substantially (20-100x), often up to 60s
@@ -199,42 +195,41 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 				$xmlDom->substituteEntities = true;
 				$xmlDom->resolveExternals = true;
 
-		        $xmlDom->load($xmlFile);
+				$xmlDom->load($xmlFile);
 
-		        // create the processor and import the stylesheet
-		        $xslDom = new DOMDocument("1.0", "UTF-8");
-		        $xslDom->load($xslFile);
+				// create the processor and import the stylesheet
+				$xslDom = new DOMDocument("1.0", "UTF-8");
+				$xslDom->load($xslFile);
 
-		        $proc = new XsltProcessor();
-		        $proc->importStylesheet($xslDom);
-	
+				$proc = new XsltProcessor();
+				$proc->importStylesheet($xslDom);
+
 				// set XSL parameters
-		        // send XHTML (and inline MathML and SVG) if it's explicitly accepted, otherwise send XHTML
-//	            if (stristr($_SERVER['HTTP_ACCEPT'], 'application/mathml+xml')) $proc->setParameter(null, 'mathml', true);
-//	            if (stristr($_SERVER['HTTP_ACCEPT'], 'image/svg+xml')) $proc->setParameter(null, 'svg', true);
-	
-		        // transform the XML document to an XHTML fragment
+				// send XHTML (and inline MathML and SVG) if it's explicitly accepted, otherwise send XHTML
+				// if (stristr($_SERVER['HTTP_ACCEPT'], 'application/mathml+xml')) $proc->setParameter(null, 'mathml', true);
+				// if (stristr($_SERVER['HTTP_ACCEPT'], 'image/svg+xml')) $proc->setParameter(null, 'svg', true);
+
+				// transform the XML document to an XHTML fragment
 				$contents = $proc->transformToXML($xmlDom);
 
-		        return $contents;
+				return $contents;
 			}
-		} 
+		}
 
 		if ( version_compare(PHP_VERSION,'5','<') && extension_loaded('xslt') ) {
 			// PHP4.x with XSLT module present
 
-			if ( $xsltType == "PHP4"  || $xsltType == "" ) {			
-	
+			if ( $xsltType == "PHP4"  || $xsltType == "" ) {
 				// create the processor
 				$proc = xslt_create();
-				
-				// set XSL parameters
-		        // send XHTML (and inline MathML and SVG) if it's explicitly accepted, otherwise send HTML
-//	            if (stristr($_SERVER['HTTP_ACCEPT'], 'application/mathml+xml')) $arguments['mathml'] = true;
-//	            if (stristr($_SERVER['HTTP_ACCEPT'], 'image/svg+xml')) $arguments['svg'] = true;
 
-		        // transform the XML document to an XHTML fragment
-		        $contents = xslt_process($proc, $xmlFile, $xslFile, null, null, $arguments);
+				// set XSL parameters
+				// send XHTML (and inline MathML and SVG) if it's explicitly accepted, otherwise send HTML
+				// if (stristr($_SERVER['HTTP_ACCEPT'], 'application/mathml+xml')) $arguments['mathml'] = true;
+				// if (stristr($_SERVER['HTTP_ACCEPT'], 'image/svg+xml')) $arguments['svg'] = true;
+
+				// transform the XML document to an XHTML fragment
+				$contents = xslt_process($proc, $xmlFile, $xslFile, null, null, $arguments);
 
 				return $contents;
 			}
@@ -263,9 +258,7 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 			// No XSLT processor available
 			return false;
 		}
-
 	}
-	
 }
 
 ?>
