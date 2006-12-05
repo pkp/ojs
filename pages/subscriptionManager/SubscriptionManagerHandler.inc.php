@@ -402,6 +402,15 @@ class SubscriptionManagerHandler extends Handler {
 			}
 
 			$subscriptionPolicyForm->display();
+		} else {
+			$templateMgr = &TemplateManager::getManager();
+			$templateMgr->assign('helpTopicId', 'journal.managementPages.subscriptions');
+
+			if (Config::getVar('general', 'scheduled_tasks')) {
+				$templateMgr->assign('scheduledTasksEnabled', true);
+			}
+
+			$subscriptionPolicyForm->display();
 		}
 	}
 
