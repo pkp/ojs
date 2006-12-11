@@ -3,7 +3,7 @@
 	{* required elements *}
 	<id>{$journal->getUrl()}/issue/feed</id>
 	<title>{$journal->getTitle()|strip_tags|escape:"html"}</title>
-	<updated>{$issue->getDatePublished()|date_format:"%Y-%m-%dT%T%z"}</updated>
+	<updated>{$issue->getDatePublished()|date_format:"%Y-%m-%dT%T%z"|regex_replace:"/00$/":":00"}</updated>
 
 	{* recommended elements *}
 	{if $journal->getSetting('contactName')}
@@ -15,12 +15,12 @@
 	</author>
 	{/if}
 	<link rel="alternate" href="{$journal->getUrl()}" />
-	<link rel="self" type="application/atom+xml" href="{$journal->getUrl()}/issue/feed" />
+	<link rel="self" type="application/atom+xml" href="{$journal->getUrl()}/feed/atom" />
 
 	{* optional elements *}
 	{* <category/> *}
 	{* <contributor/> *}
-	<generator url="http://pkp.sfu.ca/ojs/" version="{$ojsVersion}">Open Journal Systems</generator>
+	<generator uri="http://pkp.sfu.ca/ojs/" version="{$ojsVersion}">Open Journal Systems</generator>
 	{if $journal->getDescription()}
 		{assign var="description" value=$journal->getDescription()}
 	{elseif $journal->getSetting('journalDescription')}
@@ -40,7 +40,7 @@
 		{* required elements *}
 		<id>{url page="article" op="view" path=$article->getBestArticleId($currentJournal)}</id>
 		<title>{$article->getArticleTitle()|strip_tags|escape:"html"}</title>
-		<updated>{$article->getLastModified()|date_format:"%Y-%m-%dT%T%z"}</updated>
+		<updated>{$article->getLastModified()|date_format:"%Y-%m-%dT%T%z"|regex_replace:"/00$/":":00"}</updated>
 
 		{* recommended elements *}
         {foreach from=$article->getAuthors() item=author name=authorList}
@@ -57,7 +57,7 @@
 		{* optional elements *}
 		{* <category/> *}
 		{* <contributor/> *}
-		<published>{$article->getDatePublished()|date_format:"%Y-%m-%dT%T%z"}</published>
+		<published>{$article->getDatePublished()|date_format:"%Y-%m-%dT%T%z"|regex_replace:"/00$/":":00"}</published>
 		{* <source/> *}
 		{* <rights/> *}
 	</entry>
