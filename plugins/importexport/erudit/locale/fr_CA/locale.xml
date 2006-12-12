@@ -16,8 +16,7 @@
 	<message key="plugins.importexport.erudit.displayName">Plugiciel d'exportation pour articles sur Érudit</message>
 	<message key="plugins.importexport.erudit.description">Exporter des articles en utilisant la définition de type de document de la version anglaise d'Érudit</message>
 
-	<message key="plugins.importexport.erudit.cliUsage"><![CDATA[Utilisation : {$scriptName} {$pluginName} [xmlFileName] [journalPath] [articleId] [galleyLabel]
-]]></message>
+	<message key="plugins.importexport.erudit.cliUsage">Utilisation : {$scriptName} {$pluginName} [xmlFileName] [journalPath] [articleId] [galleyLabel]</message>
 	<message key="plugins.importexport.erudit.export">Exporter des données</message>
 	<message key="plugins.importexport.erudit.export.issues">Exporter des numéros</message>
 	<message key="plugins.importexport.erudit.export.sections">Exporter des sections</message>
@@ -27,8 +26,8 @@
 	<message key="plugins.importexport.erudit.selectArticle">Choisir un article</message>
 
 	<message key="plugins.importexport.erudit.cliError">ERREUR :</message>
-	<message key="plugins.importexport.erudit.error.unknownJournal">Le chemin spécifié pour cette revue, "{$journalPath}", n'existe pas.</message>
-	<message key="plugins.importexport.erudit.export.error.couldNotWrite">Impossible d'écrire au fichier "{$fileName}".</message>
+	<message key="plugins.importexport.erudit.error.unknownJournal">Le chemin spécifié pour cette revue,</message>
+	<message key="plugins.importexport.erudit.export.error.couldNotWrite">Impossible d'écrire au fichier</message>
 	<message key="plugins.importexport.erudit.export.error.articleNotFound">Aucun article ne correspond à l'identification d'article spécifiée "{$articleId}".</message>
 	<message key="plugins.importexport.erudit.export.error.galleyNotFound">Aucune épreuve ne correspond à l'étiquette d'épreuve spécifiée "{$galleyLabel}".</message>
 

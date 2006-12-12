@@ -20,7 +20,7 @@
 <p>Google Scholar a besoin de certaines informations qui sont facultatives dans OJS. Veuillez vous assurer que vos données correspondent aux exigences de Google Scholar en utilisant le bouton Vérifier les données.</p>]]></message>
 	<message key="plugins.gateways.googleScholar.checkData">Vérifier les données</message>
 	<message key="plugins.gateways.googleScholar.errors">Messages d'erreur</message>
-	<message key="plugins.gateways.googleScholar.errors.noErrors">Aucune erreur n'a été trouvée.</message>
+	<message key="plugins.gateways.googleScholar.errors.noErrors">Aucune erreur n'a été trouvée</message>
 
 	<message key="plugins.gateways.googleScholar.settings.publisherName">Nom de la maison d'édition</message>
 	<message key="plugins.gateways.googleScholar.settings.publisherLocation">Emplacement de la maison d'édition</message>

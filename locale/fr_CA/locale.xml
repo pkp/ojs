@@ -149,7 +149,7 @@
 
 	<!-- Common Form Messages -->
 	<message key="form.errorsOccurred">Des erreurs sont survenues lors du traitement de ce formulaire</message>
-	<message key="form.saveToUpload">Utiliser "Save" pour télécharger vers le serveur</message>
+	<message key="form.saveToUpload">Utiliser</message>
 	<message key="form.contains">contient</message>
 	<message key="form.is">est</message>
 	<message key="form.required">(* Obligatoire)</message>
@@ -220,8 +220,8 @@
 	<message key="navigation.previousStep">Étape précédente</message>
 	<message key="navigation.nextStep">Étape suivante</message>
 	<message key="navigation.stepNumber">Étape {$step}</message>
-	<message key="navigation.previousPage">&lt;&lt;</message>
-	<message key="navigation.nextPage">&gt;&gt;</message>
+	<message key="navigation.previousPage"><![CDATA[<<]]></message>
+	<message key="navigation.nextPage"><![CDATA[>>]]></message>
 	<message key="navigation.items">{$from} - {$to} de {$total} articles</message>
 	
 	<!-- Article Queues -->
@@ -285,7 +285,7 @@
 
 	<!-- Submission Tracking - Common -->
 	<message key="submission.summary">Sommaire</message>
-	<message key="submission.review">Evaluation</message>
+	<message key="submission.review">Évaluation</message>
 	<message key="submission.editing">Révision</message>
 	<message key="submission.history">Historique</message>
 	<message key="submission.page.summary">#{$id} sommaire</message>
@@ -296,7 +296,7 @@
 	<message key="submission.submissionEditing">Révision de la soumission</message>
 	<message key="submission.submissionHistory">Historique de la soumission</message>
 	<message key="submission.submissionManuscript">Manuscrit soumis</message>
-	<message key="submission.metadata">Métadonnées sur la soumission</message>
+	<message key="submission.metadata">Métadonnées de la soumission</message>
 	<message key="submission.originalFile">Fichier original</message>
 	<message key="submission.addSuppFile">Ajouter un fichier supplémentaire</message>
 	<message key="submission.submitter">Personne effectuant la soumission</message>
@@ -319,10 +319,10 @@
 	<message key="submission.abstractViews">Vues des résumés</message>
 	<message key="submission.noReviewAssignments">Aucune personne désignée pour l'évaluation</message>
 	<message key="submission.reviewVersion">Version à évaluer</message>
-	<message key="submission.peerReview">Révision par un pair&amp;nbsp;</message>
+	<message key="submission.peerReview">Évaluation par un pair </message>
 	<message key="submission.editorDecision">Décision du rédacteur</message>
-	<message key="submission.round">Cycle&amp;nbsp;{$round}</message>
-	<message key="submission.editorReview">Evaluation du rédacteur</message>
+	<message key="submission.round">Cycle {$round}</message>
+	<message key="submission.editorReview">Évaluation du rédacteur</message>
 	<message key="submission.notifyAuthor">Aviser l’auteur</message>
 	<message key="submission.notifyEditor">Aviser le rédacteur</message>
 	<message key="submission.editorAuthorRecord">Compte rendu des échanges entre le rédacteur et l'auteur</message>
@@ -569,12 +569,12 @@
 	<message key="comments.viewAllComments">Voir tous les commentaires</message>
 	<message key="comments.noComments">Aucun commentaire affiché par les lecteurs</message>
 	<message key="comments.anonymous">Usager anonyme</message>
-	<message key="comments.anonymousNamed">"{$userName}"</message>
+	<message key="comments.anonymousNamed"></message>
 	<message key="comments.authenticated">{$userName}</message>
 	<message key="comments.nReplies">({$num} réponses)</message>
 	<message key="comments.oneReply">(Une réponse)</message>
 	<message key="comments.readerComments">Commentaires des lecteurs</message>
-	<message key="comments.inResponseTo">En réponse à <![CDATA[<a href="]]>{$url}<![CDATA[">]]>{$title}<![CDATA[</a>]]></message>
+	<message key="comments.inResponseTo"><![CDATA[En réponse à <a href=]]></message>
 	<message key="comments.emailReply">Réponse par courriel</message>
 	<message key="comments.postReply">Afficher la réponse</message>
 	<message key="comments.delete">Supprimer ce commentaire</message>
@@ -596,7 +596,7 @@
 	
 	<message key="admin.settings.siteTitle">Titre du site</message>
 	<message key="admin.settings.introduction">Introduction</message>
-	<message key="admin.settings.aboutDescription">Description "About the Site"</message>
+	<message key="admin.settings.aboutDescription">Description</message>
 	<message key="admin.settings.form.titleRequired">Un titre est requis</message>
 	<message key="admin.settings.journalRedirect">Réacheminer la revue</message>
 	<message key="admin.settings.journalRedirectInstructions">Les demandes faites au site principal seront réacheminées vers cette revue. Cela pourrait être utile si le site héberge, par exemple, une seule revue.</message>
@@ -604,8 +604,8 @@
 	<message key="admin.settings.contactName">Nom de la personne-ressource principale</message>
 	<message key="admin.settings.contactEmail">Courriel de la personne-ressource principale</message>
 	<message key="admin.settings.minPasswordLength">Longueur minimum du mot de passe</message>
-	<message key="admin.settings.form.contactNameRequired">Nom de la personne-ressource principale requis.</message>
-	<message key="admin.settings.form.contactEmailRequired">Courriel de la personne-ressource principale requis.</message>
+	<message key="admin.settings.form.contactNameRequired">Nom de la personne-ressource principale requis</message>
+	<message key="admin.settings.form.contactEmailRequired">Courriel de la personne-ressource principale requis</message>
 	<message key="admin.settings.form.minPasswordLengthRequired">Vous devez entrer un mot de passe d'au moins 4 caractères.</message>
 	<message key="admin.settings.passwordCharacters">Caractères</message>
 	<message key="admin.settings.siteLanguage">Langue du site</message>
@@ -1010,7 +1010,7 @@ Prendre note que si votre webmaster a déjà  inscrit ce site auprès de PKP Ha
 	<message key="manager.setup.managingTheJournal">Étape 4. Gérer la revue</message>
 	<message key="manager.setup.publicationScheduling">Calendrier de la publication</message>
 	<message key="manager.setup.publicationSchedule">Calendrier de publication</message>
-	<message key="manager.setup.publicationScheduleDescription"><![CDATA[Les articles de la revue peuvent être publiés ensemble, dans un numéro avec sa propre table des matières. Des articles individuels peuvent aussi être publiés dès qu'ils sont prêts, en les ajoutant à la table des matières du numéro actuel. Fournir aux lecteurs, dans « Au sujet de la revue », un énoncé sur le système que cette revue utilisera et la fréquence prévue de publication.]]></message>
+	<message key="manager.setup.publicationScheduleDescription">Les articles de la revue peuvent être publiés ensemble, dans un numéro avec sa propre table des matières. Des articles individuels peuvent aussi être publiés dès qu'ils sont prêts, en les ajoutant à la table des matières du numéro actuel. Fournir aux lecteurs, dans « Au sujet de la revue », un énoncé sur le système que cette revue utilisera et la fréquence prévue de publication.</message>
 	<message key="manager.setup.publicationFormat">Format</message>
 	<message key="manager.setup.publicationFormatDescription">Sélectionner un format pour identifier les numéros ou les volumes de la revue:</message>
 	<message key="manager.setup.publicationFormatIssue">volume, numéro, et année</message>
@@ -2588,10 +2588,9 @@ Les chiffres dans le Tableau 3 ne sont pas alignés dans la troisième colonne.
 
 4. FORMATAGE
 Le paragraphe qui commence par " Ce dernier sujet... " n'est pas en retrait.]]></message>
-	<message key="default.journalSettings.emailSignature"><![CDATA[________________________________________________________________________
+	<message key="default.journalSettings.emailSignature">________________________________________________________________________
 {$journalName}
-{$indexUrl}/{$JournalPath}
-]]></message>
+{$indexUrl}/{$JournalPath}</message>
 	<message key="default.journalSettings.forReaders"><![CDATA[Nous incitons les lecteurs à s'inscrire pour recevoir les avis de publication pour cette revue. Utiliser le <a href="{$indexUrl}/{$JournalPath}/user/register">Inscrire</a> le lien en haut de la page d'accueil de la revue. Cette inscription permettra au lecteur de recevoir par courriel la table des matières de chaque nouveau numéro de la revue. Cette liste permet aussi à la revue d'inscrire un certain niveau de soutien ou de lectorat. Voir la rubrique de la revue <a href="{$indexUrl}/{$JournalPath}/about/submissions#privacyStatement">Protection des données personnelles</a> qui confirme aux lecteurs que leur nom et leur adresse électronique ne seront pas utilisés à d'autres fins.]]></message>
 	<message key="default.journalSettings.forAuthors"><![CDATA[Intéressé à faire une soumission à cette revue? Nous vous recommandons de consulter les rubriques de la revue à la page <a href="{$indexUrl}/{$JournalPath}/about">Au sujet de la revue</a> <a href="{$indexUrl}/{$JournalPath}/about/submissions#authorGuidelines">Instructions aux auteurs</a>. Les auteurs doivent <a href="{$indexUrl}/{$JournalPath}/user/register">s'inscrire</a> auprès de la revue avant de présenter une soumission, ou s'ils sont déjà inscrits, simplement <a href="{$indexUrl}/index/login">ouvrir une session</a> et commencer les 5 étapes du processus.]]></message>
 	<message key="default.journalSettings.forLibrarians"><![CDATA[Nous incitons les bibliothèques à indiquer l'accès libre à cette revue parmi les revues électroniques qu'elles conservent. Ce système de publication est aussi conçu pour être hébergé et exploité par les bibliothèques de recherche afin de soutenir les travaux des membres de ses facultés associées publiés dans la revue. Pour en savoir plus sur l'utilisation de Open Journal Systems pour gérer et publier les revues évaluées par les pairs, voir <a href="http://pkp.sfu.ca">Public Knowledge Project</a>.]]></message>

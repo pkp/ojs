@@ -24,38 +24,47 @@
 		<row>
 			<field name="email_key">PASSWORD_RESET_CONFIRM</field>
 			<field name="subject">Confirmation de la réinitialisation du mot de passe</field>
-			<field name="body">Nous avons reçu une demande concernant la réinitialisation de votre mot de passe pour le site Web {$siteTitle}.
+			<field name="body"><![CDATA[Bonjour,
 
-Si vous n'avez pas fait cette demande, veuillez ne pas tenir compte du présent message; votre mot de passe restera le même. Si vous voulez réinitialiser votre mot de passe, cliquez sur l'URL et un nouveau mot de passe vous sera envoyé par courriel sous peu.
+Nous avons reçu une demande concernant la réinitialisation de votre mot de passe pour le site Web {$siteTitle}.
+
+Si vous n'avez pas fait cette demande, veuillez ne pas tenir compte du présent message, votre mot de passe restera le même. Si vous voulez réinitialiser votre mot de passe, cliquez sur l'URL et un nouveau mot de passe vous sera envoyé par courriel sous peu.
 
 Réinitialisation du mot de passe : {$url}
 
-{$principalContactSignature}</field>
-			<field name="description">Ce courriel est envoyé aux usagers qui nous avisent avoir oublié leur mot de passe, ou qui sont incapable d'ouvrir une session. Il fournit le lien URL pour réinitialiser leur mot de passe.</field>
+Merci pour votre collaboration.
+Cordialement.
+
+{$principalContactSignature}]]></field>
+			<field name="description"><![CDATA[Ce courriel est envoyé aux usagers qui nous avisent avoir oublié leur mot de passe ou qui sont incapables d'ouvrir une session. Il fournit le lien URL pour réinitialiser leur mot de passe.]]></field>
 		</row>
 		<row>
 			<field name="email_key">PASSWORD_RESET</field>
 			<field name="subject">Réinitialisation du mot de passe</field>
-			<field name="body">Votre mot de passe pour le site Web {$siteTitle} a été réinitialisé avec succès. Veuillez garder votre nom d'utilisateur et mot de passe, car vous en aurez besoin pour tous les travaux liés à la revue.
+			<field name="body"><![CDATA[Votre mot de passe pour le site Web {$siteTitle} a été réinitialisé avec succès. Veuillez conserver précieusement votre nom d'utilisateur ainsi que votre mot de passe.  Vous en aurez besoin pour chacune de vos actions dans la revue.
 
 Votre nom d'utilisateur : {$username}
 Votre nouveau mot de passe : {$password}
 
-{$principalContactSignature}</field>
-			<field name="description">Ce courriel est envoyé aux usagers inscrits lorsqu'ils ont réussi à réinitialiser leur mot de passe en ayant suivi la procédure décrite dans le courriel « Confirmation de la réinitialisation du mot de passe ».</field>
+Merci pour votre collaboration.
+Cordialement.
+
+{$principalContactSignature}]]></field>
+			<field name="description"><![CDATA[Ce courriel est envoyé aux usagers inscrits lorsqu'ils ont réussi à réinitialiser leur mot de passe en ayant suivi la procédure décrite dans le courriel « Confirmation de la réinitialisation du mot de passe ».]]></field>
 		</row>
 		<row>
 			<field name="email_key">USER_REGISTER</field>
-			<field name="subject">Inscription d'un nouvel usager</field>
-			<field name="body">
-Nous vous remercions de vous être inscrit en tant qu'usager pour {$journalName}. Veuillez garder votre nom d'utilisateur et mot de passe, car vous en aurez besoin pour tous les travaux liés à la revue.
+			<field name="subject"><![CDATA[Inscription d'un nouvel usager]]></field>
+			<field name="body"><![CDATA[Nous vous remercions de vous être inscrit en tant qu'usager pour {$journalName}. Veuillez conserver précieusement votre nom d'utilisateur et votre mot de passe.  Vous en aurez besoin pour toutes vos actions dans la revue.
 
 Nom d'utilisateur : {$username}
 Mot de passe : {$password}
 
-Merci!
-{$principalContactSignature}</field>
-			<field name="description">Ce courriel est envoyé aux usagers nouvellement inscrits pour leur souhaiter la bienvenue à la revue, et leur faire connaître leur nom d'usager et leur mot de passe.</field>
+Merci pour votre collaboration.
+Cordialement.
+
+{$principalContactSignature}]]></field>
+			<field name="description"><![CDATA[Ce courriel est envoyé aux usagers nouvellement inscrits pour leur souhaiter la bienvenue à la revue et leur faire connaître leur nom d'usager et leur mot de passe.]]></field>
 		</row>
 		<row>
 			<field name="email_key">PUBLISH_NOTIFY</field>
@@ -266,6 +275,16 @@ Je suis en mesure d'évaluer la soumission intitulée « {$articleTitle} » po
 
 {$reviewerName}</field>
 			<field name="description">Ce courriel est envoyé par l'évaluateur au chef de rubrique en réponse à la demande d'évaluation faite, pour aviser ce dernier que la demande a été acceptée et que l'évaluation sera complétée au plus tard à la date spécifiée.</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEW_CONFIRM_ACK</field>
+			<field name="subject">Reconnaissance que l'évaluation est en cours</field>
+			<field name="body">{$reviewerName} :
+
+Merci d'avoir accepté d'évaluer le manuscrit intitulé "{$articleTitle}" pour {$journalName} avant le {$reviewDueDate}.
+
+{$editorialContactSignature}</field>
+			<field name="description">Le chef de rubrique envoie ce courriel à l'évaluateur pour reconnaître son acceptation ou pour l'encourager à compléter l'évaluation.</field>
 		</row>
 		<row>
 			<field name="email_key">REVIEW_DECLINE</field>

@@ -18,18 +18,17 @@
 	
 	<message key="plugins.importexport.pubmed.export">Exporter les données</message>
 	<message key="plugins.importexport.pubmed.export.issues">Exporter les numéros</message>
-	<message key="plugins.importexport.pubmed.export.selectIssue">Choisir un numéro pour l'exporter.</message>
+	<message key="plugins.importexport.pubmed.export.selectIssue">Choisir un numéro pour l'exporter</message>
 	<message key="plugins.importexport.pubmed.export.articles">Exporter des articles</message>
-	<message key="plugins.importexport.pubmed.export.selectArticle">Choisir des articles pour les exporter.</message>
+	<message key="plugins.importexport.pubmed.export.selectArticle">Choisir des articles pour les exporter</message>
 	
-	<message key="plugins.importexport.pubmed.cliUsage"><![CDATA[Utilisation : 
+	<message key="plugins.importexport.pubmed.cliUsage">Utilisation : 
 {$scriptName} {$pluginName} [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
-{$scriptName} {$pluginName} [xmlFileName] [journal_path] numéro [issueId]
-]]></message>
+{$scriptName} {$pluginName} [xmlFileName] [journal_path] numéro [issueId]</message>
 	<message key="plugins.importexport.pubmed.cliError">ERREUR :</message>
 
-	<message key="plugins.importexport.pubmed.export.error.issueNotFound">Aucun numéro ne correspond à l'identification de numéro choisie, "{$issueId}".</message>
-	<message key="plugins.importexport.pubmed.export.error.articleNotFound">Aucun article ne correspond à l'identification de numéro choisie, "{$articleId}".</message>
+	<message key="plugins.importexport.pubmed.export.error.issueNotFound">Aucun numéro ne correspond à l'identification de numéro choisie, "{$issueId}"</message>
+	<message key="plugins.importexport.pubmed.export.error.articleNotFound">Aucun article ne correspond à l'identification de numéro choisie, "{$articleId}"</message>
 
 
 </locale>
