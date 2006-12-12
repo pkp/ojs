@@ -55,10 +55,20 @@ class RTSetupHandler extends RTAdminHandler {
 			$templateMgr->assign('printerFriendly', $rt->getPrinterFriendly());
 			$templateMgr->assign('authorBio', $rt->getAuthorBio());
 			$templateMgr->assign('defineTerms', $rt->getDefineTerms());
-			$templateMgr->assign('addComment', $rt->getAddComment());
 			$templateMgr->assign('emailAuthor', $rt->getEmailAuthor());
 			$templateMgr->assign('emailOthers', $rt->getEmailOthers());
 			$templateMgr->assign('bibFormat', $rt->getBibFormat());
+
+			// Bring in the comments constants.
+			$commentDao = &DAORegistry::getDao('CommentDAO');
+
+			$templateMgr->assign('commentsOptions', array(
+				'COMMENTS_DISABLED' => COMMENTS_DISABLED,
+				'COMMENTS_AUTHENTICATED' => COMMENTS_AUTHENTICATED,
+				'COMMENTS_ANONYMOUS' => COMMENTS_ANONYMOUS,
+				'COMMENTS_UNAUTHENTICATED' => COMMENTS_UNAUTHENTICATED
+			));
+			$templateMgr->assign('enableComments', $journal->getSetting('enableComments'));
 
 			$templateMgr->assign('helpTopicId', 'journal.managementPages.readingTools.settings');
 			$templateMgr->display('rtadmin/settings.tpl');
@@ -69,6 +79,9 @@ class RTSetupHandler extends RTAdminHandler {
 
 	function saveSettings() {
 		RTAdminHandler::validate();
+
+		// Bring in the comments constants.
+		$commentDao = &DAORegistry::getDao('CommentDAO');
 
 		$journal = Request::getJournal();
 
@@ -86,10 +99,11 @@ class RTSetupHandler extends RTAdminHandler {
 			$rt->setPrinterFriendly(Request::getUserVar('printerFriendly')==true);
 			$rt->setAuthorBio(Request::getUserVar('authorBio')==true);
 			$rt->setDefineTerms(Request::getUserVar('defineTerms')==true);
-			$rt->setAddComment(Request::getUserVar('addComment')==true);
 			$rt->setEmailAuthor(Request::getUserVar('emailAuthor')==true);
 			$rt->setEmailOthers(Request::getUserVar('emailOthers')==true);
 			$rt->setBibFormat(Request::getUserVar('bibFormat'));
+
+			$journal->updateSetting('enableComments', Request::getUserVar('enableComments')?Request::getUserVar('enableCommentsMode'):COMMENTS_DISABLED);
 
 			$rtDao->updateJournalRT($rt);
 		}

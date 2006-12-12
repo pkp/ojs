@@ -839,7 +839,7 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="manager.setup.submissions">Submissions</message>
 	<message key="manager.setup.submissions.description">Author guidelines, copyright, and indexing (including registration).</message>
 	<message key="manager.setup.management">Management</message>
-	<message key="manager.setup.management.description">Scheduling, online access, announcements, and use of copyeditors, layout editors and proofreaders.</message>
+	<message key="manager.setup.management.description">Access and security, scheduling, announcements, copyediting, layout, and proofreading.</message>
 	<message key="manager.setup.look">The Look</message>
 	<message key="manager.setup.look.description">Homepage header, content, journal header, footer, navigation bar, and style sheet.</message>
 	<message key="manager.setup.journalTitle">Journal title</message>
@@ -946,27 +946,21 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="manager.setup.aboutItemContent">Content</message>
 	<message key="manager.setup.addAboutItem">Add About Item</message>
 	<message key="manager.setup.form.numReviewersPerSubmission">The number of reviewers per submission is required.</message>
-	<message key="manager.setup.securitySettings">Security/Access Settings</message>
+	<message key="manager.setup.securitySettings">Access and Security Settings</message>
 	<message key="manager.setup.securitySettingsDescription">OJS provides a number of security-related options that can be used to restrict to the journal's contents, and maintain additional information about submissions for auditing purposes.</message>
 	<message key="manager.setup.userRegistration">User Registration</message>
-	<message key="manager.setup.enableUserRegistration">Allow users to register with the journal site as:</message>
-	<message key="manager.setup.disableUserRegistration">Disable user registration. Users will have to be manually created by a journal manager.</message>
-	<message key="manager.setup.siteAccess">Site Access</message>
-	<message key="manager.setup.noRestrictSiteAccess">Unregistered users can view the journal site.</message>
-	<message key="manager.setup.restrictSiteAccess">Users must log in to view the journal site.</message>
-	<message key="manager.setup.articleAccess">Article Access</message>
-	<message key="manager.setup.noRestrictArticleAccess">Unregistered users can view the full text of published articles.</message>
-	<message key="manager.setup.restrictArticleAccess">Users must log in to view the full text of published articles.</message>
-
-	<message key="manager.setup.comments">Reader Comments</message>
-	<message key="manager.setup.comments.disable">Reader comments are disabled.</message>
-	<message key="manager.setup.comments.authenticated">Registered users can post; anonymous posting is disabled.</message>
-	<message key="manager.setup.comments.anonymous">Users can post anonymously, but must be registered.</message>
-	<message key="manager.setup.comments.unauthenticated">Allow anyone to post anonymously.</message>
+	<message key="manager.setup.enableUserRegistration">Users can register themselves with the journal in one or more of the following roles:</message>
+	<message key="manager.setup.enableUserRegistration.author">Authors (can submit materials to the journal)</message>
+	<message key="manager.setup.enableUserRegistration.reader">Readers (will recieve notifications and be counted as equivalent to a subscriber)</message>
+	<message key="manager.setup.enableUserRegistration.reviewer">Reviewers (available for reviewing submissions)</message>
+	<message key="manager.setup.disableUserRegistration">Journal Manager registers all users, with Editors or Section Editors able to register Reviewers alone.</message>
+	<message key="manager.setup.siteAccess">Additional Site and Article Access Restrictions</message>
+	<message key="manager.setup.restrictSiteAccess">Users must be registered and log in to view the journal site.</message>
+	<message key="manager.setup.restrictArticleAccess">Users must be registered and log in to view open access content.</message>
 
 	<message key="manager.setup.loggingAndAuditing">Logging and Auditing</message>
-	<message key="manager.setup.submissionEventLogging">Enable submission event logging, which maintains a log of all actions on a submission (accessible via each submission's "History" page).</message>
-	<message key="manager.setup.submissionEmailLogging">Enable submission email logging, which maintains a log of all emails sent out related to a submission (accessible via each submission's "History" page).</message>
+	<message key="manager.setup.submissionEventLogging">Maintain a log of all actions taken with a submission on its History page.</message>
+	<message key="manager.setup.submissionEmailLogging">Maintain a log of all emails sent in relation to a submission on its History page.</message>
 	<message key="manager.setup.reviewerDatabaseLink">Potential Reviewer Database</message>
 	<message key="manager.setup.reviewerDatabaseLink.desc">Add to the Select Reviewer page a link to a relevant literature database that can be searched for potential reviewers and is open to editors without subscription.</message>
 	<message key="manager.setup.addReviewerDatabaseLink">Add New Database Link</message>
@@ -1082,12 +1076,12 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.setup.enablePublicSuppFileId">Custom identifiers will be used to identify supplemental article files.</message>
 	<message key="manager.setup.pageNumberIdentifier">Page Number Option</message>
 	<message key="manager.setup.enablePageNumber">Page numbers for items will be calculated and entered manually in the Table of Contents (e.g., pp. 13-26).</message>
-	<message key="manager.setup.onlineAccessManagement">Online Access Management</message>
+	<message key="manager.setup.onlineAccessManagement">Access to Journal Content</message>
 	<message key="manager.setup.openAccess">The journal will provide open access to its contents.</message>
 	<message key="manager.setup.openAccessPolicy">Open Access Policy</message>
 	<message key="manager.setup.openAccessPolicyDescription">Enter a statement on the journal's open access policy that will appear in About the Journal.</message>
 	<message key="manager.setup.subscription">The journal will require subscriptions to access some or all of its contents.</message>
-	<message key="manager.setup.subscriptionDescription">The Subscription Management module requires that a Subscription Manager be assigned who has access to the module, which includes additional open access, self-archiving, and email notification options.</message>
+	<message key="manager.setup.subscriptionDescription">This requires the assigment of a Subscription Manager who has access to subscription module, which includes additional open access, self-archiving, and email notification options.</message>
 	<message key="manager.setup.announcements">Announcements</message>
 	<message key="manager.setup.announcementsDescription">Announcements may be published to inform readers of journal news and events. Published announcements will appear on the Announcements page.</message>
 	<message key="manager.setup.enableAnnouncements">Enable Journal Managers to add journal announcements.</message>
@@ -2387,7 +2381,11 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="rt.admin.settings.printerFriendly">Print version (Leads to a printer-friendly version of an item).</message>
 	<message key="rt.admin.settings.authorBio">About the author (displays the bio statements entered by the author).</message>
 	<message key="rt.admin.settings.defineTerms">Look up terms (enables readers to double-click on any word in an item and send the word to a dictionary).</message>
-	<message key="rt.admin.settings.addComment">Add comment (enables readers to post comments, which Journal Managers can delete. Reader Comments must be enabled in Setup, step 2).</message>
+	<message key="rt.admin.settings.addComment">Add comment (enables readers to post comments, with Journal Manager able to delete).</message>
+	<message key="rt.admin.settings.addComment.authenticated">Users must be registered and log into to post, with anonymity not permitted.</message>
+	<message key="rt.admin.settings.addComment.anonymous">Users must be registered and log into to post, with anonymity permitted.</message>
+	<message key="rt.admin.settings.addComment.unauthenticated">Users do not need to be registered to post, with anonymity permitted.</message>
+
 	<message key="rt.admin.settings.emailAuthor">Email the author (leads to an email template with author's email).</message>
 	<message key="rt.admin.settings.emailOthers">Notify a colleague (leads to an email template with link to item).</message>
 

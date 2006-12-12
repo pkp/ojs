@@ -15,7 +15,133 @@
 <form method="post" action="{url op="saveSetup" path="4"}" enctype="multipart/form-data">
 {include file="common/formErrors.tpl"}
 
-<h3>4.1 {translate key="manager.setup.publicationScheduling"}</h3>
+<h3>4.1 {translate key="manager.setup.securitySettings"}</h3>
+
+<h4>{translate key="manager.setup.onlineAccessManagement"}</h4>
+	<script type="text/javascript">
+		{literal}
+		<!--
+			function toggleEnableSubscriptions(form) {
+				if (form.enableSubscriptions[0].checked) {
+					form.openAccessPolicy.disabled = false;
+					form.subscriptionName.disabled = true;
+					form.subscriptionEmail.disabled = true;
+					form.subscriptionPhone.disabled = true;
+					form.subscriptionFax.disabled = true;
+					form.subscriptionMailingAddress.disabled = true;
+				} else {
+					form.openAccessPolicy.disabled = true;
+					form.subscriptionName.disabled = false;
+					form.subscriptionEmail.disabled = false;
+					form.subscriptionPhone.disabled = false;
+					form.subscriptionFax.disabled = false;
+					form.subscriptionMailingAddress.disabled = false;
+				}
+			}
+		// -->
+		{/literal}
+	</script>
+
+<table width="100%" class="data">
+	<tr valign="top">
+		<td width="5%" class="label" align="right">
+			<input type="radio" name="enableSubscriptions" id="enableSubscriptions-0" value="0" onclick="toggleEnableSubscriptions(this.form)"{if not $enableSubscriptions} checked="checked"{/if} />
+		</td>
+		<td width="95%" class="value">
+			<label for="enableSubscriptions-0">{translate key="manager.setup.openAccess"}</label>
+			<h4>{translate key="manager.setup.openAccessPolicy"}</h4>
+			<p><span class="instruct">{translate key="manager.setup.openAccessPolicyDescription"}</span></p>
+			<p><textarea name="openAccessPolicy" id="openAccessPolicy" rows="12" cols="60" class="textArea"{if $enableSubscriptions} disabled="disabled"{/if}>{$openAccessPolicy|escape}</textarea></p>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2" class="separator">&nbsp;</td>
+	</tr>
+	<tr valign="top">
+		<td width="5%" class="label" align="right">
+			<input type="radio" name="enableSubscriptions" id="enableSubscriptions-1" value="1" onclick="toggleEnableSubscriptions(this.form)"{if $enableSubscriptions} checked="checked"{/if} />
+		</td>
+		<td width="95%" class="value">
+			<label for="enableSubscriptions-1">{translate key="manager.setup.subscription"}</label>
+			<p><span class="instruct">{translate key="manager.setup.subscriptionDescription"}</span></p>
+		</td>
+	</tr>
+</table>
+
+
+<p>{translate key="manager.setup.securitySettingsDescription"}</p>
+
+<script type="text/javascript">
+{literal}
+<!--
+function toggleRegAllowOpts(form) {
+	form.allowRegReader.disabled=!form.allowRegReader.disabled;
+	form.allowRegAuthor.disabled=!form.allowRegAuthor.disabled;
+	form.allowRegReviewer.disabled=!form.allowRegReviewer.disabled;
+}
+// -->
+{/literal}
+</script>
+
+<h4>{translate key="manager.setup.siteAccess"}</h4>
+
+<table width="100%" class="data">
+	<tr valign="top">
+		<td width="5%" class="label"><input type="checkbox" name="restrictSiteAccess" id="restrictSiteAccess" value="1"{if $restrictSiteAccess} checked="checked"{/if} /></td>
+		<td width="95%" class="value"><label for="restrictSiteAccess">{translate key="manager.setup.restrictSiteAccess"}</label></td>
+	</tr>
+	<tr valign="top">
+		<td width="5%" class="label"><input type="checkbox" name="restrictArticleAccess" id="restrictArticleAccess" value="1"{if $restrictArticleAccess} checked="checked"{/if} /></td>
+		<td width="95%" class="value"><label for="restrictArticleAccess">{translate key="manager.setup.restrictArticleAccess"}</label></td>
+	</tr>
+</table>
+
+<h4>{translate key="manager.setup.userRegistration"}</h4>
+
+<table width="100%" class="data">
+	<tr valign="top">
+		<td width="5%" class="label"><input type="radio" name="disableUserReg" id="disableUserReg-0" value="0" onclick="toggleRegAllowOpts(this.form)"{if !$disableUserReg} checked="checked"{/if} /></td>
+		<td width="95%" class="value">
+			<label for="disableUserReg-0">{translate key="manager.setup.enableUserRegistration"}</label>
+			<table width="100%">
+				<tr>
+					<td width="5%"><input type="checkbox" name="allowRegReader" id="allowRegReader" value="1"{if $allowRegReader || $allowRegReader === null} checked="checked"{/if}{if $disableUserReg} disabled="disabled"{/if} /></td>
+					<td width="95%"><label for="allowRegReader">{translate key="manager.setup.enableUserRegistration.reader"}</label></td>
+				</tr>
+				<tr>
+					<td width="5%"><input type="checkbox" name="allowRegAuthor" id="allowRegAuthor" value="1"{if $allowRegAuthor || $allowRegAuthor === null} checked="checked"{/if}{if $disableUserReg} disabled="disabled"{/if} /></td>
+					<td width="95%"><label for="allowRegAuthor">{translate key="manager.setup.enableUserRegistration.author"}</label></td>
+				</tr>
+				<tr>
+					<td width="5%"><input type="checkbox" name="allowRegReviewer" id="allowRegReviewer" value="1"{if $allowRegReviewer || $allowRegReviewer === null} checked="checked"{/if}{if $disableUserReg} disabled="disabled"{/if} /></td>
+					<td width="95%"><label for="allowRegReviewer">{translate key="manager.setup.enableUserRegistration.reviewer"}</label></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="5%" class="label"><input type="radio" name="disableUserReg" id="disableUserReg-1" value="1" onclick="toggleRegAllowOpts(this.form)"{if $disableUserReg} checked="checked"{/if} /></td>
+		<td width="95%" class="value"><label for="disableUserReg-1">{translate key="manager.setup.disableUserRegistration"}</label></td>
+	</tr>
+</table>
+
+<h4>{translate key="manager.setup.loggingAndAuditing"}</h4>
+
+<table width="100%" class="data">
+	<tr valign="top">
+		<td width="5%" class="label"><input type="checkbox" name="articleEventLog" id="articleEventLog" value="1"{if $articleEventLog} checked="checked"{/if} /></td>
+		<td width="95%" class="value"><label for="articleEventLog">{translate key="manager.setup.submissionEventLogging"}</label></td>
+	</tr>
+	<tr valign="top">
+		<td width="5%" class="label"><input type="checkbox" name="articleEmailLog" id="articleEmailLog" value="1"{if $articleEmailLog} checked="checked"{/if} /></td>
+		<td width="95%" class="value"><label for="articleEmailLog">{translate key="manager.setup.submissionEmailLogging"}</label></td>
+	</tr>
+</table>
+
+
+<div class="separator"></div>
+
+<h3>4.2 {translate key="manager.setup.publicationScheduling"}</h3>
 
 <h4>{translate key="manager.setup.publicationSchedule"}</h4>
 
@@ -83,7 +209,7 @@
 <div class="separator"></div>
 
 
-<h3>4.2 {translate key="manager.setup.publicIdentifier"}</h3>
+<h3>4.3 {translate key="manager.setup.publicIdentifier"}</h3>
 
 <h4>{translate key="manager.setup.uniqueIdentifier"}</h4>
 
@@ -114,63 +240,6 @@
 		<td width="95%" class="value"><label for="enablePageNumber">{translate key="manager.setup.enablePageNumber"}</label></td>
 	</tr>
 </table>
-
-
-<div class="separator"></div>
-
-
-<h3>4.3 {translate key="manager.setup.onlineAccessManagement"}</h3>
-
-	<script type="text/javascript">
-		{literal}
-		<!--
-			function toggleEnableSubscriptions(form) {
-				if (form.enableSubscriptions[0].checked) {
-					form.openAccessPolicy.disabled = false;
-					form.subscriptionName.disabled = true;
-					form.subscriptionEmail.disabled = true;
-					form.subscriptionPhone.disabled = true;
-					form.subscriptionFax.disabled = true;
-					form.subscriptionMailingAddress.disabled = true;
-				} else {
-					form.openAccessPolicy.disabled = true;
-					form.subscriptionName.disabled = false;
-					form.subscriptionEmail.disabled = false;
-					form.subscriptionPhone.disabled = false;
-					form.subscriptionFax.disabled = false;
-					form.subscriptionMailingAddress.disabled = false;
-				}
-			}
-		// -->
-		{/literal}
-	</script>
-
-<table width="100%" class="data">
-	<tr valign="top">
-		<td width="5%" class="label" align="right">
-			<input type="radio" name="enableSubscriptions" id="enableSubscriptions-0" value="0" onclick="toggleEnableSubscriptions(this.form)"{if not $enableSubscriptions} checked="checked"{/if} />
-		</td>
-		<td width="95%" class="value">
-			<label for="enableSubscriptions-0">{translate key="manager.setup.openAccess"}</label>
-			<h4>{translate key="manager.setup.openAccessPolicy"}</h4>
-			<p><span class="instruct">{translate key="manager.setup.openAccessPolicyDescription"}</span></p>
-			<p><textarea name="openAccessPolicy" id="openAccessPolicy" rows="12" cols="60" class="textArea"{if $enableSubscriptions} disabled="disabled"{/if}>{$openAccessPolicy|escape}</textarea></p>
-		</td>
-	</tr>
-	<tr>
-		<td colspan="2" class="separator">&nbsp;</td>
-	</tr>
-	<tr valign="top">
-		<td width="5%" class="label" align="right">
-			<input type="radio" name="enableSubscriptions" id="enableSubscriptions-1" value="1" onclick="toggleEnableSubscriptions(this.form)"{if $enableSubscriptions} checked="checked"{/if} />
-		</td>
-		<td width="95%" class="value">
-			<label for="enableSubscriptions-1">{translate key="manager.setup.subscription"}</label>
-			<p><span class="instruct">{translate key="manager.setup.subscriptionDescription"}</span></p>
-		</td>
-	</tr>
-</table>
-
 
 <div class="separator"></div>
 

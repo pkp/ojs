@@ -35,16 +35,7 @@ class JournalSetupStep2Form extends JournalSetupForm {
 				'reviewGuidelines' => 'string',
 				'authorSelectsEditor' => 'int',
 				'privacyStatement' => 'string',
-				'disableUserReg' => 'bool',
-				'allowRegReader' => 'bool',
-				'allowRegAuthor' => 'bool',
-				'allowRegReviewer' => 'bool',
-				'restrictSiteAccess' => 'bool',
-				'restrictArticleAccess' => 'bool',
-				'articleEventLog' => 'bool',
-				'articleEmailLog' => 'bool',
 				'customAboutItems' => 'object',
-				'enableComments' => 'int',
 				'enableLockss' => 'bool',
 				'lockssLicense' => 'string',
 				'reviewerDatabaseLinks' => 'object'
@@ -58,16 +49,6 @@ class JournalSetupStep2Form extends JournalSetupForm {
 		$templateMgr = &TemplateManager::getManager();
 		if (Config::getVar('general', 'scheduled_tasks'))
 			$templateMgr->assign('scheduledTasksEnabled', true);
-
-		// Bring in the comments constants.
-		$commentDao = &DAORegistry::getDao('CommentDAO');
-
-		$templateMgr->assign('commentsOptions', array(
-			COMMENTS_DISABLED => 'manager.setup.comments.disable',
-			COMMENTS_AUTHENTICATED => 'manager.setup.comments.authenticated',
-			COMMENTS_ANONYMOUS => 'manager.setup.comments.anonymous',
-			COMMENTS_UNAUTHENTICATED => 'manager.setup.comments.unauthenticated'
-		));
 
 		parent::display();
 	}

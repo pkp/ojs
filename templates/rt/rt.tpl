@@ -87,7 +87,7 @@
 				{/if}
 			</li>
 		{/if}
-		{if $journalRt->getAddComment() && $postingAllowed}
+		{if $postingAllowed}
 			<li><a href="{url page="comment" op="add" path=$article->getArticleId()|to_array:$galleyId}" target="_parent">{translate key="rt.addComment"}</a></li>
 		{elseif !$postingDisabled}
 			{translate key="rt.addComment"}*

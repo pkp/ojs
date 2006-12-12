@@ -44,9 +44,6 @@ class RT {
 	/** @var $defineTerms boolean */
 	var $defineTerms;
 
-	/** @var $addComment boolean */
-	var $addComment;
-
 	/** @var $emailAuthor boolean */
 	var $emailAuthor;
 
@@ -139,14 +136,6 @@ class RT {
 
 	function getDefineTerms() {
 		return $this->defineTerms;
-	}
-
-	function setAddComment($addComment) {
-		$this->addComment = $addComment;
-	}
-
-	function getAddComment() {
-		return $this->addComment;
 	}
 
 	function setEmailAuthor($emailAuthor) {

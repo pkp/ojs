@@ -37,7 +37,6 @@ class RTDAO extends DAO {
 		$rt->setPrinterFriendly($journal->getSetting('rtPrinterFriendly')?true:false);
 		$rt->setAuthorBio($journal->getSetting('rtAuthorBio')?true:false);
 		$rt->setDefineTerms($journal->getSetting('rtDefineTerms')?true:false);
-		$rt->setAddComment($journal->getSetting('rtAddComment')?true:false);
 		$rt->setEmailAuthor($journal->getSetting('rtEmailAuthor')?true:false);
 		$rt->setEmailOthers($journal->getSetting('rtEmailOthers')?true:false);
 		$rt->setBibFormat($journal->getSetting('rtBibFormat'));
@@ -57,7 +56,6 @@ class RTDAO extends DAO {
 		$journal->updateSetting('rtPrinterFriendly', $rt->getPrinterFriendly(), 'bool');
 		$journal->updateSetting('rtAuthorBio', $rt->getAuthorBio(), 'bool');
 		$journal->updateSetting('rtDefineTerms', $rt->getDefineTerms(), 'bool');
-		$journal->updateSetting('rtAddComment', $rt->getAddComment(), 'bool');
 		$journal->updateSetting('rtEmailAuthor', $rt->getEmailAuthor(), 'bool');
 		$journal->updateSetting('rtEmailOthers', $rt->getEmailOthers(), 'bool');
 		$journal->updateSetting('rtBibFormat', $rt->getBibFormat());
@@ -218,7 +216,6 @@ class RTDAO extends DAO {
 		$rt->setPrinterFriendly($row['printer_friendly']);
 		$rt->setAuthorBio($row['author_bio']);
 		$rt->setDefineTerms($row['define_terms']);
-		$rt->setAddComment($row['add_comment']);
 		$rt->setEmailAuthor($row['email_author']);
 		$rt->setEmailOthers($row['email_others']);
 		$rt->setBibFormat($row['bib_format']);

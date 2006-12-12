@@ -21,6 +21,14 @@ class JournalSetupStep4Form extends JournalSetupForm {
 		parent::JournalSetupForm(
 			4,
 			array(
+				'disableUserReg' => 'bool',
+				'allowRegReader' => 'bool',
+				'allowRegAuthor' => 'bool',
+				'allowRegReviewer' => 'bool',
+				'restrictSiteAccess' => 'bool',
+				'restrictArticleAccess' => 'bool',
+				'articleEventLog' => 'bool',
+				'articleEmailLog' => 'bool',
 				'publicationFormat' => 'int',
 				'initialVolume' => 'int',
 				'initialNumber' => 'int',
