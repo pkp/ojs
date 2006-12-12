@@ -55,6 +55,12 @@ class ArticleHTMLGalley extends ArticleGalley {
 				$contents,
 				1
 			);
+			$contents = preg_replace(
+				'/[Hh][Rr][Ee][Ff]\s*=\s*"([^"]*' . preg_quote($image->getOriginalFileName()) .    ')"/',
+				'href="' . $imageUrl . '"',
+				$contents,
+				1
+			);
 		}
 
 		// Perform replacement for ojs://... URLs
