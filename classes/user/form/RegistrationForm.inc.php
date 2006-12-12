@@ -92,6 +92,10 @@ class RegistrationForm extends Form {
 			}
 		}
 
+		$countryDao =& DAORegistry::getDAO('CountryDAO');
+		$countries =& $countryDao->getCountries();
+		$templateMgr->assign_by_ref('countries', $countries);
+
 		$templateMgr->assign('privacyStatement', $journal->getSetting('privacyStatement'));
 		$templateMgr->assign('allowRegReader', $journal->getSetting('allowRegReader')==1?1:0);
 		$templateMgr->assign('enableSubscriptions', $journal->getSetting('enableSubscriptions')==1?1:0);
@@ -124,7 +128,7 @@ class RegistrationForm extends Form {
 	function readInputData() {
 		$userVars = array(
 			'username', 'password', 'password2',
-			'firstName', 'middleName', 'lastName', 'initials',
+			'firstName', 'middleName', 'lastName', 'initials', 'country',
 			'affiliation', 'email', 'userUrl', 'phone', 'fax', 'signature',
 			'mailingAddress', 'biography', 'interests', 'userLocales',
 			'registerAsReader', 'openAccessNotification', 'registerAsAuthor',
@@ -180,6 +184,7 @@ class RegistrationForm extends Form {
 			$user->setBiography($this->getData('biography'));
 			$user->setInterests($this->getData('interests'));
 			$user->setDateRegistered(Core::getCurrentDate());
+			$user->setCountry($this->getData('country'));
 		
 			if ($this->profileLocalesEnabled) {
 				$site = &Request::getSite();

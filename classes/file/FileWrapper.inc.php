@@ -139,12 +139,22 @@ class HTTPFileWrapper extends FileWrapper {
 	var $defaultPath;
 	var $redirects;
 
+	var $proxyHost;
+	var $proxyPort;
+	var $proxyUsername;
+	var $proxyPassword;
+
 	function HTTPFileWrapper($url, &$info, $redirects = 5) {
 		parent::FileWrapper($url, $info);
 		$this->setDefaultPort(80);
 		$this->setDefaultHost('localhost');
 		$this->setDefaultPath('/');
 		$this->redirects = 5;
+
+		$this->proxyHost = Config::getVar('proxy', 'http_host');
+		$this->proxyPort = Config::getVar('proxy', 'http_port');
+		$this->proxyUsername = Config::getVar('proxy', 'proxy_username');
+		$this->proxyPassword = Config::getVar('proxy', 'proxy_password');
 	}
 
 	function setDefaultPort($port) {
@@ -171,7 +181,15 @@ class HTTPFileWrapper extends FileWrapper {
 		$port = isset($this->info['port']) ? (int)$this->info['port'] : $this->defaultPort;
 		$path = isset($this->info['path']) ? $this->info['path'] : $this->defaultPath;
 		if (isset($this->info['query'])) $path .= '?' . $this->info['query'];
-		
+
+		if (!empty($this->proxyHost)) {
+			$host = $this->proxyHost;
+			$port = $this->proxyPort;
+			if (!empty($this->proxyUsername)) {
+				$this->headers['Proxy-Authorization'] = 'Basic ' . base64_encode($this->proxyUsername . ':' . $this->proxyPassword);
+			}
+		}
+
 		if (!($this->fp = fsockopen($host, $port, $errno, $errstr)))
 			return false;
 
@@ -180,7 +198,7 @@ class HTTPFileWrapper extends FileWrapper {
 			$additionalHeadersString .= "$name: $value\r\n";
 		}
 
-		$request = "GET $path HTTP/1.0\r\n" .
+		$request = 'GET ' . (empty($this->proxyHost)?$path:$this->url) . " HTTP/1.0\r\n" .
 			"Host: $host\r\n" .
 			$additionalHeadersString .
 			"Connection: Close\r\n\r\n";

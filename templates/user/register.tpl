@@ -129,6 +129,16 @@
 </tr>
 	
 <tr valign="top">
+	<td class="label">{fieldLabel name="country" key="common.country"}</td>
+	<td class="value">
+		<select name="country" id="country" class="selectMenu">
+			<option value=""></option>
+			{html_options options=$countries selected=$country}
+		</select>
+	</td>
+</tr>
+
+<tr valign="top">
 	<td class="label">{fieldLabel name="biography" key="user.biography"}<br />{translate key="user.biography.description"}</td>
 	<td class="value"><textarea name="biography" id="biography" rows="5" cols="40" class="textArea">{$biography|escape}</textarea></td>
 </tr>
