@@ -29,8 +29,10 @@ class PhpAdsNewPlugin extends GenericPlugin {
 		if (parent::register($category, $path)) {
 			$this->addLocaleData();
 
-			HookRegistry::register('TemplateManager::display', array(&$this, 'mainCallback'));
-			HookRegistry::register('Templates::Common::Header::sidebar', array(&$this, 'sidebarCallback'));
+			if ($this->getEnabled()) {
+				HookRegistry::register('TemplateManager::display', array(&$this, 'mainCallback'));
+				HookRegistry::register('Templates::Common::Header::sidebar', array(&$this, 'sidebarCallback'));
+			}
 
 			return true;
 		}
