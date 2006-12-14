@@ -112,20 +112,11 @@
 	</tr>
 </table>
 
-{* Determine whether any review assignments are available to initiate
-   so that we know whether or not to display the Initiate All Reviews button *}
-{assign var=reviewAvailable value=0}
-{foreach from=$reviewAssignments item=reviewAssignment}
-	{if !$reviewAssignment->getCancelled() && $reviewAssignment->getReviewFileId()}
-		{assign var=reviewAvailable value=1}
-	{/if}
-{/foreach}
-
 {assign var="start" value="A"|ord}
 {foreach from=$reviewAssignments item=reviewAssignment key=reviewKey}
 {assign var="reviewId" value=$reviewAssignment->getReviewId()}
 
-{if not $reviewAssignment->getCancelled()}
+{if not $reviewAssignment->getCancelled() and not $reviewAssignment->getDeclined()}
 	{assign var="reviewIndex" value=$reviewIndexes[$reviewId]}
 	<div class="separator"></div>
 
