@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2006 Siavash Miri and Alec Smecher
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.generic.phpadsnew.description">The phpAdsNew plugin allows dynamic ads from phpAdsNew site to be inserted into ojs.</message>
+	<message key="plugins.generic.phpadsnew.descriptionUnconfigured"><![CDATA[The phpAdsNew plugin allows dynamic ads from phpAdsNew site to be inserted into OJS. <strong>Please read the README file in plugins/generic/phpAdsNew for information on enabling this plugin.</strong>]]></message>
+	<message key="plugins.generic.phpadsnew">PhpAdsNew Plugin</message>
+	<message key="plugins.generic.phpadsnew.settings.description">Use this form to select the phpAdsNew ad zones that will be displayed in OJS for each potential location.</message>
+	<message key="plugins.generic.phpadsnew.manager.settings">Settings</message>
+
+	<message key="plugins.generic.phpadsnew.error.configFileNotFound">The configuration file, {$filename}, could not be accessed.</message>
+	<message key="plugins.generic.phpadsnew.error.missingParameter">At least one of the required phpAdsNew configuration parameters could not be read from the configuration file. The required parameters are dbhost, dbuser, dbpassword, dbname, url_prefix, and table_prefix.</message>
+	<message key="plugins.generic.phpadsnew.error.dbConnectionError">Unable to connect to the PhpAdsNew database.</message>
+
+	<message key="plugins.generic.phpadsnew.headerAd">Header Ad</message>
+	<message key="plugins.generic.phpadsnew.contentAd">Content Ad</message>
+	<message key="plugins.generic.phpadsnew.sidebarAd">Sidebar Ad</message>
+</locale>

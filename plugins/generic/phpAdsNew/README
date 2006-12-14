@@ -1,0 +1,17 @@
+	=====================
+	=== phpAdsNew Plugin
+	=====================
+
+
+The phpAdsNew plugin integrates the display of phpAdsNew ads into the OJS user
+interface.
+
+In order to use this plugin, you must ensure the following directives are
+properly configured in OJS's config.inc.php configuration file in the
+[phpAdsNew] section:
+
+installPath: This should contain the full path to the phpAdsNew installation.
+
+In order to place content ads, you must insert the tag {$adContent} (the tag
+must appear exactly, and capitalization is important) anywhere in the article's
+full-text (i.e. HTML) and/or abstract.
