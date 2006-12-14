@@ -26,6 +26,7 @@ class PhpAdsNewPlugin extends GenericPlugin {
 	 * 	the plugin will not be registered.
 	 */
 	function register($category, $path) {
+		if (!Config::getVar('general', 'installed')) return false;
 		if (parent::register($category, $path)) {
 			$this->addLocaleData();
 
