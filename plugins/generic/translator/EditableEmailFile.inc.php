@@ -3,28 +3,30 @@
 /**
  * EditableEmailFile.inc.php
  *
- * This extension of LocaleFile.inc.php supports updating.
+ * This class supports updating for email XML files.
  *
  * $Id$
  */
 
 class EditableEmailFile {
-	var $contents;
 	var $locale;
-	var $filename;
+	var $editableFile;
 
 	function EditableEmailFile($locale, $filename) {
 		$this->locale = $locale;
-		$this->filename = $filename;
-		$this->contents = file_get_contents($this->filename);
+		$this->editableFile =& new EditableFile($filename);
 	}
 
 	function write() {
-		$fp = fopen($this->filename, 'w+');
-		if ($fp === false) return false;
-		fwrite($fp, $this->contents);
-		fclose($fp);
-		return true;
+		$this->editableFile->write();
+	}
+
+	function &getContents() {
+		return $this->editableFile->getContents();
+	}
+
+	function setContents(&$contents) {
+		$this->editableFile->setContents($contents);
 	}
 
 	function update($key, $subject, $body, $description) {
@@ -32,25 +34,25 @@ class EditableEmailFile {
 		$quotedKey = String::regexp_quote($key);
 	 	preg_match(
 			"/<row>[\W]*<field name=\"email_key\">$quotedKey<\/field>/",
-			$this->contents,
+			$this->getContents(),
 			$matches,
 			PREG_OFFSET_CAPTURE
 		);
 		if (!isset($matches[0])) return false;
 
 		$offset = $matches[0][1];
-		$closeOffset = strpos($this->contents, '</row>', $offset);
+		$closeOffset = strpos($this->getContents(), '</row>', $offset);
 		if ($closeOffset === FALSE) return false;
 
-		$newContents = substr($this->contents, 0, $offset);
+		$newContents = substr($this->getContents(), 0, $offset);
 		$newContents .= '<row>
-			<field name="email_key">' . $this->xmlEscape($key) . '</field>
-			<field name="subject">' . $this->xmlEscape($subject) . '</field>
-			<field name="body">' . $this->xmlEscape($body) . '</field>
-			<field name="description">' . $this->xmlEscape($description) . '</field>
+			<field name="email_key">' . $this->editableFile->xmlEscape($key) . '</field>
+			<field name="subject">' . $this->editableFile->xmlEscape($subject) . '</field>
+			<field name="body">' . $this->editableFile->xmlEscape($body) . '</field>
+			<field name="description">' . $this->editableFile->xmlEscape($description) . '</field>
 		';
-		$newContents .= substr($this->contents, $closeOffset);
-		$this->contents =& $newContents;
+		$newContents .= substr($this->getContents(), $closeOffset);
+		$this->setContents($newContents);
 		return true;
 	}
 
@@ -59,42 +61,37 @@ class EditableEmailFile {
 		$quotedKey = String::regexp_quote($key);
 	 	preg_match(
 			"/[ \t]*<row>[\W]*<field name=\"email_key\">$quotedKey<\/field>/",
-			$this->contents,
+			$this->getContents(),
 			$matches,
 			PREG_OFFSET_CAPTURE
 		);
 		if (!isset($matches[0])) return false;
 		$offset = $matches[0][1];
 
-		preg_match("/<\/row>[ \t]*[\r]?\n/", $this->contents, $matches, PREG_OFFSET_CAPTURE, $offset);
+		preg_match("/<\/row>[ \t]*[\r]?\n/", $this->getContents(), $matches, PREG_OFFSET_CAPTURE, $offset);
 		if (!isset($matches[0])) return false;
 		$closeOffset = $matches[0][1] + strlen($matches[0][0]);
 
-		$newContents = substr($this->contents, 0, $offset);
-		$newContents .= substr($this->contents, $closeOffset);
-		$this->contents =& $newContents;
+		$newContents = substr($this->getContents(), 0, $offset);
+		$newContents .= substr($this->getContents(), $closeOffset);
+		$this->setContents($newContents);
 		return true;
 	}
 
 	function insert($key, $subject, $body, $description) {
-		$offset = strrpos($this->contents, '</table>');
+		$offset = strrpos($this->getContents(), '</table>');
 		if ($offset === false) return false;
-		$newContents = substr($this->contents, 0, $offset);
+		$newContents = substr($this->getContents(), 0, $offset);
 		$newContents .= '	<row>
-			<field name="email_key">' . $this->xmlEscape($key) . '</field>
-			<field name="subject">' . $this->xmlEscape($subject) . '</field>
-			<field name="body">' . $this->xmlEscape($body) . '</field>
-			<field name="description">' . $this->xmlEscape($description) . '</field>
+			<field name="email_key">' . $this->editableFile->xmlEscape($key) . '</field>
+			<field name="subject">' . $this->editableFile->xmlEscape($subject) . '</field>
+			<field name="body">' . $this->editableFile->xmlEscape($body) . '</field>
+			<field name="description">' . $this->editableFile->xmlEscape($description) . '</field>
 		</row>
 	';
-		$newContents .= substr($this->contents, $offset);
-		$this->contents =& $newContents;
-	}
-
-	function xmlEscape($value) {
-		$escapedValue = XMLNode::xmlentities($value);
-		if ($value !== $escapedValue) return "<![CDATA[$value]]>";
-		return $value;
+		$newContents .= substr($this->getContents(), $offset);
+		$this->setContents($newContents);
 	}
 }
+
 ?>

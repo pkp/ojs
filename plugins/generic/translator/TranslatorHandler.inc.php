@@ -9,6 +9,7 @@
  */
 
 require_once('TranslatorAction.inc.php');
+require_once('EditableFile.inc.php');
 require_once('EditableLocaleFile.inc.php');
 require_once('EditableEmailFile.inc.php');
 
@@ -110,7 +111,7 @@ class TranslatorHandler extends Handler {
 			$key = array_shift($stack);
 			$value = array_shift($stack);
 			if (in_array($filename, $localeFiles)) {
-				$changesByFile[$filename][$key] = str_replace("\r\n", "\n", $value);
+				$changesByFile[$filename][$key] = TranslatorHandler::correctCr($value);
 			}
 		}
 
@@ -241,7 +242,7 @@ class TranslatorHandler extends Handler {
 
 		while (!empty($changes)) {
 			$key = array_shift($changes);
-			$value = str_replace("\r\n", "\n", array_shift($changes));
+			$value = TranslatorHandler::correctCr(array_shift($changes));
 			if (!$file->update($key, $value)) {
 				$file->insert($key, $value);
 			}
@@ -283,7 +284,8 @@ class TranslatorHandler extends Handler {
 
 		$fp = fopen($filename, 'w+'); // FIXME error handling
 		if ($fp) {
-			fwrite ($fp, Request::getUserVar('translationContents'));
+			$contents = TranslatorHandler::correctCr(Request::getUserVar('translationContents'));
+			fwrite ($fp, $contents);
 			fclose($fp);
 		}
 		Request::redirect(null, null, 'edit', $locale);
@@ -366,9 +368,9 @@ class TranslatorHandler extends Handler {
 
 		$file =& new EditableEmailFile($locale, Locale::getEmailTemplateFilename($locale));
 
-		$subject = str_replace("\r\n", "\n", Request::getUserVar('subject'));
-		$body = str_replace("\r\n", "\n", Request::getUserVar('body'));
-		$description = str_replace("\r\n", "\n", Request::getUserVar('description'));
+		$subject = TranslatorHandler::correctCr(Request::getUserVar('subject'));
+		$body = TranslatorHandler::correctCr(Request::getUserVar('body'));
+		$description = TranslatorHandler::correctCr(Request::getUserVar('description'));
 
 		if (!$file->update($emailKey, $subject, $body, $description))
 			$file->insert($emailKey, $subject, $body, $description);
@@ -386,5 +388,8 @@ class TranslatorHandler extends Handler {
 		return array(&$plugin);
 	}
 
+	function correctCr($value) {
+		return str_replace("\r\n", "\n", $value);
+	}
 }
 ?>

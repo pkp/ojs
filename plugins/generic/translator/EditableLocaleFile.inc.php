@@ -9,19 +9,23 @@
  */
 
 class EditableLocaleFile extends LocaleFile {
-	var $contents;
+	var $editableFile;
 
 	function EditableLocaleFile($locale, $filename) {
 		parent::LocaleFile($locale, $filename);
-		$this->contents = file_get_contents($this->filename);
+		$this->editableFile =& new EditableFile($this->filename);
 	}
 
 	function write() {
-		$fp = fopen($this->filename, 'w+');
-		if ($fp === false) return false;
-		fwrite($fp, $this->contents);
-		fclose($fp);
-		return true;
+		$this->editableFile->write();
+	}
+
+	function &getContents() {
+		return $this->editableFile->getContents();
+	}
+
+	function setContents(&$contents) {
+		$this->editableFile->setContents($contents);
 	}
 
 	function update($key, $value) {
@@ -29,20 +33,20 @@ class EditableLocaleFile extends LocaleFile {
 		$quotedKey = String::regexp_quote($key);
 	 	preg_match(
 			"/<message[\W]+key=\"$quotedKey\">/",
-			$this->contents,
+			$this->getContents(),
 			$matches,
 			PREG_OFFSET_CAPTURE
 		);
 		if (!isset($matches[0])) return false;
 
 		$offset = $matches[0][1];
-		$closeOffset = strpos($this->contents, '</message>', $offset);
+		$closeOffset = strpos($this->getContents(), '</message>', $offset);
 		if ($closeOffset === FALSE) return false;
 
-		$newContents = substr($this->contents, 0, $offset);
-		$newContents .= "<message key=\"$key\">" . $this->xmlEscape($value);
-		$newContents .= substr($this->contents, $closeOffset);
-		$this->contents =& $newContents;
+		$newContents = substr($this->getContents(), 0, $offset);
+		$newContents .= "<message key=\"$key\">" . $this->editableFile->xmlEscape($value);
+		$newContents .= substr($this->getContents(), $closeOffset);
+		$this->setContents($newContents);
 		return true;
 	}
 
@@ -51,36 +55,30 @@ class EditableLocaleFile extends LocaleFile {
 		$quotedKey = String::regexp_quote($key);
 	 	preg_match(
 			"/[ \t]*<message[\W]+key=\"$quotedKey\">/",
-			$this->contents,
+			$this->getContents(),
 			$matches,
 			PREG_OFFSET_CAPTURE
 		);
 		if (!isset($matches[0])) return false;
 		$offset = $matches[0][1];
 
-		preg_match("/<\/message>[\W]*[\r]?\n/", $this->contents, $matches, PREG_OFFSET_CAPTURE, $offset);
+		preg_match("/<\/message>[\W]*[\r]?\n/", $this->getContents(), $matches, PREG_OFFSET_CAPTURE, $offset);
 		if (!isset($matches[0])) return false;
 		$closeOffset = $matches[0][1] + strlen($matches[0][0]);
 
-		$newContents = substr($this->contents, 0, $offset);
-		$newContents .= substr($this->contents, $closeOffset);
-		$this->contents =& $newContents;
+		$newContents = substr($this->getContents(), 0, $offset);
+		$newContents .= substr($this->getContents(), $closeOffset);
+		$this->setContents($newContents);
 		return true;
 	}
 
 	function insert($key, $value) {
-		$offset = strrpos($this->contents, '</locale>');
+		$offset = strrpos($this->getContents(), '</locale>');
 		if ($offset === false) return false;
-		$newContents = substr($this->contents, 0, $offset);
-		$newContents .= "\t<message key=\"$key\">" . $this->xmlEscape($value) . "</message>\n";
-		$newContents .= substr($this->contents, $offset);
-		$this->contents =& $newContents;
-	}
-
-	function xmlEscape($value) {
-		$escapedValue = XMLNode::xmlentities($value);
-		if ($value !== $escapedValue) return "<![CDATA[$value]]>";
-		return $value;
+		$newContents = substr($this->getContents(), 0, $offset);
+		$newContents .= "\t<message key=\"$key\">" . $this->editableFile->xmlEscape($value) . "</message>\n";
+		$newContents .= substr($this->getContents(), $offset);
+		$this->setContents($newContents);
 	}
 }
 ?>
