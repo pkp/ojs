@@ -58,12 +58,25 @@ class Plugin {
 
 	function addLocaleData($locale = null) {
 		if ($locale == '') $locale = Locale::getLocale();
-		$localeFile =& Locale::registerLocaleFile($locale, $this->getLocaleFilename($locale));
+		Locale::registerLocaleFile($locale, $this->getLocaleFilename($locale));
 		return true;
 	}
 
 	function getLocaleFilename($locale) {
 		return $this->getPluginPath() . DIRECTORY_SEPARATOR . 'locale' . DIRECTORY_SEPARATOR . $locale . DIRECTORY_SEPARATOR . 'locale.xml';
+	}
+
+	function addHelpData($locale = null) {
+		if ($locale == '') $locale = Locale::getLocale();
+		$help =& Help::getHelp();
+		import('help.PluginHelpMappingFile');
+		$pluginHelpMapping =& new PluginHelpMappingFile($this);
+		$help->addMappingFile($pluginHelpMapping);
+		return true;
+	}
+
+	function getHelpMappingFilename() {
+		return $this->getPluginPath() . DIRECTORY_SEPARATOR . 'help.xml';
 	}
 
 	/**
@@ -150,6 +163,6 @@ class Plugin {
 		}
 		return $smarty->smartyUrl($params, $smarty);
 	}
-	
+
 }
 ?>

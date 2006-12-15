@@ -29,8 +29,9 @@ class HelpTopicDAO extends XMLDAO {
 		static $cache;
 		if (!isset($cache)) {
 			import('cache.CacheManager');
+			$help =& Help::getHelp();
 			$cacheManager =& CacheManager::getManager();
-			$cache =& $cacheManager->getFileCache('help-topic-' . Help::getLocale(), $topicId, array($this, '_cacheMiss'));
+			$cache =& $cacheManager->getFileCache('help-topic-' . $help->getLocale(), $topicId, array($this, '_cacheMiss'));
 
 			// Check to see if the cache info is outdated.
 			$cacheTime = $cache->getCacheTime();
@@ -40,6 +41,25 @@ class HelpTopicDAO extends XMLDAO {
 			}
 		}
 		return $cache;
+	}
+
+	function &getMappingFile($topicId) {
+		$help =& Help::getHelp();
+		$mappingFiles =& $help->getMappingFiles();
+
+		for ($i = 0; $i < count($mappingFiles); $i++) {
+			// "foreach by reference" hack
+			$mappingFile =& $mappingFiles[$i];
+			if ($mappingFile->containsTopic($topicId)) return $mappingFile;
+			unset($mappingFile);
+		}
+		$returner = null;
+		return $returner;
+	}
+
+	function getFilename($topicId) {
+		$mappingFile =& $this->getMappingFile($topicId);
+		return $mappingFile?$mappingFile->getTopicFilename($topicId):null;
 	}
 
 	function _cacheMiss(&$cache, $id) {
@@ -58,10 +78,6 @@ class HelpTopicDAO extends XMLDAO {
 		return null;
 	}
 	
-	function getFilename($topicId) {
-		return sprintf('help/%s/%s.xml', Help::getLocale(), $topicId);
-	}
-
 	/**
 	 * Retrieve a topic by its ID.
 	 * @param $topicId string
@@ -113,15 +129,17 @@ class HelpTopicDAO extends XMLDAO {
 	function &getTopicsByKeyword($keyword) {
 		$keyword = String::strtolower($keyword);
 		$matchingTopics = array();
-		$topicsDir = sprintf('help/%s', Help::getLocale());
-		$dir = opendir($topicsDir);
-		while (($file = readdir($dir)) !== false) {
-			$currFile = sprintf('%s/%s',$topicsDir,$file);
-			if (is_dir($currFile) && $file != 'toc' && $file != '.' && $file != '..') {
-				HelpTopicDAO::searchDirectory($matchingTopics,$keyword,$currFile);
+		$help =& Help::getHelp();
+		foreach ($help->getSearchPaths() as $searchPath => $mappingFile) {
+			$dir = opendir($searchPath);
+			while (($file = readdir($dir)) !== false) {
+				$currFile = $searchPath . DIRECTORY_SEPARATOR . $file;
+				if (is_dir($currFile) && $file != 'toc' && $file != '.' && $file != '..') {
+					HelpTopicDAO::searchDirectory($mappingFile, $matchingTopics,$keyword,$currFile);
+				}
 			}
+			closedir($dir);
 		}
-		closedir($dir);
 
 		krsort($matchingTopics);
 		$topics = array_values($matchingTopics);
@@ -131,19 +149,20 @@ class HelpTopicDAO extends XMLDAO {
 
 	/**
 	 * Parses deeper into folders if subdirectories exists otherwise scans the topic xml files
+	 * @param $mappingFile array The responsible mapping file
 	 * @param $matchingTopics array stores topics that match the keyword
 	 * @param $keyword string
 	 * @param $dir string
 	 * @modifies $matchingTopics array by reference by making appropriate calls to functions
 	 */
-	function searchDirectory(&$matchingTopics,$keyword,$dir) {
+	function searchDirectory(&$mappingFile, &$matchingTopics,$keyword,$dir) {
 		$currDir = opendir($dir);
 		while (($file = readdir($currDir)) !== false) {
 			$currFile = sprintf('%s/%s',$dir,$file);
 			if (is_dir($currFile) && $file != '.' && $file != '..' && $file != 'toc') {
-				HelpTopicDAO::searchDirectory($matchingTopics,$keyword,$currFile);
+				HelpTopicDAO::searchDirectory($mappingFile, $matchingTopics,$keyword,$currFile);
 			} else {
-				HelpTopicDAO::scanTopic($matchingTopics,$keyword,$dir,$file);
+				HelpTopicDAO::scanTopic($mappingFile, $matchingTopics,$keyword,$dir,$file);
 			}
 		}
 		closedir($currDir);
@@ -151,17 +170,16 @@ class HelpTopicDAO extends XMLDAO {
 
 	/**
 	 * Scans topic xml files for keywords
+	 * @param $mappingFile object The responsible mapping file
 	 * @param $matchingTopics array stores topics that match the keyword
 	 * @param $keyword string
 	 * @param $dir string
 	 * @param $file string
 	 * @modifies $matchingTopics array by reference
 	 */
-	function scanTopic(&$matchingTopics,$keyword,$dir,$file) {
+	function scanTopic(&$mappingFile, &$matchingTopics,$keyword,$dir,$file) {
 		if (preg_match('/^\d{6,6}\.xml$/', $file)) {
-			// remove the help/<locale> from directory path and use the latter half or url
-			$url = split('/', str_replace('\\', '/', $dir), 3);
-			$topicId = $url[2] . '/' . str_replace('.xml', '', $file);
+			$topicId = $mappingFile->getTopicIdForFilename($dir . DIRECTORY_SEPARATOR . $file);
 			$topic = &$this->getTopic($topicId);
 			
 			if ($topic) {

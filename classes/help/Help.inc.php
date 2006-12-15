@@ -8,17 +8,45 @@
  *
  * @package help
  * 
- * Provides methods for translating help topic keys to their respected topic help id
+ * Provides methods for translating help topic keys to their respected topic
+ * help ids.
  *
  * $Id$
  */
 
 class Help {
+	/** @var $mappingFiles array of HelpMappingFile objects */
+	var $mappingFiles;
+
+	/**
+	 * Get an instance of the Help object.
+	 */
+	function &getHelp() {
+		$instance =& Registry::get('help');
+		if ($instance == null) {
+			unset($instance);
+			$instance = new Help();
+			Registry::set('help', $instance);
+		}
+		return $instance;
+	}
 
 	/**
 	 * Constructor.
 	 */
 	function Help() {
+		import('help.OJSHelpMappingFile');
+		$mainMappingFile =& new OJSHelpMappingFile();
+		$this->mappingFiles = array();
+		$this->addMappingFile($mainMappingFile);
+	}
+
+	function &getMappingFiles() {
+		return $this->mappingFiles;
+	}
+
+	function addMappingFile(&$mappingFile) {
+		$this->mappingFiles[] =& $mappingFile;
 	}
 
 	/**
@@ -45,33 +73,18 @@ class Help {
 			return '';
 		}
 
-		$cache =& Help::_getMappingCache();
-		$value = $cache->get($key);
+		$mappingFiles =& $this->getMappingFiles();
+		for ($i=0; $i < count($mappingFiles); $i++) {
+			// Not using foreach because it runs by value
+			$mappingFile =& $mappingFiles[$i];
+			$value = $mappingFile->map($key);
+			if ($value !== null) return $value;
+			unset($mappingFile);
+		}
+
 		if (!isset($value)) {
 			return '##' . $key . '##';
 		}
-		return $value;
-	}
-
-	function &_getMappingCache() {
-		static $cache;
-
-		if (!isset($cache)) {
-			import('cache.CacheManager');
-			$cacheManager =& CacheManager::getManager();
-			$cache =& $cacheManager->getFileCache(
-				'help', 'mapping',
-				array('Help', '_mappingCacheMiss')
-			);
-
-			// Check to see if the cache info is outdated.
-			$cacheTime = $cache->getCacheTime();
-			if ($cacheTime !== null && $cacheTime < filemtime(Help::getMappingFilename())) {
-				// The cached data is out of date.
-				$cache->flush();
-			}
-		}
-		return $cache;
 	}
 
 	function &_getTocCache() {
@@ -87,7 +100,7 @@ class Help {
 
 			// Check to see if the cache info is outdated.
 			$cacheTime = $cache->getCacheTime();
-			if ($cacheTime !== null && $cacheTime < Help::dirmtime('help/'.Help::getLocale().'/.', true)) {
+			if ($cacheTime !== null && $cacheTime < $this->dirmtime('help/'. $this->getLocale() . '/.', true)) {
 				// The cached data is out of date.
 				$cache->flush();
 			}
@@ -99,8 +112,12 @@ class Help {
 		// Keep a secondary cache of the mappings so that a few
 		// cache misses won't destroy the server
 		static $mappings;
+
+		$result = null;
+		if (HookRegistry::call('Help::_mappingCacheMiss', array(&$cache, &$id, &$mappings, &$result))) return $result;
+
 		if (!isset($mappings)) {
-			$mappings =& Help::loadHelpMappings();
+			$mappings =& $this->loadHelpMappings();
 			$cache->setEntireCache($mappings);
 		}
 		return isset($mappings[$id])?$mappings[$id]:null;
@@ -113,46 +130,21 @@ class Help {
 		if (!isset($toc)) {
 			$helpToc = array();
 			$topicId = 'index/topic/000000';
-			$helpToc = Help::buildTopicSection($topicId);
-			$toc =& Help::buildToc($helpToc);
+			$helpToc = $this->buildTopicSection($topicId);
+			$toc =& $this->buildToc($helpToc);
 
 			$cache->setEntireCache($toc);
 		}
 		return null;
 	}
 
-	function getMappingFilename() {
-		return 'help/help.xml'; break;
-	}
-
-	/**
-	 * Load mappings of help page keys and their ids from an XML file
-	 * @return array associative array of page keys and ids
-	 */
-	function &loadHelpMappings() {
-		$mappings = array();
-
-		// Reload help XML file
-		$xmlDao = &new XMLDAO();
-		$data = $xmlDao->parseStruct(Help::getMappingFilename(), array('topic'));
-
-		// Build associative array of page keys and ids
-		if (isset($data['topic'])) {
-			foreach ($data['topic'] as $helpData) {
-				$mappings[$helpData['attributes']['key']] = $helpData['attributes']['id'];
-			}
-		}
-
-		return $mappings;	
-	}
-	
 	/**
 	 * Load table of contents from xml help topics and their tocs
 	 * (return cache, if available)
 	 * @return array associative array of topics and subtopics
 	 */
 	function &getTableOfContents() {
-		$cache =& Help::_getTocCache();
+		$cache =& $this->_getTocCache();
 		return $cache->getContents();
 	}
 
@@ -166,7 +158,7 @@ class Help {
 		$toc = array();
 		foreach($helpToc as $topicId => $section) {
 			$toc[$topicId] = array('title' => $section['title'], 'prefix' => '');
-			Help::buildTocHelper($toc, $section['section'], '');
+			$this->buildTocHelper($toc, $section['section'], '');
 		}
 		return $toc;
 	}
@@ -182,7 +174,7 @@ class Help {
 			$prefix = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$prefix";
 			foreach($section as $topicId => $sect) {
 				$toc[$topicId] = array('title' => $sect['title'], 'prefix' => $prefix);
-				Help::buildTocHelper($toc, $sect['section'], $prefix);
+				$this->buildTocHelper($toc, $sect['section'], $prefix);
 			}
 		}
 	}
@@ -211,7 +203,7 @@ class Help {
 				$currId = $currTopic->getId();
 				$currTitle = $currTopic->getTitle();
 				if ($currId != $topicId) {
-					$section[$currId] = array('title' => $currTitle, 'section' => Help::buildTopicSection($currId, $tocId)); 
+					$section[$currId] = array('title' => $currTitle, 'section' => $this->buildTopicSection($currId, $tocId)); 
 				}
 			}
 		}
@@ -230,23 +222,32 @@ class Help {
 	 * @return int
 	 */
 	function dirmtime($dirName,$doRecursive) {
-	   $d = dir($dirName);
-	   $lastModified = 0;
-	   while($entry = $d->read()) {
-	       if ($entry != "." && $entry != "..") {
-	           if (!is_dir($dirName."/".$entry)) {
-	               $currentModified = filemtime($dirName."/".$entry);
-	           } else if ($doRecursive && is_dir($dirName."/".$entry)) {
-	               $currentModified = Help::dirmtime($dirName."/".$entry,true);
-	           }
-	           if ($currentModified > $lastModified){
-	               $lastModified = $currentModified;
-	           }
-	       }
-	   }
-	   $d->close();
-	   return $lastModified;
-	}	
+		$d = dir($dirName);
+		$lastModified = 0;
+		while($entry = $d->read()) {
+			if ($entry != "." && $entry != "..") {
+				if (!is_dir($dirName."/".$entry)) {
+					$currentModified = filemtime($dirName."/".$entry);
+				} else if ($doRecursive && is_dir($dirName."/".$entry)) {
+					$currentModified = $this->dirmtime($dirName."/".$entry,true);
+				}
+				if ($currentModified > $lastModified) {
+					$lastModified = $currentModified;
+				}
+			}
+		}
+		$d->close();
+		return $lastModified;
+	}
+
+	function getSearchPaths() {
+		$mappingFiles =& $this->getMappingFiles();
+		$searchPaths = array();
+		for ($i = 0; $i < count($mappingFiles); $i++) {
+			$searchPaths[$mappingFiles[$i]->getSearchPath()] =& $mappingFiles[$i];
+		}
+		return $searchPaths;
+	}
 }
 
 ?>

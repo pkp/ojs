@@ -35,7 +35,8 @@ class HelpHandler extends Handler {
 		parent::validate();
 
 		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign_by_ref('helpToc', Help::getTableOfContents());
+		$help =& Help::getHelp();
+		$templateMgr->assign_by_ref('helpToc', $help->getTableOfContents());
 		$templateMgr->display('help/helpToc.tpl');
 	}
 	

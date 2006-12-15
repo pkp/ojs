@@ -27,10 +27,12 @@ class HelpTocDAO extends XMLDAO {
 
 	function &_getCache($tocId) {
 		static $cache;
+
 		if (!isset($cache)) {
 			import('cache.CacheManager');
+			$help =& Help::getHelp();
 			$cacheManager =& CacheManager::getManager();
-			$cache =& $cacheManager->getFileCache('help-toc-' . Help::getLocale(), $tocId, array($this, '_cacheMiss'));
+			$cache =& $cacheManager->getFileCache('help-toc-' . $help->getLocale(), $tocId, array($this, '_cacheMiss'));
 
 			// Check to see if the cache info is outdated.
 			$cacheTime = $cache->getCacheTime();
@@ -44,6 +46,7 @@ class HelpTocDAO extends XMLDAO {
 
 	function _cacheMiss(&$cache, $id) {
 		static $data;
+
 		if (!isset($data)) {
 			$helpFile = $this->getFilename($cache->getCacheId());
 			$data = &$this->parseStruct($helpFile);
@@ -57,9 +60,24 @@ class HelpTocDAO extends XMLDAO {
 		}
 		return null;
 	}
-	
+
+	function &getMappingFile($tocId) {
+		$help =& Help::getHelp();
+		$mappingFiles =& $help->getMappingFiles();
+
+		for ($i=0; $i < count($mappingFiles); $i++) {
+			// "foreach by reference" hack
+			$mappingFile =& $mappingFiles[$i];
+			if ($mappingFile->containsToc($tocId)) return $mappingFile;
+			unset($mappingFile);
+		}
+		$returner = null;
+		return $returner;
+	}
+
 	function getFilename($tocId) {
-		return sprintf('help/%s/%s.xml', Help::getLocale(), $tocId);
+		$mappingFile =& $this->getMappingFile($tocId);
+		return $mappingFile?$mappingFile->getTocFilename($tocId):null;
 	}
 
 	/**

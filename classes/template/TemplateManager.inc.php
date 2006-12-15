@@ -378,13 +378,14 @@ class TemplateManager extends Smarty {
 	 * @return numerical help topic id
 	 */
 	function smartyGetHelpId($params, &$smarty) {
+		$help =& Help::getHelp();
 		if (isset($params) && !empty($params)) {
 			if (isset($params['key'])) {
 				$key = $params['key'];
 				unset($params['key']);
-				$translatedKey = Help::translate($key);
+				$translatedKey = $help->translate($key);
 			} else {
-				$translatedKey = Help::translate('');
+				$translatedKey = $help->translate('');
 			}
 			
 			if ($params['url'] == "true") {
@@ -404,8 +405,9 @@ class TemplateManager extends Smarty {
 	 * @return anchor link to related help topic
 	 */
 	function smartyHelpTopic($params, &$smarty) {
+		$help =& Help::getHelp();
 		if (isset($params) && !empty($params)) {
-			$translatedKey = isset($params['key']) ? Help::translate($params['key']) : Help::translate('');
+			$translatedKey = isset($params['key']) ? $help->translate($params['key']) : $help->translate('');
 			$link = Request::url(null, 'help', 'view', explode('/', $translatedKey));
 			$text = isset($params['text']) ? $params['text'] : '';
 			return "<a href=\"$link\">$text</a>";
