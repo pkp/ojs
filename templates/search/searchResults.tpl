@@ -88,7 +88,17 @@ function ensureKeyword() {
 	<td><a href="{url journal=$journal->getPath() page="issue" op="view" path=$issue->getBestIssueId($journal)}">{$issue->getIssueIdentification()|escape}</a></td>
 	<td width="30%">{$article->getArticleTitle()|strip_unsafe_html}</td>
 	<td width="30%" align="right">
-		<a href="{url journal=$journal->getPath() page="article" op="view" path=$publishedArticle->getBestArticleId($journal)}" class="file">{if $section->getAbstractsDisabled()}{translate key="article.details"}{else}{translate key="article.abstract"}{/if}</a>{if $publishedArticle->getAccessStatus() || $issueAvailable}{foreach from=$publishedArticle->getGalleys() item=galley name=galleyList}&nbsp;<a href="{url journal=$journal->getPath() page="article" op="view" path=$publishedArticle->getBestArticleId($journal)|to_array:$galley->getGalleyId()}" class="file">{$galley->getLabel()|escape}</a>{/foreach}{/if}
+		{if $publishedArticle->getAccessStatus() || $issueAvailable}
+			{assign var=hasAccess value=1}
+		{else}
+			{assign var=hasAccess value=0}
+		{/if}
+		{if !$section->getAbstractsDisabled() && $publishedArticle->getAbstract() != ""}
+			{assign var=hasAbstract value=1}
+		{else}
+			{assign var=hasAbstract value=0}
+		{/if}
+		{if !$hasAccess || $hasAbstract}<a href="{url journal=$journal->getPath() page="article" op="view" path=$publishedArticle->getBestArticleId($journal)}" class="file">{if !$hasAbstract}{translate key="article.details"}{else}{translate key="article.abstract"}{/if}{/if}</a>{if $hasAccess}{foreach from=$publishedArticle->getGalleys() item=galley name=galleyList}&nbsp;<a href="{url journal=$journal->getPath() page="article" op="view" path=$publishedArticle->getBestArticleId($journal)|to_array:$galley->getGalleyId()}" class="file">{$galley->getLabel()|escape}</a>{/foreach}{/if}
 	</td>
 </tr>
 <tr>

@@ -18,9 +18,9 @@
 	<td width="75%">{$article->getArticleTitle()|strip_unsafe_html}</td>
 	<td align="right" width="25%">
 		{if $section.abstractsDisabled || $article->getAbstract() == ""}
-			{assign var=abstractLabel value="article.details"}
+			{assign var=hasAbstract value=0}
 		{else}
-			{assign var=abstractLabel value="article.abstract"}
+			{assign var=hasAbstract value=1}
 		{/if}
 
 		{if (!$subscriptionRequired || $article->getAccessStatus() || $subscribedUser || $subscribedDomain)}
@@ -29,7 +29,7 @@
 			{assign var=hasAccess value=0}
 		{/if}
 
-		{if !$hasAccess || $article->getAbstract() != ""}<a href="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)}" class="file">{translate key=$abstractLabel}</a>{/if}
+		{if !$hasAccess || $hasAbstract}<a href="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)}" class="file">{if $hasAbstract}{translate key=article.abstract}{else}{translate key="article.details"}{/if}</a>{/if}
 
 		{if $hasAccess}
 		{foreach from=$article->getGalleys() item=galley name=galleyList}
