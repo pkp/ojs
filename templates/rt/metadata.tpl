@@ -127,7 +127,17 @@
 	<td>{translate key="rt.metadata.pkp.uri"}</td>
 	<td><a target="_new" href="{url page="article" op="view" path=$articleId}">{url page="article" op="view" path=$articleId}</a></td>
 </tr>
+{assign var=doi value=$article->getDOI()}
+{if $doi}
 <tr><td colspan="4" class="separator">&nbsp;</td></tr>
+<tr valign="top">
+	<td>10.</td>
+	<td>{translate key="rt.metadata.dublinCore.identifier"}</td>
+	<td>{translate key="rt.metadata.pkp.doi"}</td>
+	<td>{$doi|escape}</a></td>
+</tr>
+<tr><td colspan="4" class="separator">&nbsp;</td></tr>
+{/if}
 <tr valign="top">
 	<td>11.</td>
 	<td>{translate key="rt.metadata.dublinCore.source"}</td>

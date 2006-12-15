@@ -225,6 +225,30 @@ class PublishedArticle extends Article {
 		}
 		return $this->getArticleId();
 	}
+
+	/**
+	 * Get a DOI for this article.
+	 */
+	function getDOI() {
+		$journalId = $this->getJournalId();
+
+		// Get the Journal object (optimized)
+		$journal =& Request::getJournal();
+		if (!$journal || $journal->getJournalId() != $journalId) {
+			unset($journal);
+			$journalDao =& DAORegistry::getDAO('JournalDAO');
+			$journal =& $journalDao->getJournal($journalId);
+		}
+
+		// Get the issue
+		$issueDao =& DAORegistry::getDAO('IssueDAO');
+		$issue =& $issueDao->getIssueByArticleId($this->getArticleId());
+
+		if (!$issue || !$journal || $journal->getJournalId() != $issue->getJournalId() || ($doiPrefix = $journal->getSetting('doiPrefix')) == '') return null;
+
+		return $doiPrefix . '/' . strtolower($journal->getSetting('journalInitials')) . '.v' . $issue->getVolume() . 'i' . $issue->getNumber() . '.' . $this->getArticleId();
+		
+	}
 }
 
 ?>

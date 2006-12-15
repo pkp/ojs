@@ -147,7 +147,7 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 			XMLCustomWriter::appendChild($journalNode, $journalArticleNode);
 			
 			// Create the DOI data
-			$DOIdataNode = &CrossRefExportDom::generateDOIdataDom($doc, $this->generateDOI($journal, $issue, $section, $article), Request::url(null, 'article', 'view', $article->getArticleId()));
+			$DOIdataNode = &CrossRefExportDom::generateDOIdataDom($doc, $article->getDOI(), Request::url(null, 'article', 'view', $article->getArticleId()));
 			XMLCustomWriter::appendChild($journalArticleNode, $DOIdataNode);							
 			XMLCustomWriter::appendChild($bodyNode, $journalNode);
 		}
@@ -205,7 +205,7 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 					XMLCustomWriter::appendChild($journalNode, $journalArticleNode);
 					
 					// DOI data node
-					$DOIdataNode = &CrossRefExportDom::generateDOIdataDom($doc, $this->generateDOI($journal, $issue, $section, $article), Request::url(null, 'article', 'view', $article->getArticleId()));
+					$DOIdataNode = &CrossRefExportDom::generateDOIdataDom($doc, $article->getDOI(), Request::url(null, 'article', 'view', $article->getArticleId()));
 					XMLCustomWriter::appendChild($journalArticleNode, $DOIdataNode);							
 					XMLCustomWriter::appendChild($bodyNode, $journalNode);
 
@@ -226,15 +226,6 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 		}
 
 		return true;
-	}
-
-	// The DOI format is hardcoded here.  Until DOI's are fully implemented in OJS
-	// this will have to do as a substitute.  Could be a plugin setting
-	// and may be in the future.
-	function generateDOI(&$journal, &$issue, &$section, &$article) {
-	
-		return $journal->getSetting('doiPrefix').'/'.strtolower($journal->getSetting('journalInitials')).'.v'.$issue->getVolume().'i'.$issue->getNumber().'.'.$article->getArticleId();
-		
 	}
 
 	/**

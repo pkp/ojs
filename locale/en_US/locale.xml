@@ -2485,6 +2485,7 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="rt.metadata.pkp.peerReviewed">Peer-reviewed Article</message>
 	<message key="rt.metadata.pkp.format">File format</message>
 	<message key="rt.metadata.pkp.uri">Universal Resource Indicator</message>
+	<message key="rt.metadata.pkp.doi">Digital Object Identifier</message>
 	<message key="rt.metadata.pkp.source">Journal/conference title; vol., no. (year)</message>
 	<message key="rt.metadata.pkp.language">English=en</message>
 	<message key="rt.metadata.pkp.suppFiles">Supp. Files</message>

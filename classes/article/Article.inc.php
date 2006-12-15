@@ -766,7 +766,6 @@ class Article extends DataObject {
 	function setPages($pages) {
 		return $this->setData('pages',$pages);
 	}		
-
 }
 
 ?>

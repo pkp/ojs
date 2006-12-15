@@ -16,6 +16,7 @@ class TranslatorPlugin extends GenericPlugin {
 		if (parent::register($category, $path)) {
 			$this->addLocaleData();
 			if ($this->getSetting(0, 'enabled')) {
+				$this->addHelpData();
 				HookRegistry::register ('LoadHandler', array(&$this, 'handleRequest'));
 				HookRegistry::register ('TinyMCEPlugin::getDisableTemplates', array(&$this, 'addTinyMCEException'));
 			}
