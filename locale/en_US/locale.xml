@@ -774,6 +774,7 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="manager.statistics.statistics.registeredReaders">Registered readers</message>
 	<message key="manager.statistics.statistics.totalNewValue">{$numTotal} ({$numNew} new)</message>
 	<message key="manager.statistics.statistics.subscriptions">Subscriptions</message>
+	<message key="manager.statistics.statistics.articleViews">Article View Counts (for Authors only)</message>
 	<message key="manager.statistics.statistics.note">Note: Percentages for peer reviewed submissions may not add up to 100%, as items resubmitted are either accepted, declined, or still in process.</message>
 
 	<message key="manager.statistics.reports">Report Generator</message>

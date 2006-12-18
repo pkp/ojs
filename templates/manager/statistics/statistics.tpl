@@ -96,6 +96,10 @@
 		</tr>
 		{/foreach}
 	{/if}
+
+	<tr valign="top">
+		<td width="20%" colspan="3" class="label"><input type="checkbox" name="statViews" {if $statViews}checked {/if}/>{translate key="manager.statistics.statistics.articleViews"}</td>
+	</tr>
 </table>
 <p>{translate key="manager.statistics.statistics.note"}</p>
 

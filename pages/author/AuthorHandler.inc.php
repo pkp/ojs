@@ -42,6 +42,10 @@ class AuthorHandler extends Handler {
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('pageToDisplay', $page);
+		if (!$active) {
+			// Make view counts available if enabled.
+			$templateMgr->assign('statViews', $journal->getSetting('statViews'));
+		}
 		$templateMgr->assign_by_ref('submissions', $submissions);
 
 		import('issue.IssueAction');
