@@ -175,7 +175,7 @@ function moveAuthor(dir, authorIndex) {
 
 {if $section->getAbstractsDisabled()==0}
 <tr valign="top">
-	<td width="20%" class="label">{fieldLabel name="abstract" key="article.abstract"}</td>
+	<td width="20%" class="label">{fieldLabel name="abstract" required="true" key="article.abstract"}</td>
 	<td width="80%" class="value"><textarea name="abstract" id="abstract" class="textArea" rows="15" cols="60">{$abstract|escape}</textarea></td>
 </tr>
 {if $alternateLocale1}

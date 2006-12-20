@@ -173,7 +173,7 @@ function moveAuthor(dir, authorIndex) {
 		<td colspan="2" class="separator">&nbsp;</td>
 	</tr>
 	<tr valign="top">
-		<td class="label">{fieldLabel name="abstract" key="article.abstract"}</td>
+		<td class="label">{fieldLabel name="abstract" required="true" key="article.abstract"}</td>
 		<td class="value"><textarea name="abstract" id="abstract" rows="15" cols="60" class="textArea">{$abstract|escape}</textarea></td>
 	</tr>
 	{if $alternateLocale1}

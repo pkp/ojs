@@ -176,6 +176,13 @@ class MetadataForm extends Form {
 				'sponsor'
 			)
 		);
+
+		$sectionDao = &DAORegistry::getDAO('SectionDAO');
+		$section = &$sectionDao->getSection($this->article->getSectionId());
+		if (!$section->getAbstractsDisabled()) {
+			$this->addCheck(new FormValidator($this, 'abstract', 'required', 'author.submit.form.abstractRequired'));
+		}
+
 	}
 
 	/**
