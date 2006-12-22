@@ -512,6 +512,20 @@
 		</index>
 	</table>
 
+	<table name="custom_issue_orders">
+		<field name="issue_id" type="I8">
+			<KEY/>
+		</field>
+		<field name="journal_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="seq" type="F">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
+		<descr>Custom sequencing information for journal issues, when available</descr>
+	</table>
+
 	<table name="custom_section_orders">
 		<field name="issue_id" type="I8">
 			<KEY/>
@@ -523,7 +537,7 @@
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
 		</field>
-		<descr>Custom sequencing information by journal issue, when available.</descr>
+		<descr>Custom sequencing information for journal sections by issue, when available.</descr>
 	</table>
 
 	<!--

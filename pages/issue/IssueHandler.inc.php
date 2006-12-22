@@ -199,7 +199,7 @@ class IssueHandler extends Handler {
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
 		$rangeInfo = Handler::getRangeInfo('issues');
 
-		$publishedIssuesIterator = $issueDao->getPublishedIssues($journal->getJournalId(), false, $rangeInfo);
+		$publishedIssuesIterator = $issueDao->getPublishedIssues($journal->getJournalId(), $rangeInfo);
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign_by_ref('issues', $publishedIssuesIterator);

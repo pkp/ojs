@@ -26,7 +26,7 @@ class IssueManagementHandler extends EditorHandler {
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
 		$rangeInfo = Handler::getRangeInfo('issues');
 		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign_by_ref('issues', $issueDao->getUnpublishedIssues($journal->getJournalId(), false, $rangeInfo));
+		$templateMgr->assign_by_ref('issues', $issueDao->getUnpublishedIssues($journal->getJournalId(), $rangeInfo));
 		$templateMgr->assign('helpTopicId', 'publishing.index');
 		$templateMgr->display('editor/issues/futureIssues.tpl');
 	}
@@ -44,8 +44,22 @@ class IssueManagementHandler extends EditorHandler {
 		$rangeInfo = Handler::getRangeInfo('issues');
 
 		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign_by_ref('issues', $issueDao->getPublishedIssues($journal->getJournalId(), false, $rangeInfo));
+		$templateMgr->assign_by_ref('issues', $issueDao->getPublishedIssues($journal->getJournalId(), $rangeInfo));
+
+		$allIssuesIterator = $issueDao->getPublishedIssues($journal->getJournalId());
+		$issueMap = array();
+		while ($issue =& $allIssuesIterator->next()) {
+			$issueMap[$issue->getIssueId()] = $issue->getIssueIdentification();
+			unset($issue);
+		}
+		$templateMgr->assign('allIssues', $issueMap);
+
+		$currentIssue =& $issueDao->getCurrentIssue($journal->getJournalId());
+		$currentIssueId = $currentIssue?$currentIssue->getIssueId():null;
+		$templateMgr->assign('currentIssueId', $currentIssueId);
+
 		$templateMgr->assign('helpTopicId', 'publishing.index');
+		$templateMgr->assign('usesCustomOrdering', $issueDao->customIssueOrderingExists($journal->getJournalId()));
 		$templateMgr->display('editor/issues/backIssues.tpl');
 	}
 
@@ -350,6 +364,58 @@ class IssueManagementHandler extends EditorHandler {
 		}
 
 		Request::redirect(null, null, 'issueToc', $issueId);
+	}
+
+	/**
+	 * Change the sequence of an issue.
+	 */
+	function setCurrentIssue($args) {
+		$issueId = Request::getUserVar('issueId');
+		$journal = &Request::getJournal();
+		$issueDao = &DAORegistry::getDAO('IssueDAO');
+		if ($issueId) {
+			$issue = IssueManagementHandler::validate($issueId);
+			$issue->setCurrent(1);
+			$issueDao->updateCurrentIssue($journal->getJournalId(), $issue);
+		} else {
+			IssueManagementHandler::validate();
+			$issueDao->updateCurrentIssue($journal->getJournalId());
+		}
+		Request::redirect(null, null, 'backIssues');
+	}
+
+	/**
+	 * Change the sequence of an issue.
+	 */
+	function moveIssue($args) {
+		$issueId = isset($args[0]) ? $args[0] : 0;
+		$issue = IssueManagementHandler::validate($issueId);
+		$journal = &Request::getJournal();
+
+		$issueDao = &DAORegistry::getDAO('IssueDAO');
+
+		// If custom issue ordering isn't yet in place, bring it in.
+		if (!$issueDao->customIssueOrderingExists($journal->getJournalId())) {
+			$issueDao->setDefaultCustomIssueOrders($journal->getJournalId());
+		}
+
+		$issueDao->moveCustomIssueOrder($journal->getJournalId(), $issue->getIssueId(), Request::getUserVar('newPos'), Request::getUserVar('d') == 'u');
+
+		Request::redirect(null, null, 'backIssues');
+	}
+
+	/**
+	 * Reset issue ordering to defaults.
+	 */
+	function resetIssueOrder($args) {
+		IssueManagementHandler::validate();
+
+		$journal =& Request::getJournal();
+
+		$issueDao =& DAORegistry::getDAO('IssueDAO');
+		$issueDao->deleteCustomIssueOrdering($journal->getJournalId());
+
+		Request::redirect(null, null, 'backIssues');
 	}
 
 	/**

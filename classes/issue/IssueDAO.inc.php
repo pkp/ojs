@@ -26,7 +26,7 @@ class IssueDAO extends DAO {
 	}
 	
 	/**
-	 * Retrieve Issue by issue id********
+	 * Retrieve Issue by issue id
 	 * @param $issueId int
 	 * @return Issue object
 	 */
@@ -249,6 +249,11 @@ class IssueDAO extends DAO {
 		);
 
 		$issue->setIssueId($this->getInsertIssueId());
+
+		if ($this->customIssueOrderingExists($issue->getJournalId())) {
+			$this->resequenceCustomIssueOrders($issue->getJournalId());
+		}
+
 		return $issue->getIssueId();	
 	}
 		
@@ -336,6 +341,9 @@ class IssueDAO extends DAO {
 				$issue->getIssueId()
 			)
 		);
+		if ($this->customIssueOrderingExists($issue->getJournalId())) {
+			$this->resequenceCustomIssueOrders($issue->getJournalId());
+		}
 	}
 
 	/**
@@ -362,6 +370,7 @@ class IssueDAO extends DAO {
 		$this->update(
 			'DELETE FROM issues WHERE issue_id = ?', $issue->getIssueId()
 		);
+		$this->resequenceCustomIssueOrders($issue->getJournalId());
 	}
 
 	/**
@@ -373,6 +382,7 @@ class IssueDAO extends DAO {
 		$this->update(
 			'DELETE FROM issues WHERE journal_id = ?', $journalId
 		);
+		$this->deleteCustomIssueOrdering($journalId);
 	}
 
 	/**
@@ -427,7 +437,7 @@ class IssueDAO extends DAO {
 	}
 
 	/**
-	 * Get all issues organized by published date********
+	 * Get all issues organized by published date
 	 * @param $journalId int
 	 * @param $rangeInfo object DBResultRange (optional)
 	 * @return issues object ItemIterator
@@ -443,42 +453,32 @@ class IssueDAO extends DAO {
 	}
 
 	/**
-	 * Get published issues organized by published date********
+	 * Get published issues organized by published date
 	 * @param $journalId int
-	 * @param $current bool retrieve current or not
 	 * @param $rangeInfo object DBResultRange
 	 * @return issues ItemIterator
 	 */
-	function &getPublishedIssues($journalId, $current = false, $rangeInfo = null) {
-		$issues = array();
-
-		if ($current) {
-			$sql = 'SELECT i.* FROM issues i WHERE journal_id = ? AND (published = 1 OR current = 1) ORDER BY current DESC, year ASC, volume ASC, number ASC';
-		} else {
-			$sql = 'SELECT i.* FROM issues i WHERE journal_id = ? AND published = 1 ORDER BY current DESC, date_published DESC';
-		}
-		$result = &$this->retrieveRange($sql, $journalId, $rangeInfo);
+	function &getPublishedIssues($journalId, $rangeInfo = null) {
+		$result = &$this->retrieveRange(
+			'SELECT i.* FROM issues i LEFT JOIN custom_issue_orders o ON (o.issue_id = i.issue_id) WHERE i.journal_id = ? AND i.published = 1 ORDER BY o.seq ASC, i.current DESC, i.date_published DESC',
+			$journalId, $rangeInfo
+		);
 		
 		$returner = &new DAOResultFactory($result, $this, '_returnIssueFromRow');
 		return $returner;
 	}
 
 	/**
-	 * Get unpublished issues organized by published date********
+	 * Get unpublished issues organized by published date
 	 * @param $journalId int
-	 * @param $current bool retrieve current or not
 	 * @param $rangeInfo object DBResultRange
  	 * @return issues ItemIterator
 	 */
-	function &getUnpublishedIssues($journalId, $current = false, $rangeInfo = null) {
-		$issues = array();
-
-		if ($current) {
-			$sql = 'SELECT i.* FROM issues i WHERE journal_id = ? AND (published = 0 OR current = 1) ORDER BY current DESC, year ASC, volume ASC, number ASC';
-		} else {
-			$sql = 'SELECT i.* FROM issues i WHERE journal_id = ? AND published = 0 ORDER BY year ASC, volume ASC, number ASC';
-		}
-		$result = &$this->retrieveRange($sql, $journalId, $rangeInfo);
+	function &getUnpublishedIssues($journalId, $rangeInfo = null) {
+		$result = &$this->retrieveRange(
+			'SELECT i.* FROM issues i WHERE journal_id = ? AND published = 0 ORDER BY year ASC, volume ASC, number ASC',
+			$journalId, $rangeInfo
+		);
 
 		$returner = &new DAOResultFactory($result, $this, '_returnIssueFromRow');
 		return $returner;
@@ -497,6 +497,130 @@ class IssueDAO extends DAO {
 		unset($result);
 
 		return $returner;
+	}
+
+	/**
+	 * Delete the custom ordering of a published issue.
+	 * @param $journalId int
+	 */
+	function deleteCustomIssueOrdering($journalId) {
+		return $this->update(
+			'DELETE FROM custom_issue_orders WHERE journal_id = ?', $journalId
+		);
+	}
+
+	/**
+	 * Sequentially renumber custom issue orderings in their sequence order.
+	 * @param $journalId int
+	 */
+	function resequenceCustomIssueOrders($journalId) {
+		$result = &$this->retrieve(
+			'SELECT i.issue_id FROM issues i LEFT JOIN custom_issue_orders o ON (o.issue_id = i.issue_id) WHERE i.journal_id = ? ORDER BY o.seq',
+			$journalId
+		);
+		
+		for ($i=1; !$result->EOF; $i++) {
+			list($issueId) = $result->fields;
+			if ($this->update(
+				'UPDATE custom_issue_orders SET seq = ? WHERE issue_id = ? AND journal_id = ?',
+				array($i, $issueId, $journalId)
+			) == 0) {
+				// This entry is missing. Create it.
+				$this->insertCustomIssueOrder($journalId, $issueId, $i);
+			}
+			
+			$result->moveNext();
+		}
+		
+		$result->close();
+		unset($result);
+	}
+	
+	/**
+	 * Check if a journal has custom issue ordering.
+	 * @param $journalId int
+	 * @return boolean
+	 */
+	function customIssueOrderingExists($journalId) {
+		$result = &$this->retrieve(
+			'SELECT COUNT(*) FROM custom_issue_orders WHERE journal_id = ?',
+			$journalId
+		);
+		$returner = isset($result->fields[0]) && $result->fields[0] == 0 ? false : true;
+
+		$result->Close();
+		unset($result);
+
+		return $returner;
+	}
+
+	/**
+	 * Get the custom issue order of a journal.
+	 * @param $journalId int
+	 * @param $issueId int
+	 * @return int
+	 */
+	function getCustomIssueOrder($journalId, $issueId) {
+		$result = &$this->retrieve(
+			'SELECT seq FROM custom_issue_orders WHERE journal_id = ? AND issue_id = ?',
+			array($journalId, $issueId)
+		);
+		
+		$returner = null;
+		if (!$result->EOF) {
+			list($returner) = $result->fields;
+		}
+		$result->Close();
+		unset($result);
+
+		return $returner;
+	}
+
+	/**
+	 * Import the current issue orders into the specified journal as custom
+	 * issue orderings.
+	 * @param $journalId int
+	 */
+	function setDefaultCustomIssueOrders($journalId) {
+		$publishedIssues =& $this->getPublishedIssues($journalId);
+		$i=1;
+		while ($issue =& $publishedIssues->next()) {
+			$this->insertCustomIssueOrder($journalId, $issue->getIssueId(), $i);
+			unset($issue);
+			$i++;
+		}
+	}
+
+	/**
+	 * INTERNAL USE ONLY: Insert a custom issue ordering
+	 * @param $journalId int
+	 * @param $issueId int
+	 * @param $seq int
+	 */
+	function insertCustomIssueOrder($journalId, $issueId, $seq) {
+		$this->update(
+			'INSERT INTO custom_issue_orders (issue_id, journal_id, seq) VALUES (?, ?, ?)',
+			array(
+				$issueId,
+				$journalId,
+				$seq
+			)
+		);
+	}
+
+	/**
+	 * Move a custom issue ordering up or down, resequencing as necessary.
+	 * @param $journalId int
+	 * @param $issueId int
+	 * @param $newPos int The new position (0-based) of this section
+	 * @param $up boolean Whether we're moving the section up or down
+	 */
+	function moveCustomIssueOrder($journalId, $issueId, $newPos, $up) {
+		$this->update(
+			'UPDATE custom_issue_orders SET seq = ? ' . ($up?'-':'+') . ' 0.5 WHERE journal_id = ? AND issue_id = ?',
+			array($newPos, $journalId, $issueId)
+		);
+		$this->resequenceCustomIssueOrders($journalId);
 	}
 }
   

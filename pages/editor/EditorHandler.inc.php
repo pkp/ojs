@@ -413,6 +413,21 @@ class EditorHandler extends SectionEditorHandler {
 		IssueManagementHandler::updateIssueToc($args);
 	}
 
+	function setCurrentIssue($args) {
+		import('pages.editor.IssueManagementHandler');
+		IssueManagementHandler::setCurrentIssue($args);
+	}
+
+	function moveIssue($args) {
+		import('pages.editor.IssueManagementHandler');
+		IssueManagementHandler::moveIssue($args);
+	}
+
+	function resetIssueOrder($args) {
+		import('pages.editor.IssueManagementHandler');
+		IssueManagementHandler::resetIssueOrder($args);
+	}
+
 	function moveSectionToc($args) {
 		import('pages.editor.IssueManagementHandler');
 		IssueManagementHandler::moveSectionToc($args);
@@ -422,6 +437,7 @@ class EditorHandler extends SectionEditorHandler {
 		import('pages.editor.IssueManagementHandler');
 		IssueManagementHandler::resetSectionOrder($args);
 	}
+
 
 	function moveArticleToc($args) {
 		import('pages.editor.IssueManagementHandler');

@@ -1531,6 +1531,7 @@ You may optionally provide the user with a reason for disabling their account.</
 	<message key="editor.issues.access">Access</message>
 	<message key="editor.issues.cover">Cover</message>
 	<message key="editor.issues.confirmIssueDelete">All articles will be returned to the editing queue and all associated files will be permanently removed.  Are you sure you want to remove this issue?</message>
+	<message key="editor.issues.resetIssueOrder"><![CDATA[This journal uses custom issue ordering. <a href="{$url}" class="action">Reset to defaults</a>]]></message>
 	<message key="editor.issues.resetSectionOrder"><![CDATA[This issue uses custom section ordering. <a href="{$url}" class="action">Reset to defaults</a>]]></message>
 
 	<!-- Live Issues -->
