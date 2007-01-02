@@ -60,14 +60,8 @@ class SectionEditorAction extends Action {
 		);
 
 		if (!HookRegistry::call('SectionEditorAction::recordDecision', array(&$sectionEditorSubmission, $editorDecision))) {
-			if ($decision == SUBMISSION_EDITOR_DECISION_DECLINE) {
-				$sectionEditorSubmission->setStatus(STATUS_DECLINED);
-				$sectionEditorSubmission->stampStatusModified();
-			} else {
-				$sectionEditorSubmission->setStatus(STATUS_QUEUED);		
-				$sectionEditorSubmission->stampStatusModified();
-			}
-		
+			$sectionEditorSubmission->setStatus(STATUS_QUEUED);
+			$sectionEditorSubmission->stampStatusModified();
 			$sectionEditorSubmission->addDecision($editorDecision, $sectionEditorSubmission->getCurrentRound());
 			$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
 
@@ -1747,11 +1741,13 @@ class SectionEditorAction extends Action {
 	 * @param $send boolean
 	 */
 	function emailEditorDecisionComment($sectionEditorSubmission, $send) {
-		$userDao = &DAORegistry::getDAO('UserDAO');
+		$userDao =& DAORegistry::getDAO('UserDAO');
 		$articleCommentDao =& DAORegistry::getDAO('ArticleCommentDAO');
-		$journal = &Request::getJournal();
+		$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
 
-		$user = &Request::getUser();
+		$journal =& Request::getJournal();
+
+		$user =& Request::getUser();
 		import('mail.ArticleMailTemplate');
 		$email = &new ArticleMailTemplate($sectionEditorSubmission);
 	
@@ -1760,6 +1756,17 @@ class SectionEditorAction extends Action {
 		if ($send && !$email->hasErrors()) {
 			HookRegistry::call('SectionEditorAction::emailEditorDecisionComment', array(&$sectionEditorSubmission, &$send));
 			$email->send();
+
+			$decisions = $sectionEditorSubmission->getDecisions();
+			$decision = array_pop($decisions);
+
+			if ($decision && $decision['decision'] == SUBMISSION_EDITOR_DECISION_DECLINE) {
+				// If the most recent decision was a decline,
+				// sending this email archives the submission.
+				$sectionEditorSubmission->setStatus(STATUS_ARCHIVED);
+				$sectionEditorSubmission->stampStatusModified();
+				$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
+			}
 
 			$articleComment =& new ArticleComment();
 			$articleComment->setCommentType(COMMENT_TYPE_EDITOR_DECISION);

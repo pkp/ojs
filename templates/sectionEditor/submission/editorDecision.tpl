@@ -42,7 +42,15 @@
 	<td class="label">{translate key="submission.notifyAuthor"}</td>
 	<td class="value">
 		{url|assign:"notifyAuthorUrl" op="emailEditorDecisionComment" articleId=$submission->getArticleId()}
-		{icon name="mail" url=$notifyAuthorUrl}
+
+		{if $decision == SUBMISSION_EDITOR_DECISION_DECLINE}
+			{* The last decision was a decline; notify the user that sending this message will archive the submission. *}
+			{translate|escape:"quotes"|assign:"confirmString" key="editor.submissionReview.emailWillArchive"}
+			{icon name="mail" url=$notifyAuthorUrl onclick="return confirm('$confirmString')"}
+		{else}
+			{icon name="mail" url=$notifyAuthorUrl}
+		{/if}
+
 		&nbsp;&nbsp;&nbsp;&nbsp;
 		{translate key="submission.editorAuthorRecord"}
 		{if $submission->getMostRecentEditorDecisionComment()}
