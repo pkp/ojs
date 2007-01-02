@@ -269,10 +269,10 @@ class PublishedArticleDAO extends DAO {
 	 * @param $journalId int
 	 * @return Array
 	 */
-	function &getPublishedArticleIdsAlphabetizedByJournal($journalId = null, $rangeInfo = null) {
+	function &getPublishedArticleIdsAlphabetizedByJournal($journalId = null, $useCache = true) {
 		$articleIds = array();
-		
-		$result = &$this->retrieveCached(
+		$functionName = $useCache?'retrieveCached':'retrieve';
+		$result = &$this->$functionName(
 			'SELECT a.article_id AS pub_id FROM published_articles pa, articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE pa.article_id = a.article_id' . (isset($journalId)?' AND a.journal_id = ?':'') . ' ORDER BY a.title',
 			isset($journalId)?$journalId:false
 		);
@@ -297,10 +297,10 @@ class PublishedArticleDAO extends DAO {
 	 * @param $journalId int
 	 * @return Array
 	 */
-	function &getPublishedArticleIdsByJournal($journalId = null, $rangeInfo = null) {
+	function &getPublishedArticleIdsByJournal($journalId = null, $useCache = true) {
 		$articleIds = array();
-		
-		$result = &$this->retrieveCached(
+		$functionName = $useCache?'retrieveCached':'retrieve';
+		$result = &$this->$functionName(
 			'SELECT a.article_id AS pub_id FROM published_articles pa, articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE pa.article_id = a.article_id' . (isset($journalId)?' AND a.journal_id = ?':'') . ' ORDER BY pa.date_published DESC',
 			isset($journalId)?$journalId:false
 		);
