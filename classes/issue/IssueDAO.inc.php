@@ -197,7 +197,10 @@ class IssueDAO extends DAO {
 		$issue->setOpenAccessDate($this->datetimeFromDB($row['open_access_date']));
 		$issue->setDescription($row['description']);
 		$issue->setPublicIssueId($row['public_issue_id']);
-		$issue->setLabelFormat($row['label_format']);
+		$issue->setShowVolume($row['show_volume']);
+		$issue->setShowNumber($row['show_number']);
+		$issue->setShowYear($row['show_year']);
+		$issue->setShowTitle($row['show_title']);
 		$issue->setFileName($row['file_name']);
 		$issue->setWidth($row['width']);
 		$issue->setHeight($row['height']);
@@ -221,9 +224,9 @@ class IssueDAO extends DAO {
 	function insertIssue(&$issue) {
 		$this->update(
 			sprintf('INSERT INTO issues
-				(journal_id, title, volume, number, year, published, current, date_published, date_notified, access_status, open_access_date, description, public_issue_id, label_format, file_name, width, height, original_file_name, cover_page_description, show_cover_page, style_file_name, original_style_file_name)
+				(journal_id, title, volume, number, year, published, current, date_published, date_notified, access_status, open_access_date, description, public_issue_id, show_volume, show_number, show_year, show_title, file_name, width, height, original_file_name, cover_page_description, show_cover_page, style_file_name, original_style_file_name)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, %s, %s, ?, %s, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, %s, %s, ?, %s, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
 				$this->datetimeToDB($issue->getDatePublished()), $this->datetimeToDB($issue->getDateNotified()), $this->datetimeToDB($issue->getOpenAccessDate())),
 			array(
 				$issue->getJournalId(),
@@ -236,7 +239,10 @@ class IssueDAO extends DAO {
 				$issue->getAccessStatus(),
 				$issue->getDescription(),
 				$issue->getPublicIssueId(),
-				$issue->getLabelFormat(),
+				$issue->getShowVolume(),
+				$issue->getShowNumber(),
+				$issue->getShowYear(),
+				$issue->getShowTitle(),
 				$issue->getFileName(),
 				$issue->getWidth(),
 				$issue->getHeight(),
@@ -307,7 +313,10 @@ class IssueDAO extends DAO {
 					description = ?,
 					public_issue_id = ?,
 					access_status = ?,
-					label_format = ?,
+					show_volume = ?,
+					show_number = ?,
+					show_year = ?,
+					show_title = ?,
 					file_name = ?,
 					width = ?,
 					height = ?,
@@ -329,7 +338,10 @@ class IssueDAO extends DAO {
 				$issue->getDescription(),
 				$issue->getPublicIssueId(),
 				$issue->getAccessStatus(),
-				$issue->getLabelFormat(),
+				$issue->getShowVolume(),
+				$issue->getShowNumber(),
+				$issue->getShowYear(),
+				$issue->getShowTitle(),
 				$issue->getFileName(),
 				$issue->getWidth(),
 				$issue->getHeight(),

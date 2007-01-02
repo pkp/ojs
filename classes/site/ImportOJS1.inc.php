@@ -72,7 +72,11 @@ class ImportOJS1 {
 	var $journalConfigInfo;
 	var $journalInfo;
 	var $journalLayoutUserId = 0;
-	var $issueLabelFormat;
+
+	var $showVolume = 0;
+	var $showNumber = 0;
+	var $showYear = 0;
+	var $showTitle = 0;
 	
 	var $userCount = 0;
 	var $issueCount = 0;
@@ -313,12 +317,17 @@ class ImportOJS1 {
 		if ($this->journalInfo['bDiscussion'] && !empty($this->journalInfo['chDiscussionURL'])) {
 			$navItems[] = array('name' => $this->trans('Forum'), 'url' => $this->trans($this->journalInfo['chDiscussionURL']), 'isLiteral' => '1', 'isAbsolute' => '1');
 		}
+
+		$publicationFormatVolume = 1;
+		$publicationFormatNumber = 1;
+		$publicationFormatYear = 1;
+		$publicationFormatTitle = 1;
 		
-		$publicationFormat = ISSUE_LABEL_NUM_VOL_YEAR;
 		if ($this->journalInfo['nSchedulingType'] == 1 && !$this->journalInfo['bPubUseNum']) {
-			$publicationFormat = ISSUE_LABEL_VOL_YEAR;
+			$publicationFormatNumber = 0;
 		} else if($this->journalInfo['nSchedulingType'] == 2) {
-			$publicationFormat = ISSUE_LABEL_YEAR;
+			$publicationFormatVolume = 0;
+			$publicationFormatNumber = 0;
 		}
 		
 		// Journal images
@@ -406,7 +415,10 @@ class ImportOJS1 {
 			'metaType' => array('bool', $this->journalInfo['bMetaType']),
 			'metaTypeExamples' => array('string', $this->trans($this->journalInfo['chDisciplineExamples'])),
 			
-			'publicationFormat' => array('int', $publicationFormat),
+			'publicationFormatVolume' => array('int', $publicationFormatVolume),
+			'publicationFormatNumber' => array('int', $publicationFormatNumber),
+			'publicationFormatYear' => array('int', $publicationFormatYear),
+			'publicationFormatTitle' => array('int', $publicationFormatTitle),
 			'initialVolume' => array('int', $this->journalInfo['nInitVol']),
 			'initialNumber' => array('int', $this->journalInfo['nInitNum']),
 			'initialYear' => array('int', $this->journalInfo['nInitYear']),
@@ -765,11 +777,16 @@ class ImportOJS1 {
 		
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
 		
-		$this->issueLabelFormat = ISSUE_LABEL_NUM_VOL_YEAR;
+		$this->showVolume = 1;
+		$this->showNumber = 1;
+		$this->showYear = 1;
+		$this->showTitle = 1;
+
 		if ($this->journalInfo['nSchedulingType'] == 1 && !$this->journalInfo['bPubUseNum']) {
-			$this->issueLabelFormat = ISSUE_LABEL_VOL_YEAR;
+			$this->showNumber = 0;
 		} else if($this->journalInfo['nSchedulingType'] == 2) {
-			$this->issueLabelFormat = ISSUE_LABEL_YEAR;
+			$this->showVolume = 0;
+			$this->showNumber = 0;
 		}
 		
 		$result = &$this->importDao->retrieve('SELECT * FROM tblissues ORDER BY bPublished DESC, bLive ASC, nYear ASC, nVolume ASC, nNumber ASC');
@@ -786,7 +803,7 @@ class ImportOJS1 {
 			$issue->setCurrent($row['bLive']);
 			if (isset($row['dtDatePublished'])) {
 				$issue->setDatePublished($row['dtDatePublished']);
-			} elseif (isset($row['nYear']) && isset($row['nNumber']) && ($row['nNumber'] <= 31)) {
+			} elseif (isset($row['nYear']) && isset($row['nNumber']) && ($row['nNumber'] >= 1) && ($row['nNumber'] <= 31)) {
 				$issue->setDatePublished($row['nYear'] . '-' . $row['nNumber'] . '-1');
 			} elseif (isset($row['nYear'])) {
 				$issue->setDatePublished($row['nYear'] . '-1-1');
@@ -795,7 +812,10 @@ class ImportOJS1 {
 			}
 			$issue->setAccessStatus(OPEN_ACCESS);
 			$issue->setOpenAccessDate(isset($row['dtDateOpenAccess']) ? $row['dtDateOpenAccess'] : null);
-			$issue->setLabelFormat($this->issueLabelFormat);
+			$issue->setShowVolume($this->showVolume);
+			$issue->setShowNumber($this->showNumber);
+			$issue->setShowYear($this->showYear);
+			$issue->setShowTitle($this->showTitle);
 			$issue->setDescription('');
 			$issue->setShowCoverPage(0);
 			
@@ -805,8 +825,8 @@ class ImportOJS1 {
 			$result->MoveNext();
 		}
 		$result->Close();
-		
-		if ($this->issueLabelFormat == ISSUE_LABEL_YEAR) {
+
+		if (!$this->showVolume && !$this->showNumber && $this->showYear) {		
 			// Insert issues for each year in "publish by year" mode
 			$result = &$this->importDao->retrieve('SELECT DISTINCT(DATE_FORMAT(dtDatePublished, \'%Y\')) FROM tblarticles WHERE bPublished = 1 ORDER BY year');
 			while (!$result->EOF) {
@@ -822,7 +842,10 @@ class ImportOJS1 {
 				$issue->setDatePublished($year . '-01-01');
 				$issue->setAccessStatus(OPEN_ACCESS);
 				$issue->setOpenAccessDate(null);
-				$issue->setLabelFormat($this->issueLabelFormat);
+				$issue->setShowVolume($this->showVolume);
+				$issue->setShowNumber($this->showNumber);
+				$issue->setShowYear($this->showYear);
+				$issue->setShowTitle($this->showTitle);
 				
 				$result->MoveNext();
 			
@@ -1009,7 +1032,7 @@ class ImportOJS1 {
 				'reviewId' => array()
 			);
 			
-			if (empty($row['fkIssueID']) && $row['bPublished'] && $row['dtDatePublished'] && $this->issueLabelFormat == ISSUE_LABEL_YEAR) {
+			if (empty($row['fkIssueID']) && $row['bPublished'] && $row['dtDatePublished'] && !$this->showVolume && !$this->showNumber && $this->showYear) {
 				$row['fkIssueID'] = 'YEAR' . date('Y', strtotime($row['dtDatePublished']));
 			}
 			

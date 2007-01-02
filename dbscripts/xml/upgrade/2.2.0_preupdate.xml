@@ -21,4 +21,36 @@
 			ALTER TABLE subscription_types ADD COLUMN currency_code_alpha VARCHAR(3)
 		</query>
 	</sql>
+
+	<!-- Bug #2291: Change from existing issue identification to more flexible 
+	     issue identification. -->
+	<sql>
+		<!-- Syntax for MySQL. -->
+		<query driver="mysql">
+			ALTER TABLE issues ADD COLUMN show_volume TINYINT NOT NULL DEFAULT 0
+		</query>
+		<query driver="mysql">
+			ALTER TABLE issues ADD COLUMN show_number TINYINT NOT NULL DEFAULT 0
+		</query>
+		<query driver="mysql">
+			ALTER TABLE issues ADD COLUMN show_year TINYINT NOT NULL DEFAULT 0
+		</query>
+		<query driver="mysql">
+			ALTER TABLE issues ADD COLUMN show_title TINYINT NOT NULL DEFAULT 0
+		</query>
+
+		<!-- Syntax for PostgreSQL. -->
+		<query driver="postgres7">
+			ALTER TABLE issues ADD COLUMN show_volume SMALLINT NOT NULL DEFAULT 0
+		</query>
+		<query driver="postgres7">
+			ALTER TABLE issues ADD COLUMN show_number SMALLINT NOT NULL DEFAULT 0
+		</query>
+		<query driver="postgres7">
+			ALTER TABLE issues ADD COLUMN show_year SMALLINT NOT NULL DEFAULT 0
+		</query>
+		<query driver="postgres7">
+			ALTER TABLE issues ADD COLUMN show_title SMALLINT NOT NULL DEFAULT 0
+		</query>
+	</sql>
 </data>

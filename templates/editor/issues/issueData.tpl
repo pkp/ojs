@@ -54,7 +54,7 @@
 	</tr>
 	<tr valign="top">
 		<td class="label">{fieldLabel name="labelFormat" key="editor.issues.issueIdentification"}</td>
-		<td class="value"><select name="labelFormat" id="labelFormat" class="selectMenu">{html_options options=$labelOptions selected=$labelFormat}</select></td>
+		<td class="value"><input type="checkbox" name="showVolume" id="showVolume" value="1"{if $showVolume} checked="checked"{/if} /><label for="showVolume"> {translate key="issue.volume"}</label><br /><input type="checkbox" name="showNumber" id="showNumber" value="1"{if $showNumber} checked="checked"{/if} /><label for="showNumber"> {translate key="issue.number"}</label><br /><input type="checkbox" name="showYear" id="showYear" value="1"{if $showYear} checked="checked"{/if} /><label for="showYear"> {translate key="issue.year"}</label><br /><input type="checkbox" name="showTitle" id="showTitle" value="1"{if $showTitle} checked="checked"{/if} /><label for="showTitle"> {translate key="issue.title"}</label></td>
 	</tr>
 	{if $enablePublicIssueId}
 	<tr valign="top">

@@ -488,7 +488,19 @@
 		<field name="open_access_date" type="T"/>
 		<field name="description" type="X"/>
 		<field name="public_issue_id" type="C2" size="255"/>
-		<field name="label_format" type="I1">
+		<field name="show_volume" type="I1">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
+		<field name="show_number" type="I1">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
+		<field name="show_year" type="I1">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
+		<field name="show_title" type="I1">
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
 		</field>

@@ -125,18 +125,30 @@ class NativeImportDom {
 
 		switch(($value = $issueNode->getAttribute('identification'))) {
 			case 'num_vol_year':
-				$issue->setLabelFormat(ISSUE_LABEL_NUM_VOL_YEAR);
+				$issue->setShowVolume(1);
+				$issue->setShowNumber(1);
+				$issue->setShowYear(1);
+				$issue->setShowTitle(0);
 				break;
 			case 'vol_year':
-				$issue->setLabelFormat(ISSUE_LABEL_VOL_YEAR);
+				$issue->setShowVolume(1);
+				$issue->setShowNumber(0);
+				$issue->setShowYear(1);
+				$issue->setShowTitle(0);
 				break;
 			case 'year':
-				$issue->setLabelFormat(ISSUE_LABEL_YEAR);
+				$issue->setShowVolume(0);
+				$issue->setShowNumber(0);
+				$issue->setShowYear(1);
+				$issue->setShowTitle(0);
 				break;
 			case 'title':
 			case '':
 			case null:
-				$issue->setLabelFormat(ISSUE_LABEL_TITLE);
+				$issue->setShowVolume(0);
+				$issue->setShowNumber(0);
+				$issue->setShowYear(0);
+				$issue->setShowTitle(1);
 				break;
 			default:
 				$errors[] = array('plugins.importexport.native.import.error.unknownIdentificationType', array('identificationType' => $value, 'issueTitle' => $issue->getTitle()));

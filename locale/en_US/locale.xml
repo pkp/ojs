@@ -1030,12 +1030,11 @@ Note that if your site administrator has already registered this site with the P
 	<message key="manager.setup.publicationSchedule">Publication Schedule</message>
 	<message key="manager.setup.publicationScheduleDescription"><![CDATA[Journal items can be published collectively, as part of an issue with its own Table of Contents. Alternatively, individual items can be published as soon as they are ready, by adding them to the "current" volume's Table of Contents. Provide readers, in About the Journal, with a statement about the system this journal will use and its expected frequency of publication.]]></message>
 	<message key="manager.setup.publicationFormat">Format</message>
-	<message key="manager.setup.publicationFormatDescription">Select the default format for identifying journal issues and/or volumes. The format can be overridden for individual issues.</message>
-	<message key="manager.setup.publicationFormatIssue">Volume, issue, and year</message>
-	<message key="manager.setup.publicationFormatVolume">Volume and year</message>
+	<message key="manager.setup.publicationFormatDescription">The journal will use the following elements to identify issues (which can be overridden for individual issues).</message>
+	<message key="manager.setup.publicationFormatNumber">Number</message>
+	<message key="manager.setup.publicationFormatVolume">Volume</message>
 	<message key="manager.setup.publicationFormatYear">Year</message>
-	<message key="manager.setup.publicationFormatTitle">Custom issue title</message>
-	<message key="manager.setup.publicationFormatTitleDescription">Note: While a title can be added to any issue, with this final option, the issue is identified by its title alone (if OJS is used, for example, for a set of edited volumes).</message>
+	<message key="manager.setup.publicationFormatTitle">Title</message>
 	<message key="manager.setup.initialIssue">Initial issue</message>
 	<message key="manager.setup.initialIssueDescription">Depending on the format selected, identify the issue, volume, and/or year of the first issue to be published with OJS:</message>
 	<message key="manager.setup.frequencyOfPublication">Starting Point and Frequency</message>
@@ -1498,14 +1497,11 @@ You may optionally provide the user with a reason for disabling their account.</
 	<message key="editor.issues.unpublished">Unpublished</message>
 
 	<!-- Create Issue / Issue Data -->
-	<message key="editor.issues.volumeRequired">Volume is required for the issue.</message>
-	<message key="editor.issues.numberRequired">Number is required for the issue.</message>
-	<message key="editor.issues.yearRequired">Year is required for the issue.</message>
-	<message key="editor.issues.labelFormatRequired">A valid label format must be selected.</message>
-	<message key="editor.issues.labelOption1">Volume, Number, Year</message>
-	<message key="editor.issues.labelOption2">Volume, Year</message>
-	<message key="editor.issues.labelOption3">Year</message>
-	<message key="editor.issues.labelOption4">Title only</message>
+	<message key="editor.issues.volumeRequired">Volume is required and must be a positive, numeric value.</message>
+	<message key="editor.issues.numberRequired">Number is required and must be a positive, numeric value.</message>
+	<message key="editor.issues.yearRequired">Year is required and must be a positive, numeric value.</message>
+	<message key="editor.issues.titleRequired">Title is required for the issue.</message>
+	<message key="editor.issues.issueIdentificationRequired">Issue identification is required. Please select at least one of the issue identification options.</message>
 	<message key="editor.issues.issueIdentification">Issue identification</message>
 	<message key="editor.issues.publicIssueIdentifier">Public issue identifier</message>
 	<message key="editor.issues.description">Description</message>

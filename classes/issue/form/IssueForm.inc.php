@@ -14,7 +14,7 @@
  */
 
 import('form.Form');
-import('issue.Issue'); // Bring in ISSUE_LABEL_... constants
+import('issue.Issue'); // Bring in constants
 
 class IssueForm extends Form {
 
@@ -23,7 +23,6 @@ class IssueForm extends Form {
 	 */
 	function IssueForm($template) {
 		parent::Form($template);
-		$this->addCheck(new FormValidatorInSet($this, 'labelFormat', 'required', 'editor.issues.labelFormatRequired', array(ISSUE_LABEL_NUM_VOL_YEAR, ISSUE_LABEL_VOL_YEAR, ISSUE_LABEL_YEAR, ISSUE_LABEL_TITLE)));
 	}
 	
 	/**
@@ -42,14 +41,6 @@ class IssueForm extends Form {
 		$accessOptions[SUBSCRIPTION] = Locale::Translate('editor.issues.subscription');
 		$templateMgr->assign('accessOptions', $accessOptions);
 
-		// set up the label options pulldown
-		$labelOptions = array();
-		$labelOptions[ISSUE_LABEL_NUM_VOL_YEAR] = Locale::Translate('editor.issues.labelOption1');
-		$labelOptions[ISSUE_LABEL_VOL_YEAR] = Locale::Translate('editor.issues.labelOption2');
-		$labelOptions[ISSUE_LABEL_YEAR] = Locale::Translate('editor.issues.labelOption3');
-		$labelOptions[ISSUE_LABEL_TITLE] = Locale::Translate('editor.issues.labelOption4');
-		$templateMgr->assign('labelOptions', $labelOptions);
-
 		$templateMgr->assign('enablePublicIssueId', $journal->getSetting('enablePublicIssueId'));
 
 		parent::display();	
@@ -59,13 +50,20 @@ class IssueForm extends Form {
 	 * Validate the form
 	 */
 	function validate($issueId = 0) {
-		switch ($this->getData('labelFormat')) {
-			case ISSUE_LABEL_NUM_VOL_YEAR:
-				$this->addCheck(new FormValidator($this, 'number', 'required', 'editor.issues.numberRequired'));
-			case ISSUE_LABEL_VOL_YEAR:
-				$this->addCheck(new FormValidator($this, 'volume', 'required', 'editor.issues.volumeRequired'));
-			case ISSUE_LABEL_YEAR:
-				$this->addCheck(new FormValidator($this, 'year', 'required', 'editor.issues.yearRequired'));
+		if ($this->getData('showVolume')) {
+			$this->addCheck(new FormValidatorCustom($this, 'volume', 'required', 'editor.issues.volumeRequired', create_function('$volume', 'return ($volume > 0);')));
+		}
+
+		if ($this->getData('showNumber')) {
+			$this->addCheck(new FormValidatorCustom($this, 'number', 'required', 'editor.issues.numberRequired', create_function('$number', 'return ($number > 0);')));
+		}
+
+		if ($this->getData('showYear')) {
+			$this->addCheck(new FormValidatorCustom($this, 'year', 'required', 'editor.issues.yearRequired', create_function('$year', 'return ($year > 0);')));
+		}
+
+		if ($this->getData('showTitle')) {
+			$this->addCheck(new FormValidator($this, 'title', 'required', 'editor.issues.titleRequired'));
 		}
 
 		// check if public issue ID has already used
@@ -147,7 +145,10 @@ class IssueForm extends Form {
 				'Date_Month' => $openAccessDate['mon'],
 				'Date_Day' => $openAccessDate['mday'],
 				'Date_Year' => $openAccessDate['year'],
-				'labelFormat' => $issue->getLabelFormat(),
+				'showVolume' => $issue->getShowVolume(),
+				'showNumber' => $issue->getShowNumber(),
+				'showYear' => $issue->getShowYear(),
+				'showTitle' => $issue->getShowTitle(),
 				'fileName' => $issue->getFileName(),
 				'originalFileName' => $issue->getOriginalFileName(),
 				'coverPageDescription' => $issue->getCoverPageDescription(),
@@ -159,8 +160,15 @@ class IssueForm extends Form {
 			
 		} else {
 			$journal = &Request::getJournal();
-			$labelFormat = $journal->getSetting('publicationFormat');
-			$this->setData('labelFormat', $labelFormat);
+			$showVolume = $journal->getSetting('publicationFormatVolume');
+			$showNumber = $journal->getSetting('publicationFormatNumber');
+			$showYear = $journal->getSetting('publicationFormatYear');
+			$showTitle = $journal->getSetting('publicationFormatTitle');
+
+			$this->setData('showVolume', $showVolume);
+			$this->setData('showNumber', $showNumber);
+			$this->setData('showYear', $showYear);
+			$this->setData('showTitle', $showTitle);
 
 			// set up the default values for volume, number and year
 			$issueDao = &DAORegistry::getDAO('IssueDAO');
@@ -172,35 +180,37 @@ class IssueForm extends Form {
 				$number = $issue->getNumber();
 				$volume = $issue->getVolume();
 				$year = $issue->getYear();
-			
-				switch ($labelFormat) {
-					case ISSUE_LABEL_TITLE:
-						$year = $volume = $number = 0;
-						break;
-					case ISSUE_LABEL_YEAR:
-						$volume = $number = 0;
-						$year++;
-						break;
-					case ISSUE_LABEL_VOL_YEAR:
-						$number = 0;
+
+				if ($showVolume && $showNumber && $showYear) {
+					$number++;
+					if ($issuePerVolume && $number > $issuePerVolume) {
+						$number = 1;
 						$volume++;
 						if ($volumePerYear && $volume > $volumePerYear) {
 							$volume = 1;
 							$year++;
 						}
-						break;
-					case ISSUE_LABEL_NUM_VOL_YEAR:
-						$number++;
-						if ($issuePerVolume && $number > $issuePerVolume) {
-							$number = 1;
-							$volume++;
-							if ($volumePerYear && $volume > $volumePerYear) {
-								$volume = 1;
-								$year++;
-							}
-						}
-						break;
-				}
+					}
+				} elseif ($showVolume && $showNumber) {
+					$number++;
+					if ($issuePerVolume && $number > $issuePerVolume) {
+						$number = 1;
+						$volume++;
+					}
+				} elseif ($showVolume && $showYear) {
+					$number = 0;
+					$volume++;
+					if ($volumePerYear && $volume > $volumePerYear) {
+						$volume = 1;
+						$year++;
+					}
+				} elseif ($showYear) {
+					$volume = $number = 0;
+					$year++;
+				} else {
+					$year = $volume = $number = 0;
+				} 
+
 
 			} else {
 				$volume = $journal->getSetting('initialVolume');
@@ -217,7 +227,10 @@ class IssueForm extends Form {
 
 
 			$this->_data = array(
-				'labelFormat' => $labelFormat,
+				'showVolume' => $showVolume,
+				'showNumber' => $showNumber,
+				'showYear' => $showYear,
+				'showTitle' => $showTitle,
 				'volume' => $volume,
 				'number' => $number,
 				'year' => $year,
@@ -242,7 +255,10 @@ class IssueForm extends Form {
 			'Date_Month',
 			'Date_Day',
 			'Date_Year',
-			'labelFormat',
+			'showVolume',
+			'showNumber',
+			'showYear',
+			'showTitle',
 			'fileName',
 			'originalFileName',
 			'coverPageDescription',
@@ -251,6 +267,9 @@ class IssueForm extends Form {
 			'styleFileName',
 			'originalStyleFileName'
 		));
+
+		$this->addCheck(new FormValidatorCustom($this, 'showVolume', 'required', 'editor.issues.issueIdentificationRequired', create_function('$showVolume, $showNumber, $showYear, $showTitle', 'return $showVolume || $showNumber || $showYear || $showTitle ? true : false;'), array($this->getData('showNumber'), $this->getData('showYear'), $this->getData('showTitle'))));
+
 	}
 	
 	/**
@@ -270,6 +289,11 @@ class IssueForm extends Form {
 		$number = $this->getData('number');
 		$year = $this->getData('year');
 
+		$showVolume = $this->getData('showVolume');
+		$showNumber = $this->getData('showNumber');
+		$showYear = $this->getData('showYear');
+		$showTitle = $this->getData('showTitle');
+
 		$issue->setJournalId($journal->getJournalId());
 		$issue->setTitle($this->getData('title'));
 		$issue->setVolume(empty($volume) ? 0 : $volume);
@@ -277,7 +301,10 @@ class IssueForm extends Form {
 		$issue->setYear(empty($year) ? 0 : $year);
 		$issue->setDescription($this->getData('description'));
 		$issue->setPublicIssueId($this->getData('publicIssueId'));
-		$issue->setLabelFormat($this->getData('labelFormat'));
+		$issue->setShowVolume(empty($showVolume) ? 0 : $showVolume);
+		$issue->setShowNumber(empty($showNumber) ? 0 : $showNumber);
+		$issue->setShowYear(empty($showYear) ? 0 : $showYear);
+		$issue->setShowTitle(empty($showTitle) ? 0 : $showTitle);
 		$issue->setCoverPageDescription($this->getData('coverPageDescription'));
 		$issue->setShowCoverPage((int)$this->getData('showCoverPage'));
 

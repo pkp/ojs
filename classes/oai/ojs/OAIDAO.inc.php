@@ -124,7 +124,10 @@ class OAIDAO extends DAO {
 			i.volume AS issue_volume,
 			i.number AS issue_number,
 			i.year AS issue_year,
-			i.label_format AS issue_label_format
+			i.show_volume AS issue_show_volume,
+			i.show_number AS issue_show_number,
+			i.show_year AS issue_show_year,
+			i.show_title AS issue_show_title
 			FROM published_articles pa, issues i, journals j, articles a
 			LEFT JOIN sections s ON s.section_id = a.section_id
 			WHERE pa.article_id = a.article_id AND j.journal_id = a.journal_id
@@ -178,7 +181,10 @@ class OAIDAO extends DAO {
 			i.volume AS issue_volume,
 			i.number AS issue_number,
 			i.year AS issue_year,
-			i.label_format AS issue_label_format
+			i.show_volume AS issue_show_volume,
+			i.show_number AS issue_show_number,
+			i.show_year AS issue_show_year,
+			i.show_title AS issue_show_title
 			FROM published_articles pa, issues i, journals j, articles a
 			LEFT JOIN sections s ON s.section_id = a.section_id
 			WHERE pa.article_id = a.article_id AND j.journal_id = a.journal_id
@@ -351,24 +357,33 @@ class OAIDAO extends DAO {
 	
 	// FIXME Common code with issue.Issue
 	function _formatIssueId(&$row) {
-		switch ($row['issue_label_format']) {
-			case ISSUE_LABEL_VOL_YEAR:
-				$vol = $row['issue_volume'];
-				$year = $row['issue_year'];
-				$volLabel = Locale::translate('issue.vol');
-				return "$volLabel $vol ($year)";
-			case ISSUE_LABEL_YEAR:
-				return $row['issue_year'];
-			case ISSUE_LABEL_TITLE:
-				return $row['issue_title'];
-			case ISSUE_LABEL_NUM_VOL_YEAR:
-			default:
-				$num = $row['issue_number'];
-				$vol = $row['issue_volume'];
-				$year = $row['issue_year'];
-				$volLabel = Locale::translate('issue.vol');
-				$numLabel = Locale::translate('issue.no');
-				return "$volLabel $vol, $numLabel $num ($year)";
+		$showVolume = $row['issue_show_volume'];
+		$showNumber = $row['issue_show_number'];
+		$showYear = $row['issue_show_year'];
+		$showTitle = $row['issue_show_title'];
+		$identification = '';
+
+		if ($showVolume) {
+			$identification = "$volLabel $vol";
+		}
+		if ($showNumber) {
+			if ($identification != '') {
+				$identification .= ", ";
+			}
+			$identification .= "$numLabel $num";
+		}
+		if ($showYear) {
+			if ($identification != '') {
+				$identification .= " ($year)";
+			} else {
+				$identification = "$year";
+			}
+		}
+		if ($showTitle) {
+			if ($identification != '') {
+				$identification .= ' ';
+			}
+			$identification .= "$title";
 		}
 	}
 	

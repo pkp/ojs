@@ -17,11 +17,6 @@ define('ISSUE_DEFAULT', 0);
 define('OPEN_ACCESS', 1);
 define('SUBSCRIPTION', 2);
 
-define('ISSUE_LABEL_NUM_VOL_YEAR', 1);
-define('ISSUE_LABEL_VOL_YEAR', 2);
-define('ISSUE_LABEL_YEAR', 3);
-define('ISSUE_LABEL_TITLE', 4);
-
 class Issue extends DataObject {
 	/**
 	 * get issue id
@@ -248,19 +243,67 @@ class Issue extends DataObject {
 	}
 
 	/**
-	 * get label format
+	 * get show issue volume 
 	 * @return int
 	 */
-	function getLabelFormat() {
-		return $this->getData('labelFormat');
+	function getShowVolume() {
+		return $this->getData('showVolume');
 	}
 	 
 	/**
-	 * set label format
-	 * @param $labelFormat int
+	 * set show issue volume 
+	 * @param $showVolume int
 	 */
-	function setLabelFormat($labelFormat) {
-		return $this->setData('labelFormat',$labelFormat);
+	function setShowVolume($showVolume) {
+		return $this->setData('showVolume',$showVolume);
+	}
+
+	/**
+	 * get show issue number 
+	 * @return int
+	 */
+	function getShowNumber() {
+		return $this->getData('showNumber');
+	}
+	 
+	/**
+	 * set show issue number 
+	 * @param $showNumber int
+	 */
+	function setShowNumber($showNumber) {
+		return $this->setData('showNumber',$showNumber);
+	}
+
+	/**
+	 * get show issue year 
+	 * @return int
+	 */
+	function getShowYear() {
+		return $this->getData('showYear');
+	}
+	 
+	/**
+	 * set show issue year 
+	 * @param $showYear int
+	 */
+	function setShowYear($showYear) {
+		return $this->setData('showYear',$showYear);
+	}
+
+	/**
+	 * get show issue title 
+	 * @return int
+	 */
+	function getShowTitle() {
+		return $this->getData('showTitle');
+	}
+	 
+	/**
+	 * set show issue title 
+	 * @param $showTitle int
+	 */
+	function setShowTitle($showTitle) {
+		return $this->setData('showTitle',$showTitle);
 	}
 
 	/**
@@ -417,37 +460,54 @@ class Issue extends DataObject {
 	 */
 	function getIssueIdentification($default = false, $breadcrumb = false, $long = false) {
 
-		$labelFormat = $default ? 1 : $this->getData('labelFormat');
-		
+		if ($default) {
+			$showVolume = 1;
+			$showNumber = 1;
+			$showYear = 1;
+			$showTitle = 0;
+		} else {
+			$showVolume = $this->getData('showVolume');
+			$showNumber = $this->getData('showNumber');
+			$showYear = $this->getData('showYear');
+			$showTitle = $this->getData('showTitle');
+		}
+
 		$volLabel = Locale::translate('issue.vol');
 		$numLabel = Locale::translate('issue.no');
+
 		$vol = $this->getData('volume');
 		$num = $this->getData('number');
 		$year = $this->getData('year');
 		$title = $this->getData('title');
 
-		switch($labelFormat) {
-			case ISSUE_LABEL_NUM_VOL_YEAR:
-				$identification = "$volLabel $vol, $numLabel $num ($year)";
-				//$breadcrumbId = "$vol.$num ($year)";
-				break;
-			case ISSUE_LABEL_VOL_YEAR:
-				$identification = "$volLabel $vol ($year)";
-				//$breadcrumbId = "$vol ($year)";
-				break;
-			case ISSUE_LABEL_YEAR:
+		$identification = '';
+
+		if ($showVolume) {
+			$identification = "$volLabel $vol";
+		}
+		if ($showNumber) {
+			if ($identification != '') {
+				$identification .= ", ";
+			}
+			$identification .= "$numLabel $num";
+		}
+		if ($showYear) {
+			if ($identification != '') {
+				$identification .= " ($year)";
+			} else {
 				$identification = "$year";
-				//$breadcrumbId = "$year";
-				break;
-			case ISSUE_LABEL_TITLE:
-				$identification = "$title";
-				//$breadcrumbId = "$vol.$num ($year)";
-				break;
+			}
+		}
+		if ($showTitle) {
+			if ($identification != '') {
+				$identification .= ' ';
+			}
+			$identification .= "$title";
 		}
 		
 		$breadcrumbId = $identification;
 		
-		if ($long && $labelFormat != ISSUE_LABEL_TITLE && !empty($title)) {
+		if ($long && !$showTitle && !empty($title)) {
 			$identification .= ' ' . $title;
 		}
 

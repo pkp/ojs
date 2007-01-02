@@ -20,10 +20,12 @@
 	</upgrade>
 
 	<!-- #2424: Make sure currencies are maintained as table is dropped -->
+	<!-- #2291: Migrate issue label column values and settings -->
 	<upgrade minversion="2.0.0.0" maxversion="2.1.1.0">
 		<!-- 2.0.x to 2.2.0 -->
 		<data file="upgrade/2.2.0_preupdate.xml"/>
 		<code function="correctCurrencies"/>
+		<code function="migrateIssueLabelAndSettings"/>
 	</upgrade>
 
 

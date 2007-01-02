@@ -155,23 +155,21 @@ function toggleRegAllowOpts(form) {
 
 <table width="100%" class="data">
 	<tr valign="top">
-		<td width="5%" class="label"><input type="radio" name="publicationFormat" id="publicationFormat-1" value="1"{if (!$publicationFormat || $publicationFormat == 1)} checked="checked"{/if} /></td>
-		<td width="95%" class="value"><label for="publicationFormat-1">{translate key="manager.setup.publicationFormatIssue"}</label></td>
+		<td width="5%" class="label"><input type="checkbox" name="publicationFormatVolume" id="publicationFormatVolume" value="1"{if ($publicationFormatVolume)} checked="checked"{/if} /></td>
+		<td width="95%" class="value"><label for="publicationFormatVolume">{translate key="manager.setup.publicationFormatVolume"}</label></td>
 	</tr>
 	<tr valign="top">
-		<td width="5%" class="label"><input type="radio" name="publicationFormat" id="publicationFormat-2" value="2"{if ($publicationFormat == 2)} checked="checked"{/if} /></td>
-		<td width="95%" class="value"><label for="publicationFormat-2">{translate key="manager.setup.publicationFormatVolume"}</label></td>
+		<td width="5%" class="label"><input type="checkbox" name="publicationFormatNumber" id="publicationFormatNumber" value="1"{if ($publicationFormatNumber)} checked="checked"{/if} /></td>
+		<td width="95%" class="value"><label for="publicationFormatNumber">{translate key="manager.setup.publicationFormatNumber"}</label></td>
 	</tr>
 	<tr valign="top">
-		<td width="5%" class="label"><input type="radio" name="publicationFormat" id="publicationFormat-3" value="3"{if ($publicationFormat == 3)} checked="checked"{/if} /></td>
-		<td width="95%" class="value"><label for="publicationFormat-3">{translate key="manager.setup.publicationFormatYear"}</label></td>
+		<td width="5%" class="label"><input type="checkbox" name="publicationFormatYear" id="publicationFormatYear" value="1"{if ($publicationFormatYear)} checked="checked"{/if} /></td>
+		<td width="95%" class="value"><label for="publicationFormatYear">{translate key="manager.setup.publicationFormatYear"}</label></td>
 	</tr>
 	<tr valign="top">
-		<td width="5%" class="label"><input type="radio" name="publicationFormat" id="publicationFormat-4" value="4"{if ($publicationFormat == 4)} checked="checked"{/if} /></td>
+		<td width="5%" class="label"><input type="checkbox" name="publicationFormatTitle" id="publicationFormatTitle" value="1"{if ($publicationFormatTitle)} checked="checked"{/if} /></td>
 		<td width="95%" class="value">
-			<label for="publicationFormat-4">{translate key="manager.setup.publicationFormatTitle"}</label>
-			<br />
-			<span class="instruct">{translate key="manager.setup.publicationFormatTitleDescription"}</span>
+			<label for="publicationFormat">{translate key="manager.setup.publicationFormatTitle"}</label>
 		</td>
 	</tr>
 </table>
