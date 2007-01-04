@@ -48,19 +48,33 @@ class PhpAdsNewSettingsForm extends Form {
 		$journalId = $this->journalId;
 		$plugin =& $this->plugin;
 
-		$templateMgr = &TemplateManager::getManager();
-
 		$this->setData('ads', $this->phpAdsNewConnection->getAds());
 		$this->setData('headerAdId', $plugin->getSetting($journalId, 'headerAdId'));
+		$this->setData('headerAdOrientation', $plugin->getSetting($journalId, 'headerAdOrientation'));
 		$this->setData('sidebarAdId', $plugin->getSetting($journalId, 'sidebarAdId'));
 		$this->setData('contentAdId', $plugin->getSetting($journalId, 'contentAdId'));
+	}
+
+	/**
+	 * Display the form.
+	 */
+	function display() {
+		$templateMgr = &TemplateManager::getManager();
+
+		$templateMgr->assign('orientationOptions', array(
+			AD_ORIENTATION_LEFT => 'plugins.generic.phpadsnew.orientation.left',
+			AD_ORIENTATION_CENTRE => 'plugins.generic.phpadsnew.orientation.centre',
+			AD_ORIENTATION_RIGHT => 'plugins.generic.phpadsnew.orientation.right'
+		));
+
+		parent::display();
 	}
 
 	/**
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->readUserVars(array('headerAdId', 'contentAdId', 'sidebarAdId'));
+		$this->readUserVars(array('headerAdId', 'headerAdOrientation', 'contentAdId', 'sidebarAdId'));
 	}
 
 	/**
@@ -72,6 +86,7 @@ class PhpAdsNewSettingsForm extends Form {
 
 		$plugin->updateSetting($journalId, 'headerAdHtml', $this->phpAdsNewConnection->getAdHtml($this->getData('headerAdId')));
 		$plugin->updateSetting($journalId, 'headerAdId', $this->getData('headerAdId'));
+		$plugin->updateSetting($journalId, 'headerAdOrientation', $this->getData('headerAdOrientation'));
 
 		$plugin->updateSetting($journalId, 'contentAdHtml', $this->phpAdsNewConnection->getAdHtml($this->getData('contentAdId')));
 		$plugin->updateSetting($journalId, 'contentAdId', $this->getData('contentAdId'));

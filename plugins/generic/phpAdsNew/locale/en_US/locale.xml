@@ -26,4 +26,8 @@
 	<message key="plugins.generic.phpadsnew.headerAd">Header Ad</message>
 	<message key="plugins.generic.phpadsnew.contentAd">Content Ad</message>
 	<message key="plugins.generic.phpadsnew.sidebarAd">Sidebar Ad</message>
+
+	<message key="plugins.generic.phpadsnew.orientation.left">Left</message>
+	<message key="plugins.generic.phpadsnew.orientation.centre">Centre</message>
+	<message key="plugins.generic.phpadsnew.orientation.right">Right</message>
 </locale>

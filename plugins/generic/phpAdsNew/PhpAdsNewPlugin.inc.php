@@ -13,6 +13,10 @@
  * $Id: CounterPlugin.inc.php,v 1.0 2006/10/20 12:28pm
  */
 
+define ('AD_ORIENTATION_LEFT',		1);
+define ('AD_ORIENTATION_RIGHT',		2);
+define ('AD_ORIENTATION_CENTRE',	3);
+
 import('classes.plugins.GenericPlugin');
 
 class PhpAdsNewPlugin extends GenericPlugin {
@@ -78,17 +82,35 @@ class PhpAdsNewPlugin extends GenericPlugin {
 		$headerAdHtml = $contentAdHtml = '';
 		if ($journal) {
 			$headerAdHtml = $this->getSetting($journal->getJournalId(), 'headerAdHtml');
+			$headerAdOrientation = $this->getSetting($journal->getJournalId(), 'headerAdOrientation');
 			$contentAdHtml = $this->getSetting($journal->getJournalId(), 'contentAdHtml');
 		}
 
 		// Look for the first <h1> tag and insert the header ad.
 		if (!empty($headerAdHtml)) {
 			if (($index = strpos($output, '<h1>')) !== false) {
+				$smarty->unregister_outputfilter('mainOutputFilter');
 				$newOutput = substr($output, 0, $index);
-				$newOutput .= $headerAdHtml;
+				switch ($headerAdOrientation) {
+					case AD_ORIENTATION_CENTRE:
+						$newOutput .= '<center>';
+						$newOutput .= $headerAdHtml;
+						$newOutput .= '</center>';
+						break;
+					case AD_ORIENTATION_RIGHT:
+						$newOutput .= '<span style="float: right">';
+						$newOutput .= $headerAdHtml;
+						$newOutput .= '</span>';
+						break;
+					case AD_ORIENTATION_LEFT:
+					default:
+						$newOutput .= $headerAdHtml;
+						break;
+				}
 				$newOutput .= substr($output, $index);
 				$output =& $newOutput;
 			} else if (($index = strpos($output, '<h2>')) !== false) {
+				$smarty->unregister_outputfilter('mainOutputFilter');
 				$newOutput = substr($output, 0, $index);
 				$newOutput .= $headerAdHtml;
 				$newOutput .= substr($output, $index);
@@ -120,12 +142,19 @@ class PhpAdsNewPlugin extends GenericPlugin {
 		// Get the ad settings.
 		$sidebarAdHtml = $this->getSetting($journal->getJournalId(), 'sidebarAdHtml');
 
-		// Look for the last </div> tag and insert the sidebar ad.
-		$index = strrpos($output, '</div>');
+		$index = strrpos($output, '<span class="blockTitle">' . Locale::translate('navigation.user') . '</span>');
+		if ($index !== false) {
+			$blockNecessary = true;
+		} else {
+			$index = strrpos($output, '<h5>' . Locale::translate('rt.readingTools') . '</h5>');
+			$blockNecessary = false;
+		}
 		if ($index !== false && !empty($sidebarAdHtml)) {
 			$newOutput = substr($output, 0, $index);
+			if ($blockNecessary) $newOutput .= '<div class="block">';
 			$newOutput .= $sidebarAdHtml;
 			$newOutput .= substr($output, $index);
+			if ($blockNecessary) $newOutput .= '</div>';
 			$output =& $newOutput;
 		}
 		$smarty->unregister_outputfilter('sidebarOutputFilter');

@@ -30,6 +30,11 @@
 				{foreach from=$ads item=ad}
 					<option {if $headerAdId == $ad->getAdId()}selected {/if}value="{$ad->getAdId()|escape}">{$ad->getName()|escape}</option>
 				{/foreach}
+			</select>&nbsp;&nbsp;
+			<select name="headerAdOrientation" class="selectMenu" id="headerAdOrientation">
+				{foreach from=$orientationOptions key=orientationOption item=orientationOptionKey}
+					<option {if $headerAdOrientation == $orientationOption}selected {/if}value="{$orientationOption|escape}">{translate key=$orientationOptionKey}</option>
+				{/foreach}
 			</select>
 		</td>
 	</tr>
