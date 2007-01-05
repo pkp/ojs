@@ -46,7 +46,7 @@ class IssueHandler extends Handler {
 				);
 			}
 
-			$issueTitle = $issue->getIssueIdentification();
+			$issueHeadingTitle = $issue->getIssueIdentification(false, true);
 			$issueCrumbTitle = $issue->getIssueIdentification(false, true);
 
 			$arg = isset($args[0]) ? $args[0] : '';
@@ -70,7 +70,6 @@ class IssueHandler extends Handler {
 				$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
 				$publishedArticles = &$publishedArticleDao->getPublishedArticlesInSections($issue->getIssueId(), true);
 				$templateMgr->assign_by_ref('publishedArticles', $publishedArticles);
-				$issueTitle = $issueTitle;
 				$showToc = true;
 			}
 
@@ -85,11 +84,11 @@ class IssueHandler extends Handler {
 
 		} else {
 			$issueCrumbTitle = Locale::translate('current.noCurrentIssue');
-			$issueTitle = Locale::translate('current.noCurrentIssue');
+			$issueHeadingTitle = Locale::translate('current.noCurrentIssue');
 		}
 
 		$templateMgr->assign('issueCrumbTitle', $issueCrumbTitle);
-		$templateMgr->assign('issueTitle', $issueTitle);
+		$templateMgr->assign('issueHeadingTitle', $issueHeadingTitle);
 		$templateMgr->assign('pageHierarchy', array(array(Request::url(null, 'issue', 'current'), 'current.current')));
 		$templateMgr->assign('helpTopicId', 'user.currentAndArchives');
 		$templateMgr->display('issue/current.tpl');
@@ -138,7 +137,7 @@ class IssueHandler extends Handler {
 		$templateMgr = &TemplateManager::getManager();
 		if (isset($issue) && ($issue->getPublished() || Validation::isEditor($journalId) || Validation::isLayoutEditor($journalId) || Validation::isProofreader($journalId)) && $issue->getJournalId() == $journalId) {
 
-			$issueTitle = $issue->getIssueIdentification();
+			$issueHeadingTitle = $issue->getIssueIdentification(false, true);
 			$issueCrumbTitle = $issue->getIssueIdentification(false, true);
 
 			if (!$showToc && $issue->getFileName() && $issue->getShowCoverPage()) {
@@ -174,7 +173,7 @@ class IssueHandler extends Handler {
 
 		} else {
 			$issueCrumbTitle = Locale::translate('archive.issueUnavailable');
-			$issueTitle = Locale::translate('archive.issueUnavailable');
+			$issueHeadingTitle = Locale::translate('archive.issueUnavailable');
 		}
 
 		if ($styleFileName = $issue->getStyleFileName()) {
@@ -186,7 +185,7 @@ class IssueHandler extends Handler {
 		}
 
 		$templateMgr->assign('issueCrumbTitle', $issueCrumbTitle);
-		$templateMgr->assign('issueTitle', $issueTitle);
+		$templateMgr->assign('issueHeadingTitle', $issueHeadingTitle);
 	}
 
 	/**

@@ -87,11 +87,10 @@
 	<a href="{$currentUrl}" class="current">{$issueCrumbTitle}</a>
 </div>
 
-<h2>{$issueTitle}{if $issue && !$issue->getPublished()} {translate key="editor.issues.preview"}{/if}</h2>
+<h2>{$issueHeadingTitle}{if $issue && !$issue->getPublished()} {translate key="editor.issues.preview"}{/if}</h2>
 
-{if $issue && $issue->getTitle() && $issue->getLabelFormat() != ISSUE_LABEL_TITLE}
-	{* If the primary issue ID isn't the title but a title is specified,
-	   display the title as a sub-heading. *}
+{if $issue && $issue->getShowTitle() && $issue->getTitle() && ($issueHeadingTitle != $issue->getTitle())}
+	{* If the title is specified and should be displayed then show it as a subheading *}
 	<h3>{$issue->getTitle()}</h3>
 {/if}
 

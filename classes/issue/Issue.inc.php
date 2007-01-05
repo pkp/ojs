@@ -472,6 +472,10 @@ class Issue extends DataObject {
 			$showTitle = $this->getData('showTitle');
 		}
 
+		if ($breadcrumb && ($showVolume || $showNumber || $showYear)) {
+			$showTitle = 0;
+		}
+
 		$volLabel = Locale::translate('issue.vol');
 		$numLabel = Locale::translate('issue.no');
 
@@ -486,32 +490,31 @@ class Issue extends DataObject {
 			$identification = "$volLabel $vol";
 		}
 		if ($showNumber) {
-			if ($identification != '') {
+			if (!empty($identification)) {
 				$identification .= ", ";
 			}
 			$identification .= "$numLabel $num";
 		}
 		if ($showYear) {
-			if ($identification != '') {
+			if (!empty($identification)) {
 				$identification .= " ($year)";
 			} else {
 				$identification = "$year";
 			}
 		}
-		if ($showTitle) {
-			if ($identification != '') {
-				$identification .= ' ';
+
+		if ($showTitle || ($long && !empty($title))) {
+			if (!empty($identification)) {
+				$identification .= ': ';
 			}
 			$identification .= "$title";
 		}
-		
-		$breadcrumbId = $identification;
-		
-		if ($long && !$showTitle && !empty($title)) {
-			$identification .= ' ' . $title;
+
+		if (empty($identification)) {
+			$identification = "$volLabel $vol, $numLabel $num ($year)";
 		}
 
-		return $breadcrumb ? $breadcrumbId : $identification;
+		return $identification;
 	}
 
 	/**
