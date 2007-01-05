@@ -1,0 +1,7 @@
+# This file contains a list, one per line, of regular expressions to be applied
+# to browser user agents to determine whether or not the browser is a "bot" or
+# not (i.e. should not be counted in article view counts). If any regexp
+# matches, the browser will be considered a bot.
+
+/Google[Bb]ot/
+/Yahoo! Slurp/

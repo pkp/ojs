@@ -16,7 +16,7 @@
 
 import('i18n.LocaleFile');
 
-define('LOCALE_REGISTRY_FILE', Config::getVar('general', 'registry_dir') . '/locales.xml');
+define('LOCALE_REGISTRY_FILE', Config::getVar('general', 'registry_dir') . DIRECTORY_SEPARATOR . 'locales.xml');
 define('LOCALE_DEFAULT', Config::getVar('i18n', 'locale'));
 define('LOCALE_ENCODING', Config::getVar('i18n', 'client_charset'));
 

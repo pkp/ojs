@@ -148,11 +148,15 @@ class ArticleHandler extends Handler {
 			$templateMgr->assign('subscribedDomain', IssueAction::subscribedDomain($journal));
 
 			// Increment the published article's abstract views count
-			$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
-			$publishedArticleDao->incrementViewsByArticleId($article->getArticleId());
+			if (!Request::isBot()) {
+				$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
+				$publishedArticleDao->incrementViewsByArticleId($article->getArticleId());
+			}
 		} else {
-			// Increment the galley's views count
-			$articleGalleyDao->incrementViews($galleyId);
+			if (!Request::isBot()) {
+				// Increment the galley's views count
+				$articleGalleyDao->incrementViews($galleyId);
+			}
 
 			// Use the article's CSS file, if set.
 			if ($galley->isHTMLGalley() && $styleFile =& $galley->getStyleFile()) {

@@ -16,7 +16,7 @@
 
 import('article.ArticleFile');
 
-define('INLINEABLE_TYPES_FILE', 'registry/inlineTypes.txt');
+define('INLINEABLE_TYPES_FILE', Config::getVar('general', 'registry_dir') . DIRECTORY_SEPARATOR . 'inlineTypes.txt');
 
 class ArticleFileDAO extends DAO {
 	/**
