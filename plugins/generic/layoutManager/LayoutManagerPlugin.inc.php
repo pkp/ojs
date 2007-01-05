@@ -133,7 +133,7 @@ class LayoutManager extends GenericPlugin {
 				$templateMgr->assign('threeColumns', true);
 			}
 
-			$templateMgr->display($this->getTemplatePath().'templates/layoutmanagertemplate.tpl', '', '');
+			$templateMgr->display($this->getTemplatePath().'layoutmanagertemplate.tpl', '', '');
 					
 			return true;
 		}
@@ -143,26 +143,54 @@ class LayoutManager extends GenericPlugin {
 
 	function setDefaultBlocks( $journalId, &$blocks, &$rightBlockOrder ) {
 		
-		// have to strip the file: from the beginning for is_dir to work correctly
-		$templateDir = str_replace('file:', '', $this->getTemplatePath().'templates/');
- 	
+		$sidebarTemplateDir = Core::getBaseDir(). DIRECTORY_SEPARATOR . 'templates/common/sidebar/';
+
 		// Open a known directory, and proceed to read its contents
 		// Until there is a template plugin class, we have to grab the templates
 		// from the directory.  Ideally this will eventually be replaced by having a lot of 
 		// template plugins, each which registers itself using the registerBlock function
-		if (is_dir($templateDir)) {
-		   if ($dh = opendir($templateDir)) {
-		       while (($file = readdir($dh)) !== false) {
-			  			       	
-		       	  if ( is_dir($templateDir.$file) &&  substr($file, 0, 1) != '.' ) {
-		       	  	if ( is_file($templateDir.$file.'/weight.txt') ) {
-		       	  		$weight = (int) preg_replace('/[^0-9]/', '', file_get_contents($templateDir.$file.'/weight.txt'));
-		       	  	} else {
-		       	  		$weight = $weight + 1;
-		       	  	}  
-		           	$blocks[$file] = array($file, $this->getTemplatePath().'templates/'.$file.'/sidebar.tpl', true, $weight ) ;
-		           	
-		       	  }
+		if (is_dir($sidebarTemplateDir)) {
+		   if ($dh = opendir($sidebarTemplateDir)) {
+		       while (($file = readdir($dh)) !== false) {			  			       	
+					if ( substr($file, 0, 1) != "." ) {
+			       	  	if ( is_file($sidebarTemplateDir.$file) ) {
+							switch ( $file ) {
+								case 'developedBy.tpl':
+									$name = "Developed By";
+									$weight = 1;
+									break;
+								case 'help.tpl':
+									$name = "Help";
+									$weight = 2;
+									break;
+								case 'user.tpl':
+									$name = "User";
+									$weight = 3;
+									break;
+								case 'sidebar.tpl':
+									$name = "Sidebar";
+									$weight = 4;								
+									break;
+								case 'languageToggle.tpl':
+									$name = "Language Toggle";
+									$weight = 5;								
+									break;
+								case 'navigation.tpl':
+									$name = "Navigation";
+									$weight = 6;								
+									break;
+								case 'fontSize.tpl':
+									$name = "Font Size";
+									$weight = 7;								
+									break;
+								case 'information.tpl':
+									$name = "Information";
+									$weight = 8;								
+									break;
+							}
+				           	$blocks[$name] = array($name, $sidebarTemplateDir.$file, true, $weight ) ;
+			       	  	}  
+		       		}
 		       }
 		       closedir($dh);
 		   }
