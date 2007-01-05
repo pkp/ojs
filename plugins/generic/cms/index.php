@@ -8,7 +8,7 @@
  *
  * @package plugins
  *
- * Wrapper for Web Feeds plugin.
+ * Wrapper for CMS plugin.
  *
  * $Id$
  */

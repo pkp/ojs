@@ -1,3 +1,12 @@
+{**
+ * tableofcontents.tpl
+ *
+ * Copyright (c) 2003-2006 The Public Knowledge Project
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * Table of Contents for the CMS Plugin
+ *
+ *}
 <div class="block">
 {if $cmsPluginToc}
 

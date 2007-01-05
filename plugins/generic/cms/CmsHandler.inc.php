@@ -82,7 +82,7 @@ class CmsHandler extends Handler {
 			$templateMgr->assign('title', $title);
 			$templateMgr->assign('content', $content[$args[0]] );		
 			$templateMgr->assign('headings', $headings);
-			$templateMgr->assign('toc', $headings);
+			$templateMgr->assign('cmsPluginToc', $headings);
 			$templateMgr->assign('pageHierarchy', $breadcrumbs);			
 			$templateMgr->display($cmsPlugin->getTemplatePath().'content.tpl');
 		}

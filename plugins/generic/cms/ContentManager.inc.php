@@ -1,10 +1,17 @@
 <?php
-/*
- * Created on Jul 5, 2006
+
+/**
+ * ContentManager.inc.php
  *
- * To change the template for this generated file go to
- * Window - Preferences - PHPeclipse - PHP - Code Templates
+ * Copyright (c) 2003-2005 The Public Knowledge Project
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @package plugins
+ *
+ * Form for journal managers to modify Cms Plugin content
+ * 
  */
+
 import('file.JournalFileManager');
 
 define('CONTENT_FILE_HEADER', '<html><body>');

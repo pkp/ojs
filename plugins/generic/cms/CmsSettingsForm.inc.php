@@ -169,16 +169,28 @@ class CmsSettingsForm extends Form {
 		<script language="javascript" type="text/javascript">
 			tinyMCE.init({
 			mode : "textareas",
-			plugins: "save, table, advimage",
+			plugins: "save, table, advimage, -heading",
 			relative_urls : false, 		
 			document_base_url : "'.Request::url('', 'manager', 'files').'/content/", 
 			theme : "advanced",
 			theme_advanced_layout_manager : "SimpleLayout",
 			theme_advanced_buttons1 : "save, formatselect, bold, italic, underline, justifyleft, justifycenter, justifyright, justifyfull, bullist, numlist, outdent, indent, code",
-			theme_advanced_buttons2 : "image, link, unlink",
+			theme_advanced_buttons2 : "h1, h2, h3, h4, image, link, unlink",
 			theme_advanced_buttons3 : "tablecontrols"
 			});
 		</script>';
+
+		// load the plugins to memory and add it to the header
+		// need to do this in order to replace the {$pluginurl}. In theory, could hardcode the path in the .js file
+		// but this is easy enough and is more flexible
+		$tinyMCE_plugins = array( 'heading' );
+		
+		foreach ( $tinyMCE_plugins as $tinyMCEplugin ) {
+			$tinyMCE_NewPlugin = file_get_contents($plugin->getPluginPath().'/tinyMCEPlugins/'.$tinyMCEplugin.'/editor_plugin.js');
+			$tinyMCE_NewPlugin = preg_replace('/\{\$pluginurl\}/', Request::getBaseUrl().'/'.$plugin->getPluginPath().'/tinyMCEPlugins/'.$tinyMCEplugin, $tinyMCE_NewPlugin);
+			$tinyMCE_script .= "\n<script language=\"javascript\" type=\"text/javascript\">\n" .
+					"/***** $tinyMCEplugin Plugin *****/\n$tinyMCE_NewPlugin\n/*****/\n</script>";
+		}
 
 		$templateMgr->assign('additionalHeadData', $additionalHeadData."\n".$tinyMCE_script);
 		$templateMgr->assign('cmsPluginToc', $headings);		
