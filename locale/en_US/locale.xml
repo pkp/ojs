@@ -1478,6 +1478,7 @@ You may optionally provide the user with a reason for disabling their account.</
 	<message key="editor.submissionReview.cannotSendToCopyediting">Before you can send this submission to copyediting, you must ensure that a revision is available and that the author has been notified of the decision using the Notify Author link above.</message>
 	<message key="editor.submissionReview.notes">Due indicates number of weeks remaining until the review's due date or (-) weeks that it is overdue. It is filled in when a reviewer accepts the request to review.</message>
 	<message key="editor.notifyUsers">Notify Users</message>
+	<message key="editor.notifyUsers.inProgress">Notifying users...</message>
 	<message key="editor.usersNotified">Users Notified</message>
 	<message key="editor.notifyUsers.allUsers">Send this message to all users associated with this journal ({$count} users)</message>
 	<message key="editor.notifyUsers.interestedUsers">Send this message to the users associated with this journal who have indicated that they wish to receive updates ({$count} users)</message>

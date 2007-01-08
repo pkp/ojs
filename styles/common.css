@@ -519,3 +519,12 @@ div.separator {
 	font-size: 0.5em;
 	line-height: 25%;
 }
+
+div.progressbar {
+	background-image: url(../templates/images/progbg.gif);
+	background-repeat: no-repeat;
+	height: 27;
+	width: 505;
+	z-index:1;
+}
+

@@ -528,9 +528,10 @@ class IssueManagementHandler extends EditorHandler {
 
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
+		$templateMgr = &TemplateManager::getManager();
 
-		import('mail.MailTemplate');
-		$email = &new MailTemplate('PUBLISH_NOTIFY');
+		import('mail.MassMail');
+		$email = &new MassMail('PUBLISH_NOTIFY');
 
 		if (Request::getUserVar('send') && !$email->hasErrors()) {
 			$email->addRecipient($user->getEmail(), $user->getFullName());
@@ -542,7 +543,7 @@ class IssueManagementHandler extends EditorHandler {
 			}
 			while (!$recipients->eof()) {
 				$recipient = &$recipients->next();
-				$email->addBcc($recipient->getEmail(), $recipient->getFullName());
+				$email->addRecipient($recipient->getEmail(), $recipient->getFullName());
 				unset($recipient);
 			}
 
@@ -552,7 +553,6 @@ class IssueManagementHandler extends EditorHandler {
 				$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
 				$publishedArticles = &$publishedArticleDao->getPublishedArticlesInSections($issue->getIssueId());
 
-				$templateMgr = &TemplateManager::getManager();
 				$templateMgr->assign_by_ref('journal', $journal);
 				$templateMgr->assign_by_ref('issue', $issue);
 				$templateMgr->assign('body', $email->getBody());
@@ -565,9 +565,18 @@ class IssueManagementHandler extends EditorHandler {
 				$issueDao->updateIssue($issue);
 			}
 
-			$email->send();
+			$callback = array(&$email, 'send');
+			$templateMgr->setProgressFunction($callback);
+			unset($callback);
 
-			Request::redirect(null, Request::getRequestedPage());
+			$email->setFrequency(10); // 10 emails per callback
+			$callback = array('TemplateManager', 'updateProgressBar');
+			$email->setCallback($callback);
+			unset($callback);
+
+			$templateMgr->assign('message', 'editor.notifyUsers.inProgress');
+			$templateMgr->display('common/progress.tpl');
+			echo '<script type="text/javascript">window.location = "' . Request::url(null, 'editor') . '";</script>';
 		} else {
 			if (!Request::getUserVar('continued')) {
 				$email->assignParams(array(
@@ -621,5 +630,4 @@ class IssueManagementHandler extends EditorHandler {
 	function setupTemplate($level) {
 		EditorHandler::setupTemplate($level);
 	}
-
 }

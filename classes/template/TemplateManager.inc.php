@@ -25,6 +25,9 @@ class TemplateManager extends Smarty {
 	/** @var $styleSheets array of URLs to stylesheets */
 	var $styleSheets;
 
+	/** @var $progressFunctionCallback callback */
+	var $progressFunctionCallback;
+
 	/**
 	 * Constructor.
 	 * Initialize template engine and assign basic template variables.
@@ -154,6 +157,7 @@ class TemplateManager extends Smarty {
 		$this->register_function('call_hook', array(&$this, 'smartyCallHook'));
 		$this->register_function('html_options_translate', array(&$this, 'smartyHtmlOptionsTranslate'));
 		$this->register_block('iterate', array(&$this, 'smartyIterate'));
+		$this->register_function('call_progress_function', array(&$this, 'smartyCallProgressFunction'));
 		$this->register_function('page_links', array(&$this, 'smartyPageLinks'));
 		$this->register_function('page_info', array(&$this, 'smartyPageInfo'));
 		$this->register_function('get_help_id', array(&$this, 'smartyGetHelpId'));
@@ -486,8 +490,14 @@ class TemplateManager extends Smarty {
 	 * a progress indicator or a message stating that the operation may take a while.
 	 */
 	function smartyFlush($params, &$smarty) {
+		$smarty->flush();
+	}
+
+	function flush() {
+		while (ob_get_level()) {
+			ob_end_flush();
+		}
 		flush();
-		ob_flush();
 	}
 
 	/**
@@ -531,6 +541,30 @@ class TemplateManager extends Smarty {
 		}
 
 		return Request::url($journal, $page, $op, $path, $params, $anchor, !isset($escape) || $escape);
+	}
+
+	function setProgressFunction(&$progressFunction) {
+		$this->progressFunctionCallback =& $progressFunction;
+	}
+
+	function smartyCallProgressFunction($params, &$smarty) {
+		if ($this->progressFunctionCallback) {
+			call_user_func($this->progressFunctionCallback);
+		}
+	}
+
+	function updateProgressBar($progress, $total) {
+		static $lastPercent;
+		$percent = round($progress * 100 / $total);
+		if (!isset($lastPercent) || $lastPercent != $percent) {
+			for($i=1; $i <= $percent-$lastPercent; $i++) {
+				echo '<img src="' . Request::getBaseUrl() . '/templates/images/progbar.gif" width="5" height="15">';
+			}
+		}
+		$lastPercent = $percent;
+
+		$templateMgr =& TemplateManager::getManager();
+		$templateMgr->flush();
 	}
 
 	/**
