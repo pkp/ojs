@@ -61,10 +61,11 @@ class ScheduledTaskDAO extends DAO {
 		if (isset($result->fields[0]) && $result->fields[0] != 0) {
 			if (isset($timestamp)) {
 				$returner = $this->update(
-					'UPDATE scheduled_tasks SET last_run = ' . $this->datetimeToDB($timestamp)
+					'UPDATE scheduled_tasks SET last_run = ' . $this->datetimeToDB($timestamp) . ' WHERE class_name = ?',
+					array($className)
 				);
 			} else {
-				$returner = $this->update('UPDATE scheduled_tasks SET last_run = NOW()');
+				$returner = $this->update('UPDATE scheduled_tasks SET last_run = NOW() WHERE class_name = ?', array($className));
 			}
 			
 		} else {
