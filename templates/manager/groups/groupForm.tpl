@@ -47,6 +47,16 @@
 		<td width="80%" class="value"><input type="text" name="titleAlt2" value="{$titleAlt2|escape}" size="35" maxlength="80" id="titleAlt2" class="textField" /></td>
 	</tr>
 {/if}
+
+<tr valign="top">
+	<td width="20%" class="label">{translate key="common.type"}</td>
+	<td width="80%" class="value">
+		{foreach from=$groupContextOptions item=groupContextOptionKey key=groupContextOptionValue}
+			<input type="radio" name="context" value="{$groupContextOptionValue|escape}" {if $context == $groupContextOptionValue}checked="true" {/if} id="context-{$groupContextOptionValue|escape}" />&nbsp;
+			{fieldLabel name="context-`$groupContextOptionValue`" key=$groupContextOptionKey}<br />
+		{/foreach}
+	</td>
+</tr>
 </table>
 
 <p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url op="groups" escape=false}'" /></p>

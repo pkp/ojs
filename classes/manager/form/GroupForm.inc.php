@@ -14,6 +14,7 @@
  */
 
 import('form.Form');
+import('group.Group');
 
 class GroupForm extends Form {
 
@@ -42,6 +43,10 @@ class GroupForm extends Form {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign_by_ref('group', $this->group);
 		$templateMgr->assign('helpTopicId', 'journal.managementPages.groups');
+		$templateMgr->assign('groupContextOptions', array(
+			GROUP_CONTEXT_EDITORIAL_TEAM => 'manager.groups.context.editorialTeam',
+			GROUP_CONTEXT_PEOPLE => 'manager.groups.context.people'
+		));
 		parent::display();
 	}
 	
@@ -53,7 +58,12 @@ class GroupForm extends Form {
 			$this->_data = array(
 				'title' => $this->group->getTitle(),
 				'titleAlt1' => $this->group->getTitleAlt1(),
-				'titleAlt2' => $this->group->getTitleAlt2()
+				'titleAlt2' => $this->group->getTitleAlt2(),
+				'context' => $this->group->getContext()
+			);
+		} else {
+			$this->_data = array(
+				'context' => GROUP_CONTEXT_EDITORIAL_TEAM
 			);
 		}
 	}
@@ -62,7 +72,7 @@ class GroupForm extends Form {
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->readUserVars(array('title', 'titleAlt1', 'titleAlt2'));
+		$this->readUserVars(array('title', 'titleAlt1', 'titleAlt2', 'context'));
 	}
 	
 	/**
@@ -80,6 +90,7 @@ class GroupForm extends Form {
 		$this->group->setTitle($this->getData('title'));
 		$this->group->setTitleAlt1($this->getData('titleAlt1'));
 		$this->group->setTitleAlt2($this->getData('titleAlt2'));
+		$this->group->setContext($this->getData('context'));
 
 		// Eventually this will be a general Groups feature; for now,
 		// we're just using it to display journal team entries in About.
@@ -98,7 +109,6 @@ class GroupForm extends Form {
 			$groupDao->resequenceGroups($this->group->getJournalId());
 		}
 	}
-	
 }
 
 ?>

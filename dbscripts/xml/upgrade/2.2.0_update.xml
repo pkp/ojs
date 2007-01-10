@@ -17,4 +17,9 @@
 	<sql>
 		<drop table="currencies" />
 	</sql>
+
+	<!-- #2501# Added context information to groups -->
+	<sql>
+		<query>UPDATE groups SET context = 1</query>
+	</sql>
 </data>

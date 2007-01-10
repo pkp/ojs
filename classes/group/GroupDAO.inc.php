@@ -47,13 +47,17 @@ class GroupDAO extends DAO {
 	/**
 	 * Get all groups for a journal.
 	 * @param $journalId int
+	 * @param $context int (optional)
 	 * @param $rangeInfo object RangeInfo object (optional)
 	 * @return array
 	 */
-	function &getGroups($journalId, $rangeInfo = null) {
+	function &getGroups($journalId, $context = null, $rangeInfo = null) {
+		$params = array($journalId);
+		if ($context !== null) $params[] = $context;
+
 		$result = &$this->retrieve(
-			'SELECT * FROM groups WHERE journal_id = ? ORDER BY seq',
-			$journalId, $rangeInfo
+			'SELECT * FROM groups WHERE journal_id = ? ' . ($context!==null?'AND context = ? ':'') . 'ORDER BY seq',
+			$params, $rangeInfo
 		);
 
 		$returner =& new DAOResultFactory($result, $this, '_returnGroupFromRow');
@@ -73,6 +77,7 @@ class GroupDAO extends DAO {
 		$group->setTitleAlt2($row['title_alt2']);
 		$group->setAboutDisplayed($row['about_displayed']);
 		$group->setSequence($row['seq']);
+		$group->setContext($row['context']);
 		$group->setJournalId($row['journal_id']);
 		
 		HookRegistry::call('GroupDAO::_returnGroupFromRow', array(&$group, &$row));
@@ -87,16 +92,17 @@ class GroupDAO extends DAO {
 	function insertGroup(&$group) {
 		$this->update(
 			'INSERT INTO groups
-				(title, title_alt1, title_alt2, seq, journal_id, about_displayed)
+				(title, title_alt1, title_alt2, seq, journal_id, about_displayed, context)
 				VALUES
-				(?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?)',
 			array(
 				$group->getTitle(),
 				$group->getTitleAlt1(),
 				$group->getTitleAlt2(),
 				$group->getSequence() == null ? 0 : $group->getSequence(),
 				$group->getJournalId(),
-				$group->getAboutDisplayed()
+				$group->getAboutDisplayed(),
+				$group->getContext()
 			)
 		);
 		
@@ -117,7 +123,8 @@ class GroupDAO extends DAO {
 					title_alt2 = ?,
 					seq = ?,
 					journal_id = ?,
-					about_displayed = ?
+					about_displayed = ?,
+					context = ?
 				WHERE group_id = ?',
 			array(
 				$group->getTitle(),
@@ -126,6 +133,7 @@ class GroupDAO extends DAO {
 				$group->getSequence(),
 				$group->getJournalId(),
 				$group->getAboutDisplayed(),
+				$group->getContext(),
 				$group->getGroupId()
 			)
 		);

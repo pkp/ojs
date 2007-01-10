@@ -740,7 +740,7 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="manager.readingTools">Reading Tools</message>
 	<message key="manager.people">People</message>
 	<message key="manager.filesBrowser">Files Browser</message>
-	<message key="manager.groups">Editorial Team</message>
+	<message key="manager.groups">Masthead</message>
 	<message key="manager.managementPages">Management Pages</message>
 	<message key="manager.plugins">System Plugins</message>
 	<message key="manager.users">Users</message>
@@ -1199,12 +1199,14 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.groups.title">Title</message>
 	<message key="manager.groups.confirmDelete">Are you sure you wish to delete this group?</message>
 	<message key="manager.groups.noneCreated">No editorial team positions have been created.</message>
-	<message key="manager.groups.create">Create Editorial Team Title</message>
+	<message key="manager.groups.create">Create Position Title</message>
 	<message key="manager.groups.form.groupTitleRequired">A group title is required.</message>
 
-	<message key="manager.groups.enableBoard.description"><![CDATA[For the <a href="{$aboutEditorialTeamUrl}">Editorial Team</a> in About the Journal:]]></message>
-	<message key="manager.groups.enableBoard">The Journal Manager will create editorial team titles, and add the appropriate people under each title.</message>
-	<message key="manager.groups.disableBoard">The system will generate a list of people under their assigned editorial roles (Journal Manager, Editor, Section Editor, Copyeditor, etc.)</message>
+	<message key="manager.groups.enableBoard.description"><![CDATA[Under <a href="{$aboutEditorialTeamUrl}">People</a> in About the Journal:]]></message>
+	<message key="manager.groups.enableBoard">The Journal Manager creates titles and adds people under each title.</message>
+	<message key="manager.groups.disableBoard">OJS lists people in Editorial Team under assigned roles (Journal Manager, Copyeditor, etc.)</message>
+	<message key="manager.groups.context.editorialTeam">Have title appear under Editorial Team in People section of About the Journal (e.g. Editor)</message>
+	<message key="manager.groups.context.people">Have title appear as its own category under People (e.g. Editorial Board)</message>
 
 	<message key="manager.groups.membership">Membership</message>
 	<message key="manager.groups.membership.confirmDelete">Are you sure you wish to delete this group membership?</message>

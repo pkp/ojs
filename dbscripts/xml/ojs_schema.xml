@@ -1844,6 +1844,7 @@
 			<KEY/>
 			<AUTOINCREMENT/>
 		</field>
+		<field name="context" type="I8"/>
 		<field name="journal_id" type="I8">
 			<NOTNULL/>
 		</field>

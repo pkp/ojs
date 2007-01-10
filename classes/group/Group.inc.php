@@ -14,6 +14,9 @@
  * $Id$
  */
 
+define('GROUP_CONTEXT_EDITORIAL_TEAM',	0x000001);
+define('GROUP_CONTEXT_PEOPLE',		0x000002);
+
 class Group extends DataObject {
 
 	/**
@@ -57,6 +60,22 @@ class Group extends DataObject {
 	*/
 	function setTitle($title) {
 		return $this->setData('title',$title);
+	}
+	
+	/**
+	 * Get context of group
+	 * @return int
+	 */
+	 function getContext() {
+	 	return $this->getData('context');
+	}
+	
+	/**
+	* Set context of group
+	* @param $context int
+	*/
+	function setContext($context) {
+		return $this->setData('context',$context);
 	}
 	
 	/**

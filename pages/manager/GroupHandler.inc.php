@@ -25,7 +25,7 @@ class GroupHandler extends ManagerHandler {
 		$rangeInfo = &Handler::getRangeInfo('groups');
 
 		$groupDao =& DAORegistry::getDAO('GroupDAO');
-		$groups =& $groupDao->getGroups($journal->getJournalId(), $rangeInfo);
+		$groups =& $groupDao->getGroups($journal->getJournalId(), null, $rangeInfo);
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign_by_ref('groups', $groups);

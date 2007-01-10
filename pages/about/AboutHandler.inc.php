@@ -26,10 +26,13 @@ class AboutHandler extends Handler {
 		$journalPath = Request::getRequestedJournalPath();
 				
 		if ($journalPath != 'index' && $journalDao->journalExistsByPath($journalPath)) {
-			$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
 			$journal = &Request::getJournal();
+
+			$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
+			$templateMgr->assign_by_ref('journalSettings', $journalSettingsDao->getJournalSettings($journal->getJournalId()));
 			
 			$customAboutItems = &$journalSettingsDao->getSetting($journal->getJournalId(), 'customAboutItems');
+			$templateMgr->assign('customAboutItems', $customAboutItems);
 
 			foreach (AboutHandler::getPublicStatisticsNames() as $name) {
 				if ($journal->getSetting($name)) {
@@ -38,9 +41,11 @@ class AboutHandler extends Handler {
 				} 
 			}
 
-			$templateMgr->assign('customAboutItems', $customAboutItems);
+			$groupDao =& DAORegistry::getDAO('GroupDAO');
+			$groups =& $groupDao->getGroups($journal->getJournalId(), GROUP_CONTEXT_PEOPLE);
+
+			$templateMgr->assign_by_ref('peopleGroups', $groups);
 			$templateMgr->assign('helpTopicId', 'user.about');
-			$templateMgr->assign_by_ref('journalSettings', $journalSettingsDao->getJournalSettings($journal->getJournalId()));
 			$templateMgr->display('about/index.tpl');
 		} else {
 			$site = &Request::getSite();
@@ -129,7 +134,7 @@ class AboutHandler extends Handler {
 			$groupDao =& DAORegistry::getDAO('GroupDAO');
 			$groupMembershipDao =& DAORegistry::getDAO('GroupMembershipDAO');
 
-			$allGroups =& $groupDao->getGroups($journal->getJournalId());
+			$allGroups =& $groupDao->getGroups($journal->getJournalId(), GROUP_CONTEXT_EDITORIAL_TEAM);
 			$teamInfo = array();
 			$groups = array();
 			while ($group =& $allGroups->next()) {
@@ -139,15 +144,51 @@ class AboutHandler extends Handler {
 				while ($membership =& $allMemberships->next()) {
 					if (!$membership->getAboutDisplayed()) continue;
 					$memberships[] =& $membership;
+					unset($membership);
 				}
 				if (!empty($memberships)) $groups[] =& $group;
 				$teamInfo[$group->getGroupId()] = $memberships;
+				unset($group);
 			}
 
 			$templateMgr->assign_by_ref('groups', $groups);
 			$templateMgr->assign_by_ref('teamInfo', $teamInfo);
 			$templateMgr->display('about/editorialTeamBoard.tpl');
 		}
+	}
+
+	/**
+	 * Display group info for a particular group.
+	 */
+	function displayMembership($args) {
+		parent::validate(true);
+		AboutHandler::setupTemplate(true);
+		$journal = &Request::getJournal();
+		$templateMgr = &TemplateManager::getManager();
+		$groupId = (int) array_shift($args);
+
+		$groupDao =& DAORegistry::getDAO('GroupDAO');
+		$group =& $groupDao->getGroup($groupId);
+
+		if (	!$journal || !$group ||
+			$group->getContext() != GROUP_CONTEXT_PEOPLE ||
+			$group->getJournalId() != $journal->getJournalId()
+		) {
+			Request::redirect(null, 'about');
+		}
+
+		$groupMembershipDao =& DAORegistry::getDAO('GroupMembershipDAO');
+		$allMemberships =& $groupMembershipDao->getMemberships($group->getGroupId());
+		$memberships = array();
+		while ($membership =& $allMemberships->next()) {
+			if (!$membership->getAboutDisplayed()) continue;
+			$memberships[] =& $membership;
+			unset($membership);
+		}
+
+		$templateMgr->assign_by_ref('group', $group);
+		$templateMgr->assign_by_ref('memberships', $memberships);
+		$templateMgr->display('about/displayMembership.tpl');
 	}
 
 	/**
@@ -178,30 +219,35 @@ class AboutHandler extends Handler {
 			while ($potentialUser =& $editors->next()) {
 				if ($potentialUser->getUserId() == $userId)
 					$user =& $potentialUser;
+				unset($potentialUser);
 			}
 
 			$sectionEditors = &$roleDao->getUsersByRoleId(ROLE_ID_SECTION_EDITOR, $journal->getJournalId());
 			while ($potentialUser =& $sectionEditors->next()) {
 				if ($potentialUser->getUserId() == $userId)
 					$user =& $potentialUser;
+				unset($potentialUser);
 			}
 
 			$layoutEditors = &$roleDao->getUsersByRoleId(ROLE_ID_LAYOUT_EDITOR, $journal->getJournalId());
 			while ($potentialUser =& $layoutEditors->next()) {
 				if ($potentialUser->getUserId() == $userId)
 					$user = $potentialUser;
+				unset($potentialUser);
 			}
 
 			$copyEditors = &$roleDao->getUsersByRoleId(ROLE_ID_COPYEDITOR, $journal->getJournalId());
 			while ($potentialUser =& $copyEditors->next()) {
 				if ($potentialUser->getUserId() == $userId)
 					$user = $potentialUser;
+				unset($potentialUser);
 			}
 		
 			$proofreaders = &$roleDao->getUsersByRoleId(ROLE_ID_PROOFREADER, $journal->getJournalId());
 			while ($potentialUser =& $proofreaders->next()) {
 				if ($potentialUser->getUserId() == $userId)
 					$user = $potentialUser;
+				unset($potentialUser);
 			}
 		
 		} else {
@@ -217,7 +263,9 @@ class AboutHandler extends Handler {
 					$potentialUser =& $membership->getUser();
 					if ($potentialUser->getUserId() == $userId)
 						$user = $potentialUser;
+					unset($membership);
 				}
+				unset($group);
 			}
 		}
 
