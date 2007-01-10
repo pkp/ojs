@@ -85,6 +85,8 @@ class CounterPlugin extends GenericPlugin {
 		$journal =& Request::getJournal();
 		$session =& Request::getSession();
 
+		if (!$journal) return false;
+
 		if (($logUser = $session->getSessionVar(COUNTER_UID_VAR))=='') {
 			$logUser = Core::getCurrentDate() . '_' . $session->getId();
 			$session->setSessionVar(COUNTER_UID_VAR, $logUser);
