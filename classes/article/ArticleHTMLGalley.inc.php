@@ -52,14 +52,12 @@ class ArticleHTMLGalley extends ArticleGalley {
 			$contents = preg_replace(
 				'/[Ss][Rr][Cc]\s*=\s*"([^"]*' . preg_quote($image->getOriginalFileName()) .    ')"/', 
 				'src="' . $imageUrl . '"',
-				$contents,
-				1
+				$contents
 			);
 			$contents = preg_replace(
 				'/[Hh][Rr][Ee][Ff]\s*=\s*"([^"]*' . preg_quote($image->getOriginalFileName()) .    ')"/',
 				'href="' . $imageUrl . '"',
-				$contents,
-				1
+				$contents
 			);
 		}
 
