@@ -25,8 +25,7 @@
 			<AUTOINCREMENT/>
 		</field>
 		<field name="galley_id" type="I8">
-			<KEY/>
-			<AUTOINCREMENT/>
+			<NOTNULL/>
 		</field>
 		<field name="article_id" type="I8">
 			<NOTNULL/>
@@ -43,7 +42,6 @@
 		<descr>XML-Derived galleys.</descr>
 		<index name="xml_galleys_id">
 			<col>xml_galley_id</col>
-			<col>galley_id</col>
 		</index>
 	</table>
 
