@@ -14,10 +14,11 @@
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
-	<title>{$article->getFirstAuthor(true)|escape}</title>
+	<title>{$article->getArticleTitle()|escape} | {$article->getFirstAuthor(true)|escape} | {$currentJournal->getTitle()|escape}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset={$defaultCharset}" />
-	<meta name="description" content="" />
-	<meta name="keywords" content="" />
+	<meta name="description" content="{$article->getArticleTitle()|escape}" />
+	<meta name="keywords" content="{$article->getSubject()|escape}" />
+	{include file="article/dublincore.tpl"}
 	<link rel="stylesheet" href="{$baseUrl}/styles/common.css" type="text/css" />
 	<link rel="alternate stylesheet" title="{translate key="icon.small.alt"}" href="{$baseUrl}/styles/small.css" type="text/css" />
 	<link rel="stylesheet" title="{translate key="icon.medium.alt"}" href="{$baseUrl}/styles/medium.css" type="text/css" />
