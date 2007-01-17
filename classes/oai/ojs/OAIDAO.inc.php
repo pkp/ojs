@@ -361,30 +361,46 @@ class OAIDAO extends DAO {
 		$showNumber = $row['issue_show_number'];
 		$showYear = $row['issue_show_year'];
 		$showTitle = $row['issue_show_title'];
+
+		$volLabel = Locale::translate('issue.vol');
+		$numLabel = Locale::translate('issue.no');
+
+		$vol = $this->getData('volume');
+		$num = $this->getData('number');
+		$year = $this->getData('year');
+		$title = $this->getData('title');
+
 		$identification = '';
 
 		if ($showVolume) {
 			$identification = "$volLabel $vol";
 		}
 		if ($showNumber) {
-			if ($identification != '') {
+			if (!empty($identification)) {
 				$identification .= ", ";
 			}
 			$identification .= "$numLabel $num";
 		}
 		if ($showYear) {
-			if ($identification != '') {
+			if (!empty($identification)) {
 				$identification .= " ($year)";
 			} else {
 				$identification = "$year";
 			}
 		}
+
 		if ($showTitle) {
-			if ($identification != '') {
-				$identification .= ' ';
+			if (!empty($identification)) {
+				$identification .= ': ';
 			}
 			$identification .= "$title";
 		}
+
+		if (empty($identification)) {
+			$identification = "$volLabel $vol, $numLabel $num ($year)";
+		}
+
+		return $identification;
 	}
 	
 	
