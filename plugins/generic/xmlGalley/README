@@ -1,7 +1,7 @@
 ================================
 === OJS XML Galley Plugin
-=== Version: 1.0
-=== Release date: September 1, 2006
+=== Version: 1.1
+=== Release date: January 16, 2007
 === Author: MJ Suhonos <mj@robotninja.com>
 === Contributions: Alf Eaton <alf@hubmed.org>
 ================================
@@ -36,6 +36,22 @@ If you are using an external XSLT processor, you must know the proper syntax to 
 
 If you wish to use an XML schema other than the Blue2 DTD (eg. Erudit), you will require an XSL stylesheet that generates valid XHTML from that schema.  Please note that the XSL transformation must be contained within a single stylesheet; xsl:include and xsl:import elements will not work.
 
+PDF Generation
+--------------
+The latest version of the plugin (1.1) introduces the ability to dynamically generate PDF using XSL-FO and an external FO processor (eg. Apache FOP).  While it has been tested, this feature is *EXPERIMENTAL* and may not be 100% reliable; errors encountered during FO processing will be output directly to the browser to aid in troubleshooting.  Feedback and bug-reports are welcomed.  PDF generation is currently available for the built-in NLM Blue2 DTD only.
+
+Any existing FO processor may be used, including (in order of preference):
+- Apache FOP (http://xmlgraphics.apache.org/fop/)
+- RenderX XEP (http://www.renderx.com/tools/xep.html)
+- Antenna House XSL Formatter (http://www.antennahouse.com/product.htm)
+
+Like an external XSLT processor, you must know the proper syntax to execute a FO transformation from the command-line, including the full path to the executable, eg.
+- for FOP:  "fop [options] -fo <fo file> -pdf <pdf file>"
+- for XEP:  "/usr/sbin/XEP/xep.sh [options] -fo <fo file> -pdf <pdf file>"
+- etc.
+
+Please note that Apache FOP is freely available, while both RenderX XEP and XSL Formatter are commercial software.  The OJS XML Galley Plugin is designed to work best with Apache FOP and its level of support for the XSL-FO standard; this may result in some functionality (eg. fo:float) not being available for generated PDF layout.  Also note that current FO processors are Java-based and require a current (1.4) JDK.
+
 Installation
 ------------
 To install the plugin:
@@ -57,9 +73,7 @@ Known Issues
 ------------
 - Due to the complexity of the NLM Blue2 DTD, there are likely XML implementations which do not render correctly using the built-in XSL.  In some cases, XHTML appearance may be incorrect, while unmatched XML elements will appear in red in the XHTML.  Please contact the author with the XML source file to help improve the XSL for future updates.
 - When using PHP 5.x with XSL functions, DTD definitions are requested over the network in order to resolve external entities.  This can cause a significant delay in the XSLT transform.  A possible solution using local catalog files for entity resolution is being investigated.
-- Dynamic generation of PDF using XSL-FO and an external FO processor (eg. Apache FOP) is not yet implemented.  This will be available in a future release.
 - All XSL is done using UTF-8 assuming that source XML documents are also UTF-8.  XML sources in other encodings (eg. Windows-1252), browser clients with different character sets (eg. ISO-8859-1), and strange combinations of these may produce unexpected results with special characters.
-- 
 
 Localization
 ------------

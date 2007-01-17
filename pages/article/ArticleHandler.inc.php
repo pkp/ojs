@@ -261,9 +261,11 @@ class ArticleHandler extends Handler {
 			}
 		}
 
-		// reuse section editor's view file function
-		import('submission.sectionEditor.SectionEditorAction');
-		SectionEditorAction::viewFile($article->getArticleId(), $fileId);
+		if (!HookRegistry::call('ArticleHandler::viewFile', array(&$article, &$galley, &$fileId))) {
+			// reuse section editor's view file function
+			import('submission.sectionEditor.SectionEditorAction');
+			SectionEditorAction::viewFile($article->getArticleId(), $fileId);
+		}
 	}
 
 	/**

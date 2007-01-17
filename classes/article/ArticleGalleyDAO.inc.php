@@ -61,6 +61,8 @@ class ArticleGalleyDAO extends DAO {
 		$returner = null;
 		if ($result->RecordCount() != 0) {
 			$returner = &$this->_returnGalleyFromRow($result->GetRowAssoc(false));
+		} else {
+			HookRegistry::call('ArticleGalleyDAO::getNewGalley', array(&$galleyId, &$articleId, &$returner));
 		}
 
 		$result->Close();
@@ -93,7 +95,9 @@ class ArticleGalleyDAO extends DAO {
 
 		$result->Close();
 		unset($result);
-	
+
+		HookRegistry::call('ArticleGalleyDAO::getArticleGalleys', array(&$galleys, &$articleId));
+
 		return $galleys;
 	}
 	
@@ -134,7 +138,7 @@ class ArticleGalleyDAO extends DAO {
 		$galley->setStatus($row['status']);
 		$galley->setDateModified($this->datetimeFromDB($row['date_modified']));
 		$galley->setDateUploaded($this->datetimeFromDB($row['date_uploaded']));
-		
+
 		HookRegistry::call('ArticleGalleyDAO::_returnGalleyFromRow', array(&$galley, &$row));
 
 		return $galley;
@@ -160,6 +164,9 @@ class ArticleGalleyDAO extends DAO {
 			)
 		);
 		$galley->setGalleyId($this->getInsertGalleyId());
+
+		HookRegistry::call('ArticleGalleyDAO::insertNewGalley', array(&$galley, $galley->getGalleyId()));
+
 		return $galley->getGalleyId();
 	}
 	
@@ -206,6 +213,9 @@ class ArticleGalleyDAO extends DAO {
 	 * @param $articleId int optional
 	 */
 	function deleteGalleyById($galleyId, $articleId = null) {
+
+		HookRegistry::call('ArticleGalleyDAO::deleteGalleyById', array(&$galleyId, &$articleId));
+
 		$this->deleteImagesByGalley($galleyId);
 		if (isset($articleId)) {
 			return $this->update(
@@ -258,10 +268,12 @@ class ArticleGalleyDAO extends DAO {
 	 * @param $galleyId int
 	 */
 	function incrementViews($galleyId) {
-		return $this->update(
-			'UPDATE article_galleys SET views = views + 1 WHERE galley_id = ?',
-			$galleyId
-		);
+		if ( !HookRegistry::call('ArticleGalleyDAO::incrementGalleyViews', array(&$galleyId)) ) {			
+			return $this->update(
+				'UPDATE article_galleys SET views = views + 1 WHERE galley_id = ?',
+				$galleyId
+			);
+		} else return false;
 	}
 	
 	/**

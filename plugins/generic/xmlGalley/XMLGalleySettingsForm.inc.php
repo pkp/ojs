@@ -57,23 +57,29 @@ class XMLGalleySettingsForm extends Form {
 			$this->setData('XSLTrenderer', $plugin->getSetting($journalId, 'XSLTrenderer'));
 			$this->setData('externalXSLT', $plugin->getSetting($journalId, 'externalXSLT'));
 			$this->setData('XSLstylesheet', $plugin->getSetting($journalId, 'XSLstylesheet'));
+			$this->setData('nlmPDF', $plugin->getSetting($journalId, 'nlmPDF'));
+			$this->setData('externalFOP', $plugin->getSetting($journalId, 'externalFOP'));
 		}
 		$this->setData('customXSL', $plugin->getSetting($journalId, 'customXSL'));
-
 	}
 
 	/**
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->readUserVars(array('XSLTrenderer', 'XSLstylesheet', 'externalXSLT', 'customXSL'));
+		$this->readUserVars(array('XSLTrenderer', 'XSLstylesheet', 'externalXSLT', 'customXSL', 'nlmPDF', 'externalFOP'));
 
 		// ensure that external XSLT or XSL are not blank
 		if ($this->getData('XSLTrenderer') == "external") {
 			$this->addCheck(new FormValidator($this, 'externalXSLT', 'required', 'plugins.generic.xmlGalley.settings.externalXSLTRequired'));
 		}
 
-		// if we have the custom stylesheet button enabled, then check that an XSL is
+		// if PDF rendering is enabled, then check that an external FO processor is set
+		if ($this->getData('nlmPDF') == "1") {
+			$this->addCheck(new FormValidator($this, 'externalFOP', 'required', 'plugins.generic.xmlGalley.settings.xslFOPRequired'));
+		}
+
+		// if the custom stylesheet button is enabled, then check that an XSL is uploaded
 		if ($this->getData('XSLstylesheet') == "custom") {
 			$this->addCheck(new FormValidator($this, 'customXSL', 'required', 'plugins.generic.xmlGalley.settings.customXSLRequired'));
 		}
@@ -99,6 +105,8 @@ class XMLGalleySettingsForm extends Form {
 			$cacheManager->flush('xsltGalley');
 		}
 
+		$plugin->updateSetting($journalId, 'nlmPDF', $this->getData('nlmPDF'));
+		$plugin->updateSetting($journalId, 'externalFOP', $this->getData('externalFOP'));
 		$plugin->updateSetting($journalId, 'XSLTrenderer', $this->getData('XSLTrenderer'));
 		$plugin->updateSetting($journalId, 'XSLstylesheet', $this->getData('XSLstylesheet'));
 		$plugin->updateSetting($journalId, 'externalXSLT', $this->getData('externalXSLT'));

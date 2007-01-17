@@ -80,6 +80,18 @@
 		<td width="90%" class="value">{translate key="plugins.generic.xmlGalley.settings.xslNLM"}</td>
 	</tr>
 	<tr valign="top">
+		<td width="10%" class="label" align="right"><input type="checkbox" name="nlmPDF" id="nlmPDF" value="1"{if $nlmPDF==1} checked="checked"{/if} /></td>
+		<td width="90%" class="value">{translate key="plugins.generic.xmlGalley.settings.xslFOP"}</td>
+	</tr>
+	<tr valign="top">
+		<td width="10%" class="label">&nbsp;</td>
+		<td width="90%" class="value">{translate key="plugins.generic.xmlGalley.settings.xslFOPDescription"}</td>
+	</tr>
+	<tr valign="top">
+		<td width="10%" class="label">&nbsp;</td>
+		<td width="90%" class="value"><input type="text" name="externalFOP" id="externalFOP" value="{$externalFOP|escape}" size="60" maxlength="90" class="textField" /></td>
+	</tr>
+	<tr valign="top">
 		<td width="10%" class="label" align="right"><input type="radio" name="XSLstylesheet" id="XSLstylesheet" value="custom" {if $XSLstylesheet eq "custom"}checked {/if}/></td>
 		<td width="90%" class="value">{translate key="plugins.generic.xmlGalley.settings.customXSL"}</td>
 	</tr>

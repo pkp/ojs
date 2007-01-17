@@ -34,6 +34,11 @@
 
 	<message key="plugins.generic.xmlGalley.settings.stylesheet">XSL Stylesheet</message>
 	<message key="plugins.generic.xmlGalley.settings.xslNLM"><![CDATA[<a href="http://dtd.nlm.nih.gov/publishing/">NLM Journal Publishing DTD</a> &rarr; XHTML]]></message>
+
+	<message key="plugins.generic.xmlGalley.settings.xslFOP">Enable rendering PDF galleys using XSL-FO (eg. FOP)</message>
+	<message key="plugins.generic.xmlGalley.settings.xslFOPDescription"><![CDATA[Enter the complete path to the FO processor, with any required arguments.  Use %fo to substitute the location of the XSL-FO file, and %pdf to substitute the location of the PDF file; eg: <br/><pre>/usr/sbin/fop -fo %fo -pdf %pdf</pre>]]></message>
+	<message key="plugins.generic.xmlGalley.settings.xslFOPRequired">An external command-line FO processor must be specified.</message>
+
 	<message key="plugins.generic.xmlGalley.settings.customXSL">Custom XSL stylesheet</message>
 	<message key="plugins.generic.xmlGalley.settings.customXSLRequired">A custom XSL stylesheet file must be specified.</message>
 	<message key="plugins.generic.xmlGalley.settings.customXSLInvalid">The uploaded XSL file was not valid. Please check the file and try again.</message>

@@ -26,11 +26,19 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 	}
 
 	/**
-	 * Check if galley is an XML galley.
+	 * Check if galley is an HTML galley.
 	 * @return boolean
 	 */
-	function isXMLGalley() {
-		return true;
+	function isHTMLGalley() {
+		switch ($this->getFileType()) {
+			case 'application/xhtml':
+			case 'application/xhtml+xml':
+			case 'text/html':
+			case 'application/xml':
+			case 'text/xml':
+				return true;
+			default: return false;
+		}
 	}
 
 	/**
@@ -66,35 +74,45 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 	 * Re-run the XSLT transformation on a stale (or missing) cache
 	 * @return boolean
 	 */
-	function _xsltCacheMiss(&$cache, $id) {
+	function _xsltCacheMiss(&$cache) {
 		static $contents;
-
 		if (!isset($contents)) {
-
 			$journal = &Request::getJournal();
-			$xsltRenderer = $this->xmlGalleyPlugin->getSetting($journal->getJournalId(), 'XSLTrenderer');
+			$xmlGalleyPlugin = &PluginRegistry::getPlugin('generic', 'XMLGalleyPlugin');
+
+			$xsltRenderer = $xmlGalleyPlugin->getSetting($journal->getJournalId(), 'XSLTrenderer');
 
 			// get command for external XSLT tool
-			if ($xsltRenderer == "external") $xsltRenderer = $this->xmlGalleyPlugin->getSetting($journal->getJournalId(), 'externalXSLT');
+			if ($xsltRenderer == "external") $xsltRenderer = $xmlGalleyPlugin->getSetting($journal->getJournalId(), 'externalXSLT');
 
 			// choose the configured stylesheet: built-in, or custom
-			$xslStylesheet = $this->xmlGalleyPlugin->getSetting($journal->getJournalId(), 'XSLstylesheet');
+			$xslStylesheet = $xmlGalleyPlugin->getSetting($journal->getJournalId(), 'XSLstylesheet');
 			switch ($xslStylesheet) {
 				case 'NLM':
-					$xslSheet = $this->xmlGalleyPlugin->getPluginPath() . '/transform/nlm-xhtml.xsl';
+					// if the XML galley is a PDF galley then render the XSL-FO stylesheet
+					if ($this->isPdfGalley()) {
+						$xslSheet = $xmlGalleyPlugin->getPluginPath() . '/transform/nlm/nlm-fo.xsl';
+					} else {
+						$xslSheet = $xmlGalleyPlugin->getPluginPath() . '/transform/nlm/nlm-xhtml.xsl';
+
+						// send XHTML (and inline MathML and SVG) if it's explicitly accepted, otherwise send XHTML
+						// TODO: ask alf about this; if he has an example with firefox
+						//if (stristr($_SERVER['HTTP_ACCEPT'], 'application/mathml+xml')) $arguments['mathml'] = true;
+						//if (stristr($_SERVER['HTTP_ACCEPT'], 'image/svg+xml')) $arguments['svg'] = true;
+					}
 					break;
 				case 'custom';
 					// get file path for custom XSL sheet
-					// FIXME:  bug here: Fatal error*: Class 'JournalFileManager' not found in */home/asmecher/cvs/ojs2/plugins/generic/xmlGalley/ArticleXMLGalley.inc.php* on line *89
 					$journalFileManager =& new JournalFileManager($journal);
-					$xslSheet = $journalFileManager->filesDir . $this->xmlGalleyPlugin->getSetting($journal->getJournalId(), 'customXSL');
+					$xslSheet = $journalFileManager->filesDir . $xmlGalleyPlugin->getSetting($journal->getJournalId(), 'customXSL');
 					break;
 			}
 
 			// transform the XML using whatever XSLT processor we have available
-			$contents = $this->transformXSLT($this->getFilePath(), $xslSheet, $xsltRenderer);
+			$contents = $this->transformXSLT($this->getFilePath(), $xslSheet, $xsltRenderer, $arguments);
 
-			$cache->setEntireCache($contents);
+			// if all goes well, cache the results of the XSLT transformation
+			if ($contents) $cache->setEntireCache($contents);
 		}
 		return null;
 	}
@@ -106,14 +124,14 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 	 * @return string
 	 */
 	function getHTMLContents() {
-		$this->xmlGalleyPlugin = &PluginRegistry::getPlugin('generic', 'XMLGalleyPlugin');
+		$xmlGalleyPlugin = &PluginRegistry::getPlugin('generic', 'XMLGalleyPlugin');
 
 		// if the XML Galley plugin is not installed or enabled,
 		// then pass through to ArticleHTMLGalley
-		if ( !$this->xmlGalleyPlugin ) return parent::getHTMLContents();
-		if ( !$this->xmlGalleyPlugin->getEnabled() ) return parent::getHTMLContents();
+		if ( !$xmlGalleyPlugin ) return parent::getHTMLContents();
+		if ( !$xmlGalleyPlugin->getEnabled() ) return parent::getHTMLContents();
 
-		$cache =& $this->_getXSLTCache($this->getFileName());
+		$cache =& $this->_getXSLTCache($this->getFileName() . '-' . $this->getGalleyId());
 		$contents = $cache->getContents();
 
 		// if contents is false/empty, then we have an XSLT error
@@ -159,23 +177,82 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 			}
 		}
 
-		// if client encoding is set to iso-8859-1, transcode string from utf8 since we transform all XML in utf8
-		// FIXME: this doesn't seem to work as expected - perhaps two XSL sheets?
-		if (LOCALE_ENCODING == "iso-8859-1") $contents = utf8_decode($contents);
-//		if (LOCALE_ENCODING == "iso-8859-1") $contents =  mb_convert_encoding($contents, "UTF-8", "ISO-8859-1");
+		// if client encoding is set to iso-8859-1, transcode string to HTML entities
+		// since we transform all XML in utf8 and can't rely on built-in PHP functions
+		if (LOCALE_ENCODING == "iso-8859-1") $contents = &String::utf2html($contents);
 
 		return $contents;
 	}
 
 	/**
-	 * Return string containing the transformed XML output.
-	 * This function applies an XSLT transform to a given XML source.
-	 * @param $xmlFile pathnae to the XML source file (absolute)
-	 * @param $xslFile pathname to the XSL stylesheet (absolute)
-	 * @param (optional) $xsltType type of XSLT renderer to use (PHP4, PHP5, or XSLT shell command)
+	 * Output PDF generated from the XML/XSL/FO source to browser
+	 * This function performs any necessary filtering, like image URL replacement.
 	 * @return string
 	 */
-	function transformXSLT($xmlFile, $xslFile, $xsltType = "") {
+	function viewFileContents() {
+		$pdfFileName = str_replace(FileManager::parseFileExtension($this->getFilePath()), 'pdf', $this->getFilePath());
+
+		// if file does not exist or is outdated, regenerate it from FO
+		if ( !FileManager::fileExists($pdfFileName) || filemtime($pdfFileName) < filemtime($this->getFilePath()) ) {
+
+			// render XML into XSL-FO
+			$cache =& $this->_getXSLTCache($this->getFileName() . '-' . $this->getGalleyId());
+
+			$contents = $cache->getContents();
+			if (!$contents) return false;		// if for some reason the XSLT failed, show original file
+
+			// create temporary FO file and write the contents
+			import('file.TemporaryFileManager');
+			$temporaryFileManager = &new TemporaryFileManager();
+			$tempFoName = $temporaryFileManager->filesDir . $this->getFileName() . '-' . $this->getGalleyId() . '.fo';
+
+			$temporaryFileManager->writeFile($tempFoName, $contents);
+
+			// perform %fo and %pdf replacements for fully-qualified shell command
+			$journal = &Request::getJournal();
+			$xmlGalleyPlugin = &PluginRegistry::getPlugin('generic', 'XMLGalleyPlugin');
+
+			$fopCommand = str_replace(array('%fo', '%pdf'), 
+					array($tempFoName, $pdfFileName), 
+					$xmlGalleyPlugin->getSetting($journal->getJournalId(), 'externalFOP'));
+
+			// check for safe mode and escape the shell command
+			if( !ini_get('safe_mode') ) $fopCommand = escapeshellcmd($fopCommand);
+
+			// run the shell command and get the results
+			exec($fopCommand . ' 2>&1', $contents, $status);
+			
+			// if there is an error, spit out the shell results to aid debugging
+			if ($status != false) {
+				if ($contents != '') {
+					foreach ($contents as $line) echo $line . "\n";
+					$cache->flush();			// clear the XSL cache in case it's a FO error
+					return true;
+				} else return false;
+			}
+
+			// clear the temporary FO file
+			FileManager::deleteFile($tempFoName);
+		}
+
+		// use FileManager to send file to browser
+		FileManager::viewFile($pdfFileName, $this->getFileType());
+
+		return true;
+	}
+
+	/**
+	 * Return string containing the transformed XML output.
+	 * This function applies an XSLT transform to a given XML source.
+	 * @param $xmlFile pathname to the XML source file (absolute)
+	 * @param $xslFile pathname to the XSL stylesheet (absolute)
+	 * @param (optional) $xsltType type of XSLT renderer to use (PHP4, PHP5, or XSLT shell command)
+	 * @param (optional) $arguments array of param-value pairs to pass to the XSLT  
+	 * @return string
+	 */
+	function transformXSLT($xmlFile, $xslFile, $xsltType = "", $arguments = null) {
+		// if either XML or XSL file don't exist, then fail without trying to process XSLT
+		if (!FileManager::fileExists($xmlFile) || !FileManager::fileExists($xslFile)) return false;
 
 		// Determine the appropriate XSLT processor for the system
 		if ( version_compare(PHP_VERSION,'5','>=') && extension_loaded('xsl') && extension_loaded('dom') ) {
@@ -205,9 +282,9 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 				$proc->importStylesheet($xslDom);
 
 				// set XSL parameters
-				// send XHTML (and inline MathML and SVG) if it's explicitly accepted, otherwise send XHTML
-				// if (stristr($_SERVER['HTTP_ACCEPT'], 'application/mathml+xml')) $proc->setParameter(null, 'mathml', true);
-				// if (stristr($_SERVER['HTTP_ACCEPT'], 'image/svg+xml')) $proc->setParameter(null, 'svg', true);
+				foreach ($arguments as $param => $value) {
+					$proc->setParameter(null, $param, $value);
+				}
 
 				// transform the XML document to an XHTML fragment
 				$contents = $proc->transformToXML($xmlDom);
@@ -222,11 +299,6 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 			if ( $xsltType == "PHP4"  || $xsltType == "" ) {
 				// create the processor
 				$proc = xslt_create();
-
-				// set XSL parameters
-				// send XHTML (and inline MathML and SVG) if it's explicitly accepted, otherwise send HTML
-				// if (stristr($_SERVER['HTTP_ACCEPT'], 'application/mathml+xml')) $arguments['mathml'] = true;
-				// if (stristr($_SERVER['HTTP_ACCEPT'], 'image/svg+xml')) $arguments['svg'] = true;
 
 				// transform the XML document to an XHTML fragment
 				$contents = xslt_process($proc, $xmlFile, $xslFile, null, null, $arguments);

@@ -12,7 +12,7 @@
  *
  * $Id$
  */
- 
+
 import('classes.plugins.GenericPlugin');
 
 class XMLGalleyPlugin extends GenericPlugin {
@@ -21,8 +21,20 @@ class XMLGalleyPlugin extends GenericPlugin {
 		if (!Config::getVar('general', 'installed')) return false;
 		if (parent::register($category, $path)) {
 
-			// Register the XML Galley type against the Article Galley DAO class 
-			HookRegistry::register( 'ArticleGalleyDAO::_returnGalleyFromRow', array(&$this, 'returnXMLGalley') );
+			$this->import('ArticleXMLGalleyDAO');
+			$xmlGalleyDao = &new ArticleXMLGalleyDAO();
+			DAORegistry::registerDAO('ArticleXMLGalleyDAO', $xmlGalleyDao);
+
+			// NB: These hooks essentially modify/overload the existing ArticleGalleyDAO methods
+			HookRegistry::register('ArticleGalleyDAO::getNewGalley', array(&$this, 'getXMLGalley') );
+			HookRegistry::register('ArticleGalleyDAO::_returnGalleyFromRow', array(&$this, 'returnXMLGalley') );
+			HookRegistry::register('ArticleGalleyDAO::getArticleGalleys', array(&$xmlGalleyDao, 'appendXMLGalleys') );
+			HookRegistry::register('ArticleGalleyDAO::insertNewGalley', array(&$xmlGalleyDao, 'insertXMLGalleys') );
+			HookRegistry::register('ArticleGalleyDAO::deleteGalleyById', array(&$xmlGalleyDao, 'deleteXMLGalleys') );
+			HookRegistry::register('ArticleGalleyDAO::incrementGalleyViews', array(&$xmlGalleyDao, 'incrementXMLViews') );
+
+			// This hook is required in the absence of hooks in the viewFile methods
+			HookRegistry::register( 'ArticleHandler::viewFile', array(&$this, 'viewXMLGalleyFile') ); 
 
 			$this->addLocaleData();
 			return true;
@@ -43,57 +55,104 @@ class XMLGalleyPlugin extends GenericPlugin {
 	}
 
 	/**
-	 * Create an article XML Galley and return it 
+	 * Get the filename of the ADODB schema for this plugin.
+	 */
+	function getInstallSchemaFile() {
+		return $this->getPluginPath() . '/' . 'schema.xml';
+	}
+
+	/**
+	 * Return XML-derived galley by ID from article_xml_galleys
+	 * (which does not exist in article_galleys)
+	 */
+	function getXMLGalley($hookName, &$args) {
+		if (!$this->getEnabled()) return false;
+		$galleyId =& $args[0];
+		$articleId =& $args[1];
+		$returner =& $args[2];
+
+		$xmlGalleyDao = &new ArticleXMLGalleyDAO();
+		$xmlGalley = $xmlGalleyDao->_getXMLGalleyFromId($galleyId, $articleId);
+		if ($xmlGalley) {
+			$xmlGalley->setGalleyId($galleyId);
+			$returner = $xmlGalley;
+			return true;
+		}
+		return false;
+	}
+
+	/**
+	 * Return XML-derived galley as a file; basically this is a FO-rendered PDF file
+	 */
+	function viewXMLGalleyFile($hookName, $args) {
+		if (!$this->getEnabled()) return false;
+		$article =& $args[0];
+		$galley =& $args[1];
+		$fileId =& $args[2];
+
+		$journal = &Request::getJournal();
+
+		if (get_class($galley) == 'ArticleXMLGalley' && $galley->isPdfGalley() && 
+			$this->getSetting($journal->getJournalId(), 'nlmPDF') == 1) {
+			return $galley->viewFileContents();
+		} else return false;
+	}
+
+	/**
+	 * Append some special attributes to a galley identified as XML, and 
+	 * Return an ArticleXMLGalley object as appropriate
 	 */
 	function returnXMLGalley($hookName, $args) {
 		if (!$this->getEnabled()) return false;
 		$galley =& $args[0];
 		$row =& $args[1];
 
+	 	// TODO: this should ONLY be for NEW galleys, to allow uploading of images, CSS, etc
+	 	// probably based on the current page/context, ie. editor pages
+
 		// If the galley is an XML file, then convert it from an HTML Galley to an XML Galley
 		if ($galley->getFileType() == "text/xml") {
-
-			$this->import('ArticleXMLGalley');
-			$xmlGalley = new ArticleXMLGalley();
-			$xmlGalley->setType('public');
-
-			// Create XML Galley with previous values
-			$xmlGalley->setGalleyId($row['galley_id']);
-			$xmlGalley->setArticleId($row['article_id']);
-			$xmlGalley->setFileId($row['file_id']);
-			$xmlGalley->setSequence($row['seq']);
-			$xmlGalley->setViews($row['views']);
-			$xmlGalley->setFileName($row['file_name']);
-			$xmlGalley->setOriginalFileName($row['original_file_name']);
-			$xmlGalley->setFileType($row['file_type']);
-			$xmlGalley->setFileSize($row['file_size']);
-			$xmlGalley->setStatus($row['status']);
-			$xmlGalley->setDateModified($row['date_modified']);
-			$xmlGalley->setDateUploaded($row['date_uploaded']);
-
-			// the result should now be XHTML so update the label for issue view
-			if (Request::getRequestedPage() == 'issue') {
-				$xmlGalley->setLabel("XHTML");
-			} else {
-				$xmlGalley->setLabel($row['label']);
-			}
-
-			// Copy CSS and image file references
-			if ($row['style_file_id']) {
-				$xmlGalley->setStyleFileId($row['style_file_id']);
-				$xmlGalley->setStyleFile($galley->getStyleFile());
-			}
-
-			if ($galley->isHTMLGalley()) {
-				$xmlGalley->setImageFiles($galley->getImageFiles());
-			}
-
-			$galley = $xmlGalley;
-
+			$galley = $this->_returnXMLGalleyFromArticleGalley(&$galley);
 			return true;
 		}
 
 		return false;
+	}
+
+	/**
+	 * Internal function to return an ArticleXMLGalley object from an ArticleGalley object
+	 * @param $galley ArticleGalley 
+	 * @return ArticleXMLGalley
+	 */
+	function _returnXMLGalleyFromArticleGalley(&$galley) {
+		$this->import('ArticleXMLGalley');
+		$articleXMLGalley = new ArticleXMLGalley();
+
+		// Create XML Galley with previous values
+		$articleXMLGalley->setGalleyId($galley->getGalleyId());
+		$articleXMLGalley->setArticleId($galley->getArticleId());
+		$articleXMLGalley->setFileId($galley->getFileId());
+		$articleXMLGalley->setLabel($galley->getLabel());
+		$articleXMLGalley->setSequence($galley->getSequence());
+		$articleXMLGalley->setViews($galley->getViews());
+		$articleXMLGalley->setFileName($galley->getFileName());
+		$articleXMLGalley->setOriginalFileName($galley->getOriginalFileName());
+		$articleXMLGalley->setFileType($galley->getFileType());
+		$articleXMLGalley->setFileSize($galley->getFileSize());
+		$articleXMLGalley->setStatus($galley->getStatus());
+		$articleXMLGalley->setDateModified($galley->getDateModified());
+		$articleXMLGalley->setDateUploaded($galley->getDateUploaded());
+
+		$articleXMLGalley->setType('public');
+
+		// Copy CSS and image file references from source galley
+		if ($galley->isHTMLGalley()) {
+			$articleXMLGalley->setStyleFileId($galley->getStyleFileId());
+			$articleXMLGalley->setStyleFile($galley->getStyleFile());
+			$articleXMLGalley->setImageFiles($galley->getImageFiles());
+		}
+
+		return $articleXMLGalley;
 	}
 
 	/**

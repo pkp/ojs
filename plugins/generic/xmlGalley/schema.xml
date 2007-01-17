@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE schema SYSTEM "../../../dbscripts/xml/dtd/xmlschema.dtd">
+
+<!--
+  * schema.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * XML Galley plugin schema in XML.
+  *
+  * $Id$
+  -->
+
+<schema version="0.2">
+
+	<!--
+	 *
+	 * TABLE article_xml_galleys 
+	 *
+	 -->
+	<table name="article_xml_galleys">
+		<field name="xml_galley_id" type="I8">
+			<KEY/>
+			<AUTOINCREMENT/>
+		</field>
+		<field name="galley_id" type="I8">
+			<KEY/>
+			<AUTOINCREMENT/>
+		</field>
+		<field name="article_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="label" type="C2" size="32">
+			<NOTNULL/>
+		</field>
+		<field name="galley_type" type="C2" size="255">
+			<NOTNULL/>
+		</field>
+		<field name="views" type="I4">
+			<NOTNULL/>
+		</field>
+		<descr>XML-Derived galleys.</descr>
+		<index name="xml_galleys_id">
+			<col>xml_galley_id</col>
+			<col>galley_id</col>
+		</index>
+	</table>
+
+</schema>
