@@ -365,10 +365,10 @@ class OAIDAO extends DAO {
 		$volLabel = Locale::translate('issue.vol');
 		$numLabel = Locale::translate('issue.no');
 
-		$vol = $this->getData('volume');
-		$num = $this->getData('number');
-		$year = $this->getData('year');
-		$title = $this->getData('title');
+		$vol = $row['issue_volume'];
+		$num = $row['issue_number'];
+		$year = $row['issue_year'];
+		$title = $row['issue_title'];
 
 		$identification = '';
 
