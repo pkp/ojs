@@ -289,8 +289,13 @@ class RTHandler extends ArticleHandler {
 
 		import('mail.MailTemplate');
 		$email = &new MailTemplate();
+		$email->setAddressFieldsEnabled(false);
 
 		if (Request::getUserVar('send') && !$email->hasErrors()) {
+			$authors = &$article->getAuthors();
+			$author = &$authors[0];
+			$email->addRecipient($author->getEmail(), $author->getFullName());
+
 			$email->send();
 
 			$templateMgr = &TemplateManager::getManager();
@@ -298,9 +303,6 @@ class RTHandler extends ArticleHandler {
 		} else {
 			if (!Request::getUserVar('continued')) {
 				$email->setSubject('[' . $journal->getSetting('journalInitials') . '] ' . strip_tags($article->getArticleTitle()));
-				$authors = &$article->getAuthors();
-				$author = &$authors[0];
-				$email->addRecipient($author->getEmail(), $author->getFullName());
 			}
 			$email->displayEditForm(Request::url(null, null, 'emailAuthor', array($articleId, $galleyId)), null, 'rt/email.tpl', array('op' => 'emailAuthor'));
 		}
