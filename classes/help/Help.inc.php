@@ -130,8 +130,9 @@ class Help {
 		if (!isset($toc)) {
 			$helpToc = array();
 			$topicId = 'index/topic/000000';
-			$helpToc = $this->buildTopicSection($topicId);
-			$toc =& $this->buildToc($helpToc);
+			$help =& Help::getHelp();
+			$helpToc = $help->buildTopicSection($topicId);
+			$toc =& $help->buildToc($helpToc);
 
 			$cache->setEntireCache($toc);
 		}
