@@ -120,6 +120,7 @@ class UserManagementForm extends Form {
 					'firstName' => $user->getFirstName(),
 					'middleName' => $user->getMiddleName(),
 					'lastName' => $user->getLastName(),
+					'signature' => $user->getSignature(),
 					'initials' => $user->getInitials(),
 					'affiliation' => $user->getAffiliation(),
 					'email' => $user->getEmail(),
@@ -152,7 +153,7 @@ class UserManagementForm extends Form {
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->readUserVars(array('authId', 'enrollAs', 'password', 'password2', 'firstName', 'middleName', 'lastName', 'initials', 'affiliation', 'email', 'phone', 'fax', 'mailingAddress', 'country', 'biography', 'interests', 'userLocales', 'generatePassword', 'sendNotify', 'mustChangePassword'));
+		$this->readUserVars(array('authId', 'enrollAs', 'password', 'password2', 'firstName', 'middleName', 'lastName', 'initials', 'signature', 'affiliation', 'email', 'phone', 'fax', 'mailingAddress', 'country', 'biography', 'interests', 'userLocales', 'generatePassword', 'sendNotify', 'mustChangePassword'));
 		if ($this->userId == null) {
 			$this->readUserVars(array('username'));
 		}
@@ -187,6 +188,7 @@ class UserManagementForm extends Form {
 		$user->setLastName($this->getData('lastName'));
 		$user->setInitials($this->getData('initials'));
 		$user->setAffiliation($this->getData('affiliation'));
+		$user->setSignature($this->getData('signature'));
 		$user->setEmail($this->getData('email'));
 		$user->setUrl($this->getData('userUrl'));
 		$user->setPhone($this->getData('phone'));
