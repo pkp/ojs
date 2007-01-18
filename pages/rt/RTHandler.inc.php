@@ -221,7 +221,7 @@ class RTHandler extends ArticleHandler {
 		$templateMgr->assign('galleyId', $galleyId);
 
 		// Use the article's CSS file, if set.
-		if ($galley->isHTMLGalley() && $styleFile =& $galley->getStyleFile()) {
+		if ($galley && $galley->isHTMLGalley() && $styleFile =& $galley->getStyleFile()) {
 			$templateMgr->addStyleSheet(Request::url(null, 'article', 'viewFile', array(
 				$article->getArticleId(),
 				$galley->getGalleyId(),
