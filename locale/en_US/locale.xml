@@ -1769,7 +1769,7 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	<!-- Article Submission Step 1 -->
 	<message key="author.submit.howToSubmit"><![CDATA[Authors submit items to this journal through this web site in a five-step process for uploading the manuscript and relevant information (with an option to upload, as well, supplementary files, such as research data and instruments). If difficulties are encountered in this process, contact <a href="mailto:{$supportEmail}">{$supportName}</a> by email or phone {$supportPhone} for assistance.]]></message>
 	<message key="author.submit.journalSection">Journal Section</message>
-	<message key="author.submit.journalSectionDescription"><![CDATA[Select the appropriate section for this submission (see Sections and Policies in <a href="{$aboutUrl}">About</a> the Journal).]]></message>
+	<message key="author.submit.journalSectionDescription"><![CDATA[Select the appropriate section for this submission (see Sections and Policies in <a href="{$aboutUrl}" target="_new">About</a> the Journal).]]></message>
 	<message key="author.submit.selectSection">Please select a section...</message>
 	
 	<message key="author.submit.submissionChecklist">Submission Checklist</message>
