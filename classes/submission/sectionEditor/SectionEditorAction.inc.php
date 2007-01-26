@@ -217,7 +217,8 @@ class SectionEditorAction extends Action {
 					if ($reviewAssignment->getDateDue() != null) {
 						$reviewDueDate = date('Y-m-d', strtotime($reviewAssignment->getDateDue()));
 					} else {
-						$reviewDueDate = date('Y-m-d', strtotime('+2 week'));
+						$numWeeks = max((int) $journal->getSetting('numWeeksPerReview'), 2);
+						$reviewDueDate = date('Y-m-d', strtotime('+' . $numWeeks . ' week'));
 					}
 
 					$submissionUrl = Request::url(null, 'reviewer', 'submission', $reviewId, $reviewerAccessKeysEnabled?array('key' => 'ACCESS_KEY'):array());
