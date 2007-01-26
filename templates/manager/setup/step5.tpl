@@ -319,7 +319,7 @@
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="navItems-$navItemId-name" key="manager.setup.labelName"}</td>
 		<td width="80%" class="value">
-			<input type="text" name="navItems[{$navItemId}][name]" id="navItems-{$navItemId}-name" value="{$navItem.name|escape}" size="30" maxlength="90" class="textField" /> {if $smarty.foreach.navItems.total > 1} <input type="submit" name="delNavItem[{$navItemId}]" value="{translate key="common.delete"}" class="button" />{/if}
+			<input type="text" name="navItems[{$navItemId}][name]" id="navItems-{$navItemId}-name" value="{$navItem.name|escape}" size="30" maxlength="90" class="textField" /> <input type="submit" name="delNavItem[{$navItemId}]" value="{translate key="common.delete"}" class="button" />
 			<table width="100%">
 				<tr valign="top">
 					<td width="5%"><input type="checkbox" name="navItems[{$navItemId}][isLiteral]" id="navItems-{$navItemId}-isLiteral" value="1"{if $navItem.isLiteral} checked="checked"{/if} /></td>
