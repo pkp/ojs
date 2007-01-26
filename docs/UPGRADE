@@ -41,8 +41,8 @@ The OJS source code is available in three forms: as patches against older
 releases of OJS, from an anonymous CVS repository, and as a complete
 stand-alone package.
 
-Patching or updating from CVS is the recommended approach if you have made local
-modifications to the system.
+Patching or updating from CVS are the recommended approach if you have made
+local modifications to the system.
 
 1. Patch
 
@@ -54,7 +54,7 @@ version of OJS and run the following command from your OJS directory:
     $ patch -p1 < PATCH_FILE
 
 "PATCH_FILE" should be replaced with the path to the decompressed patch file
-that was downloaded, e.g. "ojs-2.0.0_to_2.0.1.patch".
+that was downloaded, e.g. "ojs-2.0_to_2.0.1.patch".
 
 Alternatively, OJS 2.0.1 and later provide a command-line tool to automatically
 download and apply the appropriate patch to upgrade to the latest release. To
