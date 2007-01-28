@@ -190,7 +190,7 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 	 * @return string
 	 */
 	function viewFileContents() {
-		$pdfFileName = str_replace(FileManager::parseFileExtension($this->getFilePath()), 'pdf', $this->getFilePath());
+		$pdfFileName = CacheManager::getFileCachePath() . DIRECTORY_SEPARATOR . 'fc-xsltGalley' . str_replace(FileManager::parseFileExtension($this->getFileName()), 'pdf', $this->getFileName());
 
 		// if file does not exist or is outdated, regenerate it from FO
 		if ( !FileManager::fileExists($pdfFileName) || filemtime($pdfFileName) < filemtime($this->getFilePath()) ) {
@@ -199,7 +199,21 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 			$cache =& $this->_getXSLTCache($this->getFileName() . '-' . $this->getGalleyId());
 
 			$contents = $cache->getContents();
-			if (!$contents) return false;		// if for some reason the XSLT failed, show original file
+			if ($contents == "") return false;		// if for some reason the XSLT failed, show original file
+
+			// Replace image references
+			$images = &$this->getImageFiles();
+
+			if ($images !== null) {
+				// TODO: this should "smart replace" the file path ($this->getFilePath()) in the XSL-FO
+				// in lieu of requiring XSL parameters, and transparently for FO that are hardcoded 
+				foreach ($images as $image) {
+					$contents = preg_replace(
+						'/src\s*=\s*"([^"]*)' . preg_quote($image->getOriginalFileName()) . '([^"]*)"/i',
+						'src="${1}' . dirname($this->getFilePath()) . DIRECTORY_SEPARATOR . $image->getFileName() . '$2"',
+						$contents );
+				}
+			}
 
 			// create temporary FO file and write the contents
 			import('file.TemporaryFileManager');
@@ -225,7 +239,7 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 			// if there is an error, spit out the shell results to aid debugging
 			if ($status != false) {
 				if ($contents != '') {
-					foreach ($contents as $line) echo $line . "\n";
+					echo implode("\n", $contents);
 					$cache->flush();			// clear the XSL cache in case it's a FO error
 					return true;
 				} else return false;
@@ -321,8 +335,15 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 			if( !ini_get('safe_mode') ) $xsltCommand = escapeshellcmd($xsltCommand);
 
 			// run the shell command and get the results
-			exec($xsltCommand, $contents, $status);
-			if ($status != false) return false;
+			exec($xsltCommand . ' 2>&1', $contents, $status);
+
+			// if there is an error, spit out the shell results to aid debugging
+			if ($status != false) {
+				if ($contents != '') {
+					echo implode("\n", $contents);
+					return true;
+				} else return false;
+			}
 
 			return implode("\n", $contents);
 
