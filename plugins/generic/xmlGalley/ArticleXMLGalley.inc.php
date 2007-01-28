@@ -160,7 +160,6 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 		);
 
 		// Replace supplementary file references
-		// $suppFiles = &$this->getSuppFiles($this->getArticleId());
 		$this->suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
 		$suppFiles = $this->suppFileDao->getSuppFilesByArticle($this->getArticleId());
 
@@ -212,6 +211,23 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 						'/src\s*=\s*"([^"]*)' . preg_quote($image->getOriginalFileName()) . '([^"]*)"/i',
 						'src="${1}' . dirname($this->getFilePath()) . DIRECTORY_SEPARATOR . $image->getFileName() . '$2"',
 						$contents );
+				}
+			}
+
+			// Replace supplementary file references
+			$this->suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
+			$suppFiles = $this->suppFileDao->getSuppFilesByArticle($this->getArticleId());
+
+			if ($suppFiles) {
+				foreach ($suppFiles as $supp) {
+					$journal = &Request::getJournal();
+					$suppUrl = Request::url(null, 'article', 'downloadSuppFile', array($this->getArticleId(), $supp->getBestSuppFileId($journal)));
+
+					$contents = preg_replace(
+						'/external-destination\s*=\s*"([^"]*)' . preg_quote($supp->getOriginalFileName()) . '([^"]*)"/i',
+						'external-destination="' . $suppUrl . '"',
+						$contents
+					);
 				}
 			}
 
