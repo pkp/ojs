@@ -140,12 +140,6 @@ function deleteAttachment(fileId) {
 	<td class="value">{$from|escape}</td>
 </tr>
 <tr valign="top">
-	<td>&nbsp;</td>
-	<td class="value">
-		<input type="submit" onclick="document.submit.action='{url op="selectTemplate"}';" class="button" value="{translate key="manager.people.emailUsers.selectTemplate"}"/>
-	</td>
-</tr>
-<tr valign="top">
 	<td width="20%" class="label">{fieldLabel name="subject" key="email.subject"}</td>
 	<td width="80%" class="value"><input type="text" id="subject" name="subject" value="{$subject|escape}" size="60" maxlength="120" class="textField" /></td>
 </tr>

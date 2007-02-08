@@ -580,6 +580,11 @@ class TemplateManager extends Smarty {
 	function smartyPageLinks($params, &$smarty) {
 		$iterator = $params['iterator'];
 		$name = $params['name'];
+		if (isset($params['params']) && is_array($params['params'])) {
+			$extraParams = $params['params'];
+			unset($params['params']);
+			$params = array_merge($params, $extraParams);
+		}
 		if (isset($params['anchor'])) {
 			$anchor = $params['anchor'];
 			unset($params['anchor']);

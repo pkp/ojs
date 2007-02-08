@@ -293,11 +293,6 @@ class ManagerHandler extends Handler {
 		EmailHandler::resetAllEmails();
 	}
 	
-	function selectTemplate($args) {
-		import('pages.manager.PeopleHandler');
-		PeopleHandler::selectTemplate($args);
-	}
-	
 	
 	//
 	// Languages

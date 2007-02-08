@@ -739,38 +739,6 @@ class PeopleHandler extends ManagerHandler {
 	}
 	
 	/**
-	 * Select a template to send to a user or group of users.
-	 */
-	function selectTemplate($args) {
-		parent::validate();
-
-		parent::setupTemplate(true);
-
-		$templateMgr = &TemplateManager::getManager();
-
-		$site = &Request::getSite();
-		$journal = &Request::getJournal();
-		$user = &Request::getUser();
-
-		$locale = Request::getUserVar('locale');
-		if (!isset($locale) || $locale == null) $locale = Locale::getLocale();
-
-		$emailTemplateDao = &DAORegistry::getDAO('EmailTemplateDAO');
-		$emailTemplates = &$emailTemplateDao->getEmailTemplates($locale, $journal->getJournalId());
-
-		$templateMgr->assign_by_ref('emailTemplates', $emailTemplates);
-		$templateMgr->assign('locale', $locale);
-		$templateMgr->assign('locales', $journal->getSetting('supportedLocales'));
-		$templateMgr->assign('localeNames', Locale::getAllLocales());
-		$templateMgr->assign('persistAttachments', Request::getUserVar('persistAttachments'));
-		$templateMgr->assign('to', Request::getUserVar('to'));
-		$templateMgr->assign('cc', Request::getUserVar('cc'));
-		$templateMgr->assign('bcc', Request::getUserVar('bcc'));
-		$templateMgr->assign('helpTopicId', 'journal.users.emailUsers');
-		$templateMgr->display('manager/people/selectTemplate.tpl');
-	}
-
-	/**
 	 * Sign in as another user.
 	 * @param $args array ($userId)
 	 */
