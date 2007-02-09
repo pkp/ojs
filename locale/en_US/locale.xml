@@ -728,7 +728,16 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="admin.journals.transcode">Transcode article metadata from ISO8859-1</message>
 	<message key="admin.journals.form.importPathRequired">The import path is required.</message>
 	<message key="admin.journals.importErrors">Importing failed to complete successfully</message>
-	
+
+	<!-- Site Administrator Merge Users -->	
+	<message key="admin.mergeUsers">Merge Users</message>
+	<message key="admin.mergeUsers.mergeUser">Merge User</message>
+	<message key="admin.mergeUsers.into.description">Select a user to whom to attribute the previous user's authorships, editing assignments, etc.</message>
+	<message key="admin.mergeUsers.from.description">Select a user to merge into another user account (e.g., when someone has two user accounts). The account selected first will be deleted and its submissions, assignments, etc. will be attributed to the second account.</message>
+	<message key="admin.mergeUsers.allUsers">All Enrolled Users</message>
+	<message key="admin.mergeUsers.confirm">Are you sure you wish to merge the account with the username "{$oldUsername}" into the account with the username "{$newUsername}"? The account with the username "{$oldUsername}" will not exist afterwards. This action is not reversible.</message>
+	<message key="admin.mergerUsers.noneEnrolled">No enrolled users.</message>
+
 	<!-- Subscription Management -->
 	<message key="subscriptionManager.subscriptionManagement">Subscription Management</message>
 	

@@ -177,6 +177,16 @@ class AdminHandler extends Handler {
 	
 	
 	//
+	// Merge users
+	//
+	
+	function mergeUsers($args) {
+		import('pages.admin.AdminPeopleHandler');
+		AdminPeopleHandler::mergeUsers($args);
+	}
+
+
+	//
 	// Administrative functions
 	//
 	

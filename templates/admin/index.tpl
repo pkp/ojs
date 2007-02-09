@@ -30,6 +30,7 @@
 	<li>&#187; <a href="{url op="expireSessions"}" onclick="return confirm('{translate|escape:"javascript" key="admin.confirmExpireSessions"}')">{translate key="admin.expireSessions"}</a></li>
 	<li>&#187; <a href="{url op="clearDataCache"}">{translate key="admin.clearDataCache"}</a></li>
 	<li>&#187; <a href="{url op="clearTemplateCache"}" onclick="return confirm('{translate|escape:"javascript" key="admin.confirmClearTemplateCache"}')">{translate key="admin.clearTemplateCache"}</a></li>
+	<li>&#187; <a href="{url op="mergeUsers"}">{translate key="admin.mergeUsers"}</a></li>
 	{call_hook name="Templates::Admin::Index::AdminFunctions"}
 </ul>
 

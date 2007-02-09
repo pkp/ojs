@@ -14,10 +14,51 @@
 
 <topic id="site/topic/000003" locale="en_US" title="Administrative Functions" toc="site/toc/000000" key="site.administrativeFunctions">
 	<section>
-		<![CDATA[<p>Several administrative functions are available in the site administration area. These functions should generally be used with caution, as improper use could lead to unexpected results.</p>
-		<p><em>System Information.</em> General information about the server environment  and OJS version history (including past upgrades). A web-based interface to modify the OJS configuration file is also provided.</p>
-		<p><em>Expire User Sessions.</em> Clears all active user sessions in the system, requiring any user that is currently logged in to sign in to the system again.</p>
-		<p><em>Clear Data Caches.</em> Clears all cached data, including locale information, help cache, and search cache.</p>
-		<p><em>Clear Template Cache.</em> Clears all cached versions of HTML templates. This function may be useful to force templates to be reloaded after customizations have been made.</p>]]>
+		<![CDATA[<p>Several administrative functions are available in the site administration area. These functions should generally be used with caution, as improper use could lead to unexpected results.</p>]]>
+	</section>
+
+	<section title="System Information">
+		<![CDATA[<p>General information about the server environment and OJS version history (including past upgrades). A web-based interface to modify the OJS configuration file is also provided.</p>]]>
+	</section>
+
+	<section title="Expire User Sessions">
+		<![CDATA[<p>Clears all active user sessions in the system, requiring any user that is currently logged in to sign in to the system again.</p>]]>
+	</section>
+
+	<section title="Clear Data Caches">
+		<![CDATA[<p>Clears all cached data, including locale information, help cache, and search cache.</p>]]>
+	</section>
+
+	<section title="Clear Template Cache">
+		<![CDATA[<p>Clears all cached versions of HTML templates. This function may be useful to force templates to be reloaded after customizations have been made.</p>]]>
+	</section>
+
+	<section title="Merge Users">
+		<![CDATA[<p>The Merge Users feature allows the Site Administrator to merge two user accounts into a single account, transferring edit assignments, submissions, and numerous other records from one account to the other and effectively deleting the first.</p>
+		<p>Unlike the Merge Users feature available to a Journal Manager, which is limited to merging user accounts for a particular journal, the Merge Users feature under Site Administration allows the Site Administrator to merge any two user accounts, even across different journals.</p>
+		<p>The following items are transferred:
+			<ul>
+				<li>Article authorship</li>
+				<li>Public comments on articles</li>
+				<li>Article notes</li>
+				<li>Editor assignments and decisions</li>
+				<li>Review assignments</li>
+				<li>Layout editor assignments</li>
+				<li>Proofreader assignments</li>
+				<li>Article email and event log entries</li>
+				<li>Reviewer access keys</li>
+				<li>Roles</li>
+			</ul>
+		The following items are <strong>not</strong> transferred:
+			<ul>
+				<li>Sessions</li>
+				<li>Subscriptions</li>
+				<li>Notification status (i.e. whether the user has signed up to receive notifications about journal news)</li>
+				<li>Editorial team memberships</li>
+				<li>Section Editor status on sections</li>
+				<li>User profile information (e.g. first name, last name, etc.)</li>
+			</ul>
+		</p>
+		<p>This feature should be used with caution, as it is not reversible and involves the transfer of records from one user to another.</p>]]>
 	</section>
 </topic>
