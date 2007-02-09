@@ -26,6 +26,7 @@
 				<li>Proofreader assignments</li>
 				<li>Article email and event log entries</li>
 				<li>Reviewer access keys</li>
+				<li>Roles</li>
 			</ul>
 		The following items are <strong>not</strong> transferred:
 			<ul>
@@ -34,7 +35,6 @@
 				<li>Notification status (i.e. whether the user has signed up to receive notifications about journal news)</li>
 				<li>Editorial team memberships</li>
 				<li>Section Editor status on sections</li>
-				<li>Roles</li>
 				<li>User profile information (e.g. first name, last name, etc.)</li>
 			</ul>
 		</p>
