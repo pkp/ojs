@@ -36,7 +36,7 @@
 			{assign var="ISSN" value=$journal->getSetting('onlineIssn')}
 		{/if}
 		{if $ISSN}
-		<prism:issn>{$journal->getSetting('issn')}</prism:issn>
+		<prism:issn>{$ISSN}</prism:issn>
 		{/if}
 		{if $journal->getSetting('copyrightNotice')}
 		<prism:copyright>{$journal->getSetting('copyrightNotice')|strip_tags|strip|escape:"html"}</prism:copyright>

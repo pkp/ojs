@@ -40,7 +40,7 @@
 				{* required elements *}
 				<title>{$article->getArticleTitle()|strip_tags|escape:"html"}</title>
 				<link>{url page="article" op="view" path=$article->getBestArticleId($currentJournal)}</link>
-				<description>{$article->getAbstract()|strip|escape:"html"}</description>
+				<description>{$article->getAbstract()|strip_tags}</description>
 
 				{* optional elements *}
 		        {foreach from=$article->getAuthors() item=author name=authorList}

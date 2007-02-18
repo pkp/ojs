@@ -42,16 +42,25 @@ class SettingsForm extends Form {
 		$journalId = $this->journalId;
 		$plugin = &$this->plugin;
 
-		$this->_data = array(
-			'displayPage' => $plugin->getSetting($journalId, 'displayPage')
-		);
+		$this->setData('displayPage', $plugin->getSetting($journalId, 'displayPage'));
+		$this->setData('displayItems', $plugin->getSetting($journalId, 'displayItems'));
+		$this->setData('recentItems', $plugin->getSetting($journalId, 'recentItems'));
 	}
 	
 	/**
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->readUserVars(array('displayPage'));
+		$this->readUserVars(array('displayPage','displayItems','recentItems'));
+
+		// check that recent items value is a positive integer
+		if ((int) $this->getData('recentItems') <= 0) $this->setData('recentItems', '');
+
+		// if recent items is selected, check that we have a value
+		if ($this->getData('displayItems') == "recent") {
+			$this->addCheck(new FormValidator($this, 'recentItems', 'required', 'plugins.generic.webfeed.settings.recentItemsRequired'));
+		}
+
 	}
 	
 	/**
@@ -62,6 +71,8 @@ class SettingsForm extends Form {
 		$journalId = $this->journalId;
 
 		$plugin->updateSetting($journalId, 'displayPage', $this->getData('displayPage'));
+		$plugin->updateSetting($journalId, 'displayItems', $this->getData('displayItems'));
+		$plugin->updateSetting($journalId, 'recentItems', $this->getData('recentItems'));
 	}
 	
 }

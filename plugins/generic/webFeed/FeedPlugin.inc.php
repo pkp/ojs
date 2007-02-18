@@ -114,6 +114,9 @@ class FeedPlugin extends GenericPlugin {
 			if ($this->getSetting($journal->getJournalId(), 'displayPage') == "") {
 				$this->updateSetting($journal->getJournalId(), 'displayPage', 'issue');
 			}
+			if ($this->getSetting($journal->getJournalId(), 'displayItems') == "") {
+				$this->updateSetting($journal->getJournalId(), 'displayItems', 'issue');
+			}
 
 			// register against the Layout Manager plugin if it's installed
 			$LayoutManagerPlugin = &PluginRegistry::getPlugin('generic', 'LayoutManager');
