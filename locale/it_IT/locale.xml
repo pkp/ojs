@@ -1881,7 +1881,7 @@ Il file pu&#x00F2; essere aperto cliccando sul nome del file. Pu&#x00F2; essere 
 	<message key="author.submit.filesSummary">Riepilogo dei file</message>
 	<message key="author.submit.finishSubmission">Completa la Submission</message>
 	<message key="author.submit.submissionComplete">Submission completa. Grazie per l'interesse di voler pubblicare il vostro articolo su {$journalTitle}.</message>
-	<message key="author.submit.expedite"><![CDATA[Se questa submission &#x00E8; in un formato che non è èronto per la pubblicaizone a meno di ulteriori processi di review, edit, o layout, pu&#x00F2; essere messa direttamente nel'ultima fase della coda di editing <a href="{$expediteUrl}" class="action">Clicccando qui</a>. (Nota: solo i journal editor hanno questa possibilit&#x00E0; per le loro submission.)]]></message>
+	<message key="author.submit.expedite"><![CDATA[Se questa submission &#x00E8; in un formato pronto per la pubblicaizone senza ulteriori processi di review, edit, o layout, pu&#x00F2; essere messa direttamente nel'ultima fase della coda di editing <a href="{$expediteUrl}" class="action">Clicccando qui</a>. (Nota: solo i journal editor hanno questa possibilit&#x00E0; per le loro submission.)]]></message>
 
 	<!-- Used in submission review / editing -->
 	<message key="submission.review.mustUploadFileForReview">L'email di richiesta non pu&#x00F2; essere inviata fino a quando una versione di review &#x00E8; idoena.</message>
