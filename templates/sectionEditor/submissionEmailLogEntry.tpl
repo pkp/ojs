@@ -86,7 +86,7 @@
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="email.body"}</td>
-		<td class="value">{$logEntry->getBody()|strip_unsafe_html|nl2br}</td>
+		<td class="value">{$logEntry->getBody()|escape|nl2br}</td>
 	</tr>
 </table>
 {if $isEditor}
