@@ -189,7 +189,7 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 	 * @return string
 	 */
 	function viewFileContents() {
-		$pdfFileName = CacheManager::getFileCachePath() . DIRECTORY_SEPARATOR . 'fc-xsltGalley' . str_replace(FileManager::parseFileExtension($this->getFileName()), 'pdf', $this->getFileName());
+		$pdfFileName = CacheManager::getFileCachePath() . DIRECTORY_SEPARATOR . 'fc-xsltGalley-' . str_replace(FileManager::parseFileExtension($this->getFileName()), 'pdf', $this->getFileName());
 
 		// if file does not exist or is outdated, regenerate it from FO
 		if ( !FileManager::fileExists($pdfFileName) || filemtime($pdfFileName) < filemtime($this->getFilePath()) ) {
@@ -219,8 +219,8 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 			$suppFiles = $this->suppFileDao->getSuppFilesByArticle($this->getArticleId());
 
 			if ($suppFiles) {
+				$journal = &Request::getJournal();
 				foreach ($suppFiles as $supp) {
-					$journal = &Request::getJournal();
 					$suppUrl = Request::url(null, 'article', 'downloadSuppFile', array($this->getArticleId(), $supp->getBestSuppFileId($journal)));
 
 					$contents = preg_replace(

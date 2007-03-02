@@ -33,19 +33,33 @@ class ArticleXMLGalleyDAO extends ArticleGalleyDAO {
 	 * @param $articleId int
 	 * @return ArticleXMLGalley
 	 */
-	function _getXMLGalleyFromId(&$galleyId, &$articleId) {
+	function _getXMLGalleyFromId($galleyId, $articleId = null) {
 
 		// get derived galley from DB
-		$result = &$this->retrieve(
-			'SELECT x.*, x.galley_type AS file_type, 
-			g.file_id, g.html_galley, g.style_file_id, g.seq,
-			a.file_name, a.original_file_name, a.file_size, a.status, a.date_uploaded, a.date_modified
-			FROM article_xml_galleys x
-			LEFT JOIN article_galleys g ON (x.galley_id = g.galley_id)
-			LEFT JOIN article_files a ON (g.file_id = a.file_id)
-			WHERE x.xml_galley_id = ? AND x.article_id = ?',
-			array($galleyId, $articleId)
-		);
+		if (isset($articleId)) {
+			$result = &$this->retrieve(
+				'SELECT x.*, x.galley_type AS file_type, 
+				g.file_id, g.html_galley, g.style_file_id, g.seq,
+				a.file_name, a.original_file_name, a.file_size, a.status, a.date_uploaded, a.date_modified
+				FROM article_xml_galleys x
+				LEFT JOIN article_galleys g ON (x.galley_id = g.galley_id)
+				LEFT JOIN article_files a ON (g.file_id = a.file_id)
+				WHERE x.xml_galley_id = ? AND x.article_id = ?',
+				array($galleyId, $articleId)
+			);
+
+		} else {
+			$result = &$this->retrieve(
+				'SELECT x.*, x.galley_type AS file_type, 
+				g.file_id, g.html_galley, g.style_file_id, g.seq,
+				a.file_name, a.original_file_name, a.file_size, a.status, a.date_uploaded, a.date_modified
+				FROM article_xml_galleys x
+				LEFT JOIN article_galleys g ON (x.galley_id = g.galley_id)
+				LEFT JOIN article_files a ON (g.file_id = a.file_id)
+				WHERE x.xml_galley_id = ?',
+				$galleyId
+			);
+		}
 
 		// transform row into an ArticleXMLGalley object
 		if ($result->RecordCount() != 0) {
@@ -118,13 +132,12 @@ class ArticleXMLGalleyDAO extends ArticleGalleyDAO {
 			// create an XHTML galley
 			$this->update(
 				'INSERT INTO article_xml_galleys
-					(galley_id, article_id, xml_galley_id, label, galley_type)
+					(galley_id, article_id, label, galley_type)
 					VALUES
 					(?, ?, ?, ?, ?)',
 				array(
 					$galleyId,
 					$galley->getArticleId(),
-					'1',
 					'XHTML',
 					'application/xhtml+xml'
 				)
@@ -141,13 +154,12 @@ class ArticleXMLGalleyDAO extends ArticleGalleyDAO {
 				// create a PDF galley
 				$this->update(
 					'INSERT INTO article_xml_galleys
-						(galley_id, article_id, xml_galley_id, label, galley_type)
+						(galley_id, article_id, label, galley_type)
 						VALUES
 						(?, ?, ?, ?, ?)',
 					array(
 						$galleyId,
 						$galley->getArticleId(),
-						'2',
 						'PDF',
 						'application/pdf'
 					)

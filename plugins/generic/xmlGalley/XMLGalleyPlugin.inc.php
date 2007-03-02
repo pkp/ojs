@@ -35,8 +35,9 @@ class XMLGalleyPlugin extends GenericPlugin {
 			HookRegistry::register('ArticleGalleyDAO::_returnGalleyFromRow', array(&$this, 'returnXMLGalley') );
 			HookRegistry::register('ArticleGalleyDAO::getNewGalley', array(&$this, 'getXMLGalley') );
 
-			// This hook is required in the absence of hooks in the viewFile methods
-			HookRegistry::register( 'ArticleHandler::viewFile', array(&$this, 'viewXMLGalleyFile') ); 
+			// This hook is required in the absence of hooks in the viewFile and download methods
+			HookRegistry::register( 'ArticleHandler::viewFile', array(&$this, 'viewXMLGalleyFile') );
+			HookRegistry::register( 'ArticleHandler::downloadFile', array(&$this, 'viewXMLGalleyFile') );
 
 			$this->addLocaleData();
 			return true;
