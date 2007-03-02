@@ -365,7 +365,8 @@ class SubscriptionDAO extends DAO {
 					EXTRACT(YEAR FROM date_end),
 					POSITION(UPPER(domain) IN UPPER(?)) 
 			FROM subscriptions, subscription_types
-			WHERE POSITION(UPPER(domain) IN UPPER(?)) != 0   
+			WHERE POSITION(UPPER(domain) IN UPPER(?)) != 0
+			AND   domain != \'\'
 			AND   subscriptions.journal_id = ?
 			AND   subscriptions.type_id = subscription_types.type_id
 			AND   subscription_types.institutional = 1
