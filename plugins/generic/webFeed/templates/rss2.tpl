@@ -2,7 +2,7 @@
 <rss version="2.0">
 	<channel>
 		{* required elements *}
-		<title>{$journal->getTitle()|strip_tags|escape:"html"}</title>
+		<title>{$journal->getTitle()|escape:"html"|strip|strip_tags}</title>
 		<link>{$journal->getUrl()}</link>
 		{if $journal->getDescription()}
 			{assign var="description" value=$journal->getDescription()}
@@ -11,20 +11,20 @@
 		{elseif $journal->getSetting('searchDescription')}
 			{assign var="description" value=$journal->getSetting('searchDescription')}
 		{/if}
-		<description>{$description|strip_tags|strip|escape:"html"}</description>
+		<description>{$description|escape:"html"|strip|strip_tags}</description>
 
 		{* optional elements *}
 	    {if $journal->getLocale()}
-	    <language>{$journal->getLocale()|replace:'_':'-'|strip_tags|escape:"html"}</language>
+	    <language>{$journal->getLocale()|replace:'_':'-'|escape:"html"|strip|strip_tags}</language>
 	    {/if}
 	    {if $journal->getSetting('copyrightNotice')}
-	    <copyright>{$journal->getSetting('copyrightNotice')|strip_tags|strip|escape:"html"}</copyright>
+	    <copyright>{$journal->getSetting('copyrightNotice')|escape:"html"|strip|strip_tags}</copyright>
 	    {/if}
 	    {if $journal->getSetting('contactEmail')}
-		<managingEditor>{$journal->getSetting('contactEmail')|strip_tags|strip|escape:"html"}{if $journal->getSetting('contactName')} ({$journal->getSetting('contactName')|strip_tags|strip|escape:"html"}){/if}</managingEditor>
+		<managingEditor>{$journal->getSetting('contactEmail')|escape:"html"|strip|strip_tags}{if $journal->getSetting('contactName')} ({$journal->getSetting('contactName')|escape:"html"|strip|strip_tags}){/if}</managingEditor>
 		{/if}
 	    {if $journal->getSetting('supportEmail')}
-		<webMaster>{$journal->getSetting('supportEmail')|strip_tags|strip|escape:"html"}{if $journal->getSetting('contactName')} ({$journal->getSetting('supportName')|strip_tags|strip|escape:"html"}){/if}</webMaster>
+		<webMaster>{$journal->getSetting('supportEmail')|escape:"html"|strip|strip_tags}{if $journal->getSetting('contactName')} ({$journal->getSetting('supportName')|escape:"html"|strip|strip_tags}){/if}</webMaster>
 		{/if}
 		<pubDate>{$issue->getDatePublished()|date_format:"%a, %d %b %Y %T %z"}</pubDate>
 		{* <lastBuildDate/> *}
@@ -38,14 +38,14 @@
 		{foreach from=$section.articles item=article}
 			<item>
 				{* required elements *}
-				<title>{$article->getArticleTitle()|strip_tags|escape:"html"}</title>
+				<title>{$article->getArticleTitle()|escape:"html"|strip|strip_tags}</title>
 				<link>{url page="article" op="view" path=$article->getBestArticleId($currentJournal)}</link>
-				<description>{$article->getAbstract()|strip_tags}</description>
+				<description>{$article->getAbstract()|escape:"html"|strip|strip_tags}</description>
 
 				{* optional elements *}
 		        {foreach from=$article->getAuthors() item=author name=authorList}
-		        	{if $author->getPrimaryContact()}
-        		    <author>{$author->getEmail()|strip_tags|escape:"html"} ({$author->getFullName()|strip_tags|escape:"html"})</author>
+		        	{if $author->getEmail()}
+        		    <author>{$author->getEmail()|escape:"html"|strip|strip_tags} ({$author->getFullName()|escape:"html"|strip|strip_tags})</author>
         		    {/if}
 				{/foreach}
 				{* <category/> *}
