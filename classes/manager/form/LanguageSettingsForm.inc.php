@@ -35,7 +35,6 @@ class LanguageSettingsForm extends Form {
 			'alternateLocale2' => 'string',
 			'supportedLocales' => 'object',
 			'journalTitleAltLanguages' => 'bool',
-			'profileAltLanguages' => 'bool',
 			'articleAltLanguages' => 'bool'
 		);
 		
@@ -69,7 +68,9 @@ class LanguageSettingsForm extends Form {
 	 */
 	function initData() {
 		$journal = &Request::getJournal();
-		$this->_data = $journal->getSettings();
+		foreach ($this->settings as $settingName => $settingType) {
+			$this->_data[$settingName] = $journal->getSetting($settingName);
+		}
 		
 		if ($this->getData('supportedLocales') == null || !is_array($this->getData('supportedLocales'))) {
 			$this->setData('supportedLocales', array());

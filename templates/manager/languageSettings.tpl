@@ -66,11 +66,11 @@
 </tr>
 <tr valign="top">
 	<td rowspan="2" class="label">{translate key="manager.languages.alternativeLanguageOptions"}</td>
-	<td width="5%"><input type="checkbox" name="journalTitleAltLanguages" id="journalTitleAltLanguages" value="1" /></td>
+	<td width="5%"><input type="checkbox" name="journalTitleAltLanguages" id="journalTitleAltLanguages" value="1"{if $journalTitleAltLanguages} checked="checked"{/if}/></td>
 	<td width="75%"><label for="journalTitleAltLanguages">{translate key="manager.languages.journalTitleAltLanguages"}</label></td>
 </tr>
 <tr valign="top">
-	<td><input type="checkbox" name="articleAltLanguages" id="articleAltLanguages" value="1" /></td>
+	<td><input type="checkbox" name="articleAltLanguages" id="articleAltLanguages" value="1"{if $articleAltLanguages} checked="checked"{/if}/></td>
 	<td><label for="articleAltLanguages">{translate key="manager.languages.articleAltLanguages"}</label></td>
 </tr>
 </table>
