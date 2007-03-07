@@ -52,7 +52,7 @@
 		<td class="value">
 			{$user->getEmail()|escape} 
 			{assign var=emailString value="`$user->getFullName()` <`$user->getEmail()`>"}
-			{url|assign:"url" to=$emailString|to_array redirectUrl=$currentUrl}
+			{url|assign:"url" page="user" op="email" to=$emailString|to_array redirectUrl=$currentUrl}
 			{icon name="mail" url=$url}
 		</td>
 	</tr>
