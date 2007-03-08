@@ -23,7 +23,18 @@ class Transcoder {
 	}
 
 	function trans($string) {
-		return iconv($this->fromEncoding, $this->toEncoding . '//TRANSLIT', $string);
+		if (function_exists('iconv')) {
+			// use the iconv library to transliterate
+			return iconv($this->fromEncoding, $this->toEncoding . '//TRANSLIT', $string);
+
+		} elseif (String::hasMBString()) {
+			// fall back to using the multibyte library if necessary (no transliteration)
+			return mb_convert_encoding($string, $this->toEncoding, $this->fromEncoding);
+
+		} else {
+			// fail gracefully by returning the original string unchanged
+			return $string;
+		}
 	}
 }
 

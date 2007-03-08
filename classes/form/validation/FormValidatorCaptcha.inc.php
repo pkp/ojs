@@ -42,7 +42,7 @@ class FormValidatorCaptcha extends FormValidator {
 			return true;
 		}
 		return false;
-		return ($captcha !== null && $captcha->getValue() === $captchaValue);
+//		return ($captcha !== null && $captcha->getValue() === $captchaValue);
 	}
 }
 
