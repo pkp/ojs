@@ -256,6 +256,7 @@ class GoogleScholarPlugin extends GatewayPlugin {
 				XMLCustomWriter::setAttribute($galleyUriNode, 'xlink:href', Request::url(null, 'article', 'viewArticle', array($publishedArticle->getArticleId(), $galley->getGalleyId())));
 				XMLCustomWriter::appendChild($articleMetaNode, $galleyUriNode);
 			}
+			unset($issue);
 		}
 
 		return $document;
