@@ -27,7 +27,7 @@ class Transcoder {
 			// use the iconv library to transliterate
 			return iconv($this->fromEncoding, $this->toEncoding . '//TRANSLIT', $string);
 
-		} elseif (String::hasMBString()) {
+		} elseif (function_exists('mb_convert_encoding')) {
 			// fall back to using the multibyte library if necessary (no transliteration)
 			return mb_convert_encoding($string, $this->toEncoding, $this->fromEncoding);
 
