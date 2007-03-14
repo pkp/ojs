@@ -258,7 +258,9 @@
 					<input type="file" name="upload" class="uploadField" />
 					<input type="submit" name="submit" value="{translate key="common.upload"}" class="button" />
 				</form>
-				<a class="action" href="{url op="enterReviewerRecommendation" articleId=$submission->getArticleId() reviewId=$reviewAssignment->getReviewId()}">{translate key="editor.article.recommendation"}</a>
+				{if $reviewAssignment->getDateConfirmed() && !$reviewAssignment->getDeclined()}
+					<a class="action" href="{url op="enterReviewerRecommendation" articleId=$submission->getArticleId() reviewId=$reviewAssignment->getReviewId()}">{translate key="editor.article.recommendation"}</a>
+				{/if}
 			</td>
 		</tr>
 	{/if}
