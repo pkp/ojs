@@ -452,7 +452,7 @@ class EditorSubmissionDAO extends DAO {
 			$decision = array_pop($decisions);
 			if (!empty($decision)) {
 				$latestDecision = array_pop($decision);
-				if ($latestDecision['decision'] == 1) {
+				if ($latestDecision['decision'] == SUBMISSION_EDITOR_DECISION_ACCEPT || $latestDecision['decision'] == SUBMISSION_EDITOR_DECISION_DECLINE) {
 					$inEditing = true;	
 				}
 			}
