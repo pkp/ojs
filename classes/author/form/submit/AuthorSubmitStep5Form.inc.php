@@ -79,7 +79,9 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 		$proofAssignment->setArticleId($article->getArticleId());
 		$proofAssignment->setProofreaderId(0);
 		$proofAssignmentDao->insertProofAssignment($proofAssignment);
-		
+
+		$this->assignEditors($article);
+
 		$user = &Request::getUser();
 		
 		// Update search index

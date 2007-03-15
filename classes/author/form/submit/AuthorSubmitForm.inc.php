@@ -69,7 +69,24 @@ class AuthorSubmitForm extends Form {
 		
 		parent::display();
 	}
-	
+
+	function assignEditors(&$article) {
+		$sectionId =& $article->getSectionId();
+
+		$sectionEditorsDao =& DAORegistry::getDAO('SectionEditorsDAO');
+		$editAssignmentDao =& DAORegistry::getDAO('EditAssignmentDAO'); +
+		$sectionEditors =& $sectionEditorsDao->getEditorsBySectionId($sectionId);
+
+		foreach ($sectionEditors as $sectionEditor) {
+			$editAssignment =& new EditAssignment();
+			$editAssignment->setArticleId($article->getArticleId());
+			$editAssignment->setEditorId($sectionEditor->getUserId());
+			$editAssignment->setCanEdit(1);
+			$editAssignment->setCanReview(1);
+			$editAssignmentDao->insertEditAssignment($editAssignment);
+			unset($editAssignment);
+		}
+	}
 }
 
 ?>
