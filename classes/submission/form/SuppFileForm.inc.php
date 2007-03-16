@@ -74,6 +74,10 @@ class SuppFileForm extends Form {
 		
 		$templateMgr->assign('typeOptionsOutput', $typeOptionsOutput);
 		$templateMgr->assign('typeOptionsValues', $typeOptionsValues);
+
+		// Sometimes it's necessary to track the page we came from in
+		// order to redirect back to the right place
+		$templateMgr->assign('from', Request::getUserVar('from'));
 		
 		if (isset($this->article)) {
 			$templateMgr->assign('submissionProgress', $this->article->getSubmissionProgress());

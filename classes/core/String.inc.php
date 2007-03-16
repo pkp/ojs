@@ -204,16 +204,26 @@ class String {
 	}
 
 	function mime_content_type($filename) {
-		if (!function_exists('mime_content_type')) {
-			$f = escapeshellarg($filename);
-			$result = trim(`file -bi $f`);
-			// Make sure we just return the mime type.
-			if (($i = strpos($result, ';')) !== false) {
-				$result = trim(substr($result, 0, $i));
+		if (function_exists('mime_content_type')) {
+			return mime_content_type($filename);
+		} elseif (function_exists('finfo_open')) {
+			static $fi;
+			if (!isset($fi)) {
+				$fi = finfo_open();
 			}
-			return $result;
+			if ($fi !== false) {
+				return finfo_file($fi, $filename);
+			}
 		}
-		return mime_content_type($filename);
+
+		// Fall back on an external "file" tool
+		$f = escapeshellarg($filename);
+		$result = trim(`file -bi $f`);
+		// Make sure we just return the mime type.
+		if (($i = strpos($result, ';')) !== false) {
+			$result = trim(substr($result, 0, $i));
+		}
+		return $result;
 	}
 
 

@@ -17,7 +17,12 @@ define('SECTION_EDITOR_ACCESS_EDIT', 0x00001);
 define('SECTION_EDITOR_ACCESS_REVIEW', 0x00002);
 
 class SubmissionEditHandler extends SectionEditorHandler {
-	
+	function getFrom($default = 'submissionEditing') {
+		$from = Request::getUserVar('from');
+		if (!in_array($from, array('submission', 'submissionEditing'))) return $default;
+		return $from;
+	}
+
 	function submission($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
@@ -994,7 +999,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		
 		if ($submitForm->validate()) {
 			$submitForm->execute();
-			Request::redirect(null, null, 'submissionEditing', $articleId);
+			Request::redirect(null, null, SubmissionEditHandler::getFrom(), $articleId);
 		} else {
 			parent::setupTemplate(true, $articleId, 'summary');
 			$submitForm->display();
@@ -1027,7 +1032,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		
 		SectionEditorAction::deleteSuppFile($submission, $suppFileId);
 		
-		Request::redirect(null, null, 'submissionEditing', $articleId);
+		Request::redirect(null, null, SubmissionEditHandler::getFrom(), $articleId);
 	}
 	
 	function archiveSubmission($args) {
@@ -1091,7 +1096,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			SubmissionEditHandler::uploadSuppFile('layoutFile');
 		
 		} else {
-			Request::redirect(null, null, 'submissionEditing', Request::getUserVar('articleId'));
+			Request::redirect(null, null, SubmissionEditHandler::getFrom(), Request::getUserVar('articleId'));
 		}
 	}
 	

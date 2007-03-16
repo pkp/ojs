@@ -39,6 +39,10 @@ class ArticleFileDAO extends DAO {
 	 * @return ArticleFile
 	 */
 	function &getArticleFile($fileId, $revision = null, $articleId = null) {
+		if ($fileId === null) {
+			$returner = null;
+			return $returner;
+		}
 		if ($revision == null) {
 			if ($articleId != null) {
 				$result = &$this->retrieveLimit(
@@ -85,6 +89,10 @@ class ArticleFileDAO extends DAO {
 	 * @return ArticleFile
 	 */
 	function &getArticleFileRevisions($fileId, $round = null) {
+		if ($fileId === null) {
+			$returner = null;
+			return $returner;
+		}
 		$articleFiles = array();
 		
 		// FIXME If "round" is review-specific, it shouldn't be in this table
@@ -117,6 +125,10 @@ class ArticleFileDAO extends DAO {
 	 * @return ArticleFile
 	 */
 	function &getArticleFileRevisionsInRange($fileId, $start = 1, $end = null) {
+		if ($fileId === null) {
+			$returner = null;
+			return $returner;
+		}
 		$articleFiles = array();
 		
 		if ($end == null) {
@@ -148,6 +160,10 @@ class ArticleFileDAO extends DAO {
 	 * @return int
 	 */
 	function &getRevisionNumber($fileId) {
+		if ($fileId === null) {
+			$returner = null;
+			return $returner;
+		}
 		$result = &$this->retrieve(
 			'SELECT MAX(revision) AS max_revision FROM article_files a WHERE file_id = ?',
 			$fileId

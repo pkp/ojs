@@ -20,6 +20,7 @@
 
 <form method="post" action="{url page=$rolePath op="saveSuppFile" path=$suppFileId}" enctype="multipart/form-data">
 <input type="hidden" name="articleId" value="{$articleId}" />
+<input type="hidden" name="from" value="{$from|escape}" />
 {include file="common/formErrors.tpl"}
 
 <h3>{translate key="author.submit.supplementaryFileData"}</h3>
