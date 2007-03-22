@@ -3,7 +3,7 @@
 /**
  * CmsSettingsForm.inc.php
  *
- * Copyright (c) 2003-2005 The Public Knowledge Project
+ * Copyright (c) 2006 Gunther Eysenbach, Juan Pablo Alperin, MJ Suhonos
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package plugins
@@ -138,7 +138,7 @@ class CmsSettingsForm extends Form {
 		}
 		
 		// go through the file 
-		$contentManager->parseContents(&$headings, &$content, $current);
+		$contentManager->parseContents($headings, $content, $current);
 
 		// grab the content and the heading
 		if ( isset($current) && count($content) > 0 ) {
@@ -162,8 +162,8 @@ class CmsSettingsForm extends Form {
 		$journal =& Request::getJournal();
 
 		import('file.JournalFileManager');
-		$journalFileManager =& new JournalFileManager($journal);
-		
+		$publicFileManager =& new PublicFileManager();
+		error_log($publicFileManager->getJournalFilesPath($journal->getJournalId()));
 		$tinyMCE_script = '
 		<script language="javascript" type="text/javascript" src="'.Request::getBaseUrl().'/'.TINYMCE_JS_PATH.'/tiny_mce.js"></script>
 		<script language="javascript" type="text/javascript">
@@ -171,19 +171,20 @@ class CmsSettingsForm extends Form {
 			mode : "textareas",
 			plugins: "save, table, advimage, -heading",
 			relative_urls : false, 		
-			document_base_url : "'.Request::url('', 'manager', 'files').'/content/", 
+			document_base_url : "'. Request::getBaseUrl() .'/'.$publicFileManager->getJournalFilesPath($journal->getJournalId()) .'/", 
 			theme : "advanced",
 			theme_advanced_layout_manager : "SimpleLayout",
 			theme_advanced_buttons1 : "save, formatselect, bold, italic, underline, justifyleft, justifycenter, justifyright, justifyfull, bullist, numlist, outdent, indent, code",
 			theme_advanced_buttons2 : "h1, h2, h3, h4, image, link, unlink",
-			theme_advanced_buttons3 : "tablecontrols"
+			theme_advanced_buttons3 : "tablecontrols",
+			extended_valid_elements : "span[*]"
 			});
 		</script>';
 
 		// load the plugins to memory and add it to the header
 		// need to do this in order to replace the {$pluginurl}. In theory, could hardcode the path in the .js file
 		// but this is easy enough and is more flexible
-		$tinyMCE_plugins = array( 'heading' );
+		$tinyMCE_plugins = array( 'heading');
 		
 		foreach ( $tinyMCE_plugins as $tinyMCEplugin ) {
 			$tinyMCE_NewPlugin = file_get_contents($plugin->getPluginPath().'/tinyMCEPlugins/'.$tinyMCEplugin.'/editor_plugin.js');
@@ -226,7 +227,7 @@ class CmsSettingsForm extends Form {
 		$h = array();
 		$c = array();
 		// no current value because we don't want anything selected
-		$contentManager->parseContents( &$h, &$c );
+		$contentManager->parseContents( $h, $c );
 		// this sets the table of contents with nothing selected
 		$plugin->updateSetting($journalId, 'toc', $h); 		
 	}
@@ -244,7 +245,7 @@ class CmsSettingsForm extends Form {
 		$c = array();
 				
 		// no current value because we don't want anything selected
-		$contentManager->parseContents( &$h, &$c );
+		$contentManager->parseContents( $h, $c );
 		
 		// this sets the table of contents with nothing selected
 		$plugin->updateSetting($journalId, 'toc', $h); 
