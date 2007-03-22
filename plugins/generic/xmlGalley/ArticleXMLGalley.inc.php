@@ -103,6 +103,7 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 					break;
 				case 'custom';
 					// get file path for custom XSL sheet
+					import('file.JournalFileManager');
 					$journalFileManager =& new JournalFileManager($journal);
 					$xslSheet = $journalFileManager->filesDir . $xmlGalleyPlugin->getSetting($journal->getJournalId(), 'customXSL');
 					break;

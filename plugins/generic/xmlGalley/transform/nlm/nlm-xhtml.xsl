@@ -10,9 +10,6 @@
 	<!--                                                               -->
  	<!-- Distributed under the GNU GPL v2.							   -->
 	<!-- For full terms see the file docs/COPYING.					   -->
-	<!--															   -->
-	<!--  Based on work from the Journal of Medical Internet Research  -->
-	<!--                         (http://www.jmir.org)                 -->
 	<!--                                                               -->
 	<!-- ============================================================= -->
 
@@ -127,12 +124,13 @@
 
 			<!-- one-line citation -->
             <abbr class="title" title="{journal-meta/journal-title}">
-                <xsl:value-of select="journal-meta/journal-id[@journal-id-type='nlm-ta' or @journal-id-type='pubmed'][1]"/>
+<!--                <xsl:value-of select="journal-meta/journal-id[@journal-id-type='nlm-ta' or @journal-id-type='pubmed'][1]"/> 	-->
+				<xsl:value-of select="journal-meta/journal-id"/>
             </abbr>
             <xsl:text>. </xsl:text>
 
 			<xsl:choose>
-            	<xsl:when test="article-meta/pub-date[@pub-type='epub']">
+				<xsl:when test="article-meta/pub-date[@pub-type='epub']">
 					<xsl:call-template name="date-format">
 						<xsl:with-param name="date">
 							<xsl:value-of select="format-number(article-meta/pub-date[@pub-type='epub']/year,'0000')"/>
@@ -174,19 +172,8 @@
 				</div>
 			</xsl:if>
         </div>
-		<br/>
+	  	<br/>
 
-		<!-- full "cite as" citation? -->
-		<!-- EXPORT METADATA
-
-					<a><xsl:attribute name="href">http://www.hubmed.org/export/xsl.cgi?nlm=<xsl:value-of select="../self-uri/@xlink:href"/>?xml&amp;format=bibtex</xsl:attribute>
-					<xsl:text>BibTeX</xsl:text></a><xsl:text>, compatible with LaTeX, BibDesk</xsl:text><br />
-
-					<a><xsl:attribute name="href">http://www.hubmed.org/export/xsl.cgi?nlm=<xsl:value-of select="../self-uri/@xlink:href"/>?xml&amp;format=ris</xsl:attribute>
-						<xsl:text>RIS</xsl:text></a><xsl:text>, compatible with Endnote, Procite, RefMan, RefWorks</xsl:text><BR />
-
-					<a><xsl:attribute name="href">http://www.hubmed.org/export/xsl.cgi?nlm=<xsl:value-of select="../self-uri/@xlink:href"/>?xml&amp;format=refer</xsl:attribute><xsl:text>Refer</xsl:text></a><xsl:text>, compatible with Endnote</xsl:text>
-			-->
     </xsl:template>
 
 
@@ -250,7 +237,7 @@
 	</xsl:template>
 
     <xsl:template match="abstract | trans-abstract">
-		<br/>
+	  	<br/>
 		<hr class="part-rule"/>
 
 		<h3 id="abstract">
@@ -284,8 +271,7 @@
 		<xsl:apply-templates/>
 
         <xsl:if test="position() != last() and following-sibling::*[.!='']">
-			<!-- separator: typically , or <br /> -->
-            <xsl:text>, </xsl:text>
+            <xsl:text>, </xsl:text> 		<!-- separator: typically , or <br /> -->
         </xsl:if>
 	</xsl:template>
 
@@ -294,15 +280,14 @@
 			<xsl:apply-templates select="./text() | *[.!='']"/>
 
 	        <xsl:if test="position() != last()">
-				<!-- separator: typically , or <br /> -->
-	            <xsl:text>, </xsl:text>
+	            <xsl:text>, </xsl:text> 	<!-- separator: typically , or <br /> -->
 	        </xsl:if>
 		</span>
 	</xsl:template>
 
 	<!-- TODO: pluralize appendices if there are multiple app-group/app -->
 	<xsl:template match="app-group">
-		<xsl:if test="position() = 1">
+		<xsl:if test="position() = 1 and not(app/title)">
 			<div class="tl-main-part" id="appendix">Appendix</div>
 		</xsl:if>
 
@@ -372,6 +357,8 @@
             <xsl:apply-templates mode="def"/>
         </dd>
     </xsl:template>
+
+    <xsl:template match="def-head"/> 	<!-- suppress def-head until we know what it does -->
 
     <xsl:template match="def-item">
         <xsl:apply-templates/>
@@ -479,6 +466,10 @@
 		</div>
     </xsl:template>
 
+	<xsl:template match="glyph-ref">
+		<xsl:apply-templates/>
+	</xsl:template>
+
 	<!-- improved history / date block for front -->
 	<xsl:template match="history/date | pub-date[@pub-type='epub']" mode="front">
 
@@ -583,6 +574,10 @@
         <xsl:apply-templates/>
     </xsl:template>
 
+	<xsl:template match="private-char">
+		<xsl:apply-templates/>
+	</xsl:template>
+
 	<xsl:template match="preformat">
 	    <xsl:choose>
 	        <xsl:when test="@preformat-type='code'">
@@ -666,10 +661,10 @@
         <blockquote class="speech">
 		    <xsl:call-template name="make-id"/>
 		    <xsl:call-template name="nl-1"/>
+	        <xsl:apply-templates select="speaker"/>
 			<q>
             	<xsl:apply-templates select="*[local-name() != 'speaker']"/>
 			</q>
-	        <xsl:apply-templates select="speaker"/>
 		    <xsl:call-template name="nl-1"/>
         </blockquote>
     </xsl:template>
@@ -711,11 +706,10 @@
         </xsl:element>
     </xsl:template>
 
-<!--
-	<xsl:template match="title[ancestor::fig or ancestor::table-wrap or ancestor::abstract or ancestor::app or ancestor::boxed-text]">
-		<div class="title"><xsl:apply-templates/></div>
+<!-- 	<xsl:template match="title[ancestor::fig or ancestor::table-wrap or ancestor::abstract or ancestor::app or ancestor::boxed-text]">	 -->
+	<xsl:template match="title[ancestor::gloss-group]">
+		<div class="tl-main-part"><xsl:apply-templates/></div>
 	</xsl:template>
--->
 
 	<!-- these improve the NLM xref templates (both contrib and not) -->
 	<xsl:template match="xref[@ref-type!='']" mode="contrib">
@@ -894,12 +888,14 @@
 		<xsl:variable name="pub-id" select="."/>
 		<xsl:variable name="href">
 			<xsl:choose>
-				<xsl:when test="@pub-id-type='medline'">
+				<xsl:when test="@pub-id-type='medline' or @pub-id-type='pmid'">
 					<xsl:value-of select="'http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&amp;db=PubMed&amp;dopt=abstract&amp;list_uids='"/>
 				</xsl:when>
+				<!--
 				<xsl:when test="@pub-id-type='pmid'">
 					<xsl:value-of select="'http://www.pubmedcentral.nih.gov/articlerender.fcgi?tool=pubmed&amp;pubmedid='"/>
 				</xsl:when>
+				-->
 				<xsl:when test="@pub-id-type='doi'">
 					<xsl:value-of select="'http://dx.doi.org/'"/>
 				</xsl:when>
@@ -917,12 +913,14 @@
 				</xsl:attribute>
 
 				<xsl:choose>
-					<xsl:when test="@pub-id-type='medline'">
+					<xsl:when test="@pub-id-type='medline' or @pub-id-type='pmid'">
 						<xsl:text>PubMed</xsl:text>
 					</xsl:when>
+					<!--
 					<xsl:when test="@pub-id-type='pmid'">
 						<xsl:text>PubMed Central</xsl:text>
 					</xsl:when>
+					-->
 					<xsl:when test="@pub-id-type='doi'">
 						<xsl:text>CrossRef</xsl:text>
 					</xsl:when>
@@ -1065,6 +1063,7 @@
 	<!-- ============================================================= -->
 
 	<xsl:template match="*">
+		<!--
 	    <xsl:message>
 	        <xsl:value-of select="name(.)"/>
 	        <xsl:text> encountered</xsl:text>
@@ -1074,6 +1073,7 @@
 	        </xsl:if>
 	        <xsl:text>, but no template matches.</xsl:text>
 	    </xsl:message>
+		-->
 	    <div style="color:red">
 	        <xsl:text>&lt;</xsl:text>
 	        <xsl:value-of select="name(.)"/>

@@ -134,7 +134,7 @@ class ArticleXMLGalleyDAO extends ArticleGalleyDAO {
 				'INSERT INTO article_xml_galleys
 					(galley_id, article_id, label, galley_type)
 					VALUES
-					(?, ?, ?, ?, ?)',
+					(?, ?, ?, ?)',
 				array(
 					$galleyId,
 					$galley->getArticleId(),
@@ -156,7 +156,7 @@ class ArticleXMLGalleyDAO extends ArticleGalleyDAO {
 					'INSERT INTO article_xml_galleys
 						(galley_id, article_id, label, galley_type)
 						VALUES
-						(?, ?, ?, ?, ?)',
+						(?, ?, ?, ?)',
 					array(
 						$galleyId,
 						$galley->getArticleId(),
@@ -184,7 +184,7 @@ class ArticleXMLGalleyDAO extends ArticleGalleyDAO {
 				'DELETE FROM article_xml_galleys WHERE galley_id = ? AND article_id = ?',
 				array($galleyId, $articleId)
 			);
-		
+
 		} else {
 			$this->update(
 				'DELETE FROM article_xml_galleys WHERE galley_id = ?', $galleyId
