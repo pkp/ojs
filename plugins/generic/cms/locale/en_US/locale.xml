@@ -22,10 +22,7 @@
 
 	<message key="manager.plugins.content">Edit/Add Content</message>
 
-	<message key="plugins.generic.cms.form.introduction">This Content Management System (CMS) Plugin enables journal managers to add static content to their journals.  The content is broken up into pages using heading levels 1, 2 and 3 while heading levels 4 and above do not break out into a new page.  Each heading becomes a menu item in the table of contents (found in the sidebar).  In order to edit a page, select it from the table of contents, edit it, and push the save button.  To add a new page, simply add a new heading and content below the current page.  New content will appear below the current page. <![CDATA[<br /><br />]]>The Upload Files link at the bottom of the page allows you to upload files to the content directory of your journal.  Any links to uploaded files (images or otherwise) should be relative to the content directory.<![CDATA[<br /><br />]]></message>
-	<message key="plugins.generic.cms.form.uploadfiles">Upload Files</message>
-	<message key="plugins.generic.cms.form.opennew">Opens in a new window</message>
-
+	<message key="plugins.generic.cms.form.introduction">This Content Management System (CMS) Plugin enables journal managers to add static content to their journals.  The content is broken up into pages using heading levels 1, 2 and 3 while heading levels 4 and above do not break out into a new page.  Each heading becomes a menu item in the table of contents (found in the sidebar).  In order to edit a page, select it from the table of contents, edit it, and push the save button.  To add a new page, simply add a new heading and content below the current page.  New content will appear below the current page.</message>
 	
 	<message key="plugins.generic.cms.error.muststartwithheader">Every page must start with a heading (<![CDATA[&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;]]>)</message>
 	<message key="plugins.generic.cms.error.musthavecontent">There must be some content after every heading.  Please ensure that no two headings immediately follow one another.</message>

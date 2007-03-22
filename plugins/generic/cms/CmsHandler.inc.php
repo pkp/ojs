@@ -1,14 +1,14 @@
 <?php
 
 /**
- * cmsimpleHandler.inc.php
+ * cmsHandler.inc.php
  *
- * Copyright (c) 2003-2006 John Willinsky
+ * Copyright (c) 2006 Gunther Eysenbach, Juan Pablo Alperin, MJ Suhonos
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package plugins
  *
- * Handle requests for Atom/RSS feeds when a feed URL is requested
+ * Find the content and display the appropriate page
  *
  * $Id$
  */
@@ -26,6 +26,7 @@ class CmsHandler extends Handler {
 		 	$journal = &Request::getJournal();
 			$journalId = $journal->getJournalId();
 			$cmsPlugin = &PluginRegistry::getPlugin('generic', 'CmsPlugin');
+			$templateMgr = &TemplateManager::getManager();
 
 			$allContent = $cmsPlugin->getSetting($journalId, 'content');
 		
@@ -34,10 +35,10 @@ class CmsHandler extends Handler {
 	
 			$content = array();
 			$headings = array();
-			$current = $args[0];
-	
+			
+			$current = $contentManager->cleanurl($args[0]);	
 			// get the content
-			$contentManager->parseContents( &$headings, &$content, $current );
+			$contentManager->parseContents( $headings, $content, $current );
 
 			// silly way to do this, but we have to find all the proper titles 
 			// and they are not stored anywhere conveniently
@@ -76,17 +77,20 @@ class CmsHandler extends Handler {
 				}
 			}
 			
-			
-			// and assign the template vars needed
-			$templateMgr = &TemplateManager::getManager();
+			$theContent = $content[$current];
+
+			HookRegistry::call("Plugins::CmsHandler", array($current, &$theContent));
+
+			// and assign the template vars needed			
 			$templateMgr->assign('title', $title);
-			$templateMgr->assign('content', $content[$args[0]] );		
+			$templateMgr->assign('content',  $theContent);		
 			$templateMgr->assign('headings', $headings);
 			$templateMgr->assign('cmsPluginToc', $headings);
 			$templateMgr->assign('pageHierarchy', $breadcrumbs);			
 			$templateMgr->display($cmsPlugin->getTemplatePath().'content.tpl');
 		}
-	}
+	}	
+	
 }
 
 ?>

@@ -1,7 +1,7 @@
 {**
  * content.tpl
  *
- * Copyright (c) 2003-2006 The Public Knowledge Project
+ * Copyright (c) 2006 Gunther Eysenbach, Juan Pablo Alperin, MJ Suhonos
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * CMS content

@@ -1,7 +1,7 @@
 {**
  * settingsForm.tpl
  *
- * Copyright (c) 2003-2006 The Public Knowledge Project
+ * Copyright (c) 2006 Gunther Eysenbach, Juan Pablo Alperin, MJ Suhonos
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Form for CMS plugin settings.
@@ -37,8 +37,6 @@
 		</td>
 	</tr>
 </table>
-
-<p><a href="{url page="manager" op="files"}/content" target="_blank" >{translate key="plugins.generic.cms.form.uploadfiles"}</a> - {translate key="plugins.generic.cms.form.opennew"}</p>
 
 <p><input type="button" value="{translate key="common.done"}" class="button" onclick="document.location.href='{url page="manager" op="plugins" escape=false}'" /></p>
 

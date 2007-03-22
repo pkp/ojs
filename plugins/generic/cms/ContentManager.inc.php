@@ -3,7 +3,7 @@
 /**
  * ContentManager.inc.php
  *
- * Copyright (c) 2003-2005 The Public Knowledge Project
+ * Copyright (c) 2006 Gunther Eysenbach, Juan Pablo Alperin, MJ Suhonos
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package plugins
@@ -14,7 +14,7 @@
 
 import('file.JournalFileManager');
 
-define('CONTENT_FILE_HEADER', '<html><body>');
+define('CONTENT_FILE_HEADER', '<html xmlns="http://www.w3.org/1999/xhtml"><body>');
 define('CONTENT_FILE_FOOTER', '</body></html>');
 
 class ContentManager {
@@ -91,7 +91,7 @@ class ContentManager {
 	 * $headings array of ( heading level, websafe name, display name )
 	 * $content array indexed by websafe name of ( content )
 	 */
-	function parseContents ( $headings, $content, $current = null ) {
+	function parseContents ( &$headings, &$content, $current = null ) {
 		$fileContent = $this->fileContent;
 
 		preg_match_all('/<h([1-3])>(.*)<\/h[1-3]>/U', $fileContent, $headMatches);
@@ -353,9 +353,12 @@ class ContentManager {
 	
 	/* strip out spaces and semi colones in the name */
 	function websafe ( $str ) {
-		return urlencode(strtolower(str_replace(' ', '', str_replace(':', '', $str))));
+		return urlencode(strtolower(str_replace(' ', '_', str_replace(':', '', $str))));
 	}
 
+	function cleanurl ( $str ) {
+		return str_replace("%3A", ":", urlencode(strtolower(str_replace(' ', '_', $str))));
+	}
 	
 }
 

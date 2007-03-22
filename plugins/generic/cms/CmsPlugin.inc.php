@@ -3,12 +3,12 @@
 /**
  * cmsPlugin.inc.php
  *
- * Copyright (c) 2003-2006 John Willinsky
+ * Copyright (c) 2006 Gunther Eysenbach, Juan Pablo Alperin, MJ Suhonos
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package plugins
  *
- * Web Feeds plugin class
+ * CMS plugin class
  *
  * $Id$
  */
@@ -143,7 +143,7 @@ class Cms extends GenericPlugin {
 				$c = array();
 						
 				// no current value because we don't want anything selected
-				$contentManager->parseContents( &$h, &$c );
+				$contentManager->parseContents( $h, $c );
 				
 				// this sets the table of contents with nothing selected
 				$this->updateSetting($journal->getJournalId(), 'toc', $h); 
