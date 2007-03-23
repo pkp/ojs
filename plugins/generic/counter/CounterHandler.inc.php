@@ -191,7 +191,7 @@ class CounterHandler extends Handler {
 	function validate($canRedirect = true) {
 		parent::validate();
 		$journal =& Request::getJournal();
-		if (!Validation::isSiteAdmin() && !Validation::isJournalManager($journal->getJournalId())) {
+		if (!Validation::isSiteAdmin()) {
 			if ($canRedirect) Validation::redirectLogin();
 			else exit;
 		}
