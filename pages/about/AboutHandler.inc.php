@@ -186,6 +186,10 @@ class AboutHandler extends Handler {
 			unset($membership);
 		}
 
+		$countryDao =& DAORegistry::getDAO('CountryDAO');
+		$countries =& $countryDao->getCountries();
+		$templateMgr->assign_by_ref('countries', $countries);
+
 		$templateMgr->assign_by_ref('group', $group);
 		$templateMgr->assign_by_ref('memberships', $memberships);
 		$templateMgr->display('about/displayMembership.tpl');
