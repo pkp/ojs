@@ -1759,6 +1759,7 @@ class SectionEditorAction extends Action {
 			$email->send();
 
 			$decisions = $sectionEditorSubmission->getDecisions();
+			$decisions = array_pop($decisions); // Rounds
 			$decision = array_pop($decisions);
 
 			if ($decision && $decision['decision'] == SUBMISSION_EDITOR_DECISION_DECLINE) {
