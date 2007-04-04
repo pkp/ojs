@@ -71,7 +71,7 @@ class AuthorSubmitForm extends Form {
 	}
 
 	function assignEditors(&$article) {
-		$sectionId =& $article->getSectionId();
+		$sectionId = $article->getSectionId();
 		$journal =& Request::getJournal();
 
 		$sectionEditorsDao =& DAORegistry::getDAO('SectionEditorsDAO');
