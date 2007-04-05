@@ -75,7 +75,7 @@ class AuthorSubmitForm extends Form {
 		$journal =& Request::getJournal();
 
 		$sectionEditorsDao =& DAORegistry::getDAO('SectionEditorsDAO');
-		$editAssignmentDao =& DAORegistry::getDAO('EditAssignmentDAO'); +
+		$editAssignmentDao =& DAORegistry::getDAO('EditAssignmentDAO');
 		$sectionEditors =& $sectionEditorsDao->getEditorsBySectionId($journal->getJournalId(), $sectionId);
 
 		foreach ($sectionEditors as $sectionEditor) {
