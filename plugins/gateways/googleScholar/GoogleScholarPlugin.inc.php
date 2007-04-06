@@ -234,7 +234,7 @@ class GoogleScholarPlugin extends GatewayPlugin {
 			}
 
 			$dateParts = getdate(strtotime($publishedArticle->getDatePublished()));
-			$pubDateNode = XMLCustomWriter::createElement($document, 'pub-date');
+			$pubDateNode =& XMLCustomWriter::createElement($document, 'pub-date');
 			XMLCustomWriter::appendChild($articleMetaNode, $pubDateNode);
 			XMLCustomWriter::createChildWithText($document, $pubDateNode, 'day', $dateParts['mday']);
 			XMLCustomWriter::createChildWithText($document, $pubDateNode, 'month', $dateParts['mon']);
