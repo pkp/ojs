@@ -148,7 +148,7 @@ class SectionEditorSubmission extends Article {
 		$decision = array_pop($decisions);
 		if (!empty($decision)) {
 			$latestDecision = array_pop($decision);
-			if ($latestDecision['decision'] == SUBMISSION_EDITOR_DECISION_ACCEPT || $latestDecision['decision'] == SUBMISSION_EDITOR_DECISION_DECLINE) {
+			if ($latestDecision['decision'] == SUBMISSION_EDITOR_DECISION_ACCEPT) {
 				return STATUS_QUEUED_EDITING;
 			}
 		}
