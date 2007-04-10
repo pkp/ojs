@@ -1,7 +1,7 @@
 {**
  * register.tpl
  *
- * Copyright (c) 2003-2006 John Willinsky
+ * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * User registration form.
@@ -150,7 +150,7 @@
 	<td class="value">
 		<input type="checkbox" name="sendPassword" id="sendPassword" value="1"{if $sendPassword} checked="checked"{/if} /> <label for="sendPassword">{translate key="user.sendPassword.description"}</label>
 	</td>
-</td>
+</tr>
 
 {if $profileLocalesEnabled && count($availableLocales) > 1}
 <tr valign="top">

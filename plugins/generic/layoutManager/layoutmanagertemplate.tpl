@@ -1,7 +1,7 @@
 {**
  * templatemanagertemplate.tpl
  *
- * Copyright (c) 2003-2005 The Public Knowledge Project
+ * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Common sidebar(s)
