@@ -209,7 +209,7 @@ class String {
 		} elseif (function_exists('finfo_open')) {
 			static $fi;
 			if (!isset($fi)) {
-				$fi = finfo_open();
+				$fi = finfo_open(FILEINFO_MIME, Config::getVar('finfo', 'mime_database_path'));
 			}
 			if ($fi !== false) {
 				return finfo_file($fi, $filename);
