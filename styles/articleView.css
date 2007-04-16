@@ -101,3 +101,14 @@ table.bm {
 .tl-default, .tl-main-part {
 	font-weight: bold;
 }
+
+dt {
+	display: inline;
+	float: left;
+	margin-left: 20px;
+	width: 80px;
+}
+
+dd {
+	margin-left: 100px;
+}
