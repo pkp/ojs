@@ -39,7 +39,7 @@ class ArticleHandler extends Handler {
 			else if ($galley->isInlineable()) {
 				import('file.ArticleFileManager');
 				$articleFileManager = &new ArticleFileManager($article->getArticleId());
-				$articleFileManager->viewFile($galley->getFileId());
+				return $articleFileManager->viewFile($galley->getFileId());
 			} else return ArticleHandler::viewDownloadInterstitial($args, $galley);
 		}
 
