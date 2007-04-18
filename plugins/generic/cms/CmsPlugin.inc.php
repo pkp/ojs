@@ -210,6 +210,9 @@ class Cms extends GenericPlugin {
 						$form->save();
 						$form->initData( array($form->getData('current')) );
 					} else {
+						// add the tiny MCE script to the form 
+						$form->addTinyMCE();
+						
 						// wipe out the 'currentHeading' because we are coming back to the 
 						// same form (due to lack of validation) and so the content already
 						// incorporates the heading

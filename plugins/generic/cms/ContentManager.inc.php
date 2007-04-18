@@ -35,9 +35,6 @@ class ContentManager {
 		$journal = &Request::getJournal();
 		$journalFileManager =& new JournalFileManager($journal);
 
-		// makre sure the images filepath exists
-		$journalFileManager->mkdirtree($journalFileManager->filesDir.'content/images'); 
-
 		// try to current locale
 		$lang = Locale::getLocale();
 		$this->filePath = $journalFileManager->filesDir.'content/'.$lang.'/content.xhtml';

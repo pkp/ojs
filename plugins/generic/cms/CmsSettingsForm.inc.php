@@ -155,15 +155,27 @@ class CmsSettingsForm extends Form {
 			$currentContent = "";		
 			$currentHeading = "";
 		}
+	
+		// add the tiny MCE script 
+		$this->addTinyMCE();
+
+		$templateMgr->assign('cmsPluginToc', $headings);		
+		$templateMgr->assign('currentHeading', $currentHeading );
+		$templateMgr->assign('currentContent', $currentContent );
+		$templateMgr->assign('current', $current );
+		$templateMgr->assign('cmsPluginEdit', true);
+	}
+	
+	function addTinyMCE() {
+		$journalId = $this->journalId;
+		$plugin =& $this->plugin;
+		$templateMgr = &TemplateManager::getManager();
 
 		// Enable TinyMCE with specific params
 		$additionalHeadData = $templateMgr->get_template_vars('additionalHeadData');
 
-		$journal =& Request::getJournal();
-
 		import('file.JournalFileManager');
 		$publicFileManager =& new PublicFileManager();
-		error_log($publicFileManager->getJournalFilesPath($journal->getJournalId()));
 		$tinyMCE_script = '
 		<script language="javascript" type="text/javascript" src="'.Request::getBaseUrl().'/'.TINYMCE_JS_PATH.'/tiny_mce.js"></script>
 		<script language="javascript" type="text/javascript">
@@ -171,7 +183,7 @@ class CmsSettingsForm extends Form {
 			mode : "textareas",
 			plugins: "save, table, advimage, -heading",
 			relative_urls : false, 		
-			document_base_url : "'. Request::getBaseUrl() .'/'.$publicFileManager->getJournalFilesPath($journal->getJournalId()) .'/", 
+			document_base_url : "'. Request::getBaseUrl() .'/'.$publicFileManager->getJournalFilesPath($journalId) .'/", 
 			theme : "advanced",
 			theme_advanced_layout_manager : "SimpleLayout",
 			theme_advanced_buttons1 : "save, formatselect, bold, italic, underline, justifyleft, justifycenter, justifyright, justifyfull, bullist, numlist, outdent, indent, code",
@@ -194,11 +206,7 @@ class CmsSettingsForm extends Form {
 		}
 
 		$templateMgr->assign('additionalHeadData', $additionalHeadData."\n".$tinyMCE_script);
-		$templateMgr->assign('cmsPluginToc', $headings);		
-		$templateMgr->assign('currentHeading', $currentHeading );
-		$templateMgr->assign('currentContent', $currentContent );
-		$templateMgr->assign('current', $current );
-		$templateMgr->assign('cmsPluginEdit', true);
+	
 	}
 	
 	/**
