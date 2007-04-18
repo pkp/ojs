@@ -663,6 +663,70 @@ class Request {
 
 		return ((empty($overriddenBaseUrl)?Request::getIndexUrl():$overriddenBaseUrl) . $baseParams . $pathString . $additionalParams . $anchor);
 	}
+
+	function isCacheable() {
+		if (!empty($_POST) || Validation::isLoggedIn()) return false;
+		if (!Config::getVar('cache', 'web_cache')) return false;
+		if (!Request::isPathInfoEnabled()) {
+			$ok = array('journal', 'page', 'op', 'path');
+			if (!empty($_GET) && count(array_diff(array_keys($_GET), $ok)) != 0) {
+				return false;
+			}
+		} else {
+			if (!empty($_GET)) return false;
+		}
+
+		if (in_array(Request::getRequestedPage(), array(
+			'about', 'announcement', 'help', 'index', 'information', 'rt', 'issue', ''
+		))) return true;
+
+		return false;
+	}
+
+	function getCacheFilename() {
+		static $cacheFilename;
+		if (!isset($cacheFilename)) {
+			if (Request::isPathInfoEnabled()) {
+				$id = isset($_SERVER['PATH_INFO'])?$_SERVER['PATH_INFO']:'index';
+				$id .= '-' . Locale::getLocale();
+			} else {
+				$id = Request::getUserVar('journal') . '-' . Request::getUserVar('page') . '-' . Request::getUserVar('op') . '-' . Request::getUserVar('path') . '-' . Locale::getLocale();
+			}
+			$path = dirname(dirname(dirname(__FILE__)));
+			$cacheFilename = $path . '/cache/wc-' . md5($id) . '.html';
+		}
+		return $cacheFilename;
+	}
+
+	function cacheContent($contents) {
+		$filename = Request::getCacheFilename();
+		$fp = fopen($filename, 'w');
+		if ($fp) {
+			fwrite($fp, mktime() . ':' . $contents);
+			fclose($fp);
+		}
+		return $contents;
+	}
+
+	function displayCached() {
+		$filename = Request::getCacheFilename();
+		if (!file_exists($filename)) return false;
+
+		$fp = fopen($filename, 'r');
+		$data = fread($fp, filesize($filename));
+		fclose($fp);
+
+		$i = strpos($data, ':');
+		$time = substr($data, 0, $i);
+		$contents = substr($data, $i+1);
+
+		if (mktime() > $time + Config::getVar('cache', 'web_cache_hours') * 60 * 60) return false;
+
+		header('Content-Type: text/html; charset=' . Config::getVar('i18n', 'client_charset'));
+
+		echo $contents;
+		return true;
+	}
 }
 
 ?>

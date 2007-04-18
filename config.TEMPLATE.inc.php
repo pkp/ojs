@@ -108,6 +108,21 @@ cache = file
 memcache_hostname = localhost
 memcache_port = 11211
 
+; For site visitors who are not logged in, many pages are often entirely
+; static (e.g. About, the home page, etc). If the option below is enabled,
+; these pages will be cached in local flat files for the number of hours
+; specified in the web_cache_hours option. This will cut down on server
+; overhead for many requests, but should be used with caution because:
+; 1) Things like journal metadata changes will not be reflected in cached
+;    data until the cache expires or is cleared, and
+; 2) This caching WILL NOT RESPECT DOMAIN-BASED SUBSCRIPTIONS.
+; However, for situations like hosting high-volume open access journals, it's
+; an easy way of decreasing server load.
+
+web_cache = On
+web_cache_hours = 1
+
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Localization Settings ;
 ;;;;;;;;;;;;;;;;;;;;;;;;;

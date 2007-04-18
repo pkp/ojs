@@ -88,6 +88,12 @@ import('plugins.HookRegistry');
 // Initialize string wrapper library
 String::init();
 
+// Can we serve a cached response?
+if (Request::isCacheable()) {
+	if (Request::displayCached()) exit(); // Success
+	ob_start(array('Request', 'cacheContent'));
+}
+
 // Load the main locale file
 Locale::initialize();
 

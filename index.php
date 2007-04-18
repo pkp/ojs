@@ -24,6 +24,7 @@ function handleRequest() {
 	// Determine the handler for this request
 	$page = Request::getRequestedPage();
 	$op = Request::getRequestedOp();
+
 	$sourceFile = sprintf('pages/%s/index.php', $page);
 
 	// If a hook has been registered to handle this page, give it the
