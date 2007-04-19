@@ -105,17 +105,19 @@ class CmsRss extends GenericPlugin {
 				}
 			}
 			
-			if ( $aggregate )
-				krsort($items);
-			
-			
-			foreach ( $items as $time => $post) {
-				if ( $months > 0 ) {		
-					if ( $time > strtotime("-".$months." month") ) {
-						$output .= $post;
+			if ( is_array($items) && count($items) > 0 ) {
+				if ( $aggregate )
+					krsort($items);
+				
+				
+				foreach ( $items as $time => $post) {
+					if ( $months > 0 ) {		
+						if ( $time > strtotime("-".$months." month") ) {
+							$output .= $post;
+						}
+					} else {
+						$output .= $post;	
 					}
-				} else {
-					$output .= $post;	
 				}
 			}
 
