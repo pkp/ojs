@@ -55,15 +55,15 @@ class XMLCustomWriter {
 	function &createTextNode(&$doc, $value) {
 		// check for Windows-1252 encoding, and transliterate if necessary	
 		if ( function_exists('mb_check_encoding') ) {
-				import('core.Transcoder');
-				$trans =& new Transcoder('CP1252', 'UTF-8');
-				$value = $trans->trans($value);
-		} elseif ( function_exists('iconv') ) {
 			if (mb_check_encoding($value, "CP1252")) {
 				import('core.Transcoder');
 				$trans =& new Transcoder('CP1252', 'UTF-8');
 				$value = $trans->trans($value);
 			}
+		} elseif ( function_exists('iconv') ) {
+				import('core.Transcoder');
+				$trans =& new Transcoder('CP1252', 'UTF-8');
+				$value = $trans->trans($value);
 		}
 
 		if (is_callable(array($doc, 'createTextNode'))) $element = &$doc->createTextNode($value);
