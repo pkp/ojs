@@ -11,20 +11,20 @@
 		{elseif $journal->getSetting('searchDescription')}
 			{assign var="description" value=$journal->getSetting('searchDescription')}
 		{/if}
-		<description>{$description|escape:"html"|strip|strip_tags}</description>
+		<description>{$description|strip|strip_tags|escape:"html"}</description>
 
 		{* optional elements *}
 	    {if $journal->getLocale()}
-	    <language>{$journal->getLocale()|replace:'_':'-'|escape:"html"|strip|strip_tags}</language>
+	    <language>{$journal->getLocale()|replace:'_':'-'|strip|strip_tags|escape:"html"}</language>
 	    {/if}
 	    {if $journal->getSetting('copyrightNotice')}
-	    <copyright>{$journal->getSetting('copyrightNotice')|escape:"html"|strip|strip_tags}</copyright>
+	    <copyright>{$journal->getSetting('copyrightNotice')|strip|strip_tags|escape:"html"}</copyright>
 	    {/if}
 	    {if $journal->getSetting('contactEmail')}
-		<managingEditor>{$journal->getSetting('contactEmail')|escape:"html"|strip|strip_tags}{if $journal->getSetting('contactName')} ({$journal->getSetting('contactName')|escape:"html"|strip|strip_tags}){/if}</managingEditor>
+		<managingEditor>{$journal->getSetting('contactEmail')|strip|strip_tags|escape:"html"}{if $journal->getSetting('contactName')} ({$journal->getSetting('contactName')|strip|strip_tags|escape:"html"}){/if}</managingEditor>
 		{/if}
 	    {if $journal->getSetting('supportEmail')}
-		<webMaster>{$journal->getSetting('supportEmail')|escape:"html"|strip|strip_tags}{if $journal->getSetting('contactName')} ({$journal->getSetting('supportName')|escape:"html"|strip|strip_tags}){/if}</webMaster>
+		<webMaster>{$journal->getSetting('supportEmail')|strip|strip_tags|escape:"html"}{if $journal->getSetting('contactName')} ({$journal->getSetting('supportName')|strip|strip_tags|escape:"html"}){/if}</webMaster>
 		{/if}
 		<pubDate>{$issue->getDatePublished()|date_format:"%a, %d %b %Y %T %z"}</pubDate>
 		{* <lastBuildDate/> *}
@@ -38,16 +38,15 @@
 		{foreach from=$section.articles item=article}
 			<item>
 				{* required elements *}
-				<title>{$article->getArticleTitle()|escape:"html"|strip|strip_tags}</title>
+				<title>{$article->getArticleTitle()|strip|strip_tags|escape:"html"}</title>
 				<link>{url page="article" op="view" path=$article->getBestArticleId($currentJournal)}</link>
-				<description>{$article->getAbstract()|escape:"html"|strip|strip_tags}</description>
+				<description>{$article->getAbstract()|strip|strip_tags|escape:"html"}</description>
 
 				{* optional elements *}
-		        {foreach from=$article->getAuthors() item=author name=authorList}
+				{assign var="author" value=$article->authors[0]}
 		        	{if $author->getEmail()}
-        		    <author>{$author->getEmail()|escape:"html"|strip|strip_tags} ({$author->getFullName()|escape:"html"|strip|strip_tags})</author>
+        		    <author>{$author->getEmail()|strip|strip_tags|escape:"html"} ({$author->getFullName()|strip|strip_tags|escape:"html"})</author>
         		    {/if}
-				{/foreach}
 				{* <category/> *}
 				{* <comments/> *}
 				{* <source/> *}

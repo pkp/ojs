@@ -29,9 +29,9 @@
 		{assign var="description" value=$journal->getSetting('searchDescription')}
 	{/if}
     {if $journal->getSetting('copyrightNotice')}
-    <rights>{$journal->getSetting('copyrightNotice')|escape:"html"|strip|strip_tags}</rights>
+    <rights>{$journal->getSetting('copyrightNotice')|strip|strip_tags|escape:"html"}</rights>
     {/if}
-	<subtitle>{$description|escape:"html"|strip|strip_tags}</subtitle>
+	<subtitle>{$description|strip|strip_tags|escape:"html"}</subtitle>
 
 
 {foreach name=sections from=$publishedArticles item=section key=sectionId}
@@ -39,21 +39,21 @@
 	<entry>
 		{* required elements *}
 		<id>{url page="article" op="view" path=$article->getBestArticleId($currentJournal)}</id>
-		<title>{$article->getArticleTitle()|escape:"html"|strip|strip_tags}</title>
+		<title>{$article->getArticleTitle()|strip|strip_tags|escape:"html"}</title>
 		<updated>{$article->getLastModified()|date_format:"%Y-%m-%dT%T%z"|regex_replace:"/00$/":":00"}</updated>
 
 		{* recommended elements *}
         {foreach from=$article->getAuthors() item=author name=authorList}
 	  	<author>
-			<name>{$author->getFullName()|escape:"html"|strip|strip_tags}</name>
+			<name>{$author->getFullName()|strip|strip_tags|escape:"html"}</name>
 			{if $author->getEmail()}
-			<email>{$author->getEmail()|escape:"html"|strip|strip_tags}</email>
+			<email>{$author->getEmail()|strip|strip_tags|escape:"html"}</email>
 			{/if}
         </author>
 		{/foreach}
 		<link rel="alternate" href="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)}" />
         {if $article->getAbstract()}
-		<summary type="html" xml:base="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)}">{$article->getAbstract()|escape:"html"|strip|strip_tags}</summary>
+		<summary type="html" xml:base="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)}">{$article->getAbstract()|strip|strip_tags|escape:"html"}</summary>
         {/if}
 
 		{* optional elements *}

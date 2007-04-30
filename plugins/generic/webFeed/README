@@ -1,7 +1,7 @@
 ================================
 === OJS Web Feeds Plugin
-=== Version: 1.3
-=== Release date: July 27, 2006
+=== Version: 1.4
+=== Release date: April 30, 2007
 === Author: MJ Suhonos <mj@robotninja.com>
 === Contributions: Juan Alperin <juan@geeky.net>, Alf Eaton <alf@hubmed.org>
 ================================
@@ -29,7 +29,9 @@ The plugin can be configured to display feed links on all journal pages, or only
 
 Known Issues
 ------------
-Improperly-formatted (non-RFC2822) email addresses within OJS articles or contact addresses may cause invalid feeds to be generated.
+- Improperly-formatted (non-RFC2822) email addresses within OJS articles or contact addresses may cause invalid feeds to be generated.
+- Articles with no abstract (eg. editorials) will create Atom warnings due to lack of entry:content or entry:summary elements
+- Multiple articles with the same publish date/time (eg. in an issue) may create an Atom warning
 
 Contact/Support
 ---------------

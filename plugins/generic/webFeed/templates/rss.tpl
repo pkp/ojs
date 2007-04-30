@@ -57,15 +57,15 @@
 {foreach from=$section.articles item=article}
 	<item rdf:about="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)}">
 		{* required elements *}
-		<title>{$article->getTitle()|escape:"html"|strip|strip_tags}</title>
+		<title>{$article->getTitle()|strip|strip_tags|escape:"html"}</title>
 		<link>{url page="article" op="view" path=$article->getBestArticleId($currentJournal)}</link>
 
 		{* optional elements *}
 		{if $article->getAbstract()}
-		<description>{$article->getAbstract()|escape:"html"|strip|strip_tags}</description>
+		<description>{$article->getAbstract()|strip|strip_tags|escape:"html"}</description>
 		{/if}
 		{foreach from=$article->getAuthors() item=author name=authorList}
-		<dc:creator>{$author->getFullName()|escape:"html"|strip|strip_tags}</dc:creator>
+		<dc:creator>{$author->getFullName()|strip|strip_tags|escape:"html"}</dc:creator>
 		{/foreach}
 		<dc:date>{$article->getDatePublished()|date_format:"%Y-%m-%d"}</dc:date>
 		<prism:volume>{$issue->getVolume()}</prism:volume>
