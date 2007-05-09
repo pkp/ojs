@@ -122,28 +122,24 @@ class ReviewerHandler extends Handler {
 	 * Setup common template variables.
 	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
 	 */
-	function setupTemplate($subclass = false, $articleId = 0, $parentPage = null, $showSidebar = true) {
+	function setupTemplate($subclass = false, $articleId = 0, $reviewId = 0) {
 		$templateMgr = &TemplateManager::getManager();
 		$pageHierarchy = $subclass ? array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, 'reviewer'), 'user.role.reviewer'))
 				: array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, 'reviewer'), 'user.role.reviewer'));
 
-		import('submission.sectionEditor.SectionEditorAction');
-		$submissionCrumb = SectionEditorAction::submissionBreadcrumb($articleId, $parentPage, 'reviewer');
-		if (isset($submissionCrumb)) {
-			$pageHierarchy = array_merge($pageHierarchy, $submissionCrumb);
+		if ($articleId && $reviewId) {
+			$pageHierarchy[] = array(Request::url(null, 'reviewer', 'submission', $reviewId), "#$articleId", true);
 		}
 		$templateMgr->assign('pageHierarchy', $pageHierarchy);
 
-		if ($showSidebar) {
-			$templateMgr->assign('sidebarTemplate', 'reviewer/navsidebar.tpl');
+		$templateMgr->assign('sidebarTemplate', 'reviewer/navsidebar.tpl');
 
-			$journal = &Request::getJournal();
-			$user = &Request::getUser();
-			if ($user) {
-				$reviewerSubmissionDao = &DAORegistry::getDAO('ReviewerSubmissionDAO');
-				$submissionsCount = $reviewerSubmissionDao->getSubmissionsCount($user->getUserId(), $journal->getJournalId());
-				$templateMgr->assign('submissionsCount', $submissionsCount);
-			}
+		$journal = &Request::getJournal();
+		$user = &Request::getUser();
+		if ($user) {
+			$reviewerSubmissionDao = &DAORegistry::getDAO('ReviewerSubmissionDAO');
+			$submissionsCount = $reviewerSubmissionDao->getSubmissionsCount($user->getUserId(), $journal->getJournalId());
+			$templateMgr->assign('submissionsCount', $submissionsCount);
 		}
 	}
 	

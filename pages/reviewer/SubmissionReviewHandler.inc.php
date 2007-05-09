@@ -30,7 +30,7 @@ class SubmissionReviewHandler extends ReviewerHandler {
 			$confirmedStatus = 1;
 		}
 
-		ReviewerHandler::setupTemplate(true, $submission->getArticleId());
+		ReviewerHandler::setupTemplate(true, $reviewAssignment->getArticleId(), $reviewId);
 	
 		$templateMgr = &TemplateManager::getManager();
 		
@@ -96,7 +96,7 @@ class SubmissionReviewHandler extends ReviewerHandler {
 		
 		list($journal, $reviewerSubmission) = SubmissionReviewHandler::validate($reviewId);
 
-		parent::setupTemplate(true, $articleId, 'review');
+		parent::setupTemplate(true, $articleId, $reviewId);
 
 		ReviewerAction::viewMetadata($reviewerSubmission, ROLE_ID_REVIEWER);
 	}
