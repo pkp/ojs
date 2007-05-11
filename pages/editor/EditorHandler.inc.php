@@ -214,7 +214,10 @@ class EditorHandler extends SectionEditorHandler {
 		$editorId = Request::getUserVar('editorId');
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
 
-		if (isset($editorId) && $editorId != null && ($roleDao->roleExists($journal->getJournalId(), $editorId, ROLE_ID_SECTION_EDITOR) || $roleDao->roleExists($journal->getJournalId(), $editorId, ROLE_ID_EDITOR))) {
+		$isSectionEditor = $roleDao->roleExists($journal->getJournalId(), $editorId, ROLE_ID_SECTION_EDITOR);
+		$isEditor = $roleDao->roleExists($journal->getJournalId(), $editorId, ROLE_ID_EDITOR);
+
+		if (isset($editorId) && $editorId != null && ($isEditor || $isSectionEditor)) {
 			// A valid section editor has already been chosen;
 			// either prompt with a modifiable email or, if this
 			// has been done, send the email and store the editor
@@ -223,7 +226,7 @@ class EditorHandler extends SectionEditorHandler {
 			EditorHandler::setupTemplate(EDITOR_SECTION_SUBMISSIONS, true, $articleId, 'summary');
 
 			// FIXME: Prompt for due date.
-			if (EditorAction::assignEditor($articleId, $editorId, Request::getUserVar('send'))) {
+			if (EditorAction::assignEditor($articleId, $editorId, $isEditor, Request::getUserVar('send'))) {
 				Request::redirect(null, null, 'submission', $articleId);
 			}
 		} else {

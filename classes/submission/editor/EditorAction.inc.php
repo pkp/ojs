@@ -33,7 +33,7 @@ class EditorAction extends SectionEditorAction {
 	 * @param $articleId int
 	 * @return boolean true iff ready for redirect
 	 */
-	function assignEditor($articleId, $sectionEditorId, $send = false) {
+	function assignEditor($articleId, $sectionEditorId, $isEditor = false, $send = false) {
 		$editorSubmissionDao = &DAORegistry::getDAO('EditorSubmissionDAO');
 		$editAssignmentDao = &DAORegistry::getDAO('EditAssignmentDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
@@ -49,7 +49,7 @@ class EditorAction extends SectionEditorAction {
 		$email = &new ArticleMailTemplate($editorSubmission, 'EDITOR_ASSIGN');
 
 		if ($user->getUserId() === $sectionEditorId || !$email->isEnabled() || ($send && !$email->hasErrors())) {
-			HookRegistry::call('EditorAction::assignEditor', array(&$editorSubmission, &$sectionEditor, &$email));
+			HookRegistry::call('EditorAction::assignEditor', array(&$editorSubmission, &$sectionEditor, &$isEditor, &$email));
 			if ($email->isEnabled() && $user->getUserId() !== $sectionEditorId) {
 				$email->setAssoc(ARTICLE_EMAIL_EDITOR_ASSIGN, ARTICLE_EMAIL_TYPE_EDITOR, $sectionEditor->getUserId());
 				$email->send();
@@ -84,8 +84,8 @@ class EditorAction extends SectionEditorAction {
 					'editorUsername' => $sectionEditor->getUsername(),
 					'editorPassword' => $sectionEditor->getPassword(),
 					'editorialContactSignature' => $user->getContactSignature(),
-					'submissionUrl' => Request::url(null, 'sectionEditor', 'submissionReview', $articleId),
-					'submissionEditingUrl' => Request::url(null, 'sectionEditor', 'submissionReview', $articleId)
+					'submissionUrl' => Request::url(null, $isEditor?'editor':'sectionEditor', 'submissionReview', $articleId),
+					'submissionEditingUrl' => Request::url(null, $isEditor?'editor':'sectionEditor', 'submissionReview', $articleId)
 				);
 				$email->assignParams($paramArray);
 			}
@@ -119,7 +119,7 @@ class EditorAction extends SectionEditorAction {
 		$editAssignments =& $sectionEditorSubmission->getEditAssignments();
 		if (empty($editAssignments)) {
 			// No editors are currently assigned; assign self.
-			EditorAction::assignEditor($article->getArticleId(), $user->getUserId());
+			EditorAction::assignEditor($article->getArticleId(), $user->getUserId(), true);
 		}
 
 		// 2. Accept the submission and send to copyediting.
