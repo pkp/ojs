@@ -53,17 +53,22 @@ class XMLCustomWriter {
 	}
 
 	function &createTextNode(&$doc, $value) {
+
 		// check for Windows-1252 encoding, and transliterate if necessary	
-		if ( function_exists('mb_check_encoding') ) {
-			if (mb_check_encoding($value, "CP1252")) {
-				import('core.Transcoder');
-				$trans =& new Transcoder('CP1252', 'UTF-8');
-				$value = $trans->trans($value);
-			}
-		} elseif ( function_exists('iconv') ) {
-				import('core.Transcoder');
-				$trans =& new Transcoder('CP1252', 'UTF-8');
-				$value = $trans->trans($value);
+		if ($value === utf8_decode($value) && $value !== utf8_encode($value)) {
+			// string is cp1252
+			// transliterate cp1252->utf8 to work in utf-8 
+			// utf8_decode to work in latin-1 (information may be lost)
+			import('core.Transcoder');
+			$trans =& new Transcoder('CP1252', 'UTF-8');
+			$value = $trans->trans($value);
+
+		} elseif ($value !== utf8_decode($value) && $value !== utf8_encode($value)) {
+			// string is not within utf-8(?)
+			// normalize to ASCII (lowest common encoding) - information will be lost
+			import('core.Transcoder');
+			$trans =& new Transcoder('UTF-8', 'ASCII');
+			$value = $trans->trans($value);
 		}
 
 		if (is_callable(array($doc, 'createTextNode'))) $element = &$doc->createTextNode($value);
