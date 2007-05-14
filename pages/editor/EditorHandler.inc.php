@@ -263,7 +263,7 @@ class EditorHandler extends SectionEditorHandler {
 			$templateMgr->assign_by_ref('editors', $editors);
 			$templateMgr->assign('roleName', $roleName);
 			$templateMgr->assign('articleId', $articleId);
-	
+
 			$sectionDao = &DAORegistry::getDAO('SectionDAO');
 			$sectionEditorSections = &$sectionDao->getEditorSections($journal->getJournalId());
 
@@ -275,7 +275,7 @@ class EditorHandler extends SectionEditorHandler {
 			
 			$templateMgr->assign('searchField', $searchType);
 			$templateMgr->assign('searchMatch', $searchMatch);
-			$templateMgr->assign('search', $searchQuery);
+			$templateMgr->assign('search', $search);
 			$templateMgr->assign('searchInitial', $searchInitial);
 
 			$templateMgr->assign('fieldOptions', Array(
