@@ -119,7 +119,7 @@ memcache_port = 11211
 ; However, for situations like hosting high-volume open access journals, it's
 ; an easy way of decreasing server load.
 
-web_cache = On
+web_cache = Off
 web_cache_hours = 1
 
 
