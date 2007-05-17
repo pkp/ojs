@@ -81,9 +81,12 @@ class PhpAdsNewPlugin extends GenericPlugin {
 		// Get the ad settings.
 		$headerAdHtml = $contentAdHtml = '';
 		if ($journal) {
-			$headerAdHtml = $this->getSetting($journal->getJournalId(), 'headerAdHtml');
+			$journalId = $journal->getJournalId();
+			$this->import('PhpAdsNewConnection');
+			$phpAdsNewConnection =& new PhpAdsNewConnection($this, $this->getInstallationPath());
+			$headerAdHtml = $phpAdsNewConnection->getAdHtml($this->getSetting($journalId, 'headerAdId'));
 			$headerAdOrientation = $this->getSetting($journal->getJournalId(), 'headerAdOrientation');
-			$contentAdHtml = $this->getSetting($journal->getJournalId(), 'contentAdHtml');
+			$contentAdHtml = $phpAdsNewConnection->getAdHtml($this->getSetting($journalId, 'contentAdId'));
 		}
 
 		// Look for the first <h1> tag and insert the header ad.
@@ -140,7 +143,9 @@ class PhpAdsNewPlugin extends GenericPlugin {
 		if (!$journal) return $output;
 
 		// Get the ad settings.
-		$sidebarAdHtml = $this->getSetting($journal->getJournalId(), 'sidebarAdHtml');
+		$this->import('PhpAdsNewConnection');
+		$phpAdsNewConnection =& new PhpAdsNewConnection($this, $this->getInstallationPath());
+		$sidebarAdHtml = $phpAdsNewConnection->getAdHtml($this->getSetting($journal->getJournalId(), 'sidebarAdId'));
 
 		$index = strrpos($output, '<span class="blockTitle">' . Locale::translate('navigation.user') . '</span>');
 		if ($index !== false) {

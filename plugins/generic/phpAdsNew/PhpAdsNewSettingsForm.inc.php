@@ -84,14 +84,11 @@ class PhpAdsNewSettingsForm extends Form {
 		$plugin = &$this->plugin;
 		$journalId = $this->journalId;
 
-		$plugin->updateSetting($journalId, 'headerAdHtml', $this->phpAdsNewConnection->getAdHtml($this->getData('headerAdId')));
 		$plugin->updateSetting($journalId, 'headerAdId', $this->getData('headerAdId'));
 		$plugin->updateSetting($journalId, 'headerAdOrientation', $this->getData('headerAdOrientation'));
 
-		$plugin->updateSetting($journalId, 'contentAdHtml', $this->phpAdsNewConnection->getAdHtml($this->getData('contentAdId')));
 		$plugin->updateSetting($journalId, 'contentAdId', $this->getData('contentAdId'));
 
-		$plugin->updateSetting($journalId, 'sidebarAdHtml', $this->phpAdsNewConnection->getAdHtml($this->getData('sidebarAdId')));
 		$plugin->updateSetting($journalId, 'sidebarAdId', $this->getData('sidebarAdId'));
 
 		return true;
