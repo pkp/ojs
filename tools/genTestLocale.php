@@ -73,7 +73,10 @@ class genTestLocale extends CommandLineTool {
 	 * Create the test locale file.
 	 */
 	function execute() {
-		$localeData = Locale::loadLocale($this->inLocale);
+		Locale::initialize();
+		$localeFiles =& Locale::getLocaleFiles();
+		$localeFile = array_shift($localeFiles[$this->inLocale]);
+		$localeData = LocaleFile::load($localeFile->filename);
 		
 		if (!isset($localeData)) {
 			printf('Invalid locale \'%s\'', $this->inLocale);
