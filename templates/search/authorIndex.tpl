@@ -27,7 +27,7 @@
 
 	<a href="{url op="authors" path="view" firstName=$author->getFirstName() middleName=$author->getMiddleName() lastName=$author->getLastName() affiliation=$author->getAffiliation()}">
 		{$author->getLastName(true)|escape},
-		{$author->getFirstName()|escape}{if $author->getMiddleName()} {$author->getMiddleName|escape}{/if}{if $author->getAffiliation()}, {$author->getAffiliation()|escape}{/if}
+		{$author->getFirstName()|escape}{if $author->getMiddleName()} {$author->getMiddleName()|escape}{/if}{if $author->getAffiliation()}, {$author->getAffiliation()|escape}{/if}
 	</a>
 	<br/>
 {/iterate}
