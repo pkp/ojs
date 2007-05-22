@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Site Administration Main 
+  *
+  * $Id$
+  -->
+
+<topic id="site/topic/000000" locale="vi_VN" title="Quản trị website" toc="index/toc/000000" subtoc="site/toc/000000" key="site.index">
+	<section>
+		<![CDATA[<p>Phần mềm quản lý và xuất bản tạp chí này được thiết kế để cài đặt và quản trị trên máy chủ web nội bộ. Khi đã được cài đặt, Người quản trị website có thể sử dụng để tạo bao nhiêu tạp chí riêng lẻ tùy ý, và có thể theo dõi việc quản trị của từng wesite tạp chí đã được tạo ra.</p>]]>	
+	</section>
+</topic>

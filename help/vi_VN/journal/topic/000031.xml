@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000031.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Import/Export
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000031" locale="vi_VN" title="Xuất/Nhập dữ liệu" toc="journal/toc/000001" key="journal.managementPages.importExport">
+	<section>
+		<![CDATA[<p>Chức năng Xuất/Nhập dữ liệu, có sẵn trong phần Quản lý Tạp chí, cho phép Tổng biên tập đưa dữ liệu vào hoặc trích xuất dữ liệu ra khỏi hệ thống OJS.</p><p>Xuất/Nhập dữ liệu được thực hiện bằng các công cụ phụ trợ, với mỗi định dạng hoặc loại dữ liệu do một công cụ khác nhau. Để biết thông tin cụ thể, xem tài liệu hướng dẫn của công cụ phụ trợ tương ứng.</p><p>Có ba công cụ phụ trợ cài đặt sẵn trong phần mềm OJS: Xuất/Nhập Bài viết &amp; Số tạp chí qua XML, Xuất/Nhập Người dùng qua XML, và Công cụ xuất bài viết Erudit. Những công cụ này được mô tả dưới đây.</p><p>Chức năng xuất/nhập dữ liệu cũng có thể thực hiện bằng công cụ dòng lệnh; xem thêm file tools/importExport.php để biết thêm chi tiết.</p>]]>
+	</section>
+	<section title="Xuất/Nhập Bài viết &amp; Số tạp chí qua XML">
+			<![CDATA[<p>Xuất/Nhập Bài viết &amp; Số tạp chí qua XML là phương pháp chủ đạo cho việc xuất và nhập dữ liệu hàng loạt. Nó cũng có thể dùng để xuất và nhập các bài riêng lẻ, nhiều bài viết, các số riêng lẻ, nhiều số, cùng với dữ liệu mô tả đầy đủ. Để thêm thông tin về công cụ này, xem file XML DTD trong "plugins/importexport/native/native.dtd".</p>]]>
+	</section>
+	<section title="Xuất/Nhập Người dùng qua XML">
+			<![CDATA[<p>Xuất/Nhập Người dùng qua XML có thể dùng để xuất và nhập người dùng cùng với các vai trò của họ. Xem file XML DTD trong "plugins/importexport/users/users.dtd" để biết thêm thông tin.</p>]]>
+	</section>
+	<section title="Công cụ xuất bài viết Erudit">
+			<![CDATA[<p>Công cụ xuất bài viết Erudit sử dụng XML DTD của Erudit xuất từng bài viết một dùng cho lập chỉ mục toàn văn. Xem <a href="http://www.erudit.org">http://www.erudit.org</a> để biết thêm thông tin.</p>]]>
+	</section>
+</topic>

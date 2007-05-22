@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000015.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Editor's Role Submissions - Unassigned 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000015" locale="vi_VN" title="Bài chưa giao" toc="editorial/toc/000002" key="editorial.editorsRole.submissions.unassigned">
+	<section>
+		<![CDATA[<p>Mỗi bài nộp cho tạp chí bắt đầ quá trình biên tập trong danh mục Bài chưa giao của BTV chính. Để giao một bài trong danh mục cho một BTV chuyên mục, BTV chính nhấp chuột vào tiêu đề của bài nộp. BTV chính sẽ được dẫn tới trang Bài nộp tương ứng, nơi mà BTV chuyên mục được giao bài. Khi bài nọp đã được giao cho một BTV chuyên mục, nó sẽ được chuyển từ danh mục Bài chưa giao sang danh mục Đang phản biện.</p>]]>	
+	</section>
+</topic>

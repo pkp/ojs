@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000001.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages Index 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000001" locale="vi_VN" title="Các trang quản lý" toc="journal/toc/000000" subtoc="journal/toc/000001" key="journal.managementPages.index">
+	<section>
+		<![CDATA[<p>Tổng biên tập đặt cấu hình và điều chỉnh hệ thống cho phù hợp với tạp chí thông qua một tập hợp Các trang quản lý. Quá trình bắt đầu với năm bước trong mục Thiết lập, và cũng bao gồm cả các Chuyên mục sẽ được xuất bản, phong thái và câu từ trong các email chuẩn của tạp chí, các ngôn ngữ có trên website, các số liệu thống kê và các công cụ cung cấp cho bạn đọc.</p>]]>	
+	</section>
+</topic>

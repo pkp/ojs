@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000023.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Reader 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000023" locale="vi_VN" title="Bạn đọc" toc="journal/toc/000003" key="journal.roles.reader">
+	<section>
+		<![CDATA[<p>Bạn đọc bao gồm những khách hàng đăng ký mua quyền truy cập vào những nội dung phải trả thuê bao và những bạn đọc đăng ký truy cập nội dung mở của tạp chí (có thể mở ngay khi bài viết xuất bản hoặc sap một khoảng thời gian kể từ khi xuất bản). Bạn đọc đã đăng ký sẽ được tạp chí gửi thông báo kèm theo Mục lục khi một số tạp chí mới được xuất bản. Tác giả tự đăng ký với tạp chí cũng có thể lựa chọn đăng ký thêm với tư cách là Bạn đọc.</p>]]>	
+	</section>
+</topic>

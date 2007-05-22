@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000020.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Proofreader 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000020" locale="vi_VN" title="Người soát lỗi" toc="journal/toc/000003" key="journal.roles.proofreader">
+	<section>
+		<![CDATA[<p>Người soát lỗi đọc cẩn thận các bản bông ở các định dạng khác nhau mà tạp chí dùng để xuất bản (tác giả cũng làm như vậy). Người soát lỗi (và Tác giả) ghi lại bất kỳ lỗi đánh máy hoặc định dạng nào để BTV trình bày sear lỗi. Ở một số tạp chí, BTV chính hoặc BTV chuyên mục cũng đảm nhiệm vai trò của Người soát lỗi.</p>]]>	
+	</section>
+</topic>

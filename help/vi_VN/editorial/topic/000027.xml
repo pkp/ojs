@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000027.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Section Editor's Role Index - Editing - Copyediting
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000027" locale="vi_VN" title="Biên tập bản thảo" toc="editorial/toc/000007" key="editorial.sectionEditorsRole.editing.copyediting">
+	<section>
+		<![CDATA[<p>Khi BTV bản thảo đã được lựa chọn và một email đã được gửi đề nghị bắt đầu quá trình biên tập bản thảo, BTV bản thảo sẽ làm việc trực tiếp trên bài nộp có đánh dấu những phần cần sửa theo Chỉ dẫn Biên tập bản thảo của tạp chí. Ở Bước 1, Biên tập ban đầu, BTV bản thảo sẽ sửa bản thảo bài nộp và tải lên phiên bản sửa bản thảo đầu tiên, sau đó file đã sửa được chuyển sang Bước 2, Tác giả biên tập bản thảo. BTV bản thảo sẽ gửi email "Hoàn tất" cho Tác giả, cc cho BTV chuyên mục và đề nghị bắt đầu Bước 2. Sau khi Tác giả đã xem lại những thay đổi, đã trả lời bất kỳ thắc mắc nào và đã tải lên ở Bước 2, BTV bản thảo sẽ tạo phiên bản sửa bản thảo hoàn chỉnh cuối cùng ở Bước 3, Biên tập bản thảo hoàn chnhs. Phiên bản hoàn chỉnh này sẽ được gửi sang mục Trình bày, nơi nó sẽ trở thành Phiên bản Trình bày. Trước khi BTV trình bày bắt đầu công việc chuẩn bị các Bản bông dựa trên phiên bản này, BTV chuyên mục có thể muốn xem qua để đảm bảo rằng nó tuân thủ các tiêu chuẩn và hướng dẫn của tạp chí.</p><p><i>Thắc mắc của BTV trong quá trình biên tập bản thảo</i>. Khi biên tập bản thảo ban đầu, BTV bản thảo có thể đưa ra Thắc mắc của BTV (ví dụ, liên quan tới phong cách của tạp chí) sẽ được BTV này đề cập trong email gửi cho Tác giả và BTV chuyên mục khi hoàn thành Bước 1. BTV chuyên mục cần xem lại những Thắc mắc của BTV này bằng cách nhấp chuột vào tên file ở Bước 2, và gửi email trực tiếp giải đáp những thắc mắc này cho BTV bản thảo (bằng cách nhấp chuột vào biểu tượng email dưới mục Đề nghị). Thao tác này sẽ tránh được phải tải lên một phiên bản ngay trên những phản hồi của Tác giả về việc biên tập ban đầu đối với bản thảo.</p><p><i>Các lựa chọn biên tập bản thảo</i>. Nếu có nhu cầu phát sinh (ví dụ, nếu BTV chuyên mục đóng vai trò BTV bản thảo), BTV chuyên mục có thể tải lên một phiên bản của bài nộp ở mỗi bước Biên tập bản thảo. Cần phải rất lưu ý để không ghi đè lên một phiên bản đã được BTV bản thảo hoặc Tác giả tải lên.</p>]]>	
+	</section>
+</topic>

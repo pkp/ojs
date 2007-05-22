@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000028.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Reading Tools - Contexts
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000028" locale="vi_VN" title="Ngữ cảnh" toc="journal/toc/000005" key="journal.managementPages.readingTools.contexts">
+	<section>
+		<![CDATA[<p>Mỗi một bộ Công cụ đọc bao gồm các các công cụ riêng lẻ (v.d., Các nghiên cứu liên quan, Diễn đàn trực tuyến, v.v..) và mỗi công cụ bao gồm một số cơ sở dữ liệu kết hợp với nhau trong một ngữ cảnh. Những cơ sở dữ liệu này, và các ngữ cảnh mà chúng được kết hợp với nhau có thể được tạo ra, sửa và xóa đi.</p><p><i>Dữ liệu mô tả cho các bài viết trong ngữ cảnh</i>. Tổng biên tập có thể thay đổi tên của công cụ. Hệ thống cũng cho phép lựa chọn quyết định liệu cho có phép sử dụng từ khóa của tác giả (mặc định), tên của tác giả (v.d., để dùng với công cụ Các tác phẩm cùng tác giả), hoặc các từ khóa địa lý để tìm kiếm trên cơ sở dữ liệu hay không. Một lựa chọn khác, sử dụng với công cụ Định nghĩa Thuật ngữ, cho phép bạn đọc lựa chọn một thuật ngữ tìm kiếm bằng ách nhấp đúp chuột vào bất kỳ từ nào trong nội dung bài viết đang đọc trên tạp chí. Tổng biên tập có thể sử dụng những lựa chọn này để xây dựng các công cụ đọc riêng của mình.</p><p><i>Sửa các tìm kiếm cho mỗi công cụ</i>. Sử dụng công cụ Tìm kiếm, Tổng biên tập có thể sửa hoặc xóa đường dẫn URL cho mỗi cơ ơở dữ liệu trong công cụ, đồng thời có thể xếp lại thứ tự xuất hiện của các cơ sở dữ liệu trong công cụ. Với mỗi CSDL, một đường dẫn URL được cung cấp cho pehsp bạn đọc tìm hiểu thêm về CSDL và một đường dẫn URL để tiến hành tìm kiếm. Có thể thiết lập hai kiểu tìm kiếm , kiểu GET, và nếu kiểu này không phù hợp với CSDL, kiểu POST cũng được hỗ trợ.</p>]]>
+	</section>
+	<section title="Tìm kiếm kiểu GET">
+		<![CDATA[<p>Đối với tìm kiếm kiểu GET, thực hiện một tìm kiếm và tìm trong đường dẫn kết quả. V.d, tên Google, tìm "FOOBAR" cho đường dẫn </p><p><samp class="code">http://www.google.ca/search?hl=en&q=FOOBAR&meta=</samp></p><p>Thaytừ khóa tìm kiếm, FOOBAR, với các từ khóa khác &#123;$formKeywords&#125;. Khi OJS gặp tham số này, nó sẽ thay thế dữ liệu phù hợp từ lấy từ trong dữ liệu mô tả của bài viết. Đường dẫn URL cho công cụ đọc sẽ là </p><p><samp class="code">http://www.google.ca/search?hl=en&q=&#123;$formKeywords&#125;&meta=</samp></p><p>. Tuy nhiên, vì các tham số khác không cần thiết trong trường hợp này, chúng ta có thể đơn gian hóa đường dẫn đó lại thành:</p><p><samp class="code">http://www.google.ca/search?q=&#123;$formKeywords&#125;</samp></p>]]>
+	</section>
+	<section title="Tìm kiếm kiểu POST">
+		<![CDATA[<p>Đối với mẫu tìm kiếm dạng POST, thao tác phức tạp hơn. Cũng vậy, xem trên Google, quý vị có thể xem mã nguồn của trang và lưu ý <samp class="code">&lt;form action="/search" ...&gt;</samp>, cho ta đường dẫn cơ bản của <samp class="code">http://www.google.com/search</samp>. Sau đó quý vị có thể xem các thành phần <samp class="code">&lt;input ...&gt;</samp> và<samp class="code">&lt;select ... &gt;</samp> và thêm thành phần này dưới dạng các cặp <samp class="code">tên=giá trị</samp> phân tách bởi<samp class="code">&</samp> ở cuối của đường dẫn. Thành phần được nêu trong ô text chấp nhận dữ liệu từ người dùng (trong trường hợp của Google, có tên là <samp class="code">q</samp>), cần được gán giá  trị là &#123;$formKeywords&#125;, và sẽ được thay thế bằng các giá trị phù hợp.</p><p>Một cách dễ dàng hơn cho các POST forms là copy mã nguồn và một file và sửa <samp class="code">method=post</samp> thành<samp class="code">method=get</samp> trong trường thích hợp của form, và đổi giá trị <samp class="code">action=</samp> thành một giá trị đầy đủ của đường dẫn URL, v.d.,<samp class="code">http://www.google.com/search</samp> thay vì chỉ là <samp class="code">/search</samp>. Sau đó quý vị có thể xem file HTML đã sửa trên trình duyệt và sử dụng phương pháp GET để thiết lập đường dẫn URL.</p><p>Vì một số công cụ tìm kiếm không hỗ trợ truy vấn kiểu GET, nếu quý vị thấy phương pháp trên không hoạt động, quý vị có thể nhập mẫu form POST vào trong trường "Dữ liệu tìm kiếm POST". Nếu vị dụ trên đây đòi hỏi dữ liệu phải được gửi đi, quý vị có thể nhập <samp class="code">http://www.google.com/search</samp> cho dường dẫn URL và<samp class="code">q=&#123;$formKeywords&#125;</samp> dữ liệu gửi đi.</p><p>Hãy chắc chắn là bạn đã kiểm tra đường dẫn URL vẫn đang hoạt động bằng cách thay &#123;$formKeywords&#125; bằng một từ trong URL và thử xem nó có cho ra những kết quả mong đợi không. Lưu ý là các form POST không phải lúc nào cũng hoạt động tốt, tùy thuộc vào từng website. Đối với các URL không có công cụ tìm kiếm phù hợp, có thể sử dụng Goolge với giới hạn tìm kiếm trong website. Quý vị có thể sử dụng tham số <samp class="code">site:mysite.com FOOBAR</samp> trong Google để tìm các tài liệu có từ khóa "FOOBAR" chỉ trong website mysite.com. Đây là cách thường dùng trong các Công cụ đọc hiện tại đối với một số website.</p>]]>
+	</section>
+</topic>

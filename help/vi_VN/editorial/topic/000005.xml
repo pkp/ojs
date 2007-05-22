@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000005.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Section Editor's Role Index - Submissions 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000005" locale="vi_VN" title="Bài nộp" toc="editorial/toc/000004" subtoc="editorial/toc/000005" key="editorial.sectionEditorsRole.submissions">
+	<section>
+		<![CDATA[<p>Bài nộp cho một tạp chí được giao cho BTV chuyên mục xuất hiện ở danh mục chờ Đang hản biện của BTV chuyên mục đó. BTV chuyên mục chỉ có quyền truy cập những bài nộp được giao cho họ. Tùy theo chính sách của tạp chí, BTV chuyên mục có thể chỉ được giao theo dõi Phản biện hoặc cả Phản biện lẫn Biên tập bài nộp.</p>]]>	
+	</section>
+</topic>

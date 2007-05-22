@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000001.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Publishing Process - Create Issue
+  *
+  * $Id$
+  -->
+
+<topic id="publishing/topic/000001" locale="vi_VN" title="Tạo số tạp chí mới" toc="publishing/toc/000000" key="publishing.createIssue">
+	<section>
+		<![CDATA[
+		<p>Trước khi sử dụng trang Xếp bài của BTV chính (xem trang Biên tập bài nộp) để xếp bài nộp vào một số tạp chí để xuất bản, BTV chính cần sử dụng chức năng Tạo số tạp chí mới để đảm bảo rằng đã có sẵn một số tạp chí để xếp bài vào. Số tạp chí cần được định danh bằng số và/hoặc tiêu đề phù hợp, tùy thuộc vào lựa chọn ở phần Thiết lập (v.d., Tập 2, Số 5, 2008). Mặc dù hệ thống sẽ nhắc BTV chính Tạo số tạp chí mới cho số tiếp theo mỗi khi một số tạp chí được tạo ra, BTV chính có thể bỏ qua những tham số này và có thể tạo một loạt số tạp chí hoặc tạo một năm tạp chí mới. BTV cũng có thể thêm tiêu đề cho một số tạp chí, tiêu đề này sẽ xuất hiện ở phía trên Mục lục, và có thể tạo ra những số đặc biệt cho tạp chí.</p>
+		<p><i>Tạo trang bìa</i>. Hệ thống cho phép tải một ảnh bìa minh họa lên cho tạp chí dưới các định dạng ảnh .jpg, .png hoặc .gif. File này sẽ hiển thị lên thành trang bìa trong phần Mục lục. Ảnh này xuất hiện ở trang chủ của tạp chí khi số tạp chí gắn với nó là số mới ra và có thể nhấp đúp chuột vào ảnh bìa để xem Mục lục của số đó. Khi số tạp chí trở thành số cũ, ảnh bìa vẫn còn trên Mục lục của số đó.</p>
+		<p><i>Số mới, Số sắp XB và Số cũ</i>. Số mới là số xuất bản gần đây nhất. Số sắp XB là những số mà BTV chính sẽ xếp bài để xuất bản số tiếp theo và trong tương lai. BTV chính có thể muốn tạo sẵn hai hoặc ba số tạp chí đang xử lý nhưng chưa xuất bản, cho phép bài viết được sắp xếp cho một vài số sao cho cân bằng giữa các số tạp chí. Các số cũ là những số đã xuất bản và không phải là số mới nhất.</p>
+		]]>
+	</section>
+</topic>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000004.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Publishing Process - Publish
+  *
+  * $Id$
+  -->
+
+<topic id="publishing/topic/000004" locale="vi_VN" title="Xuất bản" toc="publishing/toc/000000" key="publishing.publish">
+	<section>
+		<![CDATA[<p>Khi cần xuất bản một số tạp chí, BTV chính nhấp chuột vào nút "Xuất bản số mới" trên trang Số tạp chí đang xử lý dành cho số sẽ được xuất, nghĩa là trang có Mục lục của số đó. Xuất bản một số mới sẽ làm cho Mục lục của số đó hiển thị khi bạn đọc nhấp chuột vào trang Số mới và trang bìa, nếu có, sẽ xuất hiện trên trang nhất của tạp chí. Số trước đó là Số mới sẽ được lưu kho Số cũ. Nếu không có trang bìa, Mục lục sẽ xuất hiện trên trang nhất, trừ khi trang nhất có ảnh hoặc văn bản được Tổng biên tập tải lên trong bước Thiết lập tạp chí. Khi xuất bản một số mới, hệ thống cũng sẽ gửi thônng báo bằng email tới tất cả Bạn đọc đã đăng ký, có gửi kèm theo Mục lục của số tạp chí và đường dẫn tới website của tạp chí.</p>]]>	
+	</section>
+</topic>

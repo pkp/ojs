@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000017.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Section Editor 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000017" locale="vi_VN" title="BTV chuyên mục" toc="journal/toc/000003" key="journal.roles.sectionEditor">
+	<section>
+		<![CDATA[<p>BTV chuyên mục quản lý việc phản biện và biên tập bài nộp mà họ được giao. Trong một số trường hợp, BTV chuyên mục được giao theo dõi quá trình {help_topic key="editorial.sectionEditorsRole.review" text="Phản biện"} của bài nộp cũng sẽ chịu trách nhiệm theo dõi bài nộp đã được chấp nhận được đưa sang quá trình {help_topic key="editorial.sectionEditorsRole.editing" text="Biên tập"} (tức là, biên tập bản thảo, trình bày và soát lỗi). Thông thường, BTV chuyên mục chỉ phụ trách quá trình phản biện, còn BTV chính, đóng vai trò như một BTV chuyên mục theo dõi bài nộp trong quá trình Biên tập. Tạp chí nên có chính sách về sự phân chia nhiệm vụ..</p>]]>	
+	</section>
+</topic>

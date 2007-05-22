@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000028.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Section Editor's Role Index - Editing - Layout
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000028" locale="vi_VN" title="Trình bày" toc="editorial/toc/000007" key="editorial.sectionEditorsRole.editing.layout">
+	<section>
+		<![CDATA[<p>Khi BTV bản thảo đã hoàn thành một bản "sạch" ở Bước 3 của Biên tập bản thảo, phiên bản này của bài nộp sẽ đi qua bước Trình bày. BTV chuyên mục, khi nhận được thông báo hoàn thành biên tập bản thảo, cần lựa chọn một BTV trình bày, nếu chưa lựa chọn, và đề nghị BTV này bắt đầu công việc bằng cách nhấp chuột vào biểu tượng email dưới mục Đề nghị. BTV trình bày sẽ chuẩn bị các bản bông của bài nộp theo mỗi định dạng xuất bản của tạp chí (v.d., HTML, PDF, PS, v.v..). Các file phụ trợ vẫn ở định dạng file ban đầu khi được nộp sẽ được BTV trình bày và BTV soát lỗi xem lại để đảm bảo định dạng cơ bản và các file tuân thủ tốt nhất có thể các tiêu chuẩn của tạp chí. Khi BTV trình bày hoàn thành việc tạo ra những bản bông, tức là những file sẽ được xuất bản trên mạng, BTV trình bày email cho BTV chuyên mục biết.</p>]]>	
+	</section>
+</topic>

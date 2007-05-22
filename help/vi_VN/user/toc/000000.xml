@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../toc.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for User Interface. 
+  *
+  * $Id$
+  -->
+
+<toc id="user/toc/000000" locale="vi_VN" title="Website Tạp chí" parent_topic="user/topic/000000">
+	<topic id="user/topic/000001" title="Trang nhất" />
+	<topic id="user/topic/000002" title="Giới thiệu" />
+	<topic id="user/topic/000007" title="Người dùng" />
+	<topic id="user/topic/000003" title="Đăng ký &amp; Hồ sơ" />
+	<topic id="user/topic/000004" title="Số mới &amp; Số cũ" />
+	<topic id="user/topic/000005" title="Tìm &amp; Duyệt" />
+	<topic id="user/topic/000006" title="Công cụ đọc" />
+
+	<breadcrumb url="user/topic/000000" title="Website Tạp chí" />
+</toc>

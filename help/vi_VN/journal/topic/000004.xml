@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000004.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Setup 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000004" locale="vi_VN" title="Thiết lập" toc="journal/toc/000001" key="journal.managementPages.setup">
+	<section>
+		<![CDATA[<p>Tổng biên tập là người thiết lập tạp chí qua năm nước, điền vào các mẫu biểu và đặt cấu hình cho việc quản lý tạp chí sau khi phần mềm đã được cài đặt trên máy chủ web. Quá trình thiết lập không nhất thiết phải hoàn thành trong một lần: các mẫu biểu có thể được điền nội dung và ghi lại; Tổng biên tập có thể quay lại quá trình thiết lập để hoàn thành công việc này hoặc sửa đổi bất kỳ lúc nào.</p><p>Tổng biên tập có quyền truy cập Thiết lập trên trang Quản lý Tạp chí, và mỗi mẫu biểu đã có sẵn hướng dẫn đi kèm. Thiết lập website tạp chí đòi hỏi phải ra quyết định và chuẩn bị nội dung cho ít nhất những mục sau đây (những nội dung này có thể chuẩn bị trước qua trao đổi với các BTV chính hoặc thêm vào sau).</p><ul><li>Đầu mối liên lạc</li><li>Hỗ trợ kỹ thuật</li><li>Thông tin về Phạm vi và Trọng tâm của tạp chí</li><li>Các chuyên mục và chính sách của tpaj chí</li><li>Hướng dẫn Tác giả</li><li>Những yêu cầu về bài nộp đối với tác giả</li><li>Các thành phần chỉ mục và các ví dụ phù hợp</li><li>Chính sách Phản biện chuyên gia</li><li>Hướng dẫn Người phản biện</li><li>Chính sách bản quyền</li><li>Chính sách truy cập mở</li><li>Ban biên tập/Hội đồng phản biện</li><li>Chính sách đặt tạp chí</li><li>BTV trình bày, BTV bản thảo và người soát lỗi</li></ul>]]>
+	</section>
+</topic>

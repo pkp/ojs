@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000012.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Copyeditor's Role Index 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000012" locale="vi_VN" title="Vai trò của BTV bản thảo" toc="editorial/toc/000000" subtoc="editorial/toc/000012" key="editorial.copyeditorsRole">
+	<section>
+		<![CDATA[<p>BTV Bản thảo nhận được email từ BTV chuyên mục đề nghị biên tập bản thảo của một bài nộp và bài này sẽ xuất hiện trong danh mục của BTV bản thảo. BTV bản thảo không thể đảm đương được công việc chỉ cần gửi email báo lại cho BTV chuyên mục.</p>]]>	
+	</section>
+</topic>

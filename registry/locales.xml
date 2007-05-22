@@ -31,4 +31,5 @@
 	<locale key="pt_BR" name="Português (Brasil)"/>
 	<locale key="ru_RU" name="Russian"/>
 	<locale key="tr_TR" name="Türkiye Türkçesi"/>
+	<locale key="vi_VN" name="Tiếng Việt"/>
 </locales>

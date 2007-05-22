@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000015.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Journal Manager 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000015" locale="vi_VN" title="Tổng biên tập" toc="journal/toc/000003" key="journal.roles.journalManager">
+	<section>
+		<![CDATA[<p>Tổng biên tập chịu trách nhiệm quản lý hệ thống xuất bản. Công việc này không đòi hỏi bất kỳ kỹ năng phức tạp nào, nhưng đòi hỏi phải nhập thông tin vào mẫu và tải file lên. Tổng biên tập là người {help_topic key="journal.managementPages.setup" text="Thiết lập"} tạp chí, bổ nhiệm BTV chính, BTV chuyên mục, BTV trình bày, BTV bản thảo, Người soát lỗi. Tên và địa chỉ của Người phản biện, nếu đã có sẵn ở một CSDL khác, có thể nhập được vào hệ thống qua chức năng Nhập người dùng ở phần {help_topic key="journal.managementPages.importExport" text="Xuất/Nhập dữ liệu"}. Tổng biên tập cũng có quyền truy cập vào các phân hệ quản trị khác của tạp chí, có thể tạo Chuyên mục mới cho tạp chí, sửa các email chuẩn đang sử dụng, quản lý {help_topic key="journal.managementPages.readingTools" text="Các công cụ đọc"} có sẵn cho tạp chí và xem các số liệu {help_topic key="journal.managementPages.statsAndReports" text="Thống kê của tạp chí"} mà hệ thống có thể lập.</p>
+<p>Lưu ý rằng mặc dù vai trò Tổng biên tập bề ngoài là vai trò với từng tạp chí, các Tổng biên tập nên được coi là những người được toàn bộ hệ thống tin cậy vì họ là người xác định những người dùng khác có thể được bổ nhiệm vào những tạp chí khác.</p>]]>
+	</section>
+</topic>

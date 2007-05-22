@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000018.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Layout Editor 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000018" locale="vi_VN" title="BTV trình bày" toc="journal/toc/000003" key="journal.roles.layoutEditor">
+	<section>
+		<![CDATA[<p>BTV trình bày chuyển dạng bản thảo đã biên tập của bài nộp thành các bản bông ở định dạng HTML, PDF, PS,... mà tạp chí đã lựa chọn để xuất bản điện tử. Hệ thống này không hỗ trợ phần mềm để chuyển văn bản Word thành các định dạng bản bông nói trên, vì vậy BTV chuyên mục cần có những phần mềm khác để tạo bản bông (chẳng hạn, dùng Adobe Acrobat để tạo file PDF; Dreamweaver để tạo file HTML), được định dạng kỹ và bố cục dễ đọc theo thông lệ của các tạp chí khoa học nhưng có lưu ý đến đặc trưng của những loại công nghệ mới này (bằng cách tham khảo các tạp chí trực tuyến nổi tiếng khác).</p>]]>	
+	</section>
+</topic>

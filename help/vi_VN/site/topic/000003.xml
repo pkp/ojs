@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000003.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Site Administration - Administration Functions 
+  *
+  * $Id$
+  -->
+
+<topic id="site/topic/000003" locale="vi_VN" title="Các chức năng hành chính" toc="site/toc/000000" key="site.administrativeFunctions">
+	<section>
+		<![CDATA[<p>Một số chức năng hành chính có sẵn trong phần quản trị website. Nói chung cần cẩn trọng khi sử dụng các chức năng này vì nếu sử dụng không đúng sẽ dẫn tới những kết quả không lường trước.</p>
+		<p><em>Thông tin hệ thống.</em> Thông tin chung về máy chủ và lịch sử các phiên bản OJS (gồm cả các lần nâng cấp trước đây). Có công cụ để sửa file cấu hình OJS ngay trên web.</p>
+		<p><em>Kết thức các lượt truy cập của người dùng.</em> Xóa tất cả các lượt truy cập hiện tại trong hệ thống, điều này đòi hỏi người dùng nào đang đăng nhập cũng phải đăng nhập lại vào hệ thống.</p>
+		<p><em>Xóa các cache dữ liệu.</em> Xóa tất cả các bộ ghi nhớ cache dữ liệu, bao gồm cả thông tin về ngôn ngữ, trợ giúp và tìm kiếm.</p>
+		<p><em>Xóa bộ nhớ cache của giao diện.</em> Xóa tất cả các phiên bản bộ nhớ đệm của giao diện HTML. Chức năng này buộc các mẫu giao diện phải được tải lại sau khi đã được cá nhân hóa.</p>]]>
+	</section>
+</topic>

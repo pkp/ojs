@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000002.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Users Index 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000002" locale="vi_VN" title="Người dùng" toc="journal/toc/000000" subtoc="journal/toc/000002" key="journal.users.index">
+	<section>
+		<![CDATA[<p>Tổng biên tập chịu trách nhiệm quản lý người dùng trong phần mềm OJS. Nhiệm vụ này bao gồm khởi tạo người dùng, vô hiệu tài khoản, quản lý các vai trò, v.v.. Tổng biên tập có thể duyệt và bổ nhiệm thêm người dùng, sửa các hồ sơ và liên lạc với các nhóm người dùng.</p>]]>	
+	</section>
+</topic>

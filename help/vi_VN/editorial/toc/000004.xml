@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../toc.dtd">
+
+<!--
+  * 000004.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Editorial Process - Section Editor's Role
+  *
+  * $Id$
+  -->
+
+<toc id="editorial/toc/000004" locale="vi_VN" title="Vai trò của BTV chuyên mục" parent_topic="editorial/topic/000004">
+	<topic id="editorial/topic/000005" title="Bài nộp" />
+	<topic id="editorial/topic/000006" title="Phản biện" />
+	<topic id="editorial/topic/000007" title="Biên tập" />
+
+	<breadcrumb url="editorial/topic/000000" title="Quá trình biên tập" />
+	<breadcrumb url="editorial/topic/000004" title="Vai trò của BTV chuyên mục" />
+</toc>

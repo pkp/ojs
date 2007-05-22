@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000010.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Files Browser
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000010" locale="vi_VN" title="Duyệt file" toc="journal/toc/000001" key="journal.managementPages.fileBrowser">
+	<section>
+		<![CDATA[<p>Chức năng Duyệt file cho phép Tổng biên tập xem và quản lý hệ thống thứ bậc của các file được tải lên tạp chí (gồm tất cả các file được tải lên trong quá trình quản lý bài nộp). TBT có thể xem, xóa và di chuyển các file như vẫn làm với máy tính thông thường.</p>
+		<p>Lưu ý rằng đây chỉ là công cụ quản lý hành chính và thường không cần sử dụng trong quản lý hàng ngày của tạp chí. Thông tin về bài nộp được lưu giữ kết hợp giữa file và biểu ghi CSDL; xóa file bằng chức năng Duyệt file sẽ không xóa các biểu ghi trong CSDL.</p>]]>
+	</section>
+</topic>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000002.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Editor's Role Submissions Index 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000002" locale="vi_VN" title="Bài nộp" toc="editorial/toc/000001" subtoc="editorial/toc/000002" key="editorial.editorsRole.submissions">
+	<section>
+		<![CDATA[<p>Tất cả bài nộp cho tạp chí có thể tìm thấy ở một trong số bốn danh sách chờ trong trang Bài nộp, tùy theo bài nộp đang ở bước nào trong quá trình biên tập. BTV chính có quyền truy cập vào tất cả bài nộp thông qua trang này, trong khi BTV chuyên mục chỉ có quyền truy cập vào những bài nộp mà mình được giao.</p>]]>	
+	</section>
+</topic>

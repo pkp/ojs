@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000009.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author's Role Index 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000009" locale="vi_VN" title="Vai trò của Tác giả" toc="editorial/toc/000000" subtoc="editorial/toc/000009" key="editorial.authorsRole">
+	<section>
+		<![CDATA[<p>Tác giả của bài nộp có thể đăng nhập vào website của tạp chí để theo dõi tiến trình của bài nộp và tham gia vào quá trình biên tập. Nếu có nhiều hơn một tác giả, tác giả trực tiếp gửi bài nộp được yêu cầu xác định đầu mối liên lạc, người sẽ nhận toàn bộ thư từ liên quan đến việc biên tập và có quyền truy cập vào website tạp chí.</p>]]>	
+	</section>
+</topic>

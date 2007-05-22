@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000036.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author's Role Editing - Proofreading
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000036" locale="vi_VN" title="Soát lỗi" toc="editorial/toc/000011" key="editorial.authorsRole.editing.proofreading">
+	<section>
+		<![CDATA[<p>Tác giả đọc soát lỗi các bản bông của bài nộp, tức là các phiên bản bài nộp ở định dạng HTML, PDF và/hoặc Postscript sẽ xuất hiện trong ấn bản trên mạng của tạp chí. Để xem những file này, Tác giả nhấp chuột vào từng Định dạng Soát lỗi (không phải vào tên file) để xêm bài nộp ở từng định dạng mà nó sẽ được xuất bản. Ở bước Soát lỗi, BTV trình bày chỉ sửa những lỗi đánh máy và định dạng. Như vậy, nếu bài nộp ở nhiều định dạng file, Tác giả không chỉ cần soát lỗi chính tả ở một định dạng mà ở tất cả các định dạng nhằm phát hiện các lỗi về định dạng. Tác giả nên theo Hướng dẫn Soát lỗi khi ghi các sửa lỗi vào ô Sửa lỗi. Tác giả cũng cần xem lại bất kỳ File phụ trợ nào đi kèm với bài nộp được xuất bản. Những file này được để ở định dạng nguyên thủy của chúng và vì vậy có thể sửa và tải lại những file này lên, đồng thời có thể sửa được tiêu đề bằng chức năng Biên tập. Bất kỳ thay đổi nào đối với những file này cũng cần được ghi lại trong ô Sửa lỗi.</p>]]>	
+	</section>
+</topic>

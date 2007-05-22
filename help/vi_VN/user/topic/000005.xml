@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000005.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * User Interface - Search and Browse
+  *
+  * $Id$
+  -->
+
+<topic id="user/topic/000005" locale="vi_VN" title="Tìm và Duyệt" toc="user/toc/000000" key="user.searchAndBrowse">
+	<section>
+		<![CDATA[<p>Có thể tìm trong nội dung của tạp chí bằng cách tìm theo tác giả, tiêu đề, tóm tắt và từ khóa chỉ mục. Có thể tìm kiếm trong toàn văn của các bài viết dưới các định dạng HTML and PDF. Ngoài ra, sử dụng liên kết Duyệt ở lề bên phải của trang, bạn đọc có thể duyệt nội dung của tạp chí theo số, tác giả, tiêu đề. Cũng có thể duyệt các tạp chí khác được xuất bản nhờ Phần mềm Tạp chí mở này.</p>]]>
+	</section>
+</topic>

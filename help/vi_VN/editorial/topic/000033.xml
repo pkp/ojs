@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000033.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author's Role Review Index - Peer Review
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000033" locale="vi_VN" title="Phản biện chuyên gia" toc="editorial/toc/000010" key="editorial.authorsRole.review.peerReview">
+	<section>
+		<![CDATA[<p>Một số thời điểm được ghi lại trên trang này, bao gồm cả ngày BTV đề nghị những Người phản biện, ngày các bài Phản biện đang được tiến hành, và ngày các bài Phản biện được những Người phản biện hoàn thành. Tác giả có thể tham khảo Chính sách Phản biện ở mục {help_topic key="user.about" text="Giới thiệu"} để hiểu thêm các bài nộp được tạp chí phản biện như thế nào. Những Người phản biện có thể tải file lên để Tác giả tham khảo, bao gồm cả phiên bản có chú thích về bài nộp. (Để tải file lên, Tác giả nhấp chuột vào tên file, mở file hoặc ghi file xuống máy tính và mở sau.)</p>]]>	
+	</section>
+</topic>

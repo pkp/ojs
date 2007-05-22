@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Index Help Page 
+  *
+  * $Id$
+  -->
+
+<topic id="index/topic/000000" locale="vi_VN" title="Hướng dẫn sử dụng Phần mềm Tạp chí mở" toc="index/toc/000000" key="index.index">
+	<section>
+		<![CDATA[<p>Tài liệu hướng dẫn sử dụng Phần mềm Tạp chí mở (OJS) được xây dựng nhằm giúp đỡ người dùng trong quá trình đọc, gửi bài viết, biên tập và xuất bản bài viết trong các tạp chí khoa học và phổ thông. Tài liệu này cũng là một cẩm nang sử dụng phần mềm OJS, mô tả quy mô và cách thức hoạt động của phần mềm quản lý tạp chí này. Tài liệu hướng dẫn còn cung cấp những khuyến nghị về biên tập thường gặp trong thực tiễn xuất bản tạp chí khoa học. Ngoài tài liệu hướng dẫn này, người dùng có thể tìm được trợ giúp ở Người hỗ trợ kỹ thuật, được nêu danh ở trang Giới thiệu Tạp chí, mục Liên hệ.</p><p>Do phần mềm OJS sử dụng các vai trò hoặc chức danh xuất bản đã được định sẵn cho mỗi chức năng và quá trình &mdash; từ Tổng biên tập người phụ trách thiết lập tạp chí tới Tác giả người soát lỗi bản bông của bài viết &mdash; mỗi một chủ đề được đề cập trong Tài liệu hướng dẫn chỉ rõ vai trò nào cần thực hiện tác vụ nào. Cũng theo nguyên tắc này, quyền truy cập vào tài liệu phù thuộc vào người dùng đóng vai trò gì và ở đâu trong hệ thống. Tài liệu hướng dẫn này được bố trị cụ thể theo ngữ cảnh; người dùng dọc được gì là tùy thuộc vào vai trò của họ. Người dùng có thể có nhiều vai trò trong phần mềm OJS (Người phản biện cũng có thể là Tác giả và Tổng biên tập có thể đồng thời là BTV chính). Những gì người dùng đọc được còn tùy thuộc vào vị trí họ đang làm việc với phần mềm OJS. Vai trò và vị trí sẽ quyết định chủ đề hướng dẫn nào hiện ra, cho dù người dùng có thể từ đó duyệt các chủ đề liên quan để tìm hiểu bất kỳ khía cạnh nào của hệ thống.</p>]]>
+	</section>
+</topic>

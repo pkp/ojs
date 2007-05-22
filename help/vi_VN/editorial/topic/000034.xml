@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000034.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author's Role Review Index - Peer Review
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000034" locale="vi_VN" title="Quyết định của BTV" toc="editorial/toc/000010" key="editorial.authorsRole.review.editorDecision">
+	<section>
+		<![CDATA[<p>Với Quyết định của BTV, Tác giả sẽ nhận được quyết định qua email từ BTV chuyên mục, dựa trên những phản biện và đánh giá của BTV chuyên mục. Quyết định này cũng được ghi lại trong mục Liên lạc giữa BTV/Tác giả trên trang Phản biện của Tác giả. Nếu BTV yêu cầu sửa chữa trước khi đi đến quyết định cuối cùng, Tác giả có thể tải lên phiên bản đã sửa của bài nộp trên trang này, cùng với những file phụ trợ đã sửa hoặc hổ sung (tập hợp dữ liệu, phương tiện nghiên cứu, tài liệu nguồn, v.v..). BTV cũng có thể tải lên những phiên bản hiện có của bài nộp hoặc các tài liệu khác để Tác giả tham khảo. (Để tham khảo những file được tải lên, Tác giả nhấp chuột vào tên file, mở file hoặc ghi file xuống máy tính rồi mở file). Nếu và khi bài nộp được chấp nhận, nó sẽ chuyển sang bước {help_topic key="editorial.editorsRole.submissions.inEditing" text="Biên tập"} của quá trình biên tập.</p><p><i>Gửi lại bài để phản biện</i>. Nếu BTV chuyên mục quyết định rằng bài nộp cần phải sửa và nộp lại để phản biện chuyên gia, Tác giả trước tiên cần sử dụng mục Liên lạc giữa BTV/Tác giả để thể hiện sẵn sàng sửa bài viết. Sau đó, khi các sửa chữa được hoàn tất, Tác giả tải lên phiên bản để phản biện vòng hai. BTV chuyên mục sẽ gửi bản này tới những Người phản biện cũ hoặc tới một hoặc nhiều Người phản biện mới và thông báo cho Tác giả biết khi có quyết định theo cách như đã làm ở vòng phản biện đầu.</p>]]>	
+	</section>
+</topic>

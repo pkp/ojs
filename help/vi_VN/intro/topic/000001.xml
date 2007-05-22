@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000001.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Frequently Asked Questions 
+  *
+  * $Id$
+  -->
+
+<topic id="intro/topic/000001" locale="vi_VN" title="Câu hỏi thường gặp" toc="intro/toc/000000" key="intro.faq">
+	<section>
+		<![CDATA[
+<ol>
+	<li><a href="#section1">Làm thế nào để bắt đầu xuất bản một tạp chí bằng OJS?</a></li>
+	<li><a href="#section2">Tôi có thể tìm kiếm hỗ trợ kỹ thuật, báo lỗi và đề xuất cải tiến ở đâu khi sử dụng OJS?</a></li>
+	<li><a href="#section3">Làm thế nào tôi có thể dịch OJS sang một ngôn ngữ khác?</a></li>
+	<li><a href="#section4">Tại sao các tác giả nhận được thông báo rằng tạp chí "hiện không nhận bài nộp"?</a></li>
+	<li><a href="#section5">Chúng tôi có thể làm gì nếu muốn cho phép truy cập vào bản thảo đang được phản biện hoặc đang ở giai đoạn "chế bản" trước khi xuất bản?</a></li>
+	<li><a href="#section6">Làm thế nào tôi có thể quảng báo tạp chí của mình trên Internet?</a></li>
+	<li><a href="#section7">Làm thế nào tạp chí có thể cung cấp hồ sơ lịch sử của thành viên trong Ban biên tập?</a></li>
+	<li><a href="#section8">Làm thế nào tôi có thể cho phép bạn đọc đăng ký trở thành người phản biện cho tạp chí?</a></li>
+	<li><a href="#section9">Làm thế nào tôi có thể tìm thêm được người phản biện cho một bài nộp ngoài danh sách những người phản biện hiện có?</a></li>
+	<li><a href="#section10">Có những cách khác nhau nào để một tạp chí có thể được xuất bản ở dạng truy cập tự do, cho phép bạn đọc truy cập tự do vào nội dung của tạp chí?</a></li>
+</ol>
+		]]>	
+	</section>
+	<section title="1. Làm thế nào để bắt đầu xuất bản một tạp chí bằng OJS?">
+		<![CDATA[
+<ol type="a">
+	<li><a href="http://pkp.sfu.ca/ojs/ojs_download.html" target="_blank">Tải xuống</a> và cài đặt phần mềm OJS, theo các tập lệnh cài đặt của phần mềm, trên một máy chủ web đáp ứng những yêu cầu của phần mềm này.</li>
+	<li>Sử dụng bí danh và mật khẩu được tạo ra trong quá trình cài đặt OJS để đăng nhập vào hệ thống.</li>
+	<li>Tạo một tạp chí mới trong mục Các tạp chí trên website.</li>
+	<li>Người quản trị website sẽ được tự động bổ nhiệm làm Tổng biên tập cho tạp chí mới, nhưng nếu cần thiết, có thể tạo thêm một hoặc nhiều người dùng mới với vai trò Tổng biên tập.</li>
+	<li>Tổng biên tập sau đó vào phần Thiết lập và tuần thự theo năm bước (mặc dù không nhất thiết hoàn thành tất cả cùng một lúc), và kết quả là một website đã sẵn sàng tiếp nhận bài nộp, quản lý quá trình biên tập và xuất bản tạp chí trên website.</li>
+	<li>Tham khảo<a href="http://pkp.sfu.ca/ojs/OJSinanHour.pdf" target="_blank">Dùng OJS trong một giờ </a> để biết thêm thông tin về cách khởi sự với OJS</li>
+</ol>
+		]]>
+	</section>
+	<section title="2. Tôi có thể tìm kiếm hỗ trợ kỹ thuật, báo lỗi và đề xuất cải tiến ở đâu khi sử dụng OJS?">
+		<![CDATA[
+<p>Dự án Tri thức Công cộng (PKP) vận hành một <a href="http://pkp.sfu.ca/support/forum/" target="_blank">Diễn đàn hỗ trợ</a> với hơn một ngàn câu trao đổi, nơi mà người dùng có thể tìm kiếm câu trả lời và có thể đặt câu hỏi với chuyên gia và cộng đồng người dùng. Chẳng hạn, người dùng có thể tìm kiếm dựa trên các thông báo lỗi để được dẫn đến các giải pháp đề xuất cho những vấn đề đã được xác định. Nếu không được, người dùng có thể gửi câu hỏi tới địa chỉ email <a href="mailto:pkp-support@sfu.ca">pkp-support@sfu.ca</a>. Các báo lỗi cần được gửi cho hệ thống ghi báo lỗi của PKP<a href="http://pkp.sfu.ca/bugzilla/" target="_blank">Bugzilla</a>.</p>
+		]]>
+	</section>
+	<section title="3. Làm thế nào tôi có thể dịch OJS sang một ngôn ngữ khác?">
+		<![CDATA[
+<p>Hướng dẫn được cung cấp trong file docs/README kèm theo trong gói OJS được tải xuống. Thông tin thêm về những vấn đề thường gặp khi dịch cũng có thể tìm thấy trên <a href="http://pkp.sfu.ca/support/forum/" target="_blank">Diễn đàn hỗ trợ của PKP</a>.</p>
+		]]>
+	</section>
+	<section title='4. Tại sao các tác giả nhận được thông báo rằng tạp chí "hiện không nhận bài nộp"?'>
+		<![CDATA[
+<p>Nếu Tổng biên tập đã lựa chọn nhãn "Chỉ BTV chính và BTV chuyên mục mới được gửi bài" cho tất cả các chuyên mục được khởi tạo, chỉ có BTV chính và BTV chuyên mục có thể gửi bài viết mà thôi. Hoặc, nếu tất cả các chuyên mục đã bị xóa, tác giả cũng sẽ nhận được thông báo này.</p>
+		]]>
+	</section>
+	<section title='5. Chúng tôi có thể làm gì nếu muốn cho phép truy cập vào bản thảo đang được phản biện hoặc đang ở giai đoạn "chế bản" trước khi xuất bản?'>
+		<![CDATA[
+<p>Hiện tại chưa có một giải pháp chính thức để cho phép truy cập vào các bài viết tiền chế bản hoặc tiền xuất bản. Tuy nhiên, tất cả những gì BTV cần làm đối với bài viết đang đề cập là sử dụng đường dẫn URL để Xem bản soát lỗi trong bước Trình bày trên trang Biên tập của bài viết. Đường dẫn này sẽ cho phép xem trước bài viết (chỉ dành cho những người dùng được cấp quyền) trước khi bài viết được xuất bản trong một số nào đó của tạp chí. Hiện tại, PKP đang tiếp tục theo dõi sự quan tâm đến tính năng này và có thể cân nhắc đưa nó thành một tính năng rõ ràng hơn trong OJS.</p>
+		]]>
+	</section>
+	<section title="6. Làm thế nào tôi có thể quảng báo tạp chí của mình trên Internet?">
+		<![CDATA[
+<p>Tạp chí của quý vị sẽ dần dần hiện diện trên Google và các mạng tìm kiếm khác theo thời gian, tuy nhiên quý vị cũng có thể thực hiện những giải pháp khác. Hãy chắc chắn là đã đăng ký tạp chí của quý vị với Công cụ gặt hái siêu dữ liệu PKP Harvester trong Bước Thiết lập 3, một lựa chọn sẽ giúp cho tạp chí của quý vị được đưa vào các chỉ mục theo chuẩn Open Archives Initiative, bao gồm cả <a href="http://pkp.sfu.ca/harvester/" target="_blank">PKP Harvester</a> and <a href="http://oaister.umdl.umich.edu/o/oaister/" target="_blank">OAIster</a>. Nếu tạp chí của quý vị truy cập tự do, hãy hỏi Giám đốc Thư viện Đại học của quý vị cách có thể đưa tạp chí của quý vị vào danh mục các tạp chí điện tử mà thư viện đang cung cấp và hỏi cách liên lạc với các thư viện nghiên cứu khác thông qua nhóm thảo luận thư của các cán bộ thư viện. Hãy xem liệu quý vị có thể sử dụng website hoặc nhóm thảo luận thư của các hiệp hội nghề nghiệp để gửi thông báo "Kêu gọi viết bài" hoặc thông báo khai trương tạp chí hay không. Cuối cùng, khi Thiết lập tạp chí, dưới mục Tham số An ninh và Truy cập (2.7), Tổng biên tập nên cho phép người dùng đăng ký với tư cách Bạn đọc để họ có thể thường xuyên nhận được thông tin về số mới ra.</p>
+		]]>
+	</section>
+	<section title="7. Làm thế nào tạp chí có thể cung cấp hồ sơ lịch sử của thành viên trong Ban biên tập?">
+		<![CDATA[
+<p>Tổng biên tập có thể nhập thông tin này bằng cách theo đường dẫn Ban Biên tập trên trang Quản lý Tạp chí. Hoặc, Tổng biên tập tạo một trang "Lịch sử Ban Biên tập" như là một mục mới trong trang Giới thiệu về Tạp chí (bước 2.5 trong Thiết lập tạp chí). Trên trang đó, quý vị có thể ghi lại tên, chức danh biên tập và số năm người đó đã làm việc trong Ban Biên tập.</p>
+		]]>
+	</section>
+	<section title="8. Làm thế nào tôi có thể cho phép bạn đọc đăng ký trở thành người phản biện cho tạp chí?">
+		<![CDATA[
+<p>Trong quá trình Thiết lập Tạp chí, dưới mục Tham số An ninh và Truy cập (2.7), Tổng biên tập có thể cho phép người đọc đăng ký như là Người phản biện, và đồng thời là Bạn đọc và/hoặc Tác giả. Người phản biện sau đó sẽ xuất hiện trong số những người mà BTV chuyên mục có thể lựa chọn và mời phản biện các bài nộp. Ở bước Thiết lập 5.7, Tổng biên tập có thể bổ sung một ghi cho "Dành cho Bạn đọc" về mong muốn của tạp chí muốn mời bạn đọc làm Người phản biện cho tạp chí. Cũng theo cách đó, tạp chí có thể khuyến khích người dùng đăng ký với tư cách là bạn đọc để có thể xác định được có bao nhiêu bạn đọc thường xuyên.</p>
+		]]>
+	</section>
+	<section title="9. Làm thế nào tôi có thể tìm thêm được người phản biện cho một bài nộp ngoài danh sách những người phản biện hiện có?">
+		<![CDATA[
+<p>Có thể sử dụng một số kỹ thuật. Khi một người phản biện tiềm năng có thể xác định bằng tên, sau đó xác định địa chỉ email và cơ quan của họ bằng cách tìm kiếm theo tên.</p>
+<ol type="a">
+	<li>Sử dụng Danh mục Tài liệu tham khảo của bài viết sẽ được phản biện để xác định người phù hợp, sau đó dùng tên đầy đủ của người đó để tìm kiếm trên Google để xác định cơ quan và địa chỉ email của người đó.</li>
+	<li>Tìm kiếm trên Google bằng sử dụng toán tử Boolean dựa trên từ khóa về tác giả (ví dụ., "hậu thực dân" + "văn học" + "Nam Phi") nhằm xác định những tài liệu trực tuyến và những người làm việc trong lĩnh vực đó.</li>
+	<li>Dựa trên cách tác giả đã xác định chủ đề của bài viết (xem Dữ liệu mô tả trong trang Tóm tắt bài nộp), hãy gửi câu hỏi tới các đồng nghiệp để hỏi tên tuổi của những chuyên gia trong lĩnh vực đã được xác định.</li>
+	<li>Vào các tạp chí trực tuyến khác trong lĩnh vực đó để tìm những tác giả có thể đóng vai trò người phản biện cho một bài viết cụ thể cần phản biện.</li>
+</ol>
+		]]>
+	</section>
+	<section title="10. Có những cách khác nhau nào để một tạp chí có thể được xuất bản ở dạng truy cập tự do, cho phép bạn đọc truy cập tự do vào nội dung của tạp chí?">
+		<![CDATA[
+<p>Quý vị có thể tham khảo bài viết của John Willinsky's <a href="http://www.jpgmonline.com/article.asp?issn=0022-3859;year=2003;volume=49;issue=3;spage=263;epage=267;aulast=Willinsky;type=0" target="_blank">"The Nine Flavours of Open Access Scholarly Publishing"</a> trên tạp chí Journal of Postgraduate Medicine. Ngoài ra, Quỹ Soros Foundation cũng có bài hướng dẫn <a href="http://www.soros.org/openaccess/scholarly_guide.shtml" target="_blank">Guide to Open Access Publishing and Scholarly Societies</a>, "một hướng dẫn nhằm giúp các cơ quan nghiên cứu &mdash; và các NXB nhỏ &mdash; đánh giá các lựa chọn sẵn có cho tương lai xuất bản của họ." <a href="http://www.arl.org/sparc/" target="_blank">SPARC</a>, the Scholarly Publishing and Academic Resources Coalition, cung cung cấp một số tài liệu về truy cập tự do.</p>
+		]]>
+	</section>
+</topic>

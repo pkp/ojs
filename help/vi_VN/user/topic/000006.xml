@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000006.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * User Interface - Reading Tools
+  *
+  * $Id$
+  -->
+
+<topic id="user/topic/000006" locale="vi_VN" title="Công cụ đọc" toc="user/toc/000000" key="user.readingTools">
+	<section>
+		<![CDATA[<p>Các tạp chí sử dụng phần mềm này có thể cung cấp một loạt Công cụ đọc đi kèm với các bài viết được xuất bản trong những Chuyên mục khác nhau của Tạp chí. Các Công cụ đọc là nhằm để hỗ trợ cả những bạn đọc mới và có kinh nghiệm trong việc xây dựng ngữ cảnh cho việc giải thích, đánh giá và sử dụng tài liệu nghiên cứu mà họ đang đọc. Các tập hợp Công cụ đọc đã được xây dựng cho một phạm vi rộng các ngành khoa học mà từ đó Tổng biên tập có thể lựa chọn, sửa hoặc xóa bớt, nhằm hỗ trợ người đọc trên tạp chí. Các Công cụ đọc cũng cho phép Bạn đọc tham gia vào nhiều diễn đàn phù hợp, đồng thời có thể liên lạc với tác giả hoặc chia sẻ bài viết với bạn đọc khác.</p><p><i>Cách thức hoạt động của Công cụ đọc</i>. Công cụ đọc được thiết kế để tạo ra ngữ cảnh cho một bài viết cụ thể mà nó đi kèm. Các công cụ này được mở ra trong một khung ở bên phải của bài viết đang đọc. Trước hết, các công cụ đọc cho phép bạn đọc tiếp cận thông tin chỉ mục của bài viết, bản dùng để in và tiểu sử của tác giả. Các công cụ đọc cũng cho phép bạn đọc tra cứu các từ trong một bài viết bằng cách nhấp đúp chuột vào bất kỳ từ nào trong bản HTML của bài viết, cho phép gửi email cho tác giả và cho một bạn đọc khác. Các công cụ đọc cũng được thiết kế để lấy những từ khóa của bài viết để đưa vào tìm kiếm trong các công cụ tìm kiếm của các cơ sở dữ liệu truy cập tự do và các nguồn thông tin khác được phân thành các nhóm như Công trình nghiên cứu, Các tác phẩm khác của Tác giả, Báo chí, Website chính phủ, v.v..., tùy theo tập hợp công cụ được lựa chọn. Bạn đọc cũng có thể tiếp cận thông tin khái quát về mỗi một nguồn tin được lựa chọn. Trong mỗi nhóm, dù là Nghiên cứu, Báo chí hay Hướng dẫn, các công cụ đọc cho phép nhiều lựa chọn một hoặc nhiều cơ sở dữ liệu để tra cứu, đồng thời cho phép bạn đọc hiểu thêm về mỗi cơ sở dữ liệu bằng cách cung cấp đường dẫn tới trang Giới thiệu về nguồn tin. (Tổng biên tập có thể sửa hoặc xóa các nguồn tin hiện có và có thể bổ sung thêm.)</p>]]>	
+	</section>
+</topic>

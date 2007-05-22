@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Publishing Process Index 
+  *
+  * $Id$
+  -->
+
+<topic id="publishing/topic/000000" locale="vi_VN" title="Quá trình xuất bản" toc="index/toc/000000" subtoc="publishing/toc/000000" key="publishing.index">
+	<section>
+		<![CDATA[<p>BTV chính theo dõi toàn bộ quá trình xuất bản bằng cách tạo ra các số và/hoặc tập cho tạp chí, sắp xếp bài nộp vào những số này, tổ chức Mục lục, và cuối cùng là xuất bản số tạp chí. Tạp chí có thể được xuất bản ở một số định dạng. Mô hình phổ biến là tập hợp bài viết vào trong một số tạp chí được xuất bản hàng quý (hoặc hàng tháng hoặc nửa năm). Tuy nhiên, một số tạp chí điện tử xuất bản bài nộp ngay khi nó đã biên tập xong, như là một phần của niên tập, được mở tập từ bài nộp đầu tiên trong năm và đóng tập ở  vào cuối năm, đồng thời tiếp tục mở tập mới. Vì mục đích của tài liệu Hướng dẫn này, thuật ngữ số tạp chí được sử dụng, mặc dù một số tạp chí bao gồm Mục lục và các thể được định danh bằng (a) số, tập, năm; (b) tập, năm; (c) năm; hoặc (d) tiêu đề. Cách định danh tạp chí được Tổng biên tập quy định trong quá trình thiết lập tạp chí.</p>]]>	
+	</section>
+</topic>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000026.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Reading Tools - Settings
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000026" locale="vi_VN" title="Tham số thiết lập" toc="journal/toc/000005" key="journal.managementPages.readingTools.settings">
+	<section>
+		<![CDATA[<p>Tổng biên tập lựa chọn một tập hợp Công cụ đọc về một ngành hoặc lĩnh vực để xuất hiện trên khung bên trái của tất cả các bài viết trong những chuyên mục được lập chỉ mục (ví dụ, trong chuyên mục Chuyên đề chứ không phải chuyên mục Thông báo Hội nghị). Tổng biên tập có thể kiểm tra, sửa, xóa và bổ sung các công cụ trong mỗi tập hợp bằng cách vào trang Phiên bản, mục Công cụ đọc. Tổng biên tập cũng có thể lựa chọn một hoặc tất cả các đường dẫn tổng hợp (không bắt buộc) để hiện thị như là một phần của tập hợp công cụ đọc. Một tập hợp Công cụ đọc giống nhau sẽ xuất hiện ở mỗi bài viết trong các chuyên mục được lập chỉ mục của tạp chí. Tuy nhiên, các Công cụ đọc sử dụng các từ khóa định chỉ mục do tác giả cung cấp để đảm bảo rằng tài liệu tìm thấy trên các cơ sở dữ liệu là phù hợp. Tổng biên tập có thể thay đổi các Công cụ đọc đã chọn bất kỳ lúc nào.</p>]]>
+	</section>
+</topic>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000030.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - System Plugins
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000030" locale="vi_VN" title="Công cụ phụ trợ hệ thống" toc="journal/toc/000001" key="journal.managementPages.plugins">
+	<section>
+		<![CDATA[<p>Trang Công cụ phụ trợ hệ thống Tổng biên tập xem danh mục các công cụ phụ trợ được cài đặt trong phần mềm OJS và thực hiện các tác vụ mà mỗi công cụ cung cấp. Để biết thêm thông tin, xem tài liệu hướng dẫn đi kèm với mỗi công cụ phụ trợ.</p>]]>
+	</section>
+</topic>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author Submission Process Index 
+  *
+  * $Id$
+  -->
+
+<topic id="submission/topic/000000" locale="vi_VN" title="Quá trình nộp bài" toc="index/toc/000000" subtoc="submission/toc/000000" key="submission.index">
+	<section>
+		<![CDATA[<p>Tạp chí cho phép các Tác giả tải bài nộp của mình trực tiếp lên website. Tùy theo thiết lập mà Tổng biên tập đã chọn cho tạp chí ở bước Thiết lập 2.7, Tác giả có thể vừa đăng ký là một tác giả, vừa đăng ký là một Người phản biện (có thể được đề nghị pahrn biện chuyên gia đối với các bài nộp khác) và/hoặc đăng ký là một bạn đọc (được thông báo về mục lục của số tạp chí mới ra). Khi hoàn thành quá trình đăng ký, Tác giả sẽ được dẫn trực tiếp tới trang Người dùng nơi liệt kê những vai trò mà người đó có trên website (v.d., Tác giả, Người phản biện, v.v...). Nhấp chuột vào vai trò Tác giả sẽ được dẫn tới trang nộp bài, nơi liệt kê những bài nộp hiện tại và trước đây của tác giả và cũng là nơi bắt đầu nộp một bài nới. Quá trình nộp bài của Tác giả được chia làm 5 bước, mỗi bước đều có chỉ dẫn. Tác giả không cần hoàn tất cả năm bước trong một lần và có thể quay trở lại tiếp tục quá trình đối với các bài nộp được ghi trong bảng danh sách bài nộp là "Chưa hoàn thành".</p>]]>	
+	</section>
+</topic>

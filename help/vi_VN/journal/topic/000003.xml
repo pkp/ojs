@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000003.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles Index 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000003" locale="vi_VN" title="Vai trò" toc="journal/toc/000000" subtoc="journal/toc/000003" key="journal.roles.index">
+	<section>
+		<![CDATA[<p>Phần mềm tạp chí này sử dụng một số vài trò trong xuất bản tạp chí truyền thống để thực hiện quá trình xuất bản. Một người có thể đăng ký với nhiều vai trò khác nhau, và nhờ vậy tạp chí có thể do một người vận hành bằng cách thực hiện tất cả các vai trò trừ Người phản biện và Tác giả. Thông thường, Tổng biên tập có thể đồng thời là BTV chính và BTV chuyên mục. Người phản biện thường đăng ký đồng thời là Tác giả.</p><p><i>Quyền truy cập được giới hạn theo vai trò</i>. MỖi vai trò có một vùng truy cập riêng trong quá trình biên tập và xuất bản. Tác giả và Người phản biện đăng nhập vào không gian riêng của họ trên website. BTV chuyên mục chỉ được phép xem các bài nộp mình được giao. Điều này có nghĩa là ít ra không có xung đột tiềm ẩn nào nếu một BTV chuyên mục gửi bài viết cho tạp chí để phản biện và xuất bản nếu có thể.</p>]]>	
+	</section>
+</topic>

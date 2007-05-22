@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000041.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Layout Editor's Role - Proofreading
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000041" locale="vi_VN" title="Soát lỗi" toc="editorial/toc/000013" key="editorial.layoutEditorsRole.proofreading">
+	<section>
+		<![CDATA[<p>Tác giả và Người soát lỗi sẽ đọc soát cá file ở các định đạng khách nhau để tìm các lỗi đánh máy hoặc định dạng. Họ sẽ ghi lại những sửa lỗi cần thiết vào ô Sửa lỗi theo các Hướng dẫn Sửa lỗi. Khi Người soát lỗi gửi email cho BTV trình bày rằng soát lỗi đã hoàn tất, BTV trình bày sẽ quay lại trang Các định dạng trình bày để soát lỗi và tiến hành sửa lỗi cần thiết, xóa những file cần sửa và tải lại file đã sửa xong. Khi hoàn thành tác vụ này, BTV trình bày có thể viết lời bình vào trong ô Sửa lỗi trước khi nhấp chuột vào biểu tượng email dưới mục Hoàn tất để được dẫn tới một email thông báo cho BTV chuyên mục rằng bài nộp đã sẵn sàng để xếp bài xuất bản.</p>]]>	
+	</section>
+</topic>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Journal Management Main 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000000" locale="vi_VN" title="Quản lý Tạp chí" toc="index/toc/000000" subtoc="journal/toc/000000" key="journal.index">
+	<section>
+		<![CDATA[<p>Tổng biên tập quán xuyến tất cả các mặt của Quản lý Tạp chí, tham khảo ý kiến của các BTV chính, bao gồm cả thiết lập và cấu hình hệ thống phần mềm tạp chí, bổ nhiệm người dùng vào các vai trò khác nhau cần thiết để vận hành tạp chí, thiết lập các Chuyên mục khác nhau của tạp chí và nhiều tác vụ quản lý khác.</p>]]>	
+	</section>
+</topic>

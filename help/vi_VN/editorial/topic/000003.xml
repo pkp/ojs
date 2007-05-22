@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000003.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Editor's Role Submission Summary Index 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000003" locale="vi_VN" title="Tóm tắt bài nộp" toc="editorial/toc/000001" subtoc="editorial/toc/000003" key="editorial.editorsRole.submissionSummary">
+	<section>
+		<![CDATA[<p>Trang Tóm tắt cho mỗi bài nộp được BTV chính dùng để quản lý các file bài nộp và dữ liệu mô tả hoặc chỉ mục kèm theo.</p>]]>	
+	</section>
+</topic>

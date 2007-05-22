@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000003.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * User Interface - Register and Profile
+  *
+  * $Id$
+  -->
+
+<topic id="user/topic/000003" locale="vi_VN" title="Đăng ký và Hồ sơ" toc="user/toc/000000" key="user.registerAndProfile">
+	<section>
+		<![CDATA[<p>Tạp chí sử dụng một hệ thống đăng ký đối với tất cả người dùng tham gia vào quá trình biên tập và xuất bản. Chính sách Bí mật cá nhân của tạp chí được áp dụng đối với tất cả người dùng đăng ký. Mỗi người dùng đăng ký có một Hồ sơ mà người đó có thể sửa hoặc bổ sung sau khi đã đăng nhập vào tạp chí. Liên kết tới Hồ sơ có thể được tìm thấy ở lề bên phải dưới mục Người dùng và trên trang Người dùng.</p>
+
+<p>Tất cả người dùng đều có thể lựa chọn cập nhật thông tin qua email để được nhận thông báo bằng email về mục lục của số mới ra. Đối với các tạp chí sử dụng nhiều ngôn ngữ, Người phản biện có thể nêu trong Hồ sơ của mình những ngôn ngữ mà họ thấy dễ dàng phản biện các bài nộp.</p>]]>	
+	</section>
+</topic>

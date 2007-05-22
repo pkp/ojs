@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000007.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * User Interface - User Home
+  *
+  * $Id$
+  -->
+
+<topic id="user/topic/000007" locale="vi_VN" title="Người dùng" toc="user/toc/000000" key="user.userHome">
+	<section>
+		<![CDATA[<p>Trang Người dùng gắn mới menu Người dùng của thanh điều khiển, xuất hiện ở tất cả các trang sau khi người dùng đã đăng nhập. Nó liệt kê tất cả những vai trò mà người dùng hiện đang được bổ nhiệm (v.d., Người phản biện, Tác giả, Bạn đọc, etc.). Nó cũng bao gồm tài khoản của người đùng, đường dẫn tới các tạp chí khác mà người dùng có một hay nhiều vai trò. Tài khoản người dùng cũng cung cấp đường dẫn tới hồ sơ cá nhân nơi có thể sửa hoặc bổ sung thông tin liên lạc và tiểu sử. Người dùng cũng có thể tạo mật khẩu mới trên trang Người dùng.</p>]]>	
+	</section>
+</topic>

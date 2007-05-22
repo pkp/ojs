@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000029.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Section Editor's Role Index - Editing - Proofreading
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000029" locale="vi_VN" title="Proofreading" toc="editorial/toc/000007" key="editorial.sectionEditorsRole.editing.proofreading">
+	<section>
+		<![CDATA[<p>Khi nhận được thông báo của BTV trình bày về việc hoàn thành bản bông, BTV chuyên mục lựa chọn BTV soát lỗi nếu trước đó chưa chọn. BTV chuyên mục sau đó gửi email Đề nghị tới Tác giả để bắt đầu quá trình Soát lỗi. Tác giả, sau khi hoàn thành việc xem lại bản bông và các file phụ trợ, nếu có, gửi thông báo hoàn tất tới BTV soát lỗi và cc. cho BTV chuyên mục. Bất kỳ lỗi đánh máy hoặc định dàng nào đều được Tác giả và BTV soát lỗi ghi chú ở ô Sửa lỗi trong trang Soát lỗi vì Tác giả và BTV soát lỗi không thể đánh dấu vào bản bông. Khi hoàn thành việc xem lại bản bông và các file phụ trợ, nếu có, BTV soát lỗi thông báo cho BTV trình bày,  có cc. cho BTV chuyên mục, để BTV trình bày tiến hành sửa lỗi trên bản bông và các file phụ trợ, nếu có. Cuối cùng, BTV trình bày thông báo cho BTV chuyên mục rằng bài nộp đã sẵn sàng để sắp xếp xuất bản. Ở bước này, BTV chuyên mục có thể muốn xem lại các file, và nếu hài lòng, sắp xếp để xuất bản bằng cách nhấp chuột để chọn một số tạp chí ở dưới cùng của trang Biên tập dành cho bài nộp và nhấn nút "Ghi lại". Bài nộp sau đó chuyển sang {help_topic key="publishing.index" text="Quá trình xuất bản"}.</p><p>Lưu ý rằng BTV chính có thể xếp bài ở bất kỳ thời điểm nào trong quá trình biên tập; thông tin này sẽ được thông báo cho BTV trình bày và BTV soát lỗi và cho phép họ xem trước số tạp chí trước khi xuất bản.</p>]]>
+	</section>
+</topic>

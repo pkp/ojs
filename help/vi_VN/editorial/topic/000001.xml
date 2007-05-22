@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000001.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Editor's Role Index 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000001" locale="vi_VN" title="Vai trò của BTV chính" toc="editorial/toc/000000" subtoc="editorial/toc/000001" key="editorial.editorsRole">
+	<section>
+		<![CDATA[<p>BTV chính quản lý quá trình biên tập, bắt đầu bằng việc giao bài nộp cho BTV chuyên mục. Tùy theo chính sách của tạp chí, BTV chính thường đóng vài trò của BTV chuyên mục trong việc theo dõi bài nộp được chấp nhận và chuyển sang bước biên tập của quá trình biên tập.</p>]]>	
+	</section>
+</topic>

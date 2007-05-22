@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000014.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Users - Email Users
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000014" locale="vi_VN" title="Gửi email tới người dùng" toc="journal/toc/000002" key="journal.users.emailUsers">
+	<section>
+		<![CDATA[<p>Tổng biên tập có thể gửi email tới tất cả người dùng hoặc một nhóm người dùng. Lưu ý rằng tất cả bạn đọc được gửi email thông báo khi một số mới được xuất bản cùng với một bản sao mục lục của số đó, hoặc cùng với tiêu đề và tác giả bài viết trong trường hợp {help_topic key="publishing.index" text="xuất bản"} liên tục. Tạp chí cũng nên có Chính sách về Bí mật Cá nhân, được nhập ở bước Thiết lập tạp chí và hiển thị trong phần Giới thiệu về Tạp chí, để mô tả cho người dùng biết tạp chí sẽ tôn trọng bí mật cá nhân của người dùng như thế nào.</p>]]>	
+	</section>
+</topic>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000011.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author's Role Editing Index 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000011" locale="vi_VN" title="Biên tập" toc="editorial/toc/000009" subtoc="editorial/toc/000011" key="editorial.authorsRole.editing">
+	<section>
+		<![CDATA[<p>Tác giả đóng góp vào cả việc Biên tập bản thảo và Soát lỗi của bài nộp ở bước Biên tập, khi mà bài nộp được chuẩn bị để xuất bản điện tử và/hoặc bản giấy.</p>]]>	
+	</section>
+</topic>

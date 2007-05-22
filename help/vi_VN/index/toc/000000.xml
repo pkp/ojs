@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../toc.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Main table of contents for help. 
+  *
+  * $Id$
+  -->
+
+<toc id="index/toc/000000" locale="vi_VN" title="Hướng dẫn sử dụng OJS" parent_topic="index/topic/000000">
+	<topic id="intro/topic/000000" title="Giới thiệu OJS" />
+	<topic id="site/topic/000000" title="Quản trị website" />
+	<topic id="journal/topic/000000" title="Quản lý tạp chí" />
+	<topic id="submission/topic/000000" title="Quá trình gửi bài" />
+	<topic id="editorial/topic/000000" title="Quá trình biên tập" />
+	<topic id="publishing/topic/000000" title="Quá trình xuất bản" />
+	<topic id="user/topic/000000" title="Website tạp chí" />
+</toc>

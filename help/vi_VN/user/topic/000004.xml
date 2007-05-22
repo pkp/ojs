@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000004.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * User Interface - Current and Archives
+  *
+  * $Id$
+  -->
+
+<topic id="user/topic/000004" locale="vi_VN" title="Số mới và Số cũ" toc="user/toc/000000" key="user.currentAndArchives">
+	<section>
+		<![CDATA[<p>Các số tạp chí được cung cấp cho bạn đọc bao gồm số mới ra và một tập hợp các số cũ. Tổng biên tập có thể cập nhật lên website tạp chí những số được xuất bản trước khi tạp chí được xuất bản bằng phần mềm này và nhờ đó tạo nên kho Bài cũ cung cấp cho bạn đọc trên website.</p>]]>	
+	</section>
+</topic>

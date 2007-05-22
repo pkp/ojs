@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../toc.dtd">
+
+<!--
+  * 000005.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Journal Management - Management Pages - Reading Tools.
+  *
+  * $Id$
+  -->
+
+<toc id="journal/toc/000005" locale="vi_VN" title="Công cụ đọc" parent_topic="journal/topic/000009">
+	<topic id="journal/topic/000026" title="Thiết lập" />
+	<topic id="journal/topic/000027" title="Phiên bản" />
+	<topic id="journal/topic/000028" title="Ngữ cảnh" />
+
+	<breadcrumb url="journal/topic/000000" title="Quản lý Tạp chí" />
+	<breadcrumb url="journal/topic/000001" title="Các trang quản lý" />
+	<breadcrumb url="journal/topic/000009" title="Công cụ đọc" />
+</toc>

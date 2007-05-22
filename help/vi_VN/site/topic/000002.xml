@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000002.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Site Administration - Site Management 
+  *
+  * $Id$
+  -->
+
+<topic id="site/topic/000002" locale="vi_VN" title="Quản lý website" toc="site/toc/000000" key="site.siteManagement">
+	<section>
+		<![CDATA[<p>Phần mềm OJS là một hệ thống đa tạp chí và Người quản trị website chịu trách nhiệm cài đặt cấu hình trên toàn bộ website và tạo các tạp chí mới được duy trì trên cùng một website. Mỗi một tạp chí là một website hoàn toàn độc lập, trừ tài khoản người dùng. Người dùng có thể đóng những vai trò khác nhau ở các tạp chí khác nhau nhưng bí danh và email vẫn giống nhau sử dụng giống nhau ở tất cả các tạp chí.</p>]]>
+	</section>
+	
+	<section title="Thiết lâp website">
+		<![CDATA[<p>Người quản trị website nhập những thông tin cơ bản dành cho tất cả các tạp chí được đặt trên website, bao gồm tên, mô tả website và thông tin liên hệ.</p>
+		<p><em>Đổi hướng tạp chí.</em> Tham số này có thể được sử dụng để lái tất cả các cuộc truy cập vào website về một tạp chí cụ thể nào đó. Tham số này thường sử dụng khi website chỉ đặt một tạp chí duy nhất.</p>]]>
+	</section>
+	
+	<section title="Các tạp chí trên website">
+		<![CDATA[<p>Vì OJS cho phép tạo không giới hạn số lượng tạp chí riêng biệt, có thể tạo và quản lý một tạp chí mới bất kỳ lúc nào. Mỗi tạp chí được tạo ra có đường dẫn URL riêng duy nhất dựa trên tên đường dẫn do Người quản trị website cung cấp. Các tạp chí đang trong quá trình thiết lập có thể đặt ở chế độ không hiển thị trên website cho tới khi chúng sẵn sàng để công bố.</p>]]>
+	</section>
+	
+	<section title="Ngôn ngữ">
+		<![CDATA[<p>Phần mềm OJS là một phần mềm đa ngôn ngữ, cho phép các tạp chí hỗ trợ nhiều ngôn ngữ khác nhau đặt trên cùng một website. Người quản trị xác định ngôn ngữ mặc định của website và cài đặt thêm các ngôn ngữ khác cho tạp chí.</p>
+		<p>Thông thường, các gói ngôn ngữ bổ sung có thể tải xuống tại website của phần mềm <a href="http://pkp.sfu.ca/" target="_blank">OJS</a> khi website nhận được các bản dịch do người đùng đóng góp. Những gói này có thể cài thêm vào phần mềm OJS đang sử dụng trên dùng trên các tạp chí.</p>]]>
+	</section>
+	
+	<section title="Các nguồn xác thực">
+		<![CDATA[<p>Theo mặc đinh, OJS xác thực người dùng dựa vào CSDL nội bộ của phần mềm. Tuy nhiên, có thể sử dụng các phương pháp xác thực khác, chẳng hạn LDAP. Các nguồn xác thực khác được triển khai dưới dạng công cụ phụ trợ. Xem thêm tài liệu hướng dẫn ở mỗi công cụ phụ trợ để biết thêm chi tiết.</p>]]>
+	</section>
+</topic>

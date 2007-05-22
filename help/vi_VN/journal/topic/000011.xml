@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000011.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Users - All Users 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000011" locale="vi_VN" title="Tất cả người dùng" toc="journal/toc/000002" key="journal.users.allUsers">
+	<section>
+		<![CDATA[<p>Chức năng này liệt kê tất cả những ai đã đăng ký với tạp chí này ở một vai trò nào đó. Tổng biên tập có thể đăng nhập với vai trò của bất kỳ người dùng nào. Điều này cực kỳ hữu ích khi cần hỗ trợ người dùng ở xa vì nó cho phép Tổng biên tập hiểu chính xác hơn trục trặc gì đang xảy ra.</p>]]>	
+	</section>
+</topic>

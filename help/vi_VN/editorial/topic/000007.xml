@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000007.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Section Editor's Role Index - Editing 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000007" locale="vi_VN" title="Biên tập" toc="editorial/toc/000004" subtoc="editorial/toc/000007" key="editorial.sectionEditorsRole.editing">
+	<section>
+		<![CDATA[
+		<p>BTV chuyên mục phụ trách biên tập bản thảo, trình bày và soát lỗi bằng cách lựa chọn và giao cho các thành viên của Ban Biên tập theo dõi bài viết ở mỗi bước và bằng cách đảm bảo rằng bài nộp được chuyển qua từng bước đúng thời hạn. Quá trình bắt đầu khi BTV chuyên mục chọn BTV bản thảo và yêu cầu biên tập bản thảo của bài viết. BTV chuyên mục cũng có thể chọn luôn BTV trình bày và BTV soát lỗi cùng lúc (tùy thuộc và có bao nhiêu vai trò được những người khác nhau của tạp chí đảm nhận), hoặc chờ tới khi bước trước đó đã hoàn tất. Để thay thế những người đã lựa chọn, BTV chuyên mục chỉ cần Lựa chọn lại và giao cho người mới thay thế cho người cũ. Bước Biên tập hoàn tất khi bài nộp đã xong được bước Soát lỗi, thời điểm mà BTV chuyên mục sẽ sắp xếp bài nộp để xuất bản. Lưu ý rằng Lượt xem chỉ số lần bản bông này được xem, sap khi đã được xuất bản.</p>
+		<p><i>Những bài nộp trong phần Trình bày cần Biên tập bản thảo kỹ hơn</i>. BTV chính có thể phụ trách việc biên  tập bản thảo kỹ hơn đối với bản đã trình bày, nếu thấy cần thiết, bằng cách download bản đã trình bày xuống và gửi kèm theo thư đến cho BTV bản thảo (BTV này cũng có thể cần liên hệ với Tác giả). Khi việc biên tập bản thảo kỹ hơn được hoàn thành và gửi lại cho BTV chính, BTV chính có thể tải file này lên trang Phiên bản Trình bày.</p>
+		<p><i>Thay đổi bản bông sau khi bài nộp đã được xếp để in</i>. Một khi bài nộp được chuyển sang phần xếp bài, trang Biên tập (cùng với các trang Tóm tắt, Phản biện và Lịch sử kèm theo) sẽ được chuyển vào kho Bài cũ. BTV chính có thể yêu cầu BTV trình bày, người cũng sẽ có quyền truy cập vào Bài cũ, thay đổi các bản bông và tải lại các file này. Điều này có thể diễn ra sau khi bài nộp đã được xuất bản. Bản bông vừa mới tải lên sẽ xuất hiện như là phiên bản đã xuất bản, tuy nhiên cần hết sức lưu ý việc thay đổi bản bông theo cách này để giữ được toàn vẹn của quá trình xuất bản tạp chí và BTV chính có thể cần thêm ghi chú về những sự thay đổi trên một bài viết đã xuất bản.</p>
+		]]>	
+	</section>
+</topic>

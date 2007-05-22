@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000002.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author Submission Process - Submission Requirements 
+  *
+  * $Id$
+  -->
+
+<topic id="submission/topic/000002" locale="vi_VN" title="Các yêu cầu về bài nộp" toc="submission/toc/000000" key="submission.submissionRequirements">
+	<section>
+		<![CDATA[<p>Để đảm bảo rằng các bài nộp cho tạp chí đã được chuẩn bị phù hợp và ở một định dạng phù hợp cho việc xử lý, Tổng biên tập và BTV chính đã xây dựng một tập hợp những Yêu cầu đối với bài nộp mà tác giả cần theo trước khi có thể chuyển sang Bước 2 của quá trình nộp bài. Nếu Tác giả không thể tuân theo một trong những yêu cầu này vì một lý do nào đó, Tác giả có thể đánh dấu kiểm đối với yêu cầu đó và giải thích trong phần Lời bình gửi BTV.</p>]]>	
+	</section>
+</topic>

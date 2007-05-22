@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000012.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Users - Create New User 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000012" locale="vi_VN" title="Tạo người dùng mới" toc="journal/toc/000002" key="journal.users.createNewUser">
+	<section>
+		<![CDATA[<p>Tổng biên tập có thể sử dụng chức năng Tạo người dùng mới để đăng ký cho một người nào đó và gắn cho họ một vai trò, từ Tổng biên tập cho tới Bạn đọc. Bằng cách đăng nhập vào tạp chí, người dùng có thể hoàn chỉnh và thay đổi hồ sơ của mình do Tổng biên tập lập ra.</p><p><i>Thay đổi mật khẩu</i>. Người dùng có thể thay đổi mật khẩu khi họ đã đăng nhập vào tạp chí. Tổng biên tập không thể truy cập được mật khẩu của người dùng một khi nó đã được giao cho người dùng. Tuy nhiên, hệ thống có thể tạo ra mật khẩu mới và gửi email cho người dùng khi họ nhấp chuột vào đường dẫn "Quyên mật khẩu?" ở phía dưới ô đăng nhập.</p>]]>	
+	</section>
+
+	<section title="Bổ nhiệm người dùng hiện tại">
+		<![CDATA[<p>Tổng biên tập có thể bổ nhiệm một người dùng hiện tại vào một hoặc nhiều vai trò.</p>]]>
+	</section>
+
+	<section title="Đồng nhất người dùng">
+		<![CDATA[<p>Chức năng đồng nhất sẽ bổ nhiệm tất cả người dùng đã được bổ nhiệm vào các vị trí cụ thể trong một tạp chí vào cùng vị trí đó ở tạp chí này. Chức năng này cho phép một nhóm người dùng (ví dụ, Người phản biện) đồng nhất giữa các tạp chí.</p>]]>
+	</section>
+</topic>

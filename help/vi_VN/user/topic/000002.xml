@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000002.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * User Interface - About
+  *
+  * $Id$
+  -->
+
+<topic id="user/topic/000002" locale="vi_VN" title="Giới thiệu" toc="user/toc/000000" key="user.about">
+	<section>
+		<![CDATA[<p>Trên trang Giới thiệu, tạp chí giới thiệu chính sách, thủ tục và các tài liệu khác liên quan nhằm minh bạch tối đa các hoạt động của tạp chí. Tài liệu đó thường được gọi là trang mặt (trang tên) của các tạp chí. Đó là nơi mà các tác giả tiềm năng của tạp chí này có thể hiểu được phạm vi và trọng tâm của tạp chí, Chính sách Phản biện chuyên gia của tạp chí cũng như cách nộp một bài viết cho tạp chí.</p>]]>	
+	</section>
+</topic>

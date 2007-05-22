@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000044.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Ensuring a blind peer review
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000044" locale="vi_VN" title="Đảm bảo phản biện chuyên gia khuyết danh" toc="editorial/toc/000001" key="editorial.sectionEditorsRole.review.blindPeerReview">
+	<section>
+		<![CDATA[<p>Để đảm bảo tính toàn vẹn của phản biện chuyên gia khuyết danh đối với bài nộp trên tạp chí này, mọi nỗ lực cần được thực hiện để không cho tác giả và người phản biện biết về nhau. Điều này đòi hỏi tác giả, biên tập viên và người phản biện (những người tải các tài liệu lên trong quá trình phản biện) kiểm tra xem các bước sau đây liên quan đến văn bản và thuộc tính của file đã được thực hiện hay chưa:
+<ol><li>Tác giả của tài liệu đã xóa tên mình trong văn bản, với "Tác giả" và năm được dùng trong trích dẫn và chú thích thay cho tên tác giả, tiêu đề bài viết,...</li>
+<li>Đối với các file văn bản Microsoft Office, thông tin về tác giả cần được bỏ đi trong phần thuộc tính của file (xem menu File/Properties trong phần mềm Word).</li>
+<li>Với các file PDF, tên của tác giả cũng cần được bỏ đi bằng cách sử dụng mục Document Properties trong Menu File của phần mềm Adobe Acrobat.</li>
+</ol></p>]]>
+	</section>
+</topic>

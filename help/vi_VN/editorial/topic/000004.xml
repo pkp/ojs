@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000004.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Section Editor's Role Index 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000004" locale="vi_VN" title="Vai trò của BTV chuyên mục" toc="editorial/toc/000000" subtoc="editorial/toc/000004" key="editorial.sectionEditorsRole">
+	<section>
+		<![CDATA[<p>BTV chuyên mục thường quản lý bước Phản biện các bài nộp và biên tập những bài nộp được chấp nhận. Tuy nhiên, tùy theo chính sách của tạp chí, một BTV chuyên mục ban đầu được BTV chính giao một bài nộp có thể chỉ được yêu cầu theo dõi bước Phản biện, sau đó, nếu bài nộp được chấp nhận, BTV chính lại tiếp tục biên tập (trong vai trò của BTV chuyên mục). BTV gửi yêu cầu cho BTV chuyên mục đề nghị theo dõi một bài nộp trong suốt quá trình biên tập.</p>]]>	
+	</section>
+</topic>

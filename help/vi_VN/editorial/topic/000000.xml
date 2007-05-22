@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Editorial Process Index 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000000" locale="vi_VN" title="Quá trình biên tập" toc="index/toc/000000" subtoc="editorial/toc/000000" key="editorial.index">
+	<section>
+		<![CDATA[<p>Quá trình biên tập một bài nộp cho tạp chí bao gồm phản biện, thường là phản biện chuyên gia ẩn danh, tiếp theo là quyết định của BTV chuyên mục chấp nhận hoặc từ chối bài nộp. Nếu được chấp nhận ở bước Phản biện trong Quá trình biên tập, bài nộp sẽ được đưa sang bước Biên tập bao gồm biên tập bản thảo, trình bày và soát lỗi. Sau đó bài nộp sẽ được xếp để in trong một số tạp chí nào đó. Tùy thuộc vào cách tổ chức của tạp chí, Quá trình Biên tập có thể chỉ do một BTV chính hoặc do một nhóm các BTV chính, BTV chuyên mục, BTV bản thảo, BTV trình bày, BTV soát lỗi thực hiện.</p>]]>	
+	</section>
+</topic>

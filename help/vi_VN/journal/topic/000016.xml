@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000016.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Editor 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000016" locale="vi_VN" title="BTV chính" toc="journal/toc/000003" key="journal.roles.editor">
+	<section>
+		<![CDATA[<p>BTV chính theo dõi toàn bộ quá trình biên tập và xuất bản. Thông thường, BTV chính cùng với Tổng biên tập xây dựng các chính sách và thủ tục của tạp chí được nhập ở phần {help_topic key="journal.managementPages.setup" text="Thiết lập tạp chí"}. Trong quá trình biên tập, BTV chính giao bài nộp cho các BTV chuyên mục để theo dõi quá trình Phản biện và Biên tập bài nộp. BTV chính cũng để mắt đến quá trình của bài nộp và trợ giúp khi gặp khó khăn. Khi phản biện hoàn thành, BTV chính thường là người theo dõi bài nộp qua quá trình {help_topic key="editorial.sectionEditorsRole.editing" text="Biên tập"} (bao gồm biên tập bản thảo, trình bày, soát lỗi) mặc dù ở một số tạp chí công việc này là trách nhiệm của BTV chuyên mục phụ trách quá trình {help_topic key="editorial.sectionEditorsRole.review" text="Phản biện"}. BTV chính cũng xếp các bài nộp để xuất, sắp xếp Mục lục và xuất bản số tạp chí trong {help_topic key="publishing.index" text="Quá trình xuất bản"}. BTV chính có thể khôi phục lại bài viết đã được lưu kho về danh sách đang phản biện hoặc biên tập như được nêu trong mục {help_topic key="editorial.editorsRole.submissions.archives" text="Bài cũ"}.</p>]]>
+	</section>
+</topic>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * User Interface Index 
+  *
+  * $Id$
+  -->
+
+<topic id="user/topic/000000" locale="vi_VN" title="Website Tạp chí" toc="index/toc/000000" subtoc="user/toc/000000" key="user.index">
+	<section>
+		<![CDATA[<p>Tạp chí này cung cấp cho người dùng một số tính năng được thiết kế nhằm giúp họ đọc tài liệu nghiên cứu dễ dàng và hiệu quả hơn. Những tính năng này được sử dụng phổ biến trên các tạp chí trực tuyến và làm quen với những công cụ đó trên tạp chí này sẽ giúp khai thác tối đa giá trị của các tạp chí trực tuyến khác. Những tính năng đó thường dành cho tất cả bạn đọc.</p>]]>	
+	</section>
+</topic>

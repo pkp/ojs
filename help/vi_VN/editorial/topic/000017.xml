@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000017.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Editor's Role Submissions - In Editing 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000017" locale="vi_VN" title="Đang biên tập" toc="editorial/toc/000002" key="editorial.editorsRole.submissions.inEditing">
+	<section>
+		<![CDATA[<p>Các bài nộp trong danh sách này sẽ trải qua quá trình biên tập bản thảo, trình bày và soát lỗi. Khi một BTV chuyên mục hoặc BTV chính nhấp chuột vào tiêu đề của bài nộp trong danh sách Đang biên tập, họ sẽ được dẫn tới trang Biên tập của bài nộp.</p>]]>	
+	</section>
+</topic>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000037.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Copyeditor's Role - Submissions
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000037" locale="vi_VN" title="Bài nộp" toc="editorial/toc/000012" key="editorial.copyeditorsRole.submissions">
+	<section>
+		<![CDATA[<p>Khi BTV bản thảo đăng nhập và nhấp chuột vào liên kết BTV bản thảo ở trang Người dùng sẽ được dẫn tới danh mục Bài nộp. Danh mục này liệt kê những tác phẩm mà BTV này được yêu cầu biên tập bản thảo. BTV bản thảo cũng truy cập được những bài viết mà họ đã từng biên tập bản thảo trước đây. BTV bản thảo nhấp chuột vào tiêu đề của bài viết để được dẫn tới trang Biên tập bản thảo dành cho bài viết đó.</p>]]>	
+	</section>
+</topic>

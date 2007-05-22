@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000032.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author's Role Index - Submissions
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000032" locale="vi_VN" title="Bài nộp" toc="editorial/toc/000009" key="editorial.authorsRole.submissions">
+	<section>
+		<![CDATA[<p>Bằng cách đăng nhập vào tạp chí và lựa chọn vai trò Tác giả trên trang chủ dành cho Người dùng (vì Tác giả cũng có thể có các vai trò khác, ví dụ Người phản biện), Tác giả sẽ được dẫn tới trang danh sách Bài nộp. Trang này liệt kê những bài nộp hiện đang trong quá trình biên tập. Tác giả cũng có thể truy cập được những bài trước đây đã từng nộp cho tạp chí.</p>]]>	
+	</section>
+</topic>

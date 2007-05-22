@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000013.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Users - Import Users
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000013" locale="vi_VN" title="Nhập người dùng" toc="journal/toc/000002" key="journal.users.importUsers">
+	<section>
+		<![CDATA[<p>OJS cung cấp công cụ đơn giản để nhập dữ liệu người dùng từ định dạng XML vốn dễ dàng được tạo ra từ các cơ sở dữ liệu người dùng khác. Tham khảo tài liệu hướng dẫn đi kèm với phần mềm OJS để hiểu thêm về định dạng XML và XML DTD cho dữ liệu người dùng.</p>]]>	
+	</section>
+</topic>

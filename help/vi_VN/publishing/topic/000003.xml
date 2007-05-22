@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000003.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Publishing Process - Table of Contents
+  *
+  * $Id$
+  -->
+
+<topic id="publishing/topic/000003" locale="vi_VN" title="Mục lục" toc="publishing/toc/000000" key="publishing.tableOfContents">
+	<section>
+		<![CDATA[<p>Khi một bài nộp được xếp để xuất bản, nó sẽ xuất hiện trong Mục lục của số đã được xếp dưới tên Chuyên mục đã được xếp. Nếu không có bài nộp nào trong một Chuyên mục, tên chuyên mục đó sẽ không xuất hiện trên Mục lục. BTV chính có thể sắp xếp lại thứ thự chuyên mục và thứ tự bài nộp trong từng chuyên mục.</p>]]>	
+	</section>
+</topic>

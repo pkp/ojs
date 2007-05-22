@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.importexport.sample.displayName">Sample Import/Export Plugin</message>
+	<message key="plugins.importexport.sample.description">This plugin provides an implementation example to be used when developing import/export plugins. It's not very useful in and of itself.</message>
+
+	<message key="plugins.importexport.sample.selectIssue.short">Select Issue</message>
+	<message key="plugins.importexport.sample.selectIssue.long">Select an Issue to export.</message>
+</locale>

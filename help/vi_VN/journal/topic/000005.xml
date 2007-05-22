@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000005.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Sections 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000005" locale="vi_VN" title="Các chuyên mục tạp chí" toc="journal/toc/000001" key="journal.managementPages.sections">
+	<section>
+		<![CDATA[<p>Tổng biên tập lập ra các chuyên mục khác nhau trong tạp chí ở phần Các chuyên mục tạp chí, trong trang Quản lý Tạp chí. Một tạp chí thông thường có những chuyên mục như Chuyên đề, Điểm sách, Sổ tay nghiên cứu, Lời tòa soạn, Bình luận,... Khi thiết lập một Chuyên mục cho tạp chí, Tổng biên tập có thể chỉ định BTV chuyên mục để theo dõi toàn bộ quá trình biên tập những bài viết nộp cho Chuyên mục đó. (BTV chính giao bài nộp trong danh sách {help_topic key="editorial.editorsRole.submissions.unassigned" text="Bài chưa giao"} cho một trong những BTV chuyên mục trong quá trình biên tập). Chuyên mục có thể được trình bày ở các định dạng hoặc bố cục khác nhau trong tạp chí. Mục lục được tạo ra cho mỗi số sẽ chia thành các Chuyên mục đã được tạo, nhưng Chuyên mục nào không có nội dung trong một số nhất định, Chuyên mục đó sẽ không xuất hiện trong Mục lục.</p><p><i>Xây dựng Chính sách chuyên mục</i>. Khi thiết lập một Chuyên mục, Tổng biên tập cần nhập một Thông báo về Chính sách đối với Chuyên mục đó, mà bạn đọc và độc giả có thể đọc được trong mục Chính sách Chuyên mục ở trang Giới thiệu Tạp chí. Thông tin này nên mô tả phạm vi của Chuyên mục và loại bài viết cần cho Chuyên mục. Thông tin đó cũng cần nói rõ các bài nộp cho Chuyên mục có được phản biện chuyên gia và lập chỉ mục không, liệu Chuyên mục có mở đối với mọi bài nộp hay chỉ dành cho bài viết đặt hàng (hoặc chỉ dành cho BTV), độ dài của tối đa của bài viết, v.v...</p><p><i>Lập chỉ mục cho nội dung của một chuyên mục</i>. Các bài trong một chuyên mục cần được lập chỉ mục nếu nó đóng góp và vốn tri thức (không phải trong trường hợp, ví dụ, một chuyên mục dành cho thông báo và đăng tìm việc). Chức năng lập chỉ mục sẽ cho phép tác giả nhập dữ liệu mô tả phù hợp cho bài viết mà họ nộp. Dữ liệu mô tả sẽ được cung cấp cho các công cụ tìm kiếm tài liệu nghiên cứu hợp chuẩn Open Archives Initiative Metadata Harvesting Protocol và các dịch vụ lập chỉ mục khác khi bài viết đã được xuất bản. Tác giả các bài viết trong các chuyên mục được lập chỉ mục cũng sẽ được đưa vào Danh sách Tác giả trong trang Tìm kiếm và sẽ đi kèm với Công cụ đọc mà Tổng biên tập chọn cho tạp chí này.</p><p><i>Hiệu lực và vô hiệu tóm tắt</i>. Một số chuyên mục, chẳng hạn Điểm sách, sẽ không cần đến tóm tắt; lựa chọn này sẽ cho phép Tổng biên tập vô hiệu tóm tắt cho chuyên mục đó. Khi tóm tắt bị vô hiệu, nó sẽ không xuất hiện hoặc được yêu cầu.</p><p><i>Cấu hình định danh bài viết</i>. Khi hiển thị dữ liệu mô tả cho người xem và các hệ thống bên ngoài  (v.d. thông qua gặt hái siêu dữ liệu OAI), kiểu bài bài viết phải được xác định. Ví dụ, một bài viết có thể là bài viết được phản biện chuyên gia, bài viết không phải biện, bài đặt hàng,...</p><p><i>Giới hạn nội dung của một Chuyên mục</i>. Ô Giới hạn cần được chọn đối với các Chuyên mục của Tạp chí (chẳng hạn Lời tòa soạn, hoặc Phỏng vấn) không mở để tác giả nộp bài tự do. Những bài nộp thuộc diện hạn chế phải do BTV hoặc người được mời gửi bài. Tác giả chỉ có thể nộp bài cho một chuyên mục như vậy nếu đồng thời là BTV chính hoặc BTV chuyên mục.</p><p><i>Giấu tiêu đề chuyên mục khỏi Mục lục</i>. Có thể kết hợp các bài viết vào một chuyên mục và/hoặc tổ chức các bài viết đã xuất bản vào một chuyên mục nhưng giấ tên của chuyên mục khi hiển thị cho độc giả.</p>]]>
+	</section>
+</topic>

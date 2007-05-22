@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../toc.dtd">
+
+<!--
+  * 000012.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Editorial Process - Copyeditor's Role
+  *
+  * $Id$
+  -->
+
+<toc id="editorial/toc/000012" locale="vi_VN" title="Vai trò của BTV bản thảo" parent_topic="editorial/topic/000012">
+	<topic id="editorial/topic/000037" title="Bài nộp" />
+	<topic id="editorial/topic/000038" title="Biên tập bản thảo" />
+
+	<breadcrumb url="editorial/topic/000000" title="Quá trình biên tập" />
+	<breadcrumb url="editorial/topic/000012" title="Vai trò của BTV bản thảo" />
+</toc>

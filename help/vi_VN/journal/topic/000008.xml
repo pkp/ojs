@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000008.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Stats & Reports
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000008" locale="vi_VN" title="Thống kê &amp; Báo cáo" toc="journal/toc/000001" key="journal.managementPages.statsAndReports">
+	<section>
+		<![CDATA[<p>Thông kê &amp; Báo cáo cung cấp cho Tổng biên tập khả năng trích xuất thông tin từ quá trình sử dụng tạp chí dưới hai dạng. Thứ nhất, dưới mục Thống kế, số liệu thống kê theo nănm cung cấp dữ liệu tổng quát về các bài nộp, công việc biên tập và người dùng. Thứ hai, Tổng biên tập có thể lập một trong nhiều loại báo cáo trong một khoảng thời gian cụ thể.</p><p>Có sẵn bốn loại báo cáo:<ul>
+			<li><strong>Báo cáo Tạp chí</strong>: Báo cáo về tất cả bài nộp cho tạp chí trong một khoảng thời gian nhất định.</li>
+			<li><strong>Báo cáo BTV</strong>: Báo cáo về bài nộp, nhóm theo BTV phụ trách.</li>
+			<li><strong>Báo cáo phản biện</strong>: Báo cáo về bài nộp, nhóm theo Người phản biện.</li>
+			<li><strong>Báo cáo chuyên mục</strong>: Báo cáo về bài nộp, nhóm theo Chuyên mục.</li>
+		</ul>Những báo cáo này được lập ra dưới định dạng Phân cách Giá trị Bằng chấm phẩy (CSV) và nên mở bằng phần mềm bảng tính.]]>
+	</section>
+</topic>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000001.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * User Interface - Home
+  *
+  * $Id$
+  -->
+
+<topic id="user/topic/000001" locale="vi_VN" title="Trang nhất" toc="user/toc/000000" key="user.home">
+	<section>
+		<![CDATA[<p>Trang nhất của tạp chí, gắn liền với menu Trang nhất của thanh điều khiển trên đầu tất cả các trang của tạp chí, là nơi Tổng biên tập có thể sử dụng để trình bày Mục lục cho số mới ra hoặc trang bìa cho số đó. Trang nhất cũng có thể là nơi đăng thông báo của tạp chí, tin tức về các sự kiện sắp tới liên quan tới tạp chí và có thể là cơ quan bảo trợ cho tạp chí. Bản đọc chỉ cần nhấp chuột vào nút Số mới ra trên thanh điều khiển của Trang nhất và tất cả các trang khác để được đưa tới trang bìa hoặc Mục lục của số mới nhất.</p>]]>	
+	</section>
+</topic>

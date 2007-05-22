@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../toc.dtd">
+
+<!--
+  * 000003.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Journal Management - Roles. 
+  *
+  * $Id$
+  -->
+
+<toc id="journal/toc/000003" locale="vi_VN" title="Vai trò" parent_topic="journal/topic/000003">
+	<topic id="journal/topic/000015" title="Tổng biên tập" />
+	<topic id="journal/topic/000016" title="BTV chính" />
+	<topic id="journal/topic/000017" title="BTV chuyên mục" />
+	<topic id="journal/topic/000019" title="BTV bản thảo" />
+	<topic id="journal/topic/000018" title="BTV trình bày" />
+	<topic id="journal/topic/000020" title="Người soát lỗi" />
+	<topic id="journal/topic/000021" title="Người phản biện" />
+	<topic id="journal/topic/000022" title="Tác giả" />
+	<topic id="journal/topic/000023" title="Bạn đọc" />
+	<topic id="journal/topic/000032" title="Quản lý phát hành" />
+
+	<breadcrumb url="journal/topic/000000" title="Quản lý Tạp chí" />
+	<breadcrumb url="journal/topic/000003" title="Vai trò" />
+</toc>

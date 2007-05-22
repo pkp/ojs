@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000033.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Merge Users
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000033" locale="vi_VN" title="Hợp nhất người dùng" toc="journal/toc/000002" key="journal.managementPages.mergeUsers">
+	<section>
+		<![CDATA[<p>Chức năng hợp nhất người dùng, có sẵn trong ở mục Người dùng trong phần Quản trị Tạp chí, cho phép Tổng biên tập hợp nhất hai tài khoản người dùng thành một, chuyển toàn bộ nhiệm vụ biên tập, bài nộp và các biểu ghi khác từ một tài khoản sang một tài khoản khác và xóa tài khoản thứ nhất khỏi hệ thống.</p>
+		<p>Những mục sau sẽ được chuyển:
+			<ul>
+				<li>Tư cách tác giả bài viết</li>
+				<li>Các lời bình đối với bài viết</li>
+				<li>Các ghi chú về bài viết</li>
+				<li>Những lần biên tập được giao và các quyết định biên tập</li>
+				<li>Những lần phản biện được giao</li>
+				<li>Những lần trình bày được giao</li>
+				<li>Những lần soát lỗi được giao</li>
+				<li>Các mục nhật ký và email liên quan đến  bài viết</li>
+				<li>Các khóa truy cập của Người phản biện</li>
+			</ul>
+		Những mục sau <strong>không</strong> được chuyển:
+			<ul>
+				<li>Lượt truy cập</li>
+				<li>Đơn đặt tạp chí</li>
+				<li>Trạng thái thông báo (trạng thái báo người dùng có đăng ký nhận tin tức vào thông báo mới từ tòa soạn hay không)</li>
+				<li>Tư cách thành viên Ban Biên tập</li>
+				<li>Trạng thái BTV chuyên mục đối với các chuyên mục</li>
+				<li>Các vai trò</li>
+				<li>Thông tin hồ sơ cá nhân (Họ, Tên, v.v..)</li>
+			</ul>
+		</p>
+		<p>Cần lưu ý khi sử dụng tính năng này vì nó không thể khôi phục lại trạng thái ban đầu và có chuyển các biểu ghi từ người dùng này sang người dùng khác.</p>]]>
+	</section>
+</topic>

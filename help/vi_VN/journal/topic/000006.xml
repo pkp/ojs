@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000006.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Prepared Emails 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000006" locale="vi_VN" title="Email tạo sẵn" toc="journal/toc/000001" key="journal.managementPages.emails">
+	<section>
+		<![CDATA[<p>Tạp chí sử dụng nhiều email tạo sẵn khác nhau để điều hành các quá trình Biên tập và Xuất bản. Các email này đã được đặt địa chỉ người nhận phù hợp từ trước (ví dụ, BTV chuyên mục thông báo cho BTV bản thảo rằng việc biên tập bản thảo một bài viết đã sẵn sàng). Tổng biên tập có thể sửa các phiên bản mặc định của những email này (qua mục Email tạo sẵn trên trang Quản lý tạp chí). Đồng thời, có thể sửa email trước khi gửi chúng đi. Hệ thống tự động thêm vào những thông tin cụ thể vào email trước khi hiển thị cho người dùng để gửi đi (ví dụ, tiêu đề và tóm tắt bài nộp đang nói đến hoặc ngày hết hạn phản biện). Email còn hướng dẫn cho người nhận các để truy cập và các trang web thích hợp, nhờ đó họ có thể thực hiện tác vụ được yêu cầu.</p>]]>	
+	</section>
+	
+	<section title="Gửi email">
+		<![CDATA[<p>Phần mềm OJS sử dụng email để điều phối các chức năng trong quá trình biên tập và xuất bản. Tất cả các email tạo sẵn đều có bản mặc định, hiện ra mỗi khi biểu tượng email được nhấp chuột. Tổng biên tập có thể sửa các email mặc định bất cứ lúc nào. Ngoài ra, người gửi email có thể sửa trước khi gửi đi. Khi biểu tượng email được nhấp chuột, địa chỉ người nhận sẽ được tự động điền vào, cùng với các thông liên liên quan cần thiết cho quá trình biên tập và xuất bản. Người gửi có thể thêm bình luận hoặc hướng dẫn chiết cho người dử dụng. Người gửi có thể sửa địa chỉ email người nhận hoặc thêm người nhận mới, trừ những trường hợp không liên quan tới nhận mật khẩu vì lý do an ninh. Xin lưu ý việc sửa tên của địa chỉ người nhận không làm thay đổi địa chỉ email trong hồ sơ của họ. Chỉ có Tổng biên tập mới có quyền thay đổi hồ sơ của người dùng.</p>]]>
+	</section>
+</topic>

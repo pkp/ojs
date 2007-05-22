@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000013.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Layout Editor's Role Index 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000013" locale="vi_VN" title="Vai trò của BTV trình bày" toc="editorial/toc/000000" subtoc="editorial/toc/000013" key="editorial.layoutEditorsRole">
+	<section>
+		<![CDATA[<p>BTV trình bày nhận email từ BTV chuyên mục hoặc BTV bản thảo đề nghị trình bày một bài nộp đã sửa xong bản thảo. BTV trình bày không thể đảm đương được công việc chỉ cần email báo lại cho BTV chuyên mục.</p>]]>	
+	</section>
+</topic>

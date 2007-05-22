@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000030.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Reviewer's Role Index - Submissions 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000030" locale="vi_VN" title="Bài nộp" toc="editorial/toc/000008" key="editorial.reviewersRole.submissions">
+	<section>
+		<![CDATA[<p>Khi đăng nhập vào tạp chí, Người phản biện sẽ tới trang chủ của Người dùng. Bằng cách nhấp chuột vào vai trò Người phản biện (vì Người phản biện có thể được bổ nhiệm các vai trò khác, ví dụ Tác giả), Người phản biện sẽ được đưa tới trang Bài nộp. Trang này liệt kê những bài nộp và Người phản biện đã từng được mời phản biện hoặc đang trong quá trình phản biện. Danh sách bài nộp cũng cho biết phản biện đang ở vòng nào, vì một số phản biện có thể đã chuyển sang vòng hai sau khi BTV chuyên mục quyết định rằng bài viết phải được nộp lại để phản biện. Trang này cũng cho phép truy cập vào những phản biện trước đây mà Người phản biện đã hoàn thành.</p>]]>	
+	</section>
+</topic>

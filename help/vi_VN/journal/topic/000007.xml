@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000007.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Languages 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000007" locale="vi_VN" title="Ngôn ngữ" toc="journal/toc/000001" key="journal.managementPages.languages">
+	<section>
+		<![CDATA[<p>Hệ thống này có thể hỗ trợ các tạp chí đa ngôn ngữ và những tạp chí ở ngôn ngữ không phải là Tiếng Anh. Những ngôn ngữ có sẵn trong hệ thống được đặt trong mục Ngôn ngữ ở trang Quản lý Tạp chí, và có thể được lựa chọn để dùng với website tạp chí.</p>]]>	
+	</section>
+</topic>

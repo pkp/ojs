@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000001.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author Submission Process - Author Guidelines 
+  *
+  * $Id$
+  -->
+
+<topic id="submission/topic/000001" locale="vi_VN" title="Hướng dẫn Tác giả" toc="submission/toc/000000" key="submission.authorGuidelines">
+	<section>
+		<![CDATA[<p>Tạp chí cung cấp Hướng dẫn Tác giả trong phần Giới thiệu Tạp chí, trong đó đề cập các tiêu chuẩn về thư mục và định dạng được sử dụng trên tạp chí. Về những khía cạnh không được đề cập trong những ví dụ có trong Hướng dẫn, Tác giả có thể duyệt qua những bài viết đã xuất bản trên tạp chí để xem tạp chí xử lý những vấn đề đó như thế nào.</p>]]>	
+	</section>
+</topic>

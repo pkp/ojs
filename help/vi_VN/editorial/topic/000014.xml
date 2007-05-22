@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000014.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Proofreader's Role Index 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000014" locale="vi_VN" title="Vai trò của Người soát lỗi" toc="editorial/toc/000000" subtoc="editorial/toc/000014" key="editorial.proofreadersRole">
+	<section>
+		<![CDATA[<p>Người soát lỗi nhận email từ Tác giả hoặc BTV chuyên mục đề nghị soát lỗi lần cuối một bài nộp ở dạng bản bông sẵn sàng để xuất bản. Người soát lỗi không thể đảm đương được công việc chỉ cần email báo lại cho BTV chyên mục.</p>]]>	
+	</section>
+</topic>

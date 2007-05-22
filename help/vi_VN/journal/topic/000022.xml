@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000022.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Author 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000022" locale="vi_VN" title="Tác giả" toc="journal/toc/000003" key="journal.roles.author">
+	<section>
+		<![CDATA[<p>Tác giả có thể đăng ký và gửi bài viết của mình cho trực tiếp trên website của tạp chí. Tác giả sẽ được đề nghị tải bài viết lên và cung cấp dữ liệu mô tả hoặc thông tin chỉ mục cho bài viết. (Dữ liệu mô tả giúp cho việc tìm kiếm dễ dàng hơn trong tạp chí và trên mạng Internet.) Tác giả có thể tải lên các File phụ trợ, dưới dạng các tập hợp dữ liệu, công cụ nghiên cúu hoặc tài liệu nguồn để minh họa thêm cho bài viết, đồng thời đóng góp vào một văn hóa nghiên cứu, học thuật mở và lành mạnh. Tác giả cũng có thể theo dõi bài viết của mình trong tiến trình biên tập &mdash; đồng thời tham gia vào việc sửa bản thảo và soát lỗi những bài nộp của mình đã được chấp nhận xuất bản  &mdash; bằng cách đăng nhập vào website của tạp chí.</p>]]>	
+	</section>
+</topic>

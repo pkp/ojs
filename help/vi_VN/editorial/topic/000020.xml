@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000020.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Editor's Role Submission Summary - Submission Metadata
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000020" locale="vi_VN" title="Dữ liệu mô tả bài nộp" toc="editorial/toc/000003" key="editorial.editorsRole.submissionSummary.submissionMetadata">
+	<section>
+		<![CDATA[<p>Dữ liệu mô tả bài nộp dùng để lập chỉ mục cho bài nộp trên ấn phẩm do Tác giả nhập vào và có thể được BTV chuyên mục hay chính Tác giả và BTV bản thảo sửa lại.</p>]]>	
+	</section>
+</topic>

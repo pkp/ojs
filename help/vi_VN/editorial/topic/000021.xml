@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000021.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Section Editor's Role Index - In Review
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000021" locale="vi_VN" title="Đang phản biện" toc="editorial/toc/000005" key="editorial.sectionEditorsRole.submissions.inReview">
+	<section>
+		<![CDATA[<p>Những bài viết được liệt kê trong danh sách Đang phản biện sẽ trải qua quá trình phản biện mà kết quả sẽ là quyết định của BTV chuyên mục chấp nhận hay từ chối bài nộp. Mức độ của quá trình phản biện, bao gồm cả những chuyên mục nào mà bài viết cần phản biện chuyên gia và bao nhiêu người tham gia phản biện, được quy định ở phần Chính sách Phản biện của tạp chí do các BTV chính và Tổng biên tập xây dựng. Khi một BTV chuyên mục hoặc một BTV chính nhấp chuột vào tiêu đề bài nộp trong danh sách Đang phản biện sẽ được dẫn đến trang Phản biện, nơi phản biện chuyên gia được tiến hành và quyết định biên tập được đưa ra đối với bài viết. Nếu BTV chuyên mục chấp nhận bài nộp để xuất bản, nó sẽ được chuyển sang danh sách Đang biên tập. Nếu bài nộp bị từ chối, nó sẽ được chuyển sang kho Bài cũ.</p>]]>	
+	</section>
+</topic>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000039.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Layout Editor's Role - Submissions
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000039" locale="vi_VN" title="Bài nộp" toc="editorial/toc/000013" key="editorial.layoutEditorsRole.submissions">
+	<section>
+		<![CDATA[<p>Khi BTV trình bày đăng nhập, nhấp chuột vào đường dẫn BTV trình bày trên trang Người dùng sẽ được dẫn tới danh sách bài nộp đang xử lý. Danh sách này liệt kê những tác phẩm đang được chờ để trình bày. BTV trình bày cũng sẽ truy cập được những bài nộp họ đã trình bày trước đây. BTV trình bày nhấp chuột vào tiêu đề của bài nộp để được dẫn tới Trang trình bày cho bài nộp đó.</p>]]>	
+	</section>
+</topic>

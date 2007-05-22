@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000038.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Copyeditor's Role - Copyediting
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000038" locale="vi_VN" title="Biên tập bản thảo" toc="editorial/toc/000012" key="editorial.copyeditorsRole.copyediting">
+	<section>
+		<![CDATA[<p>Trên trang Biên tập bản thảo của bài nộp, quá trình biên tập bản thảo được chia làm 3 bước. Biên tập bản thảo được làm trực tiếp trên file bài nộp, với những gợi ý nhằm cải tiến mạch ngôn ngữ và truyền đạt ý nghĩa cũng những thay đổi nhằm đảm bảo bài viết tuân thủ với phong cách và định dạng của tạp chí. File sau đó sẽ được ghi lại vào máy tính của BTV bản thảo hoặc Tác giả và được tải lên ở một bước thích hợp. Điều này giúp cho file bản thảo đã biên tập sẵn sàng cho bước tiếp theo, hoặc cho giai đoạn Trình bày khi đã ở Bước 3.</p><p><i>Bước 1</i><br />Trong bước đầu tiên này, BTV bản thảo nhấp chuột vào tên file để tải file về và mở ra. Sau khi mở bài nộp ở Bước 1, BTV bản thảo sẽ biên tập bài viết theo những tiêu chuẩn về bản thảo đã được thống nhất. (Những tiêu chuẩn này được Tổng Biên tập xây dựng trong quá trình Thiết lập tạp chí). BTV bản thảo ghi lại tất cả những khuyến nghị thay đổi hoặc sửa lỗi, cùng với các Thắc mắc với Tác giả (v.d., thiếu số trang) và/hoặc Truy vấn BTV (v.d., các vấn đề về phong cách và chuẩn của tạp chí). Khi kết thúc phần sửa bản thảo ban đầu, BTV bản thảo ghi lại file trên máy của mình và tải lên để Tác giả sửa bản thảo ở bước tiếp theo.</p><p><i>Hoàn tất Bước 1</i>. Khi file bản thảo đã biên tập được tải lên và dữ liệu mô tả đã được xem lại, BTV bản thảo nhấp chuột vào biểu tượng email dưới mục Kết thúc Bước 1. Thao tác này sẽ gửi một email tới Tác giả và BTV chính thông báo rằng Bước 1 đã hoàn tất. BTV bản thảo cần lưu ý trong email nếu có những Truy vấn BTV mà BTV chuyên mục cần quan tâm.</p><p><i>Bước 2</i><br />Tác giả tải xuống và mở bản thảo đã biên tập ở Bước 1 và duyệt lại biên tập bản thảo, phản hồi bất kỳ Thắc mắc với Tác giả nào trực tiếp trên file. Tác giả ghi lại và tải file lên trong Bước 2 để sẵn sàng cho BTV bản thảo biên tập lần cuối cùng. BTV chính sẽ phản hồi bất kỳ Thắc mắc với BTV nào qua email để đảm bảo rằng Tác giả và BTV chính không tải file chồng lên nhau. Tác giả gửi một email thông báo hoàn thành cho BTV bản thảo và BTV chính, khởi động bước tiếp theo, bước thứ 3.</p><p><i>Bước 3</i><br />BTV bản thảo tải file và mở file bản thảo đã biên tập ở Bước 2 và tạo ra một phiên bản sạch (loại bỏ những đánh dấu trong quá trình biên tập bản thảo) dựa trên phản hồi của Tác giả và BTV chính để chuẩn bị sẵn sàng cho BTV trình bày chuyển thành phiên bản dùng để xuất bản. BTV bản thảo tải bản sạch lên ở Bước 3, trở thành Bản để trình bày trên trang Biên tập. BTV bản thảo sau đó sử dụng biểu tượng email dưới mục Hoàn thành để báo cho BTV trình bày và BTV chuyên mục rằng quá trình biên tập bản thảo đã hoàn tất.</p>]]>	
+	</section>
+</topic>

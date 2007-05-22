@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000029.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Groups
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000029" locale="vi_VN" title="Ban biên tập" toc="journal/toc/000001" key="journal.managementPages.groups">
+	<section>
+		<![CDATA[<p>Có hai phương pháp mà Tổng biên tập có thể sử dụng để lập Ban biên tập cho tạp chí, mà danh sách sẽ xuất hiện ở trang Ban biên tập trong phần Giới thiệu Tạp chí: bổ nhiệm vai trò biên tập và bổ nhiệm chức danh riêng của tạp chí.</p>]]>
+	</section>
+	<section title="Lập Ban biên tập bằng bổ nhiệm vai trò biên tập">
+		<![CDATA[<p>Khi phương pháp này được lựa chọn, thông tin về Ban biên tập trên trang Giới thiệu Tạp chí sẽ được tự động tạo ra từ các vai trò biên tập đã được định nghĩa trên trang Vai trò, phần Quản lý Tạp chí. Những người dùng là BTV chính, BTV chuyên mục, BTV trình bày, TV bản thảo và Người soát lỗi sẽ được liệt kê.</p>]]>
+	</section>
+	<section title="Lập Ban biên tập bằng bổ nhiệm chức danh riêng của tạp chí">
+		<![CDATA[<p>Nếu Tổng biên tập muốn trực tiếp cung cấp thông tin trên về Ban biên tập trên trang Giới thiệu, Tổng biên tập có thể kích hoạt lựa chọn này từ trang Ban Biên tập trong phần Quản lý Tạp chí. Khi lựa chọn này có hiệu lực, có thể tạo ra nhiều chức danh khác nhau trong Ban Biên tập và sẽ được sử dụng để cung cấp thông tin công khai về Ban biên tập.</p>]]>
+	</section>
+</topic>

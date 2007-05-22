@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000019.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Editor's Role Submission Summary - Submission Management
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000019" locale="vi_VN" title="Quản lý bài nộp" toc="editorial/toc/000003" key="editorial.editorsRole.submissionSummary.submissionManagement">
+	<section>
+		<![CDATA[<p>Trước khi giao cho một BTV chuyên mục quản lý việc Phản biện một bài nộp, BTV chính nên nhấp chuột vào tên file của bài nộp để mở file và đảm bảo rằng bài viết có vẻ phù hợp để tạp chí phản biện và nó được xếp vào đúng Chuyên mục của tạp chí.</p><p><i>Bài nộp không phù hợp</i>. Nếu bài nộp rõ ràng không phù hợp với tạp chí, BTV chính có thể gửi email cho tác giả và thông báo rằng bài viết sẽ không được gửi đi phản biện. BTV chính sau đó có thể đưa bài nộp vào kho bài cũ. BTV chuyên mục được giao cũng có quyền ra quyết định này.</p><p><i>Giao bài viết cho BTV chuyên mục</i>. BTV chính chọn một BTV chuyên mục từ danh sách tất cả các BTV chuyên mục phụ trách Chuyên mục (Chuyên đề, Điểm sách, v.v...) mà bài nộp được gửi đến. Thao tác này sẽ gửi một email tự động đến BTV chuyên mục thông báo về việc giao bài.</p>]]>	
+	</section>
+</topic>

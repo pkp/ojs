@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000021.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Reviewer 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000021" locale="vi_VN" title="Người phản biện" toc="journal/toc/000003" key="journal.roles.reviewer">
+	<section>
+		<![CDATA[<p>Người phản biện được BTV chuyên mục lựa chọn để phản biện một bài nộp. Người phản biện được đề nghị gửi bài phản biện cho tới website của tạp chí (tuy nhiên một số tạp chí có thể để người phản biện gửi bài qua email) và có thể tải lên các file đính kèm để BTV và Tác giả sử dụng. BTV chuyên mục có thể đánh giá Người phản biện tùy theo chính sách của tạp chí này.</p>]]>	
+	</section>
+</topic>

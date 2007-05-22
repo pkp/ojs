@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000035.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author's Role Editing - Copyediting 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000035" locale="vi_VN" title="Biên tập bản thảo" toc="editorial/toc/000011" key="editorial.authorsRole.editing.copyediting">
+	<section>
+		<![CDATA[<p>BTV bản thảo ban đầu biên tập bài nộp bằng cách làm việc trực tiếp trên file bài nộp, đưa ra những đề nghị nhằm cải thiện mạnh của ngôn ngữ và sự chuyển tải ý nghĩa, đồng thời đưa ra những thay đổi nhằm đảm bảo rằng bài nộp tuân theo phong cách và định dạng của tạp chí (đặc biệt là định dạng thư mục). BTV bản thảo tải liên bản đã biên tập ở Bước 1 và gửi email cho Tác giả và BTV chuyên mục thông báo rằng bản thảo sửa sơ bộ đã hoàn tất. Tác giả có thể xem được phiên bản ở Bước 1 của Biên tập bản thảo bằng cách nhấp chuột vào tên file, ghi file xuống máy tính và mở ra xem.</p><p><i>Tác giả duyệt lại bản thảo sửa</i>. Tác giả xem lại tất cả những đề xuất thay đổi của BTV bản thảo và có thể đề xuất thêm những khuyến nghị hoặc thay đổi dựa theo Hướng dẫn Biên tập bản thảo mà tạp chí này áp dụng. (Đây là cơ hội cuối cùng để có những thay đổi như vậy, vì ở bước Soát lỗi, chỉ còn lỗi đánh máy và định dạng được sửa). Tác giả cũng có thể phản hồi bất kỳ Thắc mắc đối với Tác giả từ BTV bản thảo(v.d., thiếu số trang, v.v..). Khi hoàn thành, Tác giả ghi file vào máy tính rồi tải lên ở Bước 2 của Biên tập bản thảo để BTV bản thảo xem.</p><p><i>Duyệt lại dữ liệu mô tả</i>. Tác giả cũng cần duyệt lại Dữ liệu mô tả bài nộp để kiểm tra lỗi hoặc thiếu sót. Dữ liệu mô tả dùng để xếp chỉ mục cho bài viết trên khi xuất bản và sẽ giúp cho bạn đọc dễ tìm ra bài viết hơn, tùy theo cách thức nó được lập chỉ mục. Cuối cùng, Tác giả nhấp chuột vào biểu tượng email ở dưới mục Hoàn tất để thông báo cho BTV bản thảo và BTV chuyên mục biết bước này đã hoàn tất.</p>]]>	
+	</section>
+</topic>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000008.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Reviewer's Role Index 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000008" locale="vi_VN" title="Vai trò của Người phản biện" toc="editorial/toc/000000" subtoc="editorial/toc/000008" key="editorial.reviewersRole">
+	<section>
+		<![CDATA[<p>Người phản biện được mời qua email để phản biện một bài nộp, bao gồm tên bài và tóm tắt cùng với địa chỉ của tạp chí và bí danh, mật khẩu để Người phản biện đang nhập vào tạp chí. Tạp chí có thể chọn cách gửi bài nộp như là file đính kèm cùng với thư mời phản biện. Trong trường hợp này, Người phản biện sẽ phản hồi bằng email. Phương pháp được mô tả ở đây là phương pháp chính để phản biện (và đảm bảo lưu giữ đầy đủ hồ sơ của quá trình), mà theo đó Người phản biện tiến hành phản biện trên website của tạp chí.</p>]]>	
+	</section>
+</topic>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000009.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Reading Tools
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000009" locale="vi_VN" title="Công cụ đọc" toc="journal/toc/000001" subtoc="journal/toc/000005" key="journal.managementPages.readingTools">
+	<section>
+		<![CDATA[<p>Tổng biên tập có thể lựa chọn một tập hợp Công cụ đọc sẽ xuất hiện trong một khung ở bên phải của bài tất cả bài viết trong các chuyên mục được lập chỉ mục (v.d., chuyên mục Chuyên đề nhưng không trong Thông báo Hội nghị). Công cụ đọc được thiết kế và hỗ trợ bạn đọc mới và bạn đọc có kinh nghiệm bằng việc cung cấp một ngữ cảnh hàm nghĩa về các tài liệu liên quan từ nhiều nguồn tin truy cập tự do khác nhau. Các công cụ này sử dụng từ khóa mà tác giả cung cấp để tự động tìm kiếm trong một cơ sở dữ liệu try cập tự do những bài viết liên quan và hiển thị kết quả trong một cửa sổ mới. Bạn đọc có thể lựa chọn công cụ và lựa chọn cơ sở dữ liệu trong mỗi công cụ cũng như được biết thông tin về cơ sở dữ liệu đó.</p><p>Ở phần Thiết lập, Tổng biên tập có thể lựa chọn những công cụ tổng hợp, chẳng hạn "Thông tin thư mục" và "Thông tin chỉ mục" cùng với một tập hợp các nguồn tin chuyên về một lĩnh vực hoặc ngành nghiên cứu (v.d., Nhân văn, Giáo dục, Vật lý,...). Tổng biên tập cũng có thể sửa hoặc xóa danh sách các nguồn tin hiện có và thêm mới. Xem thêm {help_topic key="user.readingTools" text="Các công cụ đọc"} ở mục Website Tạp chí.</p>]]>
+	</section>
+</topic>
