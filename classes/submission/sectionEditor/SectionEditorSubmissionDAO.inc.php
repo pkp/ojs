@@ -956,7 +956,7 @@ class SectionEditorSubmissionDAO extends DAO {
 		$statistics = Array();
 
 		// Get counts of completed submissions
-		$result = &$this->retrieve('select la.editor_id as editor_id, count(la.article_id) as complete from layouted_assignments la, articles a where la.article_id=a.article_id and la.date_completed is not null and a.journal_id=? group by la.editor_id', $journalId);
+		$result = &$this->retrieve('SELECT la.editor_id AS editor_id, COUNT(la.article_id) AS complete FROM layouted_assignments la, articles a INNER JOIN proof_assignments p ON (p.article_id = a.article_id) WHERE la.article_id = a.article_id AND (la.date_completed IS NOT NULL AND p.date_layouteditor_completed IS NOT NULL) AND la.date_notified IS NOT NULL AND a.journal_id = ? GROUP BY la.editor_id', $journalId);
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
 			if (!isset($statistics[$row['editor_id']])) $statistics[$row['editor_id']] = array();
@@ -968,7 +968,7 @@ class SectionEditorSubmissionDAO extends DAO {
 		unset($result);
 
 		// Get counts of incomplete submissions
-		$result = &$this->retrieve('select la.editor_id as editor_id, count(la.article_id) as incomplete from layouted_assignments la, articles a where la.article_id=a.article_id and la.date_completed is null and a.journal_id=? group by la.editor_id', $journalId);
+		$result = &$this->retrieve('SELECT la.editor_id AS editor_id, COUNT(la.article_id) AS incomplete FROM layouted_assignments la, articles a INNER JOIN proof_assignments p ON (p.article_id = a.article_id) WHERE la.article_id = a.article_id AND (la.date_completed IS NULL OR p.date_layouteditor_completed IS NULL) AND la.date_notified IS NOT NULL AND a.journal_id = ? GROUP BY la.editor_id', $journalId);
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
 			if (!isset($statistics[$row['editor_id']])) $statistics[$row['editor_id']] = array();
