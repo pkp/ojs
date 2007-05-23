@@ -77,6 +77,9 @@
 {foreach from=$editorFiles item=editorFile}
 	{assign var="editorRevisionExists" value=true}
 {/foreach}
+{if $reviewFile}
+	{assign var="reviewVersionExists" value=1}
+{/if}
 
 <table class="data" width="100%">
 	{if $lastDecision == SUBMISSION_EDITOR_DECISION_RESUBMIT}
@@ -91,7 +94,7 @@
 		<tr valign="top">
 			<td width="20%">&nbsp;</td>
 			<td width="80%">
-				{if !($editorRevisionExists or $authorRevisionExists) or !$submission->getMostRecentEditorDecisionComment()}{assign var=copyeditingUnavailable value=1}{else}{assign var=copyeditingUnavailable value=0}{/if}
+				{if !($editorRevisionExists or $authorRevisionExists or $reviewVersionExists) or !$submission->getMostRecentEditorDecisionComment()}{assign var=copyeditingUnavailable value=1}{else}{assign var=copyeditingUnavailable value=0}{/if}
 				{translate key="editor.article.sendFileToCopyedit"}
 				<input type="submit" {if $copyeditingUnavailable}disabled="disabled" {/if}name="setCopyeditFile" value="{translate key="form.send"}" class="button" />
 				{if $copyeditingUnavailable}
@@ -106,7 +109,10 @@
 		<tr valign="top">
 			<td width="20%" class="label">{translate key="submission.reviewVersion"}</td>
 			<td width="50%" class="value">
-				{if $lastDecision == SUBMISSION_EDITOR_DECISION_ACCEPT || $lastDecision == SUBMISSION_EDITOR_DECISION_RESUBMIT}<input type="radio" name="editorDecisionFile" value="{$reviewFile->getFileId()},{$reviewFile->getRevision()}" /> {/if}<a href="{url op="downloadFile" path=$submission->getArticleId()|to_array:$reviewFile->getFileId():$reviewFile->getRevision()}" class="file">{$reviewFile->getFileName()}</a>&nbsp;&nbsp;
+				{if $lastDecision == SUBMISSION_EDITOR_DECISION_ACCEPT || $lastDecision == SUBMISSION_EDITOR_DECISION_RESUBMIT}
+					<input type="radio" name="editorDecisionFile" value="{$reviewFile->getFileId()},{$reviewFile->getRevision()}" />
+				{/if}
+				<a href="{url op="downloadFile" path=$submission->getArticleId()|to_array:$reviewFile->getFileId():$reviewFile->getRevision()}" class="file">{$reviewFile->getFileName()}</a>&nbsp;&nbsp;
 				{$reviewFile->getDateModified()|date_format:$dateFormatShort}
 				{if $copyeditFile && $copyeditFile->getSourceFileId() == $reviewFile->getFileId()}
 					&nbsp;&nbsp;&nbsp;&nbsp;{translate key="submission.sent"}&nbsp;&nbsp;{$copyeditFile->getDateUploaded()|date_format:$dateFormatShort}
