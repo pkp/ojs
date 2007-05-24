@@ -38,7 +38,7 @@
 	</section>
 	
 	<section title="Instalação">
-		<![CDATA[<p>O sistema possui um script de instalação web que guiará o administrador do sistema através do processo de instalação.</p>
+		<![CDATA[<p>O sistema possui um script de instalação web que guiará o administrador do portal através do processo de instalação.</p>
 		<ol>
 			<li>
 				Baixe o pacote OJS.
