@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the hr_HR (hrvatski) locale.
+  *
+  * $Id: locale.xml,v 1.3 Teo Matkovic (teo.matkovic@pravo.hr), 
+  * Marija Matesic(mmatesi1@ffzg.hr), Tomislav Biscan (info@seofruits.com.hr) Exp $
+  -->
+ 
+<locale name="hr_HR" full_name="hrvatski">
+	<message key="plugins.importexport.users.displayName">Dodatak za XML korisnika</message>
+	<message key="plugins.importexport.users.description">Unošenje i iznošenje korisnika.</message>
+
+	<message key="plugins.importexport.users.cliUsage"><![CDATA[Primjena: {$scriptName} {$pluginName} [naredba] ...
+Naredba:
+	import [xmlNazivDatoteke] [putanja_časopisa] [opcionalne oznake]
+	export [xmlNazivDatoteke] [putanja_časopisa]
+	export [xmlNazivDatoteke] [putanja_časopisa] [putanja_uloge1] [putanja_uloge2] ...
+
+Opcionalne oznake:
+	continue_on_error: Ako je zadano, u slučaju pojavljivanja pogreške ne staje s unošenjem korisnika
+
+	send_notify: Ako je zadano, šalje e-pošte obavijesti unesenim korisnicima koji sadrže korisnička imena i lozinke
+
+Primjeri:
+	Unosi korisnike u mojCasopis iz mojaDatotekaUnosenja.xml, nastavljajući u slučaju pogreške:
+	{$scriptName} {$pluginName} import mojaDatotekaUnosenja.xml mojCasopis continue_on_error
+
+	Iznosi sve korisnike iz časpoisa mojCasopis:
+	{$scriptName} {$pluginName} export mojaDatotekaIznosa.xml mojCasopis
+
+	Iznosi sve korisnike registrirane kao recenzente, zajedno s njihovim recenzentskim ulogama:
+	{$scriptName} {$pluginName} export mojaDatotekaIznosa.xml mojCasopis reviewer
+]]></message>
+	<message key="plugins.importexport.users.import.importUsers">Unesi korisnike</message>
+	<message key="plugins.importexport.users.import.instructions"><![CDATA[Molim odaberite XML datoteku koja sadrži informacije o korisnicima koje želite unijeti u ovaj časopis. Pogledajte pomoć časopisa za detalje o formatu ove datoteke.<br /><br />Uzmite u obzir da korisnici neće biti uneseni, te će njihove nove uloge biti dodijeljene postojećim ukoliko unesena datoteka sadrži bilo koja korisnička imena ili adrese e-pošte koje već postoje u sustavu.]]></message>
+	<message key="plugins.importexport.users.import.failedToImportUser">Neuspjelo unošenje korisnika</message>
+	<message key="plugins.importexport.users.import.failedToImportRole">Neuspjelo unošenje uloga korisnika</message>
+	<message key="plugins.importexport.users.import.dataFile">Podatkovna datoteka korisnika</message>
+	<message key="plugins.importexport.users.import.sendNotify">Pošalji e-poštom svakom unesenom korisniku obavijest koja sadrži njegovo korisničko ime i lozinku.</message>
+	<message key="plugins.importexport.users.import.continueOnError">U slučaju greške nastavi s unošenjem ostalih korisnika.</message>
+	<message key="plugins.importexport.users.import.noFileError">Datoteka nije poslana!</message>
+	<message key="plugins.importexport.users.import.usersWereImported">Sljedeći korisnici su uspješno uneseni u sustav</message>
+	<message key="plugins.importexport.users.import.errorsOccurred">Pogreške koje su se pojavile prilikom unošenja</message>
+	<message key="plugins.importexport.users.import.confirmUsers">Molim potvrdite da su ovo korisnici koje želite unijeti u sustav</message>
+	<message key="plugins.importexport.users.unknownJournal">Navedena je nepoznata putanja "{$journalPath}".</message>
+
+	<message key="plugins.importexport.users.export.exportUsers">Iznesi korisnike</message>
+	<message key="plugins.importexport.users.export.exportByRole">Iznesi po ulozi</message>
+	<message key="plugins.importexport.users.export.exportAllUsers">Iznesi sve</message>
+	<message key="plugins.importexport.users.export.errorsOccurred">Pogreške koje su se pojavile prilikom iznošenja</message>
+	<message key="plugins.importexport.users.export.couldNotWriteFile">Nije moguće pisati po datoteci "{$fileName}".</message>
+</locale>

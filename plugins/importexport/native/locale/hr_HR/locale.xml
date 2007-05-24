@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the hr_HR (hrvatski) locale.
+  *
+  * $Id: locale.xml,v 1.16 Teo Matkovic (teo.matkovic@pravo.hr), 
+  * Marija Matesic(mmatesi1@ffzg.hr), Tomislav Biscan (info@seofruits.com.hr) Exp $
+  -->
+ 
+<locale name="hr_HR" full_name="hrvatski">
+	<message key="plugins.importexport.native.displayName">XML dodatak za članke i brojeve</message>
+	<message key="plugins.importexport.native.description">Unošenje i iznošenje članaka i brojeva.</message>
+
+	<message key="plugins.importexport.native.cliUsage"><![CDATA[Primjena: {$scriptName} {$pluginName} [naredba] ...
+Naredbe:
+	import [xmlNazivDatoteke] [putanja_časopisa] [korisničko_ime] ...
+	export [xmlNazivDatoteke] [putanja_časopisa] articles [članakId1] [članakId2] ...
+	export [xmlNazivDatoteke] [putanja_časopisa] article [članakId]
+	export [xmlNazivDatoteke] [putanja_časopisa] issues [brojId1] [brojId2] ...
+	export [xmlNazivDatoteke] [putanja_časopisa] issue [brojId]
+
+Dodatni parametri su obavezni za unošenje članaka kako slijedi, 
+ovisno o glavnom čvoru XML dokumenta.
+
+Ako je glavni čvor <article> ili <articles>, dodatni parametri su obavezni.
+Prihvatljivi su sljedeći formati:
+
+{$scriptName} {$pluginName} import [xmlNazivDatoteke] [putanja_časopisa] [korisničko_ime]
+	issue_id [brojId] section_id [rubrikaId]
+
+{$scriptName} {$pluginName} import [xmlNazivDatoteke] [putanja_časopisa] [korisničko_ime]
+	issue_id [brojId] section_name [naziv]
+
+{$scriptName} {$pluginName} import [xmlNazivDatoteke] [putanja_časopisa]
+	issue_id [brojId] section_abbrev [kratica]
+]]></message>
+	<message key="plugins.importexport.native.export">Iznošenje podataka</message>
+	<message key="plugins.importexport.native.export.issues">Iznošenje brojeva</message>
+	<message key="plugins.importexport.native.export.sections">Iznošenje rubrika</message>
+	<message key="plugins.importexport.native.export.articles">Iznošenje članaka</message>
+
+	<message key="plugins.importexport.native.selectIssue">Odaberite broj</message>
+	<message key="plugins.importexport.native.selectArticle">Odaberite članak</message>
+
+	<message key="plugins.importexport.native.import.articles">Unošenje članaka</message>
+	<message key="plugins.importexport.native.import.articles.description">Datoteka koju unosite sadrži jedan ili više članaka. Morate odabrati broj i rubriku u koju ćete unijeti članke. Ako ih ne želite unijeti sve u istu rubriku i broj, možete ih ili odvojiti u različite XML datoteke ili premjestiti u odgovarajuće brojeve i rubrike nakon unošenja.</message>
+
+	<message key="plugins.importexport.native.import">Unošenje podataka</message>
+	<message key="plugins.importexport.native.import.description">Ovaj dodatak podržava unošenje podataka bazirane na native.dtd definiciji tipa dokumenta. Podržani glavni čvorovi su: &amp;lt;article&amp;gt;, &amp;lt;articles&amp;gt;, &amp;lt;issue&amp;gt; i &amp;lt;issues&amp;gt;.</message>
+
+	<message key="plugins.importexport.native.import.error">Pogreška prilikom unošenja</message>
+	<message key="plugins.importexport.native.import.error.description">Prilikom unošenja pojavila se jedna ili više pogrešaka. Molim provjerite da li format datoteke unošenja odgovara specifikaciji. Specifični detalji pogrešaka prilikom unošenja su izlistani ispod.</message>
+
+	<message key="plugins.importexport.native.cliError">POGREŠKA:</message>
+	<message key="plugins.importexport.native.error.unknownUser">Navedeni korisnik "{$userName}" ne postoji.</message>
+	<message key="plugins.importexport.native.error.unknownJournal">Navedena putanja časopisa "{$journalPath}" ne postoji.</message>
+	<message key="plugins.importexport.native.export.error.couldNotWrite">Nije moguće pisati po datoteci "{$fileName}".</message>
+	<message key="plugins.importexport.native.export.error.sectionNotFound">Niti jedna rubrika ne odgovara razvrstaču "{$sectionIdentifier}".</message>
+	<message key="plugins.importexport.native.export.error.issueNotFound">Niti jedan broj ne odgovara navedenom ID-u broja "{$issueId}".</message>
+	<message key="plugins.importexport.native.export.error.articleNotFound">Niti jedan članak ne odgovara navedenom ID-u članka "{$articleId}".</message>
+	<message key="plugins.importexport.native.import.error.unsupportedRoot">Ovaj dodatak ne podržava navedeni glavni čvor "{$rootName}". Molimo provjerite jesu li datoteke ispravno formirane i pokušajte ponovno.</message>
+
+	<message key="plugins.importexport.native.import.error.titleMissing">Nedostajao je naslov broja.</message>
+	<message key="plugins.importexport.native.import.error.defaultTitle">NASLOV KOJI NEDOSTAJE</message>
+	<message key="plugins.importexport.native.import.error.unknownIdentificationType">Nepoznati identifikacijski tip "{$identificationType}" je specificiran u "identification" atributu "issue" elementa broja "{$issueTitle}".</message>
+	<message key="plugins.importexport.native.import.error.invalidBooleanValue">Navedena je neispravna logička (boolean) vrijednost "{$value}". Molimo koristite "true" ili "false".</message>
+	<message key="plugins.importexport.native.import.error.invalidDate">Naveden je neispravan datum "{$value}".</message>
+	<message key="plugins.importexport.native.import.error.unknownEncoding">Podaci su umetnuti koristivši nepoznati tip enkodiranja "{$type}".</message>
+	<message key="plugins.importexport.native.import.error.couldNotWriteFile">Nije moguće spremiti lokalno kopiju datoteke "{$originalName}".</message>
+	<message key="plugins.importexport.native.import.error.illegalUrl">Navedeni URL "{$url}" za broj "{$issueTitle}" je bio nedopušten. Uvođenja putem web prijave podržavaju samo http, https, ftp ili ftps metode.</message>
+	<message key="plugins.importexport.native.import.error.unknownSuppFileType">Naveden je nepoznati tip dopunske datoteke "{$suppFileType}".</message>
+	<message key="plugins.importexport.native.import.error.couldNotCopy">Navedeni URL "{$url}" ne može se kopirati u lokalnu datoteku.</message>
+	<message key="plugins.importexport.native.import.error.duplicatePublicId">Javni ID dodijeljen za uvođenje broja "{$issueTitle}" već koristi drugi broj, "{$otherIssueTitle}".</message>
+	<message key="plugins.importexport.native.import.error.sectionTitleMissing">Nedostajao je naslov rubrike za broj "{$issueTitle}". Molimo vas, pobrinite se da XML dokument odgovara adekvatnom DTD-u.</message>
+	<message key="plugins.importexport.native.import.error.sectionMismatch">Rubrika "{$sectionTitle}" broja "{$issueTitle}" pristaje postojećoj rubrici časopisa, ali navedena kratica ("{$sectionAbbrev}") pristaje drugoj rubrici.</message>
+	<message key="plugins.importexport.native.import.error.articleTitleMissing">Nedostajao je naslov članka za broj "{$issueTitle}" u rubrici "{$sectionTitle}". Molimo vas, pobrinite se da XML dokument odgovara adekvatnom DTD-u, te da je naslov isporučen za lokalitet časopisa.</message>
+	<message key="plugins.importexport.native.import.error.articleTitleLocaleUnsupported">Naslov časopisa ("{$articleTitle}") za broj "{$issueTitle}" zaveden je u lokalizaciji ("{$locale}") koju ovaj časopis ne podržava.</message>
+	<message key="plugins.importexport.native.import.error.articleAbstractLocaleUnsupported">Sažetak članka za članak  "{$articleTitle}" u broju "{$issueTitle}" je zaveden u lokalizaciji ("{$locale}") koju ovaj časopis ne podržava.</message>
+	<message key="plugins.importexport.native.import.error.galleyLabelMissing">Članku "{$articleTitle}" u rubrici "{$sectionTitle}" broja "{$issueTitle}" je nedostajala oznaka prijeloma.</message>
+	<message key="plugins.importexport.native.import.error.suppFileMissing">Članku "{$articleTitle}" u rubrici "{$sectionTitle}" broja "{$issueTitle}" je nedostajala dopunska datoteka.</message>
+	<message key="plugins.importexport.native.import.error.galleyFileMissing">Članku "{$articleTitle}" u rubrici "{$sectionTitle}" broja "{$issueTitle}" je nedostajala datoteka prijeloma.</message>
+
+	<message key="plugins.importexport.native.import.success">Uvođenje uspješno</message>
+	<message key="plugins.importexport.native.import.success.description">Uvođenje je uspješno završeno. Uspješno uvedene stavke su izlistane ispod.</message>
+</locale>

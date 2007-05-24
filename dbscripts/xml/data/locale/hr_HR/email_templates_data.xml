@@ -1,0 +1,798 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../../../dtd/xmldata.dtd">
+
+<!--
+  * email_templates_data.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Email templates data XML file (hrvatski).
+  *
+  * $Id: email_templates_data.xml,v 1.46 2007/04/22 20:26:17 Teo Matkovic (teo.matkovic@pravo.hr), 
+  * Marija Matesic(mmatesi1@ffzg.hr), Tomislav Biscan (info@seofruits.com.hr) Exp $
+  -->
+
+<data>
+	<table name="email_templates_default_data">
+		<field_default name="locale">hr_HR</field_default>
+
+		<!--
+		  *
+		  * General
+		  *
+		  -->
+		<row>
+			<field name="email_key">PASSWORD_RESET_CONFIRM</field>
+			<field name="subject">Potvrda o promjeni lozinke</field>
+			<field name="body">Zaprimili smo vaš zahtjev za promjenu lozinke za mrežnu stranicu {$siteTitle}.
+
+U slučaju da takav zahtjev niste poslali, molimo vas da ignorirate ovu e-poštu i vaša će lozinka ostati nepromijenjena. U slučaju da želite promijeniti lozinku, molimo vas da kliknete na dolje navedeni URL.
+
+Promjena lozinke {$url}
+
+{$principalContactSignature}</field>
+			<field name="description">Ovaj obrazac e-pošte šalje se registriranim korisnicima kada informiraju sustav da su zaboravili svoju lozinku ili da se ne mogu prijaviti u sustav. U poruci se nalazi URL koji mogu slijediti kao bi postavili svoju novu lozinku.</field>
+		</row>
+		<row>
+			<field name="email_key">PASSWORD_RESET</field>
+			<field name="subject">Promjena lozinke</field>
+			<field name="body">Vaša lozinka za mrežnu stranicu {$siteTitle} je uspješno promijenjena. Molimo vas da pohranite vaše korisničko ime i lozinku jer su oni nužni za sve aktivnosti vezane uz časopis. 
+
+Vaše korisničko ime: {$username}
+Vaša nova lozinka: {$password}
+
+{$principalContactSignature}</field>
+			<field name="description">Ovaj obrazac e-pošte šalje se registriranim korisnicima nakon što  uspješno ponovno postave  svoju  lozinku slijedeći postupak koji je opisan u PASSWORD_RESET_CONFIRM.</field>
+		</row>
+		<row>
+			<field name="email_key">USER_REGISTER</field>
+			<field name="subject">Registracija novog korisnika</field>
+			<field name="body">Zahvaljujemo vam se što ste se registrirali kao korisnik časopisa {$journalName}. Molimo vas da pohranite vaše korisničko ime i lozinku jer su oni nužni za sve aktivnosti vezane uz časopis.
+
+Korisničko ime: {$username}
+Lozinka: {$password}
+
+Srdačno,
+{$principalContactSignature}</field>
+			<field name="description">Ovaj se obrazac e-pošte šalje novoregistriranim korisnicima u sustavu i sadrži njihovo korisničko ime i lozinku.</field>
+		</row>
+		<row>
+			<field name="email_key">PUBLISH_NOTIFY</field>
+			<field name="subject">Objavljen novi broj</field>
+			<field name="body">Poštovani čitatelji,
+
+upravo je objavljen novi broj časopisa {$journalName} koji je dostupan na {$journalUrl}. Pozivamo vas da pregledate sadržaj i posjetite našu mrežnu stranicu kako bi pročitali članke i druge potencijalno zanimljive radove. 
+
+
+Hvala vam na interesu za naš rad,
+{$editorialContactSignature}</field>
+			<field name="description">Ovaj obrazac e-pošte šalje se registriranim čitateljima kroz opciju "Obavijesti korisnika" na početnom urednikovom izborniku. Čitatelji se njome obavještavaju o izlasku novog broja časopisa i pozivaju se da posjete stranice časopisa na priloženom URL-u.</field>
+		</row>
+		<row>
+			<field name="email_key">LOCKSS_EXISTING_ARCHIVE</field>
+			<field name="subject">Zamolba za arhiviranje časopisa {$journalName}</field>
+			<field name="body"><![CDATA[Poštovani [Knjižničar ustanove],
+
+{$journalName} <{$journalUrl}> je časopis s kojim zaposlenik vašeg fakulteta [ime zaposlenika] surađuje kao [titula]. Časopis pokušava, u ovoj i drugim knjižnicama u sustavu znanosti i visokog obrazovanja, uspostaviti arhivu u skladu s LOCKSS sustavom (Lots of Copies Keep Stuff Safe). 
+
+[Kratki opis časopisa]
+
+Adresa LOCKSS izdavače izjave za naš časopis je: {$articleUrl}/gateway/lockss
+
+Prema našim spoznajama, vi već sudjelujete u sustavu LOCKSS. Vrlo rado ćemo vam pružiti bilo kakve dodatne metapodatke koji bi mogli biti potrebni u svrhu prijave našeg časopisa unutar vaše verzije LOCKSS sustava.
+
+Unaprijed hvala,
+{$principalContactSignature}]]></field>
+			<field name="description">Ovaj obrazac e-pošte skreće pozornost osobe nadležne za LOCKSS arhivu da razmotri uključenje ovog časopisa u svoju arhivu. E-pošta šalje i URL poveznicu ka izjavi izdavača ovog časopisa o korištenju LOCKSS sustava.</field>
+		</row>
+		<row>
+			<field name="email_key">LOCKSS_NEW_ARCHIVE</field>
+			<field name="subject">Zamolba za arhiviranje časopisa {$journalName}</field>
+			<field name="body"><![CDATA[Poštovani [Knjižničar ustanove],
+
+{$journalName} <{$journalUrl}> časopis je s kojim zaposlenik vašeg fakulteta [ime zaposlenika] surađuje kao [titula]. Časopis pokušava, u ovoj i drugim knjižnicama u sustavu znanosti i visokog obrazovanja, uspostaviti arhivu u skladu s LOCKSS sustavom (Lots of Copies Keep Stuff Safe). 
+
+[Kratki opis časopisa]
+
+Međunarodna bibliotekarska/izdavačka inicijativa Program LOCKSS <http://lockss.stanford.edu/> predstavlja funkcionalni primjer distribuiranog repozitorija namijenjenog čuvanju i arhiviranju sadržaja. Dodatne informacije možete pročitati u nastavku teksta. Potreban software koji se može koristiti i na običnom osobnom računalu je besplatan; sustav se vrlo jednostavno postavlja on-line te zahtijeva vrlo malo kontinuiranog održavanja.
+
+Kako biste doprinijeli arhiviranju našeg časopisa, pozivamo vas da postanete član LOCKSS zajednice čime biste pripomogli u sakupljanju i očuvanju naslova koje izdaje vaš fakultet i drugi znanstvenici diljem svijeta. Želite li se uključiti, molimo vas da jedan/a od vaših djelatnika/ca posjeti stranicu LOCKSS-a kako bi dobio/la informacije o funkcioniranju sustava. Nadamo se da ćete nas uskoro kontaktirati u vezi s izvedivošću pružanja ovakve podrške arhiviranju časopisa.
+
+Unaprijed hvala,
+{$principalContactSignature}]]></field>
+			<field name="description">Ovaj obrazac e-pošte potiče primatelja na sudjelovanje u LOCKSS inicijativi i uvrštenje ovog časopisa u arhivu. Obrazac pruža osnovne informacije o LOCKSS inicijativi i načinima uključivanja.</field>
+		</row>
+
+
+		<!--
+		  *
+		  * Submission-related
+		  *
+		  -->
+		<row>
+			<field name="email_key">SUBMISSION_ACK</field>
+			<field name="subject">Prilog zaprimljen</field>
+			<field name="body">Poštovana/i {$authorName},
+
+zahvaljujemo što ste prijavili prilog "{$articleTitle}" našem časopisu {$journalName}. Pomoću sustava upravljanja časopisom koji koristimo, moći ćete aktivno pratiti kretanje članka kroz postupak uređivanja prijavljujući se na mrežnu stranicu časopisa:
+
+URL rukopisa: {$submissionUrl}
+Korisničko ime: {$authorUsername}
+
+U slučaju da imate bilo kakvih pitanja, molimo vas da nam se obratite. 
+
+Srdačno,
+{$editorialContactSignature}</field>
+			<field name="description">Ovaj se obrazac e-pošte automatski šalje autoru kada su on ili ona završili postupak prijave priloga časopisu. Poruka daje informacije o tome kako mogu pratiti prilog kroz uređivački postupak.</field>
+		</row>
+		<row>
+			<field name="email_key">SUBMISSION_UNSUITABLE</field>
+			<field name="subject">Tematski neprimjereni prilog</field>
+			<field name="body">Poštovana/i {$authorName},
+
+inicijalnom recenzijom članka "{$articleTitle}" ustanovili smo da se vaš prilog ne uklapa u djelokrug i područje časopisa {$journalName}. Predlažemo da pogledate opis časopisa (u sekciji "O časopisu") te sadržaj izdanih brojeva kako biste stekli bolji uvid o vrsti radova koje objavljujemo. Predlažemo vam da razmotrite prijavu ovog priloga nekom drugom, primjerenijem, časopisu.
+
+Srdačno,
+{$editorialContactSignature}</field>
+		</row>
+		<row>
+			<field name="email_key">SUBMISSION_COMMENT</field>
+			<field name="subject">Komentar priloga</field>
+			<field name="body">Poštovana/i {$name},
+
+{$commentName} je upravo priložio komentar članka "{$articleTitle}" u časopisu {$journalName}:
+
+{$comments}
+</field>
+			<field name="description">Ovaj obrazac e-pošte obavještava osobe uključene u postupak uređivanja nekog priloga o tome da je unesen novi komentar.</field>
+		</row>
+		<row>
+			<field name="email_key">SUBMISSION_DECISION_REVIEWERS</field>
+			<field name="subject">Odluka o članku "{$articleTitle}"</field>
+			<field name="body">Kao jednom od recenzenata članka "{$articleTitle}" za časopis {$journalName} šaljemo vam recenzije i uredničke odluke koje su poslane autoru ovog rada. Željeli bismo vam još jednom zahvaliti na vašem važnom doprinosu ovom postupku.
+
+Srdačno,
+{$editorialContactSignature}
+
+{$comments}</field>
+			<field name="description">Ovim se obrascem e-pošte obavještavaju recenzenti da je recenzijski postupak završen. Poruka sadrži informacije o članku i donesenoj odluci.</field>
+		</row>
+
+
+		<!--
+		  *
+		  * Editor
+		  *
+		  -->
+		<row>
+			<field name="email_key">EDITOR_ASSIGN</field>
+			<field name="subject">Dodjela uredničkog zaduženja</field>
+			<field name="body">{$editorialContactName},
+
+u okviru raspodjele uredničkih zaduženja za časopis {$journalName} vama je dodijeljen zaprimljeni prilog "{$articleTitle}" kako biste proveli postupak njegova uređivanja. 
+
+URL priloga: {$submissionUrl}
+Korisničko ime: {$editorUsername}
+
+Unaprijed hvala,
+{$editorialContactSignature}</field>
+			<field name="description">Ovim obrascem e-pošte glavni urednik obavještava urednika rubrike da mu je dodijeljen zadatak vođenja priloga kroz uređivački postupak. Obrazac pruža i osnovne informacije o prilogu.</field>
+		</row>
+
+
+		<!--
+		  *
+		  * Peer Review
+		  *
+		  -->
+		<row>
+			<field name="email_key">REVIEW_REQUEST</field>
+			<field name="subject">Zamolba za recenziju članka</field>
+			<field name="body">Poštovana/i {$reviewerName},
+
+s obzirom na vaše iskustvo i područje ekspertize, rado bismo vam povjerili zadatak recenzije članka "{$articleTitle}" prijavljenog u naš časopis {$journalName}. Sažetak članka nalazi se u nastavku ove poruke. Nadamo se da ćete prihvatiti našu ponudu te izvršiti ovu, za nas iznimno važnu, zadaću.
+
+Molimo vas da se kao korisnik prijavite na mrežnu stranicu časopisa do {$weekLaterDate} kako biste naznačili hoćete li preuzeti recenziju ili ne. Potom, ukoliko prihvatite izradu recenzije, na istome mjestu možete pristupiti tekstu članka te zabilježili vašu recenziju i preporuku. Mrežna stranica časopisa je {$journalUrl}
+
+U slučaju da nemate pri ruci svoje korisničko ime ili lozinku za mrežnu stranicu časopisa, možete se koristiti ovom poveznicom kako biste promijenili lozinku (koju ćemo vam tada, zajedno s korisničkim imenom, poslati putem e-pošte). {$passwordResetUrl}
+
+Sama recenzija trebala bi biti završena zaključno s {$reviewDueDate}.
+
+URL članka: {$submissionReviewUrl}
+
+Srdačno,
+{$editorialContactSignature}
+
+"{$articleTitle}"
+
+{$abstractTermIfEnabled}
+{$articleAbstract}</field>
+			<field name="description">Ovim obrascem e-pošte urednik rubrike šalje upit recenzentu može li prihvatiti zadatak recenziranja članka. Zamolba sadrži osnovne informacije u vidu naslova i kratkog sadržaja članka, datum do kojeg bi recenzija trebala biti napisana te načina na koji se recenzent može prijaviti u sustav. Ova poruka se koristi kada je odabran standardni recenzijski postupak u 2. koraku Postavljanja časopisa (Ako nije, koristi se Zamolba za recenziju članka u privitku)</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEW_REQUEST_ONECLICK</field>
+			<field name="subject">Zamolba za recenziju članka</field>
+			<field name="body">Poštovana/i {$reviewerName},
+
+s obzirom na vaše iskustvo i područje ekspertize, rado bismo vam povjerili zadatak recenzije članka "{$articleTitle}" prijavljenog u naš časopis {$journalName}. Sažetak članka nalazi se u nastavku ove poruke. Nadamo se da ćete prihvatiti našu ponudu te izvršiti ovu, za nas iznimno važnu, zadaću.
+
+Molimo vas da se kao korisnik prijavite na mrežnu stranicu časopisa do {$weekLaterDate} kako biste naznačili hoćete li preuzeti recenziju ili ne. Potom, ukoliko prihvatite izradu recenzije, na istome mjestu možete pristupiti tekstu članka te zabilježili vašu recenziju i preporuku. 
+
+Sama recenzija trebala bi biti završena zaključno s {$reviewDueDate}.
+
+URL članka: {$submissionReviewUrl}
+
+Srdačno,
+{$editorialContactSignature}
+
+"{$articleTitle}"
+
+{$abstractTermIfEnabled}
+{$articleAbstract}</field>
+			<field name="description">Ovim obrascem e-pošte urednik rubrike šalje upit recenzentu može li prihvatiti ili je prisiljen odbiti zadatak recenziranja članka. Zamolba sadrži osnovne informacije u vidu naslova i kratkog sadržaja članka, datum do kojeg bi recenzija trebala biti napisana te načina na koji  recenzent može pristupiti članku. Ova poruka se koristi kada je odabran standardni recenzijski postupak u 2. koraku Postavljanja časopisa, a recenzentu je omogućen pristup jednim klikom.</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEW_REQUEST_ATTACHED</field>
+			<field name="subject">Zamolba za recenziju članka u privitku</field>
+			<field name="body">Poštovana/i {$reviewerName},
+
+s obzirom na vaše iskustvo i područje ekspertize, rado bismo vam povjerili zadatak recenzije članka "{$articleTitle}" prijavljenog u naš časopis. Nadamo se da ćete prihvatiti našu ponudu te izvršiti ovu, za nas iznimno važnu, zadaću.
+U nastavku teksta poruke nalaze se upute za recenzente našeg časopisa, a tekst članka nalazi se u prilogu. Od vas očekujemo da nam vašu recenziju članka, zajedno s preporukom dostavite e-poštom zaključno s {$reviewDueDate}.
+
+No prije svega, molimo vas da nam u odgovoru na ovu poruku e-poštom zaključno s datumom {$weekLaterDate} naznačite da li ste u mogućnosti i da li ste voljni izvršiti recenziju
+
+Srdačno,
+{$editorialContactSignature}
+
+Upute za recenzente
+
+{$reviewGuidelines}</field>
+			<field name="description">Ovim obrascem e-pošte urednik rubrike šalje upit recenzentu može li prihvatiti ili je prisiljen odbiti zadatak recenziranja članka. Zamolba sadrži i tekst članka u privitku. Ova poruka se koristi kada je u 2. koraku Postavljanja časopisa odabran recenzijski postupak u kojem se prilog šalje recenzentu kao privitak e-pošte. (Ako ne, pogledajte Zamolba za recenziju članka.)</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEW_CANCEL</field>
+			<field name="subject">Povlačenje zamolbe za recenziju</field>
+			<field name="body">Poštovana/i {$reviewerName},
+
+s obzirom na okolnosti, odlučili smo povući zamolbu da izvršite recenziju članka "{$articleTitle}" za časopis {$journalName}. Nadamo se da ćemo vam se u budućnosti ponovno moći obratiti da vašom recenzijom pridonesete ovom časopisu.
+
+Srdačno,
+{$editorialContactSignature}</field>
+			<field name="description">Ovim obrascem e-pošte urednik rubrike recenzenta obavještava o povlačenju zahtjeva za izradu recenzije za koju je prethodno recenzent bio zadužen ili koja je recenzentu bila ponuđena.</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEW_CONFIRM</field>
+			<field name="subject">U mogućnosti sam izvršiti recenziju</field>
+			<field name="body">Poštovana/i {$editorialContactName},
+
+u mogućnosti sam izvršiti recenziju članka "{$articleTitle}" za časopis {$journalName}. Recenziju namjeravam izvršiti  unutar dogovorenog vremenskog roka, {$reviewDueDate}, ako ne i prije.
+
+Srdačno,
+{$reviewerName}</field>
+			<field name="description">Ovim obrascem e-pošte recenzent potvrđuje uredniku rubrike da prihvaća zahtjev za recenzijom.</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEW_CONFIRM_ACK</field>
+			<field name="subject">Potvrda recenzentskog angažmana</field>
+			<field name="body">Poštovana/i {$reviewerName},
+
+hvala što ste pristali izraditi recenziju članka "{$articleTitle}" za časopis {$journalName}. Rok izrade recenzije je {$reviewDueDate}.
+
+Srdačno,
+{$editorialContactSignature}</field>
+			<field name="description">Ovim obrascem e-pošte urednik rubrike zahvaljuje recenzentu na pristanku za recenziju ili požuruje recenzenta da izradi recenziju.</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEW_DECLINE</field>
+			<field name="subject">Nisam u mogućnosti izvršiti recenziju</field>
+			<field name="body">Poštovana/i {$editorialContactName},
+
+nažalost, u ovom trenutku nisam u mogućnosti izvršiti recenziju članka "{$articleTitle}" za časopis {$journalName}. Hvala vam što ste me predložili za recenzenta, i molim vas da mi se svakako ponovno obratite u budućnosti.
+
+Srdačno,
+{$reviewerName}</field>
+			<field name="description">Ovim obrascem e-pošte recenzent odgovara uredniku rubrike da ne prihvaća zahtjev za recenzijom.</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEW_COMPLETE</field>
+			<field name="subject">Izrađena recenzija članka</field>
+			<field name="body">Poštovana/i {$editorialContactName},
+
+upravo sam završio/la recenziju članka"{$articleTitle}" za časopis {$journalName} i predao/la svoju preporuku: {$recommendation}.
+
+Srdačno,
+{$reviewerName}</field>
+			<field name="description">Ovim obrascem e-pošte recenzent obavještava urednika rubrike da je recenzija izrađena i da su komentari i preporuke evidentirani na mrežnoj stranici časopisa.</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEW_ACK</field>
+			<field name="subject">Zaprimljena recenzija članka</field>
+			<field name="body">Poštovana/i {$reviewerName},
+
+hvala vam što ste izradili recenziju članka "{$articleTitle}" za časopis {$journalName}. Cijenimo vaš doprinos kvaliteti radova objavljenih u našem časopisu.
+
+Srdačno,
+{$editorialContactSignature}</field>
+			<field name="description">Ovim obrascem e-pošte  urednik rubrike potvrđuje recenzentu primitak završene recenzije.</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEW_REMIND</field>
+			<field name="subject">Podsjetnik za predaju Recenzije</field>
+			<field name="body">Poštovana/i {$reviewerName},
+
+željeli bismo vas samo podsjetiti da je rok koji smo dogovorili za recenziju članka "{$articleTitle}" za časopis {$journalName} istekao {$reviewDueDate}. Bilo bi nam izuzetno drago ukoliko biste recenziju završili i predali što je prije moguće.
+
+U slučaju da nemate pri ruci svoje korisničko ime ili lozinku za mrežnu stranicu časopisa, možete se koristi ovom poveznicom kako biste promijenili lozinku (koju ćemo vam tada, zajedno s korisničkim imenom, poslati putem e-pošte). {$passwordResetUrl}
+
+URL članka: {$submissionReviewUrl}
+
+Molimo vas da nas izvijestite u kojem ste roku u mogućnosti izraditi recenziju. Nadamo se skorom odgovoru.
+ 
+Srdačno,
+{$editorialContactSignature}</field>
+			<field name="description">Ovim obrascem e-pošte urednik rubrike podsjeća recenzenta da rok za izradu recenzije istekao.</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEW_REMIND_ONECLICK</field>
+			<field name="subject">Podsjetnik za predaju Recenzije</field>
+			<field name="body">{$reviewerName}:
+
+Željeli bismo vas samo podsjetiti da je rok koji smo dogovorili za recenziju članka, "{$articleTitle}," za časopis {$journalName} istekao {$reviewDueDate}. Bilo bi nam izuzetno drago ukoliko biste recenziju završili i predali čim je prije moguće.
+
+URL članka: {$submissionReviewUrl}
+
+Molimo vas da potvrdite da ste u mogućnosti privesti kraju ovaj ključan doprinos radu časopisa. Nadamo se skorom odgovoru.
+ 
+{$editorialContactSignature}</field>
+			<field name="description">Ovu e-poštu je poslao urednik rubrike da podsjeti recenzenta da je njegova recenzija dospjela.</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEW_REMIND_AUTO</field>
+			<field name="subject">Automatski podsjetnik za predaju recenzije</field>
+			<field name="body">Poštovana/i {$reviewerName},
+
+željeli bismo vas samo podsjetiti da je rok koji smo dogovorili za recenziju članka "{$articleTitle}" za časopis {$journalName} istekao. Nadali smo se da će recenzija biti gotova do {$reviewDueDate}. Ova poruka se automatski šalje nakon prolaska tog datuma. Molimo vas da nam recenziju pošaljete u najskorijem roku.
+
+U slučaju da nemate pri ruci svoje korisničko ime ili lozinku za mrežnu stranicu časopisa, možete se koristiti ovom poveznicom kako biste promijenili lozinku (koju ćemo vam tada, zajedno s korisničkim imenom, poslati putem e-pošte). {$passwordResetUrl}
+
+URL članka: {$submissionReviewUrl}
+
+Molimo vas da nas izvijestite u kojem ste roku u mogućnosti izraditi recenziju. Nadamo se skorom odgovoru.
+ 
+Srdačno,
+{$editorialContactSignature}</field>
+			<field name="description">Ovaj se obrazac e-pošte automatski šalje recenzentu kada datum naveden kao rok za izradu recenzije istekao (pogledajte Opcije recenzije unutar Postavljanja časopisa, 2. korak), a recenzentu nije omogućen pristup jednim klikom. Za ovu funkciju Raspoređeni zadaci moraju biti aktivirani i namješteni (pogledajte konfiguracijsku datoteku stranice).</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEW_REMIND_AUTO_ONECLICK</field>
+			<field name="subject">Automatski podsjetnik za predaju recenzije</field>
+			<field name="body">Poštovana/i {$reviewerName},
+
+željeli bismo vas samo podsjetiti da je rok koji smo dogovorili za recenziju članka "{$articleTitle}" za časopis {$journalName} istekao {$reviewDueDate}. Bilo bi nam izuzetno drago ukoliko biste recenziju završili i predali čim je prije moguće.
+
+URL članka: {$submissionReviewUrl}
+
+Molimo vas da potvrdite da ste u mogućnosti privesti kraju ovaj ključan doprinos radu časopisa. Nadamo se skorom odgovoru.
+ 
+Srdačno,
+{$editorialContactSignature}</field>
+			<field name="description">Ovim obrascem e-pošte urednik rubrike podsjeća recenzenta da rok za izradu recenzije istekao. Obrazac se koristi ukoliko je recenzentu je omogućen pristup jednim klikom.</field>
+		</row>
+
+
+		<!--
+		  *
+		  * Editor Review
+		  *
+		  -->
+		<row>
+			<field name="email_key">EDITOR_REVIEW</field>
+			<field name="subject">Ishod recenzije članka</field>
+			<field name="body">Poštovana/i {$authorName},
+
+upravo smo završili recenzijski postupak vašeg rada "{$articleTitle}" te donijeli sljedeću odluku:
+
+{$comments}.
+
+Opširnije komentare urednika i recenzenata možete pročitati ukoliko se prijavite kao autor na mrežne stranice časopisa:
+
+
+URL priloga: {$submissionUrl}
+Korisničko ime: {$authorUsername}
+
+U slučaju da imate bilo kakvih dodatnih pitanja, molimo vas da nam se obratite.
+
+Srdačno,
+{$editorialContactSignature}</field>
+			<field name="description">Ovim obrascem e-pošte urednik rubrike obavještava autora prijave da je donesena odluka u pogledu recenzije članka.</field>
+		</row>
+		<row>
+			<field name="email_key">COPYEDIT_REQUEST</field>
+			<field name="subject">Zamolba za lekturu</field>
+			<field name="body">Poštovana/i {$copyeditorName},
+
+željeli bismo vas zamoliti da prihvatite lekturu rukopisa "{$articleTitle}" za časopis {$journalName}. Prijavljeni rukopis, kao i upute za lektoriranje možete pronaći na mrežnim stranicama časopisa.
+
+URL rukopisa: {$submissionCopyeditingUrl}
+Korisničko ime: {$copyeditorUsername}
+
+U slučaju da trenutačno niste u mogućnosti preuzeti lekturu ili da imate bilo kakvih dodatnih pitanja, molimo vas da nam se obratite.
+
+Srdačno,
+{$editorialContactSignature}
+</field>
+			<field name="description">Ovim obrascem e-pošte urednik rubrike šalje lektoru zamolbu da započne s lekturom priloga. Poruka pruža osnovne informacije o prilogu i kako mu pristupiti.</field>
+		</row>
+		<row>
+			<field name="email_key">COPYEDIT_COMPLETE</field>
+			<field name="subject">Napravljena lektura</field>
+			<field name="body">Poštovana/i {$editorialContactName},
+
+prvi krug lekture rukopisa "{$articleTitle}" za časopis {$journalName} je završen. Rukopis je sada spreman da autor i urednik na njemu izvrše pregled promjena i upita. 
+
+Srdačno,
+{$copyeditorName}</field>
+		</row>
+		<row>
+			<field name="email_key">COPYEDIT_ACK</field>
+			<field name="subject">Zaprimljena lektura</field>
+			<field name="body">Poštovana/i {$copyeditorName},
+
+hvala vam što ste izvršili lekturu rukopisa "{$articleTitle}" za časopis {$journalName}. 
+
+Srdačno,
+{$editorialContactSignature}
+</field>
+			<field name="description">Ovim obrascem e-pošte urednik rubrike potvrđuje lektoru primitak lekture.</field>
+		</row>
+		<row>
+			<field name="email_key">COPYEDIT_AUTHOR_REQUEST</field>
+			<field name="subject">Zamolba za pregled lekture</field>
+			<field name="body">Poštovana/i {$authorName},
+
+upravo smo napravili lekturu vašeg priloga "{$articleTitle}" za časopis {$journalName}. Kako biste pregledali predložene promjene i odgovorili na eventualne upite, molimo vas da otiđete na mrežnu stranicu časopisa koristeći se dolje navedenom poveznicom. Učitajte i otvorite datoteku s inicijalnom lekturom. Nakon što ste pregledali lekturu, u korisničkom sučelju datoteku s vašim ispravcima i komentarima priložite pod Korak 2 i odabirom opcije ZAVRŠENO obavijestite o tome uredništvo slanjem obrasca e-pošte.
+
+Ovo je posljednja prilika da izvršite neke promjene u vašem prilogu. Tekst ćete moći još jednom pregledati u fazi korekture, međutim u toj fazi mogu se ispravljati samo manje tiskarske pogreške i pogreške u prijelomu.
+
+URL rukopisa: {$submissionCopyeditingUrl}
+Korisničko ime: {$authorUsername}
+ 
+U slučaju da trenutačno niste u mogućnosti pregledati svoj prilog ili ako imate bilo kakvih dodatnih upita, molimo vas da nam se obratite. 
+
+Srdačno,
+{$editorialContactSignature}
+</field>
+			<field name="description">Ovim obrascem e-pošte urednik rubrike šalje autoru priloga zamolbu za pregled lekture. U poruci se autora upućuje kako može pristupiti svojem rukopisu te ga se informira da je to posljednja mogućnost da napravi neke promjene u tekstu.</field>
+		</row>
+		<row>
+			<field name="email_key">COPYEDIT_AUTHOR_COMPLETE</field>
+			<field name="subject">Napravljen pregled lekture</field>
+			<field name="body">Poštovana/i {$editorialContactName},
+
+pregled lekture rukopisa "{$articleTitle}" za časopis {$journalName} je završen, te je rukopis spreman za završni krug lekture i pripremu prijeloma.
+
+Srdačno,
+{$authorName}
+</field>
+			<field name="description">Ovim obrascem e-pošte autor obavještava urednika rubrike da je autorski pregled lekture završen.</field>
+		</row>
+		<row>
+			<field name="email_key">COPYEDIT_AUTHOR_ACK</field>
+			<field name="subject">Zaprimljen pregled lekture</field>
+			<field name="body">Poštovana/i {$authorName},
+
+hvala vam što ste pregledali lekturu vašeg rukopisa "{$articleTitle}" za časopis {$journalName}. Bit će nam zadovoljstvo objaviti ovaj prilog.
+
+Srdačno,
+{$editorialContactSignature}
+</field>
+			<field name="description">Ovim obrascem e-pošte urednik rubrike potvrđuje autoru primitak autorove lekture.</field>
+		</row>
+		<row>
+			<field name="email_key">COPYEDIT_FINAL_REQUEST</field>
+			<field name="subject">Zamolba za završnu lekturu</field>
+			<field name="body">Poštovana/i {$copyeditorName},
+
+autor i urednik učinili su pregled lekture rukopisa "{$articleTitle}" za časopis {$journalName}. Temeljem priloženih napomena molim vas da izradite konačnu, "čistu verziju", koja će biti upućena u prijelom.
+
+URL rukopisa: {$submissionCopyeditingUrl}
+Korisničko ime: {$copyeditorUsername}	
+
+Srdačno,
+{$editorialContactSignature}</field>
+			<field name="description">Ovim obrascem e-pošte urednik rubrike od lektora zahtijeva provođenje zadnjeg kruga lekture priloga prije prosljeđivanja rukopisa u postupak prijeloma.</field>
+		</row>
+		<row>
+			<field name="email_key">COPYEDIT_FINAL_COMPLETE</field>
+			<field name="subject">Napravljena završna lektura</field>
+			<field name="body">Poštovana/i {$editorialContactName},
+
+pripremio/la sam čistu, lektoriranu verziju rukopisa "{$articleTitle}" za časopis {$journalName}. Rukopis je sada spreman za pripremu prijeloma.
+
+Srdačno,
+{$copyeditorName}</field>
+			<field name="description">Ovim obrascem e-pošte lektor obavještava  urednika rubrike da je zadnji krug postupka lekture završen i da postupak prijeloma može početi.</field>
+		</row>
+		<row>
+			<field name="email_key">COPYEDIT_FINAL_ACK</field>
+			<field name="subject">Zaprimljena završna lektura</field>
+			<field name="body">Poštovana/i {$copyeditorName},
+
+hvala vam što ste završili lekturu rukopisa "{$articleTitle}" za časopis {$journalName}. 
+
+Srdačno,
+{$editorialContactSignature}</field>
+			<field name="description">Ovim obrascem e-pošte urednik rubrike potvrđuje  lektoru  završetak zadnjeg kruga lekture.</field>
+		</row>
+
+
+		<!--
+		  *
+		  * Layout Editing
+		  *
+		  -->
+		<row>
+			<field name="email_key">LAYOUT_REQUEST</field>
+			<field name="subject">Zamolba za prijelom</field>
+			<field name="body">Poštovana/i {$layoutEditorName},
+
+molim vas da pripremite prijelom priloga "{$articleTitle}" za časopis {$journalName}.
+
+URL rukopisa: {$submissionLayoutUrl}
+Korisničko ime: {$layoutEditorUsername}
+
+U slučaju da trenutačno niste u mogućnosti preuzeti ovu obavezu ili ako imate bilo kakvih dodatnih pitanja, molim vas da mi se obratite.
+ 
+Srdačno,
+{$editorialContactSignature}</field>
+			<field name="description">Ovim obrascem e-pošte urednik rubrike obavještava grafičkog urednika da mu je dodijeljen zadatak  izrade prijeloma priloga.</field>
+		</row>
+		<row>
+			<field name="email_key">LAYOUT_COMPLETE</field>
+			<field name="subject">Napravljen prijelom</field>
+			<field name="body">Poštovana/i {$editorialContactName},
+
+prijelom priloga "{$articleTitle}" za časopis {$journalName} je završen te spreman za korekturu. 
+U slučaju da imate bilo kakvih pitanja molim vas da mi se obratite.
+
+Srdačno,
+{$layoutEditorName}
+</field>
+			<field name="description">Ova e-pošta urednika prijeloma uredniku rubrike obaviještava da je proces prijeloma završen.</field>
+		</row>
+		<row>
+			<field name="email_key">LAYOUT_ACK</field>
+			<field name="subject">Zaprimljen prijelom</field>
+			<field name="body">Poštovana/i {$layoutEditorName},
+
+zahvaljujem vam što ste pripremili prijelom priloga "{$articleTitle}" za časopis {$journalName}.
+
+Srdačno,
+{$editorialContactSignature}</field>
+			<field name="description">Ovim obrascem e-pošte grafički urednik obavještava urednika rubrike da je postupak prijeloma završen.</field>
+		</row>
+
+
+		<!--
+		  *
+		  * Proofreading
+		  *
+		  -->
+		<row>
+			<field name="email_key">PROOFREAD_AUTHOR_REQUEST</field>
+			<field name="subject">Zahtjev za korekturu (Autor)</field>
+			<field name="body">Poštovana/i {$authorName},
+
+molimo vas da izvršite korekturu prijeloma vašeg priloga "{$articleTitle}" za časopis {$journalName}. Kako biste pristupili radnom primjerku prijeloma, molimo vas da otiđete na mrežnu stranicu časopisa koristeći se poveznicom koja se nalazi u nastavku teksta. Koristite poveznicu VIEW PROOF kako biste pregledali postoje li tiskarske pogreške i greške u prijelomu u tekstu oblikovanom za objavljivanje. Ispravke zabilježite unutar okvira Korektorski ispravci, koristeći se priloženim uputama za ispravke.
+
+URL Rukopisa: {$submissionUrl}
+Korisničko ime: {$authorUsername}
+
+U slučaju da trenutačno niste u mogućnosti izraditi korekturu svog priloga ili ako imate bilo kakvih dodatnih pitanja, molim vas da nam se obratite.
+
+Srdačno,
+{$editorialContactSignature}</field>
+			<field name="description">Ovim obrascem e-pošte urednik rubrike obavještava autora da je prijelom članka spreman za korekturu. Poruka uključuje informacije o članku i kako mu pristupiti.</field>
+		</row>
+		<row>
+			<field name="email_key">PROOFREAD_AUTHOR_COMPLETE</field>
+			<field name="subject">Napravljena korektura (Autor)</field>
+			<field name="body">Poštovana/i {$editorialContactName},
+
+korektura prijeloma mog priloga "{$articleTitle}" za časopis {$journalName} je napravljena. Prijelom je sada spreman za završne ispravke korektora. 
+
+Srdačno,
+{$authorName}</field>
+			<field name="description">Ovim obrascem e-pošte autor obavještava korektora i urednika završio autorsku korekturu. Autorski ispravci mogu se pronaći u komentarima članka.</field>
+		</row>
+		<row>
+			<field name="email_key">PROOFREAD_AUTHOR_ACK</field>
+			<field name="subject">Zaprimljena korektura (Autor)</field>
+			<field name="body">Poštovana/i {$authorName},
+
+zahvaljujemo vam na korekturi prijeloma vašeg priloga "{$articleTitle}" za časopis {$journalName}. Bit će nam zadovoljstvo uskoro objaviti vaš rad.
+
+Ako se predbilježite za naš sustav obavještavanja, dobivat ćete e-poštu sadržaja broja čim se on objavi. U slučaju da imate bilo kakva dodatna pitanja, molimo vas da nam se obratite.
+
+Srdačno,
+{$editorialContactSignature}</field>
+			<field name="description">Ovim obrascem e-pošte urednik rubrike potvrđuje autoru primitak korekture.</field>
+		</row>
+		<row>
+			<field name="email_key">PROOFREAD_REQUEST</field>
+			<field name="subject">Zamolba za korekturu</field>
+			<field name="body">Poštovana/i {$proofreaderName},
+
+molim vas da izvršite korekturu prijeloma priloga "{$articleTitle}" za časopis {$journalName}. 
+
+URL Rukopisa: {$submissionUrl}
+Korisničko ime: {$proofreaderUsername}
+
+U slučaju da trenutačno niste u mogućnosti preuzeti ovu korekturu ili u slučaju da imate bilo kakvih pitanja, molimo vas da nam se obratite.
+
+Srdačno,
+{$editorialContactSignature}</field>
+			<field name="description">Ovim obrascem e-pošte urednik rubrike šalje korektoru zamolbu za korekturu prijeloma članka. Poruka daje osnovne informacije o članku i kako mu pristupiti.</field>
+		</row>
+		<row>
+			<field name="email_key">PROOFREAD_COMPLETE</field>
+			<field name="subject">Napravljena korektura</field>
+			<field name="body">Poštovana/i {$editorialContactName},
+
+korektura prijeloma priloga "{$articleTitle}" za časopis {$journalName} je napravljena. Prijelom je spreman za unos završnih ispravaka od strane grafičkog urednika.
+
+Srdačno,
+{$proofreaderName}</field>
+			<field name="description">Ovim obrascem e-pošte korektor obavještava urednika rubrike da je završio postupak korekture.</field>
+		</row>
+		<row>
+			<field name="email_key">PROOFREAD_ACK</field>
+			<field name="subject">Zaprimljena korektura</field>
+			<field name="body">Poštovana/i {$proofreaderName},
+
+zahvaljujem vam na korekturi prijeloma priloga "{$articleTitle}" za časopis {$journalName}. 
+ 
+Srdačno,
+{$editorialContactSignature}</field>
+			<field name="description">Ovim obrascem e-pošte urednik rubrike potvrđuje korektoru zaprimanje korekture.</field>
+		</row>
+		<row>
+			<field name="email_key">PROOFREAD_LAYOUT_REQUEST</field>
+			<field name="subject">Zamolba za unos korekture (grafički urednik)</field>
+			<field name="body">Poštovana/i {$layoutEditorName},
+
+molimo vas da izvršite potrebne ispravke u prijelomu priloga "{$articleTitle}" za časopis {$journalName} u skladu s priloženim korekturama.
+
+URL priloga: {$submissionUrl}
+Korisničko ime: {$layoutEditorUsername}
+
+U slučaju da trenutačno niste u mogućnosti izvršiti ove unose ili ako imate bilo kakva dodatna pitanja, molimo vas da nam se obratite. 
+
+Srdačno,
+{$editorialContactSignature}</field>
+			<field name="description">Ovim obrascem e-pošte urednik rubrike obavještava grafičkog urednika da su korekture inicijalnog prijeloma članka izrađene i spremne za unos. Poruka daje osnovne informacije o članku i kako mu pristupiti.</field>
+		</row>
+		<row>
+			<field name="email_key">PROOFREAD_LAYOUT_COMPLETE</field>
+			<field name="subject">Napravljena korektura (grafički urednik)</field>
+			<field name="body">Poštovana/i {$editorialContactName},
+
+prijelom priloga "{$articleTitle}" za časopis {$journalName} ispravljen je prema priloženim korektorskim uputama. Članak je sada spreman za objavljivanje.
+
+Srdačno,
+{$layoutEditorName}</field>
+			<field name="description">Ovim obrascem e-pošte grafički urednik obavještava urednika rubrike da je unos korekture završen i da je članak spreman za objavljivanje.</field>
+		</row>
+		<row>
+			<field name="email_key">PROOFREAD_LAYOUT_ACK</field>
+			<field name="subject">Zaprimljena korektura (grafički urednik)</field>
+			<field name="body">Poštovana/i {$layoutEditorName},
+
+hvala vam što ste završili unos korektura u prijelom priloga "{$articleTitle}" za časopis {$journalName}.
+
+Srdačno,
+{$editorialContactSignature}</field>
+			<field name="description">Ovim obrascem e-pošte urednik rubrike potvrđuje grafičkom uredniku da je zaprimio prijelom sa unesenim  korekturama.</field>
+		</row>
+		<row>
+			<field name="email_key">EMAIL_LINK</field>
+			<field name="subject">Potencijalno zanimljiv članak</field>
+			<field name="body">Skrećem vam pozornost na članak "{$articleTitle}" autora {$authorName} koji je objavljen u godištu {$volume}, broju {$number} ({$year}) časopisa {$journalName}, a može se naći na "{$articleUrl}".</field>
+			<field name="description">Ovaj obrazac e-pošte omogućuje registriranom čitatelju da šalje informaciju o članku nekome tko je zainteresiran. Ovaj je obrazac dostupan putem alata za čitanje i njegovu upotrebu mora aktivirati glavni urednik unutar postavki alata za čitanje među postavkama časopisa.</field>
+		</row>
+
+
+		<!--
+		  *
+		  * Subscriptions 
+		  *
+		  -->
+		<row>
+			<field name="email_key">SUBSCRIPTION_NOTIFY</field>
+			<field name="subject">Obavijest o pretplati</field>
+			<field name="body">Poštovana/i {$subscriberName},
+
+upravo smo vas u našem e-sustavu za uređivanje časopisa evidentirali kao pretplatnika časopisa {$journalName}. Tip vaše pretplate je:
+
+{$subscriptionType}
+
+Kako biste pristupili sadržaju koji je raspoloživ isključivo za pretplatnike, sve što trebate učiniti je prijaviti se u sustav uz pomoć vašeg korisničkog imena "{$username}".
+
+Nakon što ste se prijavili u sustav, možete u bilo kojem trenutku promijeniti detalje svog profila ili lozinku.
+
+Molimo vas da uzmete u obzir da u slučaju da koristite institucionalnu pretplatu nije potrebno da se korisnici pri vašoj instituciji registriraju, budući da će sustav automatski autorizirati zahtjeve za pretplatnički sadržaj koji dolaze s mrežnih adresa vaše institucije.
+
+Molimo vas da nam se obratite u slučaju da imate bilo kakva dodatna pitanja.
+
+Srdačno,
+{$subscriptionContactSignature}</field>
+			<field name="description">Ovim se obrascem e-pošte obavještavaju pretplatnici o aktivaciji njihove pretplate . Poruka sadrži URL časopisa i upute za pristup.</field>
+		</row>
+		<row>
+			<field name="email_key">OPEN_ACCESS_NOTIFY</field>
+			<field name="subject">Broj dostupan pod uvjetima otvorenog pristupa</field>
+			<field name="body">Ovaj broj časopisa {$journalName} od sada je u cijelosti dostupan svim čitateljima pod uvjetima otvorenog pristupa. Pozivamo vas da pregledate kazalo sadržaja i potom posjetite našu mrežnu stranicu ({$journalUrl}) gdje možete bez ograničenja pregledati sve članke i priloge koji vas zanimaju.
+
+Hvala vam na zanimanju za naš rad,
+{$editorialContactSignature}</field>
+			<field name="description">Ovaj obrazac e-pošte šalje se registriranim čitateljima koji su zatražili primanje obavijesti e-poštom kada broj časopisa postane dostupan pod uvjetima otvorenog pristupa.</field>
+		</row>
+		<row>
+			<field name="email_key">SUBSCRIPTION_BEFORE_EXPIRY</field>
+			<field name="subject">Obavijest o isteku pretplate</field>
+			<field name="body">{$subscriberName},
+
+vaša pretplata na časopis {$journalName} uskoro ističe.
+
+{$subscriptionType}
+Datum isteka: {$expiryDate}
+
+Kako biste osigurali kontinuitet pristupa sadržaju ovog časopisa, molimo da posjetite mrežnu stranicu časopisa i obnovite vašu pretplatu. U sustav se možete prijaviti koristeći vaše korisničko ime "{$username}".
+
+U slučaju da imate bilo kakvih dodatnih pitanja, molimo vas da nam se obratite.
+
+Srdačno,
+{$subscriptionContactSignature}</field>
+			<field name="description">Ovim se obrascem e-pošte obavještavaju pretplatnici da će njihova pretplata uskoro isteći. Poruka sadrži URL časopisa i upute za pristup.</field>
+		</row>
+		<row>
+			<field name="email_key">SUBSCRIPTION_AFTER_EXPIRY</field>
+			<field name="subject">Vaša pretplata je istekla</field>
+			<field name="body">{$subscriberName},
+
+vaša pretplata na časopis {$journalName} je istekla.
+
+{$subscriptionType}
+Datum isteka: {$expiryDate}
+
+Kako biste obnovili vašu pretplatu posjetite mrežnu stranicu časopisa. U sustav se možete prijaviti koristeći vaše korisničko ime "{$username}".
+
+U slučaju da imate bilo kakvih dodatnih pitanja, molimo vas da nam se obratite.
+
+Srdačno,
+{$subscriptionContactSignature}
+</field>
+			<field name="description">Ovim se obrascem e-pošte obavještavaju pretplatnici da je njihova pretplata istekla. Poruka sadrži URL časopisa i upute za pristup.</field>
+		</row>
+		<row>
+			<field name="email_key">SUBSCRIPTION_AFTER_EXPIRY_LAST</field>
+			<field name="subject">Vaša pretplata je istekla - Posljednji podsjetnik</field>
+			<field name="body">{$subscriberName},
+
+vaša pretplata na časopis {$journalName} je istekla.
+Ovo je posljednji podsjetnik koji će vam biti poslan e-poštom.
+
+{$subscriptionType}
+Datum isteka: {$expiryDate}
+
+Kako biste obnovili vašu pretplatu, posjetite mrežnu stranicu časopisa. U sustav se možete prijaviti koristeći vaše korisničko ime "{$username}".
+
+U slučaju da imate bilo kakvih dodatnih pitanja, molimo vas da nam se obratite.
+
+Srdačno,
+{$subscriptionContactSignature}</field>
+			<field name="description">Ovim se obrascem e-pošte obavještavaju pretplatnici da je njihova pretplata istekla. Poruka sadrži URL časopisa i upute za pristup.</field>
+		</row>
+	</table>
+</data>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the hr_HR (hrvatski) locale.
+  *
+  * $Id: locale.xml,v 1.2 Teo Matkovic (teo.matkovic@pravo.hr), 
+  * Marija Matesic(mmatesi1@ffzg.hr), Tomislav Biscan (info@seofruits.com.hr) Exp $
+  -->
+ 
+<locale name="hr_HR" full_name="hrvatski">
+	<message key="plugins.importexport.crossref.displayName">Dodatak za CrossRef XML iznošenje</message>
+	<message key="plugins.importexport.crossref.description">Koristi se za iznošenje metapodataka članaka u CrossRef XML formatu.</message>
+	
+	<message key="plugins.importexport.crossref.export">Iznošenje podataka</message>
+	<message key="plugins.importexport.crossref.export.issues">Iznošenje brojeva</message>
+	<message key="plugins.importexport.crossref.export.selectIssue">Odaberite broj za iznošenje.</message>
+	<message key="plugins.importexport.crossref.export.articles">Iznošenje članaka</message>
+	<message key="plugins.importexport.crossref.export.selectArticle">Odaberite članke za iznošenje.</message>
+	
+	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[Primjena: 
+{$scriptName} {$pluginName} [xmlNazivDatoteke] [putanja_časopisa] članci [članakId1] [članakId2] ...
+{$scriptName} {$pluginName} [xmlNazivDatoteke] [putanja_časopisa] broj [brojId]
+]]></message>
+	<message key="plugins.importexport.crossref.cliError">POGREŠKA:</message>
+
+	<message key="plugins.importexport.crossref.export.error.issueNotFound">Nijedan broj ne odgovara navedenom ID-u ({$issueId}).</message>
+	<message key="plugins.importexport.crossref.export.error.articleNotFound">Nijedan članak ne odgovara navedenom ID-u 
+	 ({$articleId}).</message>
+
+	<message key="plugins.importexport.crossref.errors.noDOIprefix">Kako biste mogli koristiti ovaj funkcionalan dodatak sustava, morate navesti ispravan DOI prefiks u prvom koraku "uređivanja postavki časopisa".</message>
+</locale>

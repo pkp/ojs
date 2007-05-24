@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the hr_HR (hrvatski) locale.
+  *
+  * $Id: locale.xml,v 1.5 Teo Matkovic (teo.matkovic@pravo.hr), 
+  * Marija Matesic(mmatesi1@ffzg.hr), Tomislav Biscan (info@seofruits.com.hr) Exp $
+  -->
+ 
+<locale name="hr_HR" full_name="hrvatski">
+	<message key="plugins.importexport.erudit.displayName">Dodatak za Erudit iznošenje članaka</message>
+	<message key="plugins.importexport.erudit.description">Iznesite članke koristeći engleski Erudit DTD.</message>
+
+	<message key="plugins.importexport.erudit.cliUsage"><![CDATA[Primjena: {$scriptName} {$pluginName} [nazivXmlDatoteke] [putanjaČasopisa] [članakId] [nazivPrijeloma]
+]]></message>
+	<message key="plugins.importexport.erudit.export">Iznošenje podataka</message>
+	<message key="plugins.importexport.erudit.export.issues">Iznošenje brojeva</message>
+	<message key="plugins.importexport.erudit.export.sections">Iznošenje rubrika</message>
+	<message key="plugins.importexport.erudit.export.articles">Iznošenje članaka</message>
+
+	<message key="plugins.importexport.erudit.selectIssue">Odaberite broj</message>
+	<message key="plugins.importexport.erudit.selectArticle">Odaberite članak</message>
+
+	<message key="plugins.importexport.erudit.cliError">POGREŠKA:</message>
+	<message key="plugins.importexport.erudit.error.unknownJournal">Navedena putanja časopisa "{$journalPath}" ne postoji.</message>
+	<message key="plugins.importexport.erudit.export.error.couldNotWrite">Nije moguće pisati po datoteci "{$fileName}".</message>
+	<message key="plugins.importexport.erudit.export.error.articleNotFound">Nijedan članak ne odgovara navedenom ID-u 
+	 ({$articleId}).</message>
+	<message key="plugins.importexport.erudit.export.error.galleyNotFound">Nijedan prijelom ne odgovara navedenom nazivu "{$galleyLabel}".</message>
+
+	<message key="plugins.importexport.erudit.unavailable">Nedostupno</message>
+</locale>

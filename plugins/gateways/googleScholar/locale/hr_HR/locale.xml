@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the hr_HR (hrvatski) locale.
+  *
+  * $Id: locale.xml,v 1.3 2007/04/22 20:26:17 Teo Matkovic (teo.matkovic@pravo.hr), 
+  * Marija Matesic(mmatesi1@ffzg.hr), Tomislav Biscan (info@seofruits.com.hr) Exp $
+  -->
+ 
+<locale name="hr_HR" full_name="hrvatski">
+	<message key="plugins.gateways.googleScholar.displayName">Dodatak za Google Scholar poveznik</message>
+	<message key="plugins.gateways.googleScholar.description">Ovaj dodatak omogućuje trenutni pristup podacima ovoga časopisa Google Schoolar-u i tako omogućuje indeksiranje i pretraživanje njegovog sadržaja.</message>
+	<message key="plugins.gateways.googleScholar.settings">Postavke</message>
+	<message key="plugins.gateways.googleScholar.settings.description"><![CDATA[<p>Dodatak za Google Scholar poveznik omogućava Google Scholar sakupljaču pristup podacima o sadržaju bilo kojeg časopisa na sustavu koji aktivira ovaj dodatak. Kada je ovaj dodatak aktiviran, dokument direktorija (tzv.informacija o izdavaču) bit će dostupan na <span class="highlight">{$directoryUrl}</span>.</p>
+<p>Google Scholar zahtijeva određene informacije koje su neobavezne u OJS-u. Provjerite odgovaraju li Vaši podaci  zahtjevima Google Scholar-a klikom na gumb "provjeri podatke".</p>]]></message>
+	<message key="plugins.gateways.googleScholar.checkData">Provjeri podatke</message>
+	<message key="plugins.gateways.googleScholar.errors">Poruke o pogrešci</message>
+	<message key="plugins.gateways.googleScholar.errors.noErrors">Nema pogrešaka</message>
+
+	<message key="plugins.gateways.googleScholar.settings.publisherName">Naziv izdavača</message>
+	<message key="plugins.gateways.googleScholar.settings.publisherLocation">Mjesto izdanja</message>
+	<message key="plugins.gateways.googleScholar.settings.publisherResultName">Rezultati za naziv izdavača</message>
+	<message key="plugins.gateways.googleScholar.settings.contact">E-pošta kontakta</message>
+	<message key="plugins.gateways.googleScholar.settings.addContact">Dodaj e-poštu kontakta</message>
+
+	<!-- Error message -->
+	<message key="plugins.gateways.googleScholar.errors.noPublisherName">Naziv izdavača nije unesen.Ovo polje je obavezno.</message>
+	<message key="plugins.gateways.googleScholar.errors.noContacts">E- pošte kontakata nisu unesene ili su nevažeće. Najmanje jedna mora biti unesena, a sve moraju biti važeće.</message>
+	<message key="plugins.gateways.googleScholar.errors.noIssn">ISSN časopisa nije unesen. Pogledajte postavke časopisa, 1.korak</message>
+	<message key="plugins.gateways.googleScholar.errors.errorMessage">Onemogućeno je iznošenje podataka za Google Scholar. Dodatak za iznošenje podataka na Google Scholar mora biti adekvatno konfiguriran. Za specifičnu informaciju o problemu, kao glavni urednik aktivirajte opciju "provjeri podatke".</message>
+</locale>

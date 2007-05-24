@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the hr_HR (hrvatski) locale.
+  *
+  * $Id: locale.xml,v 1.3 Teo Matkovic (teo.matkovic@pravo.hr), 
+  * Marija Matesic(mmatesi1@ffzg.hr), Tomislav Biscan (info@seofruits.com.hr) Exp $
+  -->
+ 
+<locale name="hr_HR" full_name="hrvatski">
+	<message key="plugins.importexport.sample.displayName">Primjer dodatka za unošenje/iznošenje</message>
+	<message key="plugins.importexport.sample.description">Ovaj funkcionalan dodatak predstavlja primjer implementacije koji se može koristiti prilikom razvijanja dodataka za unošenje/iznošenje. Sam po sebi nije koristan.</message>
+
+	<message key="plugins.importexport.sample.selectIssue.short">Odaberite broj</message>
+	<message key="plugins.importexport.sample.selectIssue.long">Odaberite broj koji želite iznijeti.</message>
+</locale>
