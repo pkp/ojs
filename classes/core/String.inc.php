@@ -289,7 +289,7 @@ class String {
 
 	/**
 	 * Convert UTF-8 encoded characters in a string to escaped HTML entities
-	 * This is a helper function for transcoding HTML (perhaps move to core?)
+	 * This is a helper function for transcoding into HTML
 	 * @param $input string input string
 	 * @return string
 	 */
@@ -298,39 +298,173 @@ class String {
 		$max = strlen($str);
 		$last = 0;  // keeps the index of the last regular character
 		
-   for ($i=0; $i<$max; $i++) {
-       $c = $str{$i};
-       $c1 = ord($c);
-       if ($c1>>5 == 6) {  // 110x xxxx, 110 prefix for 2 bytes unicode
-           $ret .= substr($str, $last, $i-$last); // append all the regular characters we've passed
-           $c1 &= 31; // remove the 3 bit two bytes prefix
-           $c2 = ord($str{++$i}); // the next byte
-           $c2 &= 63;  // remove the 2 bit trailing byte prefix
-           $c2 |= (($c1 & 3) << 6); // last 2 bits of c1 become first 2 of c2
-           $c1 >>= 2; // c1 shifts 2 to the right
-           $ret .= "&#" . ($c1 * 0x100 + $c2) . ";"; // this is the fastest string concatenation
-           $last = $i+1;     
-       }
-       elseif ($c1>>4 == 14) {  // 1110 xxxx, 110 prefix for 3 bytes unicode
-           $ret .= substr($str, $last, $i-$last); // append all the regular characters we've passed
-           $c2 = ord($str{++$i}); // the next byte
-           $c3 = ord($str{++$i}); // the third byte
-           $c1 &= 15; // remove the 4 bit three bytes prefix
-           $c2 &= 63;  // remove the 2 bit trailing byte prefix
-           $c3 &= 63;  // remove the 2 bit trailing byte prefix
-           $c3 |= (($c2 & 3) << 6); // last 2 bits of c2 become first 2 of c3
-           $c2 >>=2; //c2 shifts 2 to the right
-           $c2 |= (($c1 & 15) << 4); // last 4 bits of c1 become first 4 of c2
-           $c1 >>= 4; // c1 shifts 4 to the right
-           $ret .= '&#' . (($c1 * 0x10000) + ($c2 * 0x100) + $c3) . ';'; // this is the fastest string concatenation
-           $last = $i+1;     
-       }
-   }
+	   for ($i=0; $i<$max; $i++) {
+	       $c = $str{$i};
+	       $c1 = ord($c);
+    	   if ($c1>>5 == 6) {  // 110x xxxx, 110 prefix for 2 bytes unicode
+        	   $ret .= substr($str, $last, $i-$last); // append all the regular characters we've passed
+	           $c1 &= 31; // remove the 3 bit two bytes prefix
+    	       $c2 = ord($str{++$i}); // the next byte
+        	   $c2 &= 63;  // remove the 2 bit trailing byte prefix
+				$c2 |= (($c1 & 3) << 6); // last 2 bits of c1 become first 2 of c2
+	           $c1 >>= 2; // c1 shifts 2 to the right
+	           $ret .= "&#" . ($c1 * 0x100 + $c2) . ";"; // this is the fastest string concatenation
+	           $last = $i+1;     
+			}
+			elseif ($c1>>4 == 14) {  // 1110 xxxx, 110 prefix for 3 bytes unicode
+				$ret .= substr($str, $last, $i-$last); // append all the regular characters we've passed
+           		$c2 = ord($str{++$i}); // the next byte
+           		$c3 = ord($str{++$i}); // the third byte
+           		$c1 &= 15; // remove the 4 bit three bytes prefix
+           		$c2 &= 63;  // remove the 2 bit trailing byte prefix
+           		$c3 &= 63;  // remove the 2 bit trailing byte prefix
+           		$c3 |= (($c2 & 3) << 6); // last 2 bits of c2 become first 2 of c3
+           		$c2 >>=2; //c2 shifts 2 to the right
+           		$c2 |= (($c1 & 15) << 4); // last 4 bits of c1 become first 4 of c2
+           		$c1 >>= 4; // c1 shifts 4 to the right
+           		$ret .= '&#' . (($c1 * 0x10000) + ($c2 * 0x100) + $c3) . ';'; // this is the fastest string concatenation
+           		$last = $i+1;     
+       		}
+   		}
 		$str=$ret . substr($str, $last, $i); // append the last batch of regular characters
 
 		return $str;   
 	}
 
-}
+	/**
+	 * Returns the UTF-8 string corresponding to the unicode value
+	 * Does not require any multibyte PHP libraries
+	 * (from php.net, courtesy - romans@void.lv)
+	 * @param $input string input string
+	 * @return boolean
+	 */
+	function code2utf($num) {
+		if ($num < 128) return chr($num);
+		if ($num < 2048) return chr(($num >> 6) + 192) . chr(($num & 63) + 128);
+		if ($num < 65536) return chr(($num >> 12) + 224) . chr((($num >> 6) & 63) + 128) . chr(($num & 63) + 128);
+		if ($num < 2097152) return chr(($num >> 18) + 240) . chr((($num >> 12) & 63) + 128) . chr((($num >> 6) & 63) + 128) . chr(($num & 63) + 128);
+		return '';
+	}
 
+	/**
+	 * Detect whether a string contains non-ascii multibyte sequences in the UTF-8 range
+	 * Does not require any multibyte PHP libraries
+	 * @param $input string input string
+	 * @return boolean
+	 */
+	function isUTF8 ($str) {
+
+	    // From http://w3.org/International/questions/qa-forms-utf-8.html
+		return preg_match('%(?:
+				[\xC2-\xDF][\x80-\xBF]								# non-overlong 2-byte
+				|\xE0[\xA0-\xBF][\x80-\xBF]					# excluding overlongs
+				|[\xE1-\xEC\xEE\xEF][\x80-\xBF]{2}		# straight 3-byte
+				|\xED[\x80-\x9F][\x80-\xBF]					# excluding surrogates
+				|\xF0[\x90-\xBF][\x80-\xBF]{2}				# planes 1-3
+				|[\xF1-\xF3][\x80-\xBF]{3}						# planes 4-15
+				|\xF4[\x80-\x8F][\x80-\xBF]{2}				# plane 16
+				)+%xs', $str);
+	}
+
+	/**
+	 * Convert Windows CP-1252 numeric entities in a string to named HTML entities
+	 * This is a helper function for transcoding into HTML/XML
+	 * From:  http://www.noqta.it/tc.html
+	 * @param $input string input string
+	 * @return string
+	 */
+	function cp1252ToEntities($str) {
+		// define the conversion table
+		$cp1252 = array(	"&#128;" => "",						"&#129;" => "",
+										"&#130;" => "&lsquor;",		"&#131;" => "&fnof;",
+										"&#132;" => "&ldquor;",		"&#133;" => "&hellip;",
+										"&#134;" => "&dagger;",		"&#135;" => "&Dagger;",
+										"&#136;" => "",						"&#137;" => "&permil;",
+										"&#138;" => "&Scaron;",		"&#139;" => "&lsaquo;",
+										"&#140;" => "&OElig;",			"&#141;" => "",
+										"&#142;" => "",						"&#143;" => "",
+										"&#144;" => "",						"&#145;" => "&lsquo;",
+										"&#146;" => "&rsquo;",			"&#147;" => "&ldquo;",
+										"&#148;" => "&rdquo;",		"&#149;" => "&bull;",
+										"&#150;" => "&ndash;",		"&#151;" => "&mdash;",
+										"&#152;" => "&tilde;",			"&#153;" => "&trade;",
+										"&#154;" => "&scaron;",		"&#155;" => "&rsaquo;",
+										"&#156;" => "&oelig;",			"&#157;" => "",
+										"&#158;" => "",						"&#159;" => "&Yuml;");
+		return strtr($str, $cp1252);
+	}
+
+	/**
+	 * Convert named HTML entities to numeric entities
+	 * This is a helper function for transcoding into HTML/XML
+	 * From php.net: function.get-html-translation-table.php
+	 * @param $input string input string
+	 * @return string
+	 */
+	 function named2numeric($str) {
+		// define the conversion table
+		$html_entities = array(
+				"&apos;"=>"&#39;", 					"&minus;"=>"&#45;", 				"&circ;"=>"&#94;", 
+				"&tilde;"=>"&#126;", 				"&Scaron;"=>"&#138;", 			"&lsaquo;"=>"&#139;", 
+				"&OElig;"=>"&#140;", 				"&lsquo;"=>"&#145;", 				"&rsquo;"=>"&#146;", 
+				"&ldquo;"=>"&#147;", 				"&rdquo;"=>"&#148;", 				"&bull;"=>"&#149;", 
+				"&ndash;"=>"&#150;", 				"&mdash;"=>"&#151;", 			"&tilde;"=>"&#152;", 
+				"&trade;"=>"&#153;", 				"&scaron;"=>"&#154;", 			"&rsaquo;"=>"&#155;", 
+				"&oelig;"=>"&#156;", 				"&Yuml;"=>"&#159;", 				"&yuml;"=>"&#255;", 
+				"&OElig;"=>"&#338;", 				"&oelig;"=>"&#339;", 				"&Scaron;"=>"&#352;", 
+				"&scaron;"=>"&#353;", 			"&Yuml;"=>"&#376;", 				"&fnof;"=>"&#402;", 
+				"&circ;"=>"&#710;", 					"&tilde;"=>"&#732;", 				"&Alpha;"=>"&#913;", 
+				"&Beta;"=>"&#914;", 					"&Gamma;"=>"&#915;", 			"&Delta;"=>"&#916;", 
+				"&Epsilon;"=>"&#917;", 			"&Zeta;"=>"&#918;", 					"&Eta;"=>"&#919;", 
+				"&Theta;"=>"&#920;", 				"&Iota;"=>"&#921;", 					"&Kappa;"=>"&#922;", 
+				"&Lambda;"=>"&#923;", 			"&Mu;"=>"&#924;", 					"&Nu;"=>"&#925;", 
+				"&Xi;"=>"&#926;", 						"&Omicron;"=>"&#927;", 			"&Pi;"=>"&#928;", 
+				"&Rho;"=>"&#929;", 					"&Sigma;"=>"&#931;", 				"&Tau;"=>"&#932;", 
+				"&Upsilon;"=>"&#933;", 			"&Phi;"=>"&#934;", 					"&Chi;"=>"&#935;", 
+				"&Psi;"=>"&#936;", 					"&Omega;"=>"&#937;", 			"&alpha;"=>"&#945;", 
+				"&beta;"=>"&#946;", 				"&gamma;"=>"&#947;", 			"&delta;"=>"&#948;", 
+				"&epsilon;"=>"&#949;", 			"&zeta;"=>"&#950;", 					"&eta;"=>"&#951;", 
+				"&theta;"=>"&#952;", 				"&iota;"=>"&#953;", 					"&kappa;"=>"&#954;", 
+				"&lambda;"=>"&#955;", 			"&mu;"=>"&#956;", 					"&nu;"=>"&#957;", 
+				"&xi;"=>"&#958;", 						"&omicron;"=>"&#959;", 			"&pi;"=>"&#960;", 
+				"&rho;"=>"&#961;", 					"&sigmaf;"=>"&#962;", 			"&sigma;"=>"&#963;", 
+				"&tau;"=>"&#964;", 					"&upsilon;"=>"&#965;", 			"&phi;"=>"&#966;", 
+				"&chi;"=>"&#967;", 					"&psi;"=>"&#968;", 					"&omega;"=>"&#969;", 
+				"&thetasym;"=>"&#977;", 		"&upsih;"=>"&#978;", 				"&piv;"=>"&#982;", 
+				"&ensp;"=>"&#8194;", 				"&emsp;"=>"&#8195;", 			"&thinsp;"=>"&#8201;", 
+				"&zwnj;"=>"&#8204;", 				"&zwj;"=>"&#8205;", 				"&lrm;"=>"&#8206;", 
+				"&rlm;"=>"&#8207;", 				"&ndash;"=>"&#8211;", 			"&mdash;"=>"&#8212;", 
+				"&lsquo;"=>"&#8216;", 			"&rsquo;"=>"&#8217;", 			"&sbquo;"=>"&#8218;", 
+				"&ldquo;"=>"&#8220;", 			"&rdquo;"=>"&#8221;", 			"&bdquo;"=>"&#8222;", 
+				"&dagger;"=>"&#8224;", 			"&Dagger;"=>"&#8225;", 			"&bull;"=>"&#8226;", 
+				"&hellip;"=>"&#8230;", 			"&permil;"=>"&#8240;", 			"&prime;"=>"&#8242;", 
+				"&Prime;"=>"&#8243;", 			"&lsaquo;"=>"&#8249;", 			"&rsaquo;"=>"&#8250;", 
+				"&oline;"=>"&#8254;", 				"&frasl;"=>"&#8260;", 				"&euro;"=>"&#8364;",
+				"&image;"=>"&#8465;", 			"&weierp;"=>"&#8472;", 			"&real;"=>"&#8476;", 
+				"&trade;"=>"&#8482;", 				"&alefsym;"=>"&#8501;", 			"&larr;"=>"&#8592;", 
+				"&uarr;"=>"&#8593;", 				"&rarr;"=>"&#8594;", 				"&darr;"=>"&#8595;", 
+				"&harr;"=>"&#8596;", 				"&crarr;"=>"&#8629;", 				"&lArr;"=>"&#8656;", 
+				"&uArr;"=>"&#8657;", 				"&rArr;"=>"&#8658;", 				"&dArr;"=>"&#8659;", 
+				"&hArr;"=>"&#8660;", 				"&forall;"=>"&#8704;", 				"&part;"=>"&#8706;", 
+				"&exist;"=>"&#8707;", 				"&empty;"=>"&#8709;", 			"&nabla;"=>"&#8711;", 
+				"&isin;"=>"&#8712;", 				"&notin;"=>"&#8713;", 				"&ni;"=>"&#8715;", 
+				"&prod;"=>"&#8719;", 				"&sum;"=>"&#8721;", 				"&minus;"=>"&#8722;", 
+				"&lowast;"=>"&#8727;", 			"&radic;"=>"&#8730;", 				"&prop;"=>"&#8733;", 
+				"&infin;"=>"&#8734;", 				"&ang;"=>"&#8736;", 				"&and;"=>"&#8743;", 
+				"&or;"=>"&#8744;", 					"&cap;"=>"&#8745;", 				"&cup;"=>"&#8746;", 
+				"&int;"=>"&#8747;", 					"&there4;"=>"&#8756;", 			"&sim;"=>"&#8764;", 
+				"&cong;"=>"&#8773;", 				"&asymp;"=>"&#8776;", 			"&ne;"=>"&#8800;", 
+				"&equiv;"=>"&#8801;", 			"&le;"=>"&#8804;", 					"&ge;"=>"&#8805;", 
+				"&sub;"=>"&#8834;", 				"&sup;"=>"&#8835;", 				"&nsub;"=>"&#8836;", 
+				"&sube;"=>"&#8838;", 				"&supe;"=>"&#8839;", 				"&oplus;"=>"&#8853;", 
+				"&otimes;"=>"&#8855;", 			"&perp;"=>"&#8869;", 				"&sdot;"=>"&#8901;", 
+				"&lceil;"=>"&#8968;", 				"&rceil;"=>"&#8969;", 				"&lfloor;"=>"&#8970;", 
+				"&rfloor;"=>"&#8971;", 			"&lang;"=>"&#9001;", 				"&rang;"=>"&#9002;", 
+				"&loz;"=>"&#9674;", 				"&spades;"=>"&#9824;", 			"&clubs;"=>"&#9827;", 
+				"&hearts;"=>"&#9829;", 			"&diams;"=>"&#9830;");
+
+		return strtr($str, $html_entities);
+	 }
+
+}
 ?>

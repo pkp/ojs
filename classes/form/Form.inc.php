@@ -81,22 +81,24 @@ class Form {
 
 		if (is_string($value)) {
 
-			// check for Windows-1252 encoding, and transliterate if necessary	
-			if ($value === utf8_decode($value) && $value !== utf8_encode($value)) {
-				// string is cp1252
-				// transliterate cp1252->utf8 to work in utf-8 
-				// utf8_decode to work in latin-1 (information may be lost)
+			// process strings that contain multibyte characters
+			if ( String::isUTF8($value) ) {
+				// alternate check:  ( $value === utf8_decode(utf8_encode($value)) )
+
+				// 1) normalize all HTML entities to UTF-8 (NB: may not be required)
+				// 2) convert UTF-8 to UTF-8 entities (numeric and named)
 				import('core.Transcoder');
-				$trans =& new Transcoder('CP1252', 'UTF-8');
+				$trans =& new Transcoder('UTF-8', 'HTML-ENTITIES');
 				$value = $trans->trans($value);
 
-			} elseif ($value !== utf8_decode($value) && $value !== utf8_encode($value)) {
-				// string is not within utf-8(?)
-				// normalize to ASCII (lowest common encoding) - information will be lost
-				import('core.Transcoder');
-				$trans =& new Transcoder('UTF-8', 'ASCII');
+				// 3) convert windows-1252 entities to UTF-8 entities
+				$value = &String::cp1252ToEntities($value);
+
+				// 4) convert UTF-8 entities to UTF-8 characters
+				$trans =& new Transcoder('HTML-ENTITIES', 'UTF-8');
 				$value = $trans->trans($value);
 			}
+
 		}
 		$this->_data[$key] = $value;
 	}
