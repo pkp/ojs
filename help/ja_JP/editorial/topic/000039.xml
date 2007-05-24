@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000039.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Layout Editor's Role - Submissions
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000039" locale="ja_JP" title="投稿物" toc="editorial/toc/000013" key="editorial.layoutEditorsRole.submissions">
+	<section>
+		<![CDATA[<p>ユーザホームページからレイアウトエディタリンクをクリックすることにより、レイアウトエディタとしてログインすると、投稿物キュー画面になります。この画面には、レイアウトを依頼されている投稿物がリストされています。この画面からは過去に作業を行った投稿物にもアクセスすることができます。投稿物のタイトルをクリックすると、その投稿物のレイアウト画面になります。</p>]]>	
+	</section>
+</topic>

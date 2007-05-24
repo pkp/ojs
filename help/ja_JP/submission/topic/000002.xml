@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000002.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author Submission Process - Submission Requirements 
+  *
+  * $Id$
+  -->
+
+<topic id="submission/topic/000002" locale="ja_JP" title="投稿要件" toc="submission/toc/000000" key="submission.submissionRequirements">
+	<section>
+		<![CDATA[<p>雑誌への投稿物が正しく準備されており、処理に適したフォーマットであることを保証するために、雑誌管理者と編集者は一連の投稿要件を制定します。著者がこれらの要件を満たしていることを示さない限り、投稿プロセスの第2ステップへ進むことは許されません。何らかの理由で要件を満たすことができない場合は、要件をすべてチェックし、編集者へのコメント欄で理由を説明することができます。</p>]]>	
+	</section>
+</topic>

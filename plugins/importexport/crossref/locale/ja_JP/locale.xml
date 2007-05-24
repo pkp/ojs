@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="ja_JP" full_name="日本語">
+	<message key="plugins.importexport.crossref.displayName">CrossRef用XMLエクスポートプラグイン</message>
+	<message key="plugins.importexport.crossref.description">論文のメタデータをCrossRef XMLフォーマットでエクスポート</message>
+	
+	<message key="plugins.importexport.crossref.export">データのエクスポート</message>
+	<message key="plugins.importexport.crossref.export.issues">巻号をエクスポート</message>
+	<message key="plugins.importexport.crossref.export.selectIssue">エクスポートする号を選択してください。</message>
+	<message key="plugins.importexport.crossref.export.articles">論文をエクスポート</message>
+	<message key="plugins.importexport.crossref.export.selectArticle">エクスポートする論文を選択してください。</message>
+	
+	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[使用法: 
+{$scriptName} {$pluginName} [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
+{$scriptName} {$pluginName} [xmlFileName] [journal_path] issue [issueId]
+]]></message>
+	<message key="plugins.importexport.crossref.cliError">エラー:</message>
+
+	<message key="plugins.importexport.crossref.export.error.issueNotFound">指定した巻号ID "{$issueId}" に合致する号はありませんでした。</message>
+	<message key="plugins.importexport.crossref.export.error.articleNotFound">指定した論文ID "{$articleId}" に合致する論文はありませんでした。</message>
+
+	<message key="plugins.importexport.crossref.errors.noDOIprefix">このプラグインを使用するには、雑誌設定ページで有効なDOIプリフィックスを指定する必要があります。</message>
+</locale>

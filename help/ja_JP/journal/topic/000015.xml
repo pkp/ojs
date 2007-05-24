@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000015.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Journal Manager 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000015" locale="ja_JP" title="雑誌管理者" toc="journal/toc/000003" key="journal.roles.journalManager">
+	<section>
+		<![CDATA[<p>雑誌管理者は、出版システムの管理を担当します。管理作業には高度な技術は必要ではありません。テンプレートに記入し、ファイルをアップロードするだけです。雑誌管理者は雑誌のを{help_topic key="journal.managementPages.setup" text="設定"}を行い、編集者、セクションエディタ、コピーエディタ、レイアウトエディタ、校正者、査読者を任命します。これらが既に別のデータベースに登録されている場合は、{help_topic key="journal.managementPages.importExport" text="データのインポート・エクスポート"}にあるユーザのインポート機能を使って、システムにインポートすることができます。雑誌管理者は、雑誌の他の管理システムにもアクセスすることができます。そして、雑誌に新しいセクションを作成したり、システムが使用するデフォルトのメール文を編集したり、この雑誌で利用可能にする{help_topic key="journal.managementPages.readingTools" text="読書ツール"}を管理したり、システムが作成する{help_topic key="journal.managementPages.statsAndReports" text="雑誌統計"}を見たりすることができます。</p>
+<p>雑誌管理者の役割は、表向きには雑誌ごとの役割ですが、通常、雑誌管理者は他の雑誌に登録されているユーザに成りすますこともできるので、システム全体のトラステッドユーザであると考えるべきであることに注意してください。</p>]]>
+	</section>
+</topic>

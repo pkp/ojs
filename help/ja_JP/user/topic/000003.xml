@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000003.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * User Interface - Register and Profile
+  *
+  * $Id$
+  -->
+
+<topic id="user/topic/000003" locale="ja_JP" title="登録とユーザ情報" toc="user/toc/000000" key="user.registerAndProfile">
+	<section>
+		<![CDATA[<p>雑誌は、編集プロセスと出版プロセスに参加するすべてのユーザのために登録システムを使用します。雑誌のプライバシーポリシーはすべての登録ユーザに適用されます。登録ユーザはユーザ情報を持ち、雑誌にログインすれば、これを編集・追加することができます。ユーザ情報へのリンクは、画面右側のユーザ欄、またはユーザのホームページにあります。</p>
+
+<p>すべてのユーザにはメール通知オプションがあります。このオプションを選択すると、新しい巻号が出版されるたびに目次情報がメールで通知されます。雑誌が複数の言語で運用されている場合、査読者は投稿物の査読を行うことができる言語をユーザ情報で指定することができます。</p>]]>	
+	</section>
+</topic>

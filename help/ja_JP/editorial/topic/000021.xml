@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000021.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Section Editor's Role Index - In Review
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000021" locale="ja_JP" title="査読中" toc="editorial/toc/000005" key="editorial.sectionEditorsRole.submissions.inReview">
+	<section>
+		<![CDATA[<p>査読中にリストされている投稿物は、査読プロセスの対象となり、その後、セクションエディタによりアクセプトかリジェクトかの判断が下されます。どの雑誌セクションの投稿物についてピアレビューが行われるか、何人の査読者が査読を行うのかといった査読プロセスの範囲は、編集者と雑誌管理者により用意される雑誌の査読ポリシーで詳細に説明されています。セクションエディタまたは編集者が査読中キューにある投稿物のタイトルをクリックすると、投稿物の査読ページに移動します。ここで、ピアレビュー作業が行われ、アイテムに対する編集判断が下されます。セクションエディタが投稿物の出版をアクセプトすると、投稿物は編集中キューに移動します。リジェクトされると投稿物はアーカイブに移動します。</p>]]>	
+	</section>
+</topic>

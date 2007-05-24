@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000001.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * User Interface - Home
+  *
+  * $Id$
+  -->
+
+<topic id="user/topic/000001" locale="ja_JP" title="ホーム" toc="user/toc/000000" key="user.home">
+	<section>
+		<![CDATA[<p>雑誌のホームページ、または雑誌ページの上部にあるナビゲーションバーのホームには、雑誌管理者が設定することにより、雑誌の最新号の目次またはその巻号のカバーページを表示することができます。また、雑誌に関するお知らせや雑誌に関係する最近の行事を伝えたり、スポンサーを紹介したりすることにも使用することができます。読者はただ、ホームページの上部にあるナビゲーションバーから最新号をクリックするだけです。その他のすべてのページは、最新号のカバーや目次から辿ることができます。</p>]]>	
+	</section>
+</topic>

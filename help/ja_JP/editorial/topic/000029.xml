@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000029.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Section Editor's Role Index - Editing - Proofreading
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000029" locale="ja_JP" title="校正" toc="editorial/toc/000007" key="editorial.sectionEditorsRole.editing.proofreading">
+	<section>
+		<![CDATA[<p>レイアウトエディタからゲラの作成が完了した旨の通知が届いたら、セクションエディタは、校正者を選んでなければまず校正者を選びます。次に、著者に校正作業を開始するよう依頼のメールを出します。著者は、ゲラと（あれば）補足ファイルのチェックを行い、終了したら校正者にメールで伝えます。メールはセクションエディタにもCCします。著者と校正者はゲラをマークアップすることができないので、校正画面の校正用の入力ボックスで文字や書式の間違いを報告します。校正者は、ゲラと（あれば）補足ファイルのチェックが終わったら、レイアウトエディタに伝えます（セクションエディタにCC）。レイアウトエディタはゲラと（あれば）補足ファイルの誤りを修正します。最後に、レイアウトエディタは、投稿物を出版スケジュールに入れる準備ができたことをセクションエディタに伝えます。この時点で、セクションエディタは再び、ファイルをチェックしたいと考えるでしょう。問題がなければ、投稿物の編集ページの一番下にある出版スケジュールから出版する巻号を選んで「設定」ボタンを押し、投稿物を出版スケジュールに入れます。すると、投稿物は{help_topic key="publishing.index" text="出版プロセス"}に入ります。</p><p>編集者は編集プロセスの任意の時点で投稿物を出版スケジュールに入れることができることに注意してください。レイアウトエディタと校正者はこの情報にアクセスできるので、対象の号を出版前に見ることができます</p>]]>
+	</section>
+</topic>

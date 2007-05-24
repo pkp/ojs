@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000003.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Editor's Role Submission Summary Index 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000003" locale="ja_JP" title="投稿物概要" toc="editorial/toc/000001" subtoc="editorial/toc/000003" key="editorial.editorsRole.submissionSummary">
+	<section>
+		<![CDATA[<p>投稿物の概要ページを使って、編集者は投稿物のファイル、メタデータ、インデックス情報を管理することができます。</p>]]>	
+	</section>
+</topic>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000009.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Reading Tools
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000009" locale="ja_JP" title="読書ツール" toc="journal/toc/000001" subtoc="journal/toc/000005" key="journal.managementPages.readingTools">
+	<section>
+		<![CDATA[<p>雑誌管理者は、インデックス化する雑誌セクション（例えば論文セクション、会議の告知は対象ではない）のすべてのアイテムの画面の右側に表示される読書ツールを選択することができます。読書ツールは、様々な主にオープンアクセスの情報源からその場の文脈に沿った関連資料を提供することにより、専門家も初心者も共に支援できるように設計されています。読書ツールは、著者が指定したキーワードを使って関連分野のオープンアクセスデータベースを自動的に検索し、関連資料を別ウィンドウに表示して読者に提供します。読者はツールの選択や各ツールにおいてデータベースの選択をすることができ、データベースに関する情報にもアクセスすることができます。</p><p>設定の際、雑誌管理者は、（人文学、教育学、物理学などの）各専門分野独自の情報源だけでなく、「書誌情報」や「インデックス情報」といった一般的なツールを選択することもできます。雑誌管理者は、既存の情報源を編集・削除したり、新しい情報源を追加したりすることもできます。雑誌Webサイトの{help_topic key="user.readingTools" text="読書ツール"}も参照してください。</p>]]>
+	</section>
+</topic>

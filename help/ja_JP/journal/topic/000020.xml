@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000020.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Proofreader 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000020" locale="ja_JP" title="校正者" toc="journal/toc/000003" key="journal.roles.proofreader">
+	<section>
+		<![CDATA[<p>校正者は、雑誌出版用の様々なフォーマットのゲラを（著者がするように）注意深く読みます。校正者（と著者）は、レイアウトエディタが修正できるように文字や書式の誤りを記録します。編集者やセクションエディタが校正者の役割を兼務する雑誌もあります。</p>]]>	
+	</section>
+</topic>

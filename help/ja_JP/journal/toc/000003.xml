@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../toc.dtd">
+
+<!--
+  * 000003.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Journal Management - Roles. 
+  *
+  * $Id$
+  -->
+
+<toc id="journal/toc/000003" locale="ja_JP" title="役割" parent_topic="journal/topic/000003">
+	<topic id="journal/topic/000015" title="雑誌管理者" />
+	<topic id="journal/topic/000016" title="編集者" />
+	<topic id="journal/topic/000017" title="セクションエディタ" />
+	<topic id="journal/topic/000019" title="コピーエディタ" />
+	<topic id="journal/topic/000018" title="レイアウトエディタ" />
+	<topic id="journal/topic/000020" title="校正者" />
+	<topic id="journal/topic/000021" title="査読者" />
+	<topic id="journal/topic/000022" title="著者" />
+	<topic id="journal/topic/000023" title="読者" />
+	<topic id="journal/topic/000032" title="購読管理者" />
+
+	<breadcrumb url="journal/topic/000000" title="雑誌管理" />
+	<breadcrumb url="journal/topic/000003" title="役割" />
+</toc>

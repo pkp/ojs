@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../toc.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Editorial Process. 
+  *
+  * $Id$
+  -->
+
+<toc id="editorial/toc/000000" locale="ja_JP" title="編集プロセス" parent_topic="editorial/topic/000000">
+	<topic id="editorial/topic/000001" title="編集者の役割" />
+	<topic id="editorial/topic/000004" title="セクションエディタの役割" />
+	<topic id="editorial/topic/000008" title="査読者の役割" />
+	<topic id="editorial/topic/000009" title="著者の役割" />
+	<topic id="editorial/topic/000012" title="コピーエディタの役割" />
+	<topic id="editorial/topic/000013" title="レイアウトエディタの役割" />
+	<topic id="editorial/topic/000014" title="校正者の役割" />
+
+	<breadcrumb url="editorial/topic/000000" title="編集プロセス" />
+</toc>

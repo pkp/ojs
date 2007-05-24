@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000031.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Import/Export
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000031" locale="ja_JP" title="データのインポート・エクスポート" toc="journal/toc/000001" key="journal.managementPages.importExport">
+	<section>
+		<![CDATA[<p>雑誌管理ページから利用できるデータのインポート・エクスポート機能を使うことにより、雑誌管理者はOJSにデータを投入したり、OJSからデータをエクスポートしたりすることができます。</p><p>データのインポート・エクスポートはプラグインを使って実装されており、各種データフォーマットやデータ種別はそれぞれ異なるプラグインで提供されています。各自の情報については、各プラグインの文書を参照してください。</p><p>OJSにはデフォルトで3つのインポート・エクスポートプラグイン、すなわち、論文および巻号XMLプラグイン、ユーザXMLプラグイン、Erudit用論文エクスポートプラグインが添付されています。これらについては、以下で説明します。</p><p>インポート・エクスポート機能はコマンドラインツールでも利用できます。詳細については、tools/importExport.phpを参照してください。</p>]]>
+	</section>
+	<section title="論文および巻号XMLプラグイン">
+			<![CDATA[<p>論文および巻号XMLプラグインは、バッチインポート・エクスポートのための基本的な方法です。このプラグインを使って、1論文、複数論文、1巻号、複数巻号をすべてのメタデータと共にインポート、エクスポートすることができます。本プラグインに関する情報は、"plugins/importexport/native/native.dtd"にあるXML DTDを参照してください。</p>]]>
+	</section>
+	<section title="ユーザXMLプラグイン">
+			<![CDATA[<p>ユーザXMLプラグインを使って、ユーザとその役割をインポート、エクスポートすることができます。詳細については、"plugins/importexport/users/users.dtd"にあるXML DTDを参照してください。 </p>]]>
+	</section>
+	<section title="Erudit用論文エクスポートプラグイン">
+			<![CDATA[<p>Erudit用論文エクスポートプラグインは、フルテキストのインデックス化のためのErudit XML DTDを使った1論文のエクスポートを実装しています。詳細については、<a href="http://www.erudit.org">http://www.erudit.org</a>を参照してください。</p>]]>
+	</section>
+</topic>

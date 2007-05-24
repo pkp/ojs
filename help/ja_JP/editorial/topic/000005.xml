@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000005.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Section Editor's Role Index - Submissions 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000005" locale="ja_JP" title="投稿物" toc="editorial/toc/000004" subtoc="editorial/toc/000005" key="editorial.sectionEditorsRole.submissions">
+	<section>
+		<![CDATA[<p>編集者によりセクションエディタに割り当てられた雑誌への投稿物は、セクションエディタの査読中キューに表示されます。セクションエディタは割り当てられた投稿物にしかアクセスすることができません。雑誌の方針により、セクションエディタは、投稿物の査読だけを担当する場合と査読と編集の両方を担当する場合があります。</p>]]>	
+	</section>
+</topic>

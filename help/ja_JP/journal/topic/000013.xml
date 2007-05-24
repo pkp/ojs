@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000013.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Users - Import Users
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000013" locale="ja_JP" title="ユーザのインポート" toc="journal/toc/000002" key="journal.users.importUsers">
+	<section>
+		<![CDATA[<p>OJSは、ユーザ情報を持つ他のデータベースから容易に作成することができるXML形式のユーザデータをインポートする簡単なツールを提供しています。ユーザデータのXML形式とXML DDについての詳細はOJSに添付されている文書を参照してください。</p>]]>	
+	</section>
+</topic>

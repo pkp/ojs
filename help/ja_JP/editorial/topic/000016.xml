@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000016.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Editor's Role Submissions - In Review 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000016" locale="ja_JP" title="査読中" toc="editorial/toc/000002" key="editorial.editorsRole.submissions.inReview">
+	<section>
+		<![CDATA[<p>このキューにある投稿物は査読の対象となり、セクションエディタによりアクセプトかリジェクトかの判断が下されます。査読プロセスの範囲は雑誌の査読ポリシーで詳細に説明されています（例えば、雑誌のすべてのセクションがピアレビューの対象となるか。各投稿物は何回ピアレビューが行われるか）。セクションエディタまたは編集者が査読中キューにある投稿物のタイトルをクリックすると、投稿物の査読ページに移動します。セクションエディタが投稿物をアクセプトすると、投稿物は編集中キューに移動します。リジェクトするとアーカイブに移動します。</p>]]>	
+	</section>
+</topic>

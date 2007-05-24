@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../toc.dtd">
+
+<!--
+  * 000006.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Editorial Process - Section Editor's Role - Review
+  *
+  * $Id$
+  -->
+
+<toc id="editorial/toc/000006" locale="ja_JP" title="査読" parent_topic="editorial/topic/000006">
+	<topic id="editorial/topic/000024" title="査読版" />
+	<topic id="editorial/topic/000025" title="ピアレビュー" />
+	<topic id="editorial/topic/000026" title="編集者の判断" />
+
+	<breadcrumb url="editorial/topic/000000" title="編集プロセス" />
+	<breadcrumb url="editorial/topic/000004" title="セクションエディタの役割" />
+	<breadcrumb url="editorial/topic/000006" title="査読" />
+</toc>

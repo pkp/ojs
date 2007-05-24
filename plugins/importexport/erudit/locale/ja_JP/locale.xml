@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="ja_JP" full_name="日本語">
+	<message key="plugins.importexport.erudit.displayName">Erudit用論文エクスポートプラグイン</message>
+	<message key="plugins.importexport.erudit.description">英語版Erudit DTDを使って論文をエクスポート</message>
+
+	<message key="plugins.importexport.erudit.cliUsage"><![CDATA[利用法: {$scriptName} {$pluginName} [xmlFileName] [journalPath] [articleId] [galleyLabel]
+]]></message>
+	<message key="plugins.importexport.erudit.export">データのエクスポート</message>
+	<message key="plugins.importexport.erudit.export.issues">巻号をエクスポート</message>
+	<message key="plugins.importexport.erudit.export.sections">セクションをエクスポート</message>
+	<message key="plugins.importexport.erudit.export.articles">論文をエクスポート</message>
+
+	<message key="plugins.importexport.erudit.selectIssue">巻号を選択</message>
+	<message key="plugins.importexport.erudit.selectArticle">論文を選択</message>
+
+	<message key="plugins.importexport.erudit.cliError">エラー:</message>
+	<message key="plugins.importexport.erudit.error.unknownJournal">指定した雑誌用パス名 "{$journalPath}" は存在しません。</message>
+	<message key="plugins.importexport.erudit.export.error.couldNotWrite">ファイル "{$fileName}" に書き込むことができません。</message>
+	<message key="plugins.importexport.erudit.export.error.articleNotFound">指定した論文ID "{$articleId}" に合致する論文はありませんでした。</message>
+	<message key="plugins.importexport.erudit.export.error.galleyNotFound">指定したゲラID "{$galleyLabel}" に合致するゲラはありませんでした。</message>
+
+	<message key="plugins.importexport.erudit.unavailable">利用不可</message>
+</locale>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000004.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * User Interface - Current and Archives
+  *
+  * $Id$
+  -->
+
+<topic id="user/topic/000004" locale="ja_JP" title="最新号とアーカイブ" toc="user/toc/000000" key="user.currentAndArchives">
+	<section>
+		<![CDATA[<p>雑誌の巻号は、最新号、またはバックナンバーからなるアーカイブとして利用することができます。雑誌管理者は、まだこのシステムを使う前に出版された雑誌のバックナンバーをこの雑誌のWebサイトに掲載することができ、これにより、読者はこれらのバックナンバーをアーカイブの一部として雑誌のWebサイトから利用できるようになります。</p>]]>	
+	</section>
+</topic>

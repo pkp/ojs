@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000044.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Ensuring a blind peer review
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000044" locale="ja_JP" title="ブラインド審査の保証" toc="editorial/toc/000001" key="editorial.sectionEditorsRole.review.blindPeerReview">
+	<section>
+		<![CDATA[<p>この雑誌における投稿物のブラインド審査の完全性を保証するためには、著者や査読者が誰であるかをお互いに知ることがないようにあらゆる努力をする必要があります。これには、著者、編集者、（査読作業の一部として文書をアップロードする）査読者が、テキストやファイルに対して次のステップに従っているかどうかをチェックすることが含まれます。<ol><li>文書の著者は、テキスト中ではその名前を削除します。参考文献や脚注の中では、著者の名前や論文タイトルなどの変わりに、「著者」や年を使用します。</li>
+<li>Microsoft Officeの文書では、著者を識別するファイルプロパティを削除します。手順は次のとおりです（Wordのファイルメニューを参照）。まず、ファイルメニューを開き、ファイル &gt; 名前を付けて保存... &gt; ツール（Macの場合はオプション） &gt; セキュリティオプション... &gt; 保存時にファイルのプロパティから個人情報を削除する &gt; 保存</li>
+<li>PDFファイルでは、Adobe Acrobatのメインメニューのファイルで見ることができるドキュメントプロパティから著者の名前を削除します。</li>
+</ol></p>]]>
+	</section>
+</topic>

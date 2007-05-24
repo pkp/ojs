@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="ja_JP" full_name="日本語">
+	<message key="plugins.importexport.users.displayName">ユーザXMLプラグイン</message>
+	<message key="plugins.importexport.users.description">ユーザのインポート・エクスポート</message>
+
+	<message key="plugins.importexport.users.cliUsage"><![CDATA[使用法: {$scriptName} {$pluginName} [command] ...
+コマンド:
+	import [xmlFileName] [journal_path] [optional flags]
+	export [xmlFileName] [journal_path]
+	export [xmlFileName] [journal_path] [role_path1] [role_path2] ...
+
+オプションフラグ:
+	continue_on_error: 指定すると、エラーが発生してもユーザのインポートを中止しない
+
+	send_notify: 指定すると、インポートしたユーザにユーザ名とパスワードを含む通知メールを送信する
+
+使用例:
+	Import users into myJournal from myImportFile.xmlからmyJournalへユーザをインポートする。エラーが発生しても継続する:
+	{$scriptName} {$pluginName} import myImportFile.xml myJournal continue_on_error
+
+	myJournalからすべてのユーザをエクスポートする:
+	{$scriptName} {$pluginName} export myExportFile.xml myJournal
+
+	査読者として登録されたすべてのユーザをその査読役割と共にエクスポートする:
+	{$scriptName} {$pluginName} export myExportFile.xml myJournal reviewer
+]]></message>
+	<message key="plugins.importexport.users.import.importUsers">ユーザのインポート</message>
+	<message key="plugins.importexport.users.import.instructions"><![CDATA[この雑誌にインポートするユーザ情報が含まれているXMLデータファイルを選択してください。このファイルのフォーマットに関しての詳細については雑誌のヘルプを参照してください。<br /><br />インポートするファイルに、既にシステムに存在するユーザ名またはメールアドレスが含まれている場合、そのユーザに関するユーザ情報はインポートされず、作成されるべき新しい役割は既存のユーザに与えられることに注意してください。]]></message>
+	<message key="plugins.importexport.users.import.failedToImportUser">ユーザのインポートに失敗しました</message>
+	<message key="plugins.importexport.users.import.failedToImportRole">ユーザに役割を与えることに失敗しました</message>
+	<message key="plugins.importexport.users.import.dataFile">ユーザデータファイル</message>
+	<message key="plugins.importexport.users.import.sendNotify">インポートしたユーザにユーザ名とパスワードを含む通知メールを送信する。</message>
+	<message key="plugins.importexport.users.import.continueOnError">エラーが発生した場合、次のユーザのインポートを継続する。</message>
+	<message key="plugins.importexport.users.import.noFileError">ファイルはアップロードされませんでした。</message>
+	<message key="plugins.importexport.users.import.usersWereImported">以下のユーザがシステムにインポートされました。</message>
+	<message key="plugins.importexport.users.import.errorsOccurred">インポート処理中にエラーが発生しました</message>
+	<message key="plugins.importexport.users.import.confirmUsers">これらのユーザがシステムにインポートするユーザであるか確認してください。</message>
+	<message key="plugins.importexport.users.unknownJournal">不明な雑誌用パス名 "{$journalPath}" が指定されました。</message>
+
+	<message key="plugins.importexport.users.export.exportUsers">ユーザのエクスポート</message>
+	<message key="plugins.importexport.users.export.exportByRole">役割によるエクスポート</message>
+	<message key="plugins.importexport.users.export.exportAllUsers">全ユーザのエクスポート</message>
+	<message key="plugins.importexport.users.export.errorsOccurred">エクスポート処理中にエラーが発生しました</message>
+	<message key="plugins.importexport.users.export.couldNotWriteFile">ファイル "{$fileName}" に書き込むことができませんでした。</message>
+</locale>

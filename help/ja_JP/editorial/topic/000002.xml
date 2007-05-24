@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000002.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Editor's Role Submissions Index 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000002" locale="ja_JP" title="投稿物" toc="editorial/toc/000001" subtoc="editorial/toc/000002" key="editorial.editorsRole.submissions">
+	<section>
+		<![CDATA[<p>雑誌へのすべての投稿物は、それが編集プロセスのどの段階にあるかにより、投稿物ページにある4つのキューのいずれかで見つけることができます。セクションエディタは自分に割り当てられた投稿物にしかアクセスすることができませんが、編集者はこのページから雑誌に投稿されたすべての投稿物にアクセスすることができます。</p>]]>	
+	</section>
+</topic>

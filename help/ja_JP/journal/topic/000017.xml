@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000017.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Section Editor 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000017" locale="ja_JP" title="セクションエディタ" toc="journal/toc/000003" key="journal.roles.sectionEditor">
+	<section>
+		<![CDATA[<p>セクションエディタは、割り当てられたセクションの投稿物の査読と編集作業を管理します。場合によっては、投稿物の{help_topic key="editorial.sectionEditorsRole.review" text="査読"}プロセスの管理を担当したセクションエディタが、受理された投稿物の{help_topic key="editorial.sectionEditorsRole.editing" text="編集"} プロセス（すなわち、原稿整理、レイアウト、校正）の管理を担当することになることもあります。しかし、通常は、セクションエディタは査読プロエスを管理するだけであり、セクションエディタの役割を兼務する編集者が投稿物の編集プロセスを管理することになります。そのような雑誌は、作業をいかに分担するかを定めたポリシーを持つことになるでしょう。</p>]]>	
+	</section>
+</topic>

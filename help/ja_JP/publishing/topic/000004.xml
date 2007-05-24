@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000004.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Publishing Process - Publish
+  *
+  * $Id$
+  -->
+
+<topic id="publishing/topic/000004" locale="ja_JP" title="出版" toc="publishing/toc/000000" key="publishing.publish">
+	<section>
+		<![CDATA[<p>巻号を出版する時がきたら、編集者は対象となる巻号ページで「この号の出版」をクリックし、その号、すなわち、その号の目次を持つページを出版します。巻号を出版することにより、読者が最新号をクリックすると、その巻号の目次が表示され、（もしあれば）カバーが雑誌のホームページに表示されるようになります。そして、これまで最新号であった巻号はアーカイブに移動します。カバーがない場合は、雑誌管理者が雑誌設定において画像やテキストをロードするよう設定していない限り、ホームページにはその号の目次が表示されます。また、巻号を出版すると、登録ユーザのすべてに、その巻号の目次と雑誌のWebサイトへのリンクを含む通知メールが送信されます。</p>]]>	
+	</section>
+</topic>

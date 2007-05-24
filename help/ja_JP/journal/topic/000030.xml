@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000030.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - System Plugins
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000030" locale="ja_JP" title="システムプラグイン" toc="journal/toc/000001" key="journal.managementPages.plugins">
+	<section>
+		<![CDATA[<p>システムプラグインページでは、雑誌管理者はOJSにインストールされているプラグインの一覧を閲覧し、各プラグインで実装されている管理作業を行うことができます。詳細については、各プラグインに添付されている文書を参照してください。</p>]]>
+	</section>
+</topic>

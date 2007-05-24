@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000026.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Reading Tools - Settings
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000026" locale="ja_JP" title="設定" toc="journal/toc/000005" key="journal.managementPages.readingTools.settings">
+	<section>
+		<![CDATA[<p>雑誌管理者は、インデックス化する雑誌セクション（例えば論文セクション、会議の告知などは対象外）のすべてのアイテムの画面右側に表示される読書ツールのベースとなる学問分野を選択することができます。雑誌管理者は、読書ツールの関連アイテムセット画面において、各ベースセットのツールを調査、編集、削除、追加をすることができます。また、雑誌管理者は、雑誌アイテムツールに表示されている一般的なオプションリンクの中からいくつでも選択することができます。同一セットの読書ツールが、その雑誌のインデックス化されるセクションのすべてのアイテムに表示されます。読書ツールは、提供されたデータベースで見つけた資料が関連のものであることを保証するために、著者が入力したインデックス語を使用しています。雑誌管理者は選択した読書ツールをいつでも変更することができます。</p>]]>
+	</section>
+</topic>

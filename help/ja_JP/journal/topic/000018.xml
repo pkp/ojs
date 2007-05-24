@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000018.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Layout Editor 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000018" locale="ja_JP" title="レイアウトエディタ" toc="journal/toc/000003" key="journal.roles.layoutEditor">
+	<section>
+		<![CDATA[<p>レイアウトエディタは、原稿整理された投稿物を変換して、雑誌が選択したHTML、PDF、PSなどの電子出版用のファイルフォーマットのゲラを作成します。このシステムは、ワープロ文書をゲラフォーマットに変換するソフトウェアを提供していません。したがって、レイアウトエディタは、ゲラを作成するサードパテーティ製のソフトウェア（例えば、PDFフォーマットにはAdobe Acrobat、HTMLにはDreamweaverなど）を利用できなければなりません。これらのソフトウェアを使って、（他のオンライン出版者、例えば、生命科学分野のHighwire Pressや人文科学のProject Museで使用されているレイアウトを参考に）学術雑誌の様式に合わせ、またこの新しい出版メディアを考慮して、論文を適切にフォーマットし、読みやすいレイアウトで画面に表示します。</p>]]>	
+	</section>
+</topic>

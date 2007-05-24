@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000016.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Editor 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000016" locale="ja_JP" title="編集者" toc="journal/toc/000003" key="journal.roles.editor">
+	<section>
+		<![CDATA[<p>編集者は、編集と出版の全プロセスを監督します。編集者は通常、雑誌管理者と共に、雑誌のポリシーと作業手順を決め、{help_topic key="journal.managementPages.setup" text="雑誌設定機能"}を使って設定します。編集プロセスにおいては、編集者は投稿物にセクションエディタを割り当てて投稿物の査読から編集作業を担当させ、その間、投稿物の進捗に目を配り、編集プロセス上の問題の解決を支援します。査読が済むと、通常、編集者が{help_topic key="editorial.sectionEditorsRole.editing" text="編集"}プロセス（原稿整理、レイアウト、校正）の面倒をみます。しかし、雑誌によっては、投稿物の{help_topic key="editorial.sectionEditorsRole.review" text="査読"}プロセスを担当したセクションエディタが引き続き、編集プロセスを担当することもあります。編集者は、また、{help_topic key="publishing.index" text="出版プロセス"}においては、投稿物の出版スケジュールをたて、目次を作成し、新しい巻号を発行します。編集者は、{help_topic key="editorial.editorsRole.submissions.archives" text="アーカイブ"}であらましが説明されているように、アーカイブされた投稿物を査読中リストや編集中リストに戻すこともできます。</p>]]>	
+	</section>
+</topic>

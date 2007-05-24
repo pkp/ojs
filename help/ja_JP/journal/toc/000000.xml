@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../toc.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Journal Management. 
+  *
+  * $Id$
+  -->
+
+<toc id="journal/toc/000000" locale="ja_JP" title="雑誌管理" parent_topic="journal/topic/000000">
+	<topic id="journal/topic/000001" title="管理ページ" />
+	<topic id="journal/topic/000002" title="ユーザ" />
+	<topic id="journal/topic/000003" title="役割" />
+	<breadcrumb url="journal/topic/000000" title="雑誌管理" />
+</toc>

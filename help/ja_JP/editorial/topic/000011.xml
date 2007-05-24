@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000011.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author's Role Editing Index 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000011" locale="ja_JP" title="編集" toc="editorial/toc/000009" subtoc="editorial/toc/000011" key="editorial.authorsRole.editing">
+	<section>
+		<![CDATA[<p>著者は、投稿物を電子出版あるいは印刷出版するための編集プロセスにおいて、投稿物の原稿整理と校正の2つの作業に貢献します。</p>]]>	
+	</section>
+</topic>

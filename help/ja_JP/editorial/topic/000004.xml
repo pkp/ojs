@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000004.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Section Editor's Role Index 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000004" locale="ja_JP" title="セクションエディタの役割" toc="editorial/toc/000000" subtoc="editorial/toc/000004" key="editorial.sectionEditorsRole">
+	<section>
+		<![CDATA[<p>セクションエディタは通常、投稿物の査読とアクセプトされた投稿物の編集を管理します。しかし、雑誌の方針によっては、セクションエディタは初めから割り当てられた投稿物の査読段階の面倒を見ることだけを編集者から依頼されており、投稿物がアクセプトされると、その後は編集者が（セクションエディタの役割を）引き継ぐ場合があります。その場合、投稿物の編集プロセスを管理してもらうには、編集者はメールでセクションエディタに依頼します。</p>]]>	
+	</section>
+</topic>

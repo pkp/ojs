@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../toc.dtd">
+
+<!--
+  * 000014.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Editorial Process - Proofreader's Role
+  *
+  * $Id$
+  -->
+
+<toc id="editorial/toc/000014" locale="ja_JP" title="校正者の役割" parent_topic="editorial/topic/000014">
+	<topic id="editorial/topic/000042" title="投稿物" />
+	<topic id="editorial/topic/000043" title="校正" />
+
+	<breadcrumb url="editorial/topic/000000" title="編集プロセス" />
+	<breadcrumb url="editorial/topic/000014" title="校正者の役割" />
+</toc>

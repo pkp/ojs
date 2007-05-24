@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000029.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Groups
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000029" locale="ja_JP" title="編集委員会" toc="journal/toc/000001" key="journal.managementPages.groups">
+	<section>
+		<![CDATA[<p>雑誌管理者は、2つの方法で雑誌の編集委員会を定義することができます。指定された編集担当職を使用する方法と独自の編集担当職を作成する方法です。なお、編集員会は、この雑誌の編集委員会ページに表示されます。</p>]]>
+	</section>
+	<section title="指定された編集担当職を使用した編集委員会の作成">
+		<![CDATA[<p>このオプションが選択された場合、「この雑誌について」ページに表示される編集委員会の情報は、雑誌管理者が役割のページで定義した編集担当を使用して自動的に作成されます。編集者、セクションエディタ、レイアウトエディタ、コピーエディタ、校正者として登録されたユーザがリストアップされます。</p>]]>
+	</section>
+	<section title="独自の編集担当職を使用した編集員会の作成">
+		<![CDATA[<p>この雑誌の編集委員会ページに表示する情報を独自に管理したい場合は、編集委員会のページ（雑誌管理を参照）でこのオプションを有効にします。このオプションが有効になると、編集委員会ページで作成した様々な編集担当職を使用して公開する編集委員会情報を作成することができます。</p>]]>
+	</section>
+</topic>

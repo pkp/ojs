@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * User Interface Index 
+  *
+  * $Id$
+  -->
+
+<topic id="user/topic/000000" locale="ja_JP" title="雑誌Webサイト" toc="index/toc/000000" subtoc="user/toc/000000" key="user.index">
+	<section>
+		<![CDATA[<p>この雑誌は、研究と学問のための読書経験を改善するよう設計された多くの機能をユーザに提供します。これらの機能はオンラインジャーナルで一般的に使用されているものです。したがって、この雑誌でその機能に慣れれば、他のオンラインジャーナルにおいてもその価値を十分に享受することが容易になるでしょう。これらの機能は通常、すべての読者が利用することができます。</p>]]>	
+	</section>
+</topic>

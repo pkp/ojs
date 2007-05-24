@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Publishing Process Index 
+  *
+  * $Id$
+  -->
+
+<topic id="publishing/topic/000000" locale="ja_JP" title="出版プロセス" toc="index/toc/000000" subtoc="publishing/toc/000000" key="publishing.index">
+	<section>
+		<![CDATA[<p>編集者は、巻号の作成、その巻号への投稿物の割り当て、目次の編成、最後にその巻号の出版という一連の出版プロセスを監督します。雑誌は複数のフォーマットで出版することができます。通常のパターンは、投稿物を1つの号に集め、季節ごとに（あるいは、月ごとや年2回）出版します。しかし、電子ジャーナルの中には、準備のできた投稿物から1つずつ直ちに出版することを好む雑誌もあります。この場合、その年の最初の投稿物から始まり、別の巻が始まる年末までに出版した投稿物がその年の巻を構成することになります。このヘルプ文書では、巻号という言葉を使っていますが、巻号は、（a）巻、号、年、(b）巻、年、（c）年、（d）タイトルで識別される目次で構成されています。巻号をどのように識別するかは、雑誌管理者が設定する雑誌の設定項目の1つです。</p>]]>	
+	</section>
+</topic>

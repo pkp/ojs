@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000002.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Users Index 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000002" locale="ja_JP" title="ユーザ" toc="journal/toc/000000" subtoc="journal/toc/000002" key="journal.users.index">
+	<section>
+		<![CDATA[<p>OJSにおけるユーザ管理は雑誌管理者の仕事です。これには、ユーザの作成、アカウントの停止、役割の管理などがあります。雑誌管理者は、既存の登録者のブラウズや追加、プロフィールの変更、アカウントのマージ、複数ユーザへの連絡をすることができます。</p>]]>	
+	</section>
+</topic>

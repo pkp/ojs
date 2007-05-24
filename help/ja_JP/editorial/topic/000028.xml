@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000028.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Section Editor's Role Index - Editing - Layout
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000028" locale="ja_JP" title="レイアウト" toc="editorial/toc/000007" key="editorial.sectionEditorsRole.editing.layout">
+	<section>
+		<![CDATA[<p>原稿整理のステップ3でコピーエディタが「クリーン」な版を作成したら、この版はレイアウト処理にまわされます。原稿整理の完了を伝えるメールを受け取ったセクションエディタは、まだレイアウトエディタを選んでいない場合はまず選定してから、レイアウトエディタの依頼欄のアイコンを使って、レイアウトエディタに作業を開始するよう依頼します。レイアウトエディタは、雑誌の出版フォーマット（例えば、HTML、PDF、PSなど）のいずれかの形式でゲラを作成します。投稿されたオリジナルファイルフォーマットのまま残されている補足ファイルは、基本的なフォーマッティングが正しくなされていることを保証するために、レイアウトエディタと校正者によりチェックされます。レイアウトエディタは、オンライン出版されるファイルであるゲラの第1稿の作成が終了したら、セクションエディタにメールで知らせます。</p>]]>	
+	</section>
+</topic>

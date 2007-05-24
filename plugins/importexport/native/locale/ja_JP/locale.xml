@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="ja_JP" full_name="日本語">
+	<message key="plugins.importexport.native.displayName">論文および巻号XMLプラグイン</message>
+	<message key="plugins.importexport.native.description">論文および巻号をインポート・エクスポート</message>
+
+	<message key="plugins.importexport.native.cliUsage"><![CDATA[使用法: {$scriptName} {$pluginName} [command] ...
+コマンド:
+	import [xmlFileName] [journal_path] [user_name] ...
+	export [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
+	export [xmlFileName] [journal_path] article [articleId]
+	export [xmlFileName] [journal_path] issues [issueId1] [issueId2] ...
+	export [xmlFileName] [journal_path] issue [issueId]
+
+データのインポートには、XML文書のルートノードにより、以下の通り追加パラメタが必要です。
+
+ルートノードが<article>または<articles>の場合は、追加パラメタが必要です。
+以下のフォーマットが使用できます。
+
+{$scriptName} {$pluginName} import [xmlFileName] [journal_path] [user_name]
+	issue_id [issueId] section_id [sectionId]
+
+{$scriptName} {$pluginName} import [xmlFileName] [journal_path] [user_name]
+	issue_id [issueId] section_name [name]
+
+{$scriptName} {$pluginName} import [xmlFileName] [journal_path]
+	issue_id [issueId] section_abbrev [abbrev]
+]]></message>
+	<message key="plugins.importexport.native.export">データのエクスポート</message>
+	<message key="plugins.importexport.native.export.issues">巻号のエクスポート</message>
+	<message key="plugins.importexport.native.export.sections">セクションのエクスポート</message>
+	<message key="plugins.importexport.native.export.articles">論文のエクスポート</message>
+
+	<message key="plugins.importexport.native.selectIssue">巻号の選択</message>
+	<message key="plugins.importexport.native.selectArticle">論文の選択</message>
+
+	<message key="plugins.importexport.native.import.articles">論文のインポート</message>
+	<message key="plugins.importexport.native.import.articles.description">インポート中のファイルには複数の論文が含まれています。これらの論文をインポートする号およびセクションを選択する必要があります。これらの論文をすべて同じセクションおよび号にインポートすることを望まない場合は、(1)異なるXMLファイルに分割するか、(2)インポート後に適当な号およびセクションに移動するか、のいずれかの対応をしてください。</message>
+
+	<message key="plugins.importexport.native.import">データのインポート</message>
+	<message key="plugins.importexport.native.import.description">このプラグインは、文書型定義 native.dtd に基づくデータインポートをサポートします。サポートするルートノードは、&amp;lt;article&amp;gt;、&amp;lt;articles&amp;gt;、&amp;lt;issue&amp;gt;と&amp;lt;issues&amp;gt;です。</message>
+
+	<message key="plugins.importexport.native.import.error">インポートエラー</message>
+	<message key="plugins.importexport.native.import.error.description">インポート処理中にエラーが発生しました。インポートファイルのフォーマットが仕様にあっているか確認してください。エラーの内容は以下の通りです。</message>
+
+	<message key="plugins.importexport.native.cliError">エラー:</message>
+	<message key="plugins.importexport.native.error.unknownUser">指定したユーザ "{$userName}" は存在しません。</message>
+	<message key="plugins.importexport.native.error.unknownJournal">指定した雑誌用パス名 "{$journalPath}"　は存在しません。</message>
+	<message key="plugins.importexport.native.export.error.couldNotWrite">ファイル "{$fileName}" に書き込むことができませんでした。</message>
+	<message key="plugins.importexport.native.export.error.sectionNotFound">指定した識別子 "{$sectionIdentifier}"　に合致するセクションはありませんでした。</message>
+	<message key="plugins.importexport.native.export.error.issueNotFound">指定した巻号ID "{$issueId}" に合致する号はありませんでした。</message>
+	<message key="plugins.importexport.native.export.error.articleNotFound">指定した論文ID "{$articleId}" に合致する論文はありませんでした。</message>
+	<message key="plugins.importexport.native.import.error.unsupportedRoot">このプラグインは入力したルートノード "{$rootName}" をサポートしていません。ファイルのフォーマットを確認して、もう一度実行してください。</message>
+
+	<message key="plugins.importexport.native.import.error.titleMissing">巻号のタイトルがありません。</message>
+	<message key="plugins.importexport.native.import.error.defaultTitle">タイトル記載なし</message>
+	<message key="plugins.importexport.native.import.error.unknownIdentificationType">"{$issueTitle}" 号の "issue" 要素の "identification" 属性に、不明な識別種別 "{$identificationType}" が指定されました。</message>
+	<message key="plugins.importexport.native.import.error.invalidBooleanValue">不正な論理値 "{$value}" が指定されました。"true" または "false" を使用してください。</message>
+	<message key="plugins.importexport.native.import.error.invalidDate">不正な日付 "{$value}" が指定されました。</message>
+	<message key="plugins.importexport.native.import.error.unknownEncoding">不明な符号化種別 "{$type}" を使ってデータが埋め込まれていました。</message>
+	<message key="plugins.importexport.native.import.error.couldNotWriteFile">"{$originalName}" のコピーを保存できません。</message>
+	<message key="plugins.importexport.native.import.error.illegalUrl">巻号 "{$issueTitle}" に指定したURL "{$url}" は不正です。Webを使ったインポートがサポートするのは、httpとhttps、ftp、ftpsだけです。</message>
+	<message key="plugins.importexport.native.import.error.unknownSuppFileType">補足ファイルに不明な種別 "{$suppFileType}" が指定されました。</message>
+	<message key="plugins.importexport.native.import.error.couldNotCopy">指定したURL "{$url}" はローカルファイルにコピーできませんでした。</message>
+	<message key="plugins.importexport.native.import.error.duplicatePublicId">インポートする号 "{$issueTitle}" に指定した公開IDはすでに別の号 "{$otherIssueTitle}" に使用されています。</message>
+	<message key="plugins.importexport.native.import.error.sectionTitleMissing">巻号 "{$issueTitle}" のセクションタイトルがありません。XML文書が適当なDTDに準拠していることを確認してください。</message>
+	<message key="plugins.importexport.native.import.error.sectionMismatch">"{$issueTitle}" 号の "{$sectionTitle}" セクションは既存の雑誌セクションに合致しますが、指定した略称（"{$sectionAbbrev}"）は別のセクションと合致します。</message>
+	<message key="plugins.importexport.native.import.error.articleTitleMissing">号 "{$issueTitle}"、セクション "{$issueTitle}" の論文タイトルがありません。XML文書が適当なDTDに準拠していること、および、雑誌の言語に合ったタイトルが提供されていることを確認してください。</message>
+	<message key="plugins.importexport.native.import.error.articleTitleLocaleUnsupported">"{$issueTitle}" 号に提供された論文タイトル（"{$articleTitle}"）は、この雑誌がサポートしていない言語（"{$locale}"）で書かれています。</message>
+	<message key="plugins.importexport.native.import.error.articleAbstractLocaleUnsupported">"{$issueTitle}" 号に提供された論文（"{$articleTitle}"）の論文要旨は、この雑誌がサポートしていない言語（"{$locale}"）で書かれています。</message>
+	<message key="plugins.importexport.native.import.error.galleyLabelMissing">"{$issueTitle}" 号の "{$sectionTitle}" セクションの論文 "{$articleTitle}" には、ゲララベルがありません。</message>
+	<message key="plugins.importexport.native.import.error.suppFileMissing">"{$issueTitle}" 号の "{$sectionTitle}" セクションの論文 "{$articleTitle}" には、補足ファイルがありません。</message>
+	<message key="plugins.importexport.native.import.error.galleyFileMissing">"{$issueTitle}" 号の "{$sectionTitle}" セクションの論文 "{$articleTitle}" には、ゲラファイルがありません。</message>
+
+	<message key="plugins.importexport.native.import.success">インポート成功</message>
+	<message key="plugins.importexport.native.import.success.description">インポートは成功しました。インポートされたアイテムを以下に示します。</message>
+</locale>

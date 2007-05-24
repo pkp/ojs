@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000014.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Proofreader's Role Index 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000014" locale="ja_JP" title="校正者の役割" toc="editorial/toc/000000" subtoc="editorial/toc/000014" key="editorial.proofreadersRole">
+	<section>
+		<![CDATA[<p>校正者は、著者またはセクションエディタから出版用に用意された校正形式に従って投稿物の最終校正作業を行うようメールで依頼されます。校正作業を行えない場合は、セクションエディタにメールで返事をするだけです。</p>]]>	
+	</section>
+</topic>

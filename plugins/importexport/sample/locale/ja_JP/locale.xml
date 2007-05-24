@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="ja_JP" full_name="日本語">
+	<message key="plugins.importexport.sample.displayName">インポート/エクスポート・サンプルプラグイン</message>
+	<message key="plugins.importexport.sample.description">このプラグインは、インポート/エクスポート・プラグインを開発する際に使用する実装例を提供します。このプラグイン自体はまったく役に立ちません。</message>
+
+	<message key="plugins.importexport.sample.selectIssue.short">巻号を選択</message>
+	<message key="plugins.importexport.sample.selectIssue.long">エクスポートする論文を選択してください。</message>
+</locale>

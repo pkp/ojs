@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000028.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Reading Tools - Contexts
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000028" locale="ja_JP" title="コンテキスト" toc="journal/toc/000005" key="journal.managementPages.readingTools.contexts">
+	<section>
+		<![CDATA[<p>読書ツールの各セットは個々のツール（関連の研究やオンラインフォーラムなど）から成り、各ツールはコンテキストとしてグループ化された関連の多くのデータベースで構成されています。これらのデータベース、およびこれらデータベースで構成されたコンテキストは、作成、編集、削除することができます。</p><p><i>コンテキストに含まれるアイテムのメタデータ:</i> 雑誌管理者はツールの名称を変更することができます。また、データベースの検索に著者のキーワード（デフォルト）、著者名（例えば、著者のその他の業績で使用する）、地理的索引語のいずれを使用するかを選択するオプションが提供されています。検索語の定義で使用されるもう一つのオプションは、読書中のテキストの任意の単語をダブルクリックすることにより検索語として選択することを可能にします。雑誌管理者は、独自の読書ツールを作成する際にこれらのオプションを使用することができます。</p><p><i>各ツールの検索機能の編集:</i> 検索画面を使って、雑誌管理者はツールに含まれている各データベースの検索URLと表示順を変更することができます。各データベースについては、読者がデータベースについてより詳しく知ることができるようにデータベースのURLが、また、検索を行うために使用する検索URLが提供されています。また、設定できる検索方法には2種類あります。1つはGET検索です。これが使用出来ないデータベースのために、POST検索もサポートされています。</p>]]>
+	</section>
+	<section title="GET検索">
+		<![CDATA[<p>GET検索を設定するには、まず検索を行い、検索結果のURLを見ます。例えば、Googleで「FOOBAR」を検索すると、URLは次のようになります。 </p><p><samp class="code">http://www.google.ca/search?hl=en&q=FOOBAR&meta=</samp></p><p>検索語「FOOBAR」を変数 &#123;$formKeywords&#125; で置き換えます。OJSはこの変数を見つけると、アイテムのメタデータから適当な値を抽出してこの変数を置き換えます。読書ツールに設定するための検索URLは次のようになります。</p><p><samp class="code">http://www.google.ca/search?hl=en&q=&#123;$formKeywords&#125;&meta=</samp></p><p>この場合、他のパラメータは不要なので、読書ツールの検索URLには次の簡略化したURLを使用することができます。</p><p><samp class="code">http://www.google.ca/search?q=&#123;$formKeywords&#125;</samp></p>]]>
+	</section>
+	<section title="POST検索">
+		<![CDATA[<p>POST検索の設定は、もう少し複雑です。再び、Googleを例に取ります。まず、ページのソースを見て、<samp class="code">&lt;form action="/search" ...&gt;</samp>の行に注目すると、ベースURLが<samp class="code">http://www.google.com/search</samp>で始まることがわかります。さらに、フォーム内にある<samp class="code">&lt;input ...&gt;</samp>要素と<samp class="code">&lt;select ... &gt;</samp>要素に注目し、これらを<samp class="code">name=value</samp>のペアとして<samp class="code">&</samp>でつなげてURLの最後に追加します。ユーザからテキスト入力を受け付けるテキストボックスを指定している要素（Googleの場合、qと名づけられています）の値には再び&#123;$formKeywords&#125;を設定します。これは、適当な値で置き換えられることになります。</p><p>POST検索をもう少し簡単に設定するには、まず、HTMLソースをファイルにコピーし、該当するフォームフィールドの<samp class="code">method=post</samp>を<samp class="code">method=get</samp>に変更し、さらに、完全なURLになるようにフォームの<samp class="code">action=</samp>値を、例えば、単なる<samp class="code">/search</samp>から<samp class="code">http://www.google.com/search</samp>に変更します。すると、変更したHTMLファイルをブラウザで見ることができるようになり、上で示したGETメソッドを使ったURLを作成することができます。</p><p>GET検索をサポートしていないサーチエンジンも存在します。上の方法でうまくいかない場合は、POSTフォームデータを「POSTデータ」フィールドに入力することができます。例えば、上の例でデータがPOSTされる必要がある場合は、検索URLに<samp class="code">http://www.google.com/search</samp>を、POSTデータに<samp class="code">q=&#123;$formKeywords&#125;</samp>を入力します。</p><p>検索が正しく行われることを確認するために作成したURLは必ずテストしてください。テストでは、URLの &#123;$formKeywords&#125;を単語で置き換えて検索し、期待した検索結果になるかどうかを確認します。POST検索については、利用できないサイトもあることに注意してください。独自の検索エンジンを持たないURLについては、もう1つの可能性として、Googleを使ってサイトで限定するという方法があります。Googleを使い検索語「FOOBAR」でmysite.comサイトだけを検索するには<samp class="code">site:mysite.com FOOBAR</samp>というクエリを使用します。デフォルトの検索ツールのいくつかのサイトでは、この方法を使用しています。</p>]]>
+	</section>
+</topic>

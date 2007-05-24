@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../toc.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Main table of contents for help. 
+  *
+  * $Id$
+  -->
+
+<toc id="index/toc/000000" locale="ja_JP" title="OJSヘルプ" parent_topic="index/topic/000000">
+	<topic id="intro/topic/000000" title="OJS入門" />
+	<topic id="site/topic/000000" title="サイト管理" />
+	<topic id="journal/topic/000000" title="雑誌管理" />
+	<topic id="submission/topic/000000" title="投稿プロセス" />
+	<topic id="editorial/topic/000000" title="編集プロセス" />
+	<topic id="publishing/topic/000000" title="出版プロセス" />
+	<topic id="user/topic/000000" title="雑誌Webサイト" />
+</toc>

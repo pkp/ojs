@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000017.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Editor's Role Submissions - In Editing 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000017" locale="ja_JP" title="編集中" toc="editorial/toc/000002" key="editorial.editorsRole.submissions.inEditing">
+	<section>
+		<![CDATA[<p>このキューにある投稿物は、原稿整理、レイアウト、校正の各作業が行われます。セクションエディタまたは編集者が編集中キューにある投稿物のタイトルをクリックすると、投稿物の編集ページに移動します。</p>]]>	
+	</section>
+</topic>

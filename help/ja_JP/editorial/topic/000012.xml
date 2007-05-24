@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000012.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Copyeditor's Role Index 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000012" locale="ja_JP" title="コピーエディタの役割" toc="editorial/toc/000000" subtoc="editorial/toc/000012" key="editorial.copyeditorsRole">
+	<section>
+		<![CDATA[<p>コピーエディタは、セクションエディタから投稿物の原稿整理を行うようメールで依頼されます。投稿物は、コピーエディタの投稿物キューに表示されます。原稿整理を行えない場合は、セクションエディタにメールで返事をするだけです。</p>]]>	
+	</section>
+</topic>

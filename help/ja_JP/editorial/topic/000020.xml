@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000020.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Editor's Role Submission Summary - Submission Metadata
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000020" locale="ja_JP" title="投稿物のメタデータ" toc="editorial/toc/000003" key="editorial.editorsRole.submissionSummary.submissionMetadata">
+	<section>
+		<![CDATA[<p>出版の際、投稿物のインデックスに使用されるメタデータは、著者により入力されます。そして、編集プロセスおいて、セクションエディタ、著者、コピーエディタにより修正することができます。</p>]]>	
+	</section>
+</topic>

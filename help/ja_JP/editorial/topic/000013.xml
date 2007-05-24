@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000013.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Layout Editor's Role Index 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000013" locale="ja_JP" title="レイアウトエディタの役割" toc="editorial/toc/000000" subtoc="editorial/toc/000013" key="editorial.layoutEditorsRole">
+	<section>
+		<![CDATA[<p>レイアウトエディタは、コピーエディタまたはセクションエディタから原稿整理の終わった投稿物のレイアウト作業を行うようメールで依頼されます。レイアウト作業を行えない場合は、セクションエディタにメールで返事をするだけです。</p>]]>	
+	</section>
+</topic>

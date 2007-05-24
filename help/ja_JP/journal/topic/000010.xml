@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000010.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Files Browser
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000010" locale="ja_JP" title="ファイルブラウザ" toc="journal/toc/000001" key="journal.managementPages.fileBrowser">
+	<section>
+		<![CDATA[<p>ファイルブラウザは、雑誌にアップロードされたファイル（投稿物管理を通じてアップロードされたすべてのファイルを含みます）の階層を雑誌管理者が調査・管理することを可能にします。あたかもローカルファイルシステムを操作するように、ファイルを閲覧・削除・移動することができます。</p>
+		<p>ファイルブラウザは、管理用のツールとして使用するために提供されたものですので、一般に日々の雑誌管理には必要のないものであることに注意してください。投稿物に関する情報は、ファイルとデータベースレコードの組み合わせで管理されています。ファイルブラウザを使って投稿物ファイルを削除しても、関連のデータベースレコードは削除されませんので注意してください。</p>]]>
+	</section>
+</topic>

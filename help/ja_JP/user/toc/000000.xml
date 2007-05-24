@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../toc.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for User Interface. 
+  *
+  * $Id$
+  -->
+
+<toc id="user/toc/000000" locale="ja_JP" title="雑誌Webサイト" parent_topic="user/topic/000000">
+	<topic id="user/topic/000001" title="ホーム" />
+	<topic id="user/topic/000002" title="この雑誌について" />
+	<topic id="user/topic/000007" title="ユーザホーム" />
+	<topic id="user/topic/000003" title="登録とユーザ情報" />
+	<topic id="user/topic/000004" title="最新号とアーカイブ" />
+	<topic id="user/topic/000005" title="検索とブラウズ" />
+	<topic id="user/topic/000006" title="読書ツール" />
+
+	<breadcrumb url="user/topic/000000" title="雑誌Webサイト" />
+</toc>

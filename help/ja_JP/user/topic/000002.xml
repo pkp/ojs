@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000002.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * User Interface - About
+  *
+  * $Id$
+  -->
+
+<topic id="user/topic/000002" locale="ja_JP" title="この雑誌について" toc="user/toc/000000" key="user.about">
+	<section>
+		<![CDATA[<p>「この雑誌について」ページでは、この雑誌の仕組みについてできるだけ明らかにするために、そのポリシー、手続き、その他の関連資料を提供します。これは、通常の雑誌の前付けと呼ばれる資料です。このページは、この雑誌の潜在的著者がこの雑誌の範囲と対象やピアレビューポリシー、投稿物のフォーマットや準備の方法、雑誌へ論文を投稿する方法について、知ることができる場所です。</p>]]>	
+	</section>
+</topic>

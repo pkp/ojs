@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author Submission Process Index 
+  *
+  * $Id$
+  -->
+
+<topic id="submission/topic/000000" locale="ja_JP" title="投稿プロセス" toc="index/toc/000000" subtoc="submission/toc/000000" key="submission.index">
+	<section>
+		<![CDATA[<p>この雑誌は、著者が投稿物を雑誌のWebサイトで直接アップロードする機能を提供しています。雑誌管理者がこの雑誌に選択したオプション（ステップ2.7）により、著者は、著者として登録する際に、査読者（他の投稿物のピアレビューを行う者を言う）として、また、読者（雑誌に新しい号が発行された場合に目次が通知される）として登録できるオプションを持つことができます。登録を済ませると、著者はそのままユーザホームに移動します。このページには、現在および過去の投稿物がリストされており、ここから雑誌への新規投稿を開始することもできます。著者による投稿プロセスは5つのステップに分けられており、各ステップには作業手順が示されます。著者は、5つのステップを一度に完了させる必要はありません。途中で投稿を中断することができ、この場合、投稿物表には「投稿未了」と表示されます。</p>]]>	
+	</section>
+</topic>

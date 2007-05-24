@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000010.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author's Role Review Index 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000010" locale="ja_JP" title="査読" toc="editorial/toc/000009" subtoc="editorial/toc/000010" key="editorial.authorsRole.review">
+	<section>
+		<![CDATA[<p>著者は、査読プロセスの間、投稿物の進捗状況を確認することができます。また、査読プロセスを監督するセクションエディタの求めに応じて、改訂版をアップロードすることができます。</p>]]>	
+	</section>
+</topic>

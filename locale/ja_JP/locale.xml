@@ -1,0 +1,2653 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../locale.dtd">
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+<locale name="ja_JP" full_name="日本語">
+  <!--
+	 * This file is organized into several major sections, separated
+	 * by comments like this one. These sections are called:
+	 *  COMMON - Contains frequently-used words
+	 *  ENTITIES - Contains terms pertaining to the system's major
+	 *             entities, e.g. Article, Journal, Section
+	 *  INTERFACE - Contains phrases organized by the section of the
+	 *              user interface they appear in.
+	 *  LOG - Contains phrases related to log entries
+	 *  MISC - Entries that don't belong elsewhere.
+	 *  DEFAULT - Default settings for configuration items.
+	-->
+  <!--
+	 *
+	 * COMMON - This section contains the most frequently-used words
+	 *
+	-->
+  <!-- Common Messages -->
+  <message key="common.and">および</message>
+  <message key="common.between">～</message>
+  <message key="common.all">すべて</message>
+  <message key="common.on">オン</message>
+  <message key="common.off">オフ</message>
+  <message key="common.enabled">有効</message>
+  <message key="common.disabled">無効</message>
+  <message key="common.openJournalSystems">オープン・ジャーナル・システム</message>
+  <message key="common.delete">削除</message>
+  <message key="common.edit">編集</message>
+  <message key="common.save">保存</message>
+  <message key="common.export">エクスポート</message>
+  <message key="common.import">インポート</message>
+  <message key="common.saveAndContinue">保存して継続</message>
+  <message key="common.saveAndEmail">保存してメール送信</message>
+  <message key="common.continue">続く</message>
+  <message key="common.cancel">取消</message>
+  <message key="common.done">完了</message>
+  <message key="common.search">検索</message>
+  <message key="common.up">上に</message>
+  <message key="common.top">トップ</message>
+  <message key="common.url">URL</message>
+  <message key="common.description">記述</message>
+  <message key="common.keywords">キーワード</message>
+  <message key="common.order">表示順</message>
+  <message key="common.back">戻る</message>
+  <message key="common.title">タイトル</message>
+  <message key="common.upload">アップロード</message>
+  <message key="common.download">ダウンロード</message>
+  <message key="common.replaceFile">ファイルの置換え</message>
+  <message key="common.subject">主題</message>
+  <message key="common.type">タイプ</message>
+  <message key="common.publisher">出版者</message>
+  <message key="common.note">注記</message>
+  <message key="common.notes">注記</message>
+  <message key="common.date">日付</message>
+  <message key="common.weeks">週間</message>
+  <message key="common.source">ソース</message>
+  <message key="common.language">言語</message>
+  <message key="common.id">ID</message>
+  <message key="common.status">状態</message>
+  <message key="common.remove">削除</message>
+  <message key="common.file">ファイル</message>
+  <message key="common.uploadedFile">アップロードファイル</message>
+  <message key="common.fileName">ファイル名</message>
+  <message key="common.dateSubmitted">投稿日</message>
+  <message key="common.dateRequested">依頼日</message>
+  <message key="common.dateCompleted">完了日</message>
+  <message key="common.dateUploaded">アップロード日</message>
+  <message key="common.dateModified">更新日</message>
+  <message key="common.other">その他</message>
+  <message key="common.fileSize">ファイルサイズ</message>
+  <message key="common.size">サイズ</message>
+  <message key="common.fileType">ファイル種別</message>
+  <message key="common.originalFileName">オリジナルファイル名</message>
+  <message key="common.none">なし</message>
+  <message key="common.required">必須</message>
+  <message key="common.requiredField">* は必須フィールドを表します</message>
+  <message key="common.or">あるいは</message>
+  <message key="common.notAvailable">利用できません</message>
+  <message key="common.notApplicable">適用しない</message>
+  <message key="common.notApplicableShort">N/A</message>
+  <message key="common.yes">はい</message>
+  <message key="common.no">いいえ</message>
+  <message key="common.languages">言語</message>
+  <message key="common.changesSaved">保存しました。</message>
+  <message key="common.chooseOne">1つ選択してください</message>
+  <message key="common.alreadyAssigned">任命済</message>
+  <message key="common.assign">任命</message>
+  <message key="common.assigned">任命済</message>
+  <message key="common.record">設定</message>
+  <message key="common.width">幅</message>
+  <message key="common.height">高さ</message>
+  <message key="common.user">ユーザ</message>
+  <message key="common.event">イベント</message>
+  <message key="common.action">アクション</message>
+  <message key="common.select">選択</message>
+  <message key="common.selectAll">すべて選択</message>
+  <message key="common.selectNone">すべての選択解除</message>
+  <message key="common.applyAction">処理実行</message>
+  <message key="common.deleteSelection">セクションの削除</message>
+  <message key="common.removeSelection">セクションの除去</message>
+  <message key="common.year">年</message>
+  <message key="common.month">月</message>
+  <message key="common.day">日</message>
+  <message key="common.hour">時</message>
+  <message key="common.minute">分</message>
+  <message key="common.second">秒</message>
+  <message key="common.create">作成</message>
+  <message key="common.modify">変更</message>
+  <message key="common.notify">通知</message>
+  <message key="common.noneAssigned">未任命</message>
+  <message key="common.cancelled">取り消された</message>
+  <message key="common.inProgress">処理中</message>
+  <message key="common.replaced">置き換えられた</message>
+  <message key="common.uninitiated">開始していない</message>
+  <message key="common.updated">更新された</message>
+  <message key="common.untitled">タイトルなし</message>
+  <message key="common.view">閲覧</message>
+  <message key="common.related">関連</message>
+  <message key="common.active">アクティブ</message>
+  <message key="common.completed">完了した</message>
+  <message key="common.mailingAddress">住所</message>
+  <message key="common.country">国</message>
+  <message key="common.close">閉じる</message>
+  <message key="common.closeWindow">ウィンドウを閉じる</message>
+  <message key="common.initiate">開始</message>
+  <message key="common.complete">完了</message>
+  <message key="common.options">オプション</message>
+  <message key="common.plugin">プラグイン</message>
+  <message key="common.default">デフォルト</message>
+  <message key="common.addSelf">自分を任命</message>
+  <message key="common.alphaList">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</message>
+  <!-- Common Form Messages -->
+  <message key="form.errorsOccurred">処理中にエラーが発生しました</message>
+  <message key="form.saveToUpload">保存ボタンを押してファイルをアップロードしてください。</message>
+  <message key="form.contains">含む</message>
+  <message key="form.is">は</message>
+  <message key="form.required">（* 必須）</message>
+  <message key="form.submit">実行</message>
+  <message key="form.send">送信</message>
+  <message key="form.resubmit">再実行</message>
+  <!-- Common Email Messages -->
+  <message key="email.email">メール</message>
+  <message key="email.sender">送信者</message>
+  <message key="email.recipient">受信者</message>
+  <message key="email.recipients">受信者</message>
+  <message key="email.from">From</message>
+  <message key="email.to">To</message>
+  <message key="email.cc">CC</message>
+  <message key="email.bcc">BCC</message>
+  <message key="email.subject">件名</message>
+  <message key="email.body">本文</message>
+  <message key="email.send">メール送信</message>
+  <message key="email.skip">スキップ</message>
+  <message key="email.compose">メール送信</message>
+  <message key="email.addToRecipient">受信者を追加</message>
+  <message key="email.addCcRecipient">CCを追加</message>
+  <message key="email.addBccRecipient">BCCを追加</message>
+  <message key="email.bccSender">このメールを自分のメールアドレス（{$address}）にコピーする</message>
+  <message key="email.invalid">このメールアドレス {$email} は不正です。</message>
+  <message key="email.multipart">MIMEフォーマットによるマルチパートメッセージです。</message>
+  <message key="email.attachments">添付ファイル</message>
+  <message key="email.addAttachment">添付ファイルを追加</message>
+  <!-- Common Localization Terms -->
+  <message key="locale.primary">デフォルトロケール</message>
+  <message key="locale.supported">サポートロケール</message>
+  <!-- Common Error Messages -->
+  <message key="common.error.databaseError">データベースエラーが発生しました: {$error}</message>
+  <message key="common.error.databaseErrorUnknown">データベース接続エラーが発生しました。</message>
+  <message key="common.error.framesRequired">
+    <![CDATA[このページはフレームを利用しています。非フレーム版は<a href="{$url}">ここをクリック</a>してください。]]>
+  </message>
+  <!-- Navigation -->
+  <message key="navigation.journalHelp">ヘルプ</message>
+  <message key="navigation.loggedInAs">ログインユーザ名: </message>
+  <message key="navigation.logout">ログアウト</message>
+  <message key="navigation.home">ホーム</message>
+  <message key="navigation.about">このサイト/雑誌について</message>
+  <message key="navigation.userHome">ユーザホーム</message>
+  <message key="navigation.login">ログイン</message>
+  <message key="navigation.register">登録</message>
+  <message key="navigation.user">ユーザ</message>
+  <message key="navigation.archives">アーカイブ</message>
+  <message key="navigation.current">最新号</message>
+  <message key="navigation.search">検索</message>
+  <message key="navigation.otherJournals">その他の雑誌</message>
+  <message key="navigation.myProfile">ユーザ情報</message>
+  <message key="navigation.myJournals">マイ･ジャーナル</message>
+  <message key="navigation.journalContent">目次</message>
+  <message key="navigation.browse">ブラウズ</message>
+  <message key="navigation.browseByIssue">巻号によるブラウズ</message>
+  <message key="navigation.browseByAuthor">著者によるブラウズ</message>
+  <message key="navigation.browseByTitle">タイトルによるブラウズ</message>
+  <message key="navigation.info">ご案内</message>
+  <message key="navigation.infoForAuthors">論文著者の皆様へ</message>
+  <message key="navigation.infoForReaders">読者の皆様へ</message>
+  <message key="navigation.infoForLibrarians">図書館員の皆様へ</message>
+  <message key="navigation.infoForAuthors.long">論文著者の皆様へ</message>
+  <message key="navigation.infoForReaders.long">読者の皆様へ</message>
+  <message key="navigation.infoForLibrarians.long">図書館員の皆様へ</message>
+  <message key="navigation.previousStep">前ステップ</message>
+  <message key="navigation.nextStep">次ステップ</message>
+  <message key="navigation.stepNumber">ステップ {$step}</message>
+  <message key="navigation.previousPage">&lt;&lt;</message>
+  <message key="navigation.nextPage">&gt;&gt;</message>
+  <message key="navigation.items">{$from} - {$to} / {$total} 件</message>
+  <!-- Article Queues -->
+  <message key="common.queue.long.submissionsUnassigned">未処理の投稿物</message>
+  <message key="common.queue.short.submissionsUnassigned">未処理</message>
+  <message key="common.queue.long.submissionsInEditing">編集中の投稿物</message>
+  <message key="common.queue.short.submissionsInEditing">編集中</message>
+  <message key="common.queue.long.submissionsInReview">査読中の投稿物</message>
+  <message key="common.queue.short.submissionsInReview">査読中</message>
+  <message key="common.queue.long.submissionsArchives">アーカイブされた投稿物</message>
+  <message key="common.queue.short.submissionsArchives">アーカイブ</message>
+  <message key="common.queue.long.active">処理対象となる投稿物</message>
+  <message key="common.queue.short.active">処理対象</message>
+  <message key="common.queue.long.completed">作業が完了した投稿物</message>
+  <message key="common.queue.short.completed">完了</message>
+  <!--
+	 *
+	 * ENTITIES - This section contains terms pertaining to the system's
+	 *            major entities, e.g. Article, Journal, Section
+	 *
+	-->
+  <!-- Common Section Terms -->
+  <message key="section.section">セクション情報</message>
+  <message key="section.sections">雑誌セクション</message>
+  <message key="section.title">セクション名</message>
+  <message key="section.abbreviation">略称</message>
+  <message key="section.abbreviation.example">（例、Articles=ART）</message>
+  <message key="section.default.title">原著論文</message>
+  <message key="section.default.abbrev">ART</message>
+  <message key="section.default.policy">
+  </message>
+  <!-- Common Article Terms -->
+  <message key="article.articles">論文</message>
+  <message key="article.submissionId">投稿物ID</message>
+  <message key="article.title">タイトル</message>
+  <message key="article.authors">著者</message>
+  <message key="article.indexingInformation">インデックス情報</message>
+  <message key="article.metadata">メタデータ</message>
+  <message key="article.journalSection">雑誌セクション</message>
+  <message key="article.file">ファイル</message>
+  <message key="article.suppFile">補足ファイル</message>
+  <message key="article.suppFiles">補足ファイル</message>
+  <message key="article.suppFilesAbbrev">補足ファイル</message>
+  <message key="article.discipline">学術分野</message>
+  <message key="article.subjectClassification">主題分類</message>
+  <message key="article.subject">キーワード</message>
+  <message key="article.coverage">範囲</message>
+  <message key="article.coverageGeo">地理空間的範囲</message>
+  <message key="article.coverageChron">時代的または歴史的範囲</message>
+  <message key="article.coverageSample">研究資料の特徴</message>
+  <message key="article.type">種類、方法またはアプローチ</message>
+  <message key="article.language">言語</message>
+  <message key="article.sectionEditor">SE</message>
+  <message key="article.commentsToEditor">編集者へのコメント</message>
+  <message key="article.submission">投稿物</message>
+  <message key="article.submissions">投稿物</message>
+  <message key="article.abstract">要旨</message>
+  <message key="article.details">詳細</message>
+  <!-- Submission Tracking - Common -->
+  <message key="submission.summary">概要</message>
+  <message key="submission.review">査読</message>
+  <message key="submission.editing">編集</message>
+  <message key="submission.history">履歴</message>
+  <message key="submission.page.summary">#{$id} 概要</message>
+  <message key="submission.page.review">#{$id} 査読</message>
+  <message key="submission.page.editing">#{$id} 編集</message>
+  <message key="submission.page.history">#{$id} 履歴</message>
+  <message key="submission.submissionReview">投稿物の査読</message>
+  <message key="submission.submissionEditing">投稿物の編集</message>
+  <message key="submission.submissionHistory">投稿物の履歴</message>
+  <message key="submission.submissionManuscript">投稿物の原稿</message>
+  <message key="submission.metadata">投稿物のメタデータ</message>
+  <message key="submission.originalFile">オリジナルファイル</message>
+  <message key="submission.addSuppFile">補足ファイルの追加</message>
+  <message key="submission.submitter">投稿者</message>
+  <message key="submission.changeSection">変更</message>
+  <message key="submission.initiated">開始した</message>
+  <message key="submission.lastModified">最新更新日</message>
+  <message key="submission.ask">依頼</message>
+  <message key="submission.request">依頼</message>
+  <message key="submission.underway">作業中</message>
+  <message key="submission.start">開始</message>
+  <message key="submission.response">回答</message>
+  <message key="submission.accepted">アクセプト</message>
+  <message key="submission.rejected">リジェクト</message>
+  <message key="submission.acceptance">査読を受諾</message>
+  <message key="submission.due">期限</message>
+  <message key="submission.complete">完了</message>
+  <message key="submission.acknowledge">謝礼</message>
+  <message key="submission.done">完了</message>
+  <message key="submission.views">閲覧</message>
+  <message key="submission.abstractViews">要旨を読む</message>
+  <message key="submission.noReviewAssignments">査読が指定されていない</message>
+  <message key="submission.reviewVersion">査読する版</message>
+  <message key="submission.peerReview">査読</message>
+  <message key="submission.editorDecision">編集者の判断</message>
+  <message key="submission.round">ラウンド&amp;nbsp;{$round}</message>
+  <message key="submission.editorReview">編集者の査読</message>
+  <message key="submission.notifyAuthor">著者に通知</message>
+  <message key="submission.notifyEditor">編集者に通知</message>
+  <message key="submission.editorAuthorRecord">編集者/著者のメールレコード</message>
+  <message key="submission.reviewersVersion">査読者版</message>
+  <message key="submission.postReviewVersion">査読済み版</message>
+  <message key="submission.editorVersion">編集者版</message>
+  <message key="submission.authorsRevisedVersion">著者改訂版</message>
+  <message key="submission.authorVersion">著者版</message>
+  <message key="submission.copyediting">原稿整理</message>
+  <message key="submission.copyedit">原稿整理</message>
+  <message key="submission.layout">レイアウト</message>
+  <message key="submission.proofreading">校正</message>
+  <message key="submission.scheduling">出版スケジュール</message>
+  <message key="submission.scheduledIn">{$issueName} 出版スケジュール。</message>
+  <message key="submission.scheduledIn.tba">（未定）</message>
+  <message key="submission.files">ファイル</message>
+  <message key="submission.viewMetadata">メタデータの閲覧</message>
+  <message key="submission.editMetadata">メタデータの編集</message>
+  <message key="submission.reviewMetadata">メタデータの点検</message>
+  <message key="submission.backToSubmissionEditing">投稿物の編集に戻る</message>
+  <message key="submission.titleAndAbstract">タイトルと要旨</message>
+  <message key="submission.indexing">インデックス</message>
+  <message key="submission.restrictions">制限</message>
+  <message key="submission.supportingAgencies">支援機関</message>
+  <message key="submission.saveMetadata">メタデータの保存</message>
+  <message key="submissions.sec">セクション</message>
+  <message key="submissions.step1">ステップ 1</message>
+  <message key="submissions.step3">ステップ 3</message>
+  <message key="submissions.completed">完了</message>
+  <message key="submissions.active">処理対象</message>
+  <message key="submissions.queuedUnassigned">指定待ち</message>
+  <message key="submissions.queuedEditing">編集作業待ち</message>
+  <message key="submissions.queuedReview">査読作業待ち</message>
+  <message key="submissions.archived">アーカイブされた</message>
+  <message key="submissions.scheduled">スケジュールされた</message>
+  <message key="submissions.published">出版された</message>
+  <message key="submissions.declined">辞退した</message>
+  <message key="submissions.queued">待ち行列に入れた</message>
+  <message key="submissions.initial">開始</message>
+  <message key="submissions.proofread">校正</message>
+  <message key="submissions.initialProof">初校</message>
+  <message key="submissions.postAuthor">著者修正済</message>
+  <message key="submissions.reviewRound">査読ラウンド</message>
+  <message key="submissions.incomplete">投稿未了</message>
+  <message key="submissions.proof">校正</message>
+  <message key="submissions.submit">実行</message>
+  <message key="submissions.editorDecision">編集者の判断</message>
+  <message key="submissions.editorRuling">編集者の裁定</message>
+  <message key="submissions.ruling">裁定</message>
+  <message key="submissions.noSubmissions">投稿物はありません</message>
+  <message key="submission.supplementaryFiles">補足ファイル</message>
+  <message key="submission.dueDate">期限日</message>
+  <message key="submission.recommendation">答申</message>
+  <message key="submission.galley">ゲラ版</message>
+  <message key="submission.emailLog">メールログ</message>
+  <message key="submission.eventLog">イベントログ</message>
+  <message key="submission.uploadFileTo">ファイルのアップロード</message>
+  <!-- Submission list search engine -->
+  <message key="submissions.submitted">投稿済み</message>
+  <message key="submissions.copyeditComplete">原稿整理済み</message>
+  <message key="submissions.layoutComplete">レイアウト済み</message>
+  <message key="submissions.proofreadingComplete">校正済み</message>
+  <!-- Submission Notes -->
+  <message key="submission.notes">投稿注記</message>
+  <message key="submission.notes.breadcrumb">注記</message>
+  <message key="submission.notes.addNewNote">新規注記の作成</message>
+  <message key="submission.notes.viewNotes">注記の閲覧</message>
+  <message key="submission.notes.expandNotes">注記の拡張</message>
+  <message key="submission.notes.clearAllNotes">全注記のクリア</message>
+  <message key="submission.notes.noSubmissionNotes">投稿注記はありません</message>
+  <message key="submission.notes.confirmDelete">この投稿注記を削除しますか。</message>
+  <message key="submission.notes.editNote">注記の編集</message>
+  <message key="submission.notes.attachedFile">ファイル添付</message>
+  <message key="submission.notes.confirmDeleteAll">全投稿注記を削除しますか。</message>
+  <message key="submission.notes.collapseNotes">注記を隠す</message>
+  <message key="submission.notes.backToSubmissionNotes">投稿注記に戻る</message>
+  <message key="submission.notes.removeUploadedFile">アップロードファイルの削除</message>
+  <message key="submission.notes.deleteNote">注記の削除</message>
+  <message key="submission.notes.updateNote">注記の更新</message>
+  <message key="submission.notes.createNewNote">新規注記の作成</message>
+  <!-- Common Journal Terms -->
+  <message key="journal.currentIssue">最新号</message>
+  <message key="journal.journals">雑誌</message>
+  <message key="journal.path">パス名</message>
+  <message key="journal.journal">雑誌</message>
+  <!-- User -->
+  <message key="user.userHome">ユーザホーム</message>
+  <message key="user.showAllJournals">マイ･ジャーナルの表示</message>
+  <message key="user.login">ログイン</message>
+  <message key="user.profile">ユーザ情報</message>
+  <message key="user.register">登録</message>
+  <message key="user.logIn">ログイン</message>
+  <message key="user.logOut">ログアウト</message>
+  <message key="user.username">ユーザ名</message>
+  <message key="user.password">パスワード</message>
+  <message key="user.name">名前</message>
+  <message key="user.firstName">名</message>
+  <message key="user.middleName">ミドルネーム</message>
+  <message key="user.initials">イニシァル</message>
+  <message key="user.initialsExample">Joan Alice Smith = JAS</message>
+  <message key="user.lastName">姓</message>
+  <message key="user.title">身分</message>
+  <message key="user.affiliation">所属</message>
+  <message key="user.affiliations">所属</message>
+  <message key="user.email">メールアドレス</message>
+  <message key="user.url">URL</message>
+  <message key="user.url.description">このURLは、「この著者について」および「編集委員会」ページの経歴欄の下にリンク付のURLとして表示されます。</message>
+  <message key="user.phone">電話</message>
+  <message key="user.fax">Fax</message>
+  <message key="user.interests">査読可能分野</message>
+  <message key="user.mailingAddress">その他のメールアドレス</message>
+  <message key="user.biography">経歴</message>
+  <message key="user.biography.description">（例: 部局や身分）</message>
+  <message key="user.workingLanguages">選択言語</message>
+  <message key="user.dateRegistered">登録日</message>
+  <message key="user.dateLastLogin">最新ログイン</message>
+  <message key="user.registerForOtherJournals">他の雑誌に登録</message>
+  <message key="user.roles">役割</message>
+  <message key="user.changePassword">パスワードの変更</message>
+  <message key="user.editMyProfile">ユーザ情報の変更</message>
+  <message key="user.changeMyPassword">パスワードの変更</message>
+  <message key="user.myJournals">マイ・ジャーナル</message>
+  <message key="user.myAccount">マイ・アカウント</message>
+  <!-- Roles -->
+  <message key="user.role.siteAdmin">サイト管理者</message>
+  <message key="user.role.manager">雑誌管理者</message>
+  <message key="user.role.editor">編集者</message>
+  <message key="user.role.sectionEditor">セクションエディタ</message>
+  <message key="user.role.layoutEditor">レイアウトエディタ</message>
+  <message key="user.role.reviewer">査読者</message>
+  <message key="user.role.copyeditor">コピーエディタ</message>
+  <message key="user.role.proofreader">校正者</message>
+  <message key="user.role.author">著者</message>
+  <message key="user.role.reader">読者</message>
+  <message key="user.role.subscriptionManager">購読管理者</message>
+  <message key="user.role.siteAdmins">サイト管理者</message>
+  <message key="user.role.managers">雑誌管理者</message>
+  <message key="user.role.editors">編集者</message>
+  <message key="user.role.sectionEditors">セクションエディタ</message>
+  <message key="user.role.layoutEditors">レイアウトエディタ</message>
+  <message key="user.role.reviewers">査読者</message>
+  <message key="user.role.copyeditors">コピーエディタ</message>
+  <message key="user.role.proofreaders">校正者</message>
+  <message key="user.role.authors">著者</message>
+  <message key="user.role.readers">読者</message>
+  <message key="user.role.subscriptionManagers">購読管理者</message>
+  <!-- Common Issue Terms -->
+  <message key="issue.issue">巻号</message>
+  <message key="issue.issues">巻号</message>
+  <message key="issue.title">タイトル</message>
+  <message key="issue.volume">巻</message>
+  <message key="issue.number">号</message>
+  <message key="issue.vol">巻</message>
+  <message key="issue.no">号</message>
+  <message key="issue.year">年</message>
+  <message key="issue.noIssues">発行なし</message>
+  <message key="issue.toc">目次</message>
+  <message key="issue.abstract">要旨</message>
+  <!--
+	 *
+	 * LOG - This section contains entries related to log entries.
+	 *
+	-->
+  <message key="submission.event.logLevel">レベル</message>
+  <message key="submission.event.logLevel.info">Info</message>
+  <message key="submission.event.logLevel.notice">Notice</message>
+  <message key="submission.event.logLevel.warning">Warning</message>
+  <message key="submission.event.logLevel.error">Error</message>
+  <message key="submission.event.general.defaultEvent">投稿イベント</message>
+  <message key="submission.event.general.articleSubmitted">投稿論文</message>
+  <message key="submission.event.general.metadataUpdated">投稿物メタデータが更新された</message>
+  <message key="submission.event.general.suppFileUpdated">投稿物ファイルが更新された</message>
+  <message key="submission.event.general.issueScheduled">投稿物が巻号スケジューリングキューに送られた</message>
+  <message key="submission.event.general.issueAssigned">投稿物が巻号に割り付けられた</message>
+  <message key="submission.event.general.articlePublished">論文が出版された</message>
+  <message key="submission.event.author.authorRevision">著者改訂版が投稿された</message>
+  <message key="submission.event.general.authorRevision">著者改訂ファイルが更新された</message>
+  <message key="submission.event.editor.editorAssigned">投稿物に担当編集者が任命された</message>
+  <message key="submission.event.editor.editorUnassigned">投稿物の担当編集者が解除された</message>
+  <message key="submission.event.editor.editorDecision">編集者の判断が投稿された</message>
+  <message key="submission.event.editor.editorFile">編集者ファイルが更新された</message>
+  <message key="submission.event.editor.submissionArchived">投稿物がアーカイブに送られた</message>
+  <message key="submission.event.editor.submissionRestored">投稿物がアーカイブから復元された</message>
+  <message key="submission.event.reviewer.reviewerAssigned">投稿物に査読者が任命された</message>
+  <message key="submission.event.reviewer.reviewerUnassigned">投稿物の査読者が解除された</message>
+  <message key="submission.event.reviewer.reviewInitiated">査読依頼が開始された</message>
+  <message key="submission.event.reviewer.reviewCancelled">査読依頼が取り消された</message>
+  <message key="submission.event.reviewer.reviewReinitiated">査読依頼が再開された</message>
+  <message key="submission.event.reviewer.reviewAccepted">査読依頼が受諾された</message>
+  <message key="submission.event.reviewer.reviewAcceptedByProxy">査読依頼が代理人により受諾された</message>
+  <message key="submission.event.reviewer.reviewDeclined">査読依頼が謝絶された</message>
+  <message key="submission.event.reviewer.reviewRevision">査読者改訂ファイルが更新された</message>
+  <message key="submission.event.reviewer.reviewRecommendation">査読答申ファイル</message>
+  <message key="submission.event.reviewer.reviewerRated">査読者の評価が提示された</message>
+  <message key="submission.event.reviewer.reviewDueDate">査読期限日が変更された</message>
+  <message key="submission.event.reviewer.reviewResubmitted">査読結果が再提示された</message>
+  <message key="submission.event.reviewer.reviewFile">査読ファイルが更新された</message>
+  <message key="submission.event.copyedit.copyeditorAssigned">投稿物にコピーエディタが任命された</message>
+  <message key="submission.event.copyedit.copyeditorUnassigned">投稿物のコピーエディタが解除された</message>
+  <message key="submission.event.copyedit.copyeditInitiated">原稿整理が開始された</message>
+  <message key="submission.event.copyedit.copyeditRevision">コピーエディタ改訂ファイルが更新された</message>
+  <message key="submission.event.copyedit.copyeditInitialCompleted">最初の原稿整理が完了した</message>
+  <message key="submission.event.copyedit.copyeditFinalCompleted">最終の原稿整理が完了した</message>
+  <message key="submission.event.copyedit.copyeditSetFile">整理編集ファイルが更新された</message>
+  <message key="submission.event.proofread.proofreaderAssigned">投稿物に校正者が任命された</message>
+  <message key="submission.event.proofread.proofreaderUnassigned">投稿物の校正者が解除された</message>
+  <message key="submission.event.proofread.proofreadInitiated">校正が開始された</message>
+  <message key="submission.event.proofread.proofreadRevision">校正者改訂ファイルが更新された</message>
+  <message key="submission.event.proofread.proofreadCompleted">校正依頼が完了した</message>
+  <message key="submission.event.layout.layoutEditorAssigned">投稿物にレイアウトエディタが任命された</message>
+  <message key="submission.event.layout.layoutEditorUnassigned">投稿物のレイアウトエディタが解除された</message>
+  <message key="submission.event.layout.layoutInitiated">レイアウトが開始された</message>
+  <message key="submission.event.layout.layoutGalleyCreated">レイアウトゲラ版が更新された</message>
+  <message key="submission.event.layout.layoutComplete">レイアウトが完了した</message>
+  <!--
+	 *
+	 * INTERFACE - Contains phrases organized by the section of the
+	 *             user interface they appear in.
+	 *
+	-->
+  <!-- Reader article view -->
+  <message key="reader.fullText">フルテキスト:</message>
+  <message key="reader.fullTextSubscribersOnly">フルテキスト: 購読者のみ</message>
+  <!-- Reader Comments -->
+  <message key="comments.commentsOnArticle">この論文に対するコメント</message>
+  <message key="comments.viewAllComments">全コメントを閲覧</message>
+  <message key="comments.noComments">読者からのコメントはありません。</message>
+  <message key="comments.anonymous">匿名ユーザ</message>
+  <message key="comments.anonymousNamed">&quot;{$userName}&quot;</message>
+  <message key="comments.authenticated">{$userName}</message>
+  <message key="comments.nReplies">（返答 {$num} 件）</message>
+  <message key="comments.oneReply">（返答 1件）</message>
+  <message key="comments.readerComments">読者コメント</message>
+  <message key="comments.inResponseTo"><![CDATA[<a href="]]>{$url}<![CDATA[">]]>{$title}<![CDATA[</a>への返答]]>
+  </message>
+  <message key="comments.emailReply">返答をメール</message>
+  <message key="comments.postReply">返答を投稿</message>
+  <message key="comments.delete">このコメントを削除</message>
+  <message key="comments.replies">返答</message>
+  <message key="comments.enterComment">コメントを入力</message>
+  <message key="comments.name">投稿者名</message>
+  <message key="comments.email">投稿者メールアドレス</message>
+  <message key="comments.title">タイトル</message>
+  <message key="comments.body">本文</message>
+  <message key="comments.postAnonymously">このコメントを匿名で投稿</message>
+  <message key="comments.readMore">もっと読む</message>
+  <message key="comments.confirmDeleteChildren">このコメントを削除するとコメントへの返答も削除されます。このコメントを削除してもよいですか。</message>
+  <!-- Site Administration -->
+  <message key="admin.siteAdmin">サイト管理</message>
+  <message key="admin.siteSettings">サイト設定</message>
+  <message key="admin.hostedJournals">提供雑誌</message>
+  <message key="admin.authSources">認証システム</message>
+  <message key="admin.settings.siteTitle">サイト名</message>
+  <message key="admin.settings.introduction">あいさつ文</message>
+  <message key="admin.settings.aboutDescription">サイトの説明</message>
+  <message key="admin.settings.form.titleRequired">サイト名は必須です。</message>
+  <message key="admin.settings.journalRedirect">リダイレクト先の雑誌</message>
+  <message key="admin.settings.journalRedirectInstructions">このサイトへのリクエストがこの雑誌にリダイレクトされます。例えば、このサイトが提供する雑誌が1誌だけの場合に設定すると良いでしょう。</message>
+  <message key="admin.settings.noJournalRedirect">リダイレクトしない</message>
+  <message key="admin.settings.contactName">連絡担当者名</message>
+  <message key="admin.settings.contactEmail">連絡担当者メールアドレス</message>
+  <message key="admin.settings.minPasswordLength">最小パスワード長</message>
+  <message key="admin.settings.form.contactNameRequired">連絡担当者名は必須です。</message>
+  <message key="admin.settings.form.contactEmailRequired">連絡担当者メールアドレスは必須です。</message>
+  <message key="admin.settings.form.minPasswordLengthRequired">パスワードには、少なくとも4文字以上入力する必要があります。</message>
+  <message key="admin.settings.passwordCharacters">文字</message>
+  <message key="admin.settings.siteLanguage">サイトの言語</message>
+  <message key="admin.settings.oaiRegistration">（メタデータハーベスティングのための）サイトの登録</message>
+  <message key="admin.settings.oaiRegistrationDescription">
+    <![CDATA[このサイトで提供するすべての雑誌のコンテンツを世界中に存在する研究情報データベースで検索できるようにするために、このサイトのURLをPublic Knowledge Projectメタデータ<a href="http://pkp.sfu.ca/harvester/" target="_blank">ハーベスタ</a>に<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">登録</a>してください。ハーベスタはこの雑誌に登録された各アイテムからメタデータを収集し、<a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">OAI-PMH</a>に準拠する研究情報サイトの情報と共に正確で包括的な検索を可能にします。
+<br /><br />
+<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">ここをクリック</a>して<b>サイトURL</b>欄に<span class="highlight">{$siteUrl}</span>を、<b>OAIアーカイブのBase URL</b>の欄に<span class="highlight">{$oaiUrl}</span>を各々入力してください。
+<br /><br />
+OJSのシステム設定を変更することにより、このサイト全体のOAIインターフェースを無効にすることができます。将来的には、OAIインターフェースの有効･無効を雑誌ごとに設定できるようにする予定です。]]>
+  </message>
+  <message key="admin.siteManagement">サイト管理</message>
+  <message key="admin.adminFunctions">管理機能</message>
+  <message key="admin.expireSessions">ユーザセッションの破棄</message>
+  <message key="admin.confirmExpireSessions">全てのユーザのセッションを破棄してもよいですか。これを実行すると、現在、システムにログインしているユーザは（あなたを含めて）すべて再ログインが必要になります。</message>
+  <message key="admin.clearTemplateCache">テンプレートキャッシュのクリア</message>
+  <message key="admin.clearDataCache">データキャッシュのクリア</message>
+  <message key="admin.confirmClearTemplateCache">コンパイル済テンプレートのキャッシュをクリアしてもよいですか。</message>
+  <message key="admin.systemInformation">システム情報</message>
+  <!-- Languages -->
+  <message key="admin.languages.languageSettings">言語設定</message>
+  <message key="admin.languages.installLanguages">言語のインストール</message>
+  <message key="admin.languages.primaryLocaleInstructions">このサイトおよびこのサイトで運営している全ての雑誌のデフォルト言語になります。</message>
+  <message key="admin.languages.supportedLocalesInstructions">このサイトでサポートするロケールをすべて選択してください。選択したロケールはこのサイトで運営している全ての雑誌で利用可能となり、各雑誌サイトに表示される言語選択メニューに現れるようになります（雑誌ごとに置き換えることが可能です）。複数のロケールが選択されなかった場合は、言語選択メニューは画面に表示されず、それ以上の言語設定を行うことはできません。</message>
+  <message key="admin.languages.languageOptions">言語オプション</message>
+  <message key="admin.languages.profileLocales">雑誌の編集者が便利なように、登録担当者（編集者、査読者、コピーエディタなど）のユーザ情報において、作業言語を必須にする。</message>
+  <message key="admin.languages.installedLocales">インストールされている言語</message>
+  <message key="admin.languages.reload">ロケールのリロード</message>
+  <message key="admin.languages.confirmReload">このロケールをリロードしてもよいですか。これを実行すると、カスタム化したメールテンプレートなどロケール依存の既存のデータを消去することになります。</message>
+  <message key="admin.languages.uninstall">ロケールのアンインストール</message>
+  <message key="admin.languages.confirmUninstall">このロケールをアンインストールしてもよいですか。これを実行すると、このロケールを現在使用している全ての雑誌に影響を及ぼすことになります。</message>
+  <message key="admin.languages.installNewLocales">新規ロケールのインストール</message>
+  <message key="admin.languages.installNewLocalesInstructions">このシステムで新たにサポートするロケールをすべて選択してください。あらかじめインストールしておかないと、このサイトで運営する雑誌でそのロケールは使用することはできません。ここに表示されていない言語を追加したい場合は、OJSの添付されている説明書をご覧ください。</message>
+  <message key="admin.languages.noLocalesAvailable">インストールできるロケールはありません。</message>
+  <message key="admin.languages.installLocales">インストール</message>
+  <message key="admin.auth.ojs">OJSユーザデータベース</message>
+  <message key="admin.auth.create">認証システムの作成</message>
+  <message key="admin.auth.confirmDelete">この認証システムを完全に削除してもよいですか。</message>
+  <message key="admin.auth.noneCreated">認証システムは定義されていません。</message>
+  <message key="admin.auth.enableSyncProfiles">ユーザ情報の同期機能を有効にする（この認証プラグインでこの機能がサポートされている場合）。このオプションを有効にすると、ユーザがログインする際に、リモート認証システムの情報によりユーザ情報が自動的に更新されます。また、本システムで変更したユーザ情報もリモートシステム上で自動的に更新されます。このオプションが無効の場合は、OJSのユーザ情報はリモートシステムのユーザ情報とは独立に管理されます。</message>
+  <message key="admin.auth.enableSyncPasswords">ユーザパスワードの変更機能を有効にする（この認証プラグインでこの機能がサポートされている場合）。このオプションを有効にすると、ユーザはOJSで指定したパスワードを変更することが可能になり、OJSの「パスワード忘失」機能を使って忘れてしまったパスワードをリセットすることができます。これらの機能は、このオプションが有効になっていないとユーザは利用することができません。</message>
+  <message key="admin.auth.enableCreateUsers">ユーザ作成機能を有効にする（この認証プラグインでこの機能がサポートされている場合）。この認証システムを使ってOJSに作成されたユーザがリモート認証システムに登録されていない場合、自動的に追加されます。さらに、このシステムがデフォルトの認証システムの場合、ユーザ登録により作成されたOJSアカウントがリモート認証システムにも追加されます。</message>
+  <message key="admin.auth.defaultSourceDescription">
+    <![CDATA[OJS以外の認証システムをデフォルトの認証システムに指定すると、次のような効果があります。
+<ul>
+	<li>ユーザが、（OJSデータベースには存在しないが）その認証システムには存在するユーザ名でこのサイトに新規アカウントを登録しようとした場合、指定されたパスワードがそのユーザアカウントのパスワードとして正しい場合のみ登録が許可されることになります。</li>
+</ul>]]>
+  </message>
+  <!-- System Information -->
+  <message key="admin.systemVersion">OJSのバージョン</message>
+  <message key="admin.systemConfiguration">OJSの設定</message>
+  <message key="admin.serverInformation">サーバ情報</message>
+  <message key="admin.currentVersion">現在のバージョン</message>
+  <message key="admin.versionHistory">バージョン履歴</message>
+  <message key="admin.version">バージョン</message>
+  <message key="admin.versionMajor">メジャー</message>
+  <message key="admin.versionMinor">マイナー</message>
+  <message key="admin.versionRevision">リビジョン</message>
+  <message key="admin.versionBuild">ビルド</message>
+  <message key="admin.dateInstalled">インストール日</message>
+  <message key="admin.systemConfigurationDescription">
+    <![CDATA[<tt>config.inc.php</tt>に設定されているOJS設定値。]]>
+  </message>
+  <message key="admin.serverInformationDescription">
+    <![CDATA[基本となるOSとサーバソフトウェアのバージョン。このサーバの詳細なPHP環境設定を見るには、<span class="highlight">PHP環境設定情報</span>をクリックしてください。]]>
+  </message>
+  <message key="admin.phpInfo">PHP環境設定情報</message>
+  <message key="admin.server.platform">OS</message>
+  <message key="admin.server.phpVersion">PHPバージョン</message>
+  <message key="admin.server.apacheVersion">Apacheバージョン</message>
+  <message key="admin.server.dbDriver">データベースドライバ</message>
+  <message key="admin.server.dbVersion">データベースサーババージョン</message>
+  <message key="admin.editSystemConfigInstructions">
+    <![CDATA[システム設定（<tt>config.inc.php</tt>ファイル）を変更する場合は、このフォームを使用してください。新しい設定値を保存する場合は「設定を保存」、変更した設定値を表示するだけで設定ファイルを更新しない場合は「設定を表示」ボタンをクリックしてください。
+<br /><br />
+<span class="formError">警告: この設定を変更するとこのサイトを不安定な状態にする恐れがあります（この場合、直接設定ファイルを修正する必要があります）。自分が行うことを正確に理解していない限り、この設定を変更しないことを強く推奨します。</span>]]>
+  </message>
+  <message key="admin.saveSystemConfig">設定を保存</message>
+  <message key="admin.displayNewSystemConfig">設定を表示</message>
+  <message key="admin.systemConfigFileReadError">
+    <![CDATA[設定ファイル（<tt>config.inc.php</tt>）が存在しない、読み込めない、または、不正です。]]>
+  </message>
+  <message key="admin.overwriteConfigFileInstructions">
+    <![CDATA[<h4>注意</div>
+<p>設定ファイルを更新できませんでした。設定の変更を適用するためには、<tt>config.inc.php</tt>をエディタで開いて、以下の内容に置き換える必要があります。</p>]]>
+  </message>
+  <message key="admin.displayConfigFileInstructions">
+    <![CDATA[更新した設定の内容を以下に示します。設定の変更を適用するためには、<tt>config.inc.php</tt>をエディタで開いて、以下の内容に置き換える必要があります。]]>
+  </message>
+  <message key="admin.configFileUpdatedInstructions">
+    <![CDATA[設定ファイルを更新しました。もし、このサイトが正常に機能しなくなった場合は、設定ファイル（<tt>config.inc.php</tt>）を直接修正する必要があります。]]>
+  </message>
+  <message key="admin.contentsOfConfigFile">設定ファイルの内容</message>
+  <message key="admin.version.checkForUpdates">更新チェック</message>
+  <message key="admin.version.latest">最新バージョン</message>
+  <message key="admin.version.upToDate">このシステムは最新版です</message>
+  <message key="admin.version.updateAvailable">新バージョンが利用できます</message>
+  <message key="admin.version.downloadPackage">ダウンロード</message>
+  <message key="admin.version.downloadPatch">パッチのダウンロード</message>
+  <message key="admin.version.moreInfo">さらなる情報</message>
+  <message key="admin.journals.journalSettings">雑誌の設定</message>
+  <message key="admin.journals.noneCreated">雑誌は作成されていません。</message>
+  <message key="admin.journals.confirmDelete">この雑誌を削除し、すべてのコンテンツを破棄してもよいですか。</message>
+  <message key="admin.journals.create">雑誌の作成</message>
+  <message key="admin.journals.createInstructions">あなたはこの雑誌の管理者として自動的に登録されます。新雑誌の作成後に雑誌の設定やユーザの登録を行うには、管理者としてこの雑誌を指定してください。</message>
+  <message key="admin.journals.urlWillBe">雑誌のURLは、{$sampleUrl} のようになります。</message>
+  <message key="admin.journals.form.titleRequired">雑誌名は必須です。</message>
+  <message key="admin.journals.form.pathRequired">パス名は必須です。</message>
+  <message key="admin.journals.form.pathAlphaNumeric">パス名に使用できる文字は、英数字とアンダーバー "_"、ハイフン "-" だけです。また、最初と最後の文字は英数字でなければなりません。</message>
+  <message key="admin.journals.form.pathExists">指定したパス名は、他の雑誌で既に使用されています。</message>
+  <message key="admin.journals.enableJournalInstructions">この雑誌をこのサイトで公開する。</message>
+  <message key="admin.journals.journalDescription">雑誌の説明</message>
+  <message key="admin.journals.importOJS1">OJS 1からインポート</message>
+  <message key="admin.journals.importOJS1.editMigratedJournal">移行した雑誌の編集</message>
+  <message key="admin.journals.importOJS1.conflict.desc">ユーザアカウント情報が一部矛盾しています。OJS第1版ではメールアドレスを複数のユーザアカウントで共有することができましたが、OJS第2版ではそれを認めていません。以下のリストでは、2番目のアカウントに一時的なメールアカウントを与えてあります。これらのアカウントは、(1) 別のメールアカウントを設定する、(2) アカウントを一本化する、のいずれかの方法で修正する必要があります。</message>
+  <message key="admin.journals.importOJS1.conflict">{$firstUsername} ({$firstName}) および {$secondUsername} ({$secondName})</message>
+  <message key="admin.journals.importOJS1Instructions">OJS第1版から第2版へのデータ移行の詳細については、システムに添付されている文書「バージョンアップについて」をご覧ください。</message>
+  <message key="admin.journal.pathImportInstructions">既存のパス名、または作成するパス名（例: &quot;ojs&quot;）</message>
+  <message key="admin.journal.importPath">OJS 1のパス名</message>
+  <message key="admin.journal.importPathInstructions">OJS 1で使用していた雑誌のファイルシステム上のフルパス名を入力してください。（例: &quot;/var/www/ojs&quot;）</message>
+  <message key="admin.journals.importSubscriptions">購読者のインポート</message>
+  <message key="admin.journals.transcode">論文メタデータの文字コードの変換（ISO8859-1から）</message>
+  <message key="admin.journals.form.importPathRequired">インポートパス名は必須です。</message>
+  <message key="admin.journals.importErrors">インポートが失敗しました。</message>
+  <!-- Subscription Management -->
+  <message key="subscriptionManager.subscriptionManagement">購読管理</message>
+  <!-- Journal Management -->
+  <message key="manager.journalManagement">雑誌管理</message>
+  <message key="manager.setup">雑誌設定</message>
+  <message key="manager.emails">メールテンプレート</message>
+  <message key="manager.statistics">統計と報告</message>
+  <message key="manager.readingTools">読書ツール</message>
+  <message key="manager.people">ユーザ</message>
+  <message key="manager.filesBrowser">ファイルブラウザ</message>
+  <message key="manager.groups">編集委員会</message>
+  <message key="manager.managementPages">管理ページ</message>
+  <message key="manager.plugins">システムプラグイン</message>
+  <message key="manager.users">ユーザ</message>
+  <message key="manager.roles">役割</message>
+  <message key="manager.subscriptionTypes">購読種別</message>
+  <message key="manager.subscriptions">購読</message>
+  <message key="manager.subscriptionPolicies">購読ポリシー</message>
+  <message key="manager.announcements">お知らせ</message>
+  <message key="manager.announcementTypes">お知らせの種類</message>
+  <!-- Statistics & Reports -->
+  <message key="manager.statistics.statistics">統計</message>
+  <message key="manager.statistics.statistics.description">OJSは雑誌ごとに以下の統計を作成します。「査読に要した日数」は投稿日（または、査読版の指定）から最初の編集者判断までを計算します。一方、「出版に要した日数」はアクセプトした投稿について、最初にアップロードされた日から出版された日までを数えています。</message>
+  <message key="manager.statistics.statistics.makePublic">「この雑誌について」で読者に公開する項目を指定してください。</message>
+  <message key="manager.statistics.statistics.selectSections">この雑誌の査読統計を作成するセクションを選択してください。</message>
+  <message key="manager.statistics.statistics.itemsPublished">出版アイテム数</message>
+  <message key="manager.statistics.statistics.numSubmissions">投稿総数</message>
+  <message key="manager.statistics.statistics.peerReviewed">査読件数</message>
+  <message key="manager.statistics.statistics.count.accept">アクセプト数</message>
+  <message key="manager.statistics.statistics.count.decline">リジェクト数</message>
+  <message key="manager.statistics.statistics.count.revise">再投稿数</message>
+  <message key="manager.statistics.statistics.count.value">{$count}（{$percentage}%）</message>
+  <message key="manager.statistics.statistics.numIssues">出版号数</message>
+  <message key="manager.statistics.statistics.reviewers">査読者数</message>
+  <message key="manager.statistics.statistics.reviewerCount">任命数</message>
+  <message key="manager.statistics.statistics.reviewsPerReviewer">査読回数</message>
+  <message key="manager.statistics.statistics.daysPerReview">査読に要した日数</message>
+  <message key="manager.statistics.statistics.reviewerScore">編集者の評価スコア</message>
+  <message key="manager.statistics.statistics.daysToPublication">出版に要した日数</message>
+  <message key="manager.statistics.statistics.registeredUsers">登録ユーザ数</message>
+  <message key="manager.statistics.statistics.registeredReaders">登録読者数</message>
+  <message key="manager.statistics.statistics.totalNewValue">{$numTotal}（うち新規 {$numNew}）</message>
+  <message key="manager.statistics.statistics.subscriptions">購読数</message>
+  <message key="manager.statistics.statistics.note">注: 査読した投稿物の比率は100%にならない場合があります。これは、投稿されたアイテムはアクセプト、リジェクト、査読中のいずれかであるからです。</message>
+  <message key="manager.statistics.reports">報告書作成</message>
+  <message key="manager.statistics.reports.description">OJSは、指定された期間における投稿物、査読者、セクションに関して投稿から出版に至る処理に関する情報を追跡して、報告書を作成します。報告書は、スプレットシートアプリケーションで読み込むことができるようにCSVフォーマットで作成されます。</message>
+  <message key="manager.statistics.reports.dateFrom">処理対象開始日</message>
+  <message key="manager.statistics.reports.dateTo">処理対象終了日</message>
+  <message key="manager.statistics.reports.reportType">報告書種別</message>
+  <message key="manager.statistics.reports.type.journal">雑誌報告書</message>
+  <message key="manager.statistics.reports.type.editor">編集者報告書</message>
+  <message key="manager.statistics.reports.type.reviewer">査読者報告書</message>
+  <message key="manager.statistics.reports.type.section">セクション報告書</message>
+  <message key="manager.statistics.reports.generate">報告書作成</message>
+  <message key="manager.statistics.reports.status">状態（アクセプト、リジェクト、その他）</message>
+  <message key="manager.statistics.reports.dateDecided">判断日</message>
+  <message key="manager.statistics.reports.author">著者 #{$num}</message>
+  <message key="manager.statistics.reports.affiliation">所属 #{$num}</message>
+  <message key="manager.statistics.reports.country">国 #{$num}</message>
+  <message key="manager.statistics.reports.reviewer">査読者 #{$num}</message>
+  <message key="manager.statistics.reports.editor">編集者 #{$num}</message>
+  <message key="manager.statistics.reports.score">スコア #{$num}</message>
+  <message key="manager.statistics.reports.singleScore">スコア</message>
+  <message key="manager.statistics.reports.recommendation">答申 #{$num}</message>
+  <message key="manager.statistics.reports.daysToDecision">判断に要した日数</message>
+  <message key="manager.statistics.reports.daysToPublication">出版に要した日数</message>
+  <!-- Plugin Management -->
+  <message key="manager.plugins.pluginManagement">プラグイン管理</message>
+  <message key="manager.plugins.sitePlugin">これはサイト全体のプラグインです。このプラグインを管理できるのはサイト管理者だけです。</message>
+  <message key="manager.plugins.action">アクション:</message>
+  <message key="manager.plugins.disable">無効化</message>
+  <message key="manager.plugins.enable">有効化</message>
+  <!-- General plugin information -->
+  <message key="plugins.categories.generic">汎用プラグイン</message>
+  <message key="plugins.categories.generic.description">汎用プラグインは、他のプラグインカテゴリでサポートしていない様々な方法でオープン･ジャーナル･システムを拡張するために使用するものです。</message>
+  <message key="plugins.categories.auth">認証プラグイン</message>
+  <message key="plugins.categories.auth.description">認証プラグインは、オープン･ジャーナル･システムがユーザ認証をLDAPサーバなどの他のシステムに委任できるようにします。</message>
+  <message key="plugins.categories.importexport">インポート･エクスポートプラグイン</message>
+  <message key="plugins.categories.importexport.description">インポート･エクスポートプラグインは他のシステムとの間でコンテンツを移動するために使用することができます。</message>
+  <message key="plugins.categories.gateways">ゲートウェイプラグイン</message>
+  <message key="plugins.categories.gateways.description">ゲートウェイプラグインはデータを外部システムに提供します。</message>
+  <!-- Files Browser -->
+  <message key="manager.files.indexOfDir">{$dir} の内容</message>
+  <message key="manager.files.uploadedFiles">アップロード</message>
+  <message key="manager.files.parentDir">親ディレクトリ</message>
+  <message key="manager.files.emptyDir">このディレクトリにはファイルが存在しません。</message>
+  <message key="manager.files.uploadFile">アップロード</message>
+  <message key="manager.files.createDir">ディレクトリ作成</message>
+  <message key="manager.files.confirmDelete">このファイルまたはディレクトリを削除しますか。ディレクトリを削除する場合は、まずディレクトリを空にしてください。</message>
+  <message key="manager.files.note">注: ファイルブラウザは、雑誌に関係するファイルやディレクトリを直接、閲覧・操作するための新機能です。</message>
+  <!-- Journal Setup -->
+  <message key="manager.setup.journalSetup">雑誌設定</message>
+  <message key="manager.setup.stepsToJournalSite">雑誌Webサイト完成までの5ステップ</message>
+  <message key="manager.setup.managingPublishingSetup">管理および出版準備</message>
+  <message key="manager.setup.details">情報</message>
+  <message key="manager.setup.details.description">雑誌名、ISSN、連絡先、スポンサー、検索エンジン。</message>
+  <message key="manager.setup.policies">ポリシー</message>
+  <message key="manager.setup.policies.description">対象、査読、セクション、プライバシー、セキュリティ、アイテムに関するその他のポリシー</message>
+  <message key="manager.setup.submissions">投稿</message>
+  <message key="manager.setup.submissions.description">執筆要項、著作権、インデックス（登録を含む）。</message>
+  <message key="manager.setup.management">管理</message>
+  <message key="manager.setup.management.description">スケジューリング、オンラインアクセス、お知らせ、コピーエディタ、レイアウトエディタ、校正者の任命。</message>
+  <message key="manager.setup.look">外観</message>
+  <message key="manager.setup.look.description">ホームページヘッダー、コンテンツ、雑誌ヘッダー、フッター、ナビゲーションバー、スタイルシート。</message>
+  <message key="manager.setup.journalTitle">雑誌名</message>
+  <message key="manager.setup.focusScope">対象と範囲</message>
+  <message key="manager.setup.focusScopeDescription">
+    <![CDATA[<b>HTMLデータ例</b>]]>
+  </message>
+  <message key="manager.setup.journalSetupUpdated">雑誌設定が更新されました。</message>
+  <message key="manager.setup.selectOne">1つ選択してください</message>
+  <!-- Setup Step 1 -->
+  <message key="manager.setup.gettingDownTheDetails">ステップ 1. 雑誌情報の記述</message>
+  <message key="manager.setup.generalInformation">一般的情報</message>
+  <message key="manager.setup.journalInitials">雑誌イニシァル</message>
+  <message key="manager.setup.journalAbbreviation">略誌名</message>
+  <message key="manager.setup.printIssn">印刷版ISSN</message>
+  <message key="manager.setup.onlineIssn">電子版ISSN</message>
+  <message key="manager.setup.issnDescription">
+    <![CDATA[ISSN（国際標準逐次刊行物番号）は逐次刊行物（電子版を含む）を識別する8桁の数字です。ISSNは、本部を置くユネスコとフランス政府による支援を受けた国際センターの調整の元、各国の国内センターの世界的なネットワークにより管理されています。ISSN番号は、<a href="http://www.issn.org" target="_blank">ISSN Webサイト</a>で入手することができます。ISSNの入手は、雑誌運営のいつの時点で行っても構いません。]]>
+  </message>
+  <message key="manager.setup.doiPrefix">DOIプリフィックス</message>
+  <message key="manager.setup.doiPrefixDescription">
+    <![CDATA[DOI（デジタルオブジェクト識別子）プリフィックスは、<a href="http://www.crossref.org">CrossRef</a>により付与され、10.xxxx（例: 10.1234）という形をしています。]]>
+  </message>
+  <message key="manager.setup.mailingAddressDescription">雑誌事務局および住所。</message>
+  <message key="manager.setup.sectionsAndSectionEditors">セクションとセクションエディタ</message>
+  <message key="manager.setup.editorialReviewBoard">編集・査読委員会</message>
+  <message key="manager.setup.useEditorialReviewBoard">編集・査読委員会は雑誌で使用されます。</message>
+  <message key="manager.setup.editorialReviewBoardDescription">雑誌は、雑誌の編集上の方向性を監督し、編集者の任命を行い、委員会委員の評判により該当分野におけるその雑誌の地位を高めるために編集委員会を設けます。査読委員会も同様な役割を果たしますが、さらに、査読処理を主導します。査読委員会の委員は、雑誌の管理システムへのアクセス権は持ちませんが、査読を行う候補者のリストに追加されます。</message>
+  <message key="manager.setup.editorialMembers">委員会委員のページで、編集委員会委員または査読委員会委員を追加してください。この処理は、雑誌運営のいつの時点で行っても構いません。</message>
+  <message key="manager.setup.principalContact">連絡責任者</message>
+  <message key="manager.setup.principalContactDescription">この身分の者は、編集長、主任編集者、または管理職員として扱われ、雑誌ホームページの連絡先および技術支援窓口に表示されます。</message>
+  <message key="manager.setup.technicalSupportContact">技術支援窓口</message>
+  <message key="manager.setup.technicalSupportContactDescription">この者は、編集者や著者、査読担当者が利用する雑誌の連絡先ページに表示されますので、これらすべての役割の立場でシステム全般の作業を経験した人をあてるべきです。しかし、この雑誌システムはほとんど技術的な支援は必要としませんので、非常勤で行えるものと思われます。作業を行うのは、例えば、著者や査読担当者が使用説明書やファイルフォーマットに不明な点がある場合やサーバ上で雑誌が定期的に確実にバックアップされるようにする必要がある場合です。</message>
+  <message key="manager.setup.publisher">出版者</message>
+  <message key="manager.setup.publisherDescription">雑誌を出版する組織。その名称は「この雑誌について」ページに表示されます。</message>
+  <message key="manager.setup.sponsors">スポンサー</message>
+  <message key="manager.setup.sponsorsDescription">雑誌をスポンサードする組織（例えば、学会や大学の部局、協同組合など）。その名称は「この雑誌について」ページに謝辞と共に表示されます。</message>
+  <message key="manager.setup.addSponsor">スポンサーの追加</message>
+  <message key="manager.setup.note">注記</message>
+  <message key="manager.setup.institution">名称</message>
+  <message key="manager.setup.contributors">支援者</message>
+  <message key="manager.setup.contributorsDescription">雑誌に経済的または現物支給による支援を提供するその他の機関や組織。その名称は「この雑誌について」ページに謝辞と共に表示されます。</message>
+  <message key="manager.setup.contributor">名称</message>
+  <message key="manager.setup.addContributor">支援者の追加</message>
+  <message key="manager.setup.searchEngineIndexing">サーチエンジンのためのインデックス</message>
+  <message key="manager.setup.searchEngineIndexingDescription">サーチエンジンのユーザがこの雑誌を発見できるように、雑誌の簡単な記述と関連キーワード（セミコロン区切り）を設定します</message>
+  <message key="manager.setup.customTags">カスタムタグ</message>
+  <message key="manager.setup.customTagsDescription">各ページのヘッダーに挿入するカスタムHTMLヘッダータグ（例えば、METAタグ）。</message>
+  <message key="manager.setup.form.journalTitleRequired">雑誌名は必須です。</message>
+  <message key="manager.setup.form.journalInitialsRequired">雑誌イニシァルは必須です。</message>
+  <message key="manager.setup.form.contactNameRequired">連絡責任者は必須です。</message>
+  <message key="manager.setup.form.contactEmailRequired">連絡責任者のメールアドレスは必須です。</message>
+  <message key="manager.setup.form.supportNameRequired">技術支援者の名前は必須です。</message>
+  <message key="manager.setup.form.supportEmailRequired">技術支援者のメールアドレスは必須です。</message>
+  <!-- Setup Step 2 -->
+  <message key="manager.setup.journalPolicies">ステップ 2. 雑誌ポリシー</message>
+  <message key="manager.setup.focusAndScopeOfJournal">雑誌の対象と範囲</message>
+  <message key="manager.setup.focusAndScopeDescription">以下に、著者や読者、図書館員に知らせるために、この雑誌が出版する論文やその他のアイテムの範囲について入力してください。これは「この雑誌について」ページに表示されます。</message>
+  <message key="manager.setup.focusAndScope">対象と範囲</message>
+  <message key="manager.setup.htmlSetupInstructions">
+    <![CDATA[この欄ではHTMLを使用できます（フォントサイズや色など）。また、「改行」は<tt>&lt;br&gt;</tt>として扱われます。ブラウザーFirefoxではHTMLエディターが使用できます。]]>
+  </message>
+  <message key="manager.setup.peerReviewPolicy">査読</message>
+  <message key="manager.setup.peerReviewDescription">読者と著者のために、この雑誌の査読ポリーおよび査読プロセスの概要を入力してください。内容には、投稿の査読を行う査読者の数、投稿物の判断をするために査読者に求められる基準、査読を行う標準的な時間、査読者を補充する際の原則などを含みます。これは「この雑誌について」ページに表示されます。</message>
+  <message key="manager.setup.reviewPolicy">査読ポリシー</message>
+  <message key="manager.setup.reviewOptions">査読オプション</message>
+  <message key="manager.setup.reviewOptions.reviewTime">査読時間</message>
+  <message key="manager.setup.reviewOptions.numWeeksPerReview">査読に許される標準的な時間</message>
+  <message key="manager.setup.reviewOptions.noteOnModification">編集プロセス中に変更が可能です。</message>
+  <message key="manager.setup.reviewOptions.reviewerReminders">査読督促</message>
+  <message key="manager.setup.reviewOptions.automatedReminders">2つの時点で査読者に査読を督促するメールが自動的に送付されます（OJSのデフォルトメール機能で可能。もちろん、編集はいつでも査読者に直接メールを送ることもできます）。</message>
+  <message key="manager.setup.reviewOptions.remindForInvite1">査読者が、査読依頼後</message>
+  <message key="manager.setup.reviewOptions.remindForInvite2">日過ぎても返事をしなかった場合。</message>
+  <message key="manager.setup.reviewOptions.remindForSubmit1">査読者が、査読期限日を</message>
+  <message key="manager.setup.reviewOptions.remindForSubmit2">日過ぎてもコメントを投稿しなかった場合。</message>
+  <message key="manager.setup.reviewOptions.automatedRemindersDisabled">
+    <![CDATA[<strong>注:</strong> このオプションを使用するには、OJS設定ファイルの<tt>scheduled_tasks</tt>オプションを有効にする必要があります。また、OJS説明書で示したように、（この機能はすべてのサーバで利用できるわけではありませんので）この機能を使用するために、さらにサーバの設定を行う必要があるかもしれません。]]>
+  </message>
+  <message key="manager.setup.reviewOptions.reviewerRatings">査読者評価</message>
+  <message key="manager.setup.reviewOptions.onQuality">査読後、編集者が査読者を5段階評価する。</message>
+  <message key="manager.setup.reviewOptions.reviewerAccess">査読者ページアクセス</message>
+  <message key="manager.setup.reviewOptions.restrictReviewerFileAccess">査読者は、査読に合意しないと投稿ファイルにアクセスできない。</message>
+  <message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled">投稿者ページへの1クリックアクセスを有効にする。</message>
+  <message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description">
+    <![CDATA[<strong>注:</strong> 査読者に査読を依頼するメールに、査読者を投稿物の査読ページに直接導く特別なURLを含めます（その他のページへのアクセスはログインが必要です）。なお、このオプションのセキュリティ上の理由により、編集者は査読依頼メールを送る際に、メールアドレスを変更したり、CCやBCCを追加することができません。]]>
+  </message>
+  <message key="manager.setup.peerReviewPolicy2">査読ポリシー</message>
+  <message key="manager.setup.reviewGuidelines">査読の手引き</message>
+  <message key="manager.setup.reviewGuidelinesDescription">査読の手引きは、投稿物がこの雑誌で発表することがふさわしいかどうかを判断するための基準や、効果的で参考になる査読をするための特別な指示を査読者に提供します。</message>
+  <message key="manager.setup.reviewProcess">査読プロセス</message>
+  <message key="manager.setup.reviewProcessDescription">
+    <![CDATA[OJSは査読プロセスを管理するための2つのモデルをサポートしています。標準的査読プロセスを推奨します。なぜなら、このプロセスは、査読者に段階的に処理を進めさせ、各投稿物について完全な査読履歴を残し、自動督促通知や投稿物に対する標準的な答申（アクセプト、改訂の上アクセプト、査読のやり直し、別の雑誌に投稿、リジェクト、コメントを参照）を利用することができるからです。<br /><br />次の選択肢から1つを選択してください。]]>
+  </message>
+  <message key="manager.setup.reviewProcessStandard">標準的査読プロセス</message>
+  <message key="manager.setup.reviewProcessStandardDescription">編集者は、選ばれた査読者に投稿物のタイトルと要旨をつけて、雑誌のWebサイトにログインして査読を行うよう依頼のメールを送付する。査読者は、雑誌のWebサイトにログインし、査読を行うことを受諾し、投稿物をダウンロードし、コメントを投稿し、答申を選択する。</message>
+  <message key="manager.setup.reviewProcessEmail">メール添付による査読プロセス</message>
+  <message key="manager.setup.reviewProcessEmailDescription">編集者は、投稿物をメールに添付し、査読者に査読を依頼する。査読者は、査読の受諾（または謝絶）を編集者にンメールで知らせ、査読コメントと答申もメールで通知する。編集者は、査読プロセスを記録するために、投稿物の査読ページで査読者の受諾（または謝絶）および査読コメントと答申を入力する。</message>
+  <message key="manager.setup.guidelines">ガイドライン</message>
+  <message key="manager.setup.sectionsDescription">
+    <![CDATA[この雑誌のセクション（例えば、論文、書評など）を作成または変更する場合は、セクション管理ページを使用してください。<br /><br />この雑誌にアイテムを投稿しようとしている著者が指定します。]]>
+  </message>
+  <message key="manager.setup.selectSectionDescription">このアイテムの掲載対象となる雑誌セクション。</message>
+  <message key="manager.setup.selectEditorDescription">編集プロセスで投稿物を担当する雑誌編集者。</message>
+  <message key="manager.setup.sectionsDefaultSectionDescription">（セクションが追加されない場合、アイテムはデフォルトで用意されている論文（Articles）セクションに投稿されます。）</message>
+  <message key="manager.setup.privacyStatement">プライバシー情報の扱いについて</message>
+  <message key="manager.setup.privacyStatementDescription">この文は、「この雑誌について」および「投稿と通知に関する著者署名」ページに表示されます。以下に表示されている文はプライバシー保護に関する推奨のポリシーですが、あらゆる部分を改訂することが可能です。</message>
+  <message key="manager.setup.privacyStatement2">プライバシー情報の扱いについて</message>
+  <message key="manager.setup.emails">メールの識別</message>
+  <message key="manager.setup.emailBounceAddress">返信アドレス</message>
+  <message key="manager.setup.emailBounceAddressDescription">配信できなかったメールは、次のアドレスへエラーメッセージとなり返送されます。</message>
+  <message key="manager.setup.emailBounceAddressDisabled">
+    <![CDATA[<strong>注:</strong> このオプションを有効にするには、サイト管理者がOJS設定ファイルで<tt>allow_envelope_sender</tt>オプションを有効にしている必要があります。また、OJS説明書で示したように（この機能はすべてのサーバで利用できるわけではありませんので）この機能を使用するために、さらにサーバの設定を行う必要があるかもしれません。]]>
+  </message>
+  <message key="manager.setup.emailSignature">シグニチャ</message>
+  <message key="manager.setup.emailSignatureDescription">次のシグニチャがシステムから送信されるメールの末尾に追加されます。送信するメールの本文は、雑誌管理ページで編集することができます。</message>
+  <message key="manager.setup.addItemtoAboutJournal">「この雑誌について」の表示項目の追加</message>
+  <message key="manager.setup.aboutItemContent">内容</message>
+  <message key="manager.setup.addAboutItem">項目の追加</message>
+  <message key="manager.setup.form.numReviewersPerSubmission">投稿物当たりの査読者の人数は必須です。</message>
+  <message key="manager.setup.securitySettings">セキュリティとアクセスに関する設定</message>
+  <message key="manager.setup.securitySettingsDescription">OJSは、雑誌コンテンツへのアクセスの制限や監査目的による投稿物に関するさらなる情報の保持のために使用できる数多くのセキュリティ関連のオプションを提供しています。</message>
+  <message key="manager.setup.userRegistration">ユーザ登録</message>
+  <message key="manager.setup.enableUserRegistration">雑誌サイトでユーザを以下の役割として登録できるようにする。</message>
+  <message key="manager.setup.disableUserRegistration">ユーザ登録機能を無効にする。ユーザは、雑誌管理者が作成する必要がある。</message>
+  <message key="manager.setup.siteAccess">サイトアクセス</message>
+  <message key="manager.setup.noRestrictSiteAccess">未登録ユーザの雑誌サイトの閲覧を認める。</message>
+  <message key="manager.setup.restrictSiteAccess">雑誌サイトを閲覧するにはユーザログインを必要とする。</message>
+  <message key="manager.setup.articleAccess">論文アクセス</message>
+  <message key="manager.setup.noRestrictArticleAccess">未登録ユーザの雑誌論文のフルテキストの閲覧を認める。</message>
+  <message key="manager.setup.restrictArticleAccess">雑誌論文のフルテキストを閲覧するにはユーザログインを必要とする。</message>
+  <message key="manager.setup.comments">読者コメント</message>
+  <message key="manager.setup.comments.disable">読者コメントを無効にする。</message>
+  <message key="manager.setup.comments.authenticated">登録ユーザの投稿は認めるが、匿名ユーザの投稿は認めない。</message>
+  <message key="manager.setup.comments.anonymous">匿名による投稿を認めるが、登録を必要とする。</message>
+  <message key="manager.setup.comments.unauthenticated">すべての人に匿名による投稿を認める。</message>
+  <message key="manager.setup.loggingAndAuditing">ログ出力と監査</message>
+  <message key="manager.setup.submissionEventLogging">投稿イベントのログ出力を有効にする。投稿に関するすべてのアクションのログを保持する（各投稿物の「履歴」ページからアクセスできる）。</message>
+  <message key="manager.setup.submissionEmailLogging">投稿メールのログ出力を有効にする。投稿に関して送信されたすべてのメールのログを保持する（各投稿物の「履歴」ページからアクセスできる）</message>
+  <message key="manager.setup.journalArchiving">雑誌のアーカイブ化</message>
+  <message key="manager.setup.lockssDescription">
+    <![CDATA[オープン･ジャーナル･システムは、雑誌の安全で永続的なアーカイブを保証する<a href="http://lockss.stanford.edu/" target="_blank">LOCKSS</a>（Lots of Copies Keep Stuff Safe）システムをサポートしています。LOCKSSはスタンフォード大学図書館で開発されたオープンソースソフトウェアであり、あらかじめ登録した雑誌のWebサイトから新たに発行されたコンテンツを定期的にチェックしてアーカイブすることにより、図書館が選択したWeb雑誌を保存することを可能にします。各アーカイブは常に他の図書館のキャッシュと比較され、コンテンツの破損や不足が見つかった場合は、他のキャッシュや雑誌を使ってそれを復元します。<br /><br />
+オープン･ジャーナル･システムにおけるLOCKSSサポートの設定は、出版が完全に軌道に乗るまでは行う必要がありませんが、設定は次の2段階で行います。]]>
+  </message>
+  <message key="manager.setup.lockssRegister">
+    <![CDATA[雑誌を登録しキャッシュしている図書館を6館から10館見つけます。例えば、編集者やその他の編集担当者が勤務する機関や既にLOCKSSに参加している機関に問い合わせてください。<a href="http://lockss.stanford.edu/about/users.htm" target="_blank">参加図書館はここ</a>を参照してください。あらかじめ用意されている(1) <a href="{$lockssExistingArchiveUrl}" target="_blank">LOCKSS参加図書館向け</a>、または、(2) <a href="{$lockssNewArchiveUrl}" target="_blank">LOCKSS未参加図書館向け</a>の招待状を使用してください。]]>
+  </message>
+  <message key="manager.setup.lockssEnable">
+    <![CDATA[LOCKSSを有効にする。LOCKSS <a href="{$lockssUrl}" target="_blank">出版者マニュフェスト</a>ページを通じてLOCKSSを有効にし、参加図書館にある雑誌コンテンツを保管・配布します。LOCKSSライセンスはアーカイブの「この雑誌について」ページに表示されます。]]>
+  </message>
+  <message key="manager.setup.lockssLicenses">
+    <![CDATA[<a href="http://lockss.stanford.edu/publishers/publishers.htm" target="_blank">LOCKSSライセンスのその他のバージョンはここ</a>を参照してください。]]>
+  </message>
+  <!-- Setup Step 3 -->
+  <message key="manager.setup.guidingSubmissions">ステップ 3. 投稿の手引き</message>
+  <message key="manager.setup.authorGuidelines">著者の手引き（執筆要項）</message>
+  <message key="manager.setup.authorGuidelinesDescription">
+    <![CDATA[雑誌に投稿するアイテムに関して著者が従うべき書誌・書式標準（例えば、<i>米国心理学会出版マニュアル</i>、第5版、2001年）を設定する。投稿に使用する雑誌および図書の一般的な引用書式例の提供も参考になるでしょう。また、読者による研究の再現を容易にするために、著者にアップロードを推奨する投稿物以外の適当な補足ファイル（データセットや研究器具など）の種類を指定してください]]>
+  </message>
+  <message key="manager.setup.submissionGuidelines">投稿の手引き</message>
+  <message key="manager.setup.submissionPreparationChecklist">投稿前の確認リスト</message>
+  <message key="manager.setup.submissionPreparationChecklistDescription">雑誌に投稿する際、処理を進めるに当たって著者はまず「投稿前の確認リスト」の各項目が完了しているか確認することを求められます。この確認リストは、「この雑誌について」ページの「執筆要項」にも表示されます。リストの内容は以下で編集することができますが、著者が投稿を進めるには、リストのすべての項目がチェックされる必要があることになります。</message>
+  <message key="manager.setup.addChecklistItem">確認項目の追加</message>
+  <message key="manager.setup.addItem">アイテムの追加</message>
+  <message key="manager.setup.authorCopyrightNotice">著作権表示</message>
+  <message key="manager.setup.authorCopyrightNoticeDescription">
+    <![CDATA[この著作権表示は「この雑誌について」および出版される各アイテムのメタデータに表示されます。著者は、著作権を保持した上で、最初に出版する権利を雑誌に与えることができます。もう一つの方法として、著者は、雑誌に著作権を委譲し、その後、雑誌が著者にオープンアクセスアーカイブへの登録を含む非営利的な使用を許可するという方法があります。さらに、柔軟な著作権使用許諾として<a href="http://www.creativecommons.org" target="_blank">クリエイティブ･コモンズ</a>を検討することもできます。]]>
+  </message>
+  <message key="manager.setup.authorCopyrightNoticeAgree">投稿プロセスの一部として著者に著作権表示への同意を要求する。</message>
+  <message key="manager.setup.copyrightNotice">著作権表示</message>
+  <message key="manager.setup.forAuthorsToIndexTheirWork">著者による投稿物のインデックス作成</message>
+  <message key="manager.setup.forAuthorsToIndexTheirWorkDescription">
+    <![CDATA[OJSは、<a href="http://www.openarchives.org/" target="_blank">オープン･アーカイブズ・イニシアティブ</a>のメタデータハーベスティングプロトコル（OAI-PMH）に準拠しています。このプロトコルは、インデックスの作成による世界的規模の電子研究資源へのアクセスのための標準となっています。著者はこれと同じテンプレートを使って、投稿物に関するメタデータを提供することになります。雑誌管理者は、インデックス化するカテゴリを選択し、それに対しどのようなインデックスを付与すべきかを例を使って著者に示すべきです。 複数のインデックスはセミコロンで区切ります（例: インデックス1;インデックス2）。記入例は、「例:」や「例えば」を使って示すべきです。]]>
+  </message>
+  <message key="manager.setup.discipline">学術分野</message>
+  <message key="manager.setup.disciplineDescription">学際的な雑誌や複数の学術分野に関わるアイテムを投稿する場合に参考になります。</message>
+  <message key="manager.setup.disciplineProvideExamples">この雑誌に関連する学術分野を指定してください。</message>
+  <message key="manager.setup.disciplineExamples">（例: 歴史学; 教育学; 社会学; 心理学; カルチュラルスタディーズ; 法学）</message>
+  <message key="manager.setup.subjectClassification">主題分類</message>
+  <message key="manager.setup.subjectClassificationDescription">
+    <![CDATA[[雑誌はWeb上で利用可能な主題分類システムを使用します。<br />
+分類システムの名称]]>
+  </message>
+  <message key="manager.setup.subjectClassificationExamples">（例: 数学主題分類; 米国議会図書館分類）</message>
+  <message key="manager.setup.subjectKeywordTopic">キーワード</message>
+  <message key="manager.setup.subjectProvideExamples">著者に示すキーワードまたはトピックの例を与えてください。</message>
+  <message key="manager.setup.subjectExamples">（例: 光合成; ブラックホール; 地図の4色問題; ベイズの定理）</message>
+  <message key="manager.setup.coverage">範囲</message>
+  <message key="manager.setup.coverageDescription">地理空間的・年代的・歴史的範囲または研究材料の性質を示してください。</message>
+  <message key="manager.setup.coverageGeoProvideExamples">このフィールドで指定する地理空間的または地理的用語の例を与えてください。</message>
+  <message key="manager.setup.coverageGeoExamples">（例: イベリア半島; 成層圏; 北方林）</message>
+  <message key="manager.setup.coverageChronProvideExamples">このフィールドで指定する年代的または歴史的用語の例を与えてください。</message>
+  <message key="manager.setup.coverageChronExamples">（例: ヨーロッパルネッサンス; ジュラ紀; 3学期）</message>
+  <message key="manager.setup.coverageResearchSampleProvideExamples">このフィールドで指定する研究材料の性質の例を与えてください。</message>
+  <message key="manager.setup.coverageResearchSampleExamples">（例: 年齢; 性別; 民族）</message>
+  <message key="manager.setup.typeMethodApproach">種類（方法/アプローチ）</message>
+  <message key="manager.setup.typeProvideExamples">このフィールドで指定する研究の種類、方法、アプローチの例を与えてください。</message>
+  <message key="manager.setup.typeExamples">（例: 歴史的考察; 準実験; テクスト分析; 調査/聞き取り）</message>
+  <message key="manager.setup.registerJournalForIndexing">メタデータハーベスティングのための雑誌登録</message>
+  <message key="manager.setup.registerJournalForIndexingDescription">
+    <![CDATA[この雑誌のコンテンツを世界中に存在する研究情報データベースで検索できるようにするために、この雑誌のURLをPublic Knowledge Projectメタデータ<a href="http://pkp.sfu.ca/harvester/" target="_blank">ハーベスタ</a>に<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">登録</a>してください。ハーベスタはこの雑誌の各アイテムのメタデータを収集し、<a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">OAI-PMH</a>に準拠する研究情報サイトで正確で包括的な検索を可能にします。
+<br /><br />
+サイト管理者がこのサイトを既にPKPハーベスタに登録している場合は、この雑誌は自動的にインデックス化されますので、登録する必要はありません。
+<br /><br />
+<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">ここをクリック</a>して<b>サイトURL</b>欄に<span class="highlight">{$siteUrl}</span>を、<b>OAIアーカイブのBase URL</b>の欄に<span class="highlight">{$oaiUrl}</span>を各々入力してください。
+]]>
+  </message>
+  <message key="manager.setup.notifications">著者への投稿受領通知</message>
+  <message key="manager.setup.notifications.description">投稿プロセスを完了すると、著者には受領確認メールが自動的に送付されます（その内容はメールテンプレートのページで閲覧・編集することができます）。この受領確認メールのコピーを次のとおり送信することができます。</message>
+  <message key="manager.setup.notifications.copyPrimaryContact">受領確認メールのコピーをステップ1で指定した雑誌の連絡責任者に送信する。</message>
+  <message key="manager.setup.notifications.copySpecifiedAddress">受領確認メールのコピーを次のメールアドレスに送信する。</message>
+  <message key="manager.setup.notifications.submissionAckDisabled">
+    <![CDATA[<strong>注:</strong> 投稿受領確認メール機能は現在無効になっています。この機能を使用するには、<a class="action" href="{$preparedEmailsUrl}">メールテンプレート</a>のページでSUBMISSION_ACKメールを有効にしてください。]]>
+  </message>
+  <!-- Setup Step 4 -->
+  <message key="manager.setup.managingTheJournal">ステップ 4. 雑誌管理</message>
+  <message key="manager.setup.publicationScheduling">出版スケジューリング</message>
+  <message key="manager.setup.publicationSchedule">出版スケジュール</message>
+  <message key="manager.setup.publicationScheduleDescription">
+    <![CDATA[雑誌アイテムは、ある号に掲載して目次と共に、まとめて出版することができます。また、個々のアイテムを準備できたものから直ちに出版して、「最新号」の目次に追加することもできます。この雑誌がどちらの方式を採用するか、また、予定する出版頻度を読書に示してください（これは、「この雑誌について」に表示されます）。]]>
+  </message>
+  <message key="manager.setup.publicationFormat">形式</message>
+  <message key="manager.setup.publicationFormatDescription">雑誌の刊行形態を識別するデフォルトの形式を選択してください。この形式は、個々の巻号ごとに変えることもできます。</message>
+  <message key="manager.setup.publicationFormatIssue">巻、号、年</message>
+  <message key="manager.setup.publicationFormatVolume">巻、年</message>
+  <message key="manager.setup.publicationFormatYear">年</message>
+  <message key="manager.setup.publicationFormatTitle">各号に専用タイトル</message>
+  <message key="manager.setup.publicationFormatTitleDescription">注: タイトルはすべての号に付けることができますが、このオプションは、その号がタイトルのみで識別されることを意味します（たとえば、OJSを一連の編集特別号に使用する場合など）。</message>
+  <message key="manager.setup.initialIssue">創刊号</message>
+  <message key="manager.setup.initialIssueDescription">選択した形式によっては、OJSで出版する最初の号、巻、年を特定する必要があります:</message>
+  <message key="manager.setup.frequencyOfPublication">開始巻号と頻度</message>
+  <message key="manager.setup.frequencyOfPublicationDescription">最初に出版する雑誌の巻/号数と年、および、予定している巻/号数を設定してください。</message>
+  <message key="manager.setup.frequencyOfPublicationNote">注: この雑誌では使用しない場合は空白のままにしておいてください。また、編集者は出版プロセスにおいてこの数字を再設定することができます。</message>
+  <message key="manager.setup.appearInAboutJournal">（「この雑誌について」に表示されます）</message>
+  <message key="manager.setup.managementOfBasicEditorialSteps">基本的な編集ステップの管理</message>
+  <message key="manager.setup.basicEditorialStepsDescription">
+    <![CDATA[ステップ: 受付 &gt; 査読 &gt; 編集 &gt; 目次。<br /><br />
+これらの編集ステップを担当するモデルを選択してください。（編集長およびセクションエディタを任命するには、雑誌管理ページの編集者機能を使用してください。）]]>
+  </message>
+  <message key="manager.setup.editorialProcess1">1人以上の編集者が担当者が指定されていない基本的ステップを担当する。</message>
+  <message key="manager.setup.editorialProcess2">編集長が受付と目次を担当し、セクションエディタが査読と編集を担当する。</message>
+  <message key="manager.setup.editorialProcess3">編集長が受付と編集、目次を担当し、セクションエディタが査読を担当する。</message>
+  <message key="manager.setup.copyediting">コピーエディタ</message>
+  <message key="manager.setup.useCopyeditors">コピーエディタを各投稿物に任命する。</message>
+  <message key="manager.setup.noUseCopyeditors">編集者がコピーエディタの役割を兼務する。</message>
+  <message key="manager.setup.copyeditInstructions">原稿整理の手引き</message>
+  <message key="manager.setup.copyeditInstructionsDescription">原稿整理の手引きは、投稿物編集段階においてコピーエディタ、著者、セクションエディタに公開されます。以下は、HTMLで書かれたデフォルトの指示内容です。雑誌編集者は、いつでもこれを変更したり、置き換えたりすることができます（プレーンテキストでもHTMLでも可）。</message>
+  <message key="manager.setup.layoutAndGalleys">レイアウトエディタ</message>
+  <message key="manager.setup.useLayoutEditors">レイアウトエディタを任命し、電子出版のためにHTMLやPDF、PSなどのファイル形式でゲラを用意させる。</message>
+  <message key="manager.setup.noUseLayoutEditors">編集者がレイアウトエディタの役割を兼務する。</message>
+  <message key="manager.setup.layoutInstructions">レイアウトの手引き</message>
+  <message key="manager.setup.layoutInstructionsDescription">この雑誌で出版するアイテムをフォーマットするためにレイアウトの手引きを用意し、以下の記入欄にHTMLまたはプレーンテキストで入力することができます。この指示は、各投稿物の編集ページでレイアウトエディタとセクションエディタに公開されます。（各雑誌は独自のファイルフォーマットや書誌標準、スタイルシートなどを採用しているので、デフォルトの指示は提供していません。）</message>
+  <message key="manager.setup.layoutTemplates">レイアウトテンプレート</message>
+  <message key="manager.setup.layoutTemplatesDescription">レイアウトページに表示するテンプレートをアップロードすることができます。各テンプレートは、この雑誌で出版される標準フォーマット（論文や書評など）の各々について、そのファイルフォーマット（pdfやdocなど）とフォントや大きさ、マージンなどを追加指定したものであり、レイアウトエディタと校正者に対する作業ガイドとして提供されます。</message>
+  <message key="manager.setup.layoutTemplates.title">名称</message>
+  <message key="manager.setup.layoutTemplates.file">テンプレートファイル</message>
+  <message key="manager.setup.proofreading">校正者</message>
+  <message key="manager.setup.useProofreaders">校正者を任命し（著者と共に）ゲラをチェックさせる。</message>
+  <message key="manager.setup.noUseProofreaders">編集者と著者がゲラの校正をする。</message>
+  <message key="manager.setup.proofingInstructions">校正の手引き</message>
+  <message key="manager.setup.proofingInstructionsDescription">校正の手引きは、投稿物編集段階において校正者、著者、レイアウトエディタ、セクションエディタに公開されます。以下は、HTMLで書かれたデフォルトの指示内容です。雑誌編集者は、いつでもこれを変更したり、置き換えたりすることができます（プレーンテキストでもHTMLでも可）。</message>
+  <message key="manager.setup.volumePerYear">1年当たり巻数</message>
+  <message key="manager.setup.issuePerVolume">巻当たり号数</message>
+  <message key="manager.setup.publicIdentifier">雑誌コンテンツの識別</message>
+  <message key="manager.setup.uniqueIdentifier">ユニーク識別子</message>
+  <message key="manager.setup.uniqueIdentifierDescription">Digital Object Identifier System（DOI）などに登録することにより、論文や巻号を識別番号や識別文字列でタグ付けすることができます。</message>
+  <message key="manager.setup.enablePublicIssueId">巻号を識別するためにカスタム識別子を使用する。</message>
+  <message key="manager.setup.enablePublicArticleId">出版アイテムを識別するためにカスタム識別子を使用する。</message>
+  <message key="manager.setup.enablePublicSuppFileId">論文補足ファイルを識別するためにカスタム識別子を使用する。</message>
+  <message key="manager.setup.pageNumberIdentifier">ページ付けオプション</message>
+  <message key="manager.setup.enablePageNumber">アイテムのページ数を独自に計算して、目次に入力する（例えば、pp. 13-26）。</message>
+  <message key="manager.setup.onlineAccessManagement">オンラインアクセス管理</message>
+  <message key="manager.setup.openAccess">この雑誌のコンテンツはオープンアクセスで提供する。</message>
+  <message key="manager.setup.openAccessPolicy">オープンアクセスポリシー</message>
+  <message key="manager.setup.openAccessPolicyDescription">この雑誌のオープンアクセスポリシーを入力してください。このポリシーは「この雑誌について」に表示されます。</message>
+  <message key="manager.setup.subscription">この雑誌のコンテンツの一部またはすべてにアクセスするためには購読を必要とする。</message>
+  <message key="manager.setup.subscriptionDescription">購読管理モジュールでこのモジュールにアクセスする購読管理者を任命する必要があります。このモジュールには、オープンアクセスの追加、セルフアーカイビング、メール通知のオプションがあります。</message>
+  <message key="manager.setup.announcements">お知らせ</message>
+  <message key="manager.setup.announcementsDescription">雑誌に関するニュースやイベントを読者に知らせる告知文を登録することができます。登録した告知文は「お知らせ」ページに表示されます。</message>
+  <message key="manager.setup.enableAnnouncements">雑誌管理者による告知文の追加機能を有効にする。</message>
+  <message key="manager.setup.enableAnnouncementsHomepage1">雑誌ホームページに最新の告知文を</message>
+  <message key="manager.setup.enableAnnouncementsHomepage2">件表示する。</message>
+  <message key="manager.setup.announcementsIntroduction">追加情報</message>
+  <message key="manager.setup.announcementsIntroductionDescription">「お知らせ」ページの告知分の前に表示する、読者に通知すべき追加情報を入力してください。</message>
+  <!-- Setup Step 5 -->
+  <message key="manager.setup.customizingTheLook">ステップ 5. 外観のカスタマイズ</message>
+  <message key="manager.setup.journalHomepageHeader">雑誌ホームページのヘッダ</message>
+  <message key="manager.setup.journalHomepageHeaderDescription">雑誌名と雑誌ロゴの画像（.gif, .jpg, .pngファイル）をホームページにアップロードできます。雑誌名の画像を指定すると雑誌名は表示されません。指定がないと雑誌名が表示されます。</message>
+  <message key="manager.setup.journalLogo">雑誌ロゴ</message>
+  <message key="manager.setup.lists">リスト</message>
+  <message key="manager.setup.listsDescription">各ページに表示するリスト項目（投稿物、ユーザ、編集者）の最大数、および、各ページに表示するページリンク数を入力してください。</message>
+  <message key="manager.setup.itemsPerPage">ページ当たり項目数</message>
+  <message key="manager.setup.numPageLinks">ページリンク数</message>
+  <message key="manager.setup.useTextTitle">誌名テキスト</message>
+  <message key="manager.setup.useImageTitle">誌名画像</message>
+  <message key="manager.setup.useImageLogo">ロゴ画像</message>
+  <message key="manager.setup.noImageFileUploaded">画像ファイルがアップロードされていません。</message>
+  <message key="manager.setup.navigationBar">ナビゲーションバー</message>
+  <message key="manager.setup.itemsDescription">ページの上部に表示される現行のナビゲーションバー（ホーム、このサイトについて、ユーザホームなど）にアイテム追加することができます。</message>
+  <message key="manager.setup.labelName">ラベル名</message>
+  <message key="manager.setup.addNavItem">アイテム追加</message>
+  <message key="manager.setup.journalPageHeader">雑誌ページのヘッダ</message>
+  <message key="manager.setup.journalPageHeaderDescription">雑誌名と雑誌ロゴの画像（.gif, .jpg, .pngファイル。通常はホームページで使用したものより小型のもの）をホームページにアップロードできます。雑誌名の画像を指定すると雑誌名は表示されません。指定がないと雑誌名が表示されます。</message>
+  <message key="manager.setup.alternateHeader">代替ヘッダ</message>
+  <message key="manager.setup.alternateHeaderDescription">雑誌名とロゴの代わりに、下の記入欄に入力したHTML版のヘッダを挿入することができます。必要ない場合は、空欄にしておいてください。</message>
+  <message key="manager.setup.journalPageFooter">雑誌ページのフッタ</message>
+  <message key="manager.setup.journalPageFooterDescription">雑誌のフッタです。フッタを変更または更新する場合は、下の記入欄にHTML文を貼り付けてください。フッタの例としては、2つ目のナビゲーションバーやカウンターなどが考えられます。このフッタはすべてのページに表示されます。</message>
+  <message key="manager.setup.journalStyleSheet">雑誌のスタイルシート</message>
+  <message key="manager.setup.journalStyleSheetDescription">デフォルトでは、雑誌とサイトは同じスタイルシート（サイトの&quot;styles&quot;サブディレクトリにある）を使用しています。雑誌独自のCSSファイルをアップロードすることによりデフォルトのスタイルを置き換えることができます。</message>
+  <message key="manager.setup.useJournalStyleSheet">雑誌スタイルシート</message>
+  <message key="manager.setup.noStyleSheetUploaded">スタイルシートがアップロードされていません。</message>
+  <message key="manager.setup.journalHomepageContent">雑誌ホームページのコンテンツ</message>
+  <message key="manager.setup.journalHomepageContentDescription">デフォルトでは、ホームページはナビゲーションリンクでできています。ホームページにコンテンツを追加するには、以下のオプションを1つ以上指定してください。ここに示した順に表示されます。最新号は、ナビゲーションバーの最新号リンクから常にアクセスできることに注意してください。</message>
+  <message key="manager.setup.journalDescription">雑誌の説明</message>
+  <message key="manager.setup.journalDescriptionDescription">雑誌について簡単に説明したテキストまたはHTML文を追加する。ナビゲーションリンクの直下に表示されます。</message>
+  <message key="manager.setup.homepageImageDescription">ページの中央に画像または図形を追加する。</message>
+  <message key="manager.setup.homepageImage">ホームページ画像</message>
+  <message key="manager.setup.currentIssue">最新号</message>
+  <message key="manager.setup.additionalContent">追加コンテンツ</message>
+  <message key="manager.setup.additionalContentDescription">テキストまたはHTMLで書いた以下のコンテンツを追加する。ホームページ画像の下（これがアップロードされている場合）に表示されます。</message>
+  <message key="manager.setup.navigationBarDescription">ナビゲーションバーアイテムの追加・削除。</message>
+  <message key="manager.setup.navItemIsLiteral">ラベル値は、ローカライズ用のメッセージキー（例えば、&quot;manager.setup&quot;）ではなく、文字列（例えば、&quot;Journal Setup&quot;）です。</message>
+  <message key="manager.setup.navItemIsAbsolute">URLはサイトに対する相対パス（例えば、&quot;/manager/setup&quot;）ではなく、絶対URL（例えば、&quot;http://www.example.com&quot;）です。</message>
+  <message key="manager.setup.displayCurrentIssue">（もしあれば）最新号の目次を追加する。</message>
+  <message key="manager.setup.homeTitleImageInvalid">ホームページヘッダの誌名画像フォーマットが不正です。利用できるフォーマットは、.gif、.jpg、.pngの3つです。</message>
+  <message key="manager.setup.homeHeaderImageInvalid">ホームページヘッダのロゴ画像フォーマットが不正です。利用できるフォーマットは、.gif、.jpg、.pngの3つです。</message>
+  <message key="manager.setup.pageHeaderTitleImageInvalid">ページヘッダの誌名画像フォーマットが不正です。利用できるフォーマットは、.gif、.jpg、.pngの3つです。</message>
+  <message key="manager.setup.pageHeaderLogoImageInvalid">ページヘッダのロゴ画像フォーマットが不正です。利用できるフォーマットは、.gif、.jpg、.pngの3つです。</message>
+  <message key="manager.setup.homeHeaderTitleImageAlt1Invalid">代替ホームページヘッダの誌名画像フォーマットが不正です。利用できるフォーマットは、.gif、.jpg、.pngの3つです。</message>
+  <message key="manager.setup.homeHeaderLogoImageAlt1Invalid">代替ホームページヘッダのロゴ画像フォーマットが不正です。利用できるフォーマットは、.gif、.jpg、.pngの3つです。</message>
+  <message key="manager.setup.pageHeaderTitleImageAlt1Invalid">代替ページヘッダの誌名画像フォーマットが不正です。利用できるフォーマットは、.gif、.jpg、.pngの3つです。</message>
+  <message key="manager.setup.pageHeaderLogoImageAlt1Invalid">代替ページヘッダのロゴ画像フォーマットが不正です。利用できるフォーマットは、.gif、.jpg、.pngの3つです。</message>
+  <message key="manager.setup.homeHeaderTitleImageAlt2Invalid">第2代替ホームページヘッダの誌名画像フォーマットが不正です。利用できるフォーマットは、.gif、.jpg、.pngの3つです。</message>
+  <message key="manager.setup.homeHeaderLogoImageAlt2Invalid">第2代替ホームページヘッダのロゴ画像フォーマットが不正です。利用できるフォーマットは、.gif、.jpg、.pngの3つです。</message>
+  <message key="manager.setup.pageHeaderTitleImageAlt2Invalid">第2代替ページヘッダの誌名画像フォーマットが不正です。利用できるフォーマットは、.gif、.jpg、.pngの3つです。</message>
+  <message key="manager.setup.pageHeaderLogoImageAlt2Invalid">第2代替ページヘッダのロゴ画像フォーマットが不正です。利用できるフォーマットは、.gif、.jpg、.pngの3つです。</message>
+  <message key="manager.setup.homepageImageInvalid">ホームページヘッダの画像フォーマットが不正です。利用できるフォーマットは、.gif、.jpg、.pngの3つです。</message>
+  <message key="manager.setup.journalStyleSheetInvalid">雑誌のスタイルシートが不正です。利用できるフォーマットは、.cssだけです。</message>
+  <message key="manager.setup.information">ご案内</message>
+  <message key="manager.setup.information.description">図書館員、潜在的著者および読者向けの雑誌に関する簡潔な説明で、サイドバーの&quot;ご案内&quot;欄に表示されます。</message>
+  <message key="manager.setup.information.forReaders">読者向け</message>
+  <message key="manager.setup.information.forAuthors">著者向け</message>
+  <message key="manager.setup.information.forLibrarians">図書館員向け</message>
+  <!-- Languages -->
+  <message key="manager.languages.languageInstructions">
+    <![CDATA[OJSはサポートしている言語のうち任意の言語で利用者にサービスを提供することができます。また、OJSは一部、多言語システムとして運用することもできます。その結果、ユーザはページごとに言語を切り替えることができ、また、デフォルト言語に加えてさらに2つの言語でデータを入力することができます。<br /><br/>OJSがサポートしている言語が以下に表示されていない場合は、サイト管理用のインターフェースを使って言語をインストールするようサイト管理者に依頼してください。サポート言語を追加する方法については、システムに添付されているOJS文書をご覧ください。]]>
+  </message>
+  <message key="manager.languages.primaryLocaleInstructions">この雑誌サイトのデフォルト言語になります。</message>
+  <message key="manager.languages.supportedLocalesInstructions">このサイトがサポートするロケールをすべて選択してください。ここで選択したロケールは、各ページに表示される言語選択メニューに現れます。ただし、メニューが現れるのは複数のロケールを選択した場合のみです。</message>
+  <message key="manager.languages.alternateLocale1">代替ロケール その1</message>
+  <message key="manager.languages.alternateLocale2">代替ロケール その2</message>
+  <message key="manager.languages.alternateLocaleInstructions">このシステムはオプションとして、重要な情報についてさらに2つの言語で入力できるようにすることができます。この機能を使用するには、代替ロケールを1つまたは2つ選択し、さらに、以下のオプションを選択してください。</message>
+  <message key="manager.languages.alternativeLanguageOptions">言語オプション</message>
+  <message key="manager.languages.journalTitleAltLanguages">タイトル画像やページヘッダなどを雑誌言語ごとにアップロードする。</message>
+  <message key="manager.languages.articleAltLanguages">雑誌スタッフによる代行オプション付きで、別言語によるタイトルや要旨の提供を著者に求める。</message>
+  <message key="manager.languages.noneAvailable">申し訳ありませんが、追加可能な言語はありません。この雑誌に言語を追加したい場合はサイト管理者にご連絡ください。</message>
+  <!-- Section Management -->
+  <message key="manager.sections.noneCreated">セクションは作成されていません。</message>
+  <message key="manager.sections.confirmDelete">このセクションを削除してもよいですか。これを実行すると、このセクションのすべての論文･記事を再出版しなければならなくなります。</message>
+  <message key="manager.sections.create">セクションの作成</message>
+  <message key="manager.sections.editors">セクションエディタ</message>
+  <message key="manager.sections.unassigned">任命可能なセクションエディタ</message>
+  <message key="manager.sections.assigned">このセクションの編集者</message>
+  <message key="manager.sections.assignEditor">編集者に任命</message>
+  <message key="manager.sections.unassignEditor">編集者の解除</message>
+  <message key="manager.sections.form.titleRequired">このセクションでは誌名は必須です。</message>
+  <message key="manager.sections.form.abbrevRequired">このセクションでは略誌名は必須です。</message>
+  <message key="manager.section.sectionEditorInstructions">任命可能なセクションエディタの中からこのセクションの「セクションエディタを選択」してください。</message>
+  <message key="manager.section.submissionsToThisSection">このセクションに投稿される物は</message>
+  <message key="manager.sections.submissionIndexing">雑誌のインデックスに含めない</message>
+  <message key="manager.sections.submissionReview">査読を行わない</message>
+  <message key="manager.sections.editorRestriction">編集者とセクションエディタのみ投稿可能。</message>
+  <message key="manager.sections.hideTocTitle">このセクションのタイトルは目次から除外する。</message>
+  <message key="manager.sections.readingTools">読書ツール</message>
+  <message key="manager.sections.indexed">インデックス化済</message>
+  <message key="manager.sections.reviewed">査読済</message>
+  <message key="manager.sections.open">投稿を受付</message>
+  <message key="manager.sections.policy">セクションの方針</message>
+  <message key="manager.sections.identifyType">メタデータの作成において、このセクションのすべてのアイテムを以下のように識別する。</message>
+  <message key="manager.sections.identifyTypeExamples">（例えば、「査読論文」「非査読論文」、「招待論文」など）</message>
+  <message key="manager.sections.abstractsDisabled">要旨は不要である</message>
+  <!-- Import/Export -->
+  <message key="manager.importExport">データのインポート・エクスポート</message>
+  <!-- Groups / Editorial Team -->
+  <message key="manager.groups.editTitle">担当の編集</message>
+  <message key="manager.groups.createTitle">担当の作成</message>
+  <message key="manager.groups.title">担当</message>
+  <message key="manager.groups.confirmDelete">このグループを削除してもよいですか。</message>
+  <message key="manager.groups.noneCreated">編集委員会の担当は作成されていません。</message>
+  <message key="manager.groups.create">担当の作成</message>
+  <message key="manager.groups.form.groupTitleRequired">編集委員会の担当は必須です。</message>
+  <message key="manager.groups.enableBoard.description">
+    <![CDATA[「この雑誌について」の「<a href="{$aboutEditorialTeamUrl}">編集委員会</a>」欄に、]]>
+  </message>
+  <message key="manager.groups.enableBoard">雑誌管理者が編集委員会の担当を作成し、担当者を設定する。</message>
+  <message key="manager.groups.disableBoard">システムが編集委員会の担当者（雑誌管理者、編集者、セクションエディタ、コピーエディタなど）リストを作成する。</message>
+  <message key="manager.groups.membership">委員</message>
+  <message key="manager.groups.membership.confirmDelete">この編集委員会の委員を削除してもよいですか。</message>
+  <message key="manager.groups.membership.noneCreated">この編集委員会に委員はいません。</message>
+  <message key="manager.groups.membership.addMember">委員の追加</message>
+  <message key="manager.groups.membership.noUsers">ユーザが見つかりませんでした。</message>
+  <!-- People Management -->
+  <message key="manager.people.allUsers">全ユーザ</message>
+  <message key="manager.people.allJournals">全雑誌</message>
+  <message key="manager.people.editUser">ユーザの編集</message>
+  <message key="manager.people.enrollExistingUser">既存ユーザの登録</message>
+  <message key="manager.people.createUser">新規ユーザ作成</message>
+  <message key="manager.people.mergeUsers">ユーザのマージ</message>
+  <message key="manager.people.mergeUser">ユーザのマージ</message>
+  <message key="manager.people.enroll">ユーザの登録</message>
+  <message key="manager.people.enrollment">登録者名簿</message>
+  <message key="manager.people.unenroll">登録解除</message>
+  <message key="manager.people.confirmUnenroll">このユーザの登録を解除しますか。</message>
+  <message key="manager.people.mergeUsers.from.description">別のユーザアカウントにマージするユーザを選択してください（ユーザが2つのアカウントを持っている場合など）。最初に選択したアカウントが削除され、このアカウントによる投稿物、役割などは2番目のアカウントのものになります。</message>
+  <message key="manager.people.mergeUsers.into.description">これまでのユーザの著書や編集担当などを移行するユーザを選択してください。</message>
+  <message key="manager.people.mergeUsers.confirm">ユーザ名 &quot;{$oldUsername}&quot; のアカウントをユーザ名 &quot;{$newUsername}&quot; のアカウントにマージしてもよいですか。今後、ユーザ名 &quot;{$oldUsername}&quot; のアカウントは利用できなくなります。この処理は元に戻すことができません。</message>
+  <message key="manager.people.confirmRemove">この雑誌からこのユーザを削除しますか。この処理により、この雑誌のすべての役割からこのユーザは解除されます。</message>
+  <message key="manager.people.confirmDisable">このユーザを利用不可にしますか。この処理により、このユーザはシステムにログインできなくなります。オプションとして、アカウントを停止する理由をユーザに知らせることができます。</message>
+  <message key="manager.people.noneEnrolled">登録されたユーザはいません。</message>
+  <message key="manager.people.enrollSelected">選択したユーザを登録</message>
+  <message key="manager.people.noMatchingUsers">該当するユーザはいません。</message>
+  <message key="manager.people.saveAndCreateAnotherUser">保存して新規作成</message>
+  <message key="manager.people.userCreatedSuccessfully">ユーザが作成されました。</message>
+  <message key="manager.people.authSource">認証システム</message>
+  <message key="manager.people.enrollUserAs">ユーザの役割</message>
+  <message key="manager.people.doNotEnroll">役割なし</message>
+  <message key="manager.people.enrollUserAsDescription">役割が選択されないと、ユーザはシステムに作成されますが、この雑誌には何の役割も登録されません。役割の登録・解除は、ユーザの作成後にいつでも行うことができます。</message>
+  <message key="manager.people.invalidUser">申し訳ありませんが、指定されたユーザは存在しません。</message>
+  <message key="manager.people.noAdministrativeRights">
+    <![CDATA[申し訳ありませんが、あなたはこのユーザに関する管理権限がありません。その理由は、以下のいずれかです。
+		<ul>
+			<li>このユーザはサイト管理である。</li>
+			<li>このユーザはあなたが管理していない雑誌に登録されている。</li>
+		</ul>
+	この処理は、サイト管理者が行う必要があります。
+	]]>
+  </message>
+  <message key="manager.people.createUserGeneratePassword">ランダムパスワードを生成。</message>
+  <message key="manager.people.createUserSendNotify">ユーザにユーザ名とパスワードを含む歓迎メールを送信する。</message>
+  <message key="manager.people.userMustChangePassword">ユーザに次回ログイン時にパスワードの変更を求める。</message>
+  <message key="manager.people.disable">無効</message>
+  <message key="manager.people.enable">有効</message>
+  <message key="manager.people.remove">削除</message>
+  <message key="manager.people.emailUsers">ユーザにメール送信</message>
+  <message key="manager.people.emailUsers.emailSelectedUsers">選択したユーザにメール送信</message>
+  <message key="manager.people.emailUsers.emailUsersEnrolledAs">次の役割のユーザにメール送信</message>
+  <message key="manager.people.emailUsers.selectUsers">メールを送信したいユーザの名前の横のチェックボックスをチェックして選択してください。</message>
+  <message key="manager.people.emailUsers.selectTemplate">テンプレートの選択</message>
+  <message key="manager.people.emailUsers.selectLocale">ロケールの選択</message>
+  <message key="manager.people.editProfile">ユーザ情報の編集</message>
+  <message key="manager.people.signInAsUser">一時ユーザとしてログイン</message>
+  <message key="manager.people.signOutAsUser">一時ユーザのログアウト</message>
+  <message key="manager.people.signInAs">ログイン</message>
+  <message key="manager.people.syncUsers">登録ユーザの同期</message>
+  <message key="manager.people.syncUserDescription">登録ユーザの同期機能は、指定した雑誌において指定した役割で登録されているすべてのユーザを、この雑誌においても同じ役割で登録します。この機能は、複数の雑誌で共通のユーザグループ（査読者など）を指定することを可能にします。</message>
+  <message key="manager.people.enrollSync">登録ユーザの同期</message>
+  <message key="manager.people.enrollSyncRole">同期する役割</message>
+  <message key="manager.people.enrollSyncJournal">対象雑誌</message>
+  <!-- Email Management -->
+  <message key="manager.emails.emailKey">メールテンプレート識別キー</message>
+  <message key="manager.emails.emailKeyExists">指定したキーを持つメールが既に存在します。メールテンプレート識別キーはユニークでなければなりません。</message>
+  <message key="manager.emails.emailTemplate">メールテンプレート</message>
+  <message key="manager.emails.emailTemplates">メールテンプレート</message>
+  <message key="manager.emails.enabled">このメールテンプレートを有効にする</message>
+  <message key="manager.emails.enable">有効化</message>
+  <message key="manager.emails.disable">無効化</message>
+  <message key="manager.emails.reset">リセット</message>
+  <message key="manager.emails.createEmail">メールテンプレートの作成</message>
+  <message key="manager.emails.editEmail">メールの編集</message>
+  <message key="manager.emails.confirmDelete">このメールテンプレートを削除してもよいですか。</message>
+  <message key="manager.emails.confirmReset">このメールテンプレートをデフォルト値にリセットしてもよいですか。</message>
+  <message key="manager.emails.resetToDefault">デフォルト値にリセット</message>
+  <message key="manager.emails.resetAll">すべてのテンプレートをリセット</message>
+  <message key="manager.emails.confirmResetAll">この雑誌のメールテンプレートをリセットしてもよいですか。実行すると、カスタマイズしたメールが失われることになります。</message>
+  <message key="manager.emails.form.subjectRequired">メールには件名が必要です。</message>
+  <message key="manager.emails.form.bodyRequired">メールには本文が必要です。</message>
+  <message key="manager.emails.editTestExample">メールテスト例を編集</message>
+  <!-- Subscription Policy Management -->
+  <message key="manager.subscriptionPolicies.subscriptionContact">購読管理者</message>
+  <message key="manager.subscriptionPolicies.subscriptionContactDescription">連絡先は、「この雑誌について」ページの購読欄の下に表示されます。</message>
+  <message key="manager.subscriptionPolicies.subscriptionAdditionalInformation">購読情報</message>
+  <message key="manager.subscriptionPolicies.subscriptionAdditionalInformationDescription">購読種別と購読料は、購読管理者の名前と連絡先と共に「この雑誌について」ページの購読欄に自動的に表示されます。購読料の支払方法や開発途上国の購読者に対する支援など、その他の情報をここに追加することができます。</message>
+  <message key="manager.subscriptionPolicies.htmlInstructions">
+    <![CDATA[この欄ではHTMLを使用できます（フォントサイズや色など）。また、「改行」は<br>として扱われます。ブラウザーFirefoxではHTMLエディターが使用できます。]]>
+  </message>
+  <message key="manager.subscriptionPolicies.openAccessOptions">購読雑誌のオープンアクセスオプション</message>
+  <message key="manager.subscriptionPolicies.openAccessOptionsDescription">購読雑誌は、「エンバーゴ付きオープンアクセス」または「著者のセルフアーカイビング」（読者やコンテンツの引用を増加させます）を提供することができます。選択したポリシーは「この雑誌について」ページに表示されます。</message>
+  <message key="manager.subscriptionPolicies.delayedOpenAccess">エンバーゴ付きオープンアクセス</message>
+  <message key="manager.subscriptionPolicies.delayedOpenAccessDescription">エンバーゴ付きオープンアクセスの雑誌についても、編集者はある号の特定の雑誌を直ちにオープンアクセスにすることができます。</message>
+  <message key="manager.subscriptionPolicies.delayedOpenAccessDescription1">この雑誌のバックナンバーを、出版後</message>
+  <message key="manager.subscriptionPolicies.delayedOpenAccessDescription2">ヵ月からオープンアクセスで利用できるようにする。</message>
+  <message key="manager.subscriptionPolicies.delayedOpenAccessDurationValid">正式なエンバーゴ期間を選択してください。</message>
+  <message key="manager.subscriptionPolicies.openAccessNotificationDescription">オープンアクセスで利用可能となった号の目次を、登録ユーザにメールで通知するオプションを設ける。</message>
+  <message key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription">次の文が、エンバーゴ付きオープンアクセス雑誌の「この雑誌について」ページに表示されます。</message>
+  <message key="manager.subscriptionPolicies.openAccessNotificationDisabled">
+    <![CDATA[<strong>注:</strong> このオプションを有効にするには、サイト管理者がOJS設定ファイルにおいて <tt>scheduled_tasks</tt> を有効にする必要があります。また、OJS説明書で示したように（この機能はすべてのサーバで利用できるわけではありませんので）この機能を使用するために、さらにサーバの設定を行う必要があるかもしれません。]]>
+  </message>
+  <message key="manager.subscriptionPolicies.authorSelfArchive">著者のセルフアーカイビングに関するポリシー</message>
+  <message key="manager.subscriptionPolicies.authorSelfArchiveDescription">次のポリシーを「この雑誌について」ページに追加する。</message>
+  <message key="manager.subscriptionPolicies.subscriptionPoliciesSaved">購読ポリシーの設定が更新されました。</message>
+  <message key="manager.subscriptionPolicies.expiryReminders">購読期間満了通知</message>
+  <message key="manager.subscriptionPolicies.expiryRemindersDescription">購読期間が満了する前後に、読者に通知メールを自動的に送付することができます（雑誌管理者はその内容をメールテンプレートで編集することができます）。</message>
+  <message key="manager.subscriptionPolicies.expiryRemindersDisabled">
+    <![CDATA[<strong>Note:</strong> このオプションを有効にするには、サイト管理者がOJS設定ファイルにおいて <tt>scheduled_tasks</tt> を有効にする必要があります。また、OJS説明書で示したように（この機能はすべてのサーバで利用できるわけではありませんので）この機能を使用するために、さらにサーバの設定を行う必要があるかもしれません。]]>
+  </message>
+  <message key="manager.subscriptionPolicies.expiryReminderBeforeMonths1">購読期間満了</message>
+  <message key="manager.subscriptionPolicies.expiryReminderBeforeMonths2">ヶ月前に購読者にメールで通知する。</message>
+  <message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks1">購読期間満了</message>
+  <message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks2">週間前に購読者にメールで通知する。</message>
+  <message key="manager.subscriptionPolicies.expiryReminderAfterMonths1">購読期間満了</message>
+  <message key="manager.subscriptionPolicies.expiryReminderAfterMonths2">ヶ月後に購読者にメールで通知する。</message>
+  <message key="manager.subscriptionPolicies.expiryReminderAfterWeeks1">購読期間満了</message>
+  <message key="manager.subscriptionPolicies.expiryReminderAfterWeeks2">週間後に購読者にメールで通知する。</message>
+  <message key="manager.subscriptionPolicies.subscriptionContactEmailValid">正確なメールアドレスを入力してください。</message>
+  <message key="manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid">チェックボックスをチェックしてください。</message>
+  <message key="manager.subscriptionPolicies.numMonthsBeforeSubscriptionExpiryReminderValid">購読期間満了の何ヶ月前に連絡するか、正しい数字を選択してください。</message>
+  <message key="manager.subscriptionPolicies.numWeeksBeforeSubscriptionExpiryReminderValid">購読期間満了の何週間前に連絡するか、正しい数字を選択してください。</message>
+  <message key="manager.subscriptionPolicies.numMonthsAfterSubscriptionExpiryReminderValid">購読期間満了の何ヶ月後に連絡するか、正しい数字を選択してください。</message>
+  <message key="manager.subscriptionPolicies.numWeeksAfterSubscriptionExpiryReminderValid">購読期間満了の何週間後に連絡するか、正しい数字を選択してください。</message>
+  <!-- Subscription Type Management -->
+  <message key="manager.subscriptionTypes.createTitle">作成</message>
+  <message key="manager.subscriptionTypes.create">新規購読種別の作成</message>
+  <message key="manager.subscriptionTypes.confirmDelete">警告! この購読種別のすべての購読者も同時に削除されます。処理を継続し、この購読種別を削除してもよいですか。</message>
+  <message key="manager.subscriptionTypes.noneCreated">購読種別は作成されていません。</message>
+  <message key="manager.subscriptionTypes.name">購読種別</message>
+  <message key="manager.subscriptionTypes.cost">購読料</message>
+  <message key="manager.subscriptionTypes.currency">通貨</message>
+  <message key="manager.subscriptionTypes.format">フォーマット</message>
+  <message key="manager.subscriptionTypes.duration">購読期間</message>
+  <message key="manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully">購読種別が作成されました。</message>
+  <message key="manager.subscriptionTypes.editTitle">編集</message>
+  <message key="manager.subscriptionTypes.edit">購読種別の編集</message>
+  <message key="manager.subscriptionTypes.year">年</message>
+  <message key="manager.subscriptionTypes.years">年</message>
+  <message key="manager.subscriptionTypes.month">月</message>
+  <message key="manager.subscriptionTypes.months">月</message>
+  <message key="manager.subscriptionTypes.form.typeNameRequired">購読種別の名称は必須です。</message>
+  <message key="manager.subscriptionTypes.form.typeNameExists">購読種別のこの名称は既に使用されています。</message>
+  <message key="manager.subscriptionTypes.form.costRequired">購読料は必須です。</message>
+  <message key="manager.subscriptionTypes.form.costNumeric">購読料は正の数値でなければなりません。</message>
+  <message key="manager.subscriptionTypes.form.durationRequired">購読期間は必須です。</message>
+  <message key="manager.subscriptionTypes.form.durationNumeric">購読期間は正の数値でなければなりません。</message>
+  <message key="manager.subscriptionTypes.form.currencyRequired">通貨は必須です。</message>
+  <message key="manager.subscriptionTypes.form.currencyValid">有効な通貨を選択してください。</message>
+  <message key="manager.subscriptionTypes.form.formatRequired">購読種別フォーマットは必須です</message>
+  <message key="manager.subscriptionTypes.form.formatValid">有効な購読種別フォーマットを選択してください。</message>
+  <message key="manager.subscriptionTypes.form.institutionalValid">チェックボックスをチェックしてください。</message>
+  <message key="manager.subscriptionTypes.form.membershipValid">チェックボックスをチェックしてください。</message>
+  <message key="manager.subscriptionTypes.form.publicValid">チェックボックスをチェックしてください。</message>
+  <message key="manager.subscriptionTypes.form.typeName">名称</message>
+  <message key="manager.subscriptionTypes.form.description">説明</message>
+  <message key="manager.subscriptionTypes.form.cost">購読料</message>
+  <message key="manager.subscriptionTypes.form.costInstructions">数値（例えば、40または40.00）を入力してください。文字（例えば、&quot;円&quot;）は入力しないでください。</message>
+  <message key="manager.subscriptionTypes.form.currency">通貨</message>
+  <message key="manager.subscriptionTypes.form.duration">購読期間</message>
+  <message key="manager.subscriptionTypes.form.durationInstructions">購読機関を月数（例えば、12）で入力してください。</message>
+  <message key="manager.subscriptionTypes.form.format">フォーマット</message>
+  <message key="manager.subscriptionTypes.form.institutional">購読者をドメイン名やIPアドレスによる認証で確認する。</message>
+  <message key="manager.subscriptionTypes.form.membership">購読者を協会や組織の会員に限定する。</message>
+  <message key="manager.subscriptionTypes.form.public">この購読種別を「この雑誌について」ページに表示しない。</message>
+  <message key="manager.subscriptionTypes.form.saveAndCreateAnotherType">保存して新規作成</message>
+  <message key="manager.subscriptionTypes.format.online">オンライン版</message>
+  <message key="manager.subscriptionTypes.format.print">印刷版</message>
+  <message key="manager.subscriptionTypes.format.printOnline">印刷版とオンライン版</message>
+  <!-- Subscription Management -->
+  <message key="manager.subscriptions.createTitle">作成</message>
+  <message key="manager.subscriptions.create">新規購読者の作成</message>
+  <message key="manager.subscriptions.select">購読者の登録</message>
+  <message key="manager.subscriptions.selectSubscriber">購読者の選択</message>
+  <message key="manager.subscriptions.selectSubscriber.desc">雑誌の雑誌管理者、編集者、セクション編集者、レイアウトエディタ、コピーエディタ、校正者には、自動的に購読アクセス権が与えられます。</message>
+  <message key="manager.subscriptions.subscribe">登録</message>
+  <message key="manager.subscriptions.confirmDelete">この購読者を削除してもよいですか。</message>
+  <message key="manager.subscriptions.noneCreated">購読者は作成されていません。</message>
+  <message key="manager.subscriptions.user">ユーザ</message>
+  <message key="manager.subscriptions.subscriptionType">購読種別</message>
+  <message key="manager.subscriptions.dateStart">購読開始日</message>
+  <message key="manager.subscriptions.dateEnd">購読終了日</message>
+  <message key="manager.subscriptions.ipRange">IPアドレス</message>
+  <message key="manager.subscriptions.subscriptionCreatedSuccessfully">購読者が作成されました。</message>
+  <message key="manager.subscriptions.editTitle">編集</message>
+  <message key="manager.subscriptions.edit">購読者の編集</message>
+  <message key="manager.subscriptions.form.userIdRequired">ユーザは必須です。</message>
+  <message key="manager.subscriptions.form.userIdValid">正しいユーザを選択してください。</message>
+  <message key="manager.subscriptions.form.subscriptionExists">このユーザは既にこの雑誌を講読しています。</message>
+  <message key="manager.subscriptions.form.typeIdRequired">購読種別は必須です。</message>
+  <message key="manager.subscriptions.form.typeIdValid">正しい購読種別を選択してください。</message>
+  <message key="manager.subscriptions.form.dateStartRequired">購読開始日は必須です。</message>
+  <message key="manager.subscriptions.form.dateStartValid">正しい購読開始日を選択してください。</message>
+  <message key="manager.subscriptions.form.dateEndRequired">購読終了日は必須です。</message>
+  <message key="manager.subscriptions.form.dateEndValid">正しい購読終了日を選択してください。</message>
+  <message key="manager.subscriptions.form.membershipRequired">選択した購読種別は会員情報が必要です。</message>
+  <message key="manager.subscriptions.form.domainIPRangeRequired">選択した購読種別は認証のためにドメイン名またはIPアドレスが必要です。</message>
+  <message key="manager.subscriptions.form.domainValid">正しいドメインを入力してください。</message>
+  <message key="manager.subscriptions.form.ipRangeValid">正しいIPアドレスを入力してください。</message>
+  <message key="manager.subscriptions.form.notifyEmailValid">チェックボックスをチェックしてください。</message>
+  <message key="manager.subscriptions.form.subscriptionContactRequired">ユーザ通知メールを送付するために、雑誌設定において購読担当者の名前とメールアドレスを指定する必要があります。</message>
+  <message key="manager.subscriptions.form.userId">ユーザ</message>
+  <message key="manager.subscriptions.form.typeId">購読種別</message>
+  <message key="manager.subscriptions.form.dateStart">購読開始日</message>
+  <message key="manager.subscriptions.form.dateEnd">購読終了日</message>
+  <message key="manager.subscriptions.form.membership">会員情報</message>
+  <message key="manager.subscriptions.form.membershipInstructions">協会や組織の会員であることが条件である購読種別の場合、会員情報を入力してください。</message>
+  <message key="manager.subscriptions.form.domain">ドメイン</message>
+  <message key="manager.subscriptions.form.domainInstructions">機関向けの購読種別の場合は、ドメインを入力してください。ドメインを入力した場合、IPアドレスはオプションとなります。有効な値はドメイン名（例えば、lib.sfu.ca）です。</message>
+  <message key="manager.subscriptions.form.ipRange">IPアドレス</message>
+  <message key="manager.subscriptions.form.ipRangeInstructions">機関向けの購読種別の場合は、IPアドレスを入力してください。IPアドレスを入力した場合、ドメインはオプションとなります。有効な値は、IPアドレス（例えば、142.58.103.1）、CIDR IPアドレス範囲（例えば、142.58.100.0/24）、IPアドレス範囲（例えば、142.58.103.1 - 142.58.103.4）、&apos;*&apos;によるIPアドレス範囲（例えば、142.58.103.*）、または、これらを&apos;;&apos;で区切って組み合わせたもの（例えば、142.58.103.* - 142.58.107.* ; 142.58.108.1/24 ; 142.58.106.*）です。</message>
+  <message key="manager.subscriptions.form.notifyEmail">ユーザにユーザ名と購読情報をメールで送付する。</message>
+  <message key="manager.subscriptions.form.saveAndCreateAnother">保存して新規作成</message>
+  <!-- Announcement Type Management -->
+  <message key="manager.announcementTypes.edit">お知らせ種別の編集</message>
+  <message key="manager.announcementTypes.editTitle">編集</message>
+  <message key="manager.announcementTypes.create">お知らせ種別の作成</message>
+  <message key="manager.announcementTypes.createTitle">作成</message>
+  <message key="manager.announcementTypes.form.typeNameRequired">お知らせ種別名称は必須です。</message>
+  <message key="manager.announcementTypes.form.typeNameExists">この名称のお知らせ種別は既に存在します。</message>
+  <message key="manager.announcementTypes.form.typeName">名称</message>
+  <message key="manager.announcementTypes.form.saveAndCreateAnother">保存して新規作成</message>
+  <message key="manager.announcementTypes.typeName">お知らせ種別</message>
+  <message key="manager.announcementTypes.confirmDelete">警告! このお知らせ種別のすべてのお知らせも同時に削除されます。処理を継続し、このお知らせ種別を削除してもよいですか。</message>
+  <message key="manager.announcementTypes.noneCreated">お知らせ種別は作成されませんでした。</message>
+  <!-- Announcements Management -->
+  <message key="manager.announcements.type">種別</message>
+  <message key="manager.announcements.dateExpire">表示期限</message>
+  <message key="manager.announcements.title">見出し</message>
+  <message key="manager.announcements.confirmDelete">このお知らせを完全に削除してもよいですか。</message>
+  <message key="manager.announcements.noneCreated">お知らせは作成されませんでした。</message>
+  <message key="manager.announcements.createTitle">作成</message>
+  <message key="manager.announcements.create">新規お知らせを作成</message>
+  <message key="manager.announcements.editTitle">編集</message>
+  <message key="manager.announcements.edit">お知らせの編集</message>
+  <message key="manager.announcements.form.typeId">種別</message>
+  <message key="manager.announcements.form.title">見出し</message>
+  <message key="manager.announcements.form.descriptionShort">簡潔な記述</message>
+  <message key="manager.announcements.form.descriptionShortInstructions">見出しと共に表示する簡潔な記述。</message>
+  <message key="manager.announcements.form.description">全記述</message>
+  <message key="manager.announcements.form.descriptionInstructions">お知らせの全文</message>
+  <message key="manager.announcements.form.dateExpire">表示期限日</message>
+  <message key="manager.announcements.form.dateExpireInstructions">お知らせはこの日まで読者に提示されます。無期限に表示する場合は、空欄にしてください。</message>
+  <message key="manager.announcements.form.saveAndCreateAnother">保存して新規作成</message>
+  <message key="manager.announcements.form.typeIdValid">正しいお知らせ種別を選択してください。</message>
+  <message key="manager.announcements.form.titleRequired">お知らせ見出しは必須です。</message>
+  <message key="manager.announcements.form.descriptionShortRequired">簡単なお知らせ内容は必須です。</message>
+  <message key="manager.announcements.form.descriptionRequired">お知らせの内容は必須です。</message>
+  <message key="manager.announcements.form.dateExpireValid">正しいお知らせ表示期限日を選択してください。</message>
+  <message key="manager.announcements.form.dateExpireYearIncompleteDate">表示期限日には年月日すべてを選択してください。</message>
+  <message key="manager.announcements.form.dateExpireMonthIncompleteDate">表示期限日には年月日すべてを選択してください。</message>
+  <message key="manager.announcements.form.dateExpireDayIncompleteDate">表示期限日には年月日すべてを選択してください。</message>
+  <!-- Editor -->
+  <message key="editor.home">編集者ホーム</message>
+  <message key="editor.submissionsAndPublishing">投稿物と出版</message>
+  <message key="editor.submissionQueue">作業待ち投稿物</message>
+  <message key="editor.submissionArchive">投稿物アーカイブ</message>
+  <message key="editor.publishing">出版</message>
+  <message key="editor.publishedIssues">出版された巻号</message>
+  <message key="editor.allSections">全セクション</message>
+  <message key="editor.submissionArchive.noSubmissions">アーカイブには投稿物はありません。</message>
+  <message key="editor.submissionArchive.saveChanges">アーカイブされた投稿物に対する変更を保存しますか。削除マークが付けられた投稿物はこのシステムから完全に削除されます。</message>
+  <message key="editor.submissionArchive.confirmDelete">この投稿物を完全に削除してもよいですか。</message>
+  <message key="editor.submissionReview.confirmDecision">この判断を記録してもよいですか。</message>
+  <message key="editor.submissionReview.notes">期限日は査読期限日までの時間を週数で示しています。マイナスの場合は、期限日を過ぎていることを表します。査読期限日は、査読者が査読依頼を受諾した際にお知らせしています。</message>
+  <message key="editor.notifyUsers">ユーザへの通知</message>
+  <message key="editor.usersNotified">通知されたユーザ</message>
+  <message key="editor.notifyUsers.allUsers">この雑誌に関係するすべてのユーザ（{$count}名）にこのメッセージを送信する。</message>
+  <message key="editor.notifyUsers.interestedUsers">この雑誌の更新情報の受け取りを希望しているユーザ（{$count}名）にこのメッセージを送信する。</message>
+  <message key="editor.notifyUsers.includeToc">この号の目次を含める:</message>
+  <!-- Editor Index Page -->
+  <message key="editor.editorAdministration">編集者管理</message>
+  <message key="editor.issues.createIssue">巻号作成</message>
+  <message key="editor.issues.backIssues">バックナンバー</message>
+  <message key="editor.issues.futureIssues">出版予定号</message>
+  <message key="editor.issues.currentIssue">最新号</message>
+  <message key="editor.issues.numArticles">アイテム</message>
+  <message key="editor.issues.noArticles">この号に現在予定されているアイテムはありません。</message>
+  <message key="editor.issues.confirmDelete">この号を完全に削除してもよいですか。</message>
+  <!-- Back Issues -->
+  <message key="editor.issues.published">出版済</message>
+  <message key="editor.issues.unpublished">未出版</message>
+  <!-- Create Issue / Issue Data -->
+  <message key="editor.issues.volumeRequired">この号に巻数は必須です。</message>
+  <message key="editor.issues.numberRequired">この号に号数は必須です。</message>
+  <message key="editor.issues.yearRequired">この号に年は必須です。</message>
+  <message key="editor.issues.labelFormatRequired">正しいラベルフォーマットを選択する必要があります。</message>
+  <message key="editor.issues.labelOption1">巻、号、年</message>
+  <message key="editor.issues.labelOption2">巻、年</message>
+  <message key="editor.issues.labelOption3">年</message>
+  <message key="editor.issues.labelOption4">タイトルのみ</message>
+  <message key="editor.issues.issueIdentification">巻号の識別</message>
+  <message key="editor.issues.publicIssueIdentifier">公開巻号識別子</message>
+  <message key="editor.issues.description">記述</message>
+  <message key="editor.issues.accessStatus">アクセス形態</message>
+  <message key="editor.issues.accessDate">オープンアクセス公開日</message>
+  <message key="editor.issues.invalidAccessDate">アクセス公開日が不正です。</message>
+  <message key="editor.issues.issuePublicIdentificationExists">公開巻号識別子が既に存在します。</message>
+  <message key="editor.issues.coverPage">カバー画像</message>
+  <message key="editor.issues.coverPageInstructions">（使用可能フォーマット: .gif, .jpg, .png）</message>
+  <message key="editor.issues.uploaded">アップロード済</message>
+  <message key="editor.issues.remove">削除</message>
+  <message key="editor.issues.proofed">検証済</message>
+  <message key="editor.issues.removeCoverPage">カバーページ画像を削除しますか。</message>
+  <message key="editor.issues.invalidCoverPageFormat">カバーページフォーマットが不正です。使用できるフォーマットは、.gif, .jpg, .pngの3フォーマットだけです。</message>
+  <message key="editor.issues.styleFile">スタイルシート</message>
+  <message key="editor.issues.invalidStyleFormat">スタイルシートフォーマットが不正です。指定したファイルが妥当なCSSファイルであることを確認してください（冒頭にコメントがあるスタイルシートは認められないことに注意してください）。</message>
+  <message key="editor.issues.removeStyleFile">スタイルシートを削除しますか。</message>
+  <message key="editor.issues.coverPageCaption">カバー見出し</message>
+  <message key="editor.issues.showCoverPage">この巻号のための独自カバーページを作成する。</message>
+  <message key="editor.issues.openAccess">オープンアクセス</message>
+  <message key="editor.issues.subscription">購読</message>
+  <message key="editor.issues.identification">識別</message>
+  <message key="editor.issues.access">アクセス</message>
+  <message key="editor.issues.cover">カバー</message>
+  <message key="editor.issues.confirmIssueDelete">すべての論文は編集作業待ちに戻され、関連のファイルはすべて完全に削除されます。この号を削除してもよいですか。</message>
+  <message key="editor.issues.resetSectionOrder">
+    <![CDATA[この号はセクションの表示順が変更されています。<a href="{$url}" class="action">デフォルトに戻す</a>]]>
+  </message>
+  <!-- Live Issues -->
+  <message key="editor.issues.issueData">巻号データ</message>
+  <message key="editor.issues.saveChanges">目次の変更を保存しますか。</message>
+  <message key="editor.issues.default">デフォルト</message>
+  <message key="editor.issues.order">配置順</message>
+  <message key="editor.issues.publicId">公開識別子</message>
+  <message key="editor.issues.publishIssue">この号の出版</message>
+  <message key="editor.issues.previewIssue">この号のプレビュー</message>
+  <message key="editor.issues.preview">（プレビュー）</message>
+  <message key="editor.issues.confirmPublish">新しい号を出版してもよいですか。</message>
+  <message key="editor.issues.publicArticleIdExists">論文の公開IDを保存できませんでした:</message>
+  <message key="editor.issues.noLiveIssues">処理中の巻号はありません</message>
+  <message key="editor.issues.open">オープン</message>
+  <message key="editor.issues.pages">ページ</message>
+  <!-- Navigation sidebar menu -->
+  <message key="editor.navigation.issues">巻号</message>
+  <message key="editor.navigation.futureIssues">出版予定号</message>
+  <message key="editor.navigation.createIssue">巻号作成</message>
+  <message key="editor.navigation.issueArchive">バックナンバー</message>
+  <!-- Used by editor in submission review / editing -->
+  <message key="editor.article.designateReviewVersion">査読版としてオリジナルファイルを指定</message>
+  <message key="editor.article.uploadReviewVersion">改訂済み査読版のアップロード</message>
+  <message key="editor.article.showSuppFile">査読者へのファイルの提供</message>
+  <message key="editor.article.layoutAndProof">レイアウトと校正</message>
+  <message key="editor.article.clear">クリア</message>
+  <message key="editor.article.clearReviewer">査読者のクリア</message>
+  <message key="editor.article.changeSection">セクションの変更</message>
+  <message key="editor.article.setDueDate">期限日の設定</message>
+  <message key="editor.article.addReviewer">査読者の追加</message>
+  <message key="editor.article.toReviewer">査読者へ</message>
+  <message key="editor.article.notifyReviewer">査読者に通知</message>
+  <message key="editor.article.initiateReview">査読の開始</message>
+  <message key="editor.article.cancelReview">依頼の取消</message>
+  <message key="editor.article.clearReview">査読者のクリア</message>
+  <message key="editor.article.enterRecommendation">答申の入力</message>
+  <message key="editor.article.enterReviewerRecommendation">査読者の答申の入力</message>
+  <message key="editor.article.recommendation">答申</message>
+  <message key="editor.article.selectReviewer">査読者の選択</message>
+  <message key="editor.article.selectReviewerNotes">
+    <![CDATA[査読者のプロファイルへの名前リンク。<br/>
+評価は5以上です（素晴しい）。<br/>
+週は査読を完了するための平均期間を表しています。<br/>
+最新は最新の査読受諾日です。<br/>
+アクティブは、現在検討中、または作業中の査読者の人数です。]]>
+  </message>
+  <message key="editor.article.replaceReviewer">査読者の置換</message>
+  <message key="editor.article.editorToEnter">査読者の答申/コメントを入力する編集者</message>
+  <message key="editor.article.uploadReviewForReviewer">査読のアップロード</message>
+  <message key="editor.article.peerReviewOptions">査読のオプション</message>
+  <message key="editor.article.decision">判断</message>
+  <message key="editor.article.noEditorSelected">編集者が選択されていません。</message>
+  <message key="editor.article.recordDecision">判断の記録</message>
+  <message key="editor.article.cannotRecord">セクションエディタがまだ記録されていません。</message>
+  <message key="editor.article.reviewersSeeAuthorsVersion">著者版を見る査読者</message>
+  <message key="editor.article.designateDueDate">期限日の指定</message>
+  <message key="editor.article.designateDueDateDescription">新しい期限日を日付または週数で入力してください。</message>
+  <message key="editor.article.todaysDate">今日の日付</message>
+  <message key="editor.article.requestedByDate">日付により依頼された</message>
+  <message key="editor.article.dueDateFormat">形式: YYYY-MM-DD</message>
+  <message key="editor.article.numberOfWeeks">週数</message>
+  <message key="editor.article.selectCopyeditor">コピーエディタの任命</message>
+  <message key="editor.article.replaceCopyeditor">コピーエディタの置換</message>
+  <message key="editor.article.editorsCopyedit">編集者とコピーエディタ</message>
+  <message key="editor.article.showAuthor">著者にファイルを見せる</message>
+  <message key="editor.article.showCopyeditor">コピーエディタに版を見せる</message>
+  <message key="editor.article.rateReviewer">査読者の評価</message>
+  <message key="editor.article.reviewerRating.veryGood">5 高評価</message>
+  <message key="editor.article.reviewerRating.good">4</message>
+  <message key="editor.article.reviewerRating.average">3</message>
+  <message key="editor.article.reviewerRating.poor">2</message>
+  <message key="editor.article.reviewerRating.veryPoor">1 低評価</message>
+  <message key="editor.article.comments">コメント</message>
+  <message key="editor.article.saveRating">評価の保存</message>
+  <message key="editor.article.noneSelected">1つも選択されていません</message>
+  <message key="editor.article.authorProofing">著者校正</message>
+  <message key="editor.article.archiveSubmission">投稿物をアーカイブ</message>
+  <message key="editor.article.emailAuthorOnArchive">この投稿物のアーカイブについて著者にメールしますか。</message>
+  <message key="editor.article.restoreToQueue">アクティブリストに戻す</message>
+  <message key="editor.article.assignSectionEditor">セクションエディタを任命</message>
+  <message key="editor.article.assignEditor">編集者を任命</message>
+  <message key="editor.article.selectEditor">{$roleName}の選択</message>
+  <message key="editor.article.selectDecision">判断の選択</message>
+  <message key="editor.article.decision.accept">アクセプト</message>
+  <message key="editor.article.decision.pendingRevisions">改訂を要求</message>
+  <message key="editor.article.decision.resubmit">査読のやり直し</message>
+  <message key="editor.article.decision.decline">リジェクト</message>
+  <message key="editor.article.selectLayoutEditor">レイアウトエディタを選択</message>
+  <message key="editor.article.replaceLayoutEditor">レイアウトエディタを置換</message>
+  <message key="editor.article.reviewSubmission">投稿物を査読</message>
+  <message key="editor.article.resubmitForReview">査読用にファイルを再投稿</message>
+  <message key="editor.article.resubmitFileForPeerReview">査読用に選択したファイルを再投稿</message>
+  <message key="editor.article.sendToCopyedit">コピーエディタにファイルを送信</message>
+  <message key="editor.article.sendFileToCopyedit">整理作業用ファイルの選択</message>
+  <message key="editor.article.selectProofreader">校正者の任命</message>
+  <message key="editor.article.replaceProofreader">校正者の置換</message>
+  <message key="editor.article.authorComments">著者のコメント</message>
+  <message key="editor.article.proofreaderComments">校正者のコメント</message>
+  <message key="editor.article.layoutEditorFinal">コピーエディタの最終版</message>
+  <message key="editor.article.noDate">（日付）</message>
+  <message key="editor.submissions.showBy">表示</message>
+  <message key="editor.submissions.submitMMDD">月-日に投稿</message>
+  <message key="editor.submissions.activeAssignments">任命済みの役割</message>
+  <message key="editor.submissions.invite">依頼</message>
+  <message key="editor.submissions.accept">受領</message>
+  <message key="editor.submissions.noSubmissions">投稿物なし</message>
+  <message key="editor.submissions.lastAssigned">最新</message>
+  <message key="editor.submissions.averageTime">週数</message>
+  <message key="editor.submissions.lastCompleted">最新完了</message>
+  <message key="editor.article.scheduleForPublication">出版スケジュール</message>
+  <message key="editor.article.scheduleForPublication.toBeAssigned">指定予定</message>
+  <!-- Section Editor -->
+  <message key="sectionEditor.activeEditorialAssignments">編集担当の任命</message>
+  <message key="sectionEditor.completedEditorialAssignments">完了した編集担当の任命</message>
+  <message key="sectionEditor.noneAssigned">任命された投稿物はありません。</message>
+  <message key="sectionEditor.copyedit.confirmRenotify">このコピーエディタへの通知は、再度、任命を行うことになります。これを実行してもよいですか。</message>
+  <message key="sectionEditor.author.confirmRenotify">この著者への通知は、再度、任命を行うことになります。これを実行してもよいですか。</message>
+  <message key="sectionEditor.layout.confirmRenotify">このレイアウトエディタへの通知は、再度、任命を行うことになります。これを実行してもよいですか。</message>
+  <message key="sectionEditor.proofreader.confirmRenotify">この校正者への通知は、再度、任命を行うことになります。これを実行してもよいですか。</message>
+  <message key="sectionEditor.regrets.breadcrumb">Regrets</message>
+  <message key="sectionEditor.regrets.title">#{$articleId} 査読者の謝絶と取消、これまでの査読ラウンド</message>
+  <message key="sectionEditor.regrets">謝絶</message>
+  <message key="sectionEditor.regrets.link">謝絶と取消、これまでの査読処理の閲覧</message>
+  <message key="sectionEditor.regrets.reviewRound">査読、 {$round}回目</message>
+  <message key="sectionEditor.regrets.decisionRound">編集者判断、{$round}回目</message>
+  <message key="sectionEditor.regrets.regretsAndCancels">査読者の謝絶と取消</message>
+  <message key="sectionEditor.regrets.regret">謝絶</message>
+  <message key="sectionEditor.regrets.result">結果</message>
+  <message key="sectionEditor.review.enrollReviewer">既存のユーザを査読者に登録</message>
+  <message key="sectionEditor.review.createReviewer">新規査読者の作成</message>
+  <!-- Layout Editor -->
+  <message key="layoutEditor.activeEditorialAssignments">編集担当の任命</message>
+  <message key="layoutEditor.completedEditorialAssignments">完了した編集担当の任命</message>
+  <message key="layoutEditor.noActiveAssignments">任命すべきべき担当はありません。</message>
+  <message key="layoutEditor.layoutEditingAssignments">レイアウト担当の任命</message>
+  <message key="layoutEditor.galley.uploadGalleyFormat">ゲラフォーマットのアップロード</message>
+  <message key="layoutEditor.galley.replaceGalley">ファイルの置換</message>
+  <message key="layoutEditor.galley.uploadSuppFile">補足ファイルのアップロード</message>
+  <message key="submission.layout.galleryNoImages">画像なし</message>
+  <!-- Reviewer -->
+  <message key="reviewer.pendingReviews">査読待ちの論文</message>
+  <message key="reviewer.completedReviews">済み</message>
+  <message key="reviewer.averageQuality">評価</message>
+  <!-- Used in submission review -->
+  <message key="reviewer.article.fileToBeReviewed">査読対象のファイル</message>
+  <message key="reviewer.article.notifyTheEditor">編集者へ通知</message>
+  <message key="reviewer.article.canDoReview">受諾する</message>
+  <message key="reviewer.article.cannotDoReview">謝絶する</message>
+  <message key="reviewer.article.restrictedFileAccess">査読を引き受けないとファイルを見ることはできません。</message>
+  <message key="reviewer.article.submissionEditor">編集者へコメント送信</message>
+  <message key="reviewer.article.reviewerCommentsDescription">ここに査読コメントを入力してください。</message>
+  <message key="reviewer.article.editorToEnter">編集者宛て</message>
+  <message key="reviewer.article.sendReminder">督促メールの送信</message>
+  <message key="reviewer.article.automatic">（自動）</message>
+  <message key="reviewer.article.selectRecommendation">答申の選択</message>
+  <message key="reviewer.article.recommendation">答申</message>
+  <message key="reviewer.article.submitReview">査読結果を編集者に送付</message>
+  <message key="reviewer.article.reviewerComments">コメント</message>
+  <message key="reviewer.article.uploadedFile">アップロードされたファイル</message>
+  <message key="reviewer.article.reviewersAnnotatedVersion">査読者によりアップロードされた版</message>
+  <message key="reviewer.article.reviewersAnnotatedVersionDescription">（編集者への注釈をファイルに付けたい場合は、保存してからブラウズ/アップロード機能を使用してください。）</message>
+  <message key="reviewer.article.schedule.request">編集者からの依頼</message>
+  <message key="reviewer.article.schedule.response">回答</message>
+  <message key="reviewer.article.schedule.submitted">査読結果送付</message>
+  <message key="reviewer.article.schedule.due">査読期限</message>
+  <message key="reviewer.article.decision.accept">アクセプト</message>
+  <message key="reviewer.article.decision.pendingRevisions">改訂を要求</message>
+  <message key="reviewer.article.decision.resubmitHere">査読のやり直し</message>
+  <message key="reviewer.article.decision.resubmitElsewhere">別の雑誌に投稿</message>
+  <message key="reviewer.article.decision.decline">リジェクト</message>
+  <message key="reviewer.article.decision.seeComments">コメントを参照</message>
+  <message key="reviewer.article.schedule">スケジュール</message>
+  <message key="reviewer.article.submissionToBeReviewed">査読する投稿物</message>
+  <message key="reviewer.article.reviewSchedule">査読スケジュール</message>
+  <message key="reviewer.article.reviewSteps">査読処理</message>
+  <message key="reviewer.article.reviewerGuidelines">査読の手引き</message>
+  <message key="reviewer.article.reviewerInstruction1a">査読を受諾するか否かを、</message>
+  <message key="reviewer.article.reviewerInstruction1b">担当編集者にお知らせください。</message>
+  <message key="reviewer.article.reviewerInstruction2">査読を行う際には、次項の査読の手引きを参照してください。</message>
+  <message key="reviewer.article.reviewerInstruction3">ファイル名をクリックしてこの投稿物に関係するファイルをダウンロードして、査読を行ってください。</message>
+  <message key="reviewer.article.reviewerInstruction4a">アイコンをクリックして、この投稿物に対するコメントを入力してください。</message>
+  <message key="reviewer.article.reviewerInstruction4b"></message>
+  <message key="reviewer.article.reviewerInstruction5">また、投稿物に編集者や著者へのコメントを付したファイルをアップロードすることもできます。</message>
+  <message key="reviewer.article.reviewerInstruction6">査読結果の答申を選択し、[投稿結果を編集者に送付]ボタンをクリックして、査読処理を完了させてください。答申を選択する前に、コメントを入力するか、ファイルをアップロードする必要があります。</message>
+  <message key="reviewer.article.mustSelectDecision">答申が選択されていません。答申を選択する必要があります。</message>
+  <message key="reviewer.article.confirmDecision">一旦、査読結果を記録したら、もはや変更できなくなります。処理を続けてもよいですか。</message>
+  <message key="reviewer.article.ensuringBlindReview">ブラインド審査の保証について</message>
+  <!-- Used in submission editing -->
+  <message key="copyeditor.article.fileToCopyedit">原稿整理するファイル</message>
+  <message key="copyeditor.article.copyeditorFile">コピーエディタのファイル</message>
+  <message key="copyeditor.article.uploadedFile">アップロードされたファイル</message>
+  <message key="copyeditor.article.copyeditorFinalFile">コピーエディタのファイル</message>
+  <!-- Proofreader -->
+  <message key="proofreader.noProofreadingAssignments">校正者は任命されていません。</message>
+  <!-- Author -->
+  <message key="author.submit">新規投稿</message>
+  <message key="author.track">投稿物一覧</message>
+  <message key="author.submit.submitArticle">論文の投稿</message>
+  <message key="author.submit.stepsToSubmit">投稿の5ステップ</message>
+  <message key="author.submit.startHereLink">投稿を開始するにはここをクリックしてください</message>
+  <message key="author.submit.step1">ステップ 1. 投稿の開始</message>
+  <message key="author.submit.step2">ステップ 2. 投稿物のメタデータ入力</message>
+  <message key="author.submit.step3">ステップ 3. 投稿物のアップロード</message>
+  <message key="author.submit.step4">ステップ 4. 補足ファイルのアップロード</message>
+  <message key="author.submit.step4a">ステップ 4a. 補足ファイルの追加</message>
+  <message key="author.submit.step5">ステップ 5. 投稿の確認</message>
+  <message key="author.submit.start">1. 開始</message>
+  <message key="author.submit.metadata">2. メタデータ入力</message>
+  <message key="author.submit.upload">3. 投稿物アップロード</message>
+  <message key="author.submit.supplementaryFiles">4. 補足ファイルアップロード</message>
+  <message key="author.submit.confirmation">5. 確認</message>
+  <message key="author.submit.cancelSubmission">後日、著者のホームページからこの投稿物を選択することにより、この投稿を完了することもできます。</message>
+  <message key="author.submit.notAccepting">この雑誌は現在投稿を受け付けていません。</message>
+  <message key="author.submissions.uploadCopyeditedVersion">コピーエディタ版のアップロード</message>
+  <message key="author.submissions.proofreadingCorrections">校正による修正</message>
+  <message key="author.submissions.confirmDelete">この処理の終了していない投稿を削除してもよいですか。</message>
+  <message key="author.submissions.viewStatus">状態の閲覧</message>
+  <message key="author.submissions.noSubmissions">投稿物がありません。</message>
+  <!-- Article Submission Step 1 -->
+  <message key="author.submit.howToSubmit">
+    <![CDATA[著者は、このWebサイトにおいて、5つの段階を経る間に原稿と関連情報をアップロードすることにより、この雑誌にアイテムを投稿します。（オプションとして、研究データや装置などの補足ファイルをアップロードすることもできます）。投稿中にご不明な点がございましたら、担当者までメール（<a href="mailto:{$supportEmail}">{$supportName}</a>）か電話（{$supportPhone}）でご連絡ください。]]>
+  </message>
+  <message key="author.submit.journalSection">雑誌セクション</message>
+  <message key="author.submit.journalSectionDescription">
+    <![CDATA[この投稿物にふさわしいセクションを選択してください。（詳しくは<a href="{$aboutUrl}">「この雑誌について」</a>のセクションとポリシー欄を参照してください。）]]>
+  </message>
+  <message key="author.submit.selectSection">セクションを選択してください。</message>
+  <message key="author.submit.submissionChecklist">投稿時のチェックリスト</message>
+  <message key="author.submit.submissionChecklistDescription">この投稿物が、雑誌が必要とする以下の項目を満たしていることを確認して、チェックしてください。&lt;br/&gt;（このページの最後で編集者へのコメントを書くことができます。）</message>
+  <message key="author.submit.verifyChecklist">投稿を続けるには、投稿物がチェックリストの全項目を満たしていることが必要です。</message>
+  <message key="author.submit.copyrightNoticeAgree">私（たち）は、投稿物がこの雑誌で出版される際に適用される上記の著作権表示条件に同意します。&lt;br/&gt;（このページの最後で編集者へのコメントを書くことができます。）</message>
+  <message key="author.submit.copyrightNoticeAgreeRequired">投稿を続けるには、著作権表示条項に同意する必要があります。</message>
+  <message key="author.submit.commentsForEditor">編集者へのコメント</message>
+  <message key="author.submit.comments">コメントを入力してください（オプション）</message>
+  <message key="author.submit.form.sectionRequired">この投稿物にふさわしい雑誌セクションを選択してください。</message>
+  <!-- Article Submission Step 2 -->
+  <message key="author.submit.metadataDescription">この雑誌は、研究資源を識別するための新たなオンライン標準であるOAIにより策定された標準に基づいて投稿物に関するメタデータを収集しています。この標準によりOAIデータベースを横断する集合的かつ正確な検索が可能になり、読者が投稿物を発見する可能性が増加します。編集者は編集処理を開始する前にメタデータの提供を求めることができます。</message>
+  <message key="author.submit.privacyStatement">この雑誌のプライバシー情報の扱いについて</message>
+  <message key="author.submit.authorsDescription">2人以上の著者を持つ投稿物については、引用情報に表示する著者の順番を指定してください。</message>
+  <message key="author.submit.reorderAuthorName">著者名の表示順の入れ替え</message>
+  <message key="author.submit.reorderInstructions">矢印を使って、投稿物に表示する著者の順番を変えてください。</message>
+  <message key="author.submit.selectPrincipalContact">編集上の連絡を取る第一著者</message>
+  <message key="author.submit.addAuthor">著者の追加</message>
+  <message key="author.submit.deleteAuthor">著者の削除</message>
+  <message key="author.submit.submissionIndexingDescription">この雑誌で使用している以下のカテゴリーにおいて、投稿物のコンテンツを説明するのに最もふさわしい言葉を選択してください。編集者による例を示しました。複数の言葉は次のようにセミコロンで区切ってください（単語1; 単語2; 単語3）。</message>
+  <message key="author.submit.submissionSupportingAgencies">支援機関</message>
+  <message key="author.submit.submissionSupportingAgenciesDescription">この投稿物の元となる研究を助成または支援した機関を指定してください。</message>
+  <message key="author.submit.agencies">機関</message>
+  <message key="author.submit.coverageInstructions">地理空間的・年代的・歴史的範囲または研究材料の特性を示してください。</message>
+  <message key="author.submit.subjectClassInstructions">分類語または（可能であれば）分類標数の選択にはハイパーリンク分類システムを使用してください。</message>
+  <message key="author.submit.languageInstructions">
+    <![CDATA[日本語=ja; 英語=en; フランス語=fr、<a href="http://www.loc.gov/standards/iso639-2/langcodes.html" target="_blank">その他のコード</a>。]]>
+  </message>
+  <message key="author.submit.form.authorRequired">少なくとも1人の著者が必須です。</message>
+  <message key="author.submit.form.authorRequiredFields">各著者の姓名、メールアドレスは必須です。</message>
+  <message key="author.submit.form.titleRequired">論文のタイトルを入力してください。</message>
+  <!-- Article Submission Step 3 -->
+  <message key="author.submit.uploadInstructions">
+    <![CDATA[
+この雑誌へ原稿をアップロードするには以下の手順に従ってください。
+
+<ol>
+<li>このページの[参照…]ボタンをクリックし、ファイル選択画面を表示させてください。</li>
+<li>ファイル選択画面を操作して、投稿したいファイルを選択してください。</li>
+<li>ファイル選択画面の[開く]ボタンをクリックしてください。選択したファイル名が投稿物ファイル欄に表示されます。</li>
+<li>この画面の[アップロード]ボタンをクリックしてください。すると、あなたのコンピュータ上にあるファイルが雑誌のWebサイトにアップロードされ、雑誌で決めた方法でリネームされます。</li>
+<li>投稿ファイルをアップロードしたら、このページの下部にある[保存して継続]ボタンをクリックしてください。</li>
+</ol>
+
+ファイル名をクリックすることによりファイルの内容を見ることができます。現在表示しているファイルを削除して、新しいファイルまたは改訂したファイルをアップロードすることができます。（次のステップの）補足ファイルを使ってその他のファイルを追加することができます。投稿物のアップロードについてご不明な点がございましたら、担当者にメール（<a href="mailto:{$supportEmail}">{$supportName}</a>）か電話（{$supportPhone}）でご連絡ください。]]>
+  </message>
+  <message key="author.submit.submissionFile">投稿物ファイル</message>
+  <message key="author.submit.uploadSubmissionFile">投稿物ファイルのアップロード</message>
+  <message key="author.submit.replaceSubmissionFile">投稿物ファイルの置換</message>
+  <message key="author.submit.noSubmissionFile">投稿物ファイルがアップロードされていません。</message>
+  <message key="author.submit.noSubmissionConfirm">投稿物のアップロードなしに処理を続けてもよいですか。</message>
+  <!-- Article Submission Step 4 -->
+  <message key="author.submit.supplementaryFilesInstructions">このオプションの投稿作業により、投稿物の貢献度を高める補足ファイルを追加することができます。補足ファイルとしては、(1) 研究装置、(2) その分野の研究倫理審査条項を満たすデータセット、(3) 他では読者が利用できない資源、(4) テキストに含めることができない図や表、などが考えられます。また、これらのファイルについて、著者はそれらの所有権を示すと共に、投稿物との関係を示すインデックスを付与することができます。補足ファイルとしてはどんなフォーマットのファイルもアップロードすることができ、オリジナルフォーマットのまま読者に公開されます。ブラインド審査の条件に抵触しなければ、これらのファイルを査読者に提供することもできます。</message>
+  <message key="author.submit.noSupplementaryFiles">この投稿物には補足ファイルが追加されませんでした。</message>
+  <message key="author.submit.backToSupplementaryFiles">補足ファイルに戻る</message>
+  <message key="author.submit.confirmDeleteSuppFile">この補足ファイルを削除してもよいですか。</message>
+  <message key="author.submit.uploadSuppFile">補足ファイルのアップロード</message>
+  <!-- Article Submission Step 4a: Supplementary Files -->
+  <message key="author.submit.addSupplementaryFile">補足ファイルの追加</message>
+  <message key="author.submit.editSupplementaryFile">補足ファイルの編集</message>
+  <message key="author.submit.supplementaryFileData">補足ファイルのメタデータ</message>
+  <message key="author.submit.supplementaryFileDataDescription">この補足ファイルをインデックス化するために、アップロードする補足ファイルに以下のメタデータを与えてください。</message>
+  <message key="author.submit.supplementaryFileUpload">補足ファイル</message>
+  <message key="author.submit.suppFile.createrOrOwner">ファイルの作成者（または所有者）</message>
+  <message key="author.submit.suppFile.researchInstrument">研究装置</message>
+  <message key="author.submit.suppFile.researchMaterials">研究材料</message>
+  <message key="author.submit.suppFile.researchResults">研究結果</message>
+  <message key="author.submit.suppFile.transcripts">筆記録</message>
+  <message key="author.submit.suppFile.dataAnalysis">データ分析</message>
+  <message key="author.submit.suppFile.dataSet">データセット</message>
+  <message key="author.submit.suppFile.sourceText">ソーステキスト</message>
+  <message key="author.submit.suppFile.briefDescription">簡単な説明</message>
+  <message key="author.submit.suppFile.contributorOrSponsor">貢献者または助成機関</message>
+  <message key="author.submit.suppFile.availableToPeers">ブラインド審査の条件に抵触しないので、査読者にファイルを（メタデータは付けずに）提供する。</message>
+  <message key="author.submit.suppFile.publisherDescription">正式に出版された資料に限る。</message>
+  <message key="author.submit.suppFile.dateDescription">データが収集された日付、または装置が作成された日付。</message>
+  <message key="author.submit.suppFile.sourceDescription">研究の名称、またはその他の採取場所。</message>
+  <message key="author.submit.suppFile.specifyOtherType">その他、具体的に示してください</message>
+  <message key="author.submit.suppFile.noFile">ファイルはアップロードされていません。</message>
+  <message key="author.submit.suppFile.form.titleRequired">この補足ファイルのタイトルを入力してください。</message>
+  <message key="author.submit.suppFile.form.subjectRequired">主題を入力してください。</message>
+  <message key="author.submit.suppFile.form.descriptionRequired">説明文を入力してください。</message>
+  <message key="author.suppFile.suppFilePublicIdentificationExists">補足ファイルの公開識別子は既に存在します。</message>
+  <message key="author.suppFile.publicSuppFileIdentifier">補足ファイルの公開識別子</message>
+  <!-- Article Submission Step 5 -->
+  <message key="author.submit.confirmationDescription">投稿プロセスの4つのステップが終了しました。[投稿を完了]ボタンをクリックして、「{$journalTitle}」へ原稿を投稿してください。投稿を受け付けると受領確認のメールが送られます。また、雑誌のWebサイトにログインすることにより編集処理の進捗状況を見ることができます。雑誌「{$journalTitle}」による出版をご検討いただき、ありがとうございました。</message>
+  <message key="author.submit.noFiles">この投稿物にはファイルが添付されていません。</message>
+  <message key="author.submit.filesSummary">ファイル情報</message>
+  <message key="author.submit.finishSubmission">投稿を完了</message>
+  <message key="author.submit.submissionComplete">投稿が完了しました。。雑誌「{$journalTitle}」による出版をご検討いただき、ありがとうございました。</message>
+  <message key="author.submit.expedite">
+    <![CDATA[この投稿物が、さらなる査読、編集、レイアウト作業をすることなく出版できるフォーマットである場合、<a href="{$expediteUrl}" class="action">ここをクリック</a>することにより、直接、編集処理の最終段階におくことができます。（注: このオプションを使用できるのは、この雑誌の編集者が自分の論文を投稿する場合だけです。）]]>
+  </message>
+  <!-- Used in submission review / editing -->
+  <message key="submission.review.mustUploadFileForReview">査読版がないと、依頼メールは送信できません。</message>
+  <message key="author.article.uploadAuthorVersion">著者版のアップロード</message>
+  <message key="author.article.copyeditedFile">原稿整理済みファイル</message>
+  <message key="author.article.authorRevisedFile">著者ファイル</message>
+  <!-- Submission Tracking - Copyedit Specific -->
+  <message key="submission.copyedit.mustUploadFileForInitialCopyedit">査読ページの編集者の判断で原稿整理するファイルが選択されないと、依頼メールは送信できません。</message>
+  <message key="submission.copyedit.mustUploadFileForCopyedit">原稿整理するファイルがアップロードされないと、依頼メールは送信できません。</message>
+  <message key="submission.copyedit.initialCopyedit">最初の原稿整理</message>
+  <message key="submission.copyedit.editorsCopyedit">編集者による原稿整理</message>
+  <message key="submission.copyedit.editorAuthorReview">著者による原稿整理</message>
+  <message key="submission.copyedit.finalCopyedit">最終原稿整理</message>
+  <message key="submission.copyedit.copyeditVersion">整理編集版</message>
+  <message key="submission.copyedit.selectCopyeditor">コピーエディタの任命</message>
+  <message key="submission.copyedit.useFile">ファイルの使用</message>
+  <message key="submission.copyedit.copyeditComments">コピーエディタのコメント</message>
+  <message key="submission.copyedit.instructions">原稿整理の手引き</message>
+  <!-- Submission Tracking - Layout Specific -->
+  <message key="submission.layout.mustUploadFileForLayout">レイアウト対象版がないと、依頼メールは送信できません。</message>
+  <message key="submission.layout.layoutVersion">レイアウト対象版</message>
+  <message key="submission.layout.layoutFile">レイアウトファイル</message>
+  <message key="submission.layout.galleys">レイアウト済（ゲラ）版</message>
+  <message key="submission.layout.newGalley">新規ゲラ版の作成</message>
+  <message key="submission.layout.assignLayoutEditor">レイアウトエディタの任命</message>
+  <message key="submission.layout.replaceLayoutEditor">レイアウトエディタの置換</message>
+  <message key="submission.layout.initialGalleyCreation">初校ゲラ版の作成</message>
+  <message key="submission.layout.supplementaryFiles">補足ファイルのチェック</message>
+  <message key="submission.layout.layoutComments">レイアウトエディタのコメント</message>
+  <message key="submission.layout.galleyLabelRequired">ゲラ版のラベルは必須です。</message>
+  <message key="submission.layout.confirmDeleteGalley">このゲラ版を完全に削除してもよいですか。</message>
+  <message key="submission.layout.newSupplementaryFile">新規補足ファイルのアップロード</message>
+  <message key="submission.layout.confirmDeleteSupplementaryFile">この補足ファイルを完全に削除してもよいですか。</message>
+  <message key="submission.layout.editGalley">レイアウト済ゲラ版の編集</message>
+  <message key="submission.layout.addGalley">レイアウト済ゲラ版の追加</message>
+  <message key="submission.layout.galleyFileData">ゲラ版ファイル情報</message>
+  <message key="submission.layout.galleyLabel">ラベル</message>
+  <message key="submission.layout.galleyLabelInstructions">ゲラ版のラベルはアイテムのファイルフォーマット（例えば、HTMLやPDFなど）の識別に使用されます。</message>
+  <message key="submission.layout.galleyHTMLData">HTMLゲラ版ファイル</message>
+  <message key="submission.layout.galleyStylesheet">スタイルシートファイル</message>
+  <message key="submission.layout.noStyleFile">このゲラ版にはスタイルシートが追加されていません。</message>
+  <message key="submission.layout.deleteGalleyStylesheet">このスタイルシートを削除する。</message>
+  <message key="submission.layout.galleyImages">画像</message>
+  <message key="submission.layout.galleyNoImages">このゲラ版には画像が追加されていません。</message>
+  <message key="submission.layout.confirmDeleteGalleyImage">ゲラ版からこの画像を除去もしてもよいですか。</message>
+  <message key="submission.layout.galleyStyle">スタイル</message>
+  <message key="submission.layout.viewingGalley">投稿物のゲラ版の閲覧</message>
+  <message key="submission.layout.galleyFormat">ゲラ版のフォーマット</message>
+  <message key="submission.layout.viewProof">校正版の閲覧</message>
+  <message key="submission.layout.instructions">レイアウトの手引き</message>
+  <!-- Submission Tracking - Proofread Specific -->
+  <message key="submission.proofreadingComments">校正者のコメント</message>
+  <message key="submission.archiveSubmission">アーカイブされた投稿物</message>
+  <message key="submission.proofread.corrections">校正による修正</message>
+  <message key="submission.proofread.instructions">校正の手引き</message>
+  <!-- Submission History -->
+  <message key="submission.history.submissionEventLog">イベントログ</message>
+  <message key="submission.history.submissionEmailLog">メールログ</message>
+  <message key="submission.history.submissionNotes">投稿注記</message>
+  <message key="submission.history.noLogEntries">ログはありません。</message>
+  <message key="submission.history.recentLogEntries">最新のエントリ</message>
+  <message key="submission.history.viewLog">ログの閲覧</message>
+  <message key="submission.history.clearLog">ログのクリア</message>
+  <message key="submission.logType.article">論文</message>
+  <message key="submission.logType.author">著者</message>
+  <message key="submission.logType.editor">編集者</message>
+  <message key="submission.logType.review">査読</message>
+  <message key="submission.logType.copyedit">整理</message>
+  <message key="submission.logType.layout">レイアウト</message>
+  <message key="submission.logType.proofread">校正</message>
+  <!-- Submission Event Log -->
+  <message key="submission.event.confirmClearLog">この投稿物のイベントログをクリアしてもよいですか。</message>
+  <message key="submission.event.confirmDeleteLogEntry">このイベントログエントリを削除してもよいですか。</message>
+  <message key="submission.event.deleteLogEntry">ログエントリの削除</message>
+  <message key="submission.event.backToEventLog">イベントログに戻る</message>
+  <!-- Submission Email Log -->
+  <message key="submission.email.confirmClearLog">この投稿物のメールログをクリアしてもよいですか。</message>
+  <message key="submission.email.confirmDeleteLogEntry">このメールログエントリを削除してもよいですか。</message>
+  <message key="submission.email.deleteLogEntry">ログエントリの削除</message>
+  <message key="submission.email.backToEmailLog">メールログに戻る</message>
+  <!-- Submission Comments -->
+  <message key="submission.comments.comments">コメント</message>
+  <message key="submission.comments.review">査読</message>
+  <message key="submission.comments.editorAuthorCorrespondence">編集者と著者の通信</message>
+  <message key="submission.comments.copyeditComments">コピーエディタのコメント</message>
+  <message key="submission.comments.corrections">修正</message>
+  <message key="submission.comments.noComments">コメントなし</message>
+  <message key="submission.comments.noReviews">査読なし</message>
+  <message key="submission.comments.subject">件名</message>
+  <message key="submission.comments.viewableDescription">
+    <![CDATA[これらのコメントを著者に示すこともできます。<br />
+（保存後、さらにコメントを追加することができます。）]]>
+  </message>
+  <message key="submission.comments.canShareWithAuthor">著者と編集者に</message>
+  <message key="submission.comments.cannotShareWithAuthor">編集者に</message>
+  <message key="submission.comments.addComment">コメントの追加</message>
+  <message key="submission.comments.editComment">コメントの編集</message>
+  <message key="submission.comments.confirmDelete">このコメントを削除してもよいですか。</message>
+  <message key="submission.comments.importPeerReviews">査読のインポート</message>
+  <message key="submission.comments.blindCcReviewers">送信後、査読者に送信する編集可能なBCCコピーを提示してください。</message>
+  <message key="submission.comments.importPeerReviews.reviewerLetter">査読者 {$reviewerLetter}:</message>
+  <message key="submission.comments.forAuthorEditor">著者と編集者に</message>
+  <message key="submission.comments.forEditor">編集者に</message>
+  <message key="submission.comments.sendDecisionToReviewers">査読者判断の送信</message>
+  <message key="submission.comments.saveAndEmailAuthor">保存して著者にメール</message>
+  <message key="submission.comments.saveAndEmailEditor">保存して編集者にメール</message>
+  <!-- Login -->
+  <message key="user.login.loginError">ユーザ名またはパスワードが正しくありません。もう一度入力してください。</message>
+  <message key="user.login.accountDisabled">このアカウントは無効です。詳細は管理者にご連絡ください。</message>
+  <message key="user.login.accountDisabledWithReason">このアカウントは次の理由で無効になっています: {$reason}</message>
+  <message key="user.login.rememberUsernameAndPassword">ユーザ名とパスワードを記憶する</message>
+  <message key="user.login.registerNewAccount">登録はこちらから。</message>
+  <message key="user.login.forgotPassword">パスワードを忘れた方はこちらで手続きをしてください。</message>
+  <message key="user.login.resetPassword">パスワードのリセット</message>
+  <message key="user.login.resetPasswordInstructions">
+    <![CDATA[セキュリティ上の理由により、本システムでは現行のパスワードをお知らせするのではなく、リセットするためのパスワードをお送りしています。<br /><br />パスワードをリセットするには、以下の記入欄にメールアドレスを入力してください。入力されたメールアドレスに確認メールを送信します。]]>
+  </message>
+  <message key="user.login.lostPassword.invalidUser">指定されたメールアドレスにユーザが存在しません。</message>
+  <message key="user.login.lostPassword.confirmationSent">確認メールを入力されたメールアドレスに送信しました。メールに書かれている指示に従って、パスワードをリセットしてください。</message>
+  <message key="user.login.lostPassword.invalidHash">このリンクは有効期限切れ、または正しくありません。申し訳ありませんが、もう一度、パスワードのリセット処理を行ってください。</message>
+  <message key="user.login.lostPassword.passwordSent">新しいパスワードを指定のメールアドレスに送信しました。今後、新しいパスワードでこのサイトにログインすることができます。</message>
+  <message key="user.login.changePasswordInstructions">
+    <![CDATA[このサイトにログインする前に、新しいパスワードを指定する必要があります。<br /><br />パスワードを変更するには、以下の記入欄にユーザ名、現行のパスワード、新しいパスワードを入力してください。]]>
+  </message>
+  <message key="user.login.rememberMe">記憶する</message>
+  <message key="user.login.registeredEmail">登録ユーザのメールアドレス</message>
+  <!-- Profile -->
+  <message key="user.profile.editProfile">ユーザ情報の編集</message>
+  <message key="user.profile.form.firstNameRequired">名は必須です。</message>
+  <message key="user.profile.form.lastNameRequired">姓は必須です。</message>
+  <message key="user.profile.form.emailRequired">メールアドレスは必須です。</message>
+  <message key="user.profile.form.usernameRequired">ユーザ名は必須です。</message>
+  <message key="user.profile.form.passwordRequired">パスワードは必須です。</message>
+  <message key="user.profile.leavePasswordBlank">現在のパスワードを変更しない場合は、パスワード欄を空白のままにしておいてください。</message>
+  <message key="user.profile.oldPassword">現在のパスワード</message>
+  <message key="user.profile.newPassword">新しいパスワード</message>
+  <message key="user.profile.repeatNewPassword">新パスワードの確認</message>
+  <message key="user.profile.changePasswordInstructions">パスワードの変更を行う場合は、現在のパスワードと新しいパスワードを以下の該当欄に入力してください。</message>
+  <message key="user.profile.form.oldPasswordInvalid">入力された現在のパスワードは間違っています。</message>
+  <message key="user.profile.form.newPasswordRequired">新しいパスワードを入力してください。</message>
+  <message key="user.profile.form.publishedNotifications">最新号出版のメール通知</message>
+  <message key="user.profile.form.openAccessNotifications">オープンアクセスになった巻号のメール通知</message>
+  <!-- Registration -->
+  <message key="user.register.repeatPassword">もう一度パスワードを入力してください</message>
+  <message key="user.register.form.usernameExists">指定されたユーザ名は既に使用されています。</message>
+  <message key="user.register.form.usernameAlphaNumeric">ユーザ名に使用できる文字は、英数字とアンダーバー "_"、ハイフン "-" だけです。また、最初と最後の文字は英数字でなければなりません。</message>
+  <message key="user.register.form.emailExists">指定されたメールアドレスは既に別のユーザに使用されています。</message>
+  <message key="user.register.form.passwordsDoNotMatch">パスワードが一致しません。</message>
+  <message key="user.register.selectJournal">登録する雑誌を選択してください</message>
+  <message key="user.register.noJournals">登録できる雑誌はありません。</message>
+  <message key="user.register.registerAs">登録ユーザ名: </message>
+  <message key="user.register.privacyStatement">個人情報の扱いについて</message>
+  <message key="user.register.completeForm">この雑誌に登録する場合は、以下の記入欄に入力してください。</message>
+  <message key="user.register.alreadyRegisteredOtherJournal">
+    <![CDATA[既にこの雑誌またはこのサイトの別の雑誌に登録している場合は、<a href="{$registerUrl}">ここをクリック</a>してください。]]>
+  </message>
+  <message key="user.register.notAlreadyRegisteredOtherJournal">
+    <![CDATA[まだこのサイトの雑誌に登録して<b>いない</b>場合は、<a href="{$registerUrl}">ここをクリック</a>してください。]]>
+  </message>
+  <message key="user.register.loginToRegister">この雑誌に登録するには、ユーザ名とパスワードを入力してください。</message>
+  <message key="user.register.registrationDisabled">この雑誌は、現在、ユーザ登録を受付けていません。</message>
+  <message key="user.register.usernameRestriction">ユーザ名に使えるのは、英小文字と数字、ハイフンとアンダーバーだけです。</message>
+  <message key="user.register.passwordLengthRestriction">パスワードは少なくとも{$length} 文字以上必要です。</message>
+  <message key="user.register.form.passwordLengthTooShort">指定したパスワードは短すぎます。</message>
+  <message key="user.register.readerDescription">この雑誌の新しい号が発行された場合、メールで連絡する。</message>
+  <message key="user.register.openAccessNotificationDescription">この雑誌のある号がオープンアクセスになった場合、メールで連絡する。</message>
+  <message key="user.register.authorDescription">この雑誌に投稿する。</message>
+  <message key="user.register.reviewerDescriptionNoInterests">この雑誌に投稿された論文の査読を行う。</message>
+  <message key="user.register.reviewerDescription">この雑誌に投稿された論文の査読を行う。査読可能な分野（分野と研究手法）を指定する。</message>
+  <!-- Search -->
+  <message key="search.browseAuthorIndex">著者インデックスのブラウズ</message>
+  <message key="search.searchFor">論文の検索</message>
+  <message key="search.allFields">すべて</message>
+  <message key="search.author">著者</message>
+  <message key="search.title">タイトル</message>
+  <message key="search.abstract">要旨</message>
+  <message key="search.fullText">フルテキスト</message>
+  <message key="search.indexTerms">インデックス検索</message>
+  <message key="search.withinJournal">対象雑誌</message>
+  <message key="search.allJournals">全雑誌</message>
+  <message key="search.searchAllCategories">検索語（全フィールド対象）</message>
+  <message key="search.searchCategories">フィールド検索</message>
+  <message key="search.date">日付</message>
+  <message key="search.dateFrom">処理対象開始日</message>
+  <message key="search.dateTo">処理対象終了日</message>
+  <message key="search.discipline">分野</message>
+  <message key="search.subject">キーワード</message>
+  <message key="search.typeMethodApproach">種別（方法/アプローチ）</message>
+  <message key="search.coverage">範囲</message>
+  <message key="search.matchAll">すべてのカテゴリにマッチ</message>
+  <message key="search.authorIndex">著者インデックスをブラウズ</message>
+  <message key="search.titleIndex">タイトルインデックスをブラウズ</message>
+  <message key="search.authorDetails">著者情報</message>
+  <message key="search.searchResults">検索結果</message>
+  <message key="search.reviseSearch">絞込検索</message>
+  <message key="search.noResults">該当なし</message>
+  <message key="search.noKeywordError">少なくとも1つ検索キーワードを入力する必要があります。</message>
+  <message key="search.syntaxInstructions">
+    <![CDATA[検索のヒント: <ul>
+<li>検査語は大文字・小文字を区別しません。</li>
+<li>一般的な語は無視されます</li>
+<li>デフォルトでは、検索語に指定した<i>すべての</i>語を含む論文だけがヒットします（すなわち、暗黙に<i>AND</i>検索が行われます）</li>
+<li>複数の語を<i>OR</i>でつなげると、これらのいずれかの語を含む論文を検索します。例: <i>education OR reserach</i></li>
+<li>複雑なクエリの作成にはカッコを使用してください。例: <i>archive ((journal OR conference) NOT theses)</i></li>
+<li>フレーズ検索を行う場合は、引用符で囲んでください。例: <i>"open access publishing"</i></li>
+<li>ある語を除外する場合は、<b>-</b> または <i>NOT</i> を前に付けてください。例: <i>online -politics</i> または <i>online NOT politics</i></li>
+<li>任意の文字列にマッチさせるためのワイルドカードには <b>*</b> を使用してください。例えば、 <i>soci* morality</i> は、"sociological" または "societal" を持つ文書にヒットします。</li>
+</ul>]]>
+  </message>
+  <message key="search.operator.not">not</message>
+  <message key="search.operator.and">and</message>
+  <message key="search.operator.or">or</message>
+  <!-- Interstitial page for PDFs -->
+  <message key="article.pdf.title">PDF</message>
+  <message key="article.pdf.note">
+    <![CDATA[使用しているWebブラウザにPDFリーダープラグイン（例えば、<a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>の最新版）をインストールしていれば、選択したPDFファイルがここにロードされるはずです。PDFファイルをダウンロードすることもできます。ダウンロードしたファイルもPDFリーダーを使って開くことができます。 PDFファイルの印刷、保存、作成などについてさらに詳しく知りたい場合は、Highwire Pressが提供している<a href="http://highwire.stanford.edu/help/pdf-faq.dtl">PDFに関するよくある質問</a>が参考になります。<br /><br />ファイルが自動的にダウンロードされない場合は、<a href="{$url}">ここをクリック</a>してください。]]>
+  </message>
+  <!-- Interstitial page for non-PDF non-HTML galleys -->
+  <message key="article.nonpdf.title">論文のダウンロード</message>
+  <message key="article.nonpdf.note">
+    <![CDATA[選択したファイルは自動的にダウンロードが開始するはずです。開始しない場合は、下のリンクをクリックしてください。このファイルを見るには特別なビューアーやプラグインが必要な場合がありますので注意してください。<br /><br />ファイルが自動的にダウンロードされない場合は、<a href="{$url}">ここをクリック</a>してください。]]>
+  </message>
+  <!-- Site index -->
+  <message key="site.journalsHosted">このサイトで提供している雑誌</message>
+  <message key="site.journalView">雑誌の閲覧</message>
+  <message key="site.journalRegister">登録</message>
+  <message key="site.journalCurrent">最新号</message>
+  <!-- Current index -->
+  <message key="current.current">最新号</message>
+  <message key="current.noCurrentIssue">最新号はありません</message>
+  <message key="current.noCurrentIssueDesc">この雑誌は1号も出版されていません。</message>
+  <!-- Archive index -->
+  <message key="archive.archives">アーカイブ</message>
+  <message key="archive.browse">バックナンバーをブラウズ</message>
+  <message key="archive.issueUnavailable">利用できない号</message>
+  <!-- About The Journal -->
+  <message key="about.aboutSite">このサイトについて</message>
+  <message key="about.contact">連絡先</message>
+  <message key="about.contact.principalContact">連絡責任者</message>
+  <message key="about.contact.supportContact">技術支援担当</message>
+  <message key="about.contact.phone">電話</message>
+  <message key="about.contact.fax">Fax</message>
+  <message key="about.contact.email">メールアドレス</message>
+  <message key="about.statistics">統計</message>
+  <message key="about.journalContact">雑誌の連絡先</message>
+  <message key="about.aboutTheJournal">この雑誌について</message>
+  <message key="about.editorialTeam">編集委員会</message>
+  <message key="about.editorialTeam.biography">人物紹介</message>
+  <message key="about.editorialPolicies">編集ポリシー</message>
+  <message key="about.focusAndScope">対象と範囲</message>
+  <message key="about.sectionPolicies">セクションポリシー</message>
+  <message key="about.submissions">投稿物</message>
+  <message key="about.sponsors">スポンサー</message>
+  <message key="about.contributors">支援者</message>
+  <message key="about.onlineSubmissions">オンライン投稿</message>
+  <message key="about.onlineSubmissions.haveAccount">{$journalTitle} 用のユーザ名/パスワードを既に持っていますか。</message>
+  <message key="about.onlineSubmissions.login">ログイン画面へ</message>
+  <message key="about.onlineSubmissions.needAccount">ユーザ名/パスワードが必要ですか。</message>
+  <message key="about.onlineSubmissions.registration">登録画面へ</message>
+  <message key="about.onlineSubmissions.registrationRequired">アイテムのオンライン投稿および投稿物の現在の状態を調べるためには、登録してログインする必要があります。</message>
+  <message key="about.authorGuidelines">執筆要項</message>
+  <message key="about.submissionPreparationChecklist">投稿準備チェックリスト</message>
+  <message key="about.submissionPreparationChecklist.description">投稿プロセスの1つとして、著者は投稿物が以下のすべての事項を満たしていることをチェックする必要があります。これらのガイドラインに従っていない場合は、投稿物は著者の元に返されます。</message>
+  <message key="about.copyrightNotice">著作権表示</message>
+  <message key="about.privacyStatement">プライバシー情報の扱いについて</message>
+  <message key="about.peerReviewProcess">査読プロセス</message>
+  <message key="about.publicationFrequency">出版頻度</message>
+  <message key="about.openAccessPolicy">オープンアクセスポリシー</message>
+  <message key="about.delayedOpenAccess">エンバーゴ付きオープンアクセス</message>
+  <message key="about.delayedOpenAccessDescription1">この雑誌のコンテンツは、出版後</message>
+  <message key="about.delayedOpenAccessDescription2">ヵ月からオープンアクセスで公開されます。</message>
+  <message key="about.authorSelfArchive">著者セルフアーカイビング</message>
+  <message key="about.archiving">アーカイビング</message>
+  <message key="about.subscriptions">購読</message>
+  <message key="about.subscriptionsContact">購読連絡先</message>
+  <message key="about.availableSubscriptionTypes">購読種別</message>
+  <message key="about.journalSponsorship">雑誌スポンサー</message>
+  <message key="about.siteMap">サイトマップ</message>
+  <message key="about.aboutThisPublishingSystem">この出版システムについて</message>
+  <message key="about.people">組織</message>
+  <message key="about.policies">ポリシー</message>
+  <message key="about.other">その他</message>
+  <message key="about.aboutOJSJournal">
+    <![CDATA[この雑誌は、オープン･ジャーナル･システム {$ojsVersion} を使用しています。OJSは、<a href="http://pkp.sfu.ca/">Public Knowledge Project</a>により開発・サポートされ、GNU一般公衆利用許諾契約書の下に自由に配布されているオープンソースの雑誌管理・出版ソフトウェアです。]]>
+  </message>
+  <message key="about.aboutOJSSite">
+    <![CDATA[このサイトは、オープン･ジャーナル･システム {$ojsVersion} を使用しています。OJSは、<a href="http://pkp.sfu.ca/">Public Knowledge Project</a>により開発・サポートされ、GNU一般公衆利用許諾契約書の下に自由に配布されているオープンソースの雑誌管理・出版ソフトウェアです。]]>
+  </message>
+  <!-- Announcement -->
+  <message key="announcement.announcements">お知らせ</message>
+  <message key="announcement.announcementsHome">お知らせ</message>
+  <message key="announcement.moreAnnouncements">その他のお知らせ...</message>
+  <message key="announcement.view">お知らせを閲覧</message>
+  <message key="announcement.viewLink">その他...</message>
+  <message key="announcement.noneExist">お知らせはありません。.</message>
+  <!-- Help -->
+  <message key="help.help">ヘルプ</message>
+  <message key="help.ojsHelp">オープン･ジャーナル･システムのヘルプ</message>
+  <message key="help.ojsHelpAbbrev">OJSヘルプ</message>
+  <message key="help.toc">目次</message>
+  <message key="help.searchResults">検索結果</message>
+  <message key="help.matchesFound">{$matches} 件見つかりました</message>
+  <message key="help.noMatchingTopics">該当するトピックは見つかりませんでした。</message>
+  <message key="help.helpIndex">ヘルプインデックス</message>
+  <message key="help.contents">内容</message>
+  <message key="help.upALevel">上位トピックへ</message>
+  <message key="help.relatedTopics">関連トピック</message>
+  <message key="help.search">ヘルプの検索</message>
+  <message key="help.searchFor">ヘルプトピックを検索</message>
+  <message key="help.searchResultsFor">検索結果</message>
+  <!-- Installer -->
+  <message key="installer.ojsInstallation">OJSのインストール</message>
+  <message key="installer.ojsUpgrade">OJSのバージョンアップ</message>
+  <message key="installer.installationInstructions">
+    <![CDATA[<h4>OJS バージョン {$version}</h4>
+
+<p>Public Knowledgeプロジェクトの<strong>オープン･ジャーナル･システム</strong>をダウンロードしていただきありがとうございました。処理を進める前に、このソフトウェアに添付されている<a href="{$baseUrl}/docs/README">README</a>ファイルをお読みください。Public Knowledgeプロジェクトと本ソフトウェアプロジェクトに関してより詳しく知りたい方は、<a href="http://pkp.sfu.ca/" target="_blank">PKPのWebサイト</a>にアクセスしてください。オープン･ジャーナル･システムに関するバグ報告や技術的サポートに関する質問がある場合は、<a href="http://pkp.sfu.ca/support/forum">サポートフォーラム</a>、または、PKPのオンライン<a href="http://pkp.sfu.ca/bugzilla/" target="_blank">バグ報告システム</a>をご覧ください。連絡はサポートフォーラムでしていただくことを希望いたしますが、直接、<a href="mailto:pkp-support@sfu.ca">pkp-support@sfu.ca</a>にメールしてくださっても構いません。</p>
+
+<h4>バージョンアップ</h4>
+
+<p>既存のOJS 2.xからバージョンアップする場合は、<a href="{$upgradeUrl}">ここをクリック</a>して作業を進めてください。</p>
+
+<h4>推奨するシステム要件</h4>
+
+<ul>
+	<li><a href="http://www.php.net/" target="_blank">PHP</a> 4.2.x以降 （PHP 5.xを含む）</li>
+	<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> 3.23.23以降（MySQL 4.xを含む）、または、<a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> 7.1以降（PostgreSQL 8.xを含む）</li>
+	<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> 1.3.2x以降、または、2.0.4x以降、または、Microsoft IIS 6</li>
+	<li>OS: <a href="http://www.linux.org/" target="_blank">Linux</a>、<a href="http://www.bsd.org/" target="_blank">BSD</a>、<a href="http://www.sun.com/" target="_blank">Solaris</a>、<a href="http://www.apple.com/" target="_blank">Mac OS X</a>、<a href="http://www.microsoft.com/">Windows</a>など、上記のソフトウェアをサポートするすべてのOS。</li>
+</ul>
+
+<p>PKPは、上記のソフトウェアバージョンとプラットフォームの可能なすべての組み合わせについてテストする資源を持っていませんので、正常な動作やサポートを保証するものではありません。</p>
+
+<p>ここで行う設定は、インストール後にOJSベースディレクトリにある<tt>config.inc.php</tt>ファイルの編集、または、サイト管理Webインターフェースを使用することにより変更することができます。</p>
+
+<h4>サポートするデータベースシステム</h4>
+
+<p>OJSは、現在のところ、 MySQLとPostgreSQLでのみテストを行っていますが、<a href="http://php.weblogs.com/adodb/" target="_blank">ADOdb</a>がサポートしている他のデータベース管理システムでも（完全に、または一部）動作すると思われます 。他のDBMSによる互換性報告やパッチコードをOJSチームにお送りください。</p>
+
+<h4>インストール前に行う処理</h4>
+
+<p>1. 以下のファイルとディレクトリ（配下のすべてのコンテンツを含む）を書き込みができるようにする必要があります。</p>
+<ul>
+	<li><tt>config.inc.php</tt>は書き込み可（オプション）: {$writable_config}</li>
+	<li><tt>public/</tt>は書き込み可: {$writable_public}</li>
+	<li><tt>cache/</tt>は書き込み可: {$writable_cache}</li>
+	<li><tt>cache/t_cache/</tt>は書き込み可: {$writable_templates_cache}</li>
+	<li><tt>cache/t_compile/</tt>は書き込み可: {$writable_templates_compile}</li>
+	<li><tt>cache/_db</tt>は書き込み可: {$writable_db_cache}</li>
+</ul>
+
+<p>2. アップロードファイルを格納するためのディレクトリを作成して、書き込みができるようにする必要があります（以下の「ファイル設定」を参照してください）。</p>
+
+<h4>マニュアルインストール</h4>
+
+<p>データベースのインストールをマニュアルで実行するには<strong>マニュアルインストール</strong>を選択してください。OJSデータベーススキーマおよび初期データを作成するために必要なSQL文が表示されます。 このオプションは、インストール、特にサポートしていないプラットフォームへのインストール時の問題をデバックする際に役に立ちます。このインストール法では、指定したデータベース設定が設定ファイルに書かれますが、データベースやテーブルは作成されないことに注意してください。</p>]]>
+  </message>
+  <message key="installer.upgradeInstructions">
+    <![CDATA[<h4>OJS バージョン {$version}</h4>
+	
+<p>Public Knowledgeプロジェクトの<strong>オープン･ジャーナル･システム</strong>をダウンロードしていただきありがとうございました。処理を進める前に、このソフトウェアに添付されている<a href="{$baseUrl}/docs/README">README</a>ファイルと<a href="{$baseUrl}/docs/UPGRADE">UPGRADE</a>ファイルをお読みください。Public Knowledgeプロジェクトと本ソフトウェアプロジェクトに関してより詳しく知りたい方は、<a href="http://pkp.sfu.ca/" target="_blank">PKPのWebサイト</a>にアクセスしてください。オープン･ジャーナル･システムに関するバグ報告や技術的サポートに関する質問がある場合は、<a href="http://pkp.sfu.ca/support/forum">サポートフォーラム</a>、または、PKPのオンライン<a href="http://pkp.sfu.ca/bugzilla/" target="_blank">バグ報告システム</a>をご覧ください。連絡はサポートフォーラムでしていただくことを希望いたしますが、直接、<a href="mailto:pkp-support@sfu.ca">pkp-support@sfu.ca</a>にメールしてくださっても構いません。</p>
+<p>処理を行う前に、データベース、ファイルディレクトリ、OJSインストールディレクトリのバックアップを行うことを<strong>強く推奨します</strong>。</p>
+<p>システムを<a href="http://www.php.net/features.safe-mode" target="_blank">PHPセーフモード</a>で運用している場合は、"php.ini"設定ファイルの"max_execution_time"ディレクティブに最大値が設定されていることを確認してください。この制限値、またはその他の時間制限（例えば、Apacheの"Timeout"ディレクティブ）に達すると、バージョンアップ処理は中断され、手作業による処理が必要になります。</p>]]>
+  </message>
+  <message key="installer.localeSettings">ロケールの設定</message>
+  <message key="installer.localeSettingsInstructions">
+    <![CDATA[Unicode（UTF-8）を完全にサポートするために、すべての文字セット設定でUTF-8を選択してください。これをサポートするには、現在のところ、MySQL 4.1.1以降、または、PostgreSQL 7.1以降のデータベースサーバを必要とすることに注意してください。また、Unicodeを完全にサポートするには、<a href="http://www.php.net/mbstring" target="_blank">mbstring</a>ライブラリのサポートを選択してコンパイルしたPHP 4.3.0以降を必要とすることにも注意してください（最近のほとんどのPHPのインストールではデフォルトで有効になっています）。サーバがこれらの要件を満たしていないと、拡張文字セットの使用時に問題が生じるかもしれません。
+<br /><br />
+サーバは現在、mbstringをサポートしている: <strong>{$supportsMBString}</strong>]]>
+  </message>
+  <message key="installer.localeInstructions">このシステムで使用する第一言語。ここに表示されていない言語のサポートに興味がある場合は、OJS文書をご覧ください。</message>
+  <message key="installer.additionalLocales">追加ロケール</message>
+  <message key="installer.additionalLocalesInstructions">このシステムでサポートする追加ロケールを選択してください。ここで選択した言語は、このサイトで運用される雑誌で使用することができます。言語は、サイト管理インターフェースを使っていつでも追加インストールすることができます。</message>
+  <message key="installer.clientCharset">クライアント文字セット</message>
+  <message key="installer.clientCharsetInstructions">ブラウザとデータを送受信する際に使用するエンコーディング。</message>
+  <message key="installer.connectionCharset">通信文字セット</message>
+  <message key="installer.connectionCharsetInstructions">データベースとデータを送受信する際に使用するエンコーディング。これはクライアント文字セットに合わせるべきです。この機能は、MySQL 4.1.1以降、または、PostgreSQL 7.1以降でのみサポートされているいることに注意してください。使用するデータベースサーバがこれらの要件を満たしていない場合は、&quot;利用不可&quot; を選択してください。</message>
+  <message key="installer.databaseCharset">データベース文字セット</message>
+  <message key="installer.databaseCharsetInstructions">データベースにデータを格納する際に使用するエンコーディング。この機能は、MySQL 4.1.1以降、または、PostgreSQL 7.1以降でのみサポートされているいることに注意してください。使用するデータベースサーバがこれらの要件を満たしていない場合は、&quot;利用不可&quot; を選択してください。</message>
+  <message key="installer.locale">ロケール</message>
+  <message key="installer.fileSettings">ファイル設定</message>
+  <message key="installer.filesDir">アップロードファイル用ディレクトリ</message>
+  <message key="installer.filesDirInstructions">
+    <![CDATA[アップロードされたファイルを保存する既存のディレクトリをフルパスで入力してください。このディレクトリはWebから直接アクセスできないディレクトリにするべきです。<strong>インストールする前に、このディレクトリが存在し、書き込み可であることを確認してください。</strong>Windowsのパス名の区切りにはスラッシュを使用する必要があります（例: "C:/myjournal/files"）。]]>
+  </message>
+  <message key="installer.securitySettings">セキュリティ設定</message>
+  <message key="installer.encryption">パスワード暗号化アルゴリズム</message>
+  <message key="installer.encryptionInstructions">使用するシステムがサポートしている場合は、SHA1を推奨します（PHP 4.3.0以降が必要）。</message>
+  <message key="installer.administratorAccount">管理者アカウント</message>
+  <message key="installer.administratorAccountInstructions">このユーザアカウントはサイト管理者になり、システムのすべてにアクセスできるようになります。ユーザアカウントの追加はインストール後に行うことができます。</message>
+  <message key="installer.databaseSettings">データベース設定</message>
+  <message key="installer.databaseDriver">データベースドライバ</message>
+  <message key="installer.databaseHost">ホスト</message>
+  <message key="installer.databaseUsername">ユーザ名</message>
+  <message key="installer.databasePassword">パスワード</message>
+  <message key="installer.databaseName">データベース名</message>
+  <message key="installer.databaseDriverInstructions">
+    <![CDATA[<strong>カッコ内に表示されているデータベースドライバは、必要なPHP拡張モジュールがロードされていないので、これを選択するとインストールは失敗すると思われます。</strong><br />サポートされていないデータベースドライバが表示されているのは単に学術目的であり、作動するわけではありません。]]>
+  </message>
+  <message key="installer.databaseHostInstructions">TCP/IP経由ではなくドメインソケットを使用する場合は、ホスト名を空欄のままにしてください。これはMySQLでは必要ありません。MySQLでは、&quot;localhost&quot; が指定されると、自動的にソケットが使用されるからです。しかし、PostgreSQLなどのほかのデータベースではこのように設定する必要があります。</message>
+  <message key="installer.createDatabase">新規データベースの作成</message>
+  <message key="installer.createDatabaseInstructions">このオプションを使用するためには、使用するデータベースシステムがリモートデータベース作成機能をサポートしており、かつ、指定したユーザアカウントが新規データベースを作成する権限を持っている必要があります。このオプションを指定してインストールが失敗した場合は、マニュアルでサーバにデータベースを作成し、このオプションを無効にした上で、再度インストールを行ってください。</message>
+  <message key="installer.miscSettings">その他の設定</message>
+  <message key="installer.oaiRepositoryId">OAIリポジトリ識別子</message>
+  <message key="installer.oaiRepositoryIdInstructions">
+    <![CDATA[<a href="http://www.openarchives.org/" target="_blank">オープン・アーカイブズ・イニシアティブ</a>のメタデータハーベスティングプロトコルを使ってこのサイトから提供するメタデータレコードを識別するために使用するユニークな識別子。]]>
+  </message>
+  <message key="installer.installOJS">オープン･ジャーナル･システムのインストール</message>
+  <message key="installer.upgradeOJS">オープン･ジャーナル･システムのバージョンアップ</message>
+  <message key="installer.manualInstall">マニュアルインストール</message>
+  <message key="installer.manualUpgrade">マニュアルバージョンアップ</message>
+  <message key="installer.form.localeRequired">ロケールを選択する必要があります。</message>
+  <message key="installer.form.clientCharsetRequired">クライアント文字セットを選択する必要があります。</message>
+  <message key="installer.form.filesDirRequired">アップロードファイルを格納するディレクトリは必須です。</message>
+  <message key="installer.form.encryptionRequired">ユーザパスワードを暗号化するために使用するアルゴリズムを選択する必要があります。</message>
+  <message key="installer.form.databaseDriverRequired">データベースドライバを選択する必要があります。</message>
+  <message key="installer.form.databaseNameRequired">データベース名は必須です。</message>
+  <message key="installer.form.usernameRequired">管理者アカウントのユーザ名は必須です。</message>
+  <message key="installer.form.passwordRequired">管理者アカウントのパスワードは必須です</message>
+  <message key="installer.form.usernameAlphaNumeric">管理者のユーザ名に使用できるのは、英数字、下線、ハイフンのみであり、最初と最後の文字は英数字でなければなりません。</message>
+  <message key="installer.form.passwordsDoNotMatch">管理者のパスワードが一致しません。</message>
+  <message key="installer.form.emailRequired">管理者アカウントの有効なメールアドレスは必須です。</message>
+  <message key="installer.form.separateMultiple">複数の値はコンマで区切ってください</message>
+  <message key="installer.installErrorsOccurred">インストール中にエラーが発生しました</message>
+  <message key="installer.installFilesDirError">アップロードファイル用に指定されたディレクトリが存在しない、または、書き込みができません。</message>
+  <message key="installer.publicFilesDirError">公開ファイルディレクトリが存在しない、または、書き込みができません。</message>
+  <message key="installer.installFileError">
+    <![CDATA[インストールファイル <tt>dbscripts/xml/install.xml</tt> が存在しない、または、読めません。]]>
+  </message>
+  <message key="installer.installParseDBFileError">
+    <![CDATA[データベースインストールファイル <tt>{$file}</tt> のパースエラー。]]>
+  </message>
+  <message key="installer.configFileError">
+    <![CDATA[設定ファイル <tt>config.inc.php</tt> が存在しない、または、読めません。]]>
+  </message>
+  <message key="installer.reinstallAfterDatabaseError">
+    <![CDATA[<b>警告:</b> データベースのインストール途中でインストールが失敗した場合、データベースの再インストールを行う前に、OJSデータベース、または、テーブルを削除する必要があるかもしれません。]]>
+  </message>
+  <message key="installer.overwriteConfigFileInstructions">
+    <![CDATA[<h4>重要!</h4>
+<p>設定ファイルを上書きする保存することができませんでした。システムを使用する前に、適当なエディターで <tt>config.inc.php</tt> ファイルを開いて、その内容を以下のテキストフィールドの内容に置き換えてください。</p>]]>
+  </message>
+  <message key="installer.contentsOfConfigFile">設定ファイルの内容</message>
+  <message key="installer.manualSQLInstructions">
+    <![CDATA[<h4>マニュアルインストール</h4>
+<p>OJSデータベーススキーマと初期データを作成するためのSQL文を以下に表示しました。これらのSQL文をマニュアルで実行しないとシステムは利用できないことに注意してください。また、<tt>config.inc.php</tt> 設定ファイルについてもマニュアルで設定する必要があります。</p>]]>
+  </message>
+  <message key="installer.installerSQLStatements">インストール用のSQL文</message>
+  <message key="installer.installationComplete">
+    <![CDATA[<p>OJSのインストールが終了しました。</p>
+<p>このシステムの利用を開始するには、前画面でユーザ名とパスワードを入力して<a href="{$loginUrl}">ログイン</a>してください。</p>
+<p>お知らせや更新案内を受け取りたい場合は、<a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>で<strong>登録してください</strong>。ご質問やご意見がございましたら、<a href="http://pkp.sfu.ca/support/forum" target="_new">サポートフォーラム</a>にご参加ください。</p>]]>
+  </message>
+  <message key="installer.upgradeComplete">
+    <![CDATA[<p>OJS バージョン {$version} へのバージョンアップが終了しました。</p>
+<p> config.inc.php 設定ファイルの"installed"項目を<i>On</i>に戻すことを忘れないでください。</p>
+<p>もしまだ登録されていなくて、お知らせや更新案内を受け取りたい場合は、<a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>で<strong>登録してください</strong>。ご質問やご意見がございましたら、<a href="http://pkp.sfu.ca/support/forum" target="_new">サポートフォーラム</a>にご参加ください。</p>]]>
+  </message>
+  <message key="installer.skipFilesDir">必要なサブディレクトリを作成しない（マニュアルインストール時にのみ有効）</message>
+  <message key="installer.releaseNotes">リリースノート</message>
+  <message key="installer.checkYes">はい</message>
+  <message key="installer.checkNo">
+    <![CDATA[<span class="formError">いいえ</span>]]>
+  </message>
+  <!-- Article Logs -->
+  <message key="log.author.submitted">{$authorName}が新規投稿ID {$submissionId} を行った。</message>
+  <message key="log.author.documentRevised">{$authorName}が論文 {$articleId} を改訂した。新しいファイルIDは {$fileId} である。</message>
+  <message key="log.review.reviewerAssigned">{$reviewerName}が投稿物 {$articleId} の{$round}回目の査読の査読者に任命された。</message>
+  <message key="log.review.reviewerUnassigned">{$reviewerName}が投稿物 {$articleId} の{$round}回目の査読の査読者を解除された。</message>
+  <message key="log.review.reviewInitiated">投稿物 {$articleId} の{$reviewerName}による{$round}回目の査読が開始された。</message>
+  <message key="log.review.reviewReinitiated">投稿物 {$articleId} の{$reviewerName}による{$round}回目の査読が再開された。</message>
+  <message key="log.review.reviewCancelled">投稿物 {$articleId} の{$reviewerName}による{$round}回目の査読が取り消された。</message>
+  <message key="log.review.reviewCleared">投稿物 {$articleId} の{$reviewerName}による{$round}回目の査読がクリアされた。</message>
+  <message key="log.review.reviewerRated">投稿物 {$articleId} の{$round}回目の査読に関して{$reviewerName}が評価された。</message>
+  <message key="log.review.reviewDueDateSet">投稿物 {$articleId} の{$reviewerName}による{$round}回目の査読の期限日が{$dueDate}に設定された。</message>
+  <message key="log.review.reviewRecommendationSet">投稿物 {$articleId} の{$reviewerName}による{$round}回目の査読の答申が設定された。</message>
+  <message key="log.review.reviewRecommendationSetByProxy">投稿物 {$articleId} の{$round}回目の査読の答申が、査読者、{$reviewerName}の代わりに編集者、{$editorName}により設定された。</message>
+  <message key="log.review.resubmit">投稿物 {$articleId} が査読に差し戻された。</message>
+  <message key="log.review.reviewDeclined">{$reviewerName} が投稿物 {$articleId} の{$round}回目の査読を謝絶した。</message>
+  <message key="log.review.reviewAccepted">{$reviewerName} が投稿物 {$articleId} の{$round}回目の査読を受諾した。</message>
+  <message key="log.review.reviewAcceptedByProxy">{$userName} が投稿物 {$articleId} の{$round}回目の査読を査読者、{$reviewerName}の代わりに受諾した。</message>
+  <message key="log.review.reviewFileByProxy">編集者、{$userName}が投稿物 {$articleId} の{$round}回目の査読ファイルを査読者、{$reviewerName}の代わりにアップロードした。</message>
+  <message key="log.review.reviewerFile">査読者ファイルがアップロードされた。</message>
+  <message key="log.copyedit.initiate">投稿物 {$articleId} の原稿整理が{$copyeditorName}により開始された。</message>
+  <message key="log.copyedit.copyeditFileSet">デフォルトの原稿整理ファイルが選択された。</message>
+  <message key="log.copyedit.initialEditComplete">{$copyeditorName}が投稿物 {$articleId} の最初の原稿整理を完了した。</message>
+  <message key="log.copyedit.finalEditComplete">{$copyeditorName}が投稿物 {$articleId} の最終の原稿整理を完了した。</message>
+  <message key="log.copyedit.copyeditorAssigned">{$copyeditorName}が投稿物 {$articleId} のコピーエディタに任命された。</message>
+  <message key="log.copyedit.copyeditorFile">投稿ファイルの整理編集版がアップロードされた。</message>
+  <message key="log.copyedit.authorFile">投稿ファイルの著者による整理編集版がアップロードされた。</message>
+  <message key="log.layout.layoutEditorAssigned">{$editorName}が投稿物 {$articleId} のレイアウトエディタに任命された。</message>
+  <message key="log.layout.layoutEditorUnassigned">{$editorName}が投稿物 {$articleId} のレイアウトエディタを解除された。</message>
+  <message key="log.layout.layoutEditComplete">{$editorName}が投稿物 {$articleId} のレイアウト編集を完了した。</message>
+  <message key="log.editor.metadataModified">この論文のメタデータが{$editorName}により変更された。</message>
+  <message key="log.editor.editorFile">投稿ファイルの編集者版がアップロードされた。</message>
+  <message key="log.editor.archived">投稿物 {$articleId} がアーカイブされた。</message>
+  <message key="log.editor.restored">投稿物 {$articleId} がキューに格納された。</message>
+  <message key="log.editor.editorAssigned">{$editorName}が投稿物 {$articleId} の編集者に任命された。</message>
+  <message key="log.editor.submissionExpedited">{$editorName}が論文 {$articleId} の編集処理を早めた。</message>
+  <message key="log.proofread.assign">{$assignerName}が{$proofreaderName}を投稿物 {$articleId} の校正者に任命した。</message>
+  <message key="log.proofread.complete">{$proofreaderName}がスケジューリングのために {$articleId} を投稿した。</message>
+  <message key="log.imported">{$userName}が論文 {$articleId}をインポートした。</message>
+  <!-- Reading Tools entries -->
+  <message key="rt.readingTools">読書ツール</message>
+  <message key="rt.admin.status">状態</message>
+  <message key="rt.admin.configuration">設定</message>
+  <message key="rt.admin.management">管理</message>
+  <!-- RT Settings -->
+  <message key="rt.admin.settings">読書ツールオプション</message>
+  <message key="rt.admin.readingToolsEnabled">読書ツール</message>
+  <message key="rt.admin.selectedVersion">関連アイテム</message>
+  <message key="rt.admin.rtEnable">この雑誌で読書ツールを有効にするには、読書ツールオプションをクリックしてください。</message>
+  <message key="rt.admin.settings.description">読書ツールは、インデックス化する雑誌セクションの出版アイテムの横に枠に囲まれて表示されます。読書ツールは、以下にリストアップした出版アイテムに関連するオプションツール、および、学問分野で組織化された関連アイテムへのアクセスを提供するツールで構成されています</message>
+  <message key="rt.admin.settings.enableReadingTools">雑誌の指定されたセクションで読書ツールを有効にする。</message>
+  <message key="rt.admin.settings.abstract">要旨（アイテムの要旨を提示する）。</message>
+  <message key="rt.admin.settings.relatedItems">分野</message>
+  <message key="rt.admin.settings.relatedItemsLink">
+    <![CDATA[各フィールドの関連アイテムを閲覧、追加、修正、削除する場合は、<a href="{$relatedItemsLink}" class="action">関連アイテムセット</a>を参照してください。]]>
+  </message>
+  <message key="rt.admin.options">雑誌アイテムツール</message>
+  <message key="rt.admin.relatedItems">関連アイテムツール</message>
+  <message key="rt.admin.settings.disableRelatedItems">関連アイテムを無効にする</message>
+  <message key="rt.admin.settings.bibFormat">引用形式</message>
+  <message key="rt.admin.settings.captureCite">アイテムの引用形式（アイテムの書誌情報を提供する）。</message>
+  <message key="rt.admin.settings.viewMetadata">インデックス用メタデータ（著者やシステムが提供したアイテムのインデックス用メタデータを表示する）。</message>
+  <message key="rt.admin.settings.supplementaryFiles">補足ファイル（著者が投稿に含めたファイルのリストを表示する）。</message>
+  <message key="rt.admin.settings.printerFriendly">印刷版（アイテムの印刷用の版に導く）。</message>
+  <message key="rt.admin.settings.authorBio">著者について（著者により入力された経歴を表示する）。</message>
+  <message key="rt.admin.settings.defineTerms">単語検索（アイテム中の任意の単語をダブルクリックすることにより、その単語を辞書で検索できるようにする）。</message>
+  <message key="rt.admin.settings.addComment">コメントの付与（読者がコメントを投稿できるようにする。雑誌管理者はこれを削除できる。読者のコメントは、雑誌設定の第2ステップで有効にしておく必要がある。</message>
+  <message key="rt.admin.settings.emailAuthor">著者にメール送信（著者のメールアドレスをセットしたメールテンプレートへ導く）。</message>
+  <message key="rt.admin.settings.emailOthers">同僚に通知（アイテムへのリンクを持つメールテンプレートへ導く）。</message>
+  <!-- RT Versions -->
+  <message key="rt.admin.versions.restoreVersions">デフォルトセットに戻す</message>
+  <message key="rt.admin.versions.createVersion">新アイテムセットの作成</message>
+  <message key="rt.admin.versions.confirmRestore">デフォルトのアイテムセットに不可逆的に戻してもよいですか。これを実行すると、設定ページでアクティブなアイテムセットを選択する必要があります。</message>
+  <message key="rt.admin.versions.confirmDelete">このアイテムセット、および関連するすべてのコンテキストと検索を削除してもよいですか。</message>
+  <message key="rt.admin.versions.edit.editVersion">アイテムセットの編集</message>
+  <message key="rt.admin.versions.metadata">メタデータ</message>
+  <message key="rt.admin.versions.export">エクスポート</message>
+  <message key="rt.admin.versions.importVersion">アイテムセットのインポート</message>
+  <!-- RT Contexts -->
+  <message key="rt.admin.contexts.edit.editContext">コンテキストの編集</message>
+  <message key="rt.admin.contexts.createContext">コンテキストの作成</message>
+  <message key="rt.admin.contexts.confirmDelete">このコンテキストおよび関連のすべての検索を削除してもよいですか。</message>
+  <message key="rt.admin.contexts.metadata">メタデータ</message>
+  <message key="rt.admin.contexts.options">オプション</message>
+  <message key="rt.admin.contexts.options.citedBy">デフォルトの検索語として著者名を使用し、論文の引用を検索するものとしてコンテキストを記述する。</message>
+  <message key="rt.admin.contexts.options.authorTerms">このアイテムの著者による他の研究成果をユーザが見つけることができるように著者名をデフォルトの検索語として使用する（例えば、&quot;他の研究成果&quot; コンテキストのために）。</message>
+  <message key="rt.admin.contexts.options.geoTerms">地理的インデックスデータをデフォルトの検索語として使用する。</message>
+  <message key="rt.admin.contexts.options.defineTerms">
+    <![CDATA[ユーザが指定した語をデフォルトの検索語として使用する。または、選択されなかった場合は、空欄として残す（例えば、"語の定義"コンテキストのために）。単語のダブルクリックによりこのコンテキストを開くようにするためには、<a href="{$settingsUrl}">RSTの設定</a>で"語の定義"オプションを有効にしておく必要があります。]]>
+  </message>
+  <!-- RT Searches -->
+  <message key="rt.admin.searches.edit.editSearch">検索の編集</message>
+  <message key="rt.admin.searches.confirmDelete">この検索を削除してもよいですか。</message>
+  <message key="rt.admin.searches.createSearch">検索の作成</message>
+  <message key="rt.admin.validateUrls">読書ツールのためのURLの検証</message>
+  <message key="rt.admin.validateUrls.description">
+    <![CDATA[検索サイトとして不正だと思われるURLを以下に表示します。<br/>
+このテストは100%正確なものではないので、不正であるとしたURLについてもご自分で確認してください。<br/>
+データを実際に入力する必要がある検索サイトのURLでは検証が失敗している可能性があります。]]>
+  </message>
+  <message key="rt.admin.validateUrls.validate">検証</message>
+  <message key="rt.admin.validateUrls.urlIsInvalid">{$url} は不正です。</message>
+  <message key="rt.admin.validateUrls.ok">OK</message>
+  <message key="rt.admin.validateUrls.complete">検証完了。</message>
+  <!-- RT Entities -->
+  <message key="rt.version">バージョン</message>
+  <message key="rt.versions">関連アイテムセット</message>
+  <message key="rt.version.title">名称</message>
+  <message key="rt.version.locale">ロケール</message>
+  <message key="rt.version.key">キー</message>
+  <message key="rt.version.description">記述</message>
+  <message key="rt.context">コンテキスト</message>
+  <message key="rt.contexts">コンテキスト</message>
+  <message key="rt.context.title">名称</message>
+  <message key="rt.context.abbrev">略称</message>
+  <message key="rt.context.description">記述</message>
+  <message key="rt.context.order">順序</message>
+  <message key="rt.search">検索</message>
+  <message key="rt.searches">検索</message>
+  <message key="rt.search.title">名称</message>
+  <message key="rt.search.url">URL</message>
+  <message key="rt.search.order">順序</message>
+  <message key="rt.search.description">説明</message>
+  <message key="rt.search.searchUrl">検索URL</message>
+  <message key="rt.search.searchPost">POSTデータ</message>
+  <message key="rt.search.suggest">ソースの提案</message>
+  <message key="rt.authorBio">著者について</message>
+  <message key="rt.viewMetadata">メタデータのインデックス化</message>
+  <message key="rt.metadata.dublinCore">ダブリンコア</message>
+  <message key="rt.metadata.pkpItem">PKPメタデータアイテム</message>
+  <message key="rt.metadata.forThisDocument">この文書のメタデータ</message>
+  <message key="rt.metadata.dublinCore.title">タイトル</message>
+  <message key="rt.metadata.dublinCore.primaryAuthor">作成者</message>
+  <message key="rt.metadata.dublinCore.subject">主題</message>
+  <message key="rt.metadata.dublinCore.description">記述</message>
+  <message key="rt.metadata.dublinCore.publisher">出版者</message>
+  <message key="rt.metadata.dublinCore.contributor">貢献者</message>
+  <message key="rt.metadata.dublinCore.date">日付</message>
+  <message key="rt.metadata.dublinCore.type">種別</message>
+  <message key="rt.metadata.dublinCore.format">形式</message>
+  <message key="rt.metadata.dublinCore.identifier">識別子</message>
+  <message key="rt.metadata.dublinCore.source">情報源</message>
+  <message key="rt.metadata.dublinCore.language">言語</message>
+  <message key="rt.metadata.dublinCore.relation">関係</message>
+  <message key="rt.metadata.dublinCore.coverage">範囲</message>
+  <message key="rt.metadata.dublinCore.rights">権利</message>
+  <message key="rt.metadata.pkp.title">文書のタイトル</message>
+  <message key="rt.metadata.pkp.primaryAuthor">著者の氏名、所属、国</message>
+  <message key="rt.metadata.pkp.discipline">専門分野</message>
+  <message key="rt.metadata.pkp.subject">キーワード</message>
+  <message key="rt.metadata.pkp.subjectClass">主題分類</message>
+  <message key="rt.metadata.pkp.abstract">要旨</message>
+  <message key="rt.metadata.pkp.publisher">組織機関、住所</message>
+  <message key="rt.metadata.pkp.sponsors">スポンサー</message>
+  <message key="rt.metadata.pkp.date">（YYYY-MM-DD）</message>
+  <message key="rt.metadata.pkp.type">種別</message>
+  <message key="rt.metadata.pkp.genre">状態とジャンル</message>
+  <message key="rt.metadata.pkp.peerReviewed">査読論文</message>
+  <message key="rt.metadata.pkp.format">ファイルフォーマット</message>
+  <message key="rt.metadata.pkp.uri">統一的資源識別子（URI）</message>
+  <message key="rt.metadata.pkp.source">雑誌・会議名; 巻, 号 （年）</message>
+  <message key="rt.metadata.pkp.language">英語=en</message>
+  <message key="rt.metadata.pkp.suppFiles">補足ファイル</message>
+  <message key="rt.metadata.pkp.coverage">地理空間場所、時代区分、研究材料（性別、年齢など）</message>
+  <message key="rt.metadata.pkp.copyright">著作権および許諾</message>
+  <message key="rt.suppFiles">補足ファイル</message>
+  <message key="rt.suppFiles.viewMetadata">メタデータのインデックス化</message>
+  <message key="rt.suppFiles.download">ダウンロード</message>
+  <message key="rt.captureCite">アイテムの引用法</message>
+  <message key="rt.captureCite.online">オンライン</message>
+  <message key="rt.captureCite.available">利用可:</message>
+  <message key="rt.captureCite.capture">引用のダウンロード</message>
+  <message key="rt.captureCite.acaoLocation">北米</message>
+  <message key="rt.captureCite.capture.endNote">
+    <![CDATA[<a href="]]>{$url}<![CDATA[">EndNote</a> - EndNoteフォーマット(Macintosh &amp; Windows)]]>
+  </message>
+  <message key="rt.captureCite.capture.referenceManager">
+    <![CDATA[<a href="]]>{$url}<![CDATA[">Reference Manager</a> - RISフォーマット（Windowsのみ）]]>
+  </message>
+  <message key="rt.captureCite.capture.proCite">
+    <![CDATA[<a href="]]>{$url}<![CDATA[">ProCite</a> - RISフォーマット（Macintosh および Windows）]]>
+  </message>
+  <message key="rt.reviewPolicy">査読ポリシー</message>
+  <message key="rt.printVersion">印刷版</message>
+  <message key="rt.lookUp">単語の調査</message>
+  <message key="rt.colleague">同僚に通知</message>
+  <message key="rt.addComment">コメントの追加</message>
+  <message key="rt.emailAuthor">著者にメール</message>
+  <message key="rt.beNotifiedWhen">通知...</message>
+  <message key="rt.relatedItems">関連アイテム</message>
+  <message key="rt.thisJournal">雑誌の検索</message>
+  <message key="rt.email.sent">メッセージを送信しました。</message>
+  <message key="rt.email.needLogin">
+    <![CDATA[* <a target="_parent" href="{$loginUrl}">登録</a>が必要です。]]>
+  </message>
+  <message key="rt.context.searchTerms">検索語</message>
+  <message key="rt.context.termToDefine">検索する単語</message>
+  <message key="rt.context.searchDescription">検索語は著者により選択されたものです。2,3の簡潔で正確な語やフレーズを使って論理（AND）検索式を作成できる場合は、読者はこれを変更したり、修正したりすることができます。検索する情報源の詳細について知りたい場合は、[このサイト/雑誌について]リンクをクリックしてください。これらの情報源はその妥当性を考慮し、また、コンテンツのすべて、または一部がオープンアクセス（フリーアクセス）のものを選択しています。</message>
+  <message key="rt.context.defineTermsDescription">アイテムが（PDFではなく）HTMLファイルの場合、テキスト中の任意の単語をダブルクリックすると[検索する単語]ボックスにその単語が現れます。ボックスに単語を入力したり、貼り付けたりすることもできます。検索する情報源の詳細について知りたい場合は、[このサイト/雑誌について]リンクをクリックしてください。これらの情報源はその妥当性を考慮し、また、コンテンツのすべて、または一部がオープンアクセス（フリーアクセス）のものを選択しています。</message>
+  <message key="rt.context.authorTermsDescription">複数の著者がいるアイテムについて、同一の共著者による論文を検索するためにはすべての著者をチェックしたままにします。1人の著者だけをチェックして、1人ずつその著者の論文を検索することもできます。検索する情報源の詳細について知りたい場合は、[このサイト/雑誌について]リンクをクリックしてください。これらの情報源はその妥当性を考慮し、また、コンテンツのすべて、または一部がオープンアクセス（フリーアクセス）のものを選択しています。</message>
+  <message key="rt.context.citesContextDescription">論文がGoogle Scholarに登録されていると、&quot;Xにより引用&quot; リンクが付きます。このリンクをクリックするとこの論文を引用している論文のリストが表示されます。同時に、Google Scholarは、そのタイトルと著者を引用しているすべてのアイテムをリストアップします。あなたが所属する機関の図書館で利用できるオンライン情報源のみにアクセスするためには、Google ScholarのScholar Preferencesページで、所属機関の図書館リンクを有効にしてください。</message>
+  <message key="rt.context.and">AND</message>
+  <!--
+	 *
+	 * MISC - Entries that do not belong in the other sections.
+	 *
+	-->
+  <!-- Icons: Default "alt" text -->
+  <message key="icon.view.alt">閲覧</message>
+  <message key="icon.checked.alt">チェック済</message>
+  <message key="icon.unchecked.alt">未チェック</message>
+  <message key="icon.comment.alt">コメント</message>
+  <message key="icon.edit.alt">編集</message>
+  <message key="icon.delete.alt">削除</message>
+  <message key="icon.letter.alt">レターLetter</message>
+  <message key="icon.mail.alt">メール</message>
+  <message key="icon.info.alt">情報</message>
+  <message key="icon.folder.alt">フォルダー</message>
+  <!-- Debug messages -->
+  <message key="debug.executionTime">以下で生成されたページ</message>
+  <message key="debug.databaseQueries">データベースクエリーの数</message>
+  <message key="debug.notes">注:</message>
+  <message key="debug.notes.localeLoad">XMLからロードされたロケールファイル &quot;{$localeFile}&quot;</message>
+  <message key="debug.notes.localeListLoad">XMLからロードされたロケールリスト &quot;{$localeList}&quot;</message>
+  <message key="debug.notes.missingLocaleKey">不明なロケールキー &quot;{$key}&quot;。</message>
+  <!--
+	 *
+	 * DEFAULT - Default settings for setup items.
+	 *
+	-->
+  <message key="default.journalSettings.checklist.notPreviouslyPublished">投稿物はこれまでに出版されておらず、また、別の雑誌に投稿されてもいない（または、編集者へのコメント欄で事情を説明している）。</message>
+  <message key="default.journalSettings.checklist.fileFormat">投稿ファイルは、Microsoft Word、RTF、またはWordPerfect文書ファイルフォーマットのいずれかである。 </message>
+  <message key="default.journalSettings.checklist.addressesLinked">
+    <![CDATA[可能な場合、参考文献にオンラインでアクセスするためのURL（参考文献のオープンアクセス版のURLを含む）を提供している。URLはクリックできる形（例えば、<a href="http://pkp.sfu.ca">http://pkp.sfu.ca</a>）で提供されている。]]>
+  </message>
+  <message key="default.journalSettings.checklist.submissionAppearance">テキストはシングルスペースで書かれており、12ポイントのフォントサイズを使用しており、下線ではなくイタリック体を使用しており（URLアドレスを除く）、すべてのイラスト、図、表は最後にまとめて示すのではなく、テキスト中の適当な場所に埋め込んでいる。</message>
+  <message key="default.journalSettings.checklist.bibliographicRequirements">
+    <![CDATA[テキストは、「この雑誌について」ページにある<a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">執筆要項</a>で示された書式要件および書誌記述要件を順守している。]]>
+  </message>
+  <message key="default.journalSettings.checklist.anonymous">
+    <![CDATA[査読を行う雑誌セクションに投稿する場合、<a href="javascript:openHelp('{$indexUrl}/{$journalPath}/help/view/editorial/topic/000044')">ブラインド審査を保証する</a>ための指示に従っている。]]>
+  </message>
+  <message key="default.journalSettings.privacyStatement">本雑誌サイトに入力された名前およびメールアドレスは、本雑誌で述べた目的にのみ使用し、他の目的で使用したり、他のいかなる団体にも公開することはありません。</message>
+  <message key="default.journalSettings.openAccessPolicy">本雑誌は、知の全世界的な流通を支援するために研究成果を自由に利用できるようにするという原則に基づいて、そのコンテンツを直ちにオープンアクセスで提供します。</message>
+  <message key="default.journalSettings.authorSelfArchivePolicy">著者には、（出版に関する書誌的情報を提供する限り）本雑誌に投稿したアイテムを個人または機関のWebサイトに出版に先立って、あるいは出版後に掲載することを許可し、奨励します。</message>
+  <message key="default.journalSettings.copyeditInstructions">
+    <![CDATA[原稿整理段階では、論文の流れ、明快さ、文法、語法、書式を改善することを目的とします。また、この段階は、著者がテキストの大幅な変更を行うことができる最後の機会を意味します。なぜなら、次の段階での修正は文字や書式の修正に限られるからです。
+
+原稿整理に使用されるファイルは、Wordまたは.rtfフォーマットですので、ワープロ文書として容易に編集することができます。ここで示す一連の指示では、原稿整理を行う上で2つの方法を提案しています。1つは、Microsoft Wordの「変更履歴の記録」機能を使用するもので、コピーエディタ、編集者、著者の3者がこのソフトウェアを利用できる必要があります。2つ目の方法は、ソフトウェアとは無関係であり、「Harvard Education Review」から許可を得て借用した方法です。雑誌編集者はこれらの指示を変更することができますので、この雑誌にあわせて処理を改善する提案を行うことができます。 
+
+<h4>原稿整理方法</h4>
+
+<b>1. Microsoft Wordの「変更履歴の記録」機能</b>
+
+ツールメニューの下にある「変更履歴の記録」機能を使用すると、コピーエディタは、テキストを挿入（該当テキストは色付きで表示）したり、削除（該当テキストは色付の抹消線で削除、または削除テキストとして余白部に表示）したりすることができます。また、コピーエディタは、質問を角カッコで挟むことにより、著者（著者質問）にも編集者（編集者質問）にも質問を投げることができます。その後、コピーエディタ版をアップロードし、編集者に通知します。そして、編集者はテキストを確認して、著者に通知します。
+
+編集者と著者は、変更に納得した場合は変更をそのままにしておきます。さらなる変更が必要な場合、編集者と著者は、最初に行われたテキストの挿入や削除を変更することも、新たに別の場所にテキストを挿入したり削除したりすることもできます。角カッコの中に置かれた各々に対する質問がある場合、著者と編集者はこれに答えます。
+
+編集者と著者によるテキストの点検が終了したら、次のレイアウトとゲラ作成ステップに渡すために、変更を適用した最終版をコピーエディタは作成します。
+
+
+<b>2. Harvard Educational Review</b>
+
+<b>原稿の電子的改訂を行う方法</b>
+
+原稿の電子的改訂を行うために、以下の手順に従ってください。
+
+<b>提案された変更に応じる</b>
+&nbsp; 提案された変更を受け入れる場合は、テキストの太字指定を外します
+&nbsp; 提案された変更を受け入れない場合は、オリジナルテキストを再入力して、<b>太字</b>指定をします。
+
+<b>追加と削除を行う</b>
+&nbsp; 新たなテキストを<b>太字にする</b>ことにより追加を示します
+&nbsp; 削除する部分を次のように置換します: <b>[削除テキスト]</b>
+&nbsp; 1つ以上のセンテンスを削除する場合は、注記で示してください。例: <b>[2センテンスを削除]</b>
+
+<b>著者への質問（QA）に回答する</b>
+&nbsp; テキスト中で太字で示されているすべてのQAはそのままにしておく。削除しない。
+&nbsp; QAに答えるには、直後にコメントを追加する。コメントには次の区切り文字を使用する。:
+<b>[Comment:]</b>
+&nbsp; 例: <b>[Comment: ご指摘の通り、方法に関する考察を拡張しました]</b>
+
+<b>コメントを付ける</b>
+&nbsp; 構成上の変更、または大規模な改訂を説明するためにコメントを使用する
+&nbsp; 例: <b>[Comment: 上記パラグラフを5ページから7ページへ移動した]</b>
+&nbsp; 注: ページに言及する場合は、あなたに送付した原稿の印刷版のページを使用してください。これは重要です。文書が電子的に改訂されるとページが変わる可能性があるからです。
+
+<h4>電子的改訂の実例</h4>
+
+<b>オリジナル「原稿」ファイル</b>
+
+オリジナル原稿の構造や構成の劇的な変更を行う前に、原稿の共同作業者に連絡してください。改訂が終了したら、ファイル名を"著者名QA.doc"から"著者名QAR.doc"に変更します（例えば、"LeeQA.doc"から"LeeQAR.doc"へ変更）。原稿を印刷して、全面的に改訂してファイル名を変更したワープロファイルを含むフロッピーディスクと共に郵送してください。
+
+
+<b>質問と提案が付されて著者に返された原稿</b>
+
+<b>我々があなたに返した原稿</b>の構造や構成の劇的な変更を行う前に、原稿を<b>担当している編集者</b>に連絡してください。改訂が終了したら、ファイル名を"著者名QA.doc"から"著者名QAR.doc"に変更します（例えば、"LeeQA.doc"から"LeeQAR.doc"へ変更）。原稿を印刷して、全面的に改訂してファイル名を変更したワープロファイルを含むフロッピーディスクと共に郵送してください。<b>[QA: このパラグラフでは、電子的改訂を行う際の指示に注意深く従うことの重要性を強調してもよいでしょう。そうでないと、編集処理が大幅に遅れる可能性があるからです。]</b>
+
+<b>改訂した原稿をHER誌に返送する</b>
+
+我々があなたに返した原稿の構造や構成の劇的な変更を行う前に、原稿を担当している編集者に連絡してください。<b>以下の指示に従わなかった場合、原稿の出版が大幅に遅れる可能性があることをご理解ください。</b>
+
+改訂が終了したら、ファイル名を"著者名QA.doc"から"著者名QAR.doc"に変更します（例えば、"LeeQA.doc"から"LeeQAR.doc"へ変更）。原稿を印刷して、<b>[単語を削除]</b>改訂してファイル名を変更したワープロファイルを含むフロッピーディスクと共に郵送してください。<b>[QA: このパラグラフでは、電子的改訂を行う際の指示に注意深く従うことの重要性を強調してもよいでしょう。そうでないと、編集処理が大幅に遅れる可能性があるからです。] [Comment: 提案に従って、センテンスを追加しました。]</b>
+
+<b>注:</b>
+&bull; 太字を解除したテキストにより最初のセンテンスに対する変更の提案を受け入れたことを示しています
+&bull; QAに応えてセンテンスが追加されました。太字のテキストは新しいテキストが追加されたことを示しています
+&bull; [単語を削除] は単語「全面的に」を削除したことを示しています
+&bull; コメントは編集者のQAに対する回答を含んでいます]]>
+  </message>
+  <message key="default.journalSettings.proofingInstructions">
+    <![CDATA[校正段階では、ゲラにおけるスペリング、文法、書式の誤りを見つけることを目的とします。セクションエディタと相談しないと、もっと大きな変更をこの段階で行うことはできません。レイアウト画面で[校正版の閲覧]をクリックすると、このアイテムを出版で使用されるHTML、PDF、その他の利用可能なファイルフォーマットで見ることができます。
+
+<strong>スペリングおよび文法の誤りについて</strong>
+
+問題のある語、または語群をコピーして、以下のように編集者への "CHANGE-TO" 指示を付けて「校正者修正」欄にペーストします
+
+1. CHANGE...
+then the others
+TO...
+than the others
+
+2. CHANGE...
+Malinowsky
+TO...
+Malinowski
+
+
+<strong>書式の誤りについて</strong>
+
+問題のある場所と内容を、以下のように "FORMATTING" の見出しを付けて「校正者修正」欄に記述します
+
+3. FORMATTING
+表3の3カラム目の数字の位置が揃っていない。
+
+4. FORMATTING
+"This last topic ..."で始まる段落がインデントされていない。]]>
+  </message>
+  <message key="default.journalSettings.emailSignature">
+    <![CDATA[________________________________________________________________________
+{$journalName}
+{$indexUrl}/{$journalPath}
+]]>
+  </message>
+  <message key="default.journalSettings.forReaders">
+    <![CDATA[読者には、この雑誌の出版通知サービスへの登録をお薦めします。雑誌ホームページの上部にある<a href="{$indexUrl}/{$journalPath}/user/register">登録</a>リンクをクリックして登録してください。このサービスは、登録した雑誌に新しい号が出版されるたびに、目次情報をメールでお知らせするものです。登録者リストは、この雑誌のサポートや読者数のレベルを主張することを可能にします。登録読者の名前とメールアドレスは、その他の目的では使用いたしません。この雑誌の<a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">プライバシー情報の扱いについて</a>を参照してください。]]>
+  </message>
+  <message key="default.journalSettings.forAuthors">
+    <![CDATA[この雑誌に論文を投稿することに興味はありませんか。この雑誌のセクションポリシーを示す<a href="{$indexUrl}/{$journalPath}/about">この雑誌について</a>および<a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">執筆要項</a>をご覧になることをお薦めします。論文を投稿するにはあらかじめこの雑誌に<a href="{$indexUrl}/{$journalPath}/user/register">登録</a>する必要があります。登録済みの方は<a href="{$indexUrl}/index/login">ログイン</a>して、5ステップの投稿処理を開始するだけです。]]>
+  </message>
+  <message key="default.journalSettings.forLibrarians">
+    <![CDATA[研究図書館の方には、この雑誌を電子ジャーナルリストに追加することをお薦めします。また、この雑誌が使用しているオープンソースの出版システムが、図書館が所属の教員が編集委員をしている雑誌を運用するために提供するシステムとしてふさわしいことも注目に値するでしょう（<a href="http://pkp.sfu.ca/ojs">オープン･ジャーナル･システム</a>のホームページを参照してください）。]]>
+  </message>
+  <message key="default.journalSettings.lockssLicense">
+    <![CDATA[この雑誌は、参加図書館による分散型アーカイブシステムを構築するLOCKSSシステムを使用しています。このシステムの参加図書館が保存および障害復旧の目的でこの雑誌の恒久的アーカイブを作成することを許可します。<a href="http://lockss.stanford.edu/">さらなる情報</a>はここを参照してください。]]>
+  </message>
+</locale>

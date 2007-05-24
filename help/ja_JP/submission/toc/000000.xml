@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../toc.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Author Submission Process. 
+  *
+  * $Id$
+  -->
+
+<toc id="submission/toc/000000" locale="ja_JP" title="投稿プロセス" parent_topic="submission/topic/000000">
+	<topic id="submission/topic/000001" title="執筆要項" />
+	<topic id="submission/topic/000002" title="投稿要件" />
+	<topic id="submission/topic/000003" title="インデックスとメタデータ" />
+	<topic id="submission/topic/000004" title="補足ファイル" />
+	<breadcrumb url="submission/topic/000000" title="投稿プロセス" />
+</toc>

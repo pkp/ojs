@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Editorial Process Index 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000000" locale="ja_JP" title="編集プロセス" toc="index/toc/000000" subtoc="editorial/toc/000000" key="editorial.index">
+	<section>
+		<![CDATA[<p>雑誌への投稿物の編集プロセスには、まず、査読（通常、ブラインド審査）とそれに続くセクションエディタによる投稿物のアクセスプトまたはリジェクトの判断が行われる査読段階があります。編集プロセスの査読段階でアクセプトされた投稿物は、原稿整理、レイアウト、校正からなる編集段階に送られます。一連の作業が終わると、投稿物は出版のために特定の号に割り付けられます。雑誌がどのように組織化されているかにより、編集プロセスは1人の編集者で行われることもあれば、編集者、セクションエディタ、コピーエディタ、レイアウトエディタ、校正者からなるチームで行われることもあります。</p>]]>
+	</section>
+</topic>

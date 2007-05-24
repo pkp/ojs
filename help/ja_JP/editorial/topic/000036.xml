@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000036.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author's Role Editing - Proofreading
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000036" locale="ja_JP" title="校正" toc="editorial/toc/000011" key="editorial.authorsRole.editing.proofreading">
+	<section>
+		<![CDATA[<p>著者は、雑誌のオンライン版として提供されることになるHTMLやPDF、ポストスクリプト版の投稿物のゲラの校正作業を行います。これらのファイルを見るには、（ファイル名ではなく）校正フォーマットのいずれかをクリックします。すると出版される各形態の投稿物を見ることができます。校正作業の段階では、文字やフォーマット上の誤りしかレイアウトエディタは修正しません。ファイルフォーマットが複数ある場合、スペルチェックに関しては著者は1つのファイルだけチェックしますが、もちろん、すべてのフォーマットで同じ問題があると思われます。著者は、校正の手引きに従って、修正点を入力ボックスに記録します。投稿物に附属して出版される補足ファイルについてもチェックを行う必要があります。これらのファイルはオリジナルフォーマットのまま提供されるので、変更してアップロードします。編集機能を使ってファイル名を変更することもできます。これらのファイルに変更を行った場合は、修正点入力ボックスに記入する必要があります。</p>]]>	
+	</section>
+</topic>

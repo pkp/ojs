@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000009.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author's Role Index 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000009" locale="ja_JP" title="著者の役割" toc="editorial/toc/000000" subtoc="editorial/toc/000009" key="editorial.authorsRole">
+	<section>
+		<![CDATA[<p>投稿物の著者は、雑誌のWebサイトにログインして投稿物の処理状況を確認することができます。また、編集プロセスに参加することもできます。著者が複数いる場合、アイテムを投稿した著者に連絡責任者を特定するよう依頼します。編集上の連絡はすべて連絡責任者に送られ、雑誌のWebサイトにアクセスするのも連絡責任者になります。</p>]]>	
+	</section>
+</topic>

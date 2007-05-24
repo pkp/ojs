@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000021.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Reviewer 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000021" locale="ja_JP" title="査読者" toc="journal/toc/000003" key="journal.roles.reviewer">
+	<section>
+		<![CDATA[<p>査読者は、セクションエディタにより選ばれ、投稿物の査読を行います。査読者は、査読結果を雑誌のWebサイトに投稿するよう依頼されます（ただし、査読作業をメールで行う雑誌もあります）。また、編集者や著者が利用できるように添付ファイルをアップロードすることができます。雑誌ポリシーにより、査読者がセクションエディタにより評価される場合もあります。</p>]]>	
+	</section>
+</topic>

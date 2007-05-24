@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000005.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * User Interface - Search and Browse
+  *
+  * $Id$
+  -->
+
+<topic id="user/topic/000005" locale="ja_JP" title="検索とブラウズ" toc="user/toc/000000" key="user.searchAndBrowse">
+	<section>
+		<![CDATA[<p>雑誌のコンテンツは、著者、タイトル、要旨、インデックス語で検索することができます。コンテンツがHTML形式またはPDF形式であればフルテキスト検索をすることもできます。もう一つの方法として、画面の右側にあるブラウズリンクを使うことにより、読者は雑誌のコンテンツを、巻号、著者、タイトルでブラウズすることができます。また、このオープン･ジャーナル･システムで運用している他の雑誌についてもブラウズすることができます。</p>]]>
+	</section>
+</topic>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000003.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Publishing Process - Table of Contents
+  *
+  * $Id$
+  -->
+
+<topic id="publishing/topic/000003" locale="ja_JP" title="目次" toc="publishing/toc/000000" key="publishing.tableOfContents">
+	<section>
+		<![CDATA[<p>投稿物が出版スケジュールに載ると、その巻号の目次の該当のセクションの下に表示されるようになります。投稿物のないセクションは、目次には表示されません。編集者は、セクションの表示順、および、セクション内の投稿物の表示順を変更することができます。</p>]]>	
+	</section>
+</topic>

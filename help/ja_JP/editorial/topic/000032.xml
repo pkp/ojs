@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000032.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author's Role Index - Submissions
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000032" locale="ja_JP" title="投稿物" toc="editorial/toc/000009" key="editorial.authorsRole.submissions">
+	<section>
+		<![CDATA[<p>雑誌にログインし、ユーザのホームページから著者の役割を選択する（査読者など、著者は別の役割を持っているばあいもあるからです）と、投稿物キューが表示されます。このページには、現在編集プロセスにある投稿物がリストされています。著者は、過去にこの雑誌に投稿した投稿物にアクセスすることもできます。</p>]]>	
+	</section>
+</topic>

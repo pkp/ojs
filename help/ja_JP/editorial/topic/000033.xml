@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000033.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author's Role Review Index - Peer Review
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000033" locale="ja_JP" title="ピアレビュー" toc="editorial/toc/000010" key="editorial.authorsRole.review.peerReview">
+	<section>
+		<![CDATA[<p>このページにはいくつかの日付が記録されています。例えば、編集者が査読依頼を行った日付、査読が開始された日付、査読者が査読を完了した日付などです。著者は、{help_topic key="user.about" text="この雑誌について"}ページにある査読ポリシーを読むことにより、投稿物がこの雑誌でどのような査読を受けるかについてより詳しく知ることができます。査読者は、著者が参考にすることができる投稿物の注釈版などのファイルをアップロードすることができます（アップロードされたファイルを見るには、ファイル名をクリックします。そして、ファイルを開くか、自分のコンピュータに保存してからファイルを開きます。</p>]]>	
+	</section>
+</topic>

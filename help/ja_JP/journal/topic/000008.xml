@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000008.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Stats & Reports
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000008" locale="ja_JP" title="統計と報告" toc="journal/toc/000001" key="journal.managementPages.statsAndReports">
+	<section>
+		<![CDATA[<p>統計と報告は、雑誌の利用履歴に関する情報を抽出して2つの形態で雑誌管理者に提供します。1つは統計であり、投稿物、編集作業、ユーザに関する一目見ただけでわかる統計データを年毎に提供します。もう一つは報告書の作成であり、雑誌管理者は以下の種類の報告書を任意の日付範囲で作成することができます。<ul>
+			<li><strong>雑誌報告書</strong>: 指定期間に雑誌に投稿された全投稿物に関する報告書</li>
+			<li><strong>編集者報告書</strong>: 編集者により集計された投稿物に関する報告書</li>
+			<li><strong>査読者報告書</strong>: 査読者により集計された投稿物に関する報告書</li>
+			<li><strong>セクション報告書</strong>: セクションにより集計された投稿物に関する報告書</li>
+		</ul>これらの報告書はCSV形式で作成されますので、スプレットシートを使って開いてください。]]>
+	</section>
+</topic>

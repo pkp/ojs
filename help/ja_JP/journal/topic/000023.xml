@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000023.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Reader 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000023" locale="ja_JP" title="読者" toc="journal/toc/000003" key="journal.roles.reader">
+	<section>
+		<![CDATA[<p>読者には、コンテンツへのアクセスを購読制にしている雑誌の購読者と、オープンアクセスジャーナル（出版後、直ちにオープンアクセスとなる雑誌と一定期間経った後に雑誌コンテンツをオープンアクセスにする雑誌のいずれか）に登録した読者がいます。登録した読者には、新しい巻号が出版されるたびに目次を含んだ通知メールが届きます。雑誌に自らを登録する著者には、同時に読者として登録するオプションも提供されます。</p>]]>	
+	</section>
+</topic>

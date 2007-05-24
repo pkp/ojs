@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000007.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Languages 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000007" locale="ja_JP" title="言語" toc="journal/toc/000001" key="journal.managementPages.languages">
+	<section>
+		<![CDATA[<p>このシステムは英語以外の言語の雑誌だけでなく、多言語の雑誌をサポートすることもできます。サイト管理者により設定されたシステムで利用可能な言語が雑誌管理の言語ページにリストされていますので、その中から雑誌サイトで使用する言語を1つ以上選択することができます</p>]]>	
+	</section>
+</topic>

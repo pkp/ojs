@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Journal Management Main 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000000" locale="ja_JP" title="雑誌管理" toc="index/toc/000000" subtoc="journal/toc/000000" key="journal.index">
+	<section>
+		<![CDATA[<p>雑誌管理者は、編集者の意見を聞きながら、雑誌システムの構築・設定、様々な雑誌セクションの設定、その他の管理作業など雑誌管理のあらゆる面を監督します。</p>]]>
+	</section>
+</topic>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000001.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Site Administration - Installation 
+  *
+  * $Id$
+  -->
+
+<topic id="site/topic/000001" locale="ja_JP" title="インストール" toc="site/toc/000000" key="site.installation">
+	<section>
+		<![CDATA[<p>オープン･ジャーナル･システムはオープンソースのアプリケーションです。自由にダウンロードしてほとんどすべてのデスクトップコンピュータやサーバーにインストールすることができます。</p>]]>	
+	</section>
+	
+	<section title="ライセンス">
+		<![CDATA[<p>OJSは、<a href="http://www.gnu.org/copyleft/gpl.html" target="_blank">GNU一般公衆利用許諾契約書</a>の条件で配布されています。OJSコードをオリジナル形態または変更した形態で再配布するためのライセンス条項のコピーは、ダウンロードしたOJSに含まれています。</p>]]>
+	</section>
+	
+	<section title="システム要件">
+		<![CDATA[<p>以下の要件を満たしているサーバ環境を推奨します。</p>
+		<ul>
+			<li><a href="http://www.php.net/" target="_blank">PHP</a> 4.2.x以降</li>
+			<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> 3.23.23以降（4.xを含む）、または、<a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> 7.1以降</li>
+			<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> 1.3.2x以降、または、2.0.4x以降。または、Microsoft IIS 6以降</li>
+			<li>オペレーティングシステム: 上記ソフトウェアをサポートする任意のOS。<a href="http://www.linux.org/" target="_blank">Linux</a>、<a href="http://www.bsd.org/" target="_blank">BSD</a>、<a href="http://www.sun.com/" target="_blank">Solaris</a>、<a href="http://www.apple.com/" target="_blank">Mac OS X</a>、<a href="http://www.microsoft.com/">Windows</a>など。</li>
+		</ul>
+		<p>OJSは現在のところ、MySQLとPostgreSQL上でしかテストを行っていません。しかし、<a href="http://php.weblogs.com/adodb/" target="_blank">ADOdb</a>によりサポートされている他のデータベース管理システムでも（完全に、または部分的に）稼動すると思われます。他のDBMSによる稼動報告やパッチを歓迎します。</p>
+		]]>
+	</section>
+	
+	<section title="ダウンロード">
+		<![CDATA[<p>OJSはPublic Knowledgeプロジェクトの<a href="http://pkp.sfu.ca/ojs/" target="_blank">Webサイト</a>からダウンロードすることができます。</p>]]>
+	</section>
+	
+	<section title="インストール">
+		<![CDATA[<p>OJSにはWebベースのインストールスクリプトが用意されています。このスクリプトがシステム管理者をインストールの全プロセスにわたって案内します。別法として、コマンドラインのインストールツールも利用できます。</p>
+		<ol>
+			<li>
+				OJSアーカイブをダウンロードします。
+			</li>
+			<li>
+				Webサーバ上でOJSアーカイブを解凍し、Webドキュメントツリーの適当な場所に置きます。<br />
+				<tt>$ tar -zxf ojs-2.*.tar.gz<br />
+				$ mv ojs-* /var/www/myjournal</tt>
+			</li>
+			<li>
+				以下のファイルおよびディレクトリを（chownあるいはchmodコマンドを使用して）書き込み可能にします。<br />
+				- config.inc.php (optional)<br />
+				- public<br />
+				- cache<br />
+				- cache/t_cache<br />
+				- cache/t_config<br />
+				- cache/t_compile<br />
+				- cache/_db
+			</li>
+			<li>
+				WebブラウザでOJSをインストールしたURL（例えば、http://www.mydomain.com/myjournal/）を開き、画面上の指示に従いインストールを実行します。インストール処理に関する詳細は、docs/READMEファイルを参照してください。
+			</li>
+		</ol>
+		]]>
+	</section>
+</topic>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000015.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Subscription Manager 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000032" locale="ja_JP" title="購読管理者" toc="journal/toc/000003" key="journal.roles.subscriptionManager">
+	<section>
+		<![CDATA[<p>購読管理者は、雑誌の講読者と購読種別を管理します。</p>]]>
+	</section>
+</topic>

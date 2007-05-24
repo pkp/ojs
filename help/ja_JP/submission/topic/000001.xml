@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000001.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author Submission Process - Author Guidelines 
+  *
+  * $Id$
+  -->
+
+<topic id="submission/topic/000001" locale="ja_JP" title="執筆要項" toc="submission/toc/000000" key="submission.authorGuidelines">
+	<section>
+		<![CDATA[<p>雑誌は、採用している参考文献の記述形式やその他のフォーマット規格などを記載した執筆要項（著者ガイドライン）を「この雑誌について」ページで提供します。この執筆要項の例でカバーされていない点については、著者は、この雑誌で発表されている論文をブラウズすることにより、この雑誌がその他の資料をどのように扱っているかを調べたいと思うでしょう。</p>]]>	
+	</section>
+</topic>

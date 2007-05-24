@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000023.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Section Editor's Role Index - Archives
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000023" locale="ja_JP" title="アーカイブ" toc="editorial/toc/000005" key="editorial.sectionEditorsRole.submissions.archives">
+	<section>
+		<![CDATA[<p>このキューにある投稿物は、編集プロセスを経て、リジェクトされたか出版されたかのいずれかです。このキューを使って、編集者と担当のセクションエディタは投稿物の編集履歴のすべて（概要、投稿物、査読、編集、履歴）にアクセスすることができます。</p>]]>	
+	</section>
+</topic>

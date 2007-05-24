@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000008.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Reviewer's Role Index 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000008" locale="ja_JP" title="査読者の役割" toc="editorial/toc/000000" subtoc="editorial/toc/000008" key="editorial.reviewersRole">
+	<section>
+		<![CDATA[<p>査読者は、投稿物の査読を行うようメールで依頼されます。このメールには、投稿物のタイトルと要旨の他に、雑誌のURLと査読者が雑誌にログインするためのユーザ名とパスワードが記載されています。投稿物を査読依頼メールに添付して査読者に送る査読オプションを採用する雑誌もあります。この場合、査読者は以後の応答をメールで行います。以下で説明するのは査読を行う（そして、処理の完全な記録を保証する）基本的な方法で、査読者は雑誌のWebサイトで査読作業を行います。</p>]]>	
+	</section>
+</topic>

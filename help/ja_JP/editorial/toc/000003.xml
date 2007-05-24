@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../toc.dtd">
+
+<!--
+  * 000003.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Editorial Process - Editor's Role - Submission Summary
+  *
+  * $Id$
+  -->
+
+<toc id="editorial/toc/000003" locale="ja_JP" title="投稿物概要" parent_topic="editorial/topic/000003">
+	<topic id="editorial/topic/000019" title="投稿物の管理" />
+	<topic id="editorial/topic/000020" title="投稿物のメタデータ" />
+
+	<breadcrumb url="editorial/topic/000000" title="編集プロセス" />
+	<breadcrumb url="editorial/topic/000001" title="編集者の役割" />
+	<breadcrumb url="editorial/topic/000003" title="投稿物概要" />
+</toc>

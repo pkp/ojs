@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000033.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Merge Users
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000033" locale="ja_JP" title="ユーザのマージ" toc="journal/toc/000002" key="journal.managementPages.mergeUsers">
+	<section>
+		<![CDATA[<p>雑誌管理のユーザ画面から利用することができるユーザのマージ機能により、雑誌管理者は、2つのユーザアカウントを1つのアカウントにマージすることができます。マージされるアカウントの任務や投稿物、その他数多くの記録はマージするアカウントに移行され、マージされるアカウントを効率的に削除します。</p>
+		<p>次のアイテムが移行されます。
+			<ul>
+				<li>論文の所有権</li>
+				<li>論文に対するパブリックコメント</li>
+				<li>論文注記</li>
+				<li>編集者の任務と判断</li>
+				<li>査読者の任務</li>
+				<li>レイアウトエディタの任務</li>
+				<li>校正者の任務</li>
+				<li>論文に関するメールログとイベントログ</li>
+				<li>査読者のアクセスキー</li>
+			</ul>
+		次のアイテムは移行<strong>されません</strong>。
+			<ul>
+				<li>セッション</li>
+				<li>購読</li>
+				<li>通知状況（すなわち、ユーザが雑誌ニュースに関する通知を受けるよう登録したか否か）</li>
+				<li>編集委員会委員資格</li>
+				<li>セクションに関するセクションエディタの身分</li>
+				<li>役割</li>
+				<li>ユーザプロフィール情報（姓、名など）</li>
+			</ul>
+		</p>
+		<p>この機能の使用には注意が必要です。ユーザの記録を別のユーザに移行させる危険があり、元に戻すことができないからです。</p>]]>
+	</section>
+</topic>

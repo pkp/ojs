@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000022.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Author 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000022" locale="ja_JP" title="著者" toc="journal/toc/000003" key="journal.roles.author">
+	<section>
+		<![CDATA[<p>著者は、雑誌のWebサイトで登録することにより、アイテムを直接、雑誌に投稿することができます。著者はアイテムのアップロードと共にアイテムに関するメタデータやインデックスの入力を求められます（メタデータは研究オンラインやこの雑誌の検索能力を高めます）。著者はまた、データセットや研究装置、ソーステキストなどの補足ファイルをアイテムに添付することができます。これにより、アイテムの内容を豊かにすると同時に、研究や学問をよりオープンで確実なものにすることに貢献できます。著者は、出版が受理された投稿物について原稿整理や校正に参加することができ、 また、雑誌のWebサイトにログインすることにより投稿物に対する編集処理の進捗状況を知ることもできます。</p>]]>	
+	</section>
+</topic>

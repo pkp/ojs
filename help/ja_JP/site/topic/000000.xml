@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Site Administration Main 
+  *
+  * $Id$
+  -->
+
+<topic id="site/topic/000000" locale="ja_JP" title="サイト管理" toc="index/toc/000000" subtoc="site/toc/000000" key="site.index">
+	<section>
+		<![CDATA[<p>この雑誌管理・出版システムは、ローカルのWebサーバにインストールして管理するよう設計されています。OJSのインストールが終了したら、サイト管理者は必要なだけの雑誌サイトを作成し、作成した雑誌サイトの管理を監督することができます。</p>]]>	
+	</section>
+</topic>

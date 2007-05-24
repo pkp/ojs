@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000030.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Reviewer's Role Index - Submissions 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000030" locale="ja_JP" title="投稿物" toc="editorial/toc/000008" key="editorial.reviewersRole.submissions">
+	<section>
+		<![CDATA[<p>雑誌にログインすると、査読者のユーザホームページとなります。査読者の役割をクリックする（著者など査読者には別の役割があるかもしれませんので）と、投稿物のページになります。このページには、査読者が査読を依頼された投稿物、または、現在査読中の投稿物がリストされています。投稿物キューは、査読が何ラウンド目であるかも示しています。セクションエディタが「査読のやり直し」を必要と判断して、第2ラウンドの査読に入っている投稿物もあるからです。このページからは、査読者が過去にこの雑誌で査読を行った投稿物にもアクセスすることができます。</p>]]>
+	</section>
+</topic>

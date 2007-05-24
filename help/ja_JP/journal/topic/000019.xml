@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000019.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Copyeditor 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000019" locale="ja_JP" title="コピーエディタ" toc="journal/toc/000003" key="journal.roles.copyeditor">
+	<section>
+		<![CDATA[<p>コピーエディタは、投稿物を編集してその文法やわかりやすさを改善し、著者と共に、必要なものがすべて所定の場所にあり、雑誌が定める引用書式やテキストスタイルに完全に準拠していることを確認し、レイアウトエディタが雑誌の出版フォーマットに合わせたゲラを作成するための元となる、編集済みの完成原稿を作成します。編集者やセクション編集がこの役割を兼務する雑誌もあります。</p>]]>	
+	</section>
+</topic>

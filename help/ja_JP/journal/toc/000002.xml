@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../toc.dtd">
+
+<!--
+  * 000002.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Journal Management - Users. 
+  *
+  * $Id$
+  -->
+
+<toc id="journal/toc/000002" locale="ja_JP" title="ユーザ" parent_topic="journal/topic/000002">
+	<topic id="journal/topic/000011" title="全ユーザ" />
+	<topic id="journal/topic/000012" title="新規ユーザ作成" />
+	<topic id="journal/topic/000033" title="ユーザのマージ" />
+
+	<breadcrumb url="journal/topic/000000" title="雑誌管理" />
+	<breadcrumb url="journal/topic/000002" title="ユーザ" />
+</toc>

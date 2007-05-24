@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000004.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Setup 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000004" locale="ja_JP" title="雑誌設定" toc="journal/toc/000001" key="journal.managementPages.setup">
+	<section>
+		<![CDATA[<p>システムがWebサーバにインストールされたら、雑誌管理者は、設定のための5ステップに従い、テンプレートに値を入れたり、雑誌管理の設定を行ったりして、雑誌を構築します。設定は一度にすべて行う必要はありません。テンプレートに入力・保存してから、雑誌管理者は設定画面に戻って作業を完了することができます。また、いつでも変更をすることができます。</p><p>雑誌設定は、雑誌管理ページ上で雑誌管理者が利用することができます。各テンプレートには独自の説明文が組み込まれています。雑誌のWebサイトを構築する際には、特に次の項目を決定し文書を用意する必要があります。なお、これは事前に編集者と相談して用意することもできますし、後で追加することもできます。</p><ul><li>雑誌の連絡責任者</li><li>技術支援担当者</li><li>雑誌の対象と適用範囲</li><li>雑誌セクションとポリシー</li><li>執筆要項</li><li>著者向けの投稿要件</li><li>インデックス化する要素と適切な例</li><li>ピアレビューポリシー</li><li>査読者の手引き</li><li>著作権ポリシー</li><li>オープンアクセスポリシー</li><li>編集委員会・査読委員会</li><li>購読ポリシー</li><li>レイアウトエディタ、コピーエディタ、校正者の使用</li></ul>]]>
+	</section>
+</topic>

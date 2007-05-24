@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000042.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Proofreader's Role - Submissions
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000042" locale="ja_JP" title="投稿物" toc="editorial/toc/000014" key="editorial.proofreadersRole.submissions">
+	<section>
+		<![CDATA[<p>ユーザホームページから校正者リンクをクリックすることにより、校正者としてログインすると、投稿物キュー画面になります。この画面には、校正を依頼されている投稿物がリストされています。この画面からは過去に作業を行った投稿物にもアクセスすることができます。投稿物のタイトルをクリックすると、その投稿物の校正画面になります。</p>]]>	
+	</section>
+</topic>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="ja_JP" full_name="日本語">
+	<message key="plugins.generic.counter.description"><![CDATA[COUNTERプラグインは、サイトの運用状況を記録し、<a href="http://www.projectcounter.org/about.html" target="_new">COUNTER</a>準拠の報告書を作成します。]]></message>
+	<message key="plugins.generic.counter">COUNTER統計</message>
+
+	<message key="plugins.generic.counter.clearLog">ログのクリア</message>
+	<message key="plugins.generic.counter.confirmClear">ログをクリアしてもよいですか。この処理は取り消しができません。</message>
+	<message key="plugins.generic.counter.browseLog">ログのブラウズ</message>
+	<message key="plugins.generic.counter.browseLog.logBrowser">ログブラウザ</message>
+
+	<message key="plugins.generic.counter.entry.timestamp">タイムスタンプ</message>
+	<message key="plugins.generic.counter.entry.site">サイト</message>
+	<message key="plugins.generic.counter.entry.journal">雑誌</message>
+	<message key="plugins.generic.counter.entry.user">ユーザ</message>
+	<message key="plugins.generic.counter.sessionNumber">セッション #{$sessionNumber}</message>
+	<message key="plugins.generic.counter.entry.type">種別</message>
+	<message key="plugins.generic.counter.entry.type.article">論文</message>
+	<message key="plugins.generic.counter.entry.type.search">検索</message>
+	<message key="plugins.generic.counter.entry.value">値</message>
+
+	<message key="plugins.generic.counter.1a.title">雑誌報告書 1 (R2): 月・雑誌毎の雑誌フルテキストへのリクエスト</message>
+	<message key="plugins.generic.counter.1a.title1">雑誌報告書 1 (R2)</message>
+	<message key="plugins.generic.counter.1a.title2">月・雑誌毎の成功した雑誌フルテキストへのリクエスト数（{$year}年）</message>
+	<message key="plugins.generic.counter.1a.dateRun">処理日:</message>
+	<message key="plugins.generic.counter.1a.publisher">出版者</message>
+	<message key="plugins.generic.counter.1a.platform">プラットフォーム</message>
+	<message key="plugins.generic.counter.1a.printIssn">印刷版ISSN</message>
+	<message key="plugins.generic.counter.1a.onlineIssn">電子版ISSN</message>
+	<message key="plugins.generic.counter.1a.ytdTotal">YTD合計</message>
+	<message key="plugins.generic.counter.1a.ytdHtml">YTD HTML</message>
+	<message key="plugins.generic.counter.1a.ytdPdf">YTD PDF</message>
+	<message key="plugins.generic.counter.1a.totalForAllJournals">全雑誌の合計</message>
+</locale>

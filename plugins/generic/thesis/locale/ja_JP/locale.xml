@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Thesis abstracts plugin localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="ja_JP" full_name="日本語">
+	<message key="plugins.generic.thesis.displayName">学位論文要旨</message>
+	<message key="plugins.generic.thesis.description">請求により学位論文要旨を出版する。</message>
+
+	<!-- Thesis Abstract Management -->
+	<message key="plugins.generic.thesis.manager.settings">設定</message>
+	<message key="plugins.generic.thesis.manager.theses">学位論文要旨</message>
+	<message key="plugins.generic.thesis.manager.status">状態</message>
+	<message key="plugins.generic.thesis.manager.status.inactive">非アクティブ</message>
+	<message key="plugins.generic.thesis.manager.status.active">アクティブ</message>
+	<message key="plugins.generic.thesis.manager.degree">学位</message>
+	<message key="plugins.generic.thesis.manager.degree.masters">修士</message>
+	<message key="plugins.generic.thesis.manager.degree.doctorate">博士</message>
+	<message key="plugins.generic.thesis.manager.dateApproved">承認日</message>
+	<message key="plugins.generic.thesis.manager.studentName">学生氏名</message>
+	<message key="plugins.generic.thesis.manager.title">学位名</message>
+	<message key="plugins.generic.thesis.manager.confirmDelete">この学位論文要旨を完全に削除してもよいですか。</message>
+	<message key="plugins.generic.thesis.manager.noneCreated">学位論文要旨が作成されていません。</message>
+	<message key="plugins.generic.thesis.manager.create">学位論文要旨の作成</message>
+	<message key="plugins.generic.thesis.manager.createTitle">作成</message>
+	<message key="plugins.generic.thesis.manager.edit">学位論文要旨の編集</message>
+	<message key="plugins.generic.thesis.manager.editTitle">編集</message>
+	<message key="plugins.generic.thesis.manager.form.status">状態</message>
+	<message key="plugins.generic.thesis.manager.form.statusRequired">学位論文要旨の状態は必須です。</message>
+	<message key="plugins.generic.thesis.manager.form.statusValid">正式な状態を選択してください。</message>
+	<message key="plugins.generic.thesis.manager.form.degree">学位</message>
+	<message key="plugins.generic.thesis.manager.form.degreeRequired">学位は必須です。</message>
+	<message key="plugins.generic.thesis.manager.form.degreeValid">正式な学位を選択してください。</message>
+	<message key="plugins.generic.thesis.manager.form.department">部局</message>
+	<message key="plugins.generic.thesis.manager.form.departmentRequired">部局は必須です。</message>
+	<message key="plugins.generic.thesis.manager.form.university">大学</message>
+	<message key="plugins.generic.thesis.manager.form.universityRequired">大学は必須です。</message>
+	<message key="plugins.generic.thesis.manager.form.dateApproved">承認日</message>
+	<message key="plugins.generic.thesis.manager.form.dateApprovedRequired">承認日は必須です。</message>
+	<message key="plugins.generic.thesis.manager.form.dateApprovedValid">正式な承認日を選択してください。</message>
+	<message key="plugins.generic.thesis.manager.form.title">学位名</message>
+	<message key="plugins.generic.thesis.manager.form.titleRequired">学位名は必須です。</message>
+	<message key="plugins.generic.thesis.manager.form.abstract">要旨</message>
+	<message key="plugins.generic.thesis.manager.form.abstractRequired">学位論文要旨は必須です。</message>
+	<message key="plugins.generic.thesis.manager.form.abstractInstructions"><![CDATA[段落を分ける場合は、空文を挿入してください。テキストを修飾する場合は、&lt;b&gt;太字タグ&lt;/b&gt;、 &lt;i&gt;イタリック体タグ&lt;/i&gt;、&lt;u&gt;下線タグ&lt;/u&gt;の間に置いてください（例えば、この &lt;i&gt;単語&lt;/i&gt; はイタリック体になります）。]]></message>
+	<message key="plugins.generic.thesis.manager.form.url">URL</message>
+	<message key="plugins.generic.thesis.manager.form.urlInstructions">学位論文がオンラインで出版されている場合は、先頭に、http://やftp://などを付加してください（たとえば、http://www.sfu.ca/path/to/thesis.pdf）。</message>
+	<message key="plugins.generic.thesis.manager.form.studentFirstName">学生の名</message>
+	<message key="plugins.generic.thesis.manager.form.studentFirstNameRequired">学生の名は必須です。</message>
+	<message key="plugins.generic.thesis.manager.form.studentLastName">学生の姓</message>
+	<message key="plugins.generic.thesis.manager.form.studentLastNameRequired">学生の姓は必須です。</message>
+	<message key="plugins.generic.thesis.manager.form.studentMiddleName">学生のミドルネーム</message>
+	<message key="plugins.generic.thesis.manager.form.studentEmail">学生のメールアドレス</message>
+	<message key="plugins.generic.thesis.manager.form.studentEmailValid">学生の有効なメールアドレスは必須です。</message>
+	<message key="plugins.generic.thesis.manager.form.supervisorFirstName">指導教官の名</message>
+	<message key="plugins.generic.thesis.manager.form.supervisorFirstNameRequired">指導教官の名は必須です。</message>
+	<message key="plugins.generic.thesis.manager.form.supervisorLastName">指導教官の姓</message>
+	<message key="plugins.generic.thesis.manager.form.supervisorLastNameRequired">指導教官の姓は必須です。</message>
+	<message key="plugins.generic.thesis.manager.form.supervisorMiddleName">指導教官のミドルネーム</message>
+	<message key="plugins.generic.thesis.manager.form.supervisorEmail">指導教官のメールアドレス</message>
+	<message key="plugins.generic.thesis.manager.form.supervisorEmailValid">指導教官の有効なメールアドレスは必須です。</message>
+	<message key="plugins.generic.thesis.manager.form.saveAndCreateAnother">保存して新規作成</message>
+
+	<!-- Thesis Abstract Settings Management -->
+	<message key="plugins.generic.thesis.settings.description"><![CDATA[<p>このプラグインは、学生がオンライン投稿フォームを使って学位論文の要旨を雑誌に投稿できるようにします。</p><p>投稿されると、論文の指導教官には要旨の投稿があった旨の通知メールが自動的に送付され、投稿された情報が正確であるか否かを確認して、下に示す学位論文要旨担当者（これは雑誌管理者である必要があります）にメールで報告するよう依頼されます。この確認メールを受け取ると、学位論文要旨担当者は該当するレコードを編集して、状態を「非アクティブ」から「アクティブ」に変えることにより、学位論文要旨の投稿をアクティブにすることができます。すると、雑誌読者は学位論文要旨を利用できるようになります。]]></message>
+	<message key="plugins.generic.thesis.settings.thesisContact">学位論文要旨担当者</message>
+	<message key="plugins.generic.thesis.settings.thesisIntroduction">導入部記述</message>
+	<message key="plugins.generic.thesis.settings.thesisIntroductionDescription">学位論文要旨の先頭に見られる導入部記述。</message>
+	<message key="plugins.generic.thesis.settings.thesisNameRequired">学位論文要旨担当者名が指定されている必要があります。</message>
+	<message key="plugins.generic.thesis.settings.thesisEmailRequired">学位論文要旨担当者のメールアドレスが指定されている必要があります。</message>
+
+	<!-- Thesis Abstracts -->
+	<message key="plugins.generic.thesis.theses">学位論文要旨</message>
+	<message key="plugins.generic.thesis.headerLink"><![CDATA[学位論文要旨]]></message>
+	<message key="plugins.generic.thesis.submit">学位論文要旨の投稿</message>
+	<message key="plugins.generic.thesis.submitLink">学位論文要旨の投稿</message>
+	<message key="plugins.generic.thesis.submitButton">投稿</message>
+	<message key="plugins.generic.thesis.view">要旨</message>
+	<message key="plugins.generic.thesis.viewTitle">要旨</message>
+	<message key="plugins.generic.thesis.noneExist">学位論文要旨が出版されていません。</message>
+	<message key="plugins.generic.thesis.abstract">要旨</message>
+	<message key="plugins.generic.thesis.studentFullName">{$lastName}, {$firstName} {$middleName}</message>
+	<message key="plugins.generic.thesis.form.introduction">以下のフォームで投稿を行うと、論文の指導教官にメールが送付され、投稿された情報が正確か否かを確認するよう依頼されます。この確認が雑誌に届くと、学位論文要旨はオンラインで公開されます。</message>
+	<message key="plugins.generic.thesis.form.status">状態</message>
+	<message key="plugins.generic.thesis.form.statusValid">正式な状態を選択してください。</message>
+	<message key="plugins.generic.thesis.form.degree">学位</message>
+	<message key="plugins.generic.thesis.form.degreeRequired">学位は必須です。</message>
+	<message key="plugins.generic.thesis.form.degreeValid">正式な学位を選択してください。</message>
+	<message key="plugins.generic.thesis.form.department">部局</message>
+	<message key="plugins.generic.thesis.form.departmentRequired">部局は必須です。</message>
+	<message key="plugins.generic.thesis.form.university">大学</message>
+	<message key="plugins.generic.thesis.form.universityRequired">大学は必須です。</message>
+	<message key="plugins.generic.thesis.form.dateApproved">承認日</message>
+	<message key="plugins.generic.thesis.form.dateApprovedRequired">承認日は必須です。</message>
+	<message key="plugins.generic.thesis.form.dateApprovedValid">正式な承認日を選択してください。</message>
+	<message key="plugins.generic.thesis.form.title">学位名</message>
+	<message key="plugins.generic.thesis.form.titleRequired">学位名は必須です。</message>
+	<message key="plugins.generic.thesis.form.abstract">要旨</message>
+	<message key="plugins.generic.thesis.form.abstractRequired">学位論文要旨は必須です。</message>
+	<message key="plugins.generic.thesis.form.abstractInstructions"><![CDATA[段落を分ける場合は、空文を挿入してください。テキストを修飾する場合は、&lt;b&gt;太字タグ&lt;/b&gt;、 &lt;i&gt;イタリック体タグ&lt;/i&gt;、&lt;u&gt;下線タグ&lt;/u&gt;の間に置いてください（例えば、この &lt;i&gt;単語&lt;/i&gt; はイタリック体になります）。]]></message>
+	<message key="plugins.generic.thesis.form.url">URL</message>
+	<message key="plugins.generic.thesis.form.urlInstructions">学位論文がオンラインで出版されている場合は、先頭に、http://やftp://などを付加してください（たとえば、http://www.sfu.ca/path/to/thesis.pdf）。</message>
+	<message key="plugins.generic.thesis.form.studentFirstName">学生の名</message>
+	<message key="plugins.generic.thesis.form.studentFirstNameRequired">学生の名は必須です。</message>
+	<message key="plugins.generic.thesis.form.studentLastName">学生の姓</message>
+	<message key="plugins.generic.thesis.form.studentLastNameRequired">学生の姓は必須です。</message>
+	<message key="plugins.generic.thesis.form.studentMiddleName">学生のミドルネーム</message>
+	<message key="plugins.generic.thesis.form.studentEmail">学生のメールアドレス</message>
+	<message key="plugins.generic.thesis.form.studentEmailValid">学生の有効なメールアドレスは必須です。</message>
+	<message key="plugins.generic.thesis.form.supervisorFirstName">指導教官の名</message>
+	<message key="plugins.generic.thesis.form.supervisorFirstNameRequired">指導教官の名は必須です。</message>
+	<message key="plugins.generic.thesis.form.supervisorLastName">指導教官の姓</message>
+	<message key="plugins.generic.thesis.form.supervisorLastNameRequired">指導教官の姓は必須です。</message>
+	<message key="plugins.generic.thesis.form.supervisorMiddleName">指導教官のミドルネーム</message>
+	<message key="plugins.generic.thesis.form.supervisorEmail">指導教官のメールアドレス</message>
+	<message key="plugins.generic.thesis.form.supervisorEmailValid">指導教官の有効なメールアドレスは必須です。</message>
+	<message key="plugins.generic.thesis.form.saveAndCreateAnother">保存して新規作成</message>
+
+</locale>

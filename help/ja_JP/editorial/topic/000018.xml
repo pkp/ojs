@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000018.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Editor's Role Submissions - Archives 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000018" locale="ja_JP" title="アーカイブ" toc="editorial/toc/000002" key="editorial.editorsRole.submissions.archives">
+	<section>
+		<![CDATA[
+		<p>このキューにある投稿物は、編集プロセスを経て、リジェクトされた、出版スケジュールに入れられている、出版済みである、のいずれかです。このキューを使って、編集者と担当のセクションエディタは投稿物の編集履歴のすべて（概要、投稿物、査読、編集、履歴）にアクセスすることができます。</p>
+		<p><i>アーカイブされたアイテムをアクティブリストに戻す方法:</i> 編集者は編集者のホームページからアーカイブページに行き、該当する投稿物を見つけます。投稿物のタイトルをクリックすると、投稿物の概要、査読、編集、履歴ページに移動できます。概要ページにある「アクティブリストに戻す」リンクをクリックすると、投稿物はアーカイブされた時の処理状況により、査読中リストまたは編集中リストに移動します。</p>
+		]]>	
+	</section>
+</topic>

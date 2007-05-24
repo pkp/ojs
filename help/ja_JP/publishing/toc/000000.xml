@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../toc.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Publishing Process. 
+  *
+  * $Id$
+  -->
+
+<toc id="publishing/toc/000000" locale="ja_JP" title="出版プロセス" parent_topic="publishing/topic/000000">
+	<topic id="publishing/topic/000001" title="巻号の作成" />
+	<topic id="publishing/topic/000002" title="投稿物の出版スケジュール" />
+	<topic id="publishing/topic/000003" title="目次" />
+	<topic id="publishing/topic/000004" title="出版" />
+	<breadcrumb url="publishing/topic/000000" title="出版プロセス" />
+</toc>

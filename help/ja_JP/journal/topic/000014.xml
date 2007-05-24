@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000014.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Users - Email Users
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000014" locale="ja_JP" title="ユーザへのメール送信" toc="journal/toc/000002" key="journal.users.emailUsers">
+	<section>
+		<![CDATA[<p>雑誌管理者は、全ユーザ、または複数のユーザにまとめてメールを送信することができます。すべての読者には、新しい号が出版されるたびにその号の目次が、継続的な{help_topic key="publishing.index" text="出版"}の場合は投稿物のタイトルと著者が、メールで通知されることに注意してください。また、雑誌は、登録ユーザのプライバシーについていかに留意しているかを記述したプライバシーポリシーを持つべきです。プライバシーポリシーは雑誌設定画面で入力し、「この雑誌について」に表示されます。</p>]]>
+	</section>
+</topic>

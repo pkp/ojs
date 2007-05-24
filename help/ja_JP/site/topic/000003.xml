@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000003.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Site Administration - Administration Functions 
+  *
+  * $Id$
+  -->
+
+<topic id="site/topic/000003" locale="ja_JP" title="管理機能" toc="site/toc/000000" key="site.administrativeFunctions">
+	<section>
+		<![CDATA[<p>サイト管理画面ではいくつかの管理機能を使用することができます。これらの機能は、一般に誤って使用すると思いがけない結果を招く場合がありますので、慎重に使用する必要があります。</p>
+		<p><em>システム情報:</em> サーバー環境とOJSバージョン履歴（過去のバージョンアップを含む）に関する一般的な情報。OJSの設定ファイルを変更するWebベースのインターフェースも提供されています。</p>
+		<p><em>ユーザセッションの破棄:</em> システムに接続しているすべてのアクティブユーザセッションをクリアします。これを実行すると、現在、ログインしているすべてのユーザは再度システムにログインする必要があります。</p>
+		<p><em>データキャッシュのクリア:</em> ロケール情報、ヘルプキャッシュ、検索キャッシュなどすべてのキャッシュデータをクリアします。</p>
+		<p><em>テンプレートキャッシュのクリア:</em> キャッシュされているHTMLテンプレートをすべてクリアします。この機能は、カスタマイズを行った後にテンプレートを強制的にリロードする際に役立つでしょう。</p>]]>
+	</section>
+</topic>

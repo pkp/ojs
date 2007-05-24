@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000015.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Editor's Role Submissions - Unassigned 
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000015" locale="ja_JP" title="未処理" toc="editorial/toc/000002" key="editorial.editorsRole.submissions.unassigned">
+	<section>
+		<![CDATA[<p>雑誌に投稿された投稿物は、編集者の未処理キューに入れられます。このリストにある投稿物をセクションエディタに割り当てるために、編集者は投稿物のタイトルをクリックします。すると、編集者は該当する投稿物ページに移動し、そこでセクションエディタを割り当てます。投稿物にセクションエディタが割り当てられると、投稿物は未処理キューから査読中キューに移動します。</p>]]>	
+	</section>
+</topic>

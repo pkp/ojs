@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000012.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Users - Create New User 
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000012" locale="ja_JP" title="新規ユーザ作成" toc="journal/toc/000002" key="journal.users.createNewUser">
+	<section>
+		<![CDATA[<p>雑誌管理者は、新規ユーザ作成リンクを使ってユーザを作成し、雑誌管理者から読者にいたる何らかの役割を与えることができます。ユーザは雑誌にログインした際に、雑誌管理者により入力されたユーザ情報を追加・変更することができます。</p><p><i>パスワードの変更:</i> ユーザは雑誌にログインしてパスワードを変更することができます。雑誌管理者はいったん付与したパスワードにアクセスすることはできません。その代わり、ログイン画面で「パスワードを忘れた方はこちらで」リンクをクリックしたユーザには、システムが新しいパスワードを生成してメールで送ります。</p>]]>	
+	</section>
+
+	<section title="既存ユーザの登録">
+		<![CDATA[<p>雑誌管理者は、既存のユーザに1つ以上の新しい役割を与えることができます。</p>]]>
+	</section>
+
+	<section title="登録ユーザの同期">
+		<![CDATA[<p>登録ユーザの同期機能は、指定した雑誌において指定した役割で登録されているすべてのユーザに、この雑誌においても同じ役割を登録します。この機能は、複数の雑誌で共通のユーザグループ（査読者など）を指定することを可能にします。</p>]]>
+	</section>
+</topic>

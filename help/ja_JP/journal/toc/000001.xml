@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../toc.dtd">
+
+<!--
+  * 000001.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Journal Management - Management Pages. 
+  *
+  * $Id$
+  -->
+
+<toc id="journal/toc/000001" locale="ja_JP" title="管理ページ" parent_topic="journal/topic/000001">
+	<topic id="journal/topic/000010" title="ファイルブラウザ" />
+	<topic id="journal/topic/000005" title="雑誌セクション" />
+	<topic id="journal/topic/000007" title="言語" />
+	<topic id="journal/topic/000029" title="編集委員会" />
+	<topic id="journal/topic/000006" title="メールテンプレート" />
+	<topic id="journal/topic/000009" title="読書ツール" />
+	<topic id="journal/topic/000004" title="雑誌設定" />
+	<topic id="journal/topic/000008" title="統計と報告" />
+	<topic id="journal/topic/000025" title="購読" />
+	<topic id="journal/topic/000034" title="お知らせ" />
+	<topic id="journal/topic/000030" title="システムプラグイン" />
+	<topic id="journal/topic/000031" title="データのインポート・エクスポート" />
+
+	<breadcrumb url="journal/topic/000000" title="雑誌管理" />
+	<breadcrumb url="journal/topic/000001" title="管理ページ" />
+</toc>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000041.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Layout Editor's Role - Proofreading
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000041" locale="ja_JP" title="校正" toc="editorial/toc/000013" key="editorial.layoutEditorsRole.proofreading">
+	<section>
+		<![CDATA[<p>著者と校正者は、様々なフォーマットのファイルについてその文字やフォーマット上の誤りを校正します。両者は、校正の手引きに従って必要な修正点を入力ボックスに記録します。校正者が校正が終了したことをレイアウトエディタにメールで伝えると、レイアウト画面の校正者版に戻って、必要な変更を行い、修正前のファイルを削除し、修正版をアップロードします。この作業を終えたら、レイアウトエディタは修正コメント入力ボックスにコメントを追加（変更の説明など）して、完了欄のメールアイコンをクリックします。すると、投稿物が出版スケジュールに入れる準備ができたことをセクションエディタに伝えるメールが作成されます。</p>]]>	
+	</section>
+</topic>

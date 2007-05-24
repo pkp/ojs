@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000022.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Section Editor's Role Index - In Editing
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000022" locale="ja_JP" title="編集中" toc="editorial/toc/000005" key="editorial.sectionEditorsRole.submissions.inEditing">
+	<section>
+		<![CDATA[<p>このキューにある投稿物は、原稿整理、レイアウト、校正の各作業が行われます。セクションエディタまたは編集者が編集中キューにある投稿物のタイトルをクリックすると、投稿物の編集ページに移動します。投稿物が編集段階を過ぎ、特定の号の出版スケジュールに入れられると、投稿物はこのリストから削除され、アーカイブに入ります。</p>]]>	
+	</section>
+</topic>
