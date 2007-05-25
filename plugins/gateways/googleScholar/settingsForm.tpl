@@ -56,7 +56,7 @@
 
 <br/>
 
-<input type="submit" name="save" class="button defaultButton" value="{translate key="common.save"}"/> <input type="button" class="button" onclick="document.location='{plugin_url path="checkData" escape="false"}'" value="{translate key="plugins.gateways.googleScholar.checkData"}"/> <input type="button" class="button" value="{translate key="common.cancel"}" onclick="history.go(-1)"/>
+<input type="submit" name="save" class="button defaultButton" value="{translate key="common.save"}"/> <input type="button" class="button" onclick="document.location='{plugin_url path="checkData" escape="false"}'" value="{translate key="plugins.gateways.googleScholar.checkData"}"/> <input type="button" class="button" value="{translate key="common.cancel"}" onclick="document.location.href='{url|escape:"quotes" page="manager" op="plugins" escape="false"}'"/>
 </form>
 
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
