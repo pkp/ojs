@@ -1225,6 +1225,9 @@ Select a model for handling these aspects of the editorial process. (To designat
 
 	<!-- People Management -->
 	<message key="manager.people.allUsers">All Enrolled Users</message>
+	<message key="manager.people.allEnrolledUsers">Users Enrolled in this Journal</message>
+	<message key="manager.people.allSiteUsers">Enroll a User from this Site in this Journal</message>
+	<message key="manager.people.mustChooseRole">Please select a role at the top of the page before clicking "Enroll User".</message>
 	<message key="manager.people.allJournals">All Journals</message>
 	<message key="manager.people.editUser">Edit User</message>
 	<message key="manager.people.enrollExistingUser">Enroll an Existing User</message>

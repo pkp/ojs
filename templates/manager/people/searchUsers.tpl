@@ -69,6 +69,10 @@ function confirmAndPrompt(userId) {
 	<!--
 	function enrollUser(userId) {ldelim}
 		var fakeUrl = '{url op="enroll" path="ROLE_ID" userId="USER_ID"}';
+		if (document.enroll.roleId.options[document.enroll.roleId.selectedIndex].value == '') {ldelim}
+			alert("{translate|escape:"javascript" key="manager.people.mustChooseRole"}");
+			return false;
+		{rdelim}
 		fakeUrl = fakeUrl.replace('ROLE_ID', document.enroll.roleId.options[document.enroll.roleId.selectedIndex].value);
 		fakeUrl = fakeUrl.replace('USER_ID', userId);
 		location.href = fakeUrl;
@@ -105,7 +109,7 @@ function confirmAndPrompt(userId) {
 		{if $roleId}
 		<a href="{url op="enroll" path=$roleId userId=$user->getUserId()}" class="action">{translate key="manager.people.enroll"}</a>
 		{else}
-		<a href="javascript:enrollUser({$user->getUserId()})" class="action">{translate key="manager.people.enroll"}</a>
+		<a href="#" onclick="enrollUser({$user->getUserId()})" class="action">{translate key="manager.people.enroll"}</a>
 		{/if}
 		{if $thisUser->getUserId() != $user->getUserId()}
 			{if $user->getDisabled()}
