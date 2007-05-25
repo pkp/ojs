@@ -15,7 +15,6 @@
 {assign var=start value="A"|ord}
 {section name="round" loop=$submission->getCurrentRound()}
 {assign var="round" value=$smarty.section.round.index+1}
-{assign var="roundIndex" value=$smarty.section.round.index}
 {assign var=authorFiles value=$submission->getAuthorFileRevisions($round)}
 {assign var=editorFiles value=$submission->getEditorFileRevisions($round)}
 {assign var="viewableFiles" value=$authorViewableFilesByRound[$round]}
@@ -66,8 +65,9 @@
 		</td>
 		<td class="value" width="80%">
 			{foreach from=$viewableFiles item=reviewerFiles key=reviewer}
-				{foreach from=$reviewerFiles item=viewableFile key=key}
-					{assign var=thisReviewer value=$start+$reviewer|chr}
+				{foreach from=$reviewerFiles item=viewableFile key=reviewId}
+					{assign var="roundIndex" value=$reviewIndexesByRound[$round][$reviewId]}
+					{assign var=thisReviewer value=$start+$roundIndex|chr}
 					{translate key="user.role.reviewer"} {$thisReviewer}
 					<a href="{url op="downloadFile" path=$submission->getArticleId()|to_array:$viewableFile->getFileId():$viewableFile->getRevision()}" class="file">{$viewableFile->getFileName()|escape}</a>&nbsp;&nbsp;{$viewableFile->getDateModified()|date_format:$dateFormatShort}<br />
 				{/foreach}

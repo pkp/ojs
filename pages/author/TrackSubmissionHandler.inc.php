@@ -119,12 +119,21 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$lastDecision = count($editorDecisions) >= 1 ? $editorDecisions[count($editorDecisions) - 1] : null;
 		
 		$templateMgr = &TemplateManager::getManager();
+
+		$reviewAssignments =& $authorSubmission->getReviewAssignments();
+		$templateMgr->assign_by_ref('reviewAssignments', $reviewAssignments);
 		$templateMgr->assign_by_ref('submission', $authorSubmission);
-		$templateMgr->assign_by_ref('reviewAssignments', $authorSubmission->getReviewAssignments());
 		$templateMgr->assign_by_ref('reviewFilesByRound', $reviewFilesByRound);
 		$templateMgr->assign_by_ref('reviewFilesByRound', $reviewFilesByRound);
 		$templateMgr->assign_by_ref('authorViewableFilesByRound', $authorViewableFilesByRound);
 		$templateMgr->assign_by_ref('reviewModifiedByRound', $reviewModifiedByRound);
+
+		$reviewIndexesByRound = array();
+		for ($round = 1; $round <= $authorSubmission->getCurrentRound(); $round++) {
+			$reviewIndexesByRound[$round] = $reviewAssignmentDao->getReviewIndexesForRound($articleId, $round);
+		}
+		$templateMgr->assign_by_ref('reviewIndexesByRound', $reviewIndexesByRound);
+
 		$templateMgr->assign('reviewEarliestNotificationByRound', $reviewEarliestNotificationByRound);
 		$templateMgr->assign_by_ref('submissionFile', $authorSubmission->getSubmissionFile());
 		$templateMgr->assign_by_ref('revisedFile', $authorSubmission->getRevisedFile());
