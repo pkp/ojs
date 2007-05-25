@@ -1679,7 +1679,7 @@
 		</field>
 		<field name="membership" type="C2" size="40"/>
 		<field name="domain" type="C2" size="255"/>
-		<field name="ip_range" type="C2" size="255"/>
+		<field name="ip_range" type="X"/>
 		<descr>Journal subscriptions.</descr>
 		<index name="subscription_journal_id">
 			<col>journal_id</col>
