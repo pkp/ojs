@@ -217,7 +217,7 @@ class ReviewAssignmentDAO extends DAO {
 		$files = array();
 		
 		$result = &$this->retrieve(
-			'select f.*, a.reviewer_id as reviewer_id from review_assignments a, article_files f where reviewer_file_id = file_id and viewable=1 and a.article_id=? order by a.round, a.reviewer_id, a.review_id', 
+			'select f.*, a.reviewer_id as reviewer_id, a.review_id from review_assignments a, article_files f where reviewer_file_id = file_id and viewable=1 and a.article_id=? order by a.round, a.reviewer_id, a.review_id', 
 			$articleId
 		);
 		
@@ -237,7 +237,7 @@ class ReviewAssignmentDAO extends DAO {
 				$files[$row['round']][$reviewer_index] = array();
 			}
 			$thisArticleFile = &$this->articleFileDao->_returnArticleFileFromRow($row);
-			$files[$row['round']][$reviewer_index][] = $thisArticleFile;
+			$files[$row['round']][$reviewer_index][$row['review_id']] = $thisArticleFile;
 			$result->MoveNext();
 		}
 
