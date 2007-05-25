@@ -130,7 +130,7 @@ class AccessKeyDAO extends DAO {
 					context = ?,
 					assoc_id = ?,
 					user_id = ?
-				WHERE accessKey_id = ?',
+				WHERE access_key_id = ?',
 				$this->datetimeToDB($accessKey->getExpiryDate())),
 			array(
 				$accessKey->getKeyHash(),
@@ -189,7 +189,7 @@ class AccessKeyDAO extends DAO {
 	 * @return int
 	 */
 	function getInsertAccessKeyId() {
-		return $this->getInsertId('accessKeys', 'accessKey_id');
+		return $this->getInsertId('access_keys', 'access_key_id');
 	}
 	
 }

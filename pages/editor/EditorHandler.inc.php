@@ -235,7 +235,7 @@ class EditorHandler extends SectionEditorHandler {
 
 			$searchType = null;
 			$searchMatch = null;
-			$search = $searchQuery = Request::getUserVar('search');
+			$search = Request::getUserVar('search');
 			$searchInitial = Request::getUserVar('searchInitial');
 			if (isset($search)) {
 				$searchType = Request::getUserVar('searchField');

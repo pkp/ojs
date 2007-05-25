@@ -48,11 +48,26 @@ class TinyMCEPlugin extends GenericPlugin {
 		return $disableTemplates;
 	}
 
+	function getDisablePages() {
+		$disablePages = array(
+			'index',
+			'about',
+			'issue',
+			'help',
+			'information',
+			''
+		);
+		HookRegistry::call('TinyMCEPlugin::getDisablePages', array(&$this, &$disablePages));
+		return $disablePages;
+	}
+
 	function callback($hookName, $args) {
 		$templateManager =& $args[0];
 		$template =& $args[1];
 
-		if (!in_array($template, $this->getDisableTemplates())) {
+		$page = Request::getRequestedPage();
+
+		if (!in_array($page, $this->getDisablePages()) && !in_array($template, $this->getDisableTemplates())) {
 			$baseUrl = $templateManager->get_template_vars('baseUrl');
 			$additionalHeadData = $templateManager->get_template_vars('additionalHeadData');
 

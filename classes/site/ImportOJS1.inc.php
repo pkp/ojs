@@ -1015,6 +1015,7 @@ class ImportOJS1 {
 				}
 				
 				$article->addAuthor($author);
+				unset($author);
 				$authorResult->MoveNext();
 			}
 			$authorResult->Close();
