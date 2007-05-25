@@ -253,7 +253,8 @@ class GoogleScholarPlugin extends GatewayPlugin {
 			XMLCustomWriter::appendChild($articleMetaNode, $canonicalUriNode);
 			foreach ($publishedArticle->getGalleys() as $galley) {
 				$galleyUriNode =& XMLCustomWriter::createElement($document, 'self-uri');
-				XMLCustomWriter::setAttribute($galleyUriNode, 'xlink:href', Request::url(null, 'article', 'viewArticle', array($publishedArticle->getArticleId(), $galley->getGalleyId())));
+				if ($galley->isHTMLGalley()) XMLCustomWriter::setAttribute($galleyUriNode, 'xlink:href', Request::url(null, 'article', 'viewArticle', array($publishedArticle->getArticleId(), $galley->getGalleyId())));
+				else XMLCustomWriter::setAttribute($galleyUriNode, 'xlink:href', Request::url(null, 'article', 'viewFile', array($publishedArticle->getArticleId(), $galley->getGalleyId())));
 				XMLCustomWriter::appendChild($articleMetaNode, $galleyUriNode);
 			}
 			unset($issue);
