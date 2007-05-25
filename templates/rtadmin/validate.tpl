@@ -9,7 +9,7 @@
  * $Id$
  *}
 
-{assign var="pageTitle" value="rt.admin.validateUrls}
+{assign var="pageTitle" value="rt.admin.validateUrls"}
 {include file="common/header.tpl"}
 
 <p>{translate key="rt.admin.validateUrls.description"}</p>
