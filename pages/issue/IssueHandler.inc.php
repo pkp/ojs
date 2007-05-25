@@ -91,7 +91,7 @@ class IssueHandler extends Handler {
 		$templateMgr->assign('issueHeadingTitle', $issueHeadingTitle);
 		$templateMgr->assign('pageHierarchy', array(array(Request::url(null, 'issue', 'current'), 'current.current')));
 		$templateMgr->assign('helpTopicId', 'user.currentAndArchives');
-		$templateMgr->display('issue/current.tpl');
+		$templateMgr->display('issue/viewPage.tpl');
 	}
 
 	/**
@@ -184,7 +184,7 @@ class IssueHandler extends Handler {
 			);
 		}
 
-		$templateMgr->assign('issueCrumbTitle', $issueCrumbTitle);
+		$templateMgr->assign('pageCrumbTitleTranslated', $issueCrumbTitle);
 		$templateMgr->assign('issueHeadingTitle', $issueHeadingTitle);
 	}
 

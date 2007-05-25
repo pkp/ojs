@@ -59,7 +59,7 @@
 
 {display_template template="common/sidebar.tpl" hookname="Templates::Common::Header::sidebar"}
 
-<div id="main" >
+<div id="main">
 <div id="navbar">
 	<ul class="menu">
 		<li><a href="{url page="index"}">{translate key="navigation.home"}</a></li>
@@ -94,5 +94,10 @@
 </div>
 
 <h2>{$pageTitleTranslated}</h2>
+
+{if $pageSubtitle && !$pageSubtitleTranslated}{translate|assign:"pageSubtitleTranslated" key=$pageSubtitle}{/if}
+{if $pageSubtitleTranslated}
+	<h3>{$pageSubtitleTranslated}</h3>
+{/if}
 
 <div id="content">
