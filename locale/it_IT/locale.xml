@@ -631,7 +631,7 @@ Da notare che l'interfaccia OAI pu&#x00F2; essere disabilitata per questo sito t
 	<message key="admin.languages.languageSettings">Impostazioni di lingua</message>
 	<message key="admin.languages.installLanguages">Installa le lingue aggiuntive</message>
 	<message key="admin.languages.primaryLocaleInstructions">Questa sar&#x00E0; la lingua di default per il sito ed le riviste ospitate.</message>
-	<message key="admin.languages.supportedLocalesInstructions">Seleziona tutte le lingue aggiuntive che saranno supportate dal sito. Le lingue scelte potranno essere selezionate da tutti le riviste ospitati tramite un menu presente in tutte le pagine del sito (in ogni caso il layout potr&#x00E0; sempre essere modificato personalizzando le pagine della singola rivista). Se non vengono impostate pi&#x00F9; lingue, il menu di selezione sar&#x00E0; presente e non saranno disponibili le impostazioni estese per le lingue.</message>
+	<message key="admin.languages.supportedLocalesInstructions">Seleziona tutte le lingue aggiuntive che saranno supportate dal sito. Le lingue scelte potranno essere selezionate da tutte le riviste ospitate tramite un menu presente in tutte le pagine del sito (in ogni caso il layout potr&#x00E0; sempre essere modificato personalizzando le pagine della singola rivista). Se non vengono impostate pi&#x00F9; lingue, il menu di selezione sar&#x00E0; presente e non saranno disponibili le impostazioni estese per le lingue.</message>
 	<message key="admin.languages.languageOptions">Opzioni per la lingua</message>
 	<message key="admin.languages.profileLocales">Nella registrazione degli utenti (editor, revisore, copyeditor, etc.), dovranno essere incluse nei profili utente, la relativa lingua madre, a beneficio dei journal editors.</message>
 	<message key="admin.languages.installedLocales">Lingue aggiuntive installate</message>
@@ -1218,7 +1218,7 @@ Fate <a href="http://www.pkp.ubc.ca/harvester/add.php" target="_blank">click qui
 
 	<!-- People Management -->
 	<message key="manager.people.allUsers">Tutti gli utenti</message>
-	<message key="manager.people.allJournals">tutti le riviste</message>
+	<message key="manager.people.allJournals">tutte le riviste</message>
 	<message key="manager.people.editUser">Modifica utente</message>
 	<message key="manager.people.enrollExistingUser">Iscrivi utente esistente</message>
 	<message key="manager.people.createUser">Crea un nuovo utente</message>
@@ -2070,7 +2070,7 @@ Il file pu&#x00F2; essere aperto cliccando sul nome del file. Pu&#x00F2; essere 
 	<message key="search.fullText">Full Text</message>
 	<message key="search.indexTerms">Indice dei termini</message>
 	<message key="search.withinJournal">All'interno</message>
-	<message key="search.allJournals">Tutti le riviste</message>
+	<message key="search.allJournals">Tutte le riviste</message>
 	<message key="search.searchAllCategories">Cerca tutte le categorie per</message>
 	<message key="search.searchCategories">Cerca categorie</message>
 	<message key="search.date">Data</message>
