@@ -29,6 +29,7 @@ class UserManagementForm extends Form {
 	function UserManagementForm($userId = null) {
 		parent::Form('manager/people/userProfileForm.tpl');
 		
+		if (!Validation::isJournalManager()) $userId = null;
 		$this->userId = isset($userId) ? (int) $userId : null;
 		$site = &Request::getSite();
 		$this->profileLocalesEnabled = $site->getProfileLocalesEnabled();
@@ -67,7 +68,7 @@ class UserManagementForm extends Form {
 		} else {
 			$helpTopicId = 'journal.users.createNewUser';
 		}
-		$templateMgr->assign('roleOptions',
+		if (Validation::isJournalManager()) $templateMgr->assign('roleOptions',
 			array(
 				'' => 'manager.people.doNotEnroll',
 				'manager' => 'user.role.manager',
@@ -80,6 +81,12 @@ class UserManagementForm extends Form {
 				'author' => 'user.role.author',
 				'reader' => 'user.role.reader',
 				'subscriptionManager' => 'user.role.subscriptionManager'
+			)
+		);
+		else $templateMgr->assign('roleOptions', // Subscription Manager
+			array(
+				'' => 'manager.people.doNotEnroll',
+				'reader' => 'user.role.reader'
 			)
 		);
 		$templateMgr->assign('profileLocalesEnabled', $this->profileLocalesEnabled);
@@ -257,11 +264,14 @@ class UserManagementForm extends Form {
 			$user->setDateRegistered(Core::getCurrentDate());
 			$userId = $userDao->insertUser($user);
 			
+			$isManager = Validation::isJournalManager();
+
 			if (!empty($this->_data['enrollAs'])) {
 				foreach ($this->getData('enrollAs') as $roleName) {
 					// Enroll new user into an initial role
 					$roleDao = &DAORegistry::getDAO('RoleDAO');
 					$roleId = $roleDao->getRoleIdFromPath($roleName);
+					if (!$isManager && $roleId != ROLE_ID_READER) continue;
 					if ($roleId != null) {
 						$role = &new Role();
 						$role->setJournalId($journal->getJournalId());

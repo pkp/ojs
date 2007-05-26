@@ -428,6 +428,61 @@ class SubscriptionManagerHandler extends Handler {
 	}
 	
 	/**
+	 * Display form to create a user profile.
+	 * @param $args array optional
+	 */
+	function createUser($args = array()) {
+		SubscriptionManagerHandler::validate();
+		SubscriptionManagerHandler::setupTemplate(true);
+
+		$journal = &Request::getJournal();
+
+		$templateMgr = &TemplateManager::getManager();
+
+		import('manager.form.UserManagementForm');
+		
+		$templateMgr->assign('currentUrl', Request::url(null, null, 'createUser'));
+		$userForm = &new UserManagementForm();
+		$userForm->initData();
+		$userForm->display();
+	}
+
+	/**
+	 * Save changes to a user profile.
+	 */
+	function updateUser() {
+		SubscriptionManagerHandler::validate();
+
+		$journal = &Request::getJournal();
+
+		import('manager.form.UserManagementForm');
+
+		$userForm = &new UserManagementForm();
+		$userForm->readInputData();
+		
+		if ($userForm->validate()) {
+			$userForm->execute();
+			
+			if (Request::getUserVar('createAnother')) {
+				// C
+				$templateMgr = &TemplateManager::getManager();
+				$templateMgr->assign('currentUrl', Request::url(null, null, 'index'));
+				$templateMgr->assign('userCreated', true);
+				$userForm = &new UserManagementForm();
+				$userForm->initData();
+				$userForm->display();
+				
+			} else {
+				Request::redirect(null, null, 'selectSubscriber');
+			}
+			
+		} else {
+			SubscriptionManagerHandler::setupTemplate(true);
+			$userForm->display();
+		}
+	}
+	
+	/**
 	 * Setup common template variables.
 	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
 	 */
