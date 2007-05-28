@@ -38,7 +38,8 @@ class JournalSetupStep2Form extends JournalSetupForm {
 				'customAboutItems' => 'object',
 				'enableLockss' => 'bool',
 				'lockssLicense' => 'string',
-				'reviewerDatabaseLinks' => 'object'
+				'reviewerDatabaseLinks' => 'object',
+				'notifyAllAuthorsOnDecision' => 'bool'
 			)
 		);
 		

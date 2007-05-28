@@ -952,6 +952,8 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="manager.setup.emailBounceAddressDisabled"><![CDATA[<strong>Note:</strong> To activate this option, the site administrator must enable the <tt>allow_envelope_sender</tt> option in the OJS configuration file. Additional server configuration may be required to support this functionality (which may not be possible on all servers), as indicated in the OJS documentation.]]></message>
 	<message key="manager.setup.emailSignature">Signature</message>
 	<message key="manager.setup.emailSignatureDescription">The prepared emails that are sent by the system on behalf of the journal will have the following signature added to the end. The body of the prepared emails are available for editing under Journal Management.</message>
+	<message key="manager.setup.editorDecision">Editor Decision</message>
+	<message key="manager.setup.notifyAllAuthorsOnDecision">When using the Notify Author email, include the email addresses of all co-authors for multiple-author submissions, and not just the submitting user.</message>
 	<message key="manager.setup.addItemtoAboutJournal">Add Item to Appear in "About the Journal"</message>
 	<message key="manager.setup.aboutItemContent">Content</message>
 	<message key="manager.setup.addAboutItem">Add About Item</message>

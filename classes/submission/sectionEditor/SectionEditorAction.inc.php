@@ -1786,7 +1786,13 @@ class SectionEditorAction extends Action {
 			if (!Request::getUserVar('continued')) {
 				$authorUser =& $userDao->getUser($sectionEditorSubmission->getUserId());
 				$email->setSubject($sectionEditorSubmission->getArticleTitle());
-				$email->addRecipient($authorUser->getEmail(), $authorUser->getFullName());
+				$authorEmail = $authorUser->getEmail();
+				$email->addRecipient($authorEmail, $authorUser->getFullName());
+				if ($journal->getSetting('notifyAllAuthorsOnDecision')) foreach ($sectionEditorSubmission->getAuthors() as $author) {
+					if ($author->getEmail() != $authorEmail) {
+						$email->addCc ($author->getEmail(), $author->getFullName());
+					}
+				}
 			} else {
 				if (Request::getUserVar('importPeerReviews')) {
 					$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');

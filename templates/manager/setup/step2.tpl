@@ -147,7 +147,14 @@
 <div class="separator"></div>
 
 
-<h3>2.4 {translate key="manager.setup.addItemtoAboutJournal"}</h3>
+<h3>2.4 {translate key="manager.setup.editorDecision"}</h3>
+
+<p><input type="checkbox" name="notifyAllAuthorsOnDecision" id="notifyAllAuthorsOnDecision" value="1"{if $notifyAllAuthorsOnDecision} checked="checked"{/if} /> <label for="notifyAllAuthorsOnDecision">{translate key="manager.setup.notifyAllAuthorsOnDecision"}</label></p>
+
+<div class="separator"></div>
+
+
+<h3>2.5 {translate key="manager.setup.addItemtoAboutJournal"}</h3>
 
 <table width="100%" class="data">
 {foreach name=customAboutItems from=$customAboutItems key=aboutId item=aboutItem}
@@ -181,7 +188,7 @@
 <div class="separator"></div>
 
 
-<h3>2.5 {translate key="manager.setup.journalArchiving"}</h3>
+<h3>2.6 {translate key="manager.setup.journalArchiving"}</h3>
 
 <p>{translate key="manager.setup.lockssDescription"}</p>
 
@@ -202,7 +209,7 @@
 <div class="separator"></div>
 
 
-<h3>2.6 {translate key="manager.setup.reviewerDatabaseLink"}</h3>
+<h3>2.7 {translate key="manager.setup.reviewerDatabaseLink"}</h3>
 
 <p>{translate key="manager.setup.reviewerDatabaseLink.desc"}</p>
 
