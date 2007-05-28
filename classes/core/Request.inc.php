@@ -665,6 +665,7 @@ class Request {
 	}
 
 	function isCacheable() {
+		if (defined('SESSION_DISABLE_INIT')) return false;
 		if (!Config::getVar('general', 'installed')) return false;
 		if (!empty($_POST) || Validation::isLoggedIn()) return false;
 		if (!Config::getVar('cache', 'web_cache')) return false;
