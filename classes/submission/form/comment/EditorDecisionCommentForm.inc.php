@@ -79,7 +79,7 @@ class EditorDecisionCommentForm extends CommentForm {
 		// the opposite of whomever wrote the comment.
 		$recipients = array();
 		
-		if ($this->roleId == ROLE_ID_EDITOR) {
+		if ($this->roleId == ROLE_ID_EDITOR || $this->roleId == ROLE_ID_SECTION_EDITOR) {
 			// Then add author
 			$user = &$userDao->getUser($this->article->getUserId());
 			

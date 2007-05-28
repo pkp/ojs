@@ -179,7 +179,7 @@ class EditCommentForm extends Form {
 	
 		switch ($this->comment->getCommentType()) {
 		case COMMENT_TYPE_PEER_REVIEW:
-			if ($this->roleId == ROLE_ID_EDITOR) {
+			if ($this->roleId == ROLE_ID_EDITOR || $this->roleId == ROLE_ID_SECTION_EDITOR) {
 				// Then add reviewer
 				if ($reviewer != null) {
 					$recipients = array_merge($recipients, array($reviewer->getEmail() => $reviewer->getFullName()));
@@ -188,7 +188,7 @@ class EditCommentForm extends Form {
 			break;
 
 		case COMMENT_TYPE_EDITOR_DECISION:
-			if ($this->roleId == ROLE_ID_EDITOR) {
+			if ($this->roleId == ROLE_ID_EDITOR || $this->roleId == ROLE_ID_SECTION_EDITOR) {
 				// Then add author
 				if (isset($author)) $recipients = array_merge($recipients, array($author->getEmail() => $author->getFullName()));
 			} else {
@@ -198,7 +198,7 @@ class EditCommentForm extends Form {
 			break;
 
 		case COMMENT_TYPE_COPYEDIT:
-			if ($this->roleId == ROLE_ID_EDITOR) {
+			if ($this->roleId == ROLE_ID_EDITOR || $this->roleId == ROLE_ID_SECTION_EDITOR) {
 				// Then add copyeditor and author
 				if ($copyeditor != null) {
 					$recipients = array_merge($recipients, array($copyeditor->getEmail() => $copyeditor->getFullName()));
@@ -222,7 +222,7 @@ class EditCommentForm extends Form {
 			}
 			break;
 		case COMMENT_TYPE_LAYOUT:
-			if ($this->roleId == ROLE_ID_EDITOR) {
+			if ($this->roleId == ROLE_ID_EDITOR || $this->roleId == ROLE_ID_SECTION_EDITOR) {
 				// Then add layout editor
 				
 				// Check to ensure that there is a layout editor assigned to this article.
@@ -235,7 +235,7 @@ class EditCommentForm extends Form {
 			}
 			break;
 		case COMMENT_TYPE_PROOFREAD:
-			if ($this->roleId == ROLE_ID_EDITOR) {
+			if ($this->roleId == ROLE_ID_EDITOR || $this->roleId == ROLE_ID_SECTION_EDITOR) {
 				// Then add layout editor, proofreader and author
 				if ($layoutEditor != null) {
 					$recipients = array_merge($recipients, array($layoutEditor->getEmail() => $layoutEditor->getFullName()));

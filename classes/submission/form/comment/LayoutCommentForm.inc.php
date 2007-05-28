@@ -70,7 +70,7 @@ class LayoutCommentForm extends CommentForm {
 		// the opposite of whomever posted the comment.
 		$recipients = array();
 		
-		if ($this->roleId == ROLE_ID_EDITOR) {
+		if ($this->roleId == ROLE_ID_EDITOR || $this->roleId == ROLE_ID_SECTION_EDITOR) {
 			// Then add layout editor
 			$layoutAssignmentDao = &DAORegistry::getDAO('LayoutAssignmentDAO');
 			$layoutAssignment = &$layoutAssignmentDao->getLayoutAssignmentByArticleId($this->article->getArticleId());
