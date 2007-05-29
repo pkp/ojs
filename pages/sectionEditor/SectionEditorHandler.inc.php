@@ -314,11 +314,6 @@ class SectionEditorHandler extends Handler {
 		SubmissionEditHandler::editorReview();
 	}
 
-	function notifyAuthor($args) {
-		import('pages.sectionEditor.SubmissionEditHandler');
-		SubmissionEditHandler::notifyAuthor($args);
-	}
-
 	function selectCopyeditor($args) {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::selectCopyeditor($args);

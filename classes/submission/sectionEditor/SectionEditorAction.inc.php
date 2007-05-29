@@ -606,45 +606,6 @@ class SectionEditorAction extends Action {
 	}
 
 	/**
-	 * Notifies an author about the editor review.
-	 * @param $sectionEditorSubmission object
-	 * FIXME: Still need to add Reviewer Comments
-	 */
-	function notifyAuthor($sectionEditorSubmission, $send = false) {
-		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
-		$userDao = &DAORegistry::getDAO('UserDAO');
-		
-		$journal = &Request::getJournal();
-		$user = &Request::getUser();
-		
-		import('mail.ArticleMailTemplate');
-		$email = &new ArticleMailTemplate($sectionEditorSubmission, 'EDITOR_REVIEW');
-
-		$author = &$userDao->getUser($sectionEditorSubmission->getUserId());
-		if (!isset($author)) return true;
-
-		if ($send && !$email->hasErrors()) {
-			HookRegistry::call('SectionEditorAction::notifyAuthor', array(&$sectionEditorSubmission, &$author, &$email));
-			$email->setAssoc(ARTICLE_EMAIL_EDITOR_NOTIFY_AUTHOR, ARTICLE_EMAIL_TYPE_EDITOR, $sectionEditorSubmission->getArticleId());
-			$email->send();
-			
-		} else {
-			if (!Request::getUserVar('continued')) {
-				$email->addRecipient($author->getEmail(), $author->getFullName());
-				$paramArray = array(
-					'authorName' => $author->getFullName(),
-					'authorUsername' => $author->getUsername(),
-					'authorPassword' => $author->getPassword(),
-					'editorialContactSignature' => $user->getContactSignature(),
-					'submissionUrl' => Request::url(null, 'author', 'submissionEditing', $sectionEditorSubmission->getArticleId())
-				);
-				$email->assignParams($paramArray);
-			}
-			$email->displayEditForm(Request::url(null, null, 'notifyAuthor'), array('articleId' => $sectionEditorSubmission->getArticleId()));
-		}
-	}
-	 
-	/**
 	 * Sets the reviewer recommendation for a review assignment.
 	 * Also concatenates the reviewer and editor comments from Peer Review and adds them to Editor Review.
 	 * @param $articleId int

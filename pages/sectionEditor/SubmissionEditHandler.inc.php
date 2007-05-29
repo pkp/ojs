@@ -736,18 +736,6 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		Request::redirect(null, null, $redirectTarget, $articleId);
 	}
 	
-	function notifyAuthor($args = array()) {
-		$articleId = Request::getUserVar('articleId');
-		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
-
-		$send = Request::getUserVar('send')?true:false;
-		parent::setupTemplate(true, $articleId, 'editing');
-
-		if (SectionEditorAction::notifyAuthor($submission, $send)) {
-			Request::redirect(null, null, 'submissionReview', $articleId);
-		}
-	}
-	
 	//
 	// Copyedit
 	//
