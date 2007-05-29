@@ -21,5 +21,9 @@
 {translate key="submission.scheduledIn" issueName=$issueName}
 
 {if $issue}
-	<a href="{url page="issue" op="view" path=$issue->getBestIssueId()}" class="action">{translate key="issue.toc"}</a>
+	{if $issue->getPublished()}
+		<a href="{url page="issue" op="view" path=$issue->getBestIssueId()}" class="action">{translate key="issue.toc"}</a>
+	{else}
+		<a href="{url op="issueToc" path=$issue->getIssueId()}" class="action">{translate key="issue.toc"}</a>
+	{/if}
 {/if}

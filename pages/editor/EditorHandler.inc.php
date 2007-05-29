@@ -334,11 +334,16 @@ class EditorHandler extends SectionEditorHandler {
 	 * @param $level int set to 0 if caller is at the same level as this handler in the hierarchy; otherwise the number of levels below this handler
 	 */
 	function setupTemplate($level = EDITOR_SECTION_HOME, $showSidebar = true, $articleId = 0, $parentPage = null) {
-		$templateMgr = &TemplateManager::getManager();
+		// Layout Editors have access to some Issue Mgmt functions. Make sure we give them
+		// the appropriate breadcrumbs and sidebar.
+		$isLayoutEditor = Request::getRequestedPage() == 'layoutEditor';
+
+		$journal =& Request::getJournal();
+		$templateMgr =& TemplateManager::getManager();
 
 		if ($level==EDITOR_SECTION_HOME) $pageHierarchy = array(array(Request::url(null, 'user'), 'navigation.user'));
 		else if ($level==EDITOR_SECTION_SUBMISSIONS) $pageHierarchy = array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, 'editor'), 'user.role.editor'), array(Request::url(null, 'editor', 'submissions'), 'article.submissions'));
-		else if ($level==EDITOR_SECTION_ISSUES) $pageHierarchy = array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, 'editor'), 'user.role.editor'), array(Request::url(null, 'editor', 'issueToc'), 'issue.issues'));
+		else if ($level==EDITOR_SECTION_ISSUES) $pageHierarchy = array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, $isLayoutEditor?'layoutEditor':'editor'), $isLayoutEditor?'user.role.layoutEditor':'user.role.editor'), array(Request::url(null, $isLayoutEditor?'layoutEditor':'editor', 'futureIssues'), 'issue.issues'));
 	
 		import('submission.sectionEditor.SectionEditorAction');
 		$submissionCrumb = SectionEditorAction::submissionBreadcrumb($articleId, $parentPage, 'editor');
@@ -348,11 +353,16 @@ class EditorHandler extends SectionEditorHandler {
 		$templateMgr->assign('pageHierarchy', $pageHierarchy);
 		
 		if ($showSidebar) {
-			$templateMgr->assign('sidebarTemplate', 'editor/navsidebar.tpl');
-
-			$journal = &Request::getJournal();
-			$editorSubmissionDao = &DAORegistry::getDAO('EditorSubmissionDAO');
-			$submissionsCount = &$editorSubmissionDao->getEditorSubmissionsCount($journal->getJournalId());
+			if ($isLayoutEditor) {
+				$templateMgr->assign('sidebarTemplate', 'layoutEditor/navsidebar.tpl');
+				$user = &Request::getUser();
+				$layoutEditorSubmissionDao = &DAORegistry::getDAO('LayoutEditorSubmissionDAO');
+				$submissionsCount = $layoutEditorSubmissionDao->getSubmissionsCount($user->getUserId(), $journal->getJournalId());
+			} else {
+				$templateMgr->assign('sidebarTemplate', 'editor/navsidebar.tpl');
+				$editorSubmissionDao = &DAORegistry::getDAO('EditorSubmissionDAO');
+				$submissionsCount = &$editorSubmissionDao->getEditorSubmissionsCount($journal->getJournalId());
+			}
 			$templateMgr->assign('submissionsCount', $submissionsCount);
 		}
 	}

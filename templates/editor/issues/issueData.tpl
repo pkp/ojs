@@ -13,12 +13,13 @@
 {assign var="pageCrumbTitleTranslated" value=$issue->getIssueIdentification(false,true)}
 {include file="common/header.tpl"}
 
-<ul class="menu">
-	<li><a href="{url op="createIssue"}">{translate key="editor.navigation.createIssue"}</a></li>
-	<li{if $unpublished} class="current"{/if}><a href="{url op="futureIssues"}">{translate key="editor.navigation.futureIssues"}</a></li>
-	<li{if !$unpublished} class="current"{/if}><a href="{url op="backIssues"}">{translate key="editor.navigation.issueArchive"}</a></li>
-</ul>
-
+{if !$isLayoutEditor}{* Layout Editors can also access this page. *}
+	<ul class="menu">
+		<li><a href="{url op="createIssue"}">{translate key="editor.navigation.createIssue"}</a></li>
+		<li{if $unpublished} class="current"{/if}><a href="{url op="futureIssues"}">{translate key="editor.navigation.futureIssues"}</a></li>
+		<li{if !$unpublished} class="current"{/if}><a href="{url op="backIssues"}">{translate key="editor.navigation.issueArchive"}</a></li>
+	</ul>
+{/if}
 <br />
 
 <form action="#">
@@ -129,7 +130,7 @@
 	</tr>
 </table>
 
-<p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" onclick="document.location.href='{url op="issueManagement" path="issueData"|to_array:$issueId escape=false}'" class="button" /></p>
+<p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" onclick="document.location.href='{url op="issueData" path=$issueId escape=false}'" class="button" /></p>
 
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 

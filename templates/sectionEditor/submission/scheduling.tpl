@@ -26,7 +26,11 @@
 	</select>&nbsp;
 	<input type="submit" value="{translate key="common.record"}" class="button defaultButton" />&nbsp;
 	{if $issueId}
-		<a href="{url page="issue" op="view" path=$issueId}" class="action">{translate key="issue.toc"}</a>
+		{if $isEditor}
+			<a href="{url op="issueToc" path=$issueId}" class="action">{translate key="issue.toc"}</a>
+		{else}
+			<a href="{url page="issue" op="view" path=$issueId}" class="action">{translate key="issue.toc"}</a>
+		{/if}
 	{/if}
 </p>
 </form>

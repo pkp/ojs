@@ -208,6 +208,10 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->assign_by_ref('suppFiles', $submission->getSuppFiles());
 		$templateMgr->assign_by_ref('copyeditor', $submission->getCopyeditor());
 
+		$roleDao =& DAORegistry::getDAO('RoleDAO');
+		$user =& Request::getUser();
+		$templateMgr->assign('isEditor', $roleDao->roleExists($journal->getJournalId(), $user->getUserId(), ROLE_ID_EDITOR));
+
 		import('issue.IssueAction');
 		$templateMgr->assign('issueOptions', IssueAction::getIssueOptions());
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');

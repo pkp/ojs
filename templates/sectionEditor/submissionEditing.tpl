@@ -28,14 +28,14 @@
 
 <div class="separator"></div>
 
+{include file="sectionEditor/submission/scheduling.tpl"}
+
+<div class="separator"></div>
+
 {include file="sectionEditor/submission/layout.tpl"}
 
 <div class="separator"></div>
 
 {include file="sectionEditor/submission/proofread.tpl"}
-
-<div class="separator"></div>
-
-{include file="sectionEditor/submission/scheduling.tpl"}
 
 {include file="common/footer.tpl"}

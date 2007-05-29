@@ -16,13 +16,23 @@
 import('submission.layoutEditor.LayoutEditorAction');
 
 class LayoutEditorHandler extends Handler {
-
 	/**
-	 * Display editor index page.
+	 * Display layout editor index page.
 	 */
-	function index($args) {
+	function index() {
 		LayoutEditorHandler::validate();
 		LayoutEditorHandler::setupTemplate();
+
+		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->display('layoutEditor/index.tpl');
+	}
+
+	/**
+	 * Display layout editor submissions page.
+	 */
+	function submissions($args) {
+		LayoutEditorHandler::validate();
+		LayoutEditorHandler::setupTemplate(true);
 
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
@@ -84,9 +94,68 @@ class LayoutEditorHandler extends Handler {
 		$issueAction = &new IssueAction();
 		$templateMgr->register_function('print_issue_id', array($issueAction, 'smartyPrintIssueId'));
 		$templateMgr->assign('helpTopicId', 'editorial.layoutEditorsRole.submissions');
-		$templateMgr->display('layoutEditor/index.tpl');
+		$templateMgr->display('layoutEditor/submissions.tpl');
 	}
 	
+	/**
+	 * Display Future Isshes page.
+	 */
+	function futureIssues() {
+		parent::validate();
+		$journal = &Request::getJournal();
+		$issueDao = &DAORegistry::getDAO('IssueDAO');
+		$rangeInfo = Handler::getRangeInfo('issues');
+		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign_by_ref('issues', $issueDao->getUnpublishedIssues($journal->getJournalId(), $rangeInfo));
+		$templateMgr->assign('helpTopicId', 'publishing.index');
+		$templateMgr->display('layoutEditor/futureIssues.tpl');
+	}
+
+	function issueData($args) {
+		import('pages.editor.EditorHandler');
+		EditorHandler::issueData($args);
+	}
+
+	function issueToc($args) {
+		import('pages.editor.EditorHandler');
+		EditorHandler::issueToc($args);
+	}
+
+	function resetSectionOrder($args) {
+		import('pages.editor.EditorHandler');
+		EditorHandler::resetSectionOrder($args);
+	}
+
+	function updateIssueToc($args) {
+		import('pages.editor.EditorHandler');
+		EditorHandler::updateIssueToc($args);
+	}
+
+	function moveSectionToc($args) {
+		import('pages.editor.EditorHandler');
+		EditorHandler::moveSectionToc($args);
+	}
+
+	function moveArticleToc($args) {
+		import('pages.editor.EditorHandler');
+		EditorHandler::moveArticleToc($args);
+	}
+
+	function editIssue($args) {
+		import('pages.editor.EditorHandler');
+		EditorHandler::editIssue($args);
+	}
+
+	function removeCoverPage($args) {
+		import('pages.editor.EditorHandler');
+		EditorHandler::removeCoverPage($args);
+	}
+
+	function removeStyleFile($args) {
+		import('pages.editor.EditorHandler');
+		EditorHandler::removeStyleFile($args);
+	}
+
 	/**
 	 * Validate that user is a layout editor in the selected journal.
 	 * Redirects to user index page if not properly authenticated.
@@ -106,7 +175,7 @@ class LayoutEditorHandler extends Handler {
 	function setupTemplate($subclass = false, $articleId = 0, $parentPage = null, $showSidebar = true) {
 		$templateMgr = &TemplateManager::getManager();
 		$pageHierarchy = $subclass ? array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, 'layoutEditor'), 'user.role.layoutEditor'))
-				: array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, 'layoutEditor'), 'user.role.layoutEditor'));
+				: array(array(Request::url(null, 'user'), 'navigation.user'));
 
 		import('submission.sectionEditor.SectionEditorAction');
 		$submissionCrumb = SectionEditorAction::submissionBreadcrumb($articleId, $parentPage, 'layoutEditor');

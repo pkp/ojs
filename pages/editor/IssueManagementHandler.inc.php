@@ -19,7 +19,7 @@ class IssueManagementHandler extends EditorHandler {
 	 * Displays the listings of future (unpublished) issues
 	 */
 	function futureIssues() {
-		IssueManagementHandler::validate();
+		IssueManagementHandler::validate(null, true);
 		IssueManagementHandler::setupTemplate(EDITOR_SECTION_ISSUES);
 
 		$journal = &Request::getJournal();
@@ -151,7 +151,7 @@ class IssueManagementHandler extends EditorHandler {
 	 */
 	function issueData($args) {
 		$issueId = isset($args[0]) ? $args[0] : 0;
-		$issue = IssueManagementHandler::validate($issueId);
+		$issue = IssueManagementHandler::validate($issueId, true);
 		IssueManagementHandler::setupTemplate(EDITOR_SECTION_ISSUES);
 
 		$templateMgr = &TemplateManager::getManager();
@@ -174,7 +174,7 @@ class IssueManagementHandler extends EditorHandler {
 	 */
 	function editIssue($args) {
 		$issueId = isset($args[0]) ? (int) $args[0] : 0;
-		$issue = IssueManagementHandler::validate($issueId);
+		$issue = IssueManagementHandler::validate($issueId, true);
 		IssueManagementHandler::setupTemplate(EDITOR_SECTION_ISSUES);
 
 		$templateMgr = &TemplateManager::getManager();
@@ -206,7 +206,7 @@ class IssueManagementHandler extends EditorHandler {
 	 */
 	function removeCoverPage($args) {
 		$issueId = isset($args[0]) ? (int)$args[0] : 0;
-		$issue = IssueManagementHandler::validate($issueId);
+		$issue = IssueManagementHandler::validate($issueId, true);
 
 		import('file.PublicFileManager');
 		$journal = &Request::getJournal();
@@ -226,7 +226,7 @@ class IssueManagementHandler extends EditorHandler {
 	 */
 	function removeStyleFile($args) {
 		$issueId = isset($args[0]) ? (int)$args[0] : 0;
-		$issue = IssueManagementHandler::validate($issueId);
+		$issue = IssueManagementHandler::validate($issueId, true);
 
 		import('file.PublicFileManager');
 		$journal = &Request::getJournal();
@@ -246,7 +246,7 @@ class IssueManagementHandler extends EditorHandler {
 	 */
 	function issueToc($args) {
 		$issueId = isset($args[0]) ? $args[0] : 0;
-		$issue = IssueManagementHandler::validate($issueId);
+		$issue = IssueManagementHandler::validate($issueId, true);
 		IssueManagementHandler::setupTemplate(EDITOR_SECTION_ISSUES);
 
 		$templateMgr = &TemplateManager::getManager();
@@ -267,7 +267,7 @@ class IssueManagementHandler extends EditorHandler {
 		
 		$templateMgr->assign('issueId', $issueId);
 		$templateMgr->assign_by_ref('issue', $issue);
-		$templateMgr->assign('unpublished',!$issue->getPublished());
+		$templateMgr->assign('unpublished', !$issue->getPublished());
 		$templateMgr->assign('issueAccess',$issue->getAccessStatus());
 
 		// get issue sections and articles
@@ -322,7 +322,7 @@ class IssueManagementHandler extends EditorHandler {
 	 */
 	function updateIssueToc($args) {
 		$issueId = isset($args[0]) ? $args[0] : 0;
-		IssueManagementHandler::validate($issueId);
+		IssueManagementHandler::validate($issueId, true);
 
 		$journal = &Request::getJournal();
 
@@ -423,7 +423,7 @@ class IssueManagementHandler extends EditorHandler {
 	 */
 	function moveSectionToc($args) {
 		$issueId = isset($args[0]) ? $args[0] : 0;
-		$issue = IssueManagementHandler::validate($issueId);
+		$issue = IssueManagementHandler::validate($issueId, true);
 		$journal = &Request::getJournal();
 
 		$sectionDao = &DAORegistry::getDAO('SectionDAO');
@@ -446,7 +446,7 @@ class IssueManagementHandler extends EditorHandler {
 	 */
 	function resetSectionOrder($args) {
 		$issueId = isset($args[0]) ? $args[0] : 0;
-		$issue = IssueManagementHandler::validate($issueId);
+		$issue = IssueManagementHandler::validate($issueId, true);
 
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
 		$sectionDao->deleteCustomSectionOrdering($issueId);
@@ -459,7 +459,7 @@ class IssueManagementHandler extends EditorHandler {
 	 */
 	function moveArticleToc($args) {
 		$issueId = isset($args[0]) ? $args[0] : 0;
-		$issue = IssueManagementHandler::validate($issueId);
+		$issue = IssueManagementHandler::validate($issueId, true);
 
 		$journal = &Request::getJournal();
 
@@ -604,23 +604,35 @@ class IssueManagementHandler extends EditorHandler {
 	/**
 	 * Validate that user is an editor in the selected journal and if the issue id is valid
 	 * Redirects to issue create issue page if not properly authenticated.
+	 * NOTE: As of OJS 2.2, Layout Editors are allowed if specified in args.
 	 */
-	function validate($issueId = null) {
-		parent::validate();
-		
+	function validate($issueId = null, $allowLayoutEditor = false) {
+		$issue = null;
+		$journal =& Request::getJournal();
+
+		if (!isset($journal)) Validation::redirectLogin();
+
 		if (isset($issueId)) {
-			$journal = &Request::getJournal();
 			$issueDao = &DAORegistry::getDAO('IssueDAO');
 			$issue = $issueDao->getIssueById($issueId, $journal->getJournalId());
 			
-			if (!isset($issue)) {
+			if (!$issue) {
 				Request::redirect(null, null, 'createIssue');
 			}
-			
-			return $issue;
+		}
+
+		if (!Validation::isEditor($journal->getJournalId())) {
+			if (isset($journal) && $allowLayoutEditor && Validation::isLayoutEditor($journal->getJournalId())) {
+				// We're a Layout Editor. If specified, make sure that the issue is not published.
+				if ($issue && !$issue->getPublished()) {
+					Validation::redirectLogin();
+				}
+			} else {
+				Validation::redirectLogin();
+			}
 		}
 		
-		return null;
+		return $issue;
 	}
 
 	/**
@@ -628,6 +640,8 @@ class IssueManagementHandler extends EditorHandler {
 	 * @param $level int set to one of EDITOR_SECTION_? defined in EditorHandler.
 	 */
 	function setupTemplate($level) {
+		$templateMgr =& TemplateManager::getManager();
+		$templateMgr->assign('isLayoutEditor', Request::getRequestedPage() == 'layoutEditor');
 		EditorHandler::setupTemplate($level);
 	}
 }

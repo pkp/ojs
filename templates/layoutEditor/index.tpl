@@ -9,16 +9,20 @@
  * $Id$
  *}
 
-{assign var="pageTitle" value="common.queue.long.$pageToDisplay"}
+{assign var="pageTitle" value="user.role.layoutEditor"}
 {include file="common/header.tpl"}
 
-<ul class="menu">
-	<li{if ($pageToDisplay == "active")} class="current"{/if}><a href="{url path="active"}">{translate key="common.queue.short.active"}</a></li>
-	<li{if ($pageToDisplay == "completed")} class="current"{/if}><a href="{url path="completed"}">{translate key="common.queue.short.completed"}</a></li>
+<h3>{translate key="article.submissions"}</h3>
+
+<ul class="plain">
+	<li>&#187; <a href="{url op="submissions" path="active"}">{translate key="common.queue.short.active"}</a></li>
+	<li>&#187; <a href="{url op="submissions" path="completed"}">{translate key="common.queue.short.completed"}</a></li>
 </ul>
 
-<br />
+<h3>{translate key="editor.navigation.issues"}</h3>
 
-{include file="layoutEditor/$pageToDisplay.tpl"}
+<ul class="plain">
+	<li>&#187; <a href="{url op="futureIssues"}">{translate key="editor.navigation.futureIssues"}</a></li>
+</ul>
 
 {include file="common/footer.tpl"}

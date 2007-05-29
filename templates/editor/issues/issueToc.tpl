@@ -18,11 +18,13 @@
 {/if}
 {include file="common/header.tpl"}
 
-<ul class="menu">
-	<li><a href="{url op="createIssue"}">{translate key="editor.navigation.createIssue"}</a></li>
-	<li{if $unpublished} class="current"{/if}><a href="{url op="futureIssues"}">{translate key="editor.navigation.futureIssues"}</a></li>
-	<li{if !$unpublished} class="current"{/if}><a href="{url op="backIssues"}">{translate key="editor.navigation.issueArchive"}</a></li>
-</ul>
+{if !$isLayoutEditor}{* Layout Editors can also access this page. *}
+	<ul class="menu">
+		<li><a href="{url op="createIssue"}">{translate key="editor.navigation.createIssue"}</a></li>
+		<li{if $unpublished} class="current"{/if}><a href="{url op="futureIssues"}">{translate key="editor.navigation.futureIssues"}</a></li>
+		<li{if !$unpublished} class="current"{/if}><a href="{url op="backIssues"}">{translate key="editor.navigation.issueArchive"}</a></li>
+	</ul>
+{/if}
 
 {if not $noIssue}
 <br />
@@ -83,7 +85,7 @@
 				{$author->getLastName()|escape}{if !$smarty.foreach.authorList.last},{/if}
 			{/foreach}
 		</td>
-		<td><a href="{url op="submission" path=$articleId}" class="action">{$article->getArticleTitle()|strip_unsafe_html|truncate:60:"..."}</a></td>
+		<td>{if !$isLayoutEditor}<a href="{url op="submission" path=$articleId}" class="action">{/if}{$article->getArticleTitle()|strip_unsafe_html|truncate:60:"..."}{if !$isLayoutEditor}</a>{/if}</td>
 		{if (($issueAccess == 2) && $enableSubscriptions)}
 		<td><select name="accessStatus[{$article->getPubId()}]" size="1" class="selectMenu">{html_options options=$accessOptions selected=$article->getAccessStatus()}</select></td>
 		{/if}
@@ -112,7 +114,7 @@
 <div class="separator"></div>
 {/foreach}
 
-<input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> {if $unpublished}<input type="button" value="{translate key="editor.issues.publishIssue"}" onclick="confirmAction('{url op="publishIssue" path=$issueId}', '{translate|escape:"javascript" key="editor.issues.confirmPublish"}')" class="button" />{/if}
+<input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> {if $unpublished && !$isLayoutEditor}<input type="button" value="{translate key="editor.issues.publishIssue"}" onclick="confirmAction('{url op="publishIssue" path=$issueId}', '{translate|escape:"javascript" key="editor.issues.confirmPublish"}')" class="button" />{/if}
 
 </form>
 

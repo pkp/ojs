@@ -17,7 +17,7 @@
 {assign var="dateTo" value="--"}
 {/if}
 
-<form method="post" name="submit" action="{url op="index" path=$pageToDisplay}">
+<form method="post" name="submit" action="{url op="submissions" path=$pageToDisplay}">
 	<select name="searchField" size="1" class="selectMenu">
 		{html_options_translate options=$fieldOptions selected=$searchField}
 	</select>
