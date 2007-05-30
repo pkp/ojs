@@ -56,7 +56,7 @@ class GroupDAO extends DAO {
 		if ($context !== null) $params[] = $context;
 
 		$result = &$this->retrieve(
-			'SELECT * FROM groups WHERE journal_id = ? ' . ($context!==null?'AND context = ? ':'') . 'ORDER BY seq',
+			'SELECT * FROM groups WHERE journal_id = ? ' . ($context!==null?'AND context = ? ':'') . 'ORDER BY context, seq',
 			$params, $rangeInfo
 		);
 
