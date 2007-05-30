@@ -197,7 +197,7 @@ function moveAuthor(dir, authorIndex) {
 
 <h3>{translate key="submission.indexing"}</h3>
 
-<p>{translate key="author.submit.submissionIndexingDescription"}</p>
+{if $journalSettings.metaDiscipline || $journalSettings.metaSubjectClass || $journalSettings.metaSubject || $journalSettings.metaCoverage || $journalSettings.metaType}<p>{translate key="author.submit.submissionIndexingDescription"}</p>{/if}
 
 <table width="100%" class="data">
 	{if $journalSettings.metaDiscipline}
