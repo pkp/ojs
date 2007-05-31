@@ -260,7 +260,7 @@ class MailTemplate extends Mail {
 		$form->setData('blankTo', Request::getUserVar('blankTo'));
 		$form->setData('blankCc', Request::getUserVar('blankCc'));
 		$form->setData('blankBcc', Request::getUserVar('blankBcc'));
-		$form->setData('from', $this->getFromString());
+		$form->setData('from', $this->getFromString(false));
 
 		$form->setData('addressFieldsEnabled', $this->getAddressFieldsEnabled());
 
