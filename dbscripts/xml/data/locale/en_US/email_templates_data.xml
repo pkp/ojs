@@ -46,8 +46,10 @@ Your new password: {$password}
 		</row>
 		<row>
 			<field name="email_key">USER_REGISTER</field>
-			<field name="subject">New User Registration</field>
-			<field name="body">Thank you for registering as a user with {$journalName}. Please keep track of your username and password, which are needed for all work with this journal.
+			<field name="subject">Journal Registration</field>
+			<field name="body">{$userFullName}
+
+You have now been registered as a user with {$journalName}. We have included your username and password in this email, which are needed for all work with this journal though its website. At any point, you can ask to be removed from the journal's list of users by contacting me.
 
 Username: {$username}
 Password: {$password}
@@ -55,6 +57,20 @@ Password: {$password}
 Thank you,
 {$principalContactSignature}</field>
 			<field name="description">This email is sent to a newly registered user to welcome them to the system and provide them with a record of their username and password.</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEWER_REGISTER</field>
+			<field name="subject">Registration as Reviewer with {$journalName}</field>
+			<field name="body">In light of your expertise, we have taken the liberty of registering your name in the reviewer database for {$journalName}. This does not entail any form of commitment on your part, but simply enables us to approach you with a submission to possibly review. On being invited to review, you will have an opportunity to see the title and abstract of the paper in question, and you'll always be in a position to accept or decline the invitation. You can also ask at any point to have your name removed from this reviewer list.
+
+We are providing you with a username and password, which is used in all interactions with the journal through its website. You may wish, for example, to update your profile, including your reviewing interests.
+
+Username: {$username}
+Password: {$password}
+
+Thank you,
+{$principalContactSignature}</field>
+			<field name="description">This email is sent to a newly registered reviewer to welcome them to the system and provide them with a record of their username and password.</field>
 		</row>
 		<row>
 			<field name="email_key">PUBLISH_NOTIFY</field>

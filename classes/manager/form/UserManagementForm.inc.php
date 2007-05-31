@@ -287,7 +287,7 @@ class UserManagementForm extends Form {
 				import('mail.MailTemplate');
 				$mail = &new MailTemplate('USER_REGISTER');
 				$mail->setFrom($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
-				$mail->assignParams(array('username' => $this->getData('username'), 'password' => $password));
+				$mail->assignParams(array('username' => $this->getData('username'), 'password' => $password, 'userFullName' => $user->getFullName()));
 				$mail->addRecipient($user->getEmail(), $user->getFullName());
 				$mail->send();
 			}

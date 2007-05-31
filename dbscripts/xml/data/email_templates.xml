@@ -36,6 +36,11 @@
 			<field name="can_disable">0</field>
 		</row>
 		<row>
+			<field name="email_key">REVIEWER_REGISTER</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">0</field>
+		</row>
+		<row>
 			<field name="email_key">PUBLISH_NOTIFY</field>
 			<field name="can_edit">1</field>
 			<field name="can_disable">0</field>
