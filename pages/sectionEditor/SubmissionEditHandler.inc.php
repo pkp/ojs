@@ -1930,7 +1930,11 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
 		$publishedArticle =& $publishedArticleDao->getPublishedArticleByArticleId($articleId);
-		if ($issueId) {
+
+		$issueDao =& DAORegistry::getDAO('IssueDAO');
+		$issue =& $issueDao->getIssueById($issueId, $journal->getJournalId());
+
+		if ($issue) {
 			// Schedule against an issue.
 			if ($publishedArticle) {
 				$publishedArticle->setIssueId($issueId);
@@ -1959,7 +1963,6 @@ class SubmissionEditHandler extends SectionEditorHandler {
 					}
 				}
 			}
-			$submission->setStatus(STATUS_PUBLISHED);
 		} else {
 			if ($publishedArticle) {
 				// This was published elsewhere; make sure we don't
@@ -1967,11 +1970,15 @@ class SubmissionEditHandler extends SectionEditorHandler {
 				$publishedArticleDao->resequencePublishedArticles($submission->getSectionId(), $publishedArticle->getIssueId());
 				$publishedArticleDao->deletePublishedArticleByArticleId($articleId);
 			}
-
-			// Remove from scheduling.
-			$submission->setStatus(STATUS_QUEUED);
 		}
 		$submission->stampStatusModified();
+
+		if ($issue && $issue->getPublished()) {
+			$submission->setStatus(STATUS_PUBLISHED);
+		} else {
+			$submission->setStatus(STATUS_QUEUED);
+		}
+
 		$sectionEditorSubmissionDao->updateSectionEditorSubmission($submission);
 
 		Request::redirect(null, null, 'submissionEditing', array($articleId), null, 'scheduling');

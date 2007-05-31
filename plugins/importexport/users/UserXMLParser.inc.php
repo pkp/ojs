@@ -254,7 +254,8 @@ class UserXMLParser {
 				$mail->addRecipient($user->getEmail(), $user->getFullName());
 				$mail->sendWithParams(array(
 					'username' => $user->getUsername(),
-					'password' => $user->getUnencryptedPassword() ==  null ? '-' : $user->getUnencryptedPassword()
+					'password' => $user->getUnencryptedPassword() ==  null ? '-' : $user->getUnencryptedPassword(),
+					'userFullName' => $user->getFullName()
 				));
 				$mail->clearRecipients();
 			}
