@@ -204,10 +204,8 @@ class RegistrationForm extends Form {
 				// FIXME Check result and handle failures
 				$this->defaultAuth->doCreateUser($user);
 				$user->setAuthId($this->defaultAuth->authId);
-				$user->setPassword(Validation::encryptCredentials($user->getUserId(), Validation::generatePassword())); // Used for PW reset hash only
-			} else {
-				$user->setPassword(Validation::encryptCredentials($this->getData('username'), $this->getData('password')));
 			}
+			$user->setPassword(Validation::encryptCredentials($this->getData('username'), $this->getData('password')));
 			
 			$userDao = &DAORegistry::getDAO('UserDAO');
 			$userDao->insertUser($user);
