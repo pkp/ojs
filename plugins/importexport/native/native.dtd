@@ -106,7 +106,7 @@
 <!ELEMENT email (#PCDATA)>
 <!ELEMENT biography (#PCDATA)>
 
-<!ELEMENT author (firstname, middlename?, lastname, affiliation?, email?, biography?)>
+<!ELEMENT author (firstname, middlename?, lastname, affiliation?, email, biography?)>
 	<!-- One author should be designated as the primary contact for this
 	     article. If no author is designated, the first author with an
 	     email address will be used; if multiple authors are designated, the
