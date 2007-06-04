@@ -37,7 +37,7 @@
 
 <div id="main">
 
-<h2>{$siteTitle|escape},&nbsp;{$issue->getIssueIdentification(false,true)|escape}</h2>
+<h2>{$siteTitle|escape}{if $issue},&nbsp;{$issue->getIssueIdentification(false,true)|escape}{/if}</h2>
 
 <div id="content">
 {if $galley}

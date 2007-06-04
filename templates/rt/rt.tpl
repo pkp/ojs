@@ -35,9 +35,9 @@
 <div id="container">
 <div id="main" style="width: 150px; font-size: 0.7em; padding-top: 1.5em; padding-left: 1em">
 
-<h5>{$journal->getSetting('journalInitials')|escape}<br />{$issue->getIssueIdentification()|escape}</h5>
+<h5>{$journal->getSetting('journalInitials')|escape}{if $issue}<br />{$issue->getIssueIdentification()|escape}{/if}</h5>
 
-<p><a href="{url page="issue" op="view" path=$issue->getBestIssueId($journal)|to_array:"showToc"}" target="_parent" class="rtAction">{translate key="issue.toc"}</a></p>
+{if $issue}<p><a href="{url page="issue" op="view" path=$issue->getBestIssueId($journal)|to_array:"showToc"}" target="_parent" class="rtAction">{translate key="issue.toc"}</a></p>{/if}
 
 <h5>{translate key="rt.readingTools"}</h5>
 

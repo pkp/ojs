@@ -29,7 +29,7 @@
 		{$author->getLastName()|escape}, {$firstName|escape}{if $i==$authorCount-2}, {translate key="rt.context.and"} {elseif $i<$authorCount-1}, {else}.{/if}
 	{/foreach}
 
-	"{$article->getArticleTitle()|strip_unsafe_html}" <i>{$journal->getTitle()|escape}</i> [{translate key="rt.captureCite.online"}], {$issue->getVolume()|escape} {$article->getDatePublished()|date_format:'%e %b %Y'}
+	"{$article->getArticleTitle()|strip_unsafe_html}" <i>{$journal->getTitle()|escape}</i> [{translate key="rt.captureCite.online"}], {if $issue}{$issue->getVolume()|escape} {/if}{$article->getDatePublished()|date_format:'%e %b %Y'}
 
 {elseif $bibFormat == 'Turabian'}
 	{assign var=authors value=$article->getAuthors()}
@@ -39,7 +39,7 @@
 		{$author->getLastName()|escape}, {$firstName|escape}{if $i==$authorCount-2}, {translate key="rt.context.and"} {elseif $i<$authorCount-1}, {else}.{/if}
 	{/foreach}
 
-	"{$article->getArticleTitle()|strip_unsafe_html}" <i>{$journal->getTitle()|escape}</i> [{translate key="rt.captureCite.online"}], {translate key="issue.volume"} {$issue->getVolume()|escape} {translate key="issue.number"} {$issue->getNumber()|escape} ({$article->getDatePublished()|date_format:'%e %B %Y'|trim})
+	"{$article->getArticleTitle()|strip_unsafe_html}" <i>{$journal->getTitle()|escape}</i> [{translate key="rt.captureCite.online"}], {translate key="issue.volume"} {if $issue}{$issue->getVolume()|escape} {translate key="issue.number"} {$issue->getNumber()|escape} {/if}({$article->getDatePublished()|date_format:'%e %B %Y'|trim})
 
 {elseif $bibFormat == 'CBE'}
 	{assign var=authors value=$article->getAuthors()}
@@ -49,7 +49,7 @@
 		{$author->getLastName()|escape}, {$firstName[0]|escape}.{if $i==$authorCount-2}, &amp; {elseif $i<$authorCount-1}, {/if}
 	{/foreach}
 
-	{$article->getDatePublished()|date_format:'%Y %b %e'}. {$article->getArticleTitle()|strip_unsafe_html}. {$journal->getTitle()|escape}. [{translate key="rt.captureCite.online"}] {$issue->getVolume()|escape}:{$issue->getNumber()|escape}
+	{$article->getDatePublished()|date_format:'%Y %b %e'}. {$article->getArticleTitle()|strip_unsafe_html}. {$journal->getTitle()|escape}. [{translate key="rt.captureCite.online"}] {if $issue}{$issue->getVolume()|escape}:{$issue->getNumber()|escape}{/if}
 
 {elseif $bibFormat == 'BibTeX'}
 
@@ -58,8 +58,8 @@
 	author = {{/literal}{assign var=authors value=$article->getAuthors()}{foreach from=$authors item=author name=authors key=i}{$author->getLastName()|escape}, {assign var=firstName value=$author->getFirstName()}{assign var=authorCount value=$authors|@count}{$firstName[0]|escape}.{if $i<$authorCount-1}, {/if}{/foreach}{literal}},
 	title = {{/literal}{$article->getArticleTitle()|strip_unsafe_html}{literal}},
 	journal = {{/literal}{$journal->getTitle()|escape}{literal}},
-	volume = {{/literal}{$issue->getVolume()|escape}{literal}},
-	number = {{/literal}{$issue->getNumber()|escape}{literal}},
+{/literal}{if $issue}{literal}	volume = {{/literal}{$issue->getVolume()|escape}{literal}},
+	number = {{/literal}{$issue->getNumber()|escape}{literal}},{/literal}{/if}{literal}
 	year = {{/literal}{$article->getDatePublished()|date_format:'%Y'}{literal}},
 {/literal}{assign var=issn value=$journal->getSetting('issn')|escape}{if $issn}{literal}	issn = {{/literal}{$issn}{literal}},{/literal}{/if}{literal}
 	url = {{/literal}{$articleUrl}{literal}}
@@ -75,7 +75,7 @@
 		{assign var=firstName value=$author->getFirstName()}
 		{$author->getLastName()|escape}, {$firstName[0]|escape}.{if $i<$authorCount-1}; {/if}{/foreach}.
 	{$article->getArticleTitle()|strip_unsafe_html}.
-	<b>{$journal->getTitle()|escape}</b>, {translate key="rt.captureCite.acaoLocation"}, {$issue->getVolume()|escape}
+	<b>{$journal->getTitle()|escape}</b>, {translate key="rt.captureCite.acaoLocation"}{if $issue}, {$issue->getVolume()|escape}{/if}
 	{$article->getDatePublished()|date_format:'%e %m %Y'}.
 
 {else}
@@ -88,7 +88,7 @@
 
 	{$article->getDatePublished()|date_format:'%Y %b %e'}.
 	{$article->getArticleTitle()|strip_unsafe_html}.
-	<i>{$journal->getTitle()|escape}</i> [{translate key="rt.captureCite.online"}] {$issue->getVolume()|escape}:{$issue->getNumber()|escape}.
+	<i>{$journal->getTitle()|escape}</i> [{translate key="rt.captureCite.online"}]{if $issue} {$issue->getVolume()|escape}:{$issue->getNumber()|escape}.{/if}
 	{translate key="rt.captureCite.available"} <a target="_new" href="{$articleUrl}">{$articleUrl|escape}</a>
 {/if}
 

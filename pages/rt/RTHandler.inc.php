@@ -262,9 +262,9 @@ class RTHandler extends ArticleHandler {
 				$email->setSubject('[' . $journal->getSetting('journalInitials') . '] ' . strip_tags($article->getArticleTitle()));
 				$email->assignParams(array(
 					'articleTitle' => strip_tags($article->getArticleTitle()),
-					'volume' => $issue->getVolume(),
-					'number' => $issue->getNumber(),
-					'year' => $issue->getYear(),
+					'volume' => $issue?$issue->getVolume():null,
+					'number' => $issue?$issue->getNumber():null,
+					'year' => $issue?$issue->getYear():null,
 					'authorName' => $primaryAuthor->getFullName(),
 					'articleUrl' => Request::url(null, 'article', 'view', $article->getBestArticleId())
 				));

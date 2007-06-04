@@ -430,11 +430,18 @@ class IssueDAO extends DAO {
 	/**
 	 * Get issue by article id
 	 * @param articleId int
+	 * @param journalId int optional
 	 * @return issue object
 	 */
-	function &getIssueByArticleId($articleId) {
-		$sql = 'SELECT i.* FROM issues i LEFT JOIN published_articles a ON (i.issue_id = a.issue_id) WHERE article_id = ?';
-		$result = &$this->retrieve($sql, $articleId);	
+	function &getIssueByArticleId($articleId, $journalId = null) {
+		$params = array($articleId);
+		$sql = 'SELECT i.* FROM issues i, published_articles pa, articles a WHERE i.issue_id = pa.issue_id AND pa.article_id = ? AND pa.article_id = a.article_id';
+		if ($journalId !== null) {
+			$sql .= ' AND i.journal_id = ? AND a.journal_id = i.journal_id';
+			$params[] = $journalId;
+		}
+
+		$result = &$this->retrieve($sql, $params);
 
 		$issue = null;
 		if ($result->RecordCount() != 0) {

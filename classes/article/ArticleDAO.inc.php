@@ -31,12 +31,18 @@ class ArticleDAO extends DAO {
 	/**
 	 * Retrieve an article by ID.
 	 * @param $articleId int
+	 * @param $journalId int optional
 	 * @return Article
 	 */
-	function &getArticle($articleId) {
-		$result = &$this->retrieve(
-			'SELECT a.*, s.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, s.abbrev AS section_abbrev, s.abbrev_alt1 AS section_abbrev_alt1, s.abbrev_alt2 AS section_abbrev_alt2 FROM articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE article_id = ?', $articleId
-		);
+	function &getArticle($articleId, $journalId = null) {
+		$params = array($articleId);
+		$sql = 'SELECT a.*, s.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, s.abbrev AS section_abbrev, s.abbrev_alt1 AS section_abbrev_alt1, s.abbrev_alt2 AS section_abbrev_alt2 FROM articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE article_id = ?';
+		if ($journalId !== null) {
+			$sql .= ' AND a.journal_id = ?';
+			$params[] = $journalId;
+		}
+
+		$result = &$this->retrieve($sql, $params);
 
 		$returner = null;
 		if ($result->RecordCount() != 0) {

@@ -63,18 +63,15 @@ class IssueAction {
 	}
 
 	/**
-	 * Checks if user has subscription
+	 * Checks if this user is granted reader access to pre-publication articles
+	 * based on their roles in the journal (i.e. Manager, Editor, etc).
+	 * @param $journal object
 	 * @return bool
 	 */
-	function subscribedUser(&$journal) {
-		$user = &Request::getUser();
-		$subscriptionDao = &DAORegistry::getDAO('SubscriptionDAO');
-		$result = false;
-		if (isset($user) && isset($journal)) {
-			// If the user is a journal manager, editor, section editor,
-			// layout editor, copyeditor, or proofreader, it is assumed
-			// that they are allowed to view the journal as a subscriber.
-			$roleDao = &DAORegistry::getDAO('RoleDAO');
+	function allowedPrePublicationAccess(&$journal) {
+		$roleDao =& DAORegistry::getDAO('RoleDAO');
+		$user =& Request::getUser();
+		if ($user && $journal) {
 			$subscriptionAssumedRoles = array(
 				ROLE_ID_JOURNAL_MANAGER,
 				ROLE_ID_EDITOR,
@@ -84,12 +81,27 @@ class IssueAction {
 				ROLE_ID_PROOFREADER,
 				ROLE_ID_SUBSCRIPTION_MANAGER
 			);
-			$roles = &$roleDao->getRolesByUserId($user->getUserId(), $journal->getJournalId());
+
+			$roles =& $roleDao->getRolesByUserId($user->getUserId(), $journal->getJournalId());
 			foreach ($roles as $role) {
 				if (in_array($role->getRoleId(), $subscriptionAssumedRoles)) return true;
 			}
+		}
 
-			$result = $subscriptionDao->isValidSubscription(null, null, $user->getUserId(), $journal->getJournalId());
+		return false;
+	}
+
+	/**
+	 * Checks if user has subscription
+	 * @return bool
+	 */
+	function subscribedUser(&$journal) {
+		$user = &Request::getUser();
+		$subscriptionDao = &DAORegistry::getDAO('SubscriptionDAO');
+		$result = false;
+		if (isset($user) && isset($journal)) {
+			if (IssueAction::allowedPrePublicationAccess($journal)) $result = true;
+			else $result = $subscriptionDao->isValidSubscription(null, null, $user->getUserId(), $journal->getJournalId());
 		}
 		HookRegistry::call('IssueAction::subscribedUser', array(&$journal, &$result));
 		return $result;

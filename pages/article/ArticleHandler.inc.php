@@ -143,7 +143,12 @@ class ArticleHandler extends Handler {
 			// Get the subscription status if displaying the abstract;
 			// if access is open, we can display links to the full text.
 			import('issue.IssueAction');
-			$templateMgr->assign('subscriptionRequired', IssueAction::subscriptionRequired($issue));
+
+			// The issue may not exist, if this is an editorial user
+			// and scheduling hasn't been completed yet for the article.
+			if ($issue) {
+				$templateMgr->assign('subscriptionRequired', IssueAction::subscriptionRequired($issue));
+			}
 			$templateMgr->assign('subscribedUser', IssueAction::subscribedUser($journal));
 			$templateMgr->assign('subscribedDomain', IssueAction::subscribedDomain($journal));
 
@@ -314,35 +319,42 @@ class ArticleHandler extends Handler {
 	 * Validation
 	 */
 	function validate($articleId, $galleyId = null) {
-
 		parent::validate(true);
+
+		import('issue.IssueAction');
 
 		$journal = &Request::getJournal();
 		$journalId = $journal->getJournalId();
-		$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
+		$article = $publishedArticle = $issue = null;
 
 		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
-
 		if ($journal->getSetting('enablePublicArticleId')) {
-			$article = &$publishedArticleDao->getPublishedArticleByBestArticleId($journal->getJournalId(), $articleId);
+			$publishedArticle = &$publishedArticleDao->getPublishedArticleByBestArticleId($journalId, $articleId);
 		} else {
-			$article = &$publishedArticleDao->getPublishedArticleByArticleId((int) $articleId);
+			$publishedArticle = &$publishedArticleDao->getPublishedArticleByArticleId((int) $articleId, $journalId);
 		}
 
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
-		if (isset($article)) $issue = &$issueDao->getIssueByArticleId($article->getArticleId());
+		if (isset($publishedArticle)) {
+			$issue = &$issueDao->getIssueByArticleId($publishedArticle->getArticleId(), $journalId);
+		} else {
+			$articleDao =& DAORegistry::getDAO('ArticleDAO');
+			$article =& $articleDao->getArticle((int) $articleId, $journalId);
+		}
 
-		// if issue or article do not exist, are not published, or are
-		// not parts of the same journal, redirect to index.
-		$layoutAssignmentDao =& DAORegistry::getDAO('LayoutAssignmentDAO');
-		if (isset($issue) && isset($article) && ($issue->getPublished() || Validation::isEditor($journal->getJournalId()) || Validation::isSectionEditor($journal->getJournalId()) || ($layoutAssignmentDao->getLayoutEditorIdByArticleId($article->getArticleId()))) && $issue->getJournalId() == $journal->getJournalId()) {
+		// If this is an editorial user who can view unpublished/unscheduled
+		// articles, bypass further validation.
+		if (($article || $publishedArticle) && IssueAction::allowedPrePublicationAccess($journal)) {
+			return array($journal, $issue, $publishedArticle?$publishedArticle:$article);
+		}
 
-			import('issue.IssueAction');
+		// Make sure the reader has rights to view the article/issue.
+		if ($issue && $issue->getPublished()) {
 			$subscriptionRequired = IssueAction::subscriptionRequired($issue);
 			$isSubscribedDomain = IssueAction::subscribedDomain($journal);
 
 			// Check if login is required for viewing.
-			if (!$isSubscribedDomain && !Validation::isLoggedIn() && $journalSettingsDao->getSetting($journalId,'restrictArticleAccess') && isset($galleyId) && $galleyId != 0) {
+			if (!$isSubscribedDomain && !Validation::isLoggedIn() && $journal->getSetting('restrictArticleAccess') && isset($galleyId) && $galleyId != 0) {
 				Validation::redirectLogin();
 			}
 	
@@ -354,7 +366,7 @@ class ArticleHandler extends Handler {
 				// Subscription Access
 				$subscribedUser = IssueAction::subscribedUser($journal);
 	
-				if (!(!$subscriptionRequired || $article->getAccessStatus() || $subscribedUser)) {
+				if (!(!$subscriptionRequired || $publishedArticle->getAccessStatus() || $subscribedUser)) {
 					if (!isset($galleyId) || $galleyId) {
 						Request::redirect(null, 'index');	
 					}
@@ -363,7 +375,7 @@ class ArticleHandler extends Handler {
 		} else {
 			Request::redirect(null, 'index');
 		}
-		return array($journal, $issue, $article);
+		return array($journal, $issue, $publishedArticle);
 	}
 
 }
