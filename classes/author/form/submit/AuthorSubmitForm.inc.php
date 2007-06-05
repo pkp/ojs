@@ -70,6 +70,11 @@ class AuthorSubmitForm extends Form {
 		parent::display();
 	}
 
+	/**
+	 * Automatically assign Section Editors to new submissions.
+	 * @param $article object
+	 * @return array of section editors
+	 */
 	function assignEditors(&$article) {
 		$sectionId = $article->getSectionId();
 		$journal =& Request::getJournal();
@@ -87,6 +92,8 @@ class AuthorSubmitForm extends Form {
 			$editAssignmentDao->insertEditAssignment($editAssignment);
 			unset($editAssignment);
 		}
+
+		return $sectionEditors;
 	}
 }
 

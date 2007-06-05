@@ -80,7 +80,7 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 		$proofAssignment->setProofreaderId(0);
 		$proofAssignmentDao->insertProofAssignment($proofAssignment);
 
-		$this->assignEditors($article);
+		$sectionEditors = $this->assignEditors($article);
 
 		$user = &Request::getUser();
 		
@@ -105,6 +105,11 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 			if($journal->getSetting('copySubmissionAckSpecified')) {
 				$copyAddress = $journal->getSetting('copySubmissionAckAddress');
 				if (!empty($copyAddress)) $mail->addBcc($copyAddress);
+			}
+
+			// Also BCC automatically assigned section editors
+			foreach ($sectionEditors as $sectionEditor) {
+				$mail->addBcc($sectionEditor->getFullName(), $sectionEditor->getEmail());
 			}
 
 			$mail->assignParams(array(
