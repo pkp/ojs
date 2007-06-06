@@ -24,48 +24,56 @@ class Transcoder {
 	}
 
 	function trans($string) {
-		if (function_exists('iconv') && $this->translit == true) {
-			// use the iconv library to transliterate
-			return iconv($this->fromEncoding, $this->toEncoding . '//TRANSLIT', $string);
+		// detect existence of encoding conversion libraries
+		$mbstring = function_exists('mb_convert_encoding');
+		$iconv = function_exists('iconv');
 
-		// === special cases for HTML entities (NB: 'HTML-ENTITIES' is not a valid encoding for iconv)
+		// ===	special cases for HTML entities to handle various PHP platforms
+		// 'HTML-ENTITIES' is not a valid encoding for iconv, so transcode manually
 
-		} elseif ($this->toEncoding == 'HTML-ENTITIES') {
-			// NB: old PHP versions may have issues; see http://ca.php.net/manual/en/function.htmlentities.php
-			if ( strtoupper($this->fromEncoding) == 'UTF-8' )
-				return String::utf2html($string);
-			else
+		if ($this->toEncoding == 'HTML-ENTITIES' && !$mbstring) {
+
+			if ( strtoupper($this->fromEncoding) == 'UTF-8' ) {
+				return String::utf2html($string);		// NB: this will return all numeric entities
+			} else {
+				// NB: old PHP versions may have issues with htmlentities()
 				return htmlentities($string, ENT_COMPAT, $this->fromEncoding);
+			}
 
-		} elseif ($this->fromEncoding == 'HTML-ENTITIES') {
-			// NB: old PHP versions may have issues with html_entity_decode
-			// this function is smarter since it uses a bigger table and better encoding
+		} elseif ($this->fromEncoding == 'HTML-ENTITIES' && !$mbstring) {
 
 			if ( strtoupper($this->toEncoding) == 'UTF-8' ) {
 				// convert named entities to numeric entities
-				$string = &String::named2numeric($string);
+				$string = strtr($string, String::getHTMLEntities());
 
-				// replace numeric entities; NB: PHP 4.3 has problems creating UTF-8 characters
-				if ( phpversion() >= '4.4.0' ) {
-					$string = preg_replace('~&#x([0-9a-f]+);~ei', 'String::code2utf(hexdec("\\1"))', $string);
-					$string = preg_replace('~&#([0-9]+);~e', 'String::code2utf(\\1)', $string);
-				}
+				// some platforms (PHP 4.3.x, 5.1? ) have problems displaying UTF-8 characters
+				// transliterate characters instead of transcoding back from HTML entities
+				// TODO: determine how to detect these platforms (OS/webserver?)
+//				$string = String::utf2ascii($string);
+
+				// use PCRE-aware replace function to replace numeric entities
+				$string = String::regexp_replace('~&#x([0-9a-f]+);~ei', 'String::code2utf(hexdec("\\1"))', $string);
+				$string = String::regexp_replace('~&#([0-9]+);~e', 'String::code2utf(\\1)', $string);
 
 				return $string;
+
 			} else {
+				// NB: old PHP versions may have issues with html_entity_decode()
 				return html_entity_decode($string, ENT_COMPAT, $this->toEncoding);
 			}
 
-		// === end special cases
+		// === end special cases for HTML entities
 
-		} elseif (function_exists('mb_convert_encoding')) {
-			// transcode using the multibyte library (no transliteration)
-//			return mb_convert_encoding($string, $this->toEncoding, $this->fromEncoding);
+		} elseif ($this->translit == true && $iconv) {
+			// use the iconv library to transliterate
+			return iconv($this->fromEncoding, $this->toEncoding . '//TRANSLIT', $string);
 
+		} elseif ($mbstring) {
+			// use the multibyte library to transcode (no transliteration)
 			// this call semantic uses backwards-compatible by-reference for better reliability
 			return call_user_func_array('mb_convert_encoding', array(&$string, $this->toEncoding, $this->fromEncoding));
 
-		} elseif (function_exists('iconv')) {
+		} elseif ($iconv) {
 			// use the iconv library to transcode
 			return iconv($this->fromEncoding, $this->toEncoding . '//IGNORE', $string);
 
@@ -76,5 +84,4 @@ class Transcoder {
 	}
 
 }
-
 ?>

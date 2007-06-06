@@ -81,13 +81,15 @@ class Form {
 
 		if (is_string($value)) {
 
+			// 1) normalize all existing HTML entities to UTF-8
+			import('core.Transcoder');
+			$trans =& new Transcoder('HTML-ENTITIES', 'UTF-8');
+			$value = $trans->trans($value);
+
 			// process strings that contain multibyte characters
 			if ( String::isUTF8($value) ) {
-				// alternate check:  ( $value === utf8_decode(utf8_encode($value)) )
 
-				// 1) normalize all HTML entities to UTF-8 (NB: may not be required)
 				// 2) convert UTF-8 to UTF-8 entities (numeric and named)
-				import('core.Transcoder');
 				$trans =& new Transcoder('UTF-8', 'HTML-ENTITIES');
 				$value = $trans->trans($value);
 

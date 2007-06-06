@@ -288,72 +288,12 @@ class String {
 	}
 
 	/**
-	 * Convert UTF-8 encoded characters in a string to escaped HTML entities
-	 * This is a helper function for transcoding into HTML
-	 * @param $input string input string
-	 * @return string
-	 */
-	function utf2html ($str) {
-		$ret = "";
-		$max = strlen($str);
-		$last = 0;  // keeps the index of the last regular character
-		
-	   for ($i=0; $i<$max; $i++) {
-	       $c = $str{$i};
-	       $c1 = ord($c);
-    	   if ($c1>>5 == 6) {  // 110x xxxx, 110 prefix for 2 bytes unicode
-        	   $ret .= substr($str, $last, $i-$last); // append all the regular characters we've passed
-	           $c1 &= 31; // remove the 3 bit two bytes prefix
-    	       $c2 = ord($str{++$i}); // the next byte
-        	   $c2 &= 63;  // remove the 2 bit trailing byte prefix
-				$c2 |= (($c1 & 3) << 6); // last 2 bits of c1 become first 2 of c2
-	           $c1 >>= 2; // c1 shifts 2 to the right
-	           $ret .= "&#" . ($c1 * 0x100 + $c2) . ";"; // this is the fastest string concatenation
-	           $last = $i+1;     
-			}
-			elseif ($c1>>4 == 14) {  // 1110 xxxx, 110 prefix for 3 bytes unicode
-				$ret .= substr($str, $last, $i-$last); // append all the regular characters we've passed
-           		$c2 = ord($str{++$i}); // the next byte
-           		$c3 = ord($str{++$i}); // the third byte
-           		$c1 &= 15; // remove the 4 bit three bytes prefix
-           		$c2 &= 63;  // remove the 2 bit trailing byte prefix
-           		$c3 &= 63;  // remove the 2 bit trailing byte prefix
-           		$c3 |= (($c2 & 3) << 6); // last 2 bits of c2 become first 2 of c3
-           		$c2 >>=2; //c2 shifts 2 to the right
-           		$c2 |= (($c1 & 15) << 4); // last 4 bits of c1 become first 4 of c2
-           		$c1 >>= 4; // c1 shifts 4 to the right
-           		$ret .= '&#' . (($c1 * 0x10000) + ($c2 * 0x100) + $c3) . ';'; // this is the fastest string concatenation
-           		$last = $i+1;     
-       		}
-   		}
-		$str=$ret . substr($str, $last, $i); // append the last batch of regular characters
-
-		return $str;   
-	}
-
-	/**
-	 * Returns the UTF-8 string corresponding to the unicode value
-	 * Does not require any multibyte PHP libraries
-	 * (from php.net, courtesy - romans@void.lv)
-	 * @param $input string input string
-	 * @return boolean
-	 */
-	function code2utf($num) {
-		if ($num < 128) return chr($num);
-		if ($num < 2048) return chr(($num >> 6) + 192) . chr(($num & 63) + 128);
-		if ($num < 65536) return chr(($num >> 12) + 224) . chr((($num >> 6) & 63) + 128) . chr(($num & 63) + 128);
-		if ($num < 2097152) return chr(($num >> 18) + 240) . chr((($num >> 12) & 63) + 128) . chr((($num >> 6) & 63) + 128) . chr(($num & 63) + 128);
-		return '';
-	}
-
-	/**
 	 * Detect whether a string contains non-ascii multibyte sequences in the UTF-8 range
 	 * Does not require any multibyte PHP libraries
 	 * @param $input string input string
 	 * @return boolean
 	 */
 	function isUTF8 ($str) {
-
 	    // From http://w3.org/International/questions/qa-forms-utf-8.html
 		return preg_match('%(?:
 				[\xC2-\xDF][\x80-\xBF]								# non-overlong 2-byte
@@ -367,14 +307,127 @@ class String {
 	}
 
 	/**
-	 * Convert Windows CP-1252 numeric entities in a string to named HTML entities
-	 * This is a helper function for transcoding into HTML/XML
-	 * From:  http://www.noqta.it/tc.html
+	 * Returns the UTF-8 string corresponding to the unicode value
+	 * Does not require any multibyte PHP libraries
+	 * (from php.net, courtesy - romans@void.lv)
+	 * @param $input string input string
+	 * @return boolean
+	 */
+	function code2utf ($num) {
+		if ($num < 128) return chr($num);
+		if ($num < 2048) return chr(($num >> 6) + 192) . chr(($num & 63) + 128);
+		if ($num < 65536) return chr(($num >> 12) + 224) . chr((($num >> 6) & 63) + 128) . chr(($num & 63) + 128);
+		if ($num < 2097152) return chr(($num >> 18) + 240) . chr((($num >> 12) & 63) + 128) . chr((($num >> 6) & 63) + 128) . chr(($num & 63) + 128);
+		return '';
+	}
+
+	/**
+	 * Convert UTF-8 encoded characters in a string to escaped HTML entities
+	 * This is a helper function for transcoding into HTML
 	 * @param $input string input string
 	 * @return string
 	 */
-	function cp1252ToEntities($str) {
+	function utf2html ($str) {
+		$ret = "";
+		$max = strlen($str);
+		$last = 0;  // keeps the index of the last regular character
+		
+	   for ($i=0; $i<$max; $i++) {
+			$c = $str{$i};
+			$c1 = ord($c);
+			if ($c1>>5 == 6) {										// 110x xxxx, 110 prefix for 2 bytes unicode
+				$ret .= substr($str, $last, $i-$last);			// append all the regular characters we've passed
+				$c1 &= 31;													// remove the 3 bit two bytes prefix
+				$c2 = ord($str{++$i});								// the next byte
+				$c2 &= 63;													// remove the 2 bit trailing byte prefix
+				$c2 |= (($c1 & 3) << 6);							// last 2 bits of c1 become first 2 of c2
+				$c1 >>= 2;													// c1 shifts 2 to the right
+				$ret .= "&#" . ($c1 * 0x100 + $c2) . ";";	// this is the fastest string concatenation
+				$last = $i+1;     
+			}
+			elseif ($c1>>4 == 14) { 								// 1110 xxxx, 110 prefix for 3 bytes unicode
+				$ret .= substr($str, $last, $i-$last);			// append all the regular characters we've passed
+				$c2 = ord($str{++$i}); 								// the next byte
+				$c3 = ord($str{++$i}); 								// the third byte
+				$c1 &= 15; 												// remove the 4 bit three bytes prefix
+				$c2 &= 63; 												// remove the 2 bit trailing byte prefix
+				$c3 &= 63; 												// remove the 2 bit trailing byte prefix
+				$c3 |= (($c2 & 3) << 6);							// last 2 bits of c2 become first 2 of c3
+				$c2 >>=2; 													//c2 shifts 2 to the right
+				$c2 |= (($c1 & 15) << 4);							// last 4 bits of c1 become first 4 of c2
+				$c1 >>= 4; 												// c1 shifts 4 to the right
+				$ret .= '&#' . (($c1 * 0x10000) + ($c2 * 0x100) + $c3) . ';'; // this is the fastest string concatenation
+				$last = $i+1;     
+			}
+		}
+		$str=$ret . substr($str, $last, $i); // append the last batch of regular characters
+
+		return $str;   
+	}
+
+	/**
+	 * Convert UTF-8 numeric entities in a string to ASCII values
+	 * This is a helper function for transcoding into HTML/XML
+	 * @param $input string input string
+	 * @return string
+	 */
+	function utf2ascii ($str) {
 		// define the conversion table
+		$entities = array(
+			"&#126;" => "~",			"&#160;" => " ",				"&#161;" => "!",
+			"&#166;" => "|",				"&#177;" => "+/-",		"&#178;" => "2",
+			"&#179;" => "3",			"&#180;" => "'",				"&#185;" => "1",
+			"&#188;" => "1/4",		"&#189;" => "1/2",		"&#190;" => "3/4",
+			"&#191;" => "?",				"&#192;" => "A",			"&#193;" => "A",
+			"&#194;" => "A",			"&#195;" => "A",			"&#196;" => "A",
+			"&#197;" => "A",			"&#198;" => "AE",			"&#199;" => "C",
+			"&#200;" => "E",			"&#201;" => "E",			"&#202;" => "E",
+			"&#203;" => "E",			"&#204;" => "I",				"&#205;" => "I",
+			"&#206;" => "I",				"&#207;" => "I",				"&#208;" => "D",
+			"&#209;" => "N",			"&#210;" => "O",			"&#211;" => "O",
+			"&#212;" => "O",			"&#213;" => "O",			"&#214;" => "O",
+			"&#215;" => "x",			"&#216;" => "O",			"&#217;" => "U",
+			"&#218;" => "U",			"&#220;" => "U",			"&#221;" => "Y",
+			"&#224;" => "a",			"&#225;" => "a",			"&#226;" => "a",
+			"&#227;" => "a",			"&#228;" => "a",			"&#229;" => "a",
+			"&#230;" => "ae",			"&#231;" => "c",				"&#232;" => "e",
+			"&#233;" => "e",			"&#234;" => "e",			"&#235;" => "e",
+			"&#236;" => "i",				"&#237;" => "i",				"&#238;" => "i",
+			"&#239;" => "i",				"&#240;" => "o",			"&#241;" => "n",
+			"&#242;" => "o",			"&#243;" => "o",			"&#244;" => "o",
+			"&#245;" => "o",			"&#246;" => "o",			"&#248;" => "o",
+			"&#249;" => "u",			"&#250;" => "u",			"&#252;" => "u",
+			"&#253;" => "y",				"&#255;" => "y",				"&#338;" => "OE",
+			"&#339;" => "oe",			"&#352;" => "S",			"&#353;" => "s",
+			"&#376;" => "Y",			"&#39;" => "'",				"&#402;" => "f",
+			"&#45;" => "-",				"&#710;" => "^",			"&#732;" => "~",
+			"&#8194;" => " ",			"&#8195;" => " ",			"&#8201;" => " ",
+			"&#8211;" => "-",			"&#8212;" => "--",		"&#8216;" => "'",
+			"&#8217;" => "'",			"&#8218;" => ",",			"&#8220;" => '"',
+			"&#8221;" => '"',			"&#8222;" => ",,",			"&#8226;" => "*",
+			"&#8230;" => "...",			"&#8240;" => "%o",		"&#8242;" => "'",
+			"&#8243;" => "''",			"&#8482;" => "TM",		"&#8722;" => "-",
+			"&#8727;" => "*",			"&#8743;" => "/\\",		"&#8744;" => "\/",
+			"&#8764;" => "~",			"&#8901;" => "*",			"&#913;" => "A",
+			"&#914;" => "B",			"&#917;" => "E",			"&#918;" => "Z",
+			"&#919;" => "H",			"&#921;" => "|",				"&#922;" => "K",
+			"&#924;" => "M",			"&#925;" => "N",			"&#927;" => "O",
+			"&#929;" => "P",			"&#932;" => "T",			"&#933;" => "Y",
+			"&#935;" => "X",			"&#94;" => "^",				"&#959;" => "o",
+			"&#961;" => "p",			"&#962;" => "?",				"&#977;" => "?",
+			"&#982;" => "?");
+
+		return strtr($str, $entities);
+	}
+
+	/**
+	 * Convert Windows CP-1252 numeric entities in a string to named HTML entities
+	 * This is a helper function for transcoding into HTML/XML
+	 * @param $input string input string
+	 * @return string
+	 */
+	function cp1252ToEntities ($str) {
+		// define the conversion table;  from: http://www.noqta.it/tc.html
 		$cp1252 = array(	"&#128;" => "",						"&#129;" => "",
 										"&#130;" => "&lsquor;",		"&#131;" => "&fnof;",
 										"&#132;" => "&ldquor;",		"&#133;" => "&hellip;",
@@ -391,79 +444,112 @@ class String {
 										"&#154;" => "&scaron;",		"&#155;" => "&rsaquo;",
 										"&#156;" => "&oelig;",			"&#157;" => "",
 										"&#158;" => "",						"&#159;" => "&Yuml;");
+
+		// corrections to map to valid ISO entities
+		$cp1252["&#130;"] = "&lsquo;";
+		$cp1252["&#132;"] = "&ldquo;";
+		$cp1252["&#146;"] = "&rsquo;";
+		$cp1252["&#148;"] = "&rdquo;";
+
 		return strtr($str, $cp1252);
 	}
 
 	/**
-	 * Convert named HTML entities to numeric entities
-	 * This is a helper function for transcoding into HTML/XML
+	 * Return an associative array of named->numeric HTML entities
+	 * Required to support HTML functions without objects in PHP4/PHP5
 	 * From php.net: function.get-html-translation-table.php
-	 * @param $input string input string
 	 * @return string
 	 */
-	 function named2numeric($str) {
+	 function getHTMLEntities () {
 		// define the conversion table
 		$html_entities = array(
-				"&apos;"=>"&#39;", 					"&minus;"=>"&#45;", 				"&circ;"=>"&#94;", 
-				"&tilde;"=>"&#126;", 				"&Scaron;"=>"&#138;", 			"&lsaquo;"=>"&#139;", 
-				"&OElig;"=>"&#140;", 				"&lsquo;"=>"&#145;", 				"&rsquo;"=>"&#146;", 
-				"&ldquo;"=>"&#147;", 				"&rdquo;"=>"&#148;", 				"&bull;"=>"&#149;", 
-				"&ndash;"=>"&#150;", 				"&mdash;"=>"&#151;", 			"&tilde;"=>"&#152;", 
-				"&trade;"=>"&#153;", 				"&scaron;"=>"&#154;", 			"&rsaquo;"=>"&#155;", 
-				"&oelig;"=>"&#156;", 				"&Yuml;"=>"&#159;", 				"&yuml;"=>"&#255;", 
-				"&OElig;"=>"&#338;", 				"&oelig;"=>"&#339;", 				"&Scaron;"=>"&#352;", 
-				"&scaron;"=>"&#353;", 			"&Yuml;"=>"&#376;", 				"&fnof;"=>"&#402;", 
-				"&circ;"=>"&#710;", 					"&tilde;"=>"&#732;", 				"&Alpha;"=>"&#913;", 
-				"&Beta;"=>"&#914;", 					"&Gamma;"=>"&#915;", 			"&Delta;"=>"&#916;", 
-				"&Epsilon;"=>"&#917;", 			"&Zeta;"=>"&#918;", 					"&Eta;"=>"&#919;", 
-				"&Theta;"=>"&#920;", 				"&Iota;"=>"&#921;", 					"&Kappa;"=>"&#922;", 
-				"&Lambda;"=>"&#923;", 			"&Mu;"=>"&#924;", 					"&Nu;"=>"&#925;", 
-				"&Xi;"=>"&#926;", 						"&Omicron;"=>"&#927;", 			"&Pi;"=>"&#928;", 
-				"&Rho;"=>"&#929;", 					"&Sigma;"=>"&#931;", 				"&Tau;"=>"&#932;", 
-				"&Upsilon;"=>"&#933;", 			"&Phi;"=>"&#934;", 					"&Chi;"=>"&#935;", 
-				"&Psi;"=>"&#936;", 					"&Omega;"=>"&#937;", 			"&alpha;"=>"&#945;", 
-				"&beta;"=>"&#946;", 				"&gamma;"=>"&#947;", 			"&delta;"=>"&#948;", 
-				"&epsilon;"=>"&#949;", 			"&zeta;"=>"&#950;", 					"&eta;"=>"&#951;", 
-				"&theta;"=>"&#952;", 				"&iota;"=>"&#953;", 					"&kappa;"=>"&#954;", 
-				"&lambda;"=>"&#955;", 			"&mu;"=>"&#956;", 					"&nu;"=>"&#957;", 
-				"&xi;"=>"&#958;", 						"&omicron;"=>"&#959;", 			"&pi;"=>"&#960;", 
-				"&rho;"=>"&#961;", 					"&sigmaf;"=>"&#962;", 			"&sigma;"=>"&#963;", 
-				"&tau;"=>"&#964;", 					"&upsilon;"=>"&#965;", 			"&phi;"=>"&#966;", 
-				"&chi;"=>"&#967;", 					"&psi;"=>"&#968;", 					"&omega;"=>"&#969;", 
-				"&thetasym;"=>"&#977;", 		"&upsih;"=>"&#978;", 				"&piv;"=>"&#982;", 
-				"&ensp;"=>"&#8194;", 				"&emsp;"=>"&#8195;", 			"&thinsp;"=>"&#8201;", 
-				"&zwnj;"=>"&#8204;", 				"&zwj;"=>"&#8205;", 				"&lrm;"=>"&#8206;", 
-				"&rlm;"=>"&#8207;", 				"&ndash;"=>"&#8211;", 			"&mdash;"=>"&#8212;", 
-				"&lsquo;"=>"&#8216;", 			"&rsquo;"=>"&#8217;", 			"&sbquo;"=>"&#8218;", 
-				"&ldquo;"=>"&#8220;", 			"&rdquo;"=>"&#8221;", 			"&bdquo;"=>"&#8222;", 
-				"&dagger;"=>"&#8224;", 			"&Dagger;"=>"&#8225;", 			"&bull;"=>"&#8226;", 
-				"&hellip;"=>"&#8230;", 			"&permil;"=>"&#8240;", 			"&prime;"=>"&#8242;", 
-				"&Prime;"=>"&#8243;", 			"&lsaquo;"=>"&#8249;", 			"&rsaquo;"=>"&#8250;", 
-				"&oline;"=>"&#8254;", 				"&frasl;"=>"&#8260;", 				"&euro;"=>"&#8364;",
-				"&image;"=>"&#8465;", 			"&weierp;"=>"&#8472;", 			"&real;"=>"&#8476;", 
-				"&trade;"=>"&#8482;", 				"&alefsym;"=>"&#8501;", 			"&larr;"=>"&#8592;", 
-				"&uarr;"=>"&#8593;", 				"&rarr;"=>"&#8594;", 				"&darr;"=>"&#8595;", 
-				"&harr;"=>"&#8596;", 				"&crarr;"=>"&#8629;", 				"&lArr;"=>"&#8656;", 
-				"&uArr;"=>"&#8657;", 				"&rArr;"=>"&#8658;", 				"&dArr;"=>"&#8659;", 
-				"&hArr;"=>"&#8660;", 				"&forall;"=>"&#8704;", 				"&part;"=>"&#8706;", 
-				"&exist;"=>"&#8707;", 				"&empty;"=>"&#8709;", 			"&nabla;"=>"&#8711;", 
-				"&isin;"=>"&#8712;", 				"&notin;"=>"&#8713;", 				"&ni;"=>"&#8715;", 
-				"&prod;"=>"&#8719;", 				"&sum;"=>"&#8721;", 				"&minus;"=>"&#8722;", 
-				"&lowast;"=>"&#8727;", 			"&radic;"=>"&#8730;", 				"&prop;"=>"&#8733;", 
-				"&infin;"=>"&#8734;", 				"&ang;"=>"&#8736;", 				"&and;"=>"&#8743;", 
-				"&or;"=>"&#8744;", 					"&cap;"=>"&#8745;", 				"&cup;"=>"&#8746;", 
-				"&int;"=>"&#8747;", 					"&there4;"=>"&#8756;", 			"&sim;"=>"&#8764;", 
-				"&cong;"=>"&#8773;", 				"&asymp;"=>"&#8776;", 			"&ne;"=>"&#8800;", 
-				"&equiv;"=>"&#8801;", 			"&le;"=>"&#8804;", 					"&ge;"=>"&#8805;", 
-				"&sub;"=>"&#8834;", 				"&sup;"=>"&#8835;", 				"&nsub;"=>"&#8836;", 
-				"&sube;"=>"&#8838;", 				"&supe;"=>"&#8839;", 				"&oplus;"=>"&#8853;", 
-				"&otimes;"=>"&#8855;", 			"&perp;"=>"&#8869;", 				"&sdot;"=>"&#8901;", 
-				"&lceil;"=>"&#8968;", 				"&rceil;"=>"&#8969;", 				"&lfloor;"=>"&#8970;", 
-				"&rfloor;"=>"&#8971;", 			"&lang;"=>"&#9001;", 				"&rang;"=>"&#9002;", 
-				"&loz;"=>"&#9674;", 				"&spades;"=>"&#9824;", 			"&clubs;"=>"&#9827;", 
-				"&hearts;"=>"&#9829;", 			"&diams;"=>"&#9830;");
+			"&Aacute;" => "&#193;",			"&aacute;" => "&#225;",			"&Acirc;" => "&#194;",
+			"&acirc;" => "&#226;",				"&acute;" => "&#180;",				"&AElig;" => "&#198;",
+			"&aelig;" => "&#230;",				"&Agrave;" => "&#192;",			"&agrave;" => "&#224;",
+			"&alefsym;" => "&#8501;",		"&Alpha;" => "&#913;",				"&alpha;" => "&#945;",
+			"&amp;" => "&#38;",					"&and;" => "&#8743;",				"&ang;" => "&#8736;",
+			"&apos;" => "&#39;",					"&Aring;" => "&#197;",				"&aring;" => "&#229;",
+			"&asymp;" => "&#8776;",			"&Atilde;" => "&#195;",				"&atilde;" => "&#227;",
+			"&Auml;" => "&#196;",				"&auml;" => "&#228;",				"&bdquo;" => "&#8222;",
+			"&Beta;" => "&#914;",				"&beta;" => "&#946;",				"&brvbar;" => "&#166;",
+			"&bull;" => "&#8226;",				"&cap;" => "&#8745;",				"&Ccedil;" => "&#199;",
+			"&ccedil;" => "&#231;",				"&cedil;" => "&#184;",				"&cent;" => "&#162;",
+			"&Chi;" => "&#935;",					"&chi;" => "&#967;",					"&circ;" => "&#94;",
+			"&clubs;" => "&#9827;",			"&cong;" => "&#8773;",			"&copy;" => "&#169;",
+			"&crarr;" => "&#8629;",			"&cup;" => "&#8746;",				"&curren;" => "&#164;",
+			"&dagger;" => "&#8224;",		"&Dagger;" => "&#8225;",		"&darr;" => "&#8595;",
+			"&dArr;" => "&#8659;",				"&deg;" => "&#176;",				"&Delta;" => "&#916;",
+			"&delta;" => "&#948;",				"&diams;" => "&#9830;",			"&divide;" => "&#247;",
+			"&Eacute;" => "&#201;",			"&eacute;" => "&#233;",			"&Ecirc;" => "&#202;",
+			"&ecirc;" => "&#234;",				"&Egrave;" => "&#200;",			"&egrave;" => "&#232;",
+			"&empty;" => "&#8709;",			"&emsp;" => "&#8195;",			"&ensp;" => "&#8194;",
+			"&Epsilon;" => "&#917;",			"&epsilon;" => "&#949;",			"&equiv;" => "&#8801;",
+			"&Eta;" => "&#919;",					"&eta;" => "&#951;",					"&ETH;" => "&#208;",
+			"&eth;" => "&#240;",					"&Euml;" => "&#203;",				"&euml;" => "&#235;",
+			"&euro;" => "&#8364;",				"&exist;" => "&#8707;",			"&fnof;" => "&#402;",
+			"&forall;" => "&#8704;",			"&frac12;" => "&#189;",			"&frac14;" => "&#188;",
+			"&frac34;" => "&#190;",			"&frasl;" => "&#8260;",				"&Gamma;" => "&#915;",
+			"&gamma;" => "&#947;",			"&ge;" => "&#8805;",				"&gt;" => "&#62;",
+			"&harr;" => "&#8596;",				"&hArr;" => "&#8660;",				"&hearts;" => "&#9829;",
+			"&hellip;" => "&#8230;",			"&Iacute;" => "&#205;",				"&iacute;" => "&#237;",
+			"&Icirc;" => "&#206;",				"&icirc;" => "&#238;",				"&iexcl;" => "&#161;",
+			"&Igrave;" => "&#204;",			"&igrave;" => "&#236;",			"&image;" => "&#8465;",
+			"&infin;" => "&#8734;",				"&int;" => "&#8747;",				"&Iota;" => "&#921;",
+			"&iota;" => "&#953;",				"&iquest;" => "&#191;",			"&isin;" => "&#8712;",
+			"&Iuml;" => "&#207;",				"&iuml;" => "&#239;",				"&Kappa;" => "&#922;",
+			"&kappa;" => "&#954;",			"&Lambda;" => "&#923;",			"&lambda;" => "&#955;",
+			"&lang;" => "&#9001;",				"&laquo;" => "&#171;",				"&larr;" => "&#8592;",
+			"&lArr;" => "&#8656;",				"&lceil;" => "&#8968;",				
+			"&ldquo;" => "&#8220;",			"&le;" => "&#8804;",					"&lfloor;" => "&#8970;",
+			"&lowast;" => "&#8727;",			"&loz;" => "&#9674;",				"&lrm;" => "&#8206;",
+			"&lsaquo;" => "&#8249;",			"&lsquo;" => "&#8216;",			"&lt;" => "&#60;",
+			"&macr;" => "&#175;",				"&mdash;" => "&#8212;",			"&micro;" => "&#181;",
+			"&middot;" => "&#183;",			"&minus;" => "&#45;",				"&Mu;" => "&#924;",
+			"&mu;" => "&#956;",					"&nabla;" => "&#8711;",			"&nbsp;" => "&#160;",
+			"&ndash;" => "&#8211;",			"&ne;" => "&#8800;",				"&ni;" => "&#8715;",
+			"&not;" => "&#172;",					"&notin;" => "&#8713;",			"&nsub;" => "&#8836;",
+			"&Ntilde;" => "&#209;",				"&ntilde;" => "&#241;",				"&Nu;" => "&#925;",
+			"&nu;" => "&#957;",					"&Oacute;" => "&#211;",			"&oacute;" => "&#243;",
+			"&Ocirc;" => "&#212;",				"&ocirc;" => "&#244;",				"&OElig;" => "&#338;",
+			"&oelig;" => "&#339;",				"&Ograve;" => "&#210;",			"&ograve;" => "&#242;",
+			"&oline;" => "&#8254;",			"&Omega;" => "&#937;",			"&omega;" => "&#969;",
+			"&Omicron;" => "&#927;",		"&omicron;" => "&#959;",			"&oplus;" => "&#8853;",
+			"&or;" => "&#8744;",					"&ordf;" => "&#170;",				"&ordm;" => "&#186;",
+			"&Oslash;" => "&#216;",			"&oslash;" => "&#248;",			"&Otilde;" => "&#213;",
+			"&otilde;" => "&#245;",				"&otimes;" => "&#8855;",			"&Ouml;" => "&#214;",
+			"&ouml;" => "&#246;",				"&para;" => "&#182;",				"&part;" => "&#8706;",
+			"&permil;" => "&#8240;",			"&perp;" => "&#8869;",				"&Phi;" => "&#934;",
+			"&phi;" => "&#966;",					"&Pi;" => "&#928;",					"&pi;" => "&#960;",
+			"&piv;" => "&#982;",					"&plusmn;" => "&#177;",			"&pound;" => "&#163;",
+			"&prime;" => "&#8242;",			"&Prime;" => "&#8243;",			"&prod;" => "&#8719;",
+			"&prop;" => "&#8733;",			"&Psi;" => "&#936;",					"&psi;" => "&#968;",
+			"&quot;" => "&#34;",					"&radic;" => "&#8730;",			"&rang;" => "&#9002;",
+			"&raquo;" => "&#187;",				"&rarr;" => "&#8594;",				"&rArr;" => "&#8658;",
+			"&rceil;" => "&#8969;",				"&rdquo;" => "&#8221;",			"&real;" => "&#8476;",
+			"&reg;" => "&#174;",					"&rfloor;" => "&#8971;",			"&Rho;" => "&#929;",
+			"&rho;" => "&#961;",					"&rlm;" => "&#8207;",				"&rsaquo;" => "&#8250;",
+			"&rsquo;" => "&#8217;",			"&sbquo;" => "&#8218;",			"&Scaron;" => "&#352;",
+			"&scaron;" => "&#353;",			"&sdot;" => "&#8901;",				"&sect;" => "&#167;",
+			"&shy;" => "&#173;",					"&Sigma;" => "&#931;",			"&sigma;" => "&#963;",
+			"&sigmaf;" => "&#962;",			"&sim;" => "&#8764;",				"&spades;" => "&#9824;",
+			"&sub;" => "&#8834;",				"&sube;" => "&#8838;",			"&sum;" => "&#8721;",
+			"&sup1;" => "&#185;",				"&sup2;" => "&#178;",				"&sup3;" => "&#179;",
+			"&sup;" => "&#8835;",				"&supe;" => "&#8839;",			"&szlig;" => "&#223;",
+			"&Tau;" => "&#932;",				"&tau;" => "&#964;",					"&there4;" => "&#8756;",
+			"&Theta;" => "&#920;",				"&theta;" => "&#952;",				"&thetasym;" => "&#977;",
+			"&thinsp;" => "&#8201;",			"&THORN;" => "&#222;",			"&thorn;" => "&#254;",
+			"&tilde;" => "&#126;",				"&times;" => "&#215;",				"&trade;" => "&#8482;",
+			"&Uacute;" => "&#218;",			"&uacute;" => "&#250;",			"&uarr;" => "&#8593;",
+			"&uArr;" => "&#8657;",				"&Ucirc;" => "&#219;",				"&ucirc;" => "&#251;",
+			"&Ugrave;" => "&#217;",			"&ugrave;" => "&#249;",			"&uml;" => "&#168;",
+			"&upsih;" => "&#978;",				"&Upsilon;" => "&#933;",			"&upsilon;" => "&#965;",
+			"&Uuml;" => "&#220;",				"&uuml;" => "&#252;",				"&weierp;" => "&#8472;",
+			"&Xi;" => "&#926;",					"&xi;" => "&#958;",					"&Yacute;" => "&#221;",
+			"&yacute;" => "&#253;",			"&yen;" => "&#165;",					"&yuml;" => "&#255;",
+			"&Yuml;" => "&#376;",				"&Zeta;" => "&#918;",				"&zeta;" => "&#950;",
+			"&zwj;" => "&#8205;",				"&zwnj;" => "&#8204;");
 
-		return strtr($str, $html_entities);
+		return $html_entities;
 	 }
 
 }
