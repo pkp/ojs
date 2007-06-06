@@ -137,7 +137,7 @@ class PubMedExportDom {
 			$articleIdListNode = &XMLCustomWriter::createElement($doc, 'ArticleIdList');
 			XMLCustomWriter::appendChild($root, $articleIdListNode);
 
-			$articleIdNode = XMLCustomWriter::createChildWithText($doc, $articleIdListNode, 'ArticleId', $article->getPublicArticleId());
+			$articleIdNode = &XMLCustomWriter::createChildWithText($doc, $articleIdListNode, 'ArticleId', $article->getPublicArticleId());
 			XMLCustomWriter::setAttribute($articleIdNode, 'IdType', 'pii');
 		}
 		
