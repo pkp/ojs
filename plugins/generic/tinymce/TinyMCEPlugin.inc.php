@@ -72,12 +72,25 @@ class TinyMCEPlugin extends GenericPlugin {
 			$additionalHeadData = $templateManager->get_template_vars('additionalHeadData');
 
 			$tinyMCE_scipt = '
-			<script language="javascript" type="text/javascript" src="'.$baseUrl.'/'.TINYMCE_JS_PATH.'/tiny_mce.js"></script>
+			<script language="javascript" type="text/javascript" src="'.$baseUrl.'/'.TINYMCE_JS_PATH.'/tiny_mce_gzip.js"></script>
 			<script language="javascript" type="text/javascript">
-				tinyMCE.init({
+				tinyMCE_GZ.init({
+				plugins : "paste",
 				mode : "textareas",
 				theme : "advanced",
-				theme_advanced_buttons1 : "bold,italic,underline,bullist,numlist,link,unlink,help,code",
+				theme_advanced_buttons1 : "pasteword,bold,italic,underline,bullist,numlist,link,unlink,help,code",
+				theme_advanced_buttons2 : "",
+				theme_advanced_buttons3 : "",
+				disk_cache : true,
+				debug : false
+    			});
+			</script>
+			<script language="javascript" type="text/javascript">
+				tinyMCE.init({
+				plugins : "paste",
+				mode : "textareas",
+				theme : "advanced",
+				theme_advanced_buttons1 : "pasteword,bold,italic,underline,bullist,numlist,link,unlink,help,code",
 				theme_advanced_buttons2 : "",
 				theme_advanced_buttons3 : ""
 				});

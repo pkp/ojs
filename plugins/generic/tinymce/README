@@ -13,16 +13,23 @@ This plugin is licensed under the GNU General Public License v2. See the file CO
 
 System Requirements
 -------------------
-The plugin requires the TinyMCE editor.  The latest release (2.0.6.1 as of this writing) can be downloaded at: http://tinymce.moxiecode.com/download.php
+The plugin requires the TinyMCE editor; the latest version of which (2.1.1.1 as of this writing) is now included with OJS.
 
 Installation
 ------------
 To install the plugin:
- - download and extract the TinyMCE editor into lib/tinymce
- - as Journal Manager, go into the "System Plugins" page and enable the TinyMCE
-   plugin.
+ - as Journal Manager, go into the "System Plugins" page and enable the TinyMCE plugin.
 
 Textareas/forms should now be enabled with the TinyMCE editor.
+
+Usage
+-----
+Now in TinyMCE is the ability to correct Windows characters (so-called "smart quotes" and others) when copy-pasting from Microsoft Word.
+
+To use this feature:
+- select the desired text in Microsoft Word and copy to the clipboard (Ctrl-C)
+- select the TinyMCE field for pasting and click the "Paste from Word" button
+- paste the text from the clipboard as directed (Ctrl-V)
 
 Localization
 ------------
