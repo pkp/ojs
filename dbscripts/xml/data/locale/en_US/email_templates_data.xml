@@ -411,12 +411,17 @@ If you have any questions, please contact me.
 			<field name="subject">Copyediting Request</field>
 			<field name="body">{$copyeditorName}:
 
-I would ask that you undertake the copyediting of the manuscript, "{$articleTitle}," for {$journalName}. The submission is found on the journal web site, along with a set of Instructions for Copyediting.
+I would ask that you undertake the copyediting of "{$articleTitle}" for {$journalName} by following these steps.
+1. Click on the Submission URL below.
+2. Log into the journal and click on the File that appears in Step 1.
+3. Consult Copyediting Instructions posted on webpage.
+4. Open the downloaded file and copyedit, while adding Author Queries as needed. 
+5. Save copyedited file, and upload to Step 1 of Copyediting.
+6. Send the COMPLETE email to the editor.
 
-Manuscript URL: {$submissionCopyeditingUrl}
+{$journalName} URL: {$journalUrl}
+Submission URL: {$submissionCopyeditingUrl}
 Username: {$copyeditorUsername}
-
-If you are unable to undertake this work at this time or have any questions, please contact me. Thank you for agreeing to undertake this important work for the journal.
 
 {$editorialContactSignature}</field>
 			<field name="description">This email is sent by a Section Editor to a submission's Copyeditor to request that they begin the copyediting process. It provides information about the submission and how to access it.</field>
@@ -446,13 +451,22 @@ Thank you for copyediting the manuscript, "{$articleTitle}," for {$journalName}.
 			<field name="subject">Copyediting Review Request</field>
 			<field name="body">{$authorName}:
 
-We have now copyedited your submission, "{$articleTitle}," for {$journalName}. To review the proposed changes and respond to Author Queries, please log into the journal web site using the link below. Download and open the Initial Copyedit File. After reviewing the copyediting, upload the file in Step 2 and send the COMPLETE email to the editor.
+Your submission "{$articleTitle}" for {$journalName} has been through the first step of copyediting, and is available for you to review by following these steps.
 
-This is the last opportunity that you have to make substantial changes. You will be asked to proofread the galleys, but at that stage we will only be able to correct minor typographical and layout errors.
+1. Click on the Submission URL below.
+2. Log into the journal and click on the File that appears in Step 1.
+3. Open the downloaded submission.
+4. Review the text, including copyediting proposals and Author Queries.
+5. Make any copyediting changes that would further improve the text.
+6. When completed, upload the file in Step 2.
+7. Click on METADATA to check indexing information for completeness and accuracy.
+8. Send the COMPLETE email to the editor and copyeditor.
 
-Manuscript URL: {$submissionCopyeditingUrl}
+Submission URL: {$submissionCopyeditingUrl}
 Username: {$authorUsername}
- 
+
+This is the last opportunity to make substantial copyediting changes to the submission. The proofreading stage, that follows the preparation of the galleys, is restricted to correcting typographical and layout errors.
+
 If you are unable to undertake this work at this time or have any questions, please contact me. Thank you for your contribution to this journal.
 
 {$editorialContactSignature}</field>
@@ -484,12 +498,17 @@ Thank you for reviewing the copyediting of your manuscript, "{$articleTitle}," f
 			<field name="subject">Copyediting Final Review</field>
 			<field name="body">{$copyeditorName}:
 
-The author and editor have now completed their review of the copyediting of the manuscript, "{$articleTitle}," for {$journalName}. The final "clean copy" can now be prepared for Layout.
+The author and editor have now completed their copyediting review of "{$articleTitle}" for {$journalName}. A "clean copy" now needs to be prepared for Layout by going through the following steps.
+1. Click on the Submission URL below.
+2. Log into the journal and click on the File that appears in Step 2.
+3. Open the downloaded file and incorporate all copyedits and query responses.
+4. Save clean file, and upload to Step 3 of Copyediting.
+5. Click on METADATA to check indexing information (saving any corrections).
+6. Send the COMPLETE email to the editor.
 
-Manuscript URL: {$submissionCopyeditingUrl}
+{$journalName} URL: {$journalUrl}
+Submission URL: {$submissionCopyeditingUrl}
 Username: {$copyeditorUsername}
-
-Thank you on behalf of the journal,
 
 {$editorialContactSignature}</field>
 			<field name="description">This email from the Section Editor to the Copyeditor requests that they perform a final round of copyediting on a submission before it enters the layout process.</field>
@@ -526,9 +545,13 @@ Thank you for completing the copyediting of the manuscript, "{$articleTitle}," f
 			<field name="subject">Request Galleys</field>
 			<field name="body">{$layoutEditorName}:
 
-I would ask that you prepare the galleys for the manuscript, "{$articleTitle}," for {$journalName}.
+The submission "{$articleTitle}" to {$journalName} now needs galleys laid out by following these steps.
+1. Click on the Submission URL below.
+2. Log into the journal and use the Layout Version file to create the galleys according to the journal's standards.
+3. Send the COMPLETE email to the editor.
 
-Manuscript URL: {$submissionLayoutUrl}
+{$journalName} URL: {$journalUrl}
+Submission URL: {$submissionLayoutUrl}
 Username: {$layoutEditorUsername}
 
 If you are unable to undertake this work at this time or have any questions, please contact me. Thank you for your contribution to this journal.
@@ -570,12 +593,16 @@ Thank you for preparing the galleys for the manuscript, "{$articleTitle}," for {
 			<field name="subject">Proofreading Request (Author)</field>
 			<field name="body">{$authorName}:
 
-We would ask that you proofread the galleys for your submission, "{$articleTitle}," for {$journalName}. To view the galleys, please log into the journal web site using the link below. Use the VIEW PROOF link to read what will be the published version of item for typographical and layout errors only. Record these errors in the Proofreading Corrections box, following the proofing instructions provided.
+Your submission "{$articleTitle}" to {$journalName} now needs to be proofread by folllowing these steps.
+1. Click on the Submission URL below.
+2. Log into the journal and view PROOFING INSTRUCTIONS
+3. Click on VIEW PROOF in Layout and proof the galley in the one or more formats used.
+4. Enter corrections (typorgraphical and format) in Proofreading Corrections.
+5. Save and email corrections to Layout Editor and Proofreader.
+6. Send the COMPLETE email to the editor.
 
-Manuscript URL: {$submissionUrl}
+Submission URL: {$submissionUrl}
 Username: {$authorUsername}
-
-If you are unable to undertake this work at this time or have any questions, please contact me. Thank you for your contribution to this journal.
 
 {$editorialContactSignature}</field>
 			<field name="description">This email from the Section Editor to the Author notifies them that an article's galleys are ready for proofreading. It provides information about the article and how to access it.</field>
@@ -607,7 +634,13 @@ If you subscribe to our notification service, you will receive an email of the T
 			<field name="subject">Proofreading Request</field>
 			<field name="body">{$proofreaderName}:
 
-I would ask that you proofread the galleys for the manuscript, "{$articleTitle}," for {$journalName}. 
+The submission "{$articleTitle}" to {$journalName} now needs to be proofread by following these steps.
+1. Click on the Submission URL below.
+2. Log into the journal and view PROOFING INSTRUCTIONS.
+3. Click on VIEW PROOF in Layout and proof the galley in the one or more formats used.
+4. Enter corrections (typorgraphical and format) in Proofreading Corrections.
+5. Save and email corrections to Layout Editor.
+6. Send the COMPLETE email to the editor.
 
 Manuscript URL: {$submissionUrl}
 Username: {$proofreaderUsername}
@@ -642,9 +675,14 @@ Thank you for proofreading the galleys for the manuscript, "{$articleTitle}," fo
 			<field name="subject">Proofreading Request (Layout Editor)</field>
 			<field name="body">{$layoutEditorName}:
 
-We would ask that make any corrections required as a result of proofreading the galleys for the manuscript, "{$articleTitle}," for {$journalName}.
+The submission "{$articleTitle}" to {$journalName} has been proofread by the author and proofreader, and any corrections should now be made by following these steps.
+1. Click on the Submission URL below.
+2. Log into the journal consult Proofreading Corrections to create corrected galleys.
+3. Upload the revised galleys.
+3. Send the COMPLETE email in Proofreading Step 3 to the editor.
 
-Manuscript URL: {$submissionUrl}
+{$journalName} URL: {$journalUrl}
+Subnmission URL: {$submissionUrl}
 Username: {$layoutEditorUsername}
 
 If you are unable to undertake this work at this time or have any questions, please contact me. Thank you for your contribution to this journal.
