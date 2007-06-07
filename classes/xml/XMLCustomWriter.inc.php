@@ -56,22 +56,21 @@ class XMLCustomWriter {
 
 	function &createTextNode(&$doc, $value) {
 
-		// 1) normalize all existing HTML entities to UTF-8
-		import('core.Transcoder');
-		$trans =& new Transcoder('HTML-ENTITIES', 'UTF-8');
-		$value = $trans->trans($value);
+		// normalize existing HTML special characters to ASCII
+		$value = strtr($value, array("&amp;" => "&", "&quot" => '"', "&lt;" => "<", "&gt;" => ">"));
 
 		// process strings that contain multibyte characters
 		if ( String::isUTF8($value) ) {
+			import('core.Transcoder');
 
-			// 2) convert UTF-8 to UTF-8 entities (numeric and named)
+			// convert UTF-8 to UTF-8 entities (numeric and named)
 			$trans =& new Transcoder('UTF-8', 'HTML-ENTITIES');
 			$value = $trans->trans($value);
 
-			// 3) convert windows-1252 entities to UTF-8 entities
+			// convert windows-1252 entities to UTF-8 entities
 			$value = &String::cp1252ToEntities($value);
 
-			// 4) convert UTF-8 entities back to UTF-8 characters
+			// convert UTF-8 entities back to UTF-8 characters
 			$trans =& new Transcoder('HTML-ENTITIES', 'UTF-8');
 			$value = $trans->trans($value);
 		}
