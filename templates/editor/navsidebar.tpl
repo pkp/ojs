@@ -10,7 +10,7 @@
  * $Id$
  *}
 
-<div class="block">
+<div class="block" id="sidebarEditor">
 	<span class="blockTitle">{translate key="user.role.editor"}</span>
 	
 	<span class="blockSubtitle">{translate key="article.submissions"}</span>

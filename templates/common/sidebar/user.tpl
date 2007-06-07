@@ -1,4 +1,15 @@
-<div class="block">
+{**
+ * user.tpl
+ *
+ * Copyright (c) 2003-2007 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * Common site sidebar menu -- user tools.
+ *
+ * $Id$
+ *}
+
+<div class="block" id="sidebarUser">
 	<span class="blockTitle">{translate key="navigation.user"}</span>
 	{if $isUserLoggedIn}
 	{translate key="navigation.loggedInAs"}<br />

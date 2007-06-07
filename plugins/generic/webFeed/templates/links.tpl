@@ -1,4 +1,15 @@
-<div class="block">
+{**
+ * links.tpl
+ *
+ * Copyright (c) 2003-2007 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * Feed plugin navigation sidebar.
+ *
+ * $Id$
+ *}
+
+<div class="block" id="sidebarWebFeed">
 {if ( $displayPage eq "all" ) || ($displayPage eq "issue" && $issue) }
 	<a href="{url page="feed" op="atom"}">
 	<img src="{$baseUrl}/plugins/generic/webFeed/templates/images/atom10_logo.gif" order="0" alt="" border="0" /></a>

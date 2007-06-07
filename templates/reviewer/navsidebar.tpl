@@ -14,7 +14,7 @@
    see if the user object actually exists before displaying submission counts. *}
 
 {if $isUserLoggedIn}
-	<div class="block">
+	<div class="block" id="sidebarReviewer">
 		<span class="blockTitle">{translate key="user.role.reviewer"}</span>
 		<span class="blockSubtitle">{translate key="article.submissions"}</span>
 		<ul>
