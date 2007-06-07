@@ -147,6 +147,9 @@ class ThesisHandler extends Handler {
 			$templateMgr->assign('journal', $journal);
 			$templateMgr->assign('thesis', $thesis);
 			$templateMgr->append('pageHierarchy', array(Request::url(null, 'thesis'), 'plugins.generic.thesis.theses'));
+			$thesisMetaCustomHeaders = $templateMgr->fetch($thesisPlugin->getTemplatePath() . 'metadata.tpl');
+			$metaCustomHeaders = $templateMgr->get_template_vars('metaCustomHeaders');
+			$templateMgr->assign('metaCustomHeaders', $metaCustomHeaders . "\n" . $thesisMetaCustomHeaders);
 			$templateMgr->display($thesisPlugin->getTemplatePath() . 'view.tpl');
 			} else {
 				Request::redirect(null, 'thesis');

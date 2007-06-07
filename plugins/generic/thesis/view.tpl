@@ -9,8 +9,8 @@
  * $Id$
  *}
 
+{assign var="pageCrumbTitleTranslated" value=$thesis->getStudentLastName()}
 {assign var="pageTitleTranslated" value=$thesis->getTitle()}
-{include file="../plugins/generic/thesis/metadata.tpl" assign=metaCustomHeaders}
 {include file="common/header.tpl"}
 
 <table width="100%">
