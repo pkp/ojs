@@ -21,6 +21,35 @@
 
 <br />
 
+{if !$dateFrom}
+{assign var="dateFrom" value="--"}
+{/if}
+
+{if !$dateTo}
+{assign var="dateTo" value="--"}
+{/if}
+
+<form method="post" action="{plugin_url path="theses"}">
+	<select name="searchField" size="1" class="selectMenu">
+		{html_options_translate options=$fieldOptions selected=$searchField}
+	</select>
+	<select name="searchMatch" size="1" class="selectMenu">
+		<option value="contains"{if $searchMatch == 'contains'} selected="selected"{/if}>{translate key="form.contains"}</option>
+		<option value="is"{if $searchMatch == 'is'} selected="selected"{/if}>{translate key="form.is"}</option>
+	</select>
+	<input type="text" size="15" name="search" class="textField" value="{$search|escape}" />
+	<br/>
+	{translate key="plugins.generic.thesis.manager.dateApproved"}
+	{translate key="common.between"}
+	{html_select_date prefix="dateFrom" time=$dateFrom all_extra="class=\"selectMenu\"" year_empty="" month_empty="" day_empty="" start_year="$yearOffsetPast"}
+	{translate key="common.and"}
+	{html_select_date prefix="dateTo" time=$dateTo all_extra="class=\"selectMenu\"" year_empty="" month_empty="" day_empty="" start_year="$yearOffsetPast"}
+	<br/>
+	<input type="submit" value="{translate key="common.search"}" class="button" />
+</form>
+
+<br />
+
 <table width="100%" class="listing">
 	<tr>
 		<td colspan="5" class="headseparator">&nbsp;</td>
@@ -47,7 +76,14 @@
 		<td colspan="5" class="{if $theses->eof()}end{/if}separator">&nbsp;</td>
 	</tr>
 {/iterate}
-{if $theses->wasEmpty()}
+{if $theses->wasEmpty() and $search != ""}
+	<tr>
+		<td colspan="5" class="nodata">{translate key="plugins.generic.thesis.manager.noResults"}</td>
+	</tr>
+	<tr>
+		<td colspan="5" class="endseparator">&nbsp;</td>
+	</tr>
+{elseif $theses->wasEmpty()}
 	<tr>
 		<td colspan="5" class="nodata">{translate key="plugins.generic.thesis.manager.noneCreated"}</td>
 	</tr>

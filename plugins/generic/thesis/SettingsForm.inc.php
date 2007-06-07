@@ -23,6 +23,9 @@ class SettingsForm extends Form {
 	/** @var $plugin object */
 	var $plugin;
 
+	/** @var validOrder array keys are valid thesis order values */
+	var $validOrder;
+
 	/**
 	 * Constructor
 	 * @param $plugin object
@@ -32,12 +35,34 @@ class SettingsForm extends Form {
 		$this->journalId = $journalId;
 		$this->plugin = &$plugin;
 
+		$this->validOrder = array (
+			THESIS_ORDER_SUBMISSION_DATE_ASC => Locale::translate('plugins.generic.thesis.settings.order.submissionDateAsc'),
+			THESIS_ORDER_SUBMISSION_DATE_DESC => Locale::translate('plugins.generic.thesis.settings.order.submissionDateDesc'),
+			THESIS_ORDER_APPROVAL_DATE_ASC => Locale::translate('plugins.generic.thesis.settings.order.approvalDateAsc'),
+			THESIS_ORDER_APPROVAL_DATE_DESC => Locale::translate('plugins.generic.thesis.settings.order.approvalDateDesc'),
+			THESIS_ORDER_LASTNAME_ASC => Locale::translate('plugins.generic.thesis.settings.order.lastNameAsc'),
+			THESIS_ORDER_LASTNAME_DESC => Locale::translate('plugins.generic.thesis.settings.order.lastNameDesc'),
+			THESIS_ORDER_TITLE_ASC => Locale::translate('plugins.generic.thesis.settings.order.titleAsc'),
+			THESIS_ORDER_TITLE_DESC => Locale::translate('plugins.generic.thesis.settings.order.titleDesc')
+		);
+
 		parent::Form($plugin->getTemplatePath() . 'settingsForm.tpl');
 	
 		$this->addCheck(new FormValidator($this, 'thesisName', 'required', 'plugins.generic.thesis.settings.thesisNameRequired'));
 		$this->addCheck(new FormValidatorEmail($this, 'thesisEmail', 'required', 'plugins.generic.thesis.settings.thesisEmailRequired'));
+
+		$this->addCheck(new FormValidatorInSet($this, 'thesisOrder', 'required', 'plugins.generic.thesis.settings.thesisOrderValid', array_keys($this->validOrder)));
 	}
 	
+	/**
+	 * Display the form.
+	 */
+	function display() {
+		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign('validOrder', $this->validOrder);
+		parent::display();
+	}
+
 	/**
 	 * Initialize form data.
 	 */
@@ -46,6 +71,10 @@ class SettingsForm extends Form {
 		$plugin = &$this->plugin;
 
 		$this->_data = array(
+			'enableUploadCode' => $plugin->getSetting($journalId, 'enableUploadCode'),
+			'uploadCode' => $plugin->getSetting($journalId, 'uploadCode'),
+			'validOrder' => $this->validOrder,
+			'thesisOrder' => $plugin->getSetting($journalId, 'thesisOrder'),
 			'thesisName' => $plugin->getSetting($journalId, 'thesisName'),
 			'thesisEmail' => $plugin->getSetting($journalId, 'thesisEmail'),
 			'thesisPhone' => $plugin->getSetting($journalId, 'thesisPhone'),
@@ -59,7 +88,11 @@ class SettingsForm extends Form {
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->readUserVars(array('thesisName', 'thesisEmail', 'thesisPhone', 'thesisFax', 'thesisMailingAddress', 'thesisIntroduction'));
+		$this->readUserVars(array('enableUploadCode', 'uploadCode', 'thesisOrder', 'thesisName', 'thesisEmail', 'thesisPhone', 'thesisFax', 'thesisMailingAddress', 'thesisIntroduction'));
+
+		if (!empty($this->_data['enableUploadCode'])) {
+			$this->addCheck(new FormValidator($this, 'uploadCode', 'required', 'plugins.generic.thesis.settings.uploadCodeRequired'));
+		}
 	}
 	
 	/**
@@ -69,12 +102,15 @@ class SettingsForm extends Form {
 		$plugin = &$this->plugin;
 		$journalId = $this->journalId;
 
-		$plugin->updateSetting($journalId, 'thesisName', $this->getData('thesisName'));
-		$plugin->updateSetting($journalId, 'thesisEmail', $this->getData('thesisEmail'));
-		$plugin->updateSetting($journalId, 'thesisPhone', $this->getData('thesisPhone'));
-		$plugin->updateSetting($journalId, 'thesisFax', $this->getData('thesisFax'));
-		$plugin->updateSetting($journalId, 'thesisMailingAddress', $this->getData('thesisMailingAddress'));
-		$plugin->updateSetting($journalId, 'thesisIntroduction', $this->getData('thesisIntroduction'));
+		$plugin->updateSetting($journalId, 'enableUploadCode', $this->getData('enableUploadCode'), 'bool');
+		$plugin->updateSetting($journalId, 'uploadCode', $this->getData('uploadCode'), 'string');
+		$plugin->updateSetting($journalId, 'thesisOrder', $this->getData('thesisOrder'), 'int');
+		$plugin->updateSetting($journalId, 'thesisName', $this->getData('thesisName'), 'string');
+		$plugin->updateSetting($journalId, 'thesisEmail', $this->getData('thesisEmail'), 'string');
+		$plugin->updateSetting($journalId, 'thesisPhone', $this->getData('thesisPhone'), 'string');
+		$plugin->updateSetting($journalId, 'thesisFax', $this->getData('thesisFax'), 'string');
+		$plugin->updateSetting($journalId, 'thesisMailingAddress', $this->getData('thesisMailingAddress'), 'string');
+		$plugin->updateSetting($journalId, 'thesisIntroduction', $this->getData('thesisIntroduction'), 'string');
 	}
 	
 }

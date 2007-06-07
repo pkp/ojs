@@ -38,6 +38,7 @@ Thank you.
 Title : {$title} 
 Author : {$studentName}
 Degree : {$degree}
+Degree Name: {$degreeName}
 Department : {$department}
 University : {$university}
 Acceptance Date : {$dateApproved}

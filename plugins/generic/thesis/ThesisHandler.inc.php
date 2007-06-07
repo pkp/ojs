@@ -22,9 +22,13 @@ class ThesisHandler extends Handler {
 	 */
 	function index() {
 		ThesisHandler::setupTemplate();
-
 		$journal = &Request::getJournal();
-		$journalId = $journal->getJournalId();
+
+		if ($journal != null) {
+			$journalId = $journal->getJournalId();
+		} else {
+			Request::redirect(null, 'index');
+		}
 
 		$thesisPlugin = &PluginRegistry::getPlugin('generic', 'ThesisPlugin');
 
@@ -33,19 +37,44 @@ class ThesisHandler extends Handler {
 		}
 
 		if ($thesesEnabled) {
+			$searchField = null;
+			$searchMatch = null;
+			$search = Request::getUserVar('search');
+
+			if (isset($search)) {
+				$searchField = Request::getUserVar('searchField');
+				$searchMatch = Request::getUserVar('searchMatch');
+			}			
+
 			$thesisDao = &DAORegistry::getDAO('ThesisDAO');
 			$rangeInfo = &Handler::getRangeInfo('theses');
-			$theses = &$thesisDao->getActiveThesesByJournalId($journalId, $rangeInfo);
+			$resultOrder = $thesisPlugin->getSetting($journalId, 'thesisOrder');
+			
+			$theses = &$thesisDao->getActiveThesesByJournalId($journalId, $searchField, $search, $searchMatch, null, null, $resultOrder, $rangeInfo);
 			$thesisIntroduction = $thesisPlugin->getSetting($journalId, 'thesisIntroduction');
 
 			$templateMgr = &TemplateManager::getManager();
 			$templateMgr->assign('theses', $theses);
 			$templateMgr->assign('thesisIntroduction', $thesisIntroduction);
+			$templateMgr->assign('searchField', $searchField);
+			$templateMgr->assign('searchMatch', $searchMatch);
+			$templateMgr->assign('search', $search);
+
+			$fieldOptions = Array(
+				THESIS_FIELD_FIRSTNAME => 'plugins.generic.thesis.studentFirstName',
+				THESIS_FIELD_LASTNAME => 'plugins.generic.thesis.studentLastName',
+				THESIS_FIELD_DEPARTMENT => 'plugins.generic.thesis.department',
+				THESIS_FIELD_UNIVERSITY => 'plugins.generic.thesis.university',
+				THESIS_FIELD_TITLE => 'plugins.generic.thesis.title',
+				THESIS_FIELD_ABSTRACT => 'plugins.generic.thesis.abstract',
+				THESIS_FIELD_SUBJECT => 'plugins.generic.thesis.keyword'
+			);
+			$templateMgr->assign('fieldOptions', $fieldOptions);
+
 			$templateMgr->display($thesisPlugin->getTemplatePath() . 'index.tpl');
 		} else {
 			Request::redirect(null, 'index');
 		}
-
 	}
 	
 	/**
@@ -53,9 +82,13 @@ class ThesisHandler extends Handler {
 	 */
 	function submit() {
 		ThesisHandler::setupTemplate();
-
 		$journal = &Request::getJournal();
-		$journalId = $journal->getJournalId();
+
+		if ($journal != null) {
+			$journalId = $journal->getJournalId();
+		} else {
+			Request::redirect(null, 'index');
+		}
 
 		$thesisPlugin = &PluginRegistry::getPlugin('generic', 'ThesisPlugin');
 
@@ -65,9 +98,13 @@ class ThesisHandler extends Handler {
 
 		if ($thesesEnabled) {
 			$thesisPlugin->import('StudentThesisForm');
+			$enableUploadCode = $thesisPlugin->getSetting($journalId, 'enableUploadCode');
+			$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
+			$journalSettings = &$journalSettingsDao->getJournalSettings($journalId);
 
 			$templateMgr = &TemplateManager::getManager();
 			$templateMgr->append('pageHierarchy', array(Request::url(null, 'thesis'), 'plugins.generic.thesis.theses'));
+			$templateMgr->assign('journalSettings', $journalSettings);
 			$thesisDao = &DAORegistry::getDAO('ThesisDAO');
 
 			$thesisForm = &new StudentThesisForm();
@@ -85,9 +122,13 @@ class ThesisHandler extends Handler {
 	 */
 	function view($args = array()) {
 		ThesisHandler::setupTemplate();
-
 		$journal = &Request::getJournal();
-		$journalId = $journal->getJournalId();
+
+		if ($journal != null) {
+			$journalId = $journal->getJournalId();
+		} else {
+			Request::redirect(null, 'index');
+		}
 
 		$thesisPlugin = &PluginRegistry::getPlugin('generic', 'ThesisPlugin');
 
@@ -103,6 +144,7 @@ class ThesisHandler extends Handler {
 			$thesis = &$thesisDao->getThesis($thesisId);
 
 			$templateMgr = &TemplateManager::getManager();
+			$templateMgr->assign('journal', $journal);
 			$templateMgr->assign('thesis', $thesis);
 			$templateMgr->append('pageHierarchy', array(Request::url(null, 'thesis'), 'plugins.generic.thesis.theses'));
 			$templateMgr->display($thesisPlugin->getTemplatePath() . 'view.tpl');
@@ -119,9 +161,13 @@ class ThesisHandler extends Handler {
 	 */
 	function save() {
 		parent::validate();
-		
 		$journal = &Request::getJournal();
-		$journalId = $journal->getJournalId();
+
+		if ($journal != null) {
+			$journalId = $journal->getJournalId();
+		} else {
+			Request::redirect(null, 'index');
+		}
 
 		$thesisPlugin = &PluginRegistry::getPlugin('generic', 'ThesisPlugin');
 
@@ -130,7 +176,6 @@ class ThesisHandler extends Handler {
 		}
 
 		if ($thesesEnabled) {
-
 			$thesisDao = &DAORegistry::getDAO('ThesisDAO');
 			$thesisPlugin->import('StudentThesisForm');
 
@@ -145,8 +190,11 @@ class ThesisHandler extends Handler {
 			} else {
 				ThesisHandler::setupTemplate();
 
+				$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
+				$journalSettings = &$journalSettingsDao->getJournalSettings($journalId);
+
 				$templateMgr = &TemplateManager::getManager();
-				$templateMgr->append('pageHierarchy', array(Request::url(null, 'theses'), 'plugins.generic.thesis.theses'));
+				$templateMgr->assign('journalSettings', $journalSettings);
 				$thesisForm->display();
 			}
 			
@@ -154,6 +202,24 @@ class ThesisHandler extends Handler {
 				Request::redirect(null, 'index');
 		}	
 	}	
+
+	/**
+	 * Captcha support.
+	 */
+	function viewCaptcha($args) {
+		$captchaId = (int) array_shift($args);
+		import('captcha.CaptchaManager');
+		$captchaManager =& new CaptchaManager();
+		if ($captchaManager->isEnabled()) {
+			$captchaDao =& DAORegistry::getDAO('CaptchaDAO');
+			$captcha =& $captchaDao->getCaptcha($captchaId);
+			if ($captcha) {
+				$captchaManager->generateImage($captcha);
+				exit();
+			}
+		}
+		Request::redirect(null, 'thesis');
+	}
 
 	/**
 	 * Setup common template variables.

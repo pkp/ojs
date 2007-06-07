@@ -16,6 +16,27 @@
 
 import('db.DAO');
 
+/* These constants are used for user-selectable search fields. */
+define('THESIS_FIELD_FIRSTNAME',	'student_first_name');
+define('THESIS_FIELD_LASTNAME', 	'student_last_name');
+define('THESIS_FIELD_EMAIL', 		'student_email');
+define('THESIS_FIELD_DEPARTMENT', 	'department');
+define('THESIS_FIELD_UNIVERSITY', 	'university');
+define('THESIS_FIELD_SUBJECT', 		'subject');
+define('THESIS_FIELD_TITLE', 		'title');
+define('THESIS_FIELD_ABSTRACT', 	'abstract');
+define('THESIS_FIELD_NONE', 		null);
+
+/* These constants are used for sorting thesis abstracts. */
+define('THESIS_ORDER_SUBMISSION_DATE_ASC',	1);
+define('THESIS_ORDER_SUBMISSION_DATE_DESC',	2);
+define('THESIS_ORDER_APPROVAL_DATE_ASC', 	3);
+define('THESIS_ORDER_APPROVAL_DATE_DESC',	4);
+define('THESIS_ORDER_LASTNAME_ASC',			5);
+define('THESIS_ORDER_LASTNAME_DESC',		6);
+define('THESIS_ORDER_TITLE_ASC',			7);
+define('THESIS_ORDER_TITLE_DESC',			8);
+
 class ThesisDAO extends DAO {
 
 	/**
@@ -86,20 +107,32 @@ class ThesisDAO extends DAO {
 		$thesis->setJournalId($row['journal_id']);
 		$thesis->setStatus($row['status']);
 		$thesis->setDegree($row['degree']);
+		$thesis->setDegreeName($row['degree_name']);
 		$thesis->setDepartment($row['department']);
 		$thesis->setUniversity($row['university']);
 		$thesis->setDateApproved($this->dateFromDB($row['date_approved']));
 		$thesis->setTitle($row['title']);
 		$thesis->setAbstract($row['abstract']);
 		$thesis->setUrl($row['url']);
+		$thesis->setComment($row['comment']);
 		$thesis->setStudentFirstName($row['student_first_name']);
 		$thesis->setStudentMiddleName($row['student_middle_name']);
 		$thesis->setStudentLastName($row['student_last_name']);
 		$thesis->setStudentEmail($row['student_email']);
+		$thesis->setStudentEmailPublish($row['student_email_publish']);
+		$thesis->setStudentBio($row['student_bio']);
 		$thesis->setSupervisorFirstName($row['supervisor_first_name']);
 		$thesis->setSupervisorMiddleName($row['supervisor_middle_name']);
 		$thesis->setSupervisorLastName($row['supervisor_last_name']);
 		$thesis->setSupervisorEmail($row['supervisor_email']);
+		$thesis->setDiscipline($row['discipline']);
+		$thesis->setSubjectClass($row['subject_class']);
+		$thesis->setSubject($row['subject']);
+		$thesis->setCoverageGeo($row['coverage_geo']);
+		$thesis->setCoverageChron($row['coverage_chron']);
+		$thesis->setCoverageSample($row['coverage_sample']);
+		$thesis->setMethod($row['method']);
+		$thesis->setLanguage($row['language']);
 		
 		return $thesis;
 	}
@@ -112,27 +145,39 @@ class ThesisDAO extends DAO {
 	function insertThesis(&$thesis) {
 		$ret = $this->update(
 			sprintf('INSERT INTO theses
-				(journal_id, status, degree, department, university, date_approved, title, abstract, url, student_first_name, student_middle_name, student_last_name, student_email, supervisor_first_name, supervisor_middle_name, supervisor_last_name, supervisor_email)
+				(journal_id, status, degree, degree_name, department, university, date_approved, title, abstract, url, comment, student_first_name, student_middle_name, student_last_name, student_email, student_email_publish, student_bio, supervisor_first_name, supervisor_middle_name, supervisor_last_name, supervisor_email, discipline, subject_class, subject, coverage_geo, coverage_chron, coverage_sample, method, language)
 				VALUES
-				(?, ?, ?, ?, ?, %s, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, %s, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
 				$this->dateToDB($thesis->getDateApproved())),
 			array(
 				$thesis->getJournalId(),
 				$thesis->getStatus(),
 				$thesis->getDegree(),
+				$thesis->getDegreeName(),
 				$thesis->getDepartment(),
 				$thesis->getUniversity(),
 				$thesis->getTitle(),
 				$thesis->getAbstract(),
 				$thesis->getUrl(),
+				$thesis->getComment(),
 				$thesis->getStudentFirstName(),
 				$thesis->getStudentMiddleName(),
 				$thesis->getStudentLastName(),
 				$thesis->getStudentEmail(),
+				$thesis->getStudentEmailPublish(),
+				$thesis->getStudentBio(),
 				$thesis->getSupervisorFirstName(),
 				$thesis->getSupervisorMiddleName(),
 				$thesis->getSupervisorLastName(),
-				$thesis->getSupervisorEmail()
+				$thesis->getSupervisorEmail(),
+				$thesis->getDiscipline(),
+				$thesis->getSubjectClass(),
+				$thesis->getSubject(),
+				$thesis->getCoverageGeo(),
+				$thesis->getCoverageChron(),
+				$thesis->getCoverageSample(),
+				$thesis->getMethod(),
+				$thesis->getLanguage()
 			)
 		);
 		$thesis->setThesisId($this->getInsertThesisId());
@@ -151,39 +196,63 @@ class ThesisDAO extends DAO {
 					journal_id = ?,
 					status = ?,
 					degree = ?,
+					degree_name = ?,
 					department = ?,
 					university = ?,
 					date_approved = %s,
 					title = ?,
 					abstract = ?,
 					url = ?,
+					comment = ?,
 					student_first_name = ?,
 					student_middle_name = ?,
 					student_last_name = ?,
 					student_email = ?,
+					student_email_publish = ?,
+					student_bio = ?,
 					supervisor_first_name = ?,
 					supervisor_middle_name = ?,
 					supervisor_last_name = ?,
-					supervisor_email = ?
+					supervisor_email = ?,
+					discipline = ?,
+					subject_class = ?,
+					subject = ?,
+					coverage_geo = ?,
+					coverage_chron = ?,
+					coverage_sample = ?,
+					method = ?,
+					language = ?
 				WHERE thesis_id = ?',
 				$this->dateToDB($thesis->getDateApproved())),
 			array(
 				$thesis->getJournalId(),
 				$thesis->getStatus(),
 				$thesis->getDegree(),
+				$thesis->getDegreeName(),
 				$thesis->getDepartment(),
 				$thesis->getUniversity(),
 				$thesis->getTitle(),
 				$thesis->getAbstract(),
 				$thesis->getUrl(),
+				$thesis->getComment(),
 				$thesis->getStudentFirstName(),
 				$thesis->getStudentMiddleName(),
 				$thesis->getStudentLastName(),
 				$thesis->getStudentEmail(),
+				$thesis->getStudentEmailPublish(),
+				$thesis->getStudentBio(),
 				$thesis->getSupervisorFirstName(),
 				$thesis->getSupervisorMiddleName(),
 				$thesis->getSupervisorLastName(),
 				$thesis->getSupervisorEmail(),
+				$thesis->getDiscipline(),
+				$thesis->getSubjectClass(),
+				$thesis->getSubject(),
+				$thesis->getCoverageGeo(),
+				$thesis->getCoverageChron(),
+				$thesis->getCoverageSample(),
+				$thesis->getMethod(),
+				$thesis->getLanguage(),
 				$thesis->getThesisId()
 			)
 		);
@@ -222,11 +291,96 @@ class ThesisDAO extends DAO {
 	/**
 	 * Retrieve an array of theses matching a particular journal ID.
 	 * @param $journalId int
+	 * @param $searchType int optional, which field to search
+	 * @param $search string optional, string to match
+	 * @param $searchMatch string optional, type of match ('is' vs. 'contains')
+	 * @param $dateFrom date optional, starting approval date
+	 * @param $dateTo date optional, ending approval date
+	 * @param $resultOrder int optional, order of the results
+	 * @param $rangeInfo object DBRangeInfo object describing range of results to return
 	 * @return object DAOResultFactory containing matching Theses 
 	 */
-	function &getThesesByJournalId($journalId, $rangeInfo = null) {
+	function &getThesesByJournalId($journalId, $searchType = null, $search = null, $searchMatch = null, $dateFrom = null, $dateTo = null, $resultOrder = null, $rangeInfo = null) {
+		$paramArray = array((int) $journalId);
+		$searchSql = '';
+
+		if (!empty($search)) switch ($searchType) {
+			case THESIS_FIELD_FIRSTNAME:
+				$searchSql = 'AND LOWER(student_first_name) ' . ($searchMatch=='is'?'=':'LIKE') . ' LOWER(?)';
+				$paramArray[] = ($searchMatch=='is'?$search:'%' . $search . '%');
+				break;
+			case THESIS_FIELD_LASTNAME:
+				$searchSql = 'AND LOWER(student_last_name) ' . ($searchMatch=='is'?'=':'LIKE') . ' LOWER(?)';
+				$paramArray[] = ($searchMatch=='is'?$search:'%' . $search . '%');
+				break;
+			case THESIS_FIELD_EMAIL:
+				$searchSql = 'AND LOWER(student_email) ' . ($searchMatch=='is'?'=':'LIKE') . ' LOWER(?)';
+				$paramArray[] = ($searchMatch=='is'?$search:'%' . $search . '%');
+				break;
+			case THESIS_FIELD_DEPARTMENT:
+				$searchSql = 'AND LOWER(department) ' . ($searchMatch=='is'?'=':'LIKE') . ' LOWER(?)';
+				$paramArray[] = ($searchMatch=='is'?$search:'%' . $search . '%');
+				break;
+			case THESIS_FIELD_UNIVERSITY:
+				$searchSql = 'AND LOWER(university) ' . ($searchMatch=='is'?'=':'LIKE') . ' LOWER(?)';
+				$paramArray[] = ($searchMatch=='is'?$search:'%' . $search . '%');
+				break;
+			case THESIS_FIELD_TITLE:
+				$searchSql = 'AND LOWER(title) ' . ($searchMatch=='is'?'=':'LIKE') . ' LOWER(?)';
+				$paramArray[] = ($searchMatch=='is'?$search:'%' . $search . '%');
+				break;
+			case THESIS_FIELD_SUBJECT:
+				$searchSql = 'AND LOWER(subject) ' . ($searchMatch=='is'?'=':'LIKE') . ' LOWER(?)';
+				$paramArray[] = ($searchMatch=='is'?$search:'%' . $search . '%');
+				break;
+			case THESIS_FIELD_ABSTRACT:
+				$searchSql = 'AND LOWER(abstract) ' . ($searchMatch=='is'?'=':'LIKE') . ' LOWER(?)';
+				$paramArray[] = ($searchMatch=='is'?$search:'%' . $search . '%');
+				break;
+		}
+
+		if (!empty($dateFrom) || !empty($dateTo)) {
+			if (!empty($dateFrom)) {
+				$searchSql .= ' AND date_approved >= ' . $this->datetimeToDB($dateFrom);
+			}
+			if (!empty($dateTo)) {
+					$searchSql .= ' AND date_approved <= ' . $this->datetimeToDB($dateTo);
+				}
+		}
+
+		switch ($resultOrder) {
+			case THESIS_ORDER_SUBMISSION_DATE_ASC:
+				$searchSql .= ' ORDER BY thesis_id ASC';
+				break;
+			case THESIS_ORDER_SUBMISSION_DATE_DESC:
+				$searchSql .= ' ORDER BY thesis_id DESC';
+				break;
+			case THESIS_ORDER_APPROVAL_DATE_ASC:
+				$searchSql .= ' ORDER BY date_approved ASC, student_last_name ASC, title ASC';
+				break;
+			case THESIS_ORDER_APPROVAL_DATE_DESC:
+				$searchSql .= ' ORDER BY date_approved DESC, student_last_name ASC, title ASC';
+				break;
+			case THESIS_ORDER_LASTNAME_ASC:
+				$searchSql .= ' ORDER BY student_last_name ASC, title ASC';
+				break;
+			case THESIS_ORDER_LASTNAME_DESC:
+				$searchSql .= ' ORDER BY student_last_name DESC, title ASC';
+				break;
+			case THESIS_ORDER_TITLE_ASC:
+				$searchSql .= ' ORDER BY title ASC, student_last_name ASC';
+				break;
+			case THESIS_ORDER_TITLE_DESC:
+				$searchSql .= ' ORDER BY title DESC, student_last_name ASC';
+				break;
+			default:
+				$searchSql .= ' ORDER BY thesis_id DESC';
+		}
+		
 		$result = &$this->retrieveRange(
-			'SELECT * FROM theses WHERE journal_id = ? ORDER BY thesis_id DESC', $journalId, $rangeInfo
+			'SELECT * FROM theses WHERE journal_id = ? ' . $searchSql,
+			$paramArray,
+			$rangeInfo
 		);
 
 		$returner = &new DAOResultFactory($result, $this, '_returnThesisFromRow');
@@ -236,14 +390,99 @@ class ThesisDAO extends DAO {
 	/**
 	 * Retrieve an array of theses with active status matching a particular journal ID.
 	 * @param $journalId int
+	 * @param $searchType int optional, which field to search
+	 * @param $search string optional, string to match
+	 * @param $searchMatch string optional, type of match ('is' vs. 'contains')
+	 * @param $dateFrom date optional, starting approval date
+	 * @param $dateTo date optional, ending approval date
+	 * @param $resultOrder int optional, order of the results
+	 * @param $rangeInfo object DBRangeInfo object describing range of results to return
 	 * @return object DAOResultFactory containing matching Theses 
 	 */
-	function &getActiveThesesByJournalId($journalId, $rangeInfo = null) {
+	function &getActiveThesesByJournalId($journalId, $searchType = null, $search = null, $searchMatch = null, $dateFrom = null, $dateTo = null, $resultOrder = null, $rangeInfo = null) {
 		$thesisPlugin = &PluginRegistry::getPlugin('generic', 'ThesisPlugin');
 		$thesisPlugin->import('Thesis');
 
+		$paramArray = array(THESIS_STATUS_ACTIVE, (int) $journalId);
+		$searchSql = '';
+
+		if (!empty($search)) switch ($searchType) {
+			case THESIS_FIELD_FIRSTNAME:
+				$searchSql = 'AND LOWER(student_first_name) ' . ($searchMatch=='is'?'=':'LIKE') . ' LOWER(?)';
+				$paramArray[] = ($searchMatch=='is'?$search:'%' . $search . '%');
+				break;
+			case THESIS_FIELD_LASTNAME:
+				$searchSql = 'AND LOWER(student_last_name) ' . ($searchMatch=='is'?'=':'LIKE') . ' LOWER(?)';
+				$paramArray[] = ($searchMatch=='is'?$search:'%' . $search . '%');
+				break;
+			case THESIS_FIELD_EMAIL:
+				$searchSql = 'AND LOWER(student_email) ' . ($searchMatch=='is'?'=':'LIKE') . ' LOWER(?)';
+				$paramArray[] = ($searchMatch=='is'?$search:'%' . $search . '%');
+				break;
+			case THESIS_FIELD_DEPARTMENT:
+				$searchSql = 'AND LOWER(department) ' . ($searchMatch=='is'?'=':'LIKE') . ' LOWER(?)';
+				$paramArray[] = ($searchMatch=='is'?$search:'%' . $search . '%');
+				break;
+			case THESIS_FIELD_UNIVERSITY:
+				$searchSql = 'AND LOWER(university) ' . ($searchMatch=='is'?'=':'LIKE') . ' LOWER(?)';
+				$paramArray[] = ($searchMatch=='is'?$search:'%' . $search . '%');
+				break;
+			case THESIS_FIELD_TITLE:
+				$searchSql = 'AND LOWER(title) ' . ($searchMatch=='is'?'=':'LIKE') . ' LOWER(?)';
+				$paramArray[] = ($searchMatch=='is'?$search:'%' . $search . '%');
+				break;
+			case THESIS_FIELD_SUBJECT:
+				$searchSql = 'AND LOWER(subject) ' . ($searchMatch=='is'?'=':'LIKE') . ' LOWER(?)';
+				$paramArray[] = ($searchMatch=='is'?$search:'%' . $search . '%');
+				break;
+			case THESIS_FIELD_ABSTRACT:
+				$searchSql = 'AND LOWER(abstract) ' . ($searchMatch=='is'?'=':'LIKE') . ' LOWER(?)';
+				$paramArray[] = ($searchMatch=='is'?$search:'%' . $search . '%');
+				break;
+		}
+
+		if (!empty($dateFrom) || !empty($dateTo)) {
+			if (!empty($dateFrom)) {
+				$searchSql .= ' AND date_approved >= ' . $this->datetimeToDB($dateFrom);
+			}
+			if (!empty($dateTo)) {
+					$searchSql .= ' AND date_approved <= ' . $this->datetimeToDB($dateTo);
+				}
+		}
+
+		switch ($resultOrder) {
+			case THESIS_ORDER_SUBMISSION_DATE_ASC:
+				$searchSql .= ' ORDER BY thesis_id ASC';
+				break;
+			case THESIS_ORDER_SUBMISSION_DATE_DESC:
+				$searchSql .= ' ORDER BY thesis_id DESC';
+				break;
+			case THESIS_ORDER_APPROVAL_DATE_ASC:
+				$searchSql .= ' ORDER BY date_approved ASC, student_last_name ASC, title ASC';
+				break;
+			case THESIS_ORDER_APPROVAL_DATE_DESC:
+				$searchSql .= ' ORDER BY date_approved DESC, student_last_name ASC, title ASC';
+				break;
+			case THESIS_ORDER_LASTNAME_ASC:
+				$searchSql .= ' ORDER BY student_last_name ASC, title ASC';
+				break;
+			case THESIS_ORDER_LASTNAME_DESC:
+				$searchSql .= ' ORDER BY student_last_name DESC, title ASC';
+				break;
+			case THESIS_ORDER_TITLE_ASC:
+				$searchSql .= ' ORDER BY title ASC, student_last_name ASC';
+				break;
+			case THESIS_ORDER_TITLE_DESC:
+				$searchSql .= ' ORDER BY title DESC, student_last_name ASC';
+				break;
+			default:
+				$searchSql .= ' ORDER BY thesis_id DESC';
+		}
+
 		$result = &$this->retrieveRange(
-			'SELECT * FROM theses WHERE status = ? AND journal_id = ? ORDER BY thesis_id DESC', array(THESIS_STATUS_ACTIVE, $journalId), $rangeInfo
+			'SELECT * FROM theses WHERE status = ? AND journal_id = ? ' . $searchSql,
+			$paramArray,
+			$rangeInfo
 		);
 
 		$returner = &new DAOResultFactory($result, $this, '_returnThesisFromRow');

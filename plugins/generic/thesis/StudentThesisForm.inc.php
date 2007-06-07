@@ -20,11 +20,19 @@ class StudentThesisForm extends Form {
 	/** @var validDegrees array keys are valid thesis degree values */
 	var $validDegrees;
 
+	/** @var boolean whether or not captcha support is enabled */
+	var $captchaEnabled;
+
+	/** @var boolean whether or not upload code is enabled */
+	var $uploadCodeEnabled;
+
 	/**
 	 * Constructor
 	 * @param thesisId int leave as default for new thesis
 	 */
 	function StudentThesisForm($thesisId = null) {
+		$journal = &Request::getJournal();
+		$journalId = $journal->getJournalId();
 		$thesisPlugin = &PluginRegistry::getPlugin('generic', 'ThesisPlugin');
 		$thesisPlugin->import('Thesis');
 
@@ -33,14 +41,27 @@ class StudentThesisForm extends Form {
 			THESIS_DEGREE_DOCTORATE => Locale::translate('plugins.generic.thesis.manager.degree.doctorate')
 		);
 
-		$journal = &Request::getJournal();
+		import('captcha.CaptchaManager');
+		$captchaManager =& new CaptchaManager();
+		$this->captchaEnabled = $captchaManager->isEnabled() ? true : false;
+
+		$this->uploadCodeEnabled = $thesisPlugin->getSetting($journalId, 'enableUploadCode');
+ 
 		parent::Form($thesisPlugin->getTemplatePath() . 'studentThesisForm.tpl');
 
+
+		// Captcha support if enabled
+		if ($this->captchaEnabled) {
+			$this->addCheck(new FormValidatorCaptcha($this, 'captcha', 'captchaId', 'common.captchaField.badCaptcha'));
+		}
 	
 		// Degree is provided and is valid value
 		$this->addCheck(new FormValidator($this, 'degree', 'required', 'plugins.generic.thesis.form.degreeRequired'));	
 		$this->addCheck(new FormValidatorInSet($this, 'degree', 'required', 'plugins.generic.thesis.form.degreeValid', array_keys($this->validDegrees)));
 	
+		// Degree Name is provided
+		$this->addCheck(new FormValidator($this, 'degreeName', 'required', 'plugins.generic.thesis.form.degreeNameRequired'));
+
 		// Department is provided
 		$this->addCheck(new FormValidator($this, 'department', 'required', 'plugins.generic.thesis.form.departmentRequired'));
 
@@ -89,8 +110,19 @@ class StudentThesisForm extends Form {
 	function display() {
 		$thesisPlugin = &PluginRegistry::getPlugin('generic', 'ThesisPlugin');
 		$thesisPlugin->import('Thesis');
-
 		$templateMgr = &TemplateManager::getManager();
+
+		if ($this->captchaEnabled) {
+			import('captcha.CaptchaManager');
+			$captchaManager =& new CaptchaManager();
+			$captcha =& $captchaManager->createCaptcha();
+			if ($captcha) {
+				$templateMgr->assign('captchaEnabled', $this->captchaEnabled);
+				$this->setData('captchaId', $captcha->getCaptchaId());
+			}
+		}
+
+		$templateMgr->assign('uploadCodeEnabled', $this->uploadCodeEnabled);
 		$templateMgr->assign('validDegrees', $this->validDegrees);
 		$templateMgr->assign('yearOffsetPast', THESIS_APPROVED_YEAR_OFFSET_PAST);
 	
@@ -107,8 +139,51 @@ class StudentThesisForm extends Form {
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->readUserVars(array('degree', 'department', 'university', 'dateApprovedYear', 'dateApprovedMonth', 'dateApprovedDay', 'title', 'url', 'abstract', 'studentFirstName', 'studentMiddleName', 'studentLastName', 'studentEmail', 'supervisorFirstName', 'supervisorMiddleName', 'supervisorLastName', 'supervisorEmail'));
+		$userVars = array(
+			'degree',
+			'degreeName',
+			'department',
+			'university',
+			'dateApprovedYear',
+			'dateApprovedMonth',
+			'dateApprovedDay',
+			'title',
+			'url',
+			'abstract',
+			'uploadCode',
+			'comment',
+			'studentFirstName',
+			'studentMiddleName',
+			'studentLastName',
+			'studentEmail',
+			'studentEmailPublish',
+			'studentBio',
+			'supervisorFirstName',
+			'supervisorMiddleName',
+			'supervisorLastName',
+			'supervisorEmail',
+			'discipline',
+			'subjectClass',
+			'keyword',
+			'coverageGeo',
+			'coverageChron',
+			'coverageSample',
+			'method',
+			'language'
+		);
+
+		if ($this->captchaEnabled) {
+			$userVars[] = 'captchaId';
+			$userVars[] = 'captcha';
+		}
+
+		$this->readUserVars($userVars);
 		$this->_data['dateApproved'] = $this->_data['dateApprovedYear'] . '-' . $this->_data['dateApprovedMonth'] . '-' . $this->_data['dateApprovedDay']; 
+
+		// If a url is provided, ensure it includes a proper prefix (i.e. http:// or ftp://).
+		if (!empty($this->_data['url'])) {
+			$this->addCheck(new FormValidatorCustom($this, 'url', 'required', 'plugins.generic.thesis.form.urlPrefixIncluded', create_function('$url', 'return strpos(trim(strtolower($url)), \'http://\') === 0 || strpos(trim(strtolower($url)), \'ftp://\') === 0 ? true : false;'), array()));
+		}
 
 	}
 	
@@ -128,68 +203,89 @@ class StudentThesisForm extends Form {
 		$thesis->setJournalId($journalId);
 		$thesis->setStatus(THESIS_STATUS_INACTIVE);
 		$thesis->setDegree($this->getData('degree'));
+		$thesis->setDegreeName($this->getData('degreeName'));
 		$thesis->setDepartment($this->getData('department'));
 		$thesis->setUniversity($this->getData('university'));
 		$thesis->setTitle($this->getData('title'));
 		$thesis->setDateApproved($this->getData('dateApprovedYear') . '-' . $this->getData('dateApprovedMonth') . '-' . $this->getData('dateApprovedDay'));
-		$thesis->setUrl($this->getData('url'));
+		$thesis->setUrl(strtolower($this->getData('url')));
 		$thesis->setAbstract($this->getData('abstract'));
+		$thesis->setComment($this->getData('comment'));
 		$thesis->setStudentFirstName($this->getData('studentFirstName'));
 		$thesis->setStudentMiddleName($this->getData('studentMiddleName'));
 		$thesis->setStudentLastName($this->getData('studentLastName'));
 		$thesis->setStudentEmail($this->getData('studentEmail'));
+		$thesis->setStudentEmailPublish($this->getData('studentEmailPublish') == null ? 0 : 1);
+		$thesis->setStudentBio($this->getData('studentBio'));
 		$thesis->setSupervisorFirstName($this->getData('supervisorFirstName'));
 		$thesis->setSupervisorMiddleName($this->getData('supervisorMiddleName'));
 		$thesis->setSupervisorLastName($this->getData('supervisorLastName'));
 		$thesis->setSupervisorEmail($this->getData('supervisorEmail'));
+		$thesis->setDiscipline($this->getData('discipline'));
+		$thesis->setSubjectClass($this->getData('subjectClass'));
+		$thesis->setSubject($this->getData('keyword'));
+		$thesis->setCoverageGeo($this->getData('coverageGeo'));
+		$thesis->setCoverageChron($this->getData('coverageChron'));
+		$thesis->setCoverageSample($this->getData('coverageSample'));
+		$thesis->setMethod($this->getData('method'));
+		$thesis->setLanguage($this->getData('language'));
 
 		$thesisDao->insertThesis($thesis);
 
 		// Send supervisor confirmation email
-		$journalName = $journal->getTitle();
-		$thesisName = $thesisPlugin->getSetting($journalId, 'thesisName');
-		$thesisEmail = $thesisPlugin->getSetting($journalId, 'thesisEmail');
-		$thesisPhone = $thesisPlugin->getSetting($journalId, 'thesisPhone');
-		$thesisFax = $thesisPlugin->getSetting($journalId, 'thesisFax');
-		$thesisMailingAddress = $thesisPlugin->getSetting($journalId, 'thesisMailingAddress');
-		$thesisContactSignature = $thesisName;
-
-		if ($thesisMailingAddress != '') {
-			$thesisContactSignature .= "\n" . $thesisMailingAddress;
-		}
-		if ($thesisPhone != '') {
-			$thesisContactSignature .= "\n" . Locale::Translate('user.phone') . ': ' . $thesisPhone;
-		}
-		if ($thesisFax != '') {
-			$thesisContactSignature .= "\n" . Locale::Translate('user.fax') . ': ' . $thesisFax;
+		if (!empty($this->uploadCodeEnabled)) {
+			$uploadCode = $thesisPlugin->getSetting($journalId, 'uploadCode');
+			$submittedUploadCode = $this->getData('uploadCode');
 		}
 
-		$thesisContactSignature .= "\n" . Locale::Translate('user.email') . ': ' . $thesisEmail;
-		$studentName = $thesis->getStudentFirstName() . ' ' . $thesis->getStudentLastName();
-		$supervisorName = $thesis->getSupervisorFirstName() . ' ' . $thesis->getSupervisorLastName();
+		if (empty($uploadCode) || ($uploadCode != $submittedUploadCode)) {
+			$journalName = $journal->getTitle();
+			$thesisName = $thesisPlugin->getSetting($journalId, 'thesisName');
+			$thesisEmail = $thesisPlugin->getSetting($journalId, 'thesisEmail');
+			$thesisPhone = $thesisPlugin->getSetting($journalId, 'thesisPhone');
+			$thesisFax = $thesisPlugin->getSetting($journalId, 'thesisFax');
+			$thesisMailingAddress = $thesisPlugin->getSetting($journalId, 'thesisMailingAddress');
+			$thesisContactSignature = $thesisName;
 
-		$paramArray = array(
-			'journalName' => $journalName,
-			'thesisName' => $thesisName,
-			'thesisEmail' => $thesisEmail,
-			'title' => $thesis->getTitle(),
-			'studentName' => $studentName,
-			'degree' => Locale::Translate($thesis->getDegreeString()),
-			'department' => $thesis->getDepartment(),
-			'university' =>	$thesis->getUniversity(),
-			'dateApproved' => $thesis->getDateApproved(),
-			'supervisorName' => $supervisorName,
-			'abstract' => $thesis->getAbstract(),		
-			'thesisContactSignature' => $thesisContactSignature 
-		);
+			if (!empty($thesisMailingAddress)) {
+				$thesisContactSignature .= "\n" . $thesisMailingAddress;
+			}
+			if (!empty($thesisPhone)) {
+				$thesisContactSignature .= "\n" . Locale::Translate('user.phone') . ': ' . $thesisPhone;
+			}
+			if (!empty($thesisFax)) {
+				$thesisContactSignature .= "\n" . Locale::Translate('user.fax') . ': ' . $thesisFax;
+			}
 
-		import('mail.MailTemplate');
-		$mail = &new MailTemplate('THESIS_ABSTRACT_CONFIRM');
-		$mail->setFrom($thesisEmail, "\"" . $thesisName . "\"");
-		$mail->assignParams($paramArray);
-		$mail->addRecipient($thesis->getSupervisorEmail(), "\"" . $supervisorName . "\"");
-		$mail->addCc($thesis->getStudentEmail(), "\"" . $studentName . "\"");
-		$mail->send();
+			$thesisContactSignature .= "\n" . Locale::Translate('user.email') . ': ' . $thesisEmail;
+			$studentName = $thesis->getStudentFirstName() . ' ' . $thesis->getStudentLastName();
+			$supervisorName = $thesis->getSupervisorFirstName() . ' ' . $thesis->getSupervisorLastName();
+
+			$paramArray = array(
+				'journalName' => $journalName,
+				'thesisName' => $thesisName,
+				'thesisEmail' => $thesisEmail,
+				'title' => $thesis->getTitle(),
+				'studentName' => $studentName,
+				'degree' => Locale::Translate($thesis->getDegreeString()),
+				'degreeName' => $thesis->getDegreeName(),
+				'department' => $thesis->getDepartment(),
+				'university' =>	$thesis->getUniversity(),
+				'dateApproved' => $thesis->getDateApproved(),
+				'supervisorName' => $supervisorName,
+				'abstract' => $thesis->getAbstract(),		
+				'thesisContactSignature' => $thesisContactSignature 
+			);
+
+			import('mail.MailTemplate');
+			$mail = &new MailTemplate('THESIS_ABSTRACT_CONFIRM');
+			$mail->setFrom($thesisEmail, "\"" . $thesisName . "\"");
+			$mail->assignParams($paramArray);
+			$mail->addRecipient($thesis->getSupervisorEmail(), "\"" . $supervisorName . "\"");
+			$mail->addCc($thesis->getStudentEmail(), "\"" . $studentName . "\"");
+			$mail->send();
+		}
+
 	}
 	
 }

@@ -97,6 +97,22 @@ class Thesis extends DataObject {
 	}
 
 	/**
+	 * Get thesis degree name.
+	 * @return int 
+	 */
+	function getDegreeName() {
+		return $this->getData('degreeName');
+	}
+	
+	/**
+	 * Set thesis degree name.
+	 * @param $degreeName int
+	 */
+	function setDegreeName($degreeName) {
+		return $this->setData('degreeName', $degreeName);
+	}
+
+	/**
 	 * Get thesis department.
 	 * @return string
 	 */
@@ -193,6 +209,22 @@ class Thesis extends DataObject {
 	}
 
 	/**
+	 * Get thesis comment.
+	 * @return string 
+	 */
+	function getComment() {
+		return $this->getData('comment');
+	}
+	
+	/**
+	 * Set thesis comment.
+	 * @param $comment string 
+	 */
+	function setComment($comment) {
+		return $this->setData('comment', $comment);
+	}
+
+	/**
 	 * Get thesis student first name.
 	 * @return string 
 	 */
@@ -244,8 +276,19 @@ class Thesis extends DataObject {
 	 * Get thesis student full name.
 	 * @return string 
 	 */
-	function getStudentFullName() {
-		return Locale::translate('plugins.generic.thesis.studentFullName', array('lastName' => $this->getData('studentLastName'), 'firstName' => $this->getData('studentFirstName'), 'middleName' => $this->getData('studentMiddleName')));
+	function getStudentFullName($lastNameFirst = false) {
+		$middleName = $this->getData('studentMiddleName'); 
+		if (!empty($middleName)) {
+			$space = " ";
+		} else {
+			$space = "";
+		}
+
+		if ($lastNameFirst) {
+			return Locale::translate('plugins.generic.thesis.studentFullNameLast', array('lastName' => $this->getData('studentLastName'), 'firstName' => $this->getData('studentFirstName'), 'middleName' => $middleName, 'space' => $space));
+		} else {
+			return Locale::translate('plugins.generic.thesis.studentFullName', array('lastName' => $this->getData('studentLastName'), 'firstName' => $this->getData('studentFirstName'), 'middleName' => $middleName, 'space' => $space));
+		}
 	}
 
 	/**
@@ -262,6 +305,38 @@ class Thesis extends DataObject {
 	 */
 	function setStudentEmail($studentEmail) {
 		return $this->setData('studentEmail', $studentEmail);
+	}
+
+	/**
+	 * Get thesis publish student email.
+	 * @return int 
+	 */
+	function getStudentEmailPublish() {
+		return $this->getData('studentEmailPublish');
+	}
+	
+	/**
+	 * Set thesis publish student email.
+	 * @param $studentEmailPublish int 
+	 */
+	function setStudentEmailPublish($studentEmailPublish) {
+		return $this->setData('studentEmailPublish', $studentEmailPublish);
+	}
+
+	/**
+	 * Get thesis student bio.
+	 * @return string 
+	 */
+	function getStudentBio() {
+		return $this->getData('studentBio');
+	}
+	
+	/**
+	 * Set thesis student bio.
+	 * @param $studentBio string 
+	 */
+	function setStudentBio($studentBio) {
+		return $this->setData('studentBio', $studentBio);
 	}
 
 	/**
@@ -313,6 +388,25 @@ class Thesis extends DataObject {
 	}
 
 	/**
+	 * Get supervisor full name.
+	 * @return string 
+	 */
+	function getSupervisorFullName($lastNameFirst = false) {
+		$middleName = $this->getData('supervisorMiddleName'); 
+		if (!empty($middleName)) {
+			$space = " ";
+		} else {
+			$space = "";
+		}
+
+		if ($lastNameFirst) {
+			return Locale::translate('plugins.generic.thesis.supervisorFullNameLast', array('lastName' => $this->getData('supervisorLastName'), 'firstName' => $this->getData('supervisorFirstName'), 'middleName' => $middleName, 'space' => $space));
+		} else {
+			return Locale::translate('plugins.generic.thesis.supervisorFullName', array('lastName' => $this->getData('supervisorLastName'), 'firstName' => $this->getData('supervisorFirstName'), 'middleName' => $middleName, 'space' => $space));
+		}
+	}
+
+	/**
 	 * Get thesis supervisor email.
 	 * @return string 
 	 */
@@ -326,6 +420,134 @@ class Thesis extends DataObject {
 	 */
 	function setSupervisorEmail($supervisorEmail) {
 		return $this->setData('supervisorEmail', $supervisorEmail);
+	}
+
+	/**
+	 * Get thesis discipline.
+	 * @return string 
+	 */
+	function getDiscipline() {
+		return $this->getData('discipline');
+	}
+	
+	/**
+	 * Set thesis discipline.
+	 * @param $discipline string 
+	 */
+	function setDiscipline($discipline) {
+		return $this->setData('discipline', $discipline);
+	}
+
+	/**
+	 * Get thesis subject classification.
+	 * @return string 
+	 */
+	function getSubjectClass() {
+		return $this->getData('subjectClass');
+	}
+	
+	/**
+	 * Set thesis subject classification.
+	 * @param $subjectClass string 
+	 */
+	function setSubjectClass($subjectClass) {
+		return $this->setData('subjectClass', $subjectClass);
+	}
+
+	/**
+	 * Get thesis subject.
+	 * @return string 
+	 */
+	function getSubject() {
+		return $this->getData('subject');
+	}
+	
+	/**
+	 * Set thesis subject.
+	 * @param $subject string 
+	 */
+	function setSubject($subject) {
+		return $this->setData('subject', $subject);
+	}
+
+	/**
+	 * Get thesis coverage geo.
+	 * @return string 
+	 */
+	function getCoverageGeo() {
+		return $this->getData('coverageGeo');
+	}
+	
+	/**
+	 * Set thesis coverage geo.
+	 * @param $coverageGeo string 
+	 */
+	function setCoverageGeo($coverageGeo) {
+		return $this->setData('coverageGeo', $coverageGeo);
+	}
+
+	/**
+	 * Get thesis coverage chron.
+	 * @return string 
+	 */
+	function getCoverageChron() {
+		return $this->getData('coverageChron');
+	}
+	
+	/**
+	 * Set thesis coverage chron.
+	 * @param $coverageChron string 
+	 */
+	function setCoverageChron($coverageChron) {
+		return $this->setData('coverageChron', $coverageChron);
+	}
+
+	/**
+	 * Get thesis coverage sample.
+	 * @return string 
+	 */
+	function getCoverageSample() {
+		return $this->getData('coverageSample');
+	}
+	
+	/**
+	 * Set thesis coverage sample.
+	 * @param $coverageSample string 
+	 */
+	function setCoverageSample($coverageSample) {
+		return $this->setData('coverageSample', $coverageSample);
+	}
+
+	/**
+	 * Get thesis method.
+	 * @return string 
+	 */
+	function getMethod() {
+		return $this->getData('method');
+	}
+	
+	/**
+	 * Set thesis method.
+	 * @param $method string 
+	 */
+	function setMethod($method) {
+		return $this->setData('method', $method);
+	}
+
+	/**
+	 * Get thesis language.
+	 * @return string 
+	 */
+	function getLanguage() {
+		return $this->getData('language');
+	}
+	
+	/**
+	 * Set thesis language.
+	 * @param $language string 
+	 */
+	function setLanguage($language) {
+		return $this->setData('language', $language);
 	}
 
 	/**
@@ -355,6 +577,21 @@ class Thesis extends DataObject {
 				return 'plugins.generic.thesis.manager.degree.doctorate';
 			default:
 				return 'plugins.generic.thesis.manager.degree';
+		}
+	}
+
+	/**
+	 * Get thesis degree metadata string.
+	 * @return string 
+	 */
+	function getDegreeLevel() {
+		switch ($this->getData('degree')) {
+			case THESIS_DEGREE_MASTERS:
+				return 'Master\'s';
+			case THESIS_DEGREE_DOCTORATE:
+				return 'Doctorate';
+			default:
+				return '';
 		}
 	}
 }

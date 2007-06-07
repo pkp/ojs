@@ -56,48 +56,48 @@ class ThesisForm extends Form {
 		$this->addCheck(new FormValidatorInSet($this, 'status', 'required', 'plugins.generic.thesis.manager.form.statusValid', array_keys($this->validStatus)));
 
 		// Degree is provided and is valid value
-		$this->addCheck(new FormValidator($this, 'degree', 'required', 'plugins.generic.thesis.form.degreeRequired'));	
-		$this->addCheck(new FormValidatorInSet($this, 'degree', 'required', 'plugins.generic.thesis.form.degreeValid', array_keys($this->validDegrees)));
+		$this->addCheck(new FormValidator($this, 'degree', 'required', 'plugins.generic.thesis.manager.form.degreeRequired'));	
+		$this->addCheck(new FormValidatorInSet($this, 'degree', 'required', 'plugins.generic.thesis.manager.form.degreeValid', array_keys($this->validDegrees)));
 	
 		// Department is provided
-		$this->addCheck(new FormValidator($this, 'department', 'required', 'plugins.generic.thesis.form.departmentRequired'));
+		$this->addCheck(new FormValidator($this, 'department', 'required', 'plugins.generic.thesis.manager.form.departmentRequired'));
 
 		// University is provided
-		$this->addCheck(new FormValidator($this, 'university', 'required', 'plugins.generic.thesis.form.universityRequired'));
+		$this->addCheck(new FormValidator($this, 'university', 'required', 'plugins.generic.thesis.manager.form.universityRequired'));
 
 		// Approval date is provided and valid
-		$this->addCheck(new FormValidator($this, 'dateApprovedYear', 'required', 'plugins.generic.thesis.form.dateApprovedRequired'));
-		$this->addCheck(new FormValidatorCustom($this, 'dateApprovedYear', 'required', 'plugins.generic.thesis.form.dateApprovedValid', create_function('$dateApprovedYear', '$minYear = date(\'Y\') + THESIS_APPROVED_YEAR_OFFSET_PAST; $maxYear = date(\'Y\'); return ($dateApprovedYear >= $minYear && $dateApprovedYear <= $maxYear) ? true : false;')));
+		$this->addCheck(new FormValidator($this, 'dateApprovedYear', 'required', 'plugins.generic.thesis.manager.form.dateApprovedRequired'));
+		$this->addCheck(new FormValidatorCustom($this, 'dateApprovedYear', 'required', 'plugins.generic.thesis.manager.form.dateApprovedValid', create_function('$dateApprovedYear', '$minYear = date(\'Y\') + THESIS_APPROVED_YEAR_OFFSET_PAST; $maxYear = date(\'Y\'); return ($dateApprovedYear >= $minYear && $dateApprovedYear <= $maxYear) ? true : false;')));
 
-		$this->addCheck(new FormValidator($this, 'dateApprovedMonth', 'required', 'plugins.generic.thesis.form.dateApprovedRequired'));
-		$this->addCheck(new FormValidatorCustom($this, 'dateApprovedMonth', 'required', 'plugins.generic.thesis.form.dateApprovedValid', create_function('$dateApprovedMonth', 'return ($dateApprovedMonth >= 1 && $dateApprovedMonth <= 12) ? true : false;')));
+		$this->addCheck(new FormValidator($this, 'dateApprovedMonth', 'required', 'plugins.generic.thesis.manager.form.dateApprovedRequired'));
+		$this->addCheck(new FormValidatorCustom($this, 'dateApprovedMonth', 'required', 'plugins.generic.thesis.manager.form.dateApprovedValid', create_function('$dateApprovedMonth', 'return ($dateApprovedMonth >= 1 && $dateApprovedMonth <= 12) ? true : false;')));
 
-		$this->addCheck(new FormValidator($this, 'dateApprovedDay', 'required', 'plugins.generic.thesis.form.dateApprovedRequired'));
-		$this->addCheck(new FormValidatorCustom($this, 'dateApprovedDay', 'required', 'plugins.generic.thesis.form.dateApprovedValid', create_function('$dateApprovedDay', 'return ($dateApprovedDay >= 1 && $dateApprovedDay <= 31) ? true : false;')));
+		$this->addCheck(new FormValidator($this, 'dateApprovedDay', 'required', 'plugins.generic.thesis.manager.form.dateApprovedRequired'));
+		$this->addCheck(new FormValidatorCustom($this, 'dateApprovedDay', 'required', 'plugins.generic.thesis.manager.form.dateApprovedValid', create_function('$dateApprovedDay', 'return ($dateApprovedDay >= 1 && $dateApprovedDay <= 31) ? true : false;')));
 
 		// Title is provided
-		$this->addCheck(new FormValidator($this, 'title', 'required', 'plugins.generic.thesis.form.titleRequired'));
+		$this->addCheck(new FormValidator($this, 'title', 'required', 'plugins.generic.thesis.manager.form.titleRequired'));
 
 		// Student first name is provided
-		$this->addCheck(new FormValidator($this, 'studentFirstName', 'required', 'plugins.generic.thesis.form.studentFirstNameRequired'));
+		$this->addCheck(new FormValidator($this, 'studentFirstName', 'required', 'plugins.generic.thesis.manager.form.studentFirstNameRequired'));
 
 		// Student last name is provided
-		$this->addCheck(new FormValidator($this, 'studentLastName', 'required', 'plugins.generic.thesis.form.studentLastNameRequired'));
+		$this->addCheck(new FormValidator($this, 'studentLastName', 'required', 'plugins.generic.thesis.manager.form.studentLastNameRequired'));
 
 		// Student email is provided and valid
-		$this->addCheck(new FormValidatorEmail($this, 'studentEmail', 'required', 'plugins.generic.thesis.form.studentEmailValid'));
+		$this->addCheck(new FormValidatorEmail($this, 'studentEmail', 'required', 'plugins.generic.thesis.manager.form.studentEmailValid'));
 
 		// Supervisor first name is provided
-		$this->addCheck(new FormValidator($this, 'supervisorFirstName', 'required', 'plugins.generic.thesis.form.supervisorFirstNameRequired'));
+		$this->addCheck(new FormValidator($this, 'supervisorFirstName', 'required', 'plugins.generic.thesis.manager.form.supervisorFirstNameRequired'));
 
 		// Supervisor last name is provided
-		$this->addCheck(new FormValidator($this, 'supervisorLastName', 'required', 'plugins.generic.thesis.form.supervisorLastNameRequired'));
+		$this->addCheck(new FormValidator($this, 'supervisorLastName', 'required', 'plugins.generic.thesis.manager.form.supervisorLastNameRequired'));
 
 		// Supervisor email is provided
-		$this->addCheck(new FormValidatorEmail($this, 'supervisorEmail', 'required', 'plugins.generic.thesis.form.supervisorEmailValid'));
+		$this->addCheck(new FormValidatorEmail($this, 'supervisorEmail', 'required', 'plugins.generic.thesis.manager.form.supervisorEmailValid'));
 
 		// Abstract is provided
-		$this->addCheck(new FormValidator($this, 'abstract', 'required', 'plugins.generic.thesis.form.abstractRequired'));
+		$this->addCheck(new FormValidator($this, 'abstract', 'required', 'plugins.generic.thesis.manager.form.abstractRequired'));
 
 	}
 	
@@ -129,20 +129,32 @@ class ThesisForm extends Form {
 				$this->_data = array(
 					'status' => $thesis->getStatus(),
 					'degree' => $thesis->getDegree(),
+					'degreeName' => $thesis->getDegreeName(),
 					'department' => $thesis->getDepartment(),
 					'university' => $thesis->getUniversity(),
 					'dateApproved' => $thesis->getDateApproved(),
 					'title' => $thesis->getTitle(),
 					'url' => $thesis->getUrl(),
 					'abstract' => $thesis->getAbstract(),
+					'comment' => $thesis->getComment(),
 					'studentFirstName' => $thesis->getStudentFirstName(),
 					'studentMiddleName' => $thesis->getStudentMiddleName(),
 					'studentLastName' => $thesis->getStudentLastName(),
 					'studentEmail' => $thesis->getStudentEmail(),
+					'studentEmailPublish' => $thesis->getStudentEmailPublish(),
+					'studentBio' => $thesis->getStudentBio(),
 					'supervisorFirstName' => $thesis->getSupervisorFirstName(),
 					'supervisorMiddleName' => $thesis->getSupervisorMiddleName(),
 					'supervisorLastName' => $thesis->getSupervisorLastName(),
-					'supervisorEmail' => $thesis->getSupervisorEmail()
+					'supervisorEmail' => $thesis->getSupervisorEmail(),
+					'discipline' => $thesis->getDiscipline(),
+					'subjectClass' => $thesis->getSubjectClass(),
+					'keyword' => $thesis->getSubject(),
+					'coverageGeo' => $thesis->getCoverageGeo(),
+					'coverageChron' => $thesis->getCoverageChron(),
+					'coverageSample' => $thesis->getCoverageSample(),
+					'method' => $thesis->getMethod(),
+					'language' => $thesis->getLanguage()
 				);
 
 			} else {
@@ -155,9 +167,13 @@ class ThesisForm extends Form {
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->readUserVars(array('status', 'degree', 'department', 'university', 'dateApprovedYear', 'dateApprovedMonth', 'dateApprovedDay', 'title', 'url', 'abstract', 'studentFirstName', 'studentMiddleName', 'studentLastName', 'studentEmail', 'supervisorFirstName', 'supervisorMiddleName', 'supervisorLastName', 'supervisorEmail'));
+		$this->readUserVars(array('status', 'degree', 'degreeName', 'department', 'university', 'dateApprovedYear', 'dateApprovedMonth', 'dateApprovedDay', 'title', 'url', 'abstract', 'comment', 'studentFirstName', 'studentMiddleName', 'studentLastName', 'studentEmail', 'studentEmailPublish', 'studentBio', 'supervisorFirstName', 'supervisorMiddleName', 'supervisorLastName', 'supervisorEmail', 'discipline', 'subjectClass', 'keyword', 'coverageGeo', 'coverageChron', 'coverageSample', 'method', 'language'));
 		$this->_data['dateApproved'] = $this->_data['dateApprovedYear'] . '-' . $this->_data['dateApprovedMonth'] . '-' . $this->_data['dateApprovedDay']; 
 
+		// If a url is provided, ensure it includes a proper prefix (i.e. http:// or ftp://).
+		if (!empty($this->_data['url'])) {
+			$this->addCheck(new FormValidatorCustom($this, 'url', 'required', 'plugins.generic.thesis.manager.form.urlPrefixIncluded', create_function('$url', 'return strpos(trim(strtolower($url)), \'http://\') === 0 || strpos(trim(strtolower($url)), \'ftp://\') === 0 ? true : false;'), array()));
+		}
 	}
 	
 	/**
@@ -182,20 +198,32 @@ class ThesisForm extends Form {
 		$thesis->setJournalId($journalId);
 		$thesis->setStatus($this->getData('status'));
 		$thesis->setDegree($this->getData('degree'));
+		$thesis->setDegreeName($this->getData('degreeName'));
 		$thesis->setDepartment($this->getData('department'));
 		$thesis->setUniversity($this->getData('university'));
 		$thesis->setTitle($this->getData('title'));
 		$thesis->setDateApproved($this->getData('dateApprovedYear') . '-' . $this->getData('dateApprovedMonth') . '-' . $this->getData('dateApprovedDay'));
-		$thesis->setUrl($this->getData('url'));
+		$thesis->setUrl(strtolower($this->getData('url')));
 		$thesis->setAbstract($this->getData('abstract'));
+		$thesis->setComment($this->getData('comment'));
 		$thesis->setStudentFirstName($this->getData('studentFirstName'));
 		$thesis->setStudentMiddleName($this->getData('studentMiddleName'));
 		$thesis->setStudentLastName($this->getData('studentLastName'));
 		$thesis->setStudentEmail($this->getData('studentEmail'));
+		$thesis->setStudentEmailPublish($this->getData('studentEmailPublish') == null ? 0 : 1);
+		$thesis->setStudentBio($this->getData('studentBio'));
 		$thesis->setSupervisorFirstName($this->getData('supervisorFirstName'));
 		$thesis->setSupervisorMiddleName($this->getData('supervisorMiddleName'));
 		$thesis->setSupervisorLastName($this->getData('supervisorLastName'));
 		$thesis->setSupervisorEmail($this->getData('supervisorEmail'));
+		$thesis->setDiscipline($this->getData('discipline'));
+		$thesis->setSubjectClass($this->getData('subjectClass'));
+		$thesis->setSubject($this->getData('keyword'));
+		$thesis->setCoverageGeo($this->getData('coverageGeo'));
+		$thesis->setCoverageChron($this->getData('coverageChron'));
+		$thesis->setCoverageSample($this->getData('coverageSample'));
+		$thesis->setMethod($this->getData('method'));
+		$thesis->setLanguage($this->getData('language'));
 
 		// Update or insert thesis
 		if ($thesis->getThesisId() != null) {

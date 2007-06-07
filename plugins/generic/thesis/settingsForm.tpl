@@ -34,6 +34,39 @@
 <form method="post" action="{plugin_url path="settings"}">
 {include file="common/formErrors.tpl"}
 
+<h4>{translate key="plugins.generic.thesis.settings.submissions"}</h4>
+	<script type="text/javascript">
+		{literal}
+		<!--
+			function toggleUploadCode(form) {
+				form.uploadCode.disabled = !form.uploadCode.disabled;
+			}
+		// -->
+		{/literal}
+	</script>
+
+<p>{translate key="plugins.generic.thesis.settings.uploadCodeDescription"}</p>
+
+<table width="100%" class="data">
+<tr valign="top">
+	<td class="label"><input type="checkbox" name="enableUploadCode" id="enableUploadCode" value="1" onclick="toggleUploadCode(this.form)"{if $enableUploadCode} checked="checked"{/if} /></td>
+	<td class="value">{fieldLabel name="uploadCode" key="plugins.generic.thesis.settings.uploadCode"} <input type="text" name="uploadCode" id="uploadCode"{if not $enableUploadCode} disabled="disabled"{/if} value="{$uploadCode|escape}" size="15" maxlength="24" class="textField" /></td>
+</tr>
+</table>
+
+<div class="separator"></div>
+
+<h4>{translate key="plugins.generic.thesis.settings.publishing"}</h4>
+<br/>
+<table width="100%" class="data">
+<tr valign="top">
+	<td width="20%" class="label">{fieldLabel name="thesisOrder" required="true" key="plugins.generic.thesis.settings.order"}</td>
+	<td width="80%" class="value"><select name="thesisOrder" id="thesisOrder" class="selectMenu" />{html_options options=$validOrder selected=$thesisOrder}</select></td>
+</tr>
+</table>
+
+<div class="separator"></div>
+
 <h4>{translate key="plugins.generic.thesis.settings.thesisContact"}</h4>
 <br/>
 <table width="100%" class="data">
