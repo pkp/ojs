@@ -91,7 +91,7 @@ class PubMedExportDom {
 		$titleAlt2 = $article->getTitleAlt2();
 */
 		$language = $article->getLanguage();
-		if ($language == 'en') {
+		if ($language == 'en' || $language == '' ) {
 			XMLCustomWriter::createChildWithText($doc, $root, 'ArticleTitle', $article->getTitle());
 		} else {
 			XMLCustomWriter::createChildWithText($doc, $root, 'VernacularTitle', $article->getTitle());
