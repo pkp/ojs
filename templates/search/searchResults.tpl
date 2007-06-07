@@ -56,8 +56,10 @@ function ensureKeyword() {
 		<input type="hidden" name="dateToDay" value="{$dateToDay|escape}"/>
 		<input type="hidden" name="dateToYear" value="{$dateToYear|escape}"/>
 	</form>
-	<a href="javascript:document.revise.submit()" class="action">{translate key="search.reviseSearch"}</a><br />&nbsp;
+	<a href="javascript:document.revise.submit()" class="action">{translate key="search.reviseSearch"}</a><br />
 {/if}
+
+{call_hook name="Templates::Search::SearchResults::PreResults"}
 
 {if $currentJournal}
 	{assign var=numCols value=3}
