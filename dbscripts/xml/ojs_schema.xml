@@ -1689,9 +1689,6 @@
 		<index name="subscription_domain">
 			<col>domain</col>
 		</index>
-		<index name="subscription_ip_range">
-			<col>ip_range</col>
-		</index>
 	</table>
 
 	<!--
