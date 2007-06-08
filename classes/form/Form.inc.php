@@ -79,28 +79,8 @@ class Form {
 	 */
 	function setData($key, $value) {
 
-		if (is_string($value)) {
+		if (is_string($value)) $value = Core::cleanVar($value);
 
-			// normalize existing HTML special characters to ASCII
-			$value = strtr($value, array("&amp;" => "&", "&quot" => '"', "&lt;" => "<", "&gt;" => ">"));
-
-			// process strings that contain multibyte characters
-			if ( String::isUTF8($value) ) {
-				import('core.Transcoder');
-
-				// convert UTF-8 to UTF-8 entities (numeric and named)
-				$trans =& new Transcoder('UTF-8', 'HTML-ENTITIES');
-				$value = $trans->trans($value);
-
-				// convert windows-1252 entities to UTF-8 entities
-				$value = &String::cp1252ToEntities($value);
-
-				// convert UTF-8 entities to UTF-8 characters
-				$trans =& new Transcoder('HTML-ENTITIES', 'UTF-8');
-				$value = $trans->trans($value);
-			}
-
-		}
 		$this->_data[$key] = $value;
 	}
 	

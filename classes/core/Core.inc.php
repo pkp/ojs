@@ -32,13 +32,31 @@ class Core {
 	
 	/**
 	 * Sanitize a variable.
-	 * Removes leading and trailing whitespace, optionally removes HTML.
+	 * Removes leading and trailing whitespace, normalizes all characters to UTF-8.
 	 * @param $var string
-	 * @param $stripHtml boolean optional, will encode HTML if set to true
 	 * @return string
 	 */
-	function cleanVar($var, $stripHtml = false) {
-		return $stripHtml ? htmlspecialchars(trim($var), ENT_NOQUOTES, Config::getVar('i18n', 'client_charset')) : trim($var);
+	function cleanVar($var) {
+		// normalize existing HTML special characters to ASCII
+		$var = strtr(trim($var), array("&amp;" => "&", "&quot" => '"', "&lt;" => "<", "&gt;" => ">"));
+
+		// process strings that contain multibyte characters
+		if ( String::isUTF8($var) ) {
+			import('core.Transcoder');
+
+			// convert UTF-8 to UTF-8 entities (numeric and named)
+			$trans =& new Transcoder('UTF-8', 'HTML-ENTITIES');
+			$var = $trans->trans($var);
+
+			// convert windows-1252 entities to UTF-8 entities
+			$var = &String::cp1252ToEntities($var);
+
+			// convert UTF-8 entities back to UTF-8 characters
+			$trans =& new Transcoder('HTML-ENTITIES', 'UTF-8');
+			$var = $trans->trans($var);
+		}		
+		
+		return $var;
 	}
 	
 	/**
