@@ -116,6 +116,10 @@
 
 {/if}
 
+{if $pageFooter}
+<br /><br />
+{$pageFooter}
+{/if}
 </div>
 
 </div>

@@ -41,6 +41,10 @@
 {url|assign:"url" op="download" path=$articleId|to_array:$galley->getGalleyId()}
 <p>{translate key="article.pdf.note" url=$url}</p>
 
+{if $pageFooter}
+<br /><br />
+{$pageFooter}
+{/if}
 </div>
 </div>
 </div>
