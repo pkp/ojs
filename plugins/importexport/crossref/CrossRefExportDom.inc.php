@@ -63,8 +63,8 @@ class CrossRefExportDom {
 	function &generateHeadDom(&$doc, &$journal ) {
 		$head = &XMLCustomWriter::createElement($doc, 'head');
 		
-		/* TODO: fix some DOI batch ID */
-		XMLCustomWriter::createChildWithText($doc, $head, 'doi_batch_id', 'some DOI batch ID');
+		// DOI batch ID is a simple tracking ID: initials + timestamp
+		XMLCustomWriter::createChildWithText($doc, $head, 'doi_batch_id', $journal->getSetting('journalInitials') . '_' . time());
 		XMLCustomWriter::createChildWithText($doc, $head, 'timestamp', time());
 
 		$journalId = $journal->getJournalId();
@@ -73,8 +73,9 @@ class CrossRefExportDom {
 		$depositorNode = &CrossRefExportDom::generateDepositorDom($doc, $journal->getSetting('supportName'), $journal->getSetting('supportEmail'));
 		XMLCustomWriter::appendChild($head, $depositorNode);
 		
-		/* The registrant is assumed to be the Primary Contact for the journal */
-		XMLCustomWriter::createChildWithText($doc, $head, 'registrant', $journal->getSetting('contactName') );
+		/* The registrant is assumed to be the Publishing institution */
+		$publisherArray = $journal->getSetting('publisher');
+		XMLCustomWriter::createChildWithText($doc, $head, 'registrant', $publisherArray['institution'] );
 
 
 		return $head;
@@ -98,8 +99,9 @@ class CrossRefExportDom {
 		XMLCustomWriter::createChildWithText($doc, $journalMetadataNode, 'full_title', $journal->getTitle());
 
 		/* Abbreviated title - defaulting to initials if no abbreviation found */
-		XMLCustomWriter::createChildWithText($doc, $journalMetadataNode, 'abbrev_title', ($journal->getSetting('journalAbbreviation') == '' )?$journal->getSetting('journalInitials'):$journal->getSetting('journalAbbreviation'));
-
+		if  ($journal->getSetting('journalAbbreviation') != '' ) {
+			XMLCustomWriter::createChildWithText($doc, $journalMetadataNode, 'abbrev_title', $journal->getSetting('journalAbbreviation'));
+		}
 
 		/* Both ISSNs are permitted for CrossRef, so sending whichever one (or both) */
 		if ( $ISSN = $journal->getSetting('onlineIssn') ) {
@@ -122,14 +124,9 @@ class CrossRefExportDom {
 	function &generateJournalIssueDom( &$doc, &$journal, &$issue, &$section, &$article) {
 		$journalIssueNode = &XMLCustomWriter::createElement($doc, 'journal_issue');
 
-		$publicationDateNode = &XMLCustomWriter::createElement($doc, 'publication_date');
+		$publicationDateNode = &CrossRefExportDom::generatePublisherDateDom($doc, $issue->getDatePublished());
+		XMLCustomWriter::appendChild($journalIssueNode, $publicationDateNode);
 
-		/* default to online type */
-		XMLCustomWriter::setAttribute($publicationDateNode, 'media_type', 'online');
-		XMLCustomWriter::appendChild($journalIssueNode, $publicationDateNode);		
-		
-		XMLCustomWriter::createChildWithText($doc, $publicationDateNode, 'year', $issue->getYear());
-		
 		$journalVolumeNode = &XMLCustomWriter::createElement($doc, 'journal_volume');
 		XMLCustomWriter::appendChild($journalIssueNode, $journalVolumeNode);
 		XMLCustomWriter::createChildWithText($doc, $journalVolumeNode, 'volume', $issue->getVolume());
@@ -160,14 +157,16 @@ class CrossRefExportDom {
 		}		
 		XMLCustomWriter::appendChild($journalArticleNode, $contributorsNode);
 		
-		/* publication date of article */
-		$publicationDateNode = &CrossRefExportDom::generatePublisherDateDom($doc, $article->getDatePublished());
+		/* publication date of issue */
+		$publicationDateNode = &CrossRefExportDom::generatePublisherDateDom($doc, $issue->getDatePublished());
 		XMLCustomWriter::appendChild($journalArticleNode, $publicationDateNode);
 
-		/* the article ID is used as the publisher_item */
-		$publisherItemNode = &XMLCustomWriter::createElement($doc, 'publisher_item');
-		XMLCustomWriter::createChildWithText($doc, $publisherItemNode, 'item_number', $article->getArticleId());
-		XMLCustomWriter::appendChild($journalArticleNode, $publisherItemNode);
+		/* publisher_item is the article pages */
+		if ($article->getPages() != '') {
+			$publisherItemNode = &XMLCustomWriter::createElement($doc, 'publisher_item');
+			XMLCustomWriter::createChildWithText($doc, $publisherItemNode, 'item_number', $article->getPages());
+			XMLCustomWriter::appendChild($journalArticleNode, $publisherItemNode);
+		}
 
 		return $journalArticleNode;
 	}
@@ -213,5 +212,4 @@ class CrossRefExportDom {
 	}
 
 }
-
 ?>
