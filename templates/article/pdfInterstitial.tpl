@@ -45,6 +45,7 @@
 <br /><br />
 {$pageFooter}
 {/if}
+{call_hook name="Templates::Article::PdfInterstitial::PageFooter"}
 </div>
 </div>
 </div>

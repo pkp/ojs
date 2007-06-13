@@ -120,6 +120,7 @@
 <br /><br />
 {$pageFooter}
 {/if}
+{call_hook name="Templates::Article::Footer::PageFooter"}
 </div>
 
 </div>

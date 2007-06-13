@@ -13,6 +13,7 @@
 <br /><br />
 {$pageFooter}
 {/if}
+{call_hook name="Templates::Common::Footer::PageFooter"}
 </div><!-- content -->
 </div><!-- main -->
 </div><!-- body -->
