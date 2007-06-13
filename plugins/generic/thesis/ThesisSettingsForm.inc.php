@@ -1,7 +1,7 @@
 <?php
 
 /**
- * SettingsForm.inc.php
+ * ThesisSettingsForm.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
@@ -15,7 +15,7 @@
 
 import('form.Form');
 
-class SettingsForm extends Form {
+class ThesisSettingsForm extends Form {
 
 	/** @var $journalId int */
 	var $journalId;
@@ -31,7 +31,7 @@ class SettingsForm extends Form {
 	 * @param $plugin object
 	 * @param $journalId int
 	 */
-	function SettingsForm(&$plugin, $journalId) {
+	function ThesisSettingsForm(&$plugin, $journalId) {
 		$this->journalId = $journalId;
 		$this->plugin = &$plugin;
 

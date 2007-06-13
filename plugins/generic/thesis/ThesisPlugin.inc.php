@@ -232,8 +232,8 @@ class ThesisPlugin extends GenericPlugin {
 				break;
 			case 'settings':
 				if ($this->getEnabled()) {
-					$this->import('SettingsForm');
-					$form = &new SettingsForm($this, $journal->getJournalId());
+					$this->import('ThesisSettingsForm');
+					$form = &new ThesisSettingsForm($this, $journal->getJournalId());
 					if (Request::getUserVar('save')) {
 						$form->readInputData();
 						if ($form->validate()) {
