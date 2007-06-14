@@ -47,8 +47,7 @@ class CopyeditorAction extends Action {
 		
 		$editAssignments = $copyeditorSubmission->getEditAssignments();
 
-		$authors = $copyeditorSubmission->getAuthors();
-		$author = $authors[0];	// assumed at least one author always
+		$author = $copyeditorSubmission->getUser();
 		
 		if (!$email->isEnabled() || ($send && !$email->hasErrors())) {
 			HookRegistry::call('CopyeditorAction::completeCopyedit', array(&$copyeditorSubmission, &$editAssignments, &$author, &$email));
