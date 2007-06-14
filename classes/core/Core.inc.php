@@ -41,7 +41,7 @@ class Core {
 		$var = strtr(trim($var), array("&amp;" => "&", "&quot" => '"', "&lt;" => "<", "&gt;" => ">"));
 
 		// process strings that contain multibyte characters
-		if ( String::isUTF8($var) ) {
+		if ( String::isUTF8(html_entity_decode($var, ENT_QUOTES, "UTF-8")) ) {
 			import('core.Transcoder');
 
 			// convert UTF-8 to UTF-8 entities (numeric and named)
