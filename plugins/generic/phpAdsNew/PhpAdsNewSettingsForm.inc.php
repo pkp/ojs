@@ -39,6 +39,8 @@ class PhpAdsNewSettingsForm extends Form {
 		$this->journalId = $journalId;
 		$this->plugin = &$plugin;
 		$this->phpAdsNewConnection =& $phpAdsNewConnection;
+
+		$this->addCheck(new FormValidatorPost($this));
 	}
 
 	/**

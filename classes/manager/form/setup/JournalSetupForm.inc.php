@@ -27,6 +27,7 @@ class JournalSetupForm extends Form {
 	 */
 	function JournalSetupForm($step, $settings) {
 		parent::Form(sprintf('manager/setup/step%d.tpl', $step));
+		$this->addCheck(new FormValidatorPost($this));
 		$this->step = $step;
 		$this->settings = $settings;
 	}

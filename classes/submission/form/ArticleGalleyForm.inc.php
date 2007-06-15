@@ -45,6 +45,7 @@ class ArticleGalleyForm extends Form {
 
 		// Validation checks for this form
 		$this->addCheck(new FormValidator($this, 'label', 'required', 'submission.layout.galleyLabelRequired'));
+		$this->addCheck(new FormValidatorPost($this));
 	}
 
 	/**

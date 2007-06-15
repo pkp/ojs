@@ -27,6 +27,7 @@ class CreateReviewerForm extends Form {
 	 */
 	function CreateReviewerForm($articleId) {
 		parent::Form('sectionEditor/createReviewerForm.tpl');
+		$this->addCheck(new FormValidatorPost($this));
 		
 		$site = &Request::getSite();
 		$this->profileLocalesEnabled = $site->getProfileLocalesEnabled();

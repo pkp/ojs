@@ -33,6 +33,7 @@ class SettingsForm extends Form {
 		$this->plugin = &$plugin;
 
 		parent::Form($plugin->getTemplatePath() . 'settingsForm.tpl');
+		$this->addCheck(new FormValidatorPost($this));
 	}
 	
 	/**

@@ -33,6 +33,7 @@ class AuthorSubmitForm extends Form {
 	 */
 	function AuthorSubmitForm($article, $step) {
 		parent::Form(sprintf('author/submit/step%d.tpl', $step));
+		$this->addCheck(new FormValidatorPost($this));
 		$this->step = $step;
 		$this->article = $article;
 		$this->articleId = $article ? $article->getArticleId() : null;

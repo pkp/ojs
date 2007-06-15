@@ -60,6 +60,7 @@ class CommentForm extends Form {
 		if ($this->captchaEnabled) {
 			$this->addCheck(new FormValidatorCaptcha($this, 'captcha', 'captchaId', 'common.captchaField.badCaptcha'));
 		}
+		$this->addCheck(new FormValidatorPost($this));
 	}
 	
 	/**

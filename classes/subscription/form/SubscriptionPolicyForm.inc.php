@@ -88,6 +88,7 @@ class SubscriptionPolicyForm extends Form {
 
 		// If provided expiry reminder weeks after value is valid value
 		$this->addCheck(new FormValidatorInSet($this, 'numWeeksAfterSubscriptionExpiryReminder', 'optional', 'manager.subscriptionPolicies.numWeeksAfterSubscriptionExpiryReminderValid', array_keys($this->validNumWeeksAfterExpiry)));
+		$this->addCheck(new FormValidatorPost($this));
 	}
 	
 	/**

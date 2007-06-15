@@ -32,6 +32,7 @@ class ImportOJS1Form extends Form {
 		// Validation checks for this form
 		$this->addCheck(new FormValidator($this, 'journalPath', 'required', 'admin.journals.form.pathRequired'));
 		$this->addCheck(new FormValidator($this, 'importPath', 'required', 'admin.journals.form.importPathRequired'));
+		$this->addCheck(new FormValidatorPost($this));
 	}
 	
 	/**

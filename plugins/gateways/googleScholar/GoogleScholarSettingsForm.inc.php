@@ -44,6 +44,7 @@ class GoogleScholarSettingsForm extends Form {
 		$this->addCheck(new FormValidator($this, 'publisherName', 'required', 'plugins.gateways.googleScholar.errors.noPublisherName'));
 		$this->addCheck(new FormValidatorArray($this, 'contact', 'required', 'plugins.gateways.googleScholar.errors.noContacts'));
 		$this->addCheck(new FormValidatorCustom($this, 'contact', 'required', 'plugins.gateways.googleScholar.errors.noContacts', array(&$this, 'elementsAreEmails')));
+		$this->addCheck(new FormValidatorPost($this));
 
 		$this->journalId = $journalId;
 		$this->plugin =& $plugin;

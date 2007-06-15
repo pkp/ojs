@@ -31,6 +31,7 @@ class VersionForm extends Form {
 	 */
 	function VersionForm($versionId, $journalId) {
 		parent::Form('rtadmin/version.tpl');
+		$this->addCheck(new FormValidatorPost($this));
 
 		$this->journalId = $journalId;
 

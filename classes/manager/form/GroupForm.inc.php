@@ -33,6 +33,8 @@ class GroupForm extends Form {
 		// Group title is provided
 		$this->addCheck(new FormValidator($this, 'title', 'required', 'manager.groups.form.groupTitleRequired'));
 
+		$this->addCheck(new FormValidatorPost($this));
+
 		$this->group =& $group;
 	}
 	

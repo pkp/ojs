@@ -36,6 +36,7 @@ class EditCommentForm extends Form {
 	 */
 	function EditCommentForm(&$article, &$comment) {
 		parent::Form('submission/comment/editComment.tpl');
+		$this->addCheck(new FormValidatorPost($this));
 		
 		$this->comment = $comment;
 		$this->roleId = $comment->getRoleId();

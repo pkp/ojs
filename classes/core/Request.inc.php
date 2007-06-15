@@ -215,6 +215,30 @@ class Request {
 	}
 
 	/**
+	 * Get the request method
+	 * @return string
+	 */
+	function getRequestMethod() {
+		return $_SERVER['REQUEST_METHOD'];
+	}
+
+	/**
+	 * Determine whether the request is a POST request
+	 * @return boolean
+	 */
+	function isPost() {
+		return (Request::getRequestMethod() == 'POST');
+	}
+
+	/**
+	 * Determine whether the request is a GET request
+	 * @return boolean
+	 */
+	function isGet() {
+		return (Request::getRequestMethod() == 'GET');
+	}
+
+	/**
 	 * Get the remote IP address of the current request.
 	 * @return string
 	 */
@@ -615,7 +639,7 @@ class Request {
 		$additionalParams = '';
 		if (!empty($params)) foreach ($params as $key => $value) {
 			if (is_array($value)) foreach($value as $element) {
-				$additionalParams .= $prefix . $key . '[]=' . rawurlencode($element);
+				$additionalParams .= $prefix . $key . '%5B%5D=' . rawurlencode($element);
 				$prefix = $amp;
 			} else {
 				$additionalParams .= $prefix . $key . '=' . rawurlencode($value);
@@ -636,7 +660,7 @@ class Request {
 
 		$pathString = '';
 		if ($pathInfoDisabled) {
-			$joiner = $amp . 'path[]=';
+			$joiner = $amp . 'path%5B%5D=';
 			if (!empty($path)) $pathString = $joiner . implode($joiner, $path);
 			if (empty($overriddenBaseUrl)) $baseParams = "?journal=$journalPath";
 			else $baseParams = '';

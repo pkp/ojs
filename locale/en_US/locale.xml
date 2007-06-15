@@ -153,6 +153,7 @@
 
 	<!-- Common Form Messages -->
 	<message key="form.errorsOccurred">Errors occurred processing this form</message>
+	<message key="form.postRequired">The form was not submitted properly.</message>
 	<message key="form.saveToUpload">Use Save to upload file.</message>
 	<message key="form.contains">contains</message>
 	<message key="form.is">is</message>
@@ -1124,8 +1125,9 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.setup.alternateHeaderDescription">Alternately, instead of title and logo, an HTML version of the header can be inserted into the text box below. Leave textbox blank if not required.</message>
 	<message key="manager.setup.journalPageFooter">Journal Page Footer</message>
 	<message key="manager.setup.journalPageFooterDescription">This is the footer of your journal. To change or update the footer, paste the HTML code in the textbox below. Examples could be another navigation bar, a counter, etc. This footer will appear on every page.</message>
-	<message key="manager.setup.journalStyleSheet">Journal Style Sheet</message>
-	<message key="manager.setup.journalStyleSheetDescription">By default journals and the site use a common style sheet (located in the "styles" subdirectory of the site). The default style rules can be overridden by uploading a journal-specific cascading style sheet.</message>
+	<message key="manager.setup.journalStyle">Journal Style</message>
+	<message key="manager.setup.journalStyleDescription">By default journals and the site use a common style sheet called "common.css", located in the "styles" subdirectory of the site. The default style rules can be overridden by choosing a theme and/or uploading a journal-specific cascading style sheet (CSS) file.</message>
+	<message key="manager.setup.journalTheme">Journal Theme</message>
 	<message key="manager.setup.useJournalStyleSheet">Journal style sheet</message>
 	<message key="manager.setup.noStyleSheetUploaded">No style sheet uploaded.</message>
 	<message key="manager.setup.journalHomepageContent">Journal Homepage Content</message>

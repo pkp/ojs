@@ -40,6 +40,7 @@ class AnnouncementTypeForm extends Form {
 		} else {
 			$this->addCheck(new FormValidatorCustom($this, 'typeName', 'required', 'manager.announcementTypes.form.typeNameExists', create_function('$typeName, $journalId, $typeId', '$announcementTypeDao = &DAORegistry::getDAO(\'AnnouncementTypeDAO\'); $checkId = $announcementTypeDao->getAnnouncementTypeByTypeName($typeName, $journalId); return ($checkId == 0 || $checkId == $typeId) ? true : false;'), array($journal->getJournalId(), $this->typeId)));
 		}
+		$this->addCheck(new FormValidatorPost($this));
 	}
 	
 	/**

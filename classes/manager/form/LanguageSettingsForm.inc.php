@@ -50,6 +50,7 @@ class LanguageSettingsForm extends Form {
 		$this->addCheck(new FormValidator($this, 'alternateLocale1', 'optional', 'manager.languages.form.alternateLocale1Invalid'), $localeCheck, array(&$this->availableLocales));
 		$this->addCheck(new FormValidator($this, 'alternateLocale2', 'optional', 'manager.languages.form.alternateLocale2Invalid'), array('Locale', 'isLocaleValid'));
 		$this->addCheck(new FormValidator($this, 'alternateLocale2', 'optional', 'manager.languages.form.alternateLocale2Invalid'), $localeCheck, array(&$this->availableLocales));
+		$this->addCheck(new FormValidatorPost($this));
 	}
 	
 	/**

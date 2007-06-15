@@ -35,6 +35,7 @@ class JournalSiteSettingsForm extends Form {
 		$this->addCheck(new FormValidator($this, 'path', 'required', 'admin.journals.form.pathRequired'));
 		$this->addCheck(new FormValidatorAlphaNum($this, 'path', 'required', 'admin.journals.form.pathAlphaNumeric'));
 		$this->addCheck(new FormValidatorCustom($this, 'path', 'required', 'admin.journals.form.pathExists', create_function('$path,$form,$journalDao', 'return !$journalDao->journalExistsByPath($path) || ($form->getData(\'oldPath\') != null && $form->getData(\'oldPath\') == $path);'), array(&$this, DAORegistry::getDAO('JournalDAO'))));
+		$this->addCheck(new FormValidatorPost($this));
 	}
 	
 	/**

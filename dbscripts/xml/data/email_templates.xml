@@ -223,7 +223,7 @@
 			<field name="can_edit">1</field>
 			<field name="can_disable">1</field>
 			<field name="from_role_id">8192<!-- Copyeditor --></field>
-			<field name="to_role_id">512<!-- Section Editor --></field>
+			<field name="to_role_id">65536<!-- Author --></field>
 		</row>
 		<row>
 			<field name="email_key">COPYEDIT_ACK</field>

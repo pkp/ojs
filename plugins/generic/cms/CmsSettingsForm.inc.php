@@ -43,6 +43,7 @@ class CmsSettingsForm extends Form {
 		$this->contentManager =& new ContentManager();
 
 		$this->addCheck(new FormValidatorCustom($this, 'content', 'required', null, array(&$this, 'checkAndFixContent')));
+		$this->addCheck(new FormValidatorPost($this));
 
 	}
 	

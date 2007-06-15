@@ -23,6 +23,7 @@ class IssueForm extends Form {
 	 */
 	function IssueForm($template) {
 		parent::Form($template);
+		$this->addCheck(new FormValidatorPost($this));
 	}
 	
 	/**

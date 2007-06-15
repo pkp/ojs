@@ -74,6 +74,8 @@ class MetadataForm extends Form {
 		}
 		
 		$this->article = $article;
+
+		$this->addCheck(new FormValidatorPost($this));
 	}
 	
 	/**

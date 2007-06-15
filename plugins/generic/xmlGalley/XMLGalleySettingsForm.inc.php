@@ -34,6 +34,8 @@ class XMLGalleySettingsForm extends Form {
 
 		$this->journalId = $journalId;
 		$this->plugin = &$plugin;
+
+		$this->addCheck(new FormValidatorPost($this));
 	}
 
 	/**

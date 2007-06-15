@@ -27,7 +27,7 @@ class LayoutManagerSettingsForm extends Form {
 	 * @param $journalId int
 	 */
 	function LayoutManagerSettingsForm(&$plugin, $journalId) {
-        $templateMgr = &TemplateManager::getManager();
+		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('pluginFileUrl', $templateMgr->get_template_vars('baseUrl').'/plugins/generic/layoutManager');		
 		$templateMgr->assign('layoutManagerPluginEdit', true);
 				
@@ -41,6 +41,7 @@ class LayoutManagerSettingsForm extends Form {
 		$this->journalId = $journalId;
 		$this->plugin =& $plugin;
 
+		$this->addCheck(new FormValidatorPost($this));
 	}
 	
 	/**
@@ -50,7 +51,7 @@ class LayoutManagerSettingsForm extends Form {
 		$journalId = $this->journalId;
 		$plugin =& $this->plugin;
 
-        $templateMgr = &TemplateManager::getManager();
+		$templateMgr = &TemplateManager::getManager();
 		
 		if ( $preview ) {
 			error_log('getData');
@@ -81,7 +82,7 @@ class LayoutManagerSettingsForm extends Form {
 			if ( $block[2] == false ) {
 				$blockDisabled[] = $block[0];
 			}			
-		}        
+		}
 		
 		// set the enabled for the left (to preserve ordering)
 		if ( $left ) {
@@ -153,7 +154,7 @@ class LayoutManagerSettingsForm extends Form {
 		}
 		
 		if ( $preview ) {
-        		$templateMgr = &TemplateManager::getManager();
+			$templateMgr = &TemplateManager::getManager();
 			$templateMgr->assign('blocks', $blocks);
 			$templateMgr->assign('leftBlockOrder', $saveLeft);
 			$templateMgr->assign('rightBlockOrder', $saveRight);			

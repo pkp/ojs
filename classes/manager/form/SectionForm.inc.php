@@ -32,6 +32,7 @@ class SectionForm extends Form {
 		// Validation checks for this form
 		$this->addCheck(new FormValidator($this, 'title', 'required', 'manager.sections.form.titleRequired'));
 		$this->addCheck(new FormValidator($this, 'abbrev', 'required', 'manager.sections.form.abbrevRequired'));
+		$this->addCheck(new FormValidatorPost($this));
 	}
 	
 	/**
