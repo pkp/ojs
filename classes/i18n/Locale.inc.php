@@ -195,6 +195,15 @@ class Locale {
 		return $currentLocale;
 	}
 
+	function getLocaleStyleSheet($locale) {
+		$allLocales =& Locale::_getAllLocalesCache();
+		$contents = $allLocales->getContents();
+		if (isset($contents[$locale]['stylesheet'])) {
+			return $contents[$locale]['stylesheet'];
+		}
+		return null;
+	}
+
 	/**
 	 * Check if the supplied locale is currently installable.
 	 * @param $locale string
@@ -266,7 +275,7 @@ class Locale {
 			// Build array with ($localKey => $localeName)
 			if (isset($data['locale'])) {
 				foreach ($data['locale'] as $localeData) {
-					$allLocales[$localeData['attributes']['key']] = $localeData['attributes']['name'];
+					$allLocales[$localeData['attributes']['key']] = $localeData['attributes'];
 				}
 			}
 			asort($allLocales);
@@ -281,19 +290,19 @@ class Locale {
 	 */
 	function &getAllLocales() {
 		$cache =& Locale::_getAllLocalesCache();
+		$rawContents = $cache->getContents();
+		$allLocales = array();
+
+		foreach ($rawContents as $locale => $contents) {
+			$allLocales[$locale] = $contents['name'];
+		}
 
 		// if client encoding is set to iso-8859-1, transcode locales from utf8
 		if (LOCALE_ENCODING == "iso-8859-1") {
-			foreach ($cache->getContents() as $locale => $language) {
-				$cache_contents[$locale] = utf8_decode($language);
-			}
-			return $cache_contents;
-
-		} else {
-
-			return $cache->getContents();
+			$allLocales = array_map('utf8_decode', $allLocales);
 		}
 
+		return $allLocales;
 	}
 	
 	/**

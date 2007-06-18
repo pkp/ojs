@@ -8,7 +8,7 @@
  *
  * @package plugins
  *
- * Abstract class for import/export plugins
+ * Abstract class for theme plugins
  *
  * $Id$
  */
@@ -26,7 +26,7 @@ class ThemePlugin extends Plugin {
 
 	/**
 	 * Get the display name of this plugin. This name is displayed on the
-	 * Journal Manager's import/export page, for example.
+	 * Journal Manager's setup page 5, for example.
 	 * @return String
 	 */
 	function getDisplayName() {
@@ -39,7 +39,7 @@ class ThemePlugin extends Plugin {
 	 * Get a description of the plugin.
 	 */
 	function getDescription() {
-		return 'This is the ThemePlugin base class. Its functions can be overridden by subclasses to provide theme functionality for various formats.';
+		return 'This is the ThemePlugin base class. Its functions can be overridden by subclasses to provide theming support.';
 	}
 
 	/**
