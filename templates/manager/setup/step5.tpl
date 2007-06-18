@@ -379,14 +379,25 @@
 <div class="separator"></div>
 
 
-<h3>5.6 {translate key="manager.setup.journalStyleSheet"}</h3>
+<h3>5.6 {translate key="manager.setup.journalStyle"}</h3>
 
-<p>{translate key="manager.setup.journalStyleSheetDescription"}</p>
+<p>{translate key="manager.setup.journalStyleDescription"}</p>
 
 <table width="100%" class="data">
 <tr>
-	<td width="20%" class="label">{translate key="manager.setup.useJournalStyleSheet"}</td>
-	<td width="80%" class="value"><input type="file" name="journalStyleSheet" class="uploadField" /> <input type="submit" name="uploadJournalStyleSheet" value="{translate key="common.upload"}" class="button" /></td>
+	<td width="20%" class="label"><label for="journalTheme">{translate key="manager.setup.journalTheme"}</label></td></td>
+	<td width="80%" class="value">
+		<select name="journalTheme" class="selectMenu" id="journalTheme"{if empty($journalThemes)} disabled="disabled"{/if}>
+			<option value="">{translate key="common.none"}</option>
+			{foreach from=$journalThemes key=path item=journalThemePlugin}
+				<option value="{$path|escape}"{if $path == $journalTheme} selected="selected"{/if}>{$journalThemePlugin->getDisplayName()}</option>
+			{/foreach}
+		</select>
+	</td>
+</tr>
+<tr>
+	<td width="20%" class="label"><label for="journalStyleSheet">{translate key="manager.setup.useJournalStyleSheet"}</label></td>
+	<td width="80%" class="value"><input type="file" name="journalStyleSheet" id="journalStyleSheet" class="uploadField" /> <input type="submit" name="uploadJournalStyleSheet" value="{translate key="common.upload"}" class="button" /></td>
 </tr>
 </table>
 

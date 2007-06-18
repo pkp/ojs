@@ -13,7 +13,7 @@
  * $Id$
  */
 
-require('ResolverPlugin.inc.php');
+require_once('ResolverPlugin.inc.php');
 
 return new ResolverPlugin();
 

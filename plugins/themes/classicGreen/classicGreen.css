@@ -1,0 +1,315 @@
+/**
+ * classicgreen.css, v 1.02 2006-03-06
+ * Copyright (c) 2007 Jon Whipple
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * based on
+ *
+ * common.css
+ *
+ * Copyright (c) 2003-2006 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * Site-wide shared stylesheet.
+ *
+ * $Id$
+ */
+
+/**
+ * Common HTML elements
+ */
+
+body {
+	background-color: #fff;
+	color: #000;
+	text-align: center;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:link {
+	color: #004400;
+}
+
+a:active {
+	color: #557034;
+}
+
+a:visited {
+	color: #004400;
+}
+
+a:hover {
+	color: #82BD86;
+	background: #004400;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	text-transform: uppercase;
+}
+
+input.textField, select.selectMenu, textarea.textArea, input.uploadField {
+	background-color: #82BD86;
+}
+
+input.button {
+	background-color: transparent;
+}
+
+input.defaultButton {
+	background-color: transparent;
+	color: inherit;
+}
+
+
+/**
+ * Main layout elements
+ */
+
+#container {
+	width: 80%;
+	\width: 80%;
+	w\idth: 80%;
+	margin: 0 auto;
+	border-left: 1px solid #000077;
+	background-color: #82BD86;
+}
+
+#header {
+	padding: 0 166px 0 0;
+	background-color: #82BD86;
+}
+
+#headerTitle {
+	text-align: center;
+	padding: 15px 0 15px 0;
+	width: auto;
+	\width: auto;
+	w\idth: auto;
+	background-color: white;
+	border-top: 25px solid #004400;
+	border-right: 1px solid #004400;
+	border-bottom: 1px solid #004400;
+}
+
+#header h1 {
+	font-family: 'Times New Roman',Times,Georgia,serif;
+	text-align: center;
+	background-color: transparent;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+#body {
+	width: 100%;
+	\width: 100%;
+	w\idth: 100%;
+	text-align: center;
+	background-color: transparent;
+}
+
+#footer {
+	\width: 100%;
+	w\idth: 100%;
+	background-color: white;
+}
+
+#footerContent {
+	width: 100%;
+	\width: 100%;
+	w\idth: 100%;
+}
+
+#sidebar {
+	width: 165px;
+	\width: 165px;
+	w\idth: 165px;
+	text-align: center;
+	color: #333333;
+	background-color: #82BD86;
+	clear: both;
+}
+
+#main {
+	text-align: center;
+	margin: 0;
+	margin-right: 166px;
+	margin-left: auto;
+	width: auto;
+	/width: auto;
+	w/idth: auto;
+	background-color: #fff;
+	border-right: 1px solid #004400;
+}
+
+#main h2 {
+	margin: 0 1em 0.5em 1em;
+	font-family: 'Times New Roman',Times,Georgia,serif;
+	text-align: center;
+}
+
+#main h3 {
+	font-family: 'Times New Roman',Times,Georgia,serif;
+}
+
+#navbar {
+	margin-left: 0px;
+	padding: 0 0 0.5em 0;
+	border-bottom: 1px solid #004400;
+	background-color: transparent;
+	text-align: center;
+}
+
+#breadcrumb {
+	padding: 1em;
+	text-align: center;
+}
+
+#content {
+	margin-left: 1em;
+	border-top: none;
+	background-color: white;
+}
+
+#content h3 {
+	font-family: 'Times New Roman',Times,Georgia,serif;
+}
+
+#content h4 {
+	font-family: 'Times New Roman',Times,Georgia,serif;
+}
+
+#content h5 {
+	margin: 0em 1em 0.25em 0em;
+	padding-top: 0.75em;
+	font-weight: bold;
+	font-size: 1em;
+}
+
+
+/**
+ * Sidebar
+ */
+
+#sidebar div.block {
+	text-align: center;
+}
+
+#sidebar div.block span.blockTitle {
+	padding: 0;
+}
+
+#sidebar input.textField {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	background-color: white;
+}
+
+#sidebar select.selectMenu, #sidebar input.button {
+	margin: 0;
+	padding: 0;
+	font-size: 1em;
+	text-align: center;
+}
+
+#sidebar div.block form {
+	margin: 0;
+	text-align: center;
+	display: block;
+}
+#sidebar div.block form table {
+	text-align: center;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+}
+
+#sidebar div.block ul {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	list-style-type: none;
+}
+
+/**
+ * Table styles
+ */
+
+table.info {
+	text-align: left;
+}
+
+table.info td {
+	text-align: left;
+}
+
+table.listing {
+	text-align: left;
+}
+
+table.listing td {
+	text-align: left;
+}
+
+table.listing td.headseparator {
+	border-top: 1px dotted #004400;
+}
+
+table.listing td.endseparator {
+	border-top: 1px dotted #004400;
+}
+
+table.listing td.separator, table.info td.separator {
+	border-top: 1px dotted #004400;
+}
+
+#content form {
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+table.data {
+	border-collapse: collapse;
+	width: 90%;
+	margin: 0 auto;
+	text-align: left;
+}
+
+table.data td {
+	text-align: left;
+}
+
+table.data td.label {
+	width: 30%;
+	text-align: left;
+}
+
+table.data td.formSubLabel {
+	text-align: left;
+}
+
+table.data td.value {
+	width: 70%;
+	text-align: left;
+}
+
+table.data td.value input {
+	text-align: left;
+}
+
+ul.steplist {
+	text-align: left;
+}
+
+ul.steplist li {
+	text-align: left;
+}
+
+div.separator, div.thickSeparator {
+	border-bottom: 1px dotted #004400;
+}
+

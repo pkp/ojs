@@ -12,7 +12,8 @@
  *
  */
  
-require('LayoutManagerPlugin.inc.php'); 
+require_once('LayoutManagerPlugin.inc.php');
+
 return new LayoutManager(); 
 
 ?> 

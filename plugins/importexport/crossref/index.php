@@ -13,7 +13,7 @@
  * $Id$
  */
 
-require('CrossRefExportPlugin.inc.php');
+require_once('CrossRefExportPlugin.inc.php');
 
 return new CrossRefExportPlugin();
 

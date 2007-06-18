@@ -13,7 +13,7 @@
  * $Id$
  */
 
-require('CounterPlugin.inc.php');
+require_once('CounterPlugin.inc.php');
 
 return new CounterPlugin();
 

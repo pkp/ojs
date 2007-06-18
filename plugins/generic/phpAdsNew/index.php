@@ -13,7 +13,7 @@
  * $Id: index.php,v 1.0 2006/10/20 12:27pm
  */
 
-require('PhpAdsNewPlugin.inc.php');
+require_once('PhpAdsNewPlugin.inc.php');
 
 return new PhpAdsNewPlugin();
 

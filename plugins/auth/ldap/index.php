@@ -13,7 +13,7 @@
  * $Id$
  */
 
-require('LDAPAuthPlugin.inc.php');
+require_once('LDAPAuthPlugin.inc.php');
 
 return new LDAPAuthPlugin();
 

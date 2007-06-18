@@ -13,7 +13,7 @@
  * $Id$
  */
 
-require('GoogleScholarPlugin.inc.php');
+require_once('GoogleScholarPlugin.inc.php');
 
 return new GoogleScholarPlugin();
 

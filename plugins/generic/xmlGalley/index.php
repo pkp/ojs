@@ -13,7 +13,8 @@
  * $Id$
  */
  
-require('XMLGalleyPlugin.inc.php');
+require_once('XMLGalleyPlugin.inc.php');
+
 return new XMLGalleyPlugin();
 
 ?> 

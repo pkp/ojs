@@ -13,7 +13,7 @@
  * $Id$
  */
 
-require('EruditExportPlugin.inc.php');
+require_once('EruditExportPlugin.inc.php');
 
 return new EruditExportPlugin();
 

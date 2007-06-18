@@ -13,7 +13,7 @@
  * $Id$
  */
 
-require('UserImportExportPlugin.inc.php');
+require_once('UserImportExportPlugin.inc.php');
 
 return new UserImportExportPlugin();
 

@@ -46,7 +46,8 @@ class JournalSetupStep5Form extends JournalSetupForm {
 				'journalDescription' => 'string',
 				'navItems' => 'object',
 				'itemsPerPage' => 'int',
-				'numPageLinks' => 'int'
+				'numPageLinks' => 'int',
+				'journalTheme' => 'string'
 			)
 		);
 	}
@@ -56,6 +57,14 @@ class JournalSetupStep5Form extends JournalSetupForm {
 	 */
 	function display() {
 		$journal = &Request::getJournal();
+
+		$allThemes =& PluginRegistry::loadCategory('themes', true);
+		$journalThemes = array();
+		foreach ($allThemes as $key => $junk) {
+			$plugin =& $allThemes[$key]; // by ref
+			$journalThemes[basename($plugin->getPluginPath())] =& $plugin;
+			unset($plugin);
+		}
 
 		// Ensure upload file settings are reloaded when the form is displayed.
 		$templateMgr = &TemplateManager::getManager();
@@ -76,7 +85,8 @@ class JournalSetupStep5Form extends JournalSetupForm {
 			'journalStyleSheet' => $journal->getSetting('journalStyleSheet'),
 			'readerInformation' => $journal->getSetting('readerInformation'),
 			'authorInformation' => $journal->getSetting('authorInformation'),
-			'librarianInformation' => $journal->getSetting('librarianInformation')
+			'librarianInformation' => $journal->getSetting('librarianInformation'),
+			'journalThemes' => $journalThemes
 		));
 		
 		parent::display();	   

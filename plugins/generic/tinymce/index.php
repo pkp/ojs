@@ -13,7 +13,8 @@
  * $Id$
  */
 
-require('TinyMCEPlugin.inc.php');
+require_once('TinyMCEPlugin.inc.php');
+
 return new TinyMCEPlugin();
 
 ?> 

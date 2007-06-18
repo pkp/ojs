@@ -1,0 +1,547 @@
+/**
+ * UnCommon Theme
+ * Copyright (c) Jon Whipple
+ * based on the common.css design by John Willinky
+ * 
+ * based on common.css
+ *
+ * Copyright (c) 2003-2007 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * $Id$
+ */
+
+/**
+ * Common HTML elements
+ */
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #fff;
+	color: #333;
+	font-family: Verdana,Arial,Helvetica,sans-serif;
+}
+
+div {
+	line-height: 140%;
+	text-align: left;
+}
+
+table {
+	border: 0;
+	border-spacing: 0;
+	font-size: 1.0em;
+}
+
+form {
+	margin: 0;
+}
+
+a {
+	text-decoration: underline;
+}
+
+a:link {
+	color: #006699;
+}
+
+a:active {
+	color: #3399CC;
+}
+
+a:visited {
+	color: #006699;
+}
+
+a:hover {
+	color: #eee;
+	background: #006699;
+}
+
+a.plain {
+	text-decoration: none;
+}
+
+ul {
+	margin: 0.25em 0 0.75em 0;
+	padding: 0 0 0 2.5em;
+}
+
+tt {
+	font-size: 1.25em;
+}
+
+label {
+}
+
+label.error {
+	color: #900;
+}
+
+input {
+		border: 1px solid #006699;
+}
+
+input.textField, select.selectMenu, textarea.textArea, input.uploadField {
+	background-color: #ffffff;
+	color: #333333;
+	font-family: Verdana,Arial,Helvetica,sans-serif;
+	border: 1px solid #006699;
+	font-size: 1em;
+}
+
+input.button {
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+	background-color: #EEEEFF;
+	font-size: 1em;
+}
+
+input.defaultButton {
+	background-color: #3399CC;
+	color: #eee;
+	font-weight: bold;
+}
+
+
+/**
+ * Main layout elements
+ */
+
+#container {
+	line-height: 125%;
+	text-align: center;
+}
+
+#header {
+	padding: 0;
+	margin: 0 auto;
+	background-color: #006699;
+	text-align: center;
+}
+
+#headerTitle {
+	text-align: left;
+	margin: 0 auto;
+	padding: 0;
+	width: 800px;
+}
+
+#header h1 {
+	margin: 0 auto;
+	padding: 1em 0 1em 0;
+	font-family:  Verdana,Arial,Helvetica,sans-serif;
+	font-weight: bold;
+	text-transform:  uppercase;
+	color: #ffffff;
+	letter-spacing: 2px;
+}
+
+#body {
+	width: 800px;
+	margin: 0 auto;
+}
+
+#footer {
+	width: 100%;
+	min-height: 35px;
+	position: relative;
+	clear: both;
+	background-color: #006699;
+	text-align: center;
+	color:  #ffffff;
+	padding: 15px;
+}
+
+#footerContent {
+	width: 800px;
+	margin: 0 auto;
+	color:  #ffffff;
+}
+
+#sidebar {
+	float: right;
+	width: 150px;
+	margin: 0;
+	padding: 1em 0em 1em 0em;
+	font-size: 0.65em;
+}
+
+#main {
+	width: 619px;
+	margin-right: 175px;
+	padding: 0.5em 0em 2em 0em;
+}
+
+#main h2 {
+	margin: 0em 1em 0.5em 0em;
+	padding-top: 0.5em;
+	font-family:  Verdana,Arial,Helvetica,sans-serif;
+	font-weight: bold;
+	color: #006699;
+}
+
+#main h3 {
+	margin: 0em 1em 0.5em 0em;
+	padding-top: 0em;
+	font-family:  Verdana,Arial,Helvetica,sans-serif;
+	font-weight: bold;
+	color: #006699;
+}
+
+#navbar {
+	margin-right: 0;
+	padding-bottom: 0.5em;
+	border-bottom: 5px solid #006699;
+}
+
+#breadcrumb {
+	padding-top: 1em;
+	font-size: 0.7em;
+	color: #666666;
+}
+
+#content {
+	margin: 0;
+	padding: 0;
+	padding-top: 0.5em;
+	font-size: 0.7em;
+	border-top: 5px solid #006699;
+}
+
+#content h3 {
+	margin: 0em 1em 0.25em 0em;
+	padding-top: 0.75em;
+	font-family:  Verdana,Arial,Helvetica,sans-serif;
+	font-weight: bold;
+	font-size: 1.8em;
+	line-height: 1.35em;
+	color: #006699;
+	font-weight: bold;
+}
+
+#content h4 {
+	margin: 0em 1em 0.25em 0em;
+	padding-top: 0.75em;
+	font-family:  Verdana,Arial,Helvetica,sans-serif;
+	font-weight: bold;
+	font-size: 1.5em;
+	color: #666666;
+}
+
+#content h5 {
+	margin: 0em 1em 0.25em 0em;
+	padding-top: 0.75em;
+	font-weight: bold;
+	font-size: 1em;
+	color: #666666;
+}
+
+
+/**
+ * Navigation bar
+ */
+
+#navbar a {
+	font-size: 0.65em;
+	letter-spacing: 0.05em;
+}
+
+#navbar a:link {
+}
+
+#navbar a:active {
+}
+
+#navbar a:visited {
+}
+
+#navbar a:hover {
+}
+
+
+/**
+ * Sidebar
+ */
+
+#developedBy {
+	text-transform: uppercase;
+	font-size: 0.95em;
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+#sidebar div.block {
+	font-size: 1em;
+	padding: 0.5em 0;
+	border-top: 5px solid #006699;
+	border-bottom: 1px solid #006699;
+	margin-bottom: 5px;
+	color: #999999;
+}
+
+#sidebar div.block span.blockTitle {
+	display: block;
+	padding: 0;
+	font-size: 1em;
+	font-weight: bold;
+	color: #006699;;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+}
+
+#sidebar div.block span.blockSubtitle {
+	display: block;
+	padding: 0;
+	font-weight: bold;
+}
+
+#sidebar input.textField, #sidebar select.selectMenu, #sidebar input.button {
+	font-size: 1em;
+}
+
+
+/**
+ * Breadcrumbs
+ */
+
+#breadcrumb a {
+	text-decoration: none;
+}
+
+#breadcrumb a.current {
+	font-weight: bold;
+}
+
+
+/**
+ * Footer elements
+ */
+
+#footer div.debugStats {
+	font-size: 0.6em;
+}
+
+
+/**
+ * Additional text styles
+ */
+
+span.disabled, label.disabled {
+	color: #666;
+}
+
+a.action, a.file {
+	font-size: 0.85em;
+	text-transform: uppercase;
+}
+
+a.icon {
+	text-decoration: none;
+}
+
+a.icon:hover {
+	background: none;
+}
+
+span.formRequired {
+	color: #333;
+	font-size: 0.9em;
+}
+
+span.instruct {
+}
+
+span.heading {
+	font-size: 0.85em;
+	text-transform: uppercase;
+}
+
+span.highlight {
+	border-bottom: 1px dotted #000;
+}
+
+.nowrap {
+	white-space: nowrap;
+}
+
+pre {
+	background-color: #EEEEFF;
+	color: #000;
+	font-size: 1.25em;
+}
+
+/**
+ * Table styles
+ */
+
+table.info {
+}
+
+table.info td {
+	padding: 0;
+	padding-bottom: 0.5em;
+	padding-right: 0.5em;
+}
+
+table.listing {
+}
+
+table.listing td {
+	padding: 0.25em 0.5em 0.25em 0.5em;
+}
+
+table.listing tr.heading td, table.listing td.heading, table.info td.heading {
+	font-size: 0.85em;
+	text-transform: uppercase;
+	font-weight: normal;
+	line-height: 120%;
+	padding: 0.75em 0.5em 1em 0.5em;
+}
+
+table.info td.heading {
+	padding-left: 0;
+}
+
+
+table.listing td.nodata, table.info td.nodata {
+	text-align: center;
+	font-style: italic;
+}
+
+table.listing td.headseparator {
+	border-top: 1px dotted #000;
+	font-size: 0.1em;
+	line-height: 1%;
+}
+
+table.listing td.endseparator {
+	border-top: 1px dotted #000;
+	font-size: 0.25em;
+	line-height: 10%;
+}
+
+table.listing td.separator, table.info td.separator {
+	border-top: 1px dotted #DDDDD0;
+	font-size: 0.1em;
+	line-height: 1%;
+}
+
+table.data {
+}
+
+table.data tr {
+}
+
+table.data td {
+	padding-bottom: 0.25em;
+}
+
+table.data td.label {
+	padding-right: 1em;
+}
+
+table.data td.value {
+}
+
+table.data td.separator {
+	padding: 0.5em;
+	font-size: 0.1em;
+	line-height: 1%;
+}
+
+table.data td.heading {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+table.nested tr {
+	padding: 0;
+	margin: 0;
+}
+
+span.nested {
+	padding: 0 4px 0 0;
+	font-size: 1.2em;
+}
+
+/**
+ * Form-specific elements
+ */
+
+span.formError {
+	color: #900;
+	font-weight: bold;
+	font-size: 1em;
+}
+
+ul.formErrorList {
+	color: #900;
+}
+
+
+/**
+ * Other organizational elements
+ */
+
+ul.menu {
+	margin: 0;
+	padding: 0;
+}
+
+ul.menu li {
+	margin: 0;
+	padding: 0;
+	padding-right: 1.5em;
+	display: inline;
+}
+
+ul.menu li.current {
+	font-weight: bold;
+}
+
+ul.menu a {
+	font-size: 0.85em;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+ul.steplist {
+	margin: 0;
+	padding: 0;
+	list-style-type: decimal;
+}
+
+ul.steplist li {
+	margin: 0;
+	padding: 0;
+	font-size: 0.85em;
+	padding-right: 0.5em;
+	display: inline;
+	text-transform: uppercase;
+}
+
+ul.steplist li.current {
+	font-weight: bold;
+}
+
+ul.steplist a {
+	text-decoration: none;
+}
+
+ul.plain {
+	list-style-type: none;
+	padding-left: 1.5em;
+}
+
+div.separator {
+	width: 100%;
+	margin-top: 1em;
+	margin-bottom: 0.25em;
+	padding: 0;
+	border-bottom: 2px solid #006699;
+	font-size: 0.5em;
+	line-height: 25%;
+}

@@ -13,7 +13,7 @@
  * $Id$
  */
 
-require('PubMedExportPlugin.inc.php');
+require_once('PubMedExportPlugin.inc.php');
 
 return new PubMedExportPlugin();
 

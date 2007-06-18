@@ -13,7 +13,8 @@
  * $Id$
  */
  
-require('CmsPlugin.inc.php'); 
+require_once('CmsPlugin.inc.php'); 
+
 return new Cms(); 
 
 ?> 

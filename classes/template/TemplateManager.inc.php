@@ -64,7 +64,10 @@ class TemplateManager extends Smarty {
 		$this->assign('dateFormatLong', Config::getVar('general', 'date_format_long'));
 		$this->assign('datetimeFormatShort', Config::getVar('general', 'datetime_format_short'));
 		$this->assign('datetimeFormatLong', Config::getVar('general', 'datetime_format_long'));
-		$this->assign('currentLocale', Locale::getLocale());
+
+		$locale = Locale::getLocale();
+		$this->assign('currentLocale', $locale);
+
 		$this->assign('articleSearchByOptions', array(
 			'' => 'search.allFields',
 			ARTICLE_SEARCH_AUTHOR => 'search.author',
@@ -89,7 +92,7 @@ class TemplateManager extends Smarty {
 
 			$siteStyleFilename = PublicFileManager::getSiteFilesPath() . '/' . $site->getSiteStyleFilename();
 			if (file_exists($siteStyleFilename)) $this->addStyleSheet(Request::getBaseUrl() . '/' . $siteStyleFilename);
-			
+
 			if (isset($journal)) {
 				$this->assign_by_ref('currentJournal', $journal);
 				$journalTitle = $journal->getTitle();
@@ -114,7 +117,15 @@ class TemplateManager extends Smarty {
 				$this->assign('numPageLinks', $journal->getSetting('numPageLinks'));
 				$this->assign('itemsPerPage', $journal->getSetting('itemsPerPage'));
 				$this->assign('enableAnnouncements', $journal->getSetting('enableAnnouncements'));
-				
+
+				// Load and apply theme plugin, if chosen
+				$themePluginPath = $journal->getSetting('journalTheme');
+				if (!empty($themePluginPath)) {
+					// Load and activate the theme
+					$themePlugin =& PluginRegistry::loadPlugin('themes', $themePluginPath);
+					if ($themePlugin) $themePlugin->activate(&$this);
+				}
+
 				// Assign stylesheets and footer
 				$journalStyleSheet = $journal->getSetting('journalStyleSheet');
 				if ($journalStyleSheet) {
@@ -144,7 +155,10 @@ class TemplateManager extends Smarty {
 			$this->assign('enableLanguageToggle', true);
 			$this->assign('languageToggleLocales', $locales);
 		}
-		
+
+		// If there's a locale-specific stylesheet, add it.
+		if (($localeStyleSheet = Locale::getLocaleStyleSheet($locale)) != null) $this->addStyleSheet(Request::getBaseUrl() . '/' . $localeStyleSheet);
+
 		// Register custom functions
 		$this->register_modifier('translate', array('Locale', 'translate'));
 		$this->register_modifier('strip_unsafe_html', array('String', 'stripUnsafeHtml'));
