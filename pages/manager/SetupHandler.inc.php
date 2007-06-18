@@ -376,12 +376,8 @@ class SetupHandler extends ManagerHandler {
 			
 			if (!isset($editData) && $setupForm->validate()) {
 				$setupForm->execute();
-				
-				$templateMgr = &TemplateManager::getManager();
-				$templateMgr->assign('setupStep', $step);
-				$templateMgr->assign('helpTopicId', 'journal.managementPages.setup');
-				$templateMgr->display('manager/setup/settingsSaved.tpl');
-			
+
+				Request::redirect(null, null, 'setupSaved', $step);
 			} else {
 				$setupForm->display();
 			}
@@ -390,7 +386,27 @@ class SetupHandler extends ManagerHandler {
 			Request::redirect();
 		}
 	}
-	
+
+	/**
+	 * Display a "Settings Saved" message
+	 */
+	function setupSaved($args) {
+		parent::validate();
+		
+		$step = isset($args[0]) ? (int) $args[0] : 0;
+		
+		if ($step >= 1 && $step <= 5) {
+			parent::setupTemplate(true);
+
+			$templateMgr = &TemplateManager::getManager();
+			$templateMgr->assign('setupStep', $step);
+			$templateMgr->assign('helpTopicId', 'journal.managementPages.setup');
+			$templateMgr->display('manager/setup/settingsSaved.tpl');
+		} else {
+			Request::redirect(null, 'index');
+		}
+	}
+
 	function downloadLayoutTemplate($args) {
 		parent::validate();
 		$journal =& Request::getJournal();

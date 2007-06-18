@@ -119,6 +119,11 @@ class ManagerHandler extends Handler {
 		SetupHandler::saveSetup($args);
 	}
 
+	function setupSaved($args) {
+		import('pages.manager.SetupHandler');
+		SetupHandler::setupSaved($args);
+	}
+
 	function downloadLayoutTemplate($args) {
 		import('pages.manager.SetupHandler');
 		SetupHandler::downloadLayoutTemplate($args);
