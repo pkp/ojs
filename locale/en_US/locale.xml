@@ -150,6 +150,7 @@
 	<message key="common.captchaField">Validation</message>
 	<message key="common.captchaField.description">Please enter the letters as they appear in the image above.</message>
 	<message key="common.captchaField.badCaptcha">The characters you entered did not match the characters in the image. Please check the characters and try again.</message>
+	<message key="common.suggest">Suggest</message>
 
 	<!-- Common Form Messages -->
 	<message key="form.errorsOccurred">Errors occurred processing this form</message>
@@ -1259,7 +1260,7 @@ You may optionally provide the user with a reason for disabling their account.</
 	<message key="manager.people.authSource">Authentication source</message>
 	<message key="manager.people.enrollUserAs">Enroll user as</message>
 	<message key="manager.people.doNotEnroll">With no role</message>
-	<message key="manager.people.enrollUserAsDescription">If no roles are selected, the user will be created in the system but not be enrolled in any role within this journal. Roles can be assigned or unassigned at any point after the user is created.</message>
+	<message key="manager.people.enrollUserAsDescription">Users can be assigned to, or removed from, a role at any point.</message>
 	<message key="manager.people.invalidUser">Sorry, the requested user does not exist.</message>
 	<message key="manager.people.noAdministrativeRights"><![CDATA[Sorry, you do not have administrative rights over this user. This may be because:
 		<ul>
@@ -1270,6 +1271,7 @@ You may optionally provide the user with a reason for disabling their account.</
 	]]></message>
 	<message key="manager.people.createUserGeneratePassword">Generate a random password.</message>
 	<message key="manager.people.createUserSendNotify">Send the user a welcome email containing their username and password.</message>
+	<message key="manager.people.mustProvideName">Please provide at least a last name for the user first.</message>
 	<message key="manager.people.userMustChangePassword">Require the user to change their password the next time they log in.</message>
 	<message key="manager.people.disable">Disable</message>
 	<message key="manager.people.enable">Enable</message>

@@ -374,8 +374,8 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$createReviewerForm->readInputData();
 			if ($createReviewerForm->validate()) {
 				// Create a user and enroll them as a reviewer.
-				$createReviewerForm->execute();
-				Request::redirect(null, null, 'selectReviewer', $articleId);
+				$newUserId = $createReviewerForm->execute();
+				Request::redirect(null, null, 'selectReviewer', array($articleId, $newUserId));
 			} else {
 				$createReviewerForm->display();
 			}
@@ -384,6 +384,19 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$createReviewerForm->display();
 		}
 
+	}
+
+	/**
+	 * Get a suggested username, making sure it's not
+	 * already used by the system. (Poor-man's AJAX.)
+	 */
+	function suggestUsername() {
+		parent::validate();
+		$suggestion = Validation::suggestUsername(
+			Request::getUserVar('firstName'),
+			Request::getUserVar('lastName')
+		);
+		echo $suggestion;
 	}
 
 	/**

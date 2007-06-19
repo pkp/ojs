@@ -168,6 +168,11 @@ class ManagerHandler extends Handler {
 		PeopleHandler::createUser();
 	}
 
+	function suggestUsername() {
+		import('pages.manager.PeopleHandler');
+		PeopleHandler::suggestUsername();
+	}
+
 	function mergeUsers($args) {
 		import('pages.manager.PeopleHandler');
 		PeopleHandler::mergeUsers($args);

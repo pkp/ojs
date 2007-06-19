@@ -189,6 +189,11 @@ class SectionEditorHandler extends Handler {
 		SubmissionEditHandler::createReviewer($args);
 	}
 
+	function suggestUsername() {
+		import('pages.sectionEditor.SubmissionEditHandler');
+		SubmissionEditHandler::suggestUsername();
+	}
+
 	function enroll($args) {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::enroll($args);

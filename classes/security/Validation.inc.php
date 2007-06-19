@@ -246,7 +246,20 @@ class Validation {
 		}
 		return substr(md5($user->getUserId() . $user->getUsername() . $user->getPassword()), 0, 6);
 	}
-	
+
+	/**
+	 * Suggest a username given the first and last names.
+	 * @return string
+	 */
+	function suggestUsername($firstName, $lastName) {
+		$initial = String::substr($firstName, 0, 1);
+
+		$suggestion = String::regexp_replace('/[^a-zA-Z0-9_-]/', '', String::strtolower($initial . $lastName));
+		$userDao =& DAORegistry::getDAO('UserDAO');
+		for ($i = ''; $userDao->userExistsByUsername($suggestion . $i); $i++);
+		return $suggestion . $i;
+	}
+
 	/**
 	 * Check if the user must change their password in order to log in.
 	 * @return boolean

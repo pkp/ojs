@@ -185,3 +185,19 @@ window.onunload = function(e) {
 	createCookie("font-size", size, 365);
 }
 
+/**
+ * Asynchronous request functions
+ */
+function makeAsyncRequest(){
+	var req=(window.XMLHttpRequest)?new XMLHttpRequest():new ActiveXObject('Microsoft.XMLHTTP');
+	return req;
+}
+
+function sendAsyncRequest(req, url, data, method) {
+	var header = 'Content-Type:text/html; Charset=utf-8';
+	req.open(method, url, true);
+	req.setRequestHeader(header.split(':')[0],header.split(':')[1]);
+	req.send(data);
+}
+
+

@@ -307,7 +307,20 @@ class PeopleHandler extends ManagerHandler {
 	function createUser() {
 		PeopleHandler::editUser();
 	}
-	
+
+	/**
+	 * Get a suggested username, making sure it's not
+	 * already used by the system. (Poor-man's AJAX.)
+	 */
+	function suggestUsername() {
+		parent::validate();
+		$suggestion = Validation::suggestUsername(
+			Request::getUserVar('firstName'),
+			Request::getUserVar('lastName')
+		);
+		echo $suggestion;
+	}
+
 	/**
 	 * Display form to create/edit a user profile.
 	 * @param $args array optional, if set the first parameter is the ID of the user to edit

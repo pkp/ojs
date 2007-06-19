@@ -89,6 +89,7 @@ class CreateReviewerForm extends Form {
 	
 	/**
 	 * Register a new user.
+	 * @return userId int
 	 */
 	function execute() {
 		$userDao = &DAORegistry::getDAO('UserDAO');
@@ -160,6 +161,8 @@ class CreateReviewerForm extends Form {
 			$mail->addRecipient($user->getEmail(), $user->getFullName());
 			$mail->send();
 		}
+
+		return $userId;
 	}
 	
 }

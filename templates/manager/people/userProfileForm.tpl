@@ -41,6 +41,23 @@
 		document.userForm.password.disabled=0;
 		document.userForm.password2.disabled=0;
 	}
+
+	function generateUsername() {
+		var req = makeAsyncRequest();
+
+		if (document.userForm.lastName.value == "") {
+			alert("{/literal}{translate key="manager.people.mustProvideName"}{literal}");
+			return;
+		}
+
+		req.onreadystatechange = function() {
+			if (req.readyState == 4) {
+				document.userForm.username.value = req.responseText;
+			}
+		}
+		sendAsyncRequest(req, '{/literal}{url op="suggestUsername" firstName="REPLACE1" lastName="REPLACE2" escape=false}{literal}'.replace('REPLACE1', escape(document.userForm.firstName.value)).replace('REPLACE2', escape(document.userForm.lastName.value)), null, 'get');
+	}
+
 // -->
 </script>
 {/literal}
@@ -60,6 +77,22 @@
 {include file="common/formErrors.tpl"}
 
 <table width="100%" class="data">
+	<tr valign="top">
+		<td class="label">{fieldLabel name="firstName" required="true" key="user.firstName"}</td>
+		<td class="value"><input type="text" name="firstName" id="firstName" value="{$firstName|escape}" size="20" maxlength="40" class="textField" /></td>
+	</tr>
+	<tr valign="top">
+		<td class="label">{fieldLabel name="middleName" key="user.middleName"}</td>
+		<td class="value"><input type="text" name="middleName" id="middleName" value="{$middleName|escape}" size="20" maxlength="40" class="textField" /></td>
+	</tr>
+	<tr valign="top">
+		<td class="label">{fieldLabel name="lastName" required="true" key="user.lastName"}</td>
+		<td class="value"><input type="text" name="lastName" id="lastName" value="{$lastName|escape}" size="20" maxlength="90" class="textField" /></td>
+	</tr>
+	<tr valign="top">
+		<td class="label">{fieldLabel name="initials" key="user.initials"}</td>
+		<td class="value"><input type="text" name="initials" id="initials" value="{$initials|escape}" size="5" maxlength="5" class="textField" />&nbsp;&nbsp;{translate key="user.initialsExample"}</td>
+	</tr>
 	{if not $userId}
 	<tr valign="top">	
 		<td class="label">{fieldLabel name="enrollAs" key="manager.people.enrollUserAs"}</td>
@@ -74,7 +107,7 @@
 	<tr valign="top">
 		<td class="label">{fieldLabel name="username" required="true" key="user.username"}</td>
 		<td class="value">
-			<input type="text" name="username" id="username" value="{$username|escape}" size="20" maxlength="32" class="textField" />
+			<input type="text" name="username" id="username" value="{$username|escape}" size="20" maxlength="32" class="textField" />&nbsp;&nbsp;<input type="button" class="button" value="{translate key="common.suggest"}" onclick="generateUsername()" />
 			<br />
 			<span class="instruct">{translate key="user.register.usernameRestriction"}</span>
 		</td>
@@ -124,22 +157,6 @@
 	<tr valign="top">
 		<td class="label">&nbsp;</td>
 		<td class="value"><input type="checkbox" name="mustChangePassword" id="mustChangePassword" value="1"{if $mustChangePassword} checked="checked"{/if} /> <label for="mustChangePassword">{translate key="manager.people.userMustChangePassword"}</label></td>
-	</tr>
-	<tr valign="top">
-		<td class="label">{fieldLabel name="firstName" required="true" key="user.firstName"}</td>
-		<td class="value"><input type="text" name="firstName" id="firstName" value="{$firstName|escape}" size="20" maxlength="40" class="textField" /></td>
-	</tr>
-	<tr valign="top">
-		<td class="label">{fieldLabel name="middleName" key="user.middleName"}</td>
-		<td class="value"><input type="text" name="middleName" id="middleName" value="{$middleName|escape}" size="20" maxlength="40" class="textField" /></td>
-	</tr>
-	<tr valign="top">
-		<td class="label">{fieldLabel name="lastName" required="true" key="user.lastName"}</td>
-		<td class="value"><input type="text" name="lastName" id="lastName" value="{$lastName|escape}" size="20" maxlength="90" class="textField" /></td>
-	</tr>
-	<tr valign="top">
-		<td class="label">{fieldLabel name="initials" key="user.initials"}</td>
-		<td class="value"><input type="text" name="initials" id="initials" value="{$initials|escape}" size="5" maxlength="5" class="textField" />&nbsp;&nbsp;{translate key="user.initialsExample"}</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{fieldLabel name="affiliation" key="user.affiliation"}</td>
