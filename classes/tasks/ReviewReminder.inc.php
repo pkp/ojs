@@ -59,7 +59,7 @@ class ReviewReminder extends ScheduledTask {
 			'reviewerUsername' => $reviewer->getUsername(),
 			'journalUrl' => $journal->getUrl(),
 			'reviewerPassword' => $reviewer->getPassword(),
-			'reviewDueDate' => date('Y-m-d', strtotime($reviewAssignment->getDateDue())),
+			'reviewDueDate' => strftime(Config::getVar('general', 'date_format_short'), strtotime($reviewAssignment->getDateDue())),
 			'editorialContactSignature' => $journal->getSetting('contactName') . "\n" . $journal->getTitle(),
 			'passwordResetUrl' => Request::url($journal->getPath(), 'login', 'resetPassword', $reviewer->getUsername(), array('confirm' => Validation::generatePasswordResetHash($reviewer->getUserId()))),
 			'submissionReviewUrl' => $submissionReviewUrl

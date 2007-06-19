@@ -98,7 +98,7 @@ class ReviewerAction extends Action {
 					$email->assignParams(array(
 						'editorialContactName' => $editorialContactName,
 						'reviewerName' => $reviewer->getFullName(),
-						'reviewDueDate' => date('Y-m-d', strtotime($reviewAssignment->getDateDue()))
+						'reviewDueDate' => strftime(Config::getVar('general', 'date_format_short'), strtotime($reviewAssignment->getDateDue()))
 					));
 				}
 				$paramArray = array('reviewId' => $reviewId);

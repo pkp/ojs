@@ -212,13 +212,13 @@ class SectionEditorAction extends Action {
 				return true;
 			} else {
 				if (!Request::getUserVar('continued')) {
-					$weekLaterDate = date('Y-m-d', strtotime('+1 week'));
+					$weekLaterDate = strftime(Config::getVar('general', 'date_format_short'), strtotime('+1 week'));
 				
 					if ($reviewAssignment->getDateDue() != null) {
-						$reviewDueDate = date('Y-m-d', strtotime($reviewAssignment->getDateDue()));
+						$reviewDueDate = strftime(Config::getVar('general', 'date_format_short'), strtotime($reviewAssignment->getDateDue()));
 					} else {
 						$numWeeks = max((int) $journal->getSetting('numWeeksPerReview'), 2);
-						$reviewDueDate = date('Y-m-d', strtotime('+' . $numWeeks . ' week'));
+						$reviewDueDate = strftime(Config::getVar('general', 'date_format_short'), strtotime('+' . $numWeeks . ' week'));
 					}
 
 					$submissionUrl = Request::url(null, 'reviewer', 'submission', $reviewId, $reviewerAccessKeysEnabled?array('key' => 'ACCESS_KEY'):array());
@@ -391,7 +391,7 @@ class SectionEditorAction extends Action {
 					'reviewerName' => $reviewer->getFullName(),
 					'reviewerUsername' => $reviewer->getUsername(),
 					'reviewerPassword' => $reviewer->getPassword(),
-					'reviewDueDate' => date('Y-m-d', strtotime($reviewAssignment->getDateDue())),
+					'reviewDueDate' => strftime(Config::getVar('general', 'date_format_short'), strtotime($reviewAssignment->getDateDue())),
 					'editorialContactSignature' => $user->getContactSignature(),
 					'passwordResetUrl' => Request::url(null, 'login', 'resetPassword', $reviewer->getUsername(), array('confirm' => Validation::generatePasswordResetHash($reviewer->getUserId()))),
 					'submissionReviewUrl' => $submissionUrl
@@ -561,7 +561,20 @@ class SectionEditorAction extends Action {
 			// Add log
 			import('article.log.ArticleLog');
 			import('article.log.ArticleEventLogEntry');
-			ArticleLog::logEvent($articleId, ARTICLE_LOG_REVIEW_SET_DUE_DATE, ARTICLE_LOG_TYPE_REVIEW, $reviewAssignment->getReviewId(), 'log.review.reviewDueDateSet', array('reviewerName' => $reviewer->getFullName(), 'dueDate' => date('Y-m-d', strtotime($reviewAssignment->getDateDue())), 'articleId' => $articleId, 'round' => $reviewAssignment->getRound()));
+			ArticleLog::logEvent(
+				$articleId,
+				ARTICLE_LOG_REVIEW_SET_DUE_DATE,
+				ARTICLE_LOG_TYPE_REVIEW,
+				$reviewAssignment->getReviewId(),
+				'log.review.reviewDueDateSet',
+				array(
+					'reviewerName' => $reviewer->getFullName(),
+					'dueDate' => strftime(Config::getVar('general', 'date_format_short'),
+					strtotime($reviewAssignment->getDateDue())),
+					'articleId' => $articleId,
+					'round' => $reviewAssignment->getRound()
+				)
+			);
 		}
 	 }
 	 
