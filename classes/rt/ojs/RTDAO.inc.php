@@ -39,7 +39,6 @@ class RTDAO extends DAO {
 		$rt->setDefineTerms($journal->getSetting('rtDefineTerms')?true:false);
 		$rt->setEmailAuthor($journal->getSetting('rtEmailAuthor')?true:false);
 		$rt->setEmailOthers($journal->getSetting('rtEmailOthers')?true:false);
-		$rt->setBibFormat($journal->getSetting('rtBibFormat'));
 		return $rt;
 	}
 
@@ -58,7 +57,6 @@ class RTDAO extends DAO {
 		$journal->updateSetting('rtDefineTerms', $rt->getDefineTerms(), 'bool');
 		$journal->updateSetting('rtEmailAuthor', $rt->getEmailAuthor(), 'bool');
 		$journal->updateSetting('rtEmailOthers', $rt->getEmailOthers(), 'bool');
-		$journal->updateSetting('rtBibFormat', $rt->getBibFormat());
 		return true;
 	}
 	
@@ -218,7 +216,6 @@ class RTDAO extends DAO {
 		$rt->setDefineTerms($row['define_terms']);
 		$rt->setEmailAuthor($row['email_author']);
 		$rt->setEmailOthers($row['email_others']);
-		$rt->setBibFormat($row['bib_format']);
 
 		HookRegistry::call('RTDAO::_returnJournalRTFromRow', array(&$rt, &$row));
 

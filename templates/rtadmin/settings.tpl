@@ -34,7 +34,6 @@
 		<td class="label"><input type="checkbox" name="captureCite" id="captureCite" {if $captureCite}checked="checked" {/if}/></td>
 		<td class="value">
 			<label for="captureCite">{translate key="rt.admin.settings.captureCite"}</label><br />
-			<label for="bibFormat">{translate key="rt.admin.settings.bibFormat"}</label>&nbsp;&nbsp;<select name="bibFormat" id="bibFormat" size="1" class="selectMenu">{html_options options=$bibFormatOptions selected=$bibFormat}</select>
 		</td>
 	</tr>
 	<tr valign="top">

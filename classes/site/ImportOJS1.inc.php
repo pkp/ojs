@@ -517,7 +517,6 @@ class ImportOJS1 {
 		$rt->setAddComment($row['bAddComment']);
 		$rt->setEmailAuthor($row['bEmailAuthor']);
 		$rt->setEmailOthers($row['bEmailOthers']);
-		$rt->setBibFormat($this->journalInfo['chCitationStyle']);
 
 		$result->Close();
 

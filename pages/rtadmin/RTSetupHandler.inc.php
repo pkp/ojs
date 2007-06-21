@@ -37,15 +37,6 @@ class RTSetupHandler extends RTAdminHandler {
 			}
 
 			$templateMgr->assign('versionOptions', $versionOptions);
-			$templateMgr->assign('bibFormatOptions', array(
-				'APA' => 'American Psychological Association (APA)',
-				'MLA' => 'Modern Language Association (MLA)',
-				'Turabian' => 'Turabian',
-				'CBE' => 'Council of Biology Editors (CBE)',
-				'BibTeX' => 'BibTeX',
-				'ABNT' => 'ABNT 10520'
-			));
-
 			$templateMgr->assign_by_ref('version', $rt->getVersion());
 			$templateMgr->assign('enabled', $rt->getEnabled());
 			$templateMgr->assign('abstract', $rt->getAbstract());
@@ -57,7 +48,6 @@ class RTSetupHandler extends RTAdminHandler {
 			$templateMgr->assign('defineTerms', $rt->getDefineTerms());
 			$templateMgr->assign('emailAuthor', $rt->getEmailAuthor());
 			$templateMgr->assign('emailOthers', $rt->getEmailOthers());
-			$templateMgr->assign('bibFormat', $rt->getBibFormat());
 
 			// Bring in the comments constants.
 			$commentDao = &DAORegistry::getDao('CommentDAO');
@@ -101,7 +91,6 @@ class RTSetupHandler extends RTAdminHandler {
 			$rt->setDefineTerms(Request::getUserVar('defineTerms')==true);
 			$rt->setEmailAuthor(Request::getUserVar('emailAuthor')==true);
 			$rt->setEmailOthers(Request::getUserVar('emailOthers')==true);
-			$rt->setBibFormat(Request::getUserVar('bibFormat'));
 
 			$journal->updateSetting('enableComments', Request::getUserVar('enableComments')?Request::getUserVar('enableCommentsMode'):COMMENTS_DISABLED);
 

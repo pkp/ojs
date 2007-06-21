@@ -2396,7 +2396,6 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="rt.admin.relatedItems">Related Item Tools</message>
 
 	<message key="rt.admin.settings.disableRelatedItems">Disable Related Items</message>
-	<message key="rt.admin.settings.bibFormat">Bibliographic format</message>
 	<message key="rt.admin.settings.captureCite">How to cite item (provides bibliographic detail for item).</message>
 	<message key="rt.admin.settings.viewMetadata">Indexing metadata (displays item's indexing metadata provided by author and system).</message>
 	<message key="rt.admin.settings.supplementaryFiles">Supplementary files (displays list of files author included with submission).</message>
@@ -2519,13 +2518,8 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="rt.suppFiles.download">Download</message>
 
 	<message key="rt.captureCite">How to cite item</message>
+	<message key="rt.captureCite.format">Citation Format</message>
 	<message key="rt.captureCite.online">Online</message>
-	<message key="rt.captureCite.available">Available:</message>
-	<message key="rt.captureCite.capture">Download Citation</message>
-	<message key="rt.captureCite.acaoLocation">North America</message>
-	<message key="rt.captureCite.capture.endNote"><![CDATA[<a href="]]>{$url}<![CDATA[">EndNote</a> - EndNote format (Macintosh &amp; Windows)]]></message>
-	<message key="rt.captureCite.capture.referenceManager"><![CDATA[<a href="]]>{$url}<![CDATA[">Reference Manager</a> - RIS format (Windows only)]]></message>
-	<message key="rt.captureCite.capture.proCite"><![CDATA[<a href="]]>{$url}<![CDATA[">ProCite</a> - RIS format (Macintosh &amp; Windows)]]></message>
 
 	<message key="rt.reviewPolicy">Review policy</message>
 	<message key="rt.printVersion">Print version</message>

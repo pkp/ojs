@@ -86,7 +86,6 @@ class Upgrade extends Installer {
 			$rt->setVersion($row['version_id']);
 			$rt->setAbstract(true); // No toggle in prior OJS; assume true
 			$rt->setCaptureCite($row['capture_cite']);
-			$rt->setBibFormat($row['bib_format']);
 			$rt->setViewMetadata($row['view_metadata']);
 			$rt->setSupplementaryFiles($row['supplementary_files']);
 			$rt->setPrinterFriendly($row['printer_friendly']);

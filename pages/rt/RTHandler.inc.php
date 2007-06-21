@@ -148,7 +148,7 @@ class RTHandler extends ArticleHandler {
 		$templateMgr->assign_by_ref('journalSettings', $journal->getSettings());
 		$templateMgr->display('rt/context.tpl');
 	}
-	
+
 	function captureCite($args) {
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
@@ -170,10 +170,21 @@ class RTHandler extends ArticleHandler {
 		$templateMgr->assign_by_ref('journal', $journal);
 		$templateMgr->assign_by_ref('issue', $issue);
 		$templateMgr->assign_by_ref('article', $article);
-		$templateMgr->assign('bibFormat', $journalRt->getBibFormat());
+
 		$templateMgr->assign_by_ref('journalSettings', $journal->getSettings());
 
-		switch ($citeType) {
+		$citationPlugins =& PluginRegistry::loadCategory('citationFormats');
+		$templateMgr->assign('citationPlugins', $citationPlugins);
+		if (isset($citationPlugins[$citeType])) {
+			// A citation type has been selected; display citation.
+			$citationPlugin =& $citationPlugins[$citeType];
+		} else {
+			// No citation type has been selected; use a default.
+			$citationPlugin = array_shift($citationPlugins);
+		}
+		$citationPlugin->cite($article, $issue);
+
+/*		switch ($citeType) {
 			case 'endNote':
 				header('Content-Disposition: attachment; filename="' . $articleId . '-endNote.enw"');
 				$templateMgr->display('rt/citeEndNote.tpl', 'application/x-endnote-refer');
@@ -189,7 +200,7 @@ class RTHandler extends ArticleHandler {
 			default:
 				$templateMgr->display('rt/captureCite.tpl');
 				break;
-		}
+		} */
 
 	}
 	
