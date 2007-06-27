@@ -514,7 +514,6 @@ class ImportOJS1 {
 		$rt->setPrinterFriendly($row['bPrintVersion']);
 		$rt->setAuthorBio($row['bAuthorBios']);
 		$rt->setDefineTerms($row['bDefineTerms']);
-		$rt->setAddComment($row['bAddComment']);
 		$rt->setEmailAuthor($row['bEmailAuthor']);
 		$rt->setEmailOthers($row['bEmailOthers']);
 
