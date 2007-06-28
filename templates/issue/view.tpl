@@ -20,7 +20,7 @@
 		<li><a href="{$currentUrl}">{translate key="issue.toc"}</a></li>
 	</ul>
 	<br />
-	{if $coverPagePath}<div><a href="{$currentUrl}"><img src="{$coverPagePath|escape}" border="0" alt=""{if $width} width="{$width}"{/if}{if $height} height="{$height}"{/if}/></a></div>{/if}
+	{if $coverPagePath}<div><a href="{$currentUrl}"><img src="{$coverPagePath|escape}" style="border: 0;" alt=""{if $width} width="{$width}"{/if}{if $height} height="{$height}"{/if}/></a></div>{/if}
 	<div>{$issue->getCoverPageDescription()|escape|nl2br}</div>
 {elseif $issue}
 	<h3>{translate key="issue.toc"}</h3>

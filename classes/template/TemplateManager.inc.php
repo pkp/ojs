@@ -446,7 +446,7 @@ class TemplateManager extends Smarty {
 				// build image tag with standarized size of 16x16
 				$disabled = (isset($params['disabled']) && !empty($params['disabled']));
 				$iconHtml = '<img src="' . $smarty->get_template_vars('baseUrl') . '/templates/images/icons/';			
-				$iconHtml .= $params['name'] . ($disabled ? '_disabled' : '') . '.gif" width="16" height="14" border="0" alt="';
+				$iconHtml .= $params['name'] . ($disabled ? '_disabled' : '') . '.gif" alt="';
 				
 				// if alt parameter specified use it, otherwise use localization version
 				if (isset($params['alt'])) {

@@ -111,13 +111,13 @@
 <br /><br />
 
 <div style="text-align: center; width: 250px; margin: 0 auto">
-	<a href="http://lockss.stanford.edu/"><img src="{$baseUrl}/templates/images/lockss.gif" width="108" height="108" border="0" alt="LOCKSS" /></a>
+	<a href="http://lockss.stanford.edu/"><img src="{$baseUrl}/templates/images/lockss.gif" style="border: 0;" alt="LOCKSS" /></a>
 	<br />
 	LOCKSS system has permission to collect, preserve, and serve this Archival Unit.
 		
 	<br /><br />
 	
-	<a href="http://pkp.sfu.ca/"><img src="{$baseUrl}/templates/images/pkp.gif" width="79" height="56" border="0" alt="The Public Knowledge Project" /></a>
+	<a href="http://pkp.sfu.ca/"><img src="{$baseUrl}/templates/images/pkp.gif" style="border: 0;" alt="The Public Knowledge Project" /></a>
 	<br />
 	Open Journal Systems was developed by the Public Knowledge Project.
 </div>

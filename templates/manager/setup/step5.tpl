@@ -35,7 +35,7 @@
 {if $homeHeaderTitleImage}
 {translate key="common.fileName"}: {$homeHeaderTitleImage.name} {$homeHeaderTitleImage.dateUploaded|date_format:$datetimeFormatShort} <input type="submit" name="deleteHomeHeaderTitleImage" value="{translate key="common.delete"}" class="button" />
 <br />
-<img src="{$publicFilesDir}/{$homeHeaderTitleImage.uploadName}" width="{$homeHeaderTitleImage.width}" height="{$homeHeaderTitleImage.height}" border="0" alt="" />
+<img src="{$publicFilesDir}/{$homeHeaderTitleImage.uploadName}" width="{$homeHeaderTitleImage.width}" height="{$homeHeaderTitleImage.height}" style="border: 0;" alt="" />
 {/if}
 
 <h4>{translate key="manager.setup.journalLogo"}</h4>
@@ -50,7 +50,7 @@
 {if $homeHeaderLogoImage}
 {translate key="common.fileName"}: {$homeHeaderLogoImage.name} {$homeHeaderLogoImage.dateUploaded|date_format:$datetimeFormatShort} <input type="submit" name="deleteHomeHeaderLogoImage" value="{translate key="common.delete"}" class="button" />
 <br />
-<img src="{$publicFilesDir}/{$homeHeaderLogoImage.uploadName}" width="{$homeHeaderLogoImage.width}" height="{$homeHeaderLogoImage.height}" border="0" alt="" />
+<img src="{$publicFilesDir}/{$homeHeaderLogoImage.uploadName}" width="{$homeHeaderLogoImage.width}" height="{$homeHeaderLogoImage.height}" style="border: 0;" alt="" />
 {/if}
 
 {if $alternateLocale1}
@@ -71,7 +71,7 @@
 {if $homeHeaderTitleImageAlt1}
 {translate key="common.fileName"}: {$homeHeaderTitleImageAlt1.name} {$homeHeaderTitleImageAlt1.dateUploaded|date_format:$datetimeFormatShort} <input type="submit" name="deleteHomeHeaderTitleImageAlt1" value="{translate key="common.delete"}" class="button" />
 <br />
-<img src="{$publicFilesDir}/{$homeHeaderTitleImageAlt1.uploadName}" width="{$homeHeaderTitleImageAlt1.width}" height="{$homeHeaderTitleImageAlt1.height}" border="0" alt="" />
+<img src="{$publicFilesDir}/{$homeHeaderTitleImageAlt1.uploadName}" width="{$homeHeaderTitleImageAlt1.width}" height="{$homeHeaderTitleImageAlt1.height}" style="border: 0;" alt="" />
 {/if}
 
 <h4>{translate key="manager.setup.journalLogo"} ({$languageToggleLocales.$alternateLocale1})</h4>
@@ -86,7 +86,7 @@
 {if $homeHeaderLogoImageAlt1}
 {translate key="common.fileName"}: {$homeHeaderLogoImageAlt1.name} {$homeHeaderLogoImageAlt1.dateUploaded|date_format:$datetimeFormatShort} <input type="submit" name="deletehHomeHeaderLogoImageAlt1" value="{translate key="common.delete"}" class="button" />
 <br />
-<img src="{$publicFilesDir}/{$homeHeaderLogoImageAlt1.uploadName}" width="{$homeHeaderLogoImageAlt1.width}" height="{$homeHeaderLogoImageAlt1.height}" border="0" alt="" />
+<img src="{$publicFilesDir}/{$homeHeaderLogoImageAlt1.uploadName}" width="{$homeHeaderLogoImageAlt1.width}" height="{$homeHeaderLogoImageAlt1.height}" style="border: 0;" alt="" />
 {/if}
 {/if}
 
@@ -108,7 +108,7 @@
 {if $homeHeaderTitleImageAlt2}
 {translate key="common.fileName"}: {$homeHeaderTitleImageAlt2.name} {$homeHeaderTitleImageAlt2.dateUploaded|date_format:$datetimeFormatShort} <input type="submit" name="deleteHomeHeaderTitleImageAlt2" value="{translate key="common.delete"}" class="button" />
 <br />
-<img src="{$publicFilesDir}/{$homeHeaderTitleImageAlt2.uploadName}" width="{$homeHeaderTitleImageAlt2.width}" height="{$homeHeaderTitleImageAlt2.height}" border="0" alt="" />
+<img src="{$publicFilesDir}/{$homeHeaderTitleImageAlt2.uploadName}" width="{$homeHeaderTitleImageAlt2.width}" height="{$homeHeaderTitleImageAlt2.height}" style="border: 0;" alt="" />
 {/if}
 
 <h4>{translate key="manager.setup.journalLogo"} ({$languageToggleLocales.$alternateLocale2})</h4>
@@ -123,7 +123,7 @@
 {if $homeHeaderLogoImageAlt2}
 {translate key="common.fileName"}: {$homeHeaderLogoImageAlt2.name} {$homeHeaderLogoImageAlt2.dateUploaded|date_format:$datetimeFormatShort} <input type="submit" name="deletehHomeHeaderLogoImageAlt2" value="{translate key="common.delete"}" class="button" />
 <br />
-<img src="{$publicFilesDir}/{$homeHeaderLogoImageAlt2.uploadName}" width="{$homeHeaderLogoImageAlt2.width}" height="{$homeHeaderLogoImageAlt2.height}" border="0" alt="" />
+<img src="{$publicFilesDir}/{$homeHeaderLogoImageAlt2.uploadName}" width="{$homeHeaderLogoImageAlt2.width}" height="{$homeHeaderLogoImageAlt2.height}" style="border: 0;" alt="" />
 {/if}
 {/if}
 
@@ -155,7 +155,7 @@
 {if $homepageImage}
 {translate key="common.fileName"}: {$homepageImage.name} {$homepageImage.dateUploaded|date_format:$datetimeFormatShort} <input type="submit" name="deleteHomepageImage" value="{translate key="common.delete"}" class="button" />
 <br />
-<img src="{$publicFilesDir}/{$homepageImage.uploadName}" width="{$homepageImage.width}" height="{$homepageImage.height}" border="0" alt="" />
+<img src="{$publicFilesDir}/{$homepageImage.uploadName}" width="{$homepageImage.width}" height="{$homepageImage.height}" style="border: 0;" alt="" />
 {/if}
 
 <h4>{translate key="manager.setup.currentIssue"}</h4>
@@ -198,7 +198,7 @@
 {if $pageHeaderTitleImage}
 {translate key="common.fileName"}: {$pageHeaderTitleImage.name} {$pageHeaderTitleImage.dateUploaded|date_format:$datetimeFormatShort} <input type="submit" name="deletePageHeaderTitleImage" value="{translate key="common.delete"}" class="button" />
 <br />
-<img src="{$publicFilesDir}/{$pageHeaderTitleImage.uploadName}" width="{$pageHeaderTitleImage.width}" height="{$pageHeaderTitleImage.height}" border="0" alt="" />
+<img src="{$publicFilesDir}/{$pageHeaderTitleImage.uploadName}" width="{$pageHeaderTitleImage.width}" height="{$pageHeaderTitleImage.height}" style="border: 0;" alt="" />
 {/if}
 
 <h4>{translate key="manager.setup.journalLogo"}</h4>
@@ -213,7 +213,7 @@
 {if $pageHeaderLogoImage}
 {translate key="common.fileName"}: {$pageHeaderLogoImage.name} {$pageHeaderLogoImage.dateUploaded|date_format:$datetimeFormatShort} <input type="submit" name="deletePageHeaderLogoImage" value="{translate key="common.delete"}" class="button" />
 <br />
-<img src="{$publicFilesDir}/{$pageHeaderLogoImage.uploadName}" width="{$pageHeaderLogoImage.width}" height="{$pageHeaderLogoImage.height}" border="0" alt="" />
+<img src="{$publicFilesDir}/{$pageHeaderLogoImage.uploadName}" width="{$pageHeaderLogoImage.width}" height="{$pageHeaderLogoImage.height}" style="border: 0;" alt="" />
 {/if}
 
 {if $alternateLocale1}
@@ -234,7 +234,7 @@
 {if $pageHeaderTitleImageAlt1}
 {translate key="common.fileName"}: {$pageHeaderTitleImageAlt1.name} {$pageHeaderTitleImageAlt1.dateUploaded|date_format:$datetimeFormatShort} <input type="submit" name="deletePageHeaderTitleImageAlt1" value="{translate key="common.delete"}" class="button" />
 <br />
-<img src="{$publicFilesDir}/{$pageHeaderTitleImageAlt1.uploadName}" width="{$pageHeaderTitleImageAlt1.width}" height="{$pageHeaderTitleImageAlt1.height}" border="0" alt="" />
+<img src="{$publicFilesDir}/{$pageHeaderTitleImageAlt1.uploadName}" width="{$pageHeaderTitleImageAlt1.width}" height="{$pageHeaderTitleImageAlt1.height}" style="border: 0;" alt="" />
 {/if}
 
 <h4>{translate key="manager.setup.journalLogo"} ({$languageToggleLocales.$alternateLocale1})</h4>
@@ -249,7 +249,7 @@
 {if $pageHeaderLogoImageAlt1}
 {translate key="common.fileName"}: {$pageHeaderLogoImageAlt1.name} {$pageHeaderLogoImageAlt1.dateUploaded|date_format:$datetimeFormatShort} <input type="submit" name="deletePageHeaderLogoImageAlt1" value="{translate key="common.delete"}" class="button" />
 <br />
-<img src="{$publicFilesDir}/{$pageHeaderLogoImageAlt1.uploadName}" width="{$pageHeaderLogoImageAlt1.width}" height="{$pageHeaderLogoImageAlt1.height}" border="0" alt="" />
+<img src="{$publicFilesDir}/{$pageHeaderLogoImageAlt1.uploadName}" width="{$pageHeaderLogoImageAlt1.width}" height="{$pageHeaderLogoImageAlt1.height}" style="border: 0;" alt="" />
 {/if}
 {/if}
 
@@ -271,7 +271,7 @@
 {if $pageHeaderTitleImageAlt2}
 {translate key="common.fileName"}: {$pageHeaderTitleImageAlt2.name} {$pageHeaderTitleImageAlt2.dateUploaded|date_format:$datetimeFormatShort} <input type="submit" name="deletePageHeaderTitleImageAlt2" value="{translate key="common.delete"}" class="button" />
 <br />
-<img src="{$publicFilesDir}/{$pageHeaderTitleImageAlt2.uploadName}" width="{$pageHeaderTitleImageAlt2.width}" height="{$pageHeaderTitleImageAlt2.height}" border="0" alt="" />
+<img src="{$publicFilesDir}/{$pageHeaderTitleImageAlt2.uploadName}" width="{$pageHeaderTitleImageAlt2.width}" height="{$pageHeaderTitleImageAlt2.height}" style="border: 0;" alt="" />
 {/if}
 
 <h4>{translate key="manager.setup.journalLogo"} ({$languageToggleLocales.$alternateLocale2})</h4>
@@ -286,7 +286,7 @@
 {if $pageHeaderLogoImageAlt2}
 {translate key="common.fileName"}: {$pageHeaderLogoImageAlt2.name} {$pageHeaderLogoImageAlt2.dateUploaded|date_format:$datetimeFormatShort} <input type="submit" name="deletePageHeaderLogoImageAlt2" value="{translate key="common.delete"}" class="button" />
 <br />
-<img src="{$publicFilesDir}/{$pageHeaderLogoImageAlt2.uploadName}" width="{$pageHeaderLogoImageAlt2.width}" height="{$pageHeaderLogoImageAlt2.height}" border="0" alt="" />
+<img src="{$publicFilesDir}/{$pageHeaderLogoImageAlt2.uploadName}" width="{$pageHeaderLogoImageAlt2.width}" height="{$pageHeaderLogoImageAlt2.height}" style="border: 0;" alt="" />
 {/if}
 {/if}
 

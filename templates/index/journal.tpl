@@ -17,7 +17,7 @@
 <br />
 
 {if $homepageImage}
-<div align="center"><img src="{$publicFilesDir}/{$homepageImage.uploadName|escape}" width="{$homepageImage.width}" height="{$homepageImage.height}" border="0" alt="" /></div>
+<div align="center"><img src="{$publicFilesDir}/{$homepageImage.uploadName|escape}" width="{$homepageImage.width}" height="{$homepageImage.height}" style="border: 0;" alt="" /></div>
 {/if}
 
 <br /><br />

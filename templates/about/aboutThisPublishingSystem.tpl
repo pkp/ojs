@@ -23,7 +23,7 @@
 </p>
 
 <p align="center">
-	<img src="{$baseUrl}/templates/images/edprocesslarge.png" width="620" height="701" border="0" alt="" />
+	<img src="{$baseUrl}/templates/images/edprocesslarge.png" style="border: 0;" alt="" />
 </p>
 
 {include file="common/footer.tpl"}
