@@ -63,18 +63,17 @@ function deleteAttachment(fileId) {
 {/if}
 
 <table class="data" width="100%">
-{if $addressFieldsEnabled}
 <tr valign="top">
 	<td class="label" width="20%">{fieldLabel name="to" key="email.to"}</td>
 	<td width="80%" class="value">
 		{foreach from=$to item=toAddress}
-			<input type="text" name="to[]" id="to" value="{if $toAddress.name != ''}{$toAddress.name|escape} &lt;{$toAddress.email|escape}&gt;{else}{$toAddress.email|escape}{/if}" size="40" maxlength="120" class="textField" /><br/>
+			<input type="text" name="to[]" id="to" value="{if $toAddress.name != ''}{$toAddress.name|escape} &lt;{$toAddress.email|escape}&gt;{else}{$toAddress.email|escape}{/if}" {if !$addressFieldsEnabled}disabled="disabled" {/if}size="40" maxlength="120" class="textField" /><br/>
 		{foreachelse}
-			<input type="text" name="to[]" id="to" size="40" maxlength="120" class="textField" />
+			<input type="text" name="to[]" id="to" size="40" maxlength="120" class="textField" {if !$addressFieldsEnabled}disabled="disabled" {/if}/>
 		{/foreach}
 
 		{if $blankTo}
-			<input type="text" name="to[]" id="to" size="40" maxlength="120" class="textField" />
+			<input type="text" name="to[]" id="to" size="40" maxlength="120" class="textField" {if !$addressFieldsEnabled}disabled="disabled" {/if}/>
 		{/if}
 	</td>
 </tr>
@@ -82,13 +81,13 @@ function deleteAttachment(fileId) {
 	<td class="label">{fieldLabel name="cc" key="email.cc"}</td>
 	<td class="value">
 		{foreach from=$cc item=ccAddress}
-			<input type="text" name="cc[]" id="cc" value="{if $ccAddress.name != ''}{$ccAddress.name|escape} &lt;{$ccAddress.email|escape}&gt;{else}{$ccAddress.email|escape}{/if}" size="40" maxlength="120" class="textField" /><br/>
+			<input type="text" name="cc[]" id="cc" value="{if $ccAddress.name != ''}{$ccAddress.name|escape} &lt;{$ccAddress.email|escape}&gt;{else}{$ccAddress.email|escape}{/if}" size="40" maxlength="120" class="textField" {if !$addressFieldsEnabled}disabled="disabled" {/if}/><br/>
 		{foreachelse}
-			<input type="text" name="cc[]" id="cc" size="40" maxlength="120" class="textField" />
+			<input type="text" name="cc[]" id="cc" size="40" maxlength="120" class="textField" {if !$addressFieldsEnabled}disabled="disabled" {/if}/>
 		{/foreach}
 
 		{if $blankCc}
-			<input type="text" name="cc[]" id="cc" size="40" maxlength="120" class="textField" />
+			<input type="text" name="cc[]" id="cc" size="40" maxlength="120" class="textField" {if !$addressFieldsEnabled}disabled="disabled" {/if}/>
 		{/if}
 	</td>
 </tr>
@@ -96,16 +95,17 @@ function deleteAttachment(fileId) {
 	<td class="label">{fieldLabel name="bcc" key="email.bcc"}</td>
 	<td class="value">
 		{foreach from=$bcc item=bccAddress}
-			<input type="text" name="bcc[]" id="bcc" value="{if $bccAddress.name != ''}{$bccAddress.name|escape} &lt;{$bccAddress.email|escape}&gt;{else}{$bccAddress.email|escape}{/if}" size="40" maxlength="120" class="textField" /><br/>
+			<input type="text" name="bcc[]" id="bcc" value="{if $bccAddress.name != ''}{$bccAddress.name|escape} &lt;{$bccAddress.email|escape}&gt;{else}{$bccAddress.email|escape}{/if}" size="40" maxlength="120" class="textField" {if !$addressFieldsEnabled}disabled="disabled" {/if}/><br/>
 		{foreachelse}
-			<input type="text" name="bcc[]" id="bcc" size="40" maxlength="120" class="textField" />
+			<input type="text" name="bcc[]" id="bcc" size="40" maxlength="120" class="textField" {if !$addressFieldsEnabled}disabled="disabled" {/if}/>
 		{/foreach}
 
 		{if $blankBcc}
-			<input type="text" name="bcc[]" id="bcc" size="40" maxlength="120" class="textField" />
+			<input type="text" name="bcc[]" id="bcc" size="40" maxlength="120" class="textField" {if !$addressFieldsEnabled}disabled="disabled" {/if}/>
 		{/if}
 	</td>
 </tr>
+{if $addressFieldsEnabled}
 <tr valign="top">
 	<td></td>
 	<td class="value">
@@ -118,7 +118,7 @@ function deleteAttachment(fileId) {
 		{/if}
 	</td>
 </tr>
-{/if}{* addressFieldsEnabled *}
+{/if}{* $addressFieldsEnabled *}
 
 {if $attachmentsEnabled}
 <tr valign="top">
