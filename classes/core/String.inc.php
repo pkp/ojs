@@ -366,6 +366,21 @@ class String {
 	}
 
 	/**
+	 * Convert escaped HTML entities in a string to UTF-8 encoded characters 
+	 * This is a native alternative to the buggy html_entity_decode() using UTF8
+	 * @param $input string input string
+	 * @return string
+	 */
+	 function html2utf($str) {
+		// convert named entities to numeric entities
+		$str = strtr($str, String::getHTMLEntities());
+
+		// use PCRE-aware replace function to replace numeric entities
+		$str = String::regexp_replace('~&#x([0-9a-f]+);~ei', 'String::code2utf(hexdec("\\1"))', $str);
+		$str = String::regexp_replace('~&#([0-9]+);~e', 'String::code2utf(\\1)', $str);
+	 }
+
+	/**
 	 * Convert UTF-8 numeric entities in a string to ASCII values
 	 * This is a helper function for transcoding into HTML/XML
 	 * @param $input string input string

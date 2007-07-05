@@ -43,19 +43,8 @@ class Transcoder {
 		} elseif ($this->fromEncoding == 'HTML-ENTITIES' && !$mbstring) {
 
 			if ( strtoupper($this->toEncoding) == 'UTF-8' ) {
-				// convert named entities to numeric entities
-				$string = strtr($string, String::getHTMLEntities());
-
-				// some platforms (PHP 4.3.x, 5.1? ) have problems displaying UTF-8 characters
-				// transliterate characters instead of transcoding back from HTML entities
-				// TODO: determine how to detect these platforms (OS/webserver?)
-//				$string = String::utf2ascii($string);
-
-				// use PCRE-aware replace function to replace numeric entities
-				$string = String::regexp_replace('~&#x([0-9a-f]+);~ei', 'String::code2utf(hexdec("\\1"))', $string);
-				$string = String::regexp_replace('~&#([0-9]+);~e', 'String::code2utf(\\1)', $string);
-
-				return $string;
+				// use built-in transcoding to UTF8
+				return String::html2utf($string);
 
 			} else {
 				// NB: old PHP versions may have issues with html_entity_decode()
