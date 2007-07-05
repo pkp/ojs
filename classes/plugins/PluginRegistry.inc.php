@@ -36,7 +36,7 @@ class PluginRegistry {
 	function &getAllPlugins() {
 		$plugins =& PluginRegistry::getPlugins();
 		$allPlugins = array();
-		foreach ($plugins as $category => $list) {
+		if (is_array($plugins)) foreach ($plugins as $category => $list) {
 			if (is_array($list)) $allPlugins += $list;
 		}
 		return $allPlugins;
