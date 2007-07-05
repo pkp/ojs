@@ -52,12 +52,12 @@ class FilesHandler extends ManagerHandler {
 							'mtime' => filemtime($filePath),
 							'size' => $isDir ? '' : FileManager::getNiceFileSize(filesize($filePath)),
 						);
-						$files[] = $info;
+						$files[$file] = $info;
 					}
 				}
 				closedir($dh);
 			}
-			
+			ksort($files);
 			$templateMgr->assign_by_ref('files', $files);
 			$templateMgr->assign('currentDir', $currentDir);
 			$templateMgr->assign('parentDir', $parentDir);
