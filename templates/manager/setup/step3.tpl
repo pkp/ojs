@@ -41,7 +41,7 @@
 
 	<tr valign="top">
 		<td width="5%" class="label"><input type="text" name="submissionChecklist[{$checklistId}][order]" value="{$checklistItem.order|escape}" size="3" maxlength="2" class="textField" /></td>
-		<td class="value"><textarea name="submissionChecklist[{$checklistId}][content]" rows="3" cols="40" class="textArea">{$checklistItem.content|escape}</textarea></td>
+		<td class="value"><textarea name="submissionChecklist[{$checklistId}][content]" id="submissionChecklist-{$checklistId}" rows="3" cols="40" class="textArea">{$checklistItem.content|escape}</textarea></td>
 		<td width="100%"><input type="submit" name="delChecklist[{$checklistId}]" value="{translate key="common.delete"}" class="button" /></td>
 	</tr>
 {/foreach}

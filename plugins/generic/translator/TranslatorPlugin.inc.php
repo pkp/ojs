@@ -18,19 +18,10 @@ class TranslatorPlugin extends GenericPlugin {
 			if ($this->getSetting(0, 'enabled')) {
 				$this->addHelpData();
 				HookRegistry::register ('LoadHandler', array(&$this, 'handleRequest'));
-				HookRegistry::register ('TinyMCEPlugin::getDisableTemplates', array(&$this, 'addTinyMCEException'));
 			}
 			return true;
 		}
 		return false;
-	}
-
-	function addTinyMCEException($hookName, $args) {
-		$disableTemplates =& $args[1];
-		$disableTemplates[] = $this->getTemplatePath() . 'errors.tpl';
-		$disableTemplates[] = $this->getTemplatePath() . 'editMiscFile.tpl';
-		$disableTemplates[] = $this->getTemplatePath() . 'localeFile.tpl';
-		$disableTemplates[] = $this->getTemplatePath() . 'editEmail.tpl';
 	}
 
 	function handleRequest($hookName, $args) {

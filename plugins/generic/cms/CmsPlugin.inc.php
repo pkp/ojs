@@ -57,8 +57,6 @@ class Cms extends GenericPlugin {
 			$this->addLocaleData();			
 			HookRegistry::register('TemplateManager::display',array(&$this, 'callbackSetTableOfContents'));
 			HookRegistry::register( 'LoadHandler', array(&$this, 'callbackHandleContent') );			 
-			HookRegistry::register( 'TinyMCEPlugin::getDisableTemplates', array(&$this, 'callbackAlterTinyMCE' ));
-
 			return true;
 		}
 		return false;
@@ -100,19 +98,6 @@ class Cms extends GenericPlugin {
 			}
 		}
 	}		
-	
-	/* 
-	 * this turns off the TinyMCE plugin and now we can incorporate our own
-	 * This way we can incorporate our own butons
-	 */
-	function callbackAlterTinyMCE ( $hookName, $args ) {
-		if ( $this->isTinyMCEInstalled() ) {
-			$disableTemplates =& $args[1];	
-			$disableTemplates[] = $this->getTemplatePath() . 'settingsForm.tpl';
-		}
-
-		return false;
-	}
 	
 	/**
 	 * Determine whether or not this plugin is enabled.

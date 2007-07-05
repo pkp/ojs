@@ -35,64 +35,176 @@ class TinyMCEPlugin extends GenericPlugin {
 		return false;
 	}
 
-	function getDisableTemplates() {
-		$disableTemplates = array(
-			'manager/emails/emailTemplateForm.tpl',
-			'email/email.tpl',
-			'rt/email.tpl',
-			'submission/comment/commentEmail.tpl',
-			'submission/comment/editorDecisionEmail.tpl',
-			'editor/notifyUsers.tpl'
-		);
-		HookRegistry::call('TinyMCEPlugin::getDisableTemplates', array(&$this, &$disableTemplates));
-		return $disableTemplates;
-	}
-
-	function getDisablePages() {
-		$disablePages = array(
-			'index',
-			'about',
-			'issue',
-			'help',
-			'information',
-			''
-		);
-		HookRegistry::call('TinyMCEPlugin::getDisablePages', array(&$this, &$disablePages));
-		return $disablePages;
+	function getEnableFields(&$templateMgr, $page, $op) {
+		$fields = array();
+		switch ("$page/$op") {
+			case 'author/submit':
+				switch (array_shift(Request::getRequestedArgs())) {
+					case 1: $fields[] = 'commentsToEditor'; break;
+					case 2:
+						$count = max(1, count($templateMgr->get_template_vars('authors')));
+						for ($i=0; $i<$count; $i++) {
+							$fields[] = "authors-$i-biography";
+						}
+						$fields[] = 'abstract';
+						$fields[] = 'abstractAlt1';
+						$fields[] = 'abstractAlt2';
+						break;
+				}
+				break;
+			case 'author/submitSuppFile': $fields[] = 'description'; break;
+			case 'editor/createIssue':
+			case 'editor/issueData':
+				$fields[] = 'description';
+				$fields[] = 'coverPageDescription';
+				break;
+			case 'manager/createAnnouncement':
+			case 'manager/editAnnouncement':
+				$fields[] = 'descriptionShort';
+				$fields[] = 'description';
+				break;
+			case 'user/profile':
+			case 'user/register':
+				$fields[] = 'mailingAddress';
+				$fields[] = 'biography';
+				break;
+			case 'manager/editSection':
+			case 'manager/createSection':
+				$fields[] = 'policy';
+				break;
+			case 'manager/setup':
+			case 'manager/saveSetup':
+				switch (array_shift(Request::getRequestedArgs())) {
+					case 1:
+						$fields[] = 'mailingAddress';
+						$fields[] = 'contactMailingAddress';
+						$fields[] = 'publisher-note';
+						$fields[] = 'sponsorNote';
+						$fields[] = 'contributorNote';
+						break;
+					case 2:
+						$fields[] = 'focusScopeDesc';
+						$fields[] = 'reviewPolicy';
+						$fields[] = 'reviewGuidelines';
+						$fields[] = 'privacyStatement';
+						$count = max(1, count($templateMgr->get_template_vars('customAboutItems')));
+						for ($i=0; $i<$count; $i++) {
+							$fields[] = "customAboutItems-$i-content";
+						}
+						$fields[] = 'lockssLicense';
+						break;
+					case 3:
+						$fields[] = 'authorGuidelines';
+						$count = max(1, count($templateMgr->get_template_vars('submissionChecklist')));
+						for ($i=0; $i<$count; $i++) {
+							$fields[] = "submissionChecklist-$i";
+						}
+						$fields[] = 'copyrightNotice';
+						break;
+					case 4:
+						$fields[] = 'openAccessPolicy';
+						$fields[] = 'pubFreqPolicy';
+						$fields[] = 'announcementsIntroduction';
+						$fields[] = 'copyeditInstructions';
+						$fields[] = 'layoutInstructions';
+						$fields[] = 'proofInstructions';
+						break;
+					case 5:
+						$fields[] = 'journalDescription';
+						$fields[] = 'additionalHomeContent';
+						$fields[] = 'journalPageHeader';
+						$fields[] = 'journalPageFooter';
+						$fields[] = 'readerInformation';
+						$fields[] = 'librarianInformation';
+						$fields[] = 'authorInformation';
+				}
+			case 'rtadmin/editContext':
+			case 'rtadmin/editSearch':
+			case 'rtadmin/editVersion':
+			case 'rtadmin/createContext':
+			case 'rtadmin/createSearch':
+			case 'rtadmin/createVersion':
+				$fields[] = 'description';
+				break;
+			case 'editor/createReviewer':
+			case 'sectionEditor/createReviewer':
+				$fields[] = 'mailingAddress';
+				$fields[] = 'biography';
+				break;
+			case 'editor/submissionNotes':
+			case 'sectionEditor/submissionNotes':
+				$fields[] = 'note';
+				break;
+			case 'sectionEditor/viewMetadata':
+			case 'editor/viewMetadata':
+			case 'sectionEditor/saveMetadata':
+			case 'editor/saveMetadata':
+				$count = max(1, count($templateMgr->get_template_vars('authors')));
+				for ($i=0; $i<$count; $i++) {
+					$fields[] = "authors-$i-biography";
+				}
+				$fields[] = 'abstract';
+				$fields[] = 'abstractAlt1';
+				$fields[] = 'abstractAlt2';
+				break;
+			case 'sectionEditor/editSuppFile':
+			case 'editor/editSuppFile':
+			case 'sectionEditor/saveSuppFile':
+			case 'editor/saveSuppFile':
+				$fields[] = 'description';
+				break;
+			case 'manager/subscriptionPolicies':
+				$fields[] = 'subscriptionMailingAddress';
+				$fields[] = 'subscriptionAdditionalInformation';
+				$fields[] = 'delayedOpenAccessPolicy';
+				$fields[] = 'authorSelfArchivePolicy';
+				break;
+			case 'manager/editSubscriptionType':
+			case 'manager/createSubscriptionType':
+				$fields[] = 'description';
+				break;
+		}
+		HookRegistry::call('TinyMCEPlugin::getEnableFields', array(&$this, &$fields));
+		return $fields;
 	}
 
 	function callback($hookName, $args) {
 		$templateManager =& $args[0];
-		$template =& $args[1];
 
 		$page = Request::getRequestedPage();
+		$op = Request::getRequestedOp();
+		$enableFields = $this->getEnableFields($templateManager, $page, $op);
 
-		if (!in_array($page, $this->getDisablePages()) && !in_array($template, $this->getDisableTemplates())) {
+		if (!empty($enableFields)) {
 			$baseUrl = $templateManager->get_template_vars('baseUrl');
 			$additionalHeadData = $templateManager->get_template_vars('additionalHeadData');
+			$enableFields = join(',', $enableFields);
+			$allLocales = Locale::getAllLocales();
+			$localeList = array();
+			foreach ($allLocales as $key => $locale) {
+				$localeList[] = String::substr($key, 0, 2);
+			}
 
 			$tinyMCE_scipt = '
 			<script language="javascript" type="text/javascript" src="'.$baseUrl.'/'.TINYMCE_JS_PATH.'/tiny_mce_gzip.js"></script>
 			<script language="javascript" type="text/javascript">
 				tinyMCE_GZ.init({
-				plugins : "paste",
-				mode : "textareas",
-				theme : "advanced",
-				theme_advanced_buttons1 : "pasteword,bold,italic,underline,bullist,numlist,link,unlink,help,code",
-				theme_advanced_buttons2 : "",
-				theme_advanced_buttons3 : "",
-				disk_cache : true,
-				debug : false
-    			});
+					plugins : "paste",
+					themes : "advanced",
+					languages : "' . join(',', $localeList) . '",
+					disk_cache : true
+				});
 			</script>
 			<script language="javascript" type="text/javascript">
 				tinyMCE.init({
-				plugins : "paste",
-				mode : "textareas",
-				theme : "advanced",
-				theme_advanced_buttons1 : "pasteword,bold,italic,underline,bullist,numlist,link,unlink,help,code",
-				theme_advanced_buttons2 : "",
-				theme_advanced_buttons3 : ""
+					plugins : "paste",
+					mode : "exact",
+					language : "' . String::substr(Locale::getLocale(), 0, 2) . '",
+					elements : "' . $enableFields . '",
+					theme : "advanced",
+					theme_advanced_buttons1 : "pasteword,bold,italic,underline,bullist,numlist,link,unlink,help,code",
+					theme_advanced_buttons2 : "",
+					theme_advanced_buttons3 : ""
 				});
 			</script>';
 
