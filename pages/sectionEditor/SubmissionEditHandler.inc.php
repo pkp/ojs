@@ -1277,35 +1277,22 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		
 		$submitForm = &new ArticleGalleyForm($articleId, $galleyId);
 		
-		if (Request::getUserVar('uploadImage')) {
-			$submitForm->initData();
+		$submitForm->readInputData();
+		if ($submitForm->validate()) {
+			$submitForm->execute();
 
-			// Attach galley image
-			$submitForm->uploadImage();
-			
-			parent::setupTemplate(true, $articleId, 'editing');
-			$submitForm->display();
-
-		} else if(($deleteImage = Request::getUserVar('deleteImage')) && count($deleteImage) == 1) {
-			$submitForm->initData();
-
-			// Delete galley image
-			list($imageId) = array_keys($deleteImage);
-			$submitForm->deleteImage($imageId);
-			
-			parent::setupTemplate(true, $articleId, 'editing');
-			$submitForm->display();
-			
-		} else {
-			$submitForm->readInputData();
-			if ($submitForm->validate()) {
-				$submitForm->execute();
-				Request::redirect(null, null, 'submissionEditing', $articleId);
-
-			} else {
-				parent::setupTemplate(true, $articleId, 'editing');
-				$submitForm->display();
+			if (Request::getUserVar('uploadImage')) {
+				$submitForm->uploadImage();
+				Request::redirect(null, null, 'editGalley', array($articleId, $galleyId));
+			} else if(($deleteImage = Request::getUserVar('deleteImage')) && count($deleteImage) == 1) {
+				list($imageId) = array_keys($deleteImage);
+				$submitForm->deleteImage($imageId);
+				Request::redirect(null, null, 'editGalley', array($articleId, $galleyId));
 			}
+			Request::redirect(null, null, 'submissionEditing', $articleId);
+		} else {
+			parent::setupTemplate(true, $articleId, 'editing');
+			$submitForm->display();
 		}
 	}
 	

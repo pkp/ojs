@@ -171,25 +171,18 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 		$submitForm = &new ArticleGalleyForm($articleId, $galleyId);
 		$submitForm->readInputData();
 		
-		if (Request::getUserVar('uploadImage')) {
-			// Attach galley image
-			$submitForm->uploadImage();
-			
-			parent::setupTemplate(true, $articleId);
-			$submitForm->display();
-		
-		} else if(($deleteImage = Request::getUserVar('deleteImage')) && count($deleteImage) == 1) {
-			// Delete galley image
-			list($imageId) = array_keys($deleteImage);
-			$submitForm->deleteImage($imageId);
-			
-			parent::setupTemplate(true, $articleId);
-			$submitForm->display();
-			
-		} else if ($submitForm->validate()) {
+		if ($submitForm->validate()) {
 			$submitForm->execute();
+
+			if (Request::getUserVar('uploadImage')) {
+				$submitForm->uploadImage();
+				Request::redirect(null, null, 'editGalley', array($articleId, $galleyId));
+			} else if(($deleteImage = Request::getUserVar('deleteImage')) && count($deleteImage) == 1) {
+				list($imageId) = array_keys($deleteImage);
+				$submitForm->deleteImage($imageId);
+				Request::redirect(null, null, 'editGalley', array($articleId, $galleyId));
+			}
 			Request::redirect(null, null, 'submission', $articleId);
-		
 		} else {
 			parent::setupTemplate(true, $articleId, 'editing');
 			$submitForm->display();
