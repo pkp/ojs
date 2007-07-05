@@ -9,3 +9,8 @@ Smarty Template Engine
  * URL: <http://smarty.php.net/>
  * Version: 2.6.14 (May 28, 2006)
  * License: LGPL (see lib/smarty/COPYING.lib)
+
+TinyMCE WYSIWYG JS HTML Editor
+ * URL: <http://tinymce.moxiecode.com>
+ * Version: 2.1.1.1
+ * License: LGPL
