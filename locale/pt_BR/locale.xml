@@ -1666,7 +1666,7 @@ com sinal positivo (+) indicando avaliação em progresso.]]></message>
 	<message key="layoutEditor.galley.uploadGalleyFormat">Enviar composição</message>
 	<message key="layoutEditor.galley.replaceGalley">Substituir Documento</message>
 	<message key="layoutEditor.galley.uploadSuppFile">Enviar documentos suplementares</message>
-	<message key="submission.layout.galleryNoImages">Sem imagens</message>
+	<message key="submission.layout.galleyNoImages">Sem imagens</message>
 	
 	<!-- Reviewer -->
 	<message key="reviewer.pendingReviews">Artigo Aguardando Avaliação</message>

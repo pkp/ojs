@@ -1652,7 +1652,7 @@ avec un signe plus (+) indiquant que la révision est en cours.]]></message>
 	<message key="layoutEditor.galley.uploadGalleyFormat">Télécharger le format pour l'épreuve en placard</message>
 	<message key="layoutEditor.galley.replaceGalley">Remplacer le fichier</message>
 	<message key="layoutEditor.galley.uploadSuppFile">Télécharger le fichier supplémentaire</message>
-	<message key="submission.layout.galleryNoImages">Aucune image</message>
+	<message key="submission.layout.galleyNoImages">Aucune image</message>
 	
 	<!-- Reviewer -->
 	<message key="reviewer.pendingReviews">Articles en attente de révision</message>

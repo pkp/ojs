@@ -1697,7 +1697,7 @@ Attivo &#x00E8; il numero di quante revisioni si stanno considerando o stanno an
 	<message key="layoutEditor.galley.uploadGalleyFormat">Invia, tramite upload, il formato di bozza</message>
 	<message key="layoutEditor.galley.replaceGalley">Sostituisci il file</message>
 	<message key="layoutEditor.galley.uploadSuppFile">Invia, tramite upload, un file aggiuntivo</message>
-	<message key="submission.layout.galleryNoImages">Nessun immagine</message>
+	<message key="submission.layout.galleyNoImages">Nessun immagine</message>
 	
 	<!-- Reviewer -->
 	<message key="reviewer.pendingReviews">Review in corso degli articoli</message>

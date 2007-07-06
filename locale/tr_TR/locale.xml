@@ -1673,7 +1673,7 @@ artı (+) işareti ile hakemin şu anda değerlendirdiği yazılar belirtilmişt
 	<message key="layoutEditor.galley.uploadGalleyFormat">Galley biçimini yükle</message>
 	<message key="layoutEditor.galley.replaceGalley">Dosyayı değiştir</message>
 	<message key="layoutEditor.galley.uploadSuppFile">Ek dosya yükle</message>
-	<message key="submission.layout.galleryNoImages">Şekil yok</message>
+	<message key="submission.layout.galleyNoImages">Şekil yok</message>
 	
 	<!-- Reviewer -->
 	<message key="reviewer.pendingReviews">Değerlendirme bekleyen makaleler</message>

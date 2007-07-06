@@ -1665,7 +1665,7 @@ Aktivnih prikazuje na koliko je recenzija recenzent trenutno angažiran.]]></mes
 	<message key="layoutEditor.galley.uploadGalleyFormat">Postavite format prijeloma </message>
 	<message key="layoutEditor.galley.replaceGalley">Zamijeni datoteku </message>
 	<message key="layoutEditor.galley.uploadSuppFile">Postavite dopunsku datoteku</message>
-	<message key="submission.layout.galleryNoImages">Nema slika</message>
+	<message key="submission.layout.galleyNoImages">Nema slika</message>
 	
 	<!-- Reviewer -->
 	<message key="reviewer.pendingReviews">Članci recenzije koja u toku</message>

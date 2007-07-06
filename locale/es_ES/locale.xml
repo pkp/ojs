@@ -1679,7 +1679,7 @@ Activas es el número de revisiones que en este momento están consideradas como
 	<message key="layoutEditor.galley.uploadGalleyFormat">Subir formato de galerada</message>
 	<message key="layoutEditor.galley.replaceGalley">Reemplazar fichero</message>
 	<message key="layoutEditor.galley.uploadSuppFile">Subir fichero suplementario</message>
-	<message key="submission.layout.galleryNoImages">No hay imágenes</message>
+	<message key="submission.layout.galleyNoImages">No hay imágenes</message>
 	
 	<!-- Reviewer -->
 	<message key="reviewer.pendingReviews">Revisión de artículos pendientes</message>

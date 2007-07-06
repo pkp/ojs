@@ -1633,7 +1633,7 @@ with a plus sign (+) indicating review-in-progress.]]></message>
 	<message key="layoutEditor.galley.uploadGalleyFormat">Загрузить формат</message>
 	<message key="layoutEditor.galley.replaceGalley">Заменить файл</message>
 	<message key="layoutEditor.galley.uploadSuppFile">Загрузить доп. файл</message>
-	<message key="submission.layout.galleryNoImages">Нет картинок</message>
+	<message key="submission.layout.galleyNoImages">Нет картинок</message>
 	
 	<!-- Reviewer -->
 	<message key="reviewer.pendingReviews">Articles Pending Review</message>

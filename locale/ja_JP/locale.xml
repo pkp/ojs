@@ -1652,7 +1652,7 @@ OJSのシステム設定を変更することにより、このサイト全体�
   <message key="layoutEditor.galley.uploadGalleyFormat">ゲラフォーマットのアップロード</message>
   <message key="layoutEditor.galley.replaceGalley">ファイルの置換</message>
   <message key="layoutEditor.galley.uploadSuppFile">補足ファイルのアップロード</message>
-  <message key="submission.layout.galleryNoImages">画像なし</message>
+  <message key="submission.layout.galleyNoImages">画像なし</message>
   <!-- Reviewer -->
   <message key="reviewer.pendingReviews">査読待ちの論文</message>
   <message key="reviewer.completedReviews">済み</message>

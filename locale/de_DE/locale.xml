@@ -1657,7 +1657,7 @@ mit einem (+), das anzeigt, dass das Gutachten in Arbeit ist.]]></message>
 	<message key="layoutEditor.galley.uploadGalleyFormat">Fahnenformat hochladen</message>
 	<message key="layoutEditor.galley.replaceGalley">Datei ersetzen</message>
 	<message key="layoutEditor.galley.uploadSuppFile">Zusatzdatei hochladen</message>
-	<message key="submission.layout.galleryNoImages">Keine Bilder</message>
+	<message key="submission.layout.galleyNoImages">Keine Bilder</message>
 	
 	<!-- Gutachter -->
 	<message key="reviewer.pendingReviews">Beiträge in Begutachtung</message>

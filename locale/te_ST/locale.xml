@@ -1510,7 +1510,7 @@ Låtèþt îþ ðåtè óf móþt rèçèñtlý åççèptèð rèvîèw.<br/>
 	<message key="layoutEditor.galley.uploadGalleyFormat">Üplóåð gållèý fórmåt</message>
 	<message key="layoutEditor.galley.replaceGalley">Rèplåçè Fîlè</message>
 	<message key="layoutEditor.galley.uploadSuppFile">Üplóåð þüpplèmèñtårý fîlè</message>
-	<message key="submission.layout.galleryNoImages">Ñó îmågèþ</message>
+	<message key="submission.layout.galleyNoImages">Ñó îmågèþ</message>
 	<message key="submission.layout.imageInvalid">Îñvålîð îmågè fórmåt. Æççèptèð fórmåtþ årè .gîf, .jpg, åñð .pñg.</message>
 	<message key="reviewer.pendingReviews">Ærtîçlèþ Pèñðîñg Rèvîèw</message>
 	<message key="reviewer.completedReviews">Ðóñè</message>

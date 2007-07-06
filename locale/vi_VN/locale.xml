@@ -1662,7 +1662,7 @@ Mới nhất là ngày ngày bài phản biện gần nhất được chấp nh�
 	<message key="layoutEditor.galley.uploadGalleyFormat">Tải định dạng bản bông lên</message>
 	<message key="layoutEditor.galley.replaceGalley">Thay file</message>
 	<message key="layoutEditor.galley.uploadSuppFile">Tải lên các file phụ trợ</message>
-	<message key="submission.layout.galleryNoImages">Chưa có ảnh</message>
+	<message key="submission.layout.galleyNoImages">Chưa có ảnh</message>
 	
 	<!-- Reviewer -->
 	<message key="reviewer.pendingReviews">Các bài viết đang phản biện</message>

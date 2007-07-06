@@ -131,7 +131,7 @@
 </tr>
 {foreachelse}
 <tr>
-	<td colspan="6" class="nodata">{translate key="submission.layout.galleryNoImages"}</td>
+	<td colspan="6" class="nodata">{translate key="submission.layout.galleyNoImages"}</td>
 </tr>
 <tr>
 	<td colspan="6" class="endseparator">&nbsp;</td>
