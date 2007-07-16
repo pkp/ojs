@@ -431,9 +431,22 @@ Username: {$copyeditorUsername}
 			<field name="subject">Copyediting Completed</field>
 			<field name="body">{$editorialContactName}:
 
-I have now completed the first round of copyediting of  the manuscript, "{$articleTitle}," for {$journalName}. It is now ready for the author and editor to review the changes and queries. 
+We have now copyedited your submission "{$articleTitle}" for {$journalName}. To review the proposed changes and respond to Author Queries, please follow these steps:
 
-Thank you,
+1. Log into the journal using URL below with your username and password (use Forgot link if needed).
+2. Click on the file at 1. Initial Copyedit File to download and open copyedited version. 
+3. Review the copyediting, making changes using Track Changes in Word, and answer queries. 
+4. Save file to desktop and upload it in 2. Author Copyedit.
+5. Click the email icon under COMPLETE and send email to the editor.
+
+This is the last opportunity that you have to make substantial changes. You will be asked at a later stage to proofread the galleys, but at that point only minor typographical and layout errors can be corrected.
+
+Manuscript URL: {$submissionEditingUrl}
+Username: {$authorUsername}
+
+If you are unable to undertake this work at this time or have any questions,
+please contact me. Thank you for your contribution to this journal.
+
 {$copyeditorName}</field>
 		</row>
 		<row>

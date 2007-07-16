@@ -75,7 +75,9 @@ class CopyeditorAction extends Action {
 
 				$paramArray = array(
 					'editorialContactName' => $author->getFullName(),
-					'copyeditorName' => $user->getFullName()
+					'copyeditorName' => $user->getFullName(),
+					'authorUsername' => $author->getUsername(),
+					'submissionEditingUrl' => Request::url(null, 'author', 'submissionEditing', array($copyeditorSubmission->getArticleId()))
 				);
 				$email->assignParams($paramArray);
 			}
