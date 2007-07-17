@@ -77,7 +77,7 @@ class ImportExportPlugin extends Plugin {
 	 * Display the import/export plugin UI.
 	 * @param $args Array The array of arguments the user supplied.
 	 */
-	function display() {
+	function display(&$args) {
 		$templateManager =& TemplateManager::getManager();
 		$templateManager->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
 	}
