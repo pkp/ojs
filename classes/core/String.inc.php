@@ -237,8 +237,10 @@ class String {
 		// Parts of this implementation were taken from Horde:
 		// see http://cvs.horde.org/co.php/framework/MIME/MIME/Viewer/html.php.
 
-		static $allowedHtmlTags = '<a> <em> <strong> <cite> <code> <ul> <ol> <li> <dl> <dt> <dd> <b> <i> <u> <img> <sup> <sub> <br> <p>';
-		$html = strip_tags($input, $allowedHtmlTags);
+		$allowedHtml = Config::getVar('security', 'allowed_html');
+		if ($allowedHtml == '') $allowedHtml = '<a> <em> <strong> <cite> <code> <ul> <ol> <li> <dl> <dt> <dd> <b> <i> <u> <img> <sup> <sub> <br> <p>';
+
+		$html = strip_tags($input, $allowedHtml);
 
 		// Change space entities to space characters
 		$html = preg_replace('/&#(x0*20|0*32);?/i', ' ', $html);

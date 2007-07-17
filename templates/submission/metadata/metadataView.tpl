@@ -59,18 +59,18 @@
 <table width="100%" class="data">
 	<tr valign="top">
 		<td width="20%" class="label">{translate key="article.title"}</td>
-		<td width="80%" class="value">{$title|escape|default:"&mdash;"}</td>
+		<td width="80%" class="value">{$title|strip_unsafe_html|default:"&mdash;"}</td>
 	</tr>
 	{if $alternateLocale1}
 	<tr valign="top">
 		<td class="label">{translate key="article.title"}<br />({$languageToggleLocales.$alternateLocale1})</td>
-		<td class="value">{$titleAlt1|escape|default:"&mdash;"}</td>
+		<td class="value">{$titleAlt1|strip_unsafe_html|default:"&mdash;"}</td>
 	</tr>
 	{/if}
 	{if $alternateLocale2}
 	<tr valign="top">
 		<td class="label">{translate key="article.title"}<br />({$languageToggleLocales.$alternateLocale2})</td>
-		<td class="value">{$titleAlt2|escape|default:"&mdash;"}</td>
+		<td class="value">{$titleAlt2|strip_unsafe_html|default:"&mdash;"}</td>
 	</tr>
 	{/if}
 
@@ -80,18 +80,18 @@
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="article.abstract"}</td>
-		<td class="value">{$abstract|nl2br|default:"&mdash;"}</td>
+		<td class="value">{$abstract|strip_unsafe_html|nl2br|default:"&mdash;"}</td>
 	</tr>
 	{if $alternateLocale1}
 	<tr valign="top">
 		<td class="label">{translate key="article.abstract"}<br />({$languageToggleLocales.$alternateLocale1})</td>
-		<td class="value">{$abstractAlt1|nl2br|default:"&mdash;"}</td>
+		<td class="value">{$abstractAlt1|strip_unsafe_html|nl2br|default:"&mdash;"}</td>
 	</tr>
 	{/if}
 	{if $alternateLocale2}
 	<tr valign="top">
 		<td class="label">{translate key="article.abstract"}<br />({$languageToggleLocales.$alternateLocale2})</td>
-		<td class="value">{$abstractAlt2|nl2br|default:"&mdash;"}</td>
+		<td class="value">{$abstractAlt2|strip_unsafe_html|nl2br|default:"&mdash;"}</td>
 	</tr>
 	{/if}
 	{/if}
@@ -168,7 +168,7 @@
 	{/if}
 	<tr valign="top">
 		<td width="20%" class="label">{translate key="article.language"}</td>
-		<td width="80%" class="value">{$language|default:"&mdash;"}</td>
+		<td width="80%" class="value">{$language|escape|default:"&mdash;"}</td>
 	</tr>
 </table>
 

@@ -189,6 +189,9 @@ session_check_ip = On
 ; Note that sha1 requires PHP >= 4.3.0
 encryption = md5
 
+; Allowed HTML tags for fields that permit restricted HTML.
+allowed_html = "<a> <em> <strong> <cite> <code> <ul> <ol> <li> <dl> <dt> <dd> <b> <i> <u> <img> <sup> <sub> <br> <p>"
+
 
 ;;;;;;;;;;;;;;;;;;
 ; Email Settings ;
