@@ -68,6 +68,23 @@ class ArticleHTMLGalley extends ArticleGalley {
 			$contents
 		);
 
+		// Perform variable replacement for journal, issue, site info
+		$issueDao =& DAORegistry::getDAO('IssueDAO');
+		$issue =& $issueDao->getIssueByArticleId($this->getArticleId());
+
+		$journal =& Request::getJournal();
+		$site =& Request::getSite();
+
+		$paramArray = array(
+			'issueTitle' => $issue->getIssueIdentification(),
+			'journalTitle' => $journal->getTitle(),
+			'siteTitle' => $site->getTitle()
+		);
+
+		foreach ($paramArray as $key => $value) {
+			$contents = str_replace('{$' . $key . '}', $value, $contents);
+		}
+
 		return $contents;
 	}
 
