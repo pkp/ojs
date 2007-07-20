@@ -99,6 +99,7 @@ class ThesisForm extends Form {
 		// Abstract is provided
 		$this->addCheck(new FormValidator($this, 'abstract', 'required', 'plugins.generic.thesis.manager.form.abstractRequired'));
 
+		$this->addCheck(new FormValidatorPost($this));
 	}
 	
 	/**

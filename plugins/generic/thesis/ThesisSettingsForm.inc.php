@@ -52,6 +52,8 @@ class ThesisSettingsForm extends Form {
 		$this->addCheck(new FormValidatorEmail($this, 'thesisEmail', 'required', 'plugins.generic.thesis.settings.thesisEmailRequired'));
 
 		$this->addCheck(new FormValidatorInSet($this, 'thesisOrder', 'required', 'plugins.generic.thesis.settings.thesisOrderValid', array_keys($this->validOrder)));
+
+		$this->addCheck(new FormValidatorPost($this));
 	}
 	
 	/**
