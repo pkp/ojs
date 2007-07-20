@@ -21,7 +21,6 @@
 // Useful for debugging purposes -- may want to disable for release version?
 error_reporting(E_ALL);
 
-
 // Update include path
 define('ENV_SEPARATOR', strtolower(substr(PHP_OS, 0, 3)) == 'win' ? ';' : ':');
 if (!defined('DIRECTORY_SEPARATOR')) {
@@ -38,6 +37,7 @@ ini_set('include_path', '.'
 	. ENV_SEPARATOR . ini_get('include_path')
 );
 
+define('REALLY_BIG_NUMBER', 10000);
 
 // Seed random number generator
 mt_srand(((double) microtime()) * 1000000);

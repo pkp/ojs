@@ -1944,7 +1944,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 				$publishedArticle->setArticleId($submission->getArticleId());
 				$publishedArticle->setIssueId($issueId);
 				$publishedArticle->setDatePublished(Core::getCurrentDate());
-				$publishedArticle->setSeq(100000); // KLUDGE: End of list
+				$publishedArticle->setSeq(REALLY_BIG_NUMBER);
 				$publishedArticle->setViews(0);
 				$publishedArticle->setAccessStatus(0);
 
@@ -1958,7 +1958,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 				// for it. (Default at the end of the list.)
 				if ($sectionDao->customSectionOrderingExists($issueId)) {
 					if ($sectionDao->getCustomSectionOrder($issueId, $submission->getSectionId()) === null) {
-						$sectionDao->insertCustomSectionOrder($issueId, $submission->getSectionId(), 10000); // KLUDGE: End of list
+						$sectionDao->insertCustomSectionOrder($issueId, $submission->getSectionId(), REALLY_BIG_NUMBER);
 						$sectionDao->resequenceCustomSectionOrders($issueId);
 					}
 				}

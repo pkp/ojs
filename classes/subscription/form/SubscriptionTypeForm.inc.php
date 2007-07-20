@@ -164,9 +164,7 @@ class SubscriptionTypeForm extends Form {
 		if ($subscriptionType->getTypeId() != null) {
 			$subscriptionTypeDao->updateSubscriptionType($subscriptionType);
 		} else {
-			// Kludge: Assume we'll have less than 10,000 subscription types.
-			$subscriptionType->setSequence(10000);
-
+			$subscriptionType->setSequence(REALLY_BIG_NUMBER);
 			$subscriptionTypeDao->insertSubscriptionType($subscriptionType);
 
 			// Re-order the subscription types so the new one is at the end of the list.

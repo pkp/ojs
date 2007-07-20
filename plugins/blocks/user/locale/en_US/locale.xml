@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.block.user.displayName">User Block</message>
+	<message key="plugins.block.user.description">This plugin provides sidebar user account tools (e.g. login, logout, profile link, etc).</message>
+	<message key="plugins.block.user.loggedInAs">You are logged in as...</message>
+	<message key="plugins.block.user.myJournals">My Journals</message>
+	<message key="plugins.block.user.myProfile">My Profile</message>
+	<message key="plugins.block.user.logout">Log Out</message>
+	<message key="plugins.block.user.signOutAsUser">Log Out as User</message>
+	<message key="plugins.block.user.rememberMe">Remember me</message>
+</locale>

@@ -1,0 +1,42 @@
+/**
+ * sidebar.css
+ *
+ * Copyright (c) 2003-2006 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * Site-wide shared elements for pages including sidebar(s).
+ *
+ * $Id$
+ */
+
+/**
+ * Sidebar
+ */
+
+#developedBy {
+	text-transform: uppercase;
+	font-size: 0.95em;
+}
+
+#sidebar div.block {
+	font-size: 1em;
+	padding-bottom: 1.5em;
+}
+
+#sidebar div.block span.blockTitle {
+	display: block;
+	padding: 0.5em 0 0.5em 0;
+	font-size: 1em;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+}
+
+#sidebar div.block span.blockSubtitle {
+	display: block;
+	padding: 0;
+}
+
+#sidebar input.textField, #sidebar select.selectMenu, #sidebar input.button {
+	font-size: 1em;
+}
+

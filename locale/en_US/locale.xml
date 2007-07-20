@@ -197,8 +197,6 @@
 		
 	<!-- Navigation -->
 	<message key="navigation.journalHelp">Journal Help</message>
-	<message key="navigation.loggedInAs">You are logged in as...</message>
-	<message key="navigation.logout">Log Out</message>
 	<message key="navigation.home">Home</message>
 	<message key="navigation.about">About</message>
 	<message key="navigation.userHome">User Home</message>
@@ -209,14 +207,10 @@
 	<message key="navigation.current">Current</message>
 	<message key="navigation.search">Search</message>
 	<message key="navigation.otherJournals">Other Journals</message>
-	<message key="navigation.myProfile">My Profile</message>
-	<message key="navigation.myJournals">My Journals</message>
-	<message key="navigation.journalContent">Journal Content</message>
 	<message key="navigation.browse">Browse</message>
 	<message key="navigation.browseByIssue">By Issue</message>
 	<message key="navigation.browseByAuthor">By Author</message>
 	<message key="navigation.browseByTitle">By Title</message>
-	<message key="navigation.info">Information</message>
 	<message key="navigation.infoForAuthors">For Authors</message>
 	<message key="navigation.infoForReaders">For Readers</message>
 	<message key="navigation.infoForLibrarians">For Librarians</message>
@@ -229,7 +223,6 @@
 	<message key="navigation.previousPage">&lt;&lt;</message>
 	<message key="navigation.nextPage">&gt;&gt;</message>
 	<message key="navigation.items">{$from} - {$to} of {$total} Items</message>
-	<message key="navigation.fontSize">Font Size</message>
 	
 	<!-- Article Queues -->
 	<message key="common.queue.long.submissionsUnassigned">Unassigned</message>
@@ -812,6 +805,7 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="manager.statistics.reports.daysToPublication">Days To Publication</message>
 
 	<!-- Plugin Management -->
+	<message key="manager.plugins.description">This page allows the Journal Manager to review and potentially configure the plugins that are currently installed. Plugins are divided into categories, according to their function. The categories are listed below, and within each category, its current set of plugins.</message>
 	<message key="manager.plugins.pluginManagement">Plugin Management</message>
 	<message key="manager.plugins.sitePlugin">This is a site-wide plugin. Only the Site Administrator may manage this plugin.</message>
 	<message key="manager.plugins.action">Action:</message>
@@ -829,6 +823,15 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 
 	<message key="plugins.categories.gateways">Gateway Plugins</message>
 	<message key="plugins.categories.gateways.description">Gateway Plugins provide live data to external systems.</message>
+
+	<message key="plugins.categories.citationFormats">Citation Format Plugins</message>
+	<message key="plugins.categories.citationFormats.description">Citation format plugins provide users with various formats in which to access article citations.</message>
+
+	<message key="plugins.categories.blocks">Block Plugins</message>
+	<message key="plugins.categories.blocks.description">Block Plugins are pluggable UI components, such as the various sidebar tools.</message>
+
+	<message key="plugins.categories.themes">Theme Plugins</message>
+	<message key="plugins.categories.themes.description">Theme Plugins can be used to change the system's appearance.</message>
 
 	<!-- Files Browser -->
 	<message key="manager.files.indexOfDir">Index of {$dir}</message>
@@ -1126,11 +1129,14 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.setup.alternateHeaderDescription">Alternately, instead of title and logo, an HTML version of the header can be inserted into the text box below. Leave textbox blank if not required.</message>
 	<message key="manager.setup.journalPageFooter">Journal Page Footer</message>
 	<message key="manager.setup.journalPageFooterDescription">This is the footer of your journal. To change or update the footer, paste the HTML code in the textbox below. Examples could be another navigation bar, a counter, etc. This footer will appear on every page.</message>
-	<message key="manager.setup.journalStyle">Journal Style</message>
-	<message key="manager.setup.journalStyleDescription">By default journals and the site use a common style sheet called "common.css", located in the "styles" subdirectory of the site. The default style rules can be overridden by choosing a theme and/or uploading a journal-specific cascading style sheet (CSS) file.</message>
+	<message key="manager.setup.journalLayout">Journal Layout</message>
+	<message key="manager.setup.journalLayoutDescription">Choose a journal theme and select layout components here. A journal stylesheet may also be uploaded, which can be used to override style data in the system-wide stylesheets and theme stylesheet (if a theme is chosen).</message>
 	<message key="manager.setup.journalTheme">Journal Theme</message>
 	<message key="manager.setup.useJournalStyleSheet">Journal style sheet</message>
 	<message key="manager.setup.noStyleSheetUploaded">No style sheet uploaded.</message>
+	<message key="manager.setup.layout.leftSidebar">Left Sidebar</message>
+	<message key="manager.setup.layout.unselected">Unselected</message>
+	<message key="manager.setup.layout.rightSidebar">Right Sidebar</message>
 	<message key="manager.setup.journalHomepageContent">Journal Homepage Content</message>
 	<message key="manager.setup.journalHomepageContentDescription">By default, the homepage consists of navigation links. Additional homepage content can be appended by using one or all of the following options, which will appear in the order shown. Note that the current issue is always accessible through the Current link in the navigation bar.</message>
 	<message key="manager.setup.journalDescription">Journal Description</message>
@@ -1286,7 +1292,6 @@ You may optionally provide the user with a reason for disabling their account.</
 	<message key="manager.people.editProfile">Edit Profile</message>
 
 	<message key="manager.people.signInAsUser">Log In as User</message>
-	<message key="manager.people.signOutAsUser">Log Out as User</message>
 	<message key="manager.people.signInAs">Log In As</message>
 	<message key="manager.people.syncUsers">Synchronize User Enrollment</message>
 	<message key="manager.people.syncUserDescription">Enrollment synchronization will enroll all users enrolled in the specified role in the specified journal into the same role in this journal. This function allows a common set of users (e.g., Reviewers) to be synchronized between journals.</message>
@@ -2011,7 +2016,6 @@ current password.<br /><br />Enter your email address below to reset your passwo
 	<message key="user.login.lostPassword.invalidHash">Sorry, the link you clicked on has expired or is not valid. Please try resetting your password again.</message>
 	<message key="user.login.lostPassword.passwordSent">A new password has been sent to your email address. You may now login to the site with your new password.</message>
 	<message key="user.login.changePasswordInstructions"><![CDATA[You must choose a new password before you can log in to this site.<br /><br />Please enter your username and your current and new passwords below to change the password for your account.]]></message>
-	<message key="user.login.rememberMe">Remember me</message>
 	<message key="user.login.registeredEmail">Registered user's email</message>
 	<message key="author.submit.authorSubmitLoginMessage">A user account is required to submit to this journal. This allows our editors to track your submissions and contact you when the status of your submission changes, or if additional information is required from you.</message>
 	

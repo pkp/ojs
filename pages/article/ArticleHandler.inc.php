@@ -218,6 +218,15 @@ class ArticleHandler extends Handler {
 		$templateMgr->assign_by_ref('journal', $journal);
 		$templateMgr->assign_by_ref('section', $section);
 
+		$templateMgr->assign('articleSearchByOptions', array(
+			'' => 'search.allFields',
+			ARTICLE_SEARCH_AUTHOR => 'search.author',
+			ARTICLE_SEARCH_TITLE => 'article.title',
+			ARTICLE_SEARCH_ABSTRACT => 'search.abstract',
+			ARTICLE_SEARCH_INDEX_TERMS => 'search.indexTerms',
+			ARTICLE_SEARCH_GALLEY_FILE => 'search.fullText'
+		));
+		
 		// Bring in comment constants.
 		$commentDao = &DAORegistry::getDAO('CommentDAO');
 

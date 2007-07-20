@@ -43,6 +43,15 @@ class Plugin {
 	}
 
 	/**
+	 * Return a number indicating the sequence in which this plugin
+	 * should be registered compared to others of its category.
+	 * Higher = later.
+	 */
+	function getSeq() {
+		return 0;
+	}
+
+	/**
 	 * Called as a plugin is registered to the registry. Subclasses over-
 	 * riding this method should call the parent method first.
 	 * @param $category String Name of category plugin was registered to
@@ -110,6 +119,7 @@ class Plugin {
 	}
 
 	function getSetting($journalId, $name) {
+		if (!Config::getVar('general', 'installed')) return null;
 		$pluginSettingsDao =& DAORegistry::getDAO('PluginSettingsDAO');
 		return $pluginSettingsDao->getSetting($journalId, $this->getName(), $name);
 	}

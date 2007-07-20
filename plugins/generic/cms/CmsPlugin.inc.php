@@ -26,7 +26,7 @@ class Cms extends GenericPlugin {
 	} 		
 
 	function getDescription() {
-		$description = Locale::translate('plugins.generic.cms.description'); 
+		$description = Locale::translate('plugins.generic.cms.description');
 		if ( !$this->isLayoutManagerInstalled() )
 			$description .= "<br />".Locale::translate('plugins.generic.cms.requirement.layoutmanager');
 		if ( !$this->isTinyMCEInstalled() )
@@ -52,11 +52,12 @@ class Cms extends GenericPlugin {
 	}
 
 	function register($category, $path) {
-		if (!Config::getVar('general', 'installed')) return false;
 		if (parent::register($category, $path)) {		
-			$this->addLocaleData();			
-			HookRegistry::register('TemplateManager::display',array(&$this, 'callbackSetTableOfContents'));
-			HookRegistry::register( 'LoadHandler', array(&$this, 'callbackHandleContent') );			 
+			$this->addLocaleData();
+			if ($this->getEnabled()) {
+				HookRegistry::register('TemplateManager::display',array(&$this, 'callbackSetTableOfContents'));
+				HookRegistry::register( 'LoadHandler', array(&$this, 'callbackHandleContent') );
+			}
 			return true;
 		}
 		return false;
@@ -66,18 +67,15 @@ class Cms extends GenericPlugin {
 	 * Declare the handler function to process the actual page URL
 	 */
 	function callbackHandleContent($hookName, $args) {
-		
 		$templateMgr = &TemplateManager::getManager();
 
-		if ( $this->getEnabled() ) {
-			$page =& $args[0];
-			$op =& $args[1];
-			
-			if ( $page == 'cms' ) {
-				define('HANDLER_CLASS', 'CmsHandler');
-				$this->import('CmsHandler');
-				return true;
-			}
+		$page =& $args[0];
+		$op =& $args[1];
+
+		if ( $page == 'cms' ) {
+			define('HANDLER_CLASS', 'CmsHandler');
+			$this->import('CmsHandler');
+			return true;
 		}
 		return false;
 	}
@@ -87,18 +85,16 @@ class Cms extends GenericPlugin {
 	 * Set the Table of Contents from the plugin settings when it hasn't been set already
 	 */
 	function callbackSetTableOfContents($hookName, $args) {
-		if ( $this->getEnabled() ) {
-			$templateManager =& $args[0];
-	
-			// set the table of contents to the default (all headings closed) 
-			// if it has not been set (by the CmsHandler)
-			if ( count($templateManager->get_template_vars('cmsPluginToc')) == 0 ) {
-				$journal =& $templateManager->get_template_vars('currentJournal');					
-				$templateManager->assign('cmsPluginToc', $this->getSetting($journal->getJournalId(), 'toc'));
-			}
+		$templateManager =& $args[0];
+
+		// set the table of contents to the default (all headings closed) 
+		// if it has not been set (by the CmsHandler)
+		if ( count($templateManager->get_template_vars('cmsPluginToc')) == 0 ) {
+			$journal =& $templateManager->get_template_vars('currentJournal');
+			$templateManager->assign('cmsPluginToc', $this->getSetting($journal->getJournalId(), 'toc'));
 		}
-	}		
-	
+	}
+
 	/**
 	 * Determine whether or not this plugin is enabled.
 	 */
@@ -121,7 +117,7 @@ class Cms extends GenericPlugin {
   			if ( $enabled ) {
 				$layoutManagerPlugin->registerBlock($this->getDisplayName(), $this->getTemplatePath().'tableofcontents.tpl', 4);
 
-				$this->import('ContentManager');	
+				$this->import('ContentManager');
 				$contentManager =& new ContentManager();
 				
 				$h = array();
@@ -131,7 +127,7 @@ class Cms extends GenericPlugin {
 				$contentManager->parseContents( $h, $c );
 				
 				// this sets the table of contents with nothing selected
-				$this->updateSetting($journal->getJournalId(), 'toc', $h); 
+				$this->updateSetting($journal->getJournalId(), 'toc', $h);
   			}
 			else
 				$layoutManagerPlugin->deRegisterBlock($this->getDisplayName());
@@ -148,7 +144,7 @@ class Cms extends GenericPlugin {
 		if ( !$this->isLayoutManagerInstalled() )
 			return array();
 
-		$verbs = array();			
+		$verbs = array();
 		if ($this->getEnabled()) {
 			$verbs[] = array(
 				'disable',
@@ -158,13 +154,13 @@ class Cms extends GenericPlugin {
 				$verbs[] = array(
 					'edit', 
 					Locale::translate('manager.plugins.content')
-				);					
+				);
 			}
 		} else {
 			$verbs[] = array(
 				'enable',
 				Locale::translate('manager.plugins.enable')
-			);	
+			);
 		}
 		return $verbs;
 	}
@@ -201,7 +197,7 @@ class Cms extends GenericPlugin {
 						// wipe out the 'currentHeading' because we are coming back to the 
 						// same form (due to lack of validation) and so the content already
 						// incorporates the heading
-						$templateMgr->assign('currentHeading', '');						
+						$templateMgr->assign('currentHeading', '');
 						$templateMgr->assign('currentContent', Request::getUserVar('content'));
 						
 					}
@@ -211,7 +207,7 @@ class Cms extends GenericPlugin {
 					$form->display();
 				}
 				$returner = true;
-				break;			
+				break;
 			case 'enable':
 				$this->setEnabled(true);
 				$returner = false;
@@ -219,10 +215,10 @@ class Cms extends GenericPlugin {
 			case 'disable':
 				$this->setEnabled(false);
 				$returner = false;
-				break;	
+				break;
 		}
 		
-		return $returner;		
+		return $returner;
 	}
 
 }

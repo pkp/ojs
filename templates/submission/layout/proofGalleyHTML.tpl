@@ -22,10 +22,6 @@
 		<link rel="stylesheet" href="{$cssUrl}" type="text/css" />
 	{/foreach}
 
-	<link rel="alternate stylesheet" title="{translate key="icon.small.alt"}" href="{$baseUrl}/styles/small.css" type="text/css" />
-	<link rel="stylesheet" title="{translate key="icon.medium.alt"}" href="{$baseUrl}/styles/medium.css" type="text/css" />
-	<link rel="alternate stylesheet" title="{translate key="icon.large.alt"}" href="{$baseUrl}/styles/large.css" type="text/css" />
-
 	{$additionalHeadData}
 </head>
 <body>

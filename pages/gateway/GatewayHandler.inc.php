@@ -86,7 +86,7 @@ class GatewayHandler extends Handler {
 			$templateMgr->assign('nextYear', $nextYear);
 			$templateMgr->assign('showInfo', $showInfo);
 			
-			$locales = $templateMgr->get_template_vars('languageToggleLocales');
+			$locales =& $journal->getSupportedLocaleNames();
 			if (!isset($locales) || empty($locales)) {
 				$localeNames = &Locale::getAllLocales();
 				$primaryLocale = Locale::getPrimaryLocale();

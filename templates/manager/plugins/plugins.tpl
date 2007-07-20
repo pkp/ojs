@@ -12,9 +12,21 @@
 {assign var="pageTitle" value="manager.plugins.pluginManagement"}
 {include file="common/header.tpl"}
 
+<p>{translate key="manager.plugins.description"}</p>
+
+<ul class="plain">
 {foreach from=$plugins item=plugin}
 	{if $plugin->getCategory() != $category}
 		{assign var=category value=$plugin->getCategory()}
+		<li>&#187; <a href="#{$category|escape}">{translate key="plugins.categories.$category"}</a></li>
+	{/if}
+{/foreach}
+</ul>
+
+{foreach from=$plugins item=plugin}
+	{if $plugin->getCategory() != $category}
+		{assign var=category value=$plugin->getCategory()}
+		<a name="{$category|escape}"></a>
 		<h3>{translate key="plugins.categories.$category"}</h3>
 		<p>{translate key="plugins.categories.$category.description"}</p>
 	{/if}

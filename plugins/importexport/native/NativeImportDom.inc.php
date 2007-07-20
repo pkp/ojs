@@ -388,12 +388,7 @@ class NativeImportDom {
 				$section->setTitle($title);
 				$section->setAbbrev($abbrev);
 				$section->setJournalId($journal->getJournalId());
-				// Kludge: We'll assume that there are less than
-				// 10,000 sections; thus when the sections are
-				// renumbered, this one should be last on the
-				// list.
-				$section->setSequence(10000);
-
+				$section->setSequence(REALLY_BIG_NUMBER);
 				$section->setMetaIndexed(1);
 				$section->setEditorRestricted(1);
 				$section->setSectionId($sectionDao->insertSection($section));
@@ -551,11 +546,7 @@ class NativeImportDom {
 		}
 		$node = $articleNode->getChildByName('open_access');
 		$publishedArticle->setAccessStatus($node?1:0);
-
-		// Kludge: This article should be last on the list. We resequence
-		// the articles at the end of this code to make the seq meaningful.
-		$publishedArticle->setSeq(100000);
-
+		$publishedArticle->setSeq(REALLY_BIG_NUMBER);
 		$publishedArticle->setViews(0);
 		$publishedArticle->setPublicArticleId($articleNode->getAttribute('public_id'));
 

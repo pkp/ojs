@@ -88,7 +88,29 @@ class JournalSetupStep5Form extends JournalSetupForm {
 			'librarianInformation' => $journal->getSetting('librarianInformation'),
 			'journalThemes' => $journalThemes
 		));
-		
+
+		// Make lists of the sidebar blocks available.
+		$templateMgr->initialize();
+		$leftBlockPlugins = $disabledBlockPlugins = $rightBlockPlugins = array();
+		$plugins =& PluginRegistry::getPlugins('blocks');
+		foreach ($plugins as $key => $junk) {
+			if (!$plugins[$key]->getEnabled()) {
+				if (count(array_intersect($plugins[$key]->getSupportedContexts(), array(BLOCK_CONTEXT_LEFT_SIDEBAR, BLOCK_CONTEXT_RIGHT_SIDEBAR))) > 0) $disabledBlockPlugins[] =& $plugins[$key];
+			} else switch ($plugins[$key]->getBlockContext()) {
+				case BLOCK_CONTEXT_LEFT_SIDEBAR:
+					$leftBlockPlugins[] =& $plugins[$key];
+					break;
+				case BLOCK_CONTEXT_RIGHT_SIDEBAR:
+					$rightBlockPlugins[] =& $plugins[$key];
+					break;
+			}
+		}
+		$templateMgr->assign(array(
+			'disabledBlockPlugins' => &$disabledBlockPlugins,
+			'leftBlockPlugins' => &$leftBlockPlugins,
+			'rightBlockPlugins' => &$rightBlockPlugins
+		));
+
 		parent::display();	   
 	}
 	
@@ -178,7 +200,35 @@ class JournalSetupStep5Form extends JournalSetupForm {
 		
 		return false;
 	}
-	
+
+	function execute() {
+		// Save the block plugin layout settings.
+		$blockVars = array('blockSelectLeft', 'blockUnselected', 'blockSelectRight');
+		foreach ($blockVars as $varName) {
+			$$varName = split(' ', Request::getUserVar($varName));
+		}
+
+		$plugins =& PluginRegistry::loadCategory('blocks');
+		$journal =& Request::getJournal();
+		$journalId = $journal->getJournalId();
+		$seq = 0;
+		foreach ($plugins as $key => $junk) {
+			$plugin =& $plugins[$key]; // Ref hack
+			$context = $plugin->getBlockContext();
+			switch ($context) {
+				case BLOCK_CONTEXT_LEFT_SIDEBAR:
+				case BLOCK_CONTEXT_RIGHT_SIDEBAR:
+					$plugin->setEnabled(!in_array($plugin->getName(), $blockUnselected));
+					if (in_array($plugin->getName(), $blockSelectLeft)) $plugin->setBlockContext(BLOCK_CONTEXT_LEFT_SIDEBAR);
+					else if (in_array($plugin->getName(), $blockSelectRight)) $plugin->setBlockContext(BLOCK_CONTEXT_RIGHT_SIDEBAR);
+					$plugin->setSeq($seq++);
+					break;
+			}
+			unset($plugin);
+		}
+
+		return parent::execute();
+	}
 }
 
 ?>

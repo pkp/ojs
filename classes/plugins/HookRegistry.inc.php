@@ -14,7 +14,9 @@
  */
 
 class HookRegistry {
-
+	/**
+	 * Get the current set of hook registrations.
+	 */
 	function &getHooks() {
 		static $hooks = array();
 		return $hooks;
@@ -51,7 +53,7 @@ class HookRegistry {
 		if (!isset($hooks[$hookName])) {
 			$hooks[$hookName] = array();
 		}
-		$hooks[$hookName][] = &$callback;
+		$hooks[$hookName][] =& $callback;
 	}
 
 	/**

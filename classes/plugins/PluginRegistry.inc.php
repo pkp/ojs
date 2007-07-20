@@ -81,10 +81,7 @@ class PluginRegistry {
 	 * current set will be returned rather than attempting to load others)
 	 */
 	function &loadCategory ($category, $forceLoad = false) {
-		// Check if the category is already loaded. If so, don't
-		// load it again.
-		if (($plugins = &PluginRegistry::getPlugins($category))!=null && !$forceLoad) return $plugins;
-
+		$plugins = array();
 		$categoryDir = PLUGINS_PREFIX . $category;
 		if (is_dir($categoryDir)) {
 			$handle = opendir($categoryDir);
@@ -100,13 +97,24 @@ class PluginRegistry {
 					// directory will throw an error.)
 					$plugin = @include("$pluginPath/index.php");
 					if ($plugin) {
-						PluginRegistry::register($category, $plugin, $pluginPath);
+						$plugins[$plugin->getSeq()][$pluginPath] =& $plugin;
 						unset($plugin);
 					}
 				}
 			}
 			closedir($handle);
 		}
+
+
+		// Register the plugins in sequence.
+		ksort($plugins);
+		foreach ($plugins as $seq => $junk1) {
+			foreach ($plugins[$seq] as $pluginPath => $junk2) {
+				PluginRegistry::register($category, $plugins[$seq][$pluginPath], $pluginPath);
+			}
+		}
+		unset($plugins);
+
 		$plugins = &PluginRegistry::getPlugins($category);
 		return $plugins;
 	}
@@ -135,12 +143,17 @@ class PluginRegistry {
 	 * Get a list of the various plugin categories available.
 	 */
 	function getCategories() {
-		return array(
+		$categories = array(
 			'generic',
 			'auth',
 			'importexport',
-			'gateways'
+			'gateways',
+			'blocks',
+			'citationFormats',
+			'themes'
 		);
+		HookRegistry::call('PluginRegistry::getCategories', array(&$categories));
+		return $categories;
 	}
 
 	/**

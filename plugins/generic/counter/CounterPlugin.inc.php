@@ -24,7 +24,6 @@ class CounterPlugin extends GenericPlugin {
 	 * 	the plugin will not be registered.
 	 */
 	function register($category, $path) {
-		if (!Config::getVar('general', 'installed')) return false;
 		$isEnabled = $this->getSetting(0, 'enabled');
 		$success = parent::register($category, $path);
 		if ($success && $isEnabled === true) {

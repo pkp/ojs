@@ -18,26 +18,24 @@ import('classes.plugins.GenericPlugin');
 class XMLGalleyPlugin extends GenericPlugin {
 
 	function register($category, $path) {
-		if (!Config::getVar('general', 'installed')) return false;
 		if (parent::register($category, $path)) {
-
-			$this->import('ArticleXMLGalleyDAO');
-			$xmlGalleyDao = &new ArticleXMLGalleyDAO();
-			DAORegistry::registerDAO('ArticleXMLGalleyDAO', $xmlGalleyDao);
-
-			// NB: These hooks essentially modify/overload the existing ArticleGalleyDAO methods
 			if ($this->getEnabled()) {
+				$this->import('ArticleXMLGalleyDAO');
+				$xmlGalleyDao = &new ArticleXMLGalleyDAO();
+				DAORegistry::registerDAO('ArticleXMLGalleyDAO', $xmlGalleyDao);
+
+				// NB: These hooks essentially modify/overload the existing ArticleGalleyDAO methods
 				HookRegistry::register('ArticleGalleyDAO::getArticleGalleys', array(&$xmlGalleyDao, 'appendXMLGalleys') );
 				HookRegistry::register('ArticleGalleyDAO::insertNewGalley', array(&$xmlGalleyDao, 'insertXMLGalleys') );
 				HookRegistry::register('ArticleGalleyDAO::deleteGalleyById', array(&$xmlGalleyDao, 'deleteXMLGalleys') );
 				HookRegistry::register('ArticleGalleyDAO::incrementGalleyViews', array(&$xmlGalleyDao, 'incrementXMLViews') );
-			}
-			HookRegistry::register('ArticleGalleyDAO::_returnGalleyFromRow', array(&$this, 'returnXMLGalley') );
-			HookRegistry::register('ArticleGalleyDAO::getNewGalley', array(&$this, 'getXMLGalley') );
+				HookRegistry::register('ArticleGalleyDAO::_returnGalleyFromRow', array(&$this, 'returnXMLGalley') );
+				HookRegistry::register('ArticleGalleyDAO::getNewGalley', array(&$this, 'getXMLGalley') );
 
-			// This hook is required in the absence of hooks in the viewFile and download methods
-			HookRegistry::register( 'ArticleHandler::viewFile', array(&$this, 'viewXMLGalleyFile') );
-			HookRegistry::register( 'ArticleHandler::downloadFile', array(&$this, 'viewXMLGalleyFile') );
+				// This hook is required in the absence of hooks in the viewFile and download methods
+				HookRegistry::register( 'ArticleHandler::viewFile', array(&$this, 'viewXMLGalleyFile') );
+				HookRegistry::register( 'ArticleHandler::downloadFile', array(&$this, 'viewXMLGalleyFile') );
+			}
 
 			$this->addLocaleData();
 			return true;

@@ -20,7 +20,6 @@ define('TINYMCE_JS_PATH', TINYMCE_INSTALL_PATH . '/jscripts/tiny_mce');
 
 class TinyMCEPlugin extends GenericPlugin {
 	function register($category, $path) {
-		if (!Config::getVar('general', 'installed')) return false;
 		if (parent::register($category, $path)) {
 			$journal =& Request::getJournal();
 			$journalId = $journal?$journal->getJournalId():0;

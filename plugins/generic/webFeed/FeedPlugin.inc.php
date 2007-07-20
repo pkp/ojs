@@ -30,11 +30,12 @@ class FeedPlugin extends GenericPlugin {
 	}   
 
 	function register($category, $path) {
-		if (!Config::getVar('general', 'installed')) return false;
 		if (parent::register($category, $path)) {
-			HookRegistry::register('TemplateManager::display',array(&$this, 'callbackAddLinks'));
-			
-			HookRegistry::register( 'LoadHandler', array(&$this, 'callbackHandleFeed') ); 
+			if ($this->getEnabled()) {
+				HookRegistry::register('TemplateManager::display',array(&$this, 'callbackAddLinks'));
+				HookRegistry::register( 'LoadHandler', array(&$this, 'callbackHandleFeed') ); 
+			}
+
 			$this->addLocaleData();
 			return true;
 		}

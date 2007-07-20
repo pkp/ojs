@@ -12,7 +12,6 @@ import('classes.plugins.GenericPlugin');
 
 class TranslatorPlugin extends GenericPlugin {
 	function register($category, $path) {
-		if (!Config::getVar('general', 'installed')) return false;
 		if (parent::register($category, $path)) {
 			$this->addLocaleData();
 			if ($this->getSetting(0, 'enabled')) {

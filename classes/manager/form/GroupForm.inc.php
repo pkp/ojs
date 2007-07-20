@@ -102,9 +102,7 @@ class GroupForm extends Form {
 		if ($this->group->getGroupId() != null) {
 			$groupDao->updateGroup($this->group);
 		} else {
-			// Kludge: Assume we'll have less than 10,000 group groups.
-			$this->group->setSequence(10000);
-
+			$this->group->setSequence(REALLY_BIG_NUMBER);
 			$groupDao->insertGroup($this->group);
 
 			// Re-order the groups so the new one is at the end of the list.

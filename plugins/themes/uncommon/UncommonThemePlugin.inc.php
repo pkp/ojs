@@ -36,7 +36,6 @@ class UncommonThemePlugin extends ThemePlugin {
 	function getStylesheetFilename() {
 		return 'uncommon.css';
 	}
-
 }
 
 ?>

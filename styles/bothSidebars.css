@@ -1,0 +1,21 @@
+/**
+ * leftSidebar.css
+ *
+ * Copyright (c) 2003-2006 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * Site-wide shared elements for pages including a left-hand sidebar.
+ *
+ * $Id$
+ */
+
+/**
+ * Common HTML elements
+ */
+
+#main {
+	position: relative;
+	width: 450px;
+	margin-left: 170px;
+	margin-right: 170px;
+}

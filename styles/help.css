@@ -21,6 +21,14 @@
 	width: 680px;
 }
 
+#sidebar {
+	float: right;
+	width: 150px;
+	margin: 0;
+	padding: 1em 0em 1em 0em;
+	font-size: 0.65em;
+}
+
 #body {
 	width: 660px;
 }
