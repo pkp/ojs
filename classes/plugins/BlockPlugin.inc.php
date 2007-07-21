@@ -20,10 +20,10 @@ define('BLOCK_CONTEXT_HOMEPAGE',		0x00000003);
 class BlockPlugin extends Plugin {
 	function register($category, $path) {
 		$success = parent::register($category, $path);
-		if ($success) {
+		if ($success && $this->getEnabled()) {
 			$contextMap =& $this->getContextMap();
 			$hookName = $contextMap[$this->getBlockContext()];
-			if ($this->getEnabled()) HookRegistry::register($hookName, array(&$this, 'callback'));
+			HookRegistry::register($hookName, array(&$this, 'callback'));
 		}
 		return $success;
 	}

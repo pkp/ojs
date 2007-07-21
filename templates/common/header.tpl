@@ -74,7 +74,7 @@
 		{if $rightSidebarCode || $sidebarTemplate}
 			<div id="rightSidebar">
 				{$rightSidebarCode}
-				{include file=$sidebarTemplate}
+				{if $sidebarTemplate}{include file=$sidebarTemplate}{/if}
 			</div>
 		{/if}
 	</div>

@@ -39,6 +39,32 @@ class FontSizeBlockPlugin extends BlockPlugin {
 	}
 
 	/**
+	 * Install default settings on system install.
+	 * @return string
+	 */
+	function getInstallSitePluginSettingsFile() {
+		return $this->getPluginPath() . '/settings.xml';
+	}
+
+	/**
+	 * Install default settings on journal creation.
+	 * @return string
+	 */
+	function getNewJournalPluginSettingsFile() {
+		return $this->getPluginPath() . '/settings.xml';
+	}
+
+	/**
+	 * Get the block context. Overrides parent so that the plugin will be
+	 * displayed during install.
+	 * @return int
+	 */
+	function getBlockContext() {
+		if (!Config::getVar('general', 'installed')) return BLOCK_CONTEXT_RIGHT_SIDEBAR;
+		return parent::getBlockContext();
+	}
+
+	/**
 	 * Get the supported contexts (e.g. BLOCK_CONTEXT_...) for this block.
 	 * @return array
 	 */

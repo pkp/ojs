@@ -161,6 +161,8 @@ class JournalSiteSettingsForm extends Form {
 			$section->setEditorRestricted(false);
 			$section->setHideTitle(false);
 			$sectionDao->insertSection($section);
+
+			HookRegistry::call('JournalSiteSettingsForm::execute', array(&$this, &$journal, &$section));
 		}
 	}
 	

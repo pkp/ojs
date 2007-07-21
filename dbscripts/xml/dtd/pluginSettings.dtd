@@ -1,0 +1,20 @@
+<!--
+  * pluginSettings.dtd
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * DTD for installing plugin settings.
+  *
+  * $Id$
+  -->
+
+<!ELEMENT plugin_settings (setting+)>
+<!ELEMENT setting (name, value)>
+<!ATTLIST setting type (int|string|object|bool) #REQUIRED>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT value (#PCDATA | array)*>
+<!ELEMENT element (#PCDATA | array)*>
+<!ATTLIST element key CDATA #IMPLIED>
+<!ELEMENT array (element+)>
+

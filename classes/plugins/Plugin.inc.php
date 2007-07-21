@@ -62,6 +62,18 @@ class Plugin {
 	function register($category, $path) {
 		$this->pluginPath = $path;
 		$this->pluginCategory = $category;
+		if ($this->getInstallSchemaFile()) {
+			HookRegistry::register ('Installer::postInstall', array(&$this, 'updateSchema'));
+		}
+		if ($this->getInstallSitePluginSettingsFile()) {
+			HookRegistry::register ('Installer::postInstall', array(&$this, 'installSiteSettings'));
+		}
+		if ($this->getNewJournalPluginSettingsFile()) {
+			HookRegistry::register ('JournalSiteSettingsForm::execute', array(&$this, 'installJournalSettings'));
+		}
+		if ($this->getInstallDataFile()) {
+			HookRegistry::register ('Installer::postInstall', array(&$this, 'installData'));
+		}
 		return true;
 	}
 
@@ -174,5 +186,120 @@ class Plugin {
 		return $smarty->smartyUrl($params, $smarty);
 	}
 
+	/**
+	 * Get the filename of the ADODB schema for this plugin.
+	 * Subclasses using SQL tables should override this.
+	 * @return string
+	 */
+	function getInstallSchemaFile() {
+		return null;
+	}
+
+	/**
+	 * Called during the install process to install the plugin schema,
+	 * if applicable.
+	 * @param $hookName string
+	 * @param $args array
+	 * @return boolean
+	 */
+	function updateSchema($hookName, $args) {
+		$installer =& $args[0];
+		$result =& $args[1];
+
+		$schemaXMLParser = &new adoSchema($installer->dbconn, $installer->dbconn->charSet);
+		$sql = $schemaXMLParser->parseSchema($this->getInstallSchemaFile());
+		if ($sql) {
+			$result = $installer->executeSQL($sql);
+		} else {
+			$installer->setError(INSTALLER_ERROR_DB, str_replace('{$file}', $this->getInstallSchemaFile(), Locale::translate('installer.installParseDBFileError')));
+			$result = false;
+		}
+		return false;
+	}
+
+	/**
+	 * Get the filename of the settings data for this plugin to install
+	 * when a journal is created (i.e. journal-level plugin settings).
+	 * Subclasses using default settings should override this.
+	 * @return string
+	 */
+	function getNewJournalPluginSettingsFile() {
+		return null;
+	}
+
+	/**
+	 * Callback used to install settings on journal creation.
+	 * @param $hookName string
+	 * @param $args array
+	 * @return boolean
+	 */
+	function installJournalSettings($hookName, $args) {
+		$journal =& $args[1];
+
+		$pluginSettingsDao =& DAORegistry::getDAO('PluginSettingsDAO');
+		$pluginSettingsDao->installSettings($journal->getJournalId(), $this->getName(), $this->getNewJournalPluginSettingsFile());
+
+		return false;
+	}
+
+
+
+	/**
+	 * Get the filename of the settings data for this plugin to install
+	 * when the system is installed (i.e. site-level plugin settings).
+	 * Subclasses using default settings should override this.
+	 * @return string
+	 */
+	function getInstallSitePluginSettingsFile() {
+		return null;
+	}
+
+	/**
+	 * Callback used to install settings on system install.
+	 * @param $hookName string
+	 * @param $args array
+	 * @return boolean
+	 */
+	function installSiteSettings($hookName, $args) {
+		$installer =& $args[0];
+		$result =& $args[1];
+
+		// Settings are only installed during automated installs. FIXME!
+		if (!$installer->getParam('manualInstall')) {
+			$pluginSettingsDao =& DAORegistry::getDAO('PluginSettingsDAO');
+			$pluginSettingsDao->installSettings(0, $this->getName(), $this->getInstallSitePluginSettingsFile());
+		}
+
+		return false;
+	}
+
+	/**
+	 * Get the filename of the install data for this plugin.
+	 * Subclasses using SQL tables should override this.
+	 * @return string
+	 */
+	function getInstallDataFile() {
+		return null;
+	}
+
+	/**
+	 * Callback used to install data files.
+	 * @param $hookName string
+	 * @param $args array
+	 * @return boolean
+	 */
+	function installData($hookName, $args) {
+		$installer =& $args[0];
+		$result =& $args[1];
+
+		$sql = $installer->dataXMLParser->parseData($this->getInstallDataFile());
+		if ($sql) {
+			$result = $installer->executeSQL($sql);
+		} else {
+			$installer->setError(INSTALLER_ERROR_DB, str_replace('{$file}', $this->getInstallDataFile(), Locale::translate('installer.installParseDBFileError')));
+			$result = false;
+		}
+		return false;
+	}
 }
 ?>
