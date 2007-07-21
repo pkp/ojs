@@ -63,6 +63,7 @@
 
 	<upgrade minversion="2.0.0.0" maxversion="2.1.1.0">
 		<data file="upgrade/2.2.0_update.xml"/>
+		<code function="installBlockPlugins"/>
 		<note file="release-notes/README-2.2.0"/>
 	</upgrade>
 </install>

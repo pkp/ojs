@@ -262,6 +262,42 @@ class Upgrade extends Installer {
 
 		return true;
 	}
+
+	/**
+	 * For upgrade to 2.2: Install default settings for block plugins.
+	 */
+	function installBlockPlugins() {
+		$pluginSettingsDao =& DAORegistry::getDAO('PluginSettingsDAO');
+		$journalDao =& DAORegistry::getDAO('JournalDAO');
+		$journals =& $journalDao->getJournals();
+
+		// Get journal IDs for insertion, including 0 for site-level
+		$journalIds = array(0);
+		while ($journal =& $journals->next()) {
+			$journalIds[] = $journal->getJournalId();
+			unset($journal);
+		}
+
+		$pluginNames = array(
+			'DevelopedByBlockPlugin',
+			'HelpBlockPlugin',
+			'UserBlockPlugin',
+			'LanguageToggleBlockPlugin',
+			'NavigationBlockPlugin',
+			'FontSizeBlockPlugin',
+			'InformationBlockPlugin'
+		);
+		foreach ($journalIds as $journalId) {
+			$i = 0;
+			foreach ($pluginNames as $pluginName) {
+				$pluginSettingsDao->updateSetting($journalId, $pluginName, 'enabled', 'true', 'bool');
+				$pluginSettingsDao->updateSetting($journalId, $pluginName, 'seq', $i++, 'int');
+				$pluginSettingsDao->updateSetting($journalId, $pluginName, 'context', BLOCK_CONTEXT_RIGHT_SIDEBAR, 'int');
+			}
+		}
+
+		return true;
+	}
 }
 
 ?>
