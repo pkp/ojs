@@ -1,12 +1,13 @@
 <?php
 
 /**
- * PublishedArticleDAO.inc.php
+ * @file PublishedArticleDAO.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package article
+ * @class PublishedArticleDAO
  *
  * Class for PublishedArticle DAO.
  * Operations for retrieving and modifying PublishedArticle objects.

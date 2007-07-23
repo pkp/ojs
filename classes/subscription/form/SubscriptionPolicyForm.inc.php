@@ -1,12 +1,13 @@
 <?php
 
 /**
- * SubscriptionPolicyForm.inc.php
+ * @file SubscriptionPolicyForm.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package manager.form
+ * @class SubscriptionPolicyForm
  *
  * Form for managers to setup subscription policies.
  *

@@ -1,12 +1,13 @@
 <?php
 
 /**
- * User.inc.php
+ * @file User.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package user
+ * @class User
  *
  * User class.
  * Basic class describing users existing in the system.

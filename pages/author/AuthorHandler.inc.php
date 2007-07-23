@@ -1,12 +1,13 @@
 <?php
 
 /**
- * AuthorHandler.inc.php
+ * @file AuthorHandler.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package pages.author
+ * @class AuthorHandler
  *
  * Handle requests for journal author functions. 
  *

@@ -1,12 +1,13 @@
 <?php
 
 /**
- * SettingsForm.inc.php
+ * @file SettingsForm.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package plugins
+ * @class SettingsForm
  *
  * Form for journal managers to modify web feeds plugin settings
  *

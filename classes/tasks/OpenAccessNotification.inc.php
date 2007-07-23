@@ -1,12 +1,13 @@
 <?php
 
 /**
- * OpenAccessNotification.inc.php
+ * @file OpenAccessNotification.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package tasks
+ * @class OpenAccessNotification
  *
  * Class to perform automated email notifications when an issue becomes open access.
  *

@@ -1,12 +1,13 @@
 <?php
 
 /**
- * PluginSettingsDAO.inc.php
+ * @file PluginSettingsDAO.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package plugins
+ * @class PluginSettingsDAO
  *
  * Class for Plugin Settings DAO.
  * Operations for retrieving and modifying plugin settings.

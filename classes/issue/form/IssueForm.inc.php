@@ -1,12 +1,13 @@
 <?php
 
 /**
- * IssueForm.inc.php
+ * @file IssueForm.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package issue.form
+ * @class IssueForm
  *
  * Form to create or edit an issue
  *

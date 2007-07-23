@@ -1,12 +1,13 @@
 <?php
 
 /**
- * Section.inc.php
+ * @file Section.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package journal
+ * @class Section
  *
  * Section class.
  * Describes basic section properties.

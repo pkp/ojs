@@ -1,12 +1,13 @@
 <?php
 
 /**
- * UserManagementForm.inc.php
+ * @file UserManagementForm.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package manager.form
+ * @class UserManagementForm
  *
  * Form for journal managers to edit user profiles.
  *

@@ -1,12 +1,13 @@
 <?php
 
 /**
- * DBRowIterator.inc.php
+ * @file DBRowIterator.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package db
+ * @class DBRowIterator
  *
  * Wrapper around ADORecordSet providing "factory" features for generating 
  * objects from DAOs.

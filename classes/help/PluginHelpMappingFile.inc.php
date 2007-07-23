@@ -1,12 +1,13 @@
 <?php
 
 /**
- * PluginHelpMappingFile.inc.php
+ * @file PluginHelpMappingFile.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package help
+ * @class PluginHelpMappingFile
  * 
  * Abstracts the plugin's help mapping XML files.
  *

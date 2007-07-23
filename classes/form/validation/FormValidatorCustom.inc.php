@@ -1,12 +1,13 @@
 <?php
 
 /**
- * FormValidatorCustom.inc.php
+ * @file FormValidatorCustom.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package form.validation
+ * @class FormValidatorCustom
  *
  * Form validation check with a custom user function performing the validation check.
  *

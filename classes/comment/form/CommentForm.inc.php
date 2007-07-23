@@ -1,12 +1,13 @@
 <?php
 
 /**
- * CommentForm.inc.php
+ * @file CommentForm.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package rt.ojs.form
+ * @class CommentForm
  *
  * Form to change metadata information for an RT comment.
  *

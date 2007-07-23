@@ -1,12 +1,13 @@
 <?php
 
 /**
- * localeCheck.php
+ * @file localeCheck.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package tools
+ * @class localeCheck
  *
  * CLI tool to check the various locales for consistency.
  *

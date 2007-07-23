@@ -1,12 +1,13 @@
 <?php
 
 /**
- * Issue.inc.php
+ * @file Issue.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package issue
+ * @class Issue
  *
  * Class for Issue.
  *

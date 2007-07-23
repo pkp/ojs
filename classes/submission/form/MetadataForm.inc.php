@@ -1,12 +1,13 @@
 <?php
 
 /**
- * MetadataForm.inc.php
+ * @file MetadataForm.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package submission.form
+ * @class MetadataForm
  *
  * Form to change metadata information for a submission.
  *

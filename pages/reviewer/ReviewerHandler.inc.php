@@ -1,12 +1,13 @@
 <?php
 
 /**
- * ReviewerHandler.inc.php
+ * @file ReviewerHandler.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package pages.reviewer
+ * @class ReviewerHandler
  *
  * Handle requests for reviewer functions. 
  *

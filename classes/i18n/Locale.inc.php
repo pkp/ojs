@@ -1,12 +1,13 @@
 <?php
 
 /**
- * Locale.inc.php
+ * @file Locale.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package i18n
+ * @class Locale
  *
  * Internationalization class. 
  * Provides methods for loading locale data and translating strings identified by unique keys

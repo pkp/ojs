@@ -1,12 +1,13 @@
 <?php
 
 /**
- * HelpTocDAO.inc.php
+ * @file HelpTocDAO.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package help
+ * @class HelpTocDAO
  *
  * Class for HelpToc DAO.
  * Operations for retrieving HelpToc objects.

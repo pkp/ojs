@@ -1,12 +1,13 @@
 <?php
 
 /**
- * ScheduledTaskDAO.inc.php
+ * @file ScheduledTaskDAO.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package scheduledTask
+ * @class ScheduledTaskDAO
  *
  * Operations for retrieving and modifying Scheduled Task data.
  *

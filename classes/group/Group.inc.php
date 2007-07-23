@@ -1,12 +1,13 @@
 <?php
 
 /**
- * Group.inc.php
+ * @file Group.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package group
+ * @class Group
  *
  * Group class.
  * Describes user groups in journals.

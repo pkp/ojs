@@ -1,12 +1,13 @@
 <?php
 
 /**
- * XMLDAO.inc.php
+ * @file XMLDAO.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package db
+ * @class XMLDAO
  *
  * XML Data Access Object base class.
  * Operations for retrieving and modifying objects from an XML data source.

@@ -1,12 +1,13 @@
 <?php
 
 /**
- * Request.inc.php
+ * @file Request.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package core
+ * @class Request
  *
  * Class providing operations associated with HTTP requests.
  * Requests are assumed to be in the format http://host.tld/index.php/<journal_id>/<page_name>/<operation_name>/<arguments...>

@@ -1,12 +1,13 @@
 <?php
 
 /**
- * AuthorSubmitStep1Form.inc.php
+ * @file AuthorSubmitStep1Form.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package author.form.submit
+ * @class AuthorSubmitStep1Form
  *
  * Form for Step 1 of author article submission.
  *

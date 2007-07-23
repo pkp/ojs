@@ -1,12 +1,13 @@
 <?php
 
 /**
- * GoogleScholarSettingsForm.inc.php
+ * @file GoogleScholarSettingsForm.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package plugins
+ * @class GoogleScholarSettingsForm
  *
  * Form for journal managers to modify Google Scholar gateway settings
  *

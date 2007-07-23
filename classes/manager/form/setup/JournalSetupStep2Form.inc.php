@@ -1,12 +1,13 @@
 <?php
 
 /**
- * JournalSetupStep2Form.inc.php
+ * @file JournalSetupStep2Form.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package manager.form.setup
+ * @class JournalSetupStep2Form
  *
  * Form for Step 2 of journal setup.
  *

@@ -1,12 +1,13 @@
 <?php
 
 /**
- * ArticleEmailLogDAO.inc.php
+ * @file ArticleEmailLogDAO.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package article.log
+ * @class ArticleEmailLogDAO
  *
  * Class for inserting/accessing article email log entries.
  *

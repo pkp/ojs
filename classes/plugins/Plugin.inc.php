@@ -1,12 +1,13 @@
 <?php
 
 /**
- * Plugin.inc.php
+ * @file Plugin.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package plugins
+ * @class Plugin
  *
  * Abstract class for plugins
  *

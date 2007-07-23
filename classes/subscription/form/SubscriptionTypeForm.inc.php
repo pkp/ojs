@@ -1,12 +1,13 @@
 <?php
 
 /**
- * SubscriptionTypeForm.inc.php
+ * @file SubscriptionTypeForm.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package manager.form
+ * @class SubscriptionTypeForm
  *
  * Form for journal managers to create/edit subscription types.
  *

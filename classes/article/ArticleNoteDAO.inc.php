@@ -1,12 +1,13 @@
 <?php
 
 /**
- * ArticleNoteDAO.inc.php
+ * @file ArticleNoteDAO.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package article
+ * @class ArticleNoteDAO
  *
  * Class for ArticleNote DAO.
  * Operations for retrieving and modifying ArticleNote objects.

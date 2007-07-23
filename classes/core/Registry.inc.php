@@ -1,12 +1,13 @@
 <?php
 
 /**
- * Registry.inc.php
+ * @file Registry.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package core
+ * @class Registry
  *
  * Maintains a static table of keyed references.
  * Used for storing/accessing single instance objects and values.

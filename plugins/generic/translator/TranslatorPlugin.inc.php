@@ -1,12 +1,13 @@
 <?php
 
 /**
- * TranslatorPlugin.inc.php
+ * @file TranslatorPlugin.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package plugins
+ * @class TranslatorPlugin
  *
  * This plugin helps with translation maintenance.
  *

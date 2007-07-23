@@ -1,12 +1,13 @@
 <?php
 
 /**
- * LoginChangePasswordForm.inc.php
+ * @file LoginChangePasswordForm.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package user.form
+ * @class LoginChangePasswordForm
  *
  * Form to change a user's password in order to login.
  *

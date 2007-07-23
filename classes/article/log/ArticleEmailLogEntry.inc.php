@@ -1,12 +1,13 @@
 <?php
 
 /**
- * ArticleEmailLogEntry.inc.php
+ * @file ArticleEmailLogEntry.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package article.log
+ * @class ArticleEmailLogEntry
  *
  * Article email log entry class.
  * Describes an entry in the article email log.

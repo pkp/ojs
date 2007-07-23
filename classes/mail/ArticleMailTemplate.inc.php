@@ -1,12 +1,13 @@
 <?php
 
 /**
- * ArticleMailTemplate.inc.php
+ * @file ArticleMailTemplate.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package mail
+ * @class ArticleMailTemplate
  *
  * Subclass of MailTemplate for sending emails related to articles.
  * This allows for article-specific functionality like logging, etc.

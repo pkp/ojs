@@ -1,12 +1,13 @@
 <?php
 
 /**
- * EmailHandler.inc.php
+ * @file EmailHandler.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package pages.user
+ * @class EmailHandler
  *
  * Handle requests for user emails.
  *

@@ -1,12 +1,13 @@
 <?php
 
 /**
- * ReviewerSubmissionDAO.inc.php
+ * @file ReviewerSubmissionDAO.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package submission
+ * @class ReviewerSubmissionDAO
  *
  * Class for ReviewerSubmission DAO.
  * Operations for retrieving and modifying ReviewerSubmission objects.

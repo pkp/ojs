@@ -1,12 +1,13 @@
 <?php
 
 /**
- * ArticleSearch.inc.php
+ * @file ArticleSearch.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package search
+ * @class ArticleSearch
  *
  * Class for retrieving article search results.
  *

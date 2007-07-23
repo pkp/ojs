@@ -1,12 +1,13 @@
 <?php
 
 /**
- * RTVersionHandler.inc.php
+ * @file RTVersionHandler.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package pages.rtadmin
+ * @class RTVersionHandler
  *
  * Handle Reading Tools administration requests -- setup section.
  *

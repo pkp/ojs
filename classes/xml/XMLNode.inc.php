@@ -1,12 +1,13 @@
 <?php
 
 /**
- * XMLNode.inc.php
+ * @file XMLNode.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package xml
+ * @class XMLNode
  *
  * Default handler for XMLParser returning a simple DOM-style object.
  * This handler parses an XML document into a tree structure of XMLNode objects.

@@ -1,12 +1,13 @@
 <?php
 
 /**
- * IssueDAO.inc.php
+ * @file IssueDAO.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package issue
+ * @class IssueDAO
  *
  * Class for Issue DAO.
  * Operations for retrieving and modifying Issue objects.

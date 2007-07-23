@@ -1,12 +1,13 @@
 <?php
 
 /**
- * SectionForm.inc.php
+ * @file SectionForm.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package manager.form
+ * @class SectionForm
  *
  * Form for creating and modifying journal sections.
  *

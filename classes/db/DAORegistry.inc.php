@@ -1,12 +1,13 @@
 <?php
 
 /**
- * DAORegistry.inc.php
+ * @file DAORegistry.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package db
+ * @class DAORegistry
  *
  * Class for retrieving DAO objects.
  * Maintains a static list of DAO objects so each DAO is instantiated only once. 

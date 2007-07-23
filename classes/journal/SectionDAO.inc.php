@@ -1,12 +1,13 @@
 <?php
 
 /**
- * SectionDAO.inc.php
+ * @file SectionDAO.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package journal
+ * @class SectionDAO
  *
  * Class for section DAO.
  * Operations for retrieving and modifying Section objects.

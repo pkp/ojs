@@ -1,12 +1,13 @@
 <?php
 
 /**
- * SubmissionCopyeditHandler.inc.php
+ * @file SubmissionCopyeditHandler.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package pages.copyeditor
+ * @class SubmissionCopyeditHandler
  *
  * Handle requests for submission tracking. 
  *

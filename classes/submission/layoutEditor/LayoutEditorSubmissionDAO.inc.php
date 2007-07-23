@@ -1,12 +1,13 @@
 <?php
 
 /**
- * LayoutEditorSubmissionDAO.inc.php
+ * @file LayoutEditorSubmissionDAO.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package submission.layoutEditor
+ * @class LayoutEditorSubmissionDAO
  *
  * Class for LayoutEditorSubmission DAO.
  * Operations for retrieving and modifying LayoutEditorSubmission objects.

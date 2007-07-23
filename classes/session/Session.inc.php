@@ -1,12 +1,13 @@
 <?php
 
 /**
- * Session.inc.php
+ * @file Session.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package session
+ * @class Session
  *
  * Session class.
  * Maintains user state information from one request to the next.

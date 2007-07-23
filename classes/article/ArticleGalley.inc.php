@@ -1,12 +1,13 @@
 <?php
 
 /**
- * ArticleGalley.inc.php
+ * @file ArticleGalley.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package article
+ * @class ArticleGalley
  *
  * ArticleGalley class.
  * A galley is a final presentation version of the full-text of an article.

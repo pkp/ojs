@@ -1,12 +1,13 @@
 <?php
 
 /**
- * AuthSourceDAO.inc.php
+ * @file AuthSourceDAO.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package security
+ * @class AuthSourceDAO
  *
  * Class for AuthSource DAO.
  * Operations for retrieving and modifying AuthSource objects.

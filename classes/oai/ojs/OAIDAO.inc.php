@@ -1,12 +1,13 @@
 <?php
 
 /**
- * OAIDAO.inc.php
+ * @file OAIDAO.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package oai.ojs
+ * @class OAIDAO
  *
  * DAO operations for the OJS OAI interface.
  *

@@ -1,12 +1,13 @@
 <?php
 
 /**
- * LayoutEditorSubmission.inc.php
+ * @file LayoutEditorSubmission.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package submission.layoutEditor
+ * @class LayoutEditorSubmission
  *
  * LayoutEditorSubmission class.
  * Describes a layout editor's view of a submission

@@ -1,12 +1,13 @@
 <?php
 
 /**
- * AdminFunctionsHandler.inc.php
+ * @file AdminFunctionsHandler.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package pages.admin
+ * @class AdminFunctionsHandler
  *
  * Handle requests for site administrative/maintenance functions. 
  *

@@ -1,12 +1,13 @@
 <?php
 
 /**
- * SubscriptionTypeDAO.inc.php
+ * @file SubscriptionTypeDAO.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package subscription
+ * @class SubscriptionTypeDAO
  *
  * Class for SubscriptionType DAO.
  * Operations for retrieving and modifying SubscriptionType objects.

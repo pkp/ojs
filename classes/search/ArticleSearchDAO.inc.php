@@ -1,12 +1,13 @@
 <?php
 
 /**
- * ArticleSearchDAO.inc.php
+ * @file ArticleSearchDAO.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package search
+ * @class ArticleSearchDAO
  *
  * DAO class for article search index.
  *

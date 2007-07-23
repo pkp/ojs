@@ -1,12 +1,13 @@
 <?php
 
 /**
- * DBResultRange.inc.php
+ * @file DBResultRange.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package db
+ * @class DBResultRange
  *
  * Container class for range information when retrieving a result set.
  *

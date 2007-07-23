@@ -1,12 +1,13 @@
 <?php
 
 /**
- * ScheduledTask.inc.php
+ * @file ScheduledTask.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package core
+ * @class ScheduledTask
  *
  * Base class for executing scheduled tasks.
  * All scheduled task classes must extend this class and implement execute().

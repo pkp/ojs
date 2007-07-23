@@ -1,12 +1,13 @@
 <?php
 
 /**
- * ArticleXMLGalleyDAO.inc.php
+ * @file ArticleXMLGalleyDAO.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package plugins
+ * @class ArticleXMLGalleyDAO
  *
  * Extended DAO methods for XML-derived galleys
  * NB: These require access to a number of hooks in ArticleGalleyDAO

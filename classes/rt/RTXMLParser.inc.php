@@ -1,12 +1,13 @@
 <?php
 
 /**
- * RTXMLParser.inc.php
+ * @file RTXMLParser.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package rt
+ * @class RTXMLParser
  *
  * Class to parse Reading Tools data from an XML format.
  *

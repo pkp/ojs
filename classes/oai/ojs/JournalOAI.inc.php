@@ -1,12 +1,13 @@
 <?php
 
 /**
- * JournalOAI.inc.php
+ * @file JournalOAI.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package oai.ojs
+ * @class JournalOAI
  *
  * OJS-specific OAI interface.
  * Designed to support both a site-wide and journal-specific OAI interface

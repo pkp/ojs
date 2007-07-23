@@ -1,12 +1,13 @@
 <?php
 
 /**
- * SMTPMailer.inc.php
+ * @file SMTPMailer.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package mail
+ * @class SMTPMailer
  *
  * Class defining a simple SMTP mail client (reference RFCs 821 and 2821).
  *

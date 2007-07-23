@@ -1,12 +1,13 @@
 <?php
 
 /**
- * OAIMetadataFormat_RFC1807.inc.php
+ * @file OAIMetadataFormat_RFC1807.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package oai.format
+ * @class OAIMetadataFormat_RFC1807
  *
  * OAI metadata format class -- RFC 1807.
  *

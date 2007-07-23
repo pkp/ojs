@@ -1,12 +1,13 @@
 <?php
 
 /**
- * install.php
+ * @file install.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package tools
+ * @class installTool
  *
  * CLI tool for installing OJS.
  *

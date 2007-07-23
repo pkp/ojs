@@ -1,12 +1,13 @@
 <?php
 
 /**
- * FileWrapper.inc.php
+ * @file FileWrapper.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package file
+ * @class FileWrapper
  *
  * Class abstracting operations for reading remote files using various protocols.
  * (for when allow_url_fopen is disabled).

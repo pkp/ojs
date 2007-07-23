@@ -1,12 +1,13 @@
 <?php
 
 /**
- * NativeExportDom.inc.php
+ * @file NativeExportDom.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package plugins
+ * @class NativeExportDom
  *
  * Native import/export plugin DOM functions for export
  *

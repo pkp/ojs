@@ -1,12 +1,13 @@
 <?php
 
 /**
- * Currency.inc.php
+ * @file Currency.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package currency 
+ * @class Currency
  *
  * Currency class.
  * Basic class describing a currency.

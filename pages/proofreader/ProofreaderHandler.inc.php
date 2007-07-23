@@ -1,12 +1,13 @@
 <?php
 
 /**
- * ProofreaderHandler.inc.php
+ * @file ProofreaderHandler.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package pages.proofreader
+ * @class ProofreaderHandler
  *
  * Handle requests for proofreader functions. 
  *

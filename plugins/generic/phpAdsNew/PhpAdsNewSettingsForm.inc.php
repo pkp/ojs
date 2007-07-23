@@ -1,12 +1,13 @@
 <?php
 
 /**
- * PhpAdsNewSettingsForm.inc.php
+ * @file PhpAdsNewSettingsForm.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package plugins
+ * @class PhpAdsNewSettingsForm
  *
  * Form for journal managers to modify Article XML Galley plugin settings
  *

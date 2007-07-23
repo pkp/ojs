@@ -1,12 +1,13 @@
 <?php
 
 /**
- * Validation.inc.php
+ * @file Validation.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package security
+ * @class Validation
  *
  * Class providing user validation/authentication operations. 
  *

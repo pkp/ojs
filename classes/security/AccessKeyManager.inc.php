@@ -1,12 +1,13 @@
 <?php
 
 /**
- * AccessKeyManager.inc.php
+ * @file AccessKeyManager.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package security
+ * @class AccessKeyManager
  *
  * Class defining operations for access key management.
  *

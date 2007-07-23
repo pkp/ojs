@@ -1,12 +1,13 @@
 <?php
 
 /**
- * FormValidatorAlphaNum.inc.php
+ * @file FormValidatorAlphaNum.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package form.validation
+ * @class FormValidatorAlphaNum
  *
  * Form validation check for alphanumeric (plus interior dash/underscore) characters only.
  *

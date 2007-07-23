@@ -1,12 +1,13 @@
 <?php
 
 /**
- * ProCiteCitationPlugin.inc.php
+ * @file ProCiteCitationPlugin.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package plugins
+ * @class ProCiteCitationPlugin
  *
  * ProCite citation format plugin
  *

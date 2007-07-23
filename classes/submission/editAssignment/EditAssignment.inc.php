@@ -1,12 +1,13 @@
 <?php
 
 /**
- * EditAssignment.inc.php
+ * @file EditAssignment.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package submission
+ * @class EditAssignment
  *
  * EditAssignment class.
  * Describes edit assignment properties.

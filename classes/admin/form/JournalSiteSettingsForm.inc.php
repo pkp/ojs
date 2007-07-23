@@ -1,12 +1,13 @@
 <?php
 
 /**
- * JournalSiteSettingsForm.inc.php
+ * @file JournalSiteSettingsForm.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package admin.form
+ * @class JournalSiteSettingsForm
  *
  * Form for site administrator to edit basic journal settings.
  *

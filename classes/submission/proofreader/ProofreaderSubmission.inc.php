@@ -1,12 +1,13 @@
 <?php
 
 /**
- * ProofreaderSubmission.inc.php
+ * @file ProofreaderSubmission.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package submission.proofreader
+ * @class ProofreaderSubmission
  *
  * ProofreaderSubmission class.
  * Describes a proofreader's view of a submission

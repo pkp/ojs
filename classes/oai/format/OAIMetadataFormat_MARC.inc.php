@@ -1,12 +1,13 @@
 <?php
 
 /**
- * OAIMetadataFormat_MARC.inc.php
+ * @file OAIMetadataFormat_MARC.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package oai.format
+ * @class OAIMetadataFormat_MARC
  *
  * OAI metadata format class -- MARC.
  *

@@ -1,12 +1,13 @@
 <?php
 
 /**
- * ImportOJS1.inc.php
+ * @file ImportOJS1.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package site
+ * @class ImportOJS1
  *
  * Class to import data from an OJS 1.x installation.
  *

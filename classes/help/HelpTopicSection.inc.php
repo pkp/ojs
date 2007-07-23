@@ -1,12 +1,13 @@
 <?php
 
 /**
- * HelpTopicSection.inc.php
+ * @file HelpTopicSection.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package help
+ * @class HelpTopicSection
  *
  * Help section class, designated a subsection of a topic.
  * A HelpTopicSection is associated with a single HelpTopic.
