@@ -1,12 +1,13 @@
 <?php
 
 /**
- * CmsRssPlugin.inc.php
+ * @file CmsRssPlugin.inc.php
  *
- * Copyright (c) 2006 Gunther Eysenbach, Juan Pablo Alperin
+ * Copyright (c) 2006-2007 Gunther Eysenbach, Juan Pablo Alperin
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package plugins
+ * @class CmsRssPlugin
  *
  * CmsRss plugin class
  *
@@ -14,7 +15,7 @@
  
 import('classes.plugins.GenericPlugin');
 
-class CmsRss extends GenericPlugin {
+class CmsRssPlugin extends GenericPlugin {
 
 	function getName() {
 		return 'CmsRssPlugin';

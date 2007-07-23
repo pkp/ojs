@@ -1,12 +1,13 @@
 <?php
 
 /**
- * CmsRssSettingsForm.inc.php
+ * @file CmsRssSettingsForm.inc.php
  *
- * Copyright (c) 2006 Gunther Eysenbach, Juan Pablo Alperin
+ * Copyright (c) 2006-2007 Gunther Eysenbach, Juan Pablo Alperin
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package plugins
+ * @class CmsRssSettingsForm
  *
  * Form for journal managers to add the RSS feeds to aggregate
  * 

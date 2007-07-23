@@ -1,7 +1,7 @@
 <?php
 
 /**
- * index.php
+ * @file index.php
  *
  * Copyright (c) 2003-2006 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
@@ -13,7 +13,8 @@
  * $Id$
  */
  
-require('RoundedCornersPlugin.inc.php'); 
-return new RoundedCornersPlugin(); 
+require_once('RoundedCornersPlugin.inc.php');
+
+return new RoundedCornersPlugin();
 
 ?> 

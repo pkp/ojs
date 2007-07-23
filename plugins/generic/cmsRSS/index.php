@@ -1,9 +1,9 @@
 <?php 
 
 /**
- * index.php
+ * @file index.php
  *
- * Copyright (c) 2006 Gunther Eysenbach, Juan Pablo Alperin
+ * Copyright (c) 2006-2007 Gunther Eysenbach, Juan Pablo Alperin
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @package plugins
@@ -13,7 +13,8 @@
  * $Id$
  */
  
-require('CmsRssPlugin.inc.php'); 
-return new CmsRss(); 
+require_once('CmsRssPlugin.inc.php');
 
-?> 
+return new CmsRssPlugin();
+
+?>
