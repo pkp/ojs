@@ -6,6 +6,8 @@
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
+ * @package index
+ *
  * Core system initialization code.
  * This file is loaded before any others.
  * Any system-wide imports or initialization code should be placed here. 

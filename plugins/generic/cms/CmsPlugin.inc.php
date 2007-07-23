@@ -1,7 +1,7 @@
 <?php
 
 /**
- * cmsPlugin.inc.php
+ * CmsPlugin.inc.php
  *
  * Copyright (c) 2006 Gunther Eysenbach, Juan Pablo Alperin, MJ Suhonos
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
@@ -15,7 +15,7 @@
  
 import('classes.plugins.GenericPlugin');
 
-class Cms extends GenericPlugin {
+class CmsPlugin extends GenericPlugin {
 
 	function getName() {
 		return 'CmsPlugin';

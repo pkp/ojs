@@ -6,6 +6,8 @@
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
+ * @package index
+ *
  * Front controller for OJS site. Loads required files and dispatches requests to the appropriate handler. 
  *
  * $Id$

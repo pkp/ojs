@@ -15,7 +15,7 @@
 
 import('form.Form');
 
-class  LoginChangePasswordForm extends Form {
+class LoginChangePasswordForm extends Form {
 	
 	/**
 	 * Constructor.

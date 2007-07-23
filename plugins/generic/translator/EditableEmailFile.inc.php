@@ -3,6 +3,11 @@
 /**
  * EditableEmailFile.inc.php
  *
+ * Copyright (c) 2003-2007 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @package plugins
+ *
  * This class supports updating for email XML files.
  *
  * $Id$

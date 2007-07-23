@@ -17,7 +17,7 @@
  
  import('mail.Mail');
  
- class SMTPMailer {
+class SMTPMailer {
  
  	/** @var $server string SMTP server hostname (default localhost) */
  	var $server;

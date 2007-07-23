@@ -15,6 +15,6 @@
  
 require_once('CmsPlugin.inc.php'); 
 
-return new Cms(); 
+return new CmsPlugin(); 
 
 ?> 

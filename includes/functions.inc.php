@@ -6,6 +6,8 @@
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
+ * @package index
+ *
  * Contains definitions for common functions used system-wide.
  * Any frequently-used functions that cannot be put into an appropriate class should be added here.
  *
