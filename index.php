@@ -1,14 +1,23 @@
 <?php
 
 /**
+ * @mainpage OJS API Reference
+ * 
+ * Welcome to the OJS API Reference. This resource contains documentation
+ * generated automatically from the OJS source code. There are several
+ * additional resources that may be useful:
+ * - The docs/README document
+ * - The PKP support forum at <http://pkp.sfu.ca/support/forum>
+ * - The technical reference, available at <http://pkp.sfu.ca/ojs_documentation>
+ * 
  * @file index.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package index
- *
  * Front controller for OJS site. Loads required files and dispatches requests to the appropriate handler. 
+ *
+ * @package index
  *
  * $Id$
  */

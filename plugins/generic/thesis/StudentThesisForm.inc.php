@@ -6,7 +6,7 @@
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package plugins 
+ * @package plugins.generic.thesis
  * @class StudentThesisForm
  *
  * Form for students to submit thesis abstract.

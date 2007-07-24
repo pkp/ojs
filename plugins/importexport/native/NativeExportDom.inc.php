@@ -6,7 +6,7 @@
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package plugins
+ * @package plugins.importexport.native
  * @class NativeExportDom
  *
  * Native import/export plugin DOM functions for export

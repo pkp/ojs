@@ -3,12 +3,12 @@
 /**
  * @file index.php
  *
- * Copyright (c) 2003-2006 John Willinsky
+ * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package plugins
+ * Wrapper for rounded corners plugin.
  *
- * Wrapper for Web Feeds plugin.
+ * @package plugins.generic.roundedCorners
  *
  * $Id$
  */

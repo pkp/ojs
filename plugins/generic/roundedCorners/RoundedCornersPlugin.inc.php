@@ -6,7 +6,7 @@
  * Copyright (c) 2007 Juan Pablo Alperin, Gunther Eysenbach
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package plugins
+ * @package plugins.generic.roundedCorners
  * @class RoundedCornersPlugin
  *
  * Rounded Corners plugin class
