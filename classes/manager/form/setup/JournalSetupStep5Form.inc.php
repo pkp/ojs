@@ -95,7 +95,7 @@ class JournalSetupStep5Form extends JournalSetupForm {
 		$leftBlockPlugins = $disabledBlockPlugins = $rightBlockPlugins = array();
 		$plugins =& PluginRegistry::getPlugins('blocks');
 		foreach ($plugins as $key => $junk) {
-			if (!$plugins[$key]->getEnabled()) {
+			if (!$plugins[$key]->getEnabled() || $plugins[$key]->getBlockContext() == '') {
 				if (count(array_intersect($plugins[$key]->getSupportedContexts(), array(BLOCK_CONTEXT_LEFT_SIDEBAR, BLOCK_CONTEXT_RIGHT_SIDEBAR))) > 0) $disabledBlockPlugins[] =& $plugins[$key];
 			} else switch ($plugins[$key]->getBlockContext()) {
 				case BLOCK_CONTEXT_LEFT_SIDEBAR:
@@ -210,20 +210,16 @@ class JournalSetupStep5Form extends JournalSetupForm {
 		}
 
 		$plugins =& PluginRegistry::loadCategory('blocks');
-		$journal =& Request::getJournal();
-		$journalId = $journal->getJournalId();
-		$seq = 0;
 		foreach ($plugins as $key => $junk) {
 			$plugin =& $plugins[$key]; // Ref hack
-			$context = $plugin->getBlockContext();
-			switch ($context) {
-				case BLOCK_CONTEXT_LEFT_SIDEBAR:
-				case BLOCK_CONTEXT_RIGHT_SIDEBAR:
-					$plugin->setEnabled(!in_array($plugin->getName(), $blockUnselected));
-					if (in_array($plugin->getName(), $blockSelectLeft)) $plugin->setBlockContext(BLOCK_CONTEXT_LEFT_SIDEBAR);
-					else if (in_array($plugin->getName(), $blockSelectRight)) $plugin->setBlockContext(BLOCK_CONTEXT_RIGHT_SIDEBAR);
-					$plugin->setSeq($seq++);
-					break;
+			$plugin->setEnabled(!in_array($plugin->getName(), $blockUnselected));
+			if (in_array($plugin->getName(), $blockSelectLeft)) {
+				$plugin->setBlockContext(BLOCK_CONTEXT_LEFT_SIDEBAR);
+				$plugin->setSeq(array_search($key, $blockSelectLeft));
+			}
+			else if (in_array($plugin->getName(), $blockSelectRight)) {
+				$plugin->setBlockContext(BLOCK_CONTEXT_RIGHT_SIDEBAR);
+				$plugin->setSeq(array_search($key, $blockSelectRight));
 			}
 			unset($plugin);
 		}

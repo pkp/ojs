@@ -171,9 +171,6 @@ class TemplateManager extends Smarty {
 		$this->initialized = true;
 	}
 
-	function blockSortCallback($a, $b) {
-	}
-
 	function addStyleSheet($url) {
 		array_push($this->styleSheets, $url);
 	}

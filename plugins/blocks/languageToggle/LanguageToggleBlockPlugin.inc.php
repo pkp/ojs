@@ -9,7 +9,7 @@
  * @package plugins.blocks.languageToggle
  * @class LanguageToggleBlockPlugin
  *
- * Class for "developed by" block plugin
+ * Class for language selector block plugin
  *
  * $Id$
  */
