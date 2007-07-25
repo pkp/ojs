@@ -23,7 +23,7 @@ class BlockPlugin extends Plugin {
 		$success = parent::register($category, $path);
 		if ($success && $this->getEnabled()) {
 			$contextMap =& $this->getContextMap();
-			$blockContex = $this->getBlockContext();
+			$blockContext = $this->getBlockContext();
 			if (isset($contextMap[$blockContext])) {
 				$hookName = $contextMap[$blockContext];
 				HookRegistry::register($hookName, array(&$this, 'callback'));
