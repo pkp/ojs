@@ -50,7 +50,7 @@ class PluginRegistry {
 	 * @param $path The path the plugin was found in
 	 * @return boolean True IFF the plugin was registered successfully
 	 */
-	function register($category, $plugin, $path) {
+	function register($category, &$plugin, $path) {
 		$pluginName = $plugin->getName();
 		$plugins =& PluginRegistry::getPlugins();
 		if (!$plugins) $plugins = array();
