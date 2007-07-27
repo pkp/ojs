@@ -306,11 +306,11 @@ class AboutHandler extends Handler {
 		$sections = &$sections->toArray();
 		$templateMgr->assign_by_ref('sections', $sections);
 		
-		$sectionEditors = array();
+		$sectionEditorEntriesBySection = array();
 		foreach ($sections as $section) {
-			$sectionEditors[$section->getSectionId()] = &$sectionEditorsDao->getEditorsBySectionId($journal->getJournalId(), $section->getSectionId());
+			$sectionEditorEntriesBySection[$section->getSectionId()] = &$sectionEditorsDao->getEditorsBySectionId($journal->getJournalId(), $section->getSectionId());
 		}
-		$templateMgr->assign_by_ref('sectionEditors', $sectionEditors);
+		$templateMgr->assign_by_ref('sectionEditorEntriesBySection', $sectionEditorEntriesBySection);
 
 		$templateMgr->display('about/editorialPolicies.tpl');
 	}

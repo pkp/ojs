@@ -890,7 +890,7 @@ class ImportOJS1 {
 			$row = &$result->fields;
 			
 			if (isset($this->sectionMap[$row['fkSectionID']]) && isset($this->userMap[$row['nUserID']])) {
-				$sectionEditorDao->insertEditor($this->journalId, $this->sectionMap[$row['fkSectionID']], $this->userMap[$row['nUserID']]);
+				$sectionEditorDao->insertEditor($this->journalId, $this->sectionMap[$row['fkSectionID']], $this->userMap[$row['nUserID']], true, true);
 			}
 			
 			$result->MoveNext();

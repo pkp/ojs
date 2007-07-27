@@ -43,9 +43,10 @@
 	{/if}
 
 	{assign var="hasEditors" value=0}
-	{foreach from=$sectionEditors item=sectionSectionEditors key=key}
+	{foreach from=$sectionEditorEntriesBySection item=sectionEditorEntries key=key}
 		{if $key == $section->getSectionId()}
-			{foreach from=$sectionSectionEditors item=sectionEditor}
+			{foreach from=$sectionEditorEntries item=sectionEditorEntry}
+				{assign var=sectionEditor value=$sectionEditorEntry.user}
 				{if 0 == $hasEditors++}
 				{translate key="user.role.editors"}
 				<ul class="plain">

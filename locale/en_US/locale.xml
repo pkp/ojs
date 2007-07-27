@@ -41,6 +41,7 @@
 	<message key="common.enabled">Enabled</message>
 	<message key="common.disabled">Disabled</message>
 	<message key="common.openJournalSystems">Open Journal Systems</message>
+	<message key="common.add">Add</message>
 	<message key="common.delete">Delete</message>
 	<message key="common.edit">Edit</message>
 	<message key="common.save">Save</message>
@@ -1190,8 +1191,6 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.sections.editors">Section editors</message>
 	<message key="manager.sections.unassigned">Available Section Editors</message>
 	<message key="manager.sections.assigned">This Section's Editors</message>
-	<message key="manager.sections.assignEditor">Assign Editor</message>
-	<message key="manager.sections.unassignEditor">Un-assign Editor</message>
 	<message key="manager.sections.form.titleRequired">A title is required for the section.</message>
 	<message key="manager.sections.form.abbrevRequired">An abbreviated title is required for the section</message>
 	<message key="manager.section.sectionEditorInstructions">Select from among the available Section Editors and "Assign Editor" to this section.</message>

@@ -52,7 +52,7 @@ class SectionHandler extends ManagerHandler {
 		
 		import('manager.form.SectionForm');
 		
-		$sectionForm = &new SectionForm(!isset($args) || empty($args) ? null : $args[0]);
+		$sectionForm = &new SectionForm(!isset($args) || empty($args) ? null : ((int) $args[0]));
 		$sectionForm->initData();
 		$sectionForm->display();
 	}
@@ -60,15 +60,28 @@ class SectionHandler extends ManagerHandler {
 	/**
 	 * Save changes to a section.
 	 */
-	function updateSection() {
+	function updateSection($args) {
 		parent::validate();
-		
+
 		import('manager.form.SectionForm');
-		
-		$sectionForm = &new SectionForm(Request::getUserVar('sectionId'));
+		$sectionForm = &new SectionForm(!isset($args) || empty($args) ? null : ((int) $args[0]));
+
+		switch (Request::getUserVar('action')) {
+			case 'addSectionEditor':
+				$sectionForm->includeSectionEditor((int) Request::getUserVar('userId'));
+				$canExecute = false;
+				break;
+			case 'removeSectionEditor':
+				$sectionForm->omitSectionEditor((int) Request::getUserVar('userId'));
+				$canExecute = false;
+				break;
+			default:
+				$canExecute = true;
+				break;
+		}
+
 		$sectionForm->readInputData();
-		
-		if ($sectionForm->validate()) {
+		if ($canExecute && $sectionForm->validate()) {
 			$sectionForm->execute();
 			Request::redirect(null, null, 'sections');
 			

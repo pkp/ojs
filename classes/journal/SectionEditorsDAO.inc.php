@@ -28,17 +28,21 @@ class SectionEditorsDAO extends DAO {
 	 * @param $journalId int
 	 * @param $sectionId int
 	 * @param $userId int
+	 * @param $canReview boolean
+	 * @param $canEdit boolean
 	 */
-	function insertEditor($journalId, $sectionId, $userId) {
+	function insertEditor($journalId, $sectionId, $userId, $canReview, $canEdit) {
 		return $this->update(
 			'INSERT INTO section_editors
-				(journal_id, section_id, user_id)
+				(journal_id, section_id, user_id, can_review, can_edit)
 				VALUES
-				(?, ?, ?)',
+				(?, ?, ?, ?, ?)',
 			array(
 				$journalId,
 				$sectionId,
-				$userId
+				$userId,
+				$canReview?1:0,
+				$canEdit?1:0
 			)
 		);
 	}
@@ -61,33 +65,6 @@ class SectionEditorsDAO extends DAO {
 	}
 	
 	/**
-	 * Retrieve a list of sections assigned to the specified user.
-	 * @param $journalId int
-	 * @param $userId int
-	 * @return array matching Sections
-	 */
-	function &getSectionsByUserId($journalId, $userId) {
-		$sections = array();
-		
-		$sectionDao = &DAORegistry::getDAO('SectionDAO');
-				
-		$result = &$this->retrieve(
-			'SELECT s.* FROM sections AS s, section_editors AS e WHERE s.section_id = e.section_id AND s.journal_id = ? AND e.user_id = ?',
-			array($journalId, $userId)
-		);
-		
-		while (!$result->EOF) {
-			$sections[] = &$sectionDao->_returnSectionFromRow($result->GetRowAssoc(false));
-			$result->moveNext();
-		}
-
-		$result->Close();
-		unset($result);
-	
-		return $sections;
-	}
-	
-	/**
 	 * Retrieve a list of all section editors assigned to the specified section.
 	 * @param $journalId int
 	 * @param $sectionId int
@@ -99,12 +76,17 @@ class SectionEditorsDAO extends DAO {
 		$userDao = &DAORegistry::getDAO('UserDAO');
 				
 		$result = &$this->retrieve(
-			'SELECT u.* FROM users AS u, section_editors AS e WHERE u.user_id = e.user_id AND e.journal_id = ? AND e.section_id = ? ORDER BY last_name, first_name',
+			'SELECT u.*, e.can_review AS can_review, e.can_edit AS can_edit FROM users AS u, section_editors AS e WHERE u.user_id = e.user_id AND e.journal_id = ? AND e.section_id = ? ORDER BY last_name, first_name',
 			array($journalId, $sectionId)
 		);
 		
 		while (!$result->EOF) {
-			$users[] = &$userDao->_returnUserFromRow($result->GetRowAssoc(false));
+			$row = $result->GetRowAssoc(false);
+			$users[] = array(
+				'user' => $userDao->_returnUserFromRow($row),
+				'canReview' => $row['can_review'],
+				'canEdit' => $row['can_edit']
+			);
 			$result->moveNext();
 		}
 
@@ -200,7 +182,6 @@ class SectionEditorsDAO extends DAO {
 
 		return $returner;
 	}
-	
 }
 
 ?>

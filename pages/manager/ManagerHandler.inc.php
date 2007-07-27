@@ -239,9 +239,9 @@ class ManagerHandler extends Handler {
 		SectionHandler::editSection($args);
 	}
 	
-	function updateSection() {
+	function updateSection($args) {
 		import('pages.manager.SectionHandler');
-		SectionHandler::updateSection();
+		SectionHandler::updateSection($args);
 	}
 	
 	function deleteSection($args) {

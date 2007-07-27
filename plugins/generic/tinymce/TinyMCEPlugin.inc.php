@@ -69,6 +69,7 @@ class TinyMCEPlugin extends GenericPlugin {
 				$fields[] = 'biography';
 				break;
 			case 'manager/editSection':
+			case 'manager/updateSection':
 			case 'manager/createSection':
 				$fields[] = 'policy';
 				break;

@@ -14,86 +14,26 @@
 {url|assign:"currentUser" op="sections"}
 {include file="common/header.tpl"}
 
-<form name="section" method="post" action="{url op="updateSection"}" onsubmit="return saveSelectedEditors()">
-{if $sectionId}
-<input type="hidden" name="sectionId" value="{$sectionId}" />
-{/if}
-<input type="hidden" name="assignedEditors" value="" />
-<input type="hidden" name="unassignedEditors" value="" />
+<form name="section" method="post" action="{url op="updateSection" path=$sectionId}">
+<input type="hidden" name="action" value="" />
+<input type="hidden" name="userId" value="" />
 
 {literal}
 <script type="text/javascript">
 <!--
-	// Move the currently selected item between two select menus
-	function moveSelectItem(currField, newField) {
-		var selectedIndex = currField.selectedIndex;
-		
-		if (selectedIndex == -1) {
-			return;
-		}
-		
-		var selectedOption = currField.options[selectedIndex];
 
-		// If "None" exists in new menu, delete it.
-		for (var i = 0; i < newField.options.length; i++) {
-			if (newField.options[i].disabled) {
-				// Delete item from old menu
-				for (var j = i + 1; j < newField.options.length; j++) {
-					newField.options[j - 1].value = newField.options[j].value;
-					newField.options[j - 1].text = newField.options[j].text;
-				}
-				newField.options.length -= 1;
-			}
-		}
+function addSectionEditor(editorId) {
+	document.section.action.value = "addSectionEditor";
+	document.section.userId.value = editorId;
+	document.section.submit();
+}
 
-		// Add item to new menu
-		newField.options.length += 1;
-		newField.options[newField.options.length - 1] = new Option(selectedOption.text, selectedOption.value);
+function removeSectionEditor(editorId) {
+	document.section.action.value = "removeSectionEditor";
+	document.section.userId.value = editorId;
+	document.section.submit();
+}
 
-		// Delete item from old menu
-		for (var i = selectedIndex + 1; i < currField.options.length; i++) {
-			currField.options[i - 1].value = currField.options[i].value;
-			currField.options[i - 1].text = currField.options[i].text;
-		}
-		currField.options.length -= 1;
-
-		// If no items are left in the current menu, add a "None" item.
-		if (currField.options.length == 0) {
-			currField.options.length = 1;
-			currField.options[0] = new Option('{/literal}{translate|escape:"quote" key="common.none"}{literal}', '');
-			currField.options[0].disabled = true;
-		}
-
-		// Update selected item
-		else if (currField.options.length > 0) {
-			currField.selectedIndex = selectedIndex < (currField.options.length - 1) ? selectedIndex : (currField.options.length - 1);
-		}
-	}
-	
-	// Save IDs of selected editors in hidden field
-	function saveSelectedEditors() {
-		var assigned = document.section.assigned;
-		var assignedIds = '';
-		for (var i = 0; i < assigned.options.length; i++) {
-			if (assignedIds != '') {
-				assignedIds += ':';
-			}
-			assignedIds += assigned.options[i].value;
-		}
-		document.section.assignedEditors.value = assignedIds;
-		
-		var unassigned = document.section.unassigned;
-		var unassignedIds = '';
-		for (var i = 0; i < unassigned.options.length; i++) {
-			if (unassignedIds != '') {
-				unassignedIds += ':';
-			}
-			unassignedIds += unassigned.options[i].value;
-		}
-		document.section.unassignedEditors.value = unassignedIds;
-		
-		return true;
-	}
 // -->
 </script>
 {/literal}
@@ -190,33 +130,74 @@
 
 <h3>{translate key="user.role.sectionEditors"}</h3>
 <p><span class="instruct">{translate key="manager.section.sectionEditorInstructions"}</span></p>
-<table class="data" width="100%">
-<tr valign="top">
-	<td width="20%">&nbsp;</td>
-	<td>{translate key="manager.sections.unassigned"}</td>
-	<td>&nbsp;</td>
-	<td>{translate key="manager.sections.assigned"}</td>
-</tr>
-<tr valign="top">
-	<td width="20%">&nbsp;</td>
-	<td><select name="unassigned" size="15" style="width: 150px" class="selectMenu">
-		{foreach from=$unassignedEditors item=editor}
-			<option value="{$editor->getUserId()}">{$editor->getFullName()|escape}</option>
-		{foreachelse}
-			<option value="" disabled="disabled">{translate key="common.none"}</option>
-		{/foreach}
-	</select></td>
-	<td><input type="button" value="{translate key="manager.sections.assignEditor"} &gt;&gt;" onclick="moveSelectItem(this.form.unassigned, this.form.assigned)" class="button" />
-		<br /><br />
-		<input type="button" value="&lt;&lt; {translate key="manager.sections.unassignEditor"}" onclick="moveSelectItem(this.form.assigned, this.form.unassigned)" class="button" /></td>
-	<td><select name="assigned" size="15" style="width: 150px" class="selectMenu">
-		{foreach from=$assignedEditors item=editor}
-			<option value="{$editor->getUserId()}">{$editor->getFullName()|escape}</option>
-		{foreachelse}
-			<option value="" disabled="disabled">{translate key="common.none"}</option>
-		{/foreach}
-	</select></td>
-</tr>
+<h4>{translate key="manager.sections.unassigned"}</h4>
+
+<table width="100%" class="listing" id="sectionEditors">
+	<tr>
+		<td colspan="3" class="headseparator">&nbsp;</td>
+	</tr>
+	<tr valign="top" class="heading">
+		<td width="20%">{translate key="user.username"}</td>
+		<td width="60%">{translate key="user.name"}</td>
+		<td width="20%" align="right">{translate key="common.action"}</td>
+	</tr>
+	<tr>
+		<td colspan="3" class="headseparator">&nbsp;</td>
+	</tr>
+	{foreach from=$unassignedEditors item=editor}
+		<tr valign="top">
+			<td>{$editor->getUsername()|escape}</td>
+			<td>{$editor->getFullName()|escape}</td>
+			<td align="right">
+				<a class="action" href="javascript:addSectionEditor({$editor->getUserId()})">{translate key="common.add"}</a>
+			</td>
+		</tr>
+	{foreachelse}
+		<tr>
+			<td colspan="3" class="nodata">{translate key="common.none"}</td>
+		</tr>
+	{/foreach}
+	<tr>
+		<td colspan="3" class="endseparator">&nbsp;</td>
+	</tr>
+</table>
+
+<h4>{translate key="manager.sections.assigned"}</h4>
+
+<table width="100%" class="listing" id="sectionEditors">
+	<tr>
+		<td colspan="5" class="headseparator">&nbsp;</td>
+	</tr>
+	<tr valign="top" class="heading">
+		<td width="20%">{translate key="user.username"}</td>
+		<td width="40%">{translate key="user.name"}</td>
+		<td width="10%" align="center">{translate key="submission.review"}</td>
+		<td width="10%" align="center">{translate key="submission.editing"}</td>
+		<td width="20%" align="right">{translate key="common.action"}</td>
+	</tr>
+	<tr>
+		<td colspan="5" class="headseparator">&nbsp;</td>
+	</tr>
+	{foreach from=$assignedEditors item=editorEntry}
+		{assign var=editor value=$editorEntry.user}
+		<input type="hidden" name="assignedEditorIds[]" value="{$editor->getUserId()|escape}" />
+		<tr valign="top">
+			<td>{$editor->getUsername()|escape}</td>
+			<td>{$editor->getFullName()|escape}</td>
+			<td align="center"><input type="checkbox" {if $editorEntry.canReview}checked="checked"{/if} name="canReview-{$editor->getUserId()}" /></td>
+			<td align="center"><input type="checkbox" {if $editorEntry.canEdit}checked="checked"{/if} name="canEdit-{$editor->getUserId()}" /></td>
+			<td align="right">
+				<a class="action" href="javascript:removeSectionEditor({$editor->getUserId()})">{translate key="common.remove"}</a>
+			</td>
+		</tr>
+	{foreachelse}
+		<tr>
+			<td colspan="5" class="nodata">{translate key="common.none"}</td>
+		</tr>
+	{/foreach}
+	<tr>
+		<td colspan="5" class="endseparator">&nbsp;</td>
+	</tr>
 </table>
 
 <p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url op="sections" escape=false}'" /></p>
