@@ -16,6 +16,8 @@
  * $Id$
  */
 
+define('RUNNING_UPGRADE', 1);
+
 require(dirname(__FILE__) . '/includes/cliTool.inc.php');
 
 import('install.Upgrade');
