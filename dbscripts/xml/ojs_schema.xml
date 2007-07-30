@@ -141,6 +141,7 @@
 		<field name="biography" type="X"/>
 		<field name="interests" type="C2" size="255"/>
 		<field name="locales" type="C2" size="255"/>
+		<field name="date_last_email" type="T"/>
 		<field name="date_registered" type="T">
 			<NOTNULL/>
 		</field>

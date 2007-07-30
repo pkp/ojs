@@ -143,6 +143,7 @@ class UserDAO extends DAO {
 		$user->setBiography($row['biography']);
 		$user->setInterests($row['interests']);
 		$user->setLocales(isset($row['locales']) && !empty($row['locales']) ? explode(':', $row['locales']) : array());
+		$user->setDateLastEmail($this->datetimeFromDB($row['date_last_email']));
 		$user->setDateRegistered($this->datetimeFromDB($row['date_registered']));
 		$user->setDateLastLogin($this->datetimeFromDB($row['date_last_login']));
 		$user->setMustChangePassword($row['must_change_password']);
@@ -168,10 +169,10 @@ class UserDAO extends DAO {
 		}
 		$this->update(
 			sprintf('INSERT INTO users
-				(username, signature, password, first_name, middle_name, initials, last_name, affiliation, email, url, phone, fax, mailing_address, country, biography, interests, locales, date_registered, date_last_login, must_change_password, disabled, disabled_reason, auth_id)
+				(username, signature, password, first_name, middle_name, initials, last_name, affiliation, email, url, phone, fax, mailing_address, country, biography, interests, locales, date_last_email, date_registered, date_last_login, must_change_password, disabled, disabled_reason, auth_id)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, %s, %s, ?, ?, ?, ?)',
-				$this->datetimeToDB($user->getDateRegistered()), $this->datetimeToDB($user->getDateLastLogin())),
+				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, %s, %s, %s, ?, ?, ?, ?)',
+				$this->datetimeToDB($user->getDateLastEmail()), $this->datetimeToDB($user->getDateRegistered()), $this->datetimeToDB($user->getDateLastLogin())),
 			array(
 				$user->getUsername(),
 				$user->getSignature(),
@@ -229,13 +230,14 @@ class UserDAO extends DAO {
 					biography = ?,
 					interests = ?,
 					locales = ?,
+					date_last_email = %s,
 					date_last_login = %s,
 					must_change_password = ?,
 					disabled = ?,
 					disabled_reason = ?,
 					auth_id = ?
 				WHERE user_id = ?',
-				$this->datetimeToDB($user->getDateLastLogin())),
+				$this->datetimeToDB($user->getDateLastEmail()), $this->datetimeToDB($user->getDateLastLogin())),
 			array(
 				$user->getUsername(),
 				$user->getSignature(),

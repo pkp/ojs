@@ -29,12 +29,41 @@ class EmailHandler extends UserHandler {
 
 		// See if this is the Editor or Manager and an email template has been chosen
 		$template = Request::getUserVar('template');
-		if (	empty($template) || (
+		if (	!$journal || empty($template) || (
 			!Validation::isJournalManager($journal->getJournalId()) &&
 			!Validation::isEditor($journal->getJournalId()) &&
 			!Validation::isSectionEditor($journal->getJournalId())
 		)) {
 			$template = null;
+		}
+
+		// Determine whether or not this account is subject to
+		// email sending restrictions.
+		$canSendUnlimitedEmails = Validation::isSiteAdmin();
+		$unlimitedEmailRoles = array(
+			ROLE_ID_JOURNAL_MANAGER,
+			ROLE_ID_EDITOR,
+			ROLE_ID_SECTION_EDITOR
+		);
+		$roleDao =& DAORegistry::getDAO('RoleDAO');
+		if ($journal) {
+			$roles =& $roleDao->getRolesByUserId($user->getUserId(), $journal->getJournalId());
+			foreach ($roles as $role) {
+				if (in_array($role->getRoleId(), $unlimitedEmailRoles)) $canSendUnlimitedEmails = true;
+			}
+		}
+
+		// Check when this user last sent an email, and if it's too
+		// recent, make them wait.
+		if (!$canSendUnlimitedEmails) {
+			$dateLastEmail = $user->getDateLastEmail();
+			if ($dateLastEmail && strtotime($dateLastEmail) + ((int) Config::getVar('email', 'time_between_emails')) > strtotime(Core::getCurrentDate())) {
+				$templateMgr->assign('pageTitle', 'email.compose');
+				$templateMgr->assign('message', 'email.compose.tooSoon');
+				$templateMgr->assign('backLink', 'javascript:history.back()');
+				$templateMgr->assign('backLinkLabel', 'email.compose');
+				return $templateMgr->display('common/message.tpl');
+			}
 		}
 
 		$email = null;
@@ -92,9 +121,29 @@ class EmailHandler extends UserHandler {
 		}
 		
 		if (Request::getUserVar('send') && !$email->hasErrors()) {
+			$recipients = $email->getRecipients();
+			$ccs = $email->getCcs();
+			$bccs = $email->getBccs();
+
+			// Make sure there aren't too many recipients (to
+			// prevent use as a spam relay)
+			$recipientCount = 0;
+			if (is_array($recipients)) $recipientCount += count($recipients);
+			if (is_array($ccs)) $recipientCount += count($ccs);
+			if (is_array($bccs)) $recipientCount += count($bccs);
+
+			if ($canSendUnlimitedEmails && $recipientCount > ((int) Config::getVar('email', 'max_recipients'))) {
+				$templateMgr->assign('pageTitle', 'email.compose');
+				$templateMgr->assign('message', 'email.compose.tooManyRecipients');
+				$templateMgr->assign('backLink', 'javascript:history.back()');
+				$templateMgr->assign('backLinkLabel', 'email.compose');
+				return $templateMgr->display('common/message.tpl');
+			}
 			$email->send();
 			$redirectUrl = Request::getUserVar('redirectUrl');
 			if (empty($redirectUrl)) $redirectUrl = Request::url(null, 'user');
+			$user->setDateLastEmail(Core::getCurrentDate());
+			$userDao->updateUser($user);
 			Request::redirectUrl($redirectUrl);
 		} else {
 			if (!Request::getUserVar('continued')) {

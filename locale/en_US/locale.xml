@@ -178,6 +178,8 @@
 	<message key="email.send">Send</message>
 	<message key="email.skip">Skip Email</message>
 	<message key="email.compose">Send Email</message>
+	<message key="email.compose.tooSoon">You are attempting to send a message too recently after your last message was sent. Please wait before sending another message.</message>
+	<message key="email.compose.tooManyRecipients">The message you are attempting to send has too many recipients.</message>
 	<message key="email.addToRecipient">Add Recipient</message>
 	<message key="email.addCcRecipient">Add CC</message>
 	<message key="email.addBccRecipient">Add BCC</message>
