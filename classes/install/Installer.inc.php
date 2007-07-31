@@ -92,6 +92,10 @@ class Installer {
 	 * @param $params array installer parameters
 	 */
 	function Installer($descriptor, $params = array()) {
+		// Load all plugins. If any of them use installer hooks,
+		// they'll need to be loaded here.
+		PluginRegistry::loadAllPlugins();
+
 		// Give the HookRegistry the opportunity to override this
 		// method or alter its parameters.
 		if (!HookRegistry::call('Installer::Installer', array(&$this, &$descriptor, &$params))) {
