@@ -2264,9 +2264,9 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="installer.clientCharset">Client character set</message>
 	<message key="installer.clientCharsetInstructions">The encoding to use for data sent to and received from browsers.</message>
 	<message key="installer.connectionCharset">Connection character set</message>
-	<message key="installer.connectionCharsetInstructions">The encoding to use for data sent to and received from the database. This should be the same as the client character set. Note that this capability is only supported with MySQL >= 4.1.1 or PostgreSQL >= 7.1. Select "Not available" if your database server does not meet these requirements.</message>
+	<message key="installer.connectionCharsetInstructions">The encoding to use for data sent to and received from the database. This should be the same as the client character set. Note that this capability is only supported with MySQL >= 4.1.1 or PostgreSQL >= 7.1. Select "Not applicable" if your database server does not meet these requirements.</message>
 	<message key="installer.databaseCharset">Database character set</message>
-	<message key="installer.databaseCharsetInstructions">The encoding to use for data stored in the database. Note that this capability is only supported with MySQL >= 4.1.1 or PostgreSQL >= 7.1. Select "Not available" if your database server does not meet these requirements.</message>
+	<message key="installer.databaseCharsetInstructions">The encoding to use for data stored in the database. Note that this capability is only supported with MySQL >= 4.1.1 or PostgreSQL >= 7.1. Select "Not applicable" if your database server does not meet these requirements.</message>
 	<message key="installer.locale">Locale</message>
 	<message key="installer.fileSettings">File Settings</message>
 	<message key="installer.filesDir">Directory for uploads</message>
