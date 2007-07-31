@@ -72,10 +72,10 @@ class EditCommentForm extends Form {
 		}
 
 		$templateMgr = &TemplateManager::getManager();
-		
+
+		$isPeerReviewComment = $this->comment->getCommentType() == COMMENT_TYPE_PEER_REVIEW;
+		$templateMgr->assign('isPeerReviewComment', $isPeerReviewComment); // FIXME
 		$templateMgr->assign_by_ref('comment', $this->comment);
-		$templateMgr->assign('commentType', $this->comment->getCommentType() == COMMENT_TYPE_PEER_REVIEW ? 'peerReview' : ''); // FIXME
-		$templateMgr->assign('canEmail', $this->roleId == ROLE_ID_REVIEWER ? false : true);
 		$templateMgr->assign_by_ref('hiddenFormParams', $hiddenFormParams);
 		
 		parent::display();

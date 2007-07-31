@@ -18,7 +18,7 @@
 		<input type="hidden" name="{$key|escape}" value="{$hiddenFormParam|escape}" />
 	{/foreach}
 {/if}
-{if $commentType ne "peerReview"}
+{if $isPeerReviewComment}
 <input type="hidden" name="viewable" value="{$viewable|escape}" />
 {/if}
 
@@ -34,7 +34,7 @@
 	<td class="label">{fieldLabel name="comments" key="submission.comments.comments" required="true"}</td>
 	<td class="value"><textarea name="comments" id="comments" rows="15" cols="50" class="textArea">{$comments}</textarea></td>
 </tr>
-{if $commentType eq "peerReview"}
+{if $isPeerReviewComment}
 <tr valign="top">
 	<td>&nbsp;</td>
 	<td class="value">
@@ -45,7 +45,7 @@
 {/if}
 </table>
 
-<p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> {if $canEmail}<input type="submit" name="saveAndEmail" value="{translate key="common.saveAndEmail"}" class="button" /> {/if}<input type="button" value="{translate key="common.cancel"}" class="button" onclick="history.go(-1);" /></p>
+<p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> {if !$isPeerReviewComment}<input type="submit" name="saveAndEmail" value="{translate key="common.saveAndEmail"}" class="button" /> {/if}<input type="button" value="{translate key="common.cancel"}" class="button" onclick="history.go(-1);" /></p>
 
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 
