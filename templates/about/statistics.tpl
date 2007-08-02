@@ -39,7 +39,7 @@
 	</tr>{/if}
 	{if $statPeerReviewed}<tr valign="top">
 		<td width="20%" class="label">{translate key="manager.statistics.statistics.peerReviewed"}</td>
-		<td width="80%" colspan="2" class="value">{$reviewerStatistics.reviewedSubmissionsCount}</td>
+		<td width="80%" colspan="2" class="value">{$limitedArticleStatistics.numReviewedSubmissions}</td>
 	</tr>{/if}
 	{if $statCountAccept}<tr valign="top">
 		<td width="20%" class="label">&nbsp;&nbsp;{translate key="manager.statistics.statistics.count.accept"}</td>

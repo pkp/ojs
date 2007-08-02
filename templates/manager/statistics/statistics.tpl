@@ -51,7 +51,7 @@
 	</tr>
 	<tr valign="top">
 		<td width="20%" class="label"><input type="checkbox" id="statPeerReviewed" name="statPeerReviewed" {if $statPeerReviewed}checked {/if}/><label for="statPeerReviewed">{translate key="manager.statistics.statistics.peerReviewed"}</label></td>
-		<td width="80%" colspan="2" class="value">{$reviewerStatistics.reviewedSubmissionsCount}</td>
+		<td width="80%" colspan="2" class="value">{$limitedArticleStatistics.numReviewedSubmissions}</td>
 	</tr>
 	<tr valign="top">
 		<td width="20%" class="label"><input type="checkbox" id="statCountAccept" name="statCountAccept" {if $statCountAccept}checked {/if}/>&nbsp;&nbsp;<label for="statCountAccept">{translate key="manager.statistics.statistics.count.accept"}</label></td>
