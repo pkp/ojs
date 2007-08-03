@@ -1,0 +1,15 @@
+/**
+ * sehl.css
+ *
+ * Copyright (c) 2003-2006 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * Site-wide shared stylesheet for small fonts.
+ *
+ * $Id$
+ */
+
+span.sehl {
+	background-color: #ff0000;
+	color: #ffffff;
+}
