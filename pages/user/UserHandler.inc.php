@@ -168,6 +168,15 @@ class UserHandler extends Handler {
 		RegistrationHandler::registerUser();
 	}
 
+	function activateUser($args) {
+		import('pages.user.RegistrationHandler');
+		RegistrationHandler::activateUser($args);
+	}
+
+	//
+	// Email
+	//
+
 	function email($args) {
 		import('pages.user.EmailHandler');
 		EmailHandler::email($args);

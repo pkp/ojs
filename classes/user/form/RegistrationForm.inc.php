@@ -157,6 +157,7 @@ class RegistrationForm extends Form {
 	 * Register a new user.
 	 */
 	function execute() {
+		$requireValidation = Config::getVar('email', 'require_validation');
 		if ($this->existingUser) {
 			// Existing user in the system
 			$userDao = &DAORegistry::getDAO('UserDAO');
@@ -208,17 +209,25 @@ class RegistrationForm extends Form {
 				$user->setAuthId($this->defaultAuth->authId);
 			}
 			$user->setPassword(Validation::encryptCredentials($this->getData('username'), $this->getData('password')));
-			
+
+			if ($requireValidation) {
+				// The account should be created in a disabled
+				// state.
+				$user->setDisabled(true);
+				$user->setDisabledReason(Locale::translate('user.login.accountNotValidated'));
+			}
+
 			$userDao = &DAORegistry::getDAO('UserDAO');
 			$userDao->insertUser($user);
 			$userId = $user->getUserId();
 			if (!$userId) {
 				return false;
 			}
-			
+
 			$sessionManager = &SessionManager::getManager();
 			$session = &$sessionManager->getUserSession();
 			$session->setSessionVar('username', $user->getUsername());
+
 		}
 
 		$journal = &Request::getJournal();
@@ -250,14 +259,38 @@ class RegistrationForm extends Form {
 			}
 		}
 		
-		if (!$this->existingUser && $this->getData('sendPassword')) {
-			// Send welcome email to user
+		if (!$this->existingUser) {
 			import('mail.MailTemplate');
-			$mail = &new MailTemplate('USER_REGISTER');
-			$mail->setFrom($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
-			$mail->assignParams(array('username' => $this->getData('username'), 'password' => $this->getData('password'), 'userFullName' => $user->getFullName()));
-			$mail->addRecipient($user->getEmail(), $user->getFullName());
-			$mail->send();
+			if ($requireValidation) {
+				// Create an access key
+				import('security.AccessKeyManager');
+				$accessKeyManager =& new AccessKeyManager();
+				$accessKey = $accessKeyManager->createKey('RegisterContext', $user->getUserId(), null, Config::getVar('email', 'validation_timeout'));
+
+				// Send email validation request to user
+				$mail =& new MailTemplate('USER_VALIDATE');
+				$mail->setFrom($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
+				$mail->assignParams(array(
+					'userFullName' => $user->getFullName(),
+					'activateUrl' => Request::url($journal->getPath(), 'user', 'activateUser', array($this->getData('username'), $accessKey))
+				));
+				$mail->addRecipient($user->getEmail(), $user->getFullName());
+				$mail->send();
+				unset($mail);
+			}
+			if ($this->getData('sendPassword')) {
+				// Send welcome email to user
+				$mail = &new MailTemplate('USER_REGISTER');
+				$mail->setFrom($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
+				$mail->assignParams(array(
+					'username' => $this->getData('username'),
+					'password' => $this->getData('password'),
+					'userFullName' => $user->getFullName()
+				));
+				$mail->addRecipient($user->getEmail(), $user->getFullName());
+				$mail->send();
+				unset($mail);
+			}
 		}
 
 		// By default, self-registering readers will receive

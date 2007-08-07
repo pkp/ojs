@@ -348,6 +348,22 @@ class User extends DataObject {
 	}
 	
 	/**
+	 * Get date user email was validated with the site.
+	 * @return datestamp (YYYY-MM-DD HH:MM:SS)
+	 */
+	function getDateValidated() {
+		return $this->getData('dateValidated');
+	}
+	
+	/**
+	 * Set date user email was validated with the site.
+	 * @param $dateValidated datestamp (YYYY-MM-DD HH:MM:SS)
+	 */
+	function setDateValidated($dateValidated) {
+		return $this->setData('dateValidated', $dateValidated);
+	}
+	
+	/**
 	 * Get date user last logged in to the site.
 	 * @return datestamp
 	 */

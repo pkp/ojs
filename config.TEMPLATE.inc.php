@@ -192,6 +192,10 @@ encryption = md5
 ; Allowed HTML tags for fields that permit restricted HTML.
 allowed_html = "<a> <em> <strong> <cite> <code> <ul> <ol> <li> <dl> <dt> <dd> <b> <i> <u> <img> <sup> <sub> <br> <p>"
 
+; Prevent VIM from attempting to highlight the rest of the config file
+; with unclosed tags:
+; </p></sub></sup></u></i></b></dd></dt></dl></li></ol></ul></code></cite></string></em></a>
+
 
 ;;;;;;;;;;;;;;;;;;
 ; Email Settings ;
@@ -231,6 +235,12 @@ time_between_emails = 3600
 ; Maximum number of recipients that can be included in a single email
 ; (either as To:, Cc:, or Bcc: addresses) for a non-priveleged user
 max_recipients = 10
+
+; If enabled, email addresses must be validated before login is possible.
+require_validation = Off
+
+; Maximum number of days before an unvalidated account expires and is deleted
+validation_timeout = 14
 
 
 ;;;;;;;;;;;;;;;;;;;

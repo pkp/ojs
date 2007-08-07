@@ -2006,6 +2006,9 @@ The file can be viewed by clicking on the file name. A new or revised file can b
 	<message key="user.login.loginError">Invalid username or password. Please try again.</message>
 	<message key="user.login.accountDisabled">Your account has been disabled. Please contact the administrator for more information.</message>
 	<message key="user.login.accountDisabledWithReason">Your account has been disabled for the following reason: {$reason}</message>
+	<message key="user.login.accountNotValidated">Your email address has not been validated. Please check your email and follow the provided instructions. If you have not received an email, you may need to contact the site administrator for assistance.</message>
+	<message key="user.login.activate">Activate Account</message>
+	<message key="user.login.activated">Thank you for activating your account. You may now log in using the credentials you supplied when you created your account.</message>
 	<message key="user.login.rememberUsernameAndPassword">Remember my username and password</message>
 	<message key="user.login.registerNewAccount">Not a user? Register with this site</message>
 	<message key="user.login.forgotPassword">Forgot your password?</message>

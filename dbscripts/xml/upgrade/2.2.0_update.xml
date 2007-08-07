@@ -264,4 +264,15 @@ I have now completed the first round of copyediting of  the manuscript, "{$artic
 Thank you,
 {$copyeditorName}'</query>
 	</sql>
+	<sql><!-- 2578: Email validation process -->
+		<query>INSERT INTO email_templates_default (email_key, can_edit, can_disable) VALUES ('USER_VALIDATE', 1, 0)</query>
+		<query>INSERT INTO email_templates_default_data (locale, email_key, subject, body, description) VALUES ('en_US', 'USER_VALIDATE', 'Validate Your Account', '{$userFullName}
+
+You have created an account with {$journalName}, but before you can start using it, you need to validate your email account. To do this, simply follow the link below:
+
+{$activateUrl}
+
+Thank you,
+{$principalContactSignature}', 'This email is sent to a newly registered user to welcome them to the system and provide them with a record of their username and password.')</query>
+	</sql>
 </data>

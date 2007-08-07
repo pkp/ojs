@@ -59,6 +59,19 @@ Thank you,
 			<field name="description">This email is sent to a newly registered user to welcome them to the system and provide them with a record of their username and password.</field>
 		</row>
 		<row>
+			<field name="email_key">USER_VALIDATE</field>
+			<field name="subject">Validate Your Account</field>
+			<field name="body">{$userFullName}
+
+You have created an account with {$journalName}, but before you can start using it, you need to validate your email account. To do this, simply follow the link below:
+
+{$activateUrl}
+
+Thank you,
+{$principalContactSignature}</field>
+			<field name="description">This email is sent to a newly registered user to welcome them to the system and provide them with a record of their username and password.</field>
+		</row>
+		<row>
 			<field name="email_key">REVIEWER_REGISTER</field>
 			<field name="subject">Registration as Reviewer with {$journalName}</field>
 			<field name="body">In light of your expertise, we have taken the liberty of registering your name in the reviewer database for {$journalName}. This does not entail any form of commitment on your part, but simply enables us to approach you with a submission to possibly review. On being invited to review, you will have an opportunity to see the title and abstract of the paper in question, and you'll always be in a position to accept or decline the invitation. You can also ask at any point to have your name removed from this reviewer list.

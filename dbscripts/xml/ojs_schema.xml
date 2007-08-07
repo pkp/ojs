@@ -145,6 +145,7 @@
 		<field name="date_registered" type="T">
 			<NOTNULL/>
 		</field>
+		<field name="date_validated" type="T"/>
 		<field name="date_last_login" type="T">
 			<NOTNULL/>
 		</field>
