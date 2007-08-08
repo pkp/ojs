@@ -11,6 +11,7 @@
 
 {if $isError}
 <p>
+	<a name="formErrors"></a>
 	<span class="formError">{translate key="form.errorsOccurred"}:</span>
 	<ul class="formErrorList">
 	{foreach key=field item=message from=$errors}
@@ -18,4 +19,12 @@
 	{/foreach}
 	</ul>
 </p>
+<script type="text/javascript">
+{literal}
+<!--
+// Jump to form errors.
+window.location.hash="formErrors";
+// -->
+{/literal}
+</script>
 {/if}

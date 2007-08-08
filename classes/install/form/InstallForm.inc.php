@@ -18,6 +18,8 @@ import('install.Install');
 import('site.VersionCheck');
 import('form.Form');
 
+define('PHP_REQUIRED_VERSION', '4.2.0');
+
 class InstallForm extends Form {
 
 	/** @var array locales supported by this system */
@@ -108,6 +110,9 @@ class InstallForm extends Form {
 		$templateMgr->assign('encryptionOptions', $this->supportedEncryptionAlgorithms);
 		$templateMgr->assign('databaseDriverOptions', $this->checkDBDrivers());
 		$templateMgr->assign('supportsMBString', String::hasMBString() ? Locale::translate('common.yes') : Locale::translate('common.no'));
+		$templateMgr->assign('phpIsSupportedVersion', version_compare(PHP_REQUIRED_VERSION, PHP_VERSION) != 1);
+		$templateMgr->assign('phpRequiredVersion', PHP_REQUIRED_VERSION);
+		$templateMgr->assign('phpVersion', PHP_VERSION);
 		$templateMgr->assign('version', VersionCheck::getCurrentCodeVersion());
 
 		parent::display();
@@ -134,7 +139,7 @@ class InstallForm extends Form {
 			'skipFilesDir' =>  0,			
 			'databaseDriver' => 'mysql',
 			'databaseHost' => 'localhost',
-			'databaseUsername' => 'root',
+			'databaseUsername' => 'ojs',
 			'databasePassword' => '',
 			'databaseName' => 'ojs',
 			'createDatabase' => 1,
