@@ -17,9 +17,12 @@
 	<title>{$article->getArticleTitle()|escape} | {$article->getFirstAuthor(true)|escape} | {$currentJournal->getTitle()|escape}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset={$defaultCharset}" />
 	<meta name="description" content="{$article->getArticleTitle()|escape}" />
+	{if $article->getSubject()}
 	<meta name="keywords" content="{$article->getSubject()|escape}" />
+	{/if}
 
 	{include file="article/dublincore.tpl"}
+	{include file="article/googlescholar.tpl"}
 
 	<link rel="stylesheet" href="{$baseUrl}/styles/common.css" type="text/css" />
 	<link rel="stylesheet" href="{$baseUrl}/styles/articleView.css" type="text/css" />
