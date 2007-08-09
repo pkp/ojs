@@ -118,9 +118,9 @@ class RoundedCornersPlugin extends GenericPlugin {
 			$matches = $this->_getDivs($newOutput, $class);
 			if ( count($matches) > 0 ) {
 				foreach ($matches as $match) {	
-					if ( preg_match('/<div[^>]+(class|id)\=\"'.$class.'\">(\s*)(<\/div>[^<]*)$/', $match) > 0 ) continue;
+					if ( preg_match('/<div[^>]+class\=\"'.$class.'\"[^>]*>(\s*)(<\/div>[^<]*)$/', $match) > 0 ) continue;
 					
-					$newBlock = preg_replace('/(<div[^>]+(class|id)\=\"'.$class.'\">)/is', "\\1$top", $match, PREG_OFFSET_CAPTURE);
+					$newBlock = preg_replace('/(<div[^>]+class\=\"'.$class.'\"[^>]*>)/is', "\\1$top", $match, PREG_OFFSET_CAPTURE);
 					$newBlock = preg_replace('/([^>]*)(<\/div>[^<]*)$/', "\\1$bottom\\2", $newBlock);
 					
 					$newOutput = str_replace($match, $newBlock, $newOutput);
@@ -138,33 +138,33 @@ class RoundedCornersPlugin extends GenericPlugin {
 	 */
 	function _getDivs($subject, $class)
 	{
-	        preg_match_all("/<div[^>]+class\=\"$class\">/is", $subject, $matches, PREG_OFFSET_CAPTURE);
+	        preg_match_all("/<div[^>]+class\=\"$class\"[^>]*>/is", $subject, $matches, PREG_OFFSET_CAPTURE);
 	        
 	        $matches = $matches[0];
 	        for($i=0; $i<count($matches); $i++)
 	        {
-	                $dopen = 0;
-	                $dclose = 0;
-	                $div_close_pos = 0;
-	                $pos_divs = array();
-	                preg_match_all("/<\/?div[^>]*>/is", $subject, $pos_divs, PREG_OFFSET_CAPTURE, $matches[$i][1]);
-	                $pos_divs = $pos_divs[0];//parr($pos_divs);
-	                for($i2=0; $i2<count($pos_divs); $i2++)
+	                $openDivs = 0;
+	                $closedDivs = 0;
+	                $divClosePosition = 0;
+	                $divPosition = array();
+	                preg_match_all("/<\/?div[^>]*>/is", $subject, $divPosition, PREG_OFFSET_CAPTURE, $matches[$i][1]);
+	                $divPosition = $divPosition[0];
+	                for($i2=0; $i2<count($divPosition); $i2++)
 	                {
-	                        if(eregi("\/", $pos_divs[$i2][0]))
+	                        if(eregi("\/", $divPosition[$i2][0]))
 	                        {
-	                                $dclose++;// echo "Dclose: $dclose";
+	                                $closedDivs++;
 	                        }
 	                        else
 	                        {
-	                                $dopen++;// echo " | Dopen: $dopen";
+	                                $openDivs++;
 	                        }
-	                        ///////////////////
-	                        if($dclose > $dopen-1)
+
+	                        if($closedDivs > $openDivs-1)
 	                        {
-	                                $div_close_pos = $pos_divs[$i2][1];
-	                                $div_len = $div_close_pos+6 - $matches[$i][1];
-	                                $divs[$i] = substr($subject, $matches[$i][1], $div_len);
+	                                $divClosePosition = $divPosition[$i2][1];
+	                                $divLength = $divClosePosition+6 - $matches[$i][1];
+	                                $divs[$i] = substr($subject, $matches[$i][1], $divLength);
 	                                break;
 	                        }
 	                }
