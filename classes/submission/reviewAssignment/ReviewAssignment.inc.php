@@ -527,7 +527,9 @@ class ReviewAssignment extends DataObject {
 	 * @return int
 	 */
 	function getWeeksDue() {
-		return round((strtotime($this->getDateDue()) - time()) / (86400 * 7.0));
+		$dateDue = $this->getDateDue();
+		if ($dateDue === null) return null;
+		return round((strtotime($dateDue) - time()) / (86400 * 7.0));
 	}
 	
 	//
