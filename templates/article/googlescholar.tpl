@@ -35,4 +35,3 @@
 	<meta name="citation_fulltext_html_url" content="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)|to_array:$dc_galley->getGalleyId()}">
 {/if}
 {/foreach}
-	<meta name="citation_publisher" content="{$siteTitle|strip_tags|escape}"/>

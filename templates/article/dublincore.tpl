@@ -51,7 +51,7 @@
 {/if}
 	<meta name="DC.Identifier.URI" content="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)}"/>
 	<meta name="DC.Language" scheme="ISO639-1" content="{$article->getLanguage()|strip_tags|escape}"/>
-	<meta name="DC.Publisher" content="{$siteTitle|strip_tags|escape}"/>
+{* DC.Publisher (publishing institution) *}
 {* DC.Publisher.Address (email addr) *}
 {if $currentJournal->getSetting('copyrightNotice')}
 	<meta name="DC.Rights" content="{$currentJournal->getSetting('copyrightNotice')|strip_tags|escape}"/>
