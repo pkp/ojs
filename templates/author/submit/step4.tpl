@@ -12,12 +12,25 @@
 {assign var="pageTitle" value="author.submit.step4"}
 {include file="author/submit/submitHeader.tpl"}
 
-<form method="post" action="{url op="saveSubmit" path=$submitStep}" enctype="multipart/form-data">
+<script type="text/javascript">
+{literal}
+<!--
+function confirmForgottenUpload() {
+	var fieldValue = document.submitForm.uploadSuppFile.value;
+	if (fieldValue) {
+		return confirm("{/literal}{translate key="author.submit.forgottenSubmitSuppFile"}{literal}");
+	}
+	return true;
+}
+// -->
+{/literal}
+</script>
+
+<form name="submitForm" method="post" action="{url op="saveSubmit" path=$submitStep}" enctype="multipart/form-data">
 <input type="hidden" name="articleId" value="{$articleId}" />
 {include file="common/formErrors.tpl"}
 
-<p>{translate key="author.submit.supplementaryFilesInstructions"}<br/>
-<a class="action" href="javascript:openHelp('{get_help_id key="editorial.sectionEditorsRole.review.blindPeerReview" url="true"}')">{translate key="reviewer.article.ensuringBlindReview"}</a></p>
+<p>{translate key="author.submit.supplementaryFilesInstructions"}</p>
 
 <table class="listing" width="100%">
 <tr>
@@ -53,13 +66,16 @@
 <table class="data" width="100%">
 <tr>
 	<td width="30%" class="label">{fieldLabel name="uploadSuppFile" key="author.submit.uploadSuppFile"}</td>
-	<td width="70%" class="value"><input type="file" name="uploadSuppFile" id="uploadSuppFile"  class="uploadField" /> <input name="submitUploadSuppFile" type="submit" class="button" value="{translate key="common.upload"}" /></td>
+	<td width="70%" class="value">
+		<input type="file" name="uploadSuppFile" id="uploadSuppFile"  class="uploadField" /> <input name="submitUploadSuppFile" type="submit" class="button" value="{translate key="common.upload"}" />
+		<a class="action" href="javascript:openHelp('{get_help_id key="editorial.sectionEditorsRole.review.blindPeerReview" url="true"}')">{translate key="reviewer.article.ensuringBlindReview"}</a>
+	</td>
 </tr>
 </table>
 
 <div class="separator"></div>
 
-<p><input type="submit" value="{translate key="common.saveAndContinue"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="confirmAction('{url page="author"}', '{translate|escape:"javascript" key="author.submit.cancelSubmission"}')" /></p>
+<p><input type="submit" onclick="return confirmForgottenUpload()" value="{translate key="common.saveAndContinue"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="confirmAction('{url page="author"}', '{translate|escape:"javascript" key="author.submit.cancelSubmission"}')" /></p>
 
 </form>
 

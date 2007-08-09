@@ -12,13 +12,42 @@
 {assign var="pageTitle" value="author.submit.step1"}
 {include file="author/submit/submitHeader.tpl"}
 
-<p>{translate key="author.submit.howToSubmit" supportName=$journalSettings.supportName supportEmail=$journalSettings.supportEmail supportPhone=$journalSettings.supportPhone}</p>
+{if $journalSettings.supportPhone}
+	{assign var="howToKeyName" value="author.submit.howToSubmit"}
+{else}
+	{assign var="howToKeyName" value="author.submit.howToSubmitNoPhone"}
+{/if}
+
+<p>{translate key=$howToKeyName supportName=$journalSettings.supportName supportEmail=$journalSettings.supportEmail supportPhone=$journalSettings.supportPhone}</p>
 
 <div class="separator"></div>
 
 {if count($sectionOptions) <= 1}
 <p>{translate key="author.submit.notAccepting"}</p>
 {else}
+
+<h3>{translate key="author.submit.journalSection"}</h3>
+
+{url|assign:"url" page="about"}
+<p>{translate key="author.submit.journalSectionDescription" aboutUrl=$url}</p>
+
+<form name="submit" method="post" action="{url op="saveSubmit" path=$submitStep}" onsubmit="return checkSubmissionChecklist()">
+
+{if $articleId}
+<input type="hidden" name="articleId" value="{$articleId}" />
+{/if}
+<input type="hidden" name="submissionChecklist" value="1" />
+{include file="common/formErrors.tpl"}
+
+<table class="data" width="100%">
+<tr valign="top">	
+	<td width="20%" class="label">{fieldLabel name="sectionId" required="true" key="section.section"}</td>
+	<td width="80%" class="value"><select name="sectionId" id="sectionId" size="1" class="selectMenu">{html_options options=$sectionOptions selected=$sectionId}</select></td>
+</tr>
+	
+</table>
+
+<div class="separator"></div>
 
 <script type="text/javascript">
 {literal}
@@ -41,14 +70,6 @@ function checkSubmissionChecklist() {
 // -->
 {/literal}
 </script>
-
-<form name="submit" method="post" action="{url op="saveSubmit" path=$submitStep}" onsubmit="return checkSubmissionChecklist()">
-
-{if $articleId}
-<input type="hidden" name="articleId" value="{$articleId}" />
-{/if}
-<input type="hidden" name="submissionChecklist" value="1" />
-{include file="common/formErrors.tpl"}
 
 {if $journalSettings.submissionChecklist}
 
@@ -91,19 +112,9 @@ function checkSubmissionChecklist() {
 <div class="separator"></div>
 {/if}
 
-<h3>{translate key="author.submit.journalSection"}</h3>
-
-{url|assign:"url" page="about"}
-<p>{translate key="author.submit.journalSectionDescription" aboutUrl=$url}</p>
-
-
-<table class="data" width="100%">
-<tr valign="top">	
-	<td width="20%" class="label">{fieldLabel name="sectionId" required="true" key="section.section"}</td>
-	<td width="80%" class="value"><select name="sectionId" id="sectionId" size="1" class="selectMenu">{html_options options=$sectionOptions selected=$sectionId}</select></td>
-</tr>
-	
-</table>
+<h3>{translate key="author.submit.privacyStatement"}</h3>
+<br />
+{$journalSettings.privacyStatement|nl2br}
 
 <div class="separator"></div>
 
@@ -125,6 +136,6 @@ function checkSubmissionChecklist() {
 
 </form>
 
-{/if}
+{/if}{* If not accepting submissions *}
 
 {include file="common/footer.tpl"}

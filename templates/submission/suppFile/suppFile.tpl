@@ -151,7 +151,7 @@
 				{fieldLabel name="uploadSuppFile" key="common.upload"}
 			{/if}
 		</td>
-		<td class="value"><input type="file" name="uploadSuppFile" id="uploadSuppFile" class="uploadField" />&nbsp;&nbsp;{translate key="form.saveToUpload"}</td>
+		<td class="value"><input type="file" name="uploadSuppFile" id="uploadSuppFile" class="uploadField" />&nbsp;&nbsp;{translate key="author.submit.supplementaryFiles.saveToUpload"}</td>
 	</tr>
 	{if not $suppFile}
 	<tr valign="top">

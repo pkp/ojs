@@ -440,7 +440,6 @@
 	<message key="user.affiliations">Affiliations</message>
 	<message key="user.email">Email</message>
 	<message key="user.url">URL</message>
-	<message key="user.url.description">This will appear as a hyperlinked URL at the bottom of the bio statement on the "About the author" pop-up and "Editorial team" page.</message>
 	<message key="user.phone">Phone</message>
 	<message key="user.fax">Fax</message>
 	<message key="user.interests">Reviewing interests</message>
@@ -1792,7 +1791,8 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	<message key="author.submissions.noSubmissions">No submissions.</message>
 
 	<!-- Article Submission Step 1 -->
-	<message key="author.submit.howToSubmit"><![CDATA[Authors submit items to this journal through this web site in a five-step process for uploading the manuscript and relevant information (with an option to upload, as well, supplementary files, such as research data and instruments). If difficulties are encountered in this process, contact <a href="mailto:{$supportEmail}">{$supportName}</a> by email or phone {$supportPhone} for assistance.]]></message>
+	<message key="author.submit.howToSubmit"><![CDATA[Encountering difficulties? Contact <a href="mailto:{$supportEmail}">{$supportName}</a> for assistance ({$supportPhone}).]]></message>
+	<message key="author.submit.howToSubmitNoPhone"><![CDATA[Encountering difficulties? Contact <a href="mailto:{$supportEmail}">{$supportName}</a> for assistance.]]></message>
 	<message key="author.submit.journalSection">Journal Section</message>
 	<message key="author.submit.journalSectionDescription"><![CDATA[Select the appropriate section for this submission (see Sections and Policies in <a href="{$aboutUrl}" target="_new">About</a> the Journal).]]></message>
 	<message key="author.submit.selectSection">Please select a section...</message>
@@ -1807,15 +1807,12 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	<message key="author.submit.form.sectionRequired">Please select an appropriate journal section for this submission.</message>
 	
 	<!-- Article Submission Step 2 -->
-	<message key="author.submit.metadataDescription">This journal gathers metadata about each submission, according to the standards set by the Open Archives Initiative, which is the emerging online standard for identifying research resources. This enables collective and accurate searching across OAI databases, increasing the likelihood that readers will find submissions such as this one. Editors may insist that metadata be provided before initiating the editorial process.</message>
 	<message key="author.submit.privacyStatement">Journal's Privacy Statement</message>
-	<message key="author.submit.authorsDescription">For submissions with more than one author, order authors as they are to appear on citation.</message>
-	<message key="author.submit.reorderAuthorName">Reorder author's name</message>
-	<message key="author.submit.reorderInstructions">Use arrows to change the order in which the authors names are to appear with the submission.</message>
+	<message key="author.submit.reorderInstructions">Reorder authors to appear in the order they will be listed on publication.</message>
 	<message key="author.submit.selectPrincipalContact">Principal contact for editorial correspondence.</message>
 	<message key="author.submit.addAuthor">Add Author</message>
 	<message key="author.submit.deleteAuthor">Delete Author</message>
-	<message key="author.submit.submissionIndexingDescription">Choose terms that best describe the submission's content following the categories used by this journal, and examples provided by the editor. Separate terms with a semi-colon (term1; term2; term3).</message>
+	<message key="author.submit.submissionIndexingDescription">Provide terms for indexing the submission; separate terms with a semi-colon (term1; term2; term3).</message>
 	<message key="author.submit.submissionSupportingAgencies">Supporting Agencies</message>
 	<message key="author.submit.submissionSupportingAgenciesDescription">Identify agencies that provided funding or support for the work presented in this submission.</message>
 	<message key="author.submit.agencies">Agencies</message>
@@ -1837,9 +1834,7 @@ To upload a manuscript to this journal, complete the following steps.
 <li>Click Open on the Choose File window, which places the name of the file on this page.</li>
 <li>Click Upload on this page, which uploads the file from the computer to the journal's web site and renames it following the journal's conventions.</li>
 <li>Once the submission is uploaded, click Save and Continue at the bottom of this page.</li>
-</ol>
-
-The file can be viewed by clicking on the file name. A new or revised file can be uploaded, deleting the one that currently appears. Additional files can be added using Supplementary Files (next step). If you have difficulties uploading the submission, contact <a href="mailto:{$supportEmail}">{$supportName}</a> by email or phone {$supportPhone} for assistance. ]]></message>
+</ol>]]></message>
 	<message key="author.submit.submissionFile">Submission File</message>
 	<message key="author.submit.uploadSubmissionFile">Upload submission file</message>
 	<message key="author.submit.replaceSubmissionFile">Replace submission file</message>
@@ -1847,7 +1842,9 @@ The file can be viewed by clicking on the file name. A new or revised file can b
 	<message key="author.submit.noSubmissionConfirm">Are you sure you wish to continue without uploading a submission file?</message>
 	
 	<!-- Article Submission Step 4 -->
-	<message key="author.submit.supplementaryFilesInstructions">This optional step in the submission process allows authors to add files to the submission which improve the contribution which the submission makes. Supplementary Files might include (a) research instruments, (b) data sets, which comply with the terms of the study's research ethics review, (c) sources that otherwise would be unavailable to readers, or (d) figures or tables that cannot be integrated into the text itself. These files are also indexed by the author, identifying their relation to the submission, as well as their ownership. Supplementary Files can be uploaded in any file format and will be made available to readers in their original format. They can be shared with peer reviewers, if they do not compromise the blind review.</message>
+	<message key="author.submit.supplementaryFilesInstructions">This optional step allows Supplementary Files to be added to a submission. The files, which can be in any format, might include (a) research instruments, (b) data sets, which comply with the terms of the study's research ethics review, (c) sources that otherwise would be unavailable to readers, (d) figures and tables that cannot be integrated into the text itself, or other materials that add to the contribution of the work.</message>
+	<message key="author.submit.supplementaryFiles.saveToUpload">Click Save to upload file (after which additional files can be uploaded).</message>
+	<message key="author.submit.forgottenSubmitSuppFile">Are you sure you wish to continue without uploading the supplementary file you have chosen?</message>
 	<message key="author.submit.noSupplementaryFiles">No supplementary files have been added to this submission.</message>
 	<message key="author.submit.backToSupplementaryFiles">Back to Supplementary Files</message>
 	<message key="author.submit.confirmDeleteSuppFile">Are you sure you want to delete this supplementary file?</message>
@@ -1882,7 +1879,7 @@ The file can be viewed by clicking on the file name. A new or revised file can b
 	<message key="author.suppFile.publicSuppFileIdentifier">Public supplemental file identifier</message>
 	
 	<!-- Article Submission Step 5 -->
-	<message key="author.submit.confirmationDescription">With the previous four steps of the submission process completed, click Finish Submission to submit your manuscript to {$journalTitle}. You will receive an acknowledgement by email and will be able to view your submission's progress through the editorial process by logging in to the journal web site. Thank you for your interest in publishing with {$journalTitle}.</message>
+	<message key="author.submit.confirmationDescription">To submit your manuscript to {$journalTitle} click Finish Submission. The submission's principal contact will receive an acknowledgement by email and will be able to view the submission's progress through the editorial process by logging in to the journal web site. Thank you for your interest in publishing with {$journalTitle}.</message>
 	<message key="author.submit.noFiles">No files have been attached to this submission.</message>
 	<message key="author.submit.filesSummary">File Summary</message>
 	<message key="author.submit.finishSubmission">Finish Submission</message>

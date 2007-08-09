@@ -16,9 +16,15 @@
 <input type="hidden" name="articleId" value="{$articleId}" />
 {include file="common/formErrors.tpl"}
 
-<p>{translate key="author.submit.uploadInstructions" supportName=$journalSettings.supportName supportEmail=$journalSettings.supportEmail supportPhone=$journalSettings.supportPhone}<br/>
-<a class="action" href="javascript:openHelp('{get_help_id key="editorial.sectionEditorsRole.review.blindPeerReview" url="true"}')">{translate key="reviewer.article.ensuringBlindReview"}</a>
-</p>
+<p>{translate key="author.submit.uploadInstructions"}</p>
+
+{if $journalSettings.supportPhone}
+	{assign var="howToKeyName" value="author.submit.howToSubmit"}
+{else}
+	{assign var="howToKeyName" value="author.submit.howToSubmitNoPhone"}
+{/if}
+
+<p>{translate key=$howToKeyName supportName=$journalSettings.supportName supportEmail=$journalSettings.supportEmail supportPhone=$journalSettings.supportPhone}</p>
 
 <div class="separator"></div>
 
@@ -59,7 +65,10 @@
 			{fieldLabel name="submissionFile" key="author.submit.uploadSubmissionFile"}
 		{/if}
 	</td>
-	<td width="70%" class="value"><input type="file" class="uploadField" name="submissionFile" id="submissionFile" /> <input name="uploadSubmissionFile" type="submit" class="button" value="{translate key="common.upload"}" /></td>
+	<td width="70%" class="value">
+		<input type="file" class="uploadField" name="submissionFile" id="submissionFile" /> <input name="uploadSubmissionFile" type="submit" class="button" value="{translate key="common.upload"}" />
+		<a class="action" href="javascript:openHelp('{get_help_id key="editorial.sectionEditorsRole.review.blindPeerReview" url="true"}')">{translate key="reviewer.article.ensuringBlindReview"}</a>
+	</td>
 </tr>
 </table>
 

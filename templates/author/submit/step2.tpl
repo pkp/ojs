@@ -11,10 +11,6 @@
 
 {assign var="pageTitle" value="author.submit.step2"}
 {include file="author/submit/submitHeader.tpl"}
-<p>{translate key="author.submit.metadataDescription"}</p>
-<h3>{translate key="author.submit.privacyStatement"}</h3>
-<br />
-{$journalSettings.privacyStatement|nl2br}
 
 <div class="separator"></div>
 
@@ -38,7 +34,6 @@ function moveAuthor(dir, authorIndex) {
 {/literal}
 
 <h3>{translate key="article.authors"}</h3>
-<p>{translate key="author.submit.authorsDescription"}</p>
 <input type="hidden" name="deletedAuthors" value="{$deletedAuthors|escape}" />
 <input type="hidden" name="moveAuthor" value="0" />
 <input type="hidden" name="moveAuthorDir" value="" />
@@ -84,8 +79,7 @@ function moveAuthor(dir, authorIndex) {
 <tr valign="top">
 	<td width="20%" class="label">{fieldLabel name="authors-$authorIndex-url" key="user.url"}</td>
 	<td width="80%" class="value">
-		<input type="text" class="textField" name="authors[{$authorIndex}][url]" id="authors-{$authorIndex}-url" value="{$author.url|escape}" size="30" maxlength="90" /><br/>
-		<span class="instruct">{translate key="user.url.description"}</span>
+		<input type="text" class="textField" name="authors[{$authorIndex}][url]" id="authors-{$authorIndex}-url" value="{$author.url|escape}" size="30" maxlength="90" />
 	</td>
 </tr>
 <tr valign="top">
@@ -95,7 +89,7 @@ function moveAuthor(dir, authorIndex) {
 {if $smarty.foreach.authors.total > 1}
 <tr valign="top">
 	<td colspan="2">
-		{translate key="author.submit.reorderAuthorName"} <a href="javascript:moveAuthor('u', '{$authorIndex}')" class="action">&uarr;</a> <a href="javascript:moveAuthor('d', '{$authorIndex}')" class="action">&darr;</a><br/>
+		<a href="javascript:moveAuthor('u', '{$authorIndex}')" class="action">&uarr;</a> <a href="javascript:moveAuthor('d', '{$authorIndex}')" class="action">&darr;</a>
 		{translate key="author.submit.reorderInstructions"}
 	</td>
 </tr>
