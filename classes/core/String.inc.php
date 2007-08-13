@@ -381,6 +381,8 @@ class String {
 		// use PCRE-aware replace function to replace numeric entities
 		$str = String::regexp_replace('~&#x([0-9a-f]+);~ei', 'String::code2utf(hexdec("\\1"))', $str);
 		$str = String::regexp_replace('~&#([0-9]+);~e', 'String::code2utf(\\1)', $str);
+		
+		return $str;
 	 }
 
 	/**
