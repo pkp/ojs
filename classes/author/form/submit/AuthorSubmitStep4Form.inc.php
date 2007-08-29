@@ -17,7 +17,6 @@
 import("author.form.submit.AuthorSubmitForm");
 
 class AuthorSubmitStep4Form extends AuthorSubmitForm {
-	
 	/**
 	 * Constructor.
 	 */
@@ -54,7 +53,6 @@ class AuthorSubmitStep4Form extends AuthorSubmitForm {
 		
 		return $this->articleId;
 	}
-	
 }
 
 ?>

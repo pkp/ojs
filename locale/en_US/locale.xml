@@ -138,6 +138,7 @@
 	<message key="common.completed">Completed</message>
 	<message key="common.mailingAddress">Mailing Address</message>
 	<message key="common.country">Country</message>
+	<message key="common.discipline">Discipline</message>
 	<message key="common.close">Close</message>
 	<message key="common.closeWindow">Close Window</message>
 	<message key="common.initiate">Initiate</message>
@@ -428,12 +429,16 @@
 	<message key="user.password">Password</message>
 	<message key="user.sendPassword">Confirmation</message>
 	<message key="user.sendPassword.description">Send me a confirmation email including my username and password</message>
+	<message key="user.salutation">Salutation</message>
 	<message key="user.name">Name</message>
 	<message key="user.firstName">First name</message>
 	<message key="user.middleName">Middle name</message>
+	<message key="user.lastName">Last name</message>
 	<message key="user.initials">Initials</message>
 	<message key="user.initialsExample">Joan Alice Smith = JAS</message>
-	<message key="user.lastName">Last name</message>
+	<message key="user.gender">Gender</message>
+	<message key="user.masculine">M</message>
+	<message key="user.feminine">F</message>
 	<message key="user.title">Title</message>
 	<message key="user.signature">Signature</message>
 	<message key="user.affiliation">Affiliation</message>
@@ -638,8 +643,6 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="admin.languages.installLanguages">Install Languages</message>
 	<message key="admin.languages.primaryLocaleInstructions">This will be the default language for the site and any hosted journals.</message>
 	<message key="admin.languages.supportedLocalesInstructions">Select all locales to support on the site. The selected locales will be available for use by all journals hosted on the site, and also appear in a language select menu to appear on each site page (which can be overridden on journal-specific pages). If multiple locales are not selected, the language toggle menu will not appear and extended language settings will not be available to journals.</message>
-	<message key="admin.languages.languageOptions">Language options</message>
-	<message key="admin.languages.profileLocales">In registering people (editors, reviewers, copyeditors, etc.), working languages should be included in their User Profiles for the benefit of journal editors.</message>
 	<message key="admin.languages.installedLocales">Installed Locales</message>
 	<message key="admin.languages.reload">Reload Locale</message>
 	<message key="admin.languages.confirmReload">Are you sure you want to reload this locale? This will erase any existing locale-specific data such as customized email templates.</message>
@@ -784,7 +787,7 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="manager.statistics.statistics.note">Note: Percentages for peer reviewed submissions may not add up to 100%, as items resubmitted are either accepted, declined, or still in process.</message>
 
 	<message key="manager.statistics.reports">Report Generator</message>
-	<message key="manager.statistics.reports.description">OJS generates reports that track the details associated with processing submissions to the journal from the perspective of submissions, editors, reviewers, and sections, over a given period of time. Reports are generated in CSV format which require a spreadsheet application to view.</message>
+	<message key="manager.statistics.reports.description">OJS generates reports that track the details associated with processing submissions to the journal from the perspective of submissions, editors, reviewers, and sections, over a given period of time. Reports are generated in CSV format which requires a spreadsheet application to view.</message>
 	<message key="manager.statistics.reports.dateFrom">From</message>
 	<message key="manager.statistics.reports.dateTo">Until</message>
 	<message key="manager.statistics.reports.reportType">Type of report</message>
@@ -1156,14 +1159,6 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.setup.homeHeaderImageInvalid">Invalid homepage header logo image format. Accepted formats are .gif, .jpg, or .png.</message>
 	<message key="manager.setup.pageHeaderTitleImageInvalid">Invalid page header title image format. Accepted formats are .gif, .jpg, or .png.</message>
 	<message key="manager.setup.pageHeaderLogoImageInvalid">Invalid page header logo image format. Accepted formats are .gif, .jpg, or .png.</message>
-	<message key="manager.setup.homeHeaderTitleImageAlt1Invalid">Invalid alternate homepage header title image format. Accepted formats are .gif, .jpg, or .png.</message>
-	<message key="manager.setup.homeHeaderLogoImageAlt1Invalid">Invalid alternate homepage header logo image format. Accepted formats are .gif, .jpg, or .png.</message>
-	<message key="manager.setup.pageHeaderTitleImageAlt1Invalid">Invalid alternate page header title image format. Accepted formats are .gif, .jpg, or .png.</message>
-	<message key="manager.setup.pageHeaderLogoImageAlt1Invalid">Invalid alternate page header logo image format. Accepted formats are .gif, .jpg, or .png.</message>
-	<message key="manager.setup.homeHeaderTitleImageAlt2Invalid">Invalid second alternate homepage header title image format. Accepted formats are .gif, .jpg, or .png.</message>
-	<message key="manager.setup.homeHeaderLogoImageAlt2Invalid">Invalid second alternate homepage header logo image format. Accepted formats are .gif, .jpg, or .png.</message>
-	<message key="manager.setup.pageHeaderTitleImageAlt2Invalid">Invalid second alternate page header title image format. Accepted formats are .gif, .jpg, or .png.</message>
-	<message key="manager.setup.pageHeaderLogoImageAlt2Invalid">Invalid second alternate page header logo image format. Accepted formats are .gif, .jpg, or .png.</message>
 	<message key="manager.setup.homepageImageInvalid">Invalid homepage image format. Accepted formats are .gif, .jpg, or .png.</message>
 	<message key="manager.setup.journalStyleSheetInvalid">Invalid journal stylesheet format. Accepted format is .css.</message>
 	<message key="manager.setup.information">Information</message>
@@ -1173,15 +1168,12 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.setup.information.forLibrarians">For Librarians</message>
 
 	<!-- Languages -->
-	<message key="manager.languages.languageInstructions"><![CDATA[OJS can be made available to users in any of several supported languages. As well, OJS can operate as a partially multilingual system, providing users with an ability to toggle between languages on each page, and allowing certain data to be entered in up to two additional languages.<br /><br/>If a language supported by OJS is not listed below, ask your site administrator to install the language from the site administration interface. For instructions on adding support for new languages, please consult the OJS documentation.]]></message>
+	<message key="manager.languages.languageInstructions"><![CDATA[OJS can be made available to users in any of several supported languages. As well, OJS can operate as a multilingual system, providing users with an ability to toggle between languages on each page, and allowing certain data to be entered in several additional languages.<br /><br/>If a language supported by OJS is not listed below, ask your site administrator to install the language from the site administration interface. For instructions on adding support for new languages, please consult the OJS documentation.]]></message>
 	<message key="manager.languages.primaryLocaleInstructions">This will be the default language for the journal site.</message>
 	<message key="manager.languages.supportedLocalesInstructions">Select all locales to support on the site via a language select menu to appear on each page. The menu will only appear if more than one locale is selected.</message>
 	<message key="manager.languages.alternateLocale1">Alternate Locale #1</message>
 	<message key="manager.languages.alternateLocale2">Alternate Locale #2</message>
-	<message key="manager.languages.alternateLocaleInstructions">This system optionally allows certain critical information to be entered in up to two additional languages. To use this feature, select one or two alternate locales and choose from the options listed below.</message>
-	<message key="manager.languages.alternativeLanguageOptions">Language options</message>
-	<message key="manager.languages.journalTitleAltLanguages">Title image, page header, etc. will be uploaded in each of the journal's languages.</message>
-	<message key="manager.languages.articleAltLanguages">Authors should be asked to provide titles and abstracts in the other language(s), with the option of having this done by journal staff.</message>
+	<message key="manager.languages.alternateLocaleInstructions">This system optionally allows certain critical information to be entered in several additional languages. To use this feature, select alternate locales and choose from the options listed below.</message>
 	<message key="manager.languages.noneAvailable">Sorry, no additional languages are available. Contact your site administrator if you wish to use additional languages with this journal.</message>
 	
 	
@@ -1206,7 +1198,7 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.sections.reviewed">Peer Reviewed</message>
 	<message key="manager.sections.open">Open Submissions</message>
 	<message key="manager.sections.policy">Section Policy</message>
-	<message key="manager.sections.identifyType">For metadata purposes, identify every item in this section as a</message>
+	<message key="manager.sections.identifyType">For metadata purposes, identify every item in this section as a(n)</message>
 	<message key="manager.sections.identifyTypeExamples">(For example, "Peer-reviewed Article", "Non-refereed Article", "Invited Article", etc.)</message>
 	<message key="manager.sections.abstractsDisabled">Do not require abstracts</message>
 
@@ -1917,6 +1909,8 @@ To upload a manuscript to this journal, complete the following steps.
 	<message key="submission.layout.supplementaryFiles">Supplementary File Review</message>
 	<message key="submission.layout.layoutComments">Layout Comments</message>
 	<message key="submission.layout.galleyLabelRequired">A galley label is required.</message>
+	<message key="submission.layout.galleyLocaleRequired">A galley locale is required.</message>
+	<message key="submission.layout.galleyLanguageRequired">A galley language is required.</message>
 	<message key="submission.layout.confirmDeleteGalley">Are you sure you want to permanently delete this galley?</message>
 	<message key="submission.layout.newSupplementaryFile">Upload New Supplementary File</message>
 	<message key="submission.layout.confirmDeleteSupplementaryFile">Are you sure you want to permanently delete this supplementary file?</message>

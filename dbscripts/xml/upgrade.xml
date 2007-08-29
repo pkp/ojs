@@ -13,57 +13,82 @@
   -->
 
 <install version="2.1.1.0">
-	
 	<upgrade minversion="2.0.0.0" maxversion="2.0.1.0">
 		<!-- 2.0.x to 2.0.2 -->
-		<data file="upgrade/2.0.2_preupdate.xml"/>
+		<data file="upgrade/2.0.2_preupdate.xml" />
 	</upgrade>
 
 	<!-- #2424: Make sure currencies are maintained as table is dropped -->
 	<!-- #2291: Migrate issue label column values and settings -->
 	<upgrade minversion="2.0.0.0" maxversion="2.1.1.0">
 		<!-- 2.0.x to 2.2.0 -->
-		<data file="upgrade/2.2.0_preupdate.xml"/>
-		<code function="correctCurrencies"/>
-		<code function="migrateIssueLabelAndSettings"/>
+		<data file="upgrade/2.2.0_preupdate.xml" />
+		<code function="correctCurrencies" />
+		<code function="migrateIssueLabelAndSettings" />
 	</upgrade>
 
+	<!-- #2961: Stage 1 of 2.2 schema upgrade: Do not drop columns yet -->
+	<upgrade minversion="2.0.0.0" maxversion="2.1.1.0">
+		<schema file="ojs_schema_stage1.xml" />
+	</upgrade>
 
-	<!-- Common upgrade files -->
-	<schema file="ojs_schema.xml"/>
-	
-	
+	<!-- Various tasks for pre-2.2 versions that do not require DAOs -->
 	<upgrade minversion="2.0.0.0" maxversion="2.0.0.0">
 		<!-- 2.0.0 to 2.0.1 -->
-		<data file="upgrade/2.0.1_update.xml"/>
-		<note file="release-notes/README-2.0.1"/>
+		<data file="upgrade/2.0.1_update.xml" />
+		<note file="release-notes/README-2.0.1" />
 	</upgrade>
-	
+
 	<upgrade minversion="2.0.0.0" maxversion="2.0.1.0">
 		<!-- 2.0.1 to 2.0.2 -->
-		<data file="upgrade/2.0.2_update.xml"/>
-		<code function="rebuildSearchIndex"/>
-		<note file="release-notes/README-2.0.2"/>
+		<data file="upgrade/2.0.2_update.xml" />
+		<note file="release-notes/README-2.0.2" />
 	</upgrade>
 
 	<upgrade minversion="2.0.0.0" maxversion="2.0.2.1">
 		<!-- 2.0.2.x (or below) to 2.1.0 -->
-		<data file="upgrade/2.1.0_update.xml"/>
-		<note file="release-notes/README-2.1.0"/>
+		<data file="upgrade/2.1.0_update.xml" />
+		<note file="release-notes/README-2.1.0" />
 	</upgrade>
 
 	<upgrade minversion="2.0.0.0" maxversion="2.1.0.1">
 		<!-- 2.1.0.x (or below) to 2.1.1 -->
-		<data file="upgrade/2.1.1_update.xml"/>
-		<code function="togglePublicDisplaySubscriptionTypes"/>
-		<code function="designateReviewVersions"/>
-		<code function="migrateRtSettings"/>
-		<note file="release-notes/README-2.1.1"/>
+		<data file="upgrade/2.1.1_update.xml" />
+		<note file="release-notes/README-2.1.1" />
 	</upgrade>
 
+	<!-- #2961: Localization overhaul -->
 	<upgrade minversion="2.0.0.0" maxversion="2.1.1.0">
-		<data file="upgrade/2.2.0_update.xml"/>
-		<code function="installBlockPlugins"/>
-		<note file="release-notes/README-2.2.0"/>
+		<code function="setJournalPrimaryLocales" />
+		<data file="upgrade/2.2.0_localize.xml" />
+	</upgrade>
+
+	<!-- Common upgrade tasks -->
+	<schema file="ojs_schema.xml" />
+
+	<!--
+	  - The following tasks from older versions use DAO-level queries
+	  - and need the DAOs to function properly in order to work.
+	  -->
+	<upgrade minversion="2.0.0.0" maxversion="2.0.1.0">
+		<code function="rebuildSearchIndex" />
+	</upgrade>
+
+	<upgrade minversion="2.0.0.0" maxversion="2.1.0.1">
+		<!-- 2.1.0-1 (or below) to 2.1.1 -->
+		<code function="designateReviewVersions" />
+		<code function="migrateRtSettings" />
+	</upgrade>
+
+	<!-- Complete the 2.2 upgrade -->
+	<upgrade minversion="2.0.0.0" maxversion="2.1.1.0">
+		<!-- 2.1.1 (or below) to 2.2 -->
+		<data file="upgrade/2.2.0_update.xml" />
+		<code function="localizeJournalSettings" />
+		<code function="migratePublisher" />
+		<code function="installBlockPlugins" />
+		<code function="setGalleyLocales" />
+		<code function="clearDataCache" />
+		<note file="release-notes/README-2.2.0" />
 	</upgrade>
 </install>

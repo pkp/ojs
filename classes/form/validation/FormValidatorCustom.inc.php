@@ -36,7 +36,7 @@ class FormValidatorCustom extends FormValidator {
 	 * @param $complementReturn boolean optional, complement the value returned by $userFunction
 	 */
 	function FormValidatorCustom(&$form, $field, $type, $message, $userFunction, $additionalArguments = array(), $complementReturn = false) {
-		parent::FormValidator($form, $field, $type, $message, $userFunction);
+		parent::FormValidator($form, $field, $type, $message);
 		$this->userFunction = $userFunction;
 		$this->additionalArguments = $additionalArguments;
 		$this->complementReturn = $complementReturn;

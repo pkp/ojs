@@ -17,13 +17,6 @@
 
 class UserSettingsDAO extends DAO {
 	/**
-	 * Constructor.
-	 */
-	function UserSettingsDAO() {
-		parent::DAO();
-	}
-
-	/**
 	 * Retrieve a user setting value.
 	 * @param $userId int
 	 * @param $name
@@ -44,24 +37,7 @@ class UserSettingsDAO extends DAO {
 		
 		if ($result->RecordCount() != 0) {
 			$row = &$result->getRowAssoc(false);
-			switch ($row['setting_type']) {
-				case 'bool':
-					$returner = (bool) $row['setting_value'];
-					break;
-				case 'int':
-					$returner = (int) $row['setting_value'];
-					break;
-				case 'float':
-					$returner = (float) $row['setting_value'];
-					break;
-				case 'object':
-					$returner = unserialize($row['setting_value']);
-					break;
-				case 'string':
-				default:
-					$returner = $row['setting_value'];
-					break;
-			}
+			$returner = $this->convertFromDB($row['setting_value'], $row['setting_type']);
 		} else {
 			$returner = null;
 		}
@@ -79,41 +55,9 @@ class UserSettingsDAO extends DAO {
 	 * @return DAOResultFactory matching Users
 	 */
 	function &getUsersBySetting($name, $value, $type = null, $journalId = null) {
-
-		if ($type == null) {
-			switch (gettype($value)) {
-				case 'boolean':
-				case 'bool':
-					$type = 'bool';
-					break;
-				case 'integer':
-				case 'int':
-					$type = 'int';
-					break;
-				case 'double':
-				case 'float':
-					$type = 'float';
-					break;
-				case 'array':
-				case 'object':
-					$type = 'object';
-					break;
-				case 'string':
-				default:
-					$type = 'string';
-					break;
-			}
-		}
-		
-		if ($type == 'object') {
-			$value = serialize($value);
-			
-		} else if ($type == 'bool') {
-			$value = isset($value) && $value ? 1 : 0;
-		}
-
 		$userDao = &DAORegistry::getDAO('UserDAO');
 
+		$value = $this->convertToDB($value, $type);
 		if ($journalId == null) {
 			$result = &$this->retrieve(
 				'SELECT u.* FROM users u, user_settings s WHERE u.user_id = s.user_id AND s.setting_name = ? AND s.setting_value = ? AND s.journal_id IS NULL',
@@ -158,24 +102,7 @@ class UserSettingsDAO extends DAO {
 		} else {
 			while (!$result->EOF) {
 				$row = &$result->getRowAssoc(false);
-				switch ($row['setting_type']) {
-					case 'bool':
-						$value = (bool) $row['setting_value'];
-						break;
-					case 'int':
-						$value = (int) $row['setting_value'];
-						break;
-					case 'float':
-						$value = (float) $row['setting_value'];
-						break;
-					case 'object':
-						$value = unserialize($row['setting_value']);
-						break;
-					case 'string':
-					default:
-						$value = $row['setting_value'];
-						break;
-				}
+				$value = $this->convertFromDB($row['setting_value'], $row['setting_type']);
 				$userSettings[$row['setting_name']] = $value;
 				$result->MoveNext();
 			}
@@ -195,39 +122,6 @@ class UserSettingsDAO extends DAO {
 	 * @param $journalId int
 	 */
 	function updateSetting($userId, $name, $value, $type = null, $journalId = null) {
-		
-		if ($type == null) {
-			switch (gettype($value)) {
-				case 'boolean':
-				case 'bool':
-					$type = 'bool';
-					break;
-				case 'integer':
-				case 'int':
-					$type = 'int';
-					break;
-				case 'double':
-				case 'float':
-					$type = 'float';
-					break;
-				case 'array':
-				case 'object':
-					$type = 'object';
-					break;
-				case 'string':
-				default:
-					$type = 'string';
-					break;
-			}
-		}
-		
-		if ($type == 'object') {
-			$value = serialize($value);
-			
-		} else if ($type == 'bool') {
-			$value = isset($value) && $value ? 1 : 0;
-		}
-
 		if ($journalId == null) {		
 			$result = $this->retrieve(
 				'SELECT COUNT(*) FROM user_settings WHERE user_id = ? AND setting_name = ? AND journal_id IS NULL', array($userId, $name)
@@ -238,6 +132,7 @@ class UserSettingsDAO extends DAO {
 			);
 		}
 		
+		$value = $this->convertToDB($value, $type);
 		if ($result->fields[0] == 0) {
 			$returner = $this->update(
 				'INSERT INTO user_settings
@@ -301,7 +196,6 @@ class UserSettingsDAO extends DAO {
 				'DELETE FROM user_settings WHERE user_id = ?', $userId
 		);
 	}
-
 }
 
 ?>

@@ -47,7 +47,7 @@ class EruditExportDom {
 		$journalNode = &XMLCustomWriter::createElement($doc, 'journal');
 		XMLCustomWriter::appendChild($adminNode, $journalNode);
 		XMLCustomWriter::setAttribute($journalNode, 'id', 'ojs-' . $journal->getPath());
-		XMLCustomWriter::createChildWithText($doc, $journalNode, 'jtitle', $journal->getTitle());
+		XMLCustomWriter::createChildWithText($doc, $journalNode, 'jtitle', $journal->getJournalTitle());
 		XMLCustomWriter::createChildWithText($doc, $journalNode, 'jshorttitle', $journal->getSetting('journalInitials'), false);
 
 		if (!($printIssn = $journal->getSetting('printIssn'))) {
@@ -77,14 +77,12 @@ class EruditExportDom {
 
 		/* --- Publisher & DTD --- */
 
-		$publisher = &$journal->getSetting('publisher');
+		$publisherInstitution = &$journal->getSetting('publisherInstitution');
 		$publisherNode = &XMLCustomWriter::createElement($doc, 'publisher');
 		XMLCustomWriter::setAttribute($publisherNode, 'id', 'ojs-' . $journal->getJournalId() . '-' . $issue->getIssueId() . '-' . $article->getArticleId());
 		XMLCustomWriter::appendChild($adminNode, $publisherNode);
 		$publisherInstitution = $unavailableString;
-		if (isset($publisher) && isset($publisher['institution']) && $publisher['institution'] != '') {
-			$publisherInstitution = $publisher['institution'];
-		}
+		if (empty($publisherInstitution)) $publisherInstitution = $unavailableString;
 		XMLCustomWriter::createChildWithText($doc, $publisherNode, 'orgname', $publisherInstitution);
 
 		$digprodNode = &XMLCustomWriter::createElement($doc, 'digprod');
@@ -104,7 +102,7 @@ class EruditExportDom {
 		XMLCustomWriter::setAttribute($dtdNode, 'version', '3.0.0');
 
 		/* --- copyright --- */
-		$copyright = $journal->getSetting('copyrightNotice');
+		$copyright = $journal->getLocalizedSetting('copyrightNotice');
 		XMLCustomWriter::createChildWithText($doc, $adminNode, 'copyright', empty($copyright)?$unavailableString:$copyright);
 
 		/* --- frontmatter --- */
@@ -155,7 +153,7 @@ class EruditExportDom {
 			unset($abstractNode);
 		}
 
-		if ($keywords = $article->getSubject()) {
+		if ($keywords = $article->getArticleSubject()) {
 			$keywordGroupNode = &XMLCustomWriter::createElement($doc, 'keywordgr');
 			XMLCustomWriter::setAttribute ($keywordGroupNode, 'lang', ($language = $article->getLanguage())?$language:'en');
 			foreach (explode(';', $keywords) as $keyword) {

@@ -21,8 +21,11 @@ class JournalReportIterator extends DBRowIterator {
 	/** @var $locale Name of report's locale */
 	var $locale;
 
-	/** @var $altLocaleNum int 1 iff current locale is journal's alt locale 1, 2 iff current locale is journal's alt locale 2 */
-	var $altLocaleNum;
+	/** @var $sectionDao object */
+	var $sectionDao;
+
+	/** @var $articleDao object */
+	var $articleDao;
 
 	/** @var $journalStatisticsDao object */
 	var $journalStatisticsDao;
@@ -54,6 +57,9 @@ class JournalReportIterator extends DBRowIterator {
 	/** @var $reportType int The report type (REPORT_TYPE_...) */
 	var $type;
 
+	/** @var $sectionCache array */
+	var $sectionCache;
+
 	/**
 	 * Constructor.
 	 * Initialize the JournalReportIterator
@@ -64,7 +70,9 @@ class JournalReportIterator extends DBRowIterator {
 	 * @param $reportType int REPORT_TYPE_...
 	 */
 	function JournalReportIterator($journalId, &$records, $dateStart, $dateEnd, $reportType) {
-		$this->authorDao =& DAORegistry::getDao('AuthorDAO');
+		$this->sectionDao =& DAORegistry::getDAO('SectionDAO');
+		$this->articleDao =& DAORegistry::getDAO('ArticleDAO');
+		$this->authorDao =& DAORegistry::getDAO('AuthorDAO');
 		$this->authorSubmissionDao =& DAORegistry::getDAO('AuthorSubmissionDAO');
 		$this->userDao =& DAORegistry::getDAO('UserDAO');
 		$this->journalStatisticsDao =& DAORegistry::getDAO('JournalStatisticsDAO');
@@ -74,7 +82,6 @@ class JournalReportIterator extends DBRowIterator {
 
 		parent::DBRowIterator($records);
 
-		$this->altLocaleNum = Locale::isAlternateJournalLocale($journalId);
 		$this->type = $reportType;
 
 		$this->maxAuthorCount = $this->journalStatisticsDao->getMaxAuthorCount($journalId, $dateStart, $dateEnd);
@@ -82,6 +89,18 @@ class JournalReportIterator extends DBRowIterator {
 		if ($this->type !== REPORT_TYPE_EDITOR) {
 			$this->maxEditorCount = $this->journalStatisticsDao->getMaxEditorCount($journalId, $dateStart, $dateEnd);
 		}
+	}
+
+	/**
+	 * Get a section (cached) by ID.
+	 * @param $sectionId int
+	 * @return object
+	 */
+	function &getSection($sectionId) {
+		if (!isset($this->sectionCache[$sectionId])) {
+			$this->sectionCache[$sectionId] =& $this->sectionDao->getSection($sectionId);
+		}
+		return $this->sectionCache[$sectionId];
 	}
 
 	/**
@@ -97,14 +116,12 @@ class JournalReportIterator extends DBRowIterator {
 		);
 
 		$ret['dateSubmitted'] = $this->journalStatisticsDao->dateFromDB($row['date_submitted']);
-		$ret['title'] = $row['article_title'];
 
-		$ret['section'] = null;
-		switch ($this->altLocaleNum) {
-			case 1: $ret['section'] = $row['section_title_alt1']; break;
-			case 2: $ret['section'] = $row['section_title_alt2']; break;
-		}
-		if (empty($ret['section'])) $ret['section'] = $row['section_title'];
+		$article =& $this->articleDao->getArticle($row['article_id']);
+		$ret['title'] = $article->getArticleTitle();
+
+		$section =& $this->getSection($row['section_id']);
+		$ret['section'] = $section->getSectionTitle();
 
 		// Author Names & Affiliations
 		$maxAuthors = $this->getMaxAuthors();

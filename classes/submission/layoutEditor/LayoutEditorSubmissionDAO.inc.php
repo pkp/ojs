@@ -18,7 +18,6 @@
 import('submission.layoutEditor.LayoutEditorSubmission');
 
 class LayoutEditorSubmissionDAO extends DAO {
-
 	/** Helper DAOs */
 	var $articleDao;
 	var $layoutDao;
@@ -49,25 +48,36 @@ class LayoutEditorSubmissionDAO extends DAO {
 	 * @return LayoutEditorSubmission
 	 */
 	function &getSubmission($articleId, $journalId =  null) {
-		if (isset($journalId)) {
-			$result = &$this->retrieve(
-				'SELECT a.*, s.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, s.abbrev AS section_abbrev, s.abbrev_alt1 AS section_abbrev_alt1, s.abbrev_alt2 AS section_abbrev_alt2
-				FROM articles a
+		$primaryLocale = Locale::getPrimaryLocale();
+		$locale = Locale::getLocale();
+		$params = array(
+			'title',
+			$primaryLocale,
+			'title',
+			$locale,
+			'abbrev',
+			$primaryLocale,
+			'abbrev',
+			$locale,
+			$articleId
+		);
+		if ($journalId) $params[] = $journalId;
+		$result = &$this->retrieve(
+			'SELECT
+				a.*,
+				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
+				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
+			FROM articles a
 				LEFT JOIN sections s ON s.section_id = a.section_id
-				WHERE article_id = ? AND a.journal_id = ?',
-				array($articleId, $journalId)
-			);
+				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
+				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
+				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
+				LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?)
+			WHERE a.article_id = ?' .
+			($journalId?' AND a.journal_id = ?':''),
+			$params
+		);
 			
-		} else {
-			$result = &$this->retrieve(
-				'SELECT a.*, s.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, s.abbrev AS section_abbrev, s.abbrev_alt1 AS section_abbrev_alt1, s.abbrev_alt2 AS section_abbrev_alt2
-				FROM articles a
-				LEFT JOIN sections s ON s.section_id = a.section_id
-				WHERE article_id = ?',
-				$articleId
-			);
-		}
-
 		$returner = null;
 		if ($result->RecordCount() != 0) {
 			$returner = &$this->_returnSubmissionFromRow($result->GetRowAssoc(false));
@@ -131,20 +141,33 @@ class LayoutEditorSubmissionDAO extends DAO {
 	 * @return array LayoutEditorSubmission
 	 */
 	function &getSubmissions($editorId, $journalId = null, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $active = true, $rangeInfo = null) {
-		if (isset($journalId)) $params = array($editorId, $journalId);
-		else $params = array($editorId);
+		$primaryLocale = Locale::getPrimaryLocale();
+		$locale = Locale::getLocale();
+		$params = array(
+			'title',
+			$primaryLocale,
+			'title',
+			$locale,
+			'abbrev',
+			$primaryLocale,
+			'abbrev',
+			$locale,
+			'title',
+			$editorId
+		);
+		if (isset($journalId)) $params[] = $journalId;
 
 		$searchSql = '';
 
 		if (!empty($search)) switch ($searchField) {
 			case SUBMISSION_FIELD_TITLE:
 				if ($searchMatch === 'is') {
-					$searchSql = ' AND (LOWER(a.title) = LOWER(?) OR LOWER(a.title_alt1) = LOWER(?) OR LOWER(a.title_alt2) = LOWER(?))';
+					$searchSql = ' AND LOWER(atl.setting_value) = LOWER(?)';
 				} else {
-					$searchSql = ' AND (LOWER(a.title) LIKE LOWER(?) OR LOWER(a.title_alt1) LIKE LOWER(?) OR LOWER(a.title_alt2) LIKE LOWER(?))';
+					$searchSql = ' AND LOWER(atl.setting_value) LIKE LOWER(?)';
 					$search = '%' . $search . '%';
 				}
-				$params[] = $params[] = $params[] = $search;
+				$params[] = $search;
 				break;
 			case SUBMISSION_FIELD_AUTHOR:
 				$first_last = $this->_dataSource->Concat('aa.first_name', '\' \'', 'aa.last_name');
@@ -213,21 +236,22 @@ class LayoutEditorSubmissionDAO extends DAO {
 		$sql = 'SELECT DISTINCT
 				a.*,
 				l.*,
-				s.title AS section_title,
-				s.title_alt1 AS section_title_alt1,
-				s.title_alt2 AS section_title_alt2,
-				s.abbrev AS section_abbrev,
-				s.abbrev_alt1 AS section_abbrev_alt1,
-				s.abbrev_alt2 AS section_abbrev_alt2
+				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
+				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
 			FROM
 				articles a
-			INNER JOIN article_authors aa ON (aa.article_id = a.article_id)
-			INNER JOIN layouted_assignments l ON (l.article_id = a.article_id)
-			INNER JOIN proof_assignments p ON (p.article_id = a.article_id)
-			LEFT JOIN sections s ON s.section_id = a.section_id
-			LEFT JOIN edit_assignments e ON (e.article_id = a.article_id)
-			LEFT JOIN users ed ON (e.editor_id = ed.user_id)
-			LEFT JOIN copyed_assignments c ON (a.article_id = c.article_id)
+				INNER JOIN article_authors aa ON (aa.article_id = a.article_id)
+				INNER JOIN layouted_assignments l ON (l.article_id = a.article_id)
+				INNER JOIN proof_assignments p ON (p.article_id = a.article_id)
+				LEFT JOIN sections s ON s.section_id = a.section_id
+				LEFT JOIN edit_assignments e ON (e.article_id = a.article_id)
+				LEFT JOIN users ed ON (e.editor_id = ed.user_id)
+				LEFT JOIN copyed_assignments c ON (a.article_id = c.article_id)
+				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
+				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
+				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
+				LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?)
+				LEFT JOIN article_settings atl ON (a.article_id = atl.article_id AND atl.setting_name = ?)
 			WHERE
 				l.editor_id = ? AND
 				' . (isset($journalId)?'a.journal_id = ? AND':'') . '
@@ -276,7 +300,6 @@ class LayoutEditorSubmissionDAO extends DAO {
 
 		return $submissionsCount;
 	}
-
 }
 
 ?>

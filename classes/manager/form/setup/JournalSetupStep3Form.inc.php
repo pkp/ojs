@@ -17,7 +17,9 @@
 import("manager.form.setup.JournalSetupForm");
 
 class JournalSetupStep3Form extends JournalSetupForm {
-	
+	/**
+	 * Constructor.
+	 */
 	function JournalSetupStep3Form() {
 		parent::JournalSetupForm(
 			3,
@@ -48,6 +50,14 @@ class JournalSetupStep3Form extends JournalSetupForm {
 		$this->addCheck(new FormValidatorEmail($this, 'copySubmissionAckAddress', 'optional', 'user.profile.form.emailRequired'));
 	}
 	
+	/**
+	 * Get the list of field names for which localized settings are used.
+	 * @return array
+	 */
+	function getLocaleFieldNames() {
+		return array('authorGuidelines', 'submissionChecklist', 'copyrightNotice', 'metaDisciplineExamples', 'metaSubjectClassTitle', 'metaSubjectClassUrl', 'metaSubjectExamples', 'metaCoverageGeoExamples', 'metaCoverageChronExamples', 'metaCoverageResearchSampleExamples', 'metaTypeExamples');
+	}
+
 	/**
 	 * Display the form
 	 */

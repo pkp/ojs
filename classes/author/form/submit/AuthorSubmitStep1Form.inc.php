@@ -100,7 +100,7 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 			$this->article->setSectionId($this->getData('sectionId'));
 			$this->article->stampStatusModified();
 			$this->article->setSubmissionProgress($this->step + 1);
-			$this->article->setLanguage($journal->getLocale());
+			$this->article->setLanguage($journal->getPrimaryLocale());
 			$this->article->setCommentsToEditor($this->getData('commentsToEditor'));
 		
 			// Set user to initial author
@@ -113,7 +113,7 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 			$author->setCountry($user->getCountry());
 			$author->setEmail($user->getEmail());
 			$author->setUrl($user->getUrl());
-			$author->setBiography($user->getBiography());
+			$author->setBiography($user->getBiography(null), null);
 			$author->setPrimaryContact(1);
 			$this->article->addAuthor($author);
 			

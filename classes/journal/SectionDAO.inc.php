@@ -18,14 +18,6 @@
 import ('journal.Section');
 
 class SectionDAO extends DAO {
-
-	/**
-	 * Constructor.
-	 */
-	function SectionDAO() {
-		parent::DAO();
-	}
-	
 	/**
 	 * Retrieve a section by ID.
 	 * @param $sectionId int
@@ -54,13 +46,18 @@ class SectionDAO extends DAO {
 	/**
 	 * Retrieve a section by abbreviation.
 	 * @param $sectionAbbrev string
+	 * @param $locale string optional
 	 * @return Section
 	 */
-	function &getSectionByAbbrev($sectionAbbrev, $journalId) {
-		$result = &$this->retrieve(
-			'SELECT * FROM sections WHERE abbrev = ? AND journal_id = ?',
-			array($sectionAbbrev, $journalId)
-		);
+	function &getSectionByAbbrev($sectionAbbrev, $journalId, $locale = null) {
+		$sql = 'SELECT s.* FROM sections s, section_settings l WHERE l.section_id = s.section_id AND l.setting_name = ? AND l.setting_value = ? AND s.journal_id = ?';
+		$params = array('abbrev', $sectionAbbrev, $journalId);
+		if ($locale !== null) {
+			$sql .= ' AND l.locale = ?';
+			$params[] = $locale;
+		}
+
+		$result = &$this->retrieve($sql, $params);
 
 		$returner = null;
 		if ($result->RecordCount() != 0) {
@@ -79,10 +76,14 @@ class SectionDAO extends DAO {
 	 * @return Section
 	 */
 	function &getSectionByTitle($sectionTitle, $journalId) {
-		$result = &$this->retrieve(
-			'SELECT * FROM sections WHERE (title = ? OR title_alt1 = ? OR title_alt2 = ?) AND journal_id = ?',
-			array($sectionTitle, $sectionTitle, $sectionTitle, $journalId)
-		);
+		$sql = 'SELECT s.* FROM sections s, section_settings l WHERE l.section_id = s.section_id AND l.setting_name = ? AND l.setting_value = ? AND s.journal_id = ?';
+		$params = array('title', $sectionAbbrev, $journalId);
+		if ($locale !== null) {
+			$sql .= ' AND l.locale = ?';
+			$params[] = $locale;
+		}
+
+		$result = &$this->retrieve($sql, $params);
 
 		$returner = null;
 		if ($result->RecordCount() != 0) {
@@ -102,10 +103,15 @@ class SectionDAO extends DAO {
 	 * @return Section
 	 */
 	function &getSectionByTitleAndAbbrev($sectionTitle, $sectionAbbrev, $journalId) {
-		$result = &$this->retrieve(
-			'SELECT * FROM sections WHERE (title = ? OR title_alt1 = ? OR title_alt2 = ?) AND (abbrev = ? OR abbrev_alt1 = ? OR abbrev_alt2 = ?) AND journal_id = ?',
-			array($sectionTitle, $sectionTitle, $sectionTitle, $sectionAbbrev, $sectionAbbrev, $sectionAbbrev, $journalId)
-		);
+		$sql = 'SELECT s.* FROM sections s, section_settings l1, section_settings l2 WHERE l1.section_id = s.section_id AND l2.section_id = s.section_id AND l1.setting_name = ? AND l2.setting_name = ? AND l1.setting_value = ? AND l2.setting_value = ? AND s.journal_id = ?';
+		$params = array('title', 'abbrev', $sectionTitle, $sectionAbbrev, $journalId);
+		if ($locale !== null) {
+			$sql .= ' AND l1.locale = ? AND l2.locale = ?';
+			$params[] = $locale;
+			$params[] = $locale;
+		}
+
+		$result = &$this->retrieve($sql, $params);
 
 		$returner = null;
 		if ($result->RecordCount() != 0) {
@@ -127,25 +133,37 @@ class SectionDAO extends DAO {
 		$section = &new Section();
 		$section->setSectionId($row['section_id']);
 		$section->setJournalId($row['journal_id']);
-		$section->setTitle($row['title']);
-		$section->setTitleAlt1($row['title_alt1']);
-		$section->setTitleAlt2($row['title_alt2']);
-		$section->setAbbrev($row['abbrev']);
-		$section->setAbbrevAlt1($row['abbrev_alt1']);
-		$section->setAbbrevAlt2($row['abbrev_alt2']);
 		$section->setSequence($row['seq']);
 		$section->setMetaIndexed($row['meta_indexed']);
 		$section->setMetaReviewed($row['meta_reviewed']);
 		$section->setAbstractsDisabled($row['abstracts_disabled']);
-		$section->setIdentifyType($row['identify_type']);
 		$section->setEditorRestricted($row['editor_restricted']);
 		$section->setHideTitle($row['hide_title']);
 		$section->setHideAbout($row['hide_about']);
-		$section->setPolicy($row['policy']);
-		
+
+		$this->getDataObjectSettings('section_settings', 'section_id', $row['section_id'], $section);
+
 		HookRegistry::call('SectionDAO::_returnSectionFromRow', array(&$section, &$row));
 
 		return $section;
+	}
+
+	/**
+	 * Get the list of fields for which data can be localized.
+	 * @return array
+	 */
+	function getLocaleFieldNames() {
+		return array('title', 'abbrev', 'policy', 'identifyType');
+	}
+
+	/**
+	 * Update the localized fields for this table
+	 * @param $section object
+	 */
+	function updateLocaleFields(&$section) {
+		$this->updateDataObjectSettings('section_settings', $section, array(
+			'section_id' => $section->getSectionId()
+		));
 	}
 
 	/**
@@ -155,23 +173,15 @@ class SectionDAO extends DAO {
 	function insertSection(&$section) {
 		$this->update(
 			'INSERT INTO sections
-				(journal_id, title, title_alt1, title_alt2, abbrev, abbrev_alt1, abbrev_alt2, seq, meta_indexed, meta_reviewed, abstracts_disabled, identify_type, policy, editor_restricted, hide_title, hide_about)
+				(journal_id, seq, meta_indexed, meta_reviewed, abstracts_disabled, editor_restricted, hide_title, hide_about)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
 				$section->getJournalId(),
-				$section->getTitle(),
-				$section->getTitleAlt1(),
-				$section->getTitleAlt2(),
-				$section->getAbbrev(),
-				$section->getAbbrevAlt1(),
-				$section->getAbbrevAlt2(),
 				$section->getSequence() == null ? 0 : $section->getSequence(),
 				$section->getMetaIndexed() ? 1 : 0,
 				$section->getMetaReviewed() ? 1 : 0,
 				$section->getAbstractsDisabled() ? 1 : 0,
-				$section->getIdentifyType(),
-				$section->getPolicy(),
 				$section->getEditorRestricted() ? 1 : 0,
 				$section->getHideTitle() ? 1 : 0,
 				$section->getHideAbout() ? 1 : 0
@@ -179,6 +189,7 @@ class SectionDAO extends DAO {
 		);
 		
 		$section->setSectionId($this->getInsertSectionId());
+		$this->updateLocaleFields($section);
 		return $section->getSectionId();
 	}
 	
@@ -187,44 +198,30 @@ class SectionDAO extends DAO {
 	 * @param $section Section
 	 */
 	function updateSection(&$section) {
-		return $this->update(
+		$returner = $this->update(
 			'UPDATE sections
 				SET
-					title = ?,
-					title_alt1 = ?,
-					title_alt2 = ?,
-					abbrev = ?,
-					abbrev_alt1 = ?,
-					abbrev_alt2 = ?,
 					seq = ?,
 					meta_indexed = ?,
 					meta_reviewed = ?,
 					abstracts_disabled = ?,
-					identify_type = ?,
-					policy = ?,
 					editor_restricted = ?,
 					hide_title = ?,
 					hide_about = ?
 				WHERE section_id = ?',
 			array(
-				$section->getTitle(),
-				$section->getTitleAlt1(),
-				$section->getTitleAlt2(),
-				$section->getAbbrev(),
-				$section->getAbbrevAlt1(),
-				$section->getAbbrevAlt2(),
 				$section->getSequence(),
 				$section->getMetaIndexed(),
 				$section->getMetaReviewed(),
 				$section->getAbstractsDisabled(),
-				$section->getIdentifyType(),
-				$section->getPolicy(),
 				$section->getEditorRestricted(),
 				$section->getHideTitle(),
 				$section->getHideAbout(),
 				$section->getSectionId()
 			)
 		);
+		$this->updateLocaleFields($section);
+		return $returner;
 	}
 	
 	/**
@@ -253,16 +250,9 @@ class SectionDAO extends DAO {
 		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
 		$publishedArticleDao->deletePublishedArticlesBySectionId($sectionId);
 
-		if (isset($journalId)) {
-			return $this->update(
-				'DELETE FROM sections WHERE section_id = ? AND journal_id = ?', array($sectionId, $journalId)
-			);
-		
-		} else {
-			return $this->update(
-				'DELETE FROM sections WHERE section_id = ?', $sectionId
-			);
-		}
+		if (isset($journalId) && !$this->sectionExists($sectionId, $journalId)) return false;
+		$this->update('DELETE FROM section_settings WHERE section_id = ?', array($sectionId));
+		return $this->update('DELETE FROM sections WHERE section_id = ?', $sectionId);
 	}
 	
 	/**
@@ -272,12 +262,11 @@ class SectionDAO extends DAO {
 	 * @param $journalId int
 	 */
 	function deleteSectionsByJournal($journalId) {
-		$sectionEditorsDao = &DAORegistry::getDAO('SectionEditorsDAO');
-		$sectionEditorsDao->deleteEditorsByJournalId($journalId);
-
-		return $this->update(
-			'DELETE FROM sections WHERE journal_id = ?', $journalId
-		);
+		$sections =& $this->getJournalSections($journalId);
+		while (($section =& $sections->next())) {
+			$this->deleteSection($section);
+			unset($section);
+		}
 	}
 
 	/**
@@ -355,26 +344,13 @@ class SectionDAO extends DAO {
 	 */
 	function &getSectionTitles($journalId, $submittableOnly = false) {
 		$sections = array();
-		
-		$result = &$this->retrieve(
-			($submittableOnly?
-			'SELECT section_id, title, title_alt1, title_alt2 FROM sections WHERE journal_id = ? AND editor_restricted = 0 ORDER BY seq':
-			'SELECT section_id, title, title_alt1, title_alt2 FROM sections WHERE journal_id = ? ORDER BY seq'),
-			$journalId
-		);
 
-		$localeNumber = Locale::isAlternateJournalLocale($journalId);
-
-		while (!$result->EOF) {
-			$sectionTitle = $result->fields[$localeNumber + 1];
-			if (!isset($sectionTitle)) $sectionTitle = $result->fields[1];
-			$sections[$result->fields[0]] = $sectionTitle;
-			$result->moveNext();
+		$sectionsIterator =& $this->getJournalSections($journalId);
+		while (($section =& $sectionsIterator->next())) {
+			$sections[$section->getSectionId()] = $section->getSectionTitle();
+			unset($section);
 		}
 
-		$result->Close();
-		unset($result);
-	
 		return $sections;
 	}
 	

@@ -33,7 +33,8 @@ class AboutHandler extends Handler {
 			$templateMgr->assign_by_ref('journalSettings', $journalSettingsDao->getJournalSettings($journal->getJournalId()));
 			
 			$customAboutItems = &$journalSettingsDao->getSetting($journal->getJournalId(), 'customAboutItems');
-			$templateMgr->assign('customAboutItems', $customAboutItems);
+			if (isset($customAboutItems[Locale::getLocale()])) $templateMgr->assign('customAboutItems', $customAboutItems[Locale::getLocale()]);
+			elseif (isset($customAboutItems[Locale::getPrimaryLocale()])) $templateMgr->assign('customAboutItems', $customAboutItems[Locale::getPrimaryLocale()]);
 
 			foreach (AboutHandler::getPublicStatisticsNames() as $name) {
 				if ($journal->getSetting($name)) {
@@ -50,7 +51,7 @@ class AboutHandler extends Handler {
 			$templateMgr->display('about/index.tpl');
 		} else {
 			$site = &Request::getSite();
-			$about = $site->getAbout();
+			$about = $site->getSiteAbout();
 			$templateMgr->assign('about', $about);
 			
 			$journals = &$journalDao->getEnabledJournals(); //Enabled Added
@@ -335,7 +336,7 @@ class AboutHandler extends Handler {
 		$subscriptionPhone = &$journalSettingsDao->getSetting($journalId, 'subscriptionPhone');
 		$subscriptionFax = &$journalSettingsDao->getSetting($journalId, 'subscriptionFax');
 		$subscriptionMailingAddress = &$journalSettingsDao->getSetting($journalId, 'subscriptionMailingAddress');
-		$subscriptionAdditionalInformation = &$journalSettingsDao->getSetting($journalId, 'subscriptionAdditionalInformation');
+		$subscriptionAdditionalInformation = &$journal->getLocalizedSetting('subscriptionAdditionalInformation');
 		$subscriptionTypes = &$subscriptionTypeDao->getSubscriptionTypesByJournalId($journalId);
 
 		$templateMgr = &TemplateManager::getManager();
@@ -362,10 +363,12 @@ class AboutHandler extends Handler {
 		
 		$templateMgr = &TemplateManager::getManager();
 		$journalSettings = &$journalDao->getJournalSettings($journal->getJournalId());
-		if (isset($journalSettings['submissionChecklist']) && count($journalSettings['submissionChecklist']) > 0) {
-			ksort($journalSettings['submissionChecklist']);
-			reset($journalSettings['submissionChecklist']);
+		$submissionChecklist = $journal->getLocalizedSetting('submissionChecklist');
+		if (!empty($submissionChecklist)) {
+			ksort($submissionChecklist);
+			reset($submissionChecklist);
 		}
+		$templateMgr->assign('submissionChecklist', $submissionChecklist);
 		$templateMgr->assign_by_ref('journalSettings', $journalSettings);
 		$templateMgr->assign('helpTopicId','submission.authorGuidelines');
 		$templateMgr->display('about/submissions.tpl');
@@ -382,10 +385,12 @@ class AboutHandler extends Handler {
 		$journal = &Request::getJournal();
 
 		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign_by_ref('publisher', $journal->getSetting('publisher'));
-		$templateMgr->assign_by_ref('contributorNote', $journal->getSetting('contributorNote'));
+		$templateMgr->assign_by_ref('publisherInstitution', $journal->getSetting('publisherInstitution'));
+		$templateMgr->assign_by_ref('publisherUrl', $journal->getSetting('publisherUrl'));
+		$templateMgr->assign_by_ref('publisherNote', $journal->getSetting('publisherNote'));
+		$templateMgr->assign_by_ref('contributorNote', $journal->getLocalizedSetting('contributorNote'));
 		$templateMgr->assign_by_ref('contributors', $journal->getSetting('contributors'));
-		$templateMgr->assign('sponsorNote', $journal->getSetting('sponsorNote'));
+		$templateMgr->assign('sponsorNote', $journal->getLocalizedSetting('sponsorNote'));
 		$templateMgr->assign_by_ref('sponsors', $journal->getSetting('sponsors'));
 		$templateMgr->display('about/journalSponsorship.tpl');
 	}

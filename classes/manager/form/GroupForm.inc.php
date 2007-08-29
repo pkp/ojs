@@ -18,7 +18,6 @@ import('form.Form');
 import('group.Group');
 
 class GroupForm extends Form {
-
 	/** @var groupId int the ID of the group being edited */
 	var $group;
 
@@ -32,13 +31,22 @@ class GroupForm extends Form {
 		parent::Form('manager/groups/groupForm.tpl');
 	
 		// Group title is provided
-		$this->addCheck(new FormValidator($this, 'title', 'required', 'manager.groups.form.groupTitleRequired'));
+		$this->addCheck(new FormValidatorLocale($this, 'title', 'required', 'manager.groups.form.groupTitleRequired'));
 
 		$this->addCheck(new FormValidatorPost($this));
 
 		$this->group =& $group;
 	}
 	
+	/**
+	 * Get the list of localized field names for this object
+	 * @return array
+	 */
+	function getLocaleFieldNames() {
+		$groupDao =& DAORegistry::getDAO('GroupDAO');
+		return $groupDao->getLocaleFieldNames();
+	}
+
 	/**
 	 * Display the form.
 	 */
@@ -59,9 +67,7 @@ class GroupForm extends Form {
 	function initData() {
 		if ($this->group != null) {
 			$this->_data = array(
-				'title' => $this->group->getTitle(),
-				'titleAlt1' => $this->group->getTitleAlt1(),
-				'titleAlt2' => $this->group->getTitleAlt2(),
+				'title' => $this->group->getTitle(null), // Localized
 				'context' => $this->group->getContext()
 			);
 		} else {
@@ -75,7 +81,7 @@ class GroupForm extends Form {
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->readUserVars(array('title', 'titleAlt1', 'titleAlt2', 'context'));
+		$this->readUserVars(array('title', 'context'));
 	}
 	
 	/**
@@ -90,9 +96,7 @@ class GroupForm extends Form {
 		}
 		
 		$this->group->setJournalId($journal->getJournalId());
-		$this->group->setTitle($this->getData('title'));
-		$this->group->setTitleAlt1($this->getData('titleAlt1'));
-		$this->group->setTitleAlt2($this->getData('titleAlt2'));
+		$this->group->setTitle($this->getData('title'), null); // Localized
 		$this->group->setContext($this->getData('context'));
 
 		// Eventually this will be a general Groups feature; for now,

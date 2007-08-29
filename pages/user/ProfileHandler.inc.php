@@ -26,7 +26,11 @@ class ProfileHandler extends UserHandler {
 		import('user.form.ProfileForm');
 		
 		$profileForm = &new ProfileForm();
-		$profileForm->initData();
+		if ($profileForm->isLocaleResubmit()) {
+			$profileForm->readInputData();
+		} else {
+			$profileForm->initData();
+		}
 		$profileForm->display();
 	}
 	

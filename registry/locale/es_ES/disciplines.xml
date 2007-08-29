@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	
+<!--
+  * disciplines.xml
+  *
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localized list of disciplines.
+  *
+  -->
+
+<!DOCTYPE disciplines [
+	<!ELEMENT disciplines (discipline+)>
+	<!ELEMENT discipline EMPTY>
+		<!ATTLIST discipline
+			code CDATA #REQUIRED
+			name CDATA #REQUIRED>
+]>
+	
+<disciplines>
+	<!-- Natural sciences -->
+	<discipline name="Astronomía" code="A1"/>
+	<discipline name="Ciencias de la Conducta" code="A2"/>
+	<discipline name="Biología" code="A3"/>
+	<discipline name="Química" code="A4"/>
+	<discipline name="Física" code="A5"/>
+	<discipline name="Ciencia de la Tierra" code="A6"/>
+	<!-- Mathematics and Computer science -->
+	<discipline name="Matemática" code="B1"/>
+	<discipline name="Ciencias de la Computación" code="B2"/>
+	<!-- Social sciences -->
+	<discipline name="Antropología" code="C1"/>
+	<discipline name="Arqueología" code="C2"/>
+	<discipline name="Arquitectura" code="C3"/>
+	<discipline name="Comunicaciones" code="C4"/>
+	<discipline name="Economía" code="C5"/>
+	<discipline name="Estudios Étnicos" code="C6"/>
+	<discipline name="Etnología" code="C7"/>
+	<discipline name="Geografía" code="C8"/>
+	<discipline name="Ciencia Política" code="C9"/>
+	<discipline name="Psicología" code="C10"/>
+	<discipline name="Sociología" code="C11"/>
+	<discipline name="Pedagogía" code="C12"/>
+	<!-- Humanities and arts -->
+	<discipline name="Arte" code="D1"/>
+	<discipline name="Estudios de la Cultura" code="D2"/>
+	<discipline name="Arte Clásico" code="D3"/>
+	<discipline name="Escritura Creativa" code="D4"/>
+	<discipline name="Danza" code="D5"/>
+	<discipline name="Inglés" code="D6"/>
+	<discipline name="Cine y Crítica de Cine" code="D7"/>
+	<discipline name="Folklore" code="D8"/>	
+	<discipline name="Historia" code="D9"/>
+	<discipline name="Lingüística" code="D10"/>
+	<discipline name="Literatura" code="D11"/>
+	<discipline name="Estudios de Medios" code="D12"/>
+	<discipline name="Música" code="D13"/>
+	<discipline name="Museología" code="D14"/>	
+	<discipline name="Estudios de los Mitos" code="D15"/>
+	<discipline name="Filología" code="D16"/>
+	<discipline name="Filosofía" code="D17"/>
+	<discipline name="Estudios de la Religión" code="D18"/>
+	<discipline name="Semiótica" code="D19"/>
+	<discipline name="Teatro" code="D20"/>
+	<discipline name="Estudios de la Mujer y Estudios de Género" code="D21"/>
+	<!-- Applied sciences -->
+	<discipline name="Agricultura" code="E1"/>
+	<discipline name="Negocios" code="E2"/>
+	<discipline name="Diseño" code="E3"/>
+	<discipline name="Ingeniería" code="E4"/>
+	<discipline name="Ergonmía" code="E5"/>
+	<discipline name="Ciencia del Consumo y de la Familia" code="E6"/>
+	<discipline name="Bosques" code="E7"/>	
+	<discipline name="Ciencias de la Salud" code="E8"/>	
+	<discipline name="Periodismo y Comunicación de Masas" code="E9"/>
+	<discipline name="Leyes" code="E10"/>
+	<discipline name="Ciencias de la Información y Bibliotecología" code="E11"/>
+	<discipline name="Medicina" code="E12"/>
+	<discipline name="Ciencia Militar" code="E13"/>
+	<discipline name="Trabajo Social" code="E14"/>
+	<discipline name="Otros" code="F1"/>
+</disciplines>

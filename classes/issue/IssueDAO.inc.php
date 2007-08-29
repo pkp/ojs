@@ -18,14 +18,6 @@
 import ('issue.Issue');
 
 class IssueDAO extends DAO {
- 
- 	/**
-	 * Constructor.
-	 */
-	function IssueDAO() {
-		parent::DAO();
-	}
-	
 	/**
 	 * Retrieve Issue by issue id
 	 * @param $issueId int
@@ -186,7 +178,6 @@ class IssueDAO extends DAO {
 		$issue = &new Issue();
 		$issue->setIssueId($row['issue_id']);
 		$issue->setJournalId($row['journal_id']);
-		$issue->setTitle($row['title']);
 		$issue->setVolume($row['volume']);
 		$issue->setNumber($row['number']);
 		$issue->setYear($row['year']);
@@ -196,27 +187,40 @@ class IssueDAO extends DAO {
 		$issue->setDateNotified($this->datetimeFromDB($row['date_notified']));
 		$issue->setAccessStatus($row['access_status']);
 		$issue->setOpenAccessDate($this->datetimeFromDB($row['open_access_date']));
-		$issue->setDescription($row['description']);
 		$issue->setPublicIssueId($row['public_issue_id']);
 		$issue->setShowVolume($row['show_volume']);
 		$issue->setShowNumber($row['show_number']);
 		$issue->setShowYear($row['show_year']);
 		$issue->setShowTitle($row['show_title']);
-		$issue->setFileName($row['file_name']);
-		$issue->setWidth($row['width']);
-		$issue->setHeight($row['height']);
-		$issue->setOriginalFileName($row['original_file_name']);
-		$issue->setCoverPageDescription($row['cover_page_description']);
-		$issue->setShowCoverPage($row['show_cover_page']);
 		$issue->setStyleFileName($row['style_file_name']);
 		$issue->setOriginalStyleFileName($row['original_style_file_name']);
 		$issue->setNumArticles($this->getNumArticles($row['issue_id']));
+
+		$this->getDataObjectSettings('issue_settings', 'issue_id', $row['issue_id'], $issue);
 
 		HookRegistry::call('IssueDAO::_returnIssueFromRow', array(&$issue, &$row));
 
 		return $issue;
 	}
-	
+
+	/**
+	 * Get a list of fields for which localized data is supported
+	 * @return array
+	 */
+	function getLocaleFieldNames() {
+		return array('title', 'coverPageDescription', 'showCoverPage', 'originalFileName', 'fileName', 'width', 'height', 'description');
+	}
+
+	/**
+	 * Update the localized fields for this object.
+	 * @param $issue
+	 */
+	function updateLocaleFields(&$issue) {
+		$this->updateDataObjectSettings('issue_settings', $issue, array(
+			'issue_id' => $issue->getIssueId()
+		));
+	}
+
 	/**
 	 * inserts a new issue into issues table
 	 * @param Issue object
@@ -225,37 +229,31 @@ class IssueDAO extends DAO {
 	function insertIssue(&$issue) {
 		$this->update(
 			sprintf('INSERT INTO issues
-				(journal_id, title, volume, number, year, published, current, date_published, date_notified, access_status, open_access_date, description, public_issue_id, show_volume, show_number, show_year, show_title, file_name, width, height, original_file_name, cover_page_description, show_cover_page, style_file_name, original_style_file_name)
+				(journal_id, volume, number, year, published, current, date_published, date_notified, access_status, open_access_date, public_issue_id, show_volume, show_number, show_year, show_title, style_file_name, original_style_file_name)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, %s, %s, ?, %s, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, %s, %s, ?, %s, ?, ?, ?, ?, ?, ?, ?)',
 				$this->datetimeToDB($issue->getDatePublished()), $this->datetimeToDB($issue->getDateNotified()), $this->datetimeToDB($issue->getOpenAccessDate())),
 			array(
 				$issue->getJournalId(),
-				$issue->getTitle(),
 				$issue->getVolume(),
 				$issue->getNumber(),
 				$issue->getYear(),
 				$issue->getPublished(),
 				$issue->getCurrent(),
 				$issue->getAccessStatus(),
-				$issue->getDescription(),
 				$issue->getPublicIssueId(),
 				$issue->getShowVolume(),
 				$issue->getShowNumber(),
 				$issue->getShowYear(),
 				$issue->getShowTitle(),
-				$issue->getFileName(),
-				$issue->getWidth(),
-				$issue->getHeight(),
-				$issue->getOriginalFileName(),
-				$issue->getCoverPageDescription(),
-				$issue->getShowCoverPage(),
 				$issue->getStyleFileName(),
 				$issue->getOriginalStyleFileName()
 			)
 		);
 
 		$issue->setIssueId($this->getInsertIssueId());
+
+		$this->updateLocaleData($issue);
 
 		if ($this->customIssueOrderingExists($issue->getJournalId())) {
 			$this->resequenceCustomIssueOrders($issue->getJournalId());
@@ -302,7 +300,6 @@ class IssueDAO extends DAO {
 			sprintf('UPDATE issues
 				SET
 					journal_id = ?,
-					title = ?,
 					volume = ?,
 					number = ?,
 					year = ?,
@@ -311,49 +308,37 @@ class IssueDAO extends DAO {
 					date_published = %s,
 					date_notified = %s,
 					open_access_date = %s,
-					description = ?,
 					public_issue_id = ?,
 					access_status = ?,
 					show_volume = ?,
 					show_number = ?,
 					show_year = ?,
 					show_title = ?,
-					file_name = ?,
-					width = ?,
-					height = ?,
-					original_file_name = ?,
-					cover_page_description = ?,
-					show_cover_page = ?,
 					style_file_name = ?,
 					original_style_file_name = ?
 				WHERE issue_id = ?',
 			$this->datetimeToDB($issue->getDatePublished()), $this->datetimeToDB($issue->getDateNotified()), $this->datetimeToDB($issue->getOpenAccessDate())),
 			array(
 				$issue->getJournalId(),
-				$issue->getTitle(),
 				$issue->getVolume(),
 				$issue->getNumber(),
 				$issue->getYear(),
 				$issue->getPublished(),
 				$issue->getCurrent(),
-				$issue->getDescription(),
 				$issue->getPublicIssueId(),
 				$issue->getAccessStatus(),
 				$issue->getShowVolume(),
 				$issue->getShowNumber(),
 				$issue->getShowYear(),
 				$issue->getShowTitle(),
-				$issue->getFileName(),
-				$issue->getWidth(),
-				$issue->getHeight(),
-				$issue->getOriginalFileName(),
-				$issue->getCoverPageDescription(),
-				$issue->getShowCoverPage(),
 				$issue->getStyleFileName(),
 				$issue->getOriginalStyleFileName(),
 				$issue->getIssueId()
 			)
 		);
+
+		$this->updateLocaleFields($issue);
+
 		if ($this->customIssueOrderingExists($issue->getJournalId())) {
 			$this->resequenceCustomIssueOrders($issue->getJournalId());
 		}
@@ -373,29 +358,30 @@ class IssueDAO extends DAO {
 			$publicFileManager->removeJournalFile($issue->getJournalId(), $fileName);
 		}
 
+		$issueId = $issue->getIssueId();
+
 		// Delete issue-specific ordering if it exists.
 		$sectionDao = &DAORegistry::getDAO('SectionDAO');
-		$sectionDao->deleteCustomSectionOrdering($issue->getIssueId());
+		$sectionDao->deleteCustomSectionOrdering($issueId);
 
 		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
-		$publishedArticleDao->deletePublishedArticlesByIssueId($issue->getIssueId());
+		$publishedArticleDao->deletePublishedArticlesByIssueId($issueId);
 
-		$this->update(
-			'DELETE FROM issues WHERE issue_id = ?', $issue->getIssueId()
-		);
+		$this->update('DELETE FROM issue_settingss WHERE issue_id = ?', $issueId);
+		$this->update('DELETE FROM issues WHERE issue_id = ?', $issueId);
 		$this->resequenceCustomIssueOrders($issue->getJournalId());
 	}
 
 	/**
-	 * Delete issues by journal id. Does not delete dependent entities; this is intended
-	 * to be called while deleting a journal, which deletes dependents.
+	 * Delete issues by journal id. Deletes dependent entities.
 	 * @param $journalId int
 	 */
 	function deleteIssuesByJournal($journalId) {
-		$this->update(
-			'DELETE FROM issues WHERE journal_id = ?', $journalId
-		);
-		$this->deleteCustomIssueOrdering($journalId);
+		$issues =& $this->getIssues($journalId);
+		while (($issue =& $issues->next())) {
+			$this->deleteIssue($issue);
+			unset($issue);
+		}
 	}
 
 	/**

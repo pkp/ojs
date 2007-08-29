@@ -37,6 +37,13 @@ function openComments(url) {
 }
 
 /**
+ * Open window for section locale data.
+ */
+function openSectionLocaleData(url) {
+	window.open(url, 'Section Locale Data', 'width=700,height=600,screenX=100,screenY=100,toolbar=0,resizable=1,scrollbars=1');
+}
+
+/**
  * Open window for preview.
  */
 function openWindow(url) {
@@ -128,4 +135,14 @@ function sendAsyncRequest(req, url, data, method) {
 	req.send(data);
 }
 
+
+/**
+ * Change the form action
+ * @param formName string
+ * @param action string 
+ */
+function changeFormAction(formName, action) {
+	document.forms[formName].action = action;
+	document.forms[formName].submit();
+}
 

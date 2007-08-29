@@ -47,8 +47,8 @@ class SectionForm extends Form {
 		$this->sectionId = $sectionId;
 		
 		// Validation checks for this form
-		$this->addCheck(new FormValidator($this, 'title', 'required', 'manager.sections.form.titleRequired'));
-		$this->addCheck(new FormValidator($this, 'abbrev', 'required', 'manager.sections.form.abbrevRequired'));
+		$this->addCheck(new FormValidatorLocale($this, 'title', 'required', 'manager.sections.form.titleRequired'));
+		$this->addCheck(new FormValidatorLocale($this, 'abbrev', 'required', 'manager.sections.form.abbrevRequired'));
 		$this->addCheck(new FormValidatorPost($this));
 
 		$this->includeSectionEditor = $this->omitSectionEditor = null;
@@ -85,6 +85,15 @@ class SectionForm extends Form {
 	}
 
 	/**
+	 * Get the names of fields for which localized data is allowed.
+	 * @return array
+	 */
+	function getLocaleFieldNames() {
+		$sectionDao =& DAORegistry::getDAO('SectionDAO');
+		return $sectionDao->getLocaleFieldNames();
+	}
+
+	/**
 	 * Display the form.
 	 */
 	function display() {
@@ -108,20 +117,16 @@ class SectionForm extends Form {
 			} else {
 				$sectionEditorsDao =& DAORegistry::getDAO('SectionEditorsDAO');
 				$this->_data = array(
-					'title' => $section->getTitle(),
-					'titleAlt1' => $section->getTitleAlt1(),
-					'titleAlt2' => $section->getTitleAlt2(),
-					'abbrev' => $section->getAbbrev(),
-					'abbrevAlt1' => $section->getAbbrevAlt1(),
-					'abbrevAlt2' => $section->getAbbrevAlt2(),
+					'title' => $section->getTitle(null), // Localized
+					'abbrev' => $section->getAbbrev(null), // Localized
 					'metaIndexed' => !$section->getMetaIndexed(), // #2066: Inverted
 					'metaReviewed' => !$section->getMetaReviewed(), // #2066: Inverted
 					'abstractsDisabled' => $section->getAbstractsDisabled(),
-					'identifyType' => $section->getIdentifyType(),
+					'identifyType' => $section->getIdentifyType(null), // Localized
 					'editorRestriction' => $section->getEditorRestricted(),
 					'hideTitle' => $section->getHideTitle(),
 					'hideAbout' => $section->getHideAbout(),
-					'policy' => $section->getPolicy(),
+					'policy' => $section->getPolicy(null), // Localized
 					'assignedEditors' => $sectionEditorsDao->getEditorsBySectionId($journal->getJournalId(), $this->sectionId),
 					'unassignedEditors' => $sectionEditorsDao->getEditorsNotInSection($journal->getJournalId(), $this->sectionId)
 				);
@@ -133,7 +138,7 @@ class SectionForm extends Form {
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->readUserVars(array('title', 'titleAlt1', 'titleAlt2', 'abbrev', 'abbrevAlt1', 'abbrevAlt2', 'metaIndexed', 'metaReviewed', 'abstractsDisabled', 'identifyType', 'editorRestriction', 'hideTitle', 'hideAbout', 'policy'));
+		$this->readUserVars(array('title', 'abbrev', 'policy', 'identifyType', 'metaIndexed', 'metaReviewed', 'abstractsDisabled', 'editorRestriction', 'hideTitle', 'hideAbout'));
 		$assignedEditorIds = Request::getUserVar('assignedEditorIds');
 		if (empty($assignedEditorIds)) $assignedEditorIds = array();
 		elseif (!is_array($assignedEditorIds)) $assignedEditorIds = array($assignedEditorIds);
@@ -182,20 +187,16 @@ class SectionForm extends Form {
 			$section->setSequence(REALLY_BIG_NUMBER);
 		}
 		
-		$section->setTitle($this->getData('title'));
-		$section->setTitleAlt1($this->getData('titleAlt1'));
-		$section->setTitleAlt2($this->getData('titleAlt2'));
-		$section->setAbbrev($this->getData('abbrev'));
-		$section->setAbbrevAlt1($this->getData('abbrevAlt1'));
-		$section->setAbbrevAlt2($this->getData('abbrevAlt2'));
+		$section->setTitle($this->getData('title'), null); // Localized
+		$section->setAbbrev($this->getData('abbrev'), null); // Localized
 		$section->setMetaIndexed($this->getData('metaIndexed') ? 0 : 1); // #2066: Inverted
 		$section->setMetaReviewed($this->getData('metaReviewed') ? 0 : 1); // #2066: Inverted
 		$section->setAbstractsDisabled($this->getData('abstractsDisabled') ? 1 : 0);
-		$section->setIdentifyType($this->getData('identifyType'));
+		$section->setIdentifyType($this->getData('identifyType'), null); // Localized
 		$section->setEditorRestricted($this->getData('editorRestriction') ? 1 : 0);
 		$section->setHideTitle($this->getData('hideTitle') ? 1 : 0);
 		$section->setHideAbout($this->getData('hideAbout') ? 1 : 0);
-		$section->setPolicy($this->getData('policy'));
+		$section->setPolicy($this->getData('policy'), null); // Localized
 		
 		if ($section->getSectionId() != null) {
 			$sectionDao->updateSection($section);

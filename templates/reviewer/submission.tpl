@@ -143,7 +143,7 @@ function confirmSubmissionCheck() {
 <tr>
 	<td colspan="2">&nbsp;</td>
 </tr>
-{if $journal->getSetting('reviewGuidelines')}
+{if $journal->getLocalizedSetting('reviewGuidelines')}
 {assign var="haveGuide" value=true}
 <tr valign="top">
         <td>2.</td>
@@ -308,7 +308,7 @@ function confirmSubmissionCheck() {
 {if $haveGuide}
 <div class="separator"></div>
 <h3>{translate key="reviewer.article.reviewerGuidelines"}</h3>
-<p>{$journal->getSetting('reviewGuidelines')|nl2br}</p>
+<p>{$journal->getLocalizedSetting('reviewGuidelines')|nl2br}</p>
 {/if}
 
 {include file="common/footer.tpl"}

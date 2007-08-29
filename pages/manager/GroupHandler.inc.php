@@ -92,7 +92,11 @@ class GroupHandler extends ManagerHandler {
 		);
 
 		$groupForm = &new GroupForm($group);
-		$groupForm->initData();
+		if ($groupForm->isLocaleResubmit()) {
+			$groupForm->readInputData();
+		} else {
+			$groupForm->initData();
+		}
 		$groupForm->display();
 	}
 
@@ -210,7 +214,7 @@ class GroupHandler extends ManagerHandler {
 			$templateMgr->assign('searchField', $searchType);
 			$templateMgr->assign('searchMatch', $searchMatch);
 			$templateMgr->assign('search', $searchQuery);
-			$templateMgr->assign('searchInitial', $searchInitial);
+			$templateMgr->assign('searchInitial', Request::getUserVar('searchInitial'));
 	
 			$templateMgr->assign_by_ref('users', $users);
 			$templateMgr->assign('fieldOptions', Array(
@@ -274,7 +278,7 @@ class GroupHandler extends ManagerHandler {
 			$templateMgr->append('pageHierarchy', array(Request::url(null, 'manager', 'groups'), 'manager.groups'));
 		}
 		if ($group) {
-			$templateMgr->append('pageHierarchy', array(Request::url(null, 'manager', 'editGroup', $group->getGroupId()), $group->getTitle(), true));
+			$templateMgr->append('pageHierarchy', array(Request::url(null, 'manager', 'editGroup', $group->getGroupId()), $group->getGroupTitle(), true));
 		}
 		$templateMgr->assign('helpTopicId', 'journal.managementPages.groups');
 	}

@@ -9,7 +9,7 @@
  * @package manager.form
  * @class EmailTemplateForm
  *
- * Form for creating and modifying journal sections.
+ * Form for creating and modifying email templates.
  *
  * $Id$
  */

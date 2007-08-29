@@ -24,6 +24,10 @@
 		<td width="80%" class="data"><strong>{$user->getUsername()|escape}</strong></td>
 	</tr>
 	<tr valign="top">
+		<td class="label">{translate key="user.salutation"}</td>
+		<td class="value">{$user->getSalutation()|escape|default:"&mdash;"}</td>
+	</tr>
+	<tr valign="top">
 		<td class="label">{translate key="user.firstName"}</td>
 		<td class="value">{$user->getFirstName()|escape|default:"&mdash;"}</td>
 	</tr>
@@ -41,11 +45,20 @@
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="user.signature"}</td>
-		<td class="value">{$user->getSignature()|escape|nl2br|default:"&mdash;"}</td>
+		<td class="value">{$user->getUserSignature()|escape|nl2br|default:"&mdash;"}</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="user.initials"}</td>
 		<td class="value">{$user->getInitials()|escape|default:"&mdash;"}</td>
+	</tr>
+	<tr valign="top">
+		<td class="label">{translate key="user.gender"}</td>
+		<td class="value">
+			{if $user->getGender() == "M"}{translate key="user.masculine"}
+			{elseif $user->getGender() == "F"}{translate key="user.feminine"}
+			{else}&mdash;
+			{/if}
+		</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="user.email"}</td>
@@ -69,8 +82,12 @@
 		<td class="value">{$user->getFax()|escape|default:"&mdash;"}</td>
 	</tr>
 	<tr valign="top">
+		<td class="label">{translate key="common.discipline"}</td>
+		<td class="value">{$discipline|escape|default:"&mdash;"}</td>
+	</tr>
+	<tr valign="top">
 		<td class="label">{translate key="user.interests"}</td>
-		<td class="value">{$user->getInterests()|escape|default:"&mdash;"}</td>
+		<td class="value">{$user->getUserInterests()|escape|default:"&mdash;"}</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="common.mailingAddress"}</td>
@@ -82,14 +99,12 @@
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="user.biography"}</td>
-		<td class="value">{$user->getBiography()|strip_unsafe_html|nl2br|default:"&mdash;"}</td>
+		<td class="value">{$user->getUserBiography()|strip_unsafe_html|nl2br|default:"&mdash;"}</td>
 	</tr>
-	{if $profileLocalesEnabled}
 	<tr valign="top">
 		<td class="label">{translate key="user.workingLanguages"}</td>
 		<td class="value">{foreach name=workingLanguages from=$user->getLocales() item=localeKey}{$localeNames.$localeKey|escape}{if !$smarty.foreach.workingLanguages.last}; {/if}{foreachelse}&mdash;{/foreach}</td>
 	</tr>
-	{/if}
 	<tr valign="top">
 		<td colspan="2" class="separator">&nbsp;</td>
 	</tr>

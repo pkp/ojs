@@ -120,7 +120,12 @@ class IssueManagementHandler extends EditorHandler {
 		$templateMgr->assign('helpTopicId', 'publishing.createIssue');
 
 		$issueForm = &new IssueForm('editor/issues/createIssue.tpl');
-		$issueForm->initData();
+
+		if ($issueForm->isLocaleResubmit()) {
+			$issueForm->readInputData();
+		} else {
+			$issueForm->initData();
+		}
 		$issueForm->display();
 	}
 
@@ -161,7 +166,12 @@ class IssueManagementHandler extends EditorHandler {
 
 		import('issue.form.IssueForm');
 		$issueForm = &new IssueForm('editor/issues/issueData.tpl');
-		$issueId = $issueForm->initData($issueId);
+
+		if ($issueForm->isLocaleResubmit()) {
+			$issueForm->readInputData();
+		} else {
+			$issueId = $issueForm->initData($issueId);
+		}
 		$templateMgr->assign('issueId', $issueId);
 
 		$templateMgr->assign_by_ref('issue', $issue);

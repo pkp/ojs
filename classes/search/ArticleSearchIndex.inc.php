@@ -161,24 +161,27 @@ class ArticleSearchIndex {
 			array_push($authorText, $author->getMiddleName());
 			array_push($authorText, $author->getLastName());
 			array_push($authorText, $author->getAffiliation());
-			array_push($authorText, strip_tags($author->getBiography()));
+			$bios = $author->getBiography(null);
+			if (is_array($bios)) foreach ($bios as $bio) { // Localized
+				array_push($authorText, strip_tags($bio));
+			}
 		}
 		
 		// Update search index
 		$articleId = $article->getArticleId();
 		ArticleSearchIndex::updateTextIndex($articleId, ARTICLE_SEARCH_AUTHOR, $authorText);
-		ArticleSearchIndex::updateTextIndex($articleId, ARTICLE_SEARCH_TITLE, array($article->getTitle(), $article->getTitleAlt1(), $article->getTitleAlt2()));
+		ArticleSearchIndex::updateTextIndex($articleId, ARTICLE_SEARCH_TITLE, $article->getTitle(null));
 
 		$sectionDao = &DAORegistry::getDAO('SectionDAO');
 		$section = &$sectionDao->getSection($article->getSectionId());
 		if ($section && !$section->getAbstractsDisabled()) {
-			ArticleSearchIndex::updateTextIndex($articleId, ARTICLE_SEARCH_ABSTRACT, array($article->getAbstract(), $article->getAbstractAlt1(), $article->getAbstractAlt2()));
+			ArticleSearchIndex::updateTextIndex($articleId, ARTICLE_SEARCH_ABSTRACT, $article->getAbstract(null));
 		}
 
-		ArticleSearchIndex::updateTextIndex($articleId, ARTICLE_SEARCH_DISCIPLINE, $article->getDiscipline());
-		ArticleSearchIndex::updateTextIndex($articleId, ARTICLE_SEARCH_SUBJECT, array($article->getSubjectClass(), $article->getSubject()));
-		ArticleSearchIndex::updateTextIndex($articleId, ARTICLE_SEARCH_TYPE, $article->getType());
-		ArticleSearchIndex::updateTextIndex($articleId, ARTICLE_SEARCH_COVERAGE, array($article->getCoverageGeo(), $article->getCoverageChron(), $article->getCoverageSample()));
+		ArticleSearchIndex::updateTextIndex($articleId, ARTICLE_SEARCH_DISCIPLINE, (array) $article->getDiscipline(null));
+		ArticleSearchIndex::updateTextIndex($articleId, ARTICLE_SEARCH_SUBJECT, array_merge(array_values((array) $article->getSubjectClass(null)), array_values((array) $article->getSubject(null))));
+		ArticleSearchIndex::updateTextIndex($articleId, ARTICLE_SEARCH_TYPE, $article->getType(null));
+		ArticleSearchIndex::updateTextIndex($articleId, ARTICLE_SEARCH_COVERAGE, array_merge(array_values((array) $article->getCoverageGeo(null)), array_values((array) $article->getCoverageChron(null)), array_values((array) $article->getCoverageSample(null))));
 		// FIXME Index sponsors too?
 	}
 	
@@ -192,13 +195,13 @@ class ArticleSearchIndex {
 		ArticleSearchIndex::updateTextIndex(
 			$articleId,
 			ARTICLE_SEARCH_SUPPLEMENTARY_FILE,
-			array(
-				$suppFile->getTitle(),
-				$suppFile->getCreator(),
-				$suppFile->getSubject(),
-				$suppFile->getTypeOther(),
-				$suppFile->getDescription(),
-				$suppFile->getSource()
+			array_merge(
+				array_keys((array) $suppFile->getTitle(null)),
+				array_keys((array) $suppFile->getCreator(null)),
+				array_keys((array) $suppFile->getSubject(null)),
+				array_keys((array) $suppFile->getTypeOther(null)),
+				array_keys((array) $suppFile->getDescription(null)),
+				array_keys((array) $suppFile->getSource(null))
 			),
 			$suppFile->getFileId()
 		);
@@ -254,7 +257,7 @@ class ArticleSearchIndex {
 			$journal = &$journals->next();
 			$numIndexed = 0;
 			
-			if ($log) echo "Indexing \"", $journal->getTitle(), "\" ... ";
+			if ($log) echo "Indexing \"", $journal->getJournalTitle(), "\" ... ";
 			
 			$articles = &$articleDao->getArticlesByJournalId($journal->getJournalId());
 			while (!$articles->eof()) {

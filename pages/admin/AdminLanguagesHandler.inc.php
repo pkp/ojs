@@ -27,9 +27,8 @@ class AdminLanguagesHandler extends AdminHandler {
 		
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('localeNames', Locale::getAllLocales());
-		$templateMgr->assign('primaryLocale', $site->getLocale());
+		$templateMgr->assign('primaryLocale', $site->getPrimaryLocale());
 		$templateMgr->assign('supportedLocales', $site->getSupportedLocales());
-		$templateMgr->assign('profileLocalesEnabled', $site->getProfileLocalesEnabled());
 		$templateMgr->assign('installedLocales', $site->getInstalledLocales());
 		$templateMgr->assign('uninstalledLocales', array_diff(array_keys(Locale::getAllLocales()), $site->getInstalledLocales()));
 		$templateMgr->assign('helpTopicId', 'site.siteManagement');
@@ -47,10 +46,9 @@ class AdminLanguagesHandler extends AdminHandler {
 		
 		$primaryLocale = Request::getUserVar('primaryLocale');
 		$supportedLocales = Request::getUserVar('supportedLocales');
-		$profileLocalesEnabled = Request::getUserVar('profileLocalesEnabled');
 		
 		if (Locale::isLocaleValid($primaryLocale)) {
-			$site->setLocale($primaryLocale);
+			$site->setPrimaryLocale($primaryLocale);
 		}
 		
 		$newSupportedLocales = array();
@@ -65,7 +63,6 @@ class AdminLanguagesHandler extends AdminHandler {
 			array_push($newSupportedLocales, $primaryLocale);
 		}
 		$site->setSupportedLocales($newSupportedLocales);
-		$site->setProfileLocalesEnabled(isset($profileLocalesEnabled) ? 1 : 0);
 		
 		$siteDao = &DAORegistry::getDAO('SiteDAO');
 		$siteDao->updateSite($site);
@@ -119,7 +116,7 @@ class AdminLanguagesHandler extends AdminHandler {
 		$site = &Request::getSite();
 		$locale = Request::getUserVar('locale');
 		
-		if (isset($locale) && !empty($locale) && $locale != $site->getLocale()) {
+		if (isset($locale) && !empty($locale) && $locale != $site->getPrimaryLocale()) {
 			$installedLocales = $site->getInstalledLocales();
 			
 			if (in_array($locale, $installedLocales)) {

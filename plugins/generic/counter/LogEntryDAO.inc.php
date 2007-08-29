@@ -18,14 +18,10 @@
 require_once (dirname(__FILE__) . '/LogEntry.inc.php');
 
 class LogEntryDAO extends DAO {
-
 	/**
-	 * Constructor.
+	 * Get the filename for the COUNTER plugin log
+	 * @return string
 	 */
-	function LogEntryDAO() {
-		parent::DAO();
-	}
-
 	function getLogFilename() {
 		return (dirname(__FILE__) . '/log.txt');
 	}

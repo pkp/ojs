@@ -75,8 +75,8 @@ class CrossRefExportDom {
 		XMLCustomWriter::appendChild($head, $depositorNode);
 		
 		/* The registrant is assumed to be the Publishing institution */
-		$publisherArray = $journal->getSetting('publisher');
-		XMLCustomWriter::createChildWithText($doc, $head, 'registrant', $publisherArray['institution'] );
+		$publisherInstitution = $journal->getSetting('publisherInstitution');
+		XMLCustomWriter::createChildWithText($doc, $head, 'registrant', $publisherInstitution);
 
 
 		return $head;
@@ -97,7 +97,7 @@ class CrossRefExportDom {
 
 
 		/* Full Title of Journal */
-		XMLCustomWriter::createChildWithText($doc, $journalMetadataNode, 'full_title', $journal->getTitle());
+		XMLCustomWriter::createChildWithText($doc, $journalMetadataNode, 'full_title', $journal->getJournalTitle());
 
 		/* Abbreviated title - defaulting to initials if no abbreviation found */
 		if  ($journal->getSetting('journalAbbreviation') != '' ) {
@@ -146,7 +146,7 @@ class CrossRefExportDom {
 
 		/* Titles */
 		$titlesNode = &XMLCustomWriter::createElement($doc, 'titles');
-		XMLCustomWriter::createChildWithText($doc, $titlesNode, 'title', $article->getTitle());
+		XMLCustomWriter::createChildWithText($doc, $titlesNode, 'title', $article->getArticleTitle());
 		XMLCustomWriter::appendChild($journalArticleNode, $titlesNode);
 		
 		$contributorsNode = &XMLCustomWriter::createElement($doc, 'contributors');

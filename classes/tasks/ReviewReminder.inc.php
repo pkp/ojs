@@ -43,8 +43,8 @@ class ReviewReminder extends ScheduledTask {
 		$email->addRecipient($reviewer->getEmail(), $reviewer->getFullName());
 		$email->setAssoc(ARTICLE_EMAIL_REVIEW_REMIND, ARTICLE_EMAIL_TYPE_REVIEW, $reviewId);
 
-		$email->setSubject($email->getSubject($journal->getLocale()));
-		$email->setBody($email->getBody($journal->getLocale()));
+		$email->setSubject($email->getSubject($journal->getPrimaryLocale()));
+		$email->setBody($email->getBody($journal->getPrimaryLocale()));
 
 		$urlParams = array();
 		if ($reviewerAccessKeysEnabled) {
@@ -63,7 +63,7 @@ class ReviewReminder extends ScheduledTask {
 			'journalUrl' => $journal->getUrl(),
 			'reviewerPassword' => $reviewer->getPassword(),
 			'reviewDueDate' => strftime(Config::getVar('general', 'date_format_short'), strtotime($reviewAssignment->getDateDue())),
-			'editorialContactSignature' => $journal->getSetting('contactName') . "\n" . $journal->getTitle(),
+			'editorialContactSignature' => $journal->getSetting('contactName') . "\n" . $journal->getJournalTitle(),
 			'passwordResetUrl' => Request::url($journal->getPath(), 'login', 'resetPassword', $reviewer->getUsername(), array('confirm' => Validation::generatePasswordResetHash($reviewer->getUserId()))),
 			'submissionReviewUrl' => $submissionReviewUrl
 		);

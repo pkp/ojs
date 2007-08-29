@@ -26,14 +26,6 @@ define ('COMMENTS_ANONYMOUS', 2); // Can be posted anonymously by authenticated 
 define ('COMMENTS_UNAUTHENTICATED', 3); // Can be posted anonymously by anyone
 
 class CommentDAO extends DAO {
- 
- 	/**
-	 * Constructor.
-	 */
-	function CommentDAO() {
-		parent::DAO();
-	}
-	
 	/**
 	 * Retrieve Comments by article id
 	 * @param $articleId int
@@ -264,6 +256,6 @@ class CommentDAO extends DAO {
 			)
 		);
 	}
- }
-  
+}
+
 ?>

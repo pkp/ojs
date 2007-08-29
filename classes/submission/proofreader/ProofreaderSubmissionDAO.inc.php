@@ -18,7 +18,6 @@
 import('submission.proofreader.ProofreaderSubmission');
 
 class ProofreaderSubmissionDAO extends DAO {
-
 	/** Helper DAOs */
 	var $articleDao;
 	var $articleCommentDao;
@@ -48,25 +47,37 @@ class ProofreaderSubmissionDAO extends DAO {
 	 * @param $articleId int
 	 * @return ProofreaderSubmission
 	 */
-	function &getSubmission($articleId, $journalId =  null) {
-		if (isset($journalId)) {
-			$result = &$this->retrieve(
-				'SELECT a.*, s.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, s.abbrev AS section_abbrev, s.abbrev_alt1 AS section_abbrev_alt1, s.abbrev_alt2 AS section_abbrev_alt2
-				FROM articles a
+	function &getSubmission($articleId, $journalId = null) {
+		$primaryLocale = Locale::getPrimaryLocale();
+		$locale = Locale::getLocale();
+
+		$params = array(
+			'title',
+			$primaryLocale,
+			'title',
+			$locale,
+			'abbrev',
+			$primaryLocale,
+			'abbrev',
+			$locale,
+			$articleId
+		);
+		if ($journalId) $params[] = $journalId;
+
+		$result = &$this->retrieve(
+			'SELECT	a.*,
+				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
+				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
+			FROM articles a
 				LEFT JOIN sections s ON s.section_id = a.section_id
-				WHERE article_id = ? AND a.journal_id = ?',
-				array($articleId, $journalId)
-			);
-			
-		} else {
-			$result = &$this->retrieve(
-				'SELECT a.*, s.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, s.abbrev AS section_abbrev, s.abbrev_alt1 AS section_abbrev_alt1, s.abbrev_alt2 AS section_abbrev_alt2
-				FROM articles a
-				LEFT JOIN sections s ON s.section_id = a.section_id
-				WHERE article_id = ?',
-				$articleId
-			);
-		}
+				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
+				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
+				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
+				LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?)
+			WHERE	article_id = ?' .
+				($journalId?' AND a.journal_id = ?':''),
+			$params
+		);
 
 		$returner = null;
 		if ($result->RecordCount() != 0) {
@@ -132,20 +143,34 @@ class ProofreaderSubmissionDAO extends DAO {
 	 * @return array ProofreaderSubmission
 	 */
 	function &getSubmissions($proofreaderId, $journalId = null, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $active = true, $rangeInfo = null) {
-		if (isset($journalId)) $params = array($proofreaderId, $journalId);
-		else $params = array($proofreaderId);
+		$primaryLocale = Locale::getPrimaryLocale();
+		$locale = Locale::getLocale();
+
+		$params = array(
+			'title',
+			$primaryLocale,
+			'title',
+			$locale,
+			'abbrev',
+			$primaryLocale,
+			'abbrev',
+			$locale,
+			'title',
+			$proofreaderId
+		);
+		if (isset($journalId)) $params[] = $journalId;
 
 		$searchSql = '';
 
 		if (!empty($search)) switch ($searchField) {
 			case SUBMISSION_FIELD_TITLE:
 				if ($searchMatch === 'is') {
-					$searchSql = ' AND (LOWER(a.title) = LOWER(?) OR LOWER(a.title_alt1) = LOWER(?) OR LOWER(a.title_alt2) = LOWER(?))';
+					$searchSql = ' AND LOWER(atl.setting_value) = LOWER(?)';
 				} else {
-					$searchSql = ' AND (LOWER(a.title) LIKE LOWER(?) OR LOWER(a.title_alt1) LIKE LOWER(?) OR LOWER(a.title_alt2) LIKE LOWER(?))';
+					$searchSql = ' AND LOWER(atl.setting_value) LIKE LOWER(?)';
 					$search = '%' . $search . '%';
 				}
-				$params[] = $params[] = $params[] = $search;
+				$params[] = $search;
 				break;
 			case SUBMISSION_FIELD_AUTHOR:
 				$first_last = $this->_dataSource->Concat('aa.first_name', '\' \'', 'aa.last_name');
@@ -212,12 +237,8 @@ class ProofreaderSubmissionDAO extends DAO {
 		}
 		$sql = 'SELECT DISTINCT
 				a.*,
-				s.title AS section_title,
-				s.title_alt1 AS section_title_alt1,
-				s.title_alt2 AS section_title_alt2,
-				s.abbrev AS section_abbrev,
-				s.abbrev_alt1 AS section_abbrev_alt1,
-				s.abbrev_alt2 AS section_abbrev_alt2
+				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
+				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
 			FROM
 				articles a
 				INNER JOIN article_authors aa ON (aa.article_id = a.article_id)
@@ -227,6 +248,11 @@ class ProofreaderSubmissionDAO extends DAO {
 				LEFT JOIN edit_assignments e ON (e.article_id = a.article_id)
 				LEFT JOIN users ed ON (e.editor_id = ed.user_id)
 				LEFT JOIN layouted_assignments l ON (l.article_id = a.article_id)
+				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
+				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
+				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
+				LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?)
+				LEFT JOIN article_settings atl ON (a.article_id = atl.article_id AND atl.setting_name = ?)
 			WHERE
 				p.proofreader_id = ? AND
 				' . (isset($journalId)?'a.journal_id = ? AND':'') . '
@@ -238,10 +264,7 @@ class ProofreaderSubmissionDAO extends DAO {
 			$sql .= ' AND p.date_proofreader_completed IS NOT NULL';		
 		}
 
-		$result = &$this->retrieveRange(
-			$sql . ' ' . $searchSql,
-			count($params)==1?array_shift($params):$params,
-			$rangeInfo);
+		$result = &$this->retrieveRange($sql . ' ' . $searchSql, $params, $rangeInfo);
 
 		$returner = &new DAOResultFactory ($result, $this, '_returnSubmissionFromRow');
 		return $returner;
@@ -272,7 +295,6 @@ class ProofreaderSubmissionDAO extends DAO {
 
 		return $submissionsCount;
 	}
-
 }
 
 ?>

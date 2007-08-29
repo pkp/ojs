@@ -17,7 +17,6 @@
 import("author.form.submit.AuthorSubmitForm");
 
 class AuthorSubmitStep2Form extends AuthorSubmitForm {
-	
 	/**
 	 * Constructor.
 	 */
@@ -29,7 +28,7 @@ class AuthorSubmitStep2Form extends AuthorSubmitForm {
 		// Validation checks for this form
 		$this->addCheck(new FormValidatorCustom($this, 'authors', 'required', 'author.submit.form.authorRequired', create_function('$authors', 'return count($authors) > 0;')));
 		$this->addCheck(new FormValidatorArray($this, 'authors', 'required', 'author.submit.form.authorRequiredFields', array('firstName', 'lastName', 'email')));
-		$this->addCheck(new FormValidator($this, 'title', 'required', 'author.submit.form.titleRequired'));
+		$this->addCheck(new FormValidatorLocale($this, 'title', 'required', 'author.submit.form.titleRequired'));
 	}
 	
 	/**
@@ -42,21 +41,17 @@ class AuthorSubmitStep2Form extends AuthorSubmitForm {
 			$article = &$this->article;
 			$this->_data = array(
 				'authors' => array(),
-				'title' => $article->getTitle(),
-				'titleAlt1' => $article->getTitleAlt1(),
-				'titleAlt2' => $article->getTitleAlt2(),
-				'abstract' => $article->getAbstract(),
-				'abstractAlt1' => $article->getAbstractAlt1(),
-				'abstractAlt2' => $article->getAbstractAlt2(),
-				'discipline' => $article->getDiscipline(),
-				'subjectClass' => $article->getSubjectClass(),
-				'subject' => $article->getSubject(),
-				'coverageGeo' => $article->getCoverageGeo(),
-				'coverageChron' => $article->getCoverageChron(),
-				'coverageSample' => $article->getCoverageSample(),
-				'type' => $article->getType(),
+				'title' => $article->getTitle(null), // Localized
+				'abstract' => $article->getAbstract(null), // Localized
+				'discipline' => $article->getDiscipline(null), // Localized
+				'subjectClass' => $article->getSubjectClass(null), // Localized
+				'subject' => $article->getSubject(null), // Localized
+				'coverageGeo' => $article->getCoverageGeo(null), // Localized
+				'coverageChron' => $article->getCoverageChron(null), // Localized
+				'coverageSample' => $article->getCoverageSample(null), // Localized
+				'type' => $article->getType(null), // Localized
 				'language' => $article->getLanguage(),
-				'sponsor' => $article->getSponsor(),
+				'sponsor' => $article->getSponsor(null), // Localized
 				'section' => $sectionDao->getSection($article->getSectionId())
 			);
 			
@@ -73,7 +68,7 @@ class AuthorSubmitStep2Form extends AuthorSubmitForm {
 						'country' => $authors[$i]->getCountry(),
 						'email' => $authors[$i]->getEmail(),
 						'url' => $authors[$i]->getUrl(),
-						'biography' => $authors[$i]->getBiography()
+						'biography' => $authors[$i]->getBiography(null)
 					)
 				);
 				if ($authors[$i]->getPrimaryContact()) {
@@ -93,11 +88,7 @@ class AuthorSubmitStep2Form extends AuthorSubmitForm {
 				'deletedAuthors',
 				'primaryContact',
 				'title',
-				'titleAlt1',
-				'titleAlt2',
 				'abstract',
-				'abstractAlt1',
-				'abstractAlt2',
 				'discipline',
 				'subjectClass',
 				'subject',
@@ -116,19 +107,27 @@ class AuthorSubmitStep2Form extends AuthorSubmitForm {
 		$this->_data['section'] = &$sectionDao->getSection($this->article->getSectionId());
 
 		if ($this->_data['section']->getAbstractsDisabled() == 0) {
-			$this->addCheck(new FormValidator($this, 'abstract', 'required', 'author.submit.form.abstractRequired'));
+			$this->addCheck(new FormValidatorLocale($this, 'abstract', 'required', 'author.submit.form.abstractRequired'));
 		}
 
+	}
+
+	/**
+	 * Get the names of fields for which data should be localized
+	 * @return array
+	 */
+	function getLocaleFieldNames() {
+		return array('title', 'abstract', 'subjectClass', 'subject', 'coverageGeo', 'coverageChron', 'coverageSample', 'type', 'sponsor');
 	}
 
 	/**
 	 * Display the form.
 	 */
 	function display() {
+		$templateMgr =& TemplateManager::getManager();
+
 		$countryDao =& DAORegistry::getDAO('CountryDAO');
 		$countries =& $countryDao->getCountries();
-
-		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign_by_ref('countries', $countries);
 
 		parent::display();
@@ -144,21 +143,17 @@ class AuthorSubmitStep2Form extends AuthorSubmitForm {
 		
 		// Update article
 		$article = &$this->article;
-		$article->setTitle($this->getData('title'));
-		$article->setTitleAlt1($this->getData('titleAlt1'));
-		$article->setTitleAlt2($this->getData('titleAlt2'));
-		$article->setAbstract($this->getData('abstract'));
-		$article->setAbstractAlt1($this->getData('abstractAlt1'));
-		$article->setAbstractAlt2($this->getData('abstractAlt2'));
-		$article->setDiscipline($this->getData('discipline'));
-		$article->setSubjectClass($this->getData('subjectClass'));
-		$article->setSubject($this->getData('subject'));
-		$article->setCoverageGeo($this->getData('coverageGeo'));
-		$article->setCoverageChron($this->getData('coverageChron'));
-		$article->setCoverageSample($this->getData('coverageSample'));
-		$article->setType($this->getData('type'));
+		$article->setTitle($this->getData('title'), null); // Localized
+		$article->setAbstract($this->getData('abstract'), null); // Localized
+		$article->setDiscipline($this->getData('discipline'), null); // Localized
+		$article->setSubjectClass($this->getData('subjectClass'), null); // Localized
+		$article->setSubject($this->getData('subject'), null); // Localized
+		$article->setCoverageGeo($this->getData('coverageGeo'), null); // Localized
+		$article->setCoverageChron($this->getData('coverageChron'), null); // Localized
+		$article->setCoverageSample($this->getData('coverageSample'), null); // Localized
+		$article->setType($this->getData('type'), null); // Localized
 		$article->setLanguage($this->getData('language'));
-		$article->setSponsor($this->getData('sponsor'));
+		$article->setSponsor($this->getData('sponsor'), null); // Localized
 		if ($article->getSubmissionProgress() <= $this->step) {
 			$article->stampStatusModified();
 			$article->setSubmissionProgress($this->step + 1);
@@ -186,7 +181,7 @@ class AuthorSubmitStep2Form extends AuthorSubmitForm {
 				$author->setCountry($authors[$i]['country']);
 				$author->setEmail($authors[$i]['email']);
 				$author->setUrl($authors[$i]['url']);
-				$author->setBiography($authors[$i]['biography']);
+				$author->setBiography($authors[$i]['biography'], null);
 				$author->setPrimaryContact($this->getData('primaryContact') == $i ? 1 : 0);
 				$author->setSequence($authors[$i]['seq']);
 				
@@ -207,7 +202,6 @@ class AuthorSubmitStep2Form extends AuthorSubmitForm {
 		
 		return $this->articleId;
 	}
-	
 }
 
 ?>

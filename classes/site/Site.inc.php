@@ -16,7 +16,6 @@
  */
 
 class Site extends DataObject {
-
 	/**
 	 * Constructor.
 	 */
@@ -52,19 +51,28 @@ class Site extends DataObject {
 	//
 	
 	/**
+	 * Get localized site title.
+	 */
+	function getSiteTitle() {
+		return $this->getLocalizedData('title');
+	}
+
+	/**
 	 * Get site title.
+	 * @param $locale string
 	 * @return string
 	 */
-	function getTitle() {
-		return $this->getData('title');
+	function getTitle($locale) {
+		return $this->getData('title', $locale);
 	}
 	
 	/**
 	 * Set site title.
 	 * @param $title string
+	 * @param $locale string
 	 */
-	function setTitle($title) {
-		return $this->setData('title', $title);
+	function setTitle($title, $locale) {
+		return $this->setData('title', $title, $locale);
 	}
 	
 	/**
@@ -84,19 +92,28 @@ class Site extends DataObject {
 	}
 	
 	/**
+	 * Get localized site intro.
+	 */
+	function getSiteIntro() {
+		return $this->getLocalizedData('intro');
+	}
+
+	/**
 	 * Get site introduction.
+	 * @param $locale string
 	 * @return string
 	 */
-	function getIntro() {
-		return $this->getData('intro');
+	function getIntro($locale) {
+		return $this->getData('intro', $locale);
 	}
 	
 	/**
 	 * Set site introduction.
 	 * @param $intro string
+	 * @param $locale string
 	 */
-	function setIntro($intro) {
-		return $this->setData('intro', $intro);
+	function setIntro($intro, $locale) {
+		return $this->setData('intro', $intro, $locale);
 	}
 	
 	/**
@@ -116,51 +133,78 @@ class Site extends DataObject {
 	}
 	
 	/**
+	 * Get localized site about statement.
+	 */
+	function getSiteAbout() {
+		return $this->getLocalizedData('about');
+	}
+
+	/**
 	 * Get site about description.
+	 * @param $locale string
 	 * @return string
 	 */
-	function getAbout() {
-		return $this->getData('about');
+	function getAbout($locale) {
+		return $this->getData('about', $locale);
 	}
 	
 	/**
 	 * Set site about description.
 	 * @param $about string
+	 * @param $locale string
 	 */
-	function setAbout($about) {
-		return $this->setData('about', $about);
+	function setAbout($about, $locale) {
+		return $this->setData('about', $about, $locale);
 	}
 	
 	/**
+	 * Get localized site contact name.
+	 */
+	function getSiteContactName() {
+		return $this->getLocalizedData('contactName');
+	}
+
+	/**
 	 * Get site contact name.
+	 * @param $locale string
 	 * @return string
 	 */
-	function getContactName() {
-		return $this->getData('contactName');
+	function getContactName($locale) {
+		return $this->getData('contactName', $locale);
 	}
 	
 	/**
 	 * Set site contact name.
 	 * @param $contactName string
+	 * @param $locale string
 	 */
-	function setContactName($contactName) {
-		return $this->setData('contactName', $contactName);
+	function setContactName($contactName, $locale) {
+		return $this->setData('contactName', $contactName, $locale);
 	}
 	
 	/**
+	 * Get localized site contact email.
+	 */
+	function getSiteContactEmail() {
+		return $this->getLocalizedData('contactEmail');
+	}
+
+	/**
 	 * Get site contact email.
+	 * @param $locale string
 	 * @return string
 	 */
-	function getContactEmail() {
-		return $this->getData('contactEmail');
+	function getContactEmail($locale) {
+		return $this->getData('contactEmail', $locale);
 	}
 	
 	/**
 	 * Set site contact email.
 	 * @param $contactEmail string
+	 * @param $locale string
 	 */
-	function setContactEmail($contactEmail) {
-		return $this->setData('contactEmail', $contactEmail);
+	function setContactEmail($contactEmail, $locale) {
+		return $this->setData('contactEmail', $contactEmail, $locale);
 	}
 	
 	/**
@@ -183,16 +227,16 @@ class Site extends DataObject {
 	 * Get primary locale.
 	 * @return string
 	 */
-	function getLocale() {
-		return $this->getData('locale');
+	function getPrimaryLocale() {
+		return $this->getData('primaryLocale');
 	}
 	
 	/**
 	 * Set primary locale.
-	 * @param $locale string
+	 * @param $primaryLocale string
 	 */
-	function setLocale($locale) {
-		return $this->setData('locale', $locale);
+	function setPrimaryLocale($primaryLocale) {
+		return $this->setData('primaryLocale', $primaryLocale);
 	}
 	
 	/**
@@ -228,23 +272,11 @@ class Site extends DataObject {
 	function setSupportedLocales($supportedLocales) {
 		return $this->setData('supportedLocales', $supportedLocales);
 	}
-	
+
 	/**
-	 * Get whether working locales are used in user profiles or not.
+	 * Get the local name under which the site-wide locale file is stored.
 	 * @return string
 	 */
-	function getProfileLocalesEnabled() {
-		return $this->getData('profileLocalesEnabled');
-	}
-	
-	/**
-	 * Set whether working locales are used in user profiles or not.
-	 * @param $profileLocalesEnabled boolean
-	 */
-	function setProfileLocalesEnabled($profileLocalesEnabled) {
-		return $this->setData('profileLocalesEnabled', $profileLocalesEnabled);
-	}
-
 	function getSiteStyleFilename() {
 		return 'sitestyle.css';
 	}

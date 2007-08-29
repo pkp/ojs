@@ -42,16 +42,25 @@ function doSubmit() {
 {/if}
 
 <table class="data" width="100%">
+{if count($formLocales) > 1}
+	<tr valign="top">
+		<td width="20%" class="label">{fieldLabel name="formLocale" required="true" key="common.language"}</td>
+		<td width="80%" class="value">
+			{url|assign:"settingsUrl" op="editJournal" path=$journalId}
+			{form_language_chooser form="journal" url=$settingsUrl}
+		</td>
+	</tr>
+{/if}
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="title" key="manager.setup.journalTitle" required="true"}</td>
-		<td width="80%" class="value"><input type="text" id="title" name="title" value="{$title|escape}" size="40" maxlength="120" class="textField" /></td>
+		<td width="80%" class="value"><input type="text" id="title" name="title[{$formLocale|escape}]" value="{$title[$formLocale]|escape}" size="40" maxlength="120" class="textField" /></td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{fieldLabel name="description" key="admin.journals.journalDescription"}</td>
-		<td class="value"><textarea name="description" id="description" cols="40" rows="10" class="textArea">{$description|escape}</textarea></td>
+		<td class="value"><textarea name="description[{$formLocale|escape}]" id="description" cols="40" rows="10" class="textArea">{$description[$formLocale]|escape}</textarea></td>
 	</tr>
 	<tr valign="top">
-		<td class="label">{fieldLabel name="title" key="journal.path" required="true"}</td>
+		<td class="label">{fieldLabel name="path" key="journal.path" required="true"}</td>
 		<td class="value">
 			<input type="text" id="path" name="path" value="{$path|escape}" size="16" maxlength="32" class="textField" />
 			<br />

@@ -130,7 +130,7 @@ class SubscriptionHandler extends ManagerHandler {
 		$templateMgr->assign('searchField', $searchType);
 		$templateMgr->assign('searchMatch', $searchMatch);
 		$templateMgr->assign('search', $searchQuery);
-		$templateMgr->assign('searchInitial', $searchInitial);
+		$templateMgr->assign('searchInitial', Request::getUserVar('searchInitial'));
 
 		$templateMgr->assign('isJournalManager', true);
 
@@ -283,7 +283,11 @@ class SubscriptionHandler extends ManagerHandler {
 			}
 
 			$subscriptionTypeForm = &new SubscriptionTypeForm($subscriptionTypeId);
-			$subscriptionTypeForm->initData();
+			if ($subscriptionTypeForm->isLocaleResubmit()) {
+				$subscriptionTypeForm->readInputData();
+			} else {
+				$subscriptionTypeForm->initData();
+			}
 			$subscriptionTypeForm->display();
 		
 		} else {
@@ -371,7 +375,11 @@ class SubscriptionHandler extends ManagerHandler {
 		}
 
 		$subscriptionPolicyForm = &new SubscriptionPolicyForm();
-		$subscriptionPolicyForm->initData();
+		if ($subscriptionPolicyForm->isLocaleResubmit()) {
+			$subscriptionPolicyForm->readInputData();
+		} else {
+			$subscriptionPolicyForm->initData();
+		}
 		$subscriptionPolicyForm->display();
 	}
 	

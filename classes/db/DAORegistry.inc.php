@@ -83,6 +83,9 @@ class DAORegistry {
 			case 'ArticleEventLogDAO': return 'article.log.ArticleEventLogDAO';
 			case 'ArticleCommentDAO': return 'article.ArticleCommentDAO';
 			case 'ArticleDAO': return 'article.ArticleDAO';
+			case 'ArticleMetadataDAO': return 'article.ArticleMetadataDAO';
+			case 'AuthorMetadataDAO': return 'article.AuthorMetadataDAO';
+			case 'SuppFileMetadataDAO': return 'article.SuppFileMetadataDAO';
 			case 'ArticleFileDAO': return 'article.ArticleFileDAO';
 			case 'ArticleGalleyDAO': return 'article.ArticleGalleyDAO';
 			case 'ArticleNoteDAO': return 'article.ArticleNoteDAO';
@@ -97,6 +100,7 @@ class DAORegistry {
 			case 'IssueDAO': return 'issue.IssueDAO';
 			case 'JournalDAO': return 'journal.JournalDAO';
 			case 'CountryDAO': return 'user.CountryDAO';
+			case 'DisciplineDAO': return 'user.DisciplineDAO';
 			case 'JournalStatisticsDAO': return 'journal.JournalStatisticsDAO';
 			case 'JournalSettingsDAO': return 'journal.JournalSettingsDAO';
 			case 'SectionDAO': return 'journal.SectionDAO';

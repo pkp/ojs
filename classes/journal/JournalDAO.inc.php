@@ -18,14 +18,6 @@
 import ('journal.Journal');
 
 class JournalDAO extends DAO {
-
-	/**
-	 * Constructor.
-	 */
-	function JournalDAO() {
-		parent::DAO();
-	}
-	
 	/**
 	 * Retrieve a journal by ID.
 	 * @param $journalId int
@@ -72,11 +64,10 @@ class JournalDAO extends DAO {
 	function &_returnJournalFromRow(&$row) {
 		$journal = &new Journal();
 		$journal->setJournalId($row['journal_id']);
-		$journal->setTitle($row['title']);
-		$journal->setDescription($row['description']);
 		$journal->setPath($row['path']);
 		$journal->setSequence($row['seq']);
 		$journal->setEnabled($row['enabled']);
+		$journal->setPrimaryLocale($row['primary_locale']);
 		
 		HookRegistry::call('JournalDAO::_returnJournalFromRow', array(&$journal, &$row));
 
@@ -90,15 +81,14 @@ class JournalDAO extends DAO {
 	function insertJournal(&$journal) {
 		$this->update(
 			'INSERT INTO journals
-				(title, description, path, seq, enabled)
+				(path, seq, enabled, primary_locale)
 				VALUES
-				(?, ?, ?, ?, ?)',
+				(?, ?, ?, ?)',
 			array(
-				$journal->getTitle(),
-				$journal->getDescription(),
 				$journal->getPath(),
 				$journal->getSequence() == null ? 0 : $journal->getSequence(),
-				$journal->getEnabled() ? 1 : 0
+				$journal->getEnabled() ? 1 : 0,
+				$journal->getPrimaryLocale()
 			)
 		);
 		
@@ -114,18 +104,16 @@ class JournalDAO extends DAO {
 		return $this->update(
 			'UPDATE journals
 				SET
-					title = ?,
-					description = ?,
 					path = ?,
 					seq = ?,
-					enabled = ?
+					enabled = ?,
+					primary_locale = ?
 				WHERE journal_id = ?',
 			array(
-				$journal->getTitle(),
-				$journal->getDescription(),
 				$journal->getPath(),
 				$journal->getSequence(),
 				$journal->getEnabled() ? 1 : 0,
+				$journal->getPrimaryLocale(),
 				$journal->getJournalId()
 			)
 		);
@@ -217,17 +205,12 @@ class JournalDAO extends DAO {
 	function &getJournalTitles() {
 		$journals = array();
 		
-		$result = &$this->retrieve(
-			'SELECT journal_id, title FROM journals ORDER BY seq'
-		);
-		
-		while (!$result->EOF) {
-			$journalId = $result->fields[0];
-			$journals[$journalId] = $result->fields[1];
-			$result->moveNext();
+		$journalIterator =& $this->getJournals();
+		while ($journal =& $journalIterator->next()) {
+			$journals[$journal->getJournalId()] = $journal->getJournalTitle();
+			unset($journal);
 		}
-		$result->Close();
-		unset($result);
+		unset($journalIterator);
 	
 		return $journals;
 	}
@@ -239,17 +222,12 @@ class JournalDAO extends DAO {
 	function &getEnabledJournalTitles() {
 		$journals = array();
 		
-		$result = &$this->retrieve(
-			'SELECT journal_id, title FROM journals WHERE enabled=1 ORDER BY seq'
-		);
-		
-		while (!$result->EOF) {
-			$journalId = $result->fields[0];
-			$journals[$journalId] = $result->fields[1];
-			$result->moveNext();
+		$journalIterator =& $this->getEnabledJournals();
+		while ($journal =& $journalIterator->next()) {
+			$journals[$journal->getJournalId()] = $journal->getJournalTitle();
+			unset($journal);
 		}
-		$result->Close();
-		unset($result);
+		unset($journalIterator);
 	
 		return $journals;
 	}
@@ -303,7 +281,6 @@ class JournalDAO extends DAO {
 	function getInsertJournalId() {
 		return $this->getInsertId('journals', 'journal_id');
 	}
-	
 }
 
 ?>

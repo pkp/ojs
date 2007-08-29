@@ -32,7 +32,7 @@ class JournalSiteSettingsForm extends Form {
 		$this->journalId = isset($journalId) ? (int) $journalId : null;
 		
 		// Validation checks for this form
-		$this->addCheck(new FormValidator($this, 'title', 'required', 'admin.journals.form.titleRequired'));
+		$this->addCheck(new FormValidatorLocale($this, 'title', 'required', 'admin.journals.form.titleRequired'));
 		$this->addCheck(new FormValidator($this, 'path', 'required', 'admin.journals.form.pathRequired'));
 		$this->addCheck(new FormValidatorAlphaNum($this, 'path', 'required', 'admin.journals.form.pathAlphaNumeric'));
 		$this->addCheck(new FormValidatorCustom($this, 'path', 'required', 'admin.journals.form.pathExists', create_function('$path,$form,$journalDao', 'return !$journalDao->journalExistsByPath($path) || ($form->getData(\'oldPath\') != null && $form->getData(\'oldPath\') == $path);'), array(&$this, DAORegistry::getDAO('JournalDAO'))));
@@ -59,8 +59,8 @@ class JournalSiteSettingsForm extends Form {
 			
 			if ($journal != null) {
 				$this->_data = array(
-					'title' => $journal->getTitle(),
-					'description' => $journal->getDescription(),
+					'title' => $journal->getSetting('title', null), // Localized
+					'description' => $journal->getSetting('description', null), // Localized
 					'path' => $journal->getPath(),
 					'enabled' => $journal->getEnabled()
 				);
@@ -89,7 +89,15 @@ class JournalSiteSettingsForm extends Form {
 			$this->setData('oldPath', $journal->getPath());
 		}
 	}
-	
+
+	/**
+	 * Get a list of field names for which localized settings are used
+	 * @return array
+	 */
+	function getLocaleFieldNames() {
+		return array('title', 'description');
+	}
+
 	/**
 	 * Save journal settings.
 	 */
@@ -104,9 +112,7 @@ class JournalSiteSettingsForm extends Form {
 			$journal = &new Journal();
 		}
 		
-		$journal->setDescription($this->getData('description'));
 		$journal->setPath($this->getData('path'));
-		$journal->setTitle($this->getData('title'));
 		$journal->setEnabled($this->getData('enabled'));
 
 		if ($journal->getJournalId() != null) {
@@ -143,7 +149,7 @@ class JournalSiteSettingsForm extends Form {
 				'indexUrl' => Request::getIndexUrl(),
 				'journalPath' => $this->getData('path'),
 				'journalName' => $this->getData('title'),
-				'primaryLocale' => $site->getLocale()
+				'primaryLocale' => $site->getPrimaryLocale()
 			));
 
 			// Install the default RT versions.
@@ -155,16 +161,18 @@ class JournalSiteSettingsForm extends Form {
 			$sectionDao = &DAORegistry::getDAO('SectionDAO');
 			$section = &new Section();
 			$section->setJournalId($journal->getJournalId());
-			$section->setTitle(Locale::translate('section.default.title'));
-			$section->setAbbrev(Locale::translate('section.default.abbrev'));
+			$section->setTitle(Locale::translate('section.default.title'), $journal->getPrimaryLocale());
+			$section->setAbbrev(Locale::translate('section.default.abbrev'), $journal->getPrimaryLocale());
 			$section->setMetaIndexed(true);
-			$section->setPolicy(Locale::translate('section.default.policy'));
+			$section->setPolicy(Locale::translate('section.default.policy'), $journal->getPrimaryLocale());
 			$section->setEditorRestricted(false);
 			$section->setHideTitle(false);
 			$sectionDao->insertSection($section);
 
-			HookRegistry::call('JournalSiteSettingsForm::execute', array(&$this, &$journal, &$section));
 		}
+		$journal->updateSetting('title', $this->getData('title'), 'string', true);
+		$journal->updateSetting('description', $this->getData('description'), 'string', true);
+		HookRegistry::call('JournalSiteSettingsForm::execute', array(&$this, &$journal, &$section));
 	}
 	
 }

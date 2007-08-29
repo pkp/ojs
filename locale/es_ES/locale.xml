@@ -13,8 +13,8 @@
   *
   * locale.xml,v 1.1 2005/09/06 00:00:00 Sergio Ruiz Exp 
   * Traducción de la versión original 1.365 por Sergio Ruiz (sruiz@revistaesalud.com) - 2005/09/29    
-	* Traducción de la version original 1.482 por Juan Pablo Alperin (juan@geeky.net) - 2006/06/29
-    -->
+  * Traducción de la version original 1.482 por Juan Pablo Alperin (juan@geeky.net) - 2006/06/29
+  -->
  
 <locale name="es_ES" full_name="Español (España)">
 	<!--

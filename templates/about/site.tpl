@@ -18,7 +18,7 @@
 <h3>{translate key="journal.journals"}</h3>
 <ul class="plain">
 {iterate from=journals item=journal}
-	<li>&#187; <a href="{url journal=`$journal->getPath()` page="about" op="index"}">{$journal->getTitle()|escape}</a></li>
+	<li>&#187; <a href="{url journal=`$journal->getPath()` page="about" op="index"}">{$journal->getJournalTitle()|escape}</a></li>
 {/iterate}
 </ul>
 

@@ -18,7 +18,6 @@
 import('xml.XMLParser');
 
 class XMLDAO {
-
 	/**
 	 * Constructor.
 	 */

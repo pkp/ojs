@@ -52,27 +52,17 @@
 	  *
 	  -->
 	<table name="site">
-		<field name="title" type="C2" size="120">
-			<KEY/>
-			<DEFAULT VALUE="Open Journal Systems"/>
-		</field>
-		<field name="intro" type="X"/>
 		<field name="journal_redirect" type="I8">
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
 			<descr>If not 0, redirect to the specified journal site.</descr>
 		</field>
-		<field name="about" type="X"/>
-		<field name="contact_name" type="C2" size="90"/>
-		<field name="contact_email" type="C2" size="90"/>
+		<field name="primary_locale" type="C2" size="5">
+			<NOTNULL/>
+		</field>
 		<field name="min_password_length" type="I1">
 			<NOTNULL/>
 			<DEFAULT VALUE="6"/>
-		</field>
-		<field name="locale" type="C2" size="5">
-			<NOTNULL/>
-			<DEFAULT VALUE="en_US"/>
-			<descr>Primary locale for the site.</descr>
 		</field>
 		<field name="installed_locales" type="C2" size="255">
 			<NOTNULL/>
@@ -82,15 +72,30 @@
 		<field name="supported_locales" type="C2" size="255">
 			<descr>Locales supported by the site (for hosted journals).</descr>
 		</field>
-		<field name="profile_locales" type="I1">
-			<NOTNULL/>
-			<DEFAULT VALUE="0"/>
-			<descr>Allow users to select their working languages in their user profile.</descr>
-		</field>
 		<field name="original_style_file_name" type="C2" size="255"/>
 		<descr>Common site settings.</descr>
 	</table>
 	
+	<!--
+	  *
+	  * TABLE site_settings
+	  *
+	  -->
+	<table name="site_settings">
+		<field name="setting_name" type="C2" size="255">
+			<KEY/>
+		</field>
+		<field name="locale" type="C2" size="5">
+			<KEY/>
+		</field>
+		<field name="setting_value" type="X"/>
+		<field name="setting_type" type="C2" size="6">
+			<NOTNULL/>
+			<descr>(bool|int|float|string|object)</descr>
+		</field>
+		<descr>Site settings.</descr>
+	</table>
+
 	<!--
 	  *
 	  * TABLE scheduled_tasks
@@ -120,6 +125,7 @@
 		<field name="password" type="C2" size="40">
 			<NOTNULL/>
 		</field>
+		<field name="salutation" type="C2" size="40"/>
 		<field name="first_name" type="C2" size="40">
 			<NOTNULL/>
 		</field>
@@ -127,7 +133,8 @@
 		<field name="last_name" type="C2" size="90">
 			<NOTNULL/>
 		</field>
-		<field name="signature" type="X"/>
+		<field name="gender" type="C" size="1"/>
+		<field name="discipline" type="C2" size="255"/>
 		<field name="initials" type="C2" size="5"/>
 		<field name="affiliation" type="C2" size="255"/>
 		<field name="email" type="C2" size="90">
@@ -138,8 +145,6 @@
 		<field name="fax" type="C2" size="24"/>
 		<field name="mailing_address" type="C2" size="255"/>
 		<field name="country" type="C2" size="90"/>
-		<field name="biography" type="X"/>
-		<field name="interests" type="C2" size="255"/>
 		<field name="locales" type="C2" size="255"/>
 		<field name="date_last_email" type="T"/>
 		<field name="date_registered" type="T">
@@ -173,23 +178,21 @@
 	  *
 	  -->
 	<table name="user_settings">
-		<field name="setting_id" type="I8">
-			<KEY/>
-			<AUTOINCREMENT/>
-		</field>
 		<field name="user_id" type="I8">
-			<NOTNULL/>
+			<KEY/>
+		</field>
+		<field name="locale" type="C2" size="5">
+			<KEY/>
 		</field>
 		<field name="setting_name" type="C2" size="255">
-			<NOTNULL/>
+			<KEY/>
 		</field>
 		<field name="journal_id" type="I8"/>
 		<field name="setting_value" type="X"/>
 		<field name="setting_type" type="C2" size="6">
 			<NOTNULL/>
-			<descr>(bool|int|float|string|object)</descr>
 		</field>
-		<descr>User settings.</descr>
+		<descr>Locale-specific user data</descr>
 		<index name="user_settings_user_id">
 			<col>user_id</col>
 		</index>
@@ -265,16 +268,15 @@
 			<KEY/>
 			<AUTOINCREMENT/>
 		</field>
-		<field name="title" type="C2" size="255">
-			<NOTNULL/>
-		</field>
-		<field name="description" type="X"/>
 		<field name="path" type="C2" size="32">
 			<NOTNULL/>
 		</field>
 		<field name="seq" type="F">
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
+		</field>
+		<field name="primary_locale" type="C2" size="5">
+			<NOTNULL/>
 		</field>
 		<field name="enabled" type="I1">
 			<NOTNULL/>
@@ -294,6 +296,9 @@
 	  -->
 	<table name="journal_settings">
 		<field name="journal_id" type="I8">
+			<KEY/>
+		</field>
+		<field name="locale" type="C2" size="5">
 			<KEY/>
 		</field>
 		<field name="setting_name" type="C2" size="255">
@@ -317,6 +322,9 @@
 	  -->
 	<table name="plugin_settings">
 		<field name="plugin_name" type="C2" size="80">
+			<KEY/>
+		</field>
+		<field name="locale" type="C2" size="5">
 			<KEY/>
 		</field>
 		<field name="journal_id" type="I8">
@@ -385,14 +393,6 @@
 		<field name="journal_id" type="I8">
 			<NOTNULL/>
 		</field>
-		<field name="title" type="C2" size="120">
-			<NOTNULL/>
-		</field>
-		<field name="title_alt1" type="C2" size="120"/>
-		<field name="title_alt2" type="C2" size="120"/>
-		<field name="abbrev" type="C2" size="20"/>
-		<field name="abbrev_alt1" type="C2" size="20"/>
-		<field name="abbrev_alt2" type="C2" size="20"/>
 		<field name="seq" type="F">
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
@@ -413,7 +413,6 @@
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
 		</field>
-		<field name="identify_type" type="C2" size="60"/>
 		<field name="hide_title" type="I1">
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
@@ -422,10 +421,34 @@
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
 		</field>
-		<field name="policy" type="X"/>
 		<descr>Journal sections.</descr>
 		<index name="sections_journal_id">
 			<col>journal_id</col>
+		</index>
+	</table>
+	
+	<!--
+	  *
+	  * TABLE section_settings
+	  *
+	  -->
+	<table name="section_settings">
+		<field name="section_id" type="I8">
+			<KEY/>
+		</field>
+		<field name="locale" type="C2" size="5">
+			<KEY/>
+		</field>
+		<field name="setting_name" type="C2" size="255">
+			<KEY/>
+		</field>
+		<field name="setting_value" type="X"/>
+		<field name="setting_type" type="C2" size="6">
+			<NOTNULL/>
+		</field>
+		<descr>Section-specific settings</descr>
+		<index name="section_settings_section_id">
+			<col>section_id</col>
 		</index>
 	</table>
 	
@@ -477,7 +500,6 @@
 		<field name="journal_id" type="I8">
 			<NOTNULL/>
 		</field>
-		<field name="title" type="C2" size="120"/>
 		<field name="volume" type="I2"/>
 		<field name="number" type="I2"/>
 		<field name="year" type="I2"/>
@@ -496,7 +518,6 @@
 			<DEFAULT VALUE="1"/>
 		</field>
 		<field name="open_access_date" type="T"/>
-		<field name="description" type="X"/>
 		<field name="public_issue_id" type="C2" size="255"/>
 		<field name="show_volume" type="I1">
 			<NOTNULL/>
@@ -514,15 +535,6 @@
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
 		</field>
-		<field name="file_name" type="C2" size="90"/>
-		<field name="original_file_name" type="C2" size="127"/>
-		<field name="width" type="I2"/>
-		<field name="height" type="I2"/>
-		<field name="cover_page_description" type="X"/>
-		<field name="show_cover_page" type="I1">
-			<NOTNULL/>
-			<DEFAULT VALUE="0"/>
-		</field>
 		<field name="style_file_name" type="C2" size="90"/>
 		<field name="original_style_file_name" type="C2" size="255"/>
 		<descr>Journal issues.</descr>
@@ -534,6 +546,35 @@
 		</index>
 	</table>
 
+	<!--
+	  *
+	  * TABLE issue_settings
+	  *
+	  -->
+	<table name="issue_settings">
+		<field name="issue_id" type="I8">
+			<KEY/>
+		</field>
+		<field name="locale" type="C2" size="5">
+			<KEY/>
+		</field>
+		<field name="setting_name" type="C2" size="255">
+			<KEY/>
+		</field>
+		<field name="setting_value" type="X"/>
+		<field name="setting_type" type="C2" size="6">
+			<NOTNULL/>
+		</field>
+		<descr>Locale-specific issue data</descr>
+		<index name="issue_settings_issue_id">
+			<col>section_id</col>
+		</index>
+	</table>
+
+	<!--
+	  * TABLE custom_issue_orders
+	  *
+	  -->
 	<table name="custom_issue_orders">
 		<field name="issue_id" type="I8">
 			<KEY/>
@@ -579,25 +620,9 @@
 			<NOTNULL/>
 		</field>
 		<field name="section_id" type="I8" />
-		<field name="title" type="C2" size="255">
-			<NOTNULL/>
-		</field>
-		<field name="title_alt1" type="C2" size="255"/>
-		<field name="title_alt2" type="C2" size="255"/>
-		<field name="abstract" type="X"/>
-		<field name="abstract_alt1" type="X"/>
-		<field name="abstract_alt2" type="X"/>
-		<field name="discipline" type="C2" size="255"/>
-		<field name="subject_class" type="C2" size="255"/>
-		<field name="subject" type="C2" size="255"/>
-		<field name="coverage_geo" type="C2" size="255"/>
-		<field name="coverage_chron" type="C2" size="255"/>
-		<field name="coverage_sample" type="C2" size="255"/>
-		<field name="type" type="C2" size="255"/>
 		<field name="language" type="C2" size="10">
 			<DEFAULT VALUE="en"/>
 		</field>
-		<field name="sponsor" type="C2" size="255"/>
 		<field name="comments_to_ed" type="X"/>
 		<field name="date_submitted" type="T"/>
 		<field name="last_modified" type="T"/>
@@ -632,6 +657,32 @@
 		</index>
 	</table>
 	
+	<!--
+	  *
+	  * TABLE article_settings
+	  *
+	  -->
+	<table name="article_settings">
+		<field name="article_id" type="I8">
+			<KEY/>
+		</field>
+		<field name="locale" type="C2" size="5">
+			<KEY/>
+		</field>
+		<field name="setting_name" type="C2" size="255">
+			<KEY/>
+		</field>
+		<field name="setting_value" type="X"/>
+		<field name="setting_type" type="C2" size="6">
+			<NOTNULL/>
+			<descr>(bool|int|float|string|object)</descr>
+		</field>
+		<descr>Journal article metadata.</descr>
+		<index name="article_settings_article_id">
+			<col>article_id</col>
+		</index>
+	</table>
+
 	<!--
 	  *
 	  * TABLE published_articles
@@ -726,6 +777,14 @@
 		<field name="article_id" type="I8">
 			<NOTNULL/>
 		</field>
+		<field name="primary_contact" type="I1">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
+		<field name="seq" type="F">
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
+		</field>
 		<field name="first_name" type="C2" size="40">
 			<NOTNULL/>
 		</field>
@@ -739,21 +798,38 @@
 			<NOTNULL/>
 		</field>
 		<field name="url" type="C2" size="255"/>
-		<field name="biography" type="X"/>
-		<field name="primary_contact" type="I1">
-			<NOTNULL/>
-			<DEFAULT VALUE="0"/>
-		</field>
-		<field name="seq" type="F">
-			<NOTNULL/>
-			<DEFAULT VALUE="0"/>
-		</field>
 		<descr>Author metadata for articles.</descr>
 		<index name="article_authors_article_id">
 			<col>article_id</col>
 		</index>
 	</table>
 	
+	<!--
+	  *
+	  * TABLE article_author_settings
+	  *
+	  -->
+	<table name="article_author_settings">
+		<field name="author_id" type="I8">
+			<KEY/>
+		</field>
+		<field name="locale" type="C2" size="5">
+			<KEY/>
+		</field>
+		<field name="setting_name" type="C2" size="255">
+			<KEY/>
+		</field>
+		<field name="setting_value" type="X"/>
+		<field name="setting_type" type="C2" size="6">
+			<NOTNULL/>
+			<descr>(bool|int|float|string|object)</descr>
+		</field>
+		<descr>Language dependent author metadata.</descr>
+		<index name="article_author_settings_author_id">
+			<col>author_id</col>
+		</index>
+	</table>
+
 	<!--
 	  *
 	  * TABLE article_files
@@ -805,6 +881,11 @@
 		</index>
 	</table>
 	
+	<!--
+	  *
+	  * TABLE article_supplementary_files
+	  *
+	  -->
 	<table name="article_supplementary_files">
 		<field name="supp_id" type="I8">
 			<KEY/>
@@ -816,20 +897,10 @@
 		<field name="article_id" type="I8">
 			<NOTNULL/>
 		</field>
-		<field name="public_supp_file_id" type="C2" size="255"/>
-		<field name="title" type="C2" size="255"/>
-		<field name="creator" type="C2" size="255"/>
-		<field name="subject" type="C2" size="255"/>
 		<field name="type" type="C2" size="255"/>
-		<field name="type_other" type="C2" size="255"/>
-		<field name="description" type="X"/>
-		<field name="publisher" type="C2" size="255"/>
-		<field name="sponsor" type="C2" size="255"/>
+		<field name="language" type="C2" size="10"/>
+		<field name="public_supp_file_id" type="C2" size="255"/>
 		<field name="date_created" type="D"/>
-		<field name="source" type="C2" size="255"/>
-		<field name="language" type="C2" size="10">
-			<DEFAULT VALUE="en"/>
-		</field>
 		<field name="show_reviewers" type="I1">
 			<DEFAULT VALUE="0"/>
 		</field>
@@ -847,8 +918,34 @@
 		<index name="article_supplementary_files_article_id">
 			<col>article_id</col>
 		</index>
-		<index name="issues_public_issue_id">
-			<col>public_issue_id</col>
+		<index name="supp_public_supp_file_id">
+			<col>public_supp_file_id</col>
+		</index>
+	</table>
+
+	<!--
+	  *
+	  * TABLE article_supplementary_file_settings
+	  *
+	  -->
+	<table name="article_supp_file_settings">
+		<field name="supp_id" type="I8">
+			<KEY/>
+		</field>
+		<field name="locale" type="C2" size="5">
+			<KEY/>
+		</field>
+		<field name="setting_name" type="C2" size="255">
+			<KEY/>
+		</field>
+		<field name="setting_value" type="X"/>
+		<field name="setting_type" type="C2" size="6">
+			<NOTNULL/>
+			<descr>(bool|int|float|string|object|date)</descr>
+		</field>
+		<descr>Article supplementary file metadata.</descr>
+		<index name="article_supp_file_settings_supp_id">
+			<col>supp_id</col>
 		</index>
 	</table>
 
@@ -1121,6 +1218,7 @@
 			<KEY/>
 			<AUTOINCREMENT/>
 		</field>
+		<field name="locale" type="C2" size="5"/>
 		<field name="article_id" type="I8">
 			<NOTNULL/>
 		</field>
@@ -1624,10 +1722,6 @@
 		<field name="journal_id" type="I8">
 			<NOTNULL/>
 		</field>
-		<field name="type_name" type="C2" size="80">
-			<NOTNULL/>
-		</field>
-		<field name="description" type="X"/>
 		<field name="cost" type="F">
 			<NOTNULL/>
 		</field>
@@ -1655,10 +1749,30 @@
 			<NOTNULL/>
 		</field>
 		<descr>Subscription types.</descr>
-		<index name="subscription_types_journal_id">
-			<col>journal_id</col>
-			<col>type_name</col>
-			<UNIQUE/>
+	</table>
+
+	<!--
+	  *
+	  * TABLE subscription_type_settings
+	  *
+	  -->
+	<table name="subscription_type_settings">
+		<field name="type_id" type="I8">
+			<KEY/>
+		</field>
+		<field name="locale" type="C2" size="5">
+			<KEY/>
+		</field>
+		<field name="setting_name" type="C2" size="255">
+			<KEY/>
+		</field>
+		<field name="setting_value" type="X"/>
+		<field name="setting_type" type="C2" size="6">
+			<NOTNULL/>
+		</field>
+		<descr>Locale-specific subscription type data</descr>
+		<index name="subscription_type_settings_type_id">
+			<col>type_id</col>
 		</index>
 	</table>
 
@@ -1714,12 +1828,34 @@
 		<field name="journal_id" type="I8">
 			<NOTNULL/>
 		</field>
-		<field name="type_name" type="C2" size="80">
-			<NOTNULL/>
-		</field>
 		<descr>Journal announcement types.</descr>
 		<index name="announcement_types_journal_id">
 			<col>journal_id</col>
+		</index>
+	</table>
+
+	<!-- 
+	  *
+	  * TABLE announcement_type_settings
+	  *
+	 -->
+	<table name="announcement_type_settings">
+		<field name="type_id" type="I8">
+			<KEY/>
+		</field>
+		<field name="locale" type="C2" size="5">
+			<KEY/>
+		</field>
+		<field name="setting_name" type="C2" size="255">
+			<KEY/>
+		</field>
+		<field name="setting_value" type="X"/>
+		<field name="setting_type" type="C2" size="6">
+			<NOTNULL/>
+		</field>
+		<descr>Language dependent journal announcement type data.</descr>
+		<index name="announcement_type_settings_type_id">
+			<col>type_id</col>
 		</index>
 	</table>
 
@@ -1737,24 +1873,38 @@
 			<NOTNULL/>
 		</field>
 		<field name="type_id" type="I8"/>
-		<field name="title" type="C2" size="255">
-			<NOTNULL/>
-		</field>
-		<field name="description_short" type="X">
-			<NOTNULL/>
-			<DEFAULT VALUE=""/>
-		</field>
-		<field name="description" type="X">
-			<NOTNULL/>
-			<DEFAULT VALUE=""/>
-		</field>
 		<field name="date_expire" type="T"/>
 		<field name="date_posted" type="T">
 			<NOTNULL/>
 		</field>
-		<descr>Journal announcements.</descr>
+		<descr>Journal announcements</descr>
 		<index name="announcements_journal_id">
 			<col>journal_id</col>
+		</index>
+	</table>
+
+	<!-- 
+	  *
+	  * TABLE announcement_settings
+	  *
+	 -->
+	<table name="announcement_settings">
+		<field name="announcement_id" type="I8">
+			<KEY/>
+		</field>
+		<field name="locale" type="C2" size="5">
+			<KEY/>
+		</field>
+		<field name="setting_name" type="C2" size="255">
+			<KEY/>
+		</field>
+		<field name="setting_value" type="X"/>
+		<field name="setting_type" type="C2" size="6">
+			<NOTNULL/>
+		</field>
+		<descr>Language dependent journal announcement data.</descr>
+		<index name="announcement_settings_announcement_id">
+			<col>announcement_id</col>
 		</index>
 	</table>
 
@@ -1855,11 +2005,6 @@
 		<field name="journal_id" type="I8">
 			<NOTNULL/>
 		</field>
-		<field name="title" type="C2" size="255">
-			<NOTNULL/>
-		</field>
-		<field name="title_alt1" type="C2" size="255"/>
-		<field name="title_alt2" type="C2" size="255"/>
 		<field name="about_displayed" type="I1">
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
@@ -1873,6 +2018,31 @@
 		</index>
 	</table>
 
+	<!-- 
+	  *
+	  * TABLE group_settings
+	  *
+	 -->
+	<table name="group_settings">
+		<field name="group_id" type="I8">
+			<KEY/>
+		</field>
+		<field name="locale" type="C2" size="5">
+			<KEY/>
+		</field>
+		<field name="setting_name" type="C2" size="255">
+			<KEY/>
+		</field>
+		<field name="setting_value" type="X"/>
+		<field name="setting_type" type="C2" size="6">
+			<NOTNULL/>
+		</field>
+		<descr>Language dependent group data.</descr>
+		<index name="group_settings_group_id">
+			<col>group_id</col>
+		</index>
+	</table>
+	
 	<!-- 
 	  *
 	  * TABLE group_memberships

@@ -30,14 +30,14 @@
 {iterate from=announcements item=announcement}
 	<tr valign="top">
 	{if $announcement->getTypeId() != null}
-		<td width="80%"><h4>{$announcement->getTypeName()}: {$announcement->getTitle()}</h4></td>
+		<td width="80%"><h4>{$announcement->getAnnouncementTypeName()}: {$announcement->getAnnouncementTitle()}</h4></td>
 	{else}
-		<td width="80%"><h4>{$announcement->getTitle()}</h4></td>
+		<td width="80%"><h4>{$announcement->getAnnouncementTitle()}</h4></td>
 	{/if}
 		<td width="20%">&nbsp;</td>
 	</tr>
 	<tr valign="top">
-		<td>{$announcement->getDescriptionShort()|nl2br}</td>
+		<td>{$announcement->getAnnouncementDescriptionShort()|nl2br}</td>
 		<td valign="bottom" align="right"><a href="{url op="view" path=$announcement->getAnnouncementId()}">{translate key="announcement.viewLink"}</a></td>
 	</tr>
 	<tr>

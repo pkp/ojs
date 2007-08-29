@@ -18,15 +18,6 @@
 import('file.TemporaryFile');
 
 class TemporaryFileDAO extends DAO {
-
-
-	/**
-	 * Constructor.
-	 */
-	function TemporaryFileDAO() {
-		parent::DAO();
-	}
-	
 	/**
 	 * Retrieve a temporary file by ID.
 	 * @param $fileId int
@@ -175,7 +166,6 @@ class TemporaryFileDAO extends DAO {
 	function getInsertTemporaryFileId() {
 		return $this->getInsertId('temporary_files', 'file_id');
 	}
-	
 }
 
 ?>

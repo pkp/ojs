@@ -45,10 +45,19 @@ class SuppFileForm extends Form {
 		}
 		
 		// Validation checks for this form
-		$this->addCheck(new FormValidator($this, 'title', 'required', 'author.submit.suppFile.form.titleRequired'));
+		$this->addCheck(new FormValidatorLocale($this, 'title', 'required', 'author.submit.suppFile.form.titleRequired'));
 		$this->addCheck(new FormValidatorPost($this));
 	}
 	
+	/**
+	 * Get the names of fields for which data should be localized
+	 * @return array
+	 */
+	function getLocaleFieldNames() {
+		$suppFileDao =& DAORegistry::getDAO('SuppFileDAO');
+		return $suppFileDao->getLocaleFieldNames();
+	}
+
 	/**
 	 * Display the form.
 	 */
@@ -101,7 +110,7 @@ class SuppFileForm extends Form {
 
 		$publicSuppFileId = $this->getData('publicSuppFileId');
 		if ($publicSuppFileId && $suppFileDao->suppFileExistsByPublicId($publicSuppFileId, $this->suppFileId, $journal->getJournalId())) {
-			$this->addError('publicIssueId', 'author.suppFile.suppFilePublicIdentificationExists');
+			$this->addError('publicIssueId', Locale::translate('author.suppFile.suppFilePublicIdentificationExists'));
 			$this->addErrorField('publicSuppFileId');
 		}
 
@@ -115,16 +124,16 @@ class SuppFileForm extends Form {
 		if (isset($this->suppFile)) {
 			$suppFile = &$this->suppFile;
 			$this->_data = array(
-				'title' => $suppFile->getTitle(),
-				'creator' => $suppFile->getCreator(),
-				'subject' => $suppFile->getSubject(),
+				'title' => $suppFile->getTitle(null), // Localized
+				'creator' => $suppFile->getCreator(null), // Localized
+				'subject' => $suppFile->getSubject(null), // Localized
 				'type' => $suppFile->getType(),
-				'typeOther' => $suppFile->getTypeOther(),
-				'description' => $suppFile->getDescription(),
-				'publisher' => $suppFile->getPublisher(),
-				'sponsor' => $suppFile->getSponsor(),
+				'typeOther' => $suppFile->getTypeOther(null), // Localized
+				'description' => $suppFile->getDescription(null), // Localized
+				'publisher' => $suppFile->getPublisher(null), // Localized
+				'sponsor' => $suppFile->getSponsor(null), // Localized
 				'dateCreated' => $suppFile->getDateCreated(),
-				'source' => $suppFile->getSource(),
+				'source' => $suppFile->getSource(null), // Localized
 				'language' => $suppFile->getLanguage(),
 				'showReviewers' => $suppFile->getShowReviewers()==1?1:0,
 				'publicSuppFileId' => $suppFile->getPublicSuppFileId()
@@ -217,16 +226,16 @@ class SuppFileForm extends Form {
 	 * @param $suppFile SuppFile
 	 */
 	function setSuppFileData(&$suppFile) {
-		$suppFile->setTitle($this->getData('title'));
-		$suppFile->setCreator($this->getData('creator'));
-		$suppFile->setSubject($this->getData('subject'));
+		$suppFile->setTitle($this->getData('title'), null); // Localized
+		$suppFile->setCreator($this->getData('creator'), null); // Localized
+		$suppFile->setSubject($this->getData('subject'), null); // Localized
 		$suppFile->setType($this->getData('type'));
-		$suppFile->setTypeOther($this->getData('typeOther'));
-		$suppFile->setDescription($this->getData('description'));
-		$suppFile->setPublisher($this->getData('publisher'));
-		$suppFile->setSponsor($this->getData('sponsor'));
+		$suppFile->setTypeOther($this->getData('typeOther'), null); // Localized
+		$suppFile->setDescription($this->getData('description'), null); // Localized
+		$suppFile->setPublisher($this->getData('publisher'), null); // Localized
+		$suppFile->setSponsor($this->getData('sponsor'), null); // Localized
 		$suppFile->setDateCreated($this->getData('dateCreated') == '' ? Core::getCurrentDate() : $this->getData('dateCreated'));
-		$suppFile->setSource($this->getData('source'));
+		$suppFile->setSource($this->getData('source'), null); // Localized
 		$suppFile->setLanguage($this->getData('language'));
 		$suppFile->setShowReviewers($this->getData('showReviewers')==1?1:0);
 		$suppFile->setPublicSuppFileId($this->getData('publicSuppFileId'));

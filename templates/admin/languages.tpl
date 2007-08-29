@@ -43,17 +43,6 @@
 		<span class="instruct">{translate key="admin.languages.supportedLocalesInstructions"}</span>
 	</td>
 </tr>
-<tr valign="top">
-	<td class="label">{translate key="admin.languages.languageOptions"}</td>
-	<td class="value">
-		<table width="100%">
-		<tr valign="top">
-			<td width="5%"><input type="checkbox" name="profileLocalesEnabled" id="profileLocalesEnabled" value="1"{if $profileLocalesEnabled} checked="checked"{/if} /></td>
-			<td width="95%"><label for="profileLocalesEnabled">{translate key="admin.languages.profileLocales"}</label></td>
-		</tr>
-		</table>
-	</td>
-</tr>
 </table>
 
 <p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url page="admin" escape=false}'" /></p>

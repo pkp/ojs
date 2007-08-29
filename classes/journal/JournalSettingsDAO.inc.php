@@ -16,13 +16,6 @@
  */
 
 class JournalSettingsDAO extends DAO {
-	/**
-	 * Constructor.
-	 */
-	function JournalSettingsDAO() {
-		parent::DAO();
-	}
-
 	function &_getCache($journalId) {
 		static $settingCache;
 		if (!isset($settingCache)) {
@@ -42,12 +35,21 @@ class JournalSettingsDAO extends DAO {
 	/**
 	 * Retrieve a journal setting value.
 	 * @param $journalId int
-	 * @param $name
+	 * @param $name string
+	 * @param $locale string optional
 	 * @return mixed
 	 */
-	function &getSetting($journalId, $name) {
+	function &getSetting($journalId, $name, $locale = null) {
 		$cache =& $this->_getCache($journalId);
 		$returner = $cache->get($name);
+		if ($locale !== null) {
+			if (!isset($returner[$locale]) || !is_array($returner)) {
+				unset($returner);
+				$returner = null;
+				return $returner;
+			}
+			return $returner[$locale];
+		}
 		return $returner;
 	}
 
@@ -70,7 +72,7 @@ class JournalSettingsDAO extends DAO {
 		$journalSettings = array();
 		
 		$result = &$this->retrieve(
-			'SELECT setting_name, setting_value, setting_type FROM journal_settings WHERE journal_id = ?', $journalId
+			'SELECT setting_name, setting_value, setting_type, locale FROM journal_settings WHERE journal_id = ?', $journalId
 		);
 		
 		if ($result->RecordCount() == 0) {
@@ -81,25 +83,9 @@ class JournalSettingsDAO extends DAO {
 		} else {
 			while (!$result->EOF) {
 				$row = &$result->getRowAssoc(false);
-				switch ($row['setting_type']) {
-					case 'bool':
-						$value = (bool) $row['setting_value'];
-						break;
-					case 'int':
-						$value = (int) $row['setting_value'];
-						break;
-					case 'float':
-						$value = (float) $row['setting_value'];
-						break;
-					case 'object':
-						$value = unserialize($row['setting_value']);
-						break;
-					case 'string':
-					default:
-						$value = $row['setting_value'];
-						break;
-				}
-				$journalSettings[$row['setting_name']] = $value;
+				$value = $this->convertFromDB($row['setting_value'], $row['setting_type']);
+				if ($row['locale'] == '') $journalSettings[$row['setting_name']] = $value;
+				else $journalSettings[$row['setting_name']][$row['locale']] = $value;
 				$result->MoveNext();
 			}
 			$result->close();
@@ -118,70 +104,40 @@ class JournalSettingsDAO extends DAO {
 	 * @param $name string
 	 * @param $value mixed
 	 * @param $type string data type of the setting. If omitted, type will be guessed
+	 * @param $isLocalized boolean
 	 */
-	function updateSetting($journalId, $name, $value, $type = null) {
+	function updateSetting($journalId, $name, $value, $type = null, $isLocalized = false) {
 		$cache =& $this->_getCache($journalId);
 		$cache->setCache($name, $value);
-		
-		if ($type == null) {
-			switch (gettype($value)) {
-				case 'boolean':
-				case 'bool':
-					$type = 'bool';
-					break;
-				case 'integer':
-				case 'int':
-					$type = 'int';
-					break;
-				case 'double':
-				case 'float':
-					$type = 'float';
-					break;
-				case 'array':
-				case 'object':
-					$type = 'object';
-					break;
-				case 'string':
-				default:
-					$type = 'string';
-					break;
-			}
-		}
-		
-		if ($type == 'object') {
-			$value = serialize($value);
-			
-		} else if ($type == 'bool') {
-			$value = isset($value) && $value ? 1 : 0;
-		}
-		
-		$result = $this->retrieve(
-			'SELECT COUNT(*) FROM journal_settings WHERE journal_id = ? AND setting_name = ?',
-			array($journalId, $name)
-		);
-		
-		if ($result->fields[0] == 0) {
-			$returner = $this->update(
-				'INSERT INTO journal_settings
-					(journal_id, setting_name, setting_value, setting_type)
-					VALUES
-					(?, ?, ?, ?)',
-				array($journalId, $name, $value, $type)
+
+		$keyFields = array('setting_name', 'locale', 'journal_id');
+
+		if (!$isLocalized) {
+			$value = $this->convertToDB($value, $type);
+			$this->replace('journal_settings',
+				array(
+					'journal_id' => $journalId,
+					'setting_name' => $name,
+					'setting_value' => $value,
+					'setting_type' => $type,
+					'locale' => ''
+				),
+				$keyFields
 			);
 		} else {
-			$returner = $this->update(
-				'UPDATE journal_settings SET
-					setting_value = ?,
-					setting_type = ?
-					WHERE journal_id = ? AND setting_name = ?',
-				array($value, $type, $journalId, $name)
-			);
+			$this->update('DELETE FROM journal_settings WHERE journal_id = ? AND setting_name = ?', array($journalId, $name));
+			if (is_array($value)) foreach ($value as $locale => $localeValue) {
+				if (empty($localeValue)) continue;
+				$type = null;
+				$this->update('INSERT INTO journal_settings
+					(journal_id, setting_name, setting_value, setting_type, locale)
+					VALUES (?, ?, ?, ?, ?)',
+					array(
+						$journalId, $name, $this->convertToDB($localeValue, $type), $type, $locale
+					)
+				);
+			}
 		}
-
-		$result->Close();
-		unset($result);
-
-		return $returner;
 	}
 	
 	/**
@@ -189,14 +145,18 @@ class JournalSettingsDAO extends DAO {
 	 * @param $journalId int
 	 * @param $name string
 	 */
-	function deleteSetting($journalId, $name) {
+	function deleteSetting($journalId, $name, $locale = null) {
 		$cache =& $this->_getCache($journalId);
 		$cache->setCache($name, null);
+
+		$params = array($journalId, $name);
+		$sql = 'DELETE FROM journal_settings WHERE journal_id = ? AND setting_name = ?';
+		if ($locale !== null) {
+			$params[] = $locale;
+			$sql .= ' AND locale = ?';
+		}
 		
-		return $this->update(
-			'DELETE FROM journal_settings WHERE journal_id = ? AND setting_name = ?',
-			array($journalId, $name)
-		);
+		return $this->update($sql, $params);
 	}
 	
 	/**

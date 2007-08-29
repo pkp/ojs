@@ -17,7 +17,9 @@
 import("manager.form.setup.JournalSetupForm");
 
 class JournalSetupStep2Form extends JournalSetupForm {
-	
+	/**
+	 * Constructor.
+	 */
 	function JournalSetupStep2Form() {
 		parent::JournalSetupForm(
 			2,
@@ -47,6 +49,17 @@ class JournalSetupStep2Form extends JournalSetupForm {
 		$this->addCheck(new FormValidatorEmail($this, 'envelopeSender', 'optional', 'user.profile.form.emailRequired'));
 	}
 
+	/**
+	 * Get the list of field names for which localized settings are used.
+	 * @return array
+	 */
+	function getLocaleFieldNames() {
+		return array('focusScopeDesc', 'reviewPolicy', 'reviewGuidelines', 'privacyStatement', 'customAboutItems', 'lockssLicense');
+	}
+
+	/**
+	 * Display the form.
+	 */
 	function display() {
 		$templateMgr = &TemplateManager::getManager();
 		if (Config::getVar('general', 'scheduled_tasks'))

@@ -20,9 +20,6 @@ class CreateReviewerForm extends Form {
 	/** @var int The article this form is for */
 	var $articleId;
 
-	/** @var boolean Include a user's working languages in their profile */
-	var $profileLocalesEnabled;
-	
 	/**
 	 * Constructor.
 	 */
@@ -31,7 +28,6 @@ class CreateReviewerForm extends Form {
 		$this->addCheck(new FormValidatorPost($this));
 		
 		$site = &Request::getSite();
-		$this->profileLocalesEnabled = $site->getProfileLocalesEnabled();
 		$this->articleId = $articleId;
 		
 		// Validation checks for this form
@@ -52,6 +48,10 @@ class CreateReviewerForm extends Form {
 		$this->setData('sendNotify', ($reviewerAccessKeysEnabled || $isEmailBasedReview)?false:true);
 	}
 	
+	function getLocaleFieldNames() {
+		return array('biography', 'interests');
+	}
+
 	/**
 	 * Display the form.
 	 */
@@ -59,15 +59,17 @@ class CreateReviewerForm extends Form {
 		$templateMgr = &TemplateManager::getManager();
 		$site = &Request::getSite();
 		$templateMgr->assign('articleId', $this->articleId);
-		$templateMgr->assign('profileLocalesEnabled', $this->profileLocalesEnabled);
-		if ($this->profileLocalesEnabled) {
-			$site = &Request::getSite();
-			$templateMgr->assign('availableLocales', $site->getSupportedLocaleNames());
-		}
+
+		$site = &Request::getSite();
+		$templateMgr->assign('availableLocales', $site->getSupportedLocaleNames());
 
 		$countryDao =& DAORegistry::getDAO('CountryDAO');
 		$countries =& $countryDao->getCountries();
 		$templateMgr->assign_by_ref('countries', $countries);
+
+		$disciplineDao =& DAORegistry::getDAO('DisciplineDAO');
+		$disciplines =& $disciplineDao->getDisciplines();
+		$templateMgr->assign_by_ref('disciplines', $disciplines);
 
 		parent::display();
 	}
@@ -76,7 +78,27 @@ class CreateReviewerForm extends Form {
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->readUserVars(array('firstName', 'middleName', 'lastName', 'initials', 'affiliation', 'email', 'userUrl', 'phone', 'fax', 'mailingAddress', 'country', 'biography', 'interests', 'userLocales', 'sendNotify', 'username'));
+		$this->readUserVars(array(
+			'salutation',
+			'firstName',
+			'middleName',
+			'lastName',
+			'gender',
+			'discipline',
+			'initials',
+			'affiliation',
+			'email',
+			'userUrl',
+			'phone',
+			'fax',
+			'mailingAddress',
+			'country',
+			'biography',
+			'interests',
+			'userLocales',
+			'sendNotify',
+			'username'
+		));
 
 		if ($this->getData('userLocales') == null || !is_array($this->getData('userLocales'))) {
 			$this->setData('userLocales', array());
@@ -95,10 +117,13 @@ class CreateReviewerForm extends Form {
 	function execute() {
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$user = &new User();
-		
+
+		$user->setSalutation($this->getData('salutation'));
 		$user->setFirstName($this->getData('firstName'));
 		$user->setMiddleName($this->getData('middleName'));
 		$user->setLastName($this->getData('lastName'));
+		$user->setGender($this->getData('gender'));
+		$user->setDiscipline($this->getData('discipline'));
 		$user->setInitials($this->getData('initials'));
 		$user->setAffiliation($this->getData('affiliation'));
 		$user->setEmail($this->getData('email'));
@@ -107,26 +132,24 @@ class CreateReviewerForm extends Form {
 		$user->setFax($this->getData('fax'));
 		$user->setMailingAddress($this->getData('mailingAddress'));
 		$user->setCountry($this->getData('country'));
-		$user->setBiography($this->getData('biography'));
-		$user->setInterests($this->getData('interests'));
+		$user->setBiography($this->getData('biography'), null); // Localized
+		$user->setInterests($this->getData('interests'), null); // Localized
 		$user->setMustChangePassword($this->getData('mustChangePassword') ? 1 : 0);
 
 		$authDao = &DAORegistry::getDAO('AuthSourceDAO');
 		$auth =& $authDao->getDefaultPlugin();
 		$user->setAuthId($auth?$auth->getAuthId():0);
 		
-		if ($this->profileLocalesEnabled) {
-			$site = &Request::getSite();
-			$availableLocales = $site->getSupportedLocales();
-			
-			$locales = array();
-			foreach ($this->getData('userLocales') as $locale) {
-				if (Locale::isLocaleValid($locale) && in_array($locale, $availableLocales)) {
-					array_push($locales, $locale);
-				}
+		$site = &Request::getSite();
+		$availableLocales = $site->getSupportedLocales();
+		
+		$locales = array();
+		foreach ($this->getData('userLocales') as $locale) {
+			if (Locale::isLocaleValid($locale) && in_array($locale, $availableLocales)) {
+				array_push($locales, $locale);
 			}
-			$user->setLocales($locales);
 		}
+		$user->setLocales($locales);
 		
 		$user->setUsername($this->getData('username'));
 		$password = Validation::generatePassword();
@@ -165,7 +188,6 @@ class CreateReviewerForm extends Form {
 
 		return $userId;
 	}
-	
 }
 
 ?>

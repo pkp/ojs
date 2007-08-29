@@ -33,7 +33,11 @@ class SetupHandler extends ManagerHandler {
 			import("manager.form.setup.$formClass");
 			
 			$setupForm = &new $formClass();
-			$setupForm->initData();
+			if ($setupForm->isLocaleResubmit()) {
+				$setupForm->readInputData();
+			} else {
+				$setupForm->initData();
+			}
 			$setupForm->display();
 		
 		} else {
@@ -61,6 +65,7 @@ class SetupHandler extends ManagerHandler {
 			
 			$setupForm = &new $formClass();
 			$setupForm->readInputData();
+			$formLocale = $setupForm->getFormLocale();
 			
 			// Check for any special cases before trying to save
 			switch ($step) {
@@ -104,7 +109,7 @@ class SetupHandler extends ManagerHandler {
 						// Add a custom about item
 						$editData = true;
 						$customAboutItems = $setupForm->getData('customAboutItems');
-						array_push($customAboutItems, array());
+						$customAboutItems[$formLocale][] = array();
 						$setupForm->setData('customAboutItems', $customAboutItems);
 						
 					} else if (($delCustomAboutItem = Request::getUserVar('delCustomAboutItem')) && count($delCustomAboutItem) == 1) {
@@ -113,7 +118,8 @@ class SetupHandler extends ManagerHandler {
 						list($delCustomAboutItem) = array_keys($delCustomAboutItem);
 						$delCustomAboutItem = (int) $delCustomAboutItem;
 						$customAboutItems = $setupForm->getData('customAboutItems');
-						array_splice($customAboutItems, $delCustomAboutItem, 1);
+						if (!isset($customAboutItems[$formLocale])) $customAboutItems[$formLocale][] = array();
+						array_splice($customAboutItems[$formLocale], $delCustomAboutItem, 1);
 						$setupForm->setData('customAboutItems', $customAboutItems);
 					}
 					if (Request::getUserVar('addReviewerDatabaseLink')) {
@@ -139,13 +145,13 @@ class SetupHandler extends ManagerHandler {
 						// Add a checklist item
 						$editData = true;
 						$checklist = $setupForm->getData('submissionChecklist');
-						if (!is_array($checklist)) {
-							$checklist = array();
+						if (!isset($checklist[$formLocale]) || !is_array($checklist[$formLocale])) {
+							$checklist[$formLocale] = array();
 							$lastOrder = 0;
 						} else {
-							$lastOrder = $checklist[count($checklist)-1]['order'];
+							$lastOrder = $checklist[$formLocale][count($checklist[$formLocale])-1]['order'];
 						}
-						array_push($checklist, array('order' => $lastOrder+1));
+						array_push($checklist[$formLocale], array('order' => $lastOrder+1));
 						$setupForm->setData('submissionChecklist', $checklist);
 						
 					} else if (($delChecklist = Request::getUserVar('delChecklist')) && count($delChecklist) == 1) {
@@ -154,15 +160,16 @@ class SetupHandler extends ManagerHandler {
 						list($delChecklist) = array_keys($delChecklist);
 						$delChecklist = (int) $delChecklist;
 						$checklist = $setupForm->getData('submissionChecklist');
-						array_splice($checklist, $delChecklist, 1);
+						if (!isset($checklist[$formLocale])) $checklist[$formLocale] = array();
+						array_splice($checklist[$formLocale], $delChecklist, 1);
 						$setupForm->setData('submissionChecklist', $checklist);
 					}
 					
 					if (!isset($editData)) {
 						// Reorder checklist items
 						$checklist = $setupForm->getData('submissionChecklist');
-						if (is_array($checklist)) {
-							usort($checklist, create_function('$a,$b','return $a[\'order\'] == $b[\'order\'] ? 0 : ($a[\'order\'] < $b[\'order\'] ? -1 : 1);'));
+						if (is_array($checklist[$formLocale])) {
+							usort($checklist[$formLocale], create_function('$a,$b','return $a[\'order\'] == $b[\'order\'] ? 0 : ($a[\'order\'] < $b[\'order\'] ? -1 : 1);'));
 						}
 						$setupForm->setData('submissionChecklist', $checklist);
 					}
@@ -204,152 +211,64 @@ class SetupHandler extends ManagerHandler {
 					break;
 				case 5:	
 					if (Request::getUserVar('uploadHomeHeaderTitleImage')) {
-						if ($setupForm->uploadImage('homeHeaderTitleImage')) {
+						if ($setupForm->uploadImage('homeHeaderTitleImage', $formLocale)) {
 							$editData = true;
 						} else {
-							$setupForm->addError('homeHeaderTitleImage', 'manager.setup.homeTitleImageInvalid');
+							$setupForm->addError('homeHeaderTitleImage', Locale::translate('manager.setup.homeTitleImageInvalid'));
 						}
 
 					} else if (Request::getUserVar('deleteHomeHeaderTitleImage')) {
 						$editData = true;
-						$setupForm->deleteImage('homeHeaderTitleImage');
+						$setupForm->deleteImage('homeHeaderTitleImage', $formLocale);
 						
 					} else if (Request::getUserVar('uploadHomeHeaderLogoImage')) {
-						if ($setupForm->uploadImage('homeHeaderLogoImage')) {
+						if ($setupForm->uploadImage('homeHeaderLogoImage', $formLocale)) {
 							$editData = true;
 						} else {
-							$setupForm->addError('homeHeaderLogoImage', 'manager.setup.homeHeaderImageInvalid');
+							$setupForm->addError('homeHeaderLogoImage', Locale::translate('manager.setup.homeHeaderImageInvalid'));
 						}
 
 					} else if (Request::getUserVar('deleteHomeHeaderLogoImage')) {
 						$editData = true;
-						$setupForm->deleteImage('homeHeaderLogoImage');
+						$setupForm->deleteImage('homeHeaderLogoImage', $formLocale);
 						
 					} else if (Request::getUserVar('uploadPageHeaderTitleImage')) {
-						if ($setupForm->uploadImage('pageHeaderTitleImage')) {
+						if ($setupForm->uploadImage('pageHeaderTitleImage', $formLocale)) {
 							$editData = true;
 						} else {
-							$setupForm->addError('pageHeaderTitleImage', 'manager.setup.pageHeaderTitleImageInvalid');
+							$setupForm->addError('pageHeaderTitleImage', Locale::translate('manager.setup.pageHeaderTitleImageInvalid'));
 						}
 
 					} else if (Request::getUserVar('deletePageHeaderTitleImage')) {
 						$editData = true;
-						$setupForm->deleteImage('pageHeaderTitleImage');
+						$setupForm->deleteImage('pageHeaderTitleImage', $formLocale);
 						
 					} else if (Request::getUserVar('uploadPageHeaderLogoImage')) {
-						if ($setupForm->uploadImage('pageHeaderLogoImage')) {
+						if ($setupForm->uploadImage('pageHeaderLogoImage', $formLocale)) {
 							$editData = true;
 						} else {
-							$setupForm->addError('pageHeaderLogoImage', 'manager.setup.pageHeaderLogoImageInvalid');
+							$setupForm->addError('pageHeaderLogoImage', Locale::translate('manager.setup.pageHeaderLogoImageInvalid'));
 						}
 
 					} else if (Request::getUserVar('deletePageHeaderLogoImage')) {
 						$editData = true;
-						$setupForm->deleteImage('pageHeaderLogoImage');
-						
-					} else if (Request::getUserVar('uploadHomeHeaderTitleImageAlt1')) {
-						if ($setupForm->uploadImage('homeHeaderTitleImageAlt1')) {
-							$editData = true;
-						} else {
-							$setupForm->addError('homeHeaderTitleImageAlt1', 'manager.setup.homeHeaderTitleImageAlt1Invalid');
-						}
-
-					} else if (Request::getUserVar('deleteHomeHeaderTitleImageAlt1')) {
-						$editData = true;
-						$setupForm->deleteImage('homeHeaderTitleImageAlt1');
-						
-					} else if (Request::getUserVar('uploadHomeHeaderLogoImageAlt1')) {
-						if ($setupForm->uploadImage('homeHeaderLogoImageAlt1')) {
-							$editData = true;
-						} else {
-							$setupForm->addError('homeHeaderLogoImageAlt1', 'manager.setup.homeHeaderLogoImageAlt1Invalid');
-						}
-
-					} else if (Request::getUserVar('deleteHomeHeaderLogoImageAlt1')) {
-						$editData = true;
-						$setupForm->deleteImage('homeHeaderLogoImageAlt1');
-						
-					} else if (Request::getUserVar('uploadPageHeaderTitleImageAlt1')) {
-						if ($setupForm->uploadImage('pageHeaderTitleImageAlt1')) {
-							$editData = true;
-						} else {
-							$setupForm->addError('pageHeaderTitleImageAlt1', 'manager.setup.pageHeaderTitleImageAlt1Invalid');
-						}
-
-					} else if (Request::getUserVar('deletePageHeaderTitleImageAlt1')) {
-						$editData = true;
-						$setupForm->deleteImage('pageHeaderTitleImageAlt1');
-						
-					} else if (Request::getUserVar('uploadPageHeaderLogoImageAlt1')) {
-						if ($setupForm->uploadImage('pageHeaderLogoImageAlt1')) {
-							$editData = true;
-						} else {
-							$setupForm->addError('pageHeaderLogoImageAlt1', 'manager.setup.pageHeaderLogoImageAlt1Invalid');
-						}
-
-					} else if (Request::getUserVar('deletePageHeaderLogoImageAlt1')) {
-						$editData = true;
-						$setupForm->deleteImage('pageHeaderLogoImageAlt1');
-						
-					} else if (Request::getUserVar('uploadHomeHeaderTitleImageAlt2')) {
-						if ($setupForm->uploadImage('homeHeaderTitleImageAlt2')) {
-							$editData = true;
-						} else {
-							$setupForm->addError('homeHeaderTitleImageAlt2', 'manager.setup.homeHeaderTitleImageAlt2Invalid');
-						}
-
-					} else if (Request::getUserVar('deleteHomeHeaderTitleImageAlt2')) {
-						$editData = true;
-						$setupForm->deleteImage('homeHeaderTitleImageAlt2');
-						
-					} else if (Request::getUserVar('uploadHomeHeaderLogoImageAlt2')) {
-						if ($setupForm->uploadImage('homeHeaderLogoImageAlt2')) {
-							$editData = true;
-						} else {
-							$setupForm->addError('homeHeaderLogoImageAlt2', 'manager.setup.homeHeaderLogoImageAlt2Invalid');
-						}
-
-					} else if (Request::getUserVar('deleteHomeHeaderLogoImageAlt2')) {
-						$editData = true;
-						$setupForm->deleteImage('homeHeaderLogoImageAlt2');
-						
-					} else if (Request::getUserVar('uploadPageHeaderTitleImageAlt2')) {
-						if ($setupForm->uploadImage('pageHeaderTitleImageAlt2')) {
-							$editData = true;
-						} else {
-							$setupForm->addError('pageHeaderTitleImageAlt2', 'manager.setup.pageHeaderTitleImageAlt2Invalid');
-						}
-
-					} else if (Request::getUserVar('deletePageHeaderTitleImageAlt2')) {
-						$editData = true;
-						$setupForm->deleteImage('pageHeaderTitleImageAlt2');
-						
-					} else if (Request::getUserVar('uploadPageHeaderLogoImageAlt2')) {
-						if ($setupForm->uploadImage('pageHeaderLogoImageAlt2')) {
-							$editData = true;
-						} else {
-							$setupForm->addError('pageHeaderLogoImageAlt2', 'manager.setup.pageHeaderLogoImageAlt2Invalid');
-						}
-
-					} else if (Request::getUserVar('deletePageHeaderLogoImageAlt2')) {
-						$editData = true;
-						$setupForm->deleteImage('pageHeaderLogoImageAlt2');
+						$setupForm->deleteImage('pageHeaderLogoImage', $formLocale);
 						
 					} else if (Request::getUserVar('uploadHomepageImage')) {
-						if ($setupForm->uploadImage('homepageImage')) {
+						if ($setupForm->uploadImage('homepageImage', $formLocale)) {
 							$editData = true;
 						} else {
-							$setupForm->addError('homepageImage', 'manager.setup.homepageImageInvalid');
+							$setupForm->addError('homepageImage', Locale::translate('manager.setup.homepageImageInvalid'));
 						}
 
 					} else if (Request::getUserVar('deleteHomepageImage')) {
 						$editData = true;
-						$setupForm->deleteImage('homepageImage');
+						$setupForm->deleteImage('homepageImage', $formLocale);
 					} else if (Request::getUserVar('uploadJournalStyleSheet')) {
 						if ($setupForm->uploadStyleSheet('journalStyleSheet')) {
 							$editData = true;
 						} else {
-							$setupForm->addError('journalStyleSheet', 'manager.setup.journalStyleSheetInvalid');
+							$setupForm->addError('journalStyleSheet', Locale::translate('manager.setup.journalStyleSheetInvalid'));
 						}
 
 					} else if (Request::getUserVar('deleteJournalStyleSheet')) {
@@ -360,7 +279,7 @@ class SetupHandler extends ManagerHandler {
 						// Add a navigation bar item
 						$editData = true;
 						$navItems = $setupForm->getData('navItems');
-						array_push($navItems,array());
+						$navItems[$formLocale][] = array();
 						$setupForm->setData('navItems', $navItems);
 						
 					} else if (($delNavItem = Request::getUserVar('delNavItem')) && count($delNavItem) == 1) {
@@ -369,8 +288,10 @@ class SetupHandler extends ManagerHandler {
 						list($delNavItem) = array_keys($delNavItem);
 						$delNavItem = (int) $delNavItem;
 						$navItems = $setupForm->getData('navItems');
-						array_splice($navItems, $delNavItem, 1);		
-						$setupForm->setData('navItems', $navItems);
+						if (is_array($navItems) && is_array($navItems[$formLocale])) {
+							array_splice($navItems[$formLocale], $delNavItem, 1);		
+							$setupForm->setData('navItems', $navItems);
+						}
 					}
 					break;
 			}

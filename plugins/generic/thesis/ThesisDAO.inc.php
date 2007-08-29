@@ -39,14 +39,6 @@ define('THESIS_ORDER_TITLE_ASC',			7);
 define('THESIS_ORDER_TITLE_DESC',			8);
 
 class ThesisDAO extends DAO {
-
-	/**
-	 * Constructor.
-	 */
-	function ThesisDAO() {
-		parent::DAO();
-	}
-
 	/**
 	 * Retrieve an thesis by thesis ID.
 	 * @param $thesisId int
@@ -497,7 +489,6 @@ class ThesisDAO extends DAO {
 	function getInsertThesisId() {
 		return $this->getInsertId('theses', 'thesis_id');
 	}
-
 }
 
 ?>

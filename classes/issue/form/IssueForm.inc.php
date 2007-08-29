@@ -26,14 +26,23 @@ class IssueForm extends Form {
 		parent::Form($template);
 		$this->addCheck(new FormValidatorPost($this));
 	}
-	
+
+	/**
+	 * Get a list of fields for which localization should be used.
+	 * @return array
+	 */
+	function getLocaleFieldNames() {
+		$issueDao =& DAORegistry::getDAO('IssueDAO');
+		return $issueDao->getLocaleFieldNames();
+	}
+
 	/**
 	 * Display the form.
 	 */
 	function display() {
-		$templateMgr = &TemplateManager::getManager();
-		$journal = &Request::getJournal();
-		
+		$templateMgr =& TemplateManager::getManager();
+		$journal =& Request::getJournal();
+
 		// set up the accessibility options pulldown
 		$templateMgr->assign('enableSubscriptions', $journal->getSetting('enableSubscriptions'));
 		$templateMgr->assign('enableDelayedOpenAccess', $journal->getSetting('enableDelayedOpenAccess'));
@@ -45,7 +54,7 @@ class IssueForm extends Form {
 
 		$templateMgr->assign('enablePublicIssueId', $journal->getSetting('enablePublicIssueId'));
 
-		parent::display();	
+		parent::display();
 	}
 
 	/**
@@ -69,12 +78,12 @@ class IssueForm extends Form {
 		}
 
 		// check if public issue ID has already used
-		$journal = &Request::getJournal();
-		$issueDao = &DAORegistry::getDAO('IssueDAO');
+		$journal =& Request::getJournal();
+		$issueDao =& DAORegistry::getDAO('IssueDAO');
 
 		$publicIssueId = $this->getData('publicIssueId');
 		if ($publicIssueId && $issueDao->publicIssueIdExists($publicIssueId, $issueId, $journal->getJournalId())) {
-			$this->addError('publicIssueId', 'editor.issues.issuePublicIdentificationExists');
+			$this->addError('publicIssueId', Locale::translate('editor.issues.issuePublicIdentificationExists'));
 			$this->addErrorField('publicIssueId');
 		}
 
@@ -83,7 +92,7 @@ class IssueForm extends Form {
 		$subscription = $journal->getSetting('enableSubscriptions');
 		$delayedOpenAccess = $journal->getSetting('enableDelayedOpenAccess');
 		if (!empty($issueId)) {
-			$issue = &$issueDao->getIssueById($issueId);
+			$issue =& $issueDao->getIssueById($issueId);
 			$issuePublished = $issue->getPublished();
 		} else {
 			$issuePublished = 0;
@@ -94,26 +103,26 @@ class IssueForm extends Form {
 			$day = $this->getData('Date_Day');
 			$year = $this->getData('Date_Year');
 			if (!checkdate($month,$day,$year)) {
-				$this->addError('openAccessDate', 'editor.issues.invalidAccessDate');
-				$this->addErrorField('openAccessDate');		
+				$this->addError('openAccessDate', Locale::translate('editor.issues.invalidAccessDate'));
+				$this->addErrorField('openAccessDate');
 			}
 		}
 
 		import('file.PublicFileManager');
-		$publicFileManager = &new PublicFileManager();
+		$publicFileManager =& new PublicFileManager();
 
 		if ($publicFileManager->uploadedFileExists('coverPage')) {
 			$type = $publicFileManager->getUploadedFileType('coverPage');
 			if (!$publicFileManager->getImageExtension($type)) {
-				$this->addError('coverPage', 'editor.issues.invalidCoverPageFormat');
-				$this->addErrorField('coverPage');		
+				$this->addError('coverPage', Locale::translate('editor.issues.invalidCoverPageFormat'));
+				$this->addErrorField('coverPage');
 			}
 		}
 
 		if ($publicFileManager->uploadedFileExists('styleFile')) {
 			$type = $publicFileManager->getUploadedFileType('styleFile');
 			if ($type != 'text/plain' && $type != 'text/css') {
-				$this->addError('styleFile', 'editor.issues.invalidStyleFile');
+				$this->addError('styleFile', Locale::translate('editor.issues.invalidStyleFile'));
 			}
 		}
 
@@ -125,23 +134,23 @@ class IssueForm extends Form {
 	 * returns issue id that it initialized the page with
 	 */
 	function initData($issueId = null) {
-		$issueDao = &DAORegistry::getDAO('IssueDAO');
+		$issueDao =& DAORegistry::getDAO('IssueDAO');
 
 		// retrieve issue by id, if not specified, then select first unpublished issue
 		if (isset($issueId)) {
-			$issue = &$issueDao->getIssueById($issueId);
+			$issue =& $issueDao->getIssueById($issueId);
 		}
-		
+
 		if (isset($issue)) {
 			$openAccessDate = $issue->getOpenAccessDate();
 			if (isset($openAccessDate)) $openAccessDate = getdate(strtotime($openAccessDate));
 
 			$this->_data = array(
-				'title' => $issue->getTitle(),
+				'title' => $issue->getTitle(null), // Localized
 				'volume' => $issue->getVolume(),
 				'number' => $issue->getNumber(),
 				'year' => $issue->getYear(),
-				'description' => $issue->getDescription(),
+				'description' => $issue->getDescription(null), // Localized
 				'publicIssueId' => $issue->getPublicIssueId(),
 				'accessStatus' => $issue->getAccessStatus(),
 				'Date_Month' => $openAccessDate['mon'],
@@ -151,17 +160,17 @@ class IssueForm extends Form {
 				'showNumber' => $issue->getShowNumber(),
 				'showYear' => $issue->getShowYear(),
 				'showTitle' => $issue->getShowTitle(),
-				'fileName' => $issue->getFileName(),
-				'originalFileName' => $issue->getOriginalFileName(),
-				'coverPageDescription' => $issue->getCoverPageDescription(),
-				'showCoverPage' => $issue->getShowCoverPage(),
+				'fileName' => $issue->getFileName(null), // Localized
+				'originalFileName' => $issue->getOriginalFileName(null), // Localized
+				'coverPageDescription' => $issue->getCoverPageDescription(null), // Localized
+				'showCoverPage' => $issue->getShowCoverPage(null), // Localized
 				'styleFileName' => $issue->getStyleFileName(),
 				'originalStyleFileName' => $issue->getOriginalStyleFileName()
 			);
 			return $issue->getIssueId();
-			
+
 		} else {
-			$journal = &Request::getJournal();
+			$journal =& Request::getJournal();
 			$showVolume = $journal->getSetting('publicationFormatVolume');
 			$showNumber = $journal->getSetting('publicationFormatNumber');
 			$showYear = $journal->getSetting('publicationFormatYear');
@@ -173,9 +182,9 @@ class IssueForm extends Form {
 			$this->setData('showTitle', $showTitle);
 
 			// set up the default values for volume, number and year
-			$issueDao = &DAORegistry::getDAO('IssueDAO');
+			$issueDao =& DAORegistry::getDAO('IssueDAO');
 			$issue = $issueDao->getLastCreatedIssue($journal->getJournalId());
-	
+
 			if (isset($issue)) {
 				$volumePerYear = $journal->getSetting('volumePerYear');
 				$issuePerVolume = $journal->getSetting('issuePerVolume');
@@ -211,7 +220,7 @@ class IssueForm extends Form {
 					$year++;
 				} else {
 					$year = $volume = $number = 0;
-				} 
+				}
 
 
 			} else {
@@ -241,7 +250,7 @@ class IssueForm extends Form {
 
 		}
 	}
-	
+
 	/**
 	 * Assign form data to user-submitted data.
 	 */
@@ -273,20 +282,20 @@ class IssueForm extends Form {
 		$this->addCheck(new FormValidatorCustom($this, 'showVolume', 'required', 'editor.issues.issueIdentificationRequired', create_function('$showVolume, $showNumber, $showYear, $showTitle', 'return $showVolume || $showNumber || $showYear || $showTitle ? true : false;'), array($this->getData('showNumber'), $this->getData('showYear'), $this->getData('showTitle'))));
 
 	}
-	
+
 	/**
 	 * Save issue settings.
 	 */
 	function execute($issueId = 0) {
-		$journal = &Request::getJournal();
-		$issueDao = &DAORegistry::getDAO('IssueDAO');
+		$journal =& Request::getJournal();
+		$issueDao =& DAORegistry::getDAO('IssueDAO');
 
 		if ($issueId) {
 			$issue = $issueDao->getIssueById($issueId);
 		} else {
-			$issue = &new Issue();
+			$issue =& new Issue();
 		}
-		
+
 		$volume = $this->getData('volume');
 		$number = $this->getData('number');
 		$year = $this->getData('year');
@@ -297,18 +306,18 @@ class IssueForm extends Form {
 		$showTitle = $this->getData('showTitle');
 
 		$issue->setJournalId($journal->getJournalId());
-		$issue->setTitle($this->getData('title'));
+		$issue->setTitle($this->getData('title'), null); // Localized
 		$issue->setVolume(empty($volume) ? 0 : $volume);
 		$issue->setNumber(empty($number) ? 0 : $number);
 		$issue->setYear(empty($year) ? 0 : $year);
-		$issue->setDescription($this->getData('description'));
+		$issue->setDescription($this->getData('description'), null); // Localized
 		$issue->setPublicIssueId($this->getData('publicIssueId'));
 		$issue->setShowVolume(empty($showVolume) ? 0 : $showVolume);
 		$issue->setShowNumber(empty($showNumber) ? 0 : $showNumber);
 		$issue->setShowYear(empty($showYear) ? 0 : $showYear);
 		$issue->setShowTitle(empty($showTitle) ? 0 : $showTitle);
-		$issue->setCoverPageDescription($this->getData('coverPageDescription'));
-		$issue->setShowCoverPage((int)$this->getData('showCoverPage'));
+		$issue->setCoverPageDescription($this->getData('coverPageDescription'), null); // Localized
+		$issue->setShowCoverPage((int)$this->getData('showCoverPage'), null); // Localized
 
 		$month = $this->getData('Date_Month');
 		$day = $this->getData('Date_Day');
@@ -319,7 +328,7 @@ class IssueForm extends Form {
 			$issue->setOpenAccessDate(date('Y-m-d H:i:s',mktime(0,0,0,$month,$day,$year)));
 		} else {
 			$issue->setAccessStatus(1);
-			$issue->setOpenAccessDate(Core::getCurrentDate());		
+			$issue->setOpenAccessDate(Core::getCurrentDate());
 		}
 
 		// if issueId is supplied, then update issue otherwise insert a new one
@@ -335,19 +344,19 @@ class IssueForm extends Form {
 		}
 
 		import('file.PublicFileManager');
-		$publicFileManager = &new PublicFileManager();
+		$publicFileManager =& new PublicFileManager();
 		if ($publicFileManager->uploadedFileExists('coverPage')) {
 			$journal = Request::getJournal();
 			$originalFileName = $publicFileManager->getUploadedFileName('coverPage');
-			$newFileName = 'cover_' . $issueId . '.' . $publicFileManager->getExtension($originalFileName);
+			$newFileName = 'cover_' . $issueId . '_' . $this->getFormLocale() . '.' . $publicFileManager->getExtension($originalFileName);
 			$publicFileManager->uploadJournalFile($journal->getJournalId(), 'coverPage', $newFileName);
-			$issue->setOriginalFileName($publicFileManager->truncateFileName($originalFileName, 127));
-			$issue->setFileName($newFileName);
+			$issue->setOriginalFileName($publicFileManager->truncateFileName($originalFileName, 127), $this->getFormLocale());
+			$issue->setFileName($newFileName, $this->getFormLocale());
 
 			// Store the image dimensions.
 			list($width, $height) = getimagesize($publicFileManager->getJournalFilesPath($journal->getJournalId()) . '/' . $newFileName);
-			$issue->setWidth($width);
-			$issue->setHeight($height);
+			$issue->setWidth($width, $this->getFormLocale());
+			$issue->setHeight($height, $this->getFormLocale());
 
 			$issueDao->updateIssue($issue);
 		}
@@ -364,7 +373,6 @@ class IssueForm extends Form {
 
 		return $issueId;
 	}
-	
 }
 
 ?>

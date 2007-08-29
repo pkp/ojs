@@ -42,37 +42,6 @@
 	<td>&nbsp;</td>
 	<td colspan="2" class="value"><span class="instruct">{translate key="manager.languages.supportedLocalesInstructions"}</span></td>
 </tr>
-<tr valign="top">
-	<td class="label">{fieldLabel name="alternateLocale1" key="manager.languages.alternateLocale1"}</td>
-	<td colspan="2" class="value"><select id="alternateLocale1" name="alternateLocale1" size="1" class="selectMenu">
-	<option value="">{translate key="common.notApplicable"}</option>
-	{foreach from=$availableLocales key=localeKey item=localeName}
-		<option value="{$localeKey}"{if $localeKey == $alternateLocale1} selected="selected"{/if}>{$localeName|escape}</option>
-	{/foreach}
-	</select></td>
-</tr>
-<tr valign="top">
-	<td class="label">{fieldLabel name="alternateLocale2" key="manager.languages.alternateLocale2"}</td>
-	<td colspan="2" class="value"><select id="alternateLocale2" name="alternateLocale2" size="1" class="selectMenu">
-	<option value="">{translate key="common.notApplicable"}</option>
-	{foreach from=$availableLocales key=localeKey item=localeName}
-		<option value="{$localeKey}"{if $localeKey == $alternateLocale2} selected="selected"{/if}>{$localeName|escape}</option>
-	{/foreach}
-	</select></td>
-</tr>
-<tr valign="top">
-	<td>&nbsp;</td>
-	<td colspan="2" class="value"><span class="instruct">{translate key="manager.languages.alternateLocaleInstructions"}</span></td>
-</tr>
-<tr valign="top">
-	<td rowspan="2" class="label">{translate key="manager.languages.alternativeLanguageOptions"}</td>
-	<td width="5%"><input type="checkbox" name="journalTitleAltLanguages" id="journalTitleAltLanguages" value="1"{if $journalTitleAltLanguages} checked="checked"{/if}/></td>
-	<td width="75%"><label for="journalTitleAltLanguages">{translate key="manager.languages.journalTitleAltLanguages"}</label></td>
-</tr>
-<tr valign="top">
-	<td><input type="checkbox" name="articleAltLanguages" id="articleAltLanguages" value="1"{if $articleAltLanguages} checked="checked"{/if}/></td>
-	<td><label for="articleAltLanguages">{translate key="manager.languages.articleAltLanguages"}</label></td>
-</tr>
 </table>
 
 <p><input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url page="manager"}'" /></p>

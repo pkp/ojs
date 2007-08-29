@@ -17,7 +17,6 @@
 import('submission.reviewAssignment.ReviewAssignment');
 
 class ReviewAssignmentDAO extends DAO {
-
 	var $userDao;
 	var $articleFileDao;
 	var $suppFileDao;

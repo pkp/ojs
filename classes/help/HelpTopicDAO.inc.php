@@ -18,14 +18,6 @@
 import('help.HelpTopic');
 
 class HelpTopicDAO extends XMLDAO {
-
-	/**
-	 * Constructor.
-	 */
-	function HelpTopicDAO() {
-		parent::XMLDAO();
-	}
-
 	function &_getCache($topicId) {
 		static $cache;
 		if (!isset($cache)) {
@@ -187,7 +179,7 @@ class HelpTopicDAO extends XMLDAO {
 				$numMatches = String::substr_count(String::strtolower($topic->getTitle()), $keyword);
 				
 				foreach ($topic->getSections() as $section) {
-					$numMatches += String::substr_count(String::strtolower($section->getTitle()), $keyword);
+					$numMatches += String::substr_count(String::strtolower($section->getSectionTitle()), $keyword);
 					$numMatches += String::substr_count(String::strtolower($section->getContent()), $keyword);
 				}
 				

@@ -53,7 +53,11 @@ class SectionHandler extends ManagerHandler {
 		import('manager.form.SectionForm');
 		
 		$sectionForm = &new SectionForm(!isset($args) || empty($args) ? null : ((int) $args[0]));
-		$sectionForm->initData();
+		if ($sectionForm->isLocaleResubmit()) {
+			$sectionForm->readInputData();
+		} else {
+			$sectionForm->initData();
+		}
 		$sectionForm->display();
 	}
 	

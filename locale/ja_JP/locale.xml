@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE locale SYSTEM "../locale.dtd">
+
 <!--
   * locale.xml
   *
@@ -10,6 +11,7 @@
   *
   * $Id$
   -->
+
 <locale name="ja_JP" full_name="日本語">
   <!--
 	 * This file is organized into several major sections, separated

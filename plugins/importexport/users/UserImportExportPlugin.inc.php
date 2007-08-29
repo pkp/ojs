@@ -114,19 +114,35 @@ class UserImportExportPlugin extends ImportExportPlugin {
 				$users = array();
 				foreach ($userKeys as $i) {
 					$newUser = &new ImportedUser();
-					if (($firstName = Request::getUserVar($i.'_firstName')) !== '') $newUser->setFirstName($firstName);
-					if (($middleName = Request::getUserVar($i.'_middleName')) !== '') $newUser->setMiddleName($middleName);
-					if (($lastName = Request::getUserVar($i.'_lastName')) !== '') $newUser->setLastName($lastName);
-					if (($username = Request::getUserVar($i.'_username')) !== '') $newUser->setUsername($username);
-					if (($password = Request::getUserVar($i.'_password')) !== '') $newUser->setPassword($password);
-					if (($biography = Request::getUserVar($i.'_biography')) !== '') $newUser->setBiography($biography);
-					if (($affiliation = Request::getUserVar($i.'_affiliation')) !== '') $newUser->setAffiliation($affiliation);
-					if (($url = Request::getUserVar($i.'_url')) !== '') $newUser->setUrl($url);
-					if (($phone = Request::getUserVar($i.'_phone')) !== '') $newUser->setPhone($phone);
-					if (($fax = Request::getUserVar($i.'_fax')) !== '') $newUser->setFax($fax);
-					if (($mailingaddress = Request::getUserVar($i.'_mailingAddress')) !== '') $newUser->setMailingAddress($mailingaddress);
-					if (($unencryptedPassword = Request::getUserVar($i.'_unencryptedPassword')) !== '') $newUser->setUnencryptedPassword($unencryptedPassword);
-					if (($email = Request::getUserVar($i.'_email')) !== '') $newUser->setEmail($email);
+					$newUser->setFirstName(Request::getUserVar($i.'_firstName'));
+					$newUser->setMiddleName(Request::getUserVar($i.'_middleName'));
+					$newUser->setLastName(Request::getUserVar($i.'_lastName'));
+					$newUser->setUsername(Request::getUserVar($i.'_username'));
+					$newUser->setEmail(Request::getUserVar($i.'_email'));
+					
+					$locales = array();
+					if (Request::getUserVar($i.'_locales') != null || is_array(Request::getUserVar($i.'_locales'))) {
+						foreach (Request::getUserVar($i.'_locales') as $locale) {
+							array_push($locales, $locale);
+						}
+					}
+					$newUser->setLocales($locales);
+					$newUser->setSignature(Request::getUserVar($i.'_signature'), null);
+					$newUser->setBiography(Request::getUserVar($i.'_biography'), null);
+					$newUser->setInterests(Request::getUserVar($i.'_interests'), null);
+					$newUser->setDiscipline(Request::getUserVar($i.'_discipline'));
+					$newUser->setCountry(Request::getUserVar($i.'_country'));
+					$newUser->setMailingAddress(Request::getUserVar($i.'_mailingAddress'));
+					$newUser->setFax(Request::getUserVar($i.'_fax'));
+					$newUser->setPhone(Request::getUserVar($i.'_phone'));
+					$newUser->setUrl(Request::getUserVar($i.'_url'));
+					$newUser->setAffiliation(Request::getUserVar($i.'_affiliation'));
+					$newUser->setGender(Request::getUserVar($i.'_gender'));
+					$newUser->setInitials(Request::getUserVar($i.'_initials'));
+					$newUser->setSalutation(Request::getUserVar($i.'_salutation'));
+					$newUser->setPassword(Request::getUserVar($i.'_password'));
+					$newUser->setMustChangePassword(Request::getUserVar($i.'_mustChangePassword'));
+					$newUser->setUnencryptedPassword(Request::getUserVar($i.'_unencryptedPassword'));
 
 					$newUserRoles = Request::getUserVar($i.'_roles');
 					if (is_array($newUserRoles) && count($newUserRoles) > 0) {

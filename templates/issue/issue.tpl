@@ -17,7 +17,7 @@
 <tr valign="top">
 	<td width="75%">{$article->getArticleTitle()|strip_unsafe_html}</td>
 	<td align="right" width="25%">
-		{if $section.abstractsDisabled || $article->getAbstract() == ""}
+		{if $section.abstractsDisabled || $article->getArticleAbstract() == ""}
 			{assign var=hasAbstract value=0}
 		{else}
 			{assign var=hasAbstract value=1}
@@ -33,7 +33,7 @@
 
 		{if $hasAccess}
 		{foreach from=$article->getGalleys() item=galley name=galleyList}
-			<a href="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)|to_array:$galley->getGalleyId()}" class="file">{$galley->getLabel()|escape}</a>
+			<a href="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)|to_array:$galley->getGalleyId()}" class="file">{$galley->getGalleyLabel()|escape}</a>
 		{/foreach}
 		{/if}
 	</td>

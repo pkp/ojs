@@ -26,20 +26,31 @@
 
 <br/>
 
-<form method="post" action="{url op="updateSubscriptionType"}">
+<form name="subscriptionType" method="post" action="{url op="updateSubscriptionType"}">
 {if $typeId}
 <input type="hidden" name="typeId" value="{$typeId}" />
 {/if}
 
 {include file="common/formErrors.tpl"}
 <table class="data" width="100%">
+{if count($formLocales) > 1}
+	<tr valign="top">
+		<td width="20%" class="label">{fieldLabel name="formLocale" required="true" key="common.language"}</td>
+		<td width="80%" class="value">
+			{if $typeId}{url|assign:"subscriptionTypeUrl" op="editSubscriptionType" path=$typeId}
+			{else}{url|assign:"subscriptionTypeUrl" op="createSubscriptionType"}
+			{/if}
+			{form_language_chooser form="subscriptionType" url=$subscriptionTypeUrl}
+		</td>
+	</tr>
+{/if}
 <tr valign="top">
-	<td width="20%" class="label">{fieldLabel name="typeName" required="true" key="manager.subscriptionTypes.form.typeName"}</td>
-	<td width="80%" class="value"><input type="text" name="typeName" value="{$typeName|escape}" size="35" maxlength="80" id="typeName" class="textField" /></td>
+	<td width="20%" class="label">{fieldLabel name="name" required="true" key="manager.subscriptionTypes.form.typeName"}</td>
+	<td width="80%" class="value"><input type="text" name="name[{$formLocale|escape}]" value="{$name[$formLocale]|escape}" size="35" maxlength="80" id="name" class="textField" /></td>
 </tr>
 <tr valign="top">
 	<td class="label">{fieldLabel name="description" key="manager.subscriptionTypes.form.description"}</td>
-	<td class="value"><textarea name="description" id="description" cols="40" rows="4" class="textArea" />{$description|escape}</textarea></td>
+	<td class="value"><textarea name="description[{$formLocale|escape}]" id="description" cols="40" rows="4" class="textArea" />{$description[$formLocale]|escape}</textarea></td>
 </tr>
 <tr valign="top">
 	<td class="label">{fieldLabel name="cost" required="true" key="manager.subscriptionTypes.form.cost"}</td>

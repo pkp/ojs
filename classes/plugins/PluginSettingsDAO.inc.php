@@ -16,14 +16,6 @@
  */
 
 class PluginSettingsDAO extends DAO {
-
-	/**
-	 * Constructor.
-	 */
-	function PluginSettingsDAO() {
-		parent::DAO();
-	}
-
 	function &_getCache($journalId, $pluginName) {
 		static $settingCache;
 		if (!isset($settingCache)) {
@@ -87,24 +79,7 @@ class PluginSettingsDAO extends DAO {
 		} else {
 			while (!$result->EOF) {
 				$row = &$result->getRowAssoc(false);
-				switch ($row['setting_type']) {
-					case 'bool':
-						$value = (bool) $row['setting_value'];
-						break;
-					case 'int':
-						$value = (int) $row['setting_value'];
-						break;
-					case 'float':
-						$value = (float) $row['setting_value'];
-						break;
-					case 'object':
-						$value = unserialize($row['setting_value']);
-						break;
-					case 'string':
-					default:
-						$value = $row['setting_value'];
-						break;
-				}
+				$value = $this->convertFromDB($row['setting_value'], $row['setting_type']);
 				$pluginSettings[$pluginName][$row['setting_name']] = $value;
 				$result->MoveNext();
 			}
@@ -130,43 +105,12 @@ class PluginSettingsDAO extends DAO {
 		$cache =& $this->_getCache($journalId, $pluginName);
 		$cache->setCache($name, $value);
 		
-		if ($type == null) {
-			switch (gettype($value)) {
-				case 'boolean':
-				case 'bool':
-					$type = 'bool';
-					break;
-				case 'integer':
-				case 'int':
-					$type = 'int';
-					break;
-				case 'double':
-				case 'float':
-					$type = 'float';
-					break;
-				case 'array':
-				case 'object':
-					$type = 'object';
-					break;
-				case 'string':
-				default:
-					$type = 'string';
-					break;
-			}
-		}
-		
-		if ($type == 'object') {
-			$value = serialize($value);
-			
-		} else if ($type == 'bool') {
-			$value = isset($value) && $value ? 1 : 0;
-		}
-		
 		$result = $this->retrieve(
 			'SELECT COUNT(*) FROM plugin_settings WHERE plugin_name = ? AND setting_name = ? AND journal_id = ?',
 			array($pluginName, $name, $journalId)
 		);
-		
+
+		$value = $this->convertToDB($value, $type);
 		if ($result->fields[0] == 0) {
 			$returner = $this->update(
 				'INSERT INTO plugin_settings

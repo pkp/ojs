@@ -17,7 +17,6 @@
 import('form.Form');
 
 class SubscriptionTypeForm extends Form {
-
 	/** @var typeId int the ID of the subscription type being edited */
 	var $typeId;
 
@@ -52,14 +51,7 @@ class SubscriptionTypeForm extends Form {
 		parent::Form('subscription/subscriptionTypeForm.tpl');
 	
 		// Type name is provided
-		$this->addCheck(new FormValidator($this, 'typeName', 'required', 'manager.subscriptionTypes.form.typeNameRequired'));
-
-		// Type name does not already exist for this journal
-		if ($this->typeId == null) {
-			$this->addCheck(new FormValidatorCustom($this, 'typeName', 'required', 'manager.subscriptionTypes.form.typeNameExists', array(DAORegistry::getDAO('SubscriptionTypeDAO'), 'subscriptionTypeExistsByTypeName'), array($journal->getJournalId()), true));
-		} else {
-			$this->addCheck(new FormValidatorCustom($this, 'typeName', 'required', 'manager.subscriptionTypes.form.typeNameExists', create_function('$typeName, $journalId, $typeId', '$subscriptionTypeDao = &DAORegistry::getDAO(\'SubscriptionTypeDAO\'); $checkId = $subscriptionTypeDao->getSubscriptionTypeByTypeName($typeName, $journalId); return ($checkId == 0 || $checkId == $typeId) ? true : false;'), array($journal->getJournalId(), $this->typeId)));
-		}
+		$this->addCheck(new FormValidatorLocale($this, 'name', 'required', 'manager.subscriptionTypes.form.typeNameRequired'));
 
 		// Cost	is provided and is numeric and positive	
 		$this->addCheck(new FormValidator($this, 'cost', 'required', 'manager.subscriptionTypes.form.costRequired'));	
@@ -89,6 +81,15 @@ class SubscriptionTypeForm extends Form {
 	}
 	
 	/**
+	 * Get a list of localized field names for this form
+	 * @return array
+	 */
+	function getLocaleFieldNames() {
+		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
+		return $subscriptionTypeDao->getLocaleFieldNames();
+	}
+
+	/**
 	 * Display the form.
 	 */
 	function display() {
@@ -111,8 +112,8 @@ class SubscriptionTypeForm extends Form {
 			
 			if ($subscriptionType != null) {
 				$this->_data = array(
-					'typeName' => $subscriptionType->getTypeName(),
-					'description' => $subscriptionType->getDescription(),
+					'name' => $subscriptionType->getName(null), // Localized
+					'description' => $subscriptionType->getDescription(null), // Localized
 					'cost' => $subscriptionType->getCost(),
 					'currency' => $subscriptionType->getCurrencyCodeAlpha(),
 					'duration' => $subscriptionType->getDuration(),
@@ -132,7 +133,7 @@ class SubscriptionTypeForm extends Form {
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->readUserVars(array('typeName', 'description', 'cost', 'currency', 'duration', 'format', 'institutional', 'membership', 'public'));
+		$this->readUserVars(array('name', 'description', 'cost', 'currency', 'duration', 'format', 'institutional', 'membership', 'public'));
 	}
 	
 	/**
@@ -151,8 +152,8 @@ class SubscriptionTypeForm extends Form {
 		}
 		
 		$subscriptionType->setJournalId($journal->getJournalId());
-		$subscriptionType->setTypeName($this->getData('typeName'));
-		$subscriptionType->setDescription($this->getData('description'));
+		$subscriptionType->setName($this->getData('name'), null); // Localized
+		$subscriptionType->setDescription($this->getData('description'), null); // Localized
 		$subscriptionType->setCost(round($this->getData('cost'), 2));
 		$subscriptionType->setCurrencyCodeAlpha($this->getData('currency'));
 		$subscriptionType->setDuration((int)$this->getData('duration'));
@@ -172,7 +173,6 @@ class SubscriptionTypeForm extends Form {
 			$subscriptionTypeDao->resequenceSubscriptionTypes($subscriptionType->getJournalId());
 		}
 	}
-	
 }
 
 ?>

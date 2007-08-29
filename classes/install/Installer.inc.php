@@ -55,9 +55,6 @@ class Installer {
 	/** @var string available locales */
 	var $installedLocales;
 	
-	/** @var adoSchema database schema parser */
-	var $schemaXMLParser;
-	
 	/** @var DBDataXMLParser database data parser */
 	var $dataXMLParser;
 	
@@ -123,9 +120,6 @@ class Installer {
 			$this->dataXMLParser->destroy();
 		}
 		
-		if (isset($this->schemaXMLParser)) {
-			$this->schemaXMLParser->destroy();
-		}
 		HookRegistry::call('Installer::destroy', array(&$this));
 	}
 	
@@ -157,11 +151,6 @@ class Installer {
 		
 		if (!isset($this->installedLocales)) {
 			$this->installedLocales = array_keys(Locale::getAllLocales());
-		}
-		
-		if (!isset($this->schemaXMLParser)) {
-			require_once('adodb/adodb-xmlschema.inc.php');
-			$this->schemaXMLParser = &new adoSchema($this->dbconn, $this->dbconn->charSet);
 		}
 		
 		if (!isset($this->dataXMLParser)) {
@@ -377,7 +366,12 @@ class Installer {
 			case 'schema':
 				$fileName = INSTALLER_DATA_DIR . '/'. $action['file'];
 				$this->log(sprintf('schema: %s', $action['file']));
-				$sql = $this->schemaXMLParser->parseSchema($fileName);
+
+				require_once('adodb/adodb-xmlschema.inc.php');
+				$schemaXMLParser = &new adoSchema($this->dbconn, $this->dbconn->charSet);
+				$sql = $schemaXMLParser->parseSchema($fileName);
+				$schemaXMLParser->destroy();
+
 				if ($sql) {
 					return $this->executeSQL($sql);
 				} else {

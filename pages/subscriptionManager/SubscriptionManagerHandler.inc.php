@@ -133,7 +133,7 @@ class SubscriptionManagerHandler extends Handler {
 		$templateMgr->assign('searchField', $searchType);
 		$templateMgr->assign('searchMatch', $searchMatch);
 		$templateMgr->assign('search', $searchQuery);
-		$templateMgr->assign('searchInitial', $searchInitial);
+		$templateMgr->assign('searchInitial', Request::getUserVar('searchInitial'));
 
 		$templateMgr->assign('isJournalManager', false);
 
@@ -286,7 +286,11 @@ class SubscriptionManagerHandler extends Handler {
 			}
 
 			$subscriptionTypeForm = &new SubscriptionTypeForm($subscriptionTypeId);
-			$subscriptionTypeForm->initData();
+			if ($subscriptionTypeForm->isLocaleResubmit()) {
+				$subscriptionTypeForm->readInputData();
+			} else {
+				$subscriptionTypeForm->initData();
+			}
 			$subscriptionTypeForm->display();
 		
 		} else {
@@ -374,7 +378,11 @@ class SubscriptionManagerHandler extends Handler {
 		}
 
 		$subscriptionPolicyForm = &new SubscriptionPolicyForm();
-		$subscriptionPolicyForm->initData();
+		if ($subscriptionPolicyForm->isLocaleResubmit()) {
+			$subscriptionPolicyForm->readInputData();
+		} else {
+			$subscriptionPolicyForm->initData();
+		}
 		$subscriptionPolicyForm->display();
 	}
 	
@@ -444,7 +452,11 @@ class SubscriptionManagerHandler extends Handler {
 		
 		$templateMgr->assign('currentUrl', Request::url(null, null, 'createUser'));
 		$userForm = &new UserManagementForm();
-		$userForm->initData();
+		if ($userForm->isLocaleResubmit()) {
+			$userForm->readInputData();
+		} else {
+			$userForm->initData();
+		}
 		$userForm->display();
 	}
 
@@ -465,7 +477,6 @@ class SubscriptionManagerHandler extends Handler {
 			$userForm->execute();
 			
 			if (Request::getUserVar('createAnother')) {
-				// C
 				$templateMgr = &TemplateManager::getManager();
 				$templateMgr->assign('currentUrl', Request::url(null, null, 'index'));
 				$templateMgr->assign('userCreated', true);

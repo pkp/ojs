@@ -26,13 +26,18 @@ class SiteSettingsForm extends Form {
 		parent::Form('admin/settings.tpl');
 		
 		// Validation checks for this form
-		$this->addCheck(new FormValidator($this, 'title', 'required', 'admin.settings.form.titleRequired'));
-		$this->addCheck(new FormValidator($this, 'contactName', 'required', 'admin.settings.form.contactNameRequired'));
-		$this->addCheck(new FormValidatorEmail($this, 'contactEmail', 'required', 'admin.settings.form.contactEmailRequired'));
+		$this->addCheck(new FormValidatorLocale($this, 'title', 'required', 'admin.settings.form.titleRequired'));
+		$this->addCheck(new FormValidatorLocale($this, 'contactName', 'required', 'admin.settings.form.contactNameRequired'));
+		$this->addCheck(new FormValidatorLocaleEmail($this, 'contactEmail', 'required', 'admin.settings.form.contactEmailRequired'));
 		$this->addCheck(new FormValidatorCustom($this, 'minPasswordLength', 'required', 'admin.settings.form.minPasswordLengthRequired', create_function('$l', sprintf('return $l >= %d;', SITE_MIN_PASSWORD_LENGTH))));
 		$this->addCheck(new FormValidatorPost($this));
 	}
 	
+	function getLocaleFieldNames() {
+		$siteDao =& DAORegistry::getDAO('SiteDAO');
+		return $siteDao->getLocaleFieldNames();
+	}
+
 	/**
 	 * Display the form.
 	 */
@@ -43,7 +48,7 @@ class SiteSettingsForm extends Form {
 		$journalDao = &DAORegistry::getDAO('JournalDAO');
 		$journals = &$journalDao->getJournalTitles();
 		$templateMgr = &TemplateManager::getManager();
-		$templateMgr->assign('redirectOptions', array('' => Locale::Translate('admin.settings.noJournalRedirect')) + $journals);
+		$templateMgr->assign('redirectOptions', $journals);
 		$templateMgr->assign('originalStyleFilename', $site->getOriginalStyleFilename());
 		$templateMgr->assign('styleFilename', $site->getSiteStyleFilename());
 		$templateMgr->assign('publicFilesDir', Request::getBasePath() . '/' . $publicFileManager->getSiteFilesPath());
@@ -61,12 +66,12 @@ class SiteSettingsForm extends Form {
 		$site = &$siteDao->getSite();
 		
 		$this->_data = array(
-			'title' => $site->getTitle(),
-			'intro' => $site->getIntro(),
+			'title' => $site->getTitle(null), // Localized
+			'intro' => $site->getIntro(null), // Localized
 			'redirect' => $site->getJournalRedirect(),
-			'about' => $site->getAbout(),
-			'contactName' => $site->getContactName(),
-			'contactEmail' => $site->getContactEmail(),
+			'about' => $site->getAbout(null), // Localized
+			'contactName' => $site->getContactName(null), // Localized
+			'contactEmail' => $site->getContactEmail(null), // Localized
 			'minPasswordLength' => $site->getMinPasswordLength()
 		);
 	}
@@ -87,12 +92,12 @@ class SiteSettingsForm extends Form {
 		$siteDao = &DAORegistry::getDAO('SiteDAO');
 		$site = &$siteDao->getSite();
 		
-		$site->setTitle($this->getData('title'));
-		$site->setIntro($this->getData('intro'));
-		$site->setAbout($this->getData('about'));
+		$site->setTitle($this->getData('title'), null); // Localized
+		$site->setIntro($this->getData('intro'), null); // Localized
+		$site->setAbout($this->getData('about'), null); // Localized
 		$site->setJournalRedirect($this->getData('redirect'));
-		$site->setContactName($this->getData('contactName'));
-		$site->setContactEmail($this->getData('contactEmail'));
+		$site->setContactName($this->getData('contactName'), null); // Localized
+		$site->setContactEmail($this->getData('contactEmail'), null); // Localized
 		$site->setMinPasswordLength($this->getData('minPasswordLength'));
 		
 		$siteDao->updateSite($site);

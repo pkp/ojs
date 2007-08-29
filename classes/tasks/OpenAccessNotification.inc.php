@@ -26,20 +26,19 @@ class OpenAccessNotification extends ScheduledTask {
 	}
 
 	function sendNotification ($users, $journal, $issue) {
-
 		if ($users->getCount() != 0) {
 
 			import('mail.MailTemplate');
 			$email = &new MailTemplate('OPEN_ACCESS_NOTIFY');
 
-			$email->setSubject($email->getSubject($journal->getLocale()));
+			$email->setSubject($email->getSubject($journal->getPrimaryLocale()));
 			$email->setFrom($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
 			$email->addRecipient($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
 
 			$paramArray = array(
-				'journalName' => $journal->getTitle(),
+				'journalName' => $journal->getJournalTitle(),
 				'journalUrl' => $journal->getUrl(),
-				'editorialContactSignature' => $journal->getSetting('contactName') . "\n" . $journal->getTitle()
+				'editorialContactSignature' => $journal->getSetting('contactName') . "\n" . $journal->getJournalTitle()
 			);
 			$email->assignParams($paramArray);
 
@@ -48,7 +47,7 @@ class OpenAccessNotification extends ScheduledTask {
 			$mimeBoundary = '==boundary_' . md5(microtime());
 
 			$templateMgr = &TemplateManager::getManager();
-			$templateMgr->assign('body', $email->getBody($journal->getLocale()));
+			$templateMgr->assign('body', $email->getBody($journal->getPrimaryLocale()));
 			$templateMgr->assign('templateSignature', $journal->getSetting('emailSignature'));
 			$templateMgr->assign('mimeBoundary', $mimeBoundary);
 			$templateMgr->assign_by_ref('issue', $issue);

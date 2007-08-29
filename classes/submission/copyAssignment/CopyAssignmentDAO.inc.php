@@ -18,7 +18,6 @@
 import('submission.copyAssignment.CopyAssignment');
 
 class CopyAssignmentDAO extends DAO {
-
 	var $articleFileDao;
 
 	/**
@@ -142,7 +141,6 @@ class CopyAssignmentDAO extends DAO {
 	function getInsertCopyedId() {
 		return $this->getInsertId('copyed_assignments', 'copyed_id');
 	}
-	
 }
 
 ?>

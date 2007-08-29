@@ -12,13 +12,25 @@
 {assign var="pageTitle" value="manager.setup.journalPolicies"}
 {include file="manager/setup/setupHeader.tpl"}
 
-<form method="post" action="{url op="saveSetup" path="2"}">
+<form name="setupForm" method="post" action="{url op="saveSetup" path="2"}">
 {include file="common/formErrors.tpl"}
+
+{if count($formLocales) > 1}
+<table width="100%" class="data">
+	<tr valign="top">
+		<td width="20%" class="label">{fieldLabel name="formLocale" required="true" key="common.language"}</td>
+		<td width="80%" class="value">
+			{url|assign:"setupFormUrl" op="setup" path="2"}
+			{form_language_chooser form="setupForm" url=$setupFormUrl}
+		</td>
+	</tr>
+</table>
+{/if}
 
 <h3>2.1 {translate key="manager.setup.focusAndScopeOfJournal"}</h3>
 <p>{translate key="manager.setup.focusAndScopeDescription"}</p>
 <p>
-	<textarea name="focusScopeDesc" id="focusScopeDesc" rows="12" cols="60" class="textArea">{$focusScopeDesc|escape}</textarea>
+	<textarea name="focusScopeDesc[{$formLocale|escape}]" id="focusScopeDesc" rows="12" cols="60" class="textArea">{$focusScopeDesc[$formLocale]|escape}</textarea>
 	<br />
 	<span class="instruct">{translate key="manager.setup.htmlSetupInstructions"}</span>
 </p>
@@ -33,14 +45,14 @@
 
 <h4>{translate key="manager.setup.reviewPolicy"}</h4>
 
-<p><textarea name="reviewPolicy" id="reviewPolicy" rows="12" cols="60" class="textArea">{$reviewPolicy|escape}</textarea></p>
+<p><textarea name="reviewPolicy[{$formLocale|escape}]" id="reviewPolicy" rows="12" cols="60" class="textArea">{$reviewPolicy[$formLocale]|escape}</textarea></p>
 
 
 <h4>{translate key="manager.setup.reviewGuidelines"}</h4>
 
 <p>{translate key="manager.setup.reviewGuidelinesDescription"}</p>
 
-<p><textarea name="reviewGuidelines" id="reviewGuidelines" rows="12" cols="60" class="textArea">{$reviewGuidelines|escape}</textarea></p>
+<p><textarea name="reviewGuidelines[{$formLocale|escape}]" id="reviewGuidelines" rows="12" cols="60" class="textArea">{$reviewGuidelines[$formLocale]|escape}</textarea></p>
 
 <h4>{translate key="manager.setup.reviewProcess"}</h4>
 
@@ -141,7 +153,7 @@
 
 <h3>2.3 {translate key="manager.setup.privacyStatement"}</h3>
 
-<p><textarea name="privacyStatement" id="privacyStatement" rows="12" cols="60" class="textArea">{$privacyStatement|escape}</textarea></p>
+<p><textarea name="privacyStatement[{$formLocale|escape}]" id="privacyStatement" rows="12" cols="60" class="textArea">{$privacyStatement[$formLocale]|escape}</textarea></p>
 
 
 <div class="separator"></div>
@@ -157,14 +169,14 @@
 <h3>2.5 {translate key="manager.setup.addItemtoAboutJournal"}</h3>
 
 <table width="100%" class="data">
-{foreach name=customAboutItems from=$customAboutItems key=aboutId item=aboutItem}
+{foreach name=customAboutItems from=$customAboutItems[$formLocale] key=aboutId item=aboutItem}
 	<tr valign="top">
 		<td width="5%" class="label">{fieldLabel name="customAboutItems-$aboutId-title" key="common.title"}</td>
-		<td width="95%" class="value"><input type="text" name="customAboutItems[{$aboutId}][title]" id="customAboutItems-{$aboutId}-title" value="{$aboutItem.title|escape}" size="40" maxlength="255" class="textField" />{if $smarty.foreach.customAboutItems.total > 1} <input type="submit" name="delCustomAboutItem[{$aboutId}]" value="{translate key="common.delete"}" class="button" />{/if}</td>
+		<td width="95%" class="value"><input type="text" name="customAboutItems[{$formLocale|escape}][{$aboutId}][title]" id="customAboutItems-{$aboutId}-title" value="{$aboutItem.title|escape}" size="40" maxlength="255" class="textField" />{if $smarty.foreach.customAboutItems.total > 1} <input type="submit" name="delCustomAboutItem[{$aboutId}]" value="{translate key="common.delete"}" class="button" />{/if}</td>
 	</tr>
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="customAboutItems-$aboutId-content" key="manager.setup.aboutItemContent"}</td>
-		<td width="80%" class="value"><textarea name="customAboutItems[{$aboutId}][content]" id="customAboutItems-{$aboutId}-content" rows="12" cols="40" class="textArea">{$aboutItem.content|escape}</textarea></td>
+		<td width="80%" class="value"><textarea name="customAboutItems[{$formLocale|escape}][{$aboutId}][content]" id="customAboutItems-{$aboutId}-content" rows="12" cols="40" class="textArea">{$aboutItem.content|escape}</textarea></td>
 	</tr>
 	{if !$smarty.foreach.customAboutItems.last}
 	<tr valign="top">
@@ -174,11 +186,11 @@
 {foreachelse}
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="customAboutItems-0-title" key="common.title"}</td>
-		<td width="80%" class="value"><input type="text" name="customAboutItems[0][title]" id="customAboutItems-0-title" value="" size="40" maxlength="255" class="textField" /></td>
+		<td width="80%" class="value"><input type="text" name="customAboutItems[{$formLocale|escape}][0][title]" id="customAboutItems-0-title" value="" size="40" maxlength="255" class="textField" /></td>
 	</tr>
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="customAboutItems-0-content" key="manager.setup.aboutItemContent"}</td>
-		<td width="80%" class="value"><textarea name="customAboutItems[0][content]" id="customAboutItems-0-content" rows="12" cols="40" class="textArea"></textarea></td>
+		<td width="80%" class="value"><textarea name="customAboutItems[{$formLocale|escape}][0][content]" id="customAboutItems-0-content" rows="12" cols="40" class="textArea"></textarea></td>
 	</tr>
 {/foreach}
 </table>

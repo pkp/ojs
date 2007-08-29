@@ -434,7 +434,7 @@ class NativeImportDom {
 
 		for ($index=0; ($node = $articleNode->getChildByName('title', $index)); $index++) {
 			$locale = $node->getAttribute('locale');
-			if ($locale == '' || $locale == $journal->getLocale()) {
+			if ($locale == '' || $locale == $journal->getPrimaryLocale()) {
 				$article->setTitle($node->getValue());
 			} elseif ($locale == $journal->getSetting('alternateLocale1')) {
 				$article->setTitleAlt1($node->getValue());
@@ -452,7 +452,7 @@ class NativeImportDom {
 
 		for ($index=0; ($node = $articleNode->getChildByName('abstract', $index)); $index++) {
 			$locale = $node->getAttribute('locale');
-			if ($locale == '' || $locale == $journal->getLocale()) {
+			if ($locale == '' || $locale == $journal->getPrimaryLocale()) {
 				$article->setAbstract($node->getValue());
 			} elseif ($locale == $journal->getSetting('alternateLocale1')) {
 				$article->setAbstractAlt1($node->getValue());
@@ -467,7 +467,7 @@ class NativeImportDom {
 		if (($indexingNode = $articleNode->getChildByName('indexing'))) {
 			if (($node = $indexingNode->getChildByName('discipline'))) $article->setDiscipline($node->getValue());
 			if (($node = $indexingNode->getChildByName('type'))) $article->setType($node->getValue());
-			if (($node = $indexingNode->getChildByName('subject'))) $article->setSubject($node->getValue());
+			if (($node = $indexingNode->getChildByName('subject'))) $article->setArticleSubject($node->getValue());
 			if (($node = $indexingNode->getChildByName('subject_class'))) $article->setSubjectClass($node->getValue());
 			if (($coverageNode = $indexingNode->getChildByName('coverage'))) {
 				if (($node = $coverageNode->getChildByName('geographical'))) $article->setCoverageGeo($node->getValue());

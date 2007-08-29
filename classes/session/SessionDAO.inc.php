@@ -18,14 +18,6 @@
 import('session.Session');
 
 class SessionDAO extends DAO {
-
-	/**
-	 * Constructor.
-	 */
-	function SessionDAO() {
-		parent::DAO();
-	}
-	
 	/**
 	 * Retrieve a session by ID.
 	 * @param $sessionId string
@@ -179,7 +171,6 @@ class SessionDAO extends DAO {
 
 		return $returner;
 	}
-	
 }
 
 ?>

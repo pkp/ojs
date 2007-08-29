@@ -40,7 +40,7 @@
 {iterate from=subscriptions item=subscription}
 	<tr valign="top">
 		<td>{$subscription->getUserFullName()|escape}</td>
-		<td>{$subscription->getTypeName()|escape}</td>
+		<td>{$subscription->getSubscriptionTypeName()|escape}</td>
 		<td>{$subscription->getDateStart()|date_format:$dateFormatShort}</td>
 		<td>{$subscription->getDateEnd()|date_format:$dateFormatShort}</td>
 		<td><a href="{url op="editSubscription" path=$subscription->getSubscriptionId()}" class="action">{translate key="common.edit"}</a>&nbsp;|&nbsp;<a href="{url op="deleteSubscription" path=$subscription->getSubscriptionId()}" onclick="return confirm('{translate|escape:"javascript" key="manager.subscriptions.confirmDelete"}')" class="action">{translate key="common.delete"}</a></td>

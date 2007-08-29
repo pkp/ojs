@@ -109,7 +109,7 @@ class Subscription extends DataObject {
 	 * Get the subscription type name of the subscription.
 	 * @return string
 	 */
-	function getTypeName() {
+	function getSubscriptionTypeName() {
 		$subscriptionTypeDao = &DAORegistry::getDAO('SubscriptionTypeDAO');
 		return $subscriptionTypeDao->getSubscriptionTypeName($this->getData('typeId'));
 	}

@@ -17,7 +17,7 @@
 <table class="data">
 <tr valign="top">
 	<td width="20%" class="label">{translate key="submission.layout.galleyLabel"}</td>
-	<td width="80%" class="value">{$galley->getLabel()|escape}</td>
+	<td width="80%" class="value">{$galley->getGalleyLabel()|escape}</td>
 </tr>
 
 <tr valign="top">

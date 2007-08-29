@@ -18,14 +18,6 @@
 import('mail.EmailTemplate');
 
 class EmailTemplateDAO extends DAO {
-
-	/**
-	 * Constructor.
-	 */
-	function EmailTemplateDAO() {
-		parent::DAO();
-	}
-	
 	/**
 	 * Retrieve a base email template by key.
 	 * @param $emailKey string

@@ -16,7 +16,7 @@
 
 <ul class="plain">
 {foreach from=$journals item=journal}
-<li>&#187; <a href="{url journal=$journal->getPath() page="rtadmin"}">{$journal->getTitle()|escape}</a></li>
+<li>&#187; <a href="{url journal=$journal->getPath() page="rtadmin"}">{$journal->getJournalTitle()|escape}</a></li>
 {/foreach}
 </ul>
 

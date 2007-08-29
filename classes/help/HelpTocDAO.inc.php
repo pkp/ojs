@@ -18,14 +18,6 @@
 import('help.HelpToc');
 
 class HelpTocDAO extends XMLDAO {
-
-	/**
-	 * Constructor.
-	 */
-	function HelpTocDAO() {
-		parent::XMLDAO();
-	}
-
 	function &_getCache($tocId) {
 		static $cache;
 

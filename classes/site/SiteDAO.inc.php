@@ -18,14 +18,6 @@
 import('site.Site');
 
 class SiteDAO extends DAO {
-
-	/**
-	 * Constructor.
-	 */
-	function SiteDAO() {
-		parent::DAO();
-	}
-	
 	/**
 	 * Retrieve site information.
 	 * @return Site
@@ -37,7 +29,7 @@ class SiteDAO extends DAO {
 		);
 		
 		if ($result->RecordCount() != 0) {
-			$site = $this->_returnSiteFromRow($result->GetRowAssoc(false));
+			$site = $this->_returnSiteFromRowWithData($result->GetRowAssoc(false));
 		}
 
 		$result->Close();
@@ -45,28 +37,32 @@ class SiteDAO extends DAO {
 
 		return $site;
 	}
-	
+
+	function &_returnSiteFromRowWithData(&$row) {
+		$site =& $this->_returnSiteFromRow($row, false);
+		$this->getDataObjectSettings('site_settings', null, null, $site);
+
+		HookRegistry::call('UserDAO::_returnSiteFromRowWithData', array(&$site, &$row));
+
+		return $site;
+	}
+
 	/**
 	 * Internal function to return a Site object from a row.
 	 * @param $row array
+	 * @param $callHook boolean
 	 * @return Site
 	 */
-	function &_returnSiteFromRow(&$row) {
+	function &_returnSiteFromRow(&$row, $callHook = true) {
 		$site = &new Site();
-		$site->setTitle($row['title']);
-		$site->setIntro($row['intro']);
-		$site->setAbout($row['about']);
 		$site->setJournalRedirect($row['journal_redirect']);
-		$site->setContactName($row['contact_name']);
-		$site->setContactEmail($row['contact_email']);
 		$site->setMinPasswordLength($row['min_password_length']);
-		$site->setLocale($row['locale']);
+		$site->setPrimaryLocale($row['primary_locale']);
 		$site->setOriginalStyleFilename($row['original_style_file_name']);
 		$site->setInstalledLocales(isset($row['installed_locales']) && !empty($row['installed_locales']) ? explode(':', $row['installed_locales']) : array());
 		$site->setSupportedLocales(isset($row['supported_locales']) && !empty($row['supported_locales']) ? explode(':', $row['supported_locales']) : array());
-		$site->setProfileLocalesEnabled($row['profile_locales']);
 
-		HookRegistry::call('SiteDAO::_returnSiteFromRow', array(&$site, &$row));
+		if ($callHook) HookRegistry::call('SiteDAO::_returnSiteFromRow', array(&$site, &$row));
 
 		return $site;
 	}
@@ -76,65 +72,56 @@ class SiteDAO extends DAO {
 	 * @param $site Site
 	 */
 	function insertSite(&$site) {
-		return $this->update(
+		$this->update(
 			'INSERT INTO site
-				(title, intro, about, journal_redirect, contact_name, contact_email, min_password_length, locale, installed_locales, supported_locales, profile_locales, original_style_file_name)
+				(journal_redirect, min_password_length, primary_locale, installed_locales, supported_locales, original_style_file_name)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?)',
 			array(
-				$site->getTitle(),
-				$site->getIntro(),
-				$site->getAbout(),
 				$site->getJournalRedirect(),
-				$site->getContactName(),
-				$site->getContactEmail(),
 				$site->getMinPasswordLength(),
-				$site->getLocale(),
+				$site->getPrimaryLocale(),
 				join(':', $site->getInstalledLocales()),
 				join(':', $site->getSupportedLocales()),
-				$site->getProfileLocalesEnabled() == null ? 0 : $site->getProfileLocalesEnabled(),
 				$site->getOriginalStyleFilename()
 			)
 		);
+		$this->updateLocaleFields($site);
 	}
-	
+
+	function getLocaleFieldNames() {
+		return array('title', 'intro', 'about', 'contactName', 'contactEmail');
+	}
+
+	function updateLocaleFields(&$site) {
+		$this->updateDataObjectSettings('site_settings', $site, array());
+	}
+
 	/**
 	 * Update existing site information.
 	 * @param $site Site
 	 */
 	function updateSite(&$site) {
+		$this->updateLocaleFields($site);
 		return $this->update(
 			'UPDATE site
 				SET
-					title = ?,
-					intro = ?,
-					about = ?,
 					journal_redirect = ?,
-					contact_name = ?,
-					contact_email = ?,
 					min_password_length = ?,
-					locale = ?,
+					primary_locale = ?,
 					installed_locales = ?,
 					supported_locales = ?,
-					profile_locales = ?,
 					original_style_file_name = ?',
 			array(
-				$site->getTitle(),
-				$site->getIntro(),
-				$site->getAbout(),
 				$site->getJournalRedirect(),
-				$site->getContactName(),
-				$site->getContactEmail(),
 				$site->getMinPasswordLength(),
-				$site->getLocale(),
+				$site->getPrimaryLocale(),
 				join(':', $site->getInstalledLocales()),
 				join(':', $site->getSupportedLocales()),
-				$site->getProfileLocalesEnabled() == null ? 0 : $site->getProfileLocalesEnabled(),
 				$site->getOriginalStyleFilename()
 			)
 		);
 	}
-	
 }
 
 ?>

@@ -17,14 +17,6 @@
 import('search.ArticleSearch');
 
 class ArticleSearchDAO extends DAO {
-
-	/**
-	 * Constructor.
-	 */
-	function ArticleSearchDAO() {
-		parent::DAO();
-	}
-	
 	/**
 	 * Add a word to the keyword list (if it doesn't already exist).
 	 * @param $keyword string
@@ -211,7 +203,6 @@ class ArticleSearchDAO extends DAO {
 		);
 		return $keywordId;
 	}
-	
 }
 
 ?>

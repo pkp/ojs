@@ -8,7 +8,7 @@
  *
  * $Id$
  *}
-	<meta name="citation_journal_title" content="{$currentJournal->getTitle()|strip_tags|escape}"/>
+	<meta name="citation_journal_title" content="{$currentJournal->getJournalTitle()|strip_tags|escape}"/>
 {if $currentJournal->getSetting('onlineIssn')}{assign var="issn" value=$currentJournal->getSetting('onlineIssn')}
 {elseif $currentJournal->getSetting('printIssn')}{assign var="issn" value=$currentJournal->getSetting('printIssn')}
 {elseif $currentJournal->getSetting('issn')}{assign var="issn" value=$currentJournal->getSetting('issn')}

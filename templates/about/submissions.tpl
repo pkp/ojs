@@ -14,9 +14,9 @@
 
 <ul class="plain">
 	<li>&#187; <a href="{url page="about" op="submissions" anchor="onlineSubmissions"}">{translate key="about.onlineSubmissions"}</a></li>
-	{if !empty($journalSettings.authorGuidelines)}<li>&#187; <a href="{url page="about" op="submissions" anchor="authorGuidelines"}">{translate key="about.authorGuidelines"}</a></li>{/if}
-	{if !empty($journalSettings.copyrightNotice)}<li>&#187; <a href="{url page="about" op="submissions" anchor="copyrightNotice"}">{translate key="about.copyrightNotice"}</a></li>{/if}
-	{if !empty($journalSettings.privacyStatement)}<li>&#187; <a href="{url page="about" op="submissions" anchor="privacyStatement"}">{translate key="about.privacyStatement"}</a></li>{/if}
+	{if $currentJournal->getLocalizedSetting('authorGuidelines') != ''}<li>&#187; <a href="{url page="about" op="submissions" anchor="authorGuidelines"}">{translate key="about.authorGuidelines"}</a></li>{/if}
+	{if $currentJournal->getLocalizedSetting('copyrightNotice') != ''}<li>&#187; <a href="{url page="about" op="submissions" anchor="copyrightNotice"}">{translate key="about.copyrightNotice"}</a></li>{/if}
+	{if $currentJournal->getLocalizedSetting('privacyStatement') != ''}<li>&#187; <a href="{url page="about" op="submissions" anchor="privacyStatement"}">{translate key="about.privacyStatement"}</a></li>{/if}
 </ul>
 
 <a name="onlineSubmissions"></a><h3>{translate key="about.onlineSubmissions"}</h3>
@@ -32,9 +32,9 @@
 
 <div class="separator">&nbsp;</div>
 
-{if !empty($journalSettings.authorGuidelines)}
+{if $currentJournal->getLocalizedSetting('authorGuidelines') != ''}
 <a name="authorGuidelines"></a><h3>{translate key="about.authorGuidelines"}</h3>
-<p>{$journalSettings.authorGuidelines|nl2br}</p>
+<p>{$currentJournal->getLocalizedSetting('authorGuidelines')|nl2br}</p>
 
 <div class="separator">&nbsp;</div>
 {/if}
@@ -42,22 +42,22 @@
 <a name="submissionPreparationChecklist"></a><h3>{translate key="about.submissionPreparationChecklist"}</h3>
 <p>{translate key="about.submissionPreparationChecklist.description"}</p>
 <ol>
-	{foreach from=$journalSettings.submissionChecklist item=checklistItem}
+	{foreach from=$submissionChecklist item=checklistItem}
 		<li>{$checklistItem.content|nl2br}</li>	
 	{/foreach}
 </ol>
 
 <div class="separator">&nbsp;</div>
 
-{if !empty($journalSettings.copyrightNotice)}
+{if $currentJournal->getLocalizedSetting('copyrightNotice') != ''}
 <a name="copyrightNotice"></a><h3>{translate key="about.copyrightNotice"}</h3>
-<p>{$journalSettings.copyrightNotice|nl2br}</p>
+<p>{$currentJournal->getLocalizedSetting('copyrightNotice')|nl2br}</p>
 
 <div class="separator">&nbsp;</div>
 {/if}
 
-{if !empty($journalSettings.privacyStatement)}<a name="privacyStatement"></a><h3>{translate key="about.privacyStatement"}</h3>
-<p>{$journalSettings.privacyStatement|nl2br}</p>
+{if $currentJournal->getLocalizedSetting('privacyStatement') != ''}<a name="privacyStatement"></a><h3>{translate key="about.privacyStatement"}</h3>
+<p>{$currentJournal->getLocalizedSetting('privacyStatement')|nl2br}</p>
 {/if}
 
 {include file="common/footer.tpl"}

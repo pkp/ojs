@@ -19,7 +19,6 @@ import('submission.editor.EditorSubmission');
 import('submission.author.AuthorSubmission'); // Bring in editor decision constants
 
 class EditorSubmissionDAO extends DAO {
-
 	var $articleDao;
 	var $authorDao;
 	var $userDao;
@@ -42,8 +41,31 @@ class EditorSubmissionDAO extends DAO {
 	 * @return EditorSubmission
 	 */
 	function &getEditorSubmission($articleId) {
+		$primaryLocale = Locale::getPrimaryLocale();
+		$locale = Locale::getLocale();
 		$result = &$this->retrieve(
-			'SELECT a.*, s.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, s.abbrev AS section_abbrev, s.abbrev_alt1 AS section_abbrev_alt1, s.abbrev_alt2 AS section_abbrev_alt2 FROM articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE a.article_id = ?', $articleId
+			'SELECT
+				a.*,
+				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
+				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
+			FROM	articles a
+				LEFT JOIN sections s ON s.section_id = a.section_id
+				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
+				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
+				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
+				LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?)
+			WHERE	a.article_id = ?',
+			array(
+				'title',
+				$primaryLocale,
+				'title',
+				$locale,
+				'abbrev',
+				$primaryLocale,
+				'abbrev',
+				$locale,
+				$articleId
+			)
 		);
 
 		$returner = null;
@@ -134,19 +156,38 @@ class EditorSubmissionDAO extends DAO {
 	 * @return array EditorSubmission
 	 */
 	function &getEditorSubmissions($journalId, $status = true, $sectionId = 0, $rangeInfo = null) {
-		if (!$sectionId) {
-			$result = &$this->retrieveRange(
-					'SELECT a.*, s.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, s.abbrev AS section_abbrev, s.abbrev_alt1 AS section_abbrev_alt1, s.abbrev_alt2 AS section_abbrev_alt2 from articles a LEFT JOIN sections s ON (s.section_id = a.section_id) WHERE a.journal_id = ? AND a.status = ? ORDER BY article_id ASC',
-					array($journalId, $status),
-					$rangeInfo
-			);
-		} else {
-			$result = &$this->retrieveRange(
-					'SELECT a.*, s.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, s.abbrev AS section_abbrev, s.abbrev_alt1 AS section_abbrev_alt1, s.abbrev_alt2 AS section_abbrev_alt2 from articles a LEFT JOIN sections s ON (s.section_id = a.section_id) WHERE a.journal_id = ? AND a.status = ? AND a.section_id = ? ORDER BY article_id ASC',
-					array($journalId, $status, $sectionId),
-					$rangeInfo
-			);	
-		}
+		$primaryLocale = Locale::getPrimaryLocale();
+		$locale = Locale::getLocale();
+		$params = array(
+			'title',
+			$primaryLocale,
+			'title',
+			$locale,
+			'abbrev',
+			$primaryLocale,
+			'abbrev',
+			$locale,
+			$journalId,
+			$status
+		);
+		if ($sectionId) $params[] = $sectionId;
+
+		$sql = 'SELECT	a.*,
+				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
+				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
+
+			FROM	articles a
+				LEFT JOIN sections s ON (s.section_id = a.section_id)
+				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
+				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
+				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
+				LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?)
+			WHERE	a.journal_id = ?
+				AND a.status = ?' .
+				($sectionId?' AND a.section_id = ?':'') .
+			' ORDER BY article_id ASC';
+
+		$result = &$this->retrieveRange($sql, $params, $rangeInfo);
 		$returner = &new DAOResultFactory($result, $this, '_returnEditorSubmissionFromRow');
 		return $returner;
 	}
@@ -166,18 +207,34 @@ class EditorSubmissionDAO extends DAO {
 	 * @return array result
 	 */
 	function &getUnfilteredEditorSubmissions($journalId, $sectionId = 0, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $status = true, $rangeInfo = null) {
-		$params = array($journalId);
+		$primaryLocale = Locale::getPrimaryLocale();
+		$locale = Locale::getLocale();
+		$params = array(
+			'title', // Section title
+			$primaryLocale,
+			'title',
+			$locale,
+			'abbrev', // Section abbrev
+			$primaryLocale,
+			'abbrev',
+			$locale,
+			'title', // Article title
+			$primaryLocale,
+			'title',
+			$locale,
+			$journalId
+		);
 		$searchSql = '';
 
 		if (!empty($search)) switch ($searchField) {
 			case SUBMISSION_FIELD_TITLE:
 				if ($searchMatch === 'is') {
-					$searchSql = ' AND (LOWER(a.title) = LOWER(?) OR LOWER(a.title_alt1) = LOWER(?) OR LOWER(a.title_alt2) = LOWER(?))';
+					$searchSql = ' AND LOWER(COALESCE(atl.setting_value, atpl.setting_value)) = LOWER(?)';
 				} else {
-					$searchSql = ' AND (LOWER(a.title) LIKE LOWER(?) OR LOWER(a.title_alt1) LIKE LOWER(?) OR LOWER(a.title_alt2) LIKE LOWER(?))';
+					$searchSql = ' AND LOWER(COALESCE(atl.setting_value, atpl.setting_value)) LIKE LOWER(?)';
 					$search = '%' . $search . '%';
 				}
-				$params[] = $params[] = $params[] = $search;
+				$params[] = $search;
 				break;
 			case SUBMISSION_FIELD_AUTHOR:
 				$searchSql = $this->_generateUserNameSearchSQL($search, $searchMatch, 'aa.', $params);
@@ -235,26 +292,28 @@ class EditorSubmissionDAO extends DAO {
 
 		$sql = 'SELECT DISTINCT
 				a.*,
-				s.title AS section_title,
-				s.title_alt1 AS section_title_alt1,
-				s.title_alt2 AS section_title_alt2,
-				s.abbrev AS section_abbrev,
-				s.abbrev_alt1 AS section_abbrev_alt1,
-				s.abbrev_alt2 AS section_abbrev_alt2
+				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
+				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
 			FROM
 				articles a
-			INNER JOIN article_authors aa ON (aa.article_id = a.article_id)
-			LEFT JOIN sections s ON (s.section_id = a.section_id)
-			LEFT JOIN edit_assignments e ON (e.article_id = a.article_id)
-			LEFT JOIN users ed ON (e.editor_id = ed.user_id)
-			LEFT JOIN copyed_assignments c ON (a.article_id = c.article_id)
-			LEFT JOIN users ce ON (c.copyeditor_id = ce.user_id)
-			LEFT JOIN proof_assignments p ON (p.article_id = a.article_id)
-			LEFT JOIN users pe ON (pe.user_id = p.proofreader_id)
-			LEFT JOIN layouted_assignments l ON (l.article_id = a.article_id)
-			LEFT JOIN users le ON (le.user_id = l.editor_id)
-			LEFT JOIN review_assignments r ON (r.article_id = a.article_id)
-			LEFT JOIN users re ON (re.user_id = r.reviewer_id AND cancelled = 0)
+				INNER JOIN article_authors aa ON (aa.article_id = a.article_id)
+				LEFT JOIN sections s ON (s.section_id = a.section_id)
+				LEFT JOIN edit_assignments e ON (e.article_id = a.article_id)
+				LEFT JOIN users ed ON (e.editor_id = ed.user_id)
+				LEFT JOIN copyed_assignments c ON (a.article_id = c.article_id)
+				LEFT JOIN users ce ON (c.copyeditor_id = ce.user_id)
+				LEFT JOIN proof_assignments p ON (p.article_id = a.article_id)
+				LEFT JOIN users pe ON (pe.user_id = p.proofreader_id)
+				LEFT JOIN layouted_assignments l ON (l.article_id = a.article_id)
+				LEFT JOIN users le ON (le.user_id = l.editor_id)
+				LEFT JOIN review_assignments r ON (r.article_id = a.article_id)
+				LEFT JOIN users re ON (re.user_id = r.reviewer_id AND cancelled = 0)
+				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
+				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
+				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
+				LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?)
+				LEFT JOIN article_settings atpl ON (a.article_id = atpl.article_id AND atpl.setting_name = ? AND atpl.locale = ?)
+				LEFT JOIN article_settings atl ON (a.article_id = atl.article_id AND atl.setting_name = ? AND atl.locale = ?)
 			WHERE
 				a.journal_id = ? AND a.submission_progress = 0';
 
@@ -638,7 +697,7 @@ class EditorSubmissionDAO extends DAO {
 	function &getUsersNotAssignedToArticle($journalId, $articleId, $roleId, $searchType=null, $search=null, $searchMatch=null, $rangeInfo = null) {
 		$users = array();
 		
-		$paramArray = array($articleId, $journalId, $roleId);
+		$paramArray = array('interests', $articleId, $journalId, $roleId);
 		$searchSql = '';
 
 		if (isset($search)) switch ($searchType) {
@@ -663,7 +722,7 @@ class EditorSubmissionDAO extends DAO {
 				$paramArray[] = ($searchMatch=='is'?$search:'%' . $search . '%');
 				break;
 			case USER_FIELD_INTERESTS:
-				$searchSql = 'AND LOWER(interests) ' . ($searchMatch=='is'?'=':'LIKE') . ' LOWER(?)';
+				$searchSql = 'AND LOWER(s.setting_value) ' . ($searchMatch=='is'?'=':'LIKE') . ' LOWER(?)';
 				$paramArray[] = ($searchMatch=='is'?$search:'%' . $search . '%');
 				break;
 			case USER_FIELD_INITIAL:
@@ -674,11 +733,11 @@ class EditorSubmissionDAO extends DAO {
 		}
 		
 		$result = &$this->retrieveRange(
-			'SELECT DISTINCT u.* FROM users u NATURAL JOIN roles r LEFT JOIN edit_assignments e ON (e.editor_id = u.user_id AND e.article_id = ?) WHERE r.journal_id = ? AND r.role_id = ? AND (e.article_id IS NULL) ' . $searchSql . ' ORDER BY last_name, first_name',
+			'SELECT DISTINCT u.* FROM users u LEFT JOIN user_settings s ON (u.user_id = s.user_id AND s.setting_name = ?) NATURAL JOIN roles r LEFT JOIN edit_assignments e ON (e.editor_id = u.user_id AND e.article_id = ?) WHERE r.journal_id = ? AND r.role_id = ? AND (e.article_id IS NULL) ' . $searchSql . ' ORDER BY last_name, first_name',
 			$paramArray, $rangeInfo
 		);
 		
-		$returner = &new DAOResultFactory($result, $this->userDao, '_returnUserFromRow');
+		$returner = &new DAOResultFactory($result, $this->userDao, '_returnUserFromRowWithData');
 		return $returner;
 	}
 	

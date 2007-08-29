@@ -30,7 +30,7 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$subscriptionTypeDao = &DAORegistry::getDAO('SubscriptionTypeDAO');
 
-		$journalName = $journal->getTitle();
+		$journalName = $journal->getJournalTitle();
 		$journalId = $journal->getJournalId();
 		$user = &$userDao->getUser($subscription->getUserId());
 		if (!isset($user)) return false;
@@ -70,8 +70,8 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 		$mail = &new MailTemplate($emailKey);
 		$mail->setFrom($subscriptionEmail, $subscriptionName);
 		$mail->addRecipient($user->getEmail(), $user->getFullName());
-		$mail->setSubject($mail->getSubject($journal->getLocale()));
-		$mail->setBody($mail->getBody($journal->getLocale()));
+		$mail->setSubject($mail->getSubject($journal->getPrimaryLocale()));
+		$mail->setBody($mail->getBody($journal->getPrimaryLocale()));
 		$mail->assignParams($paramArray);
 		$mail->send();
 	}

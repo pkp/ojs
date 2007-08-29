@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../dtd/xmldata.dtd">
+
+<!--
+  * 2.2.0_localize.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localize the database for an upgrade from pre-2.2 to 2.2.
+  *
+  * $Id$
+  -->
+
+<data>
+	<!-- Localize the site table -->
+	<sql>
+		<query>INSERT INTO site_settings (setting_name, setting_value, setting_type, locale) SELECT 'title', title, 'string', primary_locale FROM site</query>
+		<query>INSERT INTO site_settings (setting_name, setting_value, setting_type, locale) SELECT 'intro', intro, 'string', primary_locale FROM site</query>
+		<query>INSERT INTO site_settings (setting_name, setting_value, setting_type, locale) SELECT 'about', about, 'string', primary_locale FROM site</query>
+		<query>INSERT INTO site_settings (setting_name, setting_value, setting_type, locale) SELECT 'contact_name', contact_name, 'string', primary_locale FROM site</query>
+		<query>INSERT INTO site_settings (setting_name, setting_value, setting_type, locale) SELECT 'contact_email', contact_email, 'string', primary_locale FROM site</query>
+	</sql>
+
+	<!-- Localize the users table -->
+	<sql>
+		<query>INSERT INTO user_settings (user_id, setting_name, setting_value, setting_type, locale) SELECT u.user_id, 'biography', biography, 'string', s.primary_locale FROM users u, site s</query>
+		<query>INSERT INTO user_settings (user_id, setting_name, setting_value, setting_type, locale) SELECT u.user_id, 'interests', interests, 'string', s.primary_locale FROM users u, site s</query>
+		<query>INSERT INTO user_settings (user_id, setting_name, setting_value, setting_type, locale) SELECT u.user_id, 'signature', signature, 'string', s.primary_locale FROM users u, site s</query>
+	</sql>
+
+	<!-- Localize the journals table -->
+	<sql>
+		<query>INSERT INTO journal_settings (journal_id, setting_name, setting_value, setting_type, locale) SELECT j.journal_id, 'title', title, 'string', j.primary_locale FROM journals j</query>
+		<query>INSERT INTO journal_settings (journal_id, setting_name, setting_value, setting_type, locale) SELECT j.journal_id, 'description', description, 'string', j.primary_locale FROM journals j</query>
+	</sql>
+
+	<!-- Localize the sections table -->
+	<sql>
+		<!-- Section title + alts -->
+		<query>INSERT INTO section_settings (section_id, setting_name, setting_value, setting_type, locale) SELECT s.section_id, 'title', s.title, 'string', j.primary_locale FROM sections s, journals j WHERE s.journal_id = j.journal_id</query>
+		<query>INSERT INTO section_settings (section_id, setting_name, setting_value, setting_type, locale) SELECT s.section_id, 'title', s.title_alt1, 'string', js.setting_value FROM sections s, journal_settings js WHERE s.journal_id = js.journal_id AND js.setting_name = 'alternateLocale1' AND s.title_alt1 IS NOT NULL AND s.title_alt1 != ''</query>
+		<query>INSERT INTO section_settings (section_id, setting_name, setting_value, setting_type, locale) SELECT s.section_id, 'title', s.title_alt2, 'string', js.setting_value FROM sections s, journal_settings js WHERE s.journal_id = js.journal_id AND js.setting_name = 'alternateLocale2' AND s.title_alt2 IS NOT NULL AND s.title_alt2 != ''</query>
+
+		<!-- Section abbrev + alts -->
+		<query>INSERT INTO section_settings (section_id, setting_name, setting_value, setting_type, locale) SELECT s.section_id, 'abbrev', s.abbrev, 'string', j.primary_locale FROM sections s, journals j WHERE s.journal_id = j.journal_id</query>
+		<query>INSERT INTO section_settings (section_id, setting_name, setting_value, setting_type, locale) SELECT s.section_id, 'abbrev', s.abbrev_alt1, 'string', js.setting_value FROM sections s, journal_settings js WHERE s.journal_id = js.journal_id AND js.setting_name = 'alternateLocale1' AND s.abbrev_alt1 IS NOT NULL AND s.abbrev_alt1 != ''</query>
+		<query>INSERT INTO section_settings (section_id, setting_name, setting_value, setting_type, locale) SELECT s.section_id, 'abbrev', s.abbrev_alt2, 'string', js.setting_value FROM sections s, journal_settings js WHERE s.journal_id = js.journal_id AND js.setting_name = 'alternateLocale2' AND s.abbrev_alt2 IS NOT NULL AND s.abbrev_alt2 != ''</query>
+
+		<!-- Section identify type -->
+		<query>INSERT INTO section_settings (section_id, setting_name, setting_value, setting_type, locale) SELECT s.section_id, 'identifyType', s.identify_type, 'string', j.primary_locale FROM sections s, journals j WHERE s.journal_id = j.journal_id</query>
+	</sql>
+
+	<!-- Localize the issues table -->
+	<sql>
+		<query>INSERT INTO issue_settings (issue_id, setting_name, setting_value, setting_type, locale) SELECT i.issue_id, 'title', i.title, 'string', j.primary_locale FROM issues i, journals j WHERE i.journal_id = j.journal_id</query>
+		<query>INSERT INTO issue_settings (issue_id, setting_name, setting_value, setting_type, locale) SELECT i.issue_id, 'description', i.description, 'string', j.primary_locale FROM issues i, journals j WHERE i.journal_id = j.journal_id</query>
+		<query>INSERT INTO issue_settings (issue_id, setting_name, setting_value, setting_type, locale) SELECT i.issue_id, 'fileName', i.file_name, 'string', j.primary_locale FROM issues i, journals j WHERE i.journal_id = j.journal_id</query>
+		<query>INSERT INTO issue_settings (issue_id, setting_name, setting_value, setting_type, locale) SELECT i.issue_id, 'originalFileName', i.original_file_name, 'string', j.primary_locale FROM issues i, journals j WHERE i.journal_id = j.journal_id</query>
+		<query>INSERT INTO issue_settings (issue_id, setting_name, setting_value, setting_type, locale) SELECT i.issue_id, 'width', i.width, 'string', j.primary_locale FROM issues i, journals j WHERE i.journal_id = j.journal_id</query>
+		<query>INSERT INTO issue_settings (issue_id, setting_name, setting_value, setting_type, locale) SELECT i.issue_id, 'height', i.height, 'string', j.primary_locale FROM issues i, journals j WHERE i.journal_id = j.journal_id</query>
+		<query>INSERT INTO issue_settings (issue_id, setting_name, setting_value, setting_type, locale) SELECT i.issue_id, 'coverPageDescription', i.cover_page_description, 'string', j.primary_locale FROM issues i, journals j WHERE i.journal_id = j.journal_id</query>
+		<query>INSERT INTO issue_settings (issue_id, setting_name, setting_value, setting_type, locale) SELECT i.issue_id, 'showCoverPage', i.show_cover_page, 'string', j.primary_locale FROM issues i, journals j WHERE i.journal_id = j.journal_id</query>
+	</sql>
+
+	<!-- Localize the articles table -->
+	<sql>
+		<!-- Article title + alts -->
+		<query>INSERT INTO article_settings (article_id, setting_name, setting_value, setting_type, locale) SELECT a.article_id, 'title', a.title, 'string', j.primary_locale FROM articles a, journals j WHERE a.journal_id = j.journal_id</query>
+		<query>INSERT INTO article_settings (article_id, setting_name, setting_value, setting_type, locale) SELECT a.article_id, 'title', a.title_alt1, 'string', js.setting_value FROM articles a, journal_settings js WHERE a.journal_id = js.journal_id AND js.setting_name = 'alternateLocale1' AND a.title_alt1 IS NOT NULL AND a.title_alt1 != ''</query>
+		<query>INSERT INTO article_settings (article_id, setting_name, setting_value, setting_type, locale) SELECT a.article_id, 'title', a.title_alt2, 'string', js.setting_value FROM articles a, journal_settings js WHERE a.journal_id = js.journal_id AND js.setting_name = 'alternateLocale2' AND a.title_alt2 IS NOT NULL AND a.title_alt2 != ''</query>
+
+		<!-- Article abstract + alts -->
+		<query>INSERT INTO article_settings (article_id, setting_name, setting_value, setting_type, locale) SELECT a.article_id, 'abstract', a.abstract, 'string', j.primary_locale FROM articles a, journals j WHERE a.journal_id = j.journal_id AND a.abstract IS NOT NULL AND a.abstract != ''</query>
+		<query>INSERT INTO article_settings (article_id, setting_name, setting_value, setting_type, locale) SELECT a.article_id, 'abstract', a.abstract_alt1, 'string', js.setting_value FROM articles a, journal_settings js WHERE a.journal_id = js.journal_id AND js.setting_name = 'alternateLocale1' AND a.abstract_alt1 IS NOT NULL AND a.abstract_alt1 != ''</query>
+		<query>INSERT INTO article_settings (article_id, setting_name, setting_value, setting_type, locale) SELECT a.article_id, 'abstract', a.abstract_alt2, 'string', js.setting_value FROM articles a, journal_settings js WHERE a.journal_id = js.journal_id AND js.setting_name = 'alternateLocale2' AND a.abstract_alt2 IS NOT NULL AND a.abstract_alt2 != ''</query>
+
+		<!-- Additional fields -->
+		<query>INSERT INTO article_settings (article_id, setting_name, setting_value, setting_type, locale) SELECT a.article_id, 'discipline', a.discipline, 'string', j.primary_locale FROM articles a, journals j WHERE a.journal_id = j.journal_id AND a.discipline IS NOT NULL AND a.discipline != ''</query>
+		<query>INSERT INTO article_settings (article_id, setting_name, setting_value, setting_type, locale) SELECT a.article_id, 'subjectClass', a.subject_class, 'string', j.primary_locale FROM articles a, journals j WHERE a.journal_id = j.journal_id AND a.subject_class IS NOT NULL AND a.subject_class != ''</query>
+		<query>INSERT INTO article_settings (article_id, setting_name, setting_value, setting_type, locale) SELECT a.article_id, 'subject', a.subject, 'string', j.primary_locale FROM articles a, journals j WHERE a.journal_id = j.journal_id AND a.subject IS NOT NULL AND a.subject != ''</query>
+		<query>INSERT INTO article_settings (article_id, setting_name, setting_value, setting_type, locale) SELECT a.article_id, 'coverageGeo', a.coverage_geo, 'string', j.primary_locale FROM articles a, journals j WHERE a.journal_id = j.journal_id AND a.coverage_geo IS NOT NULL AND a.coverage_geo != ''</query>
+		<query>INSERT INTO article_settings (article_id, setting_name, setting_value, setting_type, locale) SELECT a.article_id, 'coverageChron', a.coverage_chron, 'string', j.primary_locale FROM articles a, journals j WHERE a.journal_id = j.journal_id AND a.coverage_chron IS NOT NULL AND a.coverage_chron != ''</query>
+		<query>INSERT INTO article_settings (article_id, setting_name, setting_value, setting_type, locale) SELECT a.article_id, 'coverageSample', a.coverage_sample, 'string', j.primary_locale FROM articles a, journals j WHERE a.journal_id = j.journal_id AND a.coverage_sample IS NOT NULL AND a.coverage_sample != ''</query>
+		<query>INSERT INTO article_settings (article_id, setting_name, setting_value, setting_type, locale) SELECT a.article_id, 'type', a.type, 'string', j.primary_locale FROM articles a, journals j WHERE a.journal_id = j.journal_id AND a.type IS NOT NULL AND a.type != ''</query>
+		<query>INSERT INTO article_settings (article_id, setting_name, setting_value, setting_type, locale) SELECT a.article_id, 'sponsor', a.sponsor, 'string', j.primary_locale FROM articles a, journals j WHERE a.journal_id = j.journal_id AND a.sponsor IS NOT NULL AND a.sponsor != ''</query>
+	</sql>
+
+	<!-- Localize the article_authors table -->
+	<sql>
+		<query>INSERT INTO article_author_settings (author_id, setting_name, setting_value, setting_type, locale) SELECT aa.author_id, 'biography', aa.biography, 'string', j.primary_locale FROM article_authors aa, articles a, journals j WHERE aa.article_id = a.article_id AND a.journal_id = j.journal_id AND aa.biography IS NOT NULL AND aa.biography != ''</query>
+	</sql>
+
+	<!-- Localize the article_supplementary_files table -->
+	<sql>
+		<query>INSERT INTO article_supp_file_settings (supp_id, setting_name, setting_value, setting_type, locale) SELECT s.supp_id, 'title', s.title, 'string', j.primary_locale FROM article_supplementary_files s, articles a, journals j WHERE s.article_id = a.article_id AND a.journal_id = j.journal_id AND s.title IS NOT NULL AND s.title != ''</query>
+		<query>INSERT INTO article_supp_file_settings (supp_id, setting_name, setting_value, setting_type, locale) SELECT s.supp_id, 'creator', s.creator, 'string', j.primary_locale FROM article_supplementary_files s, articles a, journals j WHERE s.article_id = a.article_id AND a.journal_id = j.journal_id AND s.creator IS NOT NULL AND s.creator != ''</query>
+		<query>INSERT INTO article_supp_file_settings (supp_id, setting_name, setting_value, setting_type, locale) SELECT s.supp_id, 'subject', s.subject, 'string', j.primary_locale FROM article_supplementary_files s, articles a, journals j WHERE s.article_id = a.article_id AND a.journal_id = j.journal_id AND s.subject IS NOT NULL AND s.subject != ''</query>
+		<query>INSERT INTO article_supp_file_settings (supp_id, setting_name, setting_value, setting_type, locale) SELECT s.supp_id, 'typeOther', s.type_other, 'string', j.primary_locale FROM article_supplementary_files s, articles a, journals j WHERE s.article_id = a.article_id AND a.journal_id = j.journal_id AND s.type_other IS NOT NULL AND s.type_other != ''</query>
+		<query>INSERT INTO article_supp_file_settings (supp_id, setting_name, setting_value, setting_type, locale) SELECT s.supp_id, 'description', s.description, 'string', j.primary_locale FROM article_supplementary_files s, articles a, journals j WHERE s.article_id = a.article_id AND a.journal_id = j.journal_id AND s.description IS NOT NULL AND s.description != ''</query>
+		<query>INSERT INTO article_supp_file_settings (supp_id, setting_name, setting_value, setting_type, locale) SELECT s.supp_id, 'publisher', s.publisher, 'string', j.primary_locale FROM article_supplementary_files s, articles a, journals j WHERE s.article_id = a.article_id AND a.journal_id = j.journal_id AND s.publisher IS NOT NULL AND s.publisher != ''</query>
+		<query>INSERT INTO article_supp_file_settings (supp_id, setting_name, setting_value, setting_type, locale) SELECT s.supp_id, 'sponsor', s.sponsor, 'string', j.primary_locale FROM article_supplementary_files s, articles a, journals j WHERE s.article_id = a.article_id AND a.journal_id = j.journal_id AND s.sponsor IS NOT NULL AND s.sponsor != ''</query>
+		<query>INSERT INTO article_supp_file_settings (supp_id, setting_name, setting_value, setting_type, locale) SELECT s.supp_id, 'source', s.source, 'string', j.primary_locale FROM article_supplementary_files s, articles a, journals j WHERE s.article_id = a.article_id AND a.journal_id = j.journal_id AND s.source IS NOT NULL AND s.source != ''</query>
+	</sql>
+
+	<!-- Localize the subscription_types table -->
+	<sql>
+		<query>INSERT INTO subscription_type_settings (type_id, setting_name, setting_value, setting_type, locale) SELECT t.type_id, 'name', t.type_name, 'string', j.primary_locale FROM subscription_types t, journals j WHERE t.journal_id = j.journal_id AND t.type_name IS NOT NULL AND t.type_name != ''</query>
+		<query>INSERT INTO subscription_type_settings (type_id, setting_name, setting_value, setting_type, locale) SELECT t.type_id, 'description', t.description, 'string', j.primary_locale FROM subscription_types t, journals j WHERE t.journal_id = j.journal_id AND t.description IS NOT NULL AND t.description != ''</query>
+	</sql>
+
+	<!-- Localize the announcement_types table -->
+	<sql>
+		<query>INSERT INTO announcement_settings (announcement_id, setting_name, setting_value, setting_type, locale) SELECT a.announcement_id, 'title', a.title, 'string', j.primary_locale FROM announcements a, journals j WHERE a.journal_id = j.journal_id AND a.title IS NOT NULL AND a.title != ''</query>
+		<query>INSERT INTO announcement_settings (announcement_id, setting_name, setting_value, setting_type, locale) SELECT a.announcement_id, 'descriptionShort', a.description_short, 'string', j.primary_locale FROM announcements a, journals j WHERE a.journal_id = j.journal_id AND a.description_short IS NOT NULL AND a.description_short != ''</query>
+		<query>INSERT INTO announcement_settings (announcement_id, setting_name, setting_value, setting_type, locale) SELECT a.announcement_id, 'description', a.description, 'string', j.primary_locale FROM announcements a, journals j WHERE a.journal_id = j.journal_id AND a.description IS NOT NULL AND a.description != ''</query>
+	</sql>
+
+	<!-- Localize the groups table -->
+	<sql>
+		<query>INSERT INTO group_settings (group_id, setting_name, setting_value, setting_type, locale) SELECT g.group_id, 'title', g.title, 'string', j.primary_locale FROM groups g, journals j WHERE g.journal_id = j.journal_id AND g.title IS NOT NULL AND g.title != ''</query>
+		<query>INSERT INTO group_settings (group_id, setting_name, setting_value, setting_type, locale) SELECT g.group_id, 'title', g.title_alt1, 'string', js.setting_value FROM groups g, journal_settings js WHERE g.journal_id = js.journal_id AND js.setting_name = 'alternateLocale1' AND g.title_alt1 IS NOT NULL AND g.title_alt1 != ''</query>
+		<query>INSERT INTO group_settings (group_id, setting_name, setting_value, setting_type, locale) SELECT g.group_id, 'title', g.title_alt2, 'string', js.setting_value FROM groups g, journal_settings js WHERE g.journal_id = js.journal_id AND js.setting_name = 'alternateLocale2' AND g.title_alt2 IS NOT NULL AND g.title_alt2 != ''</query>
+	</sql>
+
+	<!-- Localize the announcement_types table -->
+	<sql>
+		<query>INSERT INTO announcement_type_settings (type_id, setting_name, setting_value, setting_type, locale) SELECT t.type_id, 'name', t.type_name, 'string', j.primary_locale FROM announcement_types t, journals j WHERE t.journal_id = j.journal_id AND t.type_name IS NOT NULL AND t.type_name != ''</query>
+	</sql>
+
+	<!-- Clean up settings that are no longer used -->
+	<sql>
+		<query>DELETE FROM journal_settings WHERE setting_name = 'alternateLocale1' OR setting_name = 'alternateLocale2'</query>
+	</sql>
+</data>

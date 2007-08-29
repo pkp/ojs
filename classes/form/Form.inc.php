@@ -49,17 +49,47 @@ class Form {
 		$this->errorsArray = array();
 		$this->errorFields = array();
 	}
-	
+
+	function getSupportedLocales() {
+		static $supportedLocales;
+		if ($supportedLocales === null) {
+			$journal =& Request::getJournal();
+			if ($journal) {
+				// Journal context
+				$supportedLocales = $journal->getSupportedLocaleNames();
+			} else {
+				// Site context
+				$site =& Request::getSite();
+				$supportedLocaleSymbols = $site->getSupportedLocales();
+				$supportedLocales = Locale::getAllLocales();
+				foreach ($supportedLocales as $key => $junk) {
+					if (!in_array($key, $supportedLocaleSymbols)) unset($supportedLocales[$key]);
+				}
+			}
+		}
+		return $supportedLocales;
+	}
+
 	/**
 	 * Display the form.
 	 */
 	function display() {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->register_function('fieldLabel', array(&$this, 'smartyFieldLabel'));
+		$templateMgr->register_function('form_language_chooser', array(&$this, 'smartyFormLanguageChooser'));
 		
 		$templateMgr->assign($this->_data);
 		$templateMgr->assign('isError', !$this->isValid());
 		$templateMgr->assign('errors', $this->getErrorsArray());
+
+		$templateMgr->assign('formLocales', $this->getSupportedLocales());
+
+		// Determine the current locale to display fields with
+		$formLocale = Request::getUserVar('formLocale');
+		if (empty($formLocale) || !in_array($formLocale, array_keys(Locale::getAllLocales()))) {
+			$formLocale = Locale::getLocale();
+		}
+		$templateMgr->assign('formLocale', $formLocale);
 		
 		$templateMgr->display($this->_template);
 	}
@@ -107,14 +137,15 @@ class Form {
 		
 		foreach ($this->_checks as $check) {
 			if (!isset($this->errorsArray[$check->getField()]) && !$check->isValid()) {
-				$this->addError($check->getField(), $check->getMessage());
-				$this->errorFields[$check->getField()] = 1;
-				
-				if (method_exists($check, 'getErrorFields')) {
+				if (method_exists($check, 'getErrorFields') && method_exists($check, 'isArray') && call_user_func(array(&$check, 'isArray'))) {
 					$errorFields = call_user_func(array(&$check, 'getErrorFields'));
 					for ($i=0, $count=count($errorFields); $i < $count; $i++) {
+						$this->addError($errorFields[$i], $check->getMessage());
 						$this->errorFields[$errorFields[$i]] = 1;
 					}
+				} else {
+					$this->addError($check->getField(), $check->getMessage());
+					$this->errorFields[$check->getField()] = 1;
 				}
 			}
 		}
@@ -127,7 +158,35 @@ class Form {
 	 */
 	function execute() {
 	}
-	
+
+	/**
+	 * Get the list of field names that need to support multiple locales
+	 * @return array
+	 */
+	function getLocaleFieldNames() {
+		return array();
+	}
+
+	/**
+	 * Determine whether or not the current request results from a resubmit
+	 * of locale data resulting from a form language change.
+	 * @return boolean
+	 */
+	function isLocaleResubmit() {
+		$formLocale = Request::getUserVar('formLocale');
+		return (!empty($formLocale));
+	}
+
+	/**
+	 * Get the current form locale.
+	 * @return string
+	 */
+	function getFormLocale() {
+		$formLocale = Request::getUserVar('formLocale');
+		if (empty($formLocale)) $formLocale = Locale::getLocale();
+		return $formLocale;
+	}
+
 	/**
 	 * Adds specified user variables to input data. 
 	 * @param $vars array the names of the variables to read
@@ -150,7 +209,6 @@ class Form {
 	 * Add an error to the form.
 	 * Errors are typically assigned as the form is validated.
 	 * @param $field string the name of the field where the error occurred
-	 * @param $message string the error message (i18n key)
 	 */
 	function addError($field, $message) {
 		$this->_errors[] = &new FormError($field, $message);
@@ -205,6 +263,65 @@ class Form {
 			}
 			echo '<label' . (isset($params['suppressId']) ? '' : ' for="' . $params['name'] . '"'), $class, '>', $params['label'], (isset($params['required']) && !empty($params['required']) ? '*' : ''), '</label>';
 		}
+	}
+
+	function _decomposeArray($name, $value, $stack) {
+		if (is_array($value)) {
+			foreach ($value as $key => $subValue) {
+				$newStack = $stack;
+				$newStack[] = $key;
+				$this->_decomposeArray($name, $subValue, $newStack);
+			}
+		} else {
+			$name = htmlentities($name, ENT_COMPAT, LOCALE_ENCODING);
+			$value = htmlentities($value, ENT_COMPAT, LOCALE_ENCODING);
+			echo '<input type="hidden" name="' . $name;
+			while (($item = array_shift($stack)) !== null) {
+				$item = htmlentities($item, ENT_COMPAT, LOCALE_ENCODING);
+				echo '[' . $item . ']';
+			}
+			echo '" value="' . $value . "\" />\n";
+		}
+	}
+	/**
+	 * Add hidden form parameters for the localized fields for this form
+	 * and display the language chooser field
+	 * @param $params array
+	 * @param $smarty object
+	 */
+	function smartyFormLanguageChooser($params, &$smarty) {
+		// Echo back all non-current language field values so that they
+		// are not lost.
+		$formLocale = $smarty->get_template_vars('formLocale');
+		foreach ($this->getLocaleFieldNames() as $field) {
+			$values = $this->getData($field);
+			if (!is_array($values)) continue;
+			foreach ($values as $locale => $value) {
+				if ($locale != $formLocale) $this->_decomposeArray($field, $value, array($locale));
+				/*$locale = htmlentities($locale, ENT_COMPAT, LOCALE_ENCODING);
+				if (is_array($value)) {
+					foreach ($value as $subName => $subValue) {print_r($value);
+						$subValue = htmlentities($subValue, ENT_COMPAT, LOCALE_ENCODING);
+						$subName = htmlentities($subName, ENT_COMPAT, LOCALE_ENCODING);
+						if (empty($subValue)) continue;
+						echo '<input type="hidden" name="' . htmlentities($field, ENT_COMPAT, LOCALE_ENCODING) . "[$locale][$subName]\" value=\"$subValue\" />\n";
+					}
+				} else {
+					$value = htmlentities($value, ENT_COMPAT, LOCALE_ENCODING);
+					if (empty($value)) continue;
+					echo '<input type="hidden" name="' . htmlentities($field, ENT_COMPAT, LOCALE_ENCODING) . "[$locale]\" value=\"$value\" />\n";
+				} */
+			}
+		}
+
+		// Display the language selector widget.
+		$formLocale = $smarty->get_template_vars('formLocale');
+		echo '<div id="languageSelector"><select size="1" name="formLocale" onchange="changeFormAction(\'' . htmlentities($params['form'], ENT_COMPAT, LOCALE_ENCODING) . '\', \'' . htmlentities($params['url'], ENT_QUOTES, LOCALE_ENCODING) . '\')" class="selectMenu">';
+		foreach ($this->getSupportedLocales() as $locale => $name) {
+			
+			echo '<option ' . ($locale == $formLocale?'selected="selected" ':'') . 'value="' . htmlentities($locale, ENT_COMPAT, LOCALE_ENCODING) . '">' . htmlentities($name, ENT_COMPAT, LOCALE_ENCODING) . '</option>';
+		}
+		echo '</select></div>';
 	}
 }
 

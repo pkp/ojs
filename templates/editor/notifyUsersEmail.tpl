@@ -1,6 +1,6 @@
 {$body}
 
-{$journal->getTitle()}
+{$journal->getJournalTitle()}
 {$issue->getIssueIdentification()}
 {translate key="issue.toc"}
 {url page="issue" op="view" path=$issue->getBestIssueId()}

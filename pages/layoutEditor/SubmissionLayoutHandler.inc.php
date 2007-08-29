@@ -138,8 +138,12 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 			import('submission.form.ArticleGalleyForm');
 			
 			$submitForm = &new ArticleGalleyForm($articleId, $galleyId);
-			
-			$submitForm->initData();
+
+			if ($submitForm->isLocaleResubmit()) {
+				$submitForm->readInputData();
+			} else {
+				$submitForm->initData();
+			}
 			$submitForm->display();
 			
 		} else {
@@ -315,8 +319,12 @@ class SubmissionLayoutHandler extends LayoutEditorHandler {
 			import('submission.form.SuppFileForm');
 			
 			$submitForm = &new SuppFileForm($submission, $suppFileId);
-			
-			$submitForm->initData();
+
+			if ($submitForm->isLocaleResubmit()) {
+				$submitForm->readInputData();
+			} else {
+				$submitForm->initData();
+			}
 			$submitForm->display();
 			
 			

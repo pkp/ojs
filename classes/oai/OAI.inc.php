@@ -23,7 +23,6 @@ import('oai.format.OAIMetadataFormat_MARC21');
 import('oai.format.OAIMetadataFormat_RFC1807');
 
 class OAI {
-
 	/** @var $config OAIConfig configuration parameters */
 	var $config;
 	
@@ -964,7 +963,6 @@ class OAI {
 			}
 		}
 	}
-	
 }
 
 ?>

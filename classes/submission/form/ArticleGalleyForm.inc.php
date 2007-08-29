@@ -17,7 +17,6 @@
 import('form.Form');
 
 class ArticleGalleyForm extends Form {
-
 	/** @var int the ID of the article */
 	var $articleId;
 
@@ -34,6 +33,7 @@ class ArticleGalleyForm extends Form {
 	 */
 	function ArticleGalleyForm($articleId, $galleyId = null) {
 		parent::Form('submission/layout/galleyForm.tpl');
+		$journal =& Request::getJournal();
 		$this->articleId = $articleId;
 
 		if (isset($galleyId) && !empty($galleyId)) {
@@ -46,6 +46,8 @@ class ArticleGalleyForm extends Form {
 
 		// Validation checks for this form
 		$this->addCheck(new FormValidator($this, 'label', 'required', 'submission.layout.galleyLabelRequired'));
+		$this->addCheck(new FormValidator($this, 'label', 'required', 'submission.layout.galleyLabelRequired'));
+		$this->addCheck(new FormValidator($this, 'galleyLocale', 'required', 'submission.layout.galleyLocaleRequired'), create_function('$galleyLocale,$availableLocales', 'return in_array($galleyLocale,$availableLocales);'), array_keys($journal->getSupportedLocaleNames()));
 		$this->addCheck(new FormValidatorPost($this));
 	}
 
@@ -53,9 +55,12 @@ class ArticleGalleyForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
+		$journal =& Request::getJournal();
 		$templateMgr = &TemplateManager::getManager();
+
 		$templateMgr->assign('articleId', $this->articleId);
 		$templateMgr->assign('galleyId', $this->galleyId);
+		$templateMgr->assign('supportedLocales', $journal->getSupportedLocaleNames());
 
 		if (isset($this->galley)) {
 			$templateMgr->assign_by_ref('galley', $this->galley);
@@ -71,7 +76,8 @@ class ArticleGalleyForm extends Form {
 		if (isset($this->galley)) {
 			$galley = &$this->galley;
 			$this->_data = array(
-				'label' => $galley->getLabel()
+				'label' => $galley->getLabel(),
+				'galleyLocale' => $galley->getLocale()
 			);
 
 		} else {
@@ -87,7 +93,8 @@ class ArticleGalleyForm extends Form {
 		$this->readUserVars(
 			array(
 				'label',
-				'deleteStyleFile'
+				'deleteStyleFile',
+				'galleyLocale'
 			)
 		);
 	}
@@ -135,6 +142,7 @@ class ArticleGalleyForm extends Form {
 
 			// Update existing galley
 			$galley->setLabel($this->getData('label'));
+			$galley->setLocale($this->getData('galleyLocale'));
 			$galleyDao->updateGalley($galley);
 
 		} else {
@@ -183,6 +191,7 @@ class ArticleGalleyForm extends Form {
 			} else {
 				$galley->setLabel($this->getData('label'));
 			}
+			$galley->setLocale($this->getData('galleyLocale'));
 
 			// Insert new galley
 			$galleyDao->insertGalley($galley);
@@ -207,7 +216,7 @@ class ArticleGalleyForm extends Form {
 			$type = $fileManager->getUploadedFileType($fileName);
 			$extension = $fileManager->getImageExtension($type);
 			if (!$extension) {
-				$this->addError('imageFile', 'submission.layout.imageInvalid');
+				$this->addError('imageFile', Locale::translate('submission.layout.imageInvalid'));
 				return false;
 			}
 
@@ -244,7 +253,6 @@ class ArticleGalleyForm extends Form {
 			}
 		}
 	}
-
 }
 
 ?>

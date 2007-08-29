@@ -178,11 +178,11 @@ class Locale {
 				if (!isset($locale)) {
 					// Use journal/site default
 					if ($journal != null) {
-						$locale = $journal->getLocale();
+						$locale = $journal->getPrimaryLocale();
 					}
 					
 					if (!isset($locale)) {
-						$locale = $site->getLocale();
+						$locale = $site->getPrimaryLocale();
 					}
 				}
 			}
@@ -216,7 +216,25 @@ class Locale {
 		if (file_exists(Locale::getMainLocaleFilename($locale))) return true;
 		return false;
 	}
-	
+
+	/**
+	 * Get the stack of "important" locales, most important first.
+	 * @return array
+	 */
+	function getLocalePrecedence() {
+		static $localePrecedence;
+		if (!isset($localePrecedence)) {
+			$localePrecedence = array(Locale::getLocale());
+
+			$journal =& Request::getJournal();
+			if ($journal && !in_array($journal->getPrimaryLocale(), $localePrecedence)) $localePrecedence[] = $journal->getPrimaryLocale();
+
+			$site =& Request::getSite();
+			if ($site && !in_array($site->getPrimaryLocale(), $localePrecedence)) $localePrecedence[] = $site->getPrimaryLocale();
+		}
+		return $localePrecedence;
+	}
+
 	/**
 	 * Retrieve the primary locale of the current context.
 	 * @return string
@@ -225,12 +243,12 @@ class Locale {
 		$journal = &Request::getJournal();
 		
 		if (isset($journal)) {
-			$locale = $journal->getLocale();
+			$locale = $journal->getPrimaryLocale();
 		}
 		
 		if (!isset($locale)) {
 			$site = &Request::getSite();
-			$locale = $site->getLocale();
+			$locale = $site->getPrimaryLocale();
 		}
 		
 		if (!isset($locale) || !Locale::isLocaleValid($locale)) {
@@ -306,36 +324,6 @@ class Locale {
 		return $allLocales;
 	}
 	
-	/**
-	 * Check if the current locale is one of the journal's alternate locales
-	 * @return int the alternate # (or 0, if no match).
-	 */
-	function isAlternateJournalLocale($journalId) {
-		static $alternateLocaleNum;
-		
-		if (!isset($alternateLocaleNum)) {
-			$localeNum = 0;
-			$locale = Locale::getLocale();
-			
-			$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
-			$alternateLocale1 = $journalSettingsDao->getSetting($journalId, 'alternateLocale1');
-			if (isset($alternateLocale1)) {
-				if ($alternateLocale1 == $locale) {
-					$localeNum = 1;
-				} else {
-					$alternateLocale2 = $journalSettingsDao->getSetting($journalId, 'alternateLocale2');
-					if ($alternateLocale2 == $locale) {
-						$localeNum = 2;
-					}
-				}
-			}
-			
-			$alternateLocaleNum = $localeNum;
-		}
-		
-		return $alternateLocaleNum;
-	}
-
 	/**
 	 * Get the path and filename for the email templates data for the
 	 * given locale

@@ -29,7 +29,11 @@ class RegistrationHandler extends UserHandler {
 			import('user.form.RegistrationForm');
 		
 			$regForm = &new RegistrationForm();
-			$regForm->initData();
+			if ($regForm->isLocaleResubmit()) {
+				$regForm->readInputData();
+			} else {
+				$regForm->initData();
+			}
 			$regForm->display();
 			
 		} else {

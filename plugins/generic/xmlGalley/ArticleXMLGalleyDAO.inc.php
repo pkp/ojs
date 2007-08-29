@@ -20,14 +20,6 @@ import('classes.article.ArticleGalleyDAO');
 
 
 class ArticleXMLGalleyDAO extends ArticleGalleyDAO {
-
-	/**
-	 * Constructor.
-	 */
-	function ArticleXMLGalleyDAO() {
-		parent::ArticleGalleyDAO();
-	}
-
 	/**
 	 * Internal function to return an ArticleXMLGalley object from an XML galley Id
 	 * @param $galleyId int
@@ -206,6 +198,6 @@ class ArticleXMLGalleyDAO extends ArticleGalleyDAO {
 		);
 
 	}
-
 }
+
 ?>

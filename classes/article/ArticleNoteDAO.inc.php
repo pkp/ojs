@@ -18,14 +18,6 @@
 import('article.ArticleNote');
 
 class ArticleNoteDAO extends DAO {
- 
- 	/**
-	 * Constructor.
-	 */
-	function ArticleNoteDAO() {
-		parent::DAO();
-	}
-	
 	/**
 	 * Retrieve Article Notes by article id.
 	 * @param $articleId int
@@ -197,7 +189,6 @@ class ArticleNoteDAO extends DAO {
 
 		$result->Close();
 	}
-
- }
+}
   
 ?>

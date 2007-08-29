@@ -18,13 +18,6 @@ define('FILE_MODE_MASK', 0666);
 define('DIRECTORY_MODE_MASK', 0777);
 
 class FileManager {
-
-	/**
-	 * Constructor.
-	 * Empty constructor.
-	 */
-	function FileManager() {	
-	}
 	
 	/**
 	 * Return true if an uploaded file exists.
@@ -34,9 +27,8 @@ class FileManager {
 	function uploadedFileExists($fileName) {
 		if (isset($_FILES[$fileName]['tmp_name']) && is_uploaded_file($_FILES[$fileName]['tmp_name'])) {
 			return true;
-		} else {
-			return false;
 		}
+		return false;
 	}
 	
 	/**
@@ -47,9 +39,8 @@ class FileManager {
 	function getUploadedFilePath($fileName) {
 		if (isset($_FILES[$fileName]['tmp_name']) && is_uploaded_file($_FILES[$fileName]['tmp_name'])) {
 			return $_FILES[$fileName]['tmp_name'];
-		} else {
-			return false;
 		}
+		return false;
 	}
 	
 	/**
@@ -60,9 +51,8 @@ class FileManager {
 	function getUploadedFileName($fileName) {
 		if (isset($_FILES[$fileName]['name'])) {
 			return $_FILES[$fileName]['name'];
-		} else {
-			return false;
 		}
+		return false;
 	}
 	
 	/**
@@ -75,9 +65,8 @@ class FileManager {
 			$type = String::mime_content_type($_FILES[$fileName]['tmp_name']);
 			if (!empty($type)) return $type;
 			return $_FILES[$fileName]['type'];
-		} else {
-			return false;
 		}
+		return false;
 	}
 		
 	/**
@@ -92,7 +81,6 @@ class FileManager {
 			// Try to create the destination directory
 			FileManager::mkdirtree($destDir);
 		}
-
 		if (move_uploaded_file($_FILES[$fileName]['tmp_name'], $destFileName))
 			return FileManager::setMode($destFileName, FILE_MODE_MASK);
 		return false;
@@ -391,7 +379,6 @@ class FileManager {
 		
 		return $fileExtension;
 	}
-	
 }
 
 ?>

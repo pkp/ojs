@@ -20,7 +20,6 @@ import('submission.author.AuthorSubmission'); // Bring in editor decision consta
 import('submission.reviewer.ReviewerSubmission'); // Bring in editor decision constants
 
 class SectionEditorSubmissionDAO extends DAO {
-
 	var $articleDao;
 	var $authorDao;
 	var $userDao;
@@ -61,11 +60,51 @@ class SectionEditorSubmissionDAO extends DAO {
 	 * @return EditorSubmission
 	 */
 	function &getSectionEditorSubmission($articleId) {
+		$primaryLocale = Locale::getPrimaryLocale();
+		$locale = Locale::getLocale();
 		$result = &$this->retrieve(
-			'SELECT a.*, s.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, s.abbrev AS section_abbrev, s.abbrev_alt1 AS section_abbrev_alt1, s.abbrev_alt2 AS section_abbrev_alt2, c.copyed_id, c.copyeditor_id, c.copyedit_revision, c.date_notified AS copyeditor_date_notified, c.date_underway AS copyeditor_date_underway, c.date_completed AS copyeditor_date_completed, c.date_acknowledged AS copyeditor_date_acknowledged, c.date_author_notified AS ce_date_author_notified, c.date_author_underway AS ce_date_author_underway, c.date_author_completed AS ce_date_author_completed,
-				c.date_author_acknowledged AS ce_date_author_acknowledged, c.date_final_notified AS ce_date_final_notified, c.date_final_underway AS ce_date_final_underway, c.date_final_completed AS ce_date_final_completed, c.date_final_acknowledged AS ce_date_final_acknowledged, c.initial_revision AS copyeditor_initial_revision, c.editor_author_revision AS ce_editor_author_revision,
-				c.final_revision AS copyeditor_final_revision, r2.review_revision
-				FROM articles a LEFT JOIN sections s ON (s.section_id = a.section_id) LEFT JOIN copyed_assignments c ON (a.article_id = c.article_id) LEFT JOIN review_rounds r2 ON (a.article_id = r2.article_id AND a.current_round = r2.round) WHERE a.article_id = ?', $articleId
+			'SELECT	a.*,
+				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
+				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev,
+				c.copyed_id,
+				c.copyeditor_id,
+				c.copyedit_revision,
+				c.date_notified AS copyeditor_date_notified,
+				c.date_underway AS copyeditor_date_underway,
+				c.date_completed AS copyeditor_date_completed,
+				c.date_acknowledged AS copyeditor_date_acknowledged,
+				c.date_author_notified AS ce_date_author_notified,
+				c.date_author_underway AS ce_date_author_underway,
+				c.date_author_completed AS ce_date_author_completed,
+				c.date_author_acknowledged AS ce_date_author_acknowledged,
+				c.date_final_notified AS ce_date_final_notified,
+				c.date_final_underway AS ce_date_final_underway,
+				c.date_final_completed AS ce_date_final_completed,
+				c.date_final_acknowledged AS ce_date_final_acknowledged,
+				c.initial_revision AS copyeditor_initial_revision,
+				c.editor_author_revision AS ce_editor_author_revision,
+				c.final_revision AS copyeditor_final_revision,
+				r2.review_revision
+			FROM	articles a
+				LEFT JOIN sections s ON (s.section_id = a.section_id)
+				LEFT JOIN copyed_assignments c ON (a.article_id = c.article_id)
+				LEFT JOIN review_rounds r2 ON (a.article_id = r2.article_id AND a.current_round = r2.round)
+				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
+				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
+				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
+				LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?)
+			WHERE	a.article_id = ?',
+			array(
+				'title',
+				$primaryLocale,
+				'title',
+				$locale,
+				'abbrev',
+				$primaryLocale,
+				'abbrev',
+				$locale,
+				$articleId
+			)
 		);
 
 		$returner = null;
@@ -326,14 +365,59 @@ class SectionEditorSubmissionDAO extends DAO {
 	 * @return array SectionEditorSubmission
 	 */
 	function &getSectionEditorSubmissions($sectionEditorId, $journalId, $status = true) {
+		$primaryLocale = Locale::getPrimaryLocale();
+		$locale = Locale::getLocale();
+
 		$sectionEditorSubmissions = array();
 		
 		$result = &$this->retrieve(
-			'SELECT a.*, s.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, s.abbrev AS section_abbrev, s.abbrev_alt1 AS section_abbrev_alt1, s.abbrev_alt2 AS section_abbrev_alt2, c.copyed_id, c.copyeditor_id, c.copyedit_revision, c.date_notified AS copyeditor_date_notified, c.date_underway AS copyeditor_date_underway, c.date_completed AS copyeditor_date_completed, c.date_acknowledged AS copyeditor_date_acknowledged, c.date_author_notified AS ce_date_author_notified, c.date_author_underway AS ce_date_author_underway, c.date_author_completed AS ce_date_author_completed,
-				c.date_author_acknowledged AS ce_date_author_acknowledged, c.date_final_notified AS ce_date_final_notified, c.date_final_underway AS ce_date_final_underway, c.date_final_completed AS ce_date_final_completed, c.date_final_acknowledged AS ce_date_final_acknowledged, c.initial_revision AS copyeditor_initial_revision, c.editor_author_revision AS ce_editor_author_revision,
-				c.final_revision AS copyeditor_final_revision, r2.review_revision
-				FROM articles a LEFT JOIN edit_assignments e ON (e.article_id = a.article_id) LEFT JOIN sections s ON (s.section_id = a.section_id) LEFT JOIN copyed_assignments c ON (a.article_id = c.article_id) LEFT JOIN review_rounds r2 ON (a.article_id = r2.article_id and a.current_round = r2.round) WHERE a.journal_id = ? AND e.editor_id = ? AND a.status = ?',
-			array($journalId, $sectionEditorId, $status)
+			'SELECT	a.*,
+				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
+				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev,
+				c.copyed_id,
+				c.copyeditor_id,
+				c.copyedit_revision,
+				c.date_notified AS copyeditor_date_notified,
+				c.date_underway AS copyeditor_date_underway,
+				c.date_completed AS copyeditor_date_completed,
+				c.date_acknowledged AS copyeditor_date_acknowledged,
+				c.date_author_notified AS ce_date_author_notified,
+				c.date_author_underway AS ce_date_author_underway,
+				c.date_author_completed AS ce_date_author_completed,
+				c.date_author_acknowledged AS ce_date_author_acknowledged,
+				c.date_final_notified AS ce_date_final_notified,
+				c.date_final_underway AS ce_date_final_underway,
+				c.date_final_completed AS ce_date_final_completed,
+				c.date_final_acknowledged AS ce_date_final_acknowledged,
+				c.initial_revision AS copyeditor_initial_revision,
+				c.editor_author_revision AS ce_editor_author_revision,
+				c.final_revision AS copyeditor_final_revision,
+				r2.review_revision
+			FROM	articles a
+				LEFT JOIN edit_assignments e ON (e.article_id = a.article_id)
+				LEFT JOIN sections s ON (s.section_id = a.section_id)
+				LEFT JOIN copyed_assignments c ON (a.article_id = c.article_id)
+				LEFT JOIN review_rounds r2 ON (a.article_id = r2.article_id AND a.current_round = r2.round)
+				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
+				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
+				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
+				LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?)
+			WHERE	a.journal_id = ?
+				AND e.editor_id = ?
+				AND a.status = ?',
+			array(
+				'title',
+				$primaryLocale,
+				'title',
+				$locale,
+				'abbrev',
+				$primarylocale,
+				'abbrev',
+				$locale,
+				$journalId,
+				$sectionEditorId,
+				$status
+			)
 		);
 		
 		while (!$result->EOF) {
@@ -351,19 +435,34 @@ class SectionEditorSubmissionDAO extends DAO {
 	 * Retrieve unfiltered section editor submissions
 	 */
 	function &getUnfilteredSectionEditorSubmissions($sectionEditorId, $journalId, $sectionId = 0, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $status = true, $additionalWhereSql = '', $rangeInfo = null) {
-		$params = array($journalId, $sectionEditorId);
+		$primaryLocale = Locale::getPrimaryLocale();
+		$locale = Locale::getLocale();
+
+		$params = array(
+			'title', // Section title
+			$primaryLocale,
+			'title',
+			$locale,
+			'abbrev', // Section abbrev
+			$primaryLocale,
+			'abbrev',
+			$locale,
+			'title', // Article title
+			$journalId,
+			$sectionEditorId
+		);
 
 		$searchSql = '';
 
 		if (!empty($search)) switch ($searchField) {
 			case SUBMISSION_FIELD_TITLE:
 				if ($searchMatch === 'is') {
-					$searchSql = ' AND (LOWER(a.title) = LOWER(?) OR LOWER(a.title_alt1) = LOWER(?) OR LOWER(a.title_alt2) = LOWER(?))';
+					$searchSql = ' AND LOWER(atl.setting_value) = LOWER(?)';
 				} else {
-					$searchSql = ' AND (LOWER(a.title) LIKE LOWER(?) OR LOWER(a.title_alt1) LIKE LOWER(?) OR LOWER(a.title_alt2) LIKE LOWER(?))';
+					$searchSql = ' AND LOWER(atl.setting_value) LIKE LOWER(?)';
 					$search = '%' . $search . '%';
 				}
-				$params[] = $params[] = $params[] = $search;
+				$params[] = $search;
 				break;
 			case SUBMISSION_FIELD_AUTHOR:
 				$first_last = $this->_dataSource->Concat('aa.first_name', '\' \'', 'aa.last_name');
@@ -433,12 +532,8 @@ class SectionEditorSubmissionDAO extends DAO {
 				a.*,
 				e.can_review AS can_review,
 				e.can_edit AS can_edit,
-				s.title AS section_title,
-				s.title_alt1 AS section_title_alt1,
-				s.title_alt2 AS section_title_alt2,
-				s.abbrev AS section_abbrev,
-				s.abbrev_alt1 AS section_abbrev_alt1,
-				s.abbrev_alt2 AS section_abbrev_alt2,
+				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
+				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev,
 				c.copyed_id,
 				c.copyeditor_id,
 				c.copyedit_revision,
@@ -460,18 +555,24 @@ class SectionEditorSubmissionDAO extends DAO {
 				r2.review_revision
 			FROM
 				articles a
-			INNER JOIN article_authors aa ON (aa.article_id = a.article_id)
-			LEFT JOIN edit_assignments e ON (e.article_id = a.article_id)
-			LEFT JOIN users ed ON (e.editor_id = ed.user_id)
-			LEFT JOIN sections s ON (s.section_id = a.section_id)
-			LEFT JOIN copyed_assignments c ON (a.article_id = c.article_id)
-			LEFT JOIN users ce ON (c.copyeditor_id = ce.user_id)
-			LEFT JOIN proof_assignments p ON (p.article_id = a.article_id)
-			LEFT JOIN users pe ON (pe.user_id = p.proofreader_id)
-			LEFT JOIN review_rounds r2 ON (a.article_id = r2.article_id and a.current_round = r2.round)
-			LEFT JOIN layouted_assignments l ON (l.article_id = a.article_id) LEFT JOIN users le ON (le.user_id = l.editor_id)
-			WHERE
-				a.journal_id = ? AND e.editor_id = ? AND a.submission_progress = 0' . (!empty($additionalWhereSql)?" AND ($additionalWhereSql)":"");
+				INNER JOIN article_authors aa ON (aa.article_id = a.article_id)
+				LEFT JOIN edit_assignments e ON (e.article_id = a.article_id)
+				LEFT JOIN users ed ON (e.editor_id = ed.user_id)
+				LEFT JOIN sections s ON (s.section_id = a.section_id)
+				LEFT JOIN copyed_assignments c ON (a.article_id = c.article_id)
+				LEFT JOIN users ce ON (c.copyeditor_id = ce.user_id)
+				LEFT JOIN proof_assignments p ON (p.article_id = a.article_id)
+				LEFT JOIN users pe ON (pe.user_id = p.proofreader_id)
+				LEFT JOIN review_rounds r2 ON (a.article_id = r2.article_id and a.current_round = r2.round)
+				LEFT JOIN layouted_assignments l ON (l.article_id = a.article_id) LEFT JOIN users le ON (le.user_id = l.editor_id)
+				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
+				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
+				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
+				LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?)
+				LEFT JOIN article_settings atl ON (a.article_id = atl.article_id AND atl.setting_name = ?)
+			WHERE	a.journal_id = ?
+				AND e.editor_id = ?
+				AND a.submission_progress = 0' . (!empty($additionalWhereSql)?" AND ($additionalWhereSql)":"");
 
 		// "Active" submissions have a status of STATUS_QUEUED and
 		// the layout editor has not yet been acknowledged.
@@ -798,7 +899,7 @@ class SectionEditorSubmissionDAO extends DAO {
 	 * @return DAOResultFactory containing matching Users
 	 */
 	function &getReviewersForArticle($journalId, $articleId, $round, $searchType = null, $search = null, $searchMatch = null, $rangeInfo = null) {
-		$paramArray = array($articleId, $round, $journalId, RoleDAO::getRoleIdFromPath('reviewer'));
+		$paramArray = array('interests', $articleId, $round, $journalId, RoleDAO::getRoleIdFromPath('reviewer'));
 		$searchSql = '';
 
 		if (isset($search)) switch ($searchType) {
@@ -823,7 +924,7 @@ class SectionEditorSubmissionDAO extends DAO {
 				$paramArray[] = ($searchMatch=='is'?$search:'%' . $search . '%');
 				break;
 			case USER_FIELD_INTERESTS:
-				$searchSql = 'AND LOWER(interests) ' . ($searchMatch=='is'?'=':'LIKE') . ' LOWER(?)';
+				$searchSql = 'AND LOWER(s.setting_value) ' . ($searchMatch=='is'?'=':'LIKE') . ' LOWER(?)';
 				$paramArray[] = ($searchMatch=='is'?$search:'%' . $search . '%');
 				break;
 			case USER_FIELD_INITIAL:
@@ -834,7 +935,7 @@ class SectionEditorSubmissionDAO extends DAO {
 		}
 		
 		$result = &$this->retrieveRange(
-			'SELECT DISTINCT u.*, a.review_id as review_id FROM users u NATURAL JOIN roles r LEFT JOIN review_assignments a ON (a.reviewer_id = u.user_id AND a.cancelled = 0 AND a.article_id = ? AND a.round = ?) WHERE u.user_id = r.user_id AND r.journal_id = ? AND r.role_id = ? ' . $searchSql . ' ORDER BY last_name, first_name',
+			'SELECT DISTINCT u.*, a.review_id as review_id FROM users u LEFT JOIN user_settings s ON (u.user_id = s.user_id AND s.setting_name = ?) NATURAL JOIN roles r LEFT JOIN review_assignments a ON (a.reviewer_id = u.user_id AND a.cancelled = 0 AND a.article_id = ? AND a.round = ?) WHERE u.user_id = r.user_id AND r.journal_id = ? AND r.role_id = ? ' . $searchSql . ' ORDER BY last_name, first_name',
 			$paramArray, $rangeInfo
 		);
 		
@@ -843,7 +944,7 @@ class SectionEditorSubmissionDAO extends DAO {
 	}
 	
 	function &_returnReviewerUserFromRow(&$row) { // FIXME
-		$user = &$this->userDao->_returnUserFromRow($row);
+		$user = &$this->userDao->_returnUserFromRowWithData($row);
 		$user->review_id = $row['review_id'];
 
 		HookRegistry::call('SectionEditorSubmissionDAO::_returnReviewerUserFromRow', array(&$user, &$row));
@@ -866,7 +967,7 @@ class SectionEditorSubmissionDAO extends DAO {
 		);
 		
 		while (!$result->EOF) {
-			$users[] = &$this->userDao->_returnUserFromRow($result->GetRowAssoc(false));
+			$users[] = &$this->userDao->_returnUserFromRowWithData($result->GetRowAssoc(false));
 			$result->moveNext();
 		}
 
@@ -898,7 +999,7 @@ class SectionEditorSubmissionDAO extends DAO {
 	function &getCopyeditorsNotAssignedToArticle($journalId, $articleId, $searchType = null, $search = null, $searchMatch = null) {
 		$users = array();
 		
-		$paramArray = array($articleId, $journalId, RoleDAO::getRoleIdFromPath('copyeditor'));
+		$paramArray = array('interests', $articleId, $journalId, RoleDAO::getRoleIdFromPath('copyeditor'));
 		$searchSql = '';
 
 		if (isset($search)) switch ($searchType) {
@@ -923,7 +1024,7 @@ class SectionEditorSubmissionDAO extends DAO {
 				$paramArray[] = ($searchMatch=='is'?$search:'%' . $search . '%');
 				break;
 			case USER_FIELD_INTERESTS:
-				$searchSql = 'AND LOWER(interests) ' . ($searchMatch=='is'?'=':'LIKE') . ' LOWER(?)';
+				$searchSql = 'AND LOWER(setting_value) ' . ($searchMatch=='is'?'=':'LIKE') . ' LOWER(?)';
 				$paramArray[] = ($searchMatch=='is'?$search:'%' . $search . '%');
 				break;
 			case USER_FIELD_INITIAL:
@@ -934,12 +1035,12 @@ class SectionEditorSubmissionDAO extends DAO {
 		}
 		
 		$result = &$this->retrieve(
-			'SELECT u.* FROM users u NATURAL JOIN roles r LEFT JOIN copyed_assignments a ON (a.copyeditor_id = u.user_id AND a.article_id = ?) WHERE r.journal_id = ? AND r.role_id = ? AND a.article_id IS NULL ' . $searchSql . ' ORDER BY last_name, first_name',
+			'SELECT u.* FROM users u LEFT JOIN user_settings s ON (u.user_id = s.user_id AND s.setting_name = ?) NATURAL JOIN roles r LEFT JOIN copyed_assignments a ON (a.copyeditor_id = u.user_id AND a.article_id = ?) WHERE r.journal_id = ? AND r.role_id = ? AND a.article_id IS NULL ' . $searchSql . ' ORDER BY last_name, first_name',
 			$paramArray
 		);
 		
 		while (!$result->EOF) {
-			$users[] = &$this->userDao->_returnUserFromRow($result->GetRowAssoc(false));
+			$users[] = &$this->userDao->_returnUserFromRowWithData($result->GetRowAssoc(false));
 			$result->moveNext();
 		}
 

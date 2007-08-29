@@ -26,13 +26,6 @@ class ArticleFileDAO extends DAO {
 	var $inlineableTypes;
 
 	/**
-	 * Constructor.
-	 */
-	function ArticleFileDAO() {
-		parent::DAO();
-	}
-	
-	/**
 	 * Retrieve an article by ID.
 	 * @param $fileId int
 	 * @param $revision int optional, if omitted latest revision is used

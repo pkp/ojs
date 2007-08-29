@@ -76,7 +76,7 @@ class MailTemplate extends Mail {
 		$userSig = '';
 		$user =& Request::getUser();
 		if ($user) {
-			$userSig = $user->getSignature();
+			$userSig = $user->getUserSignature();
 			if (!empty($userSig)) $userSig = "\n" . $userSig;
 		}
 
@@ -192,7 +192,7 @@ class MailTemplate extends Mail {
 		// Add commonly-used variables to the list
 		if (isset($this->journal)) {
 			// FIXME Include affiliation, title, etc. in signature?
-			$paramArray['journalName'] = $this->journal->getTitle();
+			$paramArray['journalName'] = $this->journal->getJournalTitle();
 			$paramArray['principalContactSignature'] = $this->journal->getSetting('contactName');
 		} else {
 			$site = &Request::getSite();

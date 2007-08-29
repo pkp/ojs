@@ -29,7 +29,7 @@ class AnnouncementHandler extends Handler {
 			$announcementDao = &DAORegistry::getDAO('AnnouncementDAO');
 			$rangeInfo = &Handler::getRangeInfo('announcements');
 			$announcements = &$announcementDao->getAnnouncementsNotExpiredByJournalId($journal->getJournalId(), $rangeInfo);
-			$announcementsIntroduction = $journal->getSetting('announcementsIntroduction');
+			$announcementsIntroduction = $journal->getLocalizedSetting('announcementsIntroduction');
 
 			$templateMgr = &TemplateManager::getManager();
 			$templateMgr->assign('announcements', $announcements);
@@ -60,9 +60,9 @@ class AnnouncementHandler extends Handler {
 				$templateMgr = &TemplateManager::getManager();
 				$templateMgr->assign('announcement', $announcement);
 				if ($announcement->getTypeId() == null) {
-					$templateMgr->assign('announcementTitle', $announcement->getTitle());
+					$templateMgr->assign('announcementTitle', $announcement->getAnnouncementTitle());
 				} else {
-					$templateMgr->assign('announcementTitle', $announcement->getTypeName() . ": " . $announcement->getTitle());
+					$templateMgr->assign('announcementTitle', $announcement->getAnnouncementTypeName() . ": " . $announcement->getAnnouncementTitle());
 				}
 				$templateMgr->append('pageHierarchy', array(Request::url(null, 'announcement'), 'announcement.announcements'));
 				$templateMgr->display('announcement/view.tpl');

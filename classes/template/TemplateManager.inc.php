@@ -19,6 +19,7 @@
 define('SMARTY_DIR', Core::getBaseDir() . DIRECTORY_SEPARATOR . 'lib' . DIRECTORY_SEPARATOR . 'smarty' . DIRECTORY_SEPARATOR);
 
 require_once('smarty/Smarty.class.php');
+require_once('smarty/plugins/modifier.escape.php'); // Seems to be needed?
 
 import('search.ArticleSearch');
 
@@ -82,12 +83,12 @@ class TemplateManager extends Smarty {
 
 			if (isset($journal)) {
 				$this->assign_by_ref('currentJournal', $journal);
-				$journalTitle = $journal->getTitle();
+				$journalTitle = $journal->getJournalTitle();
 				$this->assign('siteTitle', $journalTitle);
 				$this->assign('publicFilesDir', Request::getBaseUrl() . '/' . PublicFileManager::getJournalFilesPath($journal->getJournalId()));
 
-				$this->assign('alternateLocale1', $journal->getSetting('alternateLocale1'));
-				$this->assign('alternateLocale2', $journal->getSetting('alternateLocale2'));
+				$this->assign('primaryLocale', $journal->getSetting('primaryLocale'));
+				$this->assign('alternateLocales', $journal->getSetting('alternateLocales'));
 
 				// Assign additional navigation bar items
 				$navMenuItems = &$journal->getSetting('navItems');
@@ -96,10 +97,10 @@ class TemplateManager extends Smarty {
 				// Assign journal page header
 				$this->assign('displayPageHeaderTitle', $journal->getJournalPageHeaderTitle());
 				$this->assign('displayPageHeaderLogo', $journal->getJournalPageHeaderLogo());
-				$this->assign('alternatePageHeader', $journal->getSetting('journalPageHeader'));
-				$this->assign('metaSearchDescription', $journal->getSetting('searchDescription'));
-				$this->assign('metaSearchKeywords', $journal->getSetting('searchKeywords'));
-				$this->assign('metaCustomHeaders', $journal->getSetting('customHeaders'));
+				$this->assign('alternatePageHeader', $journal->getLocalizedSetting('journalPageHeader'));
+				$this->assign('metaSearchDescription', $journal->getLocalizedSetting('searchDescription'));
+				$this->assign('metaSearchKeywords', $journal->getLocalizedSetting('searchKeywords'));
+				$this->assign('metaCustomHeaders', $journal->getLocalizedSetting('customHeaders'));
 				$this->assign('numPageLinks', $journal->getSetting('numPageLinks'));
 				$this->assign('itemsPerPage', $journal->getSetting('itemsPerPage'));
 				$this->assign('enableAnnouncements', $journal->getSetting('enableAnnouncements'));
@@ -118,9 +119,9 @@ class TemplateManager extends Smarty {
 					$this->addStyleSheet(Request::getBaseUrl() . '/' . PublicFileManager::getJournalFilesPath($journal->getJournalId()) . '/' . $journalStyleSheet['uploadName']);
 				}
 
-				$this->assign('pageFooter', $journal->getSetting('journalPageFooter'));	
+				$this->assign('pageFooter', $journal->getLocalizedSetting('journalPageFooter'));	
 			} else {
-				$this->assign('siteTitle', $site->getTitle());
+				$this->assign('siteTitle', $site->getSiteTitle());
 				$this->assign('publicFilesDir', Request::getBaseUrl() . '/' . PublicFileManager::getSiteFilesPath());
 				$this->assign('itemsPerPage', Config::getVar('interface', 'items_per_page'));
 				$this->assign('numPageLinks', Config::getVar('interface', 'page_links'));
@@ -139,6 +140,7 @@ class TemplateManager extends Smarty {
 		$this->register_modifier('strip_unsafe_html', array('String', 'stripUnsafeHtml'));
 		$this->register_modifier('String_substr', array('String', 'substr'));
 		$this->register_modifier('to_array', array(&$this, 'smartyToArray'));
+		$this->register_modifier('escape', array(&$this, 'smartyEscape'));
 		$this->register_modifier('explode', array(&$this, 'smartyExplode'));
 		$this->register_modifier('assign', array(&$this, 'smartyAssign'));
 		$this->register_function('translate', array(&$this, 'smartyTranslate'));
@@ -644,6 +646,15 @@ class TemplateManager extends Smarty {
 	 */
 	function smartyToArray() {
 		return func_get_args();
+	}
+
+	/**
+	 * Override the built-in smarty escape modifier to set the charset
+	 * properly.
+	 */
+	function smartyEscape($string, $esc_type = 'html', $char_set = null) {
+		if ($char_set === null) $char_set = LOCALE_ENCODING;
+		return smarty_modifier_escape($string, $esc_type, $char_set);
 	}
 
 	/**

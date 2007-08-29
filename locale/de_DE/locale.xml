@@ -137,6 +137,7 @@
 	<message key="common.completed">Beendet</message>
 	<message key="common.mailingAddress">Postadresse</message>
 	<message key="common.country">Land</message>
+	<message key="common.discipline">Disziplin</message>
 	<message key="common.close">Schliessen</message>
 	<message key="common.closeWindow">Fenster schliessen</message>
 	<message key="common.initiate">Initiieren</message>
@@ -423,12 +424,17 @@
 	<message key="user.logOut">Sitzung schließen</message>
 	<message key="user.username">Benutzername</message>
 	<message key="user.password">Passwort</message>
+	<message key="user.salutation">Anrede</message>
 	<message key="user.name">Name</message>
 	<message key="user.firstName">Vorname</message>
 	<message key="user.middleName">Zweiter Vorname</message>
+	<message key="user.lastName">Familienname</message>
 	<message key="user.initials">Initialen</message>
 	<message key="user.initialsExample">Beispiel: Jean-Luc Savard = JLS</message>
-	<message key="user.lastName">Familienname</message>
+	<message key="user.gender">Geschlecht</message>
+	<message key="user.masculine">M</message>
+	<message key="user.feminine">F</message>
+	<message key="user.signature">Signatur</message>
 	<message key="user.title">Titel</message>
 	<message key="user.affiliation">Zugehörigkeit</message>
 	<message key="user.affiliations">Zugehörigkeiten</message>

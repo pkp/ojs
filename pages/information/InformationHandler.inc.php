@@ -30,17 +30,17 @@ class InformationHandler extends Handler {
 
 		switch(isset($args[0])?$args[0]:null) {
 			case 'readers':
-				$content = $journal->getSetting('readerInformation');
+				$content = $journal->getLocalizedSetting('readerInformation');
 				$pageTitle = 'navigation.infoForReaders.long';
 				$pageCrumbTitle = 'navigation.infoForReaders';
 				break;
 			case 'authors':
-				$content = $journal->getSetting('authorInformation');
+				$content = $journal->getLocalizedSetting('authorInformation');
 				$pageTitle = 'navigation.infoForAuthors.long';
 				$pageCrumbTitle = 'navigation.infoForAuthors';
 				break;
 			case 'librarians':
-				$content = $journal->getSetting('librarianInformation');
+				$content = $journal->getLocalizedSetting('librarianInformation');
 				$pageTitle = 'navigation.infoForLibrarians.long';
 				$pageCrumbTitle = 'navigation.infoForAuthors';
 				break;

@@ -555,8 +555,9 @@ class Request {
 	 */
 	function cleanUserVar(&$var, $stripHtml = false) {
 		if (isset($var) && is_array($var)) {
-			array_walk($var, create_function('&$item,$key', 'Request::cleanUserVar($item);'));
-		
+			foreach ($var as $key => $value) {
+				Request::cleanUserVar($var[$key], $stripHtml);
+			}
 		} else if (isset($var)) {
 			$var = Core::cleanVar(get_magic_quotes_gpc() ? stripslashes($var) : $var);
 			

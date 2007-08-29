@@ -14,9 +14,36 @@
 
 <users>
         <user>
-                <username>usertwo</username>
-                <first_name>UserTwo</first_name>
-                <last_name>LastName</last_name>
-                <email>him3@there.com</email>
+		<username>testuser1</username>
+		<password>ojsojs</password>
+		<salutation>Dr.</salutation>
+		<first_name>TestUser1FirstName</first_name>
+		<last_name>TestUser1LastName</last_name>
+		<gender>F</gender>
+		<affiliation>TestUser1Affiliation</affiliation>
+		<email>testuser1@ojsdev.bb</email>
+		<country>DE</country>
+		<discipline>C4</discipline>
+		<biography locale="de_DE">My biograhy (German) - TestUser1.</biography>
+		<biography locale="en_US">My biograhy (English) - TestUser1.</biography>
+		<biography locale="es_ES">My biograhy (Spanish) - TestUser1.</biography>
+		<role type="author"/>
+	</user>
+	<user>
+		<username>testuser2</username>
+		<password encrypted="sha1">efe7d096996561e621764052b451ff752b03652f</password>
+		<salutation>Dr.</salutation>
+		<first_name>TestUser2FirstName</first_name>
+		<last_name>TestUser2LastName</last_name>
+		<gender>F</gender>
+		<affiliation>TestUser2Affiliation</affiliation>
+		<email>testuser2@ojsdev.bb</email>
+		<country>DE</country>
+		<discipline>C4</discipline>
+		<biography locale="de_DE">My biograhy (German) - TestUser2.</biography>
+		<biography locale="en_US">My biograhy (English) - TestUser2.</biography>
+		<biography locale="es_ES">My biograhy (Spanish) - TestUser2.</biography>
+		<userLocales>de_DE:en_US</userLocales>
+		<role type="author"/>
         </user>
 </users>

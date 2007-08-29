@@ -106,18 +106,16 @@ class CounterPlugin extends GenericPlugin {
 
 				$logEntry =& new LogEntry();
 				$logEntry->setSite($site->getTitle());
-				$logEntry->setJournal($journal->getTitle());
+				$logEntry->setJournal($journal->getJournalTitle());
 				$logEntry->setJournalUrl(Request::url(null, 'index'));
 				$logEntry->setPrintIssn($journal->getSetting('printIssn'));
 				$logEntry->setOnlineIssn($journal->getSetting('onlineIssn'));
-				$publisher = $journal->getSetting('publisher');
-				if (is_array($publisher) && isset($publisher['institution'])) $publisher = $publisher['institution'];
-				$logEntry->setPublisher($publisher);
+				$logEntry->setPublisher($journal->getSetting('publisherInstitution'));
 				$logEntry->setUser($logUser);
 				if ($galley->isHTMLGalley()) $logEntry->setType(LOG_ENTRY_TYPE_HTML_ARTICLE);
 				elseif ($galley->isPdfGalley()) $logEntry->setType(LOG_ENTRY_TYPE_PDF_ARTICLE);
 				else $logEntry->setType(LOG_ENTRY_TYPE_OTHER_ARTICLE);
-				$logEntry->setValue($article->getTitle());
+				$logEntry->setValue($article->getArticleTitle());
 				$logEntryDao =& DAORegistry::getDAO('LogEntryDAO');
 				$logEntryDao->addEntry($logEntry);
 				break;
@@ -126,7 +124,7 @@ class CounterPlugin extends GenericPlugin {
 				$logEntry =& new LogEntry();
 				$article = $templateManager->get_template_vars('article');
 				$logEntry->setSite($site->getTitle());
-				$logEntry->setJournal($journal->getTitle());
+				$logEntry->setJournal($journal->getJournalTitle());
 				$logEntry->setJournalUrl(Request::url(null, 'index'));
 				$logEntry->setUser($logUser);
 				$logEntry->setType(LOG_ENTRY_TYPE_SEARCH);

@@ -34,9 +34,9 @@ class IndexHandler extends Handler {
 			// Assign header and content for home page
 			$templateMgr->assign('displayPageHeaderTitle', $journal->getJournalPageHeaderTitle(true));
 			$templateMgr->assign('displayPageHeaderLogo', $journal->getJournalPageHeaderLogo(true));
-			$templateMgr->assign('additionalHomeContent', $journal->getSetting('additionalHomeContent'));
-			$templateMgr->assign('homepageImage', $journal->getSetting('homepageImage'));
-			$templateMgr->assign('journalDescription', $journal->getSetting('journalDescription'));
+			$templateMgr->assign('additionalHomeContent', $journal->getLocalizedSetting('additionalHomeContent'));
+			$templateMgr->assign('homepageImage', $journal->getLocalizedSetting('homepageImage'));
+			$templateMgr->assign('journalDescription', $journal->getLocalizedSetting('journalDescription'));
 
 			$displayCurrentIssue = $journal->getSetting('displayCurrentIssue');
 			$issueDao = &DAORegistry::getDAO('IssueDAO');
@@ -67,7 +67,7 @@ class IndexHandler extends Handler {
 				Request::redirect($journal->getPath());
 			}
 
-			$templateMgr->assign('intro', $site->getIntro());
+			$templateMgr->assign('intro', $site->getSiteIntro());
 			$journals = &$journalDao->getEnabledJournals();
 			$templateMgr->assign_by_ref('journals', $journals);
 			$templateMgr->display('index/site.tpl');

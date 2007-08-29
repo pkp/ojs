@@ -235,7 +235,7 @@ class XMLGalleyPlugin extends GenericPlugin {
 
 					// check the result
 					if (trim(preg_replace("/\s+/", " ", $result)) != "Open Journal Systems Success" ) {
-						$form->addError('content', 'plugins.generic.xmlGalley.settings.externalXSLTFailure');
+						$form->addError('content', Locale::translate('plugins.generic.xmlGalley.settings.externalXSLTFailure'));
 					} else $templateMgr->assign('testSuccess', true);
 
 				}
@@ -282,9 +282,9 @@ class XMLGalleyPlugin extends GenericPlugin {
 							$this->updateSetting($journal->getJournalId(), 'XSLstylesheet', 'custom');
 							$this->updateSetting($journal->getJournalId(), 'customXSL', $fileName);
 
-						} else $form->addError('content', 'plugins.generic.xmlGalley.settings.customXSLInvalid');
+						} else $form->addError('content', Locale::translate('plugins.generic.xmlGalley.settings.customXSLInvalid'));
 
-					} else $form->addError('content', 'plugins.generic.xmlGalley.settings.customXSLRequired');
+					} else $form->addError('content', Locale::translate('plugins.generic.xmlGalley.settings.customXSLRequired'));
 
 					// re-populate the form values with the new settings
 					$form->initData();

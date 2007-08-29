@@ -12,23 +12,35 @@
 {assign var="pageTitle" value="manager.setup.gettingDownTheDetails"}
 {include file="manager/setup/setupHeader.tpl"}
 
-<form method="post" action="{url op="saveSetup" path="1"}">
+<form name="setupForm" method="post" action="{url op="saveSetup" path="1"}">
 {include file="common/formErrors.tpl"}
+
+{if count($formLocales) > 1}
+<table width="100%" class="data">
+	<tr valign="top">
+		<td width="20%" class="label">{fieldLabel name="formLocale" required="true" key="common.language"}</td>
+		<td width="80%" class="value">
+			{url|assign:"setupFormUrl" op="setup" path="1"}
+			{form_language_chooser form="setupForm" url=$setupFormUrl}
+		</td>
+	</tr>
+</table>
+{/if}
 
 <h3>1.1 {translate key="manager.setup.generalInformation"}</h3>
 
 <table width="100%" class="data">
 	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="journalTitle" required="true" key="manager.setup.journalTitle"}</td>
-		<td width="80%" class="value"><input type="text" name="journalTitle" id="journalTitle" value="{$journalTitle|escape}" size="40" maxlength="120" class="textField" /></td>
+		<td width="20%" class="label">{fieldLabel name="title" required="true" key="manager.setup.journalTitle"}</td>
+		<td width="80%" class="value"><input type="text" name="title[{$formLocale|escape}]" id="title" value="{$title[$formLocale]|escape}" size="40" maxlength="120" class="textField" /></td>
 	</tr>
 	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="journalInitials" required="true" key="manager.setup.journalInitials"}</td>
-		<td width="80%" class="value"><input type="text" name="journalInitials" id="journalInitials" value="{$journalInitials|escape}" size="8" maxlength="16" class="textField" /></td>
+		<td width="20%" class="label">{fieldLabel name="initials" required="true" key="manager.setup.journalInitials"}</td>
+		<td width="80%" class="value"><input type="text" name="initials[{$formLocale|escape}]" id="initials" value="{$initials[$formLocale]|escape}" size="8" maxlength="16" class="textField" /></td>
 	</tr>
 	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="journalAbbreviation" key="manager.setup.journalAbbreviation"}</td>
-		<td width="80%" class="value"><input type="text" name="journalAbbreviation" id="journalAbbreviation" value="{$journalAbbreviation|escape}" size="40" maxlength="120" class="textField" /></td>
+		<td width="20%" class="label">{fieldLabel name="abbreviation" required="true" key="manager.setup.journalAbbreviation"}</td>
+		<td width="80%" class="value"><input type="text" name="abbreviation[{$formLocale|escape}]" id="abbreviation" value="{$abbreviation[$formLocale]|escape}" size="8" maxlength="16" class="textField" /></td>
 	</tr>
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="printIssn" key="manager.setup.printIssn"}</td>
@@ -155,16 +167,16 @@
 
 <table width="100%" class="data">
 	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="publisher-note" key="manager.setup.note"}</td>
-		<td width="80%" class="value"><textarea name="publisher[note]" id="publisher-note" rows="5" cols="40" class="textArea">{$publisher.note|escape}</textarea></td>
+		<td width="20%" class="label">{fieldLabel name="publisherNote" key="manager.setup.note"}</td>
+		<td width="80%" class="value"><textarea name="publisherNote[{$formLocale|escape}]" id="publisherNote" rows="5" cols="40" class="textArea">{$publisherNote[$formLocale]|escape}</textarea></td>
 	</tr>
 	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="publisher-institution" key="manager.setup.institution"}</td>
-		<td width="80%" class="value"><input type="text" name="publisher[institution]" id="publisher-institution" value="{$publisher.institution|escape}" size="40" maxlength="90" class="textField" /></td>
+		<td width="20%" class="label">{fieldLabel name="publisherInstitution" key="manager.setup.institution"}</td>
+		<td width="80%" class="value"><input type="text" name="publisherInstitution" id="publisherInstitution" value="{$publisherInstitution|escape}" size="40" maxlength="90" class="textField" /></td>
 	</tr>
 	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="publisher-url" key="common.url"}</td>
-		<td width="80%" class="value"><input type="text" name="publisher[url]" id="publisher-url" value="{$publisher.url|escape}" size="40" maxlength="255" class="textField" /></td>
+		<td width="20%" class="label">{fieldLabel name="publisherUrl" key="common.url"}</td>
+		<td width="80%" class="value"><input type="text" name="publisherUrl" id="publisherUrl" value="{$publisherUrl|escape}" size="40" maxlength="255" class="textField" /></td>
 	</tr>
 </table>
 
@@ -177,7 +189,7 @@
 <table width="100%" class="data">
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="sponsorNote" key="manager.setup.note"}</td>
-		<td width="80%" class="value"><textarea name="sponsorNote" id="sponsorNote" rows="5" cols="40" class="textArea">{$sponsorNote|escape}</textarea></td>
+		<td width="80%" class="value"><textarea name="sponsorNote[{$formLocale|escape}]" id="sponsorNote" rows="5" cols="40" class="textArea">{$sponsorNote[$formLocale]|escape}</textarea></td>
 	</tr>
 {foreach name=sponsors from=$sponsors key=sponsorId item=sponsor}
 	<tr valign="top">
@@ -218,7 +230,7 @@
 <table width="100%" class="data">
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="contributorNote" key="manager.setup.note"}</td>
-		<td width="80%" class="value"><textarea name="contributorNote" id="contributorNote" rows="5" cols="40" class="textArea">{$contributorNote|escape}</textarea></td>
+		<td width="80%" class="value"><textarea name="contributorNote[{$formLocale|escape}]" id="contributorNote" rows="5" cols="40" class="textArea">{$contributorNote[$formLocale]|escape}</textarea></td>
 	</tr>
 {foreach name=contributors from=$contributors key=contributorId item=contributor}
 	<tr valign="top">
@@ -259,16 +271,16 @@
 <table width="100%" class="data">
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="searchDescription" key="common.description"}</td>
-		<td width="80%" class="value"><input type="text" name="searchDescription" id="searchDescription" value="{$searchDescription|escape}" size="40" maxlength="255" class="textField" /></td>
+		<td width="80%" class="value"><input type="text" name="searchDescription[{$formLocale|escape}]" id="searchDescription" value="{$searchDescription[$formLocale]|escape}" size="40" maxlength="255" class="textField" /></td>
 	</tr>
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="searchKeywords" key="common.keywords"}</td>
-		<td width="80%" class="value"><input type="text" name="searchKeywords" id="searchKeywords" value="{$searchKeywords|escape}" size="40" maxlength="255" class="textField" /></td>
+		<td width="80%" class="value"><input type="text" name="searchKeywords[{$formLocale|escape}]" id="searchKeywords" value="{$searchKeywords[$formLocale]|escape}" size="40" maxlength="255" class="textField" /></td>
 	</tr>
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="customHeaders" key="manager.setup.customTags"}</td>
 		<td width="80%" class="value">
-			<textarea name="customHeaders" id="customHeaders" rows="3" cols="40" class="textArea">{$customHeaders|escape}</textarea>
+			<textarea name="customHeaders[{$formLocale|escape}]" id="customHeaders" rows="3" cols="40" class="textArea">{$customHeaders[$formLocale]|escape}</textarea>
 			<br />
 			<span class="instruct">{translate key="manager.setup.customTagsDescription"}</span>
 		</td>

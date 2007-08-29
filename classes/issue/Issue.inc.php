@@ -13,7 +13,7 @@
  *
  * $Id$
  */
- 
+
 define('ISSUE_DEFAULT', 0);
 define('OPEN_ACCESS', 1);
 define('SUBSCRIPTION', 2);
@@ -26,15 +26,15 @@ class Issue extends DataObject {
 	function getIssueId() {
 		return $this->getData('issueId');
 	}
-	 
+
 	/**
 	 * set issue id
 	 * @param $issueId int
 	 */
 	function setIssueId($issueId) {
-		return $this->setData('issueId',$issueId);
+		return $this->setData('issueId', $issueId);
 	}
- 
+
 	/**
 	 * get journal id
 	 * @return int
@@ -42,29 +42,39 @@ class Issue extends DataObject {
 	function getJournalId() {
 		return $this->getData('journalId');
 	}
-	 
+
 	/**
 	 * set journal id
 	 * @param $journalId int
 	 */
 	function setJournalId($journalId) {
-		return $this->setData('journalId',$journalId);
+		return $this->setData('journalId', $journalId);
+	}
+
+	/**
+	 * Get the localized title
+	 * @return string
+	 */
+	function getIssueTitle() {
+		return $this->getLocalizedData('title');
 	}
 
 	/**
 	 * get title
+	 * @param $locale string
 	 * @return string
 	 */
-	function getTitle() {
-		return $this->getData('title');
+	function getTitle($locale) {
+		return $this->getData('title', $locale);
 	}
-	 
+
 	/**
 	 * set title
 	 * @param $title string
+	 * @param $locale string
 	 */
-	function setTitle($title) {
-		return $this->setData('title',$title);
+	function setTitle($title, $locale) {
+		return $this->setData('title', $locale);
 	}
 
 	/**
@@ -74,13 +84,13 @@ class Issue extends DataObject {
 	function getVolume() {
 		return $this->getData('volume');
 	}
-	 
+
 	/**
 	 * set volume
 	 * @param $volume int
 	 */
 	function setVolume($volume) {
-		return $this->setData('volume',$volume);
+		return $this->setData('volume', $volume);
 	}
 
 	/**
@@ -90,13 +100,13 @@ class Issue extends DataObject {
 	function getNumber() {
 		return $this->getData('number');
 	}
-	 
+
 	/**
 	 * set number
 	 * @param $number int
 	 */
 	function setNumber($number) {
-		return $this->setData('number',$number);
+		return $this->setData('number', $number);
 	}
 
 	/**
@@ -106,13 +116,13 @@ class Issue extends DataObject {
 	function getYear() {
 		return $this->getData('year');
 	}
-	 
+
 	/**
 	 * set year
 	 * @param $year int
 	 */
 	function setYear($year) {
-		return $this->setData('year',$year);
+		return $this->setData('year', $year);
 	}
 
 	/**
@@ -122,13 +132,13 @@ class Issue extends DataObject {
 	function getPublished() {
 		return $this->getData('published');
 	}
-	 
+
 	/**
 	 * set published
 	 * @param $published int
 	 */
 	function setPublished($published) {
-		return $this->setData('published',$published);
+		return $this->setData('published', $published);
 	}
 
 	/**
@@ -138,13 +148,13 @@ class Issue extends DataObject {
 	function getCurrent() {
 		return $this->getData('current');
 	}
-	 
+
 	/**
 	 * set current
 	 * @param $current int
 	 */
 	function setCurrent($current) {
-		return $this->setData('current',$current);
+		return $this->setData('current', $current);
 	}
 
  	/**
@@ -154,13 +164,13 @@ class Issue extends DataObject {
 	function getDatePublished() {
 		return $this->getData('datePublished');
 	}
-	 
+
 	/**
 	 * set date published
 	 * @param $datePublished date
 	 */
 	function setDatePublished($datePublished) {
-		return $this->setData('datePublished',$datePublished);
+		return $this->setData('datePublished', $datePublished);
 	}
 
  	/**
@@ -170,13 +180,13 @@ class Issue extends DataObject {
 	function getDateNotified() {
 		return $this->getData('dateNotified');
 	}
-	 
+
 	/**
 	 * set date the users were last notified
 	 * @param $dateNotified date
 	 */
 	function setDateNotified($dateNotified) {
-		return $this->setData('dateNotified',$dateNotified);
+		return $this->setData('dateNotified', $dateNotified);
 	}
 
 	/**
@@ -186,13 +196,13 @@ class Issue extends DataObject {
 	function getAccessStatus() {
 		return $this->getData('accessStatus');
 	}
-	 
+
 	/**
 	 * set access status
 	 * @param $accessStatus int
 	 */
 	function setAccessStatus($accessStatus) {
-		return $this->setData('accessStatus',$accessStatus);
+		return $this->setData('accessStatus', $accessStatus);
 	}
 
  	/**
@@ -202,29 +212,39 @@ class Issue extends DataObject {
 	function getOpenAccessDate() {
 		return $this->getData('openAccessDate');
 	}
-	 
+
 	/**
 	 * set open access date
 	 * @param $openAccessDate date
 	 */
 	function setOpenAccessDate($openAccessDate) {
-		return $this->setData('openAccessDate',$openAccessDate);
+		return $this->setData('openAccessDate', $openAccessDate);
+	}
+
+	/**
+	 * Get the localized description
+	 * @return string
+	 */
+	function getIssueDescription() {
+		return $this->getLocalizedData('description');
 	}
 
 	/**
 	 * get description
+	 * @param $locale string
 	 * @return string
 	 */
-	function getDescription() {
-		return $this->getData('description');
+	function getDescription($locale) {
+		return $this->getData('description', $locale);
 	}
-	 
+
 	/**
 	 * set description
 	 * @param $description string
+	 * @param $locale string
 	 */
-	function setDescription($description) {
-		return $this->setData('description',$description);
+	function setDescription($description, $locale) {
+		return $this->setData('description', $description, $locale);
 	}
 
 	/**
@@ -234,13 +254,13 @@ class Issue extends DataObject {
 	function getPublicIssueId() {
 		return $this->getData('publicIssueId');
 	}
-	 
+
 	/**
 	 * set public issue id
 	 * @param $publicIssueId string
 	 */
 	function setPublicIssueId($publicIssueId) {
-		return $this->setData('publicIssueId',$publicIssueId);
+		return $this->setData('publicIssueId', $publicIssueId);
 	}
 
 	/**
@@ -250,13 +270,13 @@ class Issue extends DataObject {
 	function getShowVolume() {
 		return $this->getData('showVolume');
 	}
-	 
+
 	/**
 	 * set show issue volume 
 	 * @param $showVolume int
 	 */
 	function setShowVolume($showVolume) {
-		return $this->setData('showVolume',$showVolume);
+		return $this->setData('showVolume', $showVolume);
 	}
 
 	/**
@@ -266,13 +286,13 @@ class Issue extends DataObject {
 	function getShowNumber() {
 		return $this->getData('showNumber');
 	}
-	 
+
 	/**
 	 * set show issue number 
 	 * @param $showNumber int
 	 */
 	function setShowNumber($showNumber) {
-		return $this->setData('showNumber',$showNumber);
+		return $this->setData('showNumber', $showNumber);
 	}
 
 	/**
@@ -282,13 +302,13 @@ class Issue extends DataObject {
 	function getShowYear() {
 		return $this->getData('showYear');
 	}
-	 
+
 	/**
 	 * set show issue year 
 	 * @param $showYear int
 	 */
 	function setShowYear($showYear) {
-		return $this->setData('showYear',$showYear);
+		return $this->setData('showYear', $showYear);
 	}
 
 	/**
@@ -298,109 +318,169 @@ class Issue extends DataObject {
 	function getShowTitle() {
 		return $this->getData('showTitle');
 	}
-	 
+
 	/**
 	 * set show issue title 
 	 * @param $showTitle int
 	 */
 	function setShowTitle($showTitle) {
-		return $this->setData('showTitle',$showTitle);
+		return $this->setData('showTitle', $showTitle);
+	}
+
+	/**
+	 * Get the localized issue cover filename
+	 * @return string
+	 */
+	function getIssueFileName() {
+		return $this->getLocalizedData('fileName');
 	}
 
 	/**
 	 * get file name
+	 * @param $locale string
 	 * @return string
 	 */
-	function getFileName() {
-		return $this->getData('fileName');
+	function getFileName($locale) {
+		return $this->getData('fileName', $locale);
 	}
-	 
+
 	/**
 	 * set file name
 	 * @param $fileName string
+	 * @param $locale string
 	 */
-	function setFileName($fileName) {
-		return $this->setData('fileName',$fileName);
+	function setFileName($fileName, $locale) {
+		return $this->setData('fileName', $fileName, $locale);
+	}
+
+	/**
+	 * Get the localized issue cover width
+	 * @return string
+	 */
+	function getIssueWidth() {
+		return $this->getLocalizedData('width');
 	}
 
 	/**
 	 * get width of cover page image
+	 * @param $locale string
 	 * @return string
 	 */
-	function getWidth() {
-		return $this->getData('width');
+	function getWidth($locale) {
+		return $this->getData('width', $locale);
 	}
-	 
+
 	/**
 	 * set width of cover page image
+	 * @param $locale string
 	 * @param $width int
 	 */
-	function setWidth($width) {
-		return $this->setData('width',$width);
+	function setWidth($width, $locale) {
+		return $this->setData('width', $width, $locale);
+	}
+
+	/**
+	 * Get the localized issue cover height
+	 * @return string
+	 */
+	function getIssueHeight() {
+		return $this->getLocalizedData('height');
 	}
 
 	/**
 	 * get height of cover page image
+	 * @param $locale string
 	 * @return string
 	 */
-	function getHeight() {
-		return $this->getData('height');
+	function getHeight($locale) {
+		return $this->getData('height', $locale);
 	}
-	 
+
 	/**
 	 * set height of cover page image
+	 * @param $locale string
 	 * @param $height int
 	 */
-	function setHeight($height) {
-		return $this->setData('height',$height);
+	function setHeight($height, $locale) {
+		return $this->setData('height', $height, $locale);
+	}
+
+	/**
+	 * Get the localized issue cover filename on the uploader's computer
+	 * @return string
+	 */
+	function getIssueOriginalFileName() {
+		return $this->getLocalizedData('originalFileName');
 	}
 
 	/**
 	 * get original file name
+	 * @param $locale string
 	 * @return string
 	 */
-	function getOriginalFileName() {
-		return $this->getData('originalFileName');
+	function getOriginalFileName($locale) {
+		return $this->getData('originalFileName', $locale);
 	}
-	 
+
 	/**
 	 * set original file name
 	 * @param $originalFileName string
+	 * @param $locale string
 	 */
-	function setOriginalFileName($originalFileName) {
-		return $this->setData('originalFileName',$originalFileName);
+	function setOriginalFileName($originalFileName, $locale) {
+		return $this->setData('originalFileName', $originalFileName, $locale);
+	}
+
+	/**
+	 * Get the localized issue cover description
+	 * @return string
+	 */
+	function getIssueCoverPageDescription() {
+		return $this->getLocalizedData('coverPageDescription');
 	}
 
 	/**
 	 * get cover page description
+	 * @param $locale string
 	 * @return string
 	 */
-	function getCoverPageDescription() {
-		return $this->getData('coverPageDescription');
+	function getCoverPageDescription($locale) {
+		return $this->getData('coverPageDescription', $locale);
 	}
-	 
+
 	/**
 	 * set cover page description
 	 * @param $coverPageDescription string
+	 * @param $locale string
 	 */
-	function setCoverPageDescription($coverPageDescription) {
-		return $this->setData('coverPageDescription',$coverPageDescription);
+	function setCoverPageDescription($coverPageDescription, $locale) {
+		return $this->setData('coverPageDescription', $coverPageDescription, $locale);
+	}
+
+	/**
+	 * Get the localized issue cover filename
+	 * @return string
+	 */
+	function getIssueShowCoverPage() {
+		return $this->getLocalizedData('showCoverPage');
 	}
 
 	/**
 	 * get show cover page
+	 * @param $locale string
 	 * @return int
 	 */
-	function getShowCoverPage() {
-		return $this->getData('showCoverPage');
+	function getShowCoverPage($locale) {
+		return $this->getData('showCoverPage', $locale);
 	}
-	 
+
 	/**
 	 * set show cover page
 	 * @param $showCoverPage int
+	 * @param $locale string
 	 */
-	function setShowCoverPage($showCoverPage) {
-		return $this->setData('showCoverPage',$showCoverPage);
+	function setShowCoverPage($showCoverPage, $locale) {
+		return $this->setData('showCoverPage', $showCoverPage, $locale);
 	}
 
 	/**
@@ -483,7 +563,7 @@ class Issue extends DataObject {
 		$vol = $this->getData('volume');
 		$num = $this->getData('number');
 		$year = $this->getData('year');
-		$title = $this->getData('title');
+		$title = $this->getLocalizedData('title');
 
 		$identification = '';
 
@@ -554,6 +634,6 @@ class Issue extends DataObject {
 		}
 		return $this->getIssueId();
 	}
- }
- 
+}
+
 ?>

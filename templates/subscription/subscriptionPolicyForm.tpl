@@ -24,7 +24,7 @@
 {translate key="manager.subscriptionPolicies.subscriptionPoliciesSaved"}<br />
 {/if}
 
-<form method="post" action="{url op="saveSubscriptionPolicies"}">
+<form name="subscriptionPolicies" method="post" action="{url op="saveSubscriptionPolicies"}">
 {include file="common/formErrors.tpl"}
 
 	<script type="text/javascript">
@@ -52,6 +52,15 @@
 <h3>{translate key="manager.subscriptionPolicies.subscriptionContact"}</h3>
 <p>{translate key="manager.subscriptionPolicies.subscriptionContactDescription"}</p>
 <table width="100%" class="data">
+{if count($formLocales) > 1}
+	<tr valign="top">
+		<td width="20%" class="label">{fieldLabel name="formLocale" required="true" key="common.language"}</td>
+		<td width="80%" class="value">
+			{url|assign:"subscriptionPoliciesUrl" op="subscriptionPolicies"}
+			{form_language_chooser form="subscriptionPolicies" url=$subscriptionPoliciesUrl}
+		</td>
+	</tr>
+{/if}
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="subscriptionName" key="user.name"}</td>
 		<td width="80%" class="value"><input type="text" name="subscriptionName" id="subscriptionName" value="{$subscriptionName|escape}" size="30" maxlength="60" class="textField" /></td>
@@ -81,7 +90,7 @@
 <h3>{translate key="manager.subscriptionPolicies.subscriptionAdditionalInformation"}</h3>
 <p>{translate key="manager.subscriptionPolicies.subscriptionAdditionalInformationDescription"}</p>
 <p>
-	<textarea name="subscriptionAdditionalInformation" id="subscriptionAdditionalInformation" rows="12" cols="60" class="textArea">{$subscriptionAdditionalInformation|escape}</textarea>
+	<textarea name="subscriptionAdditionalInformation[{$formLocale|escape}]" id="subscriptionAdditionalInformation" rows="12" cols="60" class="textArea">{$subscriptionAdditionalInformation[$formLocale]|escape}</textarea>
 	<br />
 	<span class="instruct">{translate key="manager.subscriptionPolicies.htmlInstructions"}</span>
 </p>
@@ -148,7 +157,7 @@
 
 	<p>{translate key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription"}</p>
 	<p>
-	<textarea name="delayedOpenAccessPolicy" id="delayedOpenAccessPolicy" rows="12" cols="60" class="textArea">{$delayedOpenAccessPolicy|escape}</textarea>
+	<textarea name="delayedOpenAccessPolicy[{$formLocale|escape}]" id="delayedOpenAccessPolicy" rows="12" cols="60" class="textArea">{$delayedOpenAccessPolicy[$formLocale]|escape}</textarea>
 	<br />
 	<span class="instruct">{translate key="manager.subscriptionPolicies.htmlInstructions"}</span>
 	</p>
@@ -159,7 +168,7 @@
 	<label for="enableAuthorSelfArchive">{translate key="manager.subscriptionPolicies.authorSelfArchiveDescription"}</label>
 </p>
 <p>
-	<textarea name="authorSelfArchivePolicy" id="authorSelfArchivePolicy" rows="12" cols="60" class="textArea">{$authorSelfArchivePolicy|escape}</textarea>
+	<textarea name="authorSelfArchivePolicy[{$formLocale|escape}]" id="authorSelfArchivePolicy" rows="12" cols="60" class="textArea">{$authorSelfArchivePolicy[$formLocale]|escape}</textarea>
 	<br />
 	<span class="instruct">{translate key="manager.subscriptionPolicies.htmlInstructions"}</span>
 </p>

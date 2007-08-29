@@ -19,28 +19,11 @@ define('GROUP_CONTEXT_EDITORIAL_TEAM',	0x000001);
 define('GROUP_CONTEXT_PEOPLE',		0x000002);
 
 class Group extends DataObject {
-
-	/**
-	 * Constructor.
-	 */
-	function Group() {
-		parent::DataObject();
-	}
-
 	/**
 	 * Get localized title of journal group.
 	 */
 	function getGroupTitle() {
-		$alternateLocaleNum = Locale::isAlternateJournalLocale($this->getJournalId());
-		$title = null;
-		switch ($alternateLocaleNum) {
-			case 1: $title = $this->getTitleAlt1(); break;
-			case 2: $title = $this->getTitleAlt2(); break;
-		}
-		// Fall back on the primary locale title.
-		if (empty($title)) $title = $this->getTitle();
-
-		return $title;
+		return $this->getLocalizedData('title');
 	}
 
 	//
@@ -49,18 +32,20 @@ class Group extends DataObject {
 	
 	/**
 	 * Get title of group (primary locale)
+	 * @param $locale string
 	 * @return string
 	 */
-	 function getTitle() {
-	 	return $this->getData('title');
+	 function getTitle($locale) {
+	 	return $this->getData('title', $locale);
 	}
 	
 	/**
 	* Set title of group
 	* @param $title string
+	* @param $locale string
 	*/
-	function setTitle($title) {
-		return $this->setData('title',$title);
+	function setTitle($title, $locale) {
+		return $this->setData('title', $title, $locale);
 	}
 	
 	/**
@@ -93,38 +78,6 @@ class Group extends DataObject {
 	*/
 	function setAboutDisplayed($aboutDisplayed) {
 		return $this->setData('aboutDisplayed',$aboutDisplayed);
-	}
-	
-	/**
-	 * Get title of group (alternate locale 1)
-	 * @return string
-	 */
-	 function getTitleAlt1() {
-	 	return $this->getData('titleAlt1');
-	}
-	
-	/**
-	* Set title of group (alternate locale 1)
-	* @param $title string
-	*/
-	function setTitleAlt1($title) {
-		return $this->setData('titleAlt1',$title);
-	}
-	
-	/**
-	 * Get title of group (alternate locale 2)
-	 * @return string
-	 */
-	 function getTitleAlt2() {
-	 	return $this->getData('titleAlt2');
-	}
-	
-	/**
-	* Set title of group (alternate locale 2)
-	* @param $title string
-	*/
-	function setTitleAlt2($title) {
-		return $this->setData('titleAlt2',$title);
 	}
 	
 	/**

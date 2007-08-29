@@ -20,6 +20,6 @@
 
 ({$article->getDatePublished()|date_format:'%Y'}).
 {$article->getArticleTitle()|strip_unsafe_html}.
-<i>{$journal->getTitle()|escape}{if $issue}, {$issue->getVolume()|escape}</i>({$issue->getNumber()|escape}){else}</i>{/if}.
+<i>{$journal->getJournalTitle()|escape}{if $issue}, {$issue->getVolume()|escape}</i>({$issue->getNumber()|escape}){else}</i>{/if}.
 {translate key="plugins.citationFormats.apa.retrieved" retrievedDate=$smarty.now|date_format:$dateFormatShort url=$articleUrl}
 

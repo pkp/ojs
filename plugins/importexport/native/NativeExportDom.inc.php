@@ -30,7 +30,7 @@ class NativeExportDom {
 		XMLCustomWriter::createChildWithText($doc, $root, 'number', $issue->getNumber(), false);
 		XMLCustomWriter::createChildWithText($doc, $root, 'year', $issue->getYear(), false);
 
-		if ($issue->getShowCoverPage()) {
+		if ($issue->getIssueShowCoverPage()) {
 			$coverNode = &XMLCustomWriter::createElement($doc, 'cover');
 			XMLCustomWriter::appendChild($root, $coverNode);
 			XMLCustomWriter::createChildWithText($doc, $coverNode, 'caption', $issue->getCoverPageDescription(), false);
@@ -77,7 +77,7 @@ class NativeExportDom {
 
 		$altLocale1 = $journal->getSetting('alternateLocale1');
 		$altLocale2 = $journal->getSetting('alternateLocale2');
-		$locale = $journal->getLocale();
+		$locale = $journal->getPrimaryLocale();
 
 		$titleNode =& XMLCustomWriter::createChildWithText($doc, $root, 'title', $section->getTitle());
 		XMLCustomWriter::setAttribute($titleNode, 'locale', $locale);
@@ -119,7 +119,7 @@ class NativeExportDom {
 
 		/* --- Titles and Abstracts --- */
 		$titleNode = XMLCustomWriter::createChildWithText($doc, $root, 'title', $article->getTitle());
-		XMLCustomWriter::setAttribute($titleNode, 'locale', $journal->getLocale(), false);
+		XMLCustomWriter::setAttribute($titleNode, 'locale', $journal->getPrimaryLocale(), false);
 
 		$titleAlt = $article->getTitleAlt1();
 		if ($titleAlt) {
@@ -141,7 +141,7 @@ class NativeExportDom {
 
 		if (!$section->getAbstractsDisabled()) {
 			$abstractNode = XMLCustomWriter::createChildWithText($doc, $root, 'abstract', $article->getAbstract());
-			XMLCustomWriter::setAttribute($abstractNode, 'locale', $journal->getLocale(), false);
+			XMLCustomWriter::setAttribute($abstractNode, 'locale', $journal->getPrimaryLocale(), false);
 
 			$abstractAlt = $article->getAbstractAlt1();
 			if ($abstractAlt) {
@@ -186,7 +186,7 @@ class NativeExportDom {
 
 		if (XMLCustomWriter::createChildWithText($doc, $indexingNode, 'discipline', $article->getDiscipline(), false)!== null) $isIndexingNecessary = true;
 		if (XMLCustomWriter::createChildWithText($doc, $indexingNode, 'type', $article->getType(), false)!== null) $isIndexingNecessary = true;
-		if (XMLCustomWriter::createChildWithText($doc, $indexingNode, 'subject', $article->getSubject(), false)!== null) $isIndexingNecessary = true;
+		if (XMLCustomWriter::createChildWithText($doc, $indexingNode, 'subject', $article->getArticleSubject(), false)!== null) $isIndexingNecessary = true;
 		if (XMLCustomWriter::createChildWithText($doc, $indexingNode, 'subject_class', $article->getSubjectClass(), false)!== null) $isIndexingNecessary = true;
 
 		$coverageNode = &XMLCustomWriter::createElement($doc, 'coverage');

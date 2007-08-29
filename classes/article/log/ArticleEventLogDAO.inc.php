@@ -17,14 +17,6 @@
 import ('article.log.ArticleEventLogEntry');
 
 class ArticleEventLogDAO extends DAO {
-
-	/**
-	 * Constructor.
-	 */
-	function ArticleEventLogDAO() {
-		parent::DAO();
-	}
-	
 	/**
 	 * Retrieve a log entry by ID.
 	 * @param $logId int
@@ -194,7 +186,6 @@ class ArticleEventLogDAO extends DAO {
 	function getInsertLogId() {
 		return $this->getInsertId('article_event_log', 'log_id');
 	}
-	
 }
 
 ?>

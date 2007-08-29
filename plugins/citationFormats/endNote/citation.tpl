@@ -19,9 +19,9 @@
 %D {$article->getDatePublished()|date_format:"%Y"}
 %T {$article->getArticleTitle()|strip_tags}
 %B {$article->getDatePublished()|date_format:"%Y"}
-%9 {$article->getSubject()|escape}
+%9 {$article->getArticleSubject()|escape}
 %! {$article->getArticleTitle()|strip_tags}
-%K {$article->getSubject()|escape}
+%K {$article->getArticleSubject()|escape}
 %X {$article->getArticleAbstract()|strip_tags|replace:"\n":" "|replace:"\r":" "}
 %U {$articleUrl}
 

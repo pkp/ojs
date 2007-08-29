@@ -55,7 +55,11 @@ class Action {
 		if (!HookRegistry::call('Action::viewMetadata', array(&$article, &$roleId))) {
 			import("submission.form.MetadataForm");
 			$metadataForm = &new MetadataForm($article, $roleId);
-			$metadataForm->initData();
+			if ($metadataForm->isLocaleResubmit()) {
+				$metadataForm->readInputData();
+			} else {
+				$metadataForm->initData();
+			}
 			$metadataForm->display();
 		}
 	}
@@ -190,15 +194,15 @@ class Action {
 			switch ($type) {
 				case 'copy':
 					$title = 'submission.copyedit.instructions';
-					$instructions = $journal->getSetting('copyeditInstructions');
+					$instructions = $journal->getLocalizedSetting('copyeditInstructions');
 					break;
 				case 'layout':
 					$title = 'submission.layout.instructions';
-					$instructions = $journal->getSetting('layoutInstructions');
+					$instructions = $journal->getLocalizedSetting('layoutInstructions');
 					break;
 				case 'proof':
 					$title = 'submission.proofread.instructions';
-					$instructions = $journal->getSetting('proofInstructions');
+					$instructions = $journal->getLocalizedSetting('proofInstructions');
 					break;
 				default:
 					return false;

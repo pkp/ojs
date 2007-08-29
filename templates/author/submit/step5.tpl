@@ -12,7 +12,7 @@
 {assign var="pageTitle" value="author.submit.step5"}
 {include file="author/submit/submitHeader.tpl"}
 
-<p>{translate key="author.submit.confirmationDescription" journalTitle=$journal->getTitle()}</p>
+<p>{translate key="author.submit.confirmationDescription" journalTitle=$journal->getJournalTitle()}</p>
 
 <form method="post" action="{url op="saveSubmit" path=$submitStep}">
 <input type="hidden" name="articleId" value="{$articleId}" />

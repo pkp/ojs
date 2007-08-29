@@ -161,7 +161,32 @@ class PublishedArticle extends Article {
 	 * @return array ArticleGalley
 	 */
 	function &getGalleys() {
-		$galleys = &$this->getData('galleys');
+		$galleys =& $this->getData('galleys');
+		return $galleys;
+	}
+	
+	/**
+	 * Get the localized galleys for an article.
+	 * @return array ArticleGalley
+	 */
+	function &getLocalizedGalleys() {
+		$primaryLocale = Locale::getPrimaryLocale();
+		$locale = Locale::getLocale();
+
+		$allGalleys =& $this->getData('galleys');
+		$galleys = array();
+		foreach (array(Locale::getLocale(), Locale::getPrimaryLocale()) as $tryLocale) {
+			foreach (array_keys($allGalleys) as $key) {
+				if ($allGalleys[$key]->getLocale() == $locale) {
+					$galleys[] =& $allGalleys[$key];
+				}
+			}
+			if (!empty($galleys)) {
+				HookRegistry::call('ArticleGalleyDAO::getLocalizedGalleysByArticle', array(&$galleys, &$articleId));
+				return $galleys;
+			}
+		}
+
 		return $galleys;
 	}
 	
@@ -216,7 +241,7 @@ class PublishedArticle extends Article {
 	function getBestArticleId($journal = null) {
 		// Retrieve the journal, if necessary.
 		if (!isset($journal)) {
-			$journalDao = &DAORegistry::getDAO('JournalDAO');
+			$journalDao =& DAORegistry::getDAO('JournalDAO');
 			$journal = $journalDao->getJournal($this->getJournalId());
 		}
 

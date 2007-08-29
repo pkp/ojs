@@ -167,7 +167,11 @@ class TrackSubmissionHandler extends AuthorHandler {
 
 			$submitForm = &new SuppFileForm($authorSubmission);
 
-			$submitForm->initData();
+			if ($submitForm->isLocaleResubmit()) {
+				$submitForm->readInputData();
+			} else {
+				$submitForm->initData();
+			}
 			$submitForm->display();
 		} else {
 			Request::redirect(null, null, 'submission', $articleId);
@@ -188,8 +192,12 @@ class TrackSubmissionHandler extends AuthorHandler {
 			import('submission.form.SuppFileForm');
 		
 			$submitForm = &new SuppFileForm($authorSubmission, $suppFileId);
-		
-			$submitForm->initData();
+
+			if ($submitForm->isLocaleResubmit()) {
+				$submitForm->readInputData();
+			} else {
+				$submitForm->initData();
+			}
 			$submitForm->display();
 		} else {
 			Request::redirect(null, null, 'submission', $articleId);

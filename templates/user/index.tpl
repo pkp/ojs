@@ -25,7 +25,7 @@
 {/if}
 
 {foreach from=$userJournals item=journal}
-<h4><a href="{url journal=$journal->getPath() page="user"}">{$journal->getTitle()|escape}</a></h4>
+<h4><a href="{url journal=$journal->getPath() page="user"}">{$journal->getJournalTitle()|escape}</a></h4>
 <ul class="plain">
 {assign var="journalId" value=$journal->getJournalId()}
 {section name=role loop=$userRoles[$journalId]}
@@ -38,7 +38,7 @@
 {/foreach}
 
 {else}
-<h3>{$userJournal->getTitle()}</h3>
+<h3>{$userJournal->getJournalTitle()}</h3>
 <ul class="plain">
 {if $isSiteAdmin && !$hasOtherJournals}
 	<li>&#187; <a href="{url journal="index" page=$isSiteAdmin->getRolePath()}">{translate key=$isSiteAdmin->getRoleName()}</a></li>

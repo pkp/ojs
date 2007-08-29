@@ -21,7 +21,7 @@
 
 <br/>
 
-<form method="post" action="{url op="updateAnnouncementType"}">
+<form name="announcementType" method="post" action="{url op="updateAnnouncementType"}">
 {if $typeId}
 <input type="hidden" name="typeId" value="{$typeId}" />
 {/if}
@@ -29,9 +29,20 @@
 {include file="common/formErrors.tpl"}
 
 <table class="data" width="100%">
+{if count($formLocales) > 1}
+	<tr valign="top">
+		<td width="20%" class="label">{fieldLabel name="formLocale" required="true" key="common.language"}</td>
+		<td width="80%" class="value">
+			{if $typeId}{url|assign:"announcementTypeUrl" op="editAnnouncementType" path=$typeId}
+			{else}{url|assign:"announcementTypeUrl" op="createAnnouncementType"}
+			{/if}
+			{form_language_chooser form="announcementType" url=$announcementTypeUrl}
+		</td>
+	</tr>
+{/if}
 <tr valign="top">
-	<td width="20%" class="label">{fieldLabel name="typeName" required="true" key="manager.announcementTypes.form.typeName"}</td>
-	<td width="80%" class="value"><input type="text" name="typeName" value="{$typeName|escape}" size="40" id="title" maxlength="80" class="textField" /></td>
+	<td width="20%" class="label">{fieldLabel name="name" required="true" key="manager.announcementTypes.form.typeName"}</td>
+	<td width="80%" class="value"><input type="text" name="name[{$formLocale|escape}]" value="{$name[$formLocale]|escape}" size="40" id="name" maxlength="80" class="textField" /></td>
 </tr>
 </table>
 

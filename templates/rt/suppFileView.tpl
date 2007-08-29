@@ -21,15 +21,15 @@
 <table width="100%" class="data">
 	<tr valign="top">
 		<td width="20%" class="label">{translate key="common.title"}</td>
-		<td width="80%" class="value">{$suppFile->getTitle()|escape|default:"&mdash;"}</td>
+		<td width="80%" class="value">{$suppFile->getSuppFileTitle()|escape|default:"&mdash;"}</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="author.submit.suppFile.createrOrOwner"}</td>
-		<td class="value">{$suppFile->getCreator()|escape|default:"&mdash;"}</td>
+		<td class="value">{$suppFile->getSuppFileCreator()|escape|default:"&mdash;"}</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="common.subject"}</td>
-		<td class="value">{$suppFile->getSubject()|escape|default:"&mdash;"}</td>
+		<td class="value">{$suppFile->getSuppFileSubject()|escape|default:"&mdash;"}</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="common.type"}</td>
@@ -37,15 +37,15 @@
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="author.submit.suppFile.briefDescription"}</td>
-		<td class="value">{$suppFile->getDescription()|escape|nl2br|default:"&mdash;"}</td>
+		<td class="value">{$suppFile->getSuppFileDescription()|escape|nl2br|default:"&mdash;"}</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="common.publisher"}</td>
-		<td class="value">{$suppFile->getPublisher()|escape|default:"&mdash;"}</td>
+		<td class="value">{$suppFile->getSuppFilePublisher()|escape|default:"&mdash;"}</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="author.submit.suppFile.contributorOrSponsor"}</td>
-		<td class="value">{$suppFile->getSponsor()|escape|default:"&mdash;"}</td>
+		<td class="value">{$suppFile->getSuppFileSponsor()|escape|default:"&mdash;"}</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="common.date"}</td>
@@ -53,7 +53,7 @@
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="common.source"}</td>
-		<td class="value">{$suppFile->getSource()|escape|default:"&mdash;"}</td>
+		<td class="value">{$suppFile->getSuppFileSource()|escape|default:"&mdash;"}</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="common.language"}</td>

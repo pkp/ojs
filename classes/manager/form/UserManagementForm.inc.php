@@ -21,9 +21,6 @@ class UserManagementForm extends Form {
 	/** The ID of the user being edited */
 	var $userId;
 
-	/** @var boolean Include a user's working languages in their profile */
-	var $profileLocalesEnabled;
-	
 	/**
 	 * Constructor.
 	 */
@@ -33,7 +30,6 @@ class UserManagementForm extends Form {
 		if (!Validation::isJournalManager()) $userId = null;
 		$this->userId = isset($userId) ? (int) $userId : null;
 		$site = &Request::getSite();
-		$this->profileLocalesEnabled = $site->getProfileLocalesEnabled();
 		
 		// Validation checks for this form
 		if ($userId == null) {
@@ -91,16 +87,19 @@ class UserManagementForm extends Form {
 				'reader' => 'user.role.reader'
 			)
 		);
-		$templateMgr->assign('profileLocalesEnabled', $this->profileLocalesEnabled);
-		if ($this->profileLocalesEnabled) {
-			$site = &Request::getSite();
-			$templateMgr->assign('availableLocales', $site->getSupportedLocaleNames());
-		}
+
+		$site = &Request::getSite();
+		$templateMgr->assign('availableLocales', $site->getSupportedLocaleNames());
+
 		$templateMgr->assign('helpTopicId', $helpTopicId);
 
 		$countryDao =& DAORegistry::getDAO('CountryDAO');
 		$countries =& $countryDao->getCountries();
 		$templateMgr->assign_by_ref('countries', $countries);
+		
+		$disciplineDao =& DAORegistry::getDAO('DisciplineDAO');
+		$disciplines =& $disciplineDao->getDisciplines();
+		$templateMgr->assign_by_ref('disciplines', $disciplines);
 		
 		$authDao = &DAORegistry::getDAO('AuthSourceDAO');
 		$authSources = &$authDao->getSources();
@@ -126,11 +125,13 @@ class UserManagementForm extends Form {
 				$this->_data = array(
 					'authId' => $user->getAuthId(),
 					'username' => $user->getUsername(),
+					'salutation' => $user->getSalutation(),
 					'firstName' => $user->getFirstName(),
 					'middleName' => $user->getMiddleName(),
 					'lastName' => $user->getLastName(),
-					'signature' => $user->getSignature(),
+					'signature' => $user->getSignature(null), // Localized
 					'initials' => $user->getInitials(),
+					'gender' => $user->getGender(),
 					'affiliation' => $user->getAffiliation(),
 					'email' => $user->getEmail(),
 					'userUrl' => $user->getUrl(),
@@ -138,8 +139,9 @@ class UserManagementForm extends Form {
 					'fax' => $user->getFax(),
 					'mailingAddress' => $user->getMailingAddress(),
 					'country' => $user->getCountry(),
-					'biography' => $user->getBiography(),
-					'interests' => $user->getInterests(),
+					'biography' => $user->getBiography(null), // Localized
+					'interests' => $user->getInterests(null), // Localized
+					'discipline' => $user->getDiscipline(),
 					'userLocales' => $user->getLocales()
 				);
 
@@ -162,7 +164,33 @@ class UserManagementForm extends Form {
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->readUserVars(array('authId', 'enrollAs', 'password', 'password2', 'firstName', 'middleName', 'lastName', 'initials', 'signature', 'affiliation', 'email', 'phone', 'fax', 'mailingAddress', 'country', 'userUrl', 'biography', 'interests', 'userLocales', 'generatePassword', 'sendNotify', 'mustChangePassword'));
+		$this->readUserVars(array(
+			'authId',
+			'enrollAs',
+			'password',
+			'password2',
+			'salutation',
+			'firstName',
+			'middleName',
+			'lastName',
+			'gender',
+			'discipline',
+			'initials',
+			'signature',
+			'affiliation',
+			'email',
+			'userUrl',
+			'phone',
+			'fax',
+			'mailingAddress',
+			'country',
+			'biography',
+			'interests',
+			'userLocales',
+			'generatePassword',
+			'sendNotify',
+			'mustChangePassword'
+		));
 		if ($this->userId == null) {
 			$this->readUserVars(array('username'));
 		}
@@ -176,7 +204,12 @@ class UserManagementForm extends Form {
 			$this->setData('username', strtolower($this->getData('username')));
 		}
 	}
-	
+
+	function getLocaleFieldNames() {
+		$userDao =& DAORegistry::getDAO('UserDAO');
+		return $userDao->getLocaleFieldNames();
+	}
+
 	/**
 	 * Register a new user.
 	 */
@@ -191,36 +224,37 @@ class UserManagementForm extends Form {
 		if (!isset($user)) {
 			$user = &new User();
 		}
-		
+
+		$user->setSalutation($this->getData('salutation'));
 		$user->setFirstName($this->getData('firstName'));
 		$user->setMiddleName($this->getData('middleName'));
 		$user->setLastName($this->getData('lastName'));
 		$user->setInitials($this->getData('initials'));
+		$user->setGender($this->getData('gender'));
+		$user->setDiscipline($this->getData('discipline'));
 		$user->setAffiliation($this->getData('affiliation'));
-		$user->setSignature($this->getData('signature'));
+		$user->setSignature($this->getData('signature'), null);
 		$user->setEmail($this->getData('email'));
 		$user->setUrl($this->getData('userUrl'));
 		$user->setPhone($this->getData('phone'));
 		$user->setFax($this->getData('fax'));
 		$user->setMailingAddress($this->getData('mailingAddress'));
 		$user->setCountry($this->getData('country'));
-		$user->setBiography($this->getData('biography'));
-		$user->setInterests($this->getData('interests'));
+		$user->setBiography($this->getData('biography'), null);
+		$user->setInterests($this->getData('interests'), null);
 		$user->setMustChangePassword($this->getData('mustChangePassword') ? 1 : 0);
 		$user->setAuthId((int) $this->getData('authId'));
 		
-		if ($this->profileLocalesEnabled) {
-			$site = &Request::getSite();
-			$availableLocales = $site->getSupportedLocales();
-			
-			$locales = array();
-			foreach ($this->getData('userLocales') as $locale) {
-				if (Locale::isLocaleValid($locale) && in_array($locale, $availableLocales)) {
-					array_push($locales, $locale);
-				}
+		$site = &Request::getSite();
+		$availableLocales = $site->getSupportedLocales();
+		
+		$locales = array();
+		foreach ($this->getData('userLocales') as $locale) {
+			if (Locale::isLocaleValid($locale) && in_array($locale, $availableLocales)) {
+				array_push($locales, $locale);
 			}
-			$user->setLocales($locales);
 		}
+		$user->setLocales($locales);
 		
 		if ($user->getAuthId()) {
 			$authDao = &DAORegistry::getDAO('AuthSourceDAO');
@@ -295,7 +329,6 @@ class UserManagementForm extends Form {
 			}
 		}
 	}
-	
 }
 
 ?>

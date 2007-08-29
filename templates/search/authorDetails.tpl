@@ -27,8 +27,8 @@
 		{$article->getArticleTitle()|strip_unsafe_html}<br/>
 		<a href="{url page="article" op="view" path=$article->getBestArticleId()}" class="file">{if $section->getAbstractsDisabled()}{translate key="article.details"}{else}{translate key="article.abstract"}{/if}</a>
 		{if (!$issueUnavailable || $article->getAccessStatus())}
-		{foreach from=$article->getGalleys() item=galley name=galleyList}
-			&nbsp;<a href="{url page="article" op="view" path=$article->getBestArticleId()|to_array:$galley->getGalleyId()}" class="file">{$galley->getLabel()|escape}</a>
+		{foreach from=$article->getLocalizedGalleys() item=galley name=galleyList}
+			&nbsp;<a href="{url page="article" op="view" path=$article->getBestArticleId()|to_array:$galley->getGalleyId()}" class="file">{$galley->getGalleyLabel()|escape}</a>
 		{/foreach}
 		{/if}
 	</li>

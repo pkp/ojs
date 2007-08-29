@@ -48,22 +48,22 @@
 	<td>3.</td>
 	<td>{translate key="rt.metadata.dublinCore.subject"}</td>
 	<td>{translate key="rt.metadata.pkp.discipline"}</td>
-	<td>{$article->getDiscipline()|escape}</td>
+	<td>{$article->getArticleDiscipline()|escape}</td>
 </tr>
 <tr><td colspan="4" class="separator">&nbsp;</td></tr>
 <tr valign="top">
 	<td>3.</td>
 	<td>{translate key="rt.metadata.dublinCore.subject"}</td>
 	<td>{translate key="rt.metadata.pkp.subject"}</td>
-	<td>{$article->getSubject()|escape}</td>
+	<td>{$article->getArticleSubject()|escape}</td>
 </tr>
-{if $article->getSubjectClass()}
+{if $article->getArticleSubjectClass()}
 <tr><td colspan="4" class="separator">&nbsp;</td></tr>
 <tr valign="top">
 	<td>3.</td>
 	<td>{translate key="rt.metadata.dublinCore.subject"}</td>
 	<td>{translate key="rt.metadata.pkp.subjectClass"}</td>
-	<td>{$article->getSubjectClass()|escape}</td>
+	<td>{$article->getArticleSubjectClass()|escape}</td>
 </tr>
 {/if}
 <tr><td colspan="4" class="separator">&nbsp;</td></tr>
@@ -116,7 +116,7 @@
 	<td>{translate key="rt.metadata.pkp.format"}</td>
 	<td>
 		{foreach from=$article->getGalleys() item=galley name=galleys}
-			{$galley->getLabel()|escape}{if !$smarty.foreach.galleys.last}, {/if}
+			{$galley->getGalleyLabel()|escape}{if !$smarty.foreach.galleys.last}, {/if}
 		{/foreach}
 	</td>
 </tr>
@@ -142,7 +142,7 @@
 	<td>11.</td>
 	<td>{translate key="rt.metadata.dublinCore.source"}</td>
 	<td>{translate key="rt.metadata.pkp.source"}</td>
-	<td>{$currentJournal->getTitle()|escape}{if $issue}; {$issue->getIssueIdentification()|escape}{/if}</td>
+	<td>{$currentJournal->getJournalTitle()|escape}{if $issue}; {$issue->getIssueIdentification()|escape}{/if}</td>
 </tr>
 <tr><td colspan="4" class="separator">&nbsp;</td></tr>
 <tr valign="top">
@@ -178,7 +178,7 @@
 	<td>15.</td>
 	<td>{translate key="rt.metadata.dublinCore.rights"}</td>
 	<td>{translate key="rt.metadata.pkp.copyright"}</td>
-	<td>{$journalSettings.copyrightNotice|nl2br}</td>
+	<td>{$currentJournal->getLocalizedSetting('copyrightNotice')|nl2br}</td>
 </tr>
 </table>
 

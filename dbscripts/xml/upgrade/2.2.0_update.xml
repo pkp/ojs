@@ -159,9 +159,8 @@ Username: {$authorUsername}
 
 If you are unable to undertake this work at this time or have any questions, please contact me. Thank you for your contribution to this journal.
 
-{$editorialContactSignature}';
-
-UPDATE email_templates_default_data SET body='{$proofreaderName}:
+{$editorialContactSignature}'</query>
+		<query>UPDATE email_templates_default_data SET body='{$proofreaderName}:
 
 The submission "{$articleTitle}" to {$journalName} now needs to be proofread by following these steps.
 1. Click on the Submission URL below.

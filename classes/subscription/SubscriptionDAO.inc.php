@@ -19,14 +19,6 @@ import('subscription.Subscription');
 import('subscription.SubscriptionType');
 
 class SubscriptionDAO extends DAO {
-
-	/**
-	 * Constructor.
-	 */
-	function SubscriptionDAO() {
-		parent::DAO();
-	}
-
 	/**
 	 * Retrieve a subscription by subscription ID.
 	 * @param $subscriptionId int
@@ -132,7 +124,7 @@ class SubscriptionDAO extends DAO {
 		$subscription->setMembership($row['membership']);
 		$subscription->setDomain($row['domain']);
 		$subscription->setIPRange($row['ip_range']);
-		
+
 		HookRegistry::call('SubscriptionDAO::_returnSubscriptionFromRow', array(&$subscription, &$row));
 
 		return $subscription;
@@ -540,7 +532,6 @@ class SubscriptionDAO extends DAO {
 	function getInsertSubscriptionId() {
 		return $this->getInsertId('subscriptions', 'subscription_id');
 	}
-	
 }
 
 ?>

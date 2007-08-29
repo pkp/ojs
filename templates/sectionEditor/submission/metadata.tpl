@@ -43,7 +43,7 @@
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="user.biography"}</td>
-		<td class="value">{$author->getBiography()|strip_unsafe_html|nl2br|default:"&mdash;"}</td>
+		<td class="value">{$author->getAuthorBiography()|strip_unsafe_html|nl2br|default:"&mdash;"}</td>
 	</tr>
 	{if $author->getPrimaryContact()}
 	<tr valign="top">
@@ -63,20 +63,8 @@
 <table width="100%" class="data">
 	<tr valign="top">
 		<td width="20%" class="label">{translate key="article.title"}</td>
-		<td width="80%" class="value">{$submission->getTitle()|strip_unsafe_html|default:"&mdash;"}</td>
+		<td width="80%" class="value">{$submission->getArticleTitle()|strip_unsafe_html|default:"&mdash;"}</td>
 	</tr>
-	{if $alternateLocale1}
-	<tr valign="top">
-		<td class="label">{translate key="article.title"}<br />({$languageToggleLocales.$alternateLocale1})</td>
-		<td class="value">{$submission->getTitleAlt1()|strip_unsafe_html|default:"&mdash;"}</td>
-	</tr>
-	{/if}
-	{if $alternateLocale2}
-	<tr valign="top">
-		<td class="label">{translate key="article.title"}<br />({$languageToggleLocales.$alternateLocale2})</td>
-		<td class="value">{$submission->getTitleAlt2()|strip_unsafe_html|default:"&mdash;"}</td>
-	</tr>
-	{/if}
 
 	{if !$section->getAbstractsDisabled()}
 	<tr>
@@ -84,20 +72,8 @@
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="article.abstract"}</td>
-		<td class="value">{$submission->getAbstract()|strip_unsafe_html|nl2br|default:"&mdash;"}</td>
+		<td class="value">{$submission->getArticleAbstract()|strip_unsafe_html|nl2br|default:"&mdash;"}</td>
 	</tr>
-	{if $alternateLocale1}
-	<tr valign="top">
-		<td class="label">{translate key="article.abstract"}<br />({$languageToggleLocales.$alternateLocale1})</td>
-		<td class="value">{$submission->getAbstractAlt1()|strip_unsafe_html|nl2br|default:"&mdash;"}</td>
-	</tr>
-	{/if}
-	{if $alternateLocale2}
-	<tr valign="top">
-		<td class="label">{translate key="article.abstract"}<br />({$languageToggleLocales.$alternateLocale2})</td>
-		<td class="value">{$submission->getAbstractAlt2()|strip_unsafe_html|nl2br|default:"&mdash;"}</td>
-	</tr>
-	{/if}
 	{/if}
 </table>
 
@@ -107,7 +83,7 @@
 	{if $journalSettings.metaDiscipline}
 	<tr valign="top">
 		<td width="20%" class="label">{translate key="article.discipline"}</td>
-		<td width="80%" class="value">{$submission->getDiscipline()|escape|default:"&mdash;"}</td>
+		<td width="80%" class="value">{$submission->getArticleDiscipline()|escape|default:"&mdash;"}</td>
 	</tr>
 	<tr>
 		<td colspan="2" class="separator">&nbsp;</td>
@@ -116,7 +92,7 @@
 	{if $journalSettings.metaSubjectClass}
 	<tr valign="top">
 		<td width="20%"  class="label">{translate key="article.subjectClassification"}</td>
-		<td width="80%" class="value">{$submission->getSubjectClass()|escape|default:"&mdash;"}</td>
+		<td width="80%" class="value">{$submission->getArticleSubjectClass()|escape|default:"&mdash;"}</td>
 	</tr>
 	<tr>
 		<td colspan="2" class="separator">&nbsp;</td>
@@ -125,7 +101,7 @@
 	{if $journalSettings.metaSubject}
 	<tr valign="top">
 		<td width="20%"  class="label">{translate key="article.subject"}</td>
-		<td width="80%" class="value">{$submission->getSubject()|escape|default:"&mdash;"}</td>
+		<td width="80%" class="value">{$submission->getArticleSubject()|escape|default:"&mdash;"}</td>
 	</tr>
 	<tr>
 		<td colspan="2" class="separator">&nbsp;</td>
@@ -134,21 +110,21 @@
 	{if $journalSettings.metaCoverage}
 	<tr valign="top">
 		<td width="20%"  class="label">{translate key="article.coverageGeo"}</td>
-		<td width="80%" class="value">{$submission->getCoverageGeo()|escape|default:"&mdash;"}</td>
+		<td width="80%" class="value">{$submission->getArticleCoverageGeo()|escape|default:"&mdash;"}</td>
 	</tr>
 	<tr>
 		<td colspan="2" class="separator">&nbsp;</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="article.coverageChron"}</td>
-		<td class="value">{$submission->getCoverageChron()|escape|default:"&mdash;"}</td>
+		<td class="value">{$submission->getArticleCoverageChron()|escape|default:"&mdash;"}</td>
 	</tr>
 	<tr>
 		<td colspan="2" class="separator">&nbsp;</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="article.coverageSample"}</td>
-		<td class="value">{$submission->getCoverageSample()|escape|default:"&mdash;"}</td>
+		<td class="value">{$submission->getArticleCoverageSample()|escape|default:"&mdash;"}</td>
 	</tr>
 	<tr>
 		<td colspan="2" class="separator">&nbsp;</td>
@@ -157,7 +133,7 @@
 	{if $journalSettings.metaType}
 	<tr valign="top">
 		<td width="20%"  class="label">{translate key="article.type"}</td>
-		<td width="80%" class="value">{$submission->getType()|escape|default:"&mdash;"}</td>
+		<td width="80%" class="value">{$submission->getArticleType()|escape|default:"&mdash;"}</td>
 	</tr>
 	<tr>
 		<td colspan="2" class="separator">&nbsp;</td>
@@ -174,6 +150,6 @@
 <table width="100%" class="data">
 	<tr valign="top">
 		<td width="20%" class="label">{translate key="author.submit.agencies"}</td>
-		<td width="80%" class="value">{$submission->getSponsor()|escape|default:"&mdash;"}</td>
+		<td width="80%" class="value">{$submission->getArticleSponsor()|escape|default:"&mdash;"}</td>
 	</tr>
 </table>

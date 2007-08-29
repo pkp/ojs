@@ -19,7 +19,6 @@ import('article.ArticleGalley');
 import('article.ArticleHTMLGalley');
 
 class ArticleGalleyDAO extends DAO {
-
 	/** Helper file DAOs. */
 	var $articleFileDao;
 
@@ -97,7 +96,7 @@ class ArticleGalleyDAO extends DAO {
 		$result->Close();
 		unset($result);
 
-		HookRegistry::call('ArticleGalleyDAO::getArticleGalleys', array(&$galleys, &$articleId));
+		HookRegistry::call('ArticleGalleyDAO::getGalleysByArticle', array(&$galleys, &$articleId));
 
 		return $galleys;
 	}
@@ -126,6 +125,7 @@ class ArticleGalleyDAO extends DAO {
 		}
 		$galley->setGalleyId($row['galley_id']);
 		$galley->setArticleId($row['article_id']);
+		$galley->setLocale($row['locale']);
 		$galley->setFileId($row['file_id']);
 		$galley->setLabel($row['label']);
 		$galley->setSequence($row['seq']);
@@ -152,13 +152,14 @@ class ArticleGalleyDAO extends DAO {
 	function insertGalley(&$galley) {
 		$this->update(
 			'INSERT INTO article_galleys
-				(article_id, file_id, label, html_galley, style_file_id, seq)
+				(article_id, file_id, label, locale, html_galley, style_file_id, seq)
 				VALUES
-				(?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?)',
 			array(
 				$galley->getArticleId(),
 				$galley->getFileId(),
 				$galley->getLabel(),
+				$galley->getLocale(),
 				(int)$galley->isHTMLGalley(),
 				$galley->isHTMLGalley() ? $galley->getStyleFileId() : null,
 				$galley->getSequence() == null ? $this->getNextGalleySequence($galley->getArticleID()) : $galley->getSequence()
@@ -181,6 +182,7 @@ class ArticleGalleyDAO extends DAO {
 				SET
 					file_id = ?,
 					label = ?,
+					locale = ?,
 					html_galley = ?,
 					style_file_id = ?,
 					seq = ?
@@ -188,16 +190,13 @@ class ArticleGalleyDAO extends DAO {
 			array(
 				$galley->getFileId(),
 				$galley->getLabel(),
+				$galley->getLocale(),
 				(int)$galley->isHTMLGalley(),
 				$galley->isHTMLGalley() ? $galley->getStyleFileId() : null,
 				$galley->getSequence(),
 				$galley->getGalleyId()
 			)
 		);
-		
-		//if($galley->isHTMLGalley()) {
-			// FIXME Update images, etc.
-		//}
 	}
 	
 	/**

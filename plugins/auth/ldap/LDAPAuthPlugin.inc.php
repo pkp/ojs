@@ -328,9 +328,9 @@ class LDAPAuthPlugin extends AuthPlugin {
 		if (isset($mailingAddress))
 			$user->setMailingAddress($mailingAddress);
 		if (isset($biography))
-			$user->setBiography($biography);
+			$user->setBiography($biography, Locale::getLocale());
 		if (isset($interests))
-			$user->setInterests($interests);
+			$user->setInterests($interests, Locale::getLocale());
 	}
 	
 	/**

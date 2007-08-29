@@ -29,6 +29,7 @@ class Upgrade extends Installer {
 
 	/**
 	 * Returns true iff this is an upgrade process.
+	 * @return boolean
 	 */
 	function isUpgrade() {
 		return true;
@@ -51,6 +52,7 @@ class Upgrade extends Installer {
 	/**
 	 * For upgrade to 2.1.1: Designate original versions as review versions
 	 * in all cases where review versions aren't designated. (#2144)
+	 * @return boolean
 	 */
 	function designateReviewVersions() {
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
@@ -76,6 +78,7 @@ class Upgrade extends Installer {
 	/**
 	 * For upgrade to 2.1.1: Migrate the RT settings from the rt_settings
 	 * table to journal settings and drop the rt_settings table.
+	 * @return boolean
 	 */
 	function migrateRtSettings() {
 		$rtDao =& DAORegistry::getDAO('RTDAO');
@@ -108,33 +111,9 @@ class Upgrade extends Installer {
 	}
 
 	/**
-	 * For upgrade to 2.1.1: Toggle public display flag for subscription types
-	 * to match UI update (#2213)
-	 */
-	function togglePublicDisplaySubscriptionTypes() {
-		$journalDao =& DAORegistry::getDAO('JournalDAO');
-		$subscriptionTypeDao =& DAORegistry::getDAO('SubscriptionTypeDAO');
-
-		$journals =& $journalDao->getJournals();
-		while ($journal =& $journals->next()) {
-			$subscriptionTypes =& $subscriptionTypeDao->getSubscriptionTypesByJournalId($journal->getJournalId());
-			while ($subscriptionType =& $subscriptionTypes->next()) {
-				if ($subscriptionType->getPublic()) {
-					$subscriptionType->setPublic(0);
-				} else {
-					$subscriptionType->setPublic(1);
-				}
-				$subscriptionTypeDao->updateSubscriptionType($subscriptionType);
-				unset($subscriptionType);
-			}
-			unset($journal);
-		}
-		return true;
-	}
-
-	/**
 	 * For upgrade to OJS 2.2.0: Migrate the currency settings so the
 	 * currencies table can be dropped in favour of XML.
+	 * @return boolean
 	 */
 	function correctCurrencies() {
 		$currencyDao =& DAORegistry::getDAO('CurrencyDAO');
@@ -152,120 +131,84 @@ class Upgrade extends Installer {
 	 * For upgrade to 2.2.0: Migrate the issue label column and values to the new
 	 * show volume, show number, etc. columns and values. Migrate the publication
 	 * format settings for the journal to the new issue label format. (#2291)
+	 * @return boolean
 	 */
 	function migrateIssueLabelAndSettings() {
 		// First, migrate label_format values in issues table.
 		$issueDao =& DAORegistry::getDAO('IssueDAO');
-		$result =& $issueDao->retrieve('SELECT * FROM issues');
-		while (!$result->EOF) {
-			$row = $result->GetRowAssoc(false);
-			$issue =& new Issue();
-			$issue->setIssueId($row['issue_id']);
-			$issue->setJournalId($row['journal_id']);
-			$issue->setTitle($row['title']);
-			$issue->setVolume($row['volume']);
-			$issue->setNumber($row['number']);
-			$issue->setYear($row['year']);
-			$issue->setPublished($row['published']);
-			$issue->setCurrent($row['current']);
-			$issue->setDatePublished($row['date_published']);
-			$issue->setDateNotified($row['date_notified']);
-			$issue->setAccessStatus($row['access_status']);
-			$issue->setOpenAccessDate($row['open_access_date']);
-			$issue->setDescription($row['description']);
-			$issue->setPublicIssueId($row['public_issue_id']);
-
-			switch ($row['label_format']) {
-				case 4: // ISSUE_LABEL_TITLE
-					$issue->setShowVolume(0);
-					$issue->setShowNumber(0);
-					$issue->setShowYear(0);
-					$issue->setShowTitle(1);
-					break;
-				case 3: // ISSUE_LABEL_YEAR
-					$issue->setShowVolume(0);
-					$issue->setShowNumber(0);
-					$issue->setShowYear(1);
-					$issue->setShowTitle(0);
-					break;
- 				case 2: // ISSUE_LABEL_VOL_YEAR 		
-					$issue->setShowVolume(1);
-					$issue->setShowNumber(0);
-					$issue->setShowYear(1);
-					$issue->setShowTitle(0);
-					break;
-				case 1: // ISSUE_LABEL_NUM_VOL_YEAR
-				default:
-					$issue->setShowVolume(1);
-					$issue->setShowNumber(1);
-					$issue->setShowYear(1);
-					$issue->setShowTitle(0);
-					break;
-			}
-
-			$issue->setFileName($row['file_name']);
-			$issue->setOriginalFileName($row['original_file_name']);
-			$issue->setWidth($row['width']);
-			$issue->setHeight($row['height']);
-			$issue->setCoverPageDescription($row['cover_page_description']);
-			$issue->setShowCoverPage($row['show_cover_page']);
-			$issue->setStyleFileName($row['style_file_name']);
-			$issue->setOriginalStyleFileName($row['original_style_file_name']);
-			$issueDao->updateIssue($issue);
-			unset($issue);
-			$result->MoveNext();
-		}
-		$result->Close();
-		unset($result);
+		$issueDao->update('UPDATE issues SET show_volume=0, show_number=0, show_year=0, show_title=1 WHERE label_format=4'); // ISSUE_LABEL_TITLE
+		$issueDao->update('UPDATE issues SET show_volume=0, show_number=0, show_year=1, show_title=0 WHERE label_format=3'); // ISSUE_LABEL_YEAR
+		$issueDao->update('UPDATE issues SET show_volume=1, show_number=0, show_year=1, show_title=0 WHERE label_format=2'); // ISSUE_LABEL_VOL_YEAR
+		$issueDao->update('UPDATE issues SET show_volume=1, show_number=1, show_year=1, show_title=0 WHERE label_format=1'); // ISSUE_LABEL_NUM_VOL_YEAR
 
 		// Drop the old label_format column once all values are migrated.
 		$issueDao->update('ALTER TABLE issues DROP COLUMN label_format');
 
 		// Migrate old publicationFormat journal setting to new journal settings. 
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
-		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO'); 
-		$journals =& $journalDao->getJournals();
-
-		while ($journal =& $journals->next()) {
-
-			$publicationFormat = $journal->getSetting('publicationFormat');
-			$journalSettingsDao->deleteSetting($journal->getJournalId(), 'publicationFormat');
-
-			switch ($publicationFormat) {
+		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
+		$result =& $journalDao->retrieve('SELECT j.journal_id AS journal_id, js.setting_value FROM journals j LEFT JOIN journal_settings js ON (js.journal_id = j.journal_id AND js.setting_name = ?)', 'publicationFormat');
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+			$settings = array(
+				'publicationFormatVolume' => false,
+				'publicationFormatNumber' => false,
+				'publicationFormatYear' => false,
+				'publicationFormatTitle' => false
+			);
+			switch ($row['setting_value']) {
 				case 4: // ISSUE_LABEL_TITLE
-					$journal->updateSetting('publicationFormatVolume', false, 'bool');
-					$journal->updateSetting('publicationFormatNumber', false, 'bool');
-					$journal->updateSetting('publicationFormatYear', false, 'bool');
-					$journal->updateSetting('publicationFormatTitle', true, 'bool');
+					$settings['publicationFormatTitle'] = true;
 					break;
 				case 3: // ISSUE_LABEL_YEAR
-					$journal->updateSetting('publicationFormatVolume', false, 'bool');
-					$journal->updateSetting('publicationFormatNumber', false, 'bool');
-					$journal->updateSetting('publicationFormatYear', true, 'bool');
-					$journal->updateSetting('publicationFormatTitle', false, 'bool');
+					$settings['publicationFormatYear'] = true;
 					break;
  				case 2: // ISSUE_LABEL_VOL_YEAR 		
-					$journal->updateSetting('publicationFormatVolume', true, 'bool');
-					$journal->updateSetting('publicationFormatNumber', false, 'bool');
-					$journal->updateSetting('publicationFormatYear', true, 'bool');
-					$journal->updateSetting('publicationFormatTitle', false, 'bool');
+					$settings['publicationFormatVolume'] = true;
+					$settings['publicationFormatYear'] = true;
 					break;
 				case 1: // ISSUE_LABEL_NUM_VOL_YEAR
 				default:
-					$journal->updateSetting('publicationFormatVolume', true, 'bool');
-					$journal->updateSetting('publicationFormatNumber', true, 'bool');
-					$journal->updateSetting('publicationFormatYear', true, 'bool');
-					$journal->updateSetting('publicationFormatTitle', false, 'bool');
+					$settings['publicationFormatVolume'] = true;
+					$settings['publicationFormatNumber'] = true;
+					$settings['publicationFormatYear'] = true;
 			}
-
-			unset($journal);
+			foreach ($settings as $name => $value) {
+				$journalDao->update('INSERT INTO journal_settings (journal_id, setting_name, setting_value, setting_type) VALUES (?, ?, ?, ?)', array($row['journal_id'], $name, $value?1:0, 'bool'));
+			}
+			$result->MoveNext();
 		}
+		$result->Close();
+		unset($result);
+
+		$journalDao->update('DELETE FROM journal_settings WHERE setting_name = ?', array('publicationFormat'));
 
 		return true;
 	}
 
 	/**
+	 * For upgrade to 2.2: Move primary_locale from journal settings into
+	 * dedicated column.
+	 * @return boolean
+	 */
+	function setJournalPrimaryLocales() {
+		$journalDao =& DAORegistry::getDAO('JournalDAO');
+		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
+
+		$result =& $journalSettingsDao->retrieve('SELECT journal_id, setting_value FROM journal_settings WHERE setting_name = ?', array('primaryLocale'));
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+			$journalDao->update('UPDATE journals SET primary_locale = ? WHERE journal_id = ?', array($row['setting_value'], $row['journal_id']));
+			$result->MoveNext();
+		}
+		$journalDao->update('UPDATE journals SET primary_locale = ? WHERE primary_locale IS NULL OR primary_locale = ?', array(INSTALLER_DEFAULT_LOCALE, ''));
+		$result->Close();
+		return true;
+	}
+
+	/**
 	 * For upgrade to 2.2: Install default settings for block plugins.
+	 * @return boolean
 	 */
 	function installBlockPlugins() {
 		$pluginSettingsDao =& DAORegistry::getDAO('PluginSettingsDAO');
@@ -296,6 +239,146 @@ class Upgrade extends Installer {
 				$pluginSettingsDao->updateSetting($journalId, $pluginName, 'context', BLOCK_CONTEXT_RIGHT_SIDEBAR, 'int');
 			}
 		}
+
+		return true;
+	}
+
+	/**
+	 * Clear the data cache files (needed because of direct tinkering
+	 * with settings tables)
+	 * @return boolean
+	 */
+	function clearDataCache() {
+		import('cache.CacheManager');
+		$cacheManager =& CacheManager::getManager();
+		$cacheManager->flush();
+		return true;
+	}
+
+	/**
+	 * For 2.2 upgrade: add locale data to existing journal settings that
+	 * were not previously localized.
+	 * @return boolean
+	 */
+	function localizeJournalSettings() {
+		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
+		$journalDao =& DAORegistry::getDAO('JournalDAO');
+
+		$settingNames = array(
+			// Setup page 1
+			'title' => 'title',
+			'journalInitials' => 'initials', // Rename
+			'journalAbbreviation' => 'abbreviation', // Rename
+			'sponsorNote' => 'sponsorNote',
+			'publisherNote' => 'publisherNote',
+			'contributorNote' => 'contributorNote',
+			'searchDescription' => 'searchDescription',
+			'searchKeywords' => 'searchKeywords',
+			'customHeaders' => 'customHeaders',
+			// Setup page 2
+			'focusScopeDesc' => 'focusScopeDesc',
+			'reviewPolicy' => 'reviewPolicy',
+			'reviewGuidelines' => 'reviewGuidelines',
+			'privacyStatement' => 'privacyStatement',
+			'customAboutItems' => 'customAboutItems',
+			'lockssLicense' => 'lockssLicense',
+			// Setup page 3
+			'authorGuidelines' => 'authorGuidelines',
+			'submissionChecklist' => 'submissionChecklist',
+			'copyrightNotice' => 'copyrightNotice',
+			'metaDisciplineExamples' => 'metaDisciplineExamples',
+			'metaSubjectClassTitle' => 'metaSubjectClassTitle',
+			'metaSubjectClassUrl' => 'metaSubjectClassUrl',
+			'metaSubjectExamples' => 'metaSubjectExamples',
+			'metaCoverageGeoExamples' => 'metaCoverageGeoExamples',
+			'metaCoverageChronExamples' => 'metaCoverageChronExamples',
+			'metaCoverageResearchSampleExamples' => 'metaCoverageResearchSampleExamples',
+			'metaTypeExamples' => 'metaTypeExamples',
+			// Setup page 4
+			'pubFreqPolicy' => 'pubFreqPolicy',
+			'copyeditInstructions' => 'copyeditInstructions',
+			'layoutInstructions' => 'layoutInstructions',
+			'proofInstructions' => 'proofInstructions',
+			'openAccessPolicy' => 'openAccessPolicy',
+			'announcementsIntroduction' => 'announcementsIntroduction',
+			// Setup page 5
+			'homeHeaderTitleType' => 'homeHeaderTitleType',
+			'homeHeaderTitle' => 'homeHeaderTitle',
+			'pageHeaderTitleType' => 'pageHeaderTitleType',
+			'pageHeaderTitle' => 'pageHeaderTitle',
+			'homepageImage' => 'homepageImage',
+			'readerInformation' => 'readerInformation',
+			'authorInformation' => 'authorInformation',
+			'librarianInformation' => 'librarianInformation',
+			'journalPageHeader' => 'journalPageHeader',
+			'journalPageFooter' => 'journalPageFooter',
+			'additionalHomeContent' => 'additionalHomeContent',
+			'description' => 'description',
+			'navItems' => 'navItems'
+		);
+
+		foreach ($settingNames as $oldName => $newName) {
+			$result =& $journalDao->retrieve('SELECT j.journal_id, j.primary_locale FROM journals j, journal_settings js WHERE j.journal_id = js.journal_id AND js.setting_name = ? AND (js.locale IS NULL OR js.locale = ?)', array($oldName, ''));
+			while (!$result->EOF) {
+				$row = $result->GetRowAssoc(false);
+				$journalSettingsDao->update('UPDATE journal_settings SET locale = ?, setting_name = ? WHERE journal_id = ? AND setting_name = ? AND (locale IS NULL OR locale = ?)', array($row['primary_locale'], $newName, $row['journal_id'], $oldName, ''));
+				$result->MoveNext();
+			}
+			$result->Close();
+			unset($result);
+		}
+
+		return true;
+	}
+
+	/**
+	 * For 2.2 upgrade: Migrate the "publisher" setting from a serialized
+	 * array into three localized settings: publisherUrl, publisherNote,
+	 * and publisherInstitution.
+	 * @return boolean
+	 */
+	function migratePublisher() {
+		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
+		
+		$result =& $journalSettingsDao->retrieve('SELECT j.primary_locale, s.setting_value, j.journal_id FROM journal_settings s, journals j WHERE s.journal_id = j.journal_id AND s.setting_name = ?', array('publisher'));
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+			$publisher = null;
+			$publisher = @unserialize($row['setting_value']);
+
+			foreach (array('note' => 'publisherNote', 'institution' => 'publisherInstitution', 'url' => 'publisherUrl') as $old => $new) {
+				if (isset($publisher[$old])) $journalSettingsDao->update(
+					'INSERT INTO journal_settings (journal_id, setting_name, setting_value, setting_type, locale) VALUES (?, ?, ?, ?, ?)',
+					array($row['journal_id'], $new, $publisher[$old], 'string', $row['primary_locale'])
+				);
+			}
+
+			$result->MoveNext();
+		}
+		$result->Close();
+		unset($result);
+
+		$journalSettingsDao->update('DELETE FROM journal_settings WHERE setting_name = ?', 'publisher');
+
+		return true;
+	}
+
+	/**
+	 * For 2.2 upgrade: Set locales for galleys.
+	 * @return boolean
+	 */
+	function setGalleyLocales() {
+		$articleGalleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
+		$journalDao =& DAORegistry::getDAO('JournalDAO');
+
+		$result =& $journalDao->retrieve('SELECT g.galley_id, j.primary_locale FROM journals j, articles a, article_galleys g WHERE a.journal_id = j.journal_id AND g.article_id = a.article_id AND (g.locale IS NULL OR g.locale = ?)', '');
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+			$articleGalleyDao->update('UPDATE article_galleys SET locale = ? WHERE galley_id = ?', array($row['primary_locale'], $row['galley_id']));
+			$result->MoveNext();
+		}
+		$result->Close();
+		unset($result);
 
 		return true;
 	}

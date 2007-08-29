@@ -277,7 +277,7 @@ class EditorHandler extends SectionEditorHandler {
 			$templateMgr->assign('searchField', $searchType);
 			$templateMgr->assign('searchMatch', $searchMatch);
 			$templateMgr->assign('search', $search);
-			$templateMgr->assign('searchInitial', $searchInitial);
+			$templateMgr->assign('searchInitial', Request::getUserVar('searchInitial'));
 
 			$templateMgr->assign('fieldOptions', Array(
 				USER_FIELD_FIRSTNAME => 'user.firstName',

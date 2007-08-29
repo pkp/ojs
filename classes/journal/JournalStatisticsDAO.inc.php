@@ -22,13 +22,6 @@ define('REPORT_TYPE_SECTION',	0x00004);
 
 class JournalStatisticsDAO extends DAO {
 	/**
-	 * Constructor.
-	 */
-	function JournalDAO() {
-		parent::DAO();
-	}
-
-	/**
 	 * Get statistics about articles in the system.
 	 * Returns a map of name => value pairs.
 	 * @param $journalId int The journal to fetch statistics for
@@ -49,7 +42,15 @@ class JournalStatisticsDAO extends DAO {
 			$sectionSql .= ')';
 		} else $sectionSql = '';
 
-		$sql =	'SELECT a.article_id AS article_id, a.date_submitted AS date_submitted, pa.date_published AS date_published, pa.pub_id AS pub_id, d.decision FROM articles a LEFT JOIN published_articles pa ON (a.article_id = pa.article_id) LEFT JOIN edit_decisions d ON (d.article_id = a.article_id) WHERE a.journal_id = ?' .
+		$sql =	'SELECT	a.article_id,
+				a.date_submitted,
+				pa.date_published,
+				pa.pub_id,
+				d.decision
+			FROM	articles a
+				LEFT JOIN published_articles pa ON (a.article_id = pa.article_id)
+				LEFT JOIN edit_decisions d ON (d.article_id = a.article_id)
+			WHERE	a.journal_id = ?' .
 			($dateStart !== null ? ' AND a.date_submitted >= ' . $this->datetimeToDB($dateStart) : '') .
 			($dateEnd !== null ? ' AND a.date_submitted <= ' . $this->datetimeToDB($dateEnd) : '') .
 			$sectionSql .
@@ -194,11 +195,20 @@ class JournalStatisticsDAO extends DAO {
 	 */
 	function getSubscriptionStatistics($journalId, $dateStart = null, $dateEnd = null) {
 		$result = &$this->retrieve(
-			'SELECT st.type_id, st.type_name, count(s.subscription_id) AS type_count FROM subscription_types st, subscriptions s WHERE st.journal_id = ? AND s.type_id = st.type_id' .
+			'SELECT	st.type_id,
+				sts.setting_name AS type_name,
+				count(s.subscription_id) AS type_count
+			FROM	subscription_types st,
+				subscriptions s,
+				journals j
+				LEFT JOIN subscription_type_settings sts ON (sts.journal_id = j.journal_id AND sts.setting_name = ? AND sts.locale = j.primary_locale)
+			WHERE	st.journal_id = ?
+				AND j.journal_id = st.journal_id
+				AND s.type_id = st.type_id' .
 			($dateStart !== null ? ' AND s.date_start >= ' . $this->datetimeToDB($dateStart) : '') .
 			($dateEnd !== null ? ' AND s.date_start <= ' . $this->datetimeToDB($dateEnd) : '') .
 			' GROUP BY st.type_id, st.type_name',
-			$journalId
+			array('name', $journalId)
 		);
 
 		$returner = array();
@@ -227,7 +237,7 @@ class JournalStatisticsDAO extends DAO {
 	 */
 	function getIssueStatistics($journalId, $dateStart = null, $dateEnd = null) {
 		$result = &$this->retrieve(
-			'SELECT COUNT(*) AS count, published FROM issues  WHERE journal_id = ?' .
+			'SELECT COUNT(*) AS count, published FROM issues WHERE journal_id = ?' .
 			($dateStart !== null ? ' AND date_published >= ' . $this->datetimeToDB($dateStart) : '') .
 			($dateEnd !== null ? ' AND date_published <= ' . $this->datetimeToDB($dateEnd) : '') .
 			' GROUP BY published',
@@ -278,7 +288,23 @@ class JournalStatisticsDAO extends DAO {
 			$sectionSql .= ')';
 		} else $sectionSql = '';
 
-		$sql =	'SELECT a.article_id, af.date_uploaded AS date_rv_uploaded, r.review_id AS review_id, u.date_registered AS date_registered, r.reviewer_id AS reviewer_id, r.quality AS quality, r.date_assigned AS date_assigned, r.date_completed AS date_completed FROM articles a, article_files af, review_assignments r LEFT JOIN users u ON (u.user_id = r.reviewer_id) WHERE a.journal_id = ? AND r.article_id = a.article_id AND af.article_id = a.article_id AND af.file_id = a.review_file_id AND af.revision = 1' .
+		$sql =	'SELECT	a.article_id,
+				af.date_uploaded AS date_rv_uploaded,
+				r.review_id,
+				u.date_registered,
+				r.reviewer_id,
+				r.quality,
+				r.date_assigned,
+				r.date_completed
+			FROM	articles a,
+				article_files af,
+				review_assignments r
+				LEFT JOIN users u ON (u.user_id = r.reviewer_id)
+			WHERE	a.journal_id = ?
+				AND r.article_id = a.article_id
+				AND af.article_id = a.article_id
+				AND af.file_id = a.review_file_id
+				AND af.revision = 1' .
 			($dateStart !== null ? ' AND a.date_submitted >= ' . $this->datetimeToDB($dateStart) : '') .
 			($dateEnd !== null ? ' AND a.date_submitted <= ' . $this->datetimeToDB($dateEnd) : '') .
 			$sectionSql;
@@ -377,15 +403,16 @@ class JournalStatisticsDAO extends DAO {
 	 */
 	function &getJournalReport($journalId, $dateStart = null, $dateEnd = null) {
 		$result = &$this->retrieve(
-			'SELECT a.article_id AS article_id, a.title AS article_title, ' .
-			'pa.pub_id AS pub_id, pa.date_published AS date_published, ' .
-			's.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, ' .
-			'a.date_submitted AS date_submitted, a.status AS status ' .
-			'FROM ' .
-			'articles a ' .
-			'LEFT JOIN sections s ON (s.section_id = a.section_id) ' .
-			'LEFT JOIN published_articles pa ON (a.article_id = pa.article_id) ' .
-			'WHERE a.journal_id = ? ' .
+			'SELECT	a.article_id,
+				pa.pub_id,
+				pa.date_published,
+				s.section_id,
+				a.date_submitted,
+				a.status
+			FROM	articles a
+				LEFT JOIN sections s ON (s.section_id = a.section_id)
+				LEFT JOIN published_articles pa ON (a.article_id = pa.article_id)
+			WHERE a.journal_id = ? AND s.section_id IS NOT NULL' .
 			($dateStart !== null ? ' AND a.date_submitted >= ' . $this->datetimeToDB($dateStart) : '') .
 			($dateEnd !== null ? ' AND a.date_submitted <= ' . $this->datetimeToDB($dateEnd) : '') .
 			' ORDER BY a.date_submitted',
@@ -404,18 +431,19 @@ class JournalStatisticsDAO extends DAO {
 	 */
 	function &getSectionReport($journalId, $dateStart = null, $dateEnd = null) {
 		$result = &$this->retrieve(
-			'SELECT a.article_id AS article_id, a.title AS article_title, ' .
-			'pa.pub_id AS pub_id, pa.date_published AS date_published, ' .
-			's.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, ' .
-			'a.date_submitted AS date_submitted, a.status AS status ' .
-			'FROM ' .
-			'articles a ' .
-			'LEFT JOIN sections s ON (s.section_id = a.section_id) ' .
-			'LEFT JOIN published_articles pa ON (a.article_id = pa.article_id) ' .
-			'WHERE a.journal_id = ? ' .
+			'SELECT	a.article_id,
+				pa.pub_id,
+				pa.date_published,
+				s.section_id,
+				a.date_submitted,
+				a.status
+			FROM	articles a
+				LEFT JOIN sections s ON (s.section_id = a.section_id)
+				LEFT JOIN published_articles pa ON (a.article_id = pa.article_id)
+			WHERE	a.journal_id = ? AND s.section_id IS NOT NULL' .
 			($dateStart !== null ? ' AND a.date_submitted >= ' . $this->datetimeToDB($dateStart) : '') .
 			($dateEnd !== null ? ' AND a.date_submitted <= ' . $this->datetimeToDB($dateEnd) : '') .
-			' ORDER BY s.title, a.date_submitted',
+			' ORDER BY s.section_id, a.date_submitted',
 			$journalId
 		);
 		import('journal.JournalReportIterator');
@@ -431,16 +459,20 @@ class JournalStatisticsDAO extends DAO {
 	 */
 	function &getReviewerReport($journalId, $dateStart = null, $dateEnd = null) {
 		$result = &$this->retrieve(
-			'SELECT ra.reviewer_id, ra.quality, a.article_id AS article_id, a.title AS article_title, ' .
-			'pa.pub_id AS pub_id, pa.date_published AS date_published, ' .
-			's.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, ' .
-			'a.date_submitted AS date_submitted, a.status AS status ' .
-			'FROM ' .
-			'review_assignments ra, ' .
-			'articles a ' .
-			'LEFT JOIN sections s ON (s.section_id = a.section_id) ' .
-			'LEFT JOIN published_articles pa ON (a.article_id = pa.article_id) ' .
-			'WHERE a.journal_id = ? AND ra.article_id = a.article_id ' .
+			'SELECT	ra.reviewer_id,
+				ra.quality,
+				a.article_id,
+				pa.pub_id AS pub_id,
+				pa.date_published AS date_published,
+				s.section_id,
+				a.date_submitted AS date_submitted,
+				a.status AS status
+			FROM	review_assignments ra,
+				articles a
+				LEFT JOIN sections s ON (s.section_id = a.section_id)
+				LEFT JOIN published_articles pa ON (a.article_id = pa.article_id)
+			WHERE	a.journal_id = ? AND s.section_id IS NOT NULL
+				AND ra.article_id = a.article_id ' .
 			($dateStart !== null ? ' AND a.date_submitted >= ' . $this->datetimeToDB($dateStart) : '') .
 			($dateEnd !== null ? ' AND a.date_submitted <= ' . $this->datetimeToDB($dateEnd) : '') .
 			' ORDER BY ra.reviewer_id, a.date_submitted',
@@ -459,16 +491,18 @@ class JournalStatisticsDAO extends DAO {
 	 */
 	function &getEditorReport($journalId, $dateStart = null, $dateEnd = null) {
 		$result = &$this->retrieve(
-			'SELECT ee.editor_id, a.article_id AS article_id, a.title AS article_title, ' .
-			'pa.pub_id AS pub_id, pa.date_published AS date_published, ' .
-			's.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, ' .
-			'a.date_submitted AS date_submitted, a.status AS status ' .
-			'FROM ' .
-			'articles a ' .
-			'LEFT JOIN edit_assignments ee ON (ee.article_id = a.article_id) ' .
-			'LEFT JOIN sections s ON (s.section_id = a.section_id) ' .
-			'LEFT JOIN published_articles pa ON (a.article_id = pa.article_id) ' .
-			'WHERE a.journal_id = ? ' .
+			'SELECT	ee.editor_id,
+				a.article_id,
+				pa.pub_id,
+				pa.date_published,
+				s.section_id,
+				a.date_submitted,
+				a.status AS status
+			FROM	articles a
+				LEFT JOIN edit_assignments ee ON (ee.article_id = a.article_id)
+				LEFT JOIN sections s ON (s.section_id = a.section_id)
+				LEFT JOIN published_articles pa ON (a.article_id = pa.article_id)
+			WHERE	a.journal_id = ? AND s.section_id IS NOT NULL' .
 			($dateStart !== null ? ' AND a.date_submitted >= ' . $this->datetimeToDB($dateStart) : '') .
 			($dateEnd !== null ? ' AND a.date_submitted <= ' . $this->datetimeToDB($dateEnd) : '') .
 			' ORDER BY ee.editor_id, a.date_submitted',
@@ -488,12 +522,11 @@ class JournalStatisticsDAO extends DAO {
 	 */
 	function getMaxAuthorCount($journalId, $dateStart, $dateEnd) {
 		$result = &$this->retrieve(
-			'SELECT COUNT(aa.author_id) ' .
-			'FROM ' .
-			'articles a, ' .
-			'article_authors aa ' .
-			'WHERE a.journal_id = ? ' .
-			'AND aa.article_id = a.article_id ' .
+			'SELECT	COUNT(aa.author_id)
+			FROM	articles a,
+				article_authors aa
+			WHERE	a.journal_id = ?
+				AND aa.article_id = a.article_id ' .
 			($dateStart !== null ? ' AND a.date_submitted >= ' . $this->datetimeToDB($dateStart) : '') .
 			($dateEnd !== null ? ' AND a.date_submitted <= ' . $this->datetimeToDB($dateEnd) : '') .
 			' GROUP BY a.article_id',
@@ -523,12 +556,11 @@ class JournalStatisticsDAO extends DAO {
 	 */
 	function getMaxReviewerCount($journalId, $dateStart, $dateEnd) {
 		$result = &$this->retrieve(
-			'SELECT COUNT(r.review_id) ' .
-			'FROM ' .
-			'articles a, ' .
-			'review_assignments r ' .
-			'WHERE a.journal_id = ? ' .
-			'AND r.article_id = a.article_id ' .
+			'SELECT	COUNT(r.review_id)
+			FROM	articles a,
+				review_assignments r
+			WHERE	a.journal_id = ?
+				AND r.article_id = a.article_id ' .
 			($dateStart !== null ? ' AND a.date_submitted >= ' . $this->datetimeToDB($dateStart) : '') .
 			($dateEnd !== null ? ' AND a.date_submitted <= ' . $this->datetimeToDB($dateEnd) : '') .
 			' GROUP BY r.article_id',
@@ -558,12 +590,11 @@ class JournalStatisticsDAO extends DAO {
 	 */
 	function getMaxEditorCount($journalId, $dateStart, $dateEnd) {
 		$result = &$this->retrieve(
-			'SELECT COUNT(e.editor_id) ' .
-			'FROM ' .
-			'articles a, ' .
-			'edit_assignments e ' .
-			'WHERE a.journal_id = ? ' .
-			'AND e.article_id = a.article_id ' .
+			'SELECT	COUNT(e.editor_id)
+			FROM	articles a,
+				edit_assignments e
+			WHERE	a.journal_id = ?
+				AND e.article_id = a.article_id ' .
 			($dateStart !== null ? ' AND a.date_submitted >= ' . $this->datetimeToDB($dateStart) : '') .
 			($dateEnd !== null ? ' AND a.date_submitted <= ' . $this->datetimeToDB($dateEnd) : '') .
 			' GROUP BY e.article_id',

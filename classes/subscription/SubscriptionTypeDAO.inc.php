@@ -18,14 +18,6 @@
 import('subscription.SubscriptionType');
 
 class SubscriptionTypeDAO extends DAO {
-
-	/**
-	 * Constructor.
-	 */
-	function SubscriptionTypeDAO() {
-		parent::DAO();
-	}
-
 	/**
 	 * Retrieve a subscription type by ID.
 	 * @param $typeId int
@@ -72,9 +64,13 @@ class SubscriptionTypeDAO extends DAO {
 	 */
 	function getSubscriptionTypeName($typeId) {
 		$result = &$this->retrieve(
-			'SELECT type_name FROM subscription_types WHERE type_id = ?', $typeId
+			'SELECT COALESCE(l.setting_value, p.setting_value) FROM subscription_type_settings l LEFT JOIN subscription_type_settings p ON (p.type_id = ? AND p.setting_name = ? AND p.locale = ?) WHERE l.type_id = ? AND l.setting_name = ? AND l.locale = ?', 
+			array(
+				$typeId, 'name', Locale::getLocale(),
+				$typeId, 'name', Locale::getPrimaryLocale()
+			)
 		);
-		
+
 		$returner = isset($result->fields[0]) ? $result->fields[0] : false;
 
 		$result->Close();
@@ -163,56 +159,6 @@ class SubscriptionTypeDAO extends DAO {
 	}
 
 	/**
-	 * Check if a subscription type exists with the given type name for a journal.
-	 * @param $typeName string
-	 * @param $journalId int
-	 * @return boolean
-	 */
-	function subscriptionTypeExistsByTypeName($typeName, $journalId) {
-		$result = &$this->retrieve(
-			'SELECT COUNT(*)
-				FROM subscription_types
-				WHERE type_name = ?
-				AND   journal_id = ?',
-			array(
-				$typeName,
-				$journalId
-			)
-		);
-		$returner = isset($result->fields[0]) && $result->fields[0] != 0 ? true : false;
-
-		$result->Close();
-		unset($result);
-
-		return $returner;
-	}
-
-	/**
-	 * Return subscription type ID based on a type name for a journal.
-	 * @param $typeName string
-	 * @param $journalId int
-	 * @return int
-	 */
-	function getSubscriptionTypeByTypeName($typeName, $journalId) {
-		$result = &$this->retrieve(
-			'SELECT type_id
-				FROM subscription_types
-				WHERE type_name = ?
-				AND   journal_id = ?',
-			array(
-				$typeName,
-				$journalId
-			)
-		);
-		$returner = isset($result->fields[0]) ? $result->fields[0] : 0;
-
-		$result->Close();
-		unset($result);
-
-		return $returner;
-	}
-
-	/**
 	 * Internal function to return a SubscriptionType object from a row.
 	 * @param $row array
 	 * @return SubscriptionType
@@ -221,8 +167,6 @@ class SubscriptionTypeDAO extends DAO {
 		$subscriptionType = &new SubscriptionType();
 		$subscriptionType->setTypeId($row['type_id']);
 		$subscriptionType->setJournalId($row['journal_id']);
-		$subscriptionType->setTypeName($row['type_name']);
-		$subscriptionType->setDescription($row['description']);
 		$subscriptionType->setCost($row['cost']);
 		$subscriptionType->setCurrencyCodeAlpha($row['currency_code_alpha']);
 		$subscriptionType->setDuration($row['duration']);
@@ -232,9 +176,29 @@ class SubscriptionTypeDAO extends DAO {
 		$subscriptionType->setPublic($row['pub']);
 		$subscriptionType->setSequence($row['seq']);
 
+		$this->getDataObjectSettings('subscription_type_settings', 'type_id', $row['type_id'], $subscriptionType);
+
 		HookRegistry::call('SubscriptionTypeDAO::_returnSubscriptionTypeFromRow', array(&$subscriptionType, &$row));
 
 		return $subscriptionType;
+	}
+
+	/**
+	 * Get the list of field names for which localized data is used.
+	 * @return array
+	 */
+	function getLocaleFieldNames() {
+		return array('name', 'description');
+	}
+
+	/**
+	 * Update the localized settings for this object
+	 * @param $announcementType object
+	 */
+	function updateLocaleFields(&$subscriptionType) {
+		$this->updateDataObjectSettings('subscription_type_settings', $subscriptionType, array(
+			'type_id' => $subscriptionType->getTypeId()
+		));
 	}
 
 	/**
@@ -243,15 +207,13 @@ class SubscriptionTypeDAO extends DAO {
 	 * @return boolean 
 	 */
 	function insertSubscriptionType(&$subscriptionType) {
-		$ret = $this->update(
+		$this->update(
 			'INSERT INTO subscription_types
-				(journal_id, type_name, description, cost, currency_code_alpha, duration, format, institutional, membership, pub, seq)
+				(journal_id, cost, currency_code_alpha, duration, format, institutional, membership, pub, seq)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
 				$subscriptionType->getJournalId(),
-				$subscriptionType->getTypeName(),
-				$subscriptionType->getDescription(),
 				$subscriptionType->getCost(),
 				$subscriptionType->getCurrencyCodeAlpha(),
 				$subscriptionType->getDuration(),
@@ -264,6 +226,7 @@ class SubscriptionTypeDAO extends DAO {
 		);
 		
 		$subscriptionType->setTypeId($this->getInsertSubscriptionTypeId());
+		$this->updateLocaleFields($subscriptionType);
 		return $subscriptionType->getTypeId();
 	}
 
@@ -273,12 +236,10 @@ class SubscriptionTypeDAO extends DAO {
 	 * @return boolean
 	 */
 	function updateSubscriptionType(&$subscriptionType) {
-		return $this->update(
+		$returner = $this->update(
 			'UPDATE subscription_types
 				SET
 					journal_id = ?,
-					type_name = ?,
-					description = ?,
 					cost = ?,
 					currency_code_alpha = ?,
 					duration = ?,
@@ -290,8 +251,6 @@ class SubscriptionTypeDAO extends DAO {
 				WHERE type_id = ?',
 			array(
 				$subscriptionType->getJournalId(),
-				$subscriptionType->getTypeName(),
-				$subscriptionType->getDescription(),
 				$subscriptionType->getCost(),
 				$subscriptionType->getCurrencyCodeAlpha(),
 				$subscriptionType->getDuration(),
@@ -303,6 +262,8 @@ class SubscriptionTypeDAO extends DAO {
 				$subscriptionType->getTypeId()
 			)
 		);
+		$this->updateLocaleFields($subscriptionType);
+		return $returner;
 	}
 
 	/**
@@ -322,9 +283,8 @@ class SubscriptionTypeDAO extends DAO {
 	 */
 	function deleteSubscriptionTypeById($typeId) {
 		// Delete subscription type
-		$ret = $this->update(
-			'DELETE FROM subscription_types WHERE type_id = ?', $typeId
-			);
+		$this->update('DELETE FROM subscription_types WHERE type_id = ?', $typeId);
+		$ret = $this->update('DELETE FROM subscription_types WHERE type_id = ?', $typeId);
 
 		// Delete all subscriptions with this subscription type
 		if ($ret) {
@@ -383,7 +343,6 @@ class SubscriptionTypeDAO extends DAO {
 		$result->close();
 		unset($result);
 	}
-
 }
 
 ?>

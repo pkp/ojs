@@ -29,14 +29,6 @@ define('USER_FIELD_INITIAL', 'initial');
 define('USER_FIELD_NONE', null);
 
 class UserDAO extends DAO {
-
-	/**
-	 * Constructor.
-	 */
-	function UserDAO() {
-		parent::DAO();
-	}
-	
 	/**
 	 * Retrieve a user by ID.
 	 * @param $userId int
@@ -50,7 +42,7 @@ class UserDAO extends DAO {
 
 		$user = null;
 		if ($result->RecordCount() != 0) {
-			$user = &$this->_returnUserFromRow($result->GetRowAssoc(false));
+			$user = &$this->_returnUserFromRowWithData($result->GetRowAssoc(false));
 		}
 		$result->Close();
 		unset($result);
@@ -70,7 +62,7 @@ class UserDAO extends DAO {
 
 		$returner = null;
 		if ($result->RecordCount() != 0) {
-			$returner = &$this->_returnUserFromRow($result->GetRowAssoc(false));
+			$returner = &$this->_returnUserFromRowWithData($result->GetRowAssoc(false));
 		}
 		$result->Close();
 		unset($result);
@@ -90,7 +82,7 @@ class UserDAO extends DAO {
 
 		$returner = null;
 		if ($result->RecordCount() != 0) {
-			$returner = &$this->_returnUserFromRow($result->GetRowAssoc(false));
+			$returner = &$this->_returnUserFromRowWithData($result->GetRowAssoc(false));
 		}
 		$result->Close();
 		unset($result);
@@ -111,28 +103,40 @@ class UserDAO extends DAO {
 
 		$returner = null;
 		if ($result->RecordCount() != 0) {
-			$returner = &$this->_returnUserFromRow($result->GetRowAssoc(false));
+			$returner = &$this->_returnUserFromRowWithData($result->GetRowAssoc(false));
 		}
 		$result->Close();
 		unset($result);
 		return $returner;
 	}
-	
+
+	function &_returnUserFromRowWithData(&$row) {
+		$user =& $this->_returnUserFromRow($row, false);
+		$this->getDataObjectSettings('user_settings', 'user_id', $row['user_id'], $user);
+
+		HookRegistry::call('UserDAO::_returnUserFromRowWithData', array(&$user, &$row));
+
+		return $user;
+	}
+
 	/**
 	 * Internal function to return a User object from a row.
 	 * @param $row array
+	 * @param $callHook boolean
 	 * @return User
 	 */
-	function &_returnUserFromRow(&$row) {
+	function &_returnUserFromRow(&$row, $callHook = true) {
 		$user = &new User();
 		$user->setUserId($row['user_id']);
 		$user->setUsername($row['username']);
-		$user->setSignature($row['signature']);
 		$user->setPassword($row['password']);
+		$user->setSalutation($row['salutation']);
 		$user->setFirstName($row['first_name']);
 		$user->setMiddleName($row['middle_name']);
 		$user->setInitials($row['initials']);
 		$user->setLastName($row['last_name']);
+		$user->setGender($row['gender']);
+		$user->setDiscipline($row['discipline']);
 		$user->setAffiliation($row['affiliation']);
 		$user->setEmail($row['email']);
 		$user->setUrl($row['url']);
@@ -140,8 +144,6 @@ class UserDAO extends DAO {
 		$user->setFax($row['fax']);
 		$user->setMailingAddress($row['mailing_address']);
 		$user->setCountry($row['country']);
-		$user->setBiography($row['biography']);
-		$user->setInterests($row['interests']);
 		$user->setLocales(isset($row['locales']) && !empty($row['locales']) ? explode(':', $row['locales']) : array());
 		$user->setDateLastEmail($this->datetimeFromDB($row['date_last_email']));
 		$user->setDateRegistered($this->datetimeFromDB($row['date_registered']));
@@ -152,7 +154,7 @@ class UserDAO extends DAO {
 		$user->setDisabledReason($row['disabled_reason']);
 		$user->setAuthId($row['auth_id']);
 		
-		HookRegistry::call('UserDAO::_returnUserFromRow', array(&$user, &$row));
+		if ($callHook) HookRegistry::call('UserDAO::_returnUserFromRow', array(&$user, &$row));
 
 		return $user;
 	}
@@ -170,18 +172,20 @@ class UserDAO extends DAO {
 		}
 		$this->update(
 			sprintf('INSERT INTO users
-				(username, signature, password, first_name, middle_name, initials, last_name, affiliation, email, url, phone, fax, mailing_address, country, biography, interests, locales, date_last_email, date_registered, date_validated, date_last_login, must_change_password, disabled, disabled_reason, auth_id)
+				(username, password, salutation, first_name, middle_name, initials, last_name, gender, discipline, affiliation, email, url, phone, fax, mailing_address, country, locales, date_last_email, date_registered, date_validated, date_last_login, must_change_password, disabled, disabled_reason, auth_id)
 				VALUES
 				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, %s, %s, %s, %s, ?, ?, ?, ?)',
 				$this->datetimeToDB($user->getDateLastEmail()), $this->datetimeToDB($user->getDateRegistered()), $this->datetimeToDB($user->getDateValidated()), $this->datetimeToDB($user->getDateLastLogin())),
 			array(
 				$user->getUsername(),
-				$user->getSignature(),
 				$user->getPassword(),
+				$user->getSalutation(),
 				$user->getFirstName(),
 				$user->getMiddleName(),
 				$user->getInitials(),
 				$user->getLastName(),
+				$user->getGender(),
+				$user->getDiscipline(),
 				$user->getAffiliation(),
 				$user->getEmail(),
 				$user->getUrl(),
@@ -189,8 +193,6 @@ class UserDAO extends DAO {
 				$user->getFax(),
 				$user->getMailingAddress(),
 				$user->getCountry(),
-				$user->getBiography(),
-				$user->getInterests(),
 				join(':', $user->getLocales()),
 				$user->getMustChangePassword(),
 				$user->getDisabled() ? 1 : 0,
@@ -200,9 +202,20 @@ class UserDAO extends DAO {
 		);
 		
 		$user->setUserId($this->getInsertUserId());
+		$this->updateLocaleFields($user);
 		return $user->getUserId();
 	}
-	
+
+	function getLocaleFieldNames() {
+		return array('biography', 'signature', 'interests');
+	}
+
+	function updateLocaleFields(&$user) {
+		$this->updateDataObjectSettings('user_settings', $user, array(
+			'user_id' => $user->getUserId()
+		));
+	}
+
 	/**
 	 * Update an existing user.
 	 * @param $user User
@@ -211,16 +224,21 @@ class UserDAO extends DAO {
 		if ($user->getDateLastLogin() == null) {
 			$user->setDateLastLogin(Core::getCurrentDate());
 		}
+
+		$this->updateLocaleFields($user);
+
 		return $this->update(
 			sprintf('UPDATE users
 				SET
 					username = ?,
-					signature = ?,
 					password = ?,
+					salutation = ?,
 					first_name = ?,
 					middle_name = ?,
 					initials = ?,
 					last_name = ?,
+					gender = ?,
+					discipline = ?,
 					affiliation = ?,
 					email = ?,
 					url = ?,
@@ -228,8 +246,6 @@ class UserDAO extends DAO {
 					fax = ?,
 					mailing_address = ?,
 					country = ?,
-					biography = ?,
-					interests = ?,
 					locales = ?,
 					date_last_email = %s,
 					date_validated = %s,
@@ -242,12 +258,14 @@ class UserDAO extends DAO {
 				$this->datetimeToDB($user->getDateLastEmail()), $this->datetimeToDB($user->getDateValidated()), $this->datetimeToDB($user->getDateLastLogin())),
 			array(
 				$user->getUsername(),
-				$user->getSignature(),
 				$user->getPassword(),
+				$user->getSalutation(),
 				$user->getFirstName(),
 				$user->getMiddleName(),
 				$user->getInitials(),
 				$user->getLastName(),
+				$user->getGender(),
+				$user->getDiscipline(),
 				$user->getAffiliation(),
 				$user->getEmail(),
 				$user->getUrl(),
@@ -255,8 +273,6 @@ class UserDAO extends DAO {
 				$user->getFax(),
 				$user->getMailingAddress(),
 				$user->getCountry(),
-				$user->getBiography(),
-				$user->getInterests(),
 				join(':', $user->getLocales()),
 				$user->getMustChangePassword(),
 				$user->getDisabled()?1:0,
@@ -280,9 +296,8 @@ class UserDAO extends DAO {
 	 * @param $userId int
 	 */
 	function deleteUserById($userId) {
-		return $this->update(
-			'DELETE FROM users WHERE user_id = ?', $userId
-		);
+		$this->update('DELETE FROM user_settings WHERE user_id = ?', $userId);
+		return $this->update('DELETE FROM users WHERE user_id = ?', $userId);
 	}
 	
 	/**
@@ -334,42 +349,6 @@ class UserDAO extends DAO {
 	}
 
 	/**
-	 * Retrieve an array of users.
-	 * @param $sort string the field to sort on
-	 * @param $order string the sort order (+|-)
-	 * @param $allowDisabled boolean
-	 * @param $dbResultRange object The desired range of results to return
-	 * @return array of Users 
- 	 */
-	function &getUsers($sort='lastName', $order='+', $allowDisabled = true, $dbResultRange = null) {
-		switch ($sort) {
-			case 'username':
-				break;
-			case 'firstName':
-				$sort = 'first_name';
-				break;
-			case 'lastName':
-			default:
-				$sort = 'last_name';
-		}
-
-		if ($order == '-') {
-			$order = 'DESC';
-		} else {
-			$order = 'ASC';
-		}
-	
-		$result = &$this->retrieveRange(
-			'SELECT * FROM users' . ($allowDisabled?'':' AND disabled = 0') . ' ORDER BY ' . $sort . ' '. $order,
-			false,
-			$dbResultRange
-		); 
-
-		$returner = &new DAOResultFactory($result, $this, '_returnUserFromRow');
-		return $returner;
-	}
-
-	/**
 	 * Retrieve an array of users matching a particular field value.
 	 * @param $field string the field to match on
 	 * @param $match string "is" for exact match, otherwise assume "like" match
@@ -380,48 +359,48 @@ class UserDAO extends DAO {
 	 */
 
 	function &getUsersByField($field = USER_FIELD_NONE, $match = null, $value = null, $allowDisabled = true, $dbResultRange = null) {
-		$sql = 'SELECT * FROM users';
+		$sql = 'SELECT * FROM users u';
 		switch ($field) {
 			case USER_FIELD_USERID:
-				$sql .= ' WHERE user_id = ?';
+				$sql .= ' WHERE u.user_id = ?';
 				$var = $value;
 				break;
 			case USER_FIELD_USERNAME:
-				$sql .= ' WHERE LOWER(username) ' . ($match == 'is' ? '=' : 'LIKE') . ' LOWER(?)';
+				$sql .= ' WHERE LOWER(u.username) ' . ($match == 'is' ? '=' : 'LIKE') . ' LOWER(?)';
 				$var = $match == 'is' ? $value : "%$value%";
 				break;
 			case USER_FIELD_INITIAL:
-				$sql .= ' WHERE LOWER(last_name) LIKE LOWER(?)';
+				$sql .= ' WHERE LOWER(u.last_name) LIKE LOWER(?)';
 				$var = "$value%";
 				break;
 			case USER_FIELD_INTERESTS:
-				$sql .= ' WHERE LOWER(interests) ' . ($match == 'is' ? '=' : 'LIKE') . ' LOWER(?)';
+				$sql .= ', user_settings us WHERE us.user_id = u.user_id AND u.setting_name = \'interests\' AND LOWER(us.setting_value) ' . ($match == 'is' ? '=' : 'LIKE') . ' LOWER(?)';
 				$var = $match == 'is' ? $value : "%$value%";
 				break;
 			case USER_FIELD_EMAIL:
-				$sql .= ' WHERE LOWER(email) ' . ($match == 'is' ? '=' : 'LIKE') . ' LOWER(?)';
+				$sql .= ' WHERE LOWER(u.email) ' . ($match == 'is' ? '=' : 'LIKE') . ' LOWER(?)';
 				$var = $match == 'is' ? $value : "%$value%";
 				break;
 			case USER_FIELD_URL:
-				$sql .= ' WHERE LOWER(url) ' . ($match == 'is' ? '=' : 'LIKE') . ' LOWER(?)';
+				$sql .= ' WHERE LOWER(u.url) ' . ($match == 'is' ? '=' : 'LIKE') . ' LOWER(?)';
 				$var = $match == 'is' ? $value : "%$value%";
 				break;
 			case USER_FIELD_FIRSTNAME:
-				$sql .= ' WHERE LOWER(first_name) ' . ($match == 'is' ? '=' : 'LIKE') . ' LOWER(?)';
+				$sql .= ' WHERE LOWER(u.first_name) ' . ($match == 'is' ? '=' : 'LIKE') . ' LOWER(?)';
 				$var = $match == 'is' ? $value : "%$value%";
 				break;
 			case USER_FIELD_LASTNAME:
-				$sql .= ' WHERE LOWER(last_name) ' . ($match == 'is' ? '=' : 'LIKE') . ' LOWER(?)';
+				$sql .= ' WHERE LOWER(u.last_name) ' . ($match == 'is' ? '=' : 'LIKE') . ' LOWER(?)';
 				$var = $match == 'is' ? $value : "%$value%";
 				break;
 		}
 		
-		$orderSql = ' ORDER BY last_name, first_name'; // FIXME Add "sort field" parameter?
+		$orderSql = ' ORDER BY u.last_name, u.first_name'; // FIXME Add "sort field" parameter?
 		
-		if ($field != USER_FIELD_NONE) $result = &$this->retrieveRange($sql . ($allowDisabled?'':' AND disabled = 0') . $orderSql, $var, $dbResultRange);
-		else $result = &$this->retrieveRange($sql . ($allowDisabled?'':' WHERE disabled = 0') . $orderSql, false, $dbResultRange);
+		if ($field != USER_FIELD_NONE) $result = &$this->retrieveRange($sql . ($allowDisabled?'':' AND u.disabled = 0') . $orderSql, $var, $dbResultRange);
+		else $result = &$this->retrieveRange($sql . ($allowDisabled?'':' WHERE u.disabled = 0') . $orderSql, false, $dbResultRange);
 		
-		$returner = &new DAOResultFactory($result, $this, '_returnUserFromRow');
+		$returner = &new DAOResultFactory($result, $this, '_returnUserFromRowWithData');
 		return $returner;
 	}
 
@@ -490,7 +469,6 @@ class UserDAO extends DAO {
 	function getInsertUserId() {
 		return $this->getInsertId('users', 'user_id');
 	}
-	
 }
 
 ?>

@@ -18,14 +18,6 @@
 import('subscription.Currency');
 
 class CurrencyDAO extends DAO {
-
-	/**
-	 * Constructor.
-	 */
-	function CurrencyDAO() {
-		parent::DAO();
-	}
-
 	function &_getCache() {
 		$locale = Locale::getLocale();
 		static $cache;

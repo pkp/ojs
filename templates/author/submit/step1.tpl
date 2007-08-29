@@ -71,9 +71,9 @@ function checkSubmissionChecklist() {
 {/literal}
 </script>
 
-{if $journalSettings.submissionChecklist}
+{if $currentJournal->getLocalizedSetting('submissionChecklist')}
 
-{foreach name=checklist from=$journalSettings.submissionChecklist key=checklistId item=checklistItem}
+{foreach name=checklist from=$currentJournal->getLocalizedSetting('submissionChecklist') key=checklistId item=checklistItem}
 	{if $checklistItem.content}
 		{if !$notFirstChecklistItem}
 			{assign var=notFirstChecklistItem value=1}
@@ -95,10 +95,10 @@ function checkSubmissionChecklist() {
 
 {/if}
 
-{if !empty($journalSettings.copyrightNotice)}
+{if $currentJournal->getLocalizedSetting('copyrightNotice') != ''}
 <h3>{translate key="about.copyrightNotice"}</h3>
 
-<p>{$journalSettings.copyrightNotice|nl2br}</p>
+<p>{$currentJournal->getLocalizedSetting('copyrightNotice')|nl2br}</p>
 
 {if $journalSettings.copyrightNoticeAgree}
 <table width="100%" class="data">
@@ -114,7 +114,7 @@ function checkSubmissionChecklist() {
 
 <h3>{translate key="author.submit.privacyStatement"}</h3>
 <br />
-{$journalSettings.privacyStatement|nl2br}
+{$currentJournal->getLocalizedSetting('privacyStatement')|nl2br}
 
 <div class="separator"></div>
 

@@ -94,7 +94,20 @@ class ArticleGalley extends ArticleFile {
 	function setViews($views) {
 		return $this->setData('views', $views);
 	}
-		
+
+	/**
+	 * Get the localized value of the galley label.
+	 * @return $string
+	 */
+	function getGalleyLabel() {
+		$label = $this->getLabel();
+		if ($this->getLocale() != Locale::getLocale()) {
+			$locales = Locale::getAllLocales();
+			$label .= ' (' . $locales[$this->getLocale()] . ')';
+		}
+		return $label;
+	}
+
 	/**
 	 * Get label/title.
 	 * @return string
@@ -109,6 +122,22 @@ class ArticleGalley extends ArticleFile {
 	 */
 	function setLabel($label) {
 		return $this->setData('label', $label);
+	}
+	
+	/**
+	 * Get locale.
+	 * @return string
+	 */
+	function getLocale() {
+		return $this->getData('locale');
+	}
+	
+	/**
+	 * Set locale.
+	 * @param $locale string
+	 */
+	function setLocale($locale) {
+		return $this->setData('locale', $locale);
 	}
 	
 	/**

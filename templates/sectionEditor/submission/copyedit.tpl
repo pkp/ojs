@@ -230,7 +230,7 @@
 	<a href="javascript:openComments('{url op="viewCopyeditComments" path=$submission->getArticleId()}');" class="icon">{icon name="comment"}</a>
 {/if}
 
-{if $currentJournal->getSetting('copyeditInstructions')}
+{if $currentJournal->getLocalizedSetting('copyeditInstructions')}
 &nbsp;&nbsp;
 <a href="javascript:openHelp('{url op="instructions" path="copy"}')" class="action">{translate key="submission.copyedit.instructions"}</a>
 {/if}

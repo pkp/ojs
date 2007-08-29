@@ -31,6 +31,15 @@
 </tr>
 
 <tr valign="top">
+	<td class="label">{fieldLabel name="galleyLocale" required="true" key="common.language"}</td>
+	<td class="value">
+		<select name="galleyLocale" id="galleyLocale" class="selectMenu">
+		{html_options options=$supportedLocales selected=$galleyLocale}
+		</select>
+	</td>
+</tr>
+
+<tr valign="top">
 	<td class="label">{translate key="common.fileName"}</td>
 	<td class="value"><a class="action" href="{url op="downloadFile" path=$articleId|to_array:$galley->getFileId()}">{$galley->getFileName()|escape}</a></td>
 </tr>

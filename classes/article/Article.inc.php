@@ -87,22 +87,7 @@ class Article extends DataObject {
 	 * @return string
 	 */
 	function getArticleTitle() {
-		// FIXME this is evil
-		$alternateLocaleNum = Locale::isAlternateJournalLocale($this->getData('journalId'));
-		switch ($alternateLocaleNum) {
-			case 1:
-				$title = $this->getTitleAlt1();
-				break;
-			case 2:
-				$title = $this->getTitleAlt2();
-				break;
-		}
-		
-		if (isset($title) && !empty($title)) {
-			return $title;
-		} else {
-			return $this->getTitle();
-		}
+		return $this->getLocalizedData('title');
 	}
 	
 	/**
@@ -110,21 +95,7 @@ class Article extends DataObject {
 	 * @return string
 	 */
 	function getArticleAbstract() {
-		$alternateLocaleNum = Locale::isAlternateJournalLocale($this->getData('journalId'));
-		switch ($alternateLocaleNum) {
-			case 1:
-				$abstract = $this->getAbstractAlt1();
-				break;
-			case 2:
-				$abstract = $this->getAbstractAlt2();
-				break;
-		}
-		
-		if (isset($abstract) && !empty($abstract)) {
-			return $abstract;
-		} else {
-			return $this->getAbstract();
-		}
+		return $this->getLocalizedData('abstract');
 	}
 	
 	/**
@@ -308,210 +279,220 @@ class Article extends DataObject {
 	
 	/**
 	 * Get title.
+	 * @param $locale
 	 * @return string
 	 */
-	function getTitle() {
-		return $this->getData('title');
+	function getTitle($locale) {
+		return $this->getData('title', $locale);
 	}
 	
 	/**
 	 * Set title.
 	 * @param $title string
+	 * @param $locale
 	 */
-	function setTitle($title) {
-		return $this->setData('title', $title);
-	}
-	
-	/**
-	 * Get alternate title #1.
-	 * @return string
-	 */
-	function getTitleAlt1() {
-		return $this->getData('titleAlt1');
-	}
-	
-	/**
-	 * Set alternate title #1.
-	 * @param $titleAlt1 string
-	 */
-	function setTitleAlt1($titleAlt1) {
-		return $this->setData('titleAlt1', $titleAlt1);
-	}
-	
-	/**
-	 * Get alternate title #2.
-	 * @return string
-	 */
-	function getTitleAlt2() {
-		return $this->getData('titleAlt2');
-	}
-	
-	/**
-	 * Set alternate title #2.
-	 * @param $titleAlt2 string
-	 */
-	function setTitleAlt2($titleAlt2) {
-		return $this->setData('titleAlt2', $titleAlt2);
+	function setTitle($title, $locale) {
+		return $this->setData('title', $title, $locale);
 	}
 	
 	/**
 	 * Get abstract.
+	 * @param $locale
 	 * @return string
 	 */
-	function getAbstract() {
-		return $this->getData('abstract');
+	function getAbstract($locale) {
+		return $this->getData('abstract', $locale);
 	}
 	
 	/**
 	 * Set abstract.
 	 * @param $abstract string
+	 * @param $locale
 	 */
-	function setAbstract($abstract) {
-		return $this->setData('abstract', $abstract);
+	function setAbstract($abstract, $locale) {
+		return $this->setData('abstract', $abstract, $locale);
 	}
 	
 	/**
-	 * Get alternate abstract #1.
+	 * Return the localized discipline
 	 * @return string
 	 */
-	function getAbstractAlt1() {
-		return $this->getData('abstractAlt1');
+	function getArticleDiscipline() {
+		return $this->getLocalizedData('discipline');
 	}
-	
+
 	/**
-	 * Set alternate abstract #1.
-	 * @param $abstractAlt1 string
-	 */
-	function setAbstractAlt1($abstractAlt1) {
-		return $this->setData('abstractAlt1', $abstractAlt1);
-	}
-	
-	/**
-	 * Get alternate abstract #2.
+	 * get discipline
+	 * @param $locale
 	 * @return string
 	 */
-	function getAbstractAlt2() {
-		return $this->getData('abstractAlt2');
+	function getDiscipline($locale) {
+		return $this->getData('discipline', $locale);
 	}
 	
 	/**
-	 * Set alternate abstract #2
-	 * @param $abstractAlt2 string
-	 */
-	function setAbstractAlt2($abstractAlt2) {
-		return $this->setData('abstractAlt2', $abstractAlt2);
-	}
-	
-	/**
-	 * Get discipline.
-	 * @return string
-	 */
-	function getDiscipline() {
-		return $this->getData('discipline');
-	}
-	
-	/**
-	 * Set discipline.
+	 * Set discipline
 	 * @param $discipline string
+	 * @param $locale
 	 */
-	function setDiscipline($discipline) {
-		return $this->setData('discipline', $discipline);
+	function setDiscipline($discipline, $locale) {
+		return $this->setData('discipline', $discipline, $locale);
 	}
 	
+	/**
+	 * Return the localized subject classification
+	 * @return string
+	 */
+	function getArticleSubjectClass() {
+		return $this->getLocalizedData('subjectClass');
+	}
+
 	/**
 	 * Get subject classification.
+	 * @param $locale
 	 * @return string
 	 */
-	function getSubjectClass() {
-		return $this->getData('subjectClass');
+	function getSubjectClass($locale) {
+		return $this->getData('subjectClass', $locale);
 	}
 	
 	/**
 	 * Set subject classification.
 	 * @param $subjectClass string
+	 * @param $locale
 	 */
-	function setSubjectClass($subjectClass) {
-		return $this->setData('subjectClass', $subjectClass);
+	function setSubjectClass($subjectClass, $locale) {
+		return $this->setData('subjectClass', $subjectClass, $locale);
 	}
 	
 	/**
-	 * Get subject.
+	 * Return the localized subject
 	 * @return string
 	 */
-	function getSubject() {
-		return $this->getData('subject');
+	function getArticleSubject() {
+		return $this->getLocalizedData('subject');
+	}
+
+	/**
+	 * Get subject.
+	 * @param $locale
+	 * @return string
+	 */
+	function getSubject($locale) {
+		return $this->getData('subject', $locale);
 	}
 	
 	/**
 	 * Set subject.
 	 * @param $subject string
+	 * @param $locale
 	 */
-	function setSubject($subject) {
-		return $this->setData('subject', $subject);
+	function setSubject($subject, $locale) {
+		return $this->setData('subject', $subject, $locale);
 	}
 	
 	/**
-	 * Get geographical coverage.
+	 * Return the localized geographical coverage
 	 * @return string
 	 */
-	function getCoverageGeo() {
-		return $this->getData('coverageGeo');
+	function getArticleCoverageGeo() {
+		return $this->getLocalizedData('coverageGeo');
+	}
+
+	/**
+	 * Get geographical coverage.
+	 * @param $locale
+	 * @return string
+	 */
+	function getCoverageGeo($locale) {
+		return $this->getData('coverageGeo', $locale);
 	}
 	
 	/**
 	 * Set geographical coverage.
 	 * @param $coverageGeo string
+	 * @param $locale
 	 */
-	function setCoverageGeo($coverageGeo) {
-		return $this->setData('coverageGeo', $coverageGeo);
+	function setCoverageGeo($coverageGeo, $locale) {
+		return $this->setData('coverageGeo', $coverageGeo, $locale);
 	}
 	
 	/**
-	 * Get chronological coverage.
+	 * Return the localized chronological coverage
 	 * @return string
 	 */
-	function getCoverageChron() {
-		return $this->getData('coverageChron');
+	function getArticleCoverageChron() {
+		return $this->getLocalizedData('coverageChron');
+	}
+
+	/**
+	 * Get chronological coverage.
+	 * @param $locale
+	 * @return string
+	 */
+	function getCoverageChron($locale) {
+		return $this->getData('coverageChron', $locale);
 	}
 	
 	/**
 	 * Set chronological coverage.
 	 * @param $coverageChron string
+	 * @param $locale
 	 */
-	function setCoverageChron($coverageChron) {
-		return $this->setData('coverageChron', $coverageChron);
+	function setCoverageChron($coverageChron, $locale) {
+		return $this->setData('coverageChron', $coverageChron, $locale);
 	}
 	
 	/**
-	 * Get research sample coverage.
+	 * Return the localized sample coverage
 	 * @return string
 	 */
-	function getCoverageSample() {
-		return $this->getData('coverageSample');
+	function getArticleCoverageSample() {
+		return $this->getLocalizedData('coverageSample');
+	}
+
+	/**
+	 * Get research sample coverage.
+	 * @param $locale
+	 * @return string
+	 */
+	function getCoverageSample($locale) {
+		return $this->getData('coverageSample', $locale);
 	}
 	
 	/**
 	 * Set geographical coverage.
 	 * @param $coverageSample string
+	 * @param $locale
 	 */
-	function setCoverageSample($coverageSample) {
-		return $this->setData('coverageSample', $coverageSample);
+	function setCoverageSample($coverageSample, $locale) {
+		return $this->setData('coverageSample', $coverageSample, $locale);
 	}
 	
 	/**
-	 * Get type (method/approach).
+	 * Return the localized type (method/approach)
 	 * @return string
 	 */
-	function getType() {
-		return $this->getData('type');
+	function getArticleType() {
+		return $this->getLocalizedData('type');
+	}
+
+	/**
+	 * Get type (method/approach).
+	 * @param $locale
+	 * @return string
+	 */
+	function getType($locale) {
+		return $this->getData('type', $locale);
 	}
 	
 	/**
 	 * Set type (method/approach).
 	 * @param $type string
+	 * @param $locale
 	 */
-	function setType($type) {
-		return $this->setData('type', $type);
+	function setType($type, $locale) {
+		return $this->setData('type', $type, $locale);
 	}
 	
 	/**
@@ -529,21 +510,31 @@ class Article extends DataObject {
 	function setLanguage($language) {
 		return $this->setData('language', $language);
 	}
-	
+
 	/**
-	 * Get sponsor.
+	 * Return the localized sponsor
 	 * @return string
 	 */
-	function getSponsor() {
-		return $this->getData('sponsor');
+	function getArticleSponsor() {
+		return $this->getLocalizedData('sponsor');
+	}
+
+	/**
+	 * Get sponsor.
+	 * @param $locale
+	 * @return string
+	 */
+	function getSponsor($locale) {
+		return $this->getData('sponsor', $locale);
 	}
 	
 	/**
 	 * Set sponsor.
 	 * @param $sponsor string
+	 * @param $locale
 	 */
-	function setSponsor($sponsor) {
-		return $this->setData('sponsor', $sponsor);
+	function setSponsor($sponsor, $locale) {
+		return $this->setData('sponsor', $sponsor, $locale);
 	}
 	
 	/**

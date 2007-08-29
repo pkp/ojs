@@ -144,7 +144,7 @@ class RTHandler extends ArticleHandler {
 		$templateMgr->assign('searchParams', $searchParams);
 		$templateMgr->assign('searchValues', $searchValues);
 		$templateMgr->assign('defineTerm', Request::getUserVar('defineTerm'));
-		$templateMgr->assign('keywords', explode(';', $article->getSubject()));
+		$templateMgr->assign('keywords', explode(';', $article->getArticleSubject()));
 		$templateMgr->assign('coverageGeo', $article->getCoverageGeo());
 		$templateMgr->assign_by_ref('journalSettings', $journal->getSettings());
 		$templateMgr->display('rt/context.tpl');

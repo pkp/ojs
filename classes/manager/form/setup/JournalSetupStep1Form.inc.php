@@ -17,13 +17,16 @@
 import("manager.form.setup.JournalSetupForm");
 
 class JournalSetupStep1Form extends JournalSetupForm {
-	
+	/**
+	 * Constructor.
+	 */
 	function JournalSetupStep1Form() {
 		parent::JournalSetupForm(
 			1,
 			array(
-				'journalInitials' => 'string',
-				'journalAbbreviation' => 'string',
+				'title' => 'string',
+				'initials' => 'string',
+				'abbreviation' => 'string',
 				'printIssn' => 'string',
 				'onlineIssn' => 'string',
 				'doiPrefix' => 'string',
@@ -41,7 +44,9 @@ class JournalSetupStep1Form extends JournalSetupForm {
 				'supportPhone' => 'string',
 				'sponsorNote' => 'string',
 				'sponsors' => 'object',
-				'publisher' => 'object',
+				'publisherInstitution' => 'string',
+				'publisherUrl' => 'string',
+				'publisherNote' => 'string',
 				'contributorNote' => 'string',
 				'contributors' => 'object',
 				'envelopeSender' => 'string',
@@ -53,36 +58,25 @@ class JournalSetupStep1Form extends JournalSetupForm {
 		);
 		
 		// Validation checks for this form
-		$this->addCheck(new FormValidator($this, 'journalTitle', 'required', 'manager.setup.form.journalTitleRequired'));
-		$this->addCheck(new FormValidator($this, 'journalInitials', 'required', 'manager.setup.form.journalInitialsRequired'));
+		$this->addCheck(new FormValidatorLocale($this, 'title', 'required', 'manager.setup.form.journalTitleRequired'));
+		$this->addCheck(new FormValidatorLocale($this, 'initials', 'required', 'manager.setup.form.journalInitialsRequired'));
 		$this->addCheck(new FormValidator($this, 'contactName', 'required', 'manager.setup.form.contactNameRequired'));
 		$this->addCheck(new FormValidatorEmail($this, 'contactEmail', 'required', 'manager.setup.form.contactEmailRequired'));
 		$this->addCheck(new FormValidator($this, 'supportName', 'required', 'manager.setup.form.supportNameRequired'));
 		$this->addCheck(new FormValidatorEmail($this, 'supportEmail', 'required', 'manager.setup.form.supportEmailRequired'));
 	}
 
-	function initData() {
-		parent::initData();
-
-		$journal = Request::getJournal();
-		$this->_data['journalTitle'] = $journal->getTitle();
+	/**
+	 * Get the list of field names for which localized settings are used.
+	 * @return array
+	 */
+	function getLocaleFieldNames() {
+		return array('title', 'initials', 'abbreviation', 'sponsorNote', 'publisherNote', 'contributorNote', 'searchDescription', 'searchKeywords', 'customHeaders');
 	}
 
-	function readInputData() {
-		parent::readInputData();
-		$this->_data['journalTitle'] = Request::getUserVar('journalTitle');
-	}
-
-	function execute() {
-		$journalDao = &DAORegistry::getDAO('JournalDAO');
-		$journal = Request::getJournal();
-
-		$journal->setTitle($this->_data['journalTitle']);
-		$journalDao->updateJournal($journal);
-
-		parent::execute();
-	}
-
+	/**
+	 * Display the form.
+	 */
 	function display() {
 		$templateMgr = &TemplateManager::getManager();
 		if (Config::getVar('email', 'allow_envelope_sender'))

@@ -15,6 +15,7 @@
 	<!ELEMENT journal_settings (setting+)>
 	<!ELEMENT setting (name, value)>
 	<!ATTLIST setting type (int|string|object|bool) #REQUIRED>
+	<!ATTLIST setting locale (0|1) #REQUIRED>
 	<!ELEMENT name (#PCDATA)>
 	<!ELEMENT value (#PCDATA | array)*>
 	<!ELEMENT element (#PCDATA | array)*>
@@ -23,63 +24,63 @@
 ]>
 
 <journal_settings>
-	<setting type="int">
-		<name>numPageLinks</name>
-		<value>10</value>
-	</setting>
-	<setting type="int">
-		<name>itemsPerPage</name>
-		<value>25</value>
-	</setting>
-	<setting type="int">
-		<name>numWeeksPerReview</name>
-		<value>4</value>
-	</setting>
-	<setting type="string">
+	<setting type="string" locale="0">
 		<name>primaryLocale</name>
 		<value>{$primaryLocale}</value>
 	</setting>
-	<setting type="string">
+	<setting type="int" locale="0">
+		<name>numPageLinks</name>
+		<value>10</value>
+	</setting>
+	<setting type="int" locale="0">
+		<name>itemsPerPage</name>
+		<value>25</value>
+	</setting>
+	<setting type="int" locale="0">
+		<name>numWeeksPerReview</name>
+		<value>4</value>
+	</setting>
+	<setting type="string" locale="1">
 		<name>privacyStatement</name>
 		<value>{translate key="default.journalSettings.privacyStatement"}</value>
 	</setting>
-	<setting type="string">
+	<setting type="string" locale="1">
 		<name>openAccessPolicy</name>
 		<value>{translate key="default.journalSettings.openAccessPolicy"}</value>
 	</setting>
-	<setting type="string">
+	<setting type="string" locale="1">
 		<name>authorSelfArchivePolicy</name>
 		<value>{translate key="default.journalSettings.authorSelfArchivePolicy"}</value>
 	</setting>
-	<setting type="string">
+	<setting type="string" locale="1">
 		<name>copyeditInstructions</name>
 		<value>{translate key="default.journalSettings.copyeditInstructions"}</value>
 	</setting>
-	<setting type="string">
+	<setting type="string" locale="0">
 		<name>emailSignature</name>
 		<value>{translate key="default.journalSettings.emailSignature"}</value>
 	</setting>
-	<setting type="string">
+	<setting type="string" locale="1">
 		<name>proofInstructions</name>
 		<value>{translate key="default.journalSettings.proofingInstructions"}</value>
 	</setting>
-	<setting type="string">
+	<setting type="string" locale="1">
 		<name>readerInformation</name>
 		<value>{translate key="default.journalSettings.forReaders"}</value>
 	</setting>
-	<setting type="string">
+	<setting type="string" locale="1">
 		<name>authorInformation</name>
 		<value>{translate key="default.journalSettings.forAuthors"}</value>
 	</setting>
-	<setting type="string">
+	<setting type="string" locale="1">
 		<name>librarianInformation</name>
 		<value>{translate key="default.journalSettings.forLibrarians"}</value>
 	</setting>
-	<setting type="string">
+	<setting type="string" locale="1">
 		<name>lockssLicense</name>
 		<value>{translate key="default.journalSettings.lockssLicense"}</value>
 	</setting>
-	<setting type="object">
+	<setting type="object" locale="1">
 		<name>submissionChecklist</name>
 		<value>
 			<array>
@@ -122,43 +123,43 @@
 			</array>
 		</value>
 	</setting>
-	<setting type="bool">
+	<setting type="bool" locale="0">
 		<name>rtAbstract</name>
 		<value>true</value>
 	</setting>
-	<setting type="bool">
+	<setting type="bool" locale="0">
 		<name>rtCaptureCite</name>
 		<value>true</value>
 	</setting>
-	<setting type="bool">
+	<setting type="bool" locale="0">
 		<name>rtViewMetadata</name>
 		<value>true</value>
 	</setting>
-	<setting type="bool">
+	<setting type="bool" locale="0">
 		<name>rtSupplementaryFiles</name>
 		<value>true</value>
 	</setting>
-	<setting type="bool">
+	<setting type="bool" locale="0">
 		<name>rtPrinterFriendly</name>
 		<value>true</value>
 	</setting>
-	<setting type="bool">
+	<setting type="bool" locale="0">
 		<name>rtAuthorBio</name>
 		<value>true</value>
 	</setting>
-	<setting type="bool">
+	<setting type="bool" locale="0">
 		<name>rtDefineTerms</name>
 		<value>true</value>
 	</setting>
-	<setting type="bool">
+	<setting type="bool" locale="0">
 		<name>rtAddComment</name>
 		<value>true</value>
 	</setting>
-	<setting type="bool">
+	<setting type="bool" locale="0">
 		<name>rtEmailAuthor</name>
 		<value>true</value>
 	</setting>
-	<setting type="bool">
+	<setting type="bool" locale="0">
 		<name>rtEmailOthers</name>
 		<value>true</value>
 	</setting>

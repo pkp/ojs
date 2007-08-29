@@ -112,7 +112,7 @@ class PeopleHandler extends ManagerHandler {
 		$templateMgr->assign('searchField', $searchType);
 		$templateMgr->assign('searchMatch', $searchMatch);
 		$templateMgr->assign('search', $search);
-		$templateMgr->assign('searchInitial', $searchInitial);
+		$templateMgr->assign('searchInitial', Request::getUserVar('searchInitial'));
 
 		if ($roleId == ROLE_ID_REVIEWER) {
 			$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
@@ -173,7 +173,7 @@ class PeopleHandler extends ManagerHandler {
 		$templateMgr->assign('searchField', $searchType);
 		$templateMgr->assign('searchMatch', $searchMatch);
 		$templateMgr->assign('search', $search);
-		$templateMgr->assign('searchInitial', $searchInitial);
+		$templateMgr->assign('searchInitial', Request::getUserVar('searchInitial'));
 
 		$templateMgr->assign('roleId', $roleId);
 		$templateMgr->assign('roleName', $roleDao->getRoleName($roleId));
@@ -350,7 +350,11 @@ class PeopleHandler extends ManagerHandler {
 		
 		$templateMgr->assign('currentUrl', Request::url(null, null, 'people', 'all'));
 		$userForm = &new UserManagementForm($userId);
-		$userForm->initData();
+		if ($userForm->isLocaleResubmit()) {
+			$userForm->readInputData();
+		} else {
+			$userForm->initData();
+		}
 		$userForm->display();
 	}
 
@@ -555,7 +559,7 @@ class PeopleHandler extends ManagerHandler {
 		$templateMgr->assign('searchField', $searchType);
 		$templateMgr->assign('searchMatch', $searchMatch);
 		$templateMgr->assign('search', $search);
-		$templateMgr->assign('searchInitial', $searchInitial);
+		$templateMgr->assign('searchInitial', Request::getUserVar('searchInitial'));
 
 		if ($roleId == ROLE_ID_REVIEWER) {
 			$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
@@ -683,7 +687,6 @@ class PeopleHandler extends ManagerHandler {
 			$userForm->execute();
 			
 			if (Request::getUserVar('createAnother')) {
-				// C
 				$templateMgr = &TemplateManager::getManager();
 				$templateMgr->assign('currentUrl', Request::url(null, null, 'people', 'all'));
 				$templateMgr->assign('userCreated', true);
@@ -744,9 +747,15 @@ class PeopleHandler extends ManagerHandler {
 			}
 			$templateMgr->assign('country', $country);
 
+			$disciplineDao =& DAORegistry::getDAO('DisciplineDAO');
+			$discipline = null;
+			if ($user->getDiscipline() != '') {
+				$discipline = $disciplineDao->getDiscipline($user->getDiscipline());
+			}
+			$templateMgr->assign('discipline', $discipline);
+
 			$templateMgr->assign_by_ref('user', $user);
 			$templateMgr->assign_by_ref('userRoles', $roles);
-			$templateMgr->assign('profileLocalesEnabled', $site->getProfileLocalesEnabled());
 			$templateMgr->assign('localeNames', Locale::getAllLocales());
 			$templateMgr->display('manager/people/userProfile.tpl');
 		}

@@ -18,14 +18,6 @@
 import('article.Author');
 
 class AuthorDAO extends DAO {
-
-	/**
-	 * Constructor.
-	 */
-	function AuthorDAO() {
-		parent::DAO();
-	}
-	
 	/**
 	 * Retrieve an author by ID.
 	 * @param $authorId int
@@ -87,7 +79,14 @@ class AuthorDAO extends DAO {
 		if ($journalId !== null) $params[] = $journalId;
 
 		$result = &$this->retrieve(
-			'SELECT DISTINCT aa.article_id FROM article_authors aa LEFT JOIN articles a ON (aa.article_id = a.article_id) WHERE aa.first_name = ? AND (aa.middle_name = ?' . (empty($middleName)?' OR aa.middle_name IS NULL':'') . ') AND aa.last_name = ? AND (aa.affiliation = ?' . (empty($affiliation)?' OR aa.affiliation IS NULL':'') . ')' . ($journalId!==null?(' AND a.journal_id = ?'):''),
+			'SELECT DISTINCT
+				aa.article_id FROM article_authors aa
+				LEFT JOIN articles a ON (aa.article_id = a.article_id)
+			WHERE	aa.first_name = ?
+				AND (aa.middle_name = ?' . (empty($middleName)?' OR aa.middle_name IS NULL':'') . ')
+				AND aa.last_name = ?
+				AND (aa.affiliation = ?' . (empty($affiliation)?' OR aa.affiliation IS NULL':'') . ')' .
+				($journalId!==null?(' AND a.journal_id = ?'):''),
 			$params
 		);
 
@@ -129,7 +128,31 @@ class AuthorDAO extends DAO {
 		}
 
 		$result = &$this->retrieveRange(
-			'SELECT DISTINCT CAST(\'\' AS CHAR(1)) AS url, 0 AS author_id, 0 AS article_id, CAST(\'\' AS CHAR(1)) AS email, CAST(\'\' AS CHAR(1)) AS biography, 0 AS primary_contact, 0 AS seq, aa.first_name AS first_name, aa.middle_name AS middle_name, aa.last_name AS last_name, aa.affiliation AS affiliation, aa.country FROM article_authors aa, articles a, published_articles pa, issues i WHERE i.issue_id = pa.issue_id AND i.published = 1 AND aa.article_id = a.article_id ' . (isset($journalId)?'AND a.journal_id = ? ':'') . 'AND pa.article_id = a.article_id AND (aa.last_name IS NOT NULL AND aa.last_name <> \'\')' . $initialSql . ' ORDER BY aa.last_name, aa.first_name',
+			'SELECT DISTINCT
+				CAST(\'\' AS CHAR(1)) AS url,
+				0 AS author_id,
+				0 AS article_id,
+				CAST(\'\' AS CHAR(1)) AS email,
+				CAST(\'\' AS CHAR(1)) AS biography,
+				0 AS primary_contact,
+				0 AS seq,
+				aa.first_name AS first_name,
+				aa.middle_name AS middle_name,
+				aa.last_name AS last_name,
+				aa.affiliation AS affiliation,
+				aa.country
+			FROM	article_authors aa,
+				articles a,
+				published_articles pa,
+				issues i
+			WHERE	i.issue_id = pa.issue_id
+				AND i.published = 1
+				AND aa.article_id = a.article_id ' .
+				(isset($journalId)?'AND a.journal_id = ? ':'') . '
+				AND pa.article_id = a.article_id
+				AND (aa.last_name IS NOT NULL AND aa.last_name <> \'\')' .
+				$initialSql . '
+			ORDER BY aa.last_name, aa.first_name',
 			empty($params)?false:$params,
 			$rangeInfo
 		);
@@ -161,7 +184,26 @@ class AuthorDAO extends DAO {
 	
 		return $authors;
 	}
-	
+
+	/**
+	 * Get field names for which data is localized.
+	 * @return array
+	 */
+	function getLocaleFieldNames() {
+		return array('biography');
+	}
+
+	/**
+	 * Update the localized data for this object
+	 * @param $author object
+	 */
+	function updateLocaleFields(&$author) {
+		$this->updateDataObjectSettings('article_author_settings', $author, array(
+			'author_id' => $author->getAuthorId()
+		));
+
+	}
+
 	/**
 	 * Internal function to return an Author object from a row.
 	 * @param $row array
@@ -178,10 +220,11 @@ class AuthorDAO extends DAO {
 		$author->setCountry($row['country']);
 		$author->setEmail($row['email']);
 		$author->setUrl($row['url']);
-		$author->setBiography($row['biography']);
 		$author->setPrimaryContact($row['primary_contact']);
 		$author->setSequence($row['seq']);
-		
+
+		$this->getDataObjectSettings('article_author_settings', 'author_id', $row['author_id'], $author);
+
 		HookRegistry::call('AuthorDAO::_returnAuthorFromRow', array(&$author, &$row));
 
 		return $author;
@@ -194,9 +237,9 @@ class AuthorDAO extends DAO {
 	function insertAuthor(&$author) {
 		$this->update(
 			'INSERT INTO article_authors
-				(article_id, first_name, middle_name, last_name, affiliation, country, email, url, biography, primary_contact, seq)
+				(article_id, first_name, middle_name, last_name, affiliation, country, email, url, primary_contact, seq)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
 				$author->getArticleId(),
 				$author->getFirstName(),
@@ -206,12 +249,14 @@ class AuthorDAO extends DAO {
 				$author->getCountry(),
 				$author->getEmail(),
 				$author->getUrl(),
-				$author->getBiography(),
 				$author->getPrimaryContact(),
 				$author->getSequence()
 			)
 		);
+
 		$author->setAuthorId($this->getInsertAuthorId());
+		$this->updateLocaleFields($author);
+
 		return $author->getAuthorId();
 	}
 	
@@ -220,7 +265,7 @@ class AuthorDAO extends DAO {
 	 * @param $author Author
 	 */
 	function updateAuthor(&$author) {
-		return $this->update(
+		$returner = $this->update(
 			'UPDATE article_authors
 				SET
 					first_name = ?,
@@ -230,7 +275,6 @@ class AuthorDAO extends DAO {
 					country = ?,
 					email = ?,
 					url = ?,
-					biography = ?,
 					primary_contact = ?,
 					seq = ?
 				WHERE author_id = ?',
@@ -242,12 +286,13 @@ class AuthorDAO extends DAO {
 				$author->getCountry(),
 				$author->getEmail(),
 				$author->getUrl(),
-				$author->getBiography(),
 				$author->getPrimaryContact(),
 				$author->getSequence(),
 				$author->getAuthorId()
 			)
 		);
+		$this->updateLocaleFields($author);
+		return $returner;
 	}
 	
 	/**
@@ -264,17 +309,14 @@ class AuthorDAO extends DAO {
 	 * @param $articleId int optional
 	 */
 	function deleteAuthorById($authorId, $articleId = null) {
-		if (isset($articleId)) {
-			return $this->update(
-				'DELETE FROM article_authors WHERE author_id = ? AND article_id = ?',
-				array($authorId, $articleId)
-			);
-		
-		} else {
-			return $this->update(
-				'DELETE FROM article_authors WHERE author_id = ?', $authorId
-			);
-		}
+		$params = array($authorId);
+		if ($articleId) $params[] = $articleId;
+		$returner = $this->update(
+			'DELETE FROM article_authors WHERE author_id = ?' .
+			($articleId?' AND article_id = ?':''),
+			$params
+		);
+		if ($returner) $this->update('DELETE FROM article_author_settings WHERE author_id = ?', array($authorId));
 	}
 	
 	/**
@@ -282,9 +324,10 @@ class AuthorDAO extends DAO {
 	 * @param $articleId int
 	 */
 	function deleteAuthorsByArticle($articleId) {
-		return $this->update(
-			'DELETE FROM article_authors WHERE article_id = ?', $articleId
-		);
+		$authors =& $this->getAuthorsByArticle($articleId);
+		foreach ($authors as $author) {
+			$this->deleteAuthor($author);
+		}
 	}
 	
 	/**
@@ -320,7 +363,6 @@ class AuthorDAO extends DAO {
 	function getInsertAuthorId() {
 		return $this->getInsertId('article_authors', 'author_id');
 	}
-	
 }
 
 ?>

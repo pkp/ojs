@@ -15,7 +15,7 @@
 	<span class="formError">{translate key="form.errorsOccurred"}:</span>
 	<ul class="formErrorList">
 	{foreach key=field item=message from=$errors}
-		<li>{translate key="$message"}</li>
+		<li>{$message}</li>
 	{/foreach}
 	</ul>
 </p>

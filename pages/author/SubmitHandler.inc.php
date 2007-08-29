@@ -34,7 +34,11 @@ class SubmitHandler extends AuthorHandler {
 		import("author.form.submit.$formClass");
 
 		$submitForm = &new $formClass($article);
-		$submitForm->initData();
+		if ($submitForm->isLocaleResubmit()) {
+			$submitForm->readInputData();
+		} else {
+			$submitForm->initData();
+		}
 		$submitForm->display();
 	}
 	
@@ -193,7 +197,11 @@ class SubmitHandler extends AuthorHandler {
 		import("author.form.submit.AuthorSubmitSuppFileForm");
 		$submitForm = &new AuthorSubmitSuppFileForm($article, $suppFileId);
 		
-		$submitForm->initData();
+		if ($submitForm->isLocaleResubmit()) {
+			$submitForm->readInputData();
+		} else {
+			$submitForm->initData();
+		}
 		$submitForm->display();
 	}
 	

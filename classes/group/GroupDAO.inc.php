@@ -18,14 +18,6 @@
 import ('group.Group');
 
 class GroupDAO extends DAO {
-
-	/**
-	 * Constructor.
-	 */
-	function GroupDAO() {
-		parent::DAO();
-	}
-	
 	/**
 	 * Retrieve a group by ID.
 	 * @param $groupId int
@@ -66,6 +58,14 @@ class GroupDAO extends DAO {
 	}
 
 	/**
+	 * Get the list of fields for which locale data is stored.
+	 * @return array
+	 */
+	function getLocaleFieldNames() {
+		return array('title');
+	}
+
+	/**
 	 * Internal function to return a Group object from a row.
 	 * @param $row array
 	 * @return Group
@@ -73,17 +73,25 @@ class GroupDAO extends DAO {
 	function &_returnGroupFromRow(&$row) {
 		$group = &new Group();
 		$group->setGroupId($row['group_id']);
-		$group->setTitle($row['title']);
-		$group->setTitleAlt1($row['title_alt1']);
-		$group->setTitleAlt2($row['title_alt2']);
 		$group->setAboutDisplayed($row['about_displayed']);
 		$group->setSequence($row['seq']);
 		$group->setContext($row['context']);
 		$group->setJournalId($row['journal_id']);
+		$this->getDataObjectSettings('group_settings', 'group_id', $row['group_id'], $group);
 		
 		HookRegistry::call('GroupDAO::_returnGroupFromRow', array(&$group, &$row));
 
 		return $group;
+	}
+
+	/**
+	 * Update the settings for this object
+	 * @param $group object
+	 */
+	function updateLocaleFields(&$group) {
+		$this->updateDataObjectSettings('group_settings', $group, array(
+			'group_id' => $group->getGroupId()
+		));
 	}
 
 	/**
@@ -93,13 +101,10 @@ class GroupDAO extends DAO {
 	function insertGroup(&$group) {
 		$this->update(
 			'INSERT INTO groups
-				(title, title_alt1, title_alt2, seq, journal_id, about_displayed, context)
+				(seq, journal_id, about_displayed, context)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?)',
 			array(
-				$group->getTitle(),
-				$group->getTitleAlt1(),
-				$group->getTitleAlt2(),
 				$group->getSequence() == null ? 0 : $group->getSequence(),
 				$group->getJournalId(),
 				$group->getAboutDisplayed(),
@@ -108,6 +113,7 @@ class GroupDAO extends DAO {
 		);
 		
 		$group->setGroupId($this->getInsertGroupId());
+		$this->updateLocaleFields($group);
 		return $group->getGroupId();
 	}
 	
@@ -116,21 +122,15 @@ class GroupDAO extends DAO {
 	 * @param $group Group
 	 */
 	function updateGroup(&$group) {
-		return $this->update(
+		$returner = $this->update(
 			'UPDATE groups
 				SET
-					title = ?,
-					title_alt1 = ?,
-					title_alt2 = ?,
 					seq = ?,
 					journal_id = ?,
 					about_displayed = ?,
 					context = ?
 				WHERE group_id = ?',
 			array(
-				$group->getTitle(),
-				$group->getTitleAlt1(),
-				$group->getTitleAlt2(),
 				$group->getSequence(),
 				$group->getJournalId(),
 				$group->getAboutDisplayed(),
@@ -138,6 +138,8 @@ class GroupDAO extends DAO {
 				$group->getGroupId()
 			)
 		);
+		$this->updateLocaleFields($group);
+		return $returner;
 	}
 	
 	/**
@@ -155,10 +157,8 @@ class GroupDAO extends DAO {
 	function deleteGroupById($groupId) {
 		$groupMembershipDao = &DAORegistry::getDAO('GroupMembershipDAO');
 		$groupMembershipDao->deleteMembershipByGroupId($groupId);
-
-		return $this->update(
-			'DELETE FROM groups WHERE group_id = ?', $groupId
-		);
+		$this->update('DELETE FROM group_settings WHERE group_id = ?', $groupId);
+		return $this->update('DELETE FROM groups WHERE group_id = ?', $groupId);
 	}
 	
 	/**
@@ -208,7 +208,6 @@ class GroupDAO extends DAO {
 	function getInsertGroupId() {
 		return $this->getInsertId('groups', 'group_id');
 	}
-	
 }
 
 ?>

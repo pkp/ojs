@@ -42,6 +42,19 @@
 </script>
 
 <table width="100%" class="data">
+{if count($formLocales) > 1}
+	<tr valign="top">
+		<td width="20%" class="label">{fieldLabel name="formLocale" required="true" key="common.language"}</td>
+		<td width="80%" class="value">
+			{url|assign:"createReviewerUrl" op="createReviewer"}
+			{form_language_chooser form="reviewerForm" url=$createReviewerUrl}
+		</td>
+	</tr>
+{/if}
+	<tr valign="top">
+		<td class="label">{fieldLabel name="salutation" key="user.salutation"}</td>
+		<td class="value"><input type="text" name="salutation" id="salutation" value="{$salutation|escape}" size="20" maxlength="40" class="textField" /></td>
+	</tr>
 	<tr valign="top">
 		<td class="label">{fieldLabel name="firstName" required="true" key="user.firstName"}</td>
 		<td class="value"><input type="text" name="firstName" id="firstName" value="{$firstName|escape}" size="20" maxlength="40" class="textField" /></td>
@@ -57,6 +70,10 @@
 	<tr valign="top">
 		<td class="label">{fieldLabel name="initials" key="user.initials"}</td>
 		<td class="value"><input type="text" name="initials" id="initials" value="{$initials|escape}" size="5" maxlength="5" class="textField" />&nbsp;&nbsp;{translate key="user.initialsExample"}</td>
+	</tr>
+	<tr valign="top">
+		<td class="label">{fieldLabel name="gender" key="user.gender"}</td>
+		<td class="value"><input type="radio" name="gender" id="gender-m" value="M" {if $gender == 'M'} checked="checked"{/if}/><label for="gender-m">{translate key="user.masculine"}</label> &nbsp;&nbsp;&nbsp; <input type="radio" name="gender" id="gender-f" value="F" {if $gender == 'F'} checked="checked"{/if}><label for="gender-f">{translate key="user.feminine"}</label></td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{fieldLabel name="username" required="true" key="user.username"}</td>
@@ -91,8 +108,18 @@
 		<td class="value"><input type="text" name="fax" id="fax" value="{$fax|escape}" size="15" maxlength="24" class="textField" /></td>
 	</tr>
 	<tr valign="top">
+		<td class="label">{fieldLabel name="discipline" key="common.discipline"}</td>
+		<td class="value">
+			<select name="discipline" id="discipline" class="selectMenu">
+				<option value=""></option>
+				{html_options options=$disciplines selected=$discipline}
+	
+			</select>
+		</td>
+	</tr>
+	<tr valign="top">
 		<td class="label">{fieldLabel name="interests" key="user.interests"}</td>
-		<td class="value"><input type="text" name="interests" id="interests" value="{$interests|escape}" size="30" maxlength="255" class="textField" /></td>
+		<td class="value"><input type="text" name="interests[{$formLocale|escape}]" id="interests" value="{$interests[$formLocale]|escape}" size="30" maxlength="255" class="textField" /></td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{fieldLabel name="mailingAddress" key="common.mailingAddress"}</td>
@@ -109,9 +136,9 @@
 </tr>
 	<tr valign="top">
 		<td class="label">{fieldLabel name="biography" key="user.biography"}<br />{translate key="user.biography.description"}</td>
-		<td class="value"><textarea name="biography" id="biography" rows="5" cols="40" class="textArea">{$biography|escape}</textarea></td>
+		<td class="value"><textarea name="biography[{$formLocale|escape}]" id="biography" rows="5" cols="40" class="textArea">{$biography[$formLocale]|escape}</textarea></td>
 	</tr>
-	{if $profileLocalesEnabled && count($availableLocales) > 1}
+	{if count($availableLocales) > 1}
 	<tr valign="top">
 		<td class="label">{translate key="user.workingLanguages"}</td>
 		<td>{foreach from=$availableLocales key=localeKey item=localeName}

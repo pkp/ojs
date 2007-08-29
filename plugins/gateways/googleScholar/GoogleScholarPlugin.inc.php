@@ -186,7 +186,7 @@ class GoogleScholarPlugin extends GatewayPlugin {
 
 			// Journal Metadata
 			$journal =& Request::getJournal();
-			XMLCustomWriter::createChildWithText($document, $journalMetaNode, 'journal-title', $journal->getTitle(), true);
+			XMLCustomWriter::createChildWithText($document, $journalMetaNode, 'journal-title', $journal->getJournalTitle(), true);
 			XMLCustomWriter::createChildWithText($document, $journalMetaNode, 'abbrev-journal-title', $journal->getSetting('journalInitials'), false);
 
 			$issn = $journal->getSetting('onlineIssn');

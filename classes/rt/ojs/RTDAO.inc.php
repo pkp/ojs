@@ -17,7 +17,6 @@
 import('rt.ojs.JournalRT');
 
 class RTDAO extends DAO {
-
 	//
 	// RT
 	//
@@ -572,7 +571,6 @@ class RTDAO extends DAO {
 		$result->close();
 		unset($result);
 	}
-
 }
 
 ?>

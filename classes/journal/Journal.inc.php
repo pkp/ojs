@@ -16,7 +16,6 @@
  */
 
 class Journal extends DataObject {
-
 	/**
 	 * Constructor.
 	 */
@@ -36,8 +35,16 @@ class Journal extends DataObject {
 	 * Return the primary locale of this journal.
 	 * @return string
 	 */
-	function getLocale() {
-		return $this->getSetting('primaryLocale');
+	function getPrimaryLocale() {
+		return $this->getData('primaryLocale');
+	}
+	
+	/**
+	 * Set the primary locale of this journal.
+	 * @param $locale string
+	 */
+	function setPrimaryLocale($primaryLocale) {
+		return $this->setData('primaryLocale', $primaryLocale);
 	}
 	
 	/**
@@ -61,7 +68,7 @@ class Journal extends DataObject {
 				$supportedLocales[$localeKey] = $localeNames[$localeKey];
 			}
 		
-			asort($supportedLocales);
+			//asort($supportedLocales);
 		}
 		
 		return $supportedLocales;
@@ -73,44 +80,21 @@ class Journal extends DataObject {
 	 * @return string
 	 */
 	function getJournalPageHeaderTitle($home = false) {
-		// FIXME this is evil
-		$alternateLocaleNum = Locale::isAlternateJournalLocale($this->getData('journalId'));
 		$prefix = $home ? 'home' : 'page';
-		switch ($alternateLocaleNum) {
-			case 1:
-				$type = $this->getSetting($prefix . 'HeaderTitleTypeAlt1');
-				if ($type) {
-					$title = $this->getSetting($prefix . 'HeaderTitleImageAlt1');
-				}
-				if (!isset($title)) {
-					$title = $this->getSetting($prefix . 'HeaderTitleAlt1');
-				}
-				break;
-			case 2:
-				$type = $this->getSetting($prefix . 'HeaderTitleTypeAlt2');
-				if ($type) {
-					$title = $this->getSetting($prefix . 'HeaderTitleImageAlt2');
-				}
-				if (!isset($title)) {
-					$title = $this->getSetting($prefix . 'HeaderTitleAlt2');
-				}
-				break;
-		}
-		
-		if (isset($title) && !empty($title)) {
-			return $title;
-			
-		} else {
-			$type = $this->getSetting($prefix . 'HeaderTitleType');
-			if ($type) {
-				$title = $this->getSetting($prefix . 'HeaderTitleImage');
+		$typeArray = $this->getSetting($prefix . 'HeaderTitleType');
+		$imageArray = $this->getSetting($prefix . 'HeaderTitleImage');
+		$titleArray = $this->getSetting($prefix . 'HeaderTitle');
+
+		$title = null;
+
+		foreach (array(Locale::getLocale(), Locale::getPrimaryLocale()) as $locale) {
+			if (isset($typeArray[$locale]) && $typeArray[$locale]) {
+				if (isset($imageArray[$locale])) $title = $imageArray[$locale];
 			}
-			if (!isset($title)) {
-				$title = $this->getSetting($prefix . 'HeaderTitle');
-			}
-			
-			return $title;
+			if (empty($title) && isset($titleArray[$locale])) $title = $titleArray[$locale];
+			if (!empty($title)) return $title;
 		}
+		return null;
 	}
 	
 	/**
@@ -119,46 +103,52 @@ class Journal extends DataObject {
 	 * @return string
 	 */
 	function getJournalPageHeaderLogo($home = false) {
-		// FIXME this is evil
-		$alternateLocaleNum = Locale::isAlternateJournalLocale($this->getData('journalId'));
 		$prefix = $home ? 'home' : 'page';
-		switch ($alternateLocaleNum) {
-			case 1:
-				$logo = $this->getSetting($prefix . 'HeaderLogoImageAlt1');
-				break;
-			case 2:
-				$logo = $this->getSetting($prefix . 'HeaderLogoImageAlt2');
-				break;
+		$logoArray = $this->getSetting($prefix . 'HeaderLogoImage');
+		foreach (array(Locale::getLocale(), Locale::getPrimaryLocale()) as $locale) {
+			if (isset($logoArray[$locale])) return $logoArray[$locale];
 		}
-		
-		if (isset($logo) && !empty($logo)) {
-			return $logo;
-			
-		} else {
-			return $this->getSetting($prefix . 'HeaderLogoImage');
-		}
+		return null;
 	}
 	
 	//
 	// Get/set methods
 	//
-	
+
 	/**
-	 * Get title of journal
+	 * Get the localized title of the journal.
 	 * @return string
 	 */
-	 function getTitle() {
-	 	return $this->getData('title');
+	function getJournalTitle() {
+		return $this->getLocalizedSetting('title');
 	}
-	
+
 	/**
-	* Set title of journal
-	* @param $title string
-	*/
-	function setTitle($title) {
-		return $this->setData('title',$title);
+	 * Get title of journal
+	 * @param $locale string
+	 * @return string
+	 */
+	 function getTitle($locale) {
+	 	return $this->getSetting('title', $locale);
 	}
-	
+
+	/**
+	 * Get localized initials of journal
+	 * @return string
+	 */
+	 function getJournalInitials() {
+	 	return $this->getLocalizedSetting('initials');
+	}
+
+	/**
+	 * Get the initials of the journal.
+	 * @param $locale string
+	 * @return string
+	 */
+	function getInitials($locale) {
+		return $this->getSetting('initials', $locale);
+	}
+
 	/**
 	 * Get enabled flag of journal
 	 * @return int
@@ -192,19 +182,20 @@ class Journal extends DataObject {
 	}
 	
 	/**
-	 * Get description of journal.
+	 * Get the localized description of the journal.
 	 * @return string
 	 */
-	function getDescription() {
-		return $this->getData('description');
+	function getJournalDescription() {
+		return $this->getDescription(Locale::getLocale());
 	}
-	
+
 	/**
-	 * Set description of journal.
-	 * @param $description string
+	 * Get description of journal.
+	 * @param $locale string
+	 * @return string
 	 */
-	function setDescription($description) {
-		return $this->setData('description', $description);
+	function getDescription($locale) {
+		return $this->getSetting('description', $locale);
 	}
 	
 	/**
@@ -248,24 +239,38 @@ class Journal extends DataObject {
 		$settings = &$journalSettingsDao->getJournalSettings($this->getData('journalId'));
 		return $settings;
 	}
-	
+
+	function &getLocalizedSetting($name) {
+		$returner = $this->getSetting($name, Locale::getLocale());
+		if ($returner === null) {
+			unset($returner);
+			$returner = $this->getSetting($name, Locale::getPrimaryLocale());
+		}
+		return $returner;
+	}
+
 	/**
 	 * Retrieve a journal setting value.
-	 * @param $name
+	 * @param $name string
+	 * @param $locale string
 	 * @return mixed
 	 */
-	function &getSetting($name) {
+	function &getSetting($name, $locale = null) {
 		$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
-		$setting = &$journalSettingsDao->getSetting($this->getData('journalId'), $name);
+		$setting = &$journalSettingsDao->getSetting($this->getData('journalId'), $name, $locale);
 		return $setting;
 	}
 
 	/**
 	 * Update a journal setting value.
+	 * @param $name string
+	 * @param $value string
+	 * @param $type string optional
+	 * @param $isLocalized boolean optional
 	 */
-	function updateSetting($name, $value, $type = null) {
+	function updateSetting($name, $value, $type = null, $isLocalized = false) {
 		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
-		return $journalSettingsDao->updateSetting($this->getJournalId(), $name, $value, $type);
+		return $journalSettingsDao->updateSetting($this->getJournalId(), $name, $value, $type, $isLocalized);
 	}
 }
 

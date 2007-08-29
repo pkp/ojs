@@ -64,7 +64,7 @@ class CmsSettingsForm extends Form {
 			 substr($content, 0, 3) != '<h2' &&  
 			 substr($content, 0, 3) != '<h3'  )  {
 			$this->setData('content', trim($content));
-			$this->addError('content', 'plugins.generic.cms.error.muststartwithheader');
+			$this->addError('content', Locale::translate('plugins.generic.cms.error.muststartwithheader'));
 			return true;
 		}
 		
@@ -75,7 +75,7 @@ class CmsSettingsForm extends Form {
 		/* there should be the same number of headings as content */
 		if ( count($headMatches[0]) != count($contentMatches[0]) ) {
 			$this->setData('content', $content);
-			$this->addError('content', 'plugins.generic.cms.error.musthavecontent');
+			$this->addError('content', Locale::translate('plugins.generic.cms.error.musthavecontent'));
 			return true;
 		} 
 		
@@ -94,7 +94,7 @@ class CmsSettingsForm extends Form {
 			
 			if ( str_replace(' ', '', $headMatches[2][$i]) == '' ) {
 				$this->setData('content', $content);
-				$this->addError('content', 'plugins.generic.cms.error.headingcannotbeempty');
+				$this->addError('content', Locale::translate('plugins.generic.cms.error.headingcannotbeempty'));
 				return true;				
 			}			
 		}
@@ -103,7 +103,7 @@ class CmsSettingsForm extends Form {
 		for ( $i = 0; $i < count($contentMatches[0]); $i++ ) {		
 			if ( strpos($contentMatches[2][$i], '<' ) === false ) {
 				$this->setData('content', $content);
-				$this->addError('content', 'plugins.generic.cms.error.musthavecontent');
+				$this->addError('content', Locale::translate('plugins.generic.cms.error.musthavecontent'));
 				return true;
 			}
 		}

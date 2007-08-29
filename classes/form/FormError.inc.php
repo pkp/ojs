@@ -47,7 +47,6 @@ class FormError {
 	function getMessage() {
 		return $this->message;
 	}
-	
 }
 
 ?>

@@ -12,12 +12,12 @@
 {assign var="pageTitle" value="about.journalSponsorship"}
 {include file="common/header.tpl"}
 
-{if not(empty($publisher.note) && empty($publisher.institution))}
+{if not(empty($publisherNote) && empty($publisherInstitution))}
 <h3>{translate key="common.publisher"}</h3>
 
-{if $publisher.note}<p>{$publisher.note|nl2br}</p>{/if}
+{if $publisherNote}<p>{$publisherNote|nl2br}</p>{/if}
 
-<p><a href="{$publisher.url}">{$publisher.institution|escape}</a></p>
+<p><a href="{$publisherUrl}">{$publisherInstitution|escape}</a></p>
 
 <div class="separator"></div>
 {/if}

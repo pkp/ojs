@@ -18,7 +18,7 @@
 
 <ul>
 {iterate from=journals item=journal}
-	{if $journal->getSetting('enableLockss')}<li><a href="{url journal=$journal->getPath() page="gateway" op="lockss"}">{$journal->getTitle()|escape}</a></li>{/if}
+	{if $journal->getSetting('enableLockss')}<li><a href="{url journal=$journal->getPath() page="gateway" op="lockss"}">{$journal->getJournalTitle()|escape}</a></li>{/if}
 {/iterate}
 </ul>
 {else}
@@ -63,19 +63,19 @@
 </tr>
 <tr valign="top">
 	<td class="label">Title</td>
-	<td class="value">{$journal->getTitle()|escape}</td>
+	<td class="value">{$journal->getJournalTitle()|escape}</td>
 </tr>
 <tr valign="top">
 	<td class="label">Publisher</td>
-	<td class="value">{assign var="publisher" value=$journal->getSetting('publisher')}<a href="{$publisher.url|escape}">{$publisher.institution|escape}</a></td>
+	<td class="value"><a href="{$journal->getSetting('publisherUrl')|escape}">{$journal->getSetting('publisherInstitution')|escape}</a></td>
 </tr>
 <tr valign="top">
 	<td class="label">Description</td>
-	<td class="value">{$journal->getSetting('searchDescription')|escape}</td>
+	<td class="value">{$journal->getLocalizedSetting('searchDescription')|escape}</td>
 </tr>
 <tr valign="top">
 	<td class="label">Keywords</td>
-	<td class="value">{$journal->getSetting('searchKeywords')|escape}</td>
+	<td class="value">{$journal->getLocalizedSetting('searchKeywords')|escape}</td>
 </tr>
 {if $journal->getSetting('issn')}
 <tr valign="top">
@@ -91,16 +91,16 @@
 	<td class="label">Publisher Email</td>
 	<td class="value">{mailto address=$journal->getSetting('contactEmail')|escape encode="hex"}</td>
 </tr>
-{if $journal->getSetting('copyrightNotice')}
+{if $journal->getLocalizedSetting('copyrightNotice')}
 <tr valign="top">
 	<td class="label">Copyright</td>
-	<td class="value">{$journal->getSetting('copyrightNotice')|nl2br}</td>
+	<td class="value">{$journal->getLocalizedSetting('copyrightNotice')|nl2br}</td>
 </tr>
 {/if}
-{if $journal->getSetting('openAccessPolicy')}
+{if $journal->getLocalizedSetting('openAccessPolicy')}
 <tr valign="top">
 	<td class="label">Rights</td>
-	<td class="value">{$journal->getSetting('openAccessPolicy')|nl2br}</td>
+	<td class="value">{$journal->getLocalizedSetting('openAccessPolicy')|nl2br}</td>
 </tr>
 {/if}
 </table>

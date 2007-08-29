@@ -17,7 +17,6 @@
 import('form.Form');
 
 class AnnouncementForm extends Form {
-
 	/** @var announcementId int the ID of the announcement being edited */
 	var $announcementId;
 
@@ -36,13 +35,13 @@ class AnnouncementForm extends Form {
 		$this->addCheck(new FormValidatorCustom($this, 'typeId', 'optional', 'manager.announcements.form.typeIdValid', create_function('$typeId, $journalId', '$announcementTypeDao = &DAORegistry::getDAO(\'AnnouncementTypeDAO\'); return $announcementTypeDao->announcementTypeExistsByTypeId($typeId, $journalId);'), array($journal->getJournalId())));
 
 		// Title is provided
-		$this->addCheck(new FormValidator($this, 'title', 'required', 'manager.announcements.form.titleRequired'));
+		$this->addCheck(new FormValidatorLocale($this, 'title', 'required', 'manager.announcements.form.titleRequired'));
 
 		// Short description is provided
-		$this->addCheck(new FormValidator($this, 'descriptionShort', 'required', 'manager.announcements.form.descriptionShortRequired'));
+		$this->addCheck(new FormValidatorLocale($this, 'descriptionShort', 'required', 'manager.announcements.form.descriptionShortRequired'));
 
 		// Description is provided
-		$this->addCheck(new FormValidator($this, 'description', 'required', 'manager.announcements.form.descriptionRequired'));
+		$this->addCheck(new FormValidatorLocale($this, 'description', 'required', 'manager.announcements.form.descriptionRequired'));
 
 		// If provided, expiry date is valid
 		$this->addCheck(new FormValidatorCustom($this, 'dateExpireYear', 'optional', 'manager.announcements.form.dateExpireValid', create_function('$dateExpireYear', '$minYear = date(\'Y\'); $maxYear = date(\'Y\') + ANNOUNCEMENT_EXPIRE_YEAR_OFFSET_FUTURE; return ($dateExpireYear >= $minYear && $dateExpireYear <= $maxYear) ? true : false;')));
@@ -59,7 +58,16 @@ class AnnouncementForm extends Form {
 		$this->addCheck(new FormValidatorPost($this));
 
 	}
-	
+
+	/**
+	 * Get the list of localized field names for this object
+	 * @return array
+	 */
+	function getLocaleFieldNames() {
+		$announcementDao =& DAORegistry::getDAO('AnnouncementDAO');
+		return $announcementDao->getLocaleFieldNames();
+	}
+
 	/**
 	 * Display the form.
 	 */
@@ -89,9 +97,9 @@ class AnnouncementForm extends Form {
 			if ($announcement != null) {
 				$this->_data = array(
 					'typeId' => $announcement->getTypeId(),
-					'title' => $announcement->getTitle(),
-					'descriptionShort' => $announcement->getDescriptionShort(),
-					'description' => $announcement->getDescription(),
+					'title' => $announcement->getTitle(null), // Localized
+					'descriptionShort' => $announcement->getDescriptionShort(null), // Localized
+					'description' => $announcement->getDescription(null), // Localized
 					'dateExpire' => $announcement->getDateExpire()
 				);
 
@@ -126,9 +134,9 @@ class AnnouncementForm extends Form {
 		}
 		
 		$announcement->setJournalId($journal->getJournalId());
-		$announcement->setTitle($this->getData('title'));
-		$announcement->setDescriptionShort($this->getData('descriptionShort'));
-		$announcement->setDescription($this->getData('description'));
+		$announcement->setTitle($this->getData('title'), null); // Localized
+		$announcement->setDescriptionShort($this->getData('descriptionShort'), null); // Localized
+		$announcement->setDescription($this->getData('description'), null); // Localized
 
 		if ($this->getData('typeId') != null) {
 			$announcement->setTypeId($this->getData('typeId'));
@@ -150,7 +158,6 @@ class AnnouncementForm extends Form {
 			$announcementDao->insertAnnouncement($announcement);
 		}
 	}
-	
 }
 
 ?>

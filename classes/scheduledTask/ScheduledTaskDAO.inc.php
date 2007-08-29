@@ -17,14 +17,6 @@
 import('scheduledTask.ScheduledTask');
 
 class ScheduledTaskDAO extends DAO {
-
-	/**
-	 * Constructor.
-	 */
-	function ScheduledTaskDAO() {
-		parent::DAO();
-	}
-	
 	/**
 	 * Get the last time a scheduled task was executed.
 	 * @param $className string
@@ -90,7 +82,6 @@ class ScheduledTaskDAO extends DAO {
 
 		return $returner;
 	}
-	
 }
 
 ?>

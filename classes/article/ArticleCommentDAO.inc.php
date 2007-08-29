@@ -18,14 +18,6 @@
 import('article.ArticleComment');
 
 class ArticleCommentDAO extends DAO {
- 
- 	/**
-	 * Constructor.
-	 */
-	function ArticleCommentDAO() {
-		parent::DAO();
-	}
-	
 	/**
 	 * Retrieve ArticleComments by article id
 	 * @param $articleId int

@@ -86,7 +86,11 @@ class AnnouncementHandler extends ManagerHandler {
 			}
 
 			$announcementForm = &new AnnouncementForm($announcementId);
-			$announcementForm->initData();
+			if ($announcementForm->isLocaleResubmit()) {
+				$announcementForm->readInputData();
+			} else {
+				$announcementForm->initData();
+			}
 			$announcementForm->display();
 
 		} else {
@@ -213,7 +217,11 @@ class AnnouncementHandler extends ManagerHandler {
 			}
 
 			$announcementTypeForm = &new AnnouncementTypeForm($typeId);
-			$announcementTypeForm->initData();
+			if ($announcementTypeForm->isLocaleResubmit()) {
+				$announcementTypeForm->readInputData();
+			} else {
+				$announcementTypeForm->initData();
+			}
 			$announcementTypeForm->display();
 
 		} else {

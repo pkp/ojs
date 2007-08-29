@@ -21,9 +21,6 @@ class RegistrationForm extends Form {
 	/** @var boolean user is already registered with another journal */
 	var $existingUser;
 
-	/** @var boolean Include a user's working languages in their profile */
-	var $profileLocalesEnabled;
-	
 	/** @var AuthPlugin default authentication source, if specified */
 	var $defaultAuth;
 
@@ -52,7 +49,6 @@ class RegistrationForm extends Form {
 		} else {
 			// New user -- check required profile fields
 			$site = &Request::getSite();
-			$this->profileLocalesEnabled = $site->getProfileLocalesEnabled();
 			
 			$this->addCheck(new FormValidatorCustom($this, 'username', 'required', 'user.register.form.usernameExists', array(DAORegistry::getDAO('UserDAO'), 'userExistsByUsername'), array(), true));
 			$this->addCheck(new FormValidatorAlphaNum($this, 'username', 'required', 'user.register.form.usernameAlphaNumeric'));
@@ -98,22 +94,30 @@ class RegistrationForm extends Form {
 		$countries =& $countryDao->getCountries();
 		$templateMgr->assign_by_ref('countries', $countries);
 
-		$templateMgr->assign('privacyStatement', $journal->getSetting('privacyStatement'));
+		$disciplineDao =& DAORegistry::getDAO('DisciplineDAO');
+		$disciplines =& $disciplineDao->getDisciplines();
+		$templateMgr->assign_by_ref('disciplines', $disciplines);
+
+		$templateMgr->assign('privacyStatement', $journal->getLocalizedSetting('privacyStatement'));
 		$templateMgr->assign('allowRegReader', $journal->getSetting('allowRegReader')==1?1:0);
 		$templateMgr->assign('enableSubscriptions', $journal->getSetting('enableSubscriptions')==1?1:0);
 		$templateMgr->assign('enableOpenAccessNotification', $journal->getSetting('enableOpenAccessNotification')==1?1:0);
 		$templateMgr->assign('allowRegAuthor', $journal->getSetting('allowRegAuthor')==1?1:0);
 		$templateMgr->assign('allowRegReviewer', $journal->getSetting('allowRegReviewer')==1?1:0);
-		$templateMgr->assign('profileLocalesEnabled', $this->profileLocalesEnabled);
 		$templateMgr->assign('source', Request::getUserVar('source'));
-		if ($this->profileLocalesEnabled) {
-			$site = &Request::getSite();
-			$templateMgr->assign('availableLocales', $site->getSupportedLocaleNames());
-		}
+
+		$site = &Request::getSite();
+		$templateMgr->assign('availableLocales', $site->getSupportedLocaleNames());
+
 		$templateMgr->assign('helpTopicId', 'user.registerAndProfile');		
 		parent::display();
 	}
-	
+
+	function getLocaleFieldNames() {
+		$userDao =& DAORegistry::getDAO('UserDAO');
+		return $userDao->getLocaleFieldNames();
+	}
+
 	/**
 	 * Initialize default data.
 	 */
@@ -130,7 +134,8 @@ class RegistrationForm extends Form {
 	function readInputData() {
 		$userVars = array(
 			'username', 'password', 'password2',
-			'firstName', 'middleName', 'lastName', 'initials', 'country',
+			'salutation', 'firstName', 'middleName', 'lastName',
+			'gender', 'initials', 'country', 'discipline',
 			'affiliation', 'email', 'userUrl', 'phone', 'fax', 'signature',
 			'mailingAddress', 'biography', 'interests', 'userLocales',
 			'registerAsReader', 'openAccessNotification', 'registerAsAuthor',
@@ -173,34 +178,34 @@ class RegistrationForm extends Form {
 			$user = &new User();
 			
 			$user->setUsername($this->getData('username'));
+			$user->setSalutation($this->getData('salutation'));
 			$user->setFirstName($this->getData('firstName'));
 			$user->setMiddleName($this->getData('middleName'));
 			$user->setInitials($this->getData('initials'));
 			$user->setLastName($this->getData('lastName'));
+			$user->setGender($this->getData('gender'));
 			$user->setAffiliation($this->getData('affiliation'));
-			$user->setSignature($this->getData('signature'));
+			$user->setSignature($this->getData('signature'), null); // Localized
 			$user->setEmail($this->getData('email'));
 			$user->setUrl($this->getData('userUrl'));
 			$user->setPhone($this->getData('phone'));
 			$user->setFax($this->getData('fax'));
 			$user->setMailingAddress($this->getData('mailingAddress'));
-			$user->setBiography($this->getData('biography'));
-			$user->setInterests($this->getData('interests'));
+			$user->setBiography($this->getData('biography'), null); // Localized
+			$user->setInterests($this->getData('interests'), null); // Localized
 			$user->setDateRegistered(Core::getCurrentDate());
 			$user->setCountry($this->getData('country'));
 		
-			if ($this->profileLocalesEnabled) {
-				$site = &Request::getSite();
-				$availableLocales = $site->getSupportedLocales();
-				
-				$locales = array();
-				foreach ($this->getData('userLocales') as $locale) {
-					if (Locale::isLocaleValid($locale) && in_array($locale, $availableLocales)) {
-						array_push($locales, $locale);
-					}
+			$site = &Request::getSite();
+			$availableLocales = $site->getSupportedLocales();
+			
+			$locales = array();
+			foreach ($this->getData('userLocales') as $locale) {
+				if (Locale::isLocaleValid($locale) && in_array($locale, $availableLocales)) {
+					array_push($locales, $locale);
 				}
-				$user->setLocales($locales);
 			}
+			$user->setLocales($locales);
 			
 			if (isset($this->defaultAuth)) {
 				$user->setPassword($this->getData('password'));

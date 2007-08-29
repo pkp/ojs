@@ -14,11 +14,11 @@
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
-	<title>{$article->getArticleTitle()|escape} | {$article->getFirstAuthor(true)|escape} | {$currentJournal->getTitle()|escape}</title>
+	<title>{$article->getArticleTitle()|escape} | {$article->getFirstAuthor(true)|escape} | {$currentJournal->getJournalTitle()|escape}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset={$defaultCharset}" />
 	<meta name="description" content="{$article->getArticleTitle()|escape}" />
-	{if $article->getSubject()}
-	<meta name="keywords" content="{$article->getSubject()|escape}" />
+	{if $article->getArticleSubject()}
+	<meta name="keywords" content="{$article->getArticleSubject()|escape}" />
 	{/if}
 
 	{include file="article/dublincore.tpl"}
@@ -89,11 +89,11 @@
 	{/if}
 
 	{if (!$subscriptionRequired || $article->getAccessStatus() || $subscribedUser || $subscribedDomain)}
-		{assign var=galleys value=$article->getGalleys()}
+		{assign var=galleys value=$article->getLocalizedGalleys()}
 		{if $galleys}
 			{translate key="reader.fullText"}
 			{foreach from=$galleys item=galley name=galleyList}
-				<a href="{url page="article" op="view" path=$articleId|to_array:$galley->getGalleyId()}" class="action" target="_parent">{$galley->getLabel()|escape}</a>
+				<a href="{url page="article" op="view" path=$articleId|to_array:$galley->getGalleyId()}" class="action" target="_parent">{$galley->getGalleyLabel()|escape}</a>
 			{/foreach}
 		{/if}
 	{else}

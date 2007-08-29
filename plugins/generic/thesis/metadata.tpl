@@ -32,7 +32,7 @@
 {/if}
 	<meta name="DC.Description" content="Abstract Only"/>
 	<meta name="DC.Description.Abstract" content="{$thesis->getAbstract()|strip_tags|escape}"/>
-	<meta name="DC.Publisher" content="{$journal->getTitle()|escape}"/>
+	<meta name="DC.Publisher" content="{$journal->getJournalTitle()|escape}"/>
 	<meta name="DC.Date" scheme="ISO8601" content="{$thesis->getDateApproved()|date_format:"%Y-%m-%d"}"/>
 	<meta name="DC.Type" content="Electronic Thesis or Dissertation"/>
 	<meta name="DC.Format" scheme="IMT" content="text/html"/>		

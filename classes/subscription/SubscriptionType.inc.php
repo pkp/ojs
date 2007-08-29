@@ -24,11 +24,6 @@ define('SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE',	0x11);
 
 
 class SubscriptionType extends DataObject {
-
-	function SubscriptionType() {
-		parent::DataObject();
-	}
-	
 	//
 	// Get/set methods
 	//
@@ -64,37 +59,57 @@ class SubscriptionType extends DataObject {
 	function setJournalId($journalId) {
 		return $this->setData('journalId', $journalId);
 	}
-	
+
 	/**
-	 * Get subscription type name.
+	 * Get the localized subscription type name
 	 * @return string
 	 */
-	function getTypeName() {
-		return $this->getData('typeName');
+	function getSubscriptionTypeName() {
+		return $this->getLocalizedData('name');
+	}
+
+	/**
+	 * Get subscription type name.
+	 * @param $locale string
+	 * @return string
+	 */
+	function getName($locale) {
+		return $this->getData('name', $locale);
 	}
 	
 	/**
 	 * Set subscription type name.
-	 * @param $typeName string
+	 * @param $name string
+	 * @param $locale string
 	 */
-	function setTypeName($typeName) {
-		return $this->setData('typeName', $typeName);
+	function setName($name, $locale) {
+		return $this->setData('name', $name, $locale);
+	}
+
+	/**
+	 * Get the localized subscription type description
+	 * @return string
+	 */
+	function getSubscriptionTypeDescription() {
+		return $this->getLocalizedData('description');
 	}
 
 	/**
 	 * Get subscription type description.
+	 * @param $locale string
 	 * @return string
 	 */
-	function getDescription() {
-		return $this->getData('description');
+	function getDescription($locale) {
+		return $this->getData('description', $locale);
 	}
 	
 	/**
 	 * Set subscription type description.
 	 * @param $description string
+	 * @param $locale string
 	 */
-	function setDescription($description) {
-		return $this->setData('description', $description);
+	function setDescription($description, $locale) {
+		return $this->setData('description', $description, $locale);
 	}
 
 	/**
@@ -303,7 +318,7 @@ class SubscriptionType extends DataObject {
 	 * @return string
 	 */
 	function getSummaryString() {
-		return $this->getTypeName() . ' - ' . $this->getDurationYearsMonths() . ' - ' . sprintf('%.2f', $this->getCost()) . ' ' . $this->getCurrencyStringShort();
+		return $this->getSubscriptionTypeName() . ' - ' . $this->getDurationYearsMonths() . ' - ' . sprintf('%.2f', $this->getCost()) . ' ' . $this->getCurrencyStringShort();
 	}
 }
 

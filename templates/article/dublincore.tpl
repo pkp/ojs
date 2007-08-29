@@ -11,17 +11,17 @@
 <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
 
 {* DC.Contributor.PersonalName (reviewer) *}
-{if $article->getSponsor()}
-	<meta name="DC.Contributor.Sponsor" content="{$article->getSponsor()|strip_tags|escape}"/>
+{if $article->getArticleSponsor()}
+	<meta name="DC.Contributor.Sponsor" content="{$article->getArticleSponsor()|strip_tags|escape}"/>
 {/if}
-{if $article->getCoverageSample()}
-	<meta name="DC.Coverage" content="{$article->getCoverageSample()|strip_tags|escape}"/>
+{if $article->getArticleCoverageSample()}
+	<meta name="DC.Coverage" content="{$article->getArticleCoverageSample()|strip_tags|escape}"/>
 {/if}
-{if $article->getCoverageGeo()}
-	<meta name="DC.Coverage.spatial" content="{$article->getCoverageGeo()|strip_tags|escape}"/>
+{if $article->getArticleCoverageGeo()}
+	<meta name="DC.Coverage.spatial" content="{$article->getArticleCoverageGeo()|strip_tags|escape}"/>
 {/if}
-{if $article->getCoverageChron()}
-	<meta name="DC.Coverage.temporal" content="{$article->getCoverageChron()|strip_tags|escape}"/>
+{if $article->getArticleCoverageChron()}
+	<meta name="DC.Coverage.temporal" content="{$article->getArticleCoverageChron()|strip_tags|escape}"/>
 {/if}
 {foreach from=$article->getAuthorString()|explode:", " item=dc_author}
 	<meta name="DC.Creator.PersonalName" content="{$dc_author|escape}"/>
@@ -53,11 +53,11 @@
 	<meta name="DC.Language" scheme="ISO639-1" content="{$article->getLanguage()|strip_tags|escape}"/>
 {* DC.Publisher (publishing institution) *}
 {* DC.Publisher.Address (email addr) *}
-{if $currentJournal->getSetting('copyrightNotice')}
-	<meta name="DC.Rights" content="{$currentJournal->getSetting('copyrightNotice')|strip_tags|escape}"/>
+{if $currentJournal->getLocalizedSetting('copyrightNotice')}
+	<meta name="DC.Rights" content="{$currentJournal->getLocalizedSetting('copyrightNotice')|strip_tags|escape}"/>
 {/if}
 {* DC.Rights.accessRights *}
-	<meta name="DC.Source" content="{$currentJournal->getTitle()|strip_tags|escape}"/>
+	<meta name="DC.Source" content="{$currentJournal->getJournalTitle()|strip_tags|escape}"/>
 {if $currentJournal->getSetting('onlineIssn')}{assign var="issn" value=$currentJournal->getSetting('onlineIssn')}
 {elseif $currentJournal->getSetting('printIssn')}{assign var="issn" value=$currentJournal->getSetting('printIssn')}
 {elseif $currentJournal->getSetting('issn')}{assign var="issn" value=$currentJournal->getSetting('issn')}
@@ -68,17 +68,16 @@
 	<meta name="DC.Source.Issue" content="{$issue->getNumber()|strip_tags|escape}"/>
 	<meta name="DC.Source.URI" content="{$currentJournal->getUrl()|strip_tags|escape}"/>
 	<meta name="DC.Source.Volume" content="{$issue->getVolume()|strip_tags|escape}"/>
-{foreach from=$article->getSubject()|explode:"; " item=dc_subject}
+{foreach from=$article->getArticleSubject()|explode:"; " item=dc_subject}
 {if $dc_subject}
 	<meta name="DC.Subject" content="{$dc_subject|escape}"/>
 {/if}
 {/foreach}
 	<meta name="DC.Title" content="{$article->getArticleTitle()|strip_tags|escape}"/>
-{if $article->getTitleAlt1()}
-	<meta name="DC.Title.Alternative" content="{$article->getTitleAlt1()|strip_tags|escape}"/>
-{/if}
-{if $article->getTitleAlt2()}
-	<meta name="DC.Title.Alternative" content="{$article->getTitleAlt2()|strip_tags|escape}"/>
-{/if}
+{foreach from=$article->getTitle(null) item=alternate}
+	{if $alternate != $article->getArticleTitle()}
+		<meta name="DC.Title.Alternative" content="{$alternate|strip_tags|escape}"/>
+	{/if}
+{/foreach}
 	<meta name="DC.Type" content="Text.Serial.Journal"/>
 	<meta name="DC.Type.articleType" content="{$article->getSectionTitle()|strip_tags|escape}"/>	

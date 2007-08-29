@@ -18,14 +18,6 @@
 import('site.Version');
 
 class VersionDAO extends DAO {
-
-	/**
-	 * Constructor.
-	 */
-	function VersionDAO() {
-		parent::DAO();
-	}
-	
 	/**
 	 * Retrieve the current version.
 	 * @return Version
@@ -115,7 +107,6 @@ class VersionDAO extends DAO {
 			)
 		);
 	}
-	
 }
 
 ?>

@@ -18,7 +18,6 @@
 import('security.Role');
 
 class RoleDAO extends DAO {
-
 	/**
 	 * Constructor.
 	 */
@@ -142,13 +141,13 @@ class RoleDAO extends DAO {
 	function &getUsersByRoleId($roleId = null, $journalId = null, $searchType = null, $search = null, $searchMatch = null, $dbResultRange = null) {
 		$users = array();
 
-		$paramArray = array();
+		$paramArray = array('interests');
 		if (isset($roleId)) $paramArray[] = (int) $roleId;
 		if (isset($journalId)) $paramArray[] = (int) $journalId;
 
 		// For security / resource usage reasons, a role or journal ID
 		// must be specified. Don't allow calls supplying neither.
-		if (empty($paramArray)) return null;
+		if ($journalId === null && $roleId === null) return null;
 
 		$searchSql = '';
 
@@ -174,7 +173,7 @@ class RoleDAO extends DAO {
 				$paramArray[] = ($searchMatch=='is'?$search:'%' . $search . '%');
 				break;
 			case USER_FIELD_INTERESTS:
-				$searchSql = 'AND LOWER(u.interests) ' . ($searchMatch=='is'?'=':'LIKE') . ' LOWER(?)';
+				$searchSql = 'AND LOWER(s.setting_value) ' . ($searchMatch=='is'?'=':'LIKE') . ' LOWER(?)';
 				$paramArray[] = ($searchMatch=='is'?$search:'%' . $search . '%');
 				break;
 			case USER_FIELD_INITIAL:
@@ -186,14 +185,12 @@ class RoleDAO extends DAO {
 		$searchSql .= ' ORDER BY u.last_name, u.first_name'; // FIXME Add "sort field" parameter?
 		
 		$result = &$this->retrieveRange(
-			'SELECT DISTINCT u.* FROM users AS u, roles AS r WHERE u.user_id = r.user_id ' . (isset($roleId)?'AND r.role_id = ?':'') . (isset($journalId) ? ' AND r.journal_id = ?' : '') . ' ' . $searchSql,
-			count($paramArray)===1?
-				array_shift($paramArray) :
-				$paramArray,
+			'SELECT DISTINCT u.* FROM users AS u LEFT JOIN user_settings s ON (u.user_id = s.user_id AND s.setting_name = ?), roles AS r WHERE u.user_id = r.user_id ' . (isset($roleId)?'AND r.role_id = ?':'') . (isset($journalId) ? ' AND r.journal_id = ?' : '') . ' ' . $searchSql,
+			$paramArray,
 			$dbResultRange
 		);
 		
-		$returner = &new DAOResultFactory($result, $this->userDao, '_returnUserFromRow');
+		$returner = &new DAOResultFactory($result, $this->userDao, '_returnUserFromRowWithData');
 		return $returner;
 	}
 	
@@ -209,7 +206,7 @@ class RoleDAO extends DAO {
 	function &getUsersByJournalId($journalId, $searchType = null, $search = null, $searchMatch = null, $dbResultRange = null) {
 		$users = array();
 
-		$paramArray = array((int) $journalId);
+		$paramArray = array('interests', (int) $journalId);
 		$searchSql = '';
 
 		if (isset($search)) switch ($searchType) {
@@ -234,7 +231,7 @@ class RoleDAO extends DAO {
 				$paramArray[] = ($searchMatch=='is'?$search:'%' . $search . '%');
 				break;
 			case USER_FIELD_INTERESTS:
-				$searchSql = 'AND LOWER(u.interests) ' . ($searchMatch=='is'?'=':'LIKE') . ' LOWER(?)';
+				$searchSql = 'AND LOWER(s.setting_value) ' . ($searchMatch=='is'?'=':'LIKE') . ' LOWER(?)';
 				$paramArray[] = ($searchMatch=='is'?$search:'%' . $search . '%');
 				break;
 			case USER_FIELD_INITIAL:
@@ -247,12 +244,12 @@ class RoleDAO extends DAO {
 		
 		$result = &$this->retrieveRange(
 
-			'SELECT DISTINCT u.* FROM users AS u, roles AS r WHERE u.user_id = r.user_id AND r.journal_id = ? ' . $searchSql,
+			'SELECT DISTINCT u.* FROM users AS u LEFT JOIN user_settings s ON (u.user_id = s.user_id AND s.setting_name = ?), roles AS r WHERE u.user_id = r.user_id AND r.journal_id = ? ' . $searchSql,
 			$paramArray,
 			$dbResultRange
 		);
 		
-		$returner = &new DAOResultFactory($result, $this->userDao, '_returnUserFromRow');
+		$returner = &new DAOResultFactory($result, $this->userDao, '_returnUserFromRowWithData');
 		return $returner;
 	}
 	
@@ -449,7 +446,6 @@ class RoleDAO extends DAO {
 				return null;
 		}
 	}
-
 }
 
 ?>

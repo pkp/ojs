@@ -18,7 +18,6 @@
 import('article.PublishedArticle');
 
 class PublishedArticleDAO extends DAO {
-
 	var $articleDao;
 	var $authorDao;
 	var $galleyDao;
@@ -43,18 +42,45 @@ class PublishedArticleDAO extends DAO {
 	 * @return PublishedArticle objects array
 	 */
 	function &getPublishedArticles($issueId, $limit = NULL, $simple = false) {
+		$primaryLocale = Locale::getPrimaryLocale();
+		$locale = Locale::getLocale();
 		$func = $simple?'_returnSimplePublishedArticleFromRow':'_returnPublishedArticleFromRow';
 		$publishedArticles = array();
 
-		if (isset($limit)) {
-			$result = &$this->retrieveLimit(
-				'SELECT DISTINCT pa.*, a.*, s.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, s.abbrev AS section_abbrev, s.abbrev_alt1 AS section_abbrev_alt1, s.abbrev_alt2 AS section_abbrev_alt2, COALESCE(o.seq, s.seq) AS section_seq, pa.seq FROM published_articles pa, articles a LEFT JOIN sections s ON s.section_id = a.section_id LEFT JOIN custom_section_orders o ON (a.section_id = o.section_id AND o.issue_id = ?) WHERE pa.article_id = a.article_id AND pa.issue_id = ? AND a.status <> ' . STATUS_ARCHIVED . ' ORDER BY section_seq ASC, pa.seq ASC', array($issueId, $issueId), $limit
-			);
-		} else {
-			$result = &$this->retrieve(
-				'SELECT DISTINCT pa.*, a.*, s.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, s.abbrev AS section_abbrev, s.abbrev_alt1 AS section_abbrev_alt1, s.abbrev_alt2 AS section_abbrev_alt2, COALESCE(o.seq, s.seq) AS section_seq, pa.seq FROM published_articles pa, articles a LEFT JOIN sections s ON s.section_id = a.section_id LEFT JOIN custom_section_orders o ON (a.section_id = o.section_id AND o.issue_id = ?) WHERE pa.article_id = a.article_id AND pa.issue_id = ? AND a.status <> ' . STATUS_ARCHIVED . ' ORDER BY section_seq ASC, pa.seq ASC', array($issueId, $issueId)
-			);
-		}
+		$params = array(
+			'title',
+			$primaryLocale,
+			'title',
+			$locale,
+			'abbrev',
+			$primaryLocale,
+			'abbrev',
+			$locale,
+			$issueId,
+			$issueId
+		);
+
+		$sql = 'SELECT DISTINCT
+				pa.*,
+				a.*,
+				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
+				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev,
+				COALESCE(o.seq, s.seq) AS section_seq,
+				pa.seq
+			FROM	published_articles pa,
+				articles a LEFT JOIN sections s ON s.section_id = a.section_id
+				LEFT JOIN custom_section_orders o ON (a.section_id = o.section_id AND o.issue_id = ?)
+				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
+				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
+				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
+				LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?)
+			WHERE	pa.article_id = a.article_id
+				AND pa.issue_id = ?
+				AND a.status <> ' . STATUS_ARCHIVED . '
+			ORDER BY section_seq ASC, pa.seq ASC';
+
+		if (isset($limit)) $result = &$this->retrieveLimit($sql, $params, $limit);
+		else $result = &$this->retrieve($sql, $params);
 
 		while (!$result->EOF) {
 			$publishedArticles[] = &$this->$func($result->GetRowAssoc(false));
@@ -88,10 +114,35 @@ class PublishedArticleDAO extends DAO {
 	 * @return object
 	 */
 	function &getPublishedArticlesByJournalId($journalId, $rangeInfo = null, $simple = false) {
+		$primaryLocale = Locale::getPrimaryLocale();
+		$locale = Locale::getLocale();
 		$func = $simple?'_returnSimplePublishedArticleFromRow':'_returnPublishedArticleFromRow';
 		$result =& $this->retrieveRange(
-			'SELECT pa.*, a.*, s.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, s.abbrev AS section_abbrev, s.abbrev_alt1 AS section_abbrev_alt1, s.abbrev_alt2 AS section_abbrev_alt2 FROM published_articles pa, articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE pa.article_id = a.article_id AND a.journal_id = ? AND a.status <> ' . STATUS_ARCHIVED,
-			$journalId,
+			'SELECT	pa.*,
+				a.*,
+				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
+				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
+			FROM	published_articles pa,
+				articles a
+				LEFT JOIN sections s ON s.section_id = a.section_id
+				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
+				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
+				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
+				LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?)
+			WHERE	pa.article_id = a.article_id
+				AND a.journal_id = ?
+				AND a.status <> ' . STATUS_ARCHIVED,
+			array(
+				'title',
+				$primaryLocale,
+				'title',
+				$locale,
+				'abbrev',
+				$primaryLocale,
+				'abbrev',
+				$locale,
+				$journalId
+			),
 			$rangeInfo
 		);
 
@@ -106,11 +157,45 @@ class PublishedArticleDAO extends DAO {
 	 * @return PublishedArticle objects array
 	 */
 	function &getPublishedArticlesInSections($issueId, $simple = false) {
+		$primaryLocale = Locale::getPrimaryLocale();
+		$locale = Locale::getLocale();
 		$func = $simple?'_returnSimplePublishedArticleFromRow':'_returnPublishedArticleFromRow';
 		$publishedArticles = array();
 
 		$result = &$this->retrieve(
-			'SELECT DISTINCT pa.*, a.*, s.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, s.abbrev AS section_abbrev, s.abbrev_alt1 AS section_abbrev_alt1, s.abbrev_alt2 AS section_abbrev_alt2, s.abstracts_disabled AS abstracts_disabled, s.hide_title AS section_hide_title, COALESCE(o.seq, s.seq) AS section_seq, pa.seq FROM published_articles pa, articles a LEFT JOIN sections s ON s.section_id = a.section_id LEFT JOIN custom_section_orders o ON (a.section_id = o.section_id AND o.issue_id = ?) WHERE pa.article_id = a.article_id AND pa.issue_id = ? AND a.status <> ' . STATUS_ARCHIVED . ' ORDER BY section_seq ASC, pa.seq ASC', array($issueId, $issueId)
+			'SELECT DISTINCT
+				pa.*,
+				a.*,
+				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
+				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev,
+				s.abstracts_disabled AS abstracts_disabled,
+				s.hide_title AS section_hide_title,
+				COALESCE(o.seq, s.seq) AS section_seq,
+				pa.seq
+			FROM	published_articles pa,
+				articles a
+				LEFT JOIN sections s ON s.section_id = a.section_id
+				LEFT JOIN custom_section_orders o ON (a.section_id = o.section_id AND o.issue_id = ?)
+				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
+				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
+				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
+				LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?)
+			WHERE	pa.article_id = a.article_id
+				AND pa.issue_id = ?
+				AND a.status <> ' . STATUS_ARCHIVED . '
+			ORDER BY section_seq ASC, pa.seq ASC',
+			array(
+				'title',
+				$primaryLocale,
+				'title',
+				$locale,
+				'abbrev',
+				$primaryLocale,
+				'abbrev',
+				$locale,
+				$issueId,
+				$issueId
+			)
 		);
 
 		$currSectionId = 0;
@@ -147,11 +232,41 @@ class PublishedArticleDAO extends DAO {
 	 * @return PublishedArticle objects array
 	 */
 	function &getPublishedArticlesBySectionId($sectionId, $issueId, $simple = false) {
+		$primaryLocale = Locale::getPrimaryLocale();
+		$locale = Locale::getLocale();
 		$func = $simple?'_returnSimplePublishedArticleFromRow':'_returnPublishedArticleFromRow';
 		$publishedArticles = array();
 
 		$result = &$this->retrieve(
-			'SELECT pa.*, a.*, s.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, s.abbrev AS section_abbrev, s.abbrev_alt1 AS section_abbrev_alt1, s.abbrev_alt2 AS section_abbrev_alt2 FROM published_articles pa, articles a, sections s WHERE a.section_id = s.section_id AND pa.article_id = a.article_id AND a.section_id = ? AND pa.issue_id = ? AND a.status <> ' . STATUS_ARCHIVED . ' ORDER BY pa.seq ASC', array($sectionId, $issueId)
+			'SELECT	pa.*,
+				a.*,
+				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
+				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
+			FROM	published_articles pa,
+				articles a,
+				sections s
+				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
+				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
+				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
+				LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?)
+			WHERE	a.section_id = s.section_id
+				AND pa.article_id = a.article_id
+				AND a.section_id = ?
+				AND pa.issue_id = ?
+				AND a.status <> ' . STATUS_ARCHIVED . '
+			ORDER BY pa.seq ASC',
+			array(
+				'title',
+				$primaryLocale,
+				'title',
+				$locale,
+				'abbrev',
+				$primaryLocale,
+				'abbrev',
+				$locale,
+				$sectionId,
+				$issueId
+			)
 		);
 
 		$currSectionId = 0;
@@ -204,12 +319,38 @@ class PublishedArticleDAO extends DAO {
 	 * @return PublishedArticle object
 	 */
 	function &getPublishedArticleByArticleId($articleId, $journalId = null, $simple = false) {
+		$primaryLocale = Locale::getPrimaryLocale();
+		$locale = Locale::getLocale();
+		$params = array(
+			'title',
+			$primaryLocale,
+			'title',
+			$locale,
+			'abbrev',
+			$primaryLocale,
+			'abbrev',
+			$locale,
+			$articleId
+		);
+		if ($journalId) $params[] = $journalId;
+
 		$func = $simple?'_returnSimplePublishedArticleFromRow':'_returnPublishedArticleFromRow';
 		$result = &$this->retrieve(
-			'SELECT pa.*, a.*, s.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, s.abbrev AS section_abbrev, s.abbrev_alt1 AS section_abbrev_alt1, s.abbrev_alt2 AS section_abbrev_alt2 FROM published_articles pa, articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE pa.article_id = a.article_id AND a.article_id = ?' . (isset($journalId)?' AND a.journal_id = ?':''),
-			isset($journalId)?
-				array($articleId, $journalId):
-				$articleId
+			'SELECT	pa.*,
+				a.*,
+				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
+				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
+			FROM	published_articles pa,
+				articles a
+				LEFT JOIN sections s ON s.section_id = a.section_id
+				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
+				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
+				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
+				LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?)
+			WHERE	pa.article_id = a.article_id
+				AND a.article_id = ?' .
+				(isset($journalId)?' AND a.journal_id = ?':''),
+			$params
 		);
 
 		$publishedArticle = null;
@@ -231,10 +372,36 @@ class PublishedArticleDAO extends DAO {
 	 * @return PublishedArticle object
 	 */
 	function &getPublishedArticleByPublicArticleId($journalId, $publicArticleId, $simple = false) {
+		$primaryLocale = Locale::getPrimaryLocale();
+		$locale = Locale::getLocale();
 		$func = $simple?'_returnSimplePublishedArticleFromRow':'_returnPublishedArticleFromRow';
 		$result = &$this->retrieve(
-			'SELECT pa.*, a.*, s.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, s.abbrev AS section_abbrev, s.abbrev_alt1 AS section_abbrev_alt1, s.abbrev_alt2 AS section_abbrev_alt2 FROM published_articles pa, articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE pa.article_id = a.article_id AND pa.public_article_id = ? AND a.journal_id = ?',
-			array($publicArticleId, $journalId)
+			'SELECT	pa.*,
+				a.*,
+				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
+				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
+			FROM	published_articles pa,
+				articles a
+				LEFT JOIN sections s ON s.section_id = a.section_id
+				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
+				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
+				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
+				LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?)
+			WHERE	pa.article_id = a.article_id
+				AND pa.public_article_id = ?
+				AND a.journal_id = ?',
+			array(
+				'title',
+				$primaryLocale,
+				'title',
+				$locale,
+				'abbrev',
+				$primaryLocale,
+				'abbrev',
+				$locale,
+				$publicArticleId,
+				$journalId
+			)
 		);
 
 		$publishedArticle = null;
@@ -271,11 +438,26 @@ class PublishedArticleDAO extends DAO {
 	 * @return Array
 	 */
 	function &getPublishedArticleIdsAlphabetizedByJournal($journalId = null, $useCache = true) {
+		$params = array(
+			'title', Locale::getLocale(),
+			'title', Locale::getPrimaryLocale()
+		);
+		if (isset($journalId)) $params[] = $journalId;
+
 		$articleIds = array();
 		$functionName = $useCache?'retrieveCached':'retrieve';
 		$result = &$this->$functionName(
-			'SELECT a.article_id AS pub_id FROM published_articles pa, articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE pa.article_id = a.article_id' . (isset($journalId)?' AND a.journal_id = ?':'') . ' ORDER BY a.title',
-			isset($journalId)?$journalId:false
+			'SELECT	a.article_id AS pub_id,
+				COALESCE(atl.setting_value, atpl.setting_value) AS article_title
+			FROM	published_articles pa,
+				articles a
+				LEFT JOIN sections s ON s.section_id = a.section_id
+				LEFT JOIN article_settings atl ON (a.article_id = atl.article_id AND atl.setting_name = ? AND atl.locale = ?)
+				LEFT JOIN article_settings atpl ON (a.article_id = atpl.article_id AND atpl.setting_name = ? AND atpl.locale = ?)
+			WHERE	pa.article_id = a.article_id
+				AND s.section_id IS NOT NULL' .
+				(isset($journalId)?' AND a.journal_id = ?':'') . ' ORDER BY article_title',
+			$params
 		);
 		
 		while (!$result->EOF) {

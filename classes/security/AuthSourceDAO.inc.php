@@ -18,7 +18,6 @@
 import('security.AuthSource');
 
 class AuthSourceDAO extends DAO {
-
 	var $plugins;
 
 	/**
@@ -196,7 +195,6 @@ class AuthSourceDAO extends DAO {
 		$returner = &new DAOResultFactory($result, $this, '_returnAuthSourceFromRow');
 		return $returner;
 	}
-	
 }
 
 ?>

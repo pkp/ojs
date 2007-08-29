@@ -52,7 +52,7 @@
 {iterate from=subscriptionTypes item=subscriptionType}
 	{if !$subscriptionType->getPublic()}
 		<tr valign="top">
-			<td>{$subscriptionType->getTypeName()|escape}<br />{$subscriptionType->getDescription()|nl2br}</td>
+			<td>{$subscriptionType->getSubscriptionTypeName()|escape}<br />{$subscriptionType->getSubscriptionTypeDescription()|nl2br}</td>
 			<td>{translate key=$subscriptionType->getFormatString()}</td>
 			<td>{$subscriptionType->getDurationYearsMonths()|escape}</td>
 			<td>{$subscriptionType->getCost()|string_format:"%.2f"}&nbsp;({$subscriptionType->getCurrencyStringShort()|escape})</td>

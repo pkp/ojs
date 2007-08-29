@@ -17,7 +17,6 @@
 import('form.Form');
 
 class AnnouncementTypeForm extends Form {
-
 	/** @var typeId int the ID of the announcement type being edited */
 	var $typeId;
 
@@ -26,24 +25,26 @@ class AnnouncementTypeForm extends Form {
 	 * @param typeId int leave as default for new announcement type
 	 */
 	function AnnouncementTypeForm($typeId = null) {
-
 		$this->typeId = isset($typeId) ? (int) $typeId : null;
 		$journal = &Request::getJournal();
 
 		parent::Form('manager/announcement/announcementTypeForm.tpl');
 
 		// Type name is provided
-		$this->addCheck(new FormValidator($this, 'typeName', 'required', 'manager.announcementTypes.form.typeNameRequired'));
+		$this->addCheck(new FormValidatorLocale($this, 'name', 'required', 'manager.announcementTypes.form.typeNameRequired'));
 
-		// Type name does not already exist for this journal
-		if ($this->typeId == null) {
-			$this->addCheck(new FormValidatorCustom($this, 'typeName', 'required', 'manager.announcementTypes.form.typeNameExists', array(DAORegistry::getDAO('AnnouncementTypeDAO'), 'announcementTypeExistsByTypeName'), array($journal->getJournalId()), true));
-		} else {
-			$this->addCheck(new FormValidatorCustom($this, 'typeName', 'required', 'manager.announcementTypes.form.typeNameExists', create_function('$typeName, $journalId, $typeId', '$announcementTypeDao = &DAORegistry::getDAO(\'AnnouncementTypeDAO\'); $checkId = $announcementTypeDao->getAnnouncementTypeByTypeName($typeName, $journalId); return ($checkId == 0 || $checkId == $typeId) ? true : false;'), array($journal->getJournalId(), $this->typeId)));
-		}
 		$this->addCheck(new FormValidatorPost($this));
 	}
-	
+
+	/**
+	 * Get a list of localized field names for this form
+	 * @return array
+	 */
+	function getLocaleFieldNames() {
+		$announcementTypeDao =& DAORegistry::getDAO('AnnouncementTypeDAO');
+		return $announcementTypeDao->getLocaleFieldNames();
+	}
+
 	/**
 	 * Display the form.
 	 */
@@ -65,7 +66,7 @@ class AnnouncementTypeForm extends Form {
 
 			if ($announcementType != null) {
 				$this->_data = array(
-					'typeName' => $announcementType->getTypeName()
+					'name' => $announcementType->getName(null) // Localized
 				);
 
 			} else {
@@ -78,10 +79,9 @@ class AnnouncementTypeForm extends Form {
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->readUserVars(array('typeName'));
-	
+		$this->readUserVars(array('name'));
 	}
-	
+
 	/**
 	 * Save announcement type. 
 	 */
@@ -98,7 +98,7 @@ class AnnouncementTypeForm extends Form {
 		}
 		
 		$announcementType->setJournalId($journal->getJournalId());
-		$announcementType->setTypeName($this->getData('typeName'));
+		$announcementType->setName($this->getData('name'), null); // Localized
 
 		// Update or insert announcement type
 		if ($announcementType->getTypeId() != null) {
@@ -107,7 +107,6 @@ class AnnouncementTypeForm extends Form {
 			$announcementTypeDao->insertAnnouncementType($announcementType);
 		}
 	}
-	
 }
 
 ?>

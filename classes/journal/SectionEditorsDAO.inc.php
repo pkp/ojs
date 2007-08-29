@@ -15,14 +15,6 @@
  */
 
 class SectionEditorsDAO extends DAO {
-
-	/**
-	 * Constructor.
-	 */
-	function SectionEditorsDAO() {
-		parent::DAO();
-	}
-	
 	/**
 	 * Insert a new section editor.
 	 * @param $journalId int

@@ -229,6 +229,7 @@ class ImportOJS1 {
 		$journalDao = &DAORegistry::getDAO('JournalDAO');
 		$journal = &new Journal();
 		$journal->setTitle($this->journalInfo['chTitle']);
+		$journal->setPrimaryLocale(Locale::getLocale());
 		$journal->setPath($this->journalPath);
 		$journal->setEnabled(1);
 		$this->journalId = $journalDao->insertJournal($journal);
@@ -251,14 +252,15 @@ class ImportOJS1 {
 		$journalRtAdmin->restoreVersions(false);
 		
 		// Publishers, sponsors, and contributors
-		$publisher = array();
 		$sponsors = array();
 		$result = &$this->importDao->retrieve('SELECT * FROM tblsponsors ORDER BY nSponsorID');
+		$publisherInstitution = $publisherUrl = null;
 		while (!$result->EOF) {
 			$row = &$result->fields;
 			$sponsors[] = array('institution' => Core::cleanVar($row['chName']), 'url' => Core::cleanVar($row['chWebpage']));
 			if (empty($publisher)) {
-				$publisher = array('institution' => Core::cleanVar($row['chName']), 'url' => Core::cleanVar($row['chWebpage']));
+				$publisherInstitution = Core::cleanVar($row['chName']);
+				$publisherUrl = Core::cleanVar($row['chWebpage']);
 			}
 			$result->MoveNext();
 		}
@@ -343,7 +345,8 @@ class ImportOJS1 {
 			'supportPhone' => array('string', Core::cleanVar($this->journalInfo['chSupportPhone'])),
 			'sponsorNote' => array('string', Core::cleanVar($this->journalInfo['chSponsorNote'])),
 			'sponsors' => array('object', $sponsors),
-			'publisher' => array('object', $publisher),
+			'publisherInstitution' => array('string', $publisherInstitution),
+			'publisherUrl' => array('string', $publisherUrl),
 			'contributorNote' => array('string', Core::cleanVar($this->journalInfo['chContribNote'])),
 			'contributors' => array('object', $contributors),
 			'searchDescription' => array('string', Core::cleanVar($this->journalInfo['chMetaDescription'])),
@@ -454,10 +457,31 @@ class ImportOJS1 {
 		);
 		
 		$settingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
-		
+
+		// Build a list of localized field names so that these are properly created.
+		// Note that this assumes that the current user's locale is the language of
+		// the OJS 1 installation.
+		import('manager.form.setup.JournalSetupStep1Form');
+		import('manager.form.setup.JournalSetupStep2Form');
+		import('manager.form.setup.JournalSetupStep3Form');
+		import('manager.form.setup.JournalSetupStep4Form');
+		import('manager.form.setup.JournalSetupStep5Form');
+		$localizedSettings = array();
+		$localizedSettings += JournalSetupStep1Form::getLocaleFieldNames();
+		$localizedSettings += JournalSetupStep2Form::getLocaleFieldNames();
+		$localizedSettings += JournalSetupStep3Form::getLocaleFieldNames();
+		$localizedSettings += JournalSetupStep4Form::getLocaleFieldNames();
+		$localizedSettings += JournalSetupStep5Form::getLocaleFieldNames();
+
 		foreach ($journalSettings as $settingName => $settingInfo) {
 			list($settingType, $settingValue) = $settingInfo;
-			$settingsDao->updateSetting($this->journalId, $settingName, $settingValue, $settingType);
+			$settingsDao->updateSetting(
+				$this->journalId,
+				$settingName,
+				$settingValue,
+				$settingType
+				in_array($settingName, $localizedSettings)
+			);
 		}
 	}
 		
@@ -562,8 +586,8 @@ class ImportOJS1 {
 				$user->setPhone(Core::cleanVar($row['chPhone']));
 				$user->setFax(Core::cleanVar($row['chFax']));
 				$user->setMailingAddress(Core::cleanVar($row['chMailAddr']));
-				$user->setBiography(Core::cleanVar($row['chBiography']));
-				$user->setInterests(Core::cleanVar($interests));
+				$user->setBiography(Core::cleanVar($row['chBiography']), Locale::getLocale());
+				$user->setInterests(Core::cleanVar($interests), Locale::getLocale());
 				$user->setLocales(array());
 				$user->setDateRegistered($row['dtDateSignedUp']);
 				$user->setDateLastLogin($row['dtDateSignedUp']);
@@ -871,12 +895,12 @@ class ImportOJS1 {
 			
 			$section = &new Section();
 			$section->setJournalId($this->journalId);
-			$section->setTitle(Core::cleanVar($row['chTitle']));
-			$section->setAbbrev(Core::cleanVar($row['chAbbrev']));
+			$section->setTitle(Core::cleanVar($row['chTitle']), Locale::getLocale());
+			$section->setAbbrev(Core::cleanVar($row['chAbbrev']), Locale::getLocale());
 			$section->setSequence(++$count);
 			$section->setMetaIndexed($row['bMetaIndex']);
 			$section->setEditorRestricted($row['bAcceptSubmissions'] ? 0 : 1);
-			$section->setPolicy(Core::cleanVar($row['chPolicies']));
+			$section->setPolicy(Core::cleanVar($row['chPolicies']), Locale::getLocale());
 			
 			$sectionId = $sectionDao->insertSection($section);
 			$this->sectionMap[$row['nSectionID']] = $sectionId;
@@ -946,26 +970,24 @@ class ImportOJS1 {
 					$status = STATUS_QUEUED;
 				}
 			}
+
+			$locale = Locale::getLocale();
 			
 			$article = &new Article();
 			$article->setUserId(1);
 			$article->setJournalId($this->journalId);
 			$article->setSectionId(isset($this->sectionMap[$row['fkSectionID']]) ? $this->sectionMap[$row['fkSectionID']] : 0);
-			$article->setTitle(Core::cleanVar($row['chMetaTitle']));
-			$article->setTitleAlt1('');
-			$article->setTitleAlt2('');
-			$article->setAbstract(Core::cleanVar($row['chMetaAbstract']));
-			$article->setAbstractAlt1('');
-			$article->setAbstractAlt2('');
-			$article->setDiscipline(Core::cleanVar($row['chMetaDiscipline']));
-			$article->setSubjectClass(Core::cleanVar($row['chMetaSubjectClass']));
-			$article->setSubject(Core::cleanVar($row['chMetaSubject']));
-			$article->setCoverageGeo(Core::cleanVar($row['chMetaCoverageGeo']));
-			$article->setCoverageChron(Core::cleanVar($row['chMetaCoverageChron']));
-			$article->setCoverageSample(Core::cleanVar($row['chMetaCoverageSample']));
-			$article->setType(Core::cleanVar($row['chMetaType_Author']));
+			$article->setTitle(Core::cleanVar($row['chMetaTitle']), $locale);
+			$article->setAbstract(Core::cleanVar($row['chMetaAbstract']), $locale);
+			$article->setDiscipline(Core::cleanVar($row['chMetaDiscipline']), $locale);
+			$article->setSubjectClass(Core::cleanVar($row['chMetaSubjectClass']), $locale);
+			$article->setSubject(Core::cleanVar($row['chMetaSubject']), $locale);
+			$article->setCoverageGeo(Core::cleanVar($row['chMetaCoverageGeo'], $locale));
+			$article->setCoverageChron(Core::cleanVar($row['chMetaCoverageChron']), $locale);
+			$article->setCoverageSample(Core::cleanVar($row['chMetaCoverageSample']), $locale);
+			$article->setType(Core::cleanVar($row['chMetaType_Author']), $locale);
 			$article->setLanguage(Core::cleanVar($row['chMetaLanguage']));
-			$article->setSponsor(Core::cleanVar($row['chMetaSponsor_Author']));
+			$article->setSponsor(Core::cleanVar($row['chMetaSponsor_Author']), $locale);
 			$article->setCommentsToEditor(Core::cleanVar($row['chNotesToEditor']));
 			$article->setDateSubmitted($row['dtDateSubmitted']);
 			$article->setDateStatusModified($row['dtDateSubmitted']);
@@ -986,7 +1008,7 @@ class ImportOJS1 {
 				$author->setLastName(Core::cleanVar($authorRow['chSurname']));
 				$author->setAffiliation(Core::cleanVar($authorRow['chAffiliation']));
 				$author->setEmail(Core::cleanVar($authorRow['chEmail']));
-				$author->setBiography(Core::cleanVar($authorRow['chBiography']));
+				$author->setBiography(Core::cleanVar($authorRow['chBiography']), $locale);
 				$author->setPrimaryContact($authorRow['bPrimaryContact']);
 				
 				if ($authorRow['bPrimaryContact'] && isset($this->userMap[$authorRow['nUserID']])) {

@@ -153,4 +153,11 @@ Thank you for agreeing to review the manuscript "{$articleTitle}" for {$journalN
 			<field name="class_name">tasks.OpenAccessNotification</field>
 		</row>
 	</table>
+
+	<!-- Bug #2213: Invert public flag on subscription types -->
+	<sql>
+		<query>
+			UPDATE subscription_types SET pub = NOT pub
+		</query>
+	</sql>
 </data>

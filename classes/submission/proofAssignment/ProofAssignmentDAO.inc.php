@@ -17,7 +17,6 @@
 import('submission.proofAssignment.ProofAssignment');
 
 class ProofAssignmentDAO extends DAO {
-
 	var $userDao;
 
 	/**
@@ -210,7 +209,6 @@ class ProofAssignmentDAO extends DAO {
 	function getInsertProofId() {
 		return $this->getInsertId('proof_assignments', 'proof_id');
 	}
-	
 }
 
 ?>

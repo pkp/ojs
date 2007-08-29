@@ -18,7 +18,6 @@
 import('submission.copyeditor.CopyeditorSubmission');
 
 class CopyeditorSubmissionDAO extends DAO {
-
 	var $articleDao;
 	var $authorDao;
 	var $userDao;
@@ -54,9 +53,34 @@ class CopyeditorSubmissionDAO extends DAO {
 	 * @return CopyeditorSubmission
 	 */
 	function &getCopyeditorSubmission($articleId) {
+		$primaryLocale = Locale::getPrimaryLocale();
+		$locale = Locale::getLocale();
 		$result = &$this->retrieve(
-			'SELECT a.*, e.editor_id, c.*, s.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, s.abbrev AS section_abbrev, s.abbrev_alt1 AS section_abbrev_alt1, s.abbrev_alt2 AS section_abbrev_alt2 FROM articles a LEFT JOIN edit_assignments e on (a.article_id = e.article_id) LEFT JOIN sections s ON (s.section_id = a.section_id) LEFT JOIN copyed_assignments c ON (c.article_id = a.article_id) WHERE a.article_id = ?',
-			$articleId
+			'SELECT	a.*,
+				e.editor_id,
+				c.*,
+				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
+				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
+			FROM	articles a
+				LEFT JOIN edit_assignments e ON (a.article_id = e.article_id)
+				LEFT JOIN sections s ON (s.section_id = a.section_id)
+				LEFT JOIN copyed_assignments c ON (c.article_id = a.article_id)
+				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
+				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
+				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
+				LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?)
+			WHERE	a.article_id = ?',
+			array(
+				'title',
+				$primaryLocale,
+				'title',
+				$locale,
+				'abbrev',
+				$primaryLocale,
+				'abbrev',
+				$locale,
+				$articleId
+			)
 		);
 
 		$returner = null;
@@ -213,20 +237,34 @@ class CopyeditorSubmissionDAO extends DAO {
 	 * @return array CopyeditorSubmissions
 	 */
 	function &getCopyeditorSubmissionsByCopyeditorId($copyeditorId, $journalId = null, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $active = true, $rangeInfo = null) {
-		if (isset($journalId)) $params = array($journalId, $copyeditorId);
-		else $params = array($copyeditorId);
+		$locale = Locale::getLocale();
+		$primaryLocale = Locale::getPrimaryLocale();
+		$params = array(
+			'title', // Section title
+			$primaryLocale,
+			'title',
+			$locale,
+			'abbrev', // Section abbrev
+			$primaryLocale,
+			'abbrev',
+			$locale,
+			'title' // Article title
+		);
+
+		if (isset($journalId)) $params[] = $journalId;
+		$params[] = $copyeditorId;
 
 		$searchSql = '';
 
 		if (!empty($search)) switch ($searchField) {
 			case SUBMISSION_FIELD_TITLE:
 				if ($searchMatch === 'is') {
-					$searchSql = ' AND (LOWER(a.title) = LOWER(?) OR LOWER(a.title_alt1) = LOWER(?) OR LOWER(a.title_alt2) = LOWER(?))';
+					$searchSql = ' AND LOWER(atl.setting_value) = LOWER(?)';
 				} else {
-					$searchSql = ' AND (LOWER(a.title) LIKE LOWER(?) OR LOWER(a.title_alt1) LIKE LOWER(?) OR LOWER(a.title_alt2) LIKE LOWER(?))';
+					$searchSql = ' AND LOWER(atl.setting_value) LIKE LOWER(?)';
 					$search = '%' . $search . '%';
 				}
-				$params[] = $params[] = $params[] = $search;
+				$params[] = $search;
 				break;
 			case SUBMISSION_FIELD_AUTHOR:
 				$first_last = $this->_dataSource->Concat('aa.first_name', '\' \'', 'aa.last_name');
@@ -295,21 +333,22 @@ class CopyeditorSubmissionDAO extends DAO {
 		$sql = 'SELECT DISTINCT
 				a.*,
 				c.*,
-				s.title AS section_title,
-				s.title_alt1 AS section_title_alt1,
-				s.title_alt2 AS section_title_alt2,
-				s.abbrev AS section_abbrev,
-				s.abbrev_alt1 AS section_abbrev_alt1,
-				s.abbrev_alt2 AS section_abbrev_alt2
+				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
+				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
 			FROM
 				articles a
-			INNER JOIN article_authors aa ON (aa.article_id = a.article_id)
-			LEFT JOIN sections s ON (s.section_id = a.section_id)
-			LEFT JOIN copyed_assignments c ON (c.article_id = a.article_id)
-			LEFT JOIN edit_assignments e ON (e.article_id = a.article_id)
-			LEFT JOIN users ed ON (e.editor_id = ed.user_id)
-			LEFT JOIN layouted_assignments l ON (l.article_id = a.article_id)
-			LEFT JOIN proof_assignments p ON (p.article_id = a.article_id)
+				INNER JOIN article_authors aa ON (aa.article_id = a.article_id)
+				LEFT JOIN sections s ON (s.section_id = a.section_id)
+				LEFT JOIN copyed_assignments c ON (c.article_id = a.article_id)
+				LEFT JOIN edit_assignments e ON (e.article_id = a.article_id)
+				LEFT JOIN users ed ON (e.editor_id = ed.user_id)
+				LEFT JOIN layouted_assignments l ON (l.article_id = a.article_id)
+				LEFT JOIN proof_assignments p ON (p.article_id = a.article_id)
+				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
+				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
+				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
+				LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?)
+				LEFT JOIN article_settings atl ON (a.article_id = atl.article_id AND atl.setting_name = ?)
 			WHERE
 				' . (isset($journalId)?'a.journal_id = ? AND':'') . '
 				c.copyeditor_id = ? AND
@@ -362,7 +401,6 @@ class CopyeditorSubmissionDAO extends DAO {
 
 		return $submissionsCount;
 	}
-	
 }
 
 ?>

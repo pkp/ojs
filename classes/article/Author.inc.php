@@ -194,21 +194,30 @@ class Author extends DataObject {
 	function setUrl($url) {
 		return $this->setData('url', $url);
 	}
-	
+
+	/**
+	 * Get the localized biography for this author
+	 */
+	function getAuthorBiography() {
+		return $this->getLocalizedData('biography');
+	}
+
 	/**
 	 * Get author biography.
+	 * @param $locale string
 	 * @return string
 	 */
-	function getBiography() {
-		return $this->getData('biography');
+	function getBiography($locale) {
+		return $this->getData('biography', $locale);
 	}
 	
 	/**
 	 * Set author biography.
 	 * @param $biography string
+	 * @param $locale string
 	 */
-	function setBiography($biography) {
-		return $this->setData('biography', $biography);
+	function setBiography($biography, $locale) {
+		return $this->setData('biography', $biography, $locale);
 	}
 	
 	/**

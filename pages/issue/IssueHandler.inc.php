@@ -53,17 +53,17 @@ class IssueHandler extends Handler {
 			$arg = isset($args[0]) ? $args[0] : '';
 			$showToc = ($arg == 'showToc') ? true : false;
 
-			if (!$showToc && $issue->getFileName() && $issue->getShowCoverPage()) {
-				$templateMgr->assign('fileName', $issue->getFileName());
-				$templateMgr->assign('width', $issue->getWidth());
-				$templateMgr->assign('height', $issue->getHeight());
-				$templateMgr->assign('originalFileName', $issue->getOriginalFileName());
+			if (!$showToc && $issue->getIssueFileName() && $issue->getIssueShowCoverPage()) {
+				$templateMgr->assign('fileName', $issue->getIssueFileName());
+				$templateMgr->assign('width', $issue->getIssueWidth());
+				$templateMgr->assign('height', $issue->getIssueHeight());
+				$templateMgr->assign('originalFileName', $issue->getIssueOriginalFileName());
 
 				import('file.PublicFileManager');
 				$publicFileManager = &new PublicFileManager();
 				$coverPagePath = Request::getBaseUrl() . '/';
 				$coverPagePath .= $publicFileManager->getJournalFilesPath($journal->getJournalId()) . '/';
-				$coverPagePath .= $issue->getFileName();
+				$coverPagePath .= $issue->getIssueFileName();
 				$templateMgr->assign('coverPagePath', $coverPagePath);
 				$showToc = false;
 			} else {
@@ -141,17 +141,17 @@ class IssueHandler extends Handler {
 			$issueHeadingTitle = $issue->getIssueIdentification(false, true);
 			$issueCrumbTitle = $issue->getIssueIdentification(false, true);
 
-			if (!$showToc && $issue->getFileName() && $issue->getShowCoverPage()) {
-				$templateMgr->assign('fileName', $issue->getFileName());
-				$templateMgr->assign('width', $issue->getWidth());
-				$templateMgr->assign('height', $issue->getHeight());
-				$templateMgr->assign('originalFileName', $issue->getOriginalFileName());
+			if (!$showToc && $issue->getIssueFileName() && $issue->getIssueShowCoverPage()) {
+				$templateMgr->assign('fileName', $issue->getIssueFileName());
+				$templateMgr->assign('width', $issue->getIssueWidth());
+				$templateMgr->assign('height', $issue->getIssueHeight());
+				$templateMgr->assign('originalFileName', $issue->getIssueOriginalFileName());
 
 				import('file.PublicFileManager');
 				$publicFileManager = &new PublicFileManager();
 				$coverPagePath = Request::getBaseUrl() . '/';
 				$coverPagePath .= $publicFileManager->getJournalFilesPath($journalId) . '/';
-				$coverPagePath .= $issue->getFileName();
+				$coverPagePath .= $issue->getIssueFileName();
 				$templateMgr->assign('coverPagePath', $coverPagePath);
 
 				$showToc = false;

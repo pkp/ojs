@@ -19,7 +19,7 @@
 {call_hook name="Templates::Index::journal"}
 
 {if $homepageImage}
-<div align="center"><img src="{$publicFilesDir}/{$homepageImage.uploadName|escape}" width="{$homepageImage.width}" height="{$homepageImage.height}" style="border: 0;" alt="" /></div>
+<div align="center"><img src="{$publicFilesDir}/{$homepageImage.uploadName|escape:"url"}" width="{$homepageImage.width|escape}" height="{$homepageImage.height|escape}" style="border: 0;" alt="" /></div>
 {/if}
 
 <br /><br />

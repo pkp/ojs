@@ -20,7 +20,6 @@ import('oai.OAI');
 import('oai.ojs.OAIDAO');
 
 class JournalOAI extends OAI {
-
 	/** @var $site Site associated site object */
 	var $site;
 	
@@ -99,12 +98,12 @@ class JournalOAI extends OAI {
 		$info = &new OAIRepository();
 		
 		if (isset($this->journal)) {
-			$info->repositoryName = $this->journal->getTitle();
-			$info->adminEmail = $this->journal->getSetting('contactEmail');
+			$info->repositoryName = $this->journal->getJournalTitle();
+			$info->adminEmail = $this->journal->getLocalizedSetting('contactEmail');
 
 		} else {
-			$info->repositoryName = $this->site->getTitle();
-			$info->adminEmail = $this->site->getContactEmail();
+			$info->repositoryName = $this->site->getSiteTitle();
+			$info->adminEmail = $this->site->getSiteContactEmail();
 		}
 		
 		$info->sampleIdentifier = $this->articleIdToIdentifier(1);
@@ -202,7 +201,6 @@ class JournalOAI extends OAI {
 		$this->dao->insertToken($token);
 		return $token;
 	}
-	
 }
 
 ?>

@@ -16,17 +16,31 @@
 {include file="common/formErrors.tpl"}
 
 <table class="data" width="100%">
+{if count($formLocales) > 1}
+	<tr valign="top">
+		<td width="20%" class="label">{fieldLabel name="formLocale" required="true" key="common.language"}</td>
+		<td width="80%" class="value">
+			{url|assign:"settingsUrl" op="settings"}
+			{form_language_chooser form="settings" url=$settingsUrl}
+		</td>
+	</tr>
+{/if}
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="title" key="admin.settings.siteTitle" required="true"}</td>
-		<td width="80%" class="value"><input type="text" id="title" name="title" value="{$title|escape}" size="40" maxlength="120" class="textField" /></td>
+		<td width="80%" class="value"><input type="text" id="title" name="title[{$formLocale|escape}]" value="{$title[$formLocale]|escape}" size="40" maxlength="120" class="textField" /></td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{fieldLabel name="intro" key="admin.settings.introduction"}</td>
-		<td class="value"><textarea name="intro" id="intro" cols="40" rows="10" class="textArea">{$intro|escape}</textarea></td>
+		<td class="value"><textarea name="intro[{$formLocale|escape}]" id="intro" cols="40" rows="10" class="textArea">{$intro[$formLocale]|escape}</textarea></td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{fieldLabel name="redirect" key="admin.settings.journalRedirect"}</td>
-		<td class="value"><select name="redirect" id="redirect" size="1" class="selectMenu">{html_options options=$redirectOptions selected=$redirect}</select></td>
+		<td class="value">
+			<select name="redirect" id="redirect" size="1" class="selectMenu">
+				<option value="">{translate key="admin.settings.noJournalRedirect"}</option>
+				{html_options options=$redirectOptions selected=$redirect}
+			</select>
+		</td>
 	</tr>
 	<tr valign="top">
 		<td>&nbsp;</td>
@@ -34,15 +48,15 @@
 	</tr>
 	<tr valign="top">
 		<td class="label">{fieldLabel name="about" key="admin.settings.aboutDescription"}</td>
-		<td class="value"><textarea name="about" id="about" cols="40" rows="10" class="textArea">{$about|escape}</textarea></td>
+		<td class="value"><textarea name="about[{$formLocale|escape}]" id="about" cols="40" rows="10" class="textArea">{$about[$formLocale]|escape}</textarea></td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{fieldLabel name="contactName" key="admin.settings.contactName" required="true"}</td>
-		<td class="value"><input type="text" id="contactName" name="contactName" value="{$contactName|escape}" size="40" maxlength="90" class="textField" /></td>
+		<td class="value"><input type="text" id="contactName" name="contactName[{$formLocale|escape}]" value="{$contactName[$formLocale]|escape}" size="40" maxlength="90" class="textField" /></td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{fieldLabel name="contactEmail" key="admin.settings.contactEmail" required="true"}</td>
-		<td class="value"><input type="text" id="contactEmail" name="contactEmail" value="{$contactEmail|escape}" size="40" maxlength="90" class="textField" /></td>
+		<td class="value"><input type="text" id="contactEmail" name="contactEmail[{$formLocale|escape}]" value="{$contactEmail[$formLocale]|escape}" size="40" maxlength="90" class="textField" /></td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{fieldLabel name="minPasswordLength" key="admin.settings.minPasswordLength" required="true"}</td>

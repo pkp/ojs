@@ -28,7 +28,7 @@
 <!ELEMENT install (schema?, data?, code?, note?, upgrade?)*>
 	<!ATTLIST install
 		version CDATA #REQUIRED>
-<!ELEMENT upgrade (schema*, data*, code*, note*, upgrade*)>
+<!ELEMENT upgrade (schema?, data?, code?, note?, upgrade?)+>
 	<!ATTLIST upgrade
 		minversion CDATA #IMPLIED
 		maxversion CDATA #IMPLIED>

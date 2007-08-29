@@ -17,7 +17,6 @@
 import("manager.form.setup.JournalSetupForm");
 
 class JournalSetupStep5Form extends JournalSetupForm {
-	
 	/**
 	 * Constructor.
 	 */
@@ -27,16 +26,8 @@ class JournalSetupStep5Form extends JournalSetupForm {
 			array(
 				'homeHeaderTitleType' => 'int',
 				'homeHeaderTitle' => 'string',
-				'homeHeaderTitleTypeAlt1' => 'int',
-				'homeHeaderTitleAlt1' => 'string',
-				'homeHeaderTitleTypeAlt2' => 'int',
-				'homeHeaderTitleAlt2' => 'string',
 				'pageHeaderTitleType' => 'int',
 				'pageHeaderTitle' => 'string',
-				'pageHeaderTitleTypeAlt1' => 'int',
-				'pageHeaderTitleAlt1' => 'string',
-				'pageHeaderTitleTypeAlt2' => 'int',
-				'pageHeaderTitleAlt2' => 'string',
 				'readerInformation' => 'string',
 				'authorInformation' => 'string',
 				'librarianInformation' => 'string',
@@ -44,7 +35,7 @@ class JournalSetupStep5Form extends JournalSetupForm {
 				'journalPageFooter' => 'string',
 				'displayCurrentIssue' => 'bool',
 				'additionalHomeContent' => 'string',
-				'journalDescription' => 'string',
+				'description' => 'string',
 				'navItems' => 'object',
 				'itemsPerPage' => 'int',
 				'numPageLinks' => 'int',
@@ -53,6 +44,14 @@ class JournalSetupStep5Form extends JournalSetupForm {
 		);
 	}
 	
+	/**
+	 * Get the list of field names for which localized settings are used.
+	 * @return array
+	 */
+	function getLocaleFieldNames() {
+		return array('homeHeaderTitleType', 'homeHeaderTitle', 'pageHeaderTitleType', 'pageHeaderTitle', 'readerInformation', 'authorInformation', 'librarianInformation', 'journalPageHeader', 'journalPageFooter', 'homepageImage', 'additionalHomeContent', 'description', 'navItems');
+	}
+
 	/**
 	 * Display the form.
 	 */
@@ -72,16 +71,8 @@ class JournalSetupStep5Form extends JournalSetupForm {
 		$templateMgr->assign(array(
 			'homeHeaderTitleImage' => $journal->getSetting('homeHeaderTitleImage'),
 			'homeHeaderLogoImage'=> $journal->getSetting('homeHeaderLogoImage'),
-			'homeHeaderTitleImageAlt1' => $journal->getSetting('homeHeaderTitleImageAlt1'),
-			'homeHeaderLogoImageAlt1'=> $journal->getSetting('homeHeaderLogoImageAlt1'),
-			'homeHeaderTitleImageAlt2' => $journal->getSetting('homeHeaderTitleImageAlt2'),
-			'homeHeaderLogoImageAlt2'=> $journal->getSetting('homeHeaderLogoImageAlt2'),
 			'pageHeaderTitleImage' => $journal->getSetting('pageHeaderTitleImage'),
 			'pageHeaderLogoImage' => $journal->getSetting('pageHeaderLogoImage'),
-			'pageHeaderTitleImageAlt1' => $journal->getSetting('pageHeaderTitleImageAlt1'),
-			'pageHeaderLogoImageAlt1' => $journal->getSetting('pageHeaderLogoImageAlt1'),
-			'pageHeaderTitleImageAlt2' => $journal->getSetting('pageHeaderTitleImageAlt2'),
-			'pageHeaderLogoImageAlt2' => $journal->getSetting('pageHeaderLogoImageAlt2'),
 			'homepageImage' => $journal->getSetting('homepageImage'),
 			'journalStyleSheet' => $journal->getSetting('journalStyleSheet'),
 			'readerInformation' => $journal->getSetting('readerInformation'),
@@ -118,35 +109,37 @@ class JournalSetupStep5Form extends JournalSetupForm {
 	/**
 	 * Uploads a journal image.
 	 * @param $settingName string setting key associated with the file
+	 * @param $locale string
 	 */
-	function uploadImage($settingName) {
+	function uploadImage($settingName, $locale) {
 		$journal = &Request::getJournal();
 		$settingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
 		
 		import('file.PublicFileManager');
 		$fileManager = &new PublicFileManager();
-		if ($fileManager->uploadedFileExists($settingName)) {
+		if ($fileManager->uploadedFileExists($settingName, $locale)) {
 			$type = $fileManager->getUploadedFileType($settingName);
 			$extension = $fileManager->getImageExtension($type);
 			if (!$extension) {
 				return false;
 			}
-			
-			$uploadName = $settingName . $extension;
+			$uploadName = $settingName . '_' . $locale . $extension;
 			if ($fileManager->uploadJournalFile($journal->getJournalId(), $settingName, $uploadName)) {
 				// Get image dimensions
 				$filePath = $fileManager->getJournalFilesPath($journal->getJournalId());
-				list($width, $height) = getimagesize($filePath . '/' . $settingName.$extension);
-				
-				$value = array(
-					'name' => $fileManager->getUploadedFileName($settingName),
+				list($width, $height) = getimagesize($filePath . '/' . $uploadName);
+
+				$value = $journal->getSetting($settingName);
+				$value[$locale] = array(
+					'name' => $fileManager->getUploadedFileName($settingName, $locale),
 					'uploadName' => $uploadName,
 					'width' => $width,
 					'height' => $height,
 					'dateUploaded' => Core::getCurrentDate()
 				);
 				
-				return $settingsDao->updateSetting($journal->getJournalId(), $settingName, $value, 'object');
+				$settingsDao->updateSetting($journal->getJournalId(), $settingName, $value, 'object', true);
+				return true;
 			}
 		}
 		
@@ -156,16 +149,17 @@ class JournalSetupStep5Form extends JournalSetupForm {
 	/**
 	 * Deletes a journal image.
 	 * @param $settingName string setting key associated with the file
+	 * @param $locale string
 	 */
-	function deleteImage($settingName) {
+	function deleteImage($settingName, $locale = null) {
 		$journal = &Request::getJournal();
 		$settingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
 		$setting = $settingsDao->getSetting($journal->getJournalId(), $settingName);
 		
 		import('file.PublicFileManager');
 		$fileManager = &new PublicFileManager();
-	 	if ($fileManager->removeJournalFile($journal->getJournalId(), $setting['uploadName'])) {
-			return $settingsDao->deleteSetting($journal->getJournalId(), $settingName);
+	 	if ($fileManager->removeJournalFile($journal->getJournalId(), $locale !== null ? $setting[$locale]['uploadName'] : $setting['uploadName'] )) {
+			return $settingsDao->deleteSetting($journal->getJournalId(), $settingName, $locale);
 		} else {
 			return false;
 		}

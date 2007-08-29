@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	{* required elements *}
 	<id>{$journal->getUrl()}/issue/feed</id>
-	<title>{$journal->getTitle()|escape:"html"|strip|strip_tags}</title>
+	<title>{$journal->getJournalTitle()|escape:"html"|strip|strip_tags}</title>
 	<updated>{$issue->getDatePublished()|date_format:"%Y-%m-%dT%T%z"|regex_replace:"/00$/":":00"}</updated>
 
 	{* recommended elements *}
@@ -21,15 +21,13 @@
 	{* <category/> *}
 	{* <contributor/> *}
 	<generator uri="http://pkp.sfu.ca/ojs/" version="{$ojsVersion}">Open Journal Systems</generator>
-	{if $journal->getDescription()}
-		{assign var="description" value=$journal->getDescription()}
-	{elseif $journal->getSetting('journalDescription')}
-		{assign var="description" value=$journal->getSetting('journalDescription')}
-	{elseif $journal->getSetting('searchDescription')}
-		{assign var="description" value=$journal->getSetting('searchDescription')}
+	{if $journal->getJournalDescription()}
+		{assign var="description" value=$journal->getJournalDescription()}
+	{elseif $journal->getLocalizedSetting('searchDescription')}
+		{assign var="description" value=$journal->getLocalizedSetting('searchDescription')}
 	{/if}
-    {if $journal->getSetting('copyrightNotice')}
-    <rights>{$journal->getSetting('copyrightNotice')|strip|strip_tags|escape:"html"}</rights>
+    {if $journal->getLocalizedSetting('copyrightNotice')}
+    <rights>{$journal->getLocalizedSetting('copyrightNotice')|strip|strip_tags|escape:"html"}</rights>
     {/if}
 	<subtitle>{$description|strip|strip_tags|escape:"html"}</subtitle>
 
@@ -52,8 +50,8 @@
         </author>
 		{/foreach}
 		<link rel="alternate" href="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)}" />
-        {if $article->getAbstract()}
-		<summary type="html" xml:base="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)}">{$article->getAbstract()|strip|strip_tags|escape:"html"}</summary>
+        {if $article->getArticleAbstract()}
+		<summary type="html" xml:base="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)}">{$article->getArticleAbstract()|strip|strip_tags|escape:"html"}</summary>
         {/if}
 
 		{* optional elements *}

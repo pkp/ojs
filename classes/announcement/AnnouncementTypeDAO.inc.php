@@ -18,14 +18,6 @@
 import('announcement.AnnouncementType');
 
 class AnnouncementTypeDAO extends DAO {
-
-	/**
-	 * Constructor.
-	 */
-	function AnnouncementTypeDAO() {
-		parent::DAO();
-	}
-
 	/**
 	 * Retrieve an announcement type by announcement type ID.
 	 * @param $typeId int
@@ -64,7 +56,11 @@ class AnnouncementTypeDAO extends DAO {
 	 */
 	function getAnnouncementTypeName($typeId) {
 		$result = &$this->retrieve(
-			'SELECT type_name FROM announcement_types WHERE type_id = ?', $typeId
+			'SELECT COALESCE(l.setting_value, p.setting_value) FROM announcement_type_settings l LEFT JOIN announcement_type_settings p ON (p.type_id = ? AND p.setting_name = ? AND p.locale = ?) WHERE l.type_id = ? AND l.setting_name = ? AND l.locale = ?', 
+			array(
+				$typeId, 'name', Locale::getLocale(),
+				$typeId, 'name', Locale::getPrimaryLocale()
+			)
 		);
 		
 		$returner = isset($result->fields[0]) ? $result->fields[0] : false;
@@ -101,54 +97,8 @@ class AnnouncementTypeDAO extends DAO {
 		return $returner;
 	}
 
-	/**
-	 * Check if a announcement type exists with the given type name for a journal.
-	 * @param $typeName string
-	 * @param $journalId int
-	 * @return boolean
-	 */
-	function announcementTypeExistsByTypeName($typeName, $journalId) {
-		$result = &$this->retrieve(
-			'SELECT COUNT(*)
-				FROM announcement_types
-				WHERE type_name = ?
-				AND   journal_id = ?',
-			array(
-				$typeName,
-				$journalId
-			)
-		);
-		$returner = isset($result->fields[0]) && $result->fields[0] != 0 ? true : false;
-
-		$result->Close();
-		unset($result);
-
-		return $returner;
-	}
-	
-	/**
-	 * Return announcement type ID based on a type name for a journal.
-	 * @param $typeName string
-	 * @param $journalId int
-	 * @return int
-	 */
-	function getAnnouncementTypeByTypeName($typeName, $journalId) {
-		$result = &$this->retrieve(
-			'SELECT type_id
-				FROM announcement_types
-				WHERE type_name = ?
-				AND   journal_id = ?',
-			array(
-				$typeName,
-				$journalId
-			)
-		);
-		$returner = isset($result->fields[0]) ? $result->fields[0] : 0;
-
-		$result->Close();
-		unset($result);
-
-		return $returner;
+	function getLocaleFieldNames() {
+		return array('name');
 	}
 
 	/**
@@ -160,9 +110,19 @@ class AnnouncementTypeDAO extends DAO {
 		$announcementType = &new AnnouncementType();
 		$announcementType->setTypeId($row['type_id']);
 		$announcementType->setJournalId($row['journal_id']);
-		$announcementType->setTypeName($row['type_name']);
+		$this->getDataObjectSettings('announcement_type_settings', 'type_id', $row['type_id'], $announcementType);
 		
 		return $announcementType;
+	}
+
+	/**
+	 * Update the localized settings for this object
+	 * @param $announcementType object
+	 */
+	function updateLocaleFields(&$announcementType) {
+		$this->updateDataObjectSettings('announcement_type_settings', $announcementType, array(
+			'type_id' => $announcementType->getTypeId()
+		));
 	}
 
 	/**
@@ -171,17 +131,17 @@ class AnnouncementTypeDAO extends DAO {
 	 * @return int 
 	 */
 	function insertAnnouncementType(&$announcementType) {
-		$ret = $this->update(
+		$this->update(
 			sprintf('INSERT INTO announcement_types
-				(journal_id, type_name)
+				(journal_id)
 				VALUES
-				(?, ?)'),
+				(?)'),
 			array(
-				$announcementType->getJournalId(),
-				$announcementType->getTypeName()
+				$announcementType->getJournalId()
 			)
 		);
 		$announcementType->setTypeId($this->getInsertTypeId());
+		$this->updateLocaleFields($announcementType);
 		return $announcementType->getTypeId();
 	}
 
@@ -191,18 +151,18 @@ class AnnouncementTypeDAO extends DAO {
 	 * @return boolean
 	 */
 	function updateAnnouncementType(&$announcementType) {
-		return $this->update(
+		$returner = $this->update(
 			sprintf('UPDATE announcement_types
 				SET
-					journal_id = ?,
-					type_name = ?
+					journal_id = ?
 				WHERE type_id = ?'),
 			array(
 				$announcementType->getJournalId(),
-				$announcementType->getTypeName(),
 				$announcementType->getTypeId()
 			)
 		);
+		$this->updateLocaleFields($announcementType);
+		return $returner;
 	}
 
 	/**
@@ -222,9 +182,8 @@ class AnnouncementTypeDAO extends DAO {
 	 * @return boolean
 	 */
 	function deleteAnnouncementTypeById($typeId) {
-		$ret = $this->update(
-			'DELETE FROM announcement_types WHERE type_id = ?', $typeId
-		);
+		$this->update('DELETE FROM announcement_type_settings WHERE type_id = ?', $typeId);
+		$ret = $this->update('DELETE FROM announcement_types WHERE type_id = ?', $typeId);
 
 		// Delete all announcements with this announcement type
 		if ($ret) {
@@ -240,9 +199,11 @@ class AnnouncementTypeDAO extends DAO {
 	 * @param $journalId int
 	 */
 	function deleteAnnouncementTypesByJournal($journalId) {
-		return $this->update(
-			'DELETE FROM announcement_types WHERE journal_id = ?', $journalId
-		);
+		$types =& $this->getAnnouncementTypesByJournalId($journalId);
+		while (($type =& $types->next())) {
+			$this->deleteAnnouncementType($type);
+			unset($type);
+		}
 	}
 
 	/**
@@ -266,7 +227,6 @@ class AnnouncementTypeDAO extends DAO {
 	function getInsertTypeId() {
 		return $this->getInsertId('announcement_types', 'type_id');
 	}
-
 }
 
 ?>

@@ -337,7 +337,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$templateMgr->assign('searchField', $searchType);
 			$templateMgr->assign('searchMatch', $searchMatch);
 			$templateMgr->assign('search', $searchQuery);
-			$templateMgr->assign('searchInitial', $searchInitial);
+			$templateMgr->assign('searchInitial', Request::getUserVar('searchInitial'));
 		
 			$templateMgr->assign_by_ref('reviewers', $reviewers);
 			$templateMgr->assign('articleId', $articleId);
@@ -382,6 +382,11 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			}
 		} else {
 			// Display the "create user" form.
+			if ($profileForm->isLocaleResubmit()) {
+				$profileForm->readInputData();
+			} else {
+				$profileForm->initData();
+			}
 			$createReviewerForm->display();
 		}
 
@@ -436,7 +441,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->assign('searchField', $searchType);
 		$templateMgr->assign('searchMatch', $searchMatch);
 		$templateMgr->assign('search', $searchQuery);
-		$templateMgr->assign('searchInitial', $searchInitial);
+		$templateMgr->assign('searchInitial', Request::getUserVar('searchInitial'));
 
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('fieldOptions', Array(
@@ -687,9 +692,22 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		} else {
 			$site = &Request::getSite();
 			$journal = &Request::getJournal();
-			
+
+			$countryDao =& DAORegistry::getDAO('CountryDAO');
+			$country = null;
+			if ($user->getCountry() != '') {
+				$country = $countryDao->getCountry($user->getCountry());
+			}
+			$templateMgr->assign('country', $country);
+ 
+			$disciplineDao =& DAORegistry::getDAO('DisciplineDAO');
+			$discipline = null;
+			if ($user->getDiscipline() != '') {
+				$discipline = $disciplineDao->getDiscipline($user->getDiscipline());
+			}
+			$templateMgr->assign('discipline', $discipline);
+
 			$templateMgr->assign_by_ref('user', $user);
-			$templateMgr->assign('profileLocalesEnabled', $site->getProfileLocalesEnabled());
 			$templateMgr->assign('localeNames', Locale::getAllLocales());
 			$templateMgr->assign('helpTopicId', 'journal.roles.index');
 			$templateMgr->display('sectionEditor/userProfile.tpl');
@@ -794,7 +812,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$templateMgr->assign('searchField', $searchType);
 			$templateMgr->assign('searchMatch', $searchMatch);
 			$templateMgr->assign('search', $searchQuery);
-			$templateMgr->assign('searchInitial', $searchInitial);
+			$templateMgr->assign('searchInitial', Request::getUserVar('searchInitial'));
 		
 			$templateMgr->assign_by_ref('users', $copyeditors);
 			$templateMgr->assign('currentUser', $submission->getCopyeditorId());
@@ -946,8 +964,12 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		import('submission.form.SuppFileForm');
 		
 		$submitForm = &new SuppFileForm($submission);
-		
-		$submitForm->initData();
+
+		if ($submitForm->isLocaleResubmit()) {
+			$submitForm->readInputData();
+		} else {
+			$submitForm->initData();
+		}
 		$submitForm->display();
 	}
 	
@@ -964,8 +986,12 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		import('submission.form.SuppFileForm');
 		
 		$submitForm = &new SuppFileForm($submission, $suppFileId);
-		
-		$submitForm->initData();
+
+		if ($submitForm->isLocaleResubmit()) {
+			$submitForm->readInputData();
+		} else {
+			$submitForm->initData();
+		}
 		$submitForm->display();
 	}
 	
@@ -1175,7 +1201,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$templateMgr->assign('searchField', $searchType);
 			$templateMgr->assign('searchMatch', $searchMatch);
 			$templateMgr->assign('search', $searchQuery);
-			$templateMgr->assign('searchInitial', $searchInitial);
+			$templateMgr->assign('searchInitial', Request::getUserVar('searchInitial'));
 			$templateMgr->assign('alphaList', explode(' ', Locale::translate('common.alphaList')));
 			
 			$templateMgr->assign('pageTitle', 'user.role.layoutEditors');
@@ -1260,8 +1286,12 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		import('submission.form.ArticleGalleyForm');
 		
 		$submitForm = &new ArticleGalleyForm($articleId, $galleyId);
-		
-		$submitForm->initData();
+
+		if ($submitForm->isLocaleResubmit()) {
+			$submitForm->readInputData();
+		} else {
+			$submitForm->initData();
+		}
 		$submitForm->display();
 	}
 	
@@ -1714,7 +1744,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
 
-		if ($userId && $articleId  && $roleDao->roleExists($journal->getJournalId(), $userId, ROLE_ID_PROOFREADER)) {
+		if ($userId && $articleId && $roleDao->roleExists($journal->getJournalId(), $userId, ROLE_ID_PROOFREADER)) {
 			import('submission.proofreader.ProofreaderAction');
 			ProofreaderAction::selectProofreader($userId, $submission);
 			Request::redirect(null, null, 'submissionEditing', $articleId);
@@ -1745,7 +1775,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$templateMgr->assign('searchField', $searchType);
 			$templateMgr->assign('searchMatch', $searchMatch);
 			$templateMgr->assign('search', $searchQuery);
-			$templateMgr->assign('searchInitial', $searchInitial);
+			$templateMgr->assign('searchInitial', Request::getUserVar('searchInitial'));
 			
 			$templateMgr->assign_by_ref('users', $proofreaders);
 

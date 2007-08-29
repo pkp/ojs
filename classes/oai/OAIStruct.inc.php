@@ -18,7 +18,6 @@
  * OAI repository configuration.
  */
 class OAIConfig {
-
 	/** @var $baseUrl string URL to the OAI front-end */
 	var $baseUrl = '';
 	
@@ -134,6 +133,13 @@ class OAIMetadataFormat {
 		$this->namespace = $namespace;
 	}
 	
+	function getLocalizedData($data, $locale) {
+		foreach ($data as $element) {
+			if (isset($data[$locale])) return $data[$locale];
+		}
+		return '';
+	}
+
 	/**
 	 * Retrieve XML-formatted metadata for the specified record.
 	 * @param $record OAIRecord
@@ -199,21 +205,23 @@ class OAIRecord extends OAIIdentifier {
 	//
 	
 	var $url;
-	var $title;
+	var $titles;
 	var $creator;
-	var $subject;
-	var $description;
-	var $publisher;
-	var $contributor;
+	var $subjects;
+	var $descriptions;
+	var $publishers;
+	var $contributors;
 	var $date;
-	var $type;
+	var $types;
 	var $format;
-	var $source;
+	var $sources;
 	var $language;
 	var $relation;
 	var $coverage;
 	var $rights;
 	var $pages;
+
+	var $primaryLocale;
 }
 
 ?>

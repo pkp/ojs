@@ -19,6 +19,9 @@ import('form.validation.FormValidatorEmail');
 import('form.validation.FormValidatorAlphaNum');
 import('form.validation.FormValidatorInSet');
 import('form.validation.FormValidatorArray');
+import('form.validation.FormValidatorArrayCustom');
+import('form.validation.FormValidatorLocale');
+import('form.validation.FormValidatorLocaleEmail');
 import('form.validation.FormValidatorLength');
 import('form.validation.FormValidatorCustom');
 import('form.validation.FormValidatorCaptcha');
@@ -82,7 +85,7 @@ class FormValidator {
 	 * @return string
 	 */
 	function getMessage() {
-		return $this->message;
+		return Locale::translate($this->message);
 	}
 	
 }

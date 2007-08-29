@@ -33,6 +33,24 @@ function moveAuthor(dir, authorIndex) {
 </script>
 {/literal}
 
+{if count($formLocales) > 1}
+<table width="100%" class="data">
+	<tr valign="top">
+		<td width="20%" class="label">{fieldLabel name="formLocale" required="true" key="common.language"}</td>
+		<td width="80%" class="value">
+			{url|assign:"submitFormUrl" op="submit" path="2" articleId=$articleId}
+			{* Maintain localized author bios across requests *}
+			{foreach from=$authors key=authorIndex item=author}
+				{foreach from=$author.biography key="thisLocale" item="thisBiography"}
+					{if $thisLocale != $formLocale}<input type="hidden" name="authors[{$authorIndex}][biography][{$thisLocale|escape}]" value="{$thisBiography|escape}" />{/if}
+				{/foreach}
+			{/foreach}
+			{form_language_chooser form="submit" url=$submitFormUrl}
+		</td>
+	</tr>
+</table>
+{/if}
+
 <h3>{translate key="article.authors"}</h3>
 <input type="hidden" name="deletedAuthors" value="{$deletedAuthors|escape}" />
 <input type="hidden" name="moveAuthor" value="0" />
@@ -77,14 +95,12 @@ function moveAuthor(dir, authorIndex) {
 	<td width="80%" class="value"><input type="text" class="textField" name="authors[{$authorIndex}][email]" id="authors-{$authorIndex}-email" value="{$author.email|escape}" size="30" maxlength="90" /></td>
 </tr>
 <tr valign="top">
-	<td width="20%" class="label">{fieldLabel name="authors-$authorIndex-url" key="user.url"}</td>
-	<td width="80%" class="value">
-		<input type="text" class="textField" name="authors[{$authorIndex}][url]" id="authors-{$authorIndex}-url" value="{$author.url|escape}" size="30" maxlength="90" />
-	</td>
+	<td class="label">{fieldLabel name="authors-$authorIndex-url" key="user.url"}</td>
+	<td class="value"><input type="text" name="authors[{$authorIndex}][url]" id="authors-{$authorIndex}-url" value="{$author.url|escape}" size="30" maxlength="90" class="textField" /></td>
 </tr>
 <tr valign="top">
 	<td width="20%" class="label">{fieldLabel name="authors-$authorIndex-biography" key="user.biography"}<br />{translate key="user.biography.description"}</td>
-	<td width="80%" class="value"><textarea name="authors[{$authorIndex}][biography]" class="textArea" id="authors-{$authorIndex}-biography" rows="5" cols="40">{$author.biography|escape}</textarea></td>
+	<td width="80%" class="value"><textarea name="authors[{$authorIndex}][biography][{$formLocale|escape}]" class="textArea" id="authors-{$authorIndex}-biography" rows="5" cols="40">{$author.biography[$formLocale]|escape}</textarea></td>
 </tr>
 {if $smarty.foreach.authors.total > 1}
 <tr valign="top">
@@ -136,8 +152,12 @@ function moveAuthor(dir, authorIndex) {
 	<td width="80%" class="value"><input type="text" class="textField" name="authors[0][email]" id="authors-0-email" size="30" maxlength="90" /></td>
 </tr>
 <tr valign="top">
+	<td width="20%" class="label">{fieldLabel name="authors-0-url" required="true" key="user.url"}</td>
+	<td width="80%" class="value"><input type="text" class="textField" name="authors[0][url]" id="authors-0-url" size="30" maxlength="90" /></td>
+</tr>
+<tr valign="top">
 	<td width="20%" class="label">{fieldLabel name="authors-0-biography" key="user.biography"}<br />{translate key="user.biography.description"}</td>
-	<td width="80%" class="value"><textarea name="authors[0][biography]" class="textArea" id="authors-0-biography" rows="5" cols="40"></textarea></td>
+	<td width="80%" class="value"><textarea name="authors[0][biography][{$formLocale|escape}]" class="textArea" id="authors-0-biography" rows="5" cols="40"></textarea></td>
 </tr>
 </table>
 {/foreach}
@@ -152,38 +172,14 @@ function moveAuthor(dir, authorIndex) {
 
 <tr valign="top">
 	<td width="20%" class="label">{fieldLabel name="title" required="true" key="article.title"}</td>
-	<td width="80%" class="value"><input type="text" class="textField" name="title" id="title" value="{$title|escape}" size="60" maxlength="255" /></td>
+	<td width="80%" class="value"><input type="text" class="textField" name="title[{$formLocale|escape}]" id="title" value="{$title[$formLocale]|escape}" size="60" maxlength="255" /></td>
 </tr>
-{if $alternateLocale1}
-<tr valign="top">
-	<td width="20%" class="label">{fieldLabel name="titleAlt1" key="article.title"} ({$languageToggleLocales.$alternateLocale1|escape})</td>
-	<td width="80%" class="value"><input type="text" class="textField" name="titleAlt1" id="titleAlt1" value="{$titleAlt1|escape}" size="60" maxlength="255" /></td>
-</tr>
-{/if}
-{if $alternateLocale2}
-<tr valign="top">
-	<td width="20%" class="label">{fieldLabel name="titleAlt2" key="article.title"} ({$languageToggleLocales.$alternateLocale2|escape})</td>
-	<td width="80%" class="value"><input type="text" class="textField" name="titleAlt2" id="titleAlt2" value="{$titleAlt2|escape}" size="60" maxlength="255" /></td>
-</tr>
-{/if}
 
 {if $section->getAbstractsDisabled()==0}
 <tr valign="top">
 	<td width="20%" class="label">{fieldLabel name="abstract" required="true" key="article.abstract"}</td>
-	<td width="80%" class="value"><textarea name="abstract" id="abstract" class="textArea" rows="15" cols="60">{$abstract|escape}</textarea></td>
+	<td width="80%" class="value"><textarea name="abstract[{$formLocale|escape}]" id="abstract" class="textArea" rows="15" cols="60">{$abstract[$formLocale]|escape}</textarea></td>
 </tr>
-{if $alternateLocale1}
-<tr valign="top">
-	<td width="20%" class="label">{fieldLabel name="abstractAlt1" key="article.abstract"} ({$languageToggleLocales.$alternateLocale1|escape})</td>
-	<td width="80%" class="value"><textarea name="abstractAlt1" class="textArea" id="abstractAlt1" rows="15" cols="60">{$abstractAlt1|escape}</textarea></td>
-</tr>
-{/if}
-{if $alternateLocale2}
-<tr valign="top">
-	<td width="20%" class="label">{fieldLabel name="abstractAlt2" key="article.abstract"} ({$languageToggleLocales.$alternateLocale2|escape})</td>
-	<td width="80%" class="value"><textarea name="abstractAlt2" class="textArea" id="abstractAlt2" rows="15" cols="60">{$abstractAlt2|escape}</textarea></td>
-</tr>
-{/if}
 {/if}{* Abstracts enabled *}
 </table>
 
@@ -195,12 +191,12 @@ function moveAuthor(dir, authorIndex) {
 	<table width="100%" class="data">
 	{if $journalSettings.metaDiscipline}
 	<tr valign="top">
-		<td{if $journalSettings.metaDisciplineExamples} rowspan="2"{/if} width="20%" class="label">{fieldLabel name="discipline" key="article.discipline"}</td>
-		<td width="80%" class="value"><input type="text" class="textField" name="discipline" id="discipline" value="{$discipline|escape}" size="40" maxlength="255" /></td>
+		<td{if $currentJournal->getLocalizedSetting('metaDisciplineExamples') != ''} rowspan="2"{/if} width="20%" class="label">{fieldLabel name="discipline" key="article.discipline"}</td>
+		<td width="80%" class="value"><input type="text" class="textField" name="discipline[{$formLocale|escape}]" id="discipline" value="{$discipline[$formLocale]|escape}" size="40" maxlength="255" /></td>
 	</tr>
-	{if $journalSettings.metaDisciplineExamples}
+	{if $currentJournal->getLocalizedSetting('metaDisciplineExamples')}
 	<tr valign="top">
-		<td><span class="instruct">{$journalSettings.metaDisciplineExamples|escape}</span></td>
+		<td><span class="instruct">{$currentJournal->getLocalizedSetting('metaDisciplineExamples')|escape}</span></td>
 	</tr>
 	{/if}
 	<tr valign="top">
@@ -212,10 +208,10 @@ function moveAuthor(dir, authorIndex) {
 	{if $journalSettings.metaSubjectClass}
 	<tr valign="top">
 		<td rowspan="2" width="20%" class="label">{fieldLabel name="subjectClass" key="article.subjectClassification"}</td>
-		<td width="80%" class="value"><input type="text" class="textField" name="subjectClass" id="subjectClass" value="{$subjectClass|escape}" size="40" maxlength="255" /></td>
+		<td width="80%" class="value"><input type="text" class="textField" name="subjectClass[{$formLocale|escape}]" id="subjectClass" value="{$subjectClass[$formLocale]|escape}" size="40" maxlength="255" /></td>
 	</tr>
 	<tr valign="top">
-		<td width="20%" class="label"><a href="{$journalSettings.metaSubjectClassUrl|escape}" target="_blank">{$journalSettings.metaSubjectClassTitle|escape}</a></td>
+		<td width="20%" class="label"><a href="{$currentJournal->getLocalizedSetting('metaSubjectClassUrl')|escape}" target="_blank">{$currentJournal->getLocalizedSetting('metaSubjectClassTitle')|escape}</a></td>
 	</tr>
 	<tr valign="top">
 		<td>&nbsp;</td>
@@ -225,12 +221,12 @@ function moveAuthor(dir, authorIndex) {
 	
 	{if $journalSettings.metaSubject}
 	<tr valign="top">
-		<td{if $journalSettings.metaSubjectExamples} rowspan="2"{/if} width="20%" class="label">{fieldLabel name="subject" key="article.subject"}</td>
-		<td width="80%" class="value"><input type="text" class="textField" name="subject" id="subject" value="{$subject|escape}" size="40" maxlength="255" /></td>
+		<td{if $currentJournal->getLocalizedSetting('metaSubjectExamples') != ''} rowspan="2"{/if} width="20%" class="label">{fieldLabel name="subject" key="article.subject"}</td>
+		<td width="80%" class="value"><input type="text" class="textField" name="subject[{$formLocale|escape}]" id="subject" value="{$subject[$formLocale]|escape}" size="40" maxlength="255" /></td>
 	</tr>
-	{if $journalSettings.metaSubjectExamples}
+	{if $currentJournal->getLocalizedSetting('metaSubjectExamples') != ''}
 	<tr valign="top">
-		<td><span class="instruct">{$journalSettings.metaSubjectExamples|escape}</span></td>
+		<td><span class="instruct">{$currentJournal->getLocalizedSetting('metaSubjectExamples')|escape}</span></td>
 	</tr>
 	{/if}
 	<tr valign="top">
@@ -241,25 +237,12 @@ function moveAuthor(dir, authorIndex) {
 	
 	{if $journalSettings.metaCoverage}
 	<tr valign="top">
-		<td{if $journalSettings.metaCoverageGeoExamples} rowspan="2"{/if} width="20%" class="label">{fieldLabel name="coverageGeo" key="article.coverageGeo"}</td>
-		<td width="80%" class="value"><input type="text" class="textField" name="coverageGeo" id="coverageGeo" value="{$coverageGeo|escape}" size="40" maxlength="255" /></td>
+		<td{if $currentJournal->getLocalizedSetting('metaCoverageGeoExamples') != ''} rowspan="2"{/if} width="20%" class="label">{fieldLabel name="coverageGeo" key="article.coverageGeo"}</td>
+		<td width="80%" class="value"><input type="text" class="textField" name="coverageGeo[{$formLocale|escape}]" id="coverageGeo" value="{$coverageGeo[$formLocale]|escape}" size="40" maxlength="255" /></td>
 	</tr>
-	{if $journalSettings.metaCoverageGeoExamples}
+	{if $currentJournal->getLocalizedSetting('metaCoverageGeoExamples')}
 	<tr valign="top">
-		<td><span class="instruct">{$journalSettings.metaCoverageGeoExamples|escape}</span></td>
-	</tr>
-	{/if}
-	<tr valign="top">
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
-	</tr>
-	<tr valign="top">
-		<td{if $journalSettings.metaCoverageChronExamples} rowspan="2"{/if} width="20%" class="label">{fieldLabel name="coverageChron" key="article.coverageChron"}</td>
-		<td width="80%" class="value"><input type="text" class="textField" name="coverageChron" id="coverageChron" value="{$coverageChron|escape}" size="40" maxlength="255" /></td>
-	</tr>
-	{if $journalSettings.metaCoverageChronExamples}
-	<tr valign="top">
-		<td><span class="instruct">{$journalSettings.metaCoverageChronExamples|escape}</span></td>
+		<td><span class="instruct">{$currentJournal->getLocalizedSetting('metaCoverageGeoExamples')|escape}</span></td>
 	</tr>
 	{/if}
 	<tr valign="top">
@@ -267,12 +250,25 @@ function moveAuthor(dir, authorIndex) {
 		<td>&nbsp;</td>
 	</tr>
 	<tr valign="top">
-		<td{if $journalSettings.metaCoverageResearchSampleExamples} rowspan="2"{/if} width="20%" class="label">{fieldLabel name="coverageSample" key="article.coverageSample"}</td>
-		<td width="80%" class="value"><input type="text" class="textField" name="coverageSample" id="coverageSample" value="{$coverageSample|escape}" size="40" maxlength="255" /></td>
+		<td{if $currentJournal->getLocalizedSetting('metaCoverageChronExamples') != ''} rowspan="2"{/if} width="20%" class="label">{fieldLabel name="coverageChron" key="article.coverageChron"}</td>
+		<td width="80%" class="value"><input type="text" class="textField" name="coverageChron[{$formLocale|escape}]" id="coverageChron" value="{$coverageChron[$formLocale]|escape}" size="40" maxlength="255" /></td>
 	</tr>
-	{if $journalSettings.metaCoverageResearchSampleExamples}
+	{if $currentJournal->getLocalizedSetting('metaCoverageChronExamples') != ''}
 	<tr valign="top">
-		<td><span class="instruct">{$journalSettings.metaCoverageResearchSampleExamples|escape}</span></td>
+		<td><span class="instruct">{$currentJournal->getLocalizedSetting('metaCoverageChronExamples')|escape}</span></td>
+	</tr>
+	{/if}
+	<tr valign="top">
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr valign="top">
+		<td{if $currentJournal->getLocalizedSetting('metaCoverageResearchSampleExamples') != ''} rowspan="2"{/if} width="20%" class="label">{fieldLabel name="coverageSample" key="article.coverageSample"}</td>
+		<td width="80%" class="value"><input type="text" class="textField" name="coverageSample[{$formLocale|escape}]" id="coverageSample" value="{$coverageSample[$formLocale]|escape}" size="40" maxlength="255" /></td>
+	</tr>
+	{if $currentJournal->getLocalizedSetting('metaCoverageResearchSampleExamples') != ''}
+	<tr valign="top">
+		<td><span class="instruct">{$currentJournal->getLocalizedSetting('metaCoverageResearchSampleExamples')|escape}</span></td>
 	</tr>
 	{/if}
 	<tr valign="top">
@@ -283,13 +279,13 @@ function moveAuthor(dir, authorIndex) {
 	
 	{if $journalSettings.metaType}
 	<tr valign="top">
-		<td width="20%" {if $journalSettings.metaTypeExamples}rowspan="2" {/if}class="label">{fieldLabel name="type" key="article.type"}</td>
-		<td width="80%" class="value"><input type="text" class="textField" name="type" id="type" value="{$type|escape}" size="40" maxlength="255" /></td>
+		<td width="20%" {if $currentJournal->getLocalizedSetting('metaTypeExamples') != ''}rowspan="2" {/if}class="label">{fieldLabel name="type" key="article.type"}</td>
+		<td width="80%" class="value"><input type="text" class="textField" name="type[{$formLocale|escape}]" id="type" value="{$type[$formLocale]|escape}" size="40" maxlength="255" /></td>
 	</tr>
 
-	{if $journalSettings.metaTypeExamples}
+	{if $currentJournal->getLocalizedSetting('metaTypeExamples') != ''}
 	<tr valign="top">
-		<td><span class="instruct">{$journalSettings.metaTypeExamples|escape}</span></td>
+		<td><span class="instruct">{$currentJournal->getLocalizedSetting('metaTypeExamples')|escape}</span></td>
 	</tr>
 	{/if}
 	<tr valign="top">
@@ -318,7 +314,7 @@ function moveAuthor(dir, authorIndex) {
 <table width="100%" class="data">
 <tr valign="top">
 	<td width="20%" class="label">{fieldLabel name="sponsor" key="author.submit.agencies"}</td>
-	<td width="80%" class="value"><input type="text" class="textField" name="sponsor" id="sponsor" value="{$sponsor|escape}" size="60" maxlength="255" /></td>
+	<td width="80%" class="value"><input type="text" class="textField" name="sponsor[{$formLocale|escape}]" id="sponsor" value="{$sponsor[$formLocale]|escape}" size="60" maxlength="255" /></td>
 </tr>
 </table>
 

@@ -36,6 +36,7 @@ class TinyMCEPlugin extends GenericPlugin {
 	}
 
 	function getEnableFields(&$templateMgr, $page, $op) {
+		$formLocale = $templateMgr->get_template_vars('formLocale');
 		$fields = array();
 		switch ("$page/$op") {
 			case 'author/submit':
@@ -79,7 +80,7 @@ class TinyMCEPlugin extends GenericPlugin {
 					case 1:
 						$fields[] = 'mailingAddress';
 						$fields[] = 'contactMailingAddress';
-						$fields[] = 'publisher-note';
+						$fields[] = 'publisherNote';
 						$fields[] = 'sponsorNote';
 						$fields[] = 'contributorNote';
 						break;
@@ -96,7 +97,8 @@ class TinyMCEPlugin extends GenericPlugin {
 						break;
 					case 3:
 						$fields[] = 'authorGuidelines';
-						$count = max(1, count($templateMgr->get_template_vars('submissionChecklist')));
+						$submissionChecklist = $templateMgr->get_template_vars('submissionChecklist');
+						$count = max(1, isset($submissionChecklist[$formLocale])?count($submissionChecklist[$formLocale]):0);
 						for ($i=0; $i<$count; $i++) {
 							$fields[] = "submissionChecklist-$i";
 						}
@@ -136,8 +138,10 @@ class TinyMCEPlugin extends GenericPlugin {
 			case 'sectionEditor/submissionNotes':
 				$fields[] = 'note';
 				break;
+			case 'author/viewMetadata':
 			case 'sectionEditor/viewMetadata':
 			case 'editor/viewMetadata':
+			case 'author/saveMetadata':
 			case 'sectionEditor/saveMetadata':
 			case 'editor/saveMetadata':
 				$count = max(1, count($templateMgr->get_template_vars('authors')));

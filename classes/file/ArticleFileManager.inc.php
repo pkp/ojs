@@ -346,9 +346,9 @@ class ArticleFileManager extends FileManager {
 	 * @param $type string
 	 * @return string
 	 */
-	function typeToPath($type) {
+	function typeToPath($type, $locale=null) {
 		switch ($type) {
-			case ARTICLE_FILE_PUBLIC: return 'public';
+			case ARTICLE_FILE_PUBLIC: return 'public/'.$locale;
 			case ARTICLE_FILE_SUPP: return 'supp';
 			case ARTICLE_FILE_NOTE: return 'note';
 			case ARTICLE_FILE_REVIEW: return 'submission/review';

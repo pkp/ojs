@@ -12,8 +12,20 @@
 {assign var="pageTitle" value="manager.setup.managingTheJournal"}
 {include file="manager/setup/setupHeader.tpl"}
 
-<form method="post" action="{url op="saveSetup" path="4"}" enctype="multipart/form-data">
+<form name="setupForm" method="post" action="{url op="saveSetup" path="4"}" enctype="multipart/form-data">
 {include file="common/formErrors.tpl"}
+
+{if count($formLocales) > 1}
+<table width="100%" class="data">
+	<tr valign="top">
+		<td width="20%" class="label">{fieldLabel name="formLocale" required="true" key="common.language"}</td>
+		<td width="80%" class="value">
+			{url|assign:"setupFormUrl" op="setup" path="4"}
+			{form_language_chooser form="setupForm" url=$setupFormUrl}
+		</td>
+	</tr>
+</table>
+{/if}
 
 <h3>4.1 {translate key="manager.setup.securitySettings"}</h3>
 
@@ -51,7 +63,7 @@
 			<label for="enableSubscriptions-0">{translate key="manager.setup.openAccess"}</label>
 			<h4>{translate key="manager.setup.openAccessPolicy"}</h4>
 			<p><span class="instruct">{translate key="manager.setup.openAccessPolicyDescription"}</span></p>
-			<p><textarea name="openAccessPolicy" id="openAccessPolicy" rows="12" cols="60" class="textArea"{if $enableSubscriptions} disabled="disabled"{/if}>{$openAccessPolicy|escape}</textarea></p>
+			<p><textarea name="openAccessPolicy[{$formLocale|escape}]" id="openAccessPolicy" rows="12" cols="60" class="textArea"{if $enableSubscriptions} disabled="disabled"{/if}>{$openAccessPolicy[$formLocale]|escape}</textarea></p>
 		</td>
 	</tr>
 	<tr>
@@ -147,7 +159,7 @@ function toggleRegAllowOpts(form) {
 
 <p>{translate key="manager.setup.publicationScheduleDescription"}</p>
 
-<p><textarea name="pubFreqPolicy" rows="12" cols="60" class="textArea">{$pubFreqPolicy|escape}</textarea></p>
+<p><textarea name="pubFreqPolicy[{$formLocale|escape}]" rows="12" cols="60" class="textArea">{$pubFreqPolicy[$formLocale]|escape}</textarea></p>
 
 <h4>{translate key="manager.setup.publicationFormat"}</h4>
 
@@ -276,7 +288,7 @@ function toggleRegAllowOpts(form) {
 
 <p>{translate key="manager.setup.announcementsIntroductionDescription"}</p>
 
-<p><textarea name="announcementsIntroduction" id="announcementsIntroduction" rows="12" cols="60" class="textArea">{$announcementsIntroduction|escape}</textarea></p>
+<p><textarea name="announcementsIntroduction[{$formLocale|escape}]" id="announcementsIntroduction" rows="12" cols="60" class="textArea">{$announcementsIntroduction[$formLocale]|escape}</textarea></p>
 
 
 <div class="separator"></div>
@@ -302,7 +314,7 @@ function toggleRegAllowOpts(form) {
 <p>{translate key="manager.setup.copyeditInstructionsDescription"}</p>
 
 <p>
-	<textarea name="copyeditInstructions" id="copyeditInstructions" rows="12" cols="60" class="textArea">{$copyeditInstructions|escape}</textarea>
+	<textarea name="copyeditInstructions[{$formLocale|escape}]" id="copyeditInstructions" rows="12" cols="60" class="textArea">{$copyeditInstructions[$formLocale]|escape}</textarea>
 	<br />
 	<span class="instruct">{translate key="manager.setup.htmlSetupInstructions"}</span>
 </p>
@@ -331,7 +343,7 @@ function toggleRegAllowOpts(form) {
 <p>{translate key="manager.setup.layoutInstructionsDescription"}</p>
 
 <p>
-	<textarea name="layoutInstructions" id="layoutInstructions" rows="12" cols="60" class="textArea">{$layoutInstructions|escape}</textarea>
+	<textarea name="layoutInstructions[{$formLocale|escape}]" id="layoutInstructions" rows="12" cols="60" class="textArea">{$layoutInstructions[$formLocale]|escape}</textarea>
 	<br />
 	<span class="instruct">{translate key="manager.setup.htmlSetupInstructions"}</span>
 </p>
@@ -380,7 +392,7 @@ function toggleRegAllowOpts(form) {
 <p>{translate key="manager.setup.proofingInstructionsDescription"}</p>
 
 <p>
-	<textarea name="proofInstructions" id="proofInstructions" rows="12" cols="60" class="textArea">{$proofInstructions|escape}</textarea>
+	<textarea name="proofInstructions[{$formLocale|escape}]" id="proofInstructions" rows="12" cols="60" class="textArea">{$proofInstructions[$formLocale]|escape}</textarea>
 	<br />
 	<span class="instruct">{translate key="manager.setup.htmlSetupInstructions"}</span>
 </p>

@@ -97,7 +97,6 @@ class PublicFileManager extends FileManager {
  	function removeJournalFile($journalId, $fileName) {
  		return $this->deleteFile($this->getJournalFilesPath($journalId) . '/' . $fileName);
  	}
- 	
 }
 
 ?>

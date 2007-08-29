@@ -26,34 +26,18 @@ class Section extends DataObject {
 
 	/**
 	 * Get localized title of journal section.
+	 * @return string
 	 */
 	function getSectionTitle() {
-		$alternateLocaleNum = Locale::isAlternateJournalLocale($this->getJournalId());
-		$title = null;
-		switch ($alternateLocaleNum) {
-			case 1: $title = $this->getTitleAlt1(); break;
-			case 2: $title = $this->getTitleAlt2(); break;
-		}
-		// Fall back on the primary locale title.
-		if (empty($title)) $title = $this->getTitle();
-
-		return $title;
+		return $this->getLocalizedData('title');
 	}
 
 	/**
 	 * Get localized abbreviation of journal section.
+	 * @return string
 	 */
 	function getSectionAbbrev() {
-		$alternateLocaleNum = Locale::isAlternateJournalLocale($this->getJournalId());
-		$abbrev = null;
-		switch ($alternateLocaleNum) {
-			case 1: $abbrev = $this->getAbbrevAlt1(); break;
-			case 2: $abbrev = $this->getAbbrevAlt2(); break;
-		}
-		// Fall back on the primary locale title.
-		if (empty($abbrev)) $abbrev = $this->getAbbrev();
-
-		return $abbrev;
+		return $this->getLocalizedData('abbrev');
 	}
 
 	//
@@ -94,98 +78,38 @@ class Section extends DataObject {
 	
 	/**
 	 * Get title of section.
+	 * @param $locale string
 	 * @return string
 	 */
-	function getTitle() {
-		return $this->getData('title');
+	function getTitle($locale) {
+		return $this->getData('title', $locale);
 	}
 	
 	/**
 	 * Set title of section.
 	 * @param $title string
+	 * @param $locale string
 	 */
-	function setTitle($title) {
-		return $this->setData('title', $title);
-	}
-	
-	/**
-	 * Get title of section (alternate locale 1).
-	 * @return string
-	 */
-	function getTitleAlt1() {
-		return $this->getData('titleAlt1');
-	}
-	
-	/**
-	 * Set title of section (alternate locale 1).
-	 * @param $titleAlt1 string
-	 */
-	function setTitleAlt1($titleAlt1) {
-		return $this->setData('titleAlt1', $titleAlt1);
-	}
-	
-	/**
-	 * Get title of section (alternate locale 2).
-	 * @return string
-	 */
-	function getTitleAlt2() {
-		return $this->getData('titleAlt2');
-	}
-	
-	/**
-	 * Set title of section (alternate locale 2).
-	 * @param $titleAlt2 string
-	 */
-	function setTitleAlt2($titleAlt2) {
-		return $this->setData('titleAlt2', $titleAlt2);
+	function setTitle($title, $locale) {
+		return $this->setData('title', $title, $locale);
 	}
 	
 	/**
 	 * Get section title abbreviation.
+	 * @param $locale string
 	 * @return string
 	 */
-	function getAbbrev() {
-		return $this->getData('abbrev');
+	function getAbbrev($locale) {
+		return $this->getData('abbrev', $locale);
 	}
 	
 	/**
 	 * Set section title abbreviation.
 	 * @param $abbrev string
+	 * @param $locale string
 	 */
-	function setAbbrev($abbrev) {
-		return $this->setData('abbrev', $abbrev);
-	}
-	
-	/**
-	 * Get section title abbreviation (alternate locale 1).
-	 * @return string
-	 */
-	function getAbbrevAlt1() {
-		return $this->getData('abbrevAlt1');
-	}
-	
-	/**
-	 * Set section title abbreviation (alternate locale 1).
-	 * @param $abbrevAlt1 string
-	 */
-	function setAbbrevAlt1($abbrevAlt1) {
-		return $this->setData('abbrevAlt1', $abbrevAlt1);
-	}
-	
-	/**
-	 * Get section title abbreviation (alternate locale 2).
-	 * @return string
-	 */
-	function getAbbrevAlt2() {
-		return $this->getData('abbrevAlt2');
-	}
-	
-	/**
-	 * Set section title abbreviation (alternate locale 2).
-	 * @param $abbrevAlt2 string
-	 */
-	function setAbbrevAlt2($abbrevAlt2) {
-		return $this->setData('abbrevAlt2', $abbrevAlt2);
+	function setAbbrev($abbrev, $locale) {
+		return $this->setData('abbrev', $abbrev, $locale);
 	}
 	
 	/**
@@ -253,19 +177,29 @@ class Section extends DataObject {
 	}
 	
 	/**
-	 * Get string identifying type of items in this section.
+	 * Get localized string identifying type of items in this section.
 	 * @return string
 	 */
-	function getIdentifyType() {
-		return $this->getData('identifyType');
+	function getSectionIdentifyType() {
+		return $this->getLocalizedData('identifyType');
+	}
+	
+	/**
+	 * Get string identifying type of items in this section.
+	 * @param $locale string
+	 * @return string
+	 */
+	function getIdentifyType($locale) {
+		return $this->getData('identifyType', $locale);
 	}
 	
 	/**
 	 * Set string identifying type of items in this section.
 	 * @param $identifyType string
+	 * @param $locale string
 	 */
-	function setIdentifyType($identifyType) {
-		return $this->setData('identifyType', $identifyType);
+	function setIdentifyType($identifyType, $locale) {
+		return $this->setData('identifyType', $identifyType, $locale);
 	}
 	
 	/**
@@ -317,21 +251,30 @@ class Section extends DataObject {
 	}
 	
 	/**
-	 * Get policy.
+	 * Get localized section policy.
 	 * @return string
 	 */
-	function getPolicy() {
-		return $this->getData('policy');
+	function getSectionPolicy() {
+		return $this->getLocalizedData('policy');
+	}
+	
+	/**
+	 * Get policy.
+	 * @param $locale string
+	 * @return string
+	 */
+	function getPolicy($locale) {
+		return $this->getData('policy', $locale);
 	}
 	
 	/**
 	 * Set policy.
 	 * @param $policy string
+	 * @param $locale string
 	 */
-	function setPolicy($policy) {
-		return $this->setData('policy', $policy);
+	function setPolicy($policy, $locale) {
+		return $this->setData('policy', $policy, $locale);
 	}
-	
 }
 
 ?>

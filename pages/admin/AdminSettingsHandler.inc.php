@@ -26,7 +26,11 @@ class AdminSettingsHandler extends AdminHandler {
 		import('admin.form.SiteSettingsForm');
 
 		$settingsForm = &new SiteSettingsForm();
-		$settingsForm->initData();
+		if ($settingsForm->isLocaleResubmit()) {
+			$settingsForm->readInputData();
+		} else {
+			$settingsForm->initData();
+		}
 		$settingsForm->display();
 	}
 	
@@ -45,7 +49,7 @@ class AdminSettingsHandler extends AdminHandler {
 		if (Request::getUserVar('uploadSiteStyleSheet')) {
 			$site =& Request::getSite();
 			if (!$settingsForm->uploadSiteStyleSheet()) {
-				$settingsForm->addError('siteStyleSheet', 'admin.settings.siteStyleSheetInvalid');
+				$settingsForm->addError('siteStyleSheet', Locale::translate('admin.settings.siteStyleSheetInvalid'));
 			}
 		} elseif (Request::getUserVar('deleteSiteStyleSheet')) {
 			$site =& Request::getSite();

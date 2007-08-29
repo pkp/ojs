@@ -10,25 +10,39 @@
   -->
 
 <!ELEMENT users (user*)>
-<!ELEMENT user (username?, password?, first_name, middle_name?, last_name, affiliation?, signature?, email, url?, phone?, fax?, mailing_address?, biography?, role*)>
+<!ELEMENT user (username?, password?, salutation?, first_name, middle_name?, last_name, initials?, gender?, affiliation?, signature?, email, url?, phone?, fax?, mailing_address?, country?, discipline?, interests*, biography*, locales?, role*)>
 <!ELEMENT username (#PCDATA)>
 <!ELEMENT password (#PCDATA)>
+	<!ATTLIST password change (true|false) "false">
 	<!ATTLIST password encrypted (plaintext|md5|sha1) #IMPLIED>
 		<!-- How the password is encrypted (if applicable).
 		     Encrypted assumes it was encrypted by Validation::encryptCredentials()
 		     and is using the same encryption algorithm used by the system.
 		     Default is "plaintext" (unencrypted). -->
+<!ELEMENT salutation (#PCDATA)>
 <!ELEMENT first_name (#PCDATA)>
 <!ELEMENT middle_name (#PCDATA)>
 <!ELEMENT last_name (#PCDATA)>
+<!ELEMENT initials (#PCDATA)>
+<!ELEMENT gender (#PCDATA)>
 <!ELEMENT affiliation (#PCDATA)>
+<!ELEMENT signature (#PCDATA)>
+	<!ATTLIST signature
+		locale CDATA #IMPLIED>
 <!ELEMENT email (#PCDATA)>
 <!ELEMENT url (#PCDATA)>
 <!ELEMENT phone (#PCDATA)>
 <!ELEMENT fax (#PCDATA)>
 <!ELEMENT mailing_address (#PCDATA)>
-<!ELEMENT signature (#PCDATA)>
+<!ELEMENT country (#PCDATA)>
+<!ELEMENT discipline (#PCDATA)>
+<!ELEMENT interests (#PCDATA)>
+	<!ATTLIST interests
+		locale CDATA #IMPLIED>
 <!ELEMENT biography (#PCDATA)>
+	<!ATTLIST biography
+		locale CDATA #IMPLIED>
+<!ELEMENT locales (#PCDATA)>
 <!ELEMENT role EMPTY>
 	<!ATTLIST role
 		type (manager|editor|sectionEditor|layoutEditor|reviewer|copyeditor|proofreader|author|reader|subscriptionManager) #REQUIRED>

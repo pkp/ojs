@@ -59,18 +59,28 @@ class AnnouncementType extends DataObject {
 
 	/**
 	 * Get the type of the announcement type.
-	 * @return int
+	 * @return string
 	 */
-	function getTypeName() {
-		return $this->getData('typeName');
+	function getAnnouncementTypeName() {
+		return $this->getLocalizedData('name');
 	}
 	
 	/**
-	 * Set the type of the announcement type.
-	 * @param $typeName int
+	 * Get the type of the announcement type.
+	 * @param $locale string
+	 * @return string
 	 */
-	function setTypeName($typeName) {
-		return $this->setData('typeName', $typeName);
+	function getName($locale) {
+		return $this->getData('name', $locale);
+	}
+
+	/**
+	 * Set the type of the announcement type.
+	 * @param $name string
+	 * @param $locale string
+	 */
+	function setName($name, $locale) {
+		return $this->setData('name', $name, $locale);
 	}
 
 }

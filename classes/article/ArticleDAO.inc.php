@@ -18,7 +18,6 @@
 import('article.Article');
 
 class ArticleDAO extends DAO {
-
 	var $authorDao;
 
 	/**
@@ -28,7 +27,25 @@ class ArticleDAO extends DAO {
 		parent::DAO();
 		$this->authorDao = &DAORegistry::getDAO('AuthorDAO');
 	}
-	
+
+	/**
+	 * Get a list of field names for which data is localized.
+	 * @return array
+	 */
+	function getLocaleFieldNames() {
+		return array('title', 'abstract', 'discipline', 'subjectClass', 'subject', 'coverageGeo', 'coverageChron', 'coverageSample', 'type', 'sponsor');
+	}
+
+	/**
+	 * Update the settings for this object
+	 * @param $article object
+	 */
+	function updateLocaleFields(&$article) {
+		$this->updateDataObjectSettings('article_settings', $article, array(
+			'article_id' => $article->getArticleId()
+		));
+	}
+
 	/**
 	 * Retrieve an article by ID.
 	 * @param $articleId int
@@ -36,8 +53,29 @@ class ArticleDAO extends DAO {
 	 * @return Article
 	 */
 	function &getArticle($articleId, $journalId = null) {
-		$params = array($articleId);
-		$sql = 'SELECT a.*, s.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, s.abbrev AS section_abbrev, s.abbrev_alt1 AS section_abbrev_alt1, s.abbrev_alt2 AS section_abbrev_alt2 FROM articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE article_id = ?';
+		$primaryLocale = Locale::getPrimaryLocale();
+		$locale = Locale::getLocale();
+		$params = array(
+			'title',
+			$primaryLocale,
+			'title',
+			$locale,
+			'abbrev',
+			$primaryLocale,
+			'abbrev',
+			$locale,
+			$articleId
+		);
+		$sql = 'SELECT	a.*,
+				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
+				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
+			FROM	articles a
+				LEFT JOIN sections s ON s.section_id = a.section_id
+				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
+				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
+				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
+				LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?)
+			WHERE	article_id = ?';
 		if ($journalId !== null) {
 			$sql .= ' AND a.journal_id = ?';
 			$params[] = $journalId;
@@ -77,44 +115,9 @@ class ArticleDAO extends DAO {
 		$article->setUserId($row['user_id']);
 		$article->setJournalId($row['journal_id']);
 		$article->setSectionId($row['section_id']);
-
-		// Localize section title & abbreviation.
-		static $alternateLocaleNum;
-		if (!isset($alternateLocaleNum)) {
-			$alternateLocaleNum = Locale::isAlternateJournalLocale($row['journal_id']);
-		}
-		$sectionTitle = $sectionAbbrev = null;
-		switch ($alternateLocaleNum) {
-			case 1:
-				$sectionTitle = $row['section_title_alt1'];
-				$sectionAbbrev = $row['section_abbrev_alt1'];
-				break;
-			case 2:
-				$sectionTitle = $row['section_title_alt2'];
-				$sectionAbbrev = $row['section_abbrev_alt2'];
-				break;
-		}
-		if (empty($sectionTitle)) $sectionTitle = $row['section_title'];
-		if (empty($sectionAbbrev)) $sectionAbbrev = $row['section_abbrev'];
-
-		$article->setSectionTitle($sectionTitle);
-		$article->setSectionAbbrev($sectionAbbrev);
-
-		$article->setTitle($row['title']);
-		$article->setTitleAlt1($row['title_alt1']);
-		$article->setTitleAlt2($row['title_alt2']);
-		$article->setAbstract($row['abstract']);
-		$article->setAbstractAlt1($row['abstract_alt1']);
-		$article->setAbstractAlt2($row['abstract_alt2']);
-		$article->setDiscipline($row['discipline']);
-		$article->setSubjectClass($row['subject_class']);
-		$article->setSubject($row['subject']);
-		$article->setCoverageGeo($row['coverage_geo']);
-		$article->setCoverageChron($row['coverage_chron']);
-		$article->setCoverageSample($row['coverage_sample']);
-		$article->setType($row['type']);
+		$article->setSectionTitle($row['section_title']);
+		$article->setSectionAbbrev($row['section_abbrev']);
 		$article->setLanguage($row['language']);
-		$article->setSponsor($row['sponsor']);
 		$article->setCommentsToEditor($row['comments_to_ed']);
 		$article->setDateSubmitted($this->datetimeFromDB($row['date_submitted']));
 		$article->setDateStatusModified($this->datetimeFromDB($row['date_status_modified']));
@@ -130,6 +133,9 @@ class ArticleDAO extends DAO {
 		$article->setPages($row['pages']);
 		
 		$article->setAuthors($this->authorDao->getAuthorsByArticle($row['article_id']));
+
+		$this->getDataObjectSettings('article_settings', 'article_id', $row['article_id'], $article);
+
 		HookRegistry::call('ArticleDAO::_returnArticleFromRow', array(&$article, &$row));
 		
 	}
@@ -142,29 +148,15 @@ class ArticleDAO extends DAO {
 		$article->stampModified();
 		$this->update(
 			sprintf('INSERT INTO articles
-				(user_id, journal_id, section_id, title, title_alt1, title_alt2, abstract, abstract_alt1, abstract_alt2, discipline, subject_class, subject, coverage_geo, coverage_chron, coverage_sample, type, language, sponsor, comments_to_ed, date_submitted, date_status_modified, last_modified, status, submission_progress, current_round, submission_file_id, revised_file_id, review_file_id, editor_file_id, copyedit_file_id, pages)
+				(user_id, journal_id, section_id, language, comments_to_ed, date_submitted, date_status_modified, last_modified, status, submission_progress, current_round, submission_file_id, revised_file_id, review_file_id, editor_file_id, copyedit_file_id, pages)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, %s, %s, %s, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, %s, %s, %s, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
 				$this->datetimeToDB($article->getDateSubmitted()), $this->datetimeToDB($article->getDateStatusModified()), $this->datetimeToDB($article->getLastModified())),
 			array(
 				$article->getUserId(),
 				$article->getJournalId(),
 				$article->getSectionId(),
-				$article->getTitle() === null ? '' : $article->getTitle(),
-				$article->getTitleAlt1(),
-				$article->getTitleAlt2(),
-				$article->getAbstract(),
-				$article->getAbstractAlt1(),
-				$article->getAbstractAlt2(),
-				$article->getDiscipline(),
-				$article->getSubjectClass(),
-				$article->getSubject(),
-				$article->getCoverageGeo(),
-				$article->getCoverageChron(),
-				$article->getCoverageSample(),
-				$article->getType(),
 				$article->getLanguage(),
-				$article->getSponsor(),
 				$article->getCommentsToEditor(),
 				$article->getStatus() === null ? STATUS_QUEUED : $article->getStatus(),
 				$article->getSubmissionProgress() === null ? 1 : $article->getSubmissionProgress(),
@@ -177,16 +169,17 @@ class ArticleDAO extends DAO {
 				$article->getPages()
 			)
 		);
-		
+
 		$article->setArticleId($this->getInsertArticleId());
-		
+		$this->updateLocaleFields($article);
+
 		// Insert authors for this article
 		$authors = &$article->getAuthors();
 		for ($i=0, $count=count($authors); $i < $count; $i++) {
 			$authors[$i]->setArticleId($article->getArticleId());
 			$this->authorDao->insertAuthor($authors[$i]);
 		}
-		
+
 		return $article->getArticleId();
 	}
 	
@@ -201,21 +194,7 @@ class ArticleDAO extends DAO {
 				SET
 					user_id = ?,
 					section_id = ?,
-					title = ?,
-					title_alt1 = ?,
-					title_alt2 = ?,
-					abstract = ?,
-					abstract_alt1 = ?,
-					abstract_alt2 = ?,
-					discipline = ?,
-					subject_class = ?,
-					subject = ?,
-					coverage_geo = ?,
-					coverage_chron = ?,
-					coverage_sample = ?,
-					type = ?,
 					language = ?,
-					sponsor = ?,
 					comments_to_ed = ?,
 					date_submitted = %s,
 					date_status_modified = %s,
@@ -234,21 +213,7 @@ class ArticleDAO extends DAO {
 			array(
 				$article->getUserId(),
 				$article->getSectionId(),
-				$article->getTitle(),
-				$article->getTitleAlt1(),
-				$article->getTitleAlt2(),
-				$article->getAbstract(),
-				$article->getAbstractAlt1(),
-				$article->getAbstractAlt2(),
-				$article->getDiscipline(),
-				$article->getSubjectClass(),
-				$article->getSubject(),
-				$article->getCoverageGeo(),
-				$article->getCoverageChron(),
-				$article->getCoverageSample(),
-				$article->getType(),
 				$article->getLanguage(),
-				$article->getSponsor(),
 				$article->getCommentsToEditor(),
 				$article->getStatus(),
 				$article->getSubmissionProgress(),
@@ -262,7 +227,9 @@ class ArticleDAO extends DAO {
 				$article->getArticleId()
 			)
 		);
-		
+
+		$this->updateLocaleFields($article);
+
 		// update authors for this article
 		$authors = &$article->getAuthors();
 		for ($i=0, $count=count($authors); $i < $count; $i++) {
@@ -359,9 +326,8 @@ class ArticleDAO extends DAO {
 
 		$articleFileDao->deleteArticleFiles($articleId);
 
-		$this->update(
-			'DELETE FROM articles WHERE article_id = ?', $articleId
-		);
+		$this->update('DELETE FROM article_settings WHERE article_id = ?', $articleId);
+		$this->update('DELETE FROM articles WHERE article_id = ?', $articleId);
 	}
 	
 	/**
@@ -371,11 +337,32 @@ class ArticleDAO extends DAO {
 	 * @return DAOResultFactory containing matching Articles
 	 */
 	function &getArticlesByJournalId($journalId) {
+		$primaryLocale = Locale::getPrimaryLocale();
+		$locale = Locale::getLocale();
 		$articles = array();
 		
 		$result = &$this->retrieve(
-			'SELECT a.*, s.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, s.abbrev AS section_abbrev, s.abbrev_alt1 AS section_abbrev_alt1, s.abbrev_alt2 AS section_abbrev_alt2 FROM articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE a.journal_id = ?',
-			$journalId
+			'SELECT	a.*,
+				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
+				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
+			FROM	articles a
+				LEFT JOIN sections s ON s.section_id = a.section_id
+				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
+				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
+				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
+				LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?)
+			WHERE a.journal_id = ?',
+			array(
+				'title',
+				$primaryLocale,
+				'title',
+				$locale,
+				'abbrev',
+				$primaryLocale,
+				'abbrev',
+				$locale,
+				$journalId
+			)
 		);
 		
 		$returner = &new DAOResultFactory($result, $this, '_returnArticleFromRow');
@@ -402,11 +389,35 @@ class ArticleDAO extends DAO {
 	 * @return array Articles
 	 */
 	function &getArticlesByUserId($userId, $journalId = null) {
+		$primaryLocale = Locale::getPrimaryLocale();
+		$locale = Locale::getLocale();
+		$params = array(
+			'title',
+			$primaryLocale,
+			'title',
+			$locale,
+			'abbrev',
+			$primaryLocale,
+			'abbrev',
+			$locale,
+			$userId
+		);
+		if ($journalId) $params[] = $journalId;
 		$articles = array();
 		
 		$result = &$this->retrieve(
-			'SELECT a.*, s.title AS section_title, s.title_alt1 AS section_title_alt1, s.title_alt2 AS section_title_alt2, s.abbrev AS section_abbrev, s.abbrev_alt1 AS section_abbrev_alt1, s.abbrev_alt2 AS section_abbrev_alt2 FROM articles a LEFT JOIN sections s ON s.section_id = a.section_id WHERE a.user_id = ?' . (isset($journalId)?' AND a.journal_id = ?':''),
-			isset($journalId)?array($userId, $journalId):$userId
+			'SELECT	a.*,
+				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
+				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev
+			FROM	articles a
+				LEFT JOIN sections s ON s.section_id = a.section_id
+				LEFT JOIN section_settings stpl ON (s.section_id = stpl.section_id AND stpl.setting_name = ? AND stpl.locale = ?)
+				LEFT JOIN section_settings stl ON (s.section_id = stl.section_id AND stl.setting_name = ? AND stl.locale = ?)
+				LEFT JOIN section_settings sapl ON (s.section_id = sapl.section_id AND sapl.setting_name = ? AND sapl.locale = ?)
+				LEFT JOIN section_settings sal ON (s.section_id = sal.section_id AND sal.setting_name = ? AND sal.locale = ?)
+			WHERE	a.user_id = ?' .
+			(isset($journalId)?' AND a.journal_id = ?':''),
+			$params
 		);
 		
 		while (!$result->EOF) {
@@ -485,7 +496,6 @@ class ArticleDAO extends DAO {
 	function getInsertArticleId() {
 		return $this->getInsertId('articles', 'article_id');
 	}
-	
 }
 
 ?>

@@ -76,9 +76,18 @@ class SuppFile extends ArticleFile {
 	function setArticleId($articleId) {
 		return $this->setData('articleId', $articleId);
 	}
-		
+
+	/**
+	 * Get localized title
+	 * @return string
+	 */
+	function getSuppFileTitle() {
+		return $this->getLocalizedData('title');
+	}
+
 	/**
 	 * Get title.
+	 * @param $locale string
 	 * @return string
 	 */
 	function getTitle() {
@@ -88,41 +97,62 @@ class SuppFile extends ArticleFile {
 	/**
 	 * Set title.
 	 * @param $title string
+	 * @param $locale string
 	 */
-	function setTitle($title) {
-		return $this->setData('title', $title);
+	function setTitle($title, $locale) {
+		return $this->setData('title', $title, $locale);
 	}
 	
 	/**
-	 * Get creator.
+	 * Get localized creator
 	 * @return string
 	 */
-	function getCreator() {
-		return $this->getData('creator');
+	function getSuppFileCreator() {
+		return $this->getLocalizedData('creator');
+	}
+
+	/**
+	 * Get creator.
+	 * @param $locale string
+	 * @return string
+	 */
+	function getCreator($locale) {
+		return $this->getData('creator', $locale);
 	}
 	
 	/**
 	 * Set creator.
 	 * @param $creator string
+	 * @param $locale string
 	 */
-	function setCreator($creator) {
-		return $this->setData('creator', $creator);
+	function setCreator($creator, $locale) {
+		return $this->setData('creator', $creator, $locale);
 	}
 	
 	/**
-	 * Get subject.
+	 * Get localized subject
 	 * @return string
 	 */
-	function getSubject() {
-		return $this->getData('subject');
+	function getSuppFileSubject() {
+		return $this->getLocalizedData('subject');
+	}
+
+	/**
+	 * Get subject.
+	 * @param $locale string
+	 * @return string
+	 */
+	function getSubject($locale) {
+		return $this->getData('subject', $locale);
 	}
 	
 	/**
 	 * Set subject.
 	 * @param $subject string
+	 * @param $locale string
 	 */
-	function setSubject($subject) {
-		return $this->setData('subject', $subject);
+	function setSubject($subject, $locale) {
+		return $this->setData('subject', $subject, $locale);
 	}
 	
 	/**
@@ -142,67 +172,107 @@ class SuppFile extends ArticleFile {
 	}
 	
 	/**
-	 * Get custom type.
+	 * Get localized subject
 	 * @return string
 	 */
-	function getTypeOther() {
-		return $this->getData('typeOther');
+	function getSuppFileTypeOther() {
+		return $this->getLocalizedData('typeOther');
+	}
+
+	/**
+	 * Get custom type.
+	 * @param $locale string
+	 * @return string
+	 */
+	function getTypeOther($locale) {
+		return $this->getData('typeOther', $locale);
 	}
 	
 	/**
 	 * Set custom type.
 	 * @param $typeOther string
+	 * @param $locale string
 	 */
-	function setTypeOther($typeOther) {
-		return $this->setData('typeOther', $typeOther);
+	function setTypeOther($typeOther, $locale) {
+		return $this->setData('typeOther', $typeOther, $locale);
 	}
 	
 	/**
-	 * Get file description.
+	 * Get localized description
 	 * @return string
 	 */
-	function getDescription() {
-		return $this->getData('description');
+	function getSuppFileDescription() {
+		return $this->getLocalizedData('description');
+	}
+
+	/**
+	 * Get file description.
+	 * @param $locale string
+	 * @return string
+	 */
+	function getDescription($locale) {
+		return $this->getData('description', $locale);
 	}
 	
 	/**
 	 * Set file description.
 	 * @param $description string
+	 * @param $locale string
 	 */
-	function setDescription($description) {
-		return $this->setData('description', $description);
+	function setDescription($description, $locale) {
+		return $this->setData('description', $description, $locale);
 	}
 	
 	/**
-	 * Get publisher.
+	 * Get localized publisher
 	 * @return string
 	 */
-	function getPublisher() {
-		return $this->getData('publisher');
+	function getSuppFilePublisher() {
+		return $this->getLocalizedData('publisher');
+	}
+
+	/**
+	 * Get publisher.
+	 * @param $locale string
+	 * @return string
+	 */
+	function getPublisher($locale) {
+		return $this->getData('publisher', $locale);
 	}
 	
 	/**
 	 * Set publisher.
 	 * @param $publisher string
+	 * @param $locale string
 	 */
-	function setPublisher($publisher) {
-		return $this->setData('publisher', $publisher);
+	function setPublisher($publisher, $locale) {
+		return $this->setData('publisher', $publisher, $locale);
 	}
 	
 	/**
-	 * Get sponsor.
+	 * Get localized sponsor
 	 * @return string
 	 */
-	function getSponsor() {
-		return $this->getData('sponsor');
+	function getSuppFileSponsor() {
+		return $this->getLocalizedData('sponsor');
+	}
+
+	/**
+	 * Get sponsor.
+	 * @param $locale string
+	 * @return string
+	 */
+	function getSponsor($locale) {
+		return $this->getData('sponsor', $locale);
 	}
 	
 	/**
 	 * Set sponsor.
 	 * @param $sponsor string
+	 * @param $locale string
 	 */
-	function setSponsor($sponsor) {
-		return $this->setData('sponsor', $sponsor);
+	function setSponsor($sponsor, $locale) {
+		return $this->setData('sponsor', $sponsor, $locale);
 	}
 	
 	/**
@@ -222,19 +292,29 @@ class SuppFile extends ArticleFile {
 	}
 	
 	/**
-	 * Get source.
+	 * Get localized source
 	 * @return string
 	 */
-	function getSource() {
-		return $this->getData('source');
+	function getSuppFileSource() {
+		return $this->getLocalizedData('source');
+	}
+
+	/**
+	 * Get source.
+	 * @param $locale string
+	 * @return string
+	 */
+	function getSource($locale) {
+		return $this->getData('source', $locale);
 	}
 	
 	/**
 	 * Set source.
 	 * @param $source string
+	 * @param $locale string
 	 */
-	function setSource($source) {
-		return $this->setData('source', $source);
+	function setSource($source, $locale) {
+		return $this->setData('source', $source, $locale);
 	}
 	
 	/**

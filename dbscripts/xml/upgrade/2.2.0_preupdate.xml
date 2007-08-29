@@ -53,4 +53,9 @@
 			ALTER TABLE issues ADD COLUMN show_title SMALLINT NOT NULL DEFAULT 0
 		</query>
 	</sql>
+
+	<!-- Bug #2961: Localization overhaul -->
+	<sql>
+		<rename table="site" column="locale" to="primary_locale" />
+	</sql>
 </data>

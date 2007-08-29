@@ -17,10 +17,6 @@
 import('form.Form');
 
 class ProfileForm extends Form {
-
-	/** @var boolean Include a user's working languages in their profile */
-	var $profileLocalesEnabled;
-	
 	/**
 	 * Constructor.
 	 */
@@ -30,7 +26,6 @@ class ProfileForm extends Form {
 		$user = &Request::getUser();
 		
 		$site = &Request::getSite();
-		$this->profileLocalesEnabled = $site->getProfileLocalesEnabled();
 		
 		// Validation checks for this form
 		$this->addCheck(new FormValidator($this, 'firstName', 'required', 'user.profile.form.firstNameRequired'));
@@ -48,11 +43,9 @@ class ProfileForm extends Form {
 		
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('username', $user->getUsername());
-		$templateMgr->assign('profileLocalesEnabled', $this->profileLocalesEnabled);
-		if ($this->profileLocalesEnabled) {
-			$site = &Request::getSite();
-			$templateMgr->assign('availableLocales', $site->getSupportedLocaleNames());
-		}
+
+		$site = &Request::getSite();
+		$templateMgr->assign('availableLocales', $site->getSupportedLocaleNames());
 
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
 		$journalDao = &DAORegistry::getDAO('JournalDAO');
@@ -77,8 +70,12 @@ class ProfileForm extends Form {
 		$countryDao =& DAORegistry::getDAO('CountryDAO');
 		$countries =& $countryDao->getCountries();
 
+		$disciplineDao =& DAORegistry::getDAO('DisciplineDAO');
+		$disciplines =& $disciplineDao->getDisciplines();
+
 		$templateMgr->assign_by_ref('journals', $journals);
 		$templateMgr->assign_by_ref('countries', $countries);
+		$templateMgr->assign_by_ref('disciplines', $disciplines);
 		$templateMgr->assign_by_ref('journalNotifications', $journalNotifications);
 		$templateMgr->assign('helpTopicId', 'user.registerAndProfile');
 
@@ -96,7 +93,12 @@ class ProfileForm extends Form {
 
 		parent::display();
 	}
-	
+
+	function getLocaleFieldNames() {
+		$userDao =& DAORegistry::getDAO('UserDAO');
+		return $userDao->getLocaleFieldNames();
+	}
+
 	/**
 	 * Initialize form data from current settings.
 	 */
@@ -104,20 +106,23 @@ class ProfileForm extends Form {
 		$user = &Request::getUser();
 
 		$this->_data = array(
+			'salutation' => $user->getSalutation(),
 			'firstName' => $user->getFirstName(),
 			'middleName' => $user->getMiddleName(),
 			'initials' => $user->getInitials(),
 			'lastName' => $user->getLastName(),
+			'gender' => $user->getGender(),
+			'discipline' => $user->getDiscipline(),
 			'affiliation' => $user->getAffiliation(),
-			'signature' => $user->getSignature(),
+			'signature' => $user->getSignature(null), // Localized
 			'email' => $user->getEmail(),
 			'userUrl' => $user->getUrl(),
 			'phone' => $user->getPhone(),
 			'fax' => $user->getFax(),
 			'mailingAddress' => $user->getMailingAddress(),
 			'country' => $user->getCountry(),
-			'biography' => $user->getBiography(),
-			'interests' => $user->getInterests(),
+			'biography' => $user->getBiography(null), // Localized
+			'interests' => $user->getInterests(null), // Localized
 			'userLocales' => $user->getLocales(),
 			'isAuthor' => Validation::isAuthor(),
 			'isReader' => Validation::isReader(),
@@ -130,9 +135,12 @@ class ProfileForm extends Form {
 	 */
 	function readInputData() {
 		$this->readUserVars(array(
+			'salutation',
 			'firstName',
 			'middleName',
 			'lastName',
+			'gender',
+			'discipline',
 			'initials',
 			'affiliation',
 			'signature',
@@ -161,33 +169,34 @@ class ProfileForm extends Form {
 	function execute() {
 		$user = &Request::getUser();
 
+		$user->setSalutation($this->getData('salutation'));
 		$user->setFirstName($this->getData('firstName'));
 		$user->setMiddleName($this->getData('middleName'));
-		$user->setInitials($this->getData('initials'));
 		$user->setLastName($this->getData('lastName'));
+		$user->setGender($this->getData('gender'));
+		$user->setDiscipline($this->getData('discipline'));
+		$user->setInitials($this->getData('initials'));
 		$user->setAffiliation($this->getData('affiliation'));
-		$user->setSignature($this->getData('signature'));
+		$user->setSignature($this->getData('signature'), null); // Localized
 		$user->setEmail($this->getData('email'));
 		$user->setUrl($this->getData('userUrl'));
 		$user->setPhone($this->getData('phone'));
 		$user->setFax($this->getData('fax'));
 		$user->setMailingAddress($this->getData('mailingAddress'));
 		$user->setCountry($this->getData('country'));
-		$user->setBiography($this->getData('biography'));
-		$user->setInterests($this->getData('interests'));
+		$user->setBiography($this->getData('biography'), null); // Localized
+		$user->setInterests($this->getData('interests'), null); // Localized
 		
-		if ($this->profileLocalesEnabled) {
-			$site = &Request::getSite();
-			$availableLocales = $site->getSupportedLocales();
-			
-			$locales = array();
-			foreach ($this->getData('userLocales') as $locale) {
-				if (Locale::isLocaleValid($locale) && in_array($locale, $availableLocales)) {
-					array_push($locales, $locale);
-				}
+		$site = &Request::getSite();
+		$availableLocales = $site->getSupportedLocales();
+		
+		$locales = array();
+		foreach ($this->getData('userLocales') as $locale) {
+			if (Locale::isLocaleValid($locale) && in_array($locale, $availableLocales)) {
+				array_push($locales, $locale);
 			}
-			$user->setLocales($locales);
 		}
+		$user->setLocales($locales);
  
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$userDao->updateUser($user);
@@ -265,7 +274,6 @@ class ProfileForm extends Form {
 			$auth->doSetUserInfo($user);
 		}
 	}
-	
 }
 
 ?>

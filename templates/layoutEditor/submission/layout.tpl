@@ -65,7 +65,7 @@
 	{foreach name=galleys from=$submission->getGalleys() item=galley}
 	<tr>
 		<td width="5%">{$smarty.foreach.galleys.iteration}.</td>
-		<td width="23%">{$galley->getLabel()|escape} &nbsp; <a href="{url op="proofGalley" path=$submission->getArticleId()|to_array:$galley->getGalleyId()}" class="action">{translate key="submission.layout.viewProof"}</td>
+		<td width="23%">{$galley->getGalleyLabel()|escape} &nbsp; <a href="{url op="proofGalley" path=$submission->getArticleId()|to_array:$galley->getGalleyId()}" class="action">{translate key="submission.layout.viewProof"}</td>
 		<td colspan="2"><a href="{url op="downloadFile" path=$submission->getArticleId()|to_array:$galley->getFileId()}" class="file">{$galley->getFileName()|escape}</a> {$galley->getDateModified()|date_format:$dateFormatShort}</td>
 		<td>
 			{if $disableEdit}
@@ -99,7 +99,7 @@
 	{foreach name=suppFiles from=$submission->getSuppFiles() item=suppFile}
 	<tr>
 		<td width="5%">{$smarty.foreach.suppFiles.iteration}.</td>
-		<td width="23%">{$suppFile->getTitle()|escape}</td>
+		<td width="23%">{$suppFile->getSuppFileTitle()|escape}</td>
 		<td colspan="2"><a href="{url op="downloadFile" path=$submission->getArticleId()|to_array:$suppFile->getFileId()}" class="file">{$suppFile->getFileName()|escape}</a> {$suppFile->getDateModified()|date_format:$dateFormatShort}</td>
 		<td>
 			{if $disableEdit}
@@ -142,7 +142,7 @@
 	<a href="javascript:openComments('{url op="viewLayoutComments" path=$submission->getArticleId()}');" class="icon">{icon name="comment"}</a>
 {/if}
 
-{if $currentJournal->getSetting('layoutInstructions')}
+{if $currentJournal->getLocalizedSetting('layoutInstructions')}
 &nbsp;&nbsp;
 <a href="javascript:openHelp('{url op="instructions" path="layout"}')" class="action">{translate key="submission.layout.instructions"}</a>
 {/if}

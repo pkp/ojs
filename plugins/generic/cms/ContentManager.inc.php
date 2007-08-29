@@ -43,8 +43,8 @@ class ContentManager {
 		// if that doesn't work, use the journal's primary locale 
 		// and if that is not defined, then use use en_US		
 		if ( !$journalFileManager->fileExists($this->filePath) ) {
-			if ( $journal->getLocale() ) 
-				$lang = $journal->getLocale();
+			if ( $journal->getPrimaryLocale() ) 
+				$lang = $journal->getPrimaryLocale();
 			else
 				$lang = 'en_US';
 

@@ -15,25 +15,6 @@
  * $Id$
  */
 
-/** Sample user datafile:
- ****************************************
-	<users>
-		<user>
-			<username>username</username>
-			<password>password</password>
-			<first_name>FirstName</first_name>
-			<last_name>LastName</last_name>
-			<affiliation>Affiliation</affiliation>
-			<signature>Email Signature</signature>
-			<email>user@pkp.sfu.ca</email>
-			<url>http://www.mysite.com</url>
-			<role type="editor"/>
-			<role type="sectionEditor"/>
-		</user>
-	</users>
- ****************************************
- */
-
 import('xml.XMLParser');
 
 class UserXMLParser {
@@ -74,6 +55,13 @@ class UserXMLParser {
 		$this->usersToImport = array();
 		$tree = $this->parser->parse($file);
 		
+		$journalDao = &DAORegistry::getDAO('JournalDAO');
+		$journal = &$journalDao->getJournal($this->journalId);
+		$journalPrimaryLocale = Locale::getPrimaryLocale();
+		
+		$site = &Request::getSite();
+		$siteSupportedLocales = $site->getSupportedLocales();
+		
 		if ($tree !== false) {
 			foreach ($tree->getChildren() as $user) {
 				if ($user->getName() == 'user') {
@@ -87,6 +75,7 @@ class UserXMLParser {
 								$newUser->setUsername(strtolower($attrib->getValue()));
 								break;
 							case 'password':
+								$newUser->setMustChangePassword($attrib->getAttribute('change') == 'true'?1:0);
 								$encrypted = $attrib->getAttribute('encrypted');
 								if (isset($encrypted) && $encrypted !== 'plaintext') {
 									$ojsEncryptionScheme = Config::getVar('security', 'encryption');
@@ -98,6 +87,9 @@ class UserXMLParser {
 									$newUser->setUnencryptedPassword($attrib->getValue());
 								}
 								break;
+							case 'salutation':
+								$newUser->setSalutation($attrib->getValue());
+								break;
 							case 'first_name':
 								$newUser->setFirstName($attrib->getValue());
 								break;
@@ -107,11 +99,14 @@ class UserXMLParser {
 							case 'last_name':
 								$newUser->setLastName($attrib->getValue());
 								break;
+							case 'initials':
+								$newUser->setInitials($attrib->getValue());
+								break;
+							case 'gender':
+								$newUser->setGender($attrib->getValue());
+								break;
 							case 'affiliation':
 								$newUser->setAffiliation($attrib->getValue());
-								break;
-							case 'signature':
-								$newUser->setSignature($attrib->getValue());
 								break;
 							case 'email':
 								$newUser->setEmail($attrib->getValue());
@@ -128,8 +123,35 @@ class UserXMLParser {
 							case 'mailing_address':
 								$newUser->setMailingAddress($attrib->getValue());
 								break;
+							case 'country':
+								$newUser->setCountry($attrib->getValue());
+								break;
+							case 'discipline':
+								$newUser->setDiscipline($attrib->getValue());
+								break;
+							case 'signature':
+								$locale = $attrib->getAttribute('locale');
+								if (empty($locale)) $locale = $journalPrimaryLocale;
+								$newUser->setInterests($attrib->getValue(), $locale);
+								break;
+							case 'interests':
+								$locale = $attrib->getAttribute('locale');
+								if (empty($locale)) $locale = $journalPrimaryLocale;
+								$newUser->setInterests($attrib->getValue(), $locale);
+								break;
 							case 'biography':
-								$newUser->setBiography($attrib->getValue());
+								$locale = $attrib->getAttribute('locale');
+								if (empty($locale)) $locale = $journalPrimaryLocale;
+								$newUser->setBiography($attrib->getValue(), $locale);
+								break;
+							case 'locales':
+								$locales = array();
+								foreach (explode(':', $attrib->getValue()) as $locale) {
+									if (Locale::isLocaleValid($locale) && in_array($locale, $siteSupportedLocales)) {
+										array_push($locales, $locale);
+									}
+								}
+								$newUser->setLocales($locales);
 								break;
 							case 'role':
 								$roleType = $attrib->getAttribute('type');
@@ -141,7 +163,6 @@ class UserXMLParser {
 								break;
 						}
 					}
-					
 					array_push($this->usersToImport, $newUser);
 				}
 			}

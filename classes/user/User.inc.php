@@ -58,19 +58,28 @@ class User extends DataObject {
 	}
 	
 	/**
+	 * Get localized user signature.
+	 */
+	function getUserSignature() {
+		return $this->getLocalizedData('signature');
+	}
+
+	/**
 	 * Get email signature.
+	 * @param $locale string
 	 * @return string
 	 */
-	function getSignature() {
-		return $this->getData('signature');
+	function getSignature($locale) {
+		return $this->getData('signature', $locale);
 	}
 	
 	/**
 	 * Set signature.
 	 * @param $signature string
+	 * @param $locale string
 	 */
-	function setSignature($signature) {
-		return $this->setData('signature', $signature);
+	function setSignature($signature, $locale) {
+		return $this->setData('signature', $signature, $locale);
 	}
 	
 	/**
@@ -154,6 +163,54 @@ class User extends DataObject {
 		return $this->setData('lastName', $lastName);
 	}
 	
+	/**
+	 * Get user salutation.
+	 * @return string
+	 */
+	function getSalutation() {
+		return $this->getData('salutation');
+	}
+	
+	/**
+	 * Set user salutation.
+	 * @param $salutation string
+	 */
+	function setSalutation($salutation) {
+		return $this->setData('salutation', $salutation);
+	}
+
+	/**
+	 * Get user gender.
+	 * @return string
+	 */
+	function getGender() {
+		return $this->getData('gender');
+	}
+	
+	/**
+	 * Set user gender.
+	 * @param $gender string
+	 */
+	function setGender($gender) {
+		return $this->setData('gender', $gender);
+	}
+
+	/**
+	 * Get user discipline.
+	 * @return string
+	 */
+	function getDiscipline() {
+		return $this->getData('discipline');
+	}
+	
+	/**
+	 * Set user discipline.
+	 * @param $discipline string
+	 */
+	function setDiscipline($discipline) {
+		return $this->setData('discipline', $discipline);
+	}
+
 	/**
 	 * Get affiliation (position, institution, etc.).
 	 * @return string
@@ -267,35 +324,53 @@ class User extends DataObject {
 	}
 	
 	/**
+	 * Get localized user biography.
+	 */
+	function getUserBiography() {
+		return $this->getLocalizedData('biography');
+	}
+
+	/**
 	 * Get user biography.
+	 * @param $locale string
 	 * @return string
 	 */
-	function getBiography() {
-		return $this->getData('biography');
+	function getBiography($locale) {
+		return $this->getData('biography', $locale);
 	}
 	
 	/**
 	 * Set user biography.
 	 * @param $biography string
+	 * @param $locale string
 	 */
-	function setBiography($biography) {
-		return $this->setData('biography', $biography);
+	function setBiography($biography, $locale) {
+		return $this->setData('biography', $biography, $locale);
 	}
-	
+
+	/**
+	 * Get localized user interests.
+	 */
+	function getUserInterests() {
+		return $this->getLocalizedData('interests');
+	}
+
 	/**
 	 * Get user reviewing interests.
+	 * @param $locale string
 	 * @return string
 	 */
-	function getInterests() {
-		return $this->getData('interests');
+	function getInterests($locale) {
+		return $this->getData('interests', $locale);
 	}
 	
 	/**
 	 * Set user reviewing interests.
 	 * @param $interests string
+	 * @param $locale string
 	 */
-	function setInterests($interests) {
-		return $this->setData('interests', $interests);
+	function setInterests($interests, $locale) {
+		return $this->setData('interests', $interests, $locale);
 	}
 	
 	/**

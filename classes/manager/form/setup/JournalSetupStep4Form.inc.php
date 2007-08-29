@@ -17,7 +17,9 @@
 import("manager.form.setup.JournalSetupForm");
 
 class JournalSetupStep4Form extends JournalSetupForm {
-	
+	/**
+	 * Constructor.
+	 */
 	function JournalSetupStep4Form() {
 		parent::JournalSetupForm(
 			4,
@@ -58,6 +60,14 @@ class JournalSetupStep4Form extends JournalSetupForm {
 				'enablePageNumber' => 'bool'
 			)
 		);
+	}
+
+	/**
+	 * Get the list of field names for which localized settings are used.
+	 * @return array
+	 */
+	function getLocaleFieldNames() {
+		return array('pubFreqPolicy', 'copyeditInstructions', 'layoutInstructions', 'proofInstructions', 'openAccessPolicy', 'announcementsIntroduction');
 	}
 }
 

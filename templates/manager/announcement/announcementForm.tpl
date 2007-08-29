@@ -21,7 +21,7 @@
 
 <br/>
 
-<form method="post" action="{url op="updateAnnouncement"}">
+<form name="announcementForm" method="post" action="{url op="updateAnnouncement"}">
 {if $announcementId}
 <input type="hidden" name="announcementId" value="{$announcementId}" />
 {/if}
@@ -29,29 +29,40 @@
 {include file="common/formErrors.tpl"}
 
 <table class="data" width="100%">
+{if count($formLocales) > 1}
+	<tr valign="top">
+		<td width="20%" class="label">{fieldLabel name="formLocale" required="true" key="common.language"}</td>
+		<td width="80%" class="value">
+			{if $typeId}{url|assign:"announcementUrl" op="editAnnouncement" path=$announcementId}
+			{else}{url|assign:"announcementUrl" op="createAnnouncement"}
+			{/if}
+			{form_language_chooser form="announcementForm" url=$announcementUrl}
+		</td>
+	</tr>
+{/if}
 <tr valign="top">
 	<td width="20%" class="label">{fieldLabel name="typeId" key="manager.announcements.form.typeId"}</td>
 	<td width="80%" class="value"><select name="typeId" id="typeId" class="selectMenu" />
 		<option value=""></option>
 		{iterate from=announcementTypes item=announcementType}
-		<option value="{$announcementType->getTypeId()}"{if $typeId == $announcementType->getTypeId()} selected="selected"{/if}>{$announcementType->getTypeName()|escape}</option>
+		<option value="{$announcementType->getTypeId()}"{if $typeId == $announcementType->getTypeId()} selected="selected"{/if}>{$announcementType->getAnnouncementTypeName()|escape}</option>
 		{/iterate} 
 	</select></td>
 </tr>
 <tr valign="top">
 	<td class="label">{fieldLabel name="title" required="true" key="manager.announcements.form.title"}</td>
-	<td class="value"><input type="text" name="title" value="{$title|escape}" size="40" id="title" maxlength="255" class="textField" /></td>
+	<td class="value"><input type="text" name="title[{$formLocale|escape}]" value="{$title[$formLocale]|escape}" size="40" id="title" maxlength="255" class="textField" /></td>
 </tr>
 <tr valign="top">
 	<td class="label">{fieldLabel name="descriptionShort" required="true" key="manager.announcements.form.descriptionShort"}</td>
-	<td class="value"><textarea name="descriptionShort" id="descriptionShort" cols="40" rows="6" class="textArea" />{$descriptionShort|escape}</textarea>
+	<td class="value"><textarea name="descriptionShort[{$formLocale|escape}]" id="descriptionShort" cols="40" rows="6" class="textArea" />{$descriptionShort[$formLocale]|escape}</textarea>
 		<br />
 		<span class="instruct">{translate key="manager.announcements.form.descriptionShortInstructions"}</span>
 	</td>
 </tr>
 <tr valign="top">
 	<td class="label">{fieldLabel name="description" required="true" key="manager.announcements.form.description"}</td>
-	<td class="value"><textarea name="description" id="description" cols="40" rows="6" class="textArea" />{$description|escape}</textarea>
+	<td class="value"><textarea name="description[{$formLocale|escape}]" id="description" cols="40" rows="6" class="textArea" />{$description[$formLocale]|escape}</textarea>
 		<br />
 		<span class="instruct">{translate key="manager.announcements.form.descriptionInstructions"}</span>
 	</td>

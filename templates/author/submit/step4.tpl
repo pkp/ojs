@@ -27,7 +27,7 @@ function confirmForgottenUpload() {
 </script>
 
 <form name="submitForm" method="post" action="{url op="saveSubmit" path=$submitStep}" enctype="multipart/form-data">
-<input type="hidden" name="articleId" value="{$articleId}" />
+<input type="hidden" name="articleId" value="{$articleId|escape}" />
 {include file="common/formErrors.tpl"}
 
 <p>{translate key="author.submit.supplementaryFilesInstructions"}</p>
@@ -49,7 +49,7 @@ function confirmForgottenUpload() {
 {foreach from=$suppFiles item=file}
 <tr valign="top">
 	<td>{$file->getSuppFileId()}</td>
-	<td>{$file->getTitle()|escape}</td>
+	<td>{$file->getSuppFileTitle()|escape}</td>
 	<td>{$file->getOriginalFileName()|escape}</td>
 	<td>{$file->getDateSubmitted()|date_format:$dateFormatTrunc}</td>
 	<td align="right"><a href="{url op="submitSuppFile" path=$file->getSuppFileId() articleId=$articleId}" class="action">{translate key="common.edit"}</a>&nbsp;|&nbsp;<a href="{url op="deleteSubmitSuppFile" path=$file->getSuppFileId() articleId=$articleId}" onclick="return confirm('{translate|escape:"javascript" key="author.submit.confirmDeleteSuppFile"}')" class="action">{translate key="common.delete"}</a></td>

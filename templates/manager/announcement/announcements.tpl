@@ -38,8 +38,8 @@
 {iterate from=announcements item=announcement}
 	<tr valign="top">
 		<td>{$announcement->getDateExpire()|date_format:$dateFormatShort}</td>
-		<td>{$announcement->getTypeName()}</td>
-		<td>{$announcement->getTitle()|escape}</td>
+		<td>{$announcement->getAnnouncementTypeName()}</td>
+		<td>{$announcement->getAnnouncementTitle()|escape}</td>
 		<td><a href="{url op="editAnnouncement" path=$announcement->getAnnouncementId()}" class="action">{translate key="common.edit"}</a> <a href="{url op="deleteAnnouncement" path=$announcement->getAnnouncementId()}" onclick="return confirm('{translate|escape:"javascript" key="manager.announcements.confirmDelete"}')" class="action">{translate key="common.delete"}</a></td>
 	</tr>
 	<tr>

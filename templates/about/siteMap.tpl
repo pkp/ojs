@@ -20,7 +20,7 @@
 	<ul class="plain">
 	{if $journals|@count>1 && !$currentJournal}
 		{foreach from=$journals item=journal}
-			<li><a href="{url journal=`$journal->getPath()` page="about" op="siteMap"}">{$journal->getTitle()|escape}</a></li>
+			<li><a href="{url journal=`$journal->getPath()` page="about" op="siteMap"}">{$journal->getJournalTitle()|escape}</a></li>
 		{/foreach}
 	{else}
 		{if $journals|@count==1}
@@ -31,7 +31,7 @@
 			{assign var=onlyOneJournal value=1}
 		{/if}
 
-		<li><a href="{url journal=`$currentJournal->getPath()`}">{$currentJournal->getTitle()|escape}</a><br/>
+		<li><a href="{url journal=`$currentJournal->getPath()`}">{$currentJournal->getJournalTitle()|escape}</a><br/>
 			<ul class="plain">
 				<li><a href="{url journal=`$currentJournal->getPath()` page="about"}">{translate key="navigation.about"}</a></li>
 				<li>

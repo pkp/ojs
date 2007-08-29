@@ -32,11 +32,7 @@ class LanguageSettingsForm extends Form {
 		
 		$this->settings = array(
 			'primaryLocale' => 'string',
-			'alternateLocale1' => 'string',
-			'alternateLocale2' => 'string',
-			'supportedLocales' => 'object',
-			'journalTitleAltLanguages' => 'bool',
-			'articleAltLanguages' => 'bool'
+			'supportedLocales' => 'object'
 		);
 		
 		$site = &Request::getSite();
@@ -47,10 +43,6 @@ class LanguageSettingsForm extends Form {
 		// Validation checks for this form
 		$this->addCheck(new FormValidator($this, 'primaryLocale', 'required', 'manager.languages.form.primaryLocaleRequired'), array('Locale', 'isLocaleValid'));
 		$this->addCheck(new FormValidator($this, 'primaryLocale', 'required', 'manager.languages.form.primaryLocaleRequired'), $localeCheck, array(&$this->availableLocales));
-		$this->addCheck(new FormValidator($this, 'alternateLocale1', 'optional', 'manager.languages.form.alternateLocale1Invalid'), array('Locale', 'isLocaleValid'));
-		$this->addCheck(new FormValidator($this, 'alternateLocale1', 'optional', 'manager.languages.form.alternateLocale1Invalid'), $localeCheck, array(&$this->availableLocales));
-		$this->addCheck(new FormValidator($this, 'alternateLocale2', 'optional', 'manager.languages.form.alternateLocale2Invalid'), array('Locale', 'isLocaleValid'));
-		$this->addCheck(new FormValidator($this, 'alternateLocale2', 'optional', 'manager.languages.form.alternateLocale2Invalid'), $localeCheck, array(&$this->availableLocales));
 		$this->addCheck(new FormValidatorPost($this));
 	}
 	
@@ -97,19 +89,6 @@ class LanguageSettingsForm extends Form {
 		$journal = &Request::getJournal();
 		$settingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
 		
-		if ($this->getData('primaryLocale') == $this->getData('alternateLocale1') || $this->getData('alternateLocale1') == '') {
-			$this->setData('alternateLocale1', null);
-		}
-		
-		if ($this->getData('primaryLocale') == $this->getData('alternateLocale2') || $this->getData('alternateLocale2') == '') {
-			$this->setData('alternateLocale2', null);
-		}
-		
-		if (!$this->getData('alternateLocale1') || $this->getData('alternateLocale1') == $this->getdata('alternateLocale2')) {
-			$this->setData('alternateLocale1', $this->getData('alternateLocale2'));
-			$this->setData('alternateLocale2', null);
-		}
-		
 		// Verify additional locales
 		$supportedLocales = array();
 		foreach ($this->getData('supportedLocales') as $locale) {
@@ -119,13 +98,9 @@ class LanguageSettingsForm extends Form {
 		}
 		
 		$primaryLocale = $this->getData('primaryLocale');
-		$alternateLocale1 = $this->getData('alternateLocale1');
-		$alternateLocale2 = $this->getData('alternateLocale2');
 		
-		foreach (array($primaryLocale, $alternateLocale1, $alternateLocale2) as $locale) {
-			if ($locale != null && !empty($locale) && !in_array($locale, $supportedLocales)) {
-				array_push($supportedLocales, $locale);
-			}
+		if ($primaryLocale != null && !empty($primaryLocale) && !in_array($primaryLocale, $supportedLocales)) {
+			array_push($supportedLocales, $primaryLocale);
 		}
 		$this->setData('supportedLocales', $supportedLocales);
 		

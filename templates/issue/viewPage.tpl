@@ -16,9 +16,9 @@
 	{assign var="pageTitleTranslated" value=$issueHeadingTitle}
 {/if}
 
-{if $issue && $issue->getShowTitle() && $issue->getTitle() && ($issueHeadingTitle != $issue->getTitle())}
+{if $issue && $issue->getShowTitle() && $issue->getIssueTitle() && ($issueHeadingTitle != $issue->getIssueTitle())}
 	{* If the title is specified and should be displayed then show it as a subheading *}
-	{assign var="pageSubtitleTranslated" value=$issue->getTitle()}
+	{assign var="pageSubtitleTranslated" value=$issue->getIssueTitle()}
 {/if}
 
 {include file="common/header.tpl"}

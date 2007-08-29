@@ -17,14 +17,6 @@
 import ('article.log.ArticleEmailLogEntry');
 
 class ArticleEmailLogDAO extends DAO {
-
-	/**
-	 * Constructor.
-	 */
-	function ArticleEmailLogDAO() {
-		parent::DAO();
-	}
-	
 	/**
 	 * Retrieve a log entry by ID.
 	 * @param $logId int
@@ -200,7 +192,6 @@ class ArticleEmailLogDAO extends DAO {
 	function getInsertLogId() {
 		return $this->getInsertId('article_email_log', 'log_id');
 	}
-	
 }
 
 ?>

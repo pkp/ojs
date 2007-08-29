@@ -82,9 +82,9 @@ class InformationBlockPlugin extends BlockPlugin {
 		$journal =& Request::getJournal();
 		if (!$journal) return '';
 
-		$templateMgr->assign('forReaders', $journal->getSetting('readerInformation'));
-		$templateMgr->assign('forAuthors', $journal->getSetting('authorInformation'));
-		$templateMgr->assign('forLibrarians', $journal->getSetting('librarianInformation'));
+		$templateMgr->assign('forReaders', $journal->getLocalizedSetting('readerInformation'));
+		$templateMgr->assign('forAuthors', $journal->getLocalizedSetting('authorInformation'));
+		$templateMgr->assign('forLibrarians', $journal->getLocalizedSetting('librarianInformation'));
 		return parent::getContents($templateMgr);
 	}
 }

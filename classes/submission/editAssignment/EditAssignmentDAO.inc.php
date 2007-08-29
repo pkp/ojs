@@ -18,13 +18,6 @@ import('submission.editAssignment.EditAssignment');
 
 class EditAssignmentDAO extends DAO {
 	/**
-	 * Constructor.
-	 */
-	function EditAssignmentDAO() {
-		parent::DAO();
-	}
-	
-	/**
 	 * Retrieve an edit assignment by id.
 	 * @param $editId int
 	 * @return EditAssignment

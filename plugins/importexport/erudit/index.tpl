@@ -41,7 +41,7 @@
 		<td>{$article->getAuthorString()|escape}</td>
 		<td>
 			{foreach from=$publishedArticle->getGalleys() item=galley}
-				<a href="{plugin_url path="exportGalley"|to_array:$article->getArticleId():$galley->getGalleyId()}" class="action">{$galley->getLabel()|escape}</a>
+				<a href="{plugin_url path="exportGalley"|to_array:$article->getArticleId():$galley->getGalleyId()}" class="action">{$galley->getGalleyLabel()|escape}</a>
 			{/foreach}
 		</td>
 	</tr>

@@ -27,20 +27,20 @@ class OAIMetadataFormat_MARC extends OAIMetadataFormat {
 			"\thttp://www.openarchives.org/OAI/1.1/oai_marc.xsd\">\n" .
 			"\t<fixfield id=\"008\">\"" . date('ymd', strtotime($record->date)) . ' ' . date('Y', strtotime($record->date)) . '												eng  "</fixfield>' . "\n" .
 			$this->formatElement('042', ' ', ' ', 'a', 'dc') .
-			$this->formatElement('245', '0', '0', 'a', $record->title) .
+			$this->formatElement('245', '0', '0', 'a', $record->titles[$record->primaryLocale]) .
 			$this->formatElement('720', ' ', ' ', 'a', $record->creator) .
-			$this->formatElement('653', ' ', ' ', 'a', $record->subject) .
-			$this->formatElement('520', ' ', ' ', 'a', $record->description) .
-			$this->formatElement('260', ' ', ' ', 'b', $record->publisher) .
-			$this->formatElement('720', ' ', ' ', 'a', $record->contributor) .
+			$this->formatElement('653', ' ', ' ', 'a', $this->getLocalizedData($record->subjects, $record->primaryLocale)) .
+			$this->formatElement('520', ' ', ' ', 'a', $this->getLocalizedData($record->descriptions, $record->primaryLocale)) .
+			$this->formatElement('260', ' ', ' ', 'b', $record->publishers[$record->primaryLocale]) .
+			$this->formatElement('720', ' ', ' ', 'a', $this->getLocalizedData($record->contributors, $record->primaryLocale)) .
 			$this->formatElement('260', ' ', ' ', 'c', $record->date) .
-			$this->formatElement('655', ' ', '7', 'a', $record->type) .
+			$this->formatElement('655', ' ', '7', 'a', $record->types[$record->primaryLocale]) .
 			$this->formatElement('856', ' ', ' ', 'q', $record->format) .
 			$this->formatElement('856', '4', '0', 'u', $record->url) .
-			$this->formatElement('786', '0', ' ', 'n', $record->source . (!empty($record->pages)?"; " . $record->pages:"")) .
+			$this->formatElement('786', '0', ' ', 'n', $record->sources[$record->primaryLocale] . (!empty($record->pages)?"; " . $record->pages:"")) .
 			$this->formatElement('546', ' ', ' ', 'a', $record->language) .
 			$this->formatElement('787', '0', ' ', 'n', $record->relation) .
-			$this->formatElement('500', ' ', ' ', 'a', $record->coverage) .
+			$this->formatElement('500', ' ', ' ', 'a', $this->getLocalizedData($record->coverage, $record->primaryLocale)) .
 			$this->formatElement('540', ' ', ' ', 'a', $record->rights) .
 			"</oai_marc>\n";
 			

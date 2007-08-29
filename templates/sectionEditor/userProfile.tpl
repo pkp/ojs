@@ -16,6 +16,10 @@
 
 <table class="data" width="100%">
 <tr valign="top">
+	<td width="20%" class="label">{translate key="user.salutation"}:</td>
+	<td width="80%" class="value">{$user->getSalutation()|escape}</td>
+</tr>
+<tr valign="top">
 	<td width="20%" class="label">{translate key="user.username"}:</td>
 	<td width="80%" class="value">{$user->getUsername()|escape}</td>
 </tr>
@@ -32,12 +36,21 @@
 	<td class="value">{$user->getLastName()|escape}</td>
 </tr>
 <tr valign="top">
+	<td class="label">{translate key="user.gender"}</td>
+	<td class="value">
+		{if $user->getGender() == "M"}{translate key="user.masculine"}
+		{elseif $user->getGender() == "F"}{translate key="user.feminine"}
+		{else}&mdash;
+		{/if}
+	</td>
+</tr>
+<tr valign="top">
 	<td class="label">{translate key="user.affiliation"}:</td>
 	<td class="value">{$user->getAffiliation()|escape}</td>
 </tr>
 <tr valign="top">
 	<td class="label">{translate key="user.signature"}:</td>
-	<td class="value">{$user->getSignature()|escape|nl2br}</td>
+	<td class="value">{$user->getUserSignature()|escape|nl2br}</td>
 </tr>
 <tr valign="top">
 	<td class="label">{translate key="user.email"}:</td>
@@ -62,22 +75,24 @@
 </tr>
 <tr valign="top">
 	<td class="label">{translate key="user.interests"}:</td>
-	<td class="value">{$user->getInterests()|escape}</td>
+	<td class="value">{$user->getUserInterests()|escape}</td>
 </tr>
 <tr valign="top">
 	<td class="label">{translate key="common.mailingAddress"}:</td>
 	<td class="value">{$user->getMailingAddress()|strip_unsafe_html|nl2br}</td>
 </tr>
 <tr valign="top">
-	<td class="label">{translate key="user.biography"}:</td>
-	<td class="value">{$user->getBiography()|strip_unsafe_html|nl2br}</td>
+	<td class="label">{translate key="common.discipline"}</td>
+	<td class="value">{$discipline|escape}</td>
 </tr>
-{if $profileLocalesEnabled}
+<tr valign="top">
+	<td class="label">{translate key="user.biography"}:</td>
+	<td class="value">{$user->getUserBiography()|strip_unsafe_html|nl2br}</td>
+</tr>
 <tr valign="top">
 	<td class="label">{translate key="user.workingLanguages"}:</td>
 	<td class="value">{foreach name=workingLanguages from=$user->getLocales() item=localeKey}{$localeNames.$localeKey|escape}{if !$smarty.foreach.workingLanguages.last}; {/if}{/foreach}</td>
 </tr>
-{/if}
 <tr valign="top">
 	<td>&nbsp;</td>
 	<td>&nbsp;</td>

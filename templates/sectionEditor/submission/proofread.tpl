@@ -179,7 +179,7 @@
 	<a href="javascript:openComments('{url op="viewProofreadComments" path=$submission->getArticleId()}');" class="icon">{icon name="comment"}</a>
 {/if}
 
-{if $currentJournal->getSetting('proofInstructions')}
+{if $currentJournal->getLocalizedSetting('proofInstructions')}
 &nbsp;&nbsp;
 <a href="javascript:openHelp('{url op="instructions" path="proof"}')" class="action">{translate key="submission.proofread.instructions"}</a>
 {/if}

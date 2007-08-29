@@ -52,7 +52,11 @@ class AdminJournalHandler extends AdminHandler {
 		import('admin.form.JournalSiteSettingsForm');
 		
 		$settingsForm = &new JournalSiteSettingsForm(!isset($args) || empty($args) ? null : $args[0]);
-		$settingsForm->initData();
+		if ($settingsForm->isLocaleResubmit()) {
+			$settingsForm->readInputData();
+		} else {
+			$settingsForm->initData();
+		}
 		$settingsForm->display();
 	}
 	
