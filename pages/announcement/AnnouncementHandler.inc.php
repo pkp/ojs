@@ -80,8 +80,12 @@ class AnnouncementHandler extends Handler {
 	 */
 	function setupTemplate($subclass = false) {
 		parent::validate();
-
 		$templateMgr = &TemplateManager::getManager();
+		$journal =& Request::getJournal();
+
+		if (!$journal || !$journal->getSetting('restrictSiteAccess')) {
+			$templateMgr->setCacheability(CACHEABILITY_PUBLIC);
+		}
 		$templateMgr->assign('pageHierachy', array(array(Request::url(null, 'announcements'), 'announcement.announcements')));
 	}
 }

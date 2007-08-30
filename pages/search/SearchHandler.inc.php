@@ -178,6 +178,7 @@ class SearchHandler extends Handler {
 		$results = &ArticleSearch::retrieveResults($journal, $keywords, null, null, $rangeInfo);
 
 		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->setCacheability(CACHEABILITY_NO_STORE);
 		$templateMgr->assign_by_ref('results', $results);
 		$templateMgr->assign('basicQuery', Request::getUserVar('query'));
 		$templateMgr->assign('searchField', Request::getUserVar('searchField'));
@@ -238,6 +239,11 @@ class SearchHandler extends Handler {
 			$subclass ? array(array(Request::url(null, 'search'), 'navigation.search'))
 				: array()
 		);
+
+		$journal =& Request::getJournal();
+		if (!$journal || !$journal->getSetting('restrictSiteAccess')) {
+			$templateMgr->setCacheability(CACHEABILITY_PUBLIC);
+		}
 	}
 
 	function assignAdvancedSearchParameters(&$templateMgr) {

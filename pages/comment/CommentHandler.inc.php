@@ -40,6 +40,7 @@ class CommentHandler extends Handler {
 		CommentHandler::setupTemplate($article, $galleyId, $comment);
 
 		$templateMgr = &TemplateManager::getManager();
+		if (Request::getUserVar('refresh')) $templateMgr->setCacheability(CACHEABILITY_NO_CACHE);
 		if ($comment) {
 			$templateMgr->assign_by_ref('comment', $comment);
 			$templateMgr->assign_by_ref('parent', $commentDao->getComment($comment->getParentCommentId(), $articleId));
@@ -92,7 +93,7 @@ class CommentHandler extends Handler {
 			$commentForm->readInputData();
 			if ($commentForm->validate()) {
 				$commentForm->execute();
-				Request::redirect(null, null, 'view', array($articleId, $galleyId, $parentId));
+				Request::redirect(null, null, 'view', array($articleId, $galleyId, $parentId), array('refresh' => 1));
 			}
 		}
 
@@ -122,7 +123,7 @@ class CommentHandler extends Handler {
 		$comment = &$commentDao->getComment($commentId, $articleId, ARTICLE_COMMENT_RECURSE_ALL);
 		if ($comment)$commentDao->deleteComment($comment);
 
-		Request::redirect(null, null, 'view', array($articleId, $galleyId));
+		Request::redirect(null, null, 'view', array($articleId, $galleyId), array('refresh' => '1'));
 	}
 
 	/**
@@ -169,6 +170,11 @@ class CommentHandler extends Handler {
 
 	function setupTemplate($article, $galleyId, $comment = null) {
 		$templateMgr = &TemplateManager::getManager();
+		$journal =& Request::getJournal();
+
+		if (!$journal || !$journal->getSetting('restrictSiteAccess')) {
+			$templateMgr->setCacheability(CACHEABILITY_PUBLIC);
+		}
 
 		$pageHierarchy = array(
 			array(

@@ -23,6 +23,12 @@ require_once('smarty/plugins/modifier.escape.php'); // Seems to be needed?
 
 import('search.ArticleSearch');
 
+define('CACHEABILITY_NO_CACHE',		'no-cache');
+define('CACHEABILITY_NO_STORE',		'no-store');
+define('CACHEABILITY_PUBLIC',		'public');
+define('CACHEABILITY_MUST_REVALIDATE',	'must-revalidate');
+define('CACHEABILITY_PROXY_REVALIDATE',	'proxy-revalidate');
+
 class TemplateManager extends Smarty {
 	/** @var $styleSheets array of URLs to stylesheets */
 	var $styleSheets;
@@ -33,6 +39,9 @@ class TemplateManager extends Smarty {
 	/** @var $initialized Kludge because of reference problems with
 	    TemplateManager::getManager() invoked during constructor process */
 	var $initialized;
+
+	/** @var $cacheability string Type of cacheability (Cache-Control). */
+	var $cacheability;
 
 	/**
 	 * Constructor.
@@ -55,6 +64,7 @@ class TemplateManager extends Smarty {
 		// Assign common variables
 		$this->styleSheets = array();
 		$this->assign_by_ref('stylesheets', $this->styleSheets);
+		$this->cacheability = CACHEABILITY_NO_STORE; // Safe default
 
 		$this->assign('defaultCharset', Config::getVar('i18n', 'client_charset'));
 		$this->assign('baseUrl', Request::getBaseUrl());
@@ -163,6 +173,14 @@ class TemplateManager extends Smarty {
 		$this->initialized = false;
 	}
 
+	/**
+	 * Flag the page as cacheable (or not).
+	 * @param $cacheability boolean optional
+	 */
+	function setCacheability($cacheability = CACHEABILITY_PUBLIC) {
+		$this->cacheability = $cacheability;
+	}
+
 	function initialize() {
 		// This code cannot be called in the constructor because of
 		// reference problems, i.e. callers that need getManager fail.
@@ -193,12 +211,17 @@ class TemplateManager extends Smarty {
 
 		$output = null;
 		if (!HookRegistry::call($hookName, array(&$this, &$template, &$sendContentType, &$charset, &$output))) {
-
-			// Explicitly set the character encoding
-			// Required in case server is using Apache's AddDefaultCharset directive
-			// (which can prevent browser auto-detection of the proper character set)
+			// If this is the main display call, send headers.
 			if ($hookName == 'TemplateManager::display') {
+				// Explicitly set the character encoding
+				// Required in case server is using Apache's
+				// AddDefaultCharset directive (which can
+				// prevent browser auto-detection of the proper
+				// character set)
 				header('Content-Type: ' . $sendContentType . '; charset=' . $charset);
+
+				// Send caching info
+				header('Cache-Control: ' . $this->cacheability);
 			}
 
 			// Actually display the template.

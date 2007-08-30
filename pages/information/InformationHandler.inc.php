@@ -21,6 +21,7 @@ class InformationHandler extends Handler {
 	 */
 	function index($args) {
 		parent::validate();
+		InformationHandler::setupTemplate();
 		$journal = Request::getJournal();
 
 		if ($journal == null) {
@@ -66,6 +67,17 @@ class InformationHandler extends Handler {
 
 	function librarians() {
 		InformationHandler::index(array('librarians'));
+	}
+
+	/**
+	 * Initialize the template.
+	 */
+	function setupTemplate() {
+		$journal =& Request::getJournal();
+		$templateMgr =& TemplateManager::getManager();
+		if (!$journal || !$journal->getSetting('restrictSiteAccess')) {
+			$templateMgr->setCacheability(CACHEABILITY_PUBLIC);
+		}
 	}
 }
 

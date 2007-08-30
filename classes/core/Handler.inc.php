@@ -40,14 +40,24 @@ class Handler {
 			// Requested page is only allowed for journals
 			Request::redirect(null, 'about');
 		}
-		
-		if ($journal != null && !Validation::isLoggedIn() && Request::getRequestedPage() != 'login' && Request::getRequestedPage() != 'user' && Request::getRequestedPage() != 'help') {
-			// Check if unregistered users can access the site
-			$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
-			if ($journalSettingsDao->getSetting($journal->getJournalId(), 'restrictSiteAccess')) {
-				Request::redirect(null, 'login');
-			}
+
+		$page = Request::getRequestedPage();
+		if (	$journal != null &&
+			!Validation::isLoggedIn() &&
+			!in_array($page, Handler::getLoginExemptions()) &&
+			$journal->getSetting('restrictSiteAccess')
+		) {
+			Request::redirect(null, 'login');
 		}
+	}
+
+	/**
+	 * Get a list of pages that don't require login, even if the journal
+	 * does.
+	 * @return array
+	 */
+	function getLoginExemptions() {
+		return array('user', 'login', 'help');
 	}
 
 	/**

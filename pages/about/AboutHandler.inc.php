@@ -67,8 +67,12 @@ class AboutHandler extends Handler {
 	 */
 	function setupTemplate($subclass = false) {
 		parent::validate();
-		
 		$templateMgr = &TemplateManager::getManager();
+		$journal =& Request::getJournal();
+
+		if (!$journal || !$journal->getSetting('restrictSiteAccess')) {
+			$templateMgr->setCacheability(CACHEABILITY_PUBLIC);
+		}
 		$templateMgr->assign('pageHierarchy', array(array(Request::url(null, 'about'), 'about.aboutTheJournal')));
 	}
 	

@@ -75,6 +75,7 @@ class Form {
 	 */
 	function display() {
 		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->setCacheability(CACHEABILITY_NO_STORE);
 		$templateMgr->register_function('fieldLabel', array(&$this, 'smartyFieldLabel'));
 		$templateMgr->register_function('form_language_chooser', array(&$this, 'smartyFormLanguageChooser'));
 		

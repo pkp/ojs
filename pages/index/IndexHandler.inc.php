@@ -70,6 +70,7 @@ class IndexHandler extends Handler {
 			$templateMgr->assign('intro', $site->getSiteIntro());
 			$journals = &$journalDao->getEnabledJournals();
 			$templateMgr->assign_by_ref('journals', $journals);
+			$templateMgr->setCacheability(CACHEABILITY_PUBLIC);
 			$templateMgr->display('index/site.tpl');
 		}
 	}
