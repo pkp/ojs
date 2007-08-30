@@ -109,9 +109,9 @@
 <div id="breadcrumb">
 	<a href="{url page="index"}">{translate key="navigation.home"}</a> &gt;
 	{foreach from=$pageHierarchy item=hierarchyLink}
-		<a href="{$hierarchyLink[0]}" class="hierarchyLink">{if not $hierarchyLink[2]}{translate key=$hierarchyLink[1]}{else}{$hierarchyLink[1]}{/if}</a> &gt;
+		<a href="{$hierarchyLink[0]|escape}" class="hierarchyLink">{if not $hierarchyLink[2]}{translate key=$hierarchyLink[1]}{else}{$hierarchyLink[1]|escape}{/if}</a> &gt;
 	{/foreach}
-	<a href="{$currentUrl}" class="current">{$pageCrumbTitleTranslated}</a>
+	<a href="{$currentUrl|escape}" class="current">{$pageCrumbTitleTranslated}</a>
 </div>
 
 <h2>{$pageTitleTranslated}</h2>
