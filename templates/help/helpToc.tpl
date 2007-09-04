@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {include file="help/header.tpl"}
 
 <div id="main" style="margin: 0; width: 660px;">

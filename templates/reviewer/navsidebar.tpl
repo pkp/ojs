@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {* Note that if the user has come in via an access key, the submission counts won't
    be available as the user isn't actually logged in. Therefore we must check to
    see if the user object actually exists before displaying submission counts. *}

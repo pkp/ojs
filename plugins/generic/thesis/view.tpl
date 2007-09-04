@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {assign var="pageCrumbTitleTranslated" value=$thesis->getStudentLastName()}
 {assign var="pageTitleTranslated" value=$thesis->getTitle()}
 {include file="common/header.tpl"}

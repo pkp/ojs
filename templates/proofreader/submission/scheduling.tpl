@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 <a name="scheduling"></a>
 <h3>{translate key="submission.scheduling"}</h3>
 

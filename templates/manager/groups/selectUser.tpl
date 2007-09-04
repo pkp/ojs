@@ -8,10 +8,9 @@
  *
  * $Id$
  *}
-
 {assign var=pageTitle value="manager.groups.membership.addMember"}
-
 {include file="common/header.tpl"}
+
 <form name="submit" method="post" action="{url op="addMembership" path=$group->getGroupId()}">
 	<select name="searchField" size="1" class="selectMenu">
 		{html_options_translate options=$fieldOptions selected=$searchField}

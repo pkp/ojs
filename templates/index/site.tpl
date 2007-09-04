@@ -8,11 +8,7 @@
  *
  * $Id$
  *}
-
-{if $siteTitle}
-	{assign var="pageTitleTranslated" value=$siteTitle}
-{/if}
-
+{if $siteTitle}{assign var="pageTitleTranslated" value=$siteTitle}{/if}
 {include file="common/header.tpl"}
 
 <br />

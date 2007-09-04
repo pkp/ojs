@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {assign var="pageTitle" value="user.role.layoutEditor"}
 {include file="common/header.tpl"}
 

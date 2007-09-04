@@ -1,3 +1,13 @@
+{**
+ * rss2.tpl
+ *
+ * Copyright (c) 2003-2007 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * RSS 2 feed template
+ *
+ * $Id$
+ *}
 <?xml version="1.0" encoding="{$defaultCharset}"?>
 <rss version="2.0">
 	<channel>

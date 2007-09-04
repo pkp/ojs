@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {if !$dateFrom}
 {assign var="dateFrom" value="--"}
 {/if}

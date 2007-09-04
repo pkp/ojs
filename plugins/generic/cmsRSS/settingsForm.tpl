@@ -7,7 +7,6 @@
  * Form for CMS RSS plugin settings.
  *
  *}
-
 {assign var="pageTitle" value="plugins.generic.cmsrss.displayName"}
 {include file="common/header.tpl"}
 

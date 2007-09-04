@@ -7,7 +7,6 @@
  * CMS content
  *
  *}
-
 {assign var="pageTitleTranslated" value=$title}
 {include file="common/header.tpl"}
 

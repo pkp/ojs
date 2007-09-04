@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
- 
 {assign var="pageTitle" value="email.compose"}
 {include file="submission/comment/header.tpl"}
 

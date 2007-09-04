@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {* WARNING: This page should be kept roughly synchronized with the
    implementation of reader statistics in the About page.          *}
 <a name="statistics"></a>

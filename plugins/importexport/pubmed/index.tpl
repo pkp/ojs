@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {assign var="pageTitle" value="plugins.importexport.pubmed.displayName"}
 {include file="common/header.tpl"}
 

@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {assign var="pageTitle" value="user.changePassword"}
 {url|assign:"currentUrl" page="user" op="changePassword"}
 {include file="common/header.tpl"}

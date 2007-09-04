@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {assign var="pageTitle" value="admin.systemConfiguration"}
 {include file="common/header.tpl"}
 

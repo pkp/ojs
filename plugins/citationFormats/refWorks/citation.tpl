@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 <div class="separator"></div>
 
 <form action="http://www.refworks.com/express/expressimport.asp?vendor=Public%20Knowledge%20Project&filter=BibTeX&encoding=65001" method="post" target="RefWorksMain">

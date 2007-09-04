@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {assign var="pageTitle" value="user.role.reviewers"}
 {include file="common/header.tpl"}
 

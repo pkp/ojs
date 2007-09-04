@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 <a name="metadata"></a>
 <table class="data">
 	<tr valign="middle">

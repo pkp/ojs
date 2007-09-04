@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 <a name="copyedit"></a>
 <h3>{translate key="submission.copyediting"}</h3>
 

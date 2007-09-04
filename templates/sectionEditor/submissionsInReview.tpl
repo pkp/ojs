@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 <a name="submissions"></a>
 
 <table width="100%" class="listing">

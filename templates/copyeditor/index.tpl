@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {assign var="pageTitle" value="common.queue.long.$pageToDisplay"}
 {include file="common/header.tpl"}
 

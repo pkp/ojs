@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {assign var="pageTitle" value="rt.contexts"}
 {include file="common/header.tpl"}
 

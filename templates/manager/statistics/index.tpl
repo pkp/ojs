@@ -8,9 +8,9 @@
  *
  * $Id$
  *}
-
 {assign var="pageTitle" value="manager.statistics"}
 {include file="common/header.tpl"}
+
 <br/>
 
 {include file="manager/statistics/statistics.tpl"}

@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 <div class="separator"></div>
 
 {assign var=authors value=$article->getAuthors()}

@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {assign var="pageTitle" value="manager.filesBrowser"}
 {include file="common/header.tpl"}
 {assign var=displayDir value="/$currentDir"}

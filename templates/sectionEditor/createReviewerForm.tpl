@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {assign var="pageTitle" value="sectionEditor.review.createReviewer"}
 {include file="common/header.tpl"}
 

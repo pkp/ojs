@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {assign var="pageTitle" value="about.statistics"}
 {include file="common/header.tpl"}
 

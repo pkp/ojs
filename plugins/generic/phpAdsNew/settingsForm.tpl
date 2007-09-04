@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {assign var="pageTitle" value="plugins.generic.phpadsnew"}
 {include file="common/header.tpl"}
 

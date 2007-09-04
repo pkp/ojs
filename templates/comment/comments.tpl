@@ -8,14 +8,12 @@
  *
  * $Id$
  *}
-
 {if $comment}
-	{assign var=pageTitle value="comments.readerComments"}
-	{assign var=pageCrumbTitleTranslated value=$comment->getTitle()|escape|truncate:50:"..."}
+{assign var=pageTitle value="comments.readerComments"}
+{assign var=pageCrumbTitleTranslated value=$comment->getTitle()|escape|truncate:50:"..."}
 {else}
-	{assign var=pageTitle value="comments.readerComments"}
+{assign var=pageTitle value="comments.readerComments"}
 {/if}
-
 {include file="common/header.tpl"}
 
 {if $comment}

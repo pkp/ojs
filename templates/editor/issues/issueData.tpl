@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {assign var="pageTitleTranslated" value=$issue->getIssueIdentification()}
 {assign var="pageCrumbTitleTranslated" value=$issue->getIssueIdentification(false,true)}
 {include file="common/header.tpl"}

@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {assign var="pageTitle" value="about.editorialTeam"}
 {include file="common/header.tpl"}
 

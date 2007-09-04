@@ -8,8 +8,8 @@
  *
  * $Id$
  *}
-
 {include file="common/header.tpl"}
+
 <h3>{translate key=$pageSubTitle}</h3>
 <form name="submit" method="post" action="{url op=$actionHandler path=$articleId}">
 	<select name="searchField" size="1" class="selectMenu">

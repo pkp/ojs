@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 <!-- phpMyVisites -->
 <a href="http://www.phpmyvisites.net/" title="phpMyVisites"
 onclick="window.open(this.href);return(false);"><script type="text/javascript">

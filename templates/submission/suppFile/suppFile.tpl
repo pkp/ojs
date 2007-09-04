@@ -8,13 +8,11 @@
  *
  * $Id$
  *}
-
 {if $suppFileId}
-	{assign var="pageTitle" value="author.submit.editSupplementaryFile"}
+{assign var="pageTitle" value="author.submit.editSupplementaryFile"}
 {else}
-	{assign var="pageTitle" value="author.submit.addSupplementaryFile"}
+{assign var="pageTitle" value="author.submit.addSupplementaryFile"}
 {/if}
-
 {assign var="pageCrumbTitle" value="submission.supplementaryFiles"}
 {include file="common/header.tpl"}
 

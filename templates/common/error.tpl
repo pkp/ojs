@@ -9,7 +9,6 @@
  *
  * $Id$
  *}
-
 {include file="common/header.tpl"}
 
 <span class="errorText">{translate key=$errorMsg params=$errorParams}</span>

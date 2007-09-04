@@ -8,13 +8,11 @@
  *
  * $Id$
  *}
-
 {if $op=="emailColleague"}
-	{assign var="pageTitle" value="rt.colleague"}
+{assign var="pageTitle" value="rt.colleague"}
 {else}
-	{assign var="pageTitle" value="rt.emailAuthor"}
+{assign var="pageTitle" value="rt.emailAuthor"}
 {/if}
-
 {include file="rt/header.tpl"}
 
 <script type="text/javascript">

@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {if $enableLanguageToggle}
 <div class="block" id="sidebarLanguageToggle">
 	<span class="blockTitle">{translate key="common.language"}</span>

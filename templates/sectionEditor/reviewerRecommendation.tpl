@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {assign var="pageTitle" value="submission.recommendation"}
 {include file="common/header.tpl"}
 

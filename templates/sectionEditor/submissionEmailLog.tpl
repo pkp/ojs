@@ -9,7 +9,6 @@
  *
  * $Id$
  *}
-
 {assign var="pageTitle" value="submission.emailLog"}
 {include file="common/header.tpl"}
 

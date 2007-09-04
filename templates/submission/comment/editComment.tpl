@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {assign var="pageTitle" value="submission.comments.editComment"}
 {include file="submission/comment/header.tpl"}
 

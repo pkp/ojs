@@ -9,7 +9,6 @@
  *
  * $Id$
  *}
-
 {include file="common/header.tpl"}
 
 <p>{translate key=$message}</p>

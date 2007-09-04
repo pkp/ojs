@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {assign var="pageTitle" value="editor.home"}
 {assign var="pageCrumbTitle" value="user.role.editor"}
 {include file="common/header.tpl"}

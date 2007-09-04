@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {include file="common/header.tpl"}
 
 <p>{$content|nl2br}</p>

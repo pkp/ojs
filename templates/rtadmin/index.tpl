@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {assign var="pageTitle" value="rt.readingTools"}
 {include file="common/header.tpl"}
 

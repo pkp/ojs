@@ -1,11 +1,12 @@
 {**
  * rss.tpl
  *
- * Copyright (c) 2006 Gunther Eysenbach, Juan Pablo Alperin
+ * Copyright (c) 2006-2007 Gunther Eysenbach, Juan Pablo Alperin
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * RSS content
  *
+ * $Id$
  *}
 <div class="separator">&nbsp;</div>
 <h4><a href="{$item->get_permalink()}">{$item->get_title()|escape}</a></h4>

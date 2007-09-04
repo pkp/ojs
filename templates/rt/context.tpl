@@ -8,9 +8,7 @@
  *
  * $Id$
  *}
-
 {assign var=pageTitleTranslated value=$context->getTitle()|capitalize}
-
 {include file="rt/header.tpl"}
 
 <script type="text/javascript">

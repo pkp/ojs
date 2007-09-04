@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {assign var="pageTitle" value="section.section"}
 {assign var="pageCrumbTitle" value="section.sections"}
 {url|assign:"currentUser" op="sections"}

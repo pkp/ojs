@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {assign var="pageTitle" value="plugins.importexport.crossref.export.selectIssue"}
 {assign var="pageCrumbTitle" value="plugins.importexport.crossref.export.selectIssue"}
 {include file="common/header.tpl"}

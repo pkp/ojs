@@ -8,11 +8,10 @@
  *
  * $Id$
  *}
-
 {if !$isNewTemplate}
-	{assign var="pageTitle" value="manager.emails.editEmail"}
+{assign var="pageTitle" value="manager.emails.editEmail"}
 {else}
-	{assign var="pageTitle" value="manager.emails.createEmail"}
+{assign var="pageTitle" value="manager.emails.createEmail"}
 {/if}
 {include file="common/header.tpl"}
 

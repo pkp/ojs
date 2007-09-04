@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {assign var="pageTitle" value="manager.setup.journalSetup"}
 {include file="manager/setup/setupHeader.tpl"}
 

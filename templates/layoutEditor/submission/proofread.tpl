@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 <a name="proofread"></a>
 <h3>{translate key="submission.proofreading"}</h3>
 

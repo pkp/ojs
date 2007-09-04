@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {assign var="pageTitle" value="editor.issues.backIssues"}
 {url|assign:"currentUrl" page="editor" op="backIssues"}
 {include file="common/header.tpl"}

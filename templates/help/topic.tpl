@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {foreach name=sections from=$topic->getSections() item=section}
 	<a name="section{math equation="counter - 1" counter=$smarty.foreach.sections.iteration}"></a>
 	{if $section->getTitle()}<h4>{$section->getTitle()}</h4>{/if}

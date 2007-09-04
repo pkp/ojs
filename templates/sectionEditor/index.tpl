@@ -8,10 +8,8 @@
  *
  * $Id$
  *}
-
 {assign var="pageTitle" value="common.queue.long.$pageToDisplay"}
 {url|assign:"currentUrl" page="sectionEditor"}
-
 {include file="common/header.tpl"}
 
 <ul class="menu">

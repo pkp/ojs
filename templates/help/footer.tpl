@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {call_hook name="Templates::Help::Footer::PageFooter"}
 </div>
 </div>

@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 <div class="separator"></div>
 
 {literal}

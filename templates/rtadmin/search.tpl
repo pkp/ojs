@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {assign var="pageTitle" value="rt.admin.searches.edit.editSearch"}
 {include file="common/header.tpl"}
 

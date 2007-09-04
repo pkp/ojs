@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {translate|escape|assign:"pageTitleTranslated" key="plugins.generic.translator.email.edit" emailKey=$emailKey}
 {include file="common/header.tpl"}
 

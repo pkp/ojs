@@ -1,3 +1,13 @@
+{**
+ * atom.tpl
+ *
+ * Copyright (c) 2003-2007 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * Atom feed template
+ *
+ * $Id$
+ *}
 <?xml version="1.0" encoding="{$defaultCharset}"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 	{* required elements *}

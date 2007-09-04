@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {assign var="pageTitle" value="plugins.importexport.users.import.importUsers"}
 {include file="common/header.tpl"}
 

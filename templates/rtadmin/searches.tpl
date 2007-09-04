@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {assign var="pageTitle" value="rt.searches"}
 {include file="common/header.tpl"}
 

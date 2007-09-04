@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {assign var=layoutAssignment value=$submission->getLayoutAssignment()}
 {assign var=layoutFile value=$layoutAssignment->getLayoutFile()}
 <a name="layout"></a>

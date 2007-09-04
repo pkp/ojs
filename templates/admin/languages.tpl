@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {assign var="pageTitle" value="common.languages"}
 {include file="common/header.tpl"}
 

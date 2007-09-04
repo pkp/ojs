@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {assign var="pageTitle" value="admin.journals.journalSettings"}
 {include file="common/header.tpl"}
 

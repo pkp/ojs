@@ -10,7 +10,6 @@
  *
  * $Id$
  *}
-
 {assign var="pageTitle" value="about.aboutThisPublishingSystem"}
 {include file="common/header.tpl"}
 

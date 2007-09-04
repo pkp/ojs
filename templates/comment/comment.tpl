@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {assign var="pageTitle" value="comments.enterComment"}
 {include file="common/header.tpl"}
 

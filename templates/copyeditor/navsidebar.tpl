@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 <div class="block" id="sidebarCopyeditor">
 	<span class="blockTitle">{translate key="user.role.copyeditor"}</span>
 	<span class="blockSubtitle">{translate key="article.submissions"}</span>

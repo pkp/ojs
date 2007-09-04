@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {assign var="pageTitle" value="about.journalContact"}
 {include file="common/header.tpl"}
 

@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 <div class="block" id="sidebarNavigation">
 	<span class="blockTitle">{translate key="plugins.block.navigation.journalContent"}</span>
 	

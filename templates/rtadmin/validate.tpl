@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {assign var="pageTitle" value="rt.admin.validateUrls"}
 {include file="common/header.tpl"}
 

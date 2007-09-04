@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 <div class="block" id="sidebarAuthor">
 	<span class="blockTitle">{translate key="user.role.author"}</span>
 	<span class="blockSubtitle">{translate key="article.submissions"}</span>

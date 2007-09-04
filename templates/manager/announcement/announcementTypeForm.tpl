@@ -8,14 +8,12 @@
  *
  * $Id$
  *}
-
 {assign var="pageCrumbTitle" value="$announcementTypeTitle"}
 {if $typeId}
-	{assign var="pageTitle" value="manager.announcementTypes.edit"}
+{assign var="pageTitle" value="manager.announcementTypes.edit"}
 {else}
-	{assign var="pageTitle" value="manager.announcementTypes.create"}
+{assign var="pageTitle" value="manager.announcementTypes.create"}
 {/if}
-
 {assign var="pageId" value="manager.announcementTypes.announcementTypeForm"}
 {include file="common/header.tpl"}
 

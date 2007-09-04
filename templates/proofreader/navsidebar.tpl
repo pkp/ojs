@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 <div class="block" id="sidebarProofreader">
 	<span class="blockTitle">{translate key="user.role.proofreader"}</span>
 	<span class="blockSubtitle">{translate key="article.submissions"}</span>

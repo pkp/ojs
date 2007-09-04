@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {if not $noIssue}
 {assign var="pageTitleTranslated" value=$issue->getIssueIdentification()|escape}
 {assign var="pageCrumbTitleTranslated" value=$issue->getIssueIdentification(false,true)|escape}

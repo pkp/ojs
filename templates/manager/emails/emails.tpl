@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {assign var="pageTitle" value="manager.emails"}
 {include file="common/header.tpl"}
 

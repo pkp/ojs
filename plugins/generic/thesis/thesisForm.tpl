@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {assign var="pageCrumbTitle" value="$thesisTitle"}
 {if $thesisId}
 	{assign var="pageTitle" value="plugins.generic.thesis.manager.edit"}

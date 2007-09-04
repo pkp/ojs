@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 <table width="100%" class="listing">
 	<tr>
 		<td colspan="2" class="headseparator">&nbsp;</td>

@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {if $pageFooter}
 <br /><br />
 {$pageFooter}

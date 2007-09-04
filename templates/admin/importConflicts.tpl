@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {include file="common/header.tpl"}
 
 <p>{translate key="admin.journals.importOJS1.conflict.desc"}</p>

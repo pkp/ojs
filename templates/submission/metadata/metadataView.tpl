@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
- 
 {assign var="pageTitle" value="submission.viewMetadata"}
 {include file="common/header.tpl"}
 

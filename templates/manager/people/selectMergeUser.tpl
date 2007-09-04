@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {assign var="pageTitle" value="manager.people.mergeUsers"}
 {include file="common/header.tpl"}
 

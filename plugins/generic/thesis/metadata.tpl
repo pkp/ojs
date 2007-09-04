@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 	<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
 	<link rel="schema.ETDMS" href="http://www.ndltd.org/standards/metadata/etdms/1.0/etdms.xsd" />
 	<meta name="DC.Title" content="{$thesis->getTitle()|escape}"/>

@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {assign var="pageTitle" value="submission.dueDate"}
 {include file="common/header.tpl"}
 

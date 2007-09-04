@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {assign var="pageTitle" value="plugins.gateways.googleScholar.displayName"}
 {include file="common/header.tpl"}
 

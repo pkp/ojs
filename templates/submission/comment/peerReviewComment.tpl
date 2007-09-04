@@ -8,8 +8,6 @@
  *
  * $Id$
  *}
-
-
 {include file="submission/comment/header.tpl"}
 
 <script type="text/javascript">

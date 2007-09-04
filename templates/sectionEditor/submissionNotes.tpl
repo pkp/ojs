@@ -9,7 +9,6 @@
  *
  * $Id$
  *}
-
 {assign var="pageTitle" value="submission.notes"}
 {assign var="pageCrumbTitle" value="submission.notes.breadcrumb"}
 {include file="common/header.tpl"}

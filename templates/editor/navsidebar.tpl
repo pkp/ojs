@@ -9,7 +9,6 @@
  *
  * $Id$
  *}
-
 <div class="block" id="sidebarEditor">
 	<span class="blockTitle">{translate key="user.role.editor"}</span>
 	

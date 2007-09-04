@@ -8,9 +8,7 @@
  *
  * $Id$
  *}
-
 {assign var=pageTitle value="search.searchResults"}
-
 {include file="common/header.tpl"}
 
 <script type="text/javascript">

@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {assign var="pageTitle" value="navigation.search"}
 {include file="common/header.tpl"}
 

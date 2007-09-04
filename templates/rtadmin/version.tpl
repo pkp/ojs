@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {assign var="pageTitle" value="rt.admin.versions.edit.editVersion"}
 {include file="common/header.tpl"}
 

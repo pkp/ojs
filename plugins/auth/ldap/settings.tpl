@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 <br />
 
 <h3>{translate key="plugins.auth.ldap.settings"}</h3>

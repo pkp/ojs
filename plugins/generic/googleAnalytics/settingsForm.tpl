@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {assign var="pageTitle" value="plugins.generic.googleAnalytics.manager.googleAnalyticsSettings"}
 {include file="common/header.tpl"}
 

@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {assign var="pageTitle" value="plugins.importexport.crossref.displayName"}
 {include file="common/header.tpl"}
 

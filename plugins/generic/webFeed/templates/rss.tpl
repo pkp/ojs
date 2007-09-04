@@ -1,3 +1,13 @@
+{**
+ * rss.tpl
+ *
+ * Copyright (c) 2003-2007 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * RSS feed template
+ *
+ * $Id$
+ *}
 <?xml version="1.0" encoding="{$defaultCharset}"?>
 <rdf:RDF
 	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"

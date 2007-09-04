@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 <a name="statistics"></a>
 <h3>{translate key="manager.statistics.reports"}</h3>
 <p>{translate key="manager.statistics.reports.description"}</p>

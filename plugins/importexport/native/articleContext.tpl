@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {assign var="pageTitle" value="plugins.importexport.native.import.articles"}
 {include file="common/header.tpl"}
 

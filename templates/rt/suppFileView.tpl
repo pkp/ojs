@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {assign var="pageTitle" value="article.suppFile"}
 {include file="rt/header.tpl"}
 

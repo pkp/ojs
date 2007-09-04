@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {assign var="pageTitle" value="user.profile.editProfile"}
 {url|assign:"url" op="profile"}
 {include file="common/header.tpl"}

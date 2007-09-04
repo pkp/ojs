@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {assign var="pageTitle" value="rt.versions"}
 {include file="common/header.tpl"}
 

@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 <div class="block" id="sidebarWebFeed">
 {if ( $displayPage eq "all" ) || ($displayPage eq "issue" && $issue) }
 	<a href="{url page="feed" op="atom"}">

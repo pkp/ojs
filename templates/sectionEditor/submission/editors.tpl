@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 <a name="editors"></a>
 <h3>{translate key="user.role.editors"}</h3>
 <form action="{url op="setEditorFlags"}" method="post">

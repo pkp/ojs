@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {assign var="pageTitle" value="manager.importExport"}
 {include file="common/header.tpl"}
 

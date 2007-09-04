@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 <a name="layout"></a>
 <h3>{translate key="submission.layout"}</h3>
 

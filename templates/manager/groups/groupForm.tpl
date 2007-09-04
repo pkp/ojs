@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {assign var="pageId" value="manager.groups.groupForm"}
 {assign var="pageCrumbTitle" value=$pageTitle}
 {include file="common/header.tpl"}

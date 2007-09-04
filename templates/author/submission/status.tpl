@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 <a name="status"></a>
 <h3>{translate key="common.status"}</h3>
 

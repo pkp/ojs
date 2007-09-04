@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 <a name="submission"></a>
 <h3>{translate key="article.submission"}</h3>
 

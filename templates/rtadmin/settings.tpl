@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {assign var="pageTitle" value="rt.admin.settings"}
 {include file="common/header.tpl"}
 

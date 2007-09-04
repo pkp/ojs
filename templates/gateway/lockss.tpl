@@ -9,7 +9,6 @@
  *
  * $Id$
  *}
-
 {assign var="pageTitleTranslated" value="LOCKSS Publisher Manifest"}
 {include file="common/header.tpl"}
 

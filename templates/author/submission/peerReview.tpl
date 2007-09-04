@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 <a name="peerReview"></a>
 <h3>{translate key="submission.peerReview"}</h3>
 

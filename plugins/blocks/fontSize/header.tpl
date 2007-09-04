@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 	<!-- Add javascript required for font sizer -->
 	<script type="text/javascript" src="{$baseUrl}/{$fontSizerPluginPath}/sizer.js" ></script>
 

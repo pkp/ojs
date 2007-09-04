@@ -10,7 +10,6 @@
  *
  * $Id$
  *}
-
 {assign var="pageTitle" value="about.siteMap"}
 {include file="common/header.tpl"}
 

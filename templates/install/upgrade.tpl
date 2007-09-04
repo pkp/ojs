@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {assign var="pageTitle" value="installer.ojsUpgrade"}
 {include file="common/header.tpl"}
 

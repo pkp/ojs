@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {assign var="pageTitle" value="common.queue.long.$pageToDisplay"}
 {url|assign:"currentUrl" page="editor"}
 {include file="common/header.tpl"}

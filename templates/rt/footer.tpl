@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 <br />
 
 {if !$omitCloseButton}

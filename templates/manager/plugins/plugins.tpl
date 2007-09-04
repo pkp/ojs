@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {assign var="pageTitle" value="manager.plugins.pluginManagement"}
 {include file="common/header.tpl"}
 

@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {if $isError}
 <p>
 	<a name="formErrors"></a>

@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {assign var="pageTitle" value="user.userHome"}
 {include file="common/header.tpl"}
 

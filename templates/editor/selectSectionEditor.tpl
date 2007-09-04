@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {assign var="pageTitle" value=`$roleName`s}
 {include file="common/header.tpl"}
 

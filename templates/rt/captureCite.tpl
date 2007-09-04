@@ -8,9 +8,7 @@
  *
  * $Id$
  *}
-
 {assign var=pageTitle value="rt.captureCite"}
-
 {include file="rt/header.tpl"}
 
 {if $galleyId}

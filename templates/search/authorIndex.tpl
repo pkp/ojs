@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {assign var="pageTitle" value="search.authorIndex"}
 {include file="common/header.tpl"}
 

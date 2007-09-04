@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {assign var="pageTitle" value="plugins.generic.phpmv.manager.phpmvSettings"}
 {include file="common/header.tpl"}
 

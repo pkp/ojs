@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {foreach name=sections from=$publishedArticles item=section key=sectionId}
 {if $section.title}<h4>{$section.title|escape}</h4>{/if}
 

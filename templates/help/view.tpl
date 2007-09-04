@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {include file="help/header.tpl"}
 
 <div id="sidebar">

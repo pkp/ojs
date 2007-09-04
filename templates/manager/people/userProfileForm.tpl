@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {url|assign:"currentUrl" op="people" path="all"}
 {assign var="pageTitle" value="manager.people"}
 {include file="common/header.tpl"}

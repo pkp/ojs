@@ -8,9 +8,7 @@
  *
  * $Id$
  *}
-
 {assign var=pageTitle value="email.email"}
-
 {include file="rt/header.tpl"}
 
 <p>{translate key="rt.email.sent"}</p>

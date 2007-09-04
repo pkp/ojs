@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 <div style="padding-top: 0.5em;">
 	<form action="{url op="search"}" method="post" style="display: inline">
 	<input type="text" name="keyword" size="16" maxlength="60" value="{$helpSearchKeyword}" class="textField" />&nbsp;<input type="submit" value="{translate key="common.search"}" class="button" />

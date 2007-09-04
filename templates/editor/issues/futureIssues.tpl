@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 {assign var="pageTitle" value="editor.issues.futureIssues"}
 {url|assign:"currentUrl" page="editor" op="issues"}
 {include file="common/header.tpl"}

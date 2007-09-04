@@ -8,7 +8,6 @@
  *
  * $Id$
  *}
-
 <a name="rounds"></a>
 <h3>{translate|escape key="sectionEditor.regrets.regretsAndCancels"}</h3>
 

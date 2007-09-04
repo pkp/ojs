@@ -9,7 +9,6 @@
  *
  * $Id$
  *}
-
 {if !$showToc && $issue}
 	{if $issueId}
 		{url|assign:"currentUrl" path=$issueId|to_array:"showToc"}

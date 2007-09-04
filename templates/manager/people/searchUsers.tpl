@@ -9,7 +9,6 @@
  * $Id$
  *
  *}
-
 {translate|assign:"pageTitleTranslated" key="manager.people.roleEnrollment" role=$roleName|translate}
 {include file="common/header.tpl"}
 

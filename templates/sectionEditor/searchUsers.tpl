@@ -9,7 +9,6 @@
  * $Id$
  *
  *}
-
 {assign var="pageTitle" value="manager.people.enrollment"}
 {include file="common/header.tpl"}
 
