@@ -24,10 +24,6 @@
 ]>
 
 <journal_settings>
-	<setting type="string" locale="0">
-		<name>primaryLocale</name>
-		<value>{$primaryLocale}</value>
-	</setting>
 	<setting type="int" locale="0">
 		<name>numPageLinks</name>
 		<value>10</value>

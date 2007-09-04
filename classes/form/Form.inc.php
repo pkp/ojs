@@ -50,26 +50,6 @@ class Form {
 		$this->errorFields = array();
 	}
 
-	function getSupportedLocales() {
-		static $supportedLocales;
-		if ($supportedLocales === null) {
-			$journal =& Request::getJournal();
-			if ($journal) {
-				// Journal context
-				$supportedLocales = $journal->getSupportedLocaleNames();
-			} else {
-				// Site context
-				$site =& Request::getSite();
-				$supportedLocaleSymbols = $site->getSupportedLocales();
-				$supportedLocales = Locale::getAllLocales();
-				foreach ($supportedLocales as $key => $junk) {
-					if (!in_array($key, $supportedLocaleSymbols)) unset($supportedLocales[$key]);
-				}
-			}
-		}
-		return $supportedLocales;
-	}
-
 	/**
 	 * Display the form.
 	 */
@@ -83,7 +63,7 @@ class Form {
 		$templateMgr->assign('isError', !$this->isValid());
 		$templateMgr->assign('errors', $this->getErrorsArray());
 
-		$templateMgr->assign('formLocales', $this->getSupportedLocales());
+		$templateMgr->assign('formLocales', Locale::getSupportedLocales());
 
 		// Determine the current locale to display fields with
 		$formLocale = Request::getUserVar('formLocale');
@@ -318,7 +298,7 @@ class Form {
 		// Display the language selector widget.
 		$formLocale = $smarty->get_template_vars('formLocale');
 		echo '<div id="languageSelector"><select size="1" name="formLocale" onchange="changeFormAction(\'' . htmlentities($params['form'], ENT_COMPAT, LOCALE_ENCODING) . '\', \'' . htmlentities($params['url'], ENT_QUOTES, LOCALE_ENCODING) . '\')" class="selectMenu">';
-		foreach ($this->getSupportedLocales() as $locale => $name) {
+		foreach (Locale::getSupportedLocales() as $locale => $name) {
 			
 			echo '<option ' . ($locale == $formLocale?'selected="selected" ':'') . 'value="' . htmlentities($locale, ENT_COMPAT, LOCALE_ENCODING) . '">' . htmlentities($name, ENT_COMPAT, LOCALE_ENCODING) . '</option>';
 		}

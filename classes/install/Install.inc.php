@@ -219,15 +219,16 @@ class Install extends Installer {
 
 		} else {
 			// Add initial site data
+			$locale = $this->getParam('locale');
 			$siteDao = &DAORegistry::getDAO('SiteDAO', $this->dbconn);
 			$site = &new Site();
-			$site->setTitle(Locale::translate(INSTALLER_DEFAULT_SITE_TITLE));
+			$site->setTitle(Locale::translate(INSTALLER_DEFAULT_SITE_TITLE), $locale);
 			$site->setJournalRedirect(0);
 			$site->setMinPasswordLength(INSTALLER_DEFAULT_MIN_PASSWORD_LENGTH);
-			$site->setlocale($this->getParam('locale'));
+			$site->setPrimaryLocale($locale);
 			$site->setInstalledLocales($this->installedLocales);
-			$site->setContactName($site->getTitle());
-			$site->setContactEmail($this->getParam('adminEmail'));
+			$site->setContactName($site->getTitle($locale), $locale);
+			$site->setContactEmail($this->getParam('adminEmail'), $locale);
 			if (!$siteDao->insertSite($site)) {
 				$this->setError(INSTALLER_ERROR_DB, $this->dbconn->errorMsg());
 				return false;

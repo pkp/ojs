@@ -231,6 +231,7 @@ class JournalSettingsDAO extends DAO {
 
 			if (isset($nameNode) && isset($valueNode)) {
 				$type = $setting->getAttribute('type');
+				$isLocaleField = $setting->getAttribute('locale');
 				$name = &$nameNode->getValue();
 
 				if ($type == 'object') {
@@ -241,7 +242,13 @@ class JournalSettingsDAO extends DAO {
 				}
 
 				// Replace translate calls with translated content
-				$this->updateSetting($journalId, $name, $value, $type);
+				$this->updateSetting(
+					$journalId,
+					$name,
+					$isLocaleField?array(Locale::getLocale() => $value):$value,
+					$type,
+					$isLocaleField
+				);
 			}
 		}
 

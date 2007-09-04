@@ -177,19 +177,19 @@ class Installer {
 		if (!$this->preInstall()) {
 			return false;
 		}
-		
+
 		if (!$this->parseInstaller()) {
 			return false;
 		}
-		
+
 		if (!$this->executeInstaller()) {
 			return false;
 		}
-		
+
 		if (!$this->postInstall()) {
 			return false;
 		}
-		
+
 		return $this->updateVersion();
 	}
 	

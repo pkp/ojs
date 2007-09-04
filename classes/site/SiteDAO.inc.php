@@ -72,7 +72,7 @@ class SiteDAO extends DAO {
 	 * @param $site Site
 	 */
 	function insertSite(&$site) {
-		$this->update(
+		$returner = $this->update(
 			'INSERT INTO site
 				(journal_redirect, min_password_length, primary_locale, installed_locales, supported_locales, original_style_file_name)
 				VALUES
@@ -87,6 +87,7 @@ class SiteDAO extends DAO {
 			)
 		);
 		$this->updateLocaleFields($site);
+		return $returner;
 	}
 
 	function getLocaleFieldNames() {

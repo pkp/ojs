@@ -140,6 +140,25 @@ class Locale {
 	}
 
 	/**
+	 * Get all supported locales for the current context.
+	 * @return array
+	 */
+	function getSupportedLocales() {
+		static $supportedLocales;
+		if (!isset($supportedLocales)) {
+			if (defined('SESSION_DISABLE_INIT') || !Config::getVar('general', 'installed')) {
+				$supportedLocales = Locale::getAllLocales();
+			} elseif (($journal =& Request::getJournal())) {
+				$supportedLocales = $journal->getSupportedLocaleNames();
+			} else {
+				$site =& Request::getSite();
+				$supportedLocales = $site->getSupportedLocaleNames();
+			}
+		}
+		return $supportedLocales;
+	}
+
+	/**
 	 * Return the key name of the user's currently selected locale (default
 	 * is "en_US" for U.S. English).
 	 * @return string 
@@ -148,7 +167,11 @@ class Locale {
 		static $currentLocale;
 		if (!isset($currentLocale)) {
 			if (defined('SESSION_DISABLE_INIT') || !Config::getVar('general', 'installed')) {
-				$locale = Request::getCookieVar('currentLocale');
+				// If the locale is specified in the URL, allow
+				// it to override. (Necessary when locale is
+				// being set, as cookie will not yet be re-set)
+				$locale = Request::getUserVar('setLocale');
+				if (empty($locale) || !in_array($locale, Locale::getSupportedLocales())) $locale = Request::getCookieVar('currentLocale');
 			
 			} else {
 				$sessionManager = &SessionManager::getManager();

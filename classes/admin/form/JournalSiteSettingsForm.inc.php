@@ -120,6 +120,9 @@ class JournalSiteSettingsForm extends Form {
 		} else {
 			$site =& Request::getSite();
 
+			// Give it a default primary locale
+			$journal->setPrimaryLocale (Locale::getLocale());
+
 			$journalId = $journalDao->insertJournal($journal);
 			$journalDao->resequenceJournals();
 			
@@ -145,11 +148,11 @@ class JournalSiteSettingsForm extends Form {
 
 			// Install default journal settings
 			$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
+			$titles = $this->getData('title');
 			$journalSettingsDao->installSettings($journalId, 'registry/journalSettings.xml', array(
 				'indexUrl' => Request::getIndexUrl(),
 				'journalPath' => $this->getData('path'),
-				'journalName' => $this->getData('title'),
-				'primaryLocale' => $site->getPrimaryLocale()
+				'journalName' => $titles[$site->getPrimaryLocale()]
 			));
 
 			// Install the default RT versions.
