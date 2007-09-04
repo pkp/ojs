@@ -184,12 +184,13 @@ File Header
   should begin with a similar header adapted to the appropriate comment style.
 
 /**
- * FILENAME.inc.php
+ * @file FILENAME.inc.php
  *
- * Copyright (c) 2003-2006 John Willinsky
+ * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package PACKAGE (optional)
+ * @package PACKAGE
+ * @class CLASS
  *
  * DESCRIPTION.
  *
