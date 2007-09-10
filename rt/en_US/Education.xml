@@ -29,6 +29,13 @@
 			
 		</search>
 		<search>
+			<search_title>Intute: Education</search_title>
+			<search_description>The Intute Education Gateway provides free access to high quality resources on the Internet. It treats educational studies as a distinct field, with the educational aspects of other disciplines handled elsewhere. Each resource has been evaluated and categorised by subject specialists based at UK universities. Our target audience is students, staff and researchers in higher and further education.</search_description>
+			<url>http://www.discover.ac.uk/socialsciences/education/</url>
+			<search_url>http://www.discover.ac.uk/socialsciences/cgi-bin/search.pl?gateway=Education&amp;submit.x=0&amp;submit.y=0&amp;submit=Go&amp;limit=0&amp;term1={$formKeywords}</search_url>
+			
+		</search>
+		<search>
 			<search_title>OAIster (Open Archives Initiative research databases)</search_title>
 			<search_description>OAIster is a project of the University of Michigan Digital Library Production Services, and provides searching a wide variety of collections from a wide variety of institutions. These institutions have made the records of their digital resources available to access, and the project team has gathered and aggregated them into the OAIster service.</search_description>
 			<url>http://www.oaister.org/</url>
@@ -332,6 +339,13 @@
 			
 		</search>
 		<search>
+			<search_title>Intute: Education</search_title>
+			<search_description>The Intute Education Gateway provides free access to high quality resources on the Internet. It treats educational studies as a distinct field, with the educational aspects of other disciplines handled elsewhere. Each resource has been evaluated and categorised by subject specialists based at UK universities. Our target audience is students, staff and researchers in higher and further education.</search_description>
+			<url>http://www.discover.ac.uk/socialsciences/education/</url>
+			<search_url>http://www.discover.ac.uk/socialsciences/cgi-bin/search.pl?gateway=Education&amp;submit.x=0&amp;submit.y=0&amp;submit=Go&amp;limit=0&amp;term1={$formKeywords}</search_url>
+			
+		</search>
+		<search>
 			<search_title>ED Pubs Online Ordering System</search_title>
 			<search_description>ED Pubs Online Ordering System is intended to help users identify and order U.S. Department of Education products. All publications are provided at no cost to the general public by the U.S. Department of Education. </search_description>
 			<url>http://www.edpubs.org/webstore/Content/search.asp</url>
@@ -411,6 +425,13 @@
 			<search_description>H-Net Humanities and Social Sciences Online provides information and resources for all those interested in the Humanities and Social Sciences.</search_description>
 			<url>http://www2.h-net.msu.edu/lists/</url>
 			<search_url>http://www2.h-net.msu.edu/logsearch/index.cgi?type=boolean&amp;hitlimit=25&amp;field=&amp;nojg=on&amp;smonth=00&amp;syear=1989&amp;emonth=11&amp;eyear=2004&amp;order=relevance&amp;phrase={$formKeywords}</search_url>
+			
+		</search>
+		<search>
+			<search_title>Intute: Social Sciences - Conferences and Events</search_title>
+			<search_description>Intute: Social Sciences - Conferences and Events provides search of conferences and events for social sciences.</search_description>
+			<url>http://www.intute.ac.uk/socialsciences/conferences.html</url>
+			<search_url>http://www.intute.ac.uk/socialsciences/cgi-bin/conferences.pl?type=All+events&amp;subject=All%7CAll+subjects&amp;submit.x=0&amp;submit.y=0&amp;submit=Go&amp;term={$formKeywords}</search_url>
 			
 		</search>
 		<search>
@@ -573,11 +594,11 @@ ENC.ORG is now goENC.COM!</search_description>
 			
 		</search>
 		<search>
-			<search_title>Government of Canada homepage</search_title>
+			<search_title>The Government of Canada</search_title>
 			<search_description>This is the primary internet portal for information on the Government of Canada, its programmes, services, new initiatives and products, and for information about Canada. Among its features are three audience-based gateways that provide access to information and services for: Canadians, Non-Canadians, and Canadian business.</search_description>
 			<url>http://www.canada.gc.ca/main_e.html</url>
-			<search_url>http://search-recherche.collectionscanada.ca/fed/searchResults.jsp?SourceQuery=&amp;ResultCount=5&amp;PageNum=1&amp;MaxDocs=-1&amp;SortSpec=score+desc&amp;Language=eng&amp;Sources=amicus&amp;Sources=mikan&amp;Sources=web&amp;QueryText.x=11&amp;QueryText.y=13&amp;QueryText={$formKeywords}</search_url>
-			<search_post>http://search-recherche.gc.ca/cgi-bin/query?mss=canada%2Fen%2Fsimple&amp;pg=q&amp;enc=iso88591&amp;site=main&amp;bridge=&amp;stt=&amp;lowercaseq=&amp;what=web&amp;user=searchintranet&amp;browser=&amp;kl=XX&amp;op=a&amp;q={$formKeywords}</search_post>			
+			<search_url>http://search-recherche.gc.ca/cgi-bin/query?mss=canada%2Fen%2Fsimple&amp;pg=q&amp;enc=iso88591&amp;site=main&amp;bridge=&amp;stt=&amp;lowercaseq=&amp;what=web&amp;user=searchintranet&amp;browser=&amp;kl=XX&amp;op=a&amp;q={$formKeywords}</search_url>
+			
 		</search>
 		<search>
 			<search_title>Directgov</search_title>
@@ -652,8 +673,8 @@ ENC.ORG is now goENC.COM!</search_description>
 			<search_title>People's Daily</search_title>
 			<search_description>People's Daily, China (January 1999-)</search_description>
 			<url>http://english.peopledaily.com.cn/</url>
-			<search_url>http://search.people.com.cn/was40/people/GB/english_index.jsp?type=1&amp;channel=</search_url>
-			<search_post>Content=&amp;searchword={$formKeywords}</search_post>			
+			<search_url>http://search.people.com.cn/was40/people/GB/english_index.jsp?type=1&amp;channel=&amp;Content=&amp;searchword={$formKeywords}</search_url>
+			
 		</search>
 		<search>
 			<search_title>Mail &amp; Guardian Newspaper</search_title>

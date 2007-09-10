@@ -29,6 +29,13 @@
 			
 		</search>
 		<search>
+			<search_title>Intute: Science, Engineering &amp; Technology</search_title>
+			<search_description>Intute: Science, Engineering and Technology is a free online service providing you with access to the very best Web resources for education and research, evaluated and selected by a network of subject specialists. It covers the physical sciences, engineering, computing, geography, mathematics and environmental science. The database currently contains 33349 records.</search_description>
+			<url>http://www.intute.ac.uk/sciences/</url>
+			<search_url>http://www.intute.ac.uk/sciences/cgi-bin/search.pl?submit.x=0&amp;submit.y=0&amp;submit=Go&amp;limit=0&amp;subject=sciences&amp;term1={$formKeywords}</search_url>
+			
+		</search>
+		<search>
 			<search_title>OAIster (Open Archives Initiative research databases)</search_title>
 			<search_description>OAIster is a project of the University of Michigan Digital Library Production Services, and provides searching a wide variety of collections from a wide variety of institutions. These institutions have made the records of their digital resources available to access, and the project team has gathered and aggregated them into the OAIster service.</search_description>
 			<url>http://oaister.umdl.umich.edu/</url>
@@ -81,7 +88,7 @@
 			<search_title>NASA Technical Reports Server</search_title>
 			<search_description>NASA Technical Reports Server allows users to search available online NASA published documents, including meeting presentations, journal articles, conference proceedings, and technical reports. Many documents are available in compressed PostScript and PDF formats. All documents are unclassified and publicly available.</search_description>
 			<url>http://ntrs.nasa.gov/?method=aboutntrs</url>
-			<search_url>http://ntrs.nasa.gov/index.cgi?method=search&amp;offset=0&amp;mode=advanced&amp;title=&amp;date=&amp;type=&amp;description=&amp;accessionID=&amp;docID=&amp;boolean=and&amp;orderby=date&amp;order=DESC&amp;limit=25&amp;archives=genesis.jpl.nasa.gov&amp;archives=atrs&amp;archives=casi&amp;archives=dtrs.dfrc.nasa.gov&amp;archives=gtrs&amp;archives=jpl-trs.jpl.nasa.gov&amp;archives=jtrs&amp;archives=ktrs&amp;archives=ltrs.larc.nasa.gov&amp;archives=mtrs&amp;archives=ssctrs&amp;archives=naca.larc.nasa.gov&amp;creator={$formKeywords}</search_url>
+			<search_url>http://ntrs.nasa.gov/search.jsp?N=0&amp;Ntk=all&amp;Ntx=mode%20matchall&amp;Ntt={$formKeywords}</search_url>
 			
 		</search>
 		<search>
@@ -163,6 +170,13 @@ definition.</search_description>
 			
 		</search>
 		<search>
+			<search_title>Intute: Science, Engineering &amp; Technology</search_title>
+			<search_description>Intute: Science, Engineering and Technology is a free online service providing you with access to the very best Web resources for education and research, evaluated and selected by a network of subject specialists. It covers the physical sciences, engineering, computing, geography, mathematics and environmental science. The database currently contains 33349 records.</search_description>
+			<url>http://www.intute.ac.uk/sciences/</url>
+			<search_url>http://www.intute.ac.uk/sciences/cgi-bin/search.pl?submit.x=0&amp;submit.y=0&amp;submit=Go&amp;limit=0&amp;subject=sciences&amp;term1={$formKeywords}</search_url>
+			
+		</search>
+		<search>
 			<search_title>DOE Information Bridge</search_title>
 			<search_description>The Information Bridge provides the open source to full-text and bibliographic records of Department of Energy (DOE) research and development reports in physics, chemistry, materials, biology, environmental sciences, energy technologies, engineering, computer and information science, renewable energy, and other topics.</search_description>
 			<url>http://www.osti.gov/bridge/index.jsp</url>
@@ -201,7 +215,7 @@ definition.</search_description>
 			<search_title>NASA Technical Reports Server</search_title>
 			<search_description>NASA Technical Reports Server allows users to search available online NASA published documents, including meeting presentations, journal articles, conference proceedings, and technical reports. Many documents are available in compressed PostScript and PDF formats. All documents are unclassified and publicly available.</search_description>
 			<url>http://ntrs.nasa.gov/?method=aboutntrs</url>
-			<search_url>http://ntrs.nasa.gov/index.cgi?method=search&amp;limit=25&amp;offset=0&amp;mode=simple&amp;order=DESC&amp;keywords={$formKeywords}</search_url>
+			<search_url>http://ntrs.nasa.gov/search.jsp?N=0&amp;Ntk=all&amp;Ntx=mode%20matchall&amp;Ntt={$formKeywords}</search_url>
 			
 		</search>
 	</context>
@@ -373,10 +387,10 @@ definition.</search_description>
 			
 		</search>
 		<search>
-			<search_title>Canadian Government Information</search_title>
-			<search_description>Includes links to Canadian government libraries, federal documents and news releases, publications catalogues, and provincial governments. Most information is in English, but some of the linked material is in French, or a combination of French and English.</search_description>
-			<url>http://www.nlc-bnc.ca/8/4/index-e.html</url>
-			<search_url>http://www.collectionscanada.ca/search/006001-110.01-e.php?q%5B1%5D=pagelevel%3A1&amp;q%5B2%5D=&amp;x=15&amp;y=13&amp;q%5B0%5D={$formKeywords}</search_url>
+			<search_title>Government of Canada Publicatons</search_title>
+			<search_description>The Government of Canada Publications Web site provides a single window access to free and priced publications authored by Government of Canada departments. The database does not have every publication published from all departments. It does however, have over 100,000 publications listed and this number is increasing on a daily basis as this site continues to collaborate with author departments.</search_description>
+			<url>http://www.canada.gc.ca/main_e.html</url>
+			<search_url>http://publications.gc.ca/control/quickPublicSearch?searchAction=2&amp;termValue={$formKeywords}</search_url>
 			
 		</search>
 		<search>
@@ -390,7 +404,7 @@ definition.</search_description>
 			<search_title>Info4local.gov.uk</search_title>
 			<search_description>Information for local government from central government.  This site gives local authorities a quick and easy way to find relevant information on the web sites of central government departments, agencies and public bodies. It includes extensive information on implementing electronic government.</search_description>
 			<url>http://www.info4local.gov.uk</url>
-			<search_url>http://www.info4local.gov.uk/searchresults.asp?formname=frmAdvanced&amp;keywordstype=1&amp;month=&amp;year=&amp;pub=1&amp;news=1&amp;links=1&amp;allsubjects=1&amp;alldepts=1&amp;alldoctypes=1&amp;keywords={$formKeywords}</search_url>
+			<search_url>http://www.info4local.gov.uk/?view=Search+results&amp;subjects=all&amp;departmentsIds=0&amp;informationTypesIds=all&amp;query={$formKeywords}</search_url>
 			
 		</search>
 		<search>

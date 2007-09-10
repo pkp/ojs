@@ -57,10 +57,10 @@
 			
 		</search>
 		<search>
-			<search_title>Social Science Information Gateway</search_title>
-			<search_description>Social Science Information Gateway provides selected Internet information in the social sciences, business, and law.</search_description>
-			<url>http://sosig.ac.uk/</url>
-			<search_url>http://sosig.ac.uk/roads/cgi-bin/search.pl?attrib1=Author-Name&amp;boolean=and&amp;ranking=on&amp;referrals=on&amp;stemming=on&amp;maxserver=8&amp;method=any&amp;view=batched&amp;bsize=10&amp;categories=on&amp;templatetype=all&amp;highlight=on&amp;database=SOSIG+ZPlugin&amp;x=11&amp;y=13&amp;term1={$formKeywords}</search_url>
+			<search_title>Intute: Social Sciences</search_title>
+			<search_description>Intute: Social Sciences is a free online service providing you with access to the very best Web resources for education and research, evaluated and selected by a network of subject specialists.</search_description>
+			<url>http://www.intute.ac.uk/socialsciences//</url>
+			<search_url>http://www.intute.ac.uk/socialsciences/cgi-bin/search.pl?submit.x=0&amp;submit.y=0&amp;submit=Go&amp;limit=0&amp;subject=socialsciences&amp;term1={$formKeywords}</search_url>
 			
 		</search>
 		<search>
@@ -176,10 +176,10 @@ definition.</search_description>
 			
 		</search>
 		<search>
-			<search_title>Social Science Information Gateway</search_title>
-			<search_description>Social Science Information Gateway provides selected Internet information in the social sciences, business, and law.</search_description>
-			<url>http://sosig.ac.uk/</url>
-			<search_url>http://sosig.ac.uk/roads/cgi-bin/search.pl?attrib1=ANY&amp;boolean=and&amp;ranking=on&amp;referrals=on&amp;stemming=on&amp;maxserver=8&amp;method=any&amp;view=batched&amp;bsize=10&amp;categories=on&amp;templatetype=all&amp;highlight=on&amp;database=SOSIG+ZPlugin&amp;x=11&amp;y=13&amp;term1={$formKeywords}</search_url>
+			<search_title>Intute: Social Sciences</search_title>
+			<search_description>Intute: Social Sciences is  a free online service providing you with access to the very best Web resources for education and research, evaluated and selected by a network of subject specialists.</search_description>
+			<url>http://www.intute.ac.uk/socialsciences//</url>
+			<search_url>http://www.intute.ac.uk/socialsciences/cgi-bin/search.pl?submit.x=0&amp;submit.y=0&amp;submit=Go&amp;limit=0&amp;subject=socialsciences&amp;term1={$formKeywords}</search_url>
 			
 		</search>
 	</context>
@@ -198,8 +198,8 @@ definition.</search_description>
 		<search>
 			<search_title>SMEALSearch</search_title>
 			<search_description>SMEALSearch is a publicly available vertical digital library and search engine hosted at Penn State's Smeal College of Business that focuses on academic business documents. SmealSearch crawls the web and harvests, catalogs, and indexes academic business documents. It is based on the computer and information science engine, CiteSeer, initially developed at NEC Research Institute by Kurt Bollacker, Lee Giles and Steve Lawrence. The search engine crawls websites of academia, commerce, research institutes, government agencies, etc. for academic business documents, including published articles, working papers, white papers, consulting reports, etc. For certain documents, SmealSearch only indexes and stores the hyperlinks to those documents. SMEALSearch generates a citation analysis for all the academic articles harvested and ranks them in order of their citation rates (the most cited articles are listed first) similar to the ranking of CiteSeer and the Google Scholar.</search_description>
-			<url>http://gunther.smeal.psu.edu/SMEALSearchAbout.html</url>
-			<search_url>http://gunther.smeal.psu.edu/cs?submit=Search+Documents&amp;q={$formKeywords}</search_url>
+			<url>http://130.203.133.125/SMEALSearchAbout.html</url>
+			<search_url>http://130.203.133.125/cs?submit=Search+Documents&amp;q={$formKeywords}</search_url>
 			
 		</search>
 		<search>
@@ -367,6 +367,13 @@ definition.</search_description>
 			
 		</search>
 		<search>
+			<search_title>Intute: Social Sciences - Conferences and Events</search_title>
+			<search_description>Intute: Social Sciences - Conferences and Events provides search of conferences and events for social sciences.</search_description>
+			<url>http://www.intute.ac.uk/socialsciences/conferences.html</url>
+			<search_url>http://www.intute.ac.uk/socialsciences/cgi-bin/conferences.pl?type=All+events&amp;subject=All%7CAll+subjects&amp;submit.x=0&amp;submit.y=0&amp;submit=Go&amp;term={$formKeywords}</search_url>
+			
+		</search>
+		<search>
 			<search_title>Liszt</search_title>
 			<search_description>Liszt, hosted by Topica, is a free service that allows you to find, manage and participate in email lists and discussion groups in business.</search_description>
 			<url>http://www.liszt.com/dir/?cid=2</url>
@@ -401,10 +408,10 @@ definition.</search_description>
 			
 		</search>
 		<search>
-			<search_title>Canadian Government Information</search_title>
-			<search_description>Includes links to Canadian government libraries, federal documents and news releases, publications catalogues, and provincial governments. Most information is in English, but some of the linked material is in French, or a combination of French and English.</search_description>
-			<url>http://www.nlc-bnc.ca/8/4/index-e.html</url>
-			<search_url>http://www.collectionscanada.ca/search/006001-110.01-e.php?q%5B1%5D=pagelevel%3A1&amp;q%5B2%5D=&amp;x=15&amp;y=13&amp;q%5B0%5D={$formKeywords}</search_url>
+			<search_title>Government of Canada Publicatons</search_title>
+			<search_description>The Government of Canada Publications Web site provides a single window access to free and priced publications authored by Government of Canada departments. The database does not have every publication published from all departments. It does however, have over 100,000 publications listed and this number is increasing on a daily basis as this site continues to collaborate with author departments.</search_description>
+			<url>http://www.canada.gc.ca/main_e.html</url>
+			<search_url>http://publications.gc.ca/control/quickPublicSearch?searchAction=2&amp;termValue={$formKeywords}</search_url>
 			
 		</search>
 		<search>
@@ -446,7 +453,7 @@ definition.</search_description>
 			<search_title>Business.gov</search_title>
 			<search_description>Business.gov is  an online resource guide designed to provide legal and regulatory information to America's small businesses. Entrepreneurs can use this gateway to federal, state and local information in order to quickly define their problems and find solutions on topics ranging from federal advertising laws to local zoning codes. In addition to self-help articles, interactive guides, and the ability to complete transactions on line such as applying for a Federal EIN, the site also connects users with sources of in-person help from government officials, attorneys and business counselors in their local area.</search_description>
 			<url>http://www.business.gov/</url>
-			<search_url>http://search.business.gov/query.html?qt={$formKeywords}</search_url>
+			<search_url>http://www.business.gov:80/appmanager/bg/main?_nfpb=true&amp;_windowLabel=T209963971174660224846&amp;_urlType=action&amp;_pageLabel=bg_page_home&amp;siteId=&amp;view=search=fromSearchBox=1&amp;numHitsPerPage=10&amp;query={$formKeywords}</search_url>
 			
 		</search>
 		<search>
@@ -536,7 +543,7 @@ definition.</search_description>
 			<search_title>People's Daily</search_title>
 			<search_description>People's Daily, China (January 1999-)</search_description>
 			<url>http://english.peopledaily.com.cn/</url>
-			<search_url>http://202.99.23.197/cgi-bin/htsearch/?method=and&amp;format=builtin-long&amp;sort=score&amp;config=english&amp;exclude=&amp;words={$formKeywords}</search_url>
+			<search_url>http://search.people.com.cn/was40/people/GB/english_index.jsp?type=1&amp;channel=&amp;Content=&amp;searchword={$formKeywords}</search_url>
 			
 		</search>
 		<search>
@@ -556,7 +563,7 @@ definition.</search_description>
 		<search>
 			<search_title>The Japan Times Online</search_title>
 			<search_description>The Japan Times Online, Japan (January 1999-)</search_description>
-			<url>http://www.japantimes.co.jp/search.htm</url>
+			<url>http://www.japantimes.co.jp/</url>
 			<search_url>http://www.google.co.jp/custom?domains=japantimes.co.jp&amp;client=pub-4223870936880387&amp;forid=1&amp;ie=Shift_JIS&amp;oe=Shift_JIS&amp;term1=&amp;cof=GALT%3A%23008000%3BGL%3A1%3BDIV%3A%23336699%3BVLC%3A663399%3BAH%3Acenter%3BBGC%3AFFFFFF%3BLBGC%3AFFFFFF%3BALC%3A0000FF%3BLC%3A0000FF%3BT%3A000000%3BGFNT%3A0000FF%3BGIMP%3A0000FF%3BLH%3A60%3BLW%3A200%3BL%3Ahttp%3A%2F%2Fwww.japantimes.co.jp%2Fimages%2Fheader_title.gif%3BS%3Ahttp%3A%2F%2Fwww.japantimes.co.jp%2F%3BFORID%3A1%3B&amp;hl=ja&amp;advancesearch=&amp;q={$formKeywords}</search_url>
 			
 		</search>

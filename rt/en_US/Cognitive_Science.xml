@@ -108,7 +108,7 @@
 			<search_title>Wordnet</search_title>
 			<search_description>Wordnet is an online lexical reference system whose design is inspired by current psycholinguistic theories of human lexical memory. English nouns, verbs, adjectives and adverbs are organized into synonym sets, each representing one underlying lexical concept. Different relations link the synonym sets.</search_description>
 			<url>http://www.cogsci.princeton.edu/~wn/</url>
-			<search_url>http://www.cogsci.princeton.edu/cgi-bin/webwn2.0?stage=1&amp;word={$formKeywords}</search_url>
+			<search_url>http://wordnet.princeton.edu/perl/webwn?sub=Search+WordNet&amp;o2=&amp;o0=1&amp;o7=&amp;o5=&amp;o1=1&amp;o6=&amp;o4=&amp;o3=&amp;h=&amp;s={$formKeywords}</search_url>
 			
 		</search>
 		<search>
@@ -299,7 +299,14 @@
 			<search_title>COGSCI Cognitive Science Discussion List</search_title>
 			<search_description>COGSCI Cognitive Science Discussion List is a website for the International Cognitive Science Discussion List.</search_description>
 			<url>http://cogsci.weenink.com/</url>
-			<search_url>http://listserv.surfnet.nl/scripts/wa.exe?S2=cogsci&amp;s=&amp;f=&amp;a=&amp;b=&amp;q={$formKeywords}</search_url>
+			<search_url>https://listserv.surfnet.nl/scripts/wa.exe?S2=COGSCI&amp;0=S&amp;s=&amp;f=&amp;a=&amp;I=-3&amp;q={$formKeywords}</search_url>
+			
+		</search>
+		<search>
+			<search_title>Intute: Social Sciences - Conferences and Events</search_title>
+			<search_description>Intute: Social Sciences - Conferences and Events provides search of conferences and events for social sciences.</search_description>
+			<url>http://www.intute.ac.uk/socialsciences/conferences.html</url>
+			<search_url>http://www.intute.ac.uk/socialsciences/cgi-bin/conferences.pl?type=All+events&amp;subject=All%7CAll+subjects&amp;submit.x=0&amp;submit.y=0&amp;submit=Go&amp;term={$formKeywords}</search_url>
 			
 		</search>
 		<search>
@@ -356,10 +363,15 @@
 			
 		</search>
 		<search>
-			<search_title>Canadian Government Information</search_title>
-			<search_description>Includes links to Canadian government libraries, federal documents and news releases, publications catalogues, and provincial governments. Most information is in English, but some of the linked material is in French, or a combination of French and English.</search_description>
-			<url>http://www.nlc-bnc.ca/8/4/index-e.html</url>
-			<search_url>http://www.collectionscanada.ca/search/006001-110.01-e.php?q%5B1%5D=pagelevel%3A1&amp;q%5B2%5D=&amp;x=15&amp;y=13&amp;q%5B0%5D={$formKeywords}</search_url>
+			<search_title>The Government of Canada</search_title>
+			<search_description>You can search across all government departments federal departments and agencies as well as provincial, territorial and municipal governments. There is a Departments and Agencies link, and the A to Z Index offers a keyword search to programmes and services. 
+
+A recent development on Departmental sites is the inclusion of a &quot;Proactive Disclosure&quot; page, which outlines travel and hospitality expenses, disclosure of contracts, grants and awards. 
+
+The About Canada page includes links to Departments and Agencies, Structure of the Canadian Government, Commissions of Inquiry and more. In addition to Department web sites, the government has been creating Portals which bring together 
+information from across federal and provincial sources, and non-governmental organizations as well.</search_description>
+			<url>http://www.canada.gc.ca/main_e.html</url>
+			<search_url>http://search-recherche.gc.ca/cgi-bin/query?mss=canada%2Fen%2Fsimple&amp;pg=q&amp;enc=iso88591&amp;site=main&amp;bridge=&amp;stt=&amp;lowercaseq=&amp;what=web&amp;user=searchintranet&amp;browser=N6E&amp;kl=XX&amp;op=a&amp;q={$formKeywords}</search_url>
 			
 		</search>
 		<search>
@@ -373,7 +385,7 @@
 			<search_title>Info4local.gov.uk</search_title>
 			<search_description>Information for local government from central government.  This site gives local authorities a quick and easy way to find relevant information on the web sites of central government departments, agencies and public bodies. It includes extensive information on implementing electronic government.</search_description>
 			<url>http://www.info4local.gov.uk</url>
-			<search_url>http://www.info4local.gov.uk/searchresults.asp?formname=frmAdvanced&amp;keywordstype=1&amp;month=&amp;year=&amp;pub=1&amp;news=1&amp;links=1&amp;allsubjects=1&amp;alldepts=1&amp;alldoctypes=1&amp;keywords={$formKeywords}</search_url>
+			<search_url>http://www.info4local.gov.uk/?view=Search+results&amp;subjects=all&amp;departmentsIds=0&amp;informationTypesIds=all&amp;query={$formKeywords}</search_url>
 			
 		</search>
 		<search>

@@ -260,10 +260,16 @@ definition.</search_description>
 			
 		</search>
 		<search>
-			<search_title>Canadian Government Information</search_title>
-			<search_description>Includes links to Canadian government libraries, federal documents and news releases, publications catalogues, and provincial governments. Most information is in English, but some of the linked material is in French, or a combination of French and English.</search_description>
-			<url>http://www.nlc-bnc.ca/8/4/index-e.html</url>
-			<search_url>http://www.collectionscanada.ca/search/006001-110.01-e.php?q%5B1%5D=pagelevel%3A1&amp;q%5B2%5D=&amp;x=15&amp;y=13&amp;q%5B0%5D={$formKeywords}</search_url>
+			<search_title>The Government of Canada</search_title>
+			<search_description>You can search across all government departments federal departments and agencies as well as provincial, territorial and municipal governments. There is a Departments and Agencies link, and the A to Z Index offers a keyword search to programmes and services. 
+
+A recent development on Departmental sites is the inclusion of a &quot;Proactive Disclosure&quot; page, which outlines travel and hospitality expenses, disclosure of contracts, grants and awards. 
+
+The About Canada page includes links to Departments and Agencies, Structure of the Canadian Government, Commissions of Inquiry and more. 
+
+In addition to Department web sites, the government has been creating Portals which bring together information from across federal and provincial sources, and non-governmental organizations as well.</search_description>
+			<url>http://www.canada.gc.ca/main_e.html</url>
+			<search_url>http://search-recherche.gc.ca/cgi-bin/query?mss=canada%2Fen%2Fsimple&amp;pg=q&amp;enc=iso88591&amp;site=main&amp;bridge=&amp;stt=&amp;lowercaseq=&amp;what=web&amp;user=searchintranet&amp;browser=N6E&amp;kl=XX&amp;op=a&amp;q={$formKeywords}</search_url>
 			
 		</search>
 		<search>
@@ -277,7 +283,7 @@ definition.</search_description>
 			<search_title>Info4local.gov.uk</search_title>
 			<search_description>Information for local government from central government.  This site gives local authorities a quick and easy way to find relevant information on the web sites of central government departments, agencies and public bodies. It includes extensive information on implementing electronic government.</search_description>
 			<url>http://www.info4local.gov.uk</url>
-			<search_url>http://www.info4local.gov.uk/searchresults.asp?formname=frmAdvanced&amp;keywordstype=1&amp;month=&amp;year=&amp;pub=1&amp;news=1&amp;links=1&amp;allsubjects=1&amp;alldepts=1&amp;alldoctypes=1&amp;keywords={$formKeywords}</search_url>
+			<search_url>http://www.info4local.gov.uk/?view=Search+results&amp;subjects=all&amp;departmentsIds=0&amp;informationTypesIds=all&amp;query={$formKeywords}</search_url>
 			
 		</search>
 		<search>
@@ -352,7 +358,7 @@ definition.</search_description>
 			<search_title>AgNIC</search_title>
 			<search_description>AgNIC is a guide to quality agricultural information on the Internet as selected by the National Agricultural Library, Land-Grant Universities, and other institutions.</search_description>
 			<url>http://www.agnic.org/</url>
-			<search_url>http://www.central.agnic.org/cgi-bin/search.pl?database=ALL&amp;caseful=off&amp;stemming=on&amp;ranking=on&amp;view=simple&amp;maxserver=8&amp;method=any&amp;referrals=on&amp;templatetype=all&amp;x=23&amp;y=11&amp;query={$formKeywords}</search_url>
+			<search_url>http://www.agnic.org/advsearch/?submitted=1&amp;searchtype=AgResource&amp;keywords={$formKeywords}</search_url>
 			
 		</search>
 		<search>
@@ -366,7 +372,7 @@ definition.</search_description>
 			<search_title>AgriSurf! - The Farmers Search Engine</search_title>
 			<search_description>From family farms to agribusiness, almost 20,000 sites &quot;hand picked by agricultural experts&quot; are arranged in categories, indexed, rated for speed and reliability of access, labeled with the flag of their country of origin, and may be searched using keywords. Annotations are taken from the sites' self-descriptions.</search_description>
 			<url>http://www.agrisurf.com/agrisurfscripts/agrisurf.asp?index=_25</url>
-			<search_url>http://www.agrisurf.com/agrisurfscripts/search.asp?index=_25&amp;rbtn=ALL&amp;ft=on&amp;SearchString={$formKeywords}</search_url>
+			<search_url>http://www.agrisurf.com/?cx=009099332680230023402%3Asp1yugldxek&amp;cof=FORID%3A10&amp;q={$formKeywords}</search_url>
 			
 		</search>
 		<search>
@@ -391,10 +397,10 @@ definition.</search_description>
 			
 		</search>
 		<search>
-			<search_title>AgriFor (uK)</search_title>
-			<search_description>AgriFor is a gateway to evaluated, quality Internet resources in agriculture, food and forestry, aimed at students, researchers, academics and practitioners in agriculture, food or forestry. AgriFor is created by a core team of information specialists and subject experts based at the University of Nottingham Greenfield Medical Library, in partnership with key organizations throughout the UK and further afield.</search_description>
-			<url>http://agrifor.ac.uk/</url>
-			<search_url>http://agrifor.ac.uk/cgi/biome-search/search.cgi?formtype=advanced&amp;zport=2169&amp;sortBy=relevance&amp;category=Any&amp;batch_size=10&amp;titles_only=on&amp;term={$formKeywords}</search_url>
+			<search_title>Intute: Science, Engineering &amp; Technology</search_title>
+			<search_description>Intute: Science, Engineering and Technology is a free online service providing you with access to the very best Web resources for education and research, evaluated and selected by a network of subject specialists. It covers the physical sciences, engineering, computing, geography, mathematics and environmental science. The database currently contains 33349 records.</search_description>
+			<url>http://www.intute.ac.uk/sciences/</url>
+			<search_url>http://www.intute.ac.uk/sciences/cgi-bin/search.pl?submit.x=0&amp;submit.y=0&amp;submit=Go&amp;limit=0&amp;subject=sciences&amp;term1={$formKeywords}</search_url>
 			
 		</search>
 		<search>
@@ -447,8 +453,8 @@ definition.</search_description>
 		<search>
 			<search_title>Agricultural Conferences, Meetings, Seminars Calendar</search_title>
 			<search_description>This calendar strives to include all major national and international agricultural meetings and others of apparent scientific importance. We will incorporate local level meetings only when they seem to be scientifically significant. Meetings outside our purview will be left to appropriate local, regional, or organization-specific calendars. We do plan to create links to such calendars when they are available. Provides a central repository for information and links to information concerning upcoming agricultural conferences, with emphasis on those of scientific significance.</search_description>
-			<url>http://laurel.nal.usda.gov:8080/agnic/Calendar/calendar</url>
-			<search_url>http://laurel.nal.usda.gov:8080/agnic/Calendar/calendar?query={$formKeywords}</search_url>
+			<url>http://www.agnic.org/mtg/</url>
+			<search_url>http://www.agnic.org/events/index.html?submitted=1&amp;searchtype=keyword&amp;keywords={$formKeywords}</search_url>
 			
 		</search>
 		<search>
@@ -489,7 +495,7 @@ definition.</search_description>
 			<search_title>USDA Economics and Statistics System</search_title>
 			<search_description>USDA Economics and Statistics System contains more than 400 reports and datasets from the economics agencies of the U.S. Department of Agriculture. These materials cover U.S. and international agriculture and related topics. Most reports are text files that contain time-sensitive information. Most data sets are in spreadsheet format and include time-series data that are updated yearly.</search_description>
 			<url>http://usda.mannlib.cornell.edu/</url>
-			<search_url>http://usda.mannlib.cornell.edu/cgi-bin/usda/ess_keyword.cgi/06?type=All&amp;ERS=on&amp;NASS=on&amp;WAOB=on&amp;selected=KEYWORD&amp;query={$formKeywords}</search_url>
+			<search_url>http://usda.mannlib.cornell.edu/MannUsda/search.do?action=fullKeywordSearch&amp;titlesearch=titlesearch&amp;includeAMS=includeAMS&amp;simple_search_term={$formKeywords}</search_url>
 			
 		</search>
 	</context>
@@ -550,7 +556,7 @@ definition.</search_description>
 			<search_title>People's Daily</search_title>
 			<search_description>People's Daily, China (January 1999-)</search_description>
 			<url>http://english.peopledaily.com.cn/</url>
-			<search_url>http://202.99.23.197/cgi-bin/htsearch/?method=and&amp;format=builtin-long&amp;sort=score&amp;config=english&amp;exclude=&amp;words={$formKeywords}</search_url>
+			<search_url>http://search.people.com.cn/was40/people/GB/english_index.jsp?type=1&amp;channel=&amp;Content=&amp;searchword={$formKeywords}</search_url>
 			
 		</search>
 		<search>
@@ -584,7 +590,7 @@ definition.</search_description>
 		<search>
 			<search_title>The Japan Times Online</search_title>
 			<search_description>The Japan Times Online, Japan (January 1999-)</search_description>
-			<url>http://www.japantimes.co.jp/search.htm</url>
+			<url>http://www.japantimes.co.jp/</url>
 			<search_url>http://www.google.co.jp/custom?domains=japantimes.co.jp&amp;client=pub-4223870936880387&amp;forid=1&amp;ie=Shift_JIS&amp;oe=Shift_JIS&amp;term1=&amp;cof=GALT%3A%23008000%3BGL%3A1%3BDIV%3A%23336699%3BVLC%3A663399%3BAH%3Acenter%3BBGC%3AFFFFFF%3BLBGC%3AFFFFFF%3BALC%3A0000FF%3BLC%3A0000FF%3BT%3A000000%3BGFNT%3A0000FF%3BGIMP%3A0000FF%3BLH%3A60%3BLW%3A200%3BL%3Ahttp%3A%2F%2Fwww.japantimes.co.jp%2Fimages%2Fheader_title.gif%3BS%3Ahttp%3A%2F%2Fwww.japantimes.co.jp%2F%3BFORID%3A1%3B&amp;hl=ja&amp;advancesearch=&amp;q={$formKeywords}</search_url>
 			
 		</search>

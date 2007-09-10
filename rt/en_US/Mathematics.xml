@@ -29,6 +29,13 @@
 			
 		</search>
 		<search>
+			<search_title>Intute: Science, Engineering &amp; Technology</search_title>
+			<search_description>Intute: Science, Engineering and Technology is a free online service providing you with access to the very best Web resources for education and research, evaluated and selected by a network of subject specialists. It covers the physical sciences, engineering, computing, geography, mathematics and environmental science. The database currently contains 33349 records.</search_description>
+			<url>http://www.intute.ac.uk/sciences/</url>
+			<search_url>http://www.intute.ac.uk/sciences/cgi-bin/search.pl?submit.x=0&amp;submit.y=0&amp;submit=Go&amp;limit=0&amp;subject=sciences&amp;term1={$formKeywords}</search_url>
+			
+		</search>
+		<search>
 			<search_title>OAIster (Open Archives Inititive research databases)</search_title>
 			<search_description>OAIster is a project of the University of Michigan Digital Library Production Services, and provides searching a wide variety of collections from a wide variety of institutions. These institutions have made the records of their digital resources available to access, and the project team has gathered and aggregated them into the OAIster service.</search_description>
 			<url>http://oaister.umdl.umich.edu/</url>
@@ -182,7 +189,7 @@
 			<search_title>Eric Weisstein's MathWorld</search_title>
 			<search_description>Eric Weisstein's MathWorld is a comprehensive mathematics information bank. The site currently consists of some 10,228 searchable entries, 89,364 cross-references, 4,205 figures, 125 animated graphics, 964 live Java applets and receives an average of 135 updates and new entries each month.</search_description>
 			<url>http://mathworld.wolfram.com/</url>
-			<search_url>http://mathworld.wolfram.com/search/index.cgi?q={$formKeywords}</search_url>
+			<search_url>http://mathworld.wolfram.com/search/?x=0&amp;y=0&amp;query={$formKeywords}</search_url>
 			
 		</search>
 	</context>
@@ -196,6 +203,13 @@
 			<search_description>CiteSeer makes available a broad, fully indexed, database of research papers from the various computer science fields.</search_description>
 			<url>http://citeseer.ist.psu.edu/cs</url>
 			<search_url>http://citeseer.ist.psu.edu/cs?submit=Search+Documents&amp;cs=1&amp;q={$formKeywords}</search_url>
+			
+		</search>
+		<search>
+			<search_title>Intute: Science, Engineering &amp; Technology</search_title>
+			<search_description>Intute: Science, Engineering and Technology is a free online service providing you with access to the very best Web resources for education and research, evaluated and selected by a network of subject specialists. It covers the physical sciences, engineering, computing, geography, mathematics and environmental science. The database currently contains 33349 records.</search_description>
+			<url>http://www.intute.ac.uk/sciences/</url>
+			<search_url>http://www.intute.ac.uk/sciences/cgi-bin/search.pl?submit.x=0&amp;submit.y=0&amp;submit=Go&amp;limit=0&amp;subject=sciences&amp;term1={$formKeywords}</search_url>
 			
 		</search>
 		<search>
@@ -384,10 +398,16 @@
 			
 		</search>
 		<search>
-			<search_title>Canadian Government Information</search_title>
-			<search_description>Includes links to Canadian government libraries, federal documents and news releases, publications catalogues, and provincial governments. Most information is in English, but some of the linked material is in French, or a combination of French and English.</search_description>
-			<url>http://www.nlc-bnc.ca/8/4/index-e.html</url>
-			<search_url>http://www.collectionscanada.ca/search/006001-110.01-e.php?q%5B1%5D=pagelevel%3A1&amp;q%5B2%5D=&amp;x=15&amp;y=13&amp;q%5B0%5D={$formKeywords}</search_url>
+			<search_title>The Government of Canada</search_title>
+			<search_description>You can search across all government departments federal departments and agencies as well as provincial, territorial and municipal governments. There is a Departments and Agencies link, and the A to Z Index offers a keyword search to programmes and services. 
+
+A recent development on Departmental sites is the inclusion of a &quot;Proactive Disclosure&quot; page, which outlines travel and hospitality expenses, disclosure of contracts, grants and awards. 
+
+The About Canada page includes links to Departments and Agencies, Structure of the Canadian Government, Commissions of Inquiry and more. 
+
+In addition to Department web sites, the government has been creating Portals which bring together information from across federal and provincial sources, and non-governmental organizations as well.</search_description>
+			<url>http://www.canada.gc.ca/main_e.html</url>
+			<search_url>http://search-recherche.gc.ca/cgi-bin/query?mss=canada%2Fen%2Fsimple&amp;pg=q&amp;enc=iso88591&amp;site=main&amp;bridge=&amp;stt=&amp;lowercaseq=&amp;what=web&amp;user=searchintranet&amp;browser=N6E&amp;kl=XX&amp;op=a&amp;q={$formKeywords}</search_url>
 			
 		</search>
 		<search>
@@ -401,7 +421,7 @@
 			<search_title>Info4local.gov.uk</search_title>
 			<search_description>Information for local government from central government.  This site gives local authorities a quick and easy way to find relevant information on the web sites of central government departments, agencies and public bodies. It includes extensive information on implementing electronic government.</search_description>
 			<url>http://www.info4local.gov.uk</url>
-			<search_url>http://www.info4local.gov.uk/searchresults.asp?formname=frmAdvanced&amp;keywordstype=1&amp;month=&amp;year=&amp;pub=1&amp;news=1&amp;links=1&amp;allsubjects=1&amp;alldepts=1&amp;alldoctypes=1&amp;keywords={$formKeywords}</search_url>
+			<search_url>http://www.info4local.gov.uk/?view=Search+results&amp;subjects=all&amp;departmentsIds=0&amp;informationTypesIds=all&amp;query={$formKeywords}</search_url>
 			
 		</search>
 		<search>

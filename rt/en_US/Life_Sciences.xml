@@ -78,10 +78,12 @@
 			
 		</search>
 		<search>
-			<search_title>BIOME</search_title>
-			<search_description>BIOME offers free access to a searchable catalogue of Internet sites and resources covering the health and life sciences.</search_description>
-			<url>http://biome.ac.uk/</url>
-			<search_url>http://biome.ac.uk/cgi/biome-search/search.cgi?formtype=advanced&amp;zport=2100&amp;sortBy=relevance&amp;category=Any&amp;batch_size=10&amp;titles_only=on&amp;whatGateway=agrifor&amp;whatGateway=bioethicsweb&amp;whatGateway=bioresearch&amp;whatGateway=medhist&amp;whatGateway=natural&amp;whatGateway=nmap&amp;whatGateway=omni&amp;whatGateway=vetgate&amp;term={$formKeywords}</search_url>
+			<search_title>Intute: Health &amp; Life Sciences</search_title>
+			<search_description>The Health and Life Sciences pages of Intute is a free online service providing you with access to the very best web resources for education and research, evaluated and selected by a network of subject specialists. There are over 31,000 resource descriptions listed here that are freely accessible for keyword searching or browsing.
+
+This service was formerly known as BIOME.</search_description>
+			<url>http://www.intute.ac.uk/healthandlifesciences/</url>
+			<search_url>http://www.intute.ac.uk/healthandlifesciences/cgi-bin/search.pl?submit.x=20&amp;submit.y=16&amp;submit=Go&amp;limit=0&amp;subject=healthandlifesciences&amp;term1={$formKeywords}</search_url>
 			
 		</search>
 	</context>
@@ -108,7 +110,7 @@
 			<search_title>Life Sciences Dictionary from BioTech</search_title>
 			<search_description>Life Sciences Dictionary from BioTech comprises 8,300+ terms relating to biochemistry, biotechnology, botany, cell biology and genetics, as well as selective entries on ecology, limnology, pharmacology, toxicology and medicine.</search_description>
 			<url>http://biotech.icmb.utexas.edu/search/dict-search.html</url>
-			<search_url>http://biotech.icmb.utexas.edu/search/dict-search.mhtml?bo1=AND&amp;search_type=normal&amp;def=&amp;word={$formKeywords}</search_url>
+			<search_url>http://biotech.icmb.utexas.edu/search/dict-search2.html?bo1=AND&amp;search_type=normal&amp;def=&amp;word={$formKeywords}</search_url>
 			
 		</search>
 		<search>
@@ -170,7 +172,7 @@
 			<search_title>ClinicalTrials.gov</search_title>
 			<search_description>ClinicalTrials.gov (National Institutes of Health) provides information for patients about clinical research studies.</search_description>
 			<url>http://www.clinicaltrials.gov</url>
-			<search_url>http://www.clinicaltrials.gov/ct/search;jsessionid=6EC2379952077D66434C74BCF3542697?&amp;submit=Search&amp;term={$formKeywords}</search_url>
+			<search_url>http://search.nhsdirect.nhs.uk/kbroker/nhsdirect/nhsdirect/search.lsim?hs=0&amp;sm=0&amp;ha=1054&amp;sc=nhsdirect&amp;mt=0&amp;sb=0&amp;nh=3&amp;qt={$formKeywords}</search_url>
 			
 		</search>
 		<search>
@@ -223,10 +225,10 @@
 			
 		</search>
 		<search>
-			<search_title>BIOME</search_title>
-			<search_description>BIOME offers free access to a searchable catalogue of Internet sites and resources covering the health and life sciences.</search_description>
-			<url>http://biome.ac.uk/</url>
-			<search_url>http://biome.ac.uk/cgi/biome-search/search.cgi?formtype=advanced&amp;zport=2100&amp;sortBy=relevance&amp;category=Any&amp;batch_size=10&amp;titles_only=on&amp;whatGateway=agrifor&amp;whatGateway=bioethicsweb&amp;whatGateway=bioresearch&amp;whatGateway=medhist&amp;whatGateway=natural&amp;whatGateway=nmap&amp;whatGateway=omni&amp;whatGateway=vetgate&amp;term={$formKeywords}</search_url>
+			<search_title>Intute: Health &amp; Life Sciences</search_title>
+			<search_description>The Health and Life Sciences pages of Intute is a free online service providing you with access to the very best web resources for education and research, evaluated and selected by a network of subject specialists. There are over 31,000 resource descriptions listed here that are freely accessible for keyword searching or browsing.</search_description>
+			<url>http://www.intute.ac.uk/healthandlifesciences/</url>
+			<search_url>http://www.intute.ac.uk/healthandlifesciences/cgi-bin/search.pl?submit.x=20&amp;submit.y=16&amp;submit=Go&amp;limit=0&amp;subject=healthandlifesciences&amp;term1={$formKeywords}</search_url>
 			
 		</search>
 	</context>
@@ -355,7 +357,7 @@
 			<search_title>NHS Direct</search_title>
 			<search_description>NHS Direct (UK) is a gateway to health information on the Internet in the United Kingdom. NHS Direct Online provides health advice and is supported by a 24 hour nurse advice and information help line.</search_description>
 			<url>http://www.nhsdirect.nhs.uk</url>
-			<search_url>http://www.nhsdirect.nhs.uk:8080/kbroker/nhsdirect/search.sim?cs=iso-8859-1hs=0&amp;sm=0&amp;ha=0&amp;sc=nhsdirect&amp;mt=1&amp;sb=0&amp;nh=10&amp;qt={$formKeywords}</search_url>
+			<search_url>http://search.nhsdirect.nhs.uk/kbroker/nhsdirect/nhsdirect/search.lsim?hs=0&amp;sm=0&amp;ha=1054&amp;sc=nhsdirect&amp;mt=0&amp;sb=0&amp;nh=3&amp;qt={$formKeywords}</search_url>
 			
 		</search>
 		<search>
@@ -409,7 +411,7 @@
 			<search_title>Drugs.com</search_title>
 			<search_description>Drugs.com is a free resource for medical professionals and consumers providing convenient and reliable drug information. Drug monographs are presented at both professional (USPDI), and consumer levels. The drug information could be found by browsing the alphabetical listing of the drugs or by search using generic or trade name. The drug interaction guide allows check for drug-drug and drug-food interactions.</search_description>
 			<url>http://www.drugs.com/</url>
-			<search_url>http://www.drugs.com/xq/cfm/pageID_0/qx/index.htm?searchtype=generic&amp;searchterm={$formKeywords}</search_url>
+			<search_url>http://www.drugs.com/search.php?is_main_search=1&amp;searchterm={$formKeywords}</search_url>
 			
 		</search>
 		<search>
@@ -480,10 +482,16 @@
 			
 		</search>
 		<search>
-			<search_title>Canadian Government Information</search_title>
-			<search_description>Includes links to Canadian government libraries, federal documents and news releases, publications catalogues, and provincial governments. Most information is in English, but some of the linked material is in French, or a combination of French and English.</search_description>
-			<url>http://www.nlc-bnc.ca/8/4/index-e.html</url>
-			<search_url>http://www.collectionscanada.ca/search/006001-110.01-e.php?q%5B1%5D=pagelevel%3A1&amp;q%5B2%5D=&amp;x=15&amp;y=13&amp;q%5B0%5D={$formKeywords}</search_url>
+			<search_title>The Government of Canada</search_title>
+			<search_description>You can search across all government departments federal departments and agencies as well as provincial, territorial and municipal governments. There is a Departments and Agencies link, and the A to Z Index offers a keyword search to programmes and services. 
+
+A recent development on Departmental sites is the inclusion of a &quot;Proactive Disclosure&quot; page, which outlines travel and hospitality expenses, disclosure of contracts, grants and awards. 
+
+The About Canada page includes links to Departments and Agencies, Structure of the Canadian Government, Commissions of Inquiry and more. 
+
+In addition to Department web sites, the government has been creating Portals which bring together information from across federal and provincial sources, and non-governmental organizations as well.</search_description>
+			<url>http://www.canada.gc.ca/main_e.html</url>
+			<search_url>http://search-recherche.gc.ca/cgi-bin/query?mss=canada%2Fen%2Fsimple&amp;pg=q&amp;enc=iso88591&amp;site=main&amp;bridge=&amp;stt=&amp;lowercaseq=&amp;what=web&amp;user=searchintranet&amp;browser=N6E&amp;kl=XX&amp;op=a&amp;q={$formKeywords}</search_url>
 			
 		</search>
 		<search>
@@ -497,7 +505,7 @@
 			<search_title>Info4local.gov.uk</search_title>
 			<search_description>Information for local government from central government.  This site gives local authorities a quick and easy way to find relevant information on the web sites of central government departments, agencies and public bodies. It includes extensive information on implementing electronic government.</search_description>
 			<url>http://www.info4local.gov.uk</url>
-			<search_url>http://www.info4local.gov.uk/searchresults.asp?formname=frmAdvanced&amp;keywordstype=1&amp;month=&amp;year=&amp;pub=1&amp;news=1&amp;links=1&amp;allsubjects=1&amp;alldepts=1&amp;alldoctypes=1&amp;keywords={$formKeywords}</search_url>
+			<search_url>http://www.info4local.gov.uk/?view=Search+results&amp;subjects=all&amp;departmentsIds=0&amp;informationTypesIds=all&amp;query={$formKeywords}</search_url>
 			
 		</search>
 		<search>
