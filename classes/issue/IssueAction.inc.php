@@ -51,6 +51,7 @@ class IssueAction {
 	 */
 	function subscriptionRequired(&$issue) {
 		$currentJournal =& Request::getJournal();
+		if (!$issue) return false;
 		if (!$currentJournal || $currentJournal->getJournalId() !== $issue->getJournalId()) {
 			$journalDao = &DAORegistry::getDAO('JournalDAO');
 			$journal =& $journalDao->getJournal($issue->getJournalId());
