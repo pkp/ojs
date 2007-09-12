@@ -50,7 +50,7 @@ class Core {
 			$var = $trans->trans($var);
 
 			// convert windows-1252 entities to UTF-8 entities
-			$var = &String::cp1252ToEntities($var);
+			$var = String::cp1252ToEntities($var);
 
 			// convert UTF-8 entities back to UTF-8 characters
 			$trans =& new Transcoder('HTML-ENTITIES', 'UTF-8');
