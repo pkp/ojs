@@ -228,7 +228,7 @@ class ImportOJS1 {
 		// Create journal
 		$journalDao = &DAORegistry::getDAO('JournalDAO');
 		$journal = &new Journal();
-		$journal->setTitle($this->journalInfo['chTitle']);
+		$journal->setTitle($this->journalInfo['chTitle'], Locale::getLocale());
 		$journal->setPrimaryLocale(Locale::getLocale());
 		$journal->setPath($this->journalPath);
 		$journal->setEnabled(1);
@@ -479,7 +479,7 @@ class ImportOJS1 {
 				$this->journalId,
 				$settingName,
 				$settingValue,
-				$settingType
+				$settingType,
 				in_array($settingName, $localizedSettings)
 			);
 		}
