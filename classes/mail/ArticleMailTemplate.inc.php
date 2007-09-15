@@ -132,7 +132,7 @@ class ArticleMailTemplate extends MailTemplate {
 		// Email data
 		$entry->setSubject($this->getSubject());
 		$entry->setBody($this->getBody());
-		$entry->setFrom($this->getFromString());
+		$entry->setFrom($this->getFromString(false));
 		$entry->setRecipients($this->getRecipientString());
 		$entry->setCcs($this->getCcString());
 		$entry->setBccs($this->getBccString());
