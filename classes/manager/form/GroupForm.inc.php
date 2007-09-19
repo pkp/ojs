@@ -29,7 +29,7 @@ class GroupForm extends Form {
 		$journal = &Request::getJournal();
 
 		parent::Form('manager/groups/groupForm.tpl');
-	
+
 		// Group title is provided
 		$this->addCheck(new FormValidatorLocale($this, 'title', 'required', 'manager.groups.form.groupTitleRequired'));
 
@@ -37,7 +37,7 @@ class GroupForm extends Form {
 
 		$this->group =& $group;
 	}
-	
+
 	/**
 	 * Get the list of localized field names for this object
 	 * @return array
@@ -60,7 +60,7 @@ class GroupForm extends Form {
 		));
 		parent::display();
 	}
-	
+
 	/**
 	 * Initialize form data from current group group.
 	 */
@@ -76,25 +76,25 @@ class GroupForm extends Form {
 			);
 		}
 	}
-	
+
 	/**
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
 		$this->readUserVars(array('title', 'context'));
 	}
-	
+
 	/**
 	 * Save group group. 
 	 */
 	function execute() {
 		$groupDao = &DAORegistry::getDAO('GroupDAO');
 		$journal = &Request::getJournal();
-	
+
 		if (!isset($this->group)) {
 			$this->group = &new Group();
 		}
-		
+
 		$this->group->setJournalId($journal->getJournalId());
 		$this->group->setTitle($this->getData('title'), null); // Localized
 		$this->group->setContext($this->getData('context'));

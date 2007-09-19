@@ -22,7 +22,7 @@ class Journal extends DataObject {
 	function Journal() {
 		parent::DataObject();
 	}
-	
+
 	/**
 	 * Get the base URL to the journal.
 	 * @return string
@@ -30,7 +30,7 @@ class Journal extends DataObject {
 	function getUrl() {
 		return Request::url($this->getPath());
 	}
-	
+
 	/**
 	 * Return the primary locale of this journal.
 	 * @return string
@@ -38,7 +38,7 @@ class Journal extends DataObject {
 	function getPrimaryLocale() {
 		return $this->getData('primaryLocale');
 	}
-	
+
 	/**
 	 * Set the primary locale of this journal.
 	 * @param $locale string
@@ -46,7 +46,7 @@ class Journal extends DataObject {
 	function setPrimaryLocale($primaryLocale) {
 		return $this->setData('primaryLocale', $primaryLocale);
 	}
-	
+
 	/**
 	 * Return associative array of all locales supported by the site.
 	 * These locales are used to provide a language toggle on the main site pages.
@@ -54,7 +54,7 @@ class Journal extends DataObject {
 	 */
 	function &getSupportedLocaleNames() {
 		$supportedLocales =& $this->getData('supportedLocales');
-		
+
 		if (!isset($supportedLocales)) {
 			$supportedLocales = array();
 			$localeNames = &Locale::getAllLocales();
@@ -63,17 +63,15 @@ class Journal extends DataObject {
 			if (!isset($locales) || !is_array($locales)) {
 				$locales = array();
 			}
-						
+
 			foreach ($locales as $localeKey) {
 				$supportedLocales[$localeKey] = $localeNames[$localeKey];
 			}
-		
-			//asort($supportedLocales);
 		}
-		
+
 		return $supportedLocales;
 	}
-	
+
 	/**
 	 * Get "localized" journal page title (if applicable).
 	 * param $home boolean get homepage title
@@ -96,7 +94,7 @@ class Journal extends DataObject {
 		}
 		return null;
 	}
-	
+
 	/**
 	 * Get "localized" journal page logo (if applicable).
 	 * param $home boolean get homepage logo
@@ -110,7 +108,7 @@ class Journal extends DataObject {
 		}
 		return null;
 	}
-	
+
 	//
 	// Get/set methods
 	//
@@ -128,16 +126,16 @@ class Journal extends DataObject {
 	 * @param $locale string
 	 * @return string
 	 */
-	 function getTitle($locale) {
-	 	return $this->getSetting('title', $locale);
+	function getTitle($locale) {
+		return $this->getSetting('title', $locale);
 	}
 
 	/**
 	 * Get localized initials of journal
 	 * @return string
 	 */
-	 function getJournalInitials() {
-	 	return $this->getLocalizedSetting('initials');
+	function getJournalInitials() {
+		return $this->getLocalizedSetting('initials');
 	}
 
 	/**
@@ -153,18 +151,18 @@ class Journal extends DataObject {
 	 * Get enabled flag of journal
 	 * @return int
 	 */
-	 function getEnabled() {
-	 	return $this->getData('enabled');
+	function getEnabled() {
+		return $this->getData('enabled');
 	}
-	
+
 	/**
-	* Set enabled flag of journal
-	* @param $enabled int
-	*/
+	 * Set enabled flag of journal
+	 * @param $enabled int
+	 */
 	function setEnabled($enabled) {
 		return $this->setData('enabled',$enabled);
 	}
-	
+
 	/**
 	 * Get ID of journal.
 	 * @return int
@@ -172,7 +170,7 @@ class Journal extends DataObject {
 	function getJournalId() {
 		return $this->getData('journalId');
 	}
-	
+
 	/**
 	 * Set ID of journal.
 	 * @param $journalId int
@@ -180,7 +178,7 @@ class Journal extends DataObject {
 	function setJournalId($journalId) {
 		return $this->setData('journalId', $journalId);
 	}
-	
+
 	/**
 	 * Get the localized description of the journal.
 	 * @return string
@@ -197,7 +195,7 @@ class Journal extends DataObject {
 	function getDescription($locale) {
 		return $this->getSetting('description', $locale);
 	}
-	
+
 	/**
 	 * Get path to journal (in URL).
 	 * @return string
@@ -205,7 +203,7 @@ class Journal extends DataObject {
 	function getPath() {
 		return $this->getData('path');
 	}
-	
+
 	/**
 	 * Set path to journal (in URL).
 	 * @param $path string
@@ -213,7 +211,7 @@ class Journal extends DataObject {
 	function setPath($path) {
 		return $this->setData('path', $path);
 	}
-	
+
 	/**
 	 * Get sequence of journal in site table of contents.
 	 * @return float
@@ -221,7 +219,7 @@ class Journal extends DataObject {
 	function getSequence() {
 		return $this->getData('sequence');
 	}
-	
+
 	/**
 	 * Set sequence of journal in site table of contents.
 	 * @param $sequence float
@@ -229,7 +227,7 @@ class Journal extends DataObject {
 	function setSequence($sequence) {
 		return $this->setData('sequence', $sequence);
 	}
-	
+
 	/**
 	 * Retrieve array of journal settings.
 	 * @return array
@@ -264,7 +262,7 @@ class Journal extends DataObject {
 	/**
 	 * Update a journal setting value.
 	 * @param $name string
-	 * @param $value string
+	 * @param $value mixed
 	 * @param $type string optional
 	 * @param $isLocalized boolean optional
 	 */

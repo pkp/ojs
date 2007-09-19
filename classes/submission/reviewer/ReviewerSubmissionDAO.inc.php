@@ -41,7 +41,7 @@ class ReviewerSubmissionDAO extends DAO {
 		$this->suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
 		$this->articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
 	}
-	
+
 	/**
 	 * Retrieve a reviewer submission by article ID.
 	 * @param $articleId int
@@ -91,7 +91,7 @@ class ReviewerSubmissionDAO extends DAO {
 
 		return $returner;
 	}
-	
+
 	/**
 	 * Internal function to return a ReviewerSubmission object from a row.
 	 * @param $row array
@@ -111,15 +111,15 @@ class ReviewerSubmissionDAO extends DAO {
 		$reviewerSubmission->setReviewFile($this->articleFileDao->getArticleFile($row['review_file_id']));
 		$reviewerSubmission->setReviewerFile($this->articleFileDao->getArticleFile($row['reviewer_file_id']));
 		$reviewerSubmission->setReviewerFileRevisions($this->articleFileDao->getArticleFileRevisions($row['reviewer_file_id']));
-		
+
 		// Comments
 		$reviewerSubmission->setMostRecentPeerReviewComment($this->articleCommentDao->getMostRecentArticleComment($row['article_id'], COMMENT_TYPE_PEER_REVIEW, $row['review_id']));
-		
+
 		// Editor Decisions
 		for ($i = 1; $i <= $row['current_round']; $i++) {
 			$reviewerSubmission->setDecisions($this->getEditorDecisions($row['article_id'], $i), $i);
 		}
-		
+
 		// Review Assignment 
 		$reviewerSubmission->setReviewId($row['review_id']);
 		$reviewerSubmission->setReviewerId($row['reviewer_id']);
@@ -142,7 +142,7 @@ class ReviewerSubmissionDAO extends DAO {
 
 		// Article attributes
 		$this->articleDao->_articleFromRow($reviewerSubmission, $row);
-		
+
 		HookRegistry::call('ReviewerSubmissionDAO::_returnReviewerSubmissionFromRow', array(&$reviewerSubmission, &$row));
 
 		return $reviewerSubmission;
@@ -186,7 +186,7 @@ class ReviewerSubmissionDAO extends DAO {
 			)
 		);
 	}
-	
+
 	/**
 	 * Get all submissions for a reviewer of a journal.
 	 * @param $reviewerId int
@@ -271,7 +271,7 @@ class ReviewerSubmissionDAO extends DAO {
 
 		return $submissionsCount;
 	}
-	
+
 	/**
 	 * Get the editor decisions for a review round of an article.
 	 * @param $articleId int
@@ -279,7 +279,7 @@ class ReviewerSubmissionDAO extends DAO {
 	 */
 	function getEditorDecisions($articleId, $round = null) {
 		$decisions = array();
-	
+
 		if ($round == null) {
 			$result = &$this->retrieve(
 				'SELECT edit_decision_id, editor_id, decision, date_decided FROM edit_decisions WHERE article_id = ? ORDER BY date_decided ASC', $articleId
@@ -290,7 +290,7 @@ class ReviewerSubmissionDAO extends DAO {
 				array($articleId, $round)
 			);
 		}
-		
+
 		while (!$result->EOF) {
 			$decisions[] = array(
 				'editDecisionId' => $result->fields['edit_decision_id'],
@@ -303,7 +303,7 @@ class ReviewerSubmissionDAO extends DAO {
 
 		$result->Close();
 		unset($result);
-	
+
 		return $decisions;
 	}
 }

@@ -18,18 +18,18 @@ class SQLParser {
 
 	/** The database driver */
 	var $driver;
-	
+
 	/** The database connection object */
 	var $dataSource;
-	
+
 	/** Enable debugging (print SQL statements as they are executed) */
 	var $debug;
-	
+
 	var $errorMsg;
-	
+
 	/** Delimiter for SQL comments used by the data source */
 	var $commentDelim;
-	
+
 	/** Delimiter for SQL statements used by the data source */
 	var $statementDelim;
 
@@ -46,7 +46,7 @@ class SQLParser {
 		$this->commentDelim = '(\-\-|#)';
 		$this->statementDelim = ';';
 	}
-	
+
 	/**
 	 * Parse an SQL file and execute all SQL statements in it.
 	 * @param $file string full path to the file
@@ -58,24 +58,24 @@ class SQLParser {
 			array_push($this->errorMsg, "$file does not exist or is not readble!");
 			return false;
 		}
-		
+
 		// Read file and break up into SQL statements
 		$sql = join('', file($file));
 		$this->stripComments($sql);
 		$statements = &$this->parseStatements($sql);
-		
+
 		// Execute each SQL statement
 		for ($i=0, $count=count($statements); $i < $count; $i++) {
 			if ($this->debug) {
 				echo 'Executing: ', $statements[$i], "\n\n";
 			}
-			
+
 			$this->dataSource->execute($statements[$i]);
-			
+
 			if ($this->dataSource->errorNo() != 0) {
 				// An error occurred executing the statement
 				array_push($this->errorMsg, $this->dataSource->errorMsg());
-				
+
 				if ($failOnError) {
 					// Abort if fail on error is enabled
 					return false;
@@ -84,10 +84,10 @@ class SQLParser {
 				}
 			}
 		}
-		
+
 		return isset($error) ? false : true;
 	}
-	
+
 	/**
 	 * Strip SQL comments from SQL string.
 	 * @param $sql string
@@ -95,7 +95,7 @@ class SQLParser {
 	function stripComments(&$sql) {
 		$sql = trim(String::regexp_replace(sprintf('/^\s*%s(.*)$/m', $this->commentDelim), '', $sql));
 	}
-	
+
 	/**
 	 * Parse SQL content into individual SQL statements.
 	 * @param $sql string
@@ -104,20 +104,20 @@ class SQLParser {
 	function &parseStatements(&$sql) {
 		$statements = array();
 		$statementsTmp = explode($this->statementDelim, $sql);
-		
+
 		$currentStatement = '';
 		$numSingleQuotes = $numEscapedSingleQuotes = 0;
-		
+
 		// This method for parsing the SQL statements was adapted from one used in phpBB (http://www.phpbb.com/)
 		for ($i=0, $count=count($statementsTmp); $i < $count; $i++) {
 			// Get total number of single quotes in string
 			$numSingleQuotes += String::substr_count($statementsTmp[$i], "'");
-			
+
 			// Get number of escaped single quotes
 			$numEscapedSingleQuotes += String::regexp_match_all("/(?<!\\\\)(\\\\\\\\)*\\\\'/", $statementsTmp[$i], $matches);
 
 			$currentStatement .= $statementsTmp[$i];
-			
+
 			if (($numSingleQuotes - $numEscapedSingleQuotes) % 2 == 0) {
 				// Even number of unescaped single quotes, so statement must be complete
 				if (trim($currentStatement) !== '') {
@@ -125,16 +125,16 @@ class SQLParser {
 				}
 				$currentStatement = '';
 				$numSingleQuotes = $numEscapedSingleQuotes = 0;
-				
+
 			} else {
 				// The statement is not complete, the delimiter must be inside the statement
 				$currentStatement .= $this->statementDelim;
 			}
 		}
-		
+
 		return $statements;
 	}
-	
+
 	/**
 	 * Return the last error message that occurred in parsing.
 	 * @return string
@@ -142,7 +142,7 @@ class SQLParser {
 	function getErrorMsg() {
 		return count($this->errorMsg) == 0 ? null : array_pop($this->errorMsg);
 	}
-	
+
 }
 
 ?>

@@ -24,7 +24,7 @@ class PublishedArticle extends Article {
 	function PublishedArticle() {
 		parent::Article();
 	}
-	
+
 	/**
 	 * Get ID of published article.
 	 * @return int
@@ -32,7 +32,7 @@ class PublishedArticle extends Article {
 	function getPubId() {
 		return $this->getData('pubId');
 	}
-	
+
 	/**
 	 * Set ID of published article.
 	 * @param $pubId int
@@ -48,7 +48,7 @@ class PublishedArticle extends Article {
 	function getArticleId() {
 		return $this->getData('articleId');
 	}
-	
+
 	/**
 	 * Set ID of associated article.
 	 * @param $articleId int
@@ -56,7 +56,7 @@ class PublishedArticle extends Article {
 	function setArticleId($articleId) {
 		return $this->setData('articleId', $articleId);
 	}
-	
+
 	/**
 	 * Get ID of the issue this article is in.
 	 * @return int
@@ -64,7 +64,7 @@ class PublishedArticle extends Article {
 	function getIssueId() {
 		return $this->getData('issueId');
 	}
-	
+
 	/**
 	 * Set ID of the issue this article is in.
 	 * @param $issueId int
@@ -80,7 +80,7 @@ class PublishedArticle extends Article {
 	function getSectionId() {
 		return $this->getData('sectionId');
 	}
-	
+
 	/**
 	 * Set section ID of the issue this article is in.
 	 * @param $sectionId int
@@ -93,21 +93,21 @@ class PublishedArticle extends Article {
 	 * Get date published.
 	 * @return date
 	 */
-	
+
 	function getDatePublished() {
 		return $this->getData('datePublished');	
 	}
-	
+
 
 	/**
 	 * Set date published.
 	 * @param $datePublished date
 	 */
-	 
+
 	function setDatePublished($datePublished) {
 		return $this->SetData('datePublished', $datePublished);
 	}
-	
+
 	/**
 	 * Get sequence of article in table of contents.
 	 * @return float
@@ -115,7 +115,7 @@ class PublishedArticle extends Article {
 	function getSeq() {
 		return $this->getData('seq');
 	}
-	
+
 	/**
 	 * Set sequence of article in table of contents.
 	 * @param $sequence float
@@ -131,7 +131,7 @@ class PublishedArticle extends Article {
 	function getViews() {
 		return $this->getData('views');
 	}
-	
+
 	/**
 	 * Set views of the published article.
 	 * @param $views int
@@ -147,7 +147,7 @@ class PublishedArticle extends Article {
 	function getAccessStatus() {
 		return $this->getData('accessStatus');
 	}
-	 
+
 	/**
 	 * set access status
 	 * @param $accessStatus int
@@ -164,7 +164,7 @@ class PublishedArticle extends Article {
 		$galleys =& $this->getData('galleys');
 		return $galleys;
 	}
-	
+
 	/**
 	 * Get the localized galleys for an article.
 	 * @return array ArticleGalley
@@ -189,7 +189,7 @@ class PublishedArticle extends Article {
 
 		return $galleys;
 	}
-	
+
 	/**
 	 * Set the galleys for an article.
 	 * @param $galleys array ArticleGalley
@@ -197,7 +197,7 @@ class PublishedArticle extends Article {
 	function setGalleys(&$galleys) {
 		return $this->setData('galleys', $galleys);
 	}
-		
+
 	/**
 	 * Get supplementary files for this article.
 	 * @return array SuppFiles
@@ -206,7 +206,7 @@ class PublishedArticle extends Article {
 		$returner =& $this->getData('suppFiles');
 		return $returner;
 	}
-	
+
 	/**
 	 * Set supplementary file for this article.
 	 * @param $suppFiles array SuppFiles
@@ -214,7 +214,7 @@ class PublishedArticle extends Article {
 	function setSuppFiles($suppFiles) {
 		return $this->setData('suppFiles', $suppFiles);
 	}
-	
+
 	/**
 	 * Get public article id
 	 * @return string
@@ -273,7 +273,7 @@ class PublishedArticle extends Article {
 		if (!$issue || !$journal || $journal->getJournalId() != $issue->getJournalId() || ($doiPrefix = $journal->getSetting('doiPrefix')) == '') return null;
 
 		return $doiPrefix . '/' . strtolower($journal->getSetting('journalInitials')) . '.v' . $issue->getVolume() . 'i' . $issue->getNumber() . '.' . $this->getArticleId();
-		
+
 	}
 }
 

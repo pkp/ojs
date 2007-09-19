@@ -27,7 +27,7 @@ class SubscriptionType extends DataObject {
 	//
 	// Get/set methods
 	//
-	
+
 	/**
 	 * Get the ID of the subscription type.
 	 * @return int
@@ -35,7 +35,7 @@ class SubscriptionType extends DataObject {
 	function getTypeId() {
 		return $this->getData('typeId');
 	}
-	
+
 	/**
 	 * Set the ID of the subscription type.
 	 * @param $typeId int
@@ -51,7 +51,7 @@ class SubscriptionType extends DataObject {
 	function getJournalId() {
 		return $this->getData('journalId');
 	}
-	
+
 	/**
 	 * Set the journal ID of the subscription type.
 	 * @param $journalId int
@@ -76,7 +76,7 @@ class SubscriptionType extends DataObject {
 	function getName($locale) {
 		return $this->getData('name', $locale);
 	}
-	
+
 	/**
 	 * Set subscription type name.
 	 * @param $name string
@@ -102,7 +102,7 @@ class SubscriptionType extends DataObject {
 	function getDescription($locale) {
 		return $this->getData('description', $locale);
 	}
-	
+
 	/**
 	 * Set subscription type description.
 	 * @param $description string
@@ -119,7 +119,7 @@ class SubscriptionType extends DataObject {
 	function getCost() {
 		return $this->getData('cost');
 	}
-	
+
 	/**
 	 * Set subscription type cost.
 	 * @param $cost float
@@ -135,7 +135,7 @@ class SubscriptionType extends DataObject {
 	function getCurrencyCodeAlpha() {
 		return $this->getData('currencyCodeAlpha');
 	}
-	
+
 	/**
 	 * Set subscription type currency code.
 	 * @param $currencyCodeAlpha string
@@ -181,7 +181,7 @@ class SubscriptionType extends DataObject {
 	function getDuration() {
 		return $this->getData('duration');
 	}
-	
+
 	/**
 	 * Set subscription type duration.
 	 * @param $duration int
@@ -223,7 +223,7 @@ class SubscriptionType extends DataObject {
 	function getFormat() {
 		return $this->getData('format');
 	}
-	
+
 	/**
 	 * Set subscription type format.
 	 * @param $format int
@@ -256,7 +256,7 @@ class SubscriptionType extends DataObject {
 	function getInstitutional() {
 		return $this->getData('institutional');
 	}
-	
+
 	/**
 	 * Set whether or not this subscription type is for an institution.
 	 * @param $institutional boolean
@@ -272,7 +272,7 @@ class SubscriptionType extends DataObject {
 	function getMembership() {
 		return $this->getData('membership');
 	}
-	
+
 	/**
 	 * Set whether or not this subscription type requires a membership.
 	 * @param $membership boolean
@@ -288,7 +288,7 @@ class SubscriptionType extends DataObject {
 	function getPublic() {
 		return $this->getData('public');
 	}
-	
+
 	/**
 	 * Set whether or not this subscription should be publicly visible.
 	 * @param $public boolean
@@ -304,7 +304,7 @@ class SubscriptionType extends DataObject {
 	function getSequence() {
 		return $this->getData('sequence');
 	}
-	
+
 	/**
 	 * Set subscription type display sequence.
 	 * @param $sequence float

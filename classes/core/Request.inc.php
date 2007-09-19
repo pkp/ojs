@@ -20,7 +20,7 @@
 define('INDEX_SCRIPTNAME', 'index.php');
 
 class Request {
-	
+
 	/**
 	 * Perform an HTTP redirect to an absolute or relative (to base system URL) URL.
 	 * @param $url string (exclude protocol for local redirects) 
@@ -30,7 +30,7 @@ class Request {
 		if (HookRegistry::call('Request::redirect', array(&$url))) {
 			return;
 		}
-		
+
 		header("Location: $url");
 		exit();
 	}
@@ -57,7 +57,7 @@ class Request {
 		if (!empty($queryString)) $url .= "?$queryString";
 		Request::redirectUrl($url);
 	}
-	
+
 	/**
 	 * Redirect to the current URL, forcing the HTTP protocol to be used.
 	 */
@@ -74,7 +74,7 @@ class Request {
 	 */
 	function getBaseUrl() {
 		static $baseUrl;
-		
+
 		if (!isset($baseUrl)) {
 			$serverHost = Request::getServerHost(null);
 			if ($serverHost !== null) {
@@ -86,7 +86,7 @@ class Request {
 			}
 			HookRegistry::call('Request::getBaseUrl', array(&$baseUrl));
 		}
-		
+
 		return $baseUrl;
 	}
 
@@ -96,7 +96,7 @@ class Request {
 	 */
 	function getBasePath() {
 		static $basePath;
-		
+
 		if (!isset($basePath)) {
 			$basePath = dirname($_SERVER['SCRIPT_NAME']);
 			if ($basePath == '/' || $basePath == '\\') {
@@ -104,7 +104,7 @@ class Request {
 			}
 			HookRegistry::call('Request::getBasePath', array(&$basePath));
 		}
-		
+
 		return $basePath;
 	}
 
@@ -146,12 +146,12 @@ class Request {
 	 */
 	function getRequestUrl() {
 		static $requestUrl;
-		
+
 		if (!isset($requestUrl)) {
 			$requestUrl = Request::getProtocol() . '://' . Request::getServerHost() . Request::getRequestPath();
 			HookRegistry::call('Request::getRequestUrl', array(&$requestUrl));
 		}
-		
+
 		return $requestUrl;
 	}
 
@@ -185,7 +185,7 @@ class Request {
 		}
 		return $requestPath;
 	}
-	
+
 	/**
 	 * Get the server hostname in the request.
 	 * @return string
@@ -266,7 +266,7 @@ class Request {
 		}
 		return $ipaddr;
 	}
-	
+
 	/**
 	 * Get the remote domain of the current request
 	 * @return string
@@ -279,7 +279,7 @@ class Request {
 		}
 		return $remoteDomain;
 	}
-	
+
 	/**
 	 * Get the user agent of the current request.
 	 * @return string
@@ -328,8 +328,8 @@ class Request {
 	function isPathInfoEnabled() {
 		static $isPathInfoEnabled;
 		if (!isset($isPathInfoEnabled)) {
-                        $isPathInfoEnabled = Config::getVar('general', 'disable_path_info')?false:true;
-                }
+			$isPathInfoEnabled = Config::getVar('general', 'disable_path_info')?false:true;
+		}
 		return $isPathInfoEnabled;
 	}
 
@@ -339,7 +339,7 @@ class Request {
 	 */
 	function getRequestedJournalPath() {
 		static $journal;
-		
+
 		if (!isset($journal)) {
 			if (Request::isPathInfoEnabled()) {
 				$journal = '';
@@ -356,73 +356,73 @@ class Request {
 			$journal = empty($journal) ? 'index' : $journal;
 			HookRegistry::call('Request::getRequestedJournalPath', array(&$journal));
 		}
-		
+
 		return $journal;
 	}
-	
+
 	/**
 	 * Get site data.
 	 * @return Site
 	 */
-	 function &getSite() {
-	 	static $site;
-	 	
-	 	if (!isset($site)) {
-		 	$siteDao = &DAORegistry::getDAO('SiteDAO');
-		 	$site = $siteDao->getSite();
-	 	}
-	 	
-	 	return $site;
-	 }
-	
+	function &getSite() {
+		static $site;
+
+		if (!isset($site)) {
+			$siteDao = &DAORegistry::getDAO('SiteDAO');
+			$site = $siteDao->getSite();
+		}
+
+		return $site;
+	}
+
 	/**
 	 * Get the user session associated with the current request.
 	 * @return Session
 	 */
-	 function &getSession() {
-	 	static $session;
-	 	
-	 	if (!isset($session)) {
-	 		$sessionManager = &SessionManager::getManager();
-	 		$session = $sessionManager->getUserSession();
-	 	}
-	 	
-	 	return $session;
-	 }
-	
+	function &getSession() {
+		static $session;
+
+		if (!isset($session)) {
+			$sessionManager = &SessionManager::getManager();
+			$session = $sessionManager->getUserSession();
+		}
+
+		return $session;
+	}
+
 	/**
 	 * Get the user associated with the current request.
 	 * @return User
 	 */
-	 function &getUser() {
-	 	static $user;
-	 	
-	 	if (!isset($user)) {
-	 		$sessionManager = &SessionManager::getManager();
-	 		$session = &$sessionManager->getUserSession();
-	 		$user = $session->getUser();
-	 	}
-	 	
-	 	return $user;
-	 }
-	 
+	function &getUser() {
+		static $user;
+
+		if (!isset($user)) {
+			$sessionManager = &SessionManager::getManager();
+			$session = &$sessionManager->getUserSession();
+			$user = $session->getUser();
+		}
+
+		return $user;
+	}
+
 	/**
 	 * Get the journal associated with the current request.
 	 * @return Journal
 	 */
-	 function &getJournal() {
-	 	static $journal;
-	 	
-	 	if (!isset($journal)) {
-	 		$path = Request::getRequestedJournalPath();
-	 		if ($path != 'index') {
-		 		$journalDao = &DAORegistry::getDAO('JournalDAO');
-		 		$journal = $journalDao->getJournalByPath(Request::getRequestedJournalPath());
-		 	}
-	 	}
-	 	
-	 	return $journal;
-	 }
+	function &getJournal() {
+		static $journal;
+
+		if (!isset($journal)) {
+			$path = Request::getRequestedJournalPath();
+			if ($path != 'index') {
+				$journalDao = &DAORegistry::getDAO('JournalDAO');
+				$journal = $journalDao->getJournalByPath(Request::getRequestedJournalPath());
+			}
+		}
+
+		return $journal;
+	}
 
 	/**
 	 * Get the page requested in the URL.
@@ -430,7 +430,7 @@ class Request {
 	 */
 	function getRequestedPage() {
 		static $page;
-		
+
 		if (!isset($page)) {
 			if (Request::isPathInfoEnabled()) {
 				$page = '';
@@ -444,17 +444,17 @@ class Request {
 				$page = Request::getUserVar('page');
 			}
 		}
-		
+
 		return $page;
 	}
-	
+
 	/**
 	 * Get the operation requested in the URL (assumed to exist in the requested page handler).
 	 * @return string
 	 */
 	function getRequestedOp() {
 		static $op;
-		
+
 		if (!isset($op)) {
 			if (Request::isPathInfoEnabled()) {
 				$op = '';
@@ -469,10 +469,10 @@ class Request {
 			}
 			$op = empty($op) ? 'index' : $op;
 		}
-		
+
 		return $op;
 	}
-	
+
 	/**
 	 * Get the arguments requested in the URL (not GET/POST arguments, only arguments prepended to the URL separated by "/").
 	 * @return array
@@ -496,18 +496,18 @@ class Request {
 		}
 		return $args;	
 	}
-	
+
 	/**
 	 * Get the value of a GET/POST variable.
 	 * @return mixed
 	 */
 	function getUserVar($key) {
 		static $vars;
-		
+
 		if (!isset($vars)) {
 			$vars = array_merge($_GET, $_POST);
 		}
-		
+
 		if (isset($vars[$key])) {
 			// FIXME Do not clean vars again if function is called more than once?
 			Request::cleanUserVar($vars[$key]);
@@ -560,12 +560,12 @@ class Request {
 			}
 		} else if (isset($var)) {
 			$var = Core::cleanVar(get_magic_quotes_gpc() ? stripslashes($var) : $var);
-			
+
 		} else {
 			return null;
 		}
 	}
-	
+
 	/**
 	 * Get the value of a cookie variable.
 	 * @return mixed
@@ -579,7 +579,7 @@ class Request {
 			return null;
 		}
 	}
-	
+
 	/**
 	 * Set a cookie variable.
 	 * @param $key string

@@ -31,7 +31,7 @@ class VersionCheck {
 		$returner = &VersionCheck::parseVersionXML(VERSION_CHECK_URL);
 		return $returner;
 	}
-	
+
 	/**
 	 * Return the currently installed database version.
 	 * @return Version
@@ -41,7 +41,7 @@ class VersionCheck {
 		$dbVersion = &$versionDao->getCurrentVersion();
 		return $dbVersion;
 	}
-	
+
 	/**
 	 * Return the current code version.
 	 * @return Version
@@ -55,7 +55,7 @@ class VersionCheck {
 		}
 		return $version;
 	}
-	
+
 	/**
 	 * Parse information from a version XML file.
 	 * @return array
@@ -67,7 +67,7 @@ class VersionCheck {
 			$result = false;
 			return $result;
 		}
-		
+
 		// FIXME validate parsed data?
 		$versionInfo = array(
 			'application' => $data['application'][0]['value'],
@@ -79,14 +79,14 @@ class VersionCheck {
 			'patch' => array(),
 			'version' => Version::fromString($data['release'][0]['value'])
 		);
-		
+
 		foreach ($data['patch'] as $patch) {
 			$versionInfo['patch'][$patch['attributes']['from']] = $patch['value'];
 		}
-		
+
 		return $versionInfo;
 	}
-	
+
 	/**
 	 * Find the applicable patch for the current code version (if available).
 	 * @param $versionInfo array as returned by parseVersionXML()
@@ -102,7 +102,7 @@ class VersionCheck {
 		}
 		return null;
 	}
-	
+
 	/**
 	 * Return URL to the remote version check script.
 	 * @return array

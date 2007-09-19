@@ -27,7 +27,7 @@ class CopyAssignmentDAO extends DAO {
 		parent::DAO();
 		$this->articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
 	}
-	
+
 	/**
 	 * Retrieve a copyed assignment by article ID.
 	 * @param $copyedId int
@@ -49,7 +49,7 @@ class CopyAssignmentDAO extends DAO {
 
 		return $returner;
 	}
-	
+
 	/**
 	 * Retrieve a copy assignment by article ID.
 	 * @param $articleId int
@@ -71,7 +71,7 @@ class CopyAssignmentDAO extends DAO {
 
 		return $returner;
 	}
-	
+
 	/**
 	 * Internal function to return a CopyAssignment object from a row.
 	 * @param $row array
@@ -102,17 +102,17 @@ class CopyAssignmentDAO extends DAO {
 		$copyAssignment->setFinalRevision($row['final_revision']);
 
 		// Files
-		
+
 		// Initial Copyedit File
 		if ($row['initial_revision'] != null) {
 			$copyAssignment->setInitialCopyeditFile($this->articleFileDao->getArticleFile($row['copyedit_file_id'], $row['initial_revision']));
 		}
-		
+
 		// Editor / Author Copyedit File
 		if ($row['editor_author_revision'] != null) {
 			$copyAssignment->setEditorAuthorCopyeditFile($this->articleFileDao->getArticleFile($row['copyedit_file_id'], $row['editor_author_revision']));
 		}
-		
+
 		// Final Copyedit File
 		if ($row['final_revision'] != null) {
 			$copyAssignment->setFinalCopyeditFile($this->articleFileDao->getArticleFile($row['copyedit_file_id'], $row['final_revision']));
@@ -122,7 +122,7 @@ class CopyAssignmentDAO extends DAO {
 
 		return $copyAssignment;
 	}
-	
+
 	/**
 	 * Delete copyediting assignments by article.
 	 * @param $articleId int
@@ -133,7 +133,7 @@ class CopyAssignmentDAO extends DAO {
 			$articleId
 		);
 	}
-	
+
 	/**
 	 * Get the ID of the last inserted copyeditor assignment.
 	 * @return int

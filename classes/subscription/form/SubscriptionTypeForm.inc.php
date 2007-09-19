@@ -49,7 +49,7 @@ class SubscriptionTypeForm extends Form {
 		$journal = &Request::getJournal();
 
 		parent::Form('subscription/subscriptionTypeForm.tpl');
-	
+
 		// Type name is provided
 		$this->addCheck(new FormValidatorLocale($this, 'name', 'required', 'manager.subscriptionTypes.form.typeNameRequired'));
 
@@ -79,7 +79,7 @@ class SubscriptionTypeForm extends Form {
 		$this->addCheck(new FormValidatorInSet($this, 'public', 'optional', 'manager.subscriptionTypes.form.publicValid', array('1')));
 		$this->addCheck(new FormValidatorPost($this));
 	}
-	
+
 	/**
 	 * Get a list of localized field names for this form
 	 * @return array
@@ -98,10 +98,10 @@ class SubscriptionTypeForm extends Form {
 		$templateMgr->assign('validCurrencies', $this->validCurrencies);
 		$templateMgr->assign('validFormats', $this->validFormats);
 		$templateMgr->assign('helpTopicId', 'journal.managementPages.subscriptions');
-	
+
 		parent::display();
 	}
-	
+
 	/**
 	 * Initialize form data from current subscription type.
 	 */
@@ -109,7 +109,7 @@ class SubscriptionTypeForm extends Form {
 		if (isset($this->typeId)) {
 			$subscriptionTypeDao = &DAORegistry::getDAO('SubscriptionTypeDAO');
 			$subscriptionType = &$subscriptionTypeDao->getSubscriptionType($this->typeId);
-			
+
 			if ($subscriptionType != null) {
 				$this->_data = array(
 					'name' => $subscriptionType->getName(null), // Localized
@@ -128,29 +128,29 @@ class SubscriptionTypeForm extends Form {
 			}
 		}
 	}
-	
+
 	/**
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
 		$this->readUserVars(array('name', 'description', 'cost', 'currency', 'duration', 'format', 'institutional', 'membership', 'public'));
 	}
-	
+
 	/**
 	 * Save subscription type. 
 	 */
 	function execute() {
 		$subscriptionTypeDao = &DAORegistry::getDAO('SubscriptionTypeDAO');
 		$journal = &Request::getJournal();
-	
+
 		if (isset($this->typeId)) {
 			$subscriptionType = &$subscriptionTypeDao->getSubscriptionType($this->typeId);
 		}
-		
+
 		if (!isset($subscriptionType)) {
 			$subscriptionType = &new SubscriptionType();
 		}
-		
+
 		$subscriptionType->setJournalId($journal->getJournalId());
 		$subscriptionType->setName($this->getData('name'), null); // Localized
 		$subscriptionType->setDescription($this->getData('description'), null); // Localized

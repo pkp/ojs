@@ -84,7 +84,7 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 			$curYear = $curDate['year'];
 			$curMonth = $curDate['month'];
 			$curDay = $curDate['day'];
-			
+
 			// Check if expiry notification before months is enabled
 			if ($journal->getSetting('enableSubscriptionExpiryReminderBeforeMonths')) {
 

@@ -26,11 +26,11 @@ class BaseEmailTemplate extends DataObject {
 	function BaseEmailTemplate() {
 		parent::DataObject();
 	}
-	
+
 	//
 	// Get/set methods
 	//
-	
+
 	/**
 	 * Get ID of journal.
 	 * @return int
@@ -38,7 +38,7 @@ class BaseEmailTemplate extends DataObject {
 	function getJournalId() {
 		return $this->getData('journalId');
 	}
-	
+
 	/**
 	 * Set ID of journal.
 	 * @param $journalId int
@@ -109,7 +109,7 @@ class BaseEmailTemplate extends DataObject {
 	function getEmailId() {
 		return $this->getData('emailId');
 	}
-	
+
 	/**
 	 * Set ID of email template.
 	 * @param $emailId int
@@ -117,7 +117,7 @@ class BaseEmailTemplate extends DataObject {
 	function setEmailId($emailId) {
 		return $this->setData('emailId', $emailId);
 	}
-	
+
 	/**
 	 * Get key of email template.
 	 * @return string
@@ -125,7 +125,7 @@ class BaseEmailTemplate extends DataObject {
 	function getEmailKey() {
 		return $this->getData('emailKey');
 	}
-	
+
 	/**
 	 * Set key of email template.
 	 * @param $emailKey string
@@ -133,7 +133,7 @@ class BaseEmailTemplate extends DataObject {
 	function setEmailKey($emailKey) {
 		return $this->setData('emailKey', $emailKey);
 	}
-	
+
 	/**
 	 * Get the enabled setting of email template.
 	 * @return boolean
@@ -141,7 +141,7 @@ class BaseEmailTemplate extends DataObject {
 	function getEnabled() {
 		return $this->getData('enabled');
 	}
-	
+
 	/**
 	 * Set the enabled setting of email template.
 	 * @param $enabled boolean
@@ -149,7 +149,7 @@ class BaseEmailTemplate extends DataObject {
 	function setEnabled($enabled) {
 		return $this->setData('enabled', $enabled);
 	}
-	
+
 	/**
 	 * Check if email template is allowed to be disabled.
 	 * @return boolean
@@ -157,7 +157,7 @@ class BaseEmailTemplate extends DataObject {
 	function getCanDisable() {
 		return $this->getData('canDisable');
 	}
-	
+
 	/**
 	 * Set whether or not email template is allowed to be disabled.
 	 * @param $canDisable boolean
@@ -165,7 +165,7 @@ class BaseEmailTemplate extends DataObject {
 	function setCanDisable($canDisable) {
 		return $this->setData('canDisable', $canDisable);
 	}
-	
+
 }
 
 
@@ -208,7 +208,7 @@ class LocaleEmailTemplate extends BaseEmailTemplate {
 	function addLocale($locale) {
 		$this->localeData[$locale] = array();
 	}
-	
+
 	/**
 	 * Get set of supported locales for this template.
 	 * @return array
@@ -216,11 +216,11 @@ class LocaleEmailTemplate extends BaseEmailTemplate {
 	function getLocales() {
 		return array_keys($this->localeData);
 	}
-	
+
 	//
 	// Get/set methods
 	//
-	
+
 	/**
 	 * Get description of email template.
 	 * @param $locale string
@@ -229,7 +229,7 @@ class LocaleEmailTemplate extends BaseEmailTemplate {
 	function getDescription($locale) {
 		return isset($this->localeData[$locale]['description']) ? $this->localeData[$locale]['description'] : '';
 	}
-	
+
 	/**
 	 * Set description of email template.
 	 * @param $locale string
@@ -238,7 +238,7 @@ class LocaleEmailTemplate extends BaseEmailTemplate {
 	function setDescription($locale, $description) {
 		$this->localeData[$locale]['description'] = $description;
 	}
-	
+
 	/**
 	 * Get subject of email template.
 	 * @param $locale string
@@ -247,7 +247,7 @@ class LocaleEmailTemplate extends BaseEmailTemplate {
 	function getSubject($locale) {
 		return isset($this->localeData[$locale]['subject']) ? $this->localeData[$locale]['subject'] : '';
 	}
-	
+
 	/**
 	 * Set subject of email template.
 	 * @param $locale string
@@ -256,7 +256,7 @@ class LocaleEmailTemplate extends BaseEmailTemplate {
 	function setSubject($locale, $subject) {
 		$this->localeData[$locale]['subject'] = $subject;
 	}
-	
+
 	/**
 	 * Get body of email template.
 	 * @param $locale string
@@ -265,7 +265,7 @@ class LocaleEmailTemplate extends BaseEmailTemplate {
 	function getBody($locale) {
 		return isset($this->localeData[$locale]['body']) ? $this->localeData[$locale]['body'] : '';
 	}
-	
+
 	/**
 	 * Set body of email template.
 	 * @param $locale string
@@ -288,7 +288,7 @@ class EmailTemplate extends BaseEmailTemplate {
 	function EmailTemplate() {
 		parent::BaseEmailTemplate();
 	}
-	
+
 	/**
 	 * Set whether or not this is a custom template.
 	 */
@@ -308,7 +308,7 @@ class EmailTemplate extends BaseEmailTemplate {
 	//
 	// Get/set methods
 	//
-	
+
 	/**
 	 * Get locale of email template.
 	 * @return string
@@ -316,7 +316,7 @@ class EmailTemplate extends BaseEmailTemplate {
 	function getLocale() {
 		return $this->getData('locale');
 	}
-	
+
 	/**
 	 * Set locale of email template.
 	 * @param $locale string
@@ -324,7 +324,7 @@ class EmailTemplate extends BaseEmailTemplate {
 	function setLocale($locale) {
 		return $this->setData('locale', $locale);
 	}
-	
+
 	/**
 	 * Get subject of email template.
 	 * @return string
@@ -332,7 +332,7 @@ class EmailTemplate extends BaseEmailTemplate {
 	function getSubject() {
 		return $this->getData('subject');
 	}
-	
+
 	/**
 	 * Set subject of journal.
 	 * @param $subject string
@@ -340,7 +340,7 @@ class EmailTemplate extends BaseEmailTemplate {
 	function setSubject($subject) {
 		return $this->setData('subject', $subject);
 	}
-	
+
 	/**
 	 * Get body of email template.
 	 * @return string
@@ -348,7 +348,7 @@ class EmailTemplate extends BaseEmailTemplate {
 	function getBody() {
 		return $this->getData('body');
 	}
-	
+
 	/**
 	 * Set body of email template.
 	 * @param $body string

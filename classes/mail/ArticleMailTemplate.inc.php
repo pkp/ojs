@@ -31,7 +31,7 @@ class ArticleMailTemplate extends MailTemplate {
 
 	/** @var int Associated type of this email */
 	var $assocType;
-	
+
 	/** @var int Associated ID of this email */
 	var $assocId;
 
@@ -72,29 +72,29 @@ class ArticleMailTemplate extends MailTemplate {
 			$user =& Request::getUser();
 			if ($this->attachmentsEnabled) $this->_clearAttachments($user->getUserId());
 			return true;
-			
+
 		} else {
 			return false;
 		}
 	}
-	
+
 	/**
 	 * @see parent::sendWithParams()
 	 */
 	function sendWithParams($paramArray) {
 		$savedSubject = $this->getSubject();
 		$savedBody = $this->getBody();
-		
+
 		$this->assignParams($paramArray);
-		
+
 		$ret = $this->send();
-		
+
 		$this->setSubject($savedSubject);
 		$this->setBody($savedBody);
-		
+
 		return $ret;
 	}
-	
+
 	/**
 	 * Add a generic association between this email and some event type / type / ID tuple.
 	 * @param $eventType int
@@ -123,12 +123,12 @@ class ArticleMailTemplate extends MailTemplate {
 		import('article.log.ArticleLog');
 		$entry = &new ArticleEmailLogEntry();
 		$article = &$this->article;
-		
+
 		// Log data
 		$entry->setEventType($this->eventType);
 		$entry->setAssocType($this->assocType);
 		$entry->setAssocId($this->assocId);
-		
+
 		// Email data
 		$entry->setSubject($this->getSubject());
 		$entry->setBody($this->getBody());

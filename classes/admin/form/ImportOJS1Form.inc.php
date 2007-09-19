@@ -21,7 +21,7 @@ class ImportOJS1Form extends Form {
 
 	/** @var $importer ImportOJS1 */
 	var $importer;
-	
+
 	/**
 	 * Constructor.
 	 * @param $journalId omit for a new journal
@@ -35,7 +35,7 @@ class ImportOJS1Form extends Form {
 		$this->addCheck(new FormValidator($this, 'importPath', 'required', 'admin.journals.form.importPathRequired'));
 		$this->addCheck(new FormValidatorPost($this));
 	}
-	
+
 	/**
 	 * Display the form.
 	 */
@@ -44,14 +44,14 @@ class ImportOJS1Form extends Form {
 		$templateMgr->assign('importError', $this->importer->error());
 		parent::display();
 	}
-	
+
 	/**
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
 		$this->readUserVars(array('journalPath', 'importPath', 'options'));
 	}
-	
+
 	/**
 	 * Import content.
 	 * @return boolean/int false or journal ID

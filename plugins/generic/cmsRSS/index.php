@@ -12,7 +12,7 @@
  *
  * $Id$
  */
- 
+
 require_once('CmsRssPlugin.inc.php');
 
 return new CmsRssPlugin();

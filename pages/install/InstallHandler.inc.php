@@ -28,16 +28,16 @@ class InstallHandler extends Handler {
 	 */
 	function index() {
 		InstallHandler::validate();
-		
+
 		if (($setLocale = Request::getUserVar('setLocale')) != null && Locale::isLocaleValid($setLocale)) {
 			Request::setCookieVar('currentLocale', $setLocale);
 		}
-		
+
 		$installForm = &new InstallForm();
 		$installForm->initData();
 		$installForm->display();
 	}
-	
+
 	/**
 	 * Redirect to index if system has already been installed.
 	 */
@@ -46,56 +46,56 @@ class InstallHandler extends Handler {
 			Request::redirect(null, 'index');	
 		}
 	}
-	
+
 	/**
 	 * Execute installer.
 	 */
 	function install() {
 		InstallHandler::validate();
-		
+
 		$installForm = &new InstallForm();
 		$installForm->readInputData();
-		
+
 		if ($installForm->validate()) {
 			$installForm->execute();
-			
+
 		} else {
 			$installForm->display();
 		}
 	}
-	
+
 	/**
 	 * Display upgrade form.
 	 */
 	function upgrade() {
 		InstallHandler::validate();
-		
+
 		if (($setLocale = Request::getUserVar('setLocale')) != null && Locale::isLocaleValid($setLocale)) {
 			Request::setCookieVar('currentLocale', $setLocale);
 		}
-		
+
 		$installForm = &new UpgradeForm();
 		$installForm->initData();
 		$installForm->display();
 	}
-	
+
 	/**
 	 * Execute upgrade.
 	 */
 	function installUpgrade() {
 		InstallHandler::validate();
-		
+
 		$installForm = &new UpgradeForm();
 		$installForm->readInputData();
-		
+
 		if ($installForm->validate()) {
 			$installForm->execute();
-			
+
 		} else {
 			$installForm->display();
 		}
 	}
-	
+
 }
 
 ?>

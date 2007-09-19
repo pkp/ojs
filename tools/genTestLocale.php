@@ -35,16 +35,16 @@ class genTestLocale extends CommandLineTool {
 	 */
 	function genTestLocale($argv = array()) {
 		parent::CommandLineTool($argv);
-		
+
 		if (count($this->argv) == 2) {
 			$this->inLocale = $this->argv[0];
 			$this->outLocale = $this->argv[1];
-			
+
 		} else {
 			$this->inLocale = DEFAULT_IN_LOCALE;
 			$this->outLocale = DEFAULT_OUT_LOCALE;
 		}
-		
+
 		$this->replaceMap = array(
 			'a' => "\xc3\xa5",
 			'A' => "\xc3\x86",
@@ -69,7 +69,7 @@ class genTestLocale extends CommandLineTool {
 			'&' => "&amp;"
 		);
 	}
-	
+
 	/**
 	 * Create the test locale file.
 	 */
@@ -78,19 +78,19 @@ class genTestLocale extends CommandLineTool {
 		$localeFiles =& Locale::getLocaleFiles();
 		$localeFile = array_shift($localeFiles[$this->inLocale]);
 		$localeData = LocaleFile::load($localeFile->filename);
-		
+
 		if (!isset($localeData)) {
 			printf('Invalid locale \'%s\'', $this->inLocale);
 			exit(1);
 		}
-		
+
 		$outFile = sprintf('locale/%s/locale.xml', $this->outLocale);
 		$fp = fopen($outFile, 'wb');
 		if (!$fp) {
 			printf('Failed to write to \'%s\'', $outFile);
 			exit(1);
 		}
-		
+
 		fwrite($fp,
 					"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" .
 					"<!DOCTYPE locale SYSTEM \"../locale.dtd\">\n\n" .
@@ -106,22 +106,22 @@ class genTestLocale extends CommandLineTool {
 					"  -->\n\n" .
 					sprintf("<locale name=\"%s\" full_name=\"%s\">\n", $this->outLocale, DEFAULT_OUT_LOCALE_NAME)
 		);
-		
+
 		foreach ($localeData as $key => $message) {
 			$outMessage = $this->fancifyString($message);
-			
+
 			if (strstr($outMessage, '<') || strstr($outMessage, '>')) {
 				$outMessage = '<![CDATA[' . $outMessage . ']]>';
 			}
-			
+
 			fwrite($fp, sprintf("\t<message key=\"%s\">%s</message>\n", $key, $outMessage));
 		}
-		
+
 		fwrite($fp, "</locale>\n");
-		
+
 		fclose($fp);
 	}
-	
+
 	/**
 	 * Perform message string munging.
 	 * @param $str string
@@ -130,9 +130,9 @@ class genTestLocale extends CommandLineTool {
 	function fancifyString($str) {
 		$inHTML = 0;
 		$inVar = 0;
-		
+
 		$outStr = "";
-		
+
 		for ($i = 0, $len = strlen($str); $i < $len; $i++) {
 			switch ($str[$i]) {
 				case '{':
@@ -148,14 +148,14 @@ class genTestLocale extends CommandLineTool {
 					$inHTML--;
 					break;
 			}
-			
+
 			if ($inHTML == 0 && $inVar == 0) {
 				$outStr .= strtr($str[$i], $this->replaceMap);
 			} else {
 				$outStr .= $str[$i];
 			}
 		}
-		
+
 		return $outStr;
 	}
 

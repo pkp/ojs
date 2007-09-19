@@ -52,10 +52,10 @@ class AnnouncementTypeForm extends Form {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('typeId', $this->typeId);
 		$templateMgr->assign('helpTopicId', 'journal.managementPages.announcements');
-	
+
 		parent::display();
 	}
-	
+
 	/**
 	 * Initialize form data from current announcement type.
 	 */
@@ -74,7 +74,7 @@ class AnnouncementTypeForm extends Form {
 			}
 		}
 	}
-	
+
 	/**
 	 * Assign form data to user-submitted data.
 	 */
@@ -88,15 +88,15 @@ class AnnouncementTypeForm extends Form {
 	function execute() {
 		$announcementTypeDao = &DAORegistry::getDAO('AnnouncementTypeDAO');
 		$journal = &Request::getJournal();
-	
+
 		if (isset($this->typeId)) {
 			$announcementType = &$announcementTypeDao->getAnnouncementType($this->typeId);
 		}
-		
+
 		if (!isset($announcementType)) {
 			$announcementType = &new AnnouncementType();
 		}
-		
+
 		$announcementType->setJournalId($journal->getJournalId());
 		$announcementType->setName($this->getData('name'), null); // Localized
 

@@ -13,9 +13,9 @@
  *
  * $Id$
  */
- 
+
 class Comment extends DataObject {
- 
+
 	/**
 	 * Constructor.
 	 */
@@ -23,7 +23,7 @@ class Comment extends DataObject {
 		parent::DataObject();
 		$this->setPosterIP(Request::getRemoteAddr());
 	}
-	
+
 	/**
 	 * get article comment id
 	 * @return int
@@ -31,7 +31,7 @@ class Comment extends DataObject {
 	function getCommentId() {
 		return $this->getData('commentId');
 	}
-	 
+
 	/**
 	 * set article comment id
 	 * @param $commentId int
@@ -39,7 +39,7 @@ class Comment extends DataObject {
 	function setCommentId($commentId) {
 		return $this->setData('commentId', $commentId);
 	}
-	
+
 	/**
 	 * get number of child comments
 	 * @return int
@@ -47,7 +47,7 @@ class Comment extends DataObject {
 	function getChildCommentCount() {
 		return $this->getData('childCommentCount');
 	}
-	 
+
 	/**
 	 * set number of child comments
 	 * @param $childCommentCount int
@@ -55,7 +55,7 @@ class Comment extends DataObject {
 	function setChildCommentCount($childCommentCount) {
 		return $this->setData('childCommentCount', $childCommentCount);
 	}
-	
+
 	/**
 	 * get parent comment id
 	 * @return int
@@ -63,7 +63,7 @@ class Comment extends DataObject {
 	function getParentCommentId() {
 		return $this->getData('parentCommentId');
 	}
-	 
+
 	/**
 	 * set parent comment id
 	 * @param $parentCommentId int
@@ -71,7 +71,7 @@ class Comment extends DataObject {
 	function setParentCommentId($parentCommentId) {
 		return $this->setData('parentCommentId', $parentCommentId);
 	}
-	
+
 	/**
 	 * get article id
 	 * @return int
@@ -79,7 +79,7 @@ class Comment extends DataObject {
 	function getArticleId() {
 		return $this->getData('articleId');
 	}
-	 
+
 	/**
 	 * set article id
 	 * @param $articleId int
@@ -87,7 +87,7 @@ class Comment extends DataObject {
 	function setArticleId($articleId) {
 		return $this->setData('articleId', $articleId);
 	}
-	
+
 	/**
 	 * get user id
 	 * @return int
@@ -95,7 +95,7 @@ class Comment extends DataObject {
 	function getUser() {
 		return $this->getData('user');
 	}
-	 
+
 	/**
 	 * set user id
 	 * @param $user int
@@ -141,7 +141,7 @@ class Comment extends DataObject {
 	function getPosterIP() {
 		return $this->getData('posterIP');
 	}
-	 
+
 	/**
 	 * set posterIP
 	 * @param $posterIP string
@@ -149,7 +149,7 @@ class Comment extends DataObject {
 	function setPosterIP($posterIP) {
 		return $this->setData('posterIP', $posterIP);
 	}
-	
+
 	/**
 	 * get title
 	 * @return string
@@ -157,7 +157,7 @@ class Comment extends DataObject {
 	function getTitle() {
 		return $this->getData('title');
 	}
-	 
+
 	/**
 	 * set title
 	 * @param $title string
@@ -165,7 +165,7 @@ class Comment extends DataObject {
 	function setTitle($title) {
 		return $this->setData('title', $title);
 	}
-	
+
 	/**
 	 * get comment body
 	 * @return string
@@ -173,7 +173,7 @@ class Comment extends DataObject {
 	function getBody() {
 		return $this->getData('body');
 	}
-	 
+
 	/**
 	 * set comment body
 	 * @param $body string
@@ -181,7 +181,7 @@ class Comment extends DataObject {
 	function setBody($body) {
 		return $this->setData('body', $body);
 	}
- 
+
  	/**
 	 * get date posted
 	 * @return date
@@ -189,7 +189,7 @@ class Comment extends DataObject {
 	function getDatePosted() {
 		return $this->getData('datePosted');
 	}
-	 
+
 	/**
 	 * set date posted
 	 * @param $datePosted date
@@ -197,7 +197,7 @@ class Comment extends DataObject {
 	function setDatePosted($datePosted) {
 		return $this->setData('datePosted', $datePosted);
 	}
-	
+
  	/**
 	 * get date modified
 	 * @return date
@@ -205,7 +205,7 @@ class Comment extends DataObject {
 	function getDateModified() {
 		return $this->getData('dateModified');
 	}
-	 
+
 	/**
 	 * set date modified
 	 * @param $dateModified date
@@ -222,7 +222,7 @@ class Comment extends DataObject {
 		$children = &$this->getData('children');
 		return $children;
 	}
-	 
+
 	/**
 	 * set child comments
 	 * @param $children array
@@ -230,7 +230,7 @@ class Comment extends DataObject {
 	function setChildren(&$children) {
 		$this->setData('children', $children);
 	}
-	
+
  }
- 
+
 ?>

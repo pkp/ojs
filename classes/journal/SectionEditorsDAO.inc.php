@@ -38,7 +38,7 @@ class SectionEditorsDAO extends DAO {
 			)
 		);
 	}
-	
+
 	/**
 	 * Delete a section editor.
 	 * @param $journalId int
@@ -55,7 +55,7 @@ class SectionEditorsDAO extends DAO {
 			)
 		);
 	}
-	
+
 	/**
 	 * Retrieve a list of all section editors assigned to the specified section.
 	 * @param $journalId int
@@ -64,14 +64,14 @@ class SectionEditorsDAO extends DAO {
 	 */
 	function &getEditorsBySectionId($journalId, $sectionId) {
 		$users = array();
-		
+
 		$userDao = &DAORegistry::getDAO('UserDAO');
-				
+
 		$result = &$this->retrieve(
 			'SELECT u.*, e.can_review AS can_review, e.can_edit AS can_edit FROM users AS u, section_editors AS e WHERE u.user_id = e.user_id AND e.journal_id = ? AND e.section_id = ? ORDER BY last_name, first_name',
 			array($journalId, $sectionId)
 		);
-		
+
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
 			$users[] = array(
@@ -84,10 +84,10 @@ class SectionEditorsDAO extends DAO {
 
 		$result->Close();
 		unset($result);
-	
+
 		return $users;
 	}
-	
+
 	/**
 	 * Retrieve a list of all section editors not assigned to the specified section.
 	 * @param $journalId int
@@ -96,14 +96,14 @@ class SectionEditorsDAO extends DAO {
 	 */
 	function &getEditorsNotInSection($journalId, $sectionId) {
 		$users = array();
-		
+
 		$userDao = &DAORegistry::getDAO('UserDAO');
-				
+
 		$result = &$this->retrieve(
 			'SELECT u.* FROM users AS u NATURAL JOIN roles r LEFT JOIN section_editors AS e ON e.user_id = u.user_id AND e.journal_id = r.journal_id AND e.section_id = ? WHERE r.journal_id = ? AND r.role_id = ? AND e.section_id IS NULL ORDER BY last_name, first_name',
 			array($sectionId, $journalId, ROLE_ID_SECTION_EDITOR)
 		);
-		
+
 		while (!$result->EOF) {
 			$users[] = &$userDao->_returnUserFromRow($result->GetRowAssoc(false));
 			$result->moveNext();
@@ -111,10 +111,10 @@ class SectionEditorsDAO extends DAO {
 
 		$result->Close();
 		unset($result);
-	
+
 		return $users;
 	}
-	
+
 	/**
 	 * Delete all section editors for a specified section in a journal.
 	 * @param $sectionId int
@@ -130,7 +130,7 @@ class SectionEditorsDAO extends DAO {
 			$sectionId
 		);
 	}
-	
+
 	/**
 	 * Delete all section editors for a specified journal.
 	 * @param $journalId int
@@ -140,7 +140,7 @@ class SectionEditorsDAO extends DAO {
 			'DELETE FROM section_editors WHERE journal_id = ?', $journalId
 		);
 	}
-	
+
 	/**
 	 * Delete all section assignments for the specified user.
 	 * @param $userId int
@@ -155,7 +155,7 @@ class SectionEditorsDAO extends DAO {
 			: (isset($sectionId) ? array($userId, $sectionId) : $userId))
 		);
 	}
-	
+
 	/**
 	 * Check if a user is assigned to a specified section.
 	 * @param $journalId int

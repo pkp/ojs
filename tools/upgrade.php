@@ -28,22 +28,22 @@ class upgradeTool extends CommandLineTool {
 
 	/** @var string command to execute (check|upgrade|patch|download) */
 	var $command;
-	
+
 	/**
 	 * Constructor.
 	 * @param $argv array command-line arguments
 	 */
 	function upgradeTool($argv = array()) {
 		parent::CommandLineTool($argv);
-		
+
 		if (!isset($this->argv[0]) || !in_array($this->argv[0], array('check', 'latest', 'upgrade', 'patch', 'download'))) {
 			$this->usage();
 			exit(1);
 		}
-		
+
 		$this->command = $this->argv[0];
 	}
-	
+
 	/**
 	 * Print command usage information.
 	 */
@@ -57,7 +57,7 @@ class upgradeTool extends CommandLineTool {
 			. "    patch                     download and apply patch for latest version\n"
 			. "    download [package|patch]  download latest version (does not unpack/install)\n";
 	}
-	
+
 	/**
 	 * Execute the specified command.
 	 */
@@ -65,21 +65,21 @@ class upgradeTool extends CommandLineTool {
 		$command = $this->command;
 		$this->$command();
 	}
-	
+
 	/**
 	 * Perform version check against latest available version.
 	 */
 	function check() {
 		$this->checkVersion(VersionCheck::getLatestVersion());
 	}
-	
+
 	/**
 	 * Print information about the latest available version.
 	 */
 	function latest() {
 		$this->checkVersion(VersionCheck::getLatestVersion(), true);
 	}
-	
+
 	/**
 	 * Run upgrade script.
 	 */
@@ -96,7 +96,7 @@ class upgradeTool extends CommandLineTool {
 					printf("%s\n\n", $note);
 				}
 			}
-			
+
 			if ($pretend) {
 				if (count($installer->getSQL()) > 0) {
 					printf("\nSQL\n");
@@ -105,31 +105,31 @@ class upgradeTool extends CommandLineTool {
 						printf("%s\n\n", $sql);
 					}
 				}
-				
+
 			} else {
 				$newVersion = &$installer->getNewVersion();
 				printf("Successfully upgraded to version %s\n", $newVersion->getVersionString());
 			}
-			
+
 		} else {
 			printf("ERROR: Upgrade failed: %s\n", $installer->getErrorString());
 		}
 	}
-	
+
 	/**
 	 * Apply patch to update code to latest version.
 	 */
 	function patch() {
 		$versionInfo = VersionCheck::getLatestVersion();
 		$check = $this->checkVersion($versionInfo);
-		
+
 		if ($check < 0) {
 			$patch = VersionCheck::getPatch($versionInfo);
 			if (!isset($patch)) {
 				printf("No applicable patch available\n");
 				return;
 			}
-				
+
 			$outFile = $versionInfo['application'] . '-' . $versionInfo['release'] . '.patch';
 			printf("Download patch: %s\n", $patch);
 			printf("Patch will be saved to: %s\n", $outFile);
@@ -137,39 +137,39 @@ class upgradeTool extends CommandLineTool {
 			if (!$this->promptContinue()) {
 				exit(0);
 			}
-			
+
 			$out = fopen($outFile, 'wb');
 			if (!$out) {
 				printf("Failed to open %s for writing\n", $outFile);
 				exit(1);
 			}
-			
+
 			$in = gzopen($patch, 'r');
 			if (!$in) {
 				printf("Failed to open %s for reading\n", $patch);
 				fclose($out);
 				exit(1);
 			}
-			
+
 			printf('Downloading patch...');
-			
+
 			while(($data = gzread($in, 4096)) !== '') {
 				printf('.');
 				fwrite($out, $data);
 			}
-			
+
 			printf("done\n");
-			
+
 			gzclose($in);
 			fclose($out);
-			
+
 			$command = 'patch -p1 < ' . escapeshellarg($outFile);
 			printf("Apply patch: %s\n", $command);
 
 			if (!$this->promptContinue()) {
 				exit(0);
 			}
-			
+
 			system($command, $ret);
 			if ($ret == 0) {
 				printf("Successfully applied patch for version %s\n", $versionInfo['release']);
@@ -178,7 +178,7 @@ class upgradeTool extends CommandLineTool {
 			}
 		}
 	}
-	
+
 	/**
 	 * Download latest package/patch.
 	 */
@@ -188,7 +188,7 @@ class upgradeTool extends CommandLineTool {
 			printf("Failed to load version info from %s\n", VersionCheck::getVersionCheckUrl());
 			exit(1);
 		}
-		
+
 		$type = isset($this->argv[1]) && $this->argv[1] == 'patch' ? 'patch' : 'package';
 		if ($type == 'package') {
 			$download = $versionInfo['package'];
@@ -200,40 +200,40 @@ class upgradeTool extends CommandLineTool {
 			return;
 		}
 		$outFile = basename($download);
-		
+
 		printf("Download %s: %s\n", $type, $download);
 		printf("File will be saved to: %s\n", $outFile);
 
 		if (!$this->promptContinue()) {
 			exit(0);
 		}
-		
+
 		$out = fopen($outFile, 'wb');
 		if (!$out) {
 			printf("Failed to open %s for writing\n", $outFile);
 			exit(1);
 		}
-		
+
 		$in = fopen($download, 'rb');
 		if (!$in) {
 			printf("Failed to open %s for reading\n", $download);
 			fclose($out);
 			exit(1);
 		}
-		
+
 		printf('Downloading file...');
-		
+
 		while(($data = fread($in, 4096)) !== '') {
 			printf('.');
 			fwrite($out, $data);
 		}
-		
+
 		printf("done\n");
-		
+
 		fclose($in);
 		fclose($out);
 	}
-	
+
 	/**
 	 * Perform version check.
 	 * @param $versionInfo array latest version info
@@ -244,31 +244,31 @@ class upgradeTool extends CommandLineTool {
 			printf("Failed to load version info from %s\n", VersionCheck::getVersionCheckUrl());
 			exit(1);
 		}
-		
+
 		$dbVersion = VersionCheck::getCurrentDBVersion();
 		$codeVersion = VersionCheck::getCurrentCodeVersion();
 		$latestVersion = $versionInfo['version'];
-		
+
 		printf("Code version:      %s\n", $codeVersion->getVersionString());
 		printf("Database version:  %s\n", $dbVersion->getVersionString());
 		printf("Latest version:    %s\n", $latestVersion->getVersionString());
-		
+
 		$compare1 = $codeVersion->compare($latestVersion);
 		$compare2 = $dbVersion->compare($codeVersion);
-		
+
 		if (!$displayInfo) {
 			if ($compare2 < 0) {
 				printf("Database version is older than code version\n");
 				printf("Run \"{$this->scriptName} upgrade\" to update\n");
 				exit(0);
-				
+
 			} else if($compare2 > 0) {
 				printf("Database version is newer than code version!\n");
 				exit(1);
-				
+
 			} else if ($compare1 == 0) {
 				printf("Your system is up-to-date\n");
-				
+
 			} else if($compare1 < 0) {
 				printf("A newer version is available:\n");
 				$displayInfo = true;
@@ -277,7 +277,7 @@ class upgradeTool extends CommandLineTool {
 				exit(1);
 			}
 		}
-		
+
 		if ($displayInfo) {
 			$patch = VersionCheck::getPatch($versionInfo, $codeVersion);
 			printf("         tag:     %s\n", $versionInfo['tag']);
@@ -286,10 +286,10 @@ class upgradeTool extends CommandLineTool {
 			printf("         package: %s\n", $versionInfo['package']);
 			printf("         patch:   %s\n", isset($patch) ? $patch : 'N/A');
 		}
-		
+
 		return $compare1;
 	}
-	
+
 	/**
 	 * Prompt user for yes/no input (default no).
 	 * @param $prompt string
@@ -299,7 +299,7 @@ class upgradeTool extends CommandLineTool {
 		$continue = fread(STDIN, 255);
 		return (strtolower(substr(trim($continue), 0, 1)) == 'y');
 	}
-	
+
 	/**
 	 * Log install message to stdout.
 	 * @param $message string
@@ -307,7 +307,7 @@ class upgradeTool extends CommandLineTool {
 	function log($message) {
 		printf("[%s]\n", $message);
 	}
-	
+
 }
 
 $tool = &new upgradeTool(isset($argv) ? $argv : array());

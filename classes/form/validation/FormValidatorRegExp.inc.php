@@ -20,7 +20,7 @@ class FormValidatorRegExp extends FormValidator {
 
 	/** The regular expression to match against the field value */
 	var $regExp;
-	
+
 	/**
 	 * Constructor.
 	 * @see FormValidator::FormValidator()
@@ -30,7 +30,7 @@ class FormValidatorRegExp extends FormValidator {
 		parent::FormValidator($form, $field, $type, $message);
 		$this->regExp = $regExp;
 	}
-	
+
 	/**
 	 * Check if field value is valid.
 	 * Value is valid if it is empty and optional or matches regular expression.
@@ -39,7 +39,7 @@ class FormValidatorRegExp extends FormValidator {
 	function isValid() {
 		return $this->isEmptyAndOptional() || String::regexp_match($this->regExp, $this->form->getData($this->field));
 	}
-	
+
 }
 
 ?>

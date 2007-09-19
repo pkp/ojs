@@ -25,7 +25,7 @@ class FormValidatorLocale extends FormValidator {
 		$value = $this->form->getData($this->field);
 		return $this->type == 'optional' || (is_array($value) && !empty($value[$primaryLocale]));
 	}
-	
+
 	/**
 	 * Check if field value is empty and optional.
 	 * @return boolean
@@ -34,7 +34,7 @@ class FormValidatorLocale extends FormValidator {
 		$value = $this->form->getData($this->field);
 		return $this->type == 'optional' && empty($value);
 	}
-	
+
 	/**
 	 * Get the field associated with the check.
 	 * @return string
@@ -42,7 +42,7 @@ class FormValidatorLocale extends FormValidator {
 	function getField() {
 		return $this->field;
 	}
-	
+
 	/**
 	 * Get the error message associated with a failed validation check.
 	 * @return string
@@ -52,7 +52,7 @@ class FormValidatorLocale extends FormValidator {
 		$allLocales = Locale::getAllLocales();
 		return parent::getMessage() . ' (' . $allLocales[$primaryLocale] . ')';
 	}
-	
+
 }
 
 ?>

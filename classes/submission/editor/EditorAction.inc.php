@@ -28,7 +28,7 @@ class EditorAction extends SectionEditorAction {
 	/**
 	 * Actions.
 	 */
-	 
+
 	/**
 	 * Assigns a section editor to a submission.
 	 * @param $articleId int
@@ -60,18 +60,18 @@ class EditorAction extends SectionEditorAction {
 			$editAssignment->setArticleId($articleId);
 			$editAssignment->setCanEdit(1);
 			$editAssignment->setCanReview(1);
-		
+
 			// Make the selected editor the new editor
 			$editAssignment->setEditorId($sectionEditorId);
 			$editAssignment->setDateNotified(Core::getCurrentDate());
 			$editAssignment->setDateUnderway(null);
-		
+
 			$editAssignments =& $editorSubmission->getEditAssignments();
 			array_push($editAssignments, $editAssignment);
 			$editorSubmission->setEditAssignments($editAssignments);
-		
+
 			$editorSubmissionDao->updateEditorSubmission($editorSubmission);
-		
+
 			// Add log
 			import('article.log.ArticleLog');
 			import('article.log.ArticleEventLogEntry');

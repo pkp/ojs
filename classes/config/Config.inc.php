@@ -31,22 +31,22 @@ class Config {
 		$configData = &Config::getData();
 		return isset($configData[$section][$key]) ? $configData[$section][$key] : null;
 	}
-	
+
 	/**
 	 * Get the current configuration data.
 	 * @return array the configuration data
 	 */
 	function &getData() {
 		static $configData;
-		
+
 		if (!isset($configData)) {
 			// Load configuration data only once per request
 			$configData = Config::reloadData();
 		}
-		
+
 		return $configData;
 	}
-	
+
 	/**
 	 * Load configuration data from a file.
 	 * The file is assumed to be formatted in php.ini style.
@@ -56,10 +56,10 @@ class Config {
 		if (($configData = &ConfigParser::readConfig(CONFIG_FILE)) === false) {
 			fatalError(sprintf('Cannot read configuration file %s', CONFIG_FILE));
 		}
-		
+
 		return $configData;
 	}
-	
+
 	/**
 	 * Return the path to the configuration file.
 	 * @return string
@@ -67,6 +67,6 @@ class Config {
 	function getConfigFileName() {
 		return CONFIG_FILE;
 	}
-	
+
 }
 ?>

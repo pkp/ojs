@@ -47,12 +47,12 @@ class ArticleSearchDAO extends DAO {
 			$result->Close();
 			unset($result);
 		}
-		
+
 		$articleSearchKeywordIds[$keyword] = $keywordId;
 
 		return $keywordId;
 	}
-	
+
 	/**
 	 * Retrieve the top results for a phrases with the given
 	 * limit (default 500 results).
@@ -65,10 +65,10 @@ class ArticleSearchDAO extends DAO {
 			$returner = &new DBRowIterator($results);
 			return $returner;
 		}
-		
+
 		$sqlFrom = '';
 		$sqlWhere = '';
-		
+
 		for ($i = 0, $count = count($phrase); $i < $count; $i++) {
 			if (!empty($sqlFrom)) {
 				$sqlFrom .= ', ';
@@ -78,7 +78,7 @@ class ArticleSearchDAO extends DAO {
 			if (strstr($phrase[$i], '%') === false) $sqlWhere .= 'k'.$i.'.keyword_text = ?';
 			else $sqlWhere .= 'k'.$i.'.keyword_text LIKE ?';
 			if ($i > 0) $sqlWhere .= ' AND o0.object_id = o'.$i.'.object_id AND o0.pos+'.$i.' = o'.$i.'.pos';
-			
+
 			$params[] = $phrase[$i];
 		}
 
@@ -122,7 +122,7 @@ class ArticleSearchDAO extends DAO {
 		$returner = &new DBRowIterator($result);
 		return $returner;
 	}
-	
+
 	/**
 	 * Delete all keywords for an article object.
 	 * @param $articleId int
@@ -132,17 +132,17 @@ class ArticleSearchDAO extends DAO {
 	function deleteArticleKeywords($articleId, $type = null, $assocId = null) {
 		$sql = 'SELECT object_id FROM article_search_objects WHERE article_id = ?';
 		$params = array($articleId);
-		
+
 		if (isset($type)) {
 			$sql .= ' AND type = ?';
 			$params[] = $type;
 		}
-		
+
 		if (isset($assocId)) {
 			$sql .= ' AND assoc_id = ?';
 			$params[] = $assocId;
 		}
-		
+
 		$result = &$this->retrieve($sql, $params);
 		while (!$result->EOF) {
 			$objectId = $result->fields[0];
@@ -153,7 +153,7 @@ class ArticleSearchDAO extends DAO {
 		$result->Close();
 		unset($result);
 	}
-	
+
 	/**
 	 * Add an article object to the index (if already exists, indexed keywords are cleared).
 	 * @param $articleId int
@@ -172,7 +172,7 @@ class ArticleSearchDAO extends DAO {
 				array($articleId, $type, $assocId)
 			);
 			$objectId = $this->getInsertId('article_search_objects', 'object_id');
-			
+
 		} else {
 			$objectId = $result->fields[0];
 			$this->update(
@@ -182,10 +182,10 @@ class ArticleSearchDAO extends DAO {
 		}
 		$result->Close();
 		unset($result);
-		
+
 		return $objectId;
 	}
-	
+
 	/**
 	 * Index an occurrence of a keyword in an object.s
 	 * @param $objectId int

@@ -55,7 +55,7 @@ class ReviewerHandler extends Handler {
 		$templateMgr->assign('helpTopicId', 'editorial.reviewersRole.submissions');
 		$templateMgr->display('reviewer/index.tpl');
 	}
-	
+
 	/**
 	 * Validate that user is a reviewer in the selected journal.
 	 * Redirects to user index page if not properly authenticated.
@@ -69,7 +69,7 @@ class ReviewerHandler extends Handler {
 			Validation::redirectLogin();
 		}
 	}
-	
+
 	/**
 	 * Used by subclasses to validate access keys when they are allowed.
 	 * @param $userId int The user this key refers to
@@ -143,11 +143,11 @@ class ReviewerHandler extends Handler {
 			$templateMgr->assign('submissionsCount', $submissionsCount);
 		}
 	}
-	
+
 	//
 	// Submission Tracking
 	//
-	
+
 	function submission($args) {
 		import('pages.reviewer.SubmissionReviewHandler');
 		SubmissionReviewHandler::submission($args);
@@ -157,17 +157,17 @@ class ReviewerHandler extends Handler {
 		import('pages.reviewer.SubmissionReviewHandler');
 		SubmissionReviewHandler::confirmReview($args);
 	}
-	
+
 	function recordRecommendation() {
 		import('pages.reviewer.SubmissionReviewHandler');
 		SubmissionReviewHandler::recordRecommendation();
 	}
-	
+
 	function viewMetadata($args) {
 		import('pages.reviewer.SubmissionReviewHandler');
 		SubmissionReviewHandler::viewMetadata($args);
 	}
-	
+
 	function uploadReviewerVersion() {
 		import('pages.reviewer.SubmissionReviewHandler');
 		SubmissionReviewHandler::uploadReviewerVersion();
@@ -177,7 +177,7 @@ class ReviewerHandler extends Handler {
 		import('pages.reviewer.SubmissionReviewHandler');
 		SubmissionReviewHandler::deleteReviewerVersion($args);
 	}
-	
+
 	//
 	// Misc.
 	//
@@ -186,16 +186,16 @@ class ReviewerHandler extends Handler {
 		import('pages.reviewer.SubmissionReviewHandler');
 		SubmissionReviewHandler::downloadFile($args);
 	}
-	
+
 	//
 	// Submission Comments
 	//
-	
+
 	function viewPeerReviewComments($args) {
 		import('pages.reviewer.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::viewPeerReviewComments($args);
 	}
-	
+
 	function postPeerReviewComment() {
 		import('pages.reviewer.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::postPeerReviewComment();
@@ -205,12 +205,12 @@ class ReviewerHandler extends Handler {
 		import('pages.reviewer.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::editComment($args);
 	}
-	
+
 	function saveComment() {
 		import('pages.reviewer.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::saveComment();
 	}
-	
+
 	function deleteComment($args) {
 		import('pages.reviewer.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::deleteComment($args);

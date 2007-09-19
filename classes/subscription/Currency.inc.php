@@ -20,11 +20,11 @@ class Currency extends DataObject {
 	function Currency() {
 		parent::DataObject();
 	}
-	
+
 	//
 	// Get/set methods
 	//
-	
+
 	/**
 	 * Get the name of the currency.
 	 * @return string
@@ -32,7 +32,7 @@ class Currency extends DataObject {
 	function getName() {
 		return $this->getData('name');
 	}
-	
+
 	/**
 	 * Set the name of the currency.
 	 * @param $name string
@@ -48,7 +48,7 @@ class Currency extends DataObject {
 	function getCodeAlpha() {
 		return $this->getData('codeAlpha');
 	}
-	
+
 	/**
 	 * Set currency alpha code.
 	 * @param $alphaCode string
@@ -64,7 +64,7 @@ class Currency extends DataObject {
 	function getCodeNumeric() {
 		return $this->getData('codeNumeric');
 	}
-	
+
 	/**
 	 * Set currency numeric code.
 	 * @param $codeNumeric string

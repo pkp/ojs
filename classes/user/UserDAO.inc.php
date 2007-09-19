@@ -48,7 +48,7 @@ class UserDAO extends DAO {
 		unset($result);
 		return $user;
 	}
-	
+
 	/**
 	 * Retrieve a user by username.
 	 * @param $username string
@@ -68,7 +68,7 @@ class UserDAO extends DAO {
 		unset($result);
 		return $returner;
 	}
-	
+
 	/**
 	 * Retrieve a user by email address.
 	 * @param $email string
@@ -88,7 +88,7 @@ class UserDAO extends DAO {
 		unset($result);
 		return $returner;
 	}
-	
+
 	/**
 	 * Retrieve a user by username and (encrypted) password.
 	 * @param $username string
@@ -153,12 +153,12 @@ class UserDAO extends DAO {
 		$user->setDisabled($row['disabled']);
 		$user->setDisabledReason($row['disabled_reason']);
 		$user->setAuthId($row['auth_id']);
-		
+
 		if ($callHook) HookRegistry::call('UserDAO::_returnUserFromRow', array(&$user, &$row));
 
 		return $user;
 	}
-	
+
 	/**
 	 * Insert a new user.
 	 * @param $user User
@@ -200,7 +200,7 @@ class UserDAO extends DAO {
 				$user->getAuthId()
 			)
 		);
-		
+
 		$user->setUserId($this->getInsertUserId());
 		$this->updateLocaleFields($user);
 		return $user->getUserId();
@@ -282,7 +282,7 @@ class UserDAO extends DAO {
 			)
 		);
 	}
-	
+
 	/**
 	 * Delete a user.
 	 * @param $user User
@@ -290,7 +290,7 @@ class UserDAO extends DAO {
 	function deleteUser(&$user) {
 		return $this->deleteUserById($user->getUserId());
 	}
-	
+
 	/**
 	 * Delete a user by ID.
 	 * @param $userId int
@@ -299,7 +299,7 @@ class UserDAO extends DAO {
 		$this->update('DELETE FROM user_settings WHERE user_id = ?', $userId);
 		return $this->update('DELETE FROM users WHERE user_id = ?', $userId);
 	}
-	
+
 	/**
 	 * Retrieve a user's name.
 	 * @param int $userId
@@ -311,7 +311,7 @@ class UserDAO extends DAO {
 			'SELECT first_name, middle_name, last_name FROM users WHERE user_id = ?' . ($allowDisabled?'':' AND disabled = 0'),
 			$userId
 		);
-		
+
 		if($result->RecordCount() == 0) {
 			$returner = false;
 		} else {
@@ -323,7 +323,7 @@ class UserDAO extends DAO {
 
 		return $returner;
 	}
-	
+
 	/**
 	 * Retrieve a user's email address.
 	 * @param int $userId
@@ -335,7 +335,7 @@ class UserDAO extends DAO {
 			'SELECT email FROM users WHERE user_id = ?' . ($allowDisabled?'':' AND disabled = 0'),
 			$userId
 		);
-		
+
 		if($result->RecordCount() == 0) {
 			$returner = false;
 		} else {
@@ -394,12 +394,12 @@ class UserDAO extends DAO {
 				$var = $match == 'is' ? $value : "%$value%";
 				break;
 		}
-		
+
 		$orderSql = ' ORDER BY u.last_name, u.first_name'; // FIXME Add "sort field" parameter?
-		
+
 		if ($field != USER_FIELD_NONE) $result = &$this->retrieveRange($sql . ($allowDisabled?'':' AND u.disabled = 0') . $orderSql, $var, $dbResultRange);
 		else $result = &$this->retrieveRange($sql . ($allowDisabled?'':' WHERE u.disabled = 0') . $orderSql, false, $dbResultRange);
-		
+
 		$returner = &new DAOResultFactory($result, $this, '_returnUserFromRowWithData');
 		return $returner;
 	}
@@ -441,7 +441,7 @@ class UserDAO extends DAO {
 
 		return $returner;
 	}
-	
+
 	/**
 	 * Check if a user exists with the specified email address.
 	 * @param $email string
@@ -461,7 +461,7 @@ class UserDAO extends DAO {
 
 		return $returner;
 	}
-	
+
 	/**
 	 * Get the ID of the last inserted user.
 	 * @return int

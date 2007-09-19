@@ -25,7 +25,7 @@ class FormValidatorPost extends FormValidator {
 	function FormValidatorPost(&$form, $message = 'form.postRequired') {
 		parent::FormValidator($form, 'dummy', 'required', $message);
 	}
-	
+
 	/**
 	 * Check if field value is valid.
 	 * Value is valid if it is empty and optional or matches regular expression.
@@ -34,7 +34,7 @@ class FormValidatorPost extends FormValidator {
 	function isValid() {
 		return Request::isPost();
 	}
-	
+
 }
 
 ?>

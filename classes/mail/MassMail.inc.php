@@ -13,7 +13,7 @@
  *
  * $Id$
  */
- 
+
 import ('mail.MailTemplate');
 
 class MassMail extends MailTemplate {

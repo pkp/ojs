@@ -40,7 +40,7 @@ class RTHandler extends ArticleHandler {
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->display('rt/bio.tpl');
 	}
-	
+
 	function metadata($args) {
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
@@ -52,7 +52,7 @@ class RTHandler extends ArticleHandler {
 		if (!$journalRt || !$journalRt->getViewMetadata()) {
 			Request::redirect(null, Request::getRequestedPage());
 		}
-		
+
 		$sectionDao = &DAORegistry::getDAO('SectionDAO');
 		$section = &$sectionDao->getSection($article->getSectionId());
 
@@ -66,7 +66,7 @@ class RTHandler extends ArticleHandler {
 		$templateMgr->assign_by_ref('journalSettings', $journal->getSettings());
 		$templateMgr->display('rt/metadata.tpl');
 	}
-	
+
 	function context($args) {
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
@@ -103,13 +103,13 @@ class RTHandler extends ArticleHandler {
 					// Split name and value from each parameter
 					$nameValue = explode('=', $param);
 					if (!isset($nameValue[0])) break;
-	
+
 					$name = $nameValue[0];
 					$value = trim(isset($nameValue[1])?$nameValue[1]:'');
 					if (!empty($name)) $params[] = array('name' => $name, 'value' => $value);
 				}
 			}
-			
+
 			$search->postParams = $params;
 			$searches[] = $search;
 		}
@@ -123,7 +123,7 @@ class RTHandler extends ArticleHandler {
 				$searchValues[$param] = $article->getAuthorString();
 				break;
 			case 'coverageGeo':
-				$searchValues[$param] = $article->getCoverageGeo();
+				$searchValues[$param] = $article->getArticleCoverageGeo();
 				break;
 			case 'title':
 				$searchValues[$param] = $article->getArticleTitle();
@@ -145,7 +145,7 @@ class RTHandler extends ArticleHandler {
 		$templateMgr->assign('searchValues', $searchValues);
 		$templateMgr->assign('defineTerm', Request::getUserVar('defineTerm'));
 		$templateMgr->assign('keywords', explode(';', $article->getArticleSubject()));
-		$templateMgr->assign('coverageGeo', $article->getCoverageGeo());
+		$templateMgr->assign('coverageGeo', $article->getArticleCoverageGeo());
 		$templateMgr->assign_by_ref('journalSettings', $journal->getSettings());
 		$templateMgr->display('rt/context.tpl');
 	}
@@ -204,7 +204,7 @@ class RTHandler extends ArticleHandler {
 		} */
 
 	}
-	
+
 	function printerFriendly($args) {
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
@@ -243,7 +243,7 @@ class RTHandler extends ArticleHandler {
 
 		$templateMgr->display('rt/printerFriendly.tpl');	
 	}
-	
+
 	function emailColleague($args) {
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
@@ -322,7 +322,7 @@ class RTHandler extends ArticleHandler {
 
 	function addComment($args) {
 	}
-	
+
 	function suppFiles($args) {
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
@@ -343,7 +343,7 @@ class RTHandler extends ArticleHandler {
 		$templateMgr->assign_by_ref('journalSettings', $journal->getSettings());
 		$templateMgr->display('rt/suppFiles.tpl');
 	}
-	
+
 	function suppFileMetadata($args) {
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;

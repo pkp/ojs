@@ -13,7 +13,7 @@
  *
  * $Id$
  */
- 
+
 import('classes.plugins.GenericPlugin');
 
 define('TINYMCE_INSTALL_PATH', 'lib/tinymce');

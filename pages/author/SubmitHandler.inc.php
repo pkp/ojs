@@ -15,7 +15,7 @@
  */
 
 class SubmitHandler extends AuthorHandler {
-	
+
 	/**
 	 * Display journal author article submission.
 	 * Displays author index page if a valid step is not specified.
@@ -24,10 +24,10 @@ class SubmitHandler extends AuthorHandler {
 	function submit($args) {
 		parent::validate('author.submit.authorSubmitLoginMessage');
 		parent::setupTemplate(true);
-		
+
 		$step = isset($args[0]) ? (int) $args[0] : 0;
 		$articleId = Request::getUserVar('articleId');
-		
+
 		list($journal, $article) = SubmitHandler::validate($articleId, $step);
 
 		$formClass = "AuthorSubmitStep{$step}Form";
@@ -41,7 +41,7 @@ class SubmitHandler extends AuthorHandler {
 		}
 		$submitForm->display();
 	}
-	
+
 	/**
 	 * Save a submission step.
 	 * @param $args array first parameter is the step being saved
@@ -49,18 +49,18 @@ class SubmitHandler extends AuthorHandler {
 	function saveSubmit($args) {
 		parent::validate();
 		parent::setupTemplate(true);
-		
+
 		$step = isset($args[0]) ? (int) $args[0] : 0;
 		$articleId = Request::getUserVar('articleId');
-		
+
 		list($journal, $article) = SubmitHandler::validate($articleId, $step);
-			
+
 		$formClass = "AuthorSubmitStep{$step}Form";
 		import("author.form.submit.$formClass");
-		
+
 		$submitForm = &new $formClass($article);
 		$submitForm->readInputData();
-			
+
 		// Check for any special cases before trying to save
 		switch ($step) {
 			case 2:
@@ -70,7 +70,7 @@ class SubmitHandler extends AuthorHandler {
 					$authors = $submitForm->getData('authors');
 					array_push($authors, array());
 					$submitForm->setData('authors', $authors);
-					
+
 				} else if (($delAuthor = Request::getUserVar('delAuthor')) && count($delAuthor) == 1) {
 					// Delete an author
 					$editData = true;
@@ -84,11 +84,11 @@ class SubmitHandler extends AuthorHandler {
 					}
 					array_splice($authors, $delAuthor, 1);
 					$submitForm->setData('authors', $authors);
-					
+
 					if ($submitForm->getData('primaryContact') == $delAuthor) {
 						$submitForm->setData('primaryContact', 0);
 					}
-					
+
 				} else if (Request::getUserVar('moveAuthor')) {
 					// Move an author up/down
 					$editData = true;
@@ -96,7 +96,7 @@ class SubmitHandler extends AuthorHandler {
 					$moveAuthorDir = $moveAuthorDir == 'u' ? 'u' : 'd';
 					$moveAuthorIndex = (int) Request::getUserVar('moveAuthorIndex');
 					$authors = $submitForm->getData('authors');
-					
+
 					if (!(($moveAuthorDir == 'u' && $moveAuthorIndex <= 0) || ($moveAuthorDir == 'd' && $moveAuthorIndex >= count($authors) - 1))) {
 						$tmpAuthor = $authors[$moveAuthorIndex];
 						$primaryContact = $submitForm->getData('primaryContact');
@@ -121,14 +121,14 @@ class SubmitHandler extends AuthorHandler {
 					$submitForm->setData('authors', $authors);
 				}
 				break;
-				
+
 			case 3:
 				if (Request::getUserVar('uploadSubmissionFile')) {
 					$submitForm->uploadSubmissionFile('submissionFile');
 					$editData = true;
 				}
 				break;
-				
+
 			case 4:
 				if (Request::getUserVar('submitUploadSuppFile')) {
 					SubmitHandler::submitUploadSuppFile();
@@ -136,10 +136,10 @@ class SubmitHandler extends AuthorHandler {
 				}
 				break;
 		}
-		
+
 		if (!isset($editData) && $submitForm->validate()) {
 			$articleId = $submitForm->execute();
-			
+
 			if ($step == 5) {
 				$journal = &Request::getJournal();
 				$templateMgr = &TemplateManager::getManager();
@@ -152,35 +152,35 @@ class SubmitHandler extends AuthorHandler {
 				$templateMgr->assign('articleId', $articleId);
 				$templateMgr->assign('helpTopicId','submission.index');
 				$templateMgr->display('author/submit/complete.tpl');
-				
+
 			} else {
 				Request::redirect(null, null, 'submit', $step+1, array('articleId' => $articleId));
 			}
-		
+
 		} else {
 			$submitForm->display();
 		}
 	}
-	
+
 	/**
 	 * Create new supplementary file with a uploaded file.
 	 */
 	function submitUploadSuppFile() {
 		parent::validate();
 		parent::setupTemplate(true);
-		
+
 		$articleId = Request::getUserVar('articleId');
-		
+
 		list($journal, $article) = SubmitHandler::validate($articleId, 4);
-		
+
 		import("author.form.submit.AuthorSubmitSuppFileForm");
 		$submitForm = &new AuthorSubmitSuppFileForm($article);
 		$submitForm->setData('title', Locale::translate('common.untitled'));
 		$suppFileId = $submitForm->execute();
-		
+
 		Request::redirect(null, null, 'submitSuppFile', $suppFileId, array('articleId' => $articleId));
 	}
-	
+
 	/**
 	 * Display supplementary file submission form.
 	 * @param $args array optional, if set the first parameter is the supplementary file to edit
@@ -188,15 +188,15 @@ class SubmitHandler extends AuthorHandler {
 	function submitSuppFile($args) {
 		parent::validate();
 		parent::setupTemplate(true);
-		
+
 		$articleId = Request::getUserVar('articleId');
 		$suppFileId = isset($args[0]) ? (int) $args[0] : 0;
-		
+
 		list($journal, $article) = SubmitHandler::validate($articleId, 4);
-		
+
 		import("author.form.submit.AuthorSubmitSuppFileForm");
 		$submitForm = &new AuthorSubmitSuppFileForm($article, $suppFileId);
-		
+
 		if ($submitForm->isLocaleResubmit()) {
 			$submitForm->readInputData();
 		} else {
@@ -204,7 +204,7 @@ class SubmitHandler extends AuthorHandler {
 		}
 		$submitForm->display();
 	}
-	
+
 	/**
 	 * Save a supplementary file.
 	 * @param $args array optional, if set the first parameter is the supplementary file to update
@@ -212,16 +212,16 @@ class SubmitHandler extends AuthorHandler {
 	function saveSubmitSuppFile($args) {
 		parent::validate();
 		parent::setupTemplate(true);
-		
+
 		$articleId = Request::getUserVar('articleId');
 		$suppFileId = isset($args[0]) ? (int) $args[0] : 0;
-		
+
 		list($journal, $article) = SubmitHandler::validate($articleId, 4);
-		
+
 		import("author.form.submit.AuthorSubmitSuppFileForm");
 		$submitForm = &new AuthorSubmitSuppFileForm($article, $suppFileId);
 		$submitForm->readInputData();
-		
+
 		if ($submitForm->validate()) {
 			$submitForm->execute();
 			Request::redirect(null, null, 'submit', '4', array('articleId' => $articleId));
@@ -229,7 +229,7 @@ class SubmitHandler extends AuthorHandler {
 			$submitForm->display();
 		}
 	}
-	
+
 	/**
 	 * Delete a supplementary file.
 	 * @param $args array, the first parameter is the supplementary file to delete
@@ -239,21 +239,21 @@ class SubmitHandler extends AuthorHandler {
 
 		parent::validate();
 		parent::setupTemplate(true);
-		
+
 		$articleId = Request::getUserVar('articleId');
 		$suppFileId = isset($args[0]) ? (int) $args[0] : 0;
 
 		list($journal, $article) = SubmitHandler::validate($articleId, 4);
-		
+
 		$suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
 		$suppFile = $suppFileDao->getSuppFile($suppFileId, $articleId);
 		$suppFileDao->deleteSuppFileById($suppFileId, $articleId);
-		
+
 		if ($suppFile->getFileId()) {
 			$articleFileManager = &new ArticleFileManager($articleId);
 			$articleFileManager->deleteFile($suppFile->getFileId());
 		}
-		
+
 		Request::redirect(null, null, 'submit', '4', array('articleId' => $articleId));
 	}
 
@@ -297,6 +297,6 @@ class SubmitHandler extends AuthorHandler {
 		}
 		return array(&$journal, &$article);
 	}
-	
+
 }
 ?>

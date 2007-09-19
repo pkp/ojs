@@ -309,7 +309,7 @@ class ThesisPlugin extends GenericPlugin {
 
 						$thesisForm = &new ThesisForm($thesisId);
 						$thesisForm->readInputData();
-			
+
 						if ($thesisForm->validate()) {
 							$thesisForm->execute();
 

@@ -72,7 +72,7 @@ class UserBlockPlugin extends BlockPlugin {
 	function getDescription() {
 		return Locale::translate('plugins.block.user.description');
 	}
-	
+
 	function getContents(&$templateMgr) {
 		if (!defined('SESSION_DISABLE_INIT')) {
 			$session =& Request::getSession();

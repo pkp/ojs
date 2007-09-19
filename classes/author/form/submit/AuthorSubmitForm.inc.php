@@ -20,13 +20,13 @@ class AuthorSubmitForm extends Form {
 
 	/** @var int the ID of the article */
 	var $articleId;
-	
+
 	/** @var Article current article */
 	var $article;
 
 	/** @var int the current step */
 	var $step;
-	
+
 	/**
 	 * Constructor.
 	 * @param $article object
@@ -39,7 +39,7 @@ class AuthorSubmitForm extends Form {
 		$this->article = $article;
 		$this->articleId = $article ? $article->getArticleId() : null;
 	}
-	
+
 	/**
 	 * Display the form.
 	 */
@@ -48,11 +48,11 @@ class AuthorSubmitForm extends Form {
 		$templateMgr->assign('sidebarTemplate', 'author/submit/submitSidebar.tpl');
 		$templateMgr->assign('articleId', $this->articleId);
 		$templateMgr->assign('submitStep', $this->step);
-		
+
 		if (isset($this->article)) {
 			$templateMgr->assign('submissionProgress', $this->article->getSubmissionProgress());
 		}
-		
+
 		switch($this->step) {
 			case '2':
 				$helpTopicId = 'submission.indexingAndMetadata';
@@ -68,7 +68,7 @@ class AuthorSubmitForm extends Form {
 		$journal = &Request::getJournal();
 		$settingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
 		$templateMgr->assign_by_ref('journalSettings', $settingsDao->getJournalSettings($journal->getJournalId()));
-		
+
 		parent::display();
 	}
 

@@ -17,16 +17,16 @@
 import('file.FileManager');
 
 class JournalFileManager extends FileManager {
-	
+
 	/** @var string the path to location of the files */
 	var $filesDir;
-	
+
 	/** @var int the ID of the associated journal */
 	var $journalId;
-	
+
 	/** @var Journal the associated article */
 	var $journal;
-	
+
 	/**
 	 * Constructor.
 	 * Create a manager for handling journal file uploads.
@@ -37,7 +37,7 @@ class JournalFileManager extends FileManager {
 		$this->journal =& $journal;
 		$this->filesDir = Config::getVar('files', 'files_dir') . '/journals/' . $this->journalId . '/';
 	}
-	
+
 	function uploadFile($fileName, $destFileName) {
 		return parent::uploadFile($fileName, $this->filesDir . $destFileName);
 	}

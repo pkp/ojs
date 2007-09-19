@@ -13,7 +13,7 @@
  *
  * $Id$
  */
- 
+
 import('classes.plugins.GenericPlugin');
 
 class CmsPlugin extends GenericPlugin {
@@ -21,7 +21,7 @@ class CmsPlugin extends GenericPlugin {
 	function getName() {
 		return 'CmsPlugin';
 	}
-	
+
 	function getDisplayName() {
 		return Locale::translate('plugins.generic.cms.displayName');
 	} 		
@@ -34,21 +34,21 @@ class CmsPlugin extends GenericPlugin {
 			$description .= "<br />".Locale::translate('plugins.generic.cms.requirement.tinymce');
 		return $description;
 	}
-	
+
 	function isTinyMCEInstalled() {
 		$tinyMCEPlugin = &PluginRegistry::getPlugin('generic', 'TinyMCEPlugin');
-		
+
 		if ( $tinyMCEPlugin ) 
 			return $tinyMCEPlugin->getEnabled();
-		
+
 		return false;
 	}
-	
+
 	function isLayoutManagerInstalled() {
 		$layoutManagerPlugin = &PluginRegistry::getPlugin('generic', 'LayoutManager');
 		if ( $layoutManagerPlugin ) 
 			return  $layoutManagerPlugin->getEnabled();
-			
+
 		return false;
 	}
 
@@ -112,7 +112,7 @@ class CmsPlugin extends GenericPlugin {
 		$journal = &Request::getJournal();
 		if ($journal) {
 			$this->updateSetting($journal->getJournalId(), 'enabled', $enabled ? true : false);
- 			
+
 			$layoutManagerPlugin = &PluginRegistry::getPlugin('generic', 'LayoutManager');
 			// register or deregister the sidebar links
   			if ( $enabled ) {
@@ -120,24 +120,24 @@ class CmsPlugin extends GenericPlugin {
 
 				$this->import('ContentManager');
 				$contentManager =& new ContentManager();
-				
+
 				$h = array();
 				$c = array();
-						
+
 				// no current value because we don't want anything selected
 				$contentManager->parseContents( $h, $c );
-				
+
 				// this sets the table of contents with nothing selected
 				$this->updateSetting($journal->getJournalId(), 'toc', $h);
   			}
 			else
 				$layoutManagerPlugin->deRegisterBlock($this->getDisplayName());
-				
+
 			return true;
 		}	
 		return false;
 	}
-	
+
 	/**
 	 * Display verbs for the management interface.
 	 */
@@ -165,7 +165,7 @@ class CmsPlugin extends GenericPlugin {
 		}
 		return $verbs;
 	}
-	
+
 	/**
 	 * Perform management functions
 	 */
@@ -174,19 +174,19 @@ class CmsPlugin extends GenericPlugin {
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
-		
+
 
 		switch ($verb) {
 			case 'edit':
 				$journal =& Request::getJournal();
-						
+
 				$this->import('CmsSettingsForm');
 				$form =& new CmsSettingsForm($this, $journal->getJournalId());
-				
+
 				// saving and staying on the form
 				if ( Request::getUserVar('content') ) {
 					$form->readInputData();
-					
+
 					if ($form->validate()) {
 						// perform the save and reset the form
 						$form->save();
@@ -194,13 +194,13 @@ class CmsPlugin extends GenericPlugin {
 					} else {
 						// add the tiny MCE script to the form 
 						$form->addTinyMCE();
-						
+
 						// wipe out the 'currentHeading' because we are coming back to the 
 						// same form (due to lack of validation) and so the content already
 						// incorporates the heading
 						$templateMgr->assign('currentHeading', '');
 						$templateMgr->assign('currentContent', Request::getUserVar('content'));
-						
+
 					}
 					$form->display();
 				} else {					
@@ -218,7 +218,7 @@ class CmsPlugin extends GenericPlugin {
 				$returner = false;
 				break;
 		}
-		
+
 		return $returner;
 	}
 

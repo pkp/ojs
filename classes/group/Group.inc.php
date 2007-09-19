@@ -29,57 +29,57 @@ class Group extends DataObject {
 	//
 	// Get/set methods
 	//
-	
+
 	/**
 	 * Get title of group (primary locale)
 	 * @param $locale string
 	 * @return string
 	 */
-	 function getTitle($locale) {
-	 	return $this->getData('title', $locale);
+	function getTitle($locale) {
+		return $this->getData('title', $locale);
 	}
-	
+
 	/**
-	* Set title of group
-	* @param $title string
-	* @param $locale string
-	*/
+	 * Set title of group
+	 * @param $title string
+	 * @param $locale string
+	 */
 	function setTitle($title, $locale) {
 		return $this->setData('title', $title, $locale);
 	}
-	
+
 	/**
 	 * Get context of group
 	 * @return int
 	 */
-	 function getContext() {
-	 	return $this->getData('context');
+	function getContext() {
+		return $this->getData('context');
 	}
-	
+
 	/**
-	* Set context of group
-	* @param $context int
-	*/
+	 * Set context of group
+	 * @param $context int
+	 */
 	function setContext($context) {
 		return $this->setData('context',$context);
 	}
-	
+
 	/**
 	 * Get flag indicating whether or not the group is displayed in "About"
 	 * @return boolean
 	 */
-	 function getAboutDisplayed() {
-	 	return $this->getData('aboutDisplayed');
+	function getAboutDisplayed() {
+		return $this->getData('aboutDisplayed');
 	}
-	
+
 	/**
-	* Set flag indicating whether or not the group is displayed in "About"
-	* @param $aboutDisplayed boolean
-	*/
+	 * Set flag indicating whether or not the group is displayed in "About"
+	 * @param $aboutDisplayed boolean
+	 */
 	function setAboutDisplayed($aboutDisplayed) {
 		return $this->setData('aboutDisplayed',$aboutDisplayed);
 	}
-	
+
 	/**
 	 * Get ID of group.
 	 * @return int
@@ -87,7 +87,7 @@ class Group extends DataObject {
 	function getGroupId() {
 		return $this->getData('groupId');
 	}
-	
+
 	/**
 	 * Set ID of group.
 	 * @param $groupId int
@@ -95,7 +95,7 @@ class Group extends DataObject {
 	function setGroupId($groupId) {
 		return $this->setData('groupId', $groupId);
 	}
-	
+
 	/**
 	 * Get ID of journal this group belongs to.
 	 * @return int
@@ -103,7 +103,7 @@ class Group extends DataObject {
 	function getJournalId() {
 		return $this->getData('journalId');
 	}
-	
+
 	/**
 	 * Set ID of journal this group belongs to.
 	 * @param $journalId int
@@ -111,7 +111,7 @@ class Group extends DataObject {
 	function setJournalId($journalId) {
 		return $this->setData('journalId', $journalId);
 	}
-	
+
 	/**
 	 * Get sequence of group.
 	 * @return float
@@ -119,7 +119,7 @@ class Group extends DataObject {
 	function getSequence() {
 		return $this->getData('sequence');
 	}
-	
+
 	/**
 	 * Set sequence of group.
 	 * @param $sequence float

@@ -13,7 +13,7 @@
  *
  * $Id$
  */
- 
+
 import('classes.plugins.GenericPlugin');
 
 class FeedPlugin extends GenericPlugin {
@@ -21,11 +21,11 @@ class FeedPlugin extends GenericPlugin {
 	function getName() {
 		return 'WebFeedPlugin';
 	}
-	
+
 	function getDisplayName() {
 		return Locale::translate('plugins.generic.webfeed.displayName');
 	}
-    
+
 	function getDescription() {
 		return Locale::translate('plugins.generic.webfeed.description');
 	}   
@@ -44,15 +44,15 @@ class FeedPlugin extends GenericPlugin {
 	}
 
 	function callbackAddLinks($hookName, $args) {
-		
+
 		if ( $this->getEnabled() ) {
 			$templateManager =& $args[0];
-	
+
 			$currentJournal =& $templateManager->get_template_vars('currentJournal');
 			$baseUrl = $templateManager->get_template_vars('baseUrl');
 			$displayPage = $this->getSetting($currentJournal->getJournalId(), 'displayPage');
 			$templateManager->assign('displayPage', $displayPage);
-	
+
 			// if we have a journal selected, append feed meta-links into the header
 			$additionalHeadData = $templateManager->get_template_vars('additionalHeadData');
 
@@ -71,20 +71,20 @@ class FeedPlugin extends GenericPlugin {
 
 		return false;
 	}
-	
+
 	/**
 	 * Declare the handler function to process the actual feed URL
 	 */
 	function callbackHandleFeed($hookName, $args) {
-		
+
 		if ( $this->getEnabled() ) {
 			$page =& $args[0];
 			$op =& $args[1];
 
 			// only display feed if the journal has a current issue
-	        $journal = &Request::getJournal();        
-    	    $issueDao = &DAORegistry::getDAO('IssueDAO');
-        	$issue = &$issueDao->getCurrentIssue($journal->getJournalId());
+			$journal = &Request::getJournal();        
+			$issueDao = &DAORegistry::getDAO('IssueDAO');
+			$issue = &$issueDao->getCurrentIssue($journal->getJournalId());
 
 			if ( $page == 'feed' && !is_null($issue)) {
 				define('HANDLER_CLASS', 'FeedHandler');
@@ -94,7 +94,7 @@ class FeedPlugin extends GenericPlugin {
 		}
 		return false;
 	}
-	
+
 	/**
 	 * Determine whether or not this plugin is enabled.
 	 */
@@ -125,7 +125,7 @@ class FeedPlugin extends GenericPlugin {
 
 			if ($LayoutManagerPlugin) {
 				// register or deregister the sidebar links
-	  			if ( $enabled )
+				if ( $enabled )
 					$LayoutManagerPlugin->registerBlock($this->getDisplayName(), $this->getTemplatePath().'templates/links.tpl', 10);
 				else
 					$LayoutManagerPlugin->deRegisterBlock($this->getDisplayName());
@@ -135,7 +135,7 @@ class FeedPlugin extends GenericPlugin {
 		}
 		return false;
 	}
-	
+
 	/**
 	 * Display verbs for the management interface.
 	 */
@@ -158,7 +158,7 @@ class FeedPlugin extends GenericPlugin {
 		}
 		return $verbs;
 	}
-	
+
 	/**
 	 * Perform management functions
 	 */
@@ -197,7 +197,7 @@ class FeedPlugin extends GenericPlugin {
 				$returner = false;
 				break;	
 		}
-		
+
 		return $returner;		
 	}
 

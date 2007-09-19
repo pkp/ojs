@@ -56,7 +56,7 @@ class JournalSetupStep1Form extends JournalSetupForm {
 				'customHeaders' => 'string'
 			)
 		);
-		
+
 		// Validation checks for this form
 		$this->addCheck(new FormValidatorLocale($this, 'title', 'required', 'manager.setup.form.journalTitleRequired'));
 		$this->addCheck(new FormValidatorLocale($this, 'initials', 'required', 'manager.setup.form.journalInitialsRequired'));

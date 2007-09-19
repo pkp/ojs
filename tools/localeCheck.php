@@ -33,7 +33,7 @@ class localeCheck extends CommandLineTool {
 		echo "Script to test locales for consistency\n"
 			. "Usage: {$this->scriptName} [localeName (optional)] ...\n";
 	}
-	
+
 	/**
 	 * Test locales.
 	 */

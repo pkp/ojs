@@ -29,10 +29,10 @@ class dbXMLtoSQL extends CommandLineTool {
 
 	/** @var string command to execute (print|execute|upgrade) */
 	var $command;
-	
+
 	/** @var string XML file to parse */
 	var $inputFile;
-	
+
 	/** @var string file to save SQL statements in */
 	var $outputFile;
 
@@ -43,7 +43,7 @@ class dbXMLtoSQL extends CommandLineTool {
 	 */
 	function dbXMLtoSQL($argv = array()) {
 		parent::CommandLineTool($argv);
-		
+
 		if (isset($this->argv[0]) && in_array($this->argv[0], array('-schema', '-data'))) {
 			$this->type = substr($this->argv[0], 1);
 			$argOffset = 1;
@@ -51,30 +51,30 @@ class dbXMLtoSQL extends CommandLineTool {
 			$this->type = 'schema';
 			$argOffset = 0;
 		}
-		
+
 		if (!isset($this->argv[$argOffset]) || !in_array($this->argv[$argOffset], array('print', 'save', 'print_upgrade', 'save_upgrade', 'execute'))) {
 			$this->usage();
 			exit(1);
 		}
-		
+
 		$this->command = $this->argv[$argOffset];
-		
+
 		$file = isset($this->argv[$argOffset+1]) ? $this->argv[$argOffset+1] : DATABASE_XML_FILE;
-		
+
 		if (!file_exists($file) && !file_exists(($file2 = PWD . '/' . $file))) {
 			printf("Input file \"%s\" does not exist!\n", $file);
 			exit(1);
 		}
-		
+
 		$this->inputFile = isset($file2) ? $file2 : $file;
-		
+
 		$this->outputFile = isset($this->argv[$argOffset+2]) ? PWD . '/' . $this->argv[$argOffset+2] : null;
 		if (in_array($this->command, array('save', 'save_upgrade')) && ($this->outputFile == null || (file_exists($this->outputFile) && (is_dir($this->outputFile) || !is_writeable($this->outputFile))) || !is_writable(dirname($this->outputFile)))) {
 			printf("Invalid output file \"%s\"!\n", $this->outputFile);
 			exit(1);
 		}
 	}
-	
+
 	/**
 	 * Print command usage information.
 	 */
@@ -88,14 +88,14 @@ class dbXMLtoSQL extends CommandLineTool {
 			. "    save_upgrade - save upgrade SQL statements to output_file\n"
 			. "    execute - execute SQL statements on current database\n";
 	}
-	
+
 	/**
 	 * Parse an XML database file and output the corresponding SQL statements.
 	 * See dbscripts/xml/xmlschema.dtd for the format of the XML files.
 	 */
 	function execute() {
 		require('adodb/adodb-xmlschema.inc.php');
-		
+
 		if (in_array($this->command, array('print', 'save'))) {
 			// Don't connect to actual database (so parser won't build upgrade XML)
 			$conn = &new DBConnection(
@@ -108,18 +108,18 @@ class dbXMLtoSQL extends CommandLineTool {
 				Config::getVar('i18n', 'connection_charset')
 			);
 			$dbconn = $conn->getDBConn();
-			
+
 		} else {
 			// Create or upgrade existing database
 			$dbconn = &DBConnection::getConn();
 		}
-		
+
 		$schema = &new adoSchema($dbconn, Config::getVar('i18n', 'database_charset'));
-		
+
 		if ($this->type == 'schema') {
 			// Parse XML schema files
 			$sql = $schema->parseSchema($this->inputFile);
-			
+
 			switch ($this->command) {
 				case 'execute':
 					$schema->ExecuteSchema();
@@ -134,13 +134,13 @@ class dbXMLtoSQL extends CommandLineTool {
 					echo @$schema->PrintSQL('TEXT') . "\n";
 					break;
 			}
-			
+
 		} else if ($this->type == 'data') {
 			// Parse XML data files
 			$dataXMLParser = &new DBDataXMLParser();
 			$dataXMLParser->setDBConn($dbconn);
 			$sql = $dataXMLParser->parseData($this->inputFile);
-			
+
 			switch ($this->command) {
 				case 'execute':
 					$schema->addSQL($sql);
@@ -158,13 +158,13 @@ class dbXMLtoSQL extends CommandLineTool {
 					echo @$schema->PrintSQL('TEXT') . "\n";
 					break;
 			}
-			
+
 			$schema->destroy();
-			
+
 			$dataXMLParser->destroy();
 		}
 	}
-	
+
 }
 
 $tool = &new dbXMLtoSQL(isset($argv) ? $argv : array());

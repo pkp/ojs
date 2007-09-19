@@ -19,19 +19,19 @@ class XMLNode {
 
 	/** @var string the element (tag) name */
 	var $name;
-	
+
 	/** @var XMLNode reference to the parent node (null if this is the root node) */
 	var $parent;
-	
+
 	/** @var array the element's attributes */
 	var $attributes;
-	
+
 	/** @var string the element's value */
 	var $value;
-	
+
 	/** @var array references to the XMLNode children of this node */
 	var $children;
-	
+
 	/**
 	 * Constructor.
 	 * @param $name element/tag name
@@ -43,42 +43,42 @@ class XMLNode {
 		$this->value = null;
 		$this->children = array();
 	}
-	
+
 	/**
 	 * @return string
 	 */
 	function getName() {
 		return $this->name;
 	}
-	
+
 	/**
 	 * @param $name string
 	 */
 	function setName($name) {
 		$this->name = $name;
 	}
-	
+
 	/**
 	 * @return XMLNode
 	 */
 	function &getParent() {
 		return $this->parent;
 	}
-	
+
 	/**
 	 * @param $parent XMLNode
 	 */
 	function setParent(&$parent) {
 		$this->parent = &$parent;
 	}
-	
+
 	/**
 	 * @return array all attributes
 	 */
 	function getAttributes() {
 		return $this->attributes;
 	}
-	
+
 	/**
 	 * @param $name string attribute name
 	 * @return string attribute value
@@ -101,21 +101,21 @@ class XMLNode {
 	function setAttributes($attributes) {
 		$this->attributes = $attributes;
 	}
-	
+
 	/**
 	 * @return string
 	 */
 	function &getValue() {
 		return $this->value;
 	}
-	
+
 	/**
 	 * @param $value string
 	 */
 	function setValue($value) {
 		$this->value = &$value;
 	}
-	
+
 	/**
 	 * @return array this node's children (XMLNode objects)
 	 */
@@ -141,7 +141,7 @@ class XMLNode {
 		$child = null;
 		return $child;
 	}
-	
+
 	/**
 	 * @param $node XMLNode the child node to add
 	 */

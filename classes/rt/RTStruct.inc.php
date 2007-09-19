@@ -18,26 +18,26 @@
  * RT Version entity.
  */
 class RTVersion {
-	
+
 	/** @var $id mixed unique identifier */
 	var $versionId;
 
 	/** @var $key string key */
 	var $key;
-	
+
 	/** @var $locale string locale key */
 	var $locale;
-	
+
 	/** @var $title string version title */
 	var $title;
-	
+
 	/** @var $description string version description */
 	var $description;
-	
+
 	/** @var $contexts array RTContext version contexts */
 	var $contexts = array();
-	
-	
+
+
 	/**
 	 * Add an RT Context to this version.
 	 * @param $context RTContext
@@ -99,41 +99,41 @@ class RTVersion {
  * RT Context entity.
  */
 class RTContext {
-	
+
 	/** @var $id mixed unique identifier */
 	var $contextId;
-	
+
 	/** @var $versionId mixed unique version identifier */
 	var $versionId;
 
 	/** @var $title string context title */
 	var $title;
-	
+
 	/** @var $abbrev string context abbreviation */
 	var $abbrev;
-	
+
 	/** @var $description string context description */
 	var $description;
-	
+
 	/** @var $authorTerms boolean default search terms to author names */
 	var $authorTerms = false;
-	
+
 	/** @var $geoTerms boolean default search terms to geo indexing data */
 	var $geoTerms = false;
-	
+
 	/** @var $defineTerms boolean default use as define terms context */
 	var $defineTerms = false;
 
 	/** @var $citedBy boolean default use as "cited by" context */
 	var $citedBy = false;
-	
+
 	/** @var $order int ordering of this context within version */
 	var $order = 0;
-	
+
 	/** @var $searches array RTSearch context searches */
 	var $searches = array();
-	
-	
+
+
 	/**
 	 * Add an RT Search to this context.
 	 * @param $search RTSearch
@@ -235,28 +235,28 @@ class RTContext {
  * RT Search entity.
  */
 class RTSearch {
-	
+
 	/** @var $id mixed unique identifier */
 	var $searchId;
-	
+
 	/** @var $contextId mixed unique context identifier */
 	var $contextId;
 
 	/** @var $title string site title */
 	var $title;
-	
+
 	/** @var $description string site description */
 	var $description;
-	
+
 	/** @var $url string site URL */
 	var $url;
-	
+
 	/** @var $searchUrl string search URL */
 	var $searchUrl;
-	
+
 	/** @var $searchPost string search POST body */
 	var $searchPost;
-	
+
 	/** @var $order int ordering of this search within context */
 	var $order = 0;
 

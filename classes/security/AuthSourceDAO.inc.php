@@ -60,7 +60,7 @@ class AuthSourceDAO extends DAO {
 		}
 		return $plugin;
 	}
-	
+
 	/**
 	 * Retrieve a source.
 	 * @param $authId int
@@ -81,7 +81,7 @@ class AuthSourceDAO extends DAO {
 
 		return $returner;
 	}
-	
+
 	/**
 	 * Retrieve the default authentication source.
 	 * @return AuthSource
@@ -101,7 +101,7 @@ class AuthSourceDAO extends DAO {
 
 		return $returner;
 	}
-	
+
 	/**
 	 * Internal function to return an AuthSource object from a row.
 	 * @param $row array
@@ -117,7 +117,7 @@ class AuthSourceDAO extends DAO {
 		$auth->setSettings(unserialize($row['settings']));
 		return $auth;
 	}
-	
+
 	/**
 	 * Insert a new source.
 	 * @param $auth AuthSource
@@ -136,11 +136,11 @@ class AuthSourceDAO extends DAO {
 				serialize($auth->getSettings() ? $auth->getSettings() : array())
 			)
 		);
-		
+
 		$auth->setAuthId($this->getInsertId('auth_sources', 'auth_id'));
 		return $auth->getAuthId();
 	}
-	
+
 	/**
 	 * Update a source.
 	 * @param $auth AuthSource
@@ -158,7 +158,7 @@ class AuthSourceDAO extends DAO {
 			)
 		);
 	}
-	
+
 	/**
 	 * Delete a source.
 	 * @param $authId int
@@ -168,7 +168,7 @@ class AuthSourceDAO extends DAO {
 			'DELETE FROM auth_sources WHERE auth_id = ?', $authId
 		);
 	}
-	
+
 	/**
 	 * Set the default authentication source.
 	 * @param $authId int
@@ -181,7 +181,7 @@ class AuthSourceDAO extends DAO {
 			'UPDATE auth_sources SET auth_default = 1 WHERE auth_id = ?', $authId
 		);
 	}
-	
+
 	/**
 	 * Retrieve a list of all auth sources for the site.
 	 * @return array AuthSource

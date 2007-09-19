@@ -38,7 +38,7 @@ class Registry {
 		if (isset($registry[$key])) $result = &$registry[$key];
 		return $result;
 	}
-	
+
 	/**
 	 * Set the value of an item in the registry.
 	 * The item will be added if it does not already exist.
@@ -49,7 +49,7 @@ class Registry {
 		$registry = &Registry::getRegistry();
 		$registry[$key] = &$value;
 	}
-	
+
 	/**
 	 * Remove an item from the registry.
 	 * @param $key string
@@ -60,7 +60,7 @@ class Registry {
 			unset($registry[$key]);
 		}
 	}
-	
+
 }
 
 ?>

@@ -38,7 +38,7 @@ class AuthorDAO extends DAO {
 
 		return $returner;
 	}
-	
+
 	/**
 	 * Retrieve all authors for an article.
 	 * @param $articleId int
@@ -46,12 +46,12 @@ class AuthorDAO extends DAO {
 	 */
 	function &getAuthorsByArticle($articleId) {
 		$authors = array();
-		
+
 		$result = &$this->retrieve(
 			'SELECT * FROM article_authors WHERE article_id = ? ORDER BY seq',
 			$articleId
 		);
-		
+
 		while (!$result->EOF) {
 			$authors[] = &$this->_returnAuthorFromRow($result->GetRowAssoc(false));
 			$result->moveNext();
@@ -59,7 +59,7 @@ class AuthorDAO extends DAO {
 
 		$result->Close();
 		unset($result);
-	
+
 		return $authors;
 	}
 
@@ -80,7 +80,8 @@ class AuthorDAO extends DAO {
 
 		$result = &$this->retrieve(
 			'SELECT DISTINCT
-				aa.article_id FROM article_authors aa
+				aa.article_id
+			FROM article_authors aa
 				LEFT JOIN articles a ON (aa.article_id = a.article_id)
 			WHERE	aa.first_name = ?
 				AND (aa.middle_name = ?' . (empty($middleName)?' OR aa.middle_name IS NULL':'') . ')
@@ -156,11 +157,11 @@ class AuthorDAO extends DAO {
 			empty($params)?false:$params,
 			$rangeInfo
 		);
-		
+
 		$returner = &new DAOResultFactory($result, $this, '_returnAuthorFromRow');
 		return $returner;
 	}
-	
+
 	/**
 	 * Retrieve the IDs of all authors for an article.
 	 * @param $articleId int
@@ -168,12 +169,12 @@ class AuthorDAO extends DAO {
 	 */
 	function &getAuthorIdsByArticle($articleId) {
 		$authors = array();
-		
+
 		$result = &$this->retrieve(
 			'SELECT author_id FROM article_authors WHERE article_id = ? ORDER BY seq',
 			$articleId
 		);
-		
+
 		while (!$result->EOF) {
 			$authors[] = $result->fields[0];
 			$result->moveNext();
@@ -181,7 +182,7 @@ class AuthorDAO extends DAO {
 
 		$result->Close();
 		unset($result);
-	
+
 		return $authors;
 	}
 
@@ -259,7 +260,7 @@ class AuthorDAO extends DAO {
 
 		return $author->getAuthorId();
 	}
-	
+
 	/**
 	 * Update an existing Author.
 	 * @param $author Author
@@ -294,7 +295,7 @@ class AuthorDAO extends DAO {
 		$this->updateLocaleFields($author);
 		return $returner;
 	}
-	
+
 	/**
 	 * Delete an Author.
 	 * @param $author Author
@@ -302,7 +303,7 @@ class AuthorDAO extends DAO {
 	function deleteAuthor(&$author) {
 		return $this->deleteAuthorById($author->getAuthorId());
 	}
-	
+
 	/**
 	 * Delete an author by ID.
 	 * @param $authorId int
@@ -318,7 +319,7 @@ class AuthorDAO extends DAO {
 		);
 		if ($returner) $this->update('DELETE FROM article_author_settings WHERE author_id = ?', array($authorId));
 	}
-	
+
 	/**
 	 * Delete authors by article.
 	 * @param $articleId int
@@ -329,7 +330,7 @@ class AuthorDAO extends DAO {
 			$this->deleteAuthor($author);
 		}
 	}
-	
+
 	/**
 	 * Sequentially renumber an article's authors in their sequence order.
 	 * @param $articleId int
@@ -338,7 +339,7 @@ class AuthorDAO extends DAO {
 		$result = &$this->retrieve(
 			'SELECT author_id FROM article_authors WHERE article_id = ? ORDER BY seq', $articleId
 		);
-		
+
 		for ($i=1; !$result->EOF; $i++) {
 			list($authorId) = $result->fields;
 			$this->update(
@@ -348,14 +349,14 @@ class AuthorDAO extends DAO {
 					$authorId
 				)
 			);
-			
+
 			$result->moveNext();
 		}
 
 		$result->close();
 		unset($result);
 	}
-	
+
 	/**
 	 * Get the ID of the last inserted author.
 	 * @return int

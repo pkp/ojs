@@ -109,8 +109,8 @@ class XMLGalleyPlugin extends GenericPlugin {
 		$galley =& $args[0];
 		$row =& $args[1];
 
-	 	// TODO: this should ONLY be for NEW galleys, to allow uploading of images, CSS, etc
-	 	// probably based on the current page/context, ie. editor pages
+		// TODO: this should ONLY be for NEW galleys, to allow uploading of images, CSS, etc
+		// probably based on the current page/context, ie. editor pages
 
 		// If the galley is an XML file, then convert it from an HTML Galley to an XML Galley
 		if ($galley->getFileType() == "text/xml") {
@@ -221,7 +221,7 @@ class XMLGalleyPlugin extends GenericPlugin {
 				if ($xsltRenderer == "external") {
 					// get command for external XSLT tool
 					$xsltCommand = $this->getSetting($journal->getJournalId(), 'externalXSLT');
-	
+
 					// get test XML/XSL files
 					$xmlFile = dirname($_SERVER['SCRIPT_FILENAME']) . DIRECTORY_SEPARATOR . $this->getPluginPath() . '/transform/test.xml';
 					$xslFile = $this->getPluginPath() . '/transform/test.xsl';
@@ -229,7 +229,7 @@ class XMLGalleyPlugin extends GenericPlugin {
 					// create a testing article galley object (to access the XSLT render method)
 					$this->import('ArticleXMLGalley');
 					$xmlGalley = new ArticleXMLGalley();
-		
+
 					// transform the XML using whatever XSLT processor we have available
 					$result = $xmlGalley->transformXSLT($xmlFile, $xslFile, $xsltCommand);
 
@@ -277,7 +277,7 @@ class XMLGalleyPlugin extends GenericPlugin {
 
 							// upload the file into the journal files folder
 							$fileManager->uploadFile('customXSL', $fileName);
-							
+
 							// update the plugin and form settings
 							$this->updateSetting($journal->getJournalId(), 'XSLstylesheet', 'custom');
 							$this->updateSetting($journal->getJournalId(), 'customXSL', $fileName);

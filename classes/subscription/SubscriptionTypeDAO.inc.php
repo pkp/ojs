@@ -48,7 +48,7 @@ class SubscriptionTypeDAO extends DAO {
 		$result = &$this->retrieve(
 			'SELECT journal_id FROM subscription_types WHERE type_id = ?', $typeId
 		);
-		
+
 		$returner = isset($result->fields[0]) ? $result->fields[0] : 0;	
 
 		$result->Close();
@@ -88,7 +88,7 @@ class SubscriptionTypeDAO extends DAO {
 		$result = &$this->retrieve(
 			'SELECT institutional FROM subscription_types WHERE type_id = ?', $typeId
 		);
-		
+
 		$returner = isset($result->fields[0]) ? $result->fields[0] : 0;
 
 		$result->Close();
@@ -193,7 +193,7 @@ class SubscriptionTypeDAO extends DAO {
 
 	/**
 	 * Update the localized settings for this object
-	 * @param $announcementType object
+	 * @param $subscriptionType object
 	 */
 	function updateLocaleFields(&$subscriptionType) {
 		$this->updateDataObjectSettings('subscription_type_settings', $subscriptionType, array(
@@ -224,7 +224,7 @@ class SubscriptionTypeDAO extends DAO {
 				$subscriptionType->getSequence()
 			)
 		);
-		
+
 		$subscriptionType->setTypeId($this->getInsertSubscriptionTypeId());
 		$this->updateLocaleFields($subscriptionType);
 		return $subscriptionType->getTypeId();
@@ -303,7 +303,7 @@ class SubscriptionTypeDAO extends DAO {
 	function &getSubscriptionTypesByJournalId($journalId, $rangeInfo = null) {
 		$result = &$this->retrieveRange(
 			'SELECT * FROM subscription_types WHERE journal_id = ? ORDER BY seq',
-			 $journalId, $rangeInfo
+			$journalId, $rangeInfo
 		);
 
 		$returner = &new DAOResultFactory($result, $this, '_returnSubscriptionTypeFromRow');
@@ -326,7 +326,7 @@ class SubscriptionTypeDAO extends DAO {
 			'SELECT type_id FROM subscription_types WHERE journal_id = ? ORDER BY seq',
 			$journalId
 		);
-		
+
 		for ($i=1; !$result->EOF; $i++) {
 			list($subscriptionTypeId) = $result->fields;
 			$this->update(
@@ -336,10 +336,10 @@ class SubscriptionTypeDAO extends DAO {
 					$subscriptionTypeId
 				)
 			);
-			
+
 			$result->moveNext();
 		}
-		
+
 		$result->close();
 		unset($result);
 	}

@@ -41,7 +41,7 @@ class SearchHandler extends Handler {
 		parent::validate();
 		SearchHandler::setupTemplate(false);
 		$templateMgr = &TemplateManager::getManager();
-		
+
 		if (Request::getJournal() == null) {
 			$journalDao = &DAORegistry::getDAO('JournalDAO');
 			$journals = &$journalDao->getEnabledJournalTitles();  //Enabled added
@@ -49,12 +49,12 @@ class SearchHandler extends Handler {
 			$templateMgr->assign('journalOptions', array('' => Locale::Translate('search.allJournals')) + $journals);
 			$journalPath = Request::getRequestedJournalPath();
 		}
-		
+
 		SearchHandler::assignAdvancedSearchParameters($templateMgr);
 
 		$templateMgr->display('search/advancedSearch.tpl');
 	}
-	
+
 	/**
 	 * Show index of published articles by author.
 	 */
@@ -128,7 +128,7 @@ class SearchHandler extends Handler {
 			$templateMgr->display('search/authorIndex.tpl');
 		}
 	}
-	
+
 	/**
 	 * Show index of published articles by title.
 	 */
@@ -151,7 +151,7 @@ class SearchHandler extends Handler {
 		$templateMgr->assign_by_ref('results', $results);
 		$templateMgr->display('search/titleIndex.tpl');
 	}
-	
+
 	/**
 	 * Show basic search results.
 	 */
@@ -184,7 +184,7 @@ class SearchHandler extends Handler {
 		$templateMgr->assign('searchField', Request::getUserVar('searchField'));
 		$templateMgr->display('search/searchResults.tpl');
 	}
-	
+
 	/**
 	 * Show advanced search results.
 	 */
@@ -226,7 +226,7 @@ class SearchHandler extends Handler {
 
 		$templateMgr->display('search/searchResults.tpl');
 	}
-	
+
 	/**
 	 * Setup common template variables.
 	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy

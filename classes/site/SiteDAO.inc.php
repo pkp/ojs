@@ -27,7 +27,7 @@ class SiteDAO extends DAO {
 		$result = $this->retrieve(
 			'SELECT * FROM site'
 		);
-		
+
 		if ($result->RecordCount() != 0) {
 			$site = $this->_returnSiteFromRowWithData($result->GetRowAssoc(false));
 		}
@@ -66,7 +66,7 @@ class SiteDAO extends DAO {
 
 		return $site;
 	}
-	
+
 	/**
 	 * Insert site information.
 	 * @param $site Site

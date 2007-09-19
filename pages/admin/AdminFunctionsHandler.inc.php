@@ -26,16 +26,16 @@ class AdminFunctionsHandler extends AdminHandler {
 	function systemInfo() {
 		parent::validate();
 		parent::setupTemplate(true);
-		
+
 		$configData = &Config::getData();
-		
+
 		$dbconn = &DBConnection::getConn();
 		$dbServerInfo = $dbconn->ServerInfo();
-		
+
 		$versionDao = &DAORegistry::getDAO('VersionDAO');
 		$currentVersion = &$versionDao->getCurrentVersion();
 		$versionHistory = &$versionDao->getVersionHistory();
-		
+
 		$serverInfo = array(
 			'admin.server.platform' => Core::serverPHPOS(),
 			'admin.server.phpVersion' => Core::serverPHPVersion(),
@@ -43,7 +43,7 @@ class AdminFunctionsHandler extends AdminHandler {
 			'admin.server.dbDriver' => Config::getVar('database', 'driver'),
 			'admin.server.dbVersion' => (empty($dbServerInfo['description']) ? $dbServerInfo['version'] : $dbServerInfo['description'])
 		);
-		
+
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign_by_ref('currentVersion', $currentVersion);
 		$templateMgr->assign_by_ref('versionHistory', $versionHistory);
@@ -57,34 +57,34 @@ class AdminFunctionsHandler extends AdminHandler {
 		$templateMgr->assign('helpTopicId', 'site.administrativeFunctions');
 		$templateMgr->display('admin/systemInfo.tpl');
 	}
-	
+
 	/**
 	 * Edit the system configuration settings.
 	 */
 	function editSystemConfig() {
 		parent::validate();
 		parent::setupTemplate(true);
-		
+
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->append('pageHierarchy', array(Request::url(null, 'admin', 'systemInfo'), 'admin.systemInformation'));
-		
+
 		$configData = &Config::getData();
-		
+
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign_by_ref('configData', $configData);
 		$templateMgr->assign('helpTopicId', 'site.administrativeFunctions');
 		$templateMgr->display('admin/systemConfig.tpl');
 	}
-	
+
 	/**
 	 * Save modified system configuration settings.
 	 */
 	function saveSystemConfig() {
 		parent::validate();
 		parent::setupTemplate(true);
-		
+
 		$configData = &Config::getData();
-	
+
 		// Update configuration based on user-supplied data
 		foreach ($configData as $sectionName => $sectionData) {
 			$newData = Request::getUserVar($sectionName);
@@ -100,9 +100,9 @@ class AdminFunctionsHandler extends AdminHandler {
 				}
 			}
 		}
-		
+
 		$templateMgr = &TemplateManager::getManager();
-		
+
 		// Update contents of configuration file
 		$configParser = &new ConfigParser();
 		if (!$configParser->updateConfig(Config::getConfigFileName(), $configData)) {
@@ -111,18 +111,18 @@ class AdminFunctionsHandler extends AdminHandler {
 			$templateMgr->assign('backLink', Request::url(null, null, 'systemInfo'));
 			$templateMgr->assign('backLinkLabel', 'admin.systemInformation');
 			$templateMgr->display('common/error.tpl');
-			
+
 		} else {
 			$writeConfigFailed = false;
 			$displayConfigContents = Request::getUserVar('display') == null ? false : true;
 			$configFileContents = $configParser->getFileContents();
-			
+
 			if (!$displayConfigContents) {
 				if (!$configParser->writeConfig(Config::getConfigFileName())) {
 					$writeConfigFailed = true;
 				}
 			}
-			
+
 			// Display confirmation
 			$templateMgr->assign('writeConfigFailed', $writeConfigFailed);
 			$templateMgr->assign('displayConfigContents', $displayConfigContents);
@@ -131,7 +131,7 @@ class AdminFunctionsHandler extends AdminHandler {
 			$templateMgr->display('admin/systemConfigUpdated.tpl');
 		}
 	}
-	
+
 	/**
 	 * Show full PHP configuration information.
 	 */
@@ -139,7 +139,7 @@ class AdminFunctionsHandler extends AdminHandler {
 		parent::validate();
 		phpinfo();
 	}
-	
+
 	/**
 	 * Expire all user sessions (will log out all users currently logged in).
 	 */
@@ -149,7 +149,7 @@ class AdminFunctionsHandler extends AdminHandler {
 		$sessionDao->deleteAllSessions();
 		Request::redirect(null, 'admin');
 	}
-	
+
 	/**
 	 * Clear compiled templates.
 	 */
@@ -174,7 +174,7 @@ class AdminFunctionsHandler extends AdminHandler {
 		// Clear ADODB's cache
 		$userDao =& DAORegistry::getDAO('UserDAO'); // As good as any
 		$userDao->flushCache();
-		
+
 		Request::redirect(null, 'admin');
 	}
 }

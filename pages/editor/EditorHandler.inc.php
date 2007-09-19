@@ -27,11 +27,11 @@ class EditorHandler extends SectionEditorHandler {
 	/**
 	 * Displays the editor role selection page.
 	 */
-	 
+
 	function index($args) {
 		EditorHandler::validate();
 		EditorHandler::setupTemplate(EDITOR_SECTION_HOME, false);
-		
+
 		$templateMgr = &TemplateManager::getManager();
 		$journal = &Request::getJournal();
 		$editorSubmissionDao = &DAORegistry::getDAO('EditorSubmissionDAO');
@@ -40,7 +40,7 @@ class EditorHandler extends SectionEditorHandler {
 		$templateMgr->assign('helpTopicId', 'editorial.editorsRole');
 		$templateMgr->display('editor/index.tpl');
 	}
-	
+
 	/**
 	 * Display editor submission queue pages.
 	 */
@@ -142,17 +142,17 @@ class EditorHandler extends SectionEditorHandler {
 		$templateMgr->assign('helpTopicId', $helpTopicId);
 		$templateMgr->display('editor/submissions.tpl');
 	}
-	
+
 	function updateSubmissionArchive() {
 		EditorHandler::submissionArchive();
 	}
-	
+
 	/**
 	 * Set the canEdit / canReview flags for this submission's edit assignments.
 	 */
 	function setEditorFlags($args) {
 		EditorHandler::validate();
-		
+
 		$journal = &Request::getJournal();
 		$articleId = (int) Request::getUserVar('articleId');
 
@@ -184,7 +184,7 @@ class EditorHandler extends SectionEditorHandler {
 	 */
 	function deleteEditAssignment($args) {
 		EditorHandler::validate();
-		
+
 		$journal = &Request::getJournal();
 		$editId = (int) (isset($args[0])?$args[0]:0);
 
@@ -209,7 +209,7 @@ class EditorHandler extends SectionEditorHandler {
 	 */
 	function assignEditor($args) {
 		EditorHandler::validate();
-		
+
 		$journal = &Request::getJournal();
 		$articleId = Request::getUserVar('articleId');
 		$editorId = Request::getUserVar('editorId');
@@ -241,7 +241,7 @@ class EditorHandler extends SectionEditorHandler {
 			if (isset($search)) {
 				$searchType = Request::getUserVar('searchField');
 				$searchMatch = Request::getUserVar('searchMatch');
-				
+
 			} else if (isset($searchInitial)) {
 				$searchInitial = String::strtoupper($searchInitial);
 				$searchType = USER_FIELD_INITIAL;
@@ -258,9 +258,9 @@ class EditorHandler extends SectionEditorHandler {
 				$roleName = 'user.role.sectionEditor';
 				$editors = &$editorSubmissionDao->getUsersNotAssignedToArticle($journal->getJournalId(), $articleId, RoleDAO::getRoleIdFromPath('sectionEditor'), $searchType, $search, $searchMatch, $rangeInfo);
 			}
-	
+
 			$templateMgr = &TemplateManager::getManager();
-	
+
 			$templateMgr->assign_by_ref('editors', $editors);
 			$templateMgr->assign('roleName', $roleName);
 			$templateMgr->assign('articleId', $articleId);
@@ -273,7 +273,7 @@ class EditorHandler extends SectionEditorHandler {
 
 			$templateMgr->assign_by_ref('editorSections', $sectionEditorSections);
 			$templateMgr->assign('editorStatistics', $editorStatistics);
-			
+
 			$templateMgr->assign('searchField', $searchType);
 			$templateMgr->assign('searchMatch', $searchMatch);
 			$templateMgr->assign('search', $search);
@@ -290,7 +290,7 @@ class EditorHandler extends SectionEditorHandler {
 			$templateMgr->display('editor/selectSectionEditor.tpl');
 		}
 	}
-	
+
 	/**
 	 * Delete a submission.
 	 */
@@ -315,7 +315,7 @@ class EditorHandler extends SectionEditorHandler {
 			// Delete article database entries
 			$articleDao->deleteArticleById($articleId);
 		}
-		
+
 		Request::redirect(null, null, 'submissions', 'submissionsArchives');
 	}
 
@@ -329,7 +329,7 @@ class EditorHandler extends SectionEditorHandler {
 			Validation::redirectLogin();
 		}
 	}
-	
+
 	/**
 	 * Setup common template variables.
 	 * @param $level int set to 0 if caller is at the same level as this handler in the hierarchy; otherwise the number of levels below this handler
@@ -345,14 +345,14 @@ class EditorHandler extends SectionEditorHandler {
 		if ($level==EDITOR_SECTION_HOME) $pageHierarchy = array(array(Request::url(null, 'user'), 'navigation.user'));
 		else if ($level==EDITOR_SECTION_SUBMISSIONS) $pageHierarchy = array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, 'editor'), 'user.role.editor'), array(Request::url(null, 'editor', 'submissions'), 'article.submissions'));
 		else if ($level==EDITOR_SECTION_ISSUES) $pageHierarchy = array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, $isLayoutEditor?'layoutEditor':'editor'), $isLayoutEditor?'user.role.layoutEditor':'user.role.editor'), array(Request::url(null, $isLayoutEditor?'layoutEditor':'editor', 'futureIssues'), 'issue.issues'));
-	
+
 		import('submission.sectionEditor.SectionEditorAction');
 		$submissionCrumb = SectionEditorAction::submissionBreadcrumb($articleId, $parentPage, 'editor');
 		if (isset($submissionCrumb)) {
 			$pageHierarchy = array_merge($pageHierarchy, $submissionCrumb);
 		}
 		$templateMgr->assign('pageHierarchy', $pageHierarchy);
-		
+
 		if ($showSidebar) {
 			if ($isLayoutEditor) {
 				$templateMgr->assign('sidebarTemplate', 'layoutEditor/navsidebar.tpl');
@@ -375,7 +375,7 @@ class EditorHandler extends SectionEditorHandler {
 		import('pages.editor.IssueManagementHandler');
 		IssueManagementHandler::futureIssues();
 	}
-	
+
 	function backIssues() {
 		import('pages.editor.IssueManagementHandler');
 		IssueManagementHandler::backIssues();
@@ -406,7 +406,7 @@ class EditorHandler extends SectionEditorHandler {
 		import('pages.editor.IssueManagementHandler');
 		IssueManagementHandler::editIssue($args);
 	}	
-	
+
 	function removeCoverPage($args) {
 		import('pages.editor.IssueManagementHandler');
 		IssueManagementHandler::removeCoverPage($args);
@@ -416,7 +416,7 @@ class EditorHandler extends SectionEditorHandler {
 		import('pages.editor.IssueManagementHandler');
 		IssueManagementHandler::removeStyleFile($args);
 	}	
-		
+
 	function issueToc($args) {
 		import('pages.editor.IssueManagementHandler');
 		IssueManagementHandler::issueToc($args);
@@ -457,7 +457,7 @@ class EditorHandler extends SectionEditorHandler {
 		import('pages.editor.IssueManagementHandler');
 		IssueManagementHandler::moveArticleToc($args);
 	}	
-	
+
 	function publishIssue($args) {
 		import('pages.editor.IssueManagementHandler');
 		IssueManagementHandler::publishIssue($args);

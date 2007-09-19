@@ -22,10 +22,10 @@ class migrate extends CommandLineTool {
 
 	/** @var $journalPath string */
 	var $journalPath;
-	
+
 	/** @var $importPath string */
 	var $importPath;
-	
+
 	/** @var $options array */
 	var $options;
 
@@ -35,17 +35,17 @@ class migrate extends CommandLineTool {
 	 */
 	function migrate($argv = array()) {
 		parent::CommandLineTool($argv);
-		
+
 		if (!isset($this->argv[0]) || !isset($this->argv[1])) {
 			$this->usage();
 			exit(1);
 		}
-		
+
 		$this->journalPath = $this->argv[0];
 		$this->importPath = $this->argv[1];
 		$this->options = array_slice($this->argv, 2);
 	}
-	
+
 	/**
 	 * Print command usage information.
 	 */
@@ -63,7 +63,7 @@ class migrate extends CommandLineTool {
 			. "                  transcode - convert journal metadata from Latin1 to UTF8\n"
 			. "                  verbose - print additional debugging information\n";
 	}
-	
+
 	/**
 	 * Execute the import command.
 	 */
@@ -81,7 +81,7 @@ class migrate extends CommandLineTool {
 			printf("Import failed!\nERROR: %s\n", $importer->error());
 		}
 	}
-	
+
 }
 
 $tool = &new migrate(isset($argv) ? $argv : array());

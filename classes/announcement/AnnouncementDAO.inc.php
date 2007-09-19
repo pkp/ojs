@@ -45,7 +45,7 @@ class AnnouncementDAO extends DAO {
 		$result = &$this->retrieve(
 			'SELECT journal_id FROM announcements WHERE announcement_id = ?', $announcementId
 		);
-		
+
 		return isset($result->fields[0]) ? $result->fields[0] : 0;	
 	}
 

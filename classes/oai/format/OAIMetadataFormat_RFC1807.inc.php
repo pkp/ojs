@@ -43,10 +43,10 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat {
 			$this->formatElement('language', $record->language) .
 			$this->formatElement('abstract', $this->getLocalizedData($record->descriptions, $record->primaryLocale)) .
 			"</rfc1807>\n";
-			
+
 		return $response;
 	}
-	
+
 	/**
 	 * Format XML for single RFC 1807 element.
 	 * @param $name string
@@ -56,14 +56,14 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat {
 		if (!is_array($value)) {
 			$value = array($value);
 		}
-		
+
 		$response = '';
 		foreach ($value as $v) {
 			$response .= "\t<$name>" . $this->oai->prepOutput($v) . "</$name>\n";
 		}
 		return $response;
 	}
-	
+
 }
 
 ?>

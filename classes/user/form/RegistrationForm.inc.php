@@ -32,7 +32,7 @@ class RegistrationForm extends Form {
 	 */
 	function RegistrationForm() {
 		parent::Form('user/register.tpl');
-		
+
 		$this->existingUser = Request::getUserVar('existingUser') ? 1 : 0;
 
 		import('captcha.CaptchaManager');
@@ -49,7 +49,7 @@ class RegistrationForm extends Form {
 		} else {
 			// New user -- check required profile fields
 			$site = &Request::getSite();
-			
+
 			$this->addCheck(new FormValidatorCustom($this, 'username', 'required', 'user.register.form.usernameExists', array(DAORegistry::getDAO('UserDAO'), 'userExistsByUsername'), array(), true));
 			$this->addCheck(new FormValidatorAlphaNum($this, 'username', 'required', 'user.register.form.usernameAlphaNumeric'));
 			$this->addCheck(new FormValidatorLength($this, 'password', 'required', 'user.register.form.passwordLengthTooShort', '>=', $site->getMinPasswordLength()));
@@ -70,7 +70,7 @@ class RegistrationForm extends Form {
 		}
 		$this->addCheck(new FormValidatorPost($this));
 	}
-	
+
 	/**
 	 * Display the form.
 	 */
@@ -127,7 +127,7 @@ class RegistrationForm extends Form {
 		$this->setData('userLocales', array());
 		$this->setData('sendPassword', 1);
 	}
-	
+
 	/**
 	 * Assign form data to user-submitted data.
 	 */
@@ -147,17 +147,17 @@ class RegistrationForm extends Form {
 		}
 
 		$this->readUserVars($userVars);
-		
+
 		if ($this->getData('userLocales') == null || !is_array($this->getData('userLocales'))) {
 			$this->setData('userLocales', array());
 		}
-		
+
 		if ($this->getData('username') != null) {
 			// Usernames must be lowercase
 			$this->setData('username', strtolower($this->getData('username')));
 		}
 	}
-	
+
 	/**
 	 * Register a new user.
 	 */
@@ -170,13 +170,13 @@ class RegistrationForm extends Form {
 			if ($user == null) {
 				return false;
 			}
-			
+
 			$userId = $user->getUserId();
-			
+
 		} else {
 			// New user
 			$user = &new User();
-			
+
 			$user->setUsername($this->getData('username'));
 			$user->setSalutation($this->getData('salutation'));
 			$user->setFirstName($this->getData('firstName'));
@@ -195,10 +195,10 @@ class RegistrationForm extends Form {
 			$user->setInterests($this->getData('interests'), null); // Localized
 			$user->setDateRegistered(Core::getCurrentDate());
 			$user->setCountry($this->getData('country'));
-		
+
 			$site = &Request::getSite();
 			$availableLocales = $site->getSupportedLocales();
-			
+
 			$locales = array();
 			foreach ($this->getData('userLocales') as $locale) {
 				if (Locale::isLocaleValid($locale) && in_array($locale, $availableLocales)) {
@@ -206,7 +206,7 @@ class RegistrationForm extends Form {
 				}
 			}
 			$user->setLocales($locales);
-			
+
 			if (isset($this->defaultAuth)) {
 				$user->setPassword($this->getData('password'));
 				// FIXME Check result and handle failures
@@ -237,7 +237,7 @@ class RegistrationForm extends Form {
 
 		$journal = &Request::getJournal();
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
-		
+
 		// Roles users are allowed to register themselves in
 		$allowedRoles = array('reader' => 'registerAsReader', 'author' => 'registerAsAuthor', 'reviewer' => 'registerAsReviewer');
 
@@ -251,7 +251,7 @@ class RegistrationForm extends Form {
 		if (!$journalSettingsDao->getSetting($journal->getJournalId(), 'allowRegReviewer')) {
 			unset($allowedRoles['reviewer']);
 		}
-		
+
 		foreach ($allowedRoles as $k => $v) {
 			$roleId = $roleDao->getRoleIdFromPath($k);
 			if ($this->getData($v) && !$roleDao->roleExists($journal->getJournalId(), $userId, $roleId)) {
@@ -263,7 +263,7 @@ class RegistrationForm extends Form {
 
 			}
 		}
-		
+
 		if (!$this->existingUser) {
 			import('mail.MailTemplate');
 			if ($requireValidation) {
@@ -313,7 +313,7 @@ class RegistrationForm extends Form {
 			$userSettingsDao->updateSetting($userId, 'openAccessNotification', true, 'bool', $journal->getJournalId());
 		}
 	}
-	
+
 }
 
 ?>

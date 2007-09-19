@@ -12,7 +12,7 @@
  *
  * $Id$
  */
- 
+
 require_once('XMLGalleyPlugin.inc.php');
 
 return new XMLGalleyPlugin();

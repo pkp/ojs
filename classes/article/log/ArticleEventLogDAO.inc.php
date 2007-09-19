@@ -45,7 +45,7 @@ class ArticleEventLogDAO extends DAO {
 
 		return $returner;
 	}
-	
+
 	/**
 	 * Retrieve all log entries for an article.
 	 * @param $articleId int
@@ -55,7 +55,7 @@ class ArticleEventLogDAO extends DAO {
 		$returner = &$this->getArticleLogEntriesByAssoc($articleId, null, null, $rangeInfo);
 		return $returner;
 	}
-	
+
 	/**
 	 * Retrieve all log entries for an article matching the specified association.
 	 * @param $articleId int
@@ -73,16 +73,16 @@ class ArticleEventLogDAO extends DAO {
 				array_push($params, $assocId);
 			}
 		}
-		
+
 		$result = &$this->retrieveRange(
 			'SELECT * FROM article_event_log WHERE article_id = ?' . (isset($assocType) ? ' AND assoc_type = ?' . (isset($assocId) ? ' AND assoc_id = ?' : '') : '') . ' ORDER BY log_id DESC',
 			$params, $rangeInfo
 		);
-		
+
 		$returner = &new DAOResultFactory($result, $this, '_returnLogEntryFromRow');
 		return $returner;
 	}
-	
+
 	/**
 	 * Internal function to return an ArticleEventLogEntry object from a row.
 	 * @param $row array
@@ -100,7 +100,7 @@ class ArticleEventLogDAO extends DAO {
 		$entry->setAssocType($row['assoc_type']);
 		$entry->setAssocId($row['assoc_id']);
 		$entry->setMessage($row['message']);
-		
+
 		HookRegistry::call('ArticleEventLogDAO::_returnLogEntryFromRow', array(&$entry, &$row));
 
 		return $entry;
@@ -134,11 +134,11 @@ class ArticleEventLogDAO extends DAO {
 				$entry->getMessage()
 			)
 		);
-		
+
 		$entry->setLogId($this->getInsertLogId());
 		return $entry->getLogId();
 	}
-	
+
 	/**
 	 * Delete a single log entry for an article.
 	 * @param $logId int
@@ -150,14 +150,14 @@ class ArticleEventLogDAO extends DAO {
 				'DELETE FROM article_event_log WHERE log_id = ? AND article_id = ?',
 				array($logId, $articleId)
 			);
-			
+
 		} else {
 			return $this->update(
 				'DELETE FROM article_event_log WHERE log_id = ?', $logId
 			);
 		}
 	}
-	
+
 	/**
 	 * Delete all log entries for an article.
 	 * @param $articleId int
@@ -167,7 +167,7 @@ class ArticleEventLogDAO extends DAO {
 			'DELETE FROM article_event_log WHERE article_id = ?', $articleId
 		);
 	}
-	
+
 	/**
 	 * Transfer all article log entries to another user.
 	 * @param $articleId int
@@ -178,7 +178,7 @@ class ArticleEventLogDAO extends DAO {
 			array($newUserId, $oldUserId)
 		);
 	}
-	
+
 	/**
 	 * Get the ID of the last inserted log entry.
 	 * @return int

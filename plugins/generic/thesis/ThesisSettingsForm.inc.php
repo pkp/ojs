@@ -48,7 +48,7 @@ class ThesisSettingsForm extends Form {
 		);
 
 		parent::Form($plugin->getTemplatePath() . 'settingsForm.tpl');
-	
+
 		$this->addCheck(new FormValidator($this, 'thesisName', 'required', 'plugins.generic.thesis.settings.thesisNameRequired'));
 		$this->addCheck(new FormValidatorEmail($this, 'thesisEmail', 'required', 'plugins.generic.thesis.settings.thesisEmailRequired'));
 
@@ -56,7 +56,7 @@ class ThesisSettingsForm extends Form {
 
 		$this->addCheck(new FormValidatorPost($this));
 	}
-	
+
 	/**
 	 * Display the form.
 	 */
@@ -86,7 +86,7 @@ class ThesisSettingsForm extends Form {
 			'thesisIntroduction' => $plugin->getSetting($journalId, 'thesisIntroduction')
 		);
 	}
-	
+
 	/**
 	 * Assign form data to user-submitted data.
 	 */
@@ -97,7 +97,7 @@ class ThesisSettingsForm extends Form {
 			$this->addCheck(new FormValidator($this, 'uploadCode', 'required', 'plugins.generic.thesis.settings.uploadCodeRequired'));
 		}
 	}
-	
+
 	/**
 	 * Save settings. 
 	 */
@@ -115,7 +115,7 @@ class ThesisSettingsForm extends Form {
 		$plugin->updateSetting($journalId, 'thesisMailingAddress', $this->getData('thesisMailingAddress'), 'string');
 		$plugin->updateSetting($journalId, 'thesisIntroduction', $this->getData('thesisIntroduction'), 'string');
 	}
-	
+
 }
 
 ?>

@@ -26,11 +26,11 @@ class OAIHandler extends Handler {
 		$oai = &new JournalOAI(new OAIConfig(Request::getRequestUrl(), Config::getVar('oai', 'repository_id')));
 		$oai->execute();
 	}
-	
+
 	function validate() {
 		// Site validation checks not applicable
 		//parent::validate();
-		
+
 		if (!Config::getVar('oai', 'oai')) {
 			Request::redirect(null, 'index');
 		}

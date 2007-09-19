@@ -24,11 +24,11 @@ class AuthorAction extends Action {
 	function AuthorAction() {
 		parent::Action();
 	}
-	
+
 	/**
 	 * Actions.
 	 */
-	 
+
 	/**
 	 * Designates the original file the review version.
 	 * @param $authorSubmission object
@@ -38,14 +38,14 @@ class AuthorAction extends Action {
 		import('file.ArticleFileManager');
 		$articleFileManager = &new ArticleFileManager($authorSubmission->getArticleId());
 		$authorSubmissionDao = &DAORegistry::getDAO('AuthorSubmissionDAO');
-		
+
 		if ($designate && !HookRegistry::call('AuthorAction::designateReviewVersion', array(&$authorSubmission))) {
 			$submissionFile =& $authorSubmission->getSubmissionFile();
 			if ($submissionFile) {
 				$reviewFileId = $articleFileManager->copyToReviewFile($submissionFile->getFileId());
 
 				$authorSubmission->setReviewFileId($reviewFileId);
-			
+
 				$authorSubmissionDao->updateAuthorSubmission($authorSubmission);
 
 				$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
@@ -53,7 +53,7 @@ class AuthorAction extends Action {
 			}
 		}
 	}
-	 
+
 	/**
 	 * Delete an author file from a submission.
 	 * @param $article object
@@ -93,7 +93,7 @@ class AuthorAction extends Action {
 		import("file.ArticleFileManager");
 		$articleFileManager = &new ArticleFileManager($authorSubmission->getArticleId());
 		$authorSubmissionDao = &DAORegistry::getDAO('AuthorSubmissionDAO');
-		
+
 		$fileName = 'upload';
 		if ($articleFileManager->uploadedFileExists($fileName)) {
 			HookRegistry::call('AuthorAction::uploadRevisedVersion', array(&$authorSubmission));
@@ -103,10 +103,10 @@ class AuthorAction extends Action {
 				$fileId = $articleFileManager->uploadEditorDecisionFile($fileName);
 			}
 		}
-		
+
 		if (isset($fileId) && $fileId != 0) {
 			$authorSubmission->setRevisedFileId($fileId);
-			
+
 			$authorSubmissionDao->updateAuthorSubmission($authorSubmission);
 
 			// Add log entry
@@ -116,7 +116,7 @@ class AuthorAction extends Action {
 			ArticleLog::logEvent($authorSubmission->getArticleId(), ARTICLE_LOG_AUTHOR_REVISION, ARTICLE_LOG_TYPE_AUTHOR, $user->getUserId(), 'log.author.documentRevised', array('authorName' => $user->getFullName(), 'fileId' => $fileId, 'articleId' => $authorSubmission->getArticleId()));
 		}
 	}
-	
+
 	/**
 	 * Author completes editor / author review.
 	 * @param $authorSubmission object
@@ -129,26 +129,26 @@ class AuthorAction extends Action {
 		if ($authorSubmission->getCopyeditorDateAuthorCompleted() != null) {
 			return true;
 		}
-		
+
 		$user = &Request::getUser();
 		import('mail.ArticleMailTemplate');
 		$email = &new ArticleMailTemplate($authorSubmission, 'COPYEDIT_AUTHOR_COMPLETE');
-		
+
 		$editAssignments = $authorSubmission->getEditAssignments();
 
 		$copyeditor =& $authorSubmission->getCopyeditor();
-		
+
 		if (!$email->isEnabled() || ($send && !$email->hasErrors())) {
 			HookRegistry::call('AuthorAction::completeAuthorCopyedit', array(&$authorSubmission, &$email));
 			if ($email->isEnabled()) {
 				$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_AUTHOR_COMPLETE, ARTICLE_EMAIL_TYPE_COPYEDIT, $authorSubmission->getArticleId());
 				$email->send();
 			}
-				
+
 			$authorSubmission->setCopyeditorDateAuthorCompleted(Core::getCurrentDate());
 			$authorSubmission->setCopyeditorDateFinalNotified(Core::getCurrentDate());
 			$authorSubmissionDao->updateAuthorSubmission($authorSubmission);
-			
+
 			// Add log entry
 			import('article.log.ArticleLog');
 			import('article.log.ArticleEventLogEntry');
@@ -194,20 +194,20 @@ class AuthorAction extends Action {
 			return false;
 		}
 	}
-	
+
 	/**
 	 * Set that the copyedit is underway.
 	 */
 	function copyeditUnderway($authorSubmission) {
 		$authorSubmissionDao = &DAORegistry::getDAO('AuthorSubmissionDAO');		
-		
+
 		if ($authorSubmission->getCopyeditorDateAuthorNotified() != null && $authorSubmission->getCopyeditorDateAuthorUnderway() == null) {
 			HookRegistry::call('AuthorAction::copyeditUnderway', array(&$authorSubmission));
 			$authorSubmission->setCopyeditorDateAuthorUnderway(Core::getCurrentDate());
 			$authorSubmissionDao->updateAuthorSubmission($authorSubmission);
 		}
 	}	
-	
+
 	/**
 	 * Upload the revised version of a copyedit file.
 	 * @param $authorSubmission object
@@ -218,7 +218,7 @@ class AuthorAction extends Action {
 		$articleFileManager = &new ArticleFileManager($authorSubmission->getArticleId());
 		$authorSubmissionDao = &DAORegistry::getDAO('AuthorSubmissionDAO');
 		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
-		
+
 		// Authors cannot upload if the assignment is not active, i.e.
 		// they haven't been notified or the assignment is already complete.
 		if (!$authorSubmission->getCopyeditorDateAuthorNotified() || $authorSubmission->getCopyeditorDateAuthorCompleted()) return;
@@ -232,20 +232,20 @@ class AuthorAction extends Action {
 				$fileId = $articleFileManager->uploadCopyeditFile($fileName);
 			}
 		}
-	
+
 		$authorSubmission->setCopyeditFileId($fileId);
-		
+
 		if ($copyeditStage == 'author') {
 			$authorSubmission->setCopyeditorEditorAuthorRevision($articleFileDao->getRevisionNumber($fileId));
 		}
-		
+
 		$authorSubmissionDao->updateAuthorSubmission($authorSubmission);
 	}
-	
+
 	//
 	// Comments
 	//
-	
+
 	/**
 	 * View layout comments.
 	 * @param $article object
@@ -258,7 +258,7 @@ class AuthorAction extends Action {
 			$commentForm->display();
 		}
 	}
-	
+
 	/**
 	 * Post layout comment.
 	 * @param $article object
@@ -270,14 +270,14 @@ class AuthorAction extends Action {
 
 			$commentForm = &new LayoutCommentForm($article, ROLE_ID_AUTHOR);
 			$commentForm->readInputData();
-		
+
 			if ($commentForm->validate()) {
 				$commentForm->execute();
-				
+
 				if ($emailComment) {
 					$commentForm->email();
 				}
-			
+
 			} else {
 				$commentForm->display();
 				return false;
@@ -285,7 +285,7 @@ class AuthorAction extends Action {
 			return true;
 		}
 	}
-	
+
 	/**
 	 * View editor decision comments.
 	 * @param $article object
@@ -299,7 +299,7 @@ class AuthorAction extends Action {
 			$commentForm->display();
 		}
 	}
-	
+
 	/**
 	 * Email editor decision comment.
 	 * @param $authorSubmission object
@@ -312,7 +312,7 @@ class AuthorAction extends Action {
 		$user = &Request::getUser();
 		import('mail.ArticleMailTemplate');
 		$email = &new ArticleMailTemplate($authorSubmission);
-	
+
 		$editAssignments = $authorSubmission->getEditAssignments();
 		$editors = array();
 		foreach ($editAssignments as $editAssignment) {
@@ -354,7 +354,7 @@ class AuthorAction extends Action {
 			return false;
 		}
 	}
-	
+
 	/**
 	 * View copyedit comments.
 	 * @param $article object
@@ -362,13 +362,13 @@ class AuthorAction extends Action {
 	function viewCopyeditComments($article) {
 		if (!HookRegistry::call('AuthorAction::viewCopyeditComments', array(&$article))) {
 			import("submission.form.comment.CopyeditCommentForm");
-		
+
 			$commentForm = &new CopyeditCommentForm($article, ROLE_ID_AUTHOR);
 			$commentForm->initData();
 			$commentForm->display();
 		}
 	}
-	
+
 	/**
 	 * Post copyedit comment.
 	 * @param $article object
@@ -376,17 +376,17 @@ class AuthorAction extends Action {
 	function postCopyeditComment($article, $emailComment) {
 		if (!HookRegistry::call('AuthorAction::postCopyeditComment', array(&$article, &$emailComment))) {
 			import("submission.form.comment.CopyeditCommentForm");
-		
+
 			$commentForm = &new CopyeditCommentForm($article, ROLE_ID_AUTHOR);
 			$commentForm->readInputData();
-		
+
 			if ($commentForm->validate()) {
 				$commentForm->execute();
-			
+
 				if ($emailComment) {
 					$commentForm->email();
 				}
-			
+
 			} else {
 				$commentForm->display();
 				return false;
@@ -402,13 +402,13 @@ class AuthorAction extends Action {
 	function viewProofreadComments($article) {
 		if (!HookRegistry::call('AuthorAction::viewProofreadComments', array(&$article))) {
 			import("submission.form.comment.ProofreadCommentForm");
-		
+
 			$commentForm = &new ProofreadCommentForm($article, ROLE_ID_AUTHOR);
 			$commentForm->initData();
 			$commentForm->display();
 		}
 	}
-	
+
 	/**
 	 * Post proofread comment.
 	 * @param $article object
@@ -417,17 +417,17 @@ class AuthorAction extends Action {
 	function postProofreadComment($article, $emailComment) {
 		if (!HookRegistry::call('AuthorAction::postProofreadComment', array(&$article, &$emailComment))) {
 			import("submission.form.comment.ProofreadCommentForm");
-		
+
 			$commentForm = &new ProofreadCommentForm($article, ROLE_ID_AUTHOR);
 			$commentForm->readInputData();
-		
+
 			if ($commentForm->validate()) {
 				$commentForm->execute();
-			
+
 				if ($emailComment) {
 					$commentForm->email();
 				}
-			
+
 			} else {
 				$commentForm->display();
 				return false;
@@ -435,11 +435,11 @@ class AuthorAction extends Action {
 			return true;
 		}
 	}
-	
+
 	//
 	// Misc
 	//
-	
+
 	/**
 	 * Download a file an author has access to.
 	 * @param $article object
@@ -455,7 +455,7 @@ class AuthorAction extends Action {
 		$layoutAssignment = &$submission->getLayoutAssignment();
 
 		$canDownload = false;
-		
+
 		// Authors have access to:
 		// 1) The original submission file.
 		// 2) Any files uploaded by the reviewers that are "viewable",
@@ -490,23 +490,23 @@ class AuthorAction extends Action {
 				foreach ($roundReviewAssignments as $reviewAssignment) {
 					if ($reviewAssignment->getReviewerFileId() == $fileId) {
 						$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
-						
+
 						$articleFile = &$articleFileDao->getArticleFile($fileId, $revision);
-						
+
 						if ($articleFile != null && $articleFile->getViewable()) {
 							$canDownload = true;
 						}
 					}
 				}
 			}
-			
+
 			// Check supplementary files
 			foreach ($submission->getSuppFiles() as $suppFile) {
 				if ($suppFile->getFileId() == $fileId) {
 					$canDownload = true;
 				}
 			}
-			
+
 			// Check galley files
 			foreach ($submission->getGalleys() as $galleyFile) {
 				if ($galleyFile->getFileId() == $fileId) {
@@ -530,7 +530,7 @@ class AuthorAction extends Action {
 				}
 			}
 		}
-		
+
 		$result = false;
 		if (!HookRegistry::call('AuthorAction::downloadAuthorFile', array(&$article, &$fileId, &$revision, &$canDownload, &$result))) {
 			if ($canDownload) {

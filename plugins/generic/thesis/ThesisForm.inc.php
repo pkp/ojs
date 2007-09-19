@@ -51,7 +51,7 @@ class ThesisForm extends Form {
 		$journal = &Request::getJournal();
 		parent::Form($thesisPlugin->getTemplatePath() . 'thesisForm.tpl');
 
-	
+
 		// Status is provided and is valid value
 		$this->addCheck(new FormValidator($this, 'status', 'required', 'plugins.generic.thesis.manager.form.statusRequired'));	
 		$this->addCheck(new FormValidatorInSet($this, 'status', 'required', 'plugins.generic.thesis.manager.form.statusValid', array_keys($this->validStatus)));
@@ -59,7 +59,7 @@ class ThesisForm extends Form {
 		// Degree is provided and is valid value
 		$this->addCheck(new FormValidator($this, 'degree', 'required', 'plugins.generic.thesis.manager.form.degreeRequired'));	
 		$this->addCheck(new FormValidatorInSet($this, 'degree', 'required', 'plugins.generic.thesis.manager.form.degreeValid', array_keys($this->validDegrees)));
-	
+
 		// Department is provided
 		$this->addCheck(new FormValidator($this, 'department', 'required', 'plugins.generic.thesis.manager.form.departmentRequired'));
 
@@ -102,7 +102,7 @@ class ThesisForm extends Form {
 
 		$this->addCheck(new FormValidatorPost($this));
 	}
-	
+
 	/**
 	 * Display the form.
 	 */
@@ -115,10 +115,10 @@ class ThesisForm extends Form {
 		$templateMgr->assign('validStatus', $this->validStatus);
 		$templateMgr->assign('validDegrees', $this->validDegrees);
 		$templateMgr->assign('yearOffsetPast', THESIS_APPROVED_YEAR_OFFSET_PAST);
-	
+
 		parent::display();
 	}
-	
+
 	/**
 	 * Initialize form data.
 	 */
@@ -164,7 +164,7 @@ class ThesisForm extends Form {
 			}
 		}
 	}
-	
+
 	/**
 	 * Assign form data to user-submitted data.
 	 */
@@ -177,7 +177,7 @@ class ThesisForm extends Form {
 			$this->addCheck(new FormValidatorCustom($this, 'url', 'required', 'plugins.generic.thesis.manager.form.urlPrefixIncluded', create_function('$url', 'return strpos(trim(strtolower($url)), \'http://\') === 0 || strpos(trim(strtolower($url)), \'ftp://\') === 0 ? true : false;'), array()));
 		}
 	}
-	
+
 	/**
 	 * Save thesis. 
 	 */
@@ -188,15 +188,15 @@ class ThesisForm extends Form {
 		$thesisDao = &DAORegistry::getDAO('ThesisDAO');
 		$journal = &Request::getJournal();
 		$journalId = $journal->getJournalId();
-	
+
 		if (isset($this->thesisId)) {
 			$thesis = &$thesisDao->getThesis($this->thesisId);
 		}
-		
+
 		if (!isset($thesis)) {
 			$thesis = &new Thesis();
 		}
-		
+
 		$thesis->setJournalId($journalId);
 		$thesis->setStatus($this->getData('status'));
 		$thesis->setDegree($this->getData('degree'));

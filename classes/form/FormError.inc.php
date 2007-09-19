@@ -18,10 +18,10 @@ class FormError {
 
 	/** The name of the field */
 	var $field;
-	
+
 	/** The error message */
 	var $message;
-	
+
 	/**
 	 * Constructor.
 	 * @param $field string the name of the field
@@ -31,7 +31,7 @@ class FormError {
 		$this->field = $field;
 		$this->message = $message;
 	}
-	
+
 	/**
 	 * Get the field associated with the error.
 	 * @return string
@@ -39,7 +39,7 @@ class FormError {
 	function getField() {
 		return $this->field;
 	}
-	
+
 	/**
 	 * Get the error message (i18n key).
 	 * @return string

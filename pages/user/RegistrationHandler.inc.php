@@ -22,12 +22,12 @@ class RegistrationHandler extends UserHandler {
 	function register() {
 		RegistrationHandler::validate();
 		parent::setupTemplate(true);
-		
+
 		$journal = &Request::getJournal();
-		
+
 		if ($journal != null) {
 			import('user.form.RegistrationForm');
-		
+
 			$regForm = &new RegistrationForm();
 			if ($regForm->isLocaleResubmit()) {
 				$regForm->readInputData();
@@ -35,7 +35,7 @@ class RegistrationHandler extends UserHandler {
 				$regForm->initData();
 			}
 			$regForm->display();
-			
+
 		} else {
 			$journalDao = &DAORegistry::getDAO('JournalDAO');
 			$journals = &$journalDao->getEnabledJournals(); //Enabled added
@@ -45,17 +45,17 @@ class RegistrationHandler extends UserHandler {
 			$templateMgr->display('user/registerSite.tpl');
 		}
 	}
-	
+
 	/**
 	 * Validate user registration information and register new user.
 	 */
 	function registerUser() {
 		RegistrationHandler::validate();
 		import('user.form.RegistrationForm');
-		
+
 		$regForm = &new RegistrationForm();
 		$regForm->readInputData();
-		
+
 		if ($regForm->validate()) {
 			$regForm->execute();
 			if (Config::getVar('email', 'require_validation')) {
@@ -78,13 +78,13 @@ class RegistrationHandler extends UserHandler {
 				Request::redirectUrl($source);
 
 			else Request::redirect(null, 'login');
-			
+
 		} else {
 			parent::setupTemplate(true);
 			$regForm->display();
 		}
 	}
-	
+
 	/**
 	 * Show error message if user registration is not allowed.
 	 */
@@ -151,7 +151,7 @@ class RegistrationHandler extends UserHandler {
 			}
 		}
 	}
-	
+
 }
 
 ?>

@@ -23,7 +23,7 @@ class FormValidatorLength extends FormValidator {
 
 	/** @var int length to compare with */
 	var $length;
-	
+
 	/**
 	 * Constructor.
 	 * @see FormValidator::FormValidator()
@@ -35,7 +35,7 @@ class FormValidatorLength extends FormValidator {
 		$this->comparator = $comparator;
 		$this->length = $length;
 	}
-	
+
 	/**
 	 * Check if field value is valid.
 	 * Value is valid if it is empty and optional or meets the specified length requirements.
@@ -44,7 +44,7 @@ class FormValidatorLength extends FormValidator {
 	function isValid() {
 		if ($this->isEmptyAndOptional()) {
 			return true;
-			
+
 		} else {
 			$length = String::strlen(trim($this->form->getData($this->field)));
 			switch ($this->comparator) {
@@ -64,7 +64,7 @@ class FormValidatorLength extends FormValidator {
 			return false;
 		}
 	}
-	
+
 }
 
 ?>

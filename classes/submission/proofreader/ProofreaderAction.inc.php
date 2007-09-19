@@ -145,7 +145,7 @@ class ProofreaderAction extends Action {
 					'authorName' => $user->getFullName()
 				);
 				break;
-			
+
 			case 'PROOFREAD_REQUEST':
 				$eventType = ARTICLE_EMAIL_PROOFREAD_NOTIFY_PROOFREADER;
 				$assocType = ARTICLE_EMAIL_TYPE_PROOFREAD;
@@ -239,7 +239,7 @@ class ProofreaderAction extends Action {
 					'editorialContactSignature' => $user->getContactSignature(),
 					'submissionUrl' => Request::url(null, 'proofreader', 'submission', $articleId)
 				);
-				
+
 				if (!$actionPath) {
 					// Reset underway/complete/thank dates
 					$proofAssignment->setDateLayoutEditorUnderway(null);
@@ -395,11 +395,11 @@ class ProofreaderAction extends Action {
 
 		$proofAssignmentDao->updateProofAssignment($proofAssignment);
 	}
-	
+
 	//
 	// Misc
 	//
-	
+
 	/**
 	 * Download a file a proofreader has access to.
 	 * @param $submission object
@@ -408,7 +408,7 @@ class ProofreaderAction extends Action {
 	 */
 	function downloadProofreaderFile($submission, $fileId, $revision = null) {
 		$canDownload = false;
-		
+
 		// Proofreaders have access to:
 		// 1) All supplementary files.
 		// 2) All galley files.
@@ -419,7 +419,7 @@ class ProofreaderAction extends Action {
 				$canDownload = true;
 			}
 		}
-		
+
 		// Check galley files
 		foreach ($submission->getGalleys() as $galleyFile) {
 			if ($galleyFile->getFileId() == $fileId) {
@@ -437,7 +437,7 @@ class ProofreaderAction extends Action {
 		}
 		return $result;
 	}
-	
+
 	/**
 	 * View proofread comments.
 	 * @param $article object
@@ -445,13 +445,13 @@ class ProofreaderAction extends Action {
 	function viewProofreadComments($article) {
 		if (!HookRegistry::call('ProofreaderAction::viewProofreadComments', array(&$article))) {
 			import("submission.form.comment.ProofreadCommentForm");
-		
+
 			$commentForm = &new ProofreadCommentForm($article, ROLE_ID_PROOFREADER);
 			$commentForm->initData();
 			$commentForm->display();
 		}
 	}
-	
+
 	/**
 	 * Post proofread comment.
 	 * @param $article object
@@ -460,17 +460,17 @@ class ProofreaderAction extends Action {
 	function postProofreadComment($article, $emailComment) {
 		if (!HookRegistry::call('ProofreaderAction::postProofreadComment', array(&$article, &$emailComment))) {
 			import("submission.form.comment.ProofreadCommentForm");
-		
+
 			$commentForm = &new ProofreadCommentForm($article, ROLE_ID_PROOFREADER);
 			$commentForm->readInputData();
-		
+
 			if ($commentForm->validate()) {
 				$commentForm->execute();
-			
+
 				if ($emailComment) {
 					$commentForm->email();
 				}
-			
+
 			} else {
 				$commentForm->display();
 				return false;
@@ -478,7 +478,7 @@ class ProofreaderAction extends Action {
 			return true;
 		}
 	}
-	
+
 	/**
 	 * View layout comments.
 	 * @param $article object
@@ -486,13 +486,13 @@ class ProofreaderAction extends Action {
 	function viewLayoutComments($article) {
 		if (!HookRegistry::call('ProofreaderAction::viewLayoutComments', array(&$article))) {
 			import("submission.form.comment.LayoutCommentForm");
-		
+
 			$commentForm = &new LayoutCommentForm($article, ROLE_ID_PROOFREADER);
 			$commentForm->initData();
 			$commentForm->display();
 		}
 	}
-	
+
 	/**
 	 * Post layout comment.
 	 * @param $article object
@@ -519,7 +519,7 @@ class ProofreaderAction extends Action {
 			return true;
 		}
 	}
-	
+
 }
 
 ?>

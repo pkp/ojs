@@ -19,14 +19,14 @@ class Session extends DataObject  {
 
 	/** The User object associated with this session */
 	var $user;
-	
+
 	/**
 	 * Constructor.
 	 */
 	function Session() {
 		parent::DataObject();
 	}
-	
+
 	/**
 	 * Get a session variable's value.
 	 * @param $key string
@@ -35,7 +35,7 @@ class Session extends DataObject  {
 	function getSessionVar($key) {
 		return isset($_SESSION[$key]) ? $_SESSION[$key] : null;
 	}
-	
+
 	/**
 	 * Get a session variable's value.
 	 * @param $key string
@@ -46,7 +46,7 @@ class Session extends DataObject  {
 		$_SESSION[$key] = $value;
 		return $value;
 	}
-	
+
 	/**
 	 * Unset (delete) a session variable.
 	 * @param $key string
@@ -55,16 +55,16 @@ class Session extends DataObject  {
 		if (isset($_SESSION[$key])) {
 			unset($_SESSION[$key]);
 		}
-		
+
 		if (session_is_registered($key)) {
 			session_unregister($key);
 		}
 	}
-	
+
 	//
 	// Get/set methods
 	//
-	
+
 	/**
 	 * Get session ID.
 	 * @return string
@@ -72,7 +72,7 @@ class Session extends DataObject  {
 	function getId() {
 		return $this->getData('id');
 	}
-	
+
 	/**
 	 * Set session ID.
 	 * @param $id string
@@ -80,7 +80,7 @@ class Session extends DataObject  {
 	function setId($id) {
 		return $this->setData('id', $id);
 	}
-	
+
 	/**
 	 * Get user ID (0 if anonymous user).
 	 * @return int
@@ -88,7 +88,7 @@ class Session extends DataObject  {
 	function getUserId() {
 		return $this->getData('userId');
 	}
-	
+
 	/**
 	 * Set user ID.
 	 * @param $userId int
@@ -97,7 +97,7 @@ class Session extends DataObject  {
 		if (!isset($userId) || empty($userId)) {
 			$this->user = null;
 			$userId = null;
-			
+
 		} else if ($userId != $this->getData('userId')) {
 			$userDao = &DAORegistry::getDAO('UserDAO');
 			$this->user = &$userDao->getUser($userId);
@@ -107,7 +107,7 @@ class Session extends DataObject  {
 		}
 		return $this->setData('userId', $userId);
 	}
-	
+
 	/**
 	 * Get IP address.
 	 * @return string
@@ -115,7 +115,7 @@ class Session extends DataObject  {
 	function getIpAddress() {
 		return $this->getData('ipAddress');
 	}
-	
+
 	/**
 	 * Set IP address.
 	 * @param $ipAddress string
@@ -123,7 +123,7 @@ class Session extends DataObject  {
 	function setIpAddress($ipAddress) {
 		return $this->setData('ipAddress', $ipAddress);
 	}
-	
+
 	/**
 	 * Get user agent.
 	 * @return string
@@ -131,7 +131,7 @@ class Session extends DataObject  {
 	function getUserAgent() {
 		return $this->getData('userAgent');
 	}
-	
+
 	/**
 	 * Set user agent.
 	 * @param $userAgent string
@@ -139,7 +139,7 @@ class Session extends DataObject  {
 	function setUserAgent($userAgent) {
 		return $this->setData('userAgent', $userAgent);
 	}
-	
+
 	/**
 	 * Get time (in seconds) since session was created.
 	 * @return int
@@ -147,7 +147,7 @@ class Session extends DataObject  {
 	function getSecondsCreated() {
 		return $this->getData('created');
 	}
-	
+
 	/**
 	 * Set time (in seconds) since session was created.
 	 * @param $created int
@@ -155,7 +155,7 @@ class Session extends DataObject  {
 	function setSecondsCreated($created) {
 		return $this->setData('created', $created);
 	}
-	
+
 	/**
 	 * Get time (in seconds) since session was last used.
 	 * @return int
@@ -163,7 +163,7 @@ class Session extends DataObject  {
 	function getSecondsLastUsed() {
 		return $this->getData('lastUsed');
 	}
-	
+
 	/**
 	 * Set time (in seconds) since session was last used.
 	 * @param $lastUsed int
@@ -171,7 +171,7 @@ class Session extends DataObject  {
 	function setSecondsLastUsed($lastUsed) {
 		return $this->setData('lastUsed', $lastUsed);
 	}
-	
+
 	/**
 	 * Check if session is to be saved across browser sessions.
 	 * @return boolean
@@ -179,7 +179,7 @@ class Session extends DataObject  {
 	function getRemember() {
 		return $this->getData('remember');
 	}
-	
+
 	/**
 	 * Set whether session is to be saved across browser sessions.
 	 * @param $remember boolean
@@ -187,7 +187,7 @@ class Session extends DataObject  {
 	function setRemember($remember) {
 		return $this->setData('remember', $remember);
 	}
-	
+
 	/**
 	 * Get all session parameters.
 	 * @return array
@@ -195,7 +195,7 @@ class Session extends DataObject  {
 	function getSessionData() {
 		return $this->getData('data');
 	}
-	
+
 	/**
 	 * Set session parameters.
 	 * @param $data array
@@ -203,7 +203,7 @@ class Session extends DataObject  {
 	function setSessionData($data) {
 		return $this->setData('data', $data);
 	}
-	
+
 	/**
 	 * Get user associated with this session (null if anonymous user).
 	 * @return User
@@ -211,7 +211,7 @@ class Session extends DataObject  {
 	function &getUser() {
 		return $this->user;
 	}
-	
+
 }
 
 ?>

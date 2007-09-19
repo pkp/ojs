@@ -40,7 +40,7 @@ class LDAPAuthPlugin extends AuthPlugin {
 
 	/** @var $conn resource the LDAP connection */
 	var $conn;
-	
+
 	/**
 	 * Return the name of this plugin.
 	 * @return string
@@ -48,7 +48,7 @@ class LDAPAuthPlugin extends AuthPlugin {
 	function getName() {
 		return 'ldap';
 	}
-	
+
 	/**
 	 * Return the localized name of this plugin.
 	 * @return string
@@ -56,7 +56,7 @@ class LDAPAuthPlugin extends AuthPlugin {
 	function getDisplayName() {
 		return Locale::translate('plugins.auth.ldap.displayName');
 	}
-	
+
 	/**
 	 * Return the localized description of this plugin.
 	 * @return string
@@ -64,13 +64,13 @@ class LDAPAuthPlugin extends AuthPlugin {
 	function getDescription() {
 		return Locale::translate('plugins.auth.ldap.description');
 	}
-	
-	
+
+
 	//
 	// Core Plugin Functions
 	// (Must be implemented by every authentication plugin)
 	//
-	
+
 	/**
 	 * Returns an instance of the authentication plugin
 	 * @param $settings array settings specific to this instance.
@@ -101,12 +101,12 @@ class LDAPAuthPlugin extends AuthPlugin {
 		}
 		return $valid;
 	}
-	
-	
+
+
 	//
 	// Optional Plugin Functions
 	//
-	
+
 	/**
 	 * Check if a username exists.
 	 * @param $username string
@@ -123,7 +123,7 @@ class LDAPAuthPlugin extends AuthPlugin {
 		}
 		return $exists;
 	}
-	
+
 	/**
 	 * Retrieve user profile information from the LDAP server.
 	 * @param $user User to update
@@ -141,7 +141,7 @@ class LDAPAuthPlugin extends AuthPlugin {
 		}
 		return $valid;
 	}
-	
+
 	/**
 	 * Store user profile information on the LDAP server.
 	 * @param $user User to store
@@ -162,7 +162,7 @@ class LDAPAuthPlugin extends AuthPlugin {
 		}
 		return $valid;
 	}
-	
+
 	/**
 	 * Change a user's password on the LDAP server.
 	 * @param $username string user to update
@@ -181,7 +181,7 @@ class LDAPAuthPlugin extends AuthPlugin {
 			$this->close();
 		}
 	}
-	
+
 	/**
 	 * Create a user on the LDAP server.
 	 * @param $user User to create
@@ -206,7 +206,7 @@ class LDAPAuthPlugin extends AuthPlugin {
 		}
 		return $valid;
 	}
-	
+
 	/**
 	 * Delete a user from the LDAP server.
 	 * @param $username string user to delete
@@ -225,12 +225,12 @@ class LDAPAuthPlugin extends AuthPlugin {
 		}
 		return $valid;
 	}
-	
-	
+
+
 	//
 	// LDAP Helper Functions
 	//
-	
+
 	/**
 	 * Open connection to the server.
 	 */
@@ -239,7 +239,7 @@ class LDAPAuthPlugin extends AuthPlugin {
 		ldap_set_option($this->conn, LDAP_OPT_PROTOCOL_VERSION, 3);
 		return $this->conn;
 	}
-	
+
 	/**
 	 * Close connection.
 	 */
@@ -247,7 +247,7 @@ class LDAPAuthPlugin extends AuthPlugin {
 		ldap_close($this->conn);
 		$this->conn = null;
 	}
-	
+
 	/**
 	 * Bind to a directory.
 	 * $binddn string directory to bind (optional)
@@ -260,7 +260,7 @@ class LDAPAuthPlugin extends AuthPlugin {
 		}
 		return @ldap_bind($this->conn, $binddn, $password);
 	}
-	
+
 	/**
 	 * Lookup a user entry in the directory.
 	 * @param $username string
@@ -307,7 +307,7 @@ class LDAPAuthPlugin extends AuthPlugin {
 			$mailingAddress = @$attr['registeredAddress'][0];
 		$biography = null;
 		$interests = null;
-		
+
 		// Only update fields that exist
 		if (isset($firstName))
 			$user->setFirstName($firstName);
@@ -332,7 +332,7 @@ class LDAPAuthPlugin extends AuthPlugin {
 		if (isset($interests))
 			$user->setInterests($interests, Locale::getLocale());
 	}
-	
+
 	/**
 	 * Update entry attributes from User object.
 	 * TODO How to deal with deleted fields.
@@ -358,7 +358,7 @@ class LDAPAuthPlugin extends AuthPlugin {
 		if ($user->getMailingAddress())
 			$attr['postalAddress'] = $user->getMailingAddress();
 	}
-	
+
 	/**
 	 * Encode password for the 'userPassword' field using the specified hash.
 	 * @param $password string

@@ -80,7 +80,7 @@ class LocaleFile {
 		if (empty($key)) {
 			return '';
 		}
-		
+
 		$cache =& $this->_getCache($this->locale);
 		$message = $cache->get($key);
 		if (!isset($message)) {
@@ -95,7 +95,7 @@ class LocaleFile {
 					$message = str_replace("{\$$key}", $value, $message);
 				}
 			}
-			
+
 			// if client encoding is set to iso-8859-1, transcode string from utf8 since we store all XML files in utf8
 			if (LOCALE_ENCODING == "iso-8859-1") $message = utf8_decode($message);
 
@@ -115,14 +115,14 @@ class LocaleFile {
 		// Reload localization XML file
 		$xmlDao = &new XMLDAO();
 		$data = $xmlDao->parseStruct($filename, array('message'));
-	
+
 		// Build array with ($key => $string)
 		if (isset($data['message'])) {
 			foreach ($data['message'] as $messageData) {
 				$localeData[$messageData['attributes']['key']] = $messageData['value'];
 			}
 		}
-		
+
 		return $localeData;	
 	}
 
@@ -134,7 +134,7 @@ class LocaleFile {
 	function isValid() {
 		return isset($this->locale) && file_exists($this->filename);
 	}
-	
+
 	/**
 	 * Test a locale file against the given reference locale file and
 	 * return an array of errorType => array(errors).
@@ -201,7 +201,7 @@ class LocaleFile {
 			// will be extra unnecessary keys.
 			unset($localeContents[$key]);
 		}
-		
+
 		// Leftover keys are extraneous.
 		foreach ($localeContents as $key => $value) {
 			$errors[LOCALE_ERROR_EXTRA_KEY][] = array(

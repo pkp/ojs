@@ -40,7 +40,7 @@ class AnnouncementHandler extends Handler {
 		}
 
 	}
-	
+
 	/**
 	 * View announcement details.
 	 * @param $args array optional, first parameter is the ID of the announcement to display 

@@ -61,7 +61,7 @@ class HelpMappingFile {
 				$mappings[$helpData['attributes']['key']] = $helpData['attributes']['id'];
 			}
 		}
-			
+
 		$cache->setEntireCache($mappings);
 		return isset($mappings[$id])?$mappings[$id]:null;
 	}

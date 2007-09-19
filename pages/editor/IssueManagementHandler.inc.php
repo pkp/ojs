@@ -89,7 +89,7 @@ class IssueManagementHandler extends EditorHandler {
 			$publicFileManager = &new PublicFileManager();
 			$publicFileManager->removeJournalFile($journal->getJournalId(),$issue->getFileName());
 		}
-		
+
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
 		$issueDao->deleteIssue($issue);
 		if ($issue->getCurrent()) {
@@ -225,7 +225,7 @@ class IssueManagementHandler extends EditorHandler {
 		$publicFileManager->removeJournalFile($journal->getJournalId(),$issue->getFileName());
 		$issue->setFileName('');
 		$issue->setOriginalFileName('');
-		
+
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
 		$issueDao->updateIssue($issue);
 
@@ -245,7 +245,7 @@ class IssueManagementHandler extends EditorHandler {
 		$publicFileManager->removeJournalFile($journal->getJournalId(),$issue->getStyleFileName());
 		$issue->setStyleFileName('');
 		$issue->setOriginalStyleFileName('');
-		
+
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
 		$issueDao->updateIssue($issue);
 
@@ -275,7 +275,7 @@ class IssueManagementHandler extends EditorHandler {
 		$enablePageNumber = $journalSettingsDao->getSetting($journalId, 'enablePageNumber');
 		$templateMgr->assign('enablePageNumber', $enablePageNumber);
 		$templateMgr->assign('customSectionOrderingExists', $customSectionOrderingExists = $sectionDao->customSectionOrderingExists($issueId));
-		
+
 		$templateMgr->assign('issueId', $issueId);
 		$templateMgr->assign_by_ref('issue', $issue);
 		$templateMgr->assign('unpublished', !$issue->getPublished());
@@ -642,7 +642,7 @@ class IssueManagementHandler extends EditorHandler {
 		if (isset($issueId)) {
 			$issueDao = &DAORegistry::getDAO('IssueDAO');
 			$issue = $issueDao->getIssueById($issueId, $journal->getJournalId());
-			
+
 			if (!$issue) {
 				Request::redirect(null, null, 'createIssue');
 			}
@@ -658,7 +658,7 @@ class IssueManagementHandler extends EditorHandler {
 				Validation::redirectLogin();
 			}
 		}
-		
+
 		return $issue;
 	}
 

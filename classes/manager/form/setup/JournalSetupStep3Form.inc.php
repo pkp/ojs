@@ -49,7 +49,7 @@ class JournalSetupStep3Form extends JournalSetupForm {
 
 		$this->addCheck(new FormValidatorEmail($this, 'copySubmissionAckAddress', 'optional', 'user.profile.form.emailRequired'));
 	}
-	
+
 	/**
 	 * Get the list of field names for which localized settings are used.
 	 * @return array

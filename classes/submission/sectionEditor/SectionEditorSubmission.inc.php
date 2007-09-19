@@ -29,7 +29,7 @@ class SectionEditorSubmission extends Article {
 
 	/** @var array the revisions of the editor file */
 	var $editorFileRevisions;
-	
+
 	/** @var array the revisions of the author file */
 	var $authorFileRevisions;
 
@@ -44,7 +44,7 @@ class SectionEditorSubmission extends Article {
 		$this->reviewAssignments = array();
 		$this->removedReviewAssignments = array();
 	}
-	
+
 	/**
 	 * Add a review assignment for this article.
 	 * @param $reviewAssignment ReviewAssignment
@@ -60,10 +60,10 @@ class SectionEditorSubmission extends Article {
 			$roundReviewAssignments = Array();
 		}
 		array_push($roundReviewAssignments, $reviewAssignment);
-		
+
 		return $this->reviewAssignments[$reviewAssignment->getRound()] = $roundReviewAssignments;
 	}
-	
+
 	/**
 	 * Add an editorial decision for this article.
 	 * @param $editorDecision array
@@ -75,7 +75,7 @@ class SectionEditorSubmission extends Article {
 		}
 		else $this->editorDecisions[$round] = Array($editorDecision);
 	}
-	
+
 	/**
 	 * Remove a review assignment.
 	 * @param $reviewId ID of the review assignment to remove
@@ -83,7 +83,7 @@ class SectionEditorSubmission extends Article {
 	 */
 	function removeReviewAssignment($reviewId) {
 		$found = false;
-		
+
 		if ($reviewId != 0) {
 			// FIXME maintain a hash of ID to author for quicker get/remove
 			$reviewAssignments = array();
@@ -104,7 +104,7 @@ class SectionEditorSubmission extends Article {
 		}
 		return $found;
 	}
-	
+
 	/**
 	 * Updates an existing review assignment.
 	 * @param $reviewAssignment ReviewAssignment
@@ -159,7 +159,7 @@ class SectionEditorSubmission extends Article {
 	/**
 	 * Get/Set Methods.
 	 */
-	 
+
 	/**
 	 * Get edit assignments for this article.
 	 * @return array
@@ -168,7 +168,7 @@ class SectionEditorSubmission extends Article {
 		$editAssignments = &$this->getData('editAssignments');
 		return $editAssignments;
 	}
-	
+
 	/**
 	 * Set edit assignments for this article.
 	 * @param $editAssignments array
@@ -192,7 +192,7 @@ class SectionEditorSubmission extends Article {
 			return $this->reviewAssignments[$round];
 		}
 	}
-	
+
 	/**
 	 * Set review assignments for this article.
 	 * @param $reviewAssignments array ReviewAssignments
@@ -200,7 +200,7 @@ class SectionEditorSubmission extends Article {
 	function setReviewAssignments($reviewAssignments, $round) {
 		return $this->reviewAssignments[$round] = $reviewAssignments;
 	}
-	
+
 	/**
 	 * Get the IDs of all review assignments removed..
 	 * @return array int
@@ -208,7 +208,7 @@ class SectionEditorSubmission extends Article {
 	function &getRemovedReviewAssignments() {
 		return $this->removedReviewAssignments;
 	}
-	
+
 	//
 	// Editor Decisions
 	//
@@ -225,7 +225,7 @@ class SectionEditorSubmission extends Article {
 			else return null;
 		}
 	}
-	
+
 	/**
 	 * Set editor decisions.
 	 * @param $editorDecisions array
@@ -234,7 +234,7 @@ class SectionEditorSubmission extends Article {
 	function setDecisions($editorDecisions, $round) {
 		return $this->editorDecisions[$round] = $editorDecisions;
 	}
-	
+
 	// 
 	// Files
 	//	
@@ -247,7 +247,7 @@ class SectionEditorSubmission extends Article {
 		$returner =& $this->getData('submissionFile');
 		return $returner;
 	}
-	
+
 	/**
 	 * Set submission file for this article.
 	 * @param $submissionFile ArticleFile
@@ -255,7 +255,7 @@ class SectionEditorSubmission extends Article {
 	function setSubmissionFile($submissionFile) {
 		return $this->setData('submissionFile', $submissionFile);
 	}
-	
+
 	/**
 	 * Get revised file for this article.
 	 * @return ArticleFile
@@ -264,7 +264,7 @@ class SectionEditorSubmission extends Article {
 		$returner =& $this->getData('revisedFile');
 		return $returner;
 	}
-	
+
 	/**
 	 * Set revised file for this article.
 	 * @param $submissionFile ArticleFile
@@ -272,7 +272,7 @@ class SectionEditorSubmission extends Article {
 	function setRevisedFile($revisedFile) {
 		return $this->setData('revisedFile', $revisedFile);
 	}
-	
+
 	/**
 	 * Get supplementary files for this article.
 	 * @return array SuppFiles
@@ -281,7 +281,7 @@ class SectionEditorSubmission extends Article {
 		$returner =& $this->getData('suppFiles');
 		return $returner;
 	}
-	
+
 	/**
 	 * Set supplementary file for this article.
 	 * @param $suppFiles array SuppFiles
@@ -289,7 +289,7 @@ class SectionEditorSubmission extends Article {
 	function setSuppFiles($suppFiles) {
 		return $this->setData('suppFiles', $suppFiles);
 	}
-	
+
 	/**
 	 * Get review file.
 	 * @return ArticleFile
@@ -298,7 +298,7 @@ class SectionEditorSubmission extends Article {
 		$returner =& $this->getData('reviewFile');
 		return $returner;
 	}
-	
+
 	/**
 	 * Set review file.
 	 * @param $reviewFile ArticleFile
@@ -306,7 +306,7 @@ class SectionEditorSubmission extends Article {
 	function setReviewFile($reviewFile) {
 		return $this->setData('reviewFile', $reviewFile);
 	}
-	
+
 	/**
 	 * Get all copyedit file revisions.
 	 * @return array ArticleFiles
@@ -314,7 +314,7 @@ class SectionEditorSubmission extends Article {
 	function getCopyeditFileRevisions() {
 		return $this->copyeditFileRevisions;
 	}
-	
+
 	/**
 	 * Set all copyedit file revisions.
 	 * @param $copyeditFileRevisions array ArticleFiles
@@ -322,7 +322,7 @@ class SectionEditorSubmission extends Article {
 	function setCopyeditFileRevisions($copyeditFileRevisions) {
 		return $this->copyeditFileRevisions = $copyeditFileRevisions;
 	}
-	
+
 	/**
 	 * Get all editor file revisions.
 	 * @return array ArticleFiles
@@ -334,7 +334,7 @@ class SectionEditorSubmission extends Article {
 			return $this->editorFileRevisions[$round];
 		}
 	}
-	
+
 	/**
 	 * Set all editor file revisions.
 	 * @param $editorFileRevisions array ArticleFiles
@@ -342,7 +342,7 @@ class SectionEditorSubmission extends Article {
 	function setEditorFileRevisions($editorFileRevisions, $round) {
 		return $this->editorFileRevisions[$round] = $editorFileRevisions;
 	}
-	
+
 	/**
 	 * Get all author file revisions.
 	 * @return array ArticleFiles
@@ -354,7 +354,7 @@ class SectionEditorSubmission extends Article {
 			return $this->authorFileRevisions[$round];
 		}
 	}
-	
+
 	/**
 	 * Set all author file revisions.
 	 * @param $authorFileRevisions array ArticleFiles
@@ -362,7 +362,7 @@ class SectionEditorSubmission extends Article {
 	function setAuthorFileRevisions($authorFileRevisions, $round) {
 		return $this->authorFileRevisions[$round] = $authorFileRevisions;
 	}
-	
+
 	/**
 	 * Get post-review file.
 	 * @return ArticleFile
@@ -371,7 +371,7 @@ class SectionEditorSubmission extends Article {
 		$returner =& $this->getData('editorFile');
 		return $returner;
 	}
-	
+
 	/**
 	 * Set post-review file.
 	 * @param $editorFile ArticleFile
@@ -379,7 +379,7 @@ class SectionEditorSubmission extends Article {
 	function setEditorFile($editorFile) {
 		return $this->setData('editorFile', $editorFile);
 	}
-	
+
 	/**
 	 * Get copyedit file.
 	 * @return ArticleFile
@@ -388,7 +388,7 @@ class SectionEditorSubmission extends Article {
 		$returner =& $this->getData('copyeditFile');
 		return $returner;
 	}
-	
+
 
 	/**
 	 * Set copyedit file.
@@ -397,7 +397,7 @@ class SectionEditorSubmission extends Article {
 	function setCopyeditFile($copyeditFile) {
 		return $this->setData('copyeditFile', $copyeditFile);
 	}
-	
+
 	/**
 	 * Get initial copyedit file.
 	 * @return ArticleFile
@@ -406,7 +406,7 @@ class SectionEditorSubmission extends Article {
 		$returner =& $this->getData('initialCopyeditFile');
 		return $returner;
 	}
-	
+
 
 	/**
 	 * Set initial copyedit file.
@@ -415,7 +415,7 @@ class SectionEditorSubmission extends Article {
 	function setInitialCopyeditFile($initialCopyeditFile) {
 		return $this->setData('initialCopyeditFile', $initialCopyeditFile);
 	}
-	
+
 	/**
 	 * Get editor author copyedit file.
 	 * @return ArticleFile
@@ -424,7 +424,7 @@ class SectionEditorSubmission extends Article {
 		$returner =& $this->getData('editorAuthorCopyeditFile');
 		return $returner;
 	}
-	
+
 
 	/**
 	 * Set editor author copyedit file.
@@ -433,7 +433,7 @@ class SectionEditorSubmission extends Article {
 	function setEditorAuthorCopyeditFile($editorAuthorCopyeditFile) {
 		return $this->setData('editorAuthorCopyeditFile', $editorAuthorCopyeditFile);
 	}
-	
+
 	/**
 	 * Get final copyedit file.
 	 * @return ArticleFile
@@ -442,7 +442,7 @@ class SectionEditorSubmission extends Article {
 		$returner =& $this->getData('finalCopyeditFile');
 		return $returner;
 	}
-	
+
 
 	/**
 	 * Set final copyedit file.
@@ -456,7 +456,7 @@ class SectionEditorSubmission extends Article {
 	//
 	// Review Rounds
 	//
-	
+
 	/**
 	 * Get review file revision.
 	 * @return int
@@ -464,7 +464,7 @@ class SectionEditorSubmission extends Article {
 	function getReviewRevision() {
 		return $this->getData('reviewRevision');
 	}
-	
+
 	/**
 	 * Set review file revision.
 	 * @param $reviewRevision int
@@ -476,7 +476,7 @@ class SectionEditorSubmission extends Article {
 	//
 	// Comments
 	//
-	
+
 	/**
 	 * Get most recent editor decision comment.
 	 * @return ArticleComment
@@ -484,7 +484,7 @@ class SectionEditorSubmission extends Article {
 	function getMostRecentEditorDecisionComment() {
 		return $this->getData('mostRecentEditorDecisionComment');
 	}
-	
+
 	/**
 	 * Set most recent editor decision comment.
 	 * @param $mostRecentEditorDecisionComment ArticleComment
@@ -500,7 +500,7 @@ class SectionEditorSubmission extends Article {
 	function getMostRecentCopyeditComment() {
 		return $this->getData('mostRecentCopyeditComment');
 	}
-	
+
 	/**
 	 * Set most recent copyedit comment.
 	 * @param $mostRecentCopyeditComment ArticleComment
@@ -508,7 +508,7 @@ class SectionEditorSubmission extends Article {
 	function setMostRecentCopyeditComment($mostRecentCopyeditComment) {
 		return $this->setData('mostRecentCopyeditComment', $mostRecentCopyeditComment);
 	}
-	
+
 	/**
 	 * Get most recent layout comment.
 	 * @return ArticleComment
@@ -516,7 +516,7 @@ class SectionEditorSubmission extends Article {
 	function getMostRecentLayoutComment() {
 		return $this->getData('mostRecentLayoutComment');
 	}
-	
+
 	/**
 	 * Set most recent layout comment.
 	 * @param $mostRecentLayoutComment ArticleComment
@@ -524,7 +524,7 @@ class SectionEditorSubmission extends Article {
 	function setMostRecentLayoutComment($mostRecentLayoutComment) {
 		return $this->setData('mostRecentLayoutComment', $mostRecentLayoutComment);
 	}
-	
+
 	/**
 	 * Get most recent proofread comment.
 	 * @return ArticleComment
@@ -532,7 +532,7 @@ class SectionEditorSubmission extends Article {
 	function getMostRecentProofreadComment() {
 		return $this->getData('mostRecentProofreadComment');
 	}
-	
+
 	/**
 	 * Set most recent proofread comment.
 	 * @param $mostRecentProofreadComment ArticleComment
@@ -544,7 +544,7 @@ class SectionEditorSubmission extends Article {
 	//
 	// Copyeditor Assignment
 	//
-	
+
 	/**
 	 * Get copyed id.
 	 * @return int
@@ -552,7 +552,7 @@ class SectionEditorSubmission extends Article {
 	function getCopyedId() {
 		return $this->getData('copyedId');
 	}
-	
+
 	/**
 	 * Set copyed id.
 	 * @param $copyedId int
@@ -560,7 +560,7 @@ class SectionEditorSubmission extends Article {
 	function setCopyedId($copyedId) {
 		return $this->setData('copyedId', $copyedId);
 	}
-	
+
 	/**
 	 * Get copyeditor id.
 	 * @return int
@@ -568,7 +568,7 @@ class SectionEditorSubmission extends Article {
 	function getCopyeditorId() {
 		return $this->getData('copyeditorId');
 	}
-	
+
 	/**
 	 * Set copyeditor id.
 	 * @param $copyeditorId int
@@ -576,7 +576,7 @@ class SectionEditorSubmission extends Article {
 	function setCopyeditorId($copyeditorId) {
 		return $this->setData('copyeditorId', $copyeditorId);
 	}
-	
+
 	/**
 	 * Get copyeditor of this article.
 	 * @return User
@@ -585,7 +585,7 @@ class SectionEditorSubmission extends Article {
 		$copyEditor = &$this->getData('copyeditor');
 		return $copyEditor;
 	}
-	
+
 	/**
 	 * Set copyeditor of this article.
 	 * @param $copyeditor User
@@ -593,7 +593,7 @@ class SectionEditorSubmission extends Article {
 	function setCopyeditor($copyeditor) {
 		return $this->setData('copyeditor', $copyeditor);
 	}
-	
+
 	/**
 	 * Get copyeditor date notified.
 	 * @return string
@@ -601,7 +601,7 @@ class SectionEditorSubmission extends Article {
 	function getCopyeditorDateNotified() {
 		return $this->getData('copyeditorDateNotified');
 	}
-	
+
 	/**
 	 * Set copyeditor date notified.
 	 * @param $copyeditorDateNotified string
@@ -609,7 +609,7 @@ class SectionEditorSubmission extends Article {
 	function setCopyeditorDateNotified($copyeditorDateNotified) {
 		return $this->setData('copyeditorDateNotified', $copyeditorDateNotified);
 	}
-	
+
 	/**
 	 * Get copyeditor date underway.
 	 * @return string
@@ -617,7 +617,7 @@ class SectionEditorSubmission extends Article {
 	function getCopyeditorDateUnderway() {
 		return $this->getData('copyeditorDateUnderway');
 	}
-	
+
 	/**
 	 * Set copyeditor date underway.
 	 * @param $copyeditorDateUnderway string
@@ -625,7 +625,7 @@ class SectionEditorSubmission extends Article {
 	function setCopyeditorDateUnderway($copyeditorDateUnderway) {
 		return $this->setData('copyeditorDateUnderway', $copyeditorDateUnderway);
 	}
-	
+
 	/**
 	 * Get copyeditor date completed.
 	 * @return string
@@ -633,7 +633,7 @@ class SectionEditorSubmission extends Article {
 	function getCopyeditorDateCompleted() {
 		return $this->getData('copyeditorDateCompleted');
 	}
-	
+
 	/**
 	 * Set copyeditor date completed.
 	 * @param $copyeditorDateCompleted string
@@ -641,7 +641,7 @@ class SectionEditorSubmission extends Article {
 	function setCopyeditorDateCompleted($copyeditorDateCompleted) {
 		return $this->setData('copyeditorDateCompleted', $copyeditorDateCompleted);
 	}
-	
+
 	/**
 	 * Get copyeditor date acknowledged.
 	 * @return string
@@ -649,7 +649,7 @@ class SectionEditorSubmission extends Article {
 	function getCopyeditorDateAcknowledged() {
 		return $this->getData('copyeditorDateAcknowledged');
 	}
-	
+
 	/**
 	 * Set copyeditor date acknowledged.
 	 * @param $copyeditorDateAcknowledged string
@@ -657,7 +657,7 @@ class SectionEditorSubmission extends Article {
 	function setCopyeditorDateAcknowledged($copyeditorDateAcknowledged) {
 		return $this->setData('copyeditorDateAcknowledged', $copyeditorDateAcknowledged);
 	}
-	
+
 	/**
 	 * Get copyeditor date author notified.
 	 * @return string
@@ -665,7 +665,7 @@ class SectionEditorSubmission extends Article {
 	function getCopyeditorDateAuthorNotified() {
 		return $this->getData('copyeditorDateAuthorNotified');
 	}
-	
+
 	/**
 	 * Set copyeditor date author notified.
 	 * @param $copyeditorDateAuthorNotified string
@@ -673,7 +673,7 @@ class SectionEditorSubmission extends Article {
 	function setCopyeditorDateAuthorNotified($copyeditorDateAuthorNotified) {
 		return $this->setData('copyeditorDateAuthorNotified', $copyeditorDateAuthorNotified);
 	}
-	
+
 	/**
 	 * Get copyeditor date authorunderway.
 	 * @return string
@@ -681,7 +681,7 @@ class SectionEditorSubmission extends Article {
 	function getCopyeditorDateAuthorUnderway() {
 		return $this->getData('copyeditorDateAuthorUnderway');
 	}
-	
+
 	/**
 	 * Set copyeditor date author underway.
 	 * @param $copyeditorDateAuthorUnderway string
@@ -689,7 +689,7 @@ class SectionEditorSubmission extends Article {
 	function setCopyeditorDateAuthorUnderway($copyeditorDateAuthorUnderway) {
 		return $this->setData('copyeditorDateAuthorUnderway', $copyeditorDateAuthorUnderway);
 	}	
-	
+
 	/**
 	 * Get copyeditor date author completed.
 	 * @return string
@@ -697,7 +697,7 @@ class SectionEditorSubmission extends Article {
 	function getCopyeditorDateAuthorCompleted() {
 		return $this->getData('copyeditorDateAuthorCompleted');
 	}
-	
+
 	/**
 	 * Set copyeditor date author completed.
 	 * @param $copyeditorDateAuthorCompleted string
@@ -705,7 +705,7 @@ class SectionEditorSubmission extends Article {
 	function setCopyeditorDateAuthorCompleted($copyeditorDateAuthorCompleted) {
 		return $this->setData('copyeditorDateAuthorCompleted', $copyeditorDateAuthorCompleted);
 	}
-	
+
 	/**
 	 * Get copyeditor date author acknowledged.
 	 * @return string
@@ -713,7 +713,7 @@ class SectionEditorSubmission extends Article {
 	function getCopyeditorDateAuthorAcknowledged() {
 		return $this->getData('copyeditorDateAuthorAcknowledged');
 	}
-	
+
 	/**
 	 * Set copyeditor date author acknowledged.
 	 * @param $copyeditorDateAuthorAcknowledged string
@@ -721,7 +721,7 @@ class SectionEditorSubmission extends Article {
 	function setCopyeditorDateAuthorAcknowledged($copyeditorDateAuthorAcknowledged) {
 		return $this->setData('copyeditorDateAuthorAcknowledged', $copyeditorDateAuthorAcknowledged);
 	}
-	
+
 	/**
 	 * Get copyeditor date final notified.
 	 * @return string
@@ -729,7 +729,7 @@ class SectionEditorSubmission extends Article {
 	function getCopyeditorDateFinalNotified() {
 		return $this->getData('copyeditorDateFinalNotified');
 	}
-	
+
 	/**
 	 * Set copyeditor date final notified.
 	 * @param $copyeditorDateFinalNotified string
@@ -737,7 +737,7 @@ class SectionEditorSubmission extends Article {
 	function setCopyeditorDateFinalNotified($copyeditorDateFinalNotified) {
 		return $this->setData('copyeditorDateFinalNotified', $copyeditorDateFinalNotified);
 	}
-	
+
 	/**
 	 * Get copyeditor date final underway.
 	 * @return string
@@ -745,7 +745,7 @@ class SectionEditorSubmission extends Article {
 	function getCopyeditorDateFinalUnderway() {
 		return $this->getData('copyeditorDateFinalUnderway');
 	}
-	
+
 	/**
 	 * Set copyeditor date final underway.
 	 * @param $copyeditorDateFinalUnderway string
@@ -753,7 +753,7 @@ class SectionEditorSubmission extends Article {
 	function setCopyeditorDateFinalUnderway($copyeditorDateFinalUnderway) {
 		return $this->setData('copyeditorDateFinalUnderway', $copyeditorDateFinalUnderway);
 	}
-	
+
 	/**
 	 * Get copyeditor date final completed.
 	 * @return string
@@ -761,7 +761,7 @@ class SectionEditorSubmission extends Article {
 	function getCopyeditorDateFinalCompleted() {
 		return $this->getData('copyeditorDateFinalCompleted');
 	}
-	
+
 	/**
 	 * Set copyeditor date final completed.
 	 * @param $copyeditorDateFinalCompleted string
@@ -769,7 +769,7 @@ class SectionEditorSubmission extends Article {
 	function setCopyeditorDateFinalCompleted($copyeditorDateFinalCompleted) {
 		return $this->setData('copyeditorDateFinalCompleted', $copyeditorDateFinalCompleted);
 	}
-	
+
 	/**
 	 * Get copyeditor date author acknowledged.
 	 * @return string
@@ -777,7 +777,7 @@ class SectionEditorSubmission extends Article {
 	function getCopyeditorDateFinalAcknowledged() {
 		return $this->getData('copyeditorDateFinalAcknowledged');
 	}
-	
+
 	/**
 	 * Set copyeditor date final acknowledged.
 	 * @param $copyeditorDateFinalAcknowledged string
@@ -785,7 +785,7 @@ class SectionEditorSubmission extends Article {
 	function setCopyeditorDateFinalAcknowledged($copyeditorDateFinalAcknowledged) {
 		return $this->setData('copyeditorDateFinalAcknowledged', $copyeditorDateFinalAcknowledged);
 	}
-	
+
 	/**
 	 * Get copyeditor initial revision.
 	 * @return int
@@ -793,7 +793,7 @@ class SectionEditorSubmission extends Article {
 	function getCopyeditorInitialRevision() {
 		return $this->getData('copyeditorInitialRevision');
 	}
-	
+
 	/**
 	 * Set copyeditor initial revision.
 	 * @param $copyeditorInitialRevision int
@@ -801,7 +801,7 @@ class SectionEditorSubmission extends Article {
 	function setCopyeditorInitialRevision($copyeditorInitialRevision)	{
 		return $this->setData('copyeditorInitialRevision', $copyeditorInitialRevision);
 	}
-	
+
 	/**
 	 * Get copyeditor editor/author revision.
 	 * @return int
@@ -809,7 +809,7 @@ class SectionEditorSubmission extends Article {
 	function getCopyeditorEditorAuthorRevision() {
 		return $this->getData('copyeditorEditorAuthorRevision');
 	}
-	
+
 	/**
 	 * Set copyeditor editor/author revision.
 	 * @param $editorAuthorRevision int
@@ -817,7 +817,7 @@ class SectionEditorSubmission extends Article {
 	function setCopyeditorEditorAuthorRevision($copyeditorEditorAuthorRevision)	{
 		return $this->setData('copyeditorEditorAuthorRevision', $copyeditorEditorAuthorRevision);
 	}
-	
+
 	/**
 	 * Get copyeditor final revision.
 	 * @return int
@@ -825,7 +825,7 @@ class SectionEditorSubmission extends Article {
 	function getCopyeditorFinalRevision() {
 		return $this->getData('copyeditorFinalRevision');
 	}
-	
+
 	/**
 	 * Set copyeditor final revision.
 	 * @param $copyeditorFinalRevision int
@@ -833,7 +833,7 @@ class SectionEditorSubmission extends Article {
 	function setCopyeditorFinalRevision($copyeditorFinalRevision)	{
 		return $this->setData('copyeditorFinalRevision', $copyeditorFinalRevision);
 	}
-	
+
 	/**
 	 * Get the layout assignment for an article.
 	 * @return LayoutAssignment
@@ -842,7 +842,7 @@ class SectionEditorSubmission extends Article {
 		$layoutAssignment = &$this->getData('layoutAssignment');
 		return $layoutAssignment;
 	}
-	
+
 	/**
 	 * Set the layout assignment for an article.
 	 * @param $layoutAssignment LayoutAssignment
@@ -850,7 +850,7 @@ class SectionEditorSubmission extends Article {
 	function setLayoutAssignment(&$layoutAssignment) {
 		return $this->setData('layoutAssignment', $layoutAssignment);
 	}
-	
+
 	/**
 	 * Get the galleys for an article.
 	 * @return array ArticleGalley
@@ -859,7 +859,7 @@ class SectionEditorSubmission extends Article {
 		$galleys = &$this->getData('galleys');
 		return $galleys;
 	}
-	
+
 	/**
 	 * Set the galleys for an article.
 	 * @param $galleys array ArticleGalley
@@ -876,7 +876,7 @@ class SectionEditorSubmission extends Article {
 		$proofAssignment = &$this->getData('proofAssignment');
 		return $proofAssignment;
 	}
-	
+
 	/**
 	 * Set the proof assignment for an article.
 	 * @param $proofAssignment ProofAssignment

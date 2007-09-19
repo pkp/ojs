@@ -40,7 +40,7 @@ class DisciplineDAO extends DAO {
 		if (!isset($caches)) {
 			$caches = array();
 		}
-		
+
 		if (!isset($caches[$locale])) {
 			import('cache.CacheManager');
 			$cacheManager =& CacheManager::getManager();
@@ -68,7 +68,7 @@ class DisciplineDAO extends DAO {
 			// Reload country registry file
 			$xmlDao = &new XMLDAO();
 			$data = $xmlDao->parseStruct($this->getFilename(), array('disciplines', 'discipline'));
-	
+
 			if (isset($data['disciplines'])) {
 				foreach ($data['discipline'] as $disciplineData) {
 					$disciplines[$id][$disciplineData['attributes']['code']] = $disciplineData['attributes']['name'];
@@ -89,7 +89,7 @@ class DisciplineDAO extends DAO {
 		$cache =& $this->_getDisciplineCache($locale);
 		return $cache->getContents();
 	}
-	
+
 	/**
 	 * Return a translated discipline, given a code.
 	 * @param $locale string Name of locale (optional)

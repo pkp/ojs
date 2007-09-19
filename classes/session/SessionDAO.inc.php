@@ -31,7 +31,7 @@ class SessionDAO extends DAO {
 		$session = null;
 		if ($result->RecordCount() != 0) {
 			$row = &$result->GetRowAssoc(false);
-			
+
 			$session = &new Session();
 			$session->setId($row['session_id']);
 			$session->setUserId($row['user_id']);
@@ -41,7 +41,7 @@ class SessionDAO extends DAO {
 			$session->setSecondsLastUsed($row['last_used']);
 			$session->setRemember($row['remember']);
 			$session->setSessionData($row['data']);
-			
+
 		}
 
 		$result->Close();
@@ -49,7 +49,7 @@ class SessionDAO extends DAO {
 
 		return $session;
 	}
-	
+
 	/**
 	 * Insert a new session.
 	 * @param $session Session
@@ -71,7 +71,7 @@ class SessionDAO extends DAO {
 			)
 		);
 	}
-	
+
 	/**
 	 * Update an existing session.
 	 * @param $session Session
@@ -100,7 +100,7 @@ class SessionDAO extends DAO {
 			)
 		);
 	}
-	
+
 	/**
 	 * Delete a session.
 	 * @param $session Session
@@ -108,7 +108,7 @@ class SessionDAO extends DAO {
 	function deleteSession(&$session) {
 		return $this->deleteSessionById($session->getId());
 	}
-	
+
 	/**
 	 * Delete a session by ID.
 	 * @param $sessionId string
@@ -118,7 +118,7 @@ class SessionDAO extends DAO {
 			'DELETE FROM sessions WHERE session_id = ?', $sessionId
 		);
 	}
-	
+
 	/**
 	 * Delete sessions by user ID.
 	 * @param $userId string
@@ -128,7 +128,7 @@ class SessionDAO extends DAO {
 			'DELETE FROM sessions WHERE user_id = ?', $userId
 		);
 	}
-	
+
 	/**
 	 * Delete all sessions older than the specified time.
 	 * @param $lastUsed int cut-off time in seconds for not-remembered sessions
@@ -146,14 +146,14 @@ class SessionDAO extends DAO {
 			);
 		}
 	}
-	
+
 	/**
 	 * Delete all sessions.
 	 */
 	function deleteAllSessions() {
 		return $this->update('DELETE FROM sessions');
 	}
-	
+
 	/**
 	 * Check if a session exists with the specified ID.
 	 * @param $sessionId string

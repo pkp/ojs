@@ -17,20 +17,20 @@
 import("author.form.submit.AuthorSubmitForm");
 
 class AuthorSubmitStep5Form extends AuthorSubmitForm {
-	
+
 	/**
 	 * Constructor.
 	 */
 	function AuthorSubmitStep5Form($article) {
 		parent::AuthorSubmitForm($article, 5);
 	}
-	
+
 	/**
 	 * Display the form.
 	 */
 	function display() {
 		$templateMgr = &TemplateManager::getManager();
-		
+
 		// Get article file for this article
 		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
 		$articleFiles =& $articleFileDao->getArticleFilesByArticle($this->articleId);
@@ -40,7 +40,7 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 
 		parent::display();
 	}
-	
+
 	/**
 	 * Save changes to article.
 	 */
@@ -68,7 +68,7 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 		$copyeditorSubmission->setArticleId($article->getArticleId());
 		$copyeditorSubmission->setCopyeditorId(0);
 		$copyeditorSubmissionDao->insertCopyeditorSubmission($copyeditorSubmission);
-		
+
 		$layoutDao = &DAORegistry::getDAO('LayoutAssignmentDAO');
 		$layoutAssignment = &new LayoutAssignment();
 		$layoutAssignment->setArticleId($article->getArticleId());
@@ -84,7 +84,7 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 		$sectionEditors = $this->assignEditors($article);
 
 		$user = &Request::getUser();
-		
+
 		// Update search index
 		import('search.ArticleSearchIndex');
 		ArticleSearchIndex::indexArticleMetadata($article);
@@ -125,10 +125,10 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 		import('article.log.ArticleLog');
 		import('article.log.ArticleEventLogEntry');
 		ArticleLog::logEvent($this->articleId, ARTICLE_LOG_ARTICLE_SUBMIT, ARTICLE_LOG_TYPE_AUTHOR, $user->getUserId(), 'log.author.submitted', array('submissionId' => $article->getArticleId(), 'authorName' => $user->getFullName()));
-		
+
 		return $this->articleId;
 	}
-	
+
 }
 
 ?>

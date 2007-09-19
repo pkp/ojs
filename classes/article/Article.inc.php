@@ -43,7 +43,7 @@ class Article extends DataObject {
 		$this->authors = array();
 		$this->removedAuthors = array();
 	}
-	
+
 	/**
 	 * Add an author.
 	 * @param $author Author
@@ -57,7 +57,7 @@ class Article extends DataObject {
 		}
 		array_push($this->authors, $author);
 	}
-	
+
 	/**
 	 * Remove an author.
 	 * @param $authorId ID of the author to remove
@@ -65,7 +65,7 @@ class Article extends DataObject {
 	 */
 	function removeAuthor($authorId) {
 		$found = false;
-		
+
 		if ($authorId != 0) {
 			// FIXME maintain a hash of ID to author for quicker get/remove
 			$authors = array();
@@ -81,7 +81,7 @@ class Article extends DataObject {
 		}
 		return $found;
 	}
-	
+
 	/**
 	 * Get "localized" article title (if applicable).
 	 * @return string
@@ -89,7 +89,7 @@ class Article extends DataObject {
 	function getArticleTitle() {
 		return $this->getLocalizedData('title');
 	}
-	
+
 	/**
 	 * Get "localized" article abstract (if applicable).
 	 * @return string
@@ -97,7 +97,7 @@ class Article extends DataObject {
 	function getArticleAbstract() {
 		return $this->getLocalizedData('abstract');
 	}
-	
+
 	/**
 	 * Return string of author names, separated by the specified token
 	 * @param $lastOnly boolean return list of lastnames only (default false)
@@ -125,11 +125,11 @@ class Article extends DataObject {
 		return $lastOnly ? $author->getLastName() : $author->getFullName();
 	}
 
-	
+
 	//
 	// Get/set methods
 	//
-	
+
 	/**
 	 * Get all authors of this article.
 	 * @return array Authors
@@ -137,7 +137,7 @@ class Article extends DataObject {
 	function &getAuthors() {
 		return $this->authors;
 	}
-	
+
 	/**
 	 * Get a specific author of this article.
 	 * @param $authorId int
@@ -145,7 +145,7 @@ class Article extends DataObject {
 	 */
 	function &getAuthor($authorId) {
 		$author = null;
-		
+
 		if ($authorId != 0) {
 			for ($i=0, $count=count($this->authors); $i < $count && $author == null; $i++) {
 				if ($this->authors[$i]->getAuthorId() == $authorId) {
@@ -155,7 +155,7 @@ class Article extends DataObject {
 		}
 		return $author;
 	}
-	
+
 	/**
 	 * Get the IDs of all authors removed from this article.
 	 * @return array int
@@ -163,7 +163,7 @@ class Article extends DataObject {
 	function &getRemovedAuthors() {
 		return $this->removedAuthors;
 	}
-	
+
 	/**
 	 * Set authors of this article.
 	 * @param $authors array Authors
@@ -171,7 +171,7 @@ class Article extends DataObject {
 	function setAuthors($authors) {
 		return $this->authors = $authors;
 	}
-	
+
 	/**
 	 * Get ID of article.
 	 * @return int
@@ -179,7 +179,7 @@ class Article extends DataObject {
 	function getArticleId() {
 		return $this->getData('articleId');
 	}
-	
+
 	/**
 	 * Set ID of article.
 	 * @param $articleId int
@@ -187,7 +187,7 @@ class Article extends DataObject {
 	function setArticleId($articleId) {
 		return $this->setData('articleId', $articleId);
 	}
-	
+
 	/**
 	 * Get user ID of the article submitter.
 	 * @return int
@@ -195,7 +195,7 @@ class Article extends DataObject {
 	function getUserId() {
 		return $this->getData('userId');
 	}
-	
+
 	/**
 	 * Set user ID of the article submitter.
 	 * @param $userId int
@@ -203,7 +203,7 @@ class Article extends DataObject {
 	function setUserId($userId) {
 		return $this->setData('userId', $userId);
 	}
-	
+
 	/**
 	 * Return the user of the article submitter.
 	 * @return User
@@ -212,7 +212,7 @@ class Article extends DataObject {
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		return $userDao->getUser($this->getUserId(), true);
 	}
-	
+
 	/**
 	 * Get ID of journal.
 	 * @return int
@@ -220,7 +220,7 @@ class Article extends DataObject {
 	function getJournalId() {
 		return $this->getData('journalId');
 	}
-	
+
 	/**
 	 * Set ID of journal.
 	 * @param $journalId int
@@ -228,7 +228,7 @@ class Article extends DataObject {
 	function setJournalId($journalId) {
 		return $this->setData('journalId', $journalId);
 	}
-	
+
 	/**
 	 * Get ID of article's section.
 	 * @return int
@@ -236,7 +236,7 @@ class Article extends DataObject {
 	function getSectionId() {
 		return $this->getData('sectionId');
 	}
-	
+
 	/**
 	 * Set ID of article's section.
 	 * @param $sectionId int
@@ -244,7 +244,7 @@ class Article extends DataObject {
 	function setSectionId($sectionId) {
 		return $this->setData('sectionId', $sectionId);
 	}
-	
+
 	/**
 	 * Get title of article's section.
 	 * @return string
@@ -252,7 +252,7 @@ class Article extends DataObject {
 	function getSectionTitle() {
 		return $this->getData('sectionTitle');
 	}
-	
+
 	/**
 	 * Set title of article's section.
 	 * @param $sectionTitle string
@@ -268,7 +268,7 @@ class Article extends DataObject {
 	function getSectionAbbrev() {
 		return $this->getData('sectionAbbrev');
 	}
-	
+
 	/**
 	 * Set section abbreviation.
 	 * @param $sectionAbbrev string
@@ -276,7 +276,7 @@ class Article extends DataObject {
 	function setSectionAbbrev($sectionAbbrev) {
 		return $this->setData('sectionAbbrev', $sectionAbbrev);
 	}
-	
+
 	/**
 	 * Get title.
 	 * @param $locale
@@ -285,7 +285,7 @@ class Article extends DataObject {
 	function getTitle($locale) {
 		return $this->getData('title', $locale);
 	}
-	
+
 	/**
 	 * Set title.
 	 * @param $title string
@@ -294,7 +294,7 @@ class Article extends DataObject {
 	function setTitle($title, $locale) {
 		return $this->setData('title', $title, $locale);
 	}
-	
+
 	/**
 	 * Get abstract.
 	 * @param $locale
@@ -303,7 +303,7 @@ class Article extends DataObject {
 	function getAbstract($locale) {
 		return $this->getData('abstract', $locale);
 	}
-	
+
 	/**
 	 * Set abstract.
 	 * @param $abstract string
@@ -312,7 +312,7 @@ class Article extends DataObject {
 	function setAbstract($abstract, $locale) {
 		return $this->setData('abstract', $abstract, $locale);
 	}
-	
+
 	/**
 	 * Return the localized discipline
 	 * @return string
@@ -329,7 +329,7 @@ class Article extends DataObject {
 	function getDiscipline($locale) {
 		return $this->getData('discipline', $locale);
 	}
-	
+
 	/**
 	 * Set discipline
 	 * @param $discipline string
@@ -338,7 +338,7 @@ class Article extends DataObject {
 	function setDiscipline($discipline, $locale) {
 		return $this->setData('discipline', $discipline, $locale);
 	}
-	
+
 	/**
 	 * Return the localized subject classification
 	 * @return string
@@ -355,7 +355,7 @@ class Article extends DataObject {
 	function getSubjectClass($locale) {
 		return $this->getData('subjectClass', $locale);
 	}
-	
+
 	/**
 	 * Set subject classification.
 	 * @param $subjectClass string
@@ -364,7 +364,7 @@ class Article extends DataObject {
 	function setSubjectClass($subjectClass, $locale) {
 		return $this->setData('subjectClass', $subjectClass, $locale);
 	}
-	
+
 	/**
 	 * Return the localized subject
 	 * @return string
@@ -381,7 +381,7 @@ class Article extends DataObject {
 	function getSubject($locale) {
 		return $this->getData('subject', $locale);
 	}
-	
+
 	/**
 	 * Set subject.
 	 * @param $subject string
@@ -390,7 +390,7 @@ class Article extends DataObject {
 	function setSubject($subject, $locale) {
 		return $this->setData('subject', $subject, $locale);
 	}
-	
+
 	/**
 	 * Return the localized geographical coverage
 	 * @return string
@@ -407,7 +407,7 @@ class Article extends DataObject {
 	function getCoverageGeo($locale) {
 		return $this->getData('coverageGeo', $locale);
 	}
-	
+
 	/**
 	 * Set geographical coverage.
 	 * @param $coverageGeo string
@@ -416,7 +416,7 @@ class Article extends DataObject {
 	function setCoverageGeo($coverageGeo, $locale) {
 		return $this->setData('coverageGeo', $coverageGeo, $locale);
 	}
-	
+
 	/**
 	 * Return the localized chronological coverage
 	 * @return string
@@ -433,7 +433,7 @@ class Article extends DataObject {
 	function getCoverageChron($locale) {
 		return $this->getData('coverageChron', $locale);
 	}
-	
+
 	/**
 	 * Set chronological coverage.
 	 * @param $coverageChron string
@@ -442,7 +442,7 @@ class Article extends DataObject {
 	function setCoverageChron($coverageChron, $locale) {
 		return $this->setData('coverageChron', $coverageChron, $locale);
 	}
-	
+
 	/**
 	 * Return the localized sample coverage
 	 * @return string
@@ -459,7 +459,7 @@ class Article extends DataObject {
 	function getCoverageSample($locale) {
 		return $this->getData('coverageSample', $locale);
 	}
-	
+
 	/**
 	 * Set geographical coverage.
 	 * @param $coverageSample string
@@ -468,7 +468,7 @@ class Article extends DataObject {
 	function setCoverageSample($coverageSample, $locale) {
 		return $this->setData('coverageSample', $coverageSample, $locale);
 	}
-	
+
 	/**
 	 * Return the localized type (method/approach)
 	 * @return string
@@ -485,7 +485,7 @@ class Article extends DataObject {
 	function getType($locale) {
 		return $this->getData('type', $locale);
 	}
-	
+
 	/**
 	 * Set type (method/approach).
 	 * @param $type string
@@ -494,7 +494,7 @@ class Article extends DataObject {
 	function setType($type, $locale) {
 		return $this->setData('type', $type, $locale);
 	}
-	
+
 	/**
 	 * Get language.
 	 * @return string
@@ -502,7 +502,7 @@ class Article extends DataObject {
 	function getLanguage() {
 		return $this->getData('language');
 	}
-	
+
 	/**
 	 * Set language.
 	 * @param $language string
@@ -527,7 +527,7 @@ class Article extends DataObject {
 	function getSponsor($locale) {
 		return $this->getData('sponsor', $locale);
 	}
-	
+
 	/**
 	 * Set sponsor.
 	 * @param $sponsor string
@@ -536,7 +536,7 @@ class Article extends DataObject {
 	function setSponsor($sponsor, $locale) {
 		return $this->setData('sponsor', $sponsor, $locale);
 	}
-	
+
 	/**
 	 * Get comments to editor.
 	 * @return string
@@ -544,7 +544,7 @@ class Article extends DataObject {
 	function getCommentsToEditor() {
 		return $this->getData('commentsToEditor');
 	}
-	
+
 	/**
 	 * Set comments to editor.
 	 * @param $commentsToEditor string
@@ -552,7 +552,7 @@ class Article extends DataObject {
 	function setCommentsToEditor($commentsToEditor) {
 		return $this->setData('commentsToEditor', $commentsToEditor);
 	}
-	
+
 	/**
 	 * Get submission date.
 	 * @return date
@@ -560,7 +560,7 @@ class Article extends DataObject {
 	function getDateSubmitted() {
 		return $this->getData('dateSubmitted');
 	}
-	
+
 	/**
 	 * Set submission date.
 	 * @param $dateSubmitted date
@@ -568,7 +568,7 @@ class Article extends DataObject {
 	function setDateSubmitted($dateSubmitted) {
 		return $this->setData('dateSubmitted', $dateSubmitted);
 	}
-	
+
 	/**
 	 * Get the date of the last status modification.
 	 * @return date
@@ -576,7 +576,7 @@ class Article extends DataObject {
 	function getDateStatusModified() {
 		return $this->getData('dateStatusModified');
 	}
-	
+
 	/**
 	 * Set the date of the last status modification.
 	 * @param $dateModified date
@@ -584,7 +584,7 @@ class Article extends DataObject {
 	function setDateStatusModified($dateModified) {
 		return $this->setData('dateStatusModified', $dateModified);
 	}
-	
+
 	/**
 	 * Get the date of the last modification.
 	 * @return date
@@ -592,7 +592,7 @@ class Article extends DataObject {
 	function getLastModified() {
 		return $this->getData('lastModified');
 	}
-	
+
 	/**
 	 * Set the date of the last modification.
 	 * @param $dateModified date
@@ -600,21 +600,21 @@ class Article extends DataObject {
 	function setLastModified($dateModified) {
 		return $this->setData('lastModified', $dateModified);
 	}
-	
+
 	/**
 	 * Stamp the date of the last modification to the current time.
 	 */
 	function stampModified() {
 		return $this->setLastModified(Core::getCurrentDate());
 	}
-	
+
 	/**
 	 * Stamp the date of the last status modification to the current time.
 	 */
 	function stampStatusModified() {
 		return $this->setDateStatusModified(Core::getCurrentDate());
 	}
-	
+
 	/**
 	 * Get article status.
 	 * @return int
@@ -622,7 +622,7 @@ class Article extends DataObject {
 	function getStatus() {
 		return $this->getData('status');
 	}
-	
+
 	/**
 	 * Set article status.
 	 * @param $status int
@@ -630,7 +630,7 @@ class Article extends DataObject {
 	function setStatus($status) {
 		return $this->setData('status', $status);
 	}
-	
+
 	/**
 	 * Get submission progress (most recently completed submission step).
 	 * @return int
@@ -638,7 +638,7 @@ class Article extends DataObject {
 	function getSubmissionProgress() {
 		return $this->getData('submissionProgress');
 	}
-	
+
 	/**
 	 * Get current review round.
 	 * @return int
@@ -646,7 +646,7 @@ class Article extends DataObject {
 	function getCurrentRound() {
 		return $this->getData('currentRound');
 	}
-	
+
 	/**
 	 * Set current review round.
 	 * @param $currentRound int
@@ -654,7 +654,7 @@ class Article extends DataObject {
 	function setCurrentRound($currentRound) {
 		return $this->setData('currentRound', $currentRound);
 	}
-	
+
 	/**
 	 * Set submission progress.
 	 * @param $submissionProgress int
@@ -662,7 +662,7 @@ class Article extends DataObject {
 	function setSubmissionProgress($submissionProgress) {
 		return $this->setData('submissionProgress', $submissionProgress);
 	}
-	
+
 	/**
 	 * Get submission file id.
 	 * @return int
@@ -670,7 +670,7 @@ class Article extends DataObject {
 	function getSubmissionFileId() {
 		return $this->getData('submissionFileId');
 	}
-	
+
 	/**
 	 * Set submission file id.
 	 * @param $submissionFileId int
@@ -678,7 +678,7 @@ class Article extends DataObject {
 	function setSubmissionFileId($submissionFileId) {
 		return $this->setData('submissionFileId', $submissionFileId);
 	}
-	
+
 	/**
 	 * Get revised file id.
 	 * @return int
@@ -686,7 +686,7 @@ class Article extends DataObject {
 	function getRevisedFileId() {
 		return $this->getData('revisedFileId');
 	}
-	
+
 	/**
 	 * Set revised file id.
 	 * @param $revisedFileId int
@@ -694,7 +694,7 @@ class Article extends DataObject {
 	function setRevisedFileId($revisedFileId) {
 		return $this->setData('revisedFileId', $revisedFileId);
 	}
-	
+
 	/**
 	 * Get review file id.
 	 * @return int
@@ -702,7 +702,7 @@ class Article extends DataObject {
 	function getReviewFileId() {
 		return $this->getData('reviewFileId');
 	}
-	
+
 	/**
 	 * Set review file id.
 	 * @param $reviewFileId int
@@ -710,7 +710,7 @@ class Article extends DataObject {
 	function setReviewFileId($reviewFileId) {
 		return $this->setData('reviewFileId', $reviewFileId);
 	}
-	
+
 	/**
 	 * Get editor file id.
 	 * @return int
@@ -718,7 +718,7 @@ class Article extends DataObject {
 	function getEditorFileId() {
 		return $this->getData('editorFileId');
 	}
-	
+
 	/**
 	 * Set editor file id.
 	 * @param $editorFileId int
@@ -726,7 +726,7 @@ class Article extends DataObject {
 	function setEditorFileId($editorFileId) {
 		return $this->setData('editorFileId', $editorFileId);
 	}
-	
+
 	/**
 	 * Get copyedit file id.
 	 * @return int
@@ -734,7 +734,7 @@ class Article extends DataObject {
 	function getCopyeditFileId() {
 		return $this->getData('copyeditFileId');
 	}
-	
+
 	/**
 	 * Set copyedit file id.
 	 * @param $copyeditFileId int
@@ -750,7 +750,7 @@ class Article extends DataObject {
 	function getPages() {
 		return $this->getData('pages');
 	}
-	 
+
 	/**
 	 * set pages
 	 * @param $pages string

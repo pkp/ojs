@@ -21,16 +21,16 @@ class JournalSiteSettingsForm extends Form {
 
 	/** The ID of the journal being edited */
 	var $journalId;
-	
+
 	/**
 	 * Constructor.
 	 * @param $journalId omit for a new journal
 	 */
 	function JournalSiteSettingsForm($journalId = null) {
 		parent::Form('admin/journalSettings.tpl');
-		
+
 		$this->journalId = isset($journalId) ? (int) $journalId : null;
-		
+
 		// Validation checks for this form
 		$this->addCheck(new FormValidatorLocale($this, 'title', 'required', 'admin.journals.form.titleRequired'));
 		$this->addCheck(new FormValidator($this, 'path', 'required', 'admin.journals.form.pathRequired'));
@@ -38,7 +38,7 @@ class JournalSiteSettingsForm extends Form {
 		$this->addCheck(new FormValidatorCustom($this, 'path', 'required', 'admin.journals.form.pathExists', create_function('$path,$form,$journalDao', 'return !$journalDao->journalExistsByPath($path) || ($form->getData(\'oldPath\') != null && $form->getData(\'oldPath\') == $path);'), array(&$this, DAORegistry::getDAO('JournalDAO'))));
 		$this->addCheck(new FormValidatorPost($this));
 	}
-	
+
 	/**
 	 * Display the form.
 	 */
@@ -48,7 +48,7 @@ class JournalSiteSettingsForm extends Form {
 		$templateMgr->assign('helpTopicId', 'site.siteManagement');
 		parent::display();
 	}
-	
+
 	/**
 	 * Initialize form data from current settings.
 	 */
@@ -56,7 +56,7 @@ class JournalSiteSettingsForm extends Form {
 		if (isset($this->journalId)) {
 			$journalDao = &DAORegistry::getDAO('JournalDAO');
 			$journal = &$journalDao->getJournal($this->journalId);
-			
+
 			if ($journal != null) {
 				$this->_data = array(
 					'title' => $journal->getSetting('title', null), // Localized
@@ -75,14 +75,14 @@ class JournalSiteSettingsForm extends Form {
 			);
 		}
 	}
-	
+
 	/**
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
 		$this->readUserVars(array('title', 'description', 'path', 'enabled'));
 		$this->setData('enabled', (int)$this->getData('enabled'));
-		
+
 		if (isset($this->journalId)) {
 			$journalDao = &DAORegistry::getDAO('JournalDAO');
 			$journal = &$journalDao->getJournal($this->journalId);
@@ -103,15 +103,15 @@ class JournalSiteSettingsForm extends Form {
 	 */
 	function execute() {
 		$journalDao = &DAORegistry::getDAO('JournalDAO');
-		
+
 		if (isset($this->journalId)) {
 			$journal = &$journalDao->getJournal($this->journalId);
 		}
-		
+
 		if (!isset($journal)) {
 			$journal = &new Journal();
 		}
-		
+
 		$journal->setPath($this->getData('path'));
 		$journal->setEnabled($this->getData('enabled'));
 
@@ -125,7 +125,7 @@ class JournalSiteSettingsForm extends Form {
 
 			$journalId = $journalDao->insertJournal($journal);
 			$journalDao->resequenceJournals();
-			
+
 			// Make the site administrator the journal manager of newly created journals
 			$sessionManager = &SessionManager::getManager();
 			$userSession = &$sessionManager->getUserSession();
@@ -134,11 +134,11 @@ class JournalSiteSettingsForm extends Form {
 				$role->setJournalId($journalId);
 				$role->setUserId($userSession->getUserId());
 				$role->setRoleId(ROLE_ID_JOURNAL_MANAGER);
-				
+
 				$roleDao = &DAORegistry::getDAO('RoleDAO');
 				$roleDao->insertRole($role);
 			}
-			
+
 			// Make the file directories for the journal
 			import('file.FileManager');
 			FileManager::mkdir(Config::getVar('files', 'files_dir') . '/journals/' . $journalId);
@@ -177,7 +177,7 @@ class JournalSiteSettingsForm extends Form {
 		$journal->updateSetting('description', $this->getData('description'), 'string', true);
 		HookRegistry::call('JournalSiteSettingsForm::execute', array(&$this, &$journal, &$section));
 	}
-	
+
 }
 
 ?>

@@ -107,7 +107,7 @@ class ArticleEventLogEntry extends DataObject {
 	function ArticleEventLogEntry() {
 		parent::DataObject();
 	}
-	
+
 	/**
 	 * Set localized log message (in the journal's primary locale)
 	 * @param $key localization message key
@@ -116,11 +116,11 @@ class ArticleEventLogEntry extends DataObject {
 	function setLogMessage($key, $params = array()) {
 		$this->setMessage(Locale::translate($key, $params, Locale::getPrimaryLocale()));
 	}
-	
+
 	//
 	// Get/set methods
 	//
-	
+
 	/**
 	 * Get ID of log entry.
 	 * @return int
@@ -128,7 +128,7 @@ class ArticleEventLogEntry extends DataObject {
 	function getLogId() {
 		return $this->getData('logId');
 	}
-	
+
 	/**
 	 * Set ID of log entry.
 	 * @param $logId int
@@ -136,7 +136,7 @@ class ArticleEventLogEntry extends DataObject {
 	function setLogId($logId) {
 		return $this->setData('logId', $logId);
 	}
-	
+
 	/**
 	 * Get ID of article.
 	 * @return int
@@ -144,7 +144,7 @@ class ArticleEventLogEntry extends DataObject {
 	function getArticleId() {
 		return $this->getData('articleId');
 	}
-	
+
 	/**
 	 * Set ID of article.
 	 * @param $articleId int
@@ -152,7 +152,7 @@ class ArticleEventLogEntry extends DataObject {
 	function setArticleId($articleId) {
 		return $this->setData('articleId', $articleId);
 	}
-	
+
 	/**
 	 * Get user ID of user that initiated the event.
 	 * @return int
@@ -160,7 +160,7 @@ class ArticleEventLogEntry extends DataObject {
 	function getUserId() {
 		return $this->getData('userId');
 	}
-	
+
 	/**
 	 * Set user ID of user that initiated the event.
 	 * @param $userId int
@@ -168,7 +168,7 @@ class ArticleEventLogEntry extends DataObject {
 	function setUserId($userId) {
 		return $this->setData('userId', $userId);
 	}
-	
+
 	/**
 	 * Get date entry was logged.
 	 * @return datestamp
@@ -176,7 +176,7 @@ class ArticleEventLogEntry extends DataObject {
 	function getDateLogged() {
 		return $this->getData('dateLogged');
 	}
-	
+
 	/**
 	 * Set date entry was logged.
 	 * @param $dateLogged datestamp
@@ -184,7 +184,7 @@ class ArticleEventLogEntry extends DataObject {
 	function setDateLogged($dateLogged) {
 		return $this->setData('dateLogged', $dateLogged);
 	}
-	
+
 	/**
 	 * Get IP address of user that initiated the event.
 	 * @return string
@@ -192,7 +192,7 @@ class ArticleEventLogEntry extends DataObject {
 	function getIPAddress() {
 		return $this->getData('ipAddress');
 	}
-	
+
 	/**
 	 * Set IP address of user that initiated the event.
 	 * @param $ipAddress string
@@ -200,7 +200,7 @@ class ArticleEventLogEntry extends DataObject {
 	function setIPAddress($ipAddress) {
 		return $this->setData('ipAddress', $ipAddress);
 	}
-	
+
 	/**
 	 * Get the log level.
 	 * @return int
@@ -208,7 +208,7 @@ class ArticleEventLogEntry extends DataObject {
 	function getLogLevel() {
 		return $this->getData('logLevel');
 	}
-	
+
 	/**
 	 * Set the log level.
 	 * @param $logLevel char
@@ -216,7 +216,7 @@ class ArticleEventLogEntry extends DataObject {
 	function setLogLevel($logLevel) {
 		return $this->setData('logLevel', $logLevel);
 	}
-	
+
 	/**
 	 * Get event type.
 	 * @return int
@@ -224,7 +224,7 @@ class ArticleEventLogEntry extends DataObject {
 	function getEventType() {
 		return $this->getData('eventType');
 	}
-	
+
 	/**
 	 * Set event type.
 	 * @param $eventType int
@@ -232,7 +232,7 @@ class ArticleEventLogEntry extends DataObject {
 	function setEventType($eventType) {
 		return $this->setData('eventType', $eventType);
 	}
-	
+
 	/**
 	 * Get associated type.
 	 * @return int
@@ -240,7 +240,7 @@ class ArticleEventLogEntry extends DataObject {
 	function getAssocType() {
 		return $this->getData('assocType');
 	}
-	
+
 	/**
 	 * Set associated type.
 	 * @param $assocType int
@@ -248,7 +248,7 @@ class ArticleEventLogEntry extends DataObject {
 	function setAssocType($assocType) {
 		return $this->setData('assocType', $assocType);
 	}
-	
+
 	/**
 	 * Get associated ID.
 	 * @return int
@@ -256,7 +256,7 @@ class ArticleEventLogEntry extends DataObject {
 	function getAssocId() {
 		return $this->getData('assocId');
 	}
-	
+
 	/**
 	 * Set associated ID.
 	 * @param $assocId int
@@ -264,7 +264,7 @@ class ArticleEventLogEntry extends DataObject {
 	function setAssocId($assocId) {
 		return $this->setData('assocId', $assocId);
 	}
-	
+
 	/**
 	 * Get custom log message (non-localized).
 	 * @return string
@@ -272,7 +272,7 @@ class ArticleEventLogEntry extends DataObject {
 	function getMessage() {
 		return $this->getData('message');
 	}
-	
+
 	/**
 	 * Set custom log message (non-localized).
 	 * @param $message string
@@ -280,7 +280,7 @@ class ArticleEventLogEntry extends DataObject {
 	function setMessage($message) {
 		return $this->setData('message', $message);
 	}
-	
+
 	/**
 	 * Return locale message key for the log level.
 	 * @return string
@@ -299,7 +299,7 @@ class ArticleEventLogEntry extends DataObject {
 				return 'submission.event.logLevel.notice';
 		}
 	}
-	
+
 	/**
 	 * Return locale message key describing event type.
 	 * @return string
@@ -319,11 +319,11 @@ class ArticleEventLogEntry extends DataObject {
 				return 'submission.event.general.issueAssigned';
 			case ARTICLE_LOG_ARTICLE_PUBLISH:
 				return 'submission.event.general.articlePublished';
-				
+
 			// Author events
 			case ARTICLE_LOG_AUTHOR_REVISION:
 				return 'submission.event.author.authorRevision';
-			
+
 			// Editor events
 			case ARTICLE_LOG_EDITOR_ASSIGN:
 				return 'submission.event.editor.editorAssigned';
@@ -337,7 +337,7 @@ class ArticleEventLogEntry extends DataObject {
 				return 'submission.event.editor.submissionArchived';
 			case ARTICLE_LOG_EDITOR_RESTORE:
 				return 'submission.event.editor.submissionRestored';
-				
+
 			// Reviewer events
 			case ARTICLE_LOG_REVIEW_ASSIGN:
 				return 'submission.event.reviewer.reviewerAssigned';
@@ -367,7 +367,7 @@ class ArticleEventLogEntry extends DataObject {
 				return 'submission.event.reviewer.reviewResubmitted';
 			case ARTICLE_LOG_REVIEW_FILE:
 				return 'submission.event.reviewer.reviewFile';
-			
+
 			// Copyeditor events
 			case ARTICLE_LOG_COPYEDIT_ASSIGN:
 				return 'submission.event.copyedit.copyeditorAssigned';
@@ -383,7 +383,7 @@ class ArticleEventLogEntry extends DataObject {
 				return 'submission.event.copyedit.copyeditFinalCompleted';
 			case ARTICLE_LOG_COPYEDIT_SET_FILE:
 				return 'submission.event.copyedit.copyeditSetFile';
-			
+
 			// Proofreader events
 			case ARTICLE_LOG_PROOFREAD_ASSIGN:
 				return 'submission.event.proofread.proofreaderAssigned';
@@ -395,7 +395,7 @@ class ArticleEventLogEntry extends DataObject {
 				return 'submission.event.proofread.proofreadRevision';
 			case ARTICLE_LOG_PROOFREAD_COMPLETE:
 				return 'submission.event.proofread.proofreadCompleted';
-			
+
 			// Layout events
 			case ARTICLE_LOG_LAYOUT_ASSIGN:
 				return 'submission.event.layout.layoutEditorAssigned';
@@ -407,12 +407,12 @@ class ArticleEventLogEntry extends DataObject {
 				return 'submission.event.layout.layoutGalleyCreated';
 			case ARTICLE_LOG_LAYOUT_COMPLETE:
 				return 'submission.event.layout.layoutComplete';
-				
+
 			default:
 				return 'submission.event.general.defaultEvent';
 		}
 	}
-	
+
 	/**
 	 * Return the full name of the user.
 	 * @return string
@@ -423,25 +423,25 @@ class ArticleEventLogEntry extends DataObject {
 			$userDao = &DAORegistry::getDAO('UserDAO');
 			$userFullName = $userDao->getUserFullName($this->getUserId(), true);
 		}
-		
+
 		return $userFullName ? $userFullName : '';
 	}
-	
+
 	/**
 	 * Return the email address of the user.
 	 * @return string
 	 */
 	function getUserEmail() {
 		$userEmail =& $this->getData('userEmail');
-		
+
 		if(!isset($userEmail)) {
 			$userDao = &DAORegistry::getDAO('UserDAO');
 			$userEmail = $userDao->getUserEmail($this->getUserId(), true);
 		}
-		
+
 		return $userEmail ? $userEmail : '';
 	}
-	
+
 	/**
 	 * Return string representation of the associated type.
 	 * @return string
@@ -464,7 +464,7 @@ class ArticleEventLogEntry extends DataObject {
 				return 'ART';
 		}
 	}
-	
+
 	/**
 	 * Return locale message key for the long format of the associated type.
 	 * @return string
@@ -487,7 +487,7 @@ class ArticleEventLogEntry extends DataObject {
 				return 'submission.logType.article';
 		}
 	}
-	
+
 }
 
 ?>

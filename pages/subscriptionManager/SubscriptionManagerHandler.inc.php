@@ -43,11 +43,11 @@ class SubscriptionManagerHandler extends Handler {
 	 */
 	function deleteSubscription($args) {
 		SubscriptionManagerHandler::validate();
-		
+
 		if (isset($args) && !empty($args)) {
 			$journal = &Request::getJournal();
 			$subscriptionId = (int) $args[0];
-		
+
 			$subscriptionDao = &DAORegistry::getDAO('SubscriptionDAO');
 
 			// Ensure subscription is for this journal
@@ -55,7 +55,7 @@ class SubscriptionManagerHandler extends Handler {
 				$subscriptionDao->deleteSubscriptionById($subscriptionId);
 			}
 		}
-		
+
 		Request::redirect(null, null, 'subscriptions');
 	}
 
@@ -88,7 +88,7 @@ class SubscriptionManagerHandler extends Handler {
 			$subscriptionForm = &new SubscriptionForm($subscriptionId, $userId);
 			$subscriptionForm->initData();
 			$subscriptionForm->display();
-		
+
 		} else {
 				Request::redirect(null, null, 'subscriptions');
 		}
@@ -119,7 +119,7 @@ class SubscriptionManagerHandler extends Handler {
 		if (!empty($search)) {
 			$searchType = Request::getUserVar('searchField');
 			$searchMatch = Request::getUserVar('searchMatch');
-			
+
 		} else if (isset($searchInitial)) {
 			$searchInitial = String::strtoupper($searchInitial);
 			$searchType = USER_FIELD_INITIAL;
@@ -129,7 +129,7 @@ class SubscriptionManagerHandler extends Handler {
 		$rangeInfo = Handler::getRangeInfo('users');
 
 		$users = &$userDao->getUsersByField($searchType, $searchMatch, $search, true, $rangeInfo);
-		
+
 		$templateMgr->assign('searchField', $searchType);
 		$templateMgr->assign('searchMatch', $searchMatch);
 		$templateMgr->assign('search', $searchQuery);
@@ -155,9 +155,9 @@ class SubscriptionManagerHandler extends Handler {
 	 */
 	function updateSubscription() {
 		SubscriptionManagerHandler::validate();
-		
+
 		import('subscription.form.SubscriptionForm');
-		
+
 		$journal = &Request::getJournal();
 		$subscriptionId = Request::getUserVar('subscriptionId') == null ? null : (int) Request::getUserVar('subscriptionId');
 		$subscriptionDao = &DAORegistry::getDAO('SubscriptionDAO');
@@ -166,7 +166,7 @@ class SubscriptionManagerHandler extends Handler {
 
 			$subscriptionForm = &new SubscriptionForm($subscriptionId);
 			$subscriptionForm->readInputData();
-			
+
 			if ($subscriptionForm->validate()) {
 				$subscriptionForm->execute();
 
@@ -175,7 +175,7 @@ class SubscriptionManagerHandler extends Handler {
 				} else {
 					Request::redirect(null, null, 'subscriptions');
 				}
-				
+
 			} else {
 				SubscriptionManagerHandler::setupTemplate();
 
@@ -190,7 +190,7 @@ class SubscriptionManagerHandler extends Handler {
 
 				$subscriptionForm->display();
 			}
-			
+
 		} else {
 				Request::redirect(null, null, 'subscriptions');
 		}
@@ -243,11 +243,11 @@ class SubscriptionManagerHandler extends Handler {
 	 */
 	function deleteSubscriptionType($args) {
 		SubscriptionManagerHandler::validate();
-		
+
 		if (isset($args) && !empty($args)) {
 			$journal = &Request::getJournal();
 			$subscriptionTypeId = (int) $args[0];
-		
+
 			$subscriptionTypeDao = &DAORegistry::getDAO('SubscriptionTypeDAO');
 
 			// Ensure subscription type is for this journal
@@ -255,7 +255,7 @@ class SubscriptionManagerHandler extends Handler {
 				$subscriptionTypeDao->deleteSubscriptionTypeById($subscriptionTypeId);
 			}
 		}
-		
+
 		Request::redirect(null, null, 'subscriptionTypes');
 	}
 
@@ -292,7 +292,7 @@ class SubscriptionManagerHandler extends Handler {
 				$subscriptionTypeForm->initData();
 			}
 			$subscriptionTypeForm->display();
-		
+
 		} else {
 				Request::redirect(null, null, 'subscriptionTypes');
 		}
@@ -310,9 +310,9 @@ class SubscriptionManagerHandler extends Handler {
 	 */
 	function updateSubscriptionType() {
 		SubscriptionManagerHandler::validate();
-		
+
 		import('subscription.form.SubscriptionTypeForm');
-		
+
 		$journal = &Request::getJournal();
 		$subscriptionTypeId = Request::getUserVar('typeId') == null ? null : (int) Request::getUserVar('typeId');
 		$subscriptionTypeDao = &DAORegistry::getDAO('SubscriptionTypeDAO');
@@ -321,7 +321,7 @@ class SubscriptionManagerHandler extends Handler {
 
 			$subscriptionTypeForm = &new SubscriptionTypeForm($subscriptionTypeId);
 			$subscriptionTypeForm->readInputData();
-			
+
 			if ($subscriptionTypeForm->validate()) {
 				$subscriptionTypeForm->execute();
 
@@ -336,11 +336,11 @@ class SubscriptionManagerHandler extends Handler {
 					$subscriptionTypeForm = &new SubscriptionTypeForm($subscriptionTypeId);
 					$subscriptionTypeForm->initData();
 					$subscriptionTypeForm->display();
-	
+
 				} else {
 					Request::redirect(null, null, 'subscriptionTypes');
 				}
-				
+
 			} else {
 				SubscriptionManagerHandler::setupTemplate(true);
 
@@ -355,7 +355,7 @@ class SubscriptionManagerHandler extends Handler {
 
 				$subscriptionTypeForm->display();
 			}
-			
+
 		} else {
 				Request::redirect(null, null, 'subscriptionTypes');
 		}
@@ -385,7 +385,7 @@ class SubscriptionManagerHandler extends Handler {
 		}
 		$subscriptionPolicyForm->display();
 	}
-	
+
 	/**
 	 * Save subscription policies for the current journal.
 	 */
@@ -396,7 +396,7 @@ class SubscriptionManagerHandler extends Handler {
 
 		$subscriptionPolicyForm = &new SubscriptionPolicyForm();
 		$subscriptionPolicyForm->readInputData();
-			
+
 		if ($subscriptionPolicyForm->validate()) {
 			$subscriptionPolicyForm->execute();
 
@@ -435,7 +435,7 @@ class SubscriptionManagerHandler extends Handler {
 			Validation::redirectLogin();
 		}
 	}
-	
+
 	/**
 	 * Display form to create a user profile.
 	 * @param $args array optional
@@ -449,7 +449,7 @@ class SubscriptionManagerHandler extends Handler {
 		$templateMgr = &TemplateManager::getManager();
 
 		import('manager.form.UserManagementForm');
-		
+
 		$templateMgr->assign('currentUrl', Request::url(null, null, 'createUser'));
 		$userForm = &new UserManagementForm();
 		if ($userForm->isLocaleResubmit()) {
@@ -472,10 +472,10 @@ class SubscriptionManagerHandler extends Handler {
 
 		$userForm = &new UserManagementForm();
 		$userForm->readInputData();
-		
+
 		if ($userForm->validate()) {
 			$userForm->execute();
-			
+
 			if (Request::getUserVar('createAnother')) {
 				$templateMgr = &TemplateManager::getManager();
 				$templateMgr->assign('currentUrl', Request::url(null, null, 'index'));
@@ -483,17 +483,17 @@ class SubscriptionManagerHandler extends Handler {
 				$userForm = &new UserManagementForm();
 				$userForm->initData();
 				$userForm->display();
-				
+
 			} else {
 				Request::redirect(null, null, 'selectSubscriber');
 			}
-			
+
 		} else {
 			SubscriptionManagerHandler::setupTemplate(true);
 			$userForm->display();
 		}
 	}
-	
+
 	/**
 	 * Setup common template variables.
 	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy

@@ -33,9 +33,9 @@ class CommentDAO extends DAO {
 	 */
 	function &getRootCommentsByArticleId($articleId, $childLevels = 0) {
 		$comments = array();
-		
+
 		$result = &$this->retrieve('SELECT * FROM comments WHERE article_id = ? AND parent_comment_id IS NULL ORDER BY date_posted', $articleId);
-		
+
 		while (!$result->EOF) {
 			$comments[] = &$this->_returnCommentFromRow($result->GetRowAssoc(false), $childLevels);
 			$result->moveNext();
@@ -43,10 +43,10 @@ class CommentDAO extends DAO {
 
 		$result->Close();
 		unset($result);
-		
+
 		return $comments;
 	}
-	
+
 	/**
 	 * Retrieve Comments by parent comment id
 	 * @param $parentId int
@@ -54,9 +54,9 @@ class CommentDAO extends DAO {
 	 */
 	function &getCommentsByParentId($parentId, $childLevels = 0) {
 		$comments = array();
-		
+
 		$result = &$this->retrieve('SELECT * FROM comments WHERE parent_comment_id = ? ORDER BY date_posted', $parentId);
-		
+
 		while (!$result->EOF) {
 			$comments[] = &$this->_returnCommentFromRow($result->GetRowAssoc(false), $childLevels);
 			$result->moveNext();
@@ -64,10 +64,10 @@ class CommentDAO extends DAO {
 
 		$result->Close();
 		unset($result);
-		
+
 		return $comments;
 	}
-	
+
 	/**
 	 * Retrieve comments by user id
 	 * @param $userId int
@@ -75,9 +75,9 @@ class CommentDAO extends DAO {
 	 */
 	function &getCommentsByUserId($userId) {
 		$comments = array();
-		
+
 		$result = &$this->retrieve('SELECT * FROM comments WHERE user_id = ?', $userId);
-		
+
 		while (!$result->EOF) {
 			$comments[] = &$this->_returnCommentFromRow($result->GetRowAssoc(false));
 			$result->moveNext();
@@ -85,10 +85,10 @@ class CommentDAO extends DAO {
 
 		$result->Close();
 		unset($result);
-		
+
 		return $comments;
 	}
-	
+
 	/**
 	 * Retrieve Comment by comment id
 	 * @param $commentId int
@@ -106,10 +106,10 @@ class CommentDAO extends DAO {
 
 		$result->Close();
 		unset($result);
-		
+
 		return $comment;
 	}	
-	
+
 	/**
 	 * Creates and returns an article comment object from a row
 	 * @param $row array
@@ -139,7 +139,7 @@ class CommentDAO extends DAO {
 
 		return $comment;
 	}
-	
+
 	/**
 	 * inserts a new article comment into article_comments table
 	 * @param Comment object
@@ -174,7 +174,7 @@ class CommentDAO extends DAO {
 
 		return $comment->getCommentId();
 	}
-		
+
 	/**
 	 * Get the ID of the last inserted article comment.
 	 * @return int

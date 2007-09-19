@@ -12,7 +12,7 @@
  *
  * $Id$
  */
- 
+
 require_once('FeedPlugin.inc.php');
 
 return new FeedPlugin(); 

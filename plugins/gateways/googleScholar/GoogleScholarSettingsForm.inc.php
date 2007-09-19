@@ -41,7 +41,7 @@ class GoogleScholarSettingsForm extends Form {
 	 */
 	function GoogleScholarSettingsForm(&$plugin, $journalId) {
 		parent::Form($plugin->getTemplatePath() . 'settingsForm.tpl');
-	
+
 		$this->addCheck(new FormValidator($this, 'publisherName', 'required', 'plugins.gateways.googleScholar.errors.noPublisherName'));
 		$this->addCheck(new FormValidatorArray($this, 'contact', 'required', 'plugins.gateways.googleScholar.errors.noContacts'));
 		$this->addCheck(new FormValidatorCustom($this, 'contact', 'required', 'plugins.gateways.googleScholar.errors.noContacts', array(&$this, 'elementsAreEmails')));
@@ -50,7 +50,7 @@ class GoogleScholarSettingsForm extends Form {
 		$this->journalId = $journalId;
 		$this->plugin =& $plugin;
 	}
-	
+
 	/**
 	 * Initialize form data from current group group.
 	 */
@@ -82,14 +82,14 @@ class GoogleScholarSettingsForm extends Form {
 		}
 
 	}
-	
+
 	/**
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
 		$this->readUserVars(array('publisherName', 'contact', 'publisherLocation', 'publisherResultName'));
 	}
-	
+
 	/**
 	 * Save group. 
 	 */
@@ -101,7 +101,7 @@ class GoogleScholarSettingsForm extends Form {
 		$plugin->updateSetting($journalId, 'publisher-location', $this->getData('publisherLocation'));
 		$plugin->updateSetting($journalId, 'publisher-result-name', $this->getData('publisherResultName'));
 	}
-	
+
 }
 
 ?>

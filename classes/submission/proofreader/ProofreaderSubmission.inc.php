@@ -25,11 +25,11 @@ class ProofreaderSubmission extends Article {
 	function ProofreaderSubmission() {
 		parent::Article();
 	}
-	
+
 	//
 	// Get/set methods
 	//
-	
+
 	/**
 	 * Get layout assignment.
 	 * @return layoutAssignment object
@@ -105,7 +105,7 @@ class ProofreaderSubmission extends Article {
 	function getMostRecentProofreadComment() {
 		return $this->getData('mostRecentProofreadComment');
 	}
-	
+
 	/**
 	 * Set most recent proofread comment.
 	 * @param $mostRecentProofreadComment ArticleComment
@@ -113,7 +113,7 @@ class ProofreaderSubmission extends Article {
 	function setMostRecentProofreadComment($mostRecentProofreadComment) {
 		return $this->setData('mostRecentProofreadComment', $mostRecentProofreadComment);
 	}
-	
+
 	/**
 	 * Get proof assignment.
 	 * @return proofAssignment object
@@ -130,7 +130,7 @@ class ProofreaderSubmission extends Article {
 	function setProofAssignment($proofAssignment) {
 		return $this->setData('proofAssignment', $proofAssignment);
 	}
-	
+
 	/**
 	 * Get edit assignments for this article.
 	 * @return array
@@ -139,7 +139,7 @@ class ProofreaderSubmission extends Article {
 		$editAssignments = &$this->getData('editAssignments');
 		return $editAssignments;
 	}
-	
+
 	/**
 	 * Set edit assignments for this article.
 	 * @param $editAssignments array

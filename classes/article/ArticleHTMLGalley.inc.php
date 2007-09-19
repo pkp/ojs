@@ -25,7 +25,7 @@ class ArticleHTMLGalley extends ArticleGalley {
 	function ArticleHTMLGalley() {
 		parent::ArticleGalley();
 	}
-	
+
 	/**
 	 * Check if galley is an HTML galley.
 	 * @return boolean
@@ -33,7 +33,7 @@ class ArticleHTMLGalley extends ArticleGalley {
 	function isHTMLGalley() {
 		return true;
 	}
-	
+
 	/**
 	 * Return string containing the contents of the HTML file.
 	 * This function performs any necessary filtering, like image URL replacement.
@@ -44,7 +44,7 @@ class ArticleHTMLGalley extends ArticleGalley {
 		import('file.ArticleFileManager');
 		$fileManager = &new ArticleFileManager($this->getArticleId());
 		$contents = $fileManager->readFile($this->getFileId());
-		
+
 		// Replace image references
 		$images = &$this->getImageFiles();
 
@@ -152,7 +152,7 @@ class ArticleHTMLGalley extends ArticleGalley {
 	//
 	// Get/set methods
 	//
-	
+
 	/**
 	 * Get ID of associated stylesheet file, if applicable.
 	 * @return int
@@ -160,7 +160,7 @@ class ArticleHTMLGalley extends ArticleGalley {
 	function getStyleFileId() {
 		return $this->getData('styleFileId');
 	}
-	
+
 	/**
 	 * Set ID of associated stylesheet file.
 	 * @param $styleFileId int
@@ -168,7 +168,7 @@ class ArticleHTMLGalley extends ArticleGalley {
 	function setStyleFileId($styleFileId) {
 		return $this->setData('styleFileId', $styleFileId);
 	}
-	
+
 	/**
 	 * Return the stylesheet file associated with this HTML galley, if applicable.
 	 * @return ArticleFile
@@ -177,7 +177,7 @@ class ArticleHTMLGalley extends ArticleGalley {
 		$styleFile = &$this->getData('styleFile');
 		return $styleFile;
 	}
-		
+
 	/**
 	 * Set the stylesheet file for this HTML galley.
 	 * @param ArticleFile $styleFile
@@ -185,7 +185,7 @@ class ArticleHTMLGalley extends ArticleGalley {
 	function setStyleFile(&$styleFile) {
 		$this->setData('styleFile', $styleFile);
 	}
-		
+
 	/**
 	 * Return array of image files for this HTML galley.
 	 * @return array
@@ -194,7 +194,7 @@ class ArticleHTMLGalley extends ArticleGalley {
 		$images = &$this->getData('images');
 		return $images;
 	}
-		
+
 	/**
 	 * Set array of image files for this HTML galley.
 	 * @param $images array
@@ -203,7 +203,7 @@ class ArticleHTMLGalley extends ArticleGalley {
 	function setImageFiles(&$images) {
 		return $this->setData('images', $images);
 	}
-	
+
 }
 
 ?>

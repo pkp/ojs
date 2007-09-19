@@ -43,7 +43,7 @@ class JournalSetupStep5Form extends JournalSetupForm {
 			)
 		);
 	}
-	
+
 	/**
 	 * Get the list of field names for which localized settings are used.
 	 * @return array
@@ -105,7 +105,7 @@ class JournalSetupStep5Form extends JournalSetupForm {
 
 		parent::display();	   
 	}
-	
+
 	/**
 	 * Uploads a journal image.
 	 * @param $settingName string setting key associated with the file
@@ -114,7 +114,7 @@ class JournalSetupStep5Form extends JournalSetupForm {
 	function uploadImage($settingName, $locale) {
 		$journal = &Request::getJournal();
 		$settingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
-		
+
 		import('file.PublicFileManager');
 		$fileManager = &new PublicFileManager();
 		if ($fileManager->uploadedFileExists($settingName, $locale)) {
@@ -137,12 +137,12 @@ class JournalSetupStep5Form extends JournalSetupForm {
 					'height' => $height,
 					'dateUploaded' => Core::getCurrentDate()
 				);
-				
+
 				$settingsDao->updateSetting($journal->getJournalId(), $settingName, $value, 'object', true);
 				return true;
 			}
 		}
-		
+
 		return false;
 	}
 
@@ -155,16 +155,16 @@ class JournalSetupStep5Form extends JournalSetupForm {
 		$journal = &Request::getJournal();
 		$settingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
 		$setting = $settingsDao->getSetting($journal->getJournalId(), $settingName);
-		
+
 		import('file.PublicFileManager');
 		$fileManager = &new PublicFileManager();
-	 	if ($fileManager->removeJournalFile($journal->getJournalId(), $locale !== null ? $setting[$locale]['uploadName'] : $setting['uploadName'] )) {
+		if ($fileManager->removeJournalFile($journal->getJournalId(), $locale !== null ? $setting[$locale]['uploadName'] : $setting['uploadName'] )) {
 			return $settingsDao->deleteSetting($journal->getJournalId(), $settingName, $locale);
 		} else {
 			return false;
 		}
 	}
-	
+
 	/**
 	 * Uploads journal custom stylesheet.
 	 * @param $settingName string setting key associated with the file
@@ -172,7 +172,7 @@ class JournalSetupStep5Form extends JournalSetupForm {
 	function uploadStyleSheet($settingName) {
 		$journal = &Request::getJournal();
 		$settingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
-	
+
 		import('file.PublicFileManager');
 		$fileManager = &new PublicFileManager();
 		if ($fileManager->uploadedFileExists($settingName)) {
@@ -180,7 +180,7 @@ class JournalSetupStep5Form extends JournalSetupForm {
 			if ($type != 'text/plain' && $type != 'text/css') {
 				return false;
 			}
-	
+
 			$uploadName = $settingName . '.css';
 			if($fileManager->uploadJournalFile($journal->getJournalId(), $settingName, $uploadName)) {			
 				$value = array(
@@ -188,11 +188,11 @@ class JournalSetupStep5Form extends JournalSetupForm {
 					'uploadName' => $uploadName,
 					'dateUploaded' => date("Y-m-d g:i:s")
 				);
-				
+
 				return $settingsDao->updateSetting($journal->getJournalId(), $settingName, $value, 'object');
 			}
 		}
-		
+
 		return false;
 	}
 

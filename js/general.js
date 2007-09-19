@@ -37,13 +37,6 @@ function openComments(url) {
 }
 
 /**
- * Open window for section locale data.
- */
-function openSectionLocaleData(url) {
-	window.open(url, 'Section Locale Data', 'width=700,height=600,screenX=100,screenY=100,toolbar=0,resizable=1,scrollbars=1');
-}
-
-/**
  * Open window for preview.
  */
 function openWindow(url) {

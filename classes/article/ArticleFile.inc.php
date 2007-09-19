@@ -22,7 +22,7 @@ class ArticleFile extends DataObject {
 	function ArticleFile() {
 		parent::DataObject();
 	}
-	
+
 	/**
 	 * Return absolute path to the file on the host filesystem.
 	 * @return string
@@ -31,11 +31,11 @@ class ArticleFile extends DataObject {
 		$articleDao = &DAORegistry::getDAO('ArticleDAO');
 		$article = &$articleDao->getArticle($this->getArticleId());
 		$journalId = $article->getJournalId();
-		
+
 		return Config::getVar('files', 'files_dir') . '/journals/' . $journalId .
 		'/articles/' . $this->getArticleId() . '/' . $this->getType() . '/' . $this->getFileName();
 	}
-	
+
 	//
 	// Get/set methods
 	//
@@ -46,7 +46,7 @@ class ArticleFile extends DataObject {
 	function getFileId() {
 		return $this->getData('fileId');
 	}
-	
+
 	/**
 	 * Set ID of file.
 	 * @param $fileId int
@@ -54,7 +54,7 @@ class ArticleFile extends DataObject {
 	function setFileId($fileId) {
 		return $this->setData('fileId', $fileId);
 	}
-	
+
 	/**
 	 * Get source file ID of this file.
 	 * @return int
@@ -62,7 +62,7 @@ class ArticleFile extends DataObject {
 	function getSourceFileId() {
 		return $this->getData('sourceFileId');
 	}
-	
+
 	/**
 	 * Set source file ID of this file.
 	 * @param $sourceFileId int
@@ -70,7 +70,7 @@ class ArticleFile extends DataObject {
 	function setSourceFileId($sourceFileId) {
 		return $this->setData('sourceFileId', $sourceFileId);
 	}
-	
+
 	/**
 	 * Get source revision of this file.
 	 * @return int
@@ -78,7 +78,7 @@ class ArticleFile extends DataObject {
 	function getSourceRevision() {
 		return $this->getData('sourceRevision');
 	}
-	
+
 	/**
 	 * Set source revision of this file.
 	 * @param $sourceRevision int
@@ -86,7 +86,7 @@ class ArticleFile extends DataObject {
 	function setSourceRevision($sourceRevision) {
 		return $this->setData('sourceRevision', $sourceRevision);
 	}
-	
+
 	/**
 	 * Get associated ID of file. (Used, e.g., for email log attachments.)
 	 * @return int
@@ -94,7 +94,7 @@ class ArticleFile extends DataObject {
 	function getAssocId() {
 		return $this->getData('assocId');
 	}
-	
+
 	/**
 	 * Set associated ID of file. (Used, e.g., for email log attachments.)
 	 * @param $assocId int
@@ -102,7 +102,7 @@ class ArticleFile extends DataObject {
 	function setAssocId($assocId) {
 		return $this->setData('assocId', $assocId);
 	}
-	
+
 	/**
 	 * Get revision number.
 	 * @return int
@@ -110,7 +110,7 @@ class ArticleFile extends DataObject {
 	function getRevision() {
 		return $this->getData('revision');
 	}
-	
+
 	/**
 	 * Set revision number.
 	 * @param $revision int
@@ -118,7 +118,7 @@ class ArticleFile extends DataObject {
 	function setRevision($revision) {
 		return $this->setData('revision', $revision);
 	}	
-	
+
 	/**
 	 * Get ID of article.
 	 * @return int
@@ -126,7 +126,7 @@ class ArticleFile extends DataObject {
 	function getArticleId() {
 		return $this->getData('articleId');
 	}
-	
+
 	/**
 	 * Set ID of article.
 	 * @param $articleId int
@@ -134,7 +134,7 @@ class ArticleFile extends DataObject {
 	function setArticleId($articleId) {
 		return $this->setData('articleId', $articleId);
 	}
-	
+
 	/**
 	 * Get file name of the file.
 	 * @param return string
@@ -142,7 +142,7 @@ class ArticleFile extends DataObject {
 	function getFileName() {
 		return $this->getData('fileName');	
 	}
-	
+
 	/**
 	 * Set file name of the file.
 	 * @param $fileName string
@@ -150,7 +150,7 @@ class ArticleFile extends DataObject {
 	function setFileName($fileName) {
 		return $this->setData('fileName', $fileName);	
 	}
-	
+
 	/**
 	 * Get file type of the file.
 	 * @ return string
@@ -158,7 +158,7 @@ class ArticleFile extends DataObject {
 	function getFileType() {
 		return $this->getData('fileType');	
 	}
-	
+
 	/**
 	 * Set file type of the file.
 	 * @param $fileType string
@@ -166,7 +166,7 @@ class ArticleFile extends DataObject {
 	function setFileType($fileType) {
 		return $this->setData('fileType', $fileType);	
 	}
-	
+
 	/**
 	 * Get original uploaded file name of the file.
 	 * @param return string
@@ -174,7 +174,7 @@ class ArticleFile extends DataObject {
 	function getOriginalFileName() {
 		return $this->getData('originalFileName');	
 	}
-	
+
 	/**
 	 * Set original uploaded file name of the file.
 	 * @param $originalFileName string
@@ -182,7 +182,7 @@ class ArticleFile extends DataObject {
 	function setOriginalFileName($originalFileName) {
 		return $this->setData('originalFileName', $originalFileName);	
 	}
-	
+
 	/**
 	 * Get type of the file.
 	 * @ return string
@@ -190,7 +190,7 @@ class ArticleFile extends DataObject {
 	function getType() {
 		return $this->getData('type');	
 	}
-	
+
 	/**
 	 * Set type of the file.
 	 * @param $type string
@@ -198,7 +198,7 @@ class ArticleFile extends DataObject {
 	function setType($type) {
 		return $this->setData('type', $type);	
 	}
-	
+
 	/**
 	 * Get status of the file.
 	 * @return string
@@ -206,7 +206,7 @@ class ArticleFile extends DataObject {
 	function getStatus() {
 		return $this->getData('status');	
 	}
-	
+
 	/**
 	 * Set status of the file.
 	 * @param $status string
@@ -214,69 +214,69 @@ class ArticleFile extends DataObject {
 	function setStatus($status) {
 		return $this->setData('status', $status);	
 	}
-	
+
 	/**
 	 * Get uploaded date of file.
 	 * @return date
 	 */
-	
+
 	function getDateUploaded() {
 		return $this->getData('dateUploaded');	
 	}
-	
+
 
 	/**
 	 * Set uploaded date of file.
 	 * @param $dateUploaded date
 	 */
-	 
+
 	function setDateUploaded($dateUploaded) {
 		return $this->SetData('dateUploaded', $dateUploaded);
 	}
-	
+
 	/**
 	 * Get modified date of file.
 	 * @return date
 	 */
-	
+
 	function getDateModified() {
 		return $this->getData('dateModified');	
 	}
-	
+
 
 	/**
 	 * Set modified date of file.
 	 * @param $dateModified date
 	 */
-	 
+
 	function setDateModified($dateModified) {
 		return $this->SetData('dateModified', $dateModified);
 	}
-	
+
 	/**
 	 * Get file size of file.
 	 * @return int
 	 */
-	
+
 	function getFileSize() {
 		return $this->getData('fileSize');	
 	}
-	
+
 
 	/**
 	 * Set file size of file.
 	 * @param $fileSize int
 	 */
-	 
+
 	function setFileSize($fileSize) {
 		return $this->SetData('fileSize', $fileSize);
 	}
-	
+
 	/**
 	 * Get nice file size of file.
 	 * @return string
 	 */
-	
+
 	function getNiceFileSize() {
 		return FileManager::getNiceFileSize($this->getData('fileSize'));
 	}
@@ -285,36 +285,36 @@ class ArticleFile extends DataObject {
 	 * Get round.
 	 * @return int
 	 */
-	
+
 	function getRound() {
 		return $this->getData('round');	
 	}
-	
+
 
 	/**
 	 * Set round.
 	 * @param $round int
 	 */
-	 
+
 	function setRound($round) {
 		return $this->SetData('round', $round);
 	}
-	
+
 	/**
 	 * Get viewable.
 	 * @return boolean
 	 */
-	
+
 	function getViewable() {
 		return $this->getData('viewable');	
 	}
-	
+
 
 	/**
 	 * Set viewable.
 	 * @param $viewable boolean
 	 */
-	 
+
 	function setViewable($viewable) {
 		return $this->SetData('viewable', $viewable);
 	}

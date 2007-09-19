@@ -97,7 +97,7 @@ class LayoutEditorHandler extends Handler {
 		$templateMgr->assign('helpTopicId', 'editorial.layoutEditorsRole.submissions');
 		$templateMgr->display('layoutEditor/submissions.tpl');
 	}
-	
+
 	/**
 	 * Display Future Isshes page.
 	 */
@@ -168,7 +168,7 @@ class LayoutEditorHandler extends Handler {
 			Validation::redirectLogin();
 		}
 	}
-	
+
 	/**
 	 * Setup common template variables.
 	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
@@ -196,7 +196,7 @@ class LayoutEditorHandler extends Handler {
 		}
 
 	}
-	
+
 	/**
 	 * Display submission management instructions.
 	 * @param $args (type)
@@ -207,42 +207,42 @@ class LayoutEditorHandler extends Handler {
 			Request::redirect(null, Request::getRequestedPage());
 		}
 	}
-	
+
 	function viewMetadata($args) {
 		import('pages.layoutEditor.SubmissionLayoutHandler');
 		SubmissionLayoutHandler::viewMetadata($args);
 	}
-	
-	
+
+
 	//
 	// Submission Layout Editing
 	//
-	
+
 	function submission($args) {
 		import('pages.layoutEditor.SubmissionLayoutHandler');
 		SubmissionLayoutHandler::submission($args);
 	}
-	
+
 	function submissionEditing($args) {
 		import('pages.layoutEditor.SubmissionLayoutHandler');
 		SubmissionLayoutHandler::submission($args);
 	}
-	
+
 	function completeAssignment($args) {
 		import('pages.layoutEditor.SubmissionLayoutHandler');
 		SubmissionLayoutHandler::completeAssignment($args);
 	}
-	
+
 	function uploadLayoutFile() {
 		import('pages.layoutEditor.SubmissionLayoutHandler');
 		SubmissionLayoutHandler::uploadLayoutFile();
 	}
-	
+
 	function editGalley($args) {
 		import('pages.layoutEditor.SubmissionLayoutHandler');
 		SubmissionLayoutHandler::editGalley($args);
 	}
-	
+
 	function saveGalley($args) {
 		import('pages.layoutEditor.SubmissionLayoutHandler');
 		SubmissionLayoutHandler::saveGalley($args);
@@ -252,32 +252,32 @@ class LayoutEditorHandler extends Handler {
 		import('pages.layoutEditor.SubmissionLayoutHandler');
 		SubmissionLayoutHandler::deleteGalley($args);
 	}
-	
+
 	function orderGalley() {
 		import('pages.layoutEditor.SubmissionLayoutHandler');
 		SubmissionLayoutHandler::orderGalley();
 	}
-	
+
 	function proofGalley($args) {
 		import('pages.layoutEditor.SubmissionLayoutHandler');
 		SubmissionLayoutHandler::proofGalley($args);
 	}
-	
+
 	function proofGalleyTop($args) {
 		import('pages.layoutEditor.SubmissionLayoutHandler');
 		SubmissionLayoutHandler::proofGalleyTop($args);
 	}
-	
+
 	function proofGalleyFile($args) {
 		import('pages.layoutEditor.SubmissionLayoutHandler');
 		SubmissionLayoutHandler::proofGalleyFile($args);
 	}
-	
+
 	function editSuppFile($args) {
 		import('pages.layoutEditor.SubmissionLayoutHandler');
 		SubmissionLayoutHandler::editSuppFile($args);
 	}
-	
+
 	function saveSuppFile($args) {
 		import('pages.layoutEditor.SubmissionLayoutHandler');
 		SubmissionLayoutHandler::saveSuppFile($args);
@@ -287,17 +287,17 @@ class LayoutEditorHandler extends Handler {
 		import('pages.layoutEditor.SubmissionLayoutHandler');
 		SubmissionLayoutHandler::deleteSuppFile($args);
 	}
-	
+
 	function orderSuppFile() {
 		import('pages.layoutEditor.SubmissionLayoutHandler');
 		SubmissionLayoutHandler::orderSuppFile();
 	}
-	
+
 	function downloadFile($args) {
 		import('pages.layoutEditor.SubmissionLayoutHandler');
 		SubmissionLayoutHandler::downloadFile($args);
 	}
-	
+
 	function viewFile($args) {
 		import('pages.layoutEditor.SubmissionLayoutHandler');
 		SubmissionLayoutHandler::viewFile($args);
@@ -312,7 +312,7 @@ class LayoutEditorHandler extends Handler {
 		import('pages.layoutEditor.SubmissionLayoutHandler');
 		SubmissionLayoutHandler::deleteArticleImage($args);
 	}
-	
+
 	//
 	// Proofreading Actions
 	//
@@ -321,47 +321,47 @@ class LayoutEditorHandler extends Handler {
 		import('pages.layoutEditor.SubmissionLayoutHandler');
 		SubmissionLayoutHandler::layoutEditorProofreadingComplete($args);
 	}
-	
-	
+
+
 	//
 	// Submission Comments
 	//
-	
+
 	function viewLayoutComments($args) {
 		import('pages.layoutEditor.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::viewLayoutComments($args);
 	}
-	
+
 	function postLayoutComment() {
 		import('pages.layoutEditor.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::postLayoutComment();
 	}
-	
+
 	function viewProofreadComments($args) {
 		import('pages.layoutEditor.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::viewProofreadComments($args);
 	}
-	
+
 	function postProofreadComment() {
 		import('pages.layoutEditor.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::postProofreadComment();
 	}
-	
+
 	function editComment($args) {
 		import('pages.layoutEditor.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::editComment($args);
 	}
-	
+
 	function saveComment() {
 		import('pages.layoutEditor.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::saveComment();
 	}
-	
+
 	function deleteComment($args) {
 		import('pages.layoutEditor.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::deleteComment($args);
 	}
-	
+
 }
 
 ?>

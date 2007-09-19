@@ -22,25 +22,25 @@ class AdminJournalHandler extends AdminHandler {
 	function journals() {
 		parent::validate();
 		parent::setupTemplate(true);
-		
+
 		$rangeInfo = Handler::getRangeInfo('journals');
 
 		$journalDao = &DAORegistry::getDAO('JournalDAO');
 		$journals = &$journalDao->getJournals($rangeInfo);
-		
+
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign_by_ref('journals', $journals);
 		$templateMgr->assign('helpTopicId', 'site.siteManagement');
 		$templateMgr->display('admin/journals.tpl');
 	}
-	
+
 	/**
 	 * Display form to create a new journal.
 	 */
 	function createJournal() {
 		AdminJournalHandler::editJournal();
 	}
-	
+
 	/**
 	 * Display form to create/edit a journal.
 	 * @param $args array optional, if set the first parameter is the ID of the journal to edit
@@ -48,9 +48,9 @@ class AdminJournalHandler extends AdminHandler {
 	function editJournal($args = array()) {
 		parent::validate();
 		parent::setupTemplate(true);
-		
+
 		import('admin.form.JournalSiteSettingsForm');
-		
+
 		$settingsForm = &new JournalSiteSettingsForm(!isset($args) || empty($args) ? null : $args[0]);
 		if ($settingsForm->isLocaleResubmit()) {
 			$settingsForm->readInputData();
@@ -59,37 +59,37 @@ class AdminJournalHandler extends AdminHandler {
 		}
 		$settingsForm->display();
 	}
-	
+
 	/**
 	 * Save changes to a journal's settings.
 	 */
 	function updateJournal() {
 		parent::validate();
-		
+
 		import('admin.form.JournalSiteSettingsForm');
-		
+
 		$settingsForm = &new JournalSiteSettingsForm(Request::getUserVar('journalId'));
 		$settingsForm->readInputData();
-		
+
 		if ($settingsForm->validate()) {
 			$settingsForm->execute();
 			Request::redirect(null, null, 'journals');
-			
+
 		} else {
 			parent::setupTemplate(true);
 			$settingsForm->display();
 		}
 	}
-	
+
 	/**
 	 * Delete a journal.
 	 * @param $args array first parameter is the ID of the journal to delete
 	 */
 	function deleteJournal($args) {
 		parent::validate();
-		
+
 		$journalDao = &DAORegistry::getDAO('JournalDAO');
-		
+
 		if (isset($args) && !empty($args) && !empty($args[0])) {
 			$journalId = $args[0];
 			if ($journalDao->deleteJournalById($journalId)) {
@@ -106,53 +106,53 @@ class AdminJournalHandler extends AdminHandler {
 				$publicFileManager->rmtree($publicFileManager->getJournalFilesPath($journalId));
 			}
 		}
-		
+
 		Request::redirect(null, null, 'journals');
 	}
-	
+
 	/**
 	 * Change the sequence of a journal on the site index page.
 	 */
 	function moveJournal() {
 		parent::validate();
-		
+
 		$journalDao = &DAORegistry::getDAO('JournalDAO');
 		$journal = &$journalDao->getJournal(Request::getUserVar('journalId'));
-		
+
 		if ($journal != null) {
 			$journal->setSequence($journal->getSequence() + (Request::getUserVar('d') == 'u' ? -1.5 : 1.5));
 			$journalDao->updateJournal($journal);
 			$journalDao->resequenceJournals();
 		}
-		
+
 		Request::redirect(null, null, 'journals');
 	}
-	
+
 	/**
 	 * Show form to import data from an OJS 1.x journal.
 	 */
 	function importOJS1() {
 		parent::validate();
 		parent::setupTemplate(true);
-		
+
 		import('admin.form.ImportOJS1Form');
-		
+
 		$importForm = &new ImportOJS1Form();
 		$importForm->initData();
 		$importForm->display();
 	}
-	
+
 	/**
 	 * Import data from an OJS 1.x journal.
 	 */
 	function doImportOJS1() {
 		parent::validate();
-		
+
 		import('admin.form.ImportOJS1Form');
-		
+
 		$importForm = &new ImportOJS1Form();
 		$importForm->readInputData();
-		
+
 		if ($importForm->validate() && ($journalId = $importForm->execute()) !== false) {
 			$conflicts = $importForm->getConflicts();
 			if (!empty($conflicts)) {
@@ -168,7 +168,7 @@ class AdminJournalHandler extends AdminHandler {
 			$importForm->display();
 		}
 	}
-	
+
 }
 
 ?>

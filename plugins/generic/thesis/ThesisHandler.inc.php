@@ -50,7 +50,7 @@ class ThesisHandler extends Handler {
 			$thesisDao = &DAORegistry::getDAO('ThesisDAO');
 			$rangeInfo = &Handler::getRangeInfo('theses');
 			$resultOrder = $thesisPlugin->getSetting($journalId, 'thesisOrder');
-			
+
 			$theses = &$thesisDao->getActiveThesesByJournalId($journalId, $searchField, $search, $searchMatch, null, null, $resultOrder, $rangeInfo);
 			$thesisIntroduction = $thesisPlugin->getSetting($journalId, 'thesisIntroduction');
 
@@ -77,7 +77,7 @@ class ThesisHandler extends Handler {
 			Request::redirect(null, 'index');
 		}
 	}
-	
+
 	/**
 	 * Display form to submit a thesis.
 	 */
@@ -185,12 +185,12 @@ class ThesisHandler extends Handler {
 
 			$thesisForm = &new StudentThesisForm();
 			$thesisForm->readInputData();
-			
+
 			if ($thesisForm->validate()) {
 				$thesisForm->execute();
 
 				Request::redirect(null, 'thesis');
-				
+
 			} else {
 				ThesisHandler::setupTemplate();
 
@@ -201,7 +201,7 @@ class ThesisHandler extends Handler {
 				$templateMgr->assign('journalSettings', $journalSettings);
 				$thesisForm->display();
 			}
-			
+
 		} else {
 				Request::redirect(null, 'index');
 		}	

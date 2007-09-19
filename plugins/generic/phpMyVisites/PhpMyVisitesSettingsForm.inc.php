@@ -34,11 +34,11 @@ class PhpMyVisitesSettingsForm extends Form {
 		$this->plugin = &$plugin;
 
 		parent::Form($plugin->getTemplatePath() . 'settingsForm.tpl');
-	
+
 		$this->addCheck(new FormValidatorCustom($this, 'phpmvUrl', 'required', 'plugins.generic.phpmv.manager.settings.phpmvUrlRequired', create_function('$phpmvUrl', 'return strpos(trim(strtolower($phpmvUrl)), \'http://\') === 0 ? true : false;')));
 		$this->addCheck(new FormValidator($this, 'phpmvSiteId', 'required', 'plugins.generic.phpmv.manager.settings.phpmvSiteIdRequired'));
 	}
-	
+
 	/**
 	 * Initialize form data.
 	 */
@@ -51,14 +51,14 @@ class PhpMyVisitesSettingsForm extends Form {
 			'phpmvSiteId' => $plugin->getSetting($journalId, 'phpmvSiteId')
 		);
 	}
-	
+
 	/**
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
 		$this->readUserVars(array('phpmvUrl', 'phpmvSiteId'));
 	}
-	
+
 	/**
 	 * Save settings. 
 	 */

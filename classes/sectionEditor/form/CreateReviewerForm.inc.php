@@ -26,10 +26,10 @@ class CreateReviewerForm extends Form {
 	function CreateReviewerForm($articleId) {
 		parent::Form('sectionEditor/createReviewerForm.tpl');
 		$this->addCheck(new FormValidatorPost($this));
-		
+
 		$site = &Request::getSite();
 		$this->articleId = $articleId;
-		
+
 		// Validation checks for this form
 		$this->addCheck(new FormValidator($this, 'username', 'required', 'user.profile.form.usernameRequired'));
 		$this->addCheck(new FormValidatorCustom($this, 'username', 'required', 'user.register.form.usernameExists', array(DAORegistry::getDAO('UserDAO'), 'userExistsByUsername'), array(null, true), true));
@@ -47,7 +47,7 @@ class CreateReviewerForm extends Form {
 		$isEmailBasedReview = $journal->getSetting('mailSubmissionsToReviewers')==1?true:false;
 		$this->setData('sendNotify', ($reviewerAccessKeysEnabled || $isEmailBasedReview)?false:true);
 	}
-	
+
 	function getLocaleFieldNames() {
 		return array('biography', 'interests');
 	}
@@ -73,7 +73,7 @@ class CreateReviewerForm extends Form {
 
 		parent::display();
 	}
-	
+
 	/**
 	 * Assign form data to user-submitted data.
 	 */
@@ -109,7 +109,7 @@ class CreateReviewerForm extends Form {
 			$this->setData('username', strtolower($this->getData('username')));
 		}
 	}
-	
+
 	/**
 	 * Register a new user.
 	 * @return userId int
@@ -139,10 +139,10 @@ class CreateReviewerForm extends Form {
 		$authDao = &DAORegistry::getDAO('AuthSourceDAO');
 		$auth =& $authDao->getDefaultPlugin();
 		$user->setAuthId($auth?$auth->getAuthId():0);
-		
+
 		$site = &Request::getSite();
 		$availableLocales = $site->getSupportedLocales();
-		
+
 		$locales = array();
 		foreach ($this->getData('userLocales') as $locale) {
 			if (Locale::isLocaleValid($locale) && in_array($locale, $availableLocales)) {
@@ -150,11 +150,11 @@ class CreateReviewerForm extends Form {
 			}
 		}
 		$user->setLocales($locales);
-		
+
 		$user->setUsername($this->getData('username'));
 		$password = Validation::generatePassword();
 		$sendNotify = $this->getData('sendNotify');
-		
+
 		if (isset($auth)) {
 			$user->setPassword($password);
 			// FIXME Check result and handle failures
@@ -167,7 +167,7 @@ class CreateReviewerForm extends Form {
 
 		$user->setDateRegistered(Core::getCurrentDate());
 		$userId = $userDao->insertUser($user);
-			
+
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
 		$journal = &Request::getJournal();
 		$role = &new Role();
@@ -175,7 +175,7 @@ class CreateReviewerForm extends Form {
 		$role->setUserId($userId);
 		$role->setRoleId(ROLE_ID_REVIEWER);
 		$roleDao->insertRole($role);
-		
+
 		if ($sendNotify) {
 			// Send welcome email to user
 			import('mail.MailTemplate');

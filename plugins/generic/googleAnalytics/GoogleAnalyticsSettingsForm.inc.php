@@ -34,10 +34,10 @@ class GoogleAnalyticsSettingsForm extends Form {
 		$this->plugin = &$plugin;
 
 		parent::Form($plugin->getTemplatePath() . 'settingsForm.tpl');
-	
+
 		$this->addCheck(new FormValidator($this, 'googleAnalyticsSiteId', 'required', 'plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdRequired'));
 	}
-	
+
 	/**
 	 * Initialize form data.
 	 */
@@ -49,14 +49,14 @@ class GoogleAnalyticsSettingsForm extends Form {
 			'googleAnalyticsSiteId' => $plugin->getSetting($journalId, 'googleAnalyticsSiteId')
 		);
 	}
-	
+
 	/**
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
 		$this->readUserVars(array('googleAnalyticsSiteId'));
 	}
-	
+
 	/**
 	 * Save settings. 
 	 */

@@ -22,13 +22,13 @@ class ContentManager {
 
 	/* the contents file being used */
 	var $filePath;
-	
+
 	/* the contents array */
 	var $fileContent;
-	
+
 	/* the default (first element) */
 	var $defaultHeading;
-		
+
 	/*
 	 * Constructor
 	 */
@@ -50,19 +50,19 @@ class ContentManager {
 
 			$this->filePath = $journalFileManager->filesDir.'content/'.$lang.'/content.xhtml';
 		}
-				
+
 		$this->loadContents();
 	} 
 
 	function loadContents() {
 		$journal = &Request::getJournal();
 		$journalFileManager =& new JournalFileManager($journal);
-		
+
 		// get the current file contents into memory and strip out
 		// characters for easier regex'ing
 		$this->fileContent = $journalFileManager->readFile($this->filePath );		
 		$this->fileContent = preg_replace("/(\r\n|\r|\n)+/","",$this->fileContent);
-	
+
 		// grab the first heading so we can default to it
 		preg_match('/<h([1-3])>(.*)<\/h[1-3]>/U', $this->fileContent, $matches);
 		if ( count($matches) > 0 )
@@ -70,7 +70,7 @@ class ContentManager {
 		else
 			$this->defaultHeading = array( 0, null, null );
 	}
-	
+
 	/* write new content to the file */
 	function saveContents( &$content ) {
 		$journal = &Request::getJournal();
@@ -79,10 +79,10 @@ class ContentManager {
 		$content = CONTENT_FILE_HEADER.$content.CONTENT_FILE_FOOTER;
 
 		$journalFileManager->writeFile($this->filePath, $content );	
-		
+
 		$this->loadContents();		
 	}
-	
+
 	/*
 	 * Parses the entire file to create the table of contents open at $current
 	 * modifies $headings and $content to hold arrays of equal length
@@ -108,7 +108,7 @@ class ContentManager {
 				$webSafe = $this->websafe($headMatches[2][$i]);
 				$headings[$i] = array(1, $webSafe, $headMatches[2][$i]);
 				$content[$webSafe] = $contentMatches[2][$i];
-				
+
 				// if we are going to open at this heading, look for subheadings
 				if ( $webSafe == $current[0] ) {
 					while ( $i + 1 < $count && $headMatches[1][$i + 1] > 1 ) {
@@ -140,7 +140,7 @@ class ContentManager {
 
 		return true; 
 	}
-	
+
 	/*
 	 * Takes current content, finds the appropriate place in the file and inserts it
 	 * changes are written to disk
@@ -162,7 +162,7 @@ class ContentManager {
 
 		preg_match_all('/<h([1-3])>(.*)<\/h[1-3]>/U', $content, $headCurrentMatches);
 		preg_match_all('/<\/h([1-3])>(.*)<(h[1-3]|\/body)>/U', $content."</body>", $contentCurrentMatches);
-		
+
 		/* 
 		 * add all the websafe versions of the headers (for duplicate matching) 
 		 * grab the greatest uniquifying number used so we can use that in future 
@@ -189,7 +189,7 @@ class ContentManager {
 		$count = count($headFileMatches[2]);
 		// an array of the heading levels up to the current
 		$current = explode(":", $strCurrent);
-		
+
 		/* these two variables will serve as aides for ensure unique headings */
 		$addedHeadings = array(1 => array(), 2 => array(), 3 => array() );
 		$prev = 1;
@@ -205,12 +205,12 @@ class ContentManager {
 			if ( $headCurrentMatches[1][0] != 1 ) {
 				$headCurrentMatches[1][0] = 1;				
 			}			
-			
+
 			for ( $i = 0; $i < count($headCurrentMatches[0]); $i++ ) {
 				/* cannot go from an H1 to an H3 */
 				if ( $headCurrentMatches[1][$i] > $prev + 1 )
 					$headCurrentMatches[1][$i] = $prev + 1;
-				
+
 				/* prepare $prev for next loop */
 				$prev = $headCurrentMatches[1][$i];
 
@@ -219,7 +219,7 @@ class ContentManager {
 					$headCurrentMatches[2][$i] = preg_replace('/^(.*)(_duplicate_[0-9]+)?$/', '$0_duplicate_'.$uniquifier,$headCurrentMatches[2][$i]);
 					$headCurrentMatches[3][$i] = preg_replace('/^(.*)(_duplicate_[0-9]+)?$/', '$0_duplicate_'.$uniquifier,  $headCurrentMatches[3][$i]);
 					$uniquifier++;
-					
+
 				}
 
 				$toWrite .= "\n<h".$headCurrentMatches[1][$i].">".$headCurrentMatches[2][$i]."</h".$headCurrentMatches[1][$i].">\n";
@@ -234,13 +234,13 @@ class ContentManager {
 			}			 
 
 		}
-		
+
 		/* 
 		 * Case where going to append to an already existing file
 		 */
 		while ( $i + 1 < $count ) {
 			$i++;	
-		
+
 			/* 
 			 * if this is the place of the insert
 			 * same heading name (websafe version) && the right heading level [1-3]
@@ -284,7 +284,7 @@ class ContentManager {
 						if ( $headFileMatches[1][$i] < 2 )
 							$addedHeadings[2] = array();
 					}
-					
+
 					// and now just put the rest of the new content
 					for ( $j = 1; $j < count($headCurrentMatches[0]); $j++ ) {
 						/* remove duplicates - uniquify */
@@ -300,7 +300,7 @@ class ContentManager {
 							$addedHeadings[3] = array();
 						if ( $headCurrentMatches[1][$j] < 2 )
 							$addedHeadings[2] = array();						
-										
+
 					}
 				}
 			} else {
@@ -311,7 +311,7 @@ class ContentManager {
 					$headFileMatches[3][$i] = preg_replace('/^(.*)(_duplicate_[0-9]+)?$/', '$0_duplicate_'.$uniquifier,$headFileMatches[3][$i]);
 					$uniquifier++;
 				}			
-								
+
 				// write all the content as is
 				$toWrite .= "\n<h".$headFileMatches[1][$i].">".$headFileMatches[2][$i]."</h".$headFileMatches[1][$i].">\n";
 				$toWrite .= $contentFileMatches[2][$i]."\n";
@@ -324,7 +324,7 @@ class ContentManager {
 
 			}
 		}		
-		
+
 		/* this mess of code here is to handle changes in the current heading name
 		 * be it on rename or on delete. 
 		 * $current has the array index so we can't get rid of it, but we need to change
@@ -332,23 +332,23 @@ class ContentManager {
 		 * on the next page call
 		 */
 		if ( count( $headCurrentMatches[0]) > 0 ) {
-			 // the heading is renamed
-			 $newCurrent = explode(":", $strCurrent);
-			 $newCurrent[count($newCurrent) - 1] = $this->webSafe($headCurrentMatches[2][0]);
-			 $strCurrent = implode(":", $newCurrent);
+			// the heading is renamed
+			$newCurrent = explode(":", $strCurrent);
+			$newCurrent[count($newCurrent) - 1] = $this->webSafe($headCurrentMatches[2][0]);
+			$strCurrent = implode(":", $newCurrent);
 		} else {
 			// the heading is deleted
-			 $newCurrent = explode(":", $strCurrent);
-			 unset($newCurrent[count($newCurrent) - 1]);
-			 $strCurrent = implode(":", $newCurrent);
+			$newCurrent = explode(":", $strCurrent);
+			unset($newCurrent[count($newCurrent) - 1]);
+			$strCurrent = implode(":", $newCurrent);
 		}
-		
+
 		$this->saveContents( $toWrite );	
-		
-		
+
+
 		return true;
 	}
-	
+
 	/* strip out spaces and semi colones in the name */
 	function websafe ( $str ) {
 		return urlencode(strtolower(str_replace(' ', '_', str_replace(':', '', $str))));
@@ -357,7 +357,7 @@ class ContentManager {
 	function cleanurl ( $str ) {
 		return str_replace("%3A", ":", urlencode(strtolower(str_replace(' ', '_', $str))));
 	}
-	
+
 }
 
 ?>

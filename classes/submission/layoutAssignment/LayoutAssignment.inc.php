@@ -23,11 +23,11 @@ class LayoutAssignment extends DataObject {
 	function LayoutAssignment() {
 		parent::DataObject();
 	}
-	
+
 	//
 	// Get/set methods
 	//
-	
+
 	/**
 	 * Get ID of layout assignment.
 	 * @return int
@@ -35,7 +35,7 @@ class LayoutAssignment extends DataObject {
 	function getLayoutId() {
 		return $this->getData('layoutId');
 	}
-	
+
 	/**
 	 * Set ID of layout assignment
 	 * @param $layoutId int
@@ -43,7 +43,7 @@ class LayoutAssignment extends DataObject {
 	function setLayoutId($layoutId) {
 		return $this->setData('layoutId', $layoutId);
 	}
-	
+
 	/**
 	 * Get ID of article.
 	 * @return int
@@ -51,7 +51,7 @@ class LayoutAssignment extends DataObject {
 	function getArticleId() {
 		return $this->getData('articleId');
 	}
-	
+
 	/**
 	 * Set ID of article.
 	 * @param $articleId int
@@ -59,7 +59,7 @@ class LayoutAssignment extends DataObject {
 	function setArticleId($articleId) {
 		return $this->setData('articleId', $articleId);
 	}
-	
+
 	/**
 	 * Get user ID of layout editor.
 	 * @return int
@@ -67,7 +67,7 @@ class LayoutAssignment extends DataObject {
 	function getEditorId() {
 		return $this->getData('editorId');
 	}
-	
+
 	/**
 	 * Set user ID of layout editor.
 	 * @param $editorId int
@@ -75,7 +75,7 @@ class LayoutAssignment extends DataObject {
 	function setEditorId($editorId) {
 		return $this->setData('editorId', $editorId);
 	}
-	
+
 	/**
 	 * Get full name of layout editor.
 	 * @return string
@@ -83,7 +83,7 @@ class LayoutAssignment extends DataObject {
 	function getEditorFullName() {
 		return $this->getData('editorFullName');
 	}
-	
+
 	/**
 	 * Set full name of layout editor.
 	 * @param $editorFullName string
@@ -91,7 +91,7 @@ class LayoutAssignment extends DataObject {
 	function setEditorFullName($editorFullName) {
 		return $this->setData('editorFullName', $editorFullName);
 	}
-	
+
 	/**
 	 * Get email of layout editor.
 	 * @return string
@@ -99,7 +99,7 @@ class LayoutAssignment extends DataObject {
 	function getEditorEmail() {
 		return $this->getData('editorEmail');
 	}
-	
+
 	/**
 	 * Set email of layout editor.
 	 * @param $editorEmail string
@@ -107,7 +107,7 @@ class LayoutAssignment extends DataObject {
 	function setEditorEmail($editorEmail) {
 		return $this->setData('editorEmail', $editorEmail);
 	}
-	
+
 	/**
 	 * Get the assignment requested by date.
 	 * @return string
@@ -115,7 +115,7 @@ class LayoutAssignment extends DataObject {
 	function getDateNotified() {
 		return $this->getData('dateNotified');
 	}
-	
+
 	/**
 	 * Set the assignment requested by date.
 	 * @param $dateNotified string
@@ -123,7 +123,7 @@ class LayoutAssignment extends DataObject {
 	function setDateNotified($dateNotified) {
 		return $this->setData('dateNotified', $dateNotified);
 	}
-	
+
 	/**
 	 * Get the assignment underway date.
 	 * @return string
@@ -131,7 +131,7 @@ class LayoutAssignment extends DataObject {
 	function getDateUnderway() {
 		return $this->getData('dateUnderway');
 	}
-	
+
 	/**
 	 * Set the assignment underway date.
 	 * @param $dateUnderway string
@@ -139,7 +139,7 @@ class LayoutAssignment extends DataObject {
 	function setDateUnderway($dateUnderway) {
 		return $this->setData('dateUnderway', $dateUnderway);
 	}
-	
+
 	/**
 	 * Get the assignment completion date.
 	 * @return string
@@ -147,7 +147,7 @@ class LayoutAssignment extends DataObject {
 	function getDateCompleted() {
 		return $this->getData('dateCompleted');
 	}
-	
+
 	/**
 	 * Set the assignment completion date.
 	 * @param $dateCompleted string
@@ -155,7 +155,7 @@ class LayoutAssignment extends DataObject {
 	function setDateCompleted($dateCompleted) {
 		return $this->setData('dateCompleted', $dateCompleted);
 	}
-	
+
 	/**
 	 * Get the assignment acknowledgement date.
 	 * @return string
@@ -163,7 +163,7 @@ class LayoutAssignment extends DataObject {
 	function getDateAcknowledged() {
 		return $this->getData('dateAcknowledged');
 	}
-	
+
 	/**
 	 * Set the assignment acknowledgement date.
 	 * @param $dateAcknowledged string
@@ -171,7 +171,7 @@ class LayoutAssignment extends DataObject {
 	function setDateAcknowledged($dateAcknowledged) {
 		return $this->setData('dateAcknowledged', $dateAcknowledged);
 	}
-	
+
 	/**
 	 * Get ID of the layout file.
 	 * @return int
@@ -179,7 +179,7 @@ class LayoutAssignment extends DataObject {
 	function getLayoutFileId() {
 		return $this->getData('layoutFileId');
 	}
-	
+
 	/**
 	 * Set ID of the layout file.
 	 * @param $layoutFileId int
@@ -187,7 +187,7 @@ class LayoutAssignment extends DataObject {
 	function setLayoutFileId($layoutFileId) {
 		return $this->setData('layoutFileId', $layoutFileId);
 	}
-	
+
 	/**
 	 * Get layout file.
 	 * @return ArticleFile
@@ -195,7 +195,7 @@ class LayoutAssignment extends DataObject {
 	function getLayoutFile() {
 		return $this->getData('layoutFile');
 	}
-	
+
 	/**
 	 * Set layout file.
 	 * @param $layoutFile ArticleFile

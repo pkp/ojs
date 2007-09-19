@@ -23,11 +23,11 @@ class CopyAssignment extends DataObject {
 	function CopyAssignment() {
 		parent::DataObject();
 	}
-	
+
 	//
 	// Get/set methods
 	//
-	
+
 	/**
 	 * Get ID of copyed assignment.
 	 * @return int
@@ -35,7 +35,7 @@ class CopyAssignment extends DataObject {
 	function getCopyedId() {
 		return $this->getData('copyedId');
 	}
-	
+
 	/**
 	 * Set ID of copyed assignment
 	 * @param $copyedId int
@@ -43,7 +43,7 @@ class CopyAssignment extends DataObject {
 	function setCopyedId($copyedId) {
 		return $this->setData('copyedId', $copyedId);
 	}
-	
+
 	/**
 	 * Get ID of article.
 	 * @return int
@@ -51,7 +51,7 @@ class CopyAssignment extends DataObject {
 	function getArticleId() {
 		return $this->getData('articleId');
 	}
-	
+
 	/**
 	 * Set ID of article.
 	 * @param $articleId int
@@ -59,7 +59,7 @@ class CopyAssignment extends DataObject {
 	function setArticleId($articleId) {
 		return $this->setData('articleId', $articleId);
 	}
-	
+
 	/**
 	 * Get copyeditor id of this article.
 	 * @return int
@@ -67,7 +67,7 @@ class CopyAssignment extends DataObject {
 	function getCopyeditorId() {
 		return $this->getData('copyeditorId');
 	}
-	
+
 	/**
 	 * Set copyeditor id of this article.
 	 * @param $copyeditorId User
@@ -75,7 +75,7 @@ class CopyAssignment extends DataObject {
 	function setCopyeditorId($copyeditorId) {
 		return $this->setData('copyeditorId', $copyeditorId);
 	}
-	
+
 	/**
 	 * Get full name of copyeditor.
 	 * @return string
@@ -83,7 +83,7 @@ class CopyAssignment extends DataObject {
 	function getCopyeditorFullName() {
 		return $this->getData('copyeditorFullName');
 	}
-	
+
 	/**
 	 * Set full name of copyeditor.
 	 * @param $copyeditorFullName string
@@ -91,7 +91,7 @@ class CopyAssignment extends DataObject {
 	function setCopyeditorFullName($copyeditorFullName) {
 		return $this->setData('copyeditorFullName', $copyeditorFullName);
 	}
-	
+
 	/**
 	 * Get date notified.
 	 * @return string
@@ -99,7 +99,7 @@ class CopyAssignment extends DataObject {
 	function getDateNotified() {
 		return $this->getData('dateNotified');
 	}
-	
+
 	/**
 	 * Set date notified.
 	 * @param $dateNotified string
@@ -107,7 +107,7 @@ class CopyAssignment extends DataObject {
 	function setDateNotified($dateNotified) {
 		return $this->setData('dateNotified', $dateNotified);
 	}
-	
+
 	/**
 	 * Get date underway.
 	 * @return string
@@ -115,7 +115,7 @@ class CopyAssignment extends DataObject {
 	function getDateUnderway() {
 		return $this->getData('dateUnderway');
 	}
-	
+
 	/**
 	 * Set date underway.
 	 * @param $dateUnderway string
@@ -123,7 +123,7 @@ class CopyAssignment extends DataObject {
 	function setDateUnderway($dateUnderway) {
 		return $this->setData('dateUnderway', $dateUnderway);
 	}
-	
+
 	/**
 	 * Get date completed.
 	 * @return string
@@ -131,7 +131,7 @@ class CopyAssignment extends DataObject {
 	function getDateCompleted() {
 		return $this->getData('dateCompleted');
 	}
-	
+
 	/**
 	 * Set date completed.
 	 * @param $dateCompleted string
@@ -140,7 +140,7 @@ class CopyAssignment extends DataObject {
 	{
 		return $this->setData('dateCompleted', $dateCompleted);
 	}
-	
+
 	/**
 	 * Get date acknowledged.
 	 * @return string
@@ -148,7 +148,7 @@ class CopyAssignment extends DataObject {
 	function getDateAcknowledged() {
 		return $this->getData('dateAcknowledged');
 	}
-	
+
 	/**
 	 * Set date acknowledged.
 	 * @param $dateAcknowledged string
@@ -157,7 +157,7 @@ class CopyAssignment extends DataObject {
 	{
 		return $this->setData('dateAcknowledged', $dateAcknowledged);
 	}
-	
+
 	/**
 	 * Get date author notified.
 	 * @return string
@@ -165,7 +165,7 @@ class CopyAssignment extends DataObject {
 	function getDateAuthorNotified() {
 		return $this->getData('dateAuthorNotified');
 	}
-	
+
 	/**
 	 * Set date author notified.
 	 * @param $dateAuthorNotified string
@@ -174,7 +174,7 @@ class CopyAssignment extends DataObject {
 	{
 		return $this->setData('dateAuthorNotified', $dateAuthorNotified);
 	}
-	
+
 	/**
 	 * Get date author underway.
 	 * @return string
@@ -182,7 +182,7 @@ class CopyAssignment extends DataObject {
 	function getDateAuthorUnderway() {
 		return $this->getData('dateAuthorUnderway');
 	}
-	
+
 	/**
 	 * Set date author underway.
 	 * @param $dateAuthorUnderway string
@@ -190,7 +190,7 @@ class CopyAssignment extends DataObject {
 	function setDateAuthorUnderway($dateAuthorUnderway) {
 		return $this->setData('dateAuthorUnderway', $dateAuthorUnderway);
 	}
-	
+
 	/**
 	 * Get date author completed.
 	 * @return string
@@ -198,7 +198,7 @@ class CopyAssignment extends DataObject {
 	function getDateAuthorCompleted() {
 		return $this->getData('dateAuthorCompleted');
 	}
-	
+
 	/**
 	 * Set date author completed.
 	 * @param $dateAuthorCompleted string
@@ -207,7 +207,7 @@ class CopyAssignment extends DataObject {
 	{
 		return $this->setData('dateAuthorCompleted', $dateAuthorCompleted);
 	}
-	
+
 	/**
 	 * Get date author acknowledged.
 	 * @return string
@@ -215,7 +215,7 @@ class CopyAssignment extends DataObject {
 	function getDateAuthorAcknowledged() {
 		return $this->getData('dateAuthorAcknowledged');
 	}
-	
+
 	/**
 	 * Set date author acknowledged.
 	 * @param $dateAuthorAcknowledged string
@@ -224,7 +224,7 @@ class CopyAssignment extends DataObject {
 	{
 		return $this->setData('dateAuthorAcknowledged', $dateAuthorAcknowledged);
 	}
-	
+
 	/**
 	 * Get date final notified.
 	 * @return string
@@ -232,7 +232,7 @@ class CopyAssignment extends DataObject {
 	function getDateFinalNotified() {
 		return $this->getData('dateFinalNotified');
 	}
-	
+
 	/**
 	 * Set date final notified.
 	 * @param $dateFinalNotified string
@@ -241,7 +241,7 @@ class CopyAssignment extends DataObject {
 	{
 		return $this->setData('dateFinalNotified', $dateFinalNotified);
 	}
-	
+
 	/**
 	 * Get date final underway.
 	 * @return string
@@ -249,7 +249,7 @@ class CopyAssignment extends DataObject {
 	function getDateFinalUnderway() {
 		return $this->getData('dateFinalUnderway');
 	}
-	
+
 	/**
 	 * Set date final underway.
 	 * @param $dateFinalUnderway string
@@ -257,7 +257,7 @@ class CopyAssignment extends DataObject {
 	function setDateFinalUnderway($dateFinalUnderway) {
 		return $this->setData('dateFinalUnderway', $dateFinalUnderway);
 	}
-	
+
 	/**
 	 * Get date final completed.
 	 * @return string
@@ -265,7 +265,7 @@ class CopyAssignment extends DataObject {
 	function getDateFinalCompleted() {
 		return $this->getData('dateFinalCompleted');
 	}
-	
+
 	/**
 	 * Set date final completed.
 	 * @param $dateFinalCompleted string
@@ -274,7 +274,7 @@ class CopyAssignment extends DataObject {
 	{
 		return $this->setData('dateFinalCompleted', $dateFinalCompleted);
 	}
-	
+
 	/**
 	 * Get date final acknowledged.
 	 * @return string
@@ -282,7 +282,7 @@ class CopyAssignment extends DataObject {
 	function getDateFinalAcknowledged() {
 		return $this->getData('dateFinalAcknowledged');
 	}
-	
+
 	/**
 	 * Set date final acknowledged.
 	 * @param $dateAuthorAcknowledged string
@@ -291,7 +291,7 @@ class CopyAssignment extends DataObject {
 	{
 		return $this->setData('dateFinalAcknowledged', $dateFinalAcknowledged);
 	}
-	
+
 	/**
 	 * Get ID of the copyed file.
 	 * @return int
@@ -299,7 +299,7 @@ class CopyAssignment extends DataObject {
 	function getCopyedFileId() {
 		return $this->getData('copyedFileId');
 	}
-	
+
 	/**
 	 * Set ID of the copyed file.
 	 * @param $copyedFileId int
@@ -307,7 +307,7 @@ class CopyAssignment extends DataObject {
 	function setCopyedFileId($copyedFileId) {
 		return $this->setData('copyedFileId', $copyedFileId);
 	}
-	
+
 	/**
 	 * Get copyed file.
 	 * @return ArticleFile
@@ -315,7 +315,7 @@ class CopyAssignment extends DataObject {
 	function getLayoutFile() {
 		return $this->getData('layoutFile');
 	}
-	
+
 	/**
 	 * Set layout file.
 	 * @param $layoutFile ArticleFile
@@ -323,7 +323,7 @@ class CopyAssignment extends DataObject {
 	function setLayoutFile($layoutFile) {
 		return $this->setData('layoutFile', $layoutFile);
 	}
-	
+
 	/**
 	 * Get initial revision.
 	 * @return int
@@ -331,7 +331,7 @@ class CopyAssignment extends DataObject {
 	function getInitialRevision() {
 		return $this->getData('initialRevision');
 	}
-	
+
 	/**
 	 * Set initial revision.
 	 * @param $initialRevision int
@@ -339,7 +339,7 @@ class CopyAssignment extends DataObject {
 	function setInitialRevision($initialRevision)	{
 		return $this->setData('initialRevision', $initialRevision);
 	}
-	
+
 	/**
 	 * Get editor/author revision.
 	 * @return int
@@ -347,7 +347,7 @@ class CopyAssignment extends DataObject {
 	function getEditorAuthorRevision() {
 		return $this->getData('editorAuthorRevision');
 	}
-	
+
 	/**
 	 * Set editor/author revision.
 	 * @param $editorAuthorRevision int
@@ -355,7 +355,7 @@ class CopyAssignment extends DataObject {
 	function setEditorAuthorRevision($editorAuthorRevision)	{
 		return $this->setData('editorAuthorRevision', $editorAuthorRevision);
 	}
-	
+
 	/**
 	 * Get final revision.
 	 * @return int
@@ -363,7 +363,7 @@ class CopyAssignment extends DataObject {
 	function getFinalRevision() {
 		return $this->getData('finalRevision');
 	}
-	
+
 	/**
 	 * Set final revision.
 	 * @param $finalRevision int
@@ -371,7 +371,7 @@ class CopyAssignment extends DataObject {
 	function setFinalRevision($finalRevision)	{
 		return $this->setData('finalRevision', $finalRevision);
 	}
-	
+
 	//
 	// Files
 	//
@@ -385,7 +385,7 @@ class CopyAssignment extends DataObject {
 		$returner =& $this->getData('initialCopyeditFile');
 		return $returner;
 	}
-	
+
 	/**
 	 * Set initial copyedit file.
 	 * (The file to be copyeditted in the Initial Copyedit stage.)
@@ -394,7 +394,7 @@ class CopyAssignment extends DataObject {
 	function setInitialCopyeditFile($initialCopyeditFile) {
 		return $this->setData('initialCopyeditFile', $initialCopyeditFile);
 	}
-	
+
 	/**
 	 * Get editor author copyedit file.
 	 * (The file to be copyeditted in the Author Copyedit stage.)
@@ -404,7 +404,7 @@ class CopyAssignment extends DataObject {
 		$returner =& $this->getData('editorAuthorCopyeditFile');
 		return $returner;
 	}
-	
+
 	/**
 	 * Set editor author copyedit file.
 	 * (The file to be copyeditted in the Author Copyedit stage.)
@@ -413,7 +413,7 @@ class CopyAssignment extends DataObject {
 	function setEditorAuthorCopyeditFile($editorAuthorCopyeditFile) {
 		return $this->setData('editorAuthorCopyeditFile', $editorAuthorCopyeditFile);
 	}
-	
+
 	/**
 	 * Get final copyedit file.
 	 * (The file to be copyeditted in the Final Copyedit stage.)
@@ -423,7 +423,7 @@ class CopyAssignment extends DataObject {
 		$returner =& $this->getData('finalCopyeditFile');
 		return $returner;
 	}
-	
+
 	/**
 	 * Set final copyedit file.
 	 * (The file to be copyeditted in the Final Copyedit stage.)

@@ -17,14 +17,14 @@
 import('article.ArticleFile');
 
 class ArticleNote extends ArticleFile {
- 
+
 	/**
 	 * Constructor.
 	 */
 	function ArticleNote() {
 		parent::DataObject();
 	}
-	
+
 	/**
 	 * get article note id
 	 * @return int
@@ -32,7 +32,7 @@ class ArticleNote extends ArticleFile {
 	function getNoteId() {
 		return $this->getData('noteId');
 	}
-	 
+
 	/**
 	 * set article note id
 	 * @param $noteId int
@@ -40,7 +40,7 @@ class ArticleNote extends ArticleFile {
 	function setNoteId($noteId) {
 		return $this->setData('noteId',$noteId);
 	}
- 
+
 	/**
 	 * get article id
 	 * @return int
@@ -48,7 +48,7 @@ class ArticleNote extends ArticleFile {
 	function getArticleId() {
 		return $this->getData('articleId');
 	}
-	 
+
 	/**
 	 * set article id
 	 * @param $articleId int
@@ -56,7 +56,7 @@ class ArticleNote extends ArticleFile {
 	function setArticleId($articleId) {
 		return $this->setData('articleId',$articleId);
 	}
-	
+
 	/**
 	 * get user id
 	 * @return int
@@ -64,7 +64,7 @@ class ArticleNote extends ArticleFile {
 	function getUserId() {
 		return $this->getData('userId');
 	}
-	 
+
 	/**
 	 * set user id
 	 * @param $userId int
@@ -72,7 +72,7 @@ class ArticleNote extends ArticleFile {
 	function setUserId($userId) {
 		return $this->setData('userId',$userId);
 	}
- 
+
  	/**
 	 * get date created
 	 * @return date
@@ -80,7 +80,7 @@ class ArticleNote extends ArticleFile {
 	function getDateCreated() {
 		return $this->getData('dateCreated');
 	}
-	 
+
 	/**
 	 * set date created
 	 * @param $dateCreated date
@@ -96,7 +96,7 @@ class ArticleNote extends ArticleFile {
 	function getDateModified() {
 		return $this->getData('dateModified');
 	}
-	 
+
 	/**
 	 * set date modified
 	 * @param $dateModified date
@@ -112,7 +112,7 @@ class ArticleNote extends ArticleFile {
 	function getTitle() {
 		return $this->getData('title');
 	}
-	 
+
 	/**
 	 * set title
 	 * @param $title string
@@ -128,7 +128,7 @@ class ArticleNote extends ArticleFile {
 	function getNote() {
 		return $this->getData('note');
 	}
-	 
+
 	/**
 	 * set note
 	 * @param $note string
@@ -144,7 +144,7 @@ class ArticleNote extends ArticleFile {
 	function getFileId() {
 		return $this->getData('fileId');
 	}
-	 
+
 	/**
 	 * set file id
 	 * @param $fileId int
@@ -154,5 +154,5 @@ class ArticleNote extends ArticleFile {
 	}
 
  }
- 
+
 ?>

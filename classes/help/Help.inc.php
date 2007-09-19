@@ -156,7 +156,7 @@ class Help {
 	 * @return array
 	 */
 	function &buildToc($helpToc) {
-	
+
 		$toc = array();
 		foreach($helpToc as $topicId => $section) {
 			$toc[$topicId] = array('title' => $section['title'], 'prefix' => '');
@@ -164,7 +164,7 @@ class Help {
 		}
 		return $toc;
 	}
-	
+
 	/**
 	 * Helper method for buildToc
 	 * @param $helpToc array
@@ -180,7 +180,7 @@ class Help {
 			}
 		}
 	}
-		
+
 	/**
 	 * Helper method for getTableOfContents
 	 * @param $topicId int
@@ -195,7 +195,7 @@ class Help {
 		} else {
 			$tocId = $topic->getSubTocId();
 		}
-		
+
 		$section = array();
 		if ($tocId && $tocId != $prevTocId) {
 			$tocDao = &DAORegistry::getDAO('HelpTocDAO');
@@ -215,7 +215,7 @@ class Help {
 
 		return $section;
 	}
-	
+
 	/**
 	 * Returns the most recent modified file in the specified directory
 	 * Taken from the php.net site under filemtime

@@ -27,7 +27,7 @@ class GroupMembershipDAO extends DAO {
 		parent::DAO();
 		$this->userDao =& DAORegistry::getDAO('UserDAO');
 	}
-	
+
 	/**
 	 * Retrieve a membership by ID.
 	 * @param $groupId int
@@ -87,7 +87,7 @@ class GroupMembershipDAO extends DAO {
 		$membership->setUser($users[$userId]);
 		$membership->setSequence($row['seq']);
 		$membership->setAboutDisplayed($row['about_displayed']);
-		
+
 		HookRegistry::call('GroupMembershipDAO::_returnMemberFromRow', array(&$membership, &$row));
 
 		return $membership;
@@ -111,7 +111,7 @@ class GroupMembershipDAO extends DAO {
 			)
 		);
 	}
-	
+
 	/**
 	 * Update an existing group membership.
 	 * @param $membership GroupMembership
@@ -133,7 +133,7 @@ class GroupMembershipDAO extends DAO {
 			)
 		);
 	}
-	
+
 	/**
 	 * Delete a membership
 	 * @param $journal GroupMembership
@@ -141,7 +141,7 @@ class GroupMembershipDAO extends DAO {
 	function deleteMembership(&$membership) {
 		return $this->deleteMembershipById($membership->getGroupId(), $membership->getUserId());
 	}
-	
+
 	/**
 	 * Delete a membership
 	 * @param $groupId int
@@ -153,7 +153,7 @@ class GroupMembershipDAO extends DAO {
 			array($groupId, $userId)
 		);
 	}
-	
+
 	/**
 	 * Delete group membership by group ID
 	 * @param $groupId int
@@ -164,7 +164,7 @@ class GroupMembershipDAO extends DAO {
 			$groupId
 		);
 	}
-	
+
 	/**
 	 * Delete group membership by user ID
 	 * @param $userId int
@@ -175,7 +175,7 @@ class GroupMembershipDAO extends DAO {
 			$userId
 		);
 	}
-	
+
 	/**
 	 * Sequentially renumber group members in their sequence order.
 	 * @param $groupId int
@@ -185,7 +185,7 @@ class GroupMembershipDAO extends DAO {
 			'SELECT user_id, group_id FROM group_memberships WHERE group_id = ? ORDER BY seq',
 			$groupId
 		);
-		
+
 		for ($i=1; !$result->EOF; $i++) {
 			list($userId, $groupId) = $result->fields;
 			$this->update(
@@ -196,7 +196,7 @@ class GroupMembershipDAO extends DAO {
 					$groupId
 				)
 			);
-			
+
 			$result->moveNext();
 		}
 

@@ -23,11 +23,11 @@ class HelpTopicSection extends DataObject {
 	function HelpTopicSection() {
 		parent::DataObject();
 	}
-	
+
 	//
 	// Get/set methods
 	//
-	
+
 	/**
 	 * Get section title.
 	 * @return string
@@ -35,7 +35,7 @@ class HelpTopicSection extends DataObject {
 	function getTitle() {
 		return $this->getData('title');
 	}
-	
+
 	/**
 	 * Set section title.
 	 * @param $title string
@@ -43,7 +43,7 @@ class HelpTopicSection extends DataObject {
 	function setTitle($title) {
 		$this->setData('title', $title);
 	}
-	
+
 	/**
 	 * Get section content (assumed to be in HTML format).
 	 * @return string
@@ -51,7 +51,7 @@ class HelpTopicSection extends DataObject {
 	function getContent() {
 		return $this->getData('content');
 	}
-	
+
 	/**
 	 * Set section content.
 	 * @param $content string
@@ -59,7 +59,7 @@ class HelpTopicSection extends DataObject {
 	function setContent($content) {
 		$this->setData('content', $content);
 	}
-	
+
 }
 
 ?>

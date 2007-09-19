@@ -93,7 +93,7 @@ class ArticleHandler extends Handler {
 			$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
 			$galley = &$galleyDao->getGalley($galleyId, $article->getArticleId());
 		}
-		
+
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
@@ -206,7 +206,7 @@ class ArticleHandler extends Handler {
 		// The RST needs to know whether this galley is HTML or not. Fetch the galley.
 		$articleGalleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
 		$galley = &$articleGalleyDao->getGalley($galleyId, $article->getArticleId());
-		
+
 		$sectionDao = &DAORegistry::getDAO('SectionDAO');
 		$section = &$sectionDao->getSection($article->getSectionId());
 
@@ -227,7 +227,7 @@ class ArticleHandler extends Handler {
 			ARTICLE_SEARCH_INDEX_TERMS => 'search.indexTerms',
 			ARTICLE_SEARCH_GALLEY_FILE => 'search.fullText'
 		));
-		
+
 		// Bring in comment constants.
 		$commentDao = &DAORegistry::getDAO('CommentDAO');
 
@@ -367,15 +367,15 @@ class ArticleHandler extends Handler {
 			if (!$isSubscribedDomain && !Validation::isLoggedIn() && $journal->getSetting('restrictArticleAccess') && isset($galleyId) && $galleyId != 0) {
 				Validation::redirectLogin();
 			}
-	
+
 			// bypass all validation if subscription based on domain or ip is valid
 			// or if the user is just requesting the abstract
 			if ( (!$isSubscribedDomain && $subscriptionRequired) &&
 			     (isset($galleyId) && $galleyId!=0) ) {
-				
+
 				// Subscription Access
 				$subscribedUser = IssueAction::subscribedUser($journal);
-	
+
 				if (!(!$subscriptionRequired || $publishedArticle->getAccessStatus() || $subscribedUser)) {
 					if (!isset($galleyId) || $galleyId) {
 						Request::redirect(null, 'index');	

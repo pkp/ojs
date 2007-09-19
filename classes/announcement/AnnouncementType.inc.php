@@ -20,11 +20,11 @@ class AnnouncementType extends DataObject {
 	function AnnouncementType() {
 		parent::DataObject();
 	}
-	
+
 	//
 	// Get/set methods
 	//
-	
+
 	/**
 	 * Get the ID of the announcement type.
 	 * @return int
@@ -32,7 +32,7 @@ class AnnouncementType extends DataObject {
 	function getTypeId() {
 		return $this->getData('typeId');
 	}
-	
+
 	/**
 	 * Set the ID of the announcement type.
 	 * @param $typeId int
@@ -48,7 +48,7 @@ class AnnouncementType extends DataObject {
 	function getJournalId() {
 		return $this->getData('journalId');
 	}
-	
+
 	/**
 	 * Set the journal ID of the announcement type.
 	 * @param $journalId int
@@ -64,7 +64,7 @@ class AnnouncementType extends DataObject {
 	function getAnnouncementTypeName() {
 		return $this->getLocalizedData('name');
 	}
-	
+
 	/**
 	 * Get the type of the announcement type.
 	 * @param $locale string

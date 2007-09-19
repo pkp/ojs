@@ -12,7 +12,7 @@
  * Rounded Corners plugin class
  *
  */
- 
+
 import('classes.plugins.GenericPlugin');
 
 class RoundedCornersPlugin extends GenericPlugin {
@@ -20,11 +20,11 @@ class RoundedCornersPlugin extends GenericPlugin {
 	function getName() {
 		return 'RoundedCornersPlugin';
 	}
-	
+
 	function getDisplayName() {
 		return Locale::translate('plugins.generic.roundedcorners.displayName');
 	}
-    
+
 	function getDescription() {
 		return Locale::translate('plugins.generic.roundedcorners.description');
 	}   
@@ -40,7 +40,7 @@ class RoundedCornersPlugin extends GenericPlugin {
 		}
 		return false;
 	}
-		
+
 	/**
 	 * Determine whether or not this plugin is enabled.
 	 */
@@ -62,7 +62,7 @@ class RoundedCornersPlugin extends GenericPlugin {
 		var_dump($enabled);
 		return false;
 	}
-	
+
 	/**
 	 * Display verbs for the management interface.
 	 */
@@ -81,30 +81,30 @@ class RoundedCornersPlugin extends GenericPlugin {
 		}
 		return $verbs;
 	}
-	
+
 	/**
 	 * Perform management functions
 	 */
 	function manage($verb, $args) {
 		$returner = false;
-		
+
 		$enabled = ( $verb == 'enable' );
 		$this->setEnabled($enabled);
 		return $returner;		
 	}
-	
+
 	/**
 	 * Register the output filter and add the stylesheet
 	 */
 	function roundCorners( $hookName, $args) {
 		$templateMgr =& $args[0];
-		
+
 		$baseUrl = $templateMgr->get_template_vars('baseUrl');
 		$roundedCornerCssUrl = $baseUrl . '/plugins/generic/roundedCorners/roundedcorners.css';
 		$templateMgr->addStyleSheet($roundedCornerCssUrl);
 		$templateMgr->register_outputfilter(array(&$this, 'mainOutputFilter'));
 	}
-	
+
 	/** 
 	 * Do the work of adding in the <span> blocks
 	 */	
@@ -112,65 +112,58 @@ class RoundedCornersPlugin extends GenericPlugin {
 		$top = '<span class="rtop"><span class="r1"></span><span class="r2"></span><span class="r3"></span><span class="r4"></span></span><div style="padding-left: 1em;">';
 		$bottom = '</div><span class="rbottom"><span class="r4"></span><span class="r3"></span><span class="r2"></span><span class="r1"></span></span>';
 		$newOutput = $output;
-		
+
 		$classes = array('block');
 		foreach ( $classes as $class ) {
 			$matches = $this->_getDivs($newOutput, $class);
 			if ( count($matches) > 0 ) {
 				foreach ($matches as $match) {	
 					if ( preg_match('/<div[^>]+class\=\"'.$class.'\"[^>]*>(\s*)(<\/div>[^<]*)$/', $match) > 0 ) continue;
-					
+
 					$newBlock = preg_replace('/(<div[^>]+class\=\"'.$class.'\"[^>]*>)/is', "\\1$top", $match, PREG_OFFSET_CAPTURE);
 					$newBlock = preg_replace('/([^>]*)(<\/div>[^<]*)$/', "\\1$bottom\\2", $newBlock);
-					
+
 					$newOutput = str_replace($match, $newBlock, $newOutput);
 				}
 			}
 		}
 		$smarty->unregister_outputfilter('mainOutputFilter');
-		
+
 		return $newOutput;
 	}
-	
+
 	/**
 	 * look for the opening and closing divs with a particular $class in the $subject 
 	 * Have to count opening and closing divs since regexes are not so good matching opening and closing tags
 	 */
-	function _getDivs($subject, $class)
-	{
-	        preg_match_all("/<div[^>]+class\=\"$class\"[^>]*>/is", $subject, $matches, PREG_OFFSET_CAPTURE);
-	        
-	        $matches = $matches[0];
-	        for($i=0; $i<count($matches); $i++)
-	        {
-	                $openDivs = 0;
-	                $closedDivs = 0;
-	                $divClosePosition = 0;
-	                $divPosition = array();
-	                preg_match_all("/<\/?div[^>]*>/is", $subject, $divPosition, PREG_OFFSET_CAPTURE, $matches[$i][1]);
-	                $divPosition = $divPosition[0];
-	                for($i2=0; $i2<count($divPosition); $i2++)
-	                {
-	                        if(eregi("\/", $divPosition[$i2][0]))
-	                        {
-	                                $closedDivs++;
-	                        }
-	                        else
-	                        {
-	                                $openDivs++;
-	                        }
+	function _getDivs($subject, $class) {
+		preg_match_all("/<div[^>]+class\=\"$class\"[^>]*>/is", $subject, $matches, PREG_OFFSET_CAPTURE);
 
-	                        if($closedDivs > $openDivs-1)
-	                        {
-	                                $divClosePosition = $divPosition[$i2][1];
-	                                $divLength = $divClosePosition+6 - $matches[$i][1];
-	                                $divs[$i] = substr($subject, $matches[$i][1], $divLength);
-	                                break;
-	                        }
-	                }
-	        }
-	        return $divs;
+		$matches = $matches[0];
+		for ($i=0; $i<count($matches); $i++) {
+			$openDivs = 0;
+			$closedDivs = 0;
+			$divClosePosition = 0;
+			$divPosition = array();
+			preg_match_all("/<\/?div[^>]*>/is", $subject, $divPosition, PREG_OFFSET_CAPTURE, $matches[$i][1]);
+			$divPosition = $divPosition[0];
+			for ($i2=0; $i2<count($divPosition); $i2++) {
+				if (eregi("\/", $divPosition[$i2][0])) {
+					$closedDivs++;
+				} else {
+					$openDivs++;
+				}
+
+				if($closedDivs > $openDivs-1) {
+					$divClosePosition = $divPosition[$i2][1];
+					$divLength = $divClosePosition+6 - $matches[$i][1];
+					$divs[$i] = substr($subject, $matches[$i][1], $divLength);
+					break;
+				}
+			}
+		}
+		return $divs;
 	}
-
 }
+
 ?>

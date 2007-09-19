@@ -13,7 +13,7 @@
  *
  * $Id$
  */
- 
+
 import('core.Handler');
 import('classes.plugins.PluginRegistry');
 
@@ -24,19 +24,19 @@ class CmsHandler extends Handler {
 
 	function view( $args ) {
 		if ( count($args) > 0 ) {
-		 	$journal = &Request::getJournal();
+			$journal = &Request::getJournal();
 			$journalId = $journal->getJournalId();
 			$cmsPlugin = &PluginRegistry::getPlugin('generic', 'CmsPlugin');
 			$templateMgr = &TemplateManager::getManager();
 
 			$allContent = $cmsPlugin->getSetting($journalId, 'content');
-		
+
 			$cmsPlugin->import('ContentManager');	
 			$contentManager =& new ContentManager();
-	
+
 			$content = array();
 			$headings = array();
-			
+
 			$current = $contentManager->cleanurl($args[0]);	
 			// get the content
 			$contentManager->parseContents( $headings, $content, $current );
@@ -50,7 +50,7 @@ class CmsHandler extends Handler {
 			if ( count($cur_array) > 2 ) 
 				$cur_array[2] = $cur_array[0].':'.$cur_array[1].':'.$cur_array[2];
 			array_pop($cur_array);
-			
+
 
 			$breadcrumbs = array();
 			foreach ( $headings as $heading ) {
@@ -59,25 +59,25 @@ class CmsHandler extends Handler {
 										'./'.$heading[1], 
 										$heading[2], 
 										$heading[2] );
-					
+
 				elseif ( count($cur_array) > 1 && $cur_array[1] == $heading[1] )
 					$breadcrumbs[] = array(
 										'./'.$heading[1], 
 										$heading[2], 
 										$heading[2] );
-					
+
 				elseif ( count($cur_array) > 2 && $cur_array[2] == $heading[1] )
 					$breadcrumbs[] = array(
 										'./'.$heading[1], 
 										$heading[2], 
 										$heading[2] );
-							
+
 				if ( $heading[1] == $current ) { 
 					$title = $heading[2];
 					break;
 				}
 			}
-			
+
 			$theContent = $content[$current];
 
 			HookRegistry::call("Plugins::CmsHandler", array($current, &$theContent));
@@ -91,7 +91,7 @@ class CmsHandler extends Handler {
 			$templateMgr->display($cmsPlugin->getTemplatePath().'content.tpl');
 		}
 	}	
-	
+
 }
 
 ?>

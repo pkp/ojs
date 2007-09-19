@@ -21,10 +21,10 @@ class DBDataXMLParser {
 
 	/** @var XMLParser the parser to use */
 	var $parser;
-	
+
 	/** @var ADOConnection the underlying database connection */
 	var $dbconn;
-	
+
 	/** @var array the array of parsed SQL statements */
 	var $sql;
 
@@ -35,7 +35,7 @@ class DBDataXMLParser {
 		$this->parser = &new XMLParser();
 		$this->sql = array();
 	}
-	
+
 	/**
 	 * Set the database connection to use for executeData() and extractData().
 	 * If the connection is not set, the default system database connection will be used.
@@ -57,7 +57,7 @@ class DBDataXMLParser {
 			foreach ($tree->getChildren() as $table) {
 				if ($table->getName() == 'table') {
 					$fieldDefaultValues = array();
-					
+
 					// Match table element
 					foreach ($table->getChildren() as $row) {
 						if ($row->getName() == 'field_default') {
@@ -70,11 +70,11 @@ class DBDataXMLParser {
 								$value = $this->quoteString($value);
 							}
 							$fieldDefaultValues[$fieldName] = $value;
-						
+
 						} else if ($row->getName() == 'row') {
 							// Match a row element
 							$fieldValues = array();
-							
+
 							foreach ($row->getChildren() as $field) {
 								// Get the field names and values for this INSERT
 								$fieldName = $field->getAttribute('name');
@@ -86,9 +86,9 @@ class DBDataXMLParser {
 								}
 								$fieldValues[$fieldName] = $value;
 							}
-							
+
 							$fieldValues = array_merge($fieldDefaultValues, $fieldValues);
-							
+
 							if (count($fieldValues) > 0) {
 								$this->sql[] = sprintf(
 										'INSERT INTO %s (%s) VALUES (%s)',
@@ -99,7 +99,7 @@ class DBDataXMLParser {
 							}
 						}
 					}
-				
+
 				} else if ($table->getName() == 'sql') {
 					// Match sql element (set of SQL queries)
 					foreach ($table->getChildren() as $query) {
@@ -116,7 +116,7 @@ class DBDataXMLParser {
 							} else {
 								$this->sql[] = $dbdict->DropTableSQL($table);
 							}
-							
+
 						} else if ($query->getName() == 'rename') {
 							if (!isset($dbdict)) {
 								$dbdict = @NewDataDictionary($this->dbconn);
@@ -153,7 +153,7 @@ class DBDataXMLParser {
 		}
 		return $this->sql;
 	}
-	
+
 	/**
 	 * Execute the parsed SQL statements.
 	 * @param $continueOnError boolean continue to execute remaining statements if a failure occurs
@@ -170,14 +170,14 @@ class DBDataXMLParser {
 		}
 		return true;
 	}
-	
+
 	/**
 	 * Extract data from the database into an XML file.
 	 * TODO: To be implemented
 	 */
 	function extractData() {
 	}
-	
+
 	/**
 	 * Return the parsed SQL statements.
 	 * @return array
@@ -185,7 +185,7 @@ class DBDataXMLParser {
 	function getSQL() {
 		return $this->sql;
 	}
-	
+
 	/**
 	 * Quote a string to be appear as a value in an SQL INSERT statement.
 	 * @param $str string
@@ -194,7 +194,7 @@ class DBDataXMLParser {
 	function quoteString($str) {
 		return '\'' . str_replace('\'', '\\\'', str_replace('\\', '\\\\', $str)) . '\'';
 	}
-	
+
 	/**
 	 * Perform required clean up for this object.
 	 */

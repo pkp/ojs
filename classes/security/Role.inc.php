@@ -36,7 +36,7 @@ class Role extends DataObject {
 	function Role() {
 		parent::DataObject();
 	}
-	
+
 	/**
 	 * Get the i18n key name associated with this role.
 	 * @return String the key
@@ -44,7 +44,7 @@ class Role extends DataObject {
 	function getRoleName() {
 		return RoleDAO::getRoleName($this->getData('roleId'));
 	}
-	
+
 	/**
 	 * Get the URL path associated with this role's operations.
 	 * @return String the path
@@ -52,11 +52,11 @@ class Role extends DataObject {
 	function getRolePath() {
 		return RoleDAO::getRolePath($this->getData('roleId'));
 	}
-	
+
 	//
 	// Get/set methods
 	//
-	
+
 	/**
 	 * Get journal ID associated with role.
 	 * @return int
@@ -64,7 +64,7 @@ class Role extends DataObject {
 	function getJournalId() {
 		return $this->getData('journalId');
 	}
-	
+
 	/**
 	 * Set journal ID associated with role.
 	 * @param $journalId int
@@ -72,7 +72,7 @@ class Role extends DataObject {
 	function setJournalId($journalId) {
 		return $this->setData('journalId', $journalId);
 	}
-	
+
 	/**
 	 * Get user ID associated with role.
 	 * @return int
@@ -80,7 +80,7 @@ class Role extends DataObject {
 	function getUserId() {
 		return $this->getData('userId');
 	}
-	
+
 	/**
 	 * Set user ID associated with role.
 	 * @param $userId int
@@ -88,7 +88,7 @@ class Role extends DataObject {
 	function setUserId($userId) {
 		return $this->setData('userId', $userId);
 	}
-	
+
 	/**
 	 * Get role ID of this role.
 	 * @return int
@@ -96,7 +96,7 @@ class Role extends DataObject {
 	function getRoleId() {
 		return $this->getData('roleId');
 	}
-	
+
 	/**
 	 * Set role ID of this role.
 	 * @param $roleId int

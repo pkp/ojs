@@ -27,7 +27,7 @@ class ScheduledTaskDAO extends DAO {
 			'SELECT last_run FROM scheduled_tasks WHERE class_name = ?',
 			$className
 		);
-		
+
 		if ($result->RecordCount() == 0) {
 			$returner = 0;
 		} else {
@@ -39,7 +39,7 @@ class ScheduledTaskDAO extends DAO {
 
 		return $returner;
 	}
-	
+
 	/**
 	 * Update a scheduled task's last run time.
 	 * @param $className string
@@ -50,7 +50,7 @@ class ScheduledTaskDAO extends DAO {
 			'SELECT COUNT(*) FROM scheduled_tasks WHERE class_name = ?',
 			$className
 		);
-		
+
 		if (isset($result->fields[0]) && $result->fields[0] != 0) {
 			if (isset($timestamp)) {
 				$returner = $this->update(
@@ -60,7 +60,7 @@ class ScheduledTaskDAO extends DAO {
 			} else {
 				$returner = $this->update('UPDATE scheduled_tasks SET last_run = NOW() WHERE class_name = ?', array($className));
 			}
-			
+
 		} else {
 			if (isset($timestamp)) {
 				$returner = $this->update(

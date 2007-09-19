@@ -20,7 +20,7 @@ class CommentForm extends Form {
 
 	/** @var int the comment type */
 	var $commentType;
-	
+
 	/** @var int the role id of the comment poster */
 	var $roleId;
 
@@ -29,10 +29,10 @@ class CommentForm extends Form {
 
 	/** @var User comment author */
 	var $user;
-	
+
 	/** @var int the ID of the comment after insertion */
 	var $commentId;
-	
+
 	/**
 	 * Constructor.
 	 * @param $article object
@@ -45,12 +45,12 @@ class CommentForm extends Form {
 		} else {
 			parent::Form('submission/comment/comment.tpl');
 		}
-		
+
 		$this->article = $article;
 		$this->commentType = $commentType;
 		$this->roleId = $roleId;
 		$this->assocId = $assocId == null ? $article->getArticleId() : $assocId;
-		
+
 		$this->user = &Request::getUser();
 
 		if ($commentType != COMMENT_TYPE_PEER_REVIEW) $this->addCheck(new FormValidator($this, 'comments', 'required', 'editor.article.commentsRequired'));
@@ -73,16 +73,16 @@ class CommentForm extends Form {
 
 		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
 		$articleComments = &$articleCommentDao->getArticleComments($article->getArticleId(), $this->commentType, $this->assocId);
-	
+
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('articleId', $article->getArticleId());
 		$templateMgr->assign('commentTitle', strip_tags($article->getArticleTitle()));
 		$templateMgr->assign('userId', $this->user->getUserId());
 		$templateMgr->assign('articleComments', $articleComments);
-		
+
 		parent::display();
 	}
-	
+
 	/**
 	 * Assign form data to user-submitted data.
 	 */
@@ -95,14 +95,14 @@ class CommentForm extends Form {
 			)
 		);
 	}
-	
+
 	/**
 	 * Add the comment.
 	 */
 	function execute() {
 		$commentDao = &DAORegistry::getDAO('ArticleCommentDAO');
 		$article = $this->article;
-	
+
 		// Insert new comment		
 		$comment = &new ArticleComment();
 		$comment->setCommentType($this->commentType);
@@ -114,10 +114,10 @@ class CommentForm extends Form {
 		$comment->setComments($this->getData('comments'));
 		$comment->setDatePosted(Core::getCurrentDate());
 		$comment->setViewable($this->getData('viewable'));
-		
+
 		$this->commentId = $commentDao->insertArticleComment($comment);
 	}
-	
+
 	/**
 	 * Email the comment.
 	 * @param $recipients array of recipients (email address => name)
@@ -126,7 +126,7 @@ class CommentForm extends Form {
 		$article = $this->article;
 		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
 		$journal = &Request::getJournal();
-		
+
 		import('mail.ArticleMailTemplate');
 		$email = &new ArticleMailTemplate($article, 'SUBMISSION_COMMENT');
 		$email->setFrom($this->user->getEmail(), $this->user->getFullName());

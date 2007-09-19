@@ -40,7 +40,7 @@ class SearchHTMLParser extends SearchFileParser {
 		}
 		return $line;
 	}
-	
+
 }
 
 ?>

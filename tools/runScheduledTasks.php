@@ -26,7 +26,7 @@ class runScheduledTasks extends CommandLineTool {
 
 	/** @var string the XML file listing the tasks to be executed */
 	var $file;
-	
+
 	/** @var ScheduledTaskDAO the DAO object */
 	var $taskDao;
 
@@ -38,21 +38,21 @@ class runScheduledTasks extends CommandLineTool {
 	 */
 	function runScheduledTasks($argv = array()) {
 		parent::CommandLineTool($argv);
-		
+
 		if (isset($this->argv[0])) {
 			$this->file = $this->argv[0];
 		} else {
 			$this->file = TASKS_REGISTRY_FILE;
 		}
-		
+
 		if (!file_exists($this->file) || !is_readable($this->file)) {
 			printf("Tasks file \"%s\" does not exist or is not readable!\n", $this->file);
 			exit(1);
 		}
-		
+
 		$this->taskDao = &DAORegistry::getDAO('ScheduledTaskDAO');
 	}
-	
+
 	/**
 	 * Print command usage information.
 	 */
@@ -60,14 +60,14 @@ class runScheduledTasks extends CommandLineTool {
 		echo "Script to run a set of scheduled tasks\n"
 			. "Usage: {$this->scriptName} [tasks_file]\n";
 	}
-	
+
 	/**
 	 * Parse and execute the scheduled tasks.
 	 */
 	function execute() {
 		$this->parseTasks($this->file);
 	}
-	
+
 	/**
 	 * Parse and execute the scheduled tasks in the specified file.
 	 * @param $file string
@@ -75,16 +75,16 @@ class runScheduledTasks extends CommandLineTool {
 	function parseTasks($file) {
 		$xmlParser = &new XMLParser();
 		$tree = $xmlParser->parse($file);
-		
+
 		if (!$tree) {
 			$xmlParser->destroy();
 			printf("Unable to parse file \"%s\"!\n", $file);
 			exit(1);
 		}
-		
+
 		foreach ($tree->getChildren() as $task) {
 			$className = $task->getAttribute('class');
-			
+
 			$frequency = $task->getChildByName('frequency');
 			if (isset($frequency)) {
 				$canExecute = $this->checkFrequency($className, $frequency);
@@ -92,15 +92,15 @@ class runScheduledTasks extends CommandLineTool {
 				// Always execute if no frequency is specified
 				$canExecute = true;
 			}
-			
+
 			if ($canExecute) {
 				$this->executeTask($className, $this->getTaskArgs($task));
 			}
 		}
-		
+
 		$xmlParser->destroy();
 	}
-	
+
 	/**
 	 * Execute the specified task.
 	 * @param $className string the class name to execute
@@ -114,14 +114,14 @@ class runScheduledTasks extends CommandLineTool {
 		} else {
 			$baseClassName = substr($className, $pos+1);
 		}
-		
+
 		// Load and execute the task
 		import($className);
 		$task = &new $baseClassName($args);
 		$task->execute();
 		$this->taskDao->updateLastRunTime($className);
 	}
-	
+
 	/**
 	 * Get the arguments for a task from the parsed XML.
 	 * @param XMLNode
@@ -130,15 +130,15 @@ class runScheduledTasks extends CommandLineTool {
 	function getTaskArgs($task) {
 		$args = array();
 		$index = 0;
-		
+
 		while(($arg = $task->getChildByName('arg', $index)) != null) {
 			array_push($args, $arg->getValue());
 			$index++;
 		}
-		
+
 		return $args;
 	}
-	
+
 	/**
 	 * Check if the specified task should be executed according to the specified
 	 * frequency and its last run time.
@@ -149,13 +149,13 @@ class runScheduledTasks extends CommandLineTool {
 	function checkFrequency($className, $frequency) {
 		$isValid = true;
 		$lastRunTime = $this->taskDao->getLastRunTime($className);
-		
+
 		// Check day of week
 		$dayOfWeek = $frequency->getAttribute('dayofweek');
 		if (isset($dayOfWeek)) {
 			$isValid = $this->isInRange($dayOfWeek, (int)date('w'), $lastRunTime, 'day', strtotime('-1 week'));
 		}
-		
+
 		if ($isValid) {
 			// Check month
 			$month = $frequency->getAttribute('month');
@@ -163,7 +163,7 @@ class runScheduledTasks extends CommandLineTool {
 				$isValid = $this->isInRange($month, (int)date('n'), $lastRunTime, 'month', strtotime('-1 year'));
 			}
 		}
-		
+
 		if ($isValid) {
 			// Check day
 			$day = $frequency->getAttribute('day');
@@ -171,7 +171,7 @@ class runScheduledTasks extends CommandLineTool {
 				$isValid = $this->isInRange($day, (int)date('j'), $lastRunTime, 'day', strtotime('-1 month'));
 			}
 		}
-		
+
 		if ($isValid) {
 			// Check hour
 			$hour = $frequency->getAttribute('hour');
@@ -179,7 +179,7 @@ class runScheduledTasks extends CommandLineTool {
 				$isValid = $this->isInRange($hour, (int)date('G'), $lastRunTime, 'hour', strtotime('-1 day'));
 			}
 		}
-		
+
 		if ($isValid) {
 			// Check minute
 			$minute = $frequency->getAttribute('minute');
@@ -187,7 +187,7 @@ class runScheduledTasks extends CommandLineTool {
 				$isValid = $this->isInRange($minute, (int)date('i'), $lastRunTime, 'min', strtotime('-1 hour'));
 			}
 		}
-		
+
 		return $isValid;
 	}
 
@@ -203,47 +203,47 @@ class runScheduledTasks extends CommandLineTool {
 	function isInRange($rangeStr, $currentValue, $lastTimestamp, $timeCompareStr, $cutoffTimestamp) {
 		$isValid = false;
 		$rangeArray = explode(',', $rangeStr);
-		
+
 		if ($cutoffTimestamp > $lastTimestamp) {
 			// Execute immediately if the cutoff time period has past since the task was last run
 			$isValid = true;
 		}
-		
+
 		for ($i = 0, $count = count($rangeArray); !$isValid && ($i < $count); $i++) {
 			if ($rangeArray[$i] == '*') {
 				// Is wildcard
 				$isValid = true;
-				
+
 			} if (is_numeric($rangeArray[$i])) {
 				// Is just a value
 				$isValid = ($currentValue == (int)$rangeArray[$i]);
-				
+
 			} else if (preg_match('/^(\d*)\-(\d*)$/', $rangeArray[$i], $matches)) {
 				// Is a range
 				$isValid = $this->isInNumericRange($currentValue, (int)$matches[1], (int)$matches[2]);
-				
+
 			} else if (preg_match('/^(.+)\/(\d+)$/', $rangeArray[$i], $matches)) {
 				// Is a range with a skip factor
 				$skipRangeStr = $matches[1];
 				$skipFactor = (int)$matches[2];
-				
+
 				if ($skipRangeStr == '*') {
 					$isValid = true;
-					
+
 				} else if (preg_match('/^(\d*)\-(\d*)$/', $skipRangeStr, $matches)) {
 					$isValid = $this->isInNumericRange($currentValue, (int)$matches[1], (int)$matches[2]);
 				}
-				
+
 				if ($isValid) {
 					// Check against skip factor
 					$isValid = (strtotime("-$skipFactor $timeCompareStr") > $lastTimestamp);
 				}
 			}
 		}
-		
+
 		return $isValid;
 	}
-		
+
 	/**
 	 * Check if a numeric value is within the specified range.
 	 * @param $value int
@@ -254,7 +254,7 @@ class runScheduledTasks extends CommandLineTool {
 	function isInNumericRange($value, $min, $max) {
 		return ($value >= $min && $value <= $max);
 	}
-	
+
 }
 
 $tool = &new runScheduledTasks(isset($argv) ? $argv : array());

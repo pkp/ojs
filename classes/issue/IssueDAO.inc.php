@@ -168,7 +168,7 @@ class IssueDAO extends DAO {
 		if ($issue) $this->updateIssue($issue);
 	}
 
-	
+
 	/**
 	 * creates and returns an issue object from a row
 	 * @param $row array
@@ -261,7 +261,7 @@ class IssueDAO extends DAO {
 
 		return $issue->getIssueId();	
 	}
-		
+
 	/**
 	 * Get the ID of the last inserted issue.
 	 * @return int
@@ -453,7 +453,7 @@ class IssueDAO extends DAO {
 
 		$sql = 'SELECT i.* FROM issues i WHERE journal_id = ? ORDER BY current DESC, date_published DESC';
 		$result = &$this->retrieveRange($sql, $journalId, $rangeInfo);
-		
+
 		$returner = &new DAOResultFactory($result, $this, '_returnIssueFromRow');
 		return $returner;
 	}
@@ -469,7 +469,7 @@ class IssueDAO extends DAO {
 			'SELECT i.* FROM issues i LEFT JOIN custom_issue_orders o ON (o.issue_id = i.issue_id) WHERE i.journal_id = ? AND i.published = 1 ORDER BY o.seq ASC, i.current DESC, i.date_published DESC',
 			$journalId, $rangeInfo
 		);
-		
+
 		$returner = &new DAOResultFactory($result, $this, '_returnIssueFromRow');
 		return $returner;
 	}
@@ -489,7 +489,7 @@ class IssueDAO extends DAO {
 		$returner = &new DAOResultFactory($result, $this, '_returnIssueFromRow');
 		return $returner;
 	}
-	
+
 	/**
 	 * Return number of articles assigned to an issue.
 	 * @param $issueId int
@@ -524,7 +524,7 @@ class IssueDAO extends DAO {
 			'SELECT i.issue_id FROM issues i LEFT JOIN custom_issue_orders o ON (o.issue_id = i.issue_id) WHERE i.journal_id = ? ORDER BY o.seq',
 			$journalId
 		);
-		
+
 		for ($i=1; !$result->EOF; $i++) {
 			list($issueId) = $result->fields;
 			if ($this->update(
@@ -534,14 +534,14 @@ class IssueDAO extends DAO {
 				// This entry is missing. Create it.
 				$this->insertCustomIssueOrder($journalId, $issueId, $i);
 			}
-			
+
 			$result->moveNext();
 		}
-		
+
 		$result->close();
 		unset($result);
 	}
-	
+
 	/**
 	 * Check if a journal has custom issue ordering.
 	 * @param $journalId int
@@ -571,7 +571,7 @@ class IssueDAO extends DAO {
 			'SELECT seq FROM custom_issue_orders WHERE journal_id = ? AND issue_id = ?',
 			array($journalId, $issueId)
 		);
-		
+
 		$returner = null;
 		if (!$result->EOF) {
 			list($returner) = $result->fields;
@@ -629,5 +629,5 @@ class IssueDAO extends DAO {
 		$this->resequenceCustomIssueOrders($journalId);
 	}
 }
-  
+
 ?>

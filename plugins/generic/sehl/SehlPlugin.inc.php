@@ -13,7 +13,7 @@
  *
  * $Id$
  */
- 
+
 import('classes.plugins.GenericPlugin');
 
 class SehlPlugin extends GenericPlugin {
@@ -117,10 +117,10 @@ class SehlPlugin extends GenericPlugin {
 				) {
 					$newOutput .= $tag_matches[0][$i];
 				} else {
-				 	$newOutput .= $tag_matches[2][$i];
+					$newOutput .= $tag_matches[2][$i];
 					$holder = preg_replace('/(.*?)(\W)('.preg_quote($q,'/').')(\W)(.*?)/iu',"\$1\$2<span class=\"sehl\">\$3</span>\$4\$5",' '.$tag_matches[3][$i].' ');
 					$newOutput .= substr($holder,1,(strlen($holder)-2));
-				 }
+				}
 			}
 			$scanPart = $newOutput;
 		}

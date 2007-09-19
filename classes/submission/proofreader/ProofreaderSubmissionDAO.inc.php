@@ -32,7 +32,7 @@ class ProofreaderSubmissionDAO extends DAO {
 	 */
 	function ProofreaderSubmissionDAO() {
 		parent::DAO();
-		
+
 		$this->articleDao = &DAORegistry::getDAO('ArticleDAO');
 		$this->articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
 		$this->proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
@@ -41,7 +41,7 @@ class ProofreaderSubmissionDAO extends DAO {
 		$this->galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
 		$this->suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
 	}
-	
+
 	/**
 	 * Retrieve a proofreader submission by article ID.
 	 * @param $articleId int
@@ -118,7 +118,7 @@ class ProofreaderSubmissionDAO extends DAO {
 
 		return $submission;
 	}
-	
+
 	/**
 	 * Update an existing proofreader submission.
 	 * @param $submission ProofreaderSubmission
@@ -128,7 +128,7 @@ class ProofreaderSubmissionDAO extends DAO {
 		$proofreadAssignment =& $submission->getProofAssignment();
 		$this->proofAssignmentDao->updateProofAssignment($proofAssignment);
 	}
-	
+
 	/**
 	 * Get set of proofreader assignments assigned to the specified proofreader.
 	 * @param $proofreaderId int
@@ -257,7 +257,7 @@ class ProofreaderSubmissionDAO extends DAO {
 				p.proofreader_id = ? AND
 				' . (isset($journalId)?'a.journal_id = ? AND':'') . '
 				p.date_proofreader_notified IS NOT NULL';
-		
+
 		if ($active) {
 			$sql .= ' AND p.date_proofreader_completed IS NULL';
 		} else {

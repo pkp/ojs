@@ -15,14 +15,14 @@
  */
 
 class AdminSettingsHandler extends AdminHandler {
-	
+
 	/**
 	 * Display form to modify site settings.
 	 */
 	function settings() {
 		parent::validate();
 		parent::setupTemplate(true);
-		
+
 		import('admin.form.SiteSettingsForm');
 
 		$settingsForm = &new SiteSettingsForm();
@@ -33,16 +33,16 @@ class AdminSettingsHandler extends AdminHandler {
 		}
 		$settingsForm->display();
 	}
-	
+
 	/**
 	 * Validate and save changes to site settings.
 	 */
 	function saveSettings() {
 		parent::validate();
 		parent::setupTemplate(true);
-		
+
 		import('admin.form.SiteSettingsForm');
-		
+
 		$settingsForm = &new SiteSettingsForm();
 		$settingsForm->readInputData();
 
@@ -57,7 +57,7 @@ class AdminSettingsHandler extends AdminHandler {
 			$publicFileManager->removeSiteFile($site->getSiteStyleFilename());
 		} elseif ($settingsForm->validate()) {
 			$settingsForm->execute();
-		
+
 			$templateMgr = &TemplateManager::getManager();
 			$templateMgr->assign(array(
 				'currentUrl' => Request::url(null, null, 'settings'),
@@ -71,7 +71,7 @@ class AdminSettingsHandler extends AdminHandler {
 		}
 		$settingsForm->display();
 	}
-	
+
 }
 
 ?>

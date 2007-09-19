@@ -130,7 +130,7 @@ class PhpAdsNewPlugin extends GenericPlugin {
 		return $output;
 
 	}
-	
+
 	function sidebarCallback($hookName, $args) {
 		$smarty =& $args[0];
 		$template =& $args[1];
@@ -166,7 +166,7 @@ class PhpAdsNewPlugin extends GenericPlugin {
 		return $output;
 
 	}
-	
+
 	/**
 	 * Display verbs for the management interface.
 	 */

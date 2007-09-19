@@ -23,7 +23,7 @@ class Handler {
 		header('HTTP/1.0 404 Not Found');
 		fatalError('404 Not Found');
 	}
-	
+
 	/**
 	 * Perform request access validation based on security settings.
 	 * @param $requiresJournal boolean
@@ -33,9 +33,9 @@ class Handler {
 			// Force SSL connections site-wide
 			Request::redirectSSL();
 		}
-		
+
 		$journal = Request::getJournal();
-		
+
 		if ($requiresJournal && $journal == null) {
 			// Requested page is only allowed for journals
 			Request::redirect(null, 'about');

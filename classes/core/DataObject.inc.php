@@ -18,7 +18,7 @@
 class DataObject {
 	/** Array of object data */
 	var $_data;
-	
+
 	/**
 	 * Constructor.
 	 */
@@ -63,7 +63,7 @@ class DataObject {
 		$nullVar = null;
 		return $nullVar;
 	}
-	
+
 	/**
 	 * Set the value of a new or existing data variable.
 	 * @param $key string

@@ -204,7 +204,7 @@ class GoogleScholarPlugin extends GatewayPlugin {
 			}
 			XMLCustomWriter::createChildWithText($document, $publisherNode, 'publisher-name', $publisherName, true);
 			XMLCustomWriter::appendChild($journalMetaNode, $publisherNode);
-			
+
 			$articleMetaNode =& XMLCustomWriter::createElement($document, 'article-meta');
 			XMLCustomWriter::appendChild($frontNode, $articleMetaNode);
 

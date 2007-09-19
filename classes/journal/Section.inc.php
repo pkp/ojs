@@ -43,7 +43,7 @@ class Section extends DataObject {
 	//
 	// Get/set methods
 	//
-	
+
 	/**
 	 * Get ID of section.
 	 * @return int
@@ -51,7 +51,7 @@ class Section extends DataObject {
 	function getSectionId() {
 		return $this->getData('sectionId');
 	}
-	
+
 	/**
 	 * Set ID of section.
 	 * @param $sectionId int
@@ -59,7 +59,7 @@ class Section extends DataObject {
 	function setSectionId($sectionId) {
 		return $this->setData('sectionId', $sectionId);
 	}
-	
+
 	/**
 	 * Get ID of journal.
 	 * @return int
@@ -67,7 +67,7 @@ class Section extends DataObject {
 	function getJournalId() {
 		return $this->getData('journalId');
 	}
-	
+
 	/**
 	 * Set ID of journal.
 	 * @param $journalId int
@@ -75,7 +75,7 @@ class Section extends DataObject {
 	function setJournalId($journalId) {
 		return $this->setData('journalId', $journalId);
 	}
-	
+
 	/**
 	 * Get title of section.
 	 * @param $locale string
@@ -84,7 +84,7 @@ class Section extends DataObject {
 	function getTitle($locale) {
 		return $this->getData('title', $locale);
 	}
-	
+
 	/**
 	 * Set title of section.
 	 * @param $title string
@@ -93,7 +93,7 @@ class Section extends DataObject {
 	function setTitle($title, $locale) {
 		return $this->setData('title', $title, $locale);
 	}
-	
+
 	/**
 	 * Get section title abbreviation.
 	 * @param $locale string
@@ -102,7 +102,7 @@ class Section extends DataObject {
 	function getAbbrev($locale) {
 		return $this->getData('abbrev', $locale);
 	}
-	
+
 	/**
 	 * Set section title abbreviation.
 	 * @param $abbrev string
@@ -111,7 +111,7 @@ class Section extends DataObject {
 	function setAbbrev($abbrev, $locale) {
 		return $this->setData('abbrev', $abbrev, $locale);
 	}
-	
+
 	/**
 	 * Get sequence of section.
 	 * @return float
@@ -119,7 +119,7 @@ class Section extends DataObject {
 	function getSequence() {
 		return $this->getData('sequence');
 	}
-	
+
 	/**
 	 * Set sequence of section.
 	 * @param $sequence float
@@ -127,7 +127,7 @@ class Section extends DataObject {
 	function setSequence($sequence) {
 		return $this->setData('sequence', $sequence);
 	}
-	
+
 	/**
 	 * Get open archive setting of section.
 	 * @return boolean
@@ -135,7 +135,7 @@ class Section extends DataObject {
 	function getMetaIndexed() {
 		return $this->getData('metaIndexed');
 	}
-	
+
 	/**
 	 * Set open archive setting of section.
 	 * @param $metaIndexed boolean
@@ -143,7 +143,7 @@ class Section extends DataObject {
 	function setMetaIndexed($metaIndexed) {
 		return $this->setData('metaIndexed', $metaIndexed);
 	}
-	
+
 	/**
 	 * Get peer-reviewed setting of section.
 	 * @return boolean
@@ -151,7 +151,7 @@ class Section extends DataObject {
 	function getMetaReviewed() {
 		return $this->getData('metaReviewed');
 	}
-	
+
 	/**
 	 * Set peer-reviewed setting of section.
 	 * @param $metaReviewed boolean
@@ -159,7 +159,7 @@ class Section extends DataObject {
 	function setMetaReviewed($metaReviewed) {
 		return $this->setData('metaReviewed', $metaReviewed);
 	}
-	
+
 	/**
 	 * Get boolean indicating whether abstracts are disabled
 	 * @return boolean
@@ -167,7 +167,7 @@ class Section extends DataObject {
 	function getAbstractsDisabled() {
 		return $this->getData('abstractsDisabled');
 	}
-	
+
 	/**
 	 * Set boolean indicating whether abstracts are disabled
 	 * @param $abstractsDisabled boolean
@@ -175,7 +175,7 @@ class Section extends DataObject {
 	function setAbstractsDisabled($abstractsDisabled) {
 		return $this->setData('abstractsDisabled', $abstractsDisabled);
 	}
-	
+
 	/**
 	 * Get localized string identifying type of items in this section.
 	 * @return string
@@ -183,7 +183,7 @@ class Section extends DataObject {
 	function getSectionIdentifyType() {
 		return $this->getLocalizedData('identifyType');
 	}
-	
+
 	/**
 	 * Get string identifying type of items in this section.
 	 * @param $locale string
@@ -192,7 +192,7 @@ class Section extends DataObject {
 	function getIdentifyType($locale) {
 		return $this->getData('identifyType', $locale);
 	}
-	
+
 	/**
 	 * Set string identifying type of items in this section.
 	 * @param $identifyType string
@@ -201,7 +201,7 @@ class Section extends DataObject {
 	function setIdentifyType($identifyType, $locale) {
 		return $this->setData('identifyType', $identifyType, $locale);
 	}
-	
+
 	/**
 	 * Return boolean indicating whether or not submissions are restricted to [section]Editors.
 	 * @return boolean
@@ -209,7 +209,7 @@ class Section extends DataObject {
 	function getEditorRestricted() {
 		return $this->getData('editorRestricted');
 	}
-	
+
 	/**
 	 * Set whether or not submissions are restricted to [section]Editors.
 	 * @param $editorRestricted boolean
@@ -217,7 +217,7 @@ class Section extends DataObject {
 	function setEditorRestricted($editorRestricted) {
 		return $this->setData('editorRestricted', $editorRestricted);
 	}
-	
+
 	/**
 	 * Return boolean indicating if title should be hidden in issue ToC.
 	 * @return boolean
@@ -225,7 +225,7 @@ class Section extends DataObject {
 	function getHideTitle() {
 		return $this->getData('hideTitle');
 	}
-	
+
 	/**
 	 * Set if title should be hidden in issue ToC.
 	 * @param $hideTitle boolean
@@ -233,7 +233,7 @@ class Section extends DataObject {
 	function setHideTitle($hideTitle) {
 		return $this->setData('hideTitle', $hideTitle);
 	}
-	
+
 	/**
 	 * Return boolean indicating if title should be hidden in About.
 	 * @return boolean
@@ -241,7 +241,7 @@ class Section extends DataObject {
 	function getHideAbout() {
 		return $this->getData('hideAbout');
 	}
-	
+
 	/**
 	 * Set if title should be hidden in About.
 	 * @param $hideAbout boolean
@@ -249,7 +249,7 @@ class Section extends DataObject {
 	function setHideAbout($hideAbout) {
 		return $this->setData('hideAbout', $hideAbout);
 	}
-	
+
 	/**
 	 * Get localized section policy.
 	 * @return string
@@ -257,7 +257,7 @@ class Section extends DataObject {
 	function getSectionPolicy() {
 		return $this->getLocalizedData('policy');
 	}
-	
+
 	/**
 	 * Get policy.
 	 * @param $locale string
@@ -266,7 +266,7 @@ class Section extends DataObject {
 	function getPolicy($locale) {
 		return $this->getData('policy', $locale);
 	}
-	
+
 	/**
 	 * Set policy.
 	 * @param $policy string

@@ -66,16 +66,16 @@ class PluginSettingsDAO extends DAO {
 	 */
 	function &getPluginSettings($journalId, $pluginName) {
 		$pluginSettings[$pluginName] = array();
-		
+
 		$result = &$this->retrieve(
 			'SELECT setting_name, setting_value, setting_type FROM plugin_settings WHERE plugin_name = ? AND journal_id = ?', array($pluginName, $journalId)
 		);
-		
+
 		if ($result->RecordCount() == 0) {
 			$returner = null;
 			$result->Close();
 			return $returner;
-			
+
 		} else {
 			while (!$result->EOF) {
 				$row = &$result->getRowAssoc(false);
@@ -92,7 +92,7 @@ class PluginSettingsDAO extends DAO {
 			return $pluginSettings[$pluginName];
 		}
 	}
-	
+
 	/**
 	 * Add/update a plugin setting.
 	 * @param $journalId int
@@ -104,7 +104,7 @@ class PluginSettingsDAO extends DAO {
 	function updateSetting($journalId, $pluginName, $name, $value, $type = null) {
 		$cache =& $this->_getCache($journalId, $pluginName);
 		$cache->setCache($name, $value);
-		
+
 		$result = $this->retrieve(
 			'SELECT COUNT(*) FROM plugin_settings WHERE plugin_name = ? AND setting_name = ? AND journal_id = ?',
 			array($pluginName, $name, $journalId)
@@ -134,7 +134,7 @@ class PluginSettingsDAO extends DAO {
 
 		return $returner;
 	}
-	
+
 	/**
 	 * Delete a plugin setting.
 	 * @param $journalId int
@@ -144,13 +144,13 @@ class PluginSettingsDAO extends DAO {
 	function deleteSetting($journalId, $pluginName, $name) {
 		$cache =& $this->_getCache($pluginName);
 		$cache->setCache($name, null);
-		
+
 		return $this->update(
 			'DELETE FROM plugin_settings WHERE plugin_name = ? AND setting_name = ? AND journal_id = ?',
 			array($pluginName, $name, $journalId)
 		);
 	}
-	
+
 	/**
 	 * Delete all settings for a plugin.
 	 * @param $pluginName string
@@ -158,7 +158,7 @@ class PluginSettingsDAO extends DAO {
 	function deleteSettingsByPlugin($pluginName) {
 		$cache =& $this->_getCache($pluginName);
 		$cache->flush();
-		
+
 		return $this->update(
 				'DELETE FROM plugin_settings WHERE plugin_name = ?', $pluginName
 		);

@@ -31,7 +31,7 @@ class TranslatorHandler extends Handler {
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('locales', new ArrayItemIterator(Locale::getAllLocales(), $rangeInfo->getPage(), $rangeInfo->getCount()));
 		$templateMgr->assign('masterLocale', MASTER_LOCALE);
-		
+
 		$templateMgr->display($plugin->getTemplatePath() . 'index.tpl');
 	}
 
@@ -103,7 +103,7 @@ class TranslatorHandler extends Handler {
 	function saveLocaleChanges($args) {
 		list($plugin) = TranslatorHandler::validate();
 		TranslatorHandler::setupTemplate();
-		
+
 		$locale = array_shift($args);
 		if (!Locale::isLocaleValid($locale)) Request::redirect(null, null, 'index');
 
@@ -170,7 +170,7 @@ class TranslatorHandler extends Handler {
 	function downloadLocaleFile($args) {
 		list($plugin) = TranslatorHandler::validate();
 		TranslatorHandler::setupTemplate();
-		
+
 		$locale = array_shift($args);
 		if (!Locale::isLocaleValid($locale)) Request::redirect(null, null, 'index');
 
@@ -188,7 +188,7 @@ class TranslatorHandler extends Handler {
 	function editLocaleFile($args) {
 		list($plugin) = TranslatorHandler::validate();
 		TranslatorHandler::setupTemplate();
-		
+
 		$locale = array_shift($args);
 		if (!Locale::isLocaleValid($locale)) Request::redirect(null, null, 'index');
 
@@ -214,7 +214,7 @@ class TranslatorHandler extends Handler {
 	function editMiscFile($args) {
 		list($plugin) = TranslatorHandler::validate();
 		TranslatorHandler::setupTemplate();
-		
+
 		$locale = array_shift($args);
 		if (!Locale::isLocaleValid($locale)) Request::redirect(null, null, 'index');
 
@@ -235,7 +235,7 @@ class TranslatorHandler extends Handler {
 	function saveLocaleFile($args) {
 		list($plugin) = TranslatorHandler::validate();
 		TranslatorHandler::setupTemplate();
-		
+
 		$locale = array_shift($args);
 		if (!Locale::isLocaleValid($locale)) Request::redirect(null, null, 'index');
 
@@ -261,7 +261,7 @@ class TranslatorHandler extends Handler {
 	function deleteLocaleKey($args) {
 		list($plugin) = TranslatorHandler::validate();
 		TranslatorHandler::setupTemplate();
-		
+
 		$locale = array_shift($args);
 		if (!Locale::isLocaleValid($locale)) Request::redirect(null, null, 'index');
 
@@ -280,7 +280,7 @@ class TranslatorHandler extends Handler {
 	function saveMiscFile($args) {
 		list($plugin) = TranslatorHandler::validate();
 		TranslatorHandler::setupTemplate();
-		
+
 		$locale = array_shift($args);
 		if (!Locale::isLocaleValid($locale)) Request::redirect(null, null, 'index');
 
@@ -301,7 +301,7 @@ class TranslatorHandler extends Handler {
 	function editEmail($args) {
 		list($plugin) = TranslatorHandler::validate();
 		TranslatorHandler::setupTemplate();
-		
+
 		$locale = array_shift($args);
 		if (!Locale::isLocaleValid($locale)) Request::redirect(null, null, 'index');
 
@@ -323,7 +323,7 @@ class TranslatorHandler extends Handler {
 	function createFile($args) {
 		list($plugin) = TranslatorHandler::validate();
 		TranslatorHandler::setupTemplate();
-		
+
 		$locale = array_shift($args);
 		if (!Locale::isLocaleValid($locale)) Request::redirect(null, null, 'index');
 
@@ -340,7 +340,7 @@ class TranslatorHandler extends Handler {
 	function deleteEmail($args) {
 		list($plugin) = TranslatorHandler::validate();
 		TranslatorHandler::setupTemplate();
-		
+
 		$locale = array_shift($args);
 		if (!Locale::isLocaleValid($locale)) Request::redirect(null, null, 'index');
 
@@ -363,7 +363,7 @@ class TranslatorHandler extends Handler {
 	function saveEmail($args) {
 		list($plugin) = TranslatorHandler::validate();
 		TranslatorHandler::setupTemplate();
-		
+
 		$locale = array_shift($args);
 		if (!Locale::isLocaleValid($locale)) Request::redirect(null, null, 'index');
 

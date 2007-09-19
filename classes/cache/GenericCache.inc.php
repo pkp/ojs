@@ -68,8 +68,8 @@ class GenericCache {
 	 * Set an object in the cache. This function should be overridden
 	 * by subclasses.
 	 */
-	function set($id) {
-		return $this->setCache($id);
+	function set($id, $value) {
+		return $this->setCache($id, $value);
 	}
 
 	/**

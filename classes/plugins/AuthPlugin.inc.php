@@ -23,10 +23,10 @@ class AuthPlugin extends Plugin {
 
 	/** @var $settings array settings for this plugin instance */
 	var $settings;
-	
+
 	/** @var $authId int auth source ID for this plugin instance */
 	var $authId;
-	
+
 	/**
 	 * Constructor.
 	 * @param $settings array
@@ -35,8 +35,8 @@ class AuthPlugin extends Plugin {
 		$this->settings = $settings;
 		$this->authId = $authId;
 	}
-	
-		
+
+
 	//
 	// General Plugin Functions
 	//
@@ -49,7 +49,7 @@ class AuthPlugin extends Plugin {
 	function getName() {
 		return 'auth';
 	}
-	
+
 	/**
 	 * Return the localized name of this plugin.
 	 * Should be overridden by subclass.
@@ -58,7 +58,7 @@ class AuthPlugin extends Plugin {
 	function getDisplayName() {
 		return 'Abstract Authentication Plugin';
 	}
-	
+
 	/**
 	 * Return the localized description of this plugin.
 	 * Should be overridden by subclass.
@@ -67,7 +67,7 @@ class AuthPlugin extends Plugin {
 	function getDescription() {
 		'Authentication plugin base class';
 	}
-	
+
 	/**
 	 * Return the path to a template for plugin settings.
 	 * Can return null if there are no plugin-specific settings.
@@ -76,12 +76,12 @@ class AuthPlugin extends Plugin {
 	function getSettingsTemplate() {
 		return $this->getTemplatePath() . 'settings.tpl';
 	}
-	
-	
+
+
 	//
 	// Wrapper Functions
 	//
-	
+
 	/**
 	 * Update local user profile from the remote source, if enabled.
 	 * @param $user User
@@ -93,7 +93,7 @@ class AuthPlugin extends Plugin {
 		}
 		return false;
 	}
-	
+
 	/**
 	 * Update remote user profile, if enabled.
 	 * @param $user User
@@ -105,7 +105,7 @@ class AuthPlugin extends Plugin {
 		}
 		return false;
 	}
-	
+
 	/**
 	 * Update remote user password, if enabled.
 	 * @param $username string
@@ -118,7 +118,7 @@ class AuthPlugin extends Plugin {
 		}
 		return false;
 	}
-	
+
 	/**
 	 * Create remote user account, if enabled.
 	 * @param $user User to create
@@ -130,13 +130,13 @@ class AuthPlugin extends Plugin {
 		}
 		return false;
 	}
-	
-	
+
+
 	//
 	// Core Plugin Functions
 	// (Must be implemented by every authentication plugin)
 	//
-	
+
 	/**
 	 * Returns an instance of the authentication plugin
 	 * @param $settings array settings specific to this instance
@@ -157,13 +157,13 @@ class AuthPlugin extends Plugin {
 	function authenticate($username, $password) {
 		return false;
 	}
-	
-	
+
+
 	//
 	// Optional Plugin Functions
 	// (Required for extended functionality but not for authentication-only plugins)
 	//
-	
+
 	/**
 	 * Check if a username exists.
 	 * @param $username string
@@ -172,7 +172,7 @@ class AuthPlugin extends Plugin {
 	function userExists($username) {
 		return false;
 	}
-	
+
 	/**
 	 * Retrieve user profile information from the remote source.
 	 * Any unsupported fields (e.g., OJS-specific ones) should not be modified.
@@ -182,7 +182,7 @@ class AuthPlugin extends Plugin {
 	function getUserInfo(&$user) {
 		return false;
 	}
-	
+
 	/**
 	 * Store user profile information on the remote source.
 	 * @param $user User to store
@@ -191,7 +191,7 @@ class AuthPlugin extends Plugin {
 	function setUserInfo(&$user) {
 		return false;
 	}
-	
+
 	/**
 	 * Change a user's password on the remote source.
 	 * @param $username string user to update
@@ -201,7 +201,7 @@ class AuthPlugin extends Plugin {
 	function setUserPassword($username, $password) {
 		return false;
 	}
-	
+
 	/**
 	 * Create a user on the remote source.
 	 * @param $user User to create
@@ -210,7 +210,7 @@ class AuthPlugin extends Plugin {
 	function createUser(&$user) {
 		return false;
 	}
-	
+
 	/**
 	 * Delete a user from the remote source.
 	 * This function is currently not used within OJS,

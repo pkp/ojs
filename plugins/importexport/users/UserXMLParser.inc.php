@@ -21,16 +21,16 @@ class UserXMLParser {
 
 	/** @var XMLParser the parser to use */
 	var $parser;
-	
+
 	/** @var array ImportedUsers users to import */
 	var $usersToImport;
-	
+
 	/** @var array ImportedUsers imported users */
 	var $importedUsers;
-	
+
 	/** @var array error messages that occurred during import */
 	var $errors;
-	
+
 	/** @var int the ID of the journal to import users into */
 	var $journalId;
 
@@ -42,7 +42,7 @@ class UserXMLParser {
 		$this->parser = &new XMLParser();
 		$this->journalId = $journalId;
 	}
-	
+
 	/**
 	 * Parse an XML users file into a set of users to import.
 	 * @param $file string path to the XML file to parse
@@ -54,20 +54,20 @@ class UserXMLParser {
 		$success = true;
 		$this->usersToImport = array();
 		$tree = $this->parser->parse($file);
-		
+
 		$journalDao = &DAORegistry::getDAO('JournalDAO');
 		$journal = &$journalDao->getJournal($this->journalId);
 		$journalPrimaryLocale = Locale::getPrimaryLocale();
-		
+
 		$site = &Request::getSite();
 		$siteSupportedLocales = $site->getSupportedLocales();
-		
+
 		if ($tree !== false) {
 			foreach ($tree->getChildren() as $user) {
 				if ($user->getName() == 'user') {
 					// Match user element
 					$newUser = &new ImportedUser();
-					
+
 					foreach ($user->getChildren() as $attrib) {
 						switch ($attrib->getName()) {
 							case 'username':
@@ -167,10 +167,10 @@ class UserXMLParser {
 				}
 			}
 		}
-		
+
 		return $this->usersToImport;
 	}
-	
+
 	/**
 	 * Import the parsed users into the system.
 	 * @param $sendNotify boolean send an email notification to each imported user containing their username and password
@@ -181,10 +181,10 @@ class UserXMLParser {
 		$success = true;
 		$this->importedUsers = array();
 		$this->errors = array();
-		
+
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
-		
+
 		if ($sendNotify) {
 			// Set up mail template to send to added users
 			import('mail.MailTemplate');
@@ -194,7 +194,7 @@ class UserXMLParser {
 			$journal = &$journalDao->getJournal($this->journalId);
 			$mail->setFrom($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
 		}
-		
+
 		for ($i=0, $count=count($this->usersToImport); $i < $count; $i++) {
 			$user = &$this->usersToImport[$i];
 			// If the email address already exists in the system,
@@ -216,7 +216,7 @@ class UserXMLParser {
 			} else if ($user->getPassword() == null) {
 				$this->generatePassword($user);
 			}
-			
+
 			if (!$newUsername) {
 				// Check if user already exists
 				$userExists = $userDao->getUserByUsername($user->getUsername(), true);
@@ -226,7 +226,7 @@ class UserXMLParser {
 			} else {
 				$userExists = false;
 			}
-			
+
 			if ($newUsername || !$userExists) {
 				// Create new user account
 				// If the user's username was specified in the data file and
@@ -236,7 +236,7 @@ class UserXMLParser {
 					$this->errors[] = sprintf('%s: %s (%s)',
 						Locale::translate('manager.people.importUsers.failedToImportUser'),
 						$user->getFullName(), $user->getUsername());
-						
+
 					if ($continueOnError) {
 						// Skip to next user
 						$success = false;
@@ -246,7 +246,7 @@ class UserXMLParser {
 					}
 				}
 			}
-			
+
 			// Enroll user in specified roles
 			// If the user is already enrolled in a role, that role is skipped
 			foreach ($user->getRoles() as $role) {
@@ -259,7 +259,7 @@ class UserXMLParser {
 							Locale::translate('manager.people.importUsers.failedToImportRole'),
 							$role->getRoleName(),
 							$user->getFullName(), $user->getUsername());
-							
+
 						if ($continueOnError) {
 							// Continue to insert other roles for this user
 							$success = false;
@@ -270,7 +270,7 @@ class UserXMLParser {
 					}
 				}
 			}
-			
+
 			if ($sendNotify && !$userExists) {
 				// Send email notification to user as if user just registered themselves			
 				$mail->addRecipient($user->getEmail(), $user->getFullName());
@@ -281,13 +281,13 @@ class UserXMLParser {
 				));
 				$mail->clearRecipients();
 			}
-			
+
 			array_push($this->importedUsers, $user);
 		}
-		
+
 		return $success;
 	}
-	
+
 	/**
 	 * Return the set of parsed users.
 	 * @return array ImportedUsers
@@ -295,7 +295,7 @@ class UserXMLParser {
 	function &getUsersToImport() {
 		return $this->usersToImport;
 	}
-	
+
 	/**
 	 * Specify the set of parsed users.
 	 * @param $usersToImport ImportedUsers
@@ -303,7 +303,7 @@ class UserXMLParser {
 	function setUsersToImport($users) {
 		$this->usersToImport = $users;
 	}
-	
+
 	/**
 	 * Return the set of users who were successfully imported.
 	 * @return array ImportedUsers
@@ -311,7 +311,7 @@ class UserXMLParser {
 	function &getImportedUsers() {
 		return $this->importedUsers;
 	}
-	
+
 	/**
 	 * Return an array of error messages that occurred during the import.
 	 * @return array string
@@ -319,7 +319,7 @@ class UserXMLParser {
 	function &getErrors() {
 		return $this->errors;
 	}
-	
+
 	/**
 	 * Check if a role type value identifies a valid role that can be imported.
 	 * Note we do not allow users to be imported into the "admin" role.
@@ -329,7 +329,7 @@ class UserXMLParser {
 	function validRole($roleType) {
 		return isset($roleType) && in_array($roleType, array('manager', 'editor', 'sectionEditor', 'layoutEditor', 'reviewer', 'copyeditor', 'proofreader', 'author', 'reader', 'subscriptionManager'));
 	}
-	
+
 	/**
 	 * Generate a unique username for a user based on the user's name.
 	 * @param $user ImportedUser the user to be modified by this function
@@ -344,13 +344,13 @@ class UserXMLParser {
 			// Default username if we can't use the user's last or first name
 			$baseUsername = 'user';
 		}
-		
+
 		for ($username = $baseUsername, $i=1; $userDao->userExistsByUsername($username, true); $i++) {
 			$username = $baseUsername . $i;
 		}
 		$user->setUsername($username);
 	}
-	
+
 	/**
 	 * Generate a random password for a user.
 	 * @param $user ImportedUser the user to be modified by this function
@@ -360,7 +360,7 @@ class UserXMLParser {
 		$user->setUnencryptedPassword($password);
 		$user->setPassword(Validation::encryptCredentials($user->getUsername(), $password));
 	}
-	
+
 }
 
 
@@ -372,7 +372,7 @@ class ImportedUser extends User {
 
 	/** @var array Roles of this user */
 	var $roles;
-	
+
 	/**
 	 * Constructor.
 	 */
@@ -380,7 +380,7 @@ class ImportedUser extends User {
 		$this->roles = array();
 		parent::User();
 	}
-	
+
 	/**
 	 * Set the unencrypted form of the user's password.
 	 * @param $unencryptedPassword string
@@ -388,7 +388,7 @@ class ImportedUser extends User {
 	function setUnencryptedPassword($unencryptedPassword) {
 		$this->setData('unencryptedPassword', $unencryptedPassword);	
 	}
-	
+
 	/**
 	 * Get the user's unencrypted password.
 	 * @return string
@@ -396,7 +396,7 @@ class ImportedUser extends User {
 	function getUnencryptedPassword() {
 		return $this->getData('unencryptedPassword');
 	}
-	
+
 	/**
 	 * Add a new role to this user.
 	 * @param $role Role
@@ -404,7 +404,7 @@ class ImportedUser extends User {
 	function addRole(&$role) {
 		array_push($this->roles, $role);
 	}
-	
+
 	/**
 	 * Get this user's roles.
 	 * @return array Roles
@@ -412,7 +412,7 @@ class ImportedUser extends User {
 	function &getRoles() {
 		return $this->roles;
 	}
-	
+
 }
 
 ?>

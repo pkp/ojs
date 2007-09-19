@@ -118,7 +118,7 @@ class ArticleXMLGalleyDAO extends ArticleGalleyDAO {
 	function insertXMLGalleys($hookName, $args) {
 		$galley =& $args[0];
 		$galleyId =& $args[1];
-		
+
 		// If the galley is an XML file, then insert rows in the article_xml_galleys table
 		if ($galley->getLabel() == "XML") {
 

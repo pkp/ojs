@@ -43,10 +43,10 @@ class OAIMetadataFormat_MARC extends OAIMetadataFormat {
 			$this->formatElement('500', ' ', ' ', 'a', $this->getLocalizedData($record->coverage, $record->primaryLocale)) .
 			$this->formatElement('540', ' ', ' ', 'a', $record->rights) .
 			"</oai_marc>\n";
-			
+
 		return $response;
 	}
-	
+
 	/**
 	 * Format XML for single MARC element.
 	 * @param $id string
@@ -59,7 +59,7 @@ class OAIMetadataFormat_MARC extends OAIMetadataFormat {
 		if (!is_array($value)) {
 			$value = array($value);
 		}
-		
+
 		$response = '';
 		foreach ($value as $v) {
 			$response .= "\t<varfield id=\"$id\" i1=\"$i1\" i2=\"$i2\">\n" .
@@ -68,7 +68,7 @@ class OAIMetadataFormat_MARC extends OAIMetadataFormat {
 		}
 		return $response;
 	}
-	
+
 }
 
 ?>

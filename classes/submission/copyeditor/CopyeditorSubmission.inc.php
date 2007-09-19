@@ -24,11 +24,11 @@ class CopyeditorSubmission extends Article {
 	function CopyeditorSubmission() {
 		parent::Article();
 	}
-	
+
 	/**
 	 * Get/Set Methods.
 	 */
-	 
+
 	/**
 	 * Get copyedit id.
 	 * @return int
@@ -36,7 +36,7 @@ class CopyeditorSubmission extends Article {
 	function getCopyedId() {
 		return $this->getData('copyedId');
 	}
-	
+
 	/**
 	 * Set copyedit id.
 	 * @param $copyedId int
@@ -45,7 +45,7 @@ class CopyeditorSubmission extends Article {
 	{
 		return $this->setData('copyedId', $copyedId);
 	}
-	
+
 	/**
 	 * Get copyeditor id.
 	 * @return int
@@ -53,7 +53,7 @@ class CopyeditorSubmission extends Article {
 	function getCopyeditorId() {
 		return $this->getData('copyeditorId');
 	}
-	
+
 	/**
 	 * Set copyeditor id.
 	 * @param $copyeditorId int
@@ -62,7 +62,7 @@ class CopyeditorSubmission extends Article {
 	{
 		return $this->setData('copyeditorId', $copyeditorId);
 	}
-	
+
 	/**
 	 * Get copyeditor of this article.
 	 * @return User
@@ -71,7 +71,7 @@ class CopyeditorSubmission extends Article {
 		$copyEditor = &$this->getData('copyeditor');
 		return $copyEditor;
 	}
-	
+
 	/**
 	 * Set copyeditor of this article.
 	 * @param $copyeditor User
@@ -79,7 +79,7 @@ class CopyeditorSubmission extends Article {
 	function setCopyeditor($copyeditor) {
 		return $this->setData('copyeditor', $copyeditor);
 	}
-	
+
 	/**
 	 * Get date notified.
 	 * @return string
@@ -87,7 +87,7 @@ class CopyeditorSubmission extends Article {
 	function getDateNotified() {
 		return $this->getData('dateNotified');
 	}
-	
+
 	/**
 	 * Set date notified.
 	 * @param $dateNotified string
@@ -95,7 +95,7 @@ class CopyeditorSubmission extends Article {
 	function setDateNotified($dateNotified) {
 		return $this->setData('dateNotified', $dateNotified);
 	}
-	
+
 	/**
 	 * Get date underway.
 	 * @return string
@@ -103,7 +103,7 @@ class CopyeditorSubmission extends Article {
 	function getDateUnderway() {
 		return $this->getData('dateUnderway');
 	}
-	
+
 	/**
 	 * Set date underway.
 	 * @param $dateUnderway string
@@ -111,7 +111,7 @@ class CopyeditorSubmission extends Article {
 	function setDateUnderway($dateUnderway) {
 		return $this->setData('dateUnderway', $dateUnderway);
 	}
-	
+
 	/**
 	 * Get date completed.
 	 * @return string
@@ -119,7 +119,7 @@ class CopyeditorSubmission extends Article {
 	function getDateCompleted() {
 		return $this->getData('dateCompleted');
 	}
-	
+
 	/**
 	 * Set date completed.
 	 * @param $dateCompleted string
@@ -128,7 +128,7 @@ class CopyeditorSubmission extends Article {
 	{
 		return $this->setData('dateCompleted', $dateCompleted);
 	}
-	
+
 	/**
 	 * Get date acknowledged.
 	 * @return string
@@ -136,7 +136,7 @@ class CopyeditorSubmission extends Article {
 	function getDateAcknowledged() {
 		return $this->getData('dateAcknowledged');
 	}
-	
+
 	/**
 	 * Set date acknowledged.
 	 * @param $dateAcknowledged string
@@ -145,7 +145,7 @@ class CopyeditorSubmission extends Article {
 	{
 		return $this->setData('dateAcknowledged', $dateAcknowledged);
 	}
-	
+
 	/**
 	 * Get date author notified.
 	 * @return string
@@ -153,7 +153,7 @@ class CopyeditorSubmission extends Article {
 	function getDateAuthorNotified() {
 		return $this->getData('dateAuthorNotified');
 	}
-	
+
 	/**
 	 * Set date author notified.
 	 * @param $dateAuthorNotified string
@@ -162,7 +162,7 @@ class CopyeditorSubmission extends Article {
 	{
 		return $this->setData('dateAuthorNotified', $dateAuthorNotified);
 	}
-	
+
 	/**
 	 * Get date author underway.
 	 * @return string
@@ -170,7 +170,7 @@ class CopyeditorSubmission extends Article {
 	function getDateAuthorUnderway() {
 		return $this->getData('dateAuthorUnderway');
 	}
-	
+
 	/**
 	 * Set date author underway.
 	 * @param $dateAuthorUnderway string
@@ -178,7 +178,7 @@ class CopyeditorSubmission extends Article {
 	function setDateAuthorUnderway($dateAuthorUnderway) {
 		return $this->setData('dateAuthorUnderway', $dateAuthorUnderway);
 	}
-	
+
 	/**
 	 * Get date author completed.
 	 * @return string
@@ -186,7 +186,7 @@ class CopyeditorSubmission extends Article {
 	function getDateAuthorCompleted() {
 		return $this->getData('dateAuthorCompleted');
 	}
-	
+
 	/**
 	 * Set date author completed.
 	 * @param $dateAuthorCompleted string
@@ -195,7 +195,7 @@ class CopyeditorSubmission extends Article {
 	{
 		return $this->setData('dateAuthorCompleted', $dateAuthorCompleted);
 	}
-	
+
 	/**
 	 * Get date author acknowledged.
 	 * @return string
@@ -203,7 +203,7 @@ class CopyeditorSubmission extends Article {
 	function getDateAuthorAcknowledged() {
 		return $this->getData('dateAuthorAcknowledged');
 	}
-	
+
 	/**
 	 * Set date author acknowledged.
 	 * @param $dateAuthorAcknowledged string
@@ -212,7 +212,7 @@ class CopyeditorSubmission extends Article {
 	{
 		return $this->setData('dateAuthorAcknowledged', $dateAuthorAcknowledged);
 	}
-	
+
 	/**
 	 * Get date final notified.
 	 * @return string
@@ -220,7 +220,7 @@ class CopyeditorSubmission extends Article {
 	function getDateFinalNotified() {
 		return $this->getData('dateFinalNotified');
 	}
-	
+
 	/**
 	 * Set date final notified.
 	 * @param $dateFinalNotified string
@@ -229,7 +229,7 @@ class CopyeditorSubmission extends Article {
 	{
 		return $this->setData('dateFinalNotified', $dateFinalNotified);
 	}
-	
+
 	/**
 	 * Get date final underway.
 	 * @return string
@@ -237,7 +237,7 @@ class CopyeditorSubmission extends Article {
 	function getDateFinalUnderway() {
 		return $this->getData('dateFinalUnderway');
 	}
-	
+
 	/**
 	 * Set date final underway.
 	 * @param $dateFinalUnderway string
@@ -245,7 +245,7 @@ class CopyeditorSubmission extends Article {
 	function setDateFinalUnderway($dateFinalUnderway) {
 		return $this->setData('dateFinalUnderway', $dateFinalUnderway);
 	}
-	
+
 	/**
 	 * Get date final completed.
 	 * @return string
@@ -253,7 +253,7 @@ class CopyeditorSubmission extends Article {
 	function getDateFinalCompleted() {
 		return $this->getData('dateFinalCompleted');
 	}
-	
+
 	/**
 	 * Set date final completed.
 	 * @param $dateFinalCompleted string
@@ -262,7 +262,7 @@ class CopyeditorSubmission extends Article {
 	{
 		return $this->setData('dateFinalCompleted', $dateFinalCompleted);
 	}
-	
+
 	/**
 	 * Get date final acknowledged.
 	 * @return string
@@ -270,7 +270,7 @@ class CopyeditorSubmission extends Article {
 	function getDateFinalAcknowledged() {
 		return $this->getData('dateFinalAcknowledged');
 	}
-	
+
 	/**
 	 * Set date final acknowledged.
 	 * @param $dateAuthorAcknowledged string
@@ -279,7 +279,7 @@ class CopyeditorSubmission extends Article {
 	{
 		return $this->setData('dateFinalAcknowledged', $dateFinalAcknowledged);
 	}
-	
+
 	/**
 	 * Get initial revision.
 	 * @return int
@@ -287,7 +287,7 @@ class CopyeditorSubmission extends Article {
 	function getInitialRevision() {
 		return $this->getData('initialRevision');
 	}
-	
+
 	/**
 	 * Set initial revision.
 	 * @param $initialRevision int
@@ -295,7 +295,7 @@ class CopyeditorSubmission extends Article {
 	function setInitialRevision($initialRevision)	{
 		return $this->setData('initialRevision', $initialRevision);
 	}
-	
+
 	/**
 	 * Get editor/author revision.
 	 * @return int
@@ -303,7 +303,7 @@ class CopyeditorSubmission extends Article {
 	function getEditorAuthorRevision() {
 		return $this->getData('editorAuthorRevision');
 	}
-	
+
 	/**
 	 * Set editor/author revision.
 	 * @param $editorAuthorRevision int
@@ -311,7 +311,7 @@ class CopyeditorSubmission extends Article {
 	function setEditorAuthorRevision($editorAuthorRevision)	{
 		return $this->setData('editorAuthorRevision', $editorAuthorRevision);
 	}
-	
+
 	/**
 	 * Get final revision.
 	 * @return int
@@ -319,7 +319,7 @@ class CopyeditorSubmission extends Article {
 	function getFinalRevision() {
 		return $this->getData('finalRevision');
 	}
-	
+
 	/**
 	 * Set final revision.
 	 * @param $finalRevision int
@@ -327,11 +327,11 @@ class CopyeditorSubmission extends Article {
 	function setFinalRevision($finalRevision)	{
 		return $this->setData('finalRevision', $finalRevision);
 	}
-	
+
 	//
 	// Editor
 	//	
-	
+
 	/**
 	 * Get edit assignments for this article.
 	 * @return array
@@ -340,7 +340,7 @@ class CopyeditorSubmission extends Article {
 		$editAssignments = &$this->getData('editAssignments');
 		return $editAssignments;
 	}
-	
+
 	/**
 	 * Set edit assignments for this article.
 	 * @param $editAssignments array
@@ -348,7 +348,7 @@ class CopyeditorSubmission extends Article {
 	function setEditAssignments($editAssignments) {
 		return $this->setData('editAssignments', $editAssignments);
 	}
-	
+
 	//
 	// Files
 	//
@@ -362,7 +362,7 @@ class CopyeditorSubmission extends Article {
 		$returner =& $this->getData('initialCopyeditFile');
 		return $returner;
 	}
-	
+
 	/**
 	 * Set initial copyedit file.
 	 * (The file to be copyeditted in the Initial Copyedit stage.)
@@ -371,7 +371,7 @@ class CopyeditorSubmission extends Article {
 	function setInitialCopyeditFile($initialCopyeditFile) {
 		return $this->setData('initialCopyeditFile', $initialCopyeditFile);
 	}
-	
+
 	/**
 	 * Get editor author copyedit file.
 	 * (The file to be copyeditted in the Author Copyedit stage.)
@@ -381,7 +381,7 @@ class CopyeditorSubmission extends Article {
 		$returner =& $this->getData('editorAuthorCopyeditFile');
 		return $returner;
 	}
-	
+
 	/**
 	 * Set editor author copyedit file.
 	 * (The file to be copyeditted in the Author Copyedit stage.)
@@ -390,7 +390,7 @@ class CopyeditorSubmission extends Article {
 	function setEditorAuthorCopyeditFile($editorAuthorCopyeditFile) {
 		return $this->setData('editorAuthorCopyeditFile', $editorAuthorCopyeditFile);
 	}
-	
+
 	/**
 	 * Get final copyedit file.
 	 * (The file to be copyeditted in the Final Copyedit stage.)
@@ -400,7 +400,7 @@ class CopyeditorSubmission extends Article {
 		$returner =& $this->getData('finalCopyeditFile');
 		return $returner;
 	}
-	
+
 	/**
 	 * Set final copyedit file.
 	 * (The file to be copyeditted in the Final Copyedit stage.)
@@ -409,11 +409,11 @@ class CopyeditorSubmission extends Article {
 	function setFinalCopyeditFile($finalCopyeditFile) {
 		return $this->setData('finalCopyeditFile', $finalCopyeditFile);
 	}
-	
+
 	//
 	// Comments
 	//
-	
+
 	/**
 	 * Get most recent copyedit comment.
 	 * @return ArticleComment
@@ -421,7 +421,7 @@ class CopyeditorSubmission extends Article {
 	function getMostRecentCopyeditComment() {
 		return $this->getData('mostRecentCopyeditComment');
 	}
-	
+
 	/**
 	 * Set most recent copyedit comment.
 	 * @param $mostRecentCopyeditComment ArticleComment

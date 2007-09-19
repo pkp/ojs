@@ -12,7 +12,7 @@
  * CmsRss plugin class
  *
  */
- 
+
 import('classes.plugins.GenericPlugin');
 
 class CmsRssPlugin extends GenericPlugin {
@@ -20,7 +20,7 @@ class CmsRssPlugin extends GenericPlugin {
 	function getName() {
 		return 'CmsRssPlugin';
 	}
-	
+
 	function getDisplayName() {
 		return Locale::translate('plugins.generic.cmsrss.displayName');
 	} 		
@@ -31,13 +31,13 @@ class CmsRssPlugin extends GenericPlugin {
 			$description .= "<br />".Locale::translate('plugins.generic.cmsrss.requirement.cms');
 		return $description;
 	}
-	
+
 	function isCmsInstalled() {
 		$cmsPlugin = &PluginRegistry::getPlugin('generic', 'CmsPlugin');
-		
+
 		if ( $cmsPlugin ) 
 			return $cmsPlugin->getEnabled();
-		
+
 		return false;
 	}
 
@@ -45,9 +45,9 @@ class CmsRssPlugin extends GenericPlugin {
 		if (!Config::getVar('general', 'installed')) return false;
 		if (parent::register($category, $path)) {		
 			$this->addLocaleData();			
-			
+
 			HookRegistry::register( 'Plugins::CmsHandler', array(&$this, 'callbackAddRssFeeds') );			 
-			
+
 
 			return true;
 		}
@@ -61,20 +61,20 @@ class CmsRssPlugin extends GenericPlugin {
 		if ( $this->getEnabled() ) {
 			$current = $args[0];
 			$output =& $args[1];
-			
+
 			$journal =& Request::getJournal();
 			$journalId = $journal->getJournalId();
-			
+
 			$templateMgr =& TemplateManager::getManager();
 
 			$this->import('SimplePie');
-			
+
 			$urls = $this->getSetting($journalId, 'urls'); 
 
 
 			$months = $this->getSetting($journalId, 'months');
 			$aggregate = $this->getSetting($journalId, 'aggregate');
-					
+
 			$feeds = array();
 			foreach ( $urls as $feedInfo ) {
 				$webSafe = array();
@@ -82,35 +82,35 @@ class CmsRssPlugin extends GenericPlugin {
 					$webSafe[] = ContentManager::websafe($pageName) ;
 				}	
 				$webSafe = implode(":", $webSafe);
-				
+
 				// skip all the ones that wont go on this page
 				if ( strcmp($webSafe, $current) != 0) 
 					continue;		
-					
+
 				$feed = new SimplePie();
 				$feed->feed_url($feedInfo['url']);
 				$feed->cache_location(Core::getBaseDir() . DIRECTORY_SEPARATOR . 'cache');
 				$feed->replace_headers(true);
 				$feed->init();
-				
+
 				if ( $feed->data ) {
 					$max = $feed->get_item_quantity(0);
 					$templateMgr->assign('feed', $feed);
-				    for ($x = 0; $x < $max; $x++) {
-					    $item = $feed->get_item($x);
+					for ($x = 0; $x < $max; $x++) {
+						$item = $feed->get_item($x);
 
 						$templateMgr->assign('item', $item);	
 
 						$items[$item->get_date('U')] = trim($templateMgr->fetch($this->getTemplatePath().'rss.tpl'));
-				    }
+					}
 				}
 			}
-			
+
 			if ( is_array($items) && count($items) > 0 ) {
 				if ( $aggregate )
 					krsort($items);
-				
-				
+
+
 				foreach ( $items as $time => $post) {
 					if ( $months > 0 ) {		
 						if ( $time > strtotime("-".$months." month") ) {
@@ -123,12 +123,12 @@ class CmsRssPlugin extends GenericPlugin {
 			}
 
 		}
-		
-		
+
+
 		return false;
 	}
 
-	
+
 	/**
 	 * Determine whether or not this plugin is enabled.
 	 */
@@ -145,12 +145,12 @@ class CmsRssPlugin extends GenericPlugin {
 		$journal = &Request::getJournal();
 		if ($journal) {
 			$this->updateSetting($journal->getJournalId(), 'enabled', $enabled ? true : false);
- 			
+
 			return true;
 		}	
 		return false;
 	}
-	
+
 	/**
 	 * Display verbs for the management interface.
 	 */
@@ -176,7 +176,7 @@ class CmsRssPlugin extends GenericPlugin {
 		}
 		return $verbs;
 	}
-	
+
 	/**
 	 * Set the page's breadcrumbs, given the plugin's tree of items
 	 * to append.
@@ -209,25 +209,25 @@ class CmsRssPlugin extends GenericPlugin {
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
-		
+
 
 		switch ($verb) {
 			case 'settings':
 				$journal =& Request::getJournal();
-						
+
 				$this->import('CmsRssSettingsForm');
 				$form =& new CmsRssSettingsForm($this, $journal->getJournalId());
-				
+
 				$this->setBreadcrumbs();
 				$form->readInputData();
-				
+
 				if (Request::getUserVar('addUrl')) {
 					// Add a sponsor
 					$editData = true;
 					$urls = $form->getData('urls');
 					array_push($urls, array());
 					$form->_data['urls'] = $urls;
-					
+
 				} else if (($delUrl = Request::getUserVar('delUrl')) && count($delUrl) == 1) {
 					// Delete an url
 					$editData = true;
@@ -248,7 +248,7 @@ class CmsRssPlugin extends GenericPlugin {
 				} else {					
 					$form->initData();
 				}
-				
+
 				if ( !isset($editData) && $form->validate()) {
 					$form->execute();
 					$form->display();	
@@ -266,7 +266,7 @@ class CmsRssPlugin extends GenericPlugin {
 				$returner = false;
 				break;	
 		}
-		
+
 		return $returner;		
 	}
 

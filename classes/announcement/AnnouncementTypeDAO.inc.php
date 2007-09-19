@@ -45,7 +45,7 @@ class AnnouncementTypeDAO extends DAO {
 		$result = &$this->retrieve(
 			'SELECT journal_id FROM announcement_types WHERE type_id = ?', $typeId
 		);
-		
+
 		return isset($result->fields[0]) ? $result->fields[0] : 0;	
 	}
 
@@ -62,7 +62,7 @@ class AnnouncementTypeDAO extends DAO {
 				$typeId, 'name', Locale::getPrimaryLocale()
 			)
 		);
-		
+
 		$returner = isset($result->fields[0]) ? $result->fields[0] : false;
 
 		$result->Close();
@@ -111,7 +111,7 @@ class AnnouncementTypeDAO extends DAO {
 		$announcementType->setTypeId($row['type_id']);
 		$announcementType->setJournalId($row['journal_id']);
 		$this->getDataObjectSettings('announcement_type_settings', 'type_id', $row['type_id'], $announcementType);
-		
+
 		return $announcementType;
 	}
 

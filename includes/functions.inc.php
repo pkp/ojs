@@ -52,7 +52,7 @@ function initSystem() {
 			if (Config::getVar('database', 'debug')) {
 				$dbconn = &$conn->getDBConn();
 				fatalError('Database connection failed: ' . $dbconn->errorMsg());
-				
+
 			} else {
 				fatalError('Database connection failed!');
 			}

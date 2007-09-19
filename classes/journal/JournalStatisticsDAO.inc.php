@@ -138,7 +138,7 @@ class JournalStatisticsDAO extends DAO {
 
 		return $returner;
 	}
-	
+
 	/**
 	 * Get statistics about users in the system.
 	 * Returns a map of name => value pairs.

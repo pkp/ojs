@@ -36,7 +36,7 @@ class Ad extends DataObject {
 	function getName() {
 		return $this->getData('name');
 	}
-	
+
 	function setName($name) {
 		$this->setData('name', $name);
 	}

@@ -13,7 +13,7 @@
  *
  * $Id$
  */
- 
+
 import('classes.plugins.GenericPlugin');
 
 class TranslatorPlugin extends GenericPlugin {

@@ -13,7 +13,7 @@
  *
  * $Id$
  */
- 
+
 define('MAIL_EOL', Core::isWindows() ? "\r\n" : "\n");
 define('MAIL_WRAP', 76);
 
@@ -54,7 +54,7 @@ class Mail extends DataObject {
 			$recipients = array();
 		}
 		array_push($recipients, array('name' => $name, 'email' => $email));
-		
+
 		return $this->setData('recipients', $recipients);
 	}
 
@@ -69,28 +69,28 @@ class Mail extends DataObject {
 	function getContentType() {
 		return $this->getData('content_type');
 	}
-	
+
 	function setContentType($contentType) {
 		return $this->setData('content_type', $contentType);
 	}
-	
+
 	function getRecipients() {
 		return $this->getData('recipients');
 	}
-	
+
 	function setRecipients($recipients) {
 		return $this->setData('recipients', $recipients);
 	}
-	
+
 	function addCc($email, $name = '') {
 		if (($ccs = $this->getData('ccs')) == null) {
 			$ccs = array();
 		}
 		array_push($ccs, array('name' => $name, 'email' => $email));
-		
+
 		return $this->setData('ccs', $ccs);
 	}
-	
+
 	function getCcs() {
 		return $this->getData('ccs');
 	}
@@ -98,20 +98,20 @@ class Mail extends DataObject {
 	function setCcs($ccs) {
 		return $this->setData('ccs', $ccs);
 	}
-	
+
 	function addBcc($email, $name = '') {
 		if (($bccs = $this->getData('bccs')) == null) {
 			$bccs = array();
 		}
 		array_push($bccs, array('name' => $name, 'email' => $email));
-		
+
 		return $this->setData('bccs', $bccs);
 	}
-	
+
 	function getBccs() {
 		return $this->getData('bccs');
 	}
-	
+
 	function setBccs($bccs) {
 		return $this->setData('bccs', $bccs);
 	}
@@ -127,7 +127,7 @@ class Mail extends DataObject {
 
 	function addHeader($name, $content) {
 		$updated = false;
-		
+
 		if (($headers = $this->getData('headers')) == null) {
 			$headers = array();
 		}
@@ -138,22 +138,22 @@ class Mail extends DataObject {
 				$updated = true;
 			}
 		}
-			
+
 		if (!$updated) {
 			array_push($headers, array('name' => $name,'content' => $content));
 		}
-			
+
 		return $this->setData('headers', $headers);
 	}
-	
+
 	function getHeaders() {
 		return $this->getData('headers');
 	}
-	
+
 	function setHeaders(&$headers) {
 		return $this->setData('headers', $headers);
 	}
-	
+
 	/**
 	 * Adds a file attachment to the email.
 	 * @param $filePath string complete path to the file to attach
@@ -165,18 +165,18 @@ class Mail extends DataObject {
 		if ($attachments = &$this->getData('attachments') == null) {
 			$attachments = array();
 		}
-		
+
 		/* If the arguments $fileName and $contentType are not specified,
 			then try and determine them automatically. */
 		if (empty($fileName)) {
 			$fileName = basename($filePath);
 		}
-		
+
 		if (empty($contentType)) {
 			$contentType = String::mime_content_type($filePath);
 			if (empty($contentType)) $contentType = 'application/x-unknown-content-type';
 		}
-		
+
 		// Open the file and read contents into $attachment
 		if (is_readable($filePath) && is_file($filePath)) {
 			$fp = fopen($filePath, 'rb');
@@ -188,12 +188,12 @@ class Mail extends DataObject {
 				fclose($fp);
 			}
 		}
-		
+
 		if (isset($content)) {
 			/* Encode the contents in base64. */
 			$content = chunk_split(base64_encode($content), MAIL_WRAP, MAIL_EOL);
 			array_push($attachments, array('filename' => $fileName, 'content-type' => $contentType, 'disposition' => $contentDisposition, 'content' => $content));
-		
+
 			return $this->setData('attachments', $attachments);
 		} else {
 			return false;
@@ -204,7 +204,7 @@ class Mail extends DataObject {
 		$attachments = &$this->getData('attachments');
 		return $attachments;
 	}
-	
+
 	function hasAttachments() {
 		$attachments = &$this->getAttachments();
 		return ($attachments != null && count($attachments) != 0);
@@ -213,11 +213,11 @@ class Mail extends DataObject {
 	function setFrom($email, $name = '') {
 		return $this->setData('from', array('name' => $name, 'email' => $email));
 	}
-	
+
 	function getFrom() {
 		return $this->getData('from');
 	}
-	
+
 	function setSubject($subject) {
 		return $this->setData('subject', $subject);
 	}
@@ -229,11 +229,11 @@ class Mail extends DataObject {
 	function setBody($body) {
 		return $this->setData('body', $body);
 	}
-	
+
 	function getBody() {
 		return $this->getData('body');
 	}
-	
+
 	/**
 	 * Return a string containing the from address.
 	 * @return string
@@ -246,7 +246,7 @@ class Mail extends DataObject {
 			return Mail::encodeDisplayName($from['name']) . ' <'.$from['email'].'>';
 		}
 	}
-	
+
 	/**
 	 * Return a string from an array of (name, email) pairs.
 	 * @param $includeNames boolean
@@ -255,27 +255,27 @@ class Mail extends DataObject {
 	function getAddressArrayString($addresses, $includeNames = true) {
 		if ($addresses == null) {
 			return null;
-			
+
 		} else {
 			$addressString = '';
-			
+
 			foreach ($addresses as $address) {
 				if (!empty($addressString)) {
 					$addressString .= ', ';
 				}
-				
+
 				if (Core::isWindows() || empty($address['name']) || !$includeNames) {
 					$addressString .= $address['email'];
-					
+
 				} else {
 					$addressString .= Mail::encodeDisplayName($address['name']) . ' <'.$address['email'].'>';
 				}
 			}
-			
+
 			return $addressString;
 		}
 	}
-	
+
 	/**
 	 * Return a string containing the recipients.
 	 * @return string
@@ -283,7 +283,7 @@ class Mail extends DataObject {
 	function getRecipientString() {
 		return $this->getAddressArrayString($this->getRecipients());
 	}
-	
+
 	/**
 	 * Return a string containing the Cc recipients.
 	 * @return string
@@ -291,7 +291,7 @@ class Mail extends DataObject {
 	function getCcString() {
 		return $this->getAddressArrayString($this->getCcs());
 	}
-	
+
 	/**
 	 * Return a string containing the Bcc recipients.
 	 * @return string
@@ -299,7 +299,7 @@ class Mail extends DataObject {
 	function getBccString() {
 		return $this->getAddressArrayString($this->getBccs(), false);
 	}
-	
+
 
 	/**
 	 * Send the email.
@@ -311,7 +311,7 @@ class Mail extends DataObject {
 
 		$subject = String::encode_mime_header($this->getSubject());
 		$body = $this->getBody();
-		
+
 		// FIXME Some *nix mailers won't work with CRLFs
 		if (Core::isWindows()) {
 			// Convert LFs to CRLFs for Windows
@@ -326,34 +326,34 @@ class Mail extends DataObject {
 		} elseif ($this->hasAttachments()) {
 			// Only add MIME headers if sending an attachment
 			$mimeBoundary = '==boundary_'.md5(microtime());
-		
+
 			/* Add MIME-Version and Content-Type as headers. */
 			$this->addHeader('MIME-Version', '1.0');
 			$this->addHeader('Content-Type', 'multipart/mixed; boundary="'.$mimeBoundary.'"');
-		
+
 		} else {
 			$this->addHeader('Content-Type', 'text/plain; charset="'.Config::getVar('i18n', 'client_charset').'"');
 		}
-		
+
 		$this->addHeader('X-Mailer', 'Open Journal Systems v2');
 		$this->addHeader('X-Originating-IP', Request::getRemoteAddr());
 		$this->addHeader('Date', date('D, d M Y H:i:s O'));
-		
+
 		/* Add $from, $ccs, and $bccs as headers. */
 		if ($from != null) {
 			$this->addHeader('From', $from);
 		}
-		
+
 		$ccs = $this->getCcString();
 		if ($ccs != null) {
 			$this->addHeader('Cc', $ccs);
 		}
-		
+
 		$bccs = $this->getBccString();
 		if ($bccs != null) {
 			$this->addHeader('Bcc', $bccs);
 		}
-		
+
 		$headers = '';
 		foreach ($this->getHeaders() as $header) {
 			if (!empty($headers)) {
@@ -361,7 +361,7 @@ class Mail extends DataObject {
 			}
 			$headers .= $header['name'].': '. str_replace(array("\r", "\n"), '', $header['content']);
 		}
-		
+
 		if ($this->hasAttachments()) {
 			// Add the body
 			$mailBody = 'This message is in MIME format and requires a MIME-capable mail client to view.'.MAIL_EOL.MAIL_EOL;
@@ -378,9 +378,9 @@ class Mail extends DataObject {
 				$mailBody .= 'Content-disposition: '.$attachment['disposition'].MAIL_EOL.MAIL_EOL;
 				$mailBody .= $attachment['content'].MAIL_EOL.MAIL_EOL;
 			}
-			
+
 			$mailBody .= '--'.$mimeBoundary.'--';
-		
+
 		} else {
 			// Just add the body
 			$mailBody = wordwrap($body, MAIL_WRAP, MAIL_EOL);

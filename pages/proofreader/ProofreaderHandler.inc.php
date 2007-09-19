@@ -88,7 +88,7 @@ class ProofreaderHandler extends Handler {
 		$templateMgr->assign('helpTopicId', 'editorial.proofreadersRole.submissions');
 		$templateMgr->display('proofreader/index.tpl');
 	}
-	
+
 	/**
 	 * Validate that user is a proofreader in the selected journal.
 	 * Redirects to user index page if not properly authenticated.
@@ -100,7 +100,7 @@ class ProofreaderHandler extends Handler {
 			Validation::redirectLogin();
 		}
 	}
-	
+
 	/**
 	 * Setup common template variables.
 	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
@@ -128,7 +128,7 @@ class ProofreaderHandler extends Handler {
 		}
 
 	}
-	
+
 	/**
 	 * Display submission management instructions.
 	 * @param $args (type)
@@ -152,16 +152,16 @@ class ProofreaderHandler extends Handler {
 		import('pages.proofreader.SubmissionProofreadHandler');
 		SubmissionProofreadHandler::completeProofreader($args);
 	}
-	
+
 	//
 	// Submission Comments
 	//
-	
+
 	function viewProofreadComments($args) {
 		import('pages.proofreader.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::viewProofreadComments($args);
 	}
-	
+
 	function postProofreadComment() {
 		import('pages.proofreader.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::postProofreadComment();
@@ -190,17 +190,17 @@ class ProofreaderHandler extends Handler {
 		import('pages.proofreader.SubmissionProofreadHandler');
 		SubmissionProofreadHandler::viewFile($args);
 	}
-	
+
 	function proofGalley($args) {
 		import('pages.proofreader.SubmissionProofreadHandler');
 		SubmissionProofreadHandler::proofGalley($args);
 	}
-	
+
 	function proofGalleyTop($args) {
 		import('pages.proofreader.SubmissionProofreadHandler');
 		SubmissionProofreadHandler::proofGalleyTop($args);
 	}
-	
+
 	function proofGalleyFile($args) {
 		import('pages.proofreader.SubmissionProofreadHandler');
 		SubmissionProofreadHandler::proofGalleyFile($args);
@@ -210,7 +210,7 @@ class ProofreaderHandler extends Handler {
 		import('pages.proofreader.SubmissionProofreadHandler');
 		SubmissionProofreadHandler::viewMetadata($args);
 	}
-	
+
 	function editComment($args) {
 		import('pages.proofreader.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::editComment($args);

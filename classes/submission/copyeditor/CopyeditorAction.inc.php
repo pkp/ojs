@@ -24,11 +24,11 @@ class CopyeditorAction extends Action {
 	function CopyeditorAction() {
 
 	}
-	
+
 	/**
 	 * Actions.
 	 */
-	
+
 	/**
 	 * Copyeditor completes initial copyedit.
 	 * @param $copyeditorSubmission object
@@ -45,29 +45,29 @@ class CopyeditorAction extends Action {
 		$user = &Request::getUser();
 		import('mail.ArticleMailTemplate');
 		$email = &new ArticleMailTemplate($copyeditorSubmission, 'COPYEDIT_COMPLETE');
-		
+
 		$editAssignments = $copyeditorSubmission->getEditAssignments();
 
 		$author = $copyeditorSubmission->getUser();
-		
+
 		if (!$email->isEnabled() || ($send && !$email->hasErrors())) {
 			HookRegistry::call('CopyeditorAction::completeCopyedit', array(&$copyeditorSubmission, &$editAssignments, &$author, &$email));
 			if ($email->isEnabled()) {
 				$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_COMPLETE, ARTICLE_EMAIL_TYPE_COPYEDIT, $copyeditorSubmission->getArticleId());
 				$email->send();
 			}
-				
+
 			$copyeditorSubmission->setDateCompleted(Core::getCurrentDate());
 			$copyeditorSubmission->setDateAuthorNotified(Core::getCurrentDate());
 			$copyeditorSubmissionDao->updateCopyeditorSubmission($copyeditorSubmission);
-	
+
 			// Add log entry
 			import('article.log.ArticleLog');
 			import('article.log.ArticleEventLogEntry');
 			ArticleLog::logEvent($copyeditorSubmission->getArticleId(), ARTICLE_LOG_COPYEDIT_INITIAL, ARTICLE_LOG_TYPE_COPYEDIT, $user->getUserId(), 'log.copyedit.initialEditComplete', Array('copyeditorName' => $user->getFullName(), 'articleId' => $copyeditorSubmission->getArticleId()));
 
 			return true;
-			
+
 		} else {
 			if (!Request::getUserVar('continued')) {
 				$email->addRecipient($author->getEmail(), $author->getFullName());
@@ -87,7 +87,7 @@ class CopyeditorAction extends Action {
 			return false;
 		}
 	}
-	
+
 	/**
 	 * Copyeditor completes final copyedit.
 	 * @param $copyeditorSubmission object
@@ -104,19 +104,19 @@ class CopyeditorAction extends Action {
 		$user = &Request::getUser();
 		import('mail.ArticleMailTemplate');
 		$email = &new ArticleMailTemplate($copyeditorSubmission, 'COPYEDIT_FINAL_COMPLETE');
-		
+
 		$editAssignments = $copyeditorSubmission->getEditAssignments();
-		
+
 		if (!$email->isEnabled() || ($send && !$email->hasErrors())) {
 			HookRegistry::call('CopyeditorAction::completeFinalCopyedit', array(&$copyeditorSubmission, &$editAssignments, &$email));
 			if ($email->isEnabled()) {
 				$email->setAssoc(ARTICLE_EMAIL_COPYEDIT_NOTIFY_FINAL_COMPLETE, ARTICLE_EMAIL_TYPE_COPYEDIT, $copyeditorSubmission->getArticleId());
 				$email->send();
 			}
-				
+
 			$copyeditorSubmission->setDateFinalCompleted(Core::getCurrentDate());
 			$copyeditorSubmissionDao->updateCopyeditorSubmission($copyeditorSubmission);
-			
+
 			if ($copyEdFile =& $copyeditorSubmission->getFinalCopyeditFile()) {
 				// Set initial layout version to final copyedit version
 				$layoutDao = &DAORegistry::getDAO('LayoutAssignmentDAO');
@@ -165,14 +165,14 @@ class CopyeditorAction extends Action {
 			return false;
 		}
 	}
-	
+
 	/**
 	 * Set that the copyedit is underway.
 	 */
 	function copyeditUnderway(&$copyeditorSubmission) {
 		if (!HookRegistry::call('CopyeditorAction::copyeditUnderway', array(&$copyeditorSubmission))) {
 			$copyeditorSubmissionDao = &DAORegistry::getDAO('CopyeditorSubmissionDAO');		
-		
+
 			if ($copyeditorSubmission->getDateNotified() != null && $copyeditorSubmission->getDateUnderway() == null) {
 				$copyeditorSubmission->setDateUnderway(Core::getCurrentDate());
 				$update = true;
@@ -181,10 +181,10 @@ class CopyeditorAction extends Action {
 				$copyeditorSubmission->setDateFinalUnderway(Core::getCurrentDate());
 				$update = true;
 			}
-		
+
 			if (isset($update)) {
 				$copyeditorSubmissionDao->updateCopyeditorSubmission($copyeditorSubmission);
-		
+
 				// Add log entry
 				$user = &Request::getUser();
 				import('article.log.ArticleLog');
@@ -211,7 +211,7 @@ class CopyeditorAction extends Action {
 
 		$articleFileManager = &new ArticleFileManager($copyeditorSubmission->getArticleId());
 		$user = &Request::getUser();
-		
+
 		$fileName = 'upload';
 		if ($articleFileManager->uploadedFileExists($fileName)) {
 			HookRegistry::call('CopyeditorAction::uploadCopyeditVersion', array(&$copyeditorSubmission));
@@ -221,22 +221,22 @@ class CopyeditorAction extends Action {
 				$fileId = $articleFileManager->uploadCopyeditFile($fileName);
 			}
 		}
-		
+
 		if (isset($fileId) && $fileId != 0) {
 			$copyeditorSubmission->setCopyeditFileId($fileId);
-		
+
 			if ($copyeditStage == 'initial') {
 				$copyeditorSubmission->setInitialRevision($articleFileDao->getRevisionNumber($fileId));
 			} elseif ($copyeditStage == 'final') {
 				$copyeditorSubmission->setFinalRevision($articleFileDao->getRevisionNumber($fileId));
 			}
-	
+
 			$copyeditorSubmissionDao->updateCopyeditorSubmission($copyeditorSubmission);
-			
+
 			// Add log
 			import('article.log.ArticleLog');
 			import('article.log.ArticleEventLogEntry');
-	
+
 			$entry = &new ArticleEventLogEntry();
 			$entry->setArticleId($copyeditorSubmission->getArticleId());
 			$entry->setUserId($user->getUserId());
@@ -245,15 +245,15 @@ class CopyeditorAction extends Action {
 			$entry->setLogMessage('log.copyedit.copyeditorFile');
 			$entry->setAssocType(ARTICLE_LOG_TYPE_COPYEDIT);
 			$entry->setAssocId($fileId);
-			
+
 			ArticleLog::logEventEntry($copyeditorSubmission->getArticleId(), $entry);
 		}
 	}
-	
+
 	//
 	// Comments
 	//
-	
+
 	/**
 	 * View layout comments.
 	 * @param $article object
@@ -261,13 +261,13 @@ class CopyeditorAction extends Action {
 	function viewLayoutComments($article) {
 		if (!HookRegistry::call('CopyeditorAction::viewLayoutComments', array(&$article))) {
 			import("submission.form.comment.LayoutCommentForm");
-		
+
 			$commentForm = &new LayoutCommentForm($article, ROLE_ID_COPYEDITOR);
 			$commentForm->initData();
 			$commentForm->display();
 		}
 	}
-	
+
 	/**
 	 * Post layout comment.
 	 * @param $article object
@@ -275,10 +275,10 @@ class CopyeditorAction extends Action {
 	function postLayoutComment($article, $emailComment) {
 		if (!HookRegistry::call('CopyeditorAction::postLayoutComment', array(&$article, &$emailComment))) {
 			import("submission.form.comment.LayoutCommentForm");
-		
+
 			$commentForm = &new LayoutCommentForm($article, ROLE_ID_COPYEDITOR);
 			$commentForm->readInputData();
-		
+
 			if ($commentForm->validate()) {
 				$commentForm->execute();
 
@@ -293,7 +293,7 @@ class CopyeditorAction extends Action {
 			return true;
 		}
 	}
-	
+
 	/**
 	 * View copyedit comments.
 	 * @param $article object
@@ -301,13 +301,13 @@ class CopyeditorAction extends Action {
 	function viewCopyeditComments($article) {
 		if (!HookRegistry::call('CopyeditorAction::viewCopyeditComments', array(&$article))) {
 			import("submission.form.comment.CopyeditCommentForm");
-		
+
 			$commentForm = &new CopyeditCommentForm($article, ROLE_ID_COPYEDITOR);
 			$commentForm->initData();
 			$commentForm->display();
 		}
 	}
-	
+
 	/**
 	 * Post copyedit comment. 
 	 * @param $article object
@@ -315,17 +315,17 @@ class CopyeditorAction extends Action {
 	function postCopyeditComment($article, $emailComment) {
 		if (!HookRegistry::call('CopyeditorAction::postCopyeditComment', array(&$article, &$emailComment))) {
 			import("submission.form.comment.CopyeditCommentForm");
-		
+
 			$commentForm = &new CopyeditCommentForm($article, ROLE_ID_COPYEDITOR);
 			$commentForm->readInputData();
-		
+
 			if ($commentForm->validate()) {
 				$commentForm->execute();
-				
+
 				if ($emailComment) {
 					$commentForm->email();
 				}
-			
+
 			} else {
 				$commentForm->display();
 				return false;
@@ -333,11 +333,11 @@ class CopyeditorAction extends Action {
 			return true;
 		}
 	}
-	
+
 	//
 	// Misc
 	//
-	
+
 	/**
 	 * Download a file a copyeditor has access to.
 	 * @param $submission object
@@ -348,7 +348,7 @@ class CopyeditorAction extends Action {
 		$copyeditorSubmissionDao = &DAORegistry::getDAO('CopyeditorSubmissionDAO');		
 
 		$canDownload = false;
-		
+
 		// Copyeditors have access to:
 		// 1) The first revision of the copyedit file
 		// 2) The initial copyedit revision
@@ -358,11 +358,11 @@ class CopyeditorAction extends Action {
 		if ($submission->getCopyeditFileId() == $fileId) {
 			$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');		
 			$currentRevision = &$articleFileDao->getRevisionNumber($fileId);
-			
+
 			if ($revision == null) {
 				$revision = $currentRevision;
 			}
-			
+
 			if ($revision == 1) {
 				$canDownload = true;
 			} else if ($submission->getInitialRevision() == $revision) {

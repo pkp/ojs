@@ -31,7 +31,7 @@ class HelpHandler extends Handler {
 	function index() {
 		HelpHandler::view(array('index', 'topic', '000000'));
 	}
-	
+
 	function toc() {
 		parent::validate();
 		HelpHandler::setupTemplate();
@@ -41,7 +41,7 @@ class HelpHandler extends Handler {
 		$templateMgr->assign_by_ref('helpToc', $help->getTableOfContents());
 		$templateMgr->display('help/helpToc.tpl');
 	}
-	
+
 	/**
 	 * Display the selected help topic.
 	 * @param $args array first parameter is the ID of the topic to display
@@ -49,26 +49,26 @@ class HelpHandler extends Handler {
 	function view($args) {
 		parent::validate();
 		HelpHandler::setupTemplate();
-		
+
 		$topicId = implode("/",$args);
-		
+
 		$topicDao = &DAORegistry::getDAO('HelpTopicDAO');
 		$topic = $topicDao->getTopic($topicId);
-		
+
 		if ($topic === false) {
 			// Invalid topic, use default instead
 			$topicId = HELP_DEFAULT_TOPIC;
 			$topic = $topicDao->getTopic($topicId);
 		}
-		
+
 		$tocDao = &DAORegistry::getDAO('HelpTocDAO');
 		$toc = $tocDao->getToc($topic->getTocId());
-		
+
 		if ($toc === false) {
 			// Invalid toc, use default instead
 			$toc = $tocDao->getToc(HELP_DEFAULT_TOC);
 		}
-		
+
 		if ($topic->getSubTocId() != null) {
 			$subToc = $tocDao->getToc($topic->getSubTocId());
 		} else {
@@ -89,7 +89,7 @@ class HelpHandler extends Handler {
 		$templateMgr->assign('breadcrumbs', $toc->getBreadcrumbs());
 		$templateMgr->display('help/view.tpl');
 	}
-	
+
 	/**
 	 * Display search results for a topic search by keyword.
 	 */
@@ -98,9 +98,9 @@ class HelpHandler extends Handler {
 		HelpHandler::setupTemplate();
 
 		$searchResults = array();
-		
+
 		$keyword = trim(String::regexp_replace('/[^\w\s\.\-]/', '', strip_tags(Request::getUserVar('keyword'))));
-		
+
 		if (!empty($keyword)) {
 			$topicDao = &DAORegistry::getDAO('HelpTopicDAO');
 			$topics = $topicDao->getTopicsByKeyword($keyword);
@@ -110,7 +110,7 @@ class HelpHandler extends Handler {
 				$searchResults[] = array('topic' => $topic, 'toc' => $tocDao->getToc($topic->getTocId()));		
 			}
 		}
-						
+
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('showSearch', true);
 		$templateMgr->assign('pageTitle', Locale::translate('help.searchResults'));

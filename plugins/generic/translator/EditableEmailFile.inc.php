@@ -38,7 +38,7 @@ class EditableEmailFile {
 	function update($key, $subject, $body, $description) {
 		$matches = null;
 		$quotedKey = String::regexp_quote($key);
-	 	preg_match(
+		preg_match(
 			"/<row>[\W]*<field name=\"email_key\">$quotedKey<\/field>/",
 			$this->getContents(),
 			$matches,
@@ -65,7 +65,7 @@ class EditableEmailFile {
 	function delete($key) {
 		$matches = null;
 		$quotedKey = String::regexp_quote($key);
-	 	preg_match(
+		preg_match(
 			"/[ \t]*<row>[\W]*<field name=\"email_key\">$quotedKey<\/field>/",
 			$this->getContents(),
 			$matches,

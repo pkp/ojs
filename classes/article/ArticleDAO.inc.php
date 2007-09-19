@@ -93,7 +93,7 @@ class ArticleDAO extends DAO {
 
 		return $returner;
 	}
-	
+
 	/**
 	 * Internal function to return an Article object from a row.
 	 * @param $row array
@@ -104,7 +104,7 @@ class ArticleDAO extends DAO {
 		$this->_articleFromRow($article, $row);
 		return $article;
 	}
-	
+
 	/**
 	 * Internal function to fill in the passed article object from the row.
 	 * @param $article Article output article
@@ -131,13 +131,13 @@ class ArticleDAO extends DAO {
 		$article->setEditorFileId($row['editor_file_id']);
 		$article->setCopyeditFileId($row['copyedit_file_id']);
 		$article->setPages($row['pages']);
-		
+
 		$article->setAuthors($this->authorDao->getAuthorsByArticle($row['article_id']));
 
 		$this->getDataObjectSettings('article_settings', 'article_id', $row['article_id'], $article);
 
 		HookRegistry::call('ArticleDAO::_returnArticleFromRow', array(&$article, &$row));
-		
+
 	}
 
 	/**
@@ -182,7 +182,7 @@ class ArticleDAO extends DAO {
 
 		return $article->getArticleId();
 	}
-	
+
 	/**
 	 * Update an existing article.
 	 * @param $article Article
@@ -239,17 +239,17 @@ class ArticleDAO extends DAO {
 				$this->authorDao->insertAuthor($authors[$i]);
 			}
 		}
-		
+
 		// Remove deleted authors
 		$removedAuthors = $article->getRemovedAuthors();
 		for ($i=0, $count=count($removedAuthors); $i < $count; $i++) {
 			$this->authorDao->deleteAuthorById($removedAuthors[$i], $article->getArticleId());
 		}
-		
+
 		// Update author sequence numbers
 		$this->authorDao->resequenceAuthors($article->getArticleId());
 	}
-	
+
 	/**
 	 * Delete an article.
 	 * @param $article Article
@@ -257,7 +257,7 @@ class ArticleDAO extends DAO {
 	function deleteArticle(&$article) {
 		return $this->deleteArticleById($article->getArticleId());
 	}
-	
+
 	/**
 	 * Delete an article by ID.
 	 * @param $articleId int
@@ -318,7 +318,7 @@ class ArticleDAO extends DAO {
 		import('file.ArticleFileManager');
 		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
 		$articleFiles = &$articleFileDao->getArticleFilesByArticle($articleId);
-	
+
 		$articleFileManager = &new ArticleFileManager($articleId);
 		foreach ($articleFiles as $articleFile) {
 			$articleFileManager->deleteFile($articleFile->getFileId());
@@ -329,7 +329,7 @@ class ArticleDAO extends DAO {
 		$this->update('DELETE FROM article_settings WHERE article_id = ?', $articleId);
 		$this->update('DELETE FROM articles WHERE article_id = ?', $articleId);
 	}
-	
+
 	/**
 	 * Get all articles for a journal.
 	 * @param $userId int
@@ -340,7 +340,7 @@ class ArticleDAO extends DAO {
 		$primaryLocale = Locale::getPrimaryLocale();
 		$locale = Locale::getLocale();
 		$articles = array();
-		
+
 		$result = &$this->retrieve(
 			'SELECT	a.*,
 				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
@@ -364,7 +364,7 @@ class ArticleDAO extends DAO {
 				$journalId
 			)
 		);
-		
+
 		$returner = &new DAOResultFactory($result, $this, '_returnArticleFromRow');
 		return $returner;
 	}
@@ -375,7 +375,7 @@ class ArticleDAO extends DAO {
 	 */
 	function deleteArticlesByJournalId($journalId) {
 		$articles = $this->getArticlesByJournalId($journalId);
-		
+
 		while (!$articles->eof()) {
 			$article = &$articles->next();
 			$this->deleteArticleById($article->getArticleId());
@@ -404,7 +404,7 @@ class ArticleDAO extends DAO {
 		);
 		if ($journalId) $params[] = $journalId;
 		$articles = array();
-		
+
 		$result = &$this->retrieve(
 			'SELECT	a.*,
 				COALESCE(stl.setting_value, stpl.setting_value) AS section_title,
@@ -419,7 +419,7 @@ class ArticleDAO extends DAO {
 			(isset($journalId)?' AND a.journal_id = ?':''),
 			$params
 		);
-		
+
 		while (!$result->EOF) {
 			$articles[] = &$this->_returnArticleFromRow($result->GetRowAssoc(false));
 			$result->MoveNext();
@@ -427,10 +427,10 @@ class ArticleDAO extends DAO {
 
 		$result->Close();
 		unset($result);
-		
+
 		return $articles;
 	}
-	
+
 	/**
 	 * Get the ID of the journal an article is in.
 	 * @param $articleId int
@@ -447,7 +447,7 @@ class ArticleDAO extends DAO {
 
 		return $returner;
 	}
-	
+
 	/**
 	 * Check if the specified incomplete submission exists.
 	 * @param $articleId int
@@ -478,7 +478,7 @@ class ArticleDAO extends DAO {
 			'UPDATE articles SET status = ? WHERE article_id = ?', array($status, $articleId)
 		);
 	}
-	
+
 	/**
 	 * Removes articles from a section by section ID
 	 * @param $sectionId int
@@ -488,7 +488,7 @@ class ArticleDAO extends DAO {
 			'UPDATE articles SET section_id = null WHERE section_id = ?', $sectionId
 		);
 	}
-	
+
 	/**
 	 * Get the ID of the last inserted article.
 	 * @return int

@@ -25,7 +25,7 @@ class ArticleGalley extends ArticleFile {
 	function ArticleGalley() {
 		parent::DataObject();
 	}
-	
+
 	/**
 	 * Check if galley is an HTML galley.
 	 * @return boolean
@@ -61,7 +61,7 @@ class ArticleGalley extends ArticleFile {
 	//
 	// Get/set methods
 	//
-	
+
 	/**
 	 * Get ID of galley.
 	 * @return int
@@ -69,7 +69,7 @@ class ArticleGalley extends ArticleFile {
 	function getGalleyId() {
 		return $this->getData('galleyId');
 	}
-	
+
 	/**
 	 * Set ID of galley.
 	 * @param $galleyId int
@@ -85,7 +85,7 @@ class ArticleGalley extends ArticleFile {
 	function getViews() {
 		return $this->getData('views');
 	}
-	
+
 	/**
 	 * Set views count.
 	 * NOTE that the views count is NOT stored by the DAO update or insert functions.
@@ -115,7 +115,7 @@ class ArticleGalley extends ArticleFile {
 	function getLabel() {
 		return $this->getData('label');
 	}
-	
+
 	/**
 	 * Set label/title.
 	 * @param $label string
@@ -123,7 +123,7 @@ class ArticleGalley extends ArticleFile {
 	function setLabel($label) {
 		return $this->setData('label', $label);
 	}
-	
+
 	/**
 	 * Get locale.
 	 * @return string
@@ -131,7 +131,7 @@ class ArticleGalley extends ArticleFile {
 	function getLocale() {
 		return $this->getData('locale');
 	}
-	
+
 	/**
 	 * Set locale.
 	 * @param $locale string
@@ -139,7 +139,7 @@ class ArticleGalley extends ArticleFile {
 	function setLocale($locale) {
 		return $this->setData('locale', $locale);
 	}
-	
+
 	/**
 	 * Get sequence order of supplementary file.
 	 * @return float
@@ -147,7 +147,7 @@ class ArticleGalley extends ArticleFile {
 	function getSequence() {
 		return $this->getData('sequence');
 	}
-	
+
 	/**
 	 * Set sequence order of supplementary file.
 	 * @param $sequence float
@@ -155,7 +155,7 @@ class ArticleGalley extends ArticleFile {
 	function setSequence($sequence) {
 		return $this->setData('sequence', $sequence);
 	}
-	
+
 }
 
 ?>

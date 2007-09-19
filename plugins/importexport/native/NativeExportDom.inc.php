@@ -212,7 +212,7 @@ class NativeExportDom {
 			$galleyNode =& NativeExportDom::generateGalleyDom($doc, $journal, $issue, $article, $galley);
 			if ($galleyNode !== null) XMLCustomWriter::appendChild($root, $galleyNode);
 			unset($galleyNode);
-			
+
 		}
 
 		/* --- Supplementary Files --- */
@@ -252,7 +252,7 @@ class NativeExportDom {
 			XMLCustomWriter::setAttribute($suppNode, 'type', $suppFileType);
 			XMLCustomWriter::setAttribute($suppNode, 'public_id', $suppFile->getPublicSuppFileId(), false);
 			XMLCustomWriter::setAttribute($suppNode, 'language', $suppFile->getLanguage(), false);
-			
+
 			XMLCustomWriter::appendChild($root, $suppNode);
 
 			XMLCustomWriter::createChildWithText($doc, $suppNode, 'title', $suppFile->getTitle());

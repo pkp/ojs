@@ -42,7 +42,7 @@ class SectionDAO extends DAO {
 
 		return $returner;
 	}
-	
+
 	/**
 	 * Retrieve a section by abbreviation.
 	 * @param $sectionAbbrev string
@@ -69,7 +69,7 @@ class SectionDAO extends DAO {
 
 		return $returner;
 	}
-	
+
 	/**
 	 * Retrieve a section by title.
 	 * @param $sectionTitle string
@@ -95,14 +95,15 @@ class SectionDAO extends DAO {
 
 		return $returner;
 	}
-	
+
 	/**
 	 * Retrieve a section by title and abbrev.
 	 * @param $sectionTitle string
 	 * @param $sectionAbbrev string
+	 * @param $locale string optional
 	 * @return Section
 	 */
-	function &getSectionByTitleAndAbbrev($sectionTitle, $sectionAbbrev, $journalId) {
+	function &getSectionByTitleAndAbbrev($sectionTitle, $sectionAbbrev, $journalId, $locale) {
 		$sql = 'SELECT s.* FROM sections s, section_settings l1, section_settings l2 WHERE l1.section_id = s.section_id AND l2.section_id = s.section_id AND l1.setting_name = ? AND l2.setting_name = ? AND l1.setting_value = ? AND l2.setting_value = ? AND s.journal_id = ?';
 		$params = array('title', 'abbrev', $sectionTitle, $sectionAbbrev, $journalId);
 		if ($locale !== null) {
@@ -123,7 +124,7 @@ class SectionDAO extends DAO {
 
 		return $returner;
 	}
-	
+
 	/**
 	 * Internal function to return a Section object from a row.
 	 * @param $row array
@@ -187,12 +188,12 @@ class SectionDAO extends DAO {
 				$section->getHideAbout() ? 1 : 0
 			)
 		);
-		
+
 		$section->setSectionId($this->getInsertSectionId());
 		$this->updateLocaleFields($section);
 		return $section->getSectionId();
 	}
-	
+
 	/**
 	 * Update an existing section.
 	 * @param $section Section
@@ -223,7 +224,7 @@ class SectionDAO extends DAO {
 		$this->updateLocaleFields($section);
 		return $returner;
 	}
-	
+
 	/**
 	 * Delete a section.
 	 * @param $section Section
@@ -231,7 +232,7 @@ class SectionDAO extends DAO {
 	function deleteSection(&$section) {
 		return $this->deleteSectionById($section->getSectionId(), $section->getJournalId());
 	}
-	
+
 	/**
 	 * Delete a section by ID.
 	 * @param $sectionId int
@@ -252,9 +253,9 @@ class SectionDAO extends DAO {
 
 		if (isset($journalId) && !$this->sectionExists($sectionId, $journalId)) return false;
 		$this->update('DELETE FROM section_settings WHERE section_id = ?', array($sectionId));
-		return $this->update('DELETE FROM sections WHERE section_id = ?', $sectionId);
+		return $this->update('DELETE FROM sections WHERE section_id = ?', array($sectionId));
 	}
-	
+
 	/**
 	 * Delete sections by journal ID
 	 * NOTE: This does not delete dependent entries EXCEPT from section_editors. It is intended
@@ -276,12 +277,12 @@ class SectionDAO extends DAO {
 	 */
 	function &getEditorSections($journalId) {
 		$returner = array();
-		
+
 		$result = &$this->retrieve(
 			'SELECT s.*, se.user_id AS editor_id FROM section_editors se, sections s WHERE se.section_id = s.section_id AND s.journal_id = se.journal_id AND s.journal_id = ?',
 			$journalId
 		);
-		
+
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
 			$section = &$this->_returnSectionFromRow($row);
@@ -295,7 +296,7 @@ class SectionDAO extends DAO {
 
 		$result->Close();
 		unset($result);
-	
+
 		return $returner;
 	}
 
@@ -306,12 +307,12 @@ class SectionDAO extends DAO {
 	 */
 	function &getSectionsForIssue($issueId) {
 		$returner = array();
-		
+
 		$result = &$this->retrieve(
 			'SELECT DISTINCT s.*, COALESCE(o.seq, s.seq) AS section_seq FROM sections s, published_articles pa, articles a LEFT JOIN custom_section_orders o ON (a.section_id = o.section_id AND o.issue_id = ?) WHERE s.section_id = a.section_id AND pa.article_id = a.article_id AND pa.issue_id = ? ORDER BY section_seq',
 			array($issueId, $issueId)
 		);
-		
+
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
 			$returner[] = &$this->_returnSectionFromRow($row);
@@ -320,10 +321,10 @@ class SectionDAO extends DAO {
 
 		$result->Close();
 		unset($result);
-	
+
 		return $returner;
 	}
-	
+
 	/**
 	 * Retrieve all sections for a journal.
 	 * @return DAOResultFactory containing Sections ordered by sequence
@@ -333,11 +334,11 @@ class SectionDAO extends DAO {
 			'SELECT * FROM sections WHERE journal_id = ? ORDER BY seq',
 			$journalId, $rangeInfo
 		);
-		
+
 		$returner = &new DAOResultFactory($result, $this, '_returnSectionFromRow');
 		return $returner;
 	}
-	
+
 	/**
 	 * Retrieve the IDs and titles of the sections for a journal in an associative array.
 	 * @return array
@@ -353,7 +354,7 @@ class SectionDAO extends DAO {
 
 		return $sections;
 	}
-	
+
 	/**
 	 * Check if a section exists with the specified ID.
 	 * @param $sectionId int
@@ -382,7 +383,7 @@ class SectionDAO extends DAO {
 			'SELECT section_id FROM sections WHERE journal_id = ? ORDER BY seq',
 			$journalId
 		);
-		
+
 		for ($i=1; !$result->EOF; $i++) {
 			list($sectionId) = $result->fields;
 			$this->update(
@@ -392,14 +393,14 @@ class SectionDAO extends DAO {
 					$sectionId
 				)
 			);
-			
+
 			$result->moveNext();
 		}
-		
+
 		$result->close();
 		unset($result);
 	}
-	
+
 	/**
 	 * Get the ID of the last inserted section.
 	 * @return int
@@ -427,21 +428,21 @@ class SectionDAO extends DAO {
 			'SELECT section_id FROM custom_section_orders WHERE issue_id = ? ORDER BY seq',
 			$issueId
 		);
-		
+
 		for ($i=1; !$result->EOF; $i++) {
 			list($sectionId) = $result->fields;
 			$this->update(
 				'UPDATE custom_section_orders SET seq = ? WHERE section_id = ? AND issue_id = ?',
 				array($i, $sectionId, $issueId)
 			);
-			
+
 			$result->moveNext();
 		}
-		
+
 		$result->close();
 		unset($result);
 	}
-	
+
 	/**
 	 * Check if an issue has custom section ordering.
 	 * @param $issueId int
@@ -471,7 +472,7 @@ class SectionDAO extends DAO {
 			'SELECT seq FROM custom_section_orders WHERE issue_id = ? AND section_id = ?',
 			array($issueId, $sectionId)
 		);
-		
+
 		$returner = null;
 		if (!$result->EOF) {
 			list($returner) = $result->fields;
@@ -492,13 +493,13 @@ class SectionDAO extends DAO {
 			'SELECT s.section_id FROM sections s, issues i WHERE i.journal_id = s.journal_id AND i.issue_id = ? ORDER BY seq',
 			$issueId
 		);
-		
+
 		for ($i=1; !$result->EOF; $i++) {
 			list($sectionId) = $result->fields;
 			$this->insertCustomSectionOrder($issueId, $sectionId, $i);
 			$result->moveNext();
 		}
-		
+
 		$result->close();
 		unset($result);
 	}

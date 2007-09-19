@@ -54,7 +54,7 @@ class StatisticsHandler extends ManagerHandler {
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
 		$sections =& $sectionDao->getJournalSections($journal->getJournalId());
 		$templateMgr->assign('sections', $sections->toArray());
-		
+
 		$issueStatistics = $journalStatisticsDao->getIssueStatistics($journal->getJournalId(), $fromDate, $toDate);
 		$templateMgr->assign('issueStatistics', $issueStatistics);
 
@@ -138,7 +138,7 @@ class StatisticsHandler extends ManagerHandler {
 		}
 		Request::redirect(null, null, 'statistics', null, array('statisticsYear' => Request::getUserVar('statisticsYear')));
 	}
-	
+
 	function csvEscape($value) {
 		$value = str_replace('"', '""', $value);
 		return '"' . $value . '"';

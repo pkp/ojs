@@ -45,7 +45,7 @@ class JournalSetupStep2Form extends JournalSetupForm {
 				'notifyAllAuthorsOnDecision' => 'bool'
 			)
 		);
-		
+
 		$this->addCheck(new FormValidatorEmail($this, 'envelopeSender', 'optional', 'user.profile.form.emailRequired'));
 	}
 

@@ -25,10 +25,10 @@ class CmsSettingsForm extends Form {
 
 	/** $var content manager object */
 	var $contentManager;
-	
+
 	/** $var $errors string */
 	var $errors;
-	
+
 	/**
 	 * Constructor
 	 * @param $journalId int
@@ -36,7 +36,7 @@ class CmsSettingsForm extends Form {
 	function CmsSettingsForm(&$plugin, $journalId) {
 
 		parent::Form($plugin->getTemplatePath() . 'settingsForm.tpl');
-	
+
 		$this->journalId = $journalId;
 		$this->plugin =& $plugin;
 
@@ -47,7 +47,7 @@ class CmsSettingsForm extends Form {
 		$this->addCheck(new FormValidatorPost($this));
 
 	}
-	
+
 	/*
 	 * Check and fix content as necessary.
 	 * $content string - submitted content
@@ -60,14 +60,14 @@ class CmsSettingsForm extends Form {
 		$content = trim($content);
 		/* force the content to start with a header */
 		if ( strlen($content) > 0 &&
-			 substr($content, 0, 3) != '<h1' && 
-			 substr($content, 0, 3) != '<h2' &&  
-			 substr($content, 0, 3) != '<h3'  )  {
+			substr($content, 0, 3) != '<h1' && 
+			substr($content, 0, 3) != '<h2' &&  
+			substr($content, 0, 3) != '<h3'  )  {
 			$this->setData('content', trim($content));
 			$this->addError('content', Locale::translate('plugins.generic.cms.error.muststartwithheader'));
 			return true;
 		}
-		
+
 		/* parse out the content */
 		preg_match_all('/<h([1-3])>(.*)<\/h[1-3]>/U', $content, $headMatches);
 		preg_match_all('/<\/h([1-3])>(.*)<(h[1-3]|\/body)>/U', $content.'</body>', $contentMatches);
@@ -78,7 +78,7 @@ class CmsSettingsForm extends Form {
 			$this->addError('content', Locale::translate('plugins.generic.cms.error.musthavecontent'));
 			return true;
 		} 
-		
+
 		/* force heading levels to go up by 1 only (e.g. no h1 to h3) */
 		$prev = 1;
 		for ( $i = 0; $i < count($headMatches[0]); $i++ ) {
@@ -86,19 +86,19 @@ class CmsSettingsForm extends Form {
 			if ( $headMatches[1][$i] > $prev + 1 )
 				$headMatches[1][$i] = $prev + 1;			
 			$prev = $headMatches[1][$i];
-			
+
 			/* eliminate <br> and &nbsp; from inside the headings */
 			$headMatches[2][$i] = preg_replace('/<.*>/','', $headMatches[2][$i]);
 			$headMatches[2][$i] = str_replace('&nbsp;', ' ', $headMatches[2][$i]);
 			$headMatches[2][$i] = trim($headMatches[2][$i]);
-			
+
 			if ( str_replace(' ', '', $headMatches[2][$i]) == '' ) {
 				$this->setData('content', $content);
 				$this->addError('content', Locale::translate('plugins.generic.cms.error.headingcannotbeempty'));
 				return true;				
 			}			
 		}
-		
+
 		/* make sure that the content is non empty (at least one tag -- hence the '<') */
 		for ( $i = 0; $i < count($contentMatches[0]); $i++ ) {		
 			if ( strpos($contentMatches[2][$i], '<' ) === false ) {
@@ -107,7 +107,7 @@ class CmsSettingsForm extends Form {
 				return true;
 			}
 		}
-		
+
 		/* rewrite the content with any changes that may have been made above */
 		$content = '';
 		for ( $i = 0; $i < count($headMatches[0]); $i++ ) {
@@ -118,7 +118,7 @@ class CmsSettingsForm extends Form {
 		$this->setData('content', $content);
 		return true;
 	}
-	
+
 	/**
 	 * Initialize form data from current group group.
 	 */
@@ -131,14 +131,14 @@ class CmsSettingsForm extends Form {
 
 		$headings = array();
 		$content = array();
-	
+
 		// figure out the current page 
 		if (count($args) > 0 && $args[0] != '') {
 			$current = $args[0];
 		} else {
 			$current = $contentManager->defaultHeading[1];
 		}
-		
+
 		// go through the file 
 		$contentManager->parseContents($headings, $content, $current);
 
@@ -157,7 +157,7 @@ class CmsSettingsForm extends Form {
 			$currentContent = "";		
 			$currentHeading = "";
 		}
-	
+
 		// add the tiny MCE script 
 		$this->addTinyMCE();
 
@@ -167,7 +167,7 @@ class CmsSettingsForm extends Form {
 		$templateMgr->assign('current', $current );
 		$templateMgr->assign('cmsPluginEdit', true);
 	}
-	
+
 	function addTinyMCE() {
 		$journalId = $this->journalId;
 		$plugin =& $this->plugin;
@@ -199,7 +199,7 @@ class CmsSettingsForm extends Form {
 		// need to do this in order to replace the {$pluginurl}. In theory, could hardcode the path in the .js file
 		// but this is easy enough and is more flexible
 		$tinyMCE_plugins = array( 'heading');
-		
+
 		foreach ( $tinyMCE_plugins as $tinyMCEplugin ) {
 			$tinyMCE_NewPlugin = file_get_contents($plugin->getPluginPath().'/tinyMCEPlugins/'.$tinyMCEplugin.'/editor_plugin.js');
 			$tinyMCE_NewPlugin = preg_replace('/\{\$pluginurl\}/', Request::getBaseUrl().'/'.$plugin->getPluginPath().'/tinyMCEPlugins/'.$tinyMCEplugin, $tinyMCE_NewPlugin);
@@ -208,16 +208,16 @@ class CmsSettingsForm extends Form {
 		}
 
 		$templateMgr->assign('additionalHeadData', $additionalHeadData."\n".$tinyMCE_script);
-	
+
 	}
-	
+
 	/**
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
 		$this->readUserVars(array('content', 'current'));
 	}
-	
+
 	/**
 	 * Save page - write to content file. 
 	 */	 
@@ -225,15 +225,15 @@ class CmsSettingsForm extends Form {
 		$plugin =& $this->plugin;
 		$journalId = $this->journalId;
 		$contentManager =& $this->contentManager;		
-		
+
 		$journal = &Request::getJournal();
-		
+
 		$content = $this->getData('content');
 		$current = $this->getData('current');
 
 		$contentManager->insertContent($content, &$current);
 		$this->setData('current', $current);	
-		
+
 		$h = array();
 		$c = array();
 		// no current value because we don't want anything selected
@@ -241,7 +241,7 @@ class CmsSettingsForm extends Form {
 		// this sets the table of contents with nothing selected
 		$plugin->updateSetting($journalId, 'toc', $h); 		
 	}
-	
+
 	/**
 	 * Clean up and reset ToC
 	 * execute is done on submit
@@ -253,13 +253,13 @@ class CmsSettingsForm extends Form {
 
 		$h = array();
 		$c = array();
-				
+
 		// no current value because we don't want anything selected
 		$contentManager->parseContents( $h, $c );
-		
+
 		// this sets the table of contents with nothing selected
 		$plugin->updateSetting($journalId, 'toc', $h); 
 	}
-		
+
 }
 ?>

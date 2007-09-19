@@ -535,7 +535,7 @@ class NativeImportDom {
 		$publishedArticle = &new PublishedArticle();
 		$publishedArticle->setArticleId($article->getArticleId());
 		$publishedArticle->setIssueId($issue->getIssueId());
-		
+
 		if (($node = $articleNode->getChildByName('date_published'))) {
 			$publishedDate = strtotime($node->getValue());
 			if ($publishedDate === -1) {

@@ -15,22 +15,22 @@
  */
 
 class Core {
-	
+
 	/**
 	 * Get the path to the base OJS directory.
 	 * @return string
 	 */
 	function getBaseDir() {
 		static $baseDir;
-		
+
 		if (!isset($baseDir)) {
 			// Need to change if this file moves from classes/core
 			$baseDir = dirname(dirname(dirname(__FILE__)));
 		}
-		
+
 		return $baseDir;
 	}
-	
+
 	/**
 	 * Sanitize a variable.
 	 * Removes leading and trailing whitespace, normalizes all characters to UTF-8.
@@ -56,10 +56,10 @@ class Core {
 			$trans =& new Transcoder('HTML-ENTITIES', 'UTF-8');
 			$var = $trans->trans($var);
 		}		
-		
+
 		return $var;
 	}
-	
+
 	/**
 	 * Sanitize a value to be used in a file path.
 	 * Removes any characters except alphanumeric characters, underscores, and dashes.
@@ -69,7 +69,7 @@ class Core {
 	function cleanFileVar($var) {
 		return String::regexp_replace('/[^\w\-]/', '', $var);
 	}
-	
+
 	/**
 	 * Return the current date in ISO (YYYY-MM-DD HH:MM:SS) format.
 	 * @param $ts int optional, use specified timestamp instead of current time
@@ -78,7 +78,7 @@ class Core {
 	function getCurrentDate($ts = null) {
 		return date('Y-m-d H:i:s', isset($ts) ? $ts : time());
 	}
-	
+
 	/**
 	 * Return *nix timestamp with microseconds (in units of seconds).
 	 * @return float
@@ -87,7 +87,7 @@ class Core {
 		list($usec, $sec) = explode(' ', microtime());
 		return (float)$sec + (float)$usec;
 	}
-	
+
 	/**
 	 * Get the operating system of the server.
 	 * @return string
@@ -95,7 +95,7 @@ class Core {
 	function serverPHPOS() {
 		return PHP_OS;
 	}
-	
+
 	/**
 	 * Get the version of PHP running on the server.
 	 * @return string
@@ -103,7 +103,7 @@ class Core {
 	function serverPHPVersion() {
 		return phpversion();
 	}
-	
+
 	/**
 	 * Check if the server platform is Windows.
 	 * @return boolean

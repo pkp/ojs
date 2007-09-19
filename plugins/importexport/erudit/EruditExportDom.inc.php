@@ -188,14 +188,14 @@ class EruditExportDom {
 		import('file.ArticleFileManager');
 		$articleFileManager = &new ArticleFileManager($article->getArticleId());
 		$file = &$articleFileManager->getFile($galley->getFileId());
-		
+
 		$parser = &SearchFileParser::fromFile($file);
 		if (isset($parser)) {
 			if ($parser->open()) {
 				// File supports text indexing.
 				$textNode = &XMLCustomWriter::createElement($doc, 'text');
 				XMLCustomWriter::appendChild($bodyNode, $textNode);
-				
+
 				while(($line = $parser->read()) !== false) {
 					$line = trim($line);
 					if ($line != '') XMLCustomWriter::createChildWithText($doc, $textNode, 'blocktext', $line, false);

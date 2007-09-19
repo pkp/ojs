@@ -24,7 +24,7 @@ define('SEARCH_STOPWORDS_FILE', 'registry/stopwords.txt');
 define('SEARCH_KEYWORD_MAX_LENGTH', 40);
 
 class ArticleSearchIndex {
-	
+
 	/**
 	 * Index a block of text for an object.
 	 * @param $objectId int
@@ -54,7 +54,7 @@ class ArticleSearchIndex {
 			$position = 0;
 			ArticleSearchIndex::indexObjectKeywords($objectId, $text, $position);
 	}
-	
+
 	/**
 	 * Add a file to the search index.
 	 * @param $articleId int
@@ -65,16 +65,16 @@ class ArticleSearchIndex {
 		import('file.ArticleFileManager');
 		$fileMgr = &new ArticleFileManager($articleId);
 		$file = &$fileMgr->getFile($fileId);
-		
+
 		if (isset($file)) {
 			$parser = &SearchFileParser::fromFile($file);
 		}
-			
+
 		if (isset($parser)) {
 			if ($parser->open()) {
 				$searchDao = &DAORegistry::getDAO('ArticleSearchDAO');
 				$objectId = $searchDao->insertObject($articleId, $type, $fileId);
-				
+
 				$position = 0;
 				while(($text = $parser->read()) !== false) {
 					ArticleSearchIndex::indexObjectKeywords($objectId, $text, $position);
@@ -83,7 +83,7 @@ class ArticleSearchIndex {
 			}
 		}
 	}
-	
+
 	/**
 	 * Delete keywords from the search index.
 	 * @param $articleId int
@@ -104,22 +104,22 @@ class ArticleSearchIndex {
 	function &filterKeywords($text, $allowWildcards = false) {
 		$minLength = Config::getVar('search', 'min_word_length');
 		$stopwords = &ArticleSearchIndex::loadStopwords();
-		
+
 		// Remove punctuation
 		if (is_array($text)) {
 			$text = join("\n", $text);
 		}
-		
+
 		$cleanText = String::regexp_replace('/[!"\#\$%\'\(\)\.\?@\[\]\^`\{\}~]/', '', $text);
 		$cleanText = String::regexp_replace('/[\+,:;&\/<=>\|\\\]/', ' ', $cleanText);
 		$cleanText = String::regexp_replace('/[\*]/', $allowWildcards ? '%' : ' ', $cleanText);
 		$cleanText = String::strtolower($cleanText);
-		
+
 		// Split into words
 		$words = String::regexp_split('/\s+/', $cleanText);
-		
+
 		// FIXME Do not perform further filtering for some fields, e.g., author names?
-		
+
 		// Remove stopwords
 		$keywords = array();
 		foreach ($words as $k) {
@@ -129,7 +129,7 @@ class ArticleSearchIndex {
 		}
 		return $keywords;
 	}
-	
+
 	/**
 	 * Return list of stopwords.
 	 * FIXME Should this be locale-specific?
@@ -143,10 +143,10 @@ class ArticleSearchIndex {
 			$searchStopwords = array_count_values(array_filter(file(SEARCH_STOPWORDS_FILE), create_function('&$a', 'return ($a = trim($a)) && !empty($a) && $a[0] != \'#\';')));
 			$searchStopwords[''] = 1;
 		}
-		
+
 		return $searchStopwords;
 	}
-	
+
 	/**
 	 * Index article metadata.
 	 * @param $article Article
@@ -166,7 +166,7 @@ class ArticleSearchIndex {
 				array_push($authorText, strip_tags($bio));
 			}
 		}
-		
+
 		// Update search index
 		$articleId = $article->getArticleId();
 		ArticleSearchIndex::updateTextIndex($articleId, ARTICLE_SEARCH_AUTHOR, $authorText);
@@ -184,7 +184,7 @@ class ArticleSearchIndex {
 		ArticleSearchIndex::updateTextIndex($articleId, ARTICLE_SEARCH_COVERAGE, array_merge(array_values((array) $article->getCoverageGeo(null)), array_values((array) $article->getCoverageChron(null)), array_values((array) $article->getCoverageSample(null))));
 		// FIXME Index sponsors too?
 	}
-	
+
 	/**
 	 * Index supp file metadata.
 	 * @param $suppFile object
@@ -206,7 +206,7 @@ class ArticleSearchIndex {
 			$suppFile->getFileId()
 		);
 	}
-	
+
 	/**
 	 * Index all article files (supplementary and galley).
 	 * @param $article Article
@@ -222,7 +222,7 @@ class ArticleSearchIndex {
 			ArticleSearchIndex::indexSuppFileMetadata($file);
 		}
 		unset($files);
-		
+
 		// Index galley files
 		$fileDao = &DAORegistry::getDAO('ArticleGalleyDAO');
 		$files = &$fileDao->getGalleysByArticle($article->getArticleId());
@@ -232,7 +232,7 @@ class ArticleSearchIndex {
 			}
 		}
 	}
-	
+
 	/**
 	 * Rebuild the search index for all journals.
 	 */
@@ -247,18 +247,18 @@ class ArticleSearchIndex {
 		$searchDao->setCacheDir(Config::getVar('files', 'files_dir') . '/_db');
 		$searchDao->_dataSource->CacheFlush();
 		if ($log) echo "done\n";
-		
+
 		// Build index
 		$journalDao = &DAORegistry::getDAO('JournalDAO');
 		$articleDao = &DAORegistry::getDAO('ArticleDAO');
-		
+
 		$journals = &$journalDao->getJournals();
 		while (!$journals->eof()) {
 			$journal = &$journals->next();
 			$numIndexed = 0;
-			
+
 			if ($log) echo "Indexing \"", $journal->getJournalTitle(), "\" ... ";
-			
+
 			$articles = &$articleDao->getArticlesByJournalId($journal->getJournalId());
 			while (!$articles->eof()) {
 				$article = &$articles->next();
@@ -269,12 +269,12 @@ class ArticleSearchIndex {
 				}
 				unset($article);
 			}
-			
+
 			if ($log) echo $numIndexed, " articles indexed\n";
 			unset($journal);
 		}
 	}
-	
+
 }
 
 ?>

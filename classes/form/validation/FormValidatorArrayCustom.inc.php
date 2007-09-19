@@ -23,16 +23,16 @@ class FormValidatorArrayCustom extends FormValidator {
 
 	/** @var array Array of field names where an error occurred */
 	var $errorFields;
-	
+
 	/** @var boolean is the field a multilingual-capable field */
 	var $isLocaleField;
-	
+
 	/** Custom validation function */
 	var $userFunction;
-	
+
 	/** Additional arguments to pass to $userFunction */
 	var $additionalArguments;
-	
+
 	/** If true, field is considered valid if user function returns false instead of true */
 	var $complementReturn;
 
@@ -51,7 +51,7 @@ class FormValidatorArrayCustom extends FormValidator {
 		$this->additionalArguments = $additionalArguments;
 		$this->complementReturn = $complementReturn;
 	}
-	
+
 	/**
 	 * Check if field value is valid.
 	 * Value is valid if it is empty and optional or is in the set of accepted values.
@@ -61,7 +61,7 @@ class FormValidatorArrayCustom extends FormValidator {
 		if ($this->type == 'optional') {
 			return true;
 		}
-		
+
 		$ret = true;
 		$data = $this->form->getData($this->field);
 		if (!is_array($data)) return false;
@@ -100,7 +100,7 @@ class FormValidatorArrayCustom extends FormValidator {
 		}
 		return $ret;
 	}
-	
+
 	/**
 	 * Get array of fields where an error occurred.
 	 * @return array
@@ -108,7 +108,7 @@ class FormValidatorArrayCustom extends FormValidator {
 	function getErrorFields() {
 		return $this->errorFields;
 	}
-	
+
 	/**
 	 * Is the field an array.
 	 * @return boolean
@@ -116,7 +116,7 @@ class FormValidatorArrayCustom extends FormValidator {
 	function isArray() {
 		return is_array($this->form->getData($this->field));
 	}
-		
+
 	/**
 	 * Is it a multilingual-capable field.
 	 * @return boolean

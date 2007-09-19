@@ -24,11 +24,11 @@ class SuppFile extends ArticleFile {
 	function SuppFile() {
 		parent::DataObject();
 	}
-	
+
 	//
 	// Get/set methods
 	//
-	
+
 	/**
 	 * Get ID of supplementary file.
 	 * @return int
@@ -36,7 +36,7 @@ class SuppFile extends ArticleFile {
 	function getSuppFileId() {
 		return $this->getData('suppFileId');
 	}
-	
+
 	/**
 	 * Set ID of supplementary file.
 	 * @param $suppFileId int
@@ -44,7 +44,7 @@ class SuppFile extends ArticleFile {
 	function setSuppFileId($suppFileId) {
 		return $this->setData('suppFileId', $suppFileId);
 	}
-	
+
 	/**
 	 * Get public ID of supplementary file.
 	 * @return string
@@ -52,7 +52,7 @@ class SuppFile extends ArticleFile {
 	function getPublicSuppFileId() {
 		return $this->getData('publicSuppFileId');
 	}
-	
+
 	/**
 	 * Set public ID of supplementary file.
 	 * @param $suppFileId string
@@ -60,7 +60,7 @@ class SuppFile extends ArticleFile {
 	function setPublicSuppFileId($publicSuppFileId) {
 		return $this->setData('publicSuppFileId', $publicSuppFileId);
 	}
-	
+
 	/**
 	 * Get ID of article.
 	 * @return int
@@ -68,7 +68,7 @@ class SuppFile extends ArticleFile {
 	function getArticleId() {
 		return $this->getData('articleId');
 	}
-	
+
 	/**
 	 * Set ID of article.
 	 * @param $articleId int
@@ -93,7 +93,7 @@ class SuppFile extends ArticleFile {
 	function getTitle() {
 		return $this->getData('title');
 	}
-	
+
 	/**
 	 * Set title.
 	 * @param $title string
@@ -102,7 +102,7 @@ class SuppFile extends ArticleFile {
 	function setTitle($title, $locale) {
 		return $this->setData('title', $title, $locale);
 	}
-	
+
 	/**
 	 * Get localized creator
 	 * @return string
@@ -119,7 +119,7 @@ class SuppFile extends ArticleFile {
 	function getCreator($locale) {
 		return $this->getData('creator', $locale);
 	}
-	
+
 	/**
 	 * Set creator.
 	 * @param $creator string
@@ -128,7 +128,7 @@ class SuppFile extends ArticleFile {
 	function setCreator($creator, $locale) {
 		return $this->setData('creator', $creator, $locale);
 	}
-	
+
 	/**
 	 * Get localized subject
 	 * @return string
@@ -145,7 +145,7 @@ class SuppFile extends ArticleFile {
 	function getSubject($locale) {
 		return $this->getData('subject', $locale);
 	}
-	
+
 	/**
 	 * Set subject.
 	 * @param $subject string
@@ -154,7 +154,7 @@ class SuppFile extends ArticleFile {
 	function setSubject($subject, $locale) {
 		return $this->setData('subject', $subject, $locale);
 	}
-	
+
 	/**
 	 * Get type (method/approach).
 	 * @return string
@@ -162,7 +162,7 @@ class SuppFile extends ArticleFile {
 	function getType() {
 		return $this->getData('type');
 	}
-	
+
 	/**
 	 * Set type (method/approach).
 	 * @param $type string
@@ -170,7 +170,7 @@ class SuppFile extends ArticleFile {
 	function setType($type) {
 		return $this->setData('type', $type);
 	}
-	
+
 	/**
 	 * Get localized subject
 	 * @return string
@@ -187,7 +187,7 @@ class SuppFile extends ArticleFile {
 	function getTypeOther($locale) {
 		return $this->getData('typeOther', $locale);
 	}
-	
+
 	/**
 	 * Set custom type.
 	 * @param $typeOther string
@@ -196,7 +196,7 @@ class SuppFile extends ArticleFile {
 	function setTypeOther($typeOther, $locale) {
 		return $this->setData('typeOther', $typeOther, $locale);
 	}
-	
+
 	/**
 	 * Get localized description
 	 * @return string
@@ -213,7 +213,7 @@ class SuppFile extends ArticleFile {
 	function getDescription($locale) {
 		return $this->getData('description', $locale);
 	}
-	
+
 	/**
 	 * Set file description.
 	 * @param $description string
@@ -222,7 +222,7 @@ class SuppFile extends ArticleFile {
 	function setDescription($description, $locale) {
 		return $this->setData('description', $description, $locale);
 	}
-	
+
 	/**
 	 * Get localized publisher
 	 * @return string
@@ -239,7 +239,7 @@ class SuppFile extends ArticleFile {
 	function getPublisher($locale) {
 		return $this->getData('publisher', $locale);
 	}
-	
+
 	/**
 	 * Set publisher.
 	 * @param $publisher string
@@ -248,7 +248,7 @@ class SuppFile extends ArticleFile {
 	function setPublisher($publisher, $locale) {
 		return $this->setData('publisher', $publisher, $locale);
 	}
-	
+
 	/**
 	 * Get localized sponsor
 	 * @return string
@@ -265,7 +265,7 @@ class SuppFile extends ArticleFile {
 	function getSponsor($locale) {
 		return $this->getData('sponsor', $locale);
 	}
-	
+
 	/**
 	 * Set sponsor.
 	 * @param $sponsor string
@@ -274,7 +274,7 @@ class SuppFile extends ArticleFile {
 	function setSponsor($sponsor, $locale) {
 		return $this->setData('sponsor', $sponsor, $locale);
 	}
-	
+
 	/**
 	 * Get date created.
 	 * @return date
@@ -282,7 +282,7 @@ class SuppFile extends ArticleFile {
 	function getDateCreated() {
 		return $this->getData('dateCreated');
 	}
-	
+
 	/**
 	 * Set date created.
 	 * @param $dateCreated date
@@ -290,7 +290,7 @@ class SuppFile extends ArticleFile {
 	function setDateCreated($dateCreated) {
 		return $this->setData('dateCreated', $dateCreated);
 	}
-	
+
 	/**
 	 * Get localized source
 	 * @return string
@@ -307,7 +307,7 @@ class SuppFile extends ArticleFile {
 	function getSource($locale) {
 		return $this->getData('source', $locale);
 	}
-	
+
 	/**
 	 * Set source.
 	 * @param $source string
@@ -316,7 +316,7 @@ class SuppFile extends ArticleFile {
 	function setSource($source, $locale) {
 		return $this->setData('source', $source, $locale);
 	}
-	
+
 	/**
 	 * Get language.
 	 * @return string
@@ -324,7 +324,7 @@ class SuppFile extends ArticleFile {
 	function getLanguage() {
 		return $this->getData('language');
 	}
-	
+
 	/**
 	 * Set language.
 	 * @param $language string
@@ -332,7 +332,7 @@ class SuppFile extends ArticleFile {
 	function setLanguage($language) {
 		return $this->setData('language', $language);
 	}
-	
+
 	/**
 	 * Check if file is available to peer reviewers.
 	 * @return boolean
@@ -340,7 +340,7 @@ class SuppFile extends ArticleFile {
 	function getShowReviewers() {
 		return $this->getData('showReviewers');
 	}
-	
+
 	/**
 	 * Set if file is available to peer reviewers or not.
 	 * @param boolean
@@ -348,7 +348,7 @@ class SuppFile extends ArticleFile {
 	function setShowReviewers($showReviewers) {
 		return $this->setData('showReviewers', $showReviewers);
 	}
-	
+
 	/**
 	 * Get date file was submitted.
 	 * @return datetime
@@ -356,7 +356,7 @@ class SuppFile extends ArticleFile {
 	function getDateSubmitted() {
 		return $this->getData('dateSubmitted');
 	}
-	
+
 	/**
 	 * Set date file was submitted.
 	 * @param $dateSubmitted datetime
@@ -364,7 +364,7 @@ class SuppFile extends ArticleFile {
 	function setDateSubmitted($dateSubmitted) {
 		return $this->setData('dateSubmitted', $dateSubmitted);
 	}
-	
+
 	/**
 	 * Get sequence order of supplementary file.
 	 * @return float
@@ -372,7 +372,7 @@ class SuppFile extends ArticleFile {
 	function getSequence() {
 		return $this->getData('sequence');
 	}
-	
+
 	/**
 	 * Set sequence order of supplementary file.
 	 * @param $sequence float
@@ -380,7 +380,7 @@ class SuppFile extends ArticleFile {
 	function setSequence($sequence) {
 		return $this->setData('sequence', $sequence);
 	}
-	
+
 	/**
 	 * Return the "best" supp file ID -- If a public ID is set,
 	 * use it; otherwise use the internal Id. (Checks the journal

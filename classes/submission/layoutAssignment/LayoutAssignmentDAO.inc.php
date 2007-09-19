@@ -26,7 +26,7 @@ class LayoutAssignmentDAO extends DAO {
 		parent::DAO();
 		$this->articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
 	}
-	
+
 	/**
 	 * Retrieve a layout assignment by assignment ID.
 	 * @param $layoutId int
@@ -113,16 +113,16 @@ class LayoutAssignmentDAO extends DAO {
 		$layoutAssignment->setDateCompleted($this->datetimeFromDB($row['date_completed']));
 		$layoutAssignment->setDateAcknowledged($this->datetimeFromDB($row['date_acknowledged']));
 		$layoutAssignment->setLayoutFileId($row['layout_file_id']);
-		
+
 		if ($row['layout_file_id'] && $row['layout_file_id']) {
 			$layoutAssignment->setLayoutFile($this->articleFileDao->getArticleFile($row['layout_file_id']));
 		}
-			
+
 		HookRegistry::call('LayoutAssignmentDAO::_returnLayoutAssignmentFromRow', array(&$layoutAssignment, &$row));
 
 		return $layoutAssignment;
 	}
-	
+
 	/**
 	 * Insert a new layout assignment.
 	 * @param $layoutAssignment LayoutAssignment
@@ -140,11 +140,11 @@ class LayoutAssignmentDAO extends DAO {
 				$layoutAssignment->getLayoutFileId()
 			)
 		);
-		
+
 		$layoutAssignment->setLayoutId($this->getInsertLayoutId());
 		return $layoutAssignment->getLayoutId();
 	}
-	
+
 	/**
 	 * Update an layout assignment.
 	 * @param $layoutAssignment LayoutAssignment
@@ -169,7 +169,7 @@ class LayoutAssignmentDAO extends DAO {
 			)
 		);
 	}
-	
+
 	/**
 	 * Delete layout assignment.
 	 * @param $layoutId int
@@ -180,7 +180,7 @@ class LayoutAssignmentDAO extends DAO {
 			$layoutId
 		);
 	}
-	
+
 	/**
 	 * Delete layout assignments by article.
 	 * @param $articleId int

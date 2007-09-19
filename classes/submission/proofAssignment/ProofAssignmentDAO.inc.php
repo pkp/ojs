@@ -26,7 +26,7 @@ class ProofAssignmentDAO extends DAO {
 		parent::DAO();
 		$this->userDao = &DAORegistry::getDAO('UserDAO');
 	}
-	
+
 	/**
 	 * Retrieve a proof assignment by id.
 	 * @param $proofId int
@@ -48,7 +48,7 @@ class ProofAssignmentDAO extends DAO {
 
 		return $returner;
 	}
-	
+
 	/**
 	 * Retrieve a proof assignment by article id.
 	 * @param $articleId int
@@ -105,7 +105,7 @@ class ProofAssignmentDAO extends DAO {
 
 		return $proofAssignment;
 	}
-	
+
 	/**
 	 * Insert a new ProofAssignment.
 	 * @param $proofAssignment ProofAssignment
@@ -133,11 +133,11 @@ class ProofAssignmentDAO extends DAO {
 				$proofAssignment->getProofreaderId()
 			)
 		);
-		
+
 		$proofAssignment->setProofId($this->getInsertProofId());
 		return $proofAssignment->getProofId();
 	}
-	
+
 	/**
 	 * Update an existing proof assignment.
 	 * @param $proofAssignment ProofAssignment
@@ -179,7 +179,7 @@ class ProofAssignmentDAO extends DAO {
 			)
 		);
 	}
-	
+
 	/**
 	 * Delete proof assignment.
 	 * @param $proofId int
@@ -190,7 +190,7 @@ class ProofAssignmentDAO extends DAO {
 			$proofId
 		);
 	}
-	
+
 	/**
 	 * Delete proof assignments by article.
 	 * @param $articleId int

@@ -32,17 +32,17 @@ class Validation {
 		$userDao = &DAORegistry::getDAO('UserDAO');
 
 		$user = &$userDao->getUserByUsername($username, true);
-		
+
 		if (!isset($user)) {
 			// User does not exist
 			return $valid;
 		}
-		
+
 		if ($user->getAuthId()) {
 			$authDao = &DAORegistry::getDAO('AuthSourceDAO');
 			$auth = &$authDao->getPlugin($user->getAuthId());
 		}
-		
+
 		if (isset($auth)) {
 			// Validate against remote authentication source
 			$valid = $auth->authenticate($username, $password);
@@ -56,16 +56,16 @@ class Validation {
 					}
 				}
 			}
-			
+
 		} else {
 			// Validate against OJS user database
 			$valid = ($user->getPassword() === Validation::encryptCredentials($username, $password));
 		}
-		
+
 		if (!$valid) {
 			// Login credentials are invalid
 			return $valid;
-			
+
 		} else {
 			if ($user->getDisabled()) {
 				// The user has been disabled.
@@ -74,31 +74,31 @@ class Validation {
 				$valid = false;
 				return $valid;
 			}
-	
+
 			// The user is valid, mark user as logged in in current session
 			$sessionManager = &SessionManager::getManager();
-		
+
 			// Regenerate session ID first
 			$sessionManager->regenerateSessionId();
-		
+
 			$session = &$sessionManager->getUserSession();
 			$session->setSessionVar('userId', $user->getUserId());
 			$session->setUserId($user->getUserId());
 			$session->setSessionVar('username', $user->getUsername());
 			$session->setRemember($remember);
-		
+
 			if ($remember && Config::getVar('general', 'session_lifetime') > 0) {
 				// Update session expiration time
 				$sessionManager->updateSessionLifetime(time() +  Config::getVar('general', 'session_lifetime') * 86400);
 			}
-		
+
 			$user->setDateLastLogin(Core::getCurrentDate());
 			$userDao->updateUser($user);
-	
+
 			return $user;
 		}
 	}
-	
+
 	/**
 	 * Mark the user as logged out in the current session.
 	 * @return boolean
@@ -109,18 +109,18 @@ class Validation {
 		$session->unsetSessionVar('userId');
 		$session->unsetSessionVar('signedInAs');
 		$session->setUserId(null);
-		
+
 		if ($session->getRemember()) {
 			$session->setRemember(0);
 			$sessionManager->updateSessionLifetime(0);
 		}
-			
+
 		$sessionDao = &DAORegistry::getDAO('SessionDAO');
 		$sessionDao->updateSession($session);
 
 		return true;
 	}
-	
+
 	/**
 	 * Redirect to the login page, appending the current URL as the source.
 	 * @param $message string Optional name of locale key to add to login page
@@ -137,7 +137,7 @@ class Validation {
 
 		Request::redirect(null, 'login', null, null, $args);
 	}
-	
+
 	/**
 	 * Check if a user's credentials are valid.
 	 * @param $username string username
@@ -147,24 +147,24 @@ class Validation {
 	function checkCredentials($username, $password) {
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$user = &$userDao->getUserByUsername($username, false);
-		
+
 		$valid = false;
 		if (isset($user)) {
 			if ($user->getAuthId()) {
 				$authDao = &DAORegistry::getDAO('AuthSourceDAO');
 				$auth = &$authDao->getPlugin($user->getAuthId());
 			}
-			
+
 			if (isset($auth)) {
 				$valid = $auth->authenticate($username, $password);
 			} else {
 				$valid = ($user->getPassword() === Validation::encryptCredentials($username, $password));
 			}
 		}
-		
+
 		return $valid;
 	}
-	
+
 	/**
 	 * Check if a user is authorized to access the specified role in the specified journal.
 	 * @param $roleId int
@@ -175,21 +175,21 @@ class Validation {
 		if (!Validation::isLoggedIn()) {
 			return false;
 		}
-		
+
 		if ($journalId === -1) {
 			// Get journal ID from request
 			$journal = &Request::getJournal();
 			$journalId = $journal == null ? 0 : $journal->getJournalId();
 		}
-		
+
 		$sessionManager = &SessionManager::getManager();
 		$session = &$sessionManager->getUserSession();
 		$user = &$session->getUser();
-		
+
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
 		return $roleDao->roleExists($journalId, $user->getUserId(), $roleId);
 	}
-	
+
 	/**
 	 * Encrypt user passwords for database storage.
 	 * The username is used as a unique salt to make dictionary
@@ -201,11 +201,11 @@ class Validation {
 	 */
 	function encryptCredentials($username, $password, $encryption = false) {
 		$valueToEncrypt = $username . $password;
-		
+
 		if ($encryption == false) {
 			$encryption = Config::getVar('security', 'encryption');
 		}
-		
+
 		switch ($encryption) {
 			case 'sha1':
 				if (function_exists('sha1')) {
@@ -216,7 +216,7 @@ class Validation {
 				return md5($valueToEncrypt);
 		}
 	}
-	
+
 	/**
 	 * Generate a random password.
 	 * Assumes the random number generator has already been seeded.
@@ -233,7 +233,7 @@ class Validation {
 		}
 		return $password;
 	}
-	
+
 	/**
 	 * Generate a hash value to use for confirmation to reset a password.
 	 * @param $userId int
@@ -268,11 +268,11 @@ class Validation {
 	function isLoggedIn() {
 		$sessionManager = &SessionManager::getManager();
 		$session = &$sessionManager->getUserSession();
-		
+
 		$userId = $session->getUserId();
 		return isset($userId) && !empty($userId);
 	}
-	
+
 	/**
 	 * Shortcut for checking authorization as site admin.
 	 * @return boolean
@@ -280,7 +280,7 @@ class Validation {
 	function isSiteAdmin() {
 		return Validation::isAuthorized(ROLE_ID_SITE_ADMIN);
 	}
-	
+
 	/**
 	 * Shortcut for checking authorization as journal manager.
 	 * @param $journalId int
@@ -289,7 +289,7 @@ class Validation {
 	function isJournalManager($journalId = -1) {
 		return Validation::isAuthorized(ROLE_ID_JOURNAL_MANAGER, $journalId);
 	}
-	
+
 	/**
 	 * Shortcut for checking authorization as editor.
 	 * @param $journalId int
@@ -298,7 +298,7 @@ class Validation {
 	function isEditor($journalId = -1) {
 		return Validation::isAuthorized(ROLE_ID_EDITOR, $journalId);
 	}
-	
+
 	/**
 	 * Shortcut for checking authorization as section editor.
 	 * @param $journalId int
@@ -307,7 +307,7 @@ class Validation {
 	function isSectionEditor($journalId = -1) {
 		return Validation::isAuthorized(ROLE_ID_SECTION_EDITOR, $journalId);
 	}
-	
+
 	/**
 	 * Shortcut for checking authorization as layout editor.
 	 * @param $journalId int
@@ -316,7 +316,7 @@ class Validation {
 	function isLayoutEditor($journalId = -1) {
 		return Validation::isAuthorized(ROLE_ID_LAYOUT_EDITOR, $journalId);
 	}
-	
+
 	/**
 	 * Shortcut for checking authorization as reviewer.
 	 * @param $journalId int
@@ -325,7 +325,7 @@ class Validation {
 	function isReviewer($journalId = -1) {
 		return Validation::isAuthorized(ROLE_ID_REVIEWER, $journalId);
 	}
-	
+
 	/**
 	 * Shortcut for checking authorization as copyeditor.
 	 * @param $journalId int
@@ -334,7 +334,7 @@ class Validation {
 	function isCopyeditor($journalId = -1) {
 		return Validation::isAuthorized(ROLE_ID_COPYEDITOR, $journalId);
 	}
-	
+
 	/**
 	 * Shortcut for checking authorization as proofreader.
 	 * @param $journalId int
@@ -343,7 +343,7 @@ class Validation {
 	function isProofreader($journalId = -1) {
 		return Validation::isAuthorized(ROLE_ID_PROOFREADER, $journalId);
 	}
-	
+
 	/**
 	 * Shortcut for checking authorization as author.
 	 * @param $journalId int
@@ -352,7 +352,7 @@ class Validation {
 	function isAuthor($journalId = -1) {
 		return Validation::isAuthorized(ROLE_ID_AUTHOR, $journalId);
 	}
-	
+
 	/**
 	 * Shortcut for checking authorization as reader.
 	 * @param $journalId int
@@ -370,7 +370,7 @@ class Validation {
 	function isSubscriptionManager($journalId = -1) {
 		return Validation::isAuthorized(ROLE_ID_SUBSCRIPTION_MANAGER, $journalId);
 	}
-	
+
 	/**
 	 * Check whether a user is allowed to administer another user.
 	 * @param $journalId int

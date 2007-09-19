@@ -24,7 +24,7 @@ class XMLParser {
 
 	/** @var int original magic_quotes_runtime setting */
 	var $magicQuotes;
-	
+
 	/** @var object instance of XMLParserHandler */
 	var $handler;
 
@@ -37,7 +37,7 @@ class XMLParser {
 		$this->magicQuotes = get_magic_quotes_runtime();
 		set_magic_quotes_runtime(0);
 	}
-	
+
 	/**
 	 * Parse an XML file using the specified handler.
 	 * If no handler has been specified, XMLParserDOMHandler is used by default, returning a tree structure representing the document.
@@ -46,17 +46,17 @@ class XMLParser {
 	 */
 	function &parse($file) {
 		$parser = &$this->createParser();
-		
+
 		if (!isset($this->handler)) {
 			// Use default handler for parsing
 			$handler =& new XMLParserDOMHandler();
 			$this->setHandler($handler);
 		}
-		
+
 		xml_set_object($parser, $this->handler);
 		xml_set_element_handler($parser, "startElement", "endElement");
 		xml_set_character_data_handler($parser, "characterData");
-		
+
 		import('file.FileWrapper');
 		$wrapper = &FileWrapper::wrapper($file);
 
@@ -70,7 +70,7 @@ class XMLParser {
 			$result = false;
 			return $result;
 		}
-		
+
 		while ($data = $wrapper->read()) {
 			if (!xml_parse($parser, $data, $wrapper->eof())) {
 				echo xml_error_string(xml_get_error_code($parser));
@@ -80,14 +80,14 @@ class XMLParser {
 				return $result;
 			}
 		}
-		
+
 		$wrapper->close();
 		$this->destroyParser($parser);
-		
+
 		$result = &$this->handler->getResult();
 		return $result;
 	}
-	
+
 	/**
 	 * Set the handler to use for parse(...).
 	 * @param $handler XMLParserHandler
@@ -95,7 +95,7 @@ class XMLParser {
 	function setHandler(&$handler) {
 		$this->handler =& $handler;
 	}
-	
+
 	/**
 	 * Parse an XML file using xml_parse_into_struct and return data in an array.
 	 * This is best suited for XML documents with fairly simple structure.
@@ -120,24 +120,24 @@ class XMLParser {
 			if (!empty($tagsToMatch) && !in_array($key, $tagsToMatch)) {
 				continue;
 			}
-			
+
 			$data[$key] = array();
-			
+
 			foreach ($indices as $index) {
 				if (!isset($values[$index]['type']) || ($values[$index]['type'] != 'open' && $values[$index]['type'] != 'complete')) {
 					continue;
 				}
-				
+
 				$data[$key][] = array(
 					'attributes' => isset($values[$index]['attributes']) ? $values[$index]['attributes'] : array(),
 					'value' => isset($values[$index]['value']) ? trim($values[$index]['value']) : ''
 				);
 			}
 		}
-		
+
 		return $data;
 	}
-	
+
 	/**
 	 * Initialize a new XML parser.
 	 * @return resource
@@ -148,7 +148,7 @@ class XMLParser {
 		xml_parser_set_option($parser, XML_OPTION_CASE_FOLDING, false);
 		return $parser;
 	}
-	
+
 	/**
 	 * Destroy XML parser.
 	 * @param $parser resource
@@ -157,7 +157,7 @@ class XMLParser {
 		xml_parser_free($parser);
 		unset($parser);
 	}
-	
+
 	/**
 	 * Perform required clean up for this object.
 	 */
@@ -166,7 +166,7 @@ class XMLParser {
 		set_magic_quotes_runtime($this->magicQuotes);
 		unset($this);
 	}
-	
+
 }
 
 /**
@@ -180,19 +180,19 @@ class XMLParserHandler {
 	 */
 	function startElement(&$parser, $tag, $attributes) {
 	}
-	
+
 	/**
 	 * Callback function to act as the end element handler.
 	 */
 	function endElement(&$parser, $tag) {
 	}
-	
+
 	/**
 	 * Callback function to act as the character data handler.
 	 */
 	function characterData(&$parser, $data) {
 	}
-	
+
 	/**
 	 * Returns a resulting data structure representing the parsed content.
 	 * The format of this object is specific to the handler.

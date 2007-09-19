@@ -40,16 +40,16 @@ define('ARTICLE_FILE_NOTE',		'NT');
 define('ARTICLE_FILE_ATTACHMENT',	'AT');
 
 class ArticleFileManager extends FileManager {
-	
+
 	/** @var string the path to location of the files */
 	var $filesDir;
-	
+
 	/** @var int the ID of the associated article */
 	var $articleId;
-	
+
 	/** @var Article the associated article */
 	var $article;
-	
+
 	/**
 	 * Constructor.
 	 * Create a manager for handling article file uploads.
@@ -63,7 +63,7 @@ class ArticleFileManager extends FileManager {
 		$this->filesDir = Config::getVar('files', 'files_dir') . '/journals/' . $journalId .
 		'/articles/' . $articleId . '/';
 	}
-	
+
 	/**
 	 * Upload a submission file.
 	 * @param $fileName string the name of the file used in the POST form
@@ -73,7 +73,7 @@ class ArticleFileManager extends FileManager {
 	function uploadSubmissionFile($fileName, $fileId = null, $overwrite = false) {
 		return $this->handleUpload($fileName, ARTICLE_FILE_SUBMISSION, $fileId, $overwrite);
 	}
-	
+
 	/**
 	 * Upload a file to the review file folder.
 	 * @param $fileName string the name of the file used in the POST form
@@ -136,7 +136,7 @@ class ArticleFileManager extends FileManager {
 	function uploadPublicFile($fileName, $fileId = null, $overwrite = true) {
 		return $this->handleUpload($fileName, ARTICLE_FILE_PUBLIC, $fileId, $overwrite);
 	}	
-	
+
 	/**
 	 * Upload a note file.
 	 * @param $fileName string the name of the file used in the POST form
@@ -214,7 +214,7 @@ class ArticleFileManager extends FileManager {
 		$articleFile = &$articleFileDao->getArticleFile($fileId, $revision, $this->articleId);
 		return $articleFile;
 	}
-	
+
 	/**
 	 * Read a file's contents.
 	 * @param $output boolean output the file's contents instead of returning a string
@@ -222,18 +222,18 @@ class ArticleFileManager extends FileManager {
 	 */
 	function readFile($fileId, $revision = null, $output = false) {
 		$articleFile = &$this->getFile($fileId, $revision);
-		
+
 		if (isset($articleFile)) {
 			$fileType = $articleFile->getFileType();
 			$filePath = $this->filesDir . $articleFile->getType() . '/' . $articleFile->getFileName();
-	
+
 			return parent::readFile($filePath, $output);
-			
+
 		} else {
 			return false;
 		}
 	}
-	
+
 	/**
 	 * Delete a file by ID.
 	 * If no revision is specified, all revisions of the file are deleted.
@@ -243,24 +243,24 @@ class ArticleFileManager extends FileManager {
 	 */
 	function deleteFile($fileId, $revision = null) {
 		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
-		
+
 		$files = array();
 		if (isset($revision)) {
 			$file = &$articleFileDao->getArticleFile($fileId, $revision);
 			if (isset($file)) {
 				$files[] = $file;
 			}
-			
+
 		} else {
 			$files =  &$articleFileDao->getArticleFileRevisions($fileId);
 		}
-		
+
 		foreach ($files as $f) {
 			parent::deleteFile($this->filesDir . $f->getType() . '/' . $f->getFileName());
 		}
-		
+
 		$articleFileDao->deleteArticleFileById($fileId, $revision);
-		
+
 		return count($files);
 	}
 
@@ -283,14 +283,14 @@ class ArticleFileManager extends FileManager {
 		if (isset($articleFile)) {
 			$fileType = $articleFile->getFileType();
 			$filePath = $this->filesDir . $articleFile->getType() . '/' . $articleFile->getFileName();
-	
+
 			return parent::downloadFile($filePath, $fileType, $inline);
-			
+
 		} else {
 			return false;
 		}
 	}
-	
+
 	/**
 	 * View a file inline (variant of downloadFile).
 	 * @see ArticleFileManager::downloadFile
@@ -298,7 +298,7 @@ class ArticleFileManager extends FileManager {
 	function viewFile($fileId, $revision = null) {
 		$this->downloadFile($fileId, $revision, true);
 	}
-	
+
 	/**
 	 * Copies an existing file to create a review file.
 	 * @param $originalFileId int the file id of the original file.
@@ -309,7 +309,7 @@ class ArticleFileManager extends FileManager {
 	function copyToReviewFile($fileId, $revision = null, $destFileId = null) {
 		return $this->copyAndRenameFile($fileId, $revision, ARTICLE_FILE_REVIEW, $destFileId);
 	}
-	
+
 	/**
 	 * Copies an existing file to create an editor decision file.
 	 * @param $fileId int the file id of the review file.
@@ -320,17 +320,17 @@ class ArticleFileManager extends FileManager {
 	function copyToEditorFile($fileId, $revision = null, $destFileId = null) {
 		return $this->copyAndRenameFile($fileId, $revision, ARTICLE_FILE_EDITOR, $destFileId);
 	}
-	
+
 	/**
-	* Copies an existing file to create a copyedit file.
-	* @param $fileId int the file id of the editor file.
-	* @param $revision int the revision of the editor file.
-	* @return int the file id of the new file.
-	*/
+	 * Copies an existing file to create a copyedit file.
+	 * @param $fileId int the file id of the editor file.
+	 * @param $revision int the revision of the editor file.
+	 * @return int the file id of the new file.
+	 */
 	function copyToCopyeditFile($fileId, $revision = null) {
 		return $this->copyAndRenameFile($fileId, $revision, ARTICLE_FILE_COPYEDIT);
 	}
-	
+
 	/**
 	 * Copies an existing file to create a layout file.
 	 * @param $fileId int the file id of the copyedit file.
@@ -340,15 +340,15 @@ class ArticleFileManager extends FileManager {
 	function copyToLayoutFile($fileId, $revision = null) {
 		return $this->copyAndRenameFile($fileId, $revision, ARTICLE_FILE_LAYOUT);
 	}
-	
+
 	/**
 	 * Return type path associated with a type code.
 	 * @param $type string
 	 * @return string
 	 */
-	function typeToPath($type, $locale=null) {
+	function typeToPath($type) {
 		switch ($type) {
-			case ARTICLE_FILE_PUBLIC: return 'public/'.$locale;
+			case ARTICLE_FILE_PUBLIC: return 'public';
 			case ARTICLE_FILE_SUPP: return 'supp';
 			case ARTICLE_FILE_NOTE: return 'note';
 			case ARTICLE_FILE_REVIEW: return 'submission/review';
@@ -359,7 +359,7 @@ class ArticleFileManager extends FileManager {
 			case ARTICLE_FILE_SUBMISSION: default: return 'submission/original';
 		}
 	}
-	
+
 	/**
 	 * Copies an existing ArticleFile and renames it.
 	 * @param $sourceFileId int
@@ -370,25 +370,25 @@ class ArticleFileManager extends FileManager {
 	function copyAndRenameFile($sourceFileId, $sourceRevision, $destType, $destFileId = null) {
 		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
 		$articleFile = &new ArticleFile();
-		
+
 		$destTypePath = $this->typeToPath($destType);
 		$destDir = $this->filesDir . $destTypePath . '/';
-		
+
 		if ($destFileId != null) {
 			$currentRevision = $articleFileDao->getRevisionNumber($destFileId);
 			$revision = $currentRevision + 1;
 		} else {
 			$revision = 1;
 		}	
-		
+
 		$sourceArticleFile = $articleFileDao->getArticleFile($sourceFileId, $sourceRevision, $this->articleId);
 
 		if (!isset($sourceArticleFile)) {
 			return false;
 		}
-		
+
 		$sourceDir = $this->filesDir . $sourceArticleFile->getType() . '/';
-		
+
 		if ($destFileId != null) {
 			$articleFile->setFileId($destFileId);
 		}
@@ -405,23 +405,23 @@ class ArticleFileManager extends FileManager {
 		$articleFile->setDateModified(Core::getCurrentDate());
 		$articleFile->setRound($this->article->getCurrentRound()); // FIXME This field is only applicable for review files?
 		$articleFile->setRevision($revision);
-		
+
 		$fileId = $articleFileDao->insertArticleFile($articleFile);
-		
+
 		// Rename the file.
 		$fileExtension = $this->parseFileExtension($sourceArticleFile->getFileName());
 		$newFileName = $this->articleId.'-'.$fileId.'-'.$revision.'-'.$destType.'.'.$fileExtension;
-		
+
 		if (!$this->fileExists($destDir, 'dir')) {
 			// Try to create destination directory
 			$this->mkdirtree($destDir);
 		}
-		
+
 		copy($sourceDir.$sourceArticleFile->getFileName(), $destDir.$newFileName);
-		
+
 		$articleFile->setFileName($newFileName);
 		$articleFileDao->updateArticleFile($articleFile);
-		
+
 		return $fileId;
 	}
 
@@ -444,7 +444,7 @@ class ArticleFileManager extends FileManager {
 		$articleFile->setDateModified(Core::getCurrentDate());
 		$articleFile->setRound(0);
 		$articleFile->setRevision(1);
-		
+
 		$articleFile->setFileId($articleFileDao->insertArticleFile($articleFile));
 
 		return $articleFile;
@@ -487,10 +487,10 @@ class ArticleFileManager extends FileManager {
 	 */
 	function handleUpload($fileName, $type, $fileId = null, $overwrite = false) {
 		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
-		
+
 		$typePath = $this->typeToPath($type);
 		$dir = $this->filesDir . $typePath . '/';
-		
+
 		if (!$fileId) {
 			// Insert dummy file to generate file id FIXME?
 			$dummyFile = true;
@@ -504,7 +504,7 @@ class ArticleFileManager extends FileManager {
 			$articleFile->setDateUploaded(Core::getCurrentDate());
 			$articleFile->setDateModified(Core::getCurrentDate());
 		}
-		
+
 		$articleFile->setFileType($_FILES[$fileName]['type']);
 		$articleFile->setFileSize($_FILES[$fileName]['size']);
 		$articleFile->setOriginalFileName(ArticleFileManager::truncateFileName($_FILES[$fileName]['name'], 127));
@@ -517,7 +517,7 @@ class ArticleFileManager extends FileManager {
 		if (!$this->uploadFile($fileName, $dir.$newFileName)) {
 			// Delete the dummy file we inserted
 			$articleFileDao->deleteArticleFileById($articleFile->getFileId());
-			
+
 			return false;
 		}
 
@@ -525,7 +525,7 @@ class ArticleFileManager extends FileManager {
 		else $articleFileDao->insertArticleFile($articleFile);
 
 		if ($overwrite) $this->removePriorRevisions($articleFile->getFileId(), $articleFile->getRevision());
-		
+
 		return $articleFile->getFileId();
 	}
 
@@ -541,10 +541,10 @@ class ArticleFileManager extends FileManager {
 	 */
 	function handleWrite($fileName, &$contents, $mimeType, $type, $fileId = null, $overwrite = false) {
 		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
-		
+
 		$typePath = $this->typeToPath($type);
 		$dir = $this->filesDir . $typePath . '/';
-		
+
 		if (!$fileId) {
 			// Insert dummy file to generate file id FIXME?
 			$dummyFile = true;
@@ -558,7 +558,7 @@ class ArticleFileManager extends FileManager {
 			$articleFile->setDateUploaded(Core::getCurrentDate());
 			$articleFile->setDateModified(Core::getCurrentDate());
 		}
-		
+
 		$articleFile->setFileType($mimeType);
 		$articleFile->setFileSize(strlen($contents));
 		$articleFile->setOriginalFileName(ArticleFileManager::truncateFileName($fileName, 127));
@@ -571,7 +571,7 @@ class ArticleFileManager extends FileManager {
 		if (!$this->writeFile($dir.$newFileName, $contents)) {
 			// Delete the dummy file we inserted
 			$articleFileDao->deleteArticleFileById($articleFile->getFileId());
-			
+
 			return false;
 		}
 
@@ -579,7 +579,7 @@ class ArticleFileManager extends FileManager {
 		else $articleFileDao->insertArticleFile($articleFile);
 
 		if ($overwrite) $this->removePriorRevisions($articleFile->getFileId(), $articleFile->getRevision());
-		
+
 		return $articleFile->getFileId();
 	}
 
@@ -594,10 +594,10 @@ class ArticleFileManager extends FileManager {
 	 */
 	function handleCopy($url, $mimeType, $type, $fileId = null, $overwrite = false) {
 		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
-		
+
 		$typePath = $this->typeToPath($type);
 		$dir = $this->filesDir . $typePath . '/';
-		
+
 		if (!$fileId) {
 			// Insert dummy file to generate file id FIXME?
 			$dummyFile = true;
@@ -611,7 +611,7 @@ class ArticleFileManager extends FileManager {
 			$articleFile->setDateUploaded(Core::getCurrentDate());
 			$articleFile->setDateModified(Core::getCurrentDate());
 		}
-		
+
 		$articleFile->setFileType($mimeType);
 		$articleFile->setOriginalFileName(ArticleFileManager::truncateFileName(basename($url), 127));
 		$articleFile->setType($typePath);
@@ -623,7 +623,7 @@ class ArticleFileManager extends FileManager {
 		if (!$this->copyFile($url, $dir.$newFileName)) {
 			// Delete the dummy file we inserted
 			$articleFileDao->deleteArticleFileById($articleFile->getFileId());
-			
+
 			return false;
 		}
 
@@ -633,7 +633,7 @@ class ArticleFileManager extends FileManager {
 		else $articleFileDao->insertArticleFile($articleFile);
 
 		if ($overwrite) $this->removePriorRevisions($articleFile->getFileId(), $articleFile->getRevision());
-		
+
 		return $articleFile->getFileId();
 	}
 
@@ -644,10 +644,10 @@ class ArticleFileManager extends FileManager {
 	 */
 	function temporaryFileToArticleFile(&$temporaryFile, $type, $assocId = null) {
 		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
-		
+
 		$typePath = $this->typeToPath($type);
 		$dir = $this->filesDir . $typePath . '/';
-		
+
 		$articleFile = &$this->generateDummyFile($this->article);
 		$articleFile->setFileType($temporaryFile->getFileType());
 		$articleFile->setOriginalFileName($temporaryFile->getOriginalFileName());
@@ -661,14 +661,14 @@ class ArticleFileManager extends FileManager {
 		if (!$this->copyFile($temporaryFile->getFilePath(), $dir.$newFileName)) {
 			// Delete the dummy file we inserted
 			$articleFileDao->deleteArticleFileById($articleFile->getFileId());
-			
+
 			return false;
 		}
 
 		$articleFile->setFileSize(filesize($dir.$newFileName));
 		$articleFileDao->updateArticleFile($articleFile);
 		$this->removePriorRevisions($articleFile->getFileId(), $articleFile->getRevision());
-		
+
 		return $articleFile->getFileId();
 	}
 }

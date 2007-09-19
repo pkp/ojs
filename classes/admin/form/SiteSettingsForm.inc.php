@@ -18,13 +18,13 @@ define('SITE_MIN_PASSWORD_LENGTH', 4);
 import('form.Form');
 
 class SiteSettingsForm extends Form {
-	
+
 	/**
 	 * Constructor.
 	 */
 	function SiteSettingsForm() {
 		parent::Form('admin/settings.tpl');
-		
+
 		// Validation checks for this form
 		$this->addCheck(new FormValidatorLocale($this, 'title', 'required', 'admin.settings.form.titleRequired'));
 		$this->addCheck(new FormValidatorLocale($this, 'contactName', 'required', 'admin.settings.form.contactNameRequired'));
@@ -32,7 +32,7 @@ class SiteSettingsForm extends Form {
 		$this->addCheck(new FormValidatorCustom($this, 'minPasswordLength', 'required', 'admin.settings.form.minPasswordLengthRequired', create_function('$l', sprintf('return $l >= %d;', SITE_MIN_PASSWORD_LENGTH))));
 		$this->addCheck(new FormValidatorPost($this));
 	}
-	
+
 	function getLocaleFieldNames() {
 		$siteDao =& DAORegistry::getDAO('SiteDAO');
 		return $siteDao->getLocaleFieldNames();
@@ -57,14 +57,14 @@ class SiteSettingsForm extends Form {
 		$templateMgr->assign('helpTopicId', 'site.siteManagement');
 		parent::display();
 	}
-	
+
 	/**
 	 * Initialize form data from current settings.
 	 */
 	function initData() {
 		$siteDao = &DAORegistry::getDAO('SiteDAO');
 		$site = &$siteDao->getSite();
-		
+
 		$this->_data = array(
 			'title' => $site->getTitle(null), // Localized
 			'intro' => $site->getIntro(null), // Localized
@@ -75,7 +75,7 @@ class SiteSettingsForm extends Form {
 			'minPasswordLength' => $site->getMinPasswordLength()
 		);
 	}
-	
+
 	/**
 	 * Assign form data to user-submitted data.
 	 */
@@ -84,14 +84,14 @@ class SiteSettingsForm extends Form {
 			array('title', 'intro', 'about', 'redirect', 'contactName', 'contactEmail', 'minPasswordLength')
 		);
 	}
-	
+
 	/**
 	 * Save site settings.
 	 */
 	function execute() {
 		$siteDao = &DAORegistry::getDAO('SiteDAO');
 		$site = &$siteDao->getSite();
-		
+
 		$site->setTitle($this->getData('title'), null); // Localized
 		$site->setIntro($this->getData('intro'), null); // Localized
 		$site->setAbout($this->getData('about'), null); // Localized
@@ -99,10 +99,10 @@ class SiteSettingsForm extends Form {
 		$site->setContactName($this->getData('contactName'), null); // Localized
 		$site->setContactEmail($this->getData('contactEmail'), null); // Localized
 		$site->setMinPasswordLength($this->getData('minPasswordLength'));
-		
+
 		$siteDao->updateSite($site);
 	}
-	
+
 	/**
 	 * Uploads custom site stylesheet.
 	 */
@@ -123,7 +123,7 @@ class SiteSettingsForm extends Form {
 				$siteDao->updateSite($site);
 			}
 		}
-		
+
 		return true;
 	}
 }

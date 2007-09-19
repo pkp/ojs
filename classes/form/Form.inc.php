@@ -21,22 +21,22 @@ class Form {
 
 	/** The template file containing the HTML form */
 	var $_template;
-	
+
 	/** Associative array containing form data */
 	var $_data;
-	
+
 	/** Validation checks for this form */
 	var $_checks;
-	
+
 	/** Errors occurring in form validation */
 	var $_errors;
-	
+
 	/** Array of field names where an error occurred and the associated error message */
 	var $errorsArray;
-	
+
 	/** Array of field names where an error occurred */
 	var $errorFields;
-	
+
 	/**
 	 * Constructor.
 	 * @param $template string the path to the form template file
@@ -58,7 +58,7 @@ class Form {
 		$templateMgr->setCacheability(CACHEABILITY_NO_STORE);
 		$templateMgr->register_function('fieldLabel', array(&$this, 'smartyFieldLabel'));
 		$templateMgr->register_function('form_language_chooser', array(&$this, 'smartyFormLanguageChooser'));
-		
+
 		$templateMgr->assign($this->_data);
 		$templateMgr->assign('isError', !$this->isValid());
 		$templateMgr->assign('errors', $this->getErrorsArray());
@@ -71,10 +71,10 @@ class Form {
 			$formLocale = Locale::getLocale();
 		}
 		$templateMgr->assign('formLocale', $formLocale);
-		
+
 		$templateMgr->display($this->_template);
 	}
-	
+
 	/**
 	 * Get the value of a form field.
 	 * @param $key string
@@ -83,7 +83,7 @@ class Form {
 	function getData($key) {
 		return isset($this->_data[$key]) ? $this->_data[$key] : null;
 	}
-	
+
 	/**
 	 * Set the value of a form field.
 	 * @param $key
@@ -95,19 +95,19 @@ class Form {
 
 		$this->_data[$key] = $value;
 	}
-	
+
 	/**
 	 * Initialize form data for a new form.
 	 */
 	function initData() {
 	}
-	
+
 	/**
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
 	}
-	
+
 	/**
 	 * Validate form data.
 	 */
@@ -115,7 +115,7 @@ class Form {
 		if (!isset($this->errorsArray)) {
 			$this->getErrorsArray();
 		}
-		
+
 		foreach ($this->_checks as $check) {
 			if (!isset($this->errorsArray[$check->getField()]) && !$check->isValid()) {
 				if (method_exists($check, 'getErrorFields') && method_exists($check, 'isArray') && call_user_func(array(&$check, 'isArray'))) {
@@ -132,7 +132,7 @@ class Form {
 		}
 		return $this->isValid();
 	}
-	
+
 	/**
 	 * Execute the form's action.
 	 * (Note that it is assumed that the form has already been validated.)
@@ -177,7 +177,7 @@ class Form {
 			$this->setData($k, Request::getUserVar($k));
 		}
 	}
-	
+
 	/**
 	 * Add a validation check to the form.
 	 * @param $formValidator FormValidator
@@ -185,7 +185,7 @@ class Form {
 	function addCheck($formValidator) {
 		$this->_checks[] = &$formValidator;
 	}
-	
+
 	/**
 	 * Add an error to the form.
 	 * Errors are typically assigned as the form is validated.
@@ -202,7 +202,7 @@ class Form {
 	function addErrorField($field) {
 		$this->errorFields[$field] = 1;
 	}
-	
+
 	/**
 	 * Check if form passes all validation checks.
 	 * @return boolean
@@ -210,7 +210,7 @@ class Form {
 	function isValid() {
 		return empty($this->_errors);
 	}
-	
+
 	/**
 	 * Return set of errors that occurred in form validation.
 	 * If multiple errors occurred processing a single field, only the first error is included.
@@ -225,7 +225,7 @@ class Form {
 		}
 		return $this->errorsArray;
 	}
-	
+
 	/**
 	 * Custom Smarty function for labelling/highlighting of form fields.
 	 * @param $params array can contain 'name' (field name/ID), 'required' (required field), 'key' (localization key), 'label' (non-localized label string), 'suppressId' (boolean)
@@ -236,7 +236,7 @@ class Form {
 			if (isset($params['key'])) {
 				$params['label'] = Locale::translate($params['key']);
 			}
-			
+
 			if (isset($this->errorFields[$params['name']])) {
 				$class = ' class="error"';
 			} else {
@@ -279,19 +279,6 @@ class Form {
 			if (!is_array($values)) continue;
 			foreach ($values as $locale => $value) {
 				if ($locale != $formLocale) $this->_decomposeArray($field, $value, array($locale));
-				/*$locale = htmlentities($locale, ENT_COMPAT, LOCALE_ENCODING);
-				if (is_array($value)) {
-					foreach ($value as $subName => $subValue) {print_r($value);
-						$subValue = htmlentities($subValue, ENT_COMPAT, LOCALE_ENCODING);
-						$subName = htmlentities($subName, ENT_COMPAT, LOCALE_ENCODING);
-						if (empty($subValue)) continue;
-						echo '<input type="hidden" name="' . htmlentities($field, ENT_COMPAT, LOCALE_ENCODING) . "[$locale][$subName]\" value=\"$subValue\" />\n";
-					}
-				} else {
-					$value = htmlentities($value, ENT_COMPAT, LOCALE_ENCODING);
-					if (empty($value)) continue;
-					echo '<input type="hidden" name="' . htmlentities($field, ENT_COMPAT, LOCALE_ENCODING) . "[$locale]\" value=\"$value\" />\n";
-				} */
 			}
 		}
 
@@ -299,7 +286,6 @@ class Form {
 		$formLocale = $smarty->get_template_vars('formLocale');
 		echo '<div id="languageSelector"><select size="1" name="formLocale" onchange="changeFormAction(\'' . htmlentities($params['form'], ENT_COMPAT, LOCALE_ENCODING) . '\', \'' . htmlentities($params['url'], ENT_QUOTES, LOCALE_ENCODING) . '\')" class="selectMenu">';
 		foreach (Locale::getSupportedLocales() as $locale => $name) {
-			
 			echo '<option ' . ($locale == $formLocale?'selected="selected" ':'') . 'value="' . htmlentities($locale, ENT_COMPAT, LOCALE_ENCODING) . '">' . htmlentities($name, ENT_COMPAT, LOCALE_ENCODING) . '</option>';
 		}
 		echo '</select></div>';

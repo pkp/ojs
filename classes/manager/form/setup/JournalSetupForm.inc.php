@@ -20,7 +20,7 @@ import('form.Form');
 class JournalSetupForm extends Form {
 	var $step;
 	var $settings;
-	
+
 	/**
 	 * Constructor.
 	 * @param $step the step number
@@ -32,7 +32,7 @@ class JournalSetupForm extends Form {
 		$this->step = $step;
 		$this->settings = $settings;
 	}
-	
+
 	/**
 	 * Display the form.
 	 */
@@ -42,7 +42,7 @@ class JournalSetupForm extends Form {
 		$templateMgr->assign('helpTopicId', 'journal.managementPages.setup');
 		parent::display();
 	}
-	
+
 	/**
 	 * Initialize data from current settings.
 	 */
@@ -50,21 +50,21 @@ class JournalSetupForm extends Form {
 		$journal = &Request::getJournal();
 		$this->_data = $journal->getSettings();
 	}
-	
+
 	/**
 	 * Read user input.
 	 */
 	function readInputData() {		
 		$this->readUserVars(array_keys($this->settings));
 	}
-	
+
 	/**
 	 * Save modified settings.
 	 */
 	function execute() {
 		$journal = &Request::getJournal();
 		$settingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
-		
+
 		foreach ($this->_data as $name => $value) {
 			if (isset($this->settings[$name])) {
 				$isLocalized = in_array($name, $this->getLocaleFieldNames());

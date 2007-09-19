@@ -17,12 +17,12 @@
 class NotificationStatusDAO extends DAO {
 	function &getJournalNotifications($userId) {
 		$returner = array();
-		
+
 		$result = &$this->retrieve(
 			'SELECT j.journal_id AS journal_id, n.journal_id AS notification FROM journals j LEFT JOIN notification_status n ON j.journal_id = n.journal_id AND n.user_id = ? ORDER BY j.seq',
 			$userId
 		);
-		
+
 		while (!$result->EOF) {
 			$row = &$result->GetRowAssoc(false);
 			$returner[$row['journal_id']] = $row['notification'];
@@ -31,10 +31,10 @@ class NotificationStatusDAO extends DAO {
 
 		$result->Close();
 		unset($result);
-	
+
 		return $returner;
 	}
-	
+
 	/**
 	 * Changes whether or not a user will receive email notifications about a given journal.
 	 * @param $journalId int
@@ -76,7 +76,7 @@ class NotificationStatusDAO extends DAO {
 	 */
 	function &getNotifiableUsersByJournalId($journalId) {
 		$userDao = &DAORegistry::getDAO('UserDAO');
-				
+
 		$result = &$this->retrieve(
 			'SELECT u.* FROM users u, notification_status n WHERE u.user_id = n.user_id AND n.journal_id = ?',
 			$journalId
@@ -93,7 +93,7 @@ class NotificationStatusDAO extends DAO {
 	 */
 	function getNotifiableUsersCount($journalId) {
 		$userDao = &DAORegistry::getDAO('UserDAO');
-				
+
 		$result = &$this->retrieve(
 			'SELECT count(*) FROM notification_status n WHERE n.journal_id = ?',
 			$journalId

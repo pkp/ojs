@@ -36,7 +36,7 @@ class JournalDAO extends DAO {
 		unset($result);
 		return $returner;
 	}
-	
+
 	/**
 	 * Retrieve a journal by path.
 	 * @param $path string
@@ -47,7 +47,7 @@ class JournalDAO extends DAO {
 		$result = &$this->retrieve(
 			'SELECT * FROM journals WHERE path = ?', $path
 		);
-		
+
 		if ($result->RecordCount() != 0) {
 			$returner = &$this->_returnJournalFromRow($result->GetRowAssoc(false));
 		}
@@ -55,7 +55,7 @@ class JournalDAO extends DAO {
 		unset($result);
 		return $returner;
 	}
-	
+
 	/**
 	 * Internal function to return a Journal object from a row.
 	 * @param $row array
@@ -68,7 +68,7 @@ class JournalDAO extends DAO {
 		$journal->setSequence($row['seq']);
 		$journal->setEnabled($row['enabled']);
 		$journal->setPrimaryLocale($row['primary_locale']);
-		
+
 		HookRegistry::call('JournalDAO::_returnJournalFromRow', array(&$journal, &$row));
 
 		return $journal;
@@ -91,11 +91,11 @@ class JournalDAO extends DAO {
 				$journal->getPrimaryLocale()
 			)
 		);
-		
+
 		$journal->setJournalId($this->getInsertJournalId());
 		return $journal->getJournalId();
 	}
-	
+
 	/**
 	 * Update an existing journal.
 	 * @param $journal Journal
@@ -118,7 +118,7 @@ class JournalDAO extends DAO {
 			)
 		);
 	}
-	
+
 	/**
 	 * Delete a journal, INCLUDING ALL DEPENDENT ITEMS.
 	 * @param $journal Journal
@@ -126,7 +126,7 @@ class JournalDAO extends DAO {
 	function deleteJournal(&$journal) {
 		return $this->deleteJournalById($journal->getJournalId());
 	}
-	
+
 	/**
 	 * Delete a journal by ID, INCLUDING ALL DEPENDENT ITEMS.
 	 * @param $journalId int
@@ -169,7 +169,7 @@ class JournalDAO extends DAO {
 			'DELETE FROM journals WHERE journal_id = ?', $journalId
 		);
 	}
-	
+
 	/**
 	 * Retrieve all journals.
 	 * @return DAOResultFactory containing matching journals
@@ -183,55 +183,54 @@ class JournalDAO extends DAO {
 		$returner = &new DAOResultFactory($result, $this, '_returnJournalFromRow');
 		return $returner;
 	}
-	
+
 	/**
 	 * Retrieve all enabled journals
 	 * @return array Journals ordered by sequence
 	 */
-	 function &getEnabledJournals() 
-	 {
+	function &getEnabledJournals() {
 		$result = &$this->retrieve(
 			'SELECT * FROM journals WHERE enabled=1 ORDER BY seq'
 		);
-		
+
 		$resultFactory = &new DAOResultFactory($result, $this, '_returnJournalFromRow');
 		return $resultFactory;
 	}
-	
+
 	/**
 	 * Retrieve the IDs and titles of all journals in an associative array.
 	 * @return array
 	 */
 	function &getJournalTitles() {
 		$journals = array();
-		
+
 		$journalIterator =& $this->getJournals();
 		while ($journal =& $journalIterator->next()) {
 			$journals[$journal->getJournalId()] = $journal->getJournalTitle();
 			unset($journal);
 		}
 		unset($journalIterator);
-	
+
 		return $journals;
 	}
-	
+
 	/**
-	* Retrieve enabled journal IDs and titles in an associative array
-	* @return array
-	*/
+	 * Retrieve enabled journal IDs and titles in an associative array
+	 * @return array
+	 */
 	function &getEnabledJournalTitles() {
 		$journals = array();
-		
+
 		$journalIterator =& $this->getEnabledJournals();
 		while ($journal =& $journalIterator->next()) {
 			$journals[$journal->getJournalId()] = $journal->getJournalTitle();
 			unset($journal);
 		}
 		unset($journalIterator);
-	
+
 		return $journals;
 	}
-	
+
 	/**
 	 * Check if a journal exists with a specified path.
 	 * @param $path the path of the journal
@@ -248,7 +247,7 @@ class JournalDAO extends DAO {
 
 		return $returner;
 	}
-	
+
 	/**
 	 * Sequentially renumber journals in their sequence order.
 	 */
@@ -256,7 +255,7 @@ class JournalDAO extends DAO {
 		$result = &$this->retrieve(
 			'SELECT journal_id FROM journals ORDER BY seq'
 		);
-		
+
 		for ($i=1; !$result->EOF; $i++) {
 			list($journalId) = $result->fields;
 			$this->update(
@@ -266,14 +265,14 @@ class JournalDAO extends DAO {
 					$journalId
 				)
 			);
-			
+
 			$result->moveNext();
 		}
 
 		$result->close();
 		unset($result);
 	}
-	
+
 	/**
 	 * Get the ID of the last inserted journal.
 	 * @return int

@@ -22,22 +22,22 @@ class SMTPMailer {
 
 	/** @var $server string SMTP server hostname (default localhost) */
 	var $server;
-	
+
 	/** @var $port string SMTP server port (default 25) */
 	var $port;
-	
+
 	/** @var $auth string Authentication mechanism (optional) (PLAIN | LOGIN | CRAM-MD5 | DIGEST-MD5) */
 	var $auth;
-	
+
 	/** @var $username string Username for authentication (optional) */
 	var $username;
-	
+
 	/** @var $password string Password for authentication (optional) */
 	var $password;
 
 	/** @var $socket int SMTP socket */
 	var $socket;
-	
+
 	/**
 	 * Constructor.
 	 */
@@ -52,7 +52,7 @@ class SMTPMailer {
 		if (!$this->port)
 			$this->port = 25;
 	}
-	
+
 	/**
 	 * Send mail.
 	 * @param $mail Mailer
@@ -65,23 +65,23 @@ class SMTPMailer {
 		// Establish connection
 		if (!$this->connect())
 			return false;
-		
+
 		if (!$this->receive('220'))
 			return $this->disconnect('Did not receive expected 220');
-		
+
 		// Send HELO/EHLO command
 		if (!$this->send($this->auth ? 'EHLO' : 'HELO', Request::getServerHost()))
 			return $this->disconnect('Could not send HELO/HELO');
-		
+
 		if (!$this->receive('250'))
 			return $this->disconnect('Did not receive expected 250 (1)');
-		
+
 		if ($this->auth) {
 			// Perform authentication
 			if (!$this->authenticate())
 				return $this->disconnect('Could not authenticate');
 		}
-		
+
 		// Send MAIL command
 		$sender = $mail->getEnvelopeSender();
 		if (!isset($sender) || empty($sender)) {
@@ -91,13 +91,13 @@ class SMTPMailer {
 			else
 				$sender = get_current_user() . '@' . Request::getServerHost();
 		}
-		
+
 		if (!$this->send('MAIL', 'FROM:<' . $sender . '>'))
 			return $this->disconnect('Could not send sender');
-		
+
 		if (!$this->receive('250'))
 			return $this->disconnect('Did not receive expected 250 (2)');
-		
+
 		// Send RCPT command(s)
 		$rcpt = array();
 		if (($addrs = $mail->getRecipients()) !== null)
@@ -112,20 +112,20 @@ class SMTPMailer {
 			if (!$this->receive(array('250', '251')))
 				return $this->disconnect('Did not receive expected 250 or 251');
 		}
-		
+
 		// Send headers and body
 		if (!$this->send('DATA'))
 			return $this->disconnect('Could not send DATA');
-		
+
 		if (!$this->receive('354'))
 			return $this->disconnect('Did not receive expected 354');
-		
+
 		if (!$this->send('To:', empty($recipients) ? 'undisclosed-recipients:;' : $recipients))
 			return $this->disconnect('Could not send recipients (2)');
-		
+
 		if (!$this->send('Subject:', $subject))
 			return $this->disconnect('Could not send subject');
-		
+
 		$lines = explode(MAIL_EOL, $headers);
 		for ($i = 0, $num = count($lines); $i < $num; $i++) {
 			if (preg_match('/^bcc:/i', $lines[$i]))
@@ -133,10 +133,10 @@ class SMTPMailer {
 			if (!$this->send($lines[$i]))
 				return $this->disconnect('Could not send headers');
 		}
-		
+
 		if (!$this->send(''))
 			return $this->disconnect('Could not send CR');
-		
+
 		$lines = explode(MAIL_EOL, $body);
 		for ($i = 0, $num = count($lines); $i < $num; $i++) {
 			if (substr($lines[$i], 0, 1) == '.')
@@ -144,18 +144,18 @@ class SMTPMailer {
 			if (!$this->send($lines[$i]))
 				return $this->disconnect('Could not send body');
 		}
-		
+
 		// Mark end of data
 		if (!$this->send('.'))
 			return $this->disconnect('Could not send EOT');
-		
+
 		if (!$this->receive('250'))
 			return $this->disconnect('Did not receive expected 250 (3)');
-		
+
 		// Tear down connection
 		return $this->disconnect();
 	}
-	
+
 	/**
 	 * Connect to the SMTP server.
 	 * @return boolean
@@ -166,7 +166,7 @@ class SMTPMailer {
 			return false;
 		return true;
 	}
-	
+
 	/**
 	 * Disconnect from the SMTP server, sending a QUIT first.
 	 * @param $success boolean
@@ -184,7 +184,7 @@ class SMTPMailer {
 		}
 		return true;
 	}
-	
+
 	/**
 	 * Send a command/data.
 	 * @param $command string
@@ -197,7 +197,7 @@ class SMTPMailer {
 			return true;
 		return false;
 	}
-	
+
 	/**
 	 * Receive a response.
 	 * @param $expected string/array expected response code(s)
@@ -206,7 +206,7 @@ class SMTPMailer {
 	function receive($expected) {
 		return $this->receiveData($expected, $data);
 	}
-	
+
 	/**
 	 * Receive a response and return the data payload.
 	 * @param $expected string/array expected response code
@@ -217,7 +217,7 @@ class SMTPMailer {
 		do {
 			$line = @fgets($this->socket);
 		} while($line !== false && substr($line, 3, 1) != ' ');
-		
+
 		if ($line !== false) {
 			$response = substr($line, 0, 3);
 			$data = substr($line, 4);
@@ -226,7 +226,7 @@ class SMTPMailer {
 		}
 		return false;
 	}
-	
+
 	/**
 	 * Authenticate using the specified mechanism.
 	 * @return boolean
@@ -245,7 +245,7 @@ class SMTPMailer {
 				return true;
 		}	
 	}
-	
+
 	/**
 	 * Authenticate using PLAIN.
 	 * @return boolean
@@ -256,7 +256,7 @@ class SMTPMailer {
 			return false;
 		return $this->receive('235');
 	}
-	
+
 	/**
 	 * Authenticate using LOGIN.
 	 * @return boolean
@@ -274,7 +274,7 @@ class SMTPMailer {
 			return false;
 		return $this->receive('235');
 	}
-	
+
 	/**
 	 * Authenticate using CRAM-MD5 (see RFC 2195).
 	 * @return boolean
@@ -289,7 +289,7 @@ class SMTPMailer {
 			return false;
 		return $this->receive('235');
 	}
-	
+
 	/**
 	 * Authenticate using DIGEST-MD5 (see RFC 2831).
 	 * @return boolean
@@ -299,7 +299,7 @@ class SMTPMailer {
 			return false;
 		if (!$this->receiveData('334', $data))
 			return false;
-		
+
 		// FIXME Make parser smarter to handle "unusual" and error cases
 		$challenge = array();
 		$data = base64_decode($data);
@@ -314,7 +314,7 @@ class SMTPMailer {
 			if (!empty($value))
 				$challenge[$key] = $value;
 		}
-		
+
 		$realms = explode(',', $challenge['realm']);
 		if (empty($realms))
 			$realm = $this->server;
@@ -324,19 +324,19 @@ class SMTPMailer {
 		$nc = '00000001';
 		$uri = 'smtp/' . $this->server;
 		$cnonce = md5(uniqid(mt_rand(), true));
-		
+
 		$a1 = pack('H*', md5($this->username . ':' . $realm . ':' . $this->password)) . ':' . $challenge['nonce'] . ':' . $cnonce;
-		
+
 		// FIXME authorization ID not supported
 		if (isset($authzid))
 			$a1 .= ':' . $authzid;
-		
+
 		$a2 = 'AUTHENTICATE:' . $uri;
-		
+
 		// FIXME 'auth-int' and 'auth-conf' not supported
 		if ($qop == 'auth-int' || $qop == 'auth-int')
 			$a2 .= ':00000000000000000000000000000000';
-		
+
 		$response = md5(md5($a1) . ':' . ($challenge['nonce'] . ':' . $nc . ':' . $cnonce. ':' . $qop . ':' . md5($a2)));
 
 		$authString = sprintf('charset=utf-8,username="%s",realm="%s",nonce="%s",nc=%s,cnonce="%s",digest-uri="%s",response=%s,qop=%s', $this->username, $realm, $challenge['nonce'], $nc, $cnonce, $uri, $response, $qop);
@@ -348,7 +348,7 @@ class SMTPMailer {
 			return false;
 		return $this->receive('235');
 	}
-	
+
 	/**
 	 * Generic HMAC digest computation (see RFC 2104).
 	 * @param $hashfn string e.g., 'md5' or 'sha1'
@@ -366,7 +366,7 @@ class SMTPMailer {
 		$hmac = pack('H*', $hashfn(($key ^ $opad) . pack('H*', $hashfn(($key ^ $ipad) . $data))));
 		return bin2hex($hmac);
 	}
-	
+
 	/**
 	 * Compute HMAC-MD5 digest.
 	 * @return string (as hex)
@@ -374,7 +374,7 @@ class SMTPMailer {
 	function hmac_md5($data, $key = '') {
 		return $this->hmac('md5', 64, $data, $key);
 	}
-	
+
 }
 
 ?>

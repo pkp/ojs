@@ -37,18 +37,18 @@ class VersionDAO extends DAO {
 
 		return $returner;
 	}
-	
+
 	/**
 	 * Retrieve the complete version history, ordered by date (most recent first).
 	 * @return array Versions
 	 */
 	function &getVersionHistory() {
 		$versions = array();
-		
+
 		$result = &$this->retrieve(
 			'SELECT * FROM versions ORDER BY date_installed DESC'
 		);
-		
+
 		while (!$result->EOF) {
 			$versions[] = $this->_returnVersionFromRow($result->GetRowAssoc(false));
 			$result->MoveNext();
@@ -56,10 +56,10 @@ class VersionDAO extends DAO {
 
 		$result->Close();
 		unset($result);
-		
+
 		return $versions;
 	}
-	
+
 	/**
 	 * Internal function to return a Version object from a row.
 	 * @param $row array
@@ -78,7 +78,7 @@ class VersionDAO extends DAO {
 
 		return $version;
 	}
-	
+
 	/**
 	 * Insert a new version.
 	 * @param $version Version
@@ -91,7 +91,7 @@ class VersionDAO extends DAO {
 		if ($version->getDateInstalled() == null) {
 			$version->setDateInstalled(Core::getCurrentDate());
 		}
-		
+
 		return $this->update(
 			sprintf('INSERT INTO versions
 				(major, minor, revision, build, date_installed, current)

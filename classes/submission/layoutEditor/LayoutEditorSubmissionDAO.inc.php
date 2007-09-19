@@ -32,7 +32,7 @@ class LayoutEditorSubmissionDAO extends DAO {
 	 */
 	function LayoutEditorSubmissionDAO() {
 		parent::DAO();
-		
+
 		$this->articleDao = &DAORegistry::getDAO('ArticleDAO');
 		$this->layoutDao = &DAORegistry::getDAO('LayoutAssignmentDAO');
 		$this->galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
@@ -41,7 +41,7 @@ class LayoutEditorSubmissionDAO extends DAO {
 		$this->proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
 		$this->articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
 	}
-	
+
 	/**
 	 * Retrieve a layout editor submission by article ID.
 	 * @param $articleId int
@@ -77,7 +77,7 @@ class LayoutEditorSubmissionDAO extends DAO {
 			($journalId?' AND a.journal_id = ?':''),
 			$params
 		);
-			
+
 		$returner = null;
 		if ($result->RecordCount() != 0) {
 			$returner = &$this->_returnSubmissionFromRow($result->GetRowAssoc(false));
@@ -88,7 +88,7 @@ class LayoutEditorSubmissionDAO extends DAO {
 
 		return $returner;
 	}
-	
+
 	/**
 	 * Internal function to return a LayoutEditorSubmission object from a row.
 	 * @param $row array
@@ -98,7 +98,7 @@ class LayoutEditorSubmissionDAO extends DAO {
 		$submission = &new LayoutEditorSubmission();
 		$this->articleDao->_articleFromRow($submission, $row);
 		$submission->setLayoutAssignment($this->layoutDao->getLayoutAssignmentByArticleId($row['article_id']));
-		
+
 		// Comments
 		$submission->setMostRecentLayoutComment($this->articleCommentDao->getMostRecentArticleComment($row['article_id'], COMMENT_TYPE_LAYOUT, $row['article_id']));
 		$submission->setMostRecentProofreadComment($this->articleCommentDao->getMostRecentArticleComment($row['article_id'], COMMENT_TYPE_PROOFREAD, $row['article_id']));
@@ -106,7 +106,7 @@ class LayoutEditorSubmissionDAO extends DAO {
 		$submission->setSuppFiles($this->suppFileDao->getSuppFilesByArticle($row['article_id']));
 
 		$submission->setGalleys($this->galleyDao->getGalleysByArticle($row['article_id']));
-		
+
 		$editAssignments =& $this->editAssignmentDao->getEditAssignmentsByArticleId($row['article_id']);
 		$submission->setEditAssignments($editAssignments->toArray());
 
@@ -116,7 +116,7 @@ class LayoutEditorSubmissionDAO extends DAO {
 
 		return $submission;
 	}
-	
+
 	/**
 	 * Update an existing layout editor sbusmission.
 	 * @param $submission LayoutEditorSubmission
@@ -126,7 +126,7 @@ class LayoutEditorSubmissionDAO extends DAO {
 		$layoutAssignment =& $submission->getLayoutAssignment();
 		$this->layoutDao->updateLayoutAssignment($layoutAssignment);
 	}
-	
+
 	/**
 	 * Get set of layout editing assignments assigned to the specified layout editor.
 	 * @param $editorId int
@@ -256,7 +256,7 @@ class LayoutEditorSubmissionDAO extends DAO {
 				l.editor_id = ? AND
 				' . (isset($journalId)?'a.journal_id = ? AND':'') . '
 				l.date_notified IS NOT NULL';
-		
+
 		if ($active) {
 			$sql .= ' AND (l.date_completed IS NULL OR p.date_layouteditor_completed IS NULL)'; 
 		} else {

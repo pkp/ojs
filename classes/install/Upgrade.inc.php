@@ -25,7 +25,7 @@ class Upgrade extends Installer {
 	function Upgrade($params) {
 		parent::Installer('upgrade.xml', $params);
 	}
-	
+
 
 	/**
 	 * Returns true iff this is an upgrade process.
@@ -38,7 +38,7 @@ class Upgrade extends Installer {
 	//
 	// Upgrade actions
 	//
-	
+
 	/**
 	 * Rebuild the search index.
 	 * @return boolean
@@ -339,7 +339,7 @@ class Upgrade extends Installer {
 	 */
 	function migratePublisher() {
 		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
-		
+
 		$result =& $journalSettingsDao->retrieve('SELECT j.primary_locale, s.setting_value, j.journal_id FROM journal_settings s, journals j WHERE s.journal_id = j.journal_id AND s.setting_name = ?', array('publisher'));
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);

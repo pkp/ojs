@@ -78,7 +78,7 @@ class GroupDAO extends DAO {
 		$group->setContext($row['context']);
 		$group->setJournalId($row['journal_id']);
 		$this->getDataObjectSettings('group_settings', 'group_id', $row['group_id'], $group);
-		
+
 		HookRegistry::call('GroupDAO::_returnGroupFromRow', array(&$group, &$row));
 
 		return $group;
@@ -111,12 +111,12 @@ class GroupDAO extends DAO {
 				$group->getContext()
 			)
 		);
-		
+
 		$group->setGroupId($this->getInsertGroupId());
 		$this->updateLocaleFields($group);
 		return $group->getGroupId();
 	}
-	
+
 	/**
 	 * Update an existing board group.
 	 * @param $group Group
@@ -141,7 +141,7 @@ class GroupDAO extends DAO {
 		$this->updateLocaleFields($group);
 		return $returner;
 	}
-	
+
 	/**
 	 * Delete a board group, including membership info
 	 * @param $journal Group
@@ -149,7 +149,7 @@ class GroupDAO extends DAO {
 	function deleteGroup(&$group) {
 		return $this->deleteGroupById($group->getGroupId());
 	}
-	
+
 	/**
 	 * Delete a board group, including membership info
 	 * @param $groupId int
@@ -160,7 +160,7 @@ class GroupDAO extends DAO {
 		$this->update('DELETE FROM group_settings WHERE group_id = ?', $groupId);
 		return $this->update('DELETE FROM groups WHERE group_id = ?', $groupId);
 	}
-	
+
 	/**
 	 * Delete board groups by journal ID, including membership info
 	 * @param $journalId int
@@ -171,7 +171,7 @@ class GroupDAO extends DAO {
 			$this->deleteGroup($group);
 		}
 	}
-	
+
 	/**
 	 * Sequentially renumber board groups in their sequence order, optionally by journal.
 	 * @param $journalId int
@@ -183,7 +183,7 @@ class GroupDAO extends DAO {
 			'ORDER BY seq',
 			$journalId
 		);
-		
+
 		for ($i=1; !$result->EOF; $i++) {
 			list($groupId) = $result->fields;
 			$this->update(
@@ -193,14 +193,14 @@ class GroupDAO extends DAO {
 					$groupId
 				)
 			);
-			
+
 			$result->moveNext();
 		}
 
 		$result->close();
 		unset($result);
 	}
-	
+
 	/**
 	 * Get the ID of the last inserted board group.
 	 * @return int

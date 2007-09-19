@@ -22,7 +22,7 @@ class HelpTopic extends DataObject {
 
 	/** The set of related topics */
 	var $relatedTopics;
-	
+
 	/**
 	 * Constructor.
 	 */
@@ -31,11 +31,11 @@ class HelpTopic extends DataObject {
 		$this->sections = array();
 		$this->relatedTopics = array();
 	}
-	
+
 	//
 	// Get/set methods
 	//
-	
+
 	/**
 	 * Get topic ID (a unique six-digit string).
 	 * @return string
@@ -43,7 +43,7 @@ class HelpTopic extends DataObject {
 	function getId() {
 		return $this->getData('id');
 	}
-	
+
 	/**
 	 * Set topic ID (a unique six-digit string).
 	 * @param $id string
@@ -51,7 +51,7 @@ class HelpTopic extends DataObject {
 	function setId($id) {
 		$this->setData('id', $id);
 	}
-	
+
 	/**
 	 * Get topic title.
 	 * @return string
@@ -59,7 +59,7 @@ class HelpTopic extends DataObject {
 	function getTitle() {
 		return $this->getData('title');
 	}
-	
+
 	/**
 	 * Set topic title.
 	 * @param $title string
@@ -67,7 +67,7 @@ class HelpTopic extends DataObject {
 	function setTitle($title) {
 		$this->setData('title', $title);
 	}
-	
+
 	/**
 	 * Get the ID of this topic's toc.
 	 * @return string
@@ -75,7 +75,7 @@ class HelpTopic extends DataObject {
 	function getTocId() {
 		return $this->getData('tocId');
 	}
-	
+
 	/**
 	 * Set the ID of this topic's toc.
 	 * @param $tocId string
@@ -83,7 +83,7 @@ class HelpTopic extends DataObject {
 	function setTocId($tocId) {
 		$this->setData('tocId', $tocId);
 	}
-	
+
 	/**
 	 * Get the ID of this topic's subtoc.
 	 * @return string
@@ -91,7 +91,7 @@ class HelpTopic extends DataObject {
 	function getSubTocId() {
 		return $this->getData('subTocId');
 	}
-	
+
 	/**
 	 * Set the ID of this topic's subtoc.
 	 * @param $subTocId string
@@ -99,7 +99,7 @@ class HelpTopic extends DataObject {
 	function setSubTocId($subTocId) {
 		$this->setData('subTocId', $subTocId);
 	}
-	
+
 	/**
 	 * Get the set of sections comprising this topic's contents.
 	 * @return array the sections in order of appearance
@@ -107,7 +107,7 @@ class HelpTopic extends DataObject {
 	function &getSections() {
 		return $this->sections;
 	}
-	
+
 	/**
 	 * Associate a section with this topic.
 	 * Sections are added in the order they appear in the topic (i.e., FIFO).
@@ -124,7 +124,7 @@ class HelpTopic extends DataObject {
 	function &getRelatedTopics() {
 		return $this->relatedTopics;
 	}
-	
+
 	/**
 	 * Add a related topic
 	 * @param $section HelpTopicSection

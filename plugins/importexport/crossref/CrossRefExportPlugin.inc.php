@@ -45,7 +45,7 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 	function getDescription() {
 		return Locale::translate('plugins.importexport.crossref.description');
 	}
-				
+
 	function display(&$args) {
 		$templateMgr = &TemplateManager::getManager();
 		parent::display();
@@ -124,11 +124,11 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 
 		// attach it to the root node
 		XMLCustomWriter::appendChild($doiBatchNode, $head);
-		
+
 		// the body node contains everything
 		$bodyNode = &XMLCustomWriter::createElement($doc, 'body');
 		XMLCustomWriter::appendChild($doiBatchNode, $bodyNode);
-		
+
 		// now cycle through everything we want to submit in this batch
 		foreach ($results as $result) {
 			$journal = &$result['journal'];
@@ -150,14 +150,14 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 			// Create the article
 			$journalArticleNode = &CrossRefExportDom::generateJournalArticleDom($doc, $journal, $issue, $section, $article);
 			XMLCustomWriter::appendChild($journalNode, $journalArticleNode);
-			
+
 			// Create the DOI data
 			$DOIdataNode = &CrossRefExportDom::generateDOIdataDom($doc, $article->getDOI(), Request::url(null, 'article', 'view', $article->getArticleId()));
 			XMLCustomWriter::appendChild($journalArticleNode, $DOIdataNode);							
 			XMLCustomWriter::appendChild($bodyNode, $journalNode);
 		}
-		
-				
+
+
 		// dump out the results
 		if (!empty($outputFile)) {
 			if (($h = fopen($outputFile, 'w'))===false) return false;
@@ -179,13 +179,13 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 		$doiBatchNode = &CrossRefExportDom::generateDoiBatchDom($doc);
 
 		$journal = &Request::getJournal();
-		
+
 		// Create Head Node and all parts inside it
 		$head = &CrossRefExportDom::generateHeadDom($doc, $journal);
 
 		// attach it to the root node
 		XMLCustomWriter::appendChild($doiBatchNode, $head);
-		
+
 		$bodyNode = &XMLCustomWriter::createElement($doc, 'body');
 		XMLCustomWriter::appendChild($doiBatchNode, $bodyNode);
 
@@ -201,14 +201,14 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 					$journalNode = &XMLCustomWriter::createElement($doc, 'journal');
 					$journalMetadataNode = &CrossRefExportDom::generateJournalMetadataDom($doc, $journal);
 					XMLCustomWriter::appendChild($journalNode, $journalMetadataNode);
-		
+
 					$journalIssueNode = &CrossRefExportDom::generateJournalIssueDom($doc, $journal, $issue, $section, $article);
 					XMLCustomWriter::appendChild($journalNode, $journalIssueNode);
-		
+
 					// Article node
 					$journalArticleNode = &CrossRefExportDom::generateJournalArticleDom($doc, $journal, $issue, $section, $article);
 					XMLCustomWriter::appendChild($journalNode, $journalArticleNode);
-					
+
 					// DOI data node
 					$DOIdataNode = &CrossRefExportDom::generateDOIdataDom($doc, $article->getDOI(), Request::url(null, 'article', 'view', $article->getArticleId()));
 					XMLCustomWriter::appendChild($journalArticleNode, $DOIdataNode);							
@@ -249,7 +249,7 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
 
 		$journal = &$journalDao->getJournalByPath($journalPath);
-		
+
 		if (!$journal) {
 			if ($journalPath != '') {
 				echo Locale::translate('plugins.importexport.crossref.cliError') . "\n";

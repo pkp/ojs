@@ -38,7 +38,7 @@ class CrossRefExportDom {
 	function &generateCrossRefDom() {
 		// create the output XML document in DOM with a root node
 		$doc = &XMLCustomWriter::createDocument('', '', '');
-		
+
 		return $doc;
 	}
 
@@ -63,7 +63,7 @@ class CrossRefExportDom {
 	/* Generate the <head> tag that accompanies each submission */	
 	function &generateHeadDom(&$doc, &$journal ) {
 		$head = &XMLCustomWriter::createElement($doc, 'head');
-		
+
 		// DOI batch ID is a simple tracking ID: initials + timestamp
 		XMLCustomWriter::createChildWithText($doc, $head, 'doi_batch_id', $journal->getSetting('journalInitials') . '_' . time());
 		XMLCustomWriter::createChildWithText($doc, $head, 'timestamp', time());
@@ -73,7 +73,7 @@ class CrossRefExportDom {
 		/* Depositor defaults to the Journal's technical Contact */
 		$depositorNode = &CrossRefExportDom::generateDepositorDom($doc, $journal->getSetting('supportName'), $journal->getSetting('supportEmail'));
 		XMLCustomWriter::appendChild($head, $depositorNode);
-		
+
 		/* The registrant is assumed to be the Publishing institution */
 		$publisherInstitution = $journal->getSetting('publisherInstitution');
 		XMLCustomWriter::createChildWithText($doc, $head, 'registrant', $publisherInstitution);
@@ -81,16 +81,16 @@ class CrossRefExportDom {
 
 		return $head;
 	}
-	
+
 	/* Depositor Node */
 	function &generateDepositorDom( &$doc, $name, $email ) {
 		$depositor = &XMLCustomWriter::createElement($doc, 'depositor');
 		XMLCustomWriter::createChildWithText($doc, $depositor, 'name', $name);
 		XMLCustomWriter::createChildWithText($doc, $depositor, 'email_address', $email);
-		
+
 		return $depositor;
 	}
-	
+
 	/* Metadata for journal - accompanies every article */
 	function &generateJournalMetadataDom( &$doc, &$journal ) {
 		$journalMetadataNode = &XMLCustomWriter::createElement($doc, 'journal_metadata');
@@ -116,8 +116,8 @@ class CrossRefExportDom {
 			$printISSN = &XMLCustomWriter::createChildWithText($doc, $journalMetadataNode, 'issn', $ISSN);
 			XMLCustomWriter::setAttribute($printISSN, 'media_type', 'print');
 		}
-		 
-			
+
+
 		return $journalMetadataNode;
 	}
 
@@ -131,7 +131,7 @@ class CrossRefExportDom {
 		$journalVolumeNode = &XMLCustomWriter::createElement($doc, 'journal_volume');
 		XMLCustomWriter::appendChild($journalIssueNode, $journalVolumeNode);
 		XMLCustomWriter::createChildWithText($doc, $journalVolumeNode, 'volume', $issue->getVolume());
-		
+
 		XMLCustomWriter::createChildWithText($doc, $journalIssueNode, 'issue', $issue->getNumber());		
 
 		return $journalIssueNode;
@@ -148,16 +148,16 @@ class CrossRefExportDom {
 		$titlesNode = &XMLCustomWriter::createElement($doc, 'titles');
 		XMLCustomWriter::createChildWithText($doc, $titlesNode, 'title', $article->getArticleTitle());
 		XMLCustomWriter::appendChild($journalArticleNode, $titlesNode);
-		
+
 		$contributorsNode = &XMLCustomWriter::createElement($doc, 'contributors');
-		
+
 		/* AuthorList */
 		foreach ($article->getAuthors() as $author) {
 			$authorNode =& CrossRefExportDom::generateAuthorDom($doc, $author);
 			XMLCustomWriter::appendChild($contributorsNode, $authorNode);
 		}		
 		XMLCustomWriter::appendChild($journalArticleNode, $contributorsNode);
-		
+
 		/* publication date of issue */
 		$publicationDateNode = &CrossRefExportDom::generatePublisherDateDom($doc, $issue->getDatePublished());
 		XMLCustomWriter::appendChild($journalArticleNode, $publicationDateNode);
@@ -177,7 +177,7 @@ class CrossRefExportDom {
 		$DOIdataNode = & XMLCustomWriter::createElement($doc, 'doi_data');
 		XMLCustomWriter::createChildWithText($doc, $DOIdataNode, 'doi', $DOI);
 		XMLCustomWriter::createChildWithText($doc, $DOIdataNode, 'resource', $url);
-		
+
 		return $DOIdataNode;
 	}
 
@@ -185,7 +185,7 @@ class CrossRefExportDom {
 	function &generateAuthorDom(&$doc, &$author) {
 		$authorNode = &XMLCustomWriter::createElement($doc, 'person_name');
 		XMLCustomWriter::setAttribute($authorNode, 'contributor_role', 'author');
-		
+
 		/* there should only be 1 primary contact per article */
 		if ($author->getPrimaryContact()) {
 			XMLCustomWriter::setAttribute($authorNode, 'sequence', 'first');			

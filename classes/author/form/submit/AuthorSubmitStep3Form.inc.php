@@ -17,7 +17,7 @@
 import("author.form.submit.AuthorSubmitForm");
 
 class AuthorSubmitStep3Form extends AuthorSubmitForm {
-	
+
 	/**
 	 * Constructor.
 	 */
@@ -26,7 +26,7 @@ class AuthorSubmitStep3Form extends AuthorSubmitForm {
 
 		// Validation checks for this form
 	}
-	
+
 	/**
 	 * Initialize form data from current article.
 	 */
@@ -37,7 +37,7 @@ class AuthorSubmitStep3Form extends AuthorSubmitForm {
 			);
 		}
 	}
-	
+
 	/**
 	 * Assign form data to user-submitted data.
 	 */
@@ -47,13 +47,13 @@ class AuthorSubmitStep3Form extends AuthorSubmitForm {
 			)
 		);
 	}
-	
+
 	/**
 	 * Display the form.
 	 */
 	function display() {
 		$templateMgr = &TemplateManager::getManager();
-		
+
 		// Get supplementary files for this article
 		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
 		if ($this->article->getSubmissionFileId() != null) {
@@ -61,7 +61,7 @@ class AuthorSubmitStep3Form extends AuthorSubmitForm {
 		}
 		parent::display();
 	}
-	
+
 	/**
 	 * Upload the submission file.
 	 * @param $fileName string
@@ -69,10 +69,10 @@ class AuthorSubmitStep3Form extends AuthorSubmitForm {
 	 */
 	function uploadSubmissionFile($fileName) {
 		import("file.ArticleFileManager");
-		
+
 		$articleFileManager = &new ArticleFileManager($this->articleId);
 		$articleDao = &DAORegistry::getDAO('ArticleDAO');
-			
+
 		if ($articleFileManager->uploadedFileExists($fileName)) {
 			// upload new submission file, overwriting previous if necessary
 			$submissionFileId = $articleFileManager->uploadSubmissionFile($fileName, $this->article->getSubmissionFileId(), true);
@@ -81,12 +81,12 @@ class AuthorSubmitStep3Form extends AuthorSubmitForm {
 		if (isset($submissionFileId)) {
 			$this->article->setSubmissionFileId($submissionFileId);
 			return $articleDao->updateArticle($this->article);
-			
+
 		} else {
 			return false;
 		}
 	}
-	
+
 	/**
 	 * Save changes to article.
 	 * @return int the article ID
@@ -95,16 +95,16 @@ class AuthorSubmitStep3Form extends AuthorSubmitForm {
 		// Update article
 		$articleDao = &DAORegistry::getDAO('ArticleDAO');
 		$article = &$this->article;
-		
+
 		if ($article->getSubmissionProgress() <= $this->step) {
 			$article->stampStatusModified();
 			$article->setSubmissionProgress($this->step + 1);
 			$articleDao->updateArticle($article);
 		}
-		
+
 		return $this->articleId;
 	}
-	
+
 }
 
 ?>

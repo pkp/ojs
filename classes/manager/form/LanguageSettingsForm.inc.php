@@ -20,32 +20,32 @@ class LanguageSettingsForm extends Form {
 
 	/** @var array the setting names */
 	var $settings;
-	
+
 	/** @var array set of locales available for journal use */
 	var $availableLocales;
-	
+
 	/**
 	 * Constructor.
 	 */
 	function LanguageSettingsForm() {
 		parent::Form('manager/languageSettings.tpl');
-		
+
 		$this->settings = array(
 			'primaryLocale' => 'string',
 			'supportedLocales' => 'object'
 		);
-		
+
 		$site = &Request::getSite();
 		$this->availableLocales = $site->getSupportedLocales();
-		
+
 		$localeCheck = create_function('$locale,$availableLocales', 'return in_array($locale,$availableLocales);');
-		
+
 		// Validation checks for this form
 		$this->addCheck(new FormValidator($this, 'primaryLocale', 'required', 'manager.languages.form.primaryLocaleRequired'), array('Locale', 'isLocaleValid'));
 		$this->addCheck(new FormValidator($this, 'primaryLocale', 'required', 'manager.languages.form.primaryLocaleRequired'), $localeCheck, array(&$this->availableLocales));
 		$this->addCheck(new FormValidatorPost($this));
 	}
-	
+
 	/**
 	 * Display the form.
 	 */
@@ -56,7 +56,7 @@ class LanguageSettingsForm extends Form {
 		$templateMgr->assign('helpTopicId','journal.managementPages.languages');
 		parent::display();
 	}
-	
+
 	/**
 	 * Initialize form data from current settings.
 	 */
@@ -65,30 +65,30 @@ class LanguageSettingsForm extends Form {
 		foreach ($this->settings as $settingName => $settingType) {
 			$this->_data[$settingName] = $journal->getSetting($settingName);
 		}
-		
+
 		if ($this->getData('supportedLocales') == null || !is_array($this->getData('supportedLocales'))) {
 			$this->setData('supportedLocales', array());
 		}
 	}
-	
+
 	/**
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
 		$this->readUserVars(array_keys($this->settings));
-		
+
 		if ($this->getData('supportedLocales') == null || !is_array($this->getData('supportedLocales'))) {
 			$this->setData('supportedLocales', array());
 		}		
 	}
-	
+
 	/**
 	 * Save modified settings.
 	 */
 	function execute() {
 		$journal = &Request::getJournal();
 		$settingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
-		
+
 		// Verify additional locales
 		$supportedLocales = array();
 		foreach ($this->getData('supportedLocales') as $locale) {
@@ -96,14 +96,14 @@ class LanguageSettingsForm extends Form {
 				array_push($supportedLocales, $locale);
 			}
 		}
-		
+
 		$primaryLocale = $this->getData('primaryLocale');
-		
+
 		if ($primaryLocale != null && !empty($primaryLocale) && !in_array($primaryLocale, $supportedLocales)) {
 			array_push($supportedLocales, $primaryLocale);
 		}
 		$this->setData('supportedLocales', $supportedLocales);
-		
+
 		foreach ($this->_data as $name => $value) {
 			$settingsDao->updateSetting(
 				$journal->getJournalId(),
@@ -113,7 +113,7 @@ class LanguageSettingsForm extends Form {
 			);
 		}
 	}
-	
+
 }
 
 ?>

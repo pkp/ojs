@@ -33,7 +33,7 @@ class EmailHandler extends ManagerHandler {
 		} else {
 			$emailTemplates =& new ArrayItemIterator($emailTemplates);
 		}
-		
+
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('pageHierarchy', array(array(Request::url(null, 'manager'), 'manager.journalManagement')));
 		$templateMgr->assign_by_ref('emailTemplates', $emailTemplates);
@@ -55,7 +55,7 @@ class EmailHandler extends ManagerHandler {
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->append('pageHierarchy', array(Request::url(null, 'manager', 'emails'), 'manager.emails'));
-		
+
 		$emailKey = !isset($args) || empty($args) ? null : $args[0];
 
 		import('manager.form.EmailTemplateForm');
@@ -64,15 +64,15 @@ class EmailHandler extends ManagerHandler {
 		$emailTemplateForm->initData();
 		$emailTemplateForm->display();
 	}
-	
+
 	/**
 	 * Save changes to an email.
 	 */
 	function updateEmail() {
 		parent::validate();
-		
+
 		import('manager.form.EmailTemplateForm');
-		
+
 		$emailKey = Request::getUserVar('emailKey');
 
 		$emailTemplateForm = &new EmailTemplateForm($emailKey);
@@ -111,51 +111,51 @@ class EmailHandler extends ManagerHandler {
 	 */
 	function resetEmail($args) {
 		parent::validate();
-		
+
 		if (isset($args) && !empty($args)) {
 			$journal = &Request::getJournal();
-		
+
 			$emailTemplateDao = &DAORegistry::getDAO('EmailTemplateDAO');
 			$emailTemplateDao->deleteEmailTemplateByKey($args[0], $journal->getJournalId());
 		}
-		
+
 		Request::redirect(null, null, 'emails');
 	}
-	
+
 	/**
 	 * resets all email templates associated with the journal.
 	 */
 	function resetAllEmails() {
 		parent::validate();
-		
+
 		$journal = &Request::getJournal();
 		$emailTemplateDao = &DAORegistry::getDAO('EmailTemplateDAO');
 		$emailTemplateDao->deleteEmailTemplatesByJournal($journal->getJournalId());
-		
+
 		Request::redirect(null, null, 'emails');
 	}
-	
+
 	/**
 	 * disables an email template.
 	 * @param $args array first parameter is the key of the email to disable
 	 */
 	function disableEmail($args) {
 		parent::validate();
-		
+
 		if (isset($args) && !empty($args)) {
 			$journal = &Request::getJournal();
-		
+
 			$emailTemplateDao = &DAORegistry::getDAO('EmailTemplateDAO');
 			$emailTemplate = $emailTemplateDao->getBaseEmailTemplate($args[0], $journal->getJournalId());
-			
+
 			if (isset($emailTemplate)) {
 				if ($emailTemplate->getCanDisable()) {
 					$emailTemplate->setEnabled(0);
-					
+
 					if ($emailTemplate->getJournalId() == null) {
 						$emailTemplate->setJournalId($journal->getJournalId());
 					}
-			
+
 					if ($emailTemplate->getEmailId() != null) {
 						$emailTemplateDao->updateBaseEmailTemplate($emailTemplate);
 					} else {
@@ -164,27 +164,27 @@ class EmailHandler extends ManagerHandler {
 				}
 			}
 		}
-		
+
 		Request::redirect(null, null, 'emails');
 	}
-	
+
 	/**
 	 * enables an email template.
 	 * @param $args array first parameter is the key of the email to enable
 	 */
 	function enableEmail($args) {
 		parent::validate();
-		
+
 		if (isset($args) && !empty($args)) {
 			$journal = &Request::getJournal();
-		
+
 			$emailTemplateDao = &DAORegistry::getDAO('EmailTemplateDAO');
 			$emailTemplate = $emailTemplateDao->getBaseEmailTemplate($args[0], $journal->getJournalId());
-			
+
 			if (isset($emailTemplate)) {
 				if ($emailTemplate->getCanDisable()) {
 					$emailTemplate->setEnabled(1);
-					
+
 					if ($emailTemplate->getEmailId() != null) {
 						$emailTemplateDao->updateBaseEmailTemplate($emailTemplate);
 					} else {
@@ -193,10 +193,10 @@ class EmailHandler extends ManagerHandler {
 				}
 			}
 		}
-		
+
 		Request::redirect(null, null, 'emails');
 	}
-	
+
 }
 
 ?>

@@ -82,10 +82,10 @@ class AnnouncementForm extends Form {
 		$announcementTypeDao = &DAORegistry::getDAO('AnnouncementTypeDAO');
 		$announcementTypes = &$announcementTypeDao->getAnnouncementTypesByJournalId($journal->getJournalId());
 		$templateMgr->assign('announcementTypes', $announcementTypes);
-	
+
 		parent::display();
 	}
-	
+
 	/**
 	 * Initialize form data from current announcement.
 	 */
@@ -108,31 +108,31 @@ class AnnouncementForm extends Form {
 			}
 		}
 	}
-	
+
 	/**
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
 		$this->readUserVars(array('typeId', 'title', 'descriptionShort', 'description', 'dateExpireYear', 'dateExpireMonth', 'dateExpireDay'));
 		$this->_data['dateExpire'] = $this->_data['dateExpireYear'] . '-' . $this->_data['dateExpireMonth'] . '-' . $this->_data['dateExpireDay'];
-	
+
 	}
-	
+
 	/**
 	 * Save announcement. 
 	 */
 	function execute() {
 		$announcementDao = &DAORegistry::getDAO('AnnouncementDAO');
 		$journal = &Request::getJournal();
-	
+
 		if (isset($this->announcementId)) {
 			$announcement = &$announcementDao->getAnnouncement($this->announcementId);
 		}
-		
+
 		if (!isset($announcement)) {
 			$announcement = &new Announcement();
 		}
-		
+
 		$announcement->setJournalId($journal->getJournalId());
 		$announcement->setTitle($this->getData('title'), null); // Localized
 		$announcement->setDescriptionShort($this->getData('descriptionShort'), null); // Localized

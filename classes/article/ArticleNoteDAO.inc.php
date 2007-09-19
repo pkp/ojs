@@ -27,7 +27,7 @@ class ArticleNoteDAO extends DAO {
 		$sql = 'SELECT n.*, a.file_name, a.original_file_name FROM article_notes n LEFT JOIN article_files a ON (n.file_id = a.file_id) WHERE a.article_id = ? OR (n.file_id = 0 AND n.article_id = ?) ORDER BY n.date_created DESC';
 
 		$result = &$this->retrieveRange($sql, array($articleId, $articleId), $rangeInfo);
-		
+
 		$returner = &new DAOResultFactory($result, $this, '_returnArticleNoteFromRow');
 		return $returner;
 	}
@@ -41,7 +41,7 @@ class ArticleNoteDAO extends DAO {
 		$sql = 'SELECT n.*, a.file_name, a.original_file_name FROM article_notes n LEFT JOIN article_files a ON (n.file_id = a.file_id) WHERE n.user_id = ? ORDER BY n.date_created DESC';
 
 		$result = &$this->retrieveRange($sql, $userId, $rangeInfo);
-		
+
 		$returner = &new DAOResultFactory($result, $this, '_returnArticleNoteFromRow');
 		return $returner;
 	}
@@ -62,7 +62,7 @@ class ArticleNoteDAO extends DAO {
 
 		return $articleNote;
 	}	
-	
+
 	/**
 	 * creates and returns an article note object from a row
 	 * @param $row array
@@ -86,7 +86,7 @@ class ArticleNoteDAO extends DAO {
 
 		return $articleNote;
 	}
-	
+
 	/**
 	 * inserts a new article note into article_notes table
 	 * @param ArticleNote object
@@ -111,7 +111,7 @@ class ArticleNoteDAO extends DAO {
 		$articleNote->setNoteId($this->getInsertArticleNoteId());
 		return $articleNote->getNoteId();
 	}
-		
+
 	/**
 	 * Get the ID of the last inserted article note.
 	 * @return int
@@ -129,7 +129,7 @@ class ArticleNoteDAO extends DAO {
 			'DELETE FROM article_notes WHERE note_id = ?', $noteId
 		);
 	}
-	
+
 	/**
 	 * updates an article note
 	 * @param ArticleNote object
@@ -161,7 +161,7 @@ class ArticleNoteDAO extends DAO {
 	 */
 	function getAllArticleNoteFileIds($articleId) {
 		$fileIds = array();
-		
+
 		$result = &$this->retrieve(
 			'SELECT a.file_id FROM article_notes a WHERE article_id = ? AND file_id > ?', array($articleId, 0)
 		);
@@ -174,7 +174,7 @@ class ArticleNoteDAO extends DAO {
 
 		$result->Close();
 		unset($result);
-		
+
 		return $fileIds;
 	}	
 
@@ -190,5 +190,5 @@ class ArticleNoteDAO extends DAO {
 		$result->Close();
 	}
 }
-  
+
 ?>

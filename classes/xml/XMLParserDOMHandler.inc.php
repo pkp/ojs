@@ -21,13 +21,13 @@ class XMLParserDOMHandler extends XMLParserHandler {
 
 	/** @var XMLNode reference to the root node */
 	var $rootNode;
-	
+
 	/** @var XMLNode reference to the node currently being parsed */
 	var $currentNode;
-	
+
 	/** @var reference to the current data */
 	var $currentData;
-	
+
 	/**
 	 * Constructor.
 	 */
@@ -35,7 +35,7 @@ class XMLParserDOMHandler extends XMLParserHandler {
 		$this->rootNodes = array();
 		$this->currentNode = null;
 	}
-	
+
 	/**
 	 * Callback function to act as the start element handler.
 	 */
@@ -43,18 +43,18 @@ class XMLParserDOMHandler extends XMLParserHandler {
 		$this->currentData = null;
 		$node = &new XMLNode($tag);
 		$node->setAttributes($attributes);
-		
+
 		if ($this->currentNode != null) {
 			$this->currentNode->addChild($node);
 			$node->setParent($this->currentNode);
-			
+
 		} else {
 			$this->rootNode = &$node;
 		}
-		
+
 		$this->currentNode = &$node;
 	}
-	
+
 	/**
 	 * Callback function to act as the end element handler.
 	 */
@@ -63,14 +63,14 @@ class XMLParserDOMHandler extends XMLParserHandler {
 		$this->currentNode = &$this->currentNode->getParent();
 		$this->currentData = null;
 	}
-	
+
 	/**
 	 * Callback function to act as the character data handler.
 	 */
 	function characterData(&$parser, $data) {
 		$this->currentData .= $data;
 	}
-	
+
 	/**
 	 * Returns a reference to the root node of the tree representing the document.
 	 * @return XMLNode
@@ -78,7 +78,7 @@ class XMLParserDOMHandler extends XMLParserHandler {
 	function &getResult() {
 		return $this->rootNode;
 	}
-	
+
 }
 
 ?>

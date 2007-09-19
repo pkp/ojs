@@ -19,13 +19,13 @@ import('form.Form');
 class MetadataForm extends Form {
 	/** @var Article current article */
 	var $article;
-	
+
 	/** @var boolean can edit metadata */
 	var $canEdit;
-	
+
 	/** @var boolean can view authors */
 	var $canViewAuthors;
-	
+
 	/**
 	 * Constructor.
 	 */
@@ -35,7 +35,7 @@ class MetadataForm extends Form {
 
 		$user = &Request::getUser();
 		$roleId = $roleDao->getRoleIdFromPath(Request::getRequestedPage());
-		
+
 		// If the user is an editor of this article, make the form editable.
 		$this->canEdit = false;
 		if ($roleId != null && ($roleId == ROLE_ID_EDITOR || $roleId == ROLE_ID_SECTION_EDITOR)) {
@@ -67,18 +67,18 @@ class MetadataForm extends Form {
 		} else {
 			parent::Form('submission/metadata/metadataView.tpl');
 		}
-		
+
 		// If the user is a reviewer of this article, do not show authors.
 		$this->canViewAuthors = true;
 		if ($roleId != null && $roleId == ROLE_ID_REVIEWER) {
 			$this->canViewAuthors = false;
 		}
-		
+
 		$this->article = $article;
 
 		$this->addCheck(new FormValidatorPost($this));
 	}
-	
+
 	/**
 	 * Initialize form data from current article.
 	 */
@@ -99,7 +99,7 @@ class MetadataForm extends Form {
 				'language' => $article->getLanguage(),
 				'sponsor' => $article->getSponsor(null) // Localized
 			);
-		
+
 			$authors = &$article->getAuthors();
 			for ($i=0, $count=count($authors); $i < $count; $i++) {
 				array_push(
@@ -140,7 +140,7 @@ class MetadataForm extends Form {
 		$settingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
 		$sectionDao = &DAORegistry::getDAO('SectionDAO');
-		
+
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('articleId', isset($this->article)?$this->article->getArticleId():null);
 		$templateMgr->assign('journalSettings', $settingsDao->getJournalSettings($journal->getJournalId()));
@@ -160,8 +160,8 @@ class MetadataForm extends Form {
 
 		parent::display();
 	}
-	
-	
+
+
 	/**
 	 * Assign form data to user-submitted data.
 	 */
@@ -201,9 +201,9 @@ class MetadataForm extends Form {
 		$articleDao = &DAORegistry::getDAO('ArticleDAO');
 		$authorDao = &DAORegistry::getDAO('AuthorDAO');
 		$sectionDao = &DAORegistry::getDAO('SectionDAO');
-		
+
 		// Update article
-	
+
 		$article = &$this->article;
 		$article->setTitle($this->getData('title'), null); // Localized
 
@@ -221,7 +221,7 @@ class MetadataForm extends Form {
 		$article->setType($this->getData('type'), null); // Localized
 		$article->setLanguage($this->getData('language')); // Localized
 		$article->setSponsor($this->getData('sponsor'), null); // Localized
-		
+
 		// Update authors
 		$authors = $this->getData('authors');
 		for ($i=0, $count=count($authors); $i < $count; $i++) {
@@ -229,13 +229,13 @@ class MetadataForm extends Form {
 				// Update an existing author
 				$author = &$article->getAuthor($authors[$i]['authorId']);
 				$isExistingAuthor = true;
-				
+
 			} else {
 				// Create a new author
 				$author = &new Author();
 				$isExistingAuthor = false;
 			}
-			
+
 			if ($author != null) {
 				$author->setFirstName($authors[$i]['firstName']);
 				$author->setMiddleName($authors[$i]['middleName']);
@@ -247,26 +247,26 @@ class MetadataForm extends Form {
 				$author->setBiography($authors[$i]['biography'], null); // Localized
 				$author->setPrimaryContact($this->getData('primaryContact') == $i ? 1 : 0);
 				$author->setSequence($authors[$i]['seq']);
-				
+
 				if ($isExistingAuthor == false) {
 					$article->addAuthor($author);
 				}
 			}
 		}
-		
+
 		// Remove deleted authors
 		$deletedAuthors = explode(':', $this->getData('deletedAuthors'));
 		for ($i=0, $count=count($deletedAuthors); $i < $count; $i++) {
 			$article->removeAuthor($deletedAuthors[$i]);
 		}
-		
+
 		// Save the article
 		$articleDao->updateArticle($article);
-		
+
 		// Update search index
 		import('search.ArticleSearchIndex');
 		ArticleSearchIndex::indexArticleMetadata($article);
-		
+
 		return $article->getArticleId();
 	}
 }

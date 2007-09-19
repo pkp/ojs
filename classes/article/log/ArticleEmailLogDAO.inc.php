@@ -45,7 +45,7 @@ class ArticleEmailLogDAO extends DAO {
 
 		return $returner;
 	}
-	
+
 	/**
 	 * Retrieve all log entries for an article.
 	 * @param $articleId int
@@ -55,7 +55,7 @@ class ArticleEmailLogDAO extends DAO {
 		$returner = &$this->getArticleLogEntriesByAssoc($articleId, null, null, $rangeInfo);
 		return $returner;
 	}
-	
+
 	/**
 	 * Retrieve all log entries for an article matching the specified association.
 	 * @param $articleId int
@@ -71,16 +71,16 @@ class ArticleEmailLogDAO extends DAO {
 				array_push($params, $assocId);
 			}
 		}
-		
+
 		$result = &$this->retrieveRange(
 			'SELECT * FROM article_email_log WHERE article_id = ?' . (isset($assocType) ? ' AND assoc_type = ?' . (isset($assocId) ? ' AND assoc_id = ?' : '') : '') . ' ORDER BY log_id DESC',
 			$params, $rangeInfo
 		);
-		
+
 		$returner = &new DAOResultFactory($result, $this, '_returnLogEntryFromRow');
 		return $returner;
 	}
-	
+
 	/**
 	 * Internal function to return an ArticleEmailLogEntry object from a row.
 	 * @param $row array
@@ -102,7 +102,7 @@ class ArticleEmailLogDAO extends DAO {
 		$entry->setBccs($row['bcc_recipients']);
 		$entry->setSubject($row['subject']);
 		$entry->setBody($row['body']);
-		
+
 		HookRegistry::call('ArticleEmailLogDAO::_returnLogEntryFromRow', array(&$entry, &$row));
 
 		return $entry;
@@ -140,11 +140,11 @@ class ArticleEmailLogDAO extends DAO {
 				$entry->getBody()
 			)
 		);
-		
+
 		$entry->setLogId($this->getInsertLogId());
 		return $entry->getLogId();
 	}
-	
+
 	/**
 	 * Delete a single log entry for an article.
 	 * @param $logId int
@@ -156,14 +156,14 @@ class ArticleEmailLogDAO extends DAO {
 				'DELETE FROM article_email_log WHERE log_id = ? AND article_id = ?',
 				array($logId, $articleId)
 			);
-			
+
 		} else {
 			return $this->update(
 				'DELETE FROM article_email_log WHERE log_id = ?', $logId
 			);
 		}
 	}
-	
+
 	/**
 	 * Delete all log entries for an article.
 	 * @param $articleId int
@@ -173,7 +173,7 @@ class ArticleEmailLogDAO extends DAO {
 			'DELETE FROM article_email_log WHERE article_id = ?', $articleId
 		);
 	}
-	
+
 	/**
 	 * Transfer all article log entries to another user.
 	 * @param $articleId int
@@ -184,7 +184,7 @@ class ArticleEmailLogDAO extends DAO {
 			array($newUserId, $oldUserId)
 		);
 	}
-	
+
 	/**
 	 * Get the ID of the last inserted log entry.
 	 * @return int

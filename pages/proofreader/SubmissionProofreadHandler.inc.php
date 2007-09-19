@@ -34,7 +34,7 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
 		$useLayoutEditors = $journal->getSetting('useLayoutEditors');
 
 		$templateMgr = &TemplateManager::getManager();
-		
+
 		$templateMgr->assign('useProofreaders', $useProofreaders);
 		$templateMgr->assign_by_ref('authors', $authors);
 		$templateMgr->assign_by_ref('submission', $submission);
@@ -72,22 +72,22 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		list($journal, $submission) = SubmissionProofreadHandler::validate($articleId);
 		parent::setupTemplate(true, $articleId, 'summary');
-		
+
 		ProofreaderAction::viewMetadata($submission, ROLE_ID_PROOFREADER);
 	}
-	
+
 	/**
 	 * Validate that the user is the assigned proofreader for the submission.
 	 * Redirects to proofreader index page if validation fails.
 	 */
 	function validate($articleId) {
 		parent::validate();
-		
+
 		$isValid = false;
-		
+
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
-		
+
 		$proofreaderDao = &DAORegistry::getDAO('ProofreaderSubmissionDAO');
 		$submission = &$proofreaderDao->getSubmission($articleId, $journal->getJournalId());
 
@@ -97,18 +97,18 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
 				$isValid = true;
 			}			
 		}
-		
+
 		if (!$isValid) {
 			Request::redirect(null, Request::getRequestedPage());
 		}
 
 		return array($journal, $submission);
 	}
-	
+
 	//
 	// Misc
 	//
-	
+
 	/**
 	 * Download a file.
 	 * @param $args array ($articleId, $fileId, [$revision])
@@ -132,13 +132,13 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		list($journal, $submission) = SubmissionProofreadHandler::validate($articleId);
-		
+
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->display('submission/layout/proofGalley.tpl');
 	}
-	
+
 	/**
 	 * Proof galley (shows frame header).
 	 * @param $args array ($articleId, $galleyId)
@@ -147,14 +147,14 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		list($journal, $submission) = SubmissionProofreadHandler::validate($articleId);
-		
+
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->assign('backHandler', 'submission');
 		$templateMgr->display('submission/layout/proofGalleyTop.tpl');
 	}
-	
+
 	/**
 	 * Proof galley (outputs file contents).
 	 * @param $args array ($articleId, $galleyId)
@@ -163,12 +163,12 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		list($journal, $submission) = SubmissionProofreadHandler::validate($articleId);
-		
+
 		$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
 		$galley = &$galleyDao->getGalley($galleyId, $articleId);
-		
+
 		import('file.ArticleFileManager'); // FIXME
-		
+
 		if (isset($galley)) {
 			if ($galley->isHTMLGalley()) {
 				$templateMgr = &TemplateManager::getManager();
@@ -179,14 +179,14 @@ class SubmissionProofreadHandler extends ProofreaderHandler {
 					)));
 				}
 				$templateMgr->display('submission/layout/proofGalleyHTML.tpl');
-				
+
 			} else {
 				// View non-HTML file inline
 				SubmissionProofreadHandler::viewFile(array($articleId, $galley->getFileId()));
 			}
 		}
 	}
-	
+
 	/**
 	 * View a file (inlines file).
 	 * @param $args array ($articleId, $fileId, [$revision])

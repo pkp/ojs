@@ -47,10 +47,10 @@ class OAIMetadataFormat_DC extends OAIMetadataFormat {
 			$this->formatElement('coverage', $record->coverage, true) .
 			$this->formatElement('rights', $record->rights) .
 			"</oai_dc:dc>\n";
-			
+
 		return $response;
 	}
-	
+
 	/**
 	 * Format XML for single DC element.
 	 * @param $name string
@@ -61,7 +61,7 @@ class OAIMetadataFormat_DC extends OAIMetadataFormat {
 		if (!is_array($value)) {
 			$value = array($value);
 		}
-		
+
 		$response = '';
 		foreach ($value as $key => $v) {
 			if (!$multilingual) $response .= "\t<dc:$name>" . $this->oai->prepOutput($v) . "</dc:$name>\n";
@@ -77,7 +77,7 @@ class OAIMetadataFormat_DC extends OAIMetadataFormat {
 		}
 		return $response;
 	}
-	
+
 }
 
 ?>

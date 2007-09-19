@@ -19,11 +19,11 @@ class AccessKey extends DataObject {
 	function AccessKey() {
 		parent::DataObject();
 	}
-	
+
 	//
 	// Get/set methods
 	//
-	
+
 	/**
 	 * Get the ID of the key.
 	 * @return int
@@ -31,7 +31,7 @@ class AccessKey extends DataObject {
 	function getAccessKeyId() {
 		return $this->getData('accessKeyId');
 	}
-	
+
 	/**
 	 * Set the ID of the access key.
 	 * @param $accessKeyId int
@@ -39,7 +39,7 @@ class AccessKey extends DataObject {
 	function setAccessKeyId($accessKeyId) {
 		return $this->setData('accessKeyId', $accessKeyId);
 	}
-	
+
 	/**
 	 * Get context.
 	 * @return string
@@ -47,7 +47,7 @@ class AccessKey extends DataObject {
 	function getContext() {
 		return $this->getData('context');
 	}
-	
+
 	/**
 	 * Set context.
 	 * @param $context string
@@ -55,7 +55,7 @@ class AccessKey extends DataObject {
 	function setContext($context) {
 		return $this->setData('context', $context);
 	}
-	
+
 	/**
 	 * Get key hash.
 	 * @return string
@@ -63,7 +63,7 @@ class AccessKey extends DataObject {
 	function getKeyHash() {
 		return $this->getData('keyHash');
 	}
-	
+
 	/**
 	 * Set key hash.
 	 * @param $keyHash string
@@ -71,7 +71,7 @@ class AccessKey extends DataObject {
 	function setKeyHash($keyHash) {
 		return $this->setData('keyHash', $keyHash);
 	}
-	
+
 	/**
 	 * Get user ID.
 	 * @return int
@@ -79,7 +79,7 @@ class AccessKey extends DataObject {
 	function getUserId() {
 		return $this->getData('userId');
 	}
-	
+
 	/**
 	 * Set user ID.
 	 * @param $userId int
@@ -88,7 +88,7 @@ class AccessKey extends DataObject {
 	{
 		return $this->setData('userId', $userId);
 	}
-	
+
 	/**
 	 * Get associated ID.
 	 * @return int
@@ -96,7 +96,7 @@ class AccessKey extends DataObject {
 	function getAssocId() {
 		return $this->getData('assocId');
 	}
-	
+
 	/**
 	 * Set associated ID.
 	 * @param $assocId int
@@ -105,7 +105,7 @@ class AccessKey extends DataObject {
 	{
 		return $this->setData('assocId', $assocId);
 	}
-	
+
 	/**
 	 * Get expiry date.
 	 * @return string
@@ -113,7 +113,7 @@ class AccessKey extends DataObject {
 	function getExpiryDate() {
 		return $this->getData('expiryDate');
 	}
-	
+
 	/**
 	 * Set expiry date.
 	 * @param $expiryDate string

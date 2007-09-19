@@ -30,6 +30,6 @@ class ScheduledTask {
 	function execute() {
 		fatalError("ScheduledTask does not implement execute()!\n");
 	}
-		
+
 }
 ?>

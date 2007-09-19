@@ -27,7 +27,7 @@ class GroupMembership extends DataObject {
 	//
 	// Get/set methods
 	//
-	
+
 	/**
 	 * Get ID of board position.
 	 * @return int
@@ -35,7 +35,7 @@ class GroupMembership extends DataObject {
 	function getGroupId() {
 		return $this->getData('groupId');
 	}
-	
+
 	/**
 	 * Set ID of board position.
 	 * @param $groupId int
@@ -43,7 +43,7 @@ class GroupMembership extends DataObject {
 	function setGroupId($groupId) {
 		return $this->setData('groupId', $groupId);
 	}
-	
+
 	/**
 	 * Get user ID of membership.
 	 * @return int
@@ -51,7 +51,7 @@ class GroupMembership extends DataObject {
 	function getUserId() {
 		return $this->getData('userId');
 	}
-	
+
 	/**
 	 * Set user ID of membership.
 	 * @param $userId int
@@ -59,7 +59,7 @@ class GroupMembership extends DataObject {
 	function setUserId($userId) {
 		return $this->setData('userId', $userId);
 	}
-	
+
 	/**
 	 * Get user for this membership.
 	 * @return int
@@ -67,7 +67,7 @@ class GroupMembership extends DataObject {
 	function &getUser() {
 		return $this->getData('user');
 	}
-	
+
 	/**
 	 * Set user for this membership.
 	 * @param $userId int
@@ -75,7 +75,7 @@ class GroupMembership extends DataObject {
 	function setUser(&$user) {
 		return $this->setData('user', $user);
 	}
-	
+
 	/**
 	 * Get sequence of membership.
 	 * @return float
@@ -83,7 +83,7 @@ class GroupMembership extends DataObject {
 	function getSequence() {
 		return $this->getData('sequence');
 	}
-	
+
 	/**
 	 * Set sequence of membership.
 	 * @param $sequence float
@@ -96,18 +96,17 @@ class GroupMembership extends DataObject {
 	 * Get flag indicating whether or not the membership is displayed in "About"
 	 * @return boolean
 	 */
-	 function getAboutDisplayed() {
-	 	return $this->getData('aboutDisplayed');
+	function getAboutDisplayed() {
+		return $this->getData('aboutDisplayed');
 	}
-	
+
 	/**
-	* Set flag indicating whether or not the membership is displayed in "About"
-	* @param $aboutDisplayed boolean
-	*/
+	 * Set flag indicating whether or not the membership is displayed in "About"
+	 * @param $aboutDisplayed boolean
+	 */
 	function setAboutDisplayed($aboutDisplayed) {
 		return $this->setData('aboutDisplayed',$aboutDisplayed);
 	}
-	
 }
 
 ?>

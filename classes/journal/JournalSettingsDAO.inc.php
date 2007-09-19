@@ -70,16 +70,16 @@ class JournalSettingsDAO extends DAO {
 	 */
 	function &getJournalSettings($journalId) {
 		$journalSettings = array();
-		
+
 		$result = &$this->retrieve(
 			'SELECT setting_name, setting_value, setting_type, locale FROM journal_settings WHERE journal_id = ?', $journalId
 		);
-		
+
 		if ($result->RecordCount() == 0) {
 			$returner = null;
 			$result->Close();
 			return $returner;
-			
+
 		} else {
 			while (!$result->EOF) {
 				$row = &$result->getRowAssoc(false);
@@ -97,7 +97,7 @@ class JournalSettingsDAO extends DAO {
 			return $journalSettings;
 		}
 	}
-	
+
 	/**
 	 * Add/update a journal setting.
 	 * @param $journalId int
@@ -139,7 +139,7 @@ class JournalSettingsDAO extends DAO {
 			}
 		}
 	}
-	
+
 	/**
 	 * Delete a journal setting.
 	 * @param $journalId int
@@ -155,10 +155,10 @@ class JournalSettingsDAO extends DAO {
 			$params[] = $locale;
 			$sql .= ' AND locale = ?';
 		}
-		
+
 		return $this->update($sql, $params);
 	}
-	
+
 	/**
 	 * Delete all settings for a journal.
 	 * @param $journalId int
@@ -166,7 +166,7 @@ class JournalSettingsDAO extends DAO {
 	function deleteSettingsByJournal($journalId) {
 		$cache =& $this->_getCache($journalId);
 		$cache->flush();
-		
+
 		return $this->update(
 				'DELETE FROM journal_settings WHERE journal_id = ?', $journalId
 		);

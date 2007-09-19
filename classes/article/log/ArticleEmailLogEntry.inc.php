@@ -78,11 +78,11 @@ class ArticleEmailLogEntry extends DataObject {
 	function ArticleEmailLogEntry() {
 		parent::DataObject();
 	}
-	
+
 	//
 	// Get/set methods
 	//
-	
+
 	/**
 	 * Get ID of log entry.
 	 * @return int
@@ -90,7 +90,7 @@ class ArticleEmailLogEntry extends DataObject {
 	function getLogId() {
 		return $this->getData('logId');
 	}
-	
+
 	/**
 	 * Set ID of log entry.
 	 * @param $logId int
@@ -98,7 +98,7 @@ class ArticleEmailLogEntry extends DataObject {
 	function setLogId($logId) {
 		return $this->setData('logId', $logId);
 	}
-	
+
 	/**
 	 * Get ID of article.
 	 * @return int
@@ -106,7 +106,7 @@ class ArticleEmailLogEntry extends DataObject {
 	function getArticleId() {
 		return $this->getData('articleId');
 	}
-	
+
 	/**
 	 * Set ID of article.
 	 * @param $articleId int
@@ -114,7 +114,7 @@ class ArticleEmailLogEntry extends DataObject {
 	function setArticleId($articleId) {
 		return $this->setData('articleId', $articleId);
 	}
-		
+
 	/**
 	 * Get user ID of sender.
 	 * @return int
@@ -122,7 +122,7 @@ class ArticleEmailLogEntry extends DataObject {
 	function getSenderId() {
 		return $this->getData('senderId');
 	}
-	
+
 	/**
 	 * Set user ID of sender.
 	 * @param $senderId int
@@ -130,7 +130,7 @@ class ArticleEmailLogEntry extends DataObject {
 	function setSenderId($senderId) {
 		return $this->setData('senderId', $senderId);
 	}
-	
+
 	/**
 	 * Get date email was sent.
 	 * @return datestamp
@@ -138,7 +138,7 @@ class ArticleEmailLogEntry extends DataObject {
 	function getDateSent() {
 		return $this->getData('dateSent');
 	}
-	
+
 	/**
 	 * Set date email was sent.
 	 * @param $dateSent datestamp
@@ -146,7 +146,7 @@ class ArticleEmailLogEntry extends DataObject {
 	function setDateSent($dateSent) {
 		return $this->setData('dateSent', $dateSent);
 	}
-	
+
 	/**
 	 * Get IP address of sender.
 	 * @return string
@@ -154,7 +154,7 @@ class ArticleEmailLogEntry extends DataObject {
 	function getIPAddress() {
 		return $this->getData('ipAddress');
 	}
-	
+
 	/**
 	 * Set IP address of sender.
 	 * @param $ipAddress string
@@ -162,7 +162,7 @@ class ArticleEmailLogEntry extends DataObject {
 	function setIPAddress($ipAddress) {
 		return $this->setData('ipAddress', $ipAddress);
 	}
-	
+
 	/**
 	 * Get event type.
 	 * @return int
@@ -170,7 +170,7 @@ class ArticleEmailLogEntry extends DataObject {
 	function getEventType() {
 		return $this->getData('eventType');
 	}
-	
+
 	/**
 	 * Set event type.
 	 * @param $eventType int
@@ -178,7 +178,7 @@ class ArticleEmailLogEntry extends DataObject {
 	function setEventType($eventType) {
 		return $this->setData('eventType', $eventType);
 	}
-	
+
 	/**
 	 * Get associated type.
 	 * @return int
@@ -186,7 +186,7 @@ class ArticleEmailLogEntry extends DataObject {
 	function getAssocType() {
 		return $this->getData('assocType');
 	}
-	
+
 	/**
 	 * Set associated type.
 	 * @param $assocType int
@@ -194,7 +194,7 @@ class ArticleEmailLogEntry extends DataObject {
 	function setAssocType($assocType) {
 		return $this->setData('assocType', $assocType);
 	}
-	
+
 	/**
 	 * Get associated ID.
 	 * @return int
@@ -202,7 +202,7 @@ class ArticleEmailLogEntry extends DataObject {
 	function getAssocId() {
 		return $this->getData('assocId');
 	}
-	
+
 	/**
 	 * Set associated ID.
 	 * @param $assocId int
@@ -210,37 +210,37 @@ class ArticleEmailLogEntry extends DataObject {
 	function setAssocId($assocId) {
 		return $this->setData('assocId', $assocId);
 	}
-	
+
 	/**
 	 * Return the full name of the sender (not necessarily the same as the from address).
 	 * @return string
 	 */
 	function getSenderFullName() {
 		$senderFullName =& $this->getData('senderFullName');
-		
+
 		if(!isset($senderFullName)) {
 			$userDao = &DAORegistry::getDAO('UserDAO');
 			$senderFullName = $userDao->getUserFullName($this->getSenderId(), true);
 		}
-		
+
 		return $senderFullName ? $senderFullName : '';
 	}
-	
+
 	/**
 	 * Return the email address of sender.
 	 * @return string
 	 */
 	function getSenderEmail() {
 		$senderEmail =& $this->getData('senderEmail');
-		
+
 		if(!isset($senderEmail)) {
 			$userDao = &DAORegistry::getDAO('UserDAO');
 			$senderEmail = $userDao->getUserEmail($this->getSenderId(), true);
 		}
-		
+
 		return $senderEmail ? $senderEmail : '';
 	}
-	
+
 	/**
 	 * Return string representation of the associated type.
 	 * @return string
@@ -263,7 +263,7 @@ class ArticleEmailLogEntry extends DataObject {
 				return 'ART';
 		}
 	}
-	
+
 	/**
 	 * Return locale message key for the long format of the associated type.
 	 * @return string
@@ -286,60 +286,60 @@ class ArticleEmailLogEntry extends DataObject {
 				return 'submission.logType.article';
 		}
 	}
-	
-	
+
+
 	//
 	// Email data
 	//
-	
+
 	function getFrom() {
 		return $this->getData('from');
 	}
-	
+
 	function setFrom($from) {
 		return $this->setData('from', $from);
 	}
-	
+
 	function getRecipients() {
 		return $this->getData('recipients');
 	}
-	
+
 	function setRecipients($recipients) {
 		return $this->setData('recipients', $recipients);
 	}
-	
+
 	function getCcs() {
 		return $this->getData('ccs');
 	}
-	
+
 	function setCcs($ccs) {
 		return $this->setData('ccs', $ccs);
 	}
-	
+
 	function getBccs() {
 		return $this->getData('bccs');
 	}
-	
+
 	function setBccs($bccs) {
 		return $this->setData('bccs', $bccs);
 	}
-	
+
 	function getSubject() {
 		return $this->getData('subject');
 	}
-	
+
 	function setSubject($subject) {
 		return $this->setData('subject', $subject);
 	}
-	
+
 	function getBody() {
 		return $this->getData('body');
 	}
-	
+
 	function setBody($body) {
 		return $this->setData('body', $body);
 	}
-	
+
 }
 
 ?>

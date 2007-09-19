@@ -13,16 +13,16 @@
  *
  * $Id$
  */
- 
+
 class Captcha extends DataObject {
- 
+
 	/**
 	 * Constructor.
 	 */
 	function Captcha() {
 		parent::DataObject();
 	}
-	
+
 	/**
 	 * get article captcha id
 	 * @return int
@@ -30,7 +30,7 @@ class Captcha extends DataObject {
 	function getCaptchaId() {
 		return $this->getData('captchaId');
 	}
-	 
+
 	/**
 	 * set captcha id
 	 * @param $captchaId int
@@ -38,7 +38,7 @@ class Captcha extends DataObject {
 	function setCaptchaId($captchaId) {
 		return $this->setData('captchaId', $captchaId);
 	}
-	
+
 	/**
 	 * get session id
 	 * @return int
@@ -46,7 +46,7 @@ class Captcha extends DataObject {
 	function getSessionId() {
 		return $this->getData('sessionId');
 	}
-	 
+
 	/**
 	 * set session id
 	 * @param $sessionId int
@@ -54,7 +54,7 @@ class Captcha extends DataObject {
 	function setSessionId($sessionId) {
 		return $this->setData('sessionId', $sessionId);
 	}
-	
+
 	/**
 	 * get value
 	 * @return string
@@ -62,7 +62,7 @@ class Captcha extends DataObject {
 	function getValue() {
 		return $this->getData('value');
 	}
-	 
+
 	/**
 	 * set value
 	 * @param $value string
@@ -81,7 +81,7 @@ class Captcha extends DataObject {
 	function setDateCreated($dateCreated) {
 		return $this->setData('dateCreated', $dateCreated);
 	}
-	
+
  	/**
 	 * get date created
 	 * @return date
@@ -90,5 +90,5 @@ class Captcha extends DataObject {
 		return $this->getData('dateCreated');
 	}
 }
- 
+
 ?>

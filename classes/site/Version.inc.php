@@ -23,7 +23,7 @@ class Version extends DataObject {
 	function Version() {
 		parent::DataObject();
 	}
-	
+
 	/**
 	 * Compare this version with another version.
 	 * Returns:
@@ -39,7 +39,7 @@ class Version extends DataObject {
 		}
 		return version_compare($this->getVersionString(), $version);
 	}
-	
+
 	/**
 	 * Static method to return a new version from a version string of the form "W.X.Y.Z".
 	 * @param $versionString string
@@ -47,21 +47,21 @@ class Version extends DataObject {
 	 */
 	function &fromString($versionString) {
 		$version = &new Version();
-		
+
 		$versionArray = explode('.', $versionString);
 		$version->setMajor(isset($versionArray[0]) ? (int) $versionArray[0] : 0);
 		$version->setMinor(isset($versionArray[1]) ? (int) $versionArray[1] : 0);
 		$version->setRevision(isset($versionArray[2]) ? (int) $versionArray[2] : 0);
 		$version->setBuild(isset($versionArray[3]) ? (int) $versionArray[3] : 0);
 		$version->setDateInstalled(null);
-		
+
 		return $version;
 	}
-	
+
 	//
 	// Get/set methods
 	//
-	
+
 	/**
 	 * Get major version.
 	 * @return int
@@ -69,7 +69,7 @@ class Version extends DataObject {
 	function getMajor() {
 		return $this->getData('major');
 	}
-	
+
 	/**
 	 * Set major version.
 	 * @param $major int
@@ -77,7 +77,7 @@ class Version extends DataObject {
 	function setMajor($major) {
 		return $this->setData('major', $major);
 	}
-	
+
 	/**
 	 * Get minor version.
 	 * @return int
@@ -85,7 +85,7 @@ class Version extends DataObject {
 	function getMinor() {
 		return $this->getData('minor');
 	}
-	
+
 	/**
 	 * Set minor version.
 	 * @param $minor int
@@ -93,7 +93,7 @@ class Version extends DataObject {
 	function setMinor($minor) {
 		return $this->setData('minor', $minor);
 	}
-	
+
 	/**
 	 * Get revision version.
 	 * @return int
@@ -101,7 +101,7 @@ class Version extends DataObject {
 	function getRevision() {
 		return $this->getData('revision');
 	}
-	
+
 	/**
 	 * Set revision version.
 	 * @param $revision int
@@ -109,7 +109,7 @@ class Version extends DataObject {
 	function setRevision($revision) {
 		return $this->setData('revision', $revision);
 	}
-	
+
 	/**
 	 * Get build version.
 	 * @return int
@@ -117,7 +117,7 @@ class Version extends DataObject {
 	function getBuild() {
 		return $this->getData('build');
 	}
-	
+
 	/**
 	 * Set build version.
 	 * @param $build int
@@ -125,7 +125,7 @@ class Version extends DataObject {
 	function setBuild($build) {
 		return $this->setData('build', $build);
 	}
-	
+
 	/**
 	 * Get date installed.
 	 * @return date
@@ -133,7 +133,7 @@ class Version extends DataObject {
 	function getDateInstalled() {
 		return $this->getData('dateInstalled');
 	}
-	
+
 	/**
 	 * Set date installed.
 	 * @param $dateInstalled date
@@ -141,7 +141,7 @@ class Version extends DataObject {
 	function setDateInstalled($dateInstalled) {
 		return $this->setData('dateInstalled', $dateInstalled);
 	}
-	
+
 	/**
 	 * Check if current version.
 	 * @return boolean
@@ -149,7 +149,7 @@ class Version extends DataObject {
 	function getCurrent() {
 		return $this->getData('current');
 	}
-	
+
 	/**
 	 * Set if current version.
 	 * @param $current boolean
@@ -157,7 +157,7 @@ class Version extends DataObject {
 	function setcurrent($current) {
 		return $this->setData('current', $current);
 	}
-	
+
 	/**
 	 * Return complete version string.
 	 * @return string
@@ -165,7 +165,7 @@ class Version extends DataObject {
 	function getVersionString() {
 		return sprintf('%d.%d.%d.%d', $this->getMajor(), $this->getMinor(), $this->getRevision(), $this->getBuild());
 	}
-	
+
 }
 
 ?>

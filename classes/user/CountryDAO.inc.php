@@ -40,7 +40,7 @@ class CountryDAO extends DAO {
 		if (!isset($caches)) {
 			$caches = array();
 		}
-		
+
 		if (!isset($caches[$locale])) {
 			import('cache.CacheManager');
 			$cacheManager =& CacheManager::getManager();
@@ -68,7 +68,7 @@ class CountryDAO extends DAO {
 			// Reload country registry file
 			$xmlDao = &new XMLDAO();
 			$data = $xmlDao->parseStruct($this->getFilename(), array('countries', 'country'));
-	
+
 			if (isset($data['countries'])) {
 				foreach ($data['country'] as $countryData) {
 					$countries[$id][$countryData['attributes']['code']] = $countryData['attributes']['name'];
@@ -89,7 +89,7 @@ class CountryDAO extends DAO {
 		$cache =& $this->_getCountryCache($locale);
 		return $cache->getContents();
 	}
-	
+
 	/**
 	 * Return a translated country name, given a code.
 	 * @param $locale string Name of locale (optional)

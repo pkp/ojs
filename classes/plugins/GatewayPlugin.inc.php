@@ -86,7 +86,7 @@ class GatewayPlugin extends Plugin {
 		}
 		return false;
 	}
-	
+
 	/**
 	 * Perform management functions
 	 */

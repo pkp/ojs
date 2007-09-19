@@ -21,11 +21,11 @@ class IssueAction {
 	 */
 	function IssueAction() {
 	}
-	
+
 	/**
 	 * Actions.
 	 */
-	 
+
 	/**
 	 * Smarty usage: {print_issue_id articleId="$articleId"}
 	 *
@@ -59,7 +59,12 @@ class IssueAction {
 			$journal =& $currentJournal;
 		}
 
-		$result = $journal->getSetting('enableSubscriptions') && ($issue->getAccessStatus() == SUBSCRIPTION && strtotime($issue->getOpenAccessDate()) > time());
+		$result = $journal->getSetting('enableSubscriptions') && (
+			$issue->getAccessStatus() == SUBSCRIPTION &&
+			$issue->getOpenAccessDate() &&
+			strtotime($issue->getOpenAccessDate()) > time()
+		);
+
 		HookRegistry::call('IssueAction::subscriptionRequired', array(&$journal, &$issue, &$result));
 		return $result;
 	}
@@ -108,7 +113,7 @@ class IssueAction {
 		HookRegistry::call('IssueAction::subscribedUser', array(&$journal, &$result));
 		return $result;
 	}
-	
+
 	/**
 	 * Checks if remote client domain or ip is allowed
 	 * @return bool

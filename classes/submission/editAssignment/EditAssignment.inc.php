@@ -23,11 +23,11 @@ class EditAssignment extends DataObject {
 	function EditAssignment() {
 		parent::DataObject();
 	}
-	
+
 	//
 	// Get/set methods
 	//
-	
+
 	/**
 	 * Get ID of edit assignment.
 	 * @return int
@@ -35,7 +35,7 @@ class EditAssignment extends DataObject {
 	function getEditId() {
 		return $this->getData('editId');
 	}
-	
+
 	/**
 	 * Set ID of edit assignment
 	 * @param $editId int
@@ -43,7 +43,7 @@ class EditAssignment extends DataObject {
 	function setEditId($editId) {
 		return $this->setData('editId', $editId);
 	}
-	
+
 	/**
 	 * Get ID of article.
 	 * @return int
@@ -51,7 +51,7 @@ class EditAssignment extends DataObject {
 	function getArticleId() {
 		return $this->getData('articleId');
 	}
-	
+
 	/**
 	 * Set ID of article.
 	 * @param $articleId int
@@ -59,7 +59,7 @@ class EditAssignment extends DataObject {
 	function setArticleId($articleId) {
 		return $this->setData('articleId', $articleId);
 	}
-	
+
 	/**
 	 * Get ID of editor.
 	 * @return int
@@ -67,7 +67,7 @@ class EditAssignment extends DataObject {
 	function getEditorId() {
 		return $this->getData('editorId');
 	}
-	
+
 	/**
 	 * Set ID of editor.
 	 * @param $editorId int
@@ -75,7 +75,7 @@ class EditAssignment extends DataObject {
 	function setEditorId($editorId) {
 		return $this->setData('editorId', $editorId);
 	}
-	
+
 	/**
 	 * Get flag indicating whether this section editor can review this article. (Irrelevant if this is an editor.)
 	 * @return boolean
@@ -83,7 +83,7 @@ class EditAssignment extends DataObject {
 	function getCanReview() {
 		return $this->getData('canReview');
 	}
-	
+
 	/**
 	 * Set flag indicating whether this section editor can review this article. (Irrelevant if this is an editor.)
 	 * @param $canReview boolean
@@ -91,7 +91,7 @@ class EditAssignment extends DataObject {
 	function setCanReview($canReview) {
 		return $this->setData('canReview', $canReview);
 	}
-	
+
 	/**
 	 * Get flag indicating whether this section editor can edit this article. (Irrelevant if this is an editor.)
 	 * @return boolean
@@ -99,7 +99,7 @@ class EditAssignment extends DataObject {
 	function getCanEdit() {
 		return $this->getData('canEdit');
 	}
-	
+
 	/**
 	 * Set flag indicating whether this section editor can edit this article. (Irrelevant if this is an editor.)
 	 * @param $canEdit boolean
@@ -107,7 +107,7 @@ class EditAssignment extends DataObject {
 	function setCanEdit($canEdit) {
 		return $this->setData('canEdit', $canEdit);
 	}
-	
+
 	/**
 	 * Get flag indicating whether this entry is for an editor or a section editor.
 	 * @return boolean
@@ -115,7 +115,7 @@ class EditAssignment extends DataObject {
 	function getIsEditor() {
 		return $this->getData('isEditor');
 	}
-	
+
 	/**
 	 * Set flag indicating whether this entry is for an editor or a section editor.
 	 * @param $isEditor boolean
@@ -131,7 +131,7 @@ class EditAssignment extends DataObject {
 	function getDateNotified() {
 		return $this->getData('dateNotified');
 	}
-	
+
 	/**
 	 * Set date editor notified.
 	 * @param $dateNotified timestamp
@@ -139,7 +139,7 @@ class EditAssignment extends DataObject {
 	function setDateNotified($dateNotified) {
 		return $this->setData('dateNotified', $dateNotified);
 	}
-	
+
 	/**
 	 * Get date editor underway.
 	 * @return timestamp
@@ -147,7 +147,7 @@ class EditAssignment extends DataObject {
 	function getDateUnderway() {
 		return $this->getData('dateUnderway');
 	}
-	
+
 	/**
 	 * Set date editor underway.
 	 * @param $dateUnderway timestamp
@@ -155,7 +155,7 @@ class EditAssignment extends DataObject {
 	function setDateUnderway($dateUnderway) {
 		return $this->setData('dateUnderway', $dateUnderway);
 	}
-	
+
 	/**
 	 * Get full name of editor.
 	 * @return string
@@ -163,7 +163,7 @@ class EditAssignment extends DataObject {
 	function getEditorFullName() {
 		return $this->getData('editorFullName');
 	}
-	
+
 	/**
 	 * Set full name of editor.
 	 * @param $editorFullName string
@@ -179,7 +179,7 @@ class EditAssignment extends DataObject {
 	function getEditorFirstName() {
 		return $this->getData('editorFirstName');
 	}
-	
+
 	/**
 	 * Set first name of editor.
 	 * @param $editorFirstName string
@@ -195,7 +195,7 @@ class EditAssignment extends DataObject {
 	function getEditorLastName() {
 		return $this->getData('editorLastName');
 	}
-	
+
 	/**
 	 * Set last name of editor.
 	 * @param $editorLastName string
@@ -203,7 +203,7 @@ class EditAssignment extends DataObject {
 	function setEditorLastName($editorLastName) {
 		return $this->setData('editorLastName', $editorLastName);
 	}
-	
+
 	/**
 	 * Get initials of editor.
 	 * @return string
@@ -215,7 +215,7 @@ class EditAssignment extends DataObject {
 			return substr($this->getEditorFirstName(), 0, 1) . substr($this->getEditorLastName(), 0, 1);
 		}
 	}
-	
+
 	/**
 	 * Set initials of editor.
 	 * @param $editorInitials string
@@ -223,7 +223,7 @@ class EditAssignment extends DataObject {
 	function setEditorInitials($editorInitials) {
 		return $this->setData('editorInitials', $editorInitials);
 	}
-	
+
 	/**
 	 * Get email of editor.
 	 * @return string
@@ -231,7 +231,7 @@ class EditAssignment extends DataObject {
 	function getEditorEmail() {
 		return $this->getData('editorEmail');
 	}
-	
+
 	/**
 	 * Set full name of editor.
 	 * @param $editorEmail string

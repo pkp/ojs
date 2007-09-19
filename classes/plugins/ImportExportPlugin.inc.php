@@ -136,6 +136,6 @@ class ImportExportPlugin extends Plugin {
 		}
 		return $smarty->smartyUrl($params, $smarty);
 	}
-	
+
 }
 ?>

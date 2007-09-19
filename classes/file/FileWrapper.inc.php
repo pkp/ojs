@@ -18,15 +18,15 @@
  *
  * $Id$
  */
- 
+
 class FileWrapper {
-	
+
 	/** @var $url string URL to the file */
 	var $url;
-	
+
 	/** @var $info array parsed URL info */
 	var $info;
-	
+
 	/** @var $fp int the file descriptor */
 	var $fp;
 
@@ -39,7 +39,7 @@ class FileWrapper {
 		$this->url = $url;
 		$this->info = $info;
 	}
-	
+
 	/**
 	 * Read and return the contents of the file (like file_get_contents()).
 	 * @return string
@@ -56,7 +56,7 @@ class FileWrapper {
 		}
 		return $contents;
 	}
-	
+
 	/**
 	 * Open the file.
 	 * @param $mode string only 'r' (read-only) is currently supported
@@ -67,7 +67,7 @@ class FileWrapper {
 		$this->fp = fopen($this->url, $mode);
 		return ($this->fp !== false);
 	}
-	
+
 	/**
 	 * Close the file.
 	 */
@@ -75,7 +75,7 @@ class FileWrapper {
 		fclose($this->fp);
 		unset($this->fp);
 	}
-	
+
 	/**
 	 * Read from the file.
 	 * @param $len int
@@ -84,7 +84,7 @@ class FileWrapper {
 	function read($len = 8192) {
 		return fread($this->fp, $len);
 	}
-	
+
 	/**
 	 * Check for end-of-file.
 	 * @return boolean
@@ -92,12 +92,12 @@ class FileWrapper {
 	function eof() {
 		return feof($this->fp);
 	}
-	
-	
+
+
 	//
 	// Static
 	//
-	
+
 	/**
 	 * Return instance of a class for reading the specified URL.
 	 * @param $url string
@@ -124,7 +124,7 @@ class FileWrapper {
 					$wrapper = &new FileWrapper($url, $info);
 			}
 		}
-		
+
 		return $wrapper;
 	}
 }
@@ -204,7 +204,7 @@ class HTTPFileWrapper extends FileWrapper {
 			$additionalHeadersString .
 			"Connection: Close\r\n\r\n";
 		fwrite($this->fp, $request);
-		
+
 		$response = fgets($this->fp, 4096);
 		$rc = 0;
 		sscanf($response, "HTTP/%*s %u %*[^\r\n]\r\n", $rc);
@@ -261,7 +261,7 @@ class HTTPSFileWrapper extends HTTPFileWrapper {
 		}
 	}
 }
-	
+
 /**
  * FTP protocol class.
  */
@@ -275,30 +275,30 @@ class FTPFileWrapper extends FileWrapper {
 		$host = isset($this->info['host']) ? $this->info['host'] : 'localhost';
 		$port = isset($this->info['port']) ? (int)$this->info['port'] : 21;
 		$path = isset($this->info['path']) ? $this->info['path'] : '/';
-		
+
 		if (!($this->ctrl = fsockopen($host, $port, $errno, $errstr)))
 			return false;
-		
+
 		if ($this->_open($user, $pass, $path))
 			return true;
 
 		$this->close();
 		return false;
 	}
-	
+
 	function close() {
 		if ($this->fp) {
 			parent::close();
 			$rc = $this->_receive(); // FIXME Check rc == 226 ?
 		}
-		
+
 		$this->_send('QUIT'); // FIXME Check rc == 221?
 		$rc = $this->_receive();
-		
+
 		fclose($this->ctrl);
 		$this->ctrl = null;
 	}
-	
+
 	function _open($user, $pass, $path) {
 		// Connection establishment
 		if ($this->_receive() != '220')
@@ -313,49 +313,49 @@ class FTPFileWrapper extends FileWrapper {
 		}
 		if ($rc != '230')
 			return false;
-			
+
 		// Binary transfer mode
 		$this->_send('TYPE', 'I');
 		if ($this->_receive() != '200')
 			return false;
-		
+
 		// Enter passive mode and open data transfer connection
 		$this->_send('PASV');
 		if ($this->_receiveLine($line) != '227')
 			return false;
-		
+
 		if (!preg_match('/(\d+),(\d+),(\d+),(\d+),(\d+),(\d+)/', $line, $matches))
 			return false;
 		list($tmp, $h1, $h2, $h3, $h4, $p1, $p2) = $matches;
-		
+
 		$host = "$h1.$h2.$h3.$h4";
 		$port = ($p1 << 8) + $p2;
-		
+
 		if (!($this->fp = fsockopen($host, $port, $errno, $errstr)))
 			return false;
-		
+
 		// Retrieve file
 		$this->_send('RETR', $path);
 		$rc = $this->_receive();
 		if ($rc != '125' && $rc != '150')
 			return false;
-		
+
 		return true;
 	}
-	
+
 	function _send($command, $data = '') {
 		return fwrite($this->ctrl, $command . (empty($data) ? '' : ' ' . $data) . "\r\n");
 	}
-	
+
 	function _receive() {
 		return $this->_receiveLine($line);
 	}
-	
+
 	function _receiveLine(&$line) {
  		do {
  			$line = fgets($this->ctrl);
  		} while($line !== false && ($tmp = substr(trim($line), 3, 1)) != ' ' && $tmp != '');
- 		
+
  		if ($line !== false) {
  			return substr($line, 0, 3);
  		}

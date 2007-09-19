@@ -253,7 +253,7 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 
 			// run the shell command and get the results
 			exec($fopCommand . ' 2>&1', $contents, $status);
-			
+
 			// if there is an error, spit out the shell results to aid debugging
 			if ($status != false) {
 				if ($contents != '') {

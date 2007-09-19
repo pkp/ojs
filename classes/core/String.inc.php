@@ -21,32 +21,32 @@ class String {
 	 */
 	function init() {
 		$clientCharset = strtolower(Config::getVar('i18n', 'client_charset'));
-		
+
 		// FIXME Should non-UTF-8 encodings be supported with mbstring?
 		$PCRE_UTF8 = '';
 		if ($clientCharset == 'utf-8' && String::hasPCREUTF8()) {
 			$PCRE_UTF8 = 'u';
 		}
-		
+
 		// Check if mbstring is installed
 		// NOTE: Requires PHP >= 4.3.0
 		if (String::hasMBString()) {
 			// mbstring routines are available
 			define('ENABLE_MBSTRING', 1);
-			
+
 			// Set up required ini settings for mbstring
 			ini_set('mbstring.internal_encoding', $clientCharset);
 			if ($clientCharset == 'utf-8') {
 				ini_set('mbstring.substitute_character', '12307');
 			}
-			
+
 			// FIXME Do any other mbstring settings need to be set?
 		}
-		
+
 		// Define modifier to be used in regexp_* routines
 		define('PCRE_UTF8', $PCRE_UTF8);
 	}
-	
+
 	/**
 	 * Check if server has the mbstring library.
 	 * Currently requires PHP >= 4.3.0 (for mb_strtolower, mb_strtoupper, and mb_substr_count)
@@ -61,7 +61,7 @@ class String {
 				&& function_exists('mb_substr_count')
 				&& function_exists('mb_send_mail'));
 	}
-	
+
 	/**
 	 * Check if server supports the PCRE_UTF8 modifier.
 	 */
@@ -74,12 +74,12 @@ class String {
 			return false;
 		}
 	}
-	
+
 	//
 	// Wrappers for basic string manipulation routines.
 	// See the php.net documentation for usage.
 	//
-	
+
 	function strlen($string) {
 		if (defined('ENABLE_MBSTRING')) {
 			return mb_strlen($string);
@@ -87,7 +87,7 @@ class String {
 			return strlen($string);
 		}
 	}
-	
+
 	function strpos($haystack, $needle, $offset = 0) {
 		if (defined('ENABLE_MBSTRING')) {
 			return mb_strpos($haystack, $needle, $offset);
@@ -95,7 +95,7 @@ class String {
 			return strpos($haystack, $needle, $offset);
 		}
 	}
-	
+
 	function strrpos($haystack, $needle) {
 		if (defined('ENABLE_MBSTRING')) {
 			return mb_strrpos($haystack, $needle);
@@ -103,7 +103,7 @@ class String {
 			return strrpos($haystack, $needle);
 		}
 	}
-	
+
 	function substr($string, $start, $length = null) {
 		if (defined('ENABLE_MBSTRING')) {
 			$substr = 'mb_substr';
@@ -116,7 +116,7 @@ class String {
 			return $substr($string, $start);
 		}
 	}
-	
+
 	function strtolower($string) {
 		if (defined('ENABLE_MBSTRING')) {
 			return mb_strtolower($string); // Requires PHP >= 4.3.0
@@ -124,7 +124,7 @@ class String {
 			return strtolower($string);
 		}
 	}
-	
+
 	function strtoupper($string) {
 		if (defined('ENABLE_MBSTRING')) {
 			return mb_strtoupper($string); // Requires PHP >= 4.3.0
@@ -132,7 +132,7 @@ class String {
 			return strtolower($string);
 		}
 	}
-	
+
 	function substr_count($haystack, $needle) {
 		if (defined('ENABLE_MBSTRING')) {
 			return mb_substr_count($haystack, $needle); // Requires PHP >= 4.3.0
@@ -140,7 +140,7 @@ class String {
 			return substr_count($haystack, $needle);
 		}
 	}
-	
+
 	function encode_mime_header($string) {
 		if (defined('ENABLE_MBSTRING')) {
 			return mb_encode_mimeheader($string, ini_get('mbstring.internal_encoding'), 'B', MAIL_EOL);
@@ -148,7 +148,7 @@ class String {
 			return $string;
 		}
 	}
-	
+
 	function mail($to, $subject, $message, $additional_headers = '', $additional_parameters = '') {
 		// Cannot use mb_send_mail as it base64 encodes the whole body of the email,
 		// making it useless for multipart emails
@@ -158,47 +158,47 @@ class String {
 			return mail($to, $subject, $message, $additional_headers, $additional_parameters);
 		}
 	}
-	
+
 	//
 	// Wrappers for PCRE-compatible regular expression routines.
 	// See the php.net documentation for usage.
 	//
-	
+
 	function regexp_quote($string, $delimiter = '/') {
 		return preg_quote($string, $delimiter);
 	}
-	
+
 	function regexp_grep($pattern, $input) {
 		$pattern .= PCRE_UTF8;
 		return preg_grep($pattern, $input);
 	}
-	
+
 	function regexp_match($pattern, $subject) {
 		$pattern .= PCRE_UTF8;
 		return preg_match($pattern, $subject);
 	}
-	
+
 	function regexp_match_get($pattern, $subject, &$matches) {
 		// NOTE: This function was created since PHP < 5.x does not support optional reference parameters
 		$pattern .= PCRE_UTF8;
 		return preg_match($pattern, $subject, $matches);
 	}
-	
+
 	function regexp_match_all($pattern, $subject, &$matches) {
 		$pattern .= PCRE_UTF8;
 		return preg_match_all($pattern, $subject, $matches);
 	}
-	
+
 	function regexp_replace($pattern, $replacement, $subject, $limit = -1) {
 		$pattern .= PCRE_UTF8;
 		return preg_replace($pattern, $replacement, $subject, $limit);
 	}
-	
+
 	function regexp_replace_callback($pattern, $callback, $subject, $limit = -1) {
 		$pattern .= PCRE_UTF8;
 		return preg_replace_callback($pattern, $callback, $subject, $limit);
 	}
-	
+
 	function regexp_split($pattern, $subject, $limit = -1) {
 		$pattern .= PCRE_UTF8;
 		return preg_split($pattern, $subject, $limit);
@@ -256,7 +256,7 @@ class String {
 
 		/* Get all attribute="javascript:foo()" tags. This is
 		 * essentially the regex /(=|url\()("?)[^>]* script:/ but
-	         * expanded to catch camouflage with spaces and entities. */
+		 * expanded to catch camouflage with spaces and entities. */
 		$preg 	= '/((&#0*61;?|&#x0*3D;?|=)|'
 			. '((u|&#0*85;?|&#x0*55;?|&#0*117;?|&#x0*75;?)\s*'
 			. '(r|&#0*82;?|&#x0*52;?|&#0*114;?|&#x0*72;?)\s*'
@@ -297,7 +297,7 @@ class String {
 	 * @return boolean
 	 */
 	function isUTF8 ($str) {
-	    // From http://w3.org/International/questions/qa-forms-utf-8.html
+		// From http://w3.org/International/questions/qa-forms-utf-8.html
 		return preg_match('%(?:
 				[\xC2-\xDF][\x80-\xBF]								# non-overlong 2-byte
 				|\xE0[\xA0-\xBF][\x80-\xBF]					# excluding overlongs
@@ -334,8 +334,8 @@ class String {
 		$ret = "";
 		$max = strlen($str);
 		$last = 0;  // keeps the index of the last regular character
-		
-	   for ($i=0; $i<$max; $i++) {
+
+		for ($i=0; $i<$max; $i++) {
 			$c = $str{$i};
 			$c1 = ord($c);
 			if ($c1>>5 == 6) {										// 110x xxxx, 110 prefix for 2 bytes unicode
@@ -374,16 +374,16 @@ class String {
 	 * @param $input string input string
 	 * @return string
 	 */
-	 function html2utf($str) {
+	function html2utf($str) {
 		// convert named entities to numeric entities
 		$str = strtr($str, String::getHTMLEntities());
 
 		// use PCRE-aware replace function to replace numeric entities
 		$str = String::regexp_replace('~&#x([0-9a-f]+);~ei', 'String::code2utf(hexdec("\\1"))', $str);
 		$str = String::regexp_replace('~&#([0-9]+);~e', 'String::code2utf(\\1)', $str);
-		
+
 		return $str;
-	 }
+	}
 
 	/**
 	 * Convert UTF-8 numeric entities in a string to ASCII values
@@ -480,7 +480,7 @@ class String {
 	 * From php.net: function.get-html-translation-table.php
 	 * @return string
 	 */
-	 function getHTMLEntities () {
+	function getHTMLEntities () {
 		// define the conversion table
 		$html_entities = array(
 			"&Aacute;" => "&#193;",			"&aacute;" => "&#225;",			"&Acirc;" => "&#194;",
@@ -570,7 +570,7 @@ class String {
 			"&zwj;" => "&#8205;",				"&zwnj;" => "&#8204;");
 
 		return $html_entities;
-	 }
-
+	}
 }
+
 ?>

@@ -51,7 +51,7 @@ class ArticleFileDAO extends DAO {
 					1
 				);
 			}
-			
+
 		} else {
 			if ($articleId != null) {
 				$result = &$this->retrieve(
@@ -76,7 +76,7 @@ class ArticleFileDAO extends DAO {
 
 		return $returner;
 	}
-	
+
 	/**
 	 * Retrieve all revisions of an article file.
 	 * @param $articleId int
@@ -88,7 +88,7 @@ class ArticleFileDAO extends DAO {
 			return $returner;
 		}
 		$articleFiles = array();
-		
+
 		// FIXME If "round" is review-specific, it shouldn't be in this table
 		if ($round == null) {
 			$result = &$this->retrieve(
@@ -101,7 +101,7 @@ class ArticleFileDAO extends DAO {
 				array($fileId, $round)
 			);
 		}
-		
+
 		while (!$result->EOF) {
 			$articleFiles[] = &$this->_returnArticleFileFromRow($result->GetRowAssoc(false));
 			$result->moveNext();
@@ -109,10 +109,10 @@ class ArticleFileDAO extends DAO {
 
 		$result->Close();
 		unset($result);
-	
+
 		return $articleFiles;
 	}
-	
+
 	/**
 	 * Retrieve revisions of an article file in a range.
 	 * @param $articleId int
@@ -124,7 +124,7 @@ class ArticleFileDAO extends DAO {
 			return $returner;
 		}
 		$articleFiles = array();
-		
+
 		if ($end == null) {
 			$result = &$this->retrieve(
 				'SELECT a.* FROM article_files a WHERE file_id = ? AND revision >= ?',
@@ -136,7 +136,7 @@ class ArticleFileDAO extends DAO {
 				array($fileId, $start, $end)
 			);		
 		}
-				
+
 		while (!$result->EOF) {
 			$articleFiles[] = &$this->_returnArticleFileFromRow($result->GetRowAssoc(false));
 			$result->moveNext();
@@ -144,10 +144,10 @@ class ArticleFileDAO extends DAO {
 
 		$result->Close();
 		unset($result);
-	
+
 		return $articleFiles;
 	}
-	
+
 	/**
 	 * Retrieve the current revision number for a file.
 	 * @param $fileId int
@@ -162,7 +162,7 @@ class ArticleFileDAO extends DAO {
 			'SELECT MAX(revision) AS max_revision FROM article_files a WHERE file_id = ?',
 			$fileId
 		);
-		
+
 		if ($result->RecordCount() == 0) {
 			$returner = null;
 		} else {
@@ -175,7 +175,7 @@ class ArticleFileDAO extends DAO {
 
 		return $returner;
 	}
-	
+
 	/**
 	 * Retrieve all article files for an article.
 	 * @param $articleId int
@@ -183,12 +183,12 @@ class ArticleFileDAO extends DAO {
 	 */
 	function &getArticleFilesByArticle($articleId) {
 		$articleFiles = array();
-		
+
 		$result = &$this->retrieve(
 			'SELECT * FROM article_files WHERE article_id = ?',
 			$articleId
 		);
-		
+
 		while (!$result->EOF) {
 			$articleFiles[] = &$this->_returnArticleFileFromRow($result->GetRowAssoc(false));
 			$result->moveNext();
@@ -196,10 +196,10 @@ class ArticleFileDAO extends DAO {
 
 		$result->Close();
 		unset($result);
-	
+
 		return $articleFiles;
 	}
-	
+
 	/**
 	 * Retrieve all article files for a type and assoc ID.
 	 * @param $assocId int
@@ -209,12 +209,12 @@ class ArticleFileDAO extends DAO {
 	function &getArticleFilesByAssocId($assocId, $type) {
 		import('file.ArticleFileManager');
 		$articleFiles = array();
-		
+
 		$result = &$this->retrieve(
 			'SELECT * FROM article_files WHERE assoc_id = ? AND type = ?',
 			array($assocId, ArticleFileManager::typeToPath($type))
 		);
-		
+
 		while (!$result->EOF) {
 			$articleFiles[] = &$this->_returnArticleFileFromRow($result->GetRowAssoc(false));
 			$result->moveNext();
@@ -222,7 +222,7 @@ class ArticleFileDAO extends DAO {
 
 		$result->Close();
 		unset($result);
-	
+
 		return $articleFiles;
 	}
 
@@ -275,11 +275,11 @@ class ArticleFileDAO extends DAO {
 			$articleFile->getViewable(),
 			$articleFile->getAssocId()
 		);
-		
+
 		if ($fileId) {
 			array_unshift($params, $fileId);
 		}
-		
+
 		$this->update(
 			sprintf('INSERT INTO article_files
 				(' . ($fileId ? 'file_id, ' : '') . 'revision, article_id, source_file_id, source_revision, file_name, file_type, file_size, original_file_name, type, status, date_uploaded, date_modified, round, viewable, assoc_id)
@@ -288,14 +288,14 @@ class ArticleFileDAO extends DAO {
 				$this->datetimeToDB($articleFile->getDateUploaded()), $this->datetimeToDB($articleFile->getDateModified())),
 			$params
 		);
-		
+
 		if (!$fileId) {
 			$articleFile->setFileId($this->getInsertArticleFileId());
 		}
-		
+
 		return $articleFile->getFileId();
 	}
-	
+
 	/**
 	 * Update an existing article file.
 	 * @param $article ArticleFile
@@ -337,11 +337,11 @@ class ArticleFileDAO extends DAO {
 				$articleFile->getRevision()
 			)
 		);
-		
+
 		return $articleFile->getFileId();
-		
+
 	}
-	
+
 	/**
 	 * Delete an article file.
 	 * @param $article ArticleFile
@@ -349,7 +349,7 @@ class ArticleFileDAO extends DAO {
 	function deleteArticleFile(&$articleFile) {
 		return $this->deleteArticleFileById($articleFile->getFileId(), $articleFile->getRevision());
 	}
-	
+
 	/**
 	 * Delete an article file by ID.
 	 * @param $articleId int
@@ -366,7 +366,7 @@ class ArticleFileDAO extends DAO {
 			);
 		}
 	}
-	
+
 	/**
 	 * Delete all article files for an article.
 	 * @param $articleId int
@@ -384,7 +384,7 @@ class ArticleFileDAO extends DAO {
 	function getInsertArticleFileId() {
 		return $this->getInsertId('article_files', 'file_id');
 	}
-	
+
 	/**
 	 * Check whether a file may be displayed inline.
 	 * @param $articleFile object

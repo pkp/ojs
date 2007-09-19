@@ -17,75 +17,75 @@
 import('pages.sectionEditor.SubmissionEditHandler');
 
 class SubmissionCommentsHandler extends SectionEditorHandler {
-	
+
 	/**
 	 * View peer review comments.
 	 */
 	function viewPeerReviewComments($args) {
 		SectionEditorHandler::validate();
 		SectionEditorHandler::setupTemplate(true);
-		
+
 		$articleId = $args[0];
 		$reviewId = $args[1];
-		
+
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
 		SectionEditorAction::viewPeerReviewComments($submission, $reviewId);
-	
+
 	}
-	
+
 	/**
 	 * Post peer review comments.
 	 */
 	function postPeerReviewComment() {
 		SectionEditorHandler::validate();
 		SectionEditorHandler::setupTemplate(true);
-		
+
 		$articleId = Request::getUserVar('articleId');
 		$reviewId = Request::getUserVar('reviewId');
-		
+
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
-		
+
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
 		if (SectionEditorAction::postPeerReviewComment($submission, $reviewId, $emailComment)) {
 			SectionEditorAction::viewPeerReviewComments($submission, $reviewId);
 		}
 
 	}
-	
+
 	/**
 	 * View editor decision comments.
 	 */
 	function viewEditorDecisionComments($args) {
 		SectionEditorHandler::validate();
 		SectionEditorHandler::setupTemplate(true);
-		
+
 		$articleId = $args[0];
-		
+
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
 		SectionEditorAction::viewEditorDecisionComments($submission);
-	
+
 	}
-	
+
 	/**
 	 * Post peer review comments.
 	 */
 	function postEditorDecisionComment() {
 		SectionEditorHandler::validate();
 		SectionEditorHandler::setupTemplate(true);
-		
+
 		$articleId = Request::getUserVar('articleId');
-		
+
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
-		
+
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
 		if (SectionEditorAction::postEditorDecisionComment($submission, $emailComment)) {
 			SectionEditorAction::viewEditorDecisionComments($submission);
 		}
-	
+
 	}
-	
+
 	/**
 	 * Blind CC the reviews to reviewers.
 	 */
@@ -101,106 +101,106 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 			Request::redirect(null, null, 'submissionReview', $articleId);
 		}
 	}
-	
+
 	/**
 	 * View copyedit comments.
 	 */
 	function viewCopyeditComments($args) {
 		SectionEditorHandler::validate();
 		SectionEditorHandler::setupTemplate(true);
-		
+
 		$articleId = $args[0];
-		
+
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
 		SectionEditorAction::viewCopyeditComments($submission);
-	
+
 	}
-	
+
 	/**
 	 * Post copyedit comment.
 	 */
 	function postCopyeditComment() {
 		SectionEditorHandler::validate();
 		SectionEditorHandler::setupTemplate(true);
-		
+
 		$articleId = Request::getUserVar('articleId');
-		
+
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
-		
+
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
 		if (SectionEditorAction::postCopyeditComment($submission, $emailComment)) {
 			SectionEditorAction::viewCopyeditComments($submission);
 		}
-	
+
 	}
-	
+
 	/**
 	 * View layout comments.
 	 */
 	function viewLayoutComments($args) {
 		SectionEditorHandler::validate();
 		SectionEditorHandler::setupTemplate(true);
-		
+
 		$articleId = $args[0];
-		
+
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
 		SectionEditorAction::viewLayoutComments($submission);
 
 	}
-	
+
 	/**
 	 * Post layout comment.
 	 */
 	function postLayoutComment() {
 		SectionEditorHandler::validate();
 		SectionEditorHandler::setupTemplate(true);
-		
+
 		$articleId = Request::getUserVar('articleId');
-		
+
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
-		
+
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
 		if (SectionEditorAction::postLayoutComment($submission, $emailComment)) {
 			SectionEditorAction::viewLayoutComments($submission);
 		}
-	
+
 	}
-	
+
 	/**
 	 * View proofread comments.
 	 */
 	function viewProofreadComments($args) {
 		SectionEditorHandler::validate();
 		SectionEditorHandler::setupTemplate(true);
-		
+
 		$articleId = $args[0];
-		
+
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
 		SectionEditorAction::viewProofreadComments($submission);
 
 	}
-	
+
 	/**
 	 * Post proofread comment.
 	 */
 	function postProofreadComment() {
 		SectionEditorHandler::validate();
 		SectionEditorHandler::setupTemplate(true);
-		
+
 		$articleId = Request::getUserVar('articleId');
-		
+
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
-		
+
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
 		if (SectionEditorAction::postProofreadComment($submission, $emailComment)) {
 			SectionEditorAction::viewProofreadComments($submission);
 		}
-	
+
 	}
-	
+
 	/**
 	 * Email an editor decision comment.
 	 */
@@ -217,17 +217,17 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 			}
 		}
 	}
-	
+
 	/**
 	 * Edit comment.
 	 */
 	function editComment($args) {
 		SectionEditorHandler::validate();
 		SectionEditorHandler::setupTemplate(true);
-		
+
 		$articleId = $args[0];
 		$commentId = $args[1];
-		
+
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
 		list($comment) = SubmissionCommentsHandler::validate($commentId);
 
@@ -239,23 +239,23 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		SectionEditorAction::editComment($submission, $comment);
 
 	}
-	
+
 	/**
 	 * Save comment.
 	 */
 	function saveComment() {
 		SectionEditorHandler::validate();
 		SectionEditorHandler::setupTemplate(true);
-		
+
 		$articleId = Request::getUserVar('articleId');
 		$commentId = Request::getUserVar('commentId');
-		
+
 		// If the user pressed the "Save and email" button, then email the comment.
 		$emailComment = Request::getUserVar('saveAndEmail') != null ? true : false;
-		
+
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
 		list($comment) = SubmissionCommentsHandler::validate($commentId);
-		
+
 		if ($comment->getCommentType() == COMMENT_TYPE_EDITOR_DECISION) {
 			// Cannot edit an editor decision comment.
 			Request::redirect(null, Request::getRequestedPage());
@@ -266,7 +266,7 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 
 		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
 		$comment = &$articleCommentDao->getArticleCommentById($commentId);
-		
+
 		// Redirect back to initial comments page
 		if ($comment->getCommentType() == COMMENT_TYPE_PEER_REVIEW) {
 			Request::redirect(null, null, 'viewPeerReviewComments', array($articleId, $comment->getAssocId()));
@@ -280,21 +280,21 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 			Request::redirect(null, null, 'viewProofreadComments', $articleId);
 		}
 	}
-	
+
 	/**
 	 * Delete comment.
 	 */
 	function deleteComment($args) {
 		SectionEditorHandler::validate();
 		SectionEditorHandler::setupTemplate(true);
-		
+
 		$articleId = $args[0];
 		$commentId = $args[1];
-		
+
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
 		list($comment) = SubmissionCommentsHandler::validate($commentId);
 		SectionEditorAction::deleteComment($commentId);
-		
+
 		// Redirect back to initial comments page
 		if ($comment->getCommentType() == COMMENT_TYPE_PEER_REVIEW) {
 			Request::redirect(null, null, 'viewPeerReviewComments', array($articleId, $comment->getAssocId()));
@@ -309,20 +309,20 @@ class SubmissionCommentsHandler extends SectionEditorHandler {
 		}
 
 	}
-	
+
 	//
 	// Validation
 	//
-	
+
 	/**
 	 * Validate that the user is the author of the comment.
 	 */
 	function validate($commentId) {
 		parent::validate();
-		
+
 		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
 		$user = &Request::getUser();
-		
+
 		$comment = &$articleCommentDao->getArticleCommentById($commentId);
 
 		if (

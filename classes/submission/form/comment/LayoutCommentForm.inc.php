@@ -13,7 +13,7 @@
  *
  * $Id$
  */
- 
+
 import("submission.form.comment.CommentForm");
 
 class LayoutCommentForm extends CommentForm {
@@ -25,7 +25,7 @@ class LayoutCommentForm extends CommentForm {
 	function LayoutCommentForm($article, $roleId) {
 		parent::CommentForm($article, COMMENT_TYPE_LAYOUT, $roleId, $article->getArticleId());
 	}
-	
+
 	/**
 	 * Display the form.
 	 */
@@ -39,24 +39,24 @@ class LayoutCommentForm extends CommentForm {
 				'articleId' => $this->article->getArticleId()
 			)
 		);
-		
+
 		parent::display();
 	}
-	
+
 	/**
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
 		parent::readInputData();
 	}
-	
+
 	/**
 	 * Add the comment.
 	 */
 	function execute() {
 		parent::execute();
 	}
-	
+
 	/**
 	 * Email the comment.
 	 */
@@ -64,22 +64,22 @@ class LayoutCommentForm extends CommentForm {
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$journal = &Request::getJournal();
-	
+
 		// Create list of recipients:
-		
+
 		// Layout comments are to be sent to the editor or layout editor;
 		// the opposite of whomever posted the comment.
 		$recipients = array();
-		
+
 		if ($this->roleId == ROLE_ID_EDITOR || $this->roleId == ROLE_ID_SECTION_EDITOR) {
 			// Then add layout editor
 			$layoutAssignmentDao = &DAORegistry::getDAO('LayoutAssignmentDAO');
 			$layoutAssignment = &$layoutAssignmentDao->getLayoutAssignmentByArticleId($this->article->getArticleId());
-			
+
 			// Check to ensure that there is a layout editor assigned to this article.
 			if ($layoutAssignment != null && $layoutAssignment->getEditorId() > 0) {
 				$user = &$userDao->getUser($layoutAssignment->getEditorId());
-			
+
 				if ($user) $recipients = array_merge($recipients, array($user->getEmail() => $user->getFullName()));
 			}
 		} else {
@@ -104,7 +104,7 @@ class LayoutCommentForm extends CommentForm {
 			}
 			$recipients = array_merge($recipients, $editorAddresses);
 		}
-		
+
 		parent::email($recipients);
 	}
 }

@@ -44,11 +44,11 @@ class AnnouncementHandler extends ManagerHandler {
 	 */
 	function deleteAnnouncement($args) {
 		parent::validate();
-		
+
 		if (isset($args) && !empty($args)) {
 			$journal = &Request::getJournal();
 			$announcementId = (int) $args[0];
-		
+
 			$announcementDao = &DAORegistry::getDAO('AnnouncementDAO');
 
 			// Ensure announcement is for this journal
@@ -56,7 +56,7 @@ class AnnouncementHandler extends ManagerHandler {
 				$announcementDao->deleteAnnouncementById($announcementId);
 			}
 		}
-		
+
 		Request::redirect(null, null, 'announcements');
 	}
 
@@ -110,9 +110,9 @@ class AnnouncementHandler extends ManagerHandler {
 	 */
 	function updateAnnouncement() {
 		parent::validate();
-		
+
 		import('manager.form.AnnouncementForm');
-		
+
 		$journal = &Request::getJournal();
 		$announcementId = Request::getUserVar('announcementId') == null ? null : (int) Request::getUserVar('announcementId');
 		$announcementDao = &DAORegistry::getDAO('AnnouncementDAO');
@@ -121,7 +121,7 @@ class AnnouncementHandler extends ManagerHandler {
 
 			$announcementForm = &new AnnouncementForm($announcementId);
 			$announcementForm->readInputData();
-			
+
 			if ($announcementForm->validate()) {
 				$announcementForm->execute();
 
@@ -130,7 +130,7 @@ class AnnouncementHandler extends ManagerHandler {
 				} else {
 					Request::redirect(null, null, 'announcements');
 				}
-				
+
 			} else {
 				AnnouncementHandler::setupTemplate();
 
@@ -145,7 +145,7 @@ class AnnouncementHandler extends ManagerHandler {
 
 				$announcementForm->display();
 			}
-			
+
 		} else {
 				Request::redirect(null, null, 'announcements');
 		}	
@@ -175,11 +175,11 @@ class AnnouncementHandler extends ManagerHandler {
 	 */
 	function deleteAnnouncementType($args) {
 		parent::validate();
-		
+
 		if (isset($args) && !empty($args)) {
 			$journal = &Request::getJournal();
 			$typeId = (int) $args[0];
-		
+
 			$announcementTypeDao = &DAORegistry::getDAO('AnnouncementTypeDAO');
 
 			// Ensure announcement is for this journal
@@ -187,7 +187,7 @@ class AnnouncementHandler extends ManagerHandler {
 				$announcementTypeDao->deleteAnnouncementTypeById($typeId);
 			}
 		}
-		
+
 		Request::redirect(null, null, 'announcementTypes');
 	}
 
@@ -241,9 +241,9 @@ class AnnouncementHandler extends ManagerHandler {
 	 */
 	function updateAnnouncementType() {
 		parent::validate();
-		
+
 		import('manager.form.AnnouncementTypeForm');
-		
+
 		$journal = &Request::getJournal();
 		$typeId = Request::getUserVar('typeId') == null ? null : (int) Request::getUserVar('typeId');
 		$announcementTypeDao = &DAORegistry::getDAO('AnnouncementTypeDAO');
@@ -252,7 +252,7 @@ class AnnouncementHandler extends ManagerHandler {
 
 			$announcementTypeForm = &new AnnouncementTypeForm($typeId);
 			$announcementTypeForm->readInputData();
-			
+
 			if ($announcementTypeForm->validate()) {
 				$announcementTypeForm->execute();
 
@@ -261,7 +261,7 @@ class AnnouncementHandler extends ManagerHandler {
 				} else {
 					Request::redirect(null, null, 'announcementTypes');
 				}
-				
+
 			} else {
 				AnnouncementHandler::setupTemplate(true);
 
@@ -276,7 +276,7 @@ class AnnouncementHandler extends ManagerHandler {
 
 				$announcementTypeForm->display();
 			}
-			
+
 		} else {
 				Request::redirect(null, null, 'announcementTypes');
 		}	

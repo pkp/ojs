@@ -23,7 +23,7 @@ class ProofAssignment extends DataObject {
 	function ProofAssignment() {
 		parent::DataObject();
 	}
-	
+
 	/**
 	 * Get ID of proof assignment.
 	 * @return int
@@ -31,7 +31,7 @@ class ProofAssignment extends DataObject {
 	function getProofId() {
 		return $this->getData('proofId');
 	}
-	
+
 	/**
 	 * Set ID of proof assignment
 	 * @param $proofId int
@@ -39,7 +39,7 @@ class ProofAssignment extends DataObject {
 	function setProofId($proofId) {
 		return $this->setData('proofId', $proofId);
 	}
-	
+
 	/**
 	 * Get ID of article.
 	 * @return int
@@ -47,7 +47,7 @@ class ProofAssignment extends DataObject {
 	function getArticleId() {
 		return $this->getData('articleId');
 	}
-	
+
 	/**
 	 * Set ID of article.
 	 * @param $articleId int
@@ -55,7 +55,7 @@ class ProofAssignment extends DataObject {
 	function setArticleId($articleId) {
 		return $this->setData('articleId', $articleId);
 	}
-	
+
 	/**
 	 * Get ID of proofreader.
 	 * @return int
@@ -63,7 +63,7 @@ class ProofAssignment extends DataObject {
 	function getProofreaderId() {
 		return $this->getData('proofreaderId');
 	}
-	
+
 	/**
 	 * Set ID of proofreader.
 	 * @param $proofreaderId int
@@ -79,7 +79,7 @@ class ProofAssignment extends DataObject {
 	function getDateAuthorNotified() {
 		return $this->getData('dateAuthorNotified');
 	}
-	
+
 	/**
 	 * Set the author notified date.
 	 * @param $dateAuthorNotified string
@@ -95,7 +95,7 @@ class ProofAssignment extends DataObject {
 	function getDateAuthorUnderway() {
 		return $this->getData('dateAuthorUnderway');
 	}
-	
+
 	/**
 	 * Set the author underway date.
 	 * @param $dateAuthorUnderway string
@@ -111,7 +111,7 @@ class ProofAssignment extends DataObject {
 	function getDateAuthorCompleted() {
 		return $this->getData('dateAuthorCompleted');
 	}
-	
+
 	/**
 	 * Set the author completed date.
 	 * @param $dateAuthorCompleted string
@@ -127,7 +127,7 @@ class ProofAssignment extends DataObject {
 	function getDateAuthorAcknowledged() {
 		return $this->getData('dateAuthorAcknowledged');
 	}
-	
+
 	/**
 	 * Set the author acknowledged date.
 	 * @param $dateAuthorAcknowledged string
@@ -143,7 +143,7 @@ class ProofAssignment extends DataObject {
 	function getDateProofreaderNotified() {
 		return $this->getData('dateProofreaderNotified');
 	}
-	
+
 	/**
 	 * Set the proofreader notified date.
 	 * @param $dateProofreaderNotified string
@@ -159,7 +159,7 @@ class ProofAssignment extends DataObject {
 	function getDateProofreaderUnderway() {
 		return $this->getData('dateProofreaderUnderway');
 	}
-	
+
 	/**
 	 * Set the proofreader underway date.
 	 * @param $dateProofreaderUnderway string
@@ -175,7 +175,7 @@ class ProofAssignment extends DataObject {
 	function getDateProofreaderCompleted() {
 		return $this->getData('dateProofreaderCompleted');
 	}
-	
+
 	/**
 	 * Set the proofreader completed date.
 	 * @param $dateProofreaderCompleted string
@@ -191,7 +191,7 @@ class ProofAssignment extends DataObject {
 	function getDateProofreaderAcknowledged() {
 		return $this->getData('dateProofreaderAcknowledged');
 	}
-	
+
 	/**
 	 * Set the proofreader acknowledged date.
 	 * @param $dateProofreaderAcknowledged string
@@ -207,7 +207,7 @@ class ProofAssignment extends DataObject {
 	function getDateLayoutEditorNotified() {
 		return $this->getData('dateLayoutEditorNotified');
 	}
-	
+
 	/**
 	 * Set the layoutEditor notified date.
 	 * @param $dateLayoutEditorNotified string
@@ -223,7 +223,7 @@ class ProofAssignment extends DataObject {
 	function getDateLayoutEditorUnderway() {
 		return $this->getData('dateLayoutEditorUnderway');
 	}
-	
+
 	/**
 	 * Set the layoutEditor underway date.
 	 * @param $dateLayoutEditorUnderway string
@@ -239,7 +239,7 @@ class ProofAssignment extends DataObject {
 	function getDateLayoutEditorCompleted() {
 		return $this->getData('dateLayoutEditorCompleted');
 	}
-	
+
 	/**
 	 * Set the layoutEditor completed date.
 	 * @param $dateLayoutEditorCompleted string
@@ -255,7 +255,7 @@ class ProofAssignment extends DataObject {
 	function getDateLayoutEditorAcknowledged() {
 		return $this->getData('dateLayoutEditorAcknowledged');
 	}
-	
+
 	/**
 	 * Set the layoutEditor acknowledged date.
 	 * @param $dateLayoutEditorAcknowledged string
@@ -271,7 +271,7 @@ class ProofAssignment extends DataObject {
 	function getProofreaderFirstName() {
 		return $this->getData('proofreaderFirstName');
 	}
-	
+
 	/**
 	 * Set the proofreader's first name.
 	 * @param $proofreaderFirstName string
@@ -287,7 +287,7 @@ class ProofAssignment extends DataObject {
 	function getProofreaderLastName() {
 		return $this->getData('proofreaderLastName');
 	}
-	
+
 	/**
 	 * Set the proofreader's last name.
 	 * @param $proofreaderLastName string
@@ -303,7 +303,7 @@ class ProofAssignment extends DataObject {
 	function getProofreaderEmail() {
 		return $this->getData('proofreaderEmail');
 	}
-	
+
 	/**
 	 * Set the proofreader's email.
 	 * @param $proofreaderEmail string

@@ -48,7 +48,7 @@ class PubMedExportDom {
 
 		// register the editor submission DAO for use later
 		$editorSubmissionDao = &DAORegistry::getDAO('EditorSubmissionDAO');
-		
+
 		/* --- Article --- */
 		$root = &XMLCustomWriter::createElement($doc, 'Article');
 
@@ -60,13 +60,13 @@ class PubMedExportDom {
 		$publisherNode = XMLCustomWriter::createChildWithText($doc, $journalNode, 'PublisherName', $publisherInstitution);
 
 		XMLCustomWriter::createChildWithText($doc, $journalNode, 'JournalTitle', $journal->getJournalTitle());
-		
+
 		// check various ISSN fields to create the ISSN tag
 		if ($journal->getSetting('printIssn') != '') $ISSN = $journal->getSetting('printIssn');
 		elseif ($journal->getSetting('issn') != '') $ISSN = $journal->getSetting('issn');
 		elseif ($journal->getSetting('onlineIssn') != '') $ISSN = $journal->getSetting('onlineIssn');
 		else $ISSN = '';
-		
+
 		if ($ISSN != '') XMLCustomWriter::createChildWithText($doc, $journalNode, 'Issn', $ISSN);
 
 		XMLCustomWriter::createChildWithText($doc, $journalNode, 'Volume', $issue->getVolume());
@@ -141,7 +141,7 @@ class PubMedExportDom {
 			$articleIdNode = &XMLCustomWriter::createChildWithText($doc, $articleIdListNode, 'ArticleId', $article->getPublicArticleId());
 			XMLCustomWriter::setAttribute($articleIdNode, 'IdType', 'pii');
 		}
-		
+
 		/* --- History --- */
 		$historyNode = &XMLCustomWriter::createElement($doc, 'History');
 		XMLCustomWriter::appendChild($root, $historyNode);
@@ -156,7 +156,7 @@ class PubMedExportDom {
 		// if there are multiple decisions, make sure we get the accepted date
 		$editordecision = array_pop($editordecisions);
 		while ($editordecision['decision'] != SUBMISSION_EDITOR_DECISION_ACCEPT && count($editordecisions) > 0) $editordecision = array_pop($editordecisions);
-		
+
 		if ($editordecision != '') {
 			$acceptedNode =& PubMedExportDom::generatePubDateDom($doc, $editordecision['dateDecided'], 'accepted');
 			XMLCustomWriter::appendChild($historyNode, $acceptedNode);

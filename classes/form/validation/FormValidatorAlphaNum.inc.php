@@ -27,7 +27,7 @@ class FormValidatorAlphaNum extends FormValidatorRegExp {
 			'/^[A-Z0-9]+([\-_][A-Z0-9]+)*$/i'
 		);
 	}
-	
+
 }
 
 ?>

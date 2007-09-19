@@ -119,7 +119,7 @@ class EmailHandler extends UserHandler {
 			import('mail.MailTemplate');
 			$email = &new MailTemplate($template);
 		}
-		
+
 		if (Request::getUserVar('send') && !$email->hasErrors()) {
 			$recipients = $email->getRecipients();
 			$ccs = $email->getCcs();

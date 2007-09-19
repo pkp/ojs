@@ -66,7 +66,7 @@ class ThesisDAO extends DAO {
 		$result = &$this->retrieve(
 			'SELECT journal_id FROM theses WHERE thesis_id = ?', $thesisId
 		);
-		
+
 		return isset($result->fields[0]) ? $result->fields[0] : 0;	
 	}
 
@@ -82,7 +82,7 @@ class ThesisDAO extends DAO {
 		$result = &$this->retrieve(
 			'SELECT thesis_id FROM theses WHERE status = ? AND thesis_id = ?', array(THESIS_STATUS_ACTIVE, $thesisId)
 		);
-		
+
 		return isset($result->fields[0]) ? true : false;	
 	}
 
@@ -126,7 +126,7 @@ class ThesisDAO extends DAO {
 		$thesis->setCoverageSample($row['coverage_sample']);
 		$thesis->setMethod($row['method']);
 		$thesis->setLanguage($row['language']);
-		
+
 		return $thesis;
 	}
 
@@ -369,7 +369,7 @@ class ThesisDAO extends DAO {
 			default:
 				$searchSql .= ' ORDER BY thesis_id DESC';
 		}
-		
+
 		$result = &$this->retrieveRange(
 			'SELECT * FROM theses WHERE journal_id = ? ' . $searchSql,
 			$paramArray,

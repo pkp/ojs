@@ -15,7 +15,7 @@
  *
  * $Id$
  */
- 
+
 // Search types
 define('ARTICLE_SEARCH_AUTHOR',			0x00000001);
 define('ARTICLE_SEARCH_TITLE',			0x00000002);
@@ -44,7 +44,7 @@ class ArticleSearch {
 		$keywords = ArticleSearch::_parseQuery($matches[1], $matches[2], $pos, $count);
 		return $keywords;
 	}
-		
+
 	/**
 	 * Query parsing helper routine.
 	 * Returned structure is based on that used by the Search::QueryParser Perl module.
@@ -92,7 +92,7 @@ class ArticleSearch {
 		}
 		return $return;
 	}
-	
+
 	/**
 	 * See implementation of retrieveResults for a description of this
 	 * function.
@@ -102,7 +102,7 @@ class ArticleSearch {
 		$resultCacheHours = Config::getVar('search', 'result_cache_hours');
 		if (!is_numeric($resultsPerKeyword)) $resultsPerKeyword = 100;
 		if (!is_numeric($resultCacheHours)) $resultCacheHours = 24;
-		
+
 		$mergedKeywords = array('+' => array(), '' => array(), '-' => array());
 		foreach ($keywords as $type => $keyword) {
 			if (!empty($keyword['+']))
@@ -113,21 +113,21 @@ class ArticleSearch {
 				$mergedKeywords['-'][] = array('type' => $type, '+' => array(), '' => $keyword['-'], '-' => array());
 		}
 		$mergedResults = &ArticleSearch::_getMergedKeywordResults($journal, $mergedKeywords, null, $publishedFrom, $publishedTo, $resultsPerKeyword, $resultCacheHours);
-		
+
 		$resultCount = count($mergedResults);
 		return $mergedResults;
 	}
-	
+
 	/**
 	 * Recursive helper for _getMergedArray.
 	 */
 	function &_getMergedKeywordResults(&$journal, &$keyword, $type, $publishedFrom, $publishedTo, $resultsPerKeyword, $resultCacheHours) {
 		$mergedResults = null;
-		
+
 		if (isset($keyword['type'])) {
 			$type = $keyword['type'];
 		}
-		
+
 		foreach ($keyword['+'] as $phrase) {
 			$results = &ArticleSearch::_getMergedPhraseResults($journal, $phrase, $type, $publishedFrom, $publishedTo, $resultsPerKeyword, $resultCacheHours);
 			if ($mergedResults == null) {
@@ -142,11 +142,11 @@ class ArticleSearch {
 				}
 			}
 		}
-		
+
 		if ($mergedResults == null) {
 			$mergedResults = array();
 		}
-		
+
 		if (!empty($mergedResults) || empty($keyword['+'])) {
 			foreach ($keyword[''] as $phrase) {
 				$results = &ArticleSearch::_getMergedPhraseResults($journal, $phrase, $type, $publishedFrom, $publishedTo, $resultsPerKeyword, $resultCacheHours);
@@ -158,7 +158,7 @@ class ArticleSearch {
 					}
 				}
 			}
-			
+
 			foreach ($keyword['-'] as $phrase) {
 				$results = &ArticleSearch::_getMergedPhraseResults($journal, $phrase, $type, $publishedFrom, $publishedTo, $resultsPerKeyword, $resultCacheHours);
 				foreach ($results as $articleId => $count) {
@@ -168,10 +168,10 @@ class ArticleSearch {
 				}
 			}
 		}
-		
+
 		return $mergedResults;
 	}
-	
+
 	/**
 	 * Recursive helper for _getMergedArray.
 	 */
@@ -180,7 +180,7 @@ class ArticleSearch {
 			$mergedResults = &ArticleSearch::_getMergedKeywordResults($journal, $phrase, $type, $publishedFrom, $publishedTo, $resultsPerKeyword, $resultCacheHours);
 			return $mergedResults;
 		}
-		
+
 		$mergedResults = array();
 		$articleSearchDao = &DAORegistry::getDAO('ArticleSearchDAO');
 		$results = &$articleSearchDao->getPhraseResults(
@@ -261,7 +261,7 @@ class ArticleSearch {
 				if (!isset($journalCache[$journalId])) {
 					$journalCache[$journalId] = $journalDao->getJournal($journalId);
 				}
-	
+
 				// Get the issue, storing in cache if necessary.
 				$issueId = $publishedArticle->getIssueId();
 				if (!isset($issueCache[$issueId])) {

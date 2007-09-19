@@ -22,15 +22,15 @@ class AuthorSubmitStep2Form extends AuthorSubmitForm {
 	 */
 	function AuthorSubmitStep2Form($article) {
 		parent::AuthorSubmitForm($article, 2);
-		
+
 		$journal = &Request::getJournal();
-		
+
 		// Validation checks for this form
 		$this->addCheck(new FormValidatorCustom($this, 'authors', 'required', 'author.submit.form.authorRequired', create_function('$authors', 'return count($authors) > 0;')));
 		$this->addCheck(new FormValidatorArray($this, 'authors', 'required', 'author.submit.form.authorRequiredFields', array('firstName', 'lastName', 'email')));
 		$this->addCheck(new FormValidatorLocale($this, 'title', 'required', 'author.submit.form.titleRequired'));
 	}
-	
+
 	/**
 	 * Initialize form data from current article.
 	 */
@@ -54,7 +54,7 @@ class AuthorSubmitStep2Form extends AuthorSubmitForm {
 				'sponsor' => $article->getSponsor(null), // Localized
 				'section' => $sectionDao->getSection($article->getSectionId())
 			);
-			
+
 			$authors = &$article->getAuthors();
 			for ($i=0, $count=count($authors); $i < $count; $i++) {
 				array_push(
@@ -77,7 +77,7 @@ class AuthorSubmitStep2Form extends AuthorSubmitForm {
 			}
 		}
 	}
-	
+
 	/**
 	 * Assign form data to user-submitted data.
 	 */
@@ -140,7 +140,7 @@ class AuthorSubmitStep2Form extends AuthorSubmitForm {
 	function execute() {
 		$articleDao = &DAORegistry::getDAO('ArticleDAO');
 		$authorDao = &DAORegistry::getDAO('AuthorDAO');
-		
+
 		// Update article
 		$article = &$this->article;
 		$article->setTitle($this->getData('title'), null); // Localized
@@ -158,7 +158,7 @@ class AuthorSubmitStep2Form extends AuthorSubmitForm {
 			$article->stampStatusModified();
 			$article->setSubmissionProgress($this->step + 1);
 		}
-		
+
 		// Update authors
 		$authors = $this->getData('authors');
 		for ($i=0, $count=count($authors); $i < $count; $i++) {
@@ -166,13 +166,13 @@ class AuthorSubmitStep2Form extends AuthorSubmitForm {
 				// Update an existing author
 				$author = &$article->getAuthor($authors[$i]['authorId']);
 				$isExistingAuthor = true;
-				
+
 			} else {
 				// Create a new author
 				$author = &new Author();
 				$isExistingAuthor = false;
 			}
-			
+
 			if ($author != null) {
 				$author->setFirstName($authors[$i]['firstName']);
 				$author->setMiddleName($authors[$i]['middleName']);
@@ -184,22 +184,22 @@ class AuthorSubmitStep2Form extends AuthorSubmitForm {
 				$author->setBiography($authors[$i]['biography'], null);
 				$author->setPrimaryContact($this->getData('primaryContact') == $i ? 1 : 0);
 				$author->setSequence($authors[$i]['seq']);
-				
+
 				if ($isExistingAuthor == false) {
 					$article->addAuthor($author);
 				}
 			}
 		}
-		
+
 		// Remove deleted authors
 		$deletedAuthors = explode(':', $this->getData('deletedAuthors'));
 		for ($i=0, $count=count($deletedAuthors); $i < $count; $i++) {
 			$article->removeAuthor($deletedAuthors[$i]);
 		}
-		
+
 		// Save the article
 		$articleDao->updateArticle($article);
-		
+
 		return $this->articleId;
 	}
 }

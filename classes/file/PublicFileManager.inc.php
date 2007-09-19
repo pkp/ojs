@@ -36,7 +36,7 @@ class PublicFileManager extends FileManager {
  	function uploadSiteFile($fileName, $destFileName) {
  		return $this->uploadFile($fileName, $this->getSiteFilesPath() . '/' . $destFileName);
  	}
- 	
+
  	/**
 	 * Delete a file from the site's public directory.
  	 * @param $fileName string the target file name
@@ -45,7 +45,7 @@ class PublicFileManager extends FileManager {
  	function removeSiteFile($fileName) {
  		return $this->deleteFile($this->getSiteFilesPath() . '/' . $fileName);
  	}
- 	
+
 	/**
 	 * Get the path to a journal's public files directory.
 	 * @param $journalId int
@@ -54,7 +54,7 @@ class PublicFileManager extends FileManager {
 	function getJournalFilesPath($journalId) {
 		return Config::getVar('files', 'public_files_dir') . '/journals/' . $journalId;
 	}
-	
+
 	/**
 	 * Upload a file to a journals's public directory.
 	 * @param $journalId int
@@ -65,7 +65,7 @@ class PublicFileManager extends FileManager {
  	function uploadJournalFile($journalId, $fileName, $destFileName) {
  		return $this->uploadFile($fileName, $this->getJournalFilesPath($journalId) . '/' . $destFileName);
  	}
- 	
+
 	/**
 	 * Write a file to a journals's public directory.
 	 * @param $journalId int
@@ -76,7 +76,7 @@ class PublicFileManager extends FileManager {
  	function writeJournalFile($journalId, $destFileName, &$contents) {
  		return $this->writeFile($this->getJournalFilesPath($journalId) . '/' . $destFileName, $contents);
  	}
- 	
+
 	/**
 	 * Copy a file to a journals's public directory.
 	 * @param $journalId int

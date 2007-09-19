@@ -19,7 +19,7 @@ require(dirname(__FILE__) . '/includes/cliTool.inc.php');
 import('search.ArticleSearchIndex');
 
 class rebuildSearchIndex extends CommandLineTool {
-	
+
 	/**
 	 * Print command usage information.
 	 */
@@ -27,14 +27,14 @@ class rebuildSearchIndex extends CommandLineTool {
 		echo "Script to rebuild article search index\n"
 			. "Usage: {$this->scriptName}\n";
 	}
-	
+
 	/**
 	 * Rebuild the search index for all articles in all journals.
 	 */
 	function execute() {
 		ArticleSearchIndex::rebuildIndex(true);
 	}
-	
+
 }
 
 $tool = &new rebuildSearchIndex(isset($argv) ? $argv : array());

@@ -20,28 +20,28 @@ class EmailTemplateForm extends Form {
 
 	/** The key of the email template being edited */
 	var $emailKey;
-	
+
 	/**
 	 * Constructor.
 	 * @param $emailKey string
 	 */
 	function EmailTemplateForm($emailKey) {
 		parent::Form('manager/emails/emailTemplateForm.tpl');
-		
+
 		$this->emailKey = $emailKey;
-		
+
 		// Validation checks for this form
 		$this->addCheck(new FormValidatorArray($this, 'subject', 'required', 'manager.emails.form.subjectRequired'));
 		$this->addCheck(new FormValidatorArray($this, 'body', 'required', 'manager.emails.form.bodyRequired'));
 		$this->addCheck(new FormValidatorPost($this));
 	}
-	
+
 	/**
 	 * Display the form.
 	 */
 	function display() {
 		$templateMgr = &TemplateManager::getManager();
-		
+
 		$journal = &Request::getJournal();
 		$emailTemplateDao = &DAORegistry::getDAO('EmailTemplateDAO');
 		$emailTemplate = &$emailTemplateDao->getBaseEmailTemplate($this->emailKey, $journal->getJournalId());
@@ -50,7 +50,7 @@ class EmailTemplateForm extends Form {
 		$templateMgr->assign('helpTopicId','journal.managementPages.emails');
 		parent::display();
 	}
-	
+
 	/**
 	 * Initialize form data from current settings.
 	 */
@@ -69,7 +69,7 @@ class EmailTemplateForm extends Form {
 				$body[$locale] = $emailTemplate->getBody($locale);
 				$description[$locale] = $emailTemplate->getDescription($locale);
 			}
-			
+
 			if ($emailTemplate != null) {
 				$this->_data = array(
 					'emailId' => $emailTemplate->getEmailId(),
@@ -84,20 +84,20 @@ class EmailTemplateForm extends Form {
 			$this->_data = array('isNewTemplate' => true);
 		}
 	}
-	
+
 	/**
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
 		$this->readUserVars(array('emailId', 'subject', 'body', 'enabled', 'journalId', 'emailKey'));
 	}
-	
+
 	/**
 	 * Save email template.
 	 */
 	function execute() {
 		$journal = &Request::getJournal();
-			
+
 		$emailTemplateDao = &DAORegistry::getDAO('EmailTemplateDAO');
 		$emailTemplate = &$emailTemplateDao->getLocaleEmailTemplate($this->emailKey, $journal->getJournalId());
 

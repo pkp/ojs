@@ -63,7 +63,7 @@ class PhpAdsNewConnection {
 		preg_match_all('/\$phpAds_config\[\'([a-z_]+)\'\][ ]?= ([\'])?([^\n]+)\2;\n/', $contents, $matches, PREG_PATTERN_ORDER);
 		foreach ($matches[1] as $key => $match) $this->config[$match] = $matches[3][$key];
 		fclose($fp);
-		
+
 		$requiredConfigFields = array('dbhost', 'dbuser', 'dbpassword', 'dbname', 'url_prefix', 'table_prefix');
 		if (count(array_intersect(array_keys($this->config), $requiredConfigFields)) != count($requiredConfigFields)) {
 			// There was at least one missing required configuration item.

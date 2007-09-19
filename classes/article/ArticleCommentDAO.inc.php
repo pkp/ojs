@@ -26,7 +26,7 @@ class ArticleCommentDAO extends DAO {
 	 */
 	function &getArticleComments($articleId, $commentType = null, $assocId = null) {
 		$articleComments = array();
-		
+
 		if ($commentType == null) {
 			$result = &$this->retrieve(
 				'SELECT a.* FROM article_comments a WHERE article_id = ? ORDER BY date_posted',	$articleId
@@ -43,7 +43,7 @@ class ArticleCommentDAO extends DAO {
 				);
 			}				
 		}
-		
+
 		while (!$result->EOF) {
 			$articleComments[] = &$this->_returnArticleCommentFromRow($result->GetRowAssoc(false));
 			$result->moveNext();
@@ -51,10 +51,10 @@ class ArticleCommentDAO extends DAO {
 
 		$result->Close();
 		unset($result);
-		
+
 		return $articleComments;
 	}
-	
+
 	/**
 	 * Retrieve ArticleComments by user id
 	 * @param $userId int
@@ -62,11 +62,11 @@ class ArticleCommentDAO extends DAO {
 	 */
 	function &getArticleCommentsByUserId($userId) {
 		$articleComments = array();
-		
+
 		$result = &$this->retrieve(
 			'SELECT a.* FROM article_comments a WHERE author_id = ? ORDER BY date_posted',	$userId
 		);
-		
+
 		while (!$result->EOF) {
 			$articleComments[] = &$this->_returnArticleCommentFromRow($result->GetRowAssoc(false));
 			$result->moveNext();
@@ -74,10 +74,10 @@ class ArticleCommentDAO extends DAO {
 
 		$result->Close();
 		unset($result);
-		
+
 		return $articleComments;
 	}
-	
+
 	/**
 	 * Retrieve most recent ArticleComment
 	 * @param $articleId int
@@ -127,15 +127,15 @@ class ArticleCommentDAO extends DAO {
 		$result = &$this->retrieve(
 			'SELECT a.* FROM article_comments a WHERE comment_id = ?', $commentId
 		);
-		
+
 		$articleComment = &$this->_returnArticleCommentFromRow($result->GetRowAssoc(false));
 
 		$result->Close();
 		unset($result);
-		
+
 		return $articleComment;
 	}	
-	
+
 	/**
 	 * Creates and returns an article comment object from a row
 	 * @param $row array
@@ -156,10 +156,10 @@ class ArticleCommentDAO extends DAO {
 		$articleComment->setViewable($row['viewable']);
 
 		HookRegistry::call('ArticleCommentDAO::_returnArticleCommentFromRow', array(&$articleComment, &$row));
-		
+
 		return $articleComment;
 	}
-	
+
 	/**
 	 * inserts a new article comment into article_comments table
 	 * @param ArticleNote object
@@ -183,11 +183,11 @@ class ArticleCommentDAO extends DAO {
 				$articleComment->getViewable() === null ? 0 : $articleComment->getViewable()
 			)
 		);
-		
+
 		$articleComment->setCommentId($this->getInsertArticleCommentId());
 		return $articleComment->getCommentId();		
 	}
-		
+
 	/**
 	 * Get the ID of the last inserted article comment.
 	 * @return int
@@ -213,7 +213,7 @@ class ArticleCommentDAO extends DAO {
 			'DELETE FROM article_comments WHERE comment_id = ?', $commentId
 		);
 	}
-	
+
 	/**
 	 * Delete all comments for an article.
 	 * @param $articleId int
@@ -223,7 +223,7 @@ class ArticleCommentDAO extends DAO {
 			'DELETE FROM article_comments WHERE article_id = ?', $articleId
 		);
 	}
-	
+
 	/**
 	 * updates an article comment
 	 * @param ArticleComment object
@@ -258,5 +258,5 @@ class ArticleCommentDAO extends DAO {
 		);
 	}
 }
-  
+
 ?>

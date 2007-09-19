@@ -23,10 +23,10 @@ class EditCommentForm extends Form {
 
 	/** @var ArticleComment the comment */
 	var $comment;
-	
+
 	/** @var int the role of the comment author */
 	var $roleId;
-	
+
 	/** @var User the user */
 	var $user;
 
@@ -38,14 +38,14 @@ class EditCommentForm extends Form {
 	function EditCommentForm(&$article, &$comment) {
 		parent::Form('submission/comment/editComment.tpl');
 		$this->addCheck(new FormValidatorPost($this));
-		
+
 		$this->comment = $comment;
 		$this->roleId = $comment->getRoleId();
 
 		$this->article = $article;
 		$this->user = &Request::getUser();
 	}
-	
+
 	/**
 	 * Initialize form data from current comment.
 	 */
@@ -58,7 +58,7 @@ class EditCommentForm extends Form {
 			'viewable' => $comment->getViewable(),
 		);
 	}	
-	
+
 	/**
 	 * Display the form.
 	 */
@@ -77,10 +77,10 @@ class EditCommentForm extends Form {
 		$templateMgr->assign('isPeerReviewComment', $isPeerReviewComment); // FIXME
 		$templateMgr->assign_by_ref('comment', $this->comment);
 		$templateMgr->assign_by_ref('hiddenFormParams', $hiddenFormParams);
-		
+
 		parent::display();
 	}
-	
+
 	/**
 	 * Assign form data to user-submitted data.
 	 */
@@ -93,23 +93,23 @@ class EditCommentForm extends Form {
 			)
 		);
 	}
-	
+
 	/**
 	 * Update the comment.
 	 */
 	function execute() {
 		$commentDao = &DAORegistry::getDAO('ArticleCommentDAO');
-	
+
 		// Update comment		
 		$comment = $this->comment;
 		$comment->setCommentTitle($this->getData('commentTitle'));
 		$comment->setComments($this->getData('comments'));
 		$comment->setViewable($this->getData('viewable') ? 1 : 0);
 		$comment->setDateModified(Core::getCurrentDate());
-		
+
 		$commentDao->updateArticleComment($comment);
 	}
-	
+
 	/**
 	 * UGLEEE function that gets the recipients for a comment.
 	 * @return $recipients array of recipients (email address => name)
@@ -118,9 +118,9 @@ class EditCommentForm extends Form {
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$journal = &Request::getJournal();
-		
+
 		$recipients = array();
-		
+
 		// Get editors for article
 		$editAssignmentDao = &DAORegistry::getDAO('EditAssignmentDAO');
 		$editAssignments = &$editAssignmentDao->getEditAssignmentsByArticleId($this->article->getArticleId());
@@ -139,7 +139,7 @@ class EditCommentForm extends Form {
 				$editorAddresses[$editor->getEmail()] = $editor->getFullName();
 			}
 		}
-		
+
 		// Get proofreader
 		$proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
 		$proofAssignment = &$proofAssignmentDao->getProofAssignmentByArticleId($this->article->getArticleId());
@@ -148,7 +148,7 @@ class EditCommentForm extends Form {
 		} else {
 			$proofreader = null;
 		}
-	
+
 		// Get layout editor
 		$layoutAssignmentDao = &DAORegistry::getDAO('LayoutAssignmentDAO');
 		$layoutAssignment = &$layoutAssignmentDao->getLayoutAssignmentByArticleId($this->article->getArticleId());
@@ -166,7 +166,7 @@ class EditCommentForm extends Form {
 		} else {
 			$copyeditor = null;
 		}
-		
+
 		// Get reviewer
 		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
 		$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($this->comment->getAssocId());
@@ -175,10 +175,10 @@ class EditCommentForm extends Form {
 		} else {
 			$reviewer = null;
 		}
-		
+
 		// Get author
 		$author = &$userDao->getUser($this->article->getUserId());
-	
+
 		switch ($this->comment->getCommentType()) {
 		case COMMENT_TYPE_PEER_REVIEW:
 			if ($this->roleId == ROLE_ID_EDITOR || $this->roleId == ROLE_ID_SECTION_EDITOR) {
@@ -205,19 +205,19 @@ class EditCommentForm extends Form {
 				if ($copyeditor != null) {
 					$recipients = array_merge($recipients, array($copyeditor->getEmail() => $copyeditor->getFullName()));
 				}
-				
+
 				$recipients = array_merge($recipients, array($author->getEmail() => $author->getFullName()));
-			
+
 			} else if ($this->roleId == ROLE_ID_COPYEDITOR) {
 				// Then add editors and author
 				$recipients = array_merge($recipients, $editorAddresses);
-			
+
 				if (isset($author)) $recipients = array_merge($recipients, array($author->getEmail() => $author->getFullName()));
-			
+
 			} else {
 				// Then add editors and copyeditor
 				$recipients = array_merge($recipients, $editorAddresses);
-				
+
 				if ($copyeditor != null) {
 					$recipients = array_merge($recipients, array($copyeditor->getEmail() => $copyeditor->getFullName()));
 				}
@@ -226,7 +226,7 @@ class EditCommentForm extends Form {
 		case COMMENT_TYPE_LAYOUT:
 			if ($this->roleId == ROLE_ID_EDITOR || $this->roleId == ROLE_ID_SECTION_EDITOR) {
 				// Then add layout editor
-				
+
 				// Check to ensure that there is a layout editor assigned to this article.
 				if ($layoutEditor != null) {
 					$recipients = array_merge($recipients, array($layoutEditor->getEmail() => $layoutEditor->getFullName()));
@@ -242,41 +242,41 @@ class EditCommentForm extends Form {
 				if ($layoutEditor != null) {
 					$recipients = array_merge($recipients, array($layoutEditor->getEmail() => $layoutEditor->getFullName()));
 				}
-				
+
 				if ($proofreader != null) {
 					$recipients = array_merge($recipients, array($proofreader->getEmail() => $proofreader->getFullName()));
 				}
-				
+
 				if (isset($author)) $recipients = array_merge($recipients, array($author->getEmail() => $author->getFullName()));
-			
+
 			} else if ($this->roleId == ROLE_ID_LAYOUT_EDITOR) {
 				// Then add editors, proofreader and author
 				$recipients = array_merge($recipients, $editorAddresses);
-				
+
 				if ($proofreader != null) {
 					$recipients = array_merge($recipients, array($proofreader->getEmail() => $proofreader->getFullName()));
 				}
-			
+
 				if (isset($author)) $recipients = array_merge($recipients, array($author->getEmail() => $author->getFullName()));
-			
+
 			} else if ($this->roleId == ROLE_ID_PROOFREADER) {
 				// Then add editors, layout editor, and author
 				$recipients = array_merge($recipients, $editorAddresses);
-				
+
 				if ($layoutEditor != null) {
 					$recipients = array_merge($recipients, array($layoutEditor->getEmail() => $layoutEditor->getFullName()));
 				}
-				
+
 				if (isset($author)) $recipients = array_merge($recipients, array($author->getEmail() => $author->getFullName()));
-			
+
 			} else {
 				// Then add editors, layout editor, and proofreader
 				$recipients = array_merge($recipients, $editorAddresses);
-				
+
 				if ($layoutEditor != null) {
 					$recipients = array_merge($recipients, array($layoutEditor->getEmail() => $layoutEditor->getFullName()));
 				}
-				
+
 				if ($proofreader != null) {
 					$recipients = array_merge($recipients, array($proofreader->getEmail() => $proofreader->getFullName()));
 				}
@@ -286,7 +286,7 @@ class EditCommentForm extends Form {
 
 		return $recipients;
 	}
-	
+
 	/**
 	 * Email the comment.
 	 * @param $recipients array of recipients (email address => name)

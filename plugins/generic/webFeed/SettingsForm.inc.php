@@ -36,7 +36,7 @@ class SettingsForm extends Form {
 		parent::Form($plugin->getTemplatePath() . 'settingsForm.tpl');
 		$this->addCheck(new FormValidatorPost($this));
 	}
-	
+
 	/**
 	 * Initialize form data.
 	 */
@@ -48,7 +48,7 @@ class SettingsForm extends Form {
 		$this->setData('displayItems', $plugin->getSetting($journalId, 'displayItems'));
 		$this->setData('recentItems', $plugin->getSetting($journalId, 'recentItems'));
 	}
-	
+
 	/**
 	 * Assign form data to user-submitted data.
 	 */
@@ -64,7 +64,7 @@ class SettingsForm extends Form {
 		}
 
 	}
-	
+
 	/**
 	 * Save settings. 
 	 */
@@ -76,7 +76,7 @@ class SettingsForm extends Form {
 		$plugin->updateSetting($journalId, 'displayItems', $this->getData('displayItems'));
 		$plugin->updateSetting($journalId, 'recentItems', $this->getData('recentItems'));
 	}
-	
+
 }
 
 ?>

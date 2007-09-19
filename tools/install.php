@@ -25,7 +25,7 @@ class installTool extends CommandLineTool {
 
 	/** @var $params array installation parameters */
 	var $params;
-	
+
 	/**
 	 * Constructor.
 	 * @param $argv array command-line arguments
@@ -33,7 +33,7 @@ class installTool extends CommandLineTool {
 	function installTool($argv = array()) {
 		parent::CommandLineTool($argv);
 	}
-	
+
 	/**
 	 * Print command usage information.
 	 */
@@ -41,7 +41,7 @@ class installTool extends CommandLineTool {
 		echo "Install tool\n"
 			. "Usage: {$this->scriptName}\n";
 	}
-	
+
 	/**
 	 * Execute the script.
 	 */
@@ -50,14 +50,14 @@ class installTool extends CommandLineTool {
 			$this->install();
 		}
 	}
-	
+
 	/**
 	 * Perform installation.
 	 */
 	function install() {
 		$installer = &new Install($this->params);
 		$installer->setLogger($this);
-		
+
 		if ($installer->execute()) {
 			if (count($installer->getNotes()) > 0) {
 				printf("\nRelease Notes\n");
@@ -66,14 +66,14 @@ class installTool extends CommandLineTool {
 					printf("%s\n\n", $note);
 				}
 			}
-			
+
 			if (!$installer->wroteConfig()) {
 					printf("\nNew config.inc.php:\n");
 					printf("----------------------------------------\n");
 					echo $installer->getConfigContents();
 					printf("----------------------------------------\n");
 			}
-			
+
 			if ($this->params['manualInstall']) {
 				if (count($installer->getSQL()) > 0) {
 					printf("\nSQL\n");
@@ -82,17 +82,17 @@ class installTool extends CommandLineTool {
 						printf("%s\n\n", $sql);
 					}
 				}
-				
+
 			} else {
 				$newVersion = &$installer->getNewVersion();
 				printf("Successfully installed version %s\n", $newVersion->getVersionString());
 			}
-			
+
 		} else {
 			printf("ERROR: Installation failed: %s\n", $installer->getErrorString());
 		}
 	}
-	
+
 	/**
 	 * Read installation parameters from stdin.
 	 * FIXME: May want to implement an abstract "CLIForm" class handling input/validation.
@@ -100,9 +100,9 @@ class installTool extends CommandLineTool {
 	 */
 	function readParams() {
 		printf("%s\n", Locale::translate('installer.ojsInstallation'));
-	
+
 		$installForm = &new InstallForm();
-	
+
 		// Locale Settings
 		$this->printTitle('installer.localeSettings');
 		$this->readParamOptions('locale', 'locale.primary', $installForm->supportedLocales, 'en_US');
@@ -110,16 +110,16 @@ class installTool extends CommandLineTool {
 		$this->readParamOptions('clientCharset', 'installer.clientCharset', $installForm->supportedClientCharsets, 'utf-8');
 		$this->readParamOptions('connectionCharset', 'installer.connectionCharset', $installForm->supportedConnectionCharsets, '');
 		$this->readParamOptions('databaseCharset', 'installer.databaseCharset', $installForm->supportedDatabaseCharsets, '');
-		
+
 		// File Settings
 		$this->printTitle('installer.fileSettings');
 		$this->readParam('filesDir', 'installer.filesDir');
 		$this->readParamBoolean('skipFilesDir', 'installer.skipFilesDir');
-		
+
 		// Security Settings
 		$this->printTitle('installer.securitySettings');
 		$this->readParamOptions('encryption', 'installer.encryption', $installForm->supportedEncryptionAlgorithms, 'md5');
-		
+
 		// Administrator Account
 		$this->printTitle('installer.administratorAccount');
 		$this->readParam('adminUsername', 'user.username');
@@ -132,7 +132,7 @@ class installTool extends CommandLineTool {
 		} while ($this->params['adminPassword'] != $this->params['adminPassword2']);
 		@`/bin/stty echo`;
 		$this->readParam('adminEmail', 'user.email');
-		
+
 		// Database Settings
 		$this->printTitle('installer.databaseSettings');
 		$this->readParamOptions('databaseDriver', 'installer.databaseDriver', $installForm->checkDBDrivers());
@@ -141,18 +141,18 @@ class installTool extends CommandLineTool {
 		$this->readParam('databasePassword', 'installer.databasePassword', '');
 		$this->readParam('databaseName', 'installer.databaseName');
 		$this->readParamBoolean('createDatabase', 'installer.createDatabase', 'Y');
-		
+
 		// Miscellaneous Settings
 		$this->printTitle('installer.miscSettings');
 		$this->readParam('oaiRepositoryId', 'installer.oaiRepositoryId');
 		$this->readParamBoolean('manualInstall', 'installer.manualInstall');
-		
+
 		printf("\n*** ");
 		$this->readParamBoolean('install', 'installer.installOJS');
-		
+
 		return $this->params['install'];
 	}
-	
+
 	/**
 	 * Print input section title.
 	 * @param $title string
@@ -160,7 +160,7 @@ class installTool extends CommandLineTool {
 	function printTitle($title) {
 		printf("\n%s\n%s\n%s\n", str_repeat('-', 80), Locale::translate($title), str_repeat('-', 80));
 	}
-	
+
 	/**
 	 * Read a line of user input.
 	 * @return string
@@ -173,7 +173,7 @@ class installTool extends CommandLineTool {
 		}
 		return $value;
 	}
-	
+
 	/**
 	 * Read a string parameter.
 	 * @param $name string
@@ -187,16 +187,16 @@ class installTool extends CommandLineTool {
 			} else {
 				printf("%s: ", Locale::translate($prompt));
 			}
-			
+
 			$value = $this->readInput();
-			
+
 			if ($value === '' && isset($defaultValue)) {
 				$value = $defaultValue;
 			}
 		} while ($value === '' && $defaultValue !== '');
 		$this->params[$name] =  $value;
 	}
-	
+
 	/**
 	 * Prompt user for yes/no input.
 	 * @param $name string
@@ -214,7 +214,7 @@ class installTool extends CommandLineTool {
 			$this->params[$name] = (int)(strtolower(substr(trim($value), 0, 1)) != 'n');
 		}
 	}
-	
+
 	/**
 	 * Read a parameter from a set of options.
 	 * @param $name string
@@ -236,13 +236,13 @@ class installTool extends CommandLineTool {
 			} else {
 				printf("%s: ", Locale::translate('common.select'));
 			}
-			
+
 			$value = $this->readInput();
-			
+
 			if ($value === '' && isset($defaultValue)) {
 				$value = $defaultValue;
 			}
-			
+
 			$values = array();
 			if ($value !== '') {
 				if ($allowMultiple) {
@@ -258,14 +258,14 @@ class installTool extends CommandLineTool {
 				}
 			}
 		} while ($value === '' && $defaultValue !== '');
-		
+
 		if ($allowMultiple) {
 			$this->params[$name] = $values;
 		} else {
 			$this->params[$name] = $value;
 		}
 	}
-	
+
 	/**
 	 * Log install message to stdout.
 	 * @param $message string
@@ -273,7 +273,7 @@ class installTool extends CommandLineTool {
 	function log($message) {
 		printf("[%s]\n", $message);
 	}
-	
+
 }
 
 $tool = &new installTool(isset($argv) ? $argv : array());

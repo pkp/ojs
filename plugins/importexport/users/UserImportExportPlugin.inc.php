@@ -119,7 +119,7 @@ class UserImportExportPlugin extends ImportExportPlugin {
 					$newUser->setLastName(Request::getUserVar($i.'_lastName'));
 					$newUser->setUsername(Request::getUserVar($i.'_username'));
 					$newUser->setEmail(Request::getUserVar($i.'_email'));
-					
+
 					$locales = array();
 					if (Request::getUserVar($i.'_locales') != null || is_array(Request::getUserVar($i.'_locales'))) {
 						foreach (Request::getUserVar($i.'_locales') as $locale) {

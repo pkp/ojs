@@ -40,11 +40,11 @@ class SubscriptionHandler extends ManagerHandler {
 	 */
 	function deleteSubscription($args) {
 		parent::validate();
-		
+
 		if (isset($args) && !empty($args)) {
 			$journal = &Request::getJournal();
 			$subscriptionId = (int) $args[0];
-		
+
 			$subscriptionDao = &DAORegistry::getDAO('SubscriptionDAO');
 
 			// Ensure subscription is for this journal
@@ -52,7 +52,7 @@ class SubscriptionHandler extends ManagerHandler {
 				$subscriptionDao->deleteSubscriptionById($subscriptionId);
 			}
 		}
-		
+
 		Request::redirect(null, null, 'subscriptions');
 	}
 
@@ -85,7 +85,7 @@ class SubscriptionHandler extends ManagerHandler {
 			$subscriptionForm = &new SubscriptionForm($subscriptionId, $userId);
 			$subscriptionForm->initData();
 			$subscriptionForm->display();
-		
+
 		} else {
 				Request::redirect(null, null, 'subscriptions');
 		}
@@ -116,7 +116,7 @@ class SubscriptionHandler extends ManagerHandler {
 		if (!empty($search)) {
 			$searchType = Request::getUserVar('searchField');
 			$searchMatch = Request::getUserVar('searchMatch');
-			
+
 		} else if (isset($searchInitial)) {
 			$searchInitial = String::strtoupper($searchInitial);
 			$searchType = USER_FIELD_INITIAL;
@@ -126,7 +126,7 @@ class SubscriptionHandler extends ManagerHandler {
 		$rangeInfo = Handler::getRangeInfo('users');
 
 		$users = &$userDao->getUsersByField($searchType, $searchMatch, $search, true, $rangeInfo);
-		
+
 		$templateMgr->assign('searchField', $searchType);
 		$templateMgr->assign('searchMatch', $searchMatch);
 		$templateMgr->assign('search', $searchQuery);
@@ -152,9 +152,9 @@ class SubscriptionHandler extends ManagerHandler {
 	 */
 	function updateSubscription() {
 		parent::validate();
-		
+
 		import('subscription.form.SubscriptionForm');
-		
+
 		$journal = &Request::getJournal();
 		$subscriptionId = Request::getUserVar('subscriptionId') == null ? null : (int) Request::getUserVar('subscriptionId');
 		$subscriptionDao = &DAORegistry::getDAO('SubscriptionDAO');
@@ -163,7 +163,7 @@ class SubscriptionHandler extends ManagerHandler {
 
 			$subscriptionForm = &new SubscriptionForm($subscriptionId);
 			$subscriptionForm->readInputData();
-			
+
 			if ($subscriptionForm->validate()) {
 				$subscriptionForm->execute();
 
@@ -172,7 +172,7 @@ class SubscriptionHandler extends ManagerHandler {
 				} else {
 					Request::redirect(null, null, 'subscriptions');
 				}
-				
+
 			} else {
 				SubscriptionHandler::setupTemplate();
 
@@ -187,7 +187,7 @@ class SubscriptionHandler extends ManagerHandler {
 
 				$subscriptionForm->display();
 			}
-			
+
 		} else {
 				Request::redirect(null, null, 'subscriptions');
 		}
@@ -240,11 +240,11 @@ class SubscriptionHandler extends ManagerHandler {
 	 */
 	function deleteSubscriptionType($args) {
 		parent::validate();
-		
+
 		if (isset($args) && !empty($args)) {
 			$journal = &Request::getJournal();
 			$subscriptionTypeId = (int) $args[0];
-		
+
 			$subscriptionTypeDao = &DAORegistry::getDAO('SubscriptionTypeDAO');
 
 			// Ensure subscription type is for this journal
@@ -252,7 +252,7 @@ class SubscriptionHandler extends ManagerHandler {
 				$subscriptionTypeDao->deleteSubscriptionTypeById($subscriptionTypeId);
 			}
 		}
-		
+
 		Request::redirect(null, null, 'subscriptionTypes');
 	}
 
@@ -289,7 +289,7 @@ class SubscriptionHandler extends ManagerHandler {
 				$subscriptionTypeForm->initData();
 			}
 			$subscriptionTypeForm->display();
-		
+
 		} else {
 				Request::redirect(null, null, 'subscriptionTypes');
 		}
@@ -307,9 +307,9 @@ class SubscriptionHandler extends ManagerHandler {
 	 */
 	function updateSubscriptionType() {
 		parent::validate();
-		
+
 		import('subscription.form.SubscriptionTypeForm');
-		
+
 		$journal = &Request::getJournal();
 		$subscriptionTypeId = Request::getUserVar('typeId') == null ? null : (int) Request::getUserVar('typeId');
 		$subscriptionTypeDao = &DAORegistry::getDAO('SubscriptionTypeDAO');
@@ -318,7 +318,7 @@ class SubscriptionHandler extends ManagerHandler {
 
 			$subscriptionTypeForm = &new SubscriptionTypeForm($subscriptionTypeId);
 			$subscriptionTypeForm->readInputData();
-			
+
 			if ($subscriptionTypeForm->validate()) {
 				$subscriptionTypeForm->execute();
 
@@ -333,11 +333,11 @@ class SubscriptionHandler extends ManagerHandler {
 					$subscriptionTypeForm = &new SubscriptionTypeForm($subscriptionTypeId);
 					$subscriptionTypeForm->initData();
 					$subscriptionTypeForm->display();
-	
+
 				} else {
 					Request::redirect(null, null, 'subscriptionTypes');
 				}
-				
+
 			} else {
 				SubscriptionHandler::setupTemplate(true);
 
@@ -352,12 +352,12 @@ class SubscriptionHandler extends ManagerHandler {
 
 				$subscriptionTypeForm->display();
 			}
-			
+
 		} else {
 				Request::redirect(null, null, 'subscriptionTypes');
 		}
 	}
-	
+
 	/**
 	 * Display subscription policies for the current journal.
 	 */
@@ -382,7 +382,7 @@ class SubscriptionHandler extends ManagerHandler {
 		}
 		$subscriptionPolicyForm->display();
 	}
-	
+
 	/**
 	 * Save subscription policies for the current journal.
 	 */
@@ -393,7 +393,7 @@ class SubscriptionHandler extends ManagerHandler {
 
 		$subscriptionPolicyForm = &new SubscriptionPolicyForm();
 		$subscriptionPolicyForm->readInputData();
-			
+
 		if ($subscriptionPolicyForm->validate()) {
 			$subscriptionPolicyForm->execute();
 

@@ -22,11 +22,11 @@ class ProfileForm extends Form {
 	 */
 	function ProfileForm() {
 		parent::Form('user/profile.tpl');
-		
+
 		$user = &Request::getUser();
-		
+
 		$site = &Request::getSite();
-		
+
 		// Validation checks for this form
 		$this->addCheck(new FormValidator($this, 'firstName', 'required', 'user.profile.form.firstNameRequired'));
 		$this->addCheck(new FormValidator($this, 'lastName', 'required', 'user.profile.form.lastNameRequired'));
@@ -34,13 +34,13 @@ class ProfileForm extends Form {
 		$this->addCheck(new FormValidatorCustom($this, 'email', 'required', 'user.register.form.emailExists', array(DAORegistry::getDAO('UserDAO'), 'userExistsByEmail'), array($user->getUserId(), true), true));
 		$this->addCheck(new FormValidatorPost($this));
 	}
-	
+
 	/**
 	 * Display the form.
 	 */
 	function display() {
 		$user = &Request::getUser();
-		
+
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('username', $user->getUsername());
 
@@ -129,7 +129,7 @@ class ProfileForm extends Form {
 			'isReviewer' => Validation::isReviewer()
 		);
 	}
-	
+
 	/**
 	 * Assign form data to user-submitted data.
 	 */
@@ -157,12 +157,12 @@ class ProfileForm extends Form {
 			'authorRole',
 			'reviewerRole'
 		));
-		
+
 		if ($this->getData('userLocales') == null || !is_array($this->getData('userLocales'))) {
 			$this->setData('userLocales', array());
 		}
 	}
-	
+
 	/**
 	 * Save profile settings.
 	 */
@@ -186,10 +186,10 @@ class ProfileForm extends Form {
 		$user->setCountry($this->getData('country'));
 		$user->setBiography($this->getData('biography'), null); // Localized
 		$user->setInterests($this->getData('interests'), null); // Localized
-		
+
 		$site = &Request::getSite();
 		$availableLocales = $site->getSupportedLocales();
-		
+
 		$locales = array();
 		foreach ($this->getData('userLocales') as $locale) {
 			if (Locale::isLocaleValid($locale) && in_array($locale, $availableLocales)) {
@@ -197,7 +197,7 @@ class ProfileForm extends Form {
 			}
 		}
 		$user->setLocales($locales);
- 
+
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$userDao->updateUser($user);
 
@@ -269,7 +269,7 @@ class ProfileForm extends Form {
 			$authDao = &DAORegistry::getDAO('AuthSourceDAO');
 			$auth = &$authDao->getPlugin($user->getAuthId());
 		}
-		
+
 		if (isset($auth)) {
 			$auth->doSetUserInfo($user);
 		}

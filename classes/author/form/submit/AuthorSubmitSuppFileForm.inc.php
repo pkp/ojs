@@ -22,13 +22,13 @@ class AuthorSubmitSuppFileForm extends Form {
 
 	/** @var int the ID of the supplementary file */
 	var $suppFileId;
-	
+
 	/** @var Article current article */
 	var $article;
-	
+
 	/** @var SuppFile current file */
 	var $suppFile;
-	
+
 	/**
 	 * Constructor.
 	 * @param $article object
@@ -37,7 +37,7 @@ class AuthorSubmitSuppFileForm extends Form {
 	function AuthorSubmitSuppFileForm($article, $suppFileId = null) {
 		parent::Form('author/submit/suppFile.tpl');
 		$this->articleId = $article->getArticleId();
-		
+
 		if (isset($suppFileId) && !empty($suppFileId)) {
 			$suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
 			$this->suppFile = &$suppFileDao->getSuppFile($suppFileId, $article->getArticleId());
@@ -45,12 +45,12 @@ class AuthorSubmitSuppFileForm extends Form {
 				$this->suppFileId = $suppFileId;
 			}
 		}
-		
+
 		// Validation checks for this form
 		$this->addCheck(new FormValidatorLocale($this, 'title', 'required', 'author.submit.suppFile.form.titleRequired'));
 		$this->addCheck(new FormValidatorPost($this));
 	}
-	
+
 	/**
 	 * Get the names of fields for which data should be localized
 	 * @return array
@@ -69,7 +69,7 @@ class AuthorSubmitSuppFileForm extends Form {
 		$templateMgr->assign('articleId', $this->articleId);
 		$templateMgr->assign('suppFileId', $this->suppFileId);
 		$templateMgr->assign('submitStep', 4);
-		
+
 		$typeOptionsOutput = array(
 			'author.submit.suppFile.researchInstrument',
 			'author.submit.suppFile.researchMaterials',
@@ -82,21 +82,21 @@ class AuthorSubmitSuppFileForm extends Form {
 		$typeOptionsValues = $typeOptionsOutput;
 		array_push($typeOptionsOutput, 'common.other');
 		array_push($typeOptionsValues, '');
-		
+
 		$templateMgr->assign('typeOptionsOutput', $typeOptionsOutput);
 		$templateMgr->assign('typeOptionsValues', $typeOptionsValues);
-		
+
 		if (isset($this->article)) {
 			$templateMgr->assign('submissionProgress', $this->article->getSubmissionProgress());
 		}
-		
+
 		if (isset($this->suppFile)) {
 			$templateMgr->assign_by_ref('suppFile', $this->suppFile);
 		}
 		$templateMgr->assign('helpTopicId','submission.supplementaryFiles');		
 		parent::display();
 	}
-	
+
 	/**
 	 * Initialize form data from current supplementary file (if applicable).
 	 */
@@ -117,15 +117,15 @@ class AuthorSubmitSuppFileForm extends Form {
 				'language' => $suppFile->getLanguage(),
 				'showReviewers' => $suppFile->getShowReviewers()
 			);
-			
+
 		} else {
 			$this->_data = array(
 				'type' => ''
 			);
 		}
-		
+
 	}
-	
+
 	/**
 	 * Assign form data to user-submitted data.
 	 */
@@ -147,7 +147,7 @@ class AuthorSubmitSuppFileForm extends Form {
 			)
 		);
 	}
-	
+
 	/**
 	 * Save changes to the supplementary file.
 	 * @return int the supplementary file ID
@@ -156,9 +156,9 @@ class AuthorSubmitSuppFileForm extends Form {
 		import("file.ArticleFileManager");
 		$articleFileManager = &new ArticleFileManager($this->articleId);
 		$suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
-		
+
 		$fileName = 'uploadSuppFile';
-		
+
 		// edit an existing supp file, otherwise create new supp file entry	
 		if (isset($this->suppFile)) {
 			$suppFile = &$this->suppFile;
@@ -173,7 +173,7 @@ class AuthorSubmitSuppFileForm extends Form {
 			// Update existing supplementary file
 			$this->setSuppFileData($suppFile);
 			$suppFileDao->updateSuppFile($suppFile);
-			
+
 		} else {
 			// Upload file, if file selected.
 			if ($articleFileManager->uploadedFileExists($fileName)) {
@@ -181,7 +181,7 @@ class AuthorSubmitSuppFileForm extends Form {
 			} else {
 				$fileId = 0;
 			}
-			
+
 			// Insert new supplementary file		
 			$suppFile = &new SuppFile();
 			$suppFile->setArticleId($this->articleId);
@@ -190,10 +190,10 @@ class AuthorSubmitSuppFileForm extends Form {
 			$suppFileDao->insertSuppFile($suppFile);
 			$this->suppFileId = $suppFile->getSuppFileId();
 		}
-		
+
 		return $this->suppFileId;
 	}
-	
+
 	/**
 	 * Assign form data to a SuppFile.
 	 * @param $suppFile SuppFile

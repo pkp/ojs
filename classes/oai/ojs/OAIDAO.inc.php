@@ -20,7 +20,7 @@ import('issue.Issue');
 class OAIDAO extends DAO {
  	/** @var $oai JournalOAI parent OAI object */
  	var $oai;
- 	
+
  	/** Helper DAOs */
  	var $journalDao;
  	var $sectionDao;
@@ -29,10 +29,10 @@ class OAIDAO extends DAO {
  	var $authorDao;
  	var $suppFileDao;
  	var $journalSettingsDao;
- 
+
  	var $journalCache;
 	var $sectionCache;
- 
+
  	/**
 	 * Constructor.
 	 */
@@ -49,7 +49,7 @@ class OAIDAO extends DAO {
 		$this->journalCache = array();
 		$this->sectionCache = array();
 	}
-	
+
 	/**
 	 * Set parent OAI object.
 	 * @param JournalOAI
@@ -57,11 +57,11 @@ class OAIDAO extends DAO {
 	function setOAI(&$oai) {
 		$this->oai = $oai;
 	}
-	
+
 	//
 	// Records
 	//
-	
+
 	/**
 	 * Return the *nix timestamp of the earliest published article.
 	 * @param $journalId int optional
@@ -73,10 +73,10 @@ class OAIDAO extends DAO {
 			FROM published_articles pa, issues i
 			WHERE pa.issue_id = i.issue_id AND i.published = 1'
 			. (isset($journalId) ? ' AND i.journal_id = ?' : ''),
-			
+
 			isset($journalId) ? $journalId : false
 		);
-		
+
 		if (isset($result->fields[0])) {
 			$timestamp = strtotime($this->datetimeFromDB($result->fields[0]));
 		}
@@ -89,7 +89,7 @@ class OAIDAO extends DAO {
 
 		return $timestamp;
 	}
-	
+
 	/**
 	 * Check if an article ID specifies a published article.
 	 * @param $articleId int
@@ -102,10 +102,10 @@ class OAIDAO extends DAO {
 			FROM published_articles pa, issues i
 			WHERE pa.issue_id = i.issue_id AND i.published = 1 AND pa.article_id = ?'
 			. (isset($journalId) ? ' AND i.journal_id = ?' : ''),
-			
+
 			isset($journalId) ? array($articleId, $journalId) : $articleId
 		);
-		
+
 		$returner = $result->fields[0] == 1;
 
 		$result->Close();
@@ -113,7 +113,7 @@ class OAIDAO extends DAO {
 
 		return $returner;
 	}
-	
+
 	/**
 	 * Return OAI record for specified article.
 	 * @param $articleId int
@@ -152,7 +152,7 @@ class OAIDAO extends DAO {
 
 		return $returner;
 	}
-	
+
 	/**
 	 * Return set of OAI records matching specified parameters.
 	 * @param $journalId int
@@ -166,7 +166,7 @@ class OAIDAO extends DAO {
 	 */
 	function &getRecords($journalId, $sectionId, $from, $until, $offset, $limit, &$total) {
 		$records = array();
-		
+
 		$params = array();
 		if (isset($journalId)) {
 			array_push($params, $journalId);
@@ -197,9 +197,9 @@ class OAIDAO extends DAO {
 				. ' ORDER BY journal_id',
 			$params
 		);
-		
+
 		$total = $result->RecordCount();
-		
+
 		$result->Move($offset);
 		for ($count = 0; $count < $limit && !$result->EOF; $count++) {
 			$row =& $result->GetRowAssoc(false);
@@ -209,10 +209,10 @@ class OAIDAO extends DAO {
 
 		$result->Close();
 		unset($result);
-		
+
 		return $records;
 	}
-	
+
 	/**
 	 * Return set of OAI identifiers matching specified parameters.
 	 * @param $journalId int
@@ -226,7 +226,7 @@ class OAIDAO extends DAO {
 	 */
 	function &getIdentifiers($journalId, $sectionId, $from, $until, $offset, $limit, &$total) {
 		$records = array();
-		
+
 		$params = array();
 		if (isset($journalId)) {
 			array_push($params, $journalId);
@@ -255,9 +255,9 @@ class OAIDAO extends DAO {
 				. ' ORDER BY journal_id',
 			$params
 		);
-		
+
 		$total = $result->RecordCount();
-		
+
 		$result->Move($offset);
 		for ($count = 0; $count < $limit && !$result->EOF; $count++) {
 			$row =& $result->GetRowAssoc(false);
@@ -267,7 +267,7 @@ class OAIDAO extends DAO {
 
 		$result->Close();
 		unset($result);
-		
+
 		return $records;
 	}
 
@@ -322,7 +322,7 @@ class OAIDAO extends DAO {
 	 */
 	function &_returnRecordFromRow(&$row) {
 		$record =& new OAIRecord();
-		
+
 		$articleId = $row['article_id'];
 		if ($this->journalSettingsDao->getSetting($row['journal_id'], 'enablePublicArticleId')) {
 			if (!empty($row['public_article_id'])) {
@@ -340,7 +340,7 @@ class OAIDAO extends DAO {
 		$record->identifier = $this->oai->articleIdToIdentifier($row['article_id']);
 		$record->datestamp = $this->oai->UTCDate(strtotime($this->datetimeFromDB($row['date_published'])));
 		$record->sets = array($journal->getPath() . ':' . $section->getSectionAbbrev());
-		
+
 		$record->url = Request::url($journal->getPath(), 'article', 'view', array($articleId));
 
 		$record->titles = $this->stripAssocArray((array) $article->getTitle(null));
@@ -373,13 +373,13 @@ class OAIDAO extends DAO {
 
 		$record->rights = (array) $this->journalSettingsDao->getSetting($row['journal_id'], 'copyrightNotice');
 		$record->pages = $article->getPages();
-		
+
 		// Get publisher (may override earlier publisher)
 		$publisherInstitution = (array) $journal->getSetting('publisherInstitution');
 		if (!empty($publisherInstitution)) {
 			$record->publishers = $publisherInstitution;
 		}
-		
+
 		// Get author names
 		$authors = $this->authorDao->getAuthorsByArticle($row['article_id']);
 		$record->creator = array();
@@ -391,7 +391,7 @@ class OAIDAO extends DAO {
 			}
 			$record->creator[] = $authorName;
 		}
-		
+
 		// Get galley formats
 		$result =& $this->retrieve(
 			'SELECT DISTINCT(f.file_type) FROM article_galleys g, article_files f WHERE g.file_id = f.file_id AND g.article_id = ?',
@@ -404,7 +404,7 @@ class OAIDAO extends DAO {
 
 		$result->Close();
 		unset($result);
-		
+
 		// Get supplementary files
 		$suppFiles =& $this->suppFileDao->getSuppFilesByArticle($row['article_id']);
 		for ($i = 0, $num = count($suppFiles); $i < $num; $i++) {
@@ -416,7 +416,7 @@ class OAIDAO extends DAO {
 
 		return $record;
 	}
-	
+
 	/**
 	 * Return OAIIdentifier object from database row.
 	 * @param $row array
@@ -427,14 +427,14 @@ class OAIDAO extends DAO {
 		$section =& $this->getSection($row['section_id']);
 
 		$record =& new OAIRecord();
-		
+
 		$record->identifier = $this->oai->articleIdToIdentifier($row['article_id']);
 		$record->datestamp = $this->oai->UTCDate(strtotime($this->datetimeFromDB($row['date_published'])));
 		$record->sets = array($journal->getPath() . ':' . $section->getSectionAbbrev());
-		
+
 		return $record;
 	}
-	
+
 	// FIXME Common code with issue.Issue
 	function _formatIssueId(&$row) {
 		$issue =& $this->getIssue($row['issue_id']);
@@ -462,10 +462,10 @@ class OAIDAO extends DAO {
 		$result =& $this->retrieve(
 			'SELECT * FROM oai_resumption_tokens WHERE token = ?', $tokenId
 		);
-		
+
 		if ($result->RecordCount() == 0) {
 			$token = null;
-			
+
 		} else {
 			$row =& $result->getRowAssoc(false);
 			$token =& new OAIResumptionToken($row['token'], $row['record_offset'], unserialize($row['params']), $row['expire']);
@@ -495,14 +495,14 @@ class OAIDAO extends DAO {
 			$result->Close();
 			unset($result);
 		} while($val != 0);
-		
+
 		$this->update(
 			'INSERT INTO oai_resumption_tokens (token, record_offset, params, expire)
 			VALUES
 			(?, ?, ?, ?)',
 			array($token->id, $token->offset, serialize($token->params), $token->expire)
 		);
-		
+
 		return $token;
 	}
 
@@ -524,24 +524,24 @@ class OAIDAO extends DAO {
 			$journals =& $this->journalDao->getJournals();
 			$journals =& $journals->toArray();
 		}
-		
+
 		// FIXME Set descriptions
 		$sets = array();
 		foreach ($journals as $journal) {
 			$title = $journal->getJournalTitle();
 			$abbrev = $journal->getPath();
 			array_push($sets, new OAISet($abbrev, $title, ''));
-			
+
 			$sections =& $this->sectionDao->getJournalSections($journal->getJournalId());
 			foreach ($sections->toArray() as $section) {
 				array_push($sets, new OAISet($abbrev . ':' . $section->getSectionAbbrev(), $section->getSectionTitle(), ''));
 			}
 		}
-		
+
 		if ($offset != 0) {
 			$sets = array_slice($sets, $offset);
 		}
-		
+
 		return $sets;
 	}
 
@@ -554,15 +554,15 @@ class OAIDAO extends DAO {
 	 */
 	function getSetJournalSectionId($journalSpec, $sectionSpec, $restrictJournalId = null) {
 		$journalId = null;
-		
+
 		$journal =& $this->journalDao->getJournalByPath($journalSpec);
 		if (!isset($journal) || (isset($restrictJournalId) && $journal->getJournalId() != $restrictJournalId)) {
 			return array(0, 0);
 		}
-		
+
 		$journalId = $journal->getJournalId();
 		$sectionId = null;
-		
+
 		if (isset($sectionSpec)) {
 			$section =& $this->sectionDao->getSectionByAbbrev($sectionSpec, $journal->getJournalId());
 			if (isset($section)) {
@@ -571,7 +571,7 @@ class OAIDAO extends DAO {
 				$sectionId = 0;
 			}
 		}
-		
+
 		return array($journalId, $sectionId);
 	}
 }

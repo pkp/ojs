@@ -45,7 +45,7 @@ class SectionForm extends Form {
 
 		$journal =& Request::getJournal();
 		$this->sectionId = $sectionId;
-		
+
 		// Validation checks for this form
 		$this->addCheck(new FormValidatorLocale($this, 'title', 'required', 'manager.sections.form.titleRequired'));
 		$this->addCheck(new FormValidatorLocale($this, 'abbrev', 'required', 'manager.sections.form.abbrevRequired'));
@@ -102,7 +102,7 @@ class SectionForm extends Form {
 		$templateMgr->assign('helpTopicId','journal.managementPages.sections');
 		parent::display();
 	}
-	
+
 	/**
 	 * Initialize form data from current settings.
 	 */
@@ -111,7 +111,7 @@ class SectionForm extends Form {
 			$journal = &Request::getJournal();
 			$sectionDao = &DAORegistry::getDAO('SectionDAO');
 			$section = &$sectionDao->getSection($this->sectionId, $journal->getJournalId());
-			
+
 			if ($section == null) {
 				unset($this->sectionId);
 			} else {
@@ -133,7 +133,7 @@ class SectionForm extends Form {
 			}
 		}
 	}
-	
+
 	/**
 	 * Assign form data to user-submitted data.
 	 */
@@ -167,26 +167,26 @@ class SectionForm extends Form {
 		$this->setData('assignedEditors', $assignedEditors);
 		$this->setData('unassignedEditors', $unassignedEditors);
 	}
-	
+
 	/**
 	 * Save section.
 	 */
 	function execute() {
 		$journal = &Request::getJournal();
 		$journalId = $journal->getJournalId();
-			
+
 		$sectionDao = &DAORegistry::getDAO('SectionDAO');
-		
+
 		if (isset($this->sectionId)) {
 			$section = &$sectionDao->getSection($this->sectionId, $journalId);
 		}
-		
+
 		if (!isset($section)) {
 			$section = &new Section();
 			$section->setJournalId($journalId);
 			$section->setSequence(REALLY_BIG_NUMBER);
 		}
-		
+
 		$section->setTitle($this->getData('title'), null); // Localized
 		$section->setAbbrev($this->getData('abbrev'), null); // Localized
 		$section->setMetaIndexed($this->getData('metaIndexed') ? 0 : 1); // #2066: Inverted
@@ -197,16 +197,16 @@ class SectionForm extends Form {
 		$section->setHideTitle($this->getData('hideTitle') ? 1 : 0);
 		$section->setHideAbout($this->getData('hideAbout') ? 1 : 0);
 		$section->setPolicy($this->getData('policy'), null); // Localized
-		
+
 		if ($section->getSectionId() != null) {
 			$sectionDao->updateSection($section);
 			$sectionId = $section->getSectionId();
-			
+
 		} else {
 			$sectionId = $sectionDao->insertSection($section);
 			$sectionDao->resequenceSections($journalId);
 		}
-		
+
 		// Save assigned editors
 		$assignedEditorIds = Request::getUserVar('assignedEditorIds');
 		if (empty($assignedEditorIds)) $assignedEditorIds = array();

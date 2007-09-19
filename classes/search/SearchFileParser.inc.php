@@ -21,7 +21,7 @@ class SearchFileParser {
 
 	/** @var $fp int file handle */
 	var $fp;
-	
+
 	/**
 	 * Constructor.
 	 * @param $filePath string
@@ -29,7 +29,7 @@ class SearchFileParser {
 	function SearchFileParser($filePath) {
 		$this->filePath = $filePath;
 	}
-	
+
 	/**
 	 * Return the path to the file.
 	 * @return string
@@ -37,7 +37,7 @@ class SearchFileParser {
 	function getFilePath() {
 		return $this->filePath;
 	}
-	
+
 	/**
 	 * Change the file path.
 	 * @param $filePath string
@@ -45,7 +45,7 @@ class SearchFileParser {
 	function setFilePath($filePath) {
 		$this->filePath = $filePath;
 	}
-	
+
 	/**
 	 * Open the file.
 	 * @return boolean
@@ -54,14 +54,14 @@ class SearchFileParser {
 		$this->fp = @fopen($this->filePath, 'rb');
 		return $this->fp ? true : false;
 	}
-	
+
 	/**
 	 * Close the file.
 	 */
 	function close() {
 		fclose($this->fp);
 	}
-	
+
 	/**
 	 * Read and return the next block/line of text.
 	 * @return string (false on EOF)
@@ -72,7 +72,7 @@ class SearchFileParser {
 		}
 		return $this->doRead();
 	}
-	
+
 	/**
 	 * Read from the file pointer.
 	 * @return string
@@ -80,12 +80,12 @@ class SearchFileParser {
 	function doRead() {
 		return fgets($this->fp, 4096);
 	}
-	
-	
+
+
 	//
 	// Static methods
 	//
-	
+
 	/**
 	 * Create a text parser for an article file.
 	 * @param $file ArticleFile
@@ -95,7 +95,7 @@ class SearchFileParser {
 		$returner = &SearchFileParser::fromFileType($file->getFileType(), $file->getFilePath());
 		return $returner;
 	}
-	
+
 	/**
 	 * Create a text parser for a file.
 	 * @param $type string
@@ -116,7 +116,7 @@ class SearchFileParser {
 		}
 		return $returner;
 	}
-	
+
 }
 
 ?>

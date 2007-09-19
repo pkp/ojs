@@ -90,7 +90,7 @@ class SubscriptionPolicyForm extends Form {
 		$this->addCheck(new FormValidatorInSet($this, 'numWeeksAfterSubscriptionExpiryReminder', 'optional', 'manager.subscriptionPolicies.numWeeksAfterSubscriptionExpiryReminderValid', array_keys($this->validNumWeeksAfterExpiry)));
 		$this->addCheck(new FormValidatorPost($this));
 	}
-	
+
 	/**
 	 * Display the form.
 	 */
@@ -101,10 +101,10 @@ class SubscriptionPolicyForm extends Form {
 		$templateMgr->assign('validNumWeeksBeforeExpiry', $this->validNumWeeksBeforeExpiry);
 		$templateMgr->assign('validNumMonthsAfterExpiry', $this->validNumMonthsAfterExpiry);
 		$templateMgr->assign('validNumWeeksAfterExpiry', $this->validNumWeeksAfterExpiry);
-	
+
 		parent::display();
 	}
-	
+
 	/**
 	 * Initialize form data from current subscription policies.
 	 */
@@ -136,7 +136,7 @@ class SubscriptionPolicyForm extends Form {
 			'numWeeksAfterSubscriptionExpiryReminder' => $journalSettingsDao->getSetting($journalId, 'numWeeksAfterSubscriptionExpiryReminder')
 		);
 	}
-	
+
 	/**
 	 * Assign form data to user-submitted data.
 	 */
@@ -184,7 +184,7 @@ class SubscriptionPolicyForm extends Form {
 		$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
 		$journal = &Request::getJournal();
 		$journalId = $journal->getJournalId();
-	
+
 		$journalSettingsDao->updateSetting($journalId, 'subscriptionName', $this->getData('subscriptionName'), 'string');
 		$journalSettingsDao->updateSetting($journalId, 'subscriptionEmail', $this->getData('subscriptionEmail'), 'string');
 		$journalSettingsDao->updateSetting($journalId, 'subscriptionPhone', $this->getData('subscriptionPhone'), 'string');

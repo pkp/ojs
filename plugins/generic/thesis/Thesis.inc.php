@@ -28,11 +28,11 @@ class Thesis extends DataObject {
 	function Thesis() {
 		parent::DataObject();
 	}
-	
+
 	//
 	// Get/set methods
 	//
-	
+
 	/**
 	 * Get the ID of the thesis.
 	 * @return int
@@ -40,7 +40,7 @@ class Thesis extends DataObject {
 	function getThesisId() {
 		return $this->getData('thesisId');
 	}
-	
+
 	/**
 	 * Set the ID of the thesis.
 	 * @param $thesisId int
@@ -56,7 +56,7 @@ class Thesis extends DataObject {
 	function getJournalId() {
 		return $this->getData('journalId');
 	}
-	
+
 	/**
 	 * Set the journal ID of the thesis.
 	 * @param $journalId int
@@ -72,7 +72,7 @@ class Thesis extends DataObject {
 	function getStatus() {
 		return $this->getData('status');
 	}
-	
+
 	/**
 	 * Set the status of the thesis.
 	 * @param $status int
@@ -88,7 +88,7 @@ class Thesis extends DataObject {
 	function getDegree() {
 		return $this->getData('degree');
 	}
-	
+
 	/**
 	 * Set thesis degree.
 	 * @param $degree int
@@ -104,7 +104,7 @@ class Thesis extends DataObject {
 	function getDegreeName() {
 		return $this->getData('degreeName');
 	}
-	
+
 	/**
 	 * Set thesis degree name.
 	 * @param $degreeName int
@@ -120,7 +120,7 @@ class Thesis extends DataObject {
 	function getDepartment() {
 		return $this->getData('department');
 	}
-	
+
 	/**
 	 * Set thesis department.
 	 * @param $department string
@@ -136,7 +136,7 @@ class Thesis extends DataObject {
 	function getUniversity() {
 		return $this->getData('university');
 	}
-	
+
 	/**
 	 * Set thesis university.
 	 * @param $university string
@@ -152,7 +152,7 @@ class Thesis extends DataObject {
 	function getDateApproved() {
 		return $this->getData('dateApproved');
 	}
-	
+
 	/**
 	 * Set thesis approval date.
 	 * @param $dateApproved date (YYYY-MM-DD)
@@ -168,7 +168,7 @@ class Thesis extends DataObject {
 	function getTitle() {
 		return $this->getData('title');
 	}
-	
+
 	/**
 	 * Set thesis title.
 	 * @param $title string
@@ -184,7 +184,7 @@ class Thesis extends DataObject {
 	function getAbstract() {
 		return $this->getData('abstract');
 	}
-	
+
 	/**
 	 * Set thesis abstract.
 	 * @param $abstract string 
@@ -200,7 +200,7 @@ class Thesis extends DataObject {
 	function getUrl() {
 		return $this->getData('url');
 	}
-	
+
 	/**
 	 * Set thesis url.
 	 * @param $url string
@@ -216,7 +216,7 @@ class Thesis extends DataObject {
 	function getComment() {
 		return $this->getData('comment');
 	}
-	
+
 	/**
 	 * Set thesis comment.
 	 * @param $comment string 
@@ -232,7 +232,7 @@ class Thesis extends DataObject {
 	function getStudentFirstName() {
 		return $this->getData('studentFirstName');
 	}
-	
+
 	/**
 	 * Set thesis student first name.
 	 * @param $studentFirstName string
@@ -248,7 +248,7 @@ class Thesis extends DataObject {
 	function getStudentMiddleName() {
 		return $this->getData('studentMiddleName');
 	}
-	
+
 	/**
 	 * Set thesis student middle name.
 	 * @param $studentMiddleName string
@@ -264,7 +264,7 @@ class Thesis extends DataObject {
 	function getStudentLastName() {
 		return $this->getData('studentLastName');
 	}
-	
+
 	/**
 	 * Set thesis student last name.
 	 * @param $studentLastName string
@@ -299,7 +299,7 @@ class Thesis extends DataObject {
 	function getStudentEmail() {
 		return $this->getData('studentEmail');
 	}
-	
+
 	/**
 	 * Set thesis student email.
 	 * @param $studentEmail string
@@ -315,7 +315,7 @@ class Thesis extends DataObject {
 	function getStudentEmailPublish() {
 		return $this->getData('studentEmailPublish');
 	}
-	
+
 	/**
 	 * Set thesis publish student email.
 	 * @param $studentEmailPublish int 
@@ -331,7 +331,7 @@ class Thesis extends DataObject {
 	function getStudentBio() {
 		return $this->getData('studentBio');
 	}
-	
+
 	/**
 	 * Set thesis student bio.
 	 * @param $studentBio string 
@@ -347,7 +347,7 @@ class Thesis extends DataObject {
 	function getSupervisorFirstName() {
 		return $this->getData('supervisorFirstName');
 	}
-	
+
 	/**
 	 * Set thesis supervisor first name.
 	 * @param $supervisorFirstName string
@@ -363,7 +363,7 @@ class Thesis extends DataObject {
 	function getSupervisorMiddleName() {
 		return $this->getData('supervisorMiddleName');
 	}
-	
+
 	/**
 	 * Set thesis supervisor middle name.
 	 * @param $supervisorMiddleName string
@@ -379,7 +379,7 @@ class Thesis extends DataObject {
 	function getSupervisorLastName() {
 		return $this->getData('supervisorLastName');
 	}
-	
+
 	/**
 	 * Set thesis supervisor last name.
 	 * @param $supervisorLastName string
@@ -414,7 +414,7 @@ class Thesis extends DataObject {
 	function getSupervisorEmail() {
 		return $this->getData('supervisorEmail');
 	}
-	
+
 	/**
 	 * Set thesis supervisor email.
 	 * @param $supervisorEmail string
@@ -430,7 +430,7 @@ class Thesis extends DataObject {
 	function getDiscipline() {
 		return $this->getData('discipline');
 	}
-	
+
 	/**
 	 * Set thesis discipline.
 	 * @param $discipline string 
@@ -446,7 +446,7 @@ class Thesis extends DataObject {
 	function getSubjectClass() {
 		return $this->getData('subjectClass');
 	}
-	
+
 	/**
 	 * Set thesis subject classification.
 	 * @param $subjectClass string 
@@ -462,7 +462,7 @@ class Thesis extends DataObject {
 	function getSubject() {
 		return $this->getData('subject');
 	}
-	
+
 	/**
 	 * Set thesis subject.
 	 * @param $subject string 
@@ -478,7 +478,7 @@ class Thesis extends DataObject {
 	function getCoverageGeo() {
 		return $this->getData('coverageGeo');
 	}
-	
+
 	/**
 	 * Set thesis coverage geo.
 	 * @param $coverageGeo string 
@@ -494,7 +494,7 @@ class Thesis extends DataObject {
 	function getCoverageChron() {
 		return $this->getData('coverageChron');
 	}
-	
+
 	/**
 	 * Set thesis coverage chron.
 	 * @param $coverageChron string 
@@ -510,7 +510,7 @@ class Thesis extends DataObject {
 	function getCoverageSample() {
 		return $this->getData('coverageSample');
 	}
-	
+
 	/**
 	 * Set thesis coverage sample.
 	 * @param $coverageSample string 
@@ -526,7 +526,7 @@ class Thesis extends DataObject {
 	function getMethod() {
 		return $this->getData('method');
 	}
-	
+
 	/**
 	 * Set thesis method.
 	 * @param $method string 
@@ -542,7 +542,7 @@ class Thesis extends DataObject {
 	function getLanguage() {
 		return $this->getData('language');
 	}
-	
+
 	/**
 	 * Set thesis language.
 	 * @param $language string 

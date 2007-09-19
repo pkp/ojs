@@ -29,7 +29,7 @@ class RTXMLParser {
 	function RTXMLParser() {
 		$this->parser = &new XMLParser();
 	}
-	
+
 	/**
 	 * Parse an RT version XML file.
 	 * @param $file string path to the XML file
@@ -38,15 +38,15 @@ class RTXMLParser {
 	function &parse($file) {	
 		$tree = $this->parser->parse($file);
 		$version = false;
-		
+
 		if ($tree !== false) {
 			$version = &$this->parseVersion($tree);
 		}
-		
+
 		return $version;
 	}
-	
-	
+
+
 	/**
 	 * Parse all RT version XML files in a directory.
 	 * @param $dir string path to the directory
@@ -54,7 +54,7 @@ class RTXMLParser {
 	 */
 	function &parseAll($dir) {
 		$versions = array();
-		
+
 		if(($fd = opendir($dir)) !== false) {
 			while (($file = readdir($fd)) !== false) {
 				if (preg_match('/\.xml$/', $file)) {
@@ -65,16 +65,16 @@ class RTXMLParser {
 			}
 			closedir($fd);
 		}
-		
+
 		return $versions;
 	}
-	
-	
+
+
 	//
 	// PRIVATE
 	//
-	
-	
+
+
 	/**
 	 * Parse version entity.
 	 * @param $version XMLNode
@@ -83,10 +83,10 @@ class RTXMLParser {
 	function &parseVersion(&$version) {
 		$newVersion = &new RTVersion();
 		$numContexts = 0;
-		
+
 		$newVersion->key = $version->getAttribute('id');
 		$newVersion->locale = $version->getAttribute('locale');
-		
+
 		foreach ($version->getChildren() as $attrib) {
 			switch ($attrib->getName()) {
 				case 'version_title':
@@ -102,10 +102,10 @@ class RTXMLParser {
 					break;
 			}
 		}
-		
+
 		return $newVersion;
 	}
-	
+
 	/**
 	 * Parse context entity.
 	 * @param $context XMLNode
@@ -114,7 +114,7 @@ class RTXMLParser {
 	function &parseContext(&$context) {
 		$newContext = &new RTContext();
 		$numSearches = 0;
-		
+
 		foreach ($context->getChildren() as $attrib) {
 			switch ($attrib->getName()) {
 				case 'context_title':
@@ -145,10 +145,10 @@ class RTXMLParser {
 					break;
 			}
 		}
-		
+
 		return $newContext;
 	}
-	
+
 	/**
 	 * Parse search entity.
 	 * @param $context XMLNode
@@ -156,7 +156,7 @@ class RTXMLParser {
 	 */
 	function &parseSearch(&$search) {
 		$newSearch = &new RTSearch();
-		
+
 		foreach ($search->getChildren() as $attrib) {
 			switch ($attrib->getName()) {
 				case 'search_title':
@@ -176,10 +176,10 @@ class RTXMLParser {
 					break;
 			}
 		}
-		
+
 		return $newSearch;
 	}
-	
+
 }
 
 ?>

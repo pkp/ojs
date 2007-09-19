@@ -23,7 +23,7 @@ class Author extends DataObject {
 		parent::DataObject();
 		$this->setAuthorId(0);
 	}
-	
+
 	/**
 	 * Get the author's complete name.
 	 * Includes first name, middle name (if applicable), and last name.
@@ -32,11 +32,11 @@ class Author extends DataObject {
 	function getFullName() {
 		return $this->getData('firstName') . ' ' . ($this->getData('middleName') != '' ? $this->getData('middleName') . ' ' : '') . $this->getData('lastName');
 	}
-	
+
 	//
 	// Get/set methods
 	//
-	
+
 	/**
 	 * Get ID of author.
 	 * @return int
@@ -44,7 +44,7 @@ class Author extends DataObject {
 	function getAuthorId() {
 		return $this->getData('authorId');
 	}
-	
+
 	/**
 	 * Set ID of author.
 	 * @param $authorId int
@@ -52,7 +52,7 @@ class Author extends DataObject {
 	function setAuthorId($authorId) {
 		return $this->setData('authorId', $authorId);
 	}
-	
+
 	/**
 	 * Get ID of article.
 	 * @return int
@@ -60,7 +60,7 @@ class Author extends DataObject {
 	function getArticleId() {
 		return $this->getData('articleId');
 	}
-	
+
 	/**
 	 * Set ID of article.
 	 * @param $articleId int
@@ -68,7 +68,7 @@ class Author extends DataObject {
 	function setArticleId($articleId) {
 		return $this->setData('articleId', $articleId);
 	}
-		
+
 	/**
 	 * Get first name.
 	 * @return string
@@ -76,7 +76,7 @@ class Author extends DataObject {
 	function getFirstName() {
 		return $this->getData('firstName');
 	}
-	
+
 	/**
 	 * Set first name.
 	 * @param $firstName string
@@ -85,7 +85,7 @@ class Author extends DataObject {
 	{
 		return $this->setData('firstName', $firstName);
 	}
-	
+
 	/**
 	 * Get middle name.
 	 * @return string
@@ -93,7 +93,7 @@ class Author extends DataObject {
 	function getMiddleName() {
 		return $this->getData('middleName');
 	}
-	
+
 	/**
 	 * Set middle name.
 	 * @param $middleName string
@@ -101,7 +101,7 @@ class Author extends DataObject {
 	function setMiddleName($middleName) {
 		return $this->setData('middleName', $middleName);
 	}
-	
+
 	/**
 	 * Get last name.
 	 * @return string
@@ -109,7 +109,7 @@ class Author extends DataObject {
 	function getLastName() {
 		return $this->getData('lastName');
 	}
-	
+
 	/**
 	 * Set last name.
 	 * @param $lastName string
@@ -117,7 +117,7 @@ class Author extends DataObject {
 	function setLastName($lastName) {
 		return $this->setData('lastName', $lastName);
 	}
-	
+
 	/**
 	 * Get affiliation (position, institution, etc.).
 	 * @return string
@@ -125,7 +125,7 @@ class Author extends DataObject {
 	function getAffiliation() {
 		return $this->getData('affiliation');
 	}
-	
+
 	/**
 	 * Set affiliation.
 	 * @param $affiliation string
@@ -133,7 +133,7 @@ class Author extends DataObject {
 	function setAffiliation($affiliation) {
 		return $this->setData('affiliation', $affiliation);
 	}
-	
+
 	/**
 	 * Get country code
 	 * @return string
@@ -154,7 +154,7 @@ class Author extends DataObject {
 		}
 		return null;
 	}
-	
+
 	/**
 	 * Set country code.
 	 * @param $country string
@@ -162,7 +162,7 @@ class Author extends DataObject {
 	function setCountry($country) {
 		return $this->setData('country', $country);
 	}
-	
+
 	/**
 	 * Get email address.
 	 * @return string
@@ -170,7 +170,7 @@ class Author extends DataObject {
 	function getEmail() {
 		return $this->getData('email');
 	}
-	
+
 	/**
 	 * Set email address.
 	 * @param $email string
@@ -178,7 +178,7 @@ class Author extends DataObject {
 	function setEmail($email) {
 		return $this->setData('email', $email);
 	}
-	
+
 	/**
 	 * Get URL.
 	 * @return string
@@ -186,7 +186,7 @@ class Author extends DataObject {
 	function getUrl() {
 		return $this->getData('url');
 	}
-	
+
 	/**
 	 * Set URL.
 	 * @param $url string
@@ -210,7 +210,7 @@ class Author extends DataObject {
 	function getBiography($locale) {
 		return $this->getData('biography', $locale);
 	}
-	
+
 	/**
 	 * Set author biography.
 	 * @param $biography string
@@ -219,7 +219,7 @@ class Author extends DataObject {
 	function setBiography($biography, $locale) {
 		return $this->setData('biography', $biography, $locale);
 	}
-	
+
 	/**
 	 * Get primary contact.
 	 * @return boolean
@@ -227,7 +227,7 @@ class Author extends DataObject {
 	function getPrimaryContact() {
 		return $this->getData('primaryContact');
 	}
-	
+
 	/**
 	 * Set primary contact.
 	 * @param $primaryContact boolean
@@ -235,7 +235,7 @@ class Author extends DataObject {
 	function setPrimaryContact($primaryContact) {
 		return $this->setData('primaryContact', $primaryContact);
 	}
-	
+
 	/**
 	 * Get sequence of author in article's author list.
 	 * @return float
@@ -243,7 +243,7 @@ class Author extends DataObject {
 	function getSequence() {
 		return $this->getData('sequence');
 	}
-	
+
 	/**
 	 * Set sequence of author in article's author list.
 	 * @param $sequence float
@@ -251,7 +251,7 @@ class Author extends DataObject {
 	function setSequence($sequence) {
 		return $this->setData('sequence', $sequence);
 	}
-	
+
 }
 
 ?>

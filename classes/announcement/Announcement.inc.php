@@ -22,7 +22,7 @@ class Announcement extends DataObject {
 	//
 	// Get/set methods
 	//
-	
+
 	/**
 	 * Get the ID of the announcement.
 	 * @return int
@@ -30,7 +30,7 @@ class Announcement extends DataObject {
 	function getAnnouncementId() {
 		return $this->getData('announcementId');
 	}
-	
+
 	/**
 	 * Set the ID of the announcement.
 	 * @param $announcementId int
@@ -46,7 +46,7 @@ class Announcement extends DataObject {
 	function getJournalId() {
 		return $this->getData('journalId');
 	}
-	
+
 	/**
 	 * Set the journal ID of the announcement.
 	 * @param $journalId int
@@ -62,7 +62,7 @@ class Announcement extends DataObject {
 	function getTypeId() {
 		return $this->getData('typeId');
 	}
-	
+
 	/**
 	 * Set the announcement type of the announcement.
 	 * @param $typeId int
@@ -96,7 +96,7 @@ class Announcement extends DataObject {
 	function getTitle($locale) {
 		return $this->getData('title', $locale);
 	}
-	
+
 	/**
 	 * Set announcement title.
 	 * @param $title string
@@ -122,7 +122,7 @@ class Announcement extends DataObject {
 	function getDescriptionShort($locale) {
 		return $this->getData('descriptionShort', $locale);
 	}
-	
+
 	/**
 	 * Set announcement brief description.
 	 * @param $descriptionShort string
@@ -148,7 +148,7 @@ class Announcement extends DataObject {
 	function getDescription($locale) {
 		return $this->getData('description', $locale);
 	}
-	
+
 	/**
 	 * Set announcement description.
 	 * @param $description string
@@ -165,7 +165,7 @@ class Announcement extends DataObject {
 	function getDateExpire() {
 		return $this->getData('dateExpire');
 	}
-	
+
 	/**
 	 * Set announcement expiration date.
 	 * @param $dateExpire date (YYYY-MM-DD)
@@ -181,7 +181,7 @@ class Announcement extends DataObject {
 	function getDatePosted() {
 		return $this->getData('datePosted');
 	}
-	
+
 	/**
 	 * Set announcement posted date.
 	 * @param $datePosted date (YYYY-MM-DD)

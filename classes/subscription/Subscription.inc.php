@@ -27,11 +27,11 @@ class Subscription extends DataObject {
 	function Subscription() {
 		parent::DataObject();
 	}
-	
+
 	//
 	// Get/set methods
 	//
-	
+
 	/**
 	 * Get the ID of the subscription.
 	 * @return int
@@ -39,7 +39,7 @@ class Subscription extends DataObject {
 	function getSubscriptionId() {
 		return $this->getData('subscriptionId');
 	}
-	
+
 	/**
 	 * Set the ID of the subscription.
 	 * @param $subscriptionId int
@@ -55,7 +55,7 @@ class Subscription extends DataObject {
 	function getJournalId() {
 		return $this->getData('journalId');
 	}
-	
+
 	/**
 	 * Set the journal ID of the subscription.
 	 * @param $journalId int
@@ -71,7 +71,7 @@ class Subscription extends DataObject {
 	function getUserId() {
 		return $this->getData('userId');
 	}
-	
+
 	/**
 	 * Set the user ID of the subscription.
 	 * @param $userId int
@@ -96,7 +96,7 @@ class Subscription extends DataObject {
 	function getTypeId() {
 		return $this->getData('typeId');
 	}
-	
+
 	/**
 	 * Set the subscription type ID of the subscription.
 	 * @param $typeId int
@@ -121,7 +121,7 @@ class Subscription extends DataObject {
 	function getDateStart() {
 		return $this->getData('dateStart');
 	}
-	
+
 	/**
 	 * Set subscription start date.
 	 * @param $dateStart date (YYYY-MM-DD)
@@ -137,7 +137,7 @@ class Subscription extends DataObject {
 	function getDateEnd() {
 		return $this->getData('dateEnd');
 	}
-	
+
 	/**
 	 * Set subscription end date.
 	 * @param $dateEnd date (YYYY-MM-DD)
@@ -153,7 +153,7 @@ class Subscription extends DataObject {
 	function getMembership() {
 		return $this->getData('membership');
 	}
-	
+
 	/**
 	 * Set subscription membership.
 	 * @param $membership string
@@ -169,7 +169,7 @@ class Subscription extends DataObject {
 	function getDomain() {
 		return $this->getData('domain');
 	}
-	
+
 	/**
 	 * Set subscription domain string.
 	 * @param $domain string
@@ -185,7 +185,7 @@ class Subscription extends DataObject {
 	function getIPRange() {
 		return $this->getData('ipRange');
 	}
-	
+
 	/**
 	 * Set subscription ip range string.
 	 * @param $ipRange string

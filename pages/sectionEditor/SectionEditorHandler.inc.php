@@ -127,7 +127,7 @@ class SectionEditorHandler extends Handler {
 			Validation::redirectLogin();
 		}
 	}
-	
+
 	/**
 	 * Setup common template variables.
 	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
@@ -139,7 +139,7 @@ class SectionEditorHandler extends Handler {
 		if (Request::getRequestedPage() == 'editor') {
 			EditorHandler::setupTemplate(EDITOR_SECTION_SUBMISSIONS, $showSidebar, $articleId, $parentPage);
 			$templateMgr->assign('helpTopicId', 'editorial.editorsRole');
-			
+
 		} else {
 			$templateMgr->assign('helpTopicId', 'editorial.sectionEditorsRole');
 
@@ -164,7 +164,7 @@ class SectionEditorHandler extends Handler {
 			}
 		}
 	}
-	
+
 	/**
 	 * Display submission management instructions.
 	 * @param $args (type)
@@ -209,62 +209,62 @@ class SectionEditorHandler extends Handler {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::submissionRegrets($args);
 	}
-	
+
 	function submissionReview($args) {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::submissionReview($args);
 	}
-	
+
 	function submissionEditing($args) {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::submissionEditing($args);
 	}
-	
+
 	function submissionHistory($args) {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::submissionHistory($args);
 	}
-	
+
 	function changeSection() {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::changeSection();
 	}
-	
+
 	function recordDecision() {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::recordDecision();
 	}
-	
+
 	function selectReviewer($args) {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::selectReviewer($args);
 	}
-	
+
 	function notifyReviewer($args) {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::notifyReviewer($args);
 	}
-	
+
 	function notifyAllReviewers($args) {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::notifyAllReviewers($args);
 	}
-	
+
 	function userProfile($args) {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::userProfile($args);
 	}
-	
+
 	function clearReview($args) {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::clearReview($args);
 	}
-	
+
 	function cancelReview($args) {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::cancelReview($args);
 	}
-	
+
 	function remindReviewer($args) {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::remindReviewer($args);
@@ -274,42 +274,42 @@ class SectionEditorHandler extends Handler {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::thankReviewer($args);
 	}
-	
+
 	function rateReviewer() {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::rateReviewer();
 	}
-	
+
 	function confirmReviewForReviewer($args) {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::confirmReviewForReviewer($args);
 	}
-	
+
 	function uploadReviewForReviewer($args) {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::uploadReviewForReviewer($args);
 	}
-	
+
 	function enterReviewerRecommendation($args) {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::enterReviewerRecommendation($args);
 	}
-	
+
 	function makeReviewerFileViewable() {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::makeReviewerFileViewable();
 	}
-	
+
 	function setDueDate($args) {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::setDueDate($args);
 	}
-	
+
 	function viewMetadata($args) {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::viewMetadata($args);
 	}
-	
+
 	function saveMetadata() {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::saveMetadata();
@@ -324,17 +324,17 @@ class SectionEditorHandler extends Handler {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::selectCopyeditor($args);
 	}
-	
+
 	function notifyCopyeditor($args) {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::notifyCopyeditor($args);
 	}
-	
+
 	function initiateCopyedit() {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::initiateCopyedit();
 	}
-	
+
 	function thankCopyeditor($args) {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::thankCopyeditor($args);
@@ -344,32 +344,32 @@ class SectionEditorHandler extends Handler {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::notifyAuthorCopyedit($args);
 	}
-	
+
 	function thankAuthorCopyedit($args) {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::thankAuthorCopyedit($args);
 	}
-	
+
 	function notifyFinalCopyedit($args) {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::notifyFinalCopyedit($args);
 	}
-	
+
 	function thankFinalCopyedit($args) {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::thankFinalCopyedit($args);
 	}
-	
+
 	function selectCopyeditRevisions() {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::selectCopyeditRevisions();
 	}
-	
+
 	function uploadReviewVersion() {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::uploadReviewVersion();
 	}
-	
+
 	function uploadCopyeditVersion() {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::uploadCopyeditVersion();
@@ -379,7 +379,7 @@ class SectionEditorHandler extends Handler {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::completeCopyedit($args);
 	}
- 
+
 	function completeFinalCopyedit($args) {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::completeFinalCopyedit($args);
@@ -399,7 +399,7 @@ class SectionEditorHandler extends Handler {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::editSuppFile($args);
 	}
-	
+
 	function saveSuppFile($args) {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::saveSuppFile($args);
@@ -409,12 +409,12 @@ class SectionEditorHandler extends Handler {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::deleteSuppFile($args);
 	}
-	
+
 	function deleteArticleFile($args) {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::deleteArticleFile($args);
 	}
-	
+
 	function archiveSubmission($args) {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::archiveSubmission($args);
@@ -429,62 +429,62 @@ class SectionEditorHandler extends Handler {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::restoreToQueue($args);
 	}
-	
+
 	function updateSection($args) {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::updateSection($args);
 	}
-	
-	
+
+
 	//
 	// Layout Editing
 	//
-	
+
 	function deleteArticleImage($args) {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::deleteArticleImage($args);
 	}
-	
+
 	function uploadLayoutFile() {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::uploadLayoutFile();
 	}
-	
+
 	function uploadLayoutVersion() {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::uploadLayoutVersion();
 	}
-	
+
 	function assignLayoutEditor($args) {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::assignLayoutEditor($args);
 	}
-	
+
 	function notifyLayoutEditor($args) {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::notifyLayoutEditor($args);
 	}
-	
+
 	function thankLayoutEditor($args) {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::thankLayoutEditor($args);
 	}
-	
+
 	function uploadGalley() {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::uploadGalley();
 	}
-	
+
 	function editGalley($args) {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::editGalley($args);
 	}
-	
+
 	function saveGalley($args) {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::saveGalley($args);
 	}
-	
+
 	function orderGalley() {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::orderGalley();
@@ -494,33 +494,33 @@ class SectionEditorHandler extends Handler {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::deleteGalley($args);
 	}
-	
+
 	function proofGalley($args) {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::proofGalley($args);
 	}
-	
+
 	function proofGalleyTop($args) {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::proofGalleyTop($args);
 	}
-	
+
 	function proofGalleyFile($args) {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::proofGalleyFile($args);
 	}	
-	
+
 	function uploadSuppFile() {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::uploadSuppFile();
 	}
-	
+
 	function orderSuppFile() {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::orderSuppFile();
 	}
-	
-	
+
+
 	//
 	// Submission History
 	//
@@ -534,22 +534,22 @@ class SectionEditorHandler extends Handler {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::submissionEventLogType($args);
 	}
-	
+
 	function clearSubmissionEventLog($args) {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::clearSubmissionEventLog($args);
 	}
-	
+
 	function submissionEmailLog($args) {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::submissionEmailLog($args);
 	}
-	
+
 	function submissionEmailLogType($args) {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::submissionEmailLogType($args);
 	}
-	
+
 	function clearSubmissionEmailLog($args) {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::clearSubmissionEmailLog($args);
@@ -579,8 +579,8 @@ class SectionEditorHandler extends Handler {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::submissionNotes($args);
 	}
-	
-	
+
+
 	//
 	// Misc.
 	//
@@ -589,91 +589,91 @@ class SectionEditorHandler extends Handler {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::downloadFile($args);
 	}
-	
+
 	function viewFile($args) {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::viewFile($args);
 	}
-	
+
 	//
 	// Submission Comments
 	//
-	
+
 	function viewPeerReviewComments($args) {
 		import('pages.sectionEditor.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::viewPeerReviewComments($args);
 	}
-	
+
 	function postPeerReviewComment() {
 		import('pages.sectionEditor.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::postPeerReviewComment();
 	}
-	
+
 	function viewEditorDecisionComments($args) {
 		import('pages.sectionEditor.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::viewEditorDecisionComments($args);
 	}
-	
+
 	function blindCcReviewsToReviewers($args) {
 		import('pages.sectionEditor.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::blindCcReviewsToReviewers($args);
 	}
-	
+
 	function postEditorDecisionComment() {
 		import('pages.sectionEditor.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::postEditorDecisionComment();
 	}
-	
+
 	function viewCopyeditComments($args) {
 		import('pages.sectionEditor.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::viewCopyeditComments($args);
 	}
-	
+
 	function postCopyeditComment() {
 		import('pages.sectionEditor.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::postCopyeditComment();
 	}
-	
+
 	function emailEditorDecisionComment() {
 		import('pages.sectionEditor.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::emailEditorDecisionComment();
 	}
-	
+
 	function viewLayoutComments($args) {
 		import('pages.sectionEditor.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::viewLayoutComments($args);
 	}
-	
+
 	function postLayoutComment() {
 		import('pages.sectionEditor.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::postLayoutComment();
 	}
-	
+
 	function viewProofreadComments($args) {
 		import('pages.sectionEditor.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::viewProofreadComments($args);
 	}
-	
+
 	function postProofreadComment() {
 		import('pages.sectionEditor.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::postProofreadComment();
 	}
-		
+
 	function editComment($args) {
 		import('pages.sectionEditor.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::editComment($args);
 	}
-	
+
 	function saveComment() {
 		import('pages.sectionEditor.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::saveComment();
 	}
-	
+
 	function deleteComment($args) {
 		import('pages.sectionEditor.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::deleteComment($args);
 	}
-	
+
 	/** Proof Assignment Functions */
 	function selectProofreader($args) {
 		import('pages.sectionEditor.SubmissionEditHandler');

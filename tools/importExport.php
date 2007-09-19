@@ -21,7 +21,7 @@ class importExport extends CommandLineTool {
 	var $command;
 	var $plugin;
 	var $parameters;
-	
+
 	/**
 	 * Constructor.
 	 * @param $argv array command-line arguments (see usage)
@@ -31,7 +31,7 @@ class importExport extends CommandLineTool {
 		$this->command = array_shift($this->argv);
 		$this->parameters = $this->argv;
 	}
-	
+
 	/**
 	 * Print command usage information.
 	 */
@@ -42,7 +42,7 @@ class importExport extends CommandLineTool {
 			. "\t{$this->scriptName} [pluginName] usage: Display usage information for a plugin\n"
 			. "\t{$this->scriptName} [pluginName] [params...]: Invoke a plugin\n";
 	}
-	
+
 	/**
 	 * Parse and execute the import/export task.
 	 */
@@ -63,7 +63,7 @@ class importExport extends CommandLineTool {
 
 		return $plugin->executeCLI($this->scriptName, $this->parameters);
 	}
-	
+
 }
 
 $tool = &new importExport(isset($argv) ? $argv : array());

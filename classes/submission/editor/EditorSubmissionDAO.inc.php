@@ -34,7 +34,7 @@ class EditorSubmissionDAO extends DAO {
 		$this->userDao = &DAORegistry::getDAO('UserDAO');
 		$this->editAssignmentDao = &DAORegistry::getDAO('EditAssignmentDAO');
 	}
-	
+
 	/**
 	 * Retrieve an editor submission by article ID.
 	 * @param $articleId int
@@ -78,7 +78,7 @@ class EditorSubmissionDAO extends DAO {
 
 		return $returner;
 	}
-	
+
 	/**
 	 * Internal function to return an EditorSubmission object from a row.
 	 * @param $row array
@@ -89,16 +89,16 @@ class EditorSubmissionDAO extends DAO {
 
 		// Article attributes
 		$this->articleDao->_articleFromRow($editorSubmission, $row);
-		
+
 		// Editor Assignment
 		$editAssignments =& $this->editAssignmentDao->getEditAssignmentsByArticleId($row['article_id']);
 		$editorSubmission->setEditAssignments($editAssignments->toArray());
-		
+
 		// Editor Decisions
 		for ($i = 1; $i <= $row['current_round']; $i++) {
 			$editorSubmission->setDecisions($this->getEditorDecisions($row['article_id'], $i), $i);
 		}
-		
+
 		HookRegistry::call('EditorSubmissionDAO::_returnEditorSubmissionFromRow', array(&$editorSubmission, &$row));
 
 		return $editorSubmission;
@@ -120,19 +120,19 @@ class EditorSubmissionDAO extends DAO {
 				$editorSubmission->getEditorId()
 			)
 		);
-		
+
 		$editorSubmission->setEditId($this->getInsertEditId());
-		
+
 		// Insert review assignments.
 		$reviewAssignments = &$editorSubmission->getReviewAssignments();
 		for ($i=0, $count=count($reviewAssignments); $i < $count; $i++) {
 			$reviewAssignments[$i]->setArticleId($editorSubmission->getArticleId());
 			$this->reviewAssignmentDao->insertReviewAssignment($reviewAssignments[$i]);
 		}
-		
+
 		return $editorSubmission->getEditId();
 	}
-	
+
 	/**
 	 * Update an existing article.
 	 * @param $article Article
@@ -148,7 +148,7 @@ class EditorSubmissionDAO extends DAO {
 			}
 		}
 	}
-	
+
 	/**
 	 * Get all submissions for a journal.
 	 * @param $journalId int
@@ -334,7 +334,7 @@ class EditorSubmissionDAO extends DAO {
 		);
 		return $result;
 	}
-	
+
 	/**
 	 * FIXME Move this into somewhere common (SubmissionDAO?) as this is used in several classes.
 	 */
@@ -380,7 +380,7 @@ class EditorSubmissionDAO extends DAO {
 	 */
 	function &getEditorSubmissionsUnassigned($journalId, $sectionId, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $rangeInfo = null) {
 		$editorSubmissions = array();
-	
+
 		// FIXME Does not pass $rangeInfo else we only get partial results
 		$result = $this->getUnfilteredEditorSubmissions($journalId, $sectionId, $searchField, $searchMatch, $search, $dateField, $dateFrom, $dateTo, true);
 
@@ -422,7 +422,7 @@ class EditorSubmissionDAO extends DAO {
 	 */
 	function &getEditorSubmissionsInReview($journalId, $sectionId, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $rangeInfo = null) {
 		$editorSubmissions = array();
-	
+
 		// FIXME Does not pass $rangeInfo else we only get partial results
 		$result = $this->getUnfilteredEditorSubmissions($journalId, $sectionId, $searchField, $searchMatch, $search, $dateField, $dateFrom, $dateTo, true);
 
@@ -459,7 +459,7 @@ class EditorSubmissionDAO extends DAO {
 		}
 		$result->Close();
 		unset($result);
-		
+
 		if (isset($rangeInfo) && $rangeInfo->isValid()) {
 			$returner = &new ArrayItemIterator($editorSubmissions, $rangeInfo->getPage(), $rangeInfo->getCount());
 		} else {
@@ -483,7 +483,7 @@ class EditorSubmissionDAO extends DAO {
 	 */
 	function &getEditorSubmissionsInEditing($journalId, $sectionId, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $rangeInfo = null) {
 		$editorSubmissions = array();
-	
+
 		// FIXME Does not pass $rangeInfo else we only get partial results
 		$result = $this->getUnfilteredEditorSubmissions($journalId, $sectionId, $searchField, $searchMatch, $search, $dateField, $dateFrom, $dateTo, true);
 
@@ -528,7 +528,7 @@ class EditorSubmissionDAO extends DAO {
 		}
 		$result->Close();
 		unset($result);
-		
+
 		if (isset($rangeInfo) && $rangeInfo->isValid()) {
 			$returner = &new ArrayItemIterator($editorSubmissions, $rangeInfo->getPage(), $rangeInfo->getCount());
 		} else {
@@ -552,7 +552,7 @@ class EditorSubmissionDAO extends DAO {
 	 */
 	function &getEditorSubmissionsArchives($journalId, $sectionId, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $rangeInfo = null) {
 		$editorSubmissions = array();
-	
+
 		$result = $this->getUnfilteredEditorSubmissions($journalId, $sectionId, $searchField, $searchMatch, $search, $dateField, $dateFrom, $dateTo, false, $rangeInfo);
 		while (!$result->EOF) {
 			$editorSubmission = &$this->_returnEditorSubmissionFromRow($result->GetRowAssoc(false));
@@ -577,7 +577,7 @@ class EditorSubmissionDAO extends DAO {
 			unset($editorSubmission);
 			$result->MoveNext();
 		}
-		
+
 		if (isset($rangeInfo) && $rangeInfo->isValid()) {
 			$returner = &new VirtualArrayIterator($editorSubmissions, $result->MaxRecordCount(), $rangeInfo->getPage(), $rangeInfo->getCount());
 		} else {
@@ -646,7 +646,7 @@ class EditorSubmissionDAO extends DAO {
 	//
 	// Miscellaneous
 	//
-	
+
 	/**
 	 * Get the editor decisions for a review round of an article.
 	 * @param $articleId int
@@ -654,7 +654,7 @@ class EditorSubmissionDAO extends DAO {
 	 */
 	function getEditorDecisions($articleId, $round = null) {
 		$decisions = array();
-	
+
 		if ($round == null) {
 			$result = &$this->retrieve(
 				'SELECT edit_decision_id, editor_id, decision, date_decided FROM edit_decisions WHERE article_id = ? ORDER BY date_decided ASC', $articleId
@@ -665,17 +665,17 @@ class EditorSubmissionDAO extends DAO {
 				array($articleId, $round)
 			);
 		}
-		
+
 		while (!$result->EOF) {
 			$decisions[] = array('editDecisionId' => $result->fields[0], 'editorId' => $result->fields[1], 'decision' => $result->fields[2], 'dateDecided' => $this->datetimeFromDB($result->fields[3]));
 			$result->moveNext();
 		}
 		$result->Close();
 		unset($result);
-	
+
 		return $decisions;
 	}
-	
+
 	/**
 	 * Get the editor decisions for an editor.
 	 * @param $userId int
@@ -686,7 +686,7 @@ class EditorSubmissionDAO extends DAO {
 			array($newUserId, $oldUserId)
 		);
 	}
-	
+
 	/**
 	 * Retrieve a list of all users in the specified role not assigned as editors to the specified article.
 	 * @param $journalId int
@@ -696,7 +696,7 @@ class EditorSubmissionDAO extends DAO {
 	 */
 	function &getUsersNotAssignedToArticle($journalId, $articleId, $roleId, $searchType=null, $search=null, $searchMatch=null, $rangeInfo = null) {
 		$users = array();
-		
+
 		$paramArray = array('interests', $articleId, $journalId, $roleId);
 		$searchSql = '';
 
@@ -731,16 +731,16 @@ class EditorSubmissionDAO extends DAO {
 				$paramArray[] = $search . '%';
 				break;
 		}
-		
+
 		$result = &$this->retrieveRange(
 			'SELECT DISTINCT u.* FROM users u LEFT JOIN user_settings s ON (u.user_id = s.user_id AND s.setting_name = ?) NATURAL JOIN roles r LEFT JOIN edit_assignments e ON (e.editor_id = u.user_id AND e.article_id = ?) WHERE r.journal_id = ? AND r.role_id = ? AND (e.article_id IS NULL) ' . $searchSql . ' ORDER BY last_name, first_name',
 			$paramArray, $rangeInfo
 		);
-		
+
 		$returner = &new DAOResultFactory($result, $this->userDao, '_returnUserFromRowWithData');
 		return $returner;
 	}
-	
+
 	/**
 	 * Get the ID of the last inserted editor assignment.
 	 * @return int

@@ -20,11 +20,11 @@ class User extends DataObject {
 	function User() {
 		parent::DataObject();
 	}
-	
+
 	//
 	// Get/set methods
 	//
-	
+
 	/**
 	 * Get the ID of the user.
 	 * @return int
@@ -32,7 +32,7 @@ class User extends DataObject {
 	function getUserId() {
 		return $this->getData('userId');
 	}
-	
+
 	/**
 	 * Set the ID of the user.
 	 * @param $userId int
@@ -40,7 +40,7 @@ class User extends DataObject {
 	function setUserId($userId) {
 		return $this->setData('userId', $userId);
 	}
-	
+
 	/**
 	 * Get username.
 	 * @return string
@@ -48,7 +48,7 @@ class User extends DataObject {
 	function getUsername() {
 		return $this->getData('username');
 	}
-	
+
 	/**
 	 * Set username.
 	 * @param $username string
@@ -56,7 +56,7 @@ class User extends DataObject {
 	function setUsername($username) {
 		return $this->setData('username', $username);
 	}
-	
+
 	/**
 	 * Get localized user signature.
 	 */
@@ -72,7 +72,7 @@ class User extends DataObject {
 	function getSignature($locale) {
 		return $this->getData('signature', $locale);
 	}
-	
+
 	/**
 	 * Set signature.
 	 * @param $signature string
@@ -81,7 +81,7 @@ class User extends DataObject {
 	function setSignature($signature, $locale) {
 		return $this->setData('signature', $signature, $locale);
 	}
-	
+
 	/**
 	 * Get password (encrypted).
 	 * @return string
@@ -89,7 +89,7 @@ class User extends DataObject {
 	function getPassword() {
 		return $this->getData('password');
 	}
-	
+
 	/**
 	 * Set password (assumed to be already encrypted).
 	 * @param $password string
@@ -97,7 +97,7 @@ class User extends DataObject {
 	function setPassword($password) {
 		return $this->setData('password', $password);
 	}
-	
+
 	/**
 	 * Get first name.
 	 * @return string
@@ -105,7 +105,7 @@ class User extends DataObject {
 	function getFirstName() {
 		return $this->getData('firstName');
 	}
-	
+
 	/**
 	 * Set first name.
 	 * @param $firstName string
@@ -114,7 +114,7 @@ class User extends DataObject {
 	{
 		return $this->setData('firstName', $firstName);
 	}
-	
+
 	/**
 	 * Get middle name.
 	 * @return string
@@ -122,7 +122,7 @@ class User extends DataObject {
 	function getMiddleName() {
 		return $this->getData('middleName');
 	}
-	
+
 	/**
 	 * Set middle name.
 	 * @param $middleName string
@@ -130,7 +130,7 @@ class User extends DataObject {
 	function setMiddleName($middleName) {
 		return $this->setData('middleName', $middleName);
 	}
-	
+
 	/**
 	 * Get initials.
 	 * @return string
@@ -138,7 +138,7 @@ class User extends DataObject {
 	function getInitials() {
 		return $this->getData('initials');
 	}
-	
+
 	/**
 	 * Set initials.
 	 * @param $initials string
@@ -146,7 +146,7 @@ class User extends DataObject {
 	function setInitials($initials) {
 		return $this->setData('initials', $initials);
 	}
-	
+
 	/**
 	 * Get last name.
 	 * @return string
@@ -154,7 +154,7 @@ class User extends DataObject {
 	function getLastName() {
 		return $this->getData('lastName');
 	}
-	
+
 	/**
 	 * Set last name.
 	 * @param $lastName string
@@ -162,7 +162,7 @@ class User extends DataObject {
 	function setLastName($lastName) {
 		return $this->setData('lastName', $lastName);
 	}
-	
+
 	/**
 	 * Get user salutation.
 	 * @return string
@@ -170,7 +170,7 @@ class User extends DataObject {
 	function getSalutation() {
 		return $this->getData('salutation');
 	}
-	
+
 	/**
 	 * Set user salutation.
 	 * @param $salutation string
@@ -186,7 +186,7 @@ class User extends DataObject {
 	function getGender() {
 		return $this->getData('gender');
 	}
-	
+
 	/**
 	 * Set user gender.
 	 * @param $gender string
@@ -202,7 +202,7 @@ class User extends DataObject {
 	function getDiscipline() {
 		return $this->getData('discipline');
 	}
-	
+
 	/**
 	 * Set user discipline.
 	 * @param $discipline string
@@ -218,7 +218,7 @@ class User extends DataObject {
 	function getAffiliation() {
 		return $this->getData('affiliation');
 	}
-	
+
 	/**
 	 * Set affiliation.
 	 * @param $affiliation string
@@ -226,7 +226,7 @@ class User extends DataObject {
 	function setAffiliation($affiliation) {
 		return $this->setData('affiliation', $affiliation);
 	}
-	
+
 	/**
 	 * Get email address.
 	 * @return string
@@ -234,7 +234,7 @@ class User extends DataObject {
 	function getEmail() {
 		return $this->getData('email');
 	}
-	
+
 	/**
 	 * Set email address.
 	 * @param $email string
@@ -242,7 +242,7 @@ class User extends DataObject {
 	function setEmail($email) {
 		return $this->setData('email', $email);
 	}
-	
+
 	/**
 	 * Get URL.
 	 * @return string
@@ -250,7 +250,7 @@ class User extends DataObject {
 	function getUrl() {
 		return $this->getData('url');
 	}
-	
+
 	/**
 	 * Set URL.
 	 * @param $url string
@@ -258,7 +258,7 @@ class User extends DataObject {
 	function setUrl($url) {
 		return $this->setData('url', $url);
 	}
-	
+
 	/**
 	 * Get phone number.
 	 * @return string
@@ -266,7 +266,7 @@ class User extends DataObject {
 	function getPhone() {
 		return $this->getData('phone');
 	}
-	
+
 	/**
 	 * Set phone number.
 	 * @param $phone string
@@ -274,7 +274,7 @@ class User extends DataObject {
 	function setPhone($phone) {
 		return $this->setData('phone', $phone);
 	}
-	
+
 	/**
 	 * Get fax number.
 	 * @return string
@@ -282,7 +282,7 @@ class User extends DataObject {
 	function getFax() {
 		return $this->getData('fax');
 	}
-	
+
 	/**
 	 * Set fax number.
 	 * @param $fax string
@@ -290,7 +290,7 @@ class User extends DataObject {
 	function setFax($fax) {
 		return $this->setData('fax', $fax);
 	}
-	
+
 	/**
 	 * Get mailing address.
 	 * @return string
@@ -298,7 +298,7 @@ class User extends DataObject {
 	function getMailingAddress() {
 		return $this->getData('mailingAddress');
 	}
-	
+
 	/**
 	 * Set mailing address.
 	 * @param $mailingAddress string
@@ -306,7 +306,7 @@ class User extends DataObject {
 	function setMailingAddress($mailingAddress) {
 		return $this->setData('mailingAddress', $mailingAddress);
 	}
-	
+
 	/**
 	 * Get country.
 	 * @return string
@@ -314,7 +314,7 @@ class User extends DataObject {
 	function getCountry() {
 		return $this->getData('country');
 	}
-	
+
 	/**
 	 * Set country.
 	 * @param $country string
@@ -322,7 +322,7 @@ class User extends DataObject {
 	function setCountry($country) {
 		return $this->setData('country', $country);
 	}
-	
+
 	/**
 	 * Get localized user biography.
 	 */
@@ -338,7 +338,7 @@ class User extends DataObject {
 	function getBiography($locale) {
 		return $this->getData('biography', $locale);
 	}
-	
+
 	/**
 	 * Set user biography.
 	 * @param $biography string
@@ -363,7 +363,7 @@ class User extends DataObject {
 	function getInterests($locale) {
 		return $this->getData('interests', $locale);
 	}
-	
+
 	/**
 	 * Set user reviewing interests.
 	 * @param $interests string
@@ -372,7 +372,7 @@ class User extends DataObject {
 	function setInterests($interests, $locale) {
 		return $this->setData('interests', $interests, $locale);
 	}
-	
+
 	/**
 	 * Get user's working languages.
 	 * @return array
@@ -381,7 +381,7 @@ class User extends DataObject {
 		$locales = $this->getData('locales');
 		return isset($locales) ? $locales : array();
 	}
-	
+
 	/**
 	 * Set user's working languages.
 	 * @param $locales array
@@ -389,7 +389,7 @@ class User extends DataObject {
 	function setLocales($locales) {
 		return $this->setData('locales', $locales);
 	}
-	
+
 	/**
 	 * Get date user last sent an email.
 	 * @return datestamp (YYYY-MM-DD HH:MM:SS)
@@ -397,7 +397,7 @@ class User extends DataObject {
 	function getDateLastEmail() {
 		return $this->getData('dateLastEmail');
 	}
-	
+
 	/**
 	 * Set date user last sent an email.
 	 * @param $dateLastEmail datestamp (YYYY-MM-DD HH:MM:SS)
@@ -405,7 +405,7 @@ class User extends DataObject {
 	function setDateLastEmail($dateLastEmail) {
 		return $this->setData('dateLastEmail', $dateLastEmail);
 	}
-	
+
 	/**
 	 * Get date user registered with the site.
 	 * @return datestamp (YYYY-MM-DD HH:MM:SS)
@@ -413,7 +413,7 @@ class User extends DataObject {
 	function getDateRegistered() {
 		return $this->getData('dateRegistered');
 	}
-	
+
 	/**
 	 * Set date user registered with the site.
 	 * @param $dateRegistered datestamp (YYYY-MM-DD HH:MM:SS)
@@ -421,7 +421,7 @@ class User extends DataObject {
 	function setDateRegistered($dateRegistered) {
 		return $this->setData('dateRegistered', $dateRegistered);
 	}
-	
+
 	/**
 	 * Get date user email was validated with the site.
 	 * @return datestamp (YYYY-MM-DD HH:MM:SS)
@@ -429,7 +429,7 @@ class User extends DataObject {
 	function getDateValidated() {
 		return $this->getData('dateValidated');
 	}
-	
+
 	/**
 	 * Set date user email was validated with the site.
 	 * @param $dateValidated datestamp (YYYY-MM-DD HH:MM:SS)
@@ -437,7 +437,7 @@ class User extends DataObject {
 	function setDateValidated($dateValidated) {
 		return $this->setData('dateValidated', $dateValidated);
 	}
-	
+
 	/**
 	 * Get date user last logged in to the site.
 	 * @return datestamp
@@ -445,7 +445,7 @@ class User extends DataObject {
 	function getDateLastLogin() {
 		return $this->getData('dateLastLogin');
 	}
-	
+
 	/**
 	 * Set date user last logged in to the site.
 	 * @param $dateLastLogin datestamp
@@ -453,7 +453,7 @@ class User extends DataObject {
 	function setDateLastLogin($dateLastLogin) {
 		return $this->setData('dateLastLogin', $dateLastLogin);
 	}
-	
+
 	/**
 	 * Check if user must change their password on their next login.
 	 * @return boolean
@@ -461,7 +461,7 @@ class User extends DataObject {
 	function getMustChangePassword() {
 		return $this->getData('mustChangePassword');
 	}
-	
+
 	/**
 	 * Set whether or not user must change their password on their next login.
 	 * @param $mustChangePassword boolean
@@ -469,7 +469,7 @@ class User extends DataObject {
 	function setMustChangePassword($mustChangePassword) {
 		return $this->setData('mustChangePassword', $mustChangePassword);
 	}
-	
+
 	/**
 	 * Check if user is disabled.
 	 * @return boolean
@@ -477,7 +477,7 @@ class User extends DataObject {
 	function getDisabled() {
 		return $this->getData('disabled');
 	}
-	
+
 	/**
 	 * Set whether or not user is disabled.
 	 * @param $disabled boolean
@@ -485,7 +485,7 @@ class User extends DataObject {
 	function setDisabled($disabled) {
 		return $this->setData('disabled', $disabled);
 	}
-	
+
 	/**
 	 * Get the reason the user was disabled.
 	 * @return string
@@ -493,7 +493,7 @@ class User extends DataObject {
 	function getDisabledReason() {
 		return $this->getData('disabled_reason');
 	}
-	
+
 	/**
 	 * Set the reason the user is disabled.
 	 * @param $reasonDisabled string
@@ -501,7 +501,7 @@ class User extends DataObject {
 	function setDisabledReason($reasonDisabled) {
 		return $this->setData('disabled_reason', $reasonDisabled);
 	}
-	
+
 	/**
 	 * Get ID of authentication source for this user.
 	 * @return int
@@ -509,7 +509,7 @@ class User extends DataObject {
 	function getAuthId() {
 		return $this->getData('authId');
 	}
-	
+
 	/**
 	 * Set ID of authentication source for this user.
 	 * @param $authId int
@@ -517,7 +517,7 @@ class User extends DataObject {
 	function setAuthId($authId) {
 		return $this->setData('authId', $authId);
 	}
-	
+
 	/**
 	 * Retrieve array of user settings.
 	 * @param journalId int
@@ -528,7 +528,7 @@ class User extends DataObject {
 		$settings = &$userSettingsDao->getSettingsByJournal($this->getData('userId'), $journalId);
 		return $settings;
 	}
-	
+
 	/**
 	 * Retrieve a user setting value.
 	 * @param $name
@@ -550,7 +550,7 @@ class User extends DataObject {
 	function getFullName($lastFirst = false) {
 		if ($lastFirst) {
 			return $this->getData('lastName') . ', ' . $this->getData('firstName') . ($this->getData('middleName') != '' ? ' ' . $this->getData('middleName') : '');
-		
+
 		} else {
 			return $this->getData('firstName') . ' ' . ($this->getData('middleName') != '' ? $this->getData('middleName') . ' ' : '') . $this->getData('lastName');
 		}

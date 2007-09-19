@@ -16,7 +16,7 @@
  */
 
 class ArticleLog {
-	
+
 	/**
 	 * Add an event log entry to this article.
 	 * @param $articleId int
@@ -25,30 +25,30 @@ class ArticleLog {
 	function logEventEntry($articleId, &$entry) {
 		$articleDao = &DAORegistry::getDAO('ArticleDAO');
 		$journalId = $articleDao->getArticleJournalId($articleId);
-		
+
 		if (!$journalId) {
 			// Invalid article
 			return false;
 		}
-		
+
 		$settingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
 		if (!$settingsDao->getSetting($journalId, 'articleEventLog')) {
 			// Event logging is disabled
 			return false;
 		}
-	
+
 		// Add the entry
 		$entry->setArticleId($articleId);
-		
+
 		if ($entry->getUserId() == null) {
 			$user = &Request::getUser();
 			$entry->setUserId($user == null ? 0 : $user->getUserId());
 		}
-		
+
 		$logDao = &DAORegistry::getDAO('ArticleEventLogDAO');
 		return $logDao->insertLogEntry($entry);
 	}
-	
+
 	/**
 	 * Add a new event log entry with the specified parameters, at the default log level
 	 * @param $articleId int
@@ -61,7 +61,7 @@ class ArticleLog {
 	function logEvent($articleId, $eventType, $assocType = 0, $assocId = 0, $messageKey = null, $messageParams = array()) {
 		return ArticleLog::logEventLevel($articleId, ARTICLE_LOG_LEVEL_NOTICE, $eventType, $assocType, $assocId, $messageKey, $messageParams);
 	}
-	
+
 	/**
 	 * Add a new event log entry with the specified parameters, including log level.
 	 * @param $articleId int
@@ -78,14 +78,14 @@ class ArticleLog {
 		$entry->setEventType($eventType);
 		$entry->setAssocType($assocType);
 		$entry->setAssocId($assocId);
-		
+
 		if (isset($messageKey)) {
 			$entry->setLogMessage($messageKey, $messageParams);
 		}
-		
+
 		return ArticleLog::logEventEntry($articleId, $entry);
 	}
-	
+
 	/**
 	 * Get all event log entries for an article.
 	 * @param $articleId int
@@ -96,7 +96,7 @@ class ArticleLog {
 		$returner = &$logDao->getArticleLogEntries($articleId, $rangeInfo);
 		return $returner;
 	}
-	
+
 	/**
 	 * Add an email log entry to this article.
 	 * @param $articleId int
@@ -105,30 +105,30 @@ class ArticleLog {
 	function logEmailEntry($articleId, &$entry) {
 		$articleDao = &DAORegistry::getDAO('ArticleDAO');
 		$journalId = $articleDao->getArticleJournalId($articleId);
-		
+
 		if (!$journalId) {
 			// Invalid article
 			return false;
 		}
-		
+
 		$settingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
 		if (!$settingsDao->getSetting($journalId, 'articleEmailLog')) {
 			// Email logging is disabled
 			return false;
 		}
-	
+
 		// Add the entry
 		$entry->setArticleId($articleId);
-		
+
 		if ($entry->getSenderId() == null) {
 			$user = &Request::getUser();
 			$entry->setSenderId($user == null ? 0 : $user->getUserId());
 		}
-		
+
 		$logDao = &DAORegistry::getDAO('ArticleEmailLogDAO');
 		return $logDao->insertLogEntry($entry);
 	}
-	
+
 	/**
 	 * Get all email log entries for an article.
 	 * @param $articleId int
@@ -139,7 +139,7 @@ class ArticleLog {
 		$result = &$logDao->getArticleLogEntries($articleId, $rangeInfo);
 		return $result;
 	}
-	
+
 }
 
 ?>

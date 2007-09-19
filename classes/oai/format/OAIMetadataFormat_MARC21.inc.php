@@ -43,10 +43,10 @@ class OAIMetadataFormat_MARC21 extends OAIMetadataFormat {
 			$this->formatElement('500', ' ', ' ', 'a', $this->getLocalizedData($record->coverage, $record->primaryLocale)) .
 			$this->formatElement('540', ' ', ' ', 'a', $record->rights[$record->primaryLocale]) .
 			"</record>\n";
-			
+
 		return $response;
 	}
-	
+
 	/**
 	 * Format XML for single MARC21 element.
 	 * @param $tag string
@@ -59,7 +59,7 @@ class OAIMetadataFormat_MARC21 extends OAIMetadataFormat {
 		if (!is_array($value)) {
 			$value = array($value);
 		}
-		
+
 		$response = '';
 		foreach ($value as $v) {
 			$response .= "\t<datafield tag=\"$tag\" ind1=\"$ind1\" ind2=\"$ind2\">\n" .
@@ -68,7 +68,7 @@ class OAIMetadataFormat_MARC21 extends OAIMetadataFormat {
 		}
 		return $response;
 	}
-	
+
 }
 
 ?>

@@ -88,7 +88,7 @@ class CopyeditorHandler extends Handler {
 		$templateMgr->assign('helpTopicId', 'editorial.copyeditorsRole.submissions');
 		$templateMgr->display('copyeditor/index.tpl');
 	}
-	
+
 	/**
 	 * Validate that user is a copyeditor in the selected journal.
 	 * Redirects to user index page if not properly authenticated.
@@ -100,7 +100,7 @@ class CopyeditorHandler extends Handler {
 			Validation::redirectLogin();
 		}
 	}
-	
+
 	/**
 	 * Setup common template variables.
 	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
@@ -127,7 +127,7 @@ class CopyeditorHandler extends Handler {
 			$templateMgr->assign('submissionsCount', $submissionsCount);
 		}
 	}
-	
+
 	/**
 	 * Display submission management instructions.
 	 * @param $args (type)
@@ -138,31 +138,31 @@ class CopyeditorHandler extends Handler {
 			Request::redirect(null, Request::getRequestedPage());
 		}
 	}
-	
+
 	//
 	// Assignment Tracking
 	//
-	
+
 	function submission($args) {
 		import('pages.copyeditor.SubmissionCopyeditHandler');
 		SubmissionCopyeditHandler::submission($args);
 	}
-	
+
 	function completeCopyedit($args) {
 		import('pages.copyeditor.SubmissionCopyeditHandler');
 		SubmissionCopyeditHandler::completeCopyedit($args);
 	}
-	
+
 	function completeFinalCopyedit($args) {
 		import('pages.copyeditor.SubmissionCopyeditHandler');
 		SubmissionCopyeditHandler::completeFinalCopyedit($args);
 	}
-	
+
 	function uploadCopyeditVersion() {
 		import('pages.copyeditor.SubmissionCopyeditHandler');
 		SubmissionCopyeditHandler::uploadCopyeditVersion();
 	}
-	
+
 	//
 	// Misc.
 	//
@@ -171,47 +171,47 @@ class CopyeditorHandler extends Handler {
 		import('pages.copyeditor.SubmissionCopyeditHandler');
 		SubmissionCopyeditHandler::downloadFile($args);
 	}
-	
+
 	function viewFile($args) {
 		import('pages.copyeditor.SubmissionCopyeditHandler');
 		SubmissionCopyeditHandler::viewFile($args);
 	}
-	
+
 	//
 	// Submission Comments
 	//
-	
+
 
 	function viewLayoutComments($args) {
 		import('pages.copyeditor.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::viewLayoutComments($args);
 	}
-	
+
 	function postLayoutComment() {
 		import('pages.copyeditor.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::postLayoutComment();
 	}
-	
+
 	function viewCopyeditComments($args) {
 		import('pages.copyeditor.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::viewCopyeditComments($args);
 	}
-	
+
 	function postCopyeditComment() {
 		import('pages.copyeditor.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::postCopyeditComment();
 	}
-	
+
 	function editComment($args) {
 		import('pages.copyeditor.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::editComment($args);
 	}
-	
+
 	function saveComment() {
 		import('pages.copyeditor.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::saveComment();
 	}
-	
+
 	function deleteComment($args) {
 		import('pages.copyeditor.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::deleteComment($args);
@@ -229,17 +229,17 @@ class CopyeditorHandler extends Handler {
 		import('pages.copyeditor.SubmissionCopyeditHandler');
 		SubmissionCopyeditHandler::proofGalley($args);
 	}
-	
+
 	function proofGalleyTop($args) {
 		import('pages.copyeditor.SubmissionCopyeditHandler');
 		SubmissionCopyeditHandler::proofGalleyTop($args);
 	}
-	
+
 	function proofGalleyFile($args) {
 		import('pages.copyeditor.SubmissionCopyeditHandler');
 		SubmissionCopyeditHandler::proofGalleyFile($args);
 	}	
-	
+
 	//
 	// Metadata Actions
 	//
@@ -247,12 +247,12 @@ class CopyeditorHandler extends Handler {
 		import('pages.copyeditor.SubmissionCopyeditHandler');
 		SubmissionCopyeditHandler::viewMetadata($args);
 	}	
-	
+
 	function saveMetadata($args) {
 		import('pages.copyeditor.SubmissionCopyeditHandler');
 		SubmissionCopyeditHandler::saveMetadata($args);
 	}	
-	
+
 }
 
 ?>

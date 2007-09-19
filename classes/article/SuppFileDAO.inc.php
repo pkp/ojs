@@ -43,7 +43,7 @@ class SuppFileDAO extends DAO {
 
 		return $returner;
 	}
-	
+
 	/**
 	 * Retrieve a supplementary file by public supp file ID.
 	 * @param $publicSuppId string
@@ -66,7 +66,7 @@ class SuppFileDAO extends DAO {
 
 		return $returner;
 	}
-	
+
 	/**
 	 * Retrieve all supplementary files for an article.
 	 * @param $articleId int
@@ -74,12 +74,12 @@ class SuppFileDAO extends DAO {
 	 */
 	function &getSuppFilesByArticle($articleId) {
 		$suppFiles = array();
-		
+
 		$result = &$this->retrieve(
 			'SELECT s.*, a.file_name, a.original_file_name, a.file_type, a.file_size, a.status, a.date_uploaded, a.date_modified FROM article_supplementary_files s LEFT JOIN article_files a ON (s.file_id = a.file_id) WHERE s.article_id = ? ORDER BY s.seq',
 			$articleId
 		);
-		
+
 		while (!$result->EOF) {
 			$suppFiles[] = &$this->_returnSuppFileFromRow($result->GetRowAssoc(false));
 			$result->moveNext();
@@ -126,7 +126,7 @@ class SuppFileDAO extends DAO {
 		$suppFile->setShowReviewers($row['show_reviewers']);
 		$suppFile->setDateSubmitted($this->datetimeFromDB($row['date_submitted']));
 		$suppFile->setSequence($row['seq']);
-		
+
 		//ArticleFile set methods
 		$suppFile->setFileName($row['file_name']);
 		$suppFile->setOriginalFileName($row['original_file_name']);
@@ -174,7 +174,7 @@ class SuppFileDAO extends DAO {
 		$this->updateLocaleFields($suppFile);
 		return $suppFile->getSuppFileId();
 	}
-	
+
 	/**
 	 * Update an existing SuppFile.
 	 * @param $suppFile SuppFile
@@ -205,7 +205,7 @@ class SuppFileDAO extends DAO {
 		$this->updateLocaleFields($suppFile);
 		return $returner;
 	}
-	
+
 	/**
 	 * Delete a SuppFile.
 	 * @param $suppFile SuppFile
@@ -213,7 +213,7 @@ class SuppFileDAO extends DAO {
 	function deleteSuppFile(&$suppFile) {
 		return $this->deleteSuppFileById($suppFile->getSuppFileId());
 	}
-	
+
 	/**
 	 * Delete a supplementary file by ID.
 	 * @param $suppFileId int
@@ -224,7 +224,7 @@ class SuppFileDAO extends DAO {
 			$returner = $this->update('DELETE FROM article_supplementary_files WHERE supp_id = ? AND article_id = ?', array($suppFileId, $articleId));
 			if ($returner) $this->update('DELETE FROM article_supp_file_settings WHERE supp_id = ?', $suppFileId);
 			return $returner;
-		
+
 		} else {
 			$this->update('DELETE FROM article_supp_file_settings WHERE supp_id = ?', $suppFileId);
 			return $this->update(
@@ -232,7 +232,7 @@ class SuppFileDAO extends DAO {
 			);
 		}
 	}
-	
+
 	/**
 	 * Delete supplementary files by article.
 	 * @param $articleId int
@@ -243,7 +243,7 @@ class SuppFileDAO extends DAO {
 			$this->deleteSuppFile($suppFile);
 		}
 	}
-	
+
 	/**
 	 * Check if a supplementary file exists with the associated file ID.
 	 * @param $articleId int
@@ -256,7 +256,7 @@ class SuppFileDAO extends DAO {
 			WHERE article_id = ? AND file_id = ?',
 			array($articleId, $fileId)
 		);
-		
+
 		$returner = isset($result->fields[0]) && $result->fields[0] == 1 ? true : false;
 
 		$result->Close();
@@ -264,7 +264,7 @@ class SuppFileDAO extends DAO {
 
 		return $returner;
 	}
-	
+
 	/**
 	 * Sequentially renumber supplementary files for an article in their sequence order.
 	 * @param $articleId int
@@ -274,7 +274,7 @@ class SuppFileDAO extends DAO {
 			'SELECT supp_id FROM article_supplementary_files WHERE article_id = ? ORDER BY seq',
 			$articleId
 		);
-		
+
 		for ($i=1; !$result->EOF; $i++) {
 			list($suppId) = $result->fields;
 			$this->update(
@@ -287,7 +287,7 @@ class SuppFileDAO extends DAO {
 		$result->close();
 		unset($result);
 	}
-	
+
 	/**
 	 * Get the the next sequence number for an article's supplementary files (i.e., current max + 1).
 	 * @param $articleId int
@@ -305,7 +305,7 @@ class SuppFileDAO extends DAO {
 
 		return $returner;
 	}
-	
+
 	/**
 	 * Get the ID of the last inserted supplementary file.
 	 * @return int

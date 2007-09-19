@@ -14,7 +14,7 @@
  * $Id$
  *
  */
- 
+
 import("submission.form.comment.CommentForm");
 
 class EditorDecisionCommentForm extends CommentForm {
@@ -26,7 +26,7 @@ class EditorDecisionCommentForm extends CommentForm {
 	function EditorDecisionCommentForm($article, $roleId) {
 		parent::CommentForm($article, COMMENT_TYPE_EDITOR_DECISION, $roleId, $article->getArticleId());
 	}
-	
+
 	/**
 	 * Display the form.
 	 */
@@ -40,13 +40,13 @@ class EditorDecisionCommentForm extends CommentForm {
 				'articleId' => $this->article->getArticleId()
 			)
 		);
-		
+
 		$isEditor = $this->roleId == ROLE_ID_EDITOR || $this->roleId == ROLE_ID_SECTION_EDITOR ? true : false;
 		$templateMgr->assign('isEditor', $isEditor);
-		
+
 		parent::display();
 	}
-	
+
 	/**
 	 * Assign form data to user-submitted data.
 	 */
@@ -58,14 +58,14 @@ class EditorDecisionCommentForm extends CommentForm {
 			)
 		);
 	}
-	
+
 	/**
 	 * Add the comment.
 	 */
 	function execute() {
 		parent::execute();
 	}
-	
+
 	/**
 	 * Email the comment.
 	 */
@@ -73,17 +73,17 @@ class EditorDecisionCommentForm extends CommentForm {
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$journal = &Request::getJournal();
-		
+
 		// Create list of recipients:
-		
+
 		// Editor Decision comments are to be sent to the editor or author,
 		// the opposite of whomever wrote the comment.
 		$recipients = array();
-		
+
 		if ($this->roleId == ROLE_ID_EDITOR || $this->roleId == ROLE_ID_SECTION_EDITOR) {
 			// Then add author
 			$user = &$userDao->getUser($this->article->getUserId());
-			
+
 			if ($user) $recipients = array_merge($recipients, array($user->getEmail() => $user->getFullName()));
 		} else {
 			// Then add editor
@@ -106,7 +106,7 @@ class EditorDecisionCommentForm extends CommentForm {
 			}
 			$recipients = array_merge($recipients, $editorAddresses);
 		}
-		
+
 		parent::email($recipients);	
 	}
 }

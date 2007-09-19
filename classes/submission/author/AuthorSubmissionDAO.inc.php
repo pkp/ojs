@@ -48,7 +48,7 @@ class AuthorSubmissionDAO extends DAO {
 		$this->proofAssignmentDao = &DAORegistry::getDAO('ProofAssignmentDAO');
 		$this->galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
 	}
-	
+
 	/**
 	 * Retrieve a author submission by article ID.
 	 * @param $articleId int
@@ -95,7 +95,7 @@ class AuthorSubmissionDAO extends DAO {
 
 		return $returner;
 	}
-	
+
 	/**
 	 * Internal function to return a AuthorSubmission object from a row.
 	 * @param $row array
@@ -106,16 +106,16 @@ class AuthorSubmissionDAO extends DAO {
 
 		// Article attributes
 		$this->articleDao->_articleFromRow($authorSubmission, $row);
-		
+
 		// Editor Assignment
 		$editAssignments =& $this->editAssignmentDao->getEditAssignmentsByArticleId($row['article_id']);
 		$authorSubmission->setEditAssignments($editAssignments->toArray());
-		
+
 		// Editor Decisions
 		for ($i = 1; $i <= $row['current_round']; $i++) {
 			$authorSubmission->setDecisions($this->getEditorDecisions($row['article_id'], $i), $i);
 		}
-				
+
 		// Review Assignments
 		for ($i = 1; $i <= $row['current_round']; $i++) {
 			$authorSubmission->setReviewAssignments($this->reviewAssignmentDao->getReviewAssignmentsByArticleId($row['article_id'], $i), $i);
@@ -126,7 +126,7 @@ class AuthorSubmissionDAO extends DAO {
 		$authorSubmission->setMostRecentCopyeditComment($this->articleCommentDao->getMostRecentArticleComment($row['article_id'], COMMENT_TYPE_COPYEDIT, $row['article_id']));
 		$authorSubmission->setMostRecentProofreadComment($this->articleCommentDao->getMostRecentArticleComment($row['article_id'], COMMENT_TYPE_PROOFREAD, $row['article_id']));
 		$authorSubmission->setMostRecentLayoutComment($this->articleCommentDao->getMostRecentArticleComment($row['article_id'], COMMENT_TYPE_LAYOUT, $row['article_id']));
-		
+
 		// Files
 		$authorSubmission->setSubmissionFile($this->articleFileDao->getArticleFile($row['submission_file_id']));
 		$authorSubmission->setRevisedFile($this->articleFileDao->getArticleFile($row['revised_file_id']));
@@ -138,22 +138,22 @@ class AuthorSubmissionDAO extends DAO {
 			$authorSubmission->setEditorFileRevisions($this->articleFileDao->getArticleFileRevisions($row['editor_file_id'], $i), $i);
 		}
 		$authorSubmission->setGalleys($this->galleyDao->getGalleysByArticle($row['article_id']));
-		
+
 		// Initial Copyedit File
 		if ($row['copyeditor_initial_revision'] != null) {
 			$authorSubmission->setInitialCopyeditFile($this->articleFileDao->getArticleFile($row['copyedit_file_id'], $row['copyeditor_initial_revision']));
 		}
-		
+
 		// Editor / Author Copyedit File
 		if ($row['ce_editor_author_revision'] != null) {
 			$authorSubmission->setEditorAuthorCopyeditFile($this->articleFileDao->getArticleFile($row['copyedit_file_id'], $row['ce_editor_author_revision']));
 		}
-		
+
 		// Final Copyedit File
 		if ($row['copyeditor_final_revision'] != null) {
 			$authorSubmission->setFinalCopyeditFile($this->articleFileDao->getArticleFile($row['copyedit_file_id'], $row['copyeditor_final_revision']));
 		}
-		
+
 		// Copyeditor Assignment
 		$authorSubmission->setCopyedId($row['copyed_id']);
 		$authorSubmission->setCopyeditorId($row['copyeditor_id']);
@@ -173,10 +173,10 @@ class AuthorSubmissionDAO extends DAO {
 		$authorSubmission->setCopyeditorInitialRevision($row['copyeditor_initial_revision']);
 		$authorSubmission->setCopyeditorEditorAuthorRevision($row['ce_editor_author_revision']);
 		$authorSubmission->setCopyeditorFinalRevision($row['copyeditor_final_revision']);
-	
+
 		// Layout Assignment
 		$authorSubmission->setLayoutAssignment($this->layoutAssignmentDao->getLayoutAssignmentByArticleId($row['article_id']));
-		
+
 		// Proof Assignment
 		$authorSubmission->setProofAssignment($this->proofAssignmentDao->getProofAssignmentByArticleId($row['article_id']));
 
@@ -184,7 +184,7 @@ class AuthorSubmissionDAO extends DAO {
 
 		return $authorSubmission;
 	}
-	
+
 	/**
 	 * Update an existing author submission.
 	 * @param $authorSubmission AuthorSubmission
@@ -193,7 +193,7 @@ class AuthorSubmissionDAO extends DAO {
 		// Update article
 		if ($authorSubmission->getArticleId()) {
 			$article = &$this->articleDao->getArticle($authorSubmission->getArticleId());
-			
+
 			// Only update fields that an author can actually edit.
 			$article->setRevisedFileId($authorSubmission->getRevisedFileId());
 			$article->setDateStatusModified($authorSubmission->getDateStatusModified());
@@ -203,11 +203,11 @@ class AuthorSubmissionDAO extends DAO {
 			// best not exposed like this.
 			$article->setReviewFileId($authorSubmission->getReviewFileId());
 			$article->setEditorFileId($authorSubmission->getEditorFileId());
-			
+
 			$this->articleDao->updateArticle($article);
 		}
-	
-		
+
+
 		// Update copyeditor assignment
 		if ($authorSubmission->getCopyedId()) {
 			$copyeditorSubmission = &$this->copyeditorSubmissionDao->getCopyeditorSubmission($authorSubmission->getArticleId());
@@ -219,11 +219,11 @@ class AuthorSubmissionDAO extends DAO {
 			$copyeditorSubmission->setEditorAuthorRevision($authorSubmission->getCopyeditorEditorAuthorRevision());
 			$copyeditorSubmission->setDateStatusModified($authorSubmission->getDateStatusModified());
 			$copyeditorSubmission->setLastModified($authorSubmission->getLastModified());
-		
+
 			$this->copyeditorSubmissionDao->updateCopyeditorSubmission($copyeditorSubmission);
 		}
 	}
-	
+
 	/**
 	 * Get all author submissions for an author.
 	 * @param $authorId int
@@ -266,11 +266,11 @@ class AuthorSubmissionDAO extends DAO {
 		$returner = &new DAOResultFactory($result, $this, '_returnAuthorSubmissionFromRow');
 		return $returner;
 	}
-	
+
 	//
 	// Miscellaneous
 	//
-	
+
 	/**
 	 * Get the editor decisions for a review round of an article.
 	 * @param $articleId int
@@ -278,7 +278,7 @@ class AuthorSubmissionDAO extends DAO {
 	 */
 	function getEditorDecisions($articleId, $round = null) {
 		$decisions = array();
-	
+
 		if ($round == null) {
 			$result = &$this->retrieve(
 				'SELECT edit_decision_id, editor_id, decision, date_decided FROM edit_decisions WHERE article_id = ? ORDER BY date_decided ASC', $articleId
@@ -289,7 +289,7 @@ class AuthorSubmissionDAO extends DAO {
 				array($articleId, $round)
 			);
 		}
-		
+
 		while (!$result->EOF) {
 			$decisions[] = array(
 				'editDecisionId' => $result->fields['edit_decision_id'],
@@ -302,7 +302,7 @@ class AuthorSubmissionDAO extends DAO {
 
 		$result->Close();
 		unset($result);
-	
+
 		return $decisions;
 	}
 

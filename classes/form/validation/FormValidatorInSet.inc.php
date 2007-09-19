@@ -20,7 +20,7 @@ class FormValidatorInSet extends FormValidator {
 
 	/**  Array of all values accepted as valid */
 	var $acceptedValues;
-	
+
 	/**
 	 * Constructor.
 	 * @see FormValidator::FormValidator()
@@ -30,7 +30,7 @@ class FormValidatorInSet extends FormValidator {
 		parent::FormValidator($form, $field, $type, $message);
 		$this->acceptedValues = $acceptedValues;
 	}
-	
+
 	/**
 	 * Check if field value is valid.
 	 * Value is valid if it is empty and optional or is in the set of accepted values.
@@ -39,7 +39,7 @@ class FormValidatorInSet extends FormValidator {
 	function isValid() {
 		return $this->isEmptyAndOptional() || in_array($this->form->getData($this->field), $this->acceptedValues);
 	}
-	
+
 }
 
 ?>

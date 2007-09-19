@@ -22,30 +22,30 @@ import('oai.ojs.OAIDAO');
 class JournalOAI extends OAI {
 	/** @var $site Site associated site object */
 	var $site;
-	
+
 	/** @var $journal Journal associated journal object */
 	var $journal;
-	
+
 	/** @var $journalId int null if no journal */
 	var $journalId;
-	
+
 	/** @var $dao OAIDAO DAO for retrieving OAI records/tokens from database */
 	var $dao;
-	
-	
+
+
 	/**
 	 * @see OAI#OAI
 	 */
 	function JournalOAI($config) {
 		parent::OAI($config);
-		
+
 		$this->site = &Request::getSite();
 		$this->journal = &Request::getJournal();
 		$this->journalId = isset($this->journal) ? $this->journal->getJournalId() : null;
 		$this->dao = &DAORegistry::getDAO('OAIDAO');
 		$this->dao->setOAI($this);
 	}
-	
+
 	/**
 	 * Convert article ID to OAI identifier.
 	 * @param $articleId int
@@ -54,7 +54,7 @@ class JournalOAI extends OAI {
 	function articleIdToIdentifier($articleId) {
 		return 'oai:' . $this->config->repositoryId . ':' . 'article/' . $articleId;
 	}
-	
+
 	/**
 	 * Convert OAI identifier to article ID.
 	 * @param $identifier string
@@ -85,40 +85,40 @@ class JournalOAI extends OAI {
 		}
 		return $this->dao->getSetJournalSectionId($journalSpec, $sectionSpec, $this->journalId);
 	}
-	
-	
+
+
 	//
 	// OAI interface functions
 	//
-	
+
 	/**
 	 * @see OAI#repositoryInfo
 	 */
 	function &repositoryInfo() {
 		$info = &new OAIRepository();
-		
+
 		if (isset($this->journal)) {
 			$info->repositoryName = $this->journal->getJournalTitle();
-			$info->adminEmail = $this->journal->getLocalizedSetting('contactEmail');
+			$info->adminEmail = $this->journal->getSetting('contactEmail');
 
 		} else {
 			$info->repositoryName = $this->site->getSiteTitle();
 			$info->adminEmail = $this->site->getSiteContactEmail();
 		}
-		
+
 		$info->sampleIdentifier = $this->articleIdToIdentifier(1);
 		$info->earliestDatestamp = $this->dao->getEarliestDatestamp($this->journalId);
-		
+
 		return $info;
 	}
-	
+
 	/**
 	 * @see OAI#validIdentifier
 	 */
 	function validIdentifier($identifier) {
 		return $this->identifierToArticleId($identifier) !== false;
 	}
-	
+
 	/**
 	 * @see OAI#identifierExists
 	 */
@@ -130,7 +130,7 @@ class JournalOAI extends OAI {
 		}
 		return $recordExists;
 	}
-	
+
 	/**
 	 * @see OAI#record
 	 */
@@ -144,7 +144,7 @@ class JournalOAI extends OAI {
 		}
 		return $record;		
 	}
-	
+
 	/**
 	 * @see OAI#records
 	 */
@@ -158,7 +158,7 @@ class JournalOAI extends OAI {
 		$records = &$this->dao->getRecords($journalId, $sectionId, $from, $until, $offset, $limit, $total);
 		return $records;
 	}
-	
+
 	/**
 	 * @see OAI#identifiers
 	 */
@@ -172,7 +172,7 @@ class JournalOAI extends OAI {
 		$records = &$this->dao->getIdentifiers($journalId, $sectionId, $from, $until, $offset, $limit, $total);
 		return $records;
 	}
-	
+
 	/**
 	 * @see OAI#sets
 	 */
@@ -180,7 +180,7 @@ class JournalOAI extends OAI {
 		$sets = &$this->dao->getJournalSets($this->journalId, $offset, $total);
 		return $sets;
 	}
-	
+
 	/**
 	 * @see OAI#resumptionToken
 	 */
@@ -192,7 +192,7 @@ class JournalOAI extends OAI {
 		}
 		return $token;
 	}
-	
+
 	/**
 	 * @see OAI#saveResumptionToken
 	 */

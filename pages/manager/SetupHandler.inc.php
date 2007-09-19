@@ -15,7 +15,7 @@
  */
 
 class SetupHandler extends ManagerHandler {
-	
+
 	/**
 	 * Display journal setup form for the selected step.
 	 * Displays setup index page if a valid step is not specified.
@@ -24,14 +24,14 @@ class SetupHandler extends ManagerHandler {
 	function setup($args) {
 		parent::validate();
 		parent::setupTemplate(true);
-		
+
 		$step = isset($args[0]) ? (int) $args[0] : 0;
-		
+
 		if ($step >= 1 && $step <= 5) {
-			
+
 			$formClass = "JournalSetupStep{$step}Form";
 			import("manager.form.setup.$formClass");
-			
+
 			$setupForm = &new $formClass();
 			if ($setupForm->isLocaleResubmit()) {
 				$setupForm->readInputData();
@@ -39,34 +39,34 @@ class SetupHandler extends ManagerHandler {
 				$setupForm->initData();
 			}
 			$setupForm->display();
-		
+
 		} else {
 			$templateMgr = &TemplateManager::getManager();
 			$templateMgr->assign('helpTopicId','journal.managementPages.setup');
 			$templateMgr->display('manager/setup/index.tpl');
 		}
 	}
-	
+
 	/**
 	 * Save changes to journal settings.
 	 * @param $args array first parameter is the step being saved
 	 */
 	function saveSetup($args) {
 		parent::validate();
-		
+
 		$step = isset($args[0]) ? (int) $args[0] : 0;
-		
+
 		if ($step >= 1 && $step <= 5) {
 
 			parent::setupTemplate(true);
-			
+
 			$formClass = "JournalSetupStep{$step}Form";
 			import("manager.form.setup.$formClass");
-			
+
 			$setupForm = &new $formClass();
 			$setupForm->readInputData();
 			$formLocale = $setupForm->getFormLocale();
-			
+
 			// Check for any special cases before trying to save
 			switch ($step) {
 				case 1:
@@ -76,7 +76,7 @@ class SetupHandler extends ManagerHandler {
 						$sponsors = $setupForm->getData('sponsors');
 						array_push($sponsors, array());
 						$setupForm->setData('sponsors', $sponsors);
-						
+
 					} else if (($delSponsor = Request::getUserVar('delSponsor')) && count($delSponsor) == 1) {
 						// Delete a sponsor
 						$editData = true;
@@ -85,14 +85,14 @@ class SetupHandler extends ManagerHandler {
 						$sponsors = $setupForm->getData('sponsors');
 						array_splice($sponsors, $delSponsor, 1);
 						$setupForm->setData('sponsors', $sponsors);
-						
+
 					} else if (Request::getUserVar('addContributor')) {
 						// Add a contributor
 						$editData = true;
 						$contributors = $setupForm->getData('contributors');
 						array_push($contributors, array());
 						$setupForm->setData('contributors', $contributors);
-						
+
 					} else if (($delContributor = Request::getUserVar('delContributor')) && count($delContributor) == 1) {
 						// Delete a contributor
 						$editData = true;
@@ -103,7 +103,7 @@ class SetupHandler extends ManagerHandler {
 						$setupForm->setData('contributors', $contributors);
 					}
 					break;
-					
+
 				case 2:
 					if (Request::getUserVar('addCustomAboutItem')) {
 						// Add a custom about item
@@ -111,7 +111,7 @@ class SetupHandler extends ManagerHandler {
 						$customAboutItems = $setupForm->getData('customAboutItems');
 						$customAboutItems[$formLocale][] = array();
 						$setupForm->setData('customAboutItems', $customAboutItems);
-						
+
 					} else if (($delCustomAboutItem = Request::getUserVar('delCustomAboutItem')) && count($delCustomAboutItem) == 1) {
 						// Delete a custom about item
 						$editData = true;
@@ -128,7 +128,7 @@ class SetupHandler extends ManagerHandler {
 						$reviewerDatabaseLinks = $setupForm->getData('reviewerDatabaseLinks');
 						array_push($reviewerDatabaseLinks, array());
 						$setupForm->setData('reviewerDatabaseLinks', $reviewerDatabaseLinks);
-						
+
 					} else if (($delReviewerDatabaseLink = Request::getUserVar('delReviewerDatabaseLink')) && count($delReviewerDatabaseLink) == 1) {
 						// Delete a custom about item
 						$editData = true;
@@ -139,7 +139,7 @@ class SetupHandler extends ManagerHandler {
 						$setupForm->setData('reviewerDatabaseLinks', $reviewerDatabaseLinks);
 					}
 					break;
-					
+
 				case 3:
 					if (Request::getUserVar('addChecklist')) {
 						// Add a checklist item
@@ -153,7 +153,7 @@ class SetupHandler extends ManagerHandler {
 						}
 						array_push($checklist[$formLocale], array('order' => $lastOrder+1));
 						$setupForm->setData('submissionChecklist', $checklist);
-						
+
 					} else if (($delChecklist = Request::getUserVar('delChecklist')) && count($delChecklist) == 1) {
 						// Delete a checklist item
 						$editData = true;
@@ -164,7 +164,7 @@ class SetupHandler extends ManagerHandler {
 						array_splice($checklist[$formLocale], $delChecklist, 1);
 						$setupForm->setData('submissionChecklist', $checklist);
 					}
-					
+
 					if (!isset($editData)) {
 						// Reorder checklist items
 						$checklist = $setupForm->getData('submissionChecklist');
@@ -220,7 +220,7 @@ class SetupHandler extends ManagerHandler {
 					} else if (Request::getUserVar('deleteHomeHeaderTitleImage')) {
 						$editData = true;
 						$setupForm->deleteImage('homeHeaderTitleImage', $formLocale);
-						
+
 					} else if (Request::getUserVar('uploadHomeHeaderLogoImage')) {
 						if ($setupForm->uploadImage('homeHeaderLogoImage', $formLocale)) {
 							$editData = true;
@@ -231,7 +231,7 @@ class SetupHandler extends ManagerHandler {
 					} else if (Request::getUserVar('deleteHomeHeaderLogoImage')) {
 						$editData = true;
 						$setupForm->deleteImage('homeHeaderLogoImage', $formLocale);
-						
+
 					} else if (Request::getUserVar('uploadPageHeaderTitleImage')) {
 						if ($setupForm->uploadImage('pageHeaderTitleImage', $formLocale)) {
 							$editData = true;
@@ -242,7 +242,7 @@ class SetupHandler extends ManagerHandler {
 					} else if (Request::getUserVar('deletePageHeaderTitleImage')) {
 						$editData = true;
 						$setupForm->deleteImage('pageHeaderTitleImage', $formLocale);
-						
+
 					} else if (Request::getUserVar('uploadPageHeaderLogoImage')) {
 						if ($setupForm->uploadImage('pageHeaderLogoImage', $formLocale)) {
 							$editData = true;
@@ -253,7 +253,7 @@ class SetupHandler extends ManagerHandler {
 					} else if (Request::getUserVar('deletePageHeaderLogoImage')) {
 						$editData = true;
 						$setupForm->deleteImage('pageHeaderLogoImage', $formLocale);
-						
+
 					} else if (Request::getUserVar('uploadHomepageImage')) {
 						if ($setupForm->uploadImage('homepageImage', $formLocale)) {
 							$editData = true;
@@ -274,14 +274,14 @@ class SetupHandler extends ManagerHandler {
 					} else if (Request::getUserVar('deleteJournalStyleSheet')) {
 						$editData = true;
 						$setupForm->deleteImage('journalStyleSheet');
-						
+
 					} else if (Request::getUserVar('addNavItem')) {
 						// Add a navigation bar item
 						$editData = true;
 						$navItems = $setupForm->getData('navItems');
 						$navItems[$formLocale][] = array();
 						$setupForm->setData('navItems', $navItems);
-						
+
 					} else if (($delNavItem = Request::getUserVar('delNavItem')) && count($delNavItem) == 1) {
 						// Delete a  navigation bar item
 						$editData = true;
@@ -295,7 +295,7 @@ class SetupHandler extends ManagerHandler {
 					}
 					break;
 			}
-			
+
 			if (!isset($editData) && $setupForm->validate()) {
 				$setupForm->execute();
 
@@ -303,7 +303,7 @@ class SetupHandler extends ManagerHandler {
 			} else {
 				$setupForm->display();
 			}
-		
+
 		} else {
 			Request::redirect();
 		}
@@ -314,9 +314,9 @@ class SetupHandler extends ManagerHandler {
 	 */
 	function setupSaved($args) {
 		parent::validate();
-		
+
 		$step = isset($args[0]) ? (int) $args[0] : 0;
-		
+
 		if ($step >= 1 && $step <= 5) {
 			parent::setupTemplate(true);
 

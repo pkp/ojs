@@ -42,11 +42,11 @@ class Action {
 	function Action() {
 
 	}
-	
+
 	/**
 	 * Actions.
 	 */
-	 
+
 	/**
 	 * View metadata of an article.
 	 * @param $article object
@@ -63,7 +63,7 @@ class Action {
 			$metadataForm->display();
 		}
 	}
-	
+
 	/**
 	 * Save metadata.
 	 * @param $article object
@@ -85,7 +85,7 @@ class Action {
 				$authors = $metadataForm->getData('authors');
 				array_push($authors, array());
 				$metadataForm->setData('authors', $authors);
-			
+
 			} else if (($delAuthor = Request::getUserVar('delAuthor')) && count($delAuthor) == 1) {
 				// Delete an author
 				$editData = true;
@@ -99,11 +99,11 @@ class Action {
 				}
 				array_splice($authors, $delAuthor, 1);
 				$metadataForm->setData('authors', $authors);
-					
+
 				if ($metadataForm->getData('primaryContact') == $delAuthor) {
 					$metadataForm->setData('primaryContact', 0);
 				}
-					
+
 			} else if (Request::getUserVar('moveAuthor')) {
 				// Move an author up/down
 				$editData = true;
@@ -111,7 +111,7 @@ class Action {
 				$moveAuthorDir = $moveAuthorDir == 'u' ? 'u' : 'd';
 				$moveAuthorIndex = (int) Request::getUserVar('moveAuthorIndex');
 				$authors = $metadataForm->getData('authors');
-			
+
 				if (!(($moveAuthorDir == 'u' && $moveAuthorIndex <= 0) || ($moveAuthorDir == 'd' && $moveAuthorIndex >= count($authors) - 1))) {
 					$tmpAuthor = $authors[$moveAuthorIndex];
 					$primaryContact = $metadataForm->getData('primaryContact');
@@ -135,11 +135,11 @@ class Action {
 				}
 				$metadataForm->setData('authors', $authors);
 			}
-		
+
 			if (isset($editData)) {
 				$metadataForm->display();
 				return false;
-			
+
 			} else {
 				$metadataForm->execute();
 
@@ -153,7 +153,7 @@ class Action {
 			}
 		}
 	}
-	
+
 	/**
 	 * Download file.
 	 * @param $articleId int
@@ -165,7 +165,7 @@ class Action {
 		$articleFileManager = &new ArticleFileManager($articleId);
 		return $articleFileManager->downloadFile($fileId, $revision);
 	}
-	
+
 	/**
 	 * View file.
 	 * @param $articleId int
@@ -177,7 +177,7 @@ class Action {
 		$articleFileManager = &new ArticleFileManager($articleId);
 		return $articleFileManager->viewFile($fileId, $revision);
 	}
-	
+
 	/**
 	 *
 	 * @param $type string the type of instructions (copy, layout, or proof).
@@ -185,12 +185,12 @@ class Action {
 	function instructions($type, $allowed = array('copy', 'layout', 'proof')) {
 		$journal = &Request::getJournal();
 		$templateMgr = &TemplateManager::getManager();
-		
+
 		if (!HookRegistry::call('Action::instructions', array(&$type, &$allowed))) {
 			if (!in_array($type, $allowed)) {
 				return false;
 			}
-		
+
 			switch ($type) {
 				case 'copy':
 					$title = 'submission.copyedit.instructions';
@@ -212,10 +212,10 @@ class Action {
 		$templateMgr->assign('pageTitle', $title);
 		$templateMgr->assign('instructions', $instructions);
 		$templateMgr->display('submission/instructions.tpl');
-		
+
 		return true;
 	}
-	
+
 	/**
 	 * Edit comment.
 	 * @param $commentId int
@@ -223,13 +223,13 @@ class Action {
 	function editComment($article, $comment) {
 		if (!HookRegistry::call('Action::editComment', array(&$article, &$comment))) {
 			import("submission.form.comment.EditCommentForm");
-		
+
 			$commentForm = &new EditCommentForm($article, $comment);
 			$commentForm->initData();
 			$commentForm->display();
 		}
 	}
-	
+
 	/**
 	 * Save comment.
 	 * @param $commentId int
@@ -237,23 +237,23 @@ class Action {
 	function saveComment($article, &$comment, $emailComment) {
 		if (!HookRegistry::call('Action::saveComment', array(&$article, &$comment, &$emailComment))) {
 			import("submission.form.comment.EditCommentForm");
-		
+
 			$commentForm = &new EditCommentForm($article, $comment);
 			$commentForm->readInputData();
-		
+
 			if ($commentForm->validate()) {
 				$commentForm->execute();
-			
+
 				if ($emailComment) {
 					$commentForm->email($commentForm->emailHelper());
 				}
-			
+
 			} else {
 				$commentForm->display();
 			}
 		}
 	}
-	
+
 	/**
 	 * Delete comment.
 	 * @param $commentId int
@@ -261,10 +261,10 @@ class Action {
 	 */
 	function deleteComment($commentId, $user = null) {
 		if ($user == null) $user = &Request::getUser();
-	
+
 		$articleCommentDao = &DAORegistry::getDAO('ArticleCommentDAO');
 		$comment = &$articleCommentDao->getArticleCommentById($commentId);
-		
+
 		if ($comment->getAuthorId() == $user->getUserId()) {
 			if (!HookRegistry::call('Action::deleteComment', array(&$comment))) {
 				$articleCommentDao->deleteArticleComment($comment);

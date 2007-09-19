@@ -25,11 +25,11 @@ class AuthSource extends DataObject {
 	function AuthSource() {
 		parent::DataObject();
 	}
-	
+
 	//
 	// Get/set methods
 	//
-	
+
 	/**
 	 * Get ID of this source.
 	 * @return int
@@ -37,7 +37,7 @@ class AuthSource extends DataObject {
 	function getAuthId() {
 		return $this->getData('authId');
 	}
-	
+
 	/**
 	 * Set ID of this source.
 	 * @param $authId int
@@ -45,7 +45,7 @@ class AuthSource extends DataObject {
 	function setAuthId($authId) {
 		return $this->setData('authId', $authId);
 	}
-	
+
 	/**
 	 * Get user-specified title of this source.
 	 * @return string
@@ -53,7 +53,7 @@ class AuthSource extends DataObject {
 	function getTitle() {
 		return $this->getData('title');
 	}
-	
+
 	/**
 	 * Set user-specified title of this source.
 	 * @param $title string
@@ -61,7 +61,7 @@ class AuthSource extends DataObject {
 	function setTitle($title) {
 		return $this->setData('title', $title);
 	}
-	
+
 	/**
 	 * Get the authentication plugin associated with this source.
 	 * @return string
@@ -69,7 +69,7 @@ class AuthSource extends DataObject {
 	function getPlugin() {
 		return $this->getData('plugin');
 	}
-	
+
 	/**
 	 * Set the authentication plugin associated with this source.
 	 * @param $plugin string
@@ -77,7 +77,7 @@ class AuthSource extends DataObject {
 	function setPlugin($plugin) {
 		return $this->setData('plugin', $plugin);
 	}
-	
+
 	/**
 	 * Get flag indicating this is the default authentication source.
 	 * @return boolean
@@ -85,7 +85,7 @@ class AuthSource extends DataObject {
 	function getDefault() {
 		return $this->getData('authDefault');
 	}
-	
+
 	/**
 	 * Set flag indicating this is the default authentication source.
 	 * @param $authDefault boolean
@@ -93,7 +93,7 @@ class AuthSource extends DataObject {
 	function setDefault($authDefault) {
 		return $this->setData('authDefault', $authDefault);
 	}
-	
+
 	/**
 	 * Get array of plugin-specific settings for this source.
 	 * @return array
@@ -101,7 +101,7 @@ class AuthSource extends DataObject {
 	function getSettings() {
 		return $this->getData('settings');
 	}
-	
+
 	/**
 	 * Set array of plugin-specific settings for this source.
 	 * @param $settings array
@@ -109,7 +109,7 @@ class AuthSource extends DataObject {
 	function setSettings($settings) {
 		return $this->setData('settings', $settings);
 	}
-	
+
 	/**
 	 * Get the authentication plugin object associated with this source.
 	 * @return AuthPlugin
@@ -118,7 +118,7 @@ class AuthSource extends DataObject {
 		$returner =& $this->getData('authPlugin');
 		return $returner;
 	}
-	
+
 	/**
 	 * Set authentication plugin object associated with this source.
 	 * @param $authPlugin AuthPlugin
@@ -126,5 +126,5 @@ class AuthSource extends DataObject {
 	function setPluginClass($authPlugin) {
 		return $this->setData('authPlugin', $authPlugin);
 	}
-	
+
 }

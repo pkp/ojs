@@ -18,10 +18,10 @@ import('mail.Mail');
 
 define('MAIL_ERROR_INVALID_EMAIL', 0x000001);
 class MailTemplate extends Mail {
-	
+
 	/** @var $emailKey string Key of the email template we are using */
 	var $emailKey;
-	
+
 	/** @var $locale string locale of this template */
 	var $locale;
 
@@ -49,7 +49,7 @@ class MailTemplate extends Mail {
 
 	/** @var boolean Whether or not email fields are disabled */
 	var $addressFieldsEnabled;
-	
+
 	/**
 	 * Constructor.
 	 * @param $emailKey string unique identifier for the template
@@ -61,13 +61,13 @@ class MailTemplate extends Mail {
 		parent::Mail();
 		$this->emailKey = isset($emailKey) ? $emailKey : null;
 
-		
+
 		// Use current user's locale if none specified
 		$this->locale = isset($locale) ? $locale : Locale::getLocale();
-		
+
 		// If a journal wasn't specified, use the current request.
 		if ($journal === null) $journal = &Request::getJournal();
-		
+
 		if (isset($this->emailKey)) {
 			$emailTemplateDao = &DAORegistry::getDAO('EmailTemplateDAO');
 			$emailTemplate = &$emailTemplateDao->getEmailTemplate($this->emailKey, $this->locale, $journal == null ? 0 : $journal->getJournalId());
@@ -128,7 +128,7 @@ class MailTemplate extends Mail {
 		} elseif ($journal == null) {
 			$site = &Request::getSite();
 			$this->setFrom($site->getContactEmail(), $site->getContactName());
-			
+
 		} else {
 			$this->setFrom($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
 		}
@@ -207,11 +207,11 @@ class MailTemplate extends Mail {
 				$body = str_replace('{$' . $key . '}', $value, $body);
 			}
 		}
-		
+
 		$this->setSubject($subject);
 		$this->setBody($body);
 	}
-	
+
 	/**
 	 * Returns true if the email template is enabled; false otherwise.
 	 * @return boolean
@@ -288,7 +288,7 @@ class MailTemplate extends Mail {
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('helpTopicId', 'journal.managementPages.emails');
-			
+
 		$form->display();
 	}
 
@@ -311,7 +311,7 @@ class MailTemplate extends Mail {
 			} else {
 				$this->setBody(str_replace($searchString, $this->journal->getSetting('emailSignature'), $this->getBody()));
 			}
-	
+
 			$envelopeSender = $this->journal->getSetting('envelopeSender');
 			if (!empty($envelopeSender) && Config::getVar('email', 'allow_envelope_sender')) $this->setEnvelopeSender($envelopeSender);
 		}
@@ -355,18 +355,18 @@ class MailTemplate extends Mail {
 		$savedHeaders = $this->getHeaders();
 		$savedSubject = $this->getSubject();
 		$savedBody = $this->getBody();
-		
+
 		$this->assignParams($paramArray);
-		
+
 		$ret = $this->send();
-		
+
 		$this->setHeaders($savedHeaders);
 		$this->setSubject($savedSubject);
 		$this->setBody($savedBody);
-		
+
 		return $ret;
 	}
-	
+
 	/**
 	 * Clears the recipient, cc, and bcc lists.
 	 * @param $clearHeaders boolean if true, also clear headers

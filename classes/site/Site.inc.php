@@ -22,7 +22,7 @@ class Site extends DataObject {
 	function Site() {
 		parent::DataObject();
 	}
-	
+
 	/**
 	 * Return associative array of all locales supported by the site.
 	 * These locales are used to provide a language toggle on the main site pages.
@@ -30,26 +30,26 @@ class Site extends DataObject {
 	 */
 	function &getSupportedLocaleNames() {
 		static $supportedLocales;
-		
+
 		if (!isset($supportedLocales)) {
 			$supportedLocales = array();
 			$localeNames = &Locale::getAllLocales();
-			
+
 			$locales = $this->getSupportedLocales();
 			foreach ($locales as $localeKey) {
 				$supportedLocales[$localeKey] = $localeNames[$localeKey];
 			}
-			
+
 			asort($supportedLocales);
 		}
-		
+
 		return $supportedLocales;
 	}
-	
+
 	//
 	// Get/set methods
 	//
-	
+
 	/**
 	 * Get localized site title.
 	 */
@@ -65,7 +65,7 @@ class Site extends DataObject {
 	function getTitle($locale) {
 		return $this->getData('title', $locale);
 	}
-	
+
 	/**
 	 * Set site title.
 	 * @param $title string
@@ -74,7 +74,7 @@ class Site extends DataObject {
 	function setTitle($title, $locale) {
 		return $this->setData('title', $title, $locale);
 	}
-	
+
 	/**
 	 * Get original site stylesheet filename.
 	 * @return string
@@ -82,7 +82,7 @@ class Site extends DataObject {
 	function getOriginalStyleFilename() {
 		return $this->getData('originalStyleFilename');
 	}
-	
+
 	/**
 	 * Set original site stylesheet filename.
 	 * @param $originalStyleFilename string
@@ -90,7 +90,7 @@ class Site extends DataObject {
 	function setOriginalStyleFilename($originalStyleFilename) {
 		return $this->setData('originalStyleFilename', $originalStyleFilename);
 	}
-	
+
 	/**
 	 * Get localized site intro.
 	 */
@@ -106,7 +106,7 @@ class Site extends DataObject {
 	function getIntro($locale) {
 		return $this->getData('intro', $locale);
 	}
-	
+
 	/**
 	 * Set site introduction.
 	 * @param $intro string
@@ -115,7 +115,7 @@ class Site extends DataObject {
 	function setIntro($intro, $locale) {
 		return $this->setData('intro', $intro, $locale);
 	}
-	
+
 	/**
 	 * Get journal redirect.
 	 * @return int
@@ -123,7 +123,7 @@ class Site extends DataObject {
 	function getJournalRedirect() {
 		return $this->getData('journalRedirect');
 	}
-	
+
 	/**
 	 * Set journal redirect.
 	 * @param $journalRedirect int
@@ -131,7 +131,7 @@ class Site extends DataObject {
 	function setJournalRedirect($journalRedirect) {
 		return $this->setData('journalRedirect', (int)$journalRedirect);
 	}
-	
+
 	/**
 	 * Get localized site about statement.
 	 */
@@ -147,7 +147,7 @@ class Site extends DataObject {
 	function getAbout($locale) {
 		return $this->getData('about', $locale);
 	}
-	
+
 	/**
 	 * Set site about description.
 	 * @param $about string
@@ -156,7 +156,7 @@ class Site extends DataObject {
 	function setAbout($about, $locale) {
 		return $this->setData('about', $about, $locale);
 	}
-	
+
 	/**
 	 * Get localized site contact name.
 	 */
@@ -172,7 +172,7 @@ class Site extends DataObject {
 	function getContactName($locale) {
 		return $this->getData('contactName', $locale);
 	}
-	
+
 	/**
 	 * Set site contact name.
 	 * @param $contactName string
@@ -181,7 +181,7 @@ class Site extends DataObject {
 	function setContactName($contactName, $locale) {
 		return $this->setData('contactName', $contactName, $locale);
 	}
-	
+
 	/**
 	 * Get localized site contact email.
 	 */
@@ -197,7 +197,7 @@ class Site extends DataObject {
 	function getContactEmail($locale) {
 		return $this->getData('contactEmail', $locale);
 	}
-	
+
 	/**
 	 * Set site contact email.
 	 * @param $contactEmail string
@@ -206,7 +206,7 @@ class Site extends DataObject {
 	function setContactEmail($contactEmail, $locale) {
 		return $this->setData('contactEmail', $contactEmail, $locale);
 	}
-	
+
 	/**
 	 * Get minimum password length.
 	 * @return int
@@ -214,7 +214,7 @@ class Site extends DataObject {
 	function getMinPasswordLength() {
 		return $this->getData('minPasswordLength');
 	}
-	
+
 	/**
 	 * Set minimum password length.
 	 * @param $minPasswordLength int
@@ -222,7 +222,7 @@ class Site extends DataObject {
 	function setMinPasswordLength($minPasswordLength) {
 		return $this->setData('minPasswordLength', $minPasswordLength);
 	}
-	
+
 	/**
 	 * Get primary locale.
 	 * @return string
@@ -230,7 +230,7 @@ class Site extends DataObject {
 	function getPrimaryLocale() {
 		return $this->getData('primaryLocale');
 	}
-	
+
 	/**
 	 * Set primary locale.
 	 * @param $primaryLocale string
@@ -238,7 +238,7 @@ class Site extends DataObject {
 	function setPrimaryLocale($primaryLocale) {
 		return $this->setData('primaryLocale', $primaryLocale);
 	}
-	
+
 	/**
 	 * Get installed locales.
 	 * @return array
@@ -247,7 +247,7 @@ class Site extends DataObject {
 		$locales = $this->getData('installedLocales');
 		return isset($locales) ? $locales : array();
 	}
-	
+
 	/**
 	 * Set installed locales.
 	 * @param $installedLocales array
@@ -255,7 +255,7 @@ class Site extends DataObject {
 	function setInstalledLocales($installedLocales) {
 		return $this->setData('installedLocales', $installedLocales);
 	}
-	
+
 	/**
 	 * Get array of all supported locales (for static text).
 	 * @return array
@@ -264,7 +264,7 @@ class Site extends DataObject {
 		$locales = $this->getData('supportedLocales');
 		return isset($locales) ? $locales : array();
 	}
-	
+
 	/**
 	 * Set array of all supported locales (for static text).
 	 * @param $supportedLocales array

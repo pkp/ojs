@@ -46,7 +46,7 @@ class CopyeditorSubmissionDAO extends DAO {
 		$this->suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
 		$this->galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
 	}
-	
+
 	/**
 	 * Retrieve a copyeditor submission by article ID.
 	 * @param $articleId int
@@ -93,7 +93,7 @@ class CopyeditorSubmissionDAO extends DAO {
 
 		return $returner;
 	}
-	
+
 	/**
 	 * Internal function to return a CopyeditorSubmission object from a row.
 	 * @param $row array
@@ -128,13 +128,13 @@ class CopyeditorSubmissionDAO extends DAO {
 		// Editor Assignment
 		$editAssignments =& $this->editAssignmentDao->getEditAssignmentsByArticleId($row['article_id']);
 		$copyeditorSubmission->setEditAssignments($editAssignments->toArray());
-		
+
 		// Comments
 		$copyeditorSubmission->setMostRecentCopyeditComment($this->articleCommentDao->getMostRecentArticleComment($row['article_id'], COMMENT_TYPE_COPYEDIT, $row['article_id']));
 		$copyeditorSubmission->setMostRecentLayoutComment($this->articleCommentDao->getMostRecentArticleComment($row['article_id'], COMMENT_TYPE_LAYOUT, $row['article_id']));
-		
+
 		// Files
-		
+
 		// Initial Copyedit File
 		if ($row['initial_revision'] != null) {
 			$copyeditorSubmission->setInitialCopyeditFile($this->articleFileDao->getArticleFile($row['copyedit_file_id'], $row['initial_revision']));
@@ -148,7 +148,7 @@ class CopyeditorSubmissionDAO extends DAO {
 		if ($row['editor_author_revision'] != null) {
 			$copyeditorSubmission->setEditorAuthorCopyeditFile($this->articleFileDao->getArticleFile($row['copyedit_file_id'], $row['editor_author_revision']));
 		}
-		
+
 		// Final Copyedit File
 		if ($row['final_revision'] != null) {
 			$copyeditorSubmission->setFinalCopyeditFile($this->articleFileDao->getArticleFile($row['copyedit_file_id'], $row['final_revision']));
@@ -156,12 +156,12 @@ class CopyeditorSubmissionDAO extends DAO {
 
 		$copyeditorSubmission->setLayoutAssignment($this->layoutAssignmentDao->getLayoutAssignmentByArticleId($row['article_id']));
 		$copyeditorSubmission->setProofAssignment($this->proofAssignmentDao->getProofAssignmentByArticleId($row['article_id']));
-		
+
 		HookRegistry::call('CopyeditorSubmissionDAO::_returnCopyeditorSubmissionFromRow', array(&$copyeditorSubmission, &$row));
 
 		return $copyeditorSubmission;
 	}
-	
+
 	/**
 	 * Insert a new CopyeditorSubmission.
 	 * @param $copyeditorSubmission CopyeditorSubmission
@@ -181,7 +181,7 @@ class CopyeditorSubmissionDAO extends DAO {
 				$copyeditorSubmission->getFinalRevision()
 			)
 		);
-		
+
 		$copyeditorSubmission->setCopyedId($this->getInsertCopyedId());
 		return $copyeditorSubmission->getCopyedId();
 	}
@@ -223,7 +223,7 @@ class CopyeditorSubmissionDAO extends DAO {
 			)
 		);
 	}
-	
+
 	/**
 	 * Get all submissions for a copyeditor of a journal.
 	 * @param $copyeditorId int
@@ -364,7 +364,7 @@ class CopyeditorSubmissionDAO extends DAO {
 		$returner = &new DAOResultFactory($result, $this, '_returnCopyeditorSubmissionFromRow');
 		return $returner;
 	}
-	
+
 	/**
 	 * Get the ID of the last inserted copyeditor assignment.
 	 * @return int

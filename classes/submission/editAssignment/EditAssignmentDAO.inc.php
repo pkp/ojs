@@ -38,7 +38,7 @@ class EditAssignmentDAO extends DAO {
 
 		return $returner;
 	}
-	
+
 	/**
 	 * Retrieve edit assignments by article id.
 	 * @param $articleId int
@@ -141,7 +141,7 @@ class EditAssignmentDAO extends DAO {
 
 		return $editAssignment;
 	}
-	
+
 	/**
 	 * Insert a new EditAssignment.
 	 * @param $editAssignment EditAssignment
@@ -161,11 +161,11 @@ class EditAssignmentDAO extends DAO {
 				$editAssignment->getCanReview()?1:0
 			)
 		);
-		
+
 		$editAssignment->setEditId($this->getInsertEditId());
 		return $editAssignment->getEditId();
 	}
-	
+
 	/**
 	 * Update an existing edit assignment.
 	 * @param $editAssignment EditAssignment
@@ -191,7 +191,7 @@ class EditAssignmentDAO extends DAO {
 			)
 		);
 	}
-	
+
 	/**
 	 * Delete edit assignment.
 	 * @param $reviewId int
@@ -202,7 +202,7 @@ class EditAssignmentDAO extends DAO {
 			$editId
 		);
 	}
-	
+
 	/**
 	 * Delete edit assignments by article.
 	 * @param $articleId int
@@ -221,7 +221,7 @@ class EditAssignmentDAO extends DAO {
 	function getInsertEditId() {
 		return $this->getInsertId('edit_assignments', 'edit_id');
 	}
-	
+
 	/**
 	 * Get the assignment counts and last assigned date for all editors in the given journal.
 	 * @return array

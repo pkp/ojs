@@ -25,11 +25,11 @@ class LayoutEditorSubmission extends Article {
 	function LayoutEditorSubmission() {
 		parent::Article();
 	}
-	
+
 	//
 	// Get/set methods
 	//
-	
+
 	/**
 	 * Get the layout assignment for an article.
 	 * @return LayoutAssignment
@@ -38,7 +38,7 @@ class LayoutEditorSubmission extends Article {
 		$layoutAssignment = &$this->getData('layoutAssignment');
 		return $layoutAssignment;
 	}
-	
+
 	/**
 	 * Set the layout assignment for an article.
 	 * @param $layoutAssignment LayoutAssignment
@@ -46,7 +46,7 @@ class LayoutEditorSubmission extends Article {
 	function setLayoutAssignment(&$layoutAssignment) {
 		return $this->setData('layoutAssignment', $layoutAssignment);
 	}
-	
+
 	/**
 	 * Get the galleys for an article.
 	 * @return array ArticleGalley
@@ -55,7 +55,7 @@ class LayoutEditorSubmission extends Article {
 		$galleys = &$this->getData('galleys');
 		return $galleys;
 	}
-	
+
 	/**
 	 * Set the galleys for an article.
 	 * @param $galleys array ArticleGalley
@@ -63,7 +63,7 @@ class LayoutEditorSubmission extends Article {
 	function setGalleys(&$galleys) {
 		return $this->setData('galleys', $galleys);
 	}
-	
+
 	/**
 	 * Get supplementary files for this article.
 	 * @return array SuppFiles
@@ -72,7 +72,7 @@ class LayoutEditorSubmission extends Article {
 		$returner =& $this->getData('suppFiles');
 		return $returner;
 	}
-	
+
 	/**
 	 * Set supplementary file for this article.
 	 * @param $suppFiles array SuppFiles
@@ -80,10 +80,10 @@ class LayoutEditorSubmission extends Article {
 	function setSuppFiles($suppFiles) {
 		return $this->setData('suppFiles', $suppFiles);
 	}
-	
-	
+
+
 	// FIXME These should probably be in an abstract "Submission" base class
-	
+
 	/**
 	 * Get edit assignments for this article.
 	 * @return array
@@ -92,7 +92,7 @@ class LayoutEditorSubmission extends Article {
 		$editAssignments = &$this->getData('editAssignments');
 		return $editAssignments;
 	}
-	
+
 	/**
 	 * Set edit assignments for this article.
 	 * @param $editAssignments array
@@ -100,7 +100,7 @@ class LayoutEditorSubmission extends Article {
 	function setEditAssignments($editAssignments) {
 		return $this->setData('editAssignments', $editAssignments);
 	}
-	
+
 	/**
 	 * Get proof assignment.
 	 * @return proofAssignment object
@@ -117,11 +117,11 @@ class LayoutEditorSubmission extends Article {
 	function setProofAssignment($proofAssignment) {
 		return $this->setData('proofAssignment', $proofAssignment);
 	}
-	
+
 	//
 	// Comments
 	//
-	
+
 	/**
 	 * Get most recent layout comment.
 	 * @return ArticleComment
@@ -129,7 +129,7 @@ class LayoutEditorSubmission extends Article {
 	function getMostRecentLayoutComment() {
 		return $this->getData('mostRecentLayoutComment');
 	}
-	
+
 	/**
 	 * Set most recent layout comment.
 	 * @param $mostRecentLayoutComment ArticleComment
@@ -137,7 +137,7 @@ class LayoutEditorSubmission extends Article {
 	function setMostRecentLayoutComment($mostRecentLayoutComment) {
 		return $this->setData('mostRecentLayoutComment', $mostRecentLayoutComment);
 	}
-	
+
 	/**
 	 * Get most recent proofread comment.
 	 * @return ArticleComment
@@ -145,7 +145,7 @@ class LayoutEditorSubmission extends Article {
 	function getMostRecentProofreadComment() {
 		return $this->getData('mostRecentProofreadComment');
 	}
-	
+
 	/**
 	 * Set most recent proofread comment.
 	 * @param $mostRecentProofreadComment ArticleComment

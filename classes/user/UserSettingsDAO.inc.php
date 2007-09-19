@@ -34,7 +34,7 @@ class UserSettingsDAO extends DAO {
 				'SELECT setting_value, setting_type FROM user_settings WHERE user_id = ? AND setting_name = ? AND journal_id = ?', array($userId, $name, $journalId)
 			);
 		}
-		
+
 		if ($result->RecordCount() != 0) {
 			$row = &$result->getRowAssoc(false);
 			$returner = $this->convertFromDB($row['setting_value'], $row['setting_type']);
@@ -43,7 +43,7 @@ class UserSettingsDAO extends DAO {
 		}
 
 		return $returner;
-			
+
 	}
 
 	/**
@@ -93,12 +93,12 @@ class UserSettingsDAO extends DAO {
 				'SELECT setting_name, setting_value, setting_type FROM user_settings WHERE user_id = ? and journal_id = ?', array($userId, $journalId)
 			);
 		}
-		
+
 		if ($result->RecordCount() == 0) {
 			$returner = null;
 			$result->Close();
 			return $returner;
-			
+
 		} else {
 			while (!$result->EOF) {
 				$row = &$result->getRowAssoc(false);
@@ -112,7 +112,7 @@ class UserSettingsDAO extends DAO {
 			return $userSettings;
 		}
 	}
-	
+
 	/**
 	 * Add/update a user setting.
 	 * @param $userId int
@@ -131,7 +131,7 @@ class UserSettingsDAO extends DAO {
 				'SELECT COUNT(*) FROM user_settings WHERE user_id = ? AND setting_name = ? AND journal_id = ?', array($userId, $name, $journalId)
 			);
 		}
-		
+
 		$value = $this->convertToDB($value, $type);
 		if ($result->fields[0] == 0) {
 			$returner = $this->update(
@@ -166,7 +166,7 @@ class UserSettingsDAO extends DAO {
 
 		return $returner;
 	}
-	
+
 	/**
 	 * Delete a user setting.
 	 * @param $userId int
@@ -186,7 +186,7 @@ class UserSettingsDAO extends DAO {
 			);
 		}
 	}
-	
+
 	/**
 	 * Delete all settings for a user.
 	 * @param $userId int

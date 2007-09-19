@@ -24,10 +24,10 @@ class JournalRTAdmin extends RTAdmin {
 
 	/** @var $journalId int */
 	var $journalId;
-	
+
 	/** @var $dao DAO */
 	var $dao;
-	
+
 
 	function JournalRTAdmin($journalId) {
 		$this->journalId = $journalId;

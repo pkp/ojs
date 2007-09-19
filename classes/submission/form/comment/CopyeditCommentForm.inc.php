@@ -13,7 +13,7 @@
  *
  * $Id$
  */
- 
+
 import("submission.form.comment.CommentForm");
 
 class CopyeditCommentForm extends CommentForm {
@@ -25,7 +25,7 @@ class CopyeditCommentForm extends CommentForm {
 	function CopyeditCommentForm($article, $roleId) {
 		parent::CommentForm($article, COMMENT_TYPE_COPYEDIT, $roleId, $article->getArticleId());
 	}
-	
+
 	/**
 	 * Display the form.
 	 */
@@ -41,24 +41,24 @@ class CopyeditCommentForm extends CommentForm {
 				'articleId' => $article->getArticleId()
 			)
 		);
-		
+
 		parent::display();
 	}
-	
+
 	/**
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
 		parent::readInputData();
 	}
-	
+
 	/**
 	 * Add the comment.
 	 */
 	function execute() {
 		parent::execute();
 	}
-	
+
 	/**
 	 * Email the comment.
 	 */
@@ -67,13 +67,13 @@ class CopyeditCommentForm extends CommentForm {
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$journal = &Request::getJournal();
-	
+
 		// Create list of recipients:
 		$recipients = array();
-		
+
 		// Copyedit comments are to be sent to the editor, author, and copyeditor,
 		// excluding whomever posted the comment.
-		
+
 		// Get editors
 		$editAssignmentDao = &DAORegistry::getDAO('EditAssignmentDAO');
 		$editAssignments = &$editAssignmentDao->getEditAssignmentsByArticleId($article->getArticleId());
@@ -92,7 +92,7 @@ class CopyeditCommentForm extends CommentForm {
 				$editorAddresses[$editor->getEmail()] = $editor->getFullName();
 			}
 		}
-		
+
 		// Get copyeditor
 		$copyAssignmentDao = &DAORegistry::getDAO('CopyAssignmentDAO');
 		$copyAssignment = &$copyAssignmentDao->getCopyAssignmentByArticleId($article->getArticleId());
@@ -101,34 +101,34 @@ class CopyeditCommentForm extends CommentForm {
 		} else {
 			$copyeditor = null;
 		}
-		
+
 		// Get author
 		$author = &$userDao->getUser($article->getUserId());
-		
+
 		// Choose who receives this email
 		if ($this->roleId == ROLE_ID_EDITOR || $this->roleId == ROLE_ID_SECTION_EDITOR) {
 			// Then add copyeditor and author
 			if ($copyeditor != null) {
 				$recipients = array_merge($recipients, array($copyeditor->getEmail() => $copyeditor->getFullName()));
 			}
-			
+
 			$recipients = array_merge($recipients, array($author->getEmail() => $author->getFullName()));
-		
+
 		} else if ($this->roleId == ROLE_ID_COPYEDITOR) {
 			// Then add editors and author
 			$recipients = array_merge($recipients, $editorAddresses);
-		
+
 			if (isset($author)) $recipients = array_merge($recipients, array($author->getEmail() => $author->getFullName()));
-		
+
 		} else {
 			// Then add editors and copyeditor
 			$recipients = array_merge($recipients, $editorAddresses);
-			
+
 			if ($copyeditor != null) {
 				$recipients = array_merge($recipients, array($copyeditor->getEmail() => $copyeditor->getFullName()));
 			}
 		}
-		
+
 		parent::email($recipients);
 	}
 }

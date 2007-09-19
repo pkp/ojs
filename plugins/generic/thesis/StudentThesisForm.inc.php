@@ -47,7 +47,7 @@ class StudentThesisForm extends Form {
 		$this->captchaEnabled = $captchaManager->isEnabled() ? true : false;
 
 		$this->uploadCodeEnabled = $thesisPlugin->getSetting($journalId, 'enableUploadCode');
- 
+
 		parent::Form($thesisPlugin->getTemplatePath() . 'studentThesisForm.tpl');
 
 
@@ -55,11 +55,11 @@ class StudentThesisForm extends Form {
 		if ($this->captchaEnabled) {
 			$this->addCheck(new FormValidatorCaptcha($this, 'captcha', 'captchaId', 'common.captchaField.badCaptcha'));
 		}
-	
+
 		// Degree is provided and is valid value
 		$this->addCheck(new FormValidator($this, 'degree', 'required', 'plugins.generic.thesis.form.degreeRequired'));	
 		$this->addCheck(new FormValidatorInSet($this, 'degree', 'required', 'plugins.generic.thesis.form.degreeValid', array_keys($this->validDegrees)));
-	
+
 		// Degree Name is provided
 		$this->addCheck(new FormValidator($this, 'degreeName', 'required', 'plugins.generic.thesis.form.degreeNameRequired'));
 
@@ -105,7 +105,7 @@ class StudentThesisForm extends Form {
 
 		$this->addCheck(new FormValidatorPost($this));
 	}
-	
+
 	/**
 	 * Display the form.
 	 */
@@ -127,16 +127,16 @@ class StudentThesisForm extends Form {
 		$templateMgr->assign('uploadCodeEnabled', $this->uploadCodeEnabled);
 		$templateMgr->assign('validDegrees', $this->validDegrees);
 		$templateMgr->assign('yearOffsetPast', THESIS_APPROVED_YEAR_OFFSET_PAST);
-	
+
 		parent::display();
 	}
-	
+
 	/**
 	 * Initialize form data.
 	 */
 	function initData() {
 	}
-	
+
 	/**
 	 * Assign form data to user-submitted data.
 	 */
@@ -188,7 +188,7 @@ class StudentThesisForm extends Form {
 		}
 
 	}
-	
+
 	/**
 	 * Save thesis. 
 	 */
@@ -199,9 +199,9 @@ class StudentThesisForm extends Form {
 		$thesisDao = &DAORegistry::getDAO('ThesisDAO');
 		$journal = &Request::getJournal();
 		$journalId = $journal->getJournalId();
-	
+
 		$thesis = &new Thesis();
-		
+
 		$thesis->setJournalId($journalId);
 		$thesis->setStatus(THESIS_STATUS_INACTIVE);
 		$thesis->setDegree($this->getData('degree'));
@@ -289,7 +289,7 @@ class StudentThesisForm extends Form {
 		}
 
 	}
-	
+
 }
 
 ?>

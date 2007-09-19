@@ -21,17 +21,17 @@ class AboutHandler extends Handler {
 	 */
 	function index() {
 		parent::validate();
-		
+
 		$templateMgr = &TemplateManager::getManager();
 		$journalDao = &DAORegistry::getDAO('JournalDAO');
 		$journalPath = Request::getRequestedJournalPath();
-				
+
 		if ($journalPath != 'index' && $journalDao->journalExistsByPath($journalPath)) {
 			$journal = &Request::getJournal();
 
 			$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
 			$templateMgr->assign_by_ref('journalSettings', $journalSettingsDao->getJournalSettings($journal->getJournalId()));
-			
+
 			$customAboutItems = &$journalSettingsDao->getSetting($journal->getJournalId(), 'customAboutItems');
 			if (isset($customAboutItems[Locale::getLocale()])) $templateMgr->assign('customAboutItems', $customAboutItems[Locale::getLocale()]);
 			elseif (isset($customAboutItems[Locale::getPrimaryLocale()])) $templateMgr->assign('customAboutItems', $customAboutItems[Locale::getPrimaryLocale()]);
@@ -53,13 +53,13 @@ class AboutHandler extends Handler {
 			$site = &Request::getSite();
 			$about = $site->getSiteAbout();
 			$templateMgr->assign('about', $about);
-			
+
 			$journals = &$journalDao->getEnabledJournals(); //Enabled Added
 			$templateMgr->assign_by_ref('journals', $journals);
 			$templateMgr->display('about/site.tpl');
 		}
 	}
-	
+
 
 	/**
 	 * Setup common template variables.
@@ -75,24 +75,24 @@ class AboutHandler extends Handler {
 		}
 		$templateMgr->assign('pageHierarchy', array(array(Request::url(null, 'about'), 'about.aboutTheJournal')));
 	}
-	
+
 	/**
 	 * Display contact page.
 	 */
 	function contact() {
 		parent::validate(true);
-		
+
 		AboutHandler::setupTemplate(true);
-		
+
 		$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
 		$journal = &Request::getJournal();
-	
+
 		$templateMgr = &TemplateManager::getManager();
 		$journalSettings = &$journalSettingsDao->getJournalSettings($journal->getJournalId());
 		$templateMgr->assign_by_ref('journalSettings', $journalSettings);
 		$templateMgr->display('about/contact.tpl');
 	}
-	
+
 	/**
 	 * Display editorialTeam page.
 	 */
@@ -121,13 +121,13 @@ class AboutHandler extends Handler {
 
 			$layoutEditors = &$roleDao->getUsersByRoleId(ROLE_ID_LAYOUT_EDITOR, $journal->getJournalId());
 			$layoutEditors = &$layoutEditors->toArray();
-		
+
 			$copyEditors = &$roleDao->getUsersByRoleId(ROLE_ID_COPYEDITOR, $journal->getJournalId());
 			$copyEditors = &$copyEditors->toArray();
-		
+
 			$proofreaders = &$roleDao->getUsersByRoleId(ROLE_ID_PROOFREADER, $journal->getJournalId());
 			$proofreaders = &$proofreaders->toArray();
-		
+
 			$templateMgr->assign_by_ref('editors', $editors);
 			$templateMgr->assign_by_ref('sectionEditors', $sectionEditors);
 			$templateMgr->assign_by_ref('layoutEditors', $layoutEditors);
@@ -206,9 +206,9 @@ class AboutHandler extends Handler {
 	 */
 	function editorialTeamBio($args) {
 		parent::validate(true);
-		
+
 		AboutHandler::setupTemplate(true);
-		
+
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
 		$journal = &Request::getJournal();
 
@@ -252,14 +252,14 @@ class AboutHandler extends Handler {
 					$user = $potentialUser;
 				unset($potentialUser);
 			}
-		
+
 			$proofreaders = &$roleDao->getUsersByRoleId(ROLE_ID_PROOFREADER, $journal->getJournalId());
 			while ($potentialUser =& $proofreaders->next()) {
 				if ($potentialUser->getUserId() == $userId)
 					$user = $potentialUser;
 				unset($potentialUser);
 			}
-		
+
 		} else {
 			$groupDao =& DAORegistry::getDAO('GroupDAO');
 			$groupMembershipDao =& DAORegistry::getDAO('GroupMembershipDAO');
@@ -296,21 +296,21 @@ class AboutHandler extends Handler {
 	 */
 	function editorialPolicies() {
 		parent::validate(true);
-		
+
 		AboutHandler::setupTemplate(true);
-		
+
 		$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
 		$sectionDao = &DAORegistry::getDAO('SectionDAO');
 		$sectionEditorsDao = &DAORegistry::getDAO('SectionEditorsDAO');
 		$journal = &Request::getJournal();
-				
+
 		$templateMgr = &TemplateManager::getManager();
 		$journalSettings = &$journalSettingsDao->getJournalSettings($journal->getJournalId());
 		$templateMgr->assign_by_ref('journalSettings', $journalSettings);
 		$sections = &$sectionDao->getJournalSections($journal->getJournalId());
 		$sections = &$sections->toArray();
 		$templateMgr->assign_by_ref('sections', $sections);
-		
+
 		$sectionEditorEntriesBySection = array();
 		foreach ($sections as $section) {
 			$sectionEditorEntriesBySection[$section->getSectionId()] = &$sectionEditorsDao->getEditorsBySectionId($journal->getJournalId(), $section->getSectionId());
@@ -359,12 +359,12 @@ class AboutHandler extends Handler {
 	 */
 	function submissions() {
 		parent::validate(true);
-		
+
 		AboutHandler::setupTemplate(true);
-		
+
 		$journalDao = &DAORegistry::getDAO('JournalSettingsDAO');
 		$journal = &Request::getJournal();
-		
+
 		$templateMgr = &TemplateManager::getManager();
 		$journalSettings = &$journalDao->getJournalSettings($journal->getJournalId());
 		$submissionChecklist = $journal->getLocalizedSetting('submissionChecklist');
@@ -398,13 +398,13 @@ class AboutHandler extends Handler {
 		$templateMgr->assign_by_ref('sponsors', $journal->getSetting('sponsors'));
 		$templateMgr->display('about/journalSponsorship.tpl');
 	}
-	
+
 	/**
 	 * Display siteMap page.
 	 */
 	function siteMap() {
 		parent::validate();
-		
+
 		AboutHandler::setupTemplate(true);
 		$templateMgr = &TemplateManager::getManager();
 
@@ -436,15 +436,15 @@ class AboutHandler extends Handler {
 
 		$templateMgr->display('about/siteMap.tpl');
 	}
-	
+
 	/**
 	 * Display aboutThisPublishingSystem page.
 	 */
 	function aboutThisPublishingSystem() {
 		parent::validate();
-		
+
 		AboutHandler::setupTemplate(true);
-		
+
 		$versionDao =& DAORegistry::getDAO('VersionDAO');
 		$version =& $versionDao->getCurrentVersion();
 
@@ -452,7 +452,7 @@ class AboutHandler extends Handler {
 		$templateMgr->assign('ojsVersion', $version->getVersionString());
 		$templateMgr->display('about/aboutThisPublishingSystem.tpl');
 	}
-	
+
 	/**
 	 * Display a list of public stats for the current journal.
 	 * WARNING: This implementation should be kept roughly synchronized
@@ -493,7 +493,7 @@ class AboutHandler extends Handler {
 		$sectionDao =& DAORegistry::getDAO('SectionDAO');
 		$sections =& $sectionDao->getJournalSections($journal->getJournalId());
 		$templateMgr->assign('sections', $sections->toArray());
-		
+
 		$issueStatistics = $journalStatisticsDao->getIssueStatistics($journal->getJournalId(), $fromDate, $toDate);
 		$templateMgr->assign('issueStatistics', $issueStatistics);
 

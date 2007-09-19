@@ -30,10 +30,10 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		parent::setupTemplate(true, $articleId);
 
 		$user = &Request::getUser();
-		
+
 		$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
 		$journalSettings = $journalSettingsDao->getJournalSettings($journal->getJournalId());
-		
+
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
 		$isEditor = $roleDao->roleExists($journal->getJournalId(), $user->getUserId(), ROLE_ID_EDITOR);
 
@@ -41,7 +41,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$section = &$sectionDao->getSection($submission->getSectionId());
 
 		$templateMgr = &TemplateManager::getManager();
-		
+
 		$templateMgr->assign_by_ref('submission', $submission);
 		$templateMgr->assign_by_ref('section', $section);
 		$templateMgr->assign_by_ref('authors', $submission->getAuthors());
@@ -51,7 +51,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->assign_by_ref('journalSettings', $journalSettings);
 		$templateMgr->assign('userId', $user->getUserId());
 		$templateMgr->assign('isEditor', $isEditor);
-		
+
 		$sectionDao = &DAORegistry::getDAO('SectionDAO');
 		$templateMgr->assign_by_ref('sections', $sectionDao->getSectionTitles($journal->getJournalId()));
 
@@ -70,7 +70,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		$templateMgr->display('sectionEditor/submission.tpl');
 	}
-	
+
 	function submissionRegrets($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
@@ -83,9 +83,9 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$reviewAssignments =& $submission->getReviewAssignments();
 		$editorDecisions = $submission->getDecisions();
 		$numRounds = $submission->getCurrentRound();
-		
+
 		$templateMgr = &TemplateManager::getManager();
-		
+
 		$templateMgr->assign_by_ref('submission', $submission);
 		$templateMgr->assign_by_ref('reviewAssignments', $reviewAssignments);
 		$templateMgr->assign_by_ref('cancelsAndRegrets', $cancelsAndRegrets);
@@ -102,7 +102,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		$templateMgr->display('sectionEditor/submissionRegrets.tpl');
 	}
-	
+
 	function submissionReview($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
@@ -126,13 +126,13 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$allowRecommendation = $submission->getCurrentRound() == $round && $submission->getReviewFileId() != null && !empty($editAssignments);
 		$allowResubmit = $lastDecision == SUBMISSION_EDITOR_DECISION_RESUBMIT && $sectionEditorSubmissionDao->getMaxReviewRound($articleId) == $round ? true : false;
 		$allowCopyedit = $lastDecision == SUBMISSION_EDITOR_DECISION_ACCEPT && $submission->getCopyeditFileId() == null ? true : false;
-		
+
 		// Prepare an array to store the 'Notify Reviewer' email logs
 		$notifyReviewerLogs = array();
 		foreach ($submission->getReviewAssignments($round) as $reviewAssignment) {
 			$notifyReviewerLogs[$reviewAssignment->getReviewId()] = array();
 		}
-		
+
 		// Parse the list of email logs and populate the array.
 		import('article.log.ArticleLog');
 		$emailLogEntries = &ArticleLog::getEmailLogEntries($articleId);
@@ -145,7 +145,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		}
 
 		$templateMgr = &TemplateManager::getManager();
-		
+
 		$templateMgr->assign_by_ref('submission', $submission);
 		$templateMgr->assign_by_ref('reviewIndexes', $reviewAssignmentDao->getReviewIndexesForRound($articleId, $round));
 		$templateMgr->assign('round', $round);
@@ -182,12 +182,12 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->assign('helpTopicId', 'editorial.sectionEditorsRole.review');
 		$templateMgr->display('sectionEditor/submissionReview.tpl');
 	}
-	
+
 	function submissionEditing($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 		parent::setupTemplate(true, $articleId);
-		
+
 		$useCopyeditors = $journal->getSetting('useCopyeditors');
 		$useLayoutEditors = $journal->getSetting('useLayoutEditors');
 		$useProofreaders = $journal->getSetting('useProofreaders');
@@ -199,7 +199,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$submissionAccepted = ($lastDecision == SUBMISSION_EDITOR_DECISION_ACCEPT) ? true : false;
 
 		$templateMgr = &TemplateManager::getManager();
-		
+
 		$templateMgr->assign_by_ref('submission', $submission);
 		$templateMgr->assign_by_ref('submissionFile', $submission->getSubmissionFile());
 		$templateMgr->assign_by_ref('copyeditFile', $submission->getCopyeditFile());
@@ -229,7 +229,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->assign('helpTopicId', 'editorial.sectionEditorsRole.editing');
 		$templateMgr->display('sectionEditor/submissionEditing.tpl');
 	}
-	
+
 	/**
 	 * View submission history
 	 */
@@ -238,10 +238,10 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
 
 		parent::setupTemplate(true, $articleId);
-		
+
 		// submission notes
 		$articleNoteDao = &DAORegistry::getDAO('ArticleNoteDAO');
-		
+
 		$rangeInfo = &Handler::getRangeInfo('submissionNotes');
 		$submissionNotes =& $articleNoteDao->getArticleNotes($articleId, $rangeInfo);
 
@@ -250,9 +250,9 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$eventLogEntries = &ArticleLog::getEventLogEntries($articleId, $rangeInfo);
 		$rangeInfo = &Handler::getRangeInfo('emailLogEntries');
 		$emailLogEntries = &ArticleLog::getEmailLogEntries($articleId, $rangeInfo);
-		
+
 		$templateMgr = &TemplateManager::getManager();
-		
+
 		$templateMgr->assign('isEditor', Validation::isEditor());
 		$templateMgr->assign_by_ref('submission', $submission);
 		$templateMgr->assign_by_ref('eventLogEntries', $eventLogEntries);
@@ -261,22 +261,22 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		$templateMgr->display('sectionEditor/submissionHistory.tpl');
 	}
-	
+
 	function changeSection() {
 		$articleId = Request::getUserVar('articleId');
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
-		
+
 		$sectionId = Request::getUserVar('sectionId');
 
 		SectionEditorAction::changeSection($submission, $sectionId);
-		
+
 		Request::redirect(null, null, 'submission', $articleId);
 	}
-	
+
 	function recordDecision() {
 		$articleId = Request::getUserVar('articleId');
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
-		
+
 		$decision = Request::getUserVar('decision');
 
 		switch ($decision) {
@@ -287,29 +287,29 @@ class SubmissionEditHandler extends SectionEditorHandler {
 				SectionEditorAction::recordDecision($submission, $decision);
 				break;
 		}
-		
+
 		Request::redirect(null, null, 'submissionReview', $articleId);
 	}
-	
+
 	//
 	// Peer Review
 	//
-	
+
 	function selectReviewer($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
-		
+
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 
 		if (isset($args[1]) && $args[1] != null) {
 			// Assign reviewer to article			
 			SectionEditorAction::addReviewer($submission, $args[1]);
 			Request::redirect(null, null, 'submissionReview', $articleId);
-			
+
 			// FIXME: Prompt for due date.
 		} else {
 			parent::setupTemplate(true, $articleId, 'review');
-		
+
 			$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 
 			$searchType = null;
@@ -319,26 +319,26 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			if (isset($search)) {
 				$searchType = Request::getUserVar('searchField');
 				$searchMatch = Request::getUserVar('searchMatch');
-				
+
 			} else if (isset($searchInitial)) {
 				$searchInitial = String::strtoupper($searchInitial);
 				$searchType = USER_FIELD_INITIAL;
 				$search = $searchInitial;
 			}
-			
+
 			$rangeInfo = &Handler::getRangeInfo('reviewers');
 			$reviewers = $sectionEditorSubmissionDao->getReviewersForArticle($journal->getJournalId(), $articleId, $submission->getCurrentRound(), $searchType, $search, $searchMatch, $rangeInfo);
-			
+
 			$journal = Request::getJournal();
 			$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
-		
+
 			$templateMgr = &TemplateManager::getManager();
 
 			$templateMgr->assign('searchField', $searchType);
 			$templateMgr->assign('searchMatch', $searchMatch);
 			$templateMgr->assign('search', $searchQuery);
 			$templateMgr->assign('searchInitial', Request::getUserVar('searchInitial'));
-		
+
 			$templateMgr->assign_by_ref('reviewers', $reviewers);
 			$templateMgr->assign('articleId', $articleId);
 			$templateMgr->assign('reviewerStatistics', $sectionEditorSubmissionDao->getReviewerStatistics($journal->getJournalId()));
@@ -428,7 +428,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		if (isset($search)) {
 			$searchType = Request::getUserVar('searchField');
 			$searchMatch = Request::getUserVar('searchMatch');
-			
+
 		} else if (isset($searchInitial)) {
 			$searchInitial = String::strtoupper($searchInitial);
 			$searchType = USER_FIELD_INITIAL;
@@ -462,7 +462,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	function enroll($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
-		
+
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
 		$roleId = $roleDao->getRoleIdFromPath('reviewer');
 
@@ -482,11 +482,11 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		}
 		Request::redirect(null, null, 'selectReviewer', $articleId);
 	}
-	
+
 	function notifyReviewer($args = array()) {
 		$articleId = Request::getUserVar('articleId');
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
-		
+
 		$reviewId = Request::getUserVar('reviewId');
 
 		$send = Request::getUserVar('send')?true:false;
@@ -496,68 +496,68 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			Request::redirect(null, null, 'submissionReview', $articleId);
 		}
 	}
-	
+
 	function clearReview($args) {
 		$articleId = isset($args[0])?$args[0]:0;
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
-		
+
 		$reviewId = $args[1];
-		
+
 		SectionEditorAction::clearReview($submission, $reviewId);
 
 		Request::redirect(null, null, 'submissionReview', $articleId);
 	}
-	
+
 	function cancelReview($args) {
 		$articleId = Request::getUserVar('articleId');
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
-		
+
 		$reviewId = Request::getUserVar('reviewId');
 
 		$send = Request::getUserVar('send')?true:false;
 		parent::setupTemplate(true, $articleId, 'review');
-		
+
 		if (SectionEditorAction::cancelReview($submission, $reviewId, $send)) {
 			Request::redirect(null, null, 'submissionReview', $articleId);
 		}
 	}
-	
+
 	function remindReviewer($args = null) {
 		$articleId = Request::getUserVar('articleId');
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
-		
+
 		$reviewId = Request::getUserVar('reviewId');
 		parent::setupTemplate(true, $articleId, 'review');
-		
+
 		if (SectionEditorAction::remindReviewer($submission, $reviewId, Request::getUserVar('send'))) {
 			Request::redirect(null, null, 'submissionReview', $articleId);
 		}
 	}
-	
+
 	function thankReviewer($args = array()) {
 		$articleId = Request::getUserVar('articleId');
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
-		
+
 		$reviewId = Request::getUserVar('reviewId');
 
 		$send = Request::getUserVar('send')?true:false;
 		parent::setupTemplate(true, $articleId, 'review');
-		
+
 		if (SectionEditorAction::thankReviewer($submission, $reviewId, $send)) {
 			Request::redirect(null, null, 'submissionReview', $articleId);
 		}
 	}
-	
+
 	function rateReviewer() {
 		$articleId = Request::getUserVar('articleId');
 		SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
 		list($journal, $submission) = parent::setupTemplate(true, $articleId, 'review');
-		
+
 		$reviewId = Request::getUserVar('reviewId');
 		$quality = Request::getUserVar('quality');
-		
+
 		SectionEditorAction::rateReviewer($articleId, $reviewId, $quality);
-		
+
 		Request::redirect(null, null, 'submissionReview', $articleId);
 	}
 
@@ -565,9 +565,9 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$articleId = (int) isset($args[0])?$args[0]:0;
 		$accept = Request::getUserVar('accept')?true:false;
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
-		
+
 		$reviewId = (int) isset($args[1])?$args[1]:0;
-		
+
 		SectionEditorAction::confirmReviewForReviewer($reviewId, $accept);
 		Request::redirect(null, null, 'submissionReview', $articleId);
 	}
@@ -575,9 +575,9 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	function uploadReviewForReviewer($args) {
 		$articleId = (int) Request::getUserVar('articleId');
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
-		
+
 		$reviewId = (int) Request::getUserVar('reviewId');
-		
+
 		SectionEditorAction::uploadReviewForReviewer($reviewId);
 		Request::redirect(null, null, 'submissionReview', $articleId);
 	}
@@ -585,73 +585,73 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	function makeReviewerFileViewable() {
 		$articleId = Request::getUserVar('articleId');
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
-		
+
 		$reviewId = Request::getUserVar('reviewId');
 		$fileId = Request::getUserVar('fileId');
 		$revision = Request::getUserVar('revision');
 		$viewable = Request::getUserVar('viewable');
-		
+
 		SectionEditorAction::makeReviewerFileViewable($articleId, $reviewId, $fileId, $revision, $viewable);
-		
+
 		Request::redirect(null, null, 'submissionReview', $articleId);
 	}
 
 	function setDueDate($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
-		
+
 		$reviewId = isset($args[1]) ? $args[1] : 0;
 		$dueDate = Request::getUserVar('dueDate');
 		$numWeeks = Request::getUserVar('numWeeks');
-		
+
 		if ($dueDate != null || $numWeeks != null) {
 			SectionEditorAction::setDueDate($articleId, $reviewId, $dueDate, $numWeeks);
 			Request::redirect(null, null, 'submissionReview', $articleId);
-			
+
 		} else {
 			parent::setupTemplate(true, $articleId, 'review');
 			$journal = &Request::getJournal();
-			
+
 			$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
 			$reviewAssignment = $reviewAssignmentDao->getReviewAssignmentById($reviewId);
-			
+
 			$settingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
 			$settings = &$settingsDao->getJournalSettings($journal->getJournalId());
-			
+
 			$templateMgr = &TemplateManager::getManager();
-		
+
 			if ($reviewAssignment->getDateDue() != null) {
 				$templateMgr->assign('dueDate', $reviewAssignment->getDateDue());
 			}
-			
+
 			$numWeeksPerReview = $settings['numWeeksPerReview'] == null ? 0 : $settings['numWeeksPerReview'];
-			
+
 			$templateMgr->assign('articleId', $articleId);
 			$templateMgr->assign('reviewId', $reviewId);
 			$templateMgr->assign('todaysDate', date('Y-m-d'));
 			$templateMgr->assign('numWeeksPerReview', $numWeeksPerReview);
 			$templateMgr->assign('actionHandler', 'setDueDate');
-	
+
 			$templateMgr->display('sectionEditor/setDueDate.tpl');
 		}
 	}
-	
+
 	function enterReviewerRecommendation($args) {
 		$articleId = Request::getUserVar('articleId');
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
-		
+
 		$reviewId = Request::getUserVar('reviewId');
-		
+
 		$recommendation = Request::getUserVar('recommendation');
-		
+
 		if ($recommendation != null) {
 			SectionEditorAction::setReviewerRecommendation($articleId, $reviewId, $recommendation, SUBMISSION_REVIEWER_RECOMMENDATION_ACCEPT);
 			Request::redirect(null, null, 'submissionReview', $articleId);
 		} else {
 			parent::setupTemplate(true, $articleId, 'review');
-			
+
 			$templateMgr = &TemplateManager::getManager();
-			
+
 			$templateMgr->assign('articleId', $articleId);
 			$templateMgr->assign('reviewId', $reviewId);
 
@@ -661,7 +661,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$templateMgr->display('sectionEditor/reviewerRecommendation.tpl');
 		}
 	}
-	
+
 	/**
 	 * Display a user's profile.
 	 * @param $args array first parameter is the ID or username of the user to display
@@ -669,10 +669,10 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	function userProfile($args) {
 		parent::validate();
 		parent::setupTemplate(true);
-			
+
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('currentUrl', Request::url(null, Request::getRequestedPage()));
-		
+
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$userId = isset($args[0]) ? $args[0] : 0;
 		if (is_numeric($userId)) {
@@ -681,14 +681,14 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		} else {
 			$user = $userDao->getUserByUsername($userId);
 		}
-		
-		
+
+
 		if ($user == null) {
 			// Non-existent user requested
 			$templateMgr->assign('pageTitle', 'manager.people');
 			$templateMgr->assign('errorMsg', 'manager.people.invalidUser');
 			$templateMgr->display('common/error.tpl');
-			
+
 		} else {
 			$site = &Request::getSite();
 			$journal = &Request::getJournal();
@@ -699,7 +699,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 				$country = $countryDao->getCountry($user->getCountry());
 			}
 			$templateMgr->assign('country', $country);
- 
+
 			$disciplineDao =& DAORegistry::getDAO('DisciplineDAO');
 			$discipline = null;
 			if ($user->getDiscipline() != '') {
@@ -713,41 +713,41 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$templateMgr->display('sectionEditor/userProfile.tpl');
 		}
 	}
-	
+
 	function viewMetadata($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
 		parent::setupTemplate(true, $articleId, 'summary');
-		
+
 		SectionEditorAction::viewMetadata($submission, ROLE_ID_SECTION_EDITOR);
 	}
-	
+
 	function saveMetadata() {
 		$articleId = Request::getUserVar('articleId');
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
 		parent::setupTemplate(true, $articleId, 'summary');
-		
+
 		if (SectionEditorAction::saveMetadata($submission)) {
 			Request::redirect(null, null, 'submission', $articleId);
 		}
 	}
-	
+
 	//
 	// Editor Review
 	//
-	
+
 	function editorReview() {
 		$articleId = Request::getUserVar('articleId');
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
 
 		$redirectTarget = 'submissionReview';
-		
+
 		// If the Upload button was pressed.
 		$submit = Request::getUserVar('submit');
 		if ($submit != null) {
 			SectionEditorAction::uploadEditorVersion($submission);
 		}		
-		
+
 		if (Request::getUserVar('setCopyeditFile')) {
 			// If the Send To Copyedit button was pressed
 			$file = explode(',', Request::getUserVar('editorDecisionFile'));
@@ -760,7 +760,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 				}
 				$redirectTarget = 'submissionEditing';
 			}
-			
+
 		} else if (Request::getUserVar('resubmit')) {
 			// If the Resubmit button was pressed
 			$file = explode(',', Request::getUserVar('editorDecisionFile'));
@@ -768,20 +768,20 @@ class SubmissionEditHandler extends SectionEditorHandler {
 				SectionEditorAction::resubmitFile($submission, $file[0], $file[1]);
 			}
 		}
-		
+
 		Request::redirect(null, null, $redirectTarget, $articleId);
 	}
-	
+
 	//
 	// Copyedit
 	//
-	
+
 	function selectCopyeditor($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
-		
+
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
-		
+
 		if (isset($args[1]) && $args[1] != null && $roleDao->roleExists($journal->getJournalId(), $args[1], ROLE_ID_COPYEDITOR)) {
 			SectionEditorAction::selectCopyeditor($submission, $args[1]);
 			Request::redirect(null, null, 'submissionEditing', $articleId);
@@ -797,7 +797,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			if (isset($search)) {
 				$searchType = Request::getUserVar('searchField');
 				$searchMatch = Request::getUserVar('searchMatch');
-				
+
 			} else if (isset($searchInitial)) {
 				$searchInitial = String::strtoupper($searchInitial);
 				$searchType = USER_FIELD_INITIAL;
@@ -813,7 +813,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$templateMgr->assign('searchMatch', $searchMatch);
 			$templateMgr->assign('search', $searchQuery);
 			$templateMgr->assign('searchInitial', Request::getUserVar('searchInitial'));
-		
+
 			$templateMgr->assign_by_ref('users', $copyeditors);
 			$templateMgr->assign('currentUser', $submission->getCopyeditorId());
 			$templateMgr->assign_by_ref('statistics', $copyeditorStatistics);
@@ -833,7 +833,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$templateMgr->display('sectionEditor/selectUser.tpl');
 		}
 	}
-	
+
 	function notifyCopyeditor($args = array()) {
 		$articleId = Request::getUserVar('articleId');
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
@@ -845,12 +845,12 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			Request::redirect(null, null, 'submissionEditing', $articleId);
 		}
 	}
-	
+
 	/* Initiates the copyediting process when the editor does the copyediting */
 	function initiateCopyedit() {
 		$articleId = Request::getUserVar('articleId');
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
-		
+
 		SectionEditorAction::initiateCopyedit($submission);
 		Request::redirect(null, null, 'submissionEditing', $articleId);
 	}
@@ -866,7 +866,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			Request::redirect(null, null, 'submissionEditing', $articleId);
 		}
 	}
-	
+
 	function notifyAuthorCopyedit($args) {
 		$articleId = Request::getUserVar('articleId');
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
@@ -878,7 +878,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			Request::redirect(null, null, 'submissionEditing', $articleId);
 		}
 	}
-	
+
 	function thankAuthorCopyedit($args) {
 		$articleId = Request::getUserVar('articleId');
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
@@ -890,7 +890,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			Request::redirect(null, null, 'submissionEditing', $articleId);
 		}
 	}
-	
+
 	function notifyFinalCopyedit($args = array()) {
 		$articleId = Request::getUserVar('articleId');
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
@@ -905,18 +905,18 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 	function completeCopyedit($args) {
 		$articleId = (int) Request::getUserVar('articleId');
- 
+
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
- 
+
 		SectionEditorAction::completeCopyedit($submission);
 		Request::redirect(null, null, 'submissionEditing', $articleId);
 	}
- 
+
 	function completeFinalCopyedit($args) {
 		$articleId = (int) Request::getUserVar('articleId');
- 
+
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
- 
+
 		SectionEditorAction::completeFinalCopyedit($submission);
 		Request::redirect(null, null, 'submissionEditing', $articleId);
 	}
@@ -936,22 +936,22 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	function uploadReviewVersion() {
 		$articleId = Request::getUserVar('articleId');
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
-		
+
 		SectionEditorAction::uploadReviewVersion($submission);
-		
+
 		Request::redirect(null, null, 'submissionReview', $articleId);
 	}
-	
+
 	function uploadCopyeditVersion() {
 		$articleId = Request::getUserVar('articleId');
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
-		
+
 		$copyeditStage = Request::getUserVar('copyeditStage');
 		SectionEditorAction::uploadCopyeditVersion($submission, $copyeditStage);
-		
+
 		Request::redirect(null, null, 'submissionEditing', $articleId);
 	}
-	
+
 	/**
 	 * Add a supplementary file.
 	 * @param $args array ($articleId)
@@ -960,9 +960,9 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
 		parent::setupTemplate(true, $articleId, 'summary');
-		
+
 		import('submission.form.SuppFileForm');
-		
+
 		$submitForm = &new SuppFileForm($submission);
 
 		if ($submitForm->isLocaleResubmit()) {
@@ -972,7 +972,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		}
 		$submitForm->display();
 	}
-	
+
 	/**
 	 * Edit a supplementary file.
 	 * @param $args array ($articleId, $suppFileId)
@@ -982,9 +982,9 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$suppFileId = isset($args[1]) ? (int) $args[1] : 0;
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
 		parent::setupTemplate(true, $articleId, 'summary');
-		
+
 		import('submission.form.SuppFileForm');
-		
+
 		$submitForm = &new SuppFileForm($submission, $suppFileId);
 
 		if ($submitForm->isLocaleResubmit()) {
@@ -994,7 +994,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		}
 		$submitForm->display();
 	}
-	
+
 	/**
 	 * Set reviewer visibility for a supplementary file.
 	 * @param $args array ($suppFileId)
@@ -1002,7 +1002,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	function setSuppFileVisibility($args) {
 		$articleId = Request::getUserVar('articleId');
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
-		
+
 		$suppFileId = Request::getUserVar('fileId');
 		$suppFileDao = &DAORegistry::getDAO('SuppFileDAO');
 		$suppFile = $suppFileDao->getSuppFile($suppFileId, $articleId);
@@ -1013,7 +1013,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		}
 		Request::redirect(null, null, 'submissionReview', $articleId);
 	}
-	
+
 	/**
 	 * Save a supplementary file.
 	 * @param $args array ($suppFileId)
@@ -1021,14 +1021,14 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	function saveSuppFile($args) {
 		$articleId = Request::getUserVar('articleId');
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
-		
+
 		$suppFileId = isset($args[0]) ? (int) $args[0] : 0;
-		
+
 		import('submission.form.SuppFileForm');
-		
+
 		$submitForm = &new SuppFileForm($submission, $suppFileId);
 		$submitForm->readInputData();
-		
+
 		if ($submitForm->validate()) {
 			$submitForm->execute();
 			Request::redirect(null, null, SubmissionEditHandler::getFrom(), $articleId);
@@ -1037,7 +1037,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$submitForm->display();
 		}
 	}
-	
+
 	/**
 	 * Delete an editor version file.
 	 * @param $args array ($articleId, $fileId)
@@ -1049,10 +1049,10 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
 		SectionEditorAction::deleteArticleFile($submission, $fileId, $revisionId);
-		
+
 		Request::redirect(null, null, 'submissionReview', $articleId);
 	}
-	
+
 	/**
 	 * Delete a supplementary file.
 	 * @param $args array ($articleId, $suppFileId)
@@ -1061,27 +1061,27 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$suppFileId = isset($args[1]) ? (int) $args[1] : 0;
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
-		
+
 		SectionEditorAction::deleteSuppFile($submission, $suppFileId);
-		
+
 		Request::redirect(null, null, SubmissionEditHandler::getFrom(), $articleId);
 	}
-	
+
 	function archiveSubmission($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
 
 		SectionEditorAction::archiveSubmission($submission);
-		
+
 		Request::redirect(null, null, 'submission', $articleId);
 	}
-	
+
 	function restoreToQueue($args) {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
 
 		SectionEditorAction::restoreToQueue($submission);
-		
+
 		Request::redirect(null, null, 'submissionEditing', $articleId);
 	}
 
@@ -1107,12 +1107,12 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		SectionEditorAction::updateSection($submission, Request::getUserVar('section'));
 		Request::redirect(null, null, 'submission', $articleId);
 	}
-	
-	
+
+
 	//
 	// Layout Editing
 	//
-	
+
 	/**
 	 * Upload a layout file (either layout version, galley, or supp. file).
 	 */
@@ -1120,30 +1120,30 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$layoutFileType = Request::getUserVar('layoutFileType');
 		if ($layoutFileType == 'submission') {
 			SubmissionEditHandler::uploadLayoutVersion();
-			
+
 		} else if ($layoutFileType == 'galley') {
 			SubmissionEditHandler::uploadGalley('layoutFile');
-		
+
 		} else if ($layoutFileType == 'supp') {
 			SubmissionEditHandler::uploadSuppFile('layoutFile');
-		
+
 		} else {
 			Request::redirect(null, null, SubmissionEditHandler::getFrom(), Request::getUserVar('articleId'));
 		}
 	}
-	
+
 	/**
 	 * Upload the layout version of the submission file
 	 */
 	function uploadLayoutVersion() {
 		$articleId = Request::getUserVar('articleId');
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
-		
+
 		SectionEditorAction::uploadLayoutVersion($submission);
-		
+
 		Request::redirect(null, null, 'submissionEditing', $articleId);
 	}
-	
+
 	/**
 	 * Delete an article image.
 	 * @param $args array ($articleId, $fileId)
@@ -1156,10 +1156,10 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 		SectionEditorAction::deleteArticleImage($submission, $fileId, $revisionId);
-		
+
 		Request::redirect(null, null, 'editGalley', array($articleId, $galleyId));
 	}
-	
+
 	/**
 	 * Assign/reassign a layout editor to the submission.
 	 * @param $args array ($articleId, [$userId])
@@ -1168,9 +1168,9 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$editorId = isset($args[1]) ? (int) $args[1] : 0;
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
-		
+
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
-		
+
 		if ($editorId && $roleDao->roleExists($journal->getJournalId(), $editorId, ROLE_ID_LAYOUT_EDITOR)) {
 			SectionEditorAction::assignLayoutEditor($submission, $editorId);
 			Request::redirect(null, null, 'submissionEditing', $articleId);
@@ -1182,7 +1182,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			if (isset($search)) {
 				$searchType = Request::getUserVar('searchField');
 				$searchMatch = Request::getUserVar('searchMatch');
-				
+
 			} else if (isset($searchInitial)) {
 				$searchInitial = String::strtoupper($searchInitial);
 				$searchType = USER_FIELD_INITIAL;
@@ -1203,7 +1203,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$templateMgr->assign('search', $searchQuery);
 			$templateMgr->assign('searchInitial', Request::getUserVar('searchInitial'));
 			$templateMgr->assign('alphaList', explode(' ', Locale::translate('common.alphaList')));
-			
+
 			$templateMgr->assign('pageTitle', 'user.role.layoutEditors');
 			$templateMgr->assign('pageSubTitle', 'editor.article.selectLayoutEditor');
 			$templateMgr->assign('actionHandler', 'assignLayoutEditor');
@@ -1226,7 +1226,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$templateMgr->display('sectionEditor/selectUser.tpl');
 		}
 	}
-	
+
 	/**
 	 * Notify the layout editor.
 	 */
@@ -1241,7 +1241,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			Request::redirect(null, null, 'submissionEditing', $articleId);
 		}
 	}
-	
+
 	/**
 	 * Thank the layout editor.
 	 */
@@ -1256,22 +1256,22 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			Request::redirect(null, null, 'submissionEditing', $articleId);
 		}
 	}
-	
+
 	/**
 	 * Create a new galley with the uploaded file.
 	 */
 	function uploadGalley($fileName = null) {
 		$articleId = Request::getUserVar('articleId');
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
-		
+
 		import('submission.form.ArticleGalleyForm');
-		
+
 		$galleyForm = &new ArticleGalleyForm($articleId);
 		$galleyId = $galleyForm->execute($fileName);
-		
+
 		Request::redirect(null, null, 'editGalley', array($articleId, $galleyId));
 	}
-	
+
 	/**
 	 * Edit a galley.
 	 * @param $args array ($articleId, $galleyId)
@@ -1280,11 +1280,11 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
-		
+
 		parent::setupTemplate(true, $articleId, 'editing');
-		
+
 		import('submission.form.ArticleGalleyForm');
-		
+
 		$submitForm = &new ArticleGalleyForm($articleId, $galleyId);
 
 		if ($submitForm->isLocaleResubmit()) {
@@ -1294,7 +1294,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		}
 		$submitForm->display();
 	}
-	
+
 	/**
 	 * Save changes to a galley.
 	 * @param $args array ($articleId, $galleyId)
@@ -1303,11 +1303,11 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
-		
+
 		import('submission.form.ArticleGalleyForm');
-		
+
 		$submitForm = &new ArticleGalleyForm($articleId, $galleyId);
-		
+
 		$submitForm->readInputData();
 		if ($submitForm->validate()) {
 			$submitForm->execute();
@@ -1326,19 +1326,19 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$submitForm->display();
 		}
 	}
-	
+
 	/**
 	 * Change the sequence order of a galley.
 	 */
 	function orderGalley() {
 		$articleId = Request::getUserVar('articleId');
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
-		
+
 		SectionEditorAction::orderGalley($submission, Request::getUserVar('galleyId'), Request::getUserVar('d'));
 
 		Request::redirect(null, null, 'submissionEditing', $articleId);
 	}
-	
+
 	/**
 	 * Delete a galley file.
 	 * @param $args array ($articleId, $galleyId)
@@ -1347,12 +1347,12 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
-		
+
 		SectionEditorAction::deleteGalley($submission, $galleyId);
-		
+
 		Request::redirect(null, null, 'submissionEditing', $articleId);
 	}
-	
+
 	/**
 	 * Proof / "preview" a galley.
 	 * @param $args array ($articleId, $galleyId)
@@ -1361,13 +1361,13 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
-		
+
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->display('submission/layout/proofGalley.tpl');
 	}
-	
+
 	/**
 	 * Proof galley (shows frame header).
 	 * @param $args array ($articleId, $galleyId)
@@ -1376,14 +1376,14 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
-		
+
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->assign('backHandler', 'submissionEditing');
 		$templateMgr->display('submission/layout/proofGalleyTop.tpl');
 	}
-	
+
 	/**
 	 * Proof galley (outputs file contents).
 	 * @param $args array ($articleId, $galleyId)
@@ -1392,12 +1392,12 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
-		
+
 		$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
 		$galley = &$galleyDao->getGalley($galleyId, $articleId);
-		
+
 		import('file.ArticleFileManager'); // FIXME
-		
+
 		if (isset($galley)) {
 			if ($galley->isHTMLGalley()) {
 				$templateMgr = &TemplateManager::getManager();
@@ -1408,47 +1408,47 @@ class SubmissionEditHandler extends SectionEditorHandler {
 					)));
 				}
 				$templateMgr->display('submission/layout/proofGalleyHTML.tpl');
-				
+
 			} else {
 				// View non-HTML file inline
 				SubmissionEditHandler::viewFile(array($articleId, $galley->getFileId()));
 			}
 		}
 	}
-	
+
 	/**
 	 * Upload a new supplementary file.
 	 */
 	function uploadSuppFile($fileName = null) {
 		$articleId = Request::getUserVar('articleId');
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
-		
+
 		import('submission.form.SuppFileForm');
-		
+
 		$suppFileForm = &new SuppFileForm($submission);
 		$suppFileForm->setData('title', Locale::translate('common.untitled'));
 		$suppFileId = $suppFileForm->execute($fileName);
-		
+
 		Request::redirect(null, null, 'editSuppFile', array($articleId, $suppFileId));
 	}
-	
+
 	/**
 	 * Change the sequence order of a supplementary file.
 	 */
 	function orderSuppFile() {
 		$articleId = Request::getUserVar('articleId');
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
-		
+
 		SectionEditorAction::orderSuppFile($submission, Request::getUserVar('suppFileId'), Request::getUserVar('d'));
 
 		Request::redirect(null, null, 'submissionEditing', $articleId);
 	}
-	
-	
+
+
 	//
 	// Submission History (FIXME Move to separate file?)
 	//
-	
+
 	/**
 	 * View submission event log.
 	 */
@@ -1457,31 +1457,31 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$logId = isset($args[1]) ? (int) $args[1] : 0;
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
 		parent::setupTemplate(true, $articleId, 'history');
-		
+
 		$templateMgr = &TemplateManager::getManager();
-		
+
 		$templateMgr->assign('isEditor', Validation::isEditor());
 		$templateMgr->assign_by_ref('submission', $submission);
-		
+
 		if ($logId) {
 			$logDao = &DAORegistry::getDAO('ArticleEventLogDAO');
 			$logEntry = &$logDao->getLogEntry($logId, $articleId);
 		}
-		
+
 		if (isset($logEntry)) {
 			$templateMgr->assign('logEntry', $logEntry);
 			$templateMgr->display('sectionEditor/submissionEventLogEntry.tpl');
-			
+
 		} else {
 			$rangeInfo = &Handler::getRangeInfo('eventLogEntries');
-			
+
 			import('article.log.ArticleLog');
 			$eventLogEntries = &ArticleLog::getEventLogEntries($articleId, $rangeInfo);
 			$templateMgr->assign('eventLogEntries', $eventLogEntries);
 			$templateMgr->display('sectionEditor/submissionEventLog.tpl');
 		}
 	}
-	
+
 	/**
 	 * View submission event log by record type.
 	 */
@@ -1491,20 +1491,20 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$assocId = isset($args[2]) ? (int) $args[2] : null;
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
 		parent::setupTemplate(true, $articleId, 'history');
-		
+
 		$rangeInfo = &Handler::getRangeInfo('eventLogEntries');
 		$logDao = &DAORegistry::getDAO('ArticleEventLogDAO');
 		$eventLogEntries = &$logDao->getArticleLogEntriesByAssoc($articleId, $assocType, $assocId, $rangeInfo);
-		
+
 		$templateMgr = &TemplateManager::getManager();
-		
+
 		$templateMgr->assign('showBackLink', true);
 		$templateMgr->assign('isEditor', Validation::isEditor());
 		$templateMgr->assign_by_ref('submission', $submission);
 		$templateMgr->assign_by_ref('eventLogEntries', $eventLogEntries);
 		$templateMgr->display('sectionEditor/submissionEventLog.tpl');
 	}
-	
+
 	/**
 	 * Clear submission event log entries.
 	 */
@@ -1512,19 +1512,19 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$logId = isset($args[1]) ? (int) $args[1] : 0;
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
-		
+
 		$logDao = &DAORegistry::getDAO('ArticleEventLogDAO');
-		
+
 		if ($logId) {
 			$logDao->deleteLogEntry($logId, $articleId);
-			
+
 		} else {
 			$logDao->deleteArticleLogEntries($articleId);
 		}
-		
+
 		Request::redirect(null, null, 'submissionEventLog', $articleId);
 	}
-	
+
 	/**
 	 * View submission email log.
 	 */
@@ -1533,35 +1533,35 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$logId = isset($args[1]) ? (int) $args[1] : 0;
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
 		parent::setupTemplate(true, $articleId, 'history');
-		
+
 		$templateMgr = &TemplateManager::getManager();
-		
+
 		$templateMgr->assign('isEditor', Validation::isEditor());
 		$templateMgr->assign_by_ref('submission', $submission);
 
 		$articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
 		import('file.ArticleFileManager');
 		$templateMgr->assign('attachments', $articleFileDao->getArticleFilesByAssocId($logId, ARTICLE_FILE_ATTACHMENT));
-		
+
 		if ($logId) {
 			$logDao = &DAORegistry::getDAO('ArticleEmailLogDAO');
 			$logEntry = &$logDao->getLogEntry($logId, $articleId);
 		}
-		
+
 		if (isset($logEntry)) {
 			$templateMgr->assign_by_ref('logEntry', $logEntry);
 			$templateMgr->display('sectionEditor/submissionEmailLogEntry.tpl');
-			
+
 		} else {
 			$rangeInfo = &Handler::getRangeInfo('emailLogEntries');
-			
+
 			import('article.log.ArticleLog');
 			$emailLogEntries = &ArticleLog::getEmailLogEntries($articleId, $rangeInfo);
 			$templateMgr->assign_by_ref('emailLogEntries', $emailLogEntries);
 			$templateMgr->display('sectionEditor/submissionEmailLog.tpl');
 		}
 	}
-	
+
 	/**
 	 * View submission email log by record type.
 	 */
@@ -1571,20 +1571,20 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$assocId = isset($args[2]) ? (int) $args[2] : null;
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
 		parent::setupTemplate(true, $articleId, 'history');
-		
+
 		$rangeInfo = &Handler::getRangeInfo('eventLogEntries');
 		$logDao = &DAORegistry::getDAO('ArticleEmailLogDAO');
 		$emailLogEntries = &$logDao->getArticleLogEntriesByAssoc($articleId, $assocType, $assocId, $rangeInfo);
-		
+
 		$templateMgr = &TemplateManager::getManager();
-		
+
 		$templateMgr->assign('showBackLink', true);
 		$templateMgr->assign('isEditor', Validation::isEditor());
 		$templateMgr->assign_by_ref('submission', $submission);
 		$templateMgr->assign_by_ref('emailLogEntries', $emailLogEntries);
 		$templateMgr->display('sectionEditor/submissionEmailLog.tpl');
 	}
-	
+
 	/**
 	 * Clear submission email log entries.
 	 */
@@ -1592,19 +1592,19 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$articleId = isset($args[0]) ? (int) $args[0] : 0;
 		$logId = isset($args[1]) ? (int) $args[1] : 0;
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
-		
+
 		$logDao = &DAORegistry::getDAO('ArticleEmailLogDAO');
-		
+
 		if ($logId) {
 			$logDao->deleteLogEntry($logId, $articleId);
-			
+
 		} else {
 			$logDao->deleteArticleLogEntries($articleId);
 		}
-		
+
 		Request::redirect(null, null, 'submissionEmailLog', $articleId);
 	}
-	
+
 	// Submission Notes Functions
 
 	/**
@@ -1614,7 +1614,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	function addSubmissionNote() {
 		$articleId = Request::getUserVar('articleId');
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId);
-		
+
 		SectionEditorAction::addSubmissionNote($articleId);
 		Request::redirect(null, null, 'submissionNotes', $articleId);
 	}
@@ -1630,7 +1630,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		SectionEditorAction::removeSubmissionNote($articleId);
 		Request::redirect(null, null, 'submissionNotes', $articleId);
 	}
-	
+
 	/**
 	 * Updates a submission note.
 	 * Redirects to submission notes list
@@ -1654,7 +1654,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		SectionEditorAction::clearAllSubmissionNotes($articleId);
 		Request::redirect(null, null, 'submissionNotes', $articleId);
 	}
-	
+
 	/**
 	 * View submission notes.
 	 */
@@ -1674,7 +1674,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		if ($noteViewType == 'edit') {
 			$articleNote = $articleNoteDao->getArticleNoteById($noteId);
 		}
-		
+
 		$templateMgr = &TemplateManager::getManager();
 
 		$templateMgr->assign('articleId', $articleId);
@@ -1691,12 +1691,12 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		$templateMgr->display('sectionEditor/submissionNotes.tpl');
 	}
-	
-	
+
+
 	//
 	// Misc
 	//
-	
+
 	/**
 	 * Download a file.
 	 * @param $args array ($articleId, $fileId, [$revision])
@@ -1711,7 +1711,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			Request::redirect(null, null, 'submission', $articleId);
 		}
 	}
-	
+
 	/**
 	 * View a file (inlines file).
 	 * @param $args array ($articleId, $fileId, [$revision])
@@ -1731,7 +1731,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	//
 	// Proofreading
 	//
-	
+
 	/**
 	 * Select Proofreader.
 	 * @param $args array ($articleId, $userId)
@@ -1758,7 +1758,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			if (isset($search)) {
 				$searchType = Request::getUserVar('searchField');
 				$searchMatch = Request::getUserVar('searchMatch');
-				
+
 			} else if (isset($searchInitial)) {
 				$searchInitial = String::strtoupper($searchInitial);
 				$searchType = USER_FIELD_INITIAL;
@@ -1766,17 +1766,17 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			}
 
 			$proofreaders = $roleDao->getUsersByRoleId(ROLE_ID_PROOFREADER, $journal->getJournalId(), $searchType, $search, $searchMatch);
-				
+
 			$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 			$proofreaderStatistics = $sectionEditorSubmissionDao->getProofreaderStatistics($journal->getJournalId());
-		
+
 			$templateMgr = &TemplateManager::getManager();
 
 			$templateMgr->assign('searchField', $searchType);
 			$templateMgr->assign('searchMatch', $searchMatch);
 			$templateMgr->assign('search', $searchQuery);
 			$templateMgr->assign('searchInitial', Request::getUserVar('searchInitial'));
-			
+
 			$templateMgr->assign_by_ref('users', $proofreaders);
 
 			$proofAssignment = &$submission->getProofAssignment();
@@ -2018,7 +2018,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	//
 	// Validation
 	//
-	
+
 	/**
 	 * Validate that the user is the assigned section editor for
 	 * the article, or is a managing editor.
@@ -2028,24 +2028,24 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	 */
 	function validate($articleId, $access = null) {
 		parent::validate();
-		
+
 		$isValid = true;
-		
+
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
-		
+
 		$sectionEditorSubmission = &$sectionEditorSubmissionDao->getSectionEditorSubmission($articleId);
 
 		if ($sectionEditorSubmission == null) {
 			$isValid = false;
-			
+
 		} else if ($sectionEditorSubmission->getJournalId() != $journal->getJournalId()) {
 			$isValid = false;
-			
+
 		} else if ($sectionEditorSubmission->getDateSubmitted() == null) {
 			$isValid = false;
-			
+
 		} else {
 			$templateMgr =& TemplateManager::getManager();
 			if (Validation::isEditor()) {
@@ -2083,7 +2083,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 				if (!$wasFound) $isValid = false;
 			}
 		}
-		
+
 		if (!$isValid) {
 			Request::redirect(null, Request::getRequestedPage());
 		}

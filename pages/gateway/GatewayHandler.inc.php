@@ -22,19 +22,19 @@ class GatewayHandler extends Handler {
 
 	function lockss() {
 		parent::validate();
-		
+
 		$journal = &Request::getJournal();
 		$templateMgr = &TemplateManager::getManager();
-		
+
 		if ($journal != null) {
 			if (!$journal->getSetting('enableLockss')) {
 				Request::redirect(null, 'index');
 			}
-			
+
 			$year = Request::getUserVar('year');
-			
+
 			$issueDao = &DAORegistry::getDAO('IssueDAO');
-			
+
 			// FIXME Should probably go in IssueDAO or a subclass
 			if (isset($year)) {
 				$year = (int)$year;
@@ -46,7 +46,7 @@ class GatewayHandler extends Handler {
 					unset($year);
 				}
 			}
-			
+
 			if (!isset($year)) {
 				$showInfo = true;
 				$result = &$issueDao->retrieve(
@@ -61,9 +61,9 @@ class GatewayHandler extends Handler {
 			} else {
 				$showInfo = false;
 			}
-			
+
 			$issues = &new DAOResultFactory($result, $issueDao, '_returnIssueFromRow');
-			
+
 			$prevYear = null;
 			$nextYear = null;
 			if (isset($year)) {
@@ -72,21 +72,21 @@ class GatewayHandler extends Handler {
 					array($journal->getJournalId(), $year)
 				);
 				list($prevYear) = $result->fields;
-				
+
 				$result = &$issueDao->retrieve(
 					'SELECT MIN(year) FROM issues WHERE journal_id = ? AND published = 1 AND year > ?',
 					array($journal->getJournalId(), $year)
 				);
 				list($nextYear) = $result->fields;
 			}
-			
+
 			$templateMgr->assign_by_ref('journal', $journal);
 			$templateMgr->assign_by_ref('issues', $issues);
 			$templateMgr->assign('year', $year);
 			$templateMgr->assign('prevYear', $prevYear);
 			$templateMgr->assign('nextYear', $nextYear);
 			$templateMgr->assign('showInfo', $showInfo);
-			
+
 			$locales =& $journal->getSupportedLocaleNames();
 			if (!isset($locales) || empty($locales)) {
 				$localeNames = &Locale::getAllLocales();
@@ -100,7 +100,7 @@ class GatewayHandler extends Handler {
 			$journals = &$journalDao->getEnabledJournals();
 			$templateMgr->assign_by_ref('journals', $journals);
 		}
-		
+
 		$templateMgr->display('gateway/lockss.tpl');
 	}
 

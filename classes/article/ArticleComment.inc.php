@@ -13,23 +13,23 @@
  *
  * $Id$
  */
- 
+
 /** Comment associative types. All types must be defined here. */
 define('COMMENT_TYPE_PEER_REVIEW', 0x01);
 define('COMMENT_TYPE_EDITOR_DECISION', 0x02);
 define('COMMENT_TYPE_COPYEDIT', 0x03);
 define('COMMENT_TYPE_LAYOUT', 0x04);
 define('COMMENT_TYPE_PROOFREAD', 0x05);
- 
+
 class ArticleComment extends DataObject {
- 
+
 	/**
 	 * Constructor.
 	 */
 	function ArticleComment() {
 		parent::DataObject();
 	}
-	
+
 	/**
 	 * get article comment id
 	 * @return int
@@ -37,7 +37,7 @@ class ArticleComment extends DataObject {
 	function getCommentId() {
 		return $this->getData('commentId');
 	}
-	 
+
 	/**
 	 * set article comment id
 	 * @param $commentId int
@@ -45,7 +45,7 @@ class ArticleComment extends DataObject {
 	function setCommentId($commentId) {
 		return $this->setData('commentId', $commentId);
 	}
-	
+
 	/**
 	 * get comment type
 	 * @return int
@@ -53,7 +53,7 @@ class ArticleComment extends DataObject {
 	function getCommentType() {
 		return $this->getData('commentType');
 	}
-	 
+
 	/**
 	 * set comment type
 	 * @param $commentType int
@@ -61,7 +61,7 @@ class ArticleComment extends DataObject {
 	function setCommentType($commentType) {
 		return $this->setData('commentType', $commentType);
 	}
-	
+
 	/**
 	 * get role id
 	 * @return int
@@ -69,7 +69,7 @@ class ArticleComment extends DataObject {
 	function getRoleId() {
 		return $this->getData('roleId');
 	}
-	
+
 	/**
 	 * set role id
 	 * @param $roleId int
@@ -77,7 +77,7 @@ class ArticleComment extends DataObject {
 	function setRoleId($roleId) {
 		return $this->setData('roleId', $roleId);
 	}
-	
+
 	/**
 	 * get role name
 	 * @return string
@@ -88,7 +88,7 @@ class ArticleComment extends DataObject {
 
 		return $roleName;
 	}
- 
+
 	/**
 	 * get article id
 	 * @return int
@@ -96,7 +96,7 @@ class ArticleComment extends DataObject {
 	function getArticleId() {
 		return $this->getData('articleId');
 	}
-	 
+
 	/**
 	 * set article id
 	 * @param $articleId int
@@ -104,7 +104,7 @@ class ArticleComment extends DataObject {
 	function setArticleId($articleId) {
 		return $this->setData('articleId', $articleId);
 	}
-	
+
 	/**
 	 * get assoc id
 	 * @return int
@@ -112,7 +112,7 @@ class ArticleComment extends DataObject {
 	function getAssocId() {
 		return $this->getData('assocId');
 	}
-	 
+
 	/**
 	 * set assoc id
 	 * @param $assocId int
@@ -120,7 +120,7 @@ class ArticleComment extends DataObject {
 	function setAssocId($assocId) {
 		return $this->setData('assocId', $assocId);
 	}	
-	
+
 	/**
 	 * get author id
 	 * @return int
@@ -128,7 +128,7 @@ class ArticleComment extends DataObject {
 	function getAuthorId() {
 		return $this->getData('authorId');
 	}
-	 
+
 	/**
 	 * set author id
 	 * @param $authorId int
@@ -136,37 +136,37 @@ class ArticleComment extends DataObject {
 	function setAuthorId($authorId) {
 		return $this->setData('authorId', $authorId);
 	}
-	
+
 	/**
 	 * get author name
 	 * @return string
 	 */
 	function getAuthorName() {
 		$authorFullName =& $this->getData('authorFullName');
-		
+
 		if(!isset($authorFullName)) {
 			$userDao = &DAORegistry::getDAO('UserDAO');
 			$authorFullName = $userDao->getUserFullName($this->getAuthorId(), true);
 		}
-		
+
 		return $authorFullName ? $authorFullName : '';
 	}
-	
+
 	/**
 	 * get author email
 	 * @return string
 	 */
 	function getAuthorEmail() {
 		$authorEmail =& $this->getData('authorEmail');
-		
+
 		if(!isset($authorEmail)) {
 			$userDao = &DAORegistry::getDAO('UserDAO');
 			$authorEmail = $userDao->getUserEmail($this->getAuthorId(), true);
 		}
-		
+
 		return $authorEmail ? $authorEmail : '';
 	}
-	 
+
 	/**
 	 * get comment title
 	 * @return string
@@ -174,7 +174,7 @@ class ArticleComment extends DataObject {
 	function getCommentTitle() {
 		return $this->getData('commentTitle');
 	}
-	 
+
 	/**
 	 * set comment title
 	 * @param $commentTitle string
@@ -182,7 +182,7 @@ class ArticleComment extends DataObject {
 	function setCommentTitle($commentTitle) {
 		return $this->setData('commentTitle', $commentTitle);
 	}
-	
+
 	/**
 	 * get comments
 	 * @return string
@@ -190,7 +190,7 @@ class ArticleComment extends DataObject {
 	function getComments() {
 		return $this->getData('comments');
 	}
-	 
+
 	/**
 	 * set comments
 	 * @param $comments string
@@ -198,7 +198,7 @@ class ArticleComment extends DataObject {
 	function setComments($comments) {
 		return $this->setData('comments', $comments);
 	}
- 
+
  	/**
 	 * get date posted
 	 * @return date
@@ -206,7 +206,7 @@ class ArticleComment extends DataObject {
 	function getDatePosted() {
 		return $this->getData('datePosted');
 	}
-	 
+
 	/**
 	 * set date posted
 	 * @param $datePosted date
@@ -214,7 +214,7 @@ class ArticleComment extends DataObject {
 	function setDatePosted($datePosted) {
 		return $this->setData('datePosted', $datePosted);
 	}
-	
+
  	/**
 	 * get date modified
 	 * @return date
@@ -222,7 +222,7 @@ class ArticleComment extends DataObject {
 	function getDateModified() {
 		return $this->getData('dateModified');
 	}
-	 
+
 	/**
 	 * set date modified
 	 * @param $dateModified date
@@ -230,7 +230,7 @@ class ArticleComment extends DataObject {
 	function setDateModified($dateModified) {
 		return $this->setData('dateModified', $dateModified);
 	}
-	
+
  	/**
 	 * get viewable
 	 * @return boolean
@@ -238,7 +238,7 @@ class ArticleComment extends DataObject {
 	function getViewable() {
 		return $this->getData('viewable');
 	}
-	 
+
 	/**
 	 * set viewable
 	 * @param $viewable boolean
@@ -247,5 +247,5 @@ class ArticleComment extends DataObject {
 		return $this->setData('viewable', $viewable);
 	}
  }
- 
+
 ?>

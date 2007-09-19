@@ -17,7 +17,7 @@
 import('form.Form');
 
 class ChangePasswordForm extends Form {
-	
+
 	/**
 	 * Constructor.
 	 */
@@ -25,7 +25,7 @@ class ChangePasswordForm extends Form {
 		parent::Form('user/changePassword.tpl');
 		$user = &Request::getUser();
 		$site = &Request::getSite();
-		
+
 		// Validation checks for this form
 		$this->addCheck(new FormValidatorCustom($this, 'oldPassword', 'required', 'user.profile.form.oldPasswordInvalid', create_function('$password,$username', 'return Validation::checkCredentials($username,$password);'), array($user->getUsername())));
 		$this->addCheck(new FormValidatorLength($this, 'password', 'required', 'user.register.form.passwordLengthTooShort', '>=', $site->getMinPasswordLength()));
@@ -33,7 +33,7 @@ class ChangePasswordForm extends Form {
 		$this->addCheck(new FormValidatorCustom($this, 'password', 'required', 'user.register.form.passwordsDoNotMatch', create_function('$password,$form', 'return $password == $form->getData(\'password2\');'), array(&$this)));
 		$this->addCheck(new FormValidatorPost($this));
 	}
-	
+
 	/**
 	 * Display the form.
 	 */
@@ -45,36 +45,36 @@ class ChangePasswordForm extends Form {
 		$templateMgr->assign('username', $user->getUsername());
 		parent::display();
 	}
-	
+
 	/**
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
 		$this->readUserVars(array('oldPassword', 'password', 'password2'));
 	}
-	
+
 	/**
 	 * Save new password.
 	 */
 	function execute() {
 		$user = &Request::getUser();
-		
+
 		if ($user->getAuthId()) {
 			$authDao = &DAORegistry::getDAO('AuthSourceDAO');
 			$auth = &$authDao->getPlugin($user->getAuthId());
 		}
-		
+
 		if (isset($auth)) {
 			$auth->doSetUserPassword($user->getUsername(), $this->getData('password'));
 			$user->setPassword(Validation::encryptCredentials($user->getUserId(), Validation::generatePassword())); // Used for PW reset hash only
 		} else {
 			$user->setPassword(Validation::encryptCredentials($user->getUsername(), $this->getData('password')));
 		}
-		
+
 		$userDao = &DAORegistry::getDAO('UserDAO');
 		$userDao->updateUser($user);
 	}
-	
+
 }
 
 ?>

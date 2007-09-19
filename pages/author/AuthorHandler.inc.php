@@ -55,7 +55,7 @@ class AuthorHandler extends Handler {
 		$templateMgr->assign('helpTopicId', 'editorial.authorsRole.submissions');
 		$templateMgr->display('author/index.tpl');
 	}
-	
+
 	/**
 	 * Validate that user has author permissions in the selected journal.
 	 * Redirects to user index page if not properly authenticated.
@@ -69,7 +69,7 @@ class AuthorHandler extends Handler {
 
 		return array(&$journal);
 	}
-	
+
 	/**
 	 * Setup common template variables.
 	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
@@ -97,7 +97,7 @@ class AuthorHandler extends Handler {
 			$templateMgr->assign('submissionsCount', $submissionsCount);
 		}
 	}
-	
+
 	/**
 	 * Display submission management instructions.
 	 * @param $args (type)
@@ -118,7 +118,7 @@ class AuthorHandler extends Handler {
 		import('pages.author.SubmitHandler');
 		SubmitHandler::submit($args);
 	}
-	
+
 	function saveSubmit($args) {
 		import('pages.author.SubmitHandler');
 		SubmitHandler::saveSubmit($args);
@@ -128,12 +128,12 @@ class AuthorHandler extends Handler {
 		import('pages.author.SubmitHandler');
 		SubmitHandler::submitSuppFile($args);
 	}
-	
+
 	function saveSubmitSuppFile($args) {
 		import('pages.author.SubmitHandler');
 		SubmitHandler::saveSubmitSuppFile($args);
 	}
-	
+
 	function deleteSubmitSuppFile($args) {
 		import('pages.author.SubmitHandler');
 		SubmitHandler::deleteSubmitSuppFile($args);
@@ -143,81 +143,81 @@ class AuthorHandler extends Handler {
 		import('pages.author.SubmitHandler');
 		SubmitHandler::expediteSubmission($args);
 	}
-	
+
 	//
 	// Submission Tracking
 	//
-	
+
 	function deleteArticleFile($args) {
 		import('pages.author.TrackSubmissionHandler');
 		TrackSubmissionHandler::deleteArticleFile($args);
 	}
-	
+
 	function deleteSubmission($args) {
 		import('pages.author.TrackSubmissionHandler');
 		TrackSubmissionHandler::deleteSubmission($args);
 	}
-	
+
 	function submission($args) {
 		import('pages.author.TrackSubmissionHandler');
 		TrackSubmissionHandler::submission($args);
 	}
-	
+
 	function editSuppFile($args) {
 		import('pages.author.TrackSubmissionHandler');
 		TrackSubmissionHandler::editSuppFile($args);
 	}
-	
+
 	function setSuppFileVisibility($args) {
 		import('pages.author.TrackSubmissionHandler');
 		TrackSubmissionHandler::setSuppFileVisibility($args);
 	}
-	
+
 	function saveSuppFile($args) {
 		import('pages.author.TrackSubmissionHandler');
 		TrackSubmissionHandler::saveSuppFile($args);
 	}
-	
+
 	function addSuppFile($args) {
 		import('pages.author.TrackSubmissionHandler');
 		TrackSubmissionHandler::addSuppFile($args);
 	}
-	
+
 	function submissionReview($args) {
 		import('pages.author.TrackSubmissionHandler');
 		TrackSubmissionHandler::submissionReview($args);
 	}
-	
+
 	function submissionEditing($args) {
 		import('pages.author.TrackSubmissionHandler');
 		TrackSubmissionHandler::submissionEditing($args);
 	}
-	
+
 	function uploadRevisedVersion() {
 		import('pages.author.TrackSubmissionHandler');
 		TrackSubmissionHandler::uploadRevisedVersion();
 	}
-	
+
 	function viewMetadata($args) {
 		import('pages.author.TrackSubmissionHandler');
 		TrackSubmissionHandler::viewMetadata($args);
 	}
-	
+
 	function saveMetadata() {
 		import('pages.author.TrackSubmissionHandler');
 		TrackSubmissionHandler::saveMetadata();
 	}
-	
+
 	function uploadCopyeditVersion() {
 		import('pages.author.TrackSubmissionHandler');
 		TrackSubmissionHandler::uploadCopyeditVersion();
 	}
-	
+
 	function completeAuthorCopyedit($args) {
 		import('pages.author.TrackSubmissionHandler');
 		TrackSubmissionHandler::completeAuthorCopyedit($args);
 	}
-	
+
 	//
 	// Misc.
 	//
@@ -231,36 +231,36 @@ class AuthorHandler extends Handler {
 		import('pages.author.TrackSubmissionHandler');
 		TrackSubmissionHandler::viewFile($args);
 	}
-	
+
 	function download($args) {
 		import('pages.author.TrackSubmissionHandler');
 		TrackSubmissionHandler::download($args);
 	}
-	
+
 	//
 	// Submission Comments
 	//
-	
+
 	function viewEditorDecisionComments($args) {
 		import('pages.author.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::viewEditorDecisionComments($args);
 	}
-	
+
 	function viewCopyeditComments($args) {
 		import('pages.author.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::viewCopyeditComments($args);
 	}
-	
+
 	function postCopyeditComment() {
 		import('pages.author.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::postCopyeditComment();
 	}
-	
+
 	function emailEditorDecisionComment() {
 		import('pages.author.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::emailEditorDecisionComment();
 	}
-	
+
 	function viewProofreadComments($args) {
 		import('pages.author.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::viewProofreadComments($args);
@@ -275,22 +275,22 @@ class AuthorHandler extends Handler {
 		import('pages.author.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::postLayoutComment();
 	}
-	
+
 	function postProofreadComment() {
 		import('pages.author.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::postProofreadComment();
 	}
-	
+
 	function editComment($args) {
 		import('pages.author.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::editComment($args);
 	}
-	
+
 	function saveComment() {
 		import('pages.author.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::saveComment();
 	}
-	
+
 	function deleteComment($args) {
 		import('pages.author.SubmissionCommentsHandler');
 		SubmissionCommentsHandler::deleteComment($args);
@@ -308,17 +308,17 @@ class AuthorHandler extends Handler {
 		import('pages.author.TrackSubmissionHandler');
 		TrackSubmissionHandler::proofGalley($args);
 	}
-	
+
 	function proofGalleyTop($args) {
 		import('pages.author.TrackSubmissionHandler');
 		TrackSubmissionHandler::proofGalleyTop($args);
 	}
-	
+
 	function proofGalleyFile($args) {
 		import('pages.author.TrackSubmissionHandler');
 		TrackSubmissionHandler::proofGalleyFile($args);
 	}	
-	
+
 }
 
 ?>

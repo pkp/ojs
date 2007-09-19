@@ -309,12 +309,12 @@ class TemplateManager extends Smarty {
 			$address = $params['address'];
 			$address_encode = '';
 			for ($x=0; $x < strlen($address); $x++) {
-			if(preg_match('!\w!',$address[$x])) {
-				$address_encode .= '%' . bin2hex($address[$x]);
-			} else {
-				$address_encode .= $address[$x];
+				if(preg_match('!\w!',$address[$x])) {
+					$address_encode .= '%' . bin2hex($address[$x]);
+				} else {
+					$address_encode .= $address[$x];
+				}
 			}
-							            }
 			$text_encode = '';
 			for ($x=0; $x < strlen($text); $x++) {
 				$text_encode .= '&#x' . bin2hex($text[$x]).';';

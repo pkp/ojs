@@ -25,7 +25,7 @@ class RoleDAO extends DAO {
 		parent::DAO();
 		$this->userDao = &DAORegistry::getDAO('UserDAO');
 	}
-	
+
 	/**
 	 * Retrieve a role.
 	 * @param $journalId int
@@ -53,7 +53,7 @@ class RoleDAO extends DAO {
 
 		return $returner;
 	}
-	
+
 	/**
 	 * Internal function to return a Role object from a row.
 	 * @param $row array
@@ -64,12 +64,12 @@ class RoleDAO extends DAO {
 		$role->setJournalId($row['journal_id']);
 		$role->setUserId($row['user_id']);
 		$role->setRoleId($row['role_id']);
-		
+
 		HookRegistry::call('RoleDAO::_returnRoleFromRow', array(&$role, &$row));
 
 		return $role;
 	}
-	
+
 	/**
 	 * Insert a new role.
 	 * @param $role Role
@@ -87,7 +87,7 @@ class RoleDAO extends DAO {
 			)
 		);
 	}
-	
+
 	/**
 	 * Delete a role.
 	 * @param $role Role
@@ -102,7 +102,7 @@ class RoleDAO extends DAO {
 			)
 		);
 	}
-	
+
 	/**
 	 * Retrieve a list of all roles for a specified user.
 	 * @param $userId int
@@ -111,12 +111,12 @@ class RoleDAO extends DAO {
 	 */
 	function &getRolesByUserId($userId, $journalId = null) {
 		$roles = array();
-				
+
 		$result = &$this->retrieve(
 			'SELECT * FROM roles WHERE user_id = ?' . (isset($journalId) ? ' AND journal_id = ?' : ''),
 			isset($journalId) ? array((int) $userId, (int) $journalId) : ((int) $userId)
 		);
-		
+
 		while (!$result->EOF) {
 			$roles[] = &$this->_returnRoleFromRow($result->GetRowAssoc(false));
 			$result->moveNext();
@@ -124,10 +124,10 @@ class RoleDAO extends DAO {
 
 		$result->Close();
 		unset($result);
-	
+
 		return $roles;
 	}
-	
+
 	/**
 	 * Retrieve a list of users in a specified role.
 	 * @param $roleId int optional (can leave as null to get all users in journal)
@@ -181,19 +181,19 @@ class RoleDAO extends DAO {
 				$paramArray[] = $search . '%';
 				break;
 		}
-		
+
 		$searchSql .= ' ORDER BY u.last_name, u.first_name'; // FIXME Add "sort field" parameter?
-		
+
 		$result = &$this->retrieveRange(
 			'SELECT DISTINCT u.* FROM users AS u LEFT JOIN user_settings s ON (u.user_id = s.user_id AND s.setting_name = ?), roles AS r WHERE u.user_id = r.user_id ' . (isset($roleId)?'AND r.role_id = ?':'') . (isset($journalId) ? ' AND r.journal_id = ?' : '') . ' ' . $searchSql,
 			$paramArray,
 			$dbResultRange
 		);
-		
+
 		$returner = &new DAOResultFactory($result, $this->userDao, '_returnUserFromRowWithData');
 		return $returner;
 	}
-	
+
 	/**
 	 * Retrieve a list of all users with some role in the specified journal.
 	 * @param $journalId int
@@ -239,20 +239,20 @@ class RoleDAO extends DAO {
 				$paramArray[] = $search . '%';
 				break;
 		}
-		
+
 		$searchSql .= ' ORDER BY u.last_name, u.first_name'; // FIXME Add "sort field" parameter?
-		
+
 		$result = &$this->retrieveRange(
 
 			'SELECT DISTINCT u.* FROM users AS u LEFT JOIN user_settings s ON (u.user_id = s.user_id AND s.setting_name = ?), roles AS r WHERE u.user_id = r.user_id AND r.journal_id = ? ' . $searchSql,
 			$paramArray,
 			$dbResultRange
 		);
-		
+
 		$returner = &new DAOResultFactory($result, $this->userDao, '_returnUserFromRowWithData');
 		return $returner;
 	}
-	
+
 	/**
 	 * Retrieve the number of users associated with the specified journal.
 	 * @param $journalId int
@@ -260,7 +260,7 @@ class RoleDAO extends DAO {
 	 */
 	function getJournalUsersCount($journalId) {
 		$userDao = &DAORegistry::getDAO('UserDAO');
-				
+
 		$result = &$this->retrieve(
 			'SELECT COUNT(DISTINCT(user_id)) FROM roles WHERE journal_id = ?',
 			(int) $journalId
@@ -290,16 +290,16 @@ class RoleDAO extends DAO {
 			$params[] = (int) $roleId;
 			$conditions[] = 'role_id = ?';
 		}
-		
+
 		$result = &$this->retrieve(
 			'SELECT * FROM roles' . (empty($conditions) ? '' : ' WHERE ' . join(' AND ', $conditions)),
 			$params
 		);
-		
+
 		$returner = &new DAOResultFactory($result, $this, '_returnRoleFromRow');
 		return $returner;
 	}
-	
+
 	/**
 	 * Delete all roles for a specified journal.
 	 * @param $journalId int
@@ -309,7 +309,7 @@ class RoleDAO extends DAO {
 			'DELETE FROM roles WHERE journal_id = ?', (int) $journalId
 		);
 	}
-	
+
 	/**
 	 * Delete all roles for a specified journal.
 	 * @param $userId int
@@ -324,7 +324,7 @@ class RoleDAO extends DAO {
 			: (isset($roleId) ? array((int) $userId, (int) $roleId) : (int) $userId))
 		);
 	}
-	
+
 	/**
 	 * Check if a role exists.
 	 * @param $journalId int
@@ -343,7 +343,7 @@ class RoleDAO extends DAO {
 
 		return $returner;
 	}
-	
+
 	/**
 	 * Get the i18n key name associated with the specified role.
 	 * @param $roleId int
@@ -378,7 +378,7 @@ class RoleDAO extends DAO {
 				return '';
 		}
 	}
-	
+
 	/**
 	 * Get the URL path associated with the specified role's operations.
 	 * @param $roleId int
@@ -412,7 +412,7 @@ class RoleDAO extends DAO {
 				return '';
 		}
 	}
-	
+
 	/**
 	 * Get a role's ID based on its path.
 	 * @param $rolePath string

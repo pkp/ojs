@@ -48,7 +48,7 @@ class SubscriptionDAO extends DAO {
 		$result = &$this->retrieve(
 			'SELECT journal_id FROM subscriptions WHERE subscription_id = ?', $subscriptionId
 		);
-		
+
 		$returner = isset($result->fields[0]) ? $result->fields[0] : 0;	
 
 		$result->Close();
@@ -74,7 +74,7 @@ class SubscriptionDAO extends DAO {
 				$journalId
 			)
 		);
-		
+
 		$returner = isset($result->fields[0]) ? $result->fields[0] : 0;	
 
 		$result->Close();
