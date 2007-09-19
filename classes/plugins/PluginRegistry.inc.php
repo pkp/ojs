@@ -168,7 +168,8 @@ class PluginRegistry {
 		foreach (PluginRegistry::getCategories() as $category) {
 			PluginRegistry::loadCategory($category);
 		}
-		return PluginRegistry::getAllPlugins();
+		$allPlugins =& PluginRegistry::getAllPlugins();
+		return $allPlugins;
 	}
 }
 ?>
