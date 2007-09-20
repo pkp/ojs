@@ -969,7 +969,7 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="manager.setup.addAboutItem">Add About Item</message>
 	<message key="manager.setup.form.numReviewersPerSubmission">The number of reviewers per submission is required.</message>
 	<message key="manager.setup.securitySettings">Access and Security Settings</message>
-	<message key="manager.setup.securitySettingsDescription">OJS provides a number of security-related options that can be used to restrict to the journal's contents, and maintain additional information about submissions for auditing purposes.</message>
+	<message key="manager.setup.securitySettingsDescription">OJS provides a number of security-related options that can be used to restrict the journal's contents, and maintain additional information about submissions for auditing purposes.</message>
 	<message key="manager.setup.userRegistration">User Registration</message>
 	<message key="manager.setup.enableUserRegistration">Users can register themselves with the journal in one or more of the following roles:</message>
 	<message key="manager.setup.enableUserRegistration.author">Authors (can submit materials to the journal)</message>
@@ -1102,7 +1102,7 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.setup.openAccessPolicy">Open Access Policy</message>
 	<message key="manager.setup.openAccessPolicyDescription">Enter a statement on the journal's open access policy that will appear in About the Journal.</message>
 	<message key="manager.setup.subscription">The journal will require subscriptions to access some or all of its contents.</message>
-	<message key="manager.setup.subscriptionDescription">This requires the assigment of a Subscription Manager who has access to subscription module, which includes additional open access, self-archiving, and email notification options.</message>
+	<message key="manager.setup.subscriptionDescription">This requires the assignment of a Subscription Manager who has access to the subscription module, which includes additional open access, self-archiving, and email notification options.</message>
 	<message key="manager.setup.announcements">Announcements</message>
 	<message key="manager.setup.announcementsDescription">Announcements may be published to inform readers of journal news and events. Published announcements will appear on the Announcements page.</message>
 	<message key="manager.setup.enableAnnouncements">Enable Journal Managers to add journal announcements.</message>
