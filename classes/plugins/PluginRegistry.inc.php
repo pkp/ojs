@@ -94,12 +94,10 @@ class PluginRegistry {
 		while (($file = readdir($handle)) !== false) {
 			if ($file == '.' || $file == '..') continue;
 			$pluginPath = "$categoryDir/$file";
+			$pluginWrapper = "$pluginPath/index.php";
 
-			// If the plugin is returned when we try to
-			// include $pluginPath/index.php, register it;
-			// note that there may be valid cases where
-			// errors must be suppressed (e.g. "CVS").
-			$plugin = @include("$pluginPath/index.php");
+			if (!file_exists($pluginWrapper)) continue;
+			$plugin = include($pluginWrapper);
 			if ($plugin && is_object($plugin)) {
 				$plugins[$plugin->getSeq()][$pluginPath] =& $plugin;
 				unset($plugin);
