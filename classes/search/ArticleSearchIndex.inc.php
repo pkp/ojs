@@ -196,12 +196,12 @@ class ArticleSearchIndex {
 			$articleId,
 			ARTICLE_SEARCH_SUPPLEMENTARY_FILE,
 			array_merge(
-				array_keys((array) $suppFile->getTitle(null)),
-				array_keys((array) $suppFile->getCreator(null)),
-				array_keys((array) $suppFile->getSubject(null)),
-				array_keys((array) $suppFile->getTypeOther(null)),
-				array_keys((array) $suppFile->getDescription(null)),
-				array_keys((array) $suppFile->getSource(null))
+				array_values((array) $suppFile->getTitle(null)),
+				array_values((array) $suppFile->getCreator(null)),
+				array_values((array) $suppFile->getSubject(null)),
+				array_values((array) $suppFile->getTypeOther(null)),
+				array_values((array) $suppFile->getDescription(null)),
+				array_values((array) $suppFile->getSource(null))
 			),
 			$suppFile->getFileId()
 		);

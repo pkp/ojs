@@ -109,7 +109,7 @@
 		<query>INSERT INTO subscription_type_settings (type_id, setting_name, setting_value, setting_type, locale) SELECT t.type_id, 'description', t.description, 'string', j.primary_locale FROM subscription_types t, journals j WHERE t.journal_id = j.journal_id AND t.description IS NOT NULL AND t.description != ''</query>
 	</sql>
 
-	<!-- Localize the announcement_types table -->
+	<!-- Localize the announcements table -->
 	<sql>
 		<query>INSERT INTO announcement_settings (announcement_id, setting_name, setting_value, setting_type, locale) SELECT a.announcement_id, 'title', a.title, 'string', j.primary_locale FROM announcements a, journals j WHERE a.journal_id = j.journal_id AND a.title IS NOT NULL AND a.title != ''</query>
 		<query>INSERT INTO announcement_settings (announcement_id, setting_name, setting_value, setting_type, locale) SELECT a.announcement_id, 'descriptionShort', a.description_short, 'string', j.primary_locale FROM announcements a, journals j WHERE a.journal_id = j.journal_id AND a.description_short IS NOT NULL AND a.description_short != ''</query>

@@ -196,18 +196,18 @@ class JournalStatisticsDAO extends DAO {
 	function getSubscriptionStatistics($journalId, $dateStart = null, $dateEnd = null) {
 		$result = &$this->retrieve(
 			'SELECT	st.type_id,
-				sts.setting_name AS type_name,
+				sts.setting_value AS type_name,
 				count(s.subscription_id) AS type_count
 			FROM	subscription_types st,
 				subscriptions s,
 				journals j
-				LEFT JOIN subscription_type_settings sts ON (sts.journal_id = j.journal_id AND sts.setting_name = ? AND sts.locale = j.primary_locale)
+				LEFT JOIN subscription_type_settings sts ON (st.type_id = sts.type_id AND sts.setting_name = ? AND sts.locale = j.primary_locale)
 			WHERE	st.journal_id = ?
 				AND j.journal_id = st.journal_id
 				AND s.type_id = st.type_id' .
 			($dateStart !== null ? ' AND s.date_start >= ' . $this->datetimeToDB($dateStart) : '') .
 			($dateEnd !== null ? ' AND s.date_start <= ' . $this->datetimeToDB($dateEnd) : '') .
-			' GROUP BY st.type_id, st.type_name',
+			' GROUP BY st.type_id, sts.setting_value',
 			array('name', $journalId)
 		);
 
