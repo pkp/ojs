@@ -262,9 +262,12 @@ function confirmSubmissionCheck() {
 				<input type="file" name="upload" {if not $confirmedStatus or $declined or $submission->getCancelled()}disabled="disabled"{/if} class="uploadField" />
 				<input type="submit" name="submit" value="{translate key="common.upload"}" {if not $confirmedStatus or $declined or $submission->getCancelled()}disabled="disabled"{/if} class="button" />
 			</form>
+
+			{if $currentJournal->getSetting('showEnsuringLink')}
 			<span class="instruct">
 				<a class="action" href="javascript:openHelp('{get_help_id key="editorial.sectionEditorsRole.review.blindPeerReview" url="true"}')">{translate key="reviewer.article.ensuringBlindReview"}</a>
 			</span>
+			{/if}
 		{/if}
 	</td>
 </tr>
