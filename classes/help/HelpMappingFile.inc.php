@@ -30,7 +30,7 @@ class HelpMappingFile {
 		if (!isset($this->cache)) {
 			import('cache.CacheManager');
 			$cacheManager =& CacheManager::getManager();
-			$this->cache =& $cacheManager->getFileCache(
+			$this->cache = $cacheManager->getFileCache(
 				'helpmap', md5($this->filename),
 				array(&$this, '_cacheMiss')
 			);

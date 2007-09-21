@@ -27,6 +27,9 @@ class InstallHandler extends Handler {
 	 * Otherwise, display the index page for the selected journal.
 	 */
 	function index() {
+		// Make sure errors are displayed to the browser during install.
+		@ini_set('display_errors', E_ALL);
+
 		InstallHandler::validate();
 
 		if (($setLocale = Request::getUserVar('setLocale')) != null && Locale::isLocaleValid($setLocale)) {

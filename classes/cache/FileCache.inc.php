@@ -89,10 +89,14 @@ class FileCache extends GenericCache {
 
 	/**
 	 * Get the time at which the data was cached.
+	 * If the file does not exist or an error occurs, null is returned.
+	 * @return int
 	 */
 	function getCacheTime() {
-		if (!file_exists($this->filename)) return 0;
-		return filemtime($this->filename);
+		if (!file_exists($this->filename)) return null;
+		$result = filemtime($this->filename);
+		if ($result === false) return null;
+		return ((int) $result);
 	}
 
 	/**

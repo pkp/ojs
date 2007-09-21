@@ -55,7 +55,7 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 		if (!isset($caches[$key])) {
 			import('cache.CacheManager');
 			$cacheManager =& CacheManager::getManager();
-			$caches[$key] =& $cacheManager->getFileCache(
+			$caches[$key] = $cacheManager->getFileCache(
 				'xsltGalley', $key,
 				array(&$this, '_xsltCacheMiss')
 			);

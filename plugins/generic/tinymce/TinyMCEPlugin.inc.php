@@ -20,14 +20,18 @@ define('TINYMCE_INSTALL_PATH', 'lib/tinymce');
 define('TINYMCE_JS_PATH', TINYMCE_INSTALL_PATH . '/jscripts/tiny_mce');
 
 class TinyMCEPlugin extends GenericPlugin {
+	/**
+	 * Register the plugin, if enabled; note that this plugin
+	 * runs under both Journal and Site contexts.
+	 * @param $category string
+	 * @param $path string
+	 * @return boolean
+	 */
 	function register($category, $path) {
 		if (parent::register($category, $path)) {
 			$journal =& Request::getJournal();
-			$journalId = $journal?$journal->getJournalId():0;
-			$isEnabled = $this->getSetting($journalId, 'enabled');
-
 			$this->addLocaleData();
-			if ($this->isMCEInstalled() && $isEnabled) {
+			if ($this->isMCEInstalled() && $this->getEnabled()) {
 				HookRegistry::register('TemplateManager::display',array(&$this, 'callback'));
 			}
 			return true;
@@ -35,10 +39,46 @@ class TinyMCEPlugin extends GenericPlugin {
 		return false;
 	}
 
+	/**
+	 * Get the name of the settings file to be installed on new journal
+	 * creation.
+	 * @return string
+	 */
+	function getNewJournalPluginSettingsFile() {
+		return $this->getPluginPath() . '/settings.xml';
+	}
+
+	/**
+	 * Get the name of the settings file to be installed site-wide when
+	 * OJS is installed.
+	 * @return string
+	 */
+	function getInstallSitePluginSettingsFile() {
+		return $this->getPluginPath() . '/settings.xml';
+	}
+
+	/**
+	 * Given a $page and $op, return a list of field names for which
+	 * the plugin should be used.
+	 * @param $templateMgr object
+	 * @param $page string The requested page
+	 * @param $op string The requested operation
+	 * @return array
+	 */
 	function getEnableFields(&$templateMgr, $page, $op) {
 		$formLocale = $templateMgr->get_template_vars('formLocale');
 		$fields = array();
 		switch ("$page/$op") {
+			case 'admin/settings':
+			case 'admin/saveSettings':
+				$fields[] = 'intro';
+				$fields[] = 'about';
+				break;
+			case 'admin/createJournal':
+			case 'admin/updateJournal':
+			case 'admin/editJournal':
+				$fields[] = 'description';
+				break;
 			case 'author/submit':
 				switch (array_shift(Request::getRequestedArgs())) {
 					case 1: $fields[] = 'commentsToEditor'; break;
@@ -173,6 +213,12 @@ class TinyMCEPlugin extends GenericPlugin {
 		return $fields;
 	}
 
+	/**
+	 * Hook callback function for TemplateManager::display
+	 * @param $hookName string
+	 * @param $args array
+	 * @return boolean
+	 */
 	function callback($hookName, $args) {
 		$templateManager =& $args[0];
 
@@ -218,29 +264,53 @@ class TinyMCEPlugin extends GenericPlugin {
 		return false;
 	}
 
+	/**
+	 * Get the symbolic name of this plugin
+	 * @return string
+	 */
 	function getName() {
 		return 'TinyMCEPlugin';
 	}
 
+	/**
+	 * Get the display name of this plugin
+	 * @return string
+	 */
 	function getDisplayName() {
 		return Locale::translate('plugins.generic.tinymce.name');
 	}
 
+	/**
+	 * Get the description of this plugin
+	 * @return string
+	 */
 	function getDescription() {
 		if ($this->isMCEInstalled()) return Locale::translate('plugins.generic.tinymce.description');
 		return Locale::translate('plugins.generic.tinymce.descriptionDisabled', array('tinyMcePath' => TINYMCE_INSTALL_PATH));
 	}
 
+	/**
+	 * Check whether or not the TinyMCE library is installed
+	 * @return boolean
+	 */
 	function isMCEInstalled() {
 		return file_exists(TINYMCE_JS_PATH . '/tiny_mce.js');
 	}
 
+	/**
+	 * Check whether or not this plugin is enabled
+	 * @return boolean
+	 */
 	function getEnabled() {
 		$journal =& Request::getJournal();
 		$journalId = $journal?$journal->getJournalId():0;
 		return $this->getSetting($journalId, 'enabled');
 	}
 
+	/**
+	 * Get a list of available management verbs for this plugin
+	 * @return array
+	 */
 	function getManagementVerbs() {
 		$verbs = array();
 		if ($this->isMCEInstalled()) $verbs[] = array(
@@ -250,6 +320,12 @@ class TinyMCEPlugin extends GenericPlugin {
 		return $verbs;
 	}
 
+	/**
+	 * Execute a management verb on this plugin
+	 * @param $verb string
+	 * @param $args array
+	 * @return boolean
+	 */
 	function manage($verb, $args) {
 		$journal =& Request::getJournal();
 		$journalId = $journal?$journal->getJournalId():0;

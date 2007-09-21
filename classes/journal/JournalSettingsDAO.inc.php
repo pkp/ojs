@@ -24,7 +24,7 @@ class JournalSettingsDAO extends DAO {
 		if (!isset($settingCache[$journalId])) {
 			import('cache.CacheManager');
 			$cacheManager =& CacheManager::getManager();
-			$settingCache[$journalId] =& $cacheManager->getCache(
+			$settingCache[$journalId] = $cacheManager->getCache(
 				'journalSettings', $journalId,
 				array($this, '_cacheMiss')
 			);

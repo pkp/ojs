@@ -41,7 +41,7 @@ class LocaleFile {
 		if (!isset($this->cache)) {
 			import('cache.CacheManager');
 			$cacheManager =& CacheManager::getManager();
-			$this->cache =& $cacheManager->getCache(
+			$this->cache = $cacheManager->getCache(
 				'locale', md5($this->filename),
 				array(&$this, '_cacheMiss')
 			);
@@ -51,7 +51,7 @@ class LocaleFile {
 			// if there's no date available (ie cachedate is
 			// null), we have to assume it's up to date.
 			$cacheTime = $this->cache->getCacheTime();
-			if ($cacheTime !== null && $cacheTime < filemtime($this->filename)) {
+			if ($cacheTime === null || $cacheTime < filemtime($this->filename)) {
 				// This cache is out of date; flush it.
 				$this->cache->setEntireCache(LocaleFile::load($this->filename));
 			}

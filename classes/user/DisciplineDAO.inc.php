@@ -44,7 +44,7 @@ class DisciplineDAO extends DAO {
 		if (!isset($caches[$locale])) {
 			import('cache.CacheManager');
 			$cacheManager =& CacheManager::getManager();
-			$caches[$locale] =& $cacheManager->getFileCache(
+			$caches[$locale] = $cacheManager->getFileCache(
 				'discipline', $locale,
 				array(&$this, '_disciplineCacheMiss')
 			);

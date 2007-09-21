@@ -38,12 +38,6 @@ define('EMAIL_ERROR_DIFFERING_PARAMS',		'EMAIL_ERROR_DIFFERING_PARAMS');
 
 class Locale {
 	/**
-	 * Constructor.
-	 */
-	function Locale() {
-	}
-
-	/**
 	 * Get a list of locale files currently registered, either in all
 	 * locales (in an array for each locale), or for a specific locale.
 	 * @param $locale string Locale identifier (optional)
@@ -288,7 +282,7 @@ class Locale {
 		if (!isset($cache)) {
 			import('cache.CacheManager');
 			$cacheManager =& CacheManager::getManager();
-			$cache =& $cacheManager->getFileCache(
+			$cache = $cacheManager->getFileCache(
 				'locale', 'list',
 				array('Locale', '_allLocalesCacheMiss')
 			);
