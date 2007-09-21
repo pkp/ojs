@@ -36,8 +36,7 @@ class CounterPlugin extends GenericPlugin {
 
 			$this->import('LogEntryDAO');
 			$logEntryDao =& new LogEntryDAO();
-			DAORegistry::registerDAO('LogEntryDAO', &$logEntryDao);
-
+			DAORegistry::registerDAO('LogEntryDAO', $logEntryDao);
 		}
 		return $success;
 	}
