@@ -29,7 +29,7 @@
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="common.type"}</td>
-		<td class="value">{$suppFile->getType()|escape|default:"&mdash;"}</td>
+		<td class="value">{$suppFile->getType()|escape|default:$suppFile->getSuppFileTypeOther()|default:"&mdash;"}</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{translate key="author.submit.suppFile.briefDescription"}</td>
