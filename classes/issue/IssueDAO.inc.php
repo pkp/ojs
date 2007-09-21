@@ -253,7 +253,7 @@ class IssueDAO extends DAO {
 
 		$issue->setIssueId($this->getInsertIssueId());
 
-		$this->updateLocaleData($issue);
+		$this->updateLocaleFields($issue);
 
 		if ($this->customIssueOrderingExists($issue->getJournalId())) {
 			$this->resequenceCustomIssueOrders($issue->getJournalId());
