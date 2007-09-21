@@ -274,7 +274,8 @@ class Request {
 	function getRemoteDomain() {
 		static $remoteDomain;
 		if (!isset($remoteDomain)) {
-			$remoteDomain = getHostByAddr(Request::getRemoteAddr());
+			$remoteDomain = null;
+			$remoteDomain = @getHostByAddr(Request::getRemoteAddr());
 			HookRegistry::call('Request::getRemoteDomain', array(&$remoteDomain));
 		}
 		return $remoteDomain;
