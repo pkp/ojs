@@ -153,6 +153,8 @@
 	<message key="common.captchaField.description">Please enter the letters as they appear in the image above.</message>
 	<message key="common.captchaField.badCaptcha">The characters you entered did not match the characters in the image. Please check the characters and try again.</message>
 	<message key="common.suggest">Suggest</message>
+	<message key="common.payment">Payment</message>
+	<message key="common.payments">Payments</message>
 
 	<!-- Common Form Messages -->
 	<message key="form.errorsOccurred">Errors occurred processing this form</message>
@@ -816,6 +818,54 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="manager.plugins.action">Action:</message>
 	<message key="manager.plugins.disable">Disable</message>
 	<message key="manager.plugins.enable">Enable</message>
+	
+	<!-- Payment Management -->
+	<message key="manager.payments">Payments</message>
+	<message key="manager.payment.enable">Enable</message>
+	<message key="manager.payment.description">Description</message>
+	<message key="manager.payment.cost">Cost</message>	
+	<message key="manager.payment.action">Action</message>
+	<message key="manager.payment.details">Details</message>	
+	<message key="manager.payment.description">Description</message>
+	<message key="manager.payment.addPayment">Add Payment</message>	
+	<message key="manager.payment.currency">Currency</message>
+	<message key="manager.payment.currencymessage">OJS does not perform any currency conversions.  If accepting payments for subscriptions, you must ensure that the subscription currency matches the one specified here.</message>
+	<message key="manager.payment.settings">Settings</message>
+	<message key="manager.payment.settings.enablePayments">Click here to enable the Payments module.  You must configure payment settings by filling in the form below.  Note that a value of 0 indicates that this option is not enabled.</message>
+	<message key="manager.payment.settings.notices">Users will be required to be logged in in order to make payments.</message>
+	<message key="manager.payment.settings.text">Description of Payment Method</message>
+	<message key="manager.payment.settings.submissionFee">Article Submission Fee (ASF)</message>
+	<message key="manager.payment.settings.publicationFee">Article Publication Fee (APF)</message>
+	<message key="manager.payment.settings.fastTrackFee">Fast-Track Review Fee</message>
+	<message key="manager.payment.settings.membershipFee">One (1) year Individual Membership</message>
+	<message key="manager.payment.settings.payPerViewFee">Article Pay-Per-View Fee</message>
+	<message key="manager.payment.settings.onlypdf">Only Restrict Access to PDF version of articles</message>
+	<message key="manager.payment.settings.acceptSubscriptionPayments">Accept subscription fees (types, cost and duration specified in the Subscriptions section)</message>
+	<message key="manager.payment.settings.acceptDonationPayments">Accept donations (lets user specify amount)</message>
+
+	<message key="manager.payment.checksettings">Notes about Journal Settings</message>
+	<message key="manager.payment.checksettings.explanation1">In order for the payments module to restrict access to articles, the Open Access Policy of the journal must be set to Subscriptions Required in the Journal Setup (Step 4).</message>	
+	<message key="manager.payment.checksettings.enablesubscripitons">Subscriptions Required</message>	
+	<message key="manager.payment.checksettings.explanation2">Please not that if you wish to restrict access to an article, NEITHER the article nor the issue can be set to Open Access.  Be mindful of the delayed open access date.</message>	
+	<message key="manager.payment.checksettings.ok">OK</message>	
+	<message key="manager.payment.checksettings.notok">must be set to subscriptions required</message>		
+
+	<message key="manager.payment.noPayments">No Payments</message>
+
+	<message key="manager.payment.paymentId">Payment ID</message>
+	<message key="manager.payment.userName">Payment ID</message>
+	<message key="manager.payment.timestamp">Timestamp</message>
+	<message key="manager.payment.amount">Amount</message>
+	<message key="manager.payment.notFound">Not Found</message>
+	<message key="manager.payment.paymentMethods">Payment Methods</message>
+	<message key="manager.payment.paymentMethod">Payment Method</message>
+	<message key="manager.payment.paymentMethod.description">You may configure any of the following Payment Method Plugins from this screen.</message>
+		
+	<message key="manager.payment.paymentType">Payment Type</message>
+	<message key="manager.payment.timestamp">Timestamp</message>
+	<message key="manager.payment.editSubscription">Edit Subscription</message>
+
+	<message key="manager.payment.form.numeric">All costs must be positve numeric values (decimal points are allowed)</message>
 
 	<!-- General plugin information -->
 	<message key="plugins.categories.generic">Generic Plugins</message>
@@ -837,6 +887,9 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 
 	<message key="plugins.categories.themes">Theme Plugins</message>
 	<message key="plugins.categories.themes.description">Theme Plugins can be used to change the system's appearance.</message>
+
+	<message key="plugins.categories.paymethod">Pay Method Plugins</message>
+	<message key="plugins.categories.paymethod.description">Payment Method plugins implement support for various ways of processing payments online.</message>
 
 	<!-- Files Browser -->
 	<message key="manager.files.indexOfDir">Index of {$dir}</message>
@@ -1663,6 +1716,10 @@ Active is how many reviews are currently being considered or underway.]]></messa
 
 	<message key="editor.article.scheduleForPublication">Schedule for publication in</message>
 	<message key="editor.article.scheduleForPublication.toBeAssigned">To Be Assigned</message>
+
+	<message key="editor.article.payment.publicationFeeNotPaid">Publication Fee has not been paid for this article.  Once a fee is paid, you will be able to schedule the article for publication.</message>
+	<message key="editor.article.payment.payPublicationFee">Pay Publication Fee</message>
+	<message key="editor.article.payment.waivePublicationFee">Waive Publication Fee</message>
 	
 	<!-- Section Editor -->
 	<message key="sectionEditor.activeEditorialAssignments">Active Editorial Assignments</message>
@@ -2196,8 +2253,38 @@ current password.<br /><br />Enter your email address below to reset your passwo
 	<message key="help.relatedTopics">Related Topics</message>
 	<message key="help.search">Search Help</message>
 	<message key="help.searchFor">Search help topics for</message>
-	<message key="help.searchResultsFor">Results for</message>
+
+	<!-- Donations -->
+	<message key="donations.thankYou">Thank You</message>
+	<message key="donations.thankYouMessage">Thank you for making a contribution.  Your contribution is much appreciated.</message>
 	
+	<!-- Payments -->
+	<message key="payment.loginRequired">You must be logged in to make a payment.</message>
+	<message key="payment.loginRequired.forArticle"><![CDATA[This article is for subscribed users or requires that you make a payment.<br />You must be logged in order to make a payment.]]></message>
+	<message key="payment.loginRequired.forDonation">You must be logged in to make a donation.</message>
+	
+	<message key="payment.type.submission">Submission Fee</message>
+	<message key="payment.type.publication">Publication Fee</message>
+	<message key="payment.type.fastTrack">Fast Track Review Fee</message>
+	<message key="payment.type.membership">Individual Membership Fee</message>
+	<message key="payment.type.payPerView">Article Pay-Per-View Fee</message>
+	<message key="payment.type.subscription">Subscription Fee</message>
+	<message key="payment.type.donation">Donations</message>
+	
+	<message key="payment.donation.makeDonation">Make a donation</message>
+	
+	<message key="payment.fastTrack.payFastTrack">Pay to FastTrack</message>
+	<message key="payment.fastTrack.inFastTrack">in FastTrack</message>
+	<message key="payment.publication.payPublication">Pay to Publish</message>
+	<message key="payment.publication.publicationPaid">Publication Fee Paid</message>
+	
+	<message key="payment.membership.buyMembership">Buy Individual Membership</message>
+	<message key="payment.membership.renewMembership">Renew Individual Membership</message>	
+	<message key="payment.membership.ends">Ends</message>
+
+	<message key="payment.subscription.renew">Renew Subscription</message>
+	<message key="payment.subscription.expires">Expires</message>	
+
 	<!-- Installer -->
 	<message key="installer.ojsInstallation">OJS Installation</message>
 	<message key="installer.ojsUpgrade">OJS Upgrade</message>

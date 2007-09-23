@@ -98,6 +98,9 @@
 	{else}
 		{translate key="reader.fullTextSubscribersOnly"}
 	{/if}
+	{if $paymentButtonsTemplate }
+		{include file=$paymentButtonsTemplate orientation="vertical"}
+	{/if}	
 {/if}
 
 {if $comments}

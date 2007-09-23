@@ -738,6 +738,19 @@ class SectionEditorHandler extends Handler {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::scheduleForPublication($args);
 	}
+	
+	/**
+	 * Payments
+	 */
+	 function payPublicationFee($args) {
+		import('pages.sectionEditor.SubmissionEditHandler');
+		SubmissionEditHandler::payPublicationFee($args);
+	 }
+
+	 function waivePublicationFee($args) {
+		import('pages.sectionEditor.SubmissionEditHandler');
+		SubmissionEditHandler::waivePublicationFee($args);
+	 }
 }
 
 ?>

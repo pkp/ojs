@@ -32,7 +32,7 @@
 	{iterate from=submissions item=submission}
 	{assign var="layoutAssignment" value=$submission->getLayoutAssignment()}
 	{assign var="proofAssignment" value=$submission->getProofAssignment()}
-	<tr valign="top">
+	<tr valign="top" {if $submission->getFastTracked()} class="fastTracked"{/if}>
 		<td>{$submission->getArticleId()}</td>
 		<td>{$submission->getDateSubmitted()|date_format:$dateFormatTrunc}</td>
 		<td>{$submission->getSectionAbbrev()|escape}</td>

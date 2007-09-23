@@ -336,6 +336,10 @@ table.listing tr.heading td, table.listing td.heading, table.info td.heading {
 	padding: 0.75em 0.5em 1em 0.5em;
 }
 
+table.listing tr.fastTracked {
+	background-color: #ABA;
+}
+
 table.info td.heading {
 	padding-left: 0;
 }

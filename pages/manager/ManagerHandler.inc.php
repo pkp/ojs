@@ -594,6 +594,42 @@ class ManagerHandler extends Handler {
 		import('pages.manager.StatisticsHandler');
 		StatisticsHandler::reportGenerator($args);
 	}
+	
+	
+	//
+	// Payment
+	//
+	
+	function payments($args) {
+		import('pages.manager.ManagerPaymentHandler');
+		ManagerPaymentHandler::payments($args);	
+	}
+	
+	function savePaymentSettings($args) {
+		import('pages.manager.ManagerPaymentHandler');
+		ManagerPaymentHandler::savePaymentSettings($args);	
+	}	
+	
+	function payMethodSettings() {
+		import('pages.manager.ManagerPaymentHandler');
+		ManagerPaymentHandler::payMethodSettings();
+	}
+	
+	function savePayMethodSettings() {
+		import('pages.manager.ManagerPaymentHandler');
+		ManagerPaymentHandler::savePayMethodSettings();
+	}
+	
+	function viewPayments($args) {
+		import('pages.manager.ManagerPaymentHandler');
+		ManagerPaymentHandler::viewPayments($args);	
+	}
+
+	function viewPayment($args) {
+		import('pages.manager.ManagerPaymentHandler');
+		ManagerPaymentHandler::viewPayment($args);	
+	}	 
+
 }
 
 ?>

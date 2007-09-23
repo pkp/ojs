@@ -42,6 +42,27 @@
 				{elseif $status==STATUS_PUBLISHED}{translate key="submissions.published"}
 				{elseif $status==STATUS_DECLINED}{translate key="submissions.declined"}
 				{/if}
+
+				{** Payment related actions *}
+				{if $status==STATUS_QUEUED_UNASSIGNED || $status==STATUS_QUEUED_REVIEW}
+					{if $fastTrackEnabled}
+						<br />
+						{if $submission->getFastTracked()}
+							{translate key="payment.fastTrack.inFastTrack"}
+						{else}
+							<a href="{url op="payFastTrackFee" path="$articleId"}" class="action">{translate key="payment.fastTrack.payFastTrack"}</a>
+						{/if}
+					{/if}
+				{elseif $status==STATUS_QUEUED_EDITING}
+					{if $publicationEnabled}
+						<br />
+						{if $completedPaymentDAO->hasPaidPublication($submission->getJournalId(), $submission->getArticleId())}
+							{translate key="payment.publication.publicationPaid}
+						{else}
+						 	<a href="{url op="payPublicationFee" path="$articleId"}" class="action">{translate key="payment.publication.payPublication"}</a>
+						 {/if}
+				{/if}		
+		{/if}
 			</td>
 		{else}
 			<td><a href="{url op="submit" path=$progress articleId=$articleId}" class="action">{if $submission->getArticleTitle()}{$submission->getArticleTitle()|strip_unsafe_html|truncate:60:"..."}{else}{translate key="common.untitled"}{/if}</a></td>

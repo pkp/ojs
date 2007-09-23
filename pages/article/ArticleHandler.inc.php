@@ -153,6 +153,14 @@ class ArticleHandler extends Handler {
 			$templateMgr->assign('subscribedUser', IssueAction::subscribedUser($journal));
 			$templateMgr->assign('subscribedDomain', IssueAction::subscribedDomain($journal));
 
+			// This flag allows galley links to appear if payments are enabled and configured
+			import('payment.ojs.OJSPaymentManager');
+			$paymentManager =& OJSPaymentManager::getManager();
+			if ( $paymentManager->payPerViewEnabled() ) {
+				$templateMgr->assign('showGalleyLinks', true);
+			}
+
+
 			// Increment the published article's abstract views count
 			if (!Request::isBot()) {
 				$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
@@ -377,6 +385,40 @@ class ArticleHandler extends Handler {
 				$subscribedUser = IssueAction::subscribedUser($journal);
 
 				if (!(!$subscriptionRequired || $publishedArticle->getAccessStatus() || $subscribedUser)) {
+					// if payment information is enabled, 
+					import('payment.ojs.OJSPaymentManager');
+					$paymentManager =& OJSPaymentManager::getManager();
+					if ( $paymentManager->payPerViewEnabled() || $paymentManager->membershipEnabled() ) { 
+						/* if only pdf files are being restricted, then approve all non-pdf galleys
+						 * and continue checking if it is a pdf galley */
+						if ( $paymentManager->onlyPdfEnabled() ) {
+							$galleyDAO =& DAORegistry::getDAO('ArticleGalleyDAO');
+							$galley =& $galleyDAO->getGalley($galleyId, $articleId);
+							if ( $galley && !$galley->isPdfGalley() ) {
+								return array($journal, $issue, $publishedArticle);
+							} 
+						} 
+					
+						if (!Validation::isLoggedIn()) {
+							Validation::redirectLogin("payment.loginRequired.forArticle");
+						}	
+						$user = &Request::getUser();	
+						$userId = $user->getUserId();
+				
+						/* if the article has been paid for then forget about everything else
+						 * and just let them access the article */
+						$completedPaymentDAO =& DAORegistry::getDAO('OJSCompletedPaymentDAO');
+						if ( $completedPaymentDAO->hasPaidPerViewArticle($userId, $articleId) ) { 
+							return array($journal, $issue, $publishedArticle);
+						} else {					
+							$queuedPayment =& $paymentManager->createQueuedPayment($journalId, PAYMENT_TYPE_PAYPERVIEW, $user->getUserId(), $articleId, $journal->getSetting('payPerViewFee'));
+							$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);
+					
+							$paymentManager->displayPaymentForm($queuedPaymentId, $queuedPayment);
+							exit;	
+						}	
+					}
+								
 					if (!isset($galleyId) || $galleyId) {
 						Request::redirect(null, 'index');	
 					}

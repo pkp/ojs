@@ -455,6 +455,22 @@ class User extends DataObject {
 	}
 
 	/**
+	 * Get date the user membership expires 
+	 * @return datestamp (YYYY-MM-DD HH:MM:SS)
+	 */
+	function getDateEndMembership() {
+		return $this->getData('dateEndMembership');
+	}
+
+	/**
+	 * Set date the user membership expires
+	 * @param $dateLastEmail datestamp (YYYY-MM-DD HH:MM:SS)
+	 */
+	function setDateEndMembership($dateEndMembership) {
+		return $this->setData('dateEndMembership', $dateEndMembership);
+	}
+	
+	/**
 	 * Check if user must change their password on their next login.
 	 * @return boolean
 	 */
@@ -565,5 +581,4 @@ class User extends DataObject {
 		return $signature;
 	}
 }
-
 ?>

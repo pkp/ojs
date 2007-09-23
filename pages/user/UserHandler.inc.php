@@ -122,9 +122,35 @@ class UserHandler extends Handler {
 	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
 	 */
 	function setupTemplate($subclass = false) {
+		$templateMgr = &TemplateManager::getManager();
 		if ($subclass) {
-			$templateMgr = &TemplateManager::getManager();
 			$templateMgr->assign('pageHierarchy', array(array(Request::url(null, 'user'), 'navigation.user')));
+		}
+		$journal =& Request::getJournal();
+		$user =& Request::getUser();
+		if ( $journal && $user ) {
+			import('payment.ojs.OJSPaymentManager');
+			$paymentManager =& OJSPaymentManager::getManager();
+			$membershipEnabled = $paymentManager->membershipEnabled();
+			$templateMgr->assign('membershipEnabled', $membershipEnabled);
+			$subscriptionEnabled = $paymentManager->acceptSubscriptionPayments();
+			$templateMgr->assign('subscriptionEnabled', $subscriptionEnabled);
+
+			if ( $subscriptionEnabled ) {				
+				import('subscription.SubscriptionDAO');
+				$subscriptionDAO =& DAORegistry::getDAO('SubscriptionDAO');
+				$subscriptionId = $subscriptionDAO->getSubscriptionIdByUser($user->getUserId(), $journal->getJournalId());
+				$templateMgr->assign('userHasSubscription', $subscriptionId);
+				if ( $subscriptionId !== false ) {
+					$subscription =& $subscriptionDAO->getSubscription($subscriptionId);
+					$templateMgr->assign('subscriptionEndDate', $subscription->getDateEnd());	
+				} 
+			}
+
+			if ( $membershipEnabled ) {
+				$templateMgr->assign('dateEndMembership', $user->getDateEndMembership());
+			}				
+				
 		}
 	}
 
@@ -200,6 +226,52 @@ class UserHandler extends Handler {
 		}
 		Request::redirect(null, 'user');
 	}
+	
+	//
+	// Payments
+	//
+	function payRenewSubscription($args) {
+		UserHandler::validate();
+
+		import('payment.ojs.OJSPaymentManager');
+		$paymentManager =& OJSPaymentManager::getManager();
+		
+		import('subscription.SubscriptionDAO');
+		$subscriptionDAO =& DAORegistry::getDAO('SubscriptionDAO');
+		$subscriptionTypeDAO =& DAORegistry::getDAO('SubscriptionTypeDAO');
+
+		$journal =& Request::getJournal();
+		if ($journal) {		
+			$user =& Request::getUser();
+			$subscriptionId = $subscriptionDAO->getSubscriptionIdByUser($user->getUserId(), $journal->getJournalId());
+	
+			$subscriptionDAO =& DAORegistry::getDAO('SubscriptionDAO');
+			$subscription =& $subscriptionDAO->getSubscription($subscriptionId);
+			$subscriptionType =& $subscriptionTypeDAO->getSubscriptionType($subscription->getTypeId());
+	
+			$queuedPayment =& $paymentManager->createQueuedPayment($journal->getJournalId(), PAYMENT_TYPE_SUBSCRIPTION, $user->getUserId(), $subscriptionId, $subscriptionType->getCost(), $subscriptionType->getCurrencyCodeAlpha());
+			$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);
+		
+			$paymentManager->displayPaymentForm($queuedPaymentId, $queuedPayment);
+		}
+
+	}
+	
+	function payMembership($args) {
+		UserHandler::validate();
+
+		import('payment.ojs.OJSPaymentManager');
+		$paymentManager =& OJSPaymentManager::getManager();
+		
+		$journal =& Request::getJournal();
+		$user =& Request::getUser();
+
+		$queuedPayment =& $paymentManager->createQueuedPayment($journal->getJournalId(), PAYMENT_TYPE_MEMBERSHIP, $user->getUserId(), null,  $journal->getSetting('membershipFee'));
+		$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);
+	
+		$paymentManager->displayPaymentForm($queuedPaymentId, $queuedPayment);
+
+	}	
 }
 
 ?>

@@ -30,7 +30,7 @@
 
 		{if !$hasAccess || $hasAbstract}<a href="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)}" class="file">{if $hasAbstract}{translate key=article.abstract}{else}{translate key="article.details"}{/if}</a>{/if}
 
-		{if $hasAccess}
+		{if $hasAccess || $showGalleyLinks}
 		{foreach from=$article->getGalleys() item=galley name=galleyList}
 			<a href="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)|to_array:$galley->getGalleyId()}" class="file">{$galley->getGalleyLabel()|escape}</a>
 		{/foreach}

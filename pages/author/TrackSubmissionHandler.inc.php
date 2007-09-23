@@ -507,5 +507,48 @@ class TrackSubmissionHandler extends AuthorHandler {
 		}
 	}
 
+	//
+	// Payment Actions
+	//
+	
+	/**
+	 * Display a form to pay for Fast Tracking an article
+	 * @param $args array ($articleId)
+	 */
+	function payToFastTrack($args) {
+		$articleId = isset($args[0]) ? $args[0] : 0;
+		
+		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
+		
+		import('payment.ojs.OJSPaymentManager');
+		$paymentManager =& OJSPaymentManager::getManager();
+		$user =& Request::getUser();
+
+		$queuedPayment =& $paymentManager->createQueuedPayment($journal->getJournalId(), PAYMENT_TYPE_FASTTRACK, $user->getUserId(), $articleId, $journal->getSetting('fastTrackFee'));
+		$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);
+	
+		$paymentManager->displayPaymentForm($queuedPaymentId, $queuedPayment);
+	}
+
+	/**
+	 * Display a form to pay for Publishing an article
+	 * @param $args array ($articleId)
+	 */
+	function payPublicationFee($args) {
+		$articleId = isset($args[0]) ? $args[0] : 0;
+		
+		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
+		
+		import('payment.ojs.OJSPaymentManager');
+		$paymentManager =& OJSPaymentManager::getManager();
+		$user =& Request::getUser();
+
+		$queuedPayment =& $paymentManager->createQueuedPayment($journal->getJournalId(), PAYMENT_TYPE_PUBLICATION, $user->getUserId(), $articleId, $journal->getSetting('publicationFee'));
+		$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);
+	
+		$paymentManager->displayPaymentForm($queuedPaymentId, $queuedPayment);
+	}
+
+
 }
 ?>

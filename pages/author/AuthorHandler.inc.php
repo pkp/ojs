@@ -49,6 +49,18 @@ class AuthorHandler extends Handler {
 		}
 		$templateMgr->assign_by_ref('submissions', $submissions);
 
+		// assign payment 
+		import('payment.ojs.OJSPaymentManager');
+		$paymentManager =& OJSPaymentManager::getManager();
+
+		if ( $paymentManager->isConfigured() ) {		
+			$templateMgr->assign('fastTrackEnabled', $paymentManager->fastTrackEnabled());
+			$templateMgr->assign('publicationEnabled', $paymentManager->publicationEnabled());
+			
+			$completedPaymentDAO =& DAORegistry::getDAO('OJSCompletedPaymentDAO');
+			$templateMgr->assign_by_ref('completedPaymentDAO', $completedPaymentDAO);
+		} 				
+
 		import('issue.IssueAction');
 		$issueAction = &new IssueAction();
 		$templateMgr->register_function('print_issue_id', array($issueAction, 'smartyPrintIssueId'));
@@ -317,6 +329,19 @@ class AuthorHandler extends Handler {
 	function proofGalleyFile($args) {
 		import('pages.author.TrackSubmissionHandler');
 		TrackSubmissionHandler::proofGalleyFile($args);
+	}	
+	
+	// 
+	// Payment Actions
+	//
+	function payFastTrackFee($args) {
+		import('pages.author.TrackSubmissionHandler');
+		TrackSubmissionHandler::payToFastTrack($args);			
+	}
+
+	function payPublicationFee($args) {
+		import('pages.author.TrackSubmissionHandler');
+		TrackSubmissionHandler::payPublicationFee($args);			
 	}	
 
 }

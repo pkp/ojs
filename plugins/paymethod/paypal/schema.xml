@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE schema SYSTEM "../../../dbscripts/xml/dtd/xmlschema.dtd">
+
+<!--
+  * schema.xml
+  *
+  * Copyright (c) 2000-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * PayPal plugin schema in XML.
+  *
+  -->
+
+<schema version="0.2">
+
+	<!--
+	 *
+	 * TABLE paypal_transactions
+	 *
+	 -->
+	<table name="paypal_transactions">
+		<field name="txn_id" type="C2" size="17">
+			<KEY/>
+		</field>
+		<field name="txn_type" type="C2" size="20" />
+		<field name="payer_email" type="C2" size="127" />
+		<field name="receiver_email" type="C2" size="127" />
+		<field name="item_number" type="C2" size="127" />
+		<field name="payment_date" type="C2" size="127" />
+		<field name="payer_id" type="C2" size="13" />
+		<field name="receiver_id" type="C2" size="13" />
+
+		<descr>Paypal transactions</descr>
+	</table>
+</schema>

@@ -126,7 +126,7 @@ class DAORegistry {
 			case 'UserDAO': return 'user.UserDAO';
 			case 'UserSettingsDAO': return 'user.UserSettingsDAO';
 			case 'RTDAO': return 'rt.ojs.RTDAO';
-			case 'CurrencyDAO': return 'subscription.CurrencyDAO';
+			case 'CurrencyDAO': return 'currency.CurrencyDAO';
 			case 'SubscriptionDAO': return 'subscription.SubscriptionDAO';
 			case 'SubscriptionTypeDAO': return 'subscription.SubscriptionTypeDAO';
 			case 'AnnouncementDAO': return 'announcement.AnnouncementDAO';
@@ -138,6 +138,8 @@ class DAORegistry {
 			case 'PluginSettingsDAO': return 'plugins.PluginSettingsDAO';
 			case 'GroupDAO': return 'group.GroupDAO';
 			case 'GroupMembershipDAO': return 'group.GroupMembershipDAO';
+			case 'QueuedPaymentDAO': return 'payment.QueuedPaymentDAO';
+			case 'OJSCompletedPaymentDAO': return 'payment.ojs.OJSCompletedPaymentDAO';
 			default: fatalError('Unrecognized DAO ' . $name);
 		}
 		return null;

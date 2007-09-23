@@ -153,7 +153,8 @@ class PluginRegistry {
 			'gateways',
 			'blocks',
 			'citationFormats',
-			'themes'
+			'themes',
+			'paymethod'
 		);
 		HookRegistry::call('PluginRegistry::getCategories', array(&$categories));
 		return $categories;

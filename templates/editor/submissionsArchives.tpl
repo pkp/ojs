@@ -30,7 +30,8 @@
 	{assign var="articleId" value=$submission->getArticleId()}
 	{assign var="layoutAssignment" value=$submission->getLayoutAssignment()}
 	{assign var="proofAssignment" value=$submission->getProofAssignment()}
-	<tr valign="top">
+
+	<tr valign="top" {if $submission->getFastTracked()} class="fastTracked"{/if}>
 		<td>{$articleId}</td>
 		<td>{$submission->getDateSubmitted()|date_format:$dateFormatShort}</td>
 		<td>{$submission->getSectionAbbrev()|escape}</td>
@@ -65,4 +66,3 @@
 	</tr>
 {/if}
 </table>
-

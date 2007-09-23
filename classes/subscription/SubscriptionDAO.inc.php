@@ -75,7 +75,7 @@ class SubscriptionDAO extends DAO {
 			)
 		);
 
-		$returner = isset($result->fields[0]) ? $result->fields[0] : 0;	
+		$returner = isset($result->fields[0]) ? $result->fields[0] : false;	
 
 		$result->Close();
 		unset($result);
@@ -187,6 +187,27 @@ class SubscriptionDAO extends DAO {
 	}
 
 	/**
+	 * Renew a subscription by dateEnd + duration of subscription type
+	 * if the subscription is expired, renew to current date + duration  
+	 * @param $subscription Subscription
+	 * @return boolean
+	 */	
+	function renewSubscription(&$subscription){
+		$subscriptionTypeDAO =& DAORegistry::getDAO('SubscriptionTypeDAO');
+		$subscriptionType =& $subscriptionTypeDAO->getSubscriptionType($subscription->getTypeId());
+		
+		$duration = $subscriptionType->getDuration();
+		$dateEnd = strtotime($subscription->getDateEnd());
+		
+		// if the subscription is expired, extend it to today + duration of subscription
+		$time = time();
+		if ($dateEnd < $time ) $dateEnd = $time;
+
+		$subscription->setDateEnd($this->dateToDB(mktime(0, 0, 0, date("m", $dateEnd)+$duration, date("d", $dateEnd), date("Y", $dateEnd))));
+		$this->updateSubscription($subscription);
+	}
+
+	/**
 	 * Delete a subscription by subscription ID.
 	 * @param $subscriptionId int
 	 * @return boolean
@@ -282,18 +303,19 @@ class SubscriptionDAO extends DAO {
 	function isValidSubscription($domain, $IP, $userId, $journalId) {
 		$valid = false;
 
+		if ($userId != null) {
+			$valid = $this->isValidSubscriptionByUser($userId, $journalId);
+			if ($valid !== false) { return $valid; }
+		}
+
 		if ($domain != null) {
 			$valid = $this->isValidSubscriptionByDomain($domain, $journalId);
-			if ($valid) { return true; }
+			if ($valid !== false) { return $valid; }
 		}	
 
 		if ($IP != null) {
 			$valid = $this->isValidSubscriptionByIP($IP, $journalId);
-			if ($valid) { return true; }
-		}
-
-		if ($userId != null) {
-			return $this->isValidSubscriptionByUser($userId, $journalId);
+			if ($valid !== false) { return $valid; }
 		}
 
 		return false;
@@ -307,9 +329,11 @@ class SubscriptionDAO extends DAO {
 	 */
 	function isValidSubscriptionByUser($userId, $journalId) {
 		$result = &$this->retrieve(
-			'SELECT EXTRACT(DAY FROM date_end),
-					EXTRACT(MONTH FROM date_end),
-					EXTRACT(YEAR FROM date_end)
+			'SELECT 
+					subscriptions.subscription_id,
+					EXTRACT(DAY FROM date_end) AS day,
+					EXTRACT(MONTH FROM date_end) AS month,
+					EXTRACT(YEAR FROM date_end) as year
 			FROM subscriptions, subscription_types
 			WHERE subscriptions.user_id = ?
 			AND   subscriptions.journal_id = ?
@@ -323,19 +347,17 @@ class SubscriptionDAO extends DAO {
 		$returner = false;
 
 		if ($result->RecordCount() != 0) {
-			$dayEnd = $result->fields[0];
-			$monthEnd = $result->fields[1];
-			$yearEnd = $result->fields[2];
+			$row = $result->GetRowAssoc(false);
 
 			// Ensure subscription is still valid
 			$curDate = getdate();
 
-			if ( $curDate['year'] < $yearEnd ) {
-				$returner = true;
-			} elseif (( $curDate['year'] == $yearEnd ) && ( $curDate['mon'] < $monthEnd )) {
-				$returner = true;
-			} elseif ((( $curDate['year'] == $yearEnd ) && ( $curDate['mon'] == $monthEnd )) && ( $curDate['mday'] <= $dayEnd ) ) {
-				$returner = true;
+			if ( $curDate['year'] < $row['year'] ) {
+				$returner = $row['subscription_id'];
+			} elseif (( $curDate['year'] ==  $row['year'] ) && ( $curDate['mon'] < $row['month'] )) {
+				$returner = $row['subscription_id'];
+			} elseif ((( $curDate['year'] ==  $row['year'] ) && ( $curDate['mon'] == $row['month'] )) && ( $curDate['mday'] <= $row['day'] ) ) {
+				$returner = $row['subscription_id'];
 			}
 		}
 
@@ -353,10 +375,11 @@ class SubscriptionDAO extends DAO {
 	 */
 	function isValidSubscriptionByDomain($domain, $journalId) {
 		$result = &$this->retrieve(
-			'SELECT EXTRACT(DAY FROM date_end),
-					EXTRACT(MONTH FROM date_end),
-					EXTRACT(YEAR FROM date_end),
-					POSITION(UPPER(domain) IN UPPER(?)) 
+			'SELECT subscription_id, 
+					EXTRACT(DAY FROM date_end) AS day,
+					EXTRACT(MONTH FROM date_end) AS month,
+					EXTRACT(YEAR FROM date_end) AS year,
+					POSITION(UPPER(domain) IN UPPER(?)) AS pos 
 			FROM subscriptions, subscription_types
 			WHERE POSITION(UPPER(domain) IN UPPER(?)) != 0
 			AND   domain != \'\'
@@ -374,14 +397,11 @@ class SubscriptionDAO extends DAO {
 
 		if ($result->RecordCount() != 0) {
 			while (!$returner && !$result->EOF) {
-				$dayEnd = $result->fields[0];
-				$monthEnd = $result->fields[1];
-				$yearEnd = $result->fields[2];
-				$posMatch = $result->fields[3];
+				$row = $result->GetRowAssoc(false);
 
 				// Ensure we have a proper match (i.e. bar.com should not match foobar.com but should match foo.bar.com)
-				if ( $posMatch > 1) {
-					if ( substr($domain, $posMatch-2, 1) != '.') {
+				if ( $row['pos'] > 1) {
+					if ( substr($domain, $row['pos']-2, 1) != '.') {
 						$result->moveNext();
 						continue;
 					}
@@ -390,12 +410,12 @@ class SubscriptionDAO extends DAO {
 				// Ensure subscription is still valid
 				$curDate = getdate();
 
-				if ( $curDate['year'] < $yearEnd ) {
-					$returner = true;
-				} elseif (( $curDate['year'] == $yearEnd ) && ( $curDate['mon'] < $monthEnd )) {
-					$returner = true;
-				} elseif ((( $curDate['year'] == $yearEnd ) && ( $curDate['mon'] == $monthEnd )) && ( $curDate['mday'] <= $dayEnd ) ) {
-					$returner = true;
+				if ( $curDate['year'] < $curDate['year'] ) {
+					$returner = $row['subscription_id'];
+				} elseif (( $curDate['year'] == $curDate['year'] ) && ( $curDate['mon'] <  $row['month'] )) {
+					$returner = $row['subscription_id'];
+				} elseif ((( $curDate['year'] == $curDate['year'] ) && ( $curDate['mon'] ==  $row['month'] )) && ( $curDate['mday'] <=  $row['day'] ) ) {
+					$returner = $row['subscription_id'];
 				}
 
 				$result->moveNext();
@@ -417,10 +437,11 @@ class SubscriptionDAO extends DAO {
 	 */
 	function isValidSubscriptionByIP($IP, $journalId) {
 		$result = &$this->retrieve(
-			'SELECT EXTRACT(DAY FROM date_end),
-					EXTRACT(MONTH FROM date_end),
-					EXTRACT(YEAR FROM date_end),
-					ip_range 
+			'SELECT subscription_id,
+					EXTRACT(DAY FROM date_end) AS day,
+					EXTRACT(MONTH FROM date_end) AS month,
+					EXTRACT(YEAR FROM date_end) AS year,
+					ip_range
 			FROM subscriptions, subscription_types
 			WHERE ip_range IS NOT NULL   
 			AND   subscriptions.journal_id = ?
@@ -433,10 +454,11 @@ class SubscriptionDAO extends DAO {
 		$returner = false;
 
 		if ($result->RecordCount() != 0) {
+			$row = $result->GetRowAssoc(false);
 			$matchFound = false;
 
 			while (!$returner && !$result->EOF) {
-				$ipRange = $result->fields[3];
+				$ipRange = $row['ip_range'];
 
 				// Get all IPs and IP ranges
 				$ipRanges = explode(SUBSCRIPTION_IP_RANGE_SEPERATOR, $ipRange);
@@ -503,18 +525,14 @@ class SubscriptionDAO extends DAO {
 
 			// Found a match. Ensure subscription is still valid
 			if ($matchFound == true) {
-				$dayEnd = $result->fields[0];
-				$monthEnd = $result->fields[1];
-				$yearEnd = $result->fields[2];
-
 				$curDate = getdate();
 
-				if ( $curDate['year'] < $yearEnd ) {
-					$returner = true;
-				} elseif (( $curDate['year'] == $yearEnd ) && ( $curDate['mon'] < $monthEnd )) {
-					$returner = true;
-				} elseif ((( $curDate['year'] == $yearEnd ) && ( $curDate['mon'] == $monthEnd )) && ( $curDate['mday'] <= $dayEnd ) ) {
-					$returner = true;
+				if ( $curDate['year'] < $row['year'] ) {
+					$returner = $row['subscription_id'];
+				} elseif (( $curDate['year'] ==  $row['year'] ) && ( $curDate['mon'] < $row['month'] )) {
+					$returner = $row['subscription_id'];
+				} elseif ((( $curDate['year'] ==  $row['year'] ) && ( $curDate['mon'] == $row['month'] )) && ( $curDate['mday'] <= $row['day'] ) ) {
+					$returner = $row['subscription_id'];
 				}
 			}
 		}

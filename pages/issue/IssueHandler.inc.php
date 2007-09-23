@@ -82,6 +82,13 @@ class IssueHandler extends Handler {
 			$templateMgr->assign('subscriptionRequired', IssueAction::subscriptionRequired($issue));
 			$templateMgr->assign('subscribedUser', IssueAction::subscribedUser($journal));
 			$templateMgr->assign('subscribedDomain', IssueAction::subscribedDomain($journal));
+			
+			// This flag allows galley links to appear if payments are enabled and configured
+			import('payment.ojs.OJSPaymentManager');
+			$paymentManager =& OJSPaymentManager::getManager();
+			if ( $paymentManager->payPerViewEnabled() ) {
+				$templateMgr->assign('showGalleyLinks', true);
+			}			
 
 		} else {
 			$issueCrumbTitle = Locale::translate('current.noCurrentIssue');
@@ -171,6 +178,13 @@ class IssueHandler extends Handler {
 			$templateMgr->assign('subscriptionRequired', IssueAction::subscriptionRequired($issue));
 			$templateMgr->assign('subscribedUser', IssueAction::subscribedUser($journal));
 			$templateMgr->assign('subscribedDomain', IssueAction::subscribedDomain($journal));
+
+			// This flag allows galley links to appear if payments are enabled and configured
+			import('payment.ojs.OJSPaymentManager');
+			$paymentManager =& OJSPaymentManager::getManager();
+			if ( $paymentManager->payPerViewEnabled()) {
+				$templateMgr->assign('subscribedUser', true);
+			}
 
 		} else {
 			$issueCrumbTitle = Locale::translate('archive.issueUnavailable');

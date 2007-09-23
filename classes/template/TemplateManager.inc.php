@@ -128,6 +128,10 @@ class TemplateManager extends Smarty {
 				if ($journalStyleSheet) {
 					$this->addStyleSheet(Request::getBaseUrl() . '/' . PublicFileManager::getJournalFilesPath($journal->getJournalId()) . '/' . $journalStyleSheet['uploadName']);
 				}
+				
+				import('payment.ojs.OJSPaymentManager');
+				$paymentManager =& OJSPaymentManager::getManager();
+				$this->assign('journalPaymentsEnabled', $paymentManager->isConfigured());				
 
 				$this->assign('pageFooter', $journal->getLocalizedSetting('journalPageFooter'));	
 			} else {

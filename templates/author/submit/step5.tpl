@@ -15,6 +15,7 @@
 
 <form method="post" action="{url op="saveSubmit" path=$submitStep}">
 <input type="hidden" name="articleId" value="{$articleId}" />
+{include file="common/formErrors.tpl"}
 
 <h3>{translate key="author.submit.filesSummary"}</h3>
 <table class="listing" width="100%">
@@ -46,6 +47,9 @@
 {/foreach}
 </table>
 
+{if $paymentButtonsTemplate }
+	{include file=$paymentButtonsTemplate orientation="vertical"}
+{/if}
 <div class="separator"></div>
 
 <p><input type="submit" value="{translate key="author.submit.finishSubmission"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="confirmAction('{url page="author"}', '{translate|escape:"javascript" key="author.submit.cancelSubmission"}')" /></p>

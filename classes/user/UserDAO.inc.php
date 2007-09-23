@@ -149,6 +149,7 @@ class UserDAO extends DAO {
 		$user->setDateRegistered($this->datetimeFromDB($row['date_registered']));
 		$user->setDateValidated($this->datetimeFromDB($row['date_validated']));
 		$user->setDateLastLogin($this->datetimeFromDB($row['date_last_login']));
+		$user->setDateEndMembership($this->datetimeFromDB($row['date_end_membership']));
 		$user->setMustChangePassword($row['must_change_password']);
 		$user->setDisabled($row['disabled']);
 		$user->setDisabledReason($row['disabled_reason']);
@@ -172,10 +173,10 @@ class UserDAO extends DAO {
 		}
 		$this->update(
 			sprintf('INSERT INTO users
-				(username, password, salutation, first_name, middle_name, initials, last_name, gender, discipline, affiliation, email, url, phone, fax, mailing_address, country, locales, date_last_email, date_registered, date_validated, date_last_login, must_change_password, disabled, disabled_reason, auth_id)
+				(username, password, salutation, first_name, middle_name, initials, last_name, gender, discipline, affiliation, email, url, phone, fax, mailing_address, country, locales, date_last_email, date_registered, date_validated, date_last_login, date_end_membership, must_change_password, disabled, disabled_reason, auth_id)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, %s, %s, %s, %s, ?, ?, ?, ?)',
-				$this->datetimeToDB($user->getDateLastEmail()), $this->datetimeToDB($user->getDateRegistered()), $this->datetimeToDB($user->getDateValidated()), $this->datetimeToDB($user->getDateLastLogin())),
+				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, %s, %s, %s, %s, %s, ?, ?, ?, ?)',
+				$this->datetimeToDB($user->getDateLastEmail()), $this->datetimeToDB($user->getDateRegistered()), $this->datetimeToDB($user->getDateValidated()), $this->datetimeToDB($user->getDateLastLogin()), $this->datetimeToDB($user->getDateEndMembership())),
 			array(
 				$user->getUsername(),
 				$user->getPassword(),
@@ -250,12 +251,13 @@ class UserDAO extends DAO {
 					date_last_email = %s,
 					date_validated = %s,
 					date_last_login = %s,
+					date_end_membership = %s,		
 					must_change_password = ?,
 					disabled = ?,
 					disabled_reason = ?,
 					auth_id = ?
 				WHERE user_id = ?',
-				$this->datetimeToDB($user->getDateLastEmail()), $this->datetimeToDB($user->getDateValidated()), $this->datetimeToDB($user->getDateLastLogin())),
+				$this->datetimeToDB($user->getDateLastEmail()), $this->datetimeToDB($user->getDateValidated()), $this->datetimeToDB($user->getDateLastLogin()), $this->dateToDB($user->getDateEndMembership())),
 			array(
 				$user->getUsername(),
 				$user->getPassword(),
@@ -281,6 +283,22 @@ class UserDAO extends DAO {
 				$user->getUserId()
 			)
 		);
+	}
+
+	/**
+	 * Renew a membership to dateEnd + 1 year
+	 * if the was expired, renew to current date + 1 year  
+	 * @param $user User
+	 */	
+	function renewMembership(&$user){
+		$dateEnd = ($user->getDateEndMembership())?strtotime($user->getDateEndMembership()):0;
+		
+		// if the membership is expired, extend it to today + 1 year
+		$time = time();
+		if ($dateEnd < $time ) $dateEnd = $time;
+
+		$user->setDateEndMembership(mktime(23, 59, 59, date("m", $dateEnd), date("d", $dateEnd), date("Y", $dateEnd)+1));
+		$this->updateUser($user);
 	}
 
 	/**

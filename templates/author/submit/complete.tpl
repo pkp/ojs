@@ -16,6 +16,9 @@
 	{url|assign:"expediteUrl" op="expediteSubmission" articleId=$articleId}
 	{translate key="author.submit.expedite" expediteUrl=$expediteUrl}
 {/if}
+{if $paymentButtonsTemplate }
+	{include file=$paymentButtonsTemplate orientation="vertical"}
+{/if}
 
 <p>&#187; <a href="{url op="track"}">{translate key="author.track"}</a></p>
 

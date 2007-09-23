@@ -42,6 +42,35 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 	}
 
 	/**
+	 * Validate the form
+	 */
+	function validate() {
+		import('payment.ojs.OJSPaymentManager');
+		$paymentManager =& OJSPaymentManager::getManager();
+		if ( $paymentManager->submissionEnabled() ) {
+			if ( !$this->isValid() ) return false;
+	
+			$journal =& Request::getJournal();
+			$journalId = $journal->getJournalId();
+			$articleId = $this->articleId;							
+			$user =& Request::getUser();
+	
+			$completedPaymentDAO =& DAORegistry::getDAO('OJSCompletedPaymentDAO');
+			if ( $completedPaymentDAO->hasPaidSubmission ( $journalId, $articleId )  ) {
+				return true;		
+			} else {				
+				$queuedPayment =& $paymentManager->createQueuedPayment($journalId, PAYMENT_TYPE_SUBMISSION, $user->getUserId(), $articleId, $journal->getSetting('submissionFee'));
+				$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);
+		
+				$paymentManager->displayPaymentForm($queuedPaymentId, $queuedPayment);
+				exit;	
+			}
+		} else {
+			return parent::validate();
+		}	
+	}
+	
+	/**
 	 * Save changes to article.
 	 */
 	function execute() {

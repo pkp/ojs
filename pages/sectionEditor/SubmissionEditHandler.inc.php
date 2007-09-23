@@ -2015,6 +2015,40 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		Request::redirect(null, null, 'submissionEditing', array($articleId), null, 'scheduling');
 	}
 
+	/**
+	 * Payments
+	 */
+
+	function payPublicationFee($args) {
+		error_log('payPublicationFee');
+		$articleId = (int) array_shift($args);
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
+
+		import('payment.ojs.OJSPaymentManager');
+		$paymentManager =& OJSPaymentManager::getManager();
+		$user =& Request::getUser();
+
+		$queuedPayment =& $paymentManager->createQueuedPayment($journal->getJournalId(), PAYMENT_TYPE_PUBLICATION, $user->getUserId(), $articleId, $journal->getSetting('publicationFee'));
+		$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);
+	
+		$paymentManager->displayPaymentForm($queuedPaymentId, $queuedPayment);
+	}
+	
+	function waivePublicationFee($args) {
+		$articleId = (int) array_shift($args);
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
+		import('payment.ojs.OJSPaymentManager');
+		$paymentManager =& OJSPaymentManager::getManager();
+		$user =& Request::getUser();
+
+		$queuedPayment =& $paymentManager->createQueuedPayment($journal->getJournalId(), PAYMENT_TYPE_PUBLICATION, $user->getUserId(), $articleId, 0, '');
+		$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);
+		
+		// Since this is a waiver, fulfill the payment immediately
+		$paymentManager->fulfillQueuedPayment($queuedPayment, 'waiver');
+		Request::redirect(null, null, 'submissionEditing', array($articleId));
+	}
+
 	//
 	// Validation
 	//
@@ -2048,6 +2082,18 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		} else {
 			$templateMgr =& TemplateManager::getManager();
+			
+			// if payment information is enabled, 
+			import('payment.ojs.OJSPaymentManager');
+			$paymentManager =& OJSPaymentManager::getManager();
+			if ( $paymentManager->publicationEnabled() ) {
+				$completedPaymentDAO =& DAORegistry::getDAO('OJSCompletedPaymentDAO');
+				$templateMgr->assign('publicatonFeeEnabled',  true);
+				$templateMgr->assign('publicatonFeePaid',  $completedPaymentDAO->hasPaidPublication($sectionEditorSubmission->getJournalId(), $articleId) );	
+			} else {
+				$templateMgr->assign('publicatonFeeEnabled',  false);
+			}
+			
 			if (Validation::isEditor()) {
 				// Make canReview and canEdit available to templates.
 				// Since this user is an editor, both are available.
@@ -2100,5 +2146,6 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		return array(&$journal, &$sectionEditorSubmission);
 	}
+
 }
 ?>
