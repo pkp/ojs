@@ -40,6 +40,7 @@ class AdminSettingsHandler extends AdminHandler {
 	function saveSettings() {
 		parent::validate();
 		parent::setupTemplate(true);
+		$site =& Request::getSite();
 
 		import('admin.form.SiteSettingsForm');
 
@@ -47,14 +48,27 @@ class AdminSettingsHandler extends AdminHandler {
 		$settingsForm->readInputData();
 
 		if (Request::getUserVar('uploadSiteStyleSheet')) {
-			$site =& Request::getSite();
 			if (!$settingsForm->uploadSiteStyleSheet()) {
 				$settingsForm->addError('siteStyleSheet', Locale::translate('admin.settings.siteStyleSheetInvalid'));
 			}
 		} elseif (Request::getUserVar('deleteSiteStyleSheet')) {
-			$site =& Request::getSite();
 			$publicFileManager =& new PublicFileManager();
 			$publicFileManager->removeSiteFile($site->getSiteStyleFilename());
+		} elseif (Request::getUserVar('uploadPageHeaderTitleImage')) {
+			if (!$settingsForm->uploadPageHeaderTitleImage($settingsForm->getFormLocale())) {
+				$settingsForm->addError('pageHeaderTitleImage', Locale::translate('admin.settings.pageHeaderImageInvalid'));
+			}
+		} elseif (Request::getUserVar('deletePageHeaderTitleImage')) {
+			$publicFileManager =& new PublicFileManager();
+			$setting = $site->getData('pageHeaderTitleImage');
+			$formLocale = $settingsForm->getFormLocale();
+			if (isset($setting[$formLocale])) {
+				$publicFileManager->removeSiteFile($setting[$formLocale]['uploadName']);
+				unset($setting[$formLocale]);
+				$site->setData('pageHeaderTitleImage', $setting);
+				$siteDao =& DAORegistry::getDAO('SiteDAO');
+				$siteDao->updateSite($site);
+			}
 		} elseif ($settingsForm->validate()) {
 			$settingsForm->execute();
 

@@ -617,6 +617,7 @@
 	<message key="admin.settings.contactEmail">Email of principal contact</message>
 	<message key="admin.settings.minPasswordLength">Minimum password length</message>
 	<message key="admin.settings.siteStyleSheet">Site style sheet</message>
+	<message key="admin.settings.homeHeaderImageInvalid">Invalid site logo image format. Accepted formats are .gif, .jpg, or .png.</message>
 	<message key="admin.settings.siteStyleSheetInvalid">Invalid site stylesheet format. Accepted format is .css.</message>
 	<message key="admin.settings.form.contactNameRequired">The name of the principal contact is required.</message>
 	<message key="admin.settings.form.contactEmailRequired">The email address of the principal contact is required.</message>

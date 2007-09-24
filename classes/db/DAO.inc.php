@@ -371,7 +371,7 @@ class DAO {
 
 		while (!$result->EOF) {
 			$row = &$result->getRowAssoc(false);
-			$dataObject->setData($row['setting_name'], $row['setting_value'], $row['locale']);
+			$dataObject->setData($row['setting_name'], $this->convertFromDB($row['setting_value'], $row['setting_type']), $row['locale']);
 			unset($row);
 			$result->MoveNext();
 		}

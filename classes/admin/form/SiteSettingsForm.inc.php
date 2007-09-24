@@ -50,6 +50,7 @@ class SiteSettingsForm extends Form {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('redirectOptions', $journals);
 		$templateMgr->assign('originalStyleFilename', $site->getOriginalStyleFilename());
+		$templateMgr->assign('pageHeaderTitleImage', $site->getData('pageHeaderTitleImage'));
 		$templateMgr->assign('styleFilename', $site->getSiteStyleFilename());
 		$templateMgr->assign('publicFilesDir', Request::getBasePath() . '/' . $publicFileManager->getSiteFilesPath());
 		$templateMgr->assign('dateStyleFileUploaded', file_exists($siteStyleFilename)?filemtime($siteStyleFilename):null);
@@ -81,7 +82,7 @@ class SiteSettingsForm extends Form {
 	 */
 	function readInputData() {
 		$this->readUserVars(
-			array('title', 'intro', 'about', 'redirect', 'contactName', 'contactEmail', 'minPasswordLength')
+			array('pageHeaderTitleType', 'title', 'intro', 'about', 'redirect', 'contactName', 'contactEmail', 'minPasswordLength')
 		);
 	}
 
@@ -120,6 +121,36 @@ class SiteSettingsForm extends Form {
 			if($fileManager->uploadSiteFile('siteStyleSheet', $uploadName)) {
 				$siteDao =& DAORegistry::getDAO('SiteDAO');
 				$site->setOriginalStyleFilename($fileManager->getUploadedFileName('siteStyleSheet'));
+				$siteDao->updateSite($site);
+			}
+		}
+
+		return true;
+	}
+
+	/**
+	 * Uploads custom site logo.
+	 */
+	function uploadPageHeaderTitleImage($locale) {
+		import('file.PublicFileManager');
+		$fileManager = &new PublicFileManager();
+		$site =& Request::getSite();
+		if ($fileManager->uploadedFileExists('pageHeaderTitleImage')) {
+			$type = $fileManager->getUploadedFileType('pageHeaderTitleImage');
+			$extension = $fileManager->getImageExtension($type);
+			if (!$extension) return false;
+
+			$uploadName = 'pageHeaderTitleImage_' . $locale . $extension;
+			if($fileManager->uploadSiteFile('pageHeaderTitleImage', $uploadName)) {
+				$siteDao =& DAORegistry::getDAO('SiteDAO');
+				$setting = $site->getData('pageHeaderTitleImage');
+				$setting[$locale] = array(
+					'originalFilename' => $fileManager->getUploadedFileName('pageHeaderTitleImage'),
+					'uploadName' => $uploadName,
+					'dateUploaded' => Core::getCurrentDate()
+				);
+				$siteDao =& DAORegistry::getDAO('SiteDAO');
+				$site->setData('pageHeaderTitleImage', $setting);
 				$siteDao->updateSite($site);
 			}
 		}

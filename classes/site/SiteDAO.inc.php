@@ -91,7 +91,7 @@ class SiteDAO extends DAO {
 	}
 
 	function getLocaleFieldNames() {
-		return array('title', 'intro', 'about', 'contactName', 'contactEmail');
+		return array('pageHeaderTitleType', 'title', 'intro', 'about', 'contactName', 'contactEmail', 'pageHeaderTitleImage');
 	}
 
 	function updateLocaleFields(&$site) {
