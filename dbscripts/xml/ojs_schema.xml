@@ -381,6 +381,7 @@
 		</field>
 		<descr>User "mail notifications to my account" flags</descr>
 	</table>
+
 	<!--
 	  *
 	  * TABLE sections
@@ -1820,6 +1821,35 @@
 		</index>
 	</table>
 
+	<!--
+	 *
+	 * TABLE subscription_ip
+	 *
+	 -->
+	<table name="subscription_ip">
+		<field name="subscription_ip_id" type="I8">
+			<KEY/>
+			<AUTOINCREMENT/>
+		</field>
+		<field name="subscription_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="ip_start" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="ip_end" type="I8">
+		</field>
+		<descr>Journal subscription IPs and IP ranges.</descr>
+		<index name="subscription_id">
+			<col>subscription_id</col>
+		</index>
+		<index name="ip_start">
+			<col>ip_start</col>
+		</index>
+		<index name="ip_end">
+			<col>ip_start</col>
+		</index>
+	</table>
 
 	<!--
 	  *
@@ -1880,7 +1910,6 @@
 			<col>completed_payment_id</col>
 		</index>
 	</table>
-	
 
 	<!--
 	 *

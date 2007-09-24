@@ -89,6 +89,7 @@
 		<code function="installBlockPlugins" />
 		<code function="setGalleyLocales" />
 		<code function="clearDataCache" />
+		<code function="addSubscriptionIPRanges" />
 		<note file="release-notes/README-2.2.0" />
 	</upgrade>
 </install>

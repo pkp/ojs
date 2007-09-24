@@ -382,6 +382,22 @@ class Upgrade extends Installer {
 
 		return true;
 	}
+
+	/**
+	 * For 2.2 upgrade: Add IP ranges for all journal subscriptions.
+	 * @return boolean
+	 */
+	function addSubscriptionIPRanges() {
+		$subscriptionDao =& DAORegistry::getDAO('SubscriptionDAO');
+		$subscriptions =& $subscriptionDao->getSubscriptions();
+
+		while ($subscription =& $subscriptions->next()) {
+			$subscriptionDao->insertSubscriptionIPRange($subscription->getSubscriptionId(), $subscription->getIPRange());
+			unset($subscription);
+		}
+
+		return true;
+	}
 }
 
 ?>

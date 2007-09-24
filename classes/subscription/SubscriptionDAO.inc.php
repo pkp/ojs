@@ -36,6 +36,7 @@ class SubscriptionDAO extends DAO {
 
 		$result->Close();
 		unset($result);
+
 		return $returner;
 	}
 
@@ -49,7 +50,7 @@ class SubscriptionDAO extends DAO {
 			'SELECT journal_id FROM subscriptions WHERE subscription_id = ?', $subscriptionId
 		);
 
-		$returner = isset($result->fields[0]) ? $result->fields[0] : 0;	
+		$returner = isset($result->fields[0]) ? $result->fields[0] : false;	
 
 		$result->Close();
 		unset($result);
@@ -100,6 +101,7 @@ class SubscriptionDAO extends DAO {
 				$journalId
 			)
 		);
+
 		$returner = isset($result->fields[0]) && $result->fields[0] != 0 ? true : false;
 
 		$result->Close();
@@ -133,10 +135,10 @@ class SubscriptionDAO extends DAO {
 	/**
 	 * Insert a new Subscription.
 	 * @param $subscription Subscription
-	 * @return boolean 
+	 * @return int 
 	 */
 	function insertSubscription(&$subscription) {
-		$ret = $this->update(
+		$returner = $this->update(
 			sprintf('INSERT INTO subscriptions
 				(journal_id, user_id, type_id, date_start, date_end, membership, domain, ip_range)
 				VALUES
@@ -151,8 +153,15 @@ class SubscriptionDAO extends DAO {
 				$subscription->getIPRange()
 			)
 		);
-		$subscription->setSubscriptionId($this->getInsertSubscriptionId());
-		return $subscription->getSubscriptionId();
+
+		$subscriptionId = $this->getInsertSubscriptionId();
+		$subscription->setSubscriptionId($subscriptionId);
+
+		if ($returner) {
+			$this->insertSubscriptionIPRange($subscriptionId, $subscription->getIPRange());
+		}
+
+		return $subscriptionId;
 	}
 
 	/**
@@ -161,7 +170,9 @@ class SubscriptionDAO extends DAO {
 	 * @return boolean
 	 */
 	function updateSubscription(&$subscription) {
-		return $this->update(
+		$subscriptionId = $subscription->getSubscriptionId();
+
+		$returner = $this->update(
 			sprintf('UPDATE subscriptions
 				SET
 					journal_id = ?,
@@ -181,9 +192,16 @@ class SubscriptionDAO extends DAO {
 				$subscription->getMembership(),
 				$subscription->getDomain(),
 				$subscription->getIPRange(),
-				$subscription->getSubscriptionId()
+				$subscriptionId
 			)
 		);
+
+		if ($returner) {
+			$this->deleteSubscriptionIPRangeBySubscriptionId($subscriptionId);
+			$this->insertSubscriptionIPRange($subscriptionId, $subscription->getIPRange());
+		}
+
+		return $returner;
 	}
 
 	/**
@@ -213,6 +231,8 @@ class SubscriptionDAO extends DAO {
 	 * @return boolean
 	 */
 	function deleteSubscriptionById($subscriptionId) {
+		$this->deleteSubscriptionIPRangeBySubscriptionId($subscriptionId);
+
 		return $this->update(
 			'DELETE FROM subscriptions WHERE subscription_id = ?', $subscriptionId
 		);
@@ -221,8 +241,27 @@ class SubscriptionDAO extends DAO {
 	/**
 	 * Delete subscriptions by journal ID.
 	 * @param $journalId int
+	 * @return boolean
 	 */
 	function deleteSubscriptionsByJournal($journalId) {
+		$result = &$this->retrieve(
+			'SELECT subscription_id
+			 FROM   subscriptions
+			 WHERE  journal_id = ?',
+			 $journalId
+		);
+
+		if ($result->RecordCount() != 0) {
+			while (!$result->EOF) {
+				$subscriptionId = $result->fields[0];
+				$this->deleteSubscriptionIPRangeBySubscriptionId($subscriptionId);
+				$result->moveNext();
+			}
+		}
+
+		$result->Close();
+		unset($result);
+
 		return $this->update(
 			'DELETE FROM subscriptions WHERE journal_id = ?', $journalId
 		);
@@ -231,8 +270,27 @@ class SubscriptionDAO extends DAO {
 	/**
 	 * Delete subscriptions by user ID.
 	 * @param $userId int
+	 * @return boolean
 	 */
 	function deleteSubscriptionsByUserId($userId) {
+		$result = &$this->retrieve(
+			'SELECT subscription_id
+			 FROM   subscriptions
+			 WHERE  user_id = ?',
+			 $userId
+		);
+
+		if ($result->RecordCount() != 0) {
+			while (!$result->EOF) {
+				$subscriptionId = $result->fields[0];
+				$this->deleteSubscriptionIPRangeBySubscriptionId($subscriptionId);
+				$result->moveNext();
+			}
+		}
+
+		$result->Close();
+		unset($result);
+
 		return $this->update(
 			'DELETE FROM subscriptions WHERE user_id = ?', $userId
 		);
@@ -244,13 +302,45 @@ class SubscriptionDAO extends DAO {
 	 * @return boolean
 	 */
 	function deleteSubscriptionByTypeId($subscriptionTypeId) {
+		$result = &$this->retrieve(
+			'SELECT subscription_id
+			 FROM   subscriptions
+			 WHERE  type_id = ?',
+			 $subscriptionTypeId
+		);
+
+		if ($result->RecordCount() != 0) {
+			while (!$result->EOF) {
+				$subscriptionId = $result->fields[0];
+				$this->deleteSubscriptionIPRangeBySubscriptionId($subscriptionId);
+				$result->moveNext();
+			}
+		}
+
+		$result->Close();
+		unset($result);
+
 		return $this->update(
 			'DELETE FROM subscriptions WHERE type_id = ?', $subscriptionTypeId
-			);
+		);
 	}
 
 	/**
-	 * Retrieve an array of subscriptions matching a particular journal ID.
+	 * Retrieve all subscriptions.
+	 * @return object DAOResultFactory containing Subscriptions
+	 */
+	function &getSubscriptions($rangeInfo = null) {
+		$result = &$this->retrieveRange(
+			'SELECT * FROM subscriptions', false, $rangeInfo
+		);
+
+		$returner = &new DAOResultFactory($result, $this, '_returnSubscriptionFromRow');
+
+		return $returner;
+	}
+
+	/**
+	 * Retrieve subscriptions matching a particular journal ID.
 	 * @param $journalId int
 	 * @return object DAOResultFactory containing matching Subscriptions
 	 */
@@ -265,7 +355,7 @@ class SubscriptionDAO extends DAO {
 	}
 
 	/**
-	 * Retrieve an array of subscriptions matching a particular end date and journal ID.
+	 * Retrieve subscriptions matching a particular end date and journal ID.
 	 * @param $dateEnd date (YYYY-MM-DD)
 	 * @param $journalId int
 	 * @return object DAOResultFactory containing matching Subscriptions
@@ -293,12 +383,112 @@ class SubscriptionDAO extends DAO {
 	}
 
 	/**
+	 * Insert a new subscription IP range.
+	 * @param $subscriptionId int
+	 * @param $IP string
+	 * @return boolean 
+	 */
+	function insertSubscriptionIPRange($subscriptionId, $IP) {
+		if (empty($IP)) {
+			return true;
+		}
+
+		if (empty($subscriptionId)) {
+			return false;
+		}
+
+		// Get all IPs and IP ranges
+		$ipRanges = explode(SUBSCRIPTION_IP_RANGE_SEPERATOR, $IP);
+
+		$returner = true;
+		
+		while (list(, $curIPString) = each($ipRanges)) {
+			$ipStart = null;
+			$ipEnd = null;
+
+			// Parse and check single IP string
+			if (strpos($curIPString, SUBSCRIPTION_IP_RANGE_RANGE) === false) {
+
+				// Check for wildcards in IP
+				if (strpos($curIPString, SUBSCRIPTION_IP_RANGE_WILDCARD) === false) {
+
+					// Get non-CIDR IP
+					if (strpos($curIPString, '/') === false) {
+						$ipStart = sprintf("%u", ip2long(trim($curIPString)));
+
+					// Convert CIDR IP to IP range
+					} else {
+						list($curIPString, $cidrBits) = explode('/', trim($curIPString));
+
+						if ($cidrBits == 0) {
+							$cidrMask = 0;
+						} else {
+							$cidrMask = (0xffffffff << (32 - $cidrBits));
+						}
+
+						$ipStart = sprintf('%u', ip2long($curIPString) & $cidrMask);
+
+						if ($cidrBits != 32) {
+							$ipEnd = sprintf('%u', ip2long($curIPString) | (~$cidrMask & 0xffffffff));
+						}
+					}
+
+				// Convert wildcard IP to IP range
+				} else {
+					$ipStart = sprintf('%u', ip2long(str_replace(SUBSCRIPTION_IP_RANGE_WILDCARD, '0', trim($curIPString))));
+					$ipEnd = sprintf('%u', ip2long(str_replace(SUBSCRIPTION_IP_RANGE_WILDCARD, '255', trim($curIPString)))); 
+				}
+
+			// Convert wildcard IP range to IP range
+			} else {
+				list($ipStart, $ipEnd) = explode(SUBSCRIPTION_IP_RANGE_RANGE, $curIPString);
+
+				// Replace wildcards in start and end of range
+				$ipStart = sprintf('%u', ip2long(str_replace(SUBSCRIPTION_IP_RANGE_WILDCARD, '0', trim($ipStart))));
+				$ipEnd = sprintf('%u', ip2long(str_replace(SUBSCRIPTION_IP_RANGE_WILDCARD, '255', trim($ipEnd))));
+			}
+
+			// Insert IP or IP range
+			if (($ipStart != null) && ($returner)) {
+				$returner = $this->update(
+					sprintf('INSERT INTO subscription_ip
+						(subscription_id, ip_start, ip_end)
+						VALUES
+						(?, ?, ?)'),
+					array(
+						$subscriptionId,
+						$ipStart,
+						$ipEnd
+					) 
+				);
+			} else {
+				$returner = false;
+				break;
+			}
+
+		}
+
+		return $returner;
+	}
+
+	/**
+	 * Delete a subscription ip range by subscription ID.
+	 * @param $subscriptionId int
+	 * @return boolean
+	 */
+	function deleteSubscriptionIPRangeBySubscriptionId($subscriptionId) {
+		return $this->update(
+			'DELETE FROM subscription_ip WHERE subscription_id = ?', $subscriptionId
+		);
+	}
+
+	/**
 	 * Check whether there is a valid subscription for a given journal.
 	 * @param $domain string
 	 * @param $IP string
 	 * @param $userId int
 	 * @param $journalId int
-	 * @return boolean
+	 * @return int
 	 */
 	function isValidSubscription($domain, $IP, $userId, $journalId) {
 		$valid = false;
@@ -325,40 +515,29 @@ class SubscriptionDAO extends DAO {
 	 * Check whether user with ID has a valid subscription for a given journal.
 	 * @param $userId int
 	 * @param $journalId int
-	 * @return boolean
+	 * @return int 
 	 */
 	function isValidSubscriptionByUser($userId, $journalId) {
+		$checkDate = $this->dateToDB(Core::getCurrentDate());
+
 		$result = &$this->retrieve(
-			'SELECT 
-					subscriptions.subscription_id,
-					EXTRACT(DAY FROM date_end) AS day,
-					EXTRACT(MONTH FROM date_end) AS month,
-					EXTRACT(YEAR FROM date_end) as year
-			FROM subscriptions, subscription_types
-			WHERE subscriptions.user_id = ?
-			AND   subscriptions.journal_id = ?
-			AND   subscriptions.type_id = subscription_types.type_id
-			AND   (subscription_types.format = ' . SUBSCRIPTION_TYPE_FORMAT_ONLINE .' OR subscription_types.format = ' . SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE . ')',
+			sprintf('SELECT subscription_id
+				FROM subscriptions, subscription_types
+				WHERE subscriptions.user_id = ?
+				AND   subscriptions.journal_id = ?
+				AND   %s >= date_start AND %s <= date_end  
+				AND   subscriptions.type_id = subscription_types.type_id
+				AND   (subscription_types.format = ' . SUBSCRIPTION_TYPE_FORMAT_ONLINE .' OR subscription_types.format = ' . SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE . ')',
+				$checkDate, $checkDate),
 			array(
 				$userId,
 				$journalId
 			));
 
-		$returner = false;
-
 		if ($result->RecordCount() != 0) {
-			$row = $result->GetRowAssoc(false);
-
-			// Ensure subscription is still valid
-			$curDate = getdate();
-
-			if ( $curDate['year'] < $row['year'] ) {
-				$returner = $row['subscription_id'];
-			} elseif (( $curDate['year'] ==  $row['year'] ) && ( $curDate['mon'] < $row['month'] )) {
-				$returner = $row['subscription_id'];
-			} elseif ((( $curDate['year'] ==  $row['year'] ) && ( $curDate['mon'] == $row['month'] )) && ( $curDate['mday'] <= $row['day'] ) ) {
-				$returner = $row['subscription_id'];
-			}
+			$returner = $result->fields[0];
+		} else {
+			$returner = false;
 		}
 
 		$result->Close();
@@ -371,61 +550,37 @@ class SubscriptionDAO extends DAO {
 	 * Check whether there is a valid subscription with given domain for a journal.
 	 * @param $domain string
 	 * @param $journalId int
-	 * @return boolean
+	 * @return int
 	 */
 	function isValidSubscriptionByDomain($domain, $journalId) {
+		$checkDate = $this->dateToDB(Core::getCurrentDate());
+
 		$result = &$this->retrieve(
-			'SELECT subscription_id, 
-					EXTRACT(DAY FROM date_end) AS day,
-					EXTRACT(MONTH FROM date_end) AS month,
-					EXTRACT(YEAR FROM date_end) AS year,
-					POSITION(UPPER(domain) IN UPPER(?)) AS pos 
-			FROM subscriptions, subscription_types
-			WHERE POSITION(UPPER(domain) IN UPPER(?)) != 0
-			AND   domain != \'\'
-			AND   subscriptions.journal_id = ?
-			AND   subscriptions.type_id = subscription_types.type_id
-			AND   subscription_types.institutional = 1
-			AND   (subscription_types.format = ' . SUBSCRIPTION_TYPE_FORMAT_ONLINE .' OR subscription_types.format = ' . SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE . ')',
+			sprintf('SELECT subscription_id 
+				FROM subscriptions, subscription_types
+				WHERE POSITION(UPPER(LPAD(domain, LENGTH(domain)+1, \'.\')) IN UPPER(LPAD(?, LENGTH(?)+1, \'.\'))) != 0
+				AND   domain != \'\'
+				AND   subscriptions.journal_id = ?
+				AND   %s >= date_start AND %s <= date_end  
+				AND   subscriptions.type_id = subscription_types.type_id
+				AND   subscription_types.institutional = 1
+				AND   (subscription_types.format = ' . SUBSCRIPTION_TYPE_FORMAT_ONLINE .' OR subscription_types.format = ' . SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE . ')',
+				$checkDate, $checkDate),
 			array(
 				$domain,
 				$domain,
 				$journalId
 			));
 
-		$returner = false;
-
 		if ($result->RecordCount() != 0) {
-			while (!$returner && !$result->EOF) {
-				$row = $result->GetRowAssoc(false);
-
-				// Ensure we have a proper match (i.e. bar.com should not match foobar.com but should match foo.bar.com)
-				if ( $row['pos'] > 1) {
-					if ( substr($domain, $row['pos']-2, 1) != '.') {
-						$result->moveNext();
-						continue;
-					}
-				}
-
-				// Ensure subscription is still valid
-				$curDate = getdate();
-
-				if ( $curDate['year'] < $curDate['year'] ) {
-					$returner = $row['subscription_id'];
-				} elseif (( $curDate['year'] == $curDate['year'] ) && ( $curDate['mon'] <  $row['month'] )) {
-					$returner = $row['subscription_id'];
-				} elseif ((( $curDate['year'] == $curDate['year'] ) && ( $curDate['mon'] ==  $row['month'] )) && ( $curDate['mday'] <=  $row['day'] ) ) {
-					$returner = $row['subscription_id'];
-				}
-
-				$result->moveNext();
-			}
+			$returner = $result->fields[0];
+		} else {
+			$returner = false;
 		}
 
 		$result->Close();
 		unset($result);
 
-		// By default, not a valid subscription
 		return $returner;
 	}
 
@@ -433,108 +588,48 @@ class SubscriptionDAO extends DAO {
 	 * Check whether there is a valid subscription for the given IP for a journal.
 	 * @param $IP string
 	 * @param $journalId int
-	 * @return boolean
+	 * @return int
 	 */
 	function isValidSubscriptionByIP($IP, $journalId) {
-		$result = &$this->retrieve(
-			'SELECT subscription_id,
-					EXTRACT(DAY FROM date_end) AS day,
-					EXTRACT(MONTH FROM date_end) AS month,
-					EXTRACT(YEAR FROM date_end) AS year,
-					ip_range
-			FROM subscriptions, subscription_types
-			WHERE ip_range IS NOT NULL   
-			AND   subscriptions.journal_id = ?
-			AND   subscriptions.type_id = subscription_types.type_id
-			AND   subscription_types.institutional = 1
-			AND   (subscription_types.format = ' . SUBSCRIPTION_TYPE_FORMAT_ONLINE .' OR subscription_types.format = ' . SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE . ')',
-			$journalId
-			);
+		if (empty($IP) || empty($journalId)) {
+			return false;
+		}
 
-		$returner = false;
+		$IP = sprintf('%u', ip2long($IP));
+		$checkDate = $this->dateToDB(Core::getCurrentDate());
+
+		$result = &$this->retrieve(
+			sprintf('SELECT subscription_ip.subscription_id
+				FROM subscription_ip, subscriptions, subscription_types
+				WHERE ((ip_end IS NOT NULL
+				AND   ? >= ip_start AND ? <= ip_end
+				AND   subscription_ip.subscription_id = subscriptions.subscription_id   
+				AND   subscriptions.journal_id = ?
+				AND   %s >= date_start AND %s <= date_end  
+				AND   subscriptions.type_id = subscription_types.type_id
+				AND   subscription_types.institutional = 1
+				AND   (subscription_types.format = ' . SUBSCRIPTION_TYPE_FORMAT_ONLINE .' OR subscription_types.format = ' . SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE . '))
+				OR    (ip_end IS NULL
+				AND   ? = ip_start
+				AND   subscription_ip.subscription_id = subscriptions.subscription_id   
+				AND   subscriptions.journal_id = ?
+				AND   %s >= date_start AND %s <= date_end  
+				AND   subscriptions.type_id = subscription_types.type_id
+				AND   subscription_types.institutional = 1
+				AND   (subscription_types.format = ' . SUBSCRIPTION_TYPE_FORMAT_ONLINE .' OR subscription_types.format = ' . SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE . ')))',
+				$checkDate, $checkDate, $checkDate, $checkDate),
+			array (
+					$IP,
+					$IP,
+					$journalId,
+					$IP,
+					$journalId
+			));
 
 		if ($result->RecordCount() != 0) {
-			$row = $result->GetRowAssoc(false);
-			$matchFound = false;
-
-			while (!$returner && !$result->EOF) {
-				$ipRange = $row['ip_range'];
-
-				// Get all IPs and IP ranges
-				$ipRanges = explode(SUBSCRIPTION_IP_RANGE_SEPERATOR, $ipRange);
-
-				// Check each IP and IP range
-				while (list(, $curIPString) = each($ipRanges)) {
-					// Parse and check single IP string
-					if (strpos($curIPString, SUBSCRIPTION_IP_RANGE_RANGE) === false) {
-
-						// Check for wildcards in IP
-						if (strpos($curIPString, SUBSCRIPTION_IP_RANGE_WILDCARD) === false) {
-
-							// Check non-CIDR IP
-							if (strpos($curIPString, '/') === false) {
-								if (ip2long(trim($curIPString)) == ip2long($IP)) {
-									$matchFound = true;
-									break;
-								}
-							// Check CIDR IP
-							} else {
-								list($curIPString, $cidrMask) = explode('/', trim($curIPString));
-								$cidrMask = 0xffffffff << (32 - $cidrMask);
-
-								if ((ip2long($IP) & $cidrMask) == (ip2long($curIPString) & $cidrMask)) {
-									$matchFound = true;
-									break;
-								}
-							}
-
-						} else {
-							// Turn wildcard IP into IP range
-							$ipStart = sprintf('%u', ip2long(str_replace(SUBSCRIPTION_IP_RANGE_WILDCARD, '0', trim($curIPString))));
-							$ipEnd = sprintf('%u', ip2long(str_replace(SUBSCRIPTION_IP_RANGE_WILDCARD, '255', trim($curIPString)))); 
-							$IP = sprintf('%u', ip2long($IP)); 
-
-							if ($IP >= $ipStart && $IP <= $ipEnd) {
-								$matchFound = true;
-								break;
-							}
-						}
-					// Parse and check IP range string
-					} else {
-						list($ipStart, $ipEnd) = explode(SUBSCRIPTION_IP_RANGE_RANGE, $curIPString);
-
-						// Replace wildcards in start and end of range
-						$ipStart = sprintf('%u', ip2long(str_replace(SUBSCRIPTION_IP_RANGE_WILDCARD, '0', trim($ipStart))));
-						$ipEnd = sprintf('%u', ip2long(str_replace(SUBSCRIPTION_IP_RANGE_WILDCARD, '255', trim($ipEnd))));
-						$IP = sprintf('%u', ip2long($IP)); 
-
-						if ($IP >= $ipStart && $IP <= $ipEnd) {
-							$matchFound = true;
-							break;
-						}
-					}
-
-				}
-
-				if ($matchFound == true) {
-					break;
-				} else {
-					$result->moveNext();
-				}
-			}
-
-			// Found a match. Ensure subscription is still valid
-			if ($matchFound == true) {
-				$curDate = getdate();
-
-				if ( $curDate['year'] < $row['year'] ) {
-					$returner = $row['subscription_id'];
-				} elseif (( $curDate['year'] ==  $row['year'] ) && ( $curDate['mon'] < $row['month'] )) {
-					$returner = $row['subscription_id'];
-				} elseif ((( $curDate['year'] ==  $row['year'] ) && ( $curDate['mon'] == $row['month'] )) && ( $curDate['mday'] <= $row['day'] ) ) {
-					$returner = $row['subscription_id'];
-				}
-			}
+			$returner = $result->fields[0];
+		} else {
+			$returner = false;
 		}
 
 		$result->Close();
