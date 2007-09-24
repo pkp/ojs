@@ -96,6 +96,7 @@ class TinyMCEPlugin extends GenericPlugin {
 			case 'author/submitSuppFile': $fields[] = 'description'; break;
 			case 'editor/createIssue':
 			case 'editor/issueData':
+			case 'editor/editIssue':
 				$fields[] = 'description';
 				$fields[] = 'coverPageDescription';
 				break;

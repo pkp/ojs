@@ -20,8 +20,9 @@
 	</ul>
 	<br />
 	{if $coverPagePath}<div><a href="{$currentUrl}"><img src="{$coverPagePath|escape}" style="border: 0;" alt=""{if $width} width="{$width}"{/if}{if $height} height="{$height}"{/if}/></a></div>{/if}
-	<div>{$issue->getIssueCoverPageDescription()|escape|nl2br}</div>
+	<div>{$issue->getIssueCoverPageDescription()|strip_unsafe_html|nl2br}</div>
 {elseif $issue}
+	<div>{$issue->getIssueDescription()|strip_unsafe_html|nl2br}</div>
 	<h3>{translate key="issue.toc"}</h3>
 	{include file="issue/issue.tpl"}
 {else}

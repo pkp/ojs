@@ -74,7 +74,7 @@ class IssueForm extends Form {
 		}
 
 		if ($this->getData('showTitle')) {
-			$this->addCheck(new FormValidator($this, 'title', 'required', 'editor.issues.titleRequired'));
+			$this->addCheck(new FormValidatorLocale($this, 'title', 'required', 'editor.issues.titleRequired'));
 		}
 
 		// check if public issue ID has already used
