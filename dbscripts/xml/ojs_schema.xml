@@ -1840,14 +1840,14 @@
 		<field name="ip_end" type="I8">
 		</field>
 		<descr>Journal subscription IPs and IP ranges.</descr>
-		<index name="subscription_id">
+		<index name="subscription_ip_subscription_id">
 			<col>subscription_id</col>
 		</index>
-		<index name="ip_start">
+		<index name="subscription_ip_start">
 			<col>ip_start</col>
 		</index>
-		<index name="ip_end">
-			<col>ip_start</col>
+		<index name="subscription_ip_end">
+			<col>ip_end</col>
 		</index>
 	</table>
 
