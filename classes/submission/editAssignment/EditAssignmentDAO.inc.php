@@ -230,7 +230,21 @@ class EditAssignmentDAO extends DAO {
 		$statistics = Array();
 
 		// Get counts of completed submissions
-		$result = &$this->retrieve('SELECT ea.editor_id AS editor_id, COUNT(ea.article_id) AS complete FROM edit_assignments ea, articles a, published_articles pa WHERE ea.article_id=a.article_id AND pa.article_id = a.article_id AND a.journal_id=? GROUP BY ea.editor_id', $journalId);
+		$result =& $this->retrieve(
+			'SELECT	ea.editor_id,
+				COUNT(ea.article_id) AS complete
+			FROM	edit_assignments ea,
+				articles a
+			WHERE	ea.article_id = a.article_id AND
+				a.journal_id = ? AND (
+					a.status = ' . STATUS_ARCHIVED . ' OR
+					a.status = ' . STATUS_PUBLISHED . ' OR
+					a.status = ' . STATUS_DECLINED . '
+				)
+			GROUP BY ea.editor_id',
+			$journalId
+		);
+
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
 			if (!isset($statistics[$row['editor_id']])) $statistics[$row['editor_id']] = array();
@@ -241,7 +255,18 @@ class EditAssignmentDAO extends DAO {
 		unset($result);
 
 		// Get counts of incomplete submissions
-		$result = &$this->retrieve('SELECT ea.editor_id AS editor_id, COUNT(ea.article_id) AS incomplete FROM edit_assignments ea, articles a LEFT JOIN published_articles pa ON (pa.article_id = a.article_id) WHERE pa.article_id IS NULL AND ea.article_id=a.article_id AND a.journal_id=? GROUP BY ea.editor_id', $journalId);
+		$result =& $this->retrieve(
+			'SELECT	ea.editor_id,
+				COUNT(ea.article_id) AS incomplete
+			FROM	edit_assignments ea,
+				articles a
+			WHERE	ea.article_id = a.article_id AND
+				a.journal_id = ? AND
+				a.status = ' . STATUS_QUEUED . '
+			GROUP BY ea.editor_id',
+			$journalId
+		);
+
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
 			if (!isset($statistics[$row['editor_id']])) $statistics[$row['editor_id']] = array();
