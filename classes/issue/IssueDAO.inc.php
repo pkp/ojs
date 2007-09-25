@@ -367,7 +367,7 @@ class IssueDAO extends DAO {
 		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
 		$publishedArticleDao->deletePublishedArticlesByIssueId($issueId);
 
-		$this->update('DELETE FROM issue_settingss WHERE issue_id = ?', $issueId);
+		$this->update('DELETE FROM issue_settings WHERE issue_id = ?', $issueId);
 		$this->update('DELETE FROM issues WHERE issue_id = ?', $issueId);
 		$this->resequenceCustomIssueOrders($issue->getJournalId());
 	}
