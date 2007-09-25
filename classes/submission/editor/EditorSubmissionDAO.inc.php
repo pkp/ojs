@@ -319,8 +319,9 @@ class EditorSubmissionDAO extends DAO {
 
 		// "Active" submissions have a status of STATUS_QUEUED and
 		// the layout editor has not yet been acknowledged.
-		if ($status) $sql .= ' AND a.status = ' . STATUS_QUEUED;
-		else $sql .= ' AND a.status <> ' . STATUS_QUEUED;
+		// A status value of null doesn't discriminate.
+		if ($status === true) $sql .= ' AND a.status = ' . STATUS_QUEUED;
+		elseif ($status === false) $sql .= ' AND a.status <> ' . STATUS_QUEUED;
 
 		if ($sectionId) {
 			$searchSql .= ' AND a.section_id = ?';

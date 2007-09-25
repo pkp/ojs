@@ -422,7 +422,13 @@ class IssueDAO extends DAO {
 	 */
 	function &getIssueByArticleId($articleId, $journalId = null) {
 		$params = array($articleId);
-		$sql = 'SELECT i.* FROM issues i, published_articles pa, articles a WHERE i.issue_id = pa.issue_id AND pa.article_id = ? AND pa.article_id = a.article_id';
+		$sql = 'SELECT	i.*
+			FROM	issues i,
+				published_articles pa,
+				articles a
+			WHERE	i.issue_id = pa.issue_id AND
+				pa.article_id = ? AND
+				pa.article_id = a.article_id';
 		if ($journalId !== null) {
 			$sql .= ' AND i.journal_id = ? AND a.journal_id = i.journal_id';
 			$params[] = $journalId;

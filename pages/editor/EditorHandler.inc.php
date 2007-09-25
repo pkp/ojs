@@ -34,7 +34,64 @@ class EditorHandler extends SectionEditorHandler {
 
 		$templateMgr = &TemplateManager::getManager();
 		$journal = &Request::getJournal();
+
 		$editorSubmissionDao = &DAORegistry::getDAO('EditorSubmissionDAO');
+		$sectionDao = &DAORegistry::getDAO('SectionDAO');
+
+		$sections = &$sectionDao->getSectionTitles($journal->getJournalId());
+		$templateMgr->assign('sectionOptions', array(0 => Locale::Translate('editor.allSections')) + $sections);
+		$templateMgr->assign('fieldOptions', EditorHandler::getSearchFieldOptions());
+		$templateMgr->assign('dateFieldOptions', EditorHandler::getDateFieldOptions());
+
+		// Bring in the print_issue_id function (FIXME?)
+		import('issue.IssueAction');
+		$issueAction = &new IssueAction();
+		$templateMgr->register_function('print_issue_id', array($issueAction, 'smartyPrintIssueId'));
+
+		// If a search was performed, get the necessary info.
+		if (array_shift($args) == 'search') {
+			$rangeInfo = Handler::getRangeInfo('submissions');
+
+			// Get the user's search conditions, if any
+			$searchField = Request::getUserVar('searchField');
+			$dateSearchField = Request::getUserVar('dateSearchField');
+			$searchMatch = Request::getUserVar('searchMatch');
+			$search = Request::getUserVar('search');
+
+			$fromDate = Request::getUserDateVar('dateFrom', 1, 1);
+			if ($fromDate !== null) $fromDate = date('Y-m-d H:i:s', $fromDate);
+			$toDate = Request::getUserDateVar('dateTo', 32, 12, null, 23, 59, 59);
+			if ($toDate !== null) $toDate = date('Y-m-d H:i:s', $toDate);
+			$rawSubmissions = &$editorSubmissionDao->getUnfilteredEditorSubmissions(
+				$journal->getJournalId(),
+				Request::getUserVar('section'),
+				$searchField,
+				$searchMatch,
+				$search,
+				$dateSearchField,
+				$fromDate,
+				$toDate,
+				null,
+				$rangeInfo
+			);
+			$submissions = &new DAOResultFactory($rawSubmissions, $editorSubmissionDao, '_returnEditorSubmissionFromRow');
+
+
+			$templateMgr->assign_by_ref('submissions', $submissions);
+			$templateMgr->assign('section', Request::getUserVar('section'));
+
+			// Set search parameters
+			foreach (EditorHandler::getSearchFormDuplicateParameters() as $param)
+				$templateMgr->assign($param, Request::getUserVar($param));
+
+			$templateMgr->assign('dateFrom', $fromDate);
+			$templateMgr->assign('dateTo', $toDate);
+			$templateMgr->assign('displayResults', true);
+		}
+
+		$rangeInfo = Handler::getRangeInfo('submissions');
+
+
 		$submissionsCount = &$editorSubmissionDao->getEditorSubmissionsCount($journal->getJournalId());
 		$templateMgr->assign('submissionsCount', $submissionsCount);
 		$templateMgr->assign('helpTopicId', 'editorial.editorsRole');
@@ -108,32 +165,13 @@ class EditorHandler extends SectionEditorHandler {
 		$templateMgr->assign('section', Request::getUserVar('section'));
 
 		// Set search parameters
-		$duplicateParameters = array(
-			'searchField', 'searchMatch', 'search',
-			'dateFromMonth', 'dateFromDay', 'dateFromYear',
-			'dateToMonth', 'dateToDay', 'dateToYear',
-			'dateSearchField'
-		);
-		foreach ($duplicateParameters as $param)
+		foreach (EditorHandler::getSearchFormDuplicateParameters() as $param)
 			$templateMgr->assign($param, Request::getUserVar($param));
 
 		$templateMgr->assign('dateFrom', $fromDate);
 		$templateMgr->assign('dateTo', $toDate);
-		$templateMgr->assign('fieldOptions', Array(
-			SUBMISSION_FIELD_TITLE => 'article.title',
-			SUBMISSION_FIELD_AUTHOR => 'user.role.author',
-			SUBMISSION_FIELD_EDITOR => 'user.role.editor',
-			SUBMISSION_FIELD_REVIEWER => 'user.role.reviewer',
-			SUBMISSION_FIELD_COPYEDITOR => 'user.role.copyeditor',
-			SUBMISSION_FIELD_LAYOUTEDITOR => 'user.role.layoutEditor',
-			SUBMISSION_FIELD_PROOFREADER => 'user.role.proofreader'
-		));
-		$templateMgr->assign('dateFieldOptions', Array(
-			SUBMISSION_FIELD_DATE_SUBMITTED => 'submissions.submitted',
-			SUBMISSION_FIELD_DATE_COPYEDIT_COMPLETE => 'submissions.copyeditComplete',
-			SUBMISSION_FIELD_DATE_LAYOUT_COMPLETE => 'submissions.layoutComplete',
-			SUBMISSION_FIELD_DATE_PROOFREADING_COMPLETE => 'submissions.proofreadingComplete'
-		));
+		$templateMgr->assign('fieldOptions', EditorHandler::getSearchFieldOptions());
+		$templateMgr->assign('dateFieldOptions', EditorHandler::getDateFieldOptions());
 
 		import('issue.IssueAction');
 		$issueAction = &new IssueAction();
@@ -145,6 +183,50 @@ class EditorHandler extends SectionEditorHandler {
 
 	function updateSubmissionArchive() {
 		EditorHandler::submissionArchive();
+	}
+
+	/**
+	 * Get the list of parameter names that should be duplicated when
+	 * displaying the search form (i.e. made available to the template
+	 * based on supplied user data).
+	 * @return array
+	 */
+	function getSearchFormDuplicateParameters() {
+		return array(
+			'searchField', 'searchMatch', 'search',
+			'dateFromMonth', 'dateFromDay', 'dateFromYear',
+			'dateToMonth', 'dateToDay', 'dateToYear',
+			'dateSearchField'
+		);
+	}
+
+	/**
+	 * Get the list of fields that can be searched by contents.
+	 * @return array
+	 */
+	function getSearchFieldOptions() {
+		return array(
+			SUBMISSION_FIELD_TITLE => 'article.title',
+			SUBMISSION_FIELD_AUTHOR => 'user.role.author',
+			SUBMISSION_FIELD_EDITOR => 'user.role.editor',
+			SUBMISSION_FIELD_REVIEWER => 'user.role.reviewer',
+			SUBMISSION_FIELD_COPYEDITOR => 'user.role.copyeditor',
+			SUBMISSION_FIELD_LAYOUTEDITOR => 'user.role.layoutEditor',
+			SUBMISSION_FIELD_PROOFREADER => 'user.role.proofreader'
+		);
+	}
+
+	/**
+	 * Get the list of date fields that can be searched.
+	 * @return array
+	 */
+	function getDateFieldOptions() {
+		return array(
+			SUBMISSION_FIELD_DATE_SUBMITTED => 'submissions.submitted',
+			SUBMISSION_FIELD_DATE_COPYEDIT_COMPLETE => 'submissions.copyeditComplete',
+			SUBMISSION_FIELD_DATE_LAYOUT_COMPLETE => 'submissions.layoutComplete',
+			SUBMISSION_FIELD_DATE_PROOFREADING_COMPLETE => 'submissions.proofreadingComplete'
+		);
 	}
 
 	/**
