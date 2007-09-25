@@ -48,7 +48,7 @@ class PubMedExportPlugin extends ImportExportPlugin {
 
 	function display(&$args) {
 		$templateMgr = &TemplateManager::getManager();
-		parent::display();
+		parent::display($args);
 
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
 

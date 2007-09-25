@@ -56,7 +56,7 @@ class SampleImportExportPlugin extends ImportExportPlugin {
 	}
 
 	function display(&$args) {
-		parent::display();
+		parent::display($args);
 		switch (array_shift($args)) {
 			case 'exportIssue':
 				// The actual issue export code would go here
