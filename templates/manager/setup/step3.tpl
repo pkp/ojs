@@ -68,11 +68,28 @@
 
 <h3>3.2 {translate key="manager.setup.authorCopyrightNotice"}</h3>
 
-<p>{translate key="manager.setup.authorCopyrightNoticeDescription"}</p>
+{url|assign:"sampleCopyrightWordingUrl" page="information" op="sampleCopyrightWording"}
+<p>{translate key="manager.setup.authorCopyrightNoticeDescription" sampleCopyrightWordingUrl=$sampleCopyrightWordingUrl}</p>
 
 <p><textarea name="copyrightNotice[{$formLocale|escape}]" id="copyrightNotice" rows="12" cols="60" class="textArea">{$copyrightNotice[$formLocale]|escape}</textarea></p>
 
-<p><input type="checkbox" name="copyrightNoticeAgree" id="copyrightNoticeAgree" value="1"{if $copyrightNoticeAgree} checked="checked"{/if} /> <label for="copyrightNoticeAgree">{translate key="manager.setup.authorCopyrightNoticeAgree"}</label></p>
+<table width="100%" class="data">
+	<tr valign="top">
+		<td width="5%" class="label">
+			<input type="checkbox" name="copyrightNoticeAgree" id="copyrightNoticeAgree" value="1"{if $copyrightNoticeAgree} checked="checked"{/if} />
+		</td>
+		<td width="95%" class="value"><label for="copyrightNoticeAgree">{translate key="manager.setup.authorCopyrightNoticeAgree"}</label>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td class="label">
+			<input type="checkbox" name="includeCreativeCommons" id="includeCreativeCommons" value="1"{if $includeCreativeCommons} checked="checked"{/if} />
+		</td>
+		<td class="value">
+			<label for="includeCreativeCommons">{translate key="manager.setup.includeCreativeCommons"}</label>
+		</td>
+	</tr>
+</table>
 
 <div class="separator"></div>
 
@@ -80,10 +97,24 @@
 
 <p>{translate key="manager.setup.competingInterests.description"}</p>
 
-<p>
-	<input type="checkbox" name="requireAuthorCompetingInterests" id="requireAuthorCompetingInterests" value="1"{if $requireAuthorCompetingInterests} checked="checked"{/if} /> <label for="requireAuthorCompetingInterests">{translate key="manager.setup.competingInterests.requireAuthors"}</label><br />
-	<input type="checkbox" name="requireReviewerCompetingInterests" id="requireReviewerCompetingInterests" value="1"{if $requireReviewerCompetingInterests} checked="checked"{/if} /> <label for="requireReviewerCompetingInterests">{translate key="manager.setup.competingInterests.requireReviewers"}</label><br />
-</p>
+<table width="100%" class="data">
+	<tr valign="top">
+		<td class="label" width="5%">
+			<input type="checkbox" name="requireAuthorCompetingInterests" id="requireAuthorCompetingInterests" value="1"{if $requireAuthorCompetingInterests} checked="checked"{/if} />
+		</td>
+		<td class="value" width="95%">
+			<label for="requireAuthorCompetingInterests">{translate key="manager.setup.competingInterests.requireAuthors"}</label>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td class="label">
+			<input type="checkbox" name="requireReviewerCompetingInterests" id="requireReviewerCompetingInterests" value="1"{if $requireReviewerCompetingInterests} checked="checked"{/if} />
+		</td>
+		<td class="value">
+			<label for="requireReviewerCompetingInterests">{translate key="manager.setup.competingInterests.requireReviewers"}</label>
+		</td>
+	</tr>
+</table>
 
 <h4>{translate key="manager.setup.competingInterests.guidelines"}</h4>
 <p><textarea name="competingInterestGuidelines[{$formLocale|escape}]" id="competingInterestGuidelines" rows="12" cols="60" class="textArea">{$competingInterestGuidelines[$formLocale]|escape}</textarea></p>
@@ -258,7 +289,7 @@
 	</tr>
 	<tr valign="top">
 		<td class="label"><input {if !$submissionAckEnabled}disabled="disabled" {/if}type="checkbox" name="copySubmissionAckSpecified" id="copySubmissionAckSpecified" value="true" {if $copySubmissionAckSpecified}checked="checked"{/if}/></td>
-		<td class="value">{fieldLabel name="copySubmissionAckAddress" key="manager.setup.notifications.copySpecifiedAddress"}&nbsp;&nbsp;<input {if !$submissionAckEnabled}disabled="disabled" {/if}type="text" class="textField" name="copySubmissionAckAddress" value="{$copySubmissionAckAddress|escape}"/></td>
+		<td class="value">{fieldLabel name="copySubmissionAckAddress" key="manager.setup.notifications.copySpecifiedAddress"}&nbsp;&nbsp;<input {if !$submissionAckEnabled}disabled="disabled" {/if}type="text" class="textField" id="copySubmissionAckAddress" name="copySubmissionAckAddress" value="{$copySubmissionAckAddress|escape}"/></td>
 	</tr>
 	{if !$submissionAckEnabled}
 	<tr valign="top">

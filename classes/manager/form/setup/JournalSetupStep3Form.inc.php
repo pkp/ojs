@@ -27,6 +27,7 @@ class JournalSetupStep3Form extends JournalSetupForm {
 				'authorGuidelines' => 'string',
 				'submissionChecklist' => 'object',
 				'copyrightNotice' => 'string',
+				'includeCreativeCommons' => 'bool',
 				'copyrightNoticeAgree' => 'bool',
 				'requireAuthorCompetingInterests' => 'bool',
 				'requireReviewerCompetingInterests' => 'bool',

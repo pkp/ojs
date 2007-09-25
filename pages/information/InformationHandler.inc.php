@@ -49,6 +49,10 @@ class InformationHandler extends Handler {
 				$content = $journal->getLocalizedSetting('competingInterestGuidelines');
 				$pageTitle = $pageCrumbTitle = 'navigation.competingInterestGuidelines';
 				break;
+			case 'sampleCopyrightWording':
+				$content = Locale::translate('manager.setup.authorCopyrightNotice.sample');
+				$pageTitle = $pageCrumbTitle = 'manager.setup.copyrightNotice';
+				break;
 			default:
 				Request::redirect($journal->getPath());
 				return;
@@ -75,6 +79,10 @@ class InformationHandler extends Handler {
 
 	function competingInterestGuidelines() {
 		InformationHandler::index(array('competingInterestGuidelines'));
+	}
+
+	function sampleCopyrightWording() {
+		InformationHandler::index(array('sampleCopyrightWording'));
 	}
 
 	/**

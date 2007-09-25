@@ -1062,9 +1062,25 @@ Setting up LOCKSS support for Open Journal Systems does not need to take place u
 	<message key="manager.setup.addChecklistItem">Add Checklist Item</message>
 	<message key="manager.setup.addItem">Add Item</message>
 	<message key="manager.setup.authorCopyrightNotice">Copyright Notice</message>
-	<message key="manager.setup.authorCopyrightNoticeDescription"><![CDATA[This Copyright Notice will appear in About the Journal and in each published item's metadata. Authors can retain copyright, while granting the journal right of first publication. Alternatively, authors can transfer copyright to the journal, which then permits authors non-commercial use of the work, 
-including the right to place it in an open access archive. In addition, <a href="http://www.creativecommons.org" target="_blank">Creative Commons</a> can be consulted for flexible copyright licenses.]]></message>
+	<message key="manager.setup.authorCopyrightNoticeDescription"><![CDATA[The Copyright Notice entered below will appear in About the Journal and in each published item's metadata. While it is up to the journal to determine the nature of its copyright agreement with authors, the Public Knowledge Project recommends the use of the <a href="http://creativecommons.org" target="_new" class="action">Creative Commons</a> license. To that end, it provides <a href="{$sampleCopyrightWordingUrl}" target="_new" class="action">sample Copyright Notice wording</a> that can be cut and pasted into the space below for journals that (a) offer open access, (b) offer delayed open access, or (c) do not offer open access.]]></message>
+	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Proposed Creative Commons Copyright Notices</h3>
+<h4>1. Proposed Policy for Journals That Offer Open Access</h4>
+Authors who publish with this journal agree to the following terms:
+<ol type="a">
+	<li>Authors retain copyright and grant the journal right of first publication with the work simultaneously licensed under a <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</a> that allows others to share the work with an acknowledgement of the work's authorship and initial publication in this journal.</li>
+	<li>Authors are able to enter into separate, additional contractual arrangements for the non-exclusive distribution of the journal's published version of the work (e.g., post it to an institutional repository or publish it in a book), with an acknowledgement of its initial publication in this journal.</li>
+	<li>Authors are permitted and encouraged to post their work online (e.g., in institutional repositories or on their website) prior to and during the submission process, as it can lead to productive exchanges, as well as earlier and greater citation of published work (See <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>).</li>
+</ol>
+
+<h4>Proposed Policy for Journals That Offer Delayed Open Access</h4>
+Authors who publish with this journal agree to the following terms:
+<ol type="a">
+	<li>Authors retain copyright and grant the journal right of first publication, with the work [SPECIFY PERIOD OF TIME] after publication simultaneously licensed under a <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</a> that allows others to share the work with an acknowledgement of the work’s authorship and initial publication in this journal.</li>
+	 <li>Authors are able to enter into separate, additional contractual arrangements for the non-exclusive distribution of the journal’s published version of the work (e.g., post it to an institutional repository or publish it in a book), with an acknowledgement of its initial publication in this journal.</li>
+	 <li>Authors are permitted and encouraged to post their work online (e.g., in institutional repositories or on their website) prior to and during the submission process, as it can lead to productive exchanges, as well as earlier and greater citation of published work (See <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html"> The Effect of Open Access</a>).</li>
+</ol>]]></message>
 	<message key="manager.setup.authorCopyrightNoticeAgree">Require authors to agree to Copyright Notice as part of the submission process.</message>
+	<message key="manager.setup.includeCreativeCommons">For journals that offer immediate or delyed open access, include a Creative Commons license with all published work at the appropriate time.</message>
 	<message key="manager.setup.copyrightNotice">Copyright notice</message>
 	<message key="manager.setup.competingInterests">Competing Interests</message>
 	<message key="manager.setup.competingInterests.description"><![CDATA[Biomedical journals typically require authors and reviewers to declare if they have any competing interests with regard to their research (see <a href="http://journals.plos.org/plosclinicaltrials/competing.php" target="_new">PLoS Policy</a>).]]></message>
