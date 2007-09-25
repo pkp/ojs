@@ -40,6 +40,15 @@
 		<td class="label">{translate key="common.country"}</td>
 		<td class="value">{$author->getCountryLocalized()|escape|default:"&mdash;"}</td>
 	</tr>
+	{if $currentJournal->getSetting('requireAuthorCompetingInterests')}
+	<tr valign="top">
+		<td class="label">
+			{url|assign:"competingInterestGuidelinesUrl" page="information" op="competingInterestGuidelines"}
+			{translate key="author.competingInterests" competingInterestGuidelinesUrl=$competingInterestGuidelinesUrl}
+		</td>
+		<td class="value">{$author->getAuthorCompetingInterests()|strip_unsafe_html|nl2br|default:"&mdash;"}</td>
+	</tr>
+	{/if}
 	<tr valign="top">
 		<td class="label">{translate key="user.biography"}</td>
 		<td class="value">{$author->getAuthorBiography()|strip_unsafe_html|nl2br|default:"&mdash;"}</td>

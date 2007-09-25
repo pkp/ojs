@@ -56,6 +56,22 @@ class ReviewerSubmission extends Article {
 	}
 
 	/**
+	 * Get the competing interests for this article.
+	 * @return string
+	 */
+	function getCompetingInterests() {
+		return $this->getData('competingInterests');
+	}
+
+	/**
+	 * Set the competing interests statement.
+	 * @param $competingInterests string
+	 */
+	function setCompetingInterests($competingInterests) {
+		return $this->setData('competingInterests', $competingInterests);
+	}
+
+	/**
 	 * Get ID of review assignment.
 	 * @return int
 	 */

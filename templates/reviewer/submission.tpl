@@ -105,13 +105,15 @@ function confirmSubmissionCheck() {
 
 {include file="common/formErrors.tpl"}
 
+{assign var="currentStep" value=1}
+
 <table width="100%" class="data">
 <tr valign="top">
 	{assign var=editAssignments value=$submission->getEditAssignments}
 	{* FIXME: Should be able to assign primary editorial contact *}
 	{if $editAssignments[0]}{assign var=firstEditAssignment value=$editAssignments[0]}{/if}
-	<td width="3%">1.</td>
-	<td width="97%"><span class="instruct">{translate key="reviewer.article.reviewerInstruction1a"}{if $firstEditAssignment}, {$firstEditAssignment->getEditorFullName()},{/if} {translate key="reviewer.article.reviewerInstruction1b"}</span></td>
+	<td width="3%">{$currentStep|escape}.{assign var="currentStep" value=$currentStep+1}</td>
+	<td width="97%"><span class="instruct">{translate key="reviewer.article.notifyEditorA"}{if $firstEditAssignment}, {$firstEditAssignment->getEditorFullName()},{/if} {translate key="reviewer.article.notifyEditorB"}</span></td>
 </tr>
 <tr valign="top">
 	<td>&nbsp;</td>
@@ -140,21 +142,18 @@ function confirmSubmissionCheck() {
 <tr>
 	<td colspan="2">&nbsp;</td>
 </tr>
-{if $journal->getLocalizedSetting('reviewGuidelines')}
-{assign var="haveGuide" value=true}
+{if $journal->getLocalizedSetting('reviewGuidelines') != ''}
 <tr valign="top">
-        <td>2.</td>
-	<td><span class="instruct">{translate key="reviewer.article.reviewerInstruction2"}</span></td>
+        <td>{$currentStep|escape}.{assign var="currentStep" value=$currentStep+1}</td>
+	<td><span class="instruct">{translate key="reviewer.article.consultGuidelines"}</span></td>
 </tr>
 <tr>
 	<td colspan="2">&nbsp;</td>
 </tr>
-{else}
-{assign var="haveGuide" value=false}
 {/if}
 <tr valign="top">
-	<td>{if $haveGuide}3{else}2{/if}.</td>
-	<td><span class="instruct">{translate key="reviewer.article.reviewerInstruction3"}</span></td>
+	<td>{$currentStep|escape}.{assign var="currentStep" value=$currentStep+1}</td>
+	<td><span class="instruct">{translate key="reviewer.article.downloadSubmission"}</span></td>
 </tr>
 <tr valign="top">
 	<td>&nbsp;</td>
@@ -203,9 +202,28 @@ function confirmSubmissionCheck() {
 <tr>
 	<td colspan="2">&nbsp;</td>
 </tr>
+{if $currentJournal->getSetting('requireReviewerCompetingInterests')}
+	<tr valign="top">
+		<td>{$currentStep|escape}.{assign var="currentStep" value=$currentStep+1}</td>
+		<td>
+			{url|assign:"competingInterestGuidelinesUrl" page="information" op="competingInterestGuidelines"}
+			<span class="instruct">{translate key="reviewer.article.enterCompetingInterests" competingInterestGuidelinesUrl=$competingInterestGuidelinesUrl}</span>
+			{if not $confirmedStatus or $declined or $submission->getCancelled() or $submission->getRecommendation()}<br/>
+				{$reviewAssignment->getCompetingInterests()|strip_unsafe_html|nl2br}
+			{else}
+				<form action="{url op="saveCompetingInterests" reviewId=$reviewId}" method="post">
+					<textarea {if $cannotChangeCI}disabled="disabled" {/if}name="competingInterests" class="textArea" id="competingInterests" rows="5" cols="40">{$reviewAssignment->getCompetingInterests()|escape}</textarea><br />
+					<input {if $cannotChangeCI}disabled="disabled" {/if}class="button defaultButton" type="submit" value="{translate key="common.save"}" />
+				</form>
+			{/if}
+		</td>
+	<tr>
+		<td colspan="2">&nbsp;</td>
+	</tr>
+{/if}
 <tr valign="top">
-	<td>{if $haveGuide}4{else}3{/if}.</td>
-	<td><span class="instruct">{translate key="reviewer.article.reviewerInstruction4a"}</span></td>
+	<td>{$currentStep|escape}.{assign var="currentStep" value=$currentStep+1}</td>
+	<td><span class="instruct">{translate key="reviewer.article.enterReviewA"}</span></td>
 </tr>
 <tr valign="top">
 	<td>&nbsp;</td>
@@ -222,8 +240,8 @@ function confirmSubmissionCheck() {
 	<td colspan="2">&nbsp;</td>
 </tr>
 <tr valign="top">
-	<td>{if $haveGuide}5{else}4{/if}.</td>
-	<td><span class="instruct">{translate key="reviewer.article.reviewerInstruction5"}</span></td>
+	<td>{$currentStep|escape}.{assign var="currentStep" value=$currentStep+1}</td>
+	<td><span class="instruct">{translate key="reviewer.article.uploadFile"}</span></td>
 </tr>
 <tr valign="top">
 	<td>&nbsp;</td>
@@ -275,8 +293,8 @@ function confirmSubmissionCheck() {
 	<td colspan="2">&nbsp;</td>
 </tr>
 <tr valign="top">
-	<td>{if $haveGuide}6{else}5{/if}.</td>
-	<td><span class="instruct">{translate key="reviewer.article.reviewerInstruction6"}</span></td>
+	<td>{$currentStep|escape}.{assign var="currentStep" value=$currentStep+1}</td>
+	<td><span class="instruct">{translate key="reviewer.article.selectRecommendation"}</span></td>
 </tr>
 <tr valign="top">
 	<td>&nbsp;</td>
@@ -305,7 +323,7 @@ function confirmSubmissionCheck() {
 </tr>
 </table>
 
-{if $haveGuide}
+{if $journal->getLocalizedSetting('reviewGuidelines') != ''}
 <div class="separator"></div>
 <h3>{translate key="reviewer.article.reviewerGuidelines"}</h3>
 <p>{$journal->getLocalizedSetting('reviewGuidelines')|nl2br}</p>

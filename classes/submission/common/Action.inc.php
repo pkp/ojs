@@ -55,7 +55,7 @@ class Action {
 		if (!HookRegistry::call('Action::viewMetadata', array(&$article, &$roleId))) {
 			import("submission.form.MetadataForm");
 			$metadataForm = &new MetadataForm($article, $roleId);
-			if ($metadataForm->isLocaleResubmit()) {
+			if ($metadataForm->getCanEdit() && $metadataForm->isLocaleResubmit()) {
 				$metadataForm->readInputData();
 			} else {
 				$metadataForm->initData();

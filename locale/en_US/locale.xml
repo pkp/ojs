@@ -220,6 +220,7 @@
 	<message key="navigation.infoForAuthors">For Authors</message>
 	<message key="navigation.infoForReaders">For Readers</message>
 	<message key="navigation.infoForLibrarians">For Librarians</message>
+	<message key="navigation.competingInterestGuidelines">Competing Interest Guidelines</message>
 	<message key="navigation.infoForAuthors.long">Information For Authors</message>
 	<message key="navigation.infoForReaders.long">Information For Readers</message>
 	<message key="navigation.infoForLibrarians.long">Information For Librarians</message>
@@ -1065,6 +1066,11 @@ Setting up LOCKSS support for Open Journal Systems does not need to take place u
 including the right to place it in an open access archive. In addition, <a href="http://www.creativecommons.org" target="_blank">Creative Commons</a> can be consulted for flexible copyright licenses.]]></message>
 	<message key="manager.setup.authorCopyrightNoticeAgree">Require authors to agree to Copyright Notice as part of the submission process.</message>
 	<message key="manager.setup.copyrightNotice">Copyright notice</message>
+	<message key="manager.setup.competingInterests">Competing Interests</message>
+	<message key="manager.setup.competingInterests.description"><![CDATA[Biomedical journals typically require authors and reviewers to declare if they have any competing interests with regard to their research (see <a href="http://journals.plos.org/plosclinicaltrials/competing.php" target="_new">PLoS Policy</a>).]]></message>
+	<message key="manager.setup.competingInterests.requireAuthors">Require submitting Authors to file a Competing Interest (CI) statement with their submission.</message>
+	<message key="manager.setup.competingInterests.requireReviewers">Require Reviewers to file a CI statement with each peer review they submit.</message>
+	<message key="manager.setup.competingInterests.guidelines">Guidelines for filing a Competing Interest statement</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWork">For Authors to Index Their Work</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWorkDescription"><![CDATA[OJS adheres to the <a href="http://www.openarchives.org/" target="_blank">Open Archives Initiative</a> Protocol for Metadata Harvesting, which is the emerging standard for providing well-indexed access to electronic research resources on a global scale. The authors will use a similar template to provide metadata for their submission. The Journal Manager should select the categories for indexing and present authors with relevant examples to assist them in indexing their work, separating terms with a semi-colon (e.g., term1; term2). The entries should be introduced as examples by using "E.g.," or "For example,".]]></message>
 	<message key="manager.setup.discipline">Academic Discipline and Sub-Disciplines</message>
@@ -1792,14 +1798,15 @@ Active is how many reviews are currently being considered or underway.]]></messa
         <message key="reviewer.article.reviewSchedule">Review Schedule</message>
         <message key="reviewer.article.reviewSteps">Review Steps</message>
         <message key="reviewer.article.reviewerGuidelines">Reviewer Guidelines</message>
-        <message key="reviewer.article.reviewerInstruction1a">Notify the submission's editor</message>
-        <message key="reviewer.article.reviewerInstruction1b">as to whether you will undertake the review.</message>
-        <message key="reviewer.article.reviewerInstruction2">If you are going to do the review, consult Reviewer Guidelines below.</message>
-        <message key="reviewer.article.reviewerInstruction3">Click on file names to download and review (on screen or by printing) the files associated with this submission.</message>
-        <message key="reviewer.article.reviewerInstruction4a">Click on icon to enter (or paste) your review of this submission.</message>
-        <message key="reviewer.article.reviewerInstruction4b">following Reviewer Guidelines below.</message>
-        <message key="reviewer.article.reviewerInstruction5">In addition, you can upload files for the editor and/or author to consult.</message>
-        <message key="reviewer.article.reviewerInstruction6">Select a recommendation and submit the review to complete the process. You must enter a review or upload a file before selecting a recommendation.</message>
+        <message key="reviewer.article.notifyEditorA">Notify the submission's editor</message>
+        <message key="reviewer.article.notifyEditorB">as to whether you will undertake the review.</message>
+        <message key="reviewer.article.consultGuidelines">If you are going to do the review, consult Reviewer Guidelines below.</message>
+        <message key="reviewer.article.downloadSubmission">Click on file names to download and review (on screen or by printing) the files associated with this submission.</message>
+        <message key="reviewer.article.enterCompetingInterests"><![CDATA[Declare whether or not you have competing interests with regard to this research (see <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">CI&nbsp;Policy</a>).]]></message>
+	<message key="reviewer.competingInterests">Competing Interests</message>
+        <message key="reviewer.article.enterReviewA">Click on icon to enter (or paste) your review of this submission.</message>
+        <message key="reviewer.article.uploadFile">In addition, you can upload files for the editor and/or author to consult.</message>
+        <message key="reviewer.article.selectRecommendation">Select a recommendation and submit the review to complete the process. You must enter a review or upload a file before selecting a recommendation.</message>
 	<message key="reviewer.article.mustSelectDecision">No recommendation was selected. You must choose a recommendation to submit.</message>
 	<message key="reviewer.article.confirmDecision">Once you have recorded a decision you will no longer be able to make changes to this review. Are you sure you wish to continue?</message>
 	<message key="reviewer.article.ensuringBlindReview">Ensuring a Blind Review</message>
@@ -1816,6 +1823,7 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	<!-- Author -->
 	<message key="author.submit">New Submission</message>
 	<message key="author.track">Active Submissions</message>
+	<message key="author.competingInterests"><![CDATA[Competing&nbsp;interests <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">CI&nbsp;Policy</a>]]></message>
 	<message key="author.submit.submitArticle">Submit an Article</message>
 	<message key="author.submit.stepsToSubmit">Five Steps to Submit</message>
 	<message key="author.submit.startHereTitle">Start a New Submission</message>

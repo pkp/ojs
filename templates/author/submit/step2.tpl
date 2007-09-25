@@ -11,6 +11,8 @@
 {assign var="pageTitle" value="author.submit.step2"}
 {include file="author/submit/submitHeader.tpl"}
 
+{url|assign:"competingInterestGuidelinesUrl" page="information" op="competingInterestGuidelines"}
+
 <div class="separator"></div>
 
 <form name="submit" method="post" action="{url op="saveSubmit" path=$submitStep}">
@@ -38,8 +40,13 @@ function moveAuthor(dir, authorIndex) {
 		<td width="20%" class="label">{fieldLabel name="formLocale" required="true" key="common.language"}</td>
 		<td width="80%" class="value">
 			{url|assign:"submitFormUrl" op="submit" path="2" articleId=$articleId}
-			{* Maintain localized author bios across requests *}
+			{* Maintain localized author info across requests *}
 			{foreach from=$authors key=authorIndex item=author}
+				{if $currentJournal->getSetting('requireAuthorCompetingInterests')}
+					{foreach from=$author.competingInterests key="thisLocale" item="thisCompetingInterests"}
+						{if $thisLocale != $formLocale}<input type="hidden" name="authors[{$authorIndex}][competingInterests][{$thisLocale|escape}]" value="{$thisCompetingInterests|escape}" />{/if}
+					{/foreach}
+				{/if}
 				{foreach from=$author.biography key="thisLocale" item="thisBiography"}
 					{if $thisLocale != $formLocale}<input type="hidden" name="authors[{$authorIndex}][biography][{$thisLocale|escape}]" value="{$thisBiography|escape}" />{/if}
 				{/foreach}
@@ -97,6 +104,12 @@ function moveAuthor(dir, authorIndex) {
 	<td class="label">{fieldLabel name="authors-$authorIndex-url" key="user.url"}</td>
 	<td class="value"><input type="text" name="authors[{$authorIndex}][url]" id="authors-{$authorIndex}-url" value="{$author.url|escape}" size="30" maxlength="90" class="textField" /></td>
 </tr>
+{if $currentJournal->getSetting('requireAuthorCompetingInterests')}
+	<tr valign="top">
+		<td width="20%" class="label">{fieldLabel name="authors-$authorIndex-competingInterests" key="author.competingInterests" competingInterestGuidelinesUrl=$competingInterestGuidelinesUrl}</td>
+		<td width="80%" class="value"><textarea name="authors[{$authorIndex}][competingInterests][{$formLocale|escape}]" class="textArea" id="authors-{$authorIndex}-competingInterests" rows="5" cols="40">{$author.competingInterests[$formLocale]|escape}</textarea></td>
+	</tr>
+{/if}{* requireAuthorCompetingInterests *}
 <tr valign="top">
 	<td width="20%" class="label">{fieldLabel name="authors-$authorIndex-biography" key="user.biography"}<br />{translate key="user.biography.description"}</td>
 	<td width="80%" class="value"><textarea name="authors[{$authorIndex}][biography][{$formLocale|escape}]" class="textArea" id="authors-{$authorIndex}-biography" rows="5" cols="40">{$author.biography[$formLocale]|escape}</textarea></td>
@@ -120,7 +133,7 @@ function moveAuthor(dir, authorIndex) {
 <input type="hidden" name="authors[0][authorId]" value="0" />
 <input type="hidden" name="primaryContact" value="0" />
 <input type="hidden" name="authors[0][seq]" value="1" />
-<table width="100%' class="data">
+<table width="100%" class="data">
 <tr valign="top">
 	<td width="20%" class="label">{fieldLabel name="authors-0-firstName" required="true" key="user.firstName"}</td>
 	<td width="80%" class="value"><input type="text" class="textField" name="authors[0][firstName]" id="authors-0-firstName" size="20" maxlength="40" /></td>
@@ -154,6 +167,12 @@ function moveAuthor(dir, authorIndex) {
 	<td width="20%" class="label">{fieldLabel name="authors-0-url" required="true" key="user.url"}</td>
 	<td width="80%" class="value"><input type="text" class="textField" name="authors[0][url]" id="authors-0-url" size="30" maxlength="90" /></td>
 </tr>
+{if $currentJournal->getSetting('requireAuthorCompetingInterests')}
+<tr valign="top">
+	<td width="20%" class="label">{fieldLabel name="authors-0-competingInterests" key="author.competingInterests" competingInterestGuidelinesUrl=$competingInterestGuidelinesUrl}</td>
+	<td width="80%" class="value"><textarea name="authors[0][competingInterests][{$formLocale|escape}]" class="textArea" id="authors-0-competingInterests" rows="5" cols="40"></textarea></td>
+</tr>
+{/if}
 <tr valign="top">
 	<td width="20%" class="label">{fieldLabel name="authors-0-biography" key="user.biography"}<br />{translate key="user.biography.description"}</td>
 	<td width="80%" class="value"><textarea name="authors[0][biography][{$formLocale|escape}]" class="textArea" id="authors-0-biography" rows="5" cols="40"></textarea></td>

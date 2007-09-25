@@ -204,6 +204,12 @@
 				{/if}
 			</td>
 		</tr>
+		{if $currentJournal->getSetting('requireReviewerCompetingInterests')}
+			<tr valign="top">
+				<td class="label">{translate key="reviewer.competingInterests"}</td>
+				<td>{$reviewAssignment->getCompetingInterests()|strip_unsafe_html|nl2br|default:"&mdash;"}</td>
+			</tr>
+		{/if}{* requireReviewerCompetingInterests *}
 		<tr valign="top">
 			<td class="label">{translate key="submission.review"}</td>
 			<td>

@@ -234,7 +234,7 @@ class Form {
 	function smartyFieldLabel($params, &$smarty) {
 		if (isset($params) && !empty($params)) {
 			if (isset($params['key'])) {
-				$params['label'] = Locale::translate($params['key']);
+				$params['label'] = Locale::translate($params['key'], $params);
 			}
 
 			if (isset($this->errorFields[$params['name']])) {

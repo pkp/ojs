@@ -15,7 +15,10 @@
  */
 
 class SubmissionReviewHandler extends ReviewerHandler {
-
+	/**
+	 * Display the submission review page.
+	 * @param $args array
+	 */
 	function submission($args) {
 		$journal = &Request::getJournal();
 		$reviewId = $args[0];
@@ -53,6 +56,10 @@ class SubmissionReviewHandler extends ReviewerHandler {
 		$templateMgr->display('reviewer/submission.tpl');
 	}
 
+	/**
+	 * Confirm whether the review has been accepted or not.
+	 * @param $args array optional
+	 */
 	function confirmReview($args = null) {
 		$reviewId = Request::getUserVar('reviewId');
 		$declineReview = Request::getUserVar('declineReview');
@@ -74,6 +81,25 @@ class SubmissionReviewHandler extends ReviewerHandler {
 		}
 	}
 
+	/**
+	 * Save the competing interests statement, if allowed.
+	 */
+	function saveCompetingInterests() {
+		$reviewId = Request::getUserVar('reviewId');
+		list($journal, $reviewerSubmission, $user) = SubmissionReviewHandler::validate($reviewId);
+
+		if ($reviewerSubmission->getDateConfirmed() && !$reviewerSubmission->getDeclined() && !$reviewerSubmission->getCancelled() && !$reviewerSubmission->getRecommendation()) {
+			$reviewerSubmissionDao =& DAORegistry::getDAO('ReviewerSubmissionDAO');
+			$reviewerSubmission->setCompetingInterests(Request::getUserVar('competingInterests'));
+			$reviewerSubmissionDao->updateReviewerSubmission($reviewerSubmission);
+		}
+
+		Request::redirect(null, 'reviewer', 'submission', array($reviewId));
+	}
+
+	/**
+	 * Record the reviewer recommendation.
+	 */
 	function recordRecommendation() {
 		$reviewId = Request::getUserVar('reviewId');
 		$recommendation = Request::getUserVar('recommendation');
@@ -91,6 +117,10 @@ class SubmissionReviewHandler extends ReviewerHandler {
 		}
 	}
 
+	/**
+	 * View the submission metadata
+	 * @param $args array
+	 */
 	function viewMetadata($args) {
 		$reviewId = $args[0];
 		$articleId = $args[1];

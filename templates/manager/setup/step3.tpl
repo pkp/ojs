@@ -74,11 +74,23 @@
 
 <p><input type="checkbox" name="copyrightNoticeAgree" id="copyrightNoticeAgree" value="1"{if $copyrightNoticeAgree} checked="checked"{/if} /> <label for="copyrightNoticeAgree">{translate key="manager.setup.authorCopyrightNoticeAgree"}</label></p>
 
+<div class="separator"></div>
+
+<h3>3.3 {translate key="manager.setup.competingInterests"}</h3>
+
+<p>{translate key="manager.setup.competingInterests.description"}</p>
+
+<p>
+	<input type="checkbox" name="requireAuthorCompetingInterests" id="requireAuthorCompetingInterests" value="1"{if $requireAuthorCompetingInterests} checked="checked"{/if} /> <label for="requireAuthorCompetingInterests">{translate key="manager.setup.competingInterests.requireAuthors"}</label><br />
+	<input type="checkbox" name="requireReviewerCompetingInterests" id="requireReviewerCompetingInterests" value="1"{if $requireReviewerCompetingInterests} checked="checked"{/if} /> <label for="requireReviewerCompetingInterests">{translate key="manager.setup.competingInterests.requireReviewers"}</label><br />
+</p>
+
+<h4>{translate key="manager.setup.competingInterests.guidelines"}</h4>
+<p><textarea name="competingInterestGuidelines[{$formLocale|escape}]" id="competingInterestGuidelines" rows="12" cols="60" class="textArea">{$competingInterestGuidelines[$formLocale]|escape}</textarea></p>
 
 <div class="separator"></div>
 
-
-<h3>3.3 {translate key="manager.setup.forAuthorsToIndexTheirWork"}</h3>
+<h3>3.4 {translate key="manager.setup.forAuthorsToIndexTheirWork"}</h3>
 
 <p>{translate key="manager.setup.forAuthorsToIndexTheirWorkDescription"}</p>
 
@@ -226,7 +238,7 @@
 <div class="separator"></div>
 
 
-<h3>3.4 {translate key="manager.setup.registerJournalForIndexing"}</h3>
+<h3>3.5 {translate key="manager.setup.registerJournalForIndexing"}</h3>
 
 {url|assign:"oaiSiteUrl" journal=$currentJournal->getPath()}
 {url|assign:"oaiUrl" page="oai"}
@@ -235,7 +247,7 @@
 
 <div class="separator"></div>
 
-<h3>3.5 {translate key="manager.setup.notifications"}</h3>
+<h3>3.6 {translate key="manager.setup.notifications"}</h3>
 
 <p>{translate key="manager.setup.notifications.description"}</p>
 

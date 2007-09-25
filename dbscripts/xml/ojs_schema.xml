@@ -1101,6 +1101,7 @@
 		<field name="reviewer_id" type="I8">
 			<NOTNULL/>
 		</field>
+		<field name="competing_interests" type="X"/>
 		<field name="recommendation" type="I1"/>
 		<field name="date_assigned" type="T"/>
 		<field name="date_notified" type="T"/>

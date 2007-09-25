@@ -198,6 +198,31 @@ class Author extends DataObject {
 	/**
 	 * Get the localized biography for this author
 	 */
+	function getAuthorCompetingInterests() {
+		return $this->getLocalizedData('competingInterests');
+	}
+
+	/**
+	 * Get author competing interests.
+	 * @param $locale string
+	 * @return string
+	 */
+	function getCompetingInterests($locale) {
+		return $this->getData('competingInterests', $locale);
+	}
+
+	/**
+	 * Set author competing interests.
+	 * @param $biography string
+	 * @param $locale string
+	 */
+	function setCompetingInterests($competingInterests, $locale) {
+		return $this->setData('competingInterests', $competingInterests, $locale);
+	}
+
+	/**
+	 * Get the localized biography for this author
+	 */
 	function getAuthorBiography() {
 		return $this->getLocalizedData('biography');
 	}

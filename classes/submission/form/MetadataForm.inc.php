@@ -114,6 +114,7 @@ class MetadataForm extends Form {
 						'countryLocalized' => $authors[$i]->getCountryLocalized(),
 						'email' => $authors[$i]->getEmail(),
 						'url' => $authors[$i]->getUrl(),
+						'competingInterests' => $authors[$i]->getCompetingInterests(null), // Localized
 						'biography' => $authors[$i]->getBiography(null) // Localized
 					)
 				);
@@ -244,6 +245,7 @@ class MetadataForm extends Form {
 				$author->setCountry($authors[$i]['country']);
 				$author->setEmail($authors[$i]['email']);
 				$author->setUrl($authors[$i]['url']);
+				$author->setCompetingInterests($authors[$i]['competingInterests'], null); // Localized
 				$author->setBiography($authors[$i]['biography'], null); // Localized
 				$author->setPrimaryContact($this->getData('primaryContact') == $i ? 1 : 0);
 				$author->setSequence($authors[$i]['seq']);
@@ -268,6 +270,14 @@ class MetadataForm extends Form {
 		ArticleSearchIndex::indexArticleMetadata($article);
 
 		return $article->getArticleId();
+	}
+
+	/**
+	 * Determine whether or not the current user is allowed to edit metadata.
+	 * @return boolean
+	 */
+	function getCanEdit() {
+		return $this->canEdit;
 	}
 }
 

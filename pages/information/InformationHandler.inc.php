@@ -45,6 +45,10 @@ class InformationHandler extends Handler {
 				$pageTitle = 'navigation.infoForLibrarians.long';
 				$pageCrumbTitle = 'navigation.infoForAuthors';
 				break;
+			case 'competingInterestGuidelines':
+				$content = $journal->getLocalizedSetting('competingInterestGuidelines');
+				$pageTitle = $pageCrumbTitle = 'navigation.competingInterestGuidelines';
+				break;
 			default:
 				Request::redirect($journal->getPath());
 				return;
@@ -67,6 +71,10 @@ class InformationHandler extends Handler {
 
 	function librarians() {
 		InformationHandler::index(array('librarians'));
+	}
+
+	function competingInterestGuidelines() {
+		InformationHandler::index(array('competingInterestGuidelines'));
 	}
 
 	/**

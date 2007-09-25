@@ -1681,15 +1681,14 @@ with a plus sign (+) indicating review-in-progress.]]></message>
         <message key="reviewer.article.reviewSteps">Review Steps</message>
 
         <message key="reviewer.article.reviewerGuidelines">Reviewer Guidelines</message>
-        <message key="reviewer.article.reviewerInstruction1a">Notify the submission's editor</message>
-        <message key="reviewer.article.reviewerInstruction1b">as to whether you will undertake the review.</message>
-        <message key="reviewer.article.reviewerInstruction2">If you are going to do the review, consult Reviewer Guidelines below.</message>
-        <message key="reviewer.article.reviewerInstruction3">Click on file names to download and review (on screen or by printing) the files associated with this submission.</message>
-        <message key="reviewer.article.reviewerInstruction4a">Click on icon to enter (or paste) your review of this submission.</message>
+        <message key="reviewer.article.notifyEditorA">Notify the submission's editor</message>
+        <message key="reviewer.article.notifyEditorB">as to whether you will undertake the review.</message>
+        <message key="reviewer.article.consultGuidelines">If you are going to do the review, consult Reviewer Guidelines below.</message>
+        <message key="reviewer.article.downloadSubmission">Click on file names to download and review (on screen or by printing) the files associated with this submission.</message>
+        <message key="reviewer.article.enterReviewA">Click on icon to enter (or paste) your review of this submission.</message>
 
-        <message key="reviewer.article.reviewerInstruction4b">following Reviewer Guidelines below.</message>
-        <message key="reviewer.article.reviewerInstruction5">In addition, you can upload files for the editor and/or author to consult.</message>
-        <message key="reviewer.article.reviewerInstruction6">Select a recommendation and submit the review to complete the process. You must enter a review or upload a file before selecting a recommendation.</message>
+        <message key="reviewer.article.uploadFile">In addition, you can upload files for the editor and/or author to consult.</message>
+        <message key="reviewer.article.selectRecommendation">Select a recommendation and submit the review to complete the process. You must enter a review or upload a file before selecting a recommendation.</message>
 	<message key="reviewer.article.mustSelectDecision">No recommendation was selected. You must choose a recommendation to submit.</message>
 	<message key="reviewer.article.confirmDecision">Once you have recorded a decision you will no longer be able to make changes to this review. Are you sure you wish to continue?</message>
 

@@ -125,6 +125,22 @@ class ReviewAssignment extends DataObject {
 	}
 
 	/**
+	 * Get competing interests.
+	 * @return string
+	 */
+	function getCompetingInterests() {
+		return $this->getData('competingInterests');
+	}
+
+	/**
+	 * Set competing interests.
+	 * @param $competingInterests string
+	 */
+	function setCompetingInterests($competingInterests) {
+		return $this->setData('competingInterests', $competingInterests);
+	}
+
+	/**
 	 * Get reviewer recommendation.
 	 * @return string
 	 */

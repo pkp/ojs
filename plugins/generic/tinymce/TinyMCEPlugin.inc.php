@@ -86,6 +86,7 @@ class TinyMCEPlugin extends GenericPlugin {
 						$count = max(1, count($templateMgr->get_template_vars('authors')));
 						for ($i=0; $i<$count; $i++) {
 							$fields[] = "authors-$i-biography";
+							$fields[] = "authors-$i-competingInterests";
 						}
 						$fields[] = 'abstract';
 						$fields[] = 'abstractAlt1';
@@ -144,6 +145,7 @@ class TinyMCEPlugin extends GenericPlugin {
 							$fields[] = "submissionChecklist-$i";
 						}
 						$fields[] = 'copyrightNotice';
+						$fields[] = 'competingInterestGuidelines';
 						break;
 					case 4:
 						$fields[] = 'openAccessPolicy';
@@ -162,6 +164,9 @@ class TinyMCEPlugin extends GenericPlugin {
 						$fields[] = 'librarianInformation';
 						$fields[] = 'authorInformation';
 				}
+			case 'reviewer/submission':
+				$fields[] = 'competingInterests';
+				break;
 			case 'rtadmin/editContext':
 			case 'rtadmin/editSearch':
 			case 'rtadmin/editVersion':
@@ -185,9 +190,12 @@ class TinyMCEPlugin extends GenericPlugin {
 			case 'author/saveMetadata':
 			case 'sectionEditor/saveMetadata':
 			case 'editor/saveMetadata':
+			case 'copyeditor/viewMetadata':
+			case 'copyeditor/saveMetadata':
 				$count = max(1, count($templateMgr->get_template_vars('authors')));
 				for ($i=0; $i<$count; $i++) {
 					$fields[] = "authors-$i-biography";
+					$fields[] = "authors-$i-competingInterests";
 				}
 				$fields[] = 'abstract';
 				$fields[] = 'abstractAlt1';

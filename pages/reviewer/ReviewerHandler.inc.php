@@ -158,6 +158,11 @@ class ReviewerHandler extends Handler {
 		SubmissionReviewHandler::confirmReview($args);
 	}
 
+	function saveCompetingInterests() {
+		import('pages.reviewer.SubmissionReviewHandler');
+		SubmissionReviewHandler::saveCompetingInterests();
+	}
+
 	function recordRecommendation() {
 		import('pages.reviewer.SubmissionReviewHandler');
 		SubmissionReviewHandler::recordRecommendation();

@@ -134,7 +134,6 @@ class AuthorDAO extends DAO {
 				0 AS author_id,
 				0 AS article_id,
 				CAST(\'\' AS CHAR(1)) AS email,
-				CAST(\'\' AS CHAR(1)) AS biography,
 				0 AS primary_contact,
 				0 AS seq,
 				aa.first_name AS first_name,
@@ -191,7 +190,7 @@ class AuthorDAO extends DAO {
 	 * @return array
 	 */
 	function getLocaleFieldNames() {
-		return array('biography');
+		return array('biography', 'competingInterests');
 	}
 
 	/**

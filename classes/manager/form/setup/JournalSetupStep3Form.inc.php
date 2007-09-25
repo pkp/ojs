@@ -28,6 +28,9 @@ class JournalSetupStep3Form extends JournalSetupForm {
 				'submissionChecklist' => 'object',
 				'copyrightNotice' => 'string',
 				'copyrightNoticeAgree' => 'bool',
+				'requireAuthorCompetingInterests' => 'bool',
+				'requireReviewerCompetingInterests' => 'bool',
+				'competingInterestGuidelines' => 'string',
 				'metaDiscipline' => 'bool',
 				'metaDisciplineExamples' => 'string',
 				'metaSubjectClass' => 'bool',
@@ -55,7 +58,7 @@ class JournalSetupStep3Form extends JournalSetupForm {
 	 * @return array
 	 */
 	function getLocaleFieldNames() {
-		return array('authorGuidelines', 'submissionChecklist', 'copyrightNotice', 'metaDisciplineExamples', 'metaSubjectClassTitle', 'metaSubjectClassUrl', 'metaSubjectExamples', 'metaCoverageGeoExamples', 'metaCoverageChronExamples', 'metaCoverageResearchSampleExamples', 'metaTypeExamples');
+		return array('authorGuidelines', 'submissionChecklist', 'copyrightNotice', 'metaDisciplineExamples', 'metaSubjectClassTitle', 'metaSubjectClassUrl', 'metaSubjectExamples', 'metaCoverageGeoExamples', 'metaCoverageChronExamples', 'metaCoverageResearchSampleExamples', 'metaTypeExamples', 'competingInterestGuidelines');
 	}
 
 	/**
