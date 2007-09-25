@@ -418,23 +418,17 @@ class Upgrade extends Installer {
 		// from these tables will be dropped.
 		$tables = array(
 			'versions', 'site', 'site_settings', 'scheduled_tasks',
-			'user_settings', 'sessions',
-			'journal_settings', 'plugin_settings',
-			'roles', 'notification_status', 
-			'section_settings', 'section_editors', 
-			'issue_settings', 'custom_issue_orders',
-			'custom_section_orders', 'article_settings',
-			'article_author_settings',
-			'article_supp_file_settings',
-			'review_rounds',
+			'user_settings', 'sessions', 'journal_settings',
+			'plugin_settings', 'roles', 'notification_status', 
+			'section_settings', 'section_editors', 'issue_settings',
+			'custom_issue_orders', 'custom_section_orders',
+			'article_settings', 'article_author_settings',
+			'article_supp_file_settings', 'review_rounds',
 			'article_html_galley_images',
-			'email_templates_default_data',
-			'email_templates_data',
+			'email_templates_default_data', 'email_templates_data',
 			'article_search_object_keywords',
-			'oai_resumption_tokens',
-			'subscription_type_settings',
-			'announcement_type_settings',
-			'announcement_settings',
+			'oai_resumption_tokens', 'subscription_type_settings',
+			'announcement_type_settings', 'announcement_settings',
 			'group_settings', 'group_memberships'
 		);
 
