@@ -21,19 +21,19 @@
 	  -->
 	<table name="versions">
 		<field name="major" type="I4">
-			<KEY/>
+			<NOTNULL />
 			<DEFAULT VALUE="0"/>
 		</field>
 		<field name="minor" type="I4">
-			<KEY/>
+			<NOTNULL />
 			<DEFAULT VALUE="0"/>
 		</field>
 		<field name="revision" type="I4">
-			<KEY/>
+			<NOTNULL />
 			<DEFAULT VALUE="0"/>
 		</field>
 		<field name="build" type="I4">
-			<KEY/>
+			<NOTNULL />
 			<DEFAULT VALUE="0"/>
 		</field>
 		<field name="date_installed" type="T">
@@ -53,7 +53,7 @@
 	  -->
 	<table name="site">
 		<field name="title" type="C2" size="120">
-			<KEY/>
+			<NOTNULL />
 			<DEFAULT VALUE="Open Journal Systems"/>
 		</field>
 		<field name="intro" type="X"/>
@@ -91,10 +91,10 @@
 	  -->
 	<table name="site_settings">
 		<field name="setting_name" type="C2" size="255">
-			<KEY/>
+			<NOTNULL />
 		</field>
 		<field name="locale" type="C2" size="5">
-			<KEY/>
+			<NOTNULL />
 		</field>
 		<field name="setting_value" type="X"/>
 		<field name="setting_type" type="C2" size="6">
@@ -111,7 +111,7 @@
 	  -->
 	<table name="scheduled_tasks">
 		<field name="class_name" type="C2" size="255">
-			<KEY/>
+			<NOTNULL />
 		</field>
 		<field name="last_run" type="T" />
 		<descr>The last run times of all scheduled tasks.</descr>
@@ -124,8 +124,8 @@
 	  -->
 	<table name="users">
 		<field name="user_id" type="I8">
-			<KEY/>
-			<AUTOINCREMENT/>
+			<KEY />
+			<AUTOINCREMENT />
 		</field>
 		<field name="username" type="C2" size="32">
 			<NOTNULL/>
@@ -173,14 +173,6 @@
 		</field>
 		<field name="disabled_reason" type="X"/>
 		<descr>User authentication credentials and profile data.</descr>
-		<index name="users_username">
-			<col>username</col>
-			<UNIQUE/>
-		</index>
-		<index name="users_email">
-			<col>email</col>
-			<UNIQUE/>
-		</index>
 	</table>
 
 	<!--
@@ -190,13 +182,13 @@
 	  -->
 	<table name="user_settings">
 		<field name="user_id" type="I8">
-			<KEY/>
+			<NOTNULL />
 		</field>
 		<field name="locale" type="C2" size="5">
-			<KEY/>
+			<NOTNULL />
 		</field>
 		<field name="setting_name" type="C2" size="255">
-			<KEY/>
+			<NOTNULL />
 		</field>
 		<field name="journal_id" type="I8"/>
 		<field name="setting_value" type="X"/>
@@ -204,9 +196,6 @@
 			<NOTNULL/>
 		</field>
 		<descr>Locale-specific user data</descr>
-		<index name="user_settings_user_id">
-			<col>user_id</col>
-		</index>
 	</table>
 
 	<!--
@@ -216,7 +205,7 @@
 	  -->
 	<table name="auth_sources">
 		<field name="auth_id" type="I8">
-			<KEY/>
+			<KEY />
 			<AUTOINCREMENT/>
 		</field>
 		<field name="title" type="C2" size="60">
@@ -240,7 +229,7 @@
 	  -->
 	<table name="sessions">
 		<field name="session_id" type="C2" size="32">
-			<KEY/>
+			<NOTNULL />
 		</field>
 		<field name="user_id" type="I8"/>
 		<field name="ip_address" type="C2" size="15">
@@ -264,9 +253,6 @@
 			<DEFAULT VALUE=""/>
 		</field>
 		<descr>Browser/user sessions and session data.</descr>
-		<index name="sessions_user_id">
-			<col>user_id</col>
-		</index>
 	</table>
 
 	<!--
@@ -276,7 +262,7 @@
 	  -->
 	<table name="journals">
 		<field name="journal_id" type="I8">
-			<KEY/>
+			<KEY />
 			<AUTOINCREMENT/>
 		</field>
 		<field name="title" type="C2" size="255">
@@ -296,10 +282,6 @@
 			<DEFAULT VALUE="1"/>
 		</field>
 		<descr>Journals and basic journal settings.</descr>
-		<index name="journals_path">
-			<col>path</col>
-			<UNIQUE/>
-		</index>
 	</table>
 	
 	<!--
@@ -309,13 +291,13 @@
 	  -->
 	<table name="journal_settings">
 		<field name="journal_id" type="I8">
-			<KEY/>
+			<NOTNULL />
 		</field>
 		<field name="locale" type="C2" size="5">
-			<KEY/>
+			<NOTNULL />
 		</field>
 		<field name="setting_name" type="C2" size="255">
-			<KEY/>
+			<NOTNULL />
 		</field>
 		<field name="setting_value" type="X"/>
 		<field name="setting_type" type="C2" size="6">
@@ -323,9 +305,6 @@
 			<descr>(bool|int|float|string|object)</descr>
 		</field>
 		<descr>Journal settings.</descr>
-		<index name="journal_settings_journal_id">
-			<col>journal_id</col>
-		</index>
 	</table>
 	
 	<!--
@@ -335,16 +314,16 @@
 	  -->
 	<table name="plugin_settings">
 		<field name="plugin_name" type="C2" size="80">
-			<KEY/>
+			<NOTNULL />
 		</field>
 		<field name="locale" type="C2" size="5">
-			<KEY/>
+			<NOTNULL />
 		</field>
 		<field name="journal_id" type="I8">
-			<KEY/>
+			<NOTNULL />
 		</field>
 		<field name="setting_name" type="C2" size="80">
-			<KEY/>
+			<NOTNULL />
 		</field>
 		<field name="setting_value" type="X"/>
 		<field name="setting_type" type="C2" size="6">
@@ -352,9 +331,6 @@
 			<descr>(bool|int|float|string|object)</descr>
 		</field>
 		<descr>Journal settings.</descr>
-		<index name="plugin_settings_plugin_name">
-			<col>plugin_name</col>
-		</index>
 	</table>
 	
 	<!--
@@ -364,32 +340,23 @@
 	  -->
 	<table name="roles">
 		<field name="journal_id" type="I8">
-			<KEY/>
+			<NOTNULL />
 		</field>
 		<field name="user_id" type="I8">
-			<KEY/>
+			<NOTNULL />
 		</field>
 		<field name="role_id" type="I8">
-			<KEY/>
+			<NOTNULL />
 		</field>
 		<descr>User roles in journals.</descr>
-		<index name="roles_journal_id">
-			<col>journal_id</col>
-		</index>
-		<index name="roles_user_id">
-			<col>user_id</col>
-		</index>
-		<index name="roles_role_id">
-			<col>role_id</col>
-		</index>
 	</table>
 
 	<table name="notification_status">
 		<field name="journal_id" type="I8">
-			<KEY/>
+			<NOTNULL />
 		</field>
 		<field name="user_id" type="I8">
-			<KEY/>
+			<NOTNULL />
 		</field>
 		<descr>User "mail notifications to my account" flags</descr>
 	</table>
@@ -400,7 +367,7 @@
 	  -->
 	<table name="sections">
 		<field name="section_id" type="I8">
-			<KEY/>
+			<KEY />
 			<AUTOINCREMENT/>
 		</field>
 		<field name="journal_id" type="I8">
@@ -445,9 +412,6 @@
 		</field>
 		<field name="policy" type="X"/>
 		<descr>Journal sections.</descr>
-		<index name="sections_journal_id">
-			<col>journal_id</col>
-		</index>
 	</table>
 	
 	<!--
@@ -457,22 +421,19 @@
 	  -->
 	<table name="section_settings">
 		<field name="section_id" type="I8">
-			<KEY/>
+			<NOTNULL />
 		</field>
 		<field name="locale" type="C2" size="5">
-			<KEY/>
+			<NOTNULL />
 		</field>
 		<field name="setting_name" type="C2" size="255">
-			<KEY/>
+			<NOTNULL />
 		</field>
 		<field name="setting_value" type="X"/>
 		<field name="setting_type" type="C2" size="6">
 			<NOTNULL/>
 		</field>
 		<descr>Section-specific settings</descr>
-		<index name="section_settings_section_id">
-			<col>section_id</col>
-		</index>
 	</table>
 	
 	<!--
@@ -482,13 +443,13 @@
 	  -->
 	<table name="section_editors">
 		<field name="journal_id" type="I8">
-			<KEY/>
+			<NOTNULL />
 		</field>
 		<field name="section_id" type="I8">
-			<KEY/>
+			<NOTNULL />
 		</field>
 		<field name="user_id" type="I8">
-			<KEY/>
+			<NOTNULL />
 		</field>
 		<field name="can_edit" type="I1">
 			<NOTNULL/>
@@ -499,15 +460,6 @@
 			<DEFAULT VALUE="1"/>
 		</field>
 		<descr>Assignments of section editors to sections.</descr>
-		<index name="section_editors_journal_id">
-			<col>journal_id</col>
-		</index>
-		<index name="section_editors_section_id">
-			<col>section_id</col>
-		</index>
-		<index name="section_editors_user_id">
-			<col>user_id</col>
-		</index>
 	</table>
 	
 	<!--
@@ -517,7 +469,7 @@
 	  -->
 	<table name="issues">
 		<field name="issue_id" type="I8">
-			<KEY/>
+			<KEY />
 			<AUTOINCREMENT/>
 		</field>
 		<field name="journal_id" type="I8">
@@ -572,12 +524,6 @@
 		<field name="style_file_name" type="C2" size="90"/>
 		<field name="original_style_file_name" type="C2" size="255"/>
 		<descr>Journal issues.</descr>
-		<index name="issues_journal_id">
-			<col>journal_id</col>
-		</index>
-		<index name="issues_public_issue_id">
-			<col>public_issue_id</col>
-		</index>
 	</table>
 
 	<!--
@@ -587,22 +533,19 @@
 	  -->
 	<table name="issue_settings">
 		<field name="issue_id" type="I8">
-			<KEY/>
+			<NOTNULL />
 		</field>
 		<field name="locale" type="C2" size="5">
-			<KEY/>
+			<NOTNULL />
 		</field>
 		<field name="setting_name" type="C2" size="255">
-			<KEY/>
+			<NOTNULL />
 		</field>
 		<field name="setting_value" type="X"/>
 		<field name="setting_type" type="C2" size="6">
 			<NOTNULL/>
 		</field>
 		<descr>Locale-specific issue data</descr>
-		<index name="issue_settings_issue_id">
-			<col>section_id</col>
-		</index>
 	</table>
 
 	<!--
@@ -611,7 +554,7 @@
 	  -->
 	<table name="custom_issue_orders">
 		<field name="issue_id" type="I8">
-			<KEY/>
+			<NOTNULL />
 		</field>
 		<field name="journal_id" type="I8">
 			<NOTNULL/>
@@ -625,10 +568,10 @@
 
 	<table name="custom_section_orders">
 		<field name="issue_id" type="I8">
-			<KEY/>
+			<NOTNULL />
 		</field>
 		<field name="section_id" type="I8">
-			<KEY/>
+			<NOTNULL />
 		</field>
 		<field name="seq" type="F">
 			<NOTNULL/>
@@ -644,7 +587,7 @@
 	  -->
 	<table name="articles">
 		<field name="article_id" type="I8">
-			<KEY/>
+			<KEY />
 			<AUTOINCREMENT/>
 		</field>
 		<field name="user_id" type="I8">
@@ -696,15 +639,6 @@
 		<field name="copyedit_file_id" type="I8"/>
 		<field name="pages" type="C2" size="255"/>
 		<descr>Journal articles.</descr>
-		<index name="articles_user_id">
-			<col>user_id</col>
-		</index>
-		<index name="articles_journal_id">
-			<col>journal_id</col>
-		</index>
-		<index name="articles_section_id">
-			<col>section_id</col>
-		</index>
 	</table>
 	
 	<!--
@@ -714,13 +648,13 @@
 	  -->
 	<table name="article_settings">
 		<field name="article_id" type="I8">
-			<KEY/>
+			<NOTNULL />
 		</field>
 		<field name="locale" type="C2" size="5">
-			<KEY/>
+			<NOTNULL />
 		</field>
 		<field name="setting_name" type="C2" size="255">
-			<KEY/>
+			<NOTNULL />
 		</field>
 		<field name="setting_value" type="X"/>
 		<field name="setting_type" type="C2" size="6">
@@ -728,9 +662,6 @@
 			<descr>(bool|int|float|string|object)</descr>
 		</field>
 		<descr>Journal article metadata.</descr>
-		<index name="article_settings_article_id">
-			<col>article_id</col>
-		</index>
 	</table>
 
 	<!--
@@ -740,7 +671,7 @@
 	  -->
 	<table name="published_articles">
 		<field name="pub_id" type="I8">
-			<KEY/>
+			<KEY />
 			<AUTOINCREMENT/>
 		</field>
 		<field name="article_id" type="I8">
@@ -766,16 +697,6 @@
 		</field>
 		<field name="public_article_id" type="C2" size="255"/>
 		<descr>Journal articles.</descr>
-		<index name="published_articles_article_id">
-			<col>article_id</col>
-			<UNIQUE/>
-		</index>
-		<index name="published_articles_issue_id">
-			<col>issue_id</col>
-		</index>
-		<index name="published_articles_public_article_id">
-			<col>public_article_id</col>
-		</index>
 	</table>
 
 	<!--
@@ -785,7 +706,7 @@
 	 -->
 	<table name="comments">
 		<field name="comment_id" type="I8">
-			<KEY/>
+			<KEY />
 			<AUTOINCREMENT/>
 		</field>
 		<field name="article_id" type="I8">
@@ -809,9 +730,6 @@
 		<field name="date_posted" type="T"/>
 		<field name="date_modified" type="T"/>
 		<descr>Reader comments on articles.</descr>
-		<index name="comments_article_id">
-			<col>article_id</col>
-		</index>
 	</table>
 
 	<!--
@@ -821,7 +739,7 @@
 	  -->
 	<table name="article_authors">
 		<field name="author_id" type="I8">
-			<KEY/>
+			<KEY />
 			<AUTOINCREMENT/>
 		</field>
 		<field name="article_id" type="I8">
@@ -850,9 +768,6 @@
 		<field name="url" type="C2" size="255"/>
 		<field name="biography" type="X"/>
 		<descr>Author metadata for articles.</descr>
-		<index name="article_authors_article_id">
-			<col>article_id</col>
-		</index>
 	</table>
 	
 	<!--
@@ -862,13 +777,13 @@
 	  -->
 	<table name="article_author_settings">
 		<field name="author_id" type="I8">
-			<KEY/>
+			<NOTNULL />
 		</field>
 		<field name="locale" type="C2" size="5">
-			<KEY/>
+			<NOTNULL />
 		</field>
 		<field name="setting_name" type="C2" size="255">
-			<KEY/>
+			<NOTNULL />
 		</field>
 		<field name="setting_value" type="X"/>
 		<field name="setting_type" type="C2" size="6">
@@ -876,9 +791,6 @@
 			<descr>(bool|int|float|string|object)</descr>
 		</field>
 		<descr>Language dependent author metadata.</descr>
-		<index name="article_author_settings_author_id">
-			<col>author_id</col>
-		</index>
 	</table>
 
 	<!--
@@ -888,11 +800,11 @@
 	  -->
 	<table name="article_files">
 		<field name="file_id" type="I8">
-			<KEY/>
+			<KEY />
 			<AUTOINCREMENT/>
 		</field>
 		<field name="revision" type="I8">
-			<KEY/>
+			<NOTNULL />
 		</field>
 		<field name="source_file_id" type="I8" />
 		<field name="source_revision" type="I8" />
@@ -927,9 +839,6 @@
 		</field>
 		<field name="assoc_id" type="I8"/>
 		<descr>Files associated with articles. Includes submission files, supplementary files, etc.</descr>
-		<index name="article_files_article_id">
-			<col>article_id</col>
-		</index>
 	</table>
 	
 	<!--
@@ -939,7 +848,7 @@
 	  -->
 	<table name="article_supplementary_files">
 		<field name="supp_id" type="I8">
-			<KEY/>
+			<KEY />
 			<AUTOINCREMENT/>
 		</field>
 		<field name="file_id" type="I8">
@@ -971,15 +880,6 @@
 			<DEFAULT VALUE="0"/>
 		</field>
 		<descr>Supplementary files attached to articles.</descr>
-		<index name="article_supplementary_files_file_id">
-			<col>file_id</col>
-		</index>
-		<index name="article_supplementary_files_article_id">
-			<col>article_id</col>
-		</index>
-		<index name="supp_public_supp_file_id">
-			<col>public_supp_file_id</col>
-		</index>
 	</table>
 
 	<!--
@@ -989,13 +889,13 @@
 	  -->
 	<table name="article_supp_file_settings">
 		<field name="supp_id" type="I8">
-			<KEY/>
+			<NOTNULL />
 		</field>
 		<field name="locale" type="C2" size="5">
-			<KEY/>
+			<NOTNULL />
 		</field>
 		<field name="setting_name" type="C2" size="255">
-			<KEY/>
+			<NOTNULL />
 		</field>
 		<field name="setting_value" type="X"/>
 		<field name="setting_type" type="C2" size="6">
@@ -1003,9 +903,6 @@
 			<descr>(bool|int|float|string|object|date)</descr>
 		</field>
 		<descr>Article supplementary file metadata.</descr>
-		<index name="article_supp_file_settings_supp_id">
-			<col>supp_id</col>
-		</index>
 	</table>
 
 	<!--
@@ -1015,7 +912,7 @@
 	  -->
 	<table name="article_notes">
 		<field name="note_id" type="I8">
-			<KEY/>
+			<KEY />
 			<AUTOINCREMENT/>
 		</field>
 		<field name="article_id" type="I8">
@@ -1038,15 +935,6 @@
 			<NOTNULL/>
 		</field>
 		<descr>Article submission notes added by editors to each submission</descr>
-		<index name="article_notes_article_id">
-			<col>article_id</col>
-		</index>
-		<index name="article_notes_user_id">
-			<col>user_id</col>
-		</index>
-		<index name="article_notes_file_id">
-			<col>file_id</col>
-		</index>
 	</table>
 	
 	<!--
@@ -1056,7 +944,7 @@
 	  -->
 	<table name="edit_assignments">
 		<field name="edit_id" type="I8">
-			<KEY/>
+			<KEY />
 			<AUTOINCREMENT/>
 		</field>
 		<field name="article_id" type="I8">
@@ -1077,12 +965,6 @@
 		<field name="date_notified" type="T"/>
 		<field name="date_underway" type="T"/>
 		<descr>Editing assignments.</descr>
-		<index name="edit_assignments_article_id">
-			<col>article_id</col>
-		</index>
-		<index name="edit_assignments_editor_id">
-			<col>editor_id</col>
-		</index>
 	</table>
 	
 	<!--
@@ -1092,7 +974,7 @@
 	  -->
 	<table name="edit_decisions">
 		<field name="edit_decision_id" type="I8">
-			<KEY/>
+			<KEY />
 			<AUTOINCREMENT/>
 		</field>
 		<field name="article_id" type="I8">
@@ -1111,12 +993,6 @@
 			<NOTNULL/>
 		</field>
 		<descr>Editor decisions.</descr>
-		<index name="edit_decisions_article_id">
-			<col>article_id</col>
-		</index>
-		<index name="edit_decisions_editor_id">
-			<col>editor_id</col>
-		</index>
 	</table>
 	
 	<!--
@@ -1126,16 +1002,13 @@
 	  -->
 	<table name="review_rounds">
 		<field name="article_id" type="I8">
-			<KEY/>
+			<NOTNULL />
 		</field>
 		<field name="round" type="I1">
-			<KEY/>
+			<NOTNULL />
 		</field>
 		<field name="review_revision" type="I8" />
 		<descr>Review rounds.</descr>
-		<index name="review_rounds_article_id">
-			<col>article_id</col>
-		</index>
 	</table>		
 		
 	<!--
@@ -1145,7 +1018,7 @@
 	  -->
 	<table name="review_assignments">
 		<field name="review_id" type="I8">
-			<KEY/>
+			<KEY />
 			<AUTOINCREMENT/>
 		</field>
 		<field name="article_id" type="I8">
@@ -1187,12 +1060,6 @@
 			<DEFAULT VALUE="1"/>
 		</field>
 		<descr>Reviewing assignments.</descr>
-		<index name="review_assignments_article_id">
-			<col>article_id</col>
-		</index>
-		<index name="review_assignments_reviewer_id">
-			<col>reviewer_id</col>
-		</index>
 	</table>
 	
 	<!--
@@ -1202,7 +1069,7 @@
 	  -->
 	<table name="copyed_assignments">
 		<field name="copyed_id" type="I8">
-			<KEY/>
+			<KEY />
 			<AUTOINCREMENT/>
 		</field>
 		<field name="article_id" type="I8">
@@ -1228,12 +1095,6 @@
 		<field name="editor_author_revision" type="I8"/>
 		<field name="final_revision" type="I8"/>
 		<descr>Copyediting assignments.</descr>
-		<index name="copyed_assignments_article_id">
-			<col>article_id</col>
-		</index>
-		<index name="copyed_assignments_copyeditor_id">
-			<col>copyeditor_id</col>
-		</index>
 	</table>
 	
 	<!--
@@ -1243,7 +1104,7 @@
 	  -->
 	<table name="layouted_assignments">
 		<field name="layouted_id" type="I8">
-			<KEY/>
+			<KEY />
 			<AUTOINCREMENT/>
 		</field>
 		<field name="article_id" type="I8">
@@ -1258,13 +1119,6 @@
 		<field name="date_acknowledged" type="T"/>
 		<field name="layout_file_id" type="I8"/>
 		<descr>Layout editing assignments.</descr>
-		<index name="layouted_assignments_article_id">
-			<col>article_id</col>
-			<UNIQUE/>
-		</index>
-		<index name="layouted_assignments_editor_id">
-			<col>editor_id</col>
-		</index>
 	</table>
 	
 	<!--
@@ -1274,7 +1128,7 @@
 	  -->
 	<table name="article_galleys">
 		<field name="galley_id" type="I8">
-			<KEY/>
+			<KEY />
 			<AUTOINCREMENT/>
 		</field>
 		<field name="locale" type="C2" size="5"/>
@@ -1299,9 +1153,6 @@
 			<DEFAULT VALUE="0"/>
 		</field>
 		<descr>Article galleys.</descr>
-		<index name="article_galleys_article_id">
-			<col>article_id</col>
-		</index>
 	</table>
 	
 	<!--
@@ -1311,10 +1162,10 @@
 	  -->
 	<table name="article_html_galley_images">
 		<field name="galley_id" type="I8">
-			<KEY/>
+			<NOTNULL />
 		</field>
 		<field name="file_id" type="I8">
-			<KEY/>
+			<NOTNULL />
 		</field>
 		<descr>Images associated with an article HTML galley.</descr>
 	</table>
@@ -1326,7 +1177,7 @@
 	  -->
 	<table name="proof_assignments">
 		<field name="proof_id" type="I8">
-			<KEY/>
+			<KEY />
 			<AUTOINCREMENT/>
 		</field>
 		<field name="article_id" type="I8">
@@ -1349,12 +1200,6 @@
 		<field name="date_layouteditor_acknowledged" type="T"/>
 
 		<descr>Proofreading assignments.</descr>
-		<index name="proof_assignments_article_id">
-			<col>article_id</col>
-		</index>
-		<index name="proof_assignments_proofreader_id">
-			<col>proofreader_id</col>
-		</index>
 	</table>
 	
 	<!--
@@ -1364,7 +1209,7 @@
 	  -->
 	<table name="article_event_log">
 		<field name="log_id" type="I8">
-			<KEY/>
+			<KEY />
 			<AUTOINCREMENT/>
 		</field>
 		<field name="article_id" type="I8">
@@ -1385,9 +1230,6 @@
 		<field name="assoc_id" type="I8"/>
 		<field name="message" type="X"/>
 		<descr>A log of all events associated with a submission.</descr>
-		<index name="article_event_log_article_id">
-			<col>article_id</col>
-		</index>
 	</table>
 	
 	<!--
@@ -1397,7 +1239,7 @@
 	  -->
 	<table name="article_email_log">
 		<field name="log_id" type="I8">
-			<KEY/>
+			<KEY />
 			<AUTOINCREMENT/>
 		</field>
 		<field name="article_id" type="I8">
@@ -1420,9 +1262,6 @@
 		<field name="subject" type="C2" size="255"/>
 		<field name="body" type="X"/>
 		<descr>A log of all emails sent out related to a submission.</descr>
-		<index name="article_email_log_article_id">
-			<col>article_id</col>
-		</index>
 	</table>
 	
 	<!--
@@ -1432,7 +1271,7 @@
 	  -->
 	<table name="article_comments">
 		<field name="comment_id" type="I8">
-			<KEY/>
+			<KEY />
 			<AUTOINCREMENT/>
 		</field>
 		<field name="comment_type" type="I8"/>
@@ -1456,9 +1295,6 @@
 		<field name="date_modified" type="T"/>
 		<field name="viewable" type="I1" />
 		<descr>Comments posted on articles.</descr>
-		<index name="article_comments_article_id">
-			<col>article_id</col>
-		</index>
 	</table>
 	
 	<!--
@@ -1468,7 +1304,7 @@
 	  -->
 	<table name="email_templates_default">
 		<field name="email_id" type="I8">
-			<KEY/>
+			<KEY />
 			<AUTOINCREMENT/>
 		</field>
 		<field name="email_key" type="C2" size="30">
@@ -1486,10 +1322,6 @@
 		<field name="from_role_id" type="I8"/>
 		<field name="to_role_id" type="I8"/>
 		<descr>Default journal email templates.</descr>
-		<index name="email_templates_default_email_key">
-			<col>email_key</col>
-			<UNIQUE/>
-		</index>
 	</table>
 	
 	<!--
@@ -1499,11 +1331,11 @@
 	  -->
 	<table name="email_templates_default_data">
 		<field name="email_key" type="C2" size="30">
-			<KEY/>
+			<NOTNULL />
 			<descr>Unique identifier for this email.</descr>
 		</field>
 		<field name="locale" type="C2" size="5">
-			<KEY/>
+			<NOTNULL />
 			<DEFAULT VALUE="en_US"/>
 		</field>
 		<field name="subject" type="C2" size="120">
@@ -1521,7 +1353,7 @@
 	  -->
 	<table name="email_templates">
 		<field name="email_id" type="I8">
-			<KEY/>
+			<KEY />
 			<AUTOINCREMENT/>
 		</field>
 		<field name="email_key" type="C2" size="30">
@@ -1536,14 +1368,6 @@
 			<DEFAULT VALUE="1"/>
 		</field>
 		<descr>Templates for journal emails.</descr>
-		<index name="email_templates_email_key">
-			<col>email_key</col>
-			<col>journal_id</col>
-			<UNIQUE/>
-		</index>
-		<index name="email_templates_journal_id">
-			<col>journal_id</col>
-		</index>
 	</table>
 	
 	<!--
@@ -1553,15 +1377,15 @@
 	  -->
 	<table name="email_templates_data">
 		<field name="email_key" type="C2" size="30">
-			<KEY/>
+			<NOTNULL />
 			<descr>Unique identifier for this email.</descr>
 		</field>
 		<field name="locale" type="C2" size="5">
-			<KEY/>
+			<NOTNULL />
 			<DEFAULT VALUE="en_US"/>
 		</field>
 		<field name="journal_id" type="I8">
-			<KEY/>
+			<NOTNULL />
 		</field>
 		<field name="subject" type="C2" size="120">
 			<NOTNULL/>
@@ -1577,17 +1401,13 @@
 	 -->
 	<table name="article_search_keyword_list">
 		<field name="keyword_id" type="I8">
-			<KEY/>
+			<KEY />
 			<AUTOINCREMENT/>
 		</field>
 		<field name="keyword_text" type="C2" size="60">
 			<NOTNULL/>
 		</field>
 		<descr>List of all keywords.</descr>
-		<index name="article_search_keyword_text">
-			<col>keyword_text</col>
-			<UNIQUE/>
-		</index>
 	</table>
 	
 	<!--
@@ -1597,7 +1417,7 @@
 	 -->
 	<table name="article_search_objects">
 		<field name="object_id" type="I8">
-			<KEY/>
+			<KEY />
 			<AUTOINCREMENT/>
 		</field>
 		<field name="article_id" type="I8">
@@ -1620,19 +1440,16 @@
 	 -->
 	<table name="article_search_object_keywords">
 		<field name="object_id" type="I8">
-			<KEY/>
+			<NOTNULL />
 		</field>
 		<field name="keyword_id" type="I8">
 			<NOTNULL/>
 		</field>
 		<field name="pos" type="I4">
-			<KEY/>
+			<NOTNULL />
 			<descr>Word position of the keyword in the object.</descr>
 		</field>
 		<descr>Keyword occurrences for each indexed object.</descr>
-		<index name="article_search_object_keywords_keyword_id">
-			<col>keyword_id</col>
-		</index>
 	</table>
 	
 	
@@ -1645,7 +1462,7 @@
 	 -->
 	<table name="oai_resumption_tokens">
 		<field name="token" type="C2" size="32">
-			<KEY/>
+			<NOTNULL />
 		</field>
 		<field name="expire" type="I8">
 			<NOTNULL/>
@@ -1667,7 +1484,7 @@
 	 -->
 	<table name="rt_versions">
 		<field name="version_id" type="I8">
-			<KEY/>
+			<KEY />
 			<AUTOINCREMENT/>
 		</field>
 		<field name="journal_id" type="I8">
@@ -1684,12 +1501,6 @@
 		</field>
 		<field name="description" type="X"/>
 		<descr>Reading Tools versions.</descr>
-		<index name="rt_versions_journal_id">
-			<col>journal_id</col>
-		</index>
-		<index name="rt_versions_version_key">
-			<col>version_key</col>
-		</index>
 	</table>
 	
 	<!--
@@ -1699,7 +1510,7 @@
 	 -->
 	<table name="rt_contexts">
 		<field name="context_id" type="I8">
-			<KEY/>
+			<KEY />
 			<AUTOINCREMENT/>
 		</field>
 		<field name="version_id" type="I8">
@@ -1733,9 +1544,6 @@
 			<DEFAULT VALUE="0"/>
 		</field>
 		<descr>Reading Tools contexts (within versions).</descr>
-		<index name="rt_contexts_version_id">
-			<col>version_id</col>
-		</index>
 	</table>
 	
 	<!--
@@ -1745,7 +1553,7 @@
 	 -->
 	<table name="rt_searches">
 		<field name="search_id" type="I8">
-			<KEY/>
+			<KEY />
 			<AUTOINCREMENT/>
 		</field>
 		<field name="context_id" type="I8">
@@ -1763,9 +1571,6 @@
 			<DEFAULT VALUE="0"/>
 		</field>
 		<descr>Reading Tools searches (within contexts).</descr>
-		<index name="rt_searches_context_id">
-			<col>context_id</col>
-		</index>
 	</table>
 
 	<!--
@@ -1775,7 +1580,7 @@
 	 -->
 	<table name="subscription_types">
 		<field name="type_id" type="I8">
-			<KEY/>
+			<KEY />
 			<AUTOINCREMENT/>
 		</field>
 		<field name="journal_id" type="I8">
@@ -1821,22 +1626,19 @@
 	  -->
 	<table name="subscription_type_settings">
 		<field name="type_id" type="I8">
-			<KEY/>
+			<NOTNULL />
 		</field>
 		<field name="locale" type="C2" size="5">
-			<KEY/>
+			<NOTNULL />
 		</field>
 		<field name="setting_name" type="C2" size="255">
-			<KEY/>
+			<NOTNULL />
 		</field>
 		<field name="setting_value" type="X"/>
 		<field name="setting_type" type="C2" size="6">
 			<NOTNULL/>
 		</field>
 		<descr>Locale-specific subscription type data</descr>
-		<index name="subscription_type_settings_type_id">
-			<col>type_id</col>
-		</index>
 	</table>
 
 	<!--
@@ -1846,7 +1648,7 @@
 	 -->
 	<table name="subscriptions">
 		<field name="subscription_id" type="I8">
-			<KEY/>
+			<KEY />
 			<AUTOINCREMENT/>
 		</field>
 		<field name="journal_id" type="I8">
@@ -1868,14 +1670,6 @@
 		<field name="domain" type="C2" size="255"/>
 		<field name="ip_range" type="X"/>
 		<descr>Journal subscriptions.</descr>
-		<index name="subscription_journal_id">
-			<col>journal_id</col>
-			<col>user_id</col>
-			<UNIQUE/>
-		</index>
-		<index name="subscription_domain">
-			<col>domain</col>
-		</index>
 	</table>
 
 	<!--
@@ -1885,7 +1679,7 @@
 	 -->
 	<table name="announcement_types">
 		<field name="type_id" type="I8">
-			<KEY/>
+			<KEY />
 			<AUTOINCREMENT/>
 		</field>
 		<field name="journal_id" type="I8">
@@ -1895,9 +1689,6 @@
 			<NOTNULL/>
 		</field>
 		<descr>Journal announcement types.</descr>
-		<index name="announcement_types_journal_id">
-			<col>journal_id</col>
-		</index>
 	</table>
 
 	<!-- 
@@ -1907,22 +1698,19 @@
 	 -->
 	<table name="announcement_type_settings">
 		<field name="type_id" type="I8">
-			<KEY/>
+			<NOTNULL />
 		</field>
 		<field name="locale" type="C2" size="5">
-			<KEY/>
+			<NOTNULL />
 		</field>
 		<field name="setting_name" type="C2" size="255">
-			<KEY/>
+			<NOTNULL />
 		</field>
 		<field name="setting_value" type="X"/>
 		<field name="setting_type" type="C2" size="6">
 			<NOTNULL/>
 		</field>
 		<descr>Language dependent journal announcement type data.</descr>
-		<index name="announcement_type_settings_type_id">
-			<col>type_id</col>
-		</index>
 	</table>
 
 	<!--
@@ -1932,7 +1720,7 @@
 	 -->
 	<table name="announcements">
 		<field name="announcement_id" type="I8">
-			<KEY/>
+			<KEY />
 			<AUTOINCREMENT/>
 		</field>
 		<field name="journal_id" type="I8">
@@ -1955,9 +1743,6 @@
 			<NOTNULL/>
 		</field>
 		<descr>Journal announcements</descr>
-		<index name="announcements_journal_id">
-			<col>journal_id</col>
-		</index>
 	</table>
 
 	<!-- 
@@ -1967,22 +1752,19 @@
 	 -->
 	<table name="announcement_settings">
 		<field name="announcement_id" type="I8">
-			<KEY/>
+			<NOTNULL />
 		</field>
 		<field name="locale" type="C2" size="5">
-			<KEY/>
+			<NOTNULL />
 		</field>
 		<field name="setting_name" type="C2" size="255">
-			<KEY/>
+			<NOTNULL />
 		</field>
 		<field name="setting_value" type="X"/>
 		<field name="setting_type" type="C2" size="6">
 			<NOTNULL/>
 		</field>
 		<descr>Language dependent journal announcement data.</descr>
-		<index name="announcement_settings_announcement_id">
-			<col>announcement_id</col>
-		</index>
 	</table>
 
 	<!--
@@ -1992,7 +1774,7 @@
 	  -->
 	<table name="captchas">
 		<field name="captcha_id" type="I8">
-			<KEY/>
+			<KEY />
 			<AUTOINCREMENT/>
 		</field>
 		<field name="session_id" type="C2" size="32">
@@ -2013,7 +1795,7 @@
 	  -->
 	<table name="temporary_files">
 		<field name="file_id" type="I8">
-			<KEY/>
+			<KEY />
 			<AUTOINCREMENT/>
 		</field>
 		<field name="user_id" type="I8">
@@ -2032,9 +1814,6 @@
 			<NOTNULL/>
 		</field>
 		<descr>Temporary file storage; used to keep attachments across multiple email composition requests</descr>
-		<index name="temporary_files_user_id">
-			<col>user_id</col>
-		</index>
 	</table>
 
 	<!--
@@ -2044,7 +1823,7 @@
 	  -->
 	<table name="access_keys">
 		<field name="access_key_id" type="I8">
-			<KEY/>
+			<KEY />
 			<AUTOINCREMENT/>
 		</field>
 		<field name="context" type="C2" size="40">
@@ -2061,11 +1840,6 @@
 			<NOTNULL/>
 		</field>
 		<descr>Access keys are used to provide pseudo-login functionality for security-minimal tasks. Passkeys can be emailed directly to users, who can use them for a limited time in lieu of standard username and password.</descr>
-		<index name="access_keys_hash">
-			<col>key_hash</col>
-			<col>user_id</col>
-			<col>context</col>
-		</index>
 	</table>
 
 	<!-- 
@@ -2075,7 +1849,7 @@
 	 -->
 	<table name="groups">
 		<field name="group_id" type="I8">
-			<KEY/>
+			<KEY />
 			<AUTOINCREMENT/>
 		</field>
 		<field name="context" type="I8"/>
@@ -2095,9 +1869,6 @@
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
 		</field>
-		<index name="groups_journal_id">
-			<col>journal_id</col>
-		</index>
 	</table>
 
 	<!-- 
@@ -2107,22 +1878,19 @@
 	 -->
 	<table name="group_settings">
 		<field name="group_id" type="I8">
-			<KEY/>
+			<NOTNULL />
 		</field>
 		<field name="locale" type="C2" size="5">
-			<KEY/>
+			<NOTNULL />
 		</field>
 		<field name="setting_name" type="C2" size="255">
-			<KEY/>
+			<NOTNULL />
 		</field>
 		<field name="setting_value" type="X"/>
 		<field name="setting_type" type="C2" size="6">
 			<NOTNULL/>
 		</field>
 		<descr>Language dependent group data.</descr>
-		<index name="group_settings_group_id">
-			<col>group_id</col>
-		</index>
 	</table>
 	
 	<!-- 
@@ -2132,10 +1900,10 @@
 	 -->
 	<table name="group_memberships">
 		<field name="user_id" type="I8">
-			<KEY/>
+			<NOTNULL />
 		</field>
 		<field name="group_id" type="I8">
-			<KEY/>
+			<NOTNULL />
 		</field>
 		<field name="about_displayed" type="I1">
 			<NOTNULL/>

@@ -398,6 +398,68 @@ class Upgrade extends Installer {
 
 		return true;
 	}
+
+	/**
+	 * For 2.2 upgrade: index handling changed away from using the <KEY />
+	 * syntax in schema descriptors in cases where AUTONUM columns were not
+	 * used, in favour of specifically-named indexes using the <index ...>
+	 * syntax. For this, all indexes (including potentially duplicated
+	 * indexes from before) on OJS tables should be dropped prior to the new
+	 * schema being applied.
+	 * @return boolean
+	 */
+	function dropAllIndexes() {
+		$siteDao =& DAORegistry::getDAO('SiteDAO');
+		$dict = NewDataDictionary($siteDao->_dataSource);
+		$dropIndexSql = array();
+
+		// This is a list of tables that were used in 2.1.1 (i.e.
+		// before the way indexes were used was changed). All indexes
+		// from these tables will be dropped.
+		$tables = array(
+			'versions', 'site', 'site_settings', 'scheduled_tasks',
+			'user_settings', 'sessions',
+			'journal_settings', 'plugin_settings',
+			'roles', 'notification_status', 
+			'section_settings', 'section_editors', 
+			'issue_settings', 'custom_issue_orders',
+			'custom_section_orders', 'article_settings',
+			'article_author_settings',
+			'article_supp_file_settings',
+			'review_rounds',
+			'article_html_galley_images',
+			'email_templates_default_data',
+			'email_templates_data',
+			'article_search_object_keywords',
+			'oai_resumption_tokens',
+			'subscription_type_settings',
+			'announcement_type_settings',
+			'announcement_settings',
+			'group_settings', 'group_memberships'
+		);
+
+		// Assemble a list of indexes to be dropped
+		foreach ($tables as $tableName) {
+			foreach ($dict->MetaIndexes($tableName) as $indexName => $indexData) {
+				$dropIndexSql = array_merge($dropIndexSql, $dict->DropIndexSQL($indexName, $tableName));
+			}
+		}
+
+		// Execute the DROP INDEX statements.
+		foreach ($dropIndexSql as $sql) {
+			$siteDao->update($sql);
+		}
+
+		// Second run: Only return primary indexes. This is necessary
+		// so that primary indexes can be dropped by MySQL.
+		foreach ($tables as $tableName) {
+			$indexes = $dict->MetaIndexes($tableName, true);
+			if (!empty($indexes)) $siteDao->update("ALTER TABLE $tableName DROP PRIMARY KEY");
+		}
+
+
+		return true;
+	}
 }
 
 ?>

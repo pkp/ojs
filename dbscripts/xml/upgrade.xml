@@ -25,6 +25,7 @@
 		<data file="upgrade/2.2.0_preupdate.xml" />
 		<code function="correctCurrencies" />
 		<code function="migrateIssueLabelAndSettings" />
+		<code function="dropAllIndexes" />
 	</upgrade>
 
 	<!-- #2961: Stage 1 of 2.2 schema upgrade: Do not drop columns yet -->
