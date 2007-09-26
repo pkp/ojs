@@ -575,7 +575,7 @@
 
 	<!-- Reader article view -->
 	<message key="reader.fullText">Full Text:</message>
-	<message key="reader.fullTextSubscribersOnly">Full Text: Subscribers Only</message>
+	<message key="reader.subscribersOnly">Subscribers Only</message>
 
 	<!-- Reader Comments -->
 	<message key="comments.commentsOnArticle">Comments on this article</message>

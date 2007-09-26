@@ -96,7 +96,7 @@
 			{/foreach}
 		{/if}
 	{else}
-		{translate key="reader.fullTextSubscribersOnly"}
+		{translate key="reader.fullText"}&nbsp;<a href="{url page="about" op="subscriptions"}">{translate key="reader.subscribersOnly"}</a>
 	{/if}
 	{if $paymentButtonsTemplate }
 		{include file=$paymentButtonsTemplate orientation="vertical"}
