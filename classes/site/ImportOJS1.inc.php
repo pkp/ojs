@@ -228,7 +228,7 @@ class ImportOJS1 {
 		// Create journal
 		$journalDao = &DAORegistry::getDAO('JournalDAO');
 		$journal = &new Journal();
-		$journal->setTitle($this->journalInfo['chTitle'], Locale::getLocale());
+		$journal->updateSetting('title', array(Locale::getLocale() => $this->journalInfo['chTitle']), 'string', true);
 		$journal->setPrimaryLocale(Locale::getLocale());
 		$journal->setPath($this->journalPath);
 		$journal->setEnabled(1);
@@ -798,7 +798,7 @@ class ImportOJS1 {
 
 			$issue = &new Issue();
 			$issue->setJournalId($this->journalId);
-			$issue->setTitle(Core::cleanVar($row['chIssueTitle']));
+			$issue->setTitle(Core::cleanVar($row['chIssueTitle']), Locale::getLocale());
 			$issue->setVolume($row['nVolume']);
 			$issue->setNumber($row['nNumber']);
 			$issue->setYear($row['nYear']);
@@ -819,7 +819,6 @@ class ImportOJS1 {
 			$issue->setShowNumber($this->showNumber);
 			$issue->setShowYear($this->showYear);
 			$issue->setShowTitle($this->showTitle);
-			$issue->setDescription('');
 			$issue->setShowCoverPage(0);
 
 			$issueId = $issueDao->insertIssue($issue);
