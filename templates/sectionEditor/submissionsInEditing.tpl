@@ -29,7 +29,8 @@
 	{assign var="layoutAssignment" value=$submission->getLayoutAssignment()}
 	{assign var="proofAssignment" value=$submission->getProofAssignment()}
 	{assign var="articleId" value=$submission->getArticleId()}
-	<tr valign="top">
+	{assign var="highlightClass" value=$submission->getHighlightClass()}
+	<tr valign="top"{if $highlightClass} class="{$highlightClass|escape}"{/if}>
 		<td>{$submission->getArticleId()}</td>
 		<td>{$submission->getDateSubmitted()|date_format:$dateFormatTrunc}</td>
 		<td>{$submission->getSectionAbbrev()|escape}</td>

@@ -74,7 +74,10 @@ class EditorHandler extends SectionEditorHandler {
 				null,
 				$rangeInfo
 			);
-			$submissions = &new DAOResultFactory($rawSubmissions, $editorSubmissionDao, '_returnEditorSubmissionFromRow');
+			
+			// EditorSubmissionDAO does not return edit assignments, so we need this.
+			$sectionEditorSubmissionDao =& DAORegistry::getDAO('SectionEditorSubmissionDAO');
+			$submissions = &new DAOResultFactory($rawSubmissions, $sectionEditorSubmissionDao, '_returnSectionEditorSubmissionFromRow');
 
 
 			$templateMgr->assign_by_ref('submissions', $submissions);

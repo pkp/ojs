@@ -324,6 +324,10 @@ table.info td {
 table.listing {
 }
 
+table.listing tr.highlight {
+	background: yellow;
+}
+
 table.listing td {
 	padding: 0.25em 0.5em 0.25em 0.5em;
 }

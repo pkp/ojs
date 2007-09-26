@@ -35,7 +35,8 @@
 {iterate from=submissions item=submission}
 
 	{assign var="articleId" value=$submission->getArticleId()}
-	<tr valign="top">
+	{assign var="highlightClass" value=$submission->getHighlightClass()}
+	<tr valign="top"{if $highlightClass} class="{$highlightClass|escape}"{/if}>
 		<td>{$submission->getArticleId()}</td>
 		<td>{$submission->getDateSubmitted()|date_format:$dateFormatTrunc}</td>
 		<td>{$submission->getSectionAbbrev()|escape}</td>

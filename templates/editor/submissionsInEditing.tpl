@@ -32,7 +32,9 @@
 	{iterate from=submissions item=submission}
 	{assign var="layoutAssignment" value=$submission->getLayoutAssignment()}
 	{assign var="proofAssignment" value=$submission->getProofAssignment()}
-	<tr valign="top" {if $submission->getFastTracked()} class="fastTracked"{/if}>
+	{assign var="highlightClass" value=$submission->getHighlightClass()}
+	{assign var="fastTracked" value=$submission->getFastTracked()}
+	<tr valign="top"{if $highlightClass || $fastTracked} class="{$highlightClass|escape} {if $fastTracked}fastTracked{/if}"{/if}>
 		<td>{$submission->getArticleId()}</td>
 		<td>{$submission->getDateSubmitted()|date_format:$dateFormatTrunc}</td>
 		<td>{$submission->getSectionAbbrev()|escape}</td>

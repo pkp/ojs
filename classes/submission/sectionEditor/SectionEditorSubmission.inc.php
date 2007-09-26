@@ -900,6 +900,250 @@ class SectionEditorSubmission extends Article {
 		);
 		return $editorDecisionOptions;
 	}
+
+	/**
+	 * Get the CSS class for highlighting this submission in a list, based on status.
+	 * @return string
+	 */
+	function getHighlightClass() {
+		$highlightClass = 'highlight';
+		$overdueSeconds = 60 * 60 * 24 * 14; // Two weeks
+
+		// Submissions that are not still queued (i.e. published) are not highlighted.
+		if ($this->getStatus() != STATUS_QUEUED) return null;
+
+		// Awaiting assignment.
+		$editAssignments = $this->getEditAssignments();
+		if (empty($editAssignments)) return $highlightClass;
+
+		$journal =& Request::getJournal();
+		// Sanity check
+		if (!$journal || $journal->getJournalId() != $this->getJournalId()) return null;
+
+		// Check whether it's in review or editing.
+		$inEditing = false;
+		$decisionsEmpty = true;
+		$lastDecisionDate = null;
+		$decisions = $this->getDecisions();
+		$decision = array_pop($decisions);
+		if (!empty($decision)) {
+			$latestDecision = array_pop($decision);
+			if (is_array($latestDecision)) {
+				if ($latestDecision['decision'] == SUBMISSION_EDITOR_DECISION_ACCEPT) $inEditing = true;
+				$decisionsEmpty = false;
+				$lastDecisionDate = strtotime($latestDecision['dateDecided']);
+			}
+		}
+
+		if ($inEditing) {
+			// ---
+			// --- Highlighting conditions for submissions in editing
+			// ---
+
+			// COPYEDITING
+
+			// First round of copyediting
+			$dateCopyeditorNotified = $this->getCopyeditorDateNotified() ?
+				strtotime($this->getCopyeditorDateNotified()) : 0;
+			$dateCopyeditorUnderway = $this->getCopyeditorDateUnderway() ?
+				strtotime($this->getCopyeditorDateUnderway()) : 0;
+			$dateCopyeditorCompleted = $this->getCopyeditorDateCompleted() ?
+				strtotime($this->getCopyeditorDateCompleted()) : 0;
+			$dateCopyeditorAcknowledged = $this->getCopyeditorDateAcknowledged() ?
+				strtotime($this->getCopyeditorDateAcknowledged()) : 0;
+			$dateLastCopyeditor = max($dateCopyeditorNotified, $dateCopyeditorUnderway);
+
+			// Check if the copyeditor is overdue on round 1
+			if (	$dateLastCopyeditor &&
+				!$dateCopyeditorCompleted &&
+				$dateLastCopyeditor + $overdueSeconds < time()
+			) return $highlightClass;
+
+			// Check if acknowledgement is overdue for CE round 1
+			if ($dateCopyeditorCompleted && !$dateCopyeditorAcknowledged) return $highlightClass;
+
+			// Second round of copyediting
+			$dateCopyeditorAuthorNotified = $this->getCopyeditorDateAuthorNotified() ?
+				strtotime($this->getCopyeditorDateAuthorNotified()) : 0;
+			$dateCopyeditorAuthorUnderway = $this->getCopyeditorDateAuthorUnderway() ?
+				strtotime($this->getCopyeditorDateAuthorUnderway()) : 0;
+			$dateCopyeditorAuthorCompleted = $this->getCopyeditorDateAuthorCompleted() ?
+				strtotime($this->getCopyeditorDateAuthorCompleted()) : 0;
+			$dateCopyeditorAuthorAcknowledged = $this->getCopyeditorDateAuthorAcknowledged() ?
+				strtotime($this->getCopyeditorDateAuthorAcknowledged()) : 0;
+			$dateLastCopyeditorAuthor = max($dateCopyeditorAuthorNotified, $dateCopyeditorAuthorUnderway);
+
+			// Check if acknowledgement is overdue for CE round 2
+			if ($dateCopyeditorAuthorCompleted && !$dateCopyeditorAuthorAcknowledged) return $highlightClass;
+
+			// Check if author is overdue on CE round 2
+			if (	$dateLastCopyeditorAuthor &&
+				!$dateCopyeditorAuthorCompleted &&
+				$dateLastCopyeditorAuthor + $overdueSeconds < time()
+			) return $highlightClass;
+
+			// Third round of copyediting
+			$dateCopyeditorFinalNotified = $this->getCopyeditorDateFinalNotified() ?
+				strtotime($this->getCopyeditorDateFinalNotified()) : 0;
+			$dateCopyeditorFinalUnderway = $this->getCopyeditorDateFinalUnderway() ?
+				strtotime($this->getCopyeditorDateFinalUnderway()) : 0;
+			$dateCopyeditorFinalCompleted = $this->getCopyeditorDateFinalCompleted() ?
+				strtotime($this->getCopyeditorDateFinalCompleted()) : 0;
+			$dateLastCopyeditorFinal = max($dateCopyeditorFinalNotified, $dateCopyeditorUnderway);
+
+			// Check if copyeditor is overdue on round 3
+			if (	$dateLastCopyeditorFinal &&
+				!$dateCopyeditorFinalCompleted &&
+				$dateLastCopyeditorFinal + $overdueSeconds < time()
+			) return $highlightClass;
+
+			// Check if acknowledgement is overdue for CE round 3
+			if ($dateCopyeditorFinalCompleted && !$dateCopyeditorFinalAcknowledged) return $highlightClass;
+
+			// LAYOUT EDITING
+			$layoutAssignment =& $this->getLayoutAssignment();
+
+			$dateLayoutNotified = $layoutAssignment->getDateNotified() ?
+				strtotime($layoutAssignment->getDateNotified()) : 0;
+			$dateLayoutUnderway = $layoutAssignment->getDateUnderway() ?
+				strtotime($layoutAssignment->getDateUnderway()) : 0;
+			$dateLayoutCompleted = $layoutAssignment->getDateCompleted() ?
+				strtotime($layoutAssignment->getDateCompleted()) : 0;
+			$dateLayoutAcknowledged = $layoutAssignment->getDateAcknowledged() ?
+				strtotime($layoutAssignment->getDateAcknowledged()) : 0;
+			$dateLastLayout = max($dateLayoutNotified, $dateLayoutUnderway);
+
+			// Check if layout editor is overdue
+			if (	$dateLastLayout &&
+				!$dateLayoutCompleted &&
+				$dateLastLayout + $overdueSeconds < time()
+			) return $highlightClass;
+
+			// Check if acknowledgement is overdue for layout
+			if ($dateLayoutCompleted && !$dateLayoutAcknowledged) return $highlightClass;
+
+			// PROOFREADING
+			$proofAssignment =& $this->getProofAssignment();
+
+			// First round of proofreading
+			$dateAuthorNotified = $proofAssignment->getDateAuthorNotified() ?
+				strtotime($proofAssignment->getDateAuthorNotified()) : 0;
+			$dateAuthorUnderway = $proofAssignment->getDateAuthorUnderway() ?
+				strtotime($proofAssignment->getDateAuthorUnderway()) : 0;
+			$dateAuthorCompleted = $proofAssignment->getDateAuthorCompleted() ?
+				strtotime($proofAssignment->getDateAuthorCompleted()) : 0;
+			$dateAuthorAcknowledged = $proofAssignment->getDateAuthorAcknowledged() ?
+				strtotime($proofAssignment->getDateAuthorAcknowledged()) : 0;
+			$dateLastAuthor = max($dateAuthorNotified, $dateAuthorUnderway);
+
+			// Check if the author is overdue on round 1 of proofreading
+			if (	$dateLastAuthor &&
+				!$dateAuthorCompleted &&
+				$dateLastAuthor + $overdueSeconds < time()
+			) return $highlightClass;
+
+			// Check if acknowledgement is overdue for proofreading round 1
+			if ($dateAuthorCompleted && !$dateAuthorAcknowledged) return $highlightClass;
+
+			// Second round of proofreading
+			$dateProofreaderNotified = $proofAssignment->getDateProofreaderNotified() ?
+				strtotime($proofAssignment->getDateProofreaderNotified()) : 0;
+			$dateProofreaderUnderway = $proofAssignment->getDateProofreaderUnderway() ?
+				strtotime($proofAssignment->getDateProofreaderUnderway()) : 0;
+			$dateProofreaderCompleted = $proofAssignment->getDateProofreaderCompleted() ?
+				strtotime($proofAssignment->getDateProofreaderCompleted()) : 0;
+			$dateProofreaderAcknowledged = $proofAssignment->getDateProofreaderAcknowledged() ?
+				strtotime($proofAssignment->getDateProofreaderAcknowledged()) : 0;
+			$dateLastProofreader = max($dateProofreaderNotified, $dateProofreaderUnderway);
+
+			// Check if acknowledgement is overdue for proofreading round 2
+			if ($dateProofreaderCompleted && !$dateProofreaderAcknowledged) return $highlightClass;
+
+			// Check if proofreader is overdue on proofreading round 2
+			if (	$dateLastProofreader &&
+				!$dateProofreaderCompleted &&
+				$dateLastProofreader + $overdueSeconds < time()
+			) return $highlightClass;
+
+			// Third round of proofreading
+			$dateLayoutEditorNotified = $proofAssignment->getDateLayoutEditorNotified() ?
+				strtotime($proofAssignment->getDateLayoutEditorNotified()) : 0;
+			$dateLayoutEditorUnderway = $proofAssignment->getDateLayoutEditorUnderway() ?
+				strtotime($proofAssignment->getDateLayoutEditorUnderway()) : 0;
+			$dateLayoutEditorCompleted = $proofAssignment->getDateLayoutEditorCompleted() ?
+				strtotime($proofAssignment->getDateLayoutEditorCompleted()) : 0;
+			$dateLastLayoutEditor = max($dateLayoutEditorNotified, $dateCopyeditorUnderway);
+
+			// Check if proofreader is overdue on round 3 of proofreading
+			if (	$dateLastLayoutEditor &&
+				!$dateLayoutEditorCompleted &&
+				$dateLastLayoutEditor + $overdueSeconds < time()
+			) return $highlightClass;
+
+			// Check if acknowledgement is overdue for proofreading round 3
+			if ($dateLayoutEditorCompleted && !$dateLayoutEditorAcknowledged) return $highlightClass;
+		} else {
+			// ---
+			// --- Highlighting conditions for submissions in review
+			// ---
+			$reviewAssignments =& $this->getReviewAssignments($this->getCurrentRound());
+			if (is_array($reviewAssignments) && !empty($reviewAssignments)) {
+				$allReviewsComplete = true;
+				foreach ($reviewAssignments as $i => $junk) {
+					$reviewAssignment =& $reviewAssignments[$i];
+
+					// If the reviewer has not been notified, highlight.
+					if ($reviewAssignment->getDateNotified() === null) return $highlightClass;
+
+					// Check review status.
+					if (!$reviewAssignment->getCancelled() && !$reviewAssignment->getDeclined()) {
+						if (!$reviewAssignment->getDateCompleted()) $allReviewsComplete = false;
+
+						$dateReminded = $reviewAssignment->getDateReminded() ?
+							strtotime($reviewAssignment->getDateReminded()) : 0;
+						$dateNotified = $reviewAssignment->getDateNotified() ?
+							strtotime($reviewAssignment->getDateNotified()) : 0;
+						$dateConfirmed = $reviewAssignment->getDateConfirmed() ?
+							strtotime($reviewAssignment->getDateConfirmed()) : 0;
+
+						// Check whether a reviewer is overdue to confirm invitation
+						if (	!$reviewAssignment->getDateCompleted() &&
+							!$dateConfirmed &&
+							!$journal->getSetting('remindForInvite') &&
+							max($dateReminded, $dateNotified) + $overdueSeconds < time()
+						) return $highlightClass;
+
+						// Check whether a reviewer is overdue to complete review
+						if (	!$reviewAssignment->getDateCompleted() &&
+							$dateConfirmed &&
+							!$journal->getSetting('remindForSubmit') &&
+							max($dateReminded, $dateConfirmed) + $overdueSeconds < time()
+						) return $highlightClass;
+					}
+
+					unset($reviewAssignment);
+				}
+				// If all reviews are complete but no decision is recorded, highlight.
+				if ($allReviewsComplete && $decisionsEmpty) return $highlightClass;
+
+				// If the author's last file upload hasn't been taken into account in
+				// the most recent decision or author/editor correspondence, highlight.
+				$comment = $this->getMostRecentEditorDecisionComment();
+				$commentDate = $comment ? strtotime($comment->getDatePosted()) : 0;
+				$authorFileRevisions = $this->getAuthorFileRevisions($this->getCurrentRound());
+				$authorFileDate = null;
+				if (is_array($authorFileRevisions) && !empty($authorFileRevisions)) {
+					$authorFile = array_pop($authorFileRevisions);
+					$authorFileDate = strtotime($authorFile->getDateUploaded());
+				}
+				if (	($lastDecisionDate || $commentDate) &&
+					$authorFileDate &&
+					$authorFileDate > max($lastDecisionDate, $commentDate)
+				) return $highlightClass;
+			}
+		}
+		return null;
+	}
 }
 
 ?>
