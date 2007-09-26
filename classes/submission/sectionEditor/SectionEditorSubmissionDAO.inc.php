@@ -935,7 +935,17 @@ class SectionEditorSubmissionDAO extends DAO {
 		}
 
 		$result = &$this->retrieveRange(
-			'SELECT DISTINCT u.*, a.review_id as review_id FROM users u LEFT JOIN user_settings s ON (u.user_id = s.user_id AND s.setting_name = ?) NATURAL JOIN roles r LEFT JOIN review_assignments a ON (a.reviewer_id = u.user_id AND a.cancelled = 0 AND a.article_id = ? AND a.round = ?) WHERE u.user_id = r.user_id AND r.journal_id = ? AND r.role_id = ? ' . $searchSql . ' ORDER BY last_name, first_name',
+			'SELECT DISTINCT
+				u.*,
+				a.review_id
+			FROM	users u
+				LEFT JOIN user_settings s ON (u.user_id = s.user_id AND s.setting_name = ?)
+				LEFT JOIN roles r ON (r.user_id = u.user_id)
+				LEFT JOIN review_assignments a ON (a.reviewer_id = u.user_id AND a.cancelled = 0 AND a.article_id = ? AND a.round = ?)
+			WHERE	u.user_id = r.user_id AND
+				r.journal_id = ? AND
+				r.role_id = ? ' . $searchSql . '
+			ORDER BY last_name, first_name',
 			$paramArray, $rangeInfo
 		);
 
@@ -962,7 +972,14 @@ class SectionEditorSubmissionDAO extends DAO {
 		$users = array();
 
 		$result = &$this->retrieve(
-			'SELECT u.* FROM users u NATURAL JOIN roles r LEFT JOIN review_assignments a ON (a.reviewer_id = u.user_id AND a.article_id = ?) WHERE r.journal_id = ? AND r.role_id = ? AND a.article_id IS NULL ORDER BY last_name, first_name',
+			'SELECT	u.*
+			FROM	users u
+				LEFT JOIN roles r ON (r.user_id = u.user_id)
+				LEFT JOIN review_assignments a ON (a.reviewer_id = u.user_id AND a.article_id = ?)
+			WHERE	r.journal_id = ? AND
+				r.role_id = ? AND
+				a.article_id IS NULL
+			ORDER BY last_name, first_name',
 			array($articleId, $journalId, RoleDAO::getRoleIdFromPath('reviewer'))
 		);
 
@@ -1035,7 +1052,16 @@ class SectionEditorSubmissionDAO extends DAO {
 		}
 
 		$result = &$this->retrieve(
-			'SELECT u.* FROM users u LEFT JOIN user_settings s ON (u.user_id = s.user_id AND s.setting_name = ?) NATURAL JOIN roles r LEFT JOIN copyed_assignments a ON (a.copyeditor_id = u.user_id AND a.article_id = ?) WHERE r.journal_id = ? AND r.role_id = ? AND a.article_id IS NULL ' . $searchSql . ' ORDER BY last_name, first_name',
+			'SELECT	u.*
+			FROM	users u
+				LEFT JOIN user_settings s ON (u.user_id = s.user_id AND s.setting_name = ?)
+				LEFT JOIN roles r ON (r.user_id = u.user_id)
+				LEFT JOIN copyed_assignments a ON (a.copyeditor_id = u.user_id AND a.article_id = ?)
+			WHERE	r.journal_id = ? AND
+				r.role_id = ? AND
+				a.article_id IS NULL
+				' . $searchSql . '
+			ORDER BY last_name, first_name',
 			$paramArray
 		);
 

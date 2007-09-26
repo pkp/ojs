@@ -283,7 +283,15 @@ class LayoutEditorSubmissionDAO extends DAO {
 		$submissionsCount[0] = 0;
 		$submissionsCount[1] = 0;
 
-		$sql = 'SELECT l.date_completed, p.date_layouteditor_completed FROM articles a NATURAL JOIN layouted_assignments l NATURAL JOIN proof_assignments p LEFT JOIN sections s ON s.section_id = a.section_id WHERE l.editor_id = ? AND a.journal_id = ? AND l.date_notified IS NOT NULL';
+		$sql = 'SELECT	l.date_completed,
+				p.date_layouteditor_completed
+			FROM	articles a
+				LEFT JOIN layouted_assignments l ON (l.article_id = a.article_id)
+				LEFT JOIN proof_assignments p ON (p.article_id = a.article_id)
+				LEFT JOIN sections s ON (s.section_id = a.section_id)
+			WHERE	l.editor_id = ? AND
+				a.journal_id = ? AND
+				l.date_notified IS NOT NULL';
 
 		$result = &$this->retrieve($sql, array($editorId, $journalId));
 		while (!$result->EOF) {

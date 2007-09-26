@@ -100,7 +100,14 @@ class SectionEditorsDAO extends DAO {
 		$userDao = &DAORegistry::getDAO('UserDAO');
 
 		$result = &$this->retrieve(
-			'SELECT u.* FROM users AS u NATURAL JOIN roles r LEFT JOIN section_editors AS e ON e.user_id = u.user_id AND e.journal_id = r.journal_id AND e.section_id = ? WHERE r.journal_id = ? AND r.role_id = ? AND e.section_id IS NULL ORDER BY last_name, first_name',
+			'SELECT	u.*
+			FROM	users u
+				LEFT JOIN roles r ON (r.user_id = u.user_id)
+				LEFT JOIN section_editors e ON (e.user_id = u.user_id AND e.journal_id = r.journal_id AND e.section_id = ?)
+			WHERE	r.journal_id = ? AND
+				r.role_id = ? AND
+				e.section_id IS NULL
+			ORDER BY last_name, first_name',
 			array($sectionId, $journalId, ROLE_ID_SECTION_EDITOR)
 		);
 
