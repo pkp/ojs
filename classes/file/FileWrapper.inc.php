@@ -178,12 +178,13 @@ class HTTPFileWrapper extends FileWrapper {
 	}
 
 	function open($mode = 'r') {
-		$host = isset($this->info['host']) ? $this->info['host'] : $this->defaultHost;
+		$realHost = $host = isset($this->info['host']) ? $this->info['host'] : $this->defaultHost;
 		$port = isset($this->info['port']) ? (int)$this->info['port'] : $this->defaultPort;
 		$path = isset($this->info['path']) ? $this->info['path'] : $this->defaultPath;
 		if (isset($this->info['query'])) $path .= '?' . $this->info['query'];
 
 		if (!empty($this->proxyHost)) {
+			$realHost = $host;
 			$host = $this->proxyHost;
 			$port = $this->proxyPort;
 			if (!empty($this->proxyUsername)) {
@@ -200,7 +201,7 @@ class HTTPFileWrapper extends FileWrapper {
 		}
 
 		$request = 'GET ' . (empty($this->proxyHost)?$path:$this->url) . " HTTP/1.0\r\n" .
-			"Host: $host\r\n" .
+			"Host: $realHost\r\n" .
 			$additionalHeadersString .
 			"Connection: Close\r\n\r\n";
 		fwrite($this->fp, $request);
