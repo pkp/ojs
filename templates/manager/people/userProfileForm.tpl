@@ -69,6 +69,7 @@
 <h3>{if $userId}{translate key="manager.people.editProfile"}{else}{translate key="manager.people.createUser"}{/if}</h3>
 
 <form name="userForm" method="post" action="{url op="updateUser"}" onsubmit="enablePasswordFields()">
+<input type="hidden" name="source" value="{$source|escape}" />
 {if $userId}
 <input type="hidden" name="userId" value="{$userId}" />
 {/if}

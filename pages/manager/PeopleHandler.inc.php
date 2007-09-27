@@ -695,7 +695,8 @@ class PeopleHandler extends ManagerHandler {
 				$userForm->display();
 
 			} else {
-				Request::redirect(null, null, 'people', 'all');
+				if ($source = Request::getUserVar('source')) Request::redirectUrl($source);
+				else Request::redirect(null, null, 'people', 'all');
 			}
 
 		} else {

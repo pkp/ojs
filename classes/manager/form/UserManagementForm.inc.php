@@ -57,6 +57,7 @@ class UserManagementForm extends Form {
 		$templateMgr = &TemplateManager::getManager();
 		$site = &Request::getSite();
 		$templateMgr->assign('minPasswordLength', $site->getMinPasswordLength());
+		$templateMgr->assign('source', Request::getUserVar('source'));
 		$templateMgr->assign('userId', $this->userId);
 		if (isset($this->userId)) {
 			$userDao = &DAORegistry::getDAO('UserDAO');

@@ -74,6 +74,7 @@
 {/if}
 </table>
 
-<a href="{url op="createUser"}" class="action">{translate key="manager.people.createUser"}</a>
+{url|assign:"selectSubscriberUrl" op="selectSubscriber"}
+<a href="{url op="createUser" source=$selectSubscriberUrl}" class="action">{translate key="manager.people.createUser"}</a>
 
 {include file="common/footer.tpl"}
