@@ -228,11 +228,11 @@ class ImportOJS1 {
 		// Create journal
 		$journalDao = &DAORegistry::getDAO('JournalDAO');
 		$journal = &new Journal();
-		$journal->updateSetting('title', array(Locale::getLocale() => $this->journalInfo['chTitle']), 'string', true);
 		$journal->setPrimaryLocale(Locale::getLocale());
 		$journal->setPath($this->journalPath);
 		$journal->setEnabled(1);
 		$this->journalId = $journalDao->insertJournal($journal);
+		$journal->updateSetting('title', array(Locale::getLocale() => $this->journalInfo['chTitle']), 'string', true);
 		$journalDao->resequenceJournals();
 
 		// Add journal manager role for site administrator(s)
