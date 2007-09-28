@@ -285,16 +285,16 @@ class SubscriptionType extends DataObject {
 	 * Check if this subscription type should be publicly visible.
 	 * @return boolean
 	 */
-	function getPublic() {
-		return $this->getData('public');
+	function getNoPublicDisplay() {
+		return $this->getData('no_public_display');
 	}
 
 	/**
 	 * Set whether or not this subscription should be publicly visible.
-	 * @param $public boolean
+	 * @param $noPublicDisplay boolean
 	 */
-	function setPublic($public) {
-		return $this->setData('public', $public);
+	function setNoPublicDisplay($noPublicDisplay) {
+		return $this->setData('no_public_display', $noPublicDisplay);
 	}
 
 	/**

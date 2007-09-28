@@ -91,8 +91,8 @@
 <tr valign="top">
 	<td>&nbsp;</td>
 	<td class="value">
-		<input type="checkbox" name="public" id="public" value="1"{if $public} checked="checked"{/if} />
-		<label for="public">{translate key="manager.subscriptionTypes.form.public"}</label>
+		<input type="checkbox" name="no_public_display" id="no_public_display" value="1"{if $no_public_display} checked="checked"{/if} />
+		<label for="no_public_display">{translate key="manager.subscriptionTypes.form.public"}</label>
 	</td>
 </tr>
 </table>
