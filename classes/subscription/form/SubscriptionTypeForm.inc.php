@@ -76,7 +76,7 @@ class SubscriptionTypeForm extends Form {
 		$this->addCheck(new FormValidatorInSet($this, 'membership', 'optional', 'manager.subscriptionTypes.form.membershipValid', array('1')));
 
 		// Public flag is valid value
-		$this->addCheck(new FormValidatorInSet($this, 'no_public_display', 'optional', 'manager.subscriptionTypes.form.publicValid', array('1')));
+		$this->addCheck(new FormValidatorInSet($this, 'disable_public_display', 'optional', 'manager.subscriptionTypes.form.publicValid', array('1')));
 		$this->addCheck(new FormValidatorPost($this));
 	}
 
@@ -120,7 +120,7 @@ class SubscriptionTypeForm extends Form {
 					'format' => $subscriptionType->getFormat(),
 					'institutional' => $subscriptionType->getInstitutional(),
 					'membership' => $subscriptionType->getMembership(),
-					'no_public_display' => $subscriptionType->getNoPublicDisplay()
+					'disable_public_display' => $subscriptionType->getDisablePublicDisplay()
 				);
 
 			} else {
@@ -133,7 +133,7 @@ class SubscriptionTypeForm extends Form {
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->readUserVars(array('name', 'description', 'cost', 'currency', 'duration', 'format', 'institutional', 'membership', 'no_public_display'));
+		$this->readUserVars(array('name', 'description', 'cost', 'currency', 'duration', 'format', 'institutional', 'membership', 'disable_public_display'));
 	}
 
 	/**
@@ -160,7 +160,7 @@ class SubscriptionTypeForm extends Form {
 		$subscriptionType->setFormat($this->getData('format'));
 		$subscriptionType->setInstitutional($this->getData('institutional') == null ? 0 : $this->getData('institutional'));
 		$subscriptionType->setMembership($this->getData('membership') == null ? 0 : $this->getData('membership'));
-		$subscriptionType->setNoPublicDisplay($this->getData('no_public_display') == null ? 0 : $this->getData('no_public_display'));
+		$subscriptionType->setDisablePublicDisplay($this->getData('disable_public_display') == null ? 0 : $this->getData('disable_public_display'));
 
 		// Update or insert subscription type
 		if ($subscriptionType->getTypeId() != null) {

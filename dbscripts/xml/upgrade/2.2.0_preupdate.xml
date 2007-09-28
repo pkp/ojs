@@ -26,14 +26,14 @@
 	<sql>
 		<!-- Syntax for MySQL. -->
 		<query driver="mysql">
-			ALTER TABLE subscription_types CHANGE COLUMN pub no_public_display TINYINT NOT NULL
+			ALTER TABLE subscription_types CHANGE COLUMN pub disable_public_display TINYINT NOT NULL
 		</query>
 	</sql>
 
 	<sql>
 		<!-- Syntax for PostgreSQL. -->
 		<query driver="postgres7">
-			ALTER TABLE subscription_types RENAME COLUMN pub TO no_public_display 
+			ALTER TABLE subscription_types RENAME COLUMN pub TO disable_public_display 
 		</query>
 	</sql>
 

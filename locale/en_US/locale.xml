@@ -1464,7 +1464,7 @@ You may optionally provide the user with a reason for disabling their account.</
 	<message key="manager.subscriptionTypes.form.format">Format</message>
 	<message key="manager.subscriptionTypes.form.institutional">Subscribers should be validated via domain or IP authentication.</message>
 	<message key="manager.subscriptionTypes.form.membership">Subscribers must be members of an association or organization.</message>
-	<message key="manager.subscriptionTypes.form.public">This subscription type will not appear under Subscriptions in About the Journal.</message>
+	<message key="manager.subscriptionTypes.form.public">This subscription type will not be publicly visible (e.g., under Subscriptions in About the Journal).</message>
 	<message key="manager.subscriptionTypes.form.saveAndCreateAnotherType">Save and Create Another</message>
 	<message key="manager.subscriptionTypes.format.online">Online</message>
 	<message key="manager.subscriptionTypes.format.print">Print</message>

@@ -120,9 +120,9 @@ class SubscriptionTypeDAO extends DAO {
 	 * @param $typeId int
 	 * @return int
 	 */
-	function getSubscriptionTypeNoPublicDisplay($typeId) {
+	function getSubscriptionTypeDisablePublicDisplay($typeId) {
 		$result = &$this->retrieve(
-			'SELECT no_public_display FROM subscription_types WHERE type_id = ?', $typeId
+			'SELECT disable_public_display FROM subscription_types WHERE type_id = ?', $typeId
 		);
 
 		$returner = isset($result->fields[0]) ? $result->fields[0] : false;
@@ -173,7 +173,7 @@ class SubscriptionTypeDAO extends DAO {
 		$subscriptionType->setFormat($row['format']);
 		$subscriptionType->setInstitutional($row['institutional']);
 		$subscriptionType->setMembership($row['membership']);
-		$subscriptionType->setNoPublicDisplay($row['no_public_display']);
+		$subscriptionType->setDisablePublicDisplay($row['disable_public_display']);
 		$subscriptionType->setSequence($row['seq']);
 
 		$this->getDataObjectSettings('subscription_type_settings', 'type_id', $row['type_id'], $subscriptionType);
@@ -209,7 +209,7 @@ class SubscriptionTypeDAO extends DAO {
 	function insertSubscriptionType(&$subscriptionType) {
 		$this->update(
 			'INSERT INTO subscription_types
-				(journal_id, cost, currency_code_alpha, duration, format, institutional, membership, no_public_display, seq)
+				(journal_id, cost, currency_code_alpha, duration, format, institutional, membership, disable_public_display, seq)
 				VALUES
 				(?, ?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
@@ -220,7 +220,7 @@ class SubscriptionTypeDAO extends DAO {
 				$subscriptionType->getFormat(),
 				$subscriptionType->getInstitutional(),
 				$subscriptionType->getMembership(),
-				$subscriptionType->getNoPublicDisplay(),
+				$subscriptionType->getDisablePublicDisplay(),
 				$subscriptionType->getSequence()
 			)
 		);
@@ -246,7 +246,7 @@ class SubscriptionTypeDAO extends DAO {
 					format = ?,
 					institutional = ?,
 					membership = ?,
-					no_public_display = ?,
+					disable_public_display = ?,
 					seq = ?
 				WHERE type_id = ?',
 			array(
@@ -257,7 +257,7 @@ class SubscriptionTypeDAO extends DAO {
 				$subscriptionType->getFormat(),
 				$subscriptionType->getInstitutional(),
 				$subscriptionType->getMembership(),
-				$subscriptionType->getNoPublicDisplay(),
+				$subscriptionType->getDisablePublicDisplay(),
 				$subscriptionType->getSequence(),
 				$subscriptionType->getTypeId()
 			)

@@ -1879,7 +1879,7 @@
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
 		</field>
-		<field name="no_public_display" type="I1">
+		<field name="disable_public_display" type="I1">
 			<NOTNULL/>
 		</field>
 		<field name="seq" type="F">
