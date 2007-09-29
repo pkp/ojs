@@ -2036,7 +2036,7 @@
 		</field>
 		<field name="user_id" type="I8" />
 		<field name="assoc_id" type="I8" />
-		<field name="cost" type="F">
+		<field name="amount" type="F">
 			<NOTNULL/>
 		</field>		
 		<field name="currency_code_alpha" type="C2" size="3" />
