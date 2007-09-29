@@ -953,6 +953,9 @@ class SectionEditorSubmission extends Article {
 				strtotime($this->getCopyeditorDateAcknowledged()) : 0;
 			$dateLastCopyeditor = max($dateCopyeditorNotified, $dateCopyeditorUnderway);
 
+			// If the Copyeditor has not been notified, highlight.
+			if (!$dateCopyeditorNotified) return $highlightClass;
+
 			// Check if the copyeditor is overdue on round 1
 			if (	$dateLastCopyeditor &&
 				!$dateCopyeditorCompleted &&
@@ -973,6 +976,9 @@ class SectionEditorSubmission extends Article {
 				strtotime($this->getCopyeditorDateAuthorAcknowledged()) : 0;
 			$dateLastCopyeditorAuthor = max($dateCopyeditorAuthorNotified, $dateCopyeditorAuthorUnderway);
 
+			// Check if round 2 is awaiting notification.
+			if ($dateCopyeditorAcknowledged && !$dateCopyeditorAuthorNotified) return $highlightClass;
+
 			// Check if acknowledgement is overdue for CE round 2
 			if ($dateCopyeditorAuthorCompleted && !$dateCopyeditorAuthorAcknowledged) return $highlightClass;
 
@@ -990,6 +996,9 @@ class SectionEditorSubmission extends Article {
 			$dateCopyeditorFinalCompleted = $this->getCopyeditorDateFinalCompleted() ?
 				strtotime($this->getCopyeditorDateFinalCompleted()) : 0;
 			$dateLastCopyeditorFinal = max($dateCopyeditorFinalNotified, $dateCopyeditorUnderway);
+
+			// Check if round 3 is awaiting notification.
+			if ($dateCopyeditorAuthorAcknowledged && !$dateCopyeditorFinalNotified) return $highlightClass;
 
 			// Check if copyeditor is overdue on round 3
 			if (	$dateLastCopyeditorFinal &&
@@ -1012,6 +1021,9 @@ class SectionEditorSubmission extends Article {
 			$dateLayoutAcknowledged = $layoutAssignment->getDateAcknowledged() ?
 				strtotime($layoutAssignment->getDateAcknowledged()) : 0;
 			$dateLastLayout = max($dateLayoutNotified, $dateLayoutUnderway);
+
+			// Check if Layout Editor needs to be notified.
+			if ($dateLastCopyeditorFinal && !$dateLayoutNotified) return $highlightClass;
 
 			// Check if layout editor is overdue
 			if (	$dateLastLayout &&
@@ -1036,6 +1048,9 @@ class SectionEditorSubmission extends Article {
 				strtotime($proofAssignment->getDateAuthorAcknowledged()) : 0;
 			$dateLastAuthor = max($dateAuthorNotified, $dateAuthorUnderway);
 
+			// Check if the author is awaiting proofreading notification.
+			if ($dateLayoutAcknowledged && !$dateAuthorNotified) return $highlightClass;
+
 			// Check if the author is overdue on round 1 of proofreading
 			if (	$dateLastAuthor &&
 				!$dateAuthorCompleted &&
@@ -1056,6 +1071,9 @@ class SectionEditorSubmission extends Article {
 				strtotime($proofAssignment->getDateProofreaderAcknowledged()) : 0;
 			$dateLastProofreader = max($dateProofreaderNotified, $dateProofreaderUnderway);
 
+			// Check if the proofreader is awaiting notification.
+			if ($dateAuthorAcknowledged && !$dateProofreaderNotified) return $highlightClass;
+
 			// Check if acknowledgement is overdue for proofreading round 2
 			if ($dateProofreaderCompleted && !$dateProofreaderAcknowledged) return $highlightClass;
 
@@ -1073,6 +1091,9 @@ class SectionEditorSubmission extends Article {
 			$dateLayoutEditorCompleted = $proofAssignment->getDateLayoutEditorCompleted() ?
 				strtotime($proofAssignment->getDateLayoutEditorCompleted()) : 0;
 			$dateLastLayoutEditor = max($dateLayoutEditorNotified, $dateCopyeditorUnderway);
+
+			// Check if the layout editor is awaiting notification.
+			if ($dateProofreaderAcknowledged && !$dateLayoutEditorNotified) return $highlightClass;
 
 			// Check if proofreader is overdue on round 3 of proofreading
 			if (	$dateLastLayoutEditor &&

@@ -37,7 +37,7 @@ function moveAuthor(dir, authorIndex) {
 {if count($formLocales) > 1}
 <table width="100%" class="data">
 	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="formLocale" required="true" key="common.language"}</td>
+		<td width="20%" class="label">{fieldLabel name="formLocale" key="form.formLanguage"}</td>
 		<td width="80%" class="value">
 			{url|assign:"submitFormUrl" op="submit" path="2" articleId=$articleId}
 			{* Maintain localized author info across requests *}
@@ -52,6 +52,7 @@ function moveAuthor(dir, authorIndex) {
 				{/foreach}
 			{/foreach}
 			{form_language_chooser form="submit" url=$submitFormUrl}
+			<span class="instruct">{translate key="form.formLanguage.description"}</span>
 		</td>
 	</tr>
 </table>

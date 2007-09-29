@@ -166,6 +166,8 @@
 	<message key="form.submit">Submit</message>
 	<message key="form.send">Send</message>
 	<message key="form.resubmit">Resubmit</message>
+	<message key="form.formLanguage">Form Language</message>
+	<message key="form.formLanguage.description">To enter the information below in additional languages, first select the language.</message>
 	
 	<!-- Common Email Messages -->
 	<message key="email.email">Email</message>

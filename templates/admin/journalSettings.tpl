@@ -43,10 +43,11 @@ function doSubmit() {
 <table class="data" width="100%">
 {if count($formLocales) > 1}
 	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="formLocale" required="true" key="common.language"}</td>
+		<td width="20%" class="label">{fieldLabel name="formLocale" key="form.formLanguage"}</td>
 		<td width="80%" class="value">
 			{url|assign:"settingsUrl" op="editJournal" path=$journalId}
 			{form_language_chooser form="journal" url=$settingsUrl}
+			<span class="instruct">{translate key="form.formLanguage.description"}</span>
 		</td>
 	</tr>
 {/if}

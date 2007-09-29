@@ -28,8 +28,6 @@ class CmsPlugin extends GenericPlugin {
 
 	function getDescription() {
 		$description = Locale::translate('plugins.generic.cms.description');
-		if ( !$this->isLayoutManagerInstalled() )
-			$description .= "<br />".Locale::translate('plugins.generic.cms.requirement.layoutmanager');
 		if ( !$this->isTinyMCEInstalled() )
 			$description .= "<br />".Locale::translate('plugins.generic.cms.requirement.tinymce');
 		return $description;
@@ -40,14 +38,6 @@ class CmsPlugin extends GenericPlugin {
 
 		if ( $tinyMCEPlugin ) 
 			return $tinyMCEPlugin->getEnabled();
-
-		return false;
-	}
-
-	function isLayoutManagerInstalled() {
-		$layoutManagerPlugin = &PluginRegistry::getPlugin('generic', 'LayoutManager');
-		if ( $layoutManagerPlugin ) 
-			return  $layoutManagerPlugin->getEnabled();
 
 		return false;
 	}
@@ -142,9 +132,6 @@ class CmsPlugin extends GenericPlugin {
 	 * Display verbs for the management interface.
 	 */
 	function getManagementVerbs() {
-		if ( !$this->isLayoutManagerInstalled() )
-			return array();
-
 		$verbs = array();
 		if ($this->getEnabled()) {
 			$verbs[] = array(

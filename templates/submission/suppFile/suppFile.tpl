@@ -24,12 +24,13 @@
 {if count($formLocales) > 1}
 <table width="100%" class="data">
 	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="formLocale" required="true" key="common.language"}</td>
+		<td width="20%" class="label">{fieldLabel name="formLocale" key="form.formLanguage"}</td>
 		<td width="80%" class="value">
 			{if $suppFileId}{url|assign:"formUrl" op="editSuppFile" path=$articleId|to_array:$suppFileId from=$from}
 			{else}{url|assign:"formUrl" op="addSuppFile" path=$articleId from=$from}
 			{/if}
 			{form_language_chooser form="suppFile" url=$formUrl}
+			<span class="instruct">{translate key="form.formLanguage.description"}</span>
 		</td>
 	</tr>
 </table>

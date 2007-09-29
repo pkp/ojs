@@ -42,12 +42,13 @@ function removeSectionEditor(editorId) {
 <table class="data" width="100%">
 {if count($formLocales) > 1}
 	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="formLocale" required="true" key="common.language"}</td>
+		<td width="20%" class="label">{fieldLabel name="formLocale" key="form.formLanguage"}</td>
 		<td width="80%" class="value">
 			{if $sectionId}{url|assign:"sectionFormUrl" op="editSection" path=$sectionId}
 			{else}{url|assign:"sectionFormUrl" op="createSection" path=$sectionId}
 			{/if}
 			{form_language_chooser form="section" url=$sectionFormUrl}
+			<span class="instruct">{translate key="form.formLanguage.description"}</span>
 		</td>
 	</tr>
 {/if}

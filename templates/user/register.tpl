@@ -38,10 +38,11 @@
 <table class="data" width="100%">
 {if count($formLocales) > 1 && !$existingUser}
 	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="formLocale" required="true" key="common.language"}</td>
+		<td width="20%" class="label">{fieldLabel name="formLocale" key="form.formLanguage"}</td>
 		<td width="80%" class="value">
 			{url|assign:"userRegisterUrl" page="user" op="register"}
 			{form_language_chooser form="register" url=$userRegisterUrl}
+			<span class="instruct">{translate key="form.formLanguage.description"}</span>
 		</td>
 	</tr>
 {/if}

@@ -30,12 +30,13 @@
 <table class="data" width="100%">
 {if count($formLocales) > 1}
 	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="formLocale" required="true" key="common.language"}</td>
+		<td width="20%" class="label">{fieldLabel name="formLocale" key="form.formLanguage"}</td>
 		<td width="80%" class="value">
 			{if $group}{url|assign:"groupFormUrl" op="editGroup" path=$group->getGroupId()}
 			{else}{url|assign:"groupFormUrl" op="createGroup"}
 			{/if}
 			{form_language_chooser form="groupForm" url=$groupFormUrl}
+			<span class="instruct">{translate key="form.formLanguage.description"}</span>
 		</td>
 	</tr>
 {/if}
