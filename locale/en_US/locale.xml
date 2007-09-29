@@ -646,7 +646,7 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	
 	<!-- Languages -->
 	<message key="admin.languages.languageSettings">Language Settings</message>
-	<message key="admin.languages.installLanguages">Install Languages</message>
+	<message key="admin.languages.installLanguages">Manage Locales</message>
 	<message key="admin.languages.primaryLocaleInstructions">This will be the default language for the site and any hosted journals.</message>
 	<message key="admin.languages.supportedLocalesInstructions">Select all locales to support on the site. The selected locales will be available for use by all journals hosted on the site, and also appear in a language select menu to appear on each site page (which can be overridden on journal-specific pages). If multiple locales are not selected, the language toggle menu will not appear and extended language settings will not be available to journals.</message>
 	<message key="admin.languages.installedLocales">Installed Locales</message>
