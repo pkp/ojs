@@ -16,39 +16,55 @@
 import('classes.plugins.GenericPlugin');
 
 class CmsRssPlugin extends GenericPlugin {
-
+	/**
+	 * Get the symbolic name of this plugin
+	 * @return string
+	 */
 	function getName() {
 		return 'CmsRssPlugin';
 	}
 
+	/**
+	 * Get the display name of this plugin
+	 * @return string
+	 */
 	function getDisplayName() {
 		return Locale::translate('plugins.generic.cmsrss.displayName');
-	} 		
+	}
 
+	/**
+	 * Get the description of this plugin
+	 * @return string
+	 */
 	function getDescription() {
-		$description = Locale::translate('plugins.generic.cmsrss.description'); 
+		$description = Locale::translate('plugins.generic.cmsrss.description');
 		if ( !$this->isCmsInstalled() )
 			$description .= "<br />".Locale::translate('plugins.generic.cmsrss.requirement.cms');
 		return $description;
 	}
 
+	/**
+	 * Get the CMS plugin object
+	 * @return object
+	 */
+	function &getCmsPlugin() {
+		$plugin =& PluginRegistry::getPlugin('generic', 'CmsPlugin');
+		return $plugin;
+	}
+
+	/**
+	 * Determine whether or not the CMS plugin is properly installed
+	 */
 	function isCmsInstalled() {
-		$cmsPlugin = &PluginRegistry::getPlugin('generic', 'CmsPlugin');
-
-		if ( $cmsPlugin ) 
-			return $cmsPlugin->getEnabled();
-
-		return false;
+		$plugin =& $this->getCmsPlugin();
+		return ($plugin && $plugin->getEnabled());
 	}
 
 	function register($category, $path) {
 		if (!Config::getVar('general', 'installed')) return false;
-		if (parent::register($category, $path)) {		
-			$this->addLocaleData();			
-
-			HookRegistry::register( 'Plugins::CmsHandler', array(&$this, 'callbackAddRssFeeds') );			 
-
-
+		if (parent::register($category, $path)) {
+			$this->addLocaleData();
+			HookRegistry::register('Plugins::CmsHandler', array(&$this, 'callbackAddRssFeeds'));
 			return true;
 		}
 		return false;
@@ -69,7 +85,7 @@ class CmsRssPlugin extends GenericPlugin {
 
 			$this->import('SimplePie');
 
-			$urls = $this->getSetting($journalId, 'urls'); 
+			$urls = $this->getSetting($journalId, 'urls');
 
 
 			$months = $this->getSetting($journalId, 'months');
@@ -80,12 +96,12 @@ class CmsRssPlugin extends GenericPlugin {
 				$webSafe = array();
 				foreach ( explode(":", $feedInfo['pageName']) as $pageName ) {
 					$webSafe[] = ContentManager::websafe($pageName) ;
-				}	
+				}
 				$webSafe = implode(":", $webSafe);
 
 				// skip all the ones that wont go on this page
-				if ( strcmp($webSafe, $current) != 0) 
-					continue;		
+				if ( strcmp($webSafe, $current) != 0)
+					continue;
 
 				$feed = new SimplePie();
 				$feed->feed_url($feedInfo['url']);
@@ -99,7 +115,7 @@ class CmsRssPlugin extends GenericPlugin {
 					for ($x = 0; $x < $max; $x++) {
 						$item = $feed->get_item($x);
 
-						$templateMgr->assign('item', $item);	
+						$templateMgr->assign('item', $item);
 
 						$items[$item->get_date('U')] = trim($templateMgr->fetch($this->getTemplatePath().'rss.tpl'));
 					}
@@ -112,12 +128,12 @@ class CmsRssPlugin extends GenericPlugin {
 
 
 				foreach ( $items as $time => $post) {
-					if ( $months > 0 ) {		
+					if ( $months > 0 ) {
 						if ( $time > strtotime("-".$months." month") ) {
 							$output .= $post;
 						}
 					} else {
-						$output .= $post;	
+						$output .= $post;
 					}
 				}
 			}
@@ -127,7 +143,6 @@ class CmsRssPlugin extends GenericPlugin {
 
 		return false;
 	}
-
 
 	/**
 	 * Determine whether or not this plugin is enabled.
@@ -147,7 +162,7 @@ class CmsRssPlugin extends GenericPlugin {
 			$this->updateSetting($journal->getJournalId(), 'enabled', $enabled ? true : false);
 
 			return true;
-		}	
+		}
 		return false;
 	}
 
@@ -158,21 +173,21 @@ class CmsRssPlugin extends GenericPlugin {
 		if ( !$this->isCmsInstalled() )
 			return array();
 
-		$verbs = array();			
+		$verbs = array();
 		if ($this->getEnabled()) {
 			$verbs[] = array(
 				'disable',
 				Locale::translate('manager.plugins.disable')
 			);
 			$verbs[] = array(
-				'settings', 
+				'settings',
 				Locale::translate('manager.plugins.cmsrss.edit')
-			);					
+			);
 		} else {
 			$verbs[] = array(
 				'enable',
 				Locale::translate('manager.plugins.enable')
-			);	
+			);
 		}
 		return $verbs;
 	}
@@ -200,7 +215,8 @@ class CmsRssPlugin extends GenericPlugin {
 		);
 
 		$templateMgr->assign('pageHierarchy', $pageCrumbs);
-	}	
+	}
+
 	/**
 	 * Perform management functions
 	 */
@@ -244,19 +260,19 @@ class CmsRssPlugin extends GenericPlugin {
 
 				} else if ( Request::getUserVar('save') ) {
 					$editData = true;
-					$form->execute(); 
-				} else {					
+					$form->execute();
+				} else {
 					$form->initData();
 				}
 
 				if ( !isset($editData) && $form->validate()) {
 					$form->execute();
-					$form->display();	
+					$form->display();
 				} else {
 					$form->display();
 				}
 				$returner = true;
-				break;			
+				break;
 			case 'enable':
 				$this->setEnabled(true);
 				$returner = false;
@@ -264,11 +280,11 @@ class CmsRssPlugin extends GenericPlugin {
 			case 'disable':
 				$this->setEnabled(false);
 				$returner = false;
-				break;	
+				break;
 		}
 
-		return $returner;		
+		return $returner;
 	}
-
 }
+
 ?>

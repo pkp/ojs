@@ -10,7 +10,7 @@
  * @class CmsRssSettingsForm
  *
  * Form for journal managers to add the RSS feeds to aggregate
- * 
+ *
  */
 
 import('form.Form');
@@ -37,9 +37,8 @@ class CmsRssSettingsForm extends Form {
 		$this->plugin =& $plugin;
 
 		$this->addCheck(new FormValidatorArray($this, 'urls', 'required', 'plugins.generic.cmsrss.requiredFields', array('pageName', 'url')));
-		$this->addCheck(new FormValidatorCustom($this, 'months', 'required', 'plugins.generic.cmsrss.monthsRequired', create_function('$months', 'return is_numeric($months) && $months >= 0;')));				
+		$this->addCheck(new FormValidatorCustom($this, 'months', 'required', 'plugins.generic.cmsrss.monthsRequired', create_function('$months', 'return is_numeric($months) && $months >= 0;')));
 	}
-
 
 	/**
 	 * Initialize form data from  the plugin settings to the form
@@ -70,9 +69,6 @@ class CmsRssSettingsForm extends Form {
 		}
 		$this->setData('months', $months);
 		$this->setData('aggregate', $aggregate);
-
-
-
 	}
 
 	/**
@@ -83,10 +79,10 @@ class CmsRssSettingsForm extends Form {
 			array(
 				'months',
 				'aggregate',
-				'urls', 
+				'urls',
 				'deletedUrls'
-				)
-			);
+			)
+		);
 	}
 
 	/**
@@ -102,7 +98,7 @@ class CmsRssSettingsForm extends Form {
 
 		// Update urls
 		$plugin->updateSetting($journalId, 'urls', $urls);
-		$this->_data['urls'] = $urls;		
+		$this->_data['urls'] = $urls;
 		//update other settings
 		$plugin->updateSetting($journalId, 'months', $this->getData('months'));
 		$plugin->updateSetting($journalId, 'aggregate', $this->getData('aggregate'));
@@ -117,8 +113,8 @@ class CmsRssSettingsForm extends Form {
 		$b = $b['pageName'];
 
 		return strcmp($a, $b);
-
 	}
 
 }
+
 ?>
