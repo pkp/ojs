@@ -19,4 +19,5 @@ import('plugins.Plugin');
 class GenericPlugin extends Plugin {
 	// No additional functions for now.
 }
+
 ?>
