@@ -23,7 +23,7 @@ import('journal.Section');
 import('security.Role');
 import('subscription.Subscription');
 import('subscription.SubscriptionType');
-import('subscription.Currency');
+import('currency.Currency');
 import('article.Article');
 import('article.ArticleComment');
 import('article.ArticleFile');
@@ -568,15 +568,20 @@ class ImportOJS1 {
 				$tmpResult->Close();
 			}
 
+			// Get username and transliterate to ASCII
+			import('core.Transcoder');
+			$trans =& new Transcoder('UTF-8', 'ASCII', true);
+			$username = $trans->trans(Core::cleanVar($row['chUsername']));
+
 			// Check for existing user with this username
-			$user = $userDao->getUserByUsername(Core::cleanVar($row['chUsername']));
+			$user = $userDao->getUserByUsername($username);
 			$existingUser = ($user != null);
 
 			if (!isset($user)) {
 				// Create new user
 				$user = &new User();
-				$user->setUsername(Core::cleanVar($row['chUsername']));
-				$user->setPassword(Validation::encryptCredentials(Core::cleanVar($row['chUsername']), Core::cleanVar($row['chPassword'])));
+				$user->setUsername($username);
+				$user->setPassword(Validation::encryptCredentials($username, Core::cleanVar($row['chPassword'])));
 				$user->setFirstName(Core::cleanVar($row['chFirstName']));
 				$user->setMiddleName(Core::cleanVar($row['chMiddleInitial']));
 				$user->setInitials(Core::cleanVar($initials));
@@ -597,7 +602,7 @@ class ImportOJS1 {
 				$otherUser =& $userDao->getUserByEmail(Core::cleanVar($row['chEmail']));
 				if ($otherUser !== null) {
 					// User exists with this email -- munge it to make unique
-					$user->setEmail('ojs-' . Core::cleanVar($row['chUsername']) . '+' . Core::cleanVar($row['chEmail']));
+					$user->setEmail('ojs-' . $username . '+' . Core::cleanVar($row['chEmail']));
 					$this->conflicts[] = array(&$otherUser, &$user);
 				}
 				unset($otherUser);

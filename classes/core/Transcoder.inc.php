@@ -9,7 +9,7 @@
  * @package db
  * @class Transcoder
  *
- * "iconv"-based transcoder. NOTE: iconv may not always be available.
+ * Multi-class transcoder; uses mbstring and iconv if available, otherwise falls back to built-in classes
  *
  * $Id$
  */
@@ -17,11 +17,12 @@
 class Transcoder {
 	var $fromEncoding;
 	var $toEncoding;
-	var $translit = false;
+	var $translit;
 
-	function Transcoder($fromEncoding, $toEncoding) {
+	function Transcoder($fromEncoding, $toEncoding, $translit = false) {
 		$this->fromEncoding = $fromEncoding;
 		$this->toEncoding = $toEncoding;
+		$this->translit = $translit;
 	}
 
 	function trans($string) {
@@ -57,6 +58,10 @@ class Transcoder {
 		} elseif ($this->translit == true && $iconv) {
 			// use the iconv library to transliterate
 			return iconv($this->fromEncoding, $this->toEncoding . '//TRANSLIT', $string);
+
+		} elseif ($this->translit == true && $this->fromEncoding == "UTF-8" && $this->toEncoding == "ASCII") {
+			// transliterate using built-in mapping
+			return String::html2utf(String::html2ascii(String::utf2html($string)));
 
 		} elseif ($mbstring) {
 			// use the multibyte library to transcode (no transliteration)
