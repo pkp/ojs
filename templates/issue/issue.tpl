@@ -7,15 +7,15 @@
  * Issue
  *
  * $Id$
- *}
+ *} 
 {foreach name=sections from=$publishedArticles item=section key=sectionId}
 {if $section.title}<h4>{$section.title|escape}</h4>{/if}
 
 {foreach from=$section.articles item=article}
 <table width="100%">
 <tr valign="top">
-	<td width="75%">{$article->getArticleTitle()|strip_unsafe_html}</td>
-	<td align="right" width="25%">
+	<td width="70%">{$article->getArticleTitle()|strip_unsafe_html}</td>
+	<td align="right" width="30%">
 		{if $section.abstractsDisabled || $article->getArticleAbstract() == ""}
 			{assign var=hasAbstract value=0}
 		{else}
@@ -31,9 +31,25 @@
 		{if !$hasAccess || $hasAbstract}<a href="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)}" class="file">{if $hasAbstract}{translate key=article.abstract}{else}{translate key="article.details"}{/if}</a>{/if}
 
 		{if $hasAccess || $showGalleyLinks}
-		{foreach from=$article->getGalleys() item=galley name=galleyList}
-			<a href="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)|to_array:$galley->getGalleyId()}" class="file">{$galley->getGalleyLabel()|escape}</a>
-		{/foreach}
+			{if !$restrictOnlyPdf}
+				{foreach from=$article->getLocalizedGalleys() item=galley name=galleyList}
+					<a href="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)|to_array:$galley->getGalleyId()}" class="file">{$galley->getGalleyLabel()|escape}</a>
+				{/foreach}
+				{if $subscriptionRequired}
+					<img src="{$baseUrl}/templates/images/icons/fulltext_restricted_medium.png">
+				{else}
+					<img src="{$baseUrl}/templates/images/icons/fulltext_open_medium.png">
+				{/if}				
+			{else}
+				{foreach from=$article->getLocalizedGalleys() item=galley name=galleyList}
+					<a href="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)|to_array:$galley->getGalleyId()}" class="file">{$galley->getGalleyLabel()|escape}</a>
+					{if $galley->isPdfGalley()}	
+						<img src="{$baseUrl}/templates/images/icons/fulltext_restricted_medium.png">
+					{else}
+						<img src="{$baseUrl}/templates/images/icons/fulltext_open_medium.png">
+					{/if}
+				{/foreach}
+			{/if}			
 		{/if}
 	</td>
 </tr>

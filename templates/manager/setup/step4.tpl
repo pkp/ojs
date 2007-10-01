@@ -36,18 +36,10 @@
 			function toggleEnableSubscriptions(form) {
 				if (form.enableSubscriptions[0].checked) {
 					form.openAccessPolicy.disabled = false;
-					form.subscriptionName.disabled = true;
-					form.subscriptionEmail.disabled = true;
-					form.subscriptionPhone.disabled = true;
-					form.subscriptionFax.disabled = true;
-					form.subscriptionMailingAddress.disabled = true;
+					form.showGalleyLinks.disabled = true;
 				} else {
 					form.openAccessPolicy.disabled = true;
-					form.subscriptionName.disabled = false;
-					form.subscriptionEmail.disabled = false;
-					form.subscriptionPhone.disabled = false;
-					form.subscriptionFax.disabled = false;
-					form.subscriptionMailingAddress.disabled = false;
+					form.showGalleyLinks.disabled = false;
 				}
 			}
 		// -->
@@ -76,8 +68,15 @@
 		<td width="95%" class="value">
 			<label for="enableSubscriptions-1">{translate key="manager.setup.subscription"}</label>
 			<p><span class="instruct">{translate key="manager.setup.subscriptionDescription"}</span></p>
+			<table width="100%">
+				<tr>
+					<td width="5%"><input type="checkbox" name="showGalleyLinks" {if $showGalleyLinks} checked="checked"{/if} /></td>
+					<td width="95%"><label for="showGalleyLinks">{translate key="manager.setup.showGalleyLinksDescription"}</label></td>
+				</tr>	
+			</table>
 		</td>
 	</tr>
+
 </table>
 
 

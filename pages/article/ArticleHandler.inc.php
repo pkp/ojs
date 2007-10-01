@@ -153,13 +153,16 @@ class ArticleHandler extends Handler {
 			$templateMgr->assign('subscribedUser', IssueAction::subscribedUser($journal));
 			$templateMgr->assign('subscribedDomain', IssueAction::subscribedDomain($journal));
 
-			// This flag allows galley links to appear if payments are enabled and configured
+			$templateMgr->assign('showGalleyLinks', $journal->getSetting('showGalleyLinks'));
+
 			import('payment.ojs.OJSPaymentManager');
 			$paymentManager =& OJSPaymentManager::getManager();
-			if ( $paymentManager->payPerViewEnabled() ) {
-				$templateMgr->assign('showGalleyLinks', true);
+			if ( $paymentManager->onlyPdfEnabled() ) {
+				$templateMgr->assign('restrictOnlyPdf', true);
 			}
-
+			if ( $paymentManager->payPerViewEnabled() ) {
+				$templateMgr->assign('payPerViewEnabled', true);
+			}
 
 			// Increment the published article's abstract views count
 			if (!Request::isBot()) {
@@ -388,6 +391,7 @@ class ArticleHandler extends Handler {
 					// if payment information is enabled, 
 					import('payment.ojs.OJSPaymentManager');
 					$paymentManager =& OJSPaymentManager::getManager();
+
 					if ( $paymentManager->payPerViewEnabled() || $paymentManager->membershipEnabled() ) { 
 						/* if only pdf files are being restricted, then approve all non-pdf galleys
 						 * and continue checking if it is a pdf galley */

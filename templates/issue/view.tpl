@@ -9,6 +9,17 @@
  *
  * $Id$
  *}
+{if $subscriptionRequired && $showGalleyLinks}
+	<img src="{$baseUrl}/templates/images/icons/fulltext_open_medium.png">
+	{translate key="reader.openAccess"}&nbsp;
+	<img src="{$baseUrl}/templates/images/icons/fulltext_restricted_medium.png">
+	{if $payPerViewEnabled}
+		{translate key="reader.subscriptionOrFeeAccess"}
+	{else}
+		{translate key="reader.subscriptionAccess"}
+	{/if}
+<br />
+{/if}
 {if !$showToc && $issue}
 	{if $issueId}
 		{url|assign:"currentUrl" path=$issueId|to_array:"showToc"}

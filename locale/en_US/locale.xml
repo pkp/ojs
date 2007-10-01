@@ -578,6 +578,9 @@
 	<!-- Reader article view -->
 	<message key="reader.fullText">Full Text:</message>
 	<message key="reader.subscribersOnly">Subscribers Only</message>
+	<message key="reader.openAccess">Open Access</message>
+	<message key="reader.subscriptionAccess">Subscription Access</message>
+	<message key="reader.subscriptionOrFeeAccess">Subscription or Fee Access</message>
 
 	<!-- Reader Comments -->
 	<message key="comments.commentsOnArticle">Comments on this article</message>
@@ -1183,6 +1186,7 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.setup.openAccessPolicyDescription">Enter a statement on the journal's open access policy that will appear in About the Journal.</message>
 	<message key="manager.setup.subscription">The journal will require subscriptions to access some or all of its contents.</message>
 	<message key="manager.setup.subscriptionDescription">This requires the assignment of a Subscription Manager who has access to the subscription module, which includes additional open access, self-archiving, and email notification options.</message>
+	<message key="manager.setup.showGalleyLinksDescription">Always show galley links and indicate restricted access.</message>
 	<message key="manager.setup.announcements">Announcements</message>
 	<message key="manager.setup.announcementsDescription">Announcements may be published to inform readers of journal news and events. Published announcements will appear on the Announcements page.</message>
 	<message key="manager.setup.enableAnnouncements">Enable Journal Managers to add journal announcements.</message>

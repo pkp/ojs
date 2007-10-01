@@ -121,7 +121,7 @@ class OJSPaymentManager extends PaymentManager {
 	
 	function onlyPdfEnabled() {
 		$journal =& Request::getJournal();
-		return $this->isConfigured() && $journal->getSetting('onlyPdf') > 0;				
+		return $this->isConfigured() && $journal->getSetting('restrictOnlyPdf');				
 	}	
 		
 	function acceptSubscriptionPayments() {

@@ -70,8 +70,8 @@
 	<td class="value" width="30%"><input type="text" class="textField" name="payPerViewFee" id="payPerViewFee" size="10" value="{$payPerViewFee|escape}" /></td>
 </tr>
 <tr>
-	<td class="label" width="70%">{fieldLabel name="onlyPdf" key="manager.payment.settings.onlypdf"}</td>
-	<td class="value" width="30%"><input type="checkbox" name="onlyPdf" id="subscription" value="1"{if $onlyPdf} checked="checked"{/if} /></td>
+	<td class="label" width="70%">{fieldLabel name="restrictOnlyPdf" key="manager.payment.settings.onlypdf"}</td>
+	<td class="value" width="30%"><input type="checkbox" name="restrictOnlyPdf" id="restrictOnlyPdf" value="1"{if $restrictOnlyPdf} checked="checked"{/if} /></td>
 </tr>
 <tr>
 	<td class="label" width="70%">{fieldLabel name="acceptSubscriptionPayments" key="manager.payment.settings.acceptSubscriptionPayments"}</td>

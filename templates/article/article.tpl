@@ -63,7 +63,6 @@
 		{/foreach}
 	</ul>
 </div>
-
 <div id="breadcrumb">
 	<a href="{url page="index"}" target="_parent">{translate key="navigation.home"}</a> &gt;
 	{if $issue}<a href="{url page="issue" op="view" path=$issue->getBestIssueId($currentJournal)}" target="_parent">{$issue->getIssueIdentification(false,true)|escape}</a> &gt;{/if}
@@ -76,7 +75,17 @@
 		{$galley->getHTMLContents()}
 	{/if}
 {else}
-
+	{if $subscriptionRequired && $showGalleyLinks}
+		<img src="{$baseUrl}/templates/images/icons/fulltext_open_medium.png">
+		{translate key="reader.openAccess"}&nbsp;
+		<img src="{$baseUrl}/templates/images/icons/fulltext_restricted_medium.png">
+		{if $payPerViewEnabled}
+			{translate key="reader.subscriptionOrFeeAccess"}
+		{else}
+			{translate key="reader.subscriptionAccess"}
+		{/if}
+	<br />
+	{/if}
 	<h3>{$article->getArticleTitle()|strip_unsafe_html}</h3>
 	<div><i>{$article->getAuthorString()|escape}</i></div>
 	<br />
@@ -88,19 +97,37 @@
 	{/if}
 
 	{if (!$subscriptionRequired || $article->getAccessStatus() || $subscribedUser || $subscribedDomain)}
-		{assign var=galleys value=$article->getLocalizedGalleys()}
-		{if $galleys}
-			{translate key="reader.fullText"}
-			{foreach from=$galleys item=galley name=galleyList}
-				<a href="{url page="article" op="view" path=$articleId|to_array:$galley->getGalleyId()}" class="action" target="_parent">{$galley->getGalleyLabel()|escape}</a>
-			{/foreach}
-		{/if}
+		{assign var=hasAccess value=1}
 	{else}
-		{translate key="reader.fullText"}&nbsp;<a href="{url page="about" op="subscriptions"}">{translate key="reader.subscribersOnly"}</a>
+		{assign var=hasAccess value=0}
 	{/if}
-	{if $paymentButtonsTemplate }
-		{include file=$paymentButtonsTemplate orientation="vertical"}
-	{/if}	
+	{assign var=galleys value=$article->getLocalizedGalleys()}
+	{if $galleys}
+		{translate key="reader.fullText"}
+		{if $hasAccess || $showGalleyLinks}
+			{if !$restrictOnlyPdf}
+				{foreach from=$article->getLocalizedGalleys() item=galley name=galleyList}
+					<a href="{url page="article" op="view" path=$articleId|to_array:$galley->getGalleyId()}" class="action" target="_parent">{$galley->getGalleyLabel()|escape}</a>
+				{/foreach}
+				{if $subscriptionRequired}
+					<img src="{$baseUrl}/templates/images/icons/fulltext_restricted_medium.png">
+				{else}
+					<img src="{$baseUrl}/templates/images/icons/fulltext_open_medium.png">
+				{/if}				
+			{else}
+				{foreach from=$article->getLocalizedGalleys() item=galley name=galleyList}
+					<a href="{url page="article" op="view" path=$articleId|to_array:$galley->getGalleyId()}" class="action" target="_parent">{$galley->getGalleyLabel()|escape}</a>			
+					{if $galley->isPdfGalley()}	
+						<img src="{$baseUrl}/templates/images/icons/fulltext_restricted_medium.png">
+					{else}
+						<img src="{$baseUrl}/templates/images/icons/fulltext_open_medium.png">
+					{/if}
+				{/foreach}
+			{/if}		
+		{else}
+			&nbsp;<a href="{url page="about" op="subscriptions"}">{translate key="reader.subscribersOnly"}</a>
+		{/if}
+	{/if}
 {/if}
 
 {if $comments}

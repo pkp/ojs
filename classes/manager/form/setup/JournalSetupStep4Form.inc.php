@@ -47,6 +47,7 @@ class JournalSetupStep4Form extends JournalSetupForm {
 				'useProofreaders' => 'bool',
 				'proofInstructions' => 'string',
 				'enableSubscriptions' => 'bool',
+				'showGalleyLinks' => 'bool',
 				'openAccessPolicy' => 'string',
 				'enableAnnouncements' => 'bool',
 				'enableAnnouncementsHomepage' => 'bool',

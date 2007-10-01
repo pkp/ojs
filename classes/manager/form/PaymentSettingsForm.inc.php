@@ -41,7 +41,7 @@ class PaymentSettingsForm extends Form {
 							'fastTrackFee' => 'float', 
 						  	'payPerViewFee' => 'float', 
 							'membershipFee' => 'float', 
-							'onlyPdf' => 'bool', 
+							'restrictOnlyPdf' => 'bool', 
 						  	'acceptSubscriptionPayments' => 'bool',
 							'acceptDonationPayments' => 'bool'
 		);
@@ -96,7 +96,7 @@ class PaymentSettingsForm extends Form {
 									'fastTrackFee', 
 								  	'payPerViewFee', 
 									'membershipFee', 
-									'onlyPdf', 
+									'restrictOnlyPdf', 
 								  	'acceptSubscriptionPayments',
 									'acceptDonationPayments'
 								  ));

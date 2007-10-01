@@ -83,13 +83,17 @@ class IssueHandler extends Handler {
 			$templateMgr->assign('subscribedUser', IssueAction::subscribedUser($journal));
 			$templateMgr->assign('subscribedDomain', IssueAction::subscribedDomain($journal));
 			
-			// This flag allows galley links to appear if payments are enabled and configured
+			$templateMgr->assign('showGalleyLinks', $journal->getSetting('showGalleyLinks'));
+
 			import('payment.ojs.OJSPaymentManager');
 			$paymentManager =& OJSPaymentManager::getManager();
+			if ( $paymentManager->onlyPdfEnabled() ) {
+				$templateMgr->assign('restrictOnlyPdf', true);
+			}
 			if ( $paymentManager->payPerViewEnabled() ) {
-				$templateMgr->assign('showGalleyLinks', true);
+				$templateMgr->assign('payPerViewEnabled', true);
 			}			
-
+			
 		} else {
 			$issueCrumbTitle = Locale::translate('current.noCurrentIssue');
 			$issueHeadingTitle = Locale::translate('current.noCurrentIssue');
@@ -178,12 +182,13 @@ class IssueHandler extends Handler {
 			$templateMgr->assign('subscriptionRequired', IssueAction::subscriptionRequired($issue));
 			$templateMgr->assign('subscribedUser', IssueAction::subscribedUser($journal));
 			$templateMgr->assign('subscribedDomain', IssueAction::subscribedDomain($journal));
+			
+			$templateMgr->assign('showGalleyLinks', $journal->getSetting('showGalleyLinks'));
 
-			// This flag allows galley links to appear if payments are enabled and configured
 			import('payment.ojs.OJSPaymentManager');
 			$paymentManager =& OJSPaymentManager::getManager();
-			if ( $paymentManager->payPerViewEnabled()) {
-				$templateMgr->assign('subscribedUser', true);
+			if ( $paymentManager->onlyPdfEnabled() ) {
+				$templateMgr->assign('restrictOnlyPdf', true);
 			}
 
 		} else {
