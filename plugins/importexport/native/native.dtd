@@ -37,76 +37,67 @@
 		mime_type CDATA #REQUIRED>
 <!ENTITY % externalformat "href | embed">
 
-<!ELEMENT subject (#PCDATA)>
-<!ELEMENT description (#PCDATA)>
 
-<!ELEMENT open_access EMPTY>
-<!ELEMENT date_published (#PCDATA)>
-<!ELEMENT date_created (#PCDATA)>
 <!ELEMENT title (#PCDATA)>
-	<!-- Note that the locale attribute is currently only supported for
-	     article titles, article abstracts, and section titles. -->
 	<!ATTLIST title
 		locale CDATA #IMPLIED>
+<!ELEMENT description (#PCDATA)>
+	<!ATTLIST description
+		locale CDATA #IMPLIED>
+<!ELEMENT date_published (#PCDATA)>
+<!ELEMENT open_access EMPTY>
+<!ELEMENT sponsor (#PCDATA)>
+	<!ATTLIST sponsor
+		locale CDATA #IMPLIED>
+<!ELEMENT subject (#PCDATA)>
+	<!ATTLIST subject
+		locale CDATA #IMPLIED>
+		
+<!ELEMENT file (%externalformat;)>
+<!ELEMENT image (%externalformat;)>
 
 <!-- Issue-related elements -->
-<!ELEMENT issue (title, description?, volume?, number?, year?, cover?, date_published?, (access_date | open_access)?, section+)>
+<!ELEMENT issue (title+, description*, volume?, number?, year?, cover*, date_published?, (access_date | open_access)?, section+)>
 	<!ATTLIST issue
 		identification (title|num_vol_year|vol_year|year) "title"
 		published (true|false) "false"
 		current (true|false) "false"
 		public_id CDATA #IMPLIED>
-		
-<!ELEMENT cover (caption?, image?)>
-<!ELEMENT caption (#PCDATA)>
 <!ELEMENT volume (#PCDATA)>
 <!ELEMENT number (#PCDATA)>
 <!ELEMENT year (#PCDATA)>
 <!ELEMENT access_date (#PCDATA)>
 
+<!ELEMENT cover (caption?, image?)>
+	<!ATTLIST cover
+		locale CDATA #IMPLIED>
+<!ELEMENT caption (#PCDATA)>
+
 <!-- Section-related elements -->
-<!ELEMENT section (title+, abbrev*, article+)>
+<!ELEMENT section (title+, abbrev*, identify_type*, policy*, article+)>
 <!ELEMENT abbrev (#PCDATA)>
 	<!ATTLIST abbrev
+		locale CDATA #IMPLIED>
+<!ELEMENT identify_type (#PCDATA)>
+	<!ATTLIST identify_type
+		locale CDATA #IMPLIED>
+<!ELEMENT policy (#PCDATA)>
+	<!ATTLIST policy
 		locale CDATA #IMPLIED>
 
 
 <!--
   * Article-related elements
   * NOTES:
-  *  - Although this DTD supports unlimited titles and abstracts, OJS 2.x
-  *    supports a maximum of 3 of each. These must correspond to the journal's
+  *  - Locale attribute value must correspond to the journal's
   *    additional locales, if enabled, otherwise an error will be displayed.
   -->
-<!ELEMENT article (title+, abstract*, date_published, open_access?, author+, indexing?, pages?, (galley?, htmlgalley?)+, supplemental_file*)>
+<!ELEMENT article (title+, abstract*, indexing?, sponsor?, author+, pages?, date_published, open_access?, (galley?, htmlgalley?)+, supplemental_file*)>
 	<!ATTLIST article
 		public_id CDATA #IMPLIED
 		language CDATA "en">
 
-<!ELEMENT abstract (#PCDATA)>
-	<!ATTLIST abstract
-		locale CDATA #IMPLIED>
-
-<!ELEMENT pages (#PCDATA)>
-
-<!ELEMENT indexing (discipline?, type?, subject?, subject_class?, coverage?)>
-<!ELEMENT discipline (#PCDATA)>
-<!ELEMENT type (#PCDATA)>
-<!ELEMENT subject_class (#PCDATA)>
-
-<!ELEMENT coverage (geographical?, chronological?, sample?)>
-<!ELEMENT geographical (#PCDATA)>
-<!ELEMENT chronological (#PCDATA)>
-<!ELEMENT sample (#PCDATA)>
-
-<!ELEMENT firstname (#PCDATA)>
-<!ELEMENT middlename (#PCDATA)>
-<!ELEMENT lastname (#PCDATA)>
-<!ELEMENT affiliation (#PCDATA)>
-<!ELEMENT email (#PCDATA)>
-<!ELEMENT biography (#PCDATA)>
-
-<!ELEMENT author (firstname, middlename?, lastname, affiliation?, email, biography?)>
+<!ELEMENT author (first_name, middle_name?, last_name, affiliation?, country?, email, url?, competing_interests*, biography*)>
 	<!-- One author should be designated as the primary contact for this
 	     article. If no author is designated, the first author with an
 	     email address will be used; if multiple authors are designated, the
@@ -114,22 +105,70 @@
 	     have a valid email address if possible. -->
 	<!ATTLIST author
 		primary_contact (true|false) "false">
+<!ELEMENT firstname (#PCDATA)>
+<!ELEMENT middlename (#PCDATA)>
+<!ELEMENT lastname (#PCDATA)>
+<!ELEMENT affiliation (#PCDATA)>
+<!ELEMENT country (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT url (#PCDATA)>
+<!ELEMENT competing_interests (#PCDATA)>
+	<!ATTLIST biography
+		locale CDATA #IMPLIED>
+<!ELEMENT biography (#PCDATA)>
+	<!ATTLIST biography
+		locale CDATA #IMPLIED>
+		
+<!ELEMENT abstract (#PCDATA)>
+	<!ATTLIST abstract
+		locale CDATA #IMPLIED>
+<!ELEMENT pages (#PCDATA)>
+
+<!ELEMENT indexing (discipline*, type*, subject*, subject_class*, coverage?)>
+<!ELEMENT discipline (#PCDATA)>
+	<!ATTLIST discipline
+		locale CDATA #IMPLIED>
+<!ELEMENT type (#PCDATA)>
+	<!ATTLIST type
+		locale CDATA #IMPLIED>
+<!ELEMENT subject_class (#PCDATA)>
+	<!ATTLIST subject_class
+		locale CDATA #IMPLIED>
+<!ELEMENT coverage (geographical*, chronological*, sample*)>
+<!ELEMENT geographical (#PCDATA)>
+	<!ATTLIST geographical
+		locale CDATA #IMPLIED>
+<!ELEMENT chronological (#PCDATA)>
+	<!ATTLIST chronological
+		locale CDATA #IMPLIED>
+<!ELEMENT sample (#PCDATA)>
+	<!ATTLIST sample
+		locale CDATA #IMPLIED>
 
 <!ELEMENT label (#PCDATA)>
-<!ELEMENT file (%externalformat;)>
 <!ELEMENT stylesheet (%externalformat;)>
-<!ELEMENT image (%externalformat;)>
 
 <!ELEMENT galley (label, file)>
+	<!ATTLIST galley
+		locale CDATA #IMPLIED>
 <!ELEMENT htmlgalley (label, file, stylesheet?, image*)>
+	<!ATTLIST htmlgalley
+		locale CDATA #IMPLIED>
 
-<!ELEMENT supplemental_file (title, creator, subject?, type_other?, description?, publisher?, sponsor?, date_created?, source?, file)>
+<!ELEMENT supplemental_file (title+, creator*, subject*, type_other?, description*, publisher*, sponsor*, date_created?, source*, file)>
 	<!ATTLIST supplemental_file
 		type (research_instrument | research_materials | research_results | transcripts | data_analysis | data_set | source_text | other) "other"
 		language CDATA "en"
 		public_id CDATA #IMPLIED>
 <!ELEMENT creator (#PCDATA)>
+	<!ATTLIST creator
+		locale CDATA #IMPLIED>
 <!ELEMENT type_other (#PCDATA)>
 <!ELEMENT publisher (#PCDATA)>
-<!ELEMENT sponsor (#PCDATA)>
+	<!ATTLIST publisher
+		locale CDATA #IMPLIED>
+<!ELEMENT date_created (#PCDATA)>
 <!ELEMENT source (#PCDATA)>
+	<!ATTLIST source
+		locale CDATA #IMPLIED>
+

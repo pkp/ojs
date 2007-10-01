@@ -84,7 +84,7 @@
 	<td>6.</td>
 	<td>{translate key="rt.metadata.dublinCore.contributor"}</td>
 	<td>{translate key="rt.metadata.pkp.sponsors"}</td>
-	<td>{$article->getSponsor()|escape}</td>
+	<td>{$article->getArticleSponsor()|escape}</td>
 </tr>
 <tr><td colspan="4" class="separator">&nbsp;</td></tr>
 <tr valign="top">
@@ -98,14 +98,14 @@
 	<td>8.</td>
 	<td>{translate key="rt.metadata.dublinCore.type"}</td>
 	<td>{translate key="rt.metadata.pkp.genre"}</td>
-	<td>{if $section && $section->getIdentifyType()}{$section->getIdentifyType()|escape}{else}{translate key="rt.metadata.pkp.peerReviewed"}{/if}</td>
+	<td>{if $section && $section->getSectionIdentifyType()}{$section->getSectionIdentifyType()|escape}{else}{translate key="rt.metadata.pkp.peerReviewed"}{/if}</td>
 </tr>
 <tr><td colspan="4" class="separator">&nbsp;</td></tr>
 <tr valign="top">
 	<td>8.</td>
 	<td>{translate key="rt.metadata.dublinCore.type"}</td>
 	<td>{translate key="rt.metadata.pkp.type"}</td>
-	<td>{$article->getType()|escape}</td>
+	<td>{$article->getArticleType()|escape}</td>
 </tr>
 <tr><td colspan="4" class="separator">&nbsp;</td></tr>
 <tr valign="top">
@@ -157,7 +157,7 @@
 	<td>{translate key="rt.metadata.pkp.suppFiles"}</td>
 	<td>
 		{foreach from=$article->getSuppFiles() item=suppFile}
-			<a href="{url page="article" op="download" path=$articleId|to_array:$suppFile->getFileId()}">{$suppFile->getTitle()|escape}</a> ({$suppFile->getNiceFileSize()})<br />
+			<a href="{url page="article" op="download" path=$articleId|to_array:$suppFile->getFileId()}">{$suppFile->getSuppFileTitle()|escape}</a> ({$suppFile->getNiceFileSize()})<br />
 		{/foreach}
 	</td>
 </tr>
@@ -168,7 +168,7 @@
 	<td>{translate key="rt.metadata.dublinCore.coverage"}</td>
 	<td>{translate key="rt.metadata.pkp.coverage"}</td>
 	<td>
-		{if $article->getCoverageGeo()}{$article->getCoverageGeo()|escape}{assign var=notFirstItem value=1}{/if}{if $article->getCoverageChron()}{if $notFirstItem}, <br/>{/if}{$article->getCoverageChron()|escape}{assign var=notFirstItem value=1}{/if}{if $article->getCoverageSample()}{if $notFirstItem}, <br/>{/if}{$article->getCoverageSample()|escape}{assign var=notFirstItem value=1}{/if}
+		{if $article->getArticleCoverageGeo()}{$article->getArticleCoverageGeo()|escape}{assign var=notFirstItem value=1}{/if}{if $article->getArticleCoverageChron()}{if $notFirstItem}, <br/>{/if}{$article->getArticleCoverageChron()|escape}{assign var=notFirstItem value=1}{/if}{if $article->getArticleCoverageSample()}{if $notFirstItem}, <br/>{/if}{$article->getArticleCoverageSample()|escape}{assign var=notFirstItem value=1}{/if}
 	</td>
 </tr>
 <tr><td colspan="4" class="separator">&nbsp;</td></tr>
