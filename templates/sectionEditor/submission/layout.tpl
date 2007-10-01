@@ -167,3 +167,7 @@
 &nbsp;&nbsp;
 <a href="javascript:openHelp('{url op="instructions" path="layout"}')" class="action">{translate key="submission.layout.instructions"}</a>
 {/if}
+{if $currentJournal->getSetting('provideRefLinkInstructions')}
+&nbsp;&nbsp;
+<a href="javascript:openHelp('{url op="instructions" path="referenceLinking"}')" class="action">{translate key="submission.layout.referenceLinking"}</a>
+{/if}

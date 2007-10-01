@@ -80,7 +80,7 @@ class ArticleHTMLGalley extends ArticleGalley {
 		$paramArray = array(
 			'issueTitle' => $issue->getIssueIdentification(),
 			'journalTitle' => $journal->getJournalTitle(),
-			'siteTitle' => $site->getTitle(),
+			'siteTitle' => $site->getSiteTitle(),
 			'currentUrl' => Request::getRequestUrl()
 		);
 

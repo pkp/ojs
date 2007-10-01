@@ -182,7 +182,7 @@ class Action {
 	 *
 	 * @param $type string the type of instructions (copy, layout, or proof).
 	 */
-	function instructions($type, $allowed = array('copy', 'layout', 'proof')) {
+	function instructions($type, $allowed = array('copy', 'layout', 'proof', 'referenceLinking')) {
 		$journal = &Request::getJournal();
 		$templateMgr = &TemplateManager::getManager();
 
@@ -203,6 +203,11 @@ class Action {
 				case 'proof':
 					$title = 'submission.proofread.instructions';
 					$instructions = $journal->getLocalizedSetting('proofInstructions');
+					break;
+				case 'referenceLinking':
+					if (!$journal->getSetting('provideRefLinkInstructions')) return false;
+					$title = 'submission.layout.referenceLinking';
+					$instructions = $journal->getLocalizedSetting('refLinkInstructions');
 					break;
 				default:
 					return false;

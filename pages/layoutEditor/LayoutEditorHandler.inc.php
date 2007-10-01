@@ -203,7 +203,7 @@ class LayoutEditorHandler extends Handler {
 	 */
 	function instructions($args) {
 		import('submission.proofreader.ProofreaderAction');
-		if (!isset($args[0]) || !ProofreaderAction::instructions($args[0], array('layout', 'proof'))) {
+		if (!isset($args[0]) || !LayoutEditorAction::instructions($args[0], array('layout', 'proof', 'referenceLinking'))) {
 			Request::redirect(null, Request::getRequestedPage());
 		}
 	}

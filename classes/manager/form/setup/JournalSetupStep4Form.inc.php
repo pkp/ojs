@@ -44,6 +44,8 @@ class JournalSetupStep4Form extends JournalSetupForm {
 				'copyeditInstructions' => 'string',
 				'useLayoutEditors' => 'bool',
 				'layoutInstructions' => 'string',
+				'provideRefLinkInstructions' => 'bool',
+				'refLinkInstructions' => 'string',
 				'useProofreaders' => 'bool',
 				'proofInstructions' => 'string',
 				'enableSubscriptions' => 'bool',
@@ -68,7 +70,7 @@ class JournalSetupStep4Form extends JournalSetupForm {
 	 * @return array
 	 */
 	function getLocaleFieldNames() {
-		return array('pubFreqPolicy', 'copyeditInstructions', 'layoutInstructions', 'proofInstructions', 'openAccessPolicy', 'announcementsIntroduction');
+		return array('pubFreqPolicy', 'copyeditInstructions', 'layoutInstructions', 'refLinkInstructions', 'proofInstructions', 'openAccessPolicy', 'announcementsIntroduction');
 	}
 }
 

@@ -182,7 +182,9 @@ class AuthorSubmitStep2Form extends AuthorSubmitForm {
 				$author->setCountry($authors[$i]['country']);
 				$author->setEmail($authors[$i]['email']);
 				$author->setUrl($authors[$i]['url']);
-				$author->setCompetingInterests($authors[$i]['competingInterests'], null);
+				if (array_key_exists('competingInterests', $authors[$i])) {
+					$author->setCompetingInterests($authors[$i]['competingInterests'], null);
+				}
 				$author->setBiography($authors[$i]['biography'], null);
 				$author->setPrimaryContact($this->getData('primaryContact') == $i ? 1 : 0);
 				$author->setSequence($authors[$i]['seq']);

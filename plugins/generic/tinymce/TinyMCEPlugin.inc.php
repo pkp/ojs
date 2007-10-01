@@ -153,6 +153,7 @@ class TinyMCEPlugin extends GenericPlugin {
 						$fields[] = 'announcementsIntroduction';
 						$fields[] = 'copyeditInstructions';
 						$fields[] = 'layoutInstructions';
+						$fields[] = 'refLinkInstructions';
 						$fields[] = 'proofInstructions';
 						break;
 					case 5:

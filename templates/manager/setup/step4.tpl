@@ -368,6 +368,22 @@ function toggleRegAllowOpts(form) {
 	</tr>
 </table>
 
+<h4>{translate key="manager.setup.referenceLinking"}</h4>
+
+<p>{translate key="manager.setup.referenceLinkingDescription"}</p>
+
+<table width="100%" class="data">
+	<tr valign="top">
+		<td width="5%" class="label"><input type="checkbox" name="provideRefLinkInstructions" id="provideRefLinkInstructions" value="1"{if $provideRefLinkInstructions} checked="checked"{/if} /></td>
+		<td width="95%" class="value"><label for="provideRefLinkInstructions">{translate key="manager.setup.provideRefLinkInstructions"}</label></td>
+	</tr>
+</table>
+
+<p>
+	<h4>{translate key="manager.setup.refLinkInstructions.description"}</h4>
+	<textarea name="refLinkInstructions[{$formLocale|escape}]" id="refLinkInstructions" rows="12" cols="60" class="textArea">{$refLinkInstructions[$formLocale]|escape}</textarea>
+</p>
+
 <div class="separator"></div>
 
 

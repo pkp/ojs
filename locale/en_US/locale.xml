@@ -1080,8 +1080,8 @@ Authors who publish with this journal agree to the following terms:
 <h4>Proposed Policy for Journals That Offer Delayed Open Access</h4>
 Authors who publish with this journal agree to the following terms:
 <ol type="a">
-	<li>Authors retain copyright and grant the journal right of first publication, with the work [SPECIFY PERIOD OF TIME] after publication simultaneously licensed under a <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</a> that allows others to share the work with an acknowledgement of the work’s authorship and initial publication in this journal.</li>
-	 <li>Authors are able to enter into separate, additional contractual arrangements for the non-exclusive distribution of the journal’s published version of the work (e.g., post it to an institutional repository or publish it in a book), with an acknowledgement of its initial publication in this journal.</li>
+	<li>Authors retain copyright and grant the journal right of first publication, with the work [SPECIFY PERIOD OF TIME] after publication simultaneously licensed under a <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</a> that allows others to share the work with an acknowledgement of the work's authorship and initial publication in this journal.</li>
+	 <li>Authors are able to enter into separate, additional contractual arrangements for the non-exclusive distribution of the journal's published version of the work (e.g., post it to an institutional repository or publish it in a book), with an acknowledgement of its initial publication in this journal.</li>
 	 <li>Authors are permitted and encouraged to post their work online (e.g., in institutional repositories or on their website) prior to and during the submission process, as it can lead to productive exchanges, as well as earlier and greater citation of published work (See <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html"> The Effect of Open Access</a>).</li>
 </ol>]]></message>
 	<message key="manager.setup.authorCopyrightNoticeAgree">Require authors to agree to Copyright Notice as part of the submission process.</message>
@@ -1165,6 +1165,15 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.setup.layoutTemplatesDescription">Templates can be uploaded to appear in Layout for each of the standard formats published in the journal (e.g., article, book review, etc.) using any file format (e.g., pdf, doc, etc.) with annotations added specifying font, size, margins, etc. to serve as a guide for Layout Editors and Proofreaders.</message>
 	<message key="manager.setup.layoutTemplates.title">Title</message>
 	<message key="manager.setup.layoutTemplates.file">Template File</message>
+	<message key="manager.setup.referenceLinking">Reference Linking</message>
+	<message key="manager.setup.referenceLinkingDescription"><![CDATA[<p>To enable readers to locate online versions of the work cited by an author, the following options are avaiable.</p>
+
+<ol>
+	<li><strong>Add a Reading Tool</strong><p>The Journal Manager can add "Find References" to the Reading Tools that accompany published items, which enables readers to paste a reference's title and then search pre-selected scholarly databases for the cited work.</p></li>
+	<li><strong>Embed Links in the References</strong><p>The Layout Editor can add a link to references that can be found online by using the following instructions (which can be edited).</li>
+</ol>]]></message>
+	<message key="manager.setup.provideRefLinkInstructions">Provide Layout Editors with instructions.</message>
+	<message key="manager.setup.refLinkInstructions.description">Layout Instructions for Reference Linking</message>
 	<message key="manager.setup.proofreading">Proofreaders</message>
 	<message key="manager.setup.useProofreaders">A Proofreader will be assigned to check (along with the authors) the galleys prior to publication.</message>
 	<message key="manager.setup.noUseProofreaders">An Editor or Section Editor assigned to the submission will check the galleys.</message>
@@ -2019,6 +2028,7 @@ To upload a manuscript to this journal, complete the following steps.
 	<message key="submission.layout.galleyFormat">Galley Format</message>
 	<message key="submission.layout.viewProof">View Proof</message>
 	<message key="submission.layout.instructions">Layout Instructions</message>
+	<message key="submission.layout.referenceLinking">Reference Linking</message>
 	
 	
 	<!-- Submission Tracking - Proofread Specific -->
@@ -2699,7 +2709,7 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	-->
 	<message key="default.journalSettings.checklist.notPreviouslyPublished">The submission has not been previously published, nor is it before another journal for consideration (or an explanation has been provided in Comments to the Editor).</message>
 	<message key="default.journalSettings.checklist.fileFormat">The submission file is in Microsoft Word, RTF, or WordPerfect document file format.</message>
-	<message key="default.journalSettings.checklist.addressesLinked"><![CDATA[When available, the URLs to access references online are provided, including those for open access versions of the reference. The URLs are ready to click (e.g., <a href="http://pkp.sfu.ca">http://pkp.sfu.ca</a>).]]></message>
+	<message key="default.journalSettings.checklist.addressesLinked">Where available, URLs for the references have been provided.</message>
 	<message key="default.journalSettings.checklist.submissionAppearance">The text is single-spaced; uses a 12-point font; employs italics, rather than underlining (except with URL addresses); and all illustrations, figures, and tables are placed within the text at the appropriate points, rather than at the end.</message>
 	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[The text adheres to the stylistic and bibliographic requirements outlined in the <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Author Guidelines</a>, which is found in About the Journal.]]></message>
 	<message key="default.journalSettings.checklist.anonymous"><![CDATA[If submitting to a peer-reviewed section of the journal, the instructions in <a href="javascript:openHelp('{$indexUrl}/{$journalPath}/help/view/editorial/topic/000044')">Ensuring a Blind Review</a>) have been followed.]]></message>
@@ -2770,32 +2780,53 @@ After you are finished with your revisions, rename the file from AuthorNameQA.do
 &bull; [deleted word] indicates deletion of "completely"
 &bull; Comment contains a reply to the editors' QA]]></message>
 
-	<message key="default.journalSettings.proofingInstructions"><![CDATA[The proofreading stage is intended to catch any errors in the galley's spelling, grammar, and formatting. More substantial changes cannot be made at this stage, unless discussed with the Section Editor. In Layout, click on VIEW PROOF to see the HTML, PDF and other available file formats used in publishing this item. 
+	<message key="default.journalSettings.refLinkInstructions"><![CDATA[<h4>To Add Reference Linking to the Layout Process</h4>
+	<p>When turning a submission into HTML or PDF, make sure that all hyperlinks in the submission are active.</p>
+	<h4>A. When the Author Provides a Link with the Reference</h4>
+	<ol>
+	<li>While the submission is still in its word processing format (e.g., Word), add the phrase VIEW ITEM to the end of the reference that has a URL.</li>
+	<li>Turn that phrase into a hyperlink by highlighting it, and using Word's Insert Hyperlink tool and the URL prepared in #2.</li>
+	</ol>
+	<h4>B. Enabling Readers to Search Google Scholar For References</h4>
+	<ol>
+	<li>While the submission is still in its word processing format (e.g., Word), copy the title of the work referenced in the References list (if it appears to be too common a title – e.g., "Peace" – then copy author and title).</li>
+	<li>Paste the reference's title between the %22's, placing a + between each word: http://scholar.google.com/scholar?q=%22PASTE+TITLE+HERE%22&hl=en&lr=&btnG=Search</li>
+	<li>Add the phrase GS SEARCH to the end of each citation in the submission's References list.</li>
+	<li>Turn that phrase into a hyperlink by highlighting it, and using Word's Insert Hyperlink tool and the URL prepared in #2.</li>
+	</ol>
+	<h4>C. Enabling Readers to Search for References with a DOI</h4>
+	<ol>
+	<li>While the submission is still in Word, copy a batch of references into CrossRef Text Query http://www.crossref.org/freeTextQuery/</li>
+	<li>Paste each DOI that the Query provides in the following URL (between = and &): http://www.cmaj.ca/cgi/external_ref?access_num=PASTE DOI#HERE&link_type=DOI</li>
+	<li>Add the phrase CrossRef to the end of each citation in the submission's References list.</li>
+	<li>Turn that phrase into a hyperlink by highlighting the phrase and using Word's Insert Hyperlink tool and the appropriate URL prepared in #2.</li>
+	</ol>]]></message>
 
-<strong>For Spelling and Grammar Errors</strong>
+	<message key="default.journalSettings.proofingInstructions"><![CDATA[<p>The proofreading stage is intended to catch any errors in the galley's spelling, grammar, and formatting. More substantial changes cannot be made at this stage, unless discussed with the Section Editor. In Layout, click on VIEW PROOF to see the HTML, PDF and other available file formats used in publishing this item.</p>
+<h4>For Spelling and Grammar Errors</h4>
 
-Copy the problem word or groups of words and paste them into the Proofreading Corrections box with "CHANGE-TO" instructions to the editor as follows...
+<p>Copy the problem word or groups of words and paste them into the Proofreading Corrections box with "CHANGE-TO" instructions to the editor as follows...</p>
 
-1. CHANGE...
+<pre>1. CHANGE...
 then the others
 TO...
-than the others
-
-2. CHANGE...
+than the others</pre>
+<br />
+<pre>2. CHANGE...
 Malinowsky
 TO...
-Malinowski
+Malinowski</pre>
+<br />
 
+<h4>For Formatting Errors</h4>
 
-<strong>For Formatting Errors</strong>
-
-Describe the location and nature of the problem in the Proofreading Corrections box after typing in the title "FORMATTING" as follows...
-
-3. FORMATTING
-The numbers in Table 3 are not aligned in the third column.
-
-4. FORMATTING
-The paragraph that begins "This last topic..." is not indented.]]></message>
+<p>Describe the location and nature of the problem in the Proofreading Corrections box after typing in the title "FORMATTING" as follows...</p>
+<br />
+<pre>3. FORMATTING
+The numbers in Table 3 are not aligned in the third column.</pre>
+<br />
+<pre>4. FORMATTING
+The paragraph that begins "This last topic..." is not indented.</pre>]]></message>
 	<message key="default.journalSettings.emailSignature"><![CDATA[________________________________________________________________________
 {$journalName}
 {$indexUrl}/{$journalPath}

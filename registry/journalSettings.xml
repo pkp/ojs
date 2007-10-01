@@ -61,6 +61,10 @@
 		<value>{translate key="default.journalSettings.proofingInstructions"}</value>
 	</setting>
 	<setting type="string" locale="1">
+		<name>refLinkInstructions</name>
+		<value>{translate key="default.journalSettings.refLinkInstructions"}</value>
+	</setting>
+	<setting type="string" locale="1">
 		<name>readerInformation</name>
 		<value>{translate key="default.journalSettings.forReaders"}</value>
 	</setting>

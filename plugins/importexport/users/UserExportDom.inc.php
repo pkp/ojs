@@ -46,26 +46,32 @@ class UserExportDom {
 			XMLCustomWriter::createChildWithText($doc, $userNode, 'mailing_address', $user->getMailingAddress(), false);
 			XMLCustomWriter::createChildWithText($doc, $userNode, 'country', $user->getCountry(), false);
 			XMLCustomWriter::createChildWithText($doc, $userNode, 'discipline', $user->getDiscipline(), false);
-			foreach($user->getSignature(null) as $locale => $value) {
-				$signatureNode =& XMLCustomWriter::createChildWithText($doc, $userNode, 'signature', $value, false);
-				if ($interestsNode) {
-					XMLCustomWriter::setAttribute($interestsNode, 'locale', $locale);
+			if (is_array($user->getSignature(null))) {
+				foreach($user->getSignature(null) as $locale => $value) {
+					$signatureNode =& XMLCustomWriter::createChildWithText($doc, $userNode, 'signature', $value, false);
+					if ($interestsNode) {
+						XMLCustomWriter::setAttribute($interestsNode, 'locale', $locale);
+					}
+					unset($signatureNode);
 				}
-				unset($signatureNode);
 			}
-			foreach($user->getInterests(null) as $locale => $value) {
-				$interestsNode =& XMLCustomWriter::createChildWithText($doc, $userNode, 'interests', $value, false);
-				if ($interestsNode) {
-					XMLCustomWriter::setAttribute($interestsNode, 'locale', $locale);
+			if (is_array($user->getSignature(null))) {
+				foreach($user->getInterests(null) as $locale => $value) {
+					$interestsNode =& XMLCustomWriter::createChildWithText($doc, $userNode, 'interests', $value, false);
+					if ($interestsNode) {
+						XMLCustomWriter::setAttribute($interestsNode, 'locale', $locale);
+					}
+					unset($interestsNode);
 				}
-				unset($interestsNode);
 			}
-			foreach($user->getBiography(null) as $locale => $value) {
-				$biographyNode =& XMLCustomWriter::createChildWithText($doc, $userNode, 'biography', $value, false);
-				if ($biographyNode) {
-					XMLCustomWriter::setAttribute($biographyNode, 'locale', $locale);
+			if (is_array($user->getSignature(null))) {
+				foreach($user->getBiography(null) as $locale => $value) {
+					$biographyNode =& XMLCustomWriter::createChildWithText($doc, $userNode, 'biography', $value, false);
+					if ($biographyNode) {
+						XMLCustomWriter::setAttribute($biographyNode, 'locale', $locale);
+					}
+					unset($biographyNode);
 				}
-				unset($biographyNode);
 			}
 			XMLCustomWriter::createChildWithText($doc, $userNode, 'locales', join(':', $user->getLocales()), false);
 			$roles = &$roleDao->getRolesByUserId($user->getUserId(), $journal->getJournalId());

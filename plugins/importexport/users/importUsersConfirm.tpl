@@ -51,13 +51,13 @@
 	<tr valign="top">
 		<td>
 			<input type="checkbox" name="userKeys[]" value="{$userKey}" checked="checked" />
-			{foreach from=$user->getBiography(null) key=locale value=value}
+			{foreach from=$user->getBiography(null) key=locale item=value}
 				<input type="hidden" name="{$userKey}_biography[{$locale|escape}]" value="{$value|escape}" />
 			{/foreach}
-			{foreach from=$user->getSignature(null) key=locale value=value}
+			{foreach from=$user->getSignature(null) key=locale item=value}
 				<input type="hidden" name="{$userKey}_signature[{$locale|escape}]" value="{$value|escape}" />
 			{/foreach}
-			{foreach from=$user->getInterests(null) key=locale value=value}
+			{foreach from=$user->getInterests(null) key=locale item=value}
 				<input type="hidden" name="{$userKey}_interests[{$locale|escape}]" value="{$value|escape}" />
 			{/foreach}
 			{foreach name=locales from=$user->getLocales() item=locale}
