@@ -13,8 +13,8 @@
  * $Id$
  */
 
-require_once('FeedPlugin.inc.php');
+require_once('WebFeedPlugin.inc.php');
 
-return new FeedPlugin(); 
+return new WebFeedPlugin(); 
 
 ?> 

@@ -31,8 +31,8 @@
 		{if $publisherInstitution}
 		<dc:publisher>{$publisherInstitution|escape:"html"|strip|strip_tags}</dc:publisher>
 		{/if}
-		{if $journal->getLocale()}
-		<dc:language>{$journal->getLocale()|replace:'_':'-'|escape:"html"|strip|strip_tags}</dc:language>
+		{if $journal->getPrimaryLocale()}
+		<dc:language>{$journal->getPrimaryLocale()|replace:'_':'-'|escape:"html"|strip|strip_tags}</dc:language>
 		{/if}
 		<prism:publicationName>{$journal->getJournalTitle()|escape:"html"|strip|strip_tags}</prism:publicationName>
 

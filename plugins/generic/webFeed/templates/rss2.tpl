@@ -22,8 +22,8 @@
 		<description>{$description|strip|strip_tags|escape:"html"}</description>
 
 		{* optional elements *}
-	    {if $journal->getLocale()}
-	    <language>{$journal->getLocale()|replace:'_':'-'|strip|strip_tags|escape:"html"}</language>
+	    {if $journal->getPrimaryLocale()}
+	    <language>{$journal->getPrimaryLocale()|replace:'_':'-'|strip|strip_tags|escape:"html"}</language>
 	    {/if}
 	    {if $journal->getLocalizedSetting('copyrightNotice')}
 	    <copyright>{$journal->getLocalizedSetting('copyrightNotice')|strip|strip_tags|escape:"html"}</copyright>

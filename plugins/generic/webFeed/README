@@ -1,9 +1,9 @@
 ================================
 === OJS Web Feeds Plugin
-=== Version: 1.4
-=== Release date: April 30, 2007
+=== Version: $Id$
 === Author: MJ Suhonos <mj@robotninja.com>
-=== Contributions: Juan Alperin <juan@geeky.net>, Alf Eaton <alf@hubmed.org>
+=== Contributions: Juan Alperin <juan@geeky.net>, Alf Eaton <alf@hubmed.org>,
+===                Alec Smecher <alec@smecher.bc.ca>
 ================================
 
 About
@@ -16,7 +16,7 @@ This plugin is licensed under the GNU General Public License v2. See the file CO
 
 System Requirements
 -------------------
-Same requirements as the OJS 2.1.x core.
+Same requirements as the OJS 2.2 core.
 
 Installation
 ------------
