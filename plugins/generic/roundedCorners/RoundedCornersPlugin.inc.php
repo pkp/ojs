@@ -33,7 +33,11 @@ class RoundedCornersPlugin extends GenericPlugin {
 		if (!Config::getVar('general', 'installed')) return false;
 		if (parent::register($category, $path)) {	
 			if ( $this->getEnabled() ) {	
-				HookRegistry::register('TemplateManager::display',array(&$this, 'roundCorners')); 
+				$templateMgr =& TemplateManager::getManager();
+				$baseUrl = $templateMgr->get_template_vars('baseUrl');
+				$roundedCornerCssUrl = $baseUrl . '/plugins/generic/roundedCorners/roundedcorners.css';
+				$templateMgr->addStyleSheet($roundedCornerCssUrl);
+				$templateMgr->register_outputfilter(array(&$this, 'mainOutputFilter'));
 			}
 			$this->addLocaleData();
 			return true;
@@ -93,18 +97,6 @@ class RoundedCornersPlugin extends GenericPlugin {
 		return $returner;		
 	}
 
-	/**
-	 * Register the output filter and add the stylesheet
-	 */
-	function roundCorners( $hookName, $args) {
-		$templateMgr =& $args[0];
-
-		$baseUrl = $templateMgr->get_template_vars('baseUrl');
-		$roundedCornerCssUrl = $baseUrl . '/plugins/generic/roundedCorners/roundedcorners.css';
-		$templateMgr->addStyleSheet($roundedCornerCssUrl);
-		$templateMgr->register_outputfilter(array(&$this, 'mainOutputFilter'));
-	}
-
 	/** 
 	 * Do the work of adding in the <span> blocks
 	 */	
@@ -113,21 +105,17 @@ class RoundedCornersPlugin extends GenericPlugin {
 		$bottom = '</div><span class="rbottom"><span class="r4"></span><span class="r3"></span><span class="r2"></span><span class="r1"></span></span>';
 		$newOutput = $output;
 
-		$classes = array('block');
-		foreach ( $classes as $class ) {
-			$matches = $this->_getDivs($newOutput, $class);
-			if ( count($matches) > 0 ) {
-				foreach ($matches as $match) {	
-					if ( preg_match('/<div[^>]+class\=\"'.$class.'\"[^>]*>(\s*)(<\/div>[^<]*)$/', $match) > 0 ) continue;
+		$matches = $this->_getDivs($newOutput, 'block');
+		if (count($matches) > 0) {
+			foreach ($matches as $match) {	
+				if (preg_match('/<div[^>]+class\=\"block\"[^>]*>(\s*)(<\/div>[^<]*)$/', $match) > 0 ) continue;
 
-					$newBlock = preg_replace('/(<div[^>]+class\=\"'.$class.'\"[^>]*>)/is', "\\1$top", $match, PREG_OFFSET_CAPTURE);
-					$newBlock = preg_replace('/([^>]*)(<\/div>[^<]*)$/', "\\1$bottom\\2", $newBlock);
+				$newBlock = preg_replace('/(<div[^>]+class\=\"block\"[^>]*>)/is', "\\1$top", $match, PREG_OFFSET_CAPTURE);
+				$newBlock = preg_replace('/([^>]*)(<\/div>[^<]*)$/', "\\1$bottom\\2", $newBlock);
 
-					$newOutput = str_replace($match, $newBlock, $newOutput);
-				}
+				$newOutput = str_replace($match, $newBlock, $newOutput) . "HERE";
 			}
 		}
-		$smarty->unregister_outputfilter('mainOutputFilter');
 
 		return $newOutput;
 	}

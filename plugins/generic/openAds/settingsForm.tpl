@@ -4,25 +4,25 @@
  * Copyright (c) 2003-2007 Siavash Miri and Alec Smecher
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * phpAdsNew plugin settings
+ * openAds plugin settings
  *
  * $Id$
  *}
-{assign var="pageTitle" value="plugins.generic.phpadsnew"}
+{assign var="pageTitle" value="plugins.generic.openads"}
 {include file="common/header.tpl"}
 
-{translate key="plugins.generic.phpadsnew.settings.description"}
+{translate key="plugins.generic.openads.settings.description"}
 
 <div class="separator">&nbsp;</div>
 
-<h3>{translate key="plugins.generic.phpadsnew.manager.settings"}</h3>
+<h3>{translate key="plugins.generic.openads.manager.settings"}</h3>
 
-<form method="post" action="{url path="generic"|to_array:"PhpAdsNewPlugin":"settings":"save"}">
+<form method="post" action="{url path="generic"|to_array:"OpenAdsPlugin":"settings":"save"}">
 {include file="common/formErrors.tpl"}
 
 <table width="100%" class="data">
 	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="headerAdId" key="plugins.generic.phpadsnew.headerAd"}</td>
+		<td width="20%" class="label">{fieldLabel name="headerAdId" key="plugins.generic.openads.headerAd"}</td>
 		<td width="80%" class="value">
 			<select name="headerAdId" class="selectMenu" id="headerAdId">
 				<option value="0">{translate key="common.disabled"}</option>
@@ -38,7 +38,7 @@
 		</td>
 	</tr>
 	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="contentAdId" key="plugins.generic.phpadsnew.contentAd"}</td>
+		<td width="20%" class="label">{fieldLabel name="contentAdId" key="plugins.generic.openads.contentAd"}</td>
 		<td width="80%" class="value">
 			<select name="contentAdId" class="selectMenu" id="contentAdId">
 				<option value="0">{translate key="common.disabled"}</option>
@@ -49,7 +49,7 @@
 		</td>
 	</tr>
 	<tr valign="top">
-		<td width="20%" class="label">{fieldLabel name="sidebarAdId" key="plugins.generic.phpadsnew.sidebarAd"}</td>
+		<td width="20%" class="label">{fieldLabel name="sidebarAdId" key="plugins.generic.openads.sidebarAd"}</td>
 		<td width="80%" class="value">
 			<select name="sidebarAdId" class="selectMenu" id="sidebarAdId">
 				<option value="0">{translate key="common.disabled"}</option>

@@ -1,28 +1,28 @@
 <?php
 
 /**
- * @file CmsBlockPlugin.inc.php
+ * @file OpenAdsBlockPlugin.inc.php
  *
- * Copyright (c) 2006-2007 Gunther Eysenbach, Juan Pablo Alperin, MJ Suhonos
+ * Copyright (c) 2003-2007 Siavash Miri and Alec Smecher
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package plugins.generic.cms
- * @class CmsBlockPlugin
+ * @package plugins.generic.openAds
+ * @class OpenAdsBlockPlugin
  *
- * CMS plugin class, block component
+ * OpenAds plugin class, block component
  *
  * $Id$
  */
 
 import('classes.plugins.BlockPlugin');
 
-class CmsBlockPlugin extends BlockPlugin {
+class OpenAdsBlockPlugin extends BlockPlugin {
 	/**
 	 * Get the symbolic name of this plugin
 	 * @return string
 	 */
 	function getName() {
-		return 'CmsBlockPlugin';
+		return 'OpenAdsBlockPlugin';
 	}
 
 	/**
@@ -30,7 +30,7 @@ class CmsBlockPlugin extends BlockPlugin {
 	 * @return string
 	 */
 	function getDisplayName() {
-		return Locale::translate('plugins.generic.cms.displayName');
+		return Locale::translate('plugins.generic.openads');
 	}
 
 	/**
@@ -38,11 +38,7 @@ class CmsBlockPlugin extends BlockPlugin {
 	 * @return string
 	 */
 	function getDescription() {
-		$description = Locale::translate('plugins.generic.cms.description');
-		$plugin =& $this->getCmsPlugin();
-		if ( !$plugin->isTinyMCEInstalled() )
-			$description .= "<br />".Locale::translate('plugins.generic.cms.requirement.tinymce');
-		return $description;
+		return Locale::translate('plugins.generic.openads.description');
 	}
 
 	/**
@@ -50,7 +46,7 @@ class CmsBlockPlugin extends BlockPlugin {
 	 * @return string
 	 */
 	function getPluginPath() {
-		$plugin =& $this->getCmsPlugin();
+		$plugin =& $this->getOpenAdsPlugin();
 		return $plugin->getPluginPath();
 	}
 
@@ -59,7 +55,7 @@ class CmsBlockPlugin extends BlockPlugin {
 	 * @return string
 	 */
 	function getTemplatePath() {
-		$plugin =& $this->getCmsPlugin();
+		$plugin =& $this->getOpenAdsPlugin();
 		return $plugin->getTemplatePath();
 	}
 
@@ -77,22 +73,25 @@ class CmsBlockPlugin extends BlockPlugin {
 	 * @return string
 	 */
 	function getContents(&$templateMgr) {
-		// Set the table of contents to the default (all headings closed)
-		// if it has not been set (by the CmsHandler)
 		$journal =& Request::getJournal();
 		if (!$journal) return '';
 
-		$plugin =& $this->getCmsPlugin();
-		$templateMgr->assign('cmsPluginToc', $plugin->getSetting($journal->getJournalId(), 'toc'));
-		return parent::getContents($templateMgr);
+		// Get the ad settings.
+		$plugin =& $this->getOpenAdsPlugin();
+		$this->import('OpenAdsConnection');
+		$openAdsConnection =& new OpenAdsConnection($plugin, $plugin->getInstallationPath());
+		$sidebarAdHtml = $openAdsConnection->getAdHtml($plugin->getSetting($journal->getJournalId(), 'sidebarAdId'));
+
+		// FIXME: THIS VERSION OF THE PLUGIN DOES NOT SUPPORT READING TOOLS ADS.
+		return '<div class="block">' . $sidebarAdHtml . '</div>';
 	}
 
 	/**
 	 * Get the actual CMS plugin
 	 * @return object
 	 */
-	function &getCmsPlugin() {
-		$plugin =& PluginRegistry::getPlugin('generic', 'CmsPlugin');
+	function &getOpenAdsPlugin() {
+		$plugin =& PluginRegistry::getPlugin('generic', 'OpenAdsPlugin');
 		return $plugin;
 	}
 
@@ -101,7 +100,7 @@ class CmsBlockPlugin extends BlockPlugin {
 	 * @return boolean
 	 */
 	function getEnabled() {
-		$plugin =& $this->getCmsPlugin();
+		$plugin =& $this->getOpenAdsPlugin();
 		return $plugin->getEnabled();
 	}
 }

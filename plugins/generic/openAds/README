@@ -8,9 +8,9 @@ interface.
 
 In order to use this plugin, you must ensure the following directives are
 properly configured in OJS's config.inc.php configuration file in the
-[phpAdsNew] section:
+[openads] section:
 
-installPath: This should contain the full path to the phpAdsNew installation.
+install_path: This should contain the full path to the phpAdsNew installation.
 
 In order to place content ads, you must insert the tag {$adContent} (the tag
 must appear exactly, and capitalization is important) anywhere in the article's

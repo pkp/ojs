@@ -1,15 +1,15 @@
 <?php
 
 /**
- * @file PhpAdsNewPlugin.inc.php
+ * @file OpenAdsPlugin.inc.php
  *
  * Copyright (c) 2003-2007 Siavash Miri and Alec Smecher
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package plugins.generic.phpAdsNew
- * @class PhpAdsNewPlugin
+ * @package plugins.generic.openAds
+ * @class OpenAdsPlugin
  *
- * Integrate PHPAdsNew ad manager with OJS.
+ * Integrate OpenAds ad manager with OJS.
  *
  * $Id: CounterPlugin.inc.php,v 1.0 2006/10/20 12:28pm
  */
@@ -20,7 +20,7 @@ define ('AD_ORIENTATION_CENTRE',	3);
 
 import('classes.plugins.GenericPlugin');
 
-class PhpAdsNewPlugin extends GenericPlugin {
+class OpenAdsPlugin extends GenericPlugin {
 	/** @var $templateName string Used to track the name of current template */
 	var $templateName;
 
@@ -36,10 +36,29 @@ class PhpAdsNewPlugin extends GenericPlugin {
 
 			if ($this->getEnabled()) {
 				HookRegistry::register('TemplateManager::display', array(&$this, 'mainCallback'));
-				HookRegistry::register('Templates::Common::Header::sidebar', array(&$this, 'sidebarCallback'));
+				HookRegistry::register('PluginRegistry::loadCategory', array(&$this, 'callbackLoadCategory'));
 			}
 
 			return true;
+		}
+		return false;
+	}
+
+	/**
+	 * Register as a block plugin, even though this is a generic plugin.
+	 * This will allow the plugin to behave as a block plugin, i.e. to
+	 * have layout tasks performed on it.
+	 * @param $hookName string
+	 * @param $args array
+	 */
+	function callbackLoadCategory($hookName, $args) {
+		$category =& $args[0];
+		$plugins =& $args[1];
+		switch ($category) {
+			case 'blocks':
+				$this->import('OpenAdsBlockPlugin');
+				$plugins[$category][] =& new OpenAdsBlockPlugin();
+				break;
 		}
 		return false;
 	}
@@ -50,17 +69,17 @@ class PhpAdsNewPlugin extends GenericPlugin {
 	 * @return String name of plugin
 	 */
 	function getName() {
-		return 'PhpAdsNewPlugin';
+		return 'OpenAdsPlugin';
 	}
 
 	function getDisplayName() {
 		$this->addLocaleData();
-		return Locale::translate('plugins.generic.phpadsnew');
+		return Locale::translate('plugins.generic.openads');
 	}
 
 	function getDescription() {
 		$this->addLocaleData();
-		return Locale::translate($this->isConfigured()?'plugins.generic.phpadsnew.description':'plugins.generic.phpadsnew.descriptionUnconfigured');
+		return Locale::translate($this->isConfigured()?'plugins.generic.openads.description':'plugins.generic.openads.descriptionUnconfigured');
 	}
 
 	function mainCallback($hookName, $args) {
@@ -82,11 +101,11 @@ class PhpAdsNewPlugin extends GenericPlugin {
 		$headerAdHtml = $contentAdHtml = '';
 		if ($journal) {
 			$journalId = $journal->getJournalId();
-			$this->import('PhpAdsNewConnection');
-			$phpAdsNewConnection =& new PhpAdsNewConnection($this, $this->getInstallationPath());
-			$headerAdHtml = $phpAdsNewConnection->getAdHtml($this->getSetting($journalId, 'headerAdId'));
+			$this->import('OpenAdsConnection');
+			$openAdsConnection =& new OpenAdsConnection($this, $this->getInstallationPath());
+			$headerAdHtml = $openAdsConnection->getAdHtml($this->getSetting($journalId, 'headerAdId'));
 			$headerAdOrientation = $this->getSetting($journal->getJournalId(), 'headerAdOrientation');
-			$contentAdHtml = $phpAdsNewConnection->getAdHtml($this->getSetting($journalId, 'contentAdId'));
+			$contentAdHtml = $openAdsConnection->getAdHtml($this->getSetting($journalId, 'contentAdId'));
 		}
 
 		// Look for the first <h1> tag and insert the header ad.
@@ -131,42 +150,6 @@ class PhpAdsNewPlugin extends GenericPlugin {
 
 	}
 
-	function sidebarCallback($hookName, $args) {
-		$smarty =& $args[0];
-		$template =& $args[1];
-		$smarty->register_outputfilter(array(&$this, 'sidebarOutputFilter'));
-		return false;
-	}
-
-	function sidebarOutputFilter($output, &$smarty) {
-		$journal =& Request::getJournal();
-		if (!$journal) return $output;
-
-		// Get the ad settings.
-		$this->import('PhpAdsNewConnection');
-		$phpAdsNewConnection =& new PhpAdsNewConnection($this, $this->getInstallationPath());
-		$sidebarAdHtml = $phpAdsNewConnection->getAdHtml($this->getSetting($journal->getJournalId(), 'sidebarAdId'));
-
-		$index = strrpos($output, '<span class="blockTitle">' . Locale::translate('navigation.user') . '</span>');
-		if ($index !== false) {
-			$blockNecessary = true;
-		} else {
-			$index = strrpos($output, '<h5>' . Locale::translate('rt.readingTools') . '</h5>');
-			$blockNecessary = false;
-		}
-		if ($index !== false && !empty($sidebarAdHtml)) {
-			$newOutput = substr($output, 0, $index);
-			if ($blockNecessary) $newOutput .= '<div class="block">';
-			$newOutput .= $sidebarAdHtml;
-			$newOutput .= substr($output, $index);
-			if ($blockNecessary) $newOutput .= '</div>';
-			$output =& $newOutput;
-		}
-		$smarty->unregister_outputfilter('sidebarOutputFilter');
-		return $output;
-
-	}
-
 	/**
 	 * Display verbs for the management interface.
 	 */
@@ -179,7 +162,7 @@ class PhpAdsNewPlugin extends GenericPlugin {
 			);
 			if ($this->isConfigured()) $verbs[] = array(
 				'settings',
-				Locale::translate('plugins.generic.phpadsnew.manager.settings')
+				Locale::translate('plugins.generic.openads.manager.settings')
 			);
 		} else {
 			if ($this->isConfigured()) $verbs[] = array(
@@ -223,11 +206,11 @@ class PhpAdsNewPlugin extends GenericPlugin {
 			case 'enable': $this->setEnabled(true); break;
 			case 'disable': $this->setEnabled(false); break;
 			case 'settings':
-				$this->import('PhpAdsNewSettingsForm');
-				$this->import('PhpAdsNewConnection');
-				$phpAdsNewConnection =& new PhpAdsNewConnection($this, $this->getInstallationPath());
-				$phpAdsNewConnection->loadConfig();
-				$form =& new PhpAdsNewSettingsForm($this, $phpAdsNewConnection, $journal->getJournalId());
+				$this->import('OpenAdsSettingsForm');
+				$this->import('OpenAdsConnection');
+				$openAdsConnection =& new OpenAdsConnection($this, $this->getInstallationPath());
+				$openAdsConnection->loadConfig();
+				$form =& new OpenAdsSettingsForm($this, $openAdsConnection, $journal->getJournalId());
 				if (array_shift($args) == 'save') {
 					$form->readInputData();
 					$form->execute();
@@ -241,14 +224,22 @@ class PhpAdsNewPlugin extends GenericPlugin {
 		return $returner;
 	}
 
+	/**
+	 * Get the configured state of this plugin
+	 * @return boolean
+	 */
 	function isConfigured() {
-		$this->import('PhpAdsNewConnection');
-		$config =& new PhpAdsNewConnection($this, $this->getInstallationPath());
+		$this->import('OpenAdsConnection');
+		$config =& new OpenAdsConnection($this, $this->getInstallationPath());
 		return $config->isConfigured();
 	}
 
+	/**
+	 * Get the installation path to OpenAds
+	 * @return string
+	 */
 	function getInstallationPath() {
-		return Config::getVar('phpAdsNew', 'installPath');
+		return Config::getVar('open_ads', 'install_path');
 	}
 }
 

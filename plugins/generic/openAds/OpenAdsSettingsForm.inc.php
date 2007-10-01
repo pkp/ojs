@@ -1,13 +1,13 @@
 <?php
 
 /**
- * @file PhpAdsNewSettingsForm.inc.php
+ * @file OpenAdsSettingsForm.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package plugins.generic.phpAdsNew
- * @class PhpAdsNewSettingsForm
+ * @package plugins.generic.openAds
+ * @class OpenAdsSettingsForm
  *
  * Form for journal managers to modify Article XML Galley plugin settings
  *
@@ -16,30 +16,30 @@
 
 import('form.Form');
 
-class PhpAdsNewSettingsForm extends Form {
+class OpenAdsSettingsForm extends Form {
 	/** @var $journalId int */
 	var $journalId;
 
 	/** @var $plugin object */
 	var $plugin;
 
-	/** @var $phpAdsNewConnection object */
-	var $phpAdsNewConnection;
+	/** @var $openAdsConnection object */
+	var $openAdsConnection;
 
 	/**
 	 * Constructor
 	 * @param $plugin object
-	 * @param $phpAdsNewConnection object
+	 * @param $openAdsConnection object
 	 * @param $journalId int
 	 */
-	function PhpAdsNewSettingsForm(&$plugin, $phpAdsNewConnection, $journalId) {
+	function OpenAdsSettingsForm(&$plugin, $openAdsConnection, $journalId) {
 		$templateMgr = &TemplateManager::getManager();
 
 		parent::Form($plugin->getTemplatePath() . 'settingsForm.tpl');
 
 		$this->journalId = $journalId;
 		$this->plugin = &$plugin;
-		$this->phpAdsNewConnection =& $phpAdsNewConnection;
+		$this->openAdsConnection =& $openAdsConnection;
 
 		$this->addCheck(new FormValidatorPost($this));
 	}
@@ -51,7 +51,7 @@ class PhpAdsNewSettingsForm extends Form {
 		$journalId = $this->journalId;
 		$plugin =& $this->plugin;
 
-		$this->setData('ads', $this->phpAdsNewConnection->getAds());
+		$this->setData('ads', $this->openAdsConnection->getAds());
 		$this->setData('headerAdId', $plugin->getSetting($journalId, 'headerAdId'));
 		$this->setData('headerAdOrientation', $plugin->getSetting($journalId, 'headerAdOrientation'));
 		$this->setData('sidebarAdId', $plugin->getSetting($journalId, 'sidebarAdId'));
@@ -65,9 +65,9 @@ class PhpAdsNewSettingsForm extends Form {
 		$templateMgr = &TemplateManager::getManager();
 
 		$templateMgr->assign('orientationOptions', array(
-			AD_ORIENTATION_LEFT => 'plugins.generic.phpadsnew.orientation.left',
-			AD_ORIENTATION_CENTRE => 'plugins.generic.phpadsnew.orientation.centre',
-			AD_ORIENTATION_RIGHT => 'plugins.generic.phpadsnew.orientation.right'
+			AD_ORIENTATION_LEFT => 'plugins.generic.openads.orientation.left',
+			AD_ORIENTATION_CENTRE => 'plugins.generic.openads.orientation.centre',
+			AD_ORIENTATION_RIGHT => 'plugins.generic.openads.orientation.right'
 		));
 
 		parent::display();
