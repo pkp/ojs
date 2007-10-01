@@ -42,14 +42,39 @@ class CmsPlugin extends GenericPlugin {
 		return false;
 	}
 
+	/**
+	 * Register the plugin, attaching to hooks as necessary.
+	 * @param $category string
+	 * @param $path string
+	 * @return boolean
+	 */
 	function register($category, $path) {
 		if (parent::register($category, $path)) {		
 			$this->addLocaleData();
 			if ($this->getEnabled()) {
-				HookRegistry::register('TemplateManager::display',array(&$this, 'callbackSetTableOfContents'));
-				HookRegistry::register( 'LoadHandler', array(&$this, 'callbackHandleContent') );
+				HookRegistry::register('LoadHandler', array(&$this, 'callbackHandleContent'));
+				HookRegistry::register('PluginRegistry::loadCategory', array(&$this, 'callbackLoadCategory'));
 			}
 			return true;
+		}
+		return false;
+	}
+
+	/**
+	 * Register as a block plugin, even though this is a generic plugin.
+	 * This will allow the plugin to behave as a block plugin, i.e. to
+	 * have layout tasks performed on it.
+	 * @param $hookName string
+	 * @param $args array
+	 */
+	function callbackLoadCategory($hookName, $args) {
+		$category =& $args[0];
+		$plugins =& $args[1];
+		switch ($category) {
+			case 'blocks':
+				$this->import('CmsBlockPlugin');
+				$plugins[$category][] =& new CmsBlockPlugin();
+				break;
 		}
 		return false;
 	}
@@ -69,21 +94,6 @@ class CmsPlugin extends GenericPlugin {
 			return true;
 		}
 		return false;
-	}
-
-	/* 
-	 * On every page view the table of contents has to be set in the sidebar
-	 * Set the Table of Contents from the plugin settings when it hasn't been set already
-	 */
-	function callbackSetTableOfContents($hookName, $args) {
-		$templateManager =& $args[0];
-
-		// set the table of contents to the default (all headings closed) 
-		// if it has not been set (by the CmsHandler)
-		if ( count($templateManager->get_template_vars('cmsPluginToc')) == 0 ) {
-			$journal =& $templateManager->get_template_vars('currentJournal');
-			$templateManager->assign('cmsPluginToc', $this->getSetting($journal->getJournalId(), 'toc'));
-		}
 	}
 
 	/**
@@ -208,6 +218,6 @@ class CmsPlugin extends GenericPlugin {
 
 		return $returner;
 	}
-
 }
+
 ?>
