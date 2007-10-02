@@ -35,7 +35,11 @@
 
 <form name="issue" method="post" action="{url op="editIssue" path=$issueId}" enctype="multipart/form-data">
 <input type="hidden" name="fileName[{$formLocale|escape}]" value="{$fileName[$formLocale]|escape}" />
-<input type="hidden" name="originalFileName" value="{$originalFileName|escape}" />
+<input type="hidden" name="originalFileName[{$formLocale|escape}]" value="{$originalFileName[$formLocale]|escape}" />
+{if $styleFileName}
+<input type="hidden" name="styleFileName" value="{$styleFileName|escape}" />
+<input type="hidden" name="originalStyleFileName" value="{$originalStyleFileName|escape}" />
+{/if}
 {include file="common/formErrors.tpl"}
 
 <h3>{translate key="editor.issues.identification"}</h3>
@@ -127,7 +131,7 @@
 	</tr>
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="coverPage" key="editor.issues.coverPage"}</td>
-		<td width="80%" class="value"><input type="file" name="coverPage" id="coverPage" class="uploadField" />&nbsp;&nbsp;{translate key="form.saveToUpload"}<br />{translate key="editor.issues.coverPageInstructions"}<br />{translate key="editor.issues.uploaded"}:&nbsp;{if $fileName}<a href="javascript:openWindow('{$publicFilesDir}/{$fileName[$formLocale]|escape:"url"}');" class="file">{$originalFileName[$formLocale]}</a>&nbsp;<a href="{url op="removeCoverPage" path=$issueId}" onclick="return confirm('{translate|escape:"javascript" key="editor.issues.removeCoverPage"}')">{translate key="editor.issues.remove"}</a>{else}&mdash;{/if}</td>
+		<td width="80%" class="value"><input type="file" name="coverPage" id="coverPage" class="uploadField" />&nbsp;&nbsp;{translate key="form.saveToUpload"}<br />{translate key="editor.issues.coverPageInstructions"}<br />{translate key="editor.issues.uploaded"}:&nbsp;{if $fileName}<a href="javascript:openWindow('{$publicFilesDir}/{$fileName[$formLocale]|escape:"url"}');" class="file">{$originalFileName[$formLocale]}</a>&nbsp;<a href="{url op="removeCoverPage" path=$issueId|to_array:$formLocale}" onclick="return confirm('{translate|escape:"javascript" key="editor.issues.removeCoverPage"}')">{translate key="editor.issues.remove"}</a>{else}&mdash;{/if}</td>
 	</tr>
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="styleFile" key="editor.issues.styleFile"}</td>

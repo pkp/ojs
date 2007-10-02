@@ -317,7 +317,13 @@ class IssueForm extends Form {
 		$issue->setShowYear(empty($showYear) ? 0 : $showYear);
 		$issue->setShowTitle(empty($showTitle) ? 0 : $showTitle);
 		$issue->setCoverPageDescription($this->getData('coverPageDescription'), null); // Localized
-		$issue->setShowCoverPage((int)$this->getData('showCoverPage'), null); // Localized
+		$showCoverPage = array_map(create_function('$arrayElement', 'return (int)$arrayElement;'), $this->getData('showCoverPage'));
+		foreach (array_keys($this->getData('coverPageDescription')) as $locale) {
+			if (!array_key_exists($locale, $showCoverPage)) {
+				$showCoverPage[$locale] = 0;
+			}
+		}
+		$issue->setShowCoverPage($showCoverPage, null); // Localized
 
 		$month = $this->getData('Date_Month');
 		$day = $this->getData('Date_Day');

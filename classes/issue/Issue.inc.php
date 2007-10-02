@@ -74,7 +74,7 @@ class Issue extends DataObject {
 	 * @param $locale string
 	 */
 	function setTitle($title, $locale) {
-		return $this->setData('title', $locale);
+		return $this->setData('title', $title, $locale);
 	}
 
 	/**

@@ -217,14 +217,17 @@ class IssueManagementHandler extends EditorHandler {
 	 */
 	function removeCoverPage($args) {
 		$issueId = isset($args[0]) ? (int)$args[0] : 0;
+		$formLocale = $args[1];
 		$issue = IssueManagementHandler::validate($issueId, true);
 
 		import('file.PublicFileManager');
 		$journal = &Request::getJournal();
 		$publicFileManager = &new PublicFileManager();
-		$publicFileManager->removeJournalFile($journal->getJournalId(),$issue->getFileName());
-		$issue->setFileName('');
-		$issue->setOriginalFileName('');
+		$publicFileManager->removeJournalFile($journal->getJournalId(),$issue->getFileName($formLocale));
+		$issue->setFileName('', $formLocale);
+		$issue->setOriginalFileName('', $formLocale);
+		$issue->setWidth('', $formLocale);
+		$issue->setHeight('', $formLocale);
 
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
 		$issueDao->updateIssue($issue);
