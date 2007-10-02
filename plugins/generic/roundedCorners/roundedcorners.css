@@ -2,30 +2,34 @@
 	Based on Nifty Corners
 	These styles allow for rounded corners purely with CSS.  No images and no JS.
 */
-span.rtop, span.rbottom{
+
+span.rtop, span.rbottom {
 	display:block;
 	background: #FBFBF3
 }
+
 span.rtop span, span.rbottom span {
 	display:block;
 	height: 1px;
-    overflow: hidden; 
-    background: #ABA;
- }
+	overflow: hidden; 
+	background: #ABA;
+}
 
-span.r1{
-	margin: 0 5px
+span.r1 {
+	margin: 0 5px;
 }
-span.r2{
-	margin: 0 3px
+
+span.r2 {
+	margin: 0 3px;
 }
-span.r3{
-	margin: 0 2px
+
+span.r3 {
+	margin: 0 2px;
 }
 
 span.rtop span.r4, span.rbottom span.r4 {
 	margin: 0 1px;
-	height: 2px
+	height: 2px;
 }
 
 #sidebar div.block {
@@ -33,5 +37,13 @@ span.rtop span.r4, span.rbottom span.r4 {
 	padding-bottom: 0;	
 	margin-bottom: 1.5em;
 	
+}
+
+div.roundedCorner {
+	padding-left: 1em;
+}
+
+/* Used to flag already-rounded corners */
+div.alreadyRounded {
 }
 
