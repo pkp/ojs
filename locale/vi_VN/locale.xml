@@ -2183,7 +2183,7 @@ Có thể xem file bằng cách nhấp chuột vào tên file. Có thể tải l
 
 <h4>Các hệ quản trị cơ sở dữ liệu có hỗ trợ</h4>
 
-<p>OJS hiện mới chỉ được thử nghiệm trên MySQL và PostgreSQL, mặc dù các hệ quản trị cơ sở dữ liệu khác được hỗ trợ bằng <a href="http://php.weblogs.com/adodb/" target="_blank">ADOdb</a> cũng có thể tương thích (một phần hoặc đầy đủ). Báo cáo về tương thích và/hoặc chỉnh sửa dành cho các hệ quản trị CSDL khác có thể gửi về cho nhóm phát triển OJS.</p>
+<p>OJS hiện mới chỉ được thử nghiệm trên MySQL và PostgreSQL, mặc dù các hệ quản trị cơ sở dữ liệu khác được hỗ trợ bằng <a href="http://adodb.sourceforge.net/" target="_blank">ADOdb</a> cũng có thể tương thích (một phần hoặc đầy đủ). Báo cáo về tương thích và/hoặc chỉnh sửa dành cho các hệ quản trị CSDL khác có thể gửi về cho nhóm phát triển OJS.</p>
 
 <h4>Các bước trước khi cài đặt</h4>
 

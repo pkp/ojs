@@ -10,7 +10,7 @@
  * @class DBConnection
  *
  * Class for accessing the low-level database connection.
- * Currently integrated with ADOdb (from http://php.weblogs.com/adodb/).
+ * Currently integrated with ADOdb (from http://adodb.sourceforge.net).
  *
  * $Id$
  */

@@ -2189,7 +2189,7 @@ vaš korisnički račun, unesite u polja ispod vašu sadašnju i novu lozinku.</
 
 <h4>Podržani sustavi baze podataka</h4>
 
-<p>OJS je trenutno testiran na MySQL i PostgreSQL, iako drugi sustavi za upravljanje bazom podataka podržani od <a href="http://php.weblogs.com/adodb/" target="_blank">ADOdb</a> mogu funkcionirati (u potpunosti ili djelomično). Funkcionalni izvještaji i/ili zakrpe koda za alternativne sustave za upravljanjem bazom podataka mogu biti poslani OJS timu.</p>
+<p>OJS je trenutno testiran na MySQL i PostgreSQL, iako drugi sustavi za upravljanje bazom podataka podržani od <a href="http://adodb.sourceforge.net/" target="_blank">ADOdb</a> mogu funkcionirati (u potpunosti ili djelomično). Funkcionalni izvještaji i/ili zakrpe koda za alternativne sustave za upravljanjem bazom podataka mogu biti poslani OJS timu.</p>
 
 <h4>Predinstalacijski koraci</h4>
 

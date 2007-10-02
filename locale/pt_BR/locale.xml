@@ -2191,7 +2191,7 @@ O documento pode ser visualizado/baixado ao clicar no nome. Ao transferir uma no
 
 <h4>Servidores de Bases de Dados suportados</h4>
 
-<p>O sistema foi testado sobre MySQL e PostgreSQL, embora outras bases de dados que utilizem o <a href="http://php.weblogs.com/adodb/" target="_blank">ADOdb</a> podem funcionar (parcial ou completamente). Notificações sobre compatibilidade e/ou correções para funcionamento em sistemas de bases de dados(DBMSs) alternativos devem ser encaminhados à equipe do PKP.</p>
+<p>O sistema foi testado sobre MySQL e PostgreSQL, embora outras bases de dados que utilizem o <a href="http://adodb.sourceforge.net/" target="_blank">ADOdb</a> podem funcionar (parcial ou completamente). Notificações sobre compatibilidade e/ou correções para funcionamento em sistemas de bases de dados(DBMSs) alternativos devem ser encaminhados à equipe do PKP.</p>
 
 <h4>Antes de Instalar</h4>
 

@@ -2162,7 +2162,7 @@ avec un signe plus (+) indiquant que la révision est en cours.]]></message>
 
 <h4>Système de base de données documenté</h4>
 
-<p>OJS a jusqu'à  maintenant uniquement été mis à l'essai sur MySQL et PostgreSQL, bien que d'autres systèmes de gestion de base de données documentés par <a href="http://php.weblogs.com/adodb/" target="_blank">ADOdb</a> pourraient fonctionner (en tout ou en partie). Il est possible d'envoyer à l'équipe OJS des rapports de compatibilité ou des pièces de codes pour d'autres SGBD.</p>
+<p>OJS a jusqu'à  maintenant uniquement été mis à l'essai sur MySQL et PostgreSQL, bien que d'autres systèmes de gestion de base de données documentés par <a href="http://adodb.sourceforge.net/" target="_blank">ADOdb</a> pourraient fonctionner (en tout ou en partie). Il est possible d'envoyer à l'équipe OJS des rapports de compatibilité ou des pièces de codes pour d'autres SGBD.</p>
 
 <h4>Installation manuelle</h4>
 

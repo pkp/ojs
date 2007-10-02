@@ -2209,7 +2209,7 @@ la contraseña actual.<br /><br />Introduzca su dirección de correo-e para camb
 
 <h4>Gestores de bases de datos soportados</h4>
 
-<p>Por el momento, OJS sólo se ha probado con MySQL y PostgreSQL, aunque otros gestores de bases de datos soportados por <a href="http://php.weblogs.com/adodb/" target="_blank">ADOdb</a> podrían funcionar (total o parcialmente). Se pueden enviar informes de compatibilidad y/o parches para gestores de bases de datos alternativos al equipo OJS.</p>
+<p>Por el momento, OJS sólo se ha probado con MySQL y PostgreSQL, aunque otros gestores de bases de datos soportados por <a href="http://adodb.sourceforge.net/" target="_blank">ADOdb</a> podrían funcionar (total o parcialmente). Se pueden enviar informes de compatibilidad y/o parches para gestores de bases de datos alternativos al equipo OJS.</p>
 
 <h4>Pasos pre-instalación</h4>
 

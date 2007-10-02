@@ -2185,7 +2185,7 @@ Zur Ansicht der Datei auf den Dateinamen klicken. Eine neue oder bearbeitete Dat
 
 <h4>Unterstützte Datenbanken</h4>
 
-<p>Bisher wurde OJS nur mit MySQL und PostgreSQL getestet, aber andere Datenbanken, die <a href="http://php.weblogs.com/adodb/" target="_blank">ADOdb</a> unterstützen, dürften entweder ganz oder teilweise auch funktionieren. Berichte zur Kompatibilität oder Programmzusätze für andere Datenbanken nimmt das OJS Team gerne entgegen.</p>
+<p>Bisher wurde OJS nur mit MySQL und PostgreSQL getestet, aber andere Datenbanken, die <a href="http://adodb.sourceforge.net/" target="_blank">ADOdb</a> unterstützen, dürften entweder ganz oder teilweise auch funktionieren. Berichte zur Kompatibilität oder Programmzusätze für andere Datenbanken nimmt das OJS Team gerne entgegen.</p>
 
 <h4>Vorbereitende Schritte</h4>
 

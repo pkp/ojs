@@ -2230,7 +2230,7 @@ Il file pu&#x00F2; essere aperto cliccando sul nome del file. Pu&#x00F2; essere 
 
 <h4>Database supportati</h4>
 
-<p>OJS &#x00E8; stato testato con MySQL e PostgreSQL, anche se altri database management systems supportati da <a href="http://php.weblogs.com/adodb/" target="_blank">ADOdb</a> potrebbero funzionare (totalmente o parzialmente). Al team di sviluppo di OJS possono essere inviati sia rapporti di compatibilit&#x00E0; sia patch di codice riguardanti eventuali DBMS alternativi.</p>
+<p>OJS &#x00E8; stato testato con MySQL e PostgreSQL, anche se altri database management systems supportati da <a href="http://adodb.sourceforge.net/" target="_blank">ADOdb</a> potrebbero funzionare (totalmente o parzialmente). Al team di sviluppo di OJS possono essere inviati sia rapporti di compatibilit&#x00E0; sia patch di codice riguardanti eventuali DBMS alternativi.</p>
 
 <h4>Fase pre-installazione</h4>
 

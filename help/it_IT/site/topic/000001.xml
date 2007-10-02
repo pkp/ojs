@@ -30,7 +30,7 @@
 			<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x or >= 2.0.4x o Microsoft IIS 6+</li>
 			<li>Sistema operativo: Ogni OS che supporti i software sopra, incluso <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.sun.com/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
 		</ul>
-		<p>OJS attualmente &#x00E8; stato solamente su MySQL e PostgreSQL, nonostante  altri database management systems supportati da <a href="http://php.weblogs.com/adodb/" target="_blank">ADOdb</a> potrebbero funzionare (pienamente o in parte). Rapporti di compatibilt&#x00E0; e/o patch per DBMS alternativi sono benvenuti.</p>
+		<p>OJS attualmente &#x00E8; stato solamente su MySQL e PostgreSQL, nonostante  altri database management systems supportati da <a href="http://adodb.sourceforge.net/" target="_blank">ADOdb</a> potrebbero funzionare (pienamente o in parte). Rapporti di compatibilt&#x00E0; e/o patch per DBMS alternativi sono benvenuti.</p>
 		]]>
 	</section>
 	

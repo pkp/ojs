@@ -1966,7 +1966,7 @@ Thè fîlè çåñ bè vîèwèð bý çlîçkîñg óñ thè fîlè ñåmè. Æ
 
 <h4>Supported database systems</h4>
 
-<p>OJS has currently only been tested on MySQL and PostgreSQL, although other database management systems supported by <a href="http://php.weblogs.com/adodb/" target="_blank">ADOdb</a> may work (in full or partially). Compatibility reports and/or code patches for alternative DBMSs can be sent to the OJS team.</p>
+<p>OJS has currently only been tested on MySQL and PostgreSQL, although other database management systems supported by <a href="http://adodb.sourceforge.net/" target="_blank">ADOdb</a> may work (in full or partially). Compatibility reports and/or code patches for alternative DBMSs can be sent to the OJS team.</p>
 
 <h4>Pre-Installation Steps</h4>
 

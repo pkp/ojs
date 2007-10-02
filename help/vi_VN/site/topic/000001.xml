@@ -29,7 +29,7 @@
 			<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x hoặc >= 2.0.4x hoặc Microsoft IIS 6+</li>
 			<li>Hệ điều hành: Bất kỳ HĐH nào hỗ trợ phần mềm trên bao gồm <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.sun.com/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, và <a href="http://www.microsoft.com/">Windows</a></li>
 		</ul>
-		<p>Phần mềm OJS mới chỉ được thử nghiệm trên MySQL và PostgreSQL, mặc dù các Hệ quản trị CSDL khác được <a href="http://php.weblogs.com/adodb/" target="_blank">ADOdb</a> hỗ trợ có thể hoạt động tốt (một phần hoặc đầy đủ). Chúng tôi mong nhận được các báo cáo và thông tin về tương thích giữa OJS với các hệ quản trị CSDL.</p>
+		<p>Phần mềm OJS mới chỉ được thử nghiệm trên MySQL và PostgreSQL, mặc dù các Hệ quản trị CSDL khác được <a href="http://adodb.sourceforge.net/" target="_blank">ADOdb</a> hỗ trợ có thể hoạt động tốt (một phần hoặc đầy đủ). Chúng tôi mong nhận được các báo cáo và thông tin về tương thích giữa OJS với các hệ quản trị CSDL.</p>
 		]]>
 	</section>
 	

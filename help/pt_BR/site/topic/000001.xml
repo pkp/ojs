@@ -29,7 +29,7 @@
 			<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x ou >= 2.0.4x</li>
 			<li>sistema Operacional: Qualquer Sistema Operacional que suporte o software acima, incluindo <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.sun.com/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
 		</ul>
-		<p>O sistema foi testado até o momento em MySQL e PostgreSQL, entretanto outros gerenciadores de bancos de dados suportados pelo <a href="http://php.weblogs.com/adodb/" target="_blank">ADOdb</a> devem funcionar (completa ou parcialmente). Relatórios de compatibilidade e/ou códigos de correção para SGBDs alternativos são sempre bem-vindos.</p>
+		<p>O sistema foi testado até o momento em MySQL e PostgreSQL, entretanto outros gerenciadores de bancos de dados suportados pelo <a href="http://adodb.sourceforge.net/" target="_blank">ADOdb</a> devem funcionar (completa ou parcialmente). Relatórios de compatibilidade e/ou códigos de correção para SGBDs alternativos são sempre bem-vindos.</p>
 		]]>
 	</section>
 	

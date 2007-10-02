@@ -2196,7 +2196,7 @@ Dosyanızı, dosya adını tıklayarak görebilirsiniz. Yeni değiştirilmiş bi
 
 <h4>Desteklenen veritabanı sistemleri </h4>
 
-<p>ADS son olarak yalnızca MySQL ve PostgreSQL üzerinde test edilmiştir. <a href="http://php.weblogs.com/adodb/" target="_blank">ADOdb</a> tarafından desteklenen diğer veritabanı sistemleri ile de çalışabilir (tam veya kısmi olarak). Diğer veritabanları ile çalıştırırsanız uyumluluk durumunu ve/veya alternatif DBMS'ler yamalarınızı ADS takımına gönderiniz.</p>
+<p>ADS son olarak yalnızca MySQL ve PostgreSQL üzerinde test edilmiştir. <a href="http://adodb.sourceforge.net/" target="_blank">ADOdb</a> tarafından desteklenen diğer veritabanı sistemleri ile de çalışabilir (tam veya kısmi olarak). Diğer veritabanları ile çalıştırırsanız uyumluluk durumunu ve/veya alternatif DBMS'ler yamalarınızı ADS takımına gönderiniz.</p>
 
 <h4>Yükleme öncesi adımlar</h4>
 

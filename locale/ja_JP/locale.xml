@@ -2169,7 +2169,7 @@ OJSのシステム設定を変更することにより、このサイト全体�
 
 <h4>サポートするデータベースシステム</h4>
 
-<p>OJSは、現在のところ、 MySQLとPostgreSQLでのみテストを行っていますが、<a href="http://php.weblogs.com/adodb/" target="_blank">ADOdb</a>がサポートしている他のデータベース管理システムでも（完全に、または一部）動作すると思われます 。他のDBMSによる互換性報告やパッチコードをOJSチームにお送りください。</p>
+<p>OJSは、現在のところ、 MySQLとPostgreSQLでのみテストを行っていますが、<a href="http://adodb.sourceforge.net/" target="_blank">ADOdb</a>がサポートしている他のデータベース管理システムでも（完全に、または一部）動作すると思われます 。他のDBMSによる互換性報告やパッチコードをOJSチームにお送りください。</p>
 
 <h4>インストール前に行う処理</h4>
 
