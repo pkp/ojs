@@ -12,7 +12,7 @@
   * $Id$
   -->
 
-<install version="2.1.1.0">
+<install version="2.2.0.0">
 	<upgrade minversion="2.0.0.0" maxversion="2.0.1.0">
 		<!-- 2.0.x to 2.0.2 -->
 		<data file="upgrade/2.0.2_preupdate.xml" />
