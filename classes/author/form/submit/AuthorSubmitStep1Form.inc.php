@@ -100,7 +100,7 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 			$this->article->setSectionId($this->getData('sectionId'));
 			$this->article->stampStatusModified();
 			$this->article->setSubmissionProgress($this->step + 1);
-			$this->article->setLanguage($journal->getPrimaryLocale());
+			$this->article->setLanguage(String::substr($journal->getPrimaryLocale(), 0, 2));
 			$this->article->setCommentsToEditor($this->getData('commentsToEditor'));
 
 			// Set user to initial author

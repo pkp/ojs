@@ -315,7 +315,7 @@ function moveAuthor(dir, authorIndex) {
 	
 	<tr valign="top">
 		<td rowspan="2" width="20%" class="label">{fieldLabel name="language" key="article.language"}</td>
-		<td width="80%" class="value"><input type="text" class="textField" name="language" id="language" value="{$language|escape|default:en}" size="5" maxlength="10" /></td>
+		<td width="80%" class="value"><input type="text" class="textField" name="language" id="language" value="{$language|escape}" size="5" maxlength="10" /></td>
 	</tr>
 	<tr valign="top">
 		<td><span class="instruct">{translate key="author.submit.languageInstructions"}</span></td>

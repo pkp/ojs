@@ -22,6 +22,9 @@ import('rt.ojs.JournalRT');
 import('article.ArticleHandler');
 
 class RTHandler extends ArticleHandler {
+	/**
+	 * Display an author biography
+	 */
 	function bio($args) {
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
@@ -41,6 +44,9 @@ class RTHandler extends ArticleHandler {
 		$templateMgr->display('rt/bio.tpl');
 	}
 
+	/**
+	 * Display the article metadata
+	 */
 	function metadata($args) {
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
@@ -67,6 +73,9 @@ class RTHandler extends ArticleHandler {
 		$templateMgr->display('rt/metadata.tpl');
 	}
 
+	/**
+	 * Display an RT search context
+	 */
 	function context($args) {
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
@@ -150,6 +159,9 @@ class RTHandler extends ArticleHandler {
 		$templateMgr->display('rt/context.tpl');
 	}
 
+	/**
+	 * Display citation information
+	 */
 	function captureCite($args) {
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
@@ -184,27 +196,11 @@ class RTHandler extends ArticleHandler {
 			$citationPlugin = array_shift($citationPlugins);
 		}
 		$citationPlugin->cite($article, $issue);
-
-/*		switch ($citeType) {
-			case 'endNote':
-				header('Content-Disposition: attachment; filename="' . $articleId . '-endNote.enw"');
-				$templateMgr->display('rt/citeEndNote.tpl', 'application/x-endnote-refer');
-				break;
-			case 'referenceManager':
-				header('Content-Disposition: attachment; filename="' . $articleId . '-refMan.ris"');
-				$templateMgr->display('rt/citeReferenceManager.tpl', 'application/x-Research-Info-Systems');
-				break;
-			case 'proCite':
-				header('Content-Disposition: attachment; filename="' . $articleId . '-proCite.ris"');
-				$templateMgr->display('rt/citeProCite.tpl', 'application/x-Research-Info-Systems');
-				break;
-			default:
-				$templateMgr->display('rt/captureCite.tpl');
-				break;
-		} */
-
 	}
 
+	/**
+	 * Display a printer-friendly version of the article
+	 */
 	function printerFriendly($args) {
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
@@ -244,6 +240,9 @@ class RTHandler extends ArticleHandler {
 		$templateMgr->display('rt/printerFriendly.tpl');	
 	}
 
+	/**
+	 * Display the "Email Colleague" form
+	 */
 	function emailColleague($args) {
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
@@ -285,6 +284,9 @@ class RTHandler extends ArticleHandler {
 		}
 	}
 
+	/**
+	 * Display the "email author" form
+	 */
 	function emailAuthor($args) {
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
@@ -320,9 +322,9 @@ class RTHandler extends ArticleHandler {
 		}
 	}
 
-	function addComment($args) {
-	}
-
+	/**
+	 * Display a list of supplementary files
+	 */
 	function suppFiles($args) {
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
@@ -344,6 +346,9 @@ class RTHandler extends ArticleHandler {
 		$templateMgr->display('rt/suppFiles.tpl');
 	}
 
+	/**
+	 * Display the metadata of a supplementary file
+	 */
 	function suppFileMetadata($args) {
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
@@ -370,6 +375,32 @@ class RTHandler extends ArticleHandler {
 		$templateMgr->display('rt/suppFileView.tpl');
 	}
 
+	/**
+	 * Display the "finding references" search engine list
+	 */
+	function findingReferences($args) {
+		$articleId = isset($args[0]) ? $args[0] : 0;
+		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
+		list($journal, $issue, $article) = RTHandler::validate($articleId, $galleyId);
+
+		$rtDao = &DAORegistry::getDAO('RTDAO');
+		$journalRt = &$rtDao->getJournalRTByJournal($journal);
+
+		if (!$journalRt || !$journalRt->getFindingReferences()) {
+			Request::redirect(null, Request::getRequestedPage());
+		}
+
+		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign('articleId', $articleId);
+		$templateMgr->assign('galleyId', $galleyId);
+		$templateMgr->assign_by_ref('journalRt', $journalRt);
+		$templateMgr->assign_by_ref('article', $article);
+		$templateMgr->display('rt/findingReferences.tpl');
+	}
+
+	/**
+	 * Get parameter values: Used internally for RT searches
+	 */
 	function getParameterNames($value) {
 		$matches = null;
 		String::regexp_match_all('/\{\$([a-zA-Z0-9]+)\}/', $value, $matches);
