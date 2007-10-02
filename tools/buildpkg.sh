@@ -33,6 +33,7 @@ EXCLUDE="dbscripts/xml/data/locale/en_US/sample.xml		\
 dbscripts/xml/data/locale/te_ST					\
 dbscripts/xml/data/sample.xml					\
 docs/dev							\
+docs/doxygen							\
 lib/adodb/CHANGED_FILES						\
 lib/adodb/diff							\
 lib/smarty/CHANGED_FILES					\
