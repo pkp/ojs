@@ -2527,7 +2527,7 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="rt.admin.settings.captureCite">How to cite item (provides bibliographic detail for item).</message>
 	<message key="rt.admin.settings.viewMetadata">Indexing metadata (displays item's indexing metadata provided by author and system).</message>
 	<message key="rt.admin.settings.supplementaryFiles">Supplementary files (displays list of files author included with submission).</message>
-	<message key="rt.admin.settings.printerFriendly">Print version (Leads to a printer-friendly version of an item).</message>
+	<message key="rt.admin.settings.printerFriendly">Print version (provides a printer-friendly version of an item).</message>
 	<message key="rt.admin.settings.authorBio">About the author (displays the bio statements entered by the author).</message>
 	<message key="rt.admin.settings.defineTerms">Look up terms (enables readers to double-click on any word in an item and send the word to a dictionary).</message>
 	<message key="rt.admin.settings.addComment">Add comment (enables readers to post comments, with Journal Manager able to delete).</message>
@@ -2537,6 +2537,7 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 
 	<message key="rt.admin.settings.emailAuthor">Email the author (leads to an email template with author's email).</message>
 	<message key="rt.admin.settings.emailOthers">Notify a colleague (leads to an email template with link to item).</message>
+	<message key="rt.admin.settings.findingReferences">Find References</message>
 
 	<!-- RT Versions -->
 	<message key="rt.admin.versions.restoreVersions">Restore Versions to Defaults</message>
@@ -2655,6 +2656,11 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="rt.colleague">Notify colleague</message>
 	<message key="rt.addComment">Add comment</message>
 	<message key="rt.emailAuthor">Email the author</message>
+
+	<message key="rt.findingReferences">Finding References</message>
+	<message key="rt.findingReferences.googleScholar">Google Scholar</message>
+	<message key="rt.findingReferences.windowsLiveAcademic">Windows Live Academic</message>
+
 	<message key="rt.beNotifiedWhen">Be notified when...</message>
 
 	<message key="rt.relatedItems">Related items</message>

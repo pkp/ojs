@@ -60,6 +60,10 @@
 		<td class="value"><label for="emailAuthor">{translate key="rt.admin.settings.emailAuthor"}</label></td>
 	</tr>
 	<tr valign="top">
+		<td class="label"><input type="checkbox" name="findingReferences" id="findingReferences" value="1"{if $findingReferences} checked="checked"{/if} /></td>
+		<td class="value"><label for="findingReferences">{translate key="rt.admin.settings.findingReferences"}</label></td>
+	</tr>
+	<tr valign="top">
 		<td class="label"><input type="checkbox" name="enableComments" id="enableComments" value="1"{if $enableComments} checked="checked"{/if} /></td>
 		<td class="value"><label for="disableComments">{translate key="rt.admin.settings.addComment"}</label></td>
 	</tr>

@@ -49,6 +49,7 @@ class RTSetupHandler extends RTAdminHandler {
 			$templateMgr->assign('defineTerms', $rt->getDefineTerms());
 			$templateMgr->assign('emailAuthor', $rt->getEmailAuthor());
 			$templateMgr->assign('emailOthers', $rt->getEmailOthers());
+			$templateMgr->assign('findingReferences', $rt->getFindingReferences());
 
 			// Bring in the comments constants.
 			$commentDao = &DAORegistry::getDao('CommentDAO');
@@ -92,6 +93,7 @@ class RTSetupHandler extends RTAdminHandler {
 			$rt->setDefineTerms(Request::getUserVar('defineTerms')==true);
 			$rt->setEmailAuthor(Request::getUserVar('emailAuthor')==true);
 			$rt->setEmailOthers(Request::getUserVar('emailOthers')==true);
+			$rt->setFindingReferences(Request::getUserVar('findingReferences')==true);
 
 			$journal->updateSetting('enableComments', Request::getUserVar('enableComments')?Request::getUserVar('enableCommentsMode'):COMMENTS_DISABLED);
 

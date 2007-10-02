@@ -39,6 +39,7 @@ class RTDAO extends DAO {
 		$rt->setDefineTerms($journal->getSetting('rtDefineTerms')?true:false);
 		$rt->setEmailAuthor($journal->getSetting('rtEmailAuthor')?true:false);
 		$rt->setEmailOthers($journal->getSetting('rtEmailOthers')?true:false);
+		$rt->setFindingReferences($journal->getSetting('rtFindingReferences')?true:false);
 		return $rt;
 	}
 
@@ -57,6 +58,7 @@ class RTDAO extends DAO {
 		$journal->updateSetting('rtDefineTerms', $rt->getDefineTerms(), 'bool');
 		$journal->updateSetting('rtEmailAuthor', $rt->getEmailAuthor(), 'bool');
 		$journal->updateSetting('rtEmailOthers', $rt->getEmailOthers(), 'bool');
+		$journal->updateSetting('rtFindingReferences', $rt->getFindingReferences());
 		return true;
 	}
 

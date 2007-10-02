@@ -51,6 +51,9 @@ class RT {
 	/** @var $emailOthers boolean */
 	var $emailOthers;
 
+	/** @var $findingReferences boolean */
+	var $findingReferences;
+
 	/**
 	 * Getter/Setter functions
 	 */
@@ -142,6 +145,14 @@ class RT {
 
 	function getEmailOthers() {
 		return $this->emailOthers;
+	}
+
+	function setFindingReferences($findingReferences) {
+		$this->findingReferences = $findingReferences;
+	}
+
+	function getFindingReferences() {
+		return $this->findingReferences;
 	}
 }
 
