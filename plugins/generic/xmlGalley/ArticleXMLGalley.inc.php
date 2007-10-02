@@ -95,11 +95,6 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 						$xslSheet = $xmlGalleyPlugin->getPluginPath() . '/transform/nlm/nlm-fo.xsl';
 					} else {
 						$xslSheet = $xmlGalleyPlugin->getPluginPath() . '/transform/nlm/nlm-xhtml.xsl';
-
-						// send XHTML (and inline MathML and SVG) if it's explicitly accepted, otherwise send XHTML
-						// TODO: ask alf about this; if he has an example with firefox
-						//if (stristr($_SERVER['HTTP_ACCEPT'], 'application/mathml+xml')) $arguments['mathml'] = true;
-						//if (stristr($_SERVER['HTTP_ACCEPT'], 'image/svg+xml')) $arguments['svg'] = true;
 					}
 					break;
 				case 'custom';
@@ -111,7 +106,7 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 			}
 
 			// transform the XML using whatever XSLT processor we have available
-			$contents = $this->transformXSLT($this->getFilePath(), $xslSheet, $xsltRenderer, $arguments);
+			$contents = $this->transformXSLT($this->getFilePath(), $xslSheet, $xsltRenderer);
 
 			// if all goes well, cache the results of the XSLT transformation
 			if ($contents) $cache->setEntireCache($contents);
@@ -191,6 +186,7 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 	 * @return string
 	 */
 	function viewFileContents() {
+		import('file.FileManager');
 		$pdfFileName = CacheManager::getFileCachePath() . DIRECTORY_SEPARATOR . 'fc-xsltGalley-' . str_replace(FileManager::parseFileExtension($this->getFileName()), 'pdf', $this->getFileName());
 
 		// if file does not exist or is outdated, regenerate it from FO

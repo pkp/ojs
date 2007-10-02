@@ -114,7 +114,7 @@ class XMLGalleyPlugin extends GenericPlugin {
 
 		// If the galley is an XML file, then convert it from an HTML Galley to an XML Galley
 		if ($galley->getFileType() == "text/xml") {
-			$galley = $this->_returnXMLGalleyFromArticleGalley(&$galley);
+			$galley = $this->_returnXMLGalleyFromArticleGalley($galley);
 			return true;
 		}
 
@@ -144,6 +144,7 @@ class XMLGalleyPlugin extends GenericPlugin {
 		$articleXMLGalley->setStatus($galley->getStatus());
 		$articleXMLGalley->setDateModified($galley->getDateModified());
 		$articleXMLGalley->setDateUploaded($galley->getDateUploaded());
+		$articleXMLGalley->setLocale($galley->getLocale());
 
 		$articleXMLGalley->setType('public');
 
