@@ -568,10 +568,11 @@ class ImportOJS1 {
 				$tmpResult->Close();
 			}
 
-			// Get username and transliterate to ASCII
+			// Get username, email and transliterate to ASCII
 			import('core.Transcoder');
 			$trans =& new Transcoder('UTF-8', 'ASCII', true);
 			$username = $trans->trans(Core::cleanVar($row['chUsername']));
+			$email = $trans->trans(Core::cleanVar($row['chEmail']));
 
 			// Check for existing user with this username
 			$user = $userDao->getUserByUsername($username);
@@ -587,7 +588,7 @@ class ImportOJS1 {
 				$user->setInitials(Core::cleanVar($initials));
 				$user->setLastName(Core::cleanVar($row['chSurname']));
 				$user->setAffiliation(Core::cleanVar($row['chAffiliation']));
-				$user->setEmail(Core::cleanVar($row['chEmail']));
+				$user->setEmail($email);
 				$user->setPhone(Core::cleanVar($row['chPhone']));
 				$user->setFax(Core::cleanVar($row['chFax']));
 				$user->setMailingAddress(Core::cleanVar($row['chMailAddr']));
@@ -599,10 +600,10 @@ class ImportOJS1 {
 				$user->setMustChangePassword(0);
 				$user->setDisabled(0);
 
-				$otherUser =& $userDao->getUserByEmail(Core::cleanVar($row['chEmail']));
+				$otherUser =& $userDao->getUserByEmail($email);
 				if ($otherUser !== null) {
 					// User exists with this email -- munge it to make unique
-					$user->setEmail('ojs-' . $username . '+' . Core::cleanVar($row['chEmail']));
+					$user->setEmail('ojs-' . $username . '+' . $email);
 					$this->conflicts[] = array(&$otherUser, &$user);
 				}
 				unset($otherUser);
