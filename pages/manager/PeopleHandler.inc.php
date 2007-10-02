@@ -124,6 +124,7 @@ class PeopleHandler extends ManagerHandler {
 			USER_FIELD_FIRSTNAME => 'user.firstName',
 			USER_FIELD_LASTNAME => 'user.lastName',
 			USER_FIELD_USERNAME => 'user.username',
+			USER_FIELD_INTERESTS => 'user.interests',
 			USER_FIELD_EMAIL => 'user.email'
 		);
 		if ($roleId == ROLE_ID_REVIEWER) $fieldOptions = array_merge(array(USER_FIELD_INTERESTS => 'user.interests'), $fieldOptions);
