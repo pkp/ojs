@@ -86,7 +86,7 @@ class OpenAdsPlugin extends GenericPlugin {
 		$smarty =& $args[0];
 		$template =& $args[1];
 		if ($template == 'rt/rt.tpl') {
-			$smarty->register_outputfilter(array(&$this, 'sidebarOutputFilter'));
+			$smarty->register_outputfilter(array(&$this, 'rtOutputFilter'));
 		} else {
 			$smarty->register_outputfilter(array(&$this, 'mainOutputFilter'));
 		}
@@ -148,6 +148,29 @@ class OpenAdsPlugin extends GenericPlugin {
 
 		return $output;
 
+	}
+
+	/**
+	 * Output filter to modify the RT sidebar
+	 */
+	function rtOutputFilter($output, &$smarty) {
+		$journal =& Request::getJournal();
+		if (!$journal) return $output;
+
+		//Get the ad settings.
+		$this->import('OpenAdsConnection');
+		$openAdsConnection =& new OpenAdsConnection($this, $this->getInstallationPath());
+		$sidebarAdHtml = $openAdsConnection->getAdHtml($this->getSetting($journal->getJournalId(), 'sidebarAdId'));
+
+		$index = strrpos($output, '<h5>' . Locale::translate('rt.readingTools') . '</h5>');
+		if ($index !== false && !empty($sidebarAdHtml)) {
+			$newOutput = substr($output,0,$index);
+			$newOutput .= $sidebarAdHtml;
+			$newOutput .= substr($output, $index);
+			$output =& $newOutput;
+		}
+		$smarty->unregister_outputfilter('sidebarOutputFilter');
+		return $output;
 	}
 
 	/**
