@@ -116,8 +116,6 @@ class CmsPlugin extends GenericPlugin {
 			$layoutManagerPlugin = &PluginRegistry::getPlugin('generic', 'LayoutManager');
 			// register or deregister the sidebar links
   			if ( $enabled ) {
-				$layoutManagerPlugin->registerBlock($this->getDisplayName(), $this->getTemplatePath().'tableofcontents.tpl', 4);
-
 				$this->import('ContentManager');
 				$contentManager =& new ContentManager();
 
@@ -130,8 +128,6 @@ class CmsPlugin extends GenericPlugin {
 				// this sets the table of contents with nothing selected
 				$this->updateSetting($journal->getJournalId(), 'toc', $h);
   			}
-			else
-				$layoutManagerPlugin->deRegisterBlock($this->getDisplayName());
 
 			return true;
 		}	
