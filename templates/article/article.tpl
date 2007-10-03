@@ -107,7 +107,7 @@
 		{translate key="reader.fullText"}
 		{if $hasAccess || ($subscriptionRequired && $showGalleyLinks)}
 			{foreach from=$article->getLocalizedGalleys() item=galley name=galleyList}
-				<a href="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)|to_array:$galley->getGalleyId()}" class="file">{$galley->getGalleyLabel()|escape}</a>
+				<a href="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)|to_array:$galley->getGalleyId()}" class="file" target="_parent">{$galley->getGalleyLabel()|escape}</a>
 				{if $subscriptionRequired && $showGalleyLinks && $restrictOnlyPdf}
 					{if $article->getAccessStatus() || !$galley->isPdfGalley()}	
 						<img src="{$baseUrl}/templates/images/icons/fulltext_open_medium.png">
@@ -124,7 +124,7 @@
 				{/if}
 			{/if}					
 		{else}
-			&nbsp;<a href="{url page="about" op="subscriptions"}">{translate key="reader.subscribersOnly"}</a>
+			&nbsp;<a href="{url page="about" op="subscriptions"}" target="_parent">{translate key="reader.subscribersOnly"}</a>
 		{/if}
 	{/if}
 {/if}
