@@ -104,12 +104,12 @@ class CounterPlugin extends GenericPlugin {
 				if (!$galley) return false;
 
 				$logEntry =& new LogEntry();
-				$logEntry->setSite($site->getTitle());
-				$logEntry->setJournal($journal->getJournalTitle());
+				$logEntry->setSite($site->getTitle($site->getPrimaryLocale()));
+				$logEntry->setJournal($journal->getTitle($journal->getPrimaryLocale()));
 				$logEntry->setJournalUrl(Request::url(null, 'index'));
 				$logEntry->setPrintIssn($journal->getSetting('printIssn'));
 				$logEntry->setOnlineIssn($journal->getSetting('onlineIssn'));
-				$logEntry->setPublisher($journal->getSetting('publisherInstitution'));
+				$logEntry->setPublisher($journal->getLocalizedSetting('publisherInstitution'));
 				$logEntry->setUser($logUser);
 				if ($galley->isHTMLGalley()) $logEntry->setType(LOG_ENTRY_TYPE_HTML_ARTICLE);
 				elseif ($galley->isPdfGalley()) $logEntry->setType(LOG_ENTRY_TYPE_PDF_ARTICLE);
@@ -122,8 +122,8 @@ class CounterPlugin extends GenericPlugin {
 				// Log the request as a search.
 				$logEntry =& new LogEntry();
 				$article = $templateManager->get_template_vars('article');
-				$logEntry->setSite($site->getTitle());
-				$logEntry->setJournal($journal->getJournalTitle());
+				$logEntry->setSite($site->getTitle($site->getPrimaryLocale()));
+				$logEntry->setJournal($journal->getTitle($journal->getPrimaryLocale()));
 				$logEntry->setJournalUrl(Request::url(null, 'index'));
 				$logEntry->setUser($logUser);
 				$logEntry->setType(LOG_ENTRY_TYPE_SEARCH);

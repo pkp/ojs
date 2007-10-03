@@ -1105,6 +1105,7 @@ class ImportOJS1 {
 					$galley->setArticleId($articleId);
 					$galley->setFileId($fileId);
 					$galley->setLabel('HTML');
+					$galley->setLocale(Locale::getLocale());
 					$galley->setSequence(1);
 					if ($row['fkFileStyleID']) {
 						$fileId = $this->addArticleFile($articleId, $row['fkFileStyleID'], ARTICLE_FILE_PUBLIC);
@@ -1119,6 +1120,7 @@ class ImportOJS1 {
 					$galley->setArticleId($articleId);
 					$galley->setFileId($fileId);
 					$galley->setLabel('PDF');
+					$galley->setLocale(Locale::getLocale());
 					$galley->setSequence(2);
 					$galleyDao->insertGalley($galley);
 				}
@@ -1127,6 +1129,7 @@ class ImportOJS1 {
 					$galley = &new ArticleGalley();
 					$galley->setArticleId($articleId);
 					$galley->setFileId($fileId);
+					$galley->setLocale(Locale::getLocale());
 					$galley->setLabel('PostScript');
 					$galley->setSequence(3);
 					$galleyDao->insertGalley($galley);

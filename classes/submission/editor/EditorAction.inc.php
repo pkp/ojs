@@ -149,6 +149,7 @@ class EditorAction extends SectionEditorAction {
 			}
 			$galley->setArticleId($article->getArticleId());
 			$galley->setFileId($fileId);
+			$galley->setLocale(Locale::getLocale());
 
 			if ($galley->isHTMLGalley()) {
 				$galley->setLabel('HTML');

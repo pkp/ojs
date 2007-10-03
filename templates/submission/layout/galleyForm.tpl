@@ -33,7 +33,7 @@
 	<td class="label">{fieldLabel name="galleyLocale" required="true" key="common.language"}</td>
 	<td class="value">
 		<select name="galleyLocale" id="galleyLocale" class="selectMenu">
-		{html_options options=$supportedLocales selected=$galleyLocale}
+		{html_options options=$supportedLocales selected=$galleyLocale|default:$formLocale}
 		</select>
 	</td>
 </tr>
