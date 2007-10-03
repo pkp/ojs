@@ -75,7 +75,7 @@ class EruditExportPlugin extends ImportExportPlugin {
 				$rangeInfo = Handler::getRangeInfo('articles');
 				$articleIds = $publishedArticleDao->getPublishedArticleIdsAlphabetizedByJournal($journal->getJournalId(), false);
 				$totalArticles = count($articleIds);
-				$articleIds = array_slice(&$articleIds, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());
+				$articleIds = array_slice($articleIds, $rangeInfo->getCount() * ($rangeInfo->getPage()-1), $rangeInfo->getCount());
 				$iterator = &new VirtualArrayIterator(ArticleSearch::formatResults($articleIds), $totalArticles, $rangeInfo->getPage(), $rangeInfo->getCount());
 				$templateMgr->assign_by_ref('articles', $iterator);
 				$templateMgr->display($this->getTemplatePath() . 'index.tpl');
@@ -87,17 +87,17 @@ class EruditExportPlugin extends ImportExportPlugin {
 		$this->import('EruditExportDom');
 		$doc = &XMLCustomWriter::createDocument('article', '-//ERUDIT//Erudit Article DTD 3.0.0//EN', 'http://www.erudit.org/dtd/article/3.0.0/en/eruditarticle.dtd');
 		$articleNode = &EruditExportDom::generateArticleDom($doc, $journal, $issue, $article, $galley);
-		XMLCustomWriter::appendChild(&$doc, &$articleNode);
+		XMLCustomWriter::appendChild($doc, $articleNode);
 
 		if (!empty($outputFile)) {
 			if (($h = fopen($outputFile, 'wb'))===false) return false;
-			fwrite($h, XMLCustomWriter::getXML(&$doc));
+			fwrite($h, XMLCustomWriter::getXML($doc));
 			fclose($h);
 		} else {
 			header("Content-Type: application/xml");
 			header("Cache-Control: private");
 			header("Content-Disposition: attachment; filename=\"erudit.xml\"");
-			XMLCustomWriter::printXML(&$doc);
+			XMLCustomWriter::printXML($doc);
 		}
 		return true;
 	}
@@ -146,7 +146,7 @@ class EruditExportPlugin extends ImportExportPlugin {
 			return;
 		}
 		$issue = &$issueDao->getIssueById($publishedArticle->getIssueId());
-		if (!$this->exportArticle(&$journal, &$issue, &$publishedArticle, $galley, $xmlFile)) {
+		if (!$this->exportArticle($journal, $issue, $publishedArticle, $galley, $xmlFile)) {
 			echo Locale::translate('plugins.importexport.erudit.cliError') . "\n";
 			echo Locale::translate('plugins.importexport.erudit.export.error.couldNotWrite', array('fileName' => $xmlFile)) . "\n\n";
 		}
