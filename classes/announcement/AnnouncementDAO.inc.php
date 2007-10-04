@@ -168,9 +168,11 @@ class AnnouncementDAO extends DAO {
 	 * @param $journalId int
 	 */
 	function deleteAnnouncementsByJournal($journalId) {
-		return $this->update(
-			'DELETE FROM announcements WHERE journal_id = ?', $journalId
-		);
+		$announcements =& $this->getAnnouncementsByJournalId($journalId);
+		while (($announcement =& $announcements->next())) {
+			$this->deleteAnnouncementById($announcement->getAnnouncementId());
+			unset($announcement);
+		}
 	}
 
 	/**

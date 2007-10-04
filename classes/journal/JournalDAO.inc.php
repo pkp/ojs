@@ -153,6 +153,15 @@ class JournalDAO extends DAO {
 		$subscriptionDao = &DAORegistry::getDAO('SubscriptionDAO');
 		$subscriptionDao->deleteSubscriptionsByJournal($journalId);
 
+		$subscriptionTypeDao = &DAORegistry::getDAO('SubscriptionTypeDAO');
+		$subscriptionTypeDao->deleteSubscriptionTypesByJournal($journalId);
+
+		$announcementDao = &DAORegistry::getDAO('AnnouncementDAO');
+		$announcementDao->deleteAnnouncementsByJournal($journalId);
+
+		$announcementTypeDao = &DAORegistry::getDAO('AnnouncementTypeDAO');
+		$announcementTypeDao->deleteAnnouncementTypesByJournal($journalId);
+
 		$articleDao = &DAORegistry::getDAO('ArticleDAO');
 		$articleDao->deleteArticlesByJournalId($journalId);
 

@@ -283,11 +283,11 @@ class SubscriptionTypeDAO extends DAO {
 	 */
 	function deleteSubscriptionTypeById($typeId) {
 		// Delete subscription type
-		$this->update('DELETE FROM subscription_types WHERE type_id = ?', $typeId);
 		$returner = $this->update('DELETE FROM subscription_types WHERE type_id = ?', $typeId);
 
-		// Delete all subscriptions with this subscription type
+		// Delete all localization settings and subscriptions for this subscription type
 		if ($returner) {
+			$this->update('DELETE FROM subscription_type_settings WHERE type_id = ?', $typeId);
 			$subscriptionDao = &DAORegistry::getDAO('SubscriptionDAO');
 			return $subscriptionDao->deleteSubscriptionByTypeId($typeId);
 		} else {
@@ -301,13 +301,15 @@ class SubscriptionTypeDAO extends DAO {
 	 * @param $journalId int
 	 * @return boolean
 	 */
-	function deleteSubscriptionTypeByJournal($journalId) {
+	function deleteSubscriptionTypesByJournal($journalId) {
 		$result = &$this->retrieve(
 			'SELECT type_id
 			 FROM   subscription_types
 			 WHERE  journal_id = ?',
 			 $journalId
 		);
+
+		$returner = false;
 
 		if ($result->RecordCount() != 0) {
 			$returner = true;
