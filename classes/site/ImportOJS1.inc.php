@@ -742,7 +742,7 @@ class ImportOJS1 {
 			$subscriptionType->setFormat(isset($subscriptionFormatMap[$row['fkSubscriptionFormatID']]) ? $subscriptionFormatMap[$row['fkSubscriptionFormatID']] : SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE);
 			$subscriptionType->setInstitutional($row['bInstitutional']);
 			$subscriptionType->setMembership($row['bMembership']);
-			$subscriptionType->setPublic(1); // No equivalent in OJS 1.x
+			$subscriptionType->setDisablePublicDisplay(0); // No equivalent in OJS 1.x
 			$subscriptionType->setSequence(++$count);
 
 			$subscriptionTypeDao->insertSubscriptionType($subscriptionType);
@@ -763,7 +763,7 @@ class ImportOJS1 {
 			$subscription->setDateEnd($row['dtDateEnd']);
 			$subscription->setMembership(Core::cleanVar($row['chMembership']));
 			$subscription->setDomain(Core::cleanVar($row['chDomain']));
-			$subscription->setIPRange('');
+			$subscription->setIPRange(''); // No equivalent in OJS 1.x
 
 			$subscriptionDao->insertSubscription($subscription);
 			$result->MoveNext();
