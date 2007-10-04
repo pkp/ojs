@@ -130,7 +130,7 @@ class MetadataForm extends Form {
 	 * @return array
 	 */
 	function getLocaleFieldNames() {
-		return array('title', 'abstract', 'subjectClass', 'subject', 'coverageGeo', 'coverageChron', 'coverageSample', 'type', 'sponsor');
+		return array('title', 'abstract', 'discipline', 'subjectClass', 'subject', 'coverageGeo', 'coverageChron', 'coverageSample', 'type', 'sponsor');
 	}
 
 	/**
@@ -245,7 +245,9 @@ class MetadataForm extends Form {
 				$author->setCountry($authors[$i]['country']);
 				$author->setEmail($authors[$i]['email']);
 				$author->setUrl($authors[$i]['url']);
-				$author->setCompetingInterests($authors[$i]['competingInterests'], null); // Localized
+				if (array_key_exists('competingInterests', $authors[$i])) {
+					$author->setCompetingInterests($authors[$i]['competingInterests'], null); // Localized
+				}
 				$author->setBiography($authors[$i]['biography'], null); // Localized
 				$author->setPrimaryContact($this->getData('primaryContact') == $i ? 1 : 0);
 				$author->setSequence($authors[$i]['seq']);

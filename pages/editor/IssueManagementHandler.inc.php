@@ -83,12 +83,16 @@ class IssueManagementHandler extends EditorHandler {
 		}
 
 		// finally remove the issue and cover page if available
-		if ($issue->getFileName()) {
+		/* --> is done in issueDAO - deleteIssue
+		if (is_array($issue->getFileName(null))) {
 			import('file.PublicFileManager');
-			$journal = &Request::getJournal();
 			$publicFileManager = &new PublicFileManager();
-			$publicFileManager->removeJournalFile($journal->getJournalId(),$issue->getFileName());
+			foreach ($issue->getFileName(null) as $fileName) {
+				$journal = &Request::getJournal();
+				$publicFileManager->removeJournalFile($journal->getJournalId(), $fileName);
+			}
 		}
+		*/
 
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
 		$issueDao->deleteIssue($issue);
