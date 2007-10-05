@@ -2117,6 +2117,7 @@ current password.<br /><br />Enter your email address below to reset your passwo
 	<message key="user.profile.form.firstNameRequired">A first name is required.</message>
 	<message key="user.profile.form.lastNameRequired">A last name is required.</message>
 	<message key="user.profile.form.emailRequired">A valid email address is required.</message>
+	<message key="user.profile.form.urlInvalid">The specified URL is not valid. Please double-check the URL and try again. (Hint: Try adding http:// to the beginning of the URL.)</message>
 	<message key="user.profile.form.usernameRequired">A username is required.</message>
 	<message key="user.profile.form.passwordRequired">A password is required.</message>
 	<message key="user.profile.leavePasswordBlank">Leave the password fields blank to keep the current password.</message>

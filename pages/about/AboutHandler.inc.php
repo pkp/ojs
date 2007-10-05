@@ -391,7 +391,7 @@ class AboutHandler extends Handler {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign_by_ref('publisherInstitution', $journal->getSetting('publisherInstitution'));
 		$templateMgr->assign_by_ref('publisherUrl', $journal->getSetting('publisherUrl'));
-		$templateMgr->assign_by_ref('publisherNote', $journal->getSetting('publisherNote'));
+		$templateMgr->assign_by_ref('publisherNote', $journal->getLocalizedSetting('publisherNote'));
 		$templateMgr->assign_by_ref('contributorNote', $journal->getLocalizedSetting('contributorNote'));
 		$templateMgr->assign_by_ref('contributors', $journal->getSetting('contributors'));
 		$templateMgr->assign('sponsorNote', $journal->getLocalizedSetting('sponsorNote'));
