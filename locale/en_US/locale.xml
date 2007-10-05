@@ -1085,7 +1085,7 @@ Authors who publish with this journal agree to the following terms:
 	 <li>Authors are permitted and encouraged to post their work online (e.g., in institutional repositories or on their website) prior to and during the submission process, as it can lead to productive exchanges, as well as earlier and greater citation of published work (See <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html"> The Effect of Open Access</a>).</li>
 </ol>]]></message>
 	<message key="manager.setup.authorCopyrightNoticeAgree">Require authors to agree to Copyright Notice as part of the submission process.</message>
-	<message key="manager.setup.includeCreativeCommons">For journals that offer immediate or delyed open access, include a Creative Commons license with all published work at the appropriate time.</message>
+	<message key="manager.setup.includeCreativeCommons">For journals that offer immediate or delayed open access, include a Creative Commons license with all published work at the appropriate time.</message>
 	<message key="manager.setup.copyrightNotice">Copyright notice</message>
 	<message key="manager.setup.competingInterests">Competing Interests</message>
 	<message key="manager.setup.competingInterests.description"><![CDATA[Biomedical journals typically require authors and reviewers to declare if they have any competing interests with regard to their research (see <a href="http://journals.plos.org/plosclinicaltrials/competing.php" target="_new">PLoS Policy</a>).]]></message>
