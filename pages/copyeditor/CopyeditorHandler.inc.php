@@ -105,7 +105,7 @@ class CopyeditorHandler extends Handler {
 	 * Setup common template variables.
 	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
 	 */
-	function setupTemplate($subclass = false, $articleId = 0, $parentPage = null, $showSidebar = true) {
+	function setupTemplate($subclass = false, $articleId = 0, $parentPage = null) {
 		$templateMgr = &TemplateManager::getManager();
 		$pageHierarchy = $subclass ? array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, 'copyeditor'), 'user.role.copyeditor'))
 				: array(array('user', 'navigation.user'), array('copyeditor', 'user.role.copyeditor'));
@@ -116,16 +116,6 @@ class CopyeditorHandler extends Handler {
 			$pageHierarchy = array_merge($pageHierarchy, $submissionCrumb);
 		}
 		$templateMgr->assign('pageHierarchy', $pageHierarchy);
-
-		if ($showSidebar) {
-			$templateMgr->assign('sidebarTemplate', 'copyeditor/navsidebar.tpl');
-
-			$journal = &Request::getJournal();
-			$user = &Request::getUser();
-			$copyeditorSubmissionDao = &DAORegistry::getDAO('CopyeditorSubmissionDAO');
-			$submissionsCount = $copyeditorSubmissionDao->getSubmissionsCount($user->getUserId(), $journal->getJournalId());
-			$templateMgr->assign('submissionsCount', $submissionsCount);
-		}
 	}
 
 	/**

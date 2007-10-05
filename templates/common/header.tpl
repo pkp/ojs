@@ -25,10 +25,10 @@
 
 	{call_hook|assign:"leftSidebarCode" name="Templates::Common::LeftSidebar"}
 	{call_hook|assign:"rightSidebarCode" name="Templates::Common::RightSidebar"}
-	{if $leftSidebarCode || $rightSidebarCode || $sidebarTemplate}<link rel="stylesheet" href="{$baseUrl}/styles/sidebar.css" type="text/css" />{/if}
+	{if $leftSidebarCode || $rightSidebarCode}<link rel="stylesheet" href="{$baseUrl}/styles/sidebar.css" type="text/css" />{/if}
 	{if $leftSidebarCode}<link rel="stylesheet" href="{$baseUrl}/styles/leftSidebar.css" type="text/css" />{/if}
-	{if $rightSidebarCode || $sidebarTemplate}<link rel="stylesheet" href="{$baseUrl}/styles/rightSidebar.css" type="text/css" />{/if}
-	{if $leftSidebarCode && ($rightSidebarCode || $sidebarTemplate)}<link rel="stylesheet" href="{$baseUrl}/styles/bothSidebars.css" type="text/css" />{/if}
+	{if $rightSidebarCode}<link rel="stylesheet" href="{$baseUrl}/styles/rightSidebar.css" type="text/css" />{/if}
+	{if $leftSidebarCode && $rightSidebarCode}<link rel="stylesheet" href="{$baseUrl}/styles/bothSidebars.css" type="text/css" />{/if}
 
 	{foreach from=$stylesheets item=cssUrl}
 		<link rel="stylesheet" href="{$cssUrl}" type="text/css" />
@@ -63,17 +63,16 @@
 
 <div id="body">
 
-{if $leftSidebarCode || $rightSidebarCode || $sidebarTemplate}
+{if $leftSidebarCode || $rightSidebarCode}
 	<div id="sidebar">
 		{if $leftSidebarCode}
 			<div id="leftSidebar">
 				{$leftSidebarCode}
 			</div>
 		{/if}
-		{if $rightSidebarCode || $sidebarTemplate}
+		{if $rightSidebarCode}
 			<div id="rightSidebar">
 				{$rightSidebarCode}
-				{if $sidebarTemplate}{include file=$sidebarTemplate}{/if}
 			</div>
 		{/if}
 	</div>

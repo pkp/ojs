@@ -86,7 +86,7 @@ class AuthorHandler extends Handler {
 	 * Setup common template variables.
 	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
 	 */
-	function setupTemplate($subclass = false, $articleId = 0, $parentPage = null, $showSidebar = true) {
+	function setupTemplate($subclass = false, $articleId = 0, $parentPage = null) {
 		$templateMgr = &TemplateManager::getManager();
 
 		$pageHierarchy = $subclass ? array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, 'author'), 'user.role.author'), array(Request::url(null, 'author'), 'article.submissions'))
@@ -98,16 +98,6 @@ class AuthorHandler extends Handler {
 			$pageHierarchy = array_merge($pageHierarchy, $submissionCrumb);
 		}
 		$templateMgr->assign('pageHierarchy', $pageHierarchy);
-
-		if ($showSidebar) {
-			$templateMgr->assign('sidebarTemplate', 'author/navsidebar.tpl');
-
-			$journal = &Request::getJournal();
-			$user = &Request::getUser();
-			$authorSubmissionDao = &DAORegistry::getDAO('AuthorSubmissionDAO');
-			$submissionsCount = $authorSubmissionDao->getSubmissionsCount($user->getUserId(), $journal->getJournalId());
-			$templateMgr->assign('submissionsCount', $submissionsCount);
-		}
 	}
 
 	/**

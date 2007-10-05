@@ -42,22 +42,6 @@ class DonationBlockPlugin extends BlockPlugin {
 	}
 
 	/**
-	 * Install default settings on system install.
-	 * @return string
-	 */
-	function getInstallSitePluginSettingsFile() {
-		return $this->getPluginPath() . '/settings.xml';
-	}
-
-	/**
-	 * Install default settings on journal creation.
-	 * @return string
-	 */
-	function getNewJournalPluginSettingsFile() {
-		return $this->getPluginPath() . '/settings.xml';
-	}
-
-	/**
 	 * Get the display name of this plugin.
 	 * @return String
 	 */

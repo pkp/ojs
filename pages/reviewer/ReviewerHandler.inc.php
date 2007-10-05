@@ -132,16 +132,6 @@ class ReviewerHandler extends Handler {
 			$pageHierarchy[] = array(Request::url(null, 'reviewer', 'submission', $reviewId), "#$articleId", true);
 		}
 		$templateMgr->assign('pageHierarchy', $pageHierarchy);
-
-		$templateMgr->assign('sidebarTemplate', 'reviewer/navsidebar.tpl');
-
-		$journal = &Request::getJournal();
-		$user = &Request::getUser();
-		if ($user) {
-			$reviewerSubmissionDao = &DAORegistry::getDAO('ReviewerSubmissionDAO');
-			$submissionsCount = $reviewerSubmissionDao->getSubmissionsCount($user->getUserId(), $journal->getJournalId());
-			$templateMgr->assign('submissionsCount', $submissionsCount);
-		}
 	}
 
 	//

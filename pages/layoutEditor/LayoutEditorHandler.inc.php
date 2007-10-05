@@ -173,7 +173,7 @@ class LayoutEditorHandler extends Handler {
 	 * Setup common template variables.
 	 * @param $subclass boolean set to true if caller is below this handler in the hierarchy
 	 */
-	function setupTemplate($subclass = false, $articleId = 0, $parentPage = null, $showSidebar = true) {
+	function setupTemplate($subclass = false, $articleId = 0, $parentPage = null) {
 		$templateMgr = &TemplateManager::getManager();
 		$pageHierarchy = $subclass ? array(array(Request::url(null, 'user'), 'navigation.user'), array(Request::url(null, 'layoutEditor'), 'user.role.layoutEditor'))
 				: array(array(Request::url(null, 'user'), 'navigation.user'));
@@ -184,17 +184,6 @@ class LayoutEditorHandler extends Handler {
 			$pageHierarchy = array_merge($pageHierarchy, $submissionCrumb);
 		}
 		$templateMgr->assign('pageHierarchy', $pageHierarchy);
-
-		if ($showSidebar) {
-			$templateMgr->assign('sidebarTemplate', 'layoutEditor/navsidebar.tpl');
-
-			$journal = &Request::getJournal();
-			$user = &Request::getUser();
-			$layoutEditorSubmissionDao = &DAORegistry::getDAO('LayoutEditorSubmissionDAO');
-			$submissionsCount = $layoutEditorSubmissionDao->getSubmissionsCount($user->getUserId(), $journal->getJournalId());
-			$templateMgr->assign('submissionsCount', $submissionsCount);
-		}
-
 	}
 
 	/**

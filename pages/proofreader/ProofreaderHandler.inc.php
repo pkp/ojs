@@ -116,17 +116,6 @@ class ProofreaderHandler extends Handler {
 			$pageHierarchy = array_merge($pageHierarchy, $submissionCrumb);
 		}
 		$templateMgr->assign('pageHierarchy', $pageHierarchy);
-
-		if ($showSidebar) {
-			$templateMgr->assign('sidebarTemplate', 'proofreader/navsidebar.tpl');
-
-			$journal = &Request::getJournal();
-			$user = &Request::getUser();
-			$proofreaderSubmissionDao = &DAORegistry::getDAO('ProofreaderSubmissionDAO');
-			$submissionsCount = $proofreaderSubmissionDao->getSubmissionsCount($user->getUserId(), $journal->getJournalId());
-			$templateMgr->assign('submissionsCount', $submissionsCount);
-		}
-
 	}
 
 	/**

@@ -30,7 +30,7 @@ class EditorHandler extends SectionEditorHandler {
 
 	function index($args) {
 		EditorHandler::validate();
-		EditorHandler::setupTemplate(EDITOR_SECTION_HOME, false);
+		EditorHandler::setupTemplate(EDITOR_SECTION_HOME);
 
 		$templateMgr = &TemplateManager::getManager();
 		$journal = &Request::getJournal();
@@ -106,7 +106,7 @@ class EditorHandler extends SectionEditorHandler {
 	 */
 	function submissions($args) {
 		EditorHandler::validate();
-		EditorHandler::setupTemplate(EDITOR_SECTION_SUBMISSIONS, true);
+		EditorHandler::setupTemplate(EDITOR_SECTION_SUBMISSIONS);
 
 		$journal = &Request::getJournal();
 		$user = &Request::getUser();
@@ -309,7 +309,7 @@ class EditorHandler extends SectionEditorHandler {
 			// has been done, send the email and store the editor
 			// selection.
 
-			EditorHandler::setupTemplate(EDITOR_SECTION_SUBMISSIONS, true, $articleId, 'summary');
+			EditorHandler::setupTemplate(EDITOR_SECTION_SUBMISSIONS, $articleId, 'summary');
 
 			// FIXME: Prompt for due date.
 			if (EditorAction::assignEditor($articleId, $editorId, $isEditor, Request::getUserVar('send'))) {
@@ -317,7 +317,7 @@ class EditorHandler extends SectionEditorHandler {
 			}
 		} else {
 			// Allow the user to choose a section editor or editor.
-			EditorHandler::setupTemplate(EDITOR_SECTION_SUBMISSIONS, true, $articleId, 'summary');
+			EditorHandler::setupTemplate(EDITOR_SECTION_SUBMISSIONS, $articleId, 'summary');
 
 			$searchType = null;
 			$searchMatch = null;
@@ -419,7 +419,7 @@ class EditorHandler extends SectionEditorHandler {
 	 * Setup common template variables.
 	 * @param $level int set to 0 if caller is at the same level as this handler in the hierarchy; otherwise the number of levels below this handler
 	 */
-	function setupTemplate($level = EDITOR_SECTION_HOME, $showSidebar = true, $articleId = 0, $parentPage = null) {
+	function setupTemplate($level = EDITOR_SECTION_HOME, $articleId = 0, $parentPage = null) {
 		// Layout Editors have access to some Issue Mgmt functions. Make sure we give them
 		// the appropriate breadcrumbs and sidebar.
 		$isLayoutEditor = Request::getRequestedPage() == 'layoutEditor';
@@ -437,20 +437,6 @@ class EditorHandler extends SectionEditorHandler {
 			$pageHierarchy = array_merge($pageHierarchy, $submissionCrumb);
 		}
 		$templateMgr->assign('pageHierarchy', $pageHierarchy);
-
-		if ($showSidebar) {
-			if ($isLayoutEditor) {
-				$templateMgr->assign('sidebarTemplate', 'layoutEditor/navsidebar.tpl');
-				$user = &Request::getUser();
-				$layoutEditorSubmissionDao = &DAORegistry::getDAO('LayoutEditorSubmissionDAO');
-				$submissionsCount = $layoutEditorSubmissionDao->getSubmissionsCount($user->getUserId(), $journal->getJournalId());
-			} else {
-				$templateMgr->assign('sidebarTemplate', 'editor/navsidebar.tpl');
-				$editorSubmissionDao = &DAORegistry::getDAO('EditorSubmissionDAO');
-				$submissionsCount = &$editorSubmissionDao->getEditorSubmissionsCount($journal->getJournalId());
-			}
-			$templateMgr->assign('submissionsCount', $submissionsCount);
-		}
 	}
 
 	//

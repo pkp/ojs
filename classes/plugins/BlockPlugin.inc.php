@@ -144,12 +144,25 @@ class BlockPlugin extends Plugin {
 	}
 
 	/**
+	 * Get the filename of the template block. (Default behavior may
+	 * be overridden through some combination of this function and the
+	 * getContents function.)
+	 * Returning null from this function results in an empty display.
+	 * @return string
+	 */
+	function getBlockTemplateFilename() {
+		return 'block.tpl';
+	}
+
+	/**
 	 * Get the HTML contents for this block.
 	 * @param $templateMgr object
 	 * @return string
 	 */
 	function getContents(&$templateMgr) {
-		return $templateMgr->fetch($this->getTemplatePath() . '/block.tpl');
+		$blockTemplateFilename = $this->getBlockTemplateFilename();
+		if ($blockTemplateFilename === null) return '';
+		return $templateMgr->fetch($this->getTemplatePath() . '/' . $blockTemplateFilename);
 	}
 
 	function callback($hookName, &$args) {

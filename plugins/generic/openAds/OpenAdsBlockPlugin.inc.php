@@ -81,8 +81,6 @@ class OpenAdsBlockPlugin extends BlockPlugin {
 		$this->import('OpenAdsConnection');
 		$openAdsConnection =& new OpenAdsConnection($plugin, $plugin->getInstallationPath());
 		$sidebarAdHtml = $openAdsConnection->getAdHtml($plugin->getSetting($journal->getJournalId(), 'sidebarAdId'));
-
-		// FIXME: THIS VERSION OF THE PLUGIN DOES NOT SUPPORT READING TOOLS ADS.
 		return '<div class="block">' . $sidebarAdHtml . '</div>';
 	}
 
