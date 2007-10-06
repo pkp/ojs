@@ -100,7 +100,9 @@ class IssueHandler extends Handler {
 			$issueCrumbTitle = Locale::translate('current.noCurrentIssue');
 			$issueHeadingTitle = Locale::translate('current.noCurrentIssue');
 		}
-
+ 
+		// Display creative commons logo/licence if enabled
+		$templateMgr->assign('displayCreativeCommons', $journal->getSetting('includeCreativeCommons'));
 		$templateMgr->assign('issueCrumbTitle', $issueCrumbTitle);
 		$templateMgr->assign('issueHeadingTitle', $issueHeadingTitle);
 		$templateMgr->assign('pageHierarchy', array(array(Request::url(null, 'issue', 'current'), 'current.current')));
@@ -131,6 +133,9 @@ class IssueHandler extends Handler {
 
 		$templateMgr = &TemplateManager::getManager();
 		IssueHandler::setupIssueTemplate($issue, ($showToc == 'showToc') ? true : false);
+
+		// Display creative commons logo/licence if enabled
+		$templateMgr->assign('displayCreativeCommons', $journal->getSetting('includeCreativeCommons'));
 		$templateMgr->assign('pageHierarchy', array(array(Request::url(null, 'issue', 'archive'), 'archive.archives')));
 		$templateMgr->assign('helpTopicId', 'user.currentAndArchives');
 		$templateMgr->display('issue/viewPage.tpl');

@@ -13,17 +13,17 @@
 
 <div>{$journalDescription}</div>
 
-<br />
-
 {call_hook name="Templates::Index::journal"}
 
 {if $homepageImage}
+<br />
 <div align="center"><img src="{$publicFilesDir}/{$homepageImage.uploadName|escape:"url"}" width="{$homepageImage.width|escape}" height="{$homepageImage.height|escape}" style="border: 0;" alt="" /></div>
 {/if}
 
-<br /><br />
-
+{if $additionalHomeContent}
+<br />
 {$additionalHomeContent}
+{/if}
 
 {if $enableAnnouncementsHomepage}
 	{* Display announcements *}
@@ -41,6 +41,7 @@
 
 {if $issue}
 	{* Display the table of contents or cover page of the current issue. *}
+	<br />
 	<h3>{$issue->getIssueIdentification()|escape}</h3>
 	{include file="issue/view.tpl"}
 {/if}
