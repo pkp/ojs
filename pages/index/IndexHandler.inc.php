@@ -36,7 +36,7 @@ class IndexHandler extends Handler {
 			$templateMgr->assign('displayPageHeaderLogo', $journal->getJournalPageHeaderLogo(true));
 			$templateMgr->assign('additionalHomeContent', $journal->getLocalizedSetting('additionalHomeContent'));
 			$templateMgr->assign('homepageImage', $journal->getLocalizedSetting('homepageImage'));
-			$templateMgr->assign('journalDescription', $journal->getLocalizedSetting('journalDescription'));
+			$templateMgr->assign('journalDescription', $journal->getLocalizedSetting('description'));
 
 			$displayCurrentIssue = $journal->getSetting('displayCurrentIssue');
 			$issueDao = &DAORegistry::getDAO('IssueDAO');
