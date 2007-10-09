@@ -13,6 +13,12 @@
   -->
 
 <data>
+	<!-- #2961# Now that the user_settings_old table has been migrated into
+	     user_settings, we can drop the user_settings_old table. -->
+	<sql>
+		<drop table="user_settings_old" />
+	</sql>
+
 	<!-- #2424# Drop the currencies table after the FKs have been kept. -->
 	<sql>
 		<drop table="currencies" />

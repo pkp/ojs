@@ -84,6 +84,7 @@
 	<!-- Complete the 2.2 upgrade -->
 	<upgrade minversion="2.0.0.0" maxversion="2.1.1.0">
 		<!-- 2.1.1 (or below) to 2.2 -->
+		<code function="migrateUserSettings" />
 		<data file="upgrade/2.2.0_update.xml" />
 		<code function="localizeJournalSettings" />
 		<code function="migratePublisher" />

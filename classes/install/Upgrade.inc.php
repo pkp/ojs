@@ -400,6 +400,27 @@ class Upgrade extends Installer {
 	}
 
 	/**
+	 * For 2.2 upgrade: user_settings table has been renamed in order to
+	 * apply the schema changes for localization. Migrate the settings from
+	 * user_settings_old to user_settings now that the new schema has been
+	 * applied.
+	 */
+	function migrateUserSettings() {
+		$userSettingsDao =& DAORegistry::getDAO('UserSettingsDAO');
+
+		$result =& $journalDao->retrieve('SELECT user_id, setting_name, journal_id, setting_value, setting_type FROM user_settings_old');
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+			$articleGalleyDao->update('INSERT INTO user_settings (user_id, setting_name, journal_id, setting_value, setting_type, locale) VALUES (?, ?, ?, ?, ?, ?)', array($row['user_id'], $row['setting_name'], $row['journal_id'], $row['setting_value'], $row['setting_type'], ''));
+			$result->MoveNext();
+		}
+		$result->Close();
+		unset($result);
+
+		return true;
+	}
+
+	/**
 	 * For 2.2 upgrade: index handling changed away from using the <KEY />
 	 * syntax in schema descriptors in cases where AUTONUM columns were not
 	 * used, in favour of specifically-named indexes using the <index ...>
