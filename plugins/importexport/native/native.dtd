@@ -30,30 +30,37 @@
 	<!ATTLIST href
 		src CDATA #REQUIRED
 		mime_type CDATA #REQUIRED>
+
 <!ELEMENT embed (#PCDATA)>
 	<!ATTLIST embed
 		encoding CDATA #FIXED "base64"
 		filename CDATA #REQUIRED
 		mime_type CDATA #REQUIRED>
-<!ENTITY % externalformat "href | embed">
 
+<!ENTITY % externalformat "href | embed">
 
 <!ELEMENT title (#PCDATA)>
 	<!ATTLIST title
 		locale CDATA #IMPLIED>
+
 <!ELEMENT description (#PCDATA)>
 	<!ATTLIST description
 		locale CDATA #IMPLIED>
+
 <!ELEMENT date_published (#PCDATA)>
+
 <!ELEMENT open_access EMPTY>
+
 <!ELEMENT sponsor (#PCDATA)>
 	<!ATTLIST sponsor
 		locale CDATA #IMPLIED>
+
 <!ELEMENT subject (#PCDATA)>
 	<!ATTLIST subject
 		locale CDATA #IMPLIED>
 		
 <!ELEMENT file (%externalformat;)>
+
 <!ELEMENT image (%externalformat;)>
 
 <!-- Issue-related elements -->
@@ -63,28 +70,35 @@
 		published (true|false) "false"
 		current (true|false) "false"
 		public_id CDATA #IMPLIED>
+
 <!ELEMENT volume (#PCDATA)>
+
 <!ELEMENT number (#PCDATA)>
+
 <!ELEMENT year (#PCDATA)>
+
 <!ELEMENT access_date (#PCDATA)>
 
 <!ELEMENT cover (caption?, image?)>
 	<!ATTLIST cover
 		locale CDATA #IMPLIED>
+
 <!ELEMENT caption (#PCDATA)>
 
 <!-- Section-related elements -->
 <!ELEMENT section (title+, abbrev*, identify_type*, policy*, article+)>
+
 <!ELEMENT abbrev (#PCDATA)>
 	<!ATTLIST abbrev
 		locale CDATA #IMPLIED>
+
 <!ELEMENT identify_type (#PCDATA)>
 	<!ATTLIST identify_type
 		locale CDATA #IMPLIED>
+
 <!ELEMENT policy (#PCDATA)>
 	<!ATTLIST policy
 		locale CDATA #IMPLIED>
-
 
 <!--
   * Article-related elements
@@ -97,7 +111,7 @@
 		public_id CDATA #IMPLIED
 		language CDATA "en">
 
-<!ELEMENT author (first_name, middle_name?, last_name, affiliation?, country?, email, url?, competing_interests*, biography*)>
+<!ELEMENT author (firstname, middlename?, lastname, affiliation?, country?, email, url?, competing_interests*, biography*)>
 	<!-- One author should be designated as the primary contact for this
 	     article. If no author is designated, the first author with an
 	     email address will be used; if multiple authors are designated, the
@@ -105,6 +119,7 @@
 	     have a valid email address if possible. -->
 	<!ATTLIST author
 		primary_contact (true|false) "false">
+
 <!ELEMENT firstname (#PCDATA)>
 <!ELEMENT middlename (#PCDATA)>
 <!ELEMENT lastname (#PCDATA)>
@@ -113,44 +128,53 @@
 <!ELEMENT email (#PCDATA)>
 <!ELEMENT url (#PCDATA)>
 <!ELEMENT competing_interests (#PCDATA)>
-	<!ATTLIST biography
-		locale CDATA #IMPLIED>
+
 <!ELEMENT biography (#PCDATA)>
 	<!ATTLIST biography
 		locale CDATA #IMPLIED>
-		
+
 <!ELEMENT abstract (#PCDATA)>
 	<!ATTLIST abstract
 		locale CDATA #IMPLIED>
+
 <!ELEMENT pages (#PCDATA)>
 
 <!ELEMENT indexing (discipline*, type*, subject*, subject_class*, coverage?)>
+
 <!ELEMENT discipline (#PCDATA)>
 	<!ATTLIST discipline
 		locale CDATA #IMPLIED>
+
 <!ELEMENT type (#PCDATA)>
 	<!ATTLIST type
 		locale CDATA #IMPLIED>
+
 <!ELEMENT subject_class (#PCDATA)>
 	<!ATTLIST subject_class
 		locale CDATA #IMPLIED>
+
 <!ELEMENT coverage (geographical*, chronological*, sample*)>
+
 <!ELEMENT geographical (#PCDATA)>
 	<!ATTLIST geographical
 		locale CDATA #IMPLIED>
+
 <!ELEMENT chronological (#PCDATA)>
 	<!ATTLIST chronological
 		locale CDATA #IMPLIED>
+
 <!ELEMENT sample (#PCDATA)>
 	<!ATTLIST sample
 		locale CDATA #IMPLIED>
 
 <!ELEMENT label (#PCDATA)>
+
 <!ELEMENT stylesheet (%externalformat;)>
 
 <!ELEMENT galley (label, file)>
 	<!ATTLIST galley
 		locale CDATA #IMPLIED>
+
 <!ELEMENT htmlgalley (label, file, stylesheet?, image*)>
 	<!ATTLIST htmlgalley
 		locale CDATA #IMPLIED>
@@ -160,15 +184,19 @@
 		type (research_instrument | research_materials | research_results | transcripts | data_analysis | data_set | source_text | other) "other"
 		language CDATA "en"
 		public_id CDATA #IMPLIED>
+
 <!ELEMENT creator (#PCDATA)>
 	<!ATTLIST creator
 		locale CDATA #IMPLIED>
+
 <!ELEMENT type_other (#PCDATA)>
+
 <!ELEMENT publisher (#PCDATA)>
 	<!ATTLIST publisher
 		locale CDATA #IMPLIED>
+
 <!ELEMENT date_created (#PCDATA)>
+
 <!ELEMENT source (#PCDATA)>
 	<!ATTLIST source
 		locale CDATA #IMPLIED>
-

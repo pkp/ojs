@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE issues SYSTEM "native.dtd" >
+<issues>
+  <issue current="false" identification="title" public_id="" published="false">
+    <title locale="">title</title>
+    <description locale="">description</description>
+    <volume>volume</volume>
+    <number>number</number>
+    <year>year</year>
+    <cover locale="">
+      <caption>caption</caption>
+      <image>
+        <href mime_type="" src=""/>
+      </image>
+    </cover>
+    <date_published>date_published</date_published>
+    <access_date>access_date</access_date>
+    <section>
+      <title locale="">title</title>
+      <abbrev locale="">abbrev</abbrev>
+      <identify_type locale="">identify_type</identify_type>
+      <policy locale="">policy</policy>
+      <article language="en" public_id="">
+        <title locale="">title</title>
+        <abstract locale="">abstract</abstract>
+        <indexing>
+          <discipline locale="">discipline</discipline>
+          <type locale="">type</type>
+          <subject locale="">subject</subject>
+          <subject_class locale="">subject_class</subject_class>
+          <coverage>
+            <geographical locale="">geographical</geographical>
+            <chronological locale="">chronological</chronological>
+            <sample locale="">sample</sample>
+          </coverage>
+        </indexing>
+        <sponsor locale="">sponsor</sponsor>
+        <author primary_contact="false">
+          <firstname>firstname</firstname>
+          <middlename>middlename</middlename>
+          <lastname>lastname</lastname>
+          <affiliation>affiliation</affiliation>
+          <country>country</country>
+          <email>email</email>
+          <url>url</url>
+          <competing_interests>competing_interests</competing_interests>
+          <biography locale="">biography</biography>
+        </author>
+        <pages>pages</pages>
+        <date_published>date_published</date_published>
+        <open_access/>
+        <galley locale="">
+          <label>label</label>
+          <file>
+            <href mime_type="" src=""/>
+          </file>
+        </galley>
+        <htmlgalley locale="">
+          <label>label</label>
+          <file>
+            <href mime_type="" src=""/>
+          </file>
+          <stylesheet>
+            <href mime_type="" src=""/>
+          </stylesheet>
+          <image>
+            <href mime_type="" src=""/>
+          </image>
+        </htmlgalley>
+        <supplemental_file language="en" public_id="" type="other">
+          <title locale="">title</title>
+          <creator locale="">creator</creator>
+          <subject locale="">subject</subject>
+          <type_other>type_other</type_other>
+          <description locale="">description</description>
+          <publisher locale="">publisher</publisher>
+          <sponsor locale="">sponsor</sponsor>
+          <date_created>date_created</date_created>
+          <source locale="">source</source>
+          <file>
+            <href mime_type="" src=""/>
+          </file>
+        </supplemental_file>
+      </article>
+    </section>
+  </issue>
+</issues>
