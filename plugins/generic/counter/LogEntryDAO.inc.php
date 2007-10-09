@@ -66,7 +66,9 @@ class LogEntryDAO extends DAO {
 		}
 
 		while ($data = fgets($fp, 4096)) {
-			list($stamp, $user, $site, $journal, $publisher, $printIssn, $onlineIssn, $type, $value, $journalUrl) = explode("\t", trim($data));
+			$fragments = explode("\t", trim($data));
+			if (sizeof($fragments) < 10) continue;
+			list($stamp, $user, $site, $journal, $publisher, $printIssn, $onlineIssn, $type, $value, $journalUrl) = $fragments;
 			$entryYear = strftime('%Y', strtotime($stamp));
 			if ($year === null || $entryYear == $year) {
 				$logEntry = &new LogEntry();
