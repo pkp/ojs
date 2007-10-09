@@ -127,7 +127,7 @@ class MailTemplate extends Mail {
 			$this->setFrom($user->getEmail(), $user->getFullName());
 		} elseif ($journal == null) {
 			$site = &Request::getSite();
-			$this->setFrom($site->getContactEmail(), $site->getContactName());
+			$this->setFrom($site->getSiteContactEmail(), $site->getSiteContactName());
 
 		} else {
 			$this->setFrom($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
@@ -196,7 +196,7 @@ class MailTemplate extends Mail {
 			$paramArray['principalContactSignature'] = $this->journal->getSetting('contactName');
 		} else {
 			$site = &Request::getSite();
-			$paramArray['principalContactSignature'] = $site->getContactName();
+			$paramArray['principalContactSignature'] = $site->getSiteContactName();
 		}
 		if (!isset($paramArray['journalUrl'])) $paramArray['journalUrl'] = Request::url(Request::getRequestedJournalPath());
 
