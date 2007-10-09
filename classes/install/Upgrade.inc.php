@@ -434,7 +434,8 @@ class Upgrade extends Installer {
 
 		// Assemble a list of indexes to be dropped
 		foreach ($tables as $tableName) {
-			foreach ($dict->MetaIndexes($tableName) as $indexName => $indexData) {
+			$indexes = $dict->MetaIndexes($tableName);
+			if (is_array($indexes)) foreach ($indexes as $indexName => $indexData) {
 				$dropIndexSql = array_merge($dropIndexSql, $dict->DropIndexSQL($indexName, $tableName));
 			}
 		}
