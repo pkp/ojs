@@ -140,7 +140,7 @@ class LoginHandler extends Handler {
 			// Send email confirming password reset
 			import('mail.MailTemplate');
 			$mail = &new MailTemplate('PASSWORD_RESET_CONFIRM');
-			$mail->setFrom($site->getContactEmail(), $site->getContactName());
+			$mail->setFrom($site->getSiteContactEmail(), $site->getSiteContactName());
 			$mail->assignParams(array(
 				'url' => Request::url(null, 'login', 'resetPassword', $user->getUsername(), array('confirm' => $hash)),
 				'siteTitle' => $site->getTitle()
@@ -203,7 +203,7 @@ class LoginHandler extends Handler {
 			$site = &Request::getSite();
 			import('mail.MailTemplate');
 			$mail = &new MailTemplate('PASSWORD_RESET');
-			$mail->setFrom($site->getContactEmail(), $site->getContactName());
+			$mail->setFrom($site->getSiteContactEmail(), $site->getSiteContactName());
 			$mail->assignParams(array(
 				'username' => $user->getUsername(),
 				'password' => $newPassword,

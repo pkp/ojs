@@ -103,9 +103,9 @@ class WebFeedPlugin extends GenericPlugin {
 			// if we have a journal selected, append feed meta-links into the header
 			$additionalHeadData = $templateManager->get_template_vars('additionalHeadData');
 
-			$feedUrl1 = '<link rel="alternate" type="application/atom+xml" href="'.$currentJournal->getUrl().'/feed/atom">';
-			$feedUrl2 = '<link rel="alternate" type="application/rdf+xml" href="'.$currentJournal->getUrl().'/feed/rss">';
-			$feedUrl3 = '<link rel="alternate" type="application/rss+xml" href="'.$currentJournal->getUrl().'/feed/rss2">';
+			$feedUrl1 = '<link rel="alternate" type="application/atom+xml" href="'.$currentJournal->getUrl().'/feed/atom" />';
+			$feedUrl2 = '<link rel="alternate" type="application/rdf+xml" href="'.$currentJournal->getUrl().'/feed/rss" />';
+			$feedUrl3 = '<link rel="alternate" type="application/rss+xml" href="'.$currentJournal->getUrl().'/feed/rss2" />';
 
 			$templateManager->assign('additionalHeadData', $additionalHeadData."\n".$feedUrl1."\n".$feedUrl2."\n".$feedUrl3);
 		}
