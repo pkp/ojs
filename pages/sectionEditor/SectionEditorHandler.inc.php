@@ -137,7 +137,7 @@ class SectionEditorHandler extends Handler {
 		$isEditor = Validation::isEditor();
 
 		if (Request::getRequestedPage() == 'editor') {
-			EditorHandler::setupTemplate(EDITOR_SECTION_SUBMISSIONS, $showSidebar, $articleId, $parentPage);
+			EditorHandler::setupTemplate(EDITOR_SECTION_SUBMISSIONS, $articleId, $parentPage);
 			$templateMgr->assign('helpTopicId', 'editorial.editorsRole');
 
 		} else {
