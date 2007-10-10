@@ -186,8 +186,6 @@
   </message>
   <!-- Navigation -->
   <message key="navigation.journalHelp">ヘルプ</message>
-  <message key="navigation.loggedInAs">ログインユーザ名: </message>
-  <message key="navigation.logout">ログアウト</message>
   <message key="navigation.home">ホーム</message>
   <message key="navigation.about">このサイト/雑誌について</message>
   <message key="navigation.userHome">ユーザホーム</message>
@@ -198,14 +196,10 @@
   <message key="navigation.current">最新号</message>
   <message key="navigation.search">検索</message>
   <message key="navigation.otherJournals">その他の雑誌</message>
-  <message key="navigation.myProfile">ユーザ情報</message>
-  <message key="navigation.myJournals">マイ･ジャーナル</message>
-  <message key="navigation.journalContent">目次</message>
   <message key="navigation.browse">ブラウズ</message>
   <message key="navigation.browseByIssue">巻号によるブラウズ</message>
   <message key="navigation.browseByAuthor">著者によるブラウズ</message>
   <message key="navigation.browseByTitle">タイトルによるブラウズ</message>
-  <message key="navigation.info">ご案内</message>
   <message key="navigation.infoForAuthors">論文著者の皆様へ</message>
   <message key="navigation.infoForReaders">読者の皆様へ</message>
   <message key="navigation.infoForLibrarians">図書館員の皆様へ</message>
@@ -301,7 +295,6 @@
   <message key="submission.response">回答</message>
   <message key="submission.accepted">アクセプト</message>
   <message key="submission.rejected">リジェクト</message>
-  <message key="submission.acceptance">査読を受諾</message>
   <message key="submission.due">期限</message>
   <message key="submission.complete">完了</message>
   <message key="submission.acknowledge">謝礼</message>
@@ -420,7 +413,6 @@
   <message key="user.affiliations">所属</message>
   <message key="user.email">メールアドレス</message>
   <message key="user.url">URL</message>
-  <message key="user.url.description">このURLは、「この著者について」および「編集委員会」ページの経歴欄の下にリンク付のURLとして表示されます。</message>
   <message key="user.phone">電話</message>
   <message key="user.fax">Fax</message>
   <message key="user.interests">査読可能分野</message>
@@ -536,7 +528,6 @@
 	-->
   <!-- Reader article view -->
   <message key="reader.fullText">フルテキスト:</message>
-  <message key="reader.fullTextSubscribersOnly">フルテキスト: 購読者のみ</message>
   <!-- Reader Comments -->
   <message key="comments.commentsOnArticle">この論文に対するコメント</message>
   <message key="comments.viewAllComments">全コメントを閲覧</message>
@@ -599,11 +590,8 @@ OJSのシステム設定を変更することにより、このサイト全体�
   <message key="admin.systemInformation">システム情報</message>
   <!-- Languages -->
   <message key="admin.languages.languageSettings">言語設定</message>
-  <message key="admin.languages.installLanguages">言語のインストール</message>
   <message key="admin.languages.primaryLocaleInstructions">このサイトおよびこのサイトで運営している全ての雑誌のデフォルト言語になります。</message>
   <message key="admin.languages.supportedLocalesInstructions">このサイトでサポートするロケールをすべて選択してください。選択したロケールはこのサイトで運営している全ての雑誌で利用可能となり、各雑誌サイトに表示される言語選択メニューに現れるようになります（雑誌ごとに置き換えることが可能です）。複数のロケールが選択されなかった場合は、言語選択メニューは画面に表示されず、それ以上の言語設定を行うことはできません。</message>
-  <message key="admin.languages.languageOptions">言語オプション</message>
-  <message key="admin.languages.profileLocales">雑誌の編集者が便利なように、登録担当者（編集者、査読者、コピーエディタなど）のユーザ情報において、作業言語を必須にする。</message>
   <message key="admin.languages.installedLocales">インストールされている言語</message>
   <message key="admin.languages.reload">ロケールのリロード</message>
   <message key="admin.languages.confirmReload">このロケールをリロードしてもよいですか。これを実行すると、カスタム化したメールテンプレートなどロケール依存の既存のデータを消去することになります。</message>
@@ -747,7 +735,6 @@ OJSのシステム設定を変更することにより、このサイト全体�
   <message key="manager.statistics.statistics.subscriptions">購読数</message>
   <message key="manager.statistics.statistics.note">注: 査読した投稿物の比率は100%にならない場合があります。これは、投稿されたアイテムはアクセプト、リジェクト、査読中のいずれかであるからです。</message>
   <message key="manager.statistics.reports">報告書作成</message>
-  <message key="manager.statistics.reports.description">OJSは、指定された期間における投稿物、査読者、セクションに関して投稿から出版に至る処理に関する情報を追跡して、報告書を作成します。報告書は、スプレットシートアプリケーションで読み込むことができるようにCSVフォーマットで作成されます。</message>
   <message key="manager.statistics.reports.dateFrom">処理対象開始日</message>
   <message key="manager.statistics.reports.dateTo">処理対象終了日</message>
   <message key="manager.statistics.reports.reportType">報告書種別</message>
@@ -803,7 +790,6 @@ OJSのシステム設定を変更することにより、このサイト全体�
   <message key="manager.setup.submissions">投稿</message>
   <message key="manager.setup.submissions.description">執筆要項、著作権、インデックス（登録を含む）。</message>
   <message key="manager.setup.management">管理</message>
-  <message key="manager.setup.management.description">スケジューリング、オンラインアクセス、お知らせ、コピーエディタ、レイアウトエディタ、校正者の任命。</message>
   <message key="manager.setup.look">外観</message>
   <message key="manager.setup.look.description">ホームページヘッダー、コンテンツ、雑誌ヘッダー、フッター、ナビゲーションバー、スタイルシート。</message>
   <message key="manager.setup.journalTitle">雑誌名</message>
@@ -923,25 +909,8 @@ OJSのシステム設定を変更することにより、このサイト全体�
   <message key="manager.setup.aboutItemContent">内容</message>
   <message key="manager.setup.addAboutItem">項目の追加</message>
   <message key="manager.setup.form.numReviewersPerSubmission">投稿物当たりの査読者の人数は必須です。</message>
-  <message key="manager.setup.securitySettings">セキュリティとアクセスに関する設定</message>
-  <message key="manager.setup.securitySettingsDescription">OJSは、雑誌コンテンツへのアクセスの制限や監査目的による投稿物に関するさらなる情報の保持のために使用できる数多くのセキュリティ関連のオプションを提供しています。</message>
   <message key="manager.setup.userRegistration">ユーザ登録</message>
-  <message key="manager.setup.enableUserRegistration">雑誌サイトでユーザを以下の役割として登録できるようにする。</message>
-  <message key="manager.setup.disableUserRegistration">ユーザ登録機能を無効にする。ユーザは、雑誌管理者が作成する必要がある。</message>
-  <message key="manager.setup.siteAccess">サイトアクセス</message>
-  <message key="manager.setup.noRestrictSiteAccess">未登録ユーザの雑誌サイトの閲覧を認める。</message>
-  <message key="manager.setup.restrictSiteAccess">雑誌サイトを閲覧するにはユーザログインを必要とする。</message>
-  <message key="manager.setup.articleAccess">論文アクセス</message>
-  <message key="manager.setup.noRestrictArticleAccess">未登録ユーザの雑誌論文のフルテキストの閲覧を認める。</message>
-  <message key="manager.setup.restrictArticleAccess">雑誌論文のフルテキストを閲覧するにはユーザログインを必要とする。</message>
-  <message key="manager.setup.comments">読者コメント</message>
-  <message key="manager.setup.comments.disable">読者コメントを無効にする。</message>
-  <message key="manager.setup.comments.authenticated">登録ユーザの投稿は認めるが、匿名ユーザの投稿は認めない。</message>
-  <message key="manager.setup.comments.anonymous">匿名による投稿を認めるが、登録を必要とする。</message>
-  <message key="manager.setup.comments.unauthenticated">すべての人に匿名による投稿を認める。</message>
   <message key="manager.setup.loggingAndAuditing">ログ出力と監査</message>
-  <message key="manager.setup.submissionEventLogging">投稿イベントのログ出力を有効にする。投稿に関するすべてのアクションのログを保持する（各投稿物の「履歴」ページからアクセスできる）。</message>
-  <message key="manager.setup.submissionEmailLogging">投稿メールのログ出力を有効にする。投稿に関して送信されたすべてのメールのログを保持する（各投稿物の「履歴」ページからアクセスできる）</message>
   <message key="manager.setup.journalArchiving">雑誌のアーカイブ化</message>
   <message key="manager.setup.lockssDescription">
     <![CDATA[オープン･ジャーナル･システムは、雑誌の安全で永続的なアーカイブを保証する<a href="http://lockss.stanford.edu/" target="_blank">LOCKSS</a>（Lots of Copies Keep Stuff Safe）システムをサポートしています。LOCKSSはスタンフォード大学図書館で開発されたオープンソースソフトウェアであり、あらかじめ登録した雑誌のWebサイトから新たに発行されたコンテンツを定期的にチェックしてアーカイブすることにより、図書館が選択したWeb雑誌を保存することを可能にします。各アーカイブは常に他の図書館のキャッシュと比較され、コンテンツの破損や不足が見つかった場合は、他のキャッシュや雑誌を使ってそれを復元します。<br /><br />
@@ -1025,12 +994,7 @@ OJSのシステム設定を変更することにより、このサイト全体�
     <![CDATA[雑誌アイテムは、ある号に掲載して目次と共に、まとめて出版することができます。また、個々のアイテムを準備できたものから直ちに出版して、「最新号」の目次に追加することもできます。この雑誌がどちらの方式を採用するか、また、予定する出版頻度を読書に示してください（これは、「この雑誌について」に表示されます）。]]>
   </message>
   <message key="manager.setup.publicationFormat">形式</message>
-  <message key="manager.setup.publicationFormatDescription">雑誌の刊行形態を識別するデフォルトの形式を選択してください。この形式は、個々の巻号ごとに変えることもできます。</message>
-  <message key="manager.setup.publicationFormatIssue">巻、号、年</message>
-  <message key="manager.setup.publicationFormatVolume">巻、年</message>
   <message key="manager.setup.publicationFormatYear">年</message>
-  <message key="manager.setup.publicationFormatTitle">各号に専用タイトル</message>
-  <message key="manager.setup.publicationFormatTitleDescription">注: タイトルはすべての号に付けることができますが、このオプションは、その号がタイトルのみで識別されることを意味します（たとえば、OJSを一連の編集特別号に使用する場合など）。</message>
   <message key="manager.setup.initialIssue">創刊号</message>
   <message key="manager.setup.initialIssueDescription">選択した形式によっては、OJSで出版する最初の号、巻、年を特定する必要があります:</message>
   <message key="manager.setup.frequencyOfPublication">開始巻号と頻度</message>
@@ -1046,13 +1010,9 @@ OJSのシステム設定を変更することにより、このサイト全体�
   <message key="manager.setup.editorialProcess2">編集長が受付と目次を担当し、セクションエディタが査読と編集を担当する。</message>
   <message key="manager.setup.editorialProcess3">編集長が受付と編集、目次を担当し、セクションエディタが査読を担当する。</message>
   <message key="manager.setup.copyediting">コピーエディタ</message>
-  <message key="manager.setup.useCopyeditors">コピーエディタを各投稿物に任命する。</message>
-  <message key="manager.setup.noUseCopyeditors">編集者がコピーエディタの役割を兼務する。</message>
   <message key="manager.setup.copyeditInstructions">原稿整理の手引き</message>
   <message key="manager.setup.copyeditInstructionsDescription">原稿整理の手引きは、投稿物編集段階においてコピーエディタ、著者、セクションエディタに公開されます。以下は、HTMLで書かれたデフォルトの指示内容です。雑誌編集者は、いつでもこれを変更したり、置き換えたりすることができます（プレーンテキストでもHTMLでも可）。</message>
   <message key="manager.setup.layoutAndGalleys">レイアウトエディタ</message>
-  <message key="manager.setup.useLayoutEditors">レイアウトエディタを任命し、電子出版のためにHTMLやPDF、PSなどのファイル形式でゲラを用意させる。</message>
-  <message key="manager.setup.noUseLayoutEditors">編集者がレイアウトエディタの役割を兼務する。</message>
   <message key="manager.setup.layoutInstructions">レイアウトの手引き</message>
   <message key="manager.setup.layoutInstructionsDescription">この雑誌で出版するアイテムをフォーマットするためにレイアウトの手引きを用意し、以下の記入欄にHTMLまたはプレーンテキストで入力することができます。この指示は、各投稿物の編集ページでレイアウトエディタとセクションエディタに公開されます。（各雑誌は独自のファイルフォーマットや書誌標準、スタイルシートなどを採用しているので、デフォルトの指示は提供していません。）</message>
   <message key="manager.setup.layoutTemplates">レイアウトテンプレート</message>
@@ -1060,8 +1020,6 @@ OJSのシステム設定を変更することにより、このサイト全体�
   <message key="manager.setup.layoutTemplates.title">名称</message>
   <message key="manager.setup.layoutTemplates.file">テンプレートファイル</message>
   <message key="manager.setup.proofreading">校正者</message>
-  <message key="manager.setup.useProofreaders">校正者を任命し（著者と共に）ゲラをチェックさせる。</message>
-  <message key="manager.setup.noUseProofreaders">編集者と著者がゲラの校正をする。</message>
   <message key="manager.setup.proofingInstructions">校正の手引き</message>
   <message key="manager.setup.proofingInstructionsDescription">校正の手引きは、投稿物編集段階において校正者、著者、レイアウトエディタ、セクションエディタに公開されます。以下は、HTMLで書かれたデフォルトの指示内容です。雑誌編集者は、いつでもこれを変更したり、置き換えたりすることができます（プレーンテキストでもHTMLでも可）。</message>
   <message key="manager.setup.volumePerYear">1年当たり巻数</message>
@@ -1074,12 +1032,10 @@ OJSのシステム設定を変更することにより、このサイト全体�
   <message key="manager.setup.enablePublicSuppFileId">論文補足ファイルを識別するためにカスタム識別子を使用する。</message>
   <message key="manager.setup.pageNumberIdentifier">ページ付けオプション</message>
   <message key="manager.setup.enablePageNumber">アイテムのページ数を独自に計算して、目次に入力する（例えば、pp. 13-26）。</message>
-  <message key="manager.setup.onlineAccessManagement">オンラインアクセス管理</message>
   <message key="manager.setup.openAccess">この雑誌のコンテンツはオープンアクセスで提供する。</message>
   <message key="manager.setup.openAccessPolicy">オープンアクセスポリシー</message>
   <message key="manager.setup.openAccessPolicyDescription">この雑誌のオープンアクセスポリシーを入力してください。このポリシーは「この雑誌について」に表示されます。</message>
   <message key="manager.setup.subscription">この雑誌のコンテンツの一部またはすべてにアクセスするためには購読を必要とする。</message>
-  <message key="manager.setup.subscriptionDescription">購読管理モジュールでこのモジュールにアクセスする購読管理者を任命する必要があります。このモジュールには、オープンアクセスの追加、セルフアーカイビング、メール通知のオプションがあります。</message>
   <message key="manager.setup.announcements">お知らせ</message>
   <message key="manager.setup.announcementsDescription">雑誌に関するニュースやイベントを読者に知らせる告知文を登録することができます。登録した告知文は「お知らせ」ページに表示されます。</message>
   <message key="manager.setup.enableAnnouncements">雑誌管理者による告知文の追加機能を有効にする。</message>
@@ -1110,8 +1066,6 @@ OJSのシステム設定を変更することにより、このサイト全体�
   <message key="manager.setup.alternateHeaderDescription">雑誌名とロゴの代わりに、下の記入欄に入力したHTML版のヘッダを挿入することができます。必要ない場合は、空欄にしておいてください。</message>
   <message key="manager.setup.journalPageFooter">雑誌ページのフッタ</message>
   <message key="manager.setup.journalPageFooterDescription">雑誌のフッタです。フッタを変更または更新する場合は、下の記入欄にHTML文を貼り付けてください。フッタの例としては、2つ目のナビゲーションバーやカウンターなどが考えられます。このフッタはすべてのページに表示されます。</message>
-  <message key="manager.setup.journalStyleSheet">雑誌のスタイルシート</message>
-  <message key="manager.setup.journalStyleSheetDescription">デフォルトでは、雑誌とサイトは同じスタイルシート（サイトの&quot;styles&quot;サブディレクトリにある）を使用しています。雑誌独自のCSSファイルをアップロードすることによりデフォルトのスタイルを置き換えることができます。</message>
   <message key="manager.setup.useJournalStyleSheet">雑誌スタイルシート</message>
   <message key="manager.setup.noStyleSheetUploaded">スタイルシートがアップロードされていません。</message>
   <message key="manager.setup.journalHomepageContent">雑誌ホームページのコンテンツ</message>
@@ -1131,14 +1085,6 @@ OJSのシステム設定を変更することにより、このサイト全体�
   <message key="manager.setup.homeHeaderImageInvalid">ホームページヘッダのロゴ画像フォーマットが不正です。利用できるフォーマットは、.gif、.jpg、.pngの3つです。</message>
   <message key="manager.setup.pageHeaderTitleImageInvalid">ページヘッダの誌名画像フォーマットが不正です。利用できるフォーマットは、.gif、.jpg、.pngの3つです。</message>
   <message key="manager.setup.pageHeaderLogoImageInvalid">ページヘッダのロゴ画像フォーマットが不正です。利用できるフォーマットは、.gif、.jpg、.pngの3つです。</message>
-  <message key="manager.setup.homeHeaderTitleImageAlt1Invalid">代替ホームページヘッダの誌名画像フォーマットが不正です。利用できるフォーマットは、.gif、.jpg、.pngの3つです。</message>
-  <message key="manager.setup.homeHeaderLogoImageAlt1Invalid">代替ホームページヘッダのロゴ画像フォーマットが不正です。利用できるフォーマットは、.gif、.jpg、.pngの3つです。</message>
-  <message key="manager.setup.pageHeaderTitleImageAlt1Invalid">代替ページヘッダの誌名画像フォーマットが不正です。利用できるフォーマットは、.gif、.jpg、.pngの3つです。</message>
-  <message key="manager.setup.pageHeaderLogoImageAlt1Invalid">代替ページヘッダのロゴ画像フォーマットが不正です。利用できるフォーマットは、.gif、.jpg、.pngの3つです。</message>
-  <message key="manager.setup.homeHeaderTitleImageAlt2Invalid">第2代替ホームページヘッダの誌名画像フォーマットが不正です。利用できるフォーマットは、.gif、.jpg、.pngの3つです。</message>
-  <message key="manager.setup.homeHeaderLogoImageAlt2Invalid">第2代替ホームページヘッダのロゴ画像フォーマットが不正です。利用できるフォーマットは、.gif、.jpg、.pngの3つです。</message>
-  <message key="manager.setup.pageHeaderTitleImageAlt2Invalid">第2代替ページヘッダの誌名画像フォーマットが不正です。利用できるフォーマットは、.gif、.jpg、.pngの3つです。</message>
-  <message key="manager.setup.pageHeaderLogoImageAlt2Invalid">第2代替ページヘッダのロゴ画像フォーマットが不正です。利用できるフォーマットは、.gif、.jpg、.pngの3つです。</message>
   <message key="manager.setup.homepageImageInvalid">ホームページヘッダの画像フォーマットが不正です。利用できるフォーマットは、.gif、.jpg、.pngの3つです。</message>
   <message key="manager.setup.journalStyleSheetInvalid">雑誌のスタイルシートが不正です。利用できるフォーマットは、.cssだけです。</message>
   <message key="manager.setup.information">ご案内</message>
@@ -1152,12 +1098,6 @@ OJSのシステム設定を変更することにより、このサイト全体�
   </message>
   <message key="manager.languages.primaryLocaleInstructions">この雑誌サイトのデフォルト言語になります。</message>
   <message key="manager.languages.supportedLocalesInstructions">このサイトがサポートするロケールをすべて選択してください。ここで選択したロケールは、各ページに表示される言語選択メニューに現れます。ただし、メニューが現れるのは複数のロケールを選択した場合のみです。</message>
-  <message key="manager.languages.alternateLocale1">代替ロケール その1</message>
-  <message key="manager.languages.alternateLocale2">代替ロケール その2</message>
-  <message key="manager.languages.alternateLocaleInstructions">このシステムはオプションとして、重要な情報についてさらに2つの言語で入力できるようにすることができます。この機能を使用するには、代替ロケールを1つまたは2つ選択し、さらに、以下のオプションを選択してください。</message>
-  <message key="manager.languages.alternativeLanguageOptions">言語オプション</message>
-  <message key="manager.languages.journalTitleAltLanguages">タイトル画像やページヘッダなどを雑誌言語ごとにアップロードする。</message>
-  <message key="manager.languages.articleAltLanguages">雑誌スタッフによる代行オプション付きで、別言語によるタイトルや要旨の提供を著者に求める。</message>
   <message key="manager.languages.noneAvailable">申し訳ありませんが、追加可能な言語はありません。この雑誌に言語を追加したい場合はサイト管理者にご連絡ください。</message>
   <!-- Section Management -->
   <message key="manager.sections.noneCreated">セクションは作成されていません。</message>
@@ -1166,8 +1106,6 @@ OJSのシステム設定を変更することにより、このサイト全体�
   <message key="manager.sections.editors">セクションエディタ</message>
   <message key="manager.sections.unassigned">任命可能なセクションエディタ</message>
   <message key="manager.sections.assigned">このセクションの編集者</message>
-  <message key="manager.sections.assignEditor">編集者に任命</message>
-  <message key="manager.sections.unassignEditor">編集者の解除</message>
   <message key="manager.sections.form.titleRequired">このセクションでは誌名は必須です。</message>
   <message key="manager.sections.form.abbrevRequired">このセクションでは略誌名は必須です。</message>
   <message key="manager.section.sectionEditorInstructions">任命可能なセクションエディタの中からこのセクションの「セクションエディタを選択」してください。</message>
@@ -1192,23 +1130,18 @@ OJSのシステム設定を変更することにより、このサイト全体�
   <message key="manager.groups.title">担当</message>
   <message key="manager.groups.confirmDelete">このグループを削除してもよいですか。</message>
   <message key="manager.groups.noneCreated">編集委員会の担当は作成されていません。</message>
-  <message key="manager.groups.create">担当の作成</message>
   <message key="manager.groups.form.groupTitleRequired">編集委員会の担当は必須です。</message>
   <message key="manager.groups.enableBoard.description">
     <![CDATA[「この雑誌について」の「<a href="{$aboutEditorialTeamUrl}">編集委員会</a>」欄に、]]>
   </message>
-  <message key="manager.groups.enableBoard">雑誌管理者が編集委員会の担当を作成し、担当者を設定する。</message>
-  <message key="manager.groups.disableBoard">システムが編集委員会の担当者（雑誌管理者、編集者、セクションエディタ、コピーエディタなど）リストを作成する。</message>
   <message key="manager.groups.membership">委員</message>
   <message key="manager.groups.membership.confirmDelete">この編集委員会の委員を削除してもよいですか。</message>
   <message key="manager.groups.membership.noneCreated">この編集委員会に委員はいません。</message>
   <message key="manager.groups.membership.addMember">委員の追加</message>
   <message key="manager.groups.membership.noUsers">ユーザが見つかりませんでした。</message>
   <!-- People Management -->
-  <message key="manager.people.allUsers">全ユーザ</message>
   <message key="manager.people.allJournals">全雑誌</message>
   <message key="manager.people.editUser">ユーザの編集</message>
-  <message key="manager.people.enrollExistingUser">既存ユーザの登録</message>
   <message key="manager.people.createUser">新規ユーザ作成</message>
   <message key="manager.people.mergeUsers">ユーザのマージ</message>
   <message key="manager.people.mergeUser">ユーザのマージ</message>
@@ -1229,7 +1162,6 @@ OJSのシステム設定を変更することにより、このサイト全体�
   <message key="manager.people.authSource">認証システム</message>
   <message key="manager.people.enrollUserAs">ユーザの役割</message>
   <message key="manager.people.doNotEnroll">役割なし</message>
-  <message key="manager.people.enrollUserAsDescription">役割が選択されないと、ユーザはシステムに作成されますが、この雑誌には何の役割も登録されません。役割の登録・解除は、ユーザの作成後にいつでも行うことができます。</message>
   <message key="manager.people.invalidUser">申し訳ありませんが、指定されたユーザは存在しません。</message>
   <message key="manager.people.noAdministrativeRights">
     <![CDATA[申し訳ありませんが、あなたはこのユーザに関する管理権限がありません。その理由は、以下のいずれかです。
@@ -1254,7 +1186,6 @@ OJSのシステム設定を変更することにより、このサイト全体�
   <message key="manager.people.emailUsers.selectLocale">ロケールの選択</message>
   <message key="manager.people.editProfile">ユーザ情報の編集</message>
   <message key="manager.people.signInAsUser">一時ユーザとしてログイン</message>
-  <message key="manager.people.signOutAsUser">一時ユーザのログアウト</message>
   <message key="manager.people.signInAs">ログイン</message>
   <message key="manager.people.syncUsers">登録ユーザの同期</message>
   <message key="manager.people.syncUserDescription">登録ユーザの同期機能は、指定した雑誌において指定した役割で登録されているすべてのユーザを、この雑誌においても同じ役割で登録します。この機能は、複数の雑誌で共通のユーザグループ（査読者など）を指定することを可能にします。</message>
@@ -1362,7 +1293,6 @@ OJSのシステム設定を変更することにより、このサイト全体�
   <message key="manager.subscriptionTypes.form.format">フォーマット</message>
   <message key="manager.subscriptionTypes.form.institutional">購読者をドメイン名やIPアドレスによる認証で確認する。</message>
   <message key="manager.subscriptionTypes.form.membership">購読者を協会や組織の会員に限定する。</message>
-  <message key="manager.subscriptionTypes.form.public">この購読種別を「この雑誌について」ページに表示しない。</message>
   <message key="manager.subscriptionTypes.form.saveAndCreateAnotherType">保存して新規作成</message>
   <message key="manager.subscriptionTypes.format.online">オンライン版</message>
   <message key="manager.subscriptionTypes.format.print">印刷版</message>
@@ -1481,14 +1411,6 @@ OJSのシステム設定を変更することにより、このサイト全体�
   <message key="editor.issues.published">出版済</message>
   <message key="editor.issues.unpublished">未出版</message>
   <!-- Create Issue / Issue Data -->
-  <message key="editor.issues.volumeRequired">この号に巻数は必須です。</message>
-  <message key="editor.issues.numberRequired">この号に号数は必須です。</message>
-  <message key="editor.issues.yearRequired">この号に年は必須です。</message>
-  <message key="editor.issues.labelFormatRequired">正しいラベルフォーマットを選択する必要があります。</message>
-  <message key="editor.issues.labelOption1">巻、号、年</message>
-  <message key="editor.issues.labelOption2">巻、年</message>
-  <message key="editor.issues.labelOption3">年</message>
-  <message key="editor.issues.labelOption4">タイトルのみ</message>
   <message key="editor.issues.issueIdentification">巻号の識別</message>
   <message key="editor.issues.publicIssueIdentifier">公開巻号識別子</message>
   <message key="editor.issues.description">記述</message>
@@ -1507,7 +1429,6 @@ OJSのシステム設定を変更することにより、このサイト全体�
   <message key="editor.issues.invalidStyleFormat">スタイルシートフォーマットが不正です。指定したファイルが妥当なCSSファイルであることを確認してください（冒頭にコメントがあるスタイルシートは認められないことに注意してください）。</message>
   <message key="editor.issues.removeStyleFile">スタイルシートを削除しますか。</message>
   <message key="editor.issues.coverPageCaption">カバー見出し</message>
-  <message key="editor.issues.showCoverPage">この巻号のための独自カバーページを作成する。</message>
   <message key="editor.issues.openAccess">オープンアクセス</message>
   <message key="editor.issues.subscription">購読</message>
   <message key="editor.issues.identification">識別</message>
@@ -1593,7 +1514,6 @@ OJSのシステム設定を変更することにより、このサイト全体�
   <message key="editor.article.noneSelected">1つも選択されていません</message>
   <message key="editor.article.authorProofing">著者校正</message>
   <message key="editor.article.archiveSubmission">投稿物をアーカイブ</message>
-  <message key="editor.article.emailAuthorOnArchive">この投稿物のアーカイブについて著者にメールしますか。</message>
   <message key="editor.article.restoreToQueue">アクティブリストに戻す</message>
   <message key="editor.article.assignSectionEditor">セクションエディタを任命</message>
   <message key="editor.article.assignEditor">編集者を任命</message>
@@ -1644,7 +1564,6 @@ OJSのシステム設定を変更することにより、このサイト全体�
   <message key="sectionEditor.regrets.regretsAndCancels">査読者の謝絶と取消</message>
   <message key="sectionEditor.regrets.regret">謝絶</message>
   <message key="sectionEditor.regrets.result">結果</message>
-  <message key="sectionEditor.review.enrollReviewer">既存のユーザを査読者に登録</message>
   <message key="sectionEditor.review.createReviewer">新規査読者の作成</message>
   <!-- Layout Editor -->
   <message key="layoutEditor.activeEditorialAssignments">編集担当の任命</message>
@@ -1664,7 +1583,6 @@ OJSのシステム設定を変更することにより、このサイト全体�
   <message key="reviewer.article.notifyTheEditor">編集者へ通知</message>
   <message key="reviewer.article.canDoReview">受諾する</message>
   <message key="reviewer.article.cannotDoReview">謝絶する</message>
-  <message key="reviewer.article.restrictedFileAccess">査読を引き受けないとファイルを見ることはできません。</message>
   <message key="reviewer.article.submissionEditor">編集者へコメント送信</message>
   <message key="reviewer.article.reviewerCommentsDescription">ここに査読コメントを入力してください。</message>
   <message key="reviewer.article.editorToEnter">編集者宛て</message>
@@ -1714,7 +1632,6 @@ OJSのシステム設定を変更することにより、このサイト全体�
   <message key="author.track">投稿物一覧</message>
   <message key="author.submit.submitArticle">論文の投稿</message>
   <message key="author.submit.stepsToSubmit">投稿の5ステップ</message>
-  <message key="author.submit.startHereLink">投稿を開始するにはここをクリックしてください</message>
   <message key="author.submit.step1">ステップ 1. 投稿の開始</message>
   <message key="author.submit.step2">ステップ 2. 投稿物のメタデータ入力</message>
   <message key="author.submit.step3">ステップ 3. 投稿物のアップロード</message>
@@ -1751,15 +1668,10 @@ OJSのシステム設定を変更することにより、このサイト全体�
   <message key="author.submit.comments">コメントを入力してください（オプション）</message>
   <message key="author.submit.form.sectionRequired">この投稿物にふさわしい雑誌セクションを選択してください。</message>
   <!-- Article Submission Step 2 -->
-  <message key="author.submit.metadataDescription">この雑誌は、研究資源を識別するための新たなオンライン標準であるOAIにより策定された標準に基づいて投稿物に関するメタデータを収集しています。この標準によりOAIデータベースを横断する集合的かつ正確な検索が可能になり、読者が投稿物を発見する可能性が増加します。編集者は編集処理を開始する前にメタデータの提供を求めることができます。</message>
   <message key="author.submit.privacyStatement">この雑誌のプライバシー情報の扱いについて</message>
-  <message key="author.submit.authorsDescription">2人以上の著者を持つ投稿物については、引用情報に表示する著者の順番を指定してください。</message>
-  <message key="author.submit.reorderAuthorName">著者名の表示順の入れ替え</message>
-  <message key="author.submit.reorderInstructions">矢印を使って、投稿物に表示する著者の順番を変えてください。</message>
   <message key="author.submit.selectPrincipalContact">編集上の連絡を取る第一著者</message>
   <message key="author.submit.addAuthor">著者の追加</message>
   <message key="author.submit.deleteAuthor">著者の削除</message>
-  <message key="author.submit.submissionIndexingDescription">この雑誌で使用している以下のカテゴリーにおいて、投稿物のコンテンツを説明するのに最もふさわしい言葉を選択してください。編集者による例を示しました。複数の言葉は次のようにセミコロンで区切ってください（単語1; 単語2; 単語3）。</message>
   <message key="author.submit.submissionSupportingAgencies">支援機関</message>
   <message key="author.submit.submissionSupportingAgenciesDescription">この投稿物の元となる研究を助成または支援した機関を指定してください。</message>
   <message key="author.submit.agencies">機関</message>
@@ -1782,17 +1694,13 @@ OJSのシステム設定を変更することにより、このサイト全体�
 <li>ファイル選択画面の[開く]ボタンをクリックしてください。選択したファイル名が投稿物ファイル欄に表示されます。</li>
 <li>この画面の[アップロード]ボタンをクリックしてください。すると、あなたのコンピュータ上にあるファイルが雑誌のWebサイトにアップロードされ、雑誌で決めた方法でリネームされます。</li>
 <li>投稿ファイルをアップロードしたら、このページの下部にある[保存して継続]ボタンをクリックしてください。</li>
-</ol>
-
-ファイル名をクリックすることによりファイルの内容を見ることができます。現在表示しているファイルを削除して、新しいファイルまたは改訂したファイルをアップロードすることができます。（次のステップの）補足ファイルを使ってその他のファイルを追加することができます。投稿物のアップロードについてご不明な点がございましたら、担当者にメール（<a href="mailto:{$supportEmail}">{$supportName}</a>）か電話（{$supportPhone}）でご連絡ください。]]>
-  </message>
+</ol>]]></message>
   <message key="author.submit.submissionFile">投稿物ファイル</message>
   <message key="author.submit.uploadSubmissionFile">投稿物ファイルのアップロード</message>
   <message key="author.submit.replaceSubmissionFile">投稿物ファイルの置換</message>
   <message key="author.submit.noSubmissionFile">投稿物ファイルがアップロードされていません。</message>
   <message key="author.submit.noSubmissionConfirm">投稿物のアップロードなしに処理を続けてもよいですか。</message>
   <!-- Article Submission Step 4 -->
-  <message key="author.submit.supplementaryFilesInstructions">このオプションの投稿作業により、投稿物の貢献度を高める補足ファイルを追加することができます。補足ファイルとしては、(1) 研究装置、(2) その分野の研究倫理審査条項を満たすデータセット、(3) 他では読者が利用できない資源、(4) テキストに含めることができない図や表、などが考えられます。また、これらのファイルについて、著者はそれらの所有権を示すと共に、投稿物との関係を示すインデックスを付与することができます。補足ファイルとしてはどんなフォーマットのファイルもアップロードすることができ、オリジナルフォーマットのまま読者に公開されます。ブラインド審査の条件に抵触しなければ、これらのファイルを査読者に提供することもできます。</message>
   <message key="author.submit.noSupplementaryFiles">この投稿物には補足ファイルが追加されませんでした。</message>
   <message key="author.submit.backToSupplementaryFiles">補足ファイルに戻る</message>
   <message key="author.submit.confirmDeleteSuppFile">この補足ファイルを削除してもよいですか。</message>
@@ -1825,7 +1733,6 @@ OJSのシステム設定を変更することにより、このサイト全体�
   <message key="author.suppFile.suppFilePublicIdentificationExists">補足ファイルの公開識別子は既に存在します。</message>
   <message key="author.suppFile.publicSuppFileIdentifier">補足ファイルの公開識別子</message>
   <!-- Article Submission Step 5 -->
-  <message key="author.submit.confirmationDescription">投稿プロセスの4つのステップが終了しました。[投稿を完了]ボタンをクリックして、「{$journalTitle}」へ原稿を投稿してください。投稿を受け付けると受領確認のメールが送られます。また、雑誌のWebサイトにログインすることにより編集処理の進捗状況を見ることができます。雑誌「{$journalTitle}」による出版をご検討いただき、ありがとうございました。</message>
   <message key="author.submit.noFiles">この投稿物にはファイルが添付されていません。</message>
   <message key="author.submit.filesSummary">ファイル情報</message>
   <message key="author.submit.finishSubmission">投稿を完了</message>
@@ -1851,7 +1758,6 @@ OJSのシステム設定を変更することにより、このサイト全体�
   <message key="submission.copyedit.copyeditComments">コピーエディタのコメント</message>
   <message key="submission.copyedit.instructions">原稿整理の手引き</message>
   <!-- Submission Tracking - Layout Specific -->
-  <message key="submission.layout.mustUploadFileForLayout">レイアウト対象版がないと、依頼メールは送信できません。</message>
   <message key="submission.layout.layoutVersion">レイアウト対象版</message>
   <message key="submission.layout.layoutFile">レイアウトファイル</message>
   <message key="submission.layout.galleys">レイアウト済（ゲラ）版</message>
@@ -1956,7 +1862,6 @@ OJSのシステム設定を変更することにより、このサイト全体�
   <message key="user.login.changePasswordInstructions">
     <![CDATA[このサイトにログインする前に、新しいパスワードを指定する必要があります。<br /><br />パスワードを変更するには、以下の記入欄にユーザ名、現行のパスワード、新しいパスワードを入力してください。]]>
   </message>
-  <message key="user.login.rememberMe">記憶する</message>
   <message key="user.login.registeredEmail">登録ユーザのメールアドレス</message>
   <!-- Profile -->
   <message key="user.profile.editProfile">ユーザ情報の編集</message>
@@ -2141,7 +2046,6 @@ OJSのシステム設定を変更することにより、このサイト全体�
   <message key="help.relatedTopics">関連トピック</message>
   <message key="help.search">ヘルプの検索</message>
   <message key="help.searchFor">ヘルプトピックを検索</message>
-  <message key="help.searchResultsFor">検索結果</message>
   <!-- Installer -->
   <message key="installer.ojsInstallation">OJSのインストール</message>
   <message key="installer.ojsUpgrade">OJSのバージョンアップ</message>
@@ -2208,9 +2112,7 @@ OJSのシステム設定を変更することにより、このサイト全体�
   <message key="installer.clientCharset">クライアント文字セット</message>
   <message key="installer.clientCharsetInstructions">ブラウザとデータを送受信する際に使用するエンコーディング。</message>
   <message key="installer.connectionCharset">通信文字セット</message>
-  <message key="installer.connectionCharsetInstructions">データベースとデータを送受信する際に使用するエンコーディング。これはクライアント文字セットに合わせるべきです。この機能は、MySQL 4.1.1以降、または、PostgreSQL 7.1以降でのみサポートされているいることに注意してください。使用するデータベースサーバがこれらの要件を満たしていない場合は、&quot;利用不可&quot; を選択してください。</message>
   <message key="installer.databaseCharset">データベース文字セット</message>
-  <message key="installer.databaseCharsetInstructions">データベースにデータを格納する際に使用するエンコーディング。この機能は、MySQL 4.1.1以降、または、PostgreSQL 7.1以降でのみサポートされているいることに注意してください。使用するデータベースサーバがこれらの要件を満たしていない場合は、&quot;利用不可&quot; を選択してください。</message>
   <message key="installer.locale">ロケール</message>
   <message key="installer.fileSettings">ファイル設定</message>
   <message key="installer.filesDir">アップロードファイル用ディレクトリ</message>
@@ -2354,14 +2256,11 @@ OJSのシステム設定を変更することにより、このサイト全体�
   <message key="rt.admin.options">雑誌アイテムツール</message>
   <message key="rt.admin.relatedItems">関連アイテムツール</message>
   <message key="rt.admin.settings.disableRelatedItems">関連アイテムを無効にする</message>
-  <message key="rt.admin.settings.bibFormat">引用形式</message>
   <message key="rt.admin.settings.captureCite">アイテムの引用形式（アイテムの書誌情報を提供する）。</message>
   <message key="rt.admin.settings.viewMetadata">インデックス用メタデータ（著者やシステムが提供したアイテムのインデックス用メタデータを表示する）。</message>
   <message key="rt.admin.settings.supplementaryFiles">補足ファイル（著者が投稿に含めたファイルのリストを表示する）。</message>
-  <message key="rt.admin.settings.printerFriendly">印刷版（アイテムの印刷用の版に導く）。</message>
   <message key="rt.admin.settings.authorBio">著者について（著者により入力された経歴を表示する）。</message>
   <message key="rt.admin.settings.defineTerms">単語検索（アイテム中の任意の単語をダブルクリックすることにより、その単語を辞書で検索できるようにする）。</message>
-  <message key="rt.admin.settings.addComment">コメントの付与（読者がコメントを投稿できるようにする。雑誌管理者はこれを削除できる。読者のコメントは、雑誌設定の第2ステップで有効にしておく必要がある。</message>
   <message key="rt.admin.settings.emailAuthor">著者にメール送信（著者のメールアドレスをセットしたメールテンプレートへ導く）。</message>
   <message key="rt.admin.settings.emailOthers">同僚に通知（アイテムへのリンクを持つメールテンプレートへ導く）。</message>
   <!-- RT Versions -->
@@ -2465,9 +2364,6 @@ OJSのシステム設定を変更することにより、このサイト全体�
   <message key="rt.suppFiles.download">ダウンロード</message>
   <message key="rt.captureCite">アイテムの引用法</message>
   <message key="rt.captureCite.online">オンライン</message>
-  <message key="rt.captureCite.available">利用可:</message>
-  <message key="rt.captureCite.capture">引用のダウンロード</message>
-  <message key="rt.captureCite.acaoLocation">北米</message>
   <message key="rt.captureCite.capture.endNote">
     <![CDATA[<a href="]]>{$url}<![CDATA[">EndNote</a> - EndNoteフォーマット(Macintosh &amp; Windows)]]>
   </message>
@@ -2604,34 +2500,6 @@ OJSのシステム設定を変更することにより、このサイト全体�
 &bull; QAに応えてセンテンスが追加されました。太字のテキストは新しいテキストが追加されたことを示しています
 &bull; [単語を削除] は単語「全面的に」を削除したことを示しています
 &bull; コメントは編集者のQAに対する回答を含んでいます]]>
-  </message>
-  <message key="default.journalSettings.proofingInstructions">
-    <![CDATA[校正段階では、ゲラにおけるスペリング、文法、書式の誤りを見つけることを目的とします。セクションエディタと相談しないと、もっと大きな変更をこの段階で行うことはできません。レイアウト画面で[校正版の閲覧]をクリックすると、このアイテムを出版で使用されるHTML、PDF、その他の利用可能なファイルフォーマットで見ることができます。
-
-<strong>スペリングおよび文法の誤りについて</strong>
-
-問題のある語、または語群をコピーして、以下のように編集者への "CHANGE-TO" 指示を付けて「校正者修正」欄にペーストします
-
-1. CHANGE...
-then the others
-TO...
-than the others
-
-2. CHANGE...
-Malinowsky
-TO...
-Malinowski
-
-
-<strong>書式の誤りについて</strong>
-
-問題のある場所と内容を、以下のように "FORMATTING" の見出しを付けて「校正者修正」欄に記述します
-
-3. FORMATTING
-表3の3カラム目の数字の位置が揃っていない。
-
-4. FORMATTING
-"This last topic ..."で始まる段落がインデントされていない。]]>
   </message>
   <message key="default.journalSettings.emailSignature">
     <![CDATA[________________________________________________________________________

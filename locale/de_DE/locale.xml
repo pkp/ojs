@@ -192,8 +192,6 @@
 		
 	<!-- Navigation -->
 	<message key="navigation.journalHelp">Navigationshilfe</message>
-	<message key="navigation.loggedInAs">Sie sind eingeloggt als ...</message>
-	<message key="navigation.logout">Ausloggen</message>
 	<message key="navigation.home">Startseite</message>
 	<message key="navigation.about">AD HOC</message>
 	<message key="navigation.userHome">Benutzerstartseite</message>
@@ -204,14 +202,10 @@
 	<message key="navigation.current">Aktuell</message>
 	<message key="navigation.search">Suche</message>
 	<message key="navigation.otherJournals">Andere Zeitschriften</message>
-	<message key="navigation.myProfile">Mein Profil</message>
-	<message key="navigation.myJournals">Meine Zeitschriften</message>
-	<message key="navigation.journalContent">Inhalt</message>
 	<message key="navigation.browse">Blättern</message>
 	<message key="navigation.browseByIssue">Nach Gegenstand</message>
 	<message key="navigation.browseByAuthor">Nach Verfasser</message>
 	<message key="navigation.browseByTitle">Nach Titel</message>
-	<message key="navigation.info">Information</message>
 	<message key="navigation.infoForAuthors">Für Verfasser</message>
 	<message key="navigation.infoForReaders">Für Leser</message>
 	<message key="navigation.infoForLibrarians">Für Bibliothekare</message>
@@ -311,7 +305,6 @@
 	<message key="submission.response">Antwort</message>
 	<message key="submission.accepted">Angenommen</message>
 	<message key="submission.rejected">Abgelehnt</message>
-	<message key="submission.acceptance">Annahme</message>
 	<message key="submission.due">Fällig</message>
 	<message key="submission.complete">Vollständig</message>
 	<message key="submission.acknowledge">Bestätigung</message>
@@ -440,7 +433,6 @@
 	<message key="user.affiliations">Zugehörigkeiten</message>
 	<message key="user.email">Email</message>
 	<message key="user.url">URL</message>
-	<message key="user.url.description">Erscheint als URL am Schluss der biographischen Notiz im Fenster "Über den Verfasser" und auf der Seite "Redaktionskollegium".</message>
 	<message key="user.phone">Telefon</message>
 	<message key="user.fax">Fax</message>
 	<message key="user.interests">Interessen</message>
@@ -568,7 +560,6 @@
 
 	<!-- Beitrag Leserzugang  -->
 	<message key="reader.fullText">Vollständiger Text :</message>
-	<message key="reader.fullTextSubscribersOnly">Vollständiger Text nur Abonnenten zugänglich.</message>
 
 	<!-- Leserkommentare -->
 	<message key="comments.commentsOnArticle">Kommentare zu diesem Artikel</message>
@@ -634,11 +625,8 @@ Nehmen Sie bitte zur Kenntnis, dass die OAI-Schnittstelle unter Umständen deakt
 	
 	<!-- Sprachen -->
 	<message key="admin.languages.languageSettings">Sprachenparameter</message>
-	<message key="admin.languages.installLanguages">Sprachen einrichten</message>
 	<message key="admin.languages.primaryLocaleInstructions">Diese Sprache ist die Standardsprache der Website und aller ihrer Zeitschriften.</message>
 	<message key="admin.languages.supportedLocalesInstructions">Alle Regionaleinstellungen für die Website auswählen. Die gewählten Parameter können von allen Zeitschriften, die die Website beherbergt, verwendet werden und erscheinen auch im Sprachenmenü auf jeder Seite der Website (bestimmte Zeitschrift-spezifische Seiten ausgenommen). Wenn nicht mehrere Regionaleinstellungen ausgewählt werden, erscheint das Sprachenmenü nicht, und die Zeitschriften können nicht über erweiterte Sprachdatensätze verfügen..</message>
-	<message key="admin.languages.languageOptions">Sprachoptionen</message>
-	<message key="admin.languages.profileLocales">Beim Einschreiben von Personen (Redakteuren, Gutachtern, Lektoren usw.) sollten die Arbeitssprachen in die Benutzerprofile  eingetragen werden.</message>
 	<message key="admin.languages.installedLocales">Eingerichtete Regionaleinstellungen</message>
 	<message key="admin.languages.reload">Die Sprachenparameter neu laden</message>
 	<message key="admin.languages.confirmReload">Sind Sie sicher, dass sie diese Regionaleinstellung neu laden wollen? Alle regionalspezifischen Daten wie z.B. Emailvorlagen werden gelöscht.</message>
@@ -773,7 +761,6 @@ Nehmen Sie bitte zur Kenntnis, dass die OAI-Schnittstelle unter Umständen deakt
 	<message key="manager.statistics.statistics.note">Anmerkung: Die Prozentsätze für kollegial begutachtete Beiträge summieren sich nicht unbedingt zu 100 %, weil erneut eingereichte Beiträge entweder angenommen, abgelehnt oder noch in Bearbeitung sein können</message>
 
 	<message key="manager.statistics.reports">Berichterstellung</message>
-	<message key="manager.statistics.reports.description">OJS erzeugt Berichte, die die mit den Beiträgen verbundenen Arbeitsgänge über einen bestimmten Zeitraum wiedergeben, im Hinblick auf die Beiträge, die Redakteure, die Gutachter, die Rubriken. Berichte werden im CSV Format erstellt und können mit einem Tabellenkalkulationsprogramm betrachtet werden.</message>
 	<message key="manager.statistics.reports.dateFrom">Von</message>
 	<message key="manager.statistics.reports.dateTo">Bis</message>
 	<message key="manager.statistics.reports.includeInReportType">Folgendes einfügen in</message>
@@ -835,7 +822,6 @@ Nehmen Sie bitte zur Kenntnis, dass die OAI-Schnittstelle unter Umständen deakt
 	<message key="manager.setup.submissions">Beiträge</message>
 	<message key="manager.setup.submissions.description">Richtlinien für Verfasser, Copyright, Indexierung (einschließlich Registrierung).</message>
 	<message key="manager.setup.management">Leitung</message>
-	<message key="manager.setup.management.description">Erstellung des Zeitplans, Abonnements, Inanspruchnahme der Gutachter, Lektoren, Layoutredakteure und Korrekturlektoren.</message>
 	<message key="manager.setup.look">Gestaltung</message>
 	<message key="manager.setup.look.description">Titel der Eingangsseite, Inhalt, Überschrift, Fusszeile, Navigationsbalken, Style sheet.</message>
 	<message key="manager.setup.journalTitle">Titel der Zeitschrift</message>
@@ -941,27 +927,10 @@ Nehmen Sie bitte zur Kenntnis, dass die OAI-Schnittstelle unter Umständen deakt
 	<message key="manager.setup.aboutItemContent">Inhalt</message>
 	<message key="manager.setup.addAboutItem">Eine AD HOC-Eingabe einfügen </message>
 	<message key="manager.setup.form.numReviewersPerSubmission">Die Zahl der Gutachter pro Beitrag wird gefordert.</message>
-	<message key="manager.setup.securitySettings">Sicherheits- u. Zugangsdaten</message>
-	<message key="manager.setup.securitySettingsDescription">OJS gibt eine Reihe von Optionen zur Sicherheit vor, die auf den Zeitschrifteninhalt einschränken und Zusatzinformationen zu den Beiträgen für Nachfragen beibehalten.</message>
 	<message key="manager.setup.userRegistration">Benutzerregistrierung</message>
-	<message key="manager.setup.enableUserRegistration">Den Benutzern gestatten, sich auf der Website der Zeitschrift einzuschreiben als :</message>
-	<message key="manager.setup.disableUserRegistration">Benutzeregistrierung deaktivieren. Benutzer müssen von Hand durch einen Leiter der Zeitschrift eingegeben werden.</message>
-	<message key="manager.setup.siteAccess">Zugang zur Website</message>
-	<message key="manager.setup.noRestrictSiteAccess">Nicht registrierte Benutzer können die Website der Zeitschrift ansehen.</message>
-	<message key="manager.setup.restrictSiteAccess">Benutzer müssen sich für die Website der Zeitschrift einloggen.</message>
-	<message key="manager.setup.articleAccess">Artikelzugang</message>
-	<message key="manager.setup.noRestrictArticleAccess">Nicht registierte Benutzer können den vollen Text der Artikel einsehen.</message>
-	<message key="manager.setup.restrictArticleAccess">Benutzer müssen sich einloggen, um den vollen Text der Artikel einzusehen.</message>
 
-	<message key="manager.setup.comments">Leserkommentare</message>
-	<message key="manager.setup.comments.disable"> Die Funktion Leserkommentare ist nicht eingeschaltet</message>
-	<message key="manager.setup.comments.authenticated">Eingeschriebene Leser können kommentieren, die Funktion anonyme Sendungen ist ausgeschaltet.</message>
-	<message key="manager.setup.comments.anonymous">Benutzer können anonym kommentieren, müssen jedoch registiert sein.</message>
-	<message key="manager.setup.comments.unauthenticated">Allen gestatten, anonym zu kommentieren.</message>
 
 	<message key="manager.setup.loggingAndAuditing">Protokollieren und Nachfragen</message>
-	<message key="manager.setup.submissionEventLogging">Beitragsprotokoll aktivieren. Alle Vorkommnisse zu einem Beitrag werden festgehalten (zugänglich über die Seite "Verlauf" jedes Beitrags</message>
-	<message key="manager.setup.submissionEmailLogging">Emailprotokoll aktivieren. Alle Emails mit Bezug zu einem Beitrag werden protokolliert (zugänglich über die Seite "Verlauf" jedes Beitrags.</message>
 	<message key="manager.setup.journalArchiving">Archivierung der Zeitschrift</message>
 	<message key="manager.setup.lockssDescription"><![CDATA[Das OJS unterstützt <a href="http://lockss.stanford.edu/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe - viele Kopien sichern das Material) und sichert so eine dauerhafte Archivierung der Zeitschrift. LOCKSS ist ein von der Stanforder Universitätsbibliothek entwickeltes offenes Programm, das Bibliotheken ermöglicht, ihre Auswahl an Webzeitschriften auf dem Laufenden zu halten. Registrierte Zeitschriften werden regelmäßig auf neue Inhalte geprüft, die dann archiviert werden. Jedes Archiv wird fortlaufend mit anderen Bibliotheksreserven verglichen und falls Inhalte verloren oder beschädigt sind, werden sie aus den Zeitschriften oder aus den anderen Bibliotheken restauriert. .
 	<br /><br />
@@ -980,7 +949,6 @@ Nehmen Sie bitte zur Kenntnis, dass die OAI-Schnittstelle unter Umständen deakt
 	<message key="manager.setup.addChecklistItem">Der Checkliste einen Punkt hinzufügen</message>
 	<message key="manager.setup.addItem">Einen Punkt hinzufügen</message>
 	<message key="manager.setup.authorCopyrightNotice">Copyrightnotiz</message>
-	<message key="manager.setup.authorCopyrightNoticeDescription"><![CDATA[Diese Notiz zum Copyright erscheint unter AD HOC und in allen Metadaten veröffentlichter Beiträge. Verfasser können das Copyright behalten und der Zeitschrift das Erstveröffenlichungsrecht überlassen. Alternativ können Verfasser der Zeitschrift das Copyright überlassen, was den Verfassern die nichtkommerzielle Nutzung der Arbeit erlaubt, einschließlich der Archivierung in einem Open Access Archive. Flexible Copyrightlizenzen finden sich auf der Internetseite <a href="http://www.creativecommons.org" target="_blank">Creative Commons</a>.]]></message>
 	<message key="manager.setup.authorCopyrightNoticeAgree">Verfasser auffordern, der Copyrightnotiz im Rahmen des Verfahrens zuzustimmen.</message>
 	<message key="manager.setup.copyrightNotice">Copyrightnotiz</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWork">Indexierung von Arbeiten</message>
@@ -1022,12 +990,7 @@ Nehmen Sie bitte zur Kenntnis, dass die OAI-Schnittstelle unter Umständen deakt
 	<message key="manager.setup.publicationSchedule">Terminkalender der Veröffentlichung </message>
 	<message key="manager.setup.publicationScheduleDescription"><![CDATA[Die Beiträge zur Zeitschrift können zusammen veröffentlicht werden, als Beiträge zu einer Ausgabe mit ihrem Inhaltsverzeichnis. Es können auch individuelle Artikel, sobald sie fertig sind, veröffentlicht und dem Inhaltsverzeichnis der laufenden Nummer angefügt werden. Erläutern Sie den Lesern unter AD HOC das Veröffentlichungssystem und die vorgesehene Frequenz der Zeitschrift.]]></message>
 	<message key="manager.setup.publicationFormat">Format</message>
-	<message key="manager.setup.publicationFormatDescription">Wählen Sie ein Format zur eindeutigen Bezeichnung von Ausgaben und/oder Bänden der Zeitschrift. Das Format kann für die einzelne Ausgabe geändert werden:</message>
-	<message key="manager.setup.publicationFormatIssue">Band, Nummer, Jahr</message>
-	<message key="manager.setup.publicationFormatVolume">Band und Jahr</message>
 	<message key="manager.setup.publicationFormatYear">Jahr</message>
-	<message key="manager.setup.publicationFormatTitle">Individueller Titel für eine Nummer </message>
-	<message key="manager.setup.publicationFormatTitleDescription">Achtung : Jede Nummer kann einen individuellen Titel haben, doch mit dieser letzten Option wird allein der Titel zur eindeutigen Bezeichnung der Ausgabe verwendet(wenn z.B. OJS zur Herausgabe einer Buchreihe verwendet wird).</message>
 	<message key="manager.setup.initialIssue">Startausgabe</message>
 	<message key="manager.setup.initialIssueDescription">Geben Sie der Startausgabe je nach gewähltem Format eine eindeutige Bezeichnung:</message>
 	<message key="manager.setup.frequencyOfPublication">Beginn und Frequenz </message>
@@ -1041,13 +1004,9 @@ Wählen sie ein Schema für diese Schritte im Herausgabeverfahren. (Zur Bestimmu
 	<message key="manager.setup.editorialProcess2">Der Redakteur ist für die Eingangswarteliste, für die Warteliste des Veröffentlichungsplans und für das Inhaltsverzeichnis zuständig, während das Begutachtungsverfahren und die Redaktion der Beiträge in die Zuständigkeit der Rubrikredakteure fällt.</message>
 	<message key="manager.setup.editorialProcess3">Der Redakteur ist zuständig für die Warteliste, für die Redaktion der Beiträge, für den Veröffentlichungsplan, für das Inhaltsverzeichnis, die Rubrikredakteure sind mit der Begutachtung befasst.</message>
 	<message key="manager.setup.copyediting">Lektor</message>
-	<message key="manager.setup.useCopyeditors">Die Zeitschrift bestimmt Lektoren für jeden Beitrag.</message>
-	<message key="manager.setup.noUseCopyeditors">Redakteur übernimmt Lektorat.</message>
 	<message key="manager.setup.copyeditInstructions">Anweisungen für das Lektorat</message>
 	<message key="manager.setup.copyeditInstructionsDescription">Die Anweisungen werden den Lektoren, Verfassern und Redakteuren mit dem zu bearbeitenden Beitrag übermittelt. Nachstehend eine Reihe von Standardanweisungen im HTML Format. Sie können jederzeit vom Zeitschriftleiter ersetzt oder geändert werden (in HTML oder einfachem Text).</message>
 	<message key="manager.setup.layoutAndGalleys">Layoutredakteur</message>
-	<message key="manager.setup.useLayoutEditors">Die Zeitschrift bestimmt Layouter, die die Fahnen zur Veröffentlichung im Format HTML, PDF, PS usw. vorbereiten.</message>
-	<message key="manager.setup.noUseLayoutEditors">Die Layouter übernehmen die Vorbereitung der Fahnen im geeigneten Format.</message>
 	<message key="manager.setup.layoutInstructions">Anweisungen für den Layout</message>
 	<message key="manager.setup.layoutInstructionsDescription">Anweisungen für den Layout können nachfolgend in HTML oder einfachem Text eingegeben werden. Sie werden dem Layouter und dem Redakteur auf der Redaktionsseite jedes Beitrags übermittelt. (Da jede Zeitschrift ihre eigenen Layoutstrukturen, Formate, bibliographischen Normen, Style sheets usw. haben wird, sind Standardanweisungen hier überflüssig)</message>
 	<message key="manager.setup.proofreading">Korrekturlektoren</message>
@@ -1055,8 +1014,6 @@ Wählen sie ein Schema für diese Schritte im Herausgabeverfahren. (Zur Bestimmu
 	<message key="manager.setup.layoutTemplatesDescription">Vorlagen können hochgeladen und unter Layout abgerufen werden für alle Standardformate der Zeitschrift (z.B., Beitrag, Buchbesprechung, usw.) und alle Dateiformate (z.B., pdf, doc, usw.). Anmerkungen zu Schriftsatz, Schriftgrösse, Rand, etc. erleichtern Layoutredakteuren und Korrektoren die Arbeit.</message>
 	<message key="manager.setup.layoutTemplates.title">Titelk</message>
 	<message key="manager.setup.layoutTemplates.file">Vorlagendatei</message>
-	<message key="manager.setup.useProofreaders">Die Zeitschrift bestimmt Korrektoren, die (zusammen mit den Verfassern) die Fahnen korrigieren.</message>
-	<message key="manager.setup.noUseProofreaders">Redakteure übernehmen die Korrektur der Fahnen.</message>
 	<message key="manager.setup.proofingInstructions">Anweisungen für die Korrektur</message>
 	<message key="manager.setup.proofingInstructionsDescription">Die Anweisungen für die Fahnenkorrektur werden den Korrektoren, Verfassern, Bearbeitern und Redakteuren übermittelt, wenn der Beitrag zur Redaktion ansteht. Nachstehend eine Reihe von Standardansweisungen für die Korrektur in HTML, die jederzeit vom Zeitschriftleiter und den Redakteuren auf der Redaktionsseite des Beitrags ersetzt oder geändert werden können (in HTML oder einfachem Text). </message>
 	<message key="manager.setup.volumePerYear">Bände pro Jahr</message>
@@ -1069,7 +1026,6 @@ Wählen sie ein Schema für diese Schritte im Herausgabeverfahren. (Zur Bestimmu
 	<message key="manager.setup.enablePublicSuppFileId">Eigene Kennzeichnung für die Zusatzdateien eines Beitrags</message>
 	<message key="manager.setup.pageNumberIdentifier">Option Seitenzahl </message>
 	<message key="manager.setup.enablePageNumber">Für jeden Beitrag werden Seitenzahlen berechnet und von Hand im Inhaltsverzeichnis der Zeitschrift vermerkt(z.B. S. 13-26).</message>
-    <message key="manager.setup.onlineAccessManagement">Inernetzugangsverwaltung</message>
 	<message key="manager.setup.openAccess">Die Zeitschrift bietet Offenen Zugang zu ihren Inhalten.</message>
 	<message key="manager.setup.openAccessPolicy">Open Access Politik</message>
 	<message key="manager.setup.openAccessPolicyDescription">Notiz zur Open Access Politik eingeben, die  im AD HOC der Zeitschrift erscheint.</message>
@@ -1106,8 +1062,6 @@ Wählen sie ein Schema für diese Schritte im Herausgabeverfahren. (Zur Bestimmu
 	<message key="manager.setup.alternateHeaderDescription">Anstelle von Titel und Logo kann auch eine HTML version der Köpfe in das nachfolgende Feld eingegeben werden. Ansonsten lassen Sie das Feld frei.</message>
 	<message key="manager.setup.journalPageFooter">Fuß der Zeitschriftseite </message>
 	<message key="manager.setup.journalPageFooterDescription">Dies ist der Fusstext Ihrer Zeitschrift. Wenn Sie den Fusstext ändern oder aktualisieren wollen, kopieren Sie den neuen HTML-Text in das nachfolgende Textfeld. Beispiele wären ein weiterer Navigationbalken, ein Zähler usw. Dieser Fusstext erscheint auf allen Seiten.</message>
-	<message key="manager.setup.journalStyleSheet">Style sheet für die Zeitschrift</message>
-	<message key="manager.setup.journalStyleSheetDescription">Standardmässig verwenden die Zeitschriften und die Website ein gemeinsames Style sheet (liegt im Unterverzeichnis "styles" der Website) Die Standardvorgaben können ausser Kraft gesetzt wenn ein spezifisches Cascadin style sheet für die Zeitschrift hochgeladen wird.</message>
 	<message key="manager.setup.useJournalStyleSheet">Stylesheet für die Zeitschrift </message>
 	<message key="manager.setup.noStyleSheetUploaded">Kein Stylesheet hochgeladen.</message>
 	<message key="manager.setup.journalHomepageContent">Inhalt der Eingangsseite der Zeitschrift</message>
@@ -1127,14 +1081,6 @@ Wählen sie ein Schema für diese Schritte im Herausgabeverfahren. (Zur Bestimmu
 	<message key="manager.setup.homeHeaderImageInvalid">Ungültiges Format des Logos. Gültige Formate sind .gif, .jpg, oder .png.</message>
 	<message key="manager.setup.pageHeaderTitleImageInvalid">Ungültiges Format des Seitenkopfbildes. Gültige Formate sind .gif, .jpg, oder .png.</message>
 	<message key="manager.setup.pageHeaderLogoImageInvalid">Ungültiges Format des Seitenlogos. Gültige Formate sind .gif, .jpg, oder .png.</message>
-	<message key="manager.setup.homeHeaderTitleImageAlt1Invalid">Ungültiges Format des alternativen Titelbildes. Gültige Formate sind .gif, .jpg, oder .png.</message>
-	<message key="manager.setup.homeHeaderLogoImageAlt1Invalid">Ungültiges Format des alternativen Logos. Gültige Formate sind .gif, .jpg, oder .png.</message>
-	<message key="manager.setup.pageHeaderTitleImageAlt1Invalid">Ungültiges Format des alternativen Seitenkopfbildes. Gültige Formate sind .gif, .jpg, oder .png.</message>
-	<message key="manager.setup.pageHeaderLogoImageAlt1Invalid">Ungültiges Format des alternativen Seitenlogos. Gültige Formate sind .gif, .jpg, oder .png.</message>
-	<message key="manager.setup.homeHeaderTitleImageAlt2Invalid">Ungültiges Format des alternativen Titelbildes Nr.2. Gültige Formate sind .gif, .jpg, oder .png.</message>
-	<message key="manager.setup.homeHeaderLogoImageAlt2Invalid">Ungültiges Format des alternativen Logos Nr.2. Gültige Formate sind .gif, .jpg, oder .png.</message>
-	<message key="manager.setup.pageHeaderTitleImageAlt2Invalid">Ungültiges Format des alternativen Seitenkopfbildes Nr2. Gültige Formate sind .gif, .jpg, oder .png.</message>
-	<message key="manager.setup.pageHeaderLogoImageAlt2Invalid">Ungültiges Format des alternativen Seitenlogos Nr.2. Gültige Formate sind .gif, .jpg, oder .png.</message>
 	<message key="manager.setup.homepageImageInvalid">Ungültiges Format des Bildes auf der Eingangsseite. Gültige Formate sind .gif, .jpg, oder .png.</message>
 	<message key="manager.setup.journalStyleSheetInvalid">Ungültiges Format des Stylesheets für die Zeitschrift. Gültiges Format ist .css.</message>
 	<message key="manager.setup.information">Information</message>
@@ -1144,15 +1090,8 @@ Wählen sie ein Schema für diese Schritte im Herausgabeverfahren. (Zur Bestimmu
 	<message key="manager.setup.information.forLibrarians">Für Bibliothekare</message>
 
 	<!-- Sprachen -->
-	<message key="manager.languages.languageInstructions"><![CDATA[OJS kann den Benutzern in mehreren Sprachen zur Verfügung stehen. OJS kann auch als ein teilweise mehrsprachiges System fungieren, Benutzer haben die Möglichkeit, auf jeder Seite zwischen den unterstützten Sprachen hin und her zu schalten, und bestimmte Daten können in bis zu zwei zusätzlichen Sprachen eingegeben werden. <br /><br/> Falls eine von OJS unterstützte Sprache weiter unten nicht aufgeführt ist, bitten Sie den Websiteverwalter, die Sprache über die Websiteverwaltungsschnittstelle einzurichten. Anweisungen, die Unterstützung weiterer Sprachen betreffend, finden Sie in der OJS Dokumentation.]]></message>
 	<message key="manager.languages.primaryLocaleInstructions">Dies ist die Standardsprache der Webseite der Zeitschrift.</message>
 	<message key="manager.languages.supportedLocalesInstructions">Wählen Sie alle Regionaleinstellungen, die von der Website über ein Sprachenmenü auf jeder Seite unterstützt werden sollen. Das Menü erscheint nur, wenn mehr als ein Datensatz ausgewählt wird.</message>
-	<message key="manager.languages.alternateLocale1">Alternative Regionaleinstellung Nr.1</message>
-	<message key="manager.languages.alternateLocale2">Alternative Regionaleinstellung Nr.2</message>
-	<message key="manager.languages.alternateLocaleInstructions">Das System erlaubt optional, bestimmte kritische Informationen in bis zu zwei anderen Sprachen einzugeben. Wählen Sie dazu einen oder zwei andere Regionaleinstellungen, und entscheiden Sie sich für eine der Optionen weiter unten. </message>
-	<message key="manager.languages.alternativeLanguageOptions">Sprachenoptionen </message>
-	<message key="manager.languages.journalTitleAltLanguages">Titelgraphik, Seitenkopf usw. werden in jeder der Sprachen der Zeitschrift hochgeladen.</message>
-	<message key="manager.languages.articleAltLanguages">Verfasser sollten aufgefordert werden, Titel und Kurzfassungen in den anderen Sprachen zu liefern, oder Mitarbeiter der Zeitschrift mit der Abfassung zu betreuen.</message>
 	<message key="manager.languages.noneAvailable">Leider ist keine andere Sprache verfügbar. Setzen Sie sich mit Ihrem Webmaster in Verbindung, wenn sie in der Zeitschrift andere Sprachen verwenden möchten.</message>
 	
 	
@@ -1163,8 +1102,6 @@ Wählen sie ein Schema für diese Schritte im Herausgabeverfahren. (Zur Bestimmu
 	<message key="manager.sections.editors">Redakteur</message>
 	<message key="manager.sections.unassigned">Verfügbare Redakteure</message>
 	<message key="manager.sections.assigned">Redakteur dieser Rubrik </message>
-	<message key="manager.sections.assignEditor">Redakteur zuweisen</message>
-	<message key="manager.sections.unassignEditor">Zuweisung des Redakteurs aufheben</message>
 	<message key="manager.sections.form.titleRequired">Ein Titel der Rubrik ist erforderlich.</message>
 	<message key="manager.sections.form.abbrevRequired">Ein Kürzel für den Titel der Rubrik ist erforderlich</message>
 	<message key="manager.section.sectionEditorInstructions">Wählen Sie unter den verfügbaren Redakteuren und führen Sie "Redakteur zuweisen" aus. </message>
@@ -1191,12 +1128,8 @@ Wählen sie ein Schema für diese Schritte im Herausgabeverfahren. (Zur Bestimmu
 	<message key="manager.groups.title">Titel</message>
 	<message key="manager.groups.confirmDelete">Sind Sie sicher, dass Sie diese Gruppe entfernen wollen?</message>
 	<message key="manager.groups.noneCreated">Es wurde kein Gremium gebildet.</message>
-	<message key="manager.groups.create">Gremium betiteln</message>
 	<message key="manager.groups.form.groupTitleRequired">Ein Gruppentitel ist erforderlich.</message>
 
-	<message key="manager.groups.enableBoard.description"><![CDATA[Zu den <a href="{$aboutEditorialTeamUrl}">Leitungsgremien</a> in AD HOC:]]></message>
-	<message key="manager.groups.enableBoard">Der Leiter der Zeitschrift benennt Gremien und versammelt in ihnen geeignete Kollegen .</message>
-	<message key="manager.groups.disableBoard">Das System erzeugt eine Liste von Namen zur jeweils zugewiesenen Rolle (Herausgeber der Zeitschrift, Redakteur, Rubrikredakteur, Lektor usw.).</message>
 
 	<message key="manager.groups.membership">Mitgliedschaft</message>
 	<message key="manager.groups.membership.confirmDelete">Sind Sie sicher, dass Sie diese Gruppenmitgliedschaft löschen wollen?</message>
@@ -1205,10 +1138,8 @@ Wählen sie ein Schema für diese Schritte im Herausgabeverfahren. (Zur Bestimmu
 	<message key="manager.groups.membership.noUsers">Keinen Benutzer gefunden.</message>
 
 	<!-- Personalverwaltung -->
-	<message key="manager.people.allUsers">Alle Benutzer</message>
 	<message key="manager.people.allJournals">Alle Zeitschriften</message>
 	<message key="manager.people.editUser">Benutzer ändern</message>
-	<message key="manager.people.enrollExistingUser">Bestehenden Benutzer registrieren </message>
 	<message key="manager.people.createUser">Neuen Benutzer erstellen</message>
 	<message key="manager.people.mergeUsers">Benutzer zusammenführen</message>
 	<message key="manager.people.mergeUser">Benutzer zusammenführen</message>
@@ -1229,7 +1160,6 @@ Wählen sie ein Schema für diese Schritte im Herausgabeverfahren. (Zur Bestimmu
 	<message key="manager.people.authSource">Quelle beglaubigen</message>
 	<message key="manager.people.enrollUserAs">Benutzer einschreiben als</message>
 	<message key="manager.people.doNotEnroll">Ohne Rolle</message>
-	<message key="manager.people.enrollUserAsDescription">Wenn keine Rolle ausgewählt wurde, wird der Benutzer vom System erstellt aber in der Zeitschrift in keine Rolle eingeschrieben. Rollen können jederzeit zugewiesen oder aufgehoben werden nachdem der Benutzer erstellt wurde.</message>
 	<message key="manager.people.invalidUser">Leider existiert der fragliche Benutzer nicht.</message>
 	<message key="manager.people.noAdministrativeRights"><![CDATA[Leider haben Sie keine Verwaltungsrechte für diesen Benutzer. Die Gründe mögen sein:  
 		<ul>
@@ -1254,7 +1184,6 @@ Wählen sie ein Schema für diese Schritte im Herausgabeverfahren. (Zur Bestimmu
 	<message key="manager.people.editProfile">Das Profil ändern</message>
 
 	<message key="manager.people.signInAsUser">Als Benutzer einloggen</message>
-	<message key="manager.people.signOutAsUser">Als Benutzer ausloggen</message>
 	<message key="manager.people.signInAs">Einloggen als</message>
 	<message key="manager.people.syncUsers">Einschreibung synchronisieren</message>
 	<message key="manager.people.syncUserDescription">Mit der Synchronisation werden alle in einer bestimmten Zeitschrift in einer bestimmten Funktion eingeschriebenen Benutzer in dieser Zeitschrift mit der gleichen Funktioin eingeschrieben. So können Zeitschriften eine bestimmte Benutzergruppe miteinander abstimmen (z.B. Gutachter).</message>
@@ -1359,7 +1288,6 @@ Wählen sie ein Schema für diese Schritte im Herausgabeverfahren. (Zur Bestimmu
 	<message key="manager.subscriptionTypes.form.format">Format</message>
 	<message key="manager.subscriptionTypes.form.institutional">Abonnenten müssen über eine IP Bestätigung oder eine Domainenangabe beglaubigt werden.</message>
 	<message key="manager.subscriptionTypes.form.membership">Abonnenten müssen Mitglieder einer Gesellschaft oder Organisation sein.</message>
-	<message key="manager.subscriptionTypes.form.public">Dieser Abonnementtyp erscheint nicht unter AD HOC.</message>
 	<message key="manager.subscriptionTypes.form.saveAndCreateAnotherType">Speichern und weiteren Typ erstellen</message>
 	<message key="manager.subscriptionTypes.format.online">Im Internet</message>
 	<message key="manager.subscriptionTypes.format.print">Druckformat</message>
@@ -1485,14 +1413,6 @@ Wählen sie ein Schema für diese Schritte im Herausgabeverfahren. (Zur Bestimmu
 	<message key="editor.issues.unpublished">Unveröffentlicht</message>
 
 	<!-- Ausgabe erstellen / Ausgabendaten -->
-	<message key="editor.issues.volumeRequired">Bandnr. für die Ausgabe erforderlich.</message>
-	<message key="editor.issues.numberRequired">Nummer für die Ausgabe erforderlich.</message>
-	<message key="editor.issues.yearRequired">Jahr für die Ausgabe erforderlich.</message>
-	<message key="editor.issues.labelFormatRequired">Ein gültiges Kennzeichnungsformat muss ausgewählt werden.</message>
-	<message key="editor.issues.labelOption1">Band, Nummer, Jahr</message>
-	<message key="editor.issues.labelOption2">Band, Jahr</message>
-	<message key="editor.issues.labelOption3">Jahr</message>
-	<message key="editor.issues.labelOption4">Nur Titel</message>
 	<message key="editor.issues.issueIdentification">Signatur der Ausgabe </message>
 	<message key="editor.issues.publicIssueIdentifier">Öffentliche Signatur </message>
 	<message key="editor.issues.description">Beschreibung</message>
@@ -1511,7 +1431,6 @@ Wählen sie ein Schema für diese Schritte im Herausgabeverfahren. (Zur Bestimmu
 	<message key="editor.issues.invalidStyleFormat">Format des Stylesheet ungültig. Vergewissern Sie sich, dass die hochgeladene Datei eine gültige .css Datei ist.</message>
 	<message key="editor.issues.removeStyleFile">Stylesheet entfernen</message>
 	<message key="editor.issues.coverPageCaption">Legende der Umschlagseite</message>
-	<message key="editor.issues.showCoverPage">Eigens für diese Ausgabe eine Umschlagseite erstellen.</message>
 	<message key="editor.issues.openAccess">Freier Zugang</message>
 	<message key="editor.issues.subscription">Abonnement</message>
 	<message key="editor.issues.identification">Identifizierung</message>
@@ -1596,7 +1515,6 @@ mit einem (+), das anzeigt, dass das Gutachten in Arbeit ist.]]></message>
 	<message key="editor.article.noneSelected">Keine Wahl getroffen</message>
 	<message key="editor.article.authorProofing">Korrekturlesen des Verfassers</message>
 	<message key="editor.article.archiveSubmission">Beitrag archivieren</message>
-	<message key="editor.article.emailAuthorOnArchive">Verfasser Email senden betreffs Archivierung seines Beitrags?</message>
 	<message key="editor.article.restoreToQueue">Wieder in die Warteliste aufnehmen</message>
 	<message key="editor.article.assignEditor">Redakteur zuweisen</message>
 	<message key="editor.article.selectEditor">{$roleName} auswählen</message>
@@ -1652,7 +1570,6 @@ mit einem (+), das anzeigt, dass das Gutachten in Arbeit ist.]]></message>
 	<message key="sectionEditor.regrets.regretsAndCancels">Gutachterablehnungen &amp; Annulierungen</message>
 	<message key="sectionEditor.regrets.regret">Absage</message>
 	<message key="sectionEditor.regrets.result">Ergebnis</message>
-	<message key="sectionEditor.review.enrollReviewer">Benutzer als Gutachter eintragen</message>
 	<message key="sectionEditor.review.createReviewer">Neuen Gutachter erstellen</message>
 
 	<!-- Layouter -->
@@ -1675,7 +1592,6 @@ mit einem (+), das anzeigt, dass das Gutachten in Arbeit ist.]]></message>
 	<message key="reviewer.article.notifyTheEditor">Redakteur unterrichten</message>
 	<message key="reviewer.article.canDoReview">Bereit zu gutachten</message>
 	<message key="reviewer.article.cannotDoReview">Nicht in der Lage zu gutachten</message>
-	<message key="reviewer.article.restrictedFileAccess">Dateien werden nur angezeigt, wenn die Begutachtung läuft</message>
 	<message key="reviewer.article.submissionEditor">Beitragsredakteur </message>
 	<message key="reviewer.article.reviewerCommentsDescription">Guachterkommentare hier eintippen oder einkopieren</message>
 	<message key="reviewer.article.editorToEnter">Vom Redakteur einzutragen</message>
@@ -1750,9 +1666,7 @@ mit einem (+), das anzeigt, dass das Gutachten in Arbeit ist.]]></message>
 	<message key="author.submissions.noSubmissions">Keine Eingaben.</message>
 
 	<!-- Beitragseingabe Schritt 1 -->
-	<message key="author.submit.howToSubmit"><![CDATA[Verfasser reichen Beiträge zu dieser Zeitschrift über diese Webseite ein. In einem fünf-Schritte-Verfahren werden das Manuskript und notwendige Zusatzinformation hochgeladen (mit der Möglichkeit, Zusatzdateien mit Forschungsdaten und Untersuchungsinstrumenten hinzuzufügen). Hilfe zum Verfahren über Email <a href="mailto:{$soutienEmail}">{$supportEmail}</a> oder per Telefon {$supportPhone}.]]></message>
 	<message key="author.submit.journalSection">Rubrik der Zeitschrift</message>
-	<message key="author.submit.journalSectionDescription"><![CDATA[Wählen Sie die passende Rubrik für den Beitrag (s. Rubriken und Orientierungen in AD HOC <a href="{$aboutUrl}">Zur Zeitschrift </a>).]]></message>
 	<message key="author.submit.selectSection">Wählen Sie eine Rubrik...</message>
 	
 	<message key="author.submit.submissionChecklist">Prüfliste für die Eingabe</message>
@@ -1765,15 +1679,10 @@ mit einem (+), das anzeigt, dass das Gutachten in Arbeit ist.]]></message>
 	<message key="author.submit.form.sectionRequired">Wählen Sie eine passende Rubrik für den Beitrag.</message>
 	
 	<!-- Beitragseingabe Schritt 2 -->
-	<message key="author.submit.metadataDescription">Diese Zeitschrift stellt für jeden Beitrag Metadaten zur Verfügung, nach Massgabe der Open Archives Initiative, dem sich abzeichnenden Standard für wissenschaftliche Quellen im Netz. Man hat so die Möglichkeit zu genauer und umfassender Suche in OAI-Datenbanken: die Wahrscheinlichkeit, dass Beiträge wie dieser vom Leser gefunden werden, steigt. Redakteure sollten auf der Eingabe von Metadaten vor Beginn der redaktionellen Arbeit bestehen. </message>
 	<message key="author.submit.privacyStatement">Datenschutzmaßgaben der Zeitschrift</message>
-	<message key="author.submit.authorsDescription">Bei mehreren Verfassern die Namen so anordnen, wie sie im Zitat des Beitrags erscheinen sollen.</message>
-	<message key="author.submit.reorderAuthorName">Verfassernamen neu ordnen </message>
-	<message key="author.submit.reorderInstructions">Zur Änderung der Ordnung von Verfassernamen Pfeiltasten benutzen.</message>
 	<message key="author.submit.selectPrincipalContact">Hauptkontakt für die redaktionelle Korrespondenz.</message>
 	<message key="author.submit.addAuthor">Verfasser hinzufügen</message>
 	<message key="author.submit.deleteAuthor">Verfasser entfernen</message>
-	<message key="author.submit.submissionIndexingDescription">Begriffe wählen, die den Inhalt des Beitrags in den Kategorien der Zeitschrift und nach den Beispielen der Redaktion am besten beschreiben. Begriffe durch Semikolon trennen. (Begriff1; Begriff2; Begriff3).</message>
 	<message key="author.submit.submissionSupportingAgencies">Unterstützende Organismen</message>
 	<message key="author.submit.submissionSupportingAgenciesDescription">Organismen benennen, die den vorliegenden Beitrag unterstützt oder finanziert haben.</message>
 	<message key="author.submit.agencies">Organismen</message>
@@ -1794,9 +1703,7 @@ Mit folgenden Schritten laden Sie ein Manuskript hoch zu dieser Zeitschrift.
 <li>Klicken Sie auf Öffnen im Auswahlfenster und der Dateiname erscheint auf dieser Seite.</li>
 <li>Auf dieser Seite auf Hochladen klicken. Die Datei wird vom Komputer auf den Website der Zeitschrift hochgeladen und nach den Regeln der Zeitschrift umbenannt.</li>
 <li>Wenn der Beitrag hochgeladen ist, auf Speichern klicken und unten auf der Seite fortfahren..</li>
-</ol>
-
-Zur Ansicht der Datei auf den Dateinamen klicken. Eine neue oder bearbeitete Datei kann hochgeladen werden und löscht die Datei auf dem Schirm. Hilfe zum Hochladen über Email <a href="mailto:{$supportEmail}">{$supportName}</a> oder per Telefon {$supportPhone}. ]]></message>
+</ol>]]></message>
 	<message key="author.submit.submissionFile">Datei des Beitrags</message>
 	<message key="author.submit.uploadSubmissionFile">Datei des Beitrags hochladen</message>
 	<message key="author.submit.replaceSubmissionFile">Datei des Beitrags ersetzen</message>
@@ -1804,7 +1711,6 @@ Zur Ansicht der Datei auf den Dateinamen klicken. Eine neue oder bearbeitete Dat
 	<message key="author.submit.noSubmissionConfirm">Sind Sie sicher, dass Sie, ohne den Beitrag hochzuladen, fortfahren wollen?</message>
 
 	<!-- Beitragseingabe Schritt 4 -->
-	<message key="author.submit.supplementaryFilesInstructions">Dieser Eingabeschritt ist optional. Zusätzliche Dateien fungieren als Anhang zur eigentlichen Eingabe und vermehren die Aussagekraft des Beitrags. Zusatzdateien können enthalten: (a) Untersuchungsinstrumente (b) Daten, die nicht gegen die wissenschaftliche Methode (Forschungsethik) des Beitrags verstoßen, (c) Quellen, die den Lesern nicht auf andere Weise zugänglich sind, (d) Graphiken oder Tabellen, die nicht im Text erscheinen können. Die Zusatzdateien werden vom Verfasser mit Angaben indiziert, aus denen ihr Bezug zum Beitrag und das Eigentumsrecht hervorgehen. Die Dateien können in jedem Format hochgeladen werden und werden den Lesern in ihrem Originalformat zugänglich gemacht..</message>
 	<message key="author.submit.noSupplementaryFiles">Der Eingabe wurden keine Zusatzdateien beigegeben.</message>
 	<message key="author.submit.backToSupplementaryFiles">Zurück zu Zusatzdateien</message>
 	<message key="author.submit.confirmDeleteSuppFile">Sind Sie sicher, dass Sie diese Zusatzdatei löschen wollen?</message>
@@ -1839,7 +1745,6 @@ Zur Ansicht der Datei auf den Dateinamen klicken. Eine neue oder bearbeitete Dat
 	<message key="author.suppFile.publicSuppFileIdentifier">Öffentliche Bezeichnung der Zusatzdatei.</message>
 	
 	<!-- Beitragseingabe Schritt 5 -->
-	<message key="author.submit.confirmationDescription">Nach Beendigung der vorangegangenen vier Eingabeschritte Eingabe beenden anklicken. Ihr Manuskript wird zur Zeitschrift {$journalTitle} hochgeladen. Sie erhalten eine Empfangsbestätigung per Email und wenn Sie sich auf der Website der Zeitschrift einloggen, können Sie den Verlauf des Redaktionsverfahrens für ihren Beitrag verfolgen. Wir danken für Ihr Interesse an der Veröffentlichung in {$journalTitle}.</message>
 	<message key="author.submit.noFiles">Dem Beitrag wurden keine Zusatzdateien beigegeben.</message>
 	<message key="author.submit.filesSummary">Zusammenfassung</message>
 	<message key="author.submit.finishSubmission">Eingabe beenden</message>
@@ -1866,7 +1771,6 @@ Zur Ansicht der Datei auf den Dateinamen klicken. Eine neue oder bearbeitete Dat
 	<message key="submission.copyedit.instructions">Lektorat -- Richtlinien</message>
 	
 	<!-- Beitragslauf - Layout -->
-	<message key="submission.layout.mustUploadFileForLayout">Anfrageemail kann erst abgehen, wenn ein Beitrag für den Layout ansteht.</message>
 	<message key="submission.layout.layoutVersion">Layoutversion</message>
 	<message key="submission.layout.layoutFile">Layoutdatei</message>
 	<message key="submission.layout.galleys">Fahnen</message>
@@ -1972,7 +1876,6 @@ Zur Ansicht der Datei auf den Dateinamen klicken. Eine neue oder bearbeitete Dat
 	<message key="user.login.lostPassword.invalidHash">Leider ist das Link das Sie angeklickt haben ausgelaufen oder ungültig. Versuchen Sie erneut, Ihr Passwort wiederherzustellen.</message>
 	<message key="user.login.lostPassword.passwordSent">Ein neues Passwort wurde an Ihre Adresse versandt. Sie können sich jetzt mit dem neuen Passwort einloggen.</message>
 	<message key="user.login.changePasswordInstructions"><![CDATA[Damit Sie den Zugang öffnen können, müssen Sie ein neues Passwort wählen.<br /><br />Sie ändern das Passwort für Ihr Konto indem Sie unten Ihren Benutzernamen und das aktuelle sowie das neue Passwort eintragen.]]></message>
-	<message key="user.login.rememberMe">Speichern</message>
 	<message key="user.login.registeredEmail">Email des registrierten Benutzers</message>
 	
 	<!-- Profile -->
@@ -2157,7 +2060,6 @@ Zur Ansicht der Datei auf den Dateinamen klicken. Eine neue oder bearbeitete Dat
 	<message key="help.relatedTopics">Verwandte Themen</message>
 	<message key="help.search">Suchhilfe</message>
 	<message key="help.searchFor">Hilfethemen suchen zu </message>
-	<message key="help.searchResultsFor">Ergebnisse zu</message>
 
 	<!-- Installation -->
 	<message key="installer.ojsInstallation">Installation des OJS</message>
@@ -2217,9 +2119,7 @@ Ihr Server unterstützt derzeit : <strong>{$supportsMBString}</strong>]]></messa
 	<message key="installer.clientCharset">Schriftsatz für den Benutzer</message>
 	<message key="installer.clientCharsetInstructions">Schriftsatz für Daten von und zum Browser.</message>
 	<message key="installer.connectionCharset">Schriftsatz für die Verbindung</message>
-	<message key="installer.connectionCharsetInstructions">Schriftsatz für Daten, die zur Datenbank gehen oder von dort kommen. Sollte der gleiche wie der Benutzerschriftsatz sein. Achtung, diese Einstellung ist nur für MySQL >= 4.1.1 oder PostgreSQL >= 7.1 dokumentiert. Wählen Sie Nicht verfügbar, falls Ihr Datenbankserver den Anforderungen nicht entspricht.</message>
 	<message key="installer.databaseCharset">Schriftsatz der Datenbank</message>
-	<message key="installer.databaseCharsetInstructions">Kodierung für die in der Datenbank gespeicherten Daten. Achtung, diese Funktion ist nur für MySQL >= 4.1.1 oder PostgreSQL >= 7.1 dokumentiert. Wählen Sie Nicht verfügbar, falls Ihr Datenbankserver den Anforderungen nicht entspricht.</message>
 	<message key="installer.locale">Regionaleinstellungen</message>
 	<message key="installer.fileSettings">Dateiparameter</message>
 	<message key="installer.filesDir">Verzeichnis für hochgeladene Dateien</message>
@@ -2351,14 +2251,11 @@ Ihr Server unterstützt derzeit : <strong>{$supportsMBString}</strong>]]></messa
 	<message key="rt.admin.relatedItems">Werkzeuge zum Umfeld</message>
 
 	<message key="rt.admin.settings.disableRelatedItems">Umfeldwerkzeuge deaktivieren</message>
-	<message key="rt.admin.settings.bibFormat">Bibliographisches Format</message>
 	<message key="rt.admin.settings.captureCite">Zitat aufzeichnen (Zeigt das Zitat eines Artikels im Standardformat, unterstützt folgende Zitationsprogramme: EndNote, Reference Manager, ProCite)</message>
 	<message key="rt.admin.settings.viewMetadata">Die Metadaten des Artikels anzeigen (Zeigt Informationen zur Indexierung des Artikels durch Verfasser und System)</message>
 	<message key="rt.admin.settings.supplementaryFiles">Zusätzliche Dateien ansehen (Zeigt eine Liste aller Zusatzdateien, die der Verfasser einem Artikel mitgegeben)</message>
-	<message key="rt.admin.settings.printerFriendly">Druckfassung (Gibt dem Leser eine Fassung des Artikel für den Drucker)</message>
 	<message key="rt.admin.settings.authorBio">Biographie des Verfassers anzeigen (Zeigt die Angaben des Verfassers zu seiner Biographie)</message>
 	<message key="rt.admin.settings.defineTerms">Wortsuche (Der Leser kann auf ein Wort im Artikel doppelklicken und dies Wort an ein Wörterbuch schicken)</message>
-	<message key="rt.admin.settings.addComment">Kommentar hinzufügen (Erlaubt den Lesern Kommentare, die zu löschen der Zeitschriftleitung zukommt). Leserkommentare müssen bei der Einrichtung der Zeitschrift zugelassen werden</message>
 	<message key="rt.admin.settings.emailAuthor">Email an Verfasser senden (Öffnet dem Leser ein Emailformular mit der Adresse des Verfassers)</message>
 	<message key="rt.admin.settings.emailOthers">Beitrag an Kollegen senden(Öffnet dem Leser ein Emailformular mit dem Titel des Beitrags als Betreff)</message>
 
@@ -2470,12 +2367,6 @@ Die Prüfung kann fehlgehen bei Such-URLs die Formularausfüllung verlangen.]]><
 
 	<message key="rt.captureCite">Bibliographische Info</message>
 	<message key="rt.captureCite.online">Per Internet</message>
-	<message key="rt.captureCite.available">Verfügbar:</message>
-	<message key="rt.captureCite.capture">Zitat herunterladen</message>
-	<message key="rt.captureCite.acaoLocation">Nordamerika</message>
-	<message key="rt.captureCite.capture.endNote"><![CDATA[<a href="]]>{$url}<![CDATA[">Endnote</a> - Format EndNote(Macintosh &amp; Windows)]]></message>
-	<message key="rt.captureCite.capture.referenceManager"><![CDATA[<a href="]]>{$url}<![CDATA[">Annotationsprogramm </a> - nur Format RIS (nur Windows)]]></message>
-	<message key="rt.captureCite.capture.proCite"><![CDATA[<a href="]]>{$url}<![CDATA[">ProCite</a> - Format RIS (Macintosh &amp; Windows)]]></message>
 
 	<message key="rt.reviewPolicy">Gutachterverfahren</message>
 	<message key="rt.printVersion">Druckfassung </message>
@@ -2532,7 +2423,6 @@ Die Prüfung kann fehlgehen bei Such-URLs die Formularausfüllung verlangen.]]><
 	-->
 	<message key="default.journalSettings.checklist.notPreviouslyPublished">Der Beitrag ist bisher unveröffentlicht und wurde auch keiner Zeitschrift vorgelegt (andernfalls ist eine Erklärung in Kommentare für den Redakteur beigefügt).</message>
 	<message key="default.journalSettings.checklist.fileFormat">Die Datei liegt im Format Microsoft WORD, RTF, oder WordPerfect vor.</message>
-	<message key="default.journalSettings.checklist.addressesLinked"><![CDATA[Alle URL-Adressen im Text (z.B., <a href="http://pkp.sfu.ca">http://pkp.sfu.ca</a>) sind aktiv und können angeklickt werden.]]></message>
 	<message key="default.journalSettings.checklist.submissionAppearance">Der Text liegt mit einfachem Zeilenabstand vor, Schriftgröße 12 Punkt, gegebenenfalls kursiv, nicht unterstrichen (mit Ausnahme der URL-Adressen); alle Illustrationen, Graphiken und Tabellen an geeigneten Stellen im Text, möglichst nicht am Ende.</message>
 	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[Der Text hält sich an die stilistischen und bibliographischen Vorgagen in<a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Hinweise für die Verfasser</a> , die unter AD HOC der Zeitschrift zu finden sind.]]></message>
 	<message key="default.journalSettings.checklist.anonymous"><![CDATA[Falls der Beitrag für eine Rubrik mit kollegialer Begutachtung eingereicht, wurden die Hinweise <a href="javascript:openHelp('{$indexUrl}/{$journalPath}/help/view/editorial/topic/000044')">Anonyme Begutachtung</a>) beachtet.]]></message>
@@ -2603,32 +2493,6 @@ After you are finished with your revisions, rename the file from AuthorNameQA.do
 &bull; [deleted word] indicates deletion of "completely"
 &bull; Comment contains a reply to the editors' QA]]></message>
 
-	<message key="default.journalSettings.proofingInstructions"><![CDATA[The proofreading stage is intended to catch any errors in the galley's spelling, grammar, and formatting. More substantial changes cannot be made at this stage, unless discussed with the Section Editor. In Layout, click on VIEW PROOF to see the HTML, PDF and other available file formats used in publishing this item. 
-
-<strong>For Spelling and Grammar Errors</strong>
-
-Copy the problem word or groups of words and paste them into the Proofreading Corrections box with "CHANGE-TO" instructions to the editor as follows...
-
-1. CHANGE...
-then the others
-TO...
-than the others
-
-2. CHANGE...
-Malinowsky
-TO...
-Malinowski
-
-
-<strong>For Formatting Errors</strong>
-
-Describe the location and nature of the problem in the Proofreading Corrections box after typing in the title "FORMATTING" as follows...
-
-3. FORMATTING
-The numbers in Table 3 are not aligned in the third column.
-
-4. FORMATTING
-The paragraph that begins "This last topic..." is not indented.]]></message>
 	<message key="default.journalSettings.emailSignature"><![CDATA[________________________________________________________________________
 {$journalName}
 {$indexUrl}/{$journalPath}

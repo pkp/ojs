@@ -191,8 +191,6 @@
 		
 	<!-- Navigation -->
 	<message key="navigation.journalHelp">Aide pour les revues</message>
-	<message key="navigation.loggedInAs">Vous êtes connecté sous le nom de</message>
-	<message key="navigation.logout">Fermer la session</message>
 	<message key="navigation.home">Page d'accueil</message>
 	<message key="navigation.about">Au sujet de</message>
 	<message key="navigation.userHome">Page d'accueil de l'usager</message>
@@ -203,14 +201,10 @@
 	<message key="navigation.current">Actuel</message>
 	<message key="navigation.search">Rechercher</message>
 	<message key="navigation.otherJournals">Autres revues</message>
-	<message key="navigation.myProfile">Mon profil</message>
-	<message key="navigation.myJournals">Mes revues</message>
-	<message key="navigation.journalContent">Contenu de la revue</message>
 	<message key="navigation.browse">Explorer</message>
 	<message key="navigation.browseByIssue">Explorer par numéro</message>
 	<message key="navigation.browseByAuthor">Explorer par auteur</message>
 	<message key="navigation.browseByTitle">Explorer par titre</message>
-	<message key="navigation.info">Renseignements</message>
 	<message key="navigation.infoForAuthors">Pour auteurs</message>
 	<message key="navigation.infoForReaders">Pour lecteurs</message>
 	<message key="navigation.infoForLibrarians">Pour bibliothécaires</message>
@@ -310,7 +304,6 @@
 	<message key="submission.response">Réponse</message>
 	<message key="submission.accepted">Accepté</message>
 	<message key="submission.rejected">Refusé</message>
-	<message key="submission.acceptance">On accepte d'évaluer</message>
 	<message key="submission.due">Echéance</message>
 	<message key="submission.complete">Complété</message>
 	<message key="submission.acknowledge">Envoyer un accusé de réception</message>
@@ -434,7 +427,6 @@
 	<message key="user.affiliations">Affiliations</message>
 	<message key="user.email">Courriel</message>
 	<message key="user.url">Adresse URL</message>
-	<message key="user.url.description">Ceci apparaîtra sous la forme d'une adresse URL hyperliée à la fin de la biographie dans "About the Author" et à la page "Editorial Team"</message>
 	<message key="user.phone">Téléphone</message>
 	<message key="user.fax">Télécopieur</message>
 	<message key="user.interests">Intérêts pour les évaluations</message>
@@ -562,7 +554,6 @@
 
 	<!-- Reader article view -->
 	<message key="reader.fullText">Texte intégral</message>
-	<message key="reader.fullTextSubscribersOnly">Texte intégral : Abonnés seulement.</message>
 
 	<!-- Reader Comments -->
 	<message key="comments.commentsOnArticle">Commentaires sur cet article</message>
@@ -624,11 +615,8 @@
 	
 	<!-- Languages -->
 	<message key="admin.languages.languageSettings">Paramètres de langue</message>
-	<message key="admin.languages.installLanguages">Installer les langues</message>
 	<message key="admin.languages.primaryLocaleInstructions">Cette langue sera la langue par défaut du site et de toute revue hébergée.</message>
 	<message key="admin.languages.supportedLocalesInstructions">Sélectionner tous les paramètres de lieu à soutenir sur le site. Les paramètres sélectionnés pourront être utilisés par toutes les revues hébergées sur le site, et apparaîtront aussi dans un menu de sélection de langue apparaissant sur chaque page du site (ce que l'usager peut sauter dans les pages qui sont particulières à des revues). Si des paramètres de lieu multiples ne sont pas sélectionnés, le menu de changement de langue n'apparaîtra pas et les paramètres de langue étendus ne seront pas disponibles aux revues.</message>
-	<message key="admin.languages.languageOptions">Options en matière de langue</message>
-	<message key="admin.languages.profileLocales">Lors de l'inscription de personnes (rédacteurs, évaluateurs, correcteurs de texte, etc.), les langues de travail devraient être incluses dans leur profil d'usager à l'intention du rédacteur de la revue</message>
 	<message key="admin.languages.installedLocales">Paramètres de lieu installés</message>
 	<message key="admin.languages.reload">Recharger les paramètres de lieu</message>
 	<message key="admin.languages.confirmReload">Êtes-vous certain de vouloir recharger ce paramètre de lieu? Cela effacera toutes les données particulières aux paramètres actuels, comme la grille personnalisée pour les messages électroniques.</message>
@@ -759,7 +747,6 @@
 	<message key="manager.statistics.statistics.note">Avis : Les pourcentages pour les soumissions évaluées par les pairs ne sont pas forcément égaux à 100%, car les articles soumis à nouveau sont soit acceptés, soit refusés, soit encore en train d'être évalués.</message>
 
 	<message key="manager.statistics.reports">Générateur de rapports</message>
-	<message key="manager.statistics.reports.description">OJS génère des rapports qui prennent compte des détails associés au processus d'évaluation des soumissions à une revue en tenant compte des soumissions, rédacteurs, évaluateurs et rubriques pendant une période donnée. Les rapports sont générés en format CSV et il est nécessaire d'utiliser un tableur pour les lire.</message>
 	<message key="manager.statistics.reports.dateFrom">De</message>
 	<message key="manager.statistics.reports.dateTo">Jusqu’à</message>
 	<message key="manager.statistics.reports.reportType">Type de rapport</message>
@@ -821,7 +808,6 @@
 	<message key="manager.setup.submissions">Soumissions</message>
 	<message key="manager.setup.submissions.description">Instructions pour les auteurs, les droits d'auteur et l'indexation (y compris comment s'enregistrer).</message>
 	<message key="manager.setup.management">Gestion</message>
-	<message key="manager.setup.management.description">Établissement d'un horaire, accès en ligne, annonces, et utilisation de réviseurs, de responsables de mise en page et de correcteurs d'épreuves.</message>
 	<message key="manager.setup.look">L'Apparence</message>
 	<message key="manager.setup.look.description">En-tête de la page d'accueil, contenu, en-tête de la revue, bas de page, barre de navigation, et feuille de style.</message>
 	<message key="manager.setup.journalTitle">Titre de la revue</message>
@@ -928,27 +914,10 @@
 	<message key="manager.setup.aboutItemContent">Contenu</message>
 	<message key="manager.setup.addAboutItem">Ajouter un item à « Au sujet de la revue »</message>
 	<message key="manager.setup.form.numReviewersPerSubmission">Le nombre d'évaluateurs par soumission est requis.</message>
-	<message key="manager.setup.securitySettings">Paramètres de sécurité d'accès</message>
-	<message key="manager.setup.securitySettingsDescription">OJS offre certaines options de sécurité qui peuvent être utilisées pour limiter le contenu de la revue et garder des renseignements supplémentaires sur les soumissions à des fins de vérification.</message>
 	<message key="manager.setup.userRegistration">Enregistrement de l'usager</message>
-	<message key="manager.setup.enableUserRegistration">Permettre aux usagers de s'inscrire sur le site de la revue comme :</message>
-	<message key="manager.setup.disableUserRegistration">Désactiver l'enregistrement de l'usager. Les usagers devront être manuellement créés par un gestionnaire de la revue.</message>
-	<message key="manager.setup.siteAccess">Accès au site</message>
-	<message key="manager.setup.noRestrictSiteAccess">Les usagers non inscrits peuvent consulter le site de la revue.</message>
-	<message key="manager.setup.restrictSiteAccess">Les usagers doivent se connecter pour consulter le site de la revue.</message>
-	<message key="manager.setup.articleAccess">Accès aux articles</message>
-	<message key="manager.setup.noRestrictArticleAccess">Les usagers non inscrits peuvent consulter le texte complet des articles publiés.</message>
-	<message key="manager.setup.restrictArticleAccess">Les usagers doivent se connecter pour voir le texte intégral d'articles publiés.</message>
 
-	<message key="manager.setup.comments">Commentaires des lecteurs</message>
-	<message key="manager.setup.comments.disable"> La fonction Commentaires des lecteurs est désactivée.</message>
-	<message key="manager.setup.comments.authenticated">Les usagers inscrits peuvent faire des commentaires; les commentaires anonymes seront désactivés.</message>
-	<message key="manager.setup.comments.anonymous">Les usagers peuvent faire des commentaires de façon anonyme, mais ils doivent être inscrits auparavant.</message>
-	<message key="manager.setup.comments.unauthenticated">Permettre à tous de faire des commentaires de façon anonyme.</message>
 
 	<message key="manager.setup.loggingAndAuditing">Journalisation et vérification</message>
-	<message key="manager.setup.submissionEventLogging">Autoriser l'enregistrement de la soumission, qui tient compte de tous les mouvements d'une soumission (accessible dans la page " Historique " de chaque soumission).</message>
-	<message key="manager.setup.submissionEmailLogging">Autoriser l'enregistrement de courriels se rapportant à une soumission, permettant la tenue d'un registre de tous les courriels envoyés en rapport avec une soumission (accessible dans la page " Historique " de chaque soumission).</message>
 	
 	<message key="manager.setup.journalArchiving">Mise en archives de revues</message>
 	<message key="manager.setup.lockssDescription"><![CDATA[Le système Open Journal supporte le système <a href="http://lockss.stanford.edu/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe - Plusieurs exemplaires assurent la sécurité) pour assurer une mise en archives sécuritaire et permanente pour la revue. LOCKSS est un logiciel à code source libre développé à la bibliothèque de l'Université Stanford qui permet aux bibliothécaires de préserver des revues électroniques sélectionnées en questionnant régulièrement les sites Web des revues inscrites pour du contenu récemment publié et en l'archivant. Chaque archive est continuellement validée contre les caches des autres bibliothèques, et si son contenu est trouvé corrompu ou perdu, les autres caches pour la revue sont utilisés pour le restaurer.
@@ -968,7 +937,6 @@
 	<message key="manager.setup.addChecklistItem">Ajouter un item à la liste</message>
 	<message key="manager.setup.addItem">Ajouter un item</message>
 	<message key="manager.setup.authorCopyrightNotice">Avis de droit d'auteur</message>
-	<message key="manager.setup.authorCopyrightNoticeDescription"><![CDATA[Ces droits d'auteur apparaîtront dans « Au sujet de la revue » et seront inclus dans les métadonnées de chaque point. Parmi les options visant les droits d'auteur (" Tous droits réservés "), les auteurs peuvent conserver les droits d'auteur pour leur travail, tout en accordant à la revue le droit exclusif de première publication. La revue peut aussi demander qu'on lui transfère le droit d'auteur, tout en accordant la permission d'utiliser le travail de façon non commerciale, y compris le droit d'afficher le travail dans les archives à accès libre. En outre, on peut consulter le site <a href="http://www.creativecommons.org" target="_blank">Creative Commons</a> qui est régi par des règles plus souples que celles du modèle traditionnel.]]></message>
 	<message key="manager.setup.copyrightNotice">Avis de droit d'auteur</message>
 	<message key="manager.setup.authorCopyrightNoticeAgree">Demande aux auteurs d'accepter l'avis sur les droits d'auteur comme faisant partie du processus de soumission.</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWork">Pour aider les auteurs à indexer leur travail</message>
@@ -1012,12 +980,7 @@ Prendre note que si votre webmaster a déjà  inscrit ce site auprès de PKP Ha
 	<message key="manager.setup.publicationSchedule">Calendrier de publication</message>
 	<message key="manager.setup.publicationScheduleDescription">Les articles de la revue peuvent être publiés ensemble, dans un numéro avec sa propre table des matières. Des articles individuels peuvent aussi être publiés dès qu'ils sont prêts, en les ajoutant à la table des matières du numéro actuel. Fournir aux lecteurs, dans « Au sujet de la revue », un énoncé sur le système que cette revue utilisera et la fréquence prévue de publication.</message>
 	<message key="manager.setup.publicationFormat">Format</message>
-	<message key="manager.setup.publicationFormatDescription">Sélectionner un format pour identifier les numéros ou les volumes de la revue:</message>
-	<message key="manager.setup.publicationFormatIssue">volume, numéro, et année</message>
-	<message key="manager.setup.publicationFormatVolume">volume et année</message>
 	<message key="manager.setup.publicationFormatYear">Année</message>
-	<message key="manager.setup.publicationFormatTitle">Titre personnalisé pour un numéro</message>
-	<message key="manager.setup.publicationFormatTitleDescription">Avis : Un titre peut toujours être ajouté à un numéro; selon cette option, le numéro est identifié par son titre seulement (avec, par exemple, un ensemble de volumes révisés).</message>
 	<message key="manager.setup.initialIssue">Premier numéro</message>
 	<message key="manager.setup.initialIssueDescription">Selon le format sélectionné, identifier le numéro, le volume, ou l'année du premier numéro à être publié avec OJS:</message>
 	<message key="manager.setup.frequencyOfPublication">Point de départ et fréquence</message>
@@ -1030,13 +993,9 @@ Prendre note que si votre webmaster a déjà  inscrit ce site auprès de PKP Ha
 	<message key="manager.setup.editorialProcess2">Le Directeur de rédaction gère la File d'attente des soumissions et la Table des matières, tandis que les Chefs de rubrique se chargent de l'Évaluation et de la Révision des soumissions.</message>
 	<message key="manager.setup.editorialProcess3">Le Directeur de rédaction gère la File d'attente des soumissions, la Révision des soumissions et la Table des matières, tandis que les Chefs de rubrique se chargent de l'Évaluation des soumissions.</message>
 	<message key="manager.setup.copyediting">évaluateurs</message>
-	<message key="manager.setup.useCopyeditors">la revue désignera des correcteurs de texte pour s'occuper de chaque soumission.</message>
-	<message key="manager.setup.noUseCopyeditors">La révision de texte sera effectuée par le rédacteur.</message>
 	<message key="manager.setup.copyeditInstructions">Instructions pour la correction de texte</message>
 	<message key="manager.setup.copyeditInstructionsDescription">Les instructions pour la correction de texte seront mises à la disposition des évaluateurs, auteurs, et des rédacteurs de rubriques à l'étape de l'édition de la soumission. Voir ci-dessous un ensemble d'instructions par défaut en HTML, qui peuvent être modifiées ou remplacées par le directeur de la revue en tout temps (en HTML ou texte en clair).</message>
 	<message key="manager.setup.layoutAndGalleys">évaluateurs de la mise en page</message>
-	<message key="manager.setup.useLayoutEditors">la revue désignera des évaluateurs de mise en page pour préparer les épreuves de galée en fichiers de format HTML, PDF, PS, etc., pour publication électronique.</message>
-	<message key="manager.setup.noUseLayoutEditors">Les rédacteurs prépareront les épreuves de galée dans le format approprié pour publication électronique.</message>
 	<message key="manager.setup.layoutInstructions">Instructions pour la mise en page</message>
 	<message key="manager.setup.layoutInstructionsDescription">Les instructions pour la mise en page peuvent être préparées pour le formatage d'articles à publier dans la revue et être entrés ci-dessous en HTML ou en texte en clair. Elles seront mises à la disposition du préparateur de copie et du évaluateur de rubrique dans la page éditoriale de chaque soumission. (Comme chaque revue peut utiliser ses propres formats de fichier, normes bibliographiques, feuille de styles, etc., un ensemble d'instructions par défaut n'est pas fourni.)</message>
 	<message key="manager.setup.layoutTemplates">Modèles de mise en page</message>
@@ -1044,8 +1003,6 @@ Prendre note que si votre webmaster a déjà  inscrit ce site auprès de PKP Ha
 	<message key="manager.setup.layoutTemplates.title">Titre</message>
 	<message key="manager.setup.layoutTemplates.file">Fichier de modèles</message>
 	<message key="manager.setup.proofreading">Correcteurs d'épreuves</message>
-	<message key="manager.setup.useProofreaders">la revue désignera des correcteurs d'épreuves qui (de concert avec les auteurs) vérifieront les épreuves de galée.</message>
-	<message key="manager.setup.noUseProofreaders">Les rédacteurs et les auteurs corrigeront les épreuves de galée.</message>
 	<message key="manager.setup.proofingInstructions">Instructions pour la correction d'épreuves</message>
 	<message key="manager.setup.proofingInstructionsDescription">Les instructions pour la correction d'épreuves seront mises à la disposition des correcteurs d'épreuves, auteurs, préparateurs de copie, et rédacteurs de rubriques à l'étape de l'édition de la soumission. Voir ci-dessous un ensemble d'instructions par défaut en HTML, qui peuvent être modifiées ou remplacées par le directeur de la revue en tout temps (en HTML ou texte en clair).</message>
 	<message key="manager.setup.volumePerYear">Volumes par année</message>
@@ -1058,12 +1015,10 @@ Prendre note que si votre webmaster a déjà  inscrit ce site auprès de PKP Ha
 	<message key="manager.setup.enablePublicSuppFileId">Des identificateurs personnalisés seront utilisés pour identifier les fichiers supplémentaires de l'article.</message>
 	<message key="manager.setup.pageNumberIdentifier">Option Numéros de page</message>
 	<message key="manager.setup.enablePageNumber">Des numéros de page pour chaque article publié seront inclus dans la table des matières de cette revue (par ex., p. 13-26).</message>
-	<message key="manager.setup.onlineAccessManagement">Gestion d'accès en ligne</message>
 	<message key="manager.setup.openAccess">La revue donnera un accès libre à son contenu.</message>
 	<message key="manager.setup.openAccessPolicy">Politique d'accès libre</message>
 	<message key="manager.setup.openAccessPolicyDescription">Écrivez un énoncé sur la politique d'accès libre de la revue qui paraîtra dans « Au sujet de la revue ».</message>
 	<message key="manager.setup.subscription">La revue aura besoin d'abonnements pour accéder à une partie ou à l'intégralité de son contenu.</message>
-	<message key="manager.setup.subscriptionDescription">Le module de Gestion des abonnements requiert qu'un responsable des abonnements ait accès au module, qui comprend des options supplémentaires d'accès libre, d'auto-archivage et de notification par courriel.</message>
 	<message key="manager.setup.announcements">Annonces</message>
 	<message key="manager.setup.announcementsDescription">Des annonces peuvent être publiées pour informer les lecteurs de nouvelles et d'événements portant sur la revue. Les annonces publiées apparaîtront à la page des annonces.</message>
 	<message key="manager.setup.enableAnnouncements">Permettre aux rédacteurs des revues d'ajouter des annonces pour leurs revues.</message>
@@ -1095,8 +1050,6 @@ Prendre note que si votre webmaster a déjà  inscrit ce site auprès de PKP Ha
 	<message key="manager.setup.alternateHeaderDescription">Au lieu du titre et du logo, une version HTML des en-têtes peut aussi être insérée dans la zone texte ci dessous. Laisser la zone texte en blanc si elle n'est pas obligatoire.</message>
 	<message key="manager.setup.journalPageFooter">Bas de page de la revue</message>
 	<message key="manager.setup.journalPageFooterDescription">Cela est le bas de page de votre revue. Pour modifier ou mettre à jour le bas de page, copier le code HTML dans la zone texte ci-dessous, par exemple une autre barre de navigation, un compteur, etc. Ce bas de page figurera dans toutes les pages.</message>
-	<message key="manager.setup.journalStyleSheet">Feuille de style de la revue</message>
-	<message key="manager.setup.journalStyleSheetDescription">Par défaut, les revues et le site utilisent une feuille de style commune (située dans le sous-répertoire des " styles " du site). Le style par défaut peut être supplanté en téléchargeant des feuilles de styles en cascade pour une revue en particulier.</message>
 	<message key="manager.setup.useJournalStyleSheet">Feuille de style de la revue</message>
 	<message key="manager.setup.noStyleSheetUploaded">Aucune feuille de style téléchargée.</message>
 	<message key="manager.setup.journalHomepageContent">Contenu de la page d'accueil de la revue</message>
@@ -1116,14 +1069,6 @@ Prendre note que si votre webmaster a déjà  inscrit ce site auprès de PKP Ha
 	<message key="manager.setup.homeHeaderImageInvalid">Format d'image du logo du titre de la page d'accueil invalide. Les formats acceptés sont .gif, .jpg, ou .png.</message>
 	<message key="manager.setup.pageHeaderTitleImageInvalid">Format d'image du titre de la page invalide. Les formats acceptés sont .gif, .jpg, ou .png.</message>
 	<message key="manager.setup.pageHeaderLogoImageInvalid">Format d'image du logo du titre de haut de page invalide. Les formats acceptés sont .gif, .jpg, ou .png.</message>
-	<message key="manager.setup.homeHeaderTitleImageAlt1Invalid">Format d'image du titre de l'autre page invalide. Les formats acceptés sont .gif, .jpg, ou .png.</message>
-	<message key="manager.setup.homeHeaderLogoImageAlt1Invalid">Format d'image du logo de l'autre page invalide. Les formats acceptés sont .gif, .jpg, ou .png.</message>
-	<message key="manager.setup.pageHeaderTitleImageAlt1Invalid">Format d'image du titre de l'autre page invalide. Les formats acceptés sont .gif, .jpg, ou .png.</message>
-	<message key="manager.setup.pageHeaderLogoImageAlt1Invalid">Format d'image du logo du titre de l'autre page invalide. Les formats acceptés sont .gif, .jpg, ou .png.</message>
-	<message key="manager.setup.homeHeaderTitleImageAlt2Invalid">Format d'image du titre de la deuxième autre page invalide. Les formats acceptés sont .gif, .jpg, ou .png.</message>
-	<message key="manager.setup.homeHeaderLogoImageAlt2Invalid">Format d'image du logo du titre de la deuxième autre page invalide. Les formats acceptés sont .gif, .jpg, ou .png.</message>
-	<message key="manager.setup.pageHeaderTitleImageAlt2Invalid">Format d'image du titre de la deuxième autre page invalide. Les formats acceptés sont .gif, .jpg, ou .png.</message>
-	<message key="manager.setup.pageHeaderLogoImageAlt2Invalid">Format d'image du logo du titre de la deuxième autre page invalide. Les formats acceptés sont .gif, .jpg, ou .png.</message>
 	<message key="manager.setup.homepageImageInvalid">Format d'image de la page d'accueil invalide. Les formats acceptés sont .gif, .jpg, ou .png.</message>
 	<message key="manager.setup.journalStyleSheetInvalid">Format de feuille de style de la revue non valide. Le format accepté .css.</message>
 	<message key="manager.setup.information">Renseignements</message>
@@ -1133,15 +1078,8 @@ Prendre note que si votre webmaster a déjà  inscrit ce site auprès de PKP Ha
 	<message key="manager.setup.information.forLibrarians">Pour les bibliothécaires</message>
 
 	<!-- Languages -->
-	<message key="manager.languages.languageInstructions"><![CDATA[Les usagers peuvent utiliser OJS dans plusieurs langues documentées. De même, OJS peut fonctionner dans un système partiellement multilingue, et permet aux usagers de passer d'une langue à l'autre sur chaque page et d'entrer certaines données dans jusqu'à  deux autres langues. <br /><br/>Si une langue documentée par OJS ne figure pas ci- dessous, demander à votre webmaster d'installer la langue de l'interface de gestion du site. Pour savoir comment ajouter un soutien pour de nouvelles langues, veuillez consulter la documentation d'OJS.]]></message>
 	<message key="manager.languages.primaryLocaleInstructions">Cette langue sera la langue par défaut du site de la revue.</message>
 	<message key="manager.languages.supportedLocalesInstructions">Sélectionner tous les paramètres de lieu à soutenir sur le site dans le menu de sélection de langue apparaissant sur chaque page. Le menu apparaîtra seulement si plus d'un paramètre de lieu est sélectionné.</message>
-	<message key="manager.languages.alternateLocale1">Paramètre de lieu alternatif #1</message>
-	<message key="manager.languages.alternateLocale2">Paramètre de lieu alternatif #2</message>
-	<message key="manager.languages.alternateLocaleInstructions">Ce système permet d'entrer en option certains renseignements critiques dans jusqu'à deux autres langues. Pour utiliser cette fonction, sélectionner un ou deux autres paramètres de lieu à  partir des options indiquées ci-dessous.</message>
-	<message key="manager.languages.alternativeLanguageOptions">Langues en option</message>
-	<message key="manager.languages.journalTitleAltLanguages">L'image du titre,  les en-têtes de page, etc. seront téléchargées dans chacune des langues de la revue.</message>
-	<message key="manager.languages.articleAltLanguages">Demander aux auteurs de fournir les titres et les résumés dans la ou les autres langues, avec l'option que ce soit fait par le personnel de la revue.</message>
 	<message key="manager.languages.noneAvailable">Malheureusement, aucune autre langue n'est disponible. Veuillez communiquer avec votre webmaster si vous désirez utiliser d'autres langues avec cette revue.</message>
 	
 	
@@ -1152,8 +1090,6 @@ Prendre note que si votre webmaster a déjà  inscrit ce site auprès de PKP Ha
 	<message key="manager.sections.editors">rédacteurs de rubrique</message>
 	<message key="manager.sections.unassigned">rédacteur de rubrique disponibles</message>
 	<message key="manager.sections.assigned">rédacteur de cette rubrique</message>
-	<message key="manager.sections.assignEditor">Assigner un rédacteur</message>
-	<message key="manager.sections.unassignEditor">Dés assigner un rédacteur</message>
 	<message key="manager.sections.form.titleRequired">Un titre est obligatoire pour la rubrique.</message>
 	<message key="manager.sections.form.abbrevRequired">Un titre abrégé est obligatoire pour la rubrique</message>
 	<message key="manager.section.sectionEditorInstructions">Sélectionner parmi les rédacteurs de rubrique disponibles et " Assigner le rédacteur " à cette rubrique.</message>
@@ -1180,12 +1116,8 @@ Prendre note que si votre webmaster a déjà  inscrit ce site auprès de PKP Ha
 	<message key="manager.groups.title">Titre</message>
 	<message key="manager.groups.confirmDelete">Êtes-vous certain de vouloir supprimer ce groupe?</message>
 	<message key="manager.groups.noneCreated">Aucun poste éditorial n'a été créé.</message>
-	<message key="manager.groups.create">Créer un titre pour l'équipe éditoriale</message>
 	<message key="manager.groups.form.groupTitleRequired">Un titre de groupe est requis.</message>
 
-	<message key="manager.groups.enableBoard.description"><![CDATA[Pour le <a href="{$aboutEditorialTeamUrl}">Équipe éditoriale</a>dans Au sujet de la revue:]]></message>
-	<message key="manager.groups.enableBoard">Le directeur de la revue créera les titres de l'équipe éditoriale, et ajoutera les noms sous chacun des titres.</message>
-	<message key="manager.groups.disableBoard">Le système va générer une liste de noms sous le rôle éditorial qui leur ont été assigné (Directeur de la revue, rédacteur, rédacteur de rubrique, évaluateur de copie, etc.).</message>
 
 	<message key="manager.groups.membership">Membres</message>
 	<message key="manager.groups.membership.confirmDelete">Êtes-vous certain de vouloir être supprimé comme membre de ce groupe?</message>
@@ -1194,10 +1126,8 @@ Prendre note que si votre webmaster a déjà  inscrit ce site auprès de PKP Ha
 	<message key="manager.groups.membership.noUsers">Aucun usager n'a été trouvé.</message>
 
 	<!-- People Management -->
-	<message key="manager.people.allUsers">Tous les usagers</message>
 	<message key="manager.people.allJournals">Toutes les revues</message>
 	<message key="manager.people.editUser">Modifier l'usager</message>
-	<message key="manager.people.enrollExistingUser">Inscrire l'usager existant</message>
 	<message key="manager.people.createUser">Créer un nouvel usager</message>
 	<message key="manager.people.mergeUsers">Fusionner les usagers</message>
 	<message key="manager.people.mergeUser">Fusionner l'usager</message>
@@ -1218,7 +1148,6 @@ Prendre note que si votre webmaster a déjà  inscrit ce site auprès de PKP Ha
 	<message key="manager.people.authSource">Authentification de la source</message>
 	<message key="manager.people.enrollUserAs">Inscrire l'usager comme</message>
 	<message key="manager.people.doNotEnroll">Ne pas inscrire</message>
-	<message key="manager.people.enrollUserAsDescription">Si aucun rôle n'est sélectionné, l'usager sera créé dans le système mais n'aura aucun rôle dans la revue. Les rôles peuvent être assignés ou dés-assignés en tout temps après que l'usager a été créé.</message>
 	<message key="manager.people.invalidUser">Malheureusement, l'usager demandé n'existe pas.</message>
 	<message key="manager.people.noAdministrativeRights"><![CDATA[Malheureusement, vous ne pouvez gérer les droits de cet usager. Raison possible : 
 		<ul>
@@ -1243,7 +1172,6 @@ Prendre note que si votre webmaster a déjà  inscrit ce site auprès de PKP Ha
 	<message key="manager.people.editProfile">Modifier le profil</message>
 
 	<message key="manager.people.signInAsUser">Ouvrir la session sous le nom "usager"</message>
-	<message key="manager.people.signOutAsUser">Fermer la session comme usager</message>
 	<message key="manager.people.signInAs">Ouvrir la session sous le nom de</message>
 	<message key="manager.people.syncUsers">Synchroniser l'enrôlement</message>
 	<message key="manager.people.syncUserDescription">La synchronisation de l'enrôlement enrôlera tous les usagers déjà enrôlés à jouer un rôle donné dans la revue donnée à occuper le même rôle dans cette revue. Cette fonction permet à un groupe d'usagers (i.e. évaluateurs) d'être synchronisés entre diverses revues.</message>
@@ -1348,7 +1276,6 @@ Prendre note que si votre webmaster a déjà  inscrit ce site auprès de PKP Ha
 	<message key="manager.subscriptionTypes.form.format">Format</message>
 	<message key="manager.subscriptionTypes.form.institutional">Les abonnés doivent être validés par une authentification IP ou un domaine.</message>
 	<message key="manager.subscriptionTypes.form.membership">Les abonnés doivent être membres d'une association ou d'une organisation.</message>
-	<message key="manager.subscriptionTypes.form.public">Ce type d'abonnement ne paraîtra pas sous Abonnements dans "Au sujet de la revue".</message>
 	<message key="manager.subscriptionTypes.form.saveAndCreateAnotherType">Enregistrer et créer un autre</message>
 	<message key="manager.subscriptionTypes.format.online">En ligne</message>
 	<message key="manager.subscriptionTypes.format.print">Format imprimé</message>
@@ -1474,14 +1401,6 @@ Prendre note que si votre webmaster a déjà  inscrit ce site auprès de PKP Ha
 	<message key="editor.issues.unpublished">Non publié</message>
 
 	<!-- Create Issue / Issue Data -->
-	<message key="editor.issues.volumeRequired">Volume obligatoire pour le numéro.</message>
-	<message key="editor.issues.numberRequired">Numéro obligatoire pour le numéro.</message>
-	<message key="editor.issues.yearRequired">Année obligatoire pour le numéro.</message>
-	<message key="editor.issues.labelFormatRequired">Un format d'étiquette valide doit être sélectionné.</message>
-	<message key="editor.issues.labelOption1">Volume, Numéro, Année</message>
-	<message key="editor.issues.labelOption2">Volume, Année</message>
-	<message key="editor.issues.labelOption3">Année</message>
-	<message key="editor.issues.labelOption4">Titre seulement</message>
 	<message key="editor.issues.issueIdentification">Numéro d'identification</message>
 	<message key="editor.issues.publicIssueIdentifier">Numéro d'identification publique</message>
 	<message key="editor.issues.description">Description</message>
@@ -1500,7 +1419,6 @@ Prendre note que si votre webmaster a déjà  inscrit ce site auprès de PKP Ha
 	<message key="editor.issues.invalidStyleFormat">Le format de la liste de caractères n'est pas valide. Assurez-vous que le fichier soumis ait des feuilles de style CSS valides. (Remarquez que les listes de caractères ayant des commentaires au début peuvent être rejetés.)</message>
 	<message key="editor.issues.removeStyleFile">Enlever la liste de caractères</message>
 	<message key="editor.issues.coverPageCaption">Légende de la page couverture</message>
-	<message key="editor.issues.showCoverPage">Créer une page couverture personnalisée pour ce numéro.</message>
 	<message key="editor.issues.openAccess">Accès libre</message>
 	<message key="editor.issues.subscription">Abonnement</message>
 	<message key="editor.issues.identification">Identification</message>
@@ -1584,7 +1502,6 @@ avec un signe plus (+) indiquant que la révision est en cours.]]></message>
 	<message key="editor.article.noneSelected">Aucun sélectionné</message>
 	<message key="editor.article.authorProofing">Révision par l'auteur</message>
 	<message key="editor.article.archiveSubmission">Archiver la soumission</message>
-	<message key="editor.article.emailAuthorOnArchive">Envoyer un courriel à l'auteur au sujet de l'archivage de sa présentation?</message>
 	<message key="editor.article.restoreToQueue">Remettre dans la liste active</message>
 	<message key="editor.article.assignEditor">Assigner le rédacteur</message>
 	<message key="editor.article.selectEditor">Select {$roleName}</message>
@@ -1606,7 +1523,7 @@ avec un signe plus (+) indiquant que la révision est en cours.]]></message>
 	<message key="editor.article.replaceProofreader">Remplacer le correcteur d'épreuves</message>
 	<message key="editor.article.authorComments">Commentaires de l'auteur</message>
 	<message key="editor.article.proofreaderComments">Commentaires du correcteur d'épreuves</message>
-	<message key="editor.article.layoutEditorFinal">Copie finale du responsable de la mise en page.</message>
+	<message key="editor.article.layoutEditorFinal">Copie finale du responsable de la mise en page</message>
 	<message key="editor.article.noDate">Aucune date</message>
 
 	<message key="editor.submissions.showBy">Montrer par</message>
@@ -1641,7 +1558,6 @@ avec un signe plus (+) indiquant que la révision est en cours.]]></message>
 	<message key="sectionEditor.regrets.regretsAndCancels">Message de refus du évaluateur &amp; Annulations</message>
 	<message key="sectionEditor.regrets.regret">Message de refus</message>
 	<message key="sectionEditor.regrets.result">Résultat</message>
-	<message key="sectionEditor.review.enrollReviewer">Enrôler un usager comme évaluateur</message>
 	<message key="sectionEditor.review.createReviewer">Créer un nouveau évaluateur</message>
 
 	<!-- Layout Editor -->
@@ -1664,7 +1580,6 @@ avec un signe plus (+) indiquant que la révision est en cours.]]></message>
 	<message key="reviewer.article.notifyTheEditor">Informer le rédacteur</message>
 	<message key="reviewer.article.canDoReview">Peut faire la révision</message>
 	<message key="reviewer.article.cannotDoReview">Impossible de faire la révision</message>
-	<message key="reviewer.article.restrictedFileAccess">Les fichiers peuvent seulement être visualisés si la révision est commencée</message>
 	<message key="reviewer.article.submissionEditor">Soumettre à le rédacteur</message>
 	<message key="reviewer.article.reviewerCommentsDescription">Taper ou coller les commentaires de la révision ici</message>
 	<message key="reviewer.article.editorToEnter">Â entrer par le rédacteur</message>
@@ -1717,7 +1632,6 @@ avec un signe plus (+) indiquant que la révision est en cours.]]></message>
 	<message key="author.track">Soumissions actives</message>
 	<message key="author.submit.submitArticle">Soumettre un article</message>
 	<message key="author.submit.stepsToSubmit">Les cinq étapes de la soumission</message>
-	<message key="author.submit.startHereLink">Cliquer ici pour entamer le processus de soumission</message>
 	<message key="author.submit.step1">Étape 1. Commencer la soumission</message>
 	<message key="author.submit.step2">Étape 2. Entrer les métadonnées de la soumission</message>
 	<message key="author.submit.step3">Étape 3. Télécharger la soumission</message>
@@ -1739,9 +1653,7 @@ avec un signe plus (+) indiquant que la révision est en cours.]]></message>
 	<message key="author.submissions.noSubmissions">Aucune soumission.</message>
 
 	<!-- Article Submission Step 1 -->
-	<message key="author.submit.howToSubmit"><![CDATA[Les auteurs soumettent des articles à cette revue sur ce site Web en suivant un processus de cinq étapes pour télécharger le manuscrit et les renseignements pertinents (avec option de télécharger aussi des fichiers supplémentaires, comme des instruments et des données de recherche). Si des difficultés se présentent lors de ce processus, communiquer <a href="mailto:{$supportEmail}">{$supportName}</a> par courriel ou téléphone {$supportPhone} pour obtenir de l'aide.]]></message>
 	<message key="author.submit.journalSection">Rubrique de la revue</message>
-	<message key="author.submit.journalSectionDescription"><![CDATA[Sélectionner la rubrique appropriée pour cette soumission (voir Rubriques et Politiques dans<a href="{$aboutUrl}">Au sujet de la revue</a>).]]></message>
 	<message key="author.submit.selectSection">Veuillez sélectionner une rubrique...</message>
 	
 	<message key="author.submit.submissionChecklist">Liste de vérification de la soumission</message>
@@ -1754,15 +1666,10 @@ avec un signe plus (+) indiquant que la révision est en cours.]]></message>
 	<message key="author.submit.form.sectionRequired">Veuillez sélectionner une rubrique appropriée des revues pour cette soumission.</message>
 	
 	<!-- Article Submission Step 2 -->
-	<message key="author.submit.metadataDescription">Cette revue recueille des métadonnées sur chaque soumission, selon les normes établies par le projet Open Archives, qui est la norme émergente en ligne pour l'identification des ressources de recherche. On peut donc procéder à une recherche collective et précise dans toutes les banques de données OAI, et ainsi accroître pour le lecteur la possibilité de trouver des soumissions comme celle-ci. Les rédacteurs peuvent insister pour que des métadonnées soient fournies avant d'amorcer le processus éditorial.</message>
 	<message key="author.submit.privacyStatement">Protection des données personnelles de la revue</message>
-	<message key="author.submit.authorsDescription">Pour les soumissions ayant plus d'un auteur, placer les auteurs en ordre d'apparition dans la citation.</message>
-	<message key="author.submit.reorderAuthorName">Remettre en ordre le nom de l'auteur</message>
-	<message key="author.submit.reorderInstructions">Utiliser les flèches pour modifier l'ordre dans lequel les noms des auteurs doivent apparaître avec la présentation.</message>
 	<message key="author.submit.selectPrincipalContact">Principal contact pour la correspondance éditoriale.</message>
 	<message key="author.submit.addAuthor">Ajouter un auteur</message>
 	<message key="author.submit.deleteAuthor">Supprimer un auteur</message>
-	<message key="author.submit.submissionIndexingDescription">Sélectionner les termes qui décrivent le mieux le contenu de la soumission selon les catégories utilisées par cette revue, et les exemples fournis par le rédacteur. Séparer les termes par un point virgule (terme1; terme2; terme3).</message>
 	<message key="author.submit.submissionSupportingAgencies">Organismes de soutien</message>
 	<message key="author.submit.submissionSupportingAgenciesDescription">Identifier les organismes qui ont fourni du financement ou du soutien pour le travail présenté dans cette soumission.</message>
 	<message key="author.submit.agencies">Organismes</message>
@@ -1774,7 +1681,7 @@ avec un signe plus (+) indiquant que la révision est en cours.]]></message>
 	<message key="author.submit.form.titleRequired">Veuillez entrer le titre de votre article.</message>
 	
 	<!-- Article Submission Step 3 -->
-	<message key="author.submit.uploadInstructions"><![CDATA[Pour télécharger un manuscrit vers cette revue, suivez les étapes suivantes. <ol><li>Sur cette page, cliquer sur Browse (ou Choose File), ce qui ouvre une fenêtre Choose File permettant de trouver le fichier dans le disque dur de votre ordinateur.</li><li>Cliquez sur Open dans la fenêtre Choose File, ce qui affiche le nom du fichier sur cette page.</li><li>Cliquez sur Upload sur cette page, ce qui télécharge le fichier à partir de l'ordinateur jusqu'au site Web de la revue et renomme celui-ci suivant les conventions de la revue.</li><li>Quand la soumission est téléchargée, cliquez sur Save and Continue au bas de cette page.</li></ol>On peut voir le contenu du fichier en cliquant sur son nom. Un nouveau fichier ou un fichier révisé peut être téléchargé, supprimant celui qui apparaît à l'écran. Des fichiers additionnels peuvent être ajoutés au moyen de Supplementary Files (étape suivante). Si vous avez de la difficulté à télécharger la soumission, contactez <a href="mailto:{$supportEmail}">{$supportName}</a> par courriel ou téléphone {$supportPhone} pour obtenir de l'aide.]]></message>
+	<message key="author.submit.uploadInstructions"><![CDATA[Pour télécharger un manuscrit vers cette revue, suivez les étapes suivantes. <ol><li>Sur cette page, cliquer sur Browse (ou Choose File), ce qui ouvre une fenêtre Choose File permettant de trouver le fichier dans le disque dur de votre ordinateur.</li><li>Cliquez sur Open dans la fenêtre Choose File, ce qui affiche le nom du fichier sur cette page.</li><li>Cliquez sur Upload sur cette page, ce qui télécharge le fichier à partir de l'ordinateur jusqu'au site Web de la revue et renomme celui-ci suivant les conventions de la revue.</li><li>Quand la soumission est téléchargée, cliquez sur Save and Continue au bas de cette page.</li></ol>]]></message>
 	<message key="author.submit.submissionFile">Fichier de la présentation</message>
 	<message key="author.submit.uploadSubmissionFile">Télécharger le fichier de la présentation</message>
 	<message key="author.submit.replaceSubmissionFile">Remplacer le fichier de la présentation</message>
@@ -1782,7 +1689,6 @@ avec un signe plus (+) indiquant que la révision est en cours.]]></message>
 	<message key="author.submit.noSubmissionConfirm">Êtes-vous certain de vouloir continuer sans télécharger le fichier de la soumission?</message>
 
 	<!-- Article Submission Step 4 -->
-	<message key="author.submit.supplementaryFilesInstructions">Cette étape facultative du processus de soumission permet à l'auteur d'ajouter des fichiers à la soumission qui peuvent améliorer celle-ci. Les fichiers supplémentaires peuvent comprendre : (a) des outils de recherche; (b) des ensembles de données respectant les règles d'éthique pour l'étude; (c) des sources auxquelles le lecteur n'aurait pas autrement accès; ou (d) des figures ou des tables qu'on ne peut pas intégrer dans le texte même. Ces fichiers sont aussi indexés par auteur, ce qui permet d'identifier la relation de ceux-ci avec leur soumission, de même que l'appartenance de la soumission. Les fichiers suppplémentaires peuvent être téléchargés dans n'importe quel format de fichier et sont mis à la disposition des lecteurs dans leur format original. On peut même les partager avec les évaluateurs dans la mesure où ces derniers ne peuvent pas apprendre ainsi l'identité de l'auteur.</message>
 	<message key="author.submit.noSupplementaryFiles">Aucun fichier supplémentaire n'a été ajouté à cette soumission.</message>
 	<message key="author.submit.backToSupplementaryFiles">Retour à Fichiers supplémentaires</message>
 	<message key="author.submit.confirmDeleteSuppFile">Êtes-vous certain de vouloir supprimer ce fichier supplémentaire?</message>
@@ -1817,7 +1723,6 @@ avec un signe plus (+) indiquant que la révision est en cours.]]></message>
 	<message key="author.suppFile.publicSuppFileIdentifier">Identificateur du fichier public supplémentaire.</message>
 	
 	<!-- Article Submission Step 5 -->
-	<message key="author.submit.confirmationDescription">Les quatre étapes précédentes du processus de soumission sont terminées. Cliquer sur " Terminer la soumission " pour soumettre votre manuscrit au {$journalTitle}. Vous recevrez une confirmation par courriel et pourrez voir le cheminement de votre soumission dans le processus éditorial en allant au site Web de la revue. Merci de l'intérêt que vous portez à la publication du {$journalTitle}.</message>
 	<message key="author.submit.noFiles">Aucun fichier n'a été attaché à cette soumission.</message>
 	<message key="author.submit.filesSummary">Sommaire du fichier</message>
 	<message key="author.submit.finishSubmission">Terminer la soumission</message>
@@ -1844,7 +1749,6 @@ avec un signe plus (+) indiquant que la révision est en cours.]]></message>
 	<message key="submission.copyedit.instructions">Instructions sur la révision</message>
 	
 	<!-- Submission Tracking - Layout Specific -->
-	<message key="submission.layout.mustUploadFileForLayout">Le courriel de demande ne peut être envoyé avant que le travail éditorial n'ait été effectué.</message>
 	<message key="submission.layout.layoutVersion">Version de mise en page</message>
 	<message key="submission.layout.layoutFile">Fichier pour la mise en page</message>
 	<message key="submission.layout.galleys">Épreuves en placard</message>
@@ -1934,7 +1838,7 @@ avec un signe plus (+) indiquant que la révision est en cours.]]></message>
 	<message key="submission.comments.forEditor">Pour le rédacteur</message>
 	<message key="submission.comments.sendDecisionToReviewers">Envoyer la décision éditoriale aux évaluateurs</message>
 	<message key="submission.comments.saveAndEmailAuthor">Sauvegarder et envoyer un courriel à l'auteur</message>
-	<message key="submission.comments.saveAndEmailEditor">Sauvegarder et envoyer un courriel à le rédacteur</message>
+	<message key="submission.comments.saveAndEmailEditor">Sauvegarder et envoyer un courriel au rédacteur</message>
 	
 	<!-- Login -->
 	<message key="user.login.loginError">Nom d'usager ou mot de passe non valide. Veuillez essayer encore une fois.</message>
@@ -1950,7 +1854,6 @@ avec un signe plus (+) indiquant que la révision est en cours.]]></message>
 	<message key="user.login.lostPassword.invalidHash">Malheureusement, le lien sur lequel vous avez cliqué est expiré ou n'est pas valide. Veuillez essayer de restaurer votre mot de passe encore une fois.</message>
 	<message key="user.login.lostPassword.passwordSent">Un nouveau mot de passe a été envoyé à votre adresse électronique. Vous pouvez maintenant vous connecter au site avec votre nouveau mot de passe.</message>
 	<message key="user.login.changePasswordInstructions"><![CDATA[Vous devez sélectionner un nouveau mot de passe avant de pouvoir ouvrir la session à ce site.<br /><br />Veuillez entrer votre nom d'usager et vos mots de passe courant et nouveau ci- dessous pour modifier le mot de passe pour votre compte.]]></message>
-	<message key="user.login.rememberMe">Souvenez-vous de moi</message>
 	<message key="user.login.registeredEmail">Courriel de l'usager inscrit</message>
 	
 	<!-- Profile -->
@@ -2134,7 +2037,6 @@ avec un signe plus (+) indiquant que la révision est en cours.]]></message>
 	<message key="help.relatedTopics">Sujets connexes</message>
 	<message key="help.search">Aide -- Recherche</message>
 	<message key="help.searchFor">Rechercher les sujets d'aide pour</message>
-	<message key="help.searchResultsFor">Résultats de</message>
 
 	<!-- Installer -->
 	<message key="installer.ojsInstallation">Installation de l'OJS</message>
@@ -2179,9 +2081,7 @@ Votre serveur soutient actuellement mbstring: <strong>{$supportsMBString}</stron
 	<message key="installer.clientCharset">Jeu de caractères du client</message>
 	<message key="installer.clientCharsetInstructions">Le codage à utiliser pour les données envoyées et reçues des navigateurs.</message>
 	<message key="installer.connectionCharset">Jeu de caractères pour la connexion</message>
-	<message key="installer.connectionCharsetInstructions">Codage à utiliser pour les données envoyées et reçues de la base de données. Il devrait être le même que le jeu de caractères du client. Prendre note que cette fonctionnalité est seulement documentée avec MySQL >= 4.1.1 ou PostgreSQL >= 7.1. Sélectionner " Non disponible " si le serveur de votre base de données ne respecte pas ces exigences.</message>
 	<message key="installer.databaseCharset">Jeu de caractères de la base de données</message>
-	<message key="installer.databaseCharsetInstructions">Codage à utiliser pour les données stockées dans la base de données. Noter que cette fonctionnalité est seulement documentée avec MySQL >= 4.1.1 ou PostgreSQL >= 7.1. Sélectionner " Non disponible " si le serveur de votre base de données ne respecte pas ces exigences.</message>
 	<message key="installer.locale">Paramètres de lieu</message>
 	<message key="installer.fileSettings">Paramètres des fichiers</message>
 	<message key="installer.filesDir">Répertoire à télécharger</message>
@@ -2308,14 +2208,11 @@ Votre serveur soutient actuellement mbstring: <strong>{$supportsMBString}</stron
 	<message key="rt.admin.relatedItems">Outils pour les articles connexes</message>
 
 	<message key="rt.admin.settings.disableRelatedItems">Désactiver Items connexes</message>
-	<message key="rt.admin.settings.bibFormat">Format bibliographique</message>
 	<message key="rt.admin.settings.captureCite">Comment citer (fournit les données bibliographiques pour un item)</message>
 	<message key="rt.admin.settings.viewMetadata">Indexer les métadonnées (affiche les métadonnées d'indexation fournies par l'auteur et le système pour un article)</message>
 	<message key="rt.admin.settings.supplementaryFiles">Fichiers supplémentaires (affiche une liste de fichiers que l'auteur a inclus avec sa soumission)</message>
-	<message key="rt.admin.settings.printerFriendly">Imprimable (mène jusqu'à une version imprimable de l'item)</message>
 	<message key="rt.admin.settings.authorBio">Biographie de l'auteur (affiche les repères biographiques soumis par l'auteur)</message>
 	<message key="rt.admin.settings.defineTerms">Chercher les termes (permet au lecteur de double-cliquer sur tout mot dans un article pour en afficher la définition)</message>
-	<message key="rt.admin.settings.addComment">Ajouter un commentaire (permet au lecteur d'afficher un commentaire, que le responsable de la revue peut supprimer; il faut avoir activé au préalable "Commentaires des lecteurs" dans la mise en place, étape 2)</message>
 	<message key="rt.admin.settings.emailAuthor">Envoyer un courriel à l'auteur (mène jusqu'à un écran affichant l'adresse courriel de l'auteur)</message>
 	<message key="rt.admin.settings.emailOthers">Aviser un collègue et/ou un ami (mène jusqu'à un écran permettant d'envoyer un lien jusqu'à l'article à un collègue et/ou un ami)</message>
 
@@ -2425,12 +2322,6 @@ Votre serveur soutient actuellement mbstring: <strong>{$supportsMBString}</stron
 
 	<message key="rt.captureCite">Comment citer un article</message>
 	<message key="rt.captureCite.online">En ligne</message>
-	<message key="rt.captureCite.available">Disponible:</message>
-	<message key="rt.captureCite.capture">Télécharger la citation</message>
-	<message key="rt.captureCite.acaoLocation">Amérique du Nord</message>
-	<message key="rt.captureCite.capture.endNote"><![CDATA[<a href="]]>{$url}<![CDATA[">EndNote</a> - Format EndNote(Macintosh &amp; Windows)]]></message>
-	<message key="rt.captureCite.capture.referenceManager"><![CDATA[<a href="]]>{$url}<![CDATA[">Gestionnaire de références</a> - Format RIS (Windows seulement)]]></message>
-	<message key="rt.captureCite.capture.proCite"><![CDATA[<a href="]]>{$url}<![CDATA[">ProCite</a> - Format RIS (Macintosh &amp; Windows)]]></message>
 
 	<message key="rt.reviewPolicy">Politique d'évaluation</message>
 	<message key="rt.printVersion">Version imprimable</message>
@@ -2488,7 +2379,6 @@ Votre serveur soutient actuellement mbstring: <strong>{$supportsMBString}</stron
 	-->
 	<message key="default.journalSettings.checklist.notPreviouslyPublished">La soumission n'a pas été précédemment publiée, et elle ne précède pas une autre revue pour examen (ou une explication a été fournie dans Commentaires à le rédacteur).</message>
 	<message key="default.journalSettings.checklist.fileFormat">Le fichier de la présentation est en format de fichier document Microsoft WORD, RTF, ou WordPerfect.</message>
-	<message key="default.journalSettings.checklist.addressesLinked"><![CDATA[Quand elles sont disponibles, les adresses URL pour accéder à des références en ligne sont fournies, y compris celles pour des versions à accès libre de la référence. Il suffit de cliquer sur les adresses URL (par ex., <a href="http://pkp.sfu.ca">http://pkp.sfu.ca</a>).]]></message>
 	<message key="default.journalSettings.checklist.submissionAppearance">Le texte est à simple interligne; utiliser une police à 12 points; employer l'italique plutôt que le souligné (sauf pour les adresses URL); et placer toutes les illustrations, figures, et tables aux endroits appropriés dans le texte plutôt qu'à la fin.</message>
 	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[Le texte se conforme aux exigences stylistiques et bibliographiques décrites dans <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Instructions aux auteurs</a>, qui se trouve dans « Au sujet de la revue ».]]></message>
 	<message key="default.journalSettings.checklist.anonymous"><![CDATA[Dans le cas d'une soumission à une rubrique évaluée par les pairs dans cette revue, les instructions dans <a href="javascript:openHelp('{$indexUrl}/{$journalPath}/help/view/editorial/topic/000044')">S'assurer d'une évaluation en aveugle</a> ont été suivies.]]></message>
@@ -2558,35 +2448,6 @@ Après que vos révisions sont terminées, changer le nom du fichier AuthorNameQ
 &bull; [mot supprimé] indique la suppression de "entièrement "
 &bull; Le commentaire contient une réponse aux QetR des rédacteurs]]></message>
 
-	<message key="default.journalSettings.proofingInstructions"><![CDATA[L'étape de la Correction d'épreuves vise à rattraper toute erreur d'orthographe, de grammaire, et de formatage dans l'épreuve en placard. Des modifications plus substantielles ne peuvent être apportées à cette étape, à moins d'en discuter avec le rédacteur de rubrique.
-
-Faire une lecture des épreuves de galée en HTML, PDF et autres formats de fichier disponibles. Le texte doit être lu attentivement dans seulement une version pour les erreurs d'orthographe et de grammaire, tout en vérifiant le formatage de chacune des versions.
-
-
-<strong>Pour les erreurs d'orthographe et de grammaire</strong>
-
-Copier le mot ou les groupes problèmes et les coller dans la boîte  de Corrections avec instructions " REMPLACER PAR " à le rédacteur, comme suit...
-
-1. REMPLACER...
-puis les autres
-PAR...
-que les autres
-
-2. REMPLACER...
-Malinowsky
-PAR...
-Malinowski
-
-
-<strong>Pour les erreurs de formatage</strong>
-
-Décrire l'emplacement et la nature du problème dans la boîte Corrections après avoir tapé dans le titre " FORMATAGE " comme suit...
-
-3. FORMATAGE
-Les chiffres dans le Tableau 3 ne sont pas alignés dans la troisième colonne.
-
-4. FORMATAGE
-Le paragraphe qui commence par " Ce dernier sujet... " n'est pas en retrait.]]></message>
 	<message key="default.journalSettings.emailSignature">________________________________________________________________________
 {$journalName}
 {$indexUrl}/{$journalPath}</message>
@@ -2595,4 +2456,39 @@ Le paragraphe qui commence par " Ce dernier sujet... " n'est pas en retrait.]]><
 	<message key="default.journalSettings.forLibrarians"><![CDATA[Nous incitons les bibliothèques à indiquer l'accès libre à cette revue parmi les revues électroniques qu'elles conservent. Ce système de publication est aussi conçu pour être hébergé et exploité par les bibliothèques de recherche afin de soutenir les travaux des membres de ses facultés associées publiés dans la revue. Pour en savoir plus sur l'utilisation de Open Journal Systems pour gérer et publier les revues évaluées par les pairs, voir <a href="http://pkp.sfu.ca">Public Knowledge Project</a>.]]></message>
 	<message key="default.journalSettings.lockssLicense"><![CDATA[Cette revue utilise le système LOCKSS pour créer un système de distribution des archives parmi les bibliothèques participantes et permet à ces bibliothèques de créer des archives permanentes pour fins de préservation et de restauration. <a href="http://lockss.stanford.edu/">More...</a>]]></message>
 
+	<message key="common.confirmComplete">Are you sure you wish to mark this task as completed? You may not be able to make changes afterwards.</message>
+	<message key="common.captchaField">Validation</message>
+	<message key="common.captchaField.description">Please enter the letters as they appear in the image above.</message>
+	<message key="common.captchaField.badCaptcha">The characters you entered did not match the characters in the image. Please check the characters and try again.</message>
+	<message key="navigation.fontSize">Font Size</message>
+	<message key="submission.sent">Sent</message>
+	<message key="user.sendPassword">Confirmation</message>
+	<message key="user.sendPassword.description">Send me a confirmation email including my username and password</message>
+	<message key="user.signature">Signature</message>
+	<message key="admin.settings.siteStyleSheet">Site style sheet</message>
+	<message key="admin.settings.siteStyleSheetInvalid">Invalid site stylesheet format. Accepted format is .css.</message>
+	<message key="manager.setup.enableUserRegistration.author">Authors (can submit materials to the journal)</message>
+	<message key="manager.setup.enableUserRegistration.reader">Readers (will recieve notifications and be counted as equivalent to a subscriber)</message>
+	<message key="manager.setup.enableUserRegistration.reviewer">Reviewers (available for reviewing submissions)</message>
+	<message key="manager.setup.reviewerDatabaseLink">Potential Reviewer Database</message>
+	<message key="manager.setup.reviewerDatabaseLink.desc">Add to the Select Reviewer page a link to a relevant literature database that can be searched for potential reviewers and is open to editors without subscription.</message>
+	<message key="manager.setup.addReviewerDatabaseLink">Add New Database Link</message>
+	<message key="manager.sections.hideAbout">Omit this section from About the Journal.</message>
+	<message key="manager.people.roleEnrollment">{$role} Enrollment</message>
+	<message key="editor.submissionReview.cannotSendToCopyediting">Before you can send this submission to copyediting, you must ensure that a revision is available and that the author has been notified of the decision using the Notify Author link above.</message>
+	<message key="editor.article.commentsRequired">The comments field is required.</message>
+	<message key="submission.layout.imageInvalid">Invalid image format. Accepted formats are .gif, .jpg, and .png.</message>
+	<message key="author.submit.startHereTitle">Start a New Submission</message>
+	<message key="submission.layout.noLayoutFile">None (Upload final copyedit version as Layout Version prior to sending request)</message>
+	<message key="author.submit.authorSubmitLoginMessage">A user account is required to submit to this journal. This allows our editors to track your submissions and contact you when the status of your submission changes, or if additional information is required from you.</message>
+	<message key="installer.databaseSettingsInstructions">OJS requires access to a SQL database to store its data. See the system requirements above for a list of supported databases. In the fields below, provide the settings to be used to connect to the database.</message>
+	<message key="log.review.reviewDeclinedByProxy">{$userName} has declined the round {$round} review for submission {$articleId} on behalf of {$reviewerName}.</message>
+	<message key="log.editor.decision">An editor decision ({$decision}) for article {$articleId} was recorded by {$editorName}.</message>
+	<message key="rt.admin.settings.addComment.authenticated">Users must be registered and log into to post, with anonymity not permitted.</message>
+	<message key="rt.admin.settings.addComment.anonymous">Users must be registered and log into to post, with anonymity permitted.</message>
+	<message key="rt.admin.settings.addComment.unauthenticated">Users do not need to be registered to post, with anonymity permitted.</message>
+	<message key="icon.small.alt">Small</message>
+	<message key="icon.medium.alt">Medium</message>
+	<message key="icon.large.alt">Large</message>
+	<message key="debug.notes.currencyListLoad">Loaded currency list "{$filename}" from XML</message>
 </locale>

@@ -16,4 +16,5 @@
 	<message key="plugins.generic.tinymce.name">Plugiciel TinyMCE</message>
 	<message key="plugins.generic.tinymce.description"><![CDATA[Ce plugiciel permet l'édition tel-tel de surfaces de texte composées OJS (Open Journal Systems) grâce à l'utilisation de l'éditeur de contenu <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a>.]]></message>
 	<message key="plugins.generic.tinymce.descriptionDisabled"><![CDATA[Ce plugiciel permet l'édition tel-tel de surfaces de texte composées OJS grâce à l'utilisation de l'éditeur de contenu <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a>. <strong>TinyMCE n'est pas installé. Veuillez l'installer {$tinyMcePath}.</strong>]]></message>
+	<message key="plugins.generic.tinymce.settings">Settings</message>
 </locale>

@@ -15,5 +15,8 @@
 <locale name="fr_CA" full_name="Français (Canada)">
 	<message key="plugins.generic.webfeed.displayName">Plugiciel d'alimentation</message>
 	<message key="plugins.generic.webfeed.description">Ce plugiciel assure une syndication en Atom et en RSS pour le numéro actuel.</message>
+	<message key="plugins.generic.webfeed.settings">Settings</message>
+	<message key="plugins.generic.webfeed.settings.issue">Display web feed links on issue pages only.</message>
+	<message key="plugins.generic.webfeed.settings.all">Display web feed links on all journal pages.</message>
 </locale>
 

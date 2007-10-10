@@ -191,8 +191,6 @@
 	
 	<!-- Navigation -->
 	<message key="navigation.journalHelp">Dergi Yardımı</message>
-	<message key="navigation.loggedInAs">Kullanıcı adınız...</message>
-	<message key="navigation.logout">Çıkış</message>
 	<message key="navigation.home">GİRİŞ</message>
 	<message key="navigation.about">SİTE HAKKINDA</message>
 	<message key="navigation.userHome">KULLANICI SAYFASI</message>
@@ -203,14 +201,10 @@
 	<message key="navigation.current">Güncel</message>
 	<message key="navigation.search">Ara</message>
 	<message key="navigation.otherJournals">Diğer Dergiler</message>
-	<message key="navigation.myProfile">Bilgilerim</message>
-	<message key="navigation.myJournals">Dergilerim</message>
-	<message key="navigation.journalContent">Dergi İçeriği</message>
 	<message key="navigation.browse">Göz at</message>
 	<message key="navigation.browseByIssue">Sayılara Göre</message>
 	<message key="navigation.browseByAuthor">Yazara Göre</message>
 	<message key="navigation.browseByTitle">Başlığa Göre</message>
-	<message key="navigation.info">Bilgi</message>
 	<message key="navigation.infoForAuthors">Yazarlar için</message>
 	<message key="navigation.infoForReaders">Okuyucular için</message>
 	<message key="navigation.infoForLibrarians">Kütüphaneciler için</message>
@@ -310,7 +304,6 @@
 	<message key="submission.response">Yanıt</message>
 	<message key="submission.accepted">Kabul edildi</message>
 	<message key="submission.rejected">Reddedildi</message>
-	<message key="submission.acceptance">Değerlendirme için Kabul</message>
 	<message key="submission.due">Son Tarih</message>
 	<message key="submission.complete">Tamam</message>
 	<message key="submission.acknowledge">Onaylama</message>
@@ -434,7 +427,6 @@
 	<message key="user.affiliations">Affiliations</message>
 	<message key="user.email">E-posta</message>
 	<message key="user.url">Web adresi</message>
-	<message key="user.url.description">Yazar hakkında ve Yönetici Listesi sayfalarında kişinin web sayfasına bağlantı vermek için kullanılacaktır.</message>
 	<message key="user.phone">Tel</message>
 	<message key="user.fax">Faks</message>
 	<message key="user.interests">Değerlendirme için ilgi alanları</message>
@@ -562,7 +554,6 @@
 
 	<!-- Reader article view -->
 	<message key="reader.fullText">Tam Metin:</message>
-	<message key="reader.fullTextSubscribersOnly">Tam Metin: Yalnızca aboneler</message>
 
 	<!-- Reader Comments -->
 	<message key="comments.commentsOnArticle">Makale hakkında Yorumlar</message>
@@ -628,11 +619,8 @@ Not: Açık arşiv sistemi arayüzü bu site için ADS ana düzenleme sayfasınd
 	
 	<!-- Languages -->
 	<message key="admin.languages.languageSettings">Dil Ayarları</message>
-	<message key="admin.languages.installLanguages">Dil ekle</message>
 	<message key="admin.languages.primaryLocaleInstructions">Site ve sitedeki dergiler için ön tanımlı dil olacaktır.</message>
 	<message key="admin.languages.supportedLocalesInstructions">Sitede desteklenecek dilleri seçiniz. Seçilen diller sitede sunulan tüm dergiler için kullanılabilir olacaktır ve özel dergi sayfaları dışında, seçtiğiniz dillerden oluşan bir dil seçme aracı tüm sayfalarda okuyucunun hizmetine sunulacaktır. Eğer birden çok dil seçilmez ise, dil seçim aracı gösterilmeyecektir ve dergiler için genişletilmiş dil olanakları çalışmayacaktır.</message>
-	<message key="admin.languages.languageOptions">Dil seçenekleri</message>
-	<message key="admin.languages.profileLocales">Kişiler görevler için kaydedilirken (editörler, hakemler, sayfa düzenleyiciler, vb), dergi editörüne kolaylık olması için çalışma dilleri kullanıcı profillerine eklenecektir.</message>
 	<message key="admin.languages.installedLocales">Kurulmuş Diller</message>
 	<message key="admin.languages.reload">Dili yeniden yükle</message>
 	<message key="admin.languages.confirmReload">Bu dili yeniden yüklemek istediğinizden emin misiniz? Yeniden yükleme dile özgü hazırlanmış bazı verileri, örneğin özelleştirilmiş e-posta şablonlarını silecektir..</message>
@@ -780,7 +768,6 @@ Not: Açık arşiv sistemi arayüzü bu site için ADS ana düzenleme sayfasınd
 	<message key="manager.statistics.reports.recommendation">Öneri #{$num}</message>
 	<message key="manager.statistics.reports.daysToDecision">Karar için geçen süre</message>
 	<message key="manager.statistics.reports.daysToPublication">Yayın için geçen süre</message>
-	<message key="manager.statistics.reports.description">ADS yazılımı başvuruların işlenmesi ile ilgili istenen tarih aralığında; başvurular, editörler, hakemler de dergi bölümleri açısından ayrıntılı raporlar oluşturur. Raporlar CVS formatındadır ve görülmesi için bir tablolama (spreadsheet) programına gerek vardır.</message>
 	<message key="manager.statistics.reports.reportType">Rapor Tipi</message>
 
 	<message key="manager.statistics.statistics.description"> ADS yazılımı her degi için şu istatistikleri hesaplar. “Değerlendirme süresi” başvuru zamanından son editör kararı verilene kadar geçen gün sayısıdır. “Yayınlama süresi” ise başvurudan yayına dek geçen toplam süredir. </message>
@@ -831,7 +818,6 @@ Not: Açık arşiv sistemi arayüzü bu site için ADS ana düzenleme sayfasınd
 	<message key="manager.setup.submissions">Başvurular</message>
 	<message key="manager.setup.submissions.description">Yazar kuralları, telif hakkı, ve indeksleme (kayıt dahil).</message>
 	<message key="manager.setup.management">Yönetim</message>
-	<message key="manager.setup.management.description">Programlama, abonelikler, ile sayfa düzenleyiciler, mizanpaj editorleri ve düzeltmenlerin  kullanımı.</message>
 	<message key="manager.setup.look">Görünüş</message>
 	<message key="manager.setup.look.description">Anasayfa başlığı, içerik, dergi başlığı, son satır, navigasyon barı, ve biçem sayfası.</message>
 	<message key="manager.setup.journalTitle">dergi başlığı</message>
@@ -941,27 +927,10 @@ Not: Açık arşiv sistemi arayüzü bu site için ADS ana düzenleme sayfasınd
 	<message key="manager.setup.aboutItemContent">İçerik</message>
 	<message key="manager.setup.addAboutItem">Ek Öğe</message>
 	<message key="manager.setup.form.numReviewersPerSubmission">Her giriş için hakemlerin sayısı gerekir.</message>
-	<message key="manager.setup.securitySettings">Güvenlik/Erişim Ayarları</message>
-	<message key="manager.setup.securitySettingsDescription">ADS dergi içeriğinin sınırlandırılabileceği birtakım güvenlik seçenekleri sağlar ve denetleme amacıyla ek bilgiler ister.</message>
 	<message key="manager.setup.userRegistration">Kullanıcı Kayıdı</message>
-	<message key="manager.setup.enableUserRegistration">Dergi sitesinden kullanıcılara giriş hakkı ver:</message>
-	<message key="manager.setup.disableUserRegistration">Kullanıcı kaydını engelle. Kullanıcılar dergi yöneticisi tarafından oluşturulacaktır.</message>
-	<message key="manager.setup.siteAccess">Site Erişimi</message>
-	<message key="manager.setup.noRestrictSiteAccess">Kayıt olmamış kullanıcılar dergi sitesini görebilir.</message>
-	<message key="manager.setup.restrictSiteAccess">Kullanıcılar dergi sitesini görmek için giriş yapmalıdırlar.</message>
-	<message key="manager.setup.articleAccess">Makale Erişimi</message>
-	<message key="manager.setup.noRestrictArticleAccess">Kayıt olmayan kullanıcılar yayınlanmış makalelerin tam metnini görebilirler.</message>
-	<message key="manager.setup.restrictArticleAccess">Kullanıcılar yayınlanmış makalelerin tam metnini görmek için giriş yapmalıdırlar.</message>
 
-	<message key="manager.setup.comments">Okuyucu Yorumları</message>
-	<message key="manager.setup.comments.disable">Okuyucu yorumlarına erişilmez.</message>
-	<message key="manager.setup.comments.authenticated">Kayıtlı kullanıcılar gönderebilir; genel gönderilere kapalıdır.</message>
-	<message key="manager.setup.comments.anonymous">Kullanıcılar kayıt olduktan sonra kimlik belirtmeden gönderebilirler.</message>
-	<message key="manager.setup.comments.unauthenticated">Kimlik gerektirmeden gönderiye izin ver.</message>
 
 	<message key="manager.setup.loggingAndAuditing">Oturum Açma ve Denetleme</message>
-	<message key="manager.setup.submissionEventLogging">Kapalı oturumda "geçmiş sayfalar" da bütün hareketler devam ederken oturum açmaya izin ver.</message>
-	<message key="manager.setup.submissionEmailLogging">Girilebilir "geçmiş sayfalar" aracılığı ile e-posta göndermeye izin ver.</message>
 
 	<message key="manager.setup.journalArchiving">Dergi Arşivi</message>
 	<message key="manager.setup.lockssDescription"><![CDATA[Açık Erişim Dergi Sistemleri destekler:<a href="http://lockss.stanford.edu/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe) Dergi için güvenli ve kalıcı arşiv sistemi. LOCKSS Stanford University Library'de geliştirilmiş, kütüphanelerin düzenli olarak toplanan kayıtlı dergilerin web sitelerinden yeni yayınlanmış içerikleri ve arşivlemeyi koruyan açık kaynak kodlu bir yazılımdır. Her arşiv devamlı olarak diğer kütüphane belleklerine karşı veriyi korur, ve eğer bozulur veya kaybolursa diğer önbellek veya dergi onarım için kullanılır.
@@ -1027,12 +996,7 @@ Kayıt olmak için <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank"
 	<message key="manager.setup.publicationSchedule">Yayın Planlaması</message>
 	<message key="manager.setup.publicationScheduleDescription"><![CDATA[Makaleler, kendi içindekiler tablosu olan bir sayıda toplanarak, toplu olarak yayınlanabilir. Ayrıca hazır olan makale son sayının içindekiler tablosuna eklenerek yayınlanabilir. Dergi Hakkında bölümünde okuyucularınıza hangi sistemin kullanıldığı ve ne sıklıkta yeni sayı yayınlandığını belirtiniz.]]></message>
 	<message key="manager.setup.publicationFormat">Biçim</message>
-	<message key="manager.setup.publicationFormatDescription">Dergi sayılarını tanımlanmaa biçimini seçiniz. Biçim tek bir sayı için özelleştirilebilir.</message>
-	<message key="manager.setup.publicationFormatIssue">Cilt, Sayı ve Yıl</message>
-	<message key="manager.setup.publicationFormatVolume">Cilt ve Yıl</message>
 	<message key="manager.setup.publicationFormatYear">Yıl</message>
-	<message key="manager.setup.publicationFormatTitle">Özel sayı başlığı</message>
-	<message key="manager.setup.publicationFormatTitleDescription">Not: Bu seçenek kullanılarak bir  sayıya yayınlanırken bir isim verilir ise, bu sayı yalnızca bu isim ile tanımlanır. (Örneğin "Kongre Ek Sayısı" gibi, ancak cilt, sayı no verilmez).</message>
 	<message key="manager.setup.initialIssue">Başlangıç Sayısı</message>
 	<message key="manager.setup.initialIssueDescription">Seçilen biçimlendirmeye uygun olarak ADS ile yayınlanacak ilk sayının cilt, sayı, yıl gibi özellikleri:</message>
 	<message key="manager.setup.frequencyOfPublication">Başlangıç ve sıklık</message>
@@ -1046,13 +1010,9 @@ Editöryel sürecin bu basamaklarının nasıl işleyeceği konusunda bir model 
 	<message key="manager.setup.editorialProcess2">Yönetici editör Başvuru Kuyruğu, İçindekiler bölümlerini, Bölüm Editörleri ise Başvuru Değerlendirilmesi, Yazıların Düzenlenmesi bölümlerini yönetirler.</message>
 	<message key="manager.setup.editorialProcess3">Yönetici editör Başvuru Kuyruğu, Yazıların Düzenlenmesi, İçindekiler bölümlerini, Bölüm Editörleri ise Başvuru Değerlendirilmesi bölümlerini yönetirler.</message>
 	<message key="manager.setup.copyediting">Sayfa Düzenleyiciler</message>
-	<message key="manager.setup.useCopyeditors">Dergi her başvuru için sayfa düzenleyici kullanır.</message>
-	<message key="manager.setup.noUseCopyeditors">Sayfa düzenlemesi editörce yapılır.</message>
 	<message key="manager.setup.copyeditInstructions">Sayfa Düzenleme Yönergesi</message>
 	<message key="manager.setup.copyeditInstructionsDescription">Sayfa düzenleme yönergesi yazı düzenlenmesi aşamasında sayfa düzenleyiciler, yazarlar ve bölüm editörlerine açıktır. Aşağıda yönergenin ön tanımlı biçimi HTML olarak verilmektedir. Dergi yöneticisi tarafından istenildiğinde değiştirilebilir. (HTML veya düz metin olarak).</message>
 	<message key="manager.setup.layoutAndGalleys">Mizanpajcı</message>
-	<message key="manager.setup.useLayoutEditors">Dergi elektronik ortamda yayınlanacak HTML, PDF, PS vb. dosya formatında çıktıları hazırlayacak mizanpajcı kullanır.</message>
-	<message key="manager.setup.noUseLayoutEditors">Editörler elektronik yayına hazır dosyaları kendileri hazırlarlar.</message>
 	<message key="manager.setup.layoutInstructions">Mizanpaj Yönergesi</message>
 	<message key="manager.setup.layoutInstructionsDescription">Mizanpaj yönergesi dergide yayınlanacak yazılara son biçim verme ilkelerini içeren HTML veya düz metin biçiminde bir belgedir. Her başvurunun düzenlenmesi sırasında mizanpajcılara ve bölüm editörlerine gösterilir. (Her dergi kendine göre dosya formatı, kitaplık standartları vb özellikler kullandığı için ön tanımlı bir set oluşturulmamıştır.)</message>
 		<message key="manager.setup.layoutTemplates">Mizanpaj Örnekleri</message>
@@ -1061,8 +1021,6 @@ Editöryel sürecin bu basamaklarının nasıl işleyeceği konusunda bir model 
 	<message key="manager.setup.layoutTemplates.file">Örnek dosya</message>
 
 	<message key="manager.setup.proofreading">Prova dizgi Değerlendirici</message>
-	<message key="manager.setup.useProofreaders">Dergi yazarlar ile birlikte prova dizgiyi değerlendirecek özel değerlendirici kullanır.</message>
-	<message key="manager.setup.noUseProofreaders">Yazarlar ve editörler prova dizgileri değerlendirir.</message>
 	<message key="manager.setup.proofingInstructions">Prova Dizgi Yönergesi</message>
 	<message key="manager.setup.proofingInstructionsDescription">Prova dizgi yönergesi yazı düzenlenmesi basamağında prova dizgi değerlendiricilere, yazarlara, mizanpajcılara ve bölüm editörlerine açık tutulur. Aşağıda, dergi yöneticisi tarafından istenildiğinde değiştirilebilecek, ön tanımlı bir set verilmiştir.</message>
 	<message key="manager.setup.volumePerYear">Yılda çıkacak cilt sayısı</message>
@@ -1075,10 +1033,8 @@ Editöryel sürecin bu basamaklarının nasıl işleyeceği konusunda bir model 
 	<message key="manager.setup.enablePublicSuppFileId">Yazı eki olan dosyalar için özel tanımlayıcılar kullanılacaktır.</message>
 	<message key="manager.setup.pageNumberIdentifier">Sayfa Numarası Seçenekleri</message>
 	<message key="manager.setup.enablePageNumber">Sayfa numaraları hesaplanıp, İçindekiler tablosuna elle girilecektir (Öerneğin 13-26 gibi).</message>
-	<message key="manager.setup.onlineAccessManagement">Webden erişim yönetimi</message>
 	<message key="manager.setup.openAccess">Dergi içeriğine açık erişime izin verir.</message>
 	<message key="manager.setup.subscription">Dergi içeriğinin tümüne veya bir bölümüne ulaşım için abonelik gerekir</message>
-	<message key="manager.setup.subscriptionDescription">Abone yönetimi etkinleştirilir ise, bir abonelik yöneticisi belirlenmelidir. Bu kişi ilgile modüle ulaşmaya, ek gecikmiş ulaşım, e-posta ile haber gibi özellikleri yönetmeye yetkili olacaktır.</message>
 	<message key="manager.setup.announcements">Duyurular</message>
 	<message key="manager.setup.announcementsDescription">Duyurular dergi okuyucularına haber veya gelişmeleri iletmek için kullanılır ve Duyurular sayfasında yayınlanırlar.</message>
 	<message key="manager.setup.enableAnnouncements">Dergi yöneticilerinin dergilerine duyuru eklemelerini etkinleştir.</message>
@@ -1112,8 +1068,6 @@ Editöryel sürecin bu basamaklarının nasıl işleyeceği konusunda bir model 
 	<message key="manager.setup.alternateHeaderDescription">Alternatif olarak, başlık HTML biçiminde hazırlanarak bu alana eklenebilir, gerekli değil ise bu alanı boş bırakınız.</message>
 	<message key="manager.setup.journalPageFooter">Dergi Sayfa altlığı</message>
 	<message key="manager.setup.journalPageFooterDescription">Dergi Sayfalarının alt bölümünde görülemesini istediklerinizi HTML biçiminde bu alana yazınız. Örneğin burada da yönlendirme yapılabilir, ya da sayaç, reklam vb eklenebilir. Altlık her sayfanın altında yer alacaktır.</message>
-	<message key="manager.setup.journalStyleSheet">Dergi Biçimlendirme Sayfası</message>
-	<message key="manager.setup.journalStyleSheetDescription">Ön tanımlı olarak dergiler ve site aynı biçimlendirme sayfasını kullanırlar. Kullanılan dosya	"styles" dizininde yer almaktadır. İstenir ise dergi için özel bir dosya sisteme gönderilerek, dergini bu dosya ile biçimlendirilmesi sağlanabilir.</message>
 	<message key="manager.setup.useJournalStyleSheet">Dergi Biçimlendirme Sayfası</message>
 	<message key="manager.setup.noStyleSheetUploaded">Biçimlendirme Sayfası gönderilmedi</message>
 	<message key="manager.setup.journalHomepageContent">Dergi Giriş Sayfası İçeriği</message>
@@ -1133,14 +1087,6 @@ Editöryel sürecin bu basamaklarının nasıl işleyeceği konusunda bir model 
 	<message key="manager.setup.homeHeaderImageInvalid">Giriş sayfası başlık logosu için geçersiz dosya biçimi. Desteklenen dosya biçimleri .gif, .jpg, veya .png biçimleridir.</message>
 	<message key="manager.setup.pageHeaderTitleImageInvalid">Sayfa başlık şekli için geçersiz dosya biçimi. Desteklenen dosya biçimleri .gif, .jpg, veya .png biçimleridir.</message>
 	<message key="manager.setup.pageHeaderLogoImageInvalid">Sayfa başlık logosu için geçersiz dosya biçimi. Desteklenen dosya biçimleri .gif, .jpg, veya .png biçimleridir.</message>
-	<message key="manager.setup.homeHeaderTitleImageAlt1Invalid">Alternatif giriş sayfası başlık şekli için geçersiz dosya biçimi. Desteklenen dosya biçimleri .gif, .jpg, veya .png biçimleridir.</message>
-	<message key="manager.setup.homeHeaderLogoImageAlt1Invalid">Alternatif giriş sayfası başlık logosu için geçersiz dosya biçimi. Desteklenen dosya biçimleri .gif, .jpg, veya .png biçimleridir.</message>
-	<message key="manager.setup.pageHeaderTitleImageAlt1Invalid">Alternatif sayfa başlık şekli için geçersiz dosya biçimi. Desteklenen dosya biçimleri .gif, .jpg, veya .png biçimleridir.</message>
-	<message key="manager.setup.pageHeaderLogoImageAlt1Invalid">Alternatif sayfa başlık logosu için geçersiz dosya biçimi. Desteklenen dosya biçimleri .gif, .jpg, veya .png biçimleridir.</message>
-	<message key="manager.setup.homeHeaderTitleImageAlt2Invalid">İkinci giriş sayfası başlık şekli için geçersiz dosya biçimi. Desteklenen dosya biçimleri .gif, .jpg, veya .png biçimleridir.</message>
-	<message key="manager.setup.homeHeaderLogoImageAlt2Invalid">İkinci giriş sayfası başlık logosu için geçersiz dosya biçimi. Desteklenen dosya biçimleri .gif, .jpg, veya .png biçimleridir.</message>
-	<message key="manager.setup.pageHeaderTitleImageAlt2Invalid">İkinci sayfa başlık şekli için geçersiz dosya biçimi. Desteklenen dosya biçimleri .gif, .jpg, veya .png biçimleridir.</message>
-	<message key="manager.setup.pageHeaderLogoImageAlt2Invalid">İkinci sayfa başlık logosu için geçersiz dosya biçimi. Desteklenen dosya biçimleri .gif, .jpg, veya .png biçimleridir.</message>
 	<message key="manager.setup.homepageImageInvalid">Giriş sayfası şekli için geçersiz dosya biçimi. Desteklenen dosya biçimleri .gif, .jpg, veya .png biçimleridir.</message>
 	<message key="manager.setup.journalStyleSheetInvalid">Biçimlendirme sayfası için geçersiz dosya biçimi. Desteklenen dosya biçimi .css dir.</message>
 	<message key="manager.setup.information">Bilgi</message>
@@ -1150,15 +1096,8 @@ Editöryel sürecin bu basamaklarının nasıl işleyeceği konusunda bir model 
 	<message key="manager.setup.information.forLibrarians">Kitaplıklar için</message>
 
 	<!-- Languages -->
-	<message key="manager.languages.languageInstructions"><![CDATA[ADS desteklenen birkaç dilde kullanıcılar için uygun hale getirilebilir. Aynı şekilde, ADS kısmi çoklu dil sistemi olarak çalışarak kullanıcılara her bir sayfadaki diller arasında değişiklik olanağı sağlarken, en fazla iki dilde olmak üzere belirli bir ek veri girme olanağı da sunar. <br /><br/>ADS tarafından desteklenen bir dil aşağıdaki listede bulunmuyorsa site yöneticinizden bu dili site yönetim arayüzünden yüklemesini isteyiniz. Yeni dillerde destek ekleme açıklaması için ADS belgelerine başvurunuz.]]></message>
 	<message key="manager.languages.primaryLocaleInstructions">Bu dergi sitesi için varsayılan dil olacaktır.</message>
 	<message key="manager.languages.supportedLocalesInstructions">Tüm sayfalarda dil seçimi olanağı ile siteyi geliştirmek için desteklemek istediğiniz dilleri seçiniz. Dil seçimi menüsü yalnızca birden fazla dil desteği seçilir ise sayfalarda sunulacaktır. </message>
-	<message key="manager.languages.alternateLocale1">Ek dil #1</message>
-	<message key="manager.languages.alternateLocale2">Ek dil #2</message>
-	<message key="manager.languages.alternateLocaleInstructions">İstenir ise, dergi sistemi en fazla iki ek dilde makaleler ile ilgili belirli kritik bilgi girişine izin verir. Bu özelliği kullanmak için aşağıdaki seçenekler listesinden dil seçebilirsiniz. </message>
-	<message key="manager.languages.alternativeLanguageOptions">Ek dil seçenekleri</message>
-	<message key="manager.languages.journalTitleAltLanguages">Dergi başlığı, sayfa başlığı vb özellikler her bir dergi dilinde değişecektir.</message>
-	<message key="manager.languages.articleAltLanguages">Yazarlardan makale başlıkları ve özetlerini ek dillerde de sağlamaları istenecektir. Bu konuda dergi çalışanlarının yardımını isteme seçeneği de sunulacaktır.</message>
 	<message key="manager.languages.noneAvailable"> Üzgünüz, başka bir ek dil kullanılamaz. Bu dergide ek bir dil kullanmak istiyorsanız site yöneticinize başvurunuz. </message>
 	
 	
@@ -1169,8 +1108,6 @@ Editöryel sürecin bu basamaklarının nasıl işleyeceği konusunda bir model 
 	<message key="manager.sections.editors">Bölüm Editörleri</message>
 	<message key="manager.sections.unassigned">Atanabilecek bölüm Editörleri</message>
 	<message key="manager.sections.assigned">Bu bölümün Editörleri</message>
-	<message key="manager.sections.assignEditor">Editör olarak atayın</message>
-	<message key="manager.sections.unassignEditor">Editörlüktan alın</message>
 	<message key="manager.sections.form.titleRequired">Bölüm için başlık gereksinimi var.</message>
 	<message key="manager.sections.form.abbrevRequired">Bölüm için kısaltılmış başlık gereksinimi var</message>
 	<message key="manager.section.sectionEditorInstructions">Uygun bölüm editörleri arasından seçin ve bu bölüme bölüm editörü olarak editör atayın.</message>
@@ -1198,12 +1135,8 @@ Editöryel sürecin bu basamaklarının nasıl işleyeceği konusunda bir model 
 	<message key="manager.groups.title">Başlık</message>
 	<message key="manager.groups.confirmDelete">Bu grubu silmek istediğinizden emin misiniz?</message>
 	<message key="manager.groups.noneCreated">Editöryal grup için kimse tanımlanmadı.</message>
-	<message key="manager.groups.create">Editöryal grup için başlık oluştur</message>
 	<message key="manager.groups.form.groupTitleRequired">Bir grup başlığı gerekiyor.</message>
 
-	<message key="manager.groups.enableBoard.description"><![CDATA[<a href="{$aboutEditorialTeamUrl}">Editöryal grup</a> hakkında bölümünde görülebilir :]]></message>
-	<message key="manager.groups.enableBoard">Dergi yöneticisi editöryal grubu ve başlığını belirler.</message>
-	<message key="manager.groups.disableBoard">Yazılım kişilerin listesini, atandıkları editöryal rollere göre kendisi oluşturur (Dergi Yöneticisi, Editör, Bölüm Editörü, vb)</message>
 
 	<message key="manager.groups.membership">Üyelik</message>
 	<message key="manager.groups.membership.confirmDelete">Bu grup üyeliğini silmek istediğinizden emin misiniz?</message>
@@ -1212,10 +1145,8 @@ Editöryel sürecin bu basamaklarının nasıl işleyeceği konusunda bir model 
 	<message key="manager.groups.membership.noUsers">Hiç kullanıcı bulunamadı.</message>
 
 	<!-- People Management -->
-	<message key="manager.people.allUsers">Tüm kullanıcılar</message>
 	<message key="manager.people.allJournals">Tüm dergiler</message>
 	<message key="manager.people.editUser">Kullanıcıyı düzenle</message>
-	<message key="manager.people.enrollExistingUser">Mevcut kullanıcıyı kaydet</message>
 	<message key="manager.people.createUser">Yeni kullanıcı oluştur</message>
 	<message key="manager.people.mergeUsers">Kullanıcıları birleştir</message>
 	<message key="manager.people.mergeUser">Kullanıcıyı birleştir</message>
@@ -1238,7 +1169,6 @@ Seçenekli olarak kullanıcıya neden vererek hesabını yetersiz kılabilirsini
 	<message key="manager.people.authSource">Yetkilenme kaynağı</message>
 	<message key="manager.people.enrollUserAs">Kullanıcıyı böyle kaydet</message>
 	<message key="manager.people.doNotEnroll">Kaydetme</message>
-	<message key="manager.people.enrollUserAsDescription">Hiç bir rol seçilmez ise, kullanıcı kaydedilir, ancak dergi ile ilişkilendirilmez. Kullanıcı oluşturulduktan sonra her hangi bir zamanda rol verilebilir veya kaldırılabilir.</message>
 	<message key="manager.people.invalidUser">Üzgünüz, böyle bir kullanıcı yok.</message>
 	<message key="manager.people.noAdministrativeRights"><![CDATA[Üzgünüz, bu kullanıcı üzerinde idari hakkınız yoktur. Bunun sebebi:
 		<ul>
@@ -1263,7 +1193,6 @@ Seçenekli olarak kullanıcıya neden vererek hesabını yetersiz kılabilirsini
 	<message key="manager.people.editProfile">Profili düzenle</message>
 
 	<message key="manager.people.signInAsUser">Kullanıcı olarak giriş yap</message>
-	<message key="manager.people.signOutAsUser">Kullanıcı olarak çıkış yap</message>
 	<message key="manager.people.signInAs">Bu kişi gibi giriş yap: </message>
 	<message key="manager.people.syncUsers">Kullanıcı kaydını eşzamanlı yap</message>
 	<message key="manager.people.syncUserDescription">Eşzamanlı kayıt belirli dergide belirli rol şeklinde kaydolmuş tüm kullanıcıları bu dergide kaydeder. Bu fonksiyon ortak kullanıcı gruplarını (Örn. Eleştirmenler) dergiler arasında senkronize eder.</message>
@@ -1369,7 +1298,6 @@ Seçenekli olarak kullanıcıya neden vererek hesabını yetersiz kılabilirsini
 	<message key="manager.subscriptionTypes.form.format">Biçim</message>
 	<message key="manager.subscriptionTypes.form.institutional">Aboneler kullanım alanı ya da IP doğruluğu aracılığı ile onaylamalıdır.</message>
 	<message key="manager.subscriptionTypes.form.membership">Aboneler bir kurum ya da kuruluşun üyesi olmalıdır.</message>
-	<message key="manager.subscriptionTypes.form.public">Bu abonelik tipi Dergi Hakkında sayfasında gösterilmeyecektir.</message>
 	<message key="manager.subscriptionTypes.form.saveAndCreateAnotherType">Kaydet ve bir başkasını oluştur</message>
 	<message key="manager.subscriptionTypes.format.online">Çevrimiçi</message>
 	<message key="manager.subscriptionTypes.format.print">Yazdır</message>
@@ -1496,14 +1424,6 @@ Seçenekli olarak kullanıcıya neden vererek hesabını yetersiz kılabilirsini
 	<message key="editor.issues.unpublished">Basılmamış</message>
 
 	<!-- Create Issue / Issue Data -->
-	<message key="editor.issues.volumeRequired">Bu sayı için cilt belirle</message>
-	<message key="editor.issues.numberRequired">Bu sayı için numara belirle</message>
-	<message key="editor.issues.yearRequired">Bu sayı için yıl belirle.</message>
-	<message key="editor.issues.labelFormatRequired">Geçerli bir etiket biçimi seçilmelidir.</message>
-	<message key="editor.issues.labelOption1">Cilt, sayı, yıl</message>
-	<message key="editor.issues.labelOption2">Cilt, yıl</message>
-	<message key="editor.issues.labelOption3">Yıl</message>
-	<message key="editor.issues.labelOption4">Yalnız başlık</message>
 	<message key="editor.issues.issueIdentification">Sayı kimliği</message>
 	<message key="editor.issues.publicIssueIdentifier">Genel sayı belirleyicisi</message>
 	<message key="editor.issues.description">Tanımlama</message>
@@ -1522,7 +1442,6 @@ Seçenekli olarak kullanıcıya neden vererek hesabını yetersiz kılabilirsini
 	<message key="editor.issues.invalidStyleFormat">Uygunsuz biçimlendirme dosyası. Gönderdiğiniz dosyanın geçerli bir biçimlendirme dosyası olduğundan emin olunuz (CSS).(Dikkat başlangıcında yorumlar olan biçimlendirme dosyaları reddedilebilir.)</message>
 	<message key="editor.issues.removeStyleFile">içimlendirme dosyasını sil</message>
 	<message key="editor.issues.coverPageCaption">Kapak başlığı</message>
-	<message key="editor.issues.showCoverPage">Bu sayı için yeni kapak sayfası oluştur.</message>
 	<message key="editor.issues.openAccess">Ulaşıma aç</message>
 	<message key="editor.issues.subscription">Kayıt</message>
 	<message key="editor.issues.identification">Tanımlama</message>
@@ -1607,7 +1526,6 @@ artı (+) işareti ile hakemin şu anda değerlendirdiği yazılar belirtilmişt
 	<message key="editor.article.noneSelected">Hiçbiri seçilmedi</message>
 	<message key="editor.article.authorProofing">Yazar dizgi provası</message>
 	<message key="editor.article.archiveSubmission">Makale başvurusunu arşivle</message>
-	<message key="editor.article.emailAuthorOnArchive">Yazara bu makale başvurusunun arşivlenmesi konusunda E-posta gönder?</message>
 	<message key="editor.article.restoreToQueue">Aktif listeyi yenile</message>
 	<message key="editor.article.assignSectionEditor">Bölüm editörü ata</message>
 	<message key="editor.article.assignEditor">Editör ata</message>
@@ -1662,7 +1580,6 @@ artı (+) işareti ile hakemin şu anda değerlendirdiği yazılar belirtilmişt
 	<message key="sectionEditor.regrets.regretsAndCancels">Hakem itirazları &amp; İptaller</message>
 	<message key="sectionEditor.regrets.regret">İtiraz</message>
 	<message key="sectionEditor.regrets.result">Sonuç</message>
-	<message key="sectionEditor.review.enrollReviewer">Kayıtlı kullanıcıyı hakem olarak ata</message>
 	<message key="sectionEditor.review.createReviewer">Yeni hakem oluştur</message>
 
 	<!-- Layout Editor -->
@@ -1685,7 +1602,6 @@ artı (+) işareti ile hakemin şu anda değerlendirdiği yazılar belirtilmişt
 	<message key="reviewer.article.notifyTheEditor">Editörü bilgilendir</message>
 	<message key="reviewer.article.canDoReview">Değerlendirmeyi yapacağım</message>
 	<message key="reviewer.article.cannotDoReview">Değerlendirmeyi yapamayacağım</message>
-	<message key="reviewer.article.restrictedFileAccess">Değerlendirmeyi kabul ederseniz dosyalar görüntülenecektir</message>
 	<message key="reviewer.article.submissionEditor">Başvuru Editörü</message>
 	<message key="reviewer.article.reviewerCommentsDescription">Hakem yorumlarını buraya yazınız ya da yapıştırınız</message>
 	<message key="reviewer.article.editorToEnter">Editörün girmesi için</message>
@@ -1738,7 +1654,6 @@ artı (+) işareti ile hakemin şu anda değerlendirdiği yazılar belirtilmişt
 	<message key="author.track">Aktif başvurular</message>
 	<message key="author.submit.submitArticle">Makale başvurusu yap</message>
 	<message key="author.submit.stepsToSubmit">Başvuru için beş basamak</message>
-	<message key="author.submit.startHereLink">Başvuru işlemine başlamak için burayı tıklat</message>
 	<message key="author.submit.step1">1. Basamak Başvuruya başlama</message>
 	<message key="author.submit.step2">2. Basamak Başvurusuyla ilgili bilgileri girme</message>
 	<message key="author.submit.step3">3. Basamak Başvuru dosyalarını yükleme</message>
@@ -1761,9 +1676,7 @@ artı (+) işareti ile hakemin şu anda değerlendirdiği yazılar belirtilmişt
 
 
 	<!-- Article Submission Step 1 -->
-	<message key="author.submit.howToSubmit"><![CDATA[Dergiye yazarlar yeni yazılarını siteyi kullanarak,5 basamaklı bir işlem ile gönderirler. Bu yol ile makale, araştırma verisi, yüksek çözünürlüklü resim gibi ek dosyalar siteye gönderilir. Eğer işlemler ile ilgili sorun yaşarsanız veya sorunuz olur ise <a href="mailto:{$supportEmail}">{$supportName}</a> adresine e-posta ile başvurabilir veya {$supportPhone} numaralı telefondan yardım alabilirsiniz.]]></message>
 	<message key="author.submit.journalSection">Dergi, Bölümü</message>
-	<message key="author.submit.journalSectionDescription"><![CDATA[Başvurunuz için uygun dergi bölümünü seçiniz. (Dergi bölümleri konusunda daha fazla bilgiye <a href="{$aboutUrl}">Dergi hakkında</a> sayfasında ulaşabilirsiniz).]]></message>
 	<message key="author.submit.selectSection">Lütfen bir bölüm seçiniz...</message>
 	
 	<message key="author.submit.submissionChecklist">Başvuru kontrol listesi</message>
@@ -1776,15 +1689,10 @@ artı (+) işareti ile hakemin şu anda değerlendirdiği yazılar belirtilmişt
 	<message key="author.submit.form.sectionRequired">Lütfen bu başvuru için uygun bir dergi bölümü seçiniz.</message>
 	
 	<!-- Article Submission Step 2 -->
-	<message key="author.submit.metadataDescription">Bu dergi, Açık Arşiv Girişim standartlarına uygun olarak, her başvuru için başvuru bilgilerini almaktadır. Bu da araştırma kaynaklarının belirlenmesi için çevrimiçi standartlar gelişimini sağlamaktadır. Bu sayede okuyucuların Açık Erişim İnternet veritabanlarını kullanarak kollektif ve doğru bir şekilde yayınlanan makaleleri bulmasaı olanaklı kılınmaktadır. Editöryal işlemler başlamadan once başvuru bilgilerin girilmesi Editör tarafından belirlenmiş bir zorunluluktur. </message>
 	<message key="author.submit.privacyStatement">Derginin Gizlilik Beyannamesi</message>
-	<message key="author.submit.authorsDescription">MAkalenin birden fazla yazarı var ise, yazarları yayındaki sıralarına uygun olarak giriniz.</message>
-	<message key="author.submit.reorderAuthorName">Yazar isimlerini yeniden sırala </message>
-	<message key="author.submit.reorderInstructions">Yazar isimlerini makaledeki geçiş sırasına uygun hale getirmek için okları kullanınız.</message>
 	<message key="author.submit.selectPrincipalContact">Editöryal iletişim için birincil irtibat.</message>
 	<message key="author.submit.addAuthor">Yazar ekle</message>
 	<message key="author.submit.deleteAuthor">Yazarı sil</message>
-	<message key="author.submit.submissionIndexingDescription">Makalenizin, Dergi tarafından tanımlanan başvuru içeriklerinden hangisine en uygun olduğunu seçiniz. Terimleri noktalı virgule kullanarak ayırınız. (terim1; terim2; terim3).</message>
 	<message key="author.submit.submissionSupportingAgencies">Destekleyen kuruluşlar</message>
 	<message key="author.submit.submissionSupportingAgenciesDescription">Bu çalışmayı maddi ya da başka bir şekilde destekleyen kuruluşları tanımlar.</message>
 	<message key="author.submit.agencies">Kuruluşlar</message>
@@ -1805,9 +1713,7 @@ Dergiye makale göndermek için aşağıdaki basamakları tamamlayınız.
 <li>Dosya seçimi penceresinde Aç'a tıklayınız, bu işlem dosya adını sayfa üzerine yerleştirecektir. </li>
 <li>Sayfadaki yükle düğmesini tıklatarak, dosyayı kendi bilgisayarınızdan derginin internet sitesine yükleyiniz, dosyanızın adı dergi kurallarına uygun olarak değiştirilecektir.</li>
 <li>Başvuru yüklendikten sonar, sayfanın alt kısmında yer alan Kaydet ve Devam et'e tıklayınız.</li>
-</ol>
-
-Dosyanızı, dosya adını tıklayarak görebilirsiniz. Yeni değiştirilmiş bir dosya gönderirseniz, kayıtlı dosya silinerek, yenisi onunyerini alacaktır. EK dosyalar bir sonraki adımda, ek dosya gönder seçeneği ile gönderilebilir. Makale göndermede sorun yaşarsanız lütfen <a href="mailto:{$supportEmail}">{$supportName}</a> ile e-posta ya da telefon {$supportPhone} ile temasa geçiniz. ]]></message>
+</ol>]]></message>
 	<message key="author.submit.submissionFile">Başvuru dosyası</message>
 	<message key="author.submit.uploadSubmissionFile">Başvuru dosyasını yükle</message>
 	<message key="author.submit.replaceSubmissionFile">Başvuru dosyasını değiştir</message>
@@ -1815,7 +1721,6 @@ Dosyanızı, dosya adını tıklayarak görebilirsiniz. Yeni değiştirilmiş bi
 	<message key="author.submit.noSubmissionConfirm">Başvuru için bir dosya göndermeden devam etmek istiyor musunuz?</message>	
 
 	<!-- Article Submission Step 4 -->
-	<message key="author.submit.supplementaryFilesInstructions">Başvuru için isteğe bağlı olan bu basamak da başvuru dosyasına ek dosyalar gönderilebilir. Olası ek dosyalar (a) Araştırma araçları, (b) veri takımları, (araştırma etiğiyle ilgili dosyalar gibi), (c) okuyuculara uygun olmayabilecek kaynaklar, ya da (d) metin içine yerleştirilemeyen şekil ve tablolar ek dosyalardır. Bu dosyalar da yazar tarafından makaleyle ilgisi belirtilerek dizinlenir. Ek dosyalar herhangi bir dosya biçimi şeklide internet sitesine yüklenebilir ve orjinal haliyle okuyucuya sunulurlar. Eğer yazar kimliği ile ilgili bilgi içermiyorlar ise, değerlendirme aşamasında hakemlere de sunulurlar.</message>
 	<message key="author.submit.noSupplementaryFiles">Bu makale başvurusunda ek dosya yüklemesi yapılmamıştır. </message>
 	<message key="author.submit.backToSupplementaryFiles">Ek dosyalara geri dön </message>
 	<message key="author.submit.confirmDeleteSuppFile">Bu ek dosyayı silmek istediğinizden emin misiniz? </message>
@@ -1850,7 +1755,6 @@ Dosyanızı, dosya adını tıklayarak görebilirsiniz. Yeni değiştirilmiş bi
 	<message key="author.suppFile.publicSuppFileIdentifier">Açık ek dosya tanımlayıcı</message>
 	
 	<!-- Article Submission Step 5 -->
-	<message key="author.submit.confirmationDescription">Makale başvurusunun önceki dört basamağı sonrası Başvuruyu Bitir'e tıkladığınızda {$journalTitle}'ne makalenizin başvurusu tamamlanmış olacaktır. E-posta yoluyla bir bilgilendirme mesajı alacaksınız, ayrıca başvurunuzun editöryal işlemlerin hangi aşamasında olduğunu da derginin internet sitesine bağlanarak takip edebileceksiniz. {$journalTitle}'ne makale gönderdiğiniz için teşekkür ederiz. </message>
 	<message key="author.submit.noFiles">Başvuruya herhangi bir dosya eklenmemiştir.</message>
 	<message key="author.submit.filesSummary">Dosya özeti</message>
 	<message key="author.submit.finishSubmission">Başvuruyu Bitir</message>
@@ -1878,7 +1782,6 @@ Dosyanızı, dosya adını tıklayarak görebilirsiniz. Yeni değiştirilmiş bi
 	<message key="submission.copyedit.instructions">Sayfa düzeni yönergesi</message>
 	
 	<!-- Submission Tracking - Layout Specific -->
-	<message key="submission.layout.mustUploadFileForLayout">Mizanpaj sürümü hazırlanmadan istek e-postası gönderilemez.</message>
 	<message key="submission.layout.layoutVersion">Mizanpaj sürümü</message>
 	<message key="submission.layout.layoutFile">Mizanpaj dosyası</message>
 	<message key="submission.layout.galleys">Dizgiler</message>
@@ -1985,7 +1888,6 @@ Dosyanızı, dosya adını tıklayarak görebilirsiniz. Yeni değiştirilmiş bi
 	<message key="user.login.lostPassword.invalidHash">Üzgünüz, tıklamış olduğunuz bağlantı geçerli değildir.Şifrenizi yenilemek için tekrar deneyiniz. </message>
 	<message key="user.login.lostPassword.passwordSent">E-posta adresinize yeni şifreniz gönderilmiştir. Yeni şifrenizi kullanarak sitemize bağlanabilirsiniz. </message>
 	<message key="user.login.changePasswordInstructions"><![CDATA[Siteye girmek için öncelikli olarak yeni bir şifre belirlemeniz gerekmektedir..<br /><br />Şifrenizi değiştirmek için lütfen kullanıcı adınızı, mevcut şifrenizi ve yeni şifrenizi giriniz.]]></message>
-	<message key="user.login.rememberMe">Beni hatırla </message>
 	<message key="user.login.registeredEmail">Kayıtlı kullanıcının e-posta adresi </message>
 	
 	<!-- Profile -->
@@ -2168,7 +2070,6 @@ Dosyanızı, dosya adını tıklayarak görebilirsiniz. Yeni değiştirilmiş bi
 	<message key="help.relatedTopics">İlgili Konular</message>
 	<message key="help.search">Yardım Konularında Arama</message>
 	<message key="help.searchFor">Yardım Konularında Bunu Ara: </message>
-	<message key="help.searchResultsFor">Bulunanlar </message>
 	
 	<!-- Installer -->
 	<message key="installer.ojsInstallation">ADS Yüklenmesi</message>
@@ -2230,9 +2131,7 @@ Sunucunuz mbstring'i güncel olarak destekler: <strong>{$supportsMBString}</stro
 	<message key="installer.clientCharset">Müşteri öğe kümesi</message>
 	<message key="installer.clientCharsetInstructions">Hizmet vericiden veri gönderme ve almak için şifreleme.</message>
 	<message key="installer.connectionCharset">Bağlantı öğe kümesi</message>
-	<message key="installer.connectionCharsetInstructions">Veritabanına veri gönderme ve alma için şifreleme. Bu müşteri öğe kümesi ile aynı olmalıdır. Bu durumun yalnızca MySQL>= 4.1.1 or PostgreSQL >= 7.1 ile desteklendiğine dikkat edin. Eğer veritabanı sunucunuz bu özelliklerle uyuşmuyorsa 'mevcut değil'i seçiniz . </message>
 	<message key="installer.databaseCharset">Veritabanı öğe kümesi</message>
-	<message key="installer.databaseCharsetInstructions">Vertabanında saklanan veriler için kullanılmak üzere şifreleme. Bu özelliğin yalnızca MySQL ile desteklendiğine dikkat edin>= 4.1.1 or PostgreSQL >= 7.1. Eğer veritabanı sürücünüz bu gereksinmeleri karşılamıyorsa ''mevcut değil''i seçiniz.</message>
 	<message key="installer.locale">Kurulum dili yeri</message>
 	<message key="installer.fileSettings">Dosya Ayarları</message>
 	<message key="installer.filesDir">Yüklemeler için dizin</message>
@@ -2358,14 +2257,11 @@ Sunucunuz mbstring'i güncel olarak destekler: <strong>{$supportsMBString}</stro
 	<message key="rt.admin.options">Dergi Yazısı Araçları</message>
 	<message key="rt.admin.relatedItems">İlişkili Yazılar Aracı</message>
 	<message key="rt.admin.settings.disableRelatedItems">İlişkili seçenekleri iptal et</message>
-	<message key="rt.admin.settings.bibFormat">Kütüphanecilik biçimi</message>
 	<message key="rt.admin.settings.captureCite">Makaleyi nasıl kaynak gösteririm (yazının kütüphanecilik açısından detaylarını verir).</message>
 	<message key="rt.admin.settings.viewMetadata">Dizinleme bilgisi (Yazar ve sistem tarafından oluşturulan dizinleme bilgisini gösterir).</message>
 	<message key="rt.admin.settings.supplementaryFiles">Ek dosyalar (Yazı ekinde yazarca gönderilen ek dosyaların listesini görüntüler).</message>
-	<message key="rt.admin.settings.printerFriendly">Baskı için uygun kopya (Baskıya daha uygun bir kopyaya ulaştırır).</message>
 	<message key="rt.admin.settings.authorBio">Yazar hakkında (Yazar tarafından girilen akademik bilgileri gösterir).</message>
 	<message key="rt.admin.settings.defineTerms">Terimlere bak (Okuyucu için yazıdaki her hangi bir sözcüğü çift tıklatarak, bir elektronik sözcükte arayabilmesini sağlar).</message>
-	<message key="rt.admin.settings.addComment">Yazıya yorum ekle (Okuyucuların yazıya dergi yöneticisinin silebileceği yorum eklemelerine izin verir. Okuyucu yorumları Dergi Kurulumunun 2. basmağında etkinleştirilmelidir).</message>
 	<message key="rt.admin.settings.emailAuthor">Yazara e-posta gönder (Okuyucuların yazarın e-posta adresini içeren bir ön tanımlı e-posta formu ile yazara e-posta göndermelerini sağlar).</message>
 	<message key="rt.admin.settings.emailOthers">Meslekdaşına bildir (Okuyucuya yazıya bağlantı veren ön tanımlı bir e-posta oluşturarak bir meslekdaşına haber verme olanağı sağlar).</message>
 
@@ -2477,12 +2373,6 @@ Form verisi gönderilen bağlantılarda başarısız olma olasılığı fazladı
 
 <message key="rt.captureCite">Nasıl kaynak gösteririm</message>
 <message key="rt.captureCite.online">Bağlantıda </message>
-<message key="rt.captureCite.available">Ulaşılabilir </message>
-<message key="rt.captureCite.capture">Kaynak göstermek için al</message>
-<message key="rt.captureCite.acaoLocation"> Kuzey Amerika </message>
-<message key="rt.captureCite.capture.endNote"><![CDATA[<a href="]]>{$url}<![CDATA[">EndNote</a> - Endnot programı (Macintosh &amp; Windows)]]></message>
-<message key="rt.captureCite.capture.referenceManager"><![CDATA[<a href="]]>{$url}<![CDATA[">Alıntılama yöneticisi </a> - RIS formatında (Yalnızca Windows için)]]></message>
-<message key="rt.captureCite.capture.proCite"><![CDATA[<a href="]]>{$url}<![CDATA[">ProCite</a> - RIS formatında (Macintosh &amp; Windows)]]></message>
 	<message key="rt.reviewPolicy">Değerlendirme politikası</message>
 
 <message key="rt.printVersion">Baskıya uygun biçim</message>
@@ -2539,7 +2429,6 @@ Form verisi gönderilen bağlantılarda başarısız olma olasılığı fazladı
 	-->
 	<message key="default.journalSettings.checklist.notPreviouslyPublished"> Gönderilen yazı daha önceden yayınlanmamış, ya da başka bir dergiye değerlendirilmek üzere sunulmamıştır. (Yazara Öneriler bölümünde bir açıklama sunulmuştur)</message>
 	<message key="default.journalSettings.checklist.fileFormat"> Yazı dosyası Microsoft Word, RTF, veya WordPerfect doküman dosya biçimindedir.</message>
-	<message key="default.journalSettings.checklist.addressesLinked"><![CDATA[Eğer olanak var ise, kaynakların açık erişimi olan internet adreslerine bağlantı verilmelidir. Tüm web bağlantıları, tıklamaya hazır biçimdedir ve adresin başında http:// mutlaka bulunmaktadır. (Örnek:  <a href="http://pkp.sfu.ca">http://pkp.sfu.ca</a>)]]></message>
 	<message key="default.journalSettings.checklist.submissionAppearance"> Metin tek satırlı, 12 fontlu, altı  çizilme yerine italik olarak vurgulanmış (URL adresleri dışında) ve tüm şekil, resim ve tablolar sonda olmaktansa metin içinde uygun noktalara yerleştirilmiştir. Baskı için, resimlerin kaliteli kopyalarını ek dosya olrak gönderiniz. Gönderilen dosyanın boyutu çok fazla olur ise, sistem almayabilir. Böyle durumlarda yazıyı bölüp, diğer bölümleri ek dosya olarak tek, tek gönderebilirsiniz.</message>
 	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[Stil ve kitaplık uygulamaları için gereksinimler, Dergi hakkında bölümündeki <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines"> Yazarlara Notlar</a>, sayfasında görülebilir.]]></message>
 	<message key="default.journalSettings.checklist.anonymous"><![CDATA[Yazınızı hakem değerlendirmesi yapılan bir dergi bölümüne gönderiyor iseniz, yazarlardan bağımsız değerlendirme sağlanması için yapmanız gerekenleri  <a href="javascript:openHelp('{$indexUrl}/{$journalPath}/help/view/editorial/topic/000044')">görmek için burayı tıklatınız</a>) Yardım sayfasındaki önerilere tam olarak uyunuz.]]></message>
@@ -2635,35 +2524,6 @@ Yeni dosyada <b>[silinmiş sözcük]</b> değiştirilmiş bölümler kalsın vey
 &bull; Köşeli parantez içinde YORUM: biçiminde başlayan ifadeler editöre görüş bildirmeki için kullanılır]]></message>
 
 
-	<message key="default.journalSettings.proofingInstructions"><![CDATA[Prova dizgi okuma düzeltme işlemi küçük düzeltmeleri kapsar. Ciddi değişiklik öneriniz var ise editörlere bildirin...
-	Düzeltme işlemi menüsünde dergide yayınlanacak kopyayı tıklattığınızda, derginin seçtiği HTML, PDF veya başka bir biçimde belge size gösterilecektir. 
-
-<strong>Harf hataları veya söz dizimi hataları için:</strong>
-
-Sorunlu sözcük grubunu düzeltme kutusuna kopyalayıp, "DEĞİŞTİR" başlığı ile doğrusunu yazınız.
-Aşağıdaki gibi...
-
-1. DEĞİŞTİR...
-böyle gelmiş, böyle gider
-YERİNE...
-böyle gelmiş, böyle gitmez
-
-2. DEĞİŞTİR...
-Buyulunal
-YERİNE...
-Büyükünal
-
-
-<strong>Biçimde sorun var ise</strong>
-
-Düzeltme kutusuna sorunlu bölümün yerini ve sorunu "BİÇİMLENDİRME" başlığının altına yazınız.
-Aşağıdaki gibi...
-
-3. BİÇİMLENDİRME
-Tablo 3 kolon 4 için rakamlar sola dayalı olmalı.
-
-4. BİÇİMLENDİRME
-"Son gelişmeler ..." diye başlayan paragraf hizalanmamış.]]></message>
 	<message key="default.journalSettings.emailSignature"><![CDATA[________________________________________________________________________
 {$journalName}
 {$indexUrl}/{$journalPath}

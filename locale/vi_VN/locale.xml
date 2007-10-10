@@ -191,8 +191,6 @@
 		
 	<!-- Navigation -->
 	<message key="navigation.journalHelp">Hướng dẫn</message>
-	<message key="navigation.loggedInAs">Bạn đăng nhập với bí danh...</message>
-	<message key="navigation.logout">Thoát ra</message>
 	<message key="navigation.home">Trang nhất</message>
 	<message key="navigation.about">Giới thiệu</message>
 	<message key="navigation.userHome">Người dùng</message>
@@ -203,14 +201,10 @@
 	<message key="navigation.current">Số mới ra</message>
 	<message key="navigation.search">Tìm kiếm</message>
 	<message key="navigation.otherJournals">Các tạp chí khác</message>
-	<message key="navigation.myProfile">Hồ sơ cá nhân</message>
-	<message key="navigation.myJournals">Tạp chí bạn đã chọn</message>
-	<message key="navigation.journalContent">Nội dung tạp chí</message>
 	<message key="navigation.browse">Duyệt</message>
 	<message key="navigation.browseByIssue">Theo Số tạp chí</message>
 	<message key="navigation.browseByAuthor">Theo Tác giả</message>
 	<message key="navigation.browseByTitle">Theo Tiêu đề</message>
-	<message key="navigation.info">Thông tin</message>
 	<message key="navigation.infoForAuthors">Cho Tác giả</message>
 	<message key="navigation.infoForReaders">Cho Bạn đọc</message>
 	<message key="navigation.infoForLibrarians">Cho Thủ thư</message>
@@ -310,7 +304,6 @@
 	<message key="submission.response">Phản hồi</message>
 	<message key="submission.accepted">Chấp thuận</message>
 	<message key="submission.rejected">Không chấp nhận</message>
-	<message key="submission.acceptance">Đồng ý để phản biện</message>
 	<message key="submission.due">Thời hạn</message>
 	<message key="submission.complete">Hoàn thành</message>
 	<message key="submission.acknowledge">Báo đã nhận</message>
@@ -434,7 +427,6 @@
 	<message key="user.affiliations">Cơ quan</message>
 	<message key="user.email">Email</message>
 	<message key="user.url">Website</message>
-	<message key="user.url.description">Địa chỉ này sẽ xuất hiện như là một đường dẫn siêu liên kết ở cuối thông tin tiểu sử ở trang "Giới thiệu về tác giả" và "Ban biên tập".</message>
 	<message key="user.phone">ĐT</message>
 	<message key="user.fax">Fax</message>
 	<message key="user.interests">Lĩnh vực phản biện</message>
@@ -562,7 +554,6 @@
 
 	<!-- Reader article view -->
 	<message key="reader.fullText">Toàn văn:</message>
-	<message key="reader.fullTextSubscribersOnly">Toàn văn: Chỉ dành cho bạn đọc đặt mua</message>
 
 	<!-- Reader Comments -->
 	<message key="comments.commentsOnArticle">Bình luận về bài viết này</message>
@@ -628,11 +619,8 @@ Lưu ý là có thể vô hiệu giao diện tìm kiếm OAI trên website này 
 	
 	<!-- Languages -->
 	<message key="admin.languages.languageSettings">Thiết lập ngôn ngữ</message>
-	<message key="admin.languages.installLanguages">Cài đặt ngôn ngữ</message>
 	<message key="admin.languages.primaryLocaleInstructions">Đây sẽ là ngôn ngữ mặc định cho web site và cho bất kỳ tạp chí nào đặt trên web site này.</message>
 	<message key="admin.languages.supportedLocalesInstructions">Lựa chọn tất cả các ngôn ngữ sẽ được sử dụng trên web site. Các ngôn ngữ được lựa chọn có thể được sử dụng cho tất cả các tạp chí và xuất hiện trong menu có ở mỗi tạp chí (có thể được đặt khác đi ở từng trang tạp chí cụ thể). Nếu chỉ có một ngôn ngữ được lựa chọn, menu ngôn ngữ sẽ không xuất hiện và không thể thiết lập thêm cho ngôn ngữ.</message>
-	<message key="admin.languages.languageOptions">Lựa chọn ngôn ngữ</message>
-	<message key="admin.languages.profileLocales">Khi đăng ký nhân sự (BTV chính, người phản biện, BTV bản thảo,...), ngôn ngữ làm việc cần được chọn sẵn trong hồ sơ để tiện cho những người biên tập.</message>
 	<message key="admin.languages.installedLocales">Các ngôn ngữ đã được cài đặt</message>
 	<message key="admin.languages.reload">Tải lại ngôn ngữ</message>
 	<message key="admin.languages.confirmReload">Quý vị có chắc chắn muốn tải lại ngôn ngữ này? Làm điều này sẽ xóa hết bất kỳ dữ liệu nào hiện tại liên quan đến ngôn ngữ đó, chẳng hạn các mẫu e-mail viết sẵn.</message>
@@ -767,7 +755,6 @@ Lưu ý là có thể vô hiệu giao diện tìm kiếm OAI trên website này 
 	<message key="manager.statistics.statistics.note">Lưu ý: Tỷ lệ phần trăm bài nộp được phản biện chuyên gia có thể không đạt tới 100% vì bài viết nộp cho tạp chí hoặc sẽ được chấp nhận, từ chối hoặc đang còn xử lý.</message>
 
 	<message key="manager.statistics.reports">Tạo báo cáo</message>
-	<message key="manager.statistics.reports.description">Phần mềm OJS tạo các báo cáo lần theo những chi tiết gắn với việc xử lý các bài viết nộp cho tạp chí ở các khía cạnh bài nộp, BTV, người phản biện, và chuyên mục trong một khoảng thời gian nhất định. Báo cáo được tạo ra dưới định dạng CVS mà để đọc cần sử dụng các phần mềm bảng tính.</message>
 	<message key="manager.statistics.reports.dateFrom">Từ</message>
 	<message key="manager.statistics.reports.dateTo">Đến</message>
 	<message key="manager.statistics.reports.reportType">Loại báo cáo</message>
@@ -829,7 +816,6 @@ Lưu ý là có thể vô hiệu giao diện tìm kiếm OAI trên website này 
 	<message key="manager.setup.submissions">Nộp bài viết</message>
 	<message key="manager.setup.submissions.description">Hướng dẫn cho tác giả, bản quyền và chỉ mục (gồm cả đăng ký).</message>
 	<message key="manager.setup.management">Quản lý</message>
-	<message key="manager.setup.management.description">Xếp bài, truy cập trực tuyến, thông báo và biên tập bản thảo, trình bày và soát lỗi.</message>
 	<message key="manager.setup.look">Giao diện</message>
 	<message key="manager.setup.look.description">Đầu trang chủ, nội dung, măng séc tạp chí, cuối trang, khối điều khiển và kiểu dạng (style sheet).</message>
 	<message key="manager.setup.journalTitle">Tên tạp chí</message>
@@ -935,27 +921,10 @@ Lưu ý là có thể vô hiệu giao diện tìm kiếm OAI trên website này 
 	<message key="manager.setup.aboutItemContent">Nội dung</message>
 	<message key="manager.setup.addAboutItem">Thêm một nội dung Giới thiệu</message>
 	<message key="manager.setup.form.numReviewersPerSubmission">Phải có số người phản biện trên mỗi bài nộp.</message>
-	<message key="manager.setup.securitySettings">Thông số thiết lập An ninh/Truy cập</message>
-	<message key="manager.setup.securitySettingsDescription">OJS cung cấp một số lựa chọn liên quan đến an ninh có thể sử dụng để hạn chế một các nội dung của tạp chí và lưu giữ thêm một số thông tin bổ sung về bài nộp để kiểm tra.</message>
 	<message key="manager.setup.userRegistration">Đăng ký người dùng</message>
-	<message key="manager.setup.enableUserRegistration">Cho phép người dùng đăng ký với website với tư cách:</message>
-	<message key="manager.setup.disableUserRegistration">Vô hiệu đăng ký người dùng. Tổng biên tập sẽ phải khởi tạo người dùng bằng tay.</message>
-	<message key="manager.setup.siteAccess">Truy cập website</message>
-	<message key="manager.setup.noRestrictSiteAccess">Người dùng không đăng ký có thể xem được website tạp chí.</message>
-	<message key="manager.setup.restrictSiteAccess">Người dùng phải đăng nhập để xem website tạp chí.</message>
-	<message key="manager.setup.articleAccess">Truy cập bài viết</message>
-	<message key="manager.setup.noRestrictArticleAccess">Người dùng không đăng ký có thể xem toàn văn những bài viết đã xuất bản.</message>
-	<message key="manager.setup.restrictArticleAccess">Người dùng phải đăng nhập để xem toàn văn những bài viết đã xuất bản.</message>
 
-	<message key="manager.setup.comments">Bình luận của bạn đọc</message>
-	<message key="manager.setup.comments.disable">Không cho bạn đọc gửi lời bình.</message>
-	<message key="manager.setup.comments.authenticated">Người dùng đăng ký có thể bình luận; không cho phép bình luận vô danh.</message>
-	<message key="manager.setup.comments.anonymous">Người dùng có thể bình luận vô danh nhưng phải đăng ký.</message>
-	<message key="manager.setup.comments.unauthenticated">Cho phép bất kỳ ai gửi lời bình vô danh.</message>
 
 	<message key="manager.setup.loggingAndAuditing">Lưu nhật ký và Kiểm tra</message>
-	<message key="manager.setup.submissionEventLogging">Kích hoạt chứ năng ghi nhật ký sự kiện về bài nộp, ghi lại danh mục tất cả những tác vụ đối với một bài nộp (có thể truy cập ở trang "Lịch sử" của mỗi bài nộp).</message>
-	<message key="manager.setup.submissionEmailLogging">Kích hoạt chức năng ghi nhật ký email về bài nộp, ghi lại một danh mục những email được gửi đi liên quan tới một bài nộp (có thể truy cập ở trang "Lịch sử" của mỗi bài nộp).</message>
 
 	<message key="manager.setup.journalArchiving">Lưu giữ tạp chí</message>
 	<message key="manager.setup.lockssDescription"><![CDATA[Phần mềm OJS hỗ trợ hệ thống <a href="http://lockss.stanford.edu/" target="_blank">LOCKSS</a> (Nhiều bản sao giữ cho tài liệu được an toàn - Lots of Copies Keep Stuff Safe) nhằm đảm bảo lưu giữ an toàn và vĩnh viễn kho bài viết của tạp chí. LOCKSS là một phần mềm mã nguồn mở được phát triển ở Thư viện Đại học Stanford cho phép các thư viện bảo quản những tạp chí trên web chọn lọc bằng cách thu thập thường xuyên từ những website đăng ký nội dung mới xuất bản và lưu kho nội dung này. Mỗi kho sẽ liên tục được kiểm tra so với các nơi lưu trữ ngoài của thư viện, và nếu dữ liệu được tìm thấy bị hỏng hoặc mất, những nơi lưu giữ khác hoặc bản thân tạp chí này sẽ được dùng về phục hồi lại.
@@ -975,7 +944,6 @@ Setting up LOCKSS support for Open Journal Systems does not need to take place u
 	<message key="manager.setup.addChecklistItem">Thêm một mục và danh mục kiểm tra</message>
 	<message key="manager.setup.addItem">Thêm mục</message>
 	<message key="manager.setup.authorCopyrightNotice">Thông báo về Bản quyền</message>
-	<message key="manager.setup.authorCopyrightNoticeDescription"><![CDATA[Thông báo về Bản quyền sẽ xuất hiện ở mục Giới thiệu Tạp chí và trong dữ liệu mô tả của mỗi bài viết được xuất bản. Tác giả có thể giữ bản quyền nhưng cho giao cho tạp chí quyền xuất bản đầu tiên. Hoặc, tác giả chuyển nhượng bản quyền cho tạp chí bao gồm cả quyền đưa tác phẩm vào một bộ sưu tập truy cập tự do, nhưng tác giả có quyền sử dụng tác phẩm vào mục đích phi thương mại. Ngoài ra, có thể tham khảo <a href="http://www.creativecommons.org" target="_blank">Creative Commons</a> để đưa ra những giấy phép bản quyền linh hoạt.]]></message>
 	<message key="manager.setup.authorCopyrightNoticeAgree">Đòi hỏi tác giả phải đồng ý với Thông báo về Bản quyền trong quá trình nộp bài.</message>
 	<message key="manager.setup.copyrightNotice">Thông báo về Bản quyền</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWork">Để tác giả lập chỉ mục tác phẩm của mình</message>
@@ -1020,12 +988,7 @@ Lưu ý rằng nếu người quản trị website của quý vị đã đăng k
 	<message key="manager.setup.publicationSchedule">Lịch xuất bản</message>
 	<message key="manager.setup.publicationScheduleDescription"><![CDATA[Các bài trên tạp chí có thể xuất bản cùng lúc như là một phần của số tạp chí cùng với Mục lục của nó. Hoặc, các bài viết riêng lẻ có thể được xuất bản ngay khi sẵn sàng bằng cách thêm bài đó vào Mục lục của số "mới ra". Hãy thông báo cho bạn đọc, trong trang Giới thiệu Tạp chí, về cách thức nào tạp chí sẽ sử dụng và định kỳ xuất bản của tạp chí.]]></message>
 	<message key="manager.setup.publicationFormat">Định dạng</message>
-	<message key="manager.setup.publicationFormatDescription">Lựa chọn định dạng mặc định cho việc nhận dạng các số và/hoặc tập của tạp chí. Định dạng này có thể khác nhau ở từng số.</message>
-	<message key="manager.setup.publicationFormatIssue">Tập, số, và năm</message>
-	<message key="manager.setup.publicationFormatVolume">Tập và năm</message>
 	<message key="manager.setup.publicationFormatYear">Năm</message>
-	<message key="manager.setup.publicationFormatTitle">Đặt tên riêng cho số này</message>
-	<message key="manager.setup.publicationFormatTitleDescription">Lưu ý: Mặc dù có thể thêm tên riêng cho bất kỳ số nào, với lựa chọn cuối cùng này, số tạp chí chỉ được xác định bằng tên của nó mà thôi (ví dụ, nếu OJS được dùng cho một bộ các tập tạp chí được biên tập).</message>
 	<message key="manager.setup.initialIssue">Số khởi đầu</message>
 	<message key="manager.setup.initialIssueDescription">Tùy thuộc vào định dạng được chọn, xác định số, tập, và/hoặc năm của số đầu tiên sẽ được xuất bản bằng phần mềm OJS:</message>
 	<message key="manager.setup.frequencyOfPublication">Điểm khởi đầu và chu kỳ xuất bản</message>
@@ -1039,13 +1002,9 @@ Lựa chọn một mô hình để xử lý những khía cạnh này của quá
 	<message key="manager.setup.editorialProcess2">BTV quản lý xử lý Danh sách bài nộp và Mục lục, còn các BTV chuyên mục xử lý Phản biện bài nộp và Biên tập bài nộp.</message>
 	<message key="manager.setup.editorialProcess3">BTV quản lý xử lý Danh sách bài nộp, Biên tập bài nộp và Mục lục còn các BTV chuyên mục xử lý Phản biện bài nộp.</message>
 	<message key="manager.setup.copyediting">BTV bản thảo</message>
-	<message key="manager.setup.useCopyeditors">Tạp chí sẽ chỉ định các BTV bản thảo cho từng bài nộp.</message>
-	<message key="manager.setup.noUseCopyeditors">BTV chính sẽ phụ trách Biên tập bản thảo.</message>
 	<message key="manager.setup.copyeditInstructions">Hướng dẫn Biên tập bản thảo</message>
 	<message key="manager.setup.copyeditInstructionsDescription">Hướng dẫn Biên tập bản thảo sẽ được cung cấp cho BTV bản thảo, Tác giả, BTV chuyên mục ở bước Biên tập bài nộp. Dưới đây là bộ tài liệu hướng dẫn chuẩn ở định dạng HTML, Tổng biên tập có thể sửa hoặc thay thế bất kỳ thời điểm nào (ở dạng HTML hoặc văn bản thô).</message>
 	<message key="manager.setup.layoutAndGalleys">BTV trình bày</message>
-	<message key="manager.setup.useLayoutEditors">Tạp chí sẽ chỉ định BTV trình bày để chuẩn bị bản bông dưới định dạng HTML, PDF, PS, v.v.., những định dạng dùng cho xuất bản điện tử.</message>
-	<message key="manager.setup.noUseLayoutEditors">BTV chính sẽ chuẩn bị bản bông ở định dạng thích hợp cho xuất bản điện tử.</message>
 	<message key="manager.setup.layoutInstructions">Hướng dẫn Trình bày </message>
 	<message key="manager.setup.layoutInstructionsDescription">Có thể xây dựng Hướng dẫn Trình bày cho việc định dạng các bài viết xuất bản trong tạp chí và được nhập dưới đây dưới dạng HTML hoặc text. Hướng dẫn này sẽ được cung cấp cho BTV trình bày và BTV chuyên mục ở trang Biên tập dành cho mỗi bìa nộp. (Vì mỗi tạp chí có thể sử dụng định dạng file riêng, tiêu chuẩn thư mục riêng, trang định dạng riêng, v.v.., vị vậy bộ tài liệu hướng dẫn chuẩn không được cung cấp.)</message>
 	<message key="manager.setup.layoutTemplates">Mẫu trình bày</message>
@@ -1053,8 +1012,6 @@ Lựa chọn một mô hình để xử lý những khía cạnh này của quá
 	<message key="manager.setup.layoutTemplates.title">Tiêu đề</message>
 	<message key="manager.setup.layoutTemplates.file">File mẫu</message>
 	<message key="manager.setup.proofreading">Người soát lỗi</message>
-	<message key="manager.setup.useProofreaders">Tạp chí sẽ chỉ định Người soát lỗi (cùng với tác giả) kiểm tra các bản bông.</message>
-	<message key="manager.setup.noUseProofreaders">BTV chính và tác giả sẽ soát lỗi các bản bông.</message>
 	<message key="manager.setup.proofingInstructions">Hướng dẫn soát lỗi</message>
 	<message key="manager.setup.proofingInstructionsDescription">Hướng dẫn soát lỗi sẽ được cung cấp cho Người soát lỗi, Tác giả, BTV trình bày và BTV chuyên mục ở bước Biên tập bài nộp. Dưới đây là bộ tài liệu hướng dẫn chuẩn ở dạng HTML, Tổng biên tập có thể sửa hoặc thay thế ở bất kỳ thời điểm nào (dưới dạng HTML hoặc text).</message>
 	<message key="manager.setup.volumePerYear">Số lượng tập mỗi năm</message>
@@ -1067,12 +1024,10 @@ Lựa chọn một mô hình để xử lý những khía cạnh này của quá
 	<message key="manager.setup.enablePublicSuppFileId">Các định danh riêng sẽ được dùng để định danh các file phụ trợ.</message>
 	<message key="manager.setup.pageNumberIdentifier">Lựa chọn Số trang</message>
 	<message key="manager.setup.enablePageNumber">Số trang của bài viết sẽ được tính và nhập bằng tay vào Mục lục (v.d., tr. 13-26).</message>
-	<message key="manager.setup.onlineAccessManagement">Quản lý Truy cập trực tuyến</message>
 	<message key="manager.setup.openAccess">Tạp chí sẽ cho phép truy cập tự do đối với các nội dung của tạp chí.</message>
 	<message key="manager.setup.openAccessPolicy">Chính sách truy cập tự do</message>
 	<message key="manager.setup.openAccessPolicyDescription">Nhập vào đây công bố của tạp chí về chính sách truy cập tự do, thông tin này sẽ hiển thị ở mục Giới thiệu Tạp chí.</message>
 	<message key="manager.setup.subscription">Phải đặt mua tạp chí để truy cập một phần hoặc tất cả nội dung tạp chí.</message>
-	<message key="manager.setup.subscriptionDescription">Module Quản lý phát hành cần có một Người quản lý phát hành được bổ nhiệm có quyền truy cập vào module, bao gồm cả các lựa chọn bổ sung khác như truy cập tự do, tự lưu trữ và thông báo bằng email.</message>
 	<message key="manager.setup.announcements">Thông báo</message>
 	<message key="manager.setup.announcementsDescription">Các thông báo có thể được công bố để thông tin cho bạn đọc về tin tức và sự kiện của tạp chí. Các thông báo được công bố sẽ xuất hiện ở trang Thông báo.</message>
 	<message key="manager.setup.enableAnnouncements">Cho phép Tổng biên tập thêm các thông báo của tạp chí.</message>
@@ -1104,8 +1059,6 @@ Lựa chọn một mô hình để xử lý những khía cạnh này của quá
 	<message key="manager.setup.alternateHeaderDescription">Thay vì ảnh tên và logo, có thẻ sử dụng măng séc dạng HTML nhập vào ô text dưới đây. Để ô trống nếu không cần sử dụng.</message>
 	<message key="manager.setup.journalPageFooter">Chân trang tạp chí</message>
 	<message key="manager.setup.journalPageFooterDescription">Đây là chân trang tạp chí. Để thay đổi hoặc cập nhật chân trang, dán đoạn mã HTLM cần thay đổi vào trong ô text dưới đây. Chân trang có thể là một thanh điều khiển, công cụ đếm, ... Chân trang sẽ xuất hiện ở tất cả các trang.</message>
-	<message key="manager.setup.journalStyleSheet">Trang định dạng tạp chí</message>
-	<message key="manager.setup.journalStyleSheetDescription">Theo mặc định, các tạp chí và website sẽ dùng chung một trang định dạng (đặt ở thư mục "styles" của website). Định dạng mặc định này có thể được bỏ qua bằng cách tải lên một trang định dạng riêng cho tạp chí.</message>
 	<message key="manager.setup.useJournalStyleSheet">Trang Định dạng tạp chí</message>
 	<message key="manager.setup.noStyleSheetUploaded">Chưa có định dạng nào được tải lên.</message>
 	<message key="manager.setup.journalHomepageContent">Nội dung Trang chủ tạp chí</message>
@@ -1125,14 +1078,6 @@ Lựa chọn một mô hình để xử lý những khía cạnh này của quá
 	<message key="manager.setup.homeHeaderImageInvalid">Định dạng ảnh logo trên trang chủ không phù hợp. Chỉ hỗ trợ các định dạng .gif, .jpg, or .png.</message>
 	<message key="manager.setup.pageHeaderTitleImageInvalid">Định dạng ảnh măng séc trên các trang trong không phù hợp. Chỉ hỗ trợ các định dạng .gif, .jpg, or .png.</message>
 	<message key="manager.setup.pageHeaderLogoImageInvalid">Định dạng logo trên các trang trong không phù hợp. Chỉ hỗ trợ các định dạng .gif, .jpg, or .png.</message>
-	<message key="manager.setup.homeHeaderTitleImageAlt1Invalid">Định dạng ảnh măng séc thay thế trên trang chủ không phù hợp. Chỉ hỗ trợ các định dạng .gif, .jpg, or .png.</message>
-	<message key="manager.setup.homeHeaderLogoImageAlt1Invalid">Định dạng ảnh logo thay thế trên trang chủ không phù hợp. Chỉ hỗ trợ các định dạng .gif, .jpg, or .png.</message>
-	<message key="manager.setup.pageHeaderTitleImageAlt1Invalid">Định dạng ảnh măng séc thay thế trên các trang trong không phù hợp. Chỉ hỗ trợ các định dạng .gif, .jpg, or .png.</message>
-	<message key="manager.setup.pageHeaderLogoImageAlt1Invalid">Định dạng logo thay thế trên các trang trong không phù hợp. Chỉ hỗ trợ các định dạng .gif, .jpg, or .png.</message>
-	<message key="manager.setup.homeHeaderTitleImageAlt2Invalid">Định dạng ảnh măng séc thay thế thứ hai trên trang chủ không phù hợp. Chỉ hỗ trợ các định dạng .gif, .jpg, or .png.</message>
-	<message key="manager.setup.homeHeaderLogoImageAlt2Invalid">Định dạng ảnh logo thay thế thứ hai trên trang chủ không phù hợp. Chỉ hỗ trợ các định dạng .gif, .jpg, or .png.</message>
-	<message key="manager.setup.pageHeaderTitleImageAlt2Invalid">Định dạng ảnh măng séc thay thế thứ hai trên các trang trong không phù hợp. Chỉ hỗ trợ các định dạng .gif, .jpg, or .png.</message>
-	<message key="manager.setup.pageHeaderLogoImageAlt2Invalid">Định dạng logo thay thế trên các trang trong không phù hợp. Chỉ hỗ trợ các định dạng .gif, .jpg, or .png.</message>
 	<message key="manager.setup.homepageImageInvalid">Định dạng ảnh trên trang chủ không phù hợp. Chỉ hỗ trợ các định dạng .gif, .jpg, or .png.</message>
 	<message key="manager.setup.journalStyleSheetInvalid">Trang định dạng không phù hợp. Chỉ hỗ trợ định dạng .css.</message>
 	<message key="manager.setup.information">Thông tin</message>
@@ -1142,15 +1087,8 @@ Lựa chọn một mô hình để xử lý những khía cạnh này của quá
 	<message key="manager.setup.information.forLibrarians">Dành cho CB Thư viện</message>
 
 	<!-- Languages -->
-	<message key="manager.languages.languageInstructions"><![CDATA[Người dùng có thể sử dụng phần mềm OJS ở bất kỳ ngôn ngữ nào được hỗ trợ. Ngoài ra, OJS cũng hoạt động như một hệ thống đa ngôn ngữ bán phần, cho phép người dùng chuyển đổi giữa các ngôn ngữ trên từng trang và cho phép nhập các dữ liệu nhất định bằng tối đa thêm hai ngôn ngữ khác.<br /><br/>Nếu một ngôn ngữ được OJS hỗ trợ không có ở đây, hãy đề nghị người quản trị website cài đặt ngôn ngữ đó từ giao diện quản trị website. Về hướng dẫn thêm ngôn ngữ hộ trợ mới, vui lòng tham khảo tài liệu hướng dẫn OJS.]]></message>
 	<message key="manager.languages.primaryLocaleInstructions">Đây sẽ là ngôn ngữ mặc định trên trang web tạp chí.</message>
 	<message key="manager.languages.supportedLocalesInstructions">Lựa chọn tất cả các ngôn ngữ được hỗ trợ trên website mà người dùng có thể lựa chọn thông qua qua menu ngôn ngữ xuất hiện trên mỗi trang.  Menu này chỉ xuất hiện khi có nhiều hơn một ngôn ngữ được lựa chọn.</message>
-	<message key="manager.languages.alternateLocale1">Lựa chọn #1</message>
-	<message key="manager.languages.alternateLocale2">Lựa chọn #2</message>
-	<message key="manager.languages.alternateLocaleInstructions">Hệ thống này cho phép tùy chọn việc nhập một số thông tin quan trọng bằng tối đa thêm hai ngôn ngữ khác. Để sử dụng chức năng này, lựa chọn một hoặc hai ngôn ngữ khác và chọn các tính năng liệt kê dưới đây.</message>
-	<message key="manager.languages.alternativeLanguageOptions">Các lựa chọn về ngôn ngữ</message>
-	<message key="manager.languages.journalTitleAltLanguages">Ảnh tên tạp chí, măng séc trang,... sẽ được tải lên ở mỗi ngôn ngữ của tạp chí.</message>
-	<message key="manager.languages.articleAltLanguages">Cần yêu cầu tác giả cung cấp tiêu đề và tóm tắt bài viết ở các ngôn ngữ khác, hoặc để nhân viên của tạp chí làm hộ điều này.</message>
 	<message key="manager.languages.noneAvailable">Xin lỗi, không có thêm ngôn ngữ nào sẵn sàng. Vui lòng liên hệ với người quản trị website nếu bạn muốn có thêm ngôn ngữ cho tạp chí.</message>
 	
 	<!-- Section Management -->
@@ -1160,8 +1098,6 @@ Lựa chọn một mô hình để xử lý những khía cạnh này của quá
 	<message key="manager.sections.editors">BTV chuyên mục</message>
 	<message key="manager.sections.unassigned">Các BTV chuyên mục hiện có</message>
 	<message key="manager.sections.assigned">Các BTV của Chuyên mục này</message>
-	<message key="manager.sections.assignEditor">Bổ nhiệm BTV</message>
-	<message key="manager.sections.unassignEditor">Miễn nhiệm BTV</message>
 	<message key="manager.sections.form.titleRequired">Chuyên mục này phải có tên.</message>
 	<message key="manager.sections.form.abbrevRequired">Chuyên mục này phải có từ tên viết tắt</message>
 	<message key="manager.section.sectionEditorInstructions">Lựa chọn trong số BTV hiện có và "Bổ nhiệm BTV" cho chuyên mục này.</message>
@@ -1188,12 +1124,8 @@ Lựa chọn một mô hình để xử lý những khía cạnh này của quá
 	<message key="manager.groups.title">Tiêu đề</message>
 	<message key="manager.groups.confirmDelete">Quý vị có chắc chắn muốn xóa nhóm này?</message>
 	<message key="manager.groups.noneCreated">Không có chức danh biên tập nào thêm được lập.</message>
-	<message key="manager.groups.create">Lập tên của nhóm biên tập</message>
 	<message key="manager.groups.form.groupTitleRequired">Phải có tên của nhóm</message>
 
-	<message key="manager.groups.enableBoard.description"><![CDATA[Về <a href="{$aboutEditorialTeamUrl}">Nhóm biên tập</a> trong mục Giới thiệu Tạp chí:]]></message>
-	<message key="manager.groups.enableBoard">Tổng biên tập sẽ đặt tên các nhóm biên tập và thêm nhân lực phù hợp cho mỗi nhóm.</message>
-	<message key="manager.groups.disableBoard">Phần mềm sẽ tạo ra một danh mục những người xếp theo vai trò biên tập được giao của họ (Tổng biên tập, BTV chính, BTV chuyên mục, BTV bản thảo,...)</message>
 
 	<message key="manager.groups.membership">Thành viên</message>
 	<message key="manager.groups.membership.confirmDelete">Quý vị có chắn chắn muốn xóa thành viên nhóm này?</message>
@@ -1202,10 +1134,8 @@ Lựa chọn một mô hình để xử lý những khía cạnh này của quá
 	<message key="manager.groups.membership.noUsers">Không tìm thấy người dùng nào.</message>
 
 	<!-- People Management -->
-	<message key="manager.people.allUsers">Tất cả người dùng</message>
 	<message key="manager.people.allJournals">Tất cả tạp chí</message>
 	<message key="manager.people.editUser">Sửa người dùng</message>
-	<message key="manager.people.enrollExistingUser">Bổ nhiệm người dùng hiện có</message>
 	<message key="manager.people.createUser">Tạo người dùng mới</message>
 	<message key="manager.people.mergeUsers">Sáp nhập người dùng</message>
 	<message key="manager.people.mergeUser">Sáp nhập người dùng</message>
@@ -1228,7 +1158,6 @@ Quý vị có thể cho người dùng biết lý do tại sao tài khoản củ
 	<message key="manager.people.authSource">Nguồn xác thực quyền</message>
 	<message key="manager.people.enrollUserAs">Bổ nhiệm người dùng với vai trò</message>
 	<message key="manager.people.doNotEnroll">Không có vai trò</message>
-	<message key="manager.people.enrollUserAsDescription">Nếu không có vai trò nào được lựa chọn, người dùng sẽ được tạo trong hệ thống nhưng chưa được bổ nhiệm bất kỳ vai trò nào trong tạp chí này. Bổ nhiệm vai trò có thể thực hiện bất kỳ thời điểm nào sau khi người dùng đã được khởi tạo.</message>
 	<message key="manager.people.invalidUser">Xin lỗi, người dùng được yêu cầu không tồn tại.</message>
 	<message key="manager.people.noAdministrativeRights"><![CDATA[Xin lỗi, quý vị không có quyền quản trị đối với người dùng này. Điều này có thể do:
 		<ul>
@@ -1253,7 +1182,6 @@ Quý vị có thể cho người dùng biết lý do tại sao tài khoản củ
 	<message key="manager.people.editProfile">Sửa hồ sơ</message>
 
 	<message key="manager.people.signInAsUser">Đăng nhập như là người dùng này</message>
-	<message key="manager.people.signOutAsUser">Thoát khỏi vai trò này</message>
 	<message key="manager.people.signInAs">Đăng nhập với vai trò này</message>
 	<message key="manager.people.syncUsers">Đồng nhất bổ nhiệm người dùng</message>
 	<message key="manager.people.syncUserDescription">Đồng nhất bổ nhiệm người dùng cho phép bổ nhiệm tất cả người dùng có chung một vai trò ở một tạp chí khác vào cùng vai trò đó ở tạp chí này. Chức năng cho phép một nhóm người (ví dụ: Hội đồng Biên tập, Phản biện) có thể làm việc cùng lúc cho các tạp chí khác nhau.</message>
@@ -1358,7 +1286,6 @@ Quý vị có thể cho người dùng biết lý do tại sao tài khoản củ
 	<message key="manager.subscriptionTypes.form.format">Định dạng</message>
 	<message key="manager.subscriptionTypes.form.institutional">Người đặt tạp chí được xác định hợp lệ qua tên miền hoặc xác thực bằng địa chỉ IP.</message>
 	<message key="manager.subscriptionTypes.form.membership">Người đặt tạp chí phải là hội viên một hiệp hội hoặc tổ chức.</message>
-	<message key="manager.subscriptionTypes.form.public">Hình thức đặt tạp chí này sẽ không công bố trong phần Đặt tạp chí của mục Giới thiệu Tạp chí.</message>
 	<message key="manager.subscriptionTypes.form.saveAndCreateAnotherType">Ghi và Tạo tiếp</message>
 	<message key="manager.subscriptionTypes.format.online">Trực tuyến</message>
 	<message key="manager.subscriptionTypes.format.print">Bản in</message>
@@ -1484,14 +1411,6 @@ Quý vị có thể cho người dùng biết lý do tại sao tài khoản củ
 	<message key="editor.issues.unpublished">Chưa xuất bản</message>
 
 	<!-- Create Issue / Issue Data -->
-	<message key="editor.issues.volumeRequired">Số tạp chí này phải có Tập.</message>
-	<message key="editor.issues.numberRequired">Số tạp chí này phải có số ký hiệu.</message>
-	<message key="editor.issues.yearRequired">Số tạp chí này phải có năm xuất bản.</message>
-	<message key="editor.issues.labelFormatRequired">Phải lựa chọn nhãn định dạng tạp chí phù hợp.</message>
-	<message key="editor.issues.labelOption1">Tập, Số, Năm</message>
-	<message key="editor.issues.labelOption2">Tập, Năm</message>
-	<message key="editor.issues.labelOption3">Năm</message>
-	<message key="editor.issues.labelOption4">Chỉ có Nhan đề</message>
 	<message key="editor.issues.issueIdentification">Định danh số TC</message>
 	<message key="editor.issues.publicIssueIdentifier">Định danh số TC công khai</message>
 	<message key="editor.issues.description">Mô tả</message>
@@ -1510,7 +1429,6 @@ Quý vị có thể cho người dùng biết lý do tại sao tài khoản củ
 	<message key="editor.issues.invalidStyleFormat">Định dạng trang định dạng web không hợp lệ. Cần đảm bảo rằng file đã gửi là một file CSS hợp lệ. (Lưu ý các file CSS có lời bình ở đầu có thể bị từ chối.)</message>
 	<message key="editor.issues.removeStyleFile">Loại bỏ trang định dạng này?</message>
 	<message key="editor.issues.coverPageCaption">Chú thích bìa</message>
-	<message key="editor.issues.showCoverPage">Tạo một trang bìa riêng cho số tạp chí này.</message>
 	<message key="editor.issues.openAccess">Truy cập tự do</message>
 	<message key="editor.issues.subscription">Đặt tạp chí</message>
 	<message key="editor.issues.identification">Định danh</message>
@@ -1595,7 +1513,6 @@ Mới nhất là ngày ngày bài phản biện gần nhất được chấp nh�
 	<message key="editor.article.noneSelected">Không lựa chọn</message>
 	<message key="editor.article.authorProofing">Tác giả soát lỗi</message>
 	<message key="editor.article.archiveSubmission">Lưu kho bài nộp</message>
-	<message key="editor.article.emailAuthorOnArchive">Gửi email cho tác giả về việc lưu kho bài nộp này?</message>
 	<message key="editor.article.restoreToQueue">Đưa trở về danh sách đang xử lý</message>
 	<message key="editor.article.assignSectionEditor">Thêm BTV chuyên mục</message>
 	<message key="editor.article.assignEditor">Thêm BTV chính</message>
@@ -1651,7 +1568,6 @@ Mới nhất là ngày ngày bài phản biện gần nhất được chấp nh�
 	<message key="sectionEditor.regrets.regretsAndCancels">Từ chối phản biện &amp; Hủy phản biện</message>
 	<message key="sectionEditor.regrets.regret">Từ chối</message>
 	<message key="sectionEditor.regrets.result">Kết quả</message>
-	<message key="sectionEditor.review.enrollReviewer">Bổ nhiệm người dùng hiện có làm Người phản biện</message>
 	<message key="sectionEditor.review.createReviewer">Thêm Người phản biện mới</message>
 
 	<!-- Layout Editor -->
@@ -1674,7 +1590,6 @@ Mới nhất là ngày ngày bài phản biện gần nhất được chấp nh�
 	<message key="reviewer.article.notifyTheEditor">Báo cho BTV chính</message>
 	<message key="reviewer.article.canDoReview">Sẽ phản biện</message>
 	<message key="reviewer.article.cannotDoReview">Không thể phản biện</message>
-	<message key="reviewer.article.restrictedFileAccess">Chỉ có thể thấy các file nếu phản biện được tiến hành</message>
 	<message key="reviewer.article.submissionEditor">BTV bài nộp</message>
 	<message key="reviewer.article.reviewerCommentsDescription">Nhập hoặc dán lời bình phản biện vào đây</message>
 	<message key="reviewer.article.editorToEnter">BTV chính sẽ nhập</message>
@@ -1727,7 +1642,6 @@ Mới nhất là ngày ngày bài phản biện gần nhất được chấp nh�
 	<message key="author.track">Bài đang nộp dở</message>
 	<message key="author.submit.submitArticle">Nộp một bài viết</message>
 	<message key="author.submit.stepsToSubmit">Năm bước nộp bài</message>
-	<message key="author.submit.startHereLink">Nhấp chuột vào đây để bắt đầu nộp bài mới</message>
 	<message key="author.submit.step1">Bước 1. Bắt đầu nộp bài</message>
 	<message key="author.submit.step2">Bước 2. Nhập dữ liệu mô tả về bài nộp</message>
 	<message key="author.submit.step3">Bước 3. Tải bài nộp lên</message>
@@ -1749,9 +1663,7 @@ Mới nhất là ngày ngày bài phản biện gần nhất được chấp nh�
 	<message key="author.submissions.noSubmissions">Không có bài nộp nào.</message>
 
 	<!-- Article Submission Step 1 -->
-	<message key="author.submit.howToSubmit"><![CDATA[Các tác giả gửi bài viết của mình cho tạp chí này thông qua web site theo một quy trình gồm năm bước dành cho việc tải lên bản thảo và các thông tin liên quan (với lựa chọn cho phép tải lên các file phụ trợ, chẳng hạn như dữ liệu và công cụ nghiên cứu). Nếu tác giả gặp phải khó khăn trong quá trình gửi bài, vui lòng liên hệ <a href="mailto:{$supportEmail}">{$supportName}</a> bằng email hoặc điện thoại {$supportPhone} để được trợ giúp.]]></message>
 	<message key="author.submit.journalSection">Chuyên mục tạp chí</message>
-	<message key="author.submit.journalSectionDescription"><![CDATA[Vui lòng chọn chuyên mục phù hợp cho bài nộp này (xem các Chuyên mục và Chính sách ở mục <a href="{$aboutUrl}">Giới thiệu</a> về Tạp chí).]]></message>
 	<message key="author.submit.selectSection">Chọn một chuyên mục...</message>
 	
 	<message key="author.submit.submissionChecklist">Danh mục kiểm tra bài nộp</message>
@@ -1764,15 +1676,10 @@ Mới nhất là ngày ngày bài phản biện gần nhất được chấp nh�
 	<message key="author.submit.form.sectionRequired">Vui lòng lựa chọn một chuyên mục phù hợp cho bài nộp này.</message>
 	
 	<!-- Article Submission Step 2 -->
-	<message key="author.submit.metadataDescription">Tạp chí này thu thập dữ liệu mô tả (siêu dữ liệu) về từng bài nộp, theo các tiêu chuẩn của tổ chức Open Archives Initiative, một tiêu chuẩn cho môi trường mạng dùng cho việc xác định các nguồn thông tin nghiên cứu. Điều này cho phép tìm kiếm chính xác và cùng lúc trên một tập hợp nhiều CSDL theo chuẩn OAI, tăng thêm khả năng người dùng tìm được các bài viết mà bài nộp này là một ví dụ. Các BTV chính có thể yêu cầu phải có dữ liệu mô tả trước khi bắt đầu quá trình biên tập.</message>
 	<message key="author.submit.privacyStatement">Tuyên bố về Bí mật cá nhân của Tạp chí</message>
-	<message key="author.submit.authorsDescription">Đối với các bài viết có nhiều hơn một tác giả, xếp thứ tự tác giả như là thứ tự dùng cho việc trích dẫn.</message>
-	<message key="author.submit.reorderAuthorName">Xếp lại thứ tự tên tác giả</message>
-	<message key="author.submit.reorderInstructions">Dùng các mũi tên để thay đổi thứ tự tên của các tác giả sẽ xuất hiện trong bài viết.</message>
 	<message key="author.submit.selectPrincipalContact">Địa chỉ đầu tiên để BBT liên hệ.</message>
 	<message key="author.submit.addAuthor">Thêm tác giả</message>
 	<message key="author.submit.deleteAuthor">Xóa tác giả</message>
-	<message key="author.submit.submissionIndexingDescription">Chọn thuật ngữ mô tả đúng nhất nội dung của bài nộp theo các mục được sử dụng trong tạp chí này, xem ví dụ do BBT cung cấp. Phân tách các thuật ngữ bằng một dấu chấm phẩy (thuật ngữ 1; thuật ngữ 2; thuật ngữ 3).</message>
 	<message key="author.submit.submissionSupportingAgencies">Các cơ quan bảo trợ</message>
 	<message key="author.submit.submissionSupportingAgenciesDescription">Nêu danh tính các cơ quan cung cấp tài chính hoặc hỗ trợ cho tác phẩm sử dụng trong bài nộp này.</message>
 	<message key="author.submit.agencies">Cơ quan</message>
@@ -1793,9 +1700,7 @@ Mới nhất là ngày ngày bài phản biện gần nhất được chấp nh�
 <li>Nhấp chuột vào nút Mở trên cửa sổ chọn file để đưa tên của file lên trang này.</li>
 <li>Nhấp chuột vào nút Tải lên trên trang này để tải file từ máy tính lên website tạp chí và đặt lại tên theo thông lệ của tạp chí.</li>
 <li>Khi bài nộp đã được tải lên, nhấp chuột vào nút Ghi và Tiếp tục ở cuối trang này.</li>
-</ol>
-
-Có thể xem file bằng cách nhấp chuột vào tên file. Có thể tải lại một bản mới hoặc bản đã sửa của file, đồng thời sẽ xóa file hiện có. Cũng có thể tải lên các file bổ sung cho file nói trên bằng cách sử dụng chức năng Các file phụ trợ (bước tiếp theo). Nếu quý vị gặp khó khăn khi tải file lên, vui lòng liên lạc với <a href="mailto:{$supportEmail}">{$supportName}</a> qua email hoặc số điện thoại {$supportPhone} để được trợ giúp. ]]></message>
+</ol>]]></message>
 	<message key="author.submit.submissionFile">File bài nộp</message>
 	<message key="author.submit.uploadSubmissionFile">Tải lên file bài nộp</message>
 	<message key="author.submit.replaceSubmissionFile">Thay thế file bài nộp</message>
@@ -1803,7 +1708,6 @@ Có thể xem file bằng cách nhấp chuột vào tên file. Có thể tải l
 	<message key="author.submit.noSubmissionConfirm">Quý vị có chắc chắn muốn tiếp tục mà không tải file bài nộp lên website?</message>
 	
 	<!-- Article Submission Step 4 -->
-	<message key="author.submit.supplementaryFilesInstructions">Bước không bắt buộc này trong quá trình nộp bài cho phép tác giả bổ sung các file cho bài nộp để minh họa cho nội dung bài nộp. Các file phụ trợ có thể gồm (a) công cụ nghiên cứu, (b) các tập hợp dữ liệu, phù hợp với những quy định về đạo đức trong nghiên cứu, (c) các nguồn thông tin mà nếu không có ở đây thì bạn đọc sẽ không thể tiếp cận được, hoặc (d) các biểu đồ hoặc bảng biểu không thể đưa trực tiếp vào trong nội dung bài viết. Những file này cũng được tác giả lập chỉ mục, tức là xác định mối quan hệ của nói với bài nộp cũng như chủ sở hữu của các file đó. Các file phụ trợ có thể được tải lên ở bất kỳ định dạng nào và sẽ được cung cấp cho bạn đọc ở định dạng gốc. File này có thể được chia sẻ với những người phản biện chuyên gia, miễn là không vi phạm phản biện khuyết danh.</message>
 	<message key="author.submit.noSupplementaryFiles">Chưa có file phụ trợ nào được tải lên cho bài nộp này.</message>
 	<message key="author.submit.backToSupplementaryFiles">Quay lại mục Các file phụ trợ</message>
 	<message key="author.submit.confirmDeleteSuppFile">Quý vị có chắc chẵn muốn xóa file phụ trợ nào?</message>
@@ -1838,7 +1742,6 @@ Có thể xem file bằng cách nhấp chuột vào tên file. Có thể tải l
 	<message key="author.suppFile.publicSuppFileIdentifier">Định danh công cộng của file phụ trợ</message>
 	
 	<!-- Article Submission Step 5 -->
-	<message key="author.submit.confirmationDescription">Khi bốn bước trên đây đã hoàn thành, nhấp chuột vào nút Kết thúc để nộp bản thảo của mình cho Tạp chí {$journalTitle}. Quý vị sẽ được báo qua email rằng Tòa soạn đã nhận được bài nộp và có thể xem được toàn bộ tiến trình biên tập bằng cách đăng nhập vào website của tạp chí. Cảm ơn quý vị đã quan tâm xuất bản bài viết của mình trên Tạp chí {$journalTitle}.</message>
 	<message key="author.submit.noFiles">Không có file nào đính kèm bài nộp này.</message>
 	<message key="author.submit.filesSummary">Tóm tắt file</message>
 	<message key="author.submit.finishSubmission">Kết thúc nộp bài</message>
@@ -1865,7 +1768,6 @@ Có thể xem file bằng cách nhấp chuột vào tên file. Có thể tải l
 	<message key="submission.copyedit.instructions">Hướng dẫn BT bản thảo</message>
 	
 	<!-- Submission Tracking - Layout Specific -->
-	<message key="submission.layout.mustUploadFileForLayout">Chưa thể gửi email yêu cầu cho tới khi Bản Trình bày đã sẵn sàng.</message>
 	<message key="submission.layout.layoutVersion">Bản trình bày</message>
 	<message key="submission.layout.layoutFile">File trình bày</message>
 	<message key="submission.layout.galleys">Bản bông</message>
@@ -1972,7 +1874,6 @@ Có thể xem file bằng cách nhấp chuột vào tên file. Có thể tải l
 	<message key="user.login.lostPassword.invalidHash">Xin lỗi, đường dẫn mà quý vị vừa mới truy cập đã hết thời hạn hoặc không hợp lệ. Vui lòng tạo lại mật khẩu một lần nữa.</message>
 	<message key="user.login.lostPassword.passwordSent">Mật khẩu mới đã được gửi vào địa chỉ email của quý vị. Bây giờ, quý vị có thể đăng nhập vào website với mật khẩu mới này.</message>
 	<message key="user.login.changePasswordInstructions"><![CDATA[Quý vị phải chọn một mật khẩu mới trước khi quý vị có thể đăng nhập vào website này.<br /><br />Vui lòng nhập bí danh, mật khẩu hiện thời và mật khẩu mới dưới đây để thay đổi mật khẩu cho tài khoản của quý vị.]]></message>
-	<message key="user.login.rememberMe">Nhớ tài khoản của tôi</message>
 	<message key="user.login.registeredEmail">Địa chỉ email người dùng đăng ký</message>
 	
 	<!-- Profile -->
@@ -2155,7 +2056,6 @@ Có thể xem file bằng cách nhấp chuột vào tên file. Có thể tải l
 	<message key="help.relatedTopics">Các chủ đề liên quan</message>
 	<message key="help.search">Tìm hướng dẫn</message>
 	<message key="help.searchFor">Tìm chủ đề hướng dẫn về</message>
-	<message key="help.searchResultsFor">Kết quả về</message>
 	
 	<!-- Installer -->
 	<message key="installer.ojsInstallation">Cài đặt OJS</message>
@@ -2217,9 +2117,7 @@ Máy chủ của quý vị hiện có hỗ trợ mbstring: <strong>{$supportsMBS
 	<message key="installer.clientCharset">Bộ mã ký tự trên máy khách</message>
 	<message key="installer.clientCharsetInstructions">Bộ mã ký tự dùng cho dữ liệu gửi và nhận từ các trình duyệt</message>
 	<message key="installer.connectionCharset">Bộ mã ký tự kết nối</message>
-	<message key="installer.connectionCharsetInstructions">Bộ mã ký tự dùng cho dữ liệu gửi và nhận từ CSDL. Bộ mã này nên giống hệt bộ mã ký tự trên máy khách. Lưu ý rằng khả năng này chỉ được hỗ trợ với phiên bản MySQL >= 4.1.1 hoặc PostgreSQL >= 7.1. Lựa chọn "Không có" nếu máy chủ CSDL của quý vị không đáp ứng những yêu cầu này.</message>
 	<message key="installer.databaseCharset">Bộ mã ký tự của CSDL</message>
-	<message key="installer.databaseCharsetInstructions">Bộ mã này dùng cho dữ liệu được lưu trữ trong CSDL. Lưu ý rằng khả năng này chỉ được hỗ trợ với phiên bản MySQL >= 4.1.1 hoặc PostgreSQL >= 7.1. Lựa chọn "Không có" nếu máy chủ CSDL của quý vị không đáp ứng những yêu cầu này.</message>
 	<message key="installer.locale">Ngôn ngữ</message>
 	<message key="installer.fileSettings">Tham số cho file</message>
 	<message key="installer.filesDir">Thư mục cho các file tải lên</message>
@@ -2352,14 +2250,11 @@ Máy chủ của quý vị hiện có hỗ trợ mbstring: <strong>{$supportsMBS
 	<message key="rt.admin.relatedItems">Các công cụ về bài viết liên quan</message>
 
 	<message key="rt.admin.settings.disableRelatedItems">Vô hiệu các bài viết liên quan</message>
-	<message key="rt.admin.settings.bibFormat">Định dạng thư mục</message>
 	<message key="rt.admin.settings.captureCite">Cách trích dẫn bài viết (cung cấp thông tin thư mục chi tiết về bài viết).</message>
 	<message key="rt.admin.settings.viewMetadata">Siêu dữ liệu chỉ mục (hiển thị dữ liệu mô tả chỉ mục của bài viết do tác giả và hệ thống cung cấp).</message>
 	<message key="rt.admin.settings.supplementaryFiles">Các file phụ trợ (hiển thị danh mục các file mà tác giả đính kèm vào bài viết).</message>
-	<message key="rt.admin.settings.printerFriendly">Bản in (hiện thị bản để in trên máy in).</message>
 	<message key="rt.admin.settings.authorBio">Giới thiệu tác giả (hiển thị thông tin tiểu sử do tác giả tự giới thiệu).</message>
 	<message key="rt.admin.settings.defineTerms">Tra cứu thuật ngữ (cho phép bạn đọc nhấp chuột kép vào bất kỳ từ nào trong bài viết và tra từ đó ở một từ điển).</message>
-	<message key="rt.admin.settings.addComment">Bình luận (cho phép quý vị đọc đăng bình luận, Tổng biên tập có thể xóa được. Chức năng Bạn đọc Bình luận phải được kích hoạt ở Bước 2 của phần Thiết lập Tạp chí).</message>
 	<message key="rt.admin.settings.emailAuthor">Gửi email cho tác giả (đưa quý vị đọc tới mẫu thư có sẵn địa chỉ email của tác giả).</message>
 	<message key="rt.admin.settings.emailOthers">Báo cho bạn đọc khác (đưa quý vị đọc tới mẫu thư gửi đường dẫn bài viết này cho người khác).</message>
 
@@ -2471,12 +2366,6 @@ Việc xác thực có thể không thành công đối với các website tìm 
 
 	<message key="rt.captureCite">Cách trích dẫn bài viết</message>
 	<message key="rt.captureCite.online">Trực tuyến</message>
-	<message key="rt.captureCite.available">Hiện có:</message>
-	<message key="rt.captureCite.capture">Download Citation</message>
-	<message key="rt.captureCite.acaoLocation">Bắc Mỹ</message>
-	<message key="rt.captureCite.capture.endNote"><![CDATA[<a href="]]>{$url}<![CDATA[">EndNote</a> - định dạng EndNote (Macintosh &amp; Windows)]]></message>
-	<message key="rt.captureCite.capture.referenceManager"><![CDATA[<a href="]]>{$url}<![CDATA[">Reference Manager</a> - định dạng RIS format (chỉ dành cho Windows)]]></message>
-	<message key="rt.captureCite.capture.proCite"><![CDATA[<a href="]]>{$url}<![CDATA[">ProCite</a> - định dạng RIS(Macintosh &amp; Windows)]]></message>
 
 	<message key="rt.reviewPolicy">Chính sách phản biện</message>
 	<message key="rt.printVersion">Bản để in</message>
@@ -2533,7 +2422,6 @@ Việc xác thực có thể không thành công đối với các website tìm 
 	-->
 	<message key="default.journalSettings.checklist.notPreviouslyPublished">Bài nộp chưa từng được xuất hoặc chưa từng được gửi cho tạp chí khác (hoặc được giải thích trong Lời bình gửi BTV).</message>
 	<message key="default.journalSettings.checklist.fileFormat">File bài nộp ở định dạng Microsoft Word, RTF, or WordPerfect.</message>
-	<message key="default.journalSettings.checklist.addressesLinked"><![CDATA[Nếu có, liên kết tới các các tài liệu trực tuyến trích dẫn trong bài sẽ được cung cấp, gồm cả đường dẫn tới các phiên bản truy cập tự do của tài liệu trích dẫn. Có thể nhấp chuột trên những liên kết này (v.d., <a href="http://pkp.sfu.ca">http://pkp.sfu.ca</a>).]]></message>
 	<message key="default.journalSettings.checklist.submissionAppearance">Tài liệu dùng khoảng cách dòng đơn; kích thước font 12 point; chữ in nghiêng thay cho gạch dưới (trừ trường hợp địa chỉ trên Internet); tất cả minh họa, biểu đồ và bảng được đặt ở các vị trí phù hợp trong bài thay vì đặt ở cuối bài viết.</message>
 	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[Tài liệu đáp ứng các yêu cầu về phong cách và thư mục được nêu trong <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Hướng dẫn dành cho Tác giả</a>, ở phần Giới thiệu Tạp chí.]]></message>
 	<message key="default.journalSettings.checklist.anonymous"><![CDATA[Nếu nộp bài cho một chuyên mục tạp chí có phản biện chuyên gia các hướng dẫn ở mục <a href="javascript:openHelp('{$indexUrl}/{$journalPath}/help/view/editorial/topic/000044')">Đảm bảo phản biện khuyết danh</a>) đã được tuân thủ.]]></message>
@@ -2604,32 +2492,6 @@ Sau khi kết thúc hiệu đính, đổi tên file từ AuthorNameQA.doc thành
 &bull; [từ đã xóa] chỉ việc xóa từ "hoàn chỉnh"
 &bull; Lời bình có hồi âm đối với thắc mắc của BTV đối với tác giả]]></message>
 
-	<message key="default.journalSettings.proofingInstructions"><![CDATA[Bước soát lỗi là nhằm bắt bất kỳ lỗi nào về chính tả, ngữ pháp và định dạng trong bản bông. Những thay đổi lớn không thể tiến hành ở bước này, trừ khi đã thảo luận với BTV chuyên mục. Trong trang Trình bày, nhấp chuột vào nút XEM BẢN SOÁT LỖI để xem các định dạng HTM, PDF và các định dạng file khác được dùng để xuất bản bài viết này.
-
-<strong>Về các lỗi chính tả và ngữ pháp</strong>
-
-Copy từ hoặc cụm từ có vấn đề và dán chúng vào hộp Sửa lỗi cùng với các hướng dẫn "SỬA THÀNH" gửi cho BTV chính như sau...
-
-1. SỬA...
-then the others
-THÀNH...
-than the others
-
-2. SỬA...
-Malinowsky
-THÀNH...
-Malinowski
-
-
-<strong>Về lỗi định dạng</strong>
-
-Mô tả vị trí và bản chất của vấn đề trong hộp Sửa lỗi sau khi nhập tiêu đề "ĐỊNH DẠNG" như sau...
-
-3. ĐỊNH DẠNG
-Các số ở Bảng 3 không thẳng hàng ở cột thứ 3.
-
-4. ĐỊNH DẠNG
-Đoạn bắt đầu với từ "Chủ đề cuối cùng này..." chưa được lùi vào ở dòng đầu.]]></message>
 	<message key="default.journalSettings.emailSignature"><![CDATA[________________________________________________________________________
 {$journalName}
 {$indexUrl}/{$journalPath}

@@ -206,9 +206,7 @@
 		
 	<!-- Navigation -->
 	<message key="navigation.journalHelp">Помощь</message>
-	<message key="navigation.loggedInAs">Вы авторизованы</message>
 
-	<message key="navigation.logout">Выйти</message>
 	<message key="navigation.home">Начало</message>
 	<message key="navigation.about">О нас</message>
 	<message key="navigation.userHome">Мои журналы</message>
@@ -220,16 +218,12 @@
 	<message key="navigation.current">Последний выпуск</message>
 	<message key="navigation.search">Поиск</message>
 	<message key="navigation.otherJournals">другие журналы</message>
-	<message key="navigation.myProfile">Мой профиль</message>
 
-	<message key="navigation.myJournals">Мои журналы</message>
-	<message key="navigation.journalContent">Содержание</message>
 	<message key="navigation.browse">Листать</message>
 	<message key="navigation.browseByIssue">по выпускам</message>
 	<message key="navigation.browseByAuthor">по авторам</message>
 	<message key="navigation.browseByTitle">по заглавиям</message>
 
-	<message key="navigation.info">Информация</message>
 	<message key="navigation.infoForAuthors">Для авторов</message>
 	<message key="navigation.infoForReaders">Для читателей</message>
 	<message key="navigation.infoForLibrarians">Для библиотек</message>
@@ -346,7 +340,6 @@
 	<message key="submission.accepted">Принята</message>
 
 	<message key="submission.rejected">Отказ</message>
-	<message key="submission.acceptance">Утверждение</message>
 	<message key="submission.due">Кон. срок</message>
 	<message key="submission.complete">Закончена</message>
 	<message key="submission.acknowledge">Утверждена</message>
@@ -623,7 +616,6 @@
 
 	<!-- Reader article view -->
 	<message key="reader.fullText">Полный текст:</message>
-	<message key="reader.fullTextSubscribersOnly">Полный текст: Только для подписчиков</message>
 
 	<!-- Reader Comments -->
 	<message key="comments.commentsOnArticle">Комментарии к статье</message>
@@ -696,12 +688,9 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	
 	<!-- Languages -->
 	<message key="admin.languages.languageSettings">Настройки языков</message>
-	<message key="admin.languages.installLanguages">Добавить язык</message>
 	<message key="admin.languages.primaryLocaleInstructions">Это будет язык по умолчанию для всех журналов на сайте.</message>
 
 	<message key="admin.languages.supportedLocalesInstructions">Выберите языки поддержки сайта. The selected locales will be available for use by all journals hosted on the site, and also appear in a language select menu to appear on each site page (which can be overridden on journal-specific pages). If multiple locales are not selected, the language toggle menu will not appear and extended language settings will not be available to journals.</message>
-	<message key="admin.languages.languageOptions">Выбор языков пользователями</message>
-	<message key="admin.languages.profileLocales">In registering people (editors, reviewers, copyeditors, etc.), working languages should be included in their User Profiles for the benefit of journal editors.</message>
 	<message key="admin.languages.installedLocales">Инсталированные языки</message>
 	<message key="admin.languages.reload">Загрузить язык</message>
 	<message key="admin.languages.confirmReload">Вы уверены, что хотите загрузить этот языковой файл? Это действие сотрет все специфические языковые шаблоны.</message>
@@ -824,7 +813,6 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 
 	<message key="manager.setup.submissions.description">Указания авторам, авторские права, лицензии, условия регистрации.</message>
 	<message key="manager.setup.management">Управление</message>
-	<message key="manager.setup.management.description">Планирование, подписки, редакторы и корректоры.</message>
 	<message key="manager.setup.look">Вид журнала</message>
 	<message key="manager.setup.look.description">Заголовки, дизайн, содержание, логотипы, навигация, форматы журнала.</message>
 	<message key="manager.setup.journalTitle">Название журнала</message>
@@ -943,30 +931,13 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="manager.setup.aboutItemContent">Содержание</message>
 	<message key="manager.setup.addAboutItem">Добавить параграф о нас</message>
 	<message key="manager.setup.form.numReviewersPerSubmission">The number of reviewers per submission is required.</message>
-	<message key="manager.setup.securitySettings">Настройки Надежность/Доступ</message>
-	<message key="manager.setup.securitySettingsDescription">OJS provides a number of security-related options that can be used to restrict to the journal's contents, and maintain additional information about submissions for auditing purposes.</message>
 	<message key="manager.setup.userRegistration">Регистрация пользователей</message>
 
-	<message key="manager.setup.enableUserRegistration">Позволить посетителям зарегистрироваться как:</message>
-	<message key="manager.setup.disableUserRegistration">Не позволять регистрации. Пользователи будут добавляться управителем журнала.</message>
-	<message key="manager.setup.siteAccess">Доступ к сайту</message>
-	<message key="manager.setup.noRestrictSiteAccess">Незарегистрированные пользователи могут листать журнал.</message>
-	<message key="manager.setup.restrictSiteAccess">Пользователи должны авторизироваться, чтобы получить доступ к журналу.</message>
-	<message key="manager.setup.articleAccess">Доступ к статьям</message>
 
-	<message key="manager.setup.noRestrictArticleAccess">Незарегистрированные посетители могут читать статьи.</message>
-	<message key="manager.setup.restrictArticleAccess">Посетители должны авторизироваться, чтобы получить доступ к полному тексту статей.</message>
 
-	<message key="manager.setup.comments">Комментарии читателей</message>
-	<message key="manager.setup.comments.disable">Читатели не могут комментировать публикации.</message>
-	<message key="manager.setup.comments.authenticated">Регистрированные пользователи могут комментировать под своим именем.</message>
-	<message key="manager.setup.comments.anonymous">Посетители могут комментировать, но должны сначала авторизироваться на сайте.</message>
 
-	<message key="manager.setup.comments.unauthenticated">Позволить всем комментировать анонимно.</message>
 
 	<message key="manager.setup.loggingAndAuditing">Дневник событий</message>
-	<message key="manager.setup.submissionEventLogging">Позволить запись действий по приему статей, просмотр которых будет возможен на страници "История").</message>
-	<message key="manager.setup.submissionEmailLogging">Позволить запись мейл сообщений, связанных с приемом статей к публикации; просмотр записей возможен на странице "История").</message>
 
 	<message key="manager.setup.journalArchiving">Архивация журнала</message>
 
@@ -989,7 +960,6 @@ Setting up LOCKSS support for Slavica Journals does not need to take place until
 	<message key="manager.setup.addItem">Добавить требование</message>
 	<message key="manager.setup.authorCopyrightNotice">Авторское право</message>
 
-	<message key="manager.setup.authorCopyrightNoticeDescription"><![CDATA[This Copyright notice will appear in About the Journal and be included in each item's metadata. Among the options for copyright, authors can be allowed to retain the copyright for their work, while granting the journal the exclusive right of first publication. Alternatively, the journal can request the transfer of copyright to it, while granting permission for non-commercial use of the work, including the right to post the work in an open access archive. In addition, the <a href="http://www.creativecommons.org" target="_blank">Creative Commons</a> can be consulted for flexible copyright licenses.]]></message>
 	<message key="manager.setup.copyrightNotice">Авторское право</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWork">For Authors to Index Their Work</message>
 	<message key="manager.setup.forAuthorsToIndexTheirWorkDescription"><![CDATA[OJS adheres to the <a href="http://www.openarchives.org/" target="_blank">Open Archives Initiative</a> Protocol for Metadata Harvesting, which is the emerging standard for providing well-indexed access to electronic research resources on a global scale. The authors will use a similar template to provide metadata for their submission. The Journal Manager should select the categories for indexing and present authors with relevant examples to assist them in indexing their work, separating terms with a semi-colon (e.g., term1; term2). The entries should be introduced as examples by using "E.g.," or "For example,".]]></message>
@@ -1033,13 +1003,8 @@ Note that if your site administrator has already registered this site with the P
 
 	<message key="manager.setup.publicationScheduleDescription"><![CDATA[Journal items can be published collectively, as part of an issue with its own Table of Contents. Alternatively, individual items can be published as soon as they are ready, by adding them to the "current" volume's Table of Contents. Provide readers, in About the Journal, with a statement about the system this journal will use and its expected frequency of publication.]]></message>
 	<message key="manager.setup.publicationFormat">Format</message>
-	<message key="manager.setup.publicationFormatDescription">Select the default format for identifying journal issues and/or volumes. The format can be overridden for individual issues.</message>
-	<message key="manager.setup.publicationFormatIssue">Том, выпуск и год</message>
-	<message key="manager.setup.publicationFormatVolume">Том и год</message>
 	<message key="manager.setup.publicationFormatYear">Год</message>
 
-	<message key="manager.setup.publicationFormatTitle">Произвольное название</message>
-	<message key="manager.setup.publicationFormatTitleDescription">Note: While a title can be added to any issue, with this final option, the issue is identified by its title alone (if OJS is used, for example, for a set of edited volumes).</message>
 	<message key="manager.setup.initialIssue">Начальный выпуск</message>
 	<message key="manager.setup.initialIssueDescription">Depending on the format selected, identify the issue, volume, and/or year of the first issue to be published with OJS:</message>
 	<message key="manager.setup.frequencyOfPublication">Начало и периодичность</message>
@@ -1055,20 +1020,14 @@ Select a model for handling these aspects of the editorial process. (To designat
 
 	<message key="manager.setup.editorialProcess3">Managing Editor handles Submission Queue, Submission Editing, Scheduling Queue, and Table of Contents, while the Section Editors handle Submission Review.</message>
 	<message key="manager.setup.copyediting">Редакторы статей</message>
-	<message key="manager.setup.useCopyeditors">Каждая статья может иметь отдельного редактора.</message>
-	<message key="manager.setup.noUseCopyeditors">Редакция осуществляется одним редактором.</message>
 	<message key="manager.setup.copyeditInstructions">Указания</message>
 	<message key="manager.setup.copyeditInstructionsDescription">Внизу Вы видите детальный набор указаний в HTML, которые можно использовать в качестве примера.</message>
 
 	<message key="manager.setup.layoutAndGalleys">Худ. редактор</message>
-	<message key="manager.setup.useLayoutEditors">Худ. редактор оформляет статьи соотв. в HTML, PDF, PS, DOC и других удобных для электронной публикации форматах.</message>
-	<message key="manager.setup.noUseLayoutEditors">Редакторы сами подготовят верстки в нужном для публикации формате.</message>
 	<message key="manager.setup.layoutInstructions">Указания для оформителя</message>
 	<message key="manager.setup.layoutInstructionsDescription">Здесь можно добавить указания для форматирования журнала как в HTML, так и в чистом тексте. Каждый журнал может иметь свое собственное оформление.</message>
 	<message key="manager.setup.proofreading">Корректоры</message>
 
-	<message key="manager.setup.useProofreaders">Корректоры проверяют подготовленные худ. редактором статьи в их специфическом формате. Проверка может осуществляться совместно с автором.</message>
-	<message key="manager.setup.noUseProofreaders">Редакторы и авторы проверяют верстки.</message>
 	<message key="manager.setup.proofingInstructions">Указания корректорам</message>
 	<message key="manager.setup.proofingInstructionsDescription">Ввести здесь конкретные указания, которые будут доступны всем заинтересованным и уполномоченным лицам.</message>
 	<message key="manager.setup.volumePerYear">Томов в год</message>
@@ -1082,7 +1041,6 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.setup.pageNumberIdentifier">Пагинация</message>
 
 	<message key="manager.setup.enablePageNumber">Страницы вводятся в Содержание дбя саждого отдельного материала (напр. с. 13-26, или просто с. 13).</message>
-	<message key="manager.setup.subscriptionDescription">Если активировать систему подписки, Издатель сможет выбрать тип подписки (с планежами) и управлять подписчиками. Редактор может обозначить статью или целый выпуск как доступный в совободном режиме или же по истечению определенного числа месяцев, до 24.</message>
 	<message key="manager.setup.subscriptionContactDescription">Если Подписка активирована, данное лицо будет числиться на страницах О нас как ответственное за подписки.</message>
 	<message key="manager.setup.subscriptionAdditionalInformation">Дополнительная информация</message>
 	<message key="manager.setup.subscriptionAdditionalInformationDescription">Любая дополн. информация будет доступна на страницах О нас, в разделе Подписка, вместе с механизмом платежей.</message>
@@ -1117,8 +1075,6 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.setup.journalPageFooter">Journal Page Footer</message>
 	<message key="manager.setup.journalPageFooterDescription">This is the footer of your journal. To change or update the footer, paste the HTML code in the textbox below. Examples could be another navigation bar, a counter, etc. This footer will appear on every page.</message>
 
-	<message key="manager.setup.journalStyleSheet">Journal Style Sheet</message>
-	<message key="manager.setup.journalStyleSheetDescription">By default journals and the site use a common style sheet (located in the "styles" subdirectory of the site). The default style rules can be overridden by uploading a journal-specific cascading style sheet.</message>
 	<message key="manager.setup.useJournalStyleSheet">Journal style sheet</message>
 	<message key="manager.setup.noStyleSheetUploaded">No style sheet uploaded.</message>
 	<message key="manager.setup.journalHomepageContent">Journal Homepage Content</message>
@@ -1141,15 +1097,7 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.setup.homeHeaderImageInvalid">Invalid homepage header logo image format. Accepted formats are .gif, .jpg, or .png.</message>
 	<message key="manager.setup.pageHeaderTitleImageInvalid">Invalid page header title image format. Accepted formats are .gif, .jpg, or .png.</message>
 	<message key="manager.setup.pageHeaderLogoImageInvalid">Invalid page header logo image format. Accepted formats are .gif, .jpg, or .png.</message>
-	<message key="manager.setup.homeHeaderTitleImageAlt1Invalid">Invalid alternate homepage header title image format. Accepted formats are .gif, .jpg, or .png.</message>
-	<message key="manager.setup.homeHeaderLogoImageAlt1Invalid">Invalid alternate homepage header logo image format. Accepted formats are .gif, .jpg, or .png.</message>
-	<message key="manager.setup.pageHeaderTitleImageAlt1Invalid">Invalid alternate page header title image format. Accepted formats are .gif, .jpg, or .png.</message>
 
-	<message key="manager.setup.pageHeaderLogoImageAlt1Invalid">Invalid alternate page header logo image format. Accepted formats are .gif, .jpg, or .png.</message>
-	<message key="manager.setup.homeHeaderTitleImageAlt2Invalid">Invalid second alternate homepage header title image format. Accepted formats are .gif, .jpg, or .png.</message>
-	<message key="manager.setup.homeHeaderLogoImageAlt2Invalid">Invalid second alternate homepage header logo image format. Accepted formats are .gif, .jpg, or .png.</message>
-	<message key="manager.setup.pageHeaderTitleImageAlt2Invalid">Invalid second alternate page header title image format. Accepted formats are .gif, .jpg, or .png.</message>
-	<message key="manager.setup.pageHeaderLogoImageAlt2Invalid">Invalid second alternate page header logo image format. Accepted formats are .gif, .jpg, or .png.</message>
 	<message key="manager.setup.homepageImageInvalid">Invalid homepage image format. Accepted formats are .gif, .jpg, or .png.</message>
 
 	<message key="manager.setup.journalStyleSheetInvalid">Invalid journal stylesheet format. Accepted format is .css.</message>
@@ -1160,16 +1108,9 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.setup.information.forLibrarians">Для библиотекарей</message>
 
 	<!-- Languages -->
-	<message key="manager.languages.languageInstructions"><![CDATA[OJS can be made available to users in any of several supported languages. As well, OJS can operate as a partially multilingual system, providing users with an ability to toggle between languages on each page, and allowing certain data to be entered in up to two additional languages.<br /><br/>If a language supported by OJS is not listed below, ask your site administrator to install the language from the site administration interface. For instructions on adding support for new languages, please consult the OJS documentation.]]></message>
 	<message key="manager.languages.primaryLocaleInstructions">This will be the default language for the journal site.</message>
 	<message key="manager.languages.supportedLocalesInstructions">Select all locales to support on the site via a language select menu to appear on each page. The menu will only appear if more than one locale is selected.</message>
-	<message key="manager.languages.alternateLocale1">Alternate Locale #1</message>
-	<message key="manager.languages.alternateLocale2">Alternate Locale #2</message>
 
-	<message key="manager.languages.alternateLocaleInstructions">This system optionally allows certain critical information to be entered in up to two additional languages. To use this feature, select one or two alternate locales and choose from the options listed below.</message>
-	<message key="manager.languages.alternativeLanguageOptions">Language options</message>
-	<message key="manager.languages.journalTitleAltLanguages">Title image, page header, etc. will be uploaded in each of the journal's languages.</message>
-	<message key="manager.languages.articleAltLanguages">Authors should be asked to provide titles and abstracts in the other language(s), with the option of having this done by journal staff.</message>
 	<message key="manager.languages.noneAvailable">Sorry, no additional languages are available. Contact your site administrator if you wish to use additional languages with this journal.</message>
 	
 	
@@ -1182,8 +1123,6 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.sections.unassigned">Наличные РР</message>
 	<message key="manager.sections.assigned">Редакторы данного раздела</message>
 
-	<message key="manager.sections.assignEditor">Добавить редактора</message>
-	<message key="manager.sections.unassignEditor">Убрать редактора</message>
 	<message key="manager.sections.form.titleRequired">У этого раздела нет названия.</message>
 	<message key="manager.sections.form.abbrevRequired">An abbreviated title is required for the section</message>
 	<message key="manager.section.sectionEditorInstructions">Select from among the available Section Editors and "Assign Editor" to this section.</message>
@@ -1202,11 +1141,9 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<!-- Import/Export -->
 	<message key="manager.importExport">Import/Export Data</message>
 	<!-- People Management -->
-	<message key="manager.people.allUsers">Все пользователи</message>
 
 	<message key="manager.people.allJournals">Все журналы</message>
 	<message key="manager.people.editUser">Править пользователя</message>
-	<message key="manager.people.enrollExistingUser">Привлечь сущ. пользователя</message>
 	<message key="manager.people.createUser">Создать нового пользователя</message>
 	<message key="manager.people.enroll">Привлечь пользователя</message>
 	<message key="manager.people.enrollment">Назначение</message>
@@ -1252,7 +1189,6 @@ You may optionally provide the user with a reason for disabling their account.</
 	<message key="manager.people.editProfile">Редакция профиля</message>
 
 	<message key="manager.people.signInAsUser">Войни как пользователя</message>
-	<message key="manager.people.signOutAsUser">Выйти</message>
 	<message key="manager.people.signInAs">Войти как</message>
 
 	<message key="manager.people.syncUsers">Синхронизировать назначения пользователя</message>
@@ -1330,7 +1266,6 @@ You may optionally provide the user with a reason for disabling their account.</
 	<message key="manager.subscriptionTypes.form.format">Format</message>
 	<message key="manager.subscriptionTypes.form.institutional">Subscribers should be validated via domain or IP authentication.</message>
 	<message key="manager.subscriptionTypes.form.membership">Subscribers must be members of an association or organization.</message>
-	<message key="manager.subscriptionTypes.form.public">This subscription type should be publicly visible.</message>
 	<message key="manager.subscriptionTypes.form.saveAndCreateAnotherType">Save and Create Another</message>
 
 	<message key="manager.subscriptionTypes.format.online">Online</message>
@@ -1436,15 +1371,7 @@ You may optionally provide the user with a reason for disabling their account.</
 	<message key="editor.issues.unpublished">Неопубликованные</message>
 
 	<!-- Create Issue / Issue Data -->
-	<message key="editor.issues.volumeRequired">Нужен том для выпуска.</message>
-	<message key="editor.issues.numberRequired">Нужен номер для выпуска.</message>
-	<message key="editor.issues.yearRequired">Нужен год для выпуска.</message>
-	<message key="editor.issues.labelFormatRequired">Выберите правильный формат.</message>
-	<message key="editor.issues.labelOption1">Том, Номер, Год</message>
 
-	<message key="editor.issues.labelOption2">Том, Год</message>
-	<message key="editor.issues.labelOption3">Год</message>
-	<message key="editor.issues.labelOption4">Только название</message>
 	<message key="editor.issues.issueIdentification">Идентификация</message>
 	<message key="editor.issues.publicIssueIdentifier">Общ. идентификатор выпуска</message>
 	<message key="editor.issues.description">Описание</message>
@@ -1461,7 +1388,6 @@ You may optionally provide the user with a reason for disabling their account.</
 	<message key="editor.issues.removeCoverPage">Remove cover page image?</message>
 	<message key="editor.issues.invalidCoverPageFormat">Invalid cover page format. Accepted formats are .gif, .jpg, or .png.</message>
 	<message key="editor.issues.coverPageCaption">Cover caption</message>
-	<message key="editor.issues.showCoverPage">Create custom cover page for this issue.</message>
 
 	<message key="editor.issues.openAccess">Свободный доступ</message>
 	<message key="editor.issues.subscription">Подписка</message>
@@ -1560,7 +1486,6 @@ with a plus sign (+) indicating review-in-progress.]]></message>
 	<message key="editor.article.authorProofing">Авторская верстка</message>
 
 	<message key="editor.article.archiveSubmission">Архивировать статью</message>
-	<message key="editor.article.emailAuthorOnArchive">Послать автору письмо?</message>
 	<message key="editor.article.restoreToQueue">Восстановить в списке обрабатываемых статьей</message>
 	<message key="editor.article.assignEditor">Назначить секционного редактора</message>
 	<message key="editor.article.selectEditor">Выбрать {$roleName}</message>
@@ -1647,7 +1572,6 @@ with a plus sign (+) indicating review-in-progress.]]></message>
 
 	<message key="reviewer.article.canDoReview">Will do the review</message>
 	<message key="reviewer.article.cannotDoReview">Unable to do the review</message>
-	<message key="reviewer.article.restrictedFileAccess">Files can only be viewed if the review is undertaken</message>
 	<message key="reviewer.article.submissionEditor">Submission Editor</message>
 	<message key="reviewer.article.reviewerCommentsDescription">Type or paste in review comments here</message>
 	<message key="reviewer.article.editorToEnter">Editor To Enter</message>
@@ -1709,7 +1633,6 @@ with a plus sign (+) indicating review-in-progress.]]></message>
 	<message key="author.submit.stepsToSubmit">Пять шагов к публикации</message>
 	<message key="author.submit.startHere">Начать процесс отправки новой статьи.</message>
 
-	<message key="author.submit.startHereLink">Старт</message>
 	<message key="author.submit.step1">Шаг 1. Начало отправки</message>
 	<message key="author.submit.step2">Шаг 2. Ввод метаданных</message>
 	<message key="author.submit.step3">Шаг 3. Загрузить статью</message>
@@ -1734,9 +1657,7 @@ with a plus sign (+) indicating review-in-progress.]]></message>
 	<message key="author.submissions.noSubmissions">Нет статей.</message>
 
 	<!-- Article Submission Step 1 -->
-	<message key="author.submit.howToSubmit"><![CDATA[Авторы присылают материалы для этого журнала онлайн. Процесс депонирования статьи включает пять этапов. Если Вы встретите трудности в процессе депонирования, обратитесь за помощью к <a href="mailto:{$supportEmail}">{$supportName}</a>, телефон {$supportPhone}.]]></message>
 	<message key="author.submit.journalSection">Раздел журнала</message>
-	<message key="author.submit.journalSectionDescription"><![CDATA[Если Ваш материал полностью соответствует перечисленным выше требованиям, выберите подходящий раздел журнала (посмотрите описания разделов на странице <a href="{$aboutUrl}">О нас</a>).]]></message>
 	<message key="author.submit.selectSection">Выбрать раздел...</message>
 	
 	<message key="author.submit.submissionChecklist">Требования к статье</message>
@@ -1749,16 +1670,11 @@ with a plus sign (+) indicating review-in-progress.]]></message>
 	
 	<!-- Article Submission Step 2 -->
 
-	<message key="author.submit.metadataDescription">Этот журнал публикует метаданные о каждой статье в соответствии со стандартами, утвержденными организациями, входящими в состав Open Archives Initiative (OAI). Этот новый стандарт делает поиск необходимого материала более адекватным и позволяет создание общих баз метаданных. Процесс редактирования и рецензирования может не начаться в том случае, если Вы не предоставили редакторам необходимые метаданные.</message>
 	<message key="author.submit.privacyStatement">Заявление о конфиденциальности</message>
-	<message key="author.submit.authorsDescription">Если статья имеет более одного автора, укажите имена авторов в алфавитном порядке.</message>
-	<message key="author.submit.reorderAuthorName">Выберите другой порядок имен</message>
-	<message key="author.submit.reorderInstructions">Используйте стрелки, чтобы выбрать нужное расположение имен авторов.</message>
 	<message key="author.submit.selectPrincipalContact">Лицо (автор) для связи с редактором.</message>
 
 	<message key="author.submit.addAuthor">Добавить автора</message>
 	<message key="author.submit.deleteAuthor">Удалить автора</message>
-	<message key="author.submit.submissionIndexingDescription">Используйте термины и словосочетания, которые лучше всего отражают содержание представленного Вами материала. Разделяйте термины при помощи точки с запятой (term1; term2; term3).</message>
 	<message key="author.submit.submissionSupportingAgencies">Спонсоры Вашего исследования</message>
 	<message key="author.submit.submissionSupportingAgenciesDescription">Укажите организацию или институт, которые предоставили Вам материальную и/или финансовую поддержку.</message>
 	<message key="author.submit.agencies">Организации</message>
@@ -1781,9 +1697,7 @@ with a plus sign (+) indicating review-in-progress.]]></message>
 <li>Нажать Open.</li>
 <li>Нажать Загрузить (Upload) файл.</li>
 <li>Когда материал загрузится, нажать Сохранить и Продолжить (Save and Continue) внизу страницы.</li>
-</ol>
-
-Файл можно посмотреть, нажав на его имя. Новая версия файла сотрет старую версию. Если у Вас трудности с отсылкой статьи, напишите техническому редактору журнала <a href="mailto:{$supportEmail}">{$supportName}</a> или позвоните по телефону {$supportPhone}. ]]></message>
+</ol>]]></message>
 	<message key="author.submit.submissionFile">Файл статьи</message>
 	<message key="author.submit.uploadSubmissionFile">Загрузить файл</message>
 	<message key="author.submit.replaceSubmissionFile">Заменить файл</message>
@@ -1791,7 +1705,6 @@ with a plus sign (+) indicating review-in-progress.]]></message>
 	
 	<!-- Article Submission Step 4 -->
 
-	<message key="author.submit.supplementaryFilesInstructions">Здесь можно закачать дополнительные файлы к Вашей статье, например таблицы, базы данных, иллюстрации и использованные нестандартные шрифты. Просьба отправлять последние в архивированном виде. Имейте в виду, что редакторы и читатели могут не иметь использованных Вами шрифтов. Поэтому очень важно предоставить их редакторам и рецензентам.</message>
 	<message key="author.submit.noSupplementaryFiles">Нет дополнительных файлов к этой статье.</message>
 	<message key="author.submit.backToSupplementaryFiles">Обратно к дополнительным файлам</message>
 	<message key="author.submit.confirmDeleteSuppFile">Стереть этот дополнительный файл?</message>
@@ -1829,7 +1742,6 @@ with a plus sign (+) indicating review-in-progress.]]></message>
 
 	
 	<!-- Article Submission Step 5 -->
-	<message key="author.submit.confirmationDescription">Если предыдущие этапы завершены, нажмите Закончить отправку (Finish Submission), чтобы послать Вашу рукопись в журнал {$journalTitle}. Вы получите подтверждение и сможете проследить продвижение Вашей статьи к окончательной публикации на сайте. Спасибо за Ваше желание опубликовать статью в журнале {$journalTitle}.</message>
 	<message key="author.submit.noFiles">У этой статьи нет прикрепленных файлов</message>
 	<message key="author.submit.filesSummary">Резюме файлов</message>
 	<message key="author.submit.finishSubmission">Закончить отправку</message>
@@ -1858,7 +1770,6 @@ with a plus sign (+) indicating review-in-progress.]]></message>
 	
 	<!-- Submission Tracking - Layout Specific -->
 
-	<message key="submission.layout.mustUploadFileForLayout">Request email cannot be sent until a Layout Version is in place.</message>
 	<message key="submission.layout.layoutVersion">Шаблон</message>
 	<message key="submission.layout.layoutFile">Файл</message>
 	<message key="submission.layout.galleys">Форматы</message>
@@ -1980,7 +1891,6 @@ with a plus sign (+) indicating review-in-progress.]]></message>
 	<message key="user.login.lostPassword.passwordSent">На Ваш адрес послан новый пароль. Вы можете использовать его для входа на сайт.</message>
 
 	<message key="user.login.changePasswordInstructions"><![CDATA[Выберите новый пароль, прежде чем войти в Ваш акаунт.<br /><br />Пожалуйста, введите имя и Ваш старый пароль, чтобы поменять пароль.]]></message>
-	<message key="user.login.rememberMe">Запомнить меня</message>
 	<message key="user.login.registeredEmail">Мейл зарегистрирован другим пользователем</message>
 	
 	<!-- Profile -->
@@ -2166,7 +2076,6 @@ with a plus sign (+) indicating review-in-progress.]]></message>
 	<message key="help.search">Поиск в помощи</message>
 	<message key="help.searchFor">Искать</message>
 
-	<message key="help.searchResultsFor">Результаты поиска</message>
 	
 	<!-- Installer -->
 	<message key="installer.ojsInstallation">OJS Installation</message>
@@ -2230,9 +2139,7 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="installer.clientCharsetInstructions">The encoding to use for data sent to and received from browsers.</message>
 
 	<message key="installer.connectionCharset">Connection character set</message>
-	<message key="installer.connectionCharsetInstructions">The encoding to use for data sent to and received from the database. This should be the same as the client character set. Note that this capability is only supported with MySQL >= 4.1.1 or PostgreSQL >= 7.1. Select "Not available" if your database server does not meet these requirements.</message>
 	<message key="installer.databaseCharset">Database character set</message>
-	<message key="installer.databaseCharsetInstructions">The encoding to use for data stored in the database. Note that this capability is only supported with MySQL >= 4.1.1 or PostgreSQL >= 7.1. Select "Not available" if your database server does not meet these requirements.</message>
 	<message key="installer.locale">Locale</message>
 	<message key="installer.fileSettings">File Settings</message>
 
@@ -2369,15 +2276,12 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="rt.admin.options">Опции</message>
 
 	<message key="rt.admin.settings.disable">Исключить инструменты</message>
-	<message key="rt.admin.settings.bibFormat">Библиографский формат</message>
 	<message key="rt.admin.settings.captureCite">Цитаты (Показывает цитату из статьи в стандартном формате при помощи следующего софтвера: EndNote, Reference Manager, and ProCite)</message>
 	<message key="rt.admin.settings.viewMetadata">Посмотреть метаданные статьи (Displays an item's indexing information generated by the author and the system)</message>
 	<message key="rt.admin.settings.supplementaryFiles">Дополнительные файлы (Displays a list of any supplementary files that the author included with an item)</message>
-	<message key="rt.admin.settings.printerFriendly">Версия для печати (Takes reader to a printer-friendly version of an item)</message>
 
 	<message key="rt.admin.settings.authorBio">Посмотреть биоданные автора (Displays the bio statements entered by the author)</message>
 	<message key="rt.admin.settings.defineTerms">Поиск слова (Enables readers to double-click on any word in an item and send the word to a dictionary)</message>
-	<message key="rt.admin.settings.addComment">Добавить комментарий (Enables readers to post comments, which Journal Manager can delete). Reader Comments must be enabled in Journal Setup</message>
 	<message key="rt.admin.settings.emailAuthor">Отправить мейл автору (Takes readers to an email template with the author's email)</message>
 	<message key="rt.admin.settings.emailOthers">Послать статью коллеге (Takes readers to an email template with the title of item as its subject)</message>
 
@@ -2505,13 +2409,7 @@ Validation may fail on search URLs that require posted form data.]]></message>
 
 	<message key="rt.captureCite">Цитата</message>
 	<message key="rt.captureCite.online">Онлайн</message>
-	<message key="rt.captureCite.available">Доступна:</message>
-	<message key="rt.captureCite.capture">Скачать цитату</message>
-	<message key="rt.captureCite.acaoLocation">Европа</message>
-	<message key="rt.captureCite.capture.endNote"><![CDATA[<a href="]]>{$url}<![CDATA[">Примечания</a> - в конце статьи (Macintosh &amp; Windows)]]></message>
 
-	<message key="rt.captureCite.capture.referenceManager"><![CDATA[<a href="]]>{$url}<![CDATA[">Справки</a> - RIS формат (Windows only)]]></message>
-	<message key="rt.captureCite.capture.proCite"><![CDATA[<a href="]]>{$url}<![CDATA[">ProCite</a> - RIS формат (Macintosh &amp; Windows)]]></message>
 
 	<message key="rt.printVersion">Версия для печати</message>
 	<message key="rt.lookUp">Поиск слова</message>
@@ -2560,7 +2458,6 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	-->
 	<message key="default.journalSettings.checklist.notPreviouslyPublished">Эта статья не была раньше опубликована, а также не предоставлена другому журналу для рассмотрения и публикации. Если подобное имеет место, то случай должен быть объяснен в примечаниях к отправленной статье (Шаг 5).</message>
 	<message key="default.journalSettings.checklist.fileFormat">Отправляемый материал набран в текстовом редакторе Microsoft Word, формат DOC или RTF; страницы без пагинации, без переносов, без колонтитулов, без абзацного отступа (абзацный отступ не задан при помощи табуляции), выравнивание по ширине; все иллюстрации, схемы, фигуры и таблицы расположены в тексте в соответствующем месте, а не в конце статьи.</message>
-	<message key="default.journalSettings.checklist.addressesLinked"><![CDATA[Все URL адреса в тексте работают.]]></message>
 	<message key="default.journalSettings.checklist.submissionAppearance">Шрифт Times New Roman, 12 pt; все остальные использованные шрифты должны быть архивированы и отправлены в дополнительном файле в качестве приложения; межстрочный интервал - 1; используется курсив вместо подчеркивания (с исключением подчеркнутых URL адресов).</message>
 	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[Текст обработан в соответствии с требованиями, предъявляемыми к авторам. С конкретными требованиями можно ознакомиться на странице <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Редакционные требования</a>, которая находится в разделе О нас.]]></message>
 	<message key="default.journalSettings.checklist.anonymous">Если отправленный текст представляет собой теоретическую статью, он будет рецензирован анонимно (peer-review). С этой целью имена авторов будут удалены. Если автор ссылается на свои работы, то в ссылках и библиографии его имя должно быть замено на Автор (напр. Автор 1996: 156). Имя автора не должно присутствовать и в свойствах (Properties) документа.</message>
@@ -2630,32 +2527,6 @@ After you are finished with your revisions, rename the file from AuthorNameQA.do
 &bull; [deleted word] indicates deletion of "completely"
 &bull; Comment contains a reply to the editors' QA]]></message>
 
-	<message key="default.journalSettings.proofingInstructions"><![CDATA[The proofreading stage is intended to catch any errors in the galley's spelling, grammar, and formatting. More substantial changes cannot be made at this stage, unless discussed with the Section Editor. In Layout, click on VIEW PROOF to see the HTML, PDF and other available file formats used in publishing this item. 
-
-<strong>For Spelling and Grammar Errors</strong>
-
-Copy the problem word or groups of words and paste them into the Proofreading Corrections box with "CHANGE-TO" instructions to the editor as follows...
-
-1. CHANGE...
-then the others
-TO...
-than the others
-
-2. CHANGE...
-Malinowsky
-TO...
-Malinowski
-
-
-<strong>For Formatting Errors</strong>
-
-Describe the location and nature of the problem in the Proofreading Corrections box after typing in the title "FORMATTING" as follows...
-
-3. FORMATTING
-The numbers in Table 3 are not aligned in the third column.
-
-4. FORMATTING
-The paragraph that begins "This last topic..." is not indented.]]></message>
 	<message key="default.journalSettings.emailSignature"><![CDATA[________________________________________________________________________
 {$journalName}
 {$indexUrl}/{$journalPath}

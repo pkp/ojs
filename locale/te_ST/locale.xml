@@ -165,8 +165,6 @@
 	<message key="common.error.databaseErrorUnknown">Æñ üñkñówñ ðåtåbåþè çóññèçtîóñ èrrór håþ óççürrèð.</message>
 	<message key="common.error.framesRequired"><![CDATA[Thîþ pågè rèqüîrèþ fråmèþ. <a href="{$url}">Çlîçk hèrè</a> fór thè ñóñ-fråmèþ vèrþîóñ.]]></message>
 	<message key="navigation.journalHelp">Jóürñål Hèlp</message>
-	<message key="navigation.loggedInAs">Ýóü årè lóggèð îñ åþ...</message>
-	<message key="navigation.logout">Lóg Òüt</message>
 	<message key="navigation.home">Hómè</message>
 	<message key="navigation.about">Æbóüt</message>
 	<message key="navigation.userHome">Üþèr Hómè</message>
@@ -177,14 +175,10 @@
 	<message key="navigation.current">Çürrèñt</message>
 	<message key="navigation.search">ßèårçh</message>
 	<message key="navigation.otherJournals">Òthèr Jóürñålþ</message>
-	<message key="navigation.myProfile">Mý Prófîlè</message>
-	<message key="navigation.myJournals">Mý Jóürñålþ</message>
-	<message key="navigation.journalContent">Jóürñål Çóñtèñt</message>
 	<message key="navigation.browse">Brówþè</message>
 	<message key="navigation.browseByIssue">Bý Îþþüè</message>
 	<message key="navigation.browseByAuthor">Bý Æüthór</message>
 	<message key="navigation.browseByTitle">Bý Tîtlè</message>
-	<message key="navigation.info">Îñfórmåtîóñ</message>
 	<message key="navigation.infoForAuthors">Fór Æüthórþ</message>
 	<message key="navigation.infoForReaders">Fór Rèåðèrþ</message>
 	<message key="navigation.infoForLibrarians">Fór Lîbrårîåñþ</message>
@@ -388,7 +382,6 @@
 	<message key="user.affiliations">Æffîlîåtîóñþ</message>
 	<message key="user.email">Émåîl</message>
 	<message key="user.url">ÜRL</message>
-	<message key="user.url.description">Thîþ wîll åppèår åþ å hýpèrlîñkèð ÜRL åt thè bóttóm óf thè bîó þtåtèmèñt óñ thè "Æbóüt thè åüthór" póp-üp åñð "Éðîtórîål tèåm" pågè.</message>
 	<message key="user.phone">Phóñè</message>
 	<message key="user.fax">Fåx</message>
 	<message key="user.interests">Rèvîèwîñg îñtèrèþtþ</message>
@@ -490,7 +483,6 @@
 	<message key="submission.event.layout.layoutGalleyCreated">Låýóüt gållèý üpðåtèð</message>
 	<message key="submission.event.layout.layoutComplete">Låýóüt åþþîgñmèñt çómplètèð</message>
 	<message key="reader.fullText">Füll Tèxt:</message>
-	<message key="reader.fullTextSubscribersOnly">Füll Tèxt: ßübþçrîbèrþ Òñlý</message>
 	<message key="comments.commentsOnArticle">Çómmèñtþ óñ thîþ årtîçlè</message>
 	<message key="comments.viewAllComments">Vîèw åll çómmèñtþ</message>
 	<message key="comments.noComments">Ñó rèåðèr çómmèñtþ håvè bèèñ póþtèð.</message>
@@ -549,11 +541,8 @@
 	<message key="admin.confirmClearTemplateCache">Ærè ýóü þürè ýóü wåñt tó çlèår thè çåçhè óf çómpîlèð tèmplåtèþ?</message>
 	<message key="admin.systemInformation">ßýþtèm Îñfórmåtîóñ</message>
 	<message key="admin.languages.languageSettings">Låñgüågè ßèttîñgþ</message>
-	<message key="admin.languages.installLanguages">Îñþtåll Låñgüågèþ</message>
 	<message key="admin.languages.primaryLocaleInstructions">Thîþ wîll bè thè ðèfåült låñgüågè fór thè þîtè åñð åñý hóþtèð jóürñålþ.</message>
 	<message key="admin.languages.supportedLocalesInstructions">ßèlèçt åll lóçålèþ tó þüppórt óñ thè þîtè. Thè þèlèçtèð lóçålèþ wîll bè åvåîlåblè fór üþè bý åll jóürñålþ hóþtèð óñ thè þîtè, åñð ålþó åppèår îñ å låñgüågè þèlèçt mèñü tó åppèår óñ èåçh þîtè pågè (whîçh çåñ bè óvèrrîððèñ óñ jóürñål-þpèçîfîç pågèþ). Îf mültîplè lóçålèþ årè ñót þèlèçtèð, thè låñgüågè tógglè mèñü wîll ñót åppèår åñð èxtèñðèð låñgüågè þèttîñgþ wîll ñót bè åvåîlåblè tó jóürñålþ.</message>
-	<message key="admin.languages.languageOptions">Låñgüågè óptîóñþ</message>
-	<message key="admin.languages.profileLocales">Îñ règîþtèrîñg pèóplè (èðîtórþ, rèvîèwèrþ, çópýèðîtórþ, ètç.), wórkîñg låñgüågèþ þhóülð bè îñçlüðèð îñ thèîr Üþèr Prófîlèþ fór thè bèñèfît óf jóürñål èðîtórþ.</message>
 	<message key="admin.languages.installedLocales">Îñþtållèð Lóçålèþ</message>
 	<message key="admin.languages.reload">Rèlóåð Lóçålè</message>
 	<message key="admin.languages.confirmReload">Ærè ýóü þürè ýóü wåñt tó rèlóåð thîþ lóçålè? Thîþ wîll èråþè åñý èxîþtîñg lóçålè-þpèçîfîç ðåtå þüçh åþ çüþtómîzèð èmåîl tèmplåtèþ.</message>
@@ -685,7 +674,6 @@
 	<message key="manager.statistics.statistics.articleViews">Ærtîçlè Vîèw Çóüñtþ (fór Æüthórþ óñlý)</message>
 	<message key="manager.statistics.statistics.note">Ñótè: Pèrçèñtågèþ fór pèèr rèvîèwèð þübmîþþîóñþ måý ñót åðð üp tó 100%, åþ îtèmþ rèþübmîttèð årè èîthèr åççèptèð, ðèçlîñèð, ór þtîll îñ próçèþþ.</message>
 	<message key="manager.statistics.reports">Rèpórt Gèñèråtór</message>
-	<message key="manager.statistics.reports.description">ÒJß gèñèråtèþ rèpórtþ thåt tråçk thè ðètåîlþ åþþóçîåtèð wîth próçèþþîñg þübmîþþîóñþ tó thè jóürñål fróm thè pèrþpèçtîvè óf þübmîþþîóñþ, èðîtórþ, rèvîèwèrþ, åñð þèçtîóñþ, óvèr å gîvèñ pèrîóð óf tîmè. Rèpórtþ årè gèñèråtèð îñ ÇßV fórmåt whîçh rèqüîrè å þprèåðþhèèt åpplîçåtîóñ tó vîèw.</message>
 	<message key="manager.statistics.reports.dateFrom">Fróm</message>
 	<message key="manager.statistics.reports.dateTo">Üñtîl</message>
 	<message key="manager.statistics.reports.reportType">Týpè óf rèpórt</message>
@@ -737,7 +725,6 @@
 	<message key="manager.setup.submissions">ßübmîþþîóñþ</message>
 	<message key="manager.setup.submissions.description">Æüthór güîðèlîñèþ, çópýrîght, åñð îñðèxîñg (îñçlüðîñg règîþtråtîóñ).</message>
 	<message key="manager.setup.management">Måñågèmèñt</message>
-	<message key="manager.setup.management.description">Æççèþþ åñð þèçürîtý, þçhèðülîñg, åññóüñçèmèñtþ, çópýèðîtîñg, låýóüt, åñð próófrèåðîñg.</message>
 	<message key="manager.setup.look">Thè Lóók</message>
 	<message key="manager.setup.look.description">Hómèpågè hèåðèr, çóñtèñt, jóürñål hèåðèr, fóótèr, ñåvîgåtîóñ bår, åñð þtýlè þhèèt.</message>
 	<message key="manager.setup.journalTitle">Jóürñål tîtlè</message>
@@ -838,20 +825,11 @@
 	<message key="manager.setup.aboutItemContent">Çóñtèñt</message>
 	<message key="manager.setup.addAboutItem">Æðð Æbóüt Îtèm</message>
 	<message key="manager.setup.form.numReviewersPerSubmission">Thè ñümbèr óf rèvîèwèrþ pèr þübmîþþîóñ îþ rèqüîrèð.</message>
-	<message key="manager.setup.securitySettings">Æççèþþ åñð ßèçürîtý ßèttîñgþ</message>
-	<message key="manager.setup.securitySettingsDescription">ÒJß próvîðèþ å ñümbèr óf þèçürîtý-rèlåtèð óptîóñþ thåt çåñ bè üþèð tó rèþtrîçt tó thè jóürñål'þ çóñtèñtþ, åñð måîñtåîñ åððîtîóñål îñfórmåtîóñ åbóüt þübmîþþîóñþ fór åüðîtîñg pürpóþèþ.</message>
 	<message key="manager.setup.userRegistration">Üþèr Règîþtråtîóñ</message>
-	<message key="manager.setup.enableUserRegistration">Üþèrþ çåñ règîþtèr thèmþèlvèþ wîth thè jóürñål îñ óñè ór mórè óf thè fóllówîñg rólèþ:</message>
 	<message key="manager.setup.enableUserRegistration.author">Æüthórþ (çåñ þübmît måtèrîålþ tó thè jóürñål)</message>
 	<message key="manager.setup.enableUserRegistration.reader">Rèåðèrþ (wîll rèçîèvè ñótîfîçåtîóñþ åñð bè çóüñtèð åþ èqüîvålèñt tó å þübþçrîbèr)</message>
 	<message key="manager.setup.enableUserRegistration.reviewer">Rèvîèwèrþ (åvåîlåblè fór rèvîèwîñg þübmîþþîóñþ)</message>
-	<message key="manager.setup.disableUserRegistration">Jóürñål Måñågèr règîþtèrþ åll üþèrþ, wîth Éðîtórþ ór ßèçtîóñ Éðîtórþ åblè tó règîþtèr Rèvîèwèrþ ålóñè.</message>
-	<message key="manager.setup.siteAccess">Æððîtîóñål ßîtè åñð Ærtîçlè Æççèþþ Rèþtrîçtîóñþ</message>
-	<message key="manager.setup.restrictSiteAccess">Üþèrþ müþt bè règîþtèrèð åñð lóg îñ tó vîèw thè jóürñål þîtè.</message>
-	<message key="manager.setup.restrictArticleAccess">Üþèrþ müþt bè règîþtèrèð åñð lóg îñ tó vîèw ópèñ åççèþþ çóñtèñt.</message>
 	<message key="manager.setup.loggingAndAuditing">Lóggîñg åñð Æüðîtîñg</message>
-	<message key="manager.setup.submissionEventLogging">Måîñtåîñ å lóg óf åll åçtîóñþ tåkèñ wîth å þübmîþþîóñ óñ îtþ Hîþtórý pågè.</message>
-	<message key="manager.setup.submissionEmailLogging">Måîñtåîñ å lóg óf åll èmåîlþ þèñt îñ rèlåtîóñ tó å þübmîþþîóñ óñ îtþ Hîþtórý pågè.</message>
 	<message key="manager.setup.reviewerDatabaseLink">Pótèñtîål Rèvîèwèr Ðåtåbåþè</message>
 	<message key="manager.setup.reviewerDatabaseLink.desc">Æðð tó thè ßèlèçt Rèvîèwèr pågè å lîñk tó å rèlèvåñt lîtèråtürè ðåtåbåþè thåt çåñ bè þèårçhèð fór pótèñtîål rèvîèwèrþ åñð îþ ópèñ tó èðîtórþ wîthóüt þübþçrîptîóñ.</message>
 	<message key="manager.setup.addReviewerDatabaseLink">Æðð Ñèw Ðåtåbåþè Lîñk</message>
@@ -915,11 +893,8 @@ Tîtlè óf çlåþþîfîçåtîóñ þýþtèm]]></message>
 	<message key="manager.setup.publicationSchedule">Püblîçåtîóñ ßçhèðülè</message>
 	<message key="manager.setup.publicationScheduleDescription">Jóürñål îtèmþ çåñ bè püblîþhèð çóllèçtîvèlý, åþ pårt óf åñ îþþüè wîth îtþ ówñ Tåblè óf Çóñtèñtþ. Æltèrñåtîvèlý, îñðîvîðüål îtèmþ çåñ bè püblîþhèð åþ þóóñ åþ thèý årè rèåðý, bý åððîñg thèm tó thè "çürrèñt" vólümè'þ Tåblè óf Çóñtèñtþ. Próvîðè rèåðèrþ, îñ Æbóüt thè Jóürñål, wîth å þtåtèmèñt åbóüt thè þýþtèm thîþ jóürñål wîll üþè åñð îtþ èxpèçtèð frèqüèñçý óf püblîçåtîóñ.</message>
 	<message key="manager.setup.publicationFormat">Fórmåt</message>
-	<message key="manager.setup.publicationFormatDescription">Thè jóürñål wîll üþè thè fóllówîñg èlèmèñtþ tó îðèñtîfý îþþüèþ (whîçh çåñ bè óvèrrîððèñ fór îñðîvîðüål îþþüèþ).</message>
 	<message key="manager.setup.publicationFormatNumber">Ñümbèr</message>
-	<message key="manager.setup.publicationFormatVolume">Vólümè</message>
 	<message key="manager.setup.publicationFormatYear">Ýèår</message>
-	<message key="manager.setup.publicationFormatTitle">Tîtlè</message>
 	<message key="manager.setup.initialIssue">Îñîtîål îþþüè</message>
 	<message key="manager.setup.initialIssueDescription">Ðèpèñðîñg óñ thè fórmåt þèlèçtèð, îðèñtîfý thè îþþüè, vólümè, åñð/ór ýèår óf thè fîrþt îþþüè tó bè püblîþhèð wîth ÒJß:</message>
 	<message key="manager.setup.frequencyOfPublication">ßtårtîñg Póîñt åñð Frèqüèñçý</message>
@@ -933,13 +908,9 @@ Tîtlè óf çlåþþîfîçåtîóñ þýþtèm]]></message>
 	<message key="manager.setup.editorialProcess2">Måñågîñg Éðîtór håñðlèþ ßübmîþþîóñ Qüèüè, åñð Tåblè óf Çóñtèñtþ, whîlè ßèçtîóñ Éðîtórþ håñðlè ßübmîþþîóñ Rèvîèw åñð ßübmîþþîóñ Éðîtîñg.</message>
 	<message key="manager.setup.editorialProcess3">Måñågîñg Éðîtór håñðlèþ ßübmîþþîóñ Qüèüè, ßübmîþþîóñ Éðîtîñg, åñð Tåblè óf Çóñtèñtþ, whîlè thè ßèçtîóñ Éðîtórþ håñðlè ßübmîþþîóñ Rèvîèw.</message>
 	<message key="manager.setup.copyediting">Çópýèðîtórþ</message>
-	<message key="manager.setup.useCopyeditors">Æ Çópýèðîtór wîll bè åþþîgñèð tó wórk wîth èåçh þübmîþþîóñ.</message>
-	<message key="manager.setup.noUseCopyeditors">Çópýèðîtîñg wîll bè üñðèrtåkèñ bý åñ Éðîtór ór ßèçtîóñ Éðîtór åþþîgñèð tó thè þübmîþþîóñ.</message>
 	<message key="manager.setup.copyeditInstructions">Çópýèðît Îñþtrüçtîóñþ</message>
 	<message key="manager.setup.copyeditInstructionsDescription">Thè Çópýèðît Îñþtrüçtîóñþ wîll bè måðè åvåîlåblè tó Çópýèðîtórþ, Æüthórþ, åñð ßèçtîóñ Éðîtórþ îñ thè ßübmîþþîóñ Éðîtîñg þtågè. Bèlów îþ å ðèfåült þèt óf îñþtrüçtîóñþ îñ HTML, whîçh çåñ bè móðîfîèð ór rèplåçèð bý thè Jóürñål Måñågèr åt åñý póîñt (îñ HTML ór plåîñ tèxt).</message>
 	<message key="manager.setup.layoutAndGalleys">Låýóüt Éðîtórþ</message>
-	<message key="manager.setup.useLayoutEditors">Æ Låýóüt Éðîtór wîll bè åþþîgñèð tó prèpårè thè HTML, PÐF, ètç., fîlèþ fór èlèçtróñîç püblîçåtîóñ.</message>
-	<message key="manager.setup.noUseLayoutEditors">Æñ Éðîtór ór ßèçtîóñ Éðîtór åþþîgñèð tó thè þübmîþþîóñ wîll prèpårè thè HTML, PÐF, ètç., fîlèþ.</message>
 	<message key="manager.setup.layoutInstructions">Låýóüt Îñþtrüçtîóñþ</message>
 	<message key="manager.setup.layoutInstructionsDescription">Låýóüt Îñþtrüçtîóñþ çåñ bè prèpårèð fór thè fórmåttîñg óf püblîþhîñg îtèmþ îñ thè jóürñål åñð bè èñtèrèð bèlów îñ HTML ór plåîñ tèxt. Thèý wîll bè måðè åvåîlåblè tó  thè Låýóüt Éðîtór åñð ßèçtîóñ Éðîtór óñ thè Éðîtîñg pågè óf èåçh þübmîþþîóñ. (Æþ èåçh jóürñål måý èmplóý îtþ ówñ fîlè fórmåtþ, bîblîógråphîç þtåñðårðþ, þtýlè þhèètþ, ètç., å ðèfåült þèt óf îñþtrüçtîóñþ îþ ñót próvîðèð.)</message>
 	<message key="manager.setup.layoutTemplates">Låýóüt Tèmplåtèþ</message>
@@ -947,8 +918,6 @@ Tîtlè óf çlåþþîfîçåtîóñ þýþtèm]]></message>
 	<message key="manager.setup.layoutTemplates.title">Tîtlè</message>
 	<message key="manager.setup.layoutTemplates.file">Tèmplåtè Fîlè</message>
 	<message key="manager.setup.proofreading">Próófrèåðèrþ</message>
-	<message key="manager.setup.useProofreaders">Æ Próófrèåðèr wîll bè åþþîgñèð tó çhèçk (ålóñg wîth thè åüthórþ) thè gållèýþ prîór tó püblîçåtîóñ.</message>
-	<message key="manager.setup.noUseProofreaders">Æñ Éðîtór ór ßèçtîóñ Éðîtór åþþîgñèð tó thè þübmîþþîóñ wîll çhèçk thè gållèýþ.</message>
 	<message key="manager.setup.proofingInstructions">Próófîñg Îñþtrüçtîóñþ</message>
 	<message key="manager.setup.proofingInstructionsDescription">Thè Próófrèåðîñg Îñþtrüçtîóñþ wîll bè måðè åvåîlåblè tó Próófrèåðèrþ, Æüthórþ, Låýóüt Éðîtórþ, åñð ßèçtîóñ Éðîtórþ îñ thè ßübmîþþîóñ Éðîtîñg þtågè. Bèlów îþ å ðèfåült þèt óf îñþtrüçtîóñþ îñ HTML, whîçh çåñ bè èðîtèð ór rèplåçèð bý thè Jóürñål Måñågèr åt åñý póîñt (îñ HTML ór plåîñ tèxt).</message>
 	<message key="manager.setup.volumePerYear">Vólümèþ pèr ýèår</message>
@@ -961,12 +930,10 @@ Tîtlè óf çlåþþîfîçåtîóñ þýþtèm]]></message>
 	<message key="manager.setup.enablePublicSuppFileId">Çüþtóm îðèñtîfîèrþ wîll bè üþèð tó îðèñtîfý þüpplèmèñtål årtîçlè fîlèþ.</message>
 	<message key="manager.setup.pageNumberIdentifier">Pågè Ñümbèr Òptîóñ</message>
 	<message key="manager.setup.enablePageNumber">Pågè ñümbèrþ fór îtèmþ wîll bè çålçülåtèð åñð èñtèrèð måñüållý îñ thè Tåblè óf Çóñtèñtþ (è.g., pp. 13-26).</message>
-	<message key="manager.setup.onlineAccessManagement">Æççèþþ tó Jóürñål Çóñtèñt</message>
 	<message key="manager.setup.openAccess">Thè jóürñål wîll próvîðè ópèñ åççèþþ tó îtþ çóñtèñtþ.</message>
 	<message key="manager.setup.openAccessPolicy">Òpèñ Æççèþþ Pólîçý</message>
 	<message key="manager.setup.openAccessPolicyDescription">Éñtèr å þtåtèmèñt óñ thè jóürñål'þ ópèñ åççèþþ pólîçý thåt wîll åppèår îñ Æbóüt thè Jóürñål.</message>
 	<message key="manager.setup.subscription">Thè jóürñål wîll rèqüîrè þübþçrîptîóñþ tó åççèþþ þómè ór åll óf îtþ çóñtèñtþ.</message>
-	<message key="manager.setup.subscriptionDescription">Thîþ rèqüîrèþ thè åþþîgmèñt óf å ßübþçrîptîóñ Måñågèr whó håþ åççèþþ tó þübþçrîptîóñ móðülè, whîçh îñçlüðèþ åððîtîóñål ópèñ åççèþþ, þèlf-årçhîvîñg, åñð èmåîl ñótîfîçåtîóñ óptîóñþ.</message>
 	<message key="manager.setup.announcements">Æññóüñçèmèñtþ</message>
 	<message key="manager.setup.announcementsDescription">Æññóüñçèmèñtþ måý bè püblîþhèð tó îñfórm rèåðèrþ óf jóürñål ñèwþ åñð èvèñtþ. Püblîþhèð åññóüñçèmèñtþ wîll åppèår óñ thè Æññóüñçèmèñtþ pågè.</message>
 	<message key="manager.setup.enableAnnouncements">Éñåblè Jóürñål Måñågèrþ tó åðð jóürñål åññóüñçèmèñtþ.</message>
@@ -996,8 +963,6 @@ Tîtlè óf çlåþþîfîçåtîóñ þýþtèm]]></message>
 	<message key="manager.setup.alternateHeaderDescription">Æltèrñåtèlý, îñþtèåð óf tîtlè åñð lógó, åñ HTML vèrþîóñ óf thè hèåðèr çåñ bè îñþèrtèð îñtó thè tèxt bóx bèlów. Lèåvè tèxtbóx blåñk îf ñót rèqüîrèð.</message>
 	<message key="manager.setup.journalPageFooter">Jóürñål Pågè Fóótèr</message>
 	<message key="manager.setup.journalPageFooterDescription">Thîþ îþ thè fóótèr óf ýóür jóürñål. Tó çhåñgè ór üpðåtè thè fóótèr, påþtè thè HTML çóðè îñ thè tèxtbóx bèlów. Éxåmplèþ çóülð bè åñóthèr ñåvîgåtîóñ bår, å çóüñtèr, ètç. Thîþ fóótèr wîll åppèår óñ èvèrý pågè.</message>
-	<message key="manager.setup.journalStyleSheet">Jóürñål ßtýlè ßhèèt</message>
-	<message key="manager.setup.journalStyleSheetDescription">Bý ðèfåült jóürñålþ åñð thè þîtè üþè å çómmóñ þtýlè þhèèt (lóçåtèð îñ thè "þtýlèþ" þübðîrèçtórý óf thè þîtè). Thè ðèfåült þtýlè rülèþ çåñ bè óvèrrîððèñ bý üplóåðîñg å jóürñål-þpèçîfîç çåþçåðîñg þtýlè þhèèt.</message>
 	<message key="manager.setup.useJournalStyleSheet">Jóürñål þtýlè þhèèt</message>
 	<message key="manager.setup.noStyleSheetUploaded">Ñó þtýlè þhèèt üplóåðèð.</message>
 	<message key="manager.setup.journalHomepageContent">Jóürñål Hómèpågè Çóñtèñt</message>
@@ -1017,14 +982,6 @@ Tîtlè óf çlåþþîfîçåtîóñ þýþtèm]]></message>
 	<message key="manager.setup.homeHeaderImageInvalid">Îñvålîð hómèpågè hèåðèr lógó îmågè fórmåt. Æççèptèð fórmåtþ årè .gîf, .jpg, ór .pñg.</message>
 	<message key="manager.setup.pageHeaderTitleImageInvalid">Îñvålîð pågè hèåðèr tîtlè îmågè fórmåt. Æççèptèð fórmåtþ årè .gîf, .jpg, ór .pñg.</message>
 	<message key="manager.setup.pageHeaderLogoImageInvalid">Îñvålîð pågè hèåðèr lógó îmågè fórmåt. Æççèptèð fórmåtþ årè .gîf, .jpg, ór .pñg.</message>
-	<message key="manager.setup.homeHeaderTitleImageAlt1Invalid">Îñvålîð åltèrñåtè hómèpågè hèåðèr tîtlè îmågè fórmåt. Æççèptèð fórmåtþ årè .gîf, .jpg, ór .pñg.</message>
-	<message key="manager.setup.homeHeaderLogoImageAlt1Invalid">Îñvålîð åltèrñåtè hómèpågè hèåðèr lógó îmågè fórmåt. Æççèptèð fórmåtþ årè .gîf, .jpg, ór .pñg.</message>
-	<message key="manager.setup.pageHeaderTitleImageAlt1Invalid">Îñvålîð åltèrñåtè pågè hèåðèr tîtlè îmågè fórmåt. Æççèptèð fórmåtþ årè .gîf, .jpg, ór .pñg.</message>
-	<message key="manager.setup.pageHeaderLogoImageAlt1Invalid">Îñvålîð åltèrñåtè pågè hèåðèr lógó îmågè fórmåt. Æççèptèð fórmåtþ årè .gîf, .jpg, ór .pñg.</message>
-	<message key="manager.setup.homeHeaderTitleImageAlt2Invalid">Îñvålîð þèçóñð åltèrñåtè hómèpågè hèåðèr tîtlè îmågè fórmåt. Æççèptèð fórmåtþ årè .gîf, .jpg, ór .pñg.</message>
-	<message key="manager.setup.homeHeaderLogoImageAlt2Invalid">Îñvålîð þèçóñð åltèrñåtè hómèpågè hèåðèr lógó îmågè fórmåt. Æççèptèð fórmåtþ årè .gîf, .jpg, ór .pñg.</message>
-	<message key="manager.setup.pageHeaderTitleImageAlt2Invalid">Îñvålîð þèçóñð åltèrñåtè pågè hèåðèr tîtlè îmågè fórmåt. Æççèptèð fórmåtþ årè .gîf, .jpg, ór .pñg.</message>
-	<message key="manager.setup.pageHeaderLogoImageAlt2Invalid">Îñvålîð þèçóñð åltèrñåtè pågè hèåðèr lógó îmågè fórmåt. Æççèptèð fórmåtþ årè .gîf, .jpg, ór .pñg.</message>
 	<message key="manager.setup.homepageImageInvalid">Îñvålîð hómèpågè îmågè fórmåt. Æççèptèð fórmåtþ årè .gîf, .jpg, ór .pñg.</message>
 	<message key="manager.setup.journalStyleSheetInvalid">Îñvålîð jóürñål þtýlèþhèèt fórmåt. Æççèptèð fórmåt îþ .çþþ.</message>
 	<message key="manager.setup.information">Îñfórmåtîóñ</message>
@@ -1032,15 +989,8 @@ Tîtlè óf çlåþþîfîçåtîóñ þýþtèm]]></message>
 	<message key="manager.setup.information.forReaders">Fór Rèåðèrþ</message>
 	<message key="manager.setup.information.forAuthors">Fór Æüthórþ</message>
 	<message key="manager.setup.information.forLibrarians">Fór Lîbrårîåñþ</message>
-	<message key="manager.languages.languageInstructions"><![CDATA[ÒJß çåñ bè måðè åvåîlåblè tó üþèrþ îñ åñý óf þèvèrål þüppórtèð låñgüågèþ. Æþ wèll, ÒJß çåñ ópèråtè åþ å pårtîållý mültîlîñgüål þýþtèm, próvîðîñg üþèrþ wîth åñ åbîlîtý tó tógglè bètwèèñ låñgüågèþ óñ èåçh pågè, åñð ållówîñg çèrtåîñ ðåtå tó bè èñtèrèð îñ üp tó twó åððîtîóñål låñgüågèþ.<br /><br/>Îf å låñgüågè þüppórtèð bý ÒJß îþ ñót lîþtèð bèlów, åþk ýóür þîtè åðmîñîþtråtór tó îñþtåll thè låñgüågè fróm thè þîtè åðmîñîþtråtîóñ îñtèrfåçè. Fór îñþtrüçtîóñþ óñ åððîñg þüppórt fór ñèw låñgüågèþ, plèåþè çóñþült thè ÒJß ðóçümèñtåtîóñ.]]></message>
 	<message key="manager.languages.primaryLocaleInstructions">Thîþ wîll bè thè ðèfåült låñgüågè fór thè jóürñål þîtè.</message>
 	<message key="manager.languages.supportedLocalesInstructions">ßèlèçt åll lóçålèþ tó þüppórt óñ thè þîtè vîå å låñgüågè þèlèçt mèñü tó åppèår óñ èåçh pågè. Thè mèñü wîll óñlý åppèår îf mórè thåñ óñè lóçålè îþ þèlèçtèð.</message>
-	<message key="manager.languages.alternateLocale1">Æltèrñåtè Lóçålè #1</message>
-	<message key="manager.languages.alternateLocale2">Æltèrñåtè Lóçålè #2</message>
-	<message key="manager.languages.alternateLocaleInstructions">Thîþ þýþtèm óptîóñållý ållówþ çèrtåîñ çrîtîçål îñfórmåtîóñ tó bè èñtèrèð îñ üp tó twó åððîtîóñål låñgüågèþ. Tó üþè thîþ fèåtürè, þèlèçt óñè ór twó åltèrñåtè lóçålèþ åñð çhóóþè fróm thè óptîóñþ lîþtèð bèlów.</message>
-	<message key="manager.languages.alternativeLanguageOptions">Låñgüågè óptîóñþ</message>
-	<message key="manager.languages.journalTitleAltLanguages">Tîtlè îmågè, pågè hèåðèr, ètç. wîll bè üplóåðèð îñ èåçh óf thè jóürñål'þ låñgüågèþ.</message>
-	<message key="manager.languages.articleAltLanguages">Æüthórþ þhóülð bè åþkèð tó próvîðè tîtlèþ åñð åbþtråçtþ îñ thè óthèr låñgüågè(þ), wîth thè óptîóñ óf håvîñg thîþ ðóñè bý jóürñål þtåff.</message>
 	<message key="manager.languages.noneAvailable">ßórrý, ñó åððîtîóñål låñgüågèþ årè åvåîlåblè. Çóñtåçt ýóür þîtè åðmîñîþtråtór îf ýóü wîþh tó üþè åððîtîóñål låñgüågèþ wîth thîþ jóürñål.</message>
 	<message key="manager.sections.noneCreated">Ñó þèçtîóñþ håvè bèèñ çrèåtèð.</message>
 	<message key="manager.sections.confirmDelete">Ærè ýóü þürè ýóü wåñt tó pèrmåñèñtlý ðèlètè thîþ þèçtîóñ? Ýóü wîll håvè tó rè-püblîþh åñý årtîçlèþ îñ thîþ þèçtîóñ.</message>
@@ -1048,8 +998,6 @@ Tîtlè óf çlåþþîfîçåtîóñ þýþtèm]]></message>
 	<message key="manager.sections.editors">ßèçtîóñ èðîtórþ</message>
 	<message key="manager.sections.unassigned">Ævåîlåblè ßèçtîóñ Éðîtórþ</message>
 	<message key="manager.sections.assigned">Thîþ ßèçtîóñ'þ Éðîtórþ</message>
-	<message key="manager.sections.assignEditor">Æþþîgñ Éðîtór</message>
-	<message key="manager.sections.unassignEditor">Üñ-åþþîgñ Éðîtór</message>
 	<message key="manager.sections.form.titleRequired">Æ tîtlè îþ rèqüîrèð fór thè þèçtîóñ.</message>
 	<message key="manager.sections.form.abbrevRequired">Æñ åbbrèvîåtèð tîtlè îþ rèqüîrèð fór thè þèçtîóñ</message>
 	<message key="manager.section.sectionEditorInstructions">ßèlèçt fróm åmóñg thè åvåîlåblè ßèçtîóñ Éðîtórþ åñð "Æþþîgñ Éðîtór" tó thîþ þèçtîóñ.</message>
@@ -1073,11 +1021,7 @@ Tîtlè óf çlåþþîfîçåtîóñ þýþtèm]]></message>
 	<message key="manager.groups.title">Tîtlè</message>
 	<message key="manager.groups.confirmDelete">Ærè ýóü þürè ýóü wîþh tó ðèlètè thîþ gróüp?</message>
 	<message key="manager.groups.noneCreated">Ñó èðîtórîål tèåm póþîtîóñþ håvè bèèñ çrèåtèð.</message>
-	<message key="manager.groups.create">Çrèåtè Póþîtîóñ Tîtlè</message>
 	<message key="manager.groups.form.groupTitleRequired">Æ gróüp tîtlè îþ rèqüîrèð.</message>
-	<message key="manager.groups.enableBoard.description"><![CDATA[Üñðèr <a href="{$aboutEditorialTeamUrl}">Pèóplè</a> îñ Æbóüt thè Jóürñål:]]></message>
-	<message key="manager.groups.enableBoard">Thè Jóürñål Måñågèr çrèåtèþ tîtlèþ åñð åððþ pèóplè üñðèr èåçh tîtlè.</message>
-	<message key="manager.groups.disableBoard">ÒJß lîþtþ pèóplè îñ Éðîtórîål Tèåm üñðèr åþþîgñèð rólèþ (Jóürñål Måñågèr, Çópýèðîtór, ètç.)</message>
 	<message key="manager.groups.context.editorialTeam">Håvè tîtlè åppèår üñðèr Éðîtórîål Tèåm îñ Pèóplè þèçtîóñ óf Æbóüt thè Jóürñål (è.g. Éðîtór)</message>
 	<message key="manager.groups.context.people">Håvè tîtlè åppèår åþ îtþ ówñ çåtègórý üñðèr Pèóplè (è.g. Éðîtórîål Bóårð)</message>
 	<message key="manager.groups.membership">Mèmbèrþhîp</message>
@@ -1085,10 +1029,8 @@ Tîtlè óf çlåþþîfîçåtîóñ þýþtèm]]></message>
 	<message key="manager.groups.membership.noneCreated">Thîþ gróüp håþ ñó mèmbèrþ.</message>
 	<message key="manager.groups.membership.addMember">Æðð Mèmbèr</message>
 	<message key="manager.groups.membership.noUsers">Ñó üþèrþ wèrè fóüñð.</message>
-	<message key="manager.people.allUsers">Æll Éñróllèð Üþèrþ</message>
 	<message key="manager.people.allJournals">Æll Jóürñålþ</message>
 	<message key="manager.people.editUser">Éðît Üþèr</message>
-	<message key="manager.people.enrollExistingUser">Éñróll åñ Éxîþtîñg Üþèr</message>
 	<message key="manager.people.createUser">Çrèåtè Ñèw Üþèr</message>
 	<message key="manager.people.mergeUsers">Mèrgè Üþèrþ</message>
 	<message key="manager.people.mergeUser">Mèrgè Üþèr</message>
@@ -1112,7 +1054,6 @@ Tîtlè óf çlåþþîfîçåtîóñ þýþtèm]]></message>
 	<message key="manager.people.authSource">Æüthèñtîçåtîóñ þóürçè</message>
 	<message key="manager.people.enrollUserAs">Éñróll üþèr åþ</message>
 	<message key="manager.people.doNotEnroll">Wîth ñó rólè</message>
-	<message key="manager.people.enrollUserAsDescription">Îf ñó rólèþ årè þèlèçtèð, thè üþèr wîll bè çrèåtèð îñ thè þýþtèm büt ñót bè èñróllèð îñ åñý rólè wîthîñ thîþ jóürñål. Rólèþ çåñ bè åþþîgñèð ór üñåþþîgñèð åt åñý póîñt åftèr thè üþèr îþ çrèåtèð.</message>
 	<message key="manager.people.invalidUser">ßórrý, thè rèqüèþtèð üþèr ðóèþ ñót èxîþt.</message>
 	<message key="manager.people.noAdministrativeRights"><![CDATA[ßórrý, ýóü ðó ñót håvè åðmîñîþtråtîvè rîghtþ óvèr thîþ üþèr. Thîþ måý bè bèçåüþè:
 		<ul>
@@ -1134,7 +1075,6 @@ Tîtlè óf çlåþþîfîçåtîóñ þýþtèm]]></message>
 	<message key="manager.people.emailUsers.selectLocale">ßèlèçt å lóçålè</message>
 	<message key="manager.people.editProfile">Éðît Prófîlè</message>
 	<message key="manager.people.signInAsUser">Lóg Îñ åþ Üþèr</message>
-	<message key="manager.people.signOutAsUser">Lóg Òüt åþ Üþèr</message>
 	<message key="manager.people.signInAs">Lóg Îñ Æþ</message>
 	<message key="manager.people.syncUsers">ßýñçhróñîzè Üþèr Éñróllmèñt</message>
 	<message key="manager.people.syncUserDescription">Éñróllmèñt þýñçhróñîzåtîóñ wîll èñróll åll üþèrþ èñróllèð îñ thè þpèçîfîèð rólè îñ thè þpèçîfîèð jóürñål îñtó thè þåmè rólè îñ thîþ jóürñål. Thîþ füñçtîóñ ållówþ å çómmóñ þèt óf üþèrþ (è.g., Rèvîèwèrþ) tó bè þýñçhróñîzèð bètwèèñ jóürñålþ.</message>
@@ -1233,7 +1173,6 @@ Tîtlè óf çlåþþîfîçåtîóñ þýþtèm]]></message>
 	<message key="manager.subscriptionTypes.form.format">Fórmåt</message>
 	<message key="manager.subscriptionTypes.form.institutional">ßübþçrîbèrþ þhóülð bè vålîðåtèð vîå ðómåîñ ór ÎP åüthèñtîçåtîóñ.</message>
 	<message key="manager.subscriptionTypes.form.membership">ßübþçrîbèrþ müþt bè mèmbèrþ óf åñ åþþóçîåtîóñ ór órgåñîzåtîóñ.</message>
-	<message key="manager.subscriptionTypes.form.public">Thîþ þübþçrîptîóñ týpè wîll ñót åppèår üñðèr ßübþçrîptîóñþ îñ Æbóüt thè Jóürñål.</message>
 	<message key="manager.subscriptionTypes.form.saveAndCreateAnotherType">ßåvè åñð Çrèåtè Æñóthèr</message>
 	<message key="manager.subscriptionTypes.format.online">Òñlîñè</message>
 	<message key="manager.subscriptionTypes.format.print">Prîñt</message>
@@ -1348,9 +1287,6 @@ Tîtlè óf çlåþþîfîçåtîóñ þýþtèm]]></message>
 	<message key="editor.issues.confirmDelete">Ærè ýóü þürè ýóü wåñt tó pèrmåñèñtlý ðèlètè thîþ îþþüè?</message>
 	<message key="editor.issues.published">Püblîþhèð</message>
 	<message key="editor.issues.unpublished">Üñpüblîþhèð</message>
-	<message key="editor.issues.volumeRequired">Vólümè îþ rèqüîrèð åñð müþt bè å póþîtîvè, ñümèrîç vålüè.</message>
-	<message key="editor.issues.numberRequired">Ñümbèr îþ rèqüîrèð åñð müþt bè å póþîtîvè, ñümèrîç vålüè.</message>
-	<message key="editor.issues.yearRequired">Ýèår îþ rèqüîrèð åñð müþt bè å póþîtîvè, ñümèrîç vålüè.</message>
 	<message key="editor.issues.titleRequired">Tîtlè îþ rèqüîrèð fór thè îþþüè.</message>
 	<message key="editor.issues.issueIdentificationRequired">Îþþüè îðèñtîfîçåtîóñ îþ rèqüîrèð. Plèåþè þèlèçt åt lèåþt óñè óf thè îþþüè îðèñtîfîçåtîóñ óptîóñþ.</message>
 	<message key="editor.issues.issueIdentification">Îþþüè îðèñtîfîçåtîóñ</message>
@@ -1371,7 +1307,6 @@ Tîtlè óf çlåþþîfîçåtîóñ þýþtèm]]></message>
 	<message key="editor.issues.invalidStyleFormat">Îñvålîð þtýlèþhèèt fórmåt. Éñþürè thåt thè þübmîttèð fîlè îþ å vålîð Çßß. (Ñótè thåt þtýlèþhèètþ wîth çómmèñtþ åt thè bègîññîñg måý bè rèjèçtèð.)</message>
 	<message key="editor.issues.removeStyleFile">Rèmóvè þtýlèþhèèt?</message>
 	<message key="editor.issues.coverPageCaption">Çóvèr çåptîóñ</message>
-	<message key="editor.issues.showCoverPage">Çrèåtè çüþtóm çóvèr pågè fór thîþ îþþüè.</message>
 	<message key="editor.issues.openAccess">Òpèñ åççèþþ</message>
 	<message key="editor.issues.subscription">ßübþçrîptîóñ</message>
 	<message key="editor.issues.identification">Îðèñtîfîçåtîóñ</message>
@@ -1501,7 +1436,6 @@ Låtèþt îþ ðåtè óf móþt rèçèñtlý åççèptèð rèvîèw.<br/>
 	<message key="sectionEditor.regrets.regretsAndCancels">Rèvîèwèr Règrètþ &amp; Çåñçèllåtîóñþ</message>
 	<message key="sectionEditor.regrets.regret">Règrèt</message>
 	<message key="sectionEditor.regrets.result">Rèþült</message>
-	<message key="sectionEditor.review.enrollReviewer">Éñróll åñ Éxîþtîñg Üþèr Æþ Rèvîèwèr</message>
 	<message key="sectionEditor.review.createReviewer">Çrèåtè Ñèw Rèvîèwèr</message>
 	<message key="layoutEditor.activeEditorialAssignments">Æçtîvè Éðîtórîål Æþþîgñmèñtþ</message>
 	<message key="layoutEditor.completedEditorialAssignments">Çómplètèð Éðîtórîål Æþþîgñmèñtþ</message>
@@ -1519,7 +1453,6 @@ Låtèþt îþ ðåtè óf móþt rèçèñtlý åççèptèð rèvîèw.<br/>
 	<message key="reviewer.article.notifyTheEditor">Ñótîfý Thè Éðîtór</message>
 	<message key="reviewer.article.canDoReview">Wîll ðó thè rèvîèw</message>
 	<message key="reviewer.article.cannotDoReview">Üñåblè tó ðó thè rèvîèw</message>
-	<message key="reviewer.article.restrictedFileAccess">ßübmîþþîóñ wîll bè måðè åvåîlåblè, îf åñð whèñ rèvîèwèr ågrèèþ tó üñðèrtåkè rèvîèw</message>
 	<message key="reviewer.article.submissionEditor">ßübmîþþîóñ Éðîtór</message>
 	<message key="reviewer.article.reviewerCommentsDescription">Týpè ór påþtè îñ rèvîèw çómmèñtþ hèrè</message>
 	<message key="reviewer.article.editorToEnter">Éðîtór Tó Éñtèr</message>
@@ -1567,7 +1500,6 @@ Låtèþt îþ ðåtè óf móþt rèçèñtlý åççèptèð rèvîèw.<br/>
 	<message key="author.submit.submitArticle">ßübmît åñ Ærtîçlè</message>
 	<message key="author.submit.stepsToSubmit">Fîvè ßtèpþ tó ßübmît</message>
 	<message key="author.submit.startHereTitle">ßtårt å Ñèw ßübmîþþîóñ</message>
-	<message key="author.submit.startHereLink"><![CDATA[<a href="{$submitUrl}" class="action">Çlîçk hèrè</a> tó gó tó þtèp óñè óf thè fîvè-þtèp þübmîþþîóñ próçèþþ.]]></message>
 	<message key="author.submit.step1">ßtèp 1. ßtårtîñg thè ßübmîþþîóñ</message>
 	<message key="author.submit.step2">ßtèp 2. Éñtèrîñg thè ßübmîþþîóñ'þ Mètåðåtå</message>
 	<message key="author.submit.step3">ßtèp 3. Üplóåðîñg thè ßübmîþþîóñ</message>
@@ -1586,9 +1518,7 @@ Låtèþt îþ ðåtè óf móþt rèçèñtlý åççèptèð rèvîèw.<br/>
 	<message key="author.submissions.confirmDelete">Ærè ýóü þürè ýóü wåñt tó ðèlètè thîþ îñçómplètè þübmîþþîóñ?</message>
 	<message key="author.submissions.viewStatus">Vîèw ßtåtüþ</message>
 	<message key="author.submissions.noSubmissions">Ñó þübmîþþîóñþ.</message>
-	<message key="author.submit.howToSubmit"><![CDATA[Æüthórþ þübmît îtèmþ tó thîþ jóürñål thróügh thîþ wèb þîtè îñ å fîvè-þtèp próçèþþ fór üplóåðîñg thè måñüþçrîpt åñð rèlèvåñt îñfórmåtîóñ (wîth åñ óptîóñ tó üplóåð, åþ wèll, þüpplèmèñtårý fîlèþ, þüçh åþ rèþèårçh ðåtå åñð îñþtrümèñtþ). Îf ðîffîçültîèþ årè èñçóüñtèrèð îñ thîþ próçèþþ, çóñtåçt <a href="mailto:{$supportEmail}">{$supportName}</a> bý èmåîl ór phóñè {$supportPhone} fór åþþîþtåñçè.]]></message>
 	<message key="author.submit.journalSection">Jóürñål ßèçtîóñ</message>
-	<message key="author.submit.journalSectionDescription"><![CDATA[ßèlèçt thè åppróprîåtè þèçtîóñ fór thîþ þübmîþþîóñ (þèè ßèçtîóñþ åñð Pólîçîèþ îñ <a href="{$aboutUrl}" target="_new">Æbóüt</a> thè Jóürñål).]]></message>
 	<message key="author.submit.selectSection">Plèåþè þèlèçt å þèçtîóñ...</message>
 	<message key="author.submit.submissionChecklist">ßübmîþþîóñ Çhèçklîþt</message>
 	<message key="author.submit.submissionChecklistDescription">Îñðîçåtè thåt thîþ þübmîþþîóñ îþ rèåðý tó bè çóñþîðèrèð bý thîþ jóürñål bý çhèçkîñg óff thè fóllówîñg (çómmèñtþ tó thè èðîtór çåñ bè åððèð bèlów).</message>
@@ -1598,15 +1528,10 @@ Låtèþt îþ ðåtè óf móþt rèçèñtlý åççèptèð rèvîèw.<br/>
 	<message key="author.submit.commentsForEditor">Çómmèñtþ fór thè Éðîtór</message>
 	<message key="author.submit.comments">Éñtèr tèxt (óptîóñål)</message>
 	<message key="author.submit.form.sectionRequired">Plèåþè þèlèçt åñ åppróprîåtè jóürñål þèçtîóñ fór thîþ þübmîþþîóñ.</message>
-	<message key="author.submit.metadataDescription">Thîþ jóürñål gåthèrþ mètåðåtå åbóüt èåçh þübmîþþîóñ, åççórðîñg tó thè þtåñðårðþ þèt bý thè Òpèñ Ærçhîvèþ Îñîtîåtîvè, whîçh îþ thè èmèrgîñg óñlîñè þtåñðårð fór îðèñtîfýîñg rèþèårçh rèþóürçèþ. Thîþ èñåblèþ çóllèçtîvè åñð åççüråtè þèårçhîñg åçróþþ ÒÆÎ ðåtåbåþèþ, îñçrèåþîñg thè lîkèlîhóóð thåt rèåðèrþ wîll fîñð þübmîþþîóñþ þüçh åþ thîþ óñè. Éðîtórþ måý îñþîþt thåt mètåðåtå bè próvîðèð bèfórè îñîtîåtîñg thè èðîtórîål próçèþþ.</message>
 	<message key="author.submit.privacyStatement">Jóürñål'þ Prîvåçý ßtåtèmèñt</message>
-	<message key="author.submit.authorsDescription">Fór þübmîþþîóñþ wîth mórè thåñ óñè åüthór, órðèr åüthórþ åþ thèý årè tó åppèår óñ çîtåtîóñ.</message>
-	<message key="author.submit.reorderAuthorName">Rèórðèr åüthór'þ ñåmè</message>
-	<message key="author.submit.reorderInstructions">Üþè årrówþ tó çhåñgè thè órðèr îñ whîçh thè åüthórþ ñåmèþ årè tó åppèår wîth thè þübmîþþîóñ.</message>
 	<message key="author.submit.selectPrincipalContact">Prîñçîpål çóñtåçt fór èðîtórîål çórrèþpóñðèñçè.</message>
 	<message key="author.submit.addAuthor">Æðð Æüthór</message>
 	<message key="author.submit.deleteAuthor">Ðèlètè Æüthór</message>
-	<message key="author.submit.submissionIndexingDescription">Çhóóþè tèrmþ thåt bèþt ðèþçrîbè thè þübmîþþîóñ'þ çóñtèñt fóllówîñg thè çåtègórîèþ üþèð bý thîþ jóürñål, åñð èxåmplèþ próvîðèð bý thè èðîtór. ßèpåråtè tèrmþ wîth å þèmî-çólóñ (tèrm1; tèrm2; tèrm3).</message>
 	<message key="author.submit.submissionSupportingAgencies">ßüppórtîñg Ægèñçîèþ</message>
 	<message key="author.submit.submissionSupportingAgenciesDescription">Îðèñtîfý ågèñçîèþ thåt próvîðèð füñðîñg ór þüppórt fór thè wórk prèþèñtèð îñ thîþ þübmîþþîóñ.</message>
 	<message key="author.submit.agencies">Ægèñçîèþ</message>
@@ -1633,7 +1558,6 @@ Thè fîlè çåñ bè vîèwèð bý çlîçkîñg óñ thè fîlè ñåmè. Æ
 	<message key="author.submit.replaceSubmissionFile">Rèplåçè þübmîþþîóñ fîlè</message>
 	<message key="author.submit.noSubmissionFile">Ñó þübmîþþîóñ fîlè üplóåðèð.</message>
 	<message key="author.submit.noSubmissionConfirm">Ærè ýóü þürè ýóü wîþh tó çóñtîñüè wîthóüt üplóåðîñg å þübmîþþîóñ fîlè?</message>
-	<message key="author.submit.supplementaryFilesInstructions">Thîþ óptîóñål þtèp îñ thè þübmîþþîóñ próçèþþ ållówþ åüthórþ tó åðð fîlèþ tó thè þübmîþþîóñ whîçh împróvè thè çóñtrîbütîóñ whîçh thè þübmîþþîóñ måkèþ. ßüpplèmèñtårý Fîlèþ mîght îñçlüðè (å) rèþèårçh îñþtrümèñtþ, (b) ðåtå þètþ, whîçh çómplý wîth thè tèrmþ óf thè þtüðý'þ rèþèårçh èthîçþ rèvîèw, (ç) þóürçèþ thåt óthèrwîþè wóülð bè üñåvåîlåblè tó rèåðèrþ, ór (ð) fîgürèþ ór tåblèþ thåt çåññót bè îñtègråtèð îñtó thè tèxt îtþèlf. Thèþè fîlèþ årè ålþó îñðèxèð bý thè åüthór, îðèñtîfýîñg thèîr rèlåtîóñ tó thè þübmîþþîóñ, åþ wèll åþ thèîr ówñèrþhîp. ßüpplèmèñtårý Fîlèþ çåñ bè üplóåðèð îñ åñý fîlè fórmåt åñð wîll bè måðè åvåîlåblè tó rèåðèrþ îñ thèîr órîgîñål fórmåt. Thèý çåñ bè þhårèð wîth pèèr rèvîèwèrþ, îf thèý ðó ñót çómprómîþè thè blîñð rèvîèw.</message>
 	<message key="author.submit.noSupplementaryFiles">Ñó þüpplèmèñtårý fîlèþ håvè bèèñ åððèð tó thîþ þübmîþþîóñ.</message>
 	<message key="author.submit.backToSupplementaryFiles">Båçk tó ßüpplèmèñtårý Fîlèþ</message>
 	<message key="author.submit.confirmDeleteSuppFile">Ærè ýóü þürè ýóü wåñt tó ðèlètè thîþ þüpplèmèñtårý fîlè?</message>
@@ -1664,7 +1588,6 @@ Thè fîlè çåñ bè vîèwèð bý çlîçkîñg óñ thè fîlè ñåmè. Æ
 	<message key="author.submit.suppFile.form.descriptionRequired">Plèåþè èñtèr å ðèþçrîptîóñ.</message>
 	<message key="author.suppFile.suppFilePublicIdentificationExists">Püblîç þüpplèmèñtål fîlè îðèñtîfîçåtîóñ ålrèåðý èxîþtþ.</message>
 	<message key="author.suppFile.publicSuppFileIdentifier">Püblîç þüpplèmèñtål fîlè îðèñtîfîèr</message>
-	<message key="author.submit.confirmationDescription">Wîth thè prèvîóüþ fóür þtèpþ óf thè þübmîþþîóñ próçèþþ çómplètèð, çlîçk Fîñîþh ßübmîþþîóñ tó þübmît ýóür måñüþçrîpt tó {$journalTitle}. Ýóü wîll rèçèîvè åñ åçkñówlèðgèmèñt bý èmåîl åñð wîll bè åblè tó vîèw ýóür þübmîþþîóñ'þ prógrèþþ thróügh thè èðîtórîål próçèþþ bý lóggîñg îñ tó thè jóürñål wèb þîtè. Thåñk ýóü fór ýóür îñtèrèþt îñ püblîþhîñg wîth {$journalTitle}.</message>
 	<message key="author.submit.noFiles">Ñó fîlèþ håvè bèèñ åttåçhèð tó thîþ þübmîþþîóñ.</message>
 	<message key="author.submit.filesSummary">Fîlè ßümmårý</message>
 	<message key="author.submit.finishSubmission">Fîñîþh ßübmîþþîóñ</message>
@@ -1779,7 +1702,6 @@ Thè fîlè çåñ bè vîèwèð bý çlîçkîñg óñ thè fîlè ñåmè. Æ
 	<message key="user.login.lostPassword.invalidHash">ßórrý, thè lîñk ýóü çlîçkèð óñ håþ èxpîrèð ór îþ ñót vålîð. Plèåþè trý rèþèttîñg ýóür påþþwórð ågåîñ.</message>
 	<message key="user.login.lostPassword.passwordSent">Æ ñèw påþþwórð håþ bèèñ þèñt tó ýóür èmåîl åððrèþþ. Ýóü måý ñów lógîñ tó thè þîtè wîth ýóür ñèw påþþwórð.</message>
 	<message key="user.login.changePasswordInstructions"><![CDATA[Ýóü müþt çhóóþè å ñèw påþþwórð bèfórè ýóü çåñ lóg îñ tó thîþ þîtè.<br /><br />Plèåþè èñtèr ýóür üþèrñåmè åñð ýóür çürrèñt åñð ñèw påþþwórðþ bèlów tó çhåñgè thè påþþwórð fór ýóür åççóüñt.]]></message>
-	<message key="user.login.rememberMe">Rèmèmbèr mè</message>
 	<message key="user.login.registeredEmail">Règîþtèrèð üþèr'þ èmåîl</message>
 	<message key="author.submit.authorSubmitLoginMessage">Æ üþèr åççóüñt îþ rèqüîrèð tó þübmît tó thîþ jóürñål. Thîþ ållówþ óür èðîtórþ tó tråçk ýóür þübmîþþîóñþ åñð çóñtåçt ýóü whèñ thè þtåtüþ óf ýóür þübmîþþîóñ çhåñgèþ, ór îf åððîtîóñål îñfórmåtîóñ îþ rèqüîrèð fróm ýóü.</message>
 	<message key="user.profile.editProfile">Éðît Prófîlè</message>
@@ -1940,7 +1862,6 @@ Thè fîlè çåñ bè vîèwèð bý çlîçkîñg óñ thè fîlè ñåmè. Æ
 	<message key="help.relatedTopics">Rèlåtèð Tópîçþ</message>
 	<message key="help.search">ßèårçh Hèlp</message>
 	<message key="help.searchFor">ßèårçh hèlp tópîçþ fór</message>
-	<message key="help.searchResultsFor">Rèþültþ fór</message>
 	<message key="installer.ojsInstallation">ÒJß Îñþtållåtîóñ</message>
 	<message key="installer.ojsUpgrade">ÒJß Üpgråðè</message>
 	<message key="installer.installationInstructions"><![CDATA[<h4>ÒJß Vèrþîóñ {$version}</h4>
@@ -2000,9 +1921,7 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="installer.clientCharset">Çlîèñt çhåråçtèr þèt</message>
 	<message key="installer.clientCharsetInstructions">Thè èñçóðîñg tó üþè fór ðåtå þèñt tó åñð rèçèîvèð fróm brówþèrþ.</message>
 	<message key="installer.connectionCharset">Çóññèçtîóñ çhåråçtèr þèt</message>
-	<message key="installer.connectionCharsetInstructions"><![CDATA[Thè èñçóðîñg tó üþè fór ðåtå þèñt tó åñð rèçèîvèð fróm thè ðåtåbåþè. Thîþ þhóülð bè thè þåmè åþ thè çlîèñt çhåråçtèr þèt. Ñótè thåt thîþ çåpåbîlîtý îþ óñlý þüppórtèð wîth MýßQL >= 4.1.1 or PostgreSQL >= 7.1. Select "Not available" if your database server does not meet these requirements.]]></message>
 	<message key="installer.databaseCharset">Ðåtåbåþè çhåråçtèr þèt</message>
-	<message key="installer.databaseCharsetInstructions"><![CDATA[Thè èñçóðîñg tó üþè fór ðåtå þtórèð îñ thè ðåtåbåþè. Ñótè thåt thîþ çåpåbîlîtý îþ óñlý þüppórtèð wîth MýßQL >= 4.1.1 or PostgreSQL >= 7.1. Select "Not available" if your database server does not meet these requirements.]]></message>
 	<message key="installer.locale">Lóçålè</message>
 	<message key="installer.fileSettings">Fîlè ßèttîñgþ</message>
 	<message key="installer.filesDir">Ðîrèçtórý fór üplóåðþ</message>
@@ -2120,14 +2039,11 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="rt.admin.options">Jóürñål Îtèm Tóólþ</message>
 	<message key="rt.admin.relatedItems">Rèlåtèð Îtèm Tóólþ</message>
 	<message key="rt.admin.settings.disableRelatedItems">Ðîþåblè Rèlåtèð Îtèmþ</message>
-	<message key="rt.admin.settings.bibFormat">Bîblîógråphîç fórmåt</message>
 	<message key="rt.admin.settings.captureCite">Hów tó çîtè îtèm (próvîðèþ bîblîógråphîç ðètåîl fór îtèm).</message>
 	<message key="rt.admin.settings.viewMetadata">Îñðèxîñg mètåðåtå (ðîþplåýþ îtèm'þ îñðèxîñg mètåðåtå próvîðèð bý åüthór åñð þýþtèm).</message>
 	<message key="rt.admin.settings.supplementaryFiles">ßüpplèmèñtårý fîlèþ (ðîþplåýþ lîþt óf fîlèþ åüthór îñçlüðèð wîth þübmîþþîóñ).</message>
-	<message key="rt.admin.settings.printerFriendly">Prîñt vèrþîóñ (Lèåðþ tó å prîñtèr-frîèñðlý vèrþîóñ óf åñ îtèm).</message>
 	<message key="rt.admin.settings.authorBio">Æbóüt thè åüthór (ðîþplåýþ thè bîó þtåtèmèñtþ èñtèrèð bý thè åüthór).</message>
 	<message key="rt.admin.settings.defineTerms">Lóók üp tèrmþ (èñåblèþ rèåðèrþ tó ðóüblè-çlîçk óñ åñý wórð îñ åñ îtèm åñð þèñð thè wórð tó å ðîçtîóñårý).</message>
-	<message key="rt.admin.settings.addComment">Æðð çómmèñt (èñåblèþ rèåðèrþ tó póþt çómmèñtþ, wîth Jóürñål Måñågèr åblè tó ðèlètè).</message>
 	<message key="rt.admin.settings.addComment.authenticated">Üþèrþ müþt bè règîþtèrèð åñð lóg îñtó tó póþt, wîth åñóñýmîtý ñót pèrmîttèð.</message>
 	<message key="rt.admin.settings.addComment.anonymous">Üþèrþ müþt bè règîþtèrèð åñð lóg îñtó tó póþt, wîth åñóñýmîtý pèrmîttèð.</message>
 	<message key="rt.admin.settings.addComment.unauthenticated">Üþèrþ ðó ñót ñèèð tó bè règîþtèrèð tó póþt, wîth åñóñýmîtý pèrmîttèð.</message>
@@ -2227,12 +2143,6 @@ Vålîðåtîóñ måý fåîl óñ þèårçh ÜRLþ thåt rèqüîrè póþtè
 	<message key="rt.suppFiles.download">Ðówñlóåð</message>
 	<message key="rt.captureCite">Hów tó çîtè îtèm</message>
 	<message key="rt.captureCite.online">Òñlîñè</message>
-	<message key="rt.captureCite.available">Ævåîlåblè:</message>
-	<message key="rt.captureCite.capture">Ðówñlóåð Çîtåtîóñ</message>
-	<message key="rt.captureCite.acaoLocation">Ñórth Æmèrîçå</message>
-	<message key="rt.captureCite.capture.endNote"><![CDATA[<a href="{$url}">ÉñðÑótè</a> - ÉñðÑótè fórmåt (Måçîñtóþh &amp;åmp; Wîñðówþ)]]></message>
-	<message key="rt.captureCite.capture.referenceManager"><![CDATA[<a href="{$url}">Rèfèrèñçè Måñågèr</a> - RÎß fórmåt (Wîñðówþ óñlý)]]></message>
-	<message key="rt.captureCite.capture.proCite"><![CDATA[<a href="{$url}">PróÇîtè</a> - RÎß fórmåt (Måçîñtóþh &amp;åmp; Wîñðówþ)]]></message>
 	<message key="rt.reviewPolicy">Rèvîèw pólîçý</message>
 	<message key="rt.printVersion">Prîñt vèrþîóñ</message>
 	<message key="rt.lookUp">Lóók üp tèrmþ</message>
@@ -2274,7 +2184,6 @@ Vålîðåtîóñ måý fåîl óñ þèårçh ÜRLþ thåt rèqüîrè póþtè
 	<message key="debug.notes.helpMappingLoad">Rèlóåðèð XML hèlp måppîñg fîlè {$filename} îñ þèårçh óf {$id}.</message>
 	<message key="default.journalSettings.checklist.notPreviouslyPublished">Thè þübmîþþîóñ håþ ñót bèèñ prèvîóüþlý püblîþhèð, ñór îþ ît bèfórè åñóthèr jóürñål fór çóñþîðèråtîóñ (ór åñ èxplåñåtîóñ håþ bèèñ próvîðèð îñ Çómmèñtþ tó thè Éðîtór).</message>
 	<message key="default.journalSettings.checklist.fileFormat">Thè þübmîþþîóñ fîlè îþ îñ Mîçróþóft Wórð, RTF, ór WórðPèrfèçt ðóçümèñt fîlè fórmåt.</message>
-	<message key="default.journalSettings.checklist.addressesLinked"><![CDATA[Whèñ åvåîlåblè, thè ÜRLþ tó åççèþþ rèfèrèñçèþ óñlîñè årè próvîðèð, îñçlüðîñg thóþè fór ópèñ åççèþþ vèrþîóñþ óf thè rèfèrèñçè. Thè ÜRLþ årè rèåðý tó çlîçk (è.g., <a href="http://pkp.sfu.ca">http://pkp.þfü.çå</a>).]]></message>
 	<message key="default.journalSettings.checklist.submissionAppearance">Thè tèxt îþ þîñglè-þpåçèð; üþèþ å 12-póîñt fóñt; èmplóýþ îtålîçþ, råthèr thåñ üñðèrlîñîñg (èxçèpt wîth ÜRL åððrèþþèþ); åñð åll îllüþtråtîóñþ, fîgürèþ, åñð tåblèþ årè plåçèð wîthîñ thè tèxt åt thè åppróprîåtè póîñtþ, råthèr thåñ åt thè èñð.</message>
 	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[Thè tèxt åðhèrèþ tó thè þtýlîþtîç åñð bîblîógråphîç rèqüîrèmèñtþ óütlîñèð îñ thè <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Æüthór Güîðèlîñèþ</a>, whîçh îþ fóüñð îñ Æbóüt thè Jóürñål.]]></message>
 	<message key="default.journalSettings.checklist.anonymous"><![CDATA[Îf þübmîttîñg tó å pèèr-rèvîèwèð þèçtîóñ óf thè jóürñål, thè îñþtrüçtîóñþ îñ <a href="javascript:openHelp('{$indexUrl}/{$journalPath}/help/view/editorial/topic/000044')">Éñþürîñg å Blîñð Rèvîèw</a>) håvè bèèñ fóllówèð.]]></message>

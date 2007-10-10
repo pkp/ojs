@@ -24,9 +24,9 @@
 		<row>
 			<field name="email_key">PASSWORD_RESET_CONFIRM</field>
 			<field name="subject">Confirmation de la réinitialisation du mot de passe</field>
-			<field name="body"><![CDATA[Bonjour,
+			<field name="body">Bonjour,
 
-Nous avons reçu une demande concernant la réinitialisation de votre mot de passe pour le site Web {$siteTitle}.
+Nous avons reçu une demande concernant la réinitialisation de votre mot de passe pour le site web {$siteTitle}.
 
 Si vous n'avez pas fait cette demande, veuillez ne pas tenir compte du présent message, votre mot de passe restera le même. Si vous voulez réinitialiser votre mot de passe, cliquez sur l'URL et un nouveau mot de passe vous sera envoyé par courriel sous peu.
 
@@ -35,13 +35,15 @@ Réinitialisation du mot de passe : {$url}
 Merci pour votre collaboration.
 Cordialement.
 
-{$principalContactSignature}]]></field>
-			<field name="description"><![CDATA[Ce courriel est envoyé aux usagers qui nous avisent avoir oublié leur mot de passe ou qui sont incapables d'ouvrir une session. Il fournit le lien URL pour réinitialiser leur mot de passe.]]></field>
+{$principalContactSignature}</field>
+			<field name="description">Ce courriel est envoyé aux usagers qui nous avisent avoir oublié leur mot de passe ou qui sont incapables d'ouvrir une session. Il fournit le lien URL pour réinitialiser leur mot de passe.</field>
 		</row>
 		<row>
 			<field name="email_key">PASSWORD_RESET</field>
 			<field name="subject">Réinitialisation du mot de passe</field>
-			<field name="body"><![CDATA[Votre mot de passe pour le site Web {$siteTitle} a été réinitialisé avec succès. Veuillez conserver précieusement votre nom d'utilisateur ainsi que votre mot de passe.  Vous en aurez besoin pour chacune de vos actions dans la revue.
+			<field name="body">Bonjour,
+
+Votre mot de passe pour le site web {$siteTitle} a été réinitialisé avec succès. Veuillez conserver précieusement votre nom d'utilisateur ainsi que votre mot de passe.  Vous en aurez besoin pour chacune de vos actions dans la revue.
 
 Votre nom d'utilisateur : {$username}
 Votre nouveau mot de passe : {$password}
@@ -49,13 +51,15 @@ Votre nouveau mot de passe : {$password}
 Merci pour votre collaboration.
 Cordialement.
 
-{$principalContactSignature}]]></field>
-			<field name="description"><![CDATA[Ce courriel est envoyé aux usagers inscrits lorsqu'ils ont réussi à réinitialiser leur mot de passe en ayant suivi la procédure décrite dans le courriel « Confirmation de la réinitialisation du mot de passe ».]]></field>
+{$principalContactSignature}</field>
+			<field name="description">Ce courriel est envoyé aux usagers inscrits lorsqu'ils ont réussi à réinitialiser leur mot de passe en ayant suivi la procédure décrite dans le courriel « Confirmation de la réinitialisation du mot de passe ».</field>
 		</row>
 		<row>
 			<field name="email_key">USER_REGISTER</field>
-			<field name="subject"><![CDATA[Inscription d'un nouvel usager]]></field>
-			<field name="body"><![CDATA[Nous vous remercions de vous être inscrit en tant qu'usager pour {$journalName}. Veuillez conserver précieusement votre nom d'utilisateur et votre mot de passe.  Vous en aurez besoin pour toutes vos actions dans la revue.
+			<field name="subject">Inscription d'un nouvel usager</field>
+			<field name="body">Bonjour,
+
+Nous vous remercions de vous être inscrit en tant qu'usager pour {$journalName}. Veuillez conserver précieusement votre nom d'utilisateur et votre mot de passe.  Vous en aurez besoin pour toutes vos actions dans la revue.
 
 Nom d'utilisateur : {$username}
 Mot de passe : {$password}
@@ -63,17 +67,19 @@ Mot de passe : {$password}
 Merci pour votre collaboration.
 Cordialement.
 
-{$principalContactSignature}]]></field>
-			<field name="description"><![CDATA[Ce courriel est envoyé aux usagers nouvellement inscrits pour leur souhaiter la bienvenue à la revue et leur faire connaître leur nom d'usager et leur mot de passe.]]></field>
+{$principalContactSignature}</field>
+			<field name="description">Ce courriel est envoyé aux usagers nouvellement inscrits pour leur souhaiter la bienvenue à la revue et leur faire connaître leur nom d'usager et leur mot de passe.</field>
 		</row>
 		<row>
 			<field name="email_key">PUBLISH_NOTIFY</field>
 			<field name="subject">Parution du dernier numéro</field>
 			<field name="body">Chers lecteurs,
 
-Le plus récent numéro de {$journalName} vient d'être publié à l'adresse suivante : {$journalUrl}. Nous vous invitons à consulter la table des matières, puis à visiter notre site Web pour y lire les articles qui vous intéressent.
+Le plus récent numéro de {$journalName} vient d'être publié à l'adresse suivante : {$journalUrl}. Nous vous invitons à consulter la table des matières, puis à visiter notre site web pour y lire les articles qui vous intéressent.
 
 Nous vous remercions de l'intérêt que vous portez à notre revue.
+
+Cordialement.
 
 {$editorialContactSignature}</field>
 			<field name="description">Ce courriel est envoyé à tous les lecteurs inscrits, via le lien «Notification aux usagers» sur la page d'accueil de l'éditeur. Il avise les lecteurs qu'un nouveau numéro est publié et les invite à visiter la revue en cliquant sur le lien fourni.</field>
@@ -81,9 +87,9 @@ Nous vous remercions de l'intérêt que vous portez à notre revue.
 		<row>
 			<field name="email_key">LOCKSS_EXISTING_ARCHIVE</field>
 			<field name="subject">Archiving Request for {$journalName}</field>
-			<field name="body"><![CDATA[Cher bibliothécaire de l'Université]
+			<field name="body"><![CDATA[Cher bibliothécaire de l'Université
 
-{$journalName} <{$journalUrl}> est une revue pour laquelle un membre de votre faculté, [nom du membre], sert à titre de [titre de la position occupée]. La revue cherche à établir des archives LOCKSS (Lots of Copies Keep Stuff Safe - Plusieurs exemplaires assurent la sécurité) se conformant à l'archivage de la bibliothèque de cette université et d'autres. 
+{$journalName} <{$journalUrl}> est une revue pour laquelle un membre de votre faculté, [nom du membre], agit à titre de [titre de la position occupée]. La revue cherche à établir des archives LOCKSS (Lots of Copies Keep Stuff Safe - Plusieurs exemplaires qui assurent la sécurité) se conformant à l'archivage de la bibliothèque de votre université ou à d'autres universités.
 
 [Brève description de la revue]
 
@@ -91,7 +97,9 @@ L'adresse URL pour le LOCKSS Publisher Manifest pour notre revue est: {$journalU
 
 Nous savons que vous participez déjà à LOCKSS. Si nous pouvons vous fournir des métadonnées supplémentaires afin d'enregistrer notre revue avec votre version de LOCKSS, il nous fera plaisir de vous les fournir.
 
-Merci,
+Merci pour votre collaboration.
+Cordialement.
+
 {$principalContactSignature}]]></field>
 			<field name="description">Ce courriel demande à un conservateur d'archives LOCKSS de considérer d'inclure cette revue dans leurs archives. Il fournit l'adresse URL du LOCKSS Publisher Manifest de la revue.</field>
 		</row>
@@ -104,13 +112,15 @@ Merci,
 
 [Brève description de la revue]
 
-Le programme LOCKSS <http://lockss.stanford.edu/>, une initiative de bibliothécaires et d'éditeurs internationaux, est une belle démonstration d'un dépôt d'archives assurant la préservation des documents. Voir détails ci-dessous. Le logiciel, lequel fonctionne sur tout ordinateur personnel, est gratuit. Il est facile de le mettre en ligne et ne requiert que très peu d'entretien.
+Le programme LOCKSS <http://lockss.stanford.edu/>, une initiative de bibliothécaires et d'éditeurs internationaux, est une belle démonstration d'un dépôt d'archives assurant la préservation des documents. Voir les détails ci-dessous. Le logiciel est gratuit et fonctionne sur tout ordinateur personnel.  Il est facile de le mettre en ligne et ne requiert que très peu d'entretien.
 
-Pour nous aider à l'archivage de notre revue, nous vous invitons à devenir membre de la communauté LOCKSS, pour aider à la collection et à la préservation des titres produits par votre faculté et par les autres savants à travers le monde. Pour ce faire, veuillez demander à quelqu'un de votre personnel de visiter le site Internet de LOCKSS pour voir les informations sur le fonctionnement du système. 
+Pour nous aider à l'archivage de notre revue, nous vous invitons à devenir membre de la communauté LOCKSS, pour aider la collection et a préservation des titres produits par votre faculté et par les autres savants à travers le monde. Pour ce faire, veuillez demander à quelqu'un de votre personnel de visiter le site Internet de LOCKSS pour voir les informations sur le fonctionnement du système. 
 
-J'espère vous lire sous peu pour apprendre s'il vous est possible de fournir un support d'archivage pour cette revue. 
+Nous attendons de vos nouvelles pour savoir s'il est possible pour vous de fournir un support d'archivage pour cette revue. 
 
-Merci à l'avance,
+Merci pour votre collaboration.
+Cordialement.
+
 {$principalContactSignature}]]></field>
 			<field name="description">Ce courriel encourage le récipiendaire à participer à l'initiative LOCKSS et d'inclure cette revue dans leur archives. Il fournit de l'information au sujet de LOCKSS et des façons de s'impliquer dans le projet.</field>
 		</row>
@@ -124,14 +134,18 @@ Merci à l'avance,
 		<row>
 			<field name="email_key">SUBMISSION_ACK</field>
 			<field name="subject">Accusé réception de la soumission</field>
-			<field name="body">{$authorName},
+			<field name="body">Bonjour,
 
-Nous vous remercions d'avoir soumis le manuscrit intitulé « {$articleTitle} » à {$journalName}. Grâce à notre système de gestion en ligne, vous pourrez suivre votre soumission tout au long du processus d'édition en accédant au site Web de la revue.
+Nous vous remercions d'avoir soumis le manuscrit intitulé « {$articleTitle} » à la revue {$journalName}. Grâce à notre système de gestion en ligne, vous pourrez suivre votre soumission tout au long du processus d'édition simplement en accédant au site web de la revue.
 
 URL du manuscrit : {$submissionUrl}
 Nom d'utilisateur : {$authorUsername}
 
-Si vous avez des questions, n'hésitez pas à communiquer avec nous. Nous vous remercions d'avoir pensé à notre revue pour la publication de vos travaux.
+Si vous avez des questions, n'hésitez pas à communiquer avec nous. 
+
+Nous vous remercions d'avoir pensé à notre revue pour la publication de vos travaux.
+
+Cordialement.
 
 {$editorialContactSignature}</field>
 			<field name="description">Ce courriel, lorsque fonctionnel, est envoyé automatiquement à un auteur quand il ou elle a complété le processus de soumission d'un manuscrit à la revue. Il fournit les informations sur comment suivre la soumission à travers le processus éditorial, et remercie l'auteur de sa soumission.</field>
@@ -139,18 +153,25 @@ Si vous avez des questions, n'hésitez pas à communiquer avec nous. Nous vous r
 		<row>
 			<field name="email_key">SUBMISSION_UNSUITABLE</field>
 			<field name="subject">Présentation non conforme</field>
-			<field name="body">{$authorName}:
+			<field name="body">Bonjour,
 
-Une évaluation initiale de "{$articleTitle}" a démontré clairement que cette soumission n'entre pas dans le domaine de {$journalName}. Je vous suggère de consulter la description de cette revue en allant à « Au sujet de la revue » ainsi que de voir le contenu de la revue pour en connaître plus sur les ouvrages que nous publions. Vous pourriez aussi considérer soumettre ce manuscrit à une autre revue plus appropriée. 
+Une évaluation initiale de votre manuscrit intitulé « {$articleTitle} » a démontré que votre soumission ne se conforme pas aux orientations de la revue {$journalName}. 
+
+Nous vous suggérons de consulter la description de cette revue en cliquant sur l'onglet « Au sujet de la revue » et en lisant le contenu de la revue pour en connaître davantage sur les articles que nous publions. 
+
+Vous pourriez aussi considérer soumettre votre manuscrit à une revue plus appropriée. 
+
+Cordialement.
 
 {$editorialContactSignature}</field>
+			<field name="description"></field>
 		</row>
 		<row>
 			<field name="email_key">SUBMISSION_COMMENT</field>
 			<field name="subject">Commentaires sur une soumission</field>
-			<field name="body">{$name}:
+			<field name="body">Bonjour,
 
-{$commentName} a ajouté un commentaire à la soumission, "{$articleTitle}" dans {$journalName}:
+{$commentName} a ajouté un commentaire à la soumission intitulée « {$articleTitle} » dans la revue {$journalName}:
 
 {$comments}</field>
 			<field name="description">Ce courriel avise diverses personnes impliquées dans le processus éditorial qu'un nouveau commentaire a été ajouté.</field>
@@ -158,7 +179,13 @@ Une évaluation initiale de "{$articleTitle}" a démontré clairement que cette 
 		<row>
 			<field name="email_key">SUBMISSION_DECISION_REVIEWERS</field>
 			<field name="subject">Décision concernant le manuscrit intitulé « {$articleTitle} »</field>
-			<field name="body">Puisque vous avez été l'un des évaluateurs du manuscrit intitulé « {$articleTitle} » pour {$journalName}, je vous envoie les évaluations et la décision du rédacteur en chef. Je vous remercie à nouveau de votre contribution importante à ce processus.
+			<field name="body">Bonjour,
+
+Puisque vous avez été l'un des évaluateurs du manuscrit intitulé « {$articleTitle} » pour la revue {$journalName}, nous vous faisons parvenir les évaluations et la décision du rédacteur en chef.  
+
+À nouveau, nous vous remercions pour votre contribution importante à notre processus éditorial.
+
+Cordialement.
 
 {$editorialContactSignature}
 
@@ -175,14 +202,17 @@ Une évaluation initiale de "{$articleTitle}" a démontré clairement que cette 
 		<row>
 			<field name="email_key">EDITOR_ASSIGN</field>
 			<field name="subject">Assignation d'un manuscrit</field>
-			<field name="body">{$editorialContactName},
+			<field name="body">Bonjour,
 
-Le manuscrit intitulé « {$articleTitle} » pour {$journalName} vous a été attribué. Vous êtes donc chargé, en tant que chef de rubrique, de suivre cet article durant le processus de l'évaluation.
+Le manuscrit intitulé « {$articleTitle} » pour la revue {$journalName} vous a été attribué. Vous êtes conséquemment responsable, en tant que chef de rubrique, de faire cheminer cet article à travers le processus d'évaluation.
 
 URL de la soumission : {$submissionUrl}
 Nom d'utilisateur : {$editorUsername}
 
-Merci,
+Merci pour votre collaboration.
+
+Cordialement.
+
 {$editorialContactSignature}</field>
 			<field name="description">Ce courriel avise un chef de rubrique que le rédacteur en chef lui a assigné la tâche de suivre une soumission durant le processus éditorial. Il fournit de l'information sur la soumission, et comment accéder au site Web de la revue.</field>
 		</row>
@@ -196,11 +226,11 @@ Merci,
 		<row>
 			<field name="email_key">REVIEW_REQUEST</field>
 			<field name="subject">Demande pour l'évaluation d'un article</field>
-			<field name="body">{$reviewerName},
+			<field name="body">Bonjour,
 
-Je crois que vous seriez un excellent évaluateur pour le manuscrit intitulé « {$articleTitle} » qui a été soumis afin d'être publié dans {$journalName}. Vous trouverez un résumé de la soumission ci-dessous. J'espère que vous accepterez ce travail important pour la revue.
+Nous croyons que vous seriez un excellent évaluateur pour le manuscrit intitulé « {$articleTitle} » qui a été soumis à la revue {$journalName}. Vous trouverez un résumé de la soumission ci-dessous.  Nous espérons que vous accepterez ce travail essentiel à la publication de la revue.
 
-Veuillez accéder au site Web de la revue avant le {$weekLaterDate} pour nous laisser savoir si vous effectuerez l'évaluation ou non. Vous pouvez également y consulter la soumission et y enregistrer votre évaluation et votre recommandation. Le site Web se trouve à l'adresse suivante : {$journalUrl}
+Veuillez accéder au site web de la revue avant le {$weekLaterDate} pour nous laisser savoir si vous acceptez de faire l'évaluation ou non. Vous pouvez également y consulter la soumission et y enregistrer votre évaluation et votre recommandation. Le site web se trouve à l'adresse suivante : {$journalUrl}
 
 La date d'échéance de l'évaluation a été fixée au {$reviewDueDate}.
 
@@ -208,7 +238,7 @@ Si vous n'avez pas de nom d'utilisateur ou de mot de passe pour le site Web de l
 
 URL de la soumission : {$submissionReviewUrl}
 
-Espérant que vous accepterez ma demande, je vous prie d'agréer l'expression de mes sentiments les meilleurs.
+En espérant que vous accepterez notre demande, veuillez recevoir notre plus parfaite considération.
 
 {$editorialContactSignature}</field>
 			<field name="description">Ce courriel du chef de rubrique à un évaluateur demande que l'évaluateur accepte ou refuse la tâche d'évaluer une soumission. Il donne de l'information au sujet de la soumission, tel son titre et un résumé, la date d'échéance pour l'évaluation, et comment accéder à la soumission elle-même. Ce message est utilisé quand « Processus d'évaluation standard » est sélectionné à l'étape 2 dans la mise en place de la revue. (Autrement voir « Demande d'évaluation en pièce jointe »).</field>
@@ -216,52 +246,54 @@ Espérant que vous accepterez ma demande, je vous prie d'agréer l'expression de
 		<row>
 			<field name="email_key">REVIEW_REQUEST_ONECLICK</field>
 			<field name="subject">Demande d'évaluation d'un article</field>
-			<field name="body">{$reviewerName}:
+			<field name="body">Bonjour,
 
-Je crois fermement que pourriez servir comme un excellant évaluateur pour le manuscrit "{$articleTitle}," qui a été soumis à {$journalName}. Un résumé de la soumission apparaît plus bas, et j'espère que vous allez considérer entreprendre cette importante tâche pour nous..
+Nous croyons que vous seriez un excellent évaluateur pour le manuscrit intitulé « {$articleTitle} » qui a été soumis à la revue {$journalName}. Vous trouverez un résumé de la soumission ci-dessous.  Nous espérons que vous accepterez ce travail essentiel à la publication de la revue.
 
-
-Veuillez vous connecter au site Web de la revue au plus tard le {$weekLaterDate} pour nous indiquer si vous allez entreprendre l'évaluation ou pas, ainsi que pour accéder à la soumission et y enregistrer votre évaluation et votre recommandation.
+Veuillez accéder au site web de la revue avant le {$weekLaterDate} pour nous informer si vous acceptez de faire l'évaluation ou non. Vous pouvez également y consulter la soumission et y enregistrer votre évaluation et votre recommandation. Le site web se trouve à l'adresse suivante : {$journalUrl}
 
 Date limite pour l'évaluation {$reviewDueDate}.
 
-L'adresse URL de la soumission: {$submissionReviewUrl}
+URL de la soumission : {$submissionReviewUrl}.
 
-Merci pour bien vouloir considérer cette demande,
+En espérant que vous accepterez notre demande, veuillez recevoir notre plus parfaite considération.
 
 {$editorialContactSignature}
 
 
+« {$articleTitle} »
 
-"{$articleTitle}"
-
-Abstract
+Résumé
 {$articleAbstract}</field>
 			<field name="description">Ce courriel d'un chef de rubrique à un évaluateur demande que l'évaluateur accepte ou décline la tâche d'évaluer une soumission. Il contient des informations sur la soumission tel que son titre et un résumé, la date d'échéance pour faire l'évaluation, et comment accéder à la soumission complète. Ce message est utilisé quand «Processus d'évaluation standard» a été sélectionné à l'étape 2  de la mise en marche de la revue, et que l'accès par ‘'un clic'' de la part du évaluateur a été activé.</field>
 		</row>
 		<row>
 			<field name="email_key">REVIEW_REQUEST_ATTACHED</field>
 			<field name="subject">Demande pour l'évaluation d'un article jointe</field>
-			<field name="body">{$reviewerName},
+			<field name="body">Bonjour,
 
-Je crois que vous seriez un excellent pair évaluateur pour le manuscrit intitulé « {$articleTitle} ». J'espère que vous accepterez ce travail important pour la revue. Les lignes directrices en matière d'évaluation se trouvent ci-dessous, et la soumission est jointe au présent courriel. 
+Nous croyons que vous feriez un excellent évaluateur pour le manuscrit intitulé « {$articleTitle} ».  Nous espérons que vous accepterez ce travail important pour notre revue. Les lignes directrices en matière d'évaluation se trouvent ci-dessous et la soumission est jointe au présent courriel. 
 
-Veuillez me faire savoir par courriel d'ici le {$weekLaterDate} si vous acceptez ou non d'effectuer cette évaluation.
+Veuillez nous faire savoir par courriel d'ici le {$weekLaterDate} si vous acceptez ou non d'effectuer cette évaluation.
 
-J'espère que vous accepterez ma demande.
+En espérant que vous accepterez notre demande, veuillez recevoir notre plus parfaite considération.
+
+{$editorialContactSignature}
+
 
 Lignes directrices pour l'évaluation :{$reviewGuidelines}</field>
-
 			<field name="description">Ce courriel est envoyé par le chef de rubrique à un évaluateur pour lui demander s'il accepte ou refuse la tâche d'évaluer une soumission. Il inclut la soumission en pièce jointe. Ce message est utilisé quand le processus de «Demande d'évaluation par courriel» est sélectionné à l'étape 2 de la mise en place de la revue (Setup). (Autrement, voir «Demande d'évaluation».)</field>
 		</row>
 		<row>
 			<field name="email_key">REVIEW_CANCEL</field>
 			<field name="subject">Annulation de la demande d'évaluation</field>
-			<field name="body">{$reviewerName},
+			<field name="body">Bonjour,
 
-Nous avons décidé d'annuler notre demande concernant l'évaluation du manuscrit intitulé « {$articleTitle} » pour {$journalName}. Nous sommes désolés de tout inconvénient que cela pourrait vous causer et nous espérons que nous pourrons compter sur votre collaboration pour un autre projet.
+Nous avons décidé d'annuler notre demande concernant l'évaluation du manuscrit intitulé « {$articleTitle} » pour {$journalName}. Nous sommes désolés des inconvénients que cela pourrait vous causer et nous espérons que nous pourrons compter sur votre collaboration pour un autre projet.
 
 Si vous avez des questions, n'hésitez pas à communiquer avec nous.
+
+Cordialement.
 
 {$editorialContactSignature}</field>
 			<field name="description">Ce courriel est envoyé par le chef de rubrique à un évaluateur qui a une évaluation en cours, pour l'aviser que celle-ci est annulée.</field>
@@ -269,9 +301,13 @@ Si vous avez des questions, n'hésitez pas à communiquer avec nous.
 		<row>
 			<field name="email_key">REVIEW_CONFIRM</field>
 			<field name="subject">Confirmation de l'évaluation</field>
-			<field name="body">{$editorialContactName},
+			<field name="body">Bonjour,
 
-Je suis en mesure d'évaluer la soumission intitulée « {$articleTitle} » pour {$journalName}. Je vous remercie d'avoir pensé à moi. Je devrais pouvoir rencontrer la date d'échéance fixée au {$reviewDueDate}.
+Je suis en mesure d'évaluer la soumission intitulée « {$articleTitle} » pour la revue {$journalName}. Je vous remercie d'avoir pensé à moi. 
+
+Je devrais pouvoir rencontrer la date d'échéance fixée au {$reviewDueDate}.
+
+Cordialement.
 
 {$reviewerName}</field>
 			<field name="description">Ce courriel est envoyé par l'évaluateur au chef de rubrique en réponse à la demande d'évaluation faite, pour aviser ce dernier que la demande a été acceptée et que l'évaluation sera complétée au plus tard à la date spécifiée.</field>
@@ -279,9 +315,13 @@ Je suis en mesure d'évaluer la soumission intitulée « {$articleTitle} » po
 		<row>
 			<field name="email_key">REVIEW_CONFIRM_ACK</field>
 			<field name="subject">Reconnaissance que l'évaluation est en cours</field>
-			<field name="body">{$reviewerName} :
+			<field name="body">Bonjour,
 
-Merci d'avoir accepté d'évaluer le manuscrit intitulé "{$articleTitle}" pour {$journalName} avant le {$reviewDueDate}.
+Merci d'avoir accepté d'évaluer avant le {$reviewDueDate} le manuscrit intitulé « {$articleTitle} » soumis à la revue {$journalName}.
+
+Nous attendrons donc votre évaluation dans les délais prescrits.
+
+Cordialement.
 
 {$editorialContactSignature}</field>
 			<field name="description">Le chef de rubrique envoie ce courriel à l'évaluateur pour reconnaître son acceptation ou pour l'encourager à compléter l'évaluation.</field>
@@ -289,9 +329,13 @@ Merci d'avoir accepté d'évaluer le manuscrit intitulé "{$articleTitle}" pour 
 		<row>
 			<field name="email_key">REVIEW_DECLINE</field>
 			<field name="subject">Refus d'évaluer le manuscrit</field>
-			<field name="body">{$editorialContactName},
+			<field name="body">Bonjour,
 
-Pour le moment, il m'est impossible d'évaluer la soumission intitulée « {$articleTitle} » pour {$journalName}. Je vous remercie d'avoir pensé à moi. N'hésitez pas à communiquer avec moi pour un autre projet.
+Pour le moment, il m'est impossible d'évaluer la soumission intitulée « {$articleTitle} » pour {$journalName}. 
+
+Je vous remercie d'avoir pensé à moi. N'hésitez pas à communiquer avec moi pour un autre projet.
+
+Cordialement.
 
 {$reviewerName}</field>
 			<field name="description">Ce courriel est envoyé par l'évaluateur au chef de rubrique en réponse à la demande de faire une évaluation, pour aviser ce dernier qu'il ne peut faire l'évaluation.</field>
@@ -441,9 +485,9 @@ Nous vous remercions d'avoir révisé le manuscrit intitulé « {$articleTitle}
 		<row>
 			<field name="email_key">COPYEDIT_AUTHOR_REQUEST</field>
 			<field name="subject">Demande de révision finale</field>
-			<field name="body"><![CDATA[{$authorName},
+			<field name="body">{$authorName},
 
-Nous avons maintenant terminé la révision initiale de votre manuscrit intitulé « {$articleTitle} » pour {$journalName}. Veuillez accéder au site Web de la revue et répondre aux questions des réviseurs. L'adresse ci-dessous vous mènera au résumé de votre soumission. Cliquez sur le lien <b>Edition</b> situé en haut de la page.
+Nous avons maintenant terminé la révision initiale de votre manuscrit intitulé « {$articleTitle} » pour {$journalName}. Veuillez accéder au site Web de la revue et répondre aux questions des réviseurs. L'adresse ci-dessous vous mènera au résumé de votre soumission. Cliquez sur le lien Edition situé en haut de la page.
 
 Il s'agit de votre dernière chance d'apporter des modifications importantes au texte. À l'étape de la correction d'épreuves, vous ne pourrez changer que les erreurs typographiques et les problèmes de mise en page.
 
@@ -452,7 +496,7 @@ Nom d'utilisateur : {$authorUsername}
  
  Si vous ne pouvez pas effectuer ce travail pour le moment ou si vous avez des questions, veuillez communiquer avec nous. Nous vous remercions de votre collaboration.
 
-{$editorialContactSignature}]]></field>
+{$editorialContactSignature}</field>
 			<field name="description">Ce courriel est envoyé par le chef de rubrique à l'auteur pour lui demander de faire la correction des épreuves du travail fait par le réviseur. Il donne accès à l'information pour le manuscrit et le met en garde que c'est la dernière chance pour l'auteur d'apporter des modifications importantes à son travail.</field>
 		</row>
 		<row>
