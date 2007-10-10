@@ -267,7 +267,7 @@ class XMLGalleyPlugin extends GenericPlugin {
 						$fileName = $fileManager->getUploadedFileName('customXSL');
 						$extension = strtolower($fileManager->getExtension($fileName));
 
-						if (($type == 'text/xml' || $type == 'text/xml' || $type == 'application/xml') 
+						if (($type == 'text/xml' || $type == 'text/xml' || $type == 'application/xml' || $type == 'application/xslt+xml') 
 							&& $extension == 'xsl') {
 
 							// if there is an existing XSL file, delete it from the journal files folder
