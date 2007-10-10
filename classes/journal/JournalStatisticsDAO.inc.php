@@ -198,12 +198,11 @@ class JournalStatisticsDAO extends DAO {
 			'SELECT	st.type_id,
 				sts.setting_value AS type_name,
 				count(s.subscription_id) AS type_count
-			FROM	subscription_types st,
-				subscriptions s,
-				journals j
-				LEFT JOIN subscription_type_settings sts ON (st.type_id = sts.type_id AND sts.setting_name = ? AND sts.locale = j.primary_locale)
+			FROM	subscription_types st
+				LEFT JOIN journals j ON (j.journal_id = st.journal_id)
+				LEFT JOIN subscription_type_settings sts ON (st.type_id = sts.type_id AND sts.setting_name = ? AND sts.locale = j.primary_locale),
+				subscriptions s
 			WHERE	st.journal_id = ?
-				AND j.journal_id = st.journal_id
 				AND s.type_id = st.type_id' .
 			($dateStart !== null ? ' AND s.date_start >= ' . $this->datetimeToDB($dateStart) : '') .
 			($dateEnd !== null ? ' AND s.date_start <= ' . $this->datetimeToDB($dateEnd) : '') .

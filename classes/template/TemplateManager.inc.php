@@ -101,7 +101,7 @@ class TemplateManager extends Smarty {
 				$this->assign('alternateLocales', $journal->getSetting('alternateLocales'));
 
 				// Assign additional navigation bar items
-				$navMenuItems = &$journal->getSetting('navItems');
+				$navMenuItems = &$journal->getLocalizedSetting('navItems');
 				$this->assign_by_ref('navMenuItems', $navMenuItems);
 
 				// Assign journal page header

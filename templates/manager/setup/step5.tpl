@@ -258,7 +258,7 @@ function prepBlockFields() {
 <p>{translate key="manager.setup.itemsDescription"}</p>
 
 <table width="100%" class="data">
-{foreach name=navItems[$formLocale] from=$navItems key=navItemId item=navItem}
+{foreach name=navItems from=$navItems[$formLocale] key=navItemId item=navItem}
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="navItems-$navItemId-name" key="manager.setup.labelName"}</td>
 		<td width="80%" class="value">
