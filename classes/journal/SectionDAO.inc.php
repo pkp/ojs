@@ -75,9 +75,9 @@ class SectionDAO extends DAO {
 	 * @param $sectionTitle string
 	 * @return Section
 	 */
-	function &getSectionByTitle($sectionTitle, $journalId) {
+	function &getSectionByTitle($sectionTitle, $journalId, $locale = null) {
 		$sql = 'SELECT s.* FROM sections s, section_settings l WHERE l.section_id = s.section_id AND l.setting_name = ? AND l.setting_value = ? AND s.journal_id = ?';
-		$params = array('title', $sectionAbbrev, $journalId);
+		$params = array('title', $sectionTitle, $journalId);
 		if ($locale !== null) {
 			$sql .= ' AND l.locale = ?';
 			$params[] = $locale;

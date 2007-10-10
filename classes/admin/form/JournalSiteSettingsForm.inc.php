@@ -121,7 +121,7 @@ class JournalSiteSettingsForm extends Form {
 			$site =& Request::getSite();
 
 			// Give it a default primary locale
-			$journal->setPrimaryLocale (Locale::getLocale());
+			$journal->setPrimaryLocale ($site->getPrimaryLocale());
 
 			$journalId = $journalDao->insertJournal($journal);
 			$journalDao->resequenceJournals();
@@ -152,6 +152,7 @@ class JournalSiteSettingsForm extends Form {
 			$journalSettingsDao->installSettings($journalId, 'registry/journalSettings.xml', array(
 				'indexUrl' => Request::getIndexUrl(),
 				'journalPath' => $this->getData('path'),
+				'primaryLocale' => $site->getPrimaryLocale(),
 				'journalName' => $titles[$site->getPrimaryLocale()]
 			));
 

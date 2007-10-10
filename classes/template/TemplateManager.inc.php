@@ -97,7 +97,7 @@ class TemplateManager extends Smarty {
 				$this->assign('siteTitle', $journalTitle);
 				$this->assign('publicFilesDir', Request::getBaseUrl() . '/' . PublicFileManager::getJournalFilesPath($journal->getJournalId()));
 
-				$this->assign('primaryLocale', $journal->getSetting('primaryLocale'));
+				$this->assign('primaryLocale', $journal->getPrimaryLocale());
 				$this->assign('alternateLocales', $journal->getSetting('alternateLocales'));
 
 				// Assign additional navigation bar items

@@ -94,6 +94,7 @@
 		</field>
 		<field name="locale" type="C2" size="5">
 			<NOTNULL />
+			<DEFAULT VALUE=""/>
 		</field>
 		<field name="setting_value" type="X"/>
 		<field name="setting_type" type="C2" size="6">
@@ -200,6 +201,7 @@
 		</field>
 		<field name="locale" type="C2" size="5">
 			<NOTNULL/>
+			<DEFAULT VALUE=""/>
 		</field>
 		<field name="setting_name" type="C2" size="255">
 			<NOTNULL/>
@@ -327,6 +329,7 @@
 		</field>
 		<field name="locale" type="C2" size="5">
 			<NOTNULL/>
+			<DEFAULT VALUE=""/>
 		</field>
 		<field name="setting_name" type="C2" size="255">
 			<NOTNULL/>
@@ -359,6 +362,7 @@
 		</field>
 		<field name="locale" type="C2" size="5">
 			<NOTNULL/>
+			<DEFAULT VALUE=""/>
 		</field>
 		<field name="journal_id" type="I8">
 			<NOTNULL/>
@@ -490,6 +494,7 @@
 		</field>
 		<field name="locale" type="C2" size="5">
 			<NOTNULL />
+			<DEFAULT VALUE=""/>
 		</field>
 		<field name="setting_name" type="C2" size="255">
 			<NOTNULL />
@@ -623,6 +628,7 @@
 		</field>
 		<field name="locale" type="C2" size="5">
 			<NOTNULL />
+			<DEFAULT VALUE=""/>
 		</field>
 		<field name="setting_name" type="C2" size="255">
 			<NOTNULL />
@@ -753,6 +759,7 @@
 		</field>
 		<field name="locale" type="C2" size="5">
 			<NOTNULL />
+			<DEFAULT VALUE=""/>
 		</field>
 		<field name="setting_name" type="C2" size="255">
 			<NOTNULL />
@@ -908,6 +915,7 @@
 		</field>
 		<field name="locale" type="C2" size="5">
 			<NOTNULL />
+			<DEFAULT VALUE=""/>
 		</field>
 		<field name="setting_name" type="C2" size="255">
 			<NOTNULL />
@@ -941,7 +949,6 @@
 		</field>
 		<field name="revision" type="I8">
 			<KEY />
-			<NOTNULL />
 		</field>
 		<field name="source_file_id" type="I8" />
 		<field name="source_revision" type="I8" />
@@ -1034,6 +1041,7 @@
 		</field>
 		<field name="locale" type="C2" size="5">
 			<NOTNULL />
+			<DEFAULT VALUE=""/>
 		</field>
 		<field name="setting_name" type="C2" size="255">
 			<NOTNULL />
@@ -1899,6 +1907,7 @@
 		</field>
 		<field name="locale" type="C2" size="5">
 			<NOTNULL />
+			<DEFAULT VALUE=""/>
 		</field>
 		<field name="setting_name" type="C2" size="255">
 			<NOTNULL />
@@ -2078,6 +2087,7 @@
 		</field>
 		<field name="locale" type="C2" size="5">
 			<NOTNULL />
+			<DEFAULT VALUE=""/>
 		</field>
 		<field name="setting_name" type="C2" size="255">
 			<NOTNULL />
@@ -2133,6 +2143,7 @@
 		</field>
 		<field name="locale" type="C2" size="5">
 			<NOTNULL />
+			<DEFAULT VALUE=""/>
 		</field>
 		<field name="setting_name" type="C2" size="255">
 			<NOTNULL />
@@ -2274,6 +2285,7 @@
 		</field>
 		<field name="locale" type="C2" size="5">
 			<NOTNULL />
+			<DEFAULT VALUE=""/>
 		</field>
 		<field name="setting_name" type="C2" size="255">
 			<NOTNULL />

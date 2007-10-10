@@ -164,21 +164,12 @@ class AdminLanguagesHandler extends AdminHandler {
 		$journals = &$journalDao->getJournals();
 		$journals = &$journals->toArray();
 		foreach ($journals as $journal) {
-			$primaryLocale =  $journal->getSetting('primaryLocale');
-			$alternateLocale1 =  $journal->getSetting('alternateLocale1');
-			$alternateLocale2 =  $journal->getSetting('alternateLocale2');
+			$primaryLocale = $journal->getPrimaryLocale();
 			$supportedLocales = $journal->getSetting('supportedLocales');
 
 			if (isset($primaryLocale) && !in_array($primaryLocale, $siteSupportedLocales)) {
-				$settingsDao->updateSetting($journal->getJournalId(), 'primaryLocale', null, 'string');
-			}
-
-			if (isset($alternateLocale1) && !in_array($alternateLocale1, $siteSupportedLocales)) {
-				$settingsDao->updateSetting($journal->getJournalId(), 'alternateLocale1', null, 'string');
-			}
-
-			if (isset($alternateLocale2) && !in_array($alternateLocale2, $siteSupportedLocales)) {
-				$settingsDao->updateSetting($journal->getJournalId(), 'alternateLocale2', null, 'string');
+				$journal->setPrimaryLocale($site->getPrimaryLocale());
+				$journalDao->updateJournal($journal);
 			}
 
 			if (is_array($supportedLocales)) {
@@ -187,7 +178,6 @@ class AdminLanguagesHandler extends AdminHandler {
 			}
 		}
 	}
-
 }
 
 ?>

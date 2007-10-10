@@ -80,6 +80,14 @@
 		<name>lockssLicense</name>
 		<value>{translate key="default.journalSettings.lockssLicense"}</value>
 	</setting>
+	<setting type="object" locale="0">
+		<name>supportedLocales</name>
+		<value>
+			<array>
+				<element>{$primaryLocale}</element>
+			</array>
+		</value>
+	</setting>
 	<setting type="object" locale="1">
 		<name>submissionChecklist</name>
 		<value>

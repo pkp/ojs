@@ -106,7 +106,7 @@
   *  - Locale attribute value must correspond to the journal's
   *    additional locales, if enabled, otherwise an error will be displayed.
   -->
-<!ELEMENT article (title+, abstract*, indexing?, sponsor?, author+, pages?, date_published, open_access?, (galley?, htmlgalley?)+, supplemental_file*)>
+<!ELEMENT article (title+, abstract*, indexing?, sponsor*, author+, pages?, date_published, open_access?, (galley?, htmlgalley?)+, supplemental_file*)>
 	<!ATTLIST article
 		public_id CDATA #IMPLIED
 		language CDATA "en">

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE issues SYSTEM "native.dtd">
-
 <!--
   * sample.xml
   *
@@ -11,44 +10,55 @@
   *
   * $Id$
   -->
-
 <issues>
- <issue>
-  <title>Test Issue</title>
-  <access_date>01-01-2001</access_date>
-  <section>
-   <title>Articles</title>
-   <abbrev>ART</abbrev>
-   <article>
-    <title>Jane Doe's Article</title>
-    <date_published>2004-10-05</date_published>
-    <author>
-     <firstname>Jane</firstname>
-     <lastname>Doe</lastname>
-    </author>
-    <htmlgalley>
-     <label>HTML</label>
-     <file>
-      <href src="myfile.html" mime_type="text/html" />
-     </file>
-     <stylesheet>
-      <href src="myfile.xsl" mime_type="text/xsl" />
-     </stylesheet>
-     <image>
-      <embed encoding="base64" filename="myfilename.png" mime_type="application/png">(base64-encoded data would appear here)
+	<issue published="true" current="false" identification="title">
+		<title locale="en_US">Test Issue</title>
+		<access_date>01-01-2001</access_date>
+		<section>
+			<title locale="en_US">Articles</title>
+			<abbrev locale="en_US">ART</abbrev>
+			<article>
+				<title locale="en_US">Jane Doe's Article Title</title>
+				<abstract locale="en_US">Jane Doe's Article Abstract...</abstract>
+				<date_published>2004-10-05</date_published>
+				<author primary_contact="true">
+					<firstname>Jane</firstname>
+					<lastname>Doe</lastname>
+					<email>JaneDoe@sample.test</email>
+					<biography locale="en_US">Jane Doe's  Bio statement...</biography>
+				</author>
+				<indexing>
+					<discipline locale="en_US">Education; Literature Education</discipline>
+					<subject locale="en_US">Young adult literature; Holocaust</subject>
+					<coverage>
+						<geographical locale="en_US">North America</geographical>
+						<chronological locale="en_US">Contempoary</chronological>
+						<sample locale="en_US">Adolescent readers</sample>
+					</coverage>
+				</indexing>
+				<htmlgalley locale="en_US">
+					<label>HTML</label>
+					<file>
+						<href src="myfile.html" mime_type="text/html"/>
+					</file>
+					<stylesheet>
+						<href src="myfile.xsl" mime_type="text/xsl"/>
+					</stylesheet>
+					<image>
+						<embed encoding="base64" filename="myfilename.png" mime_type="application/png">(base64-encoded data would appear here)
       </embed>
-     </image>
-     <image>
-      <href src="myimage2.png" mime_type="application/png" />
-     </image>
-    </htmlgalley>
-    <galley>
-     <label>PDF</label>
-     <file>
-      <href src="mygalley.pdf" mime_type="application/pdf" />
-     </file>
-    </galley>
-   </article>
-  </section>
- </issue>
+					</image>
+					<image>
+						<href src="myimage2.png" mime_type="application/png"/>
+					</image>
+				</htmlgalley>
+				<galley locale="en_US">
+					<label>PDF</label>
+					<file>
+						<href src="mygalley.pdf" mime_type="application/pdf"/>
+					</file>
+				</galley>
+			</article>
+		</section>
+	</issue>
 </issues>
