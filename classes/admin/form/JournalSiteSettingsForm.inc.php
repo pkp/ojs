@@ -116,8 +116,10 @@ class JournalSiteSettingsForm extends Form {
 		$journal->setEnabled($this->getData('enabled'));
 
 		if ($journal->getJournalId() != null) {
+			$isNewJournal = false;
 			$journalDao->updateJournal($journal);
 		} else {
+			$isNewJournal = true;
 			$site =& Request::getSite();
 
 			// Give it a default primary locale
@@ -176,7 +178,7 @@ class JournalSiteSettingsForm extends Form {
 		}
 		$journal->updateSetting('title', $this->getData('title'), 'string', true);
 		$journal->updateSetting('description', $this->getData('description'), 'string', true);
-		HookRegistry::call('JournalSiteSettingsForm::execute', array(&$this, &$journal, &$section));
+		HookRegistry::call('JournalSiteSettingsForm::execute', array(&$this, &$journal, &$section, &$isNewJournal));
 	}
 
 }

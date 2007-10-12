@@ -243,6 +243,9 @@ class Plugin {
 	 */
 	function installJournalSettings($hookName, $args) {
 		$journal =& $args[1];
+		$isNewJournal = $args[3];
+
+		if (!$isNewJournal) return false;
 
 		$pluginSettingsDao =& DAORegistry::getDAO('PluginSettingsDAO');
 		$pluginSettingsDao->installSettings($journal->getJournalId(), $this->getName(), $this->getNewJournalPluginSettingsFile());

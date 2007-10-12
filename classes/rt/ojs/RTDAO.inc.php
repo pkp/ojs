@@ -324,7 +324,17 @@ class RTDAO extends DAO {
 			(version_id, title, abbrev, description, cited_by, author_terms, geo_terms, define_terms, seq)
 			VALUES
 			(?, ?, ?, ?, ?, ?, ?, ?, ?)',
-			array((int) $context->versionId, $context->title, $context->abbrev, $context->description, $context->citedBy?1:0, $context->authorTerms?1:0, $context->geoTerms?1:0, $context->defineTerms?1:0, (int) $context->order)
+			array(
+				(int) $context->versionId,
+				$context->title,
+				$context->abbrev,
+				$context->description,
+				$context->citedBy?1:0,
+				$context->authorTerms?1:0,
+				$context->geoTerms?1:0,
+				$context->defineTerms?1:0,
+				(int) $context->order
+			)
 		);
 
 		$context->contextId = $this->getInsertId('rt_contexts', 'context_id');

@@ -72,6 +72,7 @@ class AdminJournalHandler extends AdminHandler {
 		$settingsForm->readInputData();
 
 		if ($settingsForm->validate()) {
+			PluginRegistry::loadCategory('blocks');
 			$settingsForm->execute();
 			Request::redirect(null, null, 'journals');
 
