@@ -424,7 +424,10 @@ class ArticleHandler extends Handler {
 					}
 								
 					if (!isset($galleyId) || $galleyId) {
-						Request::redirect(null, 'index');	
+						if (!Validation::isLoggedIn()) {
+							Validation::redirectLogin("reader.subscribersOnly");
+						}						
+						Request::redirect(null, 'subscriptions', 'about');	
 					}
 				}
 			}
