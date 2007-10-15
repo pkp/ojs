@@ -172,4 +172,5 @@ class BlockPlugin extends Plugin {
 		$output .= $this->getContents($smarty);
 	}
 }
+
 ?>

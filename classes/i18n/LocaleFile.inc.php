@@ -187,7 +187,7 @@ class LocaleFile {
 
 			$referenceParams = Locale::getParameterNames($referenceValue);
 			$params = Locale::getParameterNames($value);
-			if ($referenceParams !== $params) {
+			if (count(array_diff($referenceParams, $params)) > 0) {
 				$errors[LOCALE_ERROR_DIFFERING_PARAMS][] = array(
 					'key' => $key,
 					'locale' => $this->locale,

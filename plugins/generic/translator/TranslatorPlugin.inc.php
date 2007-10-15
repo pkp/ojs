@@ -93,4 +93,5 @@ class TranslatorPlugin extends GenericPlugin {
 		return true;
 	}
 }
+
 ?>
