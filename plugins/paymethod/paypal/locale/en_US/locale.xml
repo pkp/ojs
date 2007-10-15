@@ -25,7 +25,7 @@
 
 	<!-- PayPal -->
 	<message key="plugins.paymethod.paypal">PayPal Payment</message>
-	<message key="plugins.paymethod.paypal.description"><![CDATA[Will process all major credit cards, as well as eChecks; does not require PayPal membership from participants, but does require conference organizers to set up a <a href="http://www.paypal.com" target="_new">PayPal Business Account</a>.]]></message>
+	<message key="plugins.paymethod.paypal.description"><![CDATA[PayPal Plugin enables users, whether or not they are PayPal members, to use all major credit cards, as well as eChecks. Journal or conference manager will need to set up a <a href="http://www.paypal.com" target="_new">PayPal Business Account</a>.]]></message>
 	<message key="plugins.paymethod.paypal.warning">Clicking Continue will direct you to the PayPal site.  After making your payment with PayPal you can click the "Return to Merchant" button to return to this site.</message>
 	<message key="plugins.paymethod.paypal.purchase.amount">Amount</message>
 	<message key="plugins.paymethod.paypal.purchase.description">Description</message>

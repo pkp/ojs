@@ -895,7 +895,7 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="plugins.categories.themes">Theme Plugins</message>
 	<message key="plugins.categories.themes.description">Theme Plugins can be used to change the system's appearance.</message>
 
-	<message key="plugins.categories.paymethod">Pay Method Plugins</message>
+	<message key="plugins.categories.paymethod">Payment Plugins</message>
 	<message key="plugins.categories.paymethod.description">Payment Method plugins implement support for various ways of processing payments online.</message>
 
 	<!-- Files Browser -->

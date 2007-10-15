@@ -13,6 +13,6 @@
  
 <locale name="en_US" full_name="U.S. English">
 	<message key="plugins.paymethod.manual.displayName">Manual Payment</message>
-	<message key="plugins.paymethod.manual.description">Payment must be submitted outside of OCS and requires conference manager to validate before registration is active. The contents of the Registration Information field in Registration Policy Management will be shown to registrants and should provide information on how to proceed with a manual registration submission.</message>
+	<message key="plugins.paymethod.manual.description">The Journal or Conference Manager will record receipt of a user's payment.</message>
 	<message key="plugins.paymethod.manual">Registration Payment</message>
 </locale>
