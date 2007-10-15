@@ -22,9 +22,9 @@
 {/if}
 {if !$showToc && $issue}
 	{if $issueId}
-		{url|assign:"currentUrl" path=$issueId|to_array:"showToc"}
+		{url|assign:"currentUrl" page="issue" op="view" path=$issueId|to_array:"showToc"}
 	{else}
-		{url|assign:"currentUrl" path="showToc"}
+		{url|assign:"currentUrl" page="issue" op="current" path="showToc"}
 	{/if}
 	<ul class="menu">
 		<li><a href="{$currentUrl}">{translate key="issue.toc"}</a></li>
