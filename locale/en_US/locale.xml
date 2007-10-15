@@ -1469,13 +1469,13 @@ You may optionally provide the user with a reason for disabling their account.</
 	<message key="manager.subscriptionTypes.form.institutionalValid">Please use the checkbox provided.</message>
 	<message key="manager.subscriptionTypes.form.membershipValid">Please use the checkbox provided.</message>
 	<message key="manager.subscriptionTypes.form.publicValid">Please use the checkbox provided.</message>
-	<message key="manager.subscriptionTypes.form.typeName">Name</message>
+	<message key="manager.subscriptionTypes.form.typeName">Name of Type</message>
 	<message key="manager.subscriptionTypes.form.description">Description</message>
 	<message key="manager.subscriptionTypes.form.cost">Cost</message>
-	<message key="manager.subscriptionTypes.form.costInstructions">Enter a numeric value (e.g. 40 or 40.00). Do not include any other text such as "$".</message>
+	<message key="manager.subscriptionTypes.form.costInstructions">Enter a numeric value (e.g. 40 or 40.00) without symbol (e.g., $).</message>
 	<message key="manager.subscriptionTypes.form.currency">Currency</message>
 	<message key="manager.subscriptionTypes.form.duration">Duration</message>
-	<message key="manager.subscriptionTypes.form.durationInstructions">The length of the subscription, in number of months (e.g. 12).</message>
+	<message key="manager.subscriptionTypes.form.durationInstructions">The number of months the subscription lasts (e.g. 12).</message>
 	<message key="manager.subscriptionTypes.form.format">Format</message>
 	<message key="manager.subscriptionTypes.form.institutional">Subscribers should be validated via domain or IP authentication.</message>
 	<message key="manager.subscriptionTypes.form.membership">Subscribers must be members of an association or organization.</message>
