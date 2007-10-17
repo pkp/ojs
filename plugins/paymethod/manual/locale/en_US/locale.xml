@@ -12,7 +12,7 @@
  -->
  
 <locale name="en_US" full_name="U.S. English">
-	<message key="plugins.paymethod.manual.displayName">Manual Payment</message>
-	<message key="plugins.paymethod.manual.description">The Journal or Conference Manager will record receipt of a user's payment.</message>
+	<message key="plugins.paymethod.manual.displayName">Manual Fee Payment</message>
+	<message key="plugins.paymethod.manual.description">The Journal or Conference Manager will manually record receipt of a user's payment (outside of this software) to activate registration.</message>
 	<message key="plugins.paymethod.manual">Registration Payment</message>
 </locale>

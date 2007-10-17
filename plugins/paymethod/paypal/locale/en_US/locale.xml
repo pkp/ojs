@@ -12,7 +12,7 @@
  -->
  
 <locale name="en_US" full_name="U.S. English">
-	<message key="plugins.paymethod.paypal.displayName">Paypal</message>
+	<message key="plugins.paymethod.paypal.displayName">Paypal Fee Payment</message>
 
 	<!-- PayPal Settings Form -->
 	<message key="plugins.paymethod.paypal.settings.paypalenable">Enable PayPal</message>
@@ -24,8 +24,8 @@
 	<message key="plugins.paymethod.paypal.settings">PayPal Settings</message>
 
 	<!-- PayPal -->
-	<message key="plugins.paymethod.paypal">PayPal Payment</message>
-	<message key="plugins.paymethod.paypal.description"><![CDATA[PayPal Plugin enables users, whether or not they are PayPal members, to use all major credit cards, as well as eChecks. Journal or conference manager will need to set up a <a href="http://www.paypal.com" target="_new">PayPal Business Account</a>.]]></message>
+	<message key="plugins.paymethod.paypal">PayPal Fee Payment</message>
+	<message key="plugins.paymethod.paypal.description"><![CDATA[PayPal enables users, whether or not they are PayPal members, to use all major credit cards. The Manager will need to set up a <a href="http://www.paypal.com" target="_new">PayPal Business Account</a>.]]></message>
 	<message key="plugins.paymethod.paypal.warning">Clicking Continue will direct you to the PayPal site.  After making your payment with PayPal you can click the "Return to Merchant" button to return to this site.</message>
 	<message key="plugins.paymethod.paypal.purchase.amount">Amount</message>
 	<message key="plugins.paymethod.paypal.purchase.description">Description</message>

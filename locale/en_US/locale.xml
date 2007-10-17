@@ -864,7 +864,7 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="manager.payment.timestamp">Timestamp</message>
 	<message key="manager.payment.amount">Amount</message>
 	<message key="manager.payment.notFound">Not Found</message>
-	<message key="manager.payment.paymentMethods">Payment Methods</message>
+	<message key="manager.payment.paymentMethods">Fee Payment Methods</message>
 	<message key="manager.payment.paymentMethod">Payment Method</message>
 	<message key="manager.payment.paymentMethod.description">You may configure any of the following Payment Method Plugins from this screen.</message>
 		
@@ -1192,7 +1192,7 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.setup.onlineAccessManagement">Access to Journal Content</message>
 	<message key="manager.setup.openAccess">The journal will provide open access to its contents.</message>
 	<message key="manager.setup.openAccessPolicy">Open Access Policy</message>
-	<message key="manager.setup.openAccessPolicyDescription">Enter a statement on the journal's open access policy that will appear in About the Journal.</message>
+	<message key="manager.setup.openAccessPolicyDescription">If the journal will provide readers with immediate free access to all published content, enter an Open Access Policy which will appear in About the Journal under Policies.</message>
 	<message key="manager.setup.subscription">The journal will require subscriptions to access some or all of its contents.</message>
 	<message key="manager.setup.subscriptionDescription">This requires the assignment of a Subscription Manager who has access to the subscription module, which includes additional open access, self-archiving, and email notification options.</message>
 	<message key="manager.setup.showGalleyLinksDescription">Always show galley links and indicate restricted access.</message>
