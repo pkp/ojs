@@ -2306,7 +2306,7 @@ current password.<br /><br />Enter your email address below to reset your passwo
 	
 	<!-- Payments -->
 	<message key="payment.loginRequired">You must be logged in to make a payment.</message>
-	<message key="payment.loginRequired.forArticle"><![CDATA[This article is for subscribed users or requires that you make a payment.<br />You must be logged in order to make a payment.]]></message>
+	<message key="payment.loginRequired.forArticle">Subscription or pay-per-view required to access item. To verify subscription or to pay fee, log in to journal.</message>
 	<message key="payment.loginRequired.forDonation">You must be logged in to make a donation.</message>
 	
 	<message key="payment.type.submission">Submission Fee</message>
