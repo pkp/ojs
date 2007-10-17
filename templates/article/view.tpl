@@ -36,6 +36,8 @@
 			{url|assign:"articleUrl" op="viewArticle" path=$articleId|to_array:$galleyId}
 		{elseif $galley->isPdfGalley()}
 			{url|assign:"articleUrl" op="viewPDFInterstitial" path=$articleId|to_array:$galleyId}
+		{elseif $galley->isInlineable()}
+			{url|assign:"articleUrl" op="viewFile" path=$articleId|to_array:$galleyId}
 		{else}
 			{url|assign:"articleUrl" op="viewDownloadInterstitial" path=$articleId|to_array:$galleyId}
 		{/if}
