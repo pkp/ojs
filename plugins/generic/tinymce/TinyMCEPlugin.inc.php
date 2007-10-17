@@ -250,6 +250,7 @@ class TinyMCEPlugin extends GenericPlugin {
 			<script language="javascript" type="text/javascript" src="'.$baseUrl.'/'.TINYMCE_JS_PATH.'/tiny_mce_gzip.js"></script>
 			<script language="javascript" type="text/javascript">
 				tinyMCE_GZ.init({
+					relative_urls : "false",
 					plugins : "paste",
 					themes : "advanced",
 					languages : "' . join(',', $localeList) . '",
