@@ -20,20 +20,21 @@ import('help.HelpTopic');
 class HelpTopicDAO extends XMLDAO {
 	function &_getCache($topicId) {
 		static $cache;
-		if (!isset($cache)) {
+		$locale = Help::getLocale();
+		if (!isset($cache[$locale][$topicId])) {
 			import('cache.CacheManager');
 			$help =& Help::getHelp();
 			$cacheManager =& CacheManager::getManager();
-			$cache = $cacheManager->getFileCache('help-topic-' . $help->getLocale(), $topicId, array($this, '_cacheMiss'));
+			$cache[$locale][$topicId] = $cacheManager->getFileCache('help-topic-' . $locale, $topicId, array($this, '_cacheMiss'));
 
 			// Check to see if the cache info is outdated.
-			$cacheTime = $cache->getCacheTime();
+			$cacheTime = $cache[$locale][$topicId]->getCacheTime();
 			if ($cacheTime !== null && $cacheTime < filemtime($this->getFilename($topicId))) {
 				// The cached data is out of date.
-				$cache->flush();
+				$cache[$locale][$topicId]->flush();
 			}
 		}
-		return $cache;
+		return $cache[$locale][$topicId];
 	}
 
 	function &getMappingFile($topicId) {
@@ -179,7 +180,7 @@ class HelpTopicDAO extends XMLDAO {
 				$numMatches = String::substr_count(String::strtolower($topic->getTitle()), $keyword);
 
 				foreach ($topic->getSections() as $section) {
-					$numMatches += String::substr_count(String::strtolower($section->getSectionTitle()), $keyword);
+					$numMatches += String::substr_count(String::strtolower($section->getTitle()), $keyword);
 					$numMatches += String::substr_count(String::strtolower($section->getContent()), $keyword);
 				}
 
