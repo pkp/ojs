@@ -59,7 +59,7 @@
 	<message key="common.url">URL</message>
 	<message key="common.description">Descripción</message>
 	<message key="common.keywords">Palabras clave</message>
-	<message key="common.order">Solicitar</message>
+	<message key="common.order">Ordenar</message>
 	<message key="common.back">Atrás</message>
 	<message key="common.title">Título</message>
 	<message key="common.upload">Subir</message>
@@ -1456,7 +1456,7 @@ Seleccione un modelo para manejar aquellos aspectos del proceso editorial. (Para
 	<message key="editor.issues.issueData">Información del número</message>
 	<message key="editor.issues.saveChanges">¿Guardar cambios en la tabla de contenidos?</message>
 	<message key="editor.issues.default">Por defecto</message>
-	<message key="editor.issues.order">Solicitar</message>
+	<message key="editor.issues.order">Ordenar</message>
 	<message key="editor.issues.publicId">Id Pública</message>
 	<message key="editor.issues.publishIssue">Publicar número</message>
 	<message key="editor.issues.previewIssue">Previsualizar el número</message>
