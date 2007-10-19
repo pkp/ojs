@@ -82,10 +82,17 @@ class Upgrade extends Installer {
 	 */
 	function migrateRtSettings() {
 		$rtDao =& DAORegistry::getDAO('RTDAO');
+		$journalDao =& DAORegistry::getDAO('JournalDAO');
+
+		// Bring in the comments constants.
+		$commentDao = &DAORegistry::getDao('CommentDAO');
+
 		$result =& $rtDao->retrieve('SELECT * FROM rt_settings');
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
-			$rt =& new JournalRT($row['journal_id']);
+			$journalId = $row['journal_id'];
+			$journal =& $journalDao->getJournal($journalId);
+			$rt =& new JournalRT($journalId);
 			$rt->setEnabled(true); // No toggle in prior OJS; assume true
 			$rt->setVersion($row['version_id']);
 			$rt->setAbstract(true); // No toggle in prior OJS; assume true
@@ -95,11 +102,14 @@ class Upgrade extends Installer {
 			$rt->setPrinterFriendly($row['printer_friendly']);
 			$rt->setAuthorBio($row['author_bio']);
 			$rt->setDefineTerms($row['define_terms']);
-			$rt->setAddComment($row['add_comment']);
+
+			$journal->updateSetting('enableComments', $row['add_comment']?COMMENTS_AUTHENTICATED:COMMENTS_DISABLED);
+
 			$rt->setEmailAuthor($row['email_author']);
 			$rt->setEmailOthers($row['email_others']);
 			$rtDao->updateJournalRT($rt);
 			unset($rt);
+			unset($journal);
 			$result->MoveNext();
 		}
 		$result->Close();
@@ -408,10 +418,10 @@ class Upgrade extends Installer {
 	function migrateUserSettings() {
 		$userSettingsDao =& DAORegistry::getDAO('UserSettingsDAO');
 
-		$result =& $journalDao->retrieve('SELECT user_id, setting_name, journal_id, setting_value, setting_type FROM user_settings_old');
+		$result =& $userSettingsDao->retrieve('SELECT user_id, setting_name, journal_id, setting_value, setting_type FROM user_settings_old');
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
-			$articleGalleyDao->update('INSERT INTO user_settings (user_id, setting_name, journal_id, setting_value, setting_type, locale) VALUES (?, ?, ?, ?, ?, ?)', array($row['user_id'], $row['setting_name'], $row['journal_id'], $row['setting_value'], $row['setting_type'], ''));
+			$userSettingsDao->update('INSERT INTO user_settings (user_id, setting_name, journal_id, setting_value, setting_type, locale) VALUES (?, ?, ?, ?, ?, ?)', array($row['user_id'], $row['setting_name'], $row['journal_id'], $row['setting_value'], $row['setting_type'], ''));
 			$result->MoveNext();
 		}
 		$result->Close();
@@ -439,7 +449,7 @@ class Upgrade extends Installer {
 		// from these tables will be dropped.
 		$tables = array(
 			'versions', 'site', 'site_settings', 'scheduled_tasks',
-			'user_settings', 'sessions', 'journal_settings',
+			'sessions', 'journal_settings',
 			'plugin_settings', 'roles', 'notification_status', 
 			'section_settings', 'section_editors', 'issue_settings',
 			'custom_issue_orders', 'custom_section_orders',

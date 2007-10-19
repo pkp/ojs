@@ -18,6 +18,7 @@
 	<sql>
 		<drop table="article_search_keyword_index" />
 		<drop table="article_search_results" />
+		<query>DELETE FROM article_search_keyword_list</query>
 	</sql>
 	
 	

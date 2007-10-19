@@ -72,6 +72,5 @@
 	<!-- Bug #2961: Localization overhaul -->
 	<sql>
 		<rename table="site" column="locale" to="primary_locale" />
-		<rename table="user_settings" to="user_settings_old" />
 	</sql>
 </data>

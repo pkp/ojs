@@ -823,8 +823,6 @@
 		</index>
 		<index name="published_articles_public_article_id">
 			<col>public_article_id</col>
-			<col>journal_id</col>
-			<UNIQUE />
 		</index>
 	</table>
 

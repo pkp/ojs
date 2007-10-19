@@ -64,6 +64,11 @@
 		<data file="upgrade/2.2.0_localize.xml" />
 	</upgrade>
 
+	<upgrade minversion="2.1.1.0" maxversion="2.1.1.0">
+		<!-- Rename the user_settings table so it can be migrated. -->
+		<data file="upgrade/2.2.0_usersettings.xml" />
+	</upgrade>
+
 	<!-- Common upgrade tasks -->
 	<schema file="ojs_schema.xml" />
 
@@ -72,6 +77,7 @@
 	  - and need the DAOs to function properly in order to work.
 	  -->
 	<upgrade minversion="2.0.0.0" maxversion="2.0.1.0">
+		<!-- The search index was flushed earlier; rebuild it. -->
 		<code function="rebuildSearchIndex" />
 	</upgrade>
 
@@ -81,10 +87,14 @@
 		<code function="migrateRtSettings" />
 	</upgrade>
 
+	<upgrade minversion="2.1.1.0" maxversion="2.1.1.0">
+		<!-- Migrate the user_settings table. -->
+		<code function="migrateUserSettings" />
+	</upgrade>
+
 	<!-- Complete the 2.2 upgrade -->
 	<upgrade minversion="2.0.0.0" maxversion="2.1.1.0">
 		<!-- 2.1.1 (or below) to 2.2 -->
-		<code function="migrateUserSettings" />
 		<data file="upgrade/2.2.0_update.xml" />
 		<code function="localizeJournalSettings" />
 		<code function="migratePublisher" />
