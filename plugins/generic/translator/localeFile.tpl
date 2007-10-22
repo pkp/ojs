@@ -14,7 +14,7 @@
 {assign var=filenameEscaped value=$filename|escape:"url"|escape:"url"}
 
 <form name="reference">
-{foreach from=referenceLocaleContents key=key item=value}<input type="hidden" name="{$key|escape:"quotes"}" value="{$key|escape:"quotes"}"/>{/foreach}
+{foreach from=referenceLocaleContents key=key item=value}<input type="hidden" name="{$key|escape}" value="{$key|escape}"/>{/foreach}
 </form>
 
 <form name="locale" action="{url op="saveLocaleFile" path=$locale|to_array:$filenameEscaped}" method="post">
@@ -37,14 +37,14 @@
 	<tr valign="top">
 		<td>{$key|escape}</td>
 		<td>
-			<input type="hidden" name="changes[]" value="{$key|escape:"quotes"}" />
+			<input type="hidden" name="changes[]" value="{$key|escape}" />
 			{assign var=referenceValue value=$referenceLocaleContents.$key}
 			{if ($value|explode:"\n"|@count > 1) || (strlen($value) > 80) || ($referenceValue|explode:"\n"|@count > 1) || (strlen($referenceValue) > 80)}
 				<textarea name="changes[]" class="textArea" rows="5" cols="50">
 {$value|escape}
 </textarea>
 			{else}
-				<input name="changes[]" class="textField" class="textField" type="text" size="50" value="{$value|escape:"quotes"}" />
+				<input name="changes[]" class="textField" class="textField" type="text" size="50" value="{$value|escape}" />
 			{/if}
 		</td>
 		<td>
