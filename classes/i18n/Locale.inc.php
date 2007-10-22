@@ -414,11 +414,14 @@ class Locale {
 		$plugins =& PluginRegistry::loadAllPlugins();
 		foreach (array_keys($plugins) as $key) {
 			$plugin =& $plugins[$key];
-			$localeFile =& new LocaleFile($locale, $plugin->getLocaleFilename($locale));
-			$referenceLocaleFile =& new LocaleFile($referenceLocale, $plugin->getLocaleFilename($referenceLocale));
-			$errors = array_merge_recursive($errors, $localeFile->testLocale($referenceLocaleFile));
-			unset($localeFile);
-			unset($referenceLocaleFile);
+			$referenceLocaleFilename = $plugin->getLocaleFilename($referenceLocale);
+			if ($referenceLocaleFilename) {
+				$localeFile =& new LocaleFile($locale, $plugin->getLocaleFilename($locale));
+				$referenceLocaleFile =& new LocaleFile($referenceLocale, $referenceLocaleFilename);
+				$errors = array_merge_recursive($errors, $localeFile->testLocale($referenceLocaleFile));
+				unset($localeFile);
+				unset($referenceLocaleFile);
+			}
 			unset($plugin);
 		}
 		return $errors;

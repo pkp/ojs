@@ -38,6 +38,9 @@ class SteelThemePlugin extends ThemePlugin {
 		return 'steel.css';
 	}
 
+	function getLocaleFilename($locale) {
+		return null; // No locale data
+	}
 }
 
 ?>

@@ -38,6 +38,9 @@ class LilacThemePlugin extends ThemePlugin {
 		return 'lilac.css';
 	}
 
+	function getLocaleFilename($locale) {
+		return null; // No locale data
+	}
 }
 
 ?>

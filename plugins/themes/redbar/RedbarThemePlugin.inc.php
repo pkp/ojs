@@ -38,6 +38,9 @@ class RedbarThemePlugin extends ThemePlugin {
 		return 'redbar.css';
 	}
 
+	function getLocaleFilename($locale) {
+		return null; // No locale data
+	}
 }
 
 ?>

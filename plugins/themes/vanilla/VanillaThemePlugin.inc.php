@@ -38,6 +38,9 @@ class VanillaThemePlugin extends ThemePlugin {
 		return 'vanilla.css';
 	}
 
+	function getLocaleFilename($locale) {
+		return null; // No locale data
+	}
 }
 
 ?>

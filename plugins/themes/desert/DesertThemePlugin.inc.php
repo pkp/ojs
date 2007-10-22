@@ -38,6 +38,9 @@ class DesertThemePlugin extends ThemePlugin {
 		return 'desert.css';
 	}
 
+	function getLocaleFilename($locale) {
+		return null; // No locale data
+	}
 }
 
 ?>

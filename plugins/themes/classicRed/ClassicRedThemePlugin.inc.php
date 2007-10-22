@@ -38,6 +38,9 @@ class ClassicRedThemePlugin extends ThemePlugin {
 		return 'classicRed.css';
 	}
 
+	function getLocaleFilename($locale) {
+		return null; // No locale data
+	}
 }
 
 ?>

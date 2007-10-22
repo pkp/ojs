@@ -38,6 +38,9 @@ class ClassicBlueThemePlugin extends ThemePlugin {
 		return 'classicBlue.css';
 	}
 
+	function getLocaleFilename($locale) {
+		return null; // No locale data
+	}
 }
 
 ?>

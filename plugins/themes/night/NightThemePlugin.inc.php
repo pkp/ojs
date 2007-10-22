@@ -38,6 +38,9 @@ class NightThemePlugin extends ThemePlugin {
 		return 'night.css';
 	}
 
+	function getLocaleFilename($locale) {
+		return null; // No locale data
+	}
 }
 
 ?>

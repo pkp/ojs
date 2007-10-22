@@ -38,6 +38,9 @@ class ClassicBrownThemePlugin extends ThemePlugin {
 		return 'classicBrown.css';
 	}
 
+	function getLocaleFilename($locale) {
+		return null; // No locale data
+	}
 }
 
 ?>

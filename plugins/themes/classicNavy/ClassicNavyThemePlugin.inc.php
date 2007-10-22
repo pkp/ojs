@@ -38,6 +38,9 @@ class ClassicNavyThemePlugin extends ThemePlugin {
 		return 'classicNavy.css';
 	}
 
+	function getLocaleFilename($locale) {
+		return null; // No locale data
+	}
 }
 
 ?>

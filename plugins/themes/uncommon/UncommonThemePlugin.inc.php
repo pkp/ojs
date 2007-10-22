@@ -37,6 +37,9 @@ class UncommonThemePlugin extends ThemePlugin {
 	function getStylesheetFilename() {
 		return 'uncommon.css';
 	}
+	function getLocaleFilename($locale) {
+		return null; // No locale data
+	}
 }
 
 ?>

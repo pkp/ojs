@@ -38,6 +38,9 @@ class ClassicGreenThemePlugin extends ThemePlugin {
 		return 'classicGreen.css';
 	}
 
+	function getLocaleFilename($locale) {
+		return null; // No locale data
+	}
 }
 
 ?>
