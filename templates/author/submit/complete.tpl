@@ -8,6 +8,7 @@
  *
  * $Id$
  *}
+{assign var="pageTitle" value="author.track"}
 {include file="common/header.tpl"}
 
 <p>{translate key="author.submit.submissionComplete" journalTitle=$journal->getJournalTitle()}</p>
