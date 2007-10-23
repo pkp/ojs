@@ -12,7 +12,7 @@
   * $Id$
   -->
  
-<locale name="pt_BR" full_name="Português (Brasil)">
+<locale name="pt_BR" full_name="Português do Brasil">
 	<message key="plugins.generic.thesis.displayName">Resumo de Tese</message>
 	<message key="plugins.generic.thesis.description">Solicitar e publicar resumos de teses.</message>
 

@@ -12,7 +12,7 @@
   * $Id$
   -->
  
-<locale name="pt_BR" full_name="Português (Brasil)">
+<locale name="pt_BR" full_name="Português do Brasil">
 	<message key="plugins.importexport.crossref.displayName">Plugin Exportador CrossRef XML</message>
 	<message key="plugins.importexport.crossref.description">Exporta metadados dos artigos no formato CrossRef XML.</message>
 	

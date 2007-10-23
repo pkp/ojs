@@ -12,7 +12,7 @@
   * $Id$
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="pt_BR" full_name="Português do Brasil">
 	<message key="plugins.block.donation.displayName">Bloco de Doações</message>
 	<message key="plugins.block.donation.description">Este plugin oferece um link na barra lateral para aceitar doações.</message>
 </locale>

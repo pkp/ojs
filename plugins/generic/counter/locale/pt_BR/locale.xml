@@ -12,7 +12,7 @@
   * $Id$
   -->
  
-<locale name="pt_BR" full_name="Português (Brasil)">
+<locale name="pt_BR" full_name="Português do Brasil">
 	<message key="plugins.generic.counter.description"><![CDATA[O plugin COUNTER permite armazenar e produzir relatórios compatíveis com <a href="http://www.projectcounter.org/about.html" target="_new">COUNTER</a>, sobre a atividade no portal.]]></message>
 	<message key="plugins.generic.counter">Estatísticas COUNTER</message>
 

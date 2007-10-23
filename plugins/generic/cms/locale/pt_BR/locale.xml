@@ -11,7 +11,7 @@
   *
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="pt_BR" full_name="Português do Brasil">
 	<message key="plugins.generic.cms.displayName">Plugin CMS</message>
 	<message key="plugins.generic.cms.description">Este plugin permite a Administração de Conteúdo Estático.</message>
 

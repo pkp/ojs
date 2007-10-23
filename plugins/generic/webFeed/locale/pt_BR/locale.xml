@@ -12,7 +12,7 @@
   * $Id$
   -->
  
-<locale name="pt_BR" full_name="Português (Brasil)">
+<locale name="pt_BR" full_name="Português do Brasil">
 	<message key="plugins.generic.webfeed.displayName">Plugin Canal Público de Divulgação RSS</message>
 	<message key="plugins.generic.webfeed.description">Este plugin produz divulgação RSS/Atom para a edição atual.</message>
 	<message key="plugins.generic.webfeed.settings">Configurações</message>

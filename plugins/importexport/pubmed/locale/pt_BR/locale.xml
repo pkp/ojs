@@ -12,7 +12,7 @@
   * $Id$
   -->
  
-<locale name="pt_BR" full_name="Português (Brasil)">
+<locale name="pt_BR" full_name="Português do Brasil">
 	<message key="plugins.importexport.pubmed.displayName">Plugin Exportador PubMed XML</message>
 	<message key="plugins.importexport.pubmed.description">Exporta metadados de artigos no formato PubMed XML para indexação na MEDLINE.</message>
 	

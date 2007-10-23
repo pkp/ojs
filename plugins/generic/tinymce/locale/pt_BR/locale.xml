@@ -12,7 +12,7 @@
   * $Id$
   -->
  
-<locale name="pt_BR" full_name="Português (Brasil)">
+<locale name="pt_BR" full_name="Português do Brasil">
 	<message key="plugins.generic.tinymce.name">TinyMCE Plugin</message>
 	<message key="plugins.generic.tinymce.description"><![CDATA[Este plugin permite edição WYSIWYG (What You See Is What You Get) em campos de texto através do editor de conteúdo <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a>.]]></message>
 	<message key="plugins.generic.tinymce.descriptionDisabled"><![CDATA[Este plugin permite edição WYSIWYG (What You See Is What You Get) em campos de texto através do editor de conteúdo <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a>. <strong>TinyMCE não está instalado atualmente. Faça a instalação em {$tinyMcePath}.</strong>]]></message>

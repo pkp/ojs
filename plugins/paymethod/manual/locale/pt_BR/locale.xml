@@ -11,7 +11,7 @@
   *
  -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="pt_BR" full_name="Português do Brasil">
 	<message key="plugins.paymethod.manual.displayName">Pagamento Manual</message>
 	<message key="plugins.paymethod.manual.description">O Editor Gerente da revista ou o Gerente Geral da Conferência registrarão o recebimento do pagamento pelo usuário.</message>
 	<message key="plugins.paymethod.manual">Registro de pagamento</message>

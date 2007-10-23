@@ -12,7 +12,7 @@
   * $Id$
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="pt_BR" full_name="Português do Brasil">
 	<message key="plugins.citationFormats.bibtex.displayName">Plugin Formato de Citação BibTeX</message>
 	<message key="plugins.citationFormats.bibtex.citationFormatName">BibTeX</message>
 	<message key="plugins.citationFormats.bibtex.description">Este plugin implementa o formato de citação BibTeX.</message>

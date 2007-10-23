@@ -12,7 +12,7 @@
   * $Id$
   -->
  
-<locale name="pt_BR" full_name="Português (Brasil)">
+<locale name="pt_BR" full_name="Português do Brasil">
 	<message key="plugins.gateways.resolver.displayName">Resolver Plugin</message>
 	<message key="plugins.gateways.resolver.description">Este plugin encontra edições e artigos baseados na informação da citação.</message>
 	<message key="plugins.gateways.resolver.errors.errorMessage">Não foi possível encontrar uma entidade única com a informação de citação especificada. Certifique-se de que a citação seja completa e se refira a uma entidade nesta instalação do sistema.</message>
