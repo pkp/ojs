@@ -290,7 +290,7 @@ class RegistrationForm extends Form {
 				$mail->setFrom($journal->getSetting('contactEmail'), $journal->getSetting('contactName'));
 				$mail->assignParams(array(
 					'username' => $this->getData('username'),
-					'password' => $this->getData('password'),
+					'password' => String::substr($this->getData('password'), 0, 30), // Prevent mailer abuse via long passwords
 					'userFullName' => $user->getFullName()
 				));
 				$mail->addRecipient($user->getEmail(), $user->getFullName());
