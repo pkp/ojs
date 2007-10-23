@@ -70,7 +70,7 @@
 			<p><span class="instruct">{translate key="manager.setup.subscriptionDescription"}</span></p>
 			<table width="100%">
 				<tr>
-					<td width="5%"><input type="checkbox" name="showGalleyLinks" {if $showGalleyLinks} checked="checked"{/if} /></td>
+					<td width="5%"><input type="checkbox" name="showGalleyLinks" id="showGalleyLinks" {if $showGalleyLinks} checked="checked"{/if} /></td>
 					<td width="95%"><label for="showGalleyLinks">{translate key="manager.setup.showGalleyLinksDescription"}</label></td>
 				</tr>	
 			</table>
