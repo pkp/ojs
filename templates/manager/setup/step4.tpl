@@ -85,10 +85,16 @@
 <script type="text/javascript">
 {literal}
 <!--
-function toggleRegAllowOpts(form) {
-	form.allowRegReader.disabled=!form.allowRegReader.disabled;
-	form.allowRegAuthor.disabled=!form.allowRegAuthor.disabled;
-	form.allowRegReviewer.disabled=!form.allowRegReviewer.disabled;
+function setRegAllowOpts(form) {
+	if(form.disableUserReg[0].checked) {
+		form.allowRegReader.disabled=false;
+		form.allowRegAuthor.disabled=false;
+		form.allowRegReviewer.disabled=false;
+	} else {
+		form.allowRegReader.disabled=true;
+		form.allowRegAuthor.disabled=true;
+		form.allowRegReviewer.disabled=true;
+	}
 }
 // -->
 {/literal}
@@ -111,7 +117,7 @@ function toggleRegAllowOpts(form) {
 
 <table width="100%" class="data">
 	<tr valign="top">
-		<td width="5%" class="label"><input type="radio" name="disableUserReg" id="disableUserReg-0" value="0" onclick="toggleRegAllowOpts(this.form)"{if !$disableUserReg} checked="checked"{/if} /></td>
+		<td width="5%" class="label"><input type="radio" name="disableUserReg" id="disableUserReg-0" value="0" onclick="setRegAllowOpts(this.form)"{if !$disableUserReg} checked="checked"{/if} /></td>
 		<td width="95%" class="value">
 			<label for="disableUserReg-0">{translate key="manager.setup.enableUserRegistration"}</label>
 			<table width="100%">
@@ -131,7 +137,7 @@ function toggleRegAllowOpts(form) {
 		</td>
 	</tr>
 	<tr valign="top">
-		<td width="5%" class="label"><input type="radio" name="disableUserReg" id="disableUserReg-1" value="1" onclick="toggleRegAllowOpts(this.form)"{if $disableUserReg} checked="checked"{/if} /></td>
+		<td width="5%" class="label"><input type="radio" name="disableUserReg" id="disableUserReg-1" value="1" onclick="setRegAllowOpts(this.form)"{if $disableUserReg} checked="checked"{/if} /></td>
 		<td width="95%" class="value"><label for="disableUserReg-1">{translate key="manager.setup.disableUserRegistration"}</label></td>
 	</tr>
 </table>
@@ -180,7 +186,7 @@ function toggleRegAllowOpts(form) {
 	<tr valign="top">
 		<td width="5%" class="label"><input type="checkbox" name="publicationFormatTitle" id="publicationFormatTitle" value="1"{if ($publicationFormatTitle)} checked="checked"{/if} /></td>
 		<td width="95%" class="value">
-			<label for="publicationFormat">{translate key="manager.setup.publicationFormatTitle"}</label>
+			<label for="publicationFormatTitle">{translate key="manager.setup.publicationFormatTitle"}</label>
 		</td>
 	</tr>
 </table>
