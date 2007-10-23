@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * phpMyVisites plugin localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+
+	<!-- phpMyVisites -->
+	<message key="plugins.generic.phpmv.displayName">Plugin phpMyVisites</message>
+	<message key="plugins.generic.phpmv.description"><![CDATA[Integre o sistema com o phpMyVisites, um ferramenta livre e gratuita de análise de tráfego web. Exige a instalação prévia do phpMyVisites. Saiba mais em <a href="http://www.phpmyvisites.us/" title="phpMyVisites site">phpMyVisites</a>.]]></message>
+
+	<!-- phpMyVisites Settings Management -->
+	<message key="plugins.generic.phpmv.manager.settings">Configurações</message>
+	<message key="plugins.generic.phpmv.manager.phpmvSettings">Configurações phpMyVisites</message>
+	<message key="plugins.generic.phpmv.manager.settings.description"><![CDATA[<p>Com este plugin habilitado phpMyVisites pode ser usado para coletar informações e analisar o tráfego de uso do portal para esta revista. O plugin exige a instalação prévia do phpMyVisites. Saiba mais em <a href="http://www.phpmyvisites.us/" title="phpMyVisites site">phpMyVisites</a>.</p>]]></message>
+	<message key="plugins.generic.phpmv.manager.settings.phpmvUrl">URL phpMyVisites</message>
+	<message key="plugins.generic.phpmv.manager.settings.phpmvUrlInstructions">A URL completa da instalação do phpMyVisites (ex.: http://myserver.net/phpmv).</message>
+	<message key="plugins.generic.phpmv.manager.settings.phpmvUrlRequired">Informe uma URL válida. Inclua o protocolo http:// no início.</message>
+	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteId">Número do perfil do portal</message>
+	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteIdInstructions"><![CDATA[Dentro do phpMyVisites, clique em Administração -> Modificar Portal (Administration->Modify site). O número do perfil do portal é exibido próximo ao nome do portal no perfil.]]></message>
+	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteIdRequired">Informe o número do perfil do portal.</message>
+
+</locale>

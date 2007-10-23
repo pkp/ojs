@@ -1681,7 +1681,7 @@ with a plus sign (+) indicating review-in-progress.]]></message>
 
 	<message key="author.submit.coverageInstructions">Опишите географический и исторический (временной) охват Вашего исследования.</message>
 	<message key="author.submit.subjectClassInstructions">Используйте классификационную схему, указанную под линком внизу, для выбора подходящей категории (или классификационного номера) для Вашего исследования.</message>
-	<message key="author.submit.languageInstructions"><![CDATA[English=en; French=fr; Russian=ru. <a href="http://www.loc.gov/standards/iso639-2/langcodes.html" target="_blank">Дополнительные коды</a>.]]></message>
+	<message key="author.submit.languageInstructions"><![CDATA[English=en; French=fr; Russian=ru. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Дополнительные коды</a>.]]></message>
 	<message key="author.submit.form.authorRequired">Требуется минимум один автор.</message>
 	<message key="author.submit.form.authorRequiredFields">Нужно ввести имя, фамилию и мейл каждого автора.</message>
 	<message key="author.submit.form.titleRequired">Введите название Вашей статьи</message>

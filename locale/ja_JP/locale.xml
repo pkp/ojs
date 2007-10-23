@@ -1678,7 +1678,7 @@ OJSのシステム設定を変更することにより、このサイト全体�
   <message key="author.submit.coverageInstructions">地理空間的・年代的・歴史的範囲または研究材料の特性を示してください。</message>
   <message key="author.submit.subjectClassInstructions">分類語または（可能であれば）分類標数の選択にはハイパーリンク分類システムを使用してください。</message>
   <message key="author.submit.languageInstructions">
-    <![CDATA[日本語=ja; 英語=en; フランス語=fr、<a href="http://www.loc.gov/standards/iso639-2/langcodes.html" target="_blank">その他のコード</a>。]]>
+    <![CDATA[日本語=ja; 英語=en; フランス語=fr、<a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">その他のコード</a>。]]>
   </message>
   <message key="author.submit.form.authorRequired">少なくとも1人の著者が必須です。</message>
   <message key="author.submit.form.authorRequiredFields">各著者の姓名、メールアドレスは必須です。</message>

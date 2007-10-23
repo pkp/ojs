@@ -49,12 +49,12 @@ Sua nova senha: {$password}
 		<row>
 			<field name="email_key">USER_REGISTER</field>
 			<field name="subject">Novo Usuário Cadastrado</field>
-			<field name="body">Agradecemos o seu cadastro ho sistema web da revista {$journalName}. Guarde o login e a senha, pois serão necessários para todos os trabalhos junto à revista.
+			<field name="body">Agradecemos o seu cadastro no sistema web da revista {$journalName}. Guarde o login e a senha, pois serão necessários para todos os trabalhos junto à revista. Caso deseje ser removido do sistema, entre em contato.
 
 Login: {$username}
 Senha: {$password}
 
-Agradecendo desde já sua atenção,
+Agradecendo desde já a atenção dispensada,
 {$principalContactSignature}</field>
 			<field name="description">Mensagem enviada aos usuários recém-cadastrados no sistema, para acolhê-los e proporcionar um registro pessoal do login e da senha.</field>
 		</row>
@@ -798,5 +798,33 @@ Sua contribuição é fundamental para a qualidade desta publicação.
 			<field name="description">Mensagem enviada por um leitor a um colega, sobre um artigo considerado de seu interesse, com link para acesso e informações sobre a revista e a edição onde o documento foi publicado.</field>
 		</row>
 
+		<row>
+			<field name="email_key">USER_VALIDATE</field>
+			<field name="subject">Validação de cadastro</field>
+			<field name="body">{$userFullName},
+
+Seu cadastro foi criado na revista {$journalName}, porém é necessário validar o endereço de e-mail para finalizar o processo. Para validar seu cadastro e acessar o sistema e seus recursos acesse a url a seguir:
+
+
+{$activateUrl}
+
+Agradecendo desde já sua atenção,
+{$principalContactSignature}</field>
+			<field name="description">Mensagem de boas-vindas enviada a novo usuário cadastrado, para ativação de cadastro.</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEWER_REGISTER</field>
+			<field name="subject">Cadastro como Avaliador na revista {$journalName}</field>
+			<field name="body">Devido ao conhecimento excepcional na sua área de atuação, tomamos a liberdade de cadastrá-lo na base de dados de avaliadores de nossa revista, {$journalName}. Seu cadastro não significa assumir responsabilidade alguma, apenas permitindo solicitar sua avaliação de submissões, de acordo com seus interesses. Ao ser convidado para avaliar um artigo, estarão disponíveis informações como o título e resumo da submissão, podendo aceitar ou rejeitar o convite. Caso deseje ser removido da lista, basta entrar em contato a qualquer tempo solicitando sua remoção.
+
+Seus dados de acesso, login e senha, utilizados para interagir com o sistema e realizar atividades, como por exemplo atualizar seu perfil e a área de interesse para avaliação, estão incluídos nesta mensagem.
+
+Login: {$username}
+Senha: {$password}
+
+Agradecendo desde já a atenção dispensada,
+{$principalContactSignature}</field>
+			<field name="description">Mensagem de boas-vindas enviada a novo avaliador cadastrado no sistema, com login e senha para acesso.</field>
+		</row>
 	</table>
 </data>

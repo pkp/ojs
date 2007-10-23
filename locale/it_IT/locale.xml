@@ -1722,7 +1722,7 @@ Attivo &#x00E8; il numero di quante revisioni si stanno considerando o stanno an
 	<message key="author.submit.agencies">Organizzazioni</message>
 	<message key="author.submit.coverageInstructions">Riferimenti geografici, al periodo cronologico/storico e/o alle caratteristiche di un campione della ricerca.</message>
 	<message key="author.submit.subjectClassInstructions">Utilizza i link ipertestuali del sistema di classificazione per selezionare i termini e, se idonei, i numeri di classificazione.</message>
-	<message key="author.submit.languageInstructions"><![CDATA[Italiano=it; Inglese=en; Francese=fr; Spagnolo=es. <a href="http://www.loc.gov/standards/iso639-2/langcodes.html" target="_blank">Altri codici</a>.]]></message>
+	<message key="author.submit.languageInstructions"><![CDATA[Italiano=it; Inglese=en; Francese=fr; Spagnolo=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Altri codici</a>.]]></message>
 	<message key="author.submit.form.authorRequired">&#x00C8; necessario inserire almeno un autore.</message>
 	<message key="author.submit.form.authorRequiredFields">&#x00C8; necessario inserire il nome, cognome e indirizzo email di ciascun autore.</message>
 	<message key="author.submit.form.titleRequired">Per piacere inserite il titolo dell'articolo.</message>

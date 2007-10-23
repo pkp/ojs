@@ -1,35 +1,35 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
-
-<!--
-  * locale.xml
-  *
-  * Copyright (c) 2003-2007 John Willinsky
-  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  *
-  * Localization strings for the pt_BR locale.
-  *
-  * $Id$
-  -->
- 
-<locale name="pt_BR" full_name="Português (Brasil)">
-	<message key="plugins.importexport.pubmed.displayName">Plugin Exportador PubMed XML</message>
-	<message key="plugins.importexport.pubmed.description">Exporta metadados de artigos no formato PubMed XML para indexação na MEDLINE.</message>
-	
-	<message key="plugins.importexport.pubmed.export">Exportar Dados</message>
-	<message key="plugins.importexport.pubmed.export.issues">Exportar Edições</message>
-	<message key="plugins.importexport.pubmed.export.selectIssue">Escolher uma Edição para exportar.</message>
-	<message key="plugins.importexport.pubmed.export.articles">Exportar Artigos</message>
-	<message key="plugins.importexport.pubmed.export.selectArticle">Selecionar Artigos para exportar.</message>
-	
-	<message key="plugins.importexport.pubmed.cliUsage"><![CDATA[Modo de Usar: 
-{$scriptName} {$pluginName} [xmlFileName] [journal_path] artigos [articleId1] [articleId2] ...
-{$scriptName} {$pluginName} [xmlFileName] [journal_path] edição [issueId]
-]]></message>
-	<message key="plugins.importexport.pubmed.cliError">ERRO:</message>
-
-	<message key="plugins.importexport.pubmed.export.error.issueNotFound">Nenhuma edição encontrada com o ID "{$issueId}".</message>
-	<message key="plugins.importexport.pubmed.export.error.articleNotFound">Nenhum artigo encontrado com o ID "{$articleId}".</message>
-
-
-</locale>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the pt_BR locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="pt_BR" full_name="Português (Brasil)">
+	<message key="plugins.importexport.pubmed.displayName">Plugin Exportador PubMed XML</message>
+	<message key="plugins.importexport.pubmed.description">Exporta metadados de artigos no formato PubMed XML para indexação na MEDLINE.</message>
+	
+	<message key="plugins.importexport.pubmed.export">Exportar Dados</message>
+	<message key="plugins.importexport.pubmed.export.issues">Exportar Edições</message>
+	<message key="plugins.importexport.pubmed.export.selectIssue">Escolher uma Edição para exportar.</message>
+	<message key="plugins.importexport.pubmed.export.articles">Exportar Artigos</message>
+	<message key="plugins.importexport.pubmed.export.selectArticle">Selecionar Artigos para exportar.</message>
+	
+	<message key="plugins.importexport.pubmed.cliUsage"><![CDATA[Modo de Usar: 
+{$scriptName} {$pluginName} [xmlFileName] [journal_path] artigos [articleId1] [articleId2] ...
+{$scriptName} {$pluginName} [xmlFileName] [journal_path] edição [issueId]
+]]></message>
+	<message key="plugins.importexport.pubmed.cliError">ERRO:</message>
+
+	<message key="plugins.importexport.pubmed.export.error.issueNotFound">Nenhuma edição encontrada com o ID "{$issueId}".</message>
+	<message key="plugins.importexport.pubmed.export.error.articleNotFound">Nenhum artigo encontrado com o ID "{$articleId}".</message>
+
+
+</locale>

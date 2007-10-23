@@ -266,10 +266,10 @@ Nếu quý vị có bất kỳ câu hỏi nào, xin vui lòng liên lạc với 
 		</row>
 		<row>
 			<field name="email_key">REVIEW_CONFIRM</field>
-			<field name="subject">Có thể phản biện</field>
+			<field name="subject">Nhận lời phản biện</field>
 			<field name="body">{$editorialContactName}:
 
-Tôi có thể và sẵn sàng phản biện bài nộp, "{$articleTitle}," cho tạp chí {$journalName}. Cám ơn quý vị đã lưu tâm đến tôi, và tôi dự kiến sẽ hoàn thành việc phản biện trước ngày hết hạn {$reviewDueDate}.
+Tôi có thể và sẵn sàng phản biện bài nộp, "{$articleTitle}," cho tạp chí {$journalName}. Cám ơn quý vị đã lưu tâm đến tôi, và tôi dự kiến sẽ hoàn thành việc phản biện trước thời  hạn {$reviewDueDate}.
 
 {$reviewerName}</field>
 			<field name="description">Email này được Người phản biện gửi cho BTV chuyên mục để hồi âm đề nghị phản biện và báo cho BTV chuyên mục rằng Người phản biện nhận lời và sẽ hoàn thành phản biện trước ngày được nêu.</field>
@@ -286,10 +286,10 @@ Cảm ơn quý vị đã nhận lời phản biện bản thảo "{$articleTitle
 		</row>
 		<row>
 			<field name="email_key">REVIEW_DECLINE</field>
-			<field name="subject">Không thể phản biện</field>
+			<field name="subject">Từ chối phản biện</field>
 			<field name="body">{$editorialContactName}:
 
-Tôi sợ rằng vào thời điểm này tôi không thể phản biện bài nộp, "{$articleTitle}," cho tạp chí {$journalName}. Cảm ơn quý vị đã lưu tâm đến tôi, và đừng ngại nhờ đến tôi vào thời điểm khác.
+Tôi sợ rằng vào thời điểm này tôi không thể phản biện bài nộp, "{$articleTitle}," cho tạp chí {$journalName} được. Cảm ơn quý vị đã lưu tâm đến tôi, và tôi rất sẵn lòng được tham gia phản biện vào thời điểm khác.
 
 {$reviewerName}</field>
 			<field name="description">Email này được Người phản biện gửi cho BTV chuyên mục để hồi âm đề nghị phản biện và báo cho BTV chuyên mục biết Người phản biện từ chối phản biện bài nộp.</field>
@@ -340,7 +340,7 @@ Xin quý vị vui lòng khẳng định khả năng đóng góp hết sức quan
 		</row>
 		<row>
 			<field name="email_key">REVIEW_REMIND_AUTO</field>
-			<field name="subject">Nhắc nhở phản biện bài nộp tự động</field>
+			<field name="subject">Tự động nhắc nhở phản biện bài nộp</field>
 			<field name="body">{$reviewerName}:
 
 Xin được phép nhắc lại đề nghị của chúng tôi với quý vị về phản biện bài nộp, "{$articleTitle}," cho tạp chí {$journalName}. Chúng tôi hy vọng sẽ nhận được bài phản biện trước ngày {$reviewDueDate}, email này được tạo ra tự động và gửi tới quý vị khi thời hạn đã qua. Mặc dù vậy chúng tôi rất vui lòng nhận được bài phản biện ngay khi quý vị chuẩn bị xong.
@@ -356,7 +356,7 @@ Xin quý vị vui lòng khẳng định khả năng đóng góp hết sức quan
 		</row>
 		<row>
 			<field name="email_key">REVIEW_REMIND_AUTO_ONECLICK</field>
-			<field name="subject">Automated Submission Review Reminder</field>
+			<field name="subject">Tự động nhắc nhở phản biện bài nộp</field>
 			<field name="body">{$reviewerName}:
 
 Xin được phép nhắc lại đề nghị của chúng tôi với quý vị về phản biện bài nộp, "{$articleTitle}," cho tạp chí {$journalName}. Chúng tôi hy vọng sẽ nhận được bài phản biện trước ngày {$reviewDueDate}, email này được tạo ra tự động và gửi tới quý vị khi thời hạn đã qua. Mặc dù vậy chúng tôi rất vui lòng nhận được bài phản biện ngay khi quý vị chuẩn bị xong.

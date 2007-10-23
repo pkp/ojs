@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2007 Siavash Miri and Alec Smecher
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.generic.openads.description">O Plugin OpenAds permite incluir anúncios do servidor de publicidade OpenAds no sistema.</message>
+	<message key="plugins.generic.openads.descriptionUnconfigured"><![CDATA[O plugin permite incluir publicidade dinâmica do servidor OpenAds dentro do sistema. <strong>Leia o README disponível em plugins/generic/openAds para informações sobre como habilitar o plugin.</strong>]]></message>
+	<message key="plugins.generic.openads">Plugin OpenAds</message>
+	<message key="plugins.generic.openads.settings.description">Utilize o formulário para escolher as regiões de publicidade OpenAds onde serão exibidos os conteúdos em potencial no sistema.</message>
+	<message key="plugins.generic.openads.manager.settings">Configurações</message>
+
+	<message key="plugins.generic.openads.error.configFileNotFound">Impossível acessar o arquivo de configuração {$filename}.</message>
+	<message key="plugins.generic.openads.error.missingParameter">Não foi possível ler pelo menos uma das configurações obrigatórias do arquivo de configuração do OpenAds. Os parâmetros obrigatórios são dbhost, dbuser, dbpassword, dbname, url_prefix, e table_prefix.</message>
+	<message key="plugins.generic.openads.error.dbConnectionError">Impossível conectar à base de dados OpenAds.</message>
+
+	<message key="plugins.generic.openads.headerAd">Anúncio de Cabeçalho</message>
+	<message key="plugins.generic.openads.contentAd">Anúncio de Conteúdo</message>
+	<message key="plugins.generic.openads.sidebarAd">Anúncio de barra lateral</message>
+
+	<message key="plugins.generic.openads.orientation.left">Esquerda</message>
+	<message key="plugins.generic.openads.orientation.centre">Centro</message>
+	<message key="plugins.generic.openads.orientation.right">Direita</message>
+</locale>

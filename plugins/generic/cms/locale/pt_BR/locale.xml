@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.generic.cms.displayName">Plugin CMS</message>
+	<message key="plugins.generic.cms.description">Este plugin permite a Administração de Conteúdo Estático.</message>
+
+	<message key="plugins.generic.cms.toc">Sumário</message>
+
+	<message key="plugins.generic.cms.requirement.layoutmanager"><![CDATA[<strong>O Plugin Administrador de Layout deve estar instalado para utilizar este plugin.</strong>]]></message>	
+	<message key="plugins.generic.cms.requirement.tinymce"><![CDATA[<strong>O Plugin TinyMCE deve estar instalado e habilitado para incluir/editar conteúdo.</strong>]]></message>
+
+	<message key="manager.plugins.content">Incluir/Editar conteúdo</message>
+
+	<message key="plugins.generic.cms.form.introduction">Este Plugin de Administração de Conteúdo (Content Management System - CMS) permite a editores gerentes incluir conteúdo estático a sua revista. O conteúdo é dividido em páginas utliizando os níveis de cabeçalho 1, 2 e 3 enquanto os níveis de cabeçalho 4 e superiores são utilizados para quebrar as páginas dentro de um nível. Cada cabeçalho se transforma em item de navegação no sumário, (disponível na barra lateral). Para editar uma página, escolha uma página do sumário, edite o conteúdo e clique no botão salvar. Para incluir uma nova página, basta incluir um novo cabeçalho e o conteúdo em seguida, dentro da página atual. O conteúdo novo aparecerá abaixo da página atual.</message>
+	
+	<message key="plugins.generic.cms.error.muststartwithheader"><![CDATA[Toda página deve iniciar com um cabeçalho (<h1>, <h2>, <h3>)]]></message>
+	<message key="plugins.generic.cms.error.musthavecontent">Deve haver algum conteúdo após cada cabeçalho. Assegure-se de não haver dois cabeçalhos seguidos.</message>
+	<message key="plugins.generic.cms.error.headingcannotbeempty">Cada cabeçalho deve possuir um caracter diferente de espaço em branco.</message>		
+</locale>

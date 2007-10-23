@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.generic.cmsrss.displayName">Plugin RSS CMS</message>
+	<message key="plugins.generic.cmsrss.description">Este plugin permite agregar RSS a páginas do plugin CMS</message>
+
+	<message key="plugins.generic.cmsrss.requirement.cms"><![CDATA[<strong>O Plugin CMS deve estar instalado e habilitado para utilizar este plugin.</strong>]]></message>	
+
+	<message key="manager.plugins.cmsrss.edit">Editar/Incluir Canal RSS</message>
+	<message key="plugins.generic.cmsrss.pagename">Nome da Página</message>
+	<message key="plugins.generic.cmsrss.url">URL do Canal</message>	
+	<message key="plugins.generic.cmsrss.months">Item mais antigo (em meses). 0 para todos os itens disponíveis.</message>		
+	<message key="plugins.generic.cmsrss.aggregate">Combinar todos os canais de cada página e ordenar por data.</message>			
+	<message key="plugins.generic.cmsrss.form.introduction"><![CDATA[<p>O Plugin RSS CMS permite a editores gerentes incluir canais RSS a páginas normalmente estáticas do Plugin CMS.</p><p>O Nome da Página deve corresponder ao cabeçalho da página CMS (que aparece no sumário).  Separe os nomes dos cabeçalhos com ":".  Ex.: cabecalho1:cabecalho2.</p><p>As URLs dos canais não são validadas, portanto, assegure-se de que a URL utilizada esja a correta.</p>]]></message>
+	<message key="plugins.generic.cmsrss.requiredFields">Toda linha requer um nome de página e uma URL</message>
+	<message key="plugins.generic.cmsrss.sorting">Linhas são ordenadas por Nome de Página</message>	
+	
+	<message key="plugins.generic.cmsrss.addUrl">Incluir outro Canal</message>
+	<message key="plugins.generic.cmsrss.deleteUrl">Remover Canal</message>	
+	
+	<!-- RSS Template -->
+	<message key="plugins.generic.cmsrss.postedon">Publicado em</message>
+	<message key="plugins.generic.cmsrss.permalink">Permalink</message>	
+</locale>

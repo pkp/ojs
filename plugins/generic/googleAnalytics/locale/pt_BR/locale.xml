@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Google Analytics plugin localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+
+	<!-- Google Analytics -->
+	<message key="plugins.generic.googleAnalytics.displayName">Plugin Google Analytics</message>
+	<message key="plugins.generic.googleAnalytics.description"><![CDATA[Integre o sistema com o Google Analytics, a aplicação da Google para análise de tráfego do portal. Exige uma conta no Google Analytics. Saiba mais em <a href="http://www.google.com/analytics/" title="Google Analytics site">Google Analytics</a>.]]></message>
+
+	<!-- Google Analytics Settings Management -->
+	<message key="plugins.generic.googleAnalytics.manager.settings">Configurações</message>
+	<message key="plugins.generic.googleAnalytics.manager.googleAnalyticsSettings">Configurações Google Analytics</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.description"><![CDATA[<p>Com este plugin habilitado, pode-se coletar informações e analisar o tráfego de uso do portal para esta revista. Este plugin exige uma conta no Google Analytics. Saiba mais em <a href="http://www.google.com/analytics/" title="Google Analytics site">Google Analytics</a>.</p>]]></message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteId">Número da conta</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdInstructions">Dentro do Google Analytics, clique em Verificar Status (Check Status) para visualizar o código de acompanhamento do portal. O número da conta é exibido dentro o código de acompanhamento : _uacct = "###". Informe o texto que corresponde a ###.</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdRequired">Informe o número da conta.</message>
+
+</locale>

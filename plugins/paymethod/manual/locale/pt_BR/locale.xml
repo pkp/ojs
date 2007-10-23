@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2000-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+ -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.paymethod.manual.displayName">Pagamento Manual</message>
+	<message key="plugins.paymethod.manual.description">O Editor Gerente da revista ou o Gerente Geral da Conferência registrarão o recebimento do pagamento pelo usuário.</message>
+	<message key="plugins.paymethod.manual">Registro de pagamento</message>
+</locale>

@@ -1688,7 +1688,7 @@ Aktivnih prikazuje na koliko je recenzija recenzent trenutno angažiran.]]></mes
 	<message key="author.submit.agencies">Ustanove</message>
 	<message key="author.submit.coverageInstructions">Odnosi se na  na geografsku rasprostranjenost lokacije, kronološki ili povijesni opseg , i/ili osobine istraživačkih uzoraka.</message>
 	<message key="author.submit.subjectClassInstructions">Koristite klasifikacijski sustav hiperveza da biste odabrali prikladne klasifikacijske pojmove ili možda prikladne brojeve.</message>
-	<message key="author.submit.languageInstructions"><![CDATA[Hrvatski=hr; Engleski=en; Francuski=fr; Španjolski=es. <a href="http://www.loc.gov/standards/iso639-2/langcodes.html" target="_blank">Dodatni kôdovi</a>.]]></message>
+	<message key="author.submit.languageInstructions"><![CDATA[Hrvatski=hr; Engleski=en; Francuski=fr; Španjolski=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Dodatni kôdovi</a>.]]></message>
 	<message key="author.submit.form.authorRequired">Najmanje jedan autor je obavezan.</message>
 	<message key="author.submit.form.authorRequiredFields">Ime, prezime i adresa e-pošte svakog autora je obavezna.</message>
 	<message key="author.submit.form.titleRequired">Molimo unesite naslov vašeg članka.</message>

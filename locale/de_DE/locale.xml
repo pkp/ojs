@@ -1688,7 +1688,7 @@ mit einem (+), das anzeigt, dass das Gutachten in Arbeit ist.]]></message>
 	<message key="author.submit.agencies">Organismen</message>
 	<message key="author.submit.coverageInstructions">Bezieht sich auf eine räumlich-geographische Zuordnung, auf einen chronologischen oder historischen Zeitraum und/oder auf Charakteristika der Forschungsgegenstände.</message>
 	<message key="author.submit.subjectClassInstructions">Klassifizierungsbegriffe aus der Hyperlinkklassifizierung oder, falls passend, Zahlen verwenden.</message>
-	<message key="author.submit.languageInstructions"><![CDATA[englisch=an; französisch=fr; spanisch=es; deutsch=de. <a href="http://www.loc.gov/standards/iso639-2/langcodes.html" target="_blank">zusätzliche Kodierungen</a>.]]></message>
+	<message key="author.submit.languageInstructions"><![CDATA[englisch=an; französisch=fr; spanisch=es; deutsch=de. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">zusätzliche Kodierungen</a>.]]></message>
 	<message key="author.submit.form.authorRequired">Mindestens ein Verfasser erforderlich.</message>
 	<message key="author.submit.form.authorRequiredFields">Vorname, Name, Emailadresse für jeden Verfasser erforderlich.</message>
 	<message key="author.submit.form.titleRequired">Bitte den Titel Ihres Beitrags eingeben.</message>

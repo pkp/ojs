@@ -1698,7 +1698,7 @@ artı (+) işareti ile hakemin şu anda değerlendirdiği yazılar belirtilmişt
 	<message key="author.submit.agencies">Kuruluşlar</message>
 	<message key="author.submit.coverageInstructions">Araştırma materyalinin coğrafik lokalizasyonunu, kronolojik ya da tarihsel  kapsamını, ve/veya karekteristiğini belirtir.</message>
 	<message key="author.submit.subjectClassInstructions">Sınıflandırma terimleri ve uygunsa numaraları seçmek için hiperlik edilmiş sınıflama sitemini kullanınız.</message>
-	<message key="author.submit.languageInstructions"><![CDATA[English=en; French=fr; Spanish=es. <a href="http://www.loc.gov/standards/iso639-2/langcodes.html" target="_blank">Additional codes</a>.]]></message>
+	<message key="author.submit.languageInstructions"><![CDATA[English=en; French=fr; Spanish=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Additional codes</a>.]]></message>
 	<message key="author.submit.form.authorRequired">En az bir yazar gerekli.</message>
 	<message key="author.submit.form.authorRequiredFields">Her yazarın adı, soyadı ve e-posta adresi gereklidir.</message>
 	<message key="author.submit.form.titleRequired">Lütfen makalenizin başlığını giriniz. </message>

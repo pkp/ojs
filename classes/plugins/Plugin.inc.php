@@ -78,16 +78,35 @@ class Plugin {
 		return true;
 	}
 
+	/**
+	 * Load locale data for this plugin.
+	 * @param $locale string
+	 * @return boolean
+	 */
 	function addLocaleData($locale = null) {
 		if ($locale == '') $locale = Locale::getLocale();
-		Locale::registerLocaleFile($locale, $this->getLocaleFilename($locale));
-		return true;
+		$localeFilename = $this->getLocaleFilename($locale);
+		if ($localeFilename) {
+			Locale::registerLocaleFile($locale, $this->getLocaleFilename($locale));
+			return true;
+		}
+		return false;
 	}
 
+	/**
+	 * Get the filename for the locale data for this plugin.
+	 * @param $locale string
+	 * @return string
+	 */
 	function getLocaleFilename($locale) {
 		return $this->getPluginPath() . DIRECTORY_SEPARATOR . 'locale' . DIRECTORY_SEPARATOR . $locale . DIRECTORY_SEPARATOR . 'locale.xml';
 	}
 
+	/**
+	 * Add help data for this plugin.
+	 * @param $locale string
+	 * @return boolean
+	 */
 	function addHelpData($locale = null) {
 		if ($locale == '') $locale = Locale::getLocale();
 		$help =& Help::getHelp();
@@ -97,6 +116,11 @@ class Plugin {
 		return true;
 	}
 
+	/**
+	 * Get the path and filename of the help mapping file, if this
+	 * plugin includes help files.
+	 * @return string
+	 */
 	function getHelpMappingFilename() {
 		return $this->getPluginPath() . DIRECTORY_SEPARATOR . 'help.xml';
 	}
@@ -111,6 +135,10 @@ class Plugin {
 		return 'Plugin';
 	}
 
+	/**
+	 * Get the display name for this plugin.
+	 * @return string
+	 */
 	function getDisplayName() {
 		return $this->getName();
 	}
@@ -127,6 +155,10 @@ class Plugin {
 		return "file:$basePath/" . $this->getPluginPath() . '/';
 	}
 
+	/**
+	 * Load a PHP file from this plugin's installation directory.
+	 * @param $class string
+	 */
 	function import($class) {
 		require_once($this->getPluginPath() . '/' . str_replace('.', '/', $class) . '.inc.php');
 	}

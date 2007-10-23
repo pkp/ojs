@@ -13,7 +13,13 @@
   -->
  
 <locale name="pt_BR" full_name="Português (Brasil)">
-	<message key="plugins.generic.webfeed.displayName">Plugin Sindicação</message>
-	<message key="plugins.generic.webfeed.description">Este plugin produz sindicação RSS/Atom para a edição atual.</message>
+	<message key="plugins.generic.webfeed.displayName">Plugin Canal Público de Divulgação RSS</message>
+	<message key="plugins.generic.webfeed.description">Este plugin produz divulgação RSS/Atom para a edição atual.</message>
+	<message key="plugins.generic.webfeed.settings">Configurações</message>
+	<message key="plugins.generic.webfeed.settings.issue">Exibir canais somente nas páginas da edição.</message>
+	<message key="plugins.generic.webfeed.settings.all">Exibir canais em todas as páginas da revista.</message>
+	<message key="plugins.generic.webfeed.settings.currentIssue">Exibir itens da edição atual.</message>
+	<message key="plugins.generic.webfeed.settings.recentArticles">itens mais recentes.</message>
+	<message key="plugins.generic.webfeed.settings.recentItemsRequired">Informe um inteiro positivo para o número de itens mais recentes.</message>
 </locale>
 

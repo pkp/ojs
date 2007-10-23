@@ -2286,4 +2286,235 @@ Thè pårågråph thåt bègîñþ "Thîþ låþt tópîç..." îþ ñót îñð
 	<message key="default.journalSettings.forAuthors"><![CDATA[Îñtèrèþtèð îñ þübmîttîñg tó thîþ jóürñål? Wè rèçómmèñð thåt ýóü rèvîèw thè <a href="{$indexUrl}/{$journalPath}/about">Æbóüt thè Jóürñål</a> pågè fór thè jóürñål'þ þèçtîóñ pólîçîèþ, åþ wèll åþ thè <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Æüthór Güîðèlîñèþ</a>. Æüthórþ ñèèð tó <a href="{$indexUrl}/{$journalPath}/user/register">règîþtèr</a> wîth thè jóürñål prîór tó þübmîttîñg, ór îf ålrèåðý règîþtèrèð çåñ þîmplý <a href="{$indexUrl}/index/login">lóg îñ</a> åñð bègîñ thè 5 þtèp próçèþþ.]]></message>
 	<message key="default.journalSettings.forLibrarians"><![CDATA[Wè èñçóürågè rèþèårçh lîbrårîåñþ tó lîþt thîþ jóürñål åmóñg thèîr lîbrårý'þ èlèçtróñîç jóürñål hólðîñgþ. Æþ wèll, ît måý bè wórth ñótîñg thåt thîþ jóürñål'þ ópèñ þóürçè püblîþhîñg þýþtèm îþ þüîtåblè fór lîbrårîèþ tó hóþt fór thèîr fåçültý mèmbèrþ tó üþè wîth jóürñålþ thèý årè îñvólvèð îñ èðîtîñg (þèè <a href="http://pkp.sfu.ca/ojs">Òpèñ Jóürñål ßýþtèmþ</a>).]]></message>
 	<message key="default.journalSettings.lockssLicense"><![CDATA[Thîþ jóürñål ütîlîzèþ thè LÒÇKßß þýþtèm tó çrèåtè å ðîþtrîbütèð årçhîvîñg þýþtèm åmóñg pårtîçîpåtîñg lîbrårîèþ åñð pèrmîtþ thóþè lîbrårîèþ tó çrèåtè pèrmåñèñt årçhîvèþ óf thè jóürñål fór pürpóþèþ óf prèþèrvåtîóñ åñð rèþtóråtîóñ. <a href="http://lockss.stanford.edu/">Mórè...</a>]]></message>
+	<message key="common.add">Add</message>
+	<message key="common.discipline">Discipline</message>
+	<message key="common.suggest">Suggest</message>
+	<message key="common.payment">Payment</message>
+	<message key="common.payments">Payments</message>
+	<message key="form.postRequired">The form was not submitted properly.</message>
+	<message key="form.formLanguage">Form Language</message>
+	<message key="form.formLanguage.description">To enter the information below in additional languages, first select the language.</message>
+	<message key="email.compose.tooSoon">You are attempting to send a message too recently after your last message was sent. Please wait before sending another message.</message>
+	<message key="email.compose.tooManyRecipients">The message you are attempting to send has too many recipients.</message>
+	<message key="navigation.competingInterestGuidelines">Competing Interest Guidelines</message>
+	<message key="user.salutation">Salutation</message>
+	<message key="user.gender">Gender</message>
+	<message key="user.masculine">M</message>
+	<message key="user.feminine">F</message>
+	<message key="reader.subscribersOnly">Subscribers Only</message>
+	<message key="reader.openAccess">Open Access</message>
+	<message key="reader.subscriptionAccess">Subscription Access</message>
+	<message key="reader.subscriptionOrFeeAccess">Subscription or Fee Access</message>
+	<message key="admin.settings.homeHeaderImageInvalid">Invalid site logo image format. Accepted formats are .gif, .jpg, or .png.</message>
+	<message key="admin.languages.installLanguages">Manage Locales</message>
+	<message key="manager.statistics.reports.description">OJS generates reports that track the details associated with processing submissions to the journal from the perspective of submissions, editors, reviewers, and sections, over a given period of time. Reports are generated in CSV format which requires a spreadsheet application to view.</message>
+	<message key="manager.plugins.description">This page allows the Journal Manager to review and potentially configure the plugins that are currently installed. Plugins are divided into categories, according to their function. The categories are listed below, and within each category, its current set of plugins.</message>
+	<message key="manager.payments">Payments</message>
+	<message key="manager.payment.enable">Enable</message>
+	<message key="manager.payment.description">Description</message>
+	<message key="manager.payment.cost">Cost</message>
+	<message key="manager.payment.action">Action</message>
+	<message key="manager.payment.details">Details</message>
+	<message key="manager.payment.addPayment">Add Payment</message>
+	<message key="manager.payment.currency">Currency</message>
+	<message key="manager.payment.currencymessage">OJS does not perform any currency conversions.  If accepting payments for subscriptions, you must ensure that the subscription currency matches the one specified here.</message>
+	<message key="manager.payment.settings">Settings</message>
+	<message key="manager.payment.settings.enablePayments">Click here to enable the Payments module.  You must configure payment settings by filling in the form below.  Note that a value of 0 indicates that this option is not enabled.</message>
+	<message key="manager.payment.settings.notices">Users will be required to be logged in in order to make payments.</message>
+	<message key="manager.payment.settings.text">Description of Payment Method</message>
+	<message key="manager.payment.settings.submissionFee">Article Submission Fee (ASF)</message>
+	<message key="manager.payment.settings.publicationFee">Article Publication Fee (APF)</message>
+	<message key="manager.payment.settings.fastTrackFee">Fast-Track Review Fee</message>
+	<message key="manager.payment.settings.membershipFee">One (1) year Individual Membership</message>
+	<message key="manager.payment.settings.payPerViewFee">Article Pay-Per-View Fee</message>
+	<message key="manager.payment.settings.onlypdf">Only Restrict Access to PDF version of articles</message>
+	<message key="manager.payment.settings.acceptSubscriptionPayments">Accept subscription fees (types, cost and duration specified in the Subscriptions section)</message>
+	<message key="manager.payment.settings.acceptDonationPayments">Accept donations (lets user specify amount)</message>
+	<message key="manager.payment.checksettings">Notes about Journal Settings</message>
+	<message key="manager.payment.checksettings.explanation1">In order for the payments module to restrict access to articles, the Open Access Policy of the journal must be set to Subscriptions Required in the Journal Setup (Step 4).</message>
+	<message key="manager.payment.checksettings.enablesubscripitons">Subscriptions Required</message>
+	<message key="manager.payment.checksettings.explanation2">Please not that if you wish to restrict access to an article, NEITHER the article nor the issue can be set to Open Access.  Be mindful of the delayed open access date.</message>
+	<message key="manager.payment.checksettings.ok">OK</message>
+	<message key="manager.payment.checksettings.notok">must be set to subscriptions required</message>
+	<message key="manager.payment.noPayments">No Payments</message>
+	<message key="manager.payment.paymentId">Payment ID</message>
+	<message key="manager.payment.userName">Payment ID</message>
+	<message key="manager.payment.timestamp">Timestamp</message>
+	<message key="manager.payment.amount">Amount</message>
+	<message key="manager.payment.notFound">Not Found</message>
+	<message key="manager.payment.paymentMethods">Payment Methods</message>
+	<message key="manager.payment.paymentMethod">Payment Method</message>
+	<message key="manager.payment.paymentMethod.description">You may configure any of the following Payment Method Plugins from this screen.</message>
+	<message key="manager.payment.paymentType">Payment Type</message>
+	<message key="manager.payment.editSubscription">Edit Subscription</message>
+	<message key="manager.payment.form.numeric">All costs must be positve numeric values (decimal points are allowed)</message>
+	<message key="plugins.categories.citationFormats">Citation Format Plugins</message>
+	<message key="plugins.categories.citationFormats.description">Citation format plugins provide users with various formats in which to access article citations.</message>
+	<message key="plugins.categories.blocks">Block Plugins</message>
+	<message key="plugins.categories.blocks.description">Block Plugins are pluggable UI components, such as the various sidebar tools.</message>
+	<message key="plugins.categories.themes">Theme Plugins</message>
+	<message key="plugins.categories.themes.description">Theme Plugins can be used to change the system's appearance.</message>
+	<message key="plugins.categories.paymethod">Pay Method Plugins</message>
+	<message key="plugins.categories.paymethod.description">Payment Method plugins implement support for various ways of processing payments online.</message>
+	<message key="manager.setup.management.description">Access and security, scheduling, announcements, copyediting, layout, and proofreading.</message>
+	<message key="manager.setup.reviewOptions.blindReview">Blind Review</message>
+	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[Provide links to <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">Ensuring a Blind Review</a> on pages where authors and reviewers upload files.]]></message>
+	<message key="manager.setup.editorDecision">Editor Decision</message>
+	<message key="manager.setup.notifyAllAuthorsOnDecision">When using the Notify Author email, include the email addresses of all co-authors for multiple-author submissions, and not just the submitting user.</message>
+	<message key="manager.setup.securitySettings">Access and Security Settings</message>
+	<message key="manager.setup.securitySettingsDescription">OJS provides a number of security-related options that can be used to restrict the journal's contents, and maintain additional information about submissions for auditing purposes.</message>
+	<message key="manager.setup.enableUserRegistration">Users can register themselves with the journal in one or more of the following roles:</message>
+	<message key="manager.setup.disableUserRegistration">Journal Manager registers all users, with Editors or Section Editors able to register Reviewers alone.</message>
+	<message key="manager.setup.siteAccess">Additional Site and Article Access Restrictions</message>
+	<message key="manager.setup.restrictSiteAccess">Users must be registered and log in to view the journal site.</message>
+	<message key="manager.setup.restrictArticleAccess">Users must be registered and log in to view open access content.</message>
+	<message key="manager.setup.submissionEventLogging">Maintain a log of all actions taken with a submission on its History page.</message>
+	<message key="manager.setup.submissionEmailLogging">Maintain a log of all emails sent in relation to a submission on its History page.</message>
+	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Proposed Creative Commons Copyright Notices</h3>
+<h4>1. Proposed Policy for Journals That Offer Open Access</h4>
+Authors who publish with this journal agree to the following terms:
+<ol type="a">
+	<li>Authors retain copyright and grant the journal right of first publication with the work simultaneously licensed under a <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</a> that allows others to share the work with an acknowledgement of the work's authorship and initial publication in this journal.</li>
+	<li>Authors are able to enter into separate, additional contractual arrangements for the non-exclusive distribution of the journal's published version of the work (e.g., post it to an institutional repository or publish it in a book), with an acknowledgement of its initial publication in this journal.</li>
+	<li>Authors are permitted and encouraged to post their work online (e.g., in institutional repositories or on their website) prior to and during the submission process, as it can lead to productive exchanges, as well as earlier and greater citation of published work (See <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>).</li>
+</ol>
+
+<h4>Proposed Policy for Journals That Offer Delayed Open Access</h4>
+Authors who publish with this journal agree to the following terms:
+<ol type="a">
+	<li>Authors retain copyright and grant the journal right of first publication, with the work [SPECIFY PERIOD OF TIME] after publication simultaneously licensed under a <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</a> that allows others to share the work with an acknowledgement of the work's authorship and initial publication in this journal.</li>
+	 <li>Authors are able to enter into separate, additional contractual arrangements for the non-exclusive distribution of the journal's published version of the work (e.g., post it to an institutional repository or publish it in a book), with an acknowledgement of its initial publication in this journal.</li>
+	 <li>Authors are permitted and encouraged to post their work online (e.g., in institutional repositories or on their website) prior to and during the submission process, as it can lead to productive exchanges, as well as earlier and greater citation of published work (See <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html"> The Effect of Open Access</a>).</li>
+</ol>]]></message>
+	<message key="manager.setup.includeCreativeCommons">For journals that offer immediate or delayed open access, include a Creative Commons license with all published work at the appropriate time.</message>
+	<message key="manager.setup.competingInterests">Competing Interests</message>
+	<message key="manager.setup.competingInterests.description"><![CDATA[Biomedical journals typically require authors and reviewers to declare if they have any competing interests with regard to their research (see <a href="http://journals.plos.org/plosclinicaltrials/competing.php" target="_new">PLoS Policy</a>).]]></message>
+	<message key="manager.setup.competingInterests.requireAuthors">Require submitting Authors to file a Competing Interest (CI) statement with their submission.</message>
+	<message key="manager.setup.competingInterests.requireReviewers">Require Reviewers to file a CI statement with each peer review they submit.</message>
+	<message key="manager.setup.competingInterests.guidelines">Guidelines for filing a Competing Interest statement</message>
+	<message key="manager.setup.publicationFormatDescription">The journal will use the following elements to identify issues (which can be overridden for individual issues).</message>
+	<message key="manager.setup.publicationFormatVolume">Volume</message>
+	<message key="manager.setup.publicationFormatTitle">Title</message>
+	<message key="manager.setup.useCopyeditors">A Copyeditor will be assigned to work with each submission.</message>
+	<message key="manager.setup.noUseCopyeditors">Copyediting will be undertaken by an Editor or Section Editor assigned to the submission.</message>
+	<message key="manager.setup.useLayoutEditors">A Layout Editor will be assigned to prepare the HTML, PDF, etc., files for electronic publication.</message>
+	<message key="manager.setup.noUseLayoutEditors">An Editor or Section Editor assigned to the submission will prepare the HTML, PDF, etc., files.</message>
+	<message key="manager.setup.referenceLinking">Reference Linking</message>
+	<message key="manager.setup.referenceLinkingDescription"><![CDATA[<p>To enable readers to locate online versions of the work cited by an author, the following options are avaiable.</p>
+
+<ol>
+	<li><strong>Add a Reading Tool</strong><p>The Journal Manager can add "Find References" to the Reading Tools that accompany published items, which enables readers to paste a reference's title and then search pre-selected scholarly databases for the cited work.</p></li>
+	<li><strong>Embed Links in the References</strong><p>The Layout Editor can add a link to references that can be found online by using the following instructions (which can be edited).</li>
+</ol>]]></message>
+	<message key="manager.setup.provideRefLinkInstructions">Provide Layout Editors with instructions.</message>
+	<message key="manager.setup.refLinkInstructions.description">Layout Instructions for Reference Linking</message>
+	<message key="manager.setup.useProofreaders">A Proofreader will be assigned to check (along with the authors) the galleys prior to publication.</message>
+	<message key="manager.setup.noUseProofreaders">An Editor or Section Editor assigned to the submission will check the galleys.</message>
+	<message key="manager.setup.onlineAccessManagement">Access to Journal Content</message>
+	<message key="manager.setup.subscriptionDescription">This requires the assignment of a Subscription Manager who has access to the subscription module, which includes additional open access, self-archiving, and email notification options.</message>
+	<message key="manager.setup.showGalleyLinksDescription">Always show galley links and indicate restricted access.</message>
+	<message key="manager.setup.journalLayout">Journal Layout</message>
+	<message key="manager.setup.journalLayoutDescription">Choose a journal theme and select layout components here. A journal stylesheet may also be uploaded, which can be used to override style data in the system-wide stylesheets and theme stylesheet (if a theme is chosen).</message>
+	<message key="manager.setup.journalTheme">Journal Theme</message>
+	<message key="manager.setup.layout.leftSidebar">Left Sidebar</message>
+	<message key="manager.setup.layout.unselected">Unselected</message>
+	<message key="manager.setup.layout.rightSidebar">Right Sidebar</message>
+	<message key="manager.languages.languageInstructions"><![CDATA[OJS can be made available to users in any of several supported languages. As well, OJS can operate as a multilingual system, providing users with an ability to toggle between languages on each page, and allowing certain data to be entered in several additional languages.<br /><br/>If a language supported by OJS is not listed below, ask your site administrator to install the language from the site administration interface. For instructions on adding support for new languages, please consult the OJS documentation.]]></message>
+	<message key="manager.languages.alternateLocaleInstructions">This system optionally allows certain critical information to be entered in several additional languages. To use this feature, select alternate locales and choose from the options listed below.</message>
+	<message key="manager.groups.create">Create Position Title</message>
+	<message key="manager.groups.enableBoard.description"><![CDATA[Under <a href="{$aboutEditorialTeamUrl}">People</a> in About the Journal:]]></message>
+	<message key="manager.groups.enableBoard">The Journal Manager creates titles and adds people under each title.</message>
+	<message key="manager.groups.disableBoard">OJS lists people in Editorial Team under assigned roles (Journal Manager, Copyeditor, etc.)</message>
+	<message key="manager.groups.context.editorialTeam.short">Editorial Team</message>
+	<message key="manager.people.allUsers">All Enrolled Users</message>
+	<message key="manager.people.allEnrolledUsers">Users Enrolled in this Journal</message>
+	<message key="manager.people.allSiteUsers">Enroll a User from this Site in this Journal</message>
+	<message key="manager.people.mustChooseRole">Please select a role at the top of the page before clicking "Enroll User".</message>
+	<message key="manager.people.enrollExistingUser">Enroll an Existing User</message>
+	<message key="manager.people.enrollUserAsDescription">Users can be assigned to, or removed from, a role at any point.</message>
+	<message key="manager.people.mustProvideName">Please provide at least a last name for the user first.</message>
+	<message key="manager.subscriptionTypes.form.public">This subscription type will not be publicly visible (e.g., under Subscriptions in About the Journal).</message>
+	<message key="editor.issues.volumeRequired">Volume is required and must be a positive, numeric value.</message>
+	<message key="editor.issues.numberRequired">Number is required and must be a positive, numeric value.</message>
+	<message key="editor.issues.yearRequired">Year is required and must be a positive, numeric value.</message>
+	<message key="editor.issues.showCoverPage">Create a cover for this issue with the following elements.</message>
+	<message key="editor.article.payment.publicationFeeNotPaid">Publication Fee has not been paid for this article.  Once a fee is paid, you will be able to schedule the article for publication.</message>
+	<message key="editor.article.payment.payPublicationFee">Pay Publication Fee</message>
+	<message key="editor.article.payment.waivePublicationFee">Waive Publication Fee</message>
+	<message key="sectionEditor.review.enrollReviewer">Enroll an Existing User As Reviewer</message>
+	<message key="reviewer.article.restrictedFileAccess">Submission will be made available, if and when reviewer agrees to undertake review</message>
+	<message key="reviewer.article.enterCompetingInterests"><![CDATA[Declare whether or not you have competing interests with regard to this research (see <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">CI Policy</a>).]]></message>
+	<message key="reviewer.competingInterests">Competing Interests</message>
+	<message key="author.competingInterests"><![CDATA[Competing interests <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">CI Policy</a>]]></message>
+	<message key="author.submit.startHereLink"><![CDATA[<a href="{$submitUrl}" class="action">Click here</a> to go to step one of the five-step submission process.]]></message>
+	<message key="author.submit.howToSubmit"><![CDATA[Encountering difficulties? Contact <a href="mailto:{$supportEmail}">{$supportName}</a> for assistance ({$supportPhone}).]]></message>
+	<message key="author.submit.howToSubmitNoPhone"><![CDATA[Encountering difficulties? Contact <a href="mailto:{$supportEmail}">{$supportName}</a> for assistance.]]></message>
+	<message key="author.submit.journalSectionDescription"><![CDATA[Select the appropriate section for this submission (see Sections and Policies in <a href="{$aboutUrl}" target="_new">About</a> the Journal).]]></message>
+	<message key="author.submit.reorderInstructions">Reorder authors to appear in the order they will be listed on publication.</message>
+	<message key="author.submit.submissionIndexingDescription">Provide terms for indexing the submission; separate terms with a semi-colon (term1; term2; term3).</message>
+	<message key="author.submit.supplementaryFilesInstructions">This optional step allows Supplementary Files to be added to a submission. The files, which can be in any format, might include (a) research instruments, (b) data sets, which comply with the terms of the study's research ethics review, (c) sources that otherwise would be unavailable to readers, (d) figures and tables that cannot be integrated into the text itself, or other materials that add to the contribution of the work.</message>
+	<message key="author.submit.supplementaryFiles.saveToUpload">Click Save to upload file (after which additional files can be uploaded).</message>
+	<message key="author.submit.forgottenSubmitSuppFile">Are you sure you wish to continue without uploading the supplementary file you have chosen?</message>
+	<message key="author.submit.confirmationDescription">To submit your manuscript to {$journalTitle} click Finish Submission. The submission's principal contact will receive an acknowledgement by email and will be able to view the submission's progress through the editorial process by logging in to the journal web site. Thank you for your interest in publishing with {$journalTitle}.</message>
+	<message key="submission.layout.galleyLocaleRequired">A galley locale is required.</message>
+	<message key="submission.layout.galleyLanguageRequired">A galley language is required.</message>
+	<message key="submission.layout.referenceLinking">Reference Linking</message>
+	<message key="user.login.accountNotValidated">Your email address has not been validated. Please check your email and follow the provided instructions. If you have not received an email, you may need to contact the site administrator for assistance.</message>
+	<message key="user.login.activate">Activate Account</message>
+	<message key="user.login.activated">Thank you for activating your account. You may now log in using the credentials you supplied when you created your account.</message>
+	<message key="user.profile.form.urlInvalid">The specified URL is not valid. Please double-check the URL and try again. (Hint: Try adding http:// to the beginning of the URL.)</message>
+	<message key="donations.thankYou">Thank You</message>
+	<message key="donations.thankYouMessage">Thank you for making a contribution.  Your contribution is much appreciated.</message>
+	<message key="payment.loginRequired">You must be logged in to make a payment.</message>
+	<message key="payment.loginRequired.forArticle"><![CDATA[This article is for subscribed users or requires that you make a payment.<br />You must be logged in order to make a payment.]]></message>
+	<message key="payment.loginRequired.forDonation">You must be logged in to make a donation.</message>
+	<message key="payment.type.submission">Submission Fee</message>
+	<message key="payment.type.publication">Publication Fee</message>
+	<message key="payment.type.fastTrack">Fast Track Review Fee</message>
+	<message key="payment.type.membership">Individual Membership Fee</message>
+	<message key="payment.type.payPerView">Article Pay-Per-View Fee</message>
+	<message key="payment.type.subscription">Subscription Fee</message>
+	<message key="payment.type.donation">Donations</message>
+	<message key="payment.donation.makeDonation">Make a donation</message>
+	<message key="payment.fastTrack.payFastTrack">Pay to FastTrack</message>
+	<message key="payment.fastTrack.inFastTrack">in FastTrack</message>
+	<message key="payment.publication.payPublication">Pay to Publish</message>
+	<message key="payment.publication.publicationPaid">Publication Fee Paid</message>
+	<message key="payment.membership.buyMembership">Buy Individual Membership</message>
+	<message key="payment.membership.renewMembership">Renew Individual Membership</message>
+	<message key="payment.membership.ends">Ends</message>
+	<message key="payment.subscription.renew">Renew Subscription</message>
+	<message key="payment.subscription.expires">Expires</message>
+	<message key="installer.installationWrongPhp"><![CDATA[<br/><strong>WARNING: Your current version of PHP does not meet the minimum requirements for installation. It is recommended to upgrade to a more recent release of PHP.</strong>]]></message>
+	<message key="installer.connectionCharsetInstructions"><![CDATA[The encoding to use for data sent to and received from the database. This should be the same as the client character set. Note that this capability is only supported with MySQL >= 4.1.1 or PostgreSQL >= 7.1. Select "Not applicable" if your database server does not meet these requirements.]]></message>
+	<message key="installer.databaseCharsetInstructions"><![CDATA[The encoding to use for data stored in the database. Note that this capability is only supported with MySQL >= 4.1.1 or PostgreSQL >= 7.1. Select "Not applicable" if your database server does not meet these requirements.]]></message>
+	<message key="rt.admin.settings.printerFriendly">Print version (provides a printer-friendly version of an item).</message>
+	<message key="rt.admin.settings.addComment">Add comment (enables readers to post comments, with Journal Manager able to delete).</message>
+	<message key="rt.admin.settings.findingReferences">Find References</message>
+	<message key="rt.captureCite.format">Citation Format</message>
+	<message key="rt.findingReferences">Finding References</message>
+	<message key="rt.findingReferences.googleScholar">Google Scholar</message>
+	<message key="rt.findingReferences.windowsLiveAcademic">Windows Live Academic</message>
+	<message key="default.journalSettings.checklist.addressesLinked">Where available, URLs for the references have been provided.</message>
+	<message key="default.journalSettings.refLinkInstructions"><![CDATA[<h4>To Add Reference Linking to the Layout Process</h4>
+	<p>When turning a submission into HTML or PDF, make sure that all hyperlinks in the submission are active.</p>
+	<h4>A. When the Author Provides a Link with the Reference</h4>
+	<ol>
+	<li>While the submission is still in its word processing format (e.g., Word), add the phrase VIEW ITEM to the end of the reference that has a URL.</li>
+	<li>Turn that phrase into a hyperlink by highlighting it, and using Word's Insert Hyperlink tool and the URL prepared in #2.</li>
+	</ol>
+	<h4>B. Enabling Readers to Search Google Scholar For References</h4>
+	<ol>
+	<li>While the submission is still in its word processing format (e.g., Word), copy the title of the work referenced in the References list (if it appears to be too common a title – e.g., "Peace" – then copy author and title).</li>
+	<li>Paste the reference's title between the %22's, placing a + between each word: http://scholar.google.com/scholar?q=%22PASTE+TITLE+HERE%22&hl=en&lr=&btnG=Search</li>
+	<li>Add the phrase GS SEARCH to the end of each citation in the submission's References list.</li>
+	<li>Turn that phrase into a hyperlink by highlighting it, and using Word's Insert Hyperlink tool and the URL prepared in #2.</li>
+	</ol>
+	<h4>C. Enabling Readers to Search for References with a DOI</h4>
+	<ol>
+	<li>While the submission is still in Word, copy a batch of references into CrossRef Text Query http://www.crossref.org/freeTextQuery/</li>
+	<li>Paste each DOI that the Query provides in the following URL (between = and &): http://www.cmaj.ca/cgi/external_ref?access_num=PASTE DOI#HERE&link_type=DOI</li>
+	<li>Add the phrase CrossRef to the end of each citation in the submission's References list.</li>
+	<li>Turn that phrase into a hyperlink by highlighting the phrase and using Word's Insert Hyperlink tool and the appropriate URL prepared in #2.</li>
+	</ol>]]></message>
 </locale>

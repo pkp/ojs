@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for this citation plugin in en_US.
+  *
+  * $Id$
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.citationFormats.refWorks.displayName">Plugin Formato de Citação RefWorks</message>
+	<message key="plugins.citationFormats.refWorks.citationFormatName">RefWorks</message>
+	<message key="plugins.citationFormats.refWorks.description">Este plugin implementa o formato de citação RefWorks.</message>
+	<message key="plugins.citationFormats.refWorks.export">Exportar para RefWorks</message>
+</locale>

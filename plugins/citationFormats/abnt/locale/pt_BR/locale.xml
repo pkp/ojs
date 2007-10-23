@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for this citation plugin in en_US.
+  *
+  * $Id$
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.citationFormats.abnt.displayName">Plugin Formato de Citação ABNT</message>
+	<message key="plugins.citationFormats.abnt.citationFormatName">ABNT</message>
+	<message key="plugins.citationFormats.abnt.description">Este plugin implementa o formato de citação ABNT.</message>
+	<message key="plugins.citationFormat.acao.location">América do Norte</message>
+</locale>

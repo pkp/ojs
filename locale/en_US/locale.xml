@@ -1910,7 +1910,7 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	<message key="author.submit.agencies">Agencies</message>
 	<message key="author.submit.coverageInstructions">Refers to geo-spatial location, chronological or historical coverage, and/or characteristics of research sample.</message>
 	<message key="author.submit.subjectClassInstructions">Use the hyperlinked classification system to select classification terms and, if appropriate, numbers.</message>
-	<message key="author.submit.languageInstructions"><![CDATA[English=en; French=fr; Spanish=es. <a href="http://www.loc.gov/standards/iso639-2/langcodes.html" target="_blank">Additional codes</a>.]]></message>
+	<message key="author.submit.languageInstructions"><![CDATA[English=en; French=fr; Spanish=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Additional codes</a>.]]></message>
 	<message key="author.submit.form.authorRequired">At least one author is required.</message>
 	<message key="author.submit.form.authorRequiredFields">The first name, last name, and email address of each author is required.</message>
 	<message key="author.submit.form.titleRequired">Please enter the title of your article.</message>

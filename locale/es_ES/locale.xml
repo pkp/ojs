@@ -1702,7 +1702,7 @@ Activas es el número de revisiones que en este momento están consideradas como
 	<message key="author.submit.agencies">Agencias</message>
 	<message key="author.submit.coverageInstructions">Se refiere a la localización geo-espacial, cronológica o cobertura histórica, y/o características de ejemplos de investigación.</message>
 	<message key="author.submit.subjectClassInstructions">Utilice el sistema de clasificación hiperenlazado para seleccionar términos de clasificación y, si es necesario, números.</message>
-	<message key="author.submit.languageInstructions"><![CDATA[Inglés=en; Francés=fr; Español=es. <a href="http://www.loc.gov/standards/iso639-2/langcodes.html" target="_blank">Códigos adicionales</a>.]]></message>
+	<message key="author.submit.languageInstructions"><![CDATA[Inglés=en; Francés=fr; Español=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Códigos adicionales</a>.]]></message>
 	<message key="author.submit.form.authorRequired">Es necesario, como mínimo, un/a autor/a.</message>
 	<message key="author.submit.form.authorRequiredFields">Es necesario el primer nombre, apellido y dirección de correo-e de cada autor/a.</message>
 	<message key="author.submit.form.titleRequired">Por favor, introduzca el título del artículo.</message>

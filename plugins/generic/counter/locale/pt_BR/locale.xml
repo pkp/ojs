@@ -17,11 +17,11 @@
 	<message key="plugins.generic.counter">Estatísticas COUNTER</message>
 
 	<message key="plugins.generic.counter.clearLog">Limpar Log</message>
-	<message key="plugins.generic.counter.confirmClear">Deseja realmente limpar o log? Esta ação não pode ser This action cannot be revertida.</message>
+	<message key="plugins.generic.counter.confirmClear">Deseja realmente limpar o log? Esta ação é irreversível!</message>
 	<message key="plugins.generic.counter.browseLog">Visualizar Log</message>
 	<message key="plugins.generic.counter.browseLog.logBrowser">Visualizador de Logs</message>
 
-	<message key="plugins.generic.counter.entry.timestamp">Timestamp</message>
+	<message key="plugins.generic.counter.entry.timestamp">Data de Criação</message>
 	<message key="plugins.generic.counter.entry.site">Portal</message>
 	<message key="plugins.generic.counter.entry.journal">Revista</message>
 	<message key="plugins.generic.counter.entry.user">Usuário</message>

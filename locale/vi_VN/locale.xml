@@ -1685,7 +1685,7 @@ Mới nhất là ngày ngày bài phản biện gần nhất được chấp nh�
 	<message key="author.submit.agencies">Cơ quan</message>
 	<message key="author.submit.coverageInstructions">Chỉ vị trí địa lý, phạm vi thời gian hoặc lịch sử, và/hoặc những đặc trưng của mẫu nghiên cứu.</message>
 	<message key="author.submit.subjectClassInstructions">Sử dụng các hệ thông phân loại có siêu liên kết để lựa chọn các thuật ngữ phân loại và chỉ số phân loại, nếu có thể.</message>
-	<message key="author.submit.languageInstructions"><![CDATA[English=en; French=fr; Spanish=es. <a href="http://www.loc.gov/standards/iso639-2/langcodes.html" target="_blank">Các mã khác</a>.]]></message>
+	<message key="author.submit.languageInstructions"><![CDATA[English=en; French=fr; Spanish=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Các mã khác</a>.]]></message>
 	<message key="author.submit.form.authorRequired">Ít nhất phải có một tác giả.</message>
 	<message key="author.submit.form.authorRequiredFields">Phải có họ, tên gọi và địa chỉ email của tác giả.</message>
 	<message key="author.submit.form.titleRequired">Vui lòng nhập tiêu đề của bài viết.</message>

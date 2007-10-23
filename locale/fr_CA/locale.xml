@@ -1675,7 +1675,7 @@ avec un signe plus (+) indiquant que la révision est en cours.]]></message>
 	<message key="author.submit.agencies">Organismes</message>
 	<message key="author.submit.coverageInstructions">Renvoie à une lieu géo-spatial, une couverture historique ou chronologique, ou à des caractéristiques d'un échantillon de recherche.</message>
 	<message key="author.submit.subjectClassInstructions">Utiliser le système de classification par liens pour sélectionner les termes de la classification et, s'il y a lieu, les numéros.</message>
-	<message key="author.submit.languageInstructions"><![CDATA[anglais=an; français=fr; espagnol=es. <a href="http://www.loc.gov/standards/iso639-2/langcodes.html" target="_blank">Codes supplémentaires</a>.]]></message>
+	<message key="author.submit.languageInstructions"><![CDATA[anglais=an; français=fr; espagnol=es. <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" target="_blank">Codes supplémentaires</a>.]]></message>
 	<message key="author.submit.form.authorRequired">Au moins un auteur est obligatoire.</message>
 	<message key="author.submit.form.authorRequiredFields">Les prénom, nom, et adresse électronique de chaque auteur sont obligatoires.</message>
 	<message key="author.submit.form.titleRequired">Veuillez entrer le titre de votre article.</message>

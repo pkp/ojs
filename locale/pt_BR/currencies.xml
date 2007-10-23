@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  * currencies.xml
+  *
+  * Copyright (c) 2000-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Currencies data XML file. Based on ISO 4217.
+  *
+  * $Id$
+  -->
+
+<!DOCTYPE currencies [
+	<!ELEMENT currencies (currency+)>
+		<!ATTLIST currencies
+			locale CDATA #REQUIRED>
+	<!ELEMENT currency EMPTY>
+		<!ATTLIST currency
+			code_alpha CDATA #REQUIRED
+			code_numeric CDATA #REQUIRED
+			name CDATA #REQUIRED>
+]>
+
+<currencies locale="pt_BR">
+	<currency name="Afegani" code_alpha="AFN" code_numeric="971" />
+	<currency name="Dinar Algeriano" code_alpha="DZD" code_numeric="12" />
+	<currency name="Peso Argentino" code_alpha="ARS" code_numeric="32" />
+	<currency name="Dram Armênio" code_alpha="AMD" code_numeric="51" />
+	<currency name="Florin de Aruba" code_alpha="AWG" code_numeric="533" />
+	<currency name="Dolar Australiano" code_alpha="AUD" code_numeric="36" />
+	<currency name="Manat Arzebaijano" code_alpha="AZM" code_numeric="31" />
+	<currency name="Dolar da Bahamas" code_alpha="BSD" code_numeric="44" />
+	<currency name="Dinar de Barein" code_alpha="BHD" code_numeric="48" />
+	<currency name="Baht Tailandês" code_alpha="THB" code_numeric="764" />
+	<currency name="Balboa panamenho" code_alpha="PAB" code_numeric="590" />
+	<currency name="Dolar de Barbados" code_alpha="BBD" code_numeric="52" />
+	<currency name="Rubro Bielo-russo" code_alpha="BYR" code_numeric="974" />
+	<currency name="Dolar de Belize" code_alpha="BZD" code_numeric="84" />
+	<currency name="Dolar de Bermudas" code_alpha="BMD" code_numeric="60" />
+	<currency name="Bolivar Venezuelano" code_alpha="VEB" code_numeric="862" />
+	<currency name="Boliviano da Bolivia" code_alpha="BOB" code_numeric="68" />
+	<currency name="Real Brasileiro" code_alpha="BRL" code_numeric="986" />
+	<currency name="Dolar de Brunei" code_alpha="BND" code_numeric="96" />
+	<currency name="Lev Búlgaro" code_alpha="BGN" code_numeric="975" />
+	<currency name="Franco de Burundi" code_alpha="BIF" code_numeric="108" />
+	<currency name="Dolar Canadense" code_alpha="CAD" code_numeric="124" />
+	<currency name="Escudo de Cabo Verde" code_alpha="CVE" code_numeric="132" />
+	<currency name="Dolar das Ilhas Cayman" code_alpha="KYD" code_numeric="136" />
+	<currency name="Cedi de Gana" code_alpha="GHC" code_numeric="288" />
+	<currency name="Franco CFA BCEAO" code_alpha="XOF" code_numeric="952" />
+	<currency name="Franco CFA BEAC" code_alpha="XAF" code_numeric="950" />
+	<currency name="Franco CFP " code_alpha="XAF" code_numeric="953" />
+	<currency name="Peso Chileno" code_alpha="CLP" code_numeric="152" />
+	<currency name="Peso Colombiano" code_alpha="COP" code_numeric="170" />
+	<currency name="Franco Comorense" code_alpha="KMF" code_numeric="174" />
+	<currency name="Marco conversível da Bosnia e Hezergovínia" code_alpha="BAM" code_numeric="977" />
+	<currency name="Córdoba Ouro Nicaraguense" code_alpha="NIO" code_numeric="558" />
+	<currency name="Colon Costarriquenho" code_alpha="CRC" code_numeric="188" />
+	<currency name="Kuna Croata" code_alpha="HRK" code_numeric="191" />
+	<currency name="Peso Cubano" code_alpha="CUP" code_numeric="192" />
+	<currency name="Libra Cipriota" code_alpha="CYP" code_numeric="196" />
+	<currency name="Corôa Tcheca" code_alpha="CZK" code_numeric="203" />
+	<currency name="Dalasi da Gâmbia" code_alpha="GMD" code_numeric="270" />
+	<currency name="Corôa DinamarquesaDanish Krone" code_alpha="DKK" code_numeric="208" />
+	<currency name="Dinar Macedônio" code_alpha="MKD" code_numeric="807" />
+	<currency name="Franco do Djibouti" code_alpha="DJF" code_numeric="262" />
+	<currency name="Dobra de São Tomé e Principe" code_alpha="STD" code_numeric="678" />
+	<currency name="Peso Dominicano" code_alpha="DOP" code_numeric="214" />
+	<currency name="Dong Vietnamita" code_alpha="VND" code_numeric="704" />
+	<currency name="Dolar Caribenho Oriental" code_alpha="XCD" code_numeric="951" />
+	<currency name="Libra Egípcia" code_alpha="EGP" code_numeric="818" />
+	<currency name="Colon Salvadorenho" code_alpha="SVC" code_numeric="222" />
+	<currency name="Birr Etíope" code_alpha="ETB" code_numeric="230" />
+	<currency name="Euro" code_alpha="EUR" code_numeric="978" />
+	<currency name="Libra das ilhas Falkland" code_alpha="FKP" code_numeric="238" />
+	<currency name="Dolar de Fiji" code_alpha="FJD" code_numeric="242" />
+	<currency name="Florin Húngaro" code_alpha="HUF" code_numeric="348" />
+	<currency name="Franco do Congo" code_alpha="CDF" code_numeric="976" />
+	<currency name="Libra de Gibraltar" code_alpha="GIP" code_numeric="292" />
+	<currency name="Gourde haitiano" code_alpha="HTG" code_numeric="332" />
+	<currency name="Guarani Paraguaio" code_alpha="PYG" code_numeric="600" />
+	<currency name="Franco da Guiné" code_alpha="GNF" code_numeric="324" />
+	<currency name="Peso da Guiné-Bissau" code_alpha="GWP" code_numeric="624" />
+	<currency name="Dolar da Guiana" code_alpha="GYD" code_numeric="328" />
+	<currency name="Dolar de Hong Kongr" code_alpha="HKD" code_numeric="344" />
+	<currency name="Hryvnia da Ucrânia" code_alpha="UAH" code_numeric="980" />
+	<currency name="Corôa Islandense" code_alpha="ISK" code_numeric="352" />
+	<currency name="Rúpia Indiana" code_alpha="INR" code_numeric="356" />
+	<currency name="Rial Iraniano" code_alpha="IRR" code_numeric="364" />
+	<currency name="Dinar Iraquiano" code_alpha="IQD" code_numeric="368" />
+	<currency name="Dolar Jamaicano" code_alpha="JMD" code_numeric="388" />
+	<currency name="Dinar Jordaniano" code_alpha="JOD" code_numeric="400" />
+	<currency name="Xelim Queniano" code_alpha="KES" code_numeric="404" />
+	<currency name="Kina da Papua Nova Guiné" code_alpha="PGK" code_numeric="598" />
+	<currency name="Kip do Laos" code_alpha="LAK" code_numeric="418" />
+	<currency name="Corôa estoniana" code_alpha="EEK" code_numeric="233" />
+	<currency name="Dinar do kwait" code_alpha="KWD" code_numeric="414" />
+	<currency name="Cuacha malauiana" code_alpha="MWK" code_numeric="454" />
+	<currency name="Kwanza Angolana" code_alpha="AOA" code_numeric="973" />
+	<currency name="Kyat de Mianmar" code_alpha="MMK" code_numeric="104" />
+	<currency name="Lari da Georgia" code_alpha="GEL" code_numeric="981" />
+	<currency name="Lats Letão" code_alpha="LVL" code_numeric="428" />
+	<currency name="Libra Libanesa" code_alpha="LBP" code_numeric="422" />
+	<currency name="Lek da Albânia" code_alpha="ALL" code_numeric="8" />
+	<currency name="Lempira Hondurenha" code_alpha="HNL" code_numeric="340" />
+	<currency name="Leone de Serra leoa" code_alpha="SLL" code_numeric="694" />
+	<currency name="Leu da moldávia" code_alpha="ROL" code_numeric="642" />
+	<currency name="Dolar Libério" code_alpha="LRD" code_numeric="430" />
+	<currency name="Dinar Líbio" code_alpha="LYD" code_numeric="434" />
+	<currency name="Lilangeni da Suazilândia" code_alpha="SZL" code_numeric="748" />
+	<currency name="Litas Lituano" code_alpha="LTL" code_numeric="440" />
+	<currency name="Loti de Lesoto" code_alpha="LSL" code_numeric="426" />
+	<currency name="Ariary malgaxe" code_alpha="MGA" code_numeric="969" />
+	<currency name="Franco malgaxe" code_alpha="MGF" code_numeric="450" />
+	<currency name="Ringgit da Malásia" code_alpha="MYR" code_numeric="458" />
+	<currency name="Lira Maltesa" code_alpha="MTL" code_numeric="470" />
+	<currency name="Manat Azerbaijano" code_alpha="TMM" code_numeric="795" />
+	<currency name="Rupia de Maurício" code_alpha="MUR" code_numeric="480" />
+	<currency name="Mertical Moçambicano" code_alpha="MZM" code_numeric="508" />
+	<currency name="Peso Mexicano" code_alpha="MXN" code_numeric="484" />
+	<currency name="Unidade Mexicana de Inversão" code_alpha="MXV" code_numeric="979" />
+	<currency name="Leu Moldavo" code_alpha="MDL" code_numeric="498" />
+	<currency name="Dirrã Marroquino" code_alpha="MAD" code_numeric="504" />
+	<currency name="Mvdol Boliviano" code_alpha="BOV" code_numeric="984" />
+	<currency name="Naira Nigeriano" code_alpha="NGN" code_numeric="566" />
+	<currency name="Nakfa da Eritréia" code_alpha="ERN" code_numeric="232" />
+	<currency name="Dolar Namíbio" code_alpha="NAD" code_numeric="516" />
+	<currency name="Rupia Nepalesa" code_alpha="NPR" code_numeric="524" />
+	<currency name="Florim das  Antilhas Holandesas" code_alpha="ANG" code_numeric="532" />
+	<currency name="Novo sheqel israelense" code_alpha="ILS" code_numeric="376" />
+	<currency name="Dolar de Taiwan" code_alpha="TWD" code_numeric="901" />
+	<currency name="Lira Nova Turca" code_alpha="TRY" code_numeric="949" />
+	<currency name="Dolar da Neozelandes" code_alpha="NZD" code_numeric="554" />
+	<currency name="Ngultrum do Butão" code_alpha="BTN" code_numeric="64" />
+	<currency name="Won Norte Coreano" code_alpha="KPW" code_numeric="408" />
+	<currency name="Corôa Norueguesa" code_alpha="NOK" code_numeric="578" />
+	<currency name="Sol Novo Peruano" code_alpha="PEN" code_numeric="604" />
+	<currency name="Lira Antiga Turca" code_alpha="TRL" code_numeric="792" />
+	<currency name="Ugüia da Mauritânia" code_alpha="MRO" code_numeric="478" />
+	<currency name="Pa'anga de Tonga" code_alpha="TOP" code_numeric="776" />
+	<currency name="Rúpia Paquistanesa" code_alpha="PKR" code_numeric="586" />
+	<currency name="Pataca de macau" code_alpha="MOP" code_numeric="446" />
+	<currency name="Peso Uruguaio" code_alpha="UYU" code_numeric="858" />
+	<currency name="Peso Filipino" code_alpha="PHP" code_numeric="608" />
+	<currency name="Libra Esterlina" code_alpha="GBP" code_numeric="826" />
+	<currency name="Pula de Botswana" code_alpha="BWP" code_numeric="72" />
+	<currency name="Rial do Qatar" code_alpha="QAR" code_numeric="634" />
+	<currency name="Quetza Guatemaltecol" code_alpha="GTQ" code_numeric="320" />
+	<currency name="Rand Sul-Africano" code_alpha="ZAR" code_numeric="710" />
+	<currency name="Rial de Omã" code_alpha="OMR" code_numeric="512" />
+	<currency name="Riel Cambojano" code_alpha="KHR" code_numeric="116" />
+	<currency name="Púpias das Maldivas" code_alpha="MVR" code_numeric="462" />
+	<currency name="Rúpia Indiana" code_alpha="IDR" code_numeric="360" />
+	<currency name="Rublo Russo" code_alpha="RUB" code_numeric="643" />
+	<currency name="Franco de Ruanda" code_alpha="RWF" code_numeric="646" />
+	<currency name="Libra de Santa Helena" code_alpha="SHP" code_numeric="654" />
+	<currency name="Rial Saudita" code_alpha="SAR" code_numeric="682" />
+	<currency name="Dinar Sérvio" code_alpha="CSD" code_numeric="891" />
+	<currency name="Rúpia da Seychelles" code_alpha="SCR" code_numeric="690" />
+	<currency name="Dolar de Singapura" code_alpha="SGD" code_numeric="702" />
+	<currency name="Corôa Eslovaca" code_alpha="SKK" code_numeric="703" />
+	<currency name="Dolar das Ilhas Salomão" code_alpha="SBD" code_numeric="90" />
+	<currency name="Som do Quirguistão" code_alpha="KGS" code_numeric="417" />
+	<currency name="Xelim da Somália" code_alpha="SOS" code_numeric="706" />
+	<currency name="Somoni do Tajiquistão" code_alpha="TJS" code_numeric="972" />
+	<currency name="Rúpia do Sri Lanka" code_alpha="LKR" code_numeric="144" />
+	<currency name="Dinar do Suão" code_alpha="SDD" code_numeric="736" />
+	<currency name="Dolar do Suriname" code_alpha="SRD" code_numeric="968" />
+	<currency name="Corôa Sueca" code_alpha="SEK" code_numeric="752" />
+	<currency name="Franco Suiço" code_alpha="CHF" code_numeric="756" />
+	<currency name="Libra Síria" code_alpha="SYP" code_numeric="760" />
+	<currency name="Taka de Bangladesh" code_alpha="BDT" code_numeric="50" />
+	<currency name="Tala de Samoa" code_alpha="WST" code_numeric="882" />
+	<currency name="Xelim da Tanzânia" code_alpha="TZS" code_numeric="834" />
+	<currency name="Tenge Cazaque" code_alpha="KZT" code_numeric="398" />
+	<currency name="Tolar da eslovênia" code_alpha="SIT" code_numeric="705" />
+	<currency name="Dolar de Trinidad e Tobago" code_alpha="TTD" code_numeric="780" />
+	<currency name="Tugrik da Mongólia" code_alpha="MNT" code_numeric="496" />
+	<currency name="Dolar Tunisiano" code_alpha="TND" code_numeric="788" />
+	<currency name="Diran dos Emirados Árabes unidos" code_alpha="AED" code_numeric="784" />
+	<currency name="Xelim Ugandense" code_alpha="UGX" code_numeric="800" />
+	<currency name="Unidade De Valor Real" code_alpha="COU" code_numeric="970" />
+	<currency name="Unidades De Fomento" code_alpha="CLF" code_numeric="990" />
+	<currency name="Dolar Americano" code_alpha="USD" code_numeric="840" />
+	<currency name="Sum Ubezque" code_alpha="UZS" code_numeric="860" />
+	<currency name="Vatu de Vanuatu" code_alpha="VUV" code_numeric="548" />
+	<currency name="Euro WIR" code_alpha="CHE" code_numeric="947" />
+	<currency name="Franco WIR" code_alpha="CHW" code_numeric="948" />
+	<currency name="Won Coreano" code_alpha="KRW" code_numeric="410" />
+	<currency name="Rial Iêmenita " code_alpha="YER" code_numeric="886" />
+	<currency name="Iene jamonês" code_alpha="JPY" code_numeric="392" />
+	<currency name="Iuan Renminbi Chinês" code_alpha="CNY" code_numeric="156" />
+	<currency name="Dolar do Zimbabwe" code_alpha="ZWD" code_numeric="716" />
+</currencies>
