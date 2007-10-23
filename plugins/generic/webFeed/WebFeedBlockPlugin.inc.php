@@ -73,7 +73,7 @@ class WebFeedBlockPlugin extends BlockPlugin {
 	 */
 	function getTemplatePath() {
 		$plugin =& $this->getWebFeedPlugin();
-		return $plugin->getTemplatePath();
+		return $plugin->getTemplatePath() . 'templates/';
 	}
 
 	/**

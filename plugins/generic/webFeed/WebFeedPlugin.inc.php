@@ -54,14 +54,6 @@ class WebFeedPlugin extends GenericPlugin {
 	}
 
 	/**
-	 * Override the usual implementation for tidiness.
-	 * @return string
-	 */
-	function getTemplatePath() {
-		return parent::getTemplatePath() . 'templates/';
-	}
-
-	/**
 	 * Check whether or not this plugin is enabled
 	 * @return boolean
 	 */

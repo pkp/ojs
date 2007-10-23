@@ -57,7 +57,7 @@ class WebFeedGatewayPlugin extends GatewayPlugin {
 	 */
 	function getTemplatePath() {
 		$plugin =& $this->getWebFeedPlugin();
-		return $plugin->getTemplatePath();
+		return $plugin->getTemplatePath() . 'templates/';
 	}
 
 	/**
@@ -112,7 +112,7 @@ class WebFeedGatewayPlugin extends GatewayPlugin {
 		$templateMgr->assign_by_ref('issue', $issue);
 		$templateMgr->assign('showToc', true);
 
-		$templateMgr->display($webFeedPlugin->getTemplatePath() . $typeMap[$type], $mimeTypeMap[$type]);
+		$templateMgr->display($this->getTemplatePath() . $typeMap[$type], $mimeTypeMap[$type]);
 	}
 }
 
