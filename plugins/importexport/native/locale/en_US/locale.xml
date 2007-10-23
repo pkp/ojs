@@ -11,7 +11,7 @@
   *
   * $Id$
   -->
- 
+
 <locale name="en_US" full_name="U.S. English">
 	<message key="plugins.importexport.native.displayName">Articles &amp; Issues XML Plugin</message>
 	<message key="plugins.importexport.native.description">Import and export articles and issues</message>
@@ -85,6 +85,44 @@ The following formats are accepted:
 	<message key="plugins.importexport.native.import.error.suppFileMissing">The article "{$articleTitle}" in the section "{$sectionTitle}" of the issue "{$issueTitle}" was missing a supplemental file.</message>
 	<message key="plugins.importexport.native.import.error.galleyFileMissing">The article "{$articleTitle}" in the section "{$sectionTitle}" of the issue "{$issueTitle}" was missing a galley file.</message>
 
+	<message key="plugins.importexport.native.import.error.issueTitleLocaleUnsupported">An issue title ("{$issueTitle}") was provided in a locale ("{$locale}") that this journal does not support.</message>
+	<message key="plugins.importexport.native.import.error.issueDescriptionLocaleUnsupported">A description of the issue "{$issueTitle}" was provided in a locale ("{$locale}") that this journal does not support.</message>
+	<message key="plugins.importexport.native.import.error.coverLocaleUnsupported">A cover of the the issue "{$issueTitle}" was provided in a locale ("{$locale}") that this journal does not support.</message>
+
+	<message key="plugins.importexport.native.import.error.sectionTitleLocaleUnsupported">A section title ("{$sectionTitle}") was provided in the issue "{$issueTitle}" in a locale ("{$locale}") that this journal does not support.</message>
+	<message key="plugins.importexport.native.import.error.sectionAbbrevLocaleUnsupported">A section abbreviation ("{$sectionAbbrev}") was provided in the issue  ("{$issueTitle}") in a locale ("{$locale}") that this journal does not support.</message>
+	<message key="plugins.importexport.native.import.error.sectionIdentifyTypeLocaleUnsupported">A section identifying type ("{$sectionIdentifyType}") was provided in the issue  ("{$issueTitle}") in a locale ("{$locale}") that this journal does not support.</message>
+	<message key="plugins.importexport.native.import.error.sectionPolicyLocaleUnsupported">A section policy ("{$sectionPolicy}") was provided in the issue ("{$issueTitle}") in a locale ("{$locale}") that this journal does not support.</message>
+
+	<message key="plugins.importexport.native.import.error.sectionTitleMismatch">The section title "{$section1Title}" and the section title "{$section2Title}" in the "{$issueTitle}" issue matched the different existing journal sections.</message>
+	<message key="plugins.importexport.native.import.error.sectionTitleMatch">The section title "{$sectionTitle}" in the "{$issueTitle}" issue matched an existing journal section, but another title of this section doesn't match with another title of the existing journal section.</message>
+	<message key="plugins.importexport.native.import.error.sectionAbbrevMismatch">The section abbreviation "{$section1Abbrev}" and the section abbreviation "{$section2Abbrev}" of the "{$issueTitle}" issue matched the different existing journal sections.</message>
+	<message key="plugins.importexport.native.import.error.sectionAbbrevMatch">The section abbreviation "{$sectionAbbrev}" in the "{$issueTitle}" issue matched an existing journal section, but another abbreviation of this section doesn't match with another abbreviation of the existing journal section.</message>
+
+	<message key="plugins.importexport.native.import.error.articleDisciplineLocaleUnsupported">An article discipline was provided for the article "{$articleTitle}" in the issue "{$issueTitle}" in a locale ("{$locale}") that this journal does not support.</message>
+	<message key="plugins.importexport.native.import.error.articleTypeLocaleUnsupported">An article type was provided for the article "{$articleTitle}" in the issue "{$issueTitle}" in a locale ("{$locale}") that this journal does not support.</message>
+	<message key="plugins.importexport.native.import.error.articleSubjectLocaleUnsupported">An article subject was provided for the article "{$articleTitle}" in the issue "{$issueTitle}" in a locale ("{$locale}") that this journal does not support.</message>
+	<message key="plugins.importexport.native.import.error.articleSubjectClassLocaleUnsupported">An article subject classification was provided for the article "{$articleTitle}" in the issue "{$issueTitle}" in a locale ("{$locale}") that this journal does not support.</message>
+	<message key="plugins.importexport.native.import.error.articleCoverageGeoLocaleUnsupported">An article geographical coverage was provided for the article "{$articleTitle}" in the issue "{$issueTitle}" in a locale ("{$locale}") that this journal does not support.</message>
+	<message key="plugins.importexport.native.import.error.articleCoverageChronLocaleUnsupported">An article geographical coverage was provided for the article "{$articleTitle}" in the issue "{$issueTitle}" in a locale ("{$locale}") that this journal does not support.</message>
+	<message key="plugins.importexport.native.import.error.articleCoverageSampleLocaleUnsupported">An article sample coverage was provided for the article "{$articleTitle}" in the issue "{$issueTitle}" in a locale ("{$locale}") that this journal does not support.</message>
+	<message key="plugins.importexport.native.import.error.articleSponsorLocaleUnsupported">An article sponsor was provided for the article "{$articleTitle}" in the issue "{$issueTitle}" in a locale ("{$locale}") that this journal does not support.</message>
+
+	<message key="plugins.importexport.native.import.error.articleAuthorCompetingInterestsLocaleUnsupported">An author competing interest was provided for the author "{$authorFullName}" of the article "{$articleTitle}" in the issue "{$issueTitle}" in a locale ("{$locale}") that this journal does not support.</message>
+	<message key="plugins.importexport.native.import.error.articleAuthorBiographyLocaleUnsupported">An author biography was provided for the author "{$authorFullName}" of the article "{$articleTitle}" in the issue "{$issueTitle}" in a locale ("{$locale}") that this journal does not support.</message>
+
+	<message key="plugins.importexport.native.import.error.galleyLocaleUnsupported">A galley of the article "{$articleTitle}" in the issue "{$issueTitle}" was provided in a locale ("{$locale}") that this journal does not support.</message>
+
+	<message key="plugins.importexport.native.import.error.articleSuppFileTitleLocaleUnsupported">A supplementary file title ("{$suppFileTitle}") of the article "{$articleTitle}" in the issue "{$issueTitle}" was provided in a locale ("{$locale}") that this journal does not support.</message>
+	<message key="plugins.importexport.native.import.error.articleSuppFileCreatorLocaleUnsupported">A creator of the supplementary file "{$suppFileTitle}" of the article "{$articleTitle}" in the issue "{$issueTitle}" was provided in a locale ("{$locale}") that this journal does not support.</message>
+	<message key="plugins.importexport.native.import.error.articleSuppFileSubjectLocaleUnsupported">A subject of the supplementary file "{$suppFileTitle}" of the article "{$articleTitle}" in the issue "{$issueTitle}" was provided in a locale ("{$locale}") that this journal does not support.</message>
+	<message key="plugins.importexport.native.import.error.articleSuppFileTypeOtherLocaleUnsupported">A custom type of the supplementary file "{$suppFileTitle}" of the article "{$articleTitle}" in the issue "{$issueTitle}" was provided in a locale ("{$locale}") that this journal does not support.</message>
+	<message key="plugins.importexport.native.import.error.articleSuppFileDescriptionLocaleUnsupported">A description of the supplementary file "{$suppFileTitle}" of the article "{$articleTitle}" in the issue "{$issueTitle}" was provided in a locale ("{$locale}") that this journal does not support.</message>
+	<message key="plugins.importexport.native.import.error.articleSuppFilePublisherLocaleUnsupported">A publisher of the supplementary file "{$suppFileTitle}" of the article "{$articleTitle}" in the issue "{$issueTitle}" was provided in a locale ("{$locale}") that this journal does not support.</message>
+	<message key="plugins.importexport.native.import.error.articleSuppFileSponsorLocaleUnsupported">A sponsor of the supplementary file "{$suppFileTitle}" of the article "{$articleTitle}" in the issue "{$issueTitle}" was provided in a locale ("{$locale}") that this journal does not support.</message>
+	<message key="plugins.importexport.native.import.error.articleSuppFileSourceLocaleUnsupported">A source of the supplementary file "{$suppFileTitle}" of the article "{$articleTitle}" in the issue "{$issueTitle}" was provided in a locale ("{$locale}") that this journal does not support.</message>
+
 	<message key="plugins.importexport.native.import.success">Import Successful</message>
 	<message key="plugins.importexport.native.import.success.description">The import was successful. Successfully-imported items are listed below.</message>
+
 </locale>
