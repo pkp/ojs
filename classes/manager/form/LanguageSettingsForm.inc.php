@@ -108,7 +108,7 @@ class LanguageSettingsForm extends Form {
 		$this->setData('supportedLocales', $supportedLocales);
 
 		foreach ($this->_data as $name => $value) {
-			if (!in_array($this->settings, $name)) continue;
+			if (!in_array($name, array_keys($this->settings))) continue;
 			$settingsDao->updateSetting(
 				$journal->getJournalId(),
 				$name,
