@@ -35,7 +35,7 @@
 {iterate from=announcementTypes item=announcementType}
 	<tr valign="top">
 		<td>{$announcementType->getAnnouncementTypeName()|escape}</td>
-		<td><a href="{url op="editAnnouncementType" path=$announcementType->getTypeId()}" class="action">{translate key="common.edit"}</a> <a href="{url op="deleteAnnouncementType" path=$announcementType->getTypeId()}" onclick="return confirm('{translate|escape:"javascript" key="manager.announcementTypes.confirmDelete"}')" class="action">{translate key="common.delete"}</a></td>
+		<td><a href="{url op="editAnnouncementType" path=$announcementType->getTypeId()}" class="action">{translate key="common.edit"}</a> <a href="{url op="deleteAnnouncementType" path=$announcementType->getTypeId()}" onclick="return confirm('{translate|escape:"jsparam" key="manager.announcementTypes.confirmDelete"}')" class="action">{translate key="common.delete"}</a></td>
 	</tr>
 	<tr>
 		<td colspan="2" class="{if $announcementTypes->eof()}end{/if}separator">&nbsp;</td>

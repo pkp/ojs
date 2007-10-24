@@ -69,7 +69,7 @@
 		<td>{$thesis->getDateApproved()|date_format:$dateFormatShort}</td>
 		<td>{$thesis->getStudentFullName()|escape}</td>
 		<td>{$thesis->getTitle()|escape}</td>
-		<td><a href="{plugin_url path="edit" id=$thesis->getThesisId()}" class="action">{translate key="common.edit"}</a> <a href="{plugin_url path="delete" id=$thesis->getThesisId()}" onclick="return confirm('{translate|escape:"javascript" key="plugins.generic.thesis.manager.confirmDelete"}')" class="action">{translate key="common.delete"}</a></td>
+		<td><a href="{plugin_url path="edit" id=$thesis->getThesisId()}" class="action">{translate key="common.edit"}</a> <a href="{plugin_url path="delete" id=$thesis->getThesisId()}" onclick="return confirm('{translate|escape:"jsparam" key="plugins.generic.thesis.manager.confirmDelete"}')" class="action">{translate key="common.delete"}</a></td>
 	</tr>
 	<tr>
 		<td colspan="5" class="{if $theses->eof()}end{/if}separator">&nbsp;</td>

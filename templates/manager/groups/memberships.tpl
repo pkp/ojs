@@ -37,7 +37,7 @@
 	<tr valign="top">
 		<td>{$user->getFullName()|escape}</td>
 		<td>
-			<a href="{url op="deleteMembership" path=$membership->getGroupId()|to_array:$membership->getUserId()}" onclick="return confirm('{translate|escape:"javascript" key="manager.groups.membership.confirmDelete"}')" class="action">{translate key="common.delete"}</a>&nbsp;|&nbsp;<a href="{url op="moveMembership" d=u groupId=$group->getGroupId() userId=$user->getUserId()}">&uarr;</a>&nbsp;<a href="{url op="moveMembership" d=d groupId=$group->getGroupId() userId=$user->getUserId()}">&darr;</a>
+			<a href="{url op="deleteMembership" path=$membership->getGroupId()|to_array:$membership->getUserId()}" onclick="return confirm('{translate|escape:"jsparam" key="manager.groups.membership.confirmDelete"}')" class="action">{translate key="common.delete"}</a>&nbsp;|&nbsp;<a href="{url op="moveMembership" d=u groupId=$group->getGroupId() userId=$user->getUserId()}">&uarr;</a>&nbsp;<a href="{url op="moveMembership" d=d groupId=$group->getGroupId() userId=$user->getUserId()}">&darr;</a>
 		</td>
 	</tr>
 	<tr>

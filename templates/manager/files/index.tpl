@@ -49,7 +49,7 @@
 			{if !$file.isDir}
 				<a href="{url op="files" path=$filePath|explode:"/" download=1}" class="action">{translate key="common.download"}</a>&nbsp;|
 			{/if}
-			<a href="{url op="fileDelete" path=$filePath|explode:"/"}" onclick="return confirm('{translate|escape:"javascript" key="manager.files.confirmDelete"}')" class="action">{translate key="common.delete"}</a>
+			<a href="{url op="fileDelete" path=$filePath|explode:"/"}" onclick="return confirm('{translate|escape:"jsparam" key="manager.files.confirmDelete"}')" class="action">{translate key="common.delete"}</a>
 		</td>
 	</tr>
 	<tr>

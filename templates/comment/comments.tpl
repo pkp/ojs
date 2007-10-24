@@ -39,7 +39,7 @@
 	{/if}
 
 	{if $isManager}
-		<a href="{url op="delete" path=$articleId|to_array:$galleyId:$comment->getCommentId()}" {if $comment->getChildCommentCount()!=0}onclick="return confirm('{translate|escape:"javascript" key="comments.confirmDeleteChildren"}')" {/if}class="action">{translate key="comments.delete"}</a>
+		<a href="{url op="delete" path=$articleId|to_array:$galleyId:$comment->getCommentId()}" {if $comment->getChildCommentCount()!=0}onclick="return confirm('{translate|escape:"jsparam" key="comments.confirmDeleteChildren"}')" {/if}class="action">{translate key="comments.delete"}</a>
 	{/if}
 
 	<br />
@@ -70,7 +70,7 @@
 	<a href="{url op="add" path=$articleId|to_array:$galleyId:$childId}" class="action">{translate key="comments.postReply"}</a>&nbsp;&nbsp;
 {/if}
 {if $isManager}
-	<a href="{url op="delete" path=$articleId|to_array:$galleyId:$child->getCommentId()}" {if $child->getChildCommentCount()!=0}onclick="return confirm('{translate|escape:"javascript" key="comments.confirmDeleteChildren"}')" {/if}class="action">{translate key="comments.delete"}</a>
+	<a href="{url op="delete" path=$articleId|to_array:$galleyId:$child->getCommentId()}" {if $child->getChildCommentCount()!=0}onclick="return confirm('{translate|escape:"jsparam" key="comments.confirmDeleteChildren"}')" {/if}class="action">{translate key="comments.delete"}</a>
 {/if}
 <br />
 

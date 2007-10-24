@@ -89,7 +89,7 @@
 	</tr>
 </table>
 {if $isEditor}
-	<a href="{url op="clearSubmissionEmailLog" path=$submission->getArticleId()|to_array:$logEntry->getLogId()}" onclick="return confirm('{translate|escape:"javascript" key="submission.email.confirmDeleteLogEntry"}')" class="action">{translate key="submission.email.deleteLogEntry"}</a><br/>
+	<a href="{url op="clearSubmissionEmailLog" path=$submission->getArticleId()|to_array:$logEntry->getLogId()}" onclick="return confirm('{translate|escape:"jsparam" key="submission.email.confirmDeleteLogEntry"}')" class="action">{translate key="submission.email.deleteLogEntry"}</a><br/>
 {/if}
 
 <a href="{url op="submissionEmailLog" path=$submission->getArticleId()}" class="action">{translate key="submission.email.backToEmailLog"}</a>

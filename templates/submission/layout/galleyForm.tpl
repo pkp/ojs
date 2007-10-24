@@ -132,7 +132,7 @@
 	<td>{$imageFile->getOriginalFileName()|escape}</td>
 	<td>{$imageFile->getNiceFileSize()}</td>
 	<td>{$imageFile->getDateUploaded()|date_format:$dateFormatShort}</td>
-	<td align="right"><input type="button" name="deleteImage[{$imageFile->getFileId()}]" value="{translate key="common.delete"}" class="button" onclick="return confirmAction('{url escape="false" op="deleteArticleImage" path=$galley->getArticleId()|to_array:$galley->getGalleyId():$imageFile->getFileId():$imageFile->getRevision()}', '{translate|escape:"javascript" key="submission.layout.confirmDeleteGalleyImage"}')" /></td>
+	<td align="right"><input type="button" name="deleteImage[{$imageFile->getFileId()}]" value="{translate key="common.delete"}" class="button" onclick="return confirmAction('{url escape="false" op="deleteArticleImage" path=$galley->getArticleId()|to_array:$galley->getGalleyId():$imageFile->getFileId():$imageFile->getRevision()}', '{translate|escape:"jsparam" key="submission.layout.confirmDeleteGalleyImage"}')" /></td>
 </tr>
 <tr>
 	<td colspan="6" class="{if $smarty.foreach.images.last}end{/if}separator">&nbsp;</td>

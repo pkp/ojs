@@ -88,7 +88,7 @@
 		<td align="right">
 			{if $oldUserId != ''}
 				{if $oldUserId != $user->getUserId()}
-					<a href="#" onclick="confirmAction('{url oldUserId=$oldUserId newUserId=$user->getUserId()}', '{translate|escape:"htmlall" key="admin.mergeUsers.confirm" oldUsername=$oldUsername newUsername=$user->getUsername()}')" class="action">{translate key="admin.mergeUsers.mergeUser"}</a>
+					<a href="#" onclick="confirmAction('{url oldUserId=$oldUserId newUserId=$user->getUserId()}', '{translate|escape:"jsparam" key="admin.mergeUsers.confirm" oldUsername=$oldUsername newUsername=$user->getUsername()}')" class="action">{translate key="admin.mergeUsers.mergeUser"}</a>
 				{/if}
 			{elseif $thisUser->getUserId() != $user->getUserId()}
 				<a href="{url oldUserId=$user->getUserId()}" class="action">{translate key="admin.mergeUsers.mergeUser"}</a>

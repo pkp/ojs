@@ -49,7 +49,7 @@
 		<td>{$issue->getDatePublished()|date_format:"$dateFormatShort"}</td>
 		<td>{$issue->getNumArticles()}</td>
 		<td>{if $pos != 1}<a href="{url op="moveIssue" path=$issue->getIssueId() d=u newPos=$pos-1}" class="plain">&uarr;</a>{else}&uarr;{/if} {if $pos != $issues->getCount()}<a href="{url op="moveIssue" path=$issue->getIssueId() d=d newPos=$pos+1}" class="plain">&darr;</a>{else}&darr;{/if}</td>
-		<td align="right"><a href="{url op="removeIssue" path=$issue->getIssueId()}" onclick="return confirm('{translate|escape:"javascript" key="editor.issues.confirmDelete"}')" class="action">{translate key="common.delete"}</a></td>
+		<td align="right"><a href="{url op="removeIssue" path=$issue->getIssueId()}" onclick="return confirm('{translate|escape:"jsparam" key="editor.issues.confirmDelete"}')" class="action">{translate key="common.delete"}</a></td>
 	</tr>
 	<tr>
 		<td colspan="5" class="{if $issues->eof()}end{/if}separator">&nbsp;</td>

@@ -43,7 +43,7 @@
 <h3>{translate key="issue.toc"}</h3>
 {url|assign:"url" op="resetSectionOrder" path=$issueId}
 {if $customSectionOrderingExists}{translate key="editor.issues.resetSectionOrder" url=$url}<br/>{/if}
-<form method="post" action="{url op="updateIssueToc" path=$issueId}" onsubmit="return confirm('{translate|escape:"javascript" key="editor.issues.saveChanges"}')">
+<form method="post" action="{url op="updateIssueToc" path=$issueId}" onsubmit="return confirm('{translate|escape:"jsparam" key="editor.issues.saveChanges"}')">
 
 {assign var=numCols value=6}
 {if ($issueAccess == 2 && $enableSubscriptions)}{assign var=numCols value=$numCols+1}{/if}
@@ -113,7 +113,7 @@
 <div class="separator"></div>
 {/foreach}
 
-<input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> {if $unpublished && !$isLayoutEditor}<input type="button" value="{translate key="editor.issues.publishIssue"}" onclick="confirmAction('{url op="publishIssue" path=$issueId}', '{translate|escape:"javascript" key="editor.issues.confirmPublish"}')" class="button" />{/if}
+<input type="submit" value="{translate key="common.save"}" class="button defaultButton" /> {if $unpublished && !$isLayoutEditor}<input type="button" value="{translate key="editor.issues.publishIssue"}" onclick="confirmAction('{url op="publishIssue" path=$issueId}', '{translate|escape:"jsparam" key="editor.issues.confirmPublish"}')" class="button" />{/if}
 
 </form>
 

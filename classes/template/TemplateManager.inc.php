@@ -685,11 +685,22 @@ class TemplateManager extends Smarty {
 
 	/**
 	 * Override the built-in smarty escape modifier to set the charset
-	 * properly.
+	 * properly; also add the jsparam escaping method.
 	 */
 	function smartyEscape($string, $esc_type = 'html', $char_set = null) {
 		if ($char_set === null) $char_set = LOCALE_ENCODING;
-		return smarty_modifier_escape($string, $esc_type, $char_set);
+		switch ($esc_type) {
+			case 'jsparam':
+				// When including a value in a Javascript parameter,
+				// quotes need to be specially handled on top of
+				// the usual escaping, as Firefox (and probably others)
+				// decodes &#039; as a quote before interpereting
+				// the javascript.
+				$value = smarty_modifier_escape($string, 'html', $char_set);
+				return str_replace('&#039;', '\\\'', $value);
+			default:
+				return smarty_modifier_escape($string, $esc_type, $char_set);
+		}
 	}
 
 	/**

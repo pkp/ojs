@@ -120,12 +120,12 @@ function confirmAndPrompt(userId) {
 		</td>
 		<td align="right">
 			{if $roleId}
-			<a href="{url op="unEnroll" path=$roleId userId=$user->getUserId()}" onclick="return confirm('{translate|escape:"javascript" key="manager.people.confirmUnenroll"}')" class="action">{translate key="manager.people.unenroll"}</a>&nbsp;|
+			<a href="{url op="unEnroll" path=$roleId userId=$user->getUserId()}" onclick="return confirm('{translate|escape:"jsparam" key="manager.people.confirmUnenroll"}')" class="action">{translate key="manager.people.unenroll"}</a>&nbsp;|
 			{/if}
 			<a href="{url op="editUser" path=$user->getUserId()}" class="action">{translate key="common.edit"}</a>
 			{if $thisUser->getUserId() != $user->getUserId()}
 				|&nbsp;<a href="{url op="signInAsUser" path=$user->getUserId()}" class="action">{translate key="manager.people.signInAs"}</a>
-				{if !$roleId}|&nbsp;<a href="{url op="removeUser" path=$user->getUserId()}" onclick="return confirm('{translate|escape:"javascript" key="manager.people.confirmRemove"}')" class="action">{translate key="manager.people.remove"}</a>{/if}
+				{if !$roleId}|&nbsp;<a href="{url op="removeUser" path=$user->getUserId()}" onclick="return confirm('{translate|escape:"jsparam" key="manager.people.confirmRemove"}')" class="action">{translate key="manager.people.remove"}</a>{/if}
 				{if $user->getDisabled()}
 					|&nbsp;<a href="{url op="enableUser" path=$user->getUserId()}" class="action">{translate key="manager.people.enable"}</a>
 				{else}

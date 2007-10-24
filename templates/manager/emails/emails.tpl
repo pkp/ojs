@@ -44,9 +44,9 @@
 				{/if}
 			{/if}
 			{if $emailTemplate->isCustomTemplate()}
-				|&nbsp;<a href="{url op="deleteCustomEmail" path=$emailTemplate->getEmailKey()}" onclick="return confirm('{translate|escape:"javascript" key="manager.emails.confirmDelete"}')" class="action">{translate key="common.delete"}</a>
+				|&nbsp;<a href="{url op="deleteCustomEmail" path=$emailTemplate->getEmailKey()}" onclick="return confirm('{translate|escape:"jsparam" key="manager.emails.confirmDelete"}')" class="action">{translate key="common.delete"}</a>
 			{else}
-				|&nbsp;<a href="{url op="resetEmail" path=$emailTemplate->getEmailKey()}" onclick="return confirm('{translate|escape:"javascript" key="manager.emails.confirmReset"}')" class="action">{translate key="manager.emails.reset"}</a>
+				|&nbsp;<a href="{url op="resetEmail" path=$emailTemplate->getEmailKey()}" onclick="return confirm('{translate|escape:"jsparam" key="manager.emails.confirmReset"}')" class="action">{translate key="manager.emails.reset"}</a>
 			{/if}
 		</td>
 	</tr>
@@ -72,6 +72,6 @@
 <br />
 
 <a href="{url op="createEmail"}" class="action">{translate key="manager.emails.createEmail"}</a><br />
-<a href="{url op="resetAllEmails"}" onclick="return confirm('{translate|escape:"javascript" key="manager.emails.confirmResetAll"}')" class="action">{translate key="manager.emails.resetAll"}</a>
+<a href="{url op="resetAllEmails"}" onclick="return confirm('{translate|escape:"jsparam" key="manager.emails.confirmResetAll"}')" class="action">{translate key="manager.emails.resetAll"}</a>
 
 {include file="common/footer.tpl"}

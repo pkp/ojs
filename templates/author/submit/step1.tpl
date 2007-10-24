@@ -56,10 +56,10 @@ function checkSubmissionChecklist() {
 	for (var i=0; i < elements.length; i++) {
 		if (elements[i].type == 'checkbox' && !elements[i].checked) {
 			if (elements[i].name.match('^checklist')) {
-				alert({/literal}'{translate|escape:"javascript" key="author.submit.verifyChecklist"}'{literal});
+				alert({/literal}'{translate|escape:"jsparam" key="author.submit.verifyChecklist"}'{literal});
 				return false;
 			} else if (elements[i].name == 'copyrightNoticeAgree') {
-				alert({/literal}'{translate|escape:"javascript" key="author.submit.copyrightNoticeAgreeRequired"}'{literal});
+				alert({/literal}'{translate|escape:"jsparam" key="author.submit.copyrightNoticeAgreeRequired"}'{literal});
 				return false;
 			}
 		}
@@ -129,7 +129,7 @@ function checkSubmissionChecklist() {
 
 <div class="separator"></div>
 
-<p><input type="submit" value="{translate key="common.saveAndContinue"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="{if $articleId}confirmAction('{url page="author"}', '{translate|escape:"javascript" key="author.submit.cancelSubmission"}'){else}document.location.href='{url page="author" escape=false}'{/if}" /></p>
+<p><input type="submit" value="{translate key="common.saveAndContinue"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="{if $articleId}confirmAction('{url page="author"}', '{translate|escape:"jsparam" key="author.submit.cancelSubmission"}'){else}document.location.href='{url page="author" escape=false}'{/if}" /></p>
 
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 

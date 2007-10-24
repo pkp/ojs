@@ -16,7 +16,7 @@
 <!--
 function ensureKeyword() {
 	if (document.search.query.value == '') {
-		alert({/literal}'{translate|escape:"javascript" key="search.noKeywordError"}'{literal});
+		alert({/literal}'{translate|escape:"jsparam" key="search.noKeywordError"}'{literal});
 		return false;
 	}
 	document.search.submit();

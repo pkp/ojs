@@ -93,7 +93,7 @@
 			{elseif $status == STATUS_PUBLISHED}
 				{print_issue_id articleId=$submission->getArticleId()}	
 			{elseif $status == STATUS_DECLINED}
-				{translate key="submissions.declined"}&nbsp;&nbsp;<a href="{url op="deleteSubmission" path=$articleId}" onclick="return confirm('{translate|escape:"javascript" key="editor.submissionArchive.confirmDelete"}')" class="action">{translate key="common.delete"}</a>
+				{translate key="submissions.declined"}&nbsp;&nbsp;<a href="{url op="deleteSubmission" path=$articleId}" onclick="return confirm('{translate|escape:"jsparam" key="editor.submissionArchive.confirmDelete"}')" class="action">{translate key="common.delete"}</a>
 			{elseif $status==STATUS_QUEUED_UNASSIGNED}{translate key="submissions.queuedUnassigned"}
 			{elseif $status==STATUS_QUEUED_EDITING}{translate key="submissions.queuedEditing"}
 			{elseif $status==STATUS_QUEUED_REVIEW}{translate key="submissions.queuedReview"}
