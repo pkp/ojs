@@ -480,7 +480,11 @@ class Upgrade extends Installer {
 		// so that primary indexes can be dropped by MySQL.
 		foreach ($tables as $tableName) {
 			$indexes = $dict->MetaIndexes($tableName, true);
-			if (!empty($indexes)) $siteDao->update("ALTER TABLE $tableName DROP PRIMARY KEY");
+			if (!empty($indexes)) switch(Config::getVar('database', 'driver')) {
+				case 'mysql':
+					$siteDao->update("ALTER TABLE $tableName DROP PRIMARY KEY");
+					break;
+			}
 		}
 
 

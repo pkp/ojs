@@ -1552,7 +1552,6 @@
 		<descr>Default journal email templates.</descr>
 		<index name="email_templates_default_email_key">
 			<col>email_key</col>
-			<UNIQUE />
 		</index>
 	</table>
 	

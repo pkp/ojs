@@ -16,5 +16,14 @@
 	<!-- Bug #2961: Localization overhaul -->
 	<sql>
 		<rename table="user_settings" to="user_settings_old" />
+		<!-- PostgreSQL leaves index names unchanged; delete it,
+		     so that it doesn't conflict with the one we'll create
+		     for the new table -->
+		<query driver="postgres7">
+			DROP INDEX user_settings_user_id
+		</query>
+		<query driver="postgres7">
+			DROP INDEX user_settings_pkey
+		</query>
 	</sql>
 </data>

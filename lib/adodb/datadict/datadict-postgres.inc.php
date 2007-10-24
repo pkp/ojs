@@ -145,8 +145,9 @@ class ADODB2_postgres extends ADODB_DataDict {
 			}
 			if ($not_null) {
 				if (isset($default)) {
-					list(,$defaultv) = preg_split('/[\t ]+/', $default, 2);
-					$sql[] = 'UPDATE '.$tabname.' SET '.$colname.' = '.$defaultv.' WHERE '.$colname.' IS NULL';
+					//$defaultv = preg_split('/[\t ]+/', $default, 2);
+					//if (!isset($defaultv[1])) $defaultv = array(null, '');
+					$sql[] = 'UPDATE '.$tabname.' SET '.$colname.' = '.$this->connection->quote($default).' WHERE '.$colname.' IS NULL';
 				}
 				list($colname) = explode(' ',$v);
 				$sql[] = 'ALTER TABLE '.$tabname.' ALTER COLUMN '.$colname.' SET NOT NULL';

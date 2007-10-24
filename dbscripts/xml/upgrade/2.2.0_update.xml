@@ -13,6 +13,47 @@
   -->
 
 <data>
+	<!-- Make sure PostgreSQL sequences are starting from the right values -->
+	<sql>
+		<query driver="postgres7">SELECT SETVAL('users_user_id_seq', (SELECT MAX(user_id) FROM users)+1)</query>
+		<query driver="postgres7">SELECT SETVAL('auth_sources_auth_id_seq', (SELECT MAX(auth_id) FROM auth_sources)+1)</query>
+		<query driver="postgres7">SELECT SETVAL('journals_journal_id_seq', (SELECT MAX(journal_id) FROM journals)+1)</query>
+		<query driver="postgres7">SELECT SETVAL('sections_section_id_seq', (SELECT MAX(section_id) FROM sections)+1)</query>
+		<query driver="postgres7">SELECT SETVAL('issues_issue_id_seq', (SELECT MAX(issue_id) FROM issues)+1)</query>
+		<query driver="postgres7">SELECT SETVAL('articles_article_id_seq', (SELECT MAX(article_id) FROM articles)+1)</query>
+		<query driver="postgres7">SELECT SETVAL('published_articles_pub_id_seq', (SELECT MAX(pub_id) FROM published_articles)+1)</query>
+		<query driver="postgres7">SELECT SETVAL('comments_comment_id_seq', (SELECT MAX(comment_id) FROM comments)+1)</query>
+		<query driver="postgres7">SELECT SETVAL('article_authors_author_id_seq', (SELECT MAX(author_id) FROM article_authors)+1)</query>
+		<query driver="postgres7">SELECT SETVAL('article_files_file_id_seq', (SELECT MAX(file_id) FROM article_files)+1)</query>
+		<query driver="postgres7">SELECT SETVAL('article_supplementary_files_supp_id_seq', (SELECT MAX(supp_id) FROM article_supplementary_files)+1)</query>
+		<query driver="postgres7">SELECT SETVAL('article_notes_note_id_seq', (SELECT MAX(note_id) FROM article_notes)+1)</query>
+		<query driver="postgres7">SELECT SETVAL('edit_assignments_edit_id_seq', (SELECT MAX(edit_id) FROM edit_assignments)+1)</query>
+		<query driver="postgres7">SELECT SETVAL('edit_decisions_edit_decision_id_seq', (SELECT MAX(edit_decision_id) FROM edit_decisions)+1)</query>
+		<query driver="postgres7">SELECT SETVAL('review_assignments_review_id_seq', (SELECT MAX(review_id) FROM review_assignments)+1)</query>
+		<query driver="postgres7">SELECT SETVAL('copyed_assignments_copyed_id_seq', (SELECT MAX(copyed_id) FROM copyed_assignments)+1)</query>
+		<query driver="postgres7">SELECT SETVAL('layouted_assignments_layouted_id_seq', (SELECT MAX(layouted_id) FROM layouted_assignments)+1)</query>
+		<query driver="postgres7">SELECT SETVAL('article_galleys_galley_id_seq', (SELECT MAX(galley_id) FROM article_galleys)+1)</query>
+		<query driver="postgres7">SELECT SETVAL('proof_assignments_proof_id_seq', (SELECT MAX(proof_id) FROM proof_assignments)+1)</query>
+		<query driver="postgres7">SELECT SETVAL('article_event_log_log_id_seq', (SELECT MAX(log_id) FROM article_event_log)+1)</query>
+		<query driver="postgres7">SELECT SETVAL('article_email_log_log_id_seq', (SELECT MAX(log_id) FROM article_email_log)+1)</query>
+		<query driver="postgres7">SELECT SETVAL('article_comments_comment_id_seq', (SELECT MAX(comment_id) FROM article_comments)+1)</query>
+		<query driver="postgres7">SELECT SETVAL('email_templates_default_email_id_seq', (SELECT MAX(email_id) FROM email_templates_default)+1)</query>
+		<query driver="postgres7">SELECT SETVAL('email_templates_email_id_seq', (SELECT MAX(email_id) FROM email_templates)+1)</query>
+		<query driver="postgres7">SELECT SETVAL('article_search_keyword_list_keyword_id_seq', (SELECT MAX(keyword_id) FROM article_search_keyword_list)+1)</query>
+		<query driver="postgres7">SELECT SETVAL('article_search_objects_object_id_seq', (SELECT MAX(object_id) FROM article_search_objects)+1)</query>
+		<query driver="postgres7">SELECT SETVAL('rt_versions_version_id_seq', (SELECT MAX(version_id) FROM rt_versions)+1)</query>
+		<query driver="postgres7">SELECT SETVAL('rt_contexts_context_id_seq', (SELECT MAX(context_id) FROM rt_contexts)+1)</query>
+		<query driver="postgres7">SELECT SETVAL('rt_searches_search_id_seq', (SELECT MAX(search_id) FROM rt_searches)+1)</query>
+		<query driver="postgres7">SELECT SETVAL('subscription_types_type_id_seq', (SELECT MAX(type_id) FROM subscription_types)+1)</query>
+		<query driver="postgres7">SELECT SETVAL('subscriptions_subscription_id_seq', (SELECT MAX(subscription_id) FROM subscriptions)+1)</query>
+		<query driver="postgres7">SELECT SETVAL('announcement_types_type_id_seq', (SELECT MAX(type_id) FROM announcement_types)+1)</query>
+		<query driver="postgres7">SELECT SETVAL('announcements_announcement_id_seq', (SELECT MAX(announcement_id) FROM announcements)+1)</query>
+		<query driver="postgres7">SELECT SETVAL('temporary_files_file_id_seq', (SELECT MAX(file_id) FROM temporary_files)+1)</query>
+		<query driver="postgres7">SELECT SETVAL('access_keys_access_key_id_seq', (SELECT MAX(access_key_id) FROM access_keys)+1)</query>
+		<query driver="postgres7">SELECT SETVAL('groups_group_id_seq', (SELECT MAX(group_id) FROM groups)+1)</query>
+		<query driver="postgres7">SELECT SETVAL('theses_thesis_id_seq', (SELECT MAX(thesis_id) FROM theses)+1)</query>
+	</sql>
+
 	<!-- #2961# Now that the user_settings_old table has been migrated into
 	     user_settings, we can drop the user_settings_old table. -->
 	<sql>
