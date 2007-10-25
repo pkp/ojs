@@ -91,32 +91,32 @@ class OJSPaymentManager extends PaymentManager {
 	
 	function acceptDonationPayments() {
 		$journal =& Request::getJournal();
-		return $this->isConfigured() && $journal->getSetting('acceptDonationPayments');	
+		return $this->isConfigured() && $journal->getSetting('donationFeeEnabled');	
 	}
 	
 	function submissionEnabled() {
 		$journal =& Request::getJournal();
-		return $this->isConfigured() && $journal->getSetting('submissionFee') > 0;	
+		return $this->isConfigured() && $journal->getSetting('submissionFeeEnabled') && $journal->getSetting('submissionFee') > 0;	
 	}
 	
 	function fastTrackEnabled() {
 		$journal =& Request::getJournal();
-		return $this->isConfigured() && $journal->getSetting('fastTrackFee') > 0;
+		return $this->isConfigured() && $journal->getSetting('fastTrackFeeEnabled') && $journal->getSetting('fastTrackFee') > 0;
 	}
 	
 	function publicationEnabled() {
 		$journal =& Request::getJournal();
-		return $this->isConfigured() && $journal->getSetting('publicationFee') > 0;
+		return $this->isConfigured() && $journal->getSetting('publicationFeeEnabled') && $journal->getSetting('publicationFee') > 0;
 	}	
 
 	function membershipEnabled() {
 		$journal =& Request::getJournal();
-		return $this->isConfigured() && $journal->getSetting('membershipFee') > 0;		
+		return $this->isConfigured() && $journal->getSetting('membershipFeeEnabled') && $journal->getSetting('membershipFee') > 0;		
 	}
 	
 	function payPerViewEnabled() {
 		$journal =& Request::getJournal();
-		return $this->isConfigured() && $journal->getSetting('payPerViewFee') > 0;
+		return $this->isConfigured() && $journal->getSetting('payPerViewFeeEnabled') && $journal->getSetting('payPerViewFee') > 0;
 	}
 	
 	function onlyPdfEnabled() {

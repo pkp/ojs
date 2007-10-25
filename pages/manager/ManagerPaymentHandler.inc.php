@@ -30,7 +30,11 @@ class ManagerPaymentHandler extends ManagerHandler {
 
 		parent::setupTemplate(true);
 
-		$form->initData();
+		if ($form->isLocaleResubmit()) {
+			$form->readInputData();
+		} else {
+			$form->initData();
+		}
 		$form->display();		
 	 }
 	 

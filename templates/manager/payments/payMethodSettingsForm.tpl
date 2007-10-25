@@ -11,9 +11,9 @@
 {include file="common/header.tpl"}
 
 <ul class="menu">
-	<li><a href="{url op="payments"}">{translate key="manager.payment.settings"}</a></li>
+	<li><a href="{url op="payments"}">{translate key="manager.payment.options"}</a></li>
 	<li class="current"><a href="{url op="payMethodSettings"}">{translate key="manager.payment.paymentMethods"}</a></li>
-	<li><a href="{url op="viewPayments"}">{translate key="manager.payments"}</a></li>		
+	<li><a href="{url op="viewPayments"}">{translate key="manager.payment.records"}</a></li>		
 </ul>
 
 {include file="common/formErrors.tpl"}

@@ -7,13 +7,13 @@
  * Page to view one CompletedPayment in detail
  *
  *}
-{assign var="pageTitle" value="common.payments"}
+{assign var="pageTitle" value="common.payment"}
 {include file="common/header.tpl"}
 
 <ul class="menu">
-	<li><a href="{url op="payments"}">{translate key="manager.payment.settings"}</a></li>
+	<li><a href="{url op="payments"}">{translate key="manager.payment.options"}</a></li>
 	<li><a href="{url op="payMethodSettings"}">{translate key="manager.payment.paymentMethods"}</a></li>
-	<li class="current"><a href="{url op="viewPayments"}">{translate key="manager.payments"}</a></li>		
+	<li class="current"><a href="{url op="viewPayments"}">{translate key="manager.payment.records"}</a></li>		
 </ul>
 
 <br />
@@ -34,7 +34,7 @@
 	</tr>
 	<tr>
 		<td width="25%">{translate key="manager.payment.description"}</td>
-		<td>{$payment->getDescription()|escape}</td>
+		<td>{$payment->getName()|escape}</td>
 	</tr>
 	<tr>
 		<td width="25%">{translate key="manager.payment.timestamp"}</td>

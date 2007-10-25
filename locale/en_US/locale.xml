@@ -829,33 +829,36 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<!-- Payment Management -->
 	<message key="manager.payments">Payments</message>
 	<message key="manager.payment.enable">Enable</message>
-	<message key="manager.payment.description">Description</message>
-	<message key="manager.payment.cost">Cost</message>	
 	<message key="manager.payment.action">Action</message>
 	<message key="manager.payment.details">Details</message>	
 	<message key="manager.payment.description">Description</message>
 	<message key="manager.payment.addPayment">Add Payment</message>	
 	<message key="manager.payment.currency">Currency</message>
 	<message key="manager.payment.currencymessage">OJS does not perform any currency conversions.  If accepting payments for subscriptions, you must ensure that the subscription currency matches the one specified here.</message>
-	<message key="manager.payment.settings">Settings</message>
-	<message key="manager.payment.settings.enablePayments">Click here to enable the Payments module.  You must configure payment settings by filling in the form below.  Note that a value of 0 indicates that this option is not enabled.</message>
-	<message key="manager.payment.settings.notices">Users will be required to be logged in in order to make payments.</message>
-	<message key="manager.payment.settings.text">Description of Payment Method</message>
-	<message key="manager.payment.settings.submissionFee">Article Submission Fee (ASF)</message>
-	<message key="manager.payment.settings.publicationFee">Article Publication Fee (APF)</message>
-	<message key="manager.payment.settings.fastTrackFee">Fast-Track Review Fee</message>
-	<message key="manager.payment.settings.membershipFee">One (1) year Individual Membership</message>
-	<message key="manager.payment.settings.payPerViewFee">Article Pay-Per-View Fee</message>
-	<message key="manager.payment.settings.onlypdf">Only Restrict Access to PDF version of articles</message>
-	<message key="manager.payment.settings.acceptSubscriptionPayments">Accept subscription fees (types, cost and duration specified in the Subscriptions section)</message>
-	<message key="manager.payment.settings.acceptDonationPayments">Accept donations (lets user specify amount)</message>
-
-	<message key="manager.payment.checksettings">Notes about Journal Settings</message>
-	<message key="manager.payment.checksettings.explanation1">In order for the payments module to restrict access to articles, the Open Access Policy of the journal must be set to Subscriptions Required in the Journal Setup (Step 4).</message>	
-	<message key="manager.payment.checksettings.enablesubscripitons">Subscriptions Required</message>	
-	<message key="manager.payment.checksettings.explanation2">Please not that if you wish to restrict access to an article, NEITHER the article nor the issue can be set to Open Access.  Be mindful of the delayed open access date.</message>	
-	<message key="manager.payment.checksettings.ok">OK</message>	
-	<message key="manager.payment.checksettings.notok">must be set to subscriptions required</message>		
+	<message key="manager.payment.feePaymentOptions">Fee Payment Options</message>
+	<message key="manager.payment.options">Options</message>
+	<message key="manager.payment.records">Records</message>
+	<message key="manager.payment.options.enablePayments">Click here to enable the Payments module.  You must configure payment settings by filling in the form below.  Note Users will be required to log in to make payments.</message>
+	<message key="manager.payment.options.text">Description of Payment Method</message>
+	<message key="manager.payment.options.fee">Fee</message>
+	<message key="manager.payment.options.feeName">Fee Name</message>
+	<message key="manager.payment.options.feeDescription">Fee Description</message>
+	<message key="manager.payment.generalOptions">General Options</message>
+	<message key="manager.payment.authorFees">Author Fees</message>
+	<message key="manager.payment.authorFeesDescription">Selected options (along with their descriptions, which can be edited, and fees) will appear in Step 1 of the submission process and in About the Journal under Submissions, as well as at point payment is required.</message>
+	<message key="manager.payment.readerFees">Reader Fees</message>
+	<message key="manager.payment.readerFeesDescription">Selected options (along with their descriptions, which can be edited, and fees) will appear in About the Journal under Policies, as well as at point payment is required.</message>	
+	<message key="manager.payment.generalFees">General Fees</message>
+	<message key="manager.payment.generalFeesDescription">The Association Membership will appear in About the Journal under Policies, and the donations link will appear above the search function in the right-hand frame.</message>
+	<message key="manager.payment.options.submissionFee">Article Submission</message>
+	<message key="manager.payment.options.publicationFee">Article Publication</message>
+	<message key="manager.payment.options.fastTrackFee">Fast-Track Review</message>
+	<message key="manager.payment.options.membershipFee">Association Membership</message>
+	<message key="manager.payment.options.payPerViewFee">Article Pay-Per-View</message>
+	<message key="manager.payment.options.waiverPolicy">Waiver Policy</message>
+	<message key="manager.payment.options.onlypdf">Only Restrict Access to PDF version of articles</message>
+	<message key="manager.payment.options.acceptSubscriptionPayments">This will activate payments for Subscriptions, where types, cost, duration and subscribers are managed by the Subscription Manager.</message>
+	<message key="manager.payment.options.donationFee">Donations to journal</message>		
 
 	<message key="manager.payment.noPayments">No Payments</message>
 
@@ -1409,17 +1412,17 @@ You may optionally provide the user with a reason for disabling their account.</
 	<message key="manager.subscriptionPolicies.subscriptionAdditionalInformationDescription">The Subscription Types and fee structure will be automatically placed under Subscriptions on the About the Journal page, along with the name and contact information for the Subscription Manager. Additional information about subscriptions, such as methods of payment or support for subscribers in developing countries, can be added here.</message>
 	<message key="manager.subscriptionPolicies.htmlInstructions"><![CDATA[HTML can be used in textarea (for font size, color, etc.), with "returns" treated as <tt>&lt;br&gt;</tt>; HTML editor works with Firefox browsers.]]></message>
 	<message key="manager.subscriptionPolicies.openAccessOptions">Open Access Options For Subscription Journals</message>
-	<message key="manager.subscriptionPolicies.openAccessOptionsDescription">Subscription journals can provide "delayed open access" and/or "author self-archiving" (which increase readership and citation of content). The selected policies will appear in About the Journal.</message>
+	<message key="manager.subscriptionPolicies.openAccessOptionsDescription">Subscription journals can provide "delayed open access" to their published content, as well as permit "author self-archiving" (both of which increase readership and citation of content).</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccess">Delayed Open Access</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription">With delayed open access, editors are still able to designate specific articles within an issue for immediate open access.</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription1">The back issues of this journal will be available in an open access format</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription2">month(s) after an issue is published.</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccessDurationValid">Please select a valid duration length.</message>
 	<message key="manager.subscriptionPolicies.openAccessNotificationDescription">Registered readers will have the option of receiving the table of contents by email when an issue becomes open access.</message>
-	<message key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription">The following statement will be posted in About the Journal under Delayed Open Access.</message>
+	<message key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription">The following Delayed Open Access Policy will be posted in About the Journal under Policies.</message>
 	<message key="manager.subscriptionPolicies.openAccessNotificationDisabled"><![CDATA[<strong>Note:</strong> To activate this option, the site administrator must enable the <tt>scheduled_tasks</tt> option in the OJS configuration file. Additional server configuration may be required to support this functionality (which may not be possible on all servers), as indicated in the OJS documentation.]]></message>
 	<message key="manager.subscriptionPolicies.authorSelfArchive">Author Self-Archiving Policy</message>
-	<message key="manager.subscriptionPolicies.authorSelfArchiveDescription">The following policy will be included in About the Journal.</message>
+	<message key="manager.subscriptionPolicies.authorSelfArchiveDescription">The following Author Self-Archiving Policy will be included in About the Journal under Policies.</message>
 	<message key="manager.subscriptionPolicies.subscriptionPoliciesSaved">Your subscription policy settings have been updated.</message>
 	<message key="manager.subscriptionPolicies.expiryReminders">Subscription Expiry Reminders</message>
 	<message key="manager.subscriptionPolicies.expiryRemindersDescription">Automated email reminders (available for editing by Journal Managers in OJS's Prepared Emails) can be sent to subscribers both before and after a subscription has expired.</message>
@@ -1758,7 +1761,7 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	<message key="editor.article.scheduleForPublication">Schedule for publication in</message>
 	<message key="editor.article.scheduleForPublication.toBeAssigned">To Be Assigned</message>
 
-	<message key="editor.article.payment.publicationFeeNotPaid">Publication Fee has not been paid for this article.  Once a fee is paid, you will be able to schedule the article for publication.</message>
+	<message key="editor.article.payment.publicationFeeNotPaid">Publication Fee not paid. To schedule item for publication notify author to pay fee, pay fee, or waive fee.</message>
 	<message key="editor.article.payment.payPublicationFee">Pay Publication Fee</message>
 	<message key="editor.article.payment.waivePublicationFee">Waive Publication Fee</message>
 	
@@ -2726,7 +2729,7 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="default.journalSettings.checklist.anonymous"><![CDATA[If submitting to a peer-reviewed section of the journal, the instructions in <a href="javascript:openHelp('{$indexUrl}/{$journalPath}/help/view/editorial/topic/000044')">Ensuring a Blind Review</a>) have been followed.]]></message>
 	<message key="default.journalSettings.privacyStatement">The names and email addresses entered in this journal site will be used exclusively for the stated purposes of this journal and will not be made available for any other purpose or to any other party.</message>
 	<message key="default.journalSettings.openAccessPolicy">This journal provides immediate open access to its content on the principle that making research freely available to the public supports a greater global exchange of knowledge.</message>
-	<message key="default.journalSettings.authorSelfArchivePolicy">Authors are permitted and encouraged to post items submitted to this journal on personal or institutional websites, prior to and after publication (while providing the bibliographic details of that publication).</message>
+	<message key="default.journalSettings.authorSelfArchivePolicy">This journal permits and encourages authors to post items submitted to the journal on personal websites or institutional repositories both prior to and after publication, while providing bibliographic details that credit, if applicable, its publication in this journal.</message>
 	<message key="default.journalSettings.copyeditInstructions"><![CDATA[The copyediting stage is intended to improve the flow, clarity, grammar, wording, and formatting of the article. It represents the last chance for the author to make any substantial changes to the text, as the next stage is restricted to typos and formatting corrections. 
 
 The file to be copyedited is in Word or .rtf format and therefore can be easily edited as a word processing document. This set of  instructions displayed here proposes two approaches to copyediting. The one is based on Microsoft Word's Track Changes feature and requires that the copyeditor, editor and author have access to this program. A second system, that is software independent, has been borrowed, with permission, from the Harvard Educational Review. The journal editor is in a position to modify these instructions, so suggestions can be made to improve the process for this journal. 
@@ -2846,5 +2849,13 @@ The paragraph that begins "This last topic..." is not indented.</pre>]]></messag
 	<message key="default.journalSettings.forAuthors"><![CDATA[Interested in submitting to this journal? We recommend that you review the <a href="{$indexUrl}/{$journalPath}/about">About the Journal</a> page for the journal's section policies, as well as the <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Author Guidelines</a>. Authors need to <a href="{$indexUrl}/{$journalPath}/user/register">register</a> with the journal prior to submitting, or if already registered can simply <a href="{$indexUrl}/index/login">log in</a> and begin the 5 step process.]]></message>
 	<message key="default.journalSettings.forLibrarians"><![CDATA[We encourage research librarians to list this journal among their library's electronic journal holdings. As well, it may be worth noting that this journal's open source publishing system is suitable for libraries to host for their faculty members to use with journals they are involved in editing (see <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></message>
 	<message key="default.journalSettings.lockssLicense"><![CDATA[This journal utilizes the LOCKSS system to create a distributed archiving system among participating libraries and permits those libraries to create permanent archives of the journal for purposes of preservation and restoration. <a href="http://lockss.stanford.edu/">More...</a>]]></message>
-
+	
+	<!-- Default settings for payment items. -->
+	<message key="default.journalSettings.submissionFeeDescription">Authors are required to pay an Article Submission Fee in Step 1 of the submission process to contribute to review costs. You may wish to consult the Waiver Policy.</message>
+	<message key="default.journalSettings.fastTrackFeeDescription">With the payment of this fee, the review, editorial decision, and author notification on this manuscript is guaranteed to take place within 4 weeks.</message>
+	<message key="default.journalSettings.publicationFeeDescription">If this paper is accepted for publication, you will be asked to pay an Article Publication Fee to cover publications costs. You may wish to consult the Waiver Policy.</message>
+	<message key="default.journalSettings.waiverPolicy">If you do not have funds to pay such fees, please use the Comments box below as we do not this to prevent the publication of worthy work.</message>
+	<message key="default.journalSettings.payPerViewFeeDescription">The payment of this fee will enable you to view, download, and print this article.</message>
+	<message key="default.journalSettings.membershipFeeDescription">The payment of this fee will enroll you as a member in this association for one year and provide you with free access to this journal.</message>
+	<message key="default.journalSettings.donationFeeDescription">Donations of any amount to this journal are gratefully received and provide a means for the editors to continue to provide a journal of the highest quality to its readers.</message>
 </locale>

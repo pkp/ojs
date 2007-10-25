@@ -171,4 +171,76 @@
 		<name>rtEmailOthers</name>
 		<value>true</value>
 	</setting>
+	<setting type="int" locale="0">
+		<name>submissionFee</name>
+		<value>0</value>
+	</setting>	
+	<setting type="string" locale="1">
+		<name>submissionFeeName</name>
+		<value>{translate key="manager.payment.options.submissionFee"}</value>
+	</setting>
+	<setting type="string" locale="1">
+		<name>submissionFeeDescription</name>
+		<value>{translate key="default.journalSettings.submissionFeeDescription"}</value>
+	</setting>			
+	<setting type="int" locale="0">
+		<name>fastTrackFee</name>
+		<value>0</value>
+	</setting>	
+	<setting type="string" locale="1">
+		<name>fastTrackFeeName</name>
+		<value>{translate key="manager.payment.options.fastTrackFee"}</value>
+	</setting>
+	<setting type="string" locale="1">
+		<name>fastTrackFeeDescription</name>
+		<value>{translate key="default.journalSettings.fastTrackFeeDescription"}</value>
+	</setting>			
+	<setting type="int" locale="0">
+		<name>publicationFee</name>
+		<value>0</value>
+	</setting>	
+	<setting type="string" locale="1">
+		<name>publicationFeeName</name>
+		<value>{translate key="manager.payment.options.publicationFee"}</value>
+	</setting>
+	<setting type="string" locale="1">
+		<name>publicationFeeDescription</name>
+		<value>{translate key="default.journalSettings.publicationFeeDescription"}</value>
+	</setting>
+	<setting type="string" locale="1">
+		<name>waiverPolicy</name>
+		<value>{translate key="default.journalSettings.waiverPolicy"}</value>
+	</setting>				
+	<setting type="int" locale="0">
+		<name>payPerViewFee</name>
+		<value>0</value>
+	</setting>	
+	<setting type="string" locale="1">
+		<name>payPerViewFeeName</name>
+		<value>{translate key="manager.payment.options.payPerViewFee"}</value>
+	</setting>
+	<setting type="string" locale="1">
+		<name>payPerViewFeeDescription</name>
+		<value>{translate key="default.journalSettings.payPerViewFeeDescription"}</value>
+	</setting>			
+	<setting type="int" locale="0">
+		<name>membershipFee</name>
+		<value>0</value>
+	</setting>	
+	<setting type="string" locale="1">
+		<name>membershipFeeName</name>
+		<value>{translate key="manager.payment.options.membershipFee"}</value>
+	</setting>
+	<setting type="string" locale="1">
+		<name>membershipFeeDescription</name>
+		<value>{translate key="default.journalSettings.membershipFeeDescription"}</value>
+	</setting>			
+	<setting type="string" locale="1">
+		<name>donationFeeName</name>
+		<value>{translate key="manager.payment.options.donationFee"}</value>
+	</setting>
+	<setting type="string" locale="1">
+		<name>donationFeeDescription</name>
+		<value>{translate key="default.journalSettings.donationFeeDescription"}</value>
+	</setting>
 </journal_settings>

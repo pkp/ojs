@@ -38,7 +38,7 @@ class ManualPaymentPlugin extends PaymethodPlugin {
 	}
 
 	function getSettingsFormFieldNames() {
-		return array();
+		return array('manualInstructions');
 	}
 
 	function isConfigured() {
@@ -46,12 +46,11 @@ class ManualPaymentPlugin extends PaymethodPlugin {
 		if (!$journal) return false;
 
 		// Make sure that all settings form fields have been filled in
-/* FIXME:  uncomment this when implemented
 		foreach ($this->getSettingsFormFieldNames() as $settingName) {
-			$setting = $this->getSetting($schedConf->getConferenceId(), $schedConf->getSchedConfId(), $settingName);
+			$setting = $this->getSetting($journal->getJournalId(), $settingName);
 			if (empty($setting)) return false;
 		}
-*/		
+
 		return true;
 	}
 
@@ -62,22 +61,27 @@ class ManualPaymentPlugin extends PaymethodPlugin {
 		$templateMgr =& TemplateManager::getManager();
 		$user =& Request::getUser();
 
-		/* FIXME: This is too specific to registration payments. */
-		$templateMgr->assign('message', $journal->getSetting('registrationAdditionalInformation'));
+		$templateMgr->assign('itemName', $queuedPayment->getName());
+		$templateMgr->assign('itemDescription', $queuedPayment->getDescription());
+		if ( $queuedPayment->getAmount() > 0 ) {
+			$templateMgr->assign('itemAmount', $queuedPayment->getAmount());
+			$templateMgr->assign('itemCurrencyCode', $queuedPayment->getCurrencyCode()); 
+		}
+		$templateMgr->assign('manualInstructions', $this->getSetting($journal->getJournalId(), 'manualInstructions'));
 
 		$templateMgr->display($this->getTemplatePath() . 'paymentForm.tpl');
 
 		import('mail.MailTemplate');
-		$contactName = $schedConf->getSetting('registrationName');
-		$contactEmail = $schedConf->getSetting('registrationEmail');
+		$contactName = $journal->getSetting('contactName');
+		$contactEmail = $journal->getSetting('contactEmail');
 		$mail = &new MailTemplate('MANUAL_PAYMENT_NOTIFICATION');
 		$mail->setFrom($contactEmail, $contactName);
 		$mail->addRecipient($contactEmail, $contactName);
 		$mail->assignParams(array(
-			'schedConfName' => $schedConf->getFullTitle(),
+			'journalName' => $journal->getJournalTitle(),
 			'userFullName' => $user?$user->getFullName():('(' . Locale::translate('common.none') . ')'),
 			'userName' => $user?$user->getUsername():('(' . Locale::translate('common.none') . ')'),
-			'itemDescription' => $queuedPayment->getDescription(),
+			'itemName' => $queuedPayment->getName(),
 			'itemCost' => $queuedPayment->getAmount(),
 			'itemCurrencyCode' => $queuedPayment->getCurrencyCode()
 		));

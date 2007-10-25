@@ -93,7 +93,7 @@ class PayPalPlugin extends PaymethodPlugin {
 	}
 
 	/**
-	 * Display hte settings form
+	 * Display the settings form
 	 * @param $params
 	 * @param $smarty Smarty
 	 */
@@ -114,7 +114,8 @@ class PayPalPlugin extends PaymethodPlugin {
 
 		$params = array(
 			'business' => $this->getSetting($journal->getJournalId(), 'selleraccount'),
-			'item_name' => $queuedPayment->getDescription(),
+			'item_name' => $queuedPayment->getName(),
+			'item_description' => $queuedPayment->getDescription(),  // not a paypal parameter (PayPal uses item_name)
 			'amount' => $queuedPayment->getAmount(),
 			'quantity' => 1,
 			'no_note' => 1,

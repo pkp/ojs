@@ -26,8 +26,9 @@
 	<!-- PayPal -->
 	<message key="plugins.paymethod.paypal">PayPal Fee Payment</message>
 	<message key="plugins.paymethod.paypal.description"><![CDATA[PayPal enables users, whether or not they are PayPal members, to use all major credit cards. The Manager will need to set up a <a href="http://www.paypal.com" target="_new">PayPal Business Account</a>.]]></message>
-	<message key="plugins.paymethod.paypal.warning">Clicking Continue will direct you to the PayPal site.  After making your payment with PayPal you can click the "Return to Merchant" button to return to this site.</message>
-	<message key="plugins.paymethod.paypal.purchase.amount">Amount</message>
+	<message key="plugins.paymethod.paypal.warning">Click the Continue button to go to the PayPal site, where credit cards can be used to pay the fee (without having to join PayPal). Use the "Return to Merchant" button after making payment to return to this site.</message>
+	<message key="plugins.paymethod.paypal.purchase.title">Title</message>
+	<message key="plugins.paymethod.paypal.purchase.fee">Fee</message>
 	<message key="plugins.paymethod.paypal.purchase.description">Description</message>
 	<message key="plugins.paymethod.paypal.purchase.cancelled">Your purchase has been cancelled.</message>
 	<message key="plugins.paymethod.paypal.purchase.cancelled.title">Purchase Cancelled</message>

@@ -11,9 +11,9 @@
 {include file="common/header.tpl"}
 
 <ul class="menu">
-	<li><a href="{url op="payments"}">{translate key="manager.payment.settings"}</a></li>
+	<li><a href="{url op="payments"}">{translate key="manager.payment.options"}</a></li>
 	<li><a href="{url op="payMethodSettings"}">{translate key="manager.payment.paymentMethods"}</a></li>
-	<li class="current"><a href="{url op="viewPayments"}">{translate key="manager.payments"}</a></li>		
+	<li class="current"><a href="{url op="viewPayments"}">{translate key="manager.payment.records"}</a></li>		
 </ul>
 
 <br />
@@ -39,11 +39,11 @@
 		</td>
 		<td>
 			{if $payment->isMembership()}
-				<a href="{url path="editMembership" user=$payment->getUserId()}" >{$payment->getDescription()|escape}</a>
+				<a href="{url path="editMembership" user=$payment->getUserId()}" >{$payment->getName()|escape}</a>
 			{elseif $payment->isSubscription()}
-				<a href="{url page="subscriptionManager" op="editSubscription" path=$payment->getAssocId() }" >{$payment->getDescription()|escape}</a>
+				<a href="{url page="subscriptionManager" op="editSubscription" path=$payment->getAssocId() }" >{$payment->getName()|escape}</a>
 			{else}
-				{$payment->getDescription()|escape}
+				{$payment->getName()|escape}
 			{/if}
 		</td>
 		<td class="nowrap">

@@ -85,25 +85,121 @@ class OJSCompletedPayment extends Payment {
 	}
 	
 	/**
-	 * Return a string representation of the payment type
-	 * @return String
+	 * Returns the description of the CompletedPayment.  
+	 * Pulled from Journal Settings if present, or from locale file otherwise.
+	 * For subscriptions, pulls subscription type name.
+	 * @return string 
+	 */
+	function getName() {
+		$journalDAO =& DAORegistry::getDAO('JournalDAO');
+		$journal =& $journalDAO->getJournal($this->getJournalId());
+		
+		switch ($this->type) {
+			case PAYMENT_TYPE_SUBSCRIPTION:
+				$subscriptionDAO =& DAORegistry::getDAO('SubscriptionDAO');
+				$subscriptionTypeDAO =& DAORegistry::getDAO('SubscriptionTypeDAO');
+				
+				$subscription =& $subscriptionDAO->getSubscription($this->assocId);
+				if ( !$subscription) return Locale::translate('payment.type.subscription');
+				
+				$subscriptionType =& $subscriptionTypeDAO->getSubscriptionType($subscription->getTypeId());
+
+				return Locale::translate('payment.type.subscription') . '(' . $subscriptionType->getSubscriptionTypeName() . ')';
+			case PAYMENT_TYPE_DONATION:
+				if ( $journal->getLocalizedSetting('donationFeeName') != '') {
+					return $journal->getLocalizedSetting('donationFeeName');
+				} else { 	
+					return Locale::translate('payment.type.donation');
+				}			
+			case PAYMENT_TYPE_MEMBERSHIP:	
+				if ( $journal->getLocalizedSetting('membershipFeeName') != '') {
+					return $journal->getLocalizedSetting('membershipFeeName');
+				} else { 	
+					return Locale::translate('payment.type.membership');
+				}
+			case PAYMENT_TYPE_PAYPERVIEW:
+				if ( $journal->getLocalizedSetting('payPerViewFeeName') != '' ) {
+					return $journal->getLocalizedSetting('payPerViewFeeName');
+				} else { 	
+					return Locale::translate('payment.type.payPerView');
+				}
+			case PAYMENT_TYPE_SUBMISSION:
+				if ( $journal->getLocalizedSetting('submissionFeeName') != '' ) {
+					return $journal->getLocalizedSetting('submissionFeeName');
+				} else { 	
+					return Locale::translate('payment.type.submission');
+				}
+			case PAYMENT_TYPE_FASTTRACK:
+				if ( $journal->getLocalizedSetting('fastTrackFeeName') != '' ) {
+					return $journal->getLocalizedSetting('fastTrackFeeName');
+				} else { 	
+					return Locale::translate('payment.type.fastTrack');
+				}				
+			case PAYMENT_TYPE_PUBLICATION:
+				if ( $journal->getLocalizedSetting('publicationFeeName') != '' ) {
+					return $journal->getLocalizedSetting('publicationFeeName');
+				} else { 	
+					return Locale::translate('payment.type.publication');
+				}
+		}
+	}		
+	
+	/**
+	 * Returns the description of the CompletedPayment.  
+	 * Pulled from Journal Settings if present, or from locale file otherwise.
+	 * For subscriptions, pulls subscription type name.
+	 * @return string 
 	 */
 	function getDescription() {
+		$journalDAO =& DAORegistry::getDAO('JournalDAO');
+		$journal =& $journalDAO->getJournal($this->getJournalId());
+		
 		switch ($this->type) {
-			case PAYMENT_TYPE_MEMBERSHIP:
-				return Locale::translate('payment.type.membership');
 			case PAYMENT_TYPE_SUBSCRIPTION:
-				return Locale::translate('payment.type.subscription');
-			case PAYMENT_TYPE_PAYPERVIEW:
-				return Locale::translate('payment.type.payPerView');
+				$subscriptionDAO =& DAORegistry::getDAO('SubscriptionDAO');
+				$subscriptionTypeDAO =& DAORegistry::getDAO('SubscriptionTypeDAO');
+				
+				$subscription =& $subscriptionDAO->getSubscription($this->assocId);
+				if ( !$subscription) return Locale::translate('payment.type.subscription');
+				
+				$subscriptionType =& $subscriptionTypeDAO->getSubscriptionType($subscription->getTypeId());
+				return $subscriptionType->getSubscriptionTypeDescription();
 			case PAYMENT_TYPE_DONATION:
-				return Locale::translate('payment.type.donation');
+				if ( $journal->getLocalizedSetting('donationFeeDescription') != '') {
+					return $journal->getLocalizedSetting('donationFeeDescription');
+				} else { 	
+					return Locale::translate('payment.type.donation');
+				}						
+			case PAYMENT_TYPE_MEMBERSHIP:	
+				if ( $journal->getLocalizedSetting('membershipFeeDescription') != '') {
+					return $journal->getLocalizedSetting('membershipFeeDescription');
+				} else { 	
+					return Locale::translate('payment.type.membership');
+				}				
+			case PAYMENT_TYPE_PAYPERVIEW:
+				if ( $journal->getLocalizedSetting('payPerViewFeeDescription') != '') {
+					return $journal->getLocalizedSetting('payPerViewFeeDescription');
+				} else { 	
+					return Locale::translate('payment.type.payPerView');
+				}
 			case PAYMENT_TYPE_SUBMISSION:
-				return Locale::translate('payment.type.submission');
+				if ( $journal->getLocalizedSetting('submissionFeeDescription') != '' ) {
+					return $journal->getLocalizedSetting('submissionFeeDescription');
+				} else { 	
+					return Locale::translate('payment.type.submission');
+				}
 			case PAYMENT_TYPE_FASTTRACK:
-				return Locale::translate('payment.type.fastTrack');				
+				if ( $journal->getLocalizedSetting('fastTrackFeeDescription') != '' ) {
+					return $journal->getLocalizedSetting('fastTrackFeeDescription');
+				} else { 	
+					return Locale::translate('payment.type.fastTrack');
+				}								
 			case PAYMENT_TYPE_PUBLICATION:
-				return Locale::translate('payment.type.publication');
+				if ( $journal->getLocalizedSetting('publicationFeeDescription') != '' ) {
+					return $journal->getLocalizedSetting('publicationFeeDescription');
+				} else { 	
+					return Locale::translate('payment.type.publication');
+				}
 		}
 	}
 	

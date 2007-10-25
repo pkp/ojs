@@ -36,14 +36,32 @@ class PaymentSettingsForm extends Form {
 		$this->settings = array(
 							'journalPaymentsEnabled' => 'bool',
 							'currency' => 'string',
-							'submissionFee' => 'float', 
-							'publicationFee' => 'float', 
+							'submissionFeeEnabled' => 'bool',
+							'submissionFee' => 'float',
+							'submissionFeeName' => 'string',
+							'submissionFeeDescription' => 'string',
+							'publicationFeeEnabled' => 'bool', 
+							'publicationFee' => 'float',
+							'publicationFeeName' => 'string',
+							'publicationFeeDescription' => 'string',							
+							'fastTrackFeeEnabled' => 'bool', 							 
 							'fastTrackFee' => 'float', 
+							'fastTrackFeeName' => 'string',
+							'fastTrackFeeDescription' => 'string',
+							'payPerViewFeeEnabled' => 'bool', 							
 						  	'payPerViewFee' => 'float', 
+							'payPerViewFeeName' => 'string',
+							'payPerViewFeeDescription' => 'string',
+							'membershipFeeEnabled' => 'bool', 						  	
 							'membershipFee' => 'float', 
+							'membershipFeeName' => 'string',
+							'membershipFeeDescription' => 'string',
+							'waiverPolicy' => 'string', 												
+							'donationFeeEnabled' => 'bool',
+							'donationFeeName' => 'string',
+							'donationFeeDescription' => 'string',									
 							'restrictOnlyPdf' => 'bool', 
-						  	'acceptSubscriptionPayments' => 'bool',
-							'acceptDonationPayments' => 'bool'
+						  	'acceptSubscriptionPayments' => 'bool'
 		);
 		
 		$this->addCheck(new FormValidatorCustom($this, 'submissionFee', 'optional', 'manager.payment.form.numeric', create_function('$submissionFee', 'return is_numeric($submissionFee) && $submissionFee >= 0;')));
@@ -64,6 +82,14 @@ class PaymentSettingsForm extends Form {
 		$this->addCheck(new FormValidator($this, 'currency', 'required', 'manager.subscriptionTypes.form.currencyRequired'));	
 		$this->addCheck(new FormValidatorInSet($this, 'currency', 'required', 'manager.subscriptionTypes.form.currencyValid', array_keys($this->validCurrencies)));
 
+	}
+	
+	/**
+	 * Get the list of field names for which localized settings are used.
+	 * @return array
+	 */
+	function getLocaleFieldNames() {
+		return array('submissionFeeName', 'submissionFeeDescription', 'publicationFeeName', 'publicationFeeDescription', 'waiverPolicy', 'fastTrackFeeName', 'fastTrackFeeDescription', 'payPerViewFeeName', 'payPerViewFeeDescription', 'membershipFeeName', 'membershipFeeDescription', 	'donationFeeName', 'donationFeeDescription');
 	}
 	
 	/**
@@ -89,17 +115,7 @@ class PaymentSettingsForm extends Form {
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->readUserVars(array(	'journalPaymentsEnabled',
-									'currency',
-									'submissionFee', 
-									'publicationFee', 
-									'fastTrackFee', 
-								  	'payPerViewFee', 
-									'membershipFee', 
-									'restrictOnlyPdf', 
-								  	'acceptSubscriptionPayments',
-									'acceptDonationPayments'
-								  ));
+		$this->readUserVars(array_keys($this->settings));
 	}
 	
 	/**
@@ -110,11 +126,13 @@ class PaymentSettingsForm extends Form {
 		$settingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
 		
 		foreach ($this->_data as $name => $value) {
+			$isLocalized = in_array($name, $this->getLocaleFieldNames());			
 			$settingsDao->updateSetting(
 				$journal->getJournalId(),
 				$name,
 				$value,
-				$this->settings[$name]
+				$this->settings[$name],
+				$isLocalized
 			);
 		}
 		

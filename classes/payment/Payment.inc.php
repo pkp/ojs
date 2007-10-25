@@ -63,6 +63,10 @@ class Payment {
 		return $this->currencyCode;
 	}
 
+	function getName() {
+		fatalError('ABSTRACT METHOD');
+	}
+
 	function getDescription() {
 		fatalError('ABSTRACT METHOD');
 	}
