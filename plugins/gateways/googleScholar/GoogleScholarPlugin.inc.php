@@ -211,10 +211,13 @@ class GoogleScholarPlugin extends GatewayPlugin {
 			// Article Metadata
 			$titleGroupNode =& XMLCustomWriter::createElement($document, 'title-group');
 			XMLCustomWriter::appendChild($articleMetaNode, $titleGroupNode);
-			XMLCustomWriter::createChildWithText($document, $titleGroupNode, 'article-title', $publishedArticle->getTitle(), true);
-			$altTitle = $publishedArticle->getTitleAlt1();
-			if (empty($altTitle)) $altTitle = $publishedArticle->getTitleAlt2();
-			XMLCustomWriter::createChildWithText($document, $titleGroupNode, 'trans-title', $altTitle, false);
+			$titles = $publishedArticle->getTitle(null);
+			$primaryLocale = $journal->getPrimaryLocale();
+			XMLCustomWriter::createChildWithText($document, $titleGroupNode, 'article-title', $titles[$primaryLocale], true);
+			unset($titles[$primaryLocale]);
+			foreach ($titles as $locale => $title) {
+				XMLCustomWriter::createChildWithText($document, $titleGroupNode, 'trans-title', $title, false);
+			}
 
 			$contribGroupNode =& XMLCustomWriter::createElement($document, 'contrib-group');
 			XMLCustomWriter::appendChild($articleMetaNode, $contribGroupNode);
