@@ -190,6 +190,8 @@
 		locale CDATA #IMPLIED>
 
 <!ELEMENT type_other (#PCDATA)>
+	<!ATTLIST type_other
+		locale CDATA #IMPLIED>
 
 <!ELEMENT publisher (#PCDATA)>
 	<!ATTLIST publisher

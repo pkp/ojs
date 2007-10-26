@@ -141,23 +141,6 @@ class NativeExportDom {
 			}
 		}
 
-		/* --- */
-
-		XMLCustomWriter::createChildWithText($doc, $root, 'date_published', NativeExportDom::formatDate($article->getDatePublished()), false);
-
-		/* --- Authors --- */
-
-		if ($article->getAccessStatus()) {
-			$accessNode = &XMLCustomWriter::createElement($doc, 'open_access');
-			XMLCustomWriter::appendChild($root, $accessNode);
-		}
-
-		foreach ($article->getAuthors() as $author) {
-			$authorNode =& NativeExportDom::generateAuthorDom($doc, $journal, $issue, $article, $author);
-			XMLCustomWriter::appendChild($root, $authorNode);
-			unset($authorNode);
-		}
-
 		/* --- Indexing --- */
 
 		$indexingNode = &XMLCustomWriter::createElement($doc, 'indexing');
@@ -233,7 +216,27 @@ class NativeExportDom {
 
 		/* --- */
 
+		/* --- Authors --- */
+
+		foreach ($article->getAuthors() as $author) {
+			$authorNode =& NativeExportDom::generateAuthorDom($doc, $journal, $issue, $article, $author);
+			XMLCustomWriter::appendChild($root, $authorNode);
+			unset($authorNode);
+		}
+
+		/* --- */
+
 		XMLCustomWriter::createChildWithText($doc, $root, 'pages', $article->getPages(), false);
+
+		XMLCustomWriter::createChildWithText($doc, $root, 'date_published', NativeExportDom::formatDate($article->getDatePublished()), false);
+
+		if ($article->getAccessStatus()) {
+			$accessNode = &XMLCustomWriter::createElement($doc, 'open_access');
+			XMLCustomWriter::appendChild($root, $accessNode);
+		}
+
+		/* --- */
+
 
 		/* --- Galleys --- */
 		foreach ($article->getGalleys() as $galley) {
