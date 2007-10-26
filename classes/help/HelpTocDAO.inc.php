@@ -20,21 +20,22 @@ import('help.HelpToc');
 class HelpTocDAO extends XMLDAO {
 	function &_getCache($tocId) {
 		static $cache;
+		$locale = Help::getLocale();
 
-		if (!isset($cache)) {
+		if (!isset($cache[$locale][$tocId])) {
 			import('cache.CacheManager');
 			$help =& Help::getHelp();
 			$cacheManager =& CacheManager::getManager();
-			$cache = $cacheManager->getFileCache('help-toc-' . $help->getLocale(), $tocId, array($this, '_cacheMiss'));
+			$cache[$locale][$tocId] = $cacheManager->getFileCache('help-toc-' . $help->getLocale(), $tocId, array($this, '_cacheMiss'));
 
 			// Check to see if the cache info is outdated.
-			$cacheTime = $cache->getCacheTime();
+			$cacheTime = $cache[$locale][$tocId]->getCacheTime();
 			if ($cacheTime !== null && $cacheTime < filemtime($this->getFilename($tocId))) {
 				// The cached data is out of date.
-				$cache->flush();
+				$cache[$locale][$tocId]->flush();
 			}
 		}
-		return $cache;
+		return $cache[$locale][$tocId];
 	}
 
 	function _cacheMiss(&$cache, $id) {

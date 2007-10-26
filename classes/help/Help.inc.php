@@ -188,7 +188,9 @@ class Help {
 	 * @return array
 	 */
 	function buildTopicSection($topicId, $prevTocId = null) {
-		$topicDao = &DAORegistry::getDAO('HelpTopicDAO');
+		$topicDao =& DAORegistry::getDAO('HelpTopicDAO');
+		$tocDao =& DAORegistry::getDAO('HelpTocDAO');
+
 		$topic = $topicDao->getTopic($topicId);
 		if ($topicId == 'index/topic/000000') {
 			$tocId = $topic->getTocId();
@@ -198,7 +200,6 @@ class Help {
 
 		$section = array();
 		if ($tocId && $tocId != $prevTocId) {
-			$tocDao = &DAORegistry::getDAO('HelpTocDAO');
 			$toc = $tocDao->getToc($tocId);
 			$topics = $toc->getTopics();
 			foreach($topics as $currTopic) {
