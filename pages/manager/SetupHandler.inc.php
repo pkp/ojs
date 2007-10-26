@@ -168,7 +168,7 @@ class SetupHandler extends ManagerHandler {
 					if (!isset($editData)) {
 						// Reorder checklist items
 						$checklist = $setupForm->getData('submissionChecklist');
-						if (is_array($checklist[$formLocale])) {
+						if (isset($checklist[$formLocale]) && is_array($checklist[$formLocale])) {
 							usort($checklist[$formLocale], create_function('$a,$b','return $a[\'order\'] == $b[\'order\'] ? 0 : ($a[\'order\'] < $b[\'order\'] ? -1 : 1);'));
 						}
 						$setupForm->setData('submissionChecklist', $checklist);
