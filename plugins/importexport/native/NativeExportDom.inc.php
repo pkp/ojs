@@ -70,7 +70,10 @@ class NativeExportDom {
 			// This may be an open access issue. Check and flag
 			// as necessary.
 
-			if ($issue->getAccessStatus()) {
+			if ( // Issue flagged as open, or subscriptions disabled
+				$issue->getAccessStatus() == OPEN_ACCESS ||
+				(!$journal->getSetting('enableSubscriptions') && $issue->getAccessStatus() == ISSUE_DEFAULT)
+			) {
 				$accessNode = &XMLCustomWriter::createElement($doc, 'open_access');
 				XMLCustomWriter::appendChild($root, $accessNode);
 			}

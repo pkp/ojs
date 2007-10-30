@@ -225,7 +225,7 @@ class NativeImportDom {
 		/* --- Access Status --- */
 		
 		$node = $issueNode->getChildByName('open_access');
-		$issue->setAccessStatus($node?1:0);
+		$issue->setAccessStatus($node?OPEN_ACCESS:SUBSCRIPTION);
 
 		if (($node = $issueNode->getChildByName('access_date'))) {
 			$accessDate = strtotime($node->getValue());

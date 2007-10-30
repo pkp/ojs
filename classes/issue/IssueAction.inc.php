@@ -59,11 +59,10 @@ class IssueAction {
 			$journal =& $currentJournal;
 		}
 
-		$result = $journal->getSetting('enableSubscriptions') && (
-			$issue->getAccessStatus() == SUBSCRIPTION &&
+		$result = $journal->getSetting('enableSubscriptions') && 
+			$issue->getAccessStatus() != OPEN_ACCESS &&
 			$issue->getOpenAccessDate() &&
-			strtotime($issue->getOpenAccessDate()) > time()
-		);
+			strtotime($issue->getOpenAccessDate()) > time();
 
 		HookRegistry::call('IssueAction::subscriptionRequired', array(&$journal, &$issue, &$result));
 		return $result;
