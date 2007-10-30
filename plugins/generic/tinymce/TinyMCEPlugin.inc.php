@@ -216,6 +216,7 @@ class TinyMCEPlugin extends GenericPlugin {
 				break;
 			case 'manager/editSubscriptionType':
 			case 'manager/createSubscriptionType':
+			case 'manager/updateSubscriptionType':
 				$fields[] = 'description';
 				break;
 		}
