@@ -61,10 +61,10 @@ class ManagerPaymentHandler extends ManagerHandler {
  			$templateMgr = &TemplateManager::getManager();
 			$templateMgr->assign(array(
 				'currentUrl' => Request::url(null, null, 'payments'),
-				'pageTitle' => 'common.payments',
+				'pageTitle' => 'manager.payment.feePaymentOptions',
 				'message' => 'common.changesSaved',
 				'backLink' => Request::url(null, null, 'payments'),
-				'backLinkLabel' => 'common.payments'
+				'backLinkLabel' => 'manager.payment.feePaymentOptions'
 			));
 			$templateMgr->display('common/message.tpl');		
 		} else {
@@ -141,7 +141,7 @@ class ManagerPaymentHandler extends ManagerHandler {
 
  			$templateMgr = &TemplateManager::getManager();
 			$templateMgr->assign(array(
-				'currentUrl' => Request::url(null, null, null, 'payMethodSettings'),
+				'currentUrl' => Request::url(null, null, 'payMethodSettings'),
 				'pageTitle' => 'manager.payment.paymentMethods',
 				'message' => 'common.changesSaved',
 				'backLink' => Request::url(null, null, 'payMethodSettings'),
