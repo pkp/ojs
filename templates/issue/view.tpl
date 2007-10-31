@@ -9,7 +9,7 @@
  *
  * $Id$
  *}
-{if $subscriptionRequired && $showGalleyLinks}
+{if $subscriptionRequired && $showGalleyLinks && $showToc}
 	<img src="{$baseUrl}/templates/images/icons/fulltext_open_medium.png">
 	{translate key="reader.openAccess"}&nbsp;
 	<img src="{$baseUrl}/templates/images/icons/fulltext_restricted_medium.png">
@@ -18,7 +18,8 @@
 	{else}
 		{translate key="reader.subscriptionAccess"}
 	{/if}
-<br />
+	<br />
+	<br />
 {/if}
 {if !$showToc && $issue}
 	{if $issueId}
