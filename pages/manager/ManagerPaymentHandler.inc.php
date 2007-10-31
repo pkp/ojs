@@ -60,7 +60,7 @@ class ManagerPaymentHandler extends ManagerHandler {
 
  			$templateMgr = &TemplateManager::getManager();
 			$templateMgr->assign(array(
-				'currentUrl' => Request::url(null, null, null, 'payments'),
+				'currentUrl' => Request::url(null, null, 'payments'),
 				'pageTitle' => 'common.payments',
 				'message' => 'common.changesSaved',
 				'backLink' => Request::url(null, null, 'payments'),
