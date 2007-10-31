@@ -32,6 +32,14 @@ class AdminLanguagesHandler extends AdminHandler {
 		$templateMgr->assign('installedLocales', $site->getInstalledLocales());
 		$templateMgr->assign('uninstalledLocales', array_diff(array_keys(Locale::getAllLocales()), $site->getInstalledLocales()));
 		$templateMgr->assign('helpTopicId', 'site.siteManagement');
+
+		import('i18n.LanguageAction');
+		$languageAction =& new LanguageAction();
+		if ($languageAction->isDownloadAvailable()) {
+			$templateMgr->assign('downloadAvailable', true);
+			$templateMgr->assign('downloadableLocales', $languageAction->getDownloadableLocales());
+		}
+
 		$templateMgr->display('admin/languages.tpl');
 	}
 
@@ -136,7 +144,7 @@ class AdminLanguagesHandler extends AdminHandler {
 		Request::redirect(null, null, 'languages');
 	}
 
-	/*
+	/**
 	 * Reload data for an installed locale.
 	 */
 	function reloadLocale() {
@@ -177,6 +185,36 @@ class AdminLanguagesHandler extends AdminHandler {
 				$settingsDao->updateSetting($journal->getJournalId(), 'supportedLocales', $supportedLocales, 'object');
 			}
 		}
+	}
+
+	/**
+	 * Download a locale from the PKP web site.
+	 */
+	function downloadLocale() {
+		parent::validate();
+		$locale = Request::getUserVar('locale');
+
+		import('i18n.LanguageAction');
+		$languageAction =& new LanguageAction();
+
+		if (!$languageAction->isDownloadAvailable()) Request::redirect(null, null, 'languages');
+
+		if (!preg_match('/^[a-z]{2}_[A-Z]{2}$/', $locale)) {
+			Request::redirect(null, null, 'languages');
+		}
+
+		$templateMgr =& TemplateManager::getManager();
+
+		$errors = array();
+		if (!$languageAction->downloadLocale($locale, $errors)) {
+			$templateMgr->assign('errors', $errors);
+			$templateMgr->display('admin/languageDownloadErrors.tpl');
+			return;
+		}
+		$templateMgr->assign('messageTranslated', Locale::translate('admin.languages.localeInstalled', array('locale' => $locale)));
+		$templateMgr->assign('backLink', Request::url(null, null, 'languages'));
+		$templateMgr->assign('backLinkLabel', 'admin.languages.languageSettings');
+		$templateMgr->display('common/message.tpl');
 	}
 }
 

@@ -78,4 +78,24 @@
 
 </form>
 
+<div class="separator"></div>
+
+<h3>{translate key="admin.languages.downloadLocales"}</h3>
+
+{if $downloadAvailable}
+
+<table class="data" width="100%">
+	{foreach from=$downloadableLocales item=downloadableLocale}
+		<tr valign="top">
+			<td width="30%">&bull;&nbsp;{$downloadableLocale.name|escape} ({$downloadableLocale.key})</td>
+			<td width="70%">
+				<a href="{url op="downloadLocale" locale=$downloadableLocale.key}" class="action">{translate key="admin.languages.download"}</a>
+			</td>
+		</tr>
+	{/foreach}
+</table>
+{else}{* not $downloadAvailable *}
+	{translate key="admin.languages.downloadUnavailable"}
+{/if}{* $downloadAvailable *}
+
 {include file="common/footer.tpl"}

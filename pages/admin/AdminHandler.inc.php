@@ -141,6 +141,11 @@ class AdminHandler extends Handler {
 		AdminLanguagesHandler::reloadLocale();
 	}
 
+	function downloadLocale() {
+		import('pages.admin.AdminLanguagesHandler');
+		AdminLanguagesHandler::downloadLocale();
+	}
+
 
 	//
 	// Authentication sources

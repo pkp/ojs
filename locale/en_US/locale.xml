@@ -661,7 +661,19 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="admin.languages.installNewLocalesInstructions">Select any additional locales to install support for in this system. Locales must be installed before they can be used by hosted journals. See the OJS documentation for information on adding support for new languages.</message>
 	<message key="admin.languages.noLocalesAvailable">No additional locales are available for installation.</message>
 	<message key="admin.languages.installLocales">Install</message>
-	
+	<message key="admin.languages.downloadLocales">Download Locales</message>
+	<message key="admin.languages.downloadFailed">The locale download failed. The error message(s) below describe the failure.</message>
+	<message key="admin.languages.localeInstalled">The "{$locale}" locale has been installed. </message>
+	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Downloading language packs from the Public Knowledge Project web server is not currently available because:
+	<ul>
+		<li>Your server does not have or allow execution of the GNU "tar" utility</li>
+		<li>OJS is unable to modify the locale registry file, typically "registry/locales.xml".</li>
+	</ul>
+Language packs can be manually downloaded from the <a href="http://pkp.sfu.ca">PKP web site</a>.</p>]]></message>
+	<message key="admin.languages.download">Download Locale</message>
+	<message key="admin.languages.download.cannotOpen">Cannot open language descriptor from PKP web site.</message>
+	<message key="admin.languages.download.cannotModifyRegistry">Cannot add the new locale to the locale registry file, typically "registry/locales.xml".</message>
+
 	<message key="admin.auth.ojs">OJS User Database</message>
 	<message key="admin.auth.create">Create authentication source</message>
 	<message key="admin.auth.confirmDelete">Are you sure you want to permanently delete this authentication source?</message>

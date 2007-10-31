@@ -14,14 +14,7 @@
   * $Id$
   -->
 
-<!DOCTYPE locales [
-	<!ELEMENT locales (locale+)>
-	<!ELEMENT locale EMPTY>
-		<!ATTLIST locale
-			key CDATA #REQUIRED
-			name CDATA #REQUIRED
-			stylesheet CDATA #IMPLIED>
-]>
+<!DOCTYPE locales SYSTEM "../dbscripts/xml/dtd/locales.dtd">
 
 <locales>
 	<locale key="de_DE" name="Deutsch (Deutschland)"/>
@@ -35,5 +28,4 @@
 	<locale key="ru_RU" name="Russian"/>
 	<locale key="tr_TR" name="Türkiye Türkçesi"/>
 	<locale key="vi_VN" name="Tiếng Việt"/>
-	<locale key="te_ST" name="Test Locale"/>
 </locales>

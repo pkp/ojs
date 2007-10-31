@@ -296,6 +296,26 @@ class Locale {
 		return $cache;
 	}
 
+	/**
+	 * Load a locale list from a file.
+	 * @param $filename string
+	 * @return array
+	 */
+	function &loadLocaleList($filename) {
+		$xmlDao = &new XMLDAO();
+		$data = $xmlDao->parseStruct($filename, array('locale'));
+		$allLocales = array();
+
+		// Build array with ($localKey => $localeName)
+		if (isset($data['locale'])) {
+			foreach ($data['locale'] as $localeData) {
+				$allLocales[$localeData['attributes']['key']] = $localeData['attributes'];
+			}
+		}
+
+		return $allLocales;
+	}
+
 	function _allLocalesCacheMiss(&$cache, $id) {
 		static $allLocales;
 		if (!isset($allLocales)) {
@@ -304,15 +324,7 @@ class Locale {
 			$notes[] = array('debug.notes.localeListLoad', array('localeList' => LOCALE_REGISTRY_FILE));
 
 			// Reload locale registry file
-			$xmlDao = &new XMLDAO();
-			$data = $xmlDao->parseStruct(LOCALE_REGISTRY_FILE, array('locale'));
-
-			// Build array with ($localKey => $localeName)
-			if (isset($data['locale'])) {
-				foreach ($data['locale'] as $localeData) {
-					$allLocales[$localeData['attributes']['key']] = $localeData['attributes'];
-				}
-			}
+			$allLocales = Locale::loadLocaleList(LOCALE_REGISTRY_FILE);
 			asort($allLocales);
 			$cache->setEntireCache($allLocales);
 		}
