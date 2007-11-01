@@ -193,7 +193,8 @@ class RTHandler extends ArticleHandler {
 			$citationPlugin =& $citationPlugins[$citeType];
 		} else {
 			// No citation type has been selected; use a default.
-			$citationPlugin = array_shift($citationPlugins);
+			if (isset($citationPlugins['abnt'])) $citationPlugin =& $citationPlugins['abnt'];
+			else $citationPlugin = array_shift($citationPlugins);
 		}
 		$citationPlugin->cite($article, $issue);
 	}
