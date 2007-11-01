@@ -83,19 +83,11 @@ class PubMedExportDom {
 		// there is some ambiguity between whether to use 
 		// article->getlanguage or journal->getlocale
 		// PubMed requires english titles for ArticleTitle
-/*
-		$altLocale1 = $journal->getSetting('alternateLocale1');
-		$altLocale2 = $journal->getSetting('alternateLocale2');
-		$locale = $journal->getLocale();
-
-		$titleAlt1 = $article->getTitleAlt1();
-		$titleAlt2 = $article->getTitleAlt2();
-*/
 		$language = $article->getLanguage();
 		if ($language == 'en' || $language == '' ) {
-			XMLCustomWriter::createChildWithText($doc, $root, 'ArticleTitle', $article->getTitle());
+			XMLCustomWriter::createChildWithText($doc, $root, 'ArticleTitle', $article->getArticleTitle());
 		} else {
-			XMLCustomWriter::createChildWithText($doc, $root, 'VernacularTitle', $article->getTitle());
+			XMLCustomWriter::createChildWithText($doc, $root, 'VernacularTitle', $article->getArticleTitle());
 		}
 
 		/* --- FirstPage / LastPage --- */
@@ -175,7 +167,7 @@ class PubMedExportDom {
 
 		/* --- Abstract --- */
 		if (!$section->getAbstractsDisabled()) {
-			$abstractNode = XMLCustomWriter::createChildWithText($doc, $root, 'Abstract', strip_tags($article->getAbstract()), false);
+			$abstractNode = XMLCustomWriter::createChildWithText($doc, $root, 'Abstract', strip_tags($article->getArticleAbstract()), false);
 		}
 
 		return $root;
