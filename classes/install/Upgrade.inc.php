@@ -55,6 +55,10 @@ class Upgrade extends Installer {
 	 * @return boolean
 	 */
 	function designateReviewVersions() {
+		// This function copies files, and is not supported by manual
+		// installs / upgrades.
+		if ($this->getParam('manualInstall')) return true;
+
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
 		$articleDao =& DAORegistry::getDAO('ArticleDAO');
 		$authorSubmissionDao =& DAORegistry::getDAO('AuthorSubmissionDAO');
@@ -82,7 +86,9 @@ class Upgrade extends Installer {
 	 */
 	function migrateRtSettings() {
 		$rtDao =& DAORegistry::getDAO('RTDAO');
+		$roRtDao =& DAORegistry::getDAO('RTDAO', $this->dbconn);
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
+		$roJournalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 
 		// Bring in the comments constants.
 		$commentDao = &DAORegistry::getDao('CommentDAO');
@@ -103,11 +109,11 @@ class Upgrade extends Installer {
 			$rt->setAuthorBio($row['author_bio']);
 			$rt->setDefineTerms($row['define_terms']);
 
-			$journal->updateSetting('enableComments', $row['add_comment']?COMMENTS_AUTHENTICATED:COMMENTS_DISABLED);
+			$roJournalSettingsDao->updateSetting($journal->getJournalId(), 'enableComments', $row['add_comment']?COMMENTS_AUTHENTICATED:COMMENTS_DISABLED, 'int');
 
 			$rt->setEmailAuthor($row['email_author']);
 			$rt->setEmailOthers($row['email_others']);
-			$rtDao->updateJournalRT($rt);
+			$roRtDao->updateJournalRT($rt);
 			unset($rt);
 			unset($journal);
 			$result->MoveNext();
@@ -116,7 +122,7 @@ class Upgrade extends Installer {
 		unset($result);
 
 		// Drop the table once all settings are migrated.
-		$rtDao->update('DROP TABLE rt_settings');
+		$roRtDao->update('DROP TABLE rt_settings');
 		return true;
 	}
 
@@ -127,10 +133,11 @@ class Upgrade extends Installer {
 	 */
 	function correctCurrencies() {
 		$currencyDao =& DAORegistry::getDAO('CurrencyDAO');
+		$roCurrencyDao =& DAORegistry::getDAO('CurrencyDAO', $this->dbconn);
 		$result =& $currencyDao->retrieve('SELECT st.type_id AS type_id, c.code_alpha AS code_alpha FROM subscription_types st LEFT JOIN currencies c ON (c.currency_id = st.currency_id)');
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
-			$currencyDao->update('UPDATE subscription_types SET currency_code_alpha = ? WHERE type_id = ?', array($row['code_alpha'], $row['type_id']));
+			$roCurrencyDao->update('UPDATE subscription_types SET currency_code_alpha = ? WHERE type_id = ?', array($row['code_alpha'], $row['type_id']));
 			$result->MoveNext();
 		}
 		unset($result);
@@ -145,18 +152,19 @@ class Upgrade extends Installer {
 	 */
 	function migrateIssueLabelAndSettings() {
 		// First, migrate label_format values in issues table.
-		$issueDao =& DAORegistry::getDAO('IssueDAO');
-		$issueDao->update('UPDATE issues SET show_volume=0, show_number=0, show_year=0, show_title=1 WHERE label_format=4'); // ISSUE_LABEL_TITLE
-		$issueDao->update('UPDATE issues SET show_volume=0, show_number=0, show_year=1, show_title=0 WHERE label_format=3'); // ISSUE_LABEL_YEAR
-		$issueDao->update('UPDATE issues SET show_volume=1, show_number=0, show_year=1, show_title=0 WHERE label_format=2'); // ISSUE_LABEL_VOL_YEAR
-		$issueDao->update('UPDATE issues SET show_volume=1, show_number=1, show_year=1, show_title=0 WHERE label_format=1'); // ISSUE_LABEL_NUM_VOL_YEAR
+		$roIssueDao =& DAORegistry::getDAO('IssueDAO', $this->dbconn);
+		$roIssueDao->update('UPDATE issues SET show_volume=0, show_number=0, show_year=0, show_title=1 WHERE label_format=4'); // ISSUE_LABEL_TITLE
+		$roIssueDao->update('UPDATE issues SET show_volume=0, show_number=0, show_year=1, show_title=0 WHERE label_format=3'); // ISSUE_LABEL_YEAR
+		$roIssueDao->update('UPDATE issues SET show_volume=1, show_number=0, show_year=1, show_title=0 WHERE label_format=2'); // ISSUE_LABEL_VOL_YEAR
+		$roIssueDao->update('UPDATE issues SET show_volume=1, show_number=1, show_year=1, show_title=0 WHERE label_format=1'); // ISSUE_LABEL_NUM_VOL_YEAR
 
 		// Drop the old label_format column once all values are migrated.
-		$issueDao->update('ALTER TABLE issues DROP COLUMN label_format');
+		$roIssueDao->update('ALTER TABLE issues DROP COLUMN label_format');
 
 		// Migrate old publicationFormat journal setting to new journal settings. 
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
-		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
+		$roJournalDao =& DAORegistry::getDAO('JournalDAO', $this->dbconn);
+		$roJournalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO', $this->dbconn);
 		$result =& $journalDao->retrieve('SELECT j.journal_id AS journal_id, js.setting_value FROM journals j LEFT JOIN journal_settings js ON (js.journal_id = j.journal_id AND js.setting_name = ?)', 'publicationFormat');
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
@@ -184,14 +192,14 @@ class Upgrade extends Installer {
 					$settings['publicationFormatYear'] = true;
 			}
 			foreach ($settings as $name => $value) {
-				$journalDao->update('INSERT INTO journal_settings (journal_id, setting_name, setting_value, setting_type) VALUES (?, ?, ?, ?)', array($row['journal_id'], $name, $value?1:0, 'bool'));
+				$roJournalSettingsDao->update('INSERT INTO journal_settings (journal_id, setting_name, setting_value, setting_type) VALUES (?, ?, ?, ?)', array($row['journal_id'], $name, $value?1:0, 'bool'));
 			}
 			$result->MoveNext();
 		}
 		$result->Close();
 		unset($result);
 
-		$journalDao->update('DELETE FROM journal_settings WHERE setting_name = ?', array('publicationFormat'));
+		$roJournalDao->update('DELETE FROM journal_settings WHERE setting_name = ?', array('publicationFormat'));
 
 		return true;
 	}
@@ -203,15 +211,16 @@ class Upgrade extends Installer {
 	 */
 	function setJournalPrimaryLocales() {
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
+		$roJournalDao =& DAORegistry::getDAO('JournalDAO', $this->dbconn);
 		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
 
 		$result =& $journalSettingsDao->retrieve('SELECT journal_id, setting_value FROM journal_settings WHERE setting_name = ?', array('primaryLocale'));
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
-			$journalDao->update('UPDATE journals SET primary_locale = ? WHERE journal_id = ?', array($row['setting_value'], $row['journal_id']));
+			$roJournalDao->update('UPDATE journals SET primary_locale = ? WHERE journal_id = ?', array($row['setting_value'], $row['journal_id']));
 			$result->MoveNext();
 		}
-		$journalDao->update('UPDATE journals SET primary_locale = ? WHERE primary_locale IS NULL OR primary_locale = ?', array(INSTALLER_DEFAULT_LOCALE, ''));
+		$roJournalDao->update('UPDATE journals SET primary_locale = ? WHERE primary_locale IS NULL OR primary_locale = ?', array(INSTALLER_DEFAULT_LOCALE, ''));
 		$result->Close();
 		return true;
 	}
@@ -221,7 +230,7 @@ class Upgrade extends Installer {
 	 * @return boolean
 	 */
 	function installBlockPlugins() {
-		$pluginSettingsDao =& DAORegistry::getDAO('PluginSettingsDAO');
+		$roPluginSettingsDao =& DAORegistry::getDAO('PluginSettingsDAO', $this->dbconn);
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
 		$journals =& $journalDao->getJournals();
 
@@ -244,9 +253,9 @@ class Upgrade extends Installer {
 		foreach ($journalIds as $journalId) {
 			$i = 0;
 			foreach ($pluginNames as $pluginName) {
-				$pluginSettingsDao->updateSetting($journalId, $pluginName, 'enabled', 'true', 'bool');
-				$pluginSettingsDao->updateSetting($journalId, $pluginName, 'seq', $i++, 'int');
-				$pluginSettingsDao->updateSetting($journalId, $pluginName, 'context', BLOCK_CONTEXT_RIGHT_SIDEBAR, 'int');
+				$roPluginSettingsDao->updateSetting($journalId, $pluginName, 'enabled', 'true', 'bool');
+				$roPluginSettingsDao->updateSetting($journalId, $pluginName, 'seq', $i++, 'int');
+				$roPluginSettingsDao->updateSetting($journalId, $pluginName, 'context', BLOCK_CONTEXT_RIGHT_SIDEBAR, 'int');
 			}
 		}
 
@@ -259,6 +268,10 @@ class Upgrade extends Installer {
 	 * @return boolean
 	 */
 	function clearDataCache() {
+		// This function affects files, and is not supported by manual
+		// installs / upgrades.
+		if ($this->getParam('manualInstall')) return true;
+
 		import('cache.CacheManager');
 		$cacheManager =& CacheManager::getManager();
 		$cacheManager->flush();
@@ -271,7 +284,7 @@ class Upgrade extends Installer {
 	 * @return boolean
 	 */
 	function localizeJournalSettings() {
-		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
+		$roJournalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO', $this->dbconn);
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
 
 		$settingNames = array(
@@ -331,7 +344,7 @@ class Upgrade extends Installer {
 			$result =& $journalDao->retrieve('SELECT j.journal_id, j.primary_locale FROM journals j, journal_settings js WHERE j.journal_id = js.journal_id AND js.setting_name = ? AND (js.locale IS NULL OR js.locale = ?)', array($oldName, ''));
 			while (!$result->EOF) {
 				$row = $result->GetRowAssoc(false);
-				$journalSettingsDao->update('UPDATE journal_settings SET locale = ?, setting_name = ? WHERE journal_id = ? AND setting_name = ? AND (locale IS NULL OR locale = ?)', array($row['primary_locale'], $newName, $row['journal_id'], $oldName, ''));
+				$roJournalSettingsDao->update('UPDATE journal_settings SET locale = ?, setting_name = ? WHERE journal_id = ? AND setting_name = ? AND (locale IS NULL OR locale = ?)', array($row['primary_locale'], $newName, $row['journal_id'], $oldName, ''));
 				$result->MoveNext();
 			}
 			$result->Close();
@@ -349,6 +362,7 @@ class Upgrade extends Installer {
 	 */
 	function migratePublisher() {
 		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
+		$roJournalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO', $this->dbconn);
 
 		$result =& $journalSettingsDao->retrieve('SELECT j.primary_locale, s.setting_value, j.journal_id FROM journal_settings s, journals j WHERE s.journal_id = j.journal_id AND s.setting_name = ?', array('publisher'));
 		while (!$result->EOF) {
@@ -357,7 +371,7 @@ class Upgrade extends Installer {
 			$publisher = @unserialize($row['setting_value']);
 
 			foreach (array('note' => 'publisherNote', 'institution' => 'publisherInstitution', 'url' => 'publisherUrl') as $old => $new) {
-				if (isset($publisher[$old])) $journalSettingsDao->update(
+				if (isset($publisher[$old])) $roJournalSettingsDao->update(
 					'INSERT INTO journal_settings (journal_id, setting_name, setting_value, setting_type, locale) VALUES (?, ?, ?, ?, ?)',
 					array($row['journal_id'], $new, $publisher[$old], 'string', $row['primary_locale'])
 				);
@@ -368,7 +382,7 @@ class Upgrade extends Installer {
 		$result->Close();
 		unset($result);
 
-		$journalSettingsDao->update('DELETE FROM journal_settings WHERE setting_name = ?', 'publisher');
+		$roJournalSettingsDao->update('DELETE FROM journal_settings WHERE setting_name = ?', 'publisher');
 
 		return true;
 	}
@@ -378,13 +392,13 @@ class Upgrade extends Installer {
 	 * @return boolean
 	 */
 	function setGalleyLocales() {
-		$articleGalleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
+		$roArticleGalleyDao =& DAORegistry::getDAO('ArticleGalleyDAO', $this->dbconn);
 		$journalDao =& DAORegistry::getDAO('JournalDAO');
 
 		$result =& $journalDao->retrieve('SELECT g.galley_id, j.primary_locale FROM journals j, articles a, article_galleys g WHERE a.journal_id = j.journal_id AND g.article_id = a.article_id AND (g.locale IS NULL OR g.locale = ?)', '');
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
-			$articleGalleyDao->update('UPDATE article_galleys SET locale = ? WHERE galley_id = ?', array($row['primary_locale'], $row['galley_id']));
+			$roArticleGalleyDao->update('UPDATE article_galleys SET locale = ? WHERE galley_id = ?', array($row['primary_locale'], $row['galley_id']));
 			$result->MoveNext();
 		}
 		$result->Close();
@@ -398,11 +412,12 @@ class Upgrade extends Installer {
 	 * @return boolean
 	 */
 	function addSubscriptionIPRanges() {
+		$roSubscriptionDao =& DAORegistry::getDAO('SubscriptionDAO', $this->dbconn);
 		$subscriptionDao =& DAORegistry::getDAO('SubscriptionDAO');
 		$subscriptions =& $subscriptionDao->getSubscriptions();
 
 		while ($subscription =& $subscriptions->next()) {
-			$subscriptionDao->insertSubscriptionIPRange($subscription->getSubscriptionId(), $subscription->getIPRange());
+			$roSubscriptionDao->insertSubscriptionIPRange($subscription->getSubscriptionId(), $subscription->getIPRange());
 			unset($subscription);
 		}
 
@@ -417,11 +432,12 @@ class Upgrade extends Installer {
 	 */
 	function migrateUserSettings() {
 		$userSettingsDao =& DAORegistry::getDAO('UserSettingsDAO');
+		$roUserSettingsDao =& DAORegistry::getDAO('UserSettingsDAO', $this->dbconn);
 
 		$result =& $userSettingsDao->retrieve('SELECT user_id, setting_name, journal_id, setting_value, setting_type FROM user_settings_old');
 		while (!$result->EOF) {
 			$row = $result->GetRowAssoc(false);
-			$userSettingsDao->update('INSERT INTO user_settings (user_id, setting_name, journal_id, setting_value, setting_type, locale) VALUES (?, ?, ?, ?, ?, ?)', array($row['user_id'], $row['setting_name'], $row['journal_id'], $row['setting_value'], $row['setting_type'], ''));
+			$roUserSettingsDao->update('INSERT INTO user_settings (user_id, setting_name, journal_id, setting_value, setting_type, locale) VALUES (?, ?, ?, ?, ?, ?)', array($row['user_id'], $row['setting_name'], $row['journal_id'], $row['setting_value'], $row['setting_type'], ''));
 			$result->MoveNext();
 		}
 		$result->Close();
@@ -441,6 +457,7 @@ class Upgrade extends Installer {
 	 */
 	function dropAllIndexes() {
 		$siteDao =& DAORegistry::getDAO('SiteDAO');
+		$roSiteDao =& DAORegistry::getDAO('SiteDAO', $this->dbconn);
 		$dict = NewDataDictionary($siteDao->_dataSource);
 		$dropIndexSql = array();
 
@@ -473,7 +490,7 @@ class Upgrade extends Installer {
 
 		// Execute the DROP INDEX statements.
 		foreach ($dropIndexSql as $sql) {
-			$siteDao->update($sql);
+			$roSiteDao->update($sql);
 		}
 
 		// Second run: Only return primary indexes. This is necessary
@@ -482,7 +499,7 @@ class Upgrade extends Installer {
 			$indexes = $dict->MetaIndexes($tableName, true);
 			if (!empty($indexes)) switch(Config::getVar('database', 'driver')) {
 				case 'mysql':
-					$siteDao->update("ALTER TABLE $tableName DROP PRIMARY KEY");
+					$roSiteDao->update("ALTER TABLE $tableName DROP PRIMARY KEY");
 					break;
 			}
 		}
