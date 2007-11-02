@@ -21,7 +21,7 @@
 	</section>
 	<section title="管理構造">
 		<![CDATA[<p><h5>編集プロセス</h5><p>OJSの編集プロセスは投稿から出版にいたる5つのステップから成り、1人または複数の編集者により管理されます。</p><ol><li><em>投稿物キュー:</em> アイテムの処理はここから始まり、担当編集者が任命されます。</li><li><em>投稿物の査読:</em> アイテムのピアレビューを行い、編集者が採択の判断をします。</li><li><em>投稿物の編集:</em> アイテムの原稿整理、レイアウト、校正を行います。アイテムを特定の巻･号に割り当てます。</li><li><em>目次:</em> アイテムを出版用に配列し、新しい号を出版します。</li></ol><h5>編集担当者の役割</h5>（雑誌管理者により任命）<ul><li><em>雑誌管理者:</em> 雑誌を設定し、編集担当者を配置します（自ら編集者やその他の担当を兼務することもできます）。</li><li><em>編集者:</em> 編集プロセスを監督します。投稿物にセクションエディタを割り当て、投稿物の査読と編集を担当させることができます。コンテンツの出版スケジュールと雑誌の出版に関する責任を持ちます。</li><li><em>セクションエディタ:</em> 指定された投稿物の査読プロセスと（常にではないですが）編集プロセスを監督します。</li><li><em>コピーエディタ:</em> 投稿物の文法やわかりやすさを改善し、間違いと思われる点を著者に質し、雑誌が定める引用書式やテキストスタイルに完全に準拠していることを確認します。</li><li><em>レイアウトエディタ:</em> 原稿整理の終わった投稿物を変換して、HTML、PDF、PSなどの電子出版用のファイルフォーマットのゲラを作成します。</li><li><em>校正者:</em> ゲラを読んで、文字や書式の誤りを正します。</li></ul></p>
-<p align="center"><a href="{$baseUrl}/templates/images/ja_JP/edprocesslarge.png"><img src="{$baseUrl}/templates/images/ja_JP/edprocess.png" width="480" height="542" border="0" alt="" /></a></p>
+<p align="center"><a href="{$baseUrl}/locale/{$locale}/edprocesslarge.png"><img src="{$baseUrl}/locale/{$locale}/edprocess.png" width="480" height="542" border="0" alt="" /></a></p>
 ]]>
 	</section>
 	<section title="サポート">
