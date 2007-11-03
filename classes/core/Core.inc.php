@@ -43,6 +43,7 @@ class Core {
 
 		// only process strings that are not UTF-8 already
 		if ( !String::isUTF8($var) && Config::getVar('i18n', 'charset_normalization') == 'On' ) {
+			import('core.Transcoder');
 
 			// convert string to HTML entities (numeric and named)
 			$trans =& new Transcoder('CP1252', 'HTML-ENTITIES');
