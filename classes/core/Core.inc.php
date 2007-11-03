@@ -41,16 +41,12 @@ class Core {
 		// normalize existing HTML special characters to ASCII
 		$var = strtr(trim($var), array("&amp;" => "&", "&quot" => '"', "&lt;" => "<", "&gt;" => ">"));
 
-		// process strings that contain multibyte characters
-		if ( String::isUTF8(String::html2utf($var)) ) {
-			import('core.Transcoder');
+		// only process strings that are not UTF-8 already
+		if ( !String::isUTF8($var) && Config::getVar('i18n', 'charset_normalization') == 'On' ) {
 
-			// convert UTF-8 to UTF-8 entities (numeric and named)
-			$trans =& new Transcoder('UTF-8', 'HTML-ENTITIES');
+			// convert string to HTML entities (numeric and named)
+			$trans =& new Transcoder('CP1252', 'HTML-ENTITIES');
 			$var = $trans->trans($var);
-
-			// convert windows-1252 entities to UTF-8 entities
-			$var = String::cp1252ToEntities($var);
 
 			// convert UTF-8 entities back to UTF-8 characters
 			$trans =& new Transcoder('HTML-ENTITIES', 'UTF-8');

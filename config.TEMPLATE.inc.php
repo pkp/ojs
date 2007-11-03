@@ -145,6 +145,9 @@ connection_charset = Off
 ; Must be set to "Off" if not supported by the database server
 database_charset = Off
 
+; Enable character normalization to utf-8 (recommended)
+; If disabled, strings will be passed through in their native encoding
+charset_normalization = On
 
 ;;;;;;;;;;;;;;;;;
 ; File Settings ;
