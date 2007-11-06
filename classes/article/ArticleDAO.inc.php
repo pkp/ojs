@@ -169,7 +169,7 @@ class ArticleDAO extends DAO {
 				$article->getEditorFileId(),
 				$article->getCopyeditFileId(),
 				$article->getPages(),
-				$article->getFastTracked() === null ? false : $article->getFastTracked()
+				$article->getFastTracked()?1:0
 			)
 		);
 
