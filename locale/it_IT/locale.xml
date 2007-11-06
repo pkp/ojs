@@ -1729,8 +1729,7 @@ Attivo &#x00E8; il numero di quante revisioni si stanno considerando o stanno an
 	
 	<!-- Article Submission Step 3 -->
 	<message key="author.submit.uploadInstructions"><![CDATA[
-Per caricare un manoscritto in questo journal, completa i seguenti passi.
-
+<p>Per caricare un manoscritto in questo journal, completa i seguenti passi.</p>
 <ol>
 <li>Su questa pagina, clicca su sfoglia (o scegli file) che apre una finestra Scegli File per trovare il file nel tuo pc.</li>
 <li>Localizza il file che hai deciso di sottomettere ed evidenzialo.</li>

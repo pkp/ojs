@@ -1695,8 +1695,7 @@ Aktivnih prikazuje na koliko je recenzija recenzent trenutno angažiran.]]></mes
 	
 	<!-- Article Submission Step 3 -->
 	<message key="author.submit.uploadInstructions"><![CDATA[
-Kako biste priložili rukopis, izvršite slijedeće korake:
-
+<p>Kako biste priložili rukopis, izvršite slijedeće korake:</p>
 <ol>
 <li>Niže na ovoj stranici, kliknite <i>Browse</i> (ili <i>Choose File</i>) koji otvara prozor <i>Choose File</i> kojim možete odabrati datoteku na tvrdom disku Vašeg računala.</li>
 <li>Locirajte datoteku koju želite poslati i označite je.</li>

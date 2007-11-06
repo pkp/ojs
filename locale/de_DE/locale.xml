@@ -1695,8 +1695,7 @@ mit einem (+), das anzeigt, dass das Gutachten in Arbeit ist.]]></message>
 	
 	<!-- Beitragseingabe Schritt 3 -->
 	<message key="author.submit.uploadInstructions"><![CDATA[
-Mit folgenden Schritten laden Sie ein Manuskript hoch zu dieser Zeitschrift.
-
+<p>Mit folgenden Schritten laden Sie ein Manuskript hoch zu dieser Zeitschrift.</p>
 <ol>
 <li>In dieser Seite auf Auswahl (oder Datei wählen) klicken. Ein Fenster zum Auffinden der Datei auf ihrer Festplatte wird geöffnet.</li>
 <li>Finden Sie die gewünschte Datei und wählen Sie sie aus.</li>

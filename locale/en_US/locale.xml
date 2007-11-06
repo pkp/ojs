@@ -1933,8 +1933,7 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	
 	<!-- Article Submission Step 3 -->
 	<message key="author.submit.uploadInstructions"><![CDATA[
-To upload a manuscript to this journal, complete the following steps.
-
+<p>To upload a manuscript to this journal, complete the following steps.</p>
 <ol>
 <li>On this page, click Browse (or Choose File) which opens a Choose File window for locating the file on the hard drive of your computer.</li>
 <li>Locate the file you wish to submit and highlight it.</li>

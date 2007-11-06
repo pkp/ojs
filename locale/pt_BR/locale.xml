@@ -1693,7 +1693,7 @@ com sinal positivo (+) indicando avaliação em progresso.]]></message>
 	<message key="author.submit.form.titleRequired">Digite o título documento.</message>
 	
 	<!-- Article Submission Step 3 -->
-	<message key="author.submit.uploadInstructions"><![CDATA[Para transferir um manuscrito para a revista, execute os seguintes passos:
+	<message key="author.submit.uploadInstructions"><![CDATA[<p>Para transferir um manuscrito para a revista, execute os seguintes passos:</p>
 <ol>
 <li>Nesta página, clique em Procurar (Browse ou Arquivo, dependendo do navegador), e localize o documento no disco rígido do seu computador (ou em outro local de armazenamento, p.ex. cd-rom ou pendrive)</li>
 <li>Localize o documento desejado e selecione-o.</li>

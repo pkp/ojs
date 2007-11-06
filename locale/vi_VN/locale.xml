@@ -1692,7 +1692,7 @@ Mới nhất là ngày ngày bài phản biện gần nhất được chấp nh�
 	
 	<!-- Article Submission Step 3 -->
 	<message key="author.submit.uploadInstructions"><![CDATA[
-Để tải một bản thảo lên tạp chí nào, xin hoàn thành các bước sau.
+<p>Để tải một bản thảo lên tạp chí nào, xin hoàn thành các bước sau.</p>
 
 <ol>
 <li>Trên trang này, nhấp chuột vào mục Duyệt (hoặc Chọn File) để mở ra một cửa sổ cho phép chọn file trên ổ cứng máy tính của quý vị.</li>

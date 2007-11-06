@@ -15,7 +15,7 @@
 <input type="hidden" name="articleId" value="{$articleId}" />
 {include file="common/formErrors.tpl"}
 
-<p>{translate key="author.submit.uploadInstructions"}</p>
+{translate key="author.submit.uploadInstructions"}
 
 {if $journalSettings.supportPhone}
 	{assign var="howToKeyName" value="author.submit.howToSubmit"}

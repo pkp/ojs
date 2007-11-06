@@ -1705,7 +1705,7 @@ artı (+) işareti ile hakemin şu anda değerlendirdiği yazılar belirtilmişt
 	
 	<!-- Article Submission Step 3 -->
 	<message key="author.submit.uploadInstructions"><![CDATA[
-Dergiye makale göndermek için aşağıdaki basamakları tamamlayınız.
+<p>Dergiye makale göndermek için aşağıdaki basamakları tamamlayınız.</p>
 
 <ol>
 <li>Bu sayfada dosya seçimi penceresini açarak kendi bilgisayarınızın sabit sürücüsünde bulunan dosyayı bulmanıza yarayacak Gözat'a (ya da Dosya Seç) tıklayınız. </li>

@@ -1681,7 +1681,8 @@ avec un signe plus (+) indiquant que la révision est en cours.]]></message>
 	<message key="author.submit.form.titleRequired">Veuillez entrer le titre de votre article.</message>
 	
 	<!-- Article Submission Step 3 -->
-	<message key="author.submit.uploadInstructions"><![CDATA[Pour télécharger un manuscrit vers cette revue, suivez les étapes suivantes. <ol><li>Sur cette page, cliquer sur Browse (ou Choose File), ce qui ouvre une fenêtre Choose File permettant de trouver le fichier dans le disque dur de votre ordinateur.</li><li>Cliquez sur Open dans la fenêtre Choose File, ce qui affiche le nom du fichier sur cette page.</li><li>Cliquez sur Upload sur cette page, ce qui télécharge le fichier à partir de l'ordinateur jusqu'au site Web de la revue et renomme celui-ci suivant les conventions de la revue.</li><li>Quand la soumission est téléchargée, cliquez sur Save and Continue au bas de cette page.</li></ol>]]></message>
+	<message key="author.submit.uploadInstructions"><![CDATA[<p>Pour télécharger un manuscrit vers cette revue, suivez les étapes suivantes.</p>
+<ol><li>Sur cette page, cliquer sur Browse (ou Choose File), ce qui ouvre une fenêtre Choose File permettant de trouver le fichier dans le disque dur de votre ordinateur.</li><li>Cliquez sur Open dans la fenêtre Choose File, ce qui affiche le nom du fichier sur cette page.</li><li>Cliquez sur Upload sur cette page, ce qui télécharge le fichier à partir de l'ordinateur jusqu'au site Web de la revue et renomme celui-ci suivant les conventions de la revue.</li><li>Quand la soumission est téléchargée, cliquez sur Save and Continue au bas de cette page.</li></ol>]]></message>
 	<message key="author.submit.submissionFile">Fichier de la présentation</message>
 	<message key="author.submit.uploadSubmissionFile">Télécharger le fichier de la présentation</message>
 	<message key="author.submit.replaceSubmissionFile">Remplacer le fichier de la présentation</message>

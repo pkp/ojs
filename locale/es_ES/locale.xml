@@ -1709,8 +1709,7 @@ Activas es el número de revisiones que en este momento están consideradas como
 	
 	<!-- Article Submission Step 3 -->
 	<message key="author.submit.uploadInstructions"><![CDATA[
-Para enviar un manuscrito a esta revista, complete los siguientes pasos.
-
+<p>Para enviar un manuscrito a esta revista, complete los siguientes pasos.</p>
 <ol>
 <li>En esta página seleccione examinar (o seleccionar fichero), se le abrirá una ventana de selección de fichero para localizar el fichero en su disco duro.</li>
 <li>Localice el fichero que quiere enviar y selecciónelo.</li>
