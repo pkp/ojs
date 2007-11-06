@@ -48,15 +48,15 @@ class PublishedArticleDAO extends DAO {
 		$publishedArticles = array();
 
 		$params = array(
-			'title',
-			$primaryLocale,
-			'title',
-			$locale,
-			'abbrev',
-			$primaryLocale,
-			'abbrev',
-			$locale,
 			$issueId,
+			'title',
+			$primaryLocale,
+			'title',
+			$locale,
+			'abbrev',
+			$primaryLocale,
+			'abbrev',
+			$locale,
 			$issueId
 		);
 
