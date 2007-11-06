@@ -68,13 +68,16 @@
 {if $authorFees}<a name="authorFees"></a><h3>{translate key="manager.payment.authorFees"}</h3>
 	<p>{translate key="about.authorFeesMessage"}</p>
 	{if $currentJournal->getSetting('submissionFeeEnabled')}
-		<p>{$currentJournal->getLocalizedSetting('submissionFeeName')|escape}: {$currentJournal->getLocalizedSetting('submissionFeeDescription')|nl2br}<p>
+		<p>{$currentJournal->getLocalizedSetting('submissionFeeName')|escape}: {$currentJournal->getSetting('submissionFee')|escape} {$currentJournal->getSetting('currency')}<br />
+		{$currentJournal->getLocalizedSetting('submissionFeeDescription')|nl2br}<p>
 	{/if}
 	{if $currentJournal->getSetting('fastTrackFeeEnabled')}
-		<p>{$currentJournal->getLocalizedSetting('fastTrackFeeName')|escape}: {$currentJournal->getLocalizedSetting('fastTrackFeeDescription')|nl2br}<p>	
+		<p>{$currentJournal->getLocalizedSetting('fastTrackFeeName')|escape}: {$currentJournal->getSetting('fastTrackFee')|escape} {$currentJournal->getSetting('currency')}<br />
+		{$currentJournal->getLocalizedSetting('fastTrackFeeDescription')|nl2br}<p>	
 	{/if}
 	{if $currentJournal->getSetting('publicationFeeEnabled')}
-		<p>{$currentJournal->getLocalizedSetting('publicationFeeName')|escape}: {$currentJournal->getLocalizedSetting('publicationDescription')|nl2br}<p>	
+		<p>{$currentJournal->getLocalizedSetting('publicationFeeName')|escape}: {$currentJournal->getSetting('publicationFee')|escape} {$currentJournal->getSetting('currency')}<br />
+		{$currentJournal->getLocalizedSetting('publicationDescription')|nl2br}<p>	
 	{/if}
 {/if}
 {include file="common/footer.tpl"}
