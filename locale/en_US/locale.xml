@@ -2271,6 +2271,8 @@ current password.<br /><br />Enter your email address below to reset your passwo
 	<message key="about.submissionPreparationChecklist.description">As part of the submission process, authors are required to check off their submission's compliance with all of the following items, and submissions may be returned to authors that do not adhere to these guidelines.</message>
 	<message key="about.copyrightNotice">Copyright Notice</message>
 	<message key="about.privacyStatement">Privacy Statement</message>
+	<message key="about.authorFees">Author Fees</message>
+	<message key="about.authorFeesMessage">This journal charges the following author fees.</message>
 	<message key="about.peerReviewProcess">Peer Review Process</message>
 	<message key="about.publicationFrequency">Publication Frequency</message>
 	<message key="about.openAccessPolicy">Open Access Policy</message>

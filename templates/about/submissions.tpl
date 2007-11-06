@@ -11,11 +11,17 @@
 {assign var="pageTitle" value="about.submissions"}
 {include file="common/header.tpl"}
 
+{if $currentJournal->getSetting('journalPaymentsEnabled') && 
+		($currentJournal->getSetting('submissionFeeEnabled') || $currentJournal->getSetting('fastTrackFeeEnabled') || $currentJournal->getSetting('publicationFeeEnabled')) }
+	{assign var="authorFees" value=1}
+{/if}
+
 <ul class="plain">
 	<li>&#187; <a href="{url page="about" op="submissions" anchor="onlineSubmissions"}">{translate key="about.onlineSubmissions"}</a></li>
 	{if $currentJournal->getLocalizedSetting('authorGuidelines') != ''}<li>&#187; <a href="{url page="about" op="submissions" anchor="authorGuidelines"}">{translate key="about.authorGuidelines"}</a></li>{/if}
 	{if $currentJournal->getLocalizedSetting('copyrightNotice') != ''}<li>&#187; <a href="{url page="about" op="submissions" anchor="copyrightNotice"}">{translate key="about.copyrightNotice"}</a></li>{/if}
 	{if $currentJournal->getLocalizedSetting('privacyStatement') != ''}<li>&#187; <a href="{url page="about" op="submissions" anchor="privacyStatement"}">{translate key="about.privacyStatement"}</a></li>{/if}
+	{if $authorFees}<li>&#187; <a href="{url page="about" op="submissions" anchor="authorFees"}">{translate key="about.authorFees"}</a></li>{/if}	
 </ul>
 
 <a name="onlineSubmissions"></a><h3>{translate key="about.onlineSubmissions"}</h3>
@@ -59,4 +65,16 @@
 <p>{$currentJournal->getLocalizedSetting('privacyStatement')|nl2br}</p>
 {/if}
 
+{if $authorFees}<a name="authorFees"></a><h3>{translate key="manager.payment.authorFees"}</h3>
+	<p>{translate key="about.authorFeesMessage"}</p>
+	{if $currentJournal->getSetting('submissionFeeEnabled')}
+		<p>{$currentJournal->getLocalizedSetting('submissionFeeName')|escape}: {$currentJournal->getLocalizedSetting('submissionFeeDescription')|nl2br}<p>
+	{/if}
+	{if $currentJournal->getSetting('fastTrackFeeEnabled')}
+		<p>{$currentJournal->getLocalizedSetting('fastTrackFeeName')|escape}: {$currentJournal->getLocalizedSetting('fastTrackFeeDescription')|nl2br}<p>	
+	{/if}
+	{if $currentJournal->getSetting('publicationFeeEnabled')}
+		<p>{$currentJournal->getLocalizedSetting('publicationFeeName')|escape}: {$currentJournal->getLocalizedSetting('publicationDescription')|nl2br}<p>	
+	{/if}
+{/if}
 {include file="common/footer.tpl"}
