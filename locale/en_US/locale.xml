@@ -229,8 +229,8 @@
 	<message key="navigation.previousStep">Previous Step</message>
 	<message key="navigation.nextStep">Next Step</message>
 	<message key="navigation.stepNumber">Step {$step}</message>
-	<message key="navigation.previousPage">&lt;&lt;</message>
-	<message key="navigation.nextPage">&gt;&gt;</message>
+	<message key="navigation.previousPage"><![CDATA[&lt;&lt;]]></message>
+	<message key="navigation.nextPage"><![CDATA[&gt;&gt;]]></message>
 	<message key="navigation.items">{$from} - {$to} of {$total} Items</message>
 	
 	<!-- Article Queues -->
@@ -664,12 +664,12 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="admin.languages.downloadLocales">Download Locales</message>
 	<message key="admin.languages.downloadFailed">The locale download failed. The error message(s) below describe the failure.</message>
 	<message key="admin.languages.localeInstalled">The "{$locale}" locale has been installed. </message>
-	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Downloading language packs from the Public Knowledge Project web server is not currently available because:
+	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Downloading language packs from the Public Knowledge Project web server is not currently available because:</p>
 	<ul>
 		<li>Your server does not have or allow execution of the GNU "tar" utility</li>
 		<li>OJS is unable to modify the locale registry file, typically "registry/locales.xml".</li>
 	</ul>
-Language packs can be manually downloaded from the <a href="http://pkp.sfu.ca">PKP web site</a>.</p>]]></message>
+<p>Language packs can be manually downloaded from the <a href="http://pkp.sfu.ca">PKP web site</a>.</p>]]></message>
 	<message key="admin.languages.download">Download Locale</message>
 	<message key="admin.languages.download.cannotOpen">Cannot open language descriptor from PKP web site.</message>
 	<message key="admin.languages.download.cannotModifyRegistry">Cannot add the new locale to the locale registry file, typically "registry/locales.xml".</message>
@@ -681,7 +681,7 @@ Language packs can be manually downloaded from the <a href="http://pkp.sfu.ca">P
 	<message key="admin.auth.enableSyncProfiles">Enable user profile synchronization (if supported by this authentication plug-in). User profile information will be automatically updated from the remote source when a user logs in, and profile changes (including password changes) made within OJS will be automatically updated on the remote source. If this option is not enabled OJS profile information will be kept separate from remote source profile information.</message>
 	<message key="admin.auth.enableSyncPasswords">Enable user password modification (if supported by this authentication plug-in). Enabling this option allows users to modify their password from within OJS and to use the OJS "lost password" feature to reset a forgotten password. These functions will be unavailable to users with this authentication source if this option is not enabled.</message>
 	<message key="admin.auth.enableCreateUsers">Enable user creation (if supported by this authentication plug-in). Users created within OJS with this authentication source will be automatically added to the remote authentication source if they do not already exist. Additionally, if this source is the default authentication source, OJS accounts created through user registration will also be added to the remote authentication source.</message>
-	<message key="admin.auth.defaultSourceDescription"><![CDATA[Specifying a default authentication source other than OJS has the following effects:
+	<message key="admin.auth.defaultSourceDescription"><![CDATA[<p>Specifying a default authentication source other than OJS has the following effects:</p>
 <ul>
 	<li>If a user attempts to register a new account with this site with a username that exists on the authentication source (but not in the OJS database), the registration attempt is only allowed if the supplied password is valid for that user account.</li>
 </ul>]]></message>
@@ -766,7 +766,7 @@ Language packs can be manually downloaded from the <a href="http://pkp.sfu.ca">P
 	<message key="manager.journalManagement">Journal Management</message>
 	<message key="manager.setup">Setup</message>
 	<message key="manager.emails">Prepared Emails</message>
-	<message key="manager.statistics">Stats &amp; Reports</message>
+	<message key="manager.statistics"><![CDATA[Stats &amp; Reports]]></message>
 	<message key="manager.readingTools">Reading Tools</message>
 	<message key="manager.people">People</message>
 	<message key="manager.filesBrowser">Files Browser</message>
@@ -950,9 +950,9 @@ Language packs can be manually downloaded from the <a href="http://pkp.sfu.ca">P
 	<message key="manager.setup.journalAbbreviation">Journal Abbreviation</message>	
 	<message key="manager.setup.printIssn">Print ISSN</message>
 	<message key="manager.setup.onlineIssn">Online ISSN</message>
-	<message key="manager.setup.issnDescription"><![CDATA[The ISSN (International Standard Serial Number) is an eight-digit number which identifies periodical publications as such, including electronic serials. It is managed by a world wide network of National Centres coordinated by an International Centre based in Paris, backed by Unesco and the French Government. A number can be obtained from the <a href="http://www.issn.org" target="_blank">ISSN web site</a>.  This can be done at any point in operating the journal.]]></message>
+	<message key="manager.setup.issnDescription"><![CDATA[The ISSN (International Standard Serial Number) is an eight-digit number which identifies periodical publications as such, including electronic serials. It is managed by a world wide network of National Centres coordinated by an International Centre based in Paris, backed by Unesco and the French Government. A number can be obtained from the <a href="http://www.issn.org" target="_new">ISSN web site</a>.  This can be done at any point in operating the journal.]]></message>
 	<message key="manager.setup.doiPrefix">DOI Prefix</message>
-	<message key="manager.setup.doiPrefixDescription"><![CDATA[The DOI (Digital Object Identifier) Prefix is assigned by <a href="http://www.crossref.org">CrossRef</a> and is in the format 10.xxxx (e.g. 10.1234).]]></message>
+	<message key="manager.setup.doiPrefixDescription"><![CDATA[The DOI (Digital Object Identifier) Prefix is assigned by <a href="http://www.crossref.org" target="_new">CrossRef</a> and is in the format 10.xxxx (e.g. 10.1234).]]></message>
 	<message key="manager.setup.mailingAddressDescription">The journal's physical location and mailing address.</message>
 	<message key="manager.setup.sectionsAndSectionEditors">Sections and Section Editors</message>
 	<message key="manager.setup.editorialReviewBoard">Editorial / Review Board</message>
@@ -1185,7 +1185,7 @@ Select a model for handling these aspects of the editorial process. (To designat
 
 <ol>
 	<li><strong>Add a Reading Tool</strong><p>The Journal Manager can add "Find References" to the Reading Tools that accompany published items, which enables readers to paste a reference's title and then search pre-selected scholarly databases for the cited work.</p></li>
-	<li><strong>Embed Links in the References</strong><p>The Layout Editor can add a link to references that can be found online by using the following instructions (which can be edited).</li>
+	<li><strong>Embed Links in the References</strong><p>The Layout Editor can add a link to references that can be found online by using the following instructions (which can be edited).</p></li>
 </ol>]]></message>
 	<message key="manager.setup.provideRefLinkInstructions">Provide Layout Editors with instructions.</message>
 	<message key="manager.setup.refLinkInstructions.description">Layout Instructions for Reference Linking</message>

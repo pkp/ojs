@@ -209,8 +209,8 @@
   <message key="navigation.previousStep">前ステップ</message>
   <message key="navigation.nextStep">次ステップ</message>
   <message key="navigation.stepNumber">ステップ {$step}</message>
-  <message key="navigation.previousPage">&lt;&lt;</message>
-  <message key="navigation.nextPage">&gt;&gt;</message>
+  <message key="navigation.previousPage"><![CDATA[&lt;&lt;]]></message>
+  <message key="navigation.nextPage"><![CDATA[&gt;&gt;]]></message>
   <message key="navigation.items">{$from} - {$to} / {$total} 件</message>
   <!-- Article Queues -->
   <message key="common.queue.long.submissionsUnassigned">未処理の投稿物</message>
@@ -609,7 +609,7 @@ OJSのシステム設定を変更することにより、このサイト全体�
   <message key="admin.auth.enableSyncPasswords">ユーザパスワードの変更機能を有効にする（この認証プラグインでこの機能がサポートされている場合）。このオプションを有効にすると、ユーザはOJSで指定したパスワードを変更することが可能になり、OJSの「パスワード忘失」機能を使って忘れてしまったパスワードをリセットすることができます。これらの機能は、このオプションが有効になっていないとユーザは利用することができません。</message>
   <message key="admin.auth.enableCreateUsers">ユーザ作成機能を有効にする（この認証プラグインでこの機能がサポートされている場合）。この認証システムを使ってOJSに作成されたユーザがリモート認証システムに登録されていない場合、自動的に追加されます。さらに、このシステムがデフォルトの認証システムの場合、ユーザ登録により作成されたOJSアカウントがリモート認証システムにも追加されます。</message>
   <message key="admin.auth.defaultSourceDescription">
-    <![CDATA[OJS以外の認証システムをデフォルトの認証システムに指定すると、次のような効果があります。
+    <![CDATA[<p>OJS以外の認証システムをデフォルトの認証システムに指定すると、次のような効果があります。</p>
 <ul>
 	<li>ユーザが、（OJSデータベースには存在しないが）その認証システムには存在するユーザ名でこのサイトに新規アカウントを登録しようとした場合、指定されたパスワードがそのユーザアカウントのパスワードとして正しい場合のみ登録が許可されることになります。</li>
 </ul>]]>
@@ -807,11 +807,11 @@ OJSのシステム設定を変更することにより、このサイト全体�
   <message key="manager.setup.printIssn">印刷版ISSN</message>
   <message key="manager.setup.onlineIssn">電子版ISSN</message>
   <message key="manager.setup.issnDescription">
-    <![CDATA[ISSN（国際標準逐次刊行物番号）は逐次刊行物（電子版を含む）を識別する8桁の数字です。ISSNは、本部を置くユネスコとフランス政府による支援を受けた国際センターの調整の元、各国の国内センターの世界的なネットワークにより管理されています。ISSN番号は、<a href="http://www.issn.org" target="_blank">ISSN Webサイト</a>で入手することができます。ISSNの入手は、雑誌運営のいつの時点で行っても構いません。]]>
+    <![CDATA[ISSN（国際標準逐次刊行物番号）は逐次刊行物（電子版を含む）を識別する8桁の数字です。ISSNは、本部を置くユネスコとフランス政府による支援を受けた国際センターの調整の元、各国の国内センターの世界的なネットワークにより管理されています。ISSN番号は、<a href="http://www.issn.org" target="_new">ISSN Webサイト</a>で入手することができます。ISSNの入手は、雑誌運営のいつの時点で行っても構いません。]]>
   </message>
   <message key="manager.setup.doiPrefix">DOIプリフィックス</message>
   <message key="manager.setup.doiPrefixDescription">
-    <![CDATA[DOI（デジタルオブジェクト識別子）プリフィックスは、<a href="http://www.crossref.org">CrossRef</a>により付与され、10.xxxx（例: 10.1234）という形をしています。]]>
+    <![CDATA[DOI（デジタルオブジェクト識別子）プリフィックスは、<a href="http://www.crossref.org" target="_new">CrossRef</a>により付与され、10.xxxx（例: 10.1234）という形をしています。]]>
   </message>
   <message key="manager.setup.mailingAddressDescription">雑誌事務局および住所。</message>
   <message key="manager.setup.sectionsAndSectionEditors">セクションとセクションエディタ</message>

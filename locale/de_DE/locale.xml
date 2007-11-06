@@ -215,8 +215,8 @@
 	<message key="navigation.previousStep">Vorheriger Schritt</message>
 	<message key="navigation.nextStep">Nächster Schritt</message>
 	<message key="navigation.stepNumber">Schritt {$step}</message>
-	<message key="navigation.previousPage">&lt;&lt;</message>
-	<message key="navigation.nextPage">&gt;&gt;</message>
+	<message key="navigation.previousPage"><![CDATA[&lt;&lt;]]></message>
+	<message key="navigation.nextPage"><![CDATA[&gt;&gt;]]></message>
 	<message key="navigation.items">{$from} - {$to} von {$total} Artikeln</message>
 	
 	<!-- Beitragswarteliste -->
@@ -644,7 +644,7 @@ Nehmen Sie bitte zur Kenntnis, dass die OAI-Schnittstelle unter Umständen deakt
 	<message key="admin.auth.enableSyncProfiles">Synchronisation des Benutzerprofils(wenn dies Zugangshilfsprogramm das zulässt). Benutzerprofile werden automatisch von der Quelle aktualisiert, wenn ein Benutzer sich einloggt, und Profiländerungen (einschliesslich Passwortänderungen) innerhalb von OJS bewirken automatisch die Aktualisierung der Quelle. Wenn diese Option nicht zugelassen ist, bleibt das OJS Profil vom Quellprofil getrennt.</message>
 	<message key="admin.auth.enableSyncPasswords">Passwortänderung eines Benutzers aktivieren (wenn dies Zugangshilfsprogramm das zulässt). Erlaubt den Benutzern ihr Passwort innerhalb des OJS zu ändern und die OJS-Funktion "Passwort verloren?" zur Wiederherstellung eines vergessenen Passwortes zu verwenden. Nur verfügbar für Benutzer dieser Zugangsdatenquelle, wenn die Option aktiviert ist.</message>
 	<message key="admin.auth.enableCreateUsers">Einrichtung eines Benutzers zulassen (wenn dies Zugangshilfsprogramm das zulässt). Benutzer, die im OJS mit Hilfe dieser Zugangsdatenquelle eingerichtet werden, werden automatisch auch der Quelle hinzugefügt, wenn sie dort nicht schon eingerichtet sind. Wenn die Quelle die Standardzugangsdatenquelle ist, werden auch die im OJS bei der Registrierung von Benutzern eingerichteten Konten der Zugangsdatenquelle hinzugefügt. </message>
-	<message key="admin.auth.defaultSourceDescription"><![CDATA[Eine Zugangsdatenquelle ausserhalb vom OJS hat folgende Auswirkungen:
+	<message key="admin.auth.defaultSourceDescription"><![CDATA[<p>Eine Zugangsdatenquelle ausserhalb vom OJS hat folgende Auswirkungen:</p>
 <ul>
 	<li>Versucht ein Benutzer auf diesem Site mit einem Benutzernamen, der in der Zugangsdatenquelle existiert (aber nicht in der OJS-Datenbank), ein neues Konto einzurichten, dann gelingt das nur, wenn das gelieferte Passwort für dieses Konto gültig ist.</li>
 </ul>]]></message>
@@ -720,7 +720,7 @@ Nehmen Sie bitte zur Kenntnis, dass die OAI-Schnittstelle unter Umständen deakt
 	<message key="manager.journalManagement">Geschäftsführung der Zeitschrift</message>
 	<message key="manager.setup">Einrichtung</message>
 	<message key="manager.emails">Emailvorlagen</message>
-	<message key="manager.statistics">Statistiken &amp; Berichte</message>
+	<message key="manager.statistics"><![CDATA[Statistiken &amp; Berichte]]></message>
 	<message key="manager.readingTools">Leserwerkzeuge</message>
 	<message key="manager.people">Personal</message>
 	<message key="manager.filesBrowser">Dateinavigator</message>
@@ -837,9 +837,9 @@ Nehmen Sie bitte zur Kenntnis, dass die OAI-Schnittstelle unter Umständen deakt
 	<message key="manager.setup.journalAbbreviation">Abkürzung</message>	
 	<message key="manager.setup.printIssn">ISSN DRUCK</message>
 	<message key="manager.setup.onlineIssn">ISSN Internet</message>
-	<message key="manager.setup.issnDescription"><![CDATA[Die ISSN (International Standard Serial Number) ist eine achtstellige Zahl, die periodischen Veröffentlichungen, einschliesslich der elektronischen zugeordnet ist. Die Verwaltung liegt bei einem weltweiten Netzwerk von nationalen Zentren, die von einem internationalen Zentrum in Paris koordiniert werden, mit Unterstützung durch UNESCO und die französische Regierung. Die Nummer erhält man auf der <a href="http://www.issn.org" target="_blank">ISSN Website</a>. Der Zeitpunkt im Zeitschriftenbetrieb ist beliebig.]]></message>
+	<message key="manager.setup.issnDescription"><![CDATA[Die ISSN (International Standard Serial Number) ist eine achtstellige Zahl, die periodischen Veröffentlichungen, einschliesslich der elektronischen zugeordnet ist. Die Verwaltung liegt bei einem weltweiten Netzwerk von nationalen Zentren, die von einem internationalen Zentrum in Paris koordiniert werden, mit Unterstützung durch UNESCO und die französische Regierung. Die Nummer erhält man auf der <a href="http://www.issn.org" target="_new">ISSN Website</a>. Der Zeitpunkt im Zeitschriftenbetrieb ist beliebig.]]></message>
 	<message key="manager.setup.doiPrefix">DOI Präfix</message>
-	<message key="manager.setup.doiPrefixDescription"><![CDATA[Das DOI (Digital Object Identifier) Präfix wird von <a href="http://www.crossref.org">CrossRef</a> vergeben und hat das Format 10.xxxx (z.B. 10.1234).]]></message>
+	<message key="manager.setup.doiPrefixDescription"><![CDATA[Das DOI (Digital Object Identifier) Präfix wird von <a href="http://www.crossref.org" target="_new">CrossRef</a> vergeben und hat das Format 10.xxxx (z.B. 10.1234).]]></message>
 	<message key="manager.setup.mailingAddressDescription">Ort und Postadresse der Zeitschrift</message>
 	<message key="manager.setup.sectionsAndSectionEditors">Rubriken und Redakteure der Rubriken</message>
 	<message key="manager.setup.editorialReviewBoard">Redaktions- und Begutachtungskommitee </message>

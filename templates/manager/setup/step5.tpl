@@ -45,7 +45,7 @@ function moveUp(field) {
 function moveDown(field) {
 	var i;
 	var max = field.length - 1;
-	for (i = max; i >= 0; i--) {
+	for (i = max; i >= 0; i=i-1) {
 		if(field.options[i].selected == true && i < max) {
 			swapEntries(field, i+1, i);
 		}
@@ -61,7 +61,7 @@ function jumpList(a, b) {
 			b.options[bMax] = new Option(a.options[i].text);
 			b.options[bMax].value = a.options[i].value;
 			a.options[i] = null;
-			i--;
+			i=i-1;
 		}
 	}
 }
@@ -328,7 +328,7 @@ function prepBlockFields() {
 
 <table width="100%" class="data">
 <tr>
-	<td width="20%" class="label"><label for="journalTheme">{translate key="manager.setup.journalTheme"}</label></td></td>
+	<td width="20%" class="label"><label for="journalTheme">{translate key="manager.setup.journalTheme"}</label></td>
 	<td width="80%" class="value">
 		<select name="journalTheme" class="selectMenu" id="journalTheme"{if empty($journalThemes)} disabled="disabled"{/if}>
 			<option value="">{translate key="common.none"}</option>
@@ -353,7 +353,7 @@ function prepBlockFields() {
 		<td rowspan="2">
 			{translate key="manager.setup.layout.leftSidebar"}<br/>
 			<input class="button defaultButton" style="width: 130px;" type="button" value="&uarr;" onclick="moveUp(this.form.elements['blockSelectLeftWidget']);" />
-			<select name="blockSelectLeftWidget" multiple size="10" class="selectMenu" style="width: 130px; height:200px" >
+			<select name="blockSelectLeftWidget" multiple="multiple" size="10" class="selectMenu" style="width: 130px; height:200px">
 				{foreach from=$leftBlockPlugins item=block}
 					<option value="{$block->getName()|escape}">{$block->getDisplayName()|escape}</option>
 				{/foreach}
@@ -367,7 +367,7 @@ function prepBlockFields() {
 		</td>
 		<td valign="top">
 			{translate key="manager.setup.layout.unselected"}<br/>
-			<select name="blockUnselectedWidget" multiple size="10" class="selectMenu" style="width: 120px; height:180px;" >
+			<select name="blockUnselectedWidget" multiple="multiple" size="10" class="selectMenu" style="width: 120px; height:180px;" >
 				{foreach from=$disabledBlockPlugins item=block}
 					<option value="{$block->getName()|escape}">{$block->getDisplayName()|escape}</option>
 				{/foreach}
@@ -380,7 +380,7 @@ function prepBlockFields() {
 		<td rowspan="2">
 			{translate key="manager.setup.layout.rightSidebar"}<br/>
 			<input class="button defaultButton" style="width: 130px;" type="button" value="&uarr;" onclick="moveUp(this.form.elements['blockSelectRightWidget']);" />
-			<select name="blockSelectRightWidget" multiple size="10" class="selectMenu" style="width: 130px; height:200px" >
+			<select name="blockSelectRightWidget" multiple="multiple" size="10" class="selectMenu" style="width: 130px; height:200px" >
 				{foreach from=$rightBlockPlugins item=block}
 					<option value="{$block->getName()|escape}">{$block->getDisplayName()|escape}</option>
 				{/foreach}

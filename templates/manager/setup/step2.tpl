@@ -152,8 +152,9 @@
 	<input type="checkbox" name="showEnsuringLink" id="showEnsuringLink" value="1"{if $showEnsuringLink} checked="checked"{/if} />&nbsp;
 	{get_help_id|assign:"blindReviewHelpId" key="editorial.sectionEditorsRole.review.blindPeerReview" url="true"}
 	<label for="showEnsuringLink">{translate key="manager.setup.reviewOptions.showEnsuringLink" blindReviewHelpId=$blindReviewHelpId}</label><br/>
-<div class="separator"></div>
 </p>
+
+<div class="separator"></div>
 
 <h3>2.3 {translate key="manager.setup.privacyStatement"}</h3>
 

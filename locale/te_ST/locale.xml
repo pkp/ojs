@@ -635,7 +635,7 @@
 	<message key="manager.journalManagement">Jóürñål Måñågèmèñt</message>
 	<message key="manager.setup">ßètüp</message>
 	<message key="manager.emails">Prèpårèð Émåîlþ</message>
-	<message key="manager.statistics">ßtåtþ &amp; Rèpórtþ</message>
+	<message key="manager.statistics"><![CDATA[ßtåtþ &amp; Rèpórtþ]]></message>
 	<message key="manager.readingTools">Rèåðîñg Tóólþ</message>
 	<message key="manager.people">Pèóplè</message>
 	<message key="manager.filesBrowser">Fîlèþ Brówþèr</message>

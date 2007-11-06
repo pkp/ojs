@@ -216,8 +216,8 @@
 	<message key="navigation.previousStep">Voltar</message>
 	<message key="navigation.nextStep">Avançar</message>
 	<message key="navigation.stepNumber">Passo {$step}</message>
-	<message key="navigation.previousPage"><![CDATA[<]]></message>
-	<message key="navigation.nextPage"><![CDATA[>]]></message>
+	<message key="navigation.previousPage"><![CDATA[&lt;&lt;]]></message>
+	<message key="navigation.nextPage"><![CDATA[&gt;&gt;]]></message>
 	<message key="navigation.items">{$from} a {$to} de {$total} Itens</message>
 	
 	<!-- Article Queues -->
@@ -639,7 +639,7 @@ Note que a interface OAI pode ser desativada para este portal nas configuraçõe
 	<message key="admin.auth.enableSyncProfiles">Habilitar sincronização de perfil de usuários (caso suportado pelo plugin de autenticação!). Os perfis dos usuários serão atualizados com o conteúdo da fonte remota assim que o usuário acessar o sistema, e alterações no perfil (incluindo alteração de senha) realizadas dentro do sistema atualizarão a fonte remota. Caso esta opção não esteja habilitada, os perfis no sistema serão mantidos separados da fonte remota.</message>
 	<message key="admin.auth.enableSyncPasswords">Habilitar alteração de senha de usuário (caso suportado pelo plugin de autenticação!). Habilitar esta opção permite ao usuário modificar a senha do sistema e fazer uso da opção de recuperação de senha para criar uma nova senha. Estas funcionalidades não estarão disponíveis aos usuários com esta fonte de autenticação, caso não seja habilitada.</message>
 	<message key="admin.auth.enableCreateUsers">Habilitar criação de usuários (caso suportado pelo plugin de autenticação!). Usuários criados no sistema serão automaticamente incluídos na fonte de autenticação remota, caso não existam ainda. Inclusive, usuários criados através do cadastro de usuários também serão incluídos automaticamente na fonte remota, caso esta seja a fonte de autenticação padrão.</message>
-	<message key="admin.auth.defaultSourceDescription"><![CDATA[Definir uma fonte de autenticação padrão diferente da do sistema implica em:
+	<message key="admin.auth.defaultSourceDescription"><![CDATA[<p>Definir uma fonte de autenticação padrão diferente da do sistema implica em:</p>
 <ul>
 	<li>Caso um usuário tente cadastrar uma nova conta com um login já existente na fonte de autenticação (mas não na base do sistema), o cadastro só será permitido se a senha informada for válida para a conta em questão.</li>
 </ul>]]></message> 
@@ -716,7 +716,7 @@ Note que a interface OAI pode ser desativada para este portal nas configuraçõe
 	<message key="manager.journalManagement">Administração da Revista</message>
 	<message key="manager.setup">Configuração</message>
 	<message key="manager.emails">E-mails</message>
-	<message key="manager.statistics"><![CDATA[Estatísticas & Relatórios]]></message>
+	<message key="manager.statistics"><![CDATA[Estatísticas &amp; Relatórios]]></message>
 	<message key="manager.readingTools">Ferramentas para Leitura</message>
 	<message key="manager.people">Pessoal</message>
 	<message key="manager.filesBrowser">Navegador de Documentos</message>
@@ -835,8 +835,8 @@ Note que a interface OAI pode ser desativada para este portal nas configuraçõe
 	<message key="manager.setup.printIssn">Print ISSN</message>
 	<message key="manager.setup.onlineIssn">ISSN Eletrônico</message>
 	<message key="manager.setup.doiPrefix">Prefixo DOI</message>
-	<message key="manager.setup.doiPrefixDescription"><![CDATA[O Prefixo DOI (Digital Object Identifier) é controlado e oferecido por <a href="http://www.crossref.org">CrossRef</a> e possui o formato 10.xxxx (ex.: 10.1234).]]></message>
-	<message key="manager.setup.issnDescription"><![CDATA[O ISSN (International Standard Serial Number) é um número de oito dígitos que identifica publicações seriadas como tais, incluindo publicações eletrônicas. É gerenciado por uma rede mundial de Centros Nacionais, coordenados pelo Centro Internacional do ISSN em Paris, apoiado pela Unesco e o Governo francês. O número pode ser obtido do portal internacional <a href="http://www.issn.org" target="_blank">ISSN web site</a>, ou para publicações brasileiras no <a href="http://www.ibict.br" target="_blank">Portal do Ibict</a>, acessando os Produtos e Serviços. O número pode ser adquirido a qualquer tempo durante a operação da revista. É importante salientar que para cada suporte (formato) de publicação de uma revista exige um número diferente (ex.: publicação em CD-Rom, internet, impresso.)]]></message>
+	<message key="manager.setup.doiPrefixDescription"><![CDATA[O Prefixo DOI (Digital Object Identifier) é controlado e oferecido por <a href="http://www.crossref.org" target="_new">CrossRef</a> e possui o formato 10.xxxx (ex.: 10.1234).]]></message>
+	<message key="manager.setup.issnDescription"><![CDATA[O ISSN (International Standard Serial Number) é um número de oito dígitos que identifica publicações seriadas como tais, incluindo publicações eletrônicas. É gerenciado por uma rede mundial de Centros Nacionais, coordenados pelo Centro Internacional do ISSN em Paris, apoiado pela Unesco e o Governo francês. O número pode ser obtido do portal internacional <a href="http://www.issn.org" target="_new">ISSN web site</a>, ou para publicações brasileiras no <a href="http://www.ibict.br" target="_blank">Portal do Ibict</a>, acessando os Produtos e Serviços. O número pode ser adquirido a qualquer tempo durante a operação da revista. É importante salientar que para cada suporte (formato) de publicação de uma revista exige um número diferente (ex.: publicação em CD-Rom, internet, impresso.)]]></message>
 	<message key="manager.setup.mailingAddressDescription">Endereço postal da revista.</message>
 	<message key="manager.setup.sectionsAndSectionEditors">Seções e Editores de Seção</message>
 	<message key="manager.setup.editorialReviewBoard">Comitê Editorial / Avaliador</message>
@@ -2645,7 +2645,7 @@ Autores que publicam nesta revista concordam com os seguintes termos:
 
 <ol>
 	<li><strong>Incluir Ferramenta de Leitura</strong><p>O Editora Gerente pode incluir "Pesquisar Referências" à Ferramenta de Leitura que acompanha os artigos publicados, permitindo aos leitores colar o título da referência no campo de pesquisa e escolher as bases de dados pré-definidas.</p></li>
-	<li><strong>Incluir Links para Referências</strong><p>O Editor de Layout pode incluir links ativos nas referências disponíveis online, utilizando os recursos a seguir (que podem ser editados).</li>
+	<li><strong>Incluir Links para Referências</strong><p>O Editor de Layout pode incluir links ativos nas referências disponíveis online, utilizando os recursos a seguir (que podem ser editados).</p></li>
 </ol>]]></message>
 	<message key="manager.setup.provideRefLinkInstructions">Oferecer instruções aos Editores de Layout</message>
 	<message key="manager.setup.refLinkInstructions.description">Instruções de Layout para Links de Referências</message>

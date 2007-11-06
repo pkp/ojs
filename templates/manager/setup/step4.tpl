@@ -376,7 +376,7 @@ function setRegAllowOpts(form) {
 
 <h4>{translate key="manager.setup.referenceLinking"}</h4>
 
-<p>{translate key="manager.setup.referenceLinkingDescription"}</p>
+{translate key="manager.setup.referenceLinkingDescription"}
 
 <table width="100%" class="data">
 	<tr valign="top">
@@ -385,10 +385,8 @@ function setRegAllowOpts(form) {
 	</tr>
 </table>
 
-<p>
-	<h4>{translate key="manager.setup.refLinkInstructions.description"}</h4>
-	<textarea name="refLinkInstructions[{$formLocale|escape}]" id="refLinkInstructions" rows="12" cols="60" class="textArea">{$refLinkInstructions[$formLocale]|escape}</textarea>
-</p>
+<h4>{translate key="manager.setup.refLinkInstructions.description"}</h4>
+<textarea name="refLinkInstructions[{$formLocale|escape}]" id="refLinkInstructions" rows="12" cols="60" class="textArea">{$refLinkInstructions[$formLocale]|escape}</textarea>
 
 <div class="separator"></div>
 

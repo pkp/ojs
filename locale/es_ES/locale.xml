@@ -218,8 +218,8 @@
 	<message key="navigation.previousStep">Paso anterior</message>
 	<message key="navigation.nextStep">Siguiente paso</message>
 	<message key="navigation.stepNumber">Paso {$step}</message>
-	<message key="navigation.previousPage">&lt;&lt;</message>
-	<message key="navigation.nextPage">&gt;&gt;</message>
+	<message key="navigation.previousPage"><![CDATA[&lt;&lt;]]></message>
+	<message key="navigation.nextPage"><![CDATA[&gt;&gt;]]></message>
 	<message key="navigation.items">{$from} - {$to} de {$total} elementos</message>
 	
 	<!-- Article Queues -->
@@ -641,7 +641,7 @@ Tenga en cuenta que el interfaz OAI se puede desactivar editando la configuraci�
 	<message key="admin.auth.enableSyncProfiles">Activar la sincronización de perfiles de usuario/a (si está soportado por este plugin de autentificación). La información del perfil de usuario se actualizará automáticamente desde la fuente remota cuando un/a usuario/a se identifica, y los cambios en el perfil (incluyendo cambios en la contraseña) realizados en OJS se actualizarán automáticamente en la fuente remota. Si no se activa esta opción, la información del perfil de OJS se mantendrá separada del perfil remoto.</message>
 	<message key="admin.auth.enableSyncPasswords">Permitir la modificación de contraseñas de usuarios/as (si está soportado por este plugin de autentificación). Al activar esta opción se permite a las/os usuarias/os modificar su contraseña de OJS y usar la opción "he olvidado mi contraseña" para restablecer una contraseña olvidada. Estas funciones no estarán disponibles para las/os usuarias/os con esta fuente de autentificación si no está activada esta opción.</message>
 	<message key="admin.auth.enableCreateUsers">Permitir la creación de usuarias/os (si está soportada por este plugin de autentificación). Los/as usuarios/as creados dentro de OJS con esta fuente de autentificación se añadirán automáticamente a la fuente de autentificación remota si no existen ya. Además, si esta es la fuente de autentificación por defecto, también se añadirán a la fuente de autentificación remota las cuentas de OJS creadas a través del registro de usuaria/o.</message>
-	<message key="admin.auth.defaultSourceDescription"><![CDATA[Indicar una fuente de autentificación por defecto distinta de OJS produce los siguientes efectos:
+	<message key="admin.auth.defaultSourceDescription"><![CDATA[<p>Indicar una fuente de autentificación por defecto distinta de OJS produce los siguientes efectos:</p>
 <ul>
 	<li>Si un/a usuario/a intenta registrar una cuenta nueva en este sitio con un nombre de usuario/a que ya existe en la fuente de autentificación (pero no existe en la base de datos de OJS), sólo se permite el registro si la contraseña es válida para dicho nombre de usuaria/o.</li>
 </ul>]]></message>
@@ -834,7 +834,7 @@ Tenga en cuenta que el interfaz OAI se puede desactivar editando la configuraci�
 	<message key="manager.setup.printIssn">ISSN Impresión</message>
 	<message key="manager.setup.onlineIssn">ISSN Electrónico</message>
 	<message key="manager.setup.doiPrefix">Prefijo de DOI</message>
-	<message key="manager.setup.doiPrefixDescription"><![CDATA[El prefijo de DOI (Identificador de Objecto Digital) esta asignado por <a href="http://www.crossref.org">CrossRef</a> y tiene el formato 10.xxxx (p.e. 10.1234).]]></message>
+	<message key="manager.setup.doiPrefixDescription"><![CDATA[El prefijo de DOI (Identificador de Objecto Digital) esta asignado por <a href="http://www.crossref.org" target="_new">CrossRef</a> y tiene el formato 10.xxxx (p.e. 10.1234).]]></message>
 	
 	
 	
@@ -842,7 +842,7 @@ Tenga en cuenta que el interfaz OAI se puede desactivar editando la configuraci�
 	<message key="manager.setup.gettingDownTheDetails">Paso 1. Detalles</message>
 	<message key="manager.setup.generalInformation">Información general</message>
 	<message key="manager.setup.journalInitials">Iniciales de la revista</message>
-	<message key="manager.setup.issnDescription"><![CDATA[El ISSN (International Standard Serial Number) es un número de ocho dígitos que identifica publicaciones periódicas, incluyendo revistas electrónicas. Está gestionado por una red internacional de Centros Nacionales coordinados por un Centro Internacional con sede en París, auspiciado por la Unesco y el gobierno francés. Se puede solicitar un número en <a href="http://www.issn.org" target="_blank">el sitio web del ISSN</a>. Se puede introducir esta información en cualquier momento.]]></message>
+	<message key="manager.setup.issnDescription"><![CDATA[El ISSN (International Standard Serial Number) es un número de ocho dígitos que identifica publicaciones periódicas, incluyendo revistas electrónicas. Está gestionado por una red internacional de Centros Nacionales coordinados por un Centro Internacional con sede en París, auspiciado por la Unesco y el gobierno francés. Se puede solicitar un número en <a href="http://www.issn.org" target="_new">el sitio web del ISSN</a>. Se puede introducir esta información en cualquier momento.]]></message>
 	<message key="manager.setup.mailingAddressDescription">Localización física de la revista y dirección postal.</message>
 	<message key="manager.setup.sectionsAndSectionEditors">Secciones y editores/as de secciones</message>
 	<message key="manager.setup.editorialReviewBoard">Consejo Editorial / Revisor</message>

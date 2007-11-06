@@ -215,8 +215,8 @@
 	<message key="navigation.previousStep">Passo precedente</message>
 	<message key="navigation.nextStep">Passo successivo</message>
 	<message key="navigation.stepNumber">Passo {$step}</message>
-	<message key="navigation.previousPage">&lt;&lt;</message>
-	<message key="navigation.nextPage">&gt;&gt;</message>
+	<message key="navigation.previousPage"><![CDATA[&lt;&lt;]]></message>
+	<message key="navigation.nextPage"><![CDATA[&gt;&gt;]]></message>
 	<message key="navigation.items">{$from} - {$to} di {$total} elementi</message>
 	
 	<!-- Article Queues -->
@@ -639,7 +639,7 @@ Da notare che l'interfaccia OAI pu&#x00F2; essere disabilitata per questo sito t
 	<message key="admin.auth.enableSyncProfiles">Abilita la sincronizzazione del profilo dell'utente (se supportato da questo plug-in di autenticazione). Le informazione sul profilo dell'utente saranno automaticamente aggiornate in remoto quando un utente accede, e i cambiamenti del profilo (inclusi cambi di password) fatti all'interno di OJS saranno automaticamente aggiornati in remoto. Se questa opzione &#x00E8; disabilitata le informazioni del profilo OJS  saranno mantenute separate dalle informazioni del profilo in remoto.</message>
 	<message key="admin.auth.enableSyncPasswords">Abilita la modifica della password dell'utente (se supportato da questo plug-in di autenticazione). L'abilitazione di questa opzione permette agli utenti di modificare la password all'interno di OJS and e di usare il comando OJS "password smarrita"  per resettare una password dimenticata. Queste funzioni non saranno disponibili all'utente con questa fonte di autenticazione se questa opzione &#x00E8; disabilitata .</message>
 	<message key="admin.auth.enableCreateUsers">Abilita la creazione di un utente (se supportato da questo plug-in di autenticazione). Gli utenti creati all'interno di OJS con questa fonte di autenticazione  saranno automaticamente aggiunti alla fonte di autenticazione in remoto se ancora non esiste. Inoltre, se questa fonte &#x00E8; la fonte di autenticazione di default, gli account di OJS creati  tramite la registrazione dello user  saranno aggiunti alla fonte di autenticazione in remoto.</message>
-	<message key="admin.auth.defaultSourceDescription"><![CDATA[Specificare una fonte di autenticazione di  default fuori da  OJS ha i seguenti effetti:
+	<message key="admin.auth.defaultSourceDescription"><![CDATA[<p>Specificare una fonte di autenticazione di  default fuori da  OJS ha i seguenti effetti:</p>
 <ul>
 	<li>Se un utente cerca di registrare un nuovo account con questo sito con una username che esiste nella fonte di autenticazione (ma non nel database di OJS), il tentativo di registrazione &#x00E8; permesso solo se la password fornita per quell'account dell'utente.</li>
 </ul>]]></message>
@@ -835,10 +835,10 @@ Da notare che l'interfaccia OAI pu&#x00F2; essere disabilitata per questo sito t
 	<message key="manager.setup.printIssn">Stampa l'ISSN</message>
 	<message key="manager.setup.onlineIssn">ISSN online</message>	
 
-	<message key="manager.setup.issnDescription"><![CDATA[ISSN (International Standard Serial Number) &#x00E8; una cifra composta da otto numeri che identifica le pubblicazioni periodiche, sia cartacee sia elettroniche. &#x00C8; gestita da un network mondiale composto da centri nazionali coordinati da un centro internazionale con sede a Parigi, supportato dall'Unesco e dal governo francese. &#x00C8; possibile richiedre un codice ISSN tramite il sito <a href="http://www.issn.org" target="_blank">www.issn.org</a>. L'inserimento del codice ISSN pu&#x00F2; essere fatto in qualsiasi momento del ciclo di vita della rivista.]]></message>
+	<message key="manager.setup.issnDescription"><![CDATA[ISSN (International Standard Serial Number) &#x00E8; una cifra composta da otto numeri che identifica le pubblicazioni periodiche, sia cartacee sia elettroniche. &#x00C8; gestita da un network mondiale composto da centri nazionali coordinati da un centro internazionale con sede a Parigi, supportato dall'Unesco e dal governo francese. &#x00C8; possibile richiedre un codice ISSN tramite il sito <a href="http://www.issn.org" target="_new">www.issn.org</a>. L'inserimento del codice ISSN pu&#x00F2; essere fatto in qualsiasi momento del ciclo di vita della rivista.]]></message>
 	<message key="manager.setup.mailingAddressDescription">La sede fisica della rivista e l'indirizzo postale.</message>
 	<message key="manager.setup.doiPrefix">Prefisso DOI</message>
-	<message key="manager.setup.doiPrefixDescription"><![CDATA[Il prefisso DOI (Digital Object Identifier) viene assegnato da <a href="http://www.crossref.org">CrossRef</a> ed &#x00E8; in formato 10.xxxx (e.g. 10.1234).]]></message>
+	<message key="manager.setup.doiPrefixDescription"><![CDATA[Il prefisso DOI (Digital Object Identifier) viene assegnato da <a href="http://www.crossref.org" target="_new">CrossRef</a> ed &#x00E8; in formato 10.xxxx (e.g. 10.1234).]]></message>
 
 	<message key="manager.setup.sectionsAndSectionEditors">Sezioni ed section editor</message>
 	<message key="manager.setup.editorialReviewBoard">Consiglio editoriale / di review</message>

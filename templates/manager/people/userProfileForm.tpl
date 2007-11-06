@@ -8,8 +8,7 @@
  *
  * $Id$
  *}
-{url|assign:"currentUrl" op="people" path="all"}
-{assign var="pageTitle" value="manager.people"}
+{url|assign:"currentUrl" op="people" path="all"}{assign var="pageTitle" value="manager.people"}
 {include file="common/header.tpl"}
 
 {if not $userId}
@@ -104,8 +103,8 @@
 		<td class="value"><input type="text" name="lastName" id="lastName" value="{$lastName|escape}" size="20" maxlength="90" class="textField" /></td>
 	</tr>
 	<tr valign="top">
-		<td class="label">{fieldLabel name="gender" key="user.gender"}</td>
-		<td class="value"><input type="radio" name="gender" id="gender-m" value="M" {if $gender == 'M'} checked="checked"{/if}/><label for="gender-m">{translate key="user.masculine"}</label> &nbsp;&nbsp;&nbsp; <input type="radio" name="gender" id="gender-f" value="F" {if $gender == 'F'} checked="checked"{/if}><label for="gender-f">{translate key="user.feminine"}</label></td>
+		<td class="label">{fieldLabel suppressId="true" name="gender" key="user.gender"}</td>
+		<td class="value"><input type="radio" name="gender" id="gender-m" value="M" {if $gender == 'M'} checked="checked"{/if}/><label for="gender-m">{translate key="user.masculine"}</label> &nbsp;&nbsp;&nbsp; <input type="radio" name="gender" id="gender-f" value="F" {if $gender == 'F'} checked="checked"{/if}/><label for="gender-f">{translate key="user.feminine"}</label></td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{fieldLabel name="initials" key="user.initials"}</td>
@@ -132,7 +131,7 @@
 	</tr>
 	{else}
 	<tr valign="top">
-		<td class="label">{fieldLabel name="username" key="user.username"}</td>
+		<td class="label">{fieldLabel suppressId="true" name="username" key="user.username"}</td>
 		<td class="value"><strong>{$username|escape}</strong></td>
 	</tr>
 	{/if}

@@ -37,7 +37,7 @@
 	</tr>
 	<tr valign="top">
 		<td class="label"><input type="checkbox" name="viewMetadata" id="viewMetadata" {if $viewMetadata}checked="checked" {/if}/></td>
-		<td class="value"><label for="viewMetadata">{translate key="rt.admin.settings.viewMetadata"}</td>
+		<td class="value"><label for="viewMetadata">{translate key="rt.admin.settings.viewMetadata"}</label></td>
 	</tr>
 	<tr valign="top">
 		<td class="label"><input type="checkbox" name="supplementaryFiles" id="supplementaryFiles" {if $supplementaryFiles}checked="checked" {/if}/></td>
@@ -74,6 +74,7 @@
 			<input type="radio" name="enableCommentsMode" id="enableCommentsMode-anonymous" value="{$commentsOptions.COMMENTS_ANONYMOUS|escape}"{if $enableComments==$commentsOptions.COMMENTS_ANONYMOUS} checked="checked"{/if} />&nbsp;&nbsp;<label for="enableCommentsMode-anonymous">{translate key="rt.admin.settings.addComment.anonymous"}</label><br />
 			<input type="radio" name="enableCommentsMode" id="enableCommentsMode-unauthenticated" value="{$commentsOptions.COMMENTS_UNAUTHENTICATED|escape}"{if $enableComments==$commentsOptions.COMMENTS_UNAUTHENTICATED} checked="checked"{/if} />&nbsp;&nbsp;<label for="enableCommentsMode-unauthenticated">{translate key="rt.admin.settings.addComment.unauthenticated"}</label><br />
 		</td>
+	</tr>
 </table>
 
 <div class="separator">&nbsp;</div>

@@ -215,8 +215,8 @@
 	<message key="navigation.previousStep">Prošli korak</message>
 	<message key="navigation.nextStep">Sljedeći korak</message>
 	<message key="navigation.stepNumber">{$step}. korak</message>
-	<message key="navigation.previousPage">&lt;&lt;</message>
-	<message key="navigation.nextPage">&gt;&gt;</message>
+	<message key="navigation.previousPage"><![CDATA[&lt;&lt;]]></message>
+	<message key="navigation.nextPage"><![CDATA[&gt;&gt;]]></message>
 	<message key="navigation.items">{$from} - {$to} od {$total} stavke/a</message>
 	
 	<!-- Article Queues -->
@@ -639,7 +639,7 @@ Aktivirani OAI protokol može biti isključen na razini čitave stranice promjen
 	<message key="admin.auth.enableSyncProfiles">Omogući sinkronizaciju korisničkog profila (ako je podržana ovim autorizacijskim dodatkom). Informacije o korisničkom profilu bit će automatski ažurirane preko udaljenog izvora prilikom prijave korisnika. Također, izmjene profila (uključujući promjenu lozinke) izvršene unutar OJS-a bit će automatski ažurirane na udaljenom izvoru. Informacije o OJS profilu bit će odvojene od informacija o profilu na udaljenom izvoru, ako ova opcija nije uključena.</message>
 	<message key="admin.auth.enableSyncPasswords">Omogući promjenu korisničke lozinke (ako je podržana ovim autorizacijskim dodatkom). Uključivanje ove opcije dopušta korisnicima da promjene svoje lozinke unutar OJS-a te korištenje OJS opcije "izdaj novu lozinku" kako bi se umjesto zaboravljene lozinke izdala nova. Te opcije neće biti dostupne korisnicima s ovim izvorom autorizacije, ako ova opcija nije uključena.</message>
 	<message key="admin.auth.enableCreateUsers">Omogući kreiranja korisnika (ako je podržano ovim autorizacijskim dodatkom). Korisnici kreirani unutar OJS-a s ovim autorizacijskim izvorom bit će automatski dodani na udaljeni izvor autorizacije ukoliko već ne postoje. Osim toga, ako je ovaj izvor standardni izvor autorizacije, OJS računi kreirani preko korisničke registracije bit će također dodani na udaljeni izvor autorizacije.</message>
-	<message key="admin.auth.defaultSourceDescription"><![CDATA[Određivanje standardnog izvora autorizacije koji nije  OJS-ov standard rezultira sljedećim:
+	<message key="admin.auth.defaultSourceDescription"><![CDATA[<p>Određivanje standardnog izvora autorizacije koji nije  OJS-ov standard rezultira sljedećim:</p>
 <ul>
 	<li>Ako korisnik pokuša registrirati novi korisnički račun na ovoj stranici s korisničkim imenom koje postoji na izvoru autorizacije (ali ne i u OJS bazi podataka), registracija je dopuštena ukoliko je isporučena lozinka valjana za taj korisnički račun.</li>
 </ul>]]></message>
@@ -834,7 +834,7 @@ Aktivirani OAI protokol može biti isključen na razini čitave stranice promjen
 	<message key="manager.setup.onlineIssn">E-ISSN</message>
 	<message key="manager.setup.issnDescription"><![CDATA[Međunarodni standardni broj serijske publikacije je osmeroznamenkasti broj koji omogućuje jedinstvenu identifikaciju periodičkih publikacija, kao i e-izdanja publikacija. Hrvatski nakladnici mogu dobiti ISSN u <a href="http://www.nsk.hr/izdavaci/issn/obrazacissn.html" target="_blank">ISSN uredu za Hrvatsku</a>.]]></message>
 	<message key="manager.setup.doiPrefix">DOI prefiks</message>
-	<message key="manager.setup.doiPrefixDescription"><![CDATA[DOI (Digital Object Identifier) prefiks dodijeljuje <a href="http://www.crossref.org">CrossRef</a>, a unosi se u formatu 10.xxxx (npr. 10.1234).]]></message>
+	<message key="manager.setup.doiPrefixDescription"><![CDATA[DOI (Digital Object Identifier) prefiks dodijeljuje <a href="http://www.crossref.org" target="_new">CrossRef</a>, a unosi se u formatu 10.xxxx (npr. 10.1234).]]></message>
 	<message key="manager.setup.mailingAddressDescription">Fizička lokacija časopisa i adresa e-pošte.</message>
 	<message key="manager.setup.sectionsAndSectionEditors">Rubrike i rubrika urednika</message>
 	<message key="manager.setup.editorialReviewBoard">Uredništvo / Recenzenti</message>

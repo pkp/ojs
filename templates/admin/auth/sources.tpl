@@ -47,7 +47,7 @@
 	</tr>
 	<tr>
 		<td colspan="4" class="endseparator">&nbsp;</td>
-	<tr>
+	</tr>
 	{else}
 		<tr>
 			<td colspan="2" align="left">{page_info iterator=$sources}</td>
@@ -65,7 +65,7 @@
 
 </form>
 
-<p>{translate key="admin.auth.defaultSourceDescription"}</p>
+{translate key="admin.auth.defaultSourceDescription"}
 
 <h4>{translate key="admin.auth.create"}</h4>
 

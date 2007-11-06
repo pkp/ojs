@@ -64,6 +64,7 @@
 {foreach from=$configData key=sectionName item=sectionData}
 <h4>{$sectionName|escape}</h4>
 
+{if !empty($sectionData)}{* Empty tables cause validation problems *}
 <table class="data" width="100%">
 {foreach from=$sectionData key=settingName item=settingValue}
 <tr valign="top">
@@ -72,6 +73,7 @@
 </tr>
 {/foreach}
 </table>
+{/if}{* !empty($sectionData) *}
 
 {/foreach}
 

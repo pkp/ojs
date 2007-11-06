@@ -214,8 +214,8 @@
 	<message key="navigation.previousStep">Önceki Adım</message>
 	<message key="navigation.nextStep">Sonraki Adım</message>
 	<message key="navigation.stepNumber">Adım {$step}</message>
-	<message key="navigation.previousPage">&lt;&lt;</message>
-	<message key="navigation.nextPage">&gt;&gt;</message>
+	<message key="navigation.previousPage"><![CDATA[&lt;&lt;]]></message>
+	<message key="navigation.nextPage"><![CDATA[&gt;&gt;]]></message>
 	<message key="navigation.items">Toplam {$total} ögeden {$from} - {$to} arası</message>
 	
 	<!-- Article Queues -->
@@ -638,7 +638,7 @@ Not: Açık arşiv sistemi arayüzü bu site için ADS ana düzenleme sayfasınd
 	<message key="admin.auth.enableSyncProfiles">Kullanıcı profili senkronizasyonunu etkinleştir (Eğer yetkilendirme eklentisi destekliyor ise). Kullanıcı bilgileri (şifre dahil) değiştiğinde diğer sistemden veya ADS'den otomatik güncelleme yapılacaktır. Bu seçenek etkinleştirilmez ise diğer sistem kaynaklarından ayrı ADS kullanıcı bilgisi tutulur.</message>
 	<message key="admin.auth.enableSyncPasswords">Kullanıcı şifre değişimini etkinleştir (Eğer yetkilendirme eklentisi destekliyor ise). Bu seçeneği etkinleştirme kullanıcıların ADS içinde şifre değiştirebilmelerini ve ADS'nin "kayıp şifre" yeteneğini kullanabilmelerini sağlar. Bu işlev etkinleştirilmez ise, yetkilendirme kaynağı ADS olmayan kullanıcılar anılan işlevleri kullanamazlar.</message>
 	<message key="admin.auth.enableCreateUsers">Kullanıcı oluşturmayı etkinleştir (Eğer yetkilendirme eklentisi destekliyor ise). ADS içinde oluşturulan kullanıcılar, diğer kaynakta bulunmuyorlar ise, kendiliğinden diğer kaynağa da ekleneceklerdir. Ek olarak, eğer bu yetkilendirme kaynağı birincil kaynak ise, orada oluşturulan kullanıcılar ADS kullanıcı veritabanına da eklenirler.</message>
-	<message key="admin.auth.defaultSourceDescription"><![CDATA[ADS dışında bir yetkilendirme kaynağını birincil olarak kullanmak aşağıdaki olaylara yol açar:
+	<message key="admin.auth.defaultSourceDescription"><![CDATA[<p>ADS dışında bir yetkilendirme kaynağını birincil olarak kullanmak aşağıdaki olaylara yol açar:</p>
 <ul>
 	<li>Eğer bir kullanıcı, birincil kaynakta olan, ancak ADS veritabanında olmayan bir kullanıcı adı ile yeni bir kayıt oluşturur ise, kayıt işlemi ancak diğer sitedeki şifrenin aynısının verilmesi ile gerçekleşebilir.</li>
 </ul>]]></message>
@@ -834,9 +834,9 @@ Not: Açık arşiv sistemi arayüzü bu site için ADS ana düzenleme sayfasınd
 	<message key="manager.setup.printIssn">Baskı ISSN</message>
 	<message key="manager.setup.onlineIssn">İnternet ISSN</message>
 
-	<message key="manager.setup.issnDescription"><![CDATA[ISSN(Uluslararası Standart Seri Numara)  elektronik olanlar dahil, periyodik yayınları tanımlayan sekiz rakamlı bir numaradır. Paris merkezli,Unesco ve Fransız Hükümeti'nce desteklenen bir uluslararası merkez tarafından koordine edilen Ulusal Merkezlerin dünya çapındaki ağı tarafından düzenlenir.Bir numara <a href="http://www.issn.org" target="_blank">ISSN web sitesi</a>.  Bu işlem dergi çalışmasının her aşamasında yapılabilir.]]></message>
+	<message key="manager.setup.issnDescription"><![CDATA[ISSN(Uluslararası Standart Seri Numara)  elektronik olanlar dahil, periyodik yayınları tanımlayan sekiz rakamlı bir numaradır. Paris merkezli,Unesco ve Fransız Hükümeti'nce desteklenen bir uluslararası merkez tarafından koordine edilen Ulusal Merkezlerin dünya çapındaki ağı tarafından düzenlenir.Bir numara <a href="http://www.issn.org" target="_new">ISSN web sitesi</a>.  Bu işlem dergi çalışmasının her aşamasında yapılabilir.]]></message>
 	<message key="manager.setup.doiPrefix">DOI Eki</message>
-	<message key="manager.setup.doiPrefixDescription"><![CDATA[The DOI (Digital Object Identifier) (sayısal madde tanımlama eki <a href="http://www.crossref.org">CrossRef</a> tarafından verilir ve and 10.xxxx biçimindedir (örneğin 10.1234).]]></message>
+	<message key="manager.setup.doiPrefixDescription"><![CDATA[The DOI (Digital Object Identifier) (sayısal madde tanımlama eki <a href="http://www.crossref.org" target="_new">CrossRef</a> tarafından verilir ve and 10.xxxx biçimindedir (örneğin 10.1234).]]></message>
 	<message key="manager.setup.mailingAddressDescription">Derginin fiziksel konumu ve posta adresi.</message>
 	<message key="manager.setup.sectionsAndSectionEditors">Bölümler ve Bölüm Editörleri</message>
 	<message key="manager.setup.editorialReviewBoard">Editorial / Değerlendirme kurulu</message>

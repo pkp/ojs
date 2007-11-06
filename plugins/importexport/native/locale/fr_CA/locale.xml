@@ -13,7 +13,7 @@
   -->
  
 <locale name="fr_CA" full_name="Français (Canada)">
-	<message key="plugins.importexport.native.displayName">Plugiciel XML pour articles et numéros</message>
+	<message key="plugins.importexport.native.displayName"><![CDATA[Plugiciel XML pour articles et numéros]]></message>
 	<message key="plugins.importexport.native.description">Importer et exporter articles et numéros</message>
 
 	<message key="plugins.importexport.native.cliUsage"><![CDATA[Utilisation : {$scriptName} {$pluginName} [command] ...

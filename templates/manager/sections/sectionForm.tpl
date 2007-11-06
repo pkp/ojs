@@ -10,7 +10,6 @@
  *}
 {assign var="pageTitle" value="section.section"}
 {assign var="pageCrumbTitle" value="section.sections"}
-{url|assign:"currentUser" op="sections"}
 {include file="common/header.tpl"}
 
 <form name="section" method="post" action="{url op="updateSection" path=$sectionId}">
@@ -119,7 +118,7 @@ function removeSectionEditor(editorId) {
 <p><span class="instruct">{translate key="manager.section.sectionEditorInstructions"}</span></p>
 <h4>{translate key="manager.sections.unassigned"}</h4>
 
-<table width="100%" class="listing" id="sectionEditors">
+<table width="100%" class="listing" id="unassignedSectionEditors">
 	<tr>
 		<td colspan="3" class="headseparator">&nbsp;</td>
 	</tr>
@@ -151,7 +150,7 @@ function removeSectionEditor(editorId) {
 
 <h4>{translate key="manager.sections.assigned"}</h4>
 
-<table width="100%" class="listing" id="sectionEditors">
+<table width="100%" class="listing" id="assignedSectionEditors">
 	<tr>
 		<td colspan="5" class="headseparator">&nbsp;</td>
 	</tr>

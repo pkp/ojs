@@ -214,8 +214,8 @@
 	<message key="navigation.previousStep">Étape précédente</message>
 	<message key="navigation.nextStep">Étape suivante</message>
 	<message key="navigation.stepNumber">Étape {$step}</message>
-	<message key="navigation.previousPage"><![CDATA[<<]]></message>
-	<message key="navigation.nextPage"><![CDATA[>>]]></message>
+	<message key="navigation.previousPage"><![CDATA[&lt;&lt;]]></message>
+	<message key="navigation.nextPage"><![CDATA[&gt;&gt;]]></message>
 	<message key="navigation.items">{$from} - {$to} de {$total} articles</message>
 	
 	<!-- Article Queues -->
@@ -634,7 +634,7 @@
 	<message key="admin.auth.enableSyncProfiles">Activer la synchronisation du profil de l’usager (si supporté par ce plugiciel d’authentification). Les informations sur le profil de l’usager seront mises à jour automatiquement depuis une source éloignée lorsqu’un usager ouvre une session, et les changements faits au profil (incluant le mot de passe) dans OJS seront automatiquement mis à jour sur la source éloignée. Si cette option n’est pas activée, les informations d’OJS sur le profil seront gardées séparément des informations de la source éloignée.</message>
 	<message key="admin.auth.enableSyncPasswords">Permettre une modification au mot de passe d’un usager (si supporté par ce plugiciel d’authentification). Cette option permet aux usagers de modifier leur mot de passe à partir d’OJS, et d’utiliser la fonction «Mot de passe oublié» pour réinitialiser ce dernier. Ces fonctions ne seront pas disponibles aux usagers ayant cette source d’authentification si cette option n’est pas activée.</message>
 	<message key="admin.auth.enableCreateUsers">Permettre la création d’un usager (si supporté par ce plugiciel d’authentification). Les usagers créés dans OJS à l’aide de cette source d’authentification seront automatiquement ajoutés à la source d’authentification à distance s'ils n'existent pas déjà. En plus, si cette source est la source d’authentification par défaut, les comptes OJS créés via l'inscription d’usagers seront aussi ajoutés à la source d’authentification à distance.</message>
-	<message key="admin.auth.defaultSourceDescription"><![CDATA[Spécifier une source d’authentification autre qu’OJS aura les effets suivants :<ul><li>Si un usager tente d’enregistrer un nouveau compte avec un nom d’usager existant à la source d’authentification (mais pas dans la banque de données d’OJS), la tentative d’enregistrement est permise seulement si le mot de passe fourni est valable pour ce compte d’usager.</li></ul>]]></message>
+	<message key="admin.auth.defaultSourceDescription"><![CDATA[<p>Spécifier une source d’authentification autre qu’OJS aura les effets suivants :</p><ul><li>Si un usager tente d’enregistrer un nouveau compte avec un nom d’usager existant à la source d’authentification (mais pas dans la banque de données d’OJS), la tentative d’enregistrement est permise seulement si le mot de passe fourni est valable pour ce compte d’usager.</li></ul>]]></message>
 
 	<!-- System Information -->
 	<message key="admin.systemVersion">Version OJS</message>
@@ -706,7 +706,7 @@
 	<message key="manager.journalManagement">Gestion de la revue</message>
 	<message key="manager.setup">Configuration</message>
 	<message key="manager.emails">Courriels préparés</message>
-	<message key="manager.statistics">Statistiques &amp; rapports</message>
+	<message key="manager.statistics"><![CDATA[Statistiques &amp; rapports]]></message>
 	<message key="manager.readingTools">Outils de lecture</message>
 	<message key="manager.people">Personnes</message>
 	<message key="manager.filesBrowser">Navigateur de fichiers</message>
@@ -823,9 +823,9 @@
 	<message key="manager.setup.journalAbbreviation">Abréviation de la revue</message>
 	<message key="manager.setup.printIssn">Imprimer ISSN</message>
 	<message key="manager.setup.onlineIssn">ISSN en ligne</message>
-	<message key="manager.setup.issnDescription"><![CDATA[Le ISSN (Numéro international normalisé des publications en série) est un numéro à  huit chiffres qui sert à identifier les périodiques, y compris les séries électroniques. Il est géré par un réseau mondial de centres nationaux coordonnés par un centre international situé à Paris, avalisé par l'UNESCO et le gouvernement de la France. On peut obtenir un numéro auprès du <a href="http://www.issn.org" target="_blank">site Web ISSN</a>, à  n'importe quel moment de l'exploitation de la revue.]]></message>
+	<message key="manager.setup.issnDescription"><![CDATA[Le ISSN (Numéro international normalisé des publications en série) est un numéro à  huit chiffres qui sert à identifier les périodiques, y compris les séries électroniques. Il est géré par un réseau mondial de centres nationaux coordonnés par un centre international situé à Paris, avalisé par l'UNESCO et le gouvernement de la France. On peut obtenir un numéro auprès du <a href="http://www.issn.org" target="_new">site Web ISSN</a>, à  n'importe quel moment de l'exploitation de la revue.]]></message>
 	<message key="manager.setup.doiPrefix">Préfixe du système DOI</message>
-	<message key="manager.setup.doiPrefixDescription"><![CDATA[Le préfixe du système DOI (Digital Object Identifier) est assigné par <a href="http://www.crossref.org">CrossRef</a> et a le format 10.xxxx (par ex., 10.1234).]]></message>
+	<message key="manager.setup.doiPrefixDescription"><![CDATA[Le préfixe du système DOI (Digital Object Identifier) est assigné par <a href="http://www.crossref.org" target="_new">CrossRef</a> et a le format 10.xxxx (par ex., 10.1234).]]></message>
 	<message key="manager.setup.mailingAddressDescription">Emplacement physique et adresse postale de la revue</message>
 	<message key="manager.setup.sectionsAndSectionEditors">Rubriques et chefs de rubrique</message>
 	<message key="manager.setup.editorialReviewBoard">Comité de rédaction et de révision</message>

@@ -26,7 +26,7 @@ function deleteAttachment(fileId) {
 <form method="post" name="submit" action="{$formActionUrl}"{if $attachmentsEnabled} enctype="multipart/form-data"{/if}>
 <input type="hidden" name="continued" value="1"/>
 {if $attachmentsEnabled}
-	<input type="hidden" name="deleteAttachment" value="">
+	<input type="hidden" name="deleteAttachment" value="" />
 	{foreach from=$persistAttachments item=temporaryFile}
 		<input type="hidden" name="persistAttachments[]" value="{$temporaryFile->getFileId()}" />
 	{/foreach}

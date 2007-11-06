@@ -214,8 +214,8 @@
 	<message key="navigation.previousStep">Bước trước đó</message>
 	<message key="navigation.nextStep">Bước tiếp theo</message>
 	<message key="navigation.stepNumber">Bước {$step}</message>
-	<message key="navigation.previousPage">&lt;&lt;</message>
-	<message key="navigation.nextPage">&gt;&gt;</message>
+	<message key="navigation.previousPage"><![CDATA[&lt;&lt;]]></message>
+	<message key="navigation.nextPage"><![CDATA[&gt;&gt;]]></message>
 	<message key="navigation.items">{$from} - {$to} trong số {$total} mục</message>
 	
 	<!-- Article Queues -->
@@ -638,7 +638,7 @@ Lưu ý là có thể vô hiệu giao diện tìm kiếm OAI trên website này 
 	<message key="admin.auth.enableSyncProfiles">Cho phép đồng nhất hồ sơ người sử dụng(nếu công cụ xác thực này hỗ trợ). Thông tin hồ sơ của người dùng sẽ được cập nhật tự động bằng nguồn từ xa, và những thay đổi trong hồ sơ (gồm cả thay đổi mật khẩu) trên phần mềm OJS cũng sẽ được cập nhật tự động lên nguồn từ xa. Nếu tính năng này không được kích hoạt, thông tin hồ sơ trên OJS sẽ được lưu giữ độc lập với thông tin hồ sơ nguồn từ xa.</message>
 	<message key="admin.auth.enableSyncPasswords">Cho phép sửa mật khẩu người dùng (nếu công cụ xác thực này hỗ trợ). Kích hoạt lựa chọn này sẽ cho phép người dùng sửa mật khẩu của họ trong phần mềm OJS và sử dụng chức năng "quên mật khẩu" để khởi tạo lại mật khẩu. Những chức năng này sẽ không dành cho người dùng từ nguồn xác thực này nếu lựa chọn không được kích hoạt.</message>
 	<message key="admin.auth.enableCreateUsers">Cho phép tạo người dùng (nếu công cụ xác thực này hỗ trợ). Người dùng được khởi tạo trong OJS bằng công cụ xác thực này sẽ được cập nhật tự động lên nguồn xác thực từ xa nếu như người dùng đó chưa có trên nguồn này. Ngoài ra, nếu nguồn này la nguồn xác thực mặc định, những tài khoản người dùng do người dùng tự đăng ký trên OJS cũng sẽ được cập nhật lên nguồn xác thực từ xa.</message>
-	<message key="admin.auth.defaultSourceDescription"><![CDATA[Việc chỉ định một nguồn xác thực khác OJS sẽ có các hiệu lực sau:
+	<message key="admin.auth.defaultSourceDescription"><![CDATA[<p>Việc chỉ định một nguồn xác thực khác OJS sẽ có các hiệu lực sau:</p>
 <ul>
 	<li>Nếu một người dùng muốn đăng ký một tài khoản mới với website này với bí danh (username) đã có trên nguồn xác thực (nhưng chưa có trên CSDL của OJS), đăng ký này sẽ không được phép nếu mật khẩu trùng với mật khẩu dành cho người trùng bí danh trên nguồn xác thực.</li>
 </ul>]]></message>
@@ -714,7 +714,7 @@ Lưu ý là có thể vô hiệu giao diện tìm kiếm OAI trên website này 
 	<message key="manager.journalManagement">Quản lý Tạp chí</message>
 	<message key="manager.setup">Thiết lập tạp chí</message>
 	<message key="manager.emails">Các e-mail tạo sẵn</message>
-	<message key="manager.statistics">Thống kê &amp; Báo cáo</message>
+	<message key="manager.statistics"><![CDATA[Thống kê &amp; Báo cáo]]></message>
 	<message key="manager.readingTools">Công cụ đọc</message>
 	<message key="manager.people">Nhân sự</message>
 	<message key="manager.filesBrowser">Duyệt File</message>
@@ -831,9 +831,9 @@ Lưu ý là có thể vô hiệu giao diện tìm kiếm OAI trên website này 
 	<message key="manager.setup.journalAbbreviation">Tên viết tắt của Tạp chí</message>	
 	<message key="manager.setup.printIssn">Chỉ số ISSN bản in</message>
 	<message key="manager.setup.onlineIssn">Chỉ số ISSN bản trực tuyến</message>
-	<message key="manager.setup.issnDescription"><![CDATA[Chỉ số ISSN (International Standard Serial Number) là một số gồm 8 chữ số định danh các ấn phẩm đều kỳ, bao gồm cả ấn phẩm đều kỳ điện tử. Chỉ số này được quản lý bởi một mạng lưới các Trung tâm Quốc gia về ISSN và được điều phối chung bởi Trung tâm Quốc tế ISSN tại Paris, được UNESCO và Chính phủ Pháp bảo trợ. Chỉ số này có thể xin tại <a href="http://www.issn.org" target="_blank">Website của ISSN</a>.  Việc này có thể làm ở bất kỳ thời điểm nào trong quá trình hoạt động của tạp chí.]]></message>
+	<message key="manager.setup.issnDescription"><![CDATA[Chỉ số ISSN (International Standard Serial Number) là một số gồm 8 chữ số định danh các ấn phẩm đều kỳ, bao gồm cả ấn phẩm đều kỳ điện tử. Chỉ số này được quản lý bởi một mạng lưới các Trung tâm Quốc gia về ISSN và được điều phối chung bởi Trung tâm Quốc tế ISSN tại Paris, được UNESCO và Chính phủ Pháp bảo trợ. Chỉ số này có thể xin tại <a href="http://www.issn.org" target="_new">Website của ISSN</a>.  Việc này có thể làm ở bất kỳ thời điểm nào trong quá trình hoạt động của tạp chí.]]></message>
 	<message key="manager.setup.doiPrefix">Tiền tố DOI</message>
-	<message key="manager.setup.doiPrefixDescription"><![CDATA[Tiền tố DOI (Digital Object Identifier - Chỉ số Nhận dạng Vật thể số) được <a href="http://www.crossref.org">CrossRef</a> cấp và có định dạng 10.xxxx (v.d. 10.1234).]]></message>
+	<message key="manager.setup.doiPrefixDescription"><![CDATA[Tiền tố DOI (Digital Object Identifier - Chỉ số Nhận dạng Vật thể số) được <a href="http://www.crossref.org" target="_new">CrossRef</a> cấp và có định dạng 10.xxxx (v.d. 10.1234).]]></message>
 	<message key="manager.setup.mailingAddressDescription">Địa điểm làm việc và địa chỉ gửi thư.</message>
 	<message key="manager.setup.sectionsAndSectionEditors">Các Chuyên mục và BTV Chuyên mục</message>
 	<message key="manager.setup.editorialReviewBoard">Hội đồng Biên tập/Phản biện</message>

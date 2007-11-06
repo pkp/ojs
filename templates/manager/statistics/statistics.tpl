@@ -16,7 +16,7 @@
 
 <p>{translate key="manager.statistics.statistics.selectSections"}</p>
 <form action="{url op="saveStatisticsSections"}" method="post">
-	<select name="sectionIds[]" class="selectMenu" multiple size="5">
+	<select name="sectionIds[]" class="selectMenu" multiple="multiple" size="5">
 		{foreach from=$sections item=section}
 			<option {if in_array($section->getSectionId(), $sectionIds)}selected {/if}value="{$section->getSectionId()}">{$section->getSectionTitle()}</option>
 		{/foreach}

@@ -8,7 +8,7 @@
  *
  * $Id$
  *}
-{assign var="pageTitle" value="archive.archives"} 
+{assign var="pageTitle" value="archive.archives"}
 {include file="common/header.tpl"}
 
 <a name="issues"></a>
