@@ -26,7 +26,7 @@
 
 	{$additionalHeadData}
 </head>
-<frameset cols="*,180" frameborder="0" framespacing="0" style="border: 0;">
+<frameset cols="*,180" style="border: 0;">
 	{if !$galley}
 		{url|assign:"articleUrl" op="viewArticle" path=$articleId}
 		{url|assign:"rstUrl" op="viewRST" path=$articleId}

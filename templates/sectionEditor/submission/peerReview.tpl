@@ -71,25 +71,25 @@
 		</td>
 	</tr>
 	{foreach from=$suppFiles item=suppFile}
-		<form method="post" action="{url op="setSuppFileVisibility"}">
-		<input type="hidden" name="articleId" value="{$submission->getArticleId()}" />
-		<input type="hidden" name="fileId" value="{$suppFile->getSuppFileId()}" />
-
 		<tr valign="top">
 			{if !$notFirstSuppFile}
 				<td class="label" rowspan="{$suppFiles|@count}">{translate key="article.suppFilesAbbrev"}</td>
 				{assign var=notFirstSuppFile value=1}
 			{/if}
 			<td width="80%" class="value nowrap">
+				<form method="post" action="{url op="setSuppFileVisibility"}">
+				<input type="hidden" name="articleId" value="{$submission->getArticleId()}" />
+				<input type="hidden" name="fileId" value="{$suppFile->getSuppFileId()}" />
+
 				<a href="{url op="downloadFile" path=$submission->getArticleId()|to_array:$suppFile->getFileId():$suppFile->getRevision()}" class="file">{$suppFile->getFileName()|escape}</a>&nbsp;&nbsp;
 				{$suppFile->getDateModified()|date_format:$dateFormatShort}&nbsp;&nbsp;
 				<label for="show">{translate key="editor.article.showSuppFile"}</label>
 				<input type="checkbox" name="show" id="show" value="1"{if $suppFile->getShowReviewers()==1} checked="checked"{/if}/>
 				<input type="submit" name="submit" value="{translate key="common.record"}" class="button" />
+				</form>
 			</td>
 		</tr>
-	</form>
-{foreachelse}
+	{foreachelse}
 	<tr valign="top">
 		<td class="label">{translate key="article.suppFilesAbbrev"}</td>
 		<td class="nodata">{translate key="common.none"}</td>

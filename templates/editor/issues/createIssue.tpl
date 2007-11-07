@@ -9,8 +9,7 @@
  * $Id$
  *}
 {assign var="pageTitle" value="editor.issues.createIssue"}
-{url|assign:"currentUrl" page="editor" op="createIssue"}
-{include file="common/header.tpl"}
+{url|assign:"currentUrl" page="editor" op="createIssue"}{include file="common/header.tpl"}
 
 {include file="common/formErrors.tpl"}
 
@@ -56,7 +55,7 @@
 		<td class="value"><input type="text" name="year" id="year" value="{$year|escape}" size="5" maxlength="4" class="textField" /></td>
 	</tr>
 	<tr valign="top">
-		<td class="label">{fieldLabel name="labelFormat" key="editor.issues.issueIdentification"}</td>
+		<td class="label">{fieldLabel suppressId="true" name="labelFormat" key="editor.issues.issueIdentification"}</td>
 		<td class="value"><input type="checkbox" name="showVolume" id="showVolume" value="1"{if $showVolume} checked="checked"{/if} /><label for="showVolume"> {translate key="issue.volume"}</label><br /><input type="checkbox" name="showNumber" id="showNumber" value="1"{if $showNumber} checked="checked"{/if} /><label for="showNumber"> {translate key="issue.number"}</label><br /><input type="checkbox" name="showYear" id="showYear" value="1"{if $showYear} checked="checked"{/if} /><label for="showYear"> {translate key="issue.year"}</label><br /><input type="checkbox" name="showTitle" id="showTitle" value="1"{if $showTitle} checked="checked"{/if} /><label for="showTitle"> {translate key="issue.title"}</label></td>
 	</tr>
 	{if $enablePublicIssueId}

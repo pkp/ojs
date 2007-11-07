@@ -9,8 +9,7 @@
  * $Id$
  *}
 {assign var="pageTitle" value="editor.issues.backIssues"}
-{url|assign:"currentUrl" page="editor" op="backIssues"}
-{include file="common/header.tpl"}
+{url|assign:"currentUrl" page="editor" op="backIssues"}{include file="common/header.tpl"}
 
 <ul class="menu">
         <li><a href="{url op="createIssue"}">{translate key="editor.navigation.createIssue"}</a></li>
