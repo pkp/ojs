@@ -1875,7 +1875,7 @@ avec un signe plus (+) indiquant que la révision est en cours.]]></message>
 	<message key="user.profile.form.openAccessNotifications">Courriel avisant d'un numéro à libre accès</message>
 	
 	<!-- Registration -->
-	<message key="user.register.repeatPassword">Entrer un nouveau mot de passe</message>
+	<message key="user.register.repeatPassword">Repeter le mot de passe</message>
 	<message key="user.register.form.usernameExists">Le nom d'usager sélectionné est déjà utilisé par un autre usager.</message>
 	<message key="user.register.form.usernameAlphaNumeric">Le nom d'usager peut contenir seulement des caractères alphanumériques, traits de soulignement, et traits d'union, et doit commencer et se terminer par un caractère alphanumérique.</message>
 

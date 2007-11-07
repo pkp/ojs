@@ -31,4 +31,6 @@
 	<message key="plugins.paymethod.paypal.purchase.description">Descrição</message>
 	<message key="plugins.paymethod.paypal.purchase.cancelled">Sua compra foi cancelada.</message>
 	<message key="plugins.paymethod.paypal.purchase.cancelled.title">Compra cancelada.</message>
+	<message key="plugins.paymethod.paypal.purchase.title">Título</message>
+	<message key="plugins.paymethod.paypal.purchase.fee">Taxa</message>
 </locale>

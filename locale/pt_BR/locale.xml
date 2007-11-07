@@ -961,7 +961,7 @@ Título do sistema de classificação:]]></message>
 	<message key="manager.setup.subjectClassificationExamples">(Ex.: Classificação de Assuntos da Matemática; Classificação da Biblioteca do Congresso)</message>
 	<message key="manager.setup.subjectKeywordTopic">Palavras-chave</message>
 	<message key="manager.setup.subjectProvideExamples">Informe exemplos de palavras-chave ou tópicos para auxiliar o autor:</message>
-	<message key="manager.setup.subjectExamples">(Ex.: Fotosíntese; Buracos Negros; Arquitetura da Informação; Sistemas de Informação)</message>
+	<message key="manager.setup.subjectExamples">(Ex.: Fotossíntese; Buracos Negros; Arquitetura da Informação; Sistemas de Informação)</message>
 	<message key="manager.setup.coverage">Cobertura</message>
 	<message key="manager.setup.coverageDescription">Referente à cobertura geo-espacial, cronológica ou histórica, e/ou características da pesquisa.</message>
 	<message key="manager.setup.coverageGeoProvideExamples">Informe exemplos de termos geo-espaciais ou geográficos relevantes:</message>
@@ -2453,24 +2453,24 @@ Após a revisão do texto por parte do editor e do autor, o editor de texto deve
 Siga o seguinte protocolo para fazer revisões eletrônicas em seu manuscrito:
 
 <b>Respostas a sugestões de alteração</b>
-  Para cada sugestão aceita, remova o negrito do texto.
-   Para cada sugestão rejeitada, insira o texto original novamente e marque-o em <b>negrito</b>.
+  Para cada sugestão aceita, remova o negrito do texto.
+   Para cada sugestão rejeitada, insira o texto original novamente e marque-o em <b>negrito</b>.
 
 <b>Realizando Inserções e Remoções</b>
-   Indique inserções novas em <b>negrito</b>.
-   Substitua o texto removido por: <b>[texto removido]</b>.
-  Caso remova uma frase ou mais, indique com um aviso (ex.: <b>[removidas 2 frases]</b>).
+   Indique inserções novas em <b>negrito</b>.
+   Substitua o texto removido por: <b>[texto removido]</b>.
+  Caso remova uma frase ou mais, indique com um aviso (ex.: <b>[removidas 2 frases]</b>).
 
 <b>Respondendo a Dúvidas ao Autor (QAs)</b>
-   Mantenha todas as QAs intactas e em negrito dentro do texto. Não as remova.
-   Para responder a uma QA, insira um comentário após a dúvida. Delimite comentários da seguinte forma:
+   Mantenha todas as QAs intactas e em negrito dentro do texto. Não as remova.
+   Para responder a uma QA, insira um comentário após a dúvida. Delimite comentários da seguinte forma:
 <b>[Comentário: ]</b> 
-  Ex.: <b>[Comentário: Maior desenvolvimento da discussão da metodologia, como sugerido]</b>
+  Ex.: <b>[Comentário: Maior desenvolvimento da discussão da metodologia, como sugerido]</b>
 
 <b>Incluindo Comentários</b>
-   Use comentários para explicar alterações organizacionais ou revisões mais importantes 
-  Ex.: <b>[Comentário: Parágrafo acima movido da p. 5 para a p. 7]</b>
-  Aviso: Ao se referir a numeração de páginas, use a numeração da cópia impressa enviada, pois a numeração pode ser alterada nas revisões eletrônicas.
+   Use comentários para explicar alterações organizacionais ou revisões mais importantes 
+  Ex.: <b>[Comentário: Parágrafo acima movido da p. 5 para a p. 7]</b>
+  Aviso: Ao se referir a numeração de páginas, use a numeração da cópia impressa enviada, pois a numeração pode ser alterada nas revisões eletrônicas.
 
 <h4>Exemplo de uma Avaliação Eletrônica</h4>
 
@@ -2541,7 +2541,7 @@ Após o término de suas revisões, renomeie o arquivo de NomedoAutorQA.doc para
 	<message key="admin.mergerUsers.noneEnrolled">Nenhum usuário cadastrado.</message>
 	<message key="manager.statistics.statistics.articleViews">Registro de visualização de artigo (Apenas para autores)</message>
 	<message key="manager.statistics.reports.description">O sistema gera relatórios que registram os detalhes associados com os procedimentos da submissão, da perspectiva de submissões, editores, avaliadores e seções, em um dado período. Relatórios são gerados no formato CSV, que exigem um aplicativo de planilha eletrônica para serem visualizados.</message>
-	<message key="manager.plugins.description">Esta página permite ao Editor Gerente verificar e possivelmente configurar os plugins atualmente instalados. Os Plugins estão dividios por categorias, de acordo com sua função. As categorias estão listadas a seguir, cada uma com seu conjunto de plugins.</message>
+	<message key="manager.plugins.description">Esta página permite ao Editor Gerente verificar e possivelmente configurar os plugins atualmente instalados. Os Plugins estão divididos por categorias, de acordo com sua função. As categorias estão listadas a seguir, cada uma com seu conjunto de plugins.</message>
 	<message key="manager.payments">Formas de Pagamento</message>
 	<message key="manager.payment.enable">Habilitar</message>
 	<message key="manager.payment.description">Descrição</message>
@@ -2557,7 +2557,7 @@ Após o término de suas revisões, renomeie o arquivo de NomedoAutorQA.doc para
 	<message key="manager.payment.settings.text">Descrição do Método de Pagamento</message>
 	<message key="manager.payment.settings.submissionFee">Taxa de Submissão de Artigo (TSA)</message>
 	<message key="manager.payment.settings.publicationFee">Taxa de Publicação de Artigo (TPA)</message>
-	<message key="manager.payment.settings.fastTrackFee">Taxa de Fast Track</message>
+	<message key="manager.payment.settings.fastTrackFee">Taxa de Acompanhamento Rápido</message>
 	<message key="manager.payment.settings.membershipFee">Assinatura Anual Individual</message>
 	<message key="manager.payment.settings.payPerViewFee">Taxa de Pay-Per-View por Artigo</message>
 	<message key="manager.payment.settings.onlypdf">Restringir acesso apenas à versão PDF do artigo</message>
@@ -2728,14 +2728,14 @@ Autores que publicam nesta revista concordam com os seguintes termos:
 	<message key="payment.loginRequired.forDonation">É necessário logar para fazer uma doação.</message>
 	<message key="payment.type.submission">Taxa de Submissão</message>
 	<message key="payment.type.publication">Taxa de Publicação</message>
-	<message key="payment.type.fastTrack">Taxa de Avaliação Fast Track</message>
+	<message key="payment.type.fastTrack">Taxa de Acompanhamento Rápido da Avaliação</message>
 	<message key="payment.type.membership">Taxa de Assinatura Individual</message>
 	<message key="payment.type.payPerView">Taxa de Pay-Per-View por Artigo</message>
 	<message key="payment.type.subscription">Taxa de Assinatura</message>
 	<message key="payment.type.donation">Doações</message>
 	<message key="payment.donation.makeDonation">Fazer doação</message>
-	<message key="payment.fastTrack.payFastTrack">Pagar FastTrack</message>
-	<message key="payment.fastTrack.inFastTrack">em FastTrack</message>
+	<message key="payment.fastTrack.payFastTrack">Pagar Acompanhamento Rápido</message>
+	<message key="payment.fastTrack.inFastTrack">em Acompanhamento Rápido</message>
 	<message key="payment.publication.payPublication">Pagar para Publicar</message>
 	<message key="payment.publication.publicationPaid">Taxa de Publicação paga</message>
 	<message key="payment.membership.buyMembership">Pagar Assinatura Individual</message>
@@ -2767,30 +2767,30 @@ Autores que publicam nesta revista concordam com os seguintes termos:
 	<message key="debug.notes.helpMappingLoad">Foi recarregado o arquivo XML de mapeamento da ajuda {$filename} buscando por {$id}.</message>
 	<message key="default.journalSettings.checklist.addressesLinked">URLs para as referências foram informadas quando necessário.</message>
 	<message key="default.journalSettings.refLinkInstructions"><![CDATA[<h4>Para incluir Referências Ativas no processo de Layout</h4>
-	<p>Ao transfomar a submissão para HTML ou PDF, assegure-se de que todos os hiperlinks estão ativos.</p>
+	<p>Ao transformar a submissão para HTML ou PDF, assegure-se de que todos os hiperlinks estão ativos.</p>
 	<h4>A. Quando o autor informa o Link para a Referência</h4>
 	<ol>
 	<li>Enquanto a submissão ainda está em um formato de edição de texto original (ex.: Word), inclua a frase VISUALIZAR ITEM no final da referência que possui uma URL.</li>
-	<li>Transforme a frase em um hiperlink selecionando-a e utlizando a ferramenta do Word Inserir Hiperlink informando a URL criada no passo #2 no campo respectivo.</li>
+	<li>Transforme a frase em um hiperlink selecionando-a e utilizando a ferramenta do Word Inserir Hiperlink informando a URL criada no passo #2 no campo respectivo.</li>
 	</ol>
 	<h4>B. Permitindo aos Leitores buscas por referências no Google Acadêmico</h4>
 	<ol>
-	<li>Enquanto a submissão ainda está em um formato de edição de texto original (ex.: Word), copie o título do trabalho referenciado na lista de Referências (caso pareça ser um título muito comun – por exemplo "Paz" – copie o autor e o título).</li>
-	<li>Cole o texto selecionado entre as marcações de espacço %22, incluindo o sinal + entre cada palavra: http://scholar.google.com/scholar?q=%22PASTE+TITLE+HERE%22&hl=en&lr=&btnG=Search</li>
+	<li>Enquanto a submissão ainda está em um formato de edição de texto original (ex.: Word), copie o título do trabalho referenciado na lista de Referências (caso pareça ser um título muito comum – por exemplo "Paz" – copie o autor e o título).</li>
+	<li>Cole o texto selecionado entre as marcações de espaço %22, incluindo o sinal + entre cada palavra: http://scholar.google.com/scholar?q=%22PASTE+TITLE+HERE%22&hl=en&lr=&btnG=Search</li>
 	<li>Inclua a frase GS SEARCH no final de cada citação na lista de Referências da submissão.</li>
-	<li>Transforme a frase em um hiperlink selecionando-a e utlizando a ferramenta do Word Inserir Hiperlink informando a URL criada no passo #2 no campo respectivo.</li>
+	<li>Transforme a frase em um hiperlink selecionando-a e utilizando a ferramenta do Word Inserir Hiperlink informando a URL criada no passo #2 no campo respectivo.</li>
 	</ol>
 	<h4>C. Permitindo aos Leitores buscas por referências que possuem DOI</h4>
 	<ol>
 	<li>Enquanto a submissão ainda está em um formato de edição de texto original (ex.: Word), copie um grupo de referências na ferramenta CrossRef Text Query (http://www.crossref.org/freeTextQuery/)</li>
 	<li>Cole cada DOI que a ferramenta Query retorna na seguinte URL (entre os sinais = e &): http://www.cmaj.ca/cgi/external_ref?access_num=COLE O DOI#AQUI&link_type=DOI</li>
 	<li>Inclua a frase CrossRef no final de cada citação na lista de Referências da submissão.</li>
-	<li>Transforme a frase em um hiperlink selecionando-a e utlizando a ferramenta do Word Inserir Hiperlink informando a URL criada no passo #2 no campo respectivo.</li>
+	<li>Transforme a frase em um hiperlink selecionando-a e utilizando a ferramenta do Word Inserir Hiperlink informando a URL criada no passo #2 no campo respectivo.</li>
 	</ol>]]></message>
 	<message key="default.journalSettings.proofingInstructions"><![CDATA[<p>O processo de leitura de provas tem por objetivo corrigir erros de ortografia, gramática e formatação na composição. Alterações mais importantes não podem ser realizadas nesta etapa, sem o consentimento do editor da seção. No Layout, clique em Visualizar Prova para ver a composição em HTML, PDF e/ou outro formato disponível.</p>
 <h4>Erros de Ortografia e Gramática</h4>
 
-<p>Copie a palavra com problemas ou o conjunto de palavras e cole no campo de Alterações da Prova com as instruções de "ALTERE-PARA" conforme as intruções a seguir...</p>
+<p>Copie a palavra com problemas ou o conjunto de palavras e cole no campo de Alterações da Prova com as instruções de "ALTERE-PARA" conforme as instruções a seguir...</p>
 
 <pre>1. ALTERE
 a peusqisa envolve
@@ -2805,11 +2805,54 @@ Malinowski </pre>
 
 <h4>Erros de Formatação</h4>
 
-<p>Descreva o local e a natureza do problema na caixa Alterações da Prova, após digitar no título "FORMATAÇÃO" conforme as intruções a seguir...</p>
+<p>Descreva o local e a natureza do problema na caixa Alterações da Prova, após digitar no título "FORMATAÇÃO" conforme as instruções a seguir...</p>
 <br />
 <pre>3. FORMATAÇÃO
 Os números na Tabela 3 não estão alinhadas na 3ª coluna.</pre>
 <br />
 <pre>4. FORMATAÇÃO
 O parágrafo iniciado em "Este último elemento..." não está recuado.</pre>]]></message>
+	<message key="admin.languages.downloadLocales">Baixar idiomas</message>
+	<message key="admin.languages.downloadFailed">Erro ao baixar idioma. A seguir, um detalhamento do(s) erro(s).</message>
+	<message key="admin.languages.localeInstalled">Iioma "{$locale}" instalado.</message>
+	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Não é possível baixar idiomas do servidor do Public Knowledge Project. Os motivos possíveis são:
+	<ul>
+		<li>Seu servidor não possui ou permite a execução da ferramenta "tar" GNU</li>
+		<li>O sistema não possui permissão para alterar o arquivo de registro de idiomas, normalmente "registry/locales.xml".</li>
+	</ul>
+Idiomas estão disponíveis para download manual no <a href="http://pkp.sfu.ca">portal do PKP</a>.</p>]]></message>
+	<message key="admin.languages.download">Baixar idioma</message>
+	<message key="admin.languages.download.cannotOpen">Não é possível abrir a identificação de idioma do portal do PKP.</message>
+	<message key="admin.languages.download.cannotModifyRegistry">Não é possível incluir novo idioma no arquivo de registro de idiomas, normalmente "registry/locales.xml".</message>
+	<message key="manager.payment.feePaymentOptions">Opções de Pagamento de Taxa</message>
+	<message key="manager.payment.options">Opções</message>
+	<message key="manager.payment.records">Registros</message>
+	<message key="manager.payment.options.enablePayments">Clique aqui para habilitar o módulo de pagamentos. Em seguida, configure as opções de pagamento através do formulário disponível. Usuários deverão estar cadastrados e logados no sistema para realizar pagamentos.</message>
+	<message key="manager.payment.options.text">Descrição do Método de Pagamento</message>
+	<message key="manager.payment.options.fee">Taxa</message>
+	<message key="manager.payment.options.feeName">Título da Taxa</message>
+	<message key="manager.payment.options.feeDescription">Descrição da Taxa</message>
+	<message key="manager.payment.generalOptions">Opções Gerais</message>
+	<message key="manager.payment.authorFees">Taxas para Autores</message>
+	<message key="manager.payment.authorFeesDescription">As opções definidas (bem como as descrições, que podem ser alteradas, e as taxas) serão exibidas no Passo 1 do processo de submissão e na seção Submissões do Sobre da revista, assim como nos locais onde pagamento é exigido.</message>
+	<message key="manager.payment.readerFees">Taxas para Leitores</message>
+	<message key="manager.payment.readerFeesDescription">As opções definidas (bem como as descrições, que podem ser alteradas, e as taxas) serão exibidas na seção Políticas do Sobre da revista, assim como nos locais onde pagamento é exigido.</message>
+	<message key="manager.payment.generalFees">Taxas Gerais</message>
+	<message key="manager.payment.generalFeesDescription">A Taxa de Adesão aparecerá na seção Políticas do Sobre da revista, e o link para doações aparecerá, normalmente, acima das funções de busca da barra direita.</message>
+	<message key="manager.payment.options.submissionFee">Submissão de Artigo</message>
+	<message key="manager.payment.options.publicationFee">Publicação de Artigo</message>
+	<message key="manager.payment.options.fastTrackFee">Avaliação Fast-Track</message>
+	<message key="manager.payment.options.membershipFee">Taxa de Adesão</message>
+	<message key="manager.payment.options.payPerViewFee">Pay-Per-View de Artigo</message>
+	<message key="manager.payment.options.waiverPolicy">Política de Isenção de Taxas</message>
+	<message key="manager.payment.options.onlypdf">Restringir acesso apenas a versões PDF dos artigos</message>
+	<message key="manager.payment.options.acceptSubscriptionPayments">Esta ação ativará pagamento para Assinaturas, sendo responsabilidade do Gerente de Assinaturas definir e gerenciar os tipos, taxas, duração e assinantes</message>
+	<message key="manager.payment.options.donationFee">Doações à revista</message>
+	<message key="default.journalSettings.submissionFeeDescription">Os Autores são obrigados a pagar uma Taxa de Submissão de artigos no Passo 1 do processo de submissão, como contribuição com os custos de avaliação. Consulte a Política de Isenção de Taxas.</message>
+	<message key="default.journalSettings.fastTrackFeeDescription">O pagamento desta taxa garante que a avaliação, decisão editorial, e notificação do autor ocorram em no máximo 4 semanas.</message>
+	<message key="default.journalSettings.publicationFeeDescription">Caso este documento seja aceito para publicação, será necessário o pagamento de uma Taxa de Publicação de Artigo para auxiliar nos custos de publicação. Consulte a Política de Isenção de Taxas.</message>
+	<message key="default.journalSettings.waiverPolicy">Caso não possa pagar as taxas descritas, notifique a Equipe Editorial através do campo Comentários, pois não é de interesse impedir a publicação de trabalhos importantes.</message>
+	<message key="default.journalSettings.payPerViewFeeDescription">O pagamento desta taxa permite visualizar, baixar e imprimir este documento.</message>
+	<message key="default.journalSettings.membershipFeeDescription">O pagamento desta taxa garante sua inscrição nesta associação durante um ano, com acesso livre a esta revista.</message>
+	<message key="default.journalSettings.donationFeeDescription">Doações de qualquer valor são muito bem-vindas, e oferecem meios aos editores de manter a qualidade da revista no mais alto nível para seus leitores e usuários.</message>
 </locale>

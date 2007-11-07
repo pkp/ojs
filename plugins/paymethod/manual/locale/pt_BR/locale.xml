@@ -15,4 +15,9 @@
 	<message key="plugins.paymethod.manual.displayName">Pagamento Manual</message>
 	<message key="plugins.paymethod.manual.description">O Editor Gerente da revista ou o Gerente Geral da Conferência registrarão o recebimento do pagamento pelo usuário.</message>
 	<message key="plugins.paymethod.manual">Registro de pagamento</message>
+	<message key="plugins.paymethod.manual.settings">Configurações de Pagamento Manual</message>
+	<message key="plugins.paymethod.manual.settings.instructions">Instruções</message>
+	<message key="plugins.paymethod.manual.settings.manualInstructions">Instruções para usuários que escolhem Método de Pagamento Manual</message>
+	<message key="plugins.paymethod.manual.purchase.title">Título</message>
+	<message key="plugins.paymethod.manual.purchase.fee">Taxa</message>
 </locale>

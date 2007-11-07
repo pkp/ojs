@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * phpMyVisites plugin localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+
+	<!-- phpMyVisites -->
+	<message key="plugins.generic.phpmv.displayName">phpMyVisites Plugin</message>
+	<message key="plugins.generic.phpmv.description"><![CDATA[Integra OJS con phpMyVisites, una applicazione web gratuita e open source per l'analisi del traffico. Richiede che phpMyVisites sia già installato. Si veda <a href="http://www.phpmyvisites.us/" title="phpMyVisites site">phpMyVisites site</a> for more information.]]></message>
+
+	<!-- phpMyVisites Settings Management -->
+	<message key="plugins.generic.phpmv.manager.settings">Impostazioni</message>
+	<message key="plugins.generic.phpmv.manager.phpmvSettings">Impostazioni di phpMyVisites</message>
+	<message key="plugins.generic.phpmv.manager.settings.description"><![CDATA[<p>Con questo plugin abilitato phpMyVisites può essere usato per raccogliere e analizzare l'utilizzo e il traffico del sito web di questa rivista. Si prega di notare che questo plugin necessita che phpMyVisites sia già installato. Si veda <a href="http://www.phpmyvisites.us/" title="phpMyVisites site">il sito phpMyVisites </a> per maggiori informazioni.</p>]]></message>
+	<message key="plugins.generic.phpmv.manager.settings.phpmvUrl">phpMyVisites Url</message>
+	<message key="plugins.generic.phpmv.manager.settings.phpmvUrlInstructions">L'url intera alla tua installzione phpMyVisites (ad es. http://myserver.net/phpmv).</message>
+	<message key="plugins.generic.phpmv.manager.settings.phpmvUrlRequired">Per favore inserisci una url valida. Includi http:// all'inizio.</message>
+	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteId">Numero del profilo del sito</message>
+	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteIdInstructions"><![CDATA[In phpMyVisites, clicca su Administration->Modify site. Il numero del profilo del sito è visualizzato dopo il nome del profilo del tuo sito.]]></message>
+	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteIdRequired">Per favore inserisci un numero del profilo del sito.</message>
+
+</locale>

@@ -13,7 +13,7 @@
   -->
  
 <locale name="en_US" full_name="U.S. English">
-	<message key="plugins.generic.tinymce.name">TinyMCE Plugin</message>
-	<message key="plugins.generic.tinymce.description"><![CDATA[This plugin enables WSYWIG editing of OJS textareas using the <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a> content editor.]]></message>
-	<message key="plugins.generic.tinymce.descriptionDisabled"><![CDATA[This plugin enables WSYWIG editing of OJS textareas using the <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a> content editor. <strong>TinyMCE is not currently installed; please install it in {$tinyMcePath}.</strong>]]></message>
+	<message key="plugins.generic.tinymce.name">Công cụ phụ trợ TinyMCE</message>
+	<message key="plugins.generic.tinymce.description"><![CDATA[Công cụ phụ trợ <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a>cho phép soạn văn bản trên phần mềm OJS bằng giao diện trù phú (WSYWIG).]]></message>
+	<message key="plugins.generic.tinymce.descriptionDisabled"><![CDATA[Công cụ phụ trợ <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a>cho phép soạn văn bản trên phần mềm OJS bằng giao diện trù phú (WSYWIG). <strong>TinyMCE hiện chưa được cài đặt; hãy cài công cụ này trong phần {$tinyMcePath}.</strong>]]></message>
 </locale>

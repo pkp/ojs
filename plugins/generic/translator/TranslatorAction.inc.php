@@ -56,7 +56,12 @@ class TranslatorAction {
 	function getMiscLocaleFiles($locale) {
 		$countryDao =& DAORegistry::getDAO('CountryDAO');
 		$currencyDao =& DAORegistry::getDAO('CurrencyDAO');
-		return array($countryDao->getFilename($locale), $currencyDao->getCurrencyFilename($locale));
+		$disciplineDao =& DAORegistry::getDAO('DisciplineDAO');
+		return array(
+			$countryDao->getFilename($locale),
+			$currencyDao->getCurrencyFilename($locale),
+			$disciplineDao->getFilename($locale)
+		);
 	}
 
 	function getEmailTemplates($locale) {
