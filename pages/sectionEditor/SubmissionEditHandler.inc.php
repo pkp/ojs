@@ -753,7 +753,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			$file = explode(',', Request::getUserVar('editorDecisionFile'));
 			if (isset($file[0]) && isset($file[1])) {
 				$round = $submission->getCurrentRound();
-				if (($submission->getAuthorFileRevisions($round) || $submission->getEditorFileRevisions($round)) && $submission->getMostRecentEditorDecisionComment()) {
+				if ($submission->getMostRecentEditorDecisionComment()) {
 					// The conditions are met for being able
 					// to send a file to copyediting.
 					SectionEditorAction::setCopyeditFile($submission, $file[0], $file[1]);
