@@ -81,7 +81,6 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 			case 'exportArticles':
 				$articleIds = Request::getUserVar('articleId');
 				if (!isset($articleIds)) $articleIds = array();
-				else array_pop($articleIds);
 				$results = &ArticleSearch::formatResults($articleIds);
 				$this->exportArticles($journal, $results);
 				break;

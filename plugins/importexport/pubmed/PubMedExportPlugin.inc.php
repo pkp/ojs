@@ -75,15 +75,12 @@ class PubMedExportPlugin extends ImportExportPlugin {
 				break;
 			case 'exportArticle':
 				$articleIds = array(array_shift($args));
-//				$result = array_shift(ArticleSearch::formatResults($articleIds));
-//				$this->exportArticle($journal, $result['issue'], $result['section'], $result['publishedArticle']);
 				$result = ArticleSearch::formatResults($articleIds);
 				$this->exportArticles($result);
 				break;
 			case 'exportArticles':
 				$articleIds = Request::getUserVar('articleId');
 				if (!isset($articleIds)) $articleIds = array();
-				else array_pop($articleIds);
 				$results = &ArticleSearch::formatResults($articleIds);
 				$this->exportArticles($results);
 				break;
