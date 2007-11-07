@@ -450,6 +450,13 @@ class AboutHandler extends Handler {
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('ojsVersion', $version->getVersionString());
+
+		foreach (array(Locale::getLocale(), $primaryLocale = Locale::getPrimaryLocale(), 'en_US') as $locale) {
+			$edProcessFile = "locale/$locale/edprocesslarge.png";
+			if (file_exists($edProcessFile)) break;
+		}
+		$templateMgr->assign('edProcessFile', $edProcessFile);
+
 		$templateMgr->display('about/aboutThisPublishingSystem.tpl');
 	}
 
