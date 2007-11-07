@@ -189,7 +189,8 @@ class JournalSetupStep5Form extends JournalSetupForm {
 					'dateUploaded' => date("Y-m-d g:i:s")
 				);
 
-				return $settingsDao->updateSetting($journal->getJournalId(), $settingName, $value, 'object');
+				$settingsDao->updateSetting($journal->getJournalId(), $settingName, $value, 'object');
+				return true;
 			}
 		}
 
