@@ -28,12 +28,10 @@
 
 <ul>
 	{foreach from=$sponsors item=sponsor}
-	{if $sponsor.institution}
-		{if $sponsor.url}
-			<li><a href="{$sponsor.url|escape}">{$sponsor.institution|escape}</a></li>
-		{else}
-			<li>{$sponsor.institution|escape}</li>
-		{/if}
+	{if $sponsor.url}
+		<li><a href="{$sponsor.url|escape}">{$sponsor.institution|escape}</a></li>
+	{else}
+		<li>{$sponsor.institution|escape}</li>
 	{/if}
 	{/foreach}
 </ul>

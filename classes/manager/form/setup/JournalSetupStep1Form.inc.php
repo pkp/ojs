@@ -75,6 +75,27 @@ class JournalSetupStep1Form extends JournalSetupForm {
 	}
 
 	/**
+	 * Execute the form, but first:
+	 * Make sure we're not saving an empty entry for sponsors. (This would
+	 * result in a possibly empty heading for the Sponsors section in About
+	 * the Journal.)
+	 */
+	function execute() {
+		$sponsors = (array) $this->getData('sponsors');
+		foreach (array_keys($sponsors) as $key) {
+			$values = array_values((array) $sponsors[$key]);
+			$isEmpty = true;
+			foreach ($values as $value) {
+				if (!empty($value)) $isEmpty = false;
+			}
+			if ($isEmpty) unset($sponsors[$key]);
+		}
+		$this->setData('sponsors', $sponsors);
+
+		return parent::execute();
+	}
+
+	/**
 	 * Display the form.
 	 */
 	function display() {
