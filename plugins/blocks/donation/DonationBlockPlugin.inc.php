@@ -23,6 +23,32 @@ class DonationBlockPlugin extends BlockPlugin {
 		}
 		return $success;
 	}
+	
+	/**
+	 * Install default settings on system install.
+	 * @return string
+	 */
+	function getInstallSitePluginSettingsFile() {
+		return $this->getPluginPath() . '/settings.xml';
+	}
+
+	/**
+	 * Install default settings on journal creation.
+	 * @return string
+	 */
+	function getNewJournalPluginSettingsFile() {
+		return $this->getPluginPath() . '/settings.xml';
+	}
+
+	/**
+	 * Get the block context. Overrides parent so that the plugin will be
+	 * displayed during install.
+	 * @return int
+	 */
+	function getBlockContext() {
+		if (!Config::getVar('general', 'installed')) return BLOCK_CONTEXT_RIGHT_SIDEBAR;
+		return parent::getBlockContext();
+	}
 
 	/**
 	 * Get the supported contexts (e.g. BLOCK_CONTEXT_...) for this block.
@@ -30,6 +56,15 @@ class DonationBlockPlugin extends BlockPlugin {
 	 */
 	function getSupportedContexts() {
 		return array(BLOCK_CONTEXT_LEFT_SIDEBAR, BLOCK_CONTEXT_RIGHT_SIDEBAR);
+	}
+
+	/**
+	 * Determine the plugin sequence. Overrides parent so that
+	 * the plugin will be displayed during install.
+	 */
+	function getSeq() {
+		if (!Config::getVar('general', 'installed')) return 0;
+		return parent::getSeq();
 	}
 
 	/**
@@ -59,8 +94,9 @@ class DonationBlockPlugin extends BlockPlugin {
 	function getContents(&$templateMgr) {
 		$journal =& Request::getJournal();
 		if (!$journal) return '';
-		$templateMgr =& TemplateManager::getManager();
-		$templateMgr->assign('acceptDonationPayments', $journal->getSetting('acceptDonationPayments'));
+		import('payment.ojs.OJSPaymentManager');
+		$paymentManager =& OJSPaymentManager::getManager();
+		$templateMgr->assign('donationEnabled', $paymentManager->donationEnabled());
 		
 		return parent::getContents($templateMgr);
 	}

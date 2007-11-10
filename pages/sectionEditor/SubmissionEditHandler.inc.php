@@ -67,6 +67,26 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		if ($isEditor) {
 			$templateMgr->assign('helpTopicId', 'editorial.editorsRole.submissionSummary');
 		}
+		
+		// Set up required Payment Related Information
+		import('payment.ojs.OJSPaymentManager');
+		$paymentManager =& OJSPaymentManager::getManager();
+		if ( $paymentManager->submissionEnabled() || $paymentManager->fastTrackEnabled() || $paymentManager->publicationEnabled()) {
+			$templateMgr->assign('authorFees', true);
+			$completedPaymentDAO =& DAORegistry::getDAO('OJSCompletedPaymentDAO');
+			
+			if ( $paymentManager->submissionEnabled() ) {
+				$templateMgr->assign_by_ref('submissionPayment', $completedPaymentDAO->getSubmissionCompletedPayment ( $journal->getJournalId(), $articleId ));
+			}
+			
+			if ( $paymentManager->fastTrackEnabled()  ) {
+				$templateMgr->assign_by_ref('fastTrackPayment', $completedPaymentDAO->getFastTrackCompletedPayment ( $journal->getJournalId(), $articleId ));
+			}
+
+			if ( $paymentManager->publicationEnabled()  ) {
+				$templateMgr->assign_by_ref('publicationPayment', $completedPaymentDAO->getPublicationCompletedPayment ( $journal->getJournalId(), $articleId ));
+			}				   
+		}		
 
 		$templateMgr->display('sectionEditor/submission.tpl');
 	}
@@ -225,6 +245,17 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->assign_by_ref('proofAssignment', $submission->getProofAssignment());
 		$templateMgr->assign_by_ref('layoutAssignment', $submission->getLayoutAssignment());
 		$templateMgr->assign('submissionAccepted', $submissionAccepted);
+
+		// Set up required Payment Related Information
+		import('payment.ojs.OJSPaymentManager');
+		$paymentManager =& OJSPaymentManager::getManager();
+		$completedPaymentDAO =& DAORegistry::getDAO('OJSCompletedPaymentDAO');
+		
+		$publicationFeeEnabled = $paymentManager->publicationEnabled();
+		$templateMgr->assign('publicatonFeeEnabled',  $publicationFeeEnabled);
+		if ( $publicationFeeEnabled ) {
+			$templateMgr->assign_by_ref('publicationPayment', $completedPaymentDAO->getPublicationCompletedPayment ( $journal->getJournalId(), $articleId ));			   
+		}	
 
 		$templateMgr->assign('helpTopicId', 'editorial.sectionEditorsRole.editing');
 		$templateMgr->display('sectionEditor/submissionEditing.tpl');
@@ -2019,23 +2050,45 @@ class SubmissionEditHandler extends SectionEditorHandler {
 	 * Payments
 	 */
 
-	function payPublicationFee($args) {
-		error_log('payPublicationFee');
+	function waiveSubmissionFee($args) {
 		$articleId = (int) array_shift($args);
-		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
+		$payMethod = Request::getUserVar('markAsPaid')?'ManualPayment':'Waiver';
 
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 		import('payment.ojs.OJSPaymentManager');
 		$paymentManager =& OJSPaymentManager::getManager();
 		$user =& Request::getUser();
 
-		$queuedPayment =& $paymentManager->createQueuedPayment($journal->getJournalId(), PAYMENT_TYPE_PUBLICATION, $user->getUserId(), $articleId, $journal->getSetting('publicationFee'));
+		$queuedPayment =& $paymentManager->createQueuedPayment($journal->getJournalId(), PAYMENT_TYPE_SUBMISSION, $user->getUserId(), $articleId, 0, '');
 		$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);
-	
-		$paymentManager->displayPaymentForm($queuedPaymentId, $queuedPayment);
+		
+		// Since this is a waiver, fulfill the payment immediately
+		$paymentManager->fulfillQueuedPayment($queuedPayment, $payMethod);
+		Request::redirect(null, null, 'submission', array($articleId));
 	}
 	
-	function waivePublicationFee($args) {
+	function waiveFastTrackFee($args) {
 		$articleId = (int) array_shift($args);
+		$payMethod = Request::getUserVar('markAsPaid')?'ManualPayment':'Waiver';
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
+		import('payment.ojs.OJSPaymentManager');
+		$paymentManager =& OJSPaymentManager::getManager();
+		$user =& Request::getUser();
+
+		$queuedPayment =& $paymentManager->createQueuedPayment($journal->getJournalId(), PAYMENT_TYPE_FASTTRACK, $user->getUserId(), $articleId, 0, '');
+		$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);
+		
+		// Since this is a waiver, fulfill the payment immediately
+		$paymentManager->fulfillQueuedPayment($queuedPayment, $payMethod);
+		Request::redirect(null, null, 'submission', array($articleId));
+	}	
+	
+	function waivePublicationFee($args) {
+		error_log(print_r($args,true));
+		$articleId = (int) array_shift($args);
+		$payMethod = Request::getUserVar('markAsPaid')?'ManualPayment':'Waiver';
+		$sendToScheduling = Request::getUserVar('sendToScheduling')?true:false;
+		
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 		import('payment.ojs.OJSPaymentManager');
 		$paymentManager =& OJSPaymentManager::getManager();
@@ -2045,8 +2098,13 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);
 		
 		// Since this is a waiver, fulfill the payment immediately
-		$paymentManager->fulfillQueuedPayment($queuedPayment, 'waiver');
-		Request::redirect(null, null, 'submissionEditing', array($articleId));
+		$paymentManager->fulfillQueuedPayment($queuedPayment, $payMethod);
+		
+		if ( $sendToScheduling ) {
+			Request::redirect(null, null, 'submissionEditing', array($articleId), 'scheduling');
+		} else { 
+			Request::redirect(null, null, 'submission', array($articleId));
+		}
 	}
 
 	//
@@ -2082,18 +2140,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		} else {
 			$templateMgr =& TemplateManager::getManager();
-			
-			// if payment information is enabled, 
-			import('payment.ojs.OJSPaymentManager');
-			$paymentManager =& OJSPaymentManager::getManager();
-			if ( $paymentManager->publicationEnabled() ) {
-				$completedPaymentDAO =& DAORegistry::getDAO('OJSCompletedPaymentDAO');
-				$templateMgr->assign('publicatonFeeEnabled',  true);
-				$templateMgr->assign('publicatonFeePaid',  $completedPaymentDAO->hasPaidPublication($sectionEditorSubmission->getJournalId(), $articleId) );	
-			} else {
-				$templateMgr->assign('publicatonFeeEnabled',  false);
-			}
-			
+						
 			if (Validation::isEditor()) {
 				// Make canReview and canEdit available to templates.
 				// Since this user is an editor, both are available.

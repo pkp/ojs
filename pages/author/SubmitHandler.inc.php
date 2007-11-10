@@ -297,6 +297,5 @@ class SubmitHandler extends AuthorHandler {
 		}
 		return array(&$journal, &$article);
 	}
-
 }
 ?>

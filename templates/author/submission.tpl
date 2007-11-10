@@ -20,6 +20,12 @@
 
 {include file="author/submission/management.tpl"}
 
+{if $authorFees}
+<div class="separator"></div>
+
+{include file="author/submission/authorFees.tpl"}
+{/if}
+
 <div class="separator"></div>
 
 {include file="author/submission/status.tpl"}

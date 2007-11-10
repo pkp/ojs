@@ -18,7 +18,7 @@
 	{if $itemAmount}
 		<tr>
 			<td class="label" width="20%">{translate key="plugins.paymethod.manual.purchase.fee"}</td>
-			<td class="value" width="80%"><strong>{$itemAmount|escape}{if $itemCurrencyCode} ({$itemCurrencyCode|escape}){/if}</strong></td>
+			<td class="value" width="80%"><strong>{$itemAmount|string_format:"%.2f"}{if $itemCurrencyCode} ({$itemCurrencyCode|escape}){/if}</strong></td>
 		</tr>
 	{/if}
 	{if $itemDescription}	

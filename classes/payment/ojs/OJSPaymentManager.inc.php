@@ -47,8 +47,8 @@ class OJSPaymentManager extends PaymentManager {
 
 	 	switch ( $type ) {
 			case PAYMENT_TYPE_PAYPERVIEW:
-				if ( isset($_SERVER['REQUEST_URI']) ) {	 		
-					$payment->setRequestUrl($_SERVER['REQUEST_URI']);
+				if ( isset($_SERVER['HTTP_REFERER']) ) {	 		
+					$payment->setRequestUrl($_SERVER['HTTP_REFERER'] );
 				} else { 
 					$payment->setRequestUrl(Request::url(null, 'article', 'view', $assocId ) );
 				}	
@@ -62,10 +62,14 @@ class OJSPaymentManager extends PaymentManager {
 				break;
 			case PAYMENT_TYPE_FASTTRACK:
 			case PAYMENT_TYPE_PUBLICATION:
-				$payment->setRequestUrl(Request::url(null, 'author') );		
-				break;
 			case PAYMENT_TYPE_SUBMISSION:
-				$payment->setRequestUrl(Request::url(null, 'author', 'saveSubmit', 5, array( 'articleId' => $assocId ) ) ); 
+				$authorSubmissionDao = &DAORegistry::getDAO('AuthorSubmissionDAO');
+				$authorSubmission = &$authorSubmissionDao->getAuthorSubmission($assocId);
+				if ($authorSubmission->getSubmissionProgress()!=0) {
+					$payment->setRequestUrl(Request::url(null, 'author', 'submit', null, array('articleId' => $assocId)));
+				} else { 
+					$payment->setRequestUrl(Request::url(null, 'author') );
+				}		
 				break;
 			default:
 				// something went wrong. crud.				
@@ -89,7 +93,7 @@ class OJSPaymentManager extends PaymentManager {
 		return $payment;
 	}
 	
-	function acceptDonationPayments() {
+	function donationEnabled() {
 		$journal =& Request::getJournal();
 		return $this->isConfigured() && $journal->getSetting('donationFeeEnabled');	
 	}

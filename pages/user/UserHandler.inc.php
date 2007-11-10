@@ -63,6 +63,31 @@ class UserHandler extends Handler {
 				Request::redirect('index', 'user');
 			}
 
+			$journal =& Request::getJournal();
+			$user =& Request::getUser();
+
+			import('payment.ojs.OJSPaymentManager');
+			$paymentManager =& OJSPaymentManager::getManager();
+			$membershipEnabled = $paymentManager->membershipEnabled();
+			$templateMgr->assign('membershipEnabled', $membershipEnabled);
+			$subscriptionEnabled = $paymentManager->acceptSubscriptionPayments();
+			$templateMgr->assign('subscriptionEnabled', $subscriptionEnabled);
+
+			if ( $subscriptionEnabled ) {				
+				import('subscription.SubscriptionDAO');
+				$subscriptionDAO =& DAORegistry::getDAO('SubscriptionDAO');
+				$subscriptionId = $subscriptionDAO->getSubscriptionIdByUser($user->getUserId(), $journal->getJournalId());
+				$templateMgr->assign('userHasSubscription', $subscriptionId);
+				if ( $subscriptionId !== false ) {
+					$subscription =& $subscriptionDAO->getSubscription($subscriptionId);
+					$templateMgr->assign('subscriptionEndDate', $subscription->getDateEnd());	
+				} 
+			}
+
+			if ( $membershipEnabled ) {
+				$templateMgr->assign('dateEndMembership', $user->getDateEndMembership());
+			}				
+
 			$rolesToDisplay[$journal->getJournalId()] = &$roles;
 			$templateMgr->assign_by_ref('userJournal', $journal);
 		}
@@ -125,32 +150,6 @@ class UserHandler extends Handler {
 		$templateMgr = &TemplateManager::getManager();
 		if ($subclass) {
 			$templateMgr->assign('pageHierarchy', array(array(Request::url(null, 'user'), 'navigation.user')));
-		}
-		$journal =& Request::getJournal();
-		$user =& Request::getUser();
-		if ( $journal && $user ) {
-			import('payment.ojs.OJSPaymentManager');
-			$paymentManager =& OJSPaymentManager::getManager();
-			$membershipEnabled = $paymentManager->membershipEnabled();
-			$templateMgr->assign('membershipEnabled', $membershipEnabled);
-			$subscriptionEnabled = $paymentManager->acceptSubscriptionPayments();
-			$templateMgr->assign('subscriptionEnabled', $subscriptionEnabled);
-
-			if ( $subscriptionEnabled ) {				
-				import('subscription.SubscriptionDAO');
-				$subscriptionDAO =& DAORegistry::getDAO('SubscriptionDAO');
-				$subscriptionId = $subscriptionDAO->getSubscriptionIdByUser($user->getUserId(), $journal->getJournalId());
-				$templateMgr->assign('userHasSubscription', $subscriptionId);
-				if ( $subscriptionId !== false ) {
-					$subscription =& $subscriptionDAO->getSubscription($subscriptionId);
-					$templateMgr->assign('subscriptionEndDate', $subscription->getDateEnd());	
-				} 
-			}
-
-			if ( $membershipEnabled ) {
-				$templateMgr->assign('dateEndMembership', $user->getDateEndMembership());
-			}				
-				
 		}
 	}
 
@@ -232,7 +231,8 @@ class UserHandler extends Handler {
 	//
 	function payRenewSubscription($args) {
 		UserHandler::validate();
-
+		UserHandler::setupTemplate(true);
+		
 		import('payment.ojs.OJSPaymentManager');
 		$paymentManager =& OJSPaymentManager::getManager();
 		
@@ -259,6 +259,7 @@ class UserHandler extends Handler {
 	
 	function payMembership($args) {
 		UserHandler::validate();
+		UserHandler::setupTemplate();
 
 		import('payment.ojs.OJSPaymentManager');
 		$paymentManager =& OJSPaymentManager::getManager();

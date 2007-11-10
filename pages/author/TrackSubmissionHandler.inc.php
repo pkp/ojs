@@ -96,6 +96,26 @@ class TrackSubmissionHandler extends AuthorHandler {
 		import('submission.sectionEditor.SectionEditorSubmission');
 		$templateMgr->assign_by_ref('editorDecisionOptions', SectionEditorSubmission::getEditorDecisionOptions());
 
+		// Set up required Payment Related Information
+		import('payment.ojs.OJSPaymentManager');
+		$paymentManager =& OJSPaymentManager::getManager();
+		if ( $paymentManager->submissionEnabled() || $paymentManager->fastTrackEnabled() || $paymentManager->publicationEnabled()) {
+			$templateMgr->assign('authorFees', true);
+			$completedPaymentDAO =& DAORegistry::getDAO('OJSCompletedPaymentDAO');
+			
+			if ( $paymentManager->submissionEnabled() ) {
+				$templateMgr->assign_by_ref('submissionPayment', $completedPaymentDAO->getSubmissionCompletedPayment ( $journal->getJournalId(), $articleId ));
+			}
+			
+			if ( $paymentManager->fastTrackEnabled()  ) {
+				$templateMgr->assign_by_ref('fastTrackPayment', $completedPaymentDAO->getFastTrackCompletedPayment ( $journal->getJournalId(), $articleId ));
+			}
+
+			if ( $paymentManager->publicationEnabled()  ) {
+				$templateMgr->assign_by_ref('publicationPayment', $completedPaymentDAO->getPublicationCompletedPayment ( $journal->getJournalId(), $articleId ));
+			}				   
+		}		
+
 		$templateMgr->assign('helpTopicId','editorial.authorsRole');
 		$templateMgr->display('author/submission.tpl');
 	}
@@ -512,13 +532,34 @@ class TrackSubmissionHandler extends AuthorHandler {
 	//
 	
 	/**
-	 * Display a form to pay for Fast Tracking an article
+	 * Display a form to pay for the submission an article
 	 * @param $args array ($articleId)
 	 */
-	function payToFastTrack($args) {
+	function paySubmissionFee($args) {
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		
 		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
+		parent::setupTemplate(true);
+		
+		import('payment.ojs.OJSPaymentManager');
+		$paymentManager =& OJSPaymentManager::getManager();
+		$user =& Request::getUser();
+
+		$queuedPayment =& $paymentManager->createQueuedPayment($journal->getJournalId(), PAYMENT_TYPE_SUBMISSION, $user->getUserId(), $articleId, $journal->getSetting('submissionFee'));
+		$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);
+	
+		$paymentManager->displayPaymentForm($queuedPaymentId, $queuedPayment);
+	}	
+	
+	/**
+	 * Display a form to pay for Fast Tracking an article
+	 * @param $args array ($articleId)
+	 */
+	function payFastTrackFee($args) {
+		$articleId = isset($args[0]) ? $args[0] : 0;
+		
+		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
+		parent::setupTemplate(true);
 		
 		import('payment.ojs.OJSPaymentManager');
 		$paymentManager =& OJSPaymentManager::getManager();
@@ -538,6 +579,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		
 		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
+		parent::setupTemplate(true);
 		
 		import('payment.ojs.OJSPaymentManager');
 		$paymentManager =& OJSPaymentManager::getManager();

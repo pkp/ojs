@@ -418,6 +418,7 @@ class ArticleHandler extends Handler {
 							$queuedPayment =& $paymentManager->createQueuedPayment($journalId, PAYMENT_TYPE_PAYPERVIEW, $user->getUserId(), $articleId, $journal->getSetting('payPerViewFee'));
 							$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);
 					
+							$templateMgr =& TemplateManager::getManager();							
 							$paymentManager->displayPaymentForm($queuedPaymentId, $queuedPayment);
 							exit;	
 						}	
@@ -425,7 +426,7 @@ class ArticleHandler extends Handler {
 								
 					if (!isset($galleyId) || $galleyId) {
 						if (!Validation::isLoggedIn()) {
-							Validation::redirectLogin("reader.subscribersOnly");
+							Validation::redirectLogin("reader.subscriptionRequiredLoginText");
 						}						
 						Request::redirect(null, 'subscriptions', 'about');	
 					}

@@ -54,6 +54,7 @@ class AuthorHandler extends Handler {
 		$paymentManager =& OJSPaymentManager::getManager();
 
 		if ( $paymentManager->isConfigured() ) {		
+			$templateMgr->assign('submissionEnabled', $paymentManager->submissionEnabled());
 			$templateMgr->assign('fastTrackEnabled', $paymentManager->fastTrackEnabled());
 			$templateMgr->assign('publicationEnabled', $paymentManager->publicationEnabled());
 			
@@ -324,9 +325,14 @@ class AuthorHandler extends Handler {
 	// 
 	// Payment Actions
 	//
+	function paySubmissionFee($args) {
+		import('pages.author.TrackSubmissionHandler');
+		TrackSubmissionHandler::paySubmissionFee($args);			
+	}
+	
 	function payFastTrackFee($args) {
 		import('pages.author.TrackSubmissionHandler');
-		TrackSubmissionHandler::payToFastTrack($args);			
+		TrackSubmissionHandler::payFastTrackFee($args);			
 	}
 
 	function payPublicationFee($args) {

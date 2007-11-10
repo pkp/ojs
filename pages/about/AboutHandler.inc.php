@@ -351,7 +351,36 @@ class AboutHandler extends Handler {
 		$templateMgr->assign('subscriptionMailingAddress', $subscriptionMailingAddress);
 		$templateMgr->assign('subscriptionAdditionalInformation', $subscriptionAdditionalInformation);
 		$templateMgr->assign('subscriptionTypes', $subscriptionTypes);
+		
 		$templateMgr->display('about/subscriptions.tpl');
+	}
+
+	/**
+	 * Display subscriptions page.
+	 */
+	function memberships() {
+		parent::validate(true);
+
+		AboutHandler::setupTemplate(true);
+		
+		$journal = &Request::getJournal();
+		$journalId = $journal->getJournalId();
+
+		import('payment.ojs.OJSPaymentManager');
+		$paymentManager =& OJSPaymentManager::getManager();
+
+		$membershipEnabled = $paymentManager->membershipEnabled();
+
+		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign('membershipEnabled', $membershipEnabled);		
+		if ( $membershipEnabled ) {
+			$membershipFeeName =& $journal->getLocalizedSetting('membershipFeeName');
+			$membershipFeeDescription =& $journal->getLocalizedSetting('membershipFeeDescription');
+
+			$templateMgr->assign('membershipFeeName', $membershipFeeName);
+			$templateMgr->assign('membershipFeeDescription', $membershipFeeDescription);
+		}		
+		$templateMgr->display('about/memberships.tpl');
 	}
 
 	/**

@@ -82,8 +82,9 @@ class OJSCompletedPaymentDAO extends DAO {
 		);
 		
 		$returner = false;
-		if (isset($result->fields[0]) && $result->fields[0] != 0) 
+		if (isset($result->fields[0]) && $result->fields[0] != 0) {
 			$returner = true;
+		}
 		
 		$result->Close();
 		return $returner;
@@ -93,6 +94,7 @@ class OJSCompletedPaymentDAO extends DAO {
 	 * Look for a completed SUBMISSION payment matching the journal and article IDs
 	 * @param int $journalId
 	 * @param int $articleId
+	 * @return bool
 	 */
 	function hasPaidSubmission ( $journalId, $articleId ) {
 		$result =& $this->retrieve(
@@ -105,10 +107,37 @@ class OJSCompletedPaymentDAO extends DAO {
 		);
 		
 		$returner = false;
-		if (isset($result->fields[0]) && $result->fields[0] != 0) 
+		if (isset($result->fields[0]) && $result->fields[0] != 0) {
 			$returner = true;
+		}
 		
 		$result->Close();
+		return $returner;
+	}
+	
+	/**
+	 * get a CompletedPayment for a SUBMISSION type payment matching the journal and article IDs
+	 * @param int $journalId
+	 * @param int $articleId
+	 * @return CompletedPayment
+	 */
+	function &getSubmissionCompletedPayment ( $journalId, $articleId ) {	
+		$result =& $this->retrieve(
+			'SELECT * FROM completed_payments WHERE payment_type = ? AND journal_id = ? AND assoc_id = ?', 
+			array(
+				PAYMENT_TYPE_SUBMISSION,
+				$journalId, 
+				$articleId
+				)
+		);
+
+		$returner = null;
+		if ($result->RecordCount() != 0) {
+			$returner = &$this->_returnPaymentFromRow($result->GetRowAssoc(false));
+		}
+
+		$result->Close();
+		unset($result);
 		return $returner;
 	}		
 
@@ -116,6 +145,7 @@ class OJSCompletedPaymentDAO extends DAO {
 	 * Look for a completed FASTTRACK payment matching the journal and article IDs
 	 * @param int $journalId
 	 * @param int $articleId
+	 * @return bool
 	 */
 	function hasPaidFastTrack ( $journalId, $articleId ) {
 		$result =& $this->retrieve(
@@ -136,6 +166,32 @@ class OJSCompletedPaymentDAO extends DAO {
 	}
 	
 	/**
+	 * get a CompletedPayment for a FASTTRACK type payment matching the journal and article IDs
+	 * @param int $journalId
+	 * @param int $articleId
+	 * @return CompletedPayment
+	 */	
+	function getFastTrackCompletedPayment ( $journalId, $articleId ) {
+		$result =& $this->retrieve(
+			'SELECT * FROM completed_payments WHERE payment_type = ? AND journal_id = ? AND assoc_id = ?', 
+			array(
+				PAYMENT_TYPE_FASTTRACK,
+				$journalId, 
+				$articleId
+				)
+		);
+			
+		$returner = null;
+		if ($result->RecordCount() != 0) {
+			$returner = &$this->_returnPaymentFromRow($result->GetRowAssoc(false));
+		}
+
+		$result->Close();
+		unset($result);
+		return $returner;
+	}		
+	
+	/**
 	 * Look for a completed payment matching the publication type and article ID
 	 * @param int $journalId 
 	 * @param int $articleId
@@ -154,8 +210,33 @@ class OJSCompletedPaymentDAO extends DAO {
 		$result->Close();
 		return $returner; 
 	}		
-	
-	
+
+	/**
+	 * get a CompletedPayment for a PUBLICATION type payment matching the journal and article IDs
+	 * @param int $journalId
+	 * @param int $articleId
+	 * @return CompletedPayment
+	 */	
+	function getPublicationCompletedPayment ( $journalId, $articleId ) {
+		$result =& $this->retrieve(
+			'SELECT * FROM completed_payments WHERE payment_type = ? AND journal_id = ? AND assoc_id = ?', 
+			array(
+				PAYMENT_TYPE_PUBLICATION,
+				$journalId, 
+				$articleId
+				)
+		);	
+
+		$returner = null;
+		if ($result->RecordCount() != 0) {
+			$returner = &$this->_returnPaymentFromRow($result->GetRowAssoc(false));
+		}
+
+		$result->Close();
+		unset($result);
+		return $returner;
+	}	
+		
 	/**
 	 * Retrieve an array of payments for a particular journal ID.
 	 * @param $journalId int

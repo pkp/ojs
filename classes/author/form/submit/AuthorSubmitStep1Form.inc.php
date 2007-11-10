@@ -49,6 +49,23 @@ class AuthorSubmitStep1Form extends AuthorSubmitForm {
 		$roleDao = &DAORegistry::getDAO('RoleDAO');
 		$isEditor = $roleDao->roleExists($journal->getJournalId(), $user->getUserId(), ROLE_ID_EDITOR) || $roleDao->roleExists($journal->getJournalId(), $user->getUserId(), ROLE_ID_SECTION_EDITOR);
 
+		// Set up required Payment Related Information
+		import('payment.ojs.OJSPaymentManager');
+		$paymentManager =& OJSPaymentManager::getManager();
+		if ( $paymentManager->submissionEnabled() || $paymentManager->fastTrackEnabled() || $paymentManager->publicationEnabled()) {
+			$templateMgr->assign('authorFees', true);
+			$completedPaymentDAO =& DAORegistry::getDAO('OJSCompletedPaymentDAO');
+			$articleId = $this->articleId;
+			
+			if ( $paymentManager->submissionEnabled() ) {
+				$templateMgr->assign_by_ref('submissionPayment', $completedPaymentDAO->getSubmissionCompletedPayment ( $journal->getJournalId(), $articleId ));
+			}
+			
+			if ( $paymentManager->fastTrackEnabled()  ) {
+				$templateMgr->assign_by_ref('fastTrackPayment', $completedPaymentDAO->getFastTrackCompletedPayment ( $journal->getJournalId(), $articleId ));
+			}	   
+		}		
+		
 		$templateMgr->assign('sectionOptions', array('0' => Locale::translate('author.submit.selectSection')) + $sectionDao->getSectionTitles($journal->getJournalId(), !$isEditor));
 		parent::display();
 	}

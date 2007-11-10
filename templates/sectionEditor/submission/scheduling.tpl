@@ -10,7 +10,8 @@
  *}
 <a name="scheduling"></a>
 <h3>{translate key="submission.scheduling"}</h3>
-{if !$publicatonFeeEnabled || $publicatonFeePaid}
+
+{if !$publicatonFeeEnabled || $publicationPayment}
 	<form action="{url op="scheduleForPublication" path=$submission->getArticleId()}" method="post">
 	<p>
 		<label for="issueId">{translate key="editor.article.scheduleForPublication"}</label>
@@ -40,14 +41,17 @@
     		{translate key="editor.article.payment.publicationFeeNotPaid"}
     	</td>
 		<td align="right">
-			<form action="{url op="payPublicationFee" path=$submission->getArticleId()}" method="post">
-			<input type="submit" value="{translate key="editor.article.payment.payPublicationFee"}" class="button defaultButton" />&nbsp;
+			<form action="{url op="waivePublicationFee" path=$submission->getArticleId()}" method="post">
+			<input type="hidden" name="markAsPaid" value=1 />
+			<input type="hidden" name="sendToScheduling" value=1 />
+			<input type="submit" value="{translate key="payment.paymentReceived"}" class="button defaultButton" />&nbsp;
 			</form>
 		</td>
 		{if $isEditor}
 		<td align="left">
 			<form action="{url op="waivePublicationFee" path=$submission->getArticleId()}" method="post">
-			<input type="submit" value="{translate key="editor.article.payment.waivePublicationFee"}" class="button defaultButton" />&nbsp;
+			<input type="hidden" name="sendToScheduling" value=1 />
+			<input type="submit" value="{translate key="payment.waive"}" class="button defaultButton" />&nbsp;
 			</form>
 		</td>	
 		{/if}

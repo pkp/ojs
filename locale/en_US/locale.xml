@@ -578,6 +578,7 @@
 	<!-- Reader article view -->
 	<message key="reader.fullText">Full Text:</message>
 	<message key="reader.subscribersOnly">Subscribers Only</message>
+	<message key="reader.subscriptionRequiredLoginText">Subscription required to access item. To verify subscription, log in to journal.</message>  
 	<message key="reader.openAccess">Open Access</message>
 	<message key="reader.subscriptionAccess">Subscription Access</message>
 	<message key="reader.subscriptionOrFeeAccess">Subscription or Fee Access</message>
@@ -1773,9 +1774,7 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	<message key="editor.article.scheduleForPublication">Schedule for publication in</message>
 	<message key="editor.article.scheduleForPublication.toBeAssigned">To Be Assigned</message>
 
-	<message key="editor.article.payment.publicationFeeNotPaid">Publication Fee not paid. To schedule item for publication notify author to pay fee, pay fee, or waive fee.</message>
-	<message key="editor.article.payment.payPublicationFee">Pay Publication Fee</message>
-	<message key="editor.article.payment.waivePublicationFee">Waive Publication Fee</message>
+	<message key="editor.article.payment.publicationFeeNotPaid">Publication Fee not paid. To schedule item for publication notify author to pay fee or waive fee.</message>
 	
 	<!-- Section Editor -->
 	<message key="sectionEditor.activeEditorialAssignments">Active Editorial Assignments</message>
@@ -1890,6 +1889,9 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	<message key="author.submit.confirmation">5. Confirmation</message>
 	<message key="author.submit.cancelSubmission">You can complete this submission at a later date by selecting Active Submissions from the Author home.</message>
 	<message key="author.submit.notAccepting">This journal is not accepting submissions at this time.</message>
+	<message key="author.submit.requestWaiver">Request Waiver</message>
+	<message key="author.submit.qualityForWaiver">Please consider waiving the fees on this article</message>
+	<message key="author.submit.addReasonsForWaiver">Use this box to add the reasons why fees should be waived.</message>
 	
 	<message key="author.submissions.uploadCopyeditedVersion">Upload Copyedited Version</message>
 	<message key="author.submissions.proofreadingCorrections">Proofreading Corrections</message>
@@ -2283,6 +2285,7 @@ current password.<br /><br />Enter your email address below to reset your passwo
 	<message key="about.subscriptions">Subscriptions</message>
 	<message key="about.subscriptionsContact">Subscriptions Contact</message>
 	<message key="about.availableSubscriptionTypes">Subscription Types</message>
+	<message key="about.memberships">Memberships</message>
 	<message key="about.journalSponsorship">Journal Sponsorship</message>
 	<message key="about.siteMap">Site Map</message>
 	<message key="about.aboutThisPublishingSystem">About this Publishing System</message>
@@ -2325,6 +2328,13 @@ current password.<br /><br />Enter your email address below to reset your passwo
 	<message key="payment.loginRequired.forArticle">Subscription or pay-per-view required to access item. To verify subscription or to pay fee, log in to journal.</message>
 	<message key="payment.loginRequired.forDonation">You must be logged in to make a donation.</message>
 	
+	<message key="payment.paid">Paid</message>
+	<message key="payment.payNow">Pay Now</message>
+	<message key="payment.waive">Waive</message>
+	<message key="payment.alreadyPaid">Already Paid</message>
+	<message key="payment.alreadyPaidMessage">Select this box if you've already sent your payment to the journal in order to finish the submission process.  The submission will not be reviewed until the payment arrives.  Click PAY NOW above to see the payment instructions.</message>
+	<message key="payment.paymentReceived">Payment Received</message>
+	<message key="payment.paymentSent">Payment has already been sent</message>
 	<message key="payment.type.submission">Submission Fee</message>
 	<message key="payment.type.publication">Publication Fee</message>
 	<message key="payment.type.fastTrack">Fast Track Review Fee</message>
@@ -2335,6 +2345,7 @@ current password.<br /><br />Enter your email address below to reset your passwo
 	
 	<message key="payment.donation.makeDonation">Make a donation</message>
 	
+	<message key="payment.submission.paySubmission">Pay Submission Fee</message>
 	<message key="payment.fastTrack.payFastTrack">Pay to FastTrack</message>
 	<message key="payment.fastTrack.inFastTrack">in FastTrack</message>
 	<message key="payment.publication.payPublication">Pay to Publish</message>
@@ -2867,7 +2878,7 @@ The paragraph that begins "This last topic..." is not indented.</pre>]]></messag
 	<message key="default.journalSettings.submissionFeeDescription">Authors are required to pay an Article Submission Fee in Step 1 of the submission process to contribute to review costs. You may wish to consult the Waiver Policy.</message>
 	<message key="default.journalSettings.fastTrackFeeDescription">With the payment of this fee, the review, editorial decision, and author notification on this manuscript is guaranteed to take place within 4 weeks.</message>
 	<message key="default.journalSettings.publicationFeeDescription">If this paper is accepted for publication, you will be asked to pay an Article Publication Fee to cover publications costs. You may wish to consult the Waiver Policy.</message>
-	<message key="default.journalSettings.waiverPolicy">If you do not have funds to pay such fees, please use the Comments box below as we do not this to prevent the publication of worthy work.</message>
+	<message key="default.journalSettings.waiverPolicy">If you do not have funds to pay such fees, please use the Comments box below as we do not want this to prevent the publication of worthy work.</message>
 	<message key="default.journalSettings.payPerViewFeeDescription">The payment of this fee will enable you to view, download, and print this article.</message>
 	<message key="default.journalSettings.membershipFeeDescription">The payment of this fee will enroll you as a member in this association for one year and provide you with free access to this journal.</message>
 	<message key="default.journalSettings.donationFeeDescription">Donations of any amount to this journal are gratefully received and provide a means for the editors to continue to provide a journal of the highest quality to its readers.</message>

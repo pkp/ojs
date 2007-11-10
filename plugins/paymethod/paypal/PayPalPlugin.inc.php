@@ -160,7 +160,7 @@ class PayPalPlugin extends PaymethodPlugin {
 			case 'ipn':
 				// Build a confirmation transaction.
 				$req = 'cmd=_notify-validate';
-				foreach ($_POST as $key => $value) $req .= '&' . urlencode($key) . '=' . urlencode($value);
+				foreach ($_POST as $key => $value) $req .= '&' . urlencode($key) . '=' . urlencode($value);		
 				// Create POST response
 				$ch = curl_init();
 				curl_setopt($ch, CURLOPT_URL, $this->getSetting($journal->getJournalId(), 'paypalurl'));

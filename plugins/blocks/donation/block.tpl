@@ -7,7 +7,7 @@
  * Common site sidebar menu -- donation links.
  *
  *}
-{if $acceptDonationPayments}
+{if $donationEnabled}
 <div class="block" id="sidebarDonation">
 	<span class="blockTitle"><a href="{url page="donations"}">{translate key="payment.type.donation"}</a></span>
 </div>

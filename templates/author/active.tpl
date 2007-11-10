@@ -45,7 +45,10 @@
 
 				{** Payment related actions *}
 				{if $status==STATUS_QUEUED_UNASSIGNED || $status==STATUS_QUEUED_REVIEW}
-					{if $fastTrackEnabled}
+					{if $submissionEnabled && !$completedPaymentDAO->hasPaidSubmission($submission->getJournalId(), $submission->getArticleId())}
+						<br />
+						<a href="{url op="paySubmissionFee" path="$articleId"}" class="action">{translate key="payment.submission.paySubmission"}</a>					
+					{elseif $fastTrackEnabled}
 						<br />
 						{if $submission->getFastTracked()}
 							{translate key="payment.fastTrack.inFastTrack"}

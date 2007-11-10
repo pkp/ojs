@@ -31,6 +31,7 @@
 	{if $currentJournal->getLocalizedSetting('pubFreqPolicy') != ''}<li>&#187; <a href="{url op="editorialPolicies" anchor="publicationFrequency"}">{translate key="about.publicationFrequency"}</a></li>{/if}
 	{if empty($journalSettings.enableSubscriptions) && $currentJournal->getLocalizedSetting('openAccessPolicy') != ''}<li>&#187; <a href="{url op="editorialPolicies" anchor="openAccessPolicy"}">{translate key="about.openAccessPolicy"}</a></li>{/if}
 	{if $journalSettings.enableLockss && $currentJournal->getLocalizedSetting('lockssLicense') != ''}<li>&#187; <a href="{url op="editorialPolicies" anchor="archiving"}">{translate key="about.archiving"}</a></li>{/if}
+	{if $journalSettings.journalPaymentsEnabled && $journalSettings.membershipFeeEnabled}<li>&#187; <a href="{url op="memberships"}">{translate key="about.memberships"}</a></li>{/if}
 	{if !empty($journalSettings.enableSubscriptions)}<li>&#187; <a href="{url op="subscriptions"}">{translate key="about.subscriptions"}</a></li>{/if}
 	{if !empty($journalSettings.enableSubscriptions) && !empty($journalSettings.enableAuthorSelfArchive)}<li>&#187; <a href="{url op="editorialPolicies" anchor="authorSelfArchivePolicy"}">{translate key="about.authorSelfArchive"}</a></li>{/if}
 	{if !empty($journalSettings.enableSubscriptions) && !empty($journalSettings.enableDelayedOpenAccess)}<li>&#187; <a href="{url op="editorialPolicies" anchor="delayedOpenAccessPolicy"}">{translate key="about.delayedOpenAccess"}</a></li>{/if}

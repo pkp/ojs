@@ -732,11 +732,17 @@ class SectionEditorHandler extends Handler {
 	/**
 	 * Payments
 	 */
-	 function payPublicationFee($args) {
+
+	 function waiveSubmissionFee($args) {
 		import('pages.sectionEditor.SubmissionEditHandler');
-		SubmissionEditHandler::payPublicationFee($args);
+		SubmissionEditHandler::waiveSubmissionFee($args);
 	 }
 
+	 function waiveFastTrackFee($args) {
+		import('pages.sectionEditor.SubmissionEditHandler');
+		SubmissionEditHandler::waiveFastTrackFee($args);
+	 }
+	 
 	 function waivePublicationFee($args) {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::waivePublicationFee($args);
