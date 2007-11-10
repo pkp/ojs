@@ -1890,7 +1890,7 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	<message key="author.submit.cancelSubmission">You can complete this submission at a later date by selecting Active Submissions from the Author home.</message>
 	<message key="author.submit.notAccepting">This journal is not accepting submissions at this time.</message>
 	<message key="author.submit.requestWaiver">Request Waiver</message>
-	<message key="author.submit.qualityForWaiver">Please consider waiving the fees on this article</message>
+	<message key="author.submit.qualityForWaiver">Please consider waiving the submission fee for this article</message>
 	<message key="author.submit.addReasonsForWaiver">Use this box to add the reasons why fees should be waived.</message>
 	
 	<message key="author.submissions.uploadCopyeditedVersion">Upload Copyedited Version</message>
