@@ -428,7 +428,7 @@ class ArticleHandler extends Handler {
 						if (!Validation::isLoggedIn()) {
 							Validation::redirectLogin("reader.subscriptionRequiredLoginText");
 						}						
-						Request::redirect(null, 'subscriptions', 'about');	
+						Request::redirect(null, 'about', 'subscriptions');	
 					}
 				}
 			}
