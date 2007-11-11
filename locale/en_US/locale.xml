@@ -1891,7 +1891,7 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	<message key="author.submit.notAccepting">This journal is not accepting submissions at this time.</message>
 	<message key="author.submit.requestWaiver">Request Waiver</message>
 	<message key="author.submit.qualityForWaiver">Please consider waiving the submission fee for this article</message>
-	<message key="author.submit.addReasonsForWaiver">Use this box to add the reasons why fees should be waived.</message>
+	<message key="author.submit.addReasonsForWaiver">Please use the comments box below to indicate why fees should be waived.</message>
 	
 	<message key="author.submissions.uploadCopyeditedVersion">Upload Copyedited Version</message>
 	<message key="author.submissions.proofreadingCorrections">Proofreading Corrections</message>
@@ -2875,7 +2875,7 @@ The paragraph that begins "This last topic..." is not indented.</pre>]]></messag
 	<message key="default.journalSettings.lockssLicense"><![CDATA[This journal utilizes the LOCKSS system to create a distributed archiving system among participating libraries and permits those libraries to create permanent archives of the journal for purposes of preservation and restoration. <a href="http://lockss.stanford.edu/">More...</a>]]></message>
 	
 	<!-- Default settings for payment items. -->
-	<message key="default.journalSettings.submissionFeeDescription">Authors are required to pay an Article Submission Fee in Step 1 of the submission process to contribute to review costs. You may wish to consult the Waiver Policy.</message>
+	<message key="default.journalSettings.submissionFeeDescription">Authors are required to pay an Article Submission Feeas part of the submission process to contribute to review costs. You may wish to consult the Waiver Policy.</message>
 	<message key="default.journalSettings.fastTrackFeeDescription">With the payment of this fee, the review, editorial decision, and author notification on this manuscript is guaranteed to take place within 4 weeks.</message>
 	<message key="default.journalSettings.publicationFeeDescription">If this paper is accepted for publication, you will be asked to pay an Article Publication Fee to cover publications costs. You may wish to consult the Waiver Policy.</message>
 	<message key="default.journalSettings.waiverPolicy">If you do not have funds to pay such fees, please use the Comments box below as we do not want this to prevent the publication of worthy work.</message>
