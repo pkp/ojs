@@ -15,7 +15,7 @@
 	{if $submissionPayment}
 		{translate key="payment.paid"} {$submissionPayment->getTimestamp()|date_format:$datetimeFormatLong}
 	{else}
-		{$currentJournal->getSetting('submissionFee')|string_format:"%.2f"} {$currentJournal->getSetting('currency')} 
+		{$currentJournal->getSetting('submissionFee')|string_format:"%.2f"} ({$currentJournal->getSetting('currency')}) 
 		{if $showPayLinks}<a class="action" href="{url op="paySubmissionFee" path=$articleId}">{translate key="payment.payNow"}</a>{/if}
 	{/if}
 	<br />{$currentJournal->getLocalizedSetting('submissionFeeDescription')|nl2br}</p>
@@ -25,13 +25,13 @@
 	{if $fastTrackPayment}
 		{translate key="payment.paid"} {$fastTrackPayment->getTimestamp()|date_format:$datetimeFormatLong}
 	{else}
-		{$currentJournal->getSetting('fastTrackFee')|string_format:"%.2f"} {$currentJournal->getSetting('currency')}
+		{$currentJournal->getSetting('fastTrackFee')|string_format:"%.2f"} ({$currentJournal->getSetting('currency')})
 		{if $showPayLinks}<a class="action" href="{url op="payFastTrackFee" path=$articleId}">{translate key="payment.payNow"}</a>{/if}
 	{/if}
 	<br />{$currentJournal->getLocalizedSetting('fastTrackFeeDescription')|nl2br}</p>	
 {/if}
 {if $currentJournal->getSetting('publicationFeeEnabled')}
-	<p>{$currentJournal->getLocalizedSetting('publicationFeeName')|escape}: {$currentJournal->getSetting('publicationFee')|string_format:"%.2f"} {$currentJournal->getSetting('currency')}
+	<p>{$currentJournal->getLocalizedSetting('publicationFeeName')|escape}: {$currentJournal->getSetting('publicationFee')|string_format:"%.2f"} ({$currentJournal->getSetting('currency')})
 	<br />{$currentJournal->getLocalizedSetting('publicationFeeDescription')|nl2br}</p>	
 {/if}
 {if $currentJournal->getLocalizedSetting('waiverPolicy') != ''}

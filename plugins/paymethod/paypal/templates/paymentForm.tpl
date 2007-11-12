@@ -10,6 +10,7 @@
 {assign var="pageTitle" value="plugins.paymethod.paypal"}
 {include file="common/header.tpl"}
 
+<p><img src="{$baseUrl}/plugins/paymethod/paypal/images/paypal_cards.png" alt="paypal" /></p>
 <p>{translate key="plugins.paymethod.paypal.warning"}</p>
 <form action="{$paypalFormUrl}" id="paypalPaymentForm" name="paypalPaymentForm" method="post" style="margin-bottom: 0px;">
 	{include file="common/formErrors.tpl"}
@@ -42,5 +43,4 @@
 	
 	<p><input type="submit" name="submitBtn" value="{translate key="common.continue"}" class="button defaultButton" /></p>
 </form>
-<p><img src="{$baseUrl}/plugins/paymethod/paypal/images/paypal_cards.png" alt="paypal" /></p>
 {include file="common/footer.tpl"}
