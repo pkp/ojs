@@ -1,28 +1,17 @@
 /**
- * classicred.css, v 1.02 2006-03-06
- * Copyright (c) 2007 Jon Whipple
+ * classicBlue.css
+ *
+ * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * based on
- *
- * common.css
- *
- * Copyright (c) 2003-2006 John Willinsky
- * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
- *
- * Site-wide shared stylesheet.
+ * Classic blue theme stylesheet.
  *
  * $Id$
  */
 
-/**
- * Common HTML elements
- */
-
 body {
 	background-color: #fff;
-	color: #000;
-	text-align: center;
+	font-family: "Times New Roman", Times, Georgia, serif;
 }
 
 a {
@@ -46,212 +35,107 @@ a:hover {
 	background: #660000;
 }
 
-h1,h2,h3,h4,h5,h6 {
-	text-transform: uppercase;
-}
-
-input.textField, select.selectMenu, textarea.textArea, input.uploadField {
-	background-color: #EECCCC;
-}
-
-input.button {
-	background-color: transparent;
+label.error {
+	color: #f60;
 }
 
 input.defaultButton {
-	background-color: transparent;
-	color: inherit;
+	color: #EECCCC;
+	background: #660000;
 }
 
-
-/**
- * Main layout elements
- */
-
 #container {
-	width: 80%;
-	\width: 80%;
-	w\idth: 80%;
-	margin: 0 auto;
-	border-left: 1px solid #660000;
-	background-color: #EECCCC;
+	background-color: #fff;
+	font-size: 1em;
 }
 
 #header {
-	padding: 0 166px 0 0;
-	background-color: #EECCCC;
+	#height:  100px;
+	background-color: #fff;
 }
 
 #headerTitle {
 	text-align: center;
-	padding: 15px 0 15px 0;
-	width: auto;
-	\width: auto;
-	w\idth: auto;
-	background-color: white;
-	border-top: 25px solid #660000;
-	border-right: 1px solid #660000;
-	border-bottom: 1px solid #660000;
 }
 
 #header h1 {
-	font-family: 'Times New Roman',Times,Georgia,serif;
-	text-align: center;
-	background-color: transparent;
+	line-height: 2.5;
+	font-family: "Times New Roman", Times, Georgia, serif;
 	text-transform: uppercase;
-	letter-spacing: 2px;
-}
-
-#body {
-	width: 100%;
-	\width: 100%;
-	w\idth: 100%;
-	text-align: center;
-	background-color: transparent;
+	letter-spacing: 10px;
+	font-size: 2em;
+	background-color: #600;
+	color:  #fff;
 }
 
 #footer {
-	\width: 100%;
-	w\idth: 100%;
-	background-color: white;
+	background-color: #600;
+	color:  #fff;
 }
 
 #footerContent {
-	width: 100%;
-	\width: 100%;
-	w\idth: 100%;
-}
-
-#sidebar {
-	width: 165px;
-	\width: 165px;
-	w\idth: 165px;
-	text-align: center;
-	color: #333333;
-	background-color: #EECCCC;
-	clear: both;
+	color:  #fff;
 }
 
 #main {
-	text-align: center;
-	margin: 0;
-	margin-right: 166px;
-	margin-left: auto;
-	width: auto;
-	/width: auto;
-	w/idth: auto;
 	background-color: #fff;
-	border-right: 1px solid #660000;
+	border-top: 1px solid yellow;
+	border-bottom: 1px dotted #660000;
+	margin-top: 15px;
 }
 
 #main h2 {
-	margin: 0 1em 0.5em 1em;
-	font-family: 'Times New Roman',Times,Georgia,serif;
-	text-align: center;
+	font-family: "Times New Roman", Times, Georgia, serif;
+	text-transform: uppercase;
 }
 
 #main h3 {
-	font-family: 'Times New Roman',Times,Georgia,serif;
+	font-family: "Times New Roman", Times, Georgia, serif;
+	text-transform: uppercase;
 }
 
 #navbar {
-	margin-left: 0px;
-	padding: 0 0 0.5em 0;
-	border-bottom: 1px solid #660000;
-	background-color: transparent;
+	border-bottom: 1px dotted #660000;
 	text-align: center;
 }
 
 #breadcrumb {
-	padding: 1em;
+	height: 18px;
+	line-height: 1.5em;
 	text-align: center;
+	border-bottom: 1px dotted #660000;
+	padding: 0;
+	font-style: italic;
 }
 
 #content {
-	margin-left: 1em;
-	border-top: none;
-	background-color: white;
+	border-top: 1px dotted #660000;
 }
 
 #content h3 {
-	font-family: 'Times New Roman',Times,Georgia,serif;
+	font-family:  "Times New Roman", Times, Georgia, serif;
+	text-transform: uppercase;
 }
 
 #content h4 {
-	font-family: 'Times New Roman',Times,Georgia,serif;
+	font-family:  "Times New Roman", Times, Georgia, serif;
+	text-transform: uppercase;
 }
 
 #content h5 {
-	margin: 0em 1em 0.25em 0em;
-	padding-top: 0.75em;
-	font-weight: bold;
-	font-size: 1em;
+	text-transform: uppercase;
 }
 
-
-/**
- * Sidebar
- */
-
-#sidebar div.block {
-	text-align: center;
+span.highlight {
+	border-bottom: 1px dotted #660000;
 }
 
-#sidebar div.block span.blockTitle {
-	padding: 0;
+table.listing tr.highlight {
+	background: #fcff64;
 }
 
-#sidebar input.textField {
-	margin: 0;
-	padding: 0;
-	text-align: center;
-	background-color: white;
-}
-
-#sidebar select.selectMenu, #sidebar input.button {
-	margin: 0;
-	padding: 0;
-	font-size: 1em;
-	text-align: center;
-}
-
-#sidebar div.block form {
-	margin: 0;
-	text-align: center;
-	display: block;
-}
-#sidebar div.block form table {
-	text-align: center;
-	padding: 0;
-	margin: 0;
-	width: 100%;
-}
-
-#sidebar div.block ul {
-	margin: 0;
-	padding: 0;
-	text-align: center;
-	list-style-type: none;
-}
-
-/**
- * Table styles
- */
-
-table.info {
-	text-align: left;
-}
-
-table.info td {
-	text-align: left;
-}
-
-table.listing {
-	text-align: left;
-}
-
-table.listing td {
-	text-align: left;
+table.listing tr.fastTracked {
+	background-color: #ecc;
 }
 
 table.listing td.headseparator {
@@ -262,54 +146,28 @@ table.listing td.endseparator {
 	border-top: 1px dotted #660000;
 }
 
-table.listing td.separator, table.info td.separator {
-	border-top: 1px dotted #660000;
+span.formError {
+	color: #f60;
 }
 
-#content form {
-	width: 100%;
-	margin: 0 auto;
-	text-align: center;
+ul.formErrorList {
+	color: #f60;
 }
 
-table.data {
-	border-collapse: collapse;
-	width: 90%;
-	margin: 0 auto;
-	text-align: left;
-}
-
-table.data td {
-	text-align: left;
-}
-
-table.data td.label {
-	width: 30%;
-	text-align: left;
-}
-
-table.data td.formSubLabel {
-	text-align: left;
-}
-
-table.data td.value {
-	width: 70%;
-	text-align: left;
-}
-
-table.data td.value input {
-	text-align: left;
-}
-
-ul.steplist {
-	text-align: left;
-}
-
-ul.steplist li {
-	text-align: left;
-}
-
-div.separator, div.thickSeparator {
+div.separator {
 	border-bottom: 1px dotted #660000;
 }
 
+#rightSidebar ul, #leftSidebar ul {
+	margin-left: 0px;
+	padding-left: 0px;
+}
+
+#rightSidebar li, #leftSidebar li {
+	list-style-type: none;
+}
+
+#rightSidebar, #leftSidebar {
+	margin-top: 5px;
+	border-bottom: 1px dotted #660000;
+}
