@@ -481,20 +481,22 @@ class Locale {
 			// Compare it against the translation.
 			$bodyParams = Locale::getParameterNames($fields['body']);
 			$referenceBodyParams = Locale::getParameterNames($referenceFields['body']);
-			if ($bodyParams !== $referenceBodyParams) {
+			$diff = array_diff($bodyParams, $referenceBodyParams);
+			if (!empty($diff)) {
 				$errors[EMAIL_ERROR_DIFFERING_PARAMS][] = array(
 					'key' => $fields['email_key'],
-					'mismatch' => array_diff($bodyParams, $referenceBodyParams)
+					'mismatch' => $diff
 				);
 			}
 
 			$subjectParams = Locale::getParameterNames($fields['subject']);
 			$referenceSubjectParams = Locale::getParameterNames($referenceFields['subject']);
 
-			if ($subjectParams !== $referenceSubjectParams) {
+			$diff = array_diff($subjectParams, $referenceSubjectParams);
+			if (!empty($diff)) {
 				$errors[EMAIL_ERROR_DIFFERING_PARAMS][] = array(
 					'key' => $fields['email_key'],
-					'mismatch' => array_diff($subjectParams, $referenceSubjectParams)
+					'mismatch' => $diff
 				);
 			}
 
@@ -557,7 +559,7 @@ class Locale {
 	 */
 	function getParameterNames($source) {
 		$matches = null;
-		String::regexp_match_get('/({\$[^}]+})/' /* '/{\$[^}]+})/' */, $source, $matches);
+		String::regexp_match_all('/({\$[^}]+})/' /* '/{\$[^}]+})/' */, $source, $matches);
 		array_shift($matches); // Knock the top element off the array
 		return $matches;
 	}

@@ -51,8 +51,10 @@ class LanguageAction {
 		@$process = proc_open('tar --version', $fds, $pipes);
 		if (!is_resource($process)) return false;
 		fclose($pipes[0]); // No input necessary
-		fflush($pipes[1]); // Flush stdout
-		fflush($pipes[2]); // Flush stderr
+		stream_get_contents($pipes[1]); // Flush pipes. fflush seems to
+		stream_get_contents($pipes[2]); // behave oddly, so it's avoided
+		fclose($pipes[1]);
+		fclose($pipes[2]);
 		if (proc_close($process) !== 0) return false;
 
 		// Check that we can write to a few locations

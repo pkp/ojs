@@ -27,18 +27,20 @@
 		<p>{translate key="plugins.generic.translator.errors.$type.description"}</p>
 		<ul>
 	{/if}
+	{assign var=categoryCount value=0}
 	{foreach from=$categoryErrors item=error}
 		<li>
 			{translate key="plugins.generic.translator.errors.$type.message" params=$error}
 			{assign var=defaultValue value=$error.reference}
 			{if $type == 'LOCALE_ERROR_DIFFERING_PARAMS'}
+				{assign var=wordCount value=$error.reference|explode:" "|@count}
+				{assign var=categoryCount value=$categoryCount+$wordCount}
 				<ul>
 					{foreach from=$error.mismatch item=param}
 						<li>{$param|escape}</li>
 					{/foreach}
 				</ul>
-			{/if}
-			{if $type == 'LOCALE_ERROR_EXTRA_KEY'}
+			{elseif $type == 'LOCALE_ERROR_EXTRA_KEY'}
 				<br />
 				{assign var=counter value=$counter+1}
 				<input type="checkbox" name="deleteKey[]" id="checkbox-{$counter}" value="{$error.filename|escape:"url"|escape:"url"}/{$error.key|escape}" />
@@ -53,6 +55,8 @@
 				<a href="{url op="createFile" path=$locale|to_array:$filenameEscaped redirectUrl=$redirectUrl}" onclick='return confirm("{translate|escape:"quotes" key="plugins.generic.translator.saveBeforeContinuing"}")' class="action">{translate key="common.create"}</a>
 			{elseif $type == 'LOCALE_ERROR_SUSPICIOUS_LENGTH'}
 				{assign var=defaultValue value=$error.value}
+				{assign var=wordCount value=$error.reference|explode:" "|@count}
+				{assign var=categoryCount value=$categoryCount+$wordCount}
 				<input type="hidden" name="stack[]" value="{$error.filename|escape}" />
 				<input type="hidden" name="stack[]" value="{$error.key|escape}" />
 				<br />
@@ -63,6 +67,8 @@
 				{/if}
 			{else}{* $type == LOCALE_ERROR_MISSING_KEY *}
 				{assign var=defaultValue value=$error.reference}
+				{assign var=wordCount value=$defaultValue|explode:" "|@count}
+				{assign var=categoryCount value=$categoryCount+$wordCount}
 				<input type="hidden" name="stack[]" value="{$error.filename|escape}" />
 				<input type="hidden" name="stack[]" value="{$error.key|escape}" />
 				<br />
@@ -82,6 +88,9 @@
 		</li>
 	{/foreach}
 	</ul>
+	{if $categoryCount}
+		&nbsp;&nbsp;&nbsp;&nbsp;(Total {$categoryCount|escape} Words)
+	{/if}
 {/foreach}
 
 {foreach from=$emailErrors key=type item=categoryErrors}

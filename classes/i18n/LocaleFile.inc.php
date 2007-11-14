@@ -193,6 +193,7 @@ class LocaleFile {
 					'locale' => $this->locale,
 					'mismatch' => array_diff($referenceParams, $params),
 					'filename' => $this->filename,
+					'reference' => $referenceValue,
 					'value' => $value
 				);
 			}
