@@ -30,6 +30,7 @@
 	{foreach from=$categoryErrors item=error}
 		<li>
 			{translate key="plugins.generic.translator.errors.$type.message" params=$error}
+			{assign var=defaultValue value=$error.reference}
 			{if $type == 'LOCALE_ERROR_DIFFERING_PARAMS'}
 				<ul>
 					{foreach from=$error.mismatch item=param}
@@ -50,12 +51,8 @@
 					{url|assign:"redirectUrl" op="editMiscFile" path=$locale|to_array:$filenameEscaped}
 				{/if}
 				<a href="{url op="createFile" path=$locale|to_array:$filenameEscaped redirectUrl=$redirectUrl}" onclick='return confirm("{translate|escape:"quotes" key="plugins.generic.translator.saveBeforeContinuing"}")' class="action">{translate key="common.create"}</a>
-			{else}
-				{if $type == 'LOCALE_ERROR_MISSING_KEY'}
-					{assign var=defaultValue value=$error.reference}
-				{else}
-					{assign var=defaultValue value=$error.value}
-				{/if}
+			{elseif $type == 'LOCALE_ERROR_SUSPICIOUS_LENGTH'}
+				{assign var=defaultValue value=$error.value}
 				<input type="hidden" name="stack[]" value="{$error.filename|escape}" />
 				<input type="hidden" name="stack[]" value="{$error.key|escape}" />
 				<br />
@@ -63,6 +60,22 @@
 					<textarea name="stack[]" class="textArea" cols="80" rows="5">{$defaultValue|escape}</textarea>
 				{else}
 					<input type="text" class="textField" name="stack[]" size="80" value="{$defaultValue|escape}" />
+				{/if}
+			{else}{* $type == LOCALE_ERROR_MISSING_KEY *}
+				{assign var=defaultValue value=$error.reference}
+				<input type="hidden" name="stack[]" value="{$error.filename|escape}" />
+				<input type="hidden" name="stack[]" value="{$error.key|escape}" />
+				<br />
+				{if ($defaultValue|explode:"\n"|@count > 1) || (strlen($defaultValue) > 80)}
+					{translate key="plugins.generic.translator.file.reference"}<br/>
+					<textarea name="junk[]" class="textArea" cols="80" rows="5" disabled="disabled">{$defaultValue|escape}</textarea><br/>
+					{translate key="plugins.generic.translator.file.translation"}<br/>
+					<textarea name="stack[]" class="textArea" cols="80" rows="5"></textarea>
+				{else}
+					{translate key="plugins.generic.translator.file.reference"}<br/>
+					<input type="text" class="textField" name="junk[]" size="80" value="{$defaultValue|escape}" disabled="disabled" /><br/>
+					{translate key="plugins.generic.translator.file.translation"}<br/>
+					<input type="text" class="textField" name="stack[]" size="80" value="" />
 				{/if}
 				<br />&nbsp;
 			{/if}
