@@ -19,7 +19,7 @@
 	<message key="plugins.paymethod.paypal.settings.paypalurl">IPN URL</message>
 	<message key="plugins.paymethod.paypal.settings.paypalurl.description"><![CDATA[This is the URL to PayPal's Instant Payment Notification (IPN) service. For testing, use <u>https://www.sandbox.paypal.com/cgi-bin/webscr</u>; for production systems, use <u>https://www.paypal.com/cgi-bin/webscr</u>.]]></message>
 	<message key="plugins.paymethod.paypal.settings.selleraccount">Seller Account</message>
-	<message key="plugins.paymethod.paypal.settings.selleraccount.description">This is the PayPal account username for the sellers' account to be used, typically an email address.</message>
+	<message key="plugins.paymethod.paypal.settings.selleraccount.description">This is the PayPal account username for the sellers' account to be used, typically an email address. Ensure that you activate Instant Payment Notification (IPN) in your seller account Profile.</message>
 	<message key="plugins.paymethod.paypal.settings.curlNotInstalled">Warning: CURL support for PHP is not installed. PayPal payment support requires the CURL library and will not function until it is installed.</message>
 	<message key="plugins.paymethod.paypal.settings">PayPal Settings</message>
 

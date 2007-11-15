@@ -858,9 +858,9 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="manager.payment.options.feeDescription">Fee Description</message>
 	<message key="manager.payment.generalOptions">General Options</message>
 	<message key="manager.payment.authorFees">Author Fees</message>
-	<message key="manager.payment.authorFeesDescription">Selected options (along with their descriptions, which can be edited, and fees) will appear in Step 1 of the submission process and in About the Journal under Submissions, as well as at point payment is required.</message>
+	<message key="manager.payment.authorFeesDescription">Selected options, along with their descriptions and fees (which can be edited below), will appear in Step 1 of the submission process and in About the Journal under Submissions, as well as at points where payment is required.</message>
 	<message key="manager.payment.readerFees">Reader Fees</message>
-	<message key="manager.payment.readerFeesDescription">Selected options (along with their descriptions, which can be edited, and fees) will appear in About the Journal under Policies, as well as at point payment is required.</message>	
+	<message key="manager.payment.readerFeesDescription">Selected options, along with their descriptions and fees (which can be edited below), will appear in About the Journal under Policies, as well as at points where payment is required.</message>	
 	<message key="manager.payment.generalFees">General Fees</message>
 	<message key="manager.payment.generalFeesDescription">The Association Membership will appear in About the Journal under Policies, and the donations link will appear above the search function in the right-hand frame.</message>
 	<message key="manager.payment.options.submissionFee">Article Submission</message>

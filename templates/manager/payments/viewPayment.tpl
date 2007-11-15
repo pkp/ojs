@@ -44,7 +44,7 @@
 	<tr>
 	<tr>
 		<td width="25%">{translate key="manager.payment.amount"}</td>
-		<td>{$payment->getAmount()|escape}</td>
+		<td>{$payment->getAmount()|string_format:"%.2f"} ({$payment->getCurrencyCode()|escape})</td>
 	</tr>
 	<tr>
 		<td width="25%">{translate key="manager.payment.paymentMethod"}</td>
