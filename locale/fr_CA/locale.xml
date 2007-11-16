@@ -36,10 +36,10 @@
 	<message key="common.and">et</message>
 	<message key="common.between">entre</message>
 	<message key="common.all">tout</message>
-	<message key="common.disabled">désactivé</message>
-	<message key="common.enabled">opérationnel</message>
-	<message key="common.on">allumé</message>
-	<message key="common.off">éteint</message>
+	<message key="common.disabled">Désactivé</message>
+	<message key="common.enabled">Opérationnel</message>
+	<message key="common.on">Allumé</message>
+	<message key="common.off">teint</message>
 	<message key="common.openJournalSystems">Système de revues à libre accès (OJS)</message>
 	<message key="common.delete">supprimer</message>
 	<message key="common.edit">modifier</message>
@@ -58,126 +58,126 @@
 	<message key="common.description">description</message>
 	<message key="common.keywords">mots clés</message>
 	<message key="common.order">mettre en ordre</message>
-	<message key="common.back">précédent</message>
-	<message key="common.title">titre</message>
-	<message key="common.upload">télécharger vers le serveur</message>
-	<message key="common.download">télécharger</message>
-	<message key="common.replaceFile">remplacer le fichier</message>
-	<message key="common.subject">sujet</message>
-	<message key="common.type">type</message>
-	<message key="common.publisher">maison d'édition</message>
-	<message key="common.note">note</message>
-	<message key="common.notes">notes</message>
-	<message key="common.date">date</message>
+	<message key="common.back">Précédent</message>
+	<message key="common.title">Titre</message>
+	<message key="common.upload">Télécharger vers le serveur</message>
+	<message key="common.download">Télécharger</message>
+	<message key="common.replaceFile">Remplacer le fichier</message>
+	<message key="common.subject">Sujet</message>
+	<message key="common.type">Type</message>
+	<message key="common.publisher">Maison d'édition</message>
+	<message key="common.note">Note</message>
+	<message key="common.notes">Notes</message>
+	<message key="common.date">Date</message>
 	<message key="common.weeks">semaines</message>
-	<message key="common.source">source</message>
-	<message key="common.language">langue</message>
-	<message key="common.id">identification</message>
-	<message key="common.status">état</message>
-	<message key="common.remove">enlever</message>
-	<message key="common.file">fichier</message>
-	<message key="common.uploadedFile">fichier téléchargé vers le serveur</message>
-	<message key="common.fileName">nom du fichier</message>
-	<message key="common.dateSubmitted">date de soumission</message>
-	<message key="common.dateRequested">date requis</message>
-	<message key="common.dateCompleted">date d'achèvement</message>
-	<message key="common.dateUploaded">date du téléchargement vers le serveur</message>
-	<message key="common.dateModified">date de modification</message>
-	<message key="common.other">autre</message>
-	<message key="common.fileSize">taille de fichier</message>
-	<message key="common.size">taille</message>
-	<message key="common.fileType">type de fichier</message>
-	<message key="common.originalFileName">nom original du fichier</message>
-	<message key="common.none">aucun</message>
-	<message key="common.required">obligatoire</message>
+	<message key="common.source">Source</message>
+	<message key="common.language">Langue</message>
+	<message key="common.id">Identification</message>
+	<message key="common.status">État</message>
+	<message key="common.remove">Enlever</message>
+	<message key="common.file">Fichier</message>
+	<message key="common.uploadedFile">Fichier téléchargé vers le serveur</message>
+	<message key="common.fileName">Nom du fichier</message>
+	<message key="common.dateSubmitted">Date de soumission</message>
+	<message key="common.dateRequested">Date requis</message>
+	<message key="common.dateCompleted">Date d'achèvement</message>
+	<message key="common.dateUploaded">Date du téléchargement vers le serveur</message>
+	<message key="common.dateModified">Date de modification</message>
+	<message key="common.other">Autre</message>
+	<message key="common.fileSize">Taille de fichier</message>
+	<message key="common.size">Taille</message>
+	<message key="common.fileType">Type de fichier</message>
+	<message key="common.originalFileName">Nom original du fichier</message>
+	<message key="common.none">Aucun</message>
+	<message key="common.required">Obligatoire</message>
 	<message key="common.requiredField">* Désigne un champ obligatoire</message>
 	<message key="common.or">ou</message>
-	<message key="common.notAvailable">non disponible</message>
-	<message key="common.notApplicable">non applicable</message>
-	<message key="common.notApplicableShort">non applicable</message>
-	<message key="common.yes">oui</message>
-	<message key="common.no">non</message>
-	<message key="common.languages">langues</message>
-	<message key="common.changesSaved">modifications sauvegardées</message>
+	<message key="common.notAvailable">Non disponible</message>
+	<message key="common.notApplicable">Non applicable</message>
+	<message key="common.notApplicableShort">Non applicable</message>
+	<message key="common.yes">Oui</message>
+	<message key="common.no">Non</message>
+	<message key="common.languages">Langues</message>
+	<message key="common.changesSaved">Modifications sauvegardées</message>
 	<message key="common.chooseOne">En choisir un</message>
-	<message key="common.alreadyAssigned">déjà assigné</message>
-	<message key="common.assign">assigner</message>
-	<message key="common.assigned">assigné</message>
-	<message key="common.record">enregistrer</message>
-	<message key="common.width">largeur</message>
-	<message key="common.height">hauteur</message>
-	<message key="common.user">usager</message>
-	<message key="common.event">événement</message>
-	<message key="common.action">action</message>
-	<message key="common.select">sélectionner</message>
-	<message key="common.selectAll">tout sélectionner</message>
-	<message key="common.selectNone">ne rien sélectionner</message>
-	<message key="common.applyAction">appliquer l'action</message>
-	<message key="common.deleteSelection">supprimer la sélection</message>
-	<message key="common.removeSelection">enlever la sélection</message>
-	<message key="common.year">année</message>
-	<message key="common.month">mois</message>
-	<message key="common.day">jour</message>
-	<message key="common.hour">heure</message>
-	<message key="common.minute">minute</message>
-	<message key="common.second">seconde</message>
-	<message key="common.create">créer</message>
-	<message key="common.modify">modifier</message>
-	<message key="common.notify">aviser</message>
-	<message key="common.noneAssigned">aucun assigné</message>
-	<message key="common.cancelled">annulé</message>
-	<message key="common.inProgress">en cours</message>
+	<message key="common.alreadyAssigned">Déjà assigné</message>
+	<message key="common.assign">Assigner</message>
+	<message key="common.assigned">Assigné</message>
+	<message key="common.record">Enregistrer</message>
+	<message key="common.width">Largeur</message>
+	<message key="common.height">Hauteur</message>
+	<message key="common.user">Usager</message>
+	<message key="common.event">Événement</message>
+	<message key="common.action">Action</message>
+	<message key="common.select">Sélectionner</message>
+	<message key="common.selectAll">Tout sélectionner</message>
+	<message key="common.selectNone">Ne rien sélectionner</message>
+	<message key="common.applyAction">Appliquer l'action</message>
+	<message key="common.deleteSelection">Supprimer la sélection</message>
+	<message key="common.removeSelection">Enlever la sélection</message>
+	<message key="common.year">Année</message>
+	<message key="common.month">Mois</message>
+	<message key="common.day">Jour</message>
+	<message key="common.hour">Heure</message>
+	<message key="common.minute">Minute(s)</message>
+	<message key="common.second">Seconde(s)</message>
+	<message key="common.create">Créer</message>
+	<message key="common.modify">Modifier</message>
+	<message key="common.notify">Aviser</message>
+	<message key="common.noneAssigned">Aucun assigné</message>
+	<message key="common.cancelled">Annulé</message>
+	<message key="common.inProgress">En cours</message>
 	<message key="common.replaced">remplacé</message>
-	<message key="common.uninitiated">non engagé</message>
-	<message key="common.updated">mis à jour</message>
-	<message key="common.untitled">sans titre</message>
-	<message key="common.view">voir</message>
-	<message key="common.related">connexe</message>
-	<message key="common.active">actif</message>
-	<message key="common.completed">terminé</message>
-	<message key="common.mailingAddress">adresse postale</message>
-	<message key="common.country">pays</message>
-	<message key="common.close">fermer</message>
-	<message key="common.closeWindow">fermer la fenêtre</message>
-	<message key="common.initiate">commencer</message>
-	<message key="common.complete">terminer</message>
-	<message key="common.options">options</message>
-	<message key="common.plugin">plugiciel</message>
-	<message key="common.default">par défaut</message>
-	<message key="common.addSelf">s’ajouter</message>
+	<message key="common.uninitiated">Non engagé</message>
+	<message key="common.updated">Mis à jour</message>
+	<message key="common.untitled">Sans titre</message>
+	<message key="common.view">Voir</message>
+	<message key="common.related">Connexe</message>
+	<message key="common.active">Actif</message>
+	<message key="common.completed">Terminé</message>
+	<message key="common.mailingAddress">Adresse postale</message>
+	<message key="common.country">Pays</message>
+	<message key="common.close">Fermer</message>
+	<message key="common.closeWindow">Fermer la fenêtre</message>
+	<message key="common.initiate">Commencer</message>
+	<message key="common.complete">Terminer</message>
+	<message key="common.options">Options</message>
+	<message key="common.plugin">Plugiciel</message>
+	<message key="common.default">Par défaut</message>
+	<message key="common.addSelf">S’ajouter</message>
 	<message key="common.alphaList">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</message>
 
 	<!-- Common Form Messages -->
-	<message key="form.errorsOccurred">Des erreurs sont survenues lors du traitement de ce formulaire</message>
-	<message key="form.saveToUpload">Utiliser</message>
+	<message key="form.errorsOccurred">Ees erreurs sont survenues lors du traitement de ce formulaire</message>
+	<message key="form.saveToUpload">Utiliser Sauvegarder pour télécharger ce dossier</message>
 	<message key="form.contains">contient</message>
 	<message key="form.is">est</message>
 	<message key="form.required">(* Obligatoire)</message>
-	<message key="form.submit">soumettre</message>
-	<message key="form.send">envoyer</message>
-	<message key="form.resubmit">soumettre à nouveau</message>
+	<message key="form.submit">Soumettre</message>
+	<message key="form.send">Envoyer</message>
+	<message key="form.resubmit">Soumettre à nouveau</message>
 	
 	<!-- Common Email Messages -->
-	<message key="email.email">courriel</message>
+	<message key="email.email">Courriel</message>
 	<message key="email.sender">envoyeur</message>
-	<message key="email.recipient">destinataire</message>
-	<message key="email.recipients">destinataires</message>
-	<message key="email.from">de</message>
-	<message key="email.to">à</message>
+	<message key="email.recipient">Destinataire</message>
+	<message key="email.recipients">Destinataires</message>
+	<message key="email.from">De</message>
+	<message key="email.to">À</message>
 	<message key="email.cc">c.c.</message>
-	<message key="email.bcc">transmission confidentielle</message>
-	<message key="email.subject">objet</message>
-	<message key="email.body">corps du message</message>
-	<message key="email.send">envoyer</message>
-	<message key="email.skip">sauter le courriel</message>
-	<message key="email.compose">écrire un courriel</message>
+	<message key="email.bcc">Transmission confidentielle</message>
+	<message key="email.subject">Objet</message>
+	<message key="email.body">Corps du message</message>
+	<message key="email.send">Envoyer</message>
+	<message key="email.skip">Sauter le courriel</message>
+	<message key="email.compose">Écrire un courriel</message>
 	<message key="email.addToRecipient">Ajouter un destinataire</message>
 	<message key="email.addCcRecipient">Ajouter une c.c.</message>
 	<message key="email.addBccRecipient">Ajouter un destinataire confidentiel</message>
 	<message key="email.bccSender">Envoyer un exemplaire de ce courriel à mon adresse ({$address})</message>
 	<message key="email.invalid">L'adresse courriel {$email} n'est pas valide.</message>
 	<message key="email.multipart">Ceci est un message en plusieurs parties en format MIME.</message>
-	<message key="email.attachments">pièces jointes</message>
+	<message key="email.attachments">Pièces jointes</message>
 	<message key="email.addAttachment">Ajouter une pièce jointe</message>
 
 	<!-- Common Localization Terms -->
@@ -214,8 +214,8 @@
 	<message key="navigation.previousStep">Étape précédente</message>
 	<message key="navigation.nextStep">Étape suivante</message>
 	<message key="navigation.stepNumber">Étape {$step}</message>
-	<message key="navigation.previousPage"><![CDATA[&lt;&lt;]]></message>
-	<message key="navigation.nextPage"><![CDATA[&gt;&gt;]]></message>
+	<message key="navigation.previousPage"><![CDATA[<<]]></message>
+	<message key="navigation.nextPage"><![CDATA[>>]]></message>
 	<message key="navigation.items">{$from} - {$to} de {$total} articles</message>
 	
 	<!-- Article Queues -->
@@ -312,9 +312,9 @@
 	<message key="submission.abstractViews">Vues des résumés</message>
 	<message key="submission.noReviewAssignments">Aucune personne désignée pour l'évaluation</message>
 	<message key="submission.reviewVersion">Version à évaluer</message>
-	<message key="submission.peerReview">Évaluation par un pair </message>
+	<message key="submission.peerReview">Évaluation par un pair</message>
 	<message key="submission.editorDecision">Décision du rédacteur</message>
-	<message key="submission.round">Cycle {$round}</message>
+	<message key="submission.round">Cycle {$round}</message>
 	<message key="submission.editorReview">Évaluation du rédacteur</message>
 	<message key="submission.notifyAuthor">Aviser l’auteur</message>
 	<message key="submission.notifyEditor">Aviser le rédacteur</message>
@@ -397,7 +397,7 @@
 	<message key="submission.notes.backToSubmissionNotes">Retour aux notes sur la soumission</message>
 	<message key="submission.notes.removeUploadedFile">Enlever le fichier téléchargé</message>
 	<message key="submission.notes.deleteNote">Supprimer la note</message>
-	<message key="submission.notes.updateNote">Mettre la note à jour</message>
+	<message key="submission.notes.updateNote">Mettre la note à jour</message>
 	<message key="submission.notes.createNewNote">Créer une nouvelle note</message>
 	
 	<!-- Common Journal Terms -->
@@ -666,7 +666,7 @@
 	<message key="admin.displayConfigFileInstructions"><![CDATA[Le contenu de votre configuration après mise à jour est affiché ci-dessous. Pour appliquer les modifications à la configuration vous devez aller <tt>config.inc.php</tt> dans un rédacteur de texte approprié et remplacer son contenu par celui de la zone de texte simple ci dessous.]]></message>
 	<message key="admin.configFileUpdatedInstructions"><![CDATA[Votre fichier de configuration a été mis à jour avec succès. Veuillez noter que si votre site ne fonctionne plus correctement, vous pourriez avoir à  rétablir votre configuration manuellement en l'éditant <tt>config.inc.php</tt> directement.]]></message>
 	<message key="admin.contentsOfConfigFile">Contenu du fichier de configuration</message>
-	<message key="admin.version.checkForUpdates">Vérifier s'il y a des mises à  jour</message>
+	<message key="admin.version.checkForUpdates">Vérifier s'il y a des mises à  jour</message>
 	<message key="admin.version.latest">Dernière version</message>
 	<message key="admin.version.upToDate">Votre système est à jour</message>
 	<message key="admin.version.updateAvailable">Une version mise à jour est disponible</message>
@@ -2378,7 +2378,7 @@ Votre serveur soutient actuellement mbstring: <strong>{$supportsMBString}</stron
 	 * DEFAULT - Default settings for setup items.
 	 *
 	-->
-	<message key="default.journalSettings.checklist.notPreviouslyPublished">La soumission n'a pas été précédemment publiée, et elle ne précède pas une autre revue pour examen (ou une explication a été fournie dans Commentaires à le rédacteur).</message>
+	<message key="default.journalSettings.checklist.notPreviouslyPublished">La soumission n'a pas été précédemment publiée, et elle ne précède pas une autre revue pour examen (ou une explication a été fournie dans Commentaires au rédacteur).</message>
 	<message key="default.journalSettings.checklist.fileFormat">Le fichier de la présentation est en format de fichier document Microsoft WORD, RTF, ou WordPerfect.</message>
 	<message key="default.journalSettings.checklist.submissionAppearance">Le texte est à simple interligne; utiliser une police à 12 points; employer l'italique plutôt que le souligné (sauf pour les adresses URL); et placer toutes les illustrations, figures, et tables aux endroits appropriés dans le texte plutôt qu'à la fin.</message>
 	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[Le texte se conforme aux exigences stylistiques et bibliographiques décrites dans <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Instructions aux auteurs</a>, qui se trouve dans « Au sujet de la revue ».]]></message>
@@ -2417,7 +2417,7 @@ Veuillez suivre le protocole suivant pour faire les révisions électroniques de
 &nbsp; Si vous supprimez une phrase ou plus, veuillez l'indiquer dans une note, par ex., <b>[ ai supprimé 2 phrases]</b>
 
 <b>Répondre aux requêtes de l'auteur (QetR)</b>
-&nbsp; Garder toutes les QetR intactes et en gras dans le texte. Ne pas les supprimer &nbsp; Pour répondre à une QetR, ajouter un commentaire après. Les commentaires doivent être limités Ã  :
+&nbsp; Garder toutes les QetR intactes et en gras dans le texte. Ne pas les supprimer &nbsp; Pour répondre à une QetR, ajouter un commentaire après. Les commentaires doivent être limités Ã  :
 <b>[Commentaire :</b>]
 &nbsp; par ex., <b>[Commentaire : Discussion élargie de la méthodologie comme vous l'avez suggéré]</b>
 
@@ -2430,7 +2430,7 @@ Veuillez suivre le protocole suivant pour faire les révisions électroniques de
 
 <b>Fichier " manuscrit " original</b>
 
-Avant d'apporter des changements importants à la structure ou à l'organisation de votre manuscrit original, veuillez communiquer avec les co-évaluateurs de votre article. Après que vous avez terminé vos révisions, changer le nom du fichier AuthorNameQA.doc pour AuthorNameQAR.doc (par ex., de GagnonQA.doc à GagnonQAR.doc). Imprimer une copie papier de votre manuscrit et la poster avec une disquette contenant le fichier de traitement de texte complètement révisé et renommé. 
+Avant d'apporter des changements importants à la structure ou à l'organisation de votre manuscrit original, veuillez communiquer avec les co-évaluateurs de votre article. Après que vous avez terminé vos révisions, changer le nom du fichier AuthorNameQA.doc pour AuthorNameQAR.doc (par ex., de GagnonQA.doc à GagnonQAR.doc). Imprimer une copie papier de votre manuscrit et la poster avec une disquette contenant le fichier de traitement de texte complètement révisé et renommé. 
 
 
 <b>Manuscrit retourné à l'auteur avec requêtes et suggestions</b>
@@ -2453,7 +2453,7 @@ Après que vos révisions sont terminées, changer le nom du fichier AuthorNameQ
 {$journalName}
 {$indexUrl}/{$journalPath}</message>
 	<message key="default.journalSettings.forReaders"><![CDATA[Nous incitons les lecteurs à s'inscrire pour recevoir les avis de publication pour cette revue. Utiliser le <a href="{$indexUrl}/{$journalPath}/user/register">Inscrire</a> le lien en haut de la page d'accueil de la revue. Cette inscription permettra au lecteur de recevoir par courriel la table des matières de chaque nouveau numéro de la revue. Cette liste permet aussi à la revue d'inscrire un certain niveau de soutien ou de lectorat. Voir la rubrique de la revue <a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">Protection des données personnelles</a> qui confirme aux lecteurs que leur nom et leur adresse électronique ne seront pas utilisés à d'autres fins.]]></message>
-	<message key="default.journalSettings.forAuthors"><![CDATA[Intéressé à faire une soumission à cette revue? Nous vous recommandons de consulter les rubriques de la revue à la page <a href="{$indexUrl}/{$journalPath}/about">Au sujet de la revue</a> <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Instructions aux auteurs</a>. Les auteurs doivent <a href="{$indexUrl}/{$journalPath}/user/register">s'inscrire</a> auprès de la revue avant de présenter une soumission, ou s'ils sont déjà inscrits, simplement <a href="{$indexUrl}/index/login">ouvrir une session</a> et commencer les 5 étapes du processus.]]></message>
+	<message key="default.journalSettings.forAuthors"><![CDATA[Intéressé à faire une soumission à cette revue? Nous vous recommandons de consulter les rubriques de la revue à la page <a href="{$indexUrl}/{$journalPath}/about">Au sujet de la revue</a> <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">Instructions aux auteurs</a>. Les auteurs doivent <a href="{$indexUrl}/{$journalPath}/user/register">s'inscrire</a> auprès de la revue avant de présenter une soumission, ou s'ils sont déjà inscrits, simplement <a href="{$indexUrl}/index/login">ouvrir une session</a> et commencer les 5 étapes du processus.]]></message>
 	<message key="default.journalSettings.forLibrarians"><![CDATA[Nous incitons les bibliothèques à indiquer l'accès libre à cette revue parmi les revues électroniques qu'elles conservent. Ce système de publication est aussi conçu pour être hébergé et exploité par les bibliothèques de recherche afin de soutenir les travaux des membres de ses facultés associées publiés dans la revue. Pour en savoir plus sur l'utilisation de Open Journal Systems pour gérer et publier les revues évaluées par les pairs, voir <a href="http://pkp.sfu.ca">Public Knowledge Project</a>.]]></message>
 	<message key="default.journalSettings.lockssLicense"><![CDATA[Cette revue utilise le système LOCKSS pour créer un système de distribution des archives parmi les bibliothèques participantes et permet à ces bibliothèques de créer des archives permanentes pour fins de préservation et de restauration. <a href="http://lockss.stanford.edu/">More...</a>]]></message>
 
@@ -2488,8 +2488,102 @@ Après que vos révisions sont terminées, changer le nom du fichier AuthorNameQ
 	<message key="rt.admin.settings.addComment.authenticated">Users must be registered and log into to post, with anonymity not permitted.</message>
 	<message key="rt.admin.settings.addComment.anonymous">Users must be registered and log into to post, with anonymity permitted.</message>
 	<message key="rt.admin.settings.addComment.unauthenticated">Users do not need to be registered to post, with anonymity permitted.</message>
-	<message key="icon.small.alt">Small</message>
-	<message key="icon.medium.alt">Medium</message>
+	<message key="icon.small.alt">Petit</message>
+	<message key="icon.medium.alt">Moyen</message>
 	<message key="icon.large.alt">Large</message>
 	<message key="debug.notes.currencyListLoad">Loaded currency list "{$filename}" from XML</message>
+	<message key="common.add">Ajouter</message>
+	<message key="common.discipline">Discipline</message>
+	<message key="common.suggest">Suggérer</message>
+	<message key="common.payment">Paiement</message>
+	<message key="common.payments">Paiements</message>
+	<message key="form.postRequired">Le formulaire n'a pas été soumis comme il se doit.</message>
+	<message key="form.formLanguage">Langue d'usage dans le formulaire</message>
+	<message key="form.formLanguage.description">Pour entrer les renseignements ci-dessous dans d'autres langues, sélectionner d'abord la langue désirée.</message>
+	<message key="email.compose.tooSoon">Vous ne laissez pas suffisamment de temps depuis l'envoi de votre plus récent message. Veuillez patienter avant d'envoyer un autre message.
+
+ou 
+
+Vous essayez d'envoyer votre message dans un laps de temps trop court depuis votre dernier envoi. Veuillez attendre avant d'envoyer un nouveau message.</message>
+	<message key="email.compose.tooManyRecipients">Il y a trop de destinataires pour le message que vous essayez d'envoyer.</message>
+	<message key="navigation.competingInterestGuidelines">Directives concernant des intérêts divergents</message>
+	<message key="user.salutation">Appel</message>
+	<message key="user.gender">Genre</message>
+	<message key="user.masculine">M</message>
+	<message key="user.feminine">F</message>
+	<message key="reader.subscribersOnly">Réservé aux abonnés</message>
+	<message key="reader.subscriptionRequiredLoginText">Accès réservé aux abonnés. Pour vérifier votre abonnement, ouvrez la session dans journal</message>
+	<message key="reader.openAccess">Libre-accès</message>
+	<message key="reader.subscriptionAccess">Accès à l'abonnement</message>
+	<message key="reader.subscriptionOrFeeAccess">Abonnement ou frais d'accès</message>
+	<message key="admin.settings.homeHeaderImageInvalid">Le format de l'image du logo du site est invalide. Seuls les formats .gif, .jpg ou .png sont acceptés.</message>
+	<message key="admin.languages.installLanguages">Gestion des paramètres de lieu</message>
+	<message key="admin.languages.downloadLocales">Télécharger les paramètres de lieu.</message>
+	<message key="admin.languages.downloadFailed">Le téléchargement du paramètre de lieu a échoué. Des explications sont contenues dans le message d'erreur ci-dessous.</message>
+	<message key="admin.languages.localeInstalled">Le paramètre de lieu "U+007b</message>
+	<message key="admin.languages.download">Télécharger le paramètre de lieu</message>
+	<message key="admin.languages.download.cannotOpen">Ne peut ouvrir le descripteur de langues du site Web PKP</message>
+	<message key="admin.languages.download.cannotModifyRegistry">Ne peut ajouter le nouveau paramètre de lieu au fichier de registre, généralement "registry/locales.xml".</message>
+	<message key="admin.mergeUsers">Fusionner les utilisateurs</message>
+	<message key="admin.mergeUsers.mergeUser">Fusionner l'utilisateur</message>
+	<message key="admin.mergeUsers.into.description">Choisir un utilisateur à qui attribuer la paternité de textes, les assignations de révisions etc. de l'utilisateur précédent</message>
+	<message key="admin.mergeUsers.from.description">Sélectionner un utilisateur à fusionner au compte d'un autre utilisateur (par ex.: lorsque quelqu'un possède deux comptes d'utilisateur). Le compte sélectionné en premier sera supprimé et les soumissions, les attributions, etc. qui s'y rattachent seront affectées au second compte.</message>
+	<message key="admin.mergeUsers.allUsers">Tous les utilisateurs enregistrés</message>
+	<message key="admin.mergerUsers.noneEnrolled">Aucun utilisateur enregistré.</message>
+	<message key="manager.statistics.statistics.articleViews">Nombre de visionnements de l'article (à l'intention des auteurs seulement)</message>
+	<message key="manager.statistics.reports.description">Le système OJS génère des rapports qui comptabilisent les renseignements liés aux soumissions au journal, du point de vue des soumissionaires, des éditeurs, des réviseurs et des sections, au cours d'une période déterminée. Les rapports sont disponibles en format CSV et nécessitent un gestionnaire de tableaux pour être lus.</message>
+	<message key="manager.plugins.description">Cette page permet au gestionnaire du journal de réviser et possiblement configurer les plugiciels présentement installés. Les plugiciels sont organisés par catégories, selon leur fonction. Vous trouverez ci-dessous la liste des catégories et pour chacune d'elles, la liste des plugiciels courant.</message>
+	<message key="manager.payments">Paiements</message>
+	<message key="manager.payment.enable">Activer</message>
+	<message key="manager.payment.action">Action</message>
+	<message key="manager.payment.details">Détails</message>
+	<message key="manager.payment.description">Description</message>
+	<message key="manager.payment.addPayment">Ajouter le paiement</message>
+	<message key="manager.payment.currency">Unité monétaire</message>
+	<message key="manager.payment.currencymessage">Le logiciel OJS n'effectue pas la conversion monétaire. Si vous acceptez les paiements d'abonnements, veuillez vous assurer que l'unité monétaire de l'abonnement concorde avec l'unité stipulée ici.</message>
+	<message key="manager.payment.options">Options</message>
+	<message key="manager.payment.records">Registres</message>
+	<message key="manager.payment.options.enablePayments">Cliquez ici pour activer le module Paiements. Vous devez compléter le formulaire ci-dessous pour configurer les paramètres de paiements. Veuillez noter que les utilisateurs doivent ouvrir une session pour effectuer leurs paiements.</message>
+	<message key="manager.payment.options.text">Description de la méthode de paiement</message>
+	<message key="manager.payment.generalOptions">Options générales</message>
+	<message key="manager.payment.authorFees">Droits d'auteurs</message>
+	<message key="manager.payment.authorFeesDescription">Les options choisies (ainsi que leur description - celles-ci peuvent être modifiées - et les frais connexes) seront affichées à l'étape 1 du procédé de soumission, ainsi que dans la section Au sujet du journal, sous l'entrée Soumissions, et au moment d'effectuer le paiement.</message>
+	<message key="manager.payment.readerFees">Frais de lecture</message>
+	<message key="manager.payment.feePaymentOptions">Options de paiement des frais</message>
+	<message key="manager.payment.options.fee">Frais</message>
+	<message key="manager.payment.options.feeName">Catégorie des frais</message>
+	<message key="manager.payment.options.feeDescription">Description des frais</message>
+	<message key="manager.payment.readerFeesDescription">Les options choisies (incluant des descriptions pouvant être modifiées - et leurs frais) paraîtront sous la rubrique Politiques, dans la section Au sujet de la revue. Le paiement électronique est requis.</message>
+	<message key="manager.payment.generalFees">Frais généraux</message>
+	<message key="manager.payment.generalFeesDescription">L'affiliation à l'Association paraîtra sous la rubrique Politiques dans la section Au sujet de la revue. Le lien pour effectuer des dons apparaîtra au-dessus de la fonction de recherche, dans la marge droite du cadre.</message>
+	<message key="manager.payment.options.submissionFee">Soumission d'article</message>
+	<message key="manager.payment.options.publicationFee">Publication d'un article</message>
+	<message key="manager.payment.options.fastTrackFee">Révision accélérée</message>
+	<message key="manager.payment.options.membershipFee">Adhésion à l'Association</message>
+	<message key="manager.payment.options.payPerViewFee">Article assujetti au paiement à la séance</message>
+	<message key="manager.payment.options.waiverPolicy">Politique d'exemption</message>
+	<message key="manager.payment.options.onlypdf">Limiter l'accès aux articles en format PFD seulement</message>
+	<message key="manager.payment.options.acceptSubscriptionPayments">Cela activera l'application des paiements d'abonnements lorsque la gestion des catégories, du coût et des utilisateurs est assurée par le responsable des abonnements.</message>
+	<message key="manager.payment.options.donationFee">Dons à la revue</message>
+	<message key="manager.payment.noPayments">Aucuns paiements</message>
+	<message key="manager.payment.paymentId">Identification du paiement</message>
+	<message key="manager.payment.userName">Identificateur du payeur</message>
+	<message key="manager.payment.timestamp">Estampille temporelle</message>
+	<message key="manager.payment.amount">Montant</message>
+	<message key="manager.payment.notFound">Inaccessible</message>
+	<message key="manager.payment.paymentMethods">Modes de paiements</message>
+	<message key="manager.payment.paymentMethod">Mode de paiement</message>
+	<message key="manager.payment.paymentMethod.description">Vous pouvez configurer tout plugiciel de mode de paiement à partir de cet écran.</message>
+	<message key="manager.payment.paymentType">Genre de paiement</message>
+	<message key="manager.payment.editSubscription">Modification de l'abonnement</message>
+	<message key="manager.payment.form.numeric">Tous lesoûts doivent avoir une valeur numérique positive (les signes décimaux sont permis)</message>
+	<message key="plugins.categories.citationFormats">Plugiciels de format de citation</message>
+	<message key="plugins.categories.citationFormats.description">Les plugiciels de format de citation offrent aux utilisateurs différents formats pour accéder aux citations d'articles.</message>
+	<message key="plugins.categories.blocks">Bloc de plugiciels</message>
+	<message key="plugins.categories.blocks.description">Le bloc de plugiciels est composé de modules d'interface enfichables, tels les outils du menu latéral.</message>
+	<message key="plugins.categories.themes">Thème de plugiciel</message>
+	<message key="plugins.categories.themes.description">Il est possible d'utiliser la clé Thème de plugiciels pour modifier l'apparence du système.</message>
+	<message key="plugins.categories.paymethod">Plugiciels de paiements</message>
+	<message key="plugins.categories.paymethod.description">Les plugiciels de mode de paiement mettent en application le traitement de divers modes de paiement en ligne.</message>
+	<message key="manager.setup.management.description">Accès et protection, calendrier de travail, annonces, correction de texte, mise en page et correction d'épreuves.</message>
 </locale>

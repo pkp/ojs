@@ -14,5 +14,5 @@
  
 <locale name="en_US" full_name="U.S. English">
 	<message key="plugins.generic.roundedcorners.displayName">Angoli smussati</message>
-	<message key="plugins.generic.roundedcorners.description">Questo plugin mette uno sfondo su ogni sidebar block e smussa i suoi angoli. Si possono cambiare i colori usati modificando il foglio di stile CSS che si trova nel plugin.</message>
+	<message key="plugins.generic.roundedcorners.description">Questo plugin mette uno sfondo su ogni blocco del menu laterale e smussa i suoi angoli. Si possono cambiare i colori usati modificando il foglio di stile CSS che si trova nel plugin.</message>
 </locale>

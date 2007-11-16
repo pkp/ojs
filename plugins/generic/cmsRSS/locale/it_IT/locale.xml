@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.generic.cmsrss.displayName">CMS RSS Plugin</message>
+	<message key="plugins.generic.cmsrss.description">Questo plugin permette di aggiungere aggregazioni RSS alle pagine CMS</message>
+
+	<message key="plugins.generic.cmsrss.requirement.cms"><![CDATA[<strong>Il plugin CMS deve essere installato e abilitato per poterlo usare.</strong>]]></message>	
+
+	<message key="manager.plugins.cmsrss.edit">Modifica/aggiungi RSS feeds</message>
+	<message key="plugins.generic.cmsrss.pagename">Nome della pagina</message>
+	<message key="plugins.generic.cmsrss.url">Feed URL</message>	
+	<message key="plugins.generic.cmsrss.months">Articoli più vecchi (in mesi). 0 per tutti gli articoli disponibili.</message>		
+	<message key="plugins.generic.cmsrss.aggregate">Associa i feeds per ogni pagina e ordinali per data</message>			
+	<message key="plugins.generic.cmsrss.form.introduction"><![CDATA[<p>Questo plugin CMS RSS permette agli amministratori della rivista di aggiungere RSS feeds alle pagine altrimenti statiche del plugin CMS.</p><p>Il nome della pagina deve corrispondere alla intestazione della pagina CMS (che appare nella tabella dei contenuti). Devi separare i nomi delle intestazioni con un ":". Per esempio: intestazione1:intestazione2.</p><p>Le Feed URL non sono convalidate, quindi assicurati che la URL usata qui corrisponda alla RSS URL corretta.</p>]]></message>
+	<message key="plugins.generic.cmsrss.requiredFields">Ogni riga richiede un nome di pagina e una feed URL</message>
+	<message key="plugins.generic.cmsrss.sorting">Le righe sono selezionate per nome di pagina</message>	
+	
+	<message key="plugins.generic.cmsrss.addUrl">Aggiungi un altro Feed</message>
+	<message key="plugins.generic.cmsrss.deleteUrl">Rimuovi il Feed</message>	
+	
+	<!-- RSS Template -->
+	<message key="plugins.generic.cmsrss.postedon">Inviato a</message>
+	<message key="plugins.generic.cmsrss.permalink">Permalink</message>	
+</locale>

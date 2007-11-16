@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2000-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+ -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.paymethod.manual.displayName">Pagamento manuale</message>
+	<message key="plugins.paymethod.manual.description">L'amministratore registrerà manualmente la ricevuta del pagamento di un utente (esterno a questo software).</message>
+	<message key="plugins.paymethod.manual">Pagamento manuale</message>
+	<message key="plugins.paymethod.manual.settings">Impostazioni del pagamento manuale</message>
+	<message key="plugins.paymethod.manual.settings.instructions">Instruzioni</message>
+	<message key="plugins.paymethod.manual.settings.manualInstructions">Instruzioni per il pagamentoper gli utenti che selezioneranno il pagamento manuale</message>
+	
+	<message key="plugins.paymethod.manual.purchase.title">Titolo</message>
+	<message key="plugins.paymethod.manual.purchase.fee">Quota</message>	
+</locale>

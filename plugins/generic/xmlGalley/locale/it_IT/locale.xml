@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.generic.xmlGalley.displayName">Plugin per bozze XML</message>
+	<message key="plugins.generic.xmlGalley.description">Questo plugin genera bozze XHTML da un aarticolo XML usando XSLT.</message>
+
+	<message key="plugins.generic.xmlGalley.manager.settings">Impostazioni</message>
+
+	<!-- XML Article Galleys Settings Management -->
+	<message key="plugins.generic.xmlGalley.settings.description"><![CDATA[<p>Con questo plugin, le bozze di articoli saranno automaticamente interpretati da un file sorgente XML caricato, usando una trasformazione di uno specifico foglio di stile XSL.</p>]]></message>
+	<message key="plugins.generic.xmlGalley.settings.renderer">Metodo di interpretazione XSLT</message>
+	<message key="plugins.generic.xmlGalley.settings.PHP5">PHP 5.0.0+ con funzioni XSL (libxslt)</message>
+	<message key="plugins.generic.xmlGalley.settings.PHP4">PHP 4.0.3+ con funzioni XSLT (Sablotron)</message>
+	<message key="plugins.generic.xmlGalley.settings.notAvailable">Non disponibile</message>
+
+	<message key="plugins.generic.xmlGalley.settings.externalXSLT">Interprete XSLT della linea di comando esterna (es. Xalan)</message>
+	<message key="plugins.generic.xmlGalley.settings.externalXSLTDescription"><![CDATA[Inserisci l'indirizzo completo dello strmento interprete XSLT, con ogni argomento necessario.  Usa %xsl per sostituire la posizione del file del foglio di stile XSL, e %xml per sostituire la posizione del file sorgente XML; es: <br/><pre>/usr/bin/java -jar ~/java/xalan.jar -HTML -IN %xml -XSL %xsl</pre>]]></message>
+	<message key="plugins.generic.xmlGalley.settings.externalXSLTTest">Test XSLT</message>
+	<message key="plugins.generic.xmlGalley.settings.externalXSLTSuccess">Test XSLT esterno riuscito.</message>
+	<message key="plugins.generic.xmlGalley.settings.externalXSLTFailure">Test XSLT esterno fallito.</message>
+	<message key="plugins.generic.xmlGalley.settings.externalXSLTRequired">Un processore XSLT esterno della linea di comando deve essere specificato.</message>
+
+	<message key="plugins.generic.xmlGalley.settings.stylesheet">Foglio di stile XSL</message>
+	<message key="plugins.generic.xmlGalley.settings.xslNLM"><![CDATA[<a href="http://dtd.nlm.nih.gov/publishing/">NLM Journal Publishing DTD</a> &rarr; XHTML]]></message>
+
+	<message key="plugins.generic.xmlGalley.settings.xslFOP">Abilita l'interpretazione delle bozze PDF usando XSL-FO (es. FOP)</message>
+	<message key="plugins.generic.xmlGalley.settings.xslFOPDescription"><![CDATA[Inserisci l'indirizzo completo del processore FO, con ogni argomento necessario.  Usa %fo per sostituire la posizione del file XSL-FO, e %pdf per sostituire la posizione del file PDF; es: <br/><pre>/usr/sbin/fop -fo %fo -pdf %pdf</pre>]]></message>
+	<message key="plugins.generic.xmlGalley.settings.xslFOPRequired">Un processore FO esterno della linea di comando deve essere specificato.</message>
+
+	<message key="plugins.generic.xmlGalley.settings.customXSL">Foglio di stile XSL personalizzato</message>
+	<message key="plugins.generic.xmlGalley.settings.customXSLRequired">Un file del foglio di stile XSL personalizzato deve essere specificato.</message>
+	<message key="plugins.generic.xmlGalley.settings.customXSLInvalid">Il file XSL caricato non era valido. Si prega di controllare il file e riprovare.</message>
+
+</locale>
+
