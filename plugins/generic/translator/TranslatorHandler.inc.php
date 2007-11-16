@@ -203,6 +203,26 @@ class TranslatorHandler extends Handler {
 		$localeContentsRangeInfo = Handler::getRangeInfo('localeContents');
 		$localeContents = EditableLocaleFile::load($filename);
 
+		// Handle a search, if one was executed.
+		$searchKey = Request::getUserVar('searchKey');
+		$found = false;
+		$index = 0;
+		$pageIndex = 0;
+		if (!empty($searchKey)) foreach ($localeContents as $key => $value) {
+			if ($index % $localeContentsRangeInfo->getCount() == 0) $pageIndex++;
+			if ($key == $searchKey) {
+				$found = true;
+				break;
+			}
+			$index++;
+		}
+
+		if ($found) {
+			$localeContentsRangeInfo->setPage($pageIndex);
+			$templateMgr->assign('searchKey', $searchKey);
+		}
+
+
 		$templateMgr->assign('filename', $filename);
 		$templateMgr->assign('locale', $locale);
 		$templateMgr->assign_by_ref('localeContents', new ArrayItemIterator($localeContents, $localeContentsRangeInfo->getPage(), $localeContentsRangeInfo->getCount()));

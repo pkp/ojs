@@ -47,12 +47,29 @@ class DBResultRange {
 	}
 
 	/**
+	 * Set the count of pages to skip.
+	 * @param $page int
+	 */
+	function setPage($page) {
+		$this->page = $page;
+	}
+
+	/**
 	 * Returns the count of items in this range to display.
 	 * @return int
 	 */
 	function getCount() {
 		return $this->count;
 	}
+
+	/**
+	 * Set the count of items in this range to display.
+	 * @param $count int
+	 */
+	function setCount() {
+		$this->count = $count;
+	}
+
 }
 
 ?>
