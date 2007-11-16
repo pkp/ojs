@@ -74,12 +74,12 @@
 				<br />
 				{if ($defaultValue|explode:"\n"|@count > 1) || (strlen($defaultValue) > 80)}
 					{translate key="plugins.generic.translator.file.reference"}<br/>
-					<textarea name="junk[]" class="textArea" cols="80" rows="5">{$defaultValue|escape}</textarea><br/>
+					<textarea name="junk[]" class="textArea" cols="80" onkeypress="return false;" rows="5">{$defaultValue|escape}</textarea><br/>
 					{translate key="plugins.generic.translator.file.translation"}<br/>
 					<textarea name="stack[]" class="textArea" cols="80" rows="5"></textarea>
 				{else}
 					{translate key="plugins.generic.translator.file.reference"}<br/>
-					<input type="text" class="textField" name="junk[]" size="80" value="{$defaultValue|escape}" /><br/>
+					<input type="text" class="textField" name="junk[]" size="80" onkeypress="return false;" value="{$defaultValue|escape}" /><br/>
 					{translate key="plugins.generic.translator.file.translation"}<br/>
 					<input type="text" class="textField" name="stack[]" size="80" value="" />
 				{/if}
