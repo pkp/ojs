@@ -172,12 +172,12 @@
 	<message key="email.skip">Bỏ qua Email</message>
 	<message key="email.compose">Gửi Email</message>
 	<message key="email.addToRecipient">Thêm người nhận</message>
-	<message key="email.addCcRecipient">Thêm người đồng kính gửi (Cc)</message>
-	<message key="email.addBccRecipient">Thêm người sao gửi (Bcc)</message>
+	<message key="email.addCcRecipient">Thêm Đồng kính gửi (Cc)</message>
+	<message key="email.addBccRecipient">Thêm Sao gửi (Bcc)</message>
 	<message key="email.bccSender">Gửi một bản sao email này vào địa chỉ của tôi ({$address})</message>
 	<message key="email.invalid">Địa chỉ email {$email} này không hợp lệ.</message>
 	<message key="email.multipart">Đây là một thông điệp nhiều phần theo định dạng MIME.</message>
-	<message key="email.attachments">Files đính kèm</message>
+	<message key="email.attachments">File đính kèm</message>
 	<message key="email.addAttachment">Thêm file đính kèm</message>
 
 	<!-- Common Localization Terms -->
@@ -477,7 +477,7 @@
 	<message key="issue.vol">T.</message>
 	<message key="issue.no">S.</message>
 	<message key="issue.year">Năm</message>
-	<message key="issue.noIssues">Không có số tạp chí nào</message>
+	<message key="issue.noIssues">Không có số nào</message>
 	<message key="issue.toc">Mục lục</message>
 	<message key="issue.abstract">Tóm tắt</message>
 
@@ -610,7 +610,7 @@ Lưu ý là có thể vô hiệu giao diện tìm kiếm OAI trên website này 
 	
 	<message key="admin.siteManagement">Quản lý web site</message>
 	<message key="admin.adminFunctions">Các chức năng quản trị</message>
-	<message key="admin.expireSessions">Ngừng lượt truy cập hiện tại của người dùng</message>
+	<message key="admin.expireSessions">Ngừng lượt truy cập</message>
 	<message key="admin.confirmExpireSessions">Quý vị có chắc chắn muốn ngừng lượt truy cập hiện tại của tất cả người dùng? Tất cả người dùng hiện đang đăng nhập vào hệ thống sẽ buộc phải đăng nhập lại (kể cả chính quý vị).</message>
 	<message key="admin.clearTemplateCache">Xóa cạc (cache) lưu trữ giao diện</message>
 	<message key="admin.clearDataCache">Xóa cạc (cache) lưu trữ dữ liệu</message>
@@ -631,7 +631,7 @@ Lưu ý là có thể vô hiệu giao diện tìm kiếm OAI trên website này 
 	<message key="admin.languages.noLocalesAvailable">Không có ngôn ngữ mới nào sẵn sàng để cài đặt.</message>
 	<message key="admin.languages.installLocales">Cài đặt</message>
 	
-	<message key="admin.auth.ojs">CSDL người dùng của Hệ thống phần mềm tạp chí mở (OJS)</message>
+	<message key="admin.auth.ojs">CSDL người dùng OJS</message>
 	<message key="admin.auth.create">Tạo nguồn xác thực quyền truy cập</message>
 	<message key="admin.auth.confirmDelete">Quý vị có chắc chắn muốn xóa vĩnh viễn nguồn xác thực này?</message>
 	<message key="admin.auth.noneCreated">Chưa có nguồn xác thực nào được định nghĩa.</message>
@@ -694,7 +694,7 @@ Lưu ý là có thể vô hiệu giao diện tìm kiếm OAI trên website này 
 	<message key="admin.journals.form.pathExists">Đường dẫn vừa chọn đã được dùng cho một tạp chí khác.</message>
 	<message key="admin.journals.enableJournalInstructions">Để tạp chí này xuất hiện công khai trên web site</message>
 	<message key="admin.journals.journalDescription">Mô tả tạp chí</message>
-	<message key="admin.journals.importOJS1">Nhập dữ liệu tạp chí từ phiên bản OJS 1</message>
+	<message key="admin.journals.importOJS1">Nhập từ OJS 1</message>
 	<message key="admin.journals.importOJS1.editMigratedJournal">Sửa các tạp chí từ phiên bản trước</message>
 	<message key="admin.journals.importOJS1.conflict.desc">Một số tài khoản người dùng có thông tin trùng nhau. Phiên bản OJS 1.x cho phép nhiều tài khoản dùng chung một địa chỉ email, trong khi phiên bản không hỗ trợ điều này. Trong danh sách sau, tài khoản thứ hai được tạm thời gắn cho một địa chỉ email. Người quản trị cần sửa bằng tay, bằng cách hoặc gắn cho một địa chỉ email khác hoặc sáp nhập các tài khoản thành một.</message>
 	<message key="admin.journals.importOJS1.conflict">{$firstUsername} ({$firstName}) và {$secondUsername} ({$secondName})</message>
@@ -712,7 +712,7 @@ Lưu ý là có thể vô hiệu giao diện tìm kiếm OAI trên website này 
 	
 	<!-- Journal Management -->
 	<message key="manager.journalManagement">Quản lý Tạp chí</message>
-	<message key="manager.setup">Thiết lập tạp chí</message>
+	<message key="manager.setup">Thiết lập</message>
 	<message key="manager.emails">Các e-mail tạo sẵn</message>
 	<message key="manager.statistics"><![CDATA[Thống kê &amp; Báo cáo]]></message>
 	<message key="manager.readingTools">Công cụ đọc</message>
@@ -792,7 +792,7 @@ Lưu ý là có thể vô hiệu giao diện tìm kiếm OAI trên website này 
 	<message key="plugins.categories.importexport">Công cụ Xuất/Nhập</message>
 	<message key="plugins.categories.importexport.description">Công cụ Xuất/Nhập có thể dùng để truyền nội dụng đến và từ các hệ thống khác.</message>
 
-	<message key="plugins.categories.gateways">Công cụ Cổng giao tiếp (Gateway Plugins)</message>
+	<message key="plugins.categories.gateways">Công cụ Cổng giao tiếp</message>
 	<message key="plugins.categories.gateways.description">Công cụ Cổng giao tiếp cung cấp dữ liệu trực tiếp từ các hệ thống bên ngoài.</message>
 
 	<!-- Files Browser -->
@@ -830,7 +830,7 @@ Lưu ý là có thể vô hiệu giao diện tìm kiếm OAI trên website này 
 	<message key="manager.setup.journalInitials">Các chữ cái đầu tên Tạp chí</message>
 	<message key="manager.setup.journalAbbreviation">Tên viết tắt của Tạp chí</message>	
 	<message key="manager.setup.printIssn">Chỉ số ISSN bản in</message>
-	<message key="manager.setup.onlineIssn">Chỉ số ISSN bản trực tuyến</message>
+	<message key="manager.setup.onlineIssn">Chỉ số ISSN trực tuyến</message>
 	<message key="manager.setup.issnDescription"><![CDATA[Chỉ số ISSN (International Standard Serial Number) là một số gồm 8 chữ số định danh các ấn phẩm đều kỳ, bao gồm cả ấn phẩm đều kỳ điện tử. Chỉ số này được quản lý bởi một mạng lưới các Trung tâm Quốc gia về ISSN và được điều phối chung bởi Trung tâm Quốc tế ISSN tại Paris, được UNESCO và Chính phủ Pháp bảo trợ. Chỉ số này có thể xin tại <a href="http://www.issn.org" target="_new">Website của ISSN</a>.  Việc này có thể làm ở bất kỳ thời điểm nào trong quá trình hoạt động của tạp chí.]]></message>
 	<message key="manager.setup.doiPrefix">Tiền tố DOI</message>
 	<message key="manager.setup.doiPrefixDescription"><![CDATA[Tiền tố DOI (Digital Object Identifier - Chỉ số Nhận dạng Vật thể số) được <a href="http://www.crossref.org" target="_new">CrossRef</a> cấp và có định dạng 10.xxxx (v.d. 10.1234).]]></message>
@@ -855,7 +855,7 @@ Lưu ý là có thể vô hiệu giao diện tìm kiếm OAI trên website này 
 	<message key="manager.setup.contributorsDescription">Các cơ quan, đơn vị khác cung cấp tài chính hoặc vật chất cho tạp chí sẽ xuất hiện ở mục Giới thiệu Tạp chí và có thể kèm theo lời cảm tạ.</message>
 	<message key="manager.setup.contributor">Người đóng góp</message>
 	<message key="manager.setup.addContributor">Thêm người đóng góp</message>
-	<message key="manager.setup.searchEngineIndexing">Lập chỉ mục ở Công cụ tìm kiếm (Search Engines)</message>
+	<message key="manager.setup.searchEngineIndexing">Lập chỉ mục ở Công cụ tìm kiếm</message>
 	<message key="manager.setup.searchEngineIndexingDescription">Để giúp cho người sử dụng các công cụ tìm kiếm dễ tìm thấy tạp chí này, hãy cung cấp một mô tả ngắn gọn về tạp chí và từ khóa phù hợp (cách nhau bằng dấu chấm phẩy).</message>
 	<message key="manager.setup.customTags">Các thẻ tự chế</message>
 	<message key="manager.setup.customTagsDescription">Có thể chèn các thẻ HTML tự chế vào đầu mỗi trang (v.d., META tags).</message>
@@ -955,7 +955,7 @@ Setting up LOCKSS support for Open Journal Systems does not need to take place u
 	<message key="manager.setup.subjectClassification">Phân loại chủ đề</message>
 	<message key="manager.setup.subjectClassificationDescription"><![CDATA[[Tạp chí sẽ sử dụng một hệ thống phân loại chủ đề có sẵn trên mạng.<br />
 Tên của hệ thống phân loại]]></message>
-	<message key="manager.setup.subjectClassificationExamples">(v.d., Khung phân loại chủ đề toán học (Mathematics Subject Classification); Khung phân loại của Thư viện Quốc hội Hoa Kỳ (Library of Congress Classification))</message>
+	<message key="manager.setup.subjectClassificationExamples">(v.d., Khung phân loại chủ đề toán học; Khung phân loại của Thư viện Quốc hội Hoa Kỳ)</message>
 	<message key="manager.setup.subjectKeywordTopic">Từ khóa</message>
 	<message key="manager.setup.subjectProvideExamples">Cung cấp các ví dụ về từ khóa hoặc chủ đề như là một chỉ dẫn cho tác giả</message>
 	<message key="manager.setup.subjectExamples">(v.d., Photosynthesis; Black Holes; Four-Color Map Problem; Bayesian Theory)</message>
@@ -1045,7 +1045,7 @@ Lựa chọn một mô hình để xử lý những khía cạnh này của quá
 	<message key="manager.setup.listsDescription">Nhập con số tối đa những mục (ví dụ, bài nộp, người dùng, bài giao biên tập)xuất hiện trên mỗi trang dưới dạng danh mục và số lượng đường dẫn được hiển thị trên mỗi trang.</message>
 	<message key="manager.setup.itemsPerPage">Số mục mỗi trang</message>
 	<message key="manager.setup.numPageLinks">Số đường dẫn</message>
-	<message key="manager.setup.useTextTitle">Tên tạp chí dạng text</message>
+	<message key="manager.setup.useTextTitle">Tên TC dạng text</message>
 	<message key="manager.setup.useImageTitle">Tên tạp chí dạng ảnh</message>
 	<message key="manager.setup.useImageLogo">Ảnh logo</message>
 	<message key="manager.setup.noImageFileUploaded">Chưa file ảnh nào được tải lên.</message>
@@ -1150,13 +1150,13 @@ Lựa chọn một mô hình để xử lý những khía cạnh này của quá
 	<message key="manager.people.confirmDisable">Vô hiệu người dùng này? Tác vụ này sẽ không cho phép người dùng này đăng nhập vào hệ thống.
 
 Quý vị có thể cho người dùng biết lý do tại sao tài khoản của họ bị vô hiệu.</message>
-	<message key="manager.people.noneEnrolled">Chưa có người dùng nào được bổ nhiệm.</message>
+	<message key="manager.people.noneEnrolled">Chưa ai được bổ nhiệm.</message>
 	<message key="manager.people.enrollSelected">Bổ nhiệm những người dùng đã chọn</message>
 	<message key="manager.people.noMatchingUsers">Không có người dùng hợp tiêu chí.</message>
 	<message key="manager.people.saveAndCreateAnotherUser">Ghi lại và tạo người dùng khác</message>
 	<message key="manager.people.userCreatedSuccessfully">Tạo người dùng mới thành công</message>
 	<message key="manager.people.authSource">Nguồn xác thực quyền</message>
-	<message key="manager.people.enrollUserAs">Bổ nhiệm người dùng với vai trò</message>
+	<message key="manager.people.enrollUserAs">Bổ nhiệm vai trò</message>
 	<message key="manager.people.doNotEnroll">Không có vai trò</message>
 	<message key="manager.people.invalidUser">Xin lỗi, người dùng được yêu cầu không tồn tại.</message>
 	<message key="manager.people.noAdministrativeRights"><![CDATA[Xin lỗi, quý vị không có quyền quản trị đối với người dùng này. Điều này có thể do:
@@ -1172,17 +1172,17 @@ Quý vị có thể cho người dùng biết lý do tại sao tài khoản củ
 	<message key="manager.people.disable">Vô hiệu</message>
 	<message key="manager.people.enable">Hiệu lực</message>
 	<message key="manager.people.remove">Loại bỏ</message>
-	<message key="manager.people.emailUsers">Gửi email cho người dùng</message>
+	<message key="manager.people.emailUsers">Email cho người dùng</message>
 	<message key="manager.people.emailUsers.emailSelectedUsers">Gửi email cho những người dùng đã chọn</message>
-	<message key="manager.people.emailUsers.emailUsersEnrolledAs">Gửi email cho những người dùng được bổ nhiệm là</message>
+	<message key="manager.people.emailUsers.emailUsersEnrolledAs">Gửi email cho</message>
 	<message key="manager.people.emailUsers.selectUsers">Chọn những người dùng quý vị muốn gửi email bằng cách đánh dấu vào các ô bên cạnh tên của họ.</message>
 	<message key="manager.people.emailUsers.selectTemplate">Chọn một thư mẫu</message>
 	<message key="manager.people.emailUsers.selectLocale">Chọn ngôn ngữ</message>
 
 	<message key="manager.people.editProfile">Sửa hồ sơ</message>
 
-	<message key="manager.people.signInAsUser">Đăng nhập như là người dùng này</message>
-	<message key="manager.people.signInAs">Đăng nhập với vai trò này</message>
+	<message key="manager.people.signInAsUser">Giả làm</message>
+	<message key="manager.people.signInAs">Giả làm</message>
 	<message key="manager.people.syncUsers">Đồng nhất bổ nhiệm người dùng</message>
 	<message key="manager.people.syncUserDescription">Đồng nhất bổ nhiệm người dùng cho phép bổ nhiệm tất cả người dùng có chung một vai trò ở một tạp chí khác vào cùng vai trò đó ở tạp chí này. Chức năng cho phép một nhóm người (ví dụ: Hội đồng Biên tập, Phản biện) có thể làm việc cùng lúc cho các tạp chí khác nhau.</message>
 	<message key="manager.people.enrollSync">Đồng nhất người dùng</message>
@@ -1378,7 +1378,7 @@ Quý vị có thể cho người dùng biết lý do tại sao tài khoản củ
 	<message key="manager.announcements.form.dateExpireDayIncompleteDate">Vui lòng chọn năm và/hoặc tháng cùng với ngày hết hiệu lực.</message>
 
 	<!-- Editor -->
-	<message key="editor.home">Trang dành cho BTV chính</message>
+	<message key="editor.home">Trang BTV chính</message>
 	<message key="editor.submissionsAndPublishing">Bài nộp và Xuất bản</message>
 	<message key="editor.submissionQueue">Bài nộp đang chờ</message>
 	<message key="editor.submissionArchive">Bài nộp cũ</message>
@@ -1448,7 +1448,7 @@ Quý vị có thể cho người dùng biết lý do tại sao tài khoản củ
 	<message key="editor.issues.preview">(Xem trước)</message>
 	<message key="editor.issues.confirmPublish">Quý vị có chắc chắn muốn xuất bản số tạp chí mới này không?</message>
 	<message key="editor.issues.publicArticleIdExists">Không thể ghi mã công khai cho bài viết:</message>		
-	<message key="editor.issues.noLiveIssues">Không có số tạp chí nào đang trên mạng</message>
+	<message key="editor.issues.noLiveIssues">Không có nào.</message>
 	<message key="editor.issues.open">Mở</message>
 	<message key="editor.issues.pages">Trang</message>
 
@@ -1723,7 +1723,7 @@ Mới nhất là ngày ngày bài phản biện gần nhất được chấp nh�
 	<message key="author.submit.suppFile.researchInstrument">Công cụ nghiên cứu</message>
 	<message key="author.submit.suppFile.researchMaterials">Các tài liệu nghiên cứu</message>
 	<message key="author.submit.suppFile.researchResults">Kết quả nghiên cứu</message>
-	<message key="author.submit.suppFile.transcripts">Lời thoại trong các phỏng vấn</message>
+	<message key="author.submit.suppFile.transcripts">Lời thoại</message>
 	<message key="author.submit.suppFile.dataAnalysis">Phân tích dữ liệu</message>
 	<message key="author.submit.suppFile.dataSet">Tập hợp dữ liệu</message>
 	<message key="author.submit.suppFile.sourceText">Văn bản (text) nguồn</message>
@@ -1761,7 +1761,7 @@ Mới nhất là ngày ngày bài phản biện gần nhất được chấp nh�
 	<message key="submission.copyedit.editorsCopyedit">Biên tập bản thảo do BTV</message>
 	<message key="submission.copyedit.editorAuthorReview">Biên tập bản theo do Tác giả</message>
 	<message key="submission.copyedit.finalCopyedit">Bản thảo cuối cùng</message>
-	<message key="submission.copyedit.copyeditVersion">Phiên bản đã biên tập bản thảo</message>
+	<message key="submission.copyedit.copyeditVersion">Bản đã BT bản thảo</message>
 	<message key="submission.copyedit.selectCopyeditor">Chỉ định BTV bản thảo</message>
 	<message key="submission.copyedit.useFile">Sử dụng File</message>
 	<message key="submission.copyedit.copyeditComments">Lời bình từ biên tập bản thảo</message>
@@ -1943,7 +1943,7 @@ Mới nhất là ngày ngày bài phản biện gần nhất được chấp nh�
 	<message key="search.authorDetails">Chi tiết về Tác giả</message>
 	<message key="search.searchResults">Kết quả tìm kiếm</message>
 	<message key="search.reviseSearch">Chỉnh lại tìm kiếm</message>
-	<message key="search.noResults">Không tìm thấy kết quả</message>
+	<message key="search.noResults">Không có kết quả</message>
 	<message key="search.noKeywordError">Bạn phải điền ít nhất một từ khóa.</message>
 	<message key="search.syntaxInstructions"><![CDATA[Mẹo tìm kiếm: <ul>
 <li>Từ khóa tìm kiếm có phân biệt chữ thường/hoa</li>
@@ -2005,7 +2005,7 @@ Mới nhất là ngày ngày bài phản biện gần nhất được chấp nh�
 	<message key="about.contributors">Nguồn hỗ trợ</message>
 	<message key="about.onlineSubmissions">Gửi bài trực tuyến</message>
 	<message key="about.onlineSubmissions.haveAccount">Đã có Bí danh/Mật khẩu dành cho {$journalTitle}?</message>
-	<message key="about.onlineSubmissions.login">Chuyển đến trang Đăng nhập</message>
+	<message key="about.onlineSubmissions.login">Đến trang Đăng nhập</message>
 	<message key="about.onlineSubmissions.needAccount">Quý vị cần Bí danh/Mật khẩu?</message>
 	<message key="about.onlineSubmissions.registration">Chuyển đến trang Đăng ký</message>
 	<message key="about.onlineSubmissions.registrationRequired">Quý vị cần Đăng ký và Đăng nhập để gửi bài viết trực tuyến và kiểm tra trạng thái biên tập những bài viết mà quý vị đã gửi.</message>
@@ -2045,7 +2045,7 @@ Mới nhất là ngày ngày bài phản biện gần nhất được chấp nh�
 	<!-- Help -->
 	<message key="help.help">Hướng dẫn</message>
 	<message key="help.ojsHelp">Hướng dẫn sử dụng Phần mềm Tạp chí Mở (OJS)</message>
-	<message key="help.ojsHelpAbbrev">Hướng dẫn sử dụng phần mềm OJS</message>	
+	<message key="help.ojsHelpAbbrev">Hướng dẫn OJS</message>	
 	<message key="help.toc">Mục lục</message>	
 	<message key="help.searchResults">Kết quả tìm kiếm</message>
 	<message key="help.matchesFound">{$matches} mục hướng dẫn được tìm thấy</message>
@@ -2129,7 +2129,7 @@ Máy chủ của quý vị hiện có hỗ trợ mbstring: <strong>{$supportsMBS
 	<message key="installer.administratorAccountInstructions">Tài khoản người dùng này sẽ trở thành người quản trị website và có quyền truy cập toàn bộ hệ thống. Các tài khoản người dùng khác có thể thêm sau khi cài đặt.</message>
 	<message key="installer.databaseSettings">Tham số cho CSDL</message>
 	<message key="installer.databaseDriver">Driver của CSDL</message>
-	<message key="installer.databaseHost">Địa chỉ máy chủ</message>
+	<message key="installer.databaseHost">Máy chủ</message>
 	<message key="installer.databaseUsername">Bí đanh</message>
 	<message key="installer.databasePassword">Mật khẩu</message>
 	<message key="installer.databaseName">Tên CSDL</message>
@@ -2176,7 +2176,7 @@ Máy chủ của quý vị hiện có hỗ trợ mbstring: <strong>{$supportsMBS
 <p>Đừng quên chuyển tham số "installed" trong file config.inc.php trở về <i>On</i>.</p>
 <p>Nếu quý vị chưa đăng ký và muốn nhận tin tức và cập nhật, <strong> vui lòng đăng ký tại <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>.</strong> Nếu quý vị có câu hỏi hoặc bình luận, vui lòng ghé thăm <a href="http://pkp.sfu.ca/support/forum" target="_new">diễn đàn hỗ trợ</a>.</p>]]></message>
 	<message key="installer.skipFilesDir">Không tạo các thư mục con cần thiết (chỉ có ích khi cài đặt bằng tay)</message>
-	<message key="installer.releaseNotes">Ghi chú về phát hành phần mềm</message>
+	<message key="installer.releaseNotes">Ghi chú về phát hành</message>
 	<message key="installer.checkYes">Đúng</message>
 	<message key="installer.checkNo"><![CDATA[<span class="formError">Sai</span>]]></message>
 
@@ -2501,4 +2501,94 @@ Sau khi kết thúc hiệu đính, đổi tên file từ AuthorNameQA.doc thành
 	<message key="default.journalSettings.forLibrarians"><![CDATA[Chúng tôi khuyến khích cán bộ các thư viện nghiên cứu đưa tạp chí này vào danh mục các tạp chí điện tử của mình. Đồng thời, cũng xin lưu ý rằng phần mềm mã nguồn mở của tạp chí này rất phù hợp cho các thư viện để cài đặt cho các giảng viên sử dụng với những tạp chí mà họ tham gia biên tập (xem <a href="http://pkp.sfu.ca/ojs">Phần mềm Tạp chí Mở (Open Journal Systems)</a>).]]></message>
 	<message key="default.journalSettings.lockssLicense"><![CDATA[Tạp chí này sử dụng hệ thống LOCKSS để tạo ra một hệ thống lưu trữ phân tán giữa các thư viện thành viên và cho phép các thư viện này xây dựng các bộ sưu tập vĩnh viễn đối với tạp chí này vì mục đích bảo quản và khôi phục. <a href="http://lockss.stanford.edu/">Xem thêm...</a>]]></message>
 
+	<message key="common.add">Thêm</message>
+	<message key="common.discipline">Ngành</message>
+	<message key="common.confirmComplete">Quý vị có chắc chắn muốn đánh dấu là tác vụ này đã hoàn thành? Quý vị không thể thay  đổi sau khi đã thực hiện.</message>
+	<message key="common.captchaField">Kiểm chứng</message>
+	<message key="common.captchaField.description">Vui lòng nhập các ký tự xuất hiện trong ảnh trên đây.</message>
+	<message key="common.captchaField.badCaptcha">Những ký tự quý vị vừa nhập không khớp với những ký tự trong ảnh. Vui lòng nhập lại các ký tự và tiếp tục.</message>
+	<message key="common.suggest">Đề xuất</message>
+	<message key="common.payment">Thanh toán</message>
+	<message key="common.payments">Các khoản thanh toán</message>
+	<message key="form.postRequired">Mẫu biểu đã không gửi đi hợp lệ.</message>
+	<message key="form.formLanguage">Ngôn ngữ của biểu mẫu.</message>
+	<message key="form.formLanguage.description">Để nhập thông tin dưới đây bằng các ngôn ngữ khác, trước hết hãy chọn ngôn ngữ.</message>
+	<message key="email.compose.tooSoon">Quý vị đang cố gửi một thư quá gần so với thư vừa gửi trước đây. Xin vui lòng chờ trước khi gửi tiếp một thư khác.</message>
+	<message key="navigation.competingInterestGuidelines">Hướng dẫn về Lợi ích xung đột</message>
+	<message key="submission.sent">Đã gửi</message>
+	<message key="user.sendPassword">Khẳng định</message>
+	<message key="user.sendPassword.description">Gửi cho tôi một email khẳng định kèm theo bí danh và mật khẩu</message>
+	<message key="user.salutation">Xưng hô</message>
+	<message key="user.gender">Giới</message>
+	<message key="user.masculine">Nam</message>
+	<message key="user.feminine">Nữ</message>
+	<message key="user.signature">Chữ ký</message>
+	<message key="reader.subscribersOnly">Chỉ dành cho thuê bao</message>
+	<message key="reader.subscriptionRequiredLoginText">Để truy cập được tài liệu cần có thuê bao. Để xác minh thuê bao, hãy đăng nhập vào tạp chí</message>
+	<message key="reader.openAccess">Truy cập Tự do</message>
+	<message key="reader.subscriptionAccess">Truy cập có Thuê bao</message>
+	<message key="reader.subscriptionOrFeeAccess">Thuê bao hoặc Truy cập Tự do</message>
+	<message key="admin.settings.siteStyleSheet">Trang định bày website</message>
+	<message key="admin.settings.homeHeaderImageInvalid">Định dang logo của website không phù hợp. Các định dạng hợp lệ là: .gif, .jpg, hoặc .png.</message>
+	<message key="admin.settings.siteStyleSheetInvalid">Định dạng của trang trình bày không hợp lệ. Định dạng hợp lệ là .css.</message>
+	<message key="admin.languages.installLanguages">Quản lý Ngôn ngữ</message>
+	<message key="admin.languages.downloadLocales">Tải Ngôn ngữ</message>
+	<message key="admin.languages.downloadFailed">Ngôn ngữ không tải được. Thông báo lỗi dưới đây giải thích về sự cố này.</message>
+	<message key="admin.languages.localeInstalled">Ngôn ngữ "{$locale}" đã được cài đặt.</message>
+	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Việc tải các gói ngôn ngữ từ máy chủ của Dự án Tri thức Công cộng hiện không thực hiện được vì:</p>
+	<ul>
+		<li>Máy chủ của quý vị không cho phép giải nén file nén chuẩn "tar"</li>
+		<li>Phần mềm OJS không sửa được file đăng ký ngôn ngữ, thường là "registry/locales.xml".</li>
+	</ul>
+<p>Có thể tự tải các gói ngôn ngữ từ website của <a href="http://pkp.sfu.ca">PKP</a>.</p>]]></message>
+	<message key="admin.languages.download">Tải Ngôn ngữ</message>
+	<message key="admin.languages.download.cannotOpen">Không mở được định danh ngôn ngữ từ website của PKP.</message>
+	<message key="email.compose.tooManyRecipients">Bạn đang gửi thư tới quá nhiều người nhận.</message>
+	<message key="admin.languages.download.cannotModifyRegistry">Không thể thêm ngôn ngữ mới vào file đăng ký ngôn ngữ, thường là "registry/locales.xml".</message>
+	<message key="admin.mergeUsers">Hợp nhất người dùng</message>
+	<message key="admin.mergeUsers.mergeUser">Hợp nhất người dùng</message>
+	<message key="admin.mergeUsers.from.description">Chọn một người dùng để hợp nhất vào một tài khoản người dùng khác (v.d., khi một người có 2 tài khoản. Tài khoản được lựa chọn trước sẽ bị xoá và các bài nộp, bài được giao,... sẽ được chuyển sang tài khoản thứ hai.</message>
+	<message key="admin.mergeUsers.allUsers">Tất cả người dùng đã bổ nhiệm</message>
+	<message key="admin.mergeUsers.confirm">Quý vị có chắc chắn muốn hợp nhất tài khoản có bí danh "{$oldUsername}" vào tài khoản có bí danh "{$newUsername}"? Tài khoản có bí danh "{$oldUsername}" sau đó sẽ không còn tồn tại. Tác vụ này không thể thay đổi lại.</message>
+	<message key="admin.mergerUsers.noneEnrolled">Chưa có người dùng được bổ nhiệm</message>
+	<message key="manager.statistics.statistics.articleViews">Lượt xem bài viết (chỉ dành cho Tác giả)</message>
+	<message key="manager.payments">Các khoản thanh toán</message>
+	<message key="manager.payment.enable">Kích hoạt</message>
+	<message key="manager.payment.action">Tác vụ</message>
+	<message key="manager.payment.details">Chi tiết</message>
+	<message key="manager.payment.description">Mô tả</message>
+	<message key="manager.payment.addPayment">Thêm khoản thanh toán</message>
+	<message key="manager.payment.currency">Tiền tệ</message>
+	<message key="manager.payment.currencymessage">OJS không quy đổi giữa các loại tiền tệ. Nếu chấp nhận các khoản thanh toán cho thuê bao, quý vị phải đảm bảo rằng tiền tệ trả cho thuê bao khớp với loại được nêu ở đây.</message>
+	<message key="manager.payment.feePaymentOptions">Các hình thức thanh toán phí</message>
+	<message key="manager.payment.options">Hình thức</message>
+	<message key="manager.payment.records">Hồ sơ</message>
+	<message key="manager.payment.options.enablePayments">Nhấp chuột vào đây để kích hoạt module Thanh toán. Quỹ vị phải thiết lập các tham số thanh toán bằng cách điền vào biểu mẫu sau. Lưu ý rằng Người dùng phải đăng nhập mới làm thanh toán được.</message>
+	<message key="manager.payment.options.text">Mô tả Phương thức thanh toán</message>
+	<message key="manager.payment.options.fee">Phí</message>
+	<message key="manager.payment.options.feeName">Tên phí</message>
+	<message key="manager.payment.options.feeDescription">Mô tả phí</message>
+	<message key="manager.payment.generalOptions">Các hình thức chung</message>
+	<message key="manager.payment.authorFees">Phí Tác giả</message>
+	<message key="manager.payment.readerFees">Phí Bạn đọc</message>
+	<message key="manager.payment.generalFees">Các phí chung</message>
+	<message key="manager.payment.options.submissionFee">Nộp bài</message>
+	<message key="manager.payment.options.publicationFee">Đăng bài</message>
+	<message key="manager.payment.options.fastTrackFee">Duyệt nhanh</message>
+	<message key="manager.payment.options.membershipFee">Hội viên</message>
+	<message key="manager.payment.options.payPerViewFee">Trả theo Lượt xem</message>
+	<message key="manager.payment.options.waiverPolicy">Chính sách Miễn giảm</message>
+	<message key="manager.payment.options.onlypdf">Chỉ giới hạn truy cập vào file PDF của bài viết</message>
+	<message key="manager.payment.options.donationFee">Tài trợ cho tạp chí</message>
+	<message key="manager.payment.noPayments">Không có thanh toán nào</message>
+	<message key="manager.payment.paymentId">Mã thanh toán</message>
+	<message key="manager.payment.userName">Mã thanh toán</message>
+	<message key="manager.payment.timestamp">Thời gian</message>
+	<message key="manager.payment.amount">Lượng</message>
+	<message key="manager.payment.notFound">Không thấy</message>
+	<message key="manager.payment.paymentMethods">Các phương pháp thanh toán</message>
+	<message key="manager.payment.paymentMethod">Phương pháp thanh toán</message>
+	<message key="manager.payment.paymentMethod.description">Quý vị có thể thiết lập bất kỳ Công cụ Phương pháp Thanh toán nào trong màn hình</message>
+	<message key="manager.payment.paymentType">Kiểu thanh toán</message>
+	<message key="manager.payment.editSubscription">Sửa thuê bao</message>
 </locale>

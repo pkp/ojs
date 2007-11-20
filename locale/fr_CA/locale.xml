@@ -2520,7 +2520,7 @@ Vous essayez d'envoyer votre message dans un laps de temps trop court depuis vot
 	<message key="admin.languages.installLanguages">Gestion des paramètres de lieu</message>
 	<message key="admin.languages.downloadLocales">Télécharger les paramètres de lieu.</message>
 	<message key="admin.languages.downloadFailed">Le téléchargement du paramètre de lieu a échoué. Des explications sont contenues dans le message d'erreur ci-dessous.</message>
-	<message key="admin.languages.localeInstalled">Le paramètre de lieu "U+007b</message>
+	<message key="admin.languages.localeInstalled">Le paramètre de lieu "{$locale}" a été installé</message>
 	<message key="admin.languages.download">Télécharger le paramètre de lieu</message>
 	<message key="admin.languages.download.cannotOpen">Ne peut ouvrir le descripteur de langues du site Web PKP</message>
 	<message key="admin.languages.download.cannotModifyRegistry">Ne peut ajouter le nouveau paramètre de lieu au fichier de registre, généralement "registry/locales.xml".</message>
@@ -2540,22 +2540,22 @@ Vous essayez d'envoyer votre message dans un laps de temps trop court depuis vot
 	<message key="manager.payment.description">Description</message>
 	<message key="manager.payment.addPayment">Ajouter le paiement</message>
 	<message key="manager.payment.currency">Unité monétaire</message>
-	<message key="manager.payment.currencymessage">Le logiciel OJS n'effectue pas la conversion monétaire. Si vous acceptez les paiements d'abonnements, veuillez vous assurer que l'unité monétaire de l'abonnement concorde avec l'unité stipulée ici.</message>
+	<message key="manager.payment.currencymessage">Le logiciel OJS n'effectue pas la conversion des unités monétaires. Si vous acceptez les paiements d'abonnements, veuillez vous assurer que l'unité monétaire de l'abonnement concorde avec l'unité stipulée ici.</message>
 	<message key="manager.payment.options">Options</message>
 	<message key="manager.payment.records">Registres</message>
 	<message key="manager.payment.options.enablePayments">Cliquez ici pour activer le module Paiements. Vous devez compléter le formulaire ci-dessous pour configurer les paramètres de paiements. Veuillez noter que les utilisateurs doivent ouvrir une session pour effectuer leurs paiements.</message>
 	<message key="manager.payment.options.text">Description de la méthode de paiement</message>
 	<message key="manager.payment.generalOptions">Options générales</message>
 	<message key="manager.payment.authorFees">Droits d'auteurs</message>
-	<message key="manager.payment.authorFeesDescription">Les options choisies (ainsi que leur description - celles-ci peuvent être modifiées - et les frais connexes) seront affichées à l'étape 1 du procédé de soumission, ainsi que dans la section Au sujet du journal, sous l'entrée Soumissions, et au moment d'effectuer le paiement.</message>
+	<message key="manager.payment.authorFeesDescription">Les options choisies (ainsi que leur description - celles-ci peuvent être modifiées - et les frais connexes) seront affichées à l'étape 1 du procédé de soumission et dans la section Au sujet du journal, sous l'entrée Soumissions, ainsi qu'au moment d'effectuer le paiement.</message>
 	<message key="manager.payment.readerFees">Frais de lecture</message>
 	<message key="manager.payment.feePaymentOptions">Options de paiement des frais</message>
 	<message key="manager.payment.options.fee">Frais</message>
 	<message key="manager.payment.options.feeName">Catégorie des frais</message>
 	<message key="manager.payment.options.feeDescription">Description des frais</message>
-	<message key="manager.payment.readerFeesDescription">Les options choisies (incluant des descriptions pouvant être modifiées - et leurs frais) paraîtront sous la rubrique Politiques, dans la section Au sujet de la revue. Le paiement électronique est requis.</message>
+	<message key="manager.payment.readerFeesDescription">Les options choisies (incluant des descriptions pouvant être modifiées - et leurs frais) paraîtront sous la rubrique Politiques, dans la section Au sujet de la revue, ainsi qu'aux étapes où un paiement électronique est requis.</message>
 	<message key="manager.payment.generalFees">Frais généraux</message>
-	<message key="manager.payment.generalFeesDescription">L'affiliation à l'Association paraîtra sous la rubrique Politiques dans la section Au sujet de la revue. Le lien pour effectuer des dons apparaîtra au-dessus de la fonction de recherche, dans la marge droite du cadre.</message>
+	<message key="manager.payment.generalFeesDescription">L'abonnement à l'Association paraîtra sous la rubrique Politiques dans la section Au sujet de la revue. Le lien pour effectuer des dons paraîtra au-dessus de la fonction de recherche, dans la marge droite du cadre.</message>
 	<message key="manager.payment.options.submissionFee">Soumission d'article</message>
 	<message key="manager.payment.options.publicationFee">Publication d'un article</message>
 	<message key="manager.payment.options.fastTrackFee">Révision accélérée</message>
@@ -2570,7 +2570,7 @@ Vous essayez d'envoyer votre message dans un laps de temps trop court depuis vot
 	<message key="manager.payment.userName">Identificateur du payeur</message>
 	<message key="manager.payment.timestamp">Estampille temporelle</message>
 	<message key="manager.payment.amount">Montant</message>
-	<message key="manager.payment.notFound">Inaccessible</message>
+	<message key="manager.payment.notFound">Pas trouvé</message>
 	<message key="manager.payment.paymentMethods">Modes de paiements</message>
 	<message key="manager.payment.paymentMethod">Mode de paiement</message>
 	<message key="manager.payment.paymentMethod.description">Vous pouvez configurer tout plugiciel de mode de paiement à partir de cet écran.</message>
@@ -2578,12 +2578,181 @@ Vous essayez d'envoyer votre message dans un laps de temps trop court depuis vot
 	<message key="manager.payment.editSubscription">Modification de l'abonnement</message>
 	<message key="manager.payment.form.numeric">Tous lesoûts doivent avoir une valeur numérique positive (les signes décimaux sont permis)</message>
 	<message key="plugins.categories.citationFormats">Plugiciels de format de citation</message>
-	<message key="plugins.categories.citationFormats.description">Les plugiciels de format de citation offrent aux utilisateurs différents formats pour accéder aux citations d'articles.</message>
+	<message key="plugins.categories.citationFormats.description">Les plugiciels de format de citation permettent aux utilisateurs d'accéder aux citations d'articles par divers formats.</message>
 	<message key="plugins.categories.blocks">Bloc de plugiciels</message>
-	<message key="plugins.categories.blocks.description">Le bloc de plugiciels est composé de modules d'interface enfichables, tels les outils du menu latéral.</message>
-	<message key="plugins.categories.themes">Thème de plugiciel</message>
-	<message key="plugins.categories.themes.description">Il est possible d'utiliser la clé Thème de plugiciels pour modifier l'apparence du système.</message>
+	<message key="plugins.categories.blocks.description">Les blocs de plugiciels sont composés de modules d'interface enfichables, tels les outils du menu latéral.</message>
+	<message key="plugins.categories.themes">Thèmes de plugiciels</message>
+	<message key="plugins.categories.themes.description">Il est possible d'utiliser les thèmes de plugiciels pour modifier l'apparence du système.</message>
 	<message key="plugins.categories.paymethod">Plugiciels de paiements</message>
 	<message key="plugins.categories.paymethod.description">Les plugiciels de mode de paiement mettent en application le traitement de divers modes de paiement en ligne.</message>
 	<message key="manager.setup.management.description">Accès et protection, calendrier de travail, annonces, correction de texte, mise en page et correction d'épreuves.</message>
+	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Le téléchargement des progiciels de langues à partir du serveur Web du Public Knowledge Project n'est pas disponible pour l'instant, car :</p>
+	<ul>
+		<li>votre serveur n'a pas ou ne permet pas l'éxécution du programme de service "tar" GNU</li>
+
+		<li>OJS n'est pas capable de modifier le fichier base de registre du paramètre de lieu, généralement is "registry/locales.xml".</li>
+	</ul>
+<p>Les plugiciels de lange peuvent être téléchargés manuellement à partir de <a href="http://pkp.sfu.ca">PKP web site</a>.</p>]]></message>
+	<message key="admin.mergeUsers.confirm">Êtes-vous certain de vouloir fusionner le compte portant le nom d'utilisateur "{$oldUsername}" avec le compte portant le nom d'utilisateur "{$newUsername}"? Le compte portant le nom d'utilisateur "{$oldUsername}" n'exstera alors plus. Cette action n'est pas réversible.</message>
+	<message key="manager.setup.reviewOptions.blindReview">Évaluation aveugle</message>
+	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[Établir des liens à <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">en garantissant une évaluation aveugle</a> des pages contenant des fichiers téléchargés par des auteurs et des évaluateurs.]]></message>
+	<message key="manager.setup.editorDecision">Décision du rédacteur</message>
+	<message key="manager.setup.notifyAllAuthorsOnDecision">Lorsque vous utilisez le courriel Aviser l'auteur, inclure les adresses courriel de tous les co-auteurs, dans le cas de soumissions d'auteurs multiples, et pas simplement celle de l'utilisateur soumissionnaire.</message>
+	<message key="manager.setup.securitySettings">Paramètres d'accès et de sécurité</message>
+	<message key="manager.setup.securitySettingsDescription">OJS offre un éventail d'options de sécurité pouvant être utilisées pour limiter l'accès au contenu d'une revue et pour gérer des renseignements supplémentaires concernant les soumissions, aux fins de vérification.</message>
+	<message key="manager.setup.enableUserRegistration">Les utilisateurs peuvent s'inscrire à la revue dans l'une ou plusieurs des fonctions suivantes :</message>
+	<message key="manager.setup.disableUserRegistration">Le gestionnaire de la revue enregistre tous les utilisateurs. Les rédacteurs et rédacteurs de section peuvent seulement enregistrer les réviseurs.</message>
+	<message key="manager.setup.siteAccess">Restrictions supplémentaires concernant l'accès aux rubriques et aux sites</message>
+	<message key="manager.setup.restrictSiteAccess">Les utilisateurs doivent être enregistrés et ouvrir une session pour visionner le site de la revue.</message>
+	<message key="manager.setup.restrictArticleAccess">Les utilisateurs doivent être enregistrés et ouvrir une session pour visionner le contenu libre-accès.</message>
+	<message key="manager.setup.submissionEventLogging">Tenir un registre sur la page Historique, de toutes les actions prises concernant une soumission.</message>
+	<message key="manager.setup.submissionEmailLogging">Tenir un registre sur la page Historique, de tous les courriels envoyés concernant une soumission.</message>
+	<message key="manager.setup.authorCopyrightNoticeDescription"><![CDATA[L'Avis de droits d'auteurs ci-dessous parraîtra dans la rubrique Au sujet de la revue, et dans toutes les métadonnées des articles publiés. Bien que ce soit la responsabilité de la revue de définir les termes d'une entente avec les auteurs concernant les droits d'auteurs, le Public Knowledge Project recommande l'utilisation de <a href="http://creativecommons.org" target="_new" class="action">Creative Commons</a> license. À cette fin, il offre <a href="{$sampleCopyrightWordingUrl}" target="_new" class="action">sample Copyright Notice wording</a> pouvant être copié et collé dans l'espace ci-dessous pour les revues offrant (a) le libre-accès, (b) le libre-accès à retardement, ou (c) n'offrant pas le libre-accès.]]></message>
+	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Suggestion d'avis de droits d'auteurs</h3>
+<h4>1. Suggestion de politique à l'intention de revues offrant le libre-accès</h4>
+Les auteurs qui publient dans cette revue acceptent les termes suivants : 
+<ol type="a">
+	<li>Les auteurs conservent les droits d'auteur et accordent à la revue le droit de première publication, l'ouvrage étant alors disponible simultanément, sous la licence <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</a> permettant à d'autres de partager l'ouvrage tout en en reconnaissant la paternité et la publication initiale dans cette revue.</li>
+	<li>Les auteurs peuvent conclure des ententes contractuelles additionnelles et séparées pour la diffusion non exclusive de la version imprimée de l'ouvrage par la revue (par ex. : l'affichage au service d'archives d'une institution ou une parution dans un livre), accompagné d'une mention reconnaissant sa publication initiale dans cette revue.</li>
+	<li>Les auteurs ont le droit et sont encouragés à publier leur ouvrage en ligne (par ex.: dans la logithèque de référence ou sur le site Web d'une institution) avant et pendant le processus de soumission, car cela peut mener à des échanges fructueux ainsi qu'à un nombre accru et anticipé de références à l’ouvrage publié (Consulter <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>).</li>
+</ol>
+
+<h4>Politique suggérée à l'intention des revues offrant le libre-accès retardé</h4>
+Les auteurs publiant dans cette revue acceptent les termes suivants :
+<ol type="a">
+	<li>Les auteurs détiennent les droits d'auteurs et accordent à la revue
+le droit de première publication de l’œuvre [SPÉCIFIER LA PÉRIODE DE TEMPS] après que la publication soit disponible simultanément, sous la licence <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</a> qui permet à d'autres de partager l'ouvrage en en reconnaissant la paternité et la publication initiale dans cette revue.</li>
+	<li>Les auteurs peuvent conclure des ententes contractuelles additionnelles et séparées pour la diffusion non exclusive de la version imprimée de l'ouvrage par la revue (par ex. : l'affichage au service d'archives d'une institution ou une parution dans un livre), accompagné d'une mention reconnaissant sa publication initiale dans cette revue.</li>
+	<li> Les auteurs ont le droit et sont encouragés à publier leur ouvrage en ligne (par ex.: dans la logithèque de référence ou sur le site Web d'une institution) avant et pendant le processus de soumission, car cela peut mener à des échanges fructueux ainsi qu'à un nombre accru et anticipé de références à l’ouvrage publié (Consulter <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>).</li>
+</ol>]]></message>
+	<message key="manager.setup.includeCreativeCommons">Dans le cas de revues offrant le libre-accès immédiat ou retardé, inclure la licence Creative Commons dans tous les ouvrages publiés, au moment opportun.</message>
+	<message key="manager.setup.competingInterests">Conflits d'intérêts</message>
+	<message key="manager.setup.competingInterests.description"><![CDATA[Les revues biomédicales exigent habituellement que les auteurs et les évaluateurs déclarent s'ils ont des conflits d'intérêts concernant leur recherche (Voir <a href="http://journals.plos.org/plosclinicaltrials/competing.php" target="_new">PLoS Policy</a>).]]></message>
+	<message key="manager.setup.competingInterests.requireAuthors">Demander aux auteurs soumissionnaires de déposer la déclaration Conflits d'intérêts (CI) avec leur soumission.</message>
+	<message key="manager.setup.competingInterests.requireReviewers">Les évaluateurs doivent déposer une déclaration CI avec chaque soumission d'évaluations par des pairs.</message>
+	<message key="manager.setup.competingInterests.guidelines">Directives pour déposer une déclaration de conflits d'intérêts</message>
+	<message key="manager.setup.publicationFormatDescription">Le journal aura recours aux éléments suivants pour identifier les</message>
+	<message key="manager.setup.publicationFormatNumber">Numéro</message>
+	<message key="manager.setup.publicationFormatVolume">Volume</message>
+	<message key="manager.setup.publicationFormatTitle">Titre</message>
+	<message key="manager.setup.useCopyeditors">Un réviseur d'épreuve sera assigné à chaque soumission.</message>
+	<message key="manager.setup.noUseCopyeditors">La correction de texte sera assurée par un réviseur ou un chef de rubrique assigné à la soumission.</message>
+	<message key="manager.setup.useLayoutEditors">Un responsable de la mise en page sera assigné à la constitution de fichiers en format HTML, PDF, etc., aux fins de publication numérique.</message>
+	<message key="manager.setup.noUseLayoutEditors">Un rédacteur ou un chef de rubrique assigné à la soumission constituera les fichiers en format HTML, PDF, etc.</message>
+	<message key="manager.setup.referenceLinking">Liaison de référence</message>
+	<message key="manager.setup.referenceLinkingDescription"><![CDATA[<p>Les options suivantes sont disponibles pour permettre aux lecteurs de repérer les versions en ligne de l’ouvrage cité par un auteur.</p>
+
+<ol>
+	<li><strong>Add a Reading Tool</strong><p>Le gestionnaire de la revue peut ajouter « Trouver une référence » aux Outils de lecture accompagnant les items publiés, pour permettre aux lecteurs d’insérer le titre d’une reéérence avant d’entreprendre une recherche de l’ouvrage cité dans une base de données académique pré-sélectionnée.</p></li>
+	<li><strong>Embed Links in the References</strong><p>Le responsable de la mise en page peut ajouter des liens à des références en ligne, en suivant les instructions suivantes (peut être modifié).</p></li>
+</ol>]]></message>
+	<message key="manager.setup.provideRefLinkInstructions">Fournir des explications aux responsables de la mise en page.</message>
+	<message key="manager.setup.refLinkInstructions.description">Directives pour la mise en page des liens de référence</message>
+	<message key="manager.setup.useProofreaders">Un lecteur d'épreuves sera assigné à la vérification (assitée par les auteurs) des épreuves en placad avant la publication.</message>
+	<message key="manager.setup.noUseProofreaders">Un rédacteur ou un responsable de rubrique assigné à la soumission vérifiera les épreuves en placard.</message>
+	<message key="manager.setup.onlineAccessManagement">Accès au contenu de la revue</message>
+	<message key="manager.setup.subscriptionDescription">Ceci nécessite l'assignation d'un responsable de l'abonnement ayant accès au module d'abonnement, incluant des options additionelles de libre-accès, d'auto-archivage et d'avis de courriel.</message>
+	<message key="manager.setup.showGalleyLinksDescription">Toujours présenter les liens aux épreuves en placard et mentionner l'accès sous réserve.</message>
+	<message key="manager.setup.journalLayout">Mise en page de la revue</message>
+	<message key="manager.setup.journalLayoutDescription">Choisir le thème d'une revue et les composantes de la mise en page. Une page style pour la revue peut également être téléchargée. Elle peut remplacer le style des données utilisé dans toutes les page styles et les page thèmes du système (lorsqu'un thème est choisi).</message>
+	<message key="manager.setup.journalTheme">Thème de la revue</message>
+	<message key="manager.setup.layout.leftSidebar">Encadré de gauche</message>
+	<message key="manager.setup.layout.unselected">Non sélectionné</message>
+	<message key="manager.setup.layout.rightSidebar">Encadré de droite</message>
+	<message key="manager.languages.languageInstructions"><![CDATA[L’OJS peut être mis à la disposition des utilisateurs dans l’un des nombreux langages d’appui. Aussi, l’OJS peut fonctionner comme système multilingue, ce qui permet aux utilisateurs d’alterner entre les langages sur chaque page, et de permettre à certaines données d’être entrées dans plusieurs langages supplémentaires.<br /><br/>Si un langage soutenu par l’OJS n’est pas inscrit ci-dessous, demandez à votre webmestre d’installer le langage à partir de l’interface de l’administration du site. Pour des directives sur l’ajout de soutien pour les nouveaux langages, veuillez consulter la documentation de l’OJS.]]></message>
+	<message key="manager.languages.alternateLocaleInstructions">Ce système permet, de façon facultative, l’entrée de certains renseignements critiques dans plusieurs langages supplémentaires. Pour utiliser cette caractéristique, sélectionnez d’autres paramètres de lieu à partir des options énumérées ci-dessous.</message>
+	<message key="manager.groups.create">Créer un titre de poste</message>
+	<message key="manager.groups.enableBoard">Le gestionnaire de la revue crée les titres et ajoute les gens sous chaque titre.</message>
+	<message key="manager.groups.disableBoard">L'OJS énumère les gens dans l'équipe éditoriale sous des rôles attribués (gestionnaire de la revue, réviseur, etc.)</message>
+	<message key="manager.groups.context.editorialTeam.short">Équipe éditoriale</message>
+	<message key="manager.groups.context.editorialTeam">Le titre doit apparaître sous Équipe éditoriale dans la section Gens de À propos de la revue (p. ex. : rédacteur)</message>
+	<message key="manager.groups.context.people">Le titre doit apparaître sous sa propre catégorie dans la section Gens (p. ex. : Comité de rédaction)</message>
+	<message key="manager.people.allUsers">Tous les utilisateurs inscrits</message>
+	<message key="manager.people.allEnrolledUsers">Utilisateurs inscrits à cette revue</message>
+	<message key="manager.people.allSiteUsers">Inscrire un utilisateur à cette revue à partir de ce site</message>
+	<message key="manager.people.mustChooseRole">Veuillez sélectionner un rôle en haut de la page avant de cliquer sur « Inscrire un utilisateur ».</message>
+	<message key="manager.people.enrollExistingUser">Inscrire un utilisateur actuel</message>
+	<message key="manager.people.enrollUserAsDescription">Les utilisateurs peuvent se voir attribuer ou se faire enlever un rôle à n'importe quel moment.</message>
+	<message key="manager.people.mustProvideName">En premier, veuillez fournir au moins un nom de famille pour l'utilisateur.</message>
+	<message key="manager.subscriptionTypes.form.public">Ce type d'abonnement ne sera pas publiquement visible (p. ex. : sous Abonnements dans À propos de la revue).</message>
+	<message key="editor.submissionReview.emailWillArchive">Cette soumission sera archivée après l'envoi du courriel de notification de l'auteur ou l'appui de la touche sauter le courriel.</message>
+	<message key="editor.notifyUsers.inProgress">Notification des utilisateurs...</message>
+	<message key="editor.issues.volumeRequired">Le volume est nécessaire et doit être une valeur numérique et positive.</message>
+	<message key="editor.issues.numberRequired">Le chiffre est nécessaire et doit être une valeur numérique et positive.</message>
+	<message key="editor.issues.yearRequired">L'année est nécessaire et doit être une valeur numérique et positive.</message>
+	<message key="editor.issues.titleRequired">Le titre est nécessaire pour l'édition.</message>
+	<message key="editor.issues.issueIdentificationRequired">L'identification de l'édition est nécessaire. Veuillez sélectionner au moins l'une des options d'identification de l'édition.</message>
+	<message key="editor.issues.showCoverPage">Créer une couverture pour cette édition avec les éléments suivants.</message>
+	<message key="editor.article.payment.publicationFeeNotPaid">Frais de publication non payés. Pour prévoir un article pour publication, informez l'auteur qu'il doit payer les frais ou supprimez les frais.</message>
+	<message key="sectionEditor.review.enrollReviewer">Inscrire un utilisateur actuel à titre de critique</message>
+	<message key="reviewer.article.restrictedFileAccess">La soumission sera mise à la disposition si et quand un critique accepte de faire une critique</message>
+	<message key="reviewer.competingInterests">Intérêts divergents</message>
+	<message key="author.submit.requestWaiver">Demande de dérogation</message>
+	<message key="author.submit.qualityForWaiver">Veuillez envisager la renonciation des frais de soumission de l'article pour cet article</message>
+	<message key="author.submit.addReasonsForWaiver">Veuillez utiliser la case de commentaires ci-dessous pour indiquer pourquoi les frais devraient être supprimés.</message>
+	<message key="author.submit.reorderInstructions">Réordonner les auteurs pour qu'ils apparaissent dans l'ordre qu'ils seront énumérés dans la publication.</message>
+	<message key="author.submit.submissionIndexingDescription">Fournir les termes pour l'indexation de la soumission; séparer les termes par un point-virgule (terme1; terme2; terme3).</message>
+	<message key="author.submit.form.abstractRequired">Veuillez entrer le résumé de votre article.</message>
+	<message key="author.submit.supplementaryFiles.saveToUpload">Cliquer sur Sauvegarder pour télécharger le fichier (après cela, des fichiers supplémentaires peuvent être téléchargés).</message>
+	<message key="author.submit.forgottenSubmitSuppFile">Êtes-vous certain de vouloir continuer sans télécharger le fichier supplémentaire que vous avez choisi?</message>
+	<message key="submission.layout.galleyLocaleRequired">Un paramètre de lieu pour l'épreuve en placard est nécessaire.</message>
+	<message key="submission.layout.galleyLanguageRequired">Un langage pour l'épreuve en placard est nécessaire.</message>
+	<message key="submission.layout.referenceLinking">Liaison de référence</message>
+	<message key="user.login.accountNotValidated">Votre adresse électronique n'a pas été validée. Veuillez vérifier votre courriel et suivre les directives présentées. Si vous n'avez pas reçu de courriel, vous devrez peut-être communiquer avec le webmestre pour de l'aide.</message>
+	<message key="user.login.activate">Compte actif</message>
+	<message key="user.login.activated">Merci d'avoir activé votre compte. Vous pouvez maintenant vous brancher en utilisant les authentifiants fournis lors de la création de votre compte.</message>
+	<message key="author.submit.supplementaryFilesInstructions">Cette étape facultative permet l’ajout de fichiers supplémentaires à la soumission. Les fichiers, qui peuvent être sous n’importe quel format, peuvent comprendre (a) des instruments de recherche, (b) des ensembles de données, qui se conforment aux conditions de la révision déontologique de la recherche de l’étude, (c) des sources qui autrement ne seraient pas disponibles aux lecteurs, (d) des figures et des tableaux qui ne peuvent être intégrés dans le texte en soi, ou d’autre matériel qui s’ajoute à la contribution du travail.</message>
+	<message key="user.profile.form.urlInvalid">Le URL spécifié est non valide. Veuillez revérifier le URL et essayer de nouveau. (Suggestion : Ajouter http:// au début de l'URL.)</message>
+	<message key="about.authorFees">Droits d'auteur</message>
+	<message key="about.authorFeesMessage">Cette revue prélève les droits d'auteur suivants.</message>
+	<message key="about.memberships">Membres</message>
+	<message key="help.searchResultsFor">Résultats pour</message>
+	<message key="donations.thankYou">Merci</message>
+	<message key="donations.thankYouMessage">Merci de votre contribution. Votre geste est très apprécié.</message>
+	<message key="payment.loginRequired">Vous devez être dans le système pour effectuer un paiement.</message>
+	<message key="payment.loginRequired.forArticle">Un abonnement ou un paiement à la séance est nécessaire pour accéder aux articles. Pour vérifier votre abonnement ou régler les frais, entrez dans la revue.</message>
+	<message key="payment.loginRequired.forDonation">Vous devez être dans le système pour effectuer un don.</message>
+	<message key="payment.paid">Payé</message>
+	<message key="payment.payNow">Payer maintenant</message>
+	<message key="payment.waive">Renoncer</message>
+	<message key="payment.alreadyPaid">Déjà payé</message>
+	<message key="payment.alreadyPaidMessage">Sélectionner cette case si vous avez déjà envoyé votre paiement à la revue afin de compléter le processus de soumission. La soumission sera revue lors de la réception du paiement. Cliquer sur PAYER MAINTENANT ci-dessus pour consulter les directives de paiement.</message>
+	<message key="payment.paymentReceived">Paiement reçu</message>
+	<message key="payment.paymentSent">Le paiement a déjà été envoyé</message>
+	<message key="payment.type.submission">Frais de soumission</message>
+	<message key="payment.type.publication">Frais de publication</message>
+	<message key="payment.type.fastTrack">Frais de révision accélérée</message>
+	<message key="payment.type.membership">Cotisation individuelle</message>
+	<message key="payment.type.payPerView">Frais d'article payé à la séance</message>
+	<message key="payment.type.subscription">Frais d'abonnement</message>
+	<message key="payment.type.donation">Dons</message>
+	<message key="payment.donation.makeDonation">Effectuer un don</message>
+	<message key="payment.submission.paySubmission">Payer les frais de soumission</message>
+	<message key="payment.fastTrack.payFastTrack">Payer pour le mode accéléré</message>
+	<message key="payment.fastTrack.inFastTrack">en mode accéléré</message>
+	<message key="payment.publication.payPublication">Payer pour publier</message>
+	<message key="payment.publication.publicationPaid">Frais de publication payés</message>
+	<message key="payment.membership.buyMembership">Acheter une cotisation individuelle</message>
+	<message key="payment.membership.renewMembership">Renouveler une cotisation individuelle</message>
+	<message key="payment.membership.ends">Se termine</message>
+	<message key="payment.subscription.renew">Renouveler l'abonnement</message>
+	<message key="payment.subscription.expires">Expire</message>
+	<message key="installer.connectionCharsetInstructions"><![CDATA[Le codage à utiliser pour les données envoyées et reçues de la base de données. Cela devrait être le même que le jeu de caractères du client. Veuillez noter que cette capacité est seulement soutenue par MySQL >= 4.1.1 ou PostgreSQL >= 7.1. Sélectionnez « Sans objet » si votre serveur de base de données ne répond pas à ces exigences.]]></message>
+	<message key="installer.databaseCharsetInstructions"><![CDATA[Le codage à utiliser pour la mémorisation dans la base de données. Veuillez noter que cette capacité est seulement soutenue par MySQL >= 4.1.1 ou PostgreSQL >= 7.1. Sélectionnez « Sans objet » si votre serveur de base de données ne répond pas à ces exigences.]]></message>
+	<message key="rt.admin.settings.printerFriendly">Version imprimable (offre une version imprimable d'un article).</message>
+	<message key="rt.admin.settings.addComment">Ajouter des commentaires (permet aux lecteurs d'afficher des commentaires. Le gestionnaire de la revue est en mesure d'effacer les commentaires).</message>
+	<message key="rt.admin.settings.findingReferences">Trouver les références</message>
+	<message key="rt.metadata.pkp.doi">Identificateur numérique d'objet</message>
+	<message key="rt.captureCite.format">Format de citation</message>
+	<message key="rt.findingReferences">Trouver les références</message>
+	<message key="rt.findingReferences.googleScholar">Chercheur Google</message>
+	<message key="rt.findingReferences.windowsLiveAcademic">Windows Live Academic</message>
+	<message key="default.journalSettings.checklist.addressesLinked">Quand cela a été possible, les URL des références ont été fournis.</message>
+	<message key="default.journalSettings.submissionFeeDescription">Les auteurs doivent payer des frais de soumission d'article dans le cadre du processus de soumission pour contribuer aux coûts de révision.</message>
+	<message key="default.journalSettings.fastTrackFeeDescription">Avec le paiement de ces frais, la révision, la décision éditoriale et la notification de l'auteur de ce manuscrit sont garanties dans les quatre prochaines semaines.</message>
+	<message key="default.journalSettings.publicationFeeDescription">Si cet article est accepté pour publication, vous devrez payer les frais de publication d'article pour couvrir les frais de publication.</message>
+	<message key="default.journalSettings.waiverPolicy">Si vous n'avez pas l'argent pour payer de tels frais, vous aurez l'occasuion de supprimer les frais. Nous ne voulons pas que les frais empêchent la publication d'ouvrages méritants.</message>
+	<message key="default.journalSettings.payPerViewFeeDescription">Le paiement des frais vous permettra de visionner, télécharger et imprimer cet article.</message>
+	<message key="default.journalSettings.membershipFeeDescription">Le paiement des frais vous inscrira à titre de membre de cette association pendant un an et vous accordera un accès gratuit à ce journal.</message>
+	<message key="default.journalSettings.donationFeeDescription">Les dons de n'importe quel montant à cette revue sont les bienvenus et permettent aux éditeurs de continuer à offrir une revue de la plus haute qualité à ses lecteurs.</message>
 </locale>

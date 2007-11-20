@@ -149,10 +149,10 @@
 	<message key="common.alphaList">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</message>
 
 	<!-- Common Form Messages -->
-	<message key="form.errorsOccurred">Si &#x00E8; verificato un errore durante l'elaborazione del modulo.</message>
+	<message key="form.errorsOccurred">Si è verificato un errore durante l'elaborazione del modulo.</message>
 	<message key="form.saveToUpload">Usa il pulsante salva per caricare un file.</message>
 	<message key="form.contains">contiene</message>
-	<message key="form.is">&#x00E8;</message>
+	<message key="form.is">è</message>
 	<message key="form.required">(* Obbligatorio)</message>
 	<message key="form.submit">Invia</message>
 	<message key="form.send">Spedisci</message>
@@ -176,8 +176,8 @@
 	<message key="email.addCcRecipient">Aggiungi CC</message>
 	<message key="email.addBccRecipient">Aggiungi BCC</message>
 	<message key="email.bccSender">Invia una copia di questo messaggio al mio indirizzo ({$address})</message>	
-    <message key="email.invalid">L'indirizzo {$email} non &#x00E8; valido.</message>
-	<message key="email.multipart">Questo &#x00E8; una email in formato MIME.</message>
+    <message key="email.invalid">L'indirizzo {$email} non è valido.</message>
+	<message key="email.multipart">Questo è una email in formato MIME.</message>
 	<message key="email.attachments">Allegati</message>
 	<message key="email.addAttachment">Aggiungi Allegati</message>
 
@@ -186,8 +186,8 @@
 	<message key="locale.supported">Lingue supportate</message>
 
 	<!-- Common Error Messages -->
-	<message key="common.error.databaseError">Si &#x00E8; verificato un errore nella connessione al database: {$error}</message>
-	<message key="common.error.databaseErrorUnknown">Si &#x00E8; verificato un errore sconosciuto nella connessione al database.</message>
+	<message key="common.error.databaseError">Si è verificato un errore nella connessione al database: {$error}</message>
+	<message key="common.error.databaseErrorUnknown">Si è verificato un errore sconosciuto nella connessione al database.</message>
 	<message key="common.error.framesRequired"><![CDATA[Questa pagina utilizza i frames. <a href="{$url}">Premi qui</a> per la versione priva di frames.]]></message>
 		
 	<!-- Navigation -->
@@ -215,8 +215,8 @@
 	<message key="navigation.previousStep">Passo precedente</message>
 	<message key="navigation.nextStep">Passo successivo</message>
 	<message key="navigation.stepNumber">Passo {$step}</message>
-	<message key="navigation.previousPage"><![CDATA[&lt;&lt;]]></message>
-	<message key="navigation.nextPage"><![CDATA[&gt;&gt;]]></message>
+	<message key="navigation.previousPage"><![CDATA[<<]]></message>
+	<message key="navigation.nextPage"><![CDATA[>>]]></message>
 	<message key="navigation.items">{$from} - {$to} di {$total} elementi</message>
 	
 	<!-- Article Queues -->
@@ -268,7 +268,7 @@
 	<message key="article.coverage">Ambito</message>
 	<message key="article.coverageGeo">Ambito geografico</message>
 	<message key="article.coverageChron">Ambito temporale/storico</message>
-	<message key="article.coverageSample"> Caratteristiche del campione di ricerca</message>
+	<message key="article.coverageSample">Caratteristiche del campione di ricerca</message>
 	<message key="article.type">Tipo, metodo o approccio</message>
 	<message key="article.language">Lingua</message>
 	<message key="article.sectionEditor">SE</message>
@@ -295,7 +295,7 @@
 	<message key="submission.originalFile">File originale</message>
 	<message key="submission.addSuppFile">Aggiungi un file supplementare</message>
 	<message key="submission.submitter">Utente che sottomette</message>
-	<message key="submission.changeSection">Cambia a </message>
+	<message key="submission.changeSection">Cambia a</message>
 	<message key="submission.initiated">Iniziato</message>
 	<message key="submission.lastModified">Ultima modifica</message>
 	<message key="submission.ask">Chiedi</message>
@@ -313,9 +313,9 @@
 	<message key="submission.abstractViews">Viste dell'Abstract</message>
 	<message key="submission.noReviewAssignments">Nessun revisore assegnato</message>
 	<message key="submission.reviewVersion">Versione revisionata</message>
-	<message key="submission.peerReview">Osservazione&amp;nbsp;revisione</message>
+	<message key="submission.peerReview"><![CDATA[Osservazione&nbsp;revisione]]></message>
 	<message key="submission.editorDecision">Decisione dell'editor</message>
-	<message key="submission.round">Round&amp;nbsp;{$round}</message>
+	<message key="submission.round"><![CDATA[Round&nbsp;{$round}]]></message>
 	<message key="submission.editorReview">Revisione dell'editor</message>
 	<message key="submission.notifyAuthor">Informa l'autore</message>
 	<message key="submission.notifyEditor">Informa l'editor</message>
@@ -894,7 +894,7 @@ Da notare che l'interfaccia OAI pu&#x00F2; essere disabilitata per questo sito t
 	<message key="manager.setup.reviewOptions.automatedRemindersDisabled"><![CDATA[<strong>Nota:</strong> Per attivare queste opzioni, l'amministratore del sito deve abilitare l'opzione <tt>scheduled_tasks</tt> nel file di configurazione di OJS. COnfigurazioni aggiuntive del server possono essere richieste per supportare questa funzione (che potrebbe non essere possibile su tutti i server), come indicato nella documentazione di OJS.]]></message>
 	<message key="manager.setup.reviewOptions.reviewerRatings">Indici dei reviewer</message>
     <message key="manager.setup.reviewOptions.onQuality">Gli editors, dopo ogni review, daranno ai reviewer un voto in una scala da uno a cinque.</message>
-	<message key="manager.setup.reviewOptions.reviewerAccess">Modalit&#x00E0; di accesso dei reviewer</message>
+	<message key="manager.setup.reviewOptions.reviewerAccess">Modalità di accesso dei reviewer</message>
     <message key="manager.setup.reviewOptions.restrictReviewerFileAccess">I reviewer avranno accesso ai file di submission solo dopo aver accettato il processo di review.</message>
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled">Abilita l'accesso one-click al revisore.</message>
 	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"><![CDATA[<strong>Nota:</strong> Quando questa opzione &#x00E8; abilitata, le URL delle submission nelle email di notifica e promemoria conterranno una chiave d'accesso che scavalca l'usauale processo di login. Usando questo link, i revisori possono fare revisioni senza inserire username e password; devono ancora fare il log in per completre gli altri compiti.]]></message>
@@ -2556,5 +2556,146 @@ Dopo che avete finito con le vostre revisioni, rinominare il file da NomeAutoreQ
 	<message key="default.journalSettings.forLibrarians"><![CDATA[Incoraggiamo ricerche di bibliotecari per mettere in lista questa rivista tra le riviste elettroniche in possesso alla biblioteca. Inoltre, potrebbe aver senso notare che il sistema di pubblicazione open source di questa rivista &#x00E8; adatto a ospitare per i loro membri di facolt&#x00E0; l'uso delle riviste in cui sono coinvolti nell'editing (vedi <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></message>
 	<message key="default.journalSettings.lockssLicense"><![CDATA[Questa rivista utilizza il sistema LOCKSS  per creare un sistema di archiviazione distribuito tra le biblioteche partecipanti e permette a queste  di creare archivi permanenti della rivista per scopi di preservazioni e restauro. <a href="http://lockss.stanford.edu/">Altro...</a>]]></message>
 
+	<message key="common.add">Aggiungi</message>
+	<message key="common.discipline">Disciplina</message>
+	<message key="common.confirmComplete">Sei sicuro di voler contrassegnare questo lavoro come completato? Potresti non poter fare cambiamenti in seguito.</message>
+	<message key="common.captchaField">Convalida</message>
+	<message key="common.captchaField.description">Per favore inserisci le lettere come appaiono nell'immagine sotto.</message>
+	<message key="common.captchaField.badCaptcha">I caratteri che hai inserito non corrispondono ai caratteri dell'immagine. Per favore controlla i caratteri e riprova.</message>
+	<message key="common.suggest">Suggerisci</message>
+	<message key="common.payment">Pagamento</message>
+	<message key="common.payments">Pagamenti</message>
+	<message key="form.postRequired">Il modulo non è stato inviato correttamente.</message>
+	<message key="form.formLanguage">Lingua del modulo</message>
+	<message key="form.formLanguage.description">Per inserire le informazioni in basso in lingue ulteriori, prima seleziona la lingua.</message>
+	<message key="email.compose.tooSoon">Stai cercando di inviare un messaggio troppo recentemente da quando è stato unviato l'ultimo messaggio. Per favore aspetta prima di inviare un altro messaggio.</message>
+	<message key="email.compose.tooManyRecipients">Il messaggio che stai cercando di inviare ha troppi destinatari.</message>
+	<message key="navigation.competingInterestGuidelines">Linee guida di interesse concorrente</message>
+	<message key="submission.sent">Inviato</message>
+	<message key="user.sendPassword">Conferma</message>
+	<message key="user.sendPassword.description">Inviami una email di conferma includendo il mio nome utente e password</message>
+	<message key="user.salutation">Saluti</message>
+	<message key="user.gender">Sesso</message>
+	<message key="user.masculine">M</message>
+	<message key="user.feminine">F</message>
+	<message key="user.signature">Firma</message>
+	<message key="reader.subscribersOnly">Solo sottoscrittori</message>
+	<message key="reader.subscriptionRequiredLoginText">E' necessario essere sottoscrittore per accedere all'articolo. Per verificare la sottoscrizione, inserisci la login nella rivista.</message>
+	<message key="reader.openAccess">Open Access</message>
+	<message key="reader.subscriptionAccess">Accesso alla sottoscrizione</message>
+	<message key="reader.subscriptionOrFeeAccess">Sottoscrizione o accesso a pagamento</message>
+	<message key="admin.settings.siteStyleSheet">Foglio di stile del sito</message>
+	<message key="admin.settings.homeHeaderImageInvalid">Formato dell'immagine del logo del sito non valido. I formati accettati sono .gif, .jpg, o .png.</message>
+	<message key="admin.settings.siteStyleSheetInvalid">Formato del foglio di stile del sito non valido. Il formato accettato è .css.</message>
+	<message key="admin.languages.installLanguages">Amministra le lingue</message>
+	<message key="admin.languages.downloadLocales">Scarica le lingue</message>
+	<message key="admin.languages.downloadFailed">Lo scarico della lingua è fallito. Il(I) messaggio(i) di errore qui sotto descrive l'insuccesso.</message>
+	<message key="admin.languages.localeInstalled">La lingua "{$locale}" è stata installata.</message>
+	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Non è attualemnte possibile scaricare i pacchetti della lingua dal server web del Public Knowledge Project  perchè:</p>
+	<ul>
+		<li>Il tuo server non ha o non permette l'esecuzione della utility del "tar" di GNU</li>
+		<li>OJS non è in grado di modificare il file di registro della lingua, solitamente "registry/locales.xml".</li>
+	</ul>
+<p>I pacchetti della lingua possono essere scaricati manualmente dal <a href="http://pkp.sfu.ca">sito web del PKP</a>.</p>]]></message>
+	<message key="admin.languages.download">Scarica la lingua</message>
+	<message key="admin.languages.download.cannotOpen">Non è possibile aprire il descrittore della lingua del sito web del PKP.</message>
+	<message key="admin.languages.download.cannotModifyRegistry">Non è possibile aggiungere la nuova lingua al file di registro della lingua, solitamente "registry/locales.xml".</message>
+	<message key="admin.mergeUsers">Fondi gli utenti</message>
+	<message key="admin.mergeUsers.mergeUser">Fondi l'utente</message>
+	<message key="admin.mergeUsers.into.description">Seleziona l'utente al quale si vuole attribuire le autorizzazioni dell'utente precedente, modificando gli incarichi assegnati, ecc.</message>
+	<message key="admin.mergeUsers.from.description">Seleziona un utente da fondere all'account di un altro utente (es., quando qualcuno ha due account da utente). L'account selezionato sarà cancellato e le sue submissions, gli incarichi, ecc. saranno attribuiti al secondo account.</message>
+	<message key="admin.mergeUsers.allUsers">Tutti gli utenti iscritti</message>
+	<message key="admin.mergeUsers.confirm">Sei sicuro di voler fondere l'account con il nome utente "{$oldUsername}" con l'account con il nome utente "{$newUsername}"? L'account con il nome utente "{$oldUsername}"  non esisterà più in seguito. Questa azione non è reversibile.</message>
+	<message key="admin.mergerUsers.noneEnrolled">Nessun utente iscritto.</message>
+	<message key="manager.statistics.statistics.articleViews">Conteggi delle visite dell'articolo (solo per gli autori)</message>
+	<message key="manager.statistics.reports.description">OJS genera dei report che tracciano i dettagli associati alle submission in lavorazione nella rivista dalla prospettiva delle submission, dei curatori, dei revisori, e delle sezioni, per un periodo di tempo indicato. I report sono generati in formato CSV che richiede un'applicazione di foglio elettronico per essere visualizzati.</message>
+	<message key="manager.plugins.description">QUesta pagina permette all'Amministratore della rivista di rivedere e potenzialmente di configurare i plugin che sono installati attualmente. I plugin sono suddivisi in categorie, a secondo delle loro funzioni. Le categorie sono elencate di seguito, e dentro ogni categoria, il suo attuale gruppo di plugin.</message>
+	<message key="manager.payments">Pagamenti</message>
+	<message key="manager.payment.enable">Abilita</message>
+	<message key="manager.payment.action">Azione</message>
+	<message key="manager.payment.details">Dettagli</message>
+	<message key="manager.payment.description">Descrizione</message>
+	<message key="manager.payment.addPayment">Aggiungi un pagamento</message>
+	<message key="manager.payment.currency">Valuta</message>
+	<message key="manager.payment.currencymessage">OJS non effettua alcuna conversione di valuta. Nell'accettare i pagamenti per le sottoscrizioni, devi assicurarti che la valuta della sottoscrizione coincida con una specificata qui.</message>
+	<message key="manager.payment.feePaymentOptions">Opzioni di pagamento della quota</message>
+	<message key="manager.payment.options">Opzioni</message>
+	<message key="manager.payment.records">Registri</message>
+	<message key="manager.payment.options.enablePayments">Clicca qui per abilitare il modulo dei pagamenti. Devi configurare le impostazioni di pagamento riempiendo il modulo qui di seguito. Si noti che agli utenti verrà richiesto di effettuare il log in per eseguire i pagamenti.</message>
+	<message key="manager.payment.options.text">Descrizione del metodo di pagamento</message>
+	<message key="manager.payment.options.fee">Quota</message>
+	<message key="manager.payment.options.feeName">Nome della quota</message>
+	<message key="manager.payment.options.feeDescription">Descrizione della quota</message>
+	<message key="manager.payment.generalOptions">Opzioni generali</message>
+	<message key="manager.payment.authorFees">Quote dell'autore</message>
+	<message key="manager.payment.authorFeesDescription">Le opzioni selezionate, insieme alle loro descrizioni e quote (che possono essere modificate qui sotto), appariranno nel Passo 1 del processo di submission e in About the Journal sotto Submissions, come anche ai punti dove viene richiesto il pagamento.</message>
+	<message key="manager.payment.readerFees">Quote del lettore</message>
+	<message key="manager.payment.readerFeesDescription">Le opzioni selezionate, insieme alle loro descrizioni e quote (che possono essere modificate qui sotto), appariranno in About the Journal sotto Policies, come anche ai punti dove viene richiesto il pagamento.</message>
+	<message key="manager.payment.generalFees">Quote generali</message>
+	<message key="manager.payment.generalFeesDescription">The Association Membership apparirà in in About the Journal sotto Policies, e i link alle donazioni apparirà sopra la finzione di ricerca nel frame di destra.</message>
+	<message key="manager.payment.options.submissionFee">Submission dell'articolo</message>
+	<message key="manager.payment.options.publicationFee">Pubblicazione dell'articolo</message>
+	<message key="manager.payment.options.membershipFee">Association Membership</message>
+	<message key="manager.payment.options.payPerViewFee">Articolo Pay-Per-View</message>
+	<message key="manager.payment.options.waiverPolicy">Policy di rinuncia</message>
+	<message key="manager.payment.options.onlypdf">Solo accesso ristretto alle versioni PDF degli articoli</message>
+	<message key="manager.payment.options.acceptSubscriptionPayments">Questo attiverà i pagamenti per le sottoscrizioni, dove le tipologie, il costo, la durata e i sottoscrittori sono amministrati dall'Amministratore delle sottoscrizioni.</message>
+	<message key="manager.payment.options.donationFee">Donazioni alla rivista</message>
+	<message key="manager.payment.noPayments">Nessun pagamento</message>
+	<message key="manager.payment.paymentId">ID del pagamento</message>
+	<message key="manager.payment.userName">ID del pagamento</message>
+	<message key="manager.payment.amount">Importo</message>
+	<message key="manager.payment.paymentMethods">Metodi di pagamento delle quote</message>
+	<message key="manager.payment.paymentMethod">Metodo di pagamento</message>
+	<message key="manager.payment.paymentMethod.description">Puoi configurare qualsiasi dei seguenti plugin di metodo di pagamento da questa videta.</message>
+	<message key="manager.payment.paymentType">Tipo di pagamento</message>
+	<message key="manager.payment.editSubscription">Modifica la sottoscrizione</message>
+	<message key="manager.payment.form.numeric">Tutti i costi devono essere valori numerici positivi (sono permessi i decimali)</message>
+	<message key="plugins.categories.citationFormats">Plugin di formato della citazione</message>
+	<message key="plugins.categories.citationFormats.description">I plugin del formato di citazione fornisce agli utenti vari formati con cui accedere alle citazioni degli articoli.</message>
+	<message key="plugins.categories.blocks">Plugin del modulo</message>
+	<message key="plugins.categories.blocks.description">I plugin del modulo sono componenti UI pluggable, come i vari strumenti del menu laterale.</message>
+	<message key="plugins.categories.themes">Plugin del tema</message>
+	<message key="plugins.categories.themes.description">I plugin del tema può essere usato per cambiare l'aspetto del sistema.</message>
+	<message key="plugins.categories.paymethod">Plugin di pagamento</message>
+	<message key="plugins.categories.paymethod.description">I plugin del metodo di pagamento implementano i supporti per vari modi di effettuare pagamenti online.</message>
+	<message key="manager.setup.management.description">Accesso e sicurezza, programmazione, annunci, copyediting, layout, and proofreading.</message>
+	<message key="manager.setup.reviewOptions.blindReview">Revisione anonima</message>
+	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[Fornisci i link a <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">Assicurando una revisione anonima</a> nelle pagine dove gli autori e i revisori caricano i file.]]></message>
+	<message key="manager.setup.editorDecision">Decisione del curatore</message>
+	<message key="manager.setup.notifyAllAuthorsOnDecision">Quando utilizzi la email di notifica all'autore, includi gli indirizzi email di tutti i coautori per le submission con molti autori, e non solo dell'utente che invia.</message>
+	<message key="manager.setup.securitySettings">Impostazioni di accesso e sicurezza</message>
+	<message key="manager.setup.securitySettingsDescription">OJS fornisce un numero di opzioni relative alla sicurezza che può essere usato per restringere i contenuti della rivista, e mantiene le informazioni aggiuntive sulle submission per fini di auditing.</message>
+	<message key="manager.setup.enableUserRegistration">Gli utenti possono autoregistrarsi alla rivista con uno o più dei seguenti ruoli:</message>
+	<message key="manager.setup.enableUserRegistration.author">Autori (possomo inviare materili alla rivista)</message>
+	<message key="manager.setup.enableUserRegistration.reader">Lettori (riceveranno le notifiche e saranno calcolati come equivalenti a un sottoscrittore)</message>
+	<message key="manager.setup.enableUserRegistration.reviewer">Revisori (disponibili per revisionare le submission)</message>
+	<message key="manager.setup.disableUserRegistration">L'amministratore della rivista registra tutti gli utenti, con i curatori e i curatori di sezione abilitati a registrare solo i revisori.</message>
+	<message key="manager.setup.siteAccess">Restrizioni aggiuntive di accesso al sito e all'articolo</message>
+	<message key="manager.setup.restrictSiteAccess">Gli utenti devono essere registrati e aver effettuato il log in per vedere il sito della rivista.</message>
+	<message key="manager.setup.restrictArticleAccess">Gli utenti devono essere registrati e aver effettuato il log in per vedere i contenuti open access.</message>
+	<message key="manager.setup.submissionEventLogging">Mantieni un log di tutte le azioni eseguite su una submmission nella sua pagina dello storico.</message>
+	<message key="manager.setup.submissionEmailLogging">Mantieni un log di tutte le email relative a una submission nella sua pagina dello storico.</message>
+	<message key="manager.setup.reviewerDatabaseLink">Banca dati di revisori potenziali</message>
+	<message key="manager.setup.reviewerDatabaseLink.desc">Aggiungi alla pagina Seleiona il revisore un link a una banca dati rilevante di letteratura che può essere consultata dai potenziali revisori e che sia aperta ai curatori senza sottoscrizioni.</message>
+	<message key="manager.setup.addReviewerDatabaseLink">Aggiungi un nuovo link di banca dati</message>
+	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Note di copyright Creative Commons Copyright suggerite</h3>
+<h4>1. Policy suggerita per riviste che offrono Open Access</h4>
+Gli autori che pubblicano in questa rivista aderiscono alle seguenti condizioni:
+<ol type="a">
+	<li>Gli autori mantengono il copyright e acconsentono al diritto della rivista di pubblicare per prima il lavoro simulaneamente licenziato sotto una <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</a> che permette ad altri di condividere il lavoro con una notifica di proprietà del lavoro e di pubblicazione iniziale in questa rivista.</li>
+	<li>Gli autori possono inserire in accordi contrattuali separati e ulteriori per la distribuzione non esclusiva della versione del lavoro pubblicata nel giornale (es., inviarlo a un repository istituzionale o pubblicarlo in un libro), con una notifica della sua pubblicazione iniziale in questa rivista.</li>
+	<li>Gli autori possono e sono incoraggiati a mettere il loro lavoro online (es., in repositories istituzionali o sul loro sito web) prima e durante la procedura di submission, in quanto potrebbe portare a scambi produttivi, come anche a citazioni più in anticipo e più importanti del lavoro pubblicato (Si veda <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">L'effetto Open Access</a>).</li>
+</ol>
+
+<h4>Proposed Policy for Journals That Offer Delayed Open Access</h4>
+Authors who publish with this journal agree to the following terms:
+<ol type="a">
+	<li>Authors retain copyright and grant the journal right of first publication, with the work [SPECIFY PERIOD OF TIME] after publication simultaneously licensed under a <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</a> that allows others to share the work with an acknowledgement of the work's authorship and initial publication in this journal.</li>
+	 <li>Authors are able to enter into separate, additional contractual arrangements for the non-exclusive distribution of the journal's published version of the work (e.g., post it to an institutional repository or publish it in a book), with an acknowledgement of its initial publication in this journal.</li>
+	 <li>Authors are permitted and encouraged to post their work online (e.g., in institutional repositories or on their website) prior to and during the submission process, as it can lead to productive exchanges, as well as earlier and greater citation of published work (See <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html"> The Effect of Open Access</a>).</li>
+</ol>]]></message>
+	<message key="manager.payment.notFound">Non trovato</message>
+	<message key="manager.setup.publicationFormatNumber">Numero</message>
 </locale>
 
