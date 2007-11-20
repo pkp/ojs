@@ -35,14 +35,6 @@ class InformationBlockPlugin extends BlockPlugin {
 	}
 
 	/**
-	 * Install default settings on system install.
-	 * @return string
-	 */
-	function getInstallSitePluginSettingsFile() {
-		return $this->getPluginPath() . '/settings.xml';
-	}
-
-	/**
 	 * Install default settings on journal creation.
 	 * @return string
 	 */
