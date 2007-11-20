@@ -25,6 +25,7 @@ class LayoutEditorHandler extends Handler {
 		LayoutEditorHandler::setupTemplate();
 
 		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign('helpTopicId', 'editorial.layoutEditorsRole');
 		$templateMgr->display('layoutEditor/index.tpl');
 	}
 
