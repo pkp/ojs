@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.generic.sehl.name">Plugiciel de mise en relief de mots clés</message>
+	<message key="plugins.generic.sehl.description">Ce plugiciel permet une mise en relief de mots clés par le moteur de recherche, de manière à ce que les mots clés recherchés soient mis en évidence dans tout article HTML retrouvé par le moteur de recherche.</message>
+</locale>

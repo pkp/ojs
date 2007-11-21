@@ -86,7 +86,7 @@
 	<message key="plugins.generic.thesis.submitButton">Submit</message>
 	<message key="plugins.generic.thesis.view">Abstract</message>
 	<message key="plugins.generic.thesis.viewTitle">Abstract</message>
-	<message key="plugins.generic.thesis.noneExist">No thesis abstracts have been published.</message>
+	<message key="plugins.generic.thesis.noneExist">Chưa có Tóm tắt Luận văn.</message>
 	<message key="plugins.generic.thesis.abstract">Abstract</message>
 	<message key="plugins.generic.thesis.studentFullName">{$lastName}, {$firstName} {$middleName}</message>
 	<message key="plugins.generic.thesis.form.introduction">Upon submission of the following form, the thesis supervisor will be emailed and asked to verify the accuracy of the submitted information. Once this verification has been received by the journal, the thesis abstract will be published online.</message>
@@ -123,6 +123,4 @@
 	<message key="plugins.generic.thesis.form.supervisorMiddleName">Supervisor Middle Name</message>
 	<message key="plugins.generic.thesis.form.supervisorEmail">Supervisor Email</message>
 	<message key="plugins.generic.thesis.form.supervisorEmailValid">A valid supervisor's email is required.</message>
-	<message key="plugins.generic.thesis.form.saveAndCreateAnother">Save and Create Another</message>
-
 </locale>

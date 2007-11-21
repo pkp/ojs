@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Google Analytics plugin localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+
+	<!-- Google Analytics -->
+	<message key="plugins.generic.googleAnalytics.displayName">Plugiciel Google Analytics</message>
+	<message key="plugins.generic.googleAnalytics.description"><![CDATA[Intégrez OJS avec Google Analytics, un service de Google permettant l'analyse de visites de sites Web. Il faut que vous ayez déjà un compte Google Analytics pour l'utiliser. Veuillez voir le <a href="http://www.google.com/analytics/" title="Google Analytics site">site Google Analytics </a> pour de plus amples informations.]]></message>
+
+	<!-- Google Analytics Settings Management -->
+	<message key="plugins.generic.googleAnalytics.manager.settings">Réglages</message>
+	<message key="plugins.generic.googleAnalytics.manager.googleAnalyticsSettings">Réglages Google Analytics</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.description"><![CDATA[<p>Au moyen de ce plugiciel, on peut utiliser Google Analytics pour recueiller et analyser les visites au site Web de cette revue. Remarquez que, pour utiliser ce plugiciel, il faut déjà avoir un compte Google Analytics. Veuillez voir le <a href="http://www.google.com/analytics/" title="Google Analytics site">site Google Analytics </a> pour de plus amples informations.</p>]]></message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteId">Numéro de compte</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdInstructions">A partir de Google Analytics, cliquez sur Check Status pour voir le code de traçage de votre site. Le numéro de compte fait partie du code de traçage: _uacct = "###". Entrez les symboles qui correspondent aux ###.</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdRequired">Veuillez entrer un numéro de compte.</message>
+
+</locale>

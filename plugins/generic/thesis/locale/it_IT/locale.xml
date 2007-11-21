@@ -30,7 +30,7 @@
 	<message key="plugins.generic.thesis.manager.studentName">Nome dello studente</message>
 	<message key="plugins.generic.thesis.manager.title">Titolo della tesi</message>
 	<message key="plugins.generic.thesis.manager.confirmDelete">Sei sicuro di voler cancellare definitivamente tl'abstract di questa tesi?</message>
-	<message key="plugins.generic.thesis.manager.noneCreated">L'abstract della tesi non &#232; stato creato.</message>
+	<message key="plugins.generic.thesis.manager.noneCreated">L'abstract della tesi non è stato creato.</message>
 	<message key="plugins.generic.thesis.manager.create">Crea un nuovo abstract della tesi</message>
 	<message key="plugins.generic.thesis.manager.createTitle">Crea</message>
 	<message key="plugins.generic.thesis.manager.edit">Modifica l'abstract della tesi</message>

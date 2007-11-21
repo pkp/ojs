@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for this citation plugin in en_US.
+  *
+  * $Id$
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.citationFormats.endNote.displayName">Plugiciel EndNote pour notes en fin de texte</message>
+	<message key="plugins.citationFormats.endNote.citationFormatName">EndNote -- format pour notes en fin de texte (Macintosh et Windows)</message>
+	<message key="plugins.citationFormats.endNote.description">Ce plugiciel EndNote permet de placer les notes en fin de texte.</message>
+</locale>

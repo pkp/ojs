@@ -275,16 +275,6 @@ Tôi có thể và sẵn sàng phản biện bài nộp, "{$articleTitle}," cho 
 			<field name="description">Email này được Người phản biện gửi cho BTV chuyên mục để hồi âm đề nghị phản biện và báo cho BTV chuyên mục rằng Người phản biện nhận lời và sẽ hoàn thành phản biện trước ngày được nêu.</field>
 		</row>
 		<row>
-			<field name="email_key">REVIEW_CONFIRM_ACK</field>
-			<field name="subject">Cảm tạ việc nhận lời phản biện</field>
-			<field name="body">{$reviewerName}:
-
-Cảm ơn quý vị đã nhận lời phản biện bản thảo "{$articleTitle}" cho {$journalName} trước ngày {$reviewDueDate}.
-
-{$editorialContactSignature}</field>
-			<field name="description">Email này được BTV chuyên mục gửi cho Người phản biện cảm tạ việc nhận lời phản biện và động viên người phản biện hoàn thành trước thời hạn.</field>
-		</row>
-		<row>
 			<field name="email_key">REVIEW_DECLINE</field>
 			<field name="subject">Từ chối phản biện</field>
 			<field name="body">{$editorialContactName}:

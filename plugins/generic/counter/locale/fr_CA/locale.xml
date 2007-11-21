@@ -39,8 +39,8 @@
 	<message key="plugins.generic.counter.1a.platform">Plate forme</message>
 	<message key="plugins.generic.counter.1a.printIssn">Imprimer l'ISSN</message>
 	<message key="plugins.generic.counter.1a.onlineIssn">ISSN en ligne</message>
-	<message key="plugins.generic.counter.1a.ytdTotal">Cumul annuel jusqu'à ce jour - total</message>
-	<message key="plugins.generic.counter.1a.ytdHtml">Cumul annuel jusqu'à ce jour - HTML</message>
+	<message key="plugins.generic.counter.1a.ytdTotal">Cumul annuel jusqu'à ce jour -- total</message>
+	<message key="plugins.generic.counter.1a.ytdHtml">Cumul annuel jusqu'à ce jour -- HTML</message>
 	<message key="plugins.generic.counter.1a.ytdPdf">Cumul annuel jusqu'à ce jour - PDF</message>
 	<message key="plugins.generic.counter.1a.totalForAllJournals">Total pour toutes les revues</message>
 </locale>
