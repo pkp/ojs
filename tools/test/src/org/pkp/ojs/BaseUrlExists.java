@@ -8,6 +8,6 @@ public class BaseUrlExists extends OJSTestCase {
 
 	public void testBaseUrl() {
 		beginAt("/");
-		assertLinkPresentWithText("Open Journal Systems");
+		assertLinkPresentWithText("Home");
 	}
 }
