@@ -164,7 +164,7 @@
 	<message key="email.recipients">Người nhận</message>
 	<message key="email.from">Người gửi</message>
 	<message key="email.to">Kính gửi</message>
-	<message key="email.cc">Đồng kính gửi</message>
+	<message key="email.cc">Đồng gửi</message>
 	<message key="email.bcc">Sao gửi</message>
 	<message key="email.subject">Chủ đề</message>
 	<message key="email.body">Nội dung</message>
@@ -172,8 +172,8 @@
 	<message key="email.skip">Bỏ qua Email</message>
 	<message key="email.compose">Gửi Email</message>
 	<message key="email.addToRecipient">Thêm người nhận</message>
-	<message key="email.addCcRecipient">Thêm Đồng kính gửi (Cc)</message>
-	<message key="email.addBccRecipient">Thêm Sao gửi (Bcc)</message>
+	<message key="email.addCcRecipient">Thêm Đồng gửi</message>
+	<message key="email.addBccRecipient">Thêm Sao gửi</message>
 	<message key="email.bccSender">Gửi một bản sao email này vào địa chỉ của tôi ({$address})</message>
 	<message key="email.invalid">Địa chỉ email {$email} này không hợp lệ.</message>
 	<message key="email.multipart">Đây là một thông điệp nhiều phần theo định dạng MIME.</message>
@@ -270,7 +270,7 @@
 	<message key="article.coverageSample">Đặc trưng của mẫu nghiên cứu</message>
 	<message key="article.type">Kiểu, phương pháp, cách tiếp cận</message>
 	<message key="article.language">Ngôn ngữ</message>
-	<message key="article.sectionEditor">BTV chuyên mục</message>
+	<message key="article.sectionEditor">BTV CM</message>
 	<message key="article.commentsToEditor">Bình luận của tác giả</message>
 	<message key="article.submission">Bài nộp</message>
 	<message key="article.submissions">Bài nộp</message>
@@ -2509,7 +2509,7 @@ Sau khi kết thúc hiệu đính, đổi tên file từ AuthorNameQA.doc thành
 	<message key="common.captchaField.badCaptcha">Những ký tự quý vị vừa nhập không khớp với những ký tự trong ảnh. Vui lòng nhập lại các ký tự và tiếp tục.</message>
 	<message key="common.suggest">Đề xuất</message>
 	<message key="common.payment">Thanh toán</message>
-	<message key="common.payments">Các khoản thanh toán</message>
+	<message key="common.payments">Thanh toán</message>
 	<message key="form.postRequired">Mẫu biểu đã không gửi đi hợp lệ.</message>
 	<message key="form.formLanguage">Ngôn ngữ của biểu mẫu.</message>
 	<message key="form.formLanguage.description">Để nhập thông tin dưới đây bằng các ngôn ngữ khác, trước hết hãy chọn ngôn ngữ.</message>
@@ -2552,7 +2552,7 @@ Sau khi kết thúc hiệu đính, đổi tên file từ AuthorNameQA.doc thành
 	<message key="admin.mergeUsers.confirm">Quý vị có chắc chắn muốn hợp nhất tài khoản có bí danh "{$oldUsername}" vào tài khoản có bí danh "{$newUsername}"? Tài khoản có bí danh "{$oldUsername}" sau đó sẽ không còn tồn tại. Tác vụ này không thể thay đổi lại.</message>
 	<message key="admin.mergerUsers.noneEnrolled">Chưa có người dùng được bổ nhiệm</message>
 	<message key="manager.statistics.statistics.articleViews">Lượt xem bài viết (chỉ dành cho Tác giả)</message>
-	<message key="manager.payments">Các khoản thanh toán</message>
+	<message key="manager.payments">Thanh toán</message>
 	<message key="manager.payment.enable">Kích hoạt</message>
 	<message key="manager.payment.action">Tác vụ</message>
 	<message key="manager.payment.details">Chi tiết</message>
@@ -2580,7 +2580,7 @@ Sau khi kết thúc hiệu đính, đổi tên file từ AuthorNameQA.doc thành
 	<message key="manager.payment.options.waiverPolicy">Chính sách Miễn giảm</message>
 	<message key="manager.payment.options.onlypdf">Chỉ giới hạn truy cập vào file PDF của bài viết</message>
 	<message key="manager.payment.options.donationFee">Tài trợ cho tạp chí</message>
-	<message key="manager.payment.noPayments">Không có thanh toán nào</message>
+	<message key="manager.payment.noPayments">Chưa có</message>
 	<message key="manager.payment.paymentId">Mã thanh toán</message>
 	<message key="manager.payment.userName">Mã thanh toán</message>
 	<message key="manager.payment.timestamp">Thời gian</message>
@@ -2591,4 +2591,13 @@ Sau khi kết thúc hiệu đính, đổi tên file từ AuthorNameQA.doc thành
 	<message key="manager.payment.paymentMethod.description">Quý vị có thể thiết lập bất kỳ Công cụ Phương pháp Thanh toán nào trong màn hình</message>
 	<message key="manager.payment.paymentType">Kiểu thanh toán</message>
 	<message key="manager.payment.editSubscription">Sửa thuê bao</message>
+	<message key="manager.setup.reviewOptions.blindReview">Phản biện Khuyết danh</message>
+	<message key="manager.setup.editorDecision">Quyết định của BTV</message>
+	<message key="manager.setup.enableUserRegistration.author">Tác giả (có thể gửi tài liệu cho tạp chí)</message>
+	<message key="manager.setup.enableUserRegistration.reader">Độc giả (sẽ nhận được thông báo và được tính như là một thuê bao)</message>
+	<message key="manager.setup.enableUserRegistration.reviewer">Người phản biện (sẵn sàng phản biện bài nộp)</message>
+	<message key="manager.setup.disableUserRegistration">Tổng biên tập đăng ký cho tất cả người dùng, BTV và BTV chuyên mục chỉ có thể đăng ký cho Người phản biện.</message>
+	<message key="manager.setup.restrictSiteAccess">Người dùng phải đăng ký và đăng nhập mới xem được tạp chí.</message>
+	<message key="manager.setup.restrictArticleAccess">Người dùng phải đăng ký và đăng nhập mới xem được nội dung cho truy cập tự do.</message>
+	<message key="manager.setup.addReviewerDatabaseLink">Thêm đường dẫn tới CSDL mới</message>
 </locale>

@@ -126,4 +126,21 @@
 	<message key="plugins.generic.thesis.form.supervisorEmailValid">Inserire un'email valida.</message>
 	<message key="plugins.generic.thesis.form.saveAndCreateAnother">Salva e crea un altro</message>
 
+	<message key="plugins.generic.thesis.manager.keyword">Parola chiave</message>
+	<message key="plugins.generic.thesis.manager.studentFirstName">Nome</message>
+	<message key="plugins.generic.thesis.manager.studentLastName">Cognome</message>
+	<message key="plugins.generic.thesis.manager.studentEmail">Email</message>
+	<message key="plugins.generic.thesis.manager.department">Dipartimento</message>
+	<message key="plugins.generic.thesis.manager.university">Università</message>
+	<message key="plugins.generic.thesis.manager.abstract">Abstract</message>
+	<message key="plugins.generic.thesis.manager.noResults">Nessun risultato</message>
+	<message key="plugins.generic.thesis.manager.form.degreeName">Nome della laurea</message>
+	<message key="plugins.generic.thesis.manager.form.degreeNameRequired">E' necessario il nome di laurea della tesi.</message>
+	<message key="plugins.generic.thesis.manager.form.degreeNameInstructions">Il nome della laurea (es. Dottore in filosofia, ecc.)</message>
+	<message key="plugins.generic.thesis.manager.form.comment">Commenti</message>
+	<message key="plugins.generic.thesis.manager.form.author">Autore e supervisione</message>
+	<message key="plugins.generic.thesis.manager.form.studentEmailPublish">Pubblica l'email dello studente</message>
+	<message key="plugins.generic.thesis.manager.form.studentEmailPublishInstructions">Se controllata, la email dello studente sarà pubblicata con l'abstract della tesi.</message>
+	<message key="plugins.generic.thesis.manager.form.indexing">Indicizzare</message>
+	<message key="plugins.generic.thesis.settings.submissions">Submission</message>
 </locale>

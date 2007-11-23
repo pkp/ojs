@@ -2697,5 +2697,153 @@ Authors who publish with this journal agree to the following terms:
 </ol>]]></message>
 	<message key="manager.payment.notFound">Non trovato</message>
 	<message key="manager.setup.publicationFormatNumber">Numero</message>
+	<message key="manager.setup.includeCreativeCommons">Per le riviste che offrono o danno in ritardo accesso aperto, includi una licenza Creative Commons con tutti i lavori pubblicati in tempo appropriato.</message>
+	<message key="manager.setup.publicationFormatDescription">La rivista userà i seguenti elementi per identificare i fascicoli (che possono essere annullati per i singoli fascicoli)</message>
+	<message key="manager.setup.publicationFormatVolume">Volume</message>
+	<message key="manager.setup.publicationFormatTitle">Titolo</message>
+	<message key="manager.setup.useCopyeditors">Un  copyeditor sarà assegnato per lavorare con ogni submission.</message>
+	<message key="manager.setup.noUseCopyeditors">Il copyediting verrà eseguito da un curatore o curatore di sezione assegnato alla submission.</message>
+	<message key="manager.setup.showGalleyLinksDescription">Mostra sempre i link alle bozze e indica l'accesso ristretto.</message>
+	<message key="manager.setup.journalTheme">Tema della rivista</message>
+	<message key="manager.setup.layout.leftSidebar">Menu laterale di sinistra</message>
+	<message key="manager.setup.layout.unselected">Non selezionato</message>
+	<message key="manager.setup.layout.rightSidebar">Menu laterale di destra</message>
+	<message key="manager.languages.alternateLocaleInstructions">Questo sistema facoltativamente permette di inserire certe informazioni critiche in diversi lingue addizionali. Per usare questa caratteristica, seleziona le lingue alternative e scegli le opzioni elencate di seguito.</message>
+	<message key="manager.groups.create">Crea il titolo di posizione</message>
+	<message key="manager.groups.enableBoard">L'amministrratore della rivista crea i titoli e aggiunge le persone sotto ogni titolo.</message>
+	<message key="manager.groups.disableBoard">OJS elenca le persone nel gruppo editoriale sotto i ruoli assegnati (amministratore della rivista, copyeditor, ecc.)</message>
+	<message key="manager.groups.context.editorialTeam.short">Gruppo editoriale</message>
+	<message key="manager.people.allUsers">Tutti gli utenti iscritti</message>
+	<message key="manager.people.allEnrolledUsers">Utenti registrati a questa rivista</message>
+	<message key="manager.people.allSiteUsers">Iscrivi un utente da questo sito in questa rivista</message>
+	<message key="manager.people.mustChooseRole">Per favore seleziona un ruolo in alto alla pagina prima di cliccare "Iscrivi un utente"</message>
+	<message key="manager.people.enrollExistingUser">Iscrivi un utente esistente</message>
+	<message key="manager.people.roleEnrollment">{$role} Iscrizione</message>
+	<message key="manager.people.enrollUserAsDescription">Gli utenti possono essere assegnati a, o rimossi da, un ruolo in qualsiasi momento.</message>
+	<message key="manager.people.mustProvideName">Per favore fornisci almeno un cognome per l'utente prima.</message>
+	<message key="editor.submissionReview.cannotSendToCopyediting">Prima di poter inviare questa submission per il copyediting, assicurati che una revisione è disponibile e che l'autore è stato notificato sulla decisione utilizzando il link Notifica l'autore sopra.</message>
+	<message key="editor.notifyUsers.inProgress">Notificare gli utenti...</message>
+	<message key="editor.issues.volumeRequired">E' necessario il volume e deve essere un valore numerico, positivo.</message>
+	<message key="editor.issues.numberRequired">E' necessario il numero e deve essere un valore numerico, positivo.</message>
+	<message key="editor.issues.yearRequired">E' necessario l'ann e deve essere un valore numerico, positivo.</message>
+	<message key="editor.issues.titleRequired">E' necessario un titolo per il fascicolo.</message>
+	<message key="editor.issues.issueIdentificationRequired">E' necessaria 'identificazione del fascicolo. Per favore seleziona almeno una delle opzioni di identificazione del fascicolo.</message>
+	<message key="editor.issues.showCoverPage">Crea una copertina per il fascicolo con i seguenti elementi</message>
+	<message key="editor.article.commentsRequired">Il capo per i commenti è necessario.</message>
+	<message key="editor.article.payment.publicationFeeNotPaid">Quota della pubblicazione non pagata.</message>
+	<message key="sectionEditor.review.enrollReviewer">Iscrivi un utente esistente come revisore</message>
+	<message key="submission.layout.imageInvalid">Formato dell'immagine non valido. I formati accettati sono .gif, .jpg, e .png.</message>
+	<message key="reviewer.article.restrictedFileAccess">La submission diventerà disponibile, se e quando il revisore accetterà di prendersi carico della revisione</message>
+	<message key="author.submit.reorderInstructions">Riordina gli autori per farli apparire nell'ordine in cui saranno elencati nella pubblicazione.</message>
+	<message key="author.submit.submissionIndexingDescription">Fornisci i termini per indicizzare la submission; separa i termini con un punto e virgola (termine1; termine2; termine3).</message>
+	<message key="author.submit.form.abstractRequired">Per favore inserisci l'abstract del tuo articolo.</message>
+	<message key="author.submit.supplementaryFilesInstructions">Questo passo facoltativo permette di aggiungere file aggiuntivi a una submission. I file, che possono essere in qualsiasi formato, potrebbero ncludere (a) strumenti di ricerca, (b) un insieme di dati, che aderiscano ai termini dell'etica di ricerca di studio della rivista (c) risorse che altrimenti non sarebbero disponibili ai lettori, (d) immagini e tabelle che non possono essere integrate nel testo stesso, o altri materiali che si aggiungono ai contributi della lavoro.</message>
+	<message key="author.submit.supplementaryFiles.saveToUpload">Clicca Salva per caricare il file (dopodichè si potranno caricare file aggiuntivi).</message>
+	<message key="author.submit.forgottenSubmitSuppFile">Sei sicuro di voler continuare senza caricare il file aggiuntivo che hai scelto?</message>
+	<message key="author.submit.confirmationDescription">Per inviare il tuo lavoro a {$journalTitle} clicca Completa la submission. Il contatto principale della submission riceverà una notifica via email e potrà visionare lo sviluppo della submission attraverso il processo editoriale effettuando il log in al sito web della rivista. Grazie per il tuo interessamento a pubblicare con {$journalTitle}</message>
+	<message key="user.login.accountNotValidated">Il tuo indirizzo email non è stato validato. Per favore controlla la tua email e segui le istruzioni fornite. Se non hai ricevuto una email,  potresti aver bisogno di contattare l'amministratore del sito per assistenza.</message>
+	<message key="user.login.activate">Attiva un account</message>
+	<message key="user.login.activated">Grazie per aver attivato il tuo account. Ora puoi effettuare il log in usando le credenziali  che hai fornito quando hai creato il tuo account.</message>
+	<message key="author.submit.authorSubmitLoginMessage">E' necessario un account di utente per sottomettere a questa rivista. Questo permette ai nostri curatori di seguire le tue submission e contattarti quando lo stato della tua submission cambia, o se sono necessarie ulteriori informazioni da te.</message>
+	<message key="user.profile.form.urlInvalid">L'URL specificata non è valida. Per favore ricontrolla la URL e riprova. (Suggerimento: Prova aggiungendo http:// all'inizio della URL.)</message>
+	<message key="about.authorFees">Quote dell'autore</message>
+	<message key="about.authorFeesMessage">Questa rivista fa pagare le seguenti quote all'autore.</message>
+	<message key="help.searchResultsFor">Risultati per</message>
+	<message key="donations.thankYou">Grazie</message>
+	<message key="donations.thankYouMessage">Grazie per aver contribuito. Il tuo contributo è molto apprezzato</message>
+	<message key="payment.loginRequired">Devi essere loggato per effettuare un pagamento.</message>
+	<message key="payment.loginRequired.forDonation">Devi essere loggato per effettuare una donazione.</message>
+	<message key="payment.paid">Pagato</message>
+	<message key="payment.payNow">Paga ora</message>
+	<message key="payment.waive">Rinuncia</message>
+	<message key="payment.alreadyPaid">Già pagato</message>
+	<message key="payment.alreadyPaidMessage">Seleziona questa casella se hai già inviato il tuo pagamento alla rivista per completare il processo di submission. La submission non sarà revisionata fino a quando il pagamento non arriverà. Clicca Paga ora in alto per vedere le istruzioni di pagamento.</message>
+	<message key="payment.paymentReceived">Pagamento ricevuto</message>
+	<message key="payment.paymentSent">Il pagamento è già stato inviato</message>
+	<message key="payment.type.submission">Quota della submission</message>
+	<message key="payment.type.publication">Quota della pubblicazione</message>
+	<message key="payment.type.subscription">Quota di sottoscrizione</message>
+	<message key="payment.type.donation">Donazioni</message>
+	<message key="payment.donation.makeDonation">Fai una donazione</message>
+	<message key="payment.publication.payPublication">Paga per pubblicare</message>
+	<message key="payment.publication.publicationPaid">Quota di pubblicazione pagata</message>
+	<message key="payment.subscription.renew">Rinnova la sottoscrizione</message>
+	<message key="installer.installationWrongPhp"><![CDATA[<br/><strong>ATTENZIONE: La tua versione attuale di PHP non soddisfa i requisiti minimi per l'installazione. E' raccomandato aggionare a una versione più recente di PHP.<br/><strong>]]></message>
+	<message key="installer.databaseSettingsInstructions">Ojs richiede l'accesso a una banca dati SQL permemorizzare i suoi dat. Vedi i requisiti di sistema sopra per un elenco delle banche dati supportate. Nei campi sotto, fornisci le impostazioni per connetterti alla banca dati.</message>
+	<message key="log.editor.decision">Una decisione del curatore ({$decision}) per l'articolo {$articleId} è stata registrata da {$articleId}</message>
+	<message key="rt.admin.settings.addComment">Aggiungi un commento (abilita i lettori a inviare commenti, che l'amministratore della rivista potrà cancellare).</message>
+	<message key="rt.captureCite.format">Formato della citazione</message>
+	<message key="rt.findingReferences.googleScholar">Google Scholar</message>
+	<message key="rt.findingReferences.windowsLiveAcademic">Windows Live Academic</message>
+	<message key="icon.small.alt">Piccolo</message>
+	<message key="icon.medium.alt">Medio</message>
+	<message key="icon.large.alt">Grande</message>
+	<message key="default.journalSettings.submissionFeeDescription">Agli autori è richiesto di pagare una quota per la submission dell'articolo come parte del processo di submission per contribuire ai costi della rivista.</message>
+	<message key="default.journalSettings.fastTrackFeeDescription">Con il pagamento di questa quota, la revisione, la decisione editoriale, e la notifica all'autore su questo lavoro sono garantite entro 4 settimane.</message>
+	<message key="default.journalSettings.publicationFeeDescription">Se questo articolo viene accettato per la pubblicazione, ti sarà chiesto di pagare una quota di pubblicazione per l'articolo per coprire i costi della pubblicazione.</message>
+	<message key="manager.setup.noUseLayoutEditors">Ub curatore o un curatore di sezione assegnato alla submission preparerà i file HTML, PDF, ecc.</message>
+	<message key="manager.setup.useProofreaders">Un correttore di bozze sarà assegnato per controllare (insieme agli autori) le bozze prima della pubblicazione.</message>
+	<message key="manager.setup.noUseProofreaders">Un curatore o un curatore di sezione assegnato alla submission controllerà le bozze.</message>
+	<message key="manager.setup.onlineAccessManagement">Accesso al contenuto della rivista</message>
+	<message key="author.submit.startHereTitle">Inizia una nouva submission</message>
+	<message key="author.submit.startHereLink"><![CDATA[<a href="{$submitUrl}" class="action">Clicca qui</a> per andare al primo passo dei cinque passi del processo di submission.]]></message>
+	<message key="author.submit.howToSubmit"><![CDATA[Hai incontrato difficoltà? Contatta <a href="mailto:{$supportEmail}">{$supportName}</a> per assistenza
+({$supportPhone}).]]></message>
+	<message key="author.submit.howToSubmitNoPhone"><![CDATA[Hai incontrato difficoltà? Contatta <a href="mailto:{$supportEmail}">{$supportName}</a> per assistenza.]]></message>
+	<message key="rt.admin.settings.addComment.authenticated">Gli utenti devono essere registrati e loggati per inviare, senza possibilità di anonimato.</message>
+	<message key="rt.admin.settings.addComment.anonymous">Gli utenti devono essere registrati e loggati per inviare, con possibilità di anonimato.</message>
+	<message key="rt.admin.settings.addComment.unauthenticated">Gli utenti possono non registrarsi per inviare, con possibilità di anonimato.</message>
+	<message key="rt.metadata.pkp.doi">Identificatore dell'oggetto digitale</message>
+	<message key="manager.setup.referenceLinking">Link ai riferimenti</message>
+	<message key="manager.setup.referenceLinkingDescription"><![CDATA[<p>Per abilitare i lettori a localizzare versioni online del lavoro citato da un autore, sono disponibili le seguenti opzioni.</p>
+
+<ol>
+	<li><strong>Aggiungi uno strumento di lettura</strong><p>L'amministratore della rivista può aggiungere "Trova riferimenti" agli strumenti di ricerca che accompagnano gli articoli pubblicati, così da abilitare i lettori a copiare un titolo di riferimento e poi cercare su banche dati accademiche preselezionate il lavoro citato.</p></li>
+	<li><strong>Link inclusi nei riferimenti</strong><p>Il curatore del layout può  aggiungere un link ai riferimenti che potrà essere trovato online usando le seguenti istruzioni (che possono essere modificate).</p></li>
+</ol>]]></message>
+	<message key="manager.setup.provideRefLinkInstructions">Fornisci ai curatori del layout le istruzioni.</message>
+	<message key="manager.setup.refLinkInstructions.description">Istruzioni di layout per i link di riferimento</message>
+	<message key="manager.setup.journalLayout">Layout della rivista</message>
+	<message key="manager.setup.journalLayoutDescription">Scegli un tema della rivista e seleziona i componenti del layout qui. Può essere caricato anche un foglio di stile della rivista, che può essere usato per ignorare  i dati di stile in tutti i fogli di stile del sistema e il foglio di stile del tema (se è stato scelto un tema).</message>
+	<message key="manager.languages.languageInstructions"><![CDATA[Ojs può essere reso accessibile agli utenti in molte lingue supportate. Inoltre OJS può operare come sistema multilingue, fornendo agli utenti la possibilità di scegliere fra le lingue in ogni pagina, e permettendo di inserire certi dati in diverse lingue addizionali.<br /><br/>Se una lingua supportata da OJS non è nella lista qui sotto, chiedi al tuo amministratore del sito di installare la lingua dall'interfaccia  dell'amministratore del sito. Per avere istruzioni sui supporti aggiuntivi per nuove lingue, si prega di consultare la documentazione di OJS.]]></message>
+	<message key="editor.submissionReview.emailWillArchive">Questa submission sarà archiviata dopo che la email di notifica all'autore sarà sia inviata o sia che il tasto 'Salta email' sarà cliccato.</message>
+	<message key="author.submit.requestWaiver">Richiedi una deroga</message>
+	<message key="author.submit.qualityForWaiver">Per favore considera di derogare la quota di submission degli articoli per questo articolo.</message>
+	<message key="author.submit.addReasonsForWaiver">Per favore usa la casella di commento sotto per indicare il perchè le quote debbano essere derogate.</message>
+	<message key="submission.layout.noLayoutFile">Nessuno (Carica la versione finale di copyedit come versione di layout prima di mandare la richiesta)</message>
+	<message key="submission.layout.referenceLinking">Link ai riferimenti</message>
+	<message key="payment.submission.paySubmission">Paga la quota di submission</message>
+	<message key="installer.connectionCharsetInstructions"><![CDATA[La codifica da usare per i dati inviati a e ricevuti dalla banca dati. Questa dovrebbe essere la stessa del set di caratteri del client. Nota che questa funzionalità è supportata solo da MySQL >= 4.1.1 o PostgreSQL >= 7.1. Seleziona "Non  applicabile" se il server della tua banca dati non riscontra questi requisiti.]]></message>
+	<message key="installer.databaseCharsetInstructions"><![CDATA[La codifica da usare per lo store dei dati in banca dati. Nota che questa funzionalità è supportata solo da MySQL >= 4.1.1 o PostgreSQL >= 7.1. Seleziona "Non  applicabile" se il server della tua banca dati non riscontra questi requisiti.]]></message>
+	<message key="rt.admin.settings.printerFriendly">Stampa la versione (fornisce una versione facile da stampare di un articolo).</message>
+	<message key="rt.admin.settings.findingReferences">Trova riferimenti</message>
+	<message key="rt.findingReferences">Trovare i riferimenti</message>
+	<message key="debug.notes.currencyListLoad">Elenco delle valute caricate "{$filename}" da XML</message>
+	<message key="default.journalSettings.checklist.addressesLinked">Dove possibile, sono stati forniti le URL dei riferimenti</message>
+	<message key="default.journalSettings.refLinkInstructions"><![CDATA[<h4>Per aggiungere link di riferimento al processo di layout</h4>
+	<p>Quando si trasforma una submission in HTML o PDF, assicurati che tutti gli hyperlink nella submission siano attivi.</p>
+	<h4>A. Quando l'autore fornisce un link con il riferimento</h4>
+	<ol>
+	<li>Mentre la submission è ancora nel suo formato word in lavorazione (es., Word), aggiungi la frase VEDI L'ARTICOLO alla fine del riferimento che ha una URL.</li>
+	<li>Trasforma questa frase in un hyperlink evidenziandola, e usando lo strumento inserci hyperlink di word e la URL preparata in #2.</li>
+	</ol>
+	<h4>B. Abilitare i lettori a Search Google Scholar per i riferimenti</h4>
+	<ol>
+	<li>Mentre la submission è ancora nel suo formato word in lavorazione (es., Word), copia il titolo del lavoro citato nella lista dei riferimenti (se un titolo sembra essere troppo comune – es., "Pace" – allora copia autore e titolo).</li>
+	<li>Incolla il titolo di riferimento tra i %22, mettendo un + tra ogni parola: http://scholar.google.com/scholar?q=%22PASTE+TITLE+HERE%22&hl=en&lr=&btnG=Search</li>
+	<li>Aggiungi la frase GS SEARCH alla fine di ogni citazione nella lista dei riferimenti della submission.</li>
+	<li>Trasforma questa frase in un hyperlink evidenziandola, e usando lo strumento Inserisci hyperlink di word e la URL preparata in #2.</li>
+	</ol>
+	<h4>C. Abiltare i lettori a ricercare i riferimenti con un DOI</h4>
+	<ol>
+	<li>Mentre la submission è ancora in Word, copia una serie di riferimenti nella CrossRef Text Query http://www.crossref.org/freeTextQuery/</li>
+	<li>Incolla ogni DOI che la Query fornisce nella seguente URL (tra = e &): http://www.cmaj.ca/cgi/external_ref?access_num=PASTE DOI#HERE&link_type=DOI</li>
+	<li>Aggiungi la frase CrossRef alla fine di ogni citazione nell'elenco dei riferimenti della submission.</li>
+	<li>Trasforma questa frase in un hyperlink evidenziando la frase e usando lo strumento Inserisci Hyperlink di Word e la URL appropriata preparata in #2.</li>
+	</ol>]]></message>
+	<message key="default.journalSettings.waiverPolicy">Se non hai fondi per pagare tali quote, avrai l'opportunità di derogare ogni quota. Non vogliamo impedire la pubblicazione di lavori notevoli.</message>
+	<message key="default.journalSettings.payPerViewFeeDescription">Il pagamento di questa quota ti permetterà di vedere, scaricare, e stampare questo articolo.</message>
+	<message key="default.journalSettings.membershipFeeDescription">Il pagamento di questa quota ti iscriverà come membro a questa associazione per un anno e ti permetterà l'accesso libero a questa rivista.</message>
+	<message key="default.journalSettings.donationFeeDescription">Donazioni di qualsiasi somma a questa rivista sono bene accette e fornisconi mezzi ai curatori per continuare a permettere alla rivista la più alta qualità per i suoi lettori.</message>
 </locale>
 

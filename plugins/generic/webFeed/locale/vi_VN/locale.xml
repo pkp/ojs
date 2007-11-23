@@ -15,5 +15,8 @@
 <locale name="en_US" full_name="U.S. English">
 	<message key="plugins.generic.webfeed.displayName">Feed Plugin</message>
 	<message key="plugins.generic.webfeed.description">This plugin produces RSS/Atom web syndication feeds for the current issue.</message>
+	<message key="plugins.generic.webfeed.settings">Thiết lập</message>
+	<message key="plugins.generic.webfeed.settings.recentArticles">những bài xuất bản gần đây nhất.</message>
+	<message key="plugins.generic.webfeed.settings.recentItemsRequired">Vui lòng nhập một số nguyên dương các bài xuất bản gần đây.</message>
 </locale>
 
