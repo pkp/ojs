@@ -33,13 +33,13 @@ public class FreshInstallTests extends OJSTestCase {
 		clickAndTest("Site Administrator");
 		clickAndTest("Site Settings");
 		setWorkingForm("settings");
-		setFormElement("title", siteTitle);
-		setFormElement("intro", siteIntro);
-		setFormElement("about", siteAbout);
-		setFormElement("contactName", siteContactName);
-		setFormElement("contactEmail", siteContactEmail);
-		setFormElement("minPasswordLength", "7");
-		submit();
+		setTextField("title[en_US]", siteTitle);
+		setTextField("intro[en_US]", siteIntro);
+		setTextField("about[en_US]", siteAbout);
+		setTextField("contactName[en_US]", siteContactName);
+		setTextField("contactEmail[en_US]", siteContactEmail);
+		setTextField("minPasswordLength", "7");
+		submit("");
 		usualTests();
 		assertTextNotPresent("Errors occurred processing this form");
 		assertTextPresent("Your changes have been saved.");
@@ -48,12 +48,12 @@ public class FreshInstallTests extends OJSTestCase {
 		clickLinkWithText("Site Administrator");
 		clickLinkWithText("Site Settings");
 		setWorkingForm("settings");
-		assertFormElementEquals("title", siteTitle);
-		assertFormElementEquals("intro", siteIntro);
-		assertFormElementEquals("about", siteAbout);
-		assertFormElementEquals("contactName", siteContactName);
-		assertFormElementEquals("contactEmail", siteContactEmail);
-		assertFormElementEquals("minPasswordLength", "7");
+		assertTextFieldEquals("title[en_US]", siteTitle);
+		assertTextFieldEquals("intro[en_US]", siteIntro);
+		assertTextFieldEquals("about[en_US]", siteAbout);
+		assertTextFieldEquals("contactName[en_US]", siteContactName);
+		assertTextFieldEquals("contactEmail[en_US]", siteContactEmail);
+		assertTextFieldEquals("minPasswordLength", "7");
 		
 		logOut();
 
@@ -72,10 +72,10 @@ public class FreshInstallTests extends OJSTestCase {
 		clickAndTest("Create Journal");
 		setWorkingForm("journal");
 
-		setFormElement("title", journalTitle);
-		setFormElement("description", journalDescription);
-		setFormElement("path", journalPath);
-		submit();
+		setTextField("title[en_US]", journalTitle);
+		setTextField("description[en_US]", journalDescription);
+		setTextField("path", journalPath);
+		clickButton("saveJournal");
 
 		usualTests();
 		assertTextNotPresent("Errors occurred processing this form");

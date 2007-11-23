@@ -14,6 +14,7 @@ public class CleanupTests extends OJSTestCase {
 		clickLinkWithText("User Home");
 		clickLinkWithText("Site Administrator");
 		clickLinkWithText("Hosted Journals");
+		setExpectedJavaScriptConfirm("Are you sure you want to permanently delete this journal and all of its contents?", true);
 		clickLinkWithText("Delete");
 		assertTextPresent("No journals have been created");
 		log("Done.\n");
