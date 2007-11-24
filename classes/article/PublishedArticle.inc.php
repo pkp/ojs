@@ -272,7 +272,7 @@ class PublishedArticle extends Article {
 
 		if (!$issue || !$journal || $journal->getJournalId() != $issue->getJournalId() || ($doiPrefix = $journal->getSetting('doiPrefix')) == '') return null;
 
-		return $doiPrefix . '/' . strtolower($journal->getSetting('journalInitials')) . '.v' . $issue->getVolume() . 'i' . $issue->getNumber() . '.' . $this->getArticleId();
+		return $doiPrefix . '/' . strtolower($journal->getLocalizedSetting('initials')) . '.v' . $issue->getVolume() . 'i' . $issue->getNumber() . '.' . $this->getArticleId();
 
 	}
 }

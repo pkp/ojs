@@ -134,7 +134,7 @@ class MailTemplate extends Mail {
 		}
 
 		if ($journal && !Request::getUserVar('continued')) {
-			$this->setSubject('[' . $journal->getSetting('journalInitials') . '] ' . $this->getSubject());
+			$this->setSubject('[' . $journal->getLocalizedSetting('initials') . '] ' . $this->getSubject());
 		}
 
 		// If enableAttachments is null, use the default value from the

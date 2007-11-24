@@ -329,7 +329,7 @@ class ImportOJS1 {
 		// Journal settings
 		// NOTE: Commented out settings do not have an equivalent in OJS 1.x
 		$journalSettings = array(
-			'journalInitials' => array('string', Core::cleanVar($this->journalInfo['chAbbrev'])),
+			'initials' => array('string', Core::cleanVar($this->journalInfo['chAbbrev'])),
 			'onlineIssn' => array('string', Core::cleanVar($this->journalInfo['chISSN'])),
 			'mailingAddress' => array('string', Core::cleanVar($this->journalInfo['chMailAddr'])),
 			'useEditorialBoard' => array('bool', $this->journalInfo['bRevBoard']),
