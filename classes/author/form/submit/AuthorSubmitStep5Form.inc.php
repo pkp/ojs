@@ -95,10 +95,11 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 			
 			$completedPaymentDAO =& DAORegistry::getDAO('OJSCompletedPaymentDAO');
 			if ( $completedPaymentDAO->hasPaidSubmission ( $journalId, $articleId )  ) {
-				return true;		
+				return parent::validate();		
 			} elseif ( Request::getUserVar('qualifyForWaiver') && Request::getUserVar('commentsToEditor') != '') {  
-				return true;
+				return parent::validate();
 			} elseif ( Request::getUserVar('paymentSent') ) {
+				return parent::validate();
 			} else {				
 				$queuedPayment =& $paymentManager->createQueuedPayment($journalId, PAYMENT_TYPE_SUBMISSION, $user->getUserId(), $articleId, $journal->getSetting('submissionFee'));
 				$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);

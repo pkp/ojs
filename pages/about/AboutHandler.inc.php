@@ -374,13 +374,18 @@ class AboutHandler extends Handler {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('membershipEnabled', $membershipEnabled);		
 		if ( $membershipEnabled ) {
+			$membershipFee  = $journal->getSetting('membershipFee');
 			$membershipFeeName =& $journal->getLocalizedSetting('membershipFeeName');
 			$membershipFeeDescription =& $journal->getLocalizedSetting('membershipFeeDescription');
+			$currency = $journal->getSetting('currency');
 
+			$templateMgr->assign('membershipFee', $membershipFee);
+			$templateMgr->assign('currency', $currency);
 			$templateMgr->assign('membershipFeeName', $membershipFeeName);
 			$templateMgr->assign('membershipFeeDescription', $membershipFeeDescription);
+			$templateMgr->display('about/memberships.tpl');
 		}		
-		$templateMgr->display('about/memberships.tpl');
+		Request::redirect(null, 'about');
 	}
 
 	/**

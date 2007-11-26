@@ -539,7 +539,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		
 		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
-		parent::setupTemplate(true);
+		parent::setupTemplate(true, $articleId);
 		
 		import('payment.ojs.OJSPaymentManager');
 		$paymentManager =& OJSPaymentManager::getManager();
@@ -559,7 +559,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		
 		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
-		parent::setupTemplate(true);
+		parent::setupTemplate(true, $articleId);
 		
 		import('payment.ojs.OJSPaymentManager');
 		$paymentManager =& OJSPaymentManager::getManager();
@@ -579,7 +579,7 @@ class TrackSubmissionHandler extends AuthorHandler {
 		$articleId = isset($args[0]) ? $args[0] : 0;
 		
 		list($journal, $submission) = TrackSubmissionHandler::validate($articleId);
-		parent::setupTemplate(true);
+		parent::setupTemplate(true, $articleId);
 		
 		import('payment.ojs.OJSPaymentManager');
 		$paymentManager =& OJSPaymentManager::getManager();
