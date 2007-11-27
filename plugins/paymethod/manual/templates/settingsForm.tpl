@@ -8,7 +8,7 @@
  *
  *}
 	<tr>
-		<td colspan="2"><h4>{translate key="plugins.paymethod.manual.settings"}</td>
+		<td colspan="2"><h4>{translate key="plugins.paymethod.manual.settings"}</h4></td>
 	</tr>
 	<tr valign="top">
 		<td class="label" width="20%">{fieldLabel name="manualInstructions" required="true" key="plugins.paymethod.manual.settings.instructions"}</td>

@@ -42,11 +42,10 @@ function changePaymentMethod() {
 			{assign var=pluginIndex value=1}
 			<h4>{translate key="manager.payment.paymentMethods"}</h4>
 			{foreach from=$paymentMethodPlugins item=plugin}
-				&nbsp;<input type="radio" name="paymentMethodPluginName" id="paymentMethodPluginName-{$pluginIndex}" value="{$plugin->getName()|escape}" onchange="changePaymentMethod();" {if $paymentMethodPluginName == $plugin->getName()}checked="checked" {/if}/>&nbsp;<label for="paymentMethodPluginName-{$pluginIndex}">{$plugin->getDisplayName()|escape}</label><br/>
+				&nbsp;<input type="radio" name="paymentMethodPluginName" id="paymentMethodPluginName-{$pluginIndex}" value="{$plugin->getName()|escape}" onClick="changePaymentMethod();" {if $paymentMethodPluginName == $plugin->getName()}checked="checked" {/if}/>&nbsp;<label for="paymentMethodPluginName-{$pluginIndex}">{$plugin->getDisplayName()|escape}</label><br/>
 				<p>{$plugin->getDescription()}</p>
 				{assign var=pluginIndex value=$pluginIndex+1}
 			{/foreach}
-			</select>
 		</td>
 	{call_hook name="Template::Manager::Payment::displayPaymentSettingsForm" plugin=$paymentMethodPluginName}
 </table>
