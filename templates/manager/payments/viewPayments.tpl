@@ -38,9 +38,7 @@
 			<a class="action" href="{url op="userProfile" path=$payment->getUserId()}">{$payment->getUsername()|escape|wordwrap:15:" ":true}</a>
 		</td>
 		<td>
-			{if $payment->isMembership()}
-				<a href="{url path="editMembership" user=$payment->getUserId()}" >{$payment->getName()|escape}</a>
-			{elseif $payment->isSubscription()}
+			{if $payment->isSubscription()}
 				<a href="{url page="subscriptionManager" op="editSubscription" path=$payment->getAssocId() }" >{$payment->getName()|escape}</a>
 			{else}
 				{$payment->getName()|escape}
