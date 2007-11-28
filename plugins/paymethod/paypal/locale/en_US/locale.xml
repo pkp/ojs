@@ -12,7 +12,7 @@
  -->
  
 <locale name="en_US" full_name="U.S. English">
-	<message key="plugins.paymethod.paypal.displayName">Paypal Fee Payment</message>
+	<message key="plugins.paymethod.paypal.displayName">PayPal Fee Payment</message>
 
 	<!-- PayPal Settings Form -->
 	<message key="plugins.paymethod.paypal.settings.paypalenable">Enable PayPal</message>
