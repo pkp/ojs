@@ -13,8 +13,8 @@
   -->
  
 <locale name="en_US" full_name="U.S. English">
-	<message key="plugins.generic.openads.description">The OpenAds plugin allows dynamic ads from the OpenAds ad server to be inserted into ojs.</message>
-	<message key="plugins.generic.openads.descriptionUnconfigured"><![CDATA[The OpenAds plugin allows dynamic ads from OpenAds ad server to be inserted into OJS. <strong>Please read the README file in plugins/generic/openAds for information on enabling this plugin.</strong>]]></message>
+	<message key="plugins.generic.openads.description">The OpenAds plugin allows dynamic ads from the OpenAds ad server to be inserted into OJS.</message>
+	<message key="plugins.generic.openads.descriptionUnconfigured"><![CDATA[The OpenAds plugin allows dynamic ads from the OpenAds ad server to be inserted into OJS. <strong>Please read the README file in plugins/generic/openAds for information on enabling this plugin.</strong>]]></message>
 	<message key="plugins.generic.openads">OpenAds Plugin</message>
 	<message key="plugins.generic.openads.settings.description">Use this form to select the OpenAds ad zones that will be displayed in OJS for each potential location.</message>
 	<message key="plugins.generic.openads.manager.settings">Settings</message>
