@@ -188,7 +188,7 @@ class RTHandler extends ArticleHandler {
 
 		$citationPlugins =& PluginRegistry::loadCategory('citationFormats');
 		$templateMgr->assign('citationPlugins', $citationPlugins);
-		if (isset($citationPlugins[$citeType])) {
+		if ($citeType != '' && isset($citationPlugins[$citeType])) {
 			// A citation type has been selected; display citation.
 			$citationPlugin =& $citationPlugins[$citeType];
 		} else {
