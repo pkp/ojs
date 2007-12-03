@@ -12,12 +12,12 @@
  -->
  
 <locale name="en_US" full_name="U.S. English">
-	<message key="plugins.paymethod.manual.displayName">Paiement manuel de frais</message>
-	<message key="plugins.paymethod.manual.description">Le directeur enregistrera manuellement la réception du paiement de l'utilisateur (en dehors de ce logiciel).</message>
-	<message key="plugins.paymethod.manual">Paiement manuel de frais</message>
-	<message key="plugins.paymethod.manual.settings">Réglages pour le paiement manuel</message>
-	<message key="plugins.paymethod.manual.settings.instructions">Mode d'emploi</message>
-	<message key="plugins.paymethod.manual.settings.manualInstructions">Mode d'emploi pour les utilisateurs choisissant le paiement manuel de frais</message>
+	<message key="plugins.paymethod.manual.displayName">Paiement manuel des frais</message>
+	<message key="plugins.paymethod.manual.description">Le responsable inscrira manuellement la réception du paiement de l'utilisateur (en dehors de ce logiciel).</message>
+	<message key="plugins.paymethod.manual">Paiement manuel des frais</message>
+	<message key="plugins.paymethod.manual.settings">Paramètres pour le paiement manuel</message>
+	<message key="plugins.paymethod.manual.settings.instructions">Directives</message>
+	<message key="plugins.paymethod.manual.settings.manualInstructions">Directives du paiement des frais à l'intention des utilisateurs choisissant le paiement manuel des frais.</message>
 	
 	<message key="plugins.paymethod.manual.purchase.title">Titre</message>
 	<message key="plugins.paymethod.manual.purchase.fee">Frais</message>	

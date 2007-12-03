@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Google Analytics plugin localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+
+	<!-- Google Analytics -->
+	<message key="plugins.generic.googleAnalytics.displayName">Complemento para Google Analytics</message>
+	<message key="plugins.generic.googleAnalytics.description"><![CDATA[Integre OJS con Google Analytics, el sistema de análisis de tráfico web de Google. Requiere una cuenta previa creada en Google Analytics. Vea la página de <a href="http://www.google.com/analytics/" title="Google Analytics site">Google Analytics </a> para más información.]]></message>
+
+	<!-- Google Analytics Settings Management -->
+	<message key="plugins.generic.googleAnalytics.manager.settings">Opciones</message>
+	<message key="plugins.generic.googleAnalytics.manager.googleAnalyticsSettings">Opciones de Google Analytics</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.description"><![CDATA[<p>Con este complemento activado puede usar Google Analytics para recoger y analizar datos de tráfico web de su revista. Requiere una cuenta previa creada en Google Analytics. Vea la página de <a href="http://www.google.com/analytics/" title="Google Analytics site">Google Analytics </a> para más información.</p>]]></message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteId">Número de cuenta</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdInstructions">En Google Analytics, pulse sobre "Check Status" para ver el código de seguimiento de su página. El número de cuenta aparece en el código de seguimiento: _uacct = "###". Introduzca los caracteres que corresponden a ###.</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdRequired">Por favor, intoduzca un número de cuenta.</message>
+
+</locale>

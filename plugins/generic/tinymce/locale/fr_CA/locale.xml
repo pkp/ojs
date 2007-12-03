@@ -14,7 +14,7 @@
  
 <locale name="fr_CA" full_name="Français (Canada)">
 	<message key="plugins.generic.tinymce.name">Plugiciel TinyMCE</message>
-	<message key="plugins.generic.tinymce.description"><![CDATA[Ce plugiciel permet l'édition tel-tel de surfaces de texte composées OJS (Open Journal Systems) grâce à l'utilisation de l'éditeur de contenu <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a>.]]></message>
-	<message key="plugins.generic.tinymce.descriptionDisabled"><![CDATA[Ce plugiciel permet l'édition tel-tel de surfaces de texte composées OJS grâce à l'utilisation de l'éditeur de contenu <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a>. <strong>TinyMCE n'est pas installé. Veuillez l'installer {$tinyMcePath}.</strong>]]></message>
-	<message key="plugins.generic.tinymce.settings">Settings</message>
+	<message key="plugins.generic.tinymce.description"><![CDATA[Ce plugiciel permet l'édition tel-tel de zones de textes de l'OJS, en utilisant l'éditeur de contenu <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a>.]]></message>
+	<message key="plugins.generic.tinymce.descriptionDisabled"><![CDATA[Ce plugiciel permet l'édition tel-tel de zones de textes de l'OJS, en utilisant l'éditeur de contenu <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a>.  <strong>TinyMCE n'est pas installé. Veuillez l'installer dans {$tinyMcePath}.</strong>]]></message>
+	<message key="plugins.generic.tinymce.settings">Paramètres</message>
 </locale>

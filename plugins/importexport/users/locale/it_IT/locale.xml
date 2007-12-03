@@ -57,4 +57,6 @@ Examples:
 	<message key="plugins.importexport.users.export.exportAllUsers">Esporta tutti</message>
 	<message key="plugins.importexport.users.export.errorsOccurred">Si sono presentati errori durante l'esportazione</message>
 	<message key="plugins.importexport.users.export.couldNotWriteFile">Non si pu&#x00F2; scrivere sul file "{$fileName}".</message>
+	<message key="plugins.importexport.users.import.warning">Attenzione</message>
+	<message key="plugins.importexport.users.import.encryptionMismatch">Non si possono usare password criptate con {$importHash}; OJS è configurato per usare {$ojsHash}. Se continui, dovrai resettare le password degli utenti importati.</message>
 </locale>

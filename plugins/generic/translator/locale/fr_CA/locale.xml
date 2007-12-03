@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.generic.translator.name">Plugiciel de traduction</message>
+	<message key="plugins.generic.translator.description">Ce plugiciel permet l'entretien en ligne de fichiers de traduction.</message>
+	<message key="plugins.generic.translator.longdescription">Cette zone permet à l'Administrateur du site de créer, modifier et vérifier les traductions de l'OJS. Elle représente le site global et ne devrait pas être utilisée  pour personnaliser une revue à libre accès particulière. Si vous corrigez ou créez une traduction, veuillez la soumettre au Public Knowledge Project pour qu'elle puisse être distribuée dans des versions futures.</message>
+	<message key="plugins.generic.translator.localeDescription">Cette page énumère toutes les composantes d'une traduction de l'OJS et permet au traducteur de modifier chacune d'entre elles. Une traduction complète devrait inclure les traductions de toutes les composantes.</message>
+
+	<message key="plugins.generic.translator.localeName">Nom de paramètre de lieu</message>
+	<message key="plugins.generic.translator.localeKey">Clé</message>
+	<message key="plugins.generic.translator.localeKeyValue">Valeur</message>
+	<message key="plugins.generic.translator.translate">Traduire</message>
+	<message key="plugins.generic.translator.availableLocales">Paramètres de lieux disponibles</message>
+	<message key="plugins.generic.translator.check">Vérifier</message>
+
+	<message key="plugins.generic.translator.errors">Erreurs de paramètres de lieu</message>
+
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_KEY.title">Clés manquantes</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_EXTRA_KEY.title">Clés supplémentaires</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_SUSPICIOUS_LENGTH.title">Longueurs de clés suspectes</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_DIFFERING_PARAMS.title">Listes de paramètres différents</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_FILE.title">Fichiers de paramètres de lieu manquants</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_MISSING_EMAIL.title">Courriels manquants</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_EXTRA_EMAIL.title">Courriels supplémentaires</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_DIFFERING_PARAMS.title">Listes de paramètres de courriels différents</message>
+
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_KEY.message">La clé "{$key}" est absente de "{$filename}". La version anglaise a été fournie par défaut.</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_EXTRA_KEY.message">La clé "{$key}" n'est plus utilisée et peut être enlevée de "{$filename}".</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_SUSPICIOUS_LENGTH.message"><![CDATA[La clé du paramètre de lieu "{$key}" dans "{$filename}" a une longueur considérablement différente par rapport à la référence :<ul>
+		<li>{$value} ({$locale})</li>
+		<li>{$reference} ({$referenceLocale})</li>
+	</ul>]]></message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_DIFFERING_PARAMS.message">La clé de paramètre de lieu "{$key}" dans "{$filename}" diffère du paramètre de lieu de référence dans son utilisation de paramètres. Veuillez vérifier qu'elle contient tous les paramètres pertinents. Le ou les paramètre(s) qui ne correspondent pas sont :</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_FILE.message">Le fichier du paramètre de lieu "{$filename}" est absent ou illisible.</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_MISSING_EMAIL.message">Le courriel "{$key}" ne se trouve pas dans la traduction.</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_EXTRA_EMAIL.message">Le courriel "{$key}" n'est plus utilisé et peut être enlevé.</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_DIFFERING_PARAMS.message">Le courriel "{$key}" diffère du paramètre de lieu de référence dans son utilisation de paramètres. Veuillez vérifier qu'il contient tous les paramètres pertinents. Le ou les paramètres qui ne correspondent pas sont :</message>
+
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_KEY.description"></message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_EXTRA_KEY.description"></message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_SUSPICIOUS_LENGTH.description"></message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_DIFFERING_PARAMS.description"></message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_FILE.description"></message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_MISSING_EMAIL.description"></message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_EXTRA_EMAIL.description"></message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_DIFFERING_PARAMS.description"></message>
+
+	<message key="plugins.generic.translator.locale">{$locale} Locale</message>
+	<message key="plugins.generic.translator.localeFiles">Locale Files</message>
+	<message key="plugins.generic.translator.miscFiles">Miscellaneous Files</message>
+	<message key="plugins.generic.translator.emails">Email Templates</message>
+	<message key="plugins.generic.translator.file.filename">Filename</message>
+	<message key="plugins.generic.translator.file.edit">Editing {$filename}</message>
+	<message key="plugins.generic.translator.email.edit">Editing {$emailKey}</message>
+	<message key="plugins.generic.translator.file.reference">Reference Version</message>
+	<message key="plugins.generic.translator.file.translation">Translation</message>
+	<message key="plugins.generic.translator.email.reference">Reference Version</message>
+	<message key="plugins.generic.translator.email.translation">Translation</message>
+	<message key="plugins.generic.translator.file.reset">Reset</message>
+	<message key="plugins.generic.translator.file.resetToReference">Reset To Reference</message>
+	<message key="plugins.generic.translator.email.reset">Reset</message>
+	<message key="plugins.generic.translator.email.resetToReference">Reset To Reference</message>
+	<message key="plugins.generic.translator.file.resetConfirm">Êtes-vous certain de vouloir réinitialiser le contenu du fichier?</message>
+	<message key="plugins.generic.translator.email.resetConfirm">Êtes-vous certain de vouloir réinitialiser le contenu du courriel?</message>
+	<message key="plugins.generic.translator.file.doesNotExistNote">* Ce fichier n'a pas encore été traduit.</message>
+	<message key="plugins.generic.translator.file.confirmCreate">Le fichier "{$filename}" sera créé en utilisant la version anglaise. Vous devrez traduire toutes les chaînes du fichier. Voulez-vous continuer?</message>
+	<message key="plugins.generic.translator.email.description">Dans les champs suivants, traduisez le titre, corps et description du modèle de courriel. La description est à l'usage du directeur de la revue seulement.</message>
+	<message key="plugins.generic.translator.confirmDelete">Êtes-vous certain de vouloir supprimer cet élément? Cette action est irréversible.</message>
+	<message key="plugins.generic.translator.deleteKey">Supprimer cette clé</message>
+	<message key="plugins.generic.translator.deleteEmail">Supprimer ce courriel</message>
+	<message key="plugins.generic.translator.saveBeforeContinuing">Assurez-vous de sauvegarder tous les changements effectués sur cette page avant de continuer ou ils seront perdus. Voulez-vous continuer? Si c'est le cas, tout changement non sauvegardé sera perdu.</message>
+</locale>

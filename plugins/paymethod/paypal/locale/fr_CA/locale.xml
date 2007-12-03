@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2006-2007 Gunther Eysenbach, Juan Pablo Alperin, MJ Suhonos
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+ -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.paymethod.paypal.displayName">Paiement des frais Paypal</message>
+
+	<!-- PayPal Settings Form -->
+	<message key="plugins.paymethod.paypal.settings.paypalenable">Activer PayPal</message>
+	<message key="plugins.paymethod.paypal.settings.paypalurl">URL IPN</message>
+	<message key="plugins.paymethod.paypal.settings.paypalurl.description"><![CDATA[Voici l’adresse URL pour accéder au service Avis de paiement instantané (IPN) PayPal. Pour vérification, utiliser <u>https://www.sandbox.paypal.com/cgi-bin/webscr</u>; pour les systèmes de production, utiliser <u>https://www.paypal.com/cgi-bin/webscr</u>.]]></message>
+	<message key="plugins.paymethod.paypal.settings.selleraccount">Compte du vendeur</message>
+	<message key="plugins.paymethod.paypal.settings.selleraccount.description">Voici le nom d’utilisateur du compte PayPal à utiliser dans le compte du vendeur, généralement une adresse courriel. Veuillez vous assurer d’activer l’Avis de paiement instantané (IPN) apparaissant dans votre profil du compte du vendeur.</message>
+	<message key="plugins.paymethod.paypal.settings.curlNotInstalled">Avertissement : L’outil d’appui CURL pour PHP n’est pas installé. La bibliothèque CURL doit être installée pour que le système de paiement PayPal puisse fonctionner.</message>
+	<message key="plugins.paymethod.paypal.settings">Paramètres PayPal</message>
+
+	<!-- PayPal -->
+	<message key="plugins.paymethod.paypal">Paiement des frais PayPal</message>
+	<message key="plugins.paymethod.paypal.description"><![CDATA[Le système PayPal permet aux utilisateurs, qu’ils soient membres de PayPal ou non, d’utiliser les principales cartes de crédit. Le gestionnaire devra ouvrir un <a href="http://www.paypal.com" target="_nouveau">compte d’affaires PayPal</a>.]]></message>
+	<message key="plugins.paymethod.paypal.warning">Cliquez sur le bouton Continuer ci-dessous pour accéder au site PayPal, afin de payer les frais avec une carte de crédit (sans avoir à devenir membre de PayPal). Utilisez le bouton « Retourner au commerçant » après avoir effectué votre paiement pour revenir à ce site.</message>
+	<message key="plugins.paymethod.paypal.purchase.title">Titre</message>
+	<message key="plugins.paymethod.paypal.purchase.fee">Frais</message>
+	<message key="plugins.paymethod.paypal.purchase.description">Description</message>
+	<message key="plugins.paymethod.paypal.purchase.cancelled">Votre achat a été annulé.</message>
+	<message key="plugins.paymethod.paypal.purchase.cancelled.title">Achat annulé</message>
+</locale>

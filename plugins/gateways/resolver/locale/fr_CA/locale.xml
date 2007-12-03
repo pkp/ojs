@@ -13,8 +13,8 @@
   -->
  
 <locale name="fr_CA" full_name="Français (Canada)">
-	<message key="plugins.gateways.resolver.displayName">Plugiciel résolveur</message>
-	<message key="plugins.gateways.resolver.description">Ce plugiciel résout les numéros et articles au moyen de citations.</message>
-	<message key="plugins.gateways.resolver.errors.errorMessage">Impossible de résoudre une seule entité en utilisant la citation spécifiée. Veuillez vous assurer que la citation soit complète et qu'elle se rapporte à une entité dans ce déploiement du OJS (Open Journal System).</message>
+	<message key="plugins.gateways.resolver.displayName">Plugiciel Resolver</message>
+	<message key="plugins.gateways.resolver.description">Ce plugiciel résout les numéros et les articles basés sur l'information de citations.</message>
+	<message key="plugins.gateways.resolver.errors.errorMessage">Impossible de résoudre une seule entité en utilisant l'information de citations spécifiée. Veuillez vous assurer que l'information de citations est complète et qu'elle se rapporte à une entité dans ce déploiement de l'OJS.</message>
 	<message key="plugins.gateways.resolver.exportHoldings">Exporter le contenu</message>
 </locale>

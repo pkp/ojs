@@ -13,6 +13,6 @@
   -->
  
 <locale name="en_US" full_name="U.S. English">
-	<message key="plugins.generic.sehl.name">Plugiciel de mise en relief de mots clés</message>
-	<message key="plugins.generic.sehl.description">Ce plugiciel permet une mise en relief de mots clés par le moteur de recherche, de manière à ce que les mots clés recherchés soient mis en évidence dans tout article HTML retrouvé par le moteur de recherche.</message>
+	<message key="plugins.generic.sehl.name">Plugiciel SEHL</message>
+	<message key="plugins.generic.sehl.description">Ce plugiciel implante la mise en évidence du moteur de recherche pour pouvoir mettre en évidence les mots-clés recherchés et repérés par un moteur de recherche dans un article HTML.</message>
 </locale>

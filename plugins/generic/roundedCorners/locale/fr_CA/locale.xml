@@ -14,5 +14,5 @@
  
 <locale name="en_US" full_name="U.S. English">
 	<message key="plugins.generic.roundedcorners.displayName">Coins arrondis</message>
-	<message key="plugins.generic.roundedcorners.description">Ce plugiciel crée un arrière-plan pour chaque encadré et arrondit ses coins. On peut changer les couleurs en modifiant la feuille de style CSS qui se trouve dans le plugiciel.</message>
+	<message key="plugins.generic.roundedcorners.description">Ce plugiciel crée un arrière-plan sur chaque bloc d'encadré latéral et arrondit ses coins. On peut changer les couleurs en modifiant la feuille de style CSS qui se trouve dans le plugiciel.</message>
 </locale>

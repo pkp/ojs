@@ -13,7 +13,7 @@
   -->
  
 <locale name="en_US" full_name="U.S. English">
-	<message key="plugins.citationFormats.endNote.displayName">Plugiciel EndNote pour notes en fin de texte</message>
-	<message key="plugins.citationFormats.endNote.citationFormatName">EndNote -- format pour notes en fin de texte (Macintosh et Windows)</message>
-	<message key="plugins.citationFormats.endNote.description">Ce plugiciel EndNote permet de placer les notes en fin de texte.</message>
+	<message key="plugins.citationFormats.endNote.displayName">Plugiciel de format de citations EndNote</message>
+	<message key="plugins.citationFormats.endNote.citationFormatName">EndNote -- format EndNote (Macintosh et Windows)</message>
+	<message key="plugins.citationFormats.endNote.description">Ce plugiciel implante le format de citations EndNote.</message>
 </locale>

@@ -14,26 +14,26 @@
  
 <locale name="fr_CA" full_name="Français (Canada)">
 	<message key="plugins.auth.ldap.displayName">Protocole LDAP</message>
-	<message key="plugins.auth.ldap.description">Ce plugiciel permet l'authentification et la synchronisation de comptes d'usagers au moyen d'une source de données LDAP externe.</message>
+	<message key="plugins.auth.ldap.description">Ce plugiciel permet l'authentification et la synchronisation de comptes d'utilisateurs par rapport à une source de données LDAP externe.</message>
 	
-	<message key="plugins.auth.ldap.settings">Options LDAP</message>
-	<message key="plugins.auth.ldap.settings.hostname">Adresse Internet du serveur</message>
-	<message key="plugins.auth.ldap.settings.hostname.description">Par exemple, "ldap.example.com", ou "ldaps://ldap.example.com" (pour utiliser SSL)</message>
+	<message key="plugins.auth.ldap.settings">Paramètres LDAP</message>
+	<message key="plugins.auth.ldap.settings.hostname">Nom d'hôte du serveur</message>
+	<message key="plugins.auth.ldap.settings.hostname.description">Par ex. : "ldap.exemple.com", ou "ldaps://ldap.exemple.com" (pour utiliser SSL)</message>
 	<message key="plugins.auth.ldap.settings.port">Port du serveur</message>
 	<message key="plugins.auth.ldap.settings.port.description">Facultatif. Va par défaut au 389 (LDAP) ou au 636 (LDAP sur SSL)</message>
-	<message key="plugins.auth.ldap.settings.basedn">Nom distinct de base</message>
-	<message key="plugins.auth.ldap.settings.basedn.description">Par exemple,</message>
+	<message key="plugins.auth.ldap.settings.basedn">Nom distinct de la base</message>
+	<message key="plugins.auth.ldap.settings.basedn.description">Par ex. : "ou=personnes,dc=exemple,dc=com"</message>
 	<message key="plugins.auth.ldap.settings.managerdn">Nom distinct du gestionnaire</message>
-	<message key="plugins.auth.ldap.settings.managerdn.description">Par exemple,</message>
+	<message key="plugins.auth.ldap.settings.managerdn.description">Par ex. : "cn=gestionnaire,dc=exemple,dc=com"</message>
 	<message key="plugins.auth.ldap.settings.managerpwd">Mot de passe du gestionnaire</message>
-	<message key="plugins.auth.ldap.settings.managerpwd.description">Le nom distinct et le mot de passe du gestionnaire ne sont requis que si la synchronisation profil/mot de passe de l'usager ou les options de création d'un usager sont activés. Si LDAP sera utilisé seulement pour l'authentification alors ces options ne sont pas nécessaires.</message>
+	<message key="plugins.auth.ldap.settings.managerpwd.description">Le nom distinct et le mot de passe du gestionnaire ne sont requis que si la synchronisation du profil/du mot de passe de l'utilisateur ou les options de création d'un utilisateur sont activées. Si le protocole LDAP n'est utilisé que pour l'authentification, ces options peuvent être omises.</message>
 	<message key="plugins.auth.ldap.settings.pwhash">Chiffrement du mot de passe</message>
-	<message key="plugins.auth.ldap.settings.pwhash.description"><![CDATA[Format mêlé pour mots de passe stocké dans le serveur. SSHA est recommandé (requiert PHP >= 4.3.0).]]></message>
-	<message key="plugins.auth.ldap.settings.saslopt">Options SASL (facultatives)</message>
-	<message key="plugins.auth.ldap.settings.sasl"><![CDATA[Utiliser SASL plutôt qu'une simple authentification (requiert PHP >= 5)]]></message>
+	<message key="plugins.auth.ldap.settings.pwhash.description"><![CDATA[Format de hachage pour les mots de passe mémorisés dans le serveur. SSHA est recommandé (requiert PHP >= 4.3.0).]]></message>
+	<message key="plugins.auth.ldap.settings.saslopt">Paramètres SASL (facultatifs)</message>
+	<message key="plugins.auth.ldap.settings.sasl"><![CDATA[Utilisez SASL plutôt qu'une simple authentification (requiert PHP >= 5)]]></message>
 	<message key="plugins.auth.ldap.settings.saslmech">Mécanisme SASL</message>
-	<message key="plugins.auth.ldap.settings.saslmech.description">Par exemple,</message>
+	<message key="plugins.auth.ldap.settings.saslmech.description">Par ex. : "DIGEST-MD5"</message>
 	<message key="plugins.auth.ldap.settings.saslrealm">Domaine</message>
-	<message key="plugins.auth.ldap.settings.saslauthzid">Identification d'autorisation demandée</message>
+	<message key="plugins.auth.ldap.settings.saslauthzid">Identification d'autorisation requise</message>
 	<message key="plugins.auth.ldap.settings.saslprop">Caractéristiques de sécurité SASL</message>
 </locale>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.block.navigation.displayName">Bloc de navigation</message>
+	<message key="plugins.block.navigation.description">Ce plugiciel offre des liens de navigation dans l'encadré latéral.</message>
+	<message key="plugins.block.navigation.journalContent">Contenu de la revue</message>
+</locale>

@@ -14,23 +14,23 @@
  
 <locale name="fr_CA" full_name="Français (Canada)">
 	<message key="plugins.gateways.googleScholar.displayName">Plugiciel de passerelle Google Scholar</message>
-	<message key="plugins.gateways.googleScholar.description">Ce plugiciel fournit des données en direct sur une revue particulière au Google Scholar aux fins d'indexation et de recherche.</message>
-	<message key="plugins.gateways.googleScholar.settings">Options</message>
-	<message key="plugins.gateways.googleScholar.settings.description"><![CDATA[<p>Le plugiciel de passerelle Google Scholar rend les données disponibles une revue à la fois au collectionneur Google Scholar. Quand ce plugiciel est activé, le document du répertoire (c'est-à-dire les informations de l'éditeur) devient disponible à <span class="highlight">{$directoryUrl}</span>.</p>
-<p>Google Scholar a besoin de certaines informations qui sont facultatives dans OJS. Veuillez vous assurer que vos données correspondent aux exigences de Google Scholar en utilisant le bouton Vérifier les données.</p>]]></message>
+	<message key="plugins.gateways.googleScholar.description">Ce plugiciel offre des données en direct sur une revue particulière au Google Scholar aux fins d'indexation et de recherche.</message>
+	<message key="plugins.gateways.googleScholar.settings">Paramètres</message>
+	<message key="plugins.gateways.googleScholar.settings.description"><![CDATA[<p>Le plugiciel de passerelle Google Scholar rend les données disponibles au collectionneur Google Scholar, une revue à la fois. Quand ce plugiciel est activé, le document du répertoire (c'est-à-dire les renseignements de l'éditeur) devient disponible à <span class="highlight">{$directoryUrl}</span>.</p>
+<p>Google Scholar a besoin de certains renseignements qui sont facultatifs dans l’OJS. Veuillez vous assurer que vos données correspondent aux exigences de Google Scholar en utilisant le bouton Vérifier les données.</p>]]></message>
 	<message key="plugins.gateways.googleScholar.checkData">Vérifier les données</message>
 	<message key="plugins.gateways.googleScholar.errors">Messages d'erreur</message>
-	<message key="plugins.gateways.googleScholar.errors.noErrors">Aucune erreur n'a été trouvée</message>
+	<message key="plugins.gateways.googleScholar.errors.noErrors">Aucune erreur n'a été trouvée.</message>
 
-	<message key="plugins.gateways.googleScholar.settings.publisherName">Nom de la maison d'édition</message>
-	<message key="plugins.gateways.googleScholar.settings.publisherLocation">Emplacement de la maison d'édition</message>
-	<message key="plugins.gateways.googleScholar.settings.publisherResultName">Nom du résultat pour la maison d'édition</message>
+	<message key="plugins.gateways.googleScholar.settings.publisherName">Nom de l'éditeur</message>
+	<message key="plugins.gateways.googleScholar.settings.publisherLocation">Emplacement de l'éditeur</message>
+	<message key="plugins.gateways.googleScholar.settings.publisherResultName">Nom du résultat pour l'éditeur</message>
 	<message key="plugins.gateways.googleScholar.settings.contact">Adresse courriel</message>
 	<message key="plugins.gateways.googleScholar.settings.addContact">Ajouter l'adresse courriel</message>
 
 	<!-- Message d'erreur -->
-	<message key="plugins.gateways.googleScholar.errors.noPublisherName">Le nom de la maison d'édition n'a pas été ajouté. Ceci est un champ requis.</message>
-	<message key="plugins.gateways.googleScholar.errors.noContacts">Les courriels des personnes-ressource sont absents ou non valables. Il faut en inclure au moins un, et tous doivent être valables.</message>
-	<message key="plugins.gateways.googleScholar.errors.noIssn">L'ISSN de la revue n'a pas été ajouté. Voir Mise en place de la revue, étape 1.</message>
-	<message key="plugins.gateways.googleScholar.errors.errorMessage">Impossible d'exporter les données de Google Scholar. Le plugiciel d'exportation de Google Scholar doit être configuré comme il faut. Pour des informations précises, veuillez utiliser la fonction Vérifier les données du gestionnaire de la revue.</message>
+	<message key="plugins.gateways.googleScholar.errors.noPublisherName">Le nom de l'éditeur n'a pas été spécifié. Ceci est un champ requis.</message>
+	<message key="plugins.gateways.googleScholar.errors.noContacts">Les courriels de personnes-ressources sont absents ou non valables. Il faut en inclure au moins un, et tous doivent être valables.</message>
+	<message key="plugins.gateways.googleScholar.errors.noIssn">L'ISSN de la revue n'a pas été spécifié. Voir Installation de la revue, étape 1.</message>
+	<message key="plugins.gateways.googleScholar.errors.errorMessage">Impossible d'exporter les données de Google Scholar. Le plugiciel d'exportation de Google Scholar doit être configuré correctement. Pour des renseignements précis, veuillez utiliser la fonction « Vérifier les données » du gestionnaire de la revue.</message>
 </locale>

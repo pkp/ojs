@@ -60,7 +60,7 @@
 	<message key="common.order">Mettre en ordre</message>
 	<message key="common.back">Précédent</message>
 	<message key="common.title">Titre</message>
-	<message key="common.upload">Télécharger vers le serveur</message>
+	<message key="common.upload">Télécharger</message>
 	<message key="common.download">Télécharger</message>
 	<message key="common.replaceFile">Remplacer le fichier</message>
 	<message key="common.subject">Sujet</message>
@@ -76,12 +76,12 @@
 	<message key="common.status">État</message>
 	<message key="common.remove">Enlever</message>
 	<message key="common.file">Fichier</message>
-	<message key="common.uploadedFile">Fichier téléchargé vers le serveur</message>
+	<message key="common.uploadedFile">Fichier téléchargé</message>
 	<message key="common.fileName">Nom du fichier</message>
 	<message key="common.dateSubmitted">Date de soumission</message>
 	<message key="common.dateRequested">Date requis</message>
 	<message key="common.dateCompleted">Date d'achèvement</message>
-	<message key="common.dateUploaded">Date du téléchargement vers le serveur</message>
+	<message key="common.dateUploaded">Date du téléchargement</message>
 	<message key="common.dateModified">Date de modification</message>
 	<message key="common.other">Autre</message>
 	<message key="common.fileSize">Taille de fichier</message>
@@ -193,8 +193,8 @@
 	<message key="navigation.journalHelp">Aide pour les revues</message>
 	<message key="navigation.home">Page d'accueil</message>
 	<message key="navigation.about">Au sujet de</message>
-	<message key="navigation.userHome">Page d'accueil de l'usager</message>
-	<message key="navigation.login">Ouverture de session</message>
+	<message key="navigation.userHome">Page d'accueil</message>
+	<message key="navigation.login">Ouvrir une session</message>
 	<message key="navigation.register">S'inscrire</message>
 	<message key="navigation.user">Usager</message>
 	<message key="navigation.archives">Archives</message>
@@ -202,7 +202,7 @@
 	<message key="navigation.search">Rechercher</message>
 	<message key="navigation.otherJournals">Autres revues</message>
 	<message key="navigation.browse">Explorer</message>
-	<message key="navigation.browseByIssue">Explorer par numéro</message>
+	<message key="navigation.browseByIssue">Par numéro</message>
 	<message key="navigation.browseByAuthor">Explorer par auteur</message>
 	<message key="navigation.browseByTitle">Explorer par titre</message>
 	<message key="navigation.infoForAuthors">Pour auteurs</message>
@@ -225,7 +225,7 @@
 	<message key="common.queue.short.submissionsInEditing">En révision</message>
 	<message key="common.queue.long.submissionsInReview">Soumissions en cours d'évaluation</message>
 	<message key="common.queue.short.submissionsInReview">En évaluation</message>
-	<message key="common.queue.long.submissionsArchives">Archives des soumissions</message>
+	<message key="common.queue.long.submissionsArchives">Archives</message>
 	<message key="common.queue.short.submissionsArchives">Archives</message>
 	<message key="common.queue.long.active">Soumissions actives</message>
 	<message key="common.queue.short.active">Actives</message>
@@ -318,7 +318,7 @@
 	<message key="submission.editorReview">Évaluation du rédacteur</message>
 	<message key="submission.notifyAuthor">Aviser l'auteur</message>
 	<message key="submission.notifyEditor">Aviser le rédacteur</message>
-	<message key="submission.editorAuthorRecord">Compte rendu des échanges entre le rédacteur et l'auteur</message>
+	<message key="submission.editorAuthorRecord">Registre des échanges entre le rédacteur et l'auteur</message>
 	<message key="submission.reviewersVersion">Version du fichier annotée par l'évaluateur</message>
 	<message key="submission.postReviewVersion">Version du fichier suivant l'évaluation</message>
 	<message key="submission.editorVersion">Version du rédacteur</message>
@@ -328,7 +328,7 @@
 	<message key="submission.copyedit">Corriger</message>
 	<message key="submission.layout">Mise en page</message>
 	<message key="submission.proofreading">Correction d'épreuve</message>
-	<message key="submission.scheduling">Gestion de plan de travail</message>
+	<message key="submission.scheduling">Calendrier des soumissions</message>
 	<message key="submission.scheduledIn">Sera publié dans {$issueName}.</message>
 	<message key="submission.scheduledIn.tba">À annoncer</message>
 	<message key="submission.files">Fichiers</message>
@@ -407,9 +407,9 @@
 	<message key="journal.journal">Revue</message>
 
 	<!-- User -->
-	<message key="user.userHome">Page d'accueil de l'usager</message>
+	<message key="user.userHome">Page d'accueil de l'utilisateur</message>
 	<message key="user.showAllJournals">Afficher toutes mes revues</message>
-	<message key="user.login">Ouverture de session</message>
+	<message key="user.login">Ouvrir la session</message>
 	<message key="user.profile">Profil</message>
 	<message key="user.register">S'inscrire</message>
 	<message key="user.logIn">Ouvrir la session</message>
@@ -449,7 +449,7 @@
 	<message key="user.role.manager">Directeur de la revue</message>
 	<message key="user.role.editor">Rédacteur</message>
 	<message key="user.role.sectionEditor">Chef de rubrique</message>
-	<message key="user.role.layoutEditor">Directeur de la mise en page</message>
+	<message key="user.role.layoutEditor">Responsable de la mise en page</message>
 	<message key="user.role.reviewer">Évaluateur</message>
 	<message key="user.role.copyeditor">Réviseur</message>
 	<message key="user.role.proofreader">Correcteur d'épreuves</message>
@@ -460,7 +460,7 @@
 	<message key="user.role.managers">Directeurs</message>
 	<message key="user.role.editors">Rédacteurs</message>
 	<message key="user.role.sectionEditors">Chefs de rubrique</message>
-	<message key="user.role.layoutEditors">Directeurs de la mise en page</message>
+	<message key="user.role.layoutEditors">Responsables de la mise en page</message>
 	<message key="user.role.reviewers">Évaluateurs</message>
 	<message key="user.role.copyeditors">Réviseurs</message>
 	<message key="user.role.proofreaders">Correcteurs d'épreuves</message>
@@ -574,7 +574,7 @@
 	<message key="comments.name">Nom de l'afficheur</message>
 	<message key="comments.email">Courriel de l'afficheur</message>
 	<message key="comments.title">Titre</message>
-	<message key="comments.body">Corps du message</message>
+	<message key="comments.body">Corps</message>
 	<message key="comments.postAnonymously">Afficher ce commentaire anonymement</message>
 	<message key="comments.readMore">En lire plus</message>
 	<message key="comments.confirmDeleteChildren">Supprimer ce commentaire supprimera aussi toutes ses réponses. Êtes-vous certain de vouloir le faire?</message>
@@ -618,14 +618,14 @@
 	<message key="admin.languages.primaryLocaleInstructions">Cette langue sera la langue par défaut du site et de toute revue hébergée.</message>
 	<message key="admin.languages.supportedLocalesInstructions">Sélectionner tous les paramètres de lieu à soutenir sur le site. Les paramètres sélectionnés pourront être utilisés par toutes les revues hébergées sur le site, et apparaîtront aussi dans un menu de sélection de langue apparaissant sur chaque page du site (ce que l'usager peut sauter dans les pages qui sont particulières à des revues). Si des paramètres de lieu multiples ne sont pas sélectionnés, le menu de changement de langue n'apparaîtra pas et les paramètres de langue étendus ne seront pas disponibles aux revues.</message>
 	<message key="admin.languages.installedLocales">Paramètres de lieu installés</message>
-	<message key="admin.languages.reload">Recharger les paramètres de lieu</message>
+	<message key="admin.languages.reload">Recharger le paramètre de lieu</message>
 	<message key="admin.languages.confirmReload">Êtes-vous certain de vouloir recharger ce paramètre de lieu? Cela effacera toutes les données particulières aux paramètres actuels, comme la grille personnalisée pour les messages électroniques.</message>
-	<message key="admin.languages.uninstall">Désinstaller les paramètres de lieu</message>
+	<message key="admin.languages.uninstall">Désinstaller le paramètre de lieu</message>
 	<message key="admin.languages.confirmUninstall">Êtes-vous certain de vouloir désinstaller ce paramètre de lieu? Cela pourra avoir un effet négatif sur tout journal hébergé utilisant le paramètre de lieu en même temps.</message>
 	<message key="admin.languages.installNewLocales">Installer de nouveaux paramètres de lieu</message>
 	<message key="admin.languages.installNewLocalesInstructions">Sélectionner tout paramètre de lieu supplémentaire auquel il faut un soutien. Ces paramètres de lieu doivent être installés avant que les revues affichées sur le Web puissent les utiliser. Voir la documentation OJS pour les renseignements sur l'ajout de soutiens pour de nouvelles langues.</message>
 	<message key="admin.languages.noLocalesAvailable">Aucun paramètre de lieu supplémentaire n'est disponible pour installation.</message>
-	<message key="admin.languages.installLocales">Installer les paramètres de lieu</message>
+	<message key="admin.languages.installLocales">Installer</message>
 	
 	<message key="admin.auth.ojs">Base de données OJS de l'usager</message>
 	<message key="admin.auth.create">Créer la source d'authentification</message>
@@ -651,7 +651,7 @@
 	<message key="admin.systemConfigurationDescription"><![CDATA[Paramètres de configuration OJS de <tt>config.inc.php</tt>.]]></message>
 	<message key="admin.serverInformationDescription"><![CDATA[Versions des logiciels du système d'exploitation de banque de données et des serveurs. Cliquer sur <span class="highlight">Renseignements sur le PHP étendu</span> pour voir les détails sur la configuration PHP pour ce serveur.]]></message>
 	<message key="admin.phpInfo">Renseignements sur PHP détaillés</message>
-	<message key="admin.server.platform">Plateforme du système d'exploitation</message>
+	<message key="admin.server.platform">Plateforme OS</message>
 	<message key="admin.server.phpVersion">Version PHP</message>
 	<message key="admin.server.apacheVersion">Version Apache</message>
 	<message key="admin.server.dbDriver">Pilote de base de données</message>
@@ -789,10 +789,10 @@
 
 	<!-- Files Browser -->
 	<message key="manager.files.indexOfDir">Index de {$dir}</message>
-	<message key="manager.files.uploadedFiles">Fichiers téléchargés vers le serveur</message>
+	<message key="manager.files.uploadedFiles">Fichiers téléchargés</message>
 	<message key="manager.files.parentDir">Répertoire parent</message>
 	<message key="manager.files.emptyDir">Aucun fichier trouvé dans ce répertoire.</message>
-	<message key="manager.files.uploadFile">Télécharger le fichier vers le serveur</message>
+	<message key="manager.files.uploadFile">Télécharger le fichier</message>
 	<message key="manager.files.createDir">Créer un répertoire</message>
 	<message key="manager.files.confirmDelete">Supprimer ce fichier ou un répertoire? Noter qu'un répertoire doit être vide avant qu'il puisse être supprimé.</message>
 	<message key="manager.files.note">Avis : Le navigateur de fichiers est une fonction avancée qui permet de voir et de manipuler directement les fichiers et les répertoires associés à une revue.</message>
@@ -824,7 +824,7 @@
 	<message key="manager.setup.printIssn">Imprimer ISSN</message>
 	<message key="manager.setup.onlineIssn">ISSN en ligne</message>
 	<message key="manager.setup.issnDescription"><![CDATA[Le ISSN (Numéro international normalisé des publications en série) est un numéro à  huit chiffres qui sert à identifier les périodiques, y compris les séries électroniques. Il est géré par un réseau mondial de centres nationaux coordonnés par un centre international situé à Paris, avalisé par l'UNESCO et le gouvernement de la France. On peut obtenir un numéro auprès du <a href="http://www.issn.org" target="_new">site Web ISSN</a>, à  n'importe quel moment de l'exploitation de la revue.]]></message>
-	<message key="manager.setup.doiPrefix">Préfixe du système DOI</message>
+	<message key="manager.setup.doiPrefix">Préfixe du DOI</message>
 	<message key="manager.setup.doiPrefixDescription"><![CDATA[Le préfixe du système DOI (Digital Object Identifier) est assigné par <a href="http://www.crossref.org" target="_new">CrossRef</a> et a le format 10.xxxx (par ex., 10.1234).]]></message>
 	<message key="manager.setup.mailingAddressDescription">Emplacement physique et adresse postale de la revue</message>
 	<message key="manager.setup.sectionsAndSectionEditors">Rubriques et chefs de rubrique</message>
@@ -912,7 +912,7 @@
 
 	<message key="manager.setup.addItemtoAboutJournal">Ajouter un article pour l'insérer dans « Au sujet de la revue »</message>
 	<message key="manager.setup.aboutItemContent">Contenu</message>
-	<message key="manager.setup.addAboutItem">Ajouter un item à « Au sujet de la revue »</message>
+	<message key="manager.setup.addAboutItem">Ajouter « Au sujet de l'article »</message>
 	<message key="manager.setup.form.numReviewersPerSubmission">Le nombre d'évaluateurs par soumission est requis.</message>
 	<message key="manager.setup.userRegistration">Enregistrement de l'usager</message>
 
@@ -929,7 +929,7 @@
 	
 	<!-- Setup Step 3 -->
 	<message key="manager.setup.guidingSubmissions">Étape 3. Orienter les soumissions</message>
-	<message key="manager.setup.authorGuidelines">Lignes directrices pour les auteurs</message>
+	<message key="manager.setup.authorGuidelines">Directives pour les auteurs</message>
 	<message key="manager.setup.authorGuidelinesDescription"><![CDATA[Établir pour les auteurs les normes pour la bibliographie et le formatage utilisées pour les articles soumis à la revue (par ex., <i>Publication Manual of the American Psychological Association</i>, 5e à d., 2001). Il est souvent utile de donner des exemples des formats usuels de citation pour les revues et les livres qui seront utilisés dans la soumission. Identifier aussi les types de fichiers supplémentaires appropriés (par ex., attribution des noms pour un ensemble de données, instruments de recherche, etc.) que les auteurs devraient être incités à télécharger, en plus de leur soumission, afin d'accroître l'engagement des lecteurs envers leur travail.]]></message>
 	<message key="manager.setup.submissionGuidelines">Instructions en matière de soumission</message>
 	<message key="manager.setup.submissionPreparationChecklist">Conditions requises pour soumettre un article</message>
@@ -995,7 +995,7 @@ Prendre note que si votre webmaster a déjà  inscrit ce site auprès de PKP Ha
 	<message key="manager.setup.copyediting">évaluateurs</message>
 	<message key="manager.setup.copyeditInstructions">Instructions pour la correction de texte</message>
 	<message key="manager.setup.copyeditInstructionsDescription">Les instructions pour la correction de texte seront mises à la disposition des évaluateurs, auteurs, et des rédacteurs de rubriques à l'étape de l'édition de la soumission. Voir ci-dessous un ensemble d'instructions par défaut en HTML, qui peuvent être modifiées ou remplacées par le directeur de la revue en tout temps (en HTML ou texte en clair).</message>
-	<message key="manager.setup.layoutAndGalleys">Évaluateurs de la mise en page</message>
+	<message key="manager.setup.layoutAndGalleys">Réviseurs de la mise en page</message>
 	<message key="manager.setup.layoutInstructions">Instructions pour la mise en page</message>
 	<message key="manager.setup.layoutInstructionsDescription">Les instructions pour la mise en page peuvent être préparées pour le formatage d'articles à publier dans la revue et être entrés ci-dessous en HTML ou en texte en clair. Elles seront mises à la disposition du préparateur de copie et du évaluateur de rubrique dans la page éditoriale de chaque soumission. (Comme chaque revue peut utiliser ses propres formats de fichier, normes bibliographiques, feuille de styles, etc., un ensemble d'instructions par défaut n'est pas fourni.)</message>
 	<message key="manager.setup.layoutTemplates">Modèles de mise en page</message>
@@ -1162,8 +1162,8 @@ Prendre note que si votre webmaster a déjà  inscrit ce site auprès de PKP Ha
 	<message key="manager.people.disable">Désactiver</message>
 	<message key="manager.people.enable">Autoriser</message>
 	<message key="manager.people.remove">Supprimer</message>
-	<message key="manager.people.emailUsers">Envoyer un courriel aux usagers</message>
-	<message key="manager.people.emailUsers.emailSelectedUsers">Envoyer un courriel aux usagers sélectionnés</message>
+	<message key="manager.people.emailUsers">Envoyer un courriel aux utilisateurs</message>
+	<message key="manager.people.emailUsers.emailSelectedUsers">Envoyer un courriel aux utilisateurs sélectionnés</message>
 	<message key="manager.people.emailUsers.emailUsersEnrolledAs">Envoyer un courriel aux usagers inscrits comme</message>
 	<message key="manager.people.emailUsers.selectUsers">Cocher les noms des usagers auxquels vous désirez envoyer un courriel</message>
 	<message key="manager.people.emailUsers.selectTemplate">Sélectionner une grille</message>
@@ -1171,11 +1171,11 @@ Prendre note que si votre webmaster a déjà  inscrit ce site auprès de PKP Ha
 
 	<message key="manager.people.editProfile">Modifier le profil</message>
 
-	<message key="manager.people.signInAsUser">Ouvrir la session sous le nom "usager"</message>
-	<message key="manager.people.signInAs">Ouvrir la session sous le nom de</message>
+	<message key="manager.people.signInAsUser">Ouvrir la session en tant qu'utilisateur</message>
+	<message key="manager.people.signInAs">Ouvrir la session en tant que</message>
 	<message key="manager.people.syncUsers">Synchroniser l'enrôlement</message>
 	<message key="manager.people.syncUserDescription">La synchronisation de l'enrôlement enrôlera tous les usagers déjà enrôlés à jouer un rôle donné dans la revue donnée à occuper le même rôle dans cette revue. Cette fonction permet à un groupe d'usagers (i.e. évaluateurs) d'être synchronisés entre diverses revues.</message>
-	<message key="manager.people.enrollSync">Synchronisation de l'enrôlement</message>
+	<message key="manager.people.enrollSync">Synchronisation de l'inscription</message>
 	<message key="manager.people.enrollSyncRole">Synchroniser les rôles</message>
 	<message key="manager.people.enrollSyncJournal">Avec la revue</message>
 	
@@ -1410,7 +1410,7 @@ Prendre note que si votre webmaster a déjà  inscrit ce site auprès de PKP Ha
 	<message key="editor.issues.issuePublicIdentificationExists">Le numéro d'identification publique existe déjà.</message>
 	<message key="editor.issues.coverPage">Image de la page couverture</message>
 	<message key="editor.issues.coverPageInstructions">(Formats acceptés : .gif, .jpg, ou .png)</message>
-	<message key="editor.issues.uploaded">Téléchargé vers le serveur</message>
+	<message key="editor.issues.uploaded">Téléchargé</message>
 	<message key="editor.issues.remove">Supprimer</message>
 	<message key="editor.issues.proofed">Révisé</message>
 	<message key="editor.issues.removeCoverPage">Supprimer l'image de la page couverture?</message>
@@ -1456,7 +1456,7 @@ Prendre note que si votre webmaster a déjà  inscrit ce site auprès de PKP Ha
 	<message key="editor.article.clear">Supprimer</message>
 	<message key="editor.article.clearReviewer">Supprimer l'évaluateur</message>
 	<message key="editor.article.changeSection">Modifier la rubrique</message>
-	<message key="editor.article.setDueDate">Établir la date d'échéance</message>
+	<message key="editor.article.setDueDate">Établir la date butoir</message>
 	<message key="editor.article.addReviewer">Ajouter un évaluateur</message>
 	<message key="editor.article.toReviewer">Au évaluateur</message>
 	<message key="editor.article.notifyReviewer">Informer l'évaluateur</message>
@@ -1503,7 +1503,7 @@ avec un signe plus (+) indiquant que la révision est en cours.]]></message>
 	<message key="editor.article.authorProofing">Révision par l'auteur</message>
 	<message key="editor.article.archiveSubmission">Archiver la soumission</message>
 	<message key="editor.article.restoreToQueue">Remettre dans la liste active</message>
-	<message key="editor.article.assignEditor">Assigner le rédacteur</message>
+	<message key="editor.article.assignEditor">Ajouter le rédacteur</message>
 	<message key="editor.article.selectEditor">Select {$roleName}</message>
 	<message key="editor.article.assignSectionEditor">Ajouter un rédacteur de rubrique</message>
 	<message key="editor.article.selectDecision">Sélectionner la décision</message>
@@ -1572,7 +1572,7 @@ avec un signe plus (+) indiquant que la révision est en cours.]]></message>
 	
 	<!-- Reviewer -->
 	<message key="reviewer.pendingReviews">Articles en attente de révision</message>
-	<message key="reviewer.completedReviews">Évaluations terminées</message>
+	<message key="reviewer.completedReviews">Complété</message>
 	<message key="reviewer.averageQuality">Cote</message>
 	
 	<!-- Used in submission review -->
@@ -1589,7 +1589,7 @@ avec un signe plus (+) indiquant que la révision est en cours.]]></message>
 	<message key="reviewer.article.recommendation">Recommandation</message>
 	<message key="reviewer.article.submitReview">Soumettre la révision à le rédacteur</message>
 	<message key="reviewer.article.reviewerComments">Commentaires</message>
-	<message key="reviewer.article.uploadedFile">Fichiers téléchargés vers le serveur</message>	
+	<message key="reviewer.article.uploadedFile">Fichiers téléchargés</message>	
 	<message key="reviewer.article.reviewersAnnotatedVersion">Version annotée téléchargée par l'évaluateur</message>
 	<message key="reviewer.article.reviewersAnnotatedVersionDescription">(Si vous voulez annoter le fichier, pour le rédacteur, enregistrer sur votre disque dur et utiliser Explorer/Télécharger .)</message>
         <message key="reviewer.article.schedule.request">Demande du rédacteur</message>
@@ -1754,8 +1754,8 @@ avec un signe plus (+) indiquant que la révision est en cours.]]></message>
 	<message key="submission.layout.layoutFile">Fichier pour la mise en page</message>
 	<message key="submission.layout.galleys">Épreuves en placard</message>
 	<message key="submission.layout.newGalley">Créer une nouvelle épreuve en placard</message>
-	<message key="submission.layout.assignLayoutEditor">Assigner un responsable de la mise en page</message>
-	<message key="submission.layout.replaceLayoutEditor">Remplacer le responsable de la mise en page</message>
+	<message key="submission.layout.assignLayoutEditor">Assigner un réviseur de la mise en page</message>
+	<message key="submission.layout.replaceLayoutEditor">Remplacer le réviseur de la mise en page</message>
 	<message key="submission.layout.initialGalleyCreation">Création de l'épreuve en placard initiale</message>
 	<message key="submission.layout.supplementaryFiles">Révision du fichier supplémentaire</message>
 	<message key="submission.layout.layoutComments">Mise en page -- Commentaires</message>
@@ -1789,8 +1789,8 @@ avec un signe plus (+) indiquant que la révision est en cours.]]></message>
 	<message key="submission.proofread.instructions">Instructions pour la correction d'épreuves</message>
 
 	<!-- Submission History -->
-	<message key="submission.history.submissionEventLog">Journal des événements</message>
-	<message key="submission.history.submissionEmailLog">Journal des courriels</message>
+	<message key="submission.history.submissionEventLog">Registre d'événement</message>
+	<message key="submission.history.submissionEmailLog">Registre de courriel</message>
 	<message key="submission.history.submissionNotes">Notes des soumissions</message>
 	<message key="submission.history.noLogEntries">Aucune entrée dans le journal</message>
 	<message key="submission.history.recentLogEntries">Entrées récentes</message>
@@ -1991,7 +1991,7 @@ avec un signe plus (+) indiquant que la révision est en cours.]]></message>
 	<message key="about.onlineSubmissions.needAccount">Besoin d'un nom d'usager/mot de passe?</message>
 	<message key="about.onlineSubmissions.registration">Aller à  Enregistrement</message>
 	<message key="about.onlineSubmissions.registrationRequired">L'enregistrement et l'ouverture de session sont obligatoires pour soumettre des articles en ligne et pour vérifier l'état des soumissions courantes.</message>
-	<message key="about.authorGuidelines">Instructions à l'intention des auteurs</message>
+	<message key="about.authorGuidelines">Directives à l'intention de l'auteur</message>
 	<message key="about.submissionPreparationChecklist">Conditions requises pour soumettre un article</message>
 	<message key="about.submissionPreparationChecklist.description">Quand ils soumettent leurs articles, les auteurs devront vérifier que leurs soumissions respectent toutes les conditions suivantes. Les soumissions peuvent leur être retournées si elles ne les respectent pas.</message>
 	<message key="about.copyrightNotice">Droits d'auteur</message>
@@ -2073,7 +2073,7 @@ avec un signe plus (+) indiquant que la révision est en cours.]]></message>
 	<message key="installer.upgradeInstructions"><![CDATA[<h4>Version OJS {$version}</h4>
 	
 <p>Merci de télécharger <strong>Open Journal Systems</strong> de Public Knowledge Project. Avant de continuer, veuillez lire <a href="{$baseUrl}/docs/README">README</a> et <a href="{$baseUrl}/docs/UPGRADE">UPGRADE</a> les fichiers inclus avec ce logiciel. Pour en savoir plus sur le projet Public Knowledge et ses projets logiciels, veuillez visiter le site Web <a href="http://pkp.sfu.ca/" target="_blank">PKP</a>. Envoyer les rapports de bogues ou les demandes de soutien technique Open Journal Systems à <a href="mailto:pkp-support@sfu.ca">pkp-support@sfu.ca</a>, ou visiter le système de rapport de bogue en ligne de PKP<a href="http://pkp.sfu.ca/bugzilla/" target="_blank"> </a>.</p>]]></message>
-	<message key="installer.localeSettings">Options pour paramètres de lieu</message>
+	<message key="installer.localeSettings">Paramètres pour le paramètre de lieu</message>
 	<message key="installer.localeSettingsInstructions"><![CDATA[Pour un soutien complet Unicode (UTF-8), sélectionner UTF-8 pour tous les paramètres des jeux de caractères. Prendre note que ce soutien exige actuellement un serveur de base de données MySQL >= 4.1.1 ou PostgreSQL >= 7.1. Veuillez aussi noter que le plein soutien Unicode exige PHP >= 4.3.0 avec le soutien pour la bibliothèque<a href="http://www.php.net/mbstring" target="_blank">mbstring</a>(activé par défaut dans les plus récentes installations PHP). Vous aurez peut-être des problèmes à utiliser les jeux de caractères étendus si votre serveur ne répond pas à ces exigences.<br /><br />
 Votre serveur soutient actuellement mbstring: <strong>{$supportsMBString}</strong>]]></message>
 	<message key="installer.localeInstructions">La langue primaire à utiliser pour ce système. Veuillez consulter la documentation OJS si vous êtes intéressé à la prise en charge de langues non indiquées ici.</message>
@@ -2083,7 +2083,7 @@ Votre serveur soutient actuellement mbstring: <strong>{$supportsMBString}</stron
 	<message key="installer.clientCharsetInstructions">Le codage à utiliser pour les données envoyées et reçues des navigateurs.</message>
 	<message key="installer.connectionCharset">Jeu de caractères pour la connexion</message>
 	<message key="installer.databaseCharset">Jeu de caractères de la base de données</message>
-	<message key="installer.locale">Paramètres de lieu</message>
+	<message key="installer.locale">Paramètre de lieu</message>
 	<message key="installer.fileSettings">Paramètres des fichiers</message>
 	<message key="installer.filesDir">Répertoire à télécharger</message>
 	<message key="installer.filesDirInstructions">Entrer le nom complet du chemin d'accès à un répertoire existant où les fichiers téléchargés doivent être gardés. Ce répertoire ne doit pas être directement accessible sur le Web. Veuillez vous assurer que ce répertoire existe et qu'il est programmable avant l'installation. Les noms de chemin d'accès de Windows doivent utiliser des barres obliques, par ex., "C:/myJournal/files".</message>
@@ -2562,7 +2562,7 @@ Après que vos révisions sont terminées, changer le nom du fichier AuthorNameQ
 	<message key="manager.payment.options.donationFee">Dons à la revue</message>
 	<message key="manager.payment.noPayments">Aucun paiement</message>
 	<message key="manager.payment.paymentId">Identification du paiement</message>
-	<message key="manager.payment.userName">Identificateur du payeur</message>
+	<message key="manager.payment.userName">Identification du payeur</message>
 	<message key="manager.payment.timestamp">Estampille temporelle</message>
 	<message key="manager.payment.amount">Montant</message>
 	<message key="manager.payment.notFound">Non trouvé</message>
@@ -2574,8 +2574,8 @@ Après que vos révisions sont terminées, changer le nom du fichier AuthorNameQ
 	<message key="manager.payment.form.numeric">Tous les frais doivent avoir une valeur numérique positive (les signes décimaux sont permis)</message>
 	<message key="plugins.categories.citationFormats">Plugiciels de format de citation</message>
 	<message key="plugins.categories.citationFormats.description">Les plugiciels de format de citation permettent aux utilisateurs d'accéder aux citations d'articles par divers formats.</message>
-	<message key="plugins.categories.blocks">Plugiciels de bloc</message>
-	<message key="plugins.categories.blocks.description">Les plugiciels de bloc sont composés de modules d'interface enfichables, tels les différents outils du menu latéral.</message>
+	<message key="plugins.categories.blocks">Plugiciels en bloc</message>
+	<message key="plugins.categories.blocks.description">Les plugiciels en bloc sont composés de modules d'interface enfichables, tels les différents outils du menu latéral.</message>
 	<message key="plugins.categories.themes">Plugiciels de thème</message>
 	<message key="plugins.categories.themes.description">Il est possible d'utiliser les plugiciels de thème pour modifier l'apparence du système.</message>
 	<message key="plugins.categories.paymethod">Plugiciels de paiement</message>
@@ -2594,31 +2594,31 @@ Après que vos révisions sont terminées, changer le nom du fichier AuthorNameQ
 	<message key="manager.setup.editorDecision">Décision du rédacteur</message>
 	<message key="manager.setup.notifyAllAuthorsOnDecision">Lorsque vous utilisez le courriel Aviser l'auteur, incluez les adresses courriel de tous les coauteurs pour les soumissions d'auteurs multiples, et non simplement celle de l'utilisateur soumissionnaire.</message>
 	<message key="manager.setup.securitySettings">Paramètres d'accès et de sécurité</message>
-	<message key="manager.setup.securitySettingsDescription">OJS offre un éventail d'options de sécurité pouvant être utilisées pour limiter l'accès au contenu d'une revue et pour gérer des renseignements supplémentaires concernant les soumissions, aux fins de vérification.</message>
+	<message key="manager.setup.securitySettingsDescription">L'OJS offre un éventail d'options de sécurité pouvant être utilisées pour limiter l'accès au contenu d'une revue et pour gérer des renseignements supplémentaires concernant les soumissions, aux fins de vérification.</message>
 	<message key="manager.setup.enableUserRegistration">Les utilisateurs peuvent s'inscrire à la revue dans l'une ou plusieurs des fonctions suivantes :</message>
-	<message key="manager.setup.disableUserRegistration">Le gestionnaire de la revue inscrit tous les utilisateurs. Les rédacteurs et rédacteurs de section peuvent seulement inscrire les réviseurs.</message>
+	<message key="manager.setup.disableUserRegistration">Le gestionnaire de la revue inscrit tous les utilisateurs. Les rédacteurs et chefs de rubrique peuvent seulement inscrire les réviseurs.</message>
 	<message key="manager.setup.siteAccess">Restrictions supplémentaires concernant l'accès à l'article et au site</message>
 	<message key="manager.setup.restrictSiteAccess">Les utilisateurs doivent être inscrits et ouvrir une session pour visionner le site de la revue.</message>
 	<message key="manager.setup.restrictArticleAccess">Les utilisateurs doivent être inscrits et ouvrir une session pour visionner le contenu libre-accès.</message>
 	<message key="manager.setup.submissionEventLogging">Tenez un registre, sur la page Historique, de toutes les actions prises concernant une soumission.</message>
 	<message key="manager.setup.submissionEmailLogging">Tenez un registre, sur la page Historique, de tous les courriels envoyés concernant une soumission.</message>
-	<message key="manager.setup.authorCopyrightNoticeDescription"><![CDATA[L'Avis de droits d'auteur ci-dessous apparaîtra dans la rubrique Au sujet de la revue, et dans toutes les métadonnées des articles publiés. Bien que la revue soit responsable de définir les termes d'une entente avec les auteurs concernant les droits d'auteur, le Public Knowledge Project recommande l'utilisation de la licence <a href="http://creativecommons.org" target="_new" class="action">Creative Commons</a>. À cette fin, il offre <a href="{$sampleCopyrightWordingUrl}" target="_new" class="action">sample Copyright Notice wording</a> pouvant être copié et collé dans l'espace ci-dessous pour les revues offrant (a) le libre-accès, (b) le libre-accès à retardement, ou (c) n'offrant pas le libre-accès.]]></message>
-	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Suggestion d'avis de droits d'auteur</h3>
+	<message key="manager.setup.authorCopyrightNoticeDescription"><![CDATA[L'Avis de droits d'auteur ci-dessous apparaîtra dans la section Au sujet de la revue, et dans toutes les métadonnées des articles publiés. Bien que la revue soit responsable de définir les termes d'une entente avec les auteurs concernant les droits d'auteur, le Public Knowledge Project recommande l'utilisation de la licence <a href="http://creativecommons.org" target="_new" class="action">Creative Commons</a>. À cette fin, il offre <a href="{$sampleCopyrightWordingUrl}" target="_new" class="action">un exemple de libellé d’Avis de droits d’auteur </a> pouvant être copié et collé dans l'espace ci-dessous pour les revues offrant (a) le libre-accès, (b) le libre-accès à retardement, ou (c) n'offrant pas le libre-accès.]]></message>
+	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Suggestion d'avis de droits d'auteurs Common Creative</h3>
 <h4>1. Suggestion de politique à l'intention de revues offrant le libre-accès</h4>
 Les auteurs qui publient dans cette revue acceptent les termes suivants : 
 <ol type="a">
-	<li>Les auteurs conservent les droits d'auteur et accordent à la revue le droit de première publication, l'ouvrage étant alors disponible simultanément, sous la licence <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</a> permettant à d'autres de partager l'ouvrage tout en reconnaissant la paternité de l’œuvre et la publication initiale dans cette revue.</li>
-	<li>Les auteurs peuvent conclure des ententes contractuelles additionnelles et séparées pour la diffusion non exclusive de la version imprimée de l'ouvrage par la revue (par ex. : l'affichage au service d'archives d'une institution ou une parution dans un livre), accompagnée d'une mention reconnaissant sa publication initiale dans cette revue.</li>
-	<li>Les auteurs ont le droit et sont encouragés à publier leur ouvrage en ligne (par ex. : dans la logithèque de référence ou sur le site Web d'une institution) avant et pendant le processus de soumission, car cela peut mener à des échanges fructueux ainsi qu'à un nombre accru et anticipé de références à l'ouvrage publié (Consulter <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>).</li>
+	<li>Les auteurs conservent les droits d'auteur et accordent à la revue le droit de première publication, l'ouvrage étant alors disponible simultanément, sous la licence <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Licence d’attribution Creative Commons</a> permettant à d'autres de partager l'ouvrage tout en en reconnaissant la paternité et la publication initiale dans cette revue.</li>
+	<li>Les auteurs peuvent conclure des ententes contractuelles additionnelles et séparées pour la diffusion non exclusive de la version imprimée de l'ouvrage par la revue (par ex. : l'affichage au service d'archives d'une institution ou une parution dans un livre), accompagné d'une mention reconnaissant sa publication initiale dans cette revue.</li>
+	<li>Les auteurs ont le droit et sont encouragés à publier leur ouvrage en ligne (par ex.: dans la logithèque de référence ou sur le site Web d'une institution) avant et pendant le processus de soumission, car cela peut mener à des échanges fructueux ainsi qu'à un nombre accru et anticipé de références à l’ouvrage publié (Consulter <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">les conséquences du libre-accès</a>).</li>
 </ol>
 
 <h4>Politique suggérée à l'intention des revues offrant le libre-accès retardé</h4>
 Les auteurs publiant dans cette revue acceptent les termes suivants :
 <ol type="a">
-	<li>Les auteurs détiennent les droits d'auteur et accordent à la revue
-le droit de première publication de l'œuvre [SPÉCIFIER LA PÉRIODE DE TEMPS] après que la publication est disponible simultanément, sous la licence <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</a> qui permet à d'autres de partager l'ouvrage tout en reconnaissant la paternité de l’œuvre et la publication initiale dans cette revue.</li>
-	<li>Les auteurs peuvent conclure des ententes contractuelles additionnelles et séparées pour la diffusion non exclusive de la version imprimée de l'ouvrage par la revue (par ex. : l'affichage au service d'archives d'une institution ou une parution dans un livre), accompagnée d'une mention reconnaissant sa publication initiale dans cette revue.</li>
-	<li> Les auteurs ont le droit et sont encouragés à publier leur ouvrage en ligne (par ex. : dans la logithèque de référence ou sur le site Web d'une institution) avant et pendant le processus de soumission, car cela peut mener à des échanges fructueux ainsi qu'à un nombre accru et anticipé de références à l'ouvrage publié (Consulter <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>).</li>
+	<li>Les auteurs détiennent les droits d'auteurs et accordent à la revue
+le droit de première publication de l’œuvre [SPÉCIFIER LA PÉRIODE DE TEMPS] après que la publication soit disponible simultanément, sous la licence <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Licence d’attribution Creative Commons </a> qui permet à d'autres de partager l'ouvrage en en reconnaissant la paternité et la publication initiale dans cette revue.</li>
+	<li>Les auteurs peuvent conclure des ententes contractuelles additionnelles et séparées pour la diffusion non exclusive de la version imprimée de l'ouvrage par la revue (par ex. : l'affichage au service d'archives d'une institution ou une parution dans un livre), accompagné d'une mention reconnaissant sa publication initiale dans cette revue.</li>
+	<li> Les auteurs ont le droit et sont encouragés à publier leur ouvrage en ligne (par ex.: dans la logithèque de référence ou sur le site Web d'une institution) avant et pendant le processus de soumission, car cela peut mener à des échanges fructueux ainsi qu'à un nombre accru et anticipé de références à l’ouvrage publié (Consulter <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">Les conséquences du libre-accès</a>).</li>
 </ol>]]></message>
 	<message key="manager.setup.includeCreativeCommons">Pour les revues offrant le libre-accès immédiat ou retardé, incluez la licence Creative Commons dans tous les ouvrages publiés, au moment opportun.</message>
 	<message key="manager.setup.competingInterests">Conflits d'intérêts</message>
@@ -2626,7 +2626,7 @@ le droit de première publication de l'œuvre [SPÉCIFIER LA PÉRIODE DE TEMPS] 
 	<message key="manager.setup.competingInterests.requireAuthors">Les auteurs soumissionnaires doivent déposer une déclaration de conflits d'intérêts (CI) avec leur soumission.</message>
 	<message key="manager.setup.competingInterests.requireReviewers">Les réviseurs doivent déposer une déclaration de CI avec chaque révision par les pairs présentée.</message>
 	<message key="manager.setup.competingInterests.guidelines">Directives pour déposer une déclaration de conflits d'intérêts</message>
-	<message key="manager.setup.publicationFormatDescription">La revue aura recours aux éléments suivants pour identifier les question (qui peuvent être annulées pour des questions individuelle).</message>
+	<message key="manager.setup.publicationFormatDescription">La revue aura recours aux éléments suivants pour identifier les numéros (qui peuvent être annulées pour des questions individuelle).</message>
 	<message key="manager.setup.publicationFormatNumber">Numéro</message>
 	<message key="manager.setup.publicationFormatVolume">Volume</message>
 	<message key="manager.setup.publicationFormatTitle">Titre</message>
@@ -2638,8 +2638,8 @@ le droit de première publication de l'œuvre [SPÉCIFIER LA PÉRIODE DE TEMPS] 
 	<message key="manager.setup.referenceLinkingDescription"><![CDATA[<p>Les options suivantes sont disponibles pour permettre aux lecteurs de repérer les versions en ligne de l'ouvrage cité par un auteur.</p>
 
 <ol>
-	<li><strong>Add a Reading Tool</strong><p>Le gestionnaire de la revue peut ajouter « Trouver une référence » aux Outils de lecture accompagnant les articles publiés, pour permettre aux lecteurs d'insérer le titre d'une référence et d'entreprendre une recherche de l'ouvrage cité dans une base de données universitaires présélectionnée.</p></li>
-	<li><strong>Embed Links in the References</strong><p>Le responsable de la mise en page peut ajouter un lien à des références en ligne, en suivant les instructions suivantes (qui peuvent être modifiées).</p></li>
+	<li><strong>Ajouter un outil de lecture</strong><p>Le gestionnaire de la revue peut ajouter « Trouver une référence » aux Outils de lecture accompagnant les articles publiés, pour permettre aux lecteurs d'insérer le titre d'une référence et d'entreprendre une recherche de l'ouvrage cité dans une base de données universitaires présélectionnée.</p></li>
+	<li><strong>Intégrer les liens aux références</strong><p>Le responsable de la mise en page peut ajouter un lien à des références en ligne, en suivant les instructions suivantes (qui peuvent être modifiées).</p></li>
 </ol>]]></message>
 	<message key="manager.setup.provideRefLinkInstructions">Fournir des directives aux responsables de la mise en page.</message>
 	<message key="manager.setup.refLinkInstructions.description">Directives pour la mise en page des liens de référence</message>
@@ -2695,9 +2695,9 @@ le droit de première publication de l'œuvre [SPÉCIFIER LA PÉRIODE DE TEMPS] 
 	<message key="submission.layout.referenceLinking">Liaison de référence</message>
 	<message key="user.login.accountNotValidated">Votre adresse électronique n'a pas été validée. Veuillez vérifier votre courriel et suivre les directives présentées. Si vous n'avez pas reçu de courriel, vous devrez peut-être communiquer avec le webmestre pour obtenir de l'aide.</message>
 	<message key="user.login.activate">Activer le compte</message>
-	<message key="user.login.activated">Merci d'avoir activé votre compte. Vous pouvez maintenant ouvrir une sessions en utilisant les authentifiants fournis lors de la création de votre compte.</message>
-	<message key="author.submit.supplementaryFilesInstructions">Cette étape facultative permet l'ajout de fichiers supplémentaires à la soumission. Les fichiers, qui peuvent être sous n'importe quel format, peuvent comprendre (a) des instruments de recherche, (b) des ensembles de données, qui se conforment aux conditions de la révision déontologique de la recherche de l'étude, (c) des sources qui autrement ne seraient pas disponibles aux lecteurs, (d) des nombres et des tableaux qui ne peuvent être intégrés dans le texte en soi, ou d'autre matériel qui s'ajoute à la contribution du travail.</message>
-	<message key="user.profile.form.urlInvalid">Le URL spécifié n'est pas valide. Veuillez revérifier le URL et essayer de nouveau. (Suggestion : Ajoutez http:// au début de l'URL.)</message>
+	<message key="user.login.activated">Merci d'avoir activé votre compte. Vous pouvez maintenant ouvrir une session en utilisant les authentifiants fournis lors de la création de votre compte.</message>
+	<message key="author.submit.supplementaryFilesInstructions">Cette étape facultative permet l'ajout de fichiers supplémentaires à la soumission. Les fichiers, qui peuvent être sous n'importe quel format, peuvent comprendre (a) des instruments de recherche, (b) des ensembles de données se conformant aux conditions de la révision déontologique de la recherche de l'étude, (c) des sources qui autrement ne seraient pas disponibles aux lecteurs, (d) des nombres et des tableaux qui ne peuvent être intégrés dans le texte en soi, ou d'autre matériel qui s'ajoute à la contribution du travail.</message>
+	<message key="user.profile.form.urlInvalid">Le URL spécifié n'est pas valide. Veuillez vérifier le URL et essayer de nouveau. (Suggestion : Ajoutez http:// au début de l'URL.)</message>
 	<message key="about.authorFees">Droits d'auteur</message>
 	<message key="about.authorFeesMessage">Cette revue prélève les droits d'auteur suivants.</message>
 	<message key="about.memberships">Adhésions</message>
@@ -2742,10 +2742,10 @@ le droit de première publication de l'œuvre [SPÉCIFIER LA PÉRIODE DE TEMPS] 
 	<message key="rt.findingReferences">Trouver les références</message>
 	<message key="rt.findingReferences.googleScholar">Chercheur Google</message>
 	<message key="rt.findingReferences.windowsLiveAcademic">Windows Live Academic</message>
-	<message key="default.journalSettings.checklist.addressesLinked">Quand cela a été possible, les URL des références ont été fournis.</message>
-	<message key="default.journalSettings.submissionFeeDescription">Les auteurs doivent payer des frais de soumission d'article dans le cadre du processus de soumission pour contribuer aux coûts de révision.</message>
+	<message key="default.journalSettings.checklist.addressesLinked">Quand cela a été possible, les URL des références ont été offerts.</message>
+	<message key="default.journalSettings.submissionFeeDescription">Les auteurs doivent payer des frais de soumission d'article dans le cadre du processus de soumission afin de contribuer aux coûts de révision.</message>
 	<message key="default.journalSettings.fastTrackFeeDescription">Avec le paiement de ces frais, la révision, la décision éditoriale et la notification à l'auteur de ce manuscrit sont garanties dans les quatre prochaines semaines.</message>
-	<message key="default.journalSettings.publicationFeeDescription">Si cet article est accepté pour publication, vous devrez payer les frais de publication d'article pour couvrir les frais de publication.</message>
+	<message key="default.journalSettings.publicationFeeDescription">Si cet article est accepté pour fin de publication, vous devrez payer les frais de publication d'article pour couvrir les frais de publication.</message>
 	<message key="default.journalSettings.waiverPolicy">Si vous n'êtes pas en mesure de payer de tels frais, vous aurez l'occasion de supprimer les frais. Nous ne voulons pas que les frais empêchent la publication d'ouvrages méritants.</message>
 	<message key="default.journalSettings.payPerViewFeeDescription">Le paiement des frais vous permettra de visionner, télécharger et imprimer cet article.</message>
 	<message key="default.journalSettings.membershipFeeDescription">Le paiement des frais vous inscrira à titre de membre de cette association pendant un an et vous accordera un accès gratuit à ce journal.</message>
@@ -2762,13 +2762,13 @@ le droit de première publication de l'œuvre [SPÉCIFIER LA PÉRIODE DE TEMPS] 
 	<message key="installer.installationWrongPhp"><![CDATA[<br/><strong>AVERTISSEMENT : Votre version actuelle de PHP ne satisfait pas aux exigences minimales d'installation. Nous vous recommandons d'actualiser à une version plus récente de PHP.</strong>]]></message>
 	<message key="debug.notes.helpMappingLoad">Fichier de mappage d'aide XML {$filename} retéléchargé à la recherche de {$id}.</message>
 	<message key="default.journalSettings.refLinkInstructions"><![CDATA[<h4>Pour ajouter un lien aux références du processus de mise en page</h4>
-	<p>Quand vous convertissez une soumission en format HTML ou PDF, assurez-vous que les hyperliens dans les soumissions son actifs.</p>
-	<h4>A. Quand un auteur fournit un lien avec la référence</h4>
+	<p>Quand vous convertissez une soumission en format HTML ou PDF, assurez-vous que tous les hyperliens dans les soumissions son actifs.</p>
+	<h4>A. Quand l'auteur fournit un lien avec la référence</h4>
 	<ol>
 	<li>Quand la soumission est encore dans son format de traitement de texte (p. ex. : Word), ajouter la phrase VISIONNER ARTICLE à la fin de la référence possédant un URL.</li>
 	<li>Convertir cette phrase en hyperlien en la surlignant et en utilisant l'outil d'insertion d'hyperliens de Word et le URL préparé au no 2.</li>
 	</ol>
-	<h4>B. Permettre aux lecteurs d'utiliser le Chercheur Google pour les références</h4>
+	<h4>B. Permettre aux lecteurs d'utiliser Google pour les références</h4>
 	<ol>
 	<li>Quand la soumission est encore dans son format de traitement de texte (p. ex. : Word), copier le titre de l'ouvrage concerné dans la liste Références (si le titre semble être trop commun – p. ex. : « Paix » - copier alors l'auteur et le titre).</li>
 	<li>Coller le titre de la référence entre le %22, en mettant un + entre chaque mot : http://scholar.google.com/scholar?q=%22PASTE+TITLE+HERE%22&hl=en&lr=&btnG=Search</li>
@@ -2806,5 +2806,5 @@ Malinowski</pre>
 Les chiffres dans le tableau 3 ne sont pas alignés dans la troisième colonne.</pre>
 <br />
 <pre>4. FORMATAGE
-Le paragraphe qui commence « Ce dernier sujet » est à effacer. </pre>]]></message>
+Le paragraphe qui commence « Ce dernier sujet... » est à effacer. </pre>]]></message>
 </locale>

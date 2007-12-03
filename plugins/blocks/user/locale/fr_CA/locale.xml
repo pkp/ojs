@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.block.user.displayName">Bloc de l'utilisateur</message>
+	<message key="plugins.block.user.description">Ce plugiciel offre des outils d'accès au compte de l'utilisateur dans l'encadré latéral (par ex. : ouverture de session, fermeture de session, lien au profil, etc.).</message>
+	<message key="plugins.block.user.loggedInAs">Vous avez ouvert une session sous le nom de...</message>
+	<message key="plugins.block.user.myJournals">Mes revues</message>
+	<message key="plugins.block.user.myProfile">Mon Profil</message>
+	<message key="plugins.block.user.logout">Fermer la session</message>
+	<message key="plugins.block.user.signOutAsUser">Fermer la session en tant qu'utilisateur</message>
+	<message key="plugins.block.user.rememberMe">Souvenez-vous de moi</message>
+</locale>

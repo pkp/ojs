@@ -410,7 +410,7 @@
 	<message key="journal.journal">Revista</message>
 
 	<!-- User -->
-	<message key="user.userHome">Inicio área personal</message>
+	<message key="user.userHome">Inicio</message>
 	<message key="user.showAllJournals">Mostrar mis revistas</message>
 	<message key="user.login">Login</message>
 	<message key="user.profile">Perfil</message>
@@ -1941,7 +1941,6 @@ la contraseña actual.<br /><br />Introduzca su dirección de correo-e para camb
 	<!-- Search -->
 	<message key="search.browseAuthorIndex">Ver índice de autoras/es</message>
 	<message key="search.searchFor">Buscar artículos por</message>
-	<message key="search.inField">En</message>
 	<message key="search.allFields">Todos</message>
 	<message key="search.author">Autoras/es</message>
 	<message key="search.title">Título</message>
@@ -2051,8 +2050,6 @@ la contraseña actual.<br /><br />Introduzca su dirección de correo-e para camb
 	<message key="about.aboutOJSSite"><![CDATA[Esta revista usa Open Journal Systems {$ojsVersion}, que es software libre de gestión y publicación de revistas desarrollado, soportado, y libremente distribuido por el <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> bajo Licencia Pública General GNU.]]></message>
 	<message key="about.statistics">Estadísticas</message>
 	<message key="about.submissionPreparationChecklist.description">Como parte del proceso de envío, se les requiere a los autores que indiquen que su envío cumpla con todos los siguientes elementos, y que acepten que envíos que no cumplan con estas indicaciones pueden ser devueltos al autor.</message>
-	<message key="about.delayedOpenAccessPolicy">Acceso Libre Diferido</message>
-	<message key="about.authorSelfArchivePolicy">Auto-Archivo de Autores</message>
 	<message key="about.delayedOpenAccess">Acceso Libre Diferido</message>
 	<message key="about.delayedOpenAccessDescription1">El contenido de esta revisa está disponible de forma de acceso libre</message>
 	<message key="about.delayedOpenAccessDescription2">mes(es) después de que un número se halla publicado.</message>
@@ -2527,4 +2524,351 @@ Una vez haya finalizado sus revisones renombre el fichero de NombreAutorPA.doc a
 	<message key="default.journalSettings.forLibrarians"><![CDATA[Recomendamos a las bibliotecas de investigación que listen esta revista en su listado de revistas electrónicas. Este sistema de publicación también está diseñado para ser alojado y operado por bibliotecas de investigación como soporte del trabajo de publicación de revistas de su facultad asociada. Para obtener más información sobre cómo usar Open Journal Systems para gestionar y publicar revistas revisadas por pares, consulte <a href="http://pkp.sfu.ca">Public Knowledge Project</a>.]]></message>
 	<message key="default.journalSettings.lockssLicense"><![CDATA[Esta revista utiliza el sistema LOCKSS para crear un archivo distribuido entre las bibliotecas participante, permitiendo a dichas bibliotecas crear archivos permanentes de la revista con fines de preservación y restauración. <a href="http://lockss.stanford.edu">Ampliar información...</a>]]></message>
 
+	<message key="common.add">Añadir</message>
+	<message key="common.discipline">Disciplina</message>
+	<message key="common.confirmComplete">Confirme que desea clasificar esta tarea como completada. Es posible que ya no pueda realizar cambios después.</message>
+	<message key="common.captchaField">Validación</message>
+	<message key="common.captchaField.description">Por favor, introduzca las letras tal como aparecen en la imagen superior.</message>
+	<message key="common.captchaField.badCaptcha">Los caracteres introducidos no coinciden con los de la imagen. Por favor, compruebe los caracteres y pruebe de nuevo.</message>
+	<message key="common.suggest">Sugerir</message>
+	<message key="common.payment">Pago</message>
+	<message key="common.payments">Pagos</message>
+	<message key="form.postRequired">El formulario no se ha enviado con éxito.</message>
+	<message key="form.formLanguage">Idioma del formulario</message>
+	<message key="form.formLanguage.description">Para introducir la información siguiente en otros idiomas adicionales, seleccione primero el idioma.</message>
+	<message key="email.compose.tooSoon">Está intentando enviar un mensaje demasiado pronto después de su último mensaje enviado. Espere antes de enviar un nuevo mensaje.</message>
+	<message key="email.compose.tooManyRecipients">Este mensaje tiene demasiados destinatarios.</message>
+	<message key="submission.sent">Enviado</message>
+	<message key="submission.saveMetadata">Grabar meta-datos</message>
+	<message key="user.sendPassword">Confirmación</message>
+	<message key="user.sendPassword.description">Enviar un mensaje de confirmación incluyendo mi nombre de usuario y contraseña.</message>
+	<message key="user.salutation">Tratamiento</message>
+	<message key="user.gender">Género</message>
+	<message key="user.masculine">Masculino</message>
+	<message key="user.feminine">Femenino</message>
+	<message key="user.signature">Firma</message>
+	<message key="reader.subscribersOnly">Sólo suscriptores</message>
+	<message key="reader.subscriptionRequiredLoginText">Se requiere suscripción para acceder a este elemento. Para verificar la suscripción, acceda a la revista con sus datos de usuario.</message>
+	<message key="reader.openAccess">Acceso abierto</message>
+	<message key="reader.subscriptionAccess">Acceso por suscripción</message>
+	<message key="reader.subscriptionOrFeeAccess">Suscripción o Acceso Abierto</message>
+	<message key="admin.settings.siteStyleSheet">Hoja de estilos del sitio</message>
+	<message key="admin.settings.homeHeaderImageInvalid">El formato de la imagen del logo no es válido. Los formatos válidos son .gif, .jpg, o .png.</message>
+	<message key="admin.settings.siteStyleSheetInvalid">El formato de la hoja de estilo no es válido. El formato debe ser .css.</message>
+	<message key="admin.languages.installLanguages">Gestionar los ficheros de traducción</message>
+	<message key="admin.languages.downloadLocales">Descargar los ficheros de traducción</message>
+	<message key="admin.languages.downloadFailed">Falló la descarga de fichero de traducción. El mensaje de error siguiente describe el fallo.</message>
+	<message key="admin.languages.localeInstalled">El fichero de traducción "{$locale}" ha sido instalado.</message>
+	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>No es posible descargar los paquetes de idiomas desde el servidor Public Knowledge Project en estos momentos porque:</p>
+	<ul>
+		<li>Su servidor no tiene o no permite ejecutar la herramienta GNU "tar"</li>
+		<li>OJS no puede modificar el fichero de registro de idiomas, normalmente en "registry/locales.xml".</li>
+	</ul>
+<p>Los paquetes de idiomas se pueden descargar manualmente de <a href="http://pkp.sfu.ca">PKP web site</a>.</p>]]></message>
+	<message key="admin.languages.download">Descargar fichero de idioma</message>
+	<message key="admin.languages.download.cannotOpen">No es posible abrir el descriptor del idioma desde PKP web site.</message>
+	<message key="admin.languages.download.cannotModifyRegistry">No se puede añadir el nuevo fichero de traducción al fichero de registro de idiomas, normalmente en "registry/locales.xml".</message>
+	<message key="admin.mergeUsers">Combinar usuarios</message>
+	<message key="admin.mergeUsers.mergeUser">Combinar usuario</message>
+	<message key="admin.mergeUsers.into.description">Seleccione un usuario al que atribuir las características (artículos, tareas, ...) del usuario anterior.</message>
+	<message key="admin.mergeUsers.from.description">Seleccione una cuenta de usuario para combinar con otra cuenta de usuario (por ejemplo, si un usuario tiene 2 cuentas). La cuenta selecionada en primer lugar se borrará, pero sus datos (envíos, tareas, ..) se asignarán a la segunda cuenta de usuario.</message>
+	<message key="admin.mergeUsers.confirm">¿Confirma que desea combinar la cuenta de usuario "{$oldUsername}" en la cuenta de usuario "{$newUsername}"? La cuenta de usurio "{$oldUsername}" desaparecerá. Esta acción no es reversible.</message>
+	<message key="manager.statistics.statistics.articleViews">Número de visitas al artículo (sólo para autores)</message>
+	<message key="manager.statistics.reports.description">OJS genera informes que detallan el proceso de los envíos a la revista durante un período de tiempo. Los informes se generan en formato CSV, que puede abrirse en una hoja de cálculo.</message>
+	<message key="manager.plugins.description">Esta página permite al Gestor de Revista revisar y configurar los complementos que están actualmente instalados. Los complementos están divididos en categorías conforme a su función.</message>
+	<message key="manager.payments">Pagos</message>
+	<message key="manager.payment.enable">Activar</message>
+	<message key="manager.payment.action">Acción</message>
+	<message key="manager.payment.details">Detalles</message>
+	<message key="manager.payment.description">Descripción</message>
+	<message key="manager.payment.addPayment">Añadir pago</message>
+	<message key="manager.payment.currency">Moneda</message>
+	<message key="manager.payment.currencymessage">OJS no realiza conversión de monedas. Si admite pagos, asegúrese de que la moneda para la suscripción coincide con la especificada aquí.</message>
+	<message key="manager.payment.feePaymentOptions">Opciones de pago</message>
+	<message key="manager.payment.options">Opciones</message>
+	<message key="manager.payment.records">Informes</message>
+	<message key="manager.payment.options.enablePayments">Pulse aquí para activar el módulo de pagos. Debe configurar las opciones en el formulario siguiente. Se requiere que los usuarios accedan a la aplicación para poder hacer pagos.</message>
+	<message key="manager.payment.options.text">Descripción del método de pago</message>
+	<message key="manager.payment.options.fee">Tarifa</message>
+	<message key="manager.payment.options.feeName">Nombre de la tarifa</message>
+	<message key="manager.payment.options.feeDescription">Descripción de la tarifa</message>
+	<message key="manager.payment.generalOptions">Opciones generales</message>
+	<message key="manager.payment.authorFees">Tarifas de autor</message>
+	<message key="manager.payment.readerFees">Tarifas de lector</message>
+	<message key="manager.payment.generalFees">Tarifas generales</message>
+	<message key="manager.payment.options.submissionFee">Envío de artículo</message>
+	<message key="manager.payment.options.publicationFee">Publicación de artículo</message>
+	<message key="manager.payment.options.membershipFee">Afiliación a la asociación</message>
+	<message key="admin.mergeUsers.allUsers">Todos los usuarios asociados</message>
+	<message key="admin.mergerUsers.noneEnrolled">Ningún usuario asociado</message>
+	<message key="manager.payment.authorFeesDescription">Las opciones seleccionadas, junto con su descripción y tarifas (que pueden editarse a continuación), aparecerán en el paso 1 del proceso de envío y en la sección "La revista" en Envíos, así como en los pasos que requieran realizar pagos.</message>
+	<message key="manager.payment.readerFeesDescription">Las opciones seleccionadas, junto con su descripción y tarifas (que pueden editarse a continuación), aparecerán en la sección "La revista" en Políticas, así como en los pasos que requieran realizar pagos.</message>
+	<message key="manager.payment.generalFeesDescription">La sección "Afiliación" aparecerá en la sección "La revista" en "Políticas", y el vínculo para donaciones aparecerá sobre la función de búsqueda en el marco derecho.</message>
+	<message key="manager.payment.options.fastTrackFee">Revisión rápida</message>
+	<message key="manager.payment.options.payPerViewFee">Pago por acceso a artículo</message>
+	<message key="manager.payment.options.waiverPolicy">Política de derechos</message>
+	<message key="manager.payment.options.onlypdf">Sólo acceso restringido a la versión PDF de los artículos</message>
+	<message key="manager.payment.options.acceptSubscriptionPayments">Esto activará los pagos por suscripción, donde el tipo, el coste, la duración y los suscriptores se gestionan desde el "Gestor de Suscripciones"</message>
+	<message key="manager.payment.options.donationFee">Donaciones a la revista</message>
+	<message key="manager.payment.noPayments">Sin pagos</message>
+	<message key="manager.payment.paymentId">Referencia del pago</message>
+	<message key="manager.payment.userName">Referencia del pago</message>
+	<message key="manager.payment.timestamp">Fecha operación</message>
+	<message key="manager.payment.amount">Cantidad</message>
+	<message key="manager.payment.notFound">No encontrado</message>
+	<message key="manager.payment.paymentMethods">Formas de pago</message>
+	<message key="manager.payment.paymentMethod">Forma de pago</message>
+	<message key="manager.payment.paymentMethod.description">Puede configurar cualquiera de las siguientes formas de pago desde esta pantalla.</message>
+	<message key="manager.payment.paymentType">Forma de pago</message>
+	<message key="manager.payment.editSubscription">Editar Suscripción</message>
+	<message key="manager.payment.form.numeric">Todos los costes deben ser números positivos (se permiten decimales)</message>
+	<message key="plugins.categories.citationFormats">Complementos de Formato de Referencias</message>
+	<message key="plugins.categories.citationFormats.description">Los complementos de Formato de Referencias permiten a los usuarios emplear distintos formatos para acceder a las referencias de los artículos.</message>
+	<message key="plugins.categories.blocks">Complementos de Bloques</message>
+	<message key="plugins.categories.blocks.description">Los Complementos de Bloques son componentes de la interfaz de usuario, como las barras laterales de herramientas.</message>
+	<message key="plugins.categories.themes">Complementos de Aspecto</message>
+	<message key="plugins.categories.themes.description">Los Complementos de Aspecto se pueden usar para cambiar la apariencia del sistema.</message>
+	<message key="plugins.categories.paymethod">Complementos de Pago</message>
+	<message key="plugins.categories.paymethod.description">Los Complementos de Pago implementan varias formas de procesar los pagos on-line.</message>
+	<message key="manager.setup.management.description">Acceso y seguridad, planificación, anuncios, edición, formato y pruebas.</message>
+	<message key="manager.setup.reviewOptions.blindReview">Revisión ciega</message>
+	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[Proporcione vínculos a <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action"> Asegurando una Revisión Ciega </a> en la páginas en que los autores y revisores envían ficheros.]]></message>
+	<message key="manager.setup.editorDecision">Decisión del Editor</message>
+	<message key="manager.setup.notifyAllAuthorsOnDecision">Al usar el email "Notificar al Autor", incluya las direcciones de todos los coautores si se trata de envíos multi-autor, y no sólo la del autor principal.</message>
+	<message key="manager.setup.securitySettings">Opciones de Acceso y Seguridad</message>
+	<message key="manager.setup.securitySettingsDescription">OJS proporciona una serie de opciones de seguridad que pueden usarse para restringir el acceso a algunas secciones de la revista, y mantiene información adicional sobre envíos a efectos de registro.</message>
+	<message key="manager.setup.enableUserRegistration">Los usuarios pueden registrarse por sí mismos en el sistema en alguno de los siguientes roles:</message>
+	<message key="manager.setup.enableUserRegistration.author">Autores (pueden enviar artículos a la revista)</message>
+	<message key="manager.setup.enableUserRegistration.reader">Lectores (pueden recibir notificaciones y se pueden contabilizar como suscriptores)</message>
+	<message key="manager.setup.enableUserRegistration.reviewer">Revisores (dispuestos a realizar revisiones)</message>
+	<message key="manager.setup.disableUserRegistration">El Gestor de la Revista registra a todos los usuarios. Los Editores y Editores de Sección sólo pueden registrar Revisores.</message>
+	<message key="manager.setup.siteAccess">Restricciones adicionales de acceso</message>
+	<message key="manager.setup.restrictSiteAccess">Los usuarios deben estar registrados e identificarse para acceder a la página de la revista.</message>
+	<message key="manager.setup.restrictArticleAccess">Los usuarios deben estar registrados e identificarse para acceder al contenido abierto.</message>
+	<message key="manager.setup.submissionEventLogging">Mantener un registro de todas las acciones relativas a un envío en su Historial.</message>
+	<message key="manager.setup.submissionEmailLogging">Mantener un registro de todos los emails relativos a un envío en su Historial.</message>
+	<message key="manager.setup.reviewerDatabaseLink">Lista de Revisores Potenciales</message>
+	<message key="manager.setup.reviewerDatabaseLink.desc">Añada a la página de "Seleccionar Revisor" un vínculo a una base de datos relevante en la que se pueda buscar a revisores potenciales y que esté abierta para su uso por parte de los editores.</message>
+	<message key="manager.setup.addReviewerDatabaseLink">Añadir vínculo a nueva base de datos</message>
+	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Propuesta de Política de Derechos </h3>
+<h4>1. Política Propuesta para Revistas de Acceso Abierto</h4>
+Los autores que publiquen en esta revista acceden a las siguientes condiciones: 
+<ol type="a">
+	<li>Los autores retienen los derechos de copia (copyright) y ceden a la revista el derecho de primera publicación, con el trabajo asimismo bajo la licencia  <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</a> que permite a terceros utilizar lo publicado siempre que hagan referencia al autor o autores del trabajo y a su publicación en esta revista. </li>
+	<li>Los autores son libres de realizar otros acuerdos contractuales para la distribución no exclusiva del artículo que publiquen en esta revista (como puede ser incluirlo en una colección institucional o publicarlo en un libro), siempre que indiquen claramente la publicación original del trabajo en esta revista.</li>
+	<li>Se permite y anima a los autores a publicar su trabajo en Internet (por ejemplo en páginas institucionales o personales) en forma de "working paper" o "preprint" de forma previa y durante el proceso de revisión y publicación, ya que puede conducir a intercambios productivos y a una mayor y más rápida difusión del trabajo publicado. (Vea <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>).</li>
+</ol>
+
+<h4>Política Propuesta para Revistas con Acceso Abierto Diferido</h4>
+Los autores que publiquen en esta revista acceden a las siguientes condiciones:
+<ol type="a">
+	<li>Los autores mantienen el copyright y ceden a la revista el derecho de primera publicación. A los [INDICAR MESES] meses de su publicación, el trabajo parará a estar bajo la licencia <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</a> que permite a terceros utilizar lo publicado siempre que hagan referencia al autor o autores del trabajo y a su publicación en esta revista. </li>
+	<li>Los autores son libres de realizar otros acuerdos contractuales para la distribución no exclusiva del artículo que publiquen en esta revista (como puede ser incluirlo en una colección institucional o publicarlo en un libro), siempre que indiquen claramente la publicación original del trabajo en esta revista.</li>
+	<li>Se permite y anima a los autores a publicar su trabajo en Internet (por ejemplo en páginas institucionales o personales) en forma de "working paper" o "preprint" de forma previa y durante el proceso de revisión y publicación, ya que puede conducir a intercambios productivos y a una mayor y más rápida difusión del trabajo publicado. (Vea <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>).</li>
+</ol>]]></message>
+	<message key="manager.setup.includeCreativeCommons">Para las revistas que ofrecen acceso abierto inmediato o diferido, incluir cuando proceda una licencia "Creative Commons" para todo el trabajo publicado.</message>
+	<message key="manager.setup.competingInterests">Conflicto de Intereses</message>
+	<message key="manager.setup.competingInterests.description"><![CDATA[Las revistas biomédicas normalmente exigen a los auotores declarar si puede existir algún conflicto de intereses en relación a los resultados de su investigación (vea por ejemplo <a href="http://journals.plos.org/competing.php" target="_new">PLoS Policy</a>).]]></message>
+	<message key="navigation.competingInterestGuidelines">Indicaciones de Conflicto de Intereses</message>
+	<message key="manager.setup.competingInterests.requireAuthors">Exigir a los autores una declaración de Conflicto de Intereses junto con sus envíos.</message>
+	<message key="manager.setup.competingInterests.requireReviewers">Exigir a los revisores una declaración de Conflicto de Intereses con cada revisión que envíen.</message>
+	<message key="manager.setup.competingInterests.guidelines">Indicaciones para las declaraciones de Conflicto de Intereses</message>
+	<message key="manager.setup.publicationFormatDescription">La revista usará los siguientes elementos para identificar números (salvo para edición de números especiales)</message>
+	<message key="manager.setup.publicationFormatNumber">Número</message>
+	<message key="manager.setup.publicationFormatVolume">Volumen</message>
+	<message key="manager.setup.publicationFormatTitle">Título</message>
+	<message key="manager.setup.useCopyeditors">Se asignará un Editor de Pruebas a cada envío</message>
+	<message key="manager.setup.noUseCopyeditors">La revisión de Pruebas la llevarán a cabo un Editor o un Editor de Sección asociados al envío.</message>
+	<message key="manager.setup.useLayoutEditors">Se asignará un Editor de Diagramación para preparar los ficheros electrónicos finales HTML, PDF, ...</message>
+	<message key="manager.setup.noUseLayoutEditors">Los ficheros electrónicos finales HTML, PDF,... los preparará un Editor o Editor de Sección.</message>
+	<message key="manager.setup.referenceLinking">Vínculos a Referencias</message>
+	<message key="manager.setup.referenceLinkingDescription"><![CDATA[<p>Para permitir a los lectores localizar versiones on-line de los trabajos citados, se tienen las siguientes opciones:</p>
+
+<ol>
+	<li><strong>Añadir Herramienta de Lectura</strong><p>El Gestor de Revista puede añadir "Encontrar Referencias" a las Herramientas de Lectura que acompañan a los elementos publicados, lo que permite a los lectores pegar el título de una referencia y buscar en bases de datos pre-seleccionadas. </p></li>
+	<li><strong>Insertar Vínculos en las Referencias</strong><p> El Editor de Diagramación puede añadir un vínculo a las referencias que se encuentren on-line usando las siguientes instrucciones (que son editables).</p></li>
+</ol>]]></message>
+	<message key="manager.setup.provideRefLinkInstructions">Proporcionar instrucciones al Editor de Diagramación</message>
+	<message key="manager.setup.refLinkInstructions.description">Instrucciones de Diagramación para Vincular Referencias</message>
+	<message key="manager.setup.useProofreaders">Se asiganará un Lector de Pruebas para revisar (junto a los autores) las galeradas antes de su publicación.</message>
+	<message key="manager.setup.noUseProofreaders">Será un Editor o Editor de Sección quien revise las galeradas.</message>
+	<message key="manager.setup.onlineAccessManagement">Acceso al contenido de la revista</message>
+	<message key="manager.setup.subscriptionDescription">Esto requiere la asignación de un Gestor de Suscripciones que tenga acceso al módulo de suscripciones, lo que incluye acceso abierto adicional, auto-archivo y opciones de notificación vía email.</message>
+	<message key="manager.setup.showGalleyLinksDescription">Muestra siempre vínculos a las galeradas e indica acceso restringido.</message>
+	<message key="manager.setup.journalLayout">Apariencia de la Revista</message>
+	<message key="manager.setup.journalLayoutDescription">Elija un "motivo de fondo" para la revista y seleccione componentes para la presentación. Se puede cargar una hoja de estilo, que tendrá prioridad sobre las otras opciones de aspecto.</message>
+	<message key="manager.setup.journalTheme">Motivo Gráfico</message>
+	<message key="manager.setup.layout.leftSidebar">Barra Izquierda</message>
+	<message key="manager.setup.layout.unselected">Sin seleccionar</message>
+	<message key="manager.setup.layout.rightSidebar">Barra Derecha</message>
+	<message key="manager.languages.languageInstructions"><![CDATA[OJS puede utilizar cualquiera de los idiomas disponibles. También puede operar como un sistema multi-idioma, permitiendo al usuario seleccionar el idioma de cada página, y permitiendo que algunos datos se introduzcan en varios idiomas. <br /><br/>Si su idioma no aparece en la lista siguiente, pida al administrador del sitio que instale el idioma. Para instrucciones sobre instalación de idiomas consulte la documentación de OJS.]]></message>
+	<message key="manager.languages.alternateLocaleInstructions">El sistema permite que cierta infromación crítica se introduzca en varios idiomas. Para usar esta característica, selecciones varios idiomas y elija entre las opciones mostradas a continuación.</message>
+	<message key="manager.sections.hideAbout">Omitir esta sección del apartado "La Revista"</message>
+	<message key="manager.groups.create">Crear Título de Posición</message>
+	<message key="manager.groups.enableBoard.description"><![CDATA[En<a href="{$aboutEditorialTeamUrl}">"Equipo"</a> en "La Revista":]]></message>
+	<message key="manager.groups.enableBoard">El Gestor de Revista crea títulos (encabezados) y añade nombres bajo cada título</message>
+	<message key="manager.groups.disableBoard">OJS muestra el Equipo Editorial con sus roles asignados.</message>
+	<message key="manager.groups.context.editorialTeam.short">Equipo Editorial</message>
+	<message key="manager.groups.context.editorialTeam">Mostrar el título en el "Equipo Editorial", en "Equipo", dentro de "La Revista"  (e.g. Editor)</message>
+	<message key="manager.groups.context.people">Mostrar el título como categoría propia en "Equipo" (e.g. Comité Editorial)</message>
+	<message key="manager.people.allUsers">Todos los usuarios asociados</message>
+	<message key="manager.people.allEnrolledUsers">Usuarios asociados a esta revista</message>
+	<message key="manager.people.allSiteUsers">Asociar un usuario del sitio a esta revista</message>
+	<message key="manager.people.mustChooseRole">Seleccione un role en la parte superior de la página antes de pulsar "Asociar Usuario".</message>
+	<message key="manager.people.enrollExistingUser">Asociar un usuario existente</message>
+	<message key="manager.people.roleEnrollment">{$role} Role asociado</message>
+	<message key="manager.people.enrollUserAsDescription">La relación usuario - role puede modificarse en cualquier momento.</message>
+	<message key="manager.people.mustProvideName">Por favor, indique al menos un apellido para el usuario.</message>
+	<message key="manager.subscriptionTypes.form.public">Este tipo de suscripción no se mostrará públicamente (por ejemplo, en la sección "Suscripciones" en "La Revista"</message>
+	<message key="editor.submissionReview.emailWillArchive">Este envío será archivado después de lanzar el email de Notificación a Autor o pulsar el botón de "No Enviar email".</message>
+	<message key="editor.submissionReview.cannotSendToCopyediting">Antes de pasar este envío a "Pruebas", debe asegurarse de que existen revisiones y de que el autor ha recibido aviso de los resultados usando el vínculo "Notificar a Autor" en la parte superior.</message>
+	<message key="editor.notifyUsers.inProgress">Notificaciones a usuarios...</message>
+	<message key="editor.issues.volumeRequired">Es necesario indicar el volumen de la revista, que debe ser un número natural positivo.</message>
+	<message key="editor.issues.numberRequired">Es necesario indicar el número de la revista, que debe ser un número natural positivo.</message>
+	<message key="editor.issues.yearRequired">Es necesario indicar el año, que debe ser un número natural positivo.</message>
+	<message key="editor.issues.titleRequired">Es necesario un título para este número de la revista.</message>
+	<message key="editor.issues.issueIdentificationRequired">Es necesario identificar el número de la revista. Por favor, selecione al menos una de las opciones de identificación de número.</message>
+	<message key="editor.issues.showCoverPage">Crear una portada para este número con los siguientes elementos.</message>
+	<message key="editor.issues.resetIssueOrder"><![CDATA[Esta revista utiliza una numeración propia. <a href="{$url}" class="action">Restaurar valores iniciales</a>]]></message>
+	<message key="editor.article.commentsRequired">Se necesita el campo de comentarios.</message>
+	<message key="editor.article.payment.publicationFeeNotPaid">No se ha recibido el pago para publicación. Para pasar a publicación notifique al autor la necesidad de pago o prescinda del mismo.</message>
+	<message key="sectionEditor.review.enrollReviewer">Asociar rol de Revisor a un usuario</message>
+	<message key="submission.layout.imageInvalid">Formato de imagen no válido. Se aceptan .gif, .jpg, y .png.</message>
+	<message key="reviewer.article.restrictedFileAccess">El envío estará disponible cuando el revisor acceda a proceder con la revisión.</message>
+	<message key="reviewer.article.enterCompetingInterests"><![CDATA[Indique si puede existir conflicto de intereses con relación a los resultados de esta investigación  (vea <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">CI&nbsp;Policy</a>).]]></message>
+	<message key="reviewer.competingInterests">Conflicto de Intereses</message>
+	<message key="author.competingInterests"><![CDATA[Conflicto de&nbsp;intereses <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">CI&nbsp;Policy</a>]]></message>
+	<message key="author.submit.startHereTitle">Comenzar un Nuevo Envío</message>
+	<message key="author.submit.startHereLink"><![CDATA[<a href="{$submitUrl}" class="action">Pulse aquí</a> para ir al primer paso del proceso de envío (5 pasos).]]></message>
+	<message key="author.submit.requestWaiver">Solicitar Exención de Pago</message>
+	<message key="author.submit.qualityForWaiver">Por favor, considere eliminar la tarifa de envío de artículo en este caso</message>
+	<message key="author.submit.addReasonsForWaiver">Por favor, indique a continuación los motivos por los que solicita la exención de pago.</message>
+	<message key="author.submit.howToSubmit"><![CDATA[¿Encuentra problemas? Contacte <a href="mailto:{$supportEmail}">{$supportName}</a> para solicitar ayuda({$supportPhone}).]]></message>
+	<message key="author.submit.howToSubmitNoPhone"><![CDATA[¿Encuentra problemas? Contacte <a href="mailto:{$supportEmail}">{$supportName}</a> para solicitar ayuda.]]></message>
+	<message key="author.submit.journalSectionDescription"><![CDATA[Seleccione una sección apropiada para este envío (vea el apartado "Secciones y Políticas" en<a href="{$aboutUrl}" target="_new">"La Revista"</a>).]]></message>
+	<message key="author.submit.reorderInstructions">Reordenar los autores por orden de aparición en el artículo.</message>
+	<message key="author.submit.submissionIndexingDescription">Proporcione palabras clave para indexar el envío; separe los términos con punto y coma (término1; término2; término3).</message>
+	<message key="author.submit.form.abstractRequired">Por favor, escriba el resumen (abstract) del artículo.</message>
+	<message key="author.submit.supplementaryFilesInstructions">Este paso es opcional y permite el envío de ficheros adicionales, como pueden ser imágenes, tablas, hojas de cálculo, programas u otros materiales que acompañen al artículo.</message>
+	<message key="author.submit.supplementaryFiles.saveToUpload">Pulse "Grabar" para subir el fichero (podrá subir más ficheros a continuación).</message>
+	<message key="author.submit.forgottenSubmitSuppFile">¿Confirma que desea continuar sin subir el fichero complementario que seleccionó?</message>
+	<message key="author.submit.confirmationDescription">Para enviar su artículo a {$journalTitle} pulse "Finalizar Envío". El autor de contacto recibirá un mensaje de confirmación y podrá seguir el proceso de revisión en este mismo sistema de gestión de envíos. Muchas gracias por su interés en publicar en {$journalTitle}.</message>
+	<message key="submission.layout.noLayoutFile">Ausente (Suba la Versión de Pruebas final como Versión de Diagramación antes de enviar la petición)</message>
+	<message key="submission.layout.galleyLocaleRequired">Se necesita la localización de galerada.</message>
+	<message key="submission.layout.galleyLanguageRequired">Se necesita el idioma de galerada.</message>
+	<message key="submission.layout.referenceLinking">Vínculos a Referencias</message>
+	<message key="user.login.accountNotValidated">La dirección de email no parece correcta. Por favor, compruebe el correo y siga las instrucciones. Si no ha recibido ningún mensaje, solicite asistencia.</message>
+	<message key="user.login.activate">Activar Cuenta</message>
+	<message key="user.login.activated">Gracias por activar su cuenta. Puede acceder al sistema utilizando los datos con los que creó su cuenta.</message>
+	<message key="author.submit.authorSubmitLoginMessage">Es necesaria una cuenta de usuario para realizar envíos. Esto permitirá a los editores asociar el envío a su cuenta y contactar con usted cuando proceda.</message>
+	<message key="user.profile.form.urlInvalid">La dirección web no es válida. Por favor compruebe la dirección e inténtelo de nuevo. Pruebe a añadir http:// antes de la dirección web.</message>
+	<message key="about.authorFees">Tarifas de Autor</message>
+	<message key="about.authorFeesMessage">Esta revista utiliza las siguientes tarifas de autor.</message>
+	<message key="about.memberships">Afiliación</message>
+	<message key="help.searchResultsFor">Resultados para</message>
+	<message key="donations.thankYou">Gracias</message>
+	<message key="donations.thankYouMessage">Muchas gracias por su donación.</message>
+	<message key="payment.loginRequired">Debe acceder al sistema para realizar un pago.</message>
+	<message key="payment.loginRequired.forArticle">Se requiere suscripción o pago para acceder a este elemento. Para comprobar su suscripción, acceda al sistema identificándose con sus datos de usuario.</message>
+	<message key="payment.loginRequired.forDonation">Debe acceder al sistema con sus datos de usuario para realizar una donación.</message>
+	<message key="payment.paid">Pagado</message>
+	<message key="payment.payNow">Pagar Ahora</message>
+	<message key="payment.waive">Exención</message>
+	<message key="payment.alreadyPaid">Pagado Ya</message>
+	<message key="payment.alreadyPaidMessage">Selecione esta caja si ya ha realizado el pago para finalizar el proceso de envío. La revisión no comenzará hasta una vez recibido el pago. Pulse sobre "Pagar Ahora" para lsa instrucciones de pago.</message>
+	<message key="payment.paymentReceived">Pago Recibido</message>
+	<message key="payment.paymentSent">El pago ya se ha enviado</message>
+	<message key="payment.type.submission">Tarifa por Envío</message>
+	<message key="payment.type.publication">Tarifa por Publicación</message>
+	<message key="payment.type.fastTrack">Tarifa de Revisión Rápida</message>
+	<message key="payment.type.membership">Tarifa de Afililación Individual</message>
+	<message key="payment.type.payPerView">Tarifa de Consulta de Artículo</message>
+	<message key="payment.type.subscription">Tarifa de Suscripción</message>
+	<message key="payment.type.donation">Donaciones</message>
+	<message key="payment.donation.makeDonation">Realizar una donación</message>
+	<message key="payment.submission.paySubmission">Pagar Tarifa de Envío</message>
+	<message key="payment.fastTrack.payFastTrack">Pagar Revisión Rápida</message>
+	<message key="payment.fastTrack.inFastTrack">en Revisión Rápida</message>
+	<message key="payment.publication.payPublication">Pagar Publicación</message>
+	<message key="payment.publication.publicationPaid">Tarifa de Publicación Pagada</message>
+	<message key="payment.membership.buyMembership">Pagar Afiliación Individual</message>
+	<message key="payment.membership.renewMembership">Renovar afiliación individual</message>
+	<message key="payment.membership.ends">Fines</message>
+	<message key="payment.subscription.renew">Renovar Suscripción</message>
+	<message key="payment.subscription.expires">Vencimiento</message>
+	<message key="installer.installationWrongPhp"><![CDATA[<br/><strong>WARNING: Su versión actual de PHP no cumple los requisitos mínimos necesarios de instalación. Actualice a una versión posterior de PHP.</strong>]]></message>
+	<message key="installer.connectionCharsetInstructions"><![CDATA[La codificación a usar en los datos enviados a y desde la base de datos. Debe ser la misma que el juego de caracteres del cliente. Esta característica solo está soportada en MySQL >= 4.1.1 o PostgreSQL >= 7.1. Seleccione "No aplica" si su servidor de base de datos no cumple estas condiciones.]]></message>
+	<message key="installer.databaseCharsetInstructions"><![CDATA[La codificación a usar en los datos almacenados en la base de datos. Esta característica solo está soportada en MySQL >= 4.1.1 o PostgreSQL >= 7.1. Seleccione "No aplica" si su servidor de base de datos no cumple estas condiciones.]]></message>
+	<message key="installer.databaseSettingsInstructions">OJS necesita acceso a una base de datos SQL para almacenar los datos. Consulte los requisitos del sistema indicados previamente para ver la lista de bases de datos admitidas. En los campos que siguen, elija las opciones de conexión a la base de datos.</message>
+	<message key="log.review.reviewDeclinedByProxy">{$userName} has declined the round {$round} review for submission {$articleId} on behalf of {$reviewerName}.</message>
+	<message key="log.editor.decision">La Decisión de Editor ({$decision}) para el artículo {$articleId} se registró por{$editorName}.</message>
+	<message key="rt.admin.settings.printerFriendly">Versión para Imprimir</message>
+	<message key="rt.admin.settings.addComment">Añadir comentario (permite a los lectores enviar comentarios, que el Gestor de Revista puede borrar).</message>
+	<message key="rt.admin.settings.addComment.authenticated">Los usuarios deben estar registrados e identificados para enviar notas, no se admiten notas anónimas.</message>
+	<message key="rt.admin.settings.addComment.anonymous">Los usuarios deben estar registrados e identificados para enviar notas, se admiten notas anónimas.</message>
+	<message key="rt.admin.settings.addComment.unauthenticated">No es necesario estar registrado e identificado para enviar notas, se admiten notas anónimas.</message>
+	<message key="rt.admin.settings.findingReferences">Encontrar Referencias</message>
+	<message key="rt.metadata.pkp.doi">Identificador de Objeto Digital (DOI)</message>
+	<message key="rt.captureCite.format">Formato de Referencias</message>
+	<message key="rt.findingReferences">Encontrando Referencias</message>
+	<message key="rt.findingReferences.googleScholar">Google Scholar</message>
+	<message key="rt.findingReferences.windowsLiveAcademic">Windows Live Academic</message>
+	<message key="icon.small.alt">Pequeño</message>
+	<message key="icon.medium.alt">Mediano</message>
+	<message key="icon.large.alt">Grande</message>
+	<message key="debug.notes.currencyListLoad">Cargada la lista de monedas "{$filename}" de XML</message>
+	<message key="default.journalSettings.checklist.addressesLinked">Donde ha sido posible se han añadido direcciones web para las referencias.</message>
+	<message key="default.journalSettings.refLinkInstructions"><![CDATA[<h4>Para añadir vínculos al proceso de Diagramación</h4>
+	<p>Al pasar un envío a HTML o PDF, asegúrese de que los hipervínculos están activos.</p>
+	<h4>A. Si el autor proporciona un vínculo a la referencia</h4>
+	<ol>
+	<li>Partiendo del documento en un procesador de texto (e.g., Word), añada la frase VER ELEMENTO al final de la referencia que tiene dirección de Internet.</li>
+	<li>Convierta la frase en un hipervínculo seleccionándola y usando la herramienta "Insertar Hipervínculo" (en el caso de Word).</li>
+	</ol>
+	<h4>B. Búsqueda de Referencias en Google Scholar</h4>
+	<ol>
+	<li>Partiendo del documento en un procesador de texto (e.g., Word), copie el título del trabajo referenciado, o bien autor y título).</li>
+	<li>Pegue el título seleccionado entr los %22's, escribiendo un + entre cada palabra: http://scholar.google.com/scholar?q=%22COPIE+TITULO+AQUI%22&hl=en&lr=&btnG=Search</li>
+	<li>Añada la frase BUSCAR EN GS al final de la referencia en el artículo. </li>
+	<li>Convierta la frase en un hipervínculo (en Word: seleccionar el texto e ir a Insertar Hipervínculo).</li>
+	</ol>
+	<h4>C. Enabling Readers to Search for References with a DOI</h4>
+	<ol>
+	<li>While the submission is still in Word, copy a batch of references into CrossRef Text Query http://www.crossref.org/freeTextQuery/</li>
+	<li>Paste each DOI that the Query provides in the following URL (between = and &): http://www.cmaj.ca/cgi/external_ref?access_num=PASTE DOI#HERE&link_type=DOI</li>
+	<li>Add the phrase CrossRef to the end of each citation in the submission's References list.</li>
+	<li>Turn that phrase into a hyperlink by highlighting the phrase and using Word's Insert Hyperlink tool and the appropriate URL prepared in #2.</li>
+	</ol>]]></message>
+	<message key="default.journalSettings.proofingInstructions"><![CDATA[La etapa "Pruebas" busca posibles errores en las galeradas, tanto gramaticales como de formato. En "Pruebas" pulse sobre "Ver Prueba" para revisar el fichero. </p>
+<h4>Erratas y Errores Gramaticales</h4>
+
+<p>Copie las palabras problemáticas en la caja de correcciones, con instrucciones de "CAMBIAR POR" para el editor, tal y como sigue... </p>
+
+<pre>1. CAMBIAR...
+digo (en la tercera línea)
+POR...
+Diego</pre>
+<br />
+<pre>2. CAMBIAR...
+Malinowsky
+POR...
+Malinowski</pre>
+<br />
+
+<h4>Errores de formato</h4>
+
+<p>Describa la posición y tipo de problema en la caja de correcciones después de escribir la palabra "FORMATO", tal y como sigue...</p>
+<br />
+<pre>3. FORMATO
+Los números en la Tabla 3 no están alineados. </pre>
+<br />
+<pre>4. FORMATO
+El tercer párrafo no está justificado.</pre>]]></message>
+	<message key="default.journalSettings.submissionFeeDescription">Se requiere el pago de una Tarifa de Envío de Artículo para contribuir a cubrir los costes del proceso de revisión.</message>
+	<message key="default.journalSettings.fastTrackFeeDescription">Con el pago de esta tarifa, se garantiza una revisión y una decisión sobre la publicación en un plazo de 4 semanas.</message>
+	<message key="default.journalSettings.publicationFeeDescription">En caso de que este artículo sea aceptado para publicación, se le solicitará el pago de una Tarifa de Publicación para cubrir los costes asociados.</message>
+	<message key="default.journalSettings.waiverPolicy">Si no ha podido obtener fondos para las Tarifas, puede solicitar una exención de pago.</message>
+	<message key="default.journalSettings.payPerViewFeeDescription">El pago de esta tarifa le permite ver, descargar e imprimir este artículo.</message>
+	<message key="default.journalSettings.membershipFeeDescription">El pago de esta tarifa supone la inclusión como miembro de esta asociación por el plazo de un año y le permitirá el acceso al contenido de la revista.</message>
+	<message key="default.journalSettings.donationFeeDescription">Las donaciones a la revista son bienvenidas y se utilizarán para el sostenimiento económico de las actividades propias del proceso de publicación.</message>
 </locale>

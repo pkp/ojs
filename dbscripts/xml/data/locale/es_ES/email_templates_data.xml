@@ -751,5 +751,34 @@ Gracias por completar la corrección de las pruebas de galeradas asociadas con e
 			<field name="description">Esta plantilla de correo proporciona a un/a lector/a registrado/a la oportunidad de enviar información sobre un artículo a alguien a quien le podría interesar. Está disponible a través de las Herramientas de Lectura y debe ser activado por el/la Gestor/a de la Revista en las Administración de Herramientas de Lectura.</field>
 		</row>
 
+		<row>
+			<field name="email_key">USER_VALIDATE</field>
+			<field name="subject">Activación de cuenta</field>
+			<field name="body">Estimada/o {$userFullName}
+
+Se ha recibido una solicitud de cuenta de usuario para la revista {$journalName} utilizando su dirección de correo. Si desea activar su cuenta en {$journalName}, pulse por favor sobre el vínculo siguiente:
+
+{$activateUrl}
+
+Muchas gracias por su interés.</field>
+			<field name="description"></field>
+		</row>
+		<row>
+			<field name="email_key">REVIEWER_REGISTER</field>
+			<field name="subject">Revisor para {$journalName}</field>
+			<field name="body">Estimado/a colega:
+
+A la vista de su trayectoria profesional, su nombre ha sido propuesto para figurar como revisor potencial en el sistema de gestión electrónica de artículos de la revista {$journalName}, sin que ello implique ningún compromiso por su parte y pudiendo dejar de formar parte de esta lista cuando lo desee.
+
+En caso de estar conforme con actuar como revisor para la revista, podrá recibir solicitudes de revisión de artículos, y aceptar o rechazar dichas solicitudes en su momento. 
+
+A continuación le enviamos un nombre de usuario y contraseña con los que podrá acceder al sistema de gestión de envíos de la revista.
+
+Usuario: {$username}
+contraseña: {$password}
+
+Muchas gracias por su atención y por su colaboración en {$journalName}</field>
+			<field name="description">Este email se envía a los nuevos revisores para darles la bienvenida al sistema y proporcionarles sus datos de acceso.</field>
+		</row>
 	</table>
 </data>

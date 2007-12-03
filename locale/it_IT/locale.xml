@@ -145,7 +145,7 @@
 	<message key="common.options">Opzioni</message>
 	<message key="common.plugin">Plugin</message>
 	<message key="common.default">Default</message>
-	<message key="common.addSelf">Aggiungi personalmente</message>
+	<message key="common.addSelf">Prendi in gestione</message>
 	<message key="common.alphaList">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</message>
 
 	<!-- Common Form Messages -->
@@ -1961,7 +1961,6 @@ Attivo &#x00E8; il numero di quante revisioni si stanno considerando o stanno an
 	<!-- Search -->
 	<message key="search.browseAuthorIndex">Scorri l'indice degli autori</message>
 	<message key="search.searchFor">Cerca articoli per</message>
-	<message key="search.inField">In</message>
 	<message key="search.allFields">Tutti</message>
 	<message key="search.author">Autori</message>
 	<message key="search.title">Titoli</message>
@@ -2061,8 +2060,6 @@ Attivo &#x00E8; il numero di quante revisioni si stanno considerando o stanno an
 	<message key="about.peerReviewProcess">Il processo di peer review </message>
 	<message key="about.publicationFrequency">Frequenza di pubblicazione</message>
 	<message key="about.openAccessPolicy">Open Access</message>
-	<message key="about.delayedOpenAccessPolicy">Delayed Open Access</message>
-	<message key="about.authorSelfArchivePolicy">Self-Archiving dell'autore</message>
 	<message key="about.delayedOpenAccess">Delayed Open Access</message>
 	<message key="about.delayedOpenAccessDescription1">I contenuti di questa rivista saranno disponibili in un formato open access</message>
 	<message key="about.delayedOpenAccessDescription2">mese(i) dopo la pubblicazione di un fascicolo.</message>
@@ -2845,5 +2842,28 @@ Authors who publish with this journal agree to the following terms:
 	<message key="default.journalSettings.payPerViewFeeDescription">Il pagamento di questa quota ti permetterà di vedere, scaricare, e stampare questo articolo.</message>
 	<message key="default.journalSettings.membershipFeeDescription">Il pagamento di questa quota ti iscriverà come membro a questa associazione per un anno e ti permetterà l'accesso libero a questa rivista.</message>
 	<message key="default.journalSettings.donationFeeDescription">Donazioni di qualsiasi somma a questa rivista sono bene accette e fornisconi mezzi ai curatori per continuare a permettere alla rivista la più alta qualità per i suoi lettori.</message>
+	<message key="manager.setup.competingInterests">Interessi concorrenziali</message>
+	<message key="manager.setup.competingInterests.description"><![CDATA[Le riviste biomediche solitamente necessitano che gli autori e i revisori dichiarino se hanno qualche interesse concorrenziale riguardo alla loro rivista (vedi <a href="http://journals.plos.org/plosclinicaltrials/competing.php" target="_new">PLoS Policy</a>).]]></message>
+	<message key="manager.setup.competingInterests.requireAuthors">Richiedi che gli autori che sottomettono preparino una dichiarazione si interessi concorrenziali (CI) con la loro submission.</message>
+	<message key="manager.setup.competingInterests.guidelines">Linee guida per presentare una dichiarazione di interesse concorrenziale</message>
+	<message key="manager.setup.useLayoutEditors">Un curatore di layout sarà assegnato per preparare i file HTML, PDF, ecc., per la pubblicazione elettronica.</message>
+	<message key="reviewer.competingInterests">Interessi concorrenziali</message>
+	<message key="manager.setup.subscriptionDescription">Questo richiede l'assegnazione di un amministratore delle sottoscrizioni che abbia accesso al modulo do sottoscrizione, che include opzioni di accesso aperto, autoarchiviazione, e notifiche email.</message>
+	<message key="editor.issues.resetIssueOrder"><![CDATA[Questa rivista utilizza l'ordinamento del fascicolo personalizzato. <a href="{$url}" class="action">Resetta il default</a>]]></message>
+	<message key="reviewer.article.enterCompetingInterests"><![CDATA[Dichiara se o meno hai interessi concorrenziali riguardo a questa ricerca (vedi 
+<a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">CI&nbsp;Policy</a>).]]></message>
+	<message key="author.competingInterests"><![CDATA[Interessi&nbsp;concorrenziali <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">CI&nbsp;Policy</a>]]></message>
+	<message key="manager.setup.competingInterests.requireReviewers">Richiede ai revisori di allegare una dichiaraazione CI ad ogni peer review che invieranno.</message>
+	<message key="manager.sections.hideAbout">Ometti questa sezione dall'Info.</message>
+	<message key="manager.groups.enableBoard.description"><![CDATA[Sotto <a href="{$aboutEditorialTeamUrl}">Persone</a> in Info:]]></message>
+	<message key="manager.groups.context.editorialTeam">Per far apparire il titolo sotto Redazione nella sezione Persone dell'Info (es. Curatore)</message>
+	<message key="manager.subscriptionTypes.form.public">Questo tipo di sottoscrizione non sarà visible pubblicamente (es., sotto Sottoscrizioni in Info).</message>
+	<message key="author.submit.journalSectionDescription"><![CDATA[Seleziona la sezione appropriata per questa submission (Vedi Policy delle sezioni in <a href="{$aboutUrl}" target="_new">Info</a> ).]]></message>
+	<message key="submission.layout.galleyLanguageRequired">E' neccessaria una lingua della bozza.</message>
+	<message key="payment.loginRequired.forArticle">E' neccesaria la sottoscrizione  o il pay-per-view per accedere all'articolo. Per verificare la sottoscrizione o pagare la quota, effettua il log in alla rivista.</message>
+	<message key="payment.type.payPerView">Quota della pay-per-view dell'articolo</message>
+	<message key="manager.payment.timestamp">Marcatura oraria</message>
+	<message key="manager.groups.context.people">Fai apparire il titolo come categoria a sè sotto Persone (es. Redazione)</message>
+	<message key="submission.layout.galleyLocaleRequired">E' necessaria una lingua della bozza.</message>
 </locale>
 

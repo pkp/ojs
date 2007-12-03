@@ -791,5 +791,33 @@ Pour renouveller votre abonnement, aller au site Web de la revue. Vous pouvez y 
 Il me fera plaisir de répondre à toute question que vous pourriez avoir.{$subscriptionContactSignature}</field>
 			<field name="description">Ce courriel avise un abonné que son abonnement est expiré. Il donne l'adresse URL de la revue ainsi que les instructions pour y accéder.</field>
 		</row>
+		<row>
+			<field name="email_key">USER_VALIDATE</field>
+			<field name="subject">Validez votre compte</field>
+			<field name="body">{$userFullName}
+
+Vous avez créé un compte avec {$journalName}, mais avant de pouvoir commence à l'utiliser, vous devez valider votre compte de courriel. Pour le faire, suivez simplement le lien ci-dessous :
+
+
+{$activateUrl}
+
+Merci,
+{$principalContactSignature}</field>
+			<field name="description">Ce courriel est envoyé à un utilisateur nouvellement inscrit, afin de l'accueillir dans le système et lui offrir un exemplaire de son nom et mot de passe d'utilisateur.</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEWER_REGISTER</field>
+			<field name="subject">Inscription en tant que réviseur de {$journalName}</field>
+			<field name="body">En considération de vos compétences d'expert, nous avons pris l'initiative d'inscrire votre nom dans la base de donnée des réviseurs de {$journalName}. Cela ne vous engage d'aucune façon, mais nous permet simplement de solliciter vos services pour la révision possible de soumissions. Si vous êtes invité à procéder à une révision, vous recevrez le titre et le résumé de la thèse en question, et serez toujours libre d'accepter ou de refuser une telle invitation. À tout moment, il vous est également possible de demander à ce que votre nom soit retiré de la liste des réviseurs.
+
+Nous vous acheminons un nom et un mot de passe d'utilisateur, car tous deux sont requis dans vos échanges avec la revue, par l'intermédiaire de ce site Web. Vous pourriez souhaiter, par exemple, effectuer la mise à jour de votre profil, y compris vos préférences révisionnelles.
+
+Nom d'utilisateur : {$username}
+Mot de passe : {$password}
+
+Merci,
+{$principalContactSignature}</field>
+			<field name="description">Ce courriel est envoyé à un réviseur nouvellement inscrit, afin de l'accueillir dans le système et lui offrir un exemplaire de son nom et mot de passe d'utilisateur.</field>
+		</row>
 	</table>
 </data>

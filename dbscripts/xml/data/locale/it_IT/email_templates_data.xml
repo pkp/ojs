@@ -746,5 +746,32 @@ Per qualsiasi domanda e ulteriore informazione, non esiti a contattarmi.
 			<field name="description">Questa email informa un abbonato che il suo abbonamento a  &#x00E8; scaduto. Fornisce la URL della rivista e le istruzioni per l'accesso.</field>
 		</row>
 
+		<row>
+			<field name="email_key">USER_VALIDATE</field>
+			<field name="subject">Convalida il tuo account</field>
+			<field name="body">{$userFullName}
+
+Hai creato un account in {$journalName}, ma prima che tu possa usarlo, devi caonvalidare la email del tuo account. Per farlo, segui semplicemente il link qui sotto:
+
+{$activateUrl}
+
+Grazie,
+{$principalContactSignature}</field>
+			<field name="description">Questa email viene spedita a un nuovo utente registrato come benvenuto nel sistema e gli fornisce una nota con il suo nome utente e password.</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEWER_REGISTER</field>
+			<field name="subject">Registrazione come revisore in {$journalName}</field>
+			<field name="body">Alla luce della tua esperienza, ci siamo presi la libertà di registrare il tuo nome nella banca dati dei revisori per {$journalName}. Questo non implica nessun tipo di impegno da parte tua, ma ci permette semplicemente di contattarti per revisionare una submission se possibile. Nell'essere invitato alla revisione, avrai l'opportunità di vedere il titolo e l'abstract dell'articolo in questione, e sarai sempre nella posizione di accettare o rifiutare l'invito. Puoi anche chiedere in qualsiasi momento di far rimuovere il tuo nome dall'elenco dei revisori.
+
+Ti stiamo fornendo lil nome utente e la password, che vengono usate per tutte le interazioni con la rivista attraverso il suo sito web. Puoi volere, per esempio, aggiornare il tuo profilo, inclusi i tuoi interessi di revisione.  
+
+Nome utente: {$username}
+Password: {$password}
+
+Grazie,
+{$principalContactSignature}</field>
+			<field name="description">Questa email viene spedita a un nuovo revisore registrato come benvenuto nel sistema e gli fornsice una nota con nome utente e password</field>
+		</row>
 	</table>
 </data>

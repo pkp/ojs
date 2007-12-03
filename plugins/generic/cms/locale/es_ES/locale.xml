@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.generic.cms.displayName">Complemento CMS</message>
+	<message key="plugins.generic.cms.description">Este Complemento permite la gestión de contenido estático (Static Content Management o SCM).</message>
+
+	<message key="plugins.generic.cms.toc">Tabla de Contenidos</message>
+
+	<message key="plugins.generic.cms.requirement.layoutmanager"><![CDATA[<strong>El Complemento Gestor de Presentación(Layout Manager) debe estar instalado y activado para poder usar este Complemento. </strong>]]></message>	
+	<message key="plugins.generic.cms.requirement.tinymce"><![CDATA[<strong>El Complemento TinyMCE debe estar instalado y activado para poder añadir o editar contenido.</strong>]]></message>
+
+	<message key="manager.plugins.content">Editar/Añadir Contenido</message>
+
+	<message key="plugins.generic.cms.form.introduction">Este Complemento CMS permite a los gestores de revista añadir contenido estático. El contenido se estructura en nuevas páginas usando los niveles de encabezado 1, 2 y 3, mientras que los niveles a partir del 4 no suponen una nueva página.  Cada encabezado se convierte en un elemento de menú de la Tabla de Contenidos (en la barra lateral). Para modificar una página, selecciónela en la Tabla de Contenidos, edítela, y pulse el botón "Grabar".  Para añadir una nueva página, añada un nuevo encabezado y contenido bajo la página actual.  El nuevo contenido aparecerá bajo la página actual.</message>
+	
+	<message key="plugins.generic.cms.error.muststartwithheader"><![CDATA[Toda página debe comenzar con etiquetas de encabezado (<h1>, <h2>, <h3>)]]></message>
+	<message key="plugins.generic.cms.error.musthavecontent">Debe haber algún contenido detrás de cada encabezado. Por favor, compruebe que no hay dos encabezados seguidos sin contenido entre ellos.</message>
+	<message key="plugins.generic.cms.error.headingcannotbeempty">Todo encabezado debe contener al menos un carácter no vacío entre las etiquetas.</message>		
+</locale>

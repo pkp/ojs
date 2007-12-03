@@ -16,5 +16,11 @@
 <locale name="it_IT" full_name="Italiano">
 	<message key="plugins.generic.webfeed.displayName">Feed Plugin</message>
 	<message key="plugins.generic.webfeed.description">Questo plugin produce dei feed RSS/Atom per il numero corrente.</message>
+	<message key="plugins.generic.webfeed.settings">Impostazioni</message>
+	<message key="plugins.generic.webfeed.settings.currentIssue">Mostra gli articoli nel fascicolo corrente pubblicato.</message>
+	<message key="plugins.generic.webfeed.settings.recentArticles">articoli pubblicati più recenti.</message>
+	<message key="plugins.generic.webfeed.settings.recentItemsRequired">Per favore inserisci un intero positivo per gli articoli recenti pubblicati</message>
+	<message key="plugins.generic.webfeed.settings.issue">Mostra i feed link su web solo sulle pagine dell'articolo.</message>
+	<message key="plugins.generic.webfeed.settings.all">Mostra i feed link su web su tutte le pagine dell'articolo.</message>
 </locale>
 

@@ -13,47 +13,46 @@
   -->
  
 <locale name="fr_CA" full_name="Français (Canada)">
-	<message key="plugins.importexport.users.displayName">Plugiciel XML pour usagers</message>
-	<message key="plugins.importexport.users.description">Importer and exporter les usagers</message>
+	<message key="plugins.importexport.users.displayName">Plugiciel XML pour utilisateurs</message>
+	<message key="plugins.importexport.users.description">Importer et exporter des utilisateurs</message>
 
-	<message key="plugins.importexport.users.cliUsage"><![CDATA[Utilisation : {$scriptName} {$pluginName} [command] ...
-Commands:
+	<message key="plugins.importexport.users.cliUsage">Utilisation : {$scriptName} {$pluginName} [command] ...
+Commandes :
 	importer [xmlFileName] [journal_path] [optional flags]
 	exporter [xmlFileName] [journal_path]
 	exporter [xmlFileName] [journal_path] [role_path1] [role_path2] ...
 
-Optional flags:
-	continue_on_error: Si cette fonction a été choisie, continuer à importer des usagers même si une erreur survient
+Balises optionnelles :
+	continue_on_error: Si cette fonction est spécifiée, continuer à importer des utilisateurs même si une erreur survient
 
-	send_notify: Si cette fonction a été choisie, envoyer des courriels contenant leurs noms et mots de passe au usagers importés
+	send_notify: Si cette fonction est spécifiée, envoyer des courriels d'avis contenant les noms d'utilisateurs et les mots de passe aux utilisateurs importés
+Exemples :
+	Importer les utilisateurs dans myJournal à partir de myImportFile.xml, continuant même s'il y a erreur :
+	{$scriptName} {$pluginName} importer myImportFile.xml myJournal continue_on_error
 
-Examples:
-	Importer usagers dans myJournal à partir de myImportFile.xml, continuant même s'il y a erreur :
-	{$scriptName} {$pluginName} import myImportFile.xml myJournal continue_on_error
+	Exporter tous les utilisateurs à partir de myJournal :
+	{$scriptName} {$pluginName} exporter myExportFile.xml myJournal
 
-	Exporter tous les usagers à partir de myJournal:
-	{$scriptName} {$pluginName} export myExportFile.xml myJournal
+	Exporter tous les utilisateurs inscrits à titre de réviseurs, ainsi que leurs rôles de réviseur seulement :
+	{$scriptName} {$pluginName} exporter myExportFile.xml myJournal reviewer</message>
+	<message key="plugins.importexport.users.import.importUsers">Importer des utilisateurs</message>
+	<message key="plugins.importexport.users.import.instructions"><![CDATA[Sélectionner un fichier de données XML contenant des renseignements sur l’utilisateur à importer dans cette revue. Consulter l'aide pour les revues afin d’obtenir des renseignements concernant le format de ce fichier.<br /><br />Veuillez noter que si le fichier importé contient des noms d'utilisateurs ou des adresses courriel existant déjà dans le système, les données d’utilisateurs de ces utilisateurs ne seront pas importées, et tout nouveau rôle à créer sera assigné aux utilisateurs existants.]]></message>
+	<message key="plugins.importexport.users.import.failedToImportUser">Incapable d'importer l'utilisateur</message>
+	<message key="plugins.importexport.users.import.failedToImportRole">Incapable d'attribuer l'utilisateur à un rôle</message>
+	<message key="plugins.importexport.users.import.dataFile">Fichier de données de l'utilisateur</message>
+	<message key="plugins.importexport.users.import.sendNotify">Envoyer à chaque utilisateur importé un courriel d'avis contenant le nom et le mot de passe de l'utilisateur.</message>
+	<message key="plugins.importexport.users.import.continueOnError">Continuer à importer d'autres utilisateurs si un échec se produit.</message>
+	<message key="plugins.importexport.users.import.noFileError">Aucun fichier n'a été téléchargé!</message>
+	<message key="plugins.importexport.users.import.usersWereImported">Les utilisateurs suivants ont été importés avec succès dans le système</message>
+	<message key="plugins.importexport.users.import.errorsOccurred">Des erreurs sont se produites lors de l'importation</message>
+	<message key="plugins.importexport.users.import.confirmUsers">Confirmez que ces utilisateurs sont bien ceux que vous souhaitez importer dans le système</message>
+	<message key="plugins.importexport.users.unknownJournal">Un chemin d'accès de revue inconnu "{$journalPath}" a été spécifié.</message>
 
-	Exporter tous les usagers inscrits à titre d'évaluateurs, ainsi que leurs rôles d'évaluateur seulement :
-	{$scriptName} {$pluginName} export myExportFile.xml myJournal reviewer]]></message>
-	<message key="plugins.importexport.users.import.importUsers">Importer les usagers</message>
-	<message key="plugins.importexport.users.import.instructions"><![CDATA[Choisir un fichier de données XML contenant des informations sur les usagers pour l'importer dans cette revue. Consulter l'aide pour les revues pour en apprendre plus sur le format de ce fichier.<br /><br />Remarquez que si le fichier importé contient des noms d'usagers ou des adresses courriel qui existent déjà dans le système, les données pour les usagers ne seront pas importées et tout nouveau rôle à créer sera donné aux usagers actuels.]]></message>
-	<message key="plugins.importexport.users.import.failedToImportUser">Incapable d'importer l'usager</message>
-	<message key="plugins.importexport.users.import.failedToImportRole">Incapable d'attribuer l'usager à un rôle</message>
-	<message key="plugins.importexport.users.import.dataFile">Fichier de données de l'usager</message>
-	<message key="plugins.importexport.users.import.sendNotify">Envoyer à chaque usager importé un courriel de notification contenant le nom et le mot de passe de l'usager</message>
-	<message key="plugins.importexport.users.import.continueOnError">Continuer à importer d'autres usagers si un échec a lieu.</message>
-	<message key="plugins.importexport.users.import.noFileError">Aucun fichier n'a été téléchargé vers le serveur!</message>
-	<message key="plugins.importexport.users.import.usersWereImported">Les usagers suivants ont été importés avec succès dans le système</message>
-	<message key="plugins.importexport.users.import.errorsOccurred">Des erreurs sont survenues lors de l'importation</message>
-	<message key="plugins.importexport.users.import.confirmUsers">Confirmez que ceux-ci sont bien les usagers que vous aimeriez importer dans le système</message>
-	<message key="plugins.importexport.users.unknownJournal">Un chemin de revue inconnu</message>
-
-	<message key="plugins.importexport.users.export.exportUsers">Exporter les usagers</message>
+	<message key="plugins.importexport.users.export.exportUsers">Exporter des utilisateurs</message>
 	<message key="plugins.importexport.users.export.exportByRole">Exporter par rôle</message>
 	<message key="plugins.importexport.users.export.exportAllUsers">Tout exporter</message>
-	<message key="plugins.importexport.users.export.errorsOccurred">Des erreurs sont survenues lors de l'exportation</message>
-	<message key="plugins.importexport.users.export.couldNotWriteFile">Incapable d'écrire au fichier</message>
-	<message key="plugins.importexport.users.import.warning">Warning</message>
-	<message key="plugins.importexport.users.import.encryptionMismatch">Cannot use passwords hashed with {$importHash}; OJS is configured to use {$ojsHash}. If you continue, you will need to reset the imported users' passwords.</message>
+	<message key="plugins.importexport.users.export.errorsOccurred">Des erreurs sont se produites lors de l'exportation</message>
+	<message key="plugins.importexport.users.export.couldNotWriteFile">Incapable d'écrire au fichier "{$fileName}".</message>
+	<message key="plugins.importexport.users.import.warning">Avertissement</message>
+	<message key="plugins.importexport.users.import.encryptionMismatch">Ne peut utiliser les mots de passe hachés avec {$importHash}. L’OJS est configuré pour utiliser {$ojsHash}. Si vous continuez, vous devrez reconfigurer les mots de passe des utilisateurs importés.</message>
 </locale>

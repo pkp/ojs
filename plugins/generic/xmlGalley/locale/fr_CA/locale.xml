@@ -13,35 +13,35 @@
   -->
  
 <locale name="en_US" full_name="U.S. English">
-	<message key="plugins.generic.xmlGalley.displayName">Plugiciel d'épreuve XML</message>
-	<message key="plugins.generic.xmlGalley.description">Ce plugiciel utilise XSLT pour produire des épreuves XHTML à partir d'un article XML.</message>
+	<message key="plugins.generic.xmlGalley.displayName">Plugiciel d'épreuve en placard XML</message>
+	<message key="plugins.generic.xmlGalley.description">Ce plugiciel génère des épreuves en placard XHTML à partir d'un article XML utilisant XSLT.</message>
 
-	<message key="plugins.generic.xmlGalley.manager.settings">Réglages</message>
+	<message key="plugins.generic.xmlGalley.manager.settings">Paramètres</message>
 
 	<!-- XML Article Galleys Settings Management -->
-	<message key="plugins.generic.xmlGalley.settings.description"><![CDATA[<p>Ce plugiciel permet d'afficher automatiquement les épreuves d'articles à partir d'un fichier source XML en transformant une feuille de style XSL particulière.</p>]]></message>
+	<message key="plugins.generic.xmlGalley.settings.description"><![CDATA[<p>Ce plugiciel permet de traduire automatiquement les épreuves d'articles en placard, à partir d'un fichier source XML téléchargé, en utilisant une transformation de feuille de style XSL spécifique.</p>]]></message>
 	<message key="plugins.generic.xmlGalley.settings.renderer">Méthode de rendu XSLT</message>
 	<message key="plugins.generic.xmlGalley.settings.PHP5">PHP 5.0.0+ avec fonctions XSL (libxslt)</message>
 	<message key="plugins.generic.xmlGalley.settings.PHP4">PHP 4.0.3+ avec fonctions XSLT (Sablotron)</message>
 	<message key="plugins.generic.xmlGalley.settings.notAvailable">Non disponible</message>
 
-	<message key="plugins.generic.xmlGalley.settings.externalXSLT">Moteur de rendu XSLT avec ligne de commande externe (par ex. Xalan)</message>
-	<message key="plugins.generic.xmlGalley.settings.externalXSLTDescription"><![CDATA[Entrer le chemin complet jusqu'à l'outil de rendu XSLT avec tout argument requis.  Utiliser %xsl pour substituer l'emplacement de la feuille de style XSL, et %xml pour substituer l'emplacement du fichier source XML -- par ex.: <br/><pre>/usr/bin/java -jar ~/java/xalan.jar -HTML -IN %xml -XSL %xsl</pre>]]></message>
+	<message key="plugins.generic.xmlGalley.settings.externalXSLT">Moteur de rendu XSLT avec ligne de commande externe (p. ex. : Xalan)</message>
+	<message key="plugins.generic.xmlGalley.settings.externalXSLTDescription"><![CDATA[Entrez le chemin d’accès complet jusqu'à l'outil de rendu XSLT avec tout argument requis.  Utilisez    %xsl pour substituer l'emplacement du fichier de la feuille de style XSL, et %xml pour substituer l'emplacement du fichier source XML -- p. ex. : <br/><pre>/usr/bin/java -jar ~/java/xalan.jar -HTML -IN %xml -XSL %xsl</pre>]]></message>
 	<message key="plugins.generic.xmlGalley.settings.externalXSLTTest">Test XSLT</message>
-	<message key="plugins.generic.xmlGalley.settings.externalXSLTSuccess">Test XSLT externe réussi.</message>
-	<message key="plugins.generic.xmlGalley.settings.externalXSLTFailure">Test XSLT externe échoué.</message>
+	<message key="plugins.generic.xmlGalley.settings.externalXSLTSuccess">Le test externe XSLT a réussi.</message>
+	<message key="plugins.generic.xmlGalley.settings.externalXSLTFailure">Le test externe XSLT a échoué.</message>
 	<message key="plugins.generic.xmlGalley.settings.externalXSLTRequired">Il faut spécifier un processeur externe avec ligne de commande XSLT.</message>
 
 	<message key="plugins.generic.xmlGalley.settings.stylesheet">Feuille de style XSL</message>
 	<message key="plugins.generic.xmlGalley.settings.xslNLM"><![CDATA[<a href="http://dtd.nlm.nih.gov/publishing/">Définition de type de document NLM pour l'édition de revues</a> &rarr; XHTML]]></message>
 
-	<message key="plugins.generic.xmlGalley.settings.xslFOP">Afficher des épreuves PDF au moyen de XSL-FO (par ex. FOP)</message>
-	<message key="plugins.generic.xmlGalley.settings.xslFOPDescription"><![CDATA[Entrer le chemin complet jusqu'au processeur FO, avec tout argument requis.  Utiliser %fo pour substituer l'emplacement du fichier XSL-FO, et %pdf pour substituer l'emplacement du fichier PDF, c'est-à-dire <br/><pre>/usr/sbin/fop -fo %fo -pdf %pdf</pre>]]></message>
+	<message key="plugins.generic.xmlGalley.settings.xslFOP">Activez le rendu des épreuves en placard PDF au moyen de XSL-FO (p. ex. : FOP)</message>
+	<message key="plugins.generic.xmlGalley.settings.xslFOPDescription"><![CDATA[Entrez le chemin d’accès complet au processeur FO, avec tout argument requis.  Utilisez %fo pour substituer l'emplacement du fichier XSL-FO, et      %pdf pour substituer l'emplacement du fichier PDF, par ex. : <br/><pre>/usr/sbin/fop -fo %fo -pdf %pdf</pre>]]></message>
 	<message key="plugins.generic.xmlGalley.settings.xslFOPRequired">Il faut spécifier un processeur externe avec ligne de commande FO.</message>
 
 	<message key="plugins.generic.xmlGalley.settings.customXSL">Feuille de style XSL personnalisée</message>
-	<message key="plugins.generic.xmlGalley.settings.customXSLRequired">Il faut spécifier une feuille de style XSL personnalisée.</message>
-	<message key="plugins.generic.xmlGalley.settings.customXSLInvalid">Le fichier XSL téléchargé n'était pas valide. Veuillez vérifier le fichier et essayez à nouveau.</message>
+	<message key="plugins.generic.xmlGalley.settings.customXSLRequired">Il faut spécifier un fichier de feuille de style XSL personnalisée.</message>
+	<message key="plugins.generic.xmlGalley.settings.customXSLInvalid">Le fichier XSL téléchargé n'était pas valide. Veuillez vérifier le fichier et essayer de nouveau.</message>
 
 </locale>
 
