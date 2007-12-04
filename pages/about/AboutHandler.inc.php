@@ -384,6 +384,7 @@ class AboutHandler extends Handler {
 			$templateMgr->assign('membershipFeeName', $membershipFeeName);
 			$templateMgr->assign('membershipFeeDescription', $membershipFeeDescription);
 			$templateMgr->display('about/memberships.tpl');
+			return;
 		}		
 		Request::redirect(null, 'about');
 	}
