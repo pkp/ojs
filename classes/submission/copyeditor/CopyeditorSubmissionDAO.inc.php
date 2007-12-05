@@ -352,9 +352,7 @@ class CopyeditorSubmissionDAO extends DAO {
 			WHERE
 				' . (isset($journalId)?'a.journal_id = ? AND':'') . '
 				c.copyeditor_id = ? AND
-				c.date_notified IS NOT NULL AND
-				c.date_final_completed ';
-		$sql .= $active ? 'IS NULL' : 'IS NOT NULL';
+			(' . ($active?'':'NOT ') . ' ((c.date_notified IS NOT NULL AND c.date_completed IS NULL) OR (c.date_final_notified IS NOT NULL AND c.date_final_completed IS NULL))) ';
 
 		$result = &$this->retrieveRange(
 			$sql . ' ' . $searchSql . ' ORDER BY a.article_id ASC',
