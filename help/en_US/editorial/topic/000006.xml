@@ -14,6 +14,7 @@
 
 <topic id="editorial/topic/000006" locale="en_US" title="Review" toc="editorial/toc/000004" subtoc="editorial/toc/000006" key="editorial.sectionEditorsRole.review">
 	<section>
-		<![CDATA[<p>The Section Editor conducts the peer review for the submission, although some Sections of the journal may not use peer review (e.g., Book Reviews), and the Section Editor enters an editorial decision for the submission on the Review page.</p>]]>	
-	</section>
+		<![CDATA[<p>The article Review page lists all necessary elements for the Section Editor to organize and complete the review process. The Section Editor assigns a Review Version of the article, assigns one or more Reviewers to the article, and  enters an Editorial Decision. Depending on the editorial decision, the article will be moved from the Review queue to either the Editing queue or the Archives, or it will be resubmitted for review.</p><p>For more detailed information on selecting a Review Version, see {help_topic key="editorial.sectionEditorsRole.review.reviewVersion" text="Review Version"}.</p><p>For more detailed information on the Peer Review Process, see {help_topic key="editorial.sectionEditorsRole.review.peerReview" text="Peer Review"}.</p><p>For more detailed information on committing an Editor Decision, see {help_topic key="editorial.sectionEditorsRole.review.editorDecision" text="Editor Decision"}.</p>]]>
+</section>
+
 </topic>

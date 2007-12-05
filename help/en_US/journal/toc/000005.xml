@@ -13,8 +13,8 @@
   -->
 
 <toc id="journal/toc/000005" locale="en_US" title="Reading Tools" parent_topic="journal/topic/000009">
-	<topic id="journal/topic/000026" title="Settings" />
-	<topic id="journal/topic/000027" title="Versions" />
+	<topic id="journal/topic/000026" title="Reading Tool Options" />
+	<topic id="journal/topic/000027" title="Related Item Sets" />
 	<topic id="journal/topic/000028" title="Contexts" />
 
 	<breadcrumb url="journal/topic/000000" title="Journal Management" />

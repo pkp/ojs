@@ -32,12 +32,12 @@
 	<section title="1. How do I start a journal with OJS?">
 		<![CDATA[
 <ol type="a">
-	<li><a href="http://pkp.sfu.ca/ojs/ojs_download.html" target="_blank">Download</a> OJS and install the software, following its installation script, on a web server that meets the software's requirements.</li>
+	<li><a href="http://pkp.sfu.ca/ojs_download" target="_blank">Download</a> OJS and install the software, following its installation script, on a web server that meets the software's requirements.</li>
 	<li>Use the administration username and password generated in the installation of OJS to log in.</li>
 	<li>Create a new journal under Hosted Journals.</li>
 	<li>The Site Administrator will automatically be enrolled as a Journal Manager for the new journal, but if necessary, create a new user (or users) in the role of Journal Manager.</li>
 	<li>The Journal Manager then goes into Setup and works through the five steps (although not necessarily all at one time), the result of which will be a web site ready to receive submissions, manage the editorial process and publish the journal online.</li>
-	<li>Consult <a href="http://pkp.sfu.ca/ojs/OJSinanHour.pdf" target="_blank">OJS in an Hour </a> for more information on getting started with OJS.</li>
+	<li>Consult <a href="http://pkp.sfu.ca/files/OJSinanHour.pdf" target="_blank">OJS in an Hour </a> for more information on getting started with OJS.</li>
 </ol>
 		]]>
 	</section>
@@ -68,12 +68,12 @@
 	</section>
 	<section title="7. How can the journal present a record of the history of who served on its editorial team?">
 		<![CDATA[
-<p>The Journal Manager can enter this information by following the Editorial Team link in Journal Management. Alternately, the Journal Manager can create a "History of the Editorial Team" page as a new item in About the Journal (item 2.5 in Setup). On such a page, you can record the name, editorial title and years served for members of the editorial team.</p>
+<p>The Journal Manager can enter this information by following the Masthead link in Journal Management. Alternately, the Journal Manager can create a "History of the Editorial Team" page as a new item in About the Journal (item 2.5 in Setup). On such a page, you can record the name, editorial title and years served for members of the editorial team.</p>
 		]]>
 	</section>
 	<section title="8. How can I let readers sign up as reviewers for the journal?">
 		<![CDATA[
-<p>In Setup under Security and Access Settings (2.7), the Journal Manager can enable readers to sign up as Reviewers, as well as Readers and/or Authors. The Reviewers will then appear among those whom the Section Editor can select and invite to review submissions. In Setup 5.7, the Journal Manager can add a note to "For Readers" about the journal's interest in having readers serve as Reviewers for the journal. By the same token, the journal can encourage users to enroll as Readers for purposes of notification and to be able to identify how many regular readers there are.</p>
+<p>In Setup under Access and Security Settings (4.1), the Journal Manager can enable readers to sign up as Reviewers, as well as Readers and/or Authors. The Reviewers will then appear among those whom the Section Editor can select and invite to review submissions. In Setup 5.7, the Journal Manager can add a note to "For Readers" about the journal's interest in having readers serve as Reviewers for the journal. By the same token, the journal can encourage users to enroll as Readers for purposes of notification and to be able to identify how many regular readers there are.</p>
 		]]>
 	</section>
 	<section title="9. How can I find additional reviewers for a submission to the journal beyond the current list of available reviewers?">

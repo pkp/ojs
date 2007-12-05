@@ -13,7 +13,7 @@
   -->
 
 <toc id="journal/toc/000002" locale="en_US" title="Users" parent_topic="journal/topic/000002">
-	<topic id="journal/topic/000011" title="All Users" />
+	<topic id="journal/topic/000011" title="Users Enrolled in This Journal" />
 	<topic id="journal/topic/000012" title="Create New User" />
 	<topic id="journal/topic/000033" title="Merge Users" />
 

@@ -14,6 +14,6 @@
 
 <topic id="journal/topic/000030" locale="en_US" title="System Plugins" toc="journal/toc/000001" key="journal.managementPages.plugins">
 	<section>
-		<![CDATA[<p>The System Plugins page allows the Journal Manager to view a list of plugins installed in OJS and perform any management tasks made available by each plugin. For more information, refer to the documentation included with each plugin.</p>]]>
+		<![CDATA[<p>The System Plugins page allows the Journal Manager to view a list of plugins installed in OJS and perform any management tasks made available by each plugin. For more information, refer to the documentation included with each plugin, found within OJS' plugin directory (/path/to/install/plugins).</p>]]>
 	</section>
 </topic>

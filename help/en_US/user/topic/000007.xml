@@ -14,6 +14,20 @@
 
 <topic id="user/topic/000007" locale="en_US" title="User Home" toc="user/toc/000000" key="user.userHome">
 	<section>
-		<![CDATA[<p>The User Home appears in the navigation bar at the page, after the user has logged in. It lists all of the roles in which the user is currently enrolled (e.g., Reviewer, Author, Reader, etc.). It also includes the user's Account, which includes links to the other journals in which the user is registered in one or more roles. My Account also provides access to the user's Profile where contact and biographical information can be added or edited. The user is also able to create a new password as part of their account management in the User Home.</p>]]>	
+		<![CDATA[<p>Once a user has logged in, a User Home link appears in the top navigation bar. Clicking this link will display different information depending on whether the user is browsing a specific journal or the site as a whole.</p>]]>	
 	</section>
+
+<section title="Main Site-Level User Home Information">
+		<![CDATA[<p>If the user is logged in and is browsing the main site, the following information is displayed:</p>
+
+<p><i>My Journals</i>. The user will find a list of all journals for which they have registered, along with links to all available roles (Author, Editor, etc.) on a per-journal basis. If the user is also the Site Administrator, there will also be links to site-wide administration pages.</p><p><i>My Account</i>. The user will find links to perform account modifications, including registering with other journals; editing the user's profile; changing the user's password; and logging out.</p>]]>
+
+</section>
+
+<section title="Journal-Level User Home Information">
+		<![CDATA[<p>If the user is logged in and is browsing a specific journal, only information particular to that journal is displayed. Additionally, under <i>My Account</i> the link to register with other journals is replaced with a link to "Show My Journals" (taking the user back to the Main Site User Home page).]]>
+
+</section>
+
 </topic>
+

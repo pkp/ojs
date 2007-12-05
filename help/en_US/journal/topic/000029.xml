@@ -12,14 +12,14 @@
   * $Id$
   -->
 
-<topic id="journal/topic/000029" locale="en_US" title="Editorial Team" toc="journal/toc/000001" key="journal.managementPages.groups">
+<topic id="journal/topic/000029" locale="en_US" title="Masthead" toc="journal/toc/000001" key="journal.managementPages.groups">
 	<section>
-		<![CDATA[<p>There are two methods the Journal Manager can use to define the Editorial Team for the journal, which appears in the Editorial Team page under About the Journal: using assigned editorial roles, and creating custom editorial team titles.</p>]]>
+		<![CDATA[<p>There are two methods the Journal Manager can use to define the Masthead for the journal, which appears in the Editorial Team page under About the Journal: using assigned editorial roles, and creating custom editorial team titles.</p>]]>
 	</section>
 	<section title="Generating The Editorial Team Using Assigned Editorial Roles">
 		<![CDATA[<p>When this option is selected, the Editorial Team information in About the Journal will be automatically generated using the editorial roles defined in the Journal Manager's Roles pages. Users registered as Editors, Section Editors, Layout Editors, Copyeditors, and Proofreaders will be listed.</p>]]>
 	</section>
 	<section title="Generating The Editorial Team Using Custom Editorial Team Titles">
-		<![CDATA[<p>If a Journal Manager wishes to have more control over the information presented in the Editorial Team page under About the Journal, they can enable this option from the Editorial Team page (see Journal Management). When this option is enabled, the various Editorial Team Titles created under the Editorial Team page will be used to generate public Editorial Team information.</p>]]>
+		<![CDATA[<p>If a Journal Manager wishes to have more control over the information presented in the Editorial Team page under About the Journal, they can enable this option from the Masthead page (see Journal Management). When this option is enabled, the various titles created under the Masthead page will be used to generate public Editorial Team information as well as information about other people related to the journal, if desired.</p><p>To create a custom title, the Journal Manager clicks on Create Position Title, enters the Title name (ie., Editor in Chief, Section Editors, Editorial Board, etc.), and decides whether the title will appear under the Editorial Team in About the Journal, or just under People in About the Journal. The Journal Manager can arrange the display order of Editorial Titles on the main Masthead page by using the up and down arrows, and can edit and delete titles if necessary.</p><p>To view, add and remove users to a specific title, the Journal Manager clicks on the Membership link beside the title name. This will display the current user list for that particular title. The Journal Manager can arrange the display order of listed members, and can delete members if necessary. To add a new member, the Journal Manager clicks Add Member, and can enroll a user from the list of journal members.</p>]]>
 	</section>
 </topic>
