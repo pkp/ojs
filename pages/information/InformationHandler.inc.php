@@ -43,7 +43,7 @@ class InformationHandler extends Handler {
 			case 'librarians':
 				$content = $journal->getLocalizedSetting('librarianInformation');
 				$pageTitle = 'navigation.infoForLibrarians.long';
-				$pageCrumbTitle = 'navigation.infoForAuthors';
+				$pageCrumbTitle = 'navigation.infoForLibrarians';
 				break;
 			case 'competingInterestGuidelines':
 				$content = $journal->getLocalizedSetting('competingInterestGuidelines');
