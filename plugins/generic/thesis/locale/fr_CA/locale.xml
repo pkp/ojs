@@ -51,7 +51,7 @@
 	<message key="plugins.generic.thesis.manager.form.titleRequired">Un titre de thèse est requis.</message>
 	<message key="plugins.generic.thesis.manager.form.abstract">Résumé</message>
 	<message key="plugins.generic.thesis.manager.form.abstractRequired">Un résumé de thèse est requis.</message>
-	<message key="plugins.generic.thesis.manager.form.abstractInstructions"><![CDATA[Insérez des lignes en blanc pour séparer les paragraphes. Placez le texte entre <b></b>, <i></i>, and <u></u> les étiquettes seront en gras, en italiques et en souligné, respectivement (c.-à-d. : ce <i>word</i> sera en italiques.)]]></message>
+	<message key="plugins.generic.thesis.manager.form.abstractInstructions"><![CDATA[Insérez des lignes en blanc pour séparer les paragraphes. Placez le texte entre &lt;b&gt;&lt;/b&gt;, &lt;i&gt;&lt;/i&gt;, and &lt;u&gt;&lt;/u&gt; les étiquettes seront en gras, en italiques et en souligné, respectivement (c.-à-d. : ce &lt;i&gt;word&lt;/i&gt; sera en italiques.)]]></message>
 	<message key="plugins.generic.thesis.manager.form.url">URL</message>
 	<message key="plugins.generic.thesis.manager.form.urlInstructions">Si la thèse est publiée en ligne, incluez http://, ftp://, etc. au début (c.-à-d. : http://www.sfu.ca/path/to/thesis.pdf).</message>
 	<message key="plugins.generic.thesis.manager.form.studentFirstName">Prénom de l'étudiant</message>
@@ -106,7 +106,7 @@
 	<message key="plugins.generic.thesis.form.titleRequired">Un titre de thèse est requis.</message>
 	<message key="plugins.generic.thesis.form.abstract">Résumé</message>
 	<message key="plugins.generic.thesis.form.abstractRequired">Un résumé de thèse est requis.</message>
-	<message key="plugins.generic.thesis.form.abstractInstructions"><![CDATA[Insérez des lignes en blanc pour séparer les paragraphes. Placez le texte entre <b></b>, <i></i>, and <u></u> les étiquettes seront en gras, en italiques et en souligné, respectivement (c.-à-d. : ce <i>word</i> sera en italiques.)]]></message>
+	<message key="plugins.generic.thesis.form.abstractInstructions"><![CDATA[Insérez des lignes en blanc pour séparer les paragraphes. Placez le texte entre &lt;b&gt;&lt;/b&gt;, &lt;i&gt;&lt;/i&gt;, and &lt;u&gt;&lt;/u&gt; les étiquettes seront en gras, en italiques et en souligné, respectivement (c.-à-d. : ce &lt;i&gt;word&lt;/i&gt; sera en italiques.)]]></message>
 	<message key="plugins.generic.thesis.form.url">URL</message>
 	<message key="plugins.generic.thesis.form.urlInstructions">Si la thèse est affichée en ligne, incluez http://, ftp://, etc. au début (c.-à.-d. http://www.sfu.ca/path/to/thesis.pdf).</message>
 	<message key="plugins.generic.thesis.form.studentFirstName">Prénom de l'étudiant</message>
@@ -201,6 +201,6 @@
 	<message key="plugins.generic.thesis.studentFullNameLast">{$lastName}, {$firstName}{$space}{$middleName}</message>
 	<message key="plugins.generic.thesis.supervisorFullNameLast">{$lastName}, {$firstName}{$space}{$middleName}</message>
 	<message key="plugins.generic.thesis.supervisorFullName">{$firstName} {$middleName}{$space}{$lastName}</message>
-	<message key="plugins.generic.thesis.form.studentBioInstructions"><![CDATA[Insérez des lignes en blanc pour séparer les paragraphes. Placez le texte entre <b></b>, <i></i>, et <u></u> les balises en gras, italiques et en surligné respectivement (p. ex. : ce <<i>motd</i> sera en italiques.)]]></message>
+	<message key="plugins.generic.thesis.form.studentBioInstructions"><![CDATA[Insérez des lignes en blanc pour séparer les paragraphes. Placez le texte entre <b></b>, <i></i>, et <u></u> les balises en gras, italiques et en surligné respectivement (p. ex. : ce <i>motd</i> sera en italiques.)]]></message>
 	<message key="plugins.generic.thesis.form.languageInstructions"><![CDATA[Anglais=en; français=fr; espagnol=es. <a href="http://www.loc.gov/standards/iso639-2/langcodes.html" target="_blank">Codes additionnels</a>.]]></message>
 </locale>

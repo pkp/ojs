@@ -48,15 +48,6 @@
 	<message key="plugins.generic.translator.errors.EMAIL_ERROR_EXTRA_EMAIL.message">The email message "{$key}" is no longer used and can be removed.</message>
 	<message key="plugins.generic.translator.errors.EMAIL_ERROR_DIFFERING_PARAMS.message">The email message "{$key}" differs from the reference locale in its use of parameters. Please double-check that it contains all relevant parameters. The mismatching parameter(s) are:</message>
 
-	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_KEY.description"></message>
-	<message key="plugins.generic.translator.errors.LOCALE_ERROR_EXTRA_KEY.description"></message>
-	<message key="plugins.generic.translator.errors.LOCALE_ERROR_SUSPICIOUS_LENGTH.description"></message>
-	<message key="plugins.generic.translator.errors.LOCALE_ERROR_DIFFERING_PARAMS.description"></message>
-	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_FILE.description"></message>
-	<message key="plugins.generic.translator.errors.EMAIL_ERROR_MISSING_EMAIL.description"></message>
-	<message key="plugins.generic.translator.errors.EMAIL_ERROR_EXTRA_EMAIL.description"></message>
-	<message key="plugins.generic.translator.errors.EMAIL_ERROR_DIFFERING_PARAMS.description"></message>
-
 	<message key="plugins.generic.translator.locale">{$locale} Locale</message>
 	<message key="plugins.generic.translator.localeFiles">Locale Files</message>
 	<message key="plugins.generic.translator.miscFiles">Miscellaneous Files</message>

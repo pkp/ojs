@@ -48,15 +48,6 @@
 	<message key="plugins.generic.translator.errors.EMAIL_ERROR_EXTRA_EMAIL.message">El email "{$key}" no se utiliza y puede eliminarse.</message>
 	<message key="plugins.generic.translator.errors.EMAIL_ERROR_DIFFERING_PARAMS.message">El email "{$key}" utiliza parámetros de forma diferente a como lo hace el email de referencia. Compruebe que utiliza todos los parámetros relevantes. Los parámetros no coincidentes son:</message>
 
-	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_KEY.description"></message>
-	<message key="plugins.generic.translator.errors.LOCALE_ERROR_EXTRA_KEY.description"></message>
-	<message key="plugins.generic.translator.errors.LOCALE_ERROR_SUSPICIOUS_LENGTH.description"></message>
-	<message key="plugins.generic.translator.errors.LOCALE_ERROR_DIFFERING_PARAMS.description"></message>
-	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_FILE.description"></message>
-	<message key="plugins.generic.translator.errors.EMAIL_ERROR_MISSING_EMAIL.description"></message>
-	<message key="plugins.generic.translator.errors.EMAIL_ERROR_EXTRA_EMAIL.description"></message>
-	<message key="plugins.generic.translator.errors.EMAIL_ERROR_DIFFERING_PARAMS.description"></message>
-
 	<message key="plugins.generic.translator.locale">{$locale} Locale</message>
 	<message key="plugins.generic.translator.localeFiles">Locale Files</message>
 	<message key="plugins.generic.translator.miscFiles">Miscellaneous Files</message>
