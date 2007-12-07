@@ -188,12 +188,12 @@ class RTHandler extends ArticleHandler {
 
 		$citationPlugins =& PluginRegistry::loadCategory('citationFormats');
 		$templateMgr->assign('citationPlugins', $citationPlugins);
-		if ($citeType != '' && isset($citationPlugins[$citeType])) {
+		if (isset($citationPlugins[$citeType])) {
 			// A citation type has been selected; display citation.
 			$citationPlugin =& $citationPlugins[$citeType];
 		} else {
 			// No citation type has been selected; use a default.
-			if (isset($citationPlugins['abnt'])) $citationPlugin =& $citationPlugins['abnt'];
+			if (isset($citationPlugins['AbntCitationPlugin'])) $citationPlugin =& $citationPlugins['AbntCitationPlugin'];
 			else $citationPlugin = array_shift($citationPlugins);
 		}
 		$citationPlugin->cite($article, $issue);
