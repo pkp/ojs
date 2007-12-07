@@ -331,7 +331,7 @@ class SubscriptionDAO extends DAO {
 	 */
 	function &getSubscriptions($rangeInfo = null) {
 		$result = &$this->retrieveRange(
-			'SELECT * FROM subscriptions', false, $rangeInfo
+			'SELECT s.* FROM subscriptions s, users u WHERE s.user_id = u.user_id ORDER BY u.last_name ASC', false, $rangeInfo
 		);
 
 		$returner = &new DAOResultFactory($result, $this, '_returnSubscriptionFromRow');
@@ -346,7 +346,7 @@ class SubscriptionDAO extends DAO {
 	 */
 	function &getSubscriptionsByJournalId($journalId, $rangeInfo = null) {
 		$result = &$this->retrieveRange(
-			'SELECT * FROM subscriptions WHERE journal_id = ?', $journalId, $rangeInfo
+			'SELECT s.* FROM subscriptions s, users u WHERE s.user_id = u.user_id AND journal_id = ? ORDER BY u.last_name ASC', $journalId, $rangeInfo
 		);
 
 		$returner = &new DAOResultFactory($result, $this, '_returnSubscriptionFromRow');
@@ -364,11 +364,15 @@ class SubscriptionDAO extends DAO {
 		$dateEnd = explode('-', $dateEnd);
 
 		$result = &$this->retrieveRange(
-			'SELECT * FROM subscriptions
-				WHERE EXTRACT(YEAR FROM date_end) = ?
-				AND   EXTRACT(MONTH FROM date_end) = ?
-				AND   EXTRACT(DAY FROM date_end) = ?
-				AND   journal_id = ?',
+			'SELECT	s.*
+			FROM	subscriptions s,
+				users u
+			WHERE	u.user_id = s.user_id AND
+				EXTRACT(YEAR FROM date_end) = ? AND
+				EXTRACT(MONTH FROM date_end) = ? AND
+				EXTRACT(DAY FROM date_end) = ? AND
+				journal_id = ?
+			ORDER BY u.last_name ASC',
 			array(
 				$dateEnd[0],
 				$dateEnd[1],
