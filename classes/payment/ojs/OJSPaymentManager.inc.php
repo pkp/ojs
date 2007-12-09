@@ -47,11 +47,7 @@ class OJSPaymentManager extends PaymentManager {
 
 	 	switch ( $type ) {
 			case PAYMENT_TYPE_PAYPERVIEW:
-				if ( isset($_SERVER['HTTP_REFERER']) ) {	 		
-					$payment->setRequestUrl($_SERVER['HTTP_REFERER'] );
-				} else { 
-					$payment->setRequestUrl(Request::url(null, 'article', 'view', $assocId ) );
-				}	
+				$payment->setRequestUrl(Request::url(null, 'article', 'view', $assocId ) );
 				break;
 			case PAYMENT_TYPE_MEMBERSHIP:
 			case PAYMENT_TYPE_SUBSCRIPTION:
