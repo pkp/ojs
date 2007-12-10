@@ -7,12 +7,12 @@
   * Copyright (c) 2003-2007 Siavash Miri and Alec Smecher
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the fr_CA (Français (Canada)) locale.
   *
   * $Id$
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="fr_CA" full_name="Français (Canada)">
 	<message key="plugins.generic.openads.description">Le plugiciel OpenAds permet d'insérer dans l'OJS des ajouts dynamiques tirés du serveur publicitaire OpenAds.</message>
 	<message key="plugins.generic.openads.descriptionUnconfigured"><![CDATA[Le plugiciel OpenAds permet d'insérer dans l'OJS des ajouts dynamiques tirés du serveur publicitaire OpenAds.  <strong>Veuillez lire le fichier LISEZMOI dans plugiciel/générique/openAds pour de plus amples renseignements concernant l’activation de ce plugiciel.</strong>]]></message>
 	<message key="plugins.generic.openads">Plugiciel OpenAds</message>

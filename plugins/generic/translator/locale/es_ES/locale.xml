@@ -7,12 +7,12 @@
   * Copyright (c) 2003-2007 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the es_ES (Español (España)) locale.
   *
   * $Id$
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="es_ES" full_name="Español (España)">
 	<message key="plugins.generic.translator.name">Complemento de traducción</message>
 	<message key="plugins.generic.translator.description">Este complemento permite el mantenimiento on-line de los ficheros de traducción.</message>
 	<message key="plugins.generic.translator.longdescription">Esta zona permite al administrador global modificar la traducción de OJS. Afecta a todas las revistas alojadas. Si decide corregir o crear una traducción, por favor considere enviarla al proyecto Public Knowledge Project para distribuirla en nuevas versiones.</message>

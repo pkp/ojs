@@ -7,12 +7,12 @@
   * Copyright (c) 2003-2007 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the it_IT (Italiano) locale.
   *
   * $Id$
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="it_IT" full_name="Italiano">
 	<message key="plugins.generic.translator.name">Plugin per traduzioni</message>
 	<message key="plugins.generic.translator.description">Questo plugin permette la manutenzione via web dei file di traduzione.</message>
 	<message key="plugins.generic.translator.longdescription">Questo campo permette all'amministratore del sito di costruire, modificare e controllare le traduzioni di OJS. E' globale per tutta la installazione e non può essere usato per personalizzare una singola rivista OJS. Se si corregge o si crea una traduzione, si prega di pensare di sottoporla al Public Knowledge Project per distribuirla con le versioni future.</message>

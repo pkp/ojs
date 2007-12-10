@@ -7,12 +7,12 @@
   * Copyright (c) 2003-2007 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the it_IT (Italiano) locale.
   *
   * $Id$
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="it_IT" full_name="Italiano">
 	<message key="plugins.block.languageToggle.displayName">Modulo del menu per scegliere la lingua</message>
 	<message key="plugins.block.languageToggle.description">Questo plugin inserisce nel menu laterale un menu a tendina per scegliere la lingua.</message>
 </locale>

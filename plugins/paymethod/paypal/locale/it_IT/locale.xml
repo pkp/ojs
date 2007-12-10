@@ -7,11 +7,11 @@
   * Copyright (c) 2006-2007 Gunther Eysenbach, Juan Pablo Alperin, MJ Suhonos
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the it_IT (Italiano) locale.
   *
  -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="it_IT" full_name="Italiano">
 	<message key="plugins.paymethod.paypal.displayName">Pagamento Paypal</message>
 
 	<!-- PayPal Settings Form -->

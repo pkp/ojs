@@ -7,12 +7,12 @@
   * Copyright (c) 2003-2007 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the fr_CA (Français (Canada)) locale.
   *
   * $Id$
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="fr_CA" full_name="Français (Canada)">
 	<message key="plugins.generic.xmlGalley.displayName">Plugiciel d'épreuve en placard XML</message>
 	<message key="plugins.generic.xmlGalley.description">Ce plugiciel génère des épreuves en placard XHTML à partir d'un article XML utilisant XSLT.</message>
 

@@ -7,12 +7,12 @@
   * Copyright (c) 2003-2007 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Google Analytics plugin localization strings for the en_US (U.S. English) locale.
+  * Google Analytics plugin localization strings for the es_ES (Español (España)) locale.
   *
   * $Id$
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="es_ES" full_name="Español (España)">
 
 	<!-- Google Analytics -->
 	<message key="plugins.generic.googleAnalytics.displayName">Complemento para Google Analytics</message>

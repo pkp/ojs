@@ -7,11 +7,11 @@
   * Copyright (c) 2000-2007 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the it_IT (Italiano) locale.
   *
  -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="it_IT" full_name="Italiano">
 	<message key="plugins.paymethod.manual.displayName">Pagamento manuale</message>
 	<message key="plugins.paymethod.manual.description">L'amministratore registrerà manualmente la ricevuta del pagamento di un utente (esterno a questo software).</message>
 	<message key="plugins.paymethod.manual">Pagamento manuale</message>

@@ -7,12 +7,12 @@
   * Copyright (c) 2003-2007 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the fr_CA (Français (Canada)) locale.
   *
   * $Id$
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="fr_CA" full_name="Français (Canada)">
 	<message key="plugins.block.help.displayName">Bloc d'Aide</message>
 	<message key="plugins.block.help.description">Ce plugiciel offre un lien à de l'aide dans l'encadré latéral.</message>
 </locale>

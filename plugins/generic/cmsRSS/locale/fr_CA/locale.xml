@@ -7,11 +7,11 @@
   * Copyright (c) 2003-2006 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the fr_CA (Français (Canada)) locale.
   *
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="fr_CA" full_name="Français (Canada)">
 	<message key="plugins.generic.cmsrss.displayName">Plugiciel RSS du SGC</message>
 	<message key="plugins.generic.cmsrss.description">Ce plugiciel permet d'ajouter l'agrégation RSS aux pages SGC</message>
 

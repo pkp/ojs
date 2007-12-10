@@ -7,12 +7,12 @@
   * Copyright (c) 2003-2006 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the it_IT (Italiano) locale.
   *
   * $Id$
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="it_IT" full_name="Italiano">
 	<message key="plugins.generic.roundedcorners.displayName">Angoli smussati</message>
 	<message key="plugins.generic.roundedcorners.description">Questo plugin mette uno sfondo su ogni blocco del menu laterale e smussa i suoi angoli. Si possono cambiare i colori usati modificando il foglio di stile CSS che si trova nel plugin.</message>
 </locale>

@@ -7,12 +7,12 @@
   * Copyright (c) 2003-2007 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for this citation plugin in en_US.
+  * Localization strings for this citation plugin in it_IT.
   *
   * $Id$
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="it_IT" full_name="Italiano">
 	<message key="plugins.citationFormats.turabian.displayName">Plugin del formato di citazioni Turabian</message>
 	<message key="plugins.citationFormats.turabian.citationFormatName">Turabian</message>
 	<message key="plugins.citationFormats.turabian.description">Questo plugin implementa il formato di citazioni Turabian.</message>

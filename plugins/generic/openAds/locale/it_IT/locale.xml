@@ -7,12 +7,12 @@
   * Copyright (c) 2003-2007 Siavash Miri and Alec Smecher
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the it_IT (Italiano) locale.
   *
   * $Id$
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="it_IT" full_name="Italiano">
 	<message key="plugins.generic.openads.description">Il plugin OpenAds permette di inserire annunci dinamici dal server di annunci OpenAds in ojs.</message>
 	<message key="plugins.generic.openads.descriptionUnconfigured"><![CDATA[Il plugin OpenAds permette di inserire annunci dinamici dal server di annunci OpenAds in ojs.
 <strong>Si prega di leggere il file README in plugins/generic/openAds per informazioni su come abilitare questo plugin.</strong>]]></message>

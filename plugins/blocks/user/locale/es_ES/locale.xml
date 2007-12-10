@@ -7,12 +7,12 @@
   * Copyright (c) 2003-2007 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the es_ES (Español (España)) locale.
   *
   * $Id$
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="es_ES" full_name="Español (España)">
 	<message key="plugins.block.user.displayName">User Block</message>
 	<message key="plugins.block.user.description">Este Complemento proporciona una barra lateral con herramientas de cuenta de usuario (e.g. Acceder, Salir, perfil, etc).</message>
 	<message key="plugins.block.user.loggedInAs">Su identificación actual es...</message>

@@ -7,12 +7,12 @@
   * Copyright (c) 2003-2007 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the fr_CA (Français (Canada)) locale.
   *
   * $Id$
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="fr_CA" full_name="Français (Canada)">
 	<message key="plugins.generic.translator.name">Plugiciel de traduction</message>
 	<message key="plugins.generic.translator.description">Ce plugiciel permet l'entretien en ligne de fichiers de traduction.</message>
 	<message key="plugins.generic.translator.longdescription">Cette zone permet à l'Administrateur du site de créer, modifier et vérifier les traductions de l'OJS. Elle représente le site global et ne devrait pas être utilisée  pour personnaliser une revue à libre accès particulière. Si vous corrigez ou créez une traduction, veuillez la soumettre au Public Knowledge Project pour qu'elle puisse être distribuée dans des versions futures.</message>

@@ -7,12 +7,12 @@
   * Copyright (c) 2003-2007 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for this citation plugin in en_US.
+  * Localization strings for this citation plugin in fr_CA.
   *
   * $Id$
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="fr_CA" full_name="Français (Canada)">
 	<message key="plugins.citationFormats.refMan.displayName">Plugiciel de format de citations Gestionnaire de références</message>
 	<message key="plugins.citationFormats.refMan.citationFormatName">Gestionnaire de références - Format RIS (Windows seulement)</message>
 	<message key="plugins.citationFormats.refMan.description">Ce plugiciel implante le format de citations Gestionnaire de références</message>

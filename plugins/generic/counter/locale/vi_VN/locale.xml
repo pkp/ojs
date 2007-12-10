@@ -7,12 +7,12 @@
   * Copyright (c) 2003-2006 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the vi_VN (Tiếng Việt) locale.
   *
   * $Id$
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="vi_VN" full_name="Tiếng Việt">
 	<message key="plugins.generic.counter.description"><![CDATA[The COUNTER plugin allows recording and <a href="http://www.projectcounter.org/about.html" target="_new">COUNTER</a>-compliant reporting on site activity.]]></message>
 	<message key="plugins.generic.counter">COUNTER Statistics</message>
 

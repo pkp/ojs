@@ -7,12 +7,12 @@
   * Copyright (c) 2003-2006 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the vi_VN (Tiếng Việt) locale.
   *
   * $Id$
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="vi_VN" full_name="Tiếng Việt">
 	<message key="plugins.importexport.native.displayName">Articles &amp; Issues XML Plugin</message>
 	<message key="plugins.importexport.native.description">Import and export articles and issues</message>
 

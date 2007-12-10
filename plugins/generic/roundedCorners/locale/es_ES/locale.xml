@@ -7,12 +7,12 @@
   * Copyright (c) 2003-2006 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the es_ES (Español (España)) locale.
   *
   * $Id$
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="es_ES" full_name="Español (España)">
 	<message key="plugins.generic.roundedcorners.displayName">Esquinas Redondeadas</message>
 	<message key="plugins.generic.roundedcorners.description">Este Complemento coloca un fondo en cada bloque (barra) de herramientas lateral y redondea las esquinas. Se puede modificar los colores editando la hoja de estilo CSS del Complemento.</message>
 </locale>

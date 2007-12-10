@@ -7,12 +7,12 @@
   * Copyright (c) 2003-2007 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * phpMyVisites plugin localization strings for the en_US (U.S. English) locale.
+  * phpMyVisites plugin localization strings for the it_IT (Italiano) locale.
   *
   * $Id$
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="it_IT" full_name="Italiano">
 
 	<!-- phpMyVisites -->
 	<message key="plugins.generic.phpmv.displayName">phpMyVisites Plugin</message>

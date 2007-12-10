@@ -7,11 +7,11 @@
   * Copyright (c) 2000-2007 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the fr_CA (Français (Canada)) locale.
   *
  -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="fr_CA" full_name="Français (Canada)">
 	<message key="plugins.paymethod.manual.displayName">Paiement manuel des frais</message>
 	<message key="plugins.paymethod.manual.description">Le responsable inscrira manuellement la réception du paiement de l'utilisateur (en dehors de ce logiciel).</message>
 	<message key="plugins.paymethod.manual">Paiement manuel des frais</message>

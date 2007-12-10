@@ -7,12 +7,12 @@
   * Copyright (c) 2003-2006 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the en_US (U.S. English) locale.
+  * Localization strings for the vi_VN (Tiếng Việt) locale.
   *
   * $Id$
   -->
  
-<locale name="en_US" full_name="U.S. English">
+<locale name="vi_VN" full_name="Tiếng Việt">
 	<message key="plugins.gateways.resolver.displayName">Resolver Plugin</message>
 	<message key="plugins.gateways.resolver.description">This plugin resolves issues and articles based on citation information.</message>
 	<message key="plugins.gateways.resolver.errors.errorMessage">Unable to resolve a single entity using the specified citation information. Please ensure that the citation information is comprehensive and refers to an entity in this deployment of OJS.</message>
