@@ -796,7 +796,7 @@ Il me fera plaisir de répondre à toute question que vous pourriez avoir.{$subs
 			<field name="subject">Validez votre compte</field>
 			<field name="body">{$userFullName}
 
-Vous avez créé un compte avec {$journalName}, mais avant de pouvoir commence à l'utiliser, vous devez valider votre compte de courriel. Pour le faire, suivez simplement le lien ci-dessous :
+Vous avez créé un compte avec {$journalName}, mais avant de pouvoir commencer à l'utiliser, vous devez valider votre compte de courriel. Pour le faire, suivez simplement le lien ci-dessous :
 
 
 {$activateUrl}
