@@ -88,7 +88,7 @@
 	<message key="plugins.generic.thesis.submitButton">Enviar</message>
 	<message key="plugins.generic.thesis.view">Resumen</message>
 	<message key="plugins.generic.thesis.viewTitle">Resumen</message>
-	<message key="plugins.generic.thesis.noneExist">Ningún resumen de tesis se ha publicado.</message>
+	<message key="plugins.generic.thesis.noneExist">No hay resúmenes de tesis</message>
 	<message key="plugins.generic.thesis.abstract">Resumen</message>
 	<message key="plugins.generic.thesis.studentFullName">{$lastName}, {$firstName} {$middleName}</message>
 	<message key="plugins.generic.thesis.form.introduction">Al entregar el siguiente formulario, el supervisor de tesis será contactado por email para pedirle que confirme los detalles entregados.  Una vez que se haya recibido la confirmación, la tesis será publicada.</message>
@@ -174,7 +174,7 @@
 	<message key="plugins.generic.thesis.studentFullNameLast">{$lastName}, {$firstName}{$space}{$middleName}</message>
 	<message key="plugins.generic.thesis.supervisorFullNameLast">{$lastName}, {$firstName}{$space}{$middleName}</message>
 	<message key="plugins.generic.thesis.supervisorFullName">{$firstName} {$middleName}{$space}{$lastName}</message>
-	<message key="plugins.generic.thesis.form.degreeName">Nombre del título académico</message>
+	<message key="plugins.generic.thesis.form.degreeName">Nombre de la titulación</message>
 	<message key="plugins.generic.thesis.form.degreeNameRequired">Se necesita nombre del título académico</message>
 	<message key="plugins.generic.thesis.form.degreeNameInstructions">El nombre del título académico</message>
 	<message key="plugins.generic.thesis.form.comment">Comentarios</message>

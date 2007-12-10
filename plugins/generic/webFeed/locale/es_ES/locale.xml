@@ -19,4 +19,6 @@
 	<message key="plugins.generic.webfeed.settings.currentIssue">Mostrar elementos del último número publicado</message>
 	<message key="plugins.generic.webfeed.settings.recentArticles">Elementos más recientes</message>
 	<message key="plugins.generic.webfeed.settings.recentItemsRequired">Indique un valor (número natural) para el número de elementos publicados más recientes</message>
+	<message key="plugins.generic.webfeed.settings.issue">Mostrar agregadores sólo en las páginas interiores.</message>
+	<message key="plugins.generic.webfeed.settings.all">Mostrar agregadores en todas las páginas de la revista.</message>
 </locale>

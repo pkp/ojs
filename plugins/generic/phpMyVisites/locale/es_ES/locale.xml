@@ -22,7 +22,7 @@
 	<message key="plugins.generic.phpmv.manager.settings">Opciones</message>
 	<message key="plugins.generic.phpmv.manager.phpmvSettings">Opciones phpMyVisites</message>
 	<message key="plugins.generic.phpmv.manager.settings.description"><![CDATA[<p>Con este Complemento activado phpMyVisites puede recoger y analizar datos de utilización y tráfico de las páginas de la revista. Requiere la instalación previa de PhpMyVisites. Vea por favor la página <a href="http://www.phpmyvisites.us/" title="phpMyVisites site">phpMyVisites</a> para más información.]]></message>
-	<message key="plugins.generic.phpmv.manager.settings.phpmvUrl">Dirección Internet (Url) de phpMyVisites</message>
+	<message key="plugins.generic.phpmv.manager.settings.phpmvUrl">URL de phpMyVisites</message>
 	<message key="plugins.generic.phpmv.manager.settings.phpmvUrlInstructions">Dirección (url) de la instalación de phpMyVisites (i.e. http://myserver.net/phpmv).</message>
 	<message key="plugins.generic.phpmv.manager.settings.phpmvUrlRequired">Por favor introduzca una dirección url váida. Incluya http:// al comienzo.</message>
 	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteId">Número de Perfil del Sitio</message>

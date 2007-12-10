@@ -41,8 +41,8 @@
 	<message key="plugins.generic.counter.1a.platform">Plataforma</message>
 	<message key="plugins.generic.counter.1a.printIssn">ISSN Impreso</message>
 	<message key="plugins.generic.counter.1a.onlineIssn">ISSN En-linea</message>
-	<message key="plugins.generic.counter.1a.ytdTotal">Total del Año Corriente</message>
-	<message key="plugins.generic.counter.1a.ytdHtml">HTML del Año Corriente</message>
-	<message key="plugins.generic.counter.1a.ytdPdf">PDF del Año Corriente</message>
+	<message key="plugins.generic.counter.1a.ytdTotal">Total Año en curso</message>
+	<message key="plugins.generic.counter.1a.ytdHtml">HTML año en curso</message>
+	<message key="plugins.generic.counter.1a.ytdPdf">PDF año en curso</message>
 	<message key="plugins.generic.counter.1a.totalForAllJournals">Total para todas las revistas</message>
 </locale>

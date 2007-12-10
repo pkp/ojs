@@ -13,7 +13,7 @@
  
 <locale name="en_US" full_name="U.S. English">
 	<message key="plugins.generic.cms.displayName">Complemento CMS</message>
-	<message key="plugins.generic.cms.description">Este Complemento permite la gestión de contenido estático (Static Content Management o SCM).</message>
+	<message key="plugins.generic.cms.description">Este plugin permite la gestión de contenido estático.</message>
 
 	<message key="plugins.generic.cms.toc">Tabla de Contenidos</message>
 

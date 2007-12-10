@@ -40,7 +40,7 @@ Ejemplos:
 ]]></message>
 	<message key="plugins.importexport.users.import.importUsers">Importar usuarios/as</message>
 	<message key="plugins.importexport.users.import.instructions"><![CDATA[Seleccione un fichero XML que contenga los datos de usarias/os que quiere importar en la revista. Consulte la ayuda e la revista para saber los detalles del formato de este fichero.<br /><br />Tenga en cuenta que si el fichero importado contiene nombres de usuaria/o o direcciones de correo-e que ya existan en el sistema no se importarán los datos de esas/os usuarias/os y los nuevos roles a crear se asignarán a las/os usuarias/os existentes.]]></message>
-	<message key="plugins.importexport.users.import.failedToImportUser">Ha ocurrido un error importando el/la usuario/a</message>
+	<message key="plugins.importexport.users.import.failedToImportUser">Error en la importación</message>
 	<message key="plugins.importexport.users.import.failedToImportRole">Ha ocurrido un error asignado el rol al / a la usuario/a</message>
 	<message key="plugins.importexport.users.import.dataFile">Fichero de datos de usuaria/o</message>
 	<message key="plugins.importexport.users.import.sendNotify">Enviar un correo-e de notificación a cada uno/a de los/as usuarios/as importados/as con su nombre de usuario/a y su contraseña.</message>

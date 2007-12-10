@@ -87,7 +87,7 @@ Se aceptan los siguientes formatos:
 	<message key="plugins.importexport.native.import.error.suppFileMissing">Al artículo "{$articleTitle}" de la sección "{$sectionTitle}" del número "{$issueTitle}" le falta un fichero adicional.</message>
 	<message key="plugins.importexport.native.import.error.galleyFileMissing">Al artículo "{$articleTitle}" de la sección "{$sectionTitle}" del número "{$issueTitle}" le falta un fichero de galerada.</message>
 
-	<message key="plugins.importexport.native.import.success">La importación se ha completado con éxito</message>
+	<message key="plugins.importexport.native.import.success">Importación completada</message>
 	<message key="plugins.importexport.native.import.success.description">La importación se ha completado con éxito. A continuación le mostramos los elementos importados.</message>
 	<message key="plugins.importexport.native.import.error.articleSponsorLocaleUnsupported">Se indicó un patrocinador del artículo "{$articleTitle}" del número "{$issueTitle}" en un idioma ("{$locale}") que esta revista no cubre actualmente.</message>
 	<message key="plugins.importexport.native.import.error.articleAuthorCompetingInterestsLocaleUnsupported">Se proporcionó una declaración de conflicto de intereses del autor "{$authorFullName}" del artículo "{$articleTitle}" del número "{$issueTitle}" en un idioma ("{$locale}") que esta revista no cubre actualmente.</message>

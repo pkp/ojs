@@ -18,7 +18,7 @@
 	<message key="plugins.gateways.googleScholar.settings">Configuración</message>
 	<message key="plugins.gateways.googleScholar.settings.description"><![CDATA[<p>El plugin de pasarela con Google Scholar Gateway Plugin pone la información a disposición del robot de Google Scholar para cada revista. Cuando este plugin está activado, el directorio de documentos (también conocido como información del / de la editor/a) estará disponible en <span class="highlight">{$directoryUrl}</span>.</p>
 <p>Google Scholar necesita cierta información que es opcional en OJS. Por favor, asegúrese de que sus datos cumplen con los requisitos de Google Scholar usando el botón Comprobar Información.</p>]]></message>
-	<message key="plugins.gateways.googleScholar.checkData">Comprobar información</message>
+	<message key="plugins.gateways.googleScholar.checkData">Comprobar datos</message>
 	<message key="plugins.gateways.googleScholar.errors">Mensajes de error</message>
 	<message key="plugins.gateways.googleScholar.errors.noErrors">No se han encontrado errores.</message>
 
