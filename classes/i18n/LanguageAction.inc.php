@@ -16,6 +16,13 @@
 
 define('LANGUAGE_PACK_DESCRIPTOR_URL', 'http://pkp.sfu.ca/ojs/xml/%s/locales.xml');
 define('LANGUAGE_PACK_TAR_URL', 'http://pkp.sfu.ca/ojs/xml/%s/%s.tar.gz');
+
+if (!function_exists('stream_get_contents')) {
+	function stream_get_contents($fp) {
+		fflush($fp);
+	}
+}
+
 class LanguageAction {
 	/**
 	 * Constructor.

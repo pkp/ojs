@@ -27,7 +27,7 @@
 			<field name="subject">Password Resetta Conferma</field>
 			<field name="body">Abbiamo ricevuto una richiesta di resettare la password per il sito web {$siteTitle}.
 
-Se non hai fatto questa richiesta, si prega di ignorare questa email e la password non sar&#x00E0; modificata. Se desisderi resettare la password, clicca sulla URL di sotto.
+Se non hai fatto questa richiesta, si prega di ignorare questa email e la password non sar&#x00E0; modificata. Se desisderi resettare la password, clica sulla URL di sotto.
 
 Resetta la mia password: {$url}
 

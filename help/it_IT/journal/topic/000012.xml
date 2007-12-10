@@ -15,7 +15,7 @@
 
 <topic id="journal/topic/000012" locale="it_IT" title="Create New User" toc="journal/toc/000002" key="journal.users.createNewUser">
 	<section>
-		<![CDATA[<p>Il Journal Manager pu&#x00F2; usare il link crea nuovo utente per registrare qualcuno e assegnargli un ruolo, dal Journal Manager al lettore. L'utente pu&#x00F2;, nel log in al journal, completare e modificare le informazioni del progfilo inserite dal Journal Manager.</p><p><i>Cambiare una password</i>. Gli utenti possono cambiare le loro password non appenahanno fatto il log in al journal. Il Journal Manager non pu&#x00F2; accedere ad una password una volta che questa &#x00E8; stata assegnata. Comunque, il sistema generer&#x00E0; una nuova password e la mandera&#x00E0;  con email all'utente che clicca sul link "Password dimenticata?" sotto il riquadro del login.</p>]]>	
+		<![CDATA[<p>Il Journal Manager pu&#x00F2; usare il link crea nuovo utente per registrare qualcuno e assegnargli un ruolo, dal Journal Manager al lettore. L'utente pu&#x00F2;, nel log in al journal, completare e modificare le informazioni del progfilo inserite dal Journal Manager.</p><p><i>Cambiare una password</i>. Gli utenti possono cambiare le loro password non appenahanno fatto il log in al journal. Il Journal Manager non pu&#x00F2; accedere ad una password una volta che questa &#x00E8; stata assegnata. Comunque, il sistema generer&#x00E0; una nuova password e la mandera&#x00E0;  con email all'utente che clica sul link "Password dimenticata?" sotto il riquadro del login.</p>]]>	
 	</section>
 	<section title="Enroll Existing User">
 		<![CDATA[<p>The Journal Manager pu&#x00F2; assegnare a un utente esistente uno o pi&#x00F9; nuovi ruoli.</p>]]>

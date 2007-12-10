@@ -1731,11 +1731,11 @@ Attivo &#x00E8; il numero di quante revisioni si stanno considerando o stanno an
 	<message key="author.submit.uploadInstructions"><![CDATA[
 <p>Per caricare un manoscritto in questo journal, completa i seguenti passi.</p>
 <ol>
-<li>Su questa pagina, clicca su sfoglia (o scegli file) che apre una finestra Scegli File per trovare il file nel tuo pc.</li>
+<li>Su questa pagina, clica su sfoglia (o scegli file) che apre una finestra Scegli File per trovare il file nel tuo pc.</li>
 <li>Localizza il file che hai deciso di sottomettere ed evidenzialo.</li>
-<li>Clicca su Open nella finestra Scegli File, e il nome del file andr&#x00E0; in questa pagina.</li>
-<li>Clicca su Upload su questa pagina, questo operazione fa in modo di caricare il file dal proprio comupter al sito web del journal e lo rinomina secondo le seguenti convenzioni del journal.</li>
-<li>Una volta che la submission &#x00E8; caricata, clicca su Salva e Continua in fondo a questa pagina.</li>
+<li>Clica su Open nella finestra Scegli File, e il nome del file andr&#x00E0; in questa pagina.</li>
+<li>Clica su Upload su questa pagina, questo operazione fa in modo di caricare il file dal proprio comupter al sito web del journal e lo rinomina secondo le seguenti convenzioni del journal.</li>
+<li>Una volta che la submission &#x00E8; caricata, clica su Salva e Continua in fondo a questa pagina.</li>
 </ol>]]></message>
 	<message key="author.submit.submissionFile">File della submission</message>
 	<message key="author.submit.uploadSubmissionFile">Invia il file della submission</message>
@@ -1943,8 +1943,8 @@ Attivo &#x00E8; il numero di quante revisioni si stanno considerando o stanno an
 	<message key="user.register.registerAs">Registrati come</message>
 	<message key="user.register.privacyStatement">Tutela della privacy</message>
 	<message key="user.register.completeForm">Riempi questa form per registrarti a questa rivista.</message>
-	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Clicca qui</a> se sei gi&#x00E0; a questo o a un'altra rivista su questo sito.]]></message>
-	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Clicca qui</a> Se <b>non</b> sei gi&#x00E0; registrato a questo o un'altra rivista su questo sito.]]></message>
+	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Clica qui</a> se sei gi&#x00E0; a questo o a un'altra rivista su questo sito.]]></message>
+	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Clica qui</a> Se <b>non</b> sei gi&#x00E0; registrato a questo o un'altra rivista su questo sito.]]></message>
 	<message key="user.register.loginToRegister">Inserisci la tua username and password per registrarti a questa rivista.</message>
 	<message key="user.register.registrationDisabled">Questa rivista attualmente non sta accettando registrazioni di utenti.</message>
 	<message key="user.register.usernameRestriction">La username deve contenere solo lettere minuscole, numeri, e trattini/underscores.</message>
@@ -2008,7 +2008,7 @@ Attivo &#x00E8; il numero di quante revisioni si stanno considerando o stanno an
 	
 	<!-- Interstitial page for non-PDF non-HTML galleys -->
 	<message key="article.nonpdf.title">Scarica articolo</message>
-	<message key="article.nonpdf.note"><![CDATA[Il file che hai selezionato dovrebbe cominciare a scaricare automaticamente. Altrimenti, clicca nel link sotto. Nota che questo file potrebbe richiedere un viewer speciale o un plugin per vedere.<br /><br />Se il fil non si scarica automaticamente, <a href="{$url}">clicca qui</a>.]]></message>
+	<message key="article.nonpdf.note"><![CDATA[Il file che hai selezionato dovrebbe cominciare a scaricare automaticamente. Altrimenti, clica nel link sotto. Nota che questo file potrebbe richiedere un viewer speciale o un plugin per vedere.<br /><br />Se il fil non si scarica automaticamente, <a href="{$url}">clica qui</a>.]]></message>
 	
 	<!-- Site index -->
 	<message key="site.journalsHosted">Riviste ospitati su questo sito</message>
@@ -2109,7 +2109,7 @@ Attivo &#x00E8; il numero di quante revisioni si stanno considerando o stanno an
 
 <h4>Aggiornamento</h4>
 
-<p>Se sta aggiornando una installazione esistente di OJS 2.x, <a href="{$upgradeUrl}">clicca qui</a> per procedere.</p>
+<p>Se sta aggiornando una installazione esistente di OJS 2.x, <a href="{$upgradeUrl}">clica qui</a> per procedere.</p>
 
 <h4>Requisiti di sistema raccomandati</h4>
 
@@ -2433,7 +2433,7 @@ Il processo di validazione pu&#x00F2; non funzionare sugli URL di ricerca che ri
 	<message key="rt.context.searchTerms">Termini di ricerca</message>
 	<message key="rt.context.termToDefine">Parola da definire</message>
 	<message key="rt.context.searchDescription">I termini di ricerca sono stati selezionati dall'autore(i). Questi possono essere modificati o cancellati da lettore, dato che due o tre brevi, precisi termini o frasi producono le migliori ricerche Booleane (AND). Per saperne di pi&#x00F9; sulle risorse cercate, premere su ABOUT. queste risorse sono state selezionate per la loro rilevanza e accesso libero a tutto o parte dei loro contenuti.</message>
-	<message key="rt.context.defineTermsDescription">Se la risorsa &#x00E8; un file HTML (piuttosto che un PDF), facendo doppio click su ogni parola nel testo questa appare nella casella parole da definire. Puoi anche digitare o incollare una parola nella casella. Quindi usare la funzione di ricerca per trovare la definizione per quella parola. Per saperne ancora sulle risorse cercate, clicca sul simbolo di informazione. Queste risorse sono state selezionate per la loro rilevanza e il loro libero accesso a tutto o a una parte dei loro contenuti.</message>
+	<message key="rt.context.defineTermsDescription">Se la risorsa &#x00E8; un file HTML (piuttosto che un PDF), facendo doppio click su ogni parola nel testo questa appare nella casella parole da definire. Puoi anche digitare o incollare una parola nella casella. Quindi usare la funzione di ricerca per trovare la definizione per quella parola. Per saperne ancora sulle risorse cercate, clica sul simbolo di informazione. Queste risorse sono state selezionate per la loro rilevanza e il loro libero accesso a tutto o a una parte dei loro contenuti.</message>
 	<message key="rt.context.authorTermsDescription">Per gli items con pi&#x00F9; di un autore, lascia tutti nomi segnati per ricercare lavori con simili co-autori, o cerca una volta segnando solo il nome dell'autore. Queste risorse sono state selezionate per la loro rilevanza e il loro libero accesso a tutto o una parte dei loro contenuti.</message>
 	<message key="rt.context.citesContextDescription">se l'articolo &#x00E8; indicizzato in Google Scholar, potrebbe essere accompagnato da un link "Cittato da X", che porta ad un elenco di tutti i lavori in cui viene citato. Inoltre, Google Scholar elenca tutti gli item che citano titolo e autori. Per accedere a risorse online che sono disponibili solo attraverso la tua biblioteca di ricerca, potresti avere la possibilit&#x00E0; di andare in Scholar Preferences in Google Scholar e attivare Library Links per il tuo istituto.</message>
 
@@ -2618,7 +2618,7 @@ Dopo che avete finito con le vostre revisioni, rinominare il file da NomeAutoreQ
 	<message key="manager.payment.feePaymentOptions">Opzioni di pagamento della quota</message>
 	<message key="manager.payment.options">Opzioni</message>
 	<message key="manager.payment.records">Registri</message>
-	<message key="manager.payment.options.enablePayments">Clicca qui per abilitare il modulo dei pagamenti. Devi configurare le impostazioni di pagamento riempiendo il modulo qui di seguito. Si noti che agli utenti verrà richiesto di effettuare il log in per eseguire i pagamenti.</message>
+	<message key="manager.payment.options.enablePayments">Clica qui per abilitare il modulo dei pagamenti. Devi configurare le impostazioni di pagamento riempiendo il modulo qui di seguito. Si noti che agli utenti verrà richiesto di effettuare il log in per eseguire i pagamenti.</message>
 	<message key="manager.payment.options.text">Descrizione del metodo di pagamento</message>
 	<message key="manager.payment.options.fee">Quota</message>
 	<message key="manager.payment.options.feeName">Nome della quota</message>
@@ -2713,7 +2713,7 @@ Authors who publish with this journal agree to the following terms:
 	<message key="manager.people.allUsers">Tutti gli utenti iscritti</message>
 	<message key="manager.people.allEnrolledUsers">Utenti registrati a questa rivista</message>
 	<message key="manager.people.allSiteUsers">Iscrivi un utente da questo sito in questa rivista</message>
-	<message key="manager.people.mustChooseRole">Per favore seleziona un ruolo in alto alla pagina prima di cliccare "Iscrivi un utente"</message>
+	<message key="manager.people.mustChooseRole">Per favore seleziona un ruolo in alto alla pagina prima di clicare "Iscrivi un utente"</message>
 	<message key="manager.people.enrollExistingUser">Iscrivi un utente esistente</message>
 	<message key="manager.people.roleEnrollment">{$role} Iscrizione</message>
 	<message key="manager.people.enrollUserAsDescription">Gli utenti possono essere assegnati a, o rimossi da, un ruolo in qualsiasi momento.</message>
@@ -2735,9 +2735,9 @@ Authors who publish with this journal agree to the following terms:
 	<message key="author.submit.submissionIndexingDescription">Fornisci i termini per indicizzare la submission; separa i termini con un punto e virgola (termine1; termine2; termine3).</message>
 	<message key="author.submit.form.abstractRequired">Per favore inserisci l'abstract del tuo articolo.</message>
 	<message key="author.submit.supplementaryFilesInstructions">Questo passo facoltativo permette di aggiungere file aggiuntivi a una submission. I file, che possono essere in qualsiasi formato, potrebbero ncludere (a) strumenti di ricerca, (b) un insieme di dati, che aderiscano ai termini dell'etica di ricerca di studio della rivista (c) risorse che altrimenti non sarebbero disponibili ai lettori, (d) immagini e tabelle che non possono essere integrate nel testo stesso, o altri materiali che si aggiungono ai contributi della lavoro.</message>
-	<message key="author.submit.supplementaryFiles.saveToUpload">Clicca Salva per caricare il file (dopodichè si potranno caricare file aggiuntivi).</message>
+	<message key="author.submit.supplementaryFiles.saveToUpload">Clica Salva per caricare il file (dopodichè si potranno caricare file aggiuntivi).</message>
 	<message key="author.submit.forgottenSubmitSuppFile">Sei sicuro di voler continuare senza caricare il file aggiuntivo che hai scelto?</message>
-	<message key="author.submit.confirmationDescription">Per inviare il tuo lavoro a {$journalTitle} clicca Completa la submission. Il contatto principale della submission riceverà una notifica via email e potrà visionare lo sviluppo della submission attraverso il processo editoriale effettuando il log in al sito web della rivista. Grazie per il tuo interessamento a pubblicare con {$journalTitle}</message>
+	<message key="author.submit.confirmationDescription">Per inviare il tuo lavoro a {$journalTitle} clica Completa la submission. Il contatto principale della submission riceverà una notifica via email e potrà visionare lo sviluppo della submission attraverso il processo editoriale effettuando il log in al sito web della rivista. Grazie per il tuo interessamento a pubblicare con {$journalTitle}</message>
 	<message key="user.login.accountNotValidated">Il tuo indirizzo email non è stato validato. Per favore controlla la tua email e segui le istruzioni fornite. Se non hai ricevuto una email,  potresti aver bisogno di contattare l'amministratore del sito per assistenza.</message>
 	<message key="user.login.activate">Attiva un account</message>
 	<message key="user.login.activated">Grazie per aver attivato il tuo account. Ora puoi effettuare il log in usando le credenziali  che hai fornito quando hai creato il tuo account.</message>
@@ -2754,7 +2754,7 @@ Authors who publish with this journal agree to the following terms:
 	<message key="payment.payNow">Paga ora</message>
 	<message key="payment.waive">Rinuncia</message>
 	<message key="payment.alreadyPaid">Già pagato</message>
-	<message key="payment.alreadyPaidMessage">Seleziona questa casella se hai già inviato il tuo pagamento alla rivista per completare il processo di submission. La submission non sarà revisionata fino a quando il pagamento non arriverà. Clicca Paga ora in alto per vedere le istruzioni di pagamento.</message>
+	<message key="payment.alreadyPaidMessage">Seleziona questa casella se hai già inviato il tuo pagamento alla rivista per completare il processo di submission. La submission non sarà revisionata fino a quando il pagamento non arriverà. Clica Paga ora in alto per vedere le istruzioni di pagamento.</message>
 	<message key="payment.paymentReceived">Pagamento ricevuto</message>
 	<message key="payment.paymentSent">Il pagamento è già stato inviato</message>
 	<message key="payment.type.submission">Quota della submission</message>
@@ -2783,7 +2783,7 @@ Authors who publish with this journal agree to the following terms:
 	<message key="manager.setup.noUseProofreaders">Un curatore o un curatore di sezione assegnato alla submission controllerà le bozze.</message>
 	<message key="manager.setup.onlineAccessManagement">Accesso al contenuto della rivista</message>
 	<message key="author.submit.startHereTitle">Inizia una nouva submission</message>
-	<message key="author.submit.startHereLink"><![CDATA[<a href="{$submitUrl}" class="action">Clicca qui</a> per andare al primo passo dei cinque passi del processo di submission.]]></message>
+	<message key="author.submit.startHereLink"><![CDATA[<a href="{$submitUrl}" class="action">Clica qui</a> per andare al primo passo dei cinque passi del processo di submission.]]></message>
 	<message key="author.submit.howToSubmit"><![CDATA[Hai incontrato difficoltà? Contatta <a href="mailto:{$supportEmail}">{$supportName}</a> per assistenza
 ({$supportPhone}).]]></message>
 	<message key="author.submit.howToSubmitNoPhone"><![CDATA[Hai incontrato difficoltà? Contatta <a href="mailto:{$supportEmail}">{$supportName}</a> per assistenza.]]></message>
@@ -2803,7 +2803,7 @@ Authors who publish with this journal agree to the following terms:
 	<message key="manager.setup.journalLayout">Layout della rivista</message>
 	<message key="manager.setup.journalLayoutDescription">Scegli un tema della rivista e seleziona i componenti del layout qui. Può essere caricato anche un foglio di stile della rivista, che può essere usato per ignorare  i dati di stile in tutti i fogli di stile del sistema e il foglio di stile del tema (se è stato scelto un tema).</message>
 	<message key="manager.languages.languageInstructions"><![CDATA[Ojs può essere reso accessibile agli utenti in molte lingue supportate. Inoltre OJS può operare come sistema multilingue, fornendo agli utenti la possibilità di scegliere fra le lingue in ogni pagina, e permettendo di inserire certi dati in diverse lingue addizionali.<br /><br/>Se una lingua supportata da OJS non è nella lista qui sotto, chiedi al tuo amministratore del sito di installare la lingua dall'interfaccia  dell'amministratore del sito. Per avere istruzioni sui supporti aggiuntivi per nuove lingue, si prega di consultare la documentazione di OJS.]]></message>
-	<message key="editor.submissionReview.emailWillArchive">Questa submission sarà archiviata dopo che la email di notifica all'autore sarà sia inviata o sia che il tasto 'Salta email' sarà cliccato.</message>
+	<message key="editor.submissionReview.emailWillArchive">Questa submission sarà archiviata dopo che la email di notifica all'autore sarà sia inviata o sia che il tasto 'Salta email' sarà clicato.</message>
 	<message key="author.submit.requestWaiver">Richiedi una deroga</message>
 	<message key="author.submit.qualityForWaiver">Per favore considera di derogare la quota di submission degli articoli per questo articolo.</message>
 	<message key="author.submit.addReasonsForWaiver">Per favore usa la casella di commento sotto per indicare il perchè le quote debbano essere derogate.</message>

@@ -26,7 +26,7 @@
 	<message key="plugins.generic.phpmv.manager.settings.phpmvUrlInstructions">L'url intera alla tua installzione phpMyVisites (ad es. http://myserver.net/phpmv).</message>
 	<message key="plugins.generic.phpmv.manager.settings.phpmvUrlRequired">Per favore inserisci una url valida. Includi http:// all'inizio.</message>
 	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteId">Numero del profilo del sito</message>
-	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteIdInstructions"><![CDATA[In phpMyVisites, clicca su Administration->Modify site. Il numero del profilo del sito è visualizzato dopo il nome del profilo del tuo sito.]]></message>
+	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteIdInstructions"><![CDATA[In phpMyVisites, clica su Administration->Modify site. Il numero del profilo del sito è visualizzato dopo il nome del profilo del tuo sito.]]></message>
 	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteIdRequired">Per favore inserisci un numero del profilo del sito.</message>
 
 </locale>

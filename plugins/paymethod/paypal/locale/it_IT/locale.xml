@@ -26,7 +26,7 @@
 	<!-- PayPal -->
 	<message key="plugins.paymethod.paypal">Pagamento Paypal</message>
 	<message key="plugins.paymethod.paypal.description"><![CDATA[PayPal abilita gli utenti, sia che siano o meno mebri PayPal, a utilizzare tutte le maggiori carte di credito. L'amministratore dovrà impostare un <a href="http://www.paypal.com" target="_new">PayPal Business Account</a>.]]></message>
-	<message key="plugins.paymethod.paypal.warning">Clicca il bottone Continua qui sotto per accedere al sito PayPal, dove si possono usare carte di credito per pagare la quota (senza doversi iscrivere a PayPal). Usa il tasto "Return to Merchant" dopo aver effettuato il pagamento per tornare in questo sito.</message>
+	<message key="plugins.paymethod.paypal.warning">Clica il bottone Continua qui sotto per accedere al sito PayPal, dove si possono usare carte di credito per pagare la quota (senza doversi iscrivere a PayPal). Usa il tasto "Return to Merchant" dopo aver effettuato il pagamento per tornare in questo sito.</message>
 	<message key="plugins.paymethod.paypal.purchase.title">Titolo</message>
 	<message key="plugins.paymethod.paypal.purchase.fee">Quota</message>
 	<message key="plugins.paymethod.paypal.purchase.description">Descrizione</message>

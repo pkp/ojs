@@ -23,7 +23,7 @@
 	<message key="plugins.generic.googleAnalytics.manager.googleAnalyticsSettings">Impostazioni di Google Analytics</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.description"><![CDATA[<p>Con questo plugin abilitato Google Analytics può essere usato per raccogliere e analizzare l'utilizzo e il traffico del sito web per questa rivista. Si prega di notare che questo plugin richiede che tu abbia già installato un account di Google Analytics. Si veda <a href="http://www.google.com/analytics/" title="Google Analytics site">Google Analytics site</a> per maggiori informazioni.</p>]]></message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteId">Numero di account</message>
-	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdInstructions">In Google Analytics, clicca su Check Status per vedere il codice di tracciamento del tuo sito. Il numero di account è visualizzato nel codice di tracciamento: _uacct = "###". Inserisci il testo che corrisponde a ###.</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdInstructions">In Google Analytics, clica su Check Status per vedere il codice di tracciamento del tuo sito. Il numero di account è visualizzato nel codice di tracciamento: _uacct = "###". Inserisci il testo che corrisponde a ###.</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdRequired">Per favore inserisci un numero di account.</message>
 
 </locale>
