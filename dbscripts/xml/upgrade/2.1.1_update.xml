@@ -157,7 +157,7 @@ Thank you for agreeing to review the manuscript "{$articleTitle}" for {$journalN
 	<!-- Bug #2213: Invert public flag on subscription types -->
 	<sql>
 		<query>
-			UPDATE subscription_types SET pub = NOT pub
+			UPDATE subscription_types SET pub = ~ pub
 		</query>
 	</sql>
 </data>

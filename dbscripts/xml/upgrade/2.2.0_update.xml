@@ -51,7 +51,6 @@
 		<query driver="postgres7">SELECT SETVAL('temporary_files_file_id_seq', (SELECT MAX(file_id) FROM temporary_files)+1)</query>
 		<query driver="postgres7">SELECT SETVAL('access_keys_access_key_id_seq', (SELECT MAX(access_key_id) FROM access_keys)+1)</query>
 		<query driver="postgres7">SELECT SETVAL('groups_group_id_seq', (SELECT MAX(group_id) FROM groups)+1)</query>
-		<query driver="postgres7">SELECT SETVAL('theses_thesis_id_seq', (SELECT MAX(thesis_id) FROM theses)+1)</query>
 	</sql>
 
 	<!-- #2961# Now that the user_settings_old table has been migrated into
