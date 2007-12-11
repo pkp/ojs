@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../dtd/xmldata.dtd">
+
+<!--
+  * 2.2.0_usersettings2.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * 2.2.0 database updates XML file; delete the user_settings_old table.
+  *
+  * $Id$
+  -->
+
+<data>
+	<!-- #2961# Now that the user_settings_old table has been migrated into
+	     user_settings, we can drop the user_settings_old table. -->
+	<sql>
+		<drop table="user_settings_old" />
+	</sql>
+</data>

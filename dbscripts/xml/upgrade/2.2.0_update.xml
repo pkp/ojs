@@ -53,12 +53,6 @@
 		<query driver="postgres7">SELECT SETVAL('groups_group_id_seq', (SELECT MAX(group_id) FROM groups)+1)</query>
 	</sql>
 
-	<!-- #2961# Now that the user_settings_old table has been migrated into
-	     user_settings, we can drop the user_settings_old table. -->
-	<sql>
-		<drop table="user_settings_old" />
-	</sql>
-
 	<!-- #2424# Drop the currencies table after the FKs have been kept. -->
 	<sql>
 		<drop table="currencies" />

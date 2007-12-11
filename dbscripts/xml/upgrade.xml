@@ -104,4 +104,10 @@
 		<code function="addSubscriptionIPRanges" />
 		<note file="release-notes/README-2.2.0" />
 	</upgrade>
+
+	<upgrade minversion="2.1.1.0" maxversion="2.1.1.0">
+		<!-- Delete the user_settings_old table now that it has been migrated. -->
+		<data file="upgrade/2.2.0_usersettings2.xml" />
+	</upgrade>
+
 </install>
