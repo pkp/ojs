@@ -57,10 +57,10 @@
 	{/iterate}
 {if $payments->wasEmpty()}
 	<tr>
-		<td colspan="2" class="nodata">{translate key="manager.payment.noPayments"}</td>
+		<td colspan="4" class="nodata">{translate key="manager.payment.noPayments"}</td>
 	</tr>
 	<tr>
-		<td colspan="2" class="endseparator">&nbsp;</td>
+		<td colspan="4" class="endseparator">&nbsp;</td>
 	</tr>
 {else}
 	<tr>
