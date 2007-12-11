@@ -153,7 +153,11 @@ class OJSPaymentManager extends PaymentManager {
 				$subscriptionId = $queuedPayment->getAssocId();
 				$subscriptionDao =& DAORegistry::getDAO('SubscriptionDAO');
 				$subscription =& $subscriptionDao->getSubscription($subscriptionId);
-				if (!$subscription || $subscription->getUserId() != $queuedPayment->getUserId() || $subscription->getJournalId() != $queuedPayment->getJournalId()) {error_log(print_r($subscription, true)); return false;}
+				if (!$subscription || $subscription->getUserId() != $queuedPayment->getUserId() || $subscription->getJournalId() != $queuedPayment->getJournalId()) {
+					// FIXME: Is this supposed to be here?
+					error_log(print_r($subscription, true));
+					return false;
+				}
 
 				$subscriptionDao->renewSubscription($subscription);
 				

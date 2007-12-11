@@ -2052,41 +2052,56 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 	function waiveSubmissionFee($args) {
 		$articleId = (int) array_shift($args);
-		$payMethod = Request::getUserVar('markAsPaid')?'ManualPayment':'Waiver';
+		$markAsPaid = Request::getUserVar('markAsPaid');
 
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 		import('payment.ojs.OJSPaymentManager');
 		$paymentManager =& OJSPaymentManager::getManager();
 		$user =& Request::getUser();
 
-		$queuedPayment =& $paymentManager->createQueuedPayment($journal->getJournalId(), PAYMENT_TYPE_SUBMISSION, $user->getUserId(), $articleId, 0, '');
+		$queuedPayment =& $paymentManager->createQueuedPayment(
+			$journal->getJournalId(),
+			PAYMENT_TYPE_SUBMISSION,
+			$markAsPaid ? $submission->getUserId() : $user->getUserId(),
+			$articleId,
+			$markAsPaid ? $journal->getSetting('submissionFee') : 0,
+			$markAsPaid ? $journal->getSetting('currency') : ''
+		);
+			
 		$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);
 		
 		// Since this is a waiver, fulfill the payment immediately
-		$paymentManager->fulfillQueuedPayment($queuedPayment, $payMethod);
+		$paymentManager->fulfillQueuedPayment($queuedPayment, $markAsPaid?'ManualPayment':'Waiver');
 		Request::redirect(null, null, 'submission', array($articleId));
 	}
 	
 	function waiveFastTrackFee($args) {
 		$articleId = (int) array_shift($args);
-		$payMethod = Request::getUserVar('markAsPaid')?'ManualPayment':'Waiver';
+		$markAsPaid = Request::getUserVar('markAsPaid');
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
 		import('payment.ojs.OJSPaymentManager');
 		$paymentManager =& OJSPaymentManager::getManager();
 		$user =& Request::getUser();
 
-		$queuedPayment =& $paymentManager->createQueuedPayment($journal->getJournalId(), PAYMENT_TYPE_FASTTRACK, $user->getUserId(), $articleId, 0, '');
+		$queuedPayment =& $paymentManager->createQueuedPayment(
+			$journal->getJournalId(),
+			PAYMENT_TYPE_FASTTRACK,
+			$markAsPaid ? $submission->getUserId() : $user->getUserId(),
+			$articleId,
+			$markAsPaid ? $journal->getSetting('fastTrackFee') : 0,
+			$markAsPaid ? $journal->getSetting('currency') : ''
+		);
+			
 		$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);
 		
 		// Since this is a waiver, fulfill the payment immediately
-		$paymentManager->fulfillQueuedPayment($queuedPayment, $payMethod);
+		$paymentManager->fulfillQueuedPayment($queuedPayment, $markAsPaid?'ManualPayment':'Waiver');
 		Request::redirect(null, null, 'submission', array($articleId));
 	}	
 	
 	function waivePublicationFee($args) {
-		error_log(print_r($args,true));
 		$articleId = (int) array_shift($args);
-		$payMethod = Request::getUserVar('markAsPaid')?'ManualPayment':'Waiver';
+		$markAsPaid = Request::getUserVar('markAsPaid');
 		$sendToScheduling = Request::getUserVar('sendToScheduling')?true:false;
 		
 		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_EDIT);
@@ -2094,11 +2109,19 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$paymentManager =& OJSPaymentManager::getManager();
 		$user =& Request::getUser();
 
-		$queuedPayment =& $paymentManager->createQueuedPayment($journal->getJournalId(), PAYMENT_TYPE_PUBLICATION, $user->getUserId(), $articleId, 0, '');
+		$queuedPayment =& $paymentManager->createQueuedPayment(
+			$journal->getJournalId(),
+			PAYMENT_TYPE_PUBLICATION,
+			$markAsPaid ? $submission->getUserId() : $user->getUserId(),
+			$articleId,
+			$markAsPaid ? $journal->getSetting('publicationFee') : 0,
+			$markAsPaid ? $journal->getSetting('currency') : ''
+		);
+
 		$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);
 		
 		// Since this is a waiver, fulfill the payment immediately
-		$paymentManager->fulfillQueuedPayment($queuedPayment, $payMethod);
+		$paymentManager->fulfillQueuedPayment($queuedPayment, $markAsPaid?'ManualPayment':'Waiver');
 		
 		if ( $sendToScheduling ) {
 			Request::redirect(null, null, 'submissionEditing', array($articleId), 'scheduling');
