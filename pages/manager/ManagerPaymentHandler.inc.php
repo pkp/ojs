@@ -26,6 +26,7 @@ class ManagerPaymentHandler extends ManagerHandler {
 		$journal = &Request::getJournal();
 		$journalSettingsDAO =& DAORegistry::getDAO('JournalSettingsDAO');
 		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign('helpTopicId', 'journal.managementPages.payments');
 		$templateMgr->assign('enableSubscripitons', $journalSettingsDAO->getSetting($journal->getJournalId(), 'enableSubscriptions'));
 
 		parent::setupTemplate(true);
@@ -49,6 +50,7 @@ class ManagerPaymentHandler extends ManagerHandler {
 		$journal = &Request::getJournal();
 		$journalSettingsDAO =& DAORegistry::getDAO('JournalSettingsDAO');
 		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign('helpTopicId', 'journal.managementPages.payments');
 		$templateMgr->assign('enableSubscripitons', $journalSettingsDAO->getSetting($journal->getJournalId(), 'enableSubscriptions'));
 
 		parent::setupTemplate(true);
@@ -81,6 +83,7 @@ class ManagerPaymentHandler extends ManagerHandler {
 		$paymentDao = &DAORegistry::getDAO('OJSCompletedPaymentDAO');
 		$journal =& Request::getJournal();
 		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign('helpTopicId', 'journal.managementPages.payments');
 		$payments = &$paymentDao->getPaymentsByJournalId($journal->getJournalId(), $rangeInfo);
 
 		$templateMgr->assign_by_ref('payments', $payments);
@@ -98,8 +101,9 @@ class ManagerPaymentHandler extends ManagerHandler {
 		$payment = &$paymentDao->getCompletedPayment($completedPaymentId);
 
 		$templateMgr =& TemplateManager::getManager();
+		$templateMgr->assign('helpTopicId', 'journal.managementPages.payments');
 		$templateMgr->assign_by_ref('payment', $payment);
-	
+
 		parent::setupTemplate(true);
 		$templateMgr->display('manager/payments/viewPayment.tpl');
 	 }
@@ -111,6 +115,9 @@ class ManagerPaymentHandler extends ManagerHandler {
 		parent::validate();
 		parent::setupTemplate(true);
 		
+		$templateMgr =& TemplateManager::getManager();
+		$templateMgr->assign('helpTopicId', 'journal.managementPages.payments');
+
 		$journal =& Request::getJournal();
 		if (!$journal) Request::redirect (null, null, 'index');
 
@@ -136,10 +143,12 @@ class ManagerPaymentHandler extends ManagerHandler {
 		$settingsForm = &new PayMethodSettingsForm();
 		$settingsForm->readInputData();
 
+ 		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign('helpTopicId', 'journal.managementPages.payments');
+
 		if ($settingsForm->validate()) {
 			$settingsForm->execute();
 
- 			$templateMgr = &TemplateManager::getManager();
 			$templateMgr->assign(array(
 				'currentUrl' => Request::url(null, null, 'payMethodSettings'),
 				'pageTitle' => 'manager.payment.paymentMethods',
