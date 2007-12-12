@@ -93,7 +93,7 @@
 			{assign var=needsLoginNote value=1}
 		{/if}
 		{if $journalRt->getFindingReferences()}
-			<li><a href="javascript:openRTWindow('{url page="rt" op="findingReferences"}');">{translate key="rt.findingReferences" path=$article->getArticleId()|to_array:$galleyId}</a></li>
+			<li><a href="javascript:openRTWindow('{url page="rt" op="findingReferences" path=$article->getArticleId()|to_array:$galleyId}');">{translate key="rt.findingReferences"}</a></li>
 		{/if}
 	</ul>
 </div>
