@@ -27,7 +27,7 @@
 	<application>ojs2</application>
 	<release>2.2.0.0</release>
 	<tag>ojs-2_2_0-0</tag>
-	<date>2007-10-02</date>
+	<date>2007-12-11</date>
 	<info>http://pkp.sfu.ca/ojs/</info>
 	<package>http://pkp.sfu.ca/ojs/download/ojs-2.2.0-0.tar.gz</package>
 	<patch from="2.0.0.0">http://pkp.sfu.ca/ojs/download/patch/ojs-2.0_to_2.2.0.patch.gz</patch>
