@@ -56,7 +56,7 @@ class AdminSettingsHandler extends AdminHandler {
 			$publicFileManager->removeSiteFile($site->getSiteStyleFilename());
 		} elseif (Request::getUserVar('uploadPageHeaderTitleImage')) {
 			if (!$settingsForm->uploadPageHeaderTitleImage($settingsForm->getFormLocale())) {
-				$settingsForm->addError('pageHeaderTitleImage', Locale::translate('admin.settings.pageHeaderImageInvalid'));
+				$settingsForm->addError('pageHeaderTitleImage', Locale::translate('admin.settings.homeHeaderImageInvalid'));
 			}
 		} elseif (Request::getUserVar('deletePageHeaderTitleImage')) {
 			$publicFileManager =& new PublicFileManager();
