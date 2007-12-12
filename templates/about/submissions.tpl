@@ -63,9 +63,14 @@
 
 {if $currentJournal->getLocalizedSetting('privacyStatement') != ''}<a name="privacyStatement"></a><h3>{translate key="about.privacyStatement"}</h3>
 <p>{$currentJournal->getLocalizedSetting('privacyStatement')|nl2br}</p>
+
+<div class="separator">&nbsp;</div>
+
 {/if}
 
-{if $authorFees}<a name="authorFees"></a><h3>{translate key="manager.payment.authorFees"}</h3>
+{if $authorFees}
+
+<a name="authorFees"></a><h3>{translate key="manager.payment.authorFees"}</h3>
 	<p>{translate key="about.authorFeesMessage"}</p>
 	{if $currentJournal->getSetting('submissionFeeEnabled')}
 		<p>{$currentJournal->getLocalizedSetting('submissionFeeName')|escape}: {$currentJournal->getSetting('submissionFee')|string_format:"%.2f"} ({$currentJournal->getSetting('currency')})<br />
