@@ -92,6 +92,10 @@
 				<a href="{url op="downloadLocale" locale=$downloadableLocale.key}" class="action">{translate key="admin.languages.download"}</a>
 			</td>
 		</tr>
+	{foreachelse}
+		<tr valign="top">
+			<td colspan="4" class="nodata">{translate key="common.none"}</td>
+		</tr>
 	{/foreach}
 </table>
 {else}{* not $downloadAvailable *}
