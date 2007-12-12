@@ -81,16 +81,18 @@ class JournalSetupStep1Form extends JournalSetupForm {
 	 * the Journal.)
 	 */
 	function execute() {
-		$sponsors = (array) $this->getData('sponsors');
-		foreach (array_keys($sponsors) as $key) {
-			$values = array_values((array) $sponsors[$key]);
-			$isEmpty = true;
-			foreach ($values as $value) {
-				if (!empty($value)) $isEmpty = false;
+		foreach (array('sponsors', 'contributors') as $element) {
+			$elementValue = (array) $this->getData($element);
+			foreach (array_keys($elementValue) as $key) {
+				$values = array_values((array) $elementValue[$key]);
+				$isEmpty = true;
+				foreach ($values as $value) {
+					if (!empty($value)) $isEmpty = false;
+				}
+				if ($isEmpty) unset($elementValue[$key]);
 			}
-			if ($isEmpty) unset($sponsors[$key]);
+			$this->setData($element, $elementValue);
 		}
-		$this->setData('sponsors', $sponsors);
 
 		return parent::execute();
 	}
