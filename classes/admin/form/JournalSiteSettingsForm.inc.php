@@ -170,6 +170,7 @@ class JournalSiteSettingsForm extends Form {
 			$section->setTitle(Locale::translate('section.default.title'), $journal->getPrimaryLocale());
 			$section->setAbbrev(Locale::translate('section.default.abbrev'), $journal->getPrimaryLocale());
 			$section->setMetaIndexed(true);
+			$section->setMetaReviewed(true);
 			$section->setPolicy(Locale::translate('section.default.policy'), $journal->getPrimaryLocale());
 			$section->setEditorRestricted(false);
 			$section->setHideTitle(false);
