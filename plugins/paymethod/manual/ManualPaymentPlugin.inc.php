@@ -63,7 +63,7 @@ class ManualPaymentPlugin extends PaymethodPlugin {
 
 		$templateMgr->assign('itemName', $queuedPayment->getName());
 		$templateMgr->assign('itemDescription', $queuedPayment->getDescription());
-		if ( $queuedPayment->getAmount() > 0 ) {
+		if ($queuedPayment->getAmount() > 0) {
 			$templateMgr->assign('itemAmount', $queuedPayment->getAmount());
 			$templateMgr->assign('itemCurrencyCode', $queuedPayment->getCurrencyCode()); 
 		}
@@ -71,21 +71,23 @@ class ManualPaymentPlugin extends PaymethodPlugin {
 
 		$templateMgr->display($this->getTemplatePath() . 'paymentForm.tpl');
 
-		import('mail.MailTemplate');
-		$contactName = $journal->getSetting('contactName');
-		$contactEmail = $journal->getSetting('contactEmail');
-		$mail = &new MailTemplate('MANUAL_PAYMENT_NOTIFICATION');
-		$mail->setFrom($contactEmail, $contactName);
-		$mail->addRecipient($contactEmail, $contactName);
-		$mail->assignParams(array(
-			'journalName' => $journal->getJournalTitle(),
-			'userFullName' => $user?$user->getFullName():('(' . Locale::translate('common.none') . ')'),
-			'userName' => $user?$user->getUsername():('(' . Locale::translate('common.none') . ')'),
-			'itemName' => $queuedPayment->getName(),
-			'itemCost' => $queuedPayment->getAmount(),
-			'itemCurrencyCode' => $queuedPayment->getCurrencyCode()
-		));
-		$mail->send();
+		if ($queuedPayment->getAmount() > 0) {
+			import('mail.MailTemplate');
+			$contactName = $journal->getSetting('contactName');
+			$contactEmail = $journal->getSetting('contactEmail');
+			$mail = &new MailTemplate('MANUAL_PAYMENT_NOTIFICATION');
+			$mail->setFrom($contactEmail, $contactName);
+			$mail->addRecipient($contactEmail, $contactName);
+			$mail->assignParams(array(
+				'journalName' => $journal->getJournalTitle(),
+				'userFullName' => $user?$user->getFullName():('(' . Locale::translate('common.none') . ')'),
+				'userName' => $user?$user->getUsername():('(' . Locale::translate('common.none') . ')'),
+				'itemName' => $queuedPayment->getName(),
+				'itemCost' => $queuedPayment->getAmount(),
+				'itemCurrencyCode' => $queuedPayment->getCurrencyCode()
+			));
+			$mail->send();
+		}
 	}
 
 	function getInstallDataFile() {
