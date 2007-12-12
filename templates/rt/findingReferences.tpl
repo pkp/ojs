@@ -52,11 +52,11 @@ function invokeWLA() {
 <table width="100%" class="data">
 	<tr valign="top">
 		<td class="label" width="20%"><label for="author">{translate key="user.role.author"}</label></td>
-		<td class="value" width="80%"><input name="author" id="author" type="text" size="20" maxlength="40" class="textField" /></td>
+		<td class="value" width="80%"><input name="author" id="author" type="text" size="20" maxlength="40" class="textField" value="{$article->getAuthorString()|escape}" /></td>
 	</tr>
 	<tr valign="top">
 		<td class="label"><label for="title">{translate key="article.title"}</label></td>
-		<td class="value"><input type="text" id="title" name="title" size="40" maxlength="40" class="textField" /></td>
+		<td class="value"><input type="text" id="title" name="title" size="40" maxlength="40" class="textField" value="{$article->getArticleTitle()|escape}" /></td>
 	</tr>
 </table>
 
