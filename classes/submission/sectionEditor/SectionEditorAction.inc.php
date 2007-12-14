@@ -1760,7 +1760,6 @@ class SectionEditorAction extends Action {
 		} else {
 			if (!Request::getUserVar('continued')) {
 				$authorUser =& $userDao->getUser($sectionEditorSubmission->getUserId());
-				$email->setSubject($sectionEditorSubmission->getArticleTitle());
 				$authorEmail = $authorUser->getEmail();
 				$email->addRecipient($authorEmail, $authorUser->getFullName());
 				if ($journal->getSetting('notifyAllAuthorsOnDecision')) foreach ($sectionEditorSubmission->getAuthors() as $author) {
