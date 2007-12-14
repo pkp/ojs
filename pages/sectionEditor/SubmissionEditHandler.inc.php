@@ -413,10 +413,10 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			}
 		} else {
 			// Display the "create user" form.
-			if ($profileForm->isLocaleResubmit()) {
-				$profileForm->readInputData();
+			if ($createReviewerForm->isLocaleResubmit()) {
+				$createReviewerForm->readInputData();
 			} else {
-				$profileForm->initData();
+				$createReviewerForm->initData();
 			}
 			$createReviewerForm->display();
 		}
