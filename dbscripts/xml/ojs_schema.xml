@@ -66,6 +66,7 @@
 		</field>
 		<field name="primary_locale" type="C2" size="5">
 			<NOTNULL/>
+			<descr>Primary locale for the site.</descr>
 		</field>
 		<field name="min_password_length" type="I1">
 			<NOTNULL/>
@@ -375,7 +376,7 @@
 			<NOTNULL/>
 			<descr>(bool|int|float|string|object)</descr>
 		</field>
-		<descr>Journal settings.</descr>
+		<descr>Plugin settings.</descr>
 		<index name="plugin_settings_plugin_name">
 			<col>plugin_name</col>
 		</index>
@@ -502,6 +503,7 @@
 		<field name="setting_value" type="X"/>
 		<field name="setting_type" type="C2" size="6">
 			<NOTNULL/>
+			<descr>(bool|int|float|string|object)</descr>
 		</field>
 		<descr>Section-specific settings</descr>
 		<index name="section_settings_section_id">
@@ -2055,10 +2057,10 @@
 	</table>
 
 	<!--
-	 *
-	 * TABLE announcement_types 
-	 *
-	 -->
+	  *
+	  * TABLE announcement_types 
+	  *
+	  -->
 	<table name="announcement_types">
 		<field name="type_id" type="I8">
 			<KEY />
@@ -2077,7 +2079,7 @@
 	  *
 	  * TABLE announcement_type_settings
 	  *
-	 -->
+	  -->
 	<table name="announcement_type_settings">
 		<field name="type_id" type="I8">
 			<NOTNULL />
@@ -2248,7 +2250,7 @@
 	  *
 	  * TABLE groups
 	  *
-	 -->
+	  -->
 	<table name="groups">
 		<field name="group_id" type="I8">
 			<KEY />
@@ -2275,7 +2277,7 @@
 	  *
 	  * TABLE group_settings
 	  *
-	 -->
+	  -->
 	<table name="group_settings">
 		<field name="group_id" type="I8">
 			<NOTNULL />

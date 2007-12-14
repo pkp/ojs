@@ -373,6 +373,7 @@
 		</field>
 		<descr>User "mail notifications to my account" flags</descr>
 	</table>
+
 	<!--
 	  *
 	  * TABLE sections
@@ -446,6 +447,7 @@
 		<field name="setting_value" type="X"/>
 		<field name="setting_type" type="C2" size="6">
 			<NOTNULL/>
+			<descr>(bool|int|float|string|object)</descr>
 		</field>
 		<descr>Section-specific settings</descr>
 	</table>
@@ -1661,9 +1663,9 @@
 	</table>
 
 	<!--
-	 *
-	 * TABLE subscriptions
-	 *
+	  *
+	  * TABLE subscriptions
+	  *
 	 -->
 	<table name="subscriptions">
 		<field name="subscription_id" type="I8">
@@ -1714,7 +1716,7 @@
 	  *
 	  * TABLE announcement_type_settings
 	  *
-	 -->
+	  -->
 	<table name="announcement_type_settings">
 		<field name="type_id" type="I8">
 			<NOTNULL />
@@ -1769,7 +1771,7 @@
 	  *
 	  * TABLE announcement_settings
 	  *
-	 -->
+	  -->
 	<table name="announcement_settings">
 		<field name="announcement_id" type="I8">
 			<NOTNULL />
@@ -1896,7 +1898,7 @@
 	  *
 	  * TABLE group_settings
 	  *
-	 -->
+	  -->
 	<table name="group_settings">
 		<field name="group_id" type="I8">
 			<NOTNULL />

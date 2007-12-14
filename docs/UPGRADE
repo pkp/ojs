@@ -63,6 +63,12 @@ use this tool run the following command from your OJS directory:
 
     $ php tools/upgrade.php patch
 
+Note that this will require the GNU patch tool to be installed. GNU patch is
+included in most *NIX distributions, and is available for Windows and Solaris
+as a download. Windows users may need to work around a patch bug by converting
+the line-endings in the patch file from UNIX to DOS; to do this, open the patch
+file in Notepad and save it again.
+
 
 2. CVS
 
