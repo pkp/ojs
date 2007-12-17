@@ -231,7 +231,7 @@ class CmsSettingsForm extends Form {
 		$content = $this->getData('content');
 		$current = $this->getData('current');
 
-		$contentManager->insertContent($content, &$current);
+		$contentManager->insertContent($content, $current);
 		$this->setData('current', $current);	
 
 		$h = array();
