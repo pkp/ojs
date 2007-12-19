@@ -11,14 +11,18 @@
 <div class="separator"></div>
 
 {literal}
-<pre style="font-size: 1.5em;">@article{{{/literal}{$journal->getJournalInitials()|escape}{literal}}{{/literal}{$articleId|escape}{literal}},
-	author = {{/literal}{assign var=authors value=$article->getAuthors()}{foreach from=$authors item=author name=authors key=i}{$author->getLastName()|escape}, {assign var=firstName value=$author->getFirstName()}{assign var=authorCount value=$authors|@count}{$firstName[0]|escape}.{if $i<$authorCount-1}, {/if}{/foreach}{literal}},
+<pre style="font-size: 1.5em;">@article{{/literal}{$journal->getJournalInitials()|escape}{$articleId|escape}{literal},
+	author = {{/literal}{assign var=authors value=$article->getAuthors()}{foreach from=$authors item=author name=authors key=i}{assign var=firstName value=$author->getFirstName()}{assign var=authorCount value=$authors|@count}{$firstName|escape} {$author->getLastName()|escape}{if $i<$authorCount-1} and {/if}{/foreach}{literal}},
 	title = {{/literal}{$article->getArticleTitle()|strip_unsafe_html}{literal}},
 	journal = {{/literal}{$journal->getJournalTitle()|escape}{literal}},
 {/literal}{if $issue}{literal}	volume = {{/literal}{$issue->getVolume()|escape}{literal}},
 	number = {{/literal}{$issue->getNumber()|escape}{literal}},{/literal}{/if}{literal}
 	year = {{/literal}{$article->getDatePublished()|date_format:'%Y'}{literal}},
-{/literal}{assign var=issn value=$journal->getSetting('issn')|escape}{if $issn}{literal}	issn = {{/literal}{$issn}{literal}},{/literal}{/if}
+	keywords = {{/literal}{$article->getArticleSubject()|escape}{literal}},
+	abstract = {{/literal}{$article->getArticleAbstract()|escape}{literal}},
+{/literal}{assign var=onlineIssn value=$journal->getSetting('onlineIssn')|escape}
+{assign var=issn value=$journal->getSetting('issn')|escape}{if $issn}{literal}	issn = {{/literal}{$issn}{literal}},{/literal}
+{elseif $onlineIssn}{literal}	issn = {{/literal}{$onlineIssn}{literal}},{/literal}{/if}
 
 {literal}	url = {{/literal}{$articleUrl}{literal}}
 }
