@@ -171,13 +171,12 @@ class PublishedArticle extends Article {
 	 */
 	function &getLocalizedGalleys() {
 		$primaryLocale = Locale::getPrimaryLocale();
-		$locale = Locale::getLocale();
 
 		$allGalleys =& $this->getData('galleys');
 		$galleys = array();
 		foreach (array(Locale::getLocale(), Locale::getPrimaryLocale()) as $tryLocale) {
 			foreach (array_keys($allGalleys) as $key) {
-				if ($allGalleys[$key]->getLocale() == $locale) {
+				if ($allGalleys[$key]->getLocale() == $tryLocale) {
 					$galleys[] =& $allGalleys[$key];
 				}
 			}
