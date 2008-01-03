@@ -8,7 +8,7 @@
  *
  * $Id$
  *}
-<?xml version="1.0" encoding="{$defaultCharset}"?>
+<?xml version="1.0" encoding="{$defaultCharset|escape}"?>
 <rdf:RDF
 	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 	xmlns="http://purl.org/rss/1.0/"
@@ -44,7 +44,7 @@
 			{assign var="ISSN" value=$journal->getSetting('onlineIssn')}
 		{/if}
 		{if $ISSN}
-		<prism:issn>{$ISSN}</prism:issn>
+		<prism:issn>{$ISSN|escape}</prism:issn>
 		{/if}
 		{if $journal->getLocalizedSetting('copyrightNotice')}
 		<prism:copyright>{$journal->getLocalizedSetting('copyrightNotice')|escape:"html"|strip|strip_tags}</prism:copyright>

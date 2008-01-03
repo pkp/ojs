@@ -102,7 +102,7 @@
 {if $customXSL}
 	<tr valign="top">
 		<td width="10%" class="label">&nbsp;</td>
-		<td width="90%" class="value">{translate key="common.fileName"}: {$customXSL} <input type="submit" name="deleteCustomXSL" value="{translate key="common.delete"}" class="button" /></td>
+		<td width="90%" class="value">{translate key="common.fileName"}: {$customXSL|escape} <input type="submit" name="deleteCustomXSL" value="{translate key="common.delete"}" class="button" /></td>
 	</tr>
 {/if}
 

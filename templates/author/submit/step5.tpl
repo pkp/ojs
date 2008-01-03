@@ -14,7 +14,7 @@
 <p>{translate key="author.submit.confirmationDescription" journalTitle=$journal->getJournalTitle()}</p>
 
 <form method="post" action="{url op="saveSubmit" path=$submitStep}">
-<input type="hidden" name="articleId" value="{$articleId}" />
+<input type="hidden" name="articleId" value="{$articleId|escape}" />
 {include file="common/formErrors.tpl"}
 
 <h3>{translate key="author.submit.filesSummary"}</h3>

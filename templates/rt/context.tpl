@@ -41,7 +41,7 @@
 		var newAction = searchForm.action;
 		newAction = newAction.replace(/{\$formKeywords}/g, termsGet);
 		{/literal}{foreach from=$searchParams item=param}{literal}
-		newAction = newAction.replace(/{\${/literal}{$param}{literal}}/g, document.additionalParams.{/literal}{$param}{literal}.value.replace(/ /g,'+'));
+		newAction = newAction.replace(/{\${/literal}{$param|escape}{literal}}/g, document.additionalParams.{/literal}{$param|escape}{literal}.value.replace(/ /g,'+'));
 		{/literal}{/foreach}{literal}
 		searchForm.action = newAction;
 
@@ -51,7 +51,7 @@
 			if (elements[i].type=='hidden') {
 				elements[i].value = elements[i].value.replace(/{\$formKeywords}/g, termsPost);
 				{/literal}{foreach from=$searchParams item=param}{literal}
-				elements[i].value = elements[i].value.replace(/{\${/literal}{$param}{literal}}/g, document.additionalParams.{/literal}{$param}{literal}.value);
+				elements[i].value = elements[i].value.replace(/{\${/literal}{$param|escape}{literal}}/g, document.additionalParams.{/literal}{$param|escape}{literal}.value);
 				{/literal}{/foreach}{literal}
 			}
 		}
@@ -78,7 +78,7 @@
 	{if $context->getDefineTerms()}
 		<tr valign="top">
 			<td width="20%" class="label">{translate key="rt.context.termToDefine"}</td>
-			<td width="80%" class="value"><input name="searchTerm" value="{$defineTerm}" length="40" class="textField" />
+			<td width="80%" class="value"><input name="searchTerm" value="{$defineTerm|escape}" length="40" class="textField" />
 		</tr>
 	{elseif $context->getAuthorTerms() || $context->getCitedBy()}
 		{foreach from=$article->getAuthors() item=author key=key}
@@ -94,7 +94,7 @@
 	{elseif $context->getGeoTerms()}
 		<tr valign="top">
 			<td width="20%" class="label">{translate key="rt.context.termToDefine"}</td>
-			<td width="80%" class="value"><input name="searchTerm" value="{$coverageGeo}" length="40" class="textField" />
+			<td width="80%" class="value"><input name="searchTerm" value="{$coverageGeo|escape}" length="40" class="textField" />
 		</tr>
 	{else}
 		<tr valign="top">
@@ -121,7 +121,7 @@
 				{/if}
 			</td>
 			<td width="80%" class="value">
-					<input name="{$paramKey}" value="{$value|escape}" length="40" class="textField" />
+					<input name="{$paramKey|escape}" value="{$value|escape}" length="40" class="textField" />
 			</td>
 	{/foreach}
 	</form>

@@ -32,7 +32,7 @@
 	{assign var="proofAssignment" value=$submission->getProofAssignment()}
 
 	<tr valign="top" {if $submission->getFastTracked()} class="fastTracked"{/if}>
-		<td>{$articleId}</td>
+		<td>{$articleId|escape}</td>
 		<td>{$submission->getDateSubmitted()|date_format:$dateFormatShort}</td>
 		<td>{$submission->getSectionAbbrev()|escape}</td>
 		<td>{$submission->getAuthorString(true)|truncate:40:"..."|escape}</td>

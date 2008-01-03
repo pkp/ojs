@@ -20,7 +20,7 @@
 
 <form method="post" action="{plugin_url path="update"}">
 {if $thesisId}
-<input type="hidden" name="thesisId" value="{$thesisId}" />
+<input type="hidden" name="thesisId" value="{$thesisId|escape}" />
 {/if}
 
 {include file="common/formErrors.tpl"}

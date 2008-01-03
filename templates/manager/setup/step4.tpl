@@ -362,7 +362,7 @@ function setRegAllowOpts(form) {
 	<tr valign="top">
 		<td width="20%" class="label"><a href="{url op="downloadLayoutTemplate" path=$templateId}" class="action">{$template.filename|escape}</a></td>
 		<td width="50%" class="value">{$template.title|escape}</td>
-		<td width="30%"><input type="submit" name="delTemplate[{$templateId}]" value="{translate key="common.delete"}" class="button" /></td>
+		<td width="30%"><input type="submit" name="delTemplate[{$templateId|escape}]" value="{translate key="common.delete"}" class="button" /></td>
 {/foreach}
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="template-title" key="manager.setup.layoutTemplates.title"}</td>

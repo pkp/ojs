@@ -21,7 +21,7 @@
 	<td width="80%" class="value">
 		<select name="primaryLocale" id="primaryLocale" size="1" class="selectMenu">
 		{foreach from=$installedLocales item=localeKey}
-			<option value="{$localeKey}"{if $localeKey == $primaryLocale} selected="selected"{/if}>{$localeNames.$localeKey|escape}</option>
+			<option value="{$localeKey|escape}"{if $localeKey == $primaryLocale} selected="selected"{/if}>{$localeNames.$localeKey|escape}</option>
 		{/foreach}
 		</select>
 		<br />
@@ -34,8 +34,8 @@
 		<table width="100%">
 		{foreach from=$installedLocales item=localeKey}
 		<tr valign="top">
-			<td width="5%"><input type="checkbox" name="supportedLocales[]" id="supportedLocales-{$localeKey}" value="{$localeKey}"{if in_array($localeKey, $supportedLocales)} checked="checked"{/if} /></td>
-			<td width="95%"><label for="supportedLocales-{$localeKey}">{$localeNames.$localeKey|escape}</label></td>
+			<td width="5%"><input type="checkbox" name="supportedLocales[]" id="supportedLocales-{$localeKey|escape}" value="{$localeKey|escape}"{if in_array($localeKey, $supportedLocales)} checked="checked"{/if} /></td>
+			<td width="95%"><label for="supportedLocales-{$localeKey|escape}">{$localeNames.$localeKey|escape}</label></td>
 		</tr>
 		{/foreach}
 		</table>
@@ -57,7 +57,7 @@
 <table class="data" width="100%">
 {foreach from=$installedLocales item=localeKey}
 <tr valign="top">
-	<td width="30%">&bull;&nbsp;{$localeNames.$localeKey|escape} ({$localeKey})</td>
+	<td width="30%">&bull;&nbsp;{$localeNames.$localeKey|escape} ({$localeKey|escape})</td>
 	<td width="70%"><a href="{url op="reloadLocale" locale=$localeKey}" onclick="return confirm('{translate|escape:"jsparam" key="admin.languages.confirmReload"}')" class="action">{translate key="admin.languages.reload"}</a>{if $localeKey != $primaryLocale} <a href="{url op="uninstallLocale" locale=$localeKey}" onclick="return confirm('{translate|escape:"jsparam" key="admin.languages.confirmUninstall"}')" class="action">{translate key="admin.languages.uninstall"}</a>{/if}</td>
 </tr>
 {/foreach}
@@ -66,7 +66,7 @@
 <h4>{translate key="admin.languages.installNewLocales"}</h4>
 <p>{translate key="admin.languages.installNewLocalesInstructions"}</p>
 {foreach from=$uninstalledLocales item=localeKey}
-<input type="checkbox" name="installLocale[]" id="installLocale-{$localeKey}" value="{$localeKey}" /> <label for="installLocale-{$localeKey}">{$localeNames.$localeKey|escape} ({$localeKey})</label><br />
+<input type="checkbox" name="installLocale[]" id="installLocale-{$localeKey|escape}" value="{$localeKey|escape}" /> <label for="installLocale-{$localeKey|escape}">{$localeNames.$localeKey|escape} ({$localeKey|escape})</label><br />
 {foreachelse}
 {assign var="noLocalesToInstall" value="1"}
 <span class="nodata">{translate key="admin.languages.noLocalesAvailable"}</span>

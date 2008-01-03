@@ -23,7 +23,7 @@
 <table width="100%" class="data">
 <tr valign="top">
 	<td width="50%" class="label">{fieldLabel name="months" required="true" key="plugins.generic.cmsrss.months"}</td>
-	<td width="50%" class="value"><input type="text" class="textField" name="months" id="months" value="{$months}" size="5" maxlength="5" /></td>
+	<td width="50%" class="value"><input type="text" class="textField" name="months" id="months" value="{$months|escape}" size="5" maxlength="5" /></td>
 </tr>
 <tr valign="top">
 	<td width="50%" class="label">{fieldLabel name="aggregate" required="true" key="plugins.generic.cmsrss.aggregate"}</td>

@@ -23,7 +23,7 @@
 	<td width="20%" class="label">{fieldLabel name="primaryLocale" required="true" key="locale.primary"}</td>
 	<td width="80%" colspan="2" class="value"><select id="primaryLocale" name="primaryLocale" size="1" class="selectMenu">
 	{foreach from=$availableLocales key=localeKey item=localeName}
-		<option value="{$localeKey}"{if $localeKey == $primaryLocale} selected="selected"{/if}>{$localeName|escape}</option>
+		<option value="{$localeKey|escape}"{if $localeKey == $primaryLocale} selected="selected"{/if}>{$localeName|escape}</option>
 	{/foreach}
 	</select></td>
 </tr>
@@ -34,7 +34,7 @@
 <tr valign="top">
 	<td class="label">{fieldLabel suppressId="true" name="supportedLocales" key="locale.supported"}</td>
 	<td colspan="2" class="value">{foreach from=$availableLocales key=localeKey item=localeName}
-		<input type="checkbox" name="supportedLocales[]" id="supportedLocales-{$localeKey}" value="{$localeKey}"{if in_array($localeKey, $supportedLocales)} checked="checked"{/if}/> <label for="supportedLocales-{$localeKey}">{$localeName|escape}</label><br />
+		<input type="checkbox" name="supportedLocales[]" id="supportedLocales-{$localeKey|escape}" value="{$localeKey|escape}"{if in_array($localeKey, $supportedLocales)} checked="checked"{/if}/> <label for="supportedLocales-{$localeKey|escape}">{$localeName|escape}</label><br />
 	{/foreach}</td>
 </tr>
 <tr valign="top">

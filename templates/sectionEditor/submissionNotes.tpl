@@ -100,7 +100,7 @@
 {elseif $noteViewType == "add"}
 	<h3>{translate key="submission.notes.addNewNote"}</h3>
 	<form name="addNote" method="post" action="{url op="addSubmissionNote"}" enctype="multipart/form-data">
-	<input type="hidden" name="articleId" value="{$articleId}" />
+	<input type="hidden" name="articleId" value="{$articleId|escape}" />
 	<table width="100%" class="data">
 	<tr valign="top">
 		<td class="label" width="20%">{translate key="common.title"}</td>

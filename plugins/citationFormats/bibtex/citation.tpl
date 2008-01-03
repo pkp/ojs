@@ -21,8 +21,8 @@
 	keywords = {{/literal}{$article->getArticleSubject()|escape}{literal}},
 	abstract = {{/literal}{$article->getArticleAbstract()|escape}{literal}},
 {/literal}{assign var=onlineIssn value=$journal->getSetting('onlineIssn')|escape}
-{assign var=issn value=$journal->getSetting('issn')|escape}{if $issn}{literal}	issn = {{/literal}{$issn}{literal}},{/literal}
-{elseif $onlineIssn}{literal}	issn = {{/literal}{$onlineIssn}{literal}},{/literal}{/if}
+{assign var=issn value=$journal->getSetting('issn')|escape}{if $issn}{literal}	issn = {{/literal}{$issn|escape}{literal}},{/literal}
+{elseif $onlineIssn}{literal}	issn = {{/literal}{$onlineIssn|escape}{literal}},{/literal}{/if}
 
 {literal}	url = {{/literal}{$articleUrl}{literal}}
 }

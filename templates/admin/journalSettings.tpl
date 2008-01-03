@@ -31,7 +31,7 @@ function doSubmit() {
 <form name="journal" method="post" action="{url op="updateJournal"}">
 <input type="hidden" name="submitted" value="0" />
 {if $journalId}
-<input type="hidden" name="journalId" value="{$journalId}" />
+<input type="hidden" name="journalId" value="{$journalId|escape}" />
 {/if}
 
 {include file="common/formErrors.tpl"}

@@ -55,7 +55,7 @@
 
 <table width="100%" class="listing">
 	<tr>
-		<td colspan="{$numCols}" class="headseparator">&nbsp;</td>
+		<td colspan="{$numCols|escape}" class="headseparator">&nbsp;</td>
 	</tr>
 	<tr class="heading" valign="bottom">
 		<td width="10%" colspan="2">{translate key="editor.issues.order"}</td>
@@ -68,7 +68,7 @@
 		<td width="5%">{translate key="editor.issues.proofed"}</td>
 	</tr>
 	<tr>
-		<td colspan="{$numCols}" class="headseparator">&nbsp;</td>
+		<td colspan="{$numCols|escape}" class="headseparator">&nbsp;</td>
 	</tr>
 
 	{assign var="articleSeq" value=0}
@@ -77,7 +77,7 @@
 	{assign var="articleSeq" value=$articleSeq+1}
 	{assign var="articleId" value=$article->getArticleID()}
 	<tr>
-		<td>{$articleSeq}.</td>
+		<td>{$articleSeq|escape}.</td>
 		<td><a href="{url op="moveArticleToc" path=$issueId d=u sectionId=$section[0] pubId=$article->getPubId()}" class="plain">&uarr;</a>&nbsp;<a href="{url op="moveArticleToc" path=$issueId d=d sectionId=$section[0] pubId=$article->getPubId()}" class="plain">&darr;</a></td>
 		<td>
 			{foreach from=$article->getAuthors() item=author name=authorList}
@@ -102,7 +102,7 @@
 		</td>
 	</tr>
 	<tr>
-		<td colspan="{$numCols}" class="{if $smarty.foreach.currSection.last}end{/if}separator">&nbsp;</td>
+		<td colspan="{$numCols|escape}" class="{if $smarty.foreach.currSection.last}end{/if}separator">&nbsp;</td>
 	</tr>
 
 	{/foreach}

@@ -46,11 +46,11 @@
 
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="subject-$localeKey" key="email.subject"}</td>
-		<td width="80%" class="value"><input type="text" name="subject[{$localeKey}]" id="subject-{$localeKey}" value="{$subject.$localeKey|escape}" size="70" maxlength="120" class="textField" /></td>
+		<td width="80%" class="value"><input type="text" name="subject[{$localeKey|escape}]" id="subject-{$localeKey|escape}" value="{$subject.$localeKey|escape}" size="70" maxlength="120" class="textField" /></td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{fieldLabel name="body-$localeKey" key="email.body"}</td>
-		<td class="value"><textarea name="body[{$localeKey}]" id="body-{$localeKey}" cols="70" rows="20" class="textArea">{$body.$localeKey|escape}</textarea></td>
+		<td class="value"><textarea name="body[{$localeKey|escape}]" id="body-{$localeKey|escape}" cols="70" rows="20" class="textArea">{$body.$localeKey|escape}</textarea></td>
 	</tr>
 {foreachelse}
 <tr valign="top"><td colspan="2">
@@ -59,11 +59,11 @@
 
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="subject-$currentLocale" key="email.subject"}</td>
-		<td width="80%" class="value"><input type="text" name="subject[{$currentLocale}]" id="subject-{$currentLocale}" value="{$subject.$currentLocale|escape}" size="70" maxlength="120" class="textField" /></td>
+		<td width="80%" class="value"><input type="text" name="subject[{$currentLocale|escape}]" id="subject-{$currentLocale|escape}" value="{$subject.$currentLocale|escape}" size="70" maxlength="120" class="textField" /></td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{fieldLabel name="body-$currentLocale" key="email.body"}</td>
-		<td class="value"><textarea name="body[{$currentLocale}]" id="body-{$currentLocale}" cols="70" rows="20" class="textArea">{$body.$currentLocale|escape}</textarea></td>
+		<td class="value"><textarea name="body[{$currentLocale|escape}]" id="body-{$currentLocale|escape}" cols="70" rows="20" class="textArea">{$body.$currentLocale|escape}</textarea></td>
 	</tr>
 {/foreach}
 </table>

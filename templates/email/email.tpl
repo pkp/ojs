@@ -125,7 +125,7 @@ function deleteAttachment(fileId) {
 		{assign var=attachmentNum value=1}
 		{foreach from=$persistAttachments item=temporaryFile}
 			{if is_object($temporaryFile)}
-				{$attachmentNum}.&nbsp;{$temporaryFile->getOriginalFileName()|escape}&nbsp;
+				{$attachmentNum|escape}.&nbsp;{$temporaryFile->getOriginalFileName()|escape}&nbsp;
 				({$temporaryFile->getNiceFileSize()})&nbsp;
 				<a href="javascript:deleteAttachment({$temporaryFile->getFileId()})" class="action">{translate key="common.delete"}</a>
 				<br/>

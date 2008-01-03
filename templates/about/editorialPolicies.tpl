@@ -113,7 +113,7 @@
 
 {foreach key=key from=$currentJournal->getLocalizedSetting('customAboutItems') item=customAboutItem name=customAboutItems}
 	{if !empty($customAboutItem.title)}
-		<a name="custom{$key}"></a><h3>{$customAboutItem.title|escape}</h3>
+		<a name="custom{$key|escape}"></a><h3>{$customAboutItem.title|escape}</h3>
 		<p>{$customAboutItem.content|nl2br}</p>
 		{if !$smarty.foreach.customAboutItems.last}<div class="separator">&nbsp;</div>{/if}
 	{/if}

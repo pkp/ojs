@@ -55,7 +55,7 @@
 {iterate from=submissions item=submission}
 	{assign var="articleId" value=$submission->getArticleId()}
 	<tr valign="top">
-		<td>{$articleId}</td>
+		<td>{$articleId|escape}</td>
 		<td>{$submission->getDateNotified()|date_format:$dateFormatTrunc}</td>
 		<td>{$submission->getSectionAbbrev()|escape}</td>
 		<td>{$submission->getAuthorString(true)|truncate:40:"..."|escape}</td>

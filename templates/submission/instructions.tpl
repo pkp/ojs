@@ -13,7 +13,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<title>{translate key=$pageTitle}</title>
-	<meta http-equiv="Content-Type" content="text/html; charset={$defaultCharset}" />
+	<meta http-equiv="Content-Type" content="text/html; charset={$defaultCharset|escape}" />
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
 

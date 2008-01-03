@@ -21,7 +21,7 @@
 
 <form method="post" action="{url op="updateSubscription"}">
 {if $subscriptionId}
-<input type="hidden" name="subscriptionId" value="{$subscriptionId}" />
+<input type="hidden" name="subscriptionId" value="{$subscriptionId|escape}" />
 {/if}
 
 {include file="common/formErrors.tpl"}

@@ -15,10 +15,10 @@
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset={$defaultCharset}" />
+	<meta http-equiv="Content-Type" content="text/html; charset={$defaultCharset|escape}" />
 	<title>{$pageTitleTranslated}</title>
-	<meta name="description" content="{$metaSearchDescription}" />
-	<meta name="keywords" content="{$metaSearchKeywords}" />
+	<meta name="description" content="{$metaSearchDescription|escape}" />
+	<meta name="keywords" content="{$metaSearchKeywords|escape}" />
 	{$metaCustomHeaders}
 
 	<link rel="stylesheet" href="{$baseUrl}/styles/common.css" type="text/css" />

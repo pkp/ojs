@@ -194,11 +194,11 @@
 {foreach name=sponsors from=$sponsors key=sponsorId item=sponsor}
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="sponsors-$sponsorId-institution" key="manager.setup.institution"}</td>
-		<td width="80%" class="value"><input type="text" name="sponsors[{$sponsorId}][institution]" id="sponsors-{$sponsorId}-institution" value="{$sponsor.institution|escape}" size="40" maxlength="90" class="textField" />{if $smarty.foreach.sponsors.total > 1} <input type="submit" name="delSponsor[{$sponsorId}]" value="{translate key="common.delete"}" class="button" />{/if}</td>
+		<td width="80%" class="value"><input type="text" name="sponsors[{$sponsorId|escape}][institution]" id="sponsors-{$sponsorId|escape}-institution" value="{$sponsor.institution|escape}" size="40" maxlength="90" class="textField" />{if $smarty.foreach.sponsors.total > 1} <input type="submit" name="delSponsor[{$sponsorId|escape}]" value="{translate key="common.delete"}" class="button" />{/if}</td>
 	</tr>
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="sponsors-$sponsorId-url" key="common.url"}</td>
-		<td width="80%" class="value"><input type="text" name="sponsors[{$sponsorId}][url]" id="sponsors-{$sponsorId}-url" value="{$sponsor.url|escape}" size="40" maxlength="255" class="textField" /></td>
+		<td width="80%" class="value"><input type="text" name="sponsors[{$sponsorId|escape}][url]" id="sponsors-{$sponsorId|escape}-url" value="{$sponsor.url|escape}" size="40" maxlength="255" class="textField" /></td>
 	</tr>
 	{if !$smarty.foreach.sponsors.last}
 	<tr valign="top">
@@ -235,11 +235,11 @@
 {foreach name=contributors from=$contributors key=contributorId item=contributor}
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="contributors-$contributorId-name" key="manager.setup.contributor"}</td>
-		<td width="80%" class="value"><input type="text" name="contributors[{$contributorId}][name]" id="contributors-{$contributorId}-name" value="{$contributor.name|escape}" size="40" maxlength="90" class="textField" />{if $smarty.foreach.contributors.total > 1} <input type="submit" name="delContributor[{$contributorId}]" value="{translate key="common.delete"}" class="button" />{/if}</td>
+		<td width="80%" class="value"><input type="text" name="contributors[{$contributorId|escape}][name]" id="contributors-{$contributorId|escape}-name" value="{$contributor.name|escape}" size="40" maxlength="90" class="textField" />{if $smarty.foreach.contributors.total > 1} <input type="submit" name="delContributor[{$contributorId|escape}]" value="{translate key="common.delete"}" class="button" />{/if}</td>
 	</tr>
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="contributors-$contributorId-url" key="common.url"}</td>
-		<td width="80%" class="value"><input type="text" name="contributors[{$contributorId}][url]" id="contributors-{$contributorId}-url" value="{$contributor.url|escape}" size="40" maxlength="255" class="textField" /></td>
+		<td width="80%" class="value"><input type="text" name="contributors[{$contributorId|escape}][url]" id="contributors-{$contributorId|escape}-url" value="{$contributor.url|escape}" size="40" maxlength="255" class="textField" /></td>
 	</tr>
 	{if !$smarty.foreach.contributors.last}
 	<tr valign="top">

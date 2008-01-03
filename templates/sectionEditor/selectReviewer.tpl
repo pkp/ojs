@@ -23,7 +23,7 @@
 	<input type="text" size="10" name="search" class="textField" value="{$search|escape}" />&nbsp;<input type="submit" value="{translate key="common.search"}" class="button" />
 </form>
 
-<p>{foreach from=$alphaList item=letter}<a href="{url op="selectReviewer" path=$articleId searchInitial=$letter}">{if $letter == $searchInitial}<strong>{$letter}</strong>{else}{$letter}{/if}</a> {/foreach}<a href="{url op="selectReviewer" path=$articleId}">{if $searchInitial==''}<strong>{translate key="common.all"}</strong>{else}{translate key="common.all"}{/if}</a></p>
+<p>{foreach from=$alphaList item=letter}<a href="{url op="selectReviewer" path=$articleId searchInitial=$letter}">{if $letter == $searchInitial}<strong>{$letter|escape}</strong>{else}{$letter|escape}{/if}</a> {/foreach}<a href="{url op="selectReviewer" path=$articleId}">{if $searchInitial==''}<strong>{translate key="common.all"}</strong>{else}{translate key="common.all"}{/if}</a></p>
 
 <p><a class="action" href="{url op="enrollSearch" path=$articleId}">{translate key="sectionEditor.review.enrollReviewer"}</a>&nbsp;|&nbsp;<a class="action" href="{url op="createReviewer" path=$articleId}">{translate key="sectionEditor.review.createReviewer"}</a>{foreach from=$reviewerDatabaseLinks item="link"}{if !empty($link.title) && !empty($link.url)}&nbsp;|&nbsp;<a href="{$link.url|escape}" target="_new" class="action">{$link.title|escape}</a>{/if}{/foreach}</p>
 
@@ -34,7 +34,7 @@
 {if $rateReviewerOnQuality}
 	{assign var=numCols value=$numCols+1}
 {/if}
-<tr><td colspan="{$numCols}" class="headseparator">&nbsp;</td></tr>
+<tr><td colspan="{$numCols|escape}" class="headseparator">&nbsp;</td></tr>
 <tr class="heading" valign="bottom">
 	<td width="20%">{translate key="user.name"}</td>
 	<td>{translate key="user.interests"}</td>
@@ -47,7 +47,7 @@
 	<td width="5%">{translate key="common.active"}</td>
 	<td width="7%" class="heading">{translate key="common.action"}</td>
 </tr>
-<tr><td colspan="{$numCols}" class="headseparator">&nbsp;</td></tr>
+<tr><td colspan="{$numCols|escape}" class="headseparator">&nbsp;</td></tr>
 {iterate from=reviewers item=reviewer}
 {assign var="userId" value=$reviewer->getUserId()}
 {assign var="qualityCount" value=$averageQualityRatings[$userId].count}
@@ -86,13 +86,13 @@
 		{/if}
 	</td>
 </tr>
-<tr><td colspan="{$numCols}" class="{if $reviewers->eof()}end{/if}separator">&nbsp;</td></tr>
+<tr><td colspan="{$numCols|escape}" class="{if $reviewers->eof()}end{/if}separator">&nbsp;</td></tr>
 {/iterate}
 {if $reviewers->wasEmpty()}
 <tr>
-<td colspan="{$numCols}" class="nodata">{translate key="manager.people.noneEnrolled"}</td>
+<td colspan="{$numCols|escape}" class="nodata">{translate key="manager.people.noneEnrolled"}</td>
 </tr>
-<tr><td colspan="{$numCols}" class="endseparator">&nbsp;</td></tr>
+<tr><td colspan="{$numCols|escape}" class="endseparator">&nbsp;</td></tr>
 {else}
 	<tr>
 		<td colspan="2" align="left">{page_info iterator=$reviewers}</td>

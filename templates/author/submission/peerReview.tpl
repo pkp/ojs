@@ -67,7 +67,7 @@
 				{foreach from=$reviewerFiles item=viewableFile key=reviewId}
 					{assign var="roundIndex" value=$reviewIndexesByRound[$round][$reviewId]}
 					{assign var=thisReviewer value=$start+$roundIndex|chr}
-					{translate key="user.role.reviewer"} {$thisReviewer}
+					{translate key="user.role.reviewer"} {$thisReviewer|escape}
 					<a href="{url op="downloadFile" path=$submission->getArticleId()|to_array:$viewableFile->getFileId():$viewableFile->getRevision()}" class="file">{$viewableFile->getFileName()|escape}</a>&nbsp;&nbsp;{$viewableFile->getDateModified()|date_format:$dateFormatShort}<br />
 				{/foreach}
 			{foreachelse}

@@ -37,7 +37,7 @@
 						<a href="{url op="view" path="index"|to_array:"topic":"000000"}">{translate key="navigation.home"}</a>
 						{foreach name=breadcrumbs from=$result.toc->getBreadcrumbs() item=breadcrumb key=key}
 							{if $breadcrumb != $result.topic->getId()}
-							 &gt; <a href="{url op="view" path=$breadcrumb|explode:"/"}">{$key}</a>
+							 &gt; <a href="{url op="view" path=$breadcrumb|explode:"/"}">{$key|escape}</a>
 							{/if}
 						{/foreach}
 						{if $result.topic->getId() != "index/topic/000000"}

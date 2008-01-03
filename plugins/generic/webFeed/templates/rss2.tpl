@@ -8,7 +8,7 @@
  *
  * $Id$
  *}
-<?xml version="1.0" encoding="{$defaultCharset}"?>
+<?xml version="1.0" encoding="{$defaultCharset|escape}"?>
 <rss version="2.0">
 	<channel>
 		{* required elements *}
@@ -38,7 +38,7 @@
 		{* <lastBuildDate/> *}
 		{* <category/> *}
 		{* <creativeCommons:license/> *}
-		<generator>OJS {$ojsVersion}</generator>
+		<generator>OJS {$ojsVersion|escape}</generator>
 		<docs>http://blogs.law.harvard.edu/tech/rss</docs>
 		<ttl>60</ttl>
 

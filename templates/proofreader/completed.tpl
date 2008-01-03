@@ -57,7 +57,7 @@
 	{assign var="proofAssignment" value=$submission->getProofAssignment()}
 
 	<tr valign="top">
-		<td>{$articleId}</td>
+		<td>{$articleId|escape}</td>
 		<td>{$proofAssignment->getDateProofreaderNotified()|date_format:$dateFormatTrunc}</td>
 		<td>{$submission->getSectionAbbrev()|escape}</td>
 		<td>{$submission->getAuthorString(true)|truncate:40:"..."|escape}</td>

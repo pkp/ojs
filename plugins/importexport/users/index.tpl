@@ -21,7 +21,7 @@
 			&#187; {translate key="plugins.importexport.users.export.exportByRole"}<br/>
 			&nbsp;&nbsp;&nbsp;&nbsp;<select name="roles[]" size="5" multiple="multiple" class="selectMenu">
 				{foreach from=$roleOptions item=roleOption key=roleKey}
-					{if $roleKey != ''}<option value="{$roleKey}">{translate key=$roleOption}</option>{/if}
+					{if $roleKey != ''}<option value="{$roleKey|escape}">{translate key=$roleOption}</option>{/if}
 				{/foreach}
 			</select><br/>
 			&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" class="button" value="{translate key="plugins.importexport.users.export.exportUsers"}"/>

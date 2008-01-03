@@ -16,7 +16,7 @@
 <div class="separator"></div>
 
 <form name="submit" method="post" action="{url op="saveSubmit" path=$submitStep}">
-<input type="hidden" name="articleId" value="{$articleId}" />
+<input type="hidden" name="articleId" value="{$articleId|escape}" />
 {include file="common/formErrors.tpl"}
 
 {literal}
@@ -44,11 +44,11 @@ function moveAuthor(dir, authorIndex) {
 			{foreach from=$authors key=authorIndex item=author}
 				{if $currentJournal->getSetting('requireAuthorCompetingInterests')}
 					{foreach from=$author.competingInterests key="thisLocale" item="thisCompetingInterests"}
-						{if $thisLocale != $formLocale}<input type="hidden" name="authors[{$authorIndex}][competingInterests][{$thisLocale|escape}]" value="{$thisCompetingInterests|escape}" />{/if}
+						{if $thisLocale != $formLocale}<input type="hidden" name="authors[{$authorIndex|escape}][competingInterests][{$thisLocale|escape}]" value="{$thisCompetingInterests|escape}" />{/if}
 					{/foreach}
 				{/if}
 				{foreach from=$author.biography key="thisLocale" item="thisBiography"}
-					{if $thisLocale != $formLocale}<input type="hidden" name="authors[{$authorIndex}][biography][{$thisLocale|escape}]" value="{$thisBiography|escape}" />{/if}
+					{if $thisLocale != $formLocale}<input type="hidden" name="authors[{$authorIndex|escape}][biography][{$thisLocale|escape}]" value="{$thisBiography|escape}" />{/if}
 				{/foreach}
 			{/foreach}
 			{form_language_chooser form="submit" url=$submitFormUrl}
@@ -65,33 +65,33 @@ function moveAuthor(dir, authorIndex) {
 <input type="hidden" name="moveAuthorIndex" value="" />
 
 {foreach name=authors from=$authors key=authorIndex item=author}
-<input type="hidden" name="authors[{$authorIndex}][authorId]" value="{$author.authorId|escape}" />
-<input type="hidden" name="authors[{$authorIndex}][seq]" value="{$authorIndex+1}" />
+<input type="hidden" name="authors[{$authorIndex|escape}][authorId]" value="{$author.authorId|escape}" />
+<input type="hidden" name="authors[{$authorIndex|escape}][seq]" value="{$authorIndex+1}" />
 {if $smarty.foreach.authors.total <= 1}
-<input type="hidden" name="primaryContact" value="{$authorIndex}" />
+<input type="hidden" name="primaryContact" value="{$authorIndex|escape}" />
 {/if}
 
 <table width="100%" class="data">
 <tr valign="top">
 	<td width="20%" class="label">{fieldLabel name="authors-$authorIndex-firstName" required="true" key="user.firstName"}</td>
-	<td width="80%" class="value"><input type="text" class="textField" name="authors[{$authorIndex}][firstName]" id="authors-{$authorIndex}-firstName" value="{$author.firstName|escape}" size="20" maxlength="40" /></td>
+	<td width="80%" class="value"><input type="text" class="textField" name="authors[{$authorIndex|escape}][firstName]" id="authors-{$authorIndex|escape}-firstName" value="{$author.firstName|escape}" size="20" maxlength="40" /></td>
 </tr>
 <tr valign="top">
 	<td width="20%" class="label">{fieldLabel name="authors-$authorIndex-middleName" key="user.middleName"}</td>
-	<td width="80%" class="value"><input type="text" class="textField" name="authors[{$authorIndex}][middleName]" id="authors-{$authorIndex}-middleName" value="{$author.middleName|escape}" size="20" maxlength="40" /></td>
+	<td width="80%" class="value"><input type="text" class="textField" name="authors[{$authorIndex|escape}][middleName]" id="authors-{$authorIndex|escape}-middleName" value="{$author.middleName|escape}" size="20" maxlength="40" /></td>
 </tr>
 <tr valign="top">
 	<td width="20%" class="label">{fieldLabel name="authors-$authorIndex-lastName" required="true" key="user.lastName"}</td>
-	<td width="80%" class="value"><input type="text" class="textField" name="authors[{$authorIndex}][lastName]" id="authors-{$authorIndex}-lastName" value="{$author.lastName|escape}" size="20" maxlength="90" /></td>
+	<td width="80%" class="value"><input type="text" class="textField" name="authors[{$authorIndex|escape}][lastName]" id="authors-{$authorIndex|escape}-lastName" value="{$author.lastName|escape}" size="20" maxlength="90" /></td>
 </tr>
 <tr valign="top">
 	<td width="20%" class="label">{fieldLabel name="authors-$authorIndex-affiliation" key="user.affiliation"}</td>
-	<td width="80%" class="value"><input type="text" class="textField" name="authors[{$authorIndex}][affiliation]" id="authors-{$authorIndex}-affiliation" value="{$author.affiliation|escape}" size="30" maxlength="255"/></td>
+	<td width="80%" class="value"><input type="text" class="textField" name="authors[{$authorIndex|escape}][affiliation]" id="authors-{$authorIndex|escape}-affiliation" value="{$author.affiliation|escape}" size="30" maxlength="255"/></td>
 </tr>
 <tr valign="top">
 	<td width="20%" class="label">{fieldLabel name="authors-$authorIndex-country" key="common.country"}</td>
 	<td width="80%" class="value">
-		<select name="authors[{$authorIndex}][country]" id="authors-{$authorIndex}-country" class="selectMenu">
+		<select name="authors[{$authorIndex|escape}][country]" id="authors-{$authorIndex|escape}-country" class="selectMenu">
 			<option value=""></option>
 			{html_options options=$countries selected=$author.country}
 		</select>
@@ -99,31 +99,31 @@ function moveAuthor(dir, authorIndex) {
 </tr>
 <tr valign="top">
 	<td width="20%" class="label">{fieldLabel name="authors-$authorIndex-email" required="true" key="user.email"}</td>
-	<td width="80%" class="value"><input type="text" class="textField" name="authors[{$authorIndex}][email]" id="authors-{$authorIndex}-email" value="{$author.email|escape}" size="30" maxlength="90" /></td>
+	<td width="80%" class="value"><input type="text" class="textField" name="authors[{$authorIndex|escape}][email]" id="authors-{$authorIndex|escape}-email" value="{$author.email|escape}" size="30" maxlength="90" /></td>
 </tr>
 <tr valign="top">
 	<td class="label">{fieldLabel name="authors-$authorIndex-url" key="user.url"}</td>
-	<td class="value"><input type="text" name="authors[{$authorIndex}][url]" id="authors-{$authorIndex}-url" value="{$author.url|escape}" size="30" maxlength="90" class="textField" /></td>
+	<td class="value"><input type="text" name="authors[{$authorIndex|escape}][url]" id="authors-{$authorIndex|escape}-url" value="{$author.url|escape}" size="30" maxlength="90" class="textField" /></td>
 </tr>
 {if $currentJournal->getSetting('requireAuthorCompetingInterests')}
 	<tr valign="top">
 		<td width="20%" class="label">{fieldLabel name="authors-$authorIndex-competingInterests" key="author.competingInterests" competingInterestGuidelinesUrl=$competingInterestGuidelinesUrl}</td>
-		<td width="80%" class="value"><textarea name="authors[{$authorIndex}][competingInterests][{$formLocale|escape}]" class="textArea" id="authors-{$authorIndex}-competingInterests" rows="5" cols="40">{$author.competingInterests[$formLocale]|escape}</textarea></td>
+		<td width="80%" class="value"><textarea name="authors[{$authorIndex|escape}][competingInterests][{$formLocale|escape}]" class="textArea" id="authors-{$authorIndex|escape}-competingInterests" rows="5" cols="40">{$author.competingInterests[$formLocale]|escape}</textarea></td>
 	</tr>
 {/if}{* requireAuthorCompetingInterests *}
 <tr valign="top">
 	<td width="20%" class="label">{fieldLabel name="authors-$authorIndex-biography" key="user.biography"}<br />{translate key="user.biography.description"}</td>
-	<td width="80%" class="value"><textarea name="authors[{$authorIndex}][biography][{$formLocale|escape}]" class="textArea" id="authors-{$authorIndex}-biography" rows="5" cols="40">{$author.biography[$formLocale]|escape}</textarea></td>
+	<td width="80%" class="value"><textarea name="authors[{$authorIndex|escape}][biography][{$formLocale|escape}]" class="textArea" id="authors-{$authorIndex|escape}-biography" rows="5" cols="40">{$author.biography[$formLocale]|escape}</textarea></td>
 </tr>
 {if $smarty.foreach.authors.total > 1}
 <tr valign="top">
 	<td colspan="2">
-		<a href="javascript:moveAuthor('u', '{$authorIndex}')" class="action">&uarr;</a> <a href="javascript:moveAuthor('d', '{$authorIndex}')" class="action">&darr;</a>
+		<a href="javascript:moveAuthor('u', '{$authorIndex|escape}')" class="action">&uarr;</a> <a href="javascript:moveAuthor('d', '{$authorIndex|escape}')" class="action">&darr;</a>
 		{translate key="author.submit.reorderInstructions"}
 	</td>
 </tr>
 <tr valign="top">
-	<td width="80%" class="value" colspan="2"><input type="radio" name="primaryContact" value="{$authorIndex}"{if $primaryContact == $authorIndex} checked="checked"{/if} /> <label for="primaryContact">{translate key="author.submit.selectPrincipalContact"}</label> <input type="submit" name="delAuthor[{$authorIndex}]" value="{translate key="author.submit.deleteAuthor"}" class="button" /></td>
+	<td width="80%" class="value" colspan="2"><input type="radio" name="primaryContact" value="{$authorIndex|escape}"{if $primaryContact == $authorIndex} checked="checked"{/if} /> <label for="primaryContact">{translate key="author.submit.selectPrincipalContact"}</label> <input type="submit" name="delAuthor[{$authorIndex|escape}]" value="{translate key="author.submit.deleteAuthor"}" class="button" /></td>
 </tr>
 <tr>
 	<td colspan="2"><br/></td>

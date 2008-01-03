@@ -68,13 +68,13 @@ function ensureKeyword() {
 <a name="results"></a>
 
 <table width="100%" class="listing">
-<tr><td colspan="{$numCols}" class="headseparator">&nbsp;</td></tr>
+<tr><td colspan="{$numCols|escape}" class="headseparator">&nbsp;</td></tr>
 <tr class="heading" valign="bottom">
 	{if !$currentJournal}<td width="20%">{translate key="journal.journal"}</td>{/if}
 	<td width="{if !$currentJournal}20%{else}40%{/if}">{translate key="issue.issue"}</td>
 	<td width="60%" colspan="2">{translate key="article.title"}</td>
 </tr>
-<tr><td colspan="{$numCols}" class="headseparator">&nbsp;</td></tr>
+<tr><td colspan="{$numCols|escape}" class="headseparator">&nbsp;</td></tr>
 
 {iterate from=results item=result}
 {assign var=publishedArticle value=$result.publishedArticle}
@@ -102,19 +102,19 @@ function ensureKeyword() {
 	</td>
 </tr>
 <tr>
-	<td colspan="{$numCols}" style="padding-left: 30px;font-style: italic;">
+	<td colspan="{$numCols|escape}" style="padding-left: 30px;font-style: italic;">
 		{foreach from=$article->getAuthors() item=authorItem name=authorList}
 			{$authorItem->getFullName()|escape}{if !$smarty.foreach.authorList.last},{/if}
 		{/foreach}
 	</td>
 </tr>
-<tr><td colspan="{$numCols}" class="{if $results->eof()}end{/if}separator">&nbsp;</td></tr>
+<tr><td colspan="{$numCols|escape}" class="{if $results->eof()}end{/if}separator">&nbsp;</td></tr>
 {/iterate}
 {if $results->wasEmpty()}
 <tr>
-<td colspan="{$numCols}" class="nodata">{translate key="search.noResults"}</td>
+<td colspan="{$numCols|escape}" class="nodata">{translate key="search.noResults"}</td>
 </tr>
-<tr><td colspan="{$numCols}" class="endseparator">&nbsp;</td></tr>
+<tr><td colspan="{$numCols|escape}" class="endseparator">&nbsp;</td></tr>
 {else}
 	<tr>
 		<td {if !$currentJournal}colspan="2" {/if}align="left">{page_info iterator=$results}</td>

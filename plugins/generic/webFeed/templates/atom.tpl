@@ -8,7 +8,7 @@
  *
  * $Id$
  *}
-<?xml version="1.0" encoding="{$defaultCharset}"?>
+<?xml version="1.0" encoding="{$defaultCharset|escape}"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 	{* required elements *}
 	<id>{$journal->getUrl()}/issue/feed</id>
@@ -30,7 +30,7 @@
 	{* optional elements *}
 	{* <category/> *}
 	{* <contributor/> *}
-	<generator uri="http://pkp.sfu.ca/ojs/" version="{$ojsVersion}">Open Journal Systems</generator>
+	<generator uri="http://pkp.sfu.ca/ojs/" version="{$ojsVersion|escape}">Open Journal Systems</generator>
 	{if $journal->getJournalDescription()}
 		{assign var="description" value=$journal->getJournalDescription()}
 	{elseif $journal->getLocalizedSetting('searchDescription')}

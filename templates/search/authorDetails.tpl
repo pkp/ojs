@@ -11,7 +11,7 @@
 {assign var="pageTitle" value="search.authorDetails"}
 {include file="common/header.tpl"}
 
-<h3>{$lastName}, {$firstName}{if $middleName} {$middleName}{/if}{if $affiliation} {$affiliation}{/if}</h3>
+<h3>{$lastName|escape}, {$firstName|escape}{if $middleName} {$middleName|escape}{/if}{if $affiliation} {$affiliation|escape}{/if}</h3>
 <ul>
 {foreach from=$publishedArticles item=article}
 	{assign var=issueId value=$article->getIssueId()}

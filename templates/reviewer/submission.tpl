@@ -275,7 +275,7 @@ function confirmSubmissionCheck() {
 		</table>
 		{if not $submission->getRecommendation()}
 			<form method="post" action="{url op="uploadReviewerVersion"}" enctype="multipart/form-data">
-				<input type="hidden" name="reviewId" value="{$reviewId}" />
+				<input type="hidden" name="reviewId" value="{$reviewId|escape}" />
 				<input type="file" name="upload" {if not $confirmedStatus or $declined or $submission->getCancelled()}disabled="disabled"{/if} class="uploadField" />
 				<input type="submit" name="submit" value="{translate key="common.upload"}" {if not $confirmedStatus or $declined or $submission->getCancelled()}disabled="disabled"{/if} class="button" />
 			</form>
@@ -308,7 +308,7 @@ function confirmSubmissionCheck() {
 					{$submission->getDateCompleted()|date_format:$dateFormatShort}
 				{else}
 					<form name="recommendation" method="post" action="{url op="recordRecommendation"}">
-					<input type="hidden" name="reviewId" value="{$reviewId}" />
+					<input type="hidden" name="reviewId" value="{$reviewId|escape}" />
 					<select name="recommendation" {if not $confirmedStatus or $declined or $submission->getCancelled() or (!$reviewAssignment->getMostRecentPeerReviewComment() and !$uploadedFileExists)}disabled="disabled"{/if} class="selectMenu">
 						{html_options_translate options=$reviewerRecommendationOptions selected=''}
 					</select>&nbsp;&nbsp;&nbsp;&nbsp;

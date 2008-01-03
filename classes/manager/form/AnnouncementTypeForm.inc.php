@@ -26,7 +26,6 @@ class AnnouncementTypeForm extends Form {
 	 */
 	function AnnouncementTypeForm($typeId = null) {
 		$this->typeId = isset($typeId) ? (int) $typeId : null;
-		$journal = &Request::getJournal();
 
 		parent::Form('manager/announcement/announcementTypeForm.tpl');
 

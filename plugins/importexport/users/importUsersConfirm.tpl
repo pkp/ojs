@@ -50,42 +50,42 @@
 {foreach name=users from=$users item=user key=userKey}
 	<tr valign="top">
 		<td>
-			<input type="checkbox" name="userKeys[]" value="{$userKey}" checked="checked" />
+			<input type="checkbox" name="userKeys[]" value="{$userKey|escape}" checked="checked" />
 			{foreach from=$user->getBiography(null) key=locale item=value}
-				<input type="hidden" name="{$userKey}_biography[{$locale|escape}]" value="{$value|escape}" />
+				<input type="hidden" name="{$userKey|escape}_biography[{$locale|escape}]" value="{$value|escape}" />
 			{/foreach}
 			{foreach from=$user->getSignature(null) key=locale item=value}
-				<input type="hidden" name="{$userKey}_signature[{$locale|escape}]" value="{$value|escape}" />
+				<input type="hidden" name="{$userKey|escape}_signature[{$locale|escape}]" value="{$value|escape}" />
 			{/foreach}
 			{foreach from=$user->getInterests(null) key=locale item=value}
-				<input type="hidden" name="{$userKey}_interests[{$locale|escape}]" value="{$value|escape}" />
+				<input type="hidden" name="{$userKey|escape}_interests[{$locale|escape}]" value="{$value|escape}" />
 			{/foreach}
 			{foreach name=locales from=$user->getLocales() item=locale}
-				<input type="hidden" name="{$userKey}_locales[]" value="{$locale|escape}" />
+				<input type="hidden" name="{$userKey|escape}_locales[]" value="{$locale|escape}" />
 			{/foreach}			
-			<input type="hidden" name="{$userKey}_discipline" value="{$user->getDiscipline()|escape}" />
-			<input type="hidden" name="{$userKey}_country" value="{$user->getCountry()|escape}" />
-			<input type="hidden" name="{$userKey}_mailingAddress" value="{$user->getMailingAddress()|escape}" />
-			<input type="hidden" name="{$userKey}_fax" value="{$user->getFax()|escape}" />
-			<input type="hidden" name="{$userKey}_phone" value="{$user->getPhone()|escape}" />
-			<input type="hidden" name="{$userKey}_url" value="{$user->getUrl()|escape}" />
-			<input type="hidden" name="{$userKey}_affiliation" value="{$user->getAffiliation()|escape}" />
-			<input type="hidden" name="{$userKey}_gender" value="{$user->getGender()|escape}" />
-			<input type="hidden" name="{$userKey}_initials" value="{$user->getInitials()|escape}" />
-			<input type="hidden" name="{$userKey}_salutation" value="{$user->getSalutation()|escape}" />
-			<input type="hidden" name="{$userKey}_password" value="{$user->getPassword()|escape}" />
-			<input type="hidden" name="{$userKey}_unencryptedPassword" value="{$user->getUnencryptedPassword()|escape}" />
-			<input type="hidden" name="{$userKey}_mustChangePassword" value="{$user->getMustChangePassword()|escape}" />
+			<input type="hidden" name="{$userKey|escape}_discipline" value="{$user->getDiscipline()|escape}" />
+			<input type="hidden" name="{$userKey|escape}_country" value="{$user->getCountry()|escape}" />
+			<input type="hidden" name="{$userKey|escape}_mailingAddress" value="{$user->getMailingAddress()|escape}" />
+			<input type="hidden" name="{$userKey|escape}_fax" value="{$user->getFax()|escape}" />
+			<input type="hidden" name="{$userKey|escape}_phone" value="{$user->getPhone()|escape}" />
+			<input type="hidden" name="{$userKey|escape}_url" value="{$user->getUrl()|escape}" />
+			<input type="hidden" name="{$userKey|escape}_affiliation" value="{$user->getAffiliation()|escape}" />
+			<input type="hidden" name="{$userKey|escape}_gender" value="{$user->getGender()|escape}" />
+			<input type="hidden" name="{$userKey|escape}_initials" value="{$user->getInitials()|escape}" />
+			<input type="hidden" name="{$userKey|escape}_salutation" value="{$user->getSalutation()|escape}" />
+			<input type="hidden" name="{$userKey|escape}_password" value="{$user->getPassword()|escape}" />
+			<input type="hidden" name="{$userKey|escape}_unencryptedPassword" value="{$user->getUnencryptedPassword()|escape}" />
+			<input type="hidden" name="{$userKey|escape}_mustChangePassword" value="{$user->getMustChangePassword()|escape}" />
 		</td>
-		<td><input type="text" name="{$userKey}_firstName" value="{$user->getFirstName()|escape}" size="9" class="textField" /></td>
-		<td><input type="text" name="{$userKey}_middleName" value="{$user->getMiddleName()|escape}" size="9" class="textField" /></td>
-		<td><input type="text" name="{$userKey}_lastName" value="{$user->getLastName()|escape}" size="9" class="textField" /></td>
-		<td><input type="text" name="{$userKey}_username" value="{$user->getUsername()|escape}" size="9" class="textField" /></td>
-		<td><input type="text" name="{$userKey}_email" value="{$user->getEmail()|escape}" size="9" class="textField" /></td>
+		<td><input type="text" name="{$userKey|escape}_firstName" value="{$user->getFirstName()|escape}" size="9" class="textField" /></td>
+		<td><input type="text" name="{$userKey|escape}_middleName" value="{$user->getMiddleName()|escape}" size="9" class="textField" /></td>
+		<td><input type="text" name="{$userKey|escape}_lastName" value="{$user->getLastName()|escape}" size="9" class="textField" /></td>
+		<td><input type="text" name="{$userKey|escape}_username" value="{$user->getUsername()|escape}" size="9" class="textField" /></td>
+		<td><input type="text" name="{$userKey|escape}_email" value="{$user->getEmail()|escape}" size="9" class="textField" /></td>
 		<td>
-			<select name="{$userKey}_roles[]" size="5" multiple="multiple" class="selectMenu">
+			<select name="{$userKey|escape}_roles[]" size="5" multiple="multiple" class="selectMenu">
 				{foreach from=$roleOptions item=roleOption key=roleKey}
-					<option value="{$roleKey}" {if ($roleKey eq '' and count($usersRoles[$userKey]) eq 0)}selected{elseif (in_array($roleOption, $usersRoles[$userKey]))}selected="selected"{/if}>{translate key=$roleOption}</option>
+					<option value="{$roleKey|escape}" {if ($roleKey eq '' and count($usersRoles[$userKey]) eq 0)}selected{elseif (in_array($roleOption, $usersRoles[$userKey]))}selected="selected"{/if}>{translate key=$roleOption}</option>
 				{/foreach}
 			</select>
 		</td>

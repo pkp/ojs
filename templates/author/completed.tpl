@@ -25,7 +25,7 @@
 {iterate from=submissions item=submission}
 	{assign var="articleId" value=$submission->getArticleId()}
 	<tr valign="top">
-		<td>{$articleId}</td>
+		<td>{$articleId|escape}</td>
 		<td>{$submission->getDateSubmitted()|date_format:$dateFormatTrunc}</td>
 		<td>{$submission->getSectionAbbrev()|escape}</td>
 		<td>{$submission->getAuthorString(true)|truncate:40:"..."|escape}</td>
@@ -39,7 +39,7 @@
 						{assign var=thisCount value=$galley->getViews()}
 						{assign var=viewCount value=$viewCount+$thisCount}
 					{/foreach}
-					{$viewCount}
+					{$viewCount|escape}
 				{else}
 					&mdash;
 				{/if}

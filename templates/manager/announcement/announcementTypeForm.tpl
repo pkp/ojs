@@ -21,7 +21,7 @@
 
 <form name="announcementType" method="post" action="{url op="updateAnnouncementType"}">
 {if $typeId}
-<input type="hidden" name="typeId" value="{$typeId}" />
+<input type="hidden" name="typeId" value="{$typeId|escape}" />
 {/if}
 
 {include file="common/formErrors.tpl"}

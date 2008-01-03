@@ -57,7 +57,7 @@
 	{assign var="layoutAssignment" value=$submission->getLayoutAssignment()}
 
 	<tr valign="top">
-		<td>{$articleId}</td>
+		<td>{$articleId|escape}</td>
 		<td>{$layoutAssignment->getDateNotified()|date_format:$dateFormatTrunc}</td>
 		<td>{$submission->getSectionAbbrev()|escape}</td>
 		<td>{$submission->getAuthorString(true)|truncate:40:"..."|escape}</td>

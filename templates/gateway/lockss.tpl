@@ -24,7 +24,7 @@
 
 <p>{if $prevYear !== null}<a href="{url op="lockss" year=$prevYear}" class="action">&lt;&lt; Previous</a>{else}<span class="disabled heading">&lt;&lt; Previous</span>{/if} | {if $nextYear !== null}<a href="{url op="lockss" year=$nextYear}" class="action">Next &gt;&gt;</a>{else}<span class="disabled heading">Next &gt;&gt;</span>{/if}</p>
 
-<h3>Archive of Published Issues: {$year}</h3>
+<h3>Archive of Published Issues: {$year|escape}</h3>
 
 <ul>
 {iterate from=issues item=issue}
@@ -84,7 +84,7 @@
 {/if}
 <tr valign="top">
 	<td class="label">Language(s)</td>
-	<td class="value">{foreach from=$locales key=localeKey item=localeName}{$localeName} ({$localeKey})<br />{/foreach}</td>
+	<td class="value">{foreach from=$locales key=localeKey item=localeName}{$localeName|escape} ({$localeKey|escape})<br />{/foreach}</td>
 </tr>
 <tr valign="top">
 	<td class="label">Publisher Email</td>

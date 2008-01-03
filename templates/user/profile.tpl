@@ -129,7 +129,7 @@
 <tr valign="top">
 	<td class="label">{translate key="user.workingLanguages"}</td>
 	<td>{foreach from=$availableLocales key=localeKey item=localeName}
-		<input type="checkbox" name="userLocales[]" id="userLocales-{$localeKey}" value="{$localeKey}"{if in_array($localeKey, $userLocales)} checked="checked"{/if} /> <label for="userLocales-{$localeKey}">{$localeName|escape}</label><br />
+		<input type="checkbox" name="userLocales[]" id="userLocales-{$localeKey|escape}" value="{$localeKey|escape}"{if in_array($localeKey, $userLocales)} checked="checked"{/if} /> <label for="userLocales-{$localeKey|escape}">{$localeName|escape}</label><br />
 	{/foreach}</td>
 </tr>
 {/if}
@@ -144,7 +144,7 @@
 			<td class="value">
 	{/if}
 
-			<input type="checkbox" name="journalNotify[]" {if $notificationEnabled}checked="checked" {/if}id="journalNotify-{$thisJournalId}" value="{$thisJournalId}" /> <label for="journalNotify-{$thisJournalId}">{$thisJournal->getJournalTitle()|escape}</label><br/>
+			<input type="checkbox" name="journalNotify[]" {if $notificationEnabled}checked="checked" {/if}id="journalNotify-{$thisJournalId|escape}" value="{$thisJournalId|escape}" /> <label for="journalNotify-{$thisJournalId|escape}">{$thisJournal->getJournalTitle()|escape}</label><br/>
 
 	{if $smarty.foreach.journalNotifications.last}
 			</td>
@@ -167,7 +167,7 @@
 		{/if}
 
 		{if $enableSubscriptions && $enableOpenAccessNotification}
-			<input type="checkbox" name="openAccessNotify[]" {if $notificationEnabled}checked="checked" {/if}id="openAccessNotify-{$thisJournalId}" value="{$thisJournalId}" /> <label for="openAccessNotify-{$thisJournalId}">{$thisJournal->getJournalTitle()|escape}</label><br/>
+			<input type="checkbox" name="openAccessNotify[]" {if $notificationEnabled}checked="checked" {/if}id="openAccessNotify-{$thisJournalId|escape}" value="{$thisJournalId|escape}" /> <label for="openAccessNotify-{$thisJournalId|escape}">{$thisJournal->getJournalTitle()|escape}</label><br/>
 		{/if}
 
 		{if $smarty.foreach.journalOpenAccessNotifications.last}

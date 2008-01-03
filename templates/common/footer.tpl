@@ -29,7 +29,7 @@
 	<div id="footerContent">
 		<div class="debugStats">
 		{translate key="debug.executionTime"}: {$debugExecutionTime|string_format:"%.4f"}s<br />
-		{translate key="debug.databaseQueries"}: {$debugNumDatabaseQueries}<br/>
+		{translate key="debug.databaseQueries"}: {$debugNumDatabaseQueries|escape}<br/>
 		{if $debugNotes}
 			<strong>{translate key="debug.notes"}</strong><br/>
 			{foreach from=$debugNotes item=note}

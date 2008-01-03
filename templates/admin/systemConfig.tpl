@@ -15,7 +15,7 @@
 <p>{translate key="admin.editSystemConfigInstructions"}</p>
 
 {foreach from=$configData key=sectionName item=sectionData}
-<h3>{$sectionName}</h3>
+<h3>{$sectionName|escape}</h3>
 
 {if !empty($sectionData)}{* Empty tables cause validation problems *}
 <table class="data" width="100%">

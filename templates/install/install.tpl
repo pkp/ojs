@@ -76,7 +76,7 @@ function doSubmit() {
 		<td class="label">{fieldLabel suppressId="true" name="additionalLocales" key="installer.additionalLocales"}</td>
 		<td class="value">
 			{foreach from=$localeOptions key=localeKey item=localeName}
-				<input type="checkbox" name="additionalLocales[]" id="additionalLocales-{$localeKey}" value="{$localeKey}"{if in_array($localeKey, $additionalLocales)} checked="checked"{/if} /> <label for="additionalLocales-{$localeKey}">{$localeName} ({$localeKey})</label><br />
+				<input type="checkbox" name="additionalLocales[]" id="additionalLocales-{$localeKey|escape}" value="{$localeKey|escape}"{if in_array($localeKey, $additionalLocales)} checked="checked"{/if} /> <label for="additionalLocales-{$localeKey|escape}">{$localeName|escape} ({$localeKey|escape})</label><br />
 			{/foreach}
 			<span class="instruct">{translate key="installer.additionalLocalesInstructions"}</span>
 		</td>

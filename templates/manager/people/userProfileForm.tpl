@@ -70,7 +70,7 @@
 <form name="userForm" method="post" action="{url op="updateUser"}" onsubmit="enablePasswordFields()">
 <input type="hidden" name="source" value="{$source|escape}" />
 {if $userId}
-<input type="hidden" name="userId" value="{$userId}" />
+<input type="hidden" name="userId" value="{$userId|escape}" />
 {/if}
 
 {include file="common/formErrors.tpl"}
@@ -233,7 +233,7 @@
 	<tr valign="top">
 		<td class="label">{translate key="user.workingLanguages"}</td>
 		<td>{foreach from=$availableLocales key=localeKey item=localeName}
-			<input type="checkbox" name="userLocales[]" id="userLocales-{$localeKey}" value="{$localeKey}"{if $userLocales && in_array($localeKey, $userLocales)} checked="checked"{/if} /> <label for="userLocales-{$localeKey}">{$localeName}</label><br />
+			<input type="checkbox" name="userLocales[]" id="userLocales-{$localeKey|escape}" value="{$localeKey|escape}"{if $userLocales && in_array($localeKey, $userLocales)} checked="checked"{/if} /> <label for="userLocales-{$localeKey|escape}">{$localeName|escape}</label><br />
 		{/foreach}</td>
 	</tr>
 	{/if}

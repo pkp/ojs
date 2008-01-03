@@ -14,7 +14,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<title>{$article->getArticleTitle()|escape} | {$article->getFirstAuthor(true)|escape} | {$currentJournal->getJournalTitle()|escape}</title>
-	<meta http-equiv="Content-Type" content="text/html; charset={$defaultCharset}" />
+	<meta http-equiv="Content-Type" content="text/html; charset={$defaultCharset|escape}" />
 	<meta name="description" content="{$article->getArticleTitle()|escape}" />
 	{if $article->getArticleSubject()}
 	<meta name="keywords" content="{$article->getArticleSubject()|escape}" />
@@ -200,7 +200,7 @@
 	<div id="footerContent">
 		<div class="debugStats">
 		{translate key="debug.executionTime"}: {$debugExecutionTime|string_format:"%.4f"}s<br />
-		{translate key="debug.databaseQueries"}: {$debugNumDatabaseQueries}<br/>
+		{translate key="debug.databaseQueries"}: {$debugNumDatabaseQueries|escape}<br/>
 		{if $debugNotes}
 			<strong>{translate key="debug.notes"}</strong><br/>
 			{foreach from=$debugNotes item=note}

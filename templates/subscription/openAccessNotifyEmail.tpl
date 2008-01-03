@@ -1,7 +1,7 @@
 {translate key="email.multipart"}
 
 --{$mimeBoundary}
-Content-Type: text/plain; charset={$defaultCharset}
+Content-Type: text/plain; charset={$defaultCharset|escape}
 Content-Transfer-Encoding: quoted-printable
 
 {$body}
@@ -25,7 +25,7 @@ Content-Transfer-Encoding: quoted-printable
 {literal}{$templateSignature}{/literal}
 
 --{$mimeBoundary}
-Content-Type: text/html; charset={$defaultCharset}
+Content-Type: text/html; charset={$defaultCharset|escape}
 Content-Transfer-Encoding: quoted-printable
 
 <?xml version="1.0" encoding="UTF-8"?>
@@ -33,7 +33,7 @@ Content-Transfer-Encoding: quoted-printable
 	 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset={$defaultCharset}" />
+		<meta http-equiv="Content-Type" content="text/html; charset={$defaultCharset|escape}" />
 		<link rel="stylesheet" href="{$baseUrl}/styles/common.css" type="text/css" />
 		{foreach from=$stylesheets item=cssUrl}
 		<link rel="stylesheet" href="{$cssUrl}" type="text/css" />

@@ -12,7 +12,7 @@
 {include file="author/submit/submitHeader.tpl"}
 
 <form method="post" action="{url op="saveSubmit" path=$submitStep}" enctype="multipart/form-data">
-<input type="hidden" name="articleId" value="{$articleId}" />
+<input type="hidden" name="articleId" value="{$articleId|escape}" />
 {include file="common/formErrors.tpl"}
 
 {translate key="author.submit.uploadInstructions"}

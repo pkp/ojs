@@ -32,8 +32,8 @@
 	<td width="20%" class="label">{fieldLabel name="contact" required="true" key="plugins.gateways.googleScholar.settings.contact"}</td>
 	<td width="80%" class="value">
 		{foreach from=$contact item=thisContact key=key}
-			<input type="text" name="contact[]" value="{$thisContact|escape}" size="35" maxlength="80" id="{if $key==0}contact{else}contact-{$key}{/if}" class="textField" />
-			{if $contact|@count>1}<input type="submit" name="deleteContact-{$key}" value="{translate key="common.delete"}" class="button"/>{/if}
+			<input type="text" name="contact[]" value="{$thisContact|escape}" size="35" maxlength="80" id="{if $key==0}contact{else}contact-{$key|escape}{/if}" class="textField" />
+			{if $contact|@count>1}<input type="submit" name="deleteContact-{$key|escape}" value="{translate key="common.delete"}" class="button"/>{/if}
 			<br/>
 		{foreachelse}
 			<input type="text" name="contact[]" size="35" maxlength="80" id="contact" class="textField" /><br/>
