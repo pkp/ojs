@@ -43,8 +43,8 @@
 			{elseif $type == 'LOCALE_ERROR_EXTRA_KEY'}
 				<br />
 				{assign var=counter value=$counter+1}
-				<input type="checkbox" name="deleteKey[]" id="checkbox-{$counter}" value="{$error.filename|escape:"url"|escape:"url"}/{$error.key|escape}" />
-				<label for="checkbox-{$counter}">{translate key="plugins.generic.translator.deleteKey"}</label>
+				<input type="checkbox" name="deleteKey[]" id="checkbox-{$counter|escape}" value="{$error.filename|escape:"url"|escape:"url"}/{$error.key|escape}" />
+				<label for="checkbox-{$counter|escape}">{translate key="plugins.generic.translator.deleteKey"}</label>
 			{elseif $type == 'LOCALE_ERROR_MISSING_FILE'}
 				{assign var=filenameEscaped value=$error.filename|escape:"url"|escape:"url"}
 				{if in_array($error.filename, $localeFiles)}
@@ -105,8 +105,8 @@
 			{if $type == 'EMAIL_ERROR_EXTRA_EMAIL'}
 				<br />
 				{assign var=counter value=$counter+1}
-				<input type="checkbox" name="deleteEmail[]" id="checkbox-{$counter}" value="{$error.key|escape}" />
-				<label for="checkbox-{$counter}">{translate key="plugins.generic.translator.deleteEmail"}</label>
+				<input type="checkbox" name="deleteEmail[]" id="checkbox-{$counter|escape}" value="{$error.key|escape}" />
+				<label for="checkbox-{$counter|escape}">{translate key="plugins.generic.translator.deleteEmail"}</label>
 			{else}
 				<a href="{url op="editEmail" path=$locale|to_array:$error.key returnToCheck=1}" class="action" onclick='return confirm("{translate|escape:"quotes" key="plugins.generic.translator.saveBeforeContinuing"}")'>{translate key="common.edit"}</a>
 			{/if}

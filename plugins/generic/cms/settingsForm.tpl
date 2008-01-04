@@ -23,7 +23,7 @@
 <table border="0">
 	<tr>
 		<td>
-			<input type="hidden" name="current" value="{$current}" />
+			<input type="hidden" name="current" value="{$current|escape}" />
 			<textarea name="content" cols="50" rows="30">
 				{$currentHeading|escape}
 				{$currentContent|escape}

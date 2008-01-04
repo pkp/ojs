@@ -46,14 +46,14 @@
 	</tr>
 	
 {foreach name=urls from=$urls key=urlIndex item=url}
-<input type="hidden" name="urls[{$urlIndex}][urlId]" value="{$url.urlId|escape}" />
+<input type="hidden" name="urls[{$urlIndex|escape}][urlId]" value="{$url.urlId|escape}" />
 <tr valign="top">
-	<td width="20%" class="value" align="right"><input type="text" class="textField" name="urls[{$urlIndex}][pageName]" id="urls-{$urlIndex}-pageName" value="{$url.pageName|escape}" size="20" maxlength="40" /></td>
-	<td width="80%" class="value" align="right"><input type="text" class="textField" name="urls[{$urlIndex}][url]" id="urls-{$urlIndex}-url" value="{$url.url|escape}" size="60" maxlength="100" /></td>
+	<td width="20%" class="value" align="right"><input type="text" class="textField" name="urls[{$urlIndex|escape}][pageName]" id="urls-{$urlIndex|escape}-pageName" value="{$url.pageName|escape}" size="20" maxlength="40" /></td>
+	<td width="80%" class="value" align="right"><input type="text" class="textField" name="urls[{$urlIndex|escape}][url]" id="urls-{$urlIndex|escape}-url" value="{$url.url|escape}" size="60" maxlength="100" /></td>
 </tr>
 {if $smarty.foreach.urls.total > 1}
 <tr valign="top">
-	<td colspan="2" align="right"><input type="submit" name="delUrl[{$urlIndex}]" value="{translate key="plugins.generic.cmsrss.deleteUrl"}" class="button" /></td>
+	<td colspan="2" align="right"><input type="submit" name="delUrl[{$urlIndex|escape}]" value="{translate key="plugins.generic.cmsrss.deleteUrl"}" class="button" /></td>
 </tr>
 	<tr>
 		<td colspan="4" class="separator">&nbsp;</td>

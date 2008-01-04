@@ -16,11 +16,6 @@
  */
 
 class AnnouncementType extends DataObject {
-
-	function AnnouncementType() {
-		parent::DataObject();
-	}
-
 	//
 	// Get/set methods
 	//

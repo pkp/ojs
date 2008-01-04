@@ -35,17 +35,24 @@
 		<i>{translate key="comments.inResponseTo" url=$url title=$parent->getTitle()|escape|default:"&nbsp;"}</i><br />
 	{/if}
 
+	{assign var="hasPriorAction" value=0}{* Track whether to add "|" between actions *}
+
 	{if $comment->getPosterEmail()}
 		{translate|assign:"emailReply" key="comments.emailReply"}
-		{mailto text=$emailReply encode="javascript" address=$comment->getPosterEmail() subject=$comment->getTitle()|default:"&nbsp;" extra='class="action"'}&nbsp;&nbsp;
+		{mailto text=$emailReply encode="javascript" address=$comment->getPosterEmail() subject=$comment->getTitle()|default:"&nbsp;" extra='class="action"'}
+		{assign var="hasPriorAction" value=1}
 	{/if}
 
 	{if $postingAllowed}
-		<a href="{url op="add" path=$articleId|to_array:$galleyId:$comment->getCommentId()}" class="action">{translate key="comments.postReply"}</a>&nbsp;&nbsp;
+		{if $hasPriorAction}&nbsp;|&nbsp;{/if}
+		<a href="{url op="add" path=$articleId|to_array:$galleyId:$comment->getCommentId()}" class="action">{translate key="comments.postReply"}</a>
+		{assign var="hasPriorAction" value=1}
 	{/if}
 
 	{if $isManager}
+		{if $hasPriorAction}&nbsp;|&nbsp;{/if}
 		<a href="{url op="delete" path=$articleId|to_array:$galleyId:$comment->getCommentId()}" {if $comment->getChildCommentCount()!=0}onclick="return confirm('{translate|escape:"jsparam" key="comments.confirmDeleteChildren"}')" {/if}class="action">{translate key="comments.delete"}</a>
+		{assign var="hasPriorAction" value=1}
 	{/if}
 
 	<br />
@@ -67,16 +74,24 @@
 {assign var=childId value=$child->getCommentId()}
 <h4><a href="{url op="view" path=$articleId|to_array:$galleyId:$childId}" target="_parent">{$child->getTitle()|escape|default:"&nbsp;"}</a></h4>
 <h5>{if $user}{translate key="comments.authenticated" userName=$child->getPosterName()|escape}{elseif $child->getPosterName()}{translate key="comments.anonymousNamed" userName=$child->getPosterName()|escape}{else}{translate key="comments.anonymous"}{/if} ({$child->getDatePosted()|date_format:$dateFormatShort})</h5>
+
+{assign var="hasPriorAction" value=0}
+
 {if $child->getPosterEmail()}
 	{translate|assign:"emailReply" key="comments.emailReply"}
-	{mailto text=$emailReply encode="javascript" address=$child->getPosterEmail()|escape subject=$child->getTitle()|escape|default:"&nbsp;" extra='class="action"'}&nbsp;&nbsp;
+	{mailto text=$emailReply encode="javascript" address=$child->getPosterEmail()|escape subject=$child->getTitle()|escape|default:"&nbsp;" extra='class="action"'}
+	{assign var="hasPriorAction" value=1}
 {/if}
 
 {if $postingAllowed}
-	<a href="{url op="add" path=$articleId|to_array:$galleyId:$childId}" class="action">{translate key="comments.postReply"}</a>&nbsp;&nbsp;
+	{if $hasPriorAction}&nbsp;|&nbsp;{/if}
+	<a href="{url op="add" path=$articleId|to_array:$galleyId:$childId}" class="action">{translate key="comments.postReply"}</a>
+	{assign var="hasPriorAction" value=1}
 {/if}
 {if $isManager}
+	{if $hasPriorAction}&nbsp;|&nbsp;{/if}
 	<a href="{url op="delete" path=$articleId|to_array:$galleyId:$child->getCommentId()}" {if $child->getChildCommentCount()!=0}onclick="return confirm('{translate|escape:"jsparam" key="comments.confirmDeleteChildren"}')" {/if}class="action">{translate key="comments.delete"}</a>
+	{assign var="hasPriorAction" value=1}
 {/if}
 <br />
 

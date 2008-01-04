@@ -39,8 +39,11 @@
 		<td>{$article->getArticleTitle()|strip_unsafe_html}</td>
 		<td>{$article->getAuthorString()|escape}</td>
 		<td>
+			{assign var="hasPriorAction" value=0}
 			{foreach from=$publishedArticle->getGalleys() item=galley}
+				{if $hasPriorAction}&nbsp;|&nbsp;{/if}
 				<a href="{plugin_url path="exportGalley"|to_array:$article->getArticleId():$galley->getGalleyId()}" class="action">{$galley->getGalleyLabel()|escape}</a>
+				{assign var="hasPriorAction" value=1}
 			{/foreach}
 		</td>
 	</tr>
