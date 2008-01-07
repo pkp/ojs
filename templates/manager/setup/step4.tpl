@@ -164,7 +164,7 @@ function setRegAllowOpts(form) {
 
 <p>{translate key="manager.setup.publicationScheduleDescription"}</p>
 
-<p><textarea name="pubFreqPolicy[{$formLocale|escape}]" rows="12" cols="60" class="textArea">{$pubFreqPolicy[$formLocale]|escape}</textarea></p>
+<p><textarea name="pubFreqPolicy[{$formLocale|escape}]" id="pubFreqPolicy" rows="12" cols="60" class="textArea">{$pubFreqPolicy[$formLocale]|escape}</textarea></p>
 
 <h4>{translate key="manager.setup.publicationFormat"}</h4>
 

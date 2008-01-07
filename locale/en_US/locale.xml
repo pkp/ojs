@@ -888,7 +888,7 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="manager.payment.timestamp">Timestamp</message>
 	<message key="manager.payment.editSubscription">Edit Subscription</message>
 
-	<message key="manager.payment.form.numeric">All costs must be positve numeric values (decimal points are allowed)</message>
+	<message key="manager.payment.form.numeric">All costs must be positive numeric values (decimal points are allowed)</message>
 
 	<!-- General plugin information -->
 	<message key="plugins.categories.generic">Generic Plugins</message>
@@ -1051,7 +1051,7 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="manager.setup.userRegistration">User Registration</message>
 	<message key="manager.setup.enableUserRegistration">Users can register themselves with the journal in one or more of the following roles:</message>
 	<message key="manager.setup.enableUserRegistration.author">Authors (can submit materials to the journal)</message>
-	<message key="manager.setup.enableUserRegistration.reader">Readers (will recieve notifications and be counted as equivalent to a subscriber)</message>
+	<message key="manager.setup.enableUserRegistration.reader">Readers (will receive notifications and be counted as equivalent to a subscriber)</message>
 	<message key="manager.setup.enableUserRegistration.reviewer">Reviewers (available for reviewing submissions)</message>
 	<message key="manager.setup.disableUserRegistration">Journal Manager registers all users, with Editors or Section Editors able to register Reviewers alone.</message>
 	<message key="manager.setup.siteAccess">Additional Site and Article Access Restrictions</message>
@@ -1182,7 +1182,7 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.setup.layoutTemplates.title">Title</message>
 	<message key="manager.setup.layoutTemplates.file">Template File</message>
 	<message key="manager.setup.referenceLinking">Reference Linking</message>
-	<message key="manager.setup.referenceLinkingDescription"><![CDATA[<p>To enable readers to locate online versions of the work cited by an author, the following options are avaiable.</p>
+	<message key="manager.setup.referenceLinkingDescription"><![CDATA[<p>To enable readers to locate online versions of the work cited by an author, the following options are available.</p>
 
 <ol>
 	<li><strong>Add a Reading Tool</strong><p>The Journal Manager can add "Find References" to the Reading Tools that accompany published items, which enables readers to paste a reference's title and then search pre-selected scholarly databases for the cited work.</p></li>
