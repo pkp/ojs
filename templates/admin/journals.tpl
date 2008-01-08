@@ -36,7 +36,7 @@
 		<td align="right"><a href="{url op="editJournal" path=$journal->getJournalId()}" class="action">{translate key="common.edit"}</a>&nbsp;|&nbsp;<a class="action" href="{url op="deleteJournal" path=$journal->getJournalId()}" onclick="return confirm('{translate|escape:"jsparam" key="admin.journals.confirmDelete"}')">{translate key="common.delete"}</a></td>
 	</tr>
 	<tr>
-		<td colspan="4" class="{if $smarty.foreach.journals.last}end{/if}separator">&nbsp;</td>
+		<td colspan="4" class="{if $journals->eof()}end{/if}separator">&nbsp;</td>
 	</tr>
 	{/iterate}
 	{if $journals->wasEmpty()}
