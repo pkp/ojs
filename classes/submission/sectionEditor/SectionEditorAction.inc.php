@@ -533,23 +533,18 @@ class SectionEditorAction extends Action {
 		if (!isset($reviewer)) return false;
 
 		if ($reviewAssignment->getArticleId() == $articleId && !HookRegistry::call('SectionEditorAction::setDueDate', array(&$reviewAssignment, &$reviewer, &$dueDate, &$numWeeks))) {
+			$today = getDate();
+			$todayTimestamp = mktime(0, 0, 0, $today['mon'], $today['mday'], $today['year']);
 			if ($dueDate != null) {
 				$dueDateParts = explode('-', $dueDate);
-				$today = getDate();
 
 				// Ensure that the specified due date is today or after today's date.
-				if ($dueDateParts[0] >= $today['year'] && ($dueDateParts[1] > $today['mon'] || ($dueDateParts[1] == $today['mon'] && $dueDateParts[2] >= $today['mday']))) {
+				if ($todayTimestamp <= strtotime($dueDate)) {
 					$reviewAssignment->setDateDue(date('Y-m-d H:i:s', mktime(0, 0, 0, $dueDateParts[1], $dueDateParts[2], $dueDateParts[0])));
-				}
-				else {
-					$today = getDate();
-					$todayTimestamp = mktime(0, 0, 0, $today['mon'], $today['mday'], $today['year']);
+				} else {
 					$reviewAssignment->setDateDue(date('Y-m-d H:i:s', $todayTimestamp));
 				}
 			} else {
-				$today = getDate();
-				$todayTimestamp = mktime(0, 0, 0, $today['mon'], $today['mday'], $today['year']);
-
 				// Add the equivilant of $numWeeks weeks, measured in seconds, to $todaysTimestamp.
 				$newDueDateTimestamp = $todayTimestamp + ($numWeeks * 7 * 24 * 60 * 60);
 
