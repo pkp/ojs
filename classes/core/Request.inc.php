@@ -538,6 +538,16 @@ class Request {
 		$minutePart = Request::getUserVar($prefix . 'Minute');
 		$secondPart = Request::getUserVar($prefix . 'Second');
 
+		switch (Request::getUserVar($prefix . 'Meridian')) {
+			case 'pm':
+				if (is_numeric($hourPart) && $hourPart != 12) $hourPart += 12;
+				break;
+			case 'am':
+			default:	
+				// Do nothing.
+				break;
+		}
+
 		if (empty($dayPart)) $dayPart = $defaultDay;
 		if (empty($monthPart)) $monthPart = $defaultMonth;
 		if (empty($yearPart)) $yearPart = $defaultYear;
