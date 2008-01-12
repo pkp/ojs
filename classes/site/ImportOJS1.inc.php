@@ -734,8 +734,8 @@ class ImportOJS1 {
 
 			$subscriptionType = &new SubscriptionType();
 			$subscriptionType->setJournalId($this->journalId);
-			$subscriptionType->setTypeName(Core::cleanVar($row['chSubscriptionType']));
-			$subscriptionType->setDescription(Core::cleanVar($row['chSubscriptionTypeDesc']));
+			$subscriptionType->setName(Core::cleanVar($row['chSubscriptionType']), Locale::getLocale());
+			$subscriptionType->setDescription(Core::cleanVar($row['chSubscriptionTypeDesc']), Locale::getLocale());
 			$subscriptionType->setCost($row['fCost']);
 			$subscriptionType->setCurrencyCodeAlpha(isset($currencyMap[$row['fkCurrencyID']]) ? $currencyMap[$row['fkCurrencyID']] : 'USD');
 			$subscriptionType->setDuration(12); // No equivalent in OJS 1.x
@@ -825,7 +825,7 @@ class ImportOJS1 {
 			$issue->setShowNumber($this->showNumber);
 			$issue->setShowYear($this->showYear);
 			$issue->setShowTitle($this->showTitle);
-			$issue->setShowCoverPage(0);
+			$issue->setShowCoverPage(0, Locale::getLocale());
 
 			$issueId = $issueDao->insertIssue($issue);
 			$this->issueMap[$row['nIssueID']] = $issueId;
@@ -977,7 +977,6 @@ class ImportOJS1 {
 			}
 
 			$locale = Locale::getLocale();
-
 			$article = &new Article();
 			$article->setUserId(1);
 			$article->setJournalId($this->journalId);
@@ -987,7 +986,7 @@ class ImportOJS1 {
 			$article->setDiscipline(Core::cleanVar($row['chMetaDiscipline']), $locale);
 			$article->setSubjectClass(Core::cleanVar($row['chMetaSubjectClass']), $locale);
 			$article->setSubject(Core::cleanVar($row['chMetaSubject']), $locale);
-			$article->setCoverageGeo(Core::cleanVar($row['chMetaCoverageGeo'], $locale));
+			$article->setCoverageGeo(Core::cleanVar($row['chMetaCoverageGeo']), $locale);
 			$article->setCoverageChron(Core::cleanVar($row['chMetaCoverageChron']), $locale);
 			$article->setCoverageSample(Core::cleanVar($row['chMetaCoverageSample']), $locale);
 			$article->setType(Core::cleanVar($row['chMetaType_Author']), $locale);
@@ -1291,16 +1290,16 @@ class ImportOJS1 {
 			$suppFile = &new SuppFile();
 			$suppFile->setFileId($fileId);
 			$suppFile->setArticleId($this->articleMap[$row['fkArticleID']]);
-			$suppFile->setTitle(Core::cleanVar($row['chTitle']));
-			$suppFile->setCreator(Core::cleanVar($row['chCreator']));
-			$suppFile->setSubject(Core::cleanVar($row['chSubject']));
-			$suppFile->setType(Core::cleanVar($row['chType']));
-			$suppFile->setTypeOther(Core::cleanVar($row['chTypeOther']));
-			$suppFile->setDescription(Core::cleanVar($row['chDescription']));
-			$suppFile->setPublisher(Core::cleanVar($row['chPublisher']));
-			$suppFile->setSponsor(Core::cleanVar($row['chSponsor']));
+			$suppFile->setTitle(Core::cleanVar($row['chTitle']), Locale::getLocale());
+			$suppFile->setCreator(Core::cleanVar($row['chCreator']), Locale::getLocale());
+			$suppFile->setSubject(Core::cleanVar($row['chSubject']), Locale::getLocale());
+			$suppFile->setType(Core::cleanVar($row['chType']), Locale::getLocale());
+			$suppFile->setTypeOther(Core::cleanVar($row['chTypeOther']), Locale::getLocale());
+			$suppFile->setDescription(Core::cleanVar($row['chDescription']), Locale::getLocale());
+			$suppFile->setPublisher(Core::cleanVar($row['chPublisher']), Locale::getLocale());
+			$suppFile->setSponsor(Core::cleanVar($row['chSponsor']), Locale::getLocale());
 			$suppFile->setDateCreated($row['dtDateCreated']);
-			$suppFile->setSource(Core::cleanVar($row['chSource']));
+			$suppFile->setSource(Core::cleanVar($row['chSource']), Locale::getLocale());
 			$suppFile->setLanguage(Core::cleanVar($row['chLanguage']));
 			$suppFile->setShowReviewers($row['bShowReviewer']);
 			$suppFile->setDateSubmitted($row['dtDateCreated']);
