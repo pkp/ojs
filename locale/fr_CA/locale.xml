@@ -2489,7 +2489,7 @@ Après que vos révisions sont terminées, changer le nom du fichier AuthorNameQ
 	<message key="rt.admin.settings.addComment.unauthenticated">Users do not need to be registered to post, with anonymity permitted.</message>
 	<message key="icon.small.alt">Petit</message>
 	<message key="icon.medium.alt">Moyen</message>
-	<message key="icon.large.alt">Large</message>
+	<message key="icon.large.alt">Grand</message>
 	<message key="debug.notes.currencyListLoad">Liste téléchargée des unités monétaires"{$filename}" de XML</message>
 	<message key="common.add">Ajouter</message>
 	<message key="common.discipline">Discipline</message>
