@@ -1,0 +1,2646 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE locale SYSTEM "../locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky 
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the zh_TW (台灣＼繁體中文) locale.
+  *中文翻譯：祝平次（清華大學中文系），鄭凱元（中正大學哲學研究所博士班）
+  * $Id$
+  -->
+ 
+<locale name="zh_TW" full_name="繁體中文">
+	<!--
+	 * This file is organized into several major sections, separated
+	 * by comments like this one. These sections are called:
+	 *  COMMON - Contains frequently-used words
+	 *  ENTITIES - Contains terms pertaining to the system's major
+	 *             entities, e.g. Article, Journal, Section
+	 *  INTERFACE - Contains phrases organized by the section of the
+	 *              user interface they appear in.
+	 *  LOG - Contains phrases related to log entries
+	 *  MISC - Entries that don't belong elsewhere.
+	 *  DEFAULT - Default settings for configuration items.
+	-->
+
+	<!--
+	 *
+	 * COMMON - This section contains the most frequently-used words
+	 *
+	-->
+
+	<!-- Common Messages 一般訊息 -->
+	<message key="common.and">和</message>
+	<message key="common.between">之間</message>
+	<message key="common.all">全部</message>
+	<message key="common.on">開</message>
+	<message key="common.off">關</message>
+	<message key="common.enabled">啟動</message>
+	<message key="common.disabled">關閉</message>
+	<message key="common.openJournalSystems">開放期刊系統</message>
+	<message key="common.delete">刪除</message>
+	<message key="common.edit">編輯</message>
+	<message key="common.save">儲存</message>
+	<message key="common.export">輸出</message>
+	<message key="common.import">輸入</message>
+	<message key="common.saveAndContinue">儲存並繼續</message>
+	<message key="common.saveAndEmail">儲存並郵寄</message>
+	<message key="common.continue">繼續</message>
+	<message key="common.cancel">取消</message>
+	<message key="common.done">完成</message>
+	<message key="common.search">尋找</message>
+	<message key="common.up">上</message>
+	<message key="common.top">開始</message>
+	<message key="common.url">網址</message>
+	<message key="common.description">描述</message>
+	<message key="common.keywords">關鍵詞</message>
+	<message key="common.order">訂閱</message>
+	<message key="common.back">返回</message>
+	<message key="common.title">標題</message>
+	<message key="common.upload">上傳</message>
+	<message key="common.download">下載</message>
+	<message key="common.replaceFile">取代檔案</message>
+	<message key="common.subject">主題</message>
+	<message key="common.type">類別</message>
+	<message key="common.publisher">出版者</message>
+	<message key="common.note">註</message>
+	<message key="common.notes">附註</message>
+	<message key="common.date">日期</message>
+	<message key="common.weeks">週</message>
+	<message key="common.source">來源</message>
+	<message key="common.language">語言</message>
+	<message key="common.id">識別碼</message>
+	<message key="common.status">狀態</message>
+	<message key="common.remove">移除</message>
+	<message key="common.file">檔案</message>
+	<message key="common.uploadedFile">上傳檔案</message>
+	<message key="common.fileName">檔名</message>
+	<message key="common.dateSubmitted">收稿日期</message>
+	<message key="common.dateRequested">要求期限</message>
+	<message key="common.dateCompleted">完成日期</message>
+	<message key="common.dateUploaded">上傳日期</message>
+	<message key="common.dateModified">修改日期</message>
+	<message key="common.other">其它</message>
+	<message key="common.fileSize">檔案大小</message>
+	<message key="common.size">大小</message>
+	<message key="common.fileType">檔案類別</message>
+	<message key="common.originalFileName">原始檔名</message>
+	<message key="common.none">無</message>
+	<message key="common.required">需要的</message>
+	<message key="common.requiredField">*需要填寫的項目</message>
+	<message key="common.or">或</message>
+	<message key="common.notAvailable">無法提供</message>
+	<message key="common.notApplicable">不適用</message>
+	<message key="common.notApplicableShort">不適用</message>
+	<message key="common.yes">是</message>
+	<message key="common.no">否</message>
+	<message key="common.languages">語言</message>
+	<message key="common.changesSaved">已經儲存您的修改</message>
+	<message key="common.chooseOne">請選一項</message>
+	<message key="common.alreadyAssigned">已指派的</message>
+	<message key="common.assign">指派</message>
+	<message key="common.assigned">指派的</message>
+	<message key="common.record">記錄</message>
+	<message key="common.width">寬度</message>
+	<message key="common.height">高度</message>
+	<message key="common.user">使用者</message>
+	<message key="common.event">事件</message>
+	<message key="common.action">功能</message>
+	<message key="common.select">選取</message>
+	<message key="common.selectAll">全部選取</message>
+	<message key="common.selectNone">全不選取</message>
+	<message key="common.applyAction">執行功能</message>
+	<message key="common.deleteSelection">刪除選取範圍</message>
+	<message key="common.removeSelection">移除選取</message>
+	<message key="common.year">年</message>
+	<message key="common.month">月</message>
+	<message key="common.day">日</message>
+	<message key="common.hour">時</message>
+	<message key="common.minute">分</message>
+	<message key="common.second">秒</message>
+	<message key="common.create">建立</message>
+	<message key="common.modify">修改</message>
+	<message key="common.notify">通知</message>
+	<message key="common.noneAssigned">沒有指派</message>
+	<message key="common.cancelled">已取消</message>
+	<message key="common.inProgress">正在進行</message>
+	<message key="common.replaced">取代的</message>
+	<message key="common.uninitiated">非主動開始</message>
+	<message key="common.updated">已更新</message>
+	<message key="common.untitled">未命名</message>
+	<message key="common.view">檢視</message>
+	<message key="common.related">相關的</message>
+	<message key="common.active">進行中的</message>
+	<message key="common.completed">已完成</message>
+	<message key="common.mailingAddress">郵寄地址</message>
+	<message key="common.country">國別</message>
+	<message key="common.close">關閉</message>
+	<message key="common.closeWindow">關閉視窗</message>
+	<message key="common.initiate">開始</message>
+	<message key="common.complete">完成</message>
+	<message key="common.options">選項</message>
+	<message key="common.plugin">插入的</message>
+	<message key="common.default">預設</message>
+	<message key="common.addSelf">加入自已</message>
+	<message key="common.alphaList">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</message>
+
+	<!-- Common Form Messages 表單訊息 -->
+	<message key="form.errorsOccurred">處理表單時發生錯誤</message>
+	<message key="form.saveToUpload">使用儲存來上傳檔案</message>
+	<message key="form.contains">包含</message>
+	<message key="form.is">是</message>
+	<message key="form.required">(*必須的)</message>
+	<message key="form.submit">送出</message>
+	<message key="form.send">送出</message>
+	<message key="form.resubmit">重新送出</message>
+	
+	<!-- Common Email Messages 電子郵件訊息 -->
+	<message key="email.email">電子郵件</message>
+	<message key="email.sender">送件者</message>
+	<message key="email.recipient">收件者</message>
+	<message key="email.recipients">收件者</message>
+	<message key="email.from">從</message>
+	<message key="email.to">到</message>
+	<message key="email.cc">副本</message>
+	<message key="email.bcc">密件副本</message>
+	<message key="email.subject">主旨</message>
+	<message key="email.body">內文</message>
+	<message key="email.send">送出</message>
+	<message key="email.skip">跳過信件</message>
+	<message key="email.compose">送出信件</message>
+	<message key="email.addToRecipient">增加收件者</message>
+	<message key="email.addCcRecipient">增加副本收件者</message>
+	<message key="email.addBccRecipient">增加隱藏副本收件者</message>
+	<message key="email.bccSender">送一份到我的信箱({$address})</message>
+	<message key="email.invalid">{$email}是無效的電子信箱。</message>
+	<message key="email.multipart">這是分成幾個部分的MIME格式信息。</message>
+	<message key="email.attachments">附件</message>
+	<message key="email.addAttachment">增加附件</message>
+
+	<!-- Common Localization Terms 本土化 -->
+	<message key="locale.primary">首要地區</message>
+	<message key="locale.supported">支持的地區</message>
+
+	<!-- Common Error Messages 錯誤資訊 -->
+	<message key="common.error.databaseError">一個和資料庫相關的錯誤產生： {$error}</message>
+	<message key="common.error.databaseErrorUnknown">一個不明資料庫連結錯誤產生。</message>
+	<message key="common.error.framesRequired"><![CDATA[這個網頁需要框架。 <a href="{$url}">點擊這裡</a> 來閱覽不用框架的版本。]]></message>
+		
+	<!-- Navigation 導覽 -->
+	<message key="navigation.journalHelp">期刊協助資訊</message>
+	<message key="navigation.loggedInAs">您是以下列使用者名稱登入：</message>
+	<message key="navigation.logout">登出</message>
+	<message key="navigation.home">首頁</message>
+	<message key="navigation.about">介紹</message>
+	<message key="navigation.userHome">使用者首頁</message>
+	<message key="navigation.login">登入</message>
+	<message key="navigation.register">註冊</message>
+	<message key="navigation.user">使用者</message>
+	<message key="navigation.archives">過期期刊</message>
+	<message key="navigation.current">當期期刊</message>
+	<message key="navigation.search">尋找</message>
+	<message key="navigation.otherJournals">其它期刊</message>
+	<message key="navigation.myProfile">我的資料</message>
+	<message key="navigation.myJournals">我的期刊</message>
+	<message key="navigation.journalContent">期刊內容</message>
+	<message key="navigation.browse">瀏覽</message>
+	<message key="navigation.browseByIssue">依據期數</message>
+	<message key="navigation.browseByAuthor">依據作者</message>
+	<message key="navigation.browseByTitle">依據篇名</message>
+	<message key="navigation.info">網站註冊/使用資訊</message>
+	<message key="navigation.infoForAuthors">給作者</message>
+	<message key="navigation.infoForReaders">給讀者</message>
+	<message key="navigation.infoForLibrarians">給圖書館員</message>
+	<message key="navigation.infoForAuthors.long">給作者的資訊</message>
+	<message key="navigation.infoForReaders.long">給讀者的資訊</message>
+	<message key="navigation.infoForLibrarians.long">給圖書館員的資訊</message>
+	<message key="navigation.previousStep">上一步</message>
+	<message key="navigation.nextStep">下一步</message>
+	<message key="navigation.stepNumber"> 第{$step}步驟</message>
+	<message key="navigation.previousPage">&lt;&lt;</message>
+	<message key="navigation.nextPage">&gt;&gt;</message>
+	<message key="navigation.items">第{$from} - {$to} 項；總共 {$total} 項</message>
+	
+	<!-- Article Queues -->
+	<message key="common.queue.long.submissionsUnassigned">未指派</message>
+	<message key="common.queue.short.submissionsUnassigned">未指派</message>
+	<message key="common.queue.long.submissionsInEditing">稿件編輯中</message>
+	<message key="common.queue.short.submissionsInEditing">編輯中</message>
+	<message key="common.queue.long.submissionsInReview">審查中</message>
+	<message key="common.queue.short.submissionsInReview">審查中</message>
+	<message key="common.queue.long.submissionsArchives">稿件檔案櫃</message>
+	<message key="common.queue.short.submissionsArchives">稿件檔案櫃</message>
+	<message key="common.queue.long.active">處理中</message>
+	<message key="common.queue.short.active">處理中</message>
+	<message key="common.queue.long.completed">檔案櫃</message>
+	<message key="common.queue.short.completed">檔案櫃</message>
+	
+	<!--
+	 *
+	 * ENTITIES - This section contains terms pertaining to the system's
+	 *            major entities, e.g. Article, Journal, Section
+	 * 各項目 - 關於論文、期刊、文稿類型等系統主要項目
+	-->
+
+	<!-- Common Section Terms 文稿類型詞彙 -->
+	<message key="section.section">文稿類型</message>
+	<message key="section.sections">期刊文稿類型</message>
+	<message key="section.title">文稿類型名稱</message>
+	<message key="section.abbreviation">簡稱</message>
+	<message key="section.abbreviation.example">(例如, Articles=ART)</message>
+	<message key="section.default.title">論文</message>
+	<message key="section.default.abbrev">ART</message>
+	<message key="section.default.policy"></message>
+
+	<!-- Common Article Terms 論文詞彙 -->
+	<message key="article.articles">論文</message>
+	<message key="article.submissionId">稿件編號</message>
+	<message key="article.title">篇名</message>
+	<message key="article.authors">作者</message>
+	<message key="article.indexingInformation">檢索資訊</message>
+	<message key="article.metadata">後設資料(metadata)</message>
+	<message key="article.journalSection">期刊文稿類型</message>
+	<message key="article.file">檔案</message>
+	<message key="article.suppFile">補充檔案</message>
+	<message key="article.suppFiles">補充檔案</message>
+	<message key="article.suppFilesAbbrev">補充檔案</message>
+	<message key="article.discipline">學術領域和次領域</message>
+	<message key="article.subjectClassification">主題分類</message>
+	<message key="article.subject">關鍵詞</message>
+	<message key="article.coverage">範圍</message>
+	<message key="article.coverageGeo">地理空間範圍</message>
+	<message key="article.coverageChron">時期或歷史範圍</message>
+	<message key="article.coverageSample"> 研究樣本的特徵</message>
+	<message key="article.type">類型、方法或途徑</message>
+	<message key="article.language">語言</message>
+	<message key="article.sectionEditor">文稿類型編者</message>
+	<message key="article.commentsToEditor">作者回覆</message>
+	<message key="article.submission">投稿</message>
+	<message key="article.submissions">投稿</message>
+	<message key="article.abstract">摘要</message>
+	<message key="article.details">詳情</message>
+
+	<!-- Submission Tracking - Common 投稿記錄（常用） -->
+	<message key="submission.summary">摘要</message>
+	<message key="submission.review">審查</message>
+	<message key="submission.editing">編輯</message>
+	<message key="submission.history">歷史</message>
+	<message key="submission.page.summary">#{$id} 摘要</message>
+	<message key="submission.page.review">#{$id} 審查</message>
+	<message key="submission.page.editing">#{$id} 編輯</message>
+	<message key="submission.page.history">#{$id} 歷史</message>
+	<message key="submission.submissionReview">稿件審查</message>
+	<message key="submission.submissionEditing">稿件編輯</message>
+	<message key="submission.submissionHistory">稿件歷史</message>
+	<message key="submission.submissionManuscript">稿件原件</message>
+	<message key="submission.metadata">稿件後設資料</message>
+	<message key="submission.originalFile">原始檔案</message>
+	<message key="submission.addSuppFile">增加一個補充檔案</message>
+	<message key="submission.submitter">投稿者</message>
+	<message key="submission.changeSection">改為</message>
+	<message key="submission.initiated">起始</message>
+	<message key="submission.lastModified">最後修改日期</message>
+	<message key="submission.ask">問題</message>
+	<message key="submission.request">要求</message>
+	<message key="submission.underway">途中</message>
+	<message key="submission.start">開始</message>
+	<message key="submission.response">回應：</message>
+	<message key="submission.accepted">接受</message>
+	<message key="submission.rejected">退稿</message>
+	<message key="submission.acceptance">同意審查</message>
+	<message key="submission.due">期限</message>
+	<message key="submission.complete">完成</message>
+	<message key="submission.acknowledge">謝辭</message>
+	<message key="submission.done">完成</message>
+	<message key="submission.views">檢視</message>
+	<message key="submission.abstractViews">檢視摘要</message>
+	<message key="submission.noReviewAssignments">沒有審查工作</message>
+	<message key="submission.reviewVersion">審查版本</message>
+	<message key="submission.peerReview">審查</message>
+	<message key="submission.editorDecision">編者決定</message>
+	<message key="submission.round">{$round}審階段</message>
+	<message key="submission.editorReview">編者審查</message>
+	<message key="submission.notifyAuthor">通知作者</message>
+	<message key="submission.notifyEditor">通知編者</message>
+	<message key="submission.editorAuthorRecord">編者/作者電子郵件記錄</message>
+	<message key="submission.reviewersVersion">審查人加註的檔案版本</message>
+	<message key="submission.postReviewVersion">審查後的檔案版本</message>
+	<message key="submission.editorVersion">編者版本</message>
+	<message key="submission.authorsRevisedVersion">作者修訂的版本</message>
+	<message key="submission.authorVersion">作者的版本</message>
+	<message key="submission.copyediting">準備印行</message>
+	<message key="submission.copyedit">準備印行</message>
+	<message key="submission.layout">版面設計</message>
+	<message key="submission.proofreading">校對</message>
+	<message key="submission.scheduling">時程安排</message>
+	<message key="submission.scheduledIn">預定出刊日期{$issueName}.</message>
+	<message key="submission.scheduledIn.tba">(TBA)</message>
+	<message key="submission.files">檔案</message>
+	<message key="submission.viewMetadata">檢視後設資料(Metadata)</message>
+	<message key="submission.editMetadata">編輯後設資料</message>
+	<message key="submission.reviewMetadata">審查後設資料</message>
+	<message key="submission.backToSubmissionEditing">回到稿件編輯</message>
+	<message key="submission.titleAndAbstract">篇名和摘要</message>
+	<message key="submission.indexing">檢索</message>
+	<message key="submission.restrictions">限制</message>
+	<message key="submission.supportingAgencies">支持單位</message>
+	<message key="submission.saveMetadata">儲存後設資料</message>
+	
+	<message key="submissions.sec">文稿類型</message>
+	<message key="submissions.step1">步驟 1</message>
+	<message key="submissions.step3">步驟 3</message>
+	<message key="submissions.completed">完成</message>
+	<message key="submissions.active">進行中的</message>
+	<message key="submissions.queuedUnassigned">等待被指派</message>
+	<message key="submissions.queuedEditing">進行編輯程序</message>
+	<message key="submissions.queuedReview">進行審查程序</message>
+	<message key="submissions.archived">典藏</message>
+	<message key="submissions.scheduled">排程</message>
+	<message key="submissions.published">出版</message>
+	<message key="submissions.declined">拒絕</message>
+	<message key="submissions.queued">排序</message>
+	<message key="submissions.initial">起始的</message>
+	<message key="submissions.proofread">校對</message>
+	<message key="submissions.initialProof">起始的證明</message>
+	<message key="submissions.postAuthor">後作者</message>
+	<message key="submissions.reviewRound">審查次數</message>
+	<message key="submissions.incomplete">未完成</message>
+	<message key="submissions.proof">校對</message>
+	<message key="submissions.submit">送出</message>
+	<message key="submissions.editorDecision">編者決定</message>
+	<message key="submissions.editorRuling">編者裁決</message>
+	<message key="submissions.ruling">裁決</message>
+	<message key="submissions.noSubmissions">沒有稿件</message>
+	<message key="submission.supplementaryFiles">補充檔案</message>
+	<message key="submission.dueDate">到期日</message>
+	<message key="submission.recommendation">推薦</message>
+	<message key="submission.galley">Galley</message>
+	<message key="submission.emailLog">電子郵件記錄簿</message>
+	<message key="submission.eventLog">事件記錄簿</message>
+	<message key="submission.uploadFileTo">上傳檔案到</message>
+
+	<!-- Submission list search engine 投稿清單搜尋引擎 -->
+	<message key="submissions.submitted">已送出</message>
+	<message key="submissions.copyeditComplete">已校樣</message>
+	<message key="submissions.layoutComplete">已排版</message>
+	<message key="submissions.proofreadingComplete">已校對</message>
+
+	<!-- Submission Notes 投稿備註 -->
+	<message key="submission.notes">投稿備註</message>
+	<message key="submission.notes.breadcrumb">備註</message>
+	<message key="submission.notes.addNewNote">應加新的備註</message>
+	<message key="submission.notes.viewNotes">檢視備註</message>
+	<message key="submission.notes.expandNotes">展開備註</message>
+	<message key="submission.notes.clearAllNotes">清除所有備註</message>
+	<message key="submission.notes.noSubmissionNotes">沒有任何投稿備註</message>
+	<message key="submission.notes.confirmDelete">移除這個投稿備註？</message>
+	<message key="submission.notes.editNote">編輯備註</message>
+	<message key="submission.notes.attachedFile">附加檔案</message>
+	<message key="submission.notes.confirmDeleteAll">移除所有投稿備註？</message>
+	<message key="submission.notes.collapseNotes">收攏備註</message>
+	<message key="submission.notes.backToSubmissionNotes">返回投稿備註</message>
+	<message key="submission.notes.removeUploadedFile">移除已上傳的檔案</message>
+	<message key="submission.notes.deleteNote">刪除備註</message>
+	<message key="submission.notes.updateNote">更新備註</message>
+	<message key="submission.notes.createNewNote">建立新的備註</message>
+	
+	<!-- Common Journal Terms 期刊詞彙 -->
+	<message key="journal.currentIssue">最新一期</message>
+	<message key="journal.journals">期刊</message>
+	<message key="journal.path">路徑</message>
+	<message key="journal.journal">期刊</message>
+
+	<!-- User 使用者 -->
+	<message key="user.userHome">使用者首頁</message>
+	<message key="user.showAllJournals">顯示我的期刊</message>
+	<message key="user.login">登入</message>
+	<message key="user.profile">小檔案</message>
+	<message key="user.register">註冊</message>
+	<message key="user.logIn">登入</message>
+	<message key="user.logOut">登出</message>
+	<message key="user.username">使用者名稱</message>
+	<message key="user.password">密碼</message>
+	<message key="user.name">姓名</message>
+	<message key="user.firstName">中文姓名</message>
+	<message key="user.middleName">中間名</message>
+	<message key="user.initials">姓名簡寫</message>
+	<message key="user.initialsExample">Joan Alice Smith = JAS</message>
+	<message key="user.lastName">西文姓名</message>
+	<message key="user.title">職稱</message>
+	<message key="user.affiliation">所屬機構</message>
+	<message key="user.affiliations">所屬機構</message>
+	<message key="user.email">電子信箱(email)</message>
+	<message key="user.url">個人網頁</message>
+	<message key="user.url.description">所填入的綱址將會在「關於作者」和「編輯團隊」的「個人資訊」欄底下顯示為一個超連結。</message>
+	<message key="user.phone">電話號碼</message>
+	<message key="user.fax">傳真號碼</message>
+	<message key="user.interests">願意審查的領域</message>
+	<message key="user.mailingAddress">郵寄地址</message>
+	<message key="user.biography">個人資訊</message>
+	<message key="user.biography.description">(例如系所和職級)</message>
+	<message key="user.workingLanguages">使用的語言</message>
+	<message key="user.dateRegistered">註冊日期</message>
+	<message key="user.dateLastLogin">最近一次登入</message>
+	<message key="user.registerForOtherJournals">註冊其它期刊</message>
+	<message key="user.roles">角色</message>
+	<message key="user.changePassword">改變密碼</message>
+	<message key="user.editMyProfile">編輯我的資料</message>
+	<message key="user.changeMyPassword">改變我的密碼</message>
+	<message key="user.myJournals">我的期刊</message>
+	<message key="user.myAccount">我的帳戶</message>
+	
+	<!-- Roles 角色 -->
+	<message key="user.role.siteAdmin">網站管理員</message>
+	<message key="user.role.manager">期刊管理員</message>
+	<message key="user.role.editor">編輯</message>
+	<message key="user.role.sectionEditor">文稿類型編輯</message>
+	<message key="user.role.layoutEditor">版面編輯</message>
+	<message key="user.role.reviewer">審查委員</message>
+	<message key="user.role.copyeditor">校樣編輯</message>
+	<message key="user.role.proofreader">校對者</message>
+	<message key="user.role.author">作者</message>
+	<message key="user.role.reader">讀者</message>
+	<message key="user.role.subscriptionManager">訂閱管理員</message>
+	<message key="user.role.siteAdmins">網站管理員</message>
+	<message key="user.role.managers">期刊管理員</message>
+	<message key="user.role.editors">編輯</message>
+	<message key="user.role.sectionEditors">文稿類型編輯</message>
+	<message key="user.role.layoutEditors">版面編輯</message>
+	<message key="user.role.reviewers">審查委員</message>
+	<message key="user.role.copyeditors">校樣編輯</message>
+	<message key="user.role.proofreaders">校對者</message>
+	<message key="user.role.authors">作者</message>
+	<message key="user.role.readers">讀者</message>
+	<message key="user.role.subscriptionManagers">訂閱管理員</message>
+	
+	<!-- Common Issue Terms -->
+	<message key="issue.issue">期</message>
+	<message key="issue.issues">期</message>
+	<message key="issue.title">標題</message>
+	<message key="issue.volume">卷</message>
+	<message key="issue.number">期數</message>
+	<message key="issue.vol">卷</message>
+	<message key="issue.no">期</message>
+	<message key="issue.year">年</message>
+	<message key="issue.noIssues">期數</message>
+	<message key="issue.toc">目錄</message>
+	<message key="issue.abstract">摘要</message>
+
+	<!--
+	 *
+	 * LOG - This section contains entries related to log entries.
+	 * 紀錄 - 包括與記錄檔相關的項目。
+	-->
+	<message key="submission.event.logLevel">層級</message>
+	<message key="submission.event.logLevel.info">資訊</message>
+	<message key="submission.event.logLevel.notice">通知</message>
+	<message key="submission.event.logLevel.warning">警訊</message>
+	<message key="submission.event.logLevel.error">錯誤</message>
+	
+	<message key="submission.event.general.defaultEvent">投稿事件</message>
+	<message key="submission.event.general.articleSubmitted">投稿稿件</message>
+	<message key="submission.event.general.metadataUpdated">已更新的稿件後設資料</message>
+	<message key="submission.event.general.suppFileUpdated">已更新的稿件檔案</message>
+	<message key="submission.event.general.issueScheduled">已送到期數排序的稿件</message>
+	<message key="submission.event.general.issueAssigned">已指派給某期的稿件</message>
+	<message key="submission.event.general.articlePublished">已刊出的論文</message>
+
+	<message key="submission.event.author.authorRevision">作者修訂送出</message>
+
+	<message key="submission.event.general.authorRevision">作者修訂檔案更新</message>
+	
+	<message key="submission.event.editor.editorAssigned">指派稿件的編者</message>
+	<message key="submission.event.editor.editorUnassigned">不指派稿件的編者</message>
+	<message key="submission.event.editor.editorDecision">編者裁決送出</message>
+	<message key="submission.event.editor.editorFile">編者檔案更新</message>
+	<message key="submission.event.editor.submissionArchived">送到檔案櫃的稿件</message>
+	<message key="submission.event.editor.submissionRestored">從檔案櫃取回的稿件</message>
+	
+	<message key="submission.event.reviewer.reviewerAssigned">指派給稿件的審查委員</message>
+	<message key="submission.event.reviewer.reviewerUnassigned">不指派給稿件的審查委員</message>
+	<message key="submission.event.reviewer.reviewInitiated">已開始的審查作業</message>
+	<message key="submission.event.reviewer.reviewCancelled">已取消的審查作業</message>
+	<message key="submission.event.reviewer.reviewReinitiated">重新開始的審查作業</message>
+	<message key="submission.event.reviewer.reviewAccepted">已接受的審查作業</message>
+	<message key="submission.event.reviewer.reviewAcceptedByProxy">從連線伺服器接受的審查作業</message>
+	<message key="submission.event.reviewer.reviewDeclined">被拒絕的審查作業</message>
+	<message key="submission.event.reviewer.reviewRevision">更新的審查修訂檔案</message>
+	<message key="submission.event.reviewer.reviewRecommendation">審查推薦檔案</message>
+	<message key="submission.event.reviewer.reviewerRated">送出的審查委員評分</message>
+	<message key="submission.event.reviewer.reviewDueDate">修正的審查截止日期</message>
+	<message key="submission.event.reviewer.reviewResubmitted">送出的審查結果</message>
+	<message key="submission.event.reviewer.reviewFile">更新的審查檔案</message>
+	
+	<message key="submission.event.copyedit.copyeditorAssigned">指派給稿件的校樣編輯</message>
+	<message key="submission.event.copyedit.copyeditorUnassigned">不指派給稿件的校樣編輯</message>
+	<message key="submission.event.copyedit.copyeditInitiated">已開始的校樣作業</message>
+	<message key="submission.event.copyedit.copyeditRevision">更新的校樣修訂檔案</message>
+	<message key="submission.event.copyedit.copyeditInitialCompleted">完成的初步校樣</message>
+	<message key="submission.event.copyedit.copyeditFinalCompleted">完成的校樣定稿</message>
+	<message key="submission.event.copyedit.copyeditSetFile">更新的校樣檔案</message>
+	
+	<message key="submission.event.proofread.proofreaderAssigned">指派給稿件的校對者</message>
+	<message key="submission.event.proofread.proofreaderUnassigned">不指派給稿件的校對者</message>
+	<message key="submission.event.proofread.proofreadInitiated">已開始進行的校對作業</message>
+	<message key="submission.event.proofread.proofreadRevision">已更新的校對修訂檔案</message>
+	<message key="submission.event.proofread.proofreadCompleted">已完成的校對作業</message>
+	
+	<message key="submission.event.layout.layoutEditorAssigned">指派給稿件的排版編輯</message>
+	<message key="submission.event.layout.layoutEditorUnassigned">不指派給稿件的排版編輯</message>
+	<message key="submission.event.layout.layoutInitiated">已開始的排版作業</message>
+	<message key="submission.event.layout.layoutGalleyCreated">已更新的排版定稿</message>
+	<message key="submission.event.layout.layoutComplete">已完成的排版作業</message>
+	<!--
+	 *
+	 * INTERFACE - Contains phrases organized by the section of the
+	 *             user interface they appear in.
+	 * 介面 - 使用者介面中會出現的片語
+	-->
+
+	<!-- Reader article view 讀者檢視文章 -->
+	<message key="reader.fullText">全文：</message>
+	<message key="reader.fullTextSubscribersOnly">全文：只有註冊者可以進入</message>
+
+	<!-- Reader Comments 讀者評論 -->
+	<message key="comments.commentsOnArticle">評論這篇論文</message>
+	<message key="comments.viewAllComments">閱覽所有評論</message>
+	<message key="comments.noComments">沒有已貼的讀者評論。</message>
+	<message key="comments.anonymous">未註冊的使用者</message>
+	<message key="comments.anonymousNamed">"{$userName}"</message>
+	<message key="comments.authenticated">{$userName}</message>
+	<message key="comments.nReplies">({$num} 回覆)</message>
+	<message key="comments.oneReply">(一篇回覆)</message>
+	<message key="comments.readerComments">讀者評論</message>
+	<message key="comments.inResponseTo">回覆 <![CDATA[<a href="]]>{$url}<![CDATA[">]]>{$title}<![CDATA[</a>]]></message>
+	<message key="comments.emailReply">電子郵件回覆</message>
+	<message key="comments.postReply">貼上網的回覆</message>
+	<message key="comments.delete">刪除這個評論</message>
+	<message key="comments.replies">回覆</message>
+	<message key="comments.enterComment">輸入評論</message>
+	<message key="comments.name">張貼者的姓名</message>
+	<message key="comments.email">張貼者的電子信箱</message>
+	<message key="comments.title">評論篇名</message>
+	<message key="comments.body">評論正文</message>
+	<message key="comments.postAnonymously">以匿名訪客張貼評論</message>
+	<message key="comments.readMore">閱讀全文</message>
+	<message key="comments.confirmDeleteChildren">刪除這篇評論也會刪除所有對它的回覆。您真得要刪除這篇評論？</message>
+
+	<!-- Site Administration 網站管理 -->
+	<message key="admin.siteAdmin">網站管理</message>
+	<message key="admin.siteSettings">網站設定</message>
+	<message key="admin.hostedJournals">期刊建置</message>
+	<message key="admin.authSources">認證來源(Authentication Sources)</message>
+	
+	<message key="admin.settings.siteTitle">網站名稱</message>
+	<message key="admin.settings.introduction">介紹</message>
+	<message key="admin.settings.aboutDescription">關於網站說明</message>
+	<message key="admin.settings.form.titleRequired">需要一個名稱。</message>
+	<message key="admin.settings.journalRedirect">期刊重新導向</message>
+	<message key="admin.settings.journalRedirectInstructions">讓主站重新導向至這份期刊。比方說，如果這個網站只有唯一一份期刊的話，這個選項就很有用。</message>
+	<message key="admin.settings.noJournalRedirect">不要重新導向</message>
+	<message key="admin.settings.contactName">主要連絡人</message>
+	<message key="admin.settings.contactEmail">主要連絡人的電子信箱</message>
+	<message key="admin.settings.minPasswordLength">最少的密碼長度</message>
+	<message key="admin.settings.form.contactNameRequired">需要主要連絡人的名字。</message>
+	<message key="admin.settings.form.contactEmailRequired">需要主要連絡人的電子信箱。</message>
+	<message key="admin.settings.form.minPasswordLengthRequired">您必須輸入一個至少有4字元的密碼。</message>
+	<message key="admin.settings.passwordCharacters">字元</message>
+	<message key="admin.settings.siteLanguage">網站語言</message>
+	<message key="admin.settings.oaiRegistration">註冊網站以便檢索(Metadata Harvesting)</message>
+	<message key="admin.settings.oaiRegistrationDescription"><![CDATA[為了讓這個網站的所有期刊內容可以讓一個全球發行的研究資料庫檢索，請將您網站的網址(url)於「公共知識計畫」Public Knowledge Project 後設資料的<a href="http://pkp.sfu.ca/harvester/" target="_blank">收集器</a> <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">註冊</a>。這個工具將會收集期刊中每個檢索項目的後設資料，以便精確和集中搜尋每個隸屬於<a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">為收集後設資料而設的開放檔案初始協議</a>的研究網站。
+<br /><br />
+<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">點擊這裡</a>並且輸入 <span class="highlight">{$siteUrl}</span>在<b>網站網址</b>，和 <span class="highlight">{$oaiUrl}</span>在<b>供「公開檔案櫃索引」(OAI)的基礎網址</b>。
+<br /><br />
+藉由修改開放期刊系統的設定，請注意開放典藏檢索界面可以被關閉。未來開放期刊系統的版本將會允設一個網站的各別期刊可以設定開啟或關閉OAI系統。]]></message>
+
+	
+	<message key="admin.siteManagement">網站管理</message>
+	<message key="admin.adminFunctions">管理功能</message>
+	<message key="admin.expireSessions">讓使用者區段過期</message>
+	<message key="admin.confirmExpireSessions">您確定您要讓所有使用者區段過期？所有現在登入的使用者會被強迫再次登入(包括您自己)。</message>
+	<message key="admin.clearTemplateCache">清除樣版快取</message>
+	<message key="admin.clearDataCache">清除日期快取</message>
+	<message key="admin.confirmClearTemplateCache">您確定您要清除被編輯的樣版？</message>
+	<message key="admin.systemInformation">系統相關資訊</message>
+	
+	<!-- Languages 語言 -->
+	<message key="admin.languages.languageSettings">語言設定</message>
+	<message key="admin.languages.installLanguages">安裝語言</message>
+	<message key="admin.languages.primaryLocaleInstructions">這將會是這個網站和其上任何期刊的預設語言。</message>
+	<message key="admin.languages.supportedLocalesInstructions">選擇這個網站支援的所有地區設定。本網站上的所有期刊皆可使用所選擇的地區設定，而且會在每一期刊的網站出現(但是可以經由期刊特定的設定所覆蓋)。如果只有一種語言被設定，語言選擇表單將不會出現，而相關的語言設定也不會出現。</message>
+	<message key="admin.languages.languageOptions">語言選項</message>
+	<message key="admin.languages.profileLocales">註冊使用者（編輯、審查人、版面編輯...等等）應該在其使用者帳號中納入方便期刊編輯人的語言。(In registering people (editors, reviewers, copyeditors, etc.), working languages should be included in their User Profiles for the benefit of journal editors.)</message>
+	<message key="admin.languages.installedLocales">已經安裝的地區設定</message>
+	<message key="admin.languages.reload">重載地區設定</message>
+	<message key="admin.languages.confirmReload">您確定您要重載地區設定？這將會刪除任何和地區設定相關的資料，例如已經殊別化的電子郵件樣版。</message>
+	<message key="admin.languages.uninstall">解除安裝地區設定</message>
+	<message key="admin.languages.confirmUninstall">您確定您要解除安裝這個地區設定？這可能會影響到任何使用這個地區設定的期刊。</message>
+	<message key="admin.languages.installNewLocales">安裝新的地區設定</message>
+	<message key="admin.languages.installNewLocalesInstructions">安裝額外的地區設定以在這個系統取得語言支援。地區設定必須先安裝，系統上的期刊才能使用該地區語言。請參考OJS文件以取得關於增加語言支援的資訊。</message>
+	<message key="admin.languages.noLocalesAvailable">沒有額外的地區設定可供安裝。</message>
+	<message key="admin.languages.installLocales">安裝</message>
+	
+	<message key="admin.auth.ojs">OJS 使用者資料庫</message>
+	<message key="admin.auth.create">開取認證資源</message>
+	<message key="admin.auth.confirmDelete">您確定您要永遠刪除這個認證資源？</message>
+	<message key="admin.auth.noneCreated">沒有定義任何認證資源。</message>
+	<message key="admin.auth.enableSyncProfiles">啟用使用者檔案同步化（如果這個認證外掛元件支持的話）。使用者帳號資訊會在使用者登入時，自動從遠端來源更新，而OJS內部的帳號變更（包括密碼變更）會自動地在更新至遠端來源。如果這個選項未被啟用，OJS帳號資訊會和遠端來源保持分離。</message>
+	<message key="admin.auth.enableSyncPasswords">啟用使用者密碼修訂（如果這個認證外掛元件支持的話）。啟用這個選項會允許使用者修改他們在OJS中的密碼，並且使用OJS的「忘記密碼」功能來重新設定被忘掉的密碼。如果這個選項沒有被啟用的話，使用者將無法使用這些功能。</message>
+	<message key="admin.auth.enableCreateUsers">啟用建立使用者（如果這個認證外掛元件支持的話）。以這個認證來源在OJS中所建立的使用者，會自動地被新增遠端的認證來源中，如果他們本來不存在的話。此外，如果這個來源是預設的認證來源，透過使用者註冊程序所建立OJS帳號也會被新增到遠端的認證來源。</message>
+	<message key="admin.auth.defaultSourceDescription"><![CDATA[指定一個OJS之外的認證來源會有下列的好處：
+<ul>
+	<li>如果一個使用者想要在這個網站中，以一個在認證來源中（而非OJS的資料庫中）已經存在的名稱來註冊一個新的帳號，只有在輸入的密碼對該使用者帳號來說是有效的時候，才能完成註冊程序。</li>
+</ul>]]></message>
+	
+	<!-- System Information 系統資訊 -->
+	<message key="admin.systemVersion">OJS 版本</message>
+	<message key="admin.systemConfiguration">OJS 設定</message>
+	<message key="admin.serverInformation">伺服器資訊</message>
+	<message key="admin.currentVersion">使用中的版本</message>
+	<message key="admin.versionHistory">版本的歷史</message>
+	<message key="admin.version">版本</message>
+	<message key="admin.versionMajor">主要</message>
+	<message key="admin.versionMinor">次要</message>
+	<message key="admin.versionRevision">修訂</message>
+	<message key="admin.versionBuild">建立</message>
+	<message key="admin.dateInstalled">安裝日期</message>
+	<message key="admin.systemConfigurationDescription"><![CDATA[由<tt>config.inc.php</tt>取得的 OJS 設定。]]></message>
+	<message key="admin.serverInformationDescription"><![CDATA[基本的運作系統和伺服器軟體版本。 點擊<span class="highlight">Extended PHP Information</span>以檢視這個伺服器之PHP設定的更多細節。]]></message>
+	<message key="admin.phpInfo">延伸的 PHP 資訊</message>
+	<message key="admin.server.platform">OS 平台</message>
+	<message key="admin.server.phpVersion">PHP 版本</message>
+	<message key="admin.server.apacheVersion">Apache 版本</message>
+	<message key="admin.server.dbDriver">資料庫驅動程式</message>
+	<message key="admin.server.dbVersion">資料庫伺服器版本</message>
+	<message key="admin.editSystemConfigInstructions"><![CDATA[使用這個表單來修改您的系統設定(<tt>config.inc.php</tt> 檔案)。按下「存檔」來儲存您做的新設定，或者按下「顯示」僅僅顯示出更新過的設定檔案，但是不修改您現有的設定。
+<br /><br />
+<span class="formError">警告：修改這些設定可能會讓您的網站處於一種無法存取的狀態（您需要手動地修正您的設定檔）我們強烈建議您，除非您完全知道您在做什麼，否則不要做任何的修改。</span>]]></message>
+	<message key="admin.saveSystemConfig">儲存設定</message>
+	<message key="admin.displayNewSystemConfig">顯示新的設定</message>
+	<message key="admin.systemConfigFileReadError"><![CDATA[設定檔<tt>config.inc.php</tt>並不存在、 無法讀取，或者無效]]></message>
+	<message key="admin.overwriteConfigFileInstructions"><![CDATA[<h4>注意！</div>
+<p>系統無法自動覆寫這個設定檔。要應用您的設定變更，您必須以適合的編輯器開啟<tt>config.inc.php</tt>，並以下列文字欄位中的內容來取代其內容。</p>]]></message>
+	<message key="admin.displayConfigFileInstructions"><![CDATA[您更新設定檔的內容顯示如下。要應用這個設定變更，您必須以適合的文字編輯器來開啟<tt>config.inc.php</tt>並以下列文字欄位中的內容來取代其內容。]]></message>
+	<message key="admin.configFileUpdatedInstructions"><![CDATA[您的設定檔已經成功更新。請注意，如果您的網站不再正確運行，您或許需直接編輯<tt>config.inc.php</tt>來手動修復您的設定]]></message>
+	<message key="admin.contentsOfConfigFile">設定檔內容</message>
+	<message key="admin.version.checkForUpdates">檢查是否有更新</message>
+	<message key="admin.version.latest">最新的版本</message>
+	<message key="admin.version.upToDate">您的系統已是最新的</message>
+	<message key="admin.version.updateAvailable">已有更新版可供下載</message>
+	<message key="admin.version.downloadPackage">下載</message>
+	<message key="admin.version.downloadPatch">下載補丁</message>
+	<message key="admin.version.moreInfo">更多資訊</message>
+	
+	<message key="admin.journals.journalSettings">期刊設定</message>
+	<message key="admin.journals.noneCreated">沒有期刊被設置。</message>
+	<message key="admin.journals.confirmDelete">您確定要永遠刪除這種期刊和它所有的內容？</message>
+	<message key="admin.journals.create">建置期刊</message>
+	<message key="admin.journals.createInstructions">您會自動被指派成為這個期刊的管理員。建立一個新期刊之後，可用管理員的身份登入，繼續設定期刊和指派角色給其他使用者。</message>
+	<message key="admin.journals.urlWillBe">期刊的網址將會是 {$sampleUrl}</message>
+	<message key="admin.journals.form.titleRequired">需要期刊名稱。</message>
+	<message key="admin.journals.form.pathRequired">需要一個路徑。</message>
+	<message key="admin.journals.form.pathAlphaNumeric">這個路徑只能含有英文字母和數字符號，底線(_)和連字號(-)，而且一定要以英文字母和數字符號當做開頭和結尾</message>
+	<message key="admin.journals.form.pathExists">所選的路徑已經被其它期刊所使用。</message>
+	<message key="admin.journals.enableJournalInstructions">在這個網站上公開顯示這種期刊。</message>
+	<message key="admin.journals.journalDescription">期刊說明</message>
+	<message key="admin.journals.importOJS1">從 OJS 1 輸入</message>
+	<message key="admin.journals.importOJS1.editMigratedJournal">編輯移入的期刊</message>
+	<message key="admin.journals.importOJS1.conflict.desc">某些使用者帳號具有衝突的資訊。OJS 1.x允許多個使用者帳號共用同樣的電子郵件地址，而OJS 2.x則否。在下面的列表中，第二的帳號具有一個指派給它的暫時性電子郵件帳號。這些資訊應該手動加以更正，可以透過指派不同的電子郵件帳號，或者合併這些帳號。</message>
+	<message key="admin.journals.importOJS1.conflict">{$firstUsername} ({$firstName}) 和 {$secondUsername} ({$secondName})</message>
+	<message key="admin.journals.importOJS1Instructions">向OJS建議「升級」文件中的從OJS 1 升級到 OJS 2詳細資訊</message>
+	<message key="admin.journal.pathImportInstructions">已經存在的期刊路徑或是路徑已經被設置(例如："ojs")。</message>
+	<message key="admin.journal.importPath">OJS 1 路徑</message>
+	<message key="admin.journal.importPathInstructions">已經完成第一種期刊安裝的在地檔案系統(例如："/var/www/ojs")。</message>
+	<message key="admin.journals.importSubscriptions">輸入說明</message>
+	<message key="admin.journals.transcode">從ISO8859-1轉換文章後設資料的編碼</message>
+	<message key="admin.journals.form.importPathRequired">需要輸入的路徑。</message>
+	<message key="admin.journals.importErrors">輸入失敗</message>
+	
+	<!-- Subscription Management 訂閱管理 -->
+	<message key="subscriptionManager.subscriptionManagement">訂閱管理</message>
+	
+	<!-- Journal Management -->
+	<message key="manager.journalManagement">期刊管理</message>
+	<message key="manager.setup">設定</message>
+	<message key="manager.emails">已設置的電子郵件</message>
+	<message key="manager.statistics">統計報告</message>
+	<message key="manager.readingTools">閱讀工具</message>
+	<message key="manager.people">人員</message>
+	<message key="manager.filesBrowser">檔案瀏覽</message>
+	<message key="manager.groups">編輯團隊</message>
+	<message key="manager.managementPages">管理網頁</message>
+	<message key="manager.plugins">外掛程式</message>
+	<message key="manager.users">使用者</message>
+	<message key="manager.roles">角色</message>
+	<message key="manager.subscriptionTypes">訂閱類別</message>
+	<message key="manager.subscriptions">訂閱</message>
+	<message key="manager.subscriptionPolicies">訂閱規定</message>
+	<message key="manager.announcements">公告</message>
+	<message key="manager.announcementTypes">公告類別</message>
+
+	<!-- Statistics & Reports 統計與報表 -->
+	<message key="manager.statistics.statistics">期刊統計</message>
+	<message key="manager.statistics.statistics.description">OJS為每一份期刊計算下列的統計數據。「審查日數」計算從投稿日（或指派審查版本的日期）開始，到做出最初的編輯決策之間的天數；而「出版日數」則計算從收到上傳初稿到出版之間的天數。</message>
+	<message key="manager.statistics.statistics.makePublic">點選讀者在「關於本期刊」之中可以使用的項目。</message>
+	<message key="manager.statistics.statistics.selectSections">選擇這個文稿類型以檢視本期刊之審查統計。</message>
+	<message key="manager.statistics.statistics.itemsPublished">已出版項目</message>
+	<message key="manager.statistics.statistics.numSubmissions">投稿稿件數</message>
+	<message key="manager.statistics.statistics.peerReviewed">經審查</message>
+	<message key="manager.statistics.statistics.count.accept">接受刊出</message>
+	<message key="manager.statistics.statistics.count.decline">回絕刊出</message>
+	<message key="manager.statistics.statistics.count.revise">重新投稿</message>
+	<message key="manager.statistics.statistics.count.value">{$count} ({$percentage}%)</message>
+	<message key="manager.statistics.statistics.numIssues">已出版期數</message>
+	<message key="manager.statistics.statistics.reviewers">審查人</message>
+	<message key="manager.statistics.statistics.reviewerCount">指定的號碼</message>
+	<message key="manager.statistics.statistics.reviewsPerReviewer">審查的號碼</message>
+	<message key="manager.statistics.statistics.daysPerReview">審查天數</message>
+	<message key="manager.statistics.statistics.reviewerScore">編輯分數</message>
+	<message key="manager.statistics.statistics.daysToPublication">出版天數</message>
+	<message key="manager.statistics.statistics.registeredUsers">已註冊的使用者</message>
+	<message key="manager.statistics.statistics.registeredReaders">已註冊的讀者</message>
+	<message key="manager.statistics.statistics.totalNewValue">{$numTotal} ({$numNew} new)</message>
+	<message key="manager.statistics.statistics.subscriptions">訂閱</message>
+	<message key="manager.statistics.statistics.note">注意已審查的稿件不可能加到百分日，因為重新投稿的頁目不是接受、退稿就是還在處理中。</message>
+
+	<message key="manager.statistics.reports">報告產生器</message>
+	<message key="manager.statistics.reports.description">OJS建立報告，從投稿人、編輯、審查人和文稿類型編輯的眼光，追蹤在一段時間中進行之投稿的相關細節。報告生成為CSV檔案格式，需要一個有試算表的應用程式(如Excel)才能檢視。</message>
+	<message key="manager.statistics.reports.dateFrom">從</message>
+	<message key="manager.statistics.reports.dateTo">到</message>
+	<message key="manager.statistics.reports.reportType">報告的類型</message>
+	<message key="manager.statistics.reports.type.journal">期刊報告</message>
+	<message key="manager.statistics.reports.type.editor">編輯報告</message>
+	<message key="manager.statistics.reports.type.reviewer">審查人報告</message>
+	<message key="manager.statistics.reports.type.section">文稿類型報告</message>
+	<message key="manager.statistics.reports.generate">產生報告</message>
+	<message key="manager.statistics.reports.status">狀態 (接受、回絕、其它)</message>
+	<message key="manager.statistics.reports.dateDecided">決定的日期</message>
+	<message key="manager.statistics.reports.author">作者#{$num}</message>
+	<message key="manager.statistics.reports.affiliation">所屬機關#{$num}</message>
+	<message key="manager.statistics.reports.country">國家#{$num}</message>
+	<message key="manager.statistics.reports.reviewer">審查人#{$num}</message>
+	<message key="manager.statistics.reports.editor">編者#{$num}</message>
+	<message key="manager.statistics.reports.score">分數#{$num}</message>
+	<message key="manager.statistics.reports.singleScore">分數</message>
+	<message key="manager.statistics.reports.recommendation">推薦#{$num}</message>
+	<message key="manager.statistics.reports.daysToDecision">決定天數</message>
+	<message key="manager.statistics.reports.daysToPublication">出版天數</message>
+
+	<!-- Plugin Management 外掛程式管理 -->
+	<message key="manager.plugins.pluginManagement">外掛程式管理</message>
+	<message key="manager.plugins.sitePlugin">這是網站全域的外掛程式，只有網站管理員可以管理這個外掛程式。</message>
+	<message key="manager.plugins.action">動作：</message>
+	<message key="manager.plugins.disable">關閉</message>
+	<message key="manager.plugins.enable">啟用</message>
+
+	<!-- General plugin information -->
+	<message key="plugins.categories.generic">類型外掛程式</message>
+	<message key="plugins.categories.generic.description">類型外掛以各種方式擴充OJS，讓其他種類的外掛程式可以支持OJS。</message>
+	<message key="plugins.categories.auth">認證外掛程式</message>
+	<message key="plugins.categories.auth.description">認證外掛程式讓OJS將使用者認證的工作授權給其他的系統，像是LDAP伺服器。</message>
+
+	<message key="plugins.categories.importexport">輸入/輸出外掛程式</message>
+	<message key="plugins.categories.importexport.description">輸入/輸出外掛程式可以被用來與其它系統互相傳輸內容。</message>
+
+	<message key="plugins.categories.gateways">閘道外掛程式</message>
+	<message key="plugins.categories.gateways.description">提供外部系統動態資料的閘道外掛程式。</message>
+
+	<!-- Files Browser -->
+	<message key="manager.files.indexOfDir">{$dir}的索引</message>
+	<message key="manager.files.uploadedFiles">上傳的檔案</message>
+	<message key="manager.files.parentDir">上層資料來</message>
+	<message key="manager.files.emptyDir">在這個目錄裏未發現任何檔案。</message>
+	<message key="manager.files.uploadFile">上傳檔案</message>
+	<message key="manager.files.createDir">建立目錄</message>
+	<message key="manager.files.confirmDelete">刪除這個檔案或目錄嗎？請注意：一個目錄必須是空的才能被刪除。</message>
+	<message key="manager.files.note">請注意：檔案瀏覽器是一項高階的功能，它允許一個期刊內的檔案和目錄直接被瀏覽和作。</message>
+
+	<!-- Journal Setup -->
+	<message key="manager.setup.journalSetup">期刊設定</message>
+	<message key="manager.setup.stepsToJournalSite">建置一個期刊網站的5個步驟</message>
+	<message key="manager.setup.managingPublishingSetup">管理和出版設定</message>
+	<message key="manager.setup.details">詳細內容</message>
+	<message key="manager.setup.details.description">期刊名稱、ISSN、連絡人、支援機構和搜索引擎。</message>
+	<message key="manager.setup.policies">方針</message>
+	<message key="manager.setup.policies.description">焦點、審查、文稿類型、隱私、安全性和其它說明。</message>
+	<message key="manager.setup.submissions">投稿</message>
+	<message key="manager.setup.submissions.description">作者指引、版權和索引(包括註冊)。</message>
+	<message key="manager.setup.management">管理</message>
+	<message key="manager.setup.management.description">時程、線上使用、公告、和校樣編輯、版面編輯、校對者的使用。</message>
+	<message key="manager.setup.look">外觀</message>
+	<message key="manager.setup.look.description">首頁標題、內容、期刊標題、尾標、瀏覽列、和樣式。</message>
+	<message key="manager.setup.journalTitle">期刊名稱</message>
+	<message key="manager.setup.focusScope">焦點和範圍</message>
+	<message key="manager.setup.focusScopeDescription"><![CDATA[<b>HTML資料範例</b>]]></message>
+	<message key="manager.setup.journalSetupUpdated">您的期刊設定已經更新。</message>
+	<message key="manager.setup.selectOne">請選擇一項</message>
+	
+	<!-- Setup Step 1 -->
+	<message key="manager.setup.gettingDownTheDetails">步驟 1：輸入細節。</message>
+	<message key="manager.setup.generalInformation">一般資訊</message>
+	<message key="manager.setup.journalInitials">期刊起首字母</message>
+	<message key="manager.setup.journalAbbreviation">期刊名稱縮寫</message>	
+	<message key="manager.setup.printIssn">紙本的 ISSN</message>
+	<message key="manager.setup.onlineIssn">線上的 ISSN</message>
+	<message key="manager.setup.issnDescription"><![CDATA[ISSN (International Standard Serial Number 國際標準序列號碼)是一個八位數字，用以識別定期出版之出版品，包括電子期刊。其由一個國家中心的世界性網路所管理，與位在巴黎的一個由聯合國教科文組織(Unesco)和法國政府所支持的國際中心合作。您可以從<a href="http://www.issn.org" target="_blank">ISSN 網站</a>獲得一組號碼。在期刊運作的任何一個階段都可以取得這樣的號碼。]]></message>
+	<message key="manager.setup.doiPrefix">DOI 字首</message>
+	<message key="manager.setup.doiPrefixDescription"><![CDATA[DOI字首(Digital Object Identifier 數位物件識別號) 是由 <a href="http://www.crossref.org">CrossRef</a>所指派， 格式為：10.xxxx (例如， 10.1234).]]></message>
+	<message key="manager.setup.mailingAddressDescription">本期刊所在地點及其地址。</message>
+	<message key="manager.setup.sectionsAndSectionEditors">文稿類型和文稿類型編輯</message>
+	<message key="manager.setup.editorialReviewBoard">編輯/審查委員會</message>
+	<message key="manager.setup.useEditorialReviewBoard">本期刊設有一個編輯/審查委員會。</message>
+	<message key="manager.setup.editorialReviewBoardDescription">各期刊設有編輯顧問監督期刊的編輯方針，提供編輯建言，並基於顧問成員的學術聲望賦予該期刊某些學術地位。審查委員會則扮演一個類似但額外的角色：他們負責審查的過程。審查委員會成員將不會進入期刊的管理系統，不過會被加入到可以進行審查工作的人員清單中。</message>
+	<message key="manager.setup.editorialMembers">前往「委員會成員」並新增「編輯委員會」以及/或者「審查委員會」成員。在期刊運作的任何階段都可以做到這件事情。</message>
+	<message key="manager.setup.principalContact">固定連絡人</message>
+	<message key="manager.setup.principalContactDescription">這個職位能夠被當成固定的編輯、管理編輯群或者管理事務的職位，會被列在期刊的首頁的「聯絡資訊」下面，連同「技術支援聯絡人」一起。</message>
+	<message key="manager.setup.technicalSupportContact">技術支援連絡人</message>
+	<message key="manager.setup.technicalSupportContactDescription">這個人會被列在期刊的「聯絡資訊」頁面中，負責編輯、作者和審查人的使用問題，並且應該具有從所有角色的觀點來進行系統操作的經驗。這個期刊系統需要很少的技術支援，這或許該是個兼職性的工作。有可能會需要這樣的職位，比方說，當作者和審查人對於操作指南或者檔案格式有疑問時，或者說，有需要去確保期刊定期在伺服器上進行備份時。</message>
+	<message key="manager.setup.publisher">出版者</message>
+	<message key="manager.setup.publisherDescription">出版這份期刊的組織單位名稱會出現在這份期刊的「期刊介紹」中。</message>
+	<message key="manager.setup.sponsors">贊助單位</message>
+	<message key="manager.setup.sponsorsDescription">贊助發起這份期刊的組織單位名稱（例如學會、大學系所、合作社等等）會出現在期刊的「期刊介紹」中，並且可以附加一個致謝的備註。</message>
+	<message key="manager.setup.addSponsor">增加贊助單位</message>
+	<message key="manager.setup.note">備註</message>
+	<message key="manager.setup.institution">機構</message>
+	<message key="manager.setup.contributors">支援的來源</message>
+	<message key="manager.setup.contributorsDescription">提供本刊金融或者實物支持的其他機構或者組織單位會出現在「期刊介紹」中，並且可以附加一個致謝的備註。</message>
+	<message key="manager.setup.contributor">贊助者</message>
+	<message key="manager.setup.addContributor">增加贊助者</message>
+	<message key="manager.setup.searchEngineIndexing">搜尋引擎索引</message>
+	<message key="manager.setup.searchEngineIndexingDescription">為協助使用者使用搜尋引擎來瞭解這份期刊，請提供一份簡短的期刊說明與相關關鍵字（以分號(;)加以區隔）。</message>
+	<message key="manager.setup.customTags">自訂標籤</message>
+	<message key="manager.setup.customTagsDescription">將自訂 HTML 的頭標搜入每個綱頁 (例如 META 標籤)。</message>
+	<message key="manager.setup.form.journalTitleRequired">需要期刊名稱</message>
+	<message key="manager.setup.form.journalInitialsRequired">需要期刊起首字母名稱。</message>
+	<message key="manager.setup.form.contactNameRequired">需要主要連絡人的姓名。</message>
+	<message key="manager.setup.form.contactEmailRequired">需要主要連絡人的電子信箱。</message>
+	<message key="manager.setup.form.supportNameRequired">需要贊助者的姓名。</message>
+	<message key="manager.setup.form.supportEmailRequired">需要贊助者的電子信箱。</message>
+
+	<!-- Setup Step 2 -->
+	<message key="manager.setup.journalPolicies">步驟 2：期刊方針</message>
+	<message key="manager.setup.focusAndScopeOfJournal">期刊焦點和範圍</message>
+	<message key="manager.setup.focusAndScopeDescription">請在下面輸入一段說明，這會顯示在「期刊介紹」中，向作者、讀者與圖書館員說明期刊論文的領域以及本期刊將會刊行的項目。 </message>
+	<message key="manager.setup.focusAndScope">焦點和範圍</message>
+	<message key="manager.setup.htmlSetupInstructions"><![CDATA[HTML能夠被使用在文字區域中（設定字形大小和字體色彩等等）， 按下"Enter"會被視為插入<tt>&lt;br&gt;</tt>標籤；HTML編輯器能在Firefox瀏覽器中執行。]]></message>
+	<message key="manager.setup.peerReviewPolicy">審查</message>
+	<message key="manager.setup.peerReviewDescription">概述這份期刊的同查審查方針以及讀者與作者的使用步驟，包括一般審查一份投稿時的審查人人數、審查人被要求以哪些判準來評審稿件、一般要花多少時間進行審查，以及聘用審查人之原則。這個項目會出現在「期刊介紹」之中。</message>
+	<message key="manager.setup.reviewPolicy">審查方針</message>
+
+	<message key="manager.setup.reviewOptions">審查選項</message>
+	<message key="manager.setup.reviewOptions.reviewTime">審查時間</message>
+	<message key="manager.setup.reviewOptions.numWeeksPerReview">一般審查時間</message>
+        <message key="manager.setup.reviewOptions.noteOnModification">可在編輯過程中修訂。</message>
+	<message key="manager.setup.reviewOptions.reviewerReminders">審查人備忘錄</message>
+        <message key="manager.setup.reviewOptions.automatedReminders">自動電子郵件備忘錄 (可從 OJS 的預設電子郵件取得) 可以在兩個時間點送給審查人 (而編輯也隨時可以直接電郵審查人)</message>
+        <message key="manager.setup.reviewOptions.remindForInvite1">如果審查人沒有在下述時間之內回應一個審查要求：</message>
+        <message key="manager.setup.reviewOptions.remindForInvite2">天。</message>
+        <message key="manager.setup.reviewOptions.remindForSubmit1">如果審查人下述時間之內沒有送出推薦：</message>
+        <message key="manager.setup.reviewOptions.remindForSubmit2">天超過審查期限。</message>
+	<message key="manager.setup.reviewOptions.automatedRemindersDisabled"><![CDATA[<strong>注意：</strong>要啟用這些選項，這個網站的管理員必須啟用OJS設定檔中的<tt>scheduled_tasks</tt> 選項。（可能無法在所有的伺服器上面執行），就在上面指出的OJS文件當中]]></message>
+	<message key="manager.setup.reviewOptions.reviewerRatings">審查人評比</message>
+        <message key="manager.setup.reviewOptions.onQuality">對每一篇審查結果，編輯將會由1到5評比審查人。</message>
+	<message key="manager.setup.reviewOptions.reviewerAccess">審查人閱讀選項</message>
+        <message key="manager.setup.reviewOptions.restrictReviewerFileAccess">審查人只有在答應審查之後才能瀏稿件檔案。</message>
+	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled">啟用審查人「一點即入」模式。</message>
+	<message key="manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"><![CDATA[<strong>注意：</strong> 這封給審查人的電子郵件邀請函會包涵一個特殊的網址連結，邀請審查人直接進入稿件的「審查」頁面（同時可以存取其他需要登入身份的頁面）。基於與這個選項相關的安全性理由，編輯在寄出給審查人的邀請函之前，不能變更電子郵件或者增加副本(CCs)或密件副本(BCCs)。]]></message>
+
+	<message key="manager.setup.peerReviewPolicy2">審查方針</message>
+	<message key="manager.setup.reviewGuidelines">審查須知</message>
+	<message key="manager.setup.reviewGuidelinesDescription">「審查須知」提供審查人評判一份投稿是否適合在本期刊出版的判準，這就像是一個特殊的指南手冊，用以進行有效的和協助性的審查工作。</message>
+	<message key="manager.setup.reviewProcess">審查程序</message>
+	<message key="manager.setup.reviewProcessDescription"><![CDATA[.OJS支援兩種管理審查程序的模式。建議使用「標準審查程序」，因為其透過各項步驟引導審查人，確保每份投稿都會有一份完整審查歷史紀錄，還有方便的自動提醒通知，以及給投稿稿件的標準建議（接受刊登；修改後接受刊登；重新審查；投稿他處；婉謝退稿；見審查意見）。<br /><br />請在下面選擇一個選項：]]></message>
+	<message key="manager.setup.reviewProcessStandard">標準審查程序</message>
+	<message key="manager.setup.reviewProcessStandardDescription">編輯會將投稿文章的標題和摘要電郵給選中的審查人，同時以邀請函的形式請審查人登入這個期刊網站，以完成審查工作。審查人進入期刊網站以同意進行審查工作，之後下載投稿稿件，上傳他們的審查意見書，並選擇一個審查建議。</message>
+	<message key="manager.setup.reviewProcessEmail">電子郵件附件審查程序</message>
+	<message key="manager.setup.reviewProcessEmailDescription">編輯向審查人寄交一份附有投稿稿件的審查邀請函。審查人同樣以電子郵件將他們的同意書（或婉謝信），連同審查意見書和建議選項寄交給編輯。編輯在投稿的「審查」頁面，進入審查人的同意書（或婉謝信）以及審查意見書和建議選項，以記錄審查流程。</message>
+	<message key="manager.setup.guidelines">須知</message>
+	<message key="manager.setup.sectionsDescription"><![CDATA[進入「文稿類型管理」以建立或修改本期刊的文章文稿類型（例如論文、書評等等）。<br /><br />在投稿給本期刊之後，作者將會指派其文章為...]]></message>
+	<message key="manager.setup.selectSectionDescription">將會考慮納入此項目的期刊文稿類型。</message>
+	<message key="manager.setup.selectEditorDescription">將會全程監控處理過程的期刊編輯</message>
+	<message key="manager.setup.sectionsDefaultSectionDescription">（如果沒有加入任何文稿類型，那麼投稿項目預設將是「論文」文稿類型。）</message>
+	<message key="manager.setup.privacyStatement">隱私權聲明</message>
+	<message key="manager.setup.privacyStatementDescription">這個聲明會出現在「期刊介紹」以及「作者投稿」和「通知」登記頁面。下面是一個建議版本的隱私權方針，可以在任何階段中進行修改。</message>
+	<message key="manager.setup.privacyStatement2">隱私權聲明</message>
+	<message key="manager.setup.emails">電子郵件 ID</message>
+	<message key="manager.setup.emailBounceAddress">退信地址</message>
+	<message key="manager.setup.emailBounceAddressDescription">如有任何退回的電子郵件，都會送出一封錯誤訊息到這個地址。</message>
+	<message key="manager.setup.emailBounceAddressDisabled"><![CDATA[<strong>注意：</strong>要啟用這個選項，網站管理員必須啟用OJS設定檔中的 <tt>allow_envelope_sender</tt>選項。可能會需要額外的伺服器設定才能支持使用這個功能（可能不是所有伺服器上都能用），請見上述的OJS文件。]]></message>
+	<message key="manager.setup.emailSignature">簽名</message>
+	<message key="manager.setup.emailSignatureDescription">The prepared emails that are sent by the system on behalf of the journal will have the following signature added to the end. The body of the prepared emails are available for editing under Journal Management.系統代表這份期刊所寄發的預備電子郵件會具有下面的簽名列在信末。預備電子郵件的正文部分允許「期刊管理員」進行編輯。</message>
+	<message key="manager.setup.addItemtoAboutJournal">增加會在「期刊介紹」裏顯示的項目</message>
+	<message key="manager.setup.aboutItemContent">內容</message>
+	<message key="manager.setup.addAboutItem">增加說明項目</message>
+	<message key="manager.setup.form.numReviewersPerSubmission">每篇稿件所需審查人數目。</message>
+	<message key="manager.setup.securitySettings">安全性/進入網頁設定</message>
+	<message key="manager.setup.securitySettingsDescription">OJS提供一個與安全性相關的數字選項，能夠用來限制期刊的內容，並且基於日後審核結算的目的來維護額外的投稿稿件資訊。</message>
+	<message key="manager.setup.userRegistration">使用者註冊</message>
+	<message key="manager.setup.enableUserRegistration">允設使用者在本期刊網站註冊為：</message>
+	<message key="manager.setup.disableUserRegistration">關閉使用者註冊。使用者必須被期刊管理員手動建置。</message>
+	<message key="manager.setup.siteAccess">網站權限</message>
+	<message key="manager.setup.noRestrictSiteAccess">未註冊的使用者可以瀏覽這個網站。</message>
+	<message key="manager.setup.restrictSiteAccess">使用者必須登入才能瀏覽這個網站。</message>
+	<message key="manager.setup.articleAccess">論文權限</message>
+	<message key="manager.setup.noRestrictArticleAccess">未註冊使用者可以瀏覽已經出版論文的全文。</message>
+	<message key="manager.setup.restrictArticleAccess">使用者必須登入才可以瀏覽已經出版論文的全文。</message>
+
+	<message key="manager.setup.comments">讀者評論</message>
+	<message key="manager.setup.comments.disable">讀者評論已關閉</message>
+	<message key="manager.setup.comments.authenticated">已註冊讀者可以貼文，不具名使用者無法貼文。</message>
+	<message key="manager.setup.comments.anonymous">使用者可以以「不具名」方式貼文，但必須先註冊。</message>
+	<message key="manager.setup.comments.unauthenticated">允許任何人以不具名方式貼文。</message>
+
+	<message key="manager.setup.loggingAndAuditing">記錄和決算</message>
+	<message key="manager.setup.submissionEventLogging">啟用投稿事件記錄，這會為每篇稿件留下一個記錄檔(可由每篇稿件的「歷史」網頁進入)。</message>
+	<message key="manager.setup.submissionEmailLogging">啟用投稿電子郵件記錄，這會為所有和一篇稿件相關的電子郵件留下一個記錄檔(可由每篇稿件的「歷史」網頁進入)。</message>
+
+	<message key="manager.setup.journalArchiving">期刊典藏</message>
+	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems 支持<a href="http://lockss.stanford.edu/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe)洛克斯數位典藏系統，確保這份期刊有個安全與永久性的檔案記錄。LOCKSS是一個由史丹佛大學圖書館所開發的開源碼軟體，能夠讓圖書館以定期徵詢註冊之期刊網站是否有新內容並將之存檔的方式，保存所選擇的網路期刊。每份檔案都會持續性地透過其他圖書館的快取(caches)加以認證，而如果檔案內容被發現損毀或遺失，其他的快取或者這份期刊就會被用來備份它，
+<br /><br />
+除非日後的出版工作完全還在準備階段，否則不需要設定 LOCKSS以支持OJS；在此階段請遵循這兩個步驟：]]></message>
+	<message key="manager.setup.lockssRegister"><![CDATA[列出6-10個會註冊並且快取這份期刊的圖書館。比方說，指派編輯或者編委成員工作的機構，以及＼或者已經加入LOCKSS的機構。見 <a href="http://lockss.stanford.edu/about/users.htm" target="_blank">participating libraries</a>. 用預備好的邀請函寄給(i) <a href="{$lockssExistingArchiveUrl}" target="_blank">libraries participating in LOCKSS</a>或者 (ii) <a href="{$lockssNewArchiveUrl}" target="_blank">libraries not yet participating in LOCKSS</a>.]]></message>
+	<message key="manager.setup.lockssEnable"><![CDATA[啟用LOCKSS，在加入LOCKSS的圖書館中儲存與散佈期刊的內容。<a href="{$lockssUrl}" target="_blank">Publisher Manifest</a>頁面。 A LOCKSS的認證資訊會顯示在「期刊典藏」的「期刊介紹」中：]]></message>
+	<message key="manager.setup.lockssLicenses"><![CDATA[See <a href="http://lockss.stanford.edu/publishers/publishers.htm" target="_blank">其他版本的LOCKSS認證</a>.]]></message>
+	
+	<!-- Setup Step 3 -->
+	<message key="manager.setup.guidingSubmissions">步驟 3：投稿導引</message>
+	<message key="manager.setup.authorGuidelines">作者須知</message>
+	<message key="manager.setup.authorGuidelinesDescription"><![CDATA[設定讓作者在投稿本期刊時要依循的書目和文件格式標準 (例如，<i>美國心理學會出版手冊</i>, 第五版, 2001).。提供用在投稿文章中的一般期刊和書目引用格式的範例通常是很有用的。也請指明恰當的「補充檔案」類型（例如資料集(data-sets)、研究器具等等），這些是應該要鼓勵作者上傳的東西，附加在他們的投稿文章上，提高讀者對其作品的瞭解程度。]]></message>
+	<message key="manager.setup.submissionGuidelines">投稿須知</message>
+	<message key="manager.setup.submissionPreparationChecklist">投稿準備清單</message>
+	<message key="manager.setup.submissionPreparationChecklistDescription">在提交一份投稿文章給這個期刊時，作者首先會被要求檢查是否完成「投稿準備清單」中的每個項目，才能繼續下一步。這份清單也會出現在「期刊介紹」內的「作者須知」欄位中。這份清單能夠在下面進行編輯，而所有的項目將會需要作者進行核取後，才能繼續他們的投稿流程。</message>
+	<message key="manager.setup.addChecklistItem">增加清單項目</message>
+	<message key="manager.setup.addItem">增加項目</message>
+	<message key="manager.setup.authorCopyrightNotice">版權注意事項</message>
+	<message key="manager.setup.authorCopyrightNoticeDescription"><![CDATA[這份版權注意事項會顯示在「期刊介紹」中，而且出現在每份出版項目的後設資料中(metadata)。作者同意期刊具有初次出版權利時，可以保留版權。否則，作者可以把版權讓渡給這份期刊，接著允許作者以非商業性的方式使用其作品，包括將作品放在一份開放閱讀的檔案資料中。此外，可以考慮以<a href="http://www.creativecommons.org" target="_blank">Creative Commons</a>（創用CC）的方式制訂一份叫有彈性的版權許可。]]></message>
+	<message key="manager.setup.authorCopyrightNoticeAgree">作者必須同意「版權注意事項」以進行投稿。</message>
+	<message key="manager.setup.copyrightNotice">版權注意事項</message>
+	<message key="manager.setup.forAuthorsToIndexTheirWork">讓作者索引他們的作品</message>
+	<message key="manager.setup.forAuthorsToIndexTheirWorkDescription"><![CDATA[OJS支持 <a href="http://www.openarchives.org/" target="_blank">Open Archives Initiative(OAI )開放典藏計畫</a> 協定來編寫後設資料，其顯示標準提供了完善的索引，以存取全球規模的電子研究資源。作者會使用一個類似的模版來提供其投稿稿件的後設資料。「期刊管理員」應該選擇索引的領域，並請以相干的範例請作者索引他們的作品，用分號來分隔多個項目（例如，項目1; 項目2）。這些項目的前面應該要加上「例如，」或者「比方說：」來介紹。]]></message>
+	<message key="manager.setup.discipline">學門領域與次屬領域</message>
+	<message key="manager.setup.disciplineDescription">.當期刊包含跨領域學門而且＼或者作者投稿多元學門領域的項目時，這會很有用。</message>
+	<message key="manager.setup.disciplineProvideExamples">提供這份期刊相關的學門領域作為範例</message>
+	<message key="manager.setup.disciplineExamples">(例如，歷史、教育、社會、心理學、文化研究、法律)</message>
+	<message key="manager.setup.subjectClassification">主題類別</message>
+	<message key="manager.setup.subjectClassificationDescription"><![CDATA[[期刊會使用一個可在網路上取得的主題分類系統。<br />
+分類系統的標題]]></message>
+	<message key="manager.setup.subjectClassificationExamples">（例如，數學主題分類、國會圖書館分類）</message>
+	<message key="manager.setup.subjectKeywordTopic">關鍵字</message>
+	<message key="manager.setup.subjectProvideExamples">提供關鍵字或者主旨的範例，以引導作者。</message>
+	<message key="manager.setup.subjectExamples">(例如，光和作用、黑洞、四色地圖問題、貝斯定理)</message>
+	<message key="manager.setup.coverage">涵蓋範圍</message>
+	<message key="manager.setup.coverageDescription">指涉地理空間上的位置、年代或者歷史範圍，以及＼或者研究樣本的特徵。</message>
+	<message key="manager.setup.coverageGeoProvideExamples">在本欄位中提供相關的地理空間或者地理詞彙</message>
+	<message key="manager.setup.coverageGeoExamples">(例如，依比利半島、平流層、北方林地等等)</message>
+	<message key="manager.setup.coverageChronProvideExamples">在本欄位中提供相關的年代或者歷史詞彙</message>
+	<message key="manager.setup.coverageChronExamples">(例如，歐洲文藝復興時期、侏羅紀時代、下學期等等)</message>
+	<message key="manager.setup.coverageResearchSampleProvideExamples">在本欄位中提供研究樣本的特徵作為範例</message>
+	<message key="manager.setup.coverageResearchSampleExamples">(例如，基因、族群等等)</message>
+	<message key="manager.setup.typeMethodApproach">類型（方法＼研究取向）</message>
+	<message key="manager.setup.typeProvideExamples">在本欄中提供相關的研究類型、方法和研究取向作為範例</message>
+	<message key="manager.setup.typeExamples">(例如，歷史研究、準實驗、文學分析、調查＼訪談等等)</message>
+	<message key="manager.setup.registerJournalForIndexing">註冊本期刊以進行索引（後設資料收集）</message>
+	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[要將這份期刊中所索引的內容收錄進一個全球性散佈的研究資料系統中，請<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">註冊</a> 您的期刊網址，進入「開放知識計畫」(Public Knowledge Project ; PKP)的後設資料 <a href="http://pkp.sfu.ca/harvester/" target="_blank">收集器</a>之中。這個工具會收集這份期刊中每個經索引的項目，使得在支持<a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">開放典藏計畫後設資料收集協定(Open Archives Initiative Protocol for Metadata Harvesting)</a>的研究網站之間能夠有準確和豐富的搜尋結果。
+<br /><br />
+注意，如果您的網站管理員已經將本站註冊PKP收集器了，您的期刊會自動被索引，而您不需要再次註冊您的期刊。
+<br /><br />
+<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">點擊這裡</a> 並進入 <span class="highlight">{$siteUrl}</span> under <b>Site URL</b>，以及 <span class="highlight">{$oaiUrl}</span> under <b>Base URL for OAI Archive</b>.]]></message>
+	<message key="manager.setup.notifications">給作者的收稿通知</message>
+	<message key="manager.setup.notifications.description">在成功完成投稿程序後，作者會自動地發出一封通知電子郵件（可以在「預備電子郵件」中檢視與編輯）。此外，通知信的副本可以用下列的方式寄出：</message>
+	<message key="manager.setup.notifications.copyPrimaryContact">送一分拷給期刊的主要連絡人(在步驟 1 的設定)。</message>
+	<message key="manager.setup.notifications.copySpecifiedAddress">送一分到下列的電子信箱：</message>
+	<message key="manager.setup.notifications.submissionAckDisabled"><![CDATA[<strong>注意：</strong>收稿通知的電子郵件現在是關閉的。若要開啟，請在 <a class="action" href="{$preparedEmailsUrl}">備用電子郵件</a>啟用「收稿通知」電子郵件。]]></message>
+
+	<!-- Setup Step 4 -->
+	<message key="manager.setup.managingTheJournal">步驟 4：管理期刊</message>
+	<message key="manager.setup.publicationScheduling">出版時程設定</message>
+	<message key="manager.setup.publicationSchedule">出版時程</message>
+	<message key="manager.setup.publicationScheduleDescription"><![CDATA[期刊的各個項目能夠一起出版，作為一期目錄的一部份內容。否則，個別的項目能夠在一準備好的時候，透過將它們加入到當期(或當卷)的「目錄」中，逕行出版。請在「期刊介紹」中提供讀者一個關於這份期刊會使用的系統以及其出刊頻率的說明。]]></message>
+	<message key="manager.setup.publicationFormat">格式</message>
+	<message key="manager.setup.publicationFormatDescription">為特定期刊期數或卷數選擇預設的格式。這個格式可以被被個別的期數所覆寫。</message>
+	<message key="manager.setup.publicationFormatIssue">卷、期、年</message>
+	<message key="manager.setup.publicationFormatVolume">卷、年</message>
+	<message key="manager.setup.publicationFormatYear">年</message>
+	<message key="manager.setup.publicationFormatTitle">自訂的期數標題</message>
+	<message key="manager.setup.publicationFormatTitleDescription">注意：雖然一個標題可以被加到任一期上面，在做出最後選擇後，該期就只能使用這個標題來指認。(比方說，使用 OJS來編輯一套叢書的時候。)</message>
+	<message key="manager.setup.initialIssue">創刊號</message>
+	<message key="manager.setup.initialIssueDescription">依照所選的格式，指認被OJS所出刊的第一期的期數、卷數、和/或年分：</message>
+	<message key="manager.setup.frequencyOfPublication">創刊時間和出刊頻率</message>
+	<message key="manager.setup.frequencyOfPublicationDescription">為本期刊的第一次出版設定起始期/卷數和年分，還有預定出版期/卷數的頻率。</message>
+	<message key="manager.setup.frequencyOfPublicationNote">注意：將本期刊不用的項目空下來，編輯可以在出版過中重新設定數目。</message>
+	<message key="manager.setup.appearInAboutJournal">(將在「期刊介紹」中出現) </message>
+	<message key="manager.setup.managementOfBasicEditorialSteps">基本編輯步驟管理</message>
+	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[步驟：投稿稿件列表 &gt; 提交審查意見書 &gt; 提交修訂版本 &gt; 內容目錄。<br /><br />
+選擇一個處理這些編輯流程之步驟的模式（要指派一個執行編輯以及文稿類型編輯，請至「期刊管理員」中的「編輯」。）]]></message>
+	<message key="manager.setup.editorialProcess1">一個或多個編輯處理這些基本步驟，但並沒有特別分配預定的角色。</message>
+	<message key="manager.setup.editorialProcess2">編輯處理稿件順序、目錄，而文稿類型編輯處理稿件審查與編輯。</message>
+	<message key="manager.setup.editorialProcess3">編輯處理稿件順序、目錄，而文稿類型編輯處理稿件審查。</message>
+	<message key="manager.setup.copyediting">校樣編輯</message>
+	<message key="manager.setup.useCopyeditors">期刊將指派校樣編輯來處理每篇稿件。</message>
+	<message key="manager.setup.noUseCopyeditors">編輯將會擔負起校樣編輯的工作。</message>
+	<message key="manager.setup.copyeditInstructions">校樣編輯指引</message>
+	<message key="manager.setup.copyeditInstructionsDescription">「校樣編輯指引」會在「投稿編輯」階段顯示給校樣編輯、作者和文稿類型編輯看到。下面是一組預設的HTML格式指南，期刊管理員可以在任何階段進行修訂或者代換（以純文字或HTML的方式）。</message>
+	<message key="manager.setup.layoutAndGalleys">版面編輯</message>
+	<message key="manager.setup.useLayoutEditors">這份期刊會指派「版面編輯」來準備電子出版品之HTML、PDF、PS（文字檔案）等檔案格式的校樣版面。</message>
+	<message key="manager.setup.noUseLayoutEditors">The editors will prepare the galleys in the appropriate format for electronic publication.編輯會為電子出版品準備恰當格式的校樣版面</message>
+	<message key="manager.setup.layoutInstructions">版面指引</message>
+	<message key="manager.setup.layoutInstructionsDescription">「版面指引」用以準備將期刊的出版項目進行格式化，在下面以HTML或純文字的方式輸入。在每份投稿稿件的「編輯」頁面中，版面編輯和文稿類型編輯都會看到這些資訊。（每份期刊可能使用自訂的檔案格式、書目標準和樣式表等等，所以沒有準備一組預設的指引。）</message>
+	<message key="manager.setup.layoutTemplates">版面樣式</message>
+	<message key="manager.setup.layoutTemplatesDescription">可以上傳樣版，顯示在「版面」中，讓期刊中每一種標準格式化的出版項目（例如論文、書評等等）使用加上註解、指派字體、大小、邊距等等的任一種檔案格式（如，doc、pdf等等），以作為版面編輯和校對者的指引。</message>
+	<message key="manager.setup.layoutTemplates.title">標題</message>
+	<message key="manager.setup.layoutTemplates.file">樣版檔案</message>
+	<message key="manager.setup.proofreading">校對者</message>
+	<message key="manager.setup.useProofreaders">這份期刊會指派（作者以外的）校對者，檢查校樣版面。</message>
+	<message key="manager.setup.noUseProofreaders">編輯與作者將會進行校對。</message>
+	<message key="manager.setup.proofingInstructions">校對指引</message>
+	<message key="manager.setup.proofingInstructionsDescription">「校對指引」會在「投稿編輯」頁面顯示給校對者、作者、版面編輯與文稿類型編輯看到。下面是一組預設的HTML格式之指引，期刊管理員可以在任何階段進行編輯或取代。（以純文字或HTML的方式）</message>
+	<message key="manager.setup.volumePerYear">卷/年</message>
+	<message key="manager.setup.issuePerVolume">期/卷</message>
+	<message key="manager.setup.publicIdentifier">期刊內容識別碼</message>
+	<message key="manager.setup.uniqueIdentifier">獨一的識別碼</message>
+	<message key="manager.setup.uniqueIdentifierDescription">文章和期數可以被附加上一個識別數字或字串，使用一個像是數位物件識別系統(Digital Object Identifier System; DOI)的註冊系統。</message>
+	<message key="manager.setup.enablePublicIssueId">自訂的識別碼將會被用來識別期數。</message>
+	<message key="manager.setup.enablePublicArticleId">自訂的識別碼將會被用來識別出版項目。</message>
+	<message key="manager.setup.enablePublicSuppFileId">自訂的識別碼將會被用來識別論文的補充檔案。</message>
+	<message key="manager.setup.pageNumberIdentifier">頁碼選項</message>
+	<message key="manager.setup.enablePageNumber">項目頁碼將會以手動方式填入目錄裏(例如：頁 13-26)。</message>
+	<message key="manager.setup.onlineAccessManagement">線上閱讀管理</message>
+	<message key="manager.setup.openAccess">期刊內容將開放閱讀。</message>
+	<message key="manager.setup.openAccessPolicy">開放閱讀原則</message>
+	<message key="manager.setup.openAccessPolicyDescription">輸入一段期刊開放閱讀方針的說明，這會顯示在「期刊介紹」之中。</message>
+	<message key="manager.setup.subscription">這份期刊需要訂閱之後才能閱讀某些或所有的內容。</message>
+	<message key="manager.setup.subscriptionDescription">「訂閱管理」模組需要指派「訂閱管理員」，存取這個模組，包括額外的開放閱讀、自行典藏和電子郵件通知選項。</message>
+	<message key="manager.setup.announcements">公告</message>
+	<message key="manager.setup.announcementsDescription">可以發佈公告以通知期刊的讀者關於期刊的新聞稿以及活動。已發佈的公告會出現在「公告」頁面。</message>
+	<message key="manager.setup.enableAnnouncements">讓期刊管理員可以增加期刊公告。</message>
+	<message key="manager.setup.enableAnnouncementsHomepage1">顯示</message>
+	<message key="manager.setup.enableAnnouncementsHomepage2">之期刊首頁最近公告。</message>
+	<message key="manager.setup.announcementsIntroduction">額外的資訊</message>
+	<message key="manager.setup.announcementsIntroductionDescription">輸入在公告網頁上要給讀者看到的額外的資訊</message>
+
+	<!-- Setup Step 5 -->
+	<message key="manager.setup.customizingTheLook">步驟 5：自訂外觀。</message>
+	<message key="manager.setup.journalHomepageHeader">期刊網頁標頭</message>
+	<message key="manager.setup.journalHomepageHeaderDescription">可以上傳一個圖片版本的期刊標題和標誌圖形(logo)到首頁上（以.gif、.jpg、.png的檔案格式），以取代文字版本的顯示方式。</message>
+	<message key="manager.setup.journalLogo">期刊圖標</message>
+	<message key="manager.setup.lists">列表</message>
+	<message key="manager.setup.listsDescription">.輸入每頁顯示項目的最大數字（例如投稿數、使用者數或者編輯作業指派人數），以及顯示每個頁面的連結數目。</message>
+	<message key="manager.setup.itemsPerPage">每頁幾項</message>
+	<message key="manager.setup.numPageLinks">網頁連結</message>
+	<message key="manager.setup.useTextTitle">標題文字</message>
+	<message key="manager.setup.useImageTitle">標題圖像</message>
+	<message key="manager.setup.useImageLogo">標誌圖像</message>
+	<message key="manager.setup.noImageFileUploaded">沒有上傳的圖像檔。</message>
+	<message key="manager.setup.navigationBar">導覽列</message>
+	<message key="manager.setup.itemsDescription">可以新增「導覽」列項目到當前顯示自首頁上方的項目中（如首頁、期刊介紹、使用者首頁...等等）。</message>
+	<message key="manager.setup.labelName">標籤名</message>
+	<message key="manager.setup.addNavItem">新增項目</message>
+	<message key="manager.setup.journalPageHeader">期刊網頁標頭</message>
+	<message key="manager.setup.journalPageHeaderDescription">可以上傳一個圖形版本的期刊標題和圖標，可能是一個比首頁圖標還要小一點的版本，當作期刊頁面的標頭顯示，會取代文字版本的標頭。</message>
+	<message key="manager.setup.alternateHeader">其它標頭</message>
+	<message key="manager.setup.alternateHeaderDescription">否則，代替標題和圖標，可以在上面的文字輸入框之中插入一個HTML版本的標頭。如果不需要的話就保持空白。</message>
+	<message key="manager.setup.journalPageFooter">期刊網頁頁尾</message>
+	<message key="manager.setup.journalPageFooterDescription">這是您的期刊的頁尾。要變更或更新頁尾，在下面的文字框中貼上HTML代碼。比方說，可以是另一個導覽列、一個計數器等等。這個頁尾會顯示在所有的頁面中。</message>
+	<message key="manager.setup.journalStyleSheet">期刊CSS樣式表</message>
+	<message key="manager.setup.journalStyleSheetDescription">根據預設的設定，期刊和網站都使用最常見的樣式表（位於本站的"styles"子目錄中）。您可以透過上傳一個期刊所指定的CSS階層樣式表來覆寫預設的樣式規則。</message>
+	<message key="manager.setup.useJournalStyleSheet">期刊CSS樣式表</message>
+	<message key="manager.setup.noStyleSheetUploaded">沒有上傳CSS樣式表</message>
+	<message key="manager.setup.journalHomepageContent">期刊首頁內容</message>
+	<message key="manager.setup.journalHomepageContentDescription">根據預設，首頁由導覽連結所組成。您可以使用下面一個或所有的選項來增添額外的首頁內容，會以所見的順序來顯示。注意，當期期刊永遠都可以透過導覽列中的「當期期刊」連結來閱讀</message>
+	<message key="manager.setup.journalDescription">期刊說明</message>
+	<message key="manager.setup.journalDescriptionDescription">以HTML或純文字的方式，加入簡短的 20-25字數說明；這會出現在導覽列的正下方。</message>
+	<message key="manager.setup.homepageImageDescription">加一個圖檔到網頁中。</message>
+	<message key="manager.setup.homepageImage">首頁圖像</message>
+	<message key="manager.setup.currentIssue">當期期刊</message>
+	<message key="manager.setup.additionalContent">額外的內容</message>
+	<message key="manager.setup.additionalContentDescription">以HTML或純文字的方式，加入下面的內容；如果有上傳任何內容，這會出現在首頁的下方</message>
+	<message key="manager.setup.navigationBarDescription">增加或移除額外的導覽列項目</message>
+	<message key="manager.setup.navItemIsLiteral">請輸入一個文字字串（例如，「期刊設定」）而非位置訊息碼（如，"manager.setup"）做為標籤值</message>
+	<message key="manager.setup.navItemIsAbsolute">網址是一個絕對路徑(如"http://www.example.com") 而不是一個相對於本站的相對路徑(如"/manager/setup")</message>
+	<message key="manager.setup.displayCurrentIssue">.為當期期刊新增一份目錄（如果可以的話）</message>
+	<message key="manager.setup.homeTitleImageInvalid"></message>
+	<message key="manager.setup.homeHeaderImageInvalid">無效的首頁標頭圖標(logo)圖像格式。可接受的格式為.gif、.jpg、.png的檔案格式。</message>
+	<message key="manager.setup.pageHeaderTitleImageInvalid">無效的頁面標頭標題圖像格式。可接受的格式為.gif、.jpg、.png的檔案格式。</message>
+	<message key="manager.setup.pageHeaderLogoImageInvalid">無效的頁面標頭圖標(logo)圖像格式。可接受的格式為.gif、.jpg、.png的檔案格式。</message>
+	<message key="manager.setup.homeHeaderTitleImageAlt1Invalid">無效的其他首頁標頭標題圖像格式。可接受的格式為.gif、.jpg、.png的檔案格式。</message>
+	<message key="manager.setup.homeHeaderLogoImageAlt1Invalid">無效的其他首頁標頭圖標(logo)圖像格式。可接受的格式為.gif、.jpg、.png的檔案格式。</message>
+	<message key="manager.setup.pageHeaderTitleImageAlt1Invalid">無效的其他頁面標頭標題圖像格式。可接受的格式為.gif、.jpg、.png的檔案格式。</message>
+	<message key="manager.setup.pageHeaderLogoImageAlt1Invalid">無效的其他頁面標頭圖標(logo)圖像格式。可接受的格式為.gif、.jpg、.png的檔案格式。</message>
+	<message key="manager.setup.homeHeaderTitleImageAlt2Invalid">.無效的次要其他首頁標頭標題圖像格式。可接受的格式為.gif、.jpg、.png的檔案格式。</message>
+	<message key="manager.setup.homeHeaderLogoImageAlt2Invalid">無效的次要其他首頁標頭圖標(logo)圖像格式。可接受的格式為.gif、.jpg、.png的檔案格式。</message>
+	<message key="manager.setup.pageHeaderTitleImageAlt2Invalid">無效的次要其他頁面標頭標題圖像格式。可接受的格式為.gif、.jpg、.png的檔案格式。</message>
+	<message key="manager.setup.pageHeaderLogoImageAlt2Invalid">無效的次要其他頁面標頭圖標(logo)圖像格式。可接受的格式為.gif、.jpg、.png的檔案格式。</message>
+	<message key="manager.setup.homepageImageInvalid">無效的首頁圖像格式。可接受的格式為.gif、.jpg、.png的檔案格式。</message>
+	<message key="manager.setup.journalStyleSheetInvalid">無效的期刊樣式表格式。可接受的格式為.css的檔案格式。</message>
+	<message key="manager.setup.information">資訊</message>
+	<message key="manager.setup.information.description">給圖書館館員、未來的作者和讀者的簡要說明，在側邊欄的「資訊」區段中顯示。</message>
+	<message key="manager.setup.information.forReaders">給讀者</message>
+	<message key="manager.setup.information.forAuthors">給作者</message>
+	<message key="manager.setup.information.forLibrarians">給圖書館員</message>
+
+	<!-- Languages 語言-->
+	<message key="manager.languages.languageInstructions"><![CDATA[
+	OJS可以讓使用者使用幾種受到支持的語言介面。同時，OJS可以當作一個部分多語化的系統，讓使用者在每個頁面中可以切換語言，並允許某些資料以額外的兩種語言進行輸入。<br /><br/>如果一個受到OJS支持的語言沒有列在下表，請您的網站管理員從網站管理介面來安裝該項語系。新增支援新語系的指引說明，請見OJS的文件。]]></message>
+	<message key="manager.languages.primaryLocaleInstructions">這將會是期刊網站的預設語言</message>
+	<message key="manager.languages.supportedLocalesInstructions">Select all locales to support on the site via a language select menu to appear on each page. The menu will only appear if more than one locale is selected.選擇支持本站的所有語系，可透過一個出現在每個頁面上的語言選單來加以選擇。只有在選擇了兩個語系以上的時候，這個選單才會顯示出來。</message>
+	<message key="manager.languages.alternateLocale1">額外的語言設定#1</message>
+	<message key="manager.languages.alternateLocale2">額外的語言設定#2</message>
+	<message key="manager.languages.alternateLocaleInstructions">這個系統可以選擇性地允許某些重要資訊，以額外的兩個語言進行輸入。要使用這個功能，請選擇一個或兩個額外的語系，並從下面列出的選項進行選擇。</message>
+	<message key="manager.languages.alternativeLanguageOptions">語言選項</message>
+	<message key="manager.languages.journalTitleAltLanguages">標題圖像、頁面標頭等等，會依照每個期刊的語系來上傳。</message>
+	<message key="manager.languages.articleAltLanguages">作者應該被要求提供另一種語言的標題和摘要，連同選取該選項的期刊工作人員亦然。</message>
+	<message key="manager.languages.noneAvailable">抱歉，沒有額外的語言可供使用。如果您希望在這份期刊中使用額外的語系，請聯絡您的網站管理者。</message>
+	
+	
+	<!-- Section Management 文稿類型管理 -->
+	<message key="manager.sections.noneCreated">沒有建置任何文稿類型。</message>
+	<message key="manager.sections.confirmDelete">您確定您要永久性地刪除這個文稿類型？您將必須重新出版屬於此文稿類型的所有文章。</message>
+	<message key="manager.sections.create">新增文稿類型</message>
+	<message key="manager.sections.editors">文稿類型編輯</message>
+	<message key="manager.sections.unassigned">可供選擇的文稿類型編輯</message>
+	<message key="manager.sections.assigned">此文稿類型的編輯</message>
+	<message key="manager.sections.assignEditor">指派編輯</message>
+	<message key="manager.sections.unassignEditor">取消指派編輯</message>
+	<message key="manager.sections.form.titleRequired">此文稿類型需要一個標題。</message>
+	<message key="manager.sections.form.abbrevRequired">此文稿類型需要一個縮寫的標題。</message>
+	<message key="manager.section.sectionEditorInstructions">從可供選擇的文稿類型編輯中指派這文稿類型的編輯。</message>
+	<message key="manager.section.submissionsToThisSection">期刊的這個文稿類型有人投稿</message>
+	<message key="manager.sections.submissionIndexing">將不會被包含在本期刊的索引。</message>
+	<message key="manager.sections.submissionReview">將不會進行審查</message>
+	<message key="manager.sections.editorRestriction">只有編輯和文稿類型編輯可以送出項目。</message>
+	<message key="manager.sections.hideTocTitle">從這些期數的目錄刪掉本文稿類型的標題。</message>
+	<message key="manager.sections.readingTools">閱讀工具</message>
+	<message key="manager.sections.indexed">已索引</message>
+	<message key="manager.sections.reviewed">需經審查</message>
+	<message key="manager.sections.open">開放投稿</message>
+	<message key="manager.sections.policy">文稿類型方針</message>
+	<message key="manager.sections.identifyType">為了後設資料的緣故，請指訂此文稿類型中的每個項目為一個</message>
+	<message key="manager.sections.identifyTypeExamples">(例如，「已經審查的論文」、「未經審閱的論文」、「邀請稿」等等。)</message>
+	<message key="manager.sections.abstractsDisabled">不需摘要</message>
+
+	<!-- Import/Export 輸入/輸出 -->
+	<message key="manager.importExport">輸入/輸出資料</message>
+
+	<!-- Groups / Editorial Team 群組＼編輯團隊 -->
+	<message key="manager.groups.editTitle">編輯標題</message>
+	<message key="manager.groups.createTitle">新增標題</message>
+	<message key="manager.groups.title">標題</message>
+	<message key="manager.groups.confirmDelete">您確定您要刪除這個群組？</message>
+	<message key="manager.groups.noneCreated">沒有建置任何編輯團隊的職位。</message>
+	<message key="manager.groups.create">新增編輯團隊的名稱</message>
+	<message key="manager.groups.form.groupTitleRequired">需要一個群組名稱。</message>
+
+	<message key="manager.groups.enableBoard.description"><![CDATA[為了讓<a href="{$aboutEditorialTeamUrl}">編輯團隊</a> 出現在「期刊介紹」中：]]></message>
+	<message key="manager.groups.enableBoard">期刊管理員將會新增編輯團隊的職稱，並且將適當的人置於每個職稱之下。</message>
+	<message key="manager.groups.disableBoard">系統會根據指派的編輯角色（期刊管理員、編輯、文稿類型編輯、校樣編輯等等）產生一個人物清單。</message>
+
+	<message key="manager.groups.membership">成員身份</message>
+	<message key="manager.groups.membership.confirmDelete">您確定您要刪除這個群組的成員身份？</message>
+	<message key="manager.groups.membership.noneCreated">這個群組沒有成員。</message>
+	<message key="manager.groups.membership.addMember">新增成員</message>
+	<message key="manager.groups.membership.noUsers">沒有使用者。</message>
+
+	<!-- People Management 人物管理 -->
+	<message key="manager.people.allUsers">所有使用者</message>
+	<message key="manager.people.allJournals">所有期刊</message>
+	<message key="manager.people.editUser">編輯使用者</message>
+	<message key="manager.people.enrollExistingUser">指派角色給已存在的使用者</message>
+	<message key="manager.people.createUser">建立新的使用者</message>
+	<message key="manager.people.mergeUsers">合併多個使用者</message>
+	<message key="manager.people.mergeUser">合併使用者</message>
+	<message key="manager.people.enroll">指派角色給使用者</message>
+	<message key="manager.people.enrollment">指派角色</message>
+	<message key="manager.people.unenroll">取消角色</message>
+	<message key="manager.people.confirmUnenroll">取消這個使用者所擁有的角色？</message>
+	<message key="manager.people.mergeUsers.from.description">選擇一個使用者以合併到其他的使用者帳號（例如，當某個人有兩個使用者帳號時）。一開始所選的帳號會被刪除，而此帳號的投稿、指派工作...等等，會被歸屬給第二個帳號。</message>
+	<message key="manager.people.mergeUsers.into.description">選擇一個使用者，將之前所選之使用者的權限、編輯指派工作等等重新歸屬給他。</message>
+	<message key="manager.people.mergeUsers.confirm">您確定您要將"{$oldUsername}"的使用者帳號，合併到"{$newUsername}"的帳號中？"{$oldUsername}"的使用者帳號在之後將會消失。這個動作不可回復！</message>
+	<message key="manager.people.confirmRemove">您要把這個使用者移出這份期刊中？這個動作將會取消這個使用者在這份期刊中所擁有的所有角色。</message>
+	<message key="manager.people.confirmDisable">停用這個使用者帳號？這會讓這個使用者無法再登入這個系統。
+
+您可以選擇性地給這些使用者一個理由，說明為什麼停用他們的帳號。</message>
+	<message key="manager.people.noneEnrolled">沒有屬於這個角色的使用者</message>
+	<message key="manager.people.enrollSelected">指派這個角色給所選的使用者</message>
+	<message key="manager.people.noMatchingUsers">沒有符合條件的使用者。</message>
+	<message key="manager.people.saveAndCreateAnotherUser">儲存並且建置另一個</message>
+	<message key="manager.people.userCreatedSuccessfully">使用者建置成功。</message>
+	<message key="manager.people.authSource">認證來源</message>
+	<message key="manager.people.enrollUserAs">以下列角色登入使用者：</message>
+	<message key="manager.people.doNotEnroll">沒有角色</message>
+	<message key="manager.people.enrollUserAsDescription">如果沒有選擇任何角色，使用者會被建立在系統中但不具有這個期刊中的任何角色。在建立這個使用者之後，可以在任何階段指派或取消這些角色。</message>
+	<message key="manager.people.invalidUser">抱歉，所查詢的使用者並不在。</message>
+	<message key="manager.people.noAdministrativeRights"><![CDATA[對不起，您對這個使用者沒有管理權限，這可能是因為：
+		<ul>
+			<li>這個使用者是一個網站管理員</li>
+			<li>這個使用者是在您沒有管理權限的期刊上活動</li>
+		</ul>
+	所要進行的動作，必須由網站管理員來完成。
+	]]></message>
+	<message key="manager.people.createUserGeneratePassword">產生一個隨機的密碼。</message>
+	<message key="manager.people.createUserSendNotify">送出一封含使用者名稱及使用者密碼的歡迎信件給使者。</message>
+	<message key="manager.people.userMustChangePassword">要求使用者在下一次登入時改變密碼。</message>
+	<message key="manager.people.disable">停用</message>
+	<message key="manager.people.enable">啟用</message>
+	<message key="manager.people.remove">移除</message>
+	<message key="manager.people.emailUsers">傳送電子郵件給使用者</message>
+	<message key="manager.people.emailUsers.emailSelectedUsers">傳送電子郵件給所選的使用者</message>
+	<message key="manager.people.emailUsers.emailUsersEnrolledAs">傳送電子郵件給下列登入身分的使用者：</message>
+	<message key="manager.people.emailUsers.selectUsers">核取姓名旁邊的方框來選擇您想要傳送電子郵件的使用者</message>
+	<message key="manager.people.emailUsers.selectTemplate">選擇一個樣版</message>
+	<message key="manager.people.emailUsers.selectLocale">選擇一個語系</message>
+
+	<message key="manager.people.editProfile">編輯個人帳號</message>
+
+	<message key="manager.people.signInAsUser">登入為這個使用者</message>
+	<message key="manager.people.signOutAsUser">登出這個使用者帳號</message>
+	<message key="manager.people.signInAs">登入為</message>
+	<message key="manager.people.syncUsers">同步化使用者角色</message>
+	<message key="manager.people.syncUserDescription">角色同步化會在這份期刊中指派「在特定期刊中已經有特定角色的使用者」同樣的角色。這個功能允許一組常見的使用者（例如，審查人）在期刊之間進行同步化。</message>
+	<message key="manager.people.enrollSync">同步角色登記</message>
+	<message key="manager.people.enrollSyncRole">同步化角色</message>
+	<message key="manager.people.enrollSyncJournal">與期刊</message>
+	
+	<!-- Email Management 電子郵件管理 -->
+	<message key="manager.emails.emailKey">電子郵件識別碼</message>
+	<message key="manager.emails.emailKeyExists">一封帶有既定識別碼的郵件已經存在。電子郵件識別碼必須是獨一無二的。</message>
+	<message key="manager.emails.emailTemplate">電子郵件樣版</message>
+	<message key="manager.emails.emailTemplates">各種電子郵件樣版</message>
+	<message key="manager.emails.enabled">啟用這個電子郵件樣版</message>
+	<message key="manager.emails.enable">啟用</message>
+	<message key="manager.emails.disable">停用</message>
+	<message key="manager.emails.reset">重設</message>
+	<message key="manager.emails.createEmail">建立電子郵件</message>
+	<message key="manager.emails.editEmail">編輯電子郵件</message>
+	<message key="manager.emails.confirmDelete">您確定您要刪除掉這個電子郵件樣版？</message>
+	<message key="manager.emails.confirmReset">您確定您要重設這個電子郵件樣版為預設值？</message>
+	<message key="manager.emails.resetToDefault">重設為預設值</message>
+	<message key="manager.emails.resetAll">重設所有的樣版</message>
+	<message key="manager.emails.confirmResetAll">您確定您要重設這份期刊中所有的電子郵件樣版為預設值？您將會失去您曾自訂過的所有設定.</message>
+	<message key="manager.emails.form.subjectRequired">這封電子郵件需要一個主旨</message>
+	<message key="manager.emails.form.bodyRequired">這封電子郵件需要一分內文</message>
+	<message key="manager.emails.editTestExample">編輯電子郵件測試範本</message>
+
+	<!-- Subscription Policy Management 訂閱方針管理 -->
+	<message key="manager.subscriptionPolicies.subscriptionContact">訂閱管理員</message>
+	<message key="manager.subscriptionPolicies.subscriptionContactDescription">這份聯絡資訊會列在「期刊介紹」的「訂閱」下面。</message>
+	<message key="manager.subscriptionPolicies.subscriptionAdditionalInformation">訂閱資訊</message>
+	<message key="manager.subscriptionPolicies.subscriptionAdditionalInformationDescription">訂閱類型和費用結構會自動地被放在「期刊介紹」頁面的「訂閱」下面，含有訂閱管理員的姓名和聯絡資訊。有關訂閱的額外資訊，像是付費方法或者援助開發中國家的訂閱者，可以在這裡加入。</message>
+	<message key="manager.subscriptionPolicies.htmlInstructions"><![CDATA[HTML能夠被使用在文字區域中（設定字形大小和字體色彩等等）， 按下"Enter"會被視為插入<tt>&lt;br&gt;</tt>標籤；HTML編輯器能在Firefox瀏覽器中執行。]]></message>
+	<message key="manager.subscriptionPolicies.openAccessOptions">開放閱讀選項來訂閱期刊</message>
+	<message key="manager.subscriptionPolicies.openAccessOptionsDescription">需訂閱之期刊可以提供「稍後開放閱讀」以及＼或者「作者自行典藏」（增加讀者和內容的引用數）兩種方式。被選擇的方案會出現在「期刊介紹」之中。</message>
+	<message key="manager.subscriptionPolicies.delayedOpenAccess">稍後開放閱讀</message>
+	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription">在稍後開放閱讀的時候，編輯仍能夠指定某一期期刊中的特定文章能夠直接開放閱讀。</message>
+	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription1">The back issues of this journal will be available in an open access format</message>
+	<message key="manager.subscriptionPolicies.delayedOpenAccessDescription2">一期期刊出版過後幾個月</message>
+	<message key="manager.subscriptionPolicies.delayedOpenAccessDurationValid">請選擇一個有效的時間長度</message>
+	<message key="manager.subscriptionPolicies.openAccessNotificationDescription">已註冊之讀者將可以選擇在一期期刊開放閱讀之時，透過電子郵件收到目錄通知。</message>
+	<message key="manager.subscriptionPolicies.delayedOpenAccessPolicyDescription">下列的說明會發佈在「期刊介紹」之中的「稍後開放閱讀」下面</message>
+	<message key="manager.subscriptionPolicies.openAccessNotificationDisabled"><![CDATA[<strong>注意：</strong>要啟用這些選項，這個網站的管理員必須啟用OJS設定檔中的<tt>scheduled_tasks</tt> 選項。（可能無法在所有的伺服器上面執行），就在上面指出的OJS文件當中]]></message>
+	<message key="manager.subscriptionPolicies.authorSelfArchive">作者自行典藏方案</message>
+	<message key="manager.subscriptionPolicies.authorSelfArchiveDescription">下列的方案會列在「期刊介紹」之中。</message>
+	<message key="manager.subscriptionPolicies.subscriptionPoliciesSaved">您的訂閱方針設定已經被更新</message>
+	<message key="manager.subscriptionPolicies.expiryReminders">訂閱期滿提醒函</message>
+	<message key="manager.subscriptionPolicies.expiryRemindersDescription">可以在訂閱期滿之前和之後寄發自動電子郵件提醒函（期刊管理員可在OJS的預備電子郵件中編輯）</message>
+	<message key="manager.subscriptionPolicies.expiryRemindersDisabled"><![CDATA[<strong>注意：</strong>要啟用這些選項，這個網站的管理員必須啟用OJS設定檔中的<tt>scheduled_tasks</tt> 選項。（可能無法在所有的伺服器上面執行），就在上面指出的OJS文件當中]]></message>
+	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths1">以電子郵件通知訂閱者</message>
+	<message key="manager.subscriptionPolicies.expiryReminderBeforeMonths2">訂閱期滿前幾個月</message>
+	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks1">以電子郵件通知訂閱者</message>
+	<message key="manager.subscriptionPolicies.expiryReminderBeforeWeeks2">訂閱期滿前幾週</message>
+	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths1">以電子郵件通知訂閱者</message>
+	<message key="manager.subscriptionPolicies.expiryReminderAfterMonths2">訂閱期滿後幾個月</message>
+	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks1">以電子郵件通知訂閱者</message>
+	<message key="manager.subscriptionPolicies.expiryReminderAfterWeeks2">訂閱期滿後幾週</message>
+	<message key="manager.subscriptionPolicies.subscriptionContactEmailValid">請輸入一個有效的電子郵件地址</message>
+	<message key="manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid">請使用所提供之核取框</message>
+	<message key="manager.subscriptionPolicies.numMonthsBeforeSubscriptionExpiryReminderValid">請選擇一個訂閱期滿之前有多少月數的有效值。</message>
+	<message key="manager.subscriptionPolicies.numWeeksBeforeSubscriptionExpiryReminderValid"></message>
+	<message key="manager.subscriptionPolicies.numMonthsAfterSubscriptionExpiryReminderValid">請選擇一個訂閱期滿之後有多少月數的有效值。</message>
+	<message key="manager.subscriptionPolicies.numWeeksAfterSubscriptionExpiryReminderValid">.請選擇一個訂閱期滿之後有多少週數的有效值。</message>
+
+	<!-- Subscription Type Management 訂閱類型管理 -->
+	<message key="manager.subscriptionTypes.createTitle">建立</message>
+	<message key="manager.subscriptionTypes.create">建立新的訂閱類型</message>
+	<message key="manager.subscriptionTypes.confirmDelete">警告！這個訂閱類型底下所有的訂閱記錄也會被刪除。您確定您要繼續並且刪除這個訂閱類型？</message>
+	<message key="manager.subscriptionTypes.noneCreated">沒有建立任何的訂閱類型。</message>
+	<message key="manager.subscriptionTypes.name">訂閱類型</message>
+	<message key="manager.subscriptionTypes.cost">價格</message>
+	<message key="manager.subscriptionTypes.currency">貨幣</message>
+	<message key="manager.subscriptionTypes.format">格式</message>
+	<message key="manager.subscriptionTypes.duration">期限</message>
+	<message key="manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully">成功建立訂閱類型</message>
+	<message key="manager.subscriptionTypes.editTitle">編輯</message>
+	<message key="manager.subscriptionTypes.edit">編輯訂閱類型</message>
+	<message key="manager.subscriptionTypes.year">年</message>
+	<message key="manager.subscriptionTypes.years">年</message>
+	<message key="manager.subscriptionTypes.month">月</message>
+	<message key="manager.subscriptionTypes.months">月</message>
+	<message key="manager.subscriptionTypes.form.typeNameRequired">需要一個訂閱類型的名稱</message>
+	<message key="manager.subscriptionTypes.form.typeNameExists">訂閱類型的名稱已經存在了</message>
+	<message key="manager.subscriptionTypes.form.costRequired">需要一個價格</message>
+	<message key="manager.subscriptionTypes.form.costNumeric">價格必須是一個正整數。</message>
+	<message key="manager.subscriptionTypes.form.durationRequired">需要一段訂閱期限</message>
+	<message key="manager.subscriptionTypes.form.durationNumeric">期限必須是一個正整數。</message>
+	<message key="manager.subscriptionTypes.form.currencyRequired">需要一種貨幣</message>
+	<message key="manager.subscriptionTypes.form.currencyValid">請選擇一種有效的貨幣</message>
+	<message key="manager.subscriptionTypes.form.formatRequired">需要一個訂閱類型的格式</message>
+	<message key="manager.subscriptionTypes.form.formatValid">請選擇一個有效的訂閱類型的格式</message>
+	<message key="manager.subscriptionTypes.form.institutionalValid">請使用所提供之核取框</message>
+	<message key="manager.subscriptionTypes.form.membershipValid">請使用所提供之核取框</message>
+	<message key="manager.subscriptionTypes.form.publicValid">請使用所提供之核取框</message>
+	<message key="manager.subscriptionTypes.form.typeName">名稱</message>
+	<message key="manager.subscriptionTypes.form.description">說明</message>
+	<message key="manager.subscriptionTypes.form.cost">價格</message>
+	<message key="manager.subscriptionTypes.form.costInstructions">輸入一個數值(例如，40或40.00)不要含有任何像"$"的其他文字。</message>
+	<message key="manager.subscriptionTypes.form.currency">貨幣</message>
+	<message key="manager.subscriptionTypes.form.duration">期限</message>
+	<message key="manager.subscriptionTypes.form.durationInstructions">訂閱的長度，以月數計（如，12）。</message>
+	<message key="manager.subscriptionTypes.form.format">格式</message>
+	<message key="manager.subscriptionTypes.form.institutional">訂閱者應該透過網域或者IP進行授權認證。</message>
+	<message key="manager.subscriptionTypes.form.membership">訂閱者一定要是一個協會或組織的成員。</message>
+	<message key="manager.subscriptionTypes.form.public">這個訂閱類型不會出現在「期刊介紹」之中的「訂閱」裡。</message>
+	<message key="manager.subscriptionTypes.form.saveAndCreateAnotherType">存檔並建立另一個</message>
+	<message key="manager.subscriptionTypes.format.online">線上</message>
+	<message key="manager.subscriptionTypes.format.print">印刷</message>
+	<message key="manager.subscriptionTypes.format.printOnline">印刷以及線上</message>
+
+	<!-- Subscription Management 訂戶管理 -->
+	<message key="manager.subscriptions.createTitle">建立</message>
+	<message key="manager.subscriptions.create">建立新的訂戶</message>
+	<message key="manager.subscriptions.select">指派角色給訂戶</message>
+	<message key="manager.subscriptions.selectSubscriber">選擇訂戶</message>
+	<message key="manager.subscriptions.selectSubscriber.desc">這份期刊的期刊管理員、編輯、文稿類型編輯、版面編輯、校樣編輯和校對者會自動擁有訂戶閱讀權限。</message>
+	<message key="manager.subscriptions.subscribe">指派角色</message>
+	<message key="manager.subscriptions.confirmDelete">您確定您要刪除掉這個訂戶？</message>
+	<message key="manager.subscriptions.noneCreated">沒有建立任何的訂戶</message>
+	<message key="manager.subscriptions.user">使用者</message>
+	<message key="manager.subscriptions.subscriptionType">訂閱類型</message>
+	<message key="manager.subscriptions.dateStart">開始</message>
+	<message key="manager.subscriptions.dateEnd">結束</message>
+	<message key="manager.subscriptions.ipRange">IP Range</message>
+	<message key="manager.subscriptions.subscriptionCreatedSuccessfully">成功建立訂戶</message>
+	<message key="manager.subscriptions.editTitle">編輯</message>
+	<message key="manager.subscriptions.edit">編輯訂戶</message>
+	<message key="manager.subscriptions.form.userIdRequired">需要一個使用者</message>
+	<message key="manager.subscriptions.form.userIdValid">請選擇一個有效的使用者</message>
+	<message key="manager.subscriptions.form.subscriptionExists">這個使用者已經訂閱本期刊</message>
+	<message key="manager.subscriptions.form.typeIdRequired">需要一個訂閱類型</message>
+	<message key="manager.subscriptions.form.typeIdValid">請選擇一個有效的訂閱類型</message>
+	<message key="manager.subscriptions.form.dateStartRequired">需要一個訂閱的起始日期</message>
+	<message key="manager.subscriptions.form.dateStartValid">請選擇一個有效的訂閱起始日期</message>
+	<message key="manager.subscriptions.form.dateEndRequired">需要一個訂閱的結束日期</message>
+	<message key="manager.subscriptions.form.dateEndValid">請選擇一個有效的訂閱結束日期</message>
+	<message key="manager.subscriptions.form.membershipRequired">所選擇的訂閱類型需要所屬成員資訊</message>
+	<message key="manager.subscriptions.form.domainIPRangeRequired">所選擇的訂閱類型需要一個網域以及＼或者一個IP網段，以進行訂閱授權。</message>
+	<message key="manager.subscriptions.form.domainValid">請輸入一個有效的網域</message>
+	<message key="manager.subscriptions.form.ipRangeValid">請輸入一個有效的IP網段。</message>
+	<message key="manager.subscriptions.form.notifyEmailValid">請使用所提供之核取框</message>
+	<message key="manager.subscriptions.form.subscriptionContactRequired">為了寄發給使用者一封通知電子郵件，您必須在期刊設定中指派訂閱聯絡人姓名和電子郵件地址。</message>
+	<message key="manager.subscriptions.form.userId">使用者</message>
+	<message key="manager.subscriptions.form.typeId">訂閱類型</message>
+	<message key="manager.subscriptions.form.dateStart">開始日期</message>
+	<message key="manager.subscriptions.form.dateEnd">結束日期</message>
+	<message key="manager.subscriptions.form.membership">成員身份</message>
+	<message key="manager.subscriptions.form.membershipInstructions">如果這個訂閱類型需要訂戶隸屬於一個協會或者組織，請輸入成員身份的資訊。.</message>
+	<message key="manager.subscriptions.form.domain">網域</message>
+	<message key="manager.subscriptions.form.domainInstructions">如果這個訂閱類型屬於一個機構，請輸入一個網域。如果已經輸入一個網域，可選填IP網段。有效值為網域名稱（例如，lib.sfu.ca）</message>
+	<message key="manager.subscriptions.form.ipRange">IP網段</message>
+	<message key="manager.subscriptions.form.ipRangeInstructions">如果這個訂閱類型屬於一個機構，請輸入一個IP網段。如果已經輸入了一個IP網段，可選填網域。有效的值包括一個IP（例如142.58.103.1），一個CIDR IP網段（例如142.58.100.0/24），或者任何這些由';'加以區隔的結合段（如，142.58.103.* - 142.58.107.* ; 142.58.108.1/24 ; 142.58.106.*）。</message>
+	<message key="manager.subscriptions.form.notifyEmail">寄給使用者一封含有其使用者名稱和訂閱詳情的電子郵件。</message>
+	<message key="manager.subscriptions.form.saveAndCreateAnother">存檔並建立另一個</message>
+
+	<!-- Announcement Type Management 公告類型管理 -->
+	<message key="manager.announcementTypes.edit">編輯公告類型</message>
+	<message key="manager.announcementTypes.editTitle">編輯</message>
+	<message key="manager.announcementTypes.create">建立公告類型</message>
+	<message key="manager.announcementTypes.createTitle">建立</message>
+	<message key="manager.announcementTypes.form.typeNameRequired">需要一個公告類型的名稱</message>
+	<message key="manager.announcementTypes.form.typeNameExists">具有這個名稱的公告類型已經存在</message>
+	<message key="manager.announcementTypes.form.typeName">名稱</message>
+	<message key="manager.announcementTypes.form.saveAndCreateAnother">存檔並建立另一個</message>
+	<message key="manager.announcementTypes.typeName">公告類型</message>
+	<message key="manager.announcementTypes.confirmDelete">警告！所有屬於這個公告類型的公告也會被刪除。您確定您要繼續並刪除這個公告類型嗎？</message>
+	<message key="manager.announcementTypes.noneCreated">沒有建立任何公告</message>
+
+	<!-- Announcements Management 公告管理 -->
+	<message key="manager.announcements.type">類型</message>
+	<message key="manager.announcements.dateExpire">過期</message>
+	<message key="manager.announcements.title">標題</message>
+	<message key="manager.announcements.confirmDelete">您確定您要永久性地刪除這份公告？</message>
+	<message key="manager.announcements.noneCreated">沒有建立任何公告</message>
+	<message key="manager.announcements.createTitle">建立</message>
+	<message key="manager.announcements.create">建立新的公告</message>
+	<message key="manager.announcements.editTitle">編輯</message>
+	<message key="manager.announcements.edit">編輯公告</message>
+	<message key="manager.announcements.form.typeId">類型</message>
+	<message key="manager.announcements.form.title">標題</message>
+	<message key="manager.announcements.form.descriptionShort">簡要說明</message>
+	<message key="manager.announcements.form.descriptionShortInstructions">隨著公告標題一起出現的簡要說明。</message>
+	<message key="manager.announcements.form.description">說明</message>
+	<message key="manager.announcements.form.descriptionInstructions">公告全文</message>
+	<message key="manager.announcements.form.dateExpire">過期日期</message>
+	<message key="manager.announcements.form.dateExpireInstructions">The announcement will be displayed to readers until this date. Leave blank if the announcement should be displayed indefinitely.在這個日期之前公告都會顯示給讀者。如果公共應該不限期顯示，請保持空白。</message>
+	<message key="manager.announcements.form.saveAndCreateAnother">存檔並建立另一個</message>
+	<message key="manager.announcements.form.typeIdValid">請選擇一個有效的公告類型</message>
+	<message key="manager.announcements.form.titleRequired">需要一個公告標題</message>
+	<message key="manager.announcements.form.descriptionShortRequired">需要一個簡短的公告說明。</message>
+	<message key="manager.announcements.form.descriptionRequired">需要一個公告說明</message>
+	<message key="manager.announcements.form.dateExpireValid">請選擇一個有效的公告過期日期</message>
+	<message key="manager.announcements.form.dateExpireYearIncompleteDate">除了過期年份以外請選擇的一個月份以及＼或者日期</message>
+	<message key="manager.announcements.form.dateExpireMonthIncompleteDate">除了過期月份以外請選擇的一個年份以及＼或者日期</message>
+	<message key="manager.announcements.form.dateExpireDayIncompleteDate">除了過期日以外請選擇的一個年份以及＼或者月份</message>
+
+	<!-- Editor 編輯 -->
+	<message key="editor.home">編輯首頁</message>
+	<message key="editor.submissionsAndPublishing">投稿與出版</message>
+	<message key="editor.submissionQueue">投稿稿件列表</message>
+	<message key="editor.submissionArchive">稿件檔案櫃</message>
+	<message key="editor.publishing">出版</message>
+	<message key="editor.publishedIssues">已出版期數</message>
+	<message key="editor.allSections">所有文稿類型</message>
+	<message key="editor.submissionArchive.noSubmissions">檔案櫃中沒有任何稿件</message>
+	<message key="editor.submissionArchive.saveChanges">儲存對於存檔稿件所做的變更？標記要刪除的稿件會永久性地從系統中被刪除。</message>
+	<message key="editor.submissionArchive.confirmDelete">您確定您要永久性地刪除這份稿件？</message>
+	<message key="editor.submissionReview.confirmDecision">您確定您要記錄這個決定？</message>
+	<message key="editor.submissionReview.notes">「期限」是指離審查截止日還剩下多少週或者已經過期多少(-)週。當一個審查人接受審稿的邀請時就算開始計算。</message>
+	<message key="editor.notifyUsers">通知使用者</message>
+	<message key="editor.usersNotified">已通知使用者</message>
+	<message key="editor.notifyUsers.allUsers">({$count})</message>
+	<message key="editor.notifyUsers.interestedUsers">寄發這份訊息給這個期刊上指明自己希望收到網站更新通知的使用者({$count}個使用者)</message>
+	<message key="editor.notifyUsers.includeToc">包括這一期的目錄：</message>
+
+	<!-- Editor Index Page 編輯索引頁面 -->
+	<message key="editor.editorAdministration">編輯管理</message>
+	<message key="editor.issues.createIssue">新建一期期刊</message>
+	<message key="editor.issues.backIssues">過往期數</message>
+	<message key="editor.issues.futureIssues">未來期數</message>
+	<message key="editor.issues.currentIssue">當期期刊</message>
+	<message key="editor.issues.numArticles">項目</message>
+	<message key="editor.issues.noArticles">本期尚未排入任何項目</message>
+	<message key="editor.issues.confirmDelete">您確定您要永久性地刪除這一期期刊？</message>
+
+	<!-- Back Issues 過往期數 -->
+	<message key="editor.issues.published">已出版</message>
+	<message key="editor.issues.unpublished">尚未出版</message>
+
+	<!-- Create Issue / Issue Data 建立期數＼期數日期 -->
+	<message key="editor.issues.volumeRequired">本期需要冊數</message>
+	<message key="editor.issues.numberRequired">本期需要一個編號數字</message>
+	<message key="editor.issues.yearRequired">本期需要一個年份</message>
+	<message key="editor.issues.labelFormatRequired">一定要選擇一個有效的標籤格式</message>
+	<message key="editor.issues.labelOption1">冊，期，年</message>
+	<message key="editor.issues.labelOption2">冊，年</message>
+	<message key="editor.issues.labelOption3">年</message>
+	<message key="editor.issues.labelOption4">只有標題</message>
+	<message key="editor.issues.issueIdentification">期數識別</message>
+	<message key="editor.issues.publicIssueIdentifier">出版期數識別碼</message>
+	<message key="editor.issues.description">說明</message>
+	<message key="editor.issues.accessStatus">閱讀狀態</message>
+	<message key="editor.issues.accessDate">開放閱讀日期</message>
+	<message key="editor.issues.invalidAccessDate">閱讀日期無效</message>
+	<message key="editor.issues.issuePublicIdentificationExists">出版期數之識別號已經存在。</message>
+	<message key="editor.issues.coverPage">封面影像</message>
+	<message key="editor.issues.coverPageInstructions">(可用格式： .gif, .jpg, 或 .png )</message>
+	<message key="editor.issues.uploaded">已上傳</message>
+	<message key="editor.issues.remove">移除</message>
+	<message key="editor.issues.proofed">已校對</message>
+	<message key="editor.issues.removeCoverPage">移除封面頁影像</message>
+	<message key="editor.issues.invalidCoverPageFormat">無效的封面頁格式。可接受的格式為：.gif, .jpg, 或 .png.</message>
+	<message key="editor.issues.styleFile">樣式表</message>
+	<message key="editor.issues.invalidStyleFormat">無效的樣式表格式。請確保所提交的檔案室一個有效的CSS檔案。（注意，一開頭含有註解的樣式表會被拒絕）</message>
+	<message key="editor.issues.removeStyleFile">移除樣式表？</message>
+	<message key="editor.issues.coverPageCaption">封面標題</message>
+	<message key="editor.issues.showCoverPage">為本期建立自訂的封面頁。</message>
+	<message key="editor.issues.openAccess">閱覽注意事項</message>
+	<message key="editor.issues.subscription">訂閱</message>
+	<message key="editor.issues.identification">識別</message>
+	<message key="editor.issues.access">閱讀</message>
+	<message key="editor.issues.cover">封面</message>
+	<message key="editor.issues.confirmIssueDelete">所有的文章都會回到編輯列表，而且所有連結的檔案都會永久性地移除。您確定您要移除這份期刊？</message>
+	<message key="editor.issues.resetSectionOrder"><![CDATA[本期使用自訂的文稿類型排序。<a href="{$url}" class="action">重設為預設值</a>]]></message>
+
+	<!-- Live Issues 進行中的期數 -->
+	<message key="editor.issues.issueData">期數資料</message>
+	<message key="editor.issues.saveChanges">儲存目錄變更？</message>
+	<message key="editor.issues.default">預設</message>
+	<message key="editor.issues.order">順序</message>
+	<message key="editor.issues.publicId">出版Id</message>
+	<message key="editor.issues.publishIssue">出版本期</message>
+	<message key="editor.issues.previewIssue">預覽期數</message>
+	<message key="editor.issues.preview">(預覽)</message>
+	<message key="editor.issues.confirmPublish">您確定您要出版新一期期刊？</message>
+	<message key="editor.issues.publicArticleIdExists">無法儲存下列文章的出版id：</message>		
+	<message key="editor.issues.noLiveIssues">沒有進行中的期數</message>
+	<message key="editor.issues.open">開放</message>
+	<message key="editor.issues.pages">頁面</message>
+
+	<!-- Navigation sidebar menu 導覽側邊欄選單-->
+	<message key="editor.navigation.issues">期數</message>
+	<message key="editor.navigation.futureIssues">未來期數</message>
+	<message key="editor.navigation.createIssue">建立期數</message>
+	<message key="editor.navigation.issueArchive">過往期數</message>
+	
+	<!-- Used by editor in submission review / editing 由編輯在稿件審查＼編輯時使用-->
+	<message key="editor.article.designateReviewVersion">指派作為審訂版本的原始檔案</message>
+	<message key="editor.article.uploadReviewVersion">上傳一份修訂過的審查版本</message>
+	<message key="editor.article.showSuppFile">提交檔案給審查人</message>
+	<message key="editor.article.layoutAndProof">版面 &amp; 校對</message>
+	<message key="editor.article.clear">清除</message>
+	<message key="editor.article.clearReviewer">清除審查人</message>
+	<message key="editor.article.changeSection">變更文稿類型</message>
+	<message key="editor.article.setDueDate">設定期限日期</message>
+	<message key="editor.article.addReviewer">新增審查人</message>
+	<message key="editor.article.toReviewer">給審查人</message>
+	<message key="editor.article.notifyReviewer">通知審查人</message>
+	<message key="editor.article.initiateReview">初審</message>
+	<message key="editor.article.cancelReview">取消邀請</message>
+	<message key="editor.article.clearReview">清除審查人</message>
+	<message key="editor.article.enterRecommendation">輸入建議事項</message>
+	<message key="editor.article.enterReviewerRecommendation">輸入審查人的建議</message>
+	<message key="editor.article.recommendation">建議</message>
+	<message key="editor.article.selectReviewer">選擇審查人</message>
+	<message key="editor.article.selectReviewerNotes"><![CDATA[姓名連結到審查人帳號。<br/>
+從5(極佳)開始評分。<br/>
+「週數」意指完成一份審查工作的平均時期<br/>
+「最新」是指最近接受的審查工作日期<br/>
+「進行中」是指有多少審查工作目前正待考慮或者正在進行。]]></message>
+	<message key="editor.article.replaceReviewer">替換審查人</message>
+	<message key="editor.article.editorToEnter">編輯替審查人輸入建議＼審查意見</message>
+	<message key="editor.article.uploadReviewForReviewer">上傳審查意見書</message>
+	<message key="editor.article.peerReviewOptions">審查選項</message>	
+	<message key="editor.article.decision">決定</message>	
+	<message key="editor.article.noEditorSelected">沒有選擇任何編輯</message>
+	<message key="editor.article.recordDecision">記錄決定</message>
+	<message key="editor.article.cannotRecord">文稿類型編輯尚未被紀錄</message>
+	<message key="editor.article.reviewersSeeAuthorsVersion">審查人瀏覽作者版本</message>
+	<message key="editor.article.designateDueDate">指定一個到期日</message>
+	<message key="editor.article.designateDueDateDescription">為新的到期日輸入日期或週數</message>
+	<message key="editor.article.todaysDate">今天的日期</message>
+	<message key="editor.article.requestedByDate">根據日期提出請求</message>
+	<message key="editor.article.dueDateFormat">格式：YYYY-MM-DD</message>
+	<message key="editor.article.numberOfWeeks">週數</message>
+	<message key="editor.article.selectCopyeditor">指派校樣編輯</message>
+	<message key="editor.article.replaceCopyeditor">替換校樣編輯</message>
+	<message key="editor.article.editorsCopyedit">編輯的校樣</message>
+	<message key="editor.article.showAuthor">讓作者檢視檔案</message>
+	<message key="editor.article.showCopyeditor">顯示給校樣編輯的版本</message>
+	<message key="editor.article.rateReviewer">審查人評比</message>
+	<message key="editor.article.reviewerRating.veryGood">5分（最高）</message>
+	<message key="editor.article.reviewerRating.good">4分</message>
+	<message key="editor.article.reviewerRating.average">3分</message>
+	<message key="editor.article.reviewerRating.poor">2分</message>
+	<message key="editor.article.reviewerRating.veryPoor">1分（最低）</message>
+	<message key="editor.article.comments">評論</message>
+	<message key="editor.article.saveRating">儲存評分</message>
+	<message key="editor.article.noneSelected">未選擇任何項目</message>
+	<message key="editor.article.authorProofing">作者校對</message>
+	<message key="editor.article.archiveSubmission">典藏稿件</message>
+	<message key="editor.article.emailAuthorOnArchive">寄發電子郵件告知作者要典藏這份稿件？</message>
+	<message key="editor.article.restoreToQueue">復原至檔案櫃列表</message>
+	<message key="editor.article.assignSectionEditor">新增文稿類型編輯</message>
+	<message key="editor.article.assignEditor">新增編輯</message>
+	<message key="editor.article.selectEditor">選擇{$roleName}</message>
+	<message key="editor.article.selectDecision">選擇決定</message>
+	<message key="editor.article.decision.accept">接受稿件</message>
+	<message key="editor.article.decision.pendingRevisions">修改後刊登</message>
+	<message key="editor.article.decision.resubmit">重新審查</message>
+	<message key="editor.article.decision.decline">婉謝退稿</message>
+	<message key="editor.article.selectLayoutEditor">選擇版面編輯</message>
+	<message key="editor.article.replaceLayoutEditor">替換版面編輯</message>
+	<message key="editor.article.reviewSubmission">審查稿件</message>
+	<message key="editor.article.resubmitForReview">重新提交檔案以供審查</message>
+	<message key="editor.article.resubmitFileForPeerReview">重新提交所選的檔案以供審查</message>
+	<message key="editor.article.sendToCopyedit">寄交檔案供校樣編輯</message>
+	<message key="editor.article.sendFileToCopyedit">選擇檔案供校樣編輯</message>
+	
+	<message key="editor.article.selectProofreader">指派校對者</message>
+	<message key="editor.article.replaceProofreader">替換校對者</message>
+	<message key="editor.article.authorComments">作者意見</message>
+	<message key="editor.article.proofreaderComments">校對者意見</message>
+	<message key="editor.article.layoutEditorFinal">版面編輯最後仲裁</message>
+	<message key="editor.article.noDate">(日期)</message>
+
+	<message key="editor.submissions.showBy">顯示根據</message>
+	<message key="editor.submissions.submitMMDD">提交 MM-DD</message>
+	<message key="editor.submissions.activeAssignments">進行中的指派工作</message>
+	<message key="editor.submissions.invite">邀請</message>
+	<message key="editor.submissions.accept">接受</message>
+	<message key="editor.submissions.noSubmissions">沒有任何稿件</message>
+	<message key="editor.submissions.lastAssigned">最新</message>
+	<message key="editor.submissions.averageTime">週數</message>
+	<message key="editor.submissions.lastCompleted">最近完成</message>
+
+	<message key="editor.article.scheduleForPublication">排程出版於</message>
+	<message key="editor.article.scheduleForPublication.toBeAssigned">待指派</message>
+	
+	<!-- Section Editor 文稿類型編輯 -->
+	<message key="sectionEditor.activeEditorialAssignments">進行中的編輯任務</message>
+	<message key="sectionEditor.completedEditorialAssignments">已完成的編輯任務</message>
+	<message key="sectionEditor.noneAssigned">沒有指派任何稿件</message>
+	<message key="sectionEditor.copyedit.confirmRenotify">再次通知這個校樣編輯會重新指派他們的編輯任務。您確定您想要這麼做？</message>
+	<message key="sectionEditor.author.confirmRenotify">再次通知這位作者將會重新設定他們的編輯任務。您確定您要這麼做？</message>
+	<message key="sectionEditor.layout.confirmRenotify">再次通知這個版面編輯會重新指派他們的編輯任務。您確定您想要這麼做？</message>
+	<message key="sectionEditor.proofreader.confirmRenotify">再次通知這個校對者會重新指派他們的編輯任務。您確定您想要這麼做？</message>
+
+	<message key="sectionEditor.regrets.breadcrumb">婉謝</message>
+	<message key="sectionEditor.regrets.title">#{$articleId} 審查人婉謝、取消 &amp; 之前的審查回合</message>
+	<message key="sectionEditor.regrets">婉謝</message>
+	<message key="sectionEditor.regrets.link">檢視婉謝、取消、前一回合審查</message>
+	<message key="sectionEditor.regrets.reviewRound">審查，第{$round}回合審查</message>
+	<message key="sectionEditor.regrets.decisionRound">編輯決定，第{$round}回合審查</message>
+	<message key="sectionEditor.regrets.regretsAndCancels">審查人婉謝 &amp; 取消</message>
+	<message key="sectionEditor.regrets.regret">婉謝</message>
+	<message key="sectionEditor.regrets.result">結果</message>
+	<message key="sectionEditor.review.enrollReviewer">指派審查人角色給已存在的使用者</message>
+	<message key="sectionEditor.review.createReviewer">建立新的審查人</message>
+
+	<!-- Layout Editor 版面編輯 -->
+	<message key="layoutEditor.activeEditorialAssignments">進行中的編輯任務</message>
+	<message key="layoutEditor.completedEditorialAssignments">已完成的編輯任務</message>
+	<message key="layoutEditor.noActiveAssignments">沒有任何進行中的編輯任務</message>
+	<message key="layoutEditor.layoutEditingAssignments">版面編輯任務</message>
+	<message key="layoutEditor.galley.uploadGalleyFormat">上傳校樣版面格式</message>
+	<message key="layoutEditor.galley.replaceGalley">替換檔案</message>
+	<message key="layoutEditor.galley.uploadSuppFile">上傳補充檔案</message>
+	<message key="submission.layout.galleryNoImages">沒有任何影像</message>
+	
+	<!-- Reviewer 審查人 -->
+	<message key="reviewer.pendingReviews">待審查的文章</message>
+	<message key="reviewer.completedReviews">完成</message>
+	<message key="reviewer.averageQuality">評分</message>
+	
+	<!-- Used in submission review 使用在稿件審查時 -->
+	<message key="reviewer.article.fileToBeReviewed">要進行審查的檔案</message>
+	<message key="reviewer.article.notifyTheEditor">通知編輯人</message>
+	<message key="reviewer.article.canDoReview">我將會進行這項審查工作</message>
+	<message key="reviewer.article.cannotDoReview">我無法進行這項審查工作</message>
+	<message key="reviewer.article.restrictedFileAccess">如果審查工作正在進行，檔案就只能被檢視而已</message>
+	<message key="reviewer.article.submissionEditor">送交編輯</message>
+	<message key="reviewer.article.reviewerCommentsDescription">在此輸入或貼上審查意見</message>
+	<message key="reviewer.article.editorToEnter">編輯進行輸入</message>
+	<message key="reviewer.article.sendReminder">發出提醒信函</message>
+	<message key="reviewer.article.automatic">(自動)</message>
+	<message key="reviewer.article.selectRecommendation">選擇一個建議選項</message>
+	<message key="reviewer.article.recommendation">建議</message>
+	<message key="reviewer.article.submitReview">送出審查意見書給編輯</message>
+	<message key="reviewer.article.reviewerComments">評論</message>
+	<message key="reviewer.article.uploadedFile">上傳檔案</message>	
+	<message key="reviewer.article.reviewersAnnotatedVersion">由審查人上傳之版本</message>
+	<message key="reviewer.article.reviewersAnnotatedVersionDescription">（如果您想要在這份檔案中做一些給編輯看的註解，請先將檔案儲存在您的硬碟上，然後使用「瀏覽＼上傳」功能。）</message>
+        <message key="reviewer.article.schedule.request">編輯的要求</message>
+        <message key="reviewer.article.schedule.response">您的回應</message>
+        <message key="reviewer.article.schedule.submitted">已送出審查意見書</message>
+        <message key="reviewer.article.schedule.due">審查期限</message>
+	<message key="reviewer.article.decision.accept">接受稿件</message>
+	<message key="reviewer.article.decision.pendingRevisions">修改後刊登</message>
+	<message key="reviewer.article.decision.resubmitHere">重新審查</message>
+        <message key="reviewer.article.decision.resubmitElsewhere">重新投稿他處</message>
+	<message key="reviewer.article.decision.decline">婉謝退稿</message>
+	<message key="reviewer.article.decision.seeComments">請見評論</message>
+	<message key="reviewer.article.schedule">排程</message>
+        <message key="reviewer.article.submissionToBeReviewed">送出接受審查</message>
+        <message key="reviewer.article.reviewSchedule">審查排程</message>
+        <message key="reviewer.article.reviewSteps">審查步驟</message>
+        <message key="reviewer.article.reviewerGuidelines">審查人指引</message>
+        <message key="reviewer.article.reviewerInstruction1a">通知這份稿件的編輯人</message>
+        <message key="reviewer.article.reviewerInstruction1b">您是否會進行審查工作*</message>
+        <message key="reviewer.article.reviewerInstruction2">如果您將要進行這份審查工作，請參考下列的「審查人指引」。</message>
+        <message key="reviewer.article.reviewerInstruction3">點擊檔案名稱下載檔案並且審查與稿件相關的所有檔案（在電腦螢幕上或者列印出來）。</message>
+        <message key="reviewer.article.reviewerInstruction4a">點擊圖示以輸入（或貼上）您對這份稿件的審查意見。</message>
+        <message key="reviewer.article.reviewerInstruction4b">請遵照下列的「審查人指引」。</message>
+        <message key="reviewer.article.reviewerInstruction5">此外，您可以上傳檔案給編輯與＼或作者參考。</message>
+        <message key="reviewer.article.reviewerInstruction6">選擇一個建議選項並且送出審查意見書以完成整個流程。在選擇一個建議選項之前，您必須輸入一份審查意見或者上傳一個書面檔案。</message>
+	<message key="reviewer.article.mustSelectDecision">沒有選擇任何建議選項。您必須選擇送出一個建議選項。</message>
+	<message key="reviewer.article.confirmDecision">一旦您記錄了一個決定，您將不再
+能夠變更這份審查意見書。您確定您要繼續下一步？</message>
+	<message key="reviewer.article.ensuringBlindReview">確保匿名審查</message>
+
+	<!-- Used in submission editing 用在稿件編輯時 -->
+	<message key="copyeditor.article.fileToCopyedit">給校樣編輯的檔案</message>
+	<message key="copyeditor.article.copyeditorFile">校樣編輯檔案</message>
+	<message key="copyeditor.article.uploadedFile">上傳檔案</message>
+	<message key="copyeditor.article.copyeditorFinalFile">校樣編輯檔案</message>
+	
+	<!-- Proofreader 校對者 -->
+	<message key="proofreader.noProofreadingAssignments">沒有任何校對工作</message>
+
+	<!-- Author 作者 -->
+	<message key="author.submit">新稿件</message>
+	<message key="author.track">進行中的稿件</message>
+	<message key="author.submit.submitArticle">送出一篇文章</message>
+	<message key="author.submit.stepsToSubmit">投稿五步驟</message>
+	<message key="author.submit.startHereLink">點擊這裡開始進行投稿</message>
+	<message key="author.submit.step1">步驟 1. 開始投稿</message>
+	<message key="author.submit.step2">步驟 2. 輸入稿件的後設資料(metadata)</message>
+	<message key="author.submit.step3">步驟 3. 上傳稿件</message>
+	<message key="author.submit.step4">步驟 4. 上傳補充檔案</message>
+	<message key="author.submit.step4a">步驟 4a. 新增一個補充檔案</message>
+	<message key="author.submit.step5">步驟 5. 確認投稿</message>
+	<message key="author.submit.start">1. 開始</message>
+	<message key="author.submit.metadata">2.  輸入後設資料</message>
+	<message key="author.submit.upload">3. 上傳稿件</message>
+	<message key="author.submit.supplementaryFiles">4. 上傳補充檔案</message>
+	<message key="author.submit.confirmation">5. 確認</message>
+	<message key="author.submit.cancelSubmission">您可以在「作者」角色的使用者首頁中選擇「進行中的稿件」以在稍後任一個時間點完成此投稿程序。</message>
+	<message key="author.submit.notAccepting">這份期刊此時不接受投稿</message>
+	
+	<message key="author.submissions.uploadCopyeditedVersion">上傳校樣編輯過後的版本</message>
+	<message key="author.submissions.proofreadingCorrections">校對修訂處</message>
+	<message key="author.submissions.confirmDelete">您確定您要刪除這份未完成的投稿稿件？</message>
+	<message key="author.submissions.viewStatus">檢視狀態</message>
+	<message key="author.submissions.noSubmissions">沒有任何稿件</message>
+
+	<!-- Article Submission Step 1 投稿步驟 1.-->
+	<message key="author.submit.howToSubmit"><![CDATA[作者透過這個網站的五步驟程序，上傳初稿和相關資訊（選擇是否同時上傳補充檔案，像是調查資料和使用設備），投稿各項目到這份期刊。如果在這個程序中碰到困難，請聯絡<a href="mailto:{$supportEmail}">{$supportName}</a> ，透過電子郵件或電話{$supportPhone}取得協助。]]></message>
+	<message key="author.submit.journalSection">期刊文稿類型</message>
+	<message key="author.submit.journalSectionDescription"><![CDATA[為這份稿件選擇恰當的投稿文稿類型（見<a href="{$aboutUrl}">期刊介紹</a> 中的「文稿類型與方針」項目）
+	).]]></message>
+	<message key="author.submit.selectSection">請選擇一個文稿類型...</message>
+	
+	<message key="author.submit.submissionChecklist">投稿檢查表</message>
+	<message key="author.submit.submissionChecklistDescription">勾選下列項目以確定這份稿件已慎重考慮投稿本期刊（可以在下面加上給編輯的意見）</message>
+	<message key="author.submit.verifyChecklist">您必須確定已經完成檢查表中的所有的項目，才能繼續下一步。</message>
+	<message key="author.submit.copyrightNoticeAgree">作者同意這份版權注意事項的內容，並同意在這份期刊出版此稿件時適用於這份稿件（可以在下面加上給編輯的意見）。</message>
+	<message key="author.submit.copyrightNoticeAgreeRequired">您必須同意「版權注意事項」的內容才能夠繼續下一步。</message>
+	<message key="author.submit.commentsForEditor">給編輯的意見</message>
+	<message key="author.submit.comments">輸入文字 (選填)</message>
+	<message key="author.submit.form.sectionRequired">請為這份稿件選擇一個恰當的期刊文稿類型。</message>
+	
+	<!-- Article Submission Step 2 投稿步驟 2.-->
+	<message key="author.submit.metadataDescription">本期刊為每份投稿稿件蒐集後設資料；依據「開放典藏計畫」標準設定，一種呈現在線上的標準格式以識別各項研究資源。這能夠透過OAI資料庫獲得豐富和準確的搜尋結果，增加讀者找到類似本文之文章的可能性。編輯可以要求在文章進行編輯程序之前一定要先提供後設資料。</message>
+	<message key="author.submit.privacyStatement">期刊的隱私權聲明</message>
+	<message key="author.submit.authorsDescription">若投稿作者超過一位以上，請排列作者姓名出現順序，以利引用</message>
+	<message key="author.submit.reorderAuthorName">記錄作者姓名</message>
+	<message key="author.submit.reorderInstructions">Use arrows to change the order in which the authors names are to appear with the submission.使用箭號以變更稿件中作者姓名的顯示順序</message>
+	<message key="author.submit.selectPrincipalContact">編輯通信的固定聯絡人</message>
+	<message key="author.submit.addAuthor">新增作者</message>
+	<message key="author.submit.deleteAuthor">刪除作者</message>
+	<message key="author.submit.submissionIndexingDescription">依照本期刊所使用的領域類別以及編輯提供的範例，來選擇能夠最佳地說明此份稿件內容的詞彙。以分號(;)來分隔多個詞彙（如，詞彙1; 詞彙2; 詞彙3）。</message>
+	<message key="author.submit.submissionSupportingAgencies">贊助機構</message>
+	<message key="author.submit.submissionSupportingAgenciesDescription">指明為本文之工作提供經費或者協助的機構</message>
+	<message key="author.submit.agencies">機構</message>
+	<message key="author.submit.coverageInstructions">地理空間位置、年代或歷史涵蓋範圍，以及＼或者研究樣本的特色。</message>
+	<message key="author.submit.subjectClassInstructions">使用有超連結的分類系統來選擇分類詞彙以及（如果適合的話）數字。</message>
+	<message key="author.submit.languageInstructions"><![CDATA[English=en; French=fr; 繁體中文=zh<a href="http://www.loc.gov/standards/iso639-2/langcodes.html" target="_blank">其他代碼</a>.]]></message>
+	<message key="author.submit.form.authorRequired">至少需要一位作者</message>
+	<message key="author.submit.form.authorRequiredFields">需要每位作者的姓名與電子郵件地址</message>
+	<message key="author.submit.form.titleRequired">請輸入文章的標題</message>
+	
+	<!-- Article Submission Step 3 投稿步驟3. -->
+	<message key="author.submit.uploadInstructions"><![CDATA[
+要上傳初稿給本期刊，請完成下列步驟。
+
+<ol>
+<li>在本頁中，點擊「瀏覽」（或者「選擇檔案」）打開一個檔案選擇視窗，選擇您的電腦硬碟上的檔案路徑）。</li>
+<li>選擇您要上傳的檔案。</li>
+<li>點擊檔案選擇視窗中的「開啟」，將檔案名稱置入本頁中。</li>
+<li>點擊本頁中的「上傳」，從您的電腦中上傳檔案到期刊網站上，並且依照期刊的規定(自動)變更檔名。</li>
+<li>一旦稿件成功上傳，請點擊本頁最下面的「存檔並繼續」按鈕</li>
+</ol>
+
+您可以點擊檔案的名稱來檢視該份檔案。可以上傳一份新的或者修改過的檔案，刪除掉目前出現的這份檔案。也可以（在下一步驟）使用「補充檔案」來增加額外的檔案。如果您上傳稿件時出現問題，請聯絡 <a href="mailto:{$supportEmail}">{$supportName}</a> ，透過電子郵件或電話 {$supportPhone}取得協助。]]></message>
+	<message key="author.submit.submissionFile">稿件檔案</message>
+	<message key="author.submit.uploadSubmissionFile">上傳稿件檔案</message>
+	<message key="author.submit.replaceSubmissionFile">替換稿件檔案</message>
+	<message key="author.submit.noSubmissionFile">沒有上傳任何稿件檔案</message>
+	<message key="author.submit.noSubmissionConfirm">您確定您希望繼續下一步而不上傳一份稿件檔案？</message>
+	
+	<!-- Article Submission Step 4 步驟 4. -->
+	<message key="author.submit.supplementaryFilesInstructions">這個在投稿流程中選擇性的步驟，讓作者可以增加檔案到稿件上，加強稿件所擁有的影響力。「補充檔案」可以包括(a)研究設備或方法；(b) 資料或數據組，依循研究工作的研究倫理審核； (c) 資料來源；無法提供給讀者的來源不算；(d) 無法納入文章本文之中的圖片或表格。這些檔案也會由作者編目索引，指明它們與稿件之間的關係，以及檔案和檔案之間的關係。「補充檔案」可以用任一種檔案格式上傳，並且可以用原本的格式讓讀者取得。如果無損匿名審查原則的話，也可以和審查人共用這些檔案。</message>
+	<message key="author.submit.noSupplementaryFiles">這份稿件沒有附加任何補充檔案。</message>
+	<message key="author.submit.backToSupplementaryFiles">回到「補充檔案」</message>
+	<message key="author.submit.confirmDeleteSuppFile">您確定您想要刪除這份補充檔案？</message>
+	<message key="author.submit.uploadSuppFile">上傳補充檔案</message>
+	
+	<!-- Article Submission Step 4a: Supplementary Files 投稿步驟 4a. 補充檔案-->
+	<message key="author.submit.addSupplementaryFile">新增一個補充檔案</message>
+	<message key="author.submit.editSupplementaryFile">編輯一個補充檔案</message>
+	<message key="author.submit.supplementaryFileData">補充檔案的後設資料</message>
+	<message key="author.submit.supplementaryFileDataDescription">要索引這份補充材料，請為上傳的補充檔案輸入下列的後設資料。</message>
+	<message key="author.submit.supplementaryFileUpload">補充檔案</message>
+	<message key="author.submit.suppFile.createrOrOwner">檔案的建立者（或擁有人）</message>
+	<message key="author.submit.suppFile.researchInstrument">研究方法或工具</message>
+	<message key="author.submit.suppFile.researchMaterials">研究材料</message>
+	<message key="author.submit.suppFile.researchResults">研究結果</message>
+	<message key="author.submit.suppFile.transcripts">副本</message>
+	<message key="author.submit.suppFile.dataAnalysis">資料分析</message>
+	<message key="author.submit.suppFile.dataSet">資料或數據組</message>
+	<message key="author.submit.suppFile.sourceText">來源文獻</message>
+	<message key="author.submit.suppFile.briefDescription">概述</message>
+	<message key="author.submit.suppFile.contributorOrSponsor">捐贈或贊助單位</message>
+	<message key="author.submit.suppFile.availableToPeers">在無損匿名審查原則的情況下，讓審查人看到檔案（不加後設資料）。</message>
+	<message key="author.submit.suppFile.publisherDescription">只使用形式上已出版的材料。</message>
+	<message key="author.submit.suppFile.dateDescription">資料蒐集或者建立方法的日期。</message>
+	<message key="author.submit.suppFile.sourceDescription">研究名稱或者其他來源點。</message>
+	<message key="author.submit.suppFile.specifyOtherType">指明其他</message>
+	<message key="author.submit.suppFile.noFile">沒有上傳任何檔案</message>
+	<message key="author.submit.suppFile.form.titleRequired">請輸入這個補充檔案的標題。</message>
+	<message key="author.submit.suppFile.form.subjectRequired">請輸入一個主旨。</message>
+	<message key="author.submit.suppFile.form.descriptionRequired">請輸入一段說明。</message>
+	<message key="author.suppFile.suppFilePublicIdentificationExists">公開的補充資料識別碼已經存在。</message>
+	<message key="author.suppFile.publicSuppFileIdentifier">公開補充資料識別碼</message>
+	
+	<!-- Article Submission Step 5 步驟5.  -->
+	<message key="author.submit.confirmationDescription">完成了之前投稿流程的四個步驟，點擊「完成投稿」以將您的初稿送交給{$journalTitle}。您會收到一封電子郵件確認信，並且在登入期刊網站後能夠檢視您的稿件正經歷哪些編輯過程。感謝您願意在{$journalTitle}出版您的文章。</message>
+	<message key="author.submit.noFiles">這份稿件沒有附加任何檔案</message>
+	<message key="author.submit.filesSummary">檔案摘要</message>
+	<message key="author.submit.finishSubmission">完成投稿</message>
+	<message key="author.submit.submissionComplete">完成投稿！感謝您願意在{$journalTitle}出版您的文章。</message>
+	<message key="author.submit.expedite"><![CDATA[如果這份稿件的格式是已經準備出版而沒有進一步的審查、編輯或者版面工作的話，它可以直接放到編輯列表的最後一個階段：<a href="{$expediteUrl}" class="action">點擊這裡</a>. (注意，只有期刊編輯人可以為他們負責的稿件選擇這個選項。)]]></message>
+
+	<!-- Used in submission review / editing 用於稿件審查、編輯-->
+	<message key="submission.review.mustUploadFileForReview">除非一份審查版本在這裡出現，否則要求發出的電子郵件無法寄出。</message>
+	<message key="author.article.uploadAuthorVersion">上傳作者版本</message>
+	<message key="author.article.copyeditedFile">校樣編輯檔案</message>
+	<message key="author.article.authorRevisedFile">作者檔案</message>
+
+	<!-- Submission Tracking - Copyedit Specific 稿件追蹤-校樣編輯階段 -->
+	<message key="submission.copyedit.mustUploadFileForInitialCopyedit">除非檔案在「編輯決定」、「審查」頁面被選擇要進行校樣編輯，否則要求發出的電子郵件無法寄出。</message>
+	<message key="submission.copyedit.mustUploadFileForCopyedit">除非檔案被上傳進行校樣編輯，否則要求發出的電子郵件無法寄出。</message>
+	<message key="submission.copyedit.initialCopyedit">開始進行校樣編輯</message>
+	<message key="submission.copyedit.editorsCopyedit">編輯校樣</message>
+	<message key="submission.copyedit.editorAuthorReview">作者校樣</message>
+	<message key="submission.copyedit.finalCopyedit">最後校樣編輯</message>
+	<message key="submission.copyedit.copyeditVersion">校樣編輯版本</message>
+	<message key="submission.copyedit.selectCopyeditor">指派校樣編輯</message>
+	<message key="submission.copyedit.useFile">使用檔案</message>
+	<message key="submission.copyedit.copyeditComments">校樣意見</message>
+	<message key="submission.copyedit.instructions">校樣指引</message>
+	
+	<!-- Submission Tracking - Layout Specific 稿件追蹤-版面編輯階段-->
+	<message key="submission.layout.mustUploadFileForLayout">除非一份版面版本在這裡出現，否則要求發出的電子郵件無法寄出。</message>
+	<message key="submission.layout.layoutVersion">Layout版本</message>
+	<message key="submission.layout.layoutFile">Layout檔案</message>
+	<message key="submission.layout.galleys">Galley</message>
+	<message key="submission.layout.newGalley">建立新的Galley</message>
+	<message key="submission.layout.assignLayoutEditor">指派版面編輯</message>
+	<message key="submission.layout.replaceLayoutEditor">替換版面編輯</message>
+	<message key="submission.layout.initialGalleyCreation">開始建立排版樣式</message>
+	<message key="submission.layout.supplementaryFiles">審核補充檔案</message>
+	<message key="submission.layout.layoutComments">版面建議</message>
+	<message key="submission.layout.galleyLabelRequired">需要一個排版樣式標籤</message>
+	<message key="submission.layout.confirmDeleteGalley">您確定您要永久性地刪除這個排版樣式？</message>
+	<message key="submission.layout.newSupplementaryFile">上傳新的補充檔案</message>
+	<message key="submission.layout.confirmDeleteSupplementaryFile">您確定您要永久性地刪除這個補充檔案？</message>
+	<message key="submission.layout.editGalley">編輯一個版面Galley</message>
+	<message key="submission.layout.addGalley">新增一個版面Galley</message>
+	<message key="submission.layout.galleyFileData">Galley檔案資訊</message>
+	<message key="submission.layout.galleyLabel">標籤</message>
+	<message key="submission.layout.galleyLabelInstructions">Galley標籤用來識別各個項目的檔案格式(如 HTML, PDF, 等等)。</message>
+	<message key="submission.layout.galleyHTMLData">HTML排版樣式檔案</message>
+	<message key="submission.layout.galleyStylesheet">樣式表檔案</message>
+	<message key="submission.layout.noStyleFile">沒有加入任何樣式表到這個Galley當中。</message>
+	<message key="submission.layout.deleteGalleyStylesheet">刪除這個樣式表</message>
+	<message key="submission.layout.galleyImages">圖片</message>
+	<message key="submission.layout.galleyNoImages">沒以任何圖片被加入到這個Galley中。</message>
+	<message key="submission.layout.confirmDeleteGalleyImage">您確定您要從這個Galley中移除這張圖片？</message>
+	<message key="submission.layout.galleyStyle">Galley樣式</message>
+	<message key="submission.layout.viewingGalley">檢視稿件的Galley</message>
+	<message key="submission.layout.galleyFormat">Galley格式</message>
+	<message key="submission.layout.viewProof">檢視校對</message>
+	<message key="submission.layout.instructions">排版指引</message>
+	
+	
+	<!-- Submission Tracking - Proofread Specific 稿件追蹤-校對階段-->
+	<message key="submission.proofreadingComments">校對意見</message>
+	<message key="submission.archiveSubmission">典藏稿件</message>
+	<message key="submission.proofread.corrections">校對修訂</message>
+	<message key="submission.proofread.instructions">校對指引</message>
+
+	<!-- Submission History 稿件履歷-->
+	<message key="submission.history.submissionEventLog">事件記錄</message>
+	<message key="submission.history.submissionEmailLog">電郵記錄</message>
+	<message key="submission.history.submissionNotes">稿件備註</message>
+	<message key="submission.history.noLogEntries">沒有任何紀錄項目</message>
+	<message key="submission.history.recentLogEntries">最近項目</message>
+	<message key="submission.history.viewLog">檢視記錄</message>
+	<message key="submission.history.clearLog">清除記錄</message>
+	
+	<message key="submission.logType.article">文章</message>
+	<message key="submission.logType.author">作者</message>
+	<message key="submission.logType.editor">編輯</message>
+	<message key="submission.logType.review">審查人</message>
+	<message key="submission.logType.copyedit">校樣編輯</message>
+	<message key="submission.logType.layout">版面編輯</message>
+	<message key="submission.logType.proofread">校對</message>
+	
+	<!-- Submission Event Log 稿件事件記錄 -->
+	<message key="submission.event.confirmClearLog">您確定您要清除這份稿件的事件記錄？</message>
+	<message key="submission.event.confirmDeleteLogEntry">您確定您要刪除這個事件記錄項目？</message>
+	<message key="submission.event.deleteLogEntry">刪除記錄項目</message>
+	<message key="submission.event.backToEventLog">回到事件記錄</message>
+
+	<!-- Submission Email Log 稿件電郵記錄 -->
+	<message key="submission.email.confirmClearLog">您確定您要清除這份稿件的電郵記錄？</message>
+	<message key="submission.email.confirmDeleteLogEntry">您確定您要刪除這個電郵記錄項目？</message>
+	<message key="submission.email.deleteLogEntry">刪除記錄項目</message>
+	<message key="submission.email.backToEmailLog">回到電郵記錄</message>
+	
+	<!-- Submission Comments 稿件評論 -->
+	<message key="submission.comments.comments">評論</message>
+	<message key="submission.comments.review">審查人意見</message>
+	<message key="submission.comments.editorAuthorCorrespondence">編輯＼作者通信</message>
+	<message key="submission.comments.copyeditComments">校樣編輯意見</message>
+	<message key="submission.comments.corrections">修訂</message>
+	<message key="submission.comments.noComments">無評論</message>
+	<message key="submission.comments.noReviews">目前尚無審查意見</message>
+	<message key="submission.comments.subject">主旨</message>
+	<message key="submission.comments.viewableDescription"><![CDATA[這些評論意見可以和作者共享。<br />
+(存檔之後，可以加入進一步的評論意見。)]]></message>
+	<message key="submission.comments.canShareWithAuthor">給作者和編輯</message>
+	<message key="submission.comments.cannotShareWithAuthor">給編輯</message>
+	<message key="submission.comments.addComment">新增評論</message>
+	<message key="submission.comments.editComment">編輯評論</message>
+	<message key="submission.comments.confirmDelete">您確定您要刪除這份評論？</message>
+	<message key="submission.comments.importPeerReviews">匯入審查意見</message>
+	<message key="submission.comments.blindCcReviewers">寄發之後，顯示一個可編輯的密件副本，寄給審查人。</message>
+	<message key="submission.comments.importPeerReviews.reviewerLetter">審查人{$reviewerLetter}:</message>
+	<message key="submission.comments.forAuthorEditor">給作者和編輯</message>
+	<message key="submission.comments.forEditor">給編輯</message>
+	<message key="submission.comments.sendDecisionToReviewers">將編輯決定寄給審查人</message>
+	<message key="submission.comments.saveAndEmailAuthor">存檔並電郵作者</message>
+	<message key="submission.comments.saveAndEmailEditor">存檔並電郵編輯</message>
+	
+	<!-- Login 登入 -->
+	<message key="user.login.loginError">無效的使用者名稱或密碼。請再試一次。</message>
+	<message key="user.login.accountDisabled">您的帳號已經被停用。請洽詢管理員。</message>
+	<message key="user.login.accountDisabledWithReason">您的帳號因為下列的理由而被停用： {$reason}</message>
+	<message key="user.login.rememberUsernameAndPassword">記住我的使用者名稱和密碼</message>
+	<message key="user.login.registerNewAccount">尚未是一個使用者嗎？請在本站註冊。</message>
+	<message key="user.login.forgotPassword">忘了您的密碼？</message>
+	<message key="user.login.resetPassword">重設密碼</message>
+	<message key="user.login.resetPasswordInstructions"><![CDATA[基於安全性的理由，這個系統將一個重新設定的密碼寄發給註冊使用者，而不是取回目前的密碼。<br /><br />請在下面輸入您的電子郵件地址以重新設定您的密碼。系統會寄發一封確認信到這個地址去。]]></message>
+	<message key="user.login.lostPassword.invalidUser">不存在具有以下電子郵件地址的使用者。</message>
+	<message key="user.login.lostPassword.confirmationSent">一封確認信已經寄發到您的電子郵件地址去了。請按照郵件中的指引來重新設定您的密碼。</message>
+	<message key="user.login.lostPassword.invalidHash">抱歉，您點擊的連結已經過了有效期限，或者是無效連結。請試著再次重設您的密碼。</message>
+	<message key="user.login.lostPassword.passwordSent">一個新的密碼已經寄發到您的電子郵件地址去了。您現在可以用您的新密碼登入這個網站。</message>
+	<message key="user.login.changePasswordInstructions"><![CDATA[您必須選擇一個新密碼才能登入這個網站。<br /><br />請在下面輸入您的使用者名稱、您目前的密碼和新的密碼，以為您的帳號變更密碼。]]></message>
+	<message key="user.login.rememberMe">記得我</message>
+	<message key="user.login.registeredEmail">已註冊使用者的電子郵件</message>
+	
+	<!-- Profile 帳號 -->
+	<message key="user.profile.editProfile">編輯個人帳號</message>
+	<message key="user.profile.form.firstNameRequired">需要填入中文姓名</message>
+	<message key="user.profile.form.lastNameRequired">需要填入英文姓名</message>
+	<message key="user.profile.form.emailRequired">需要一個有效的電子郵件地址</message>
+	<message key="user.profile.form.usernameRequired">需要一個使用者帳號名稱</message>
+	<message key="user.profile.form.passwordRequired">需要一個密碼</message>
+	<message key="user.profile.leavePasswordBlank">保持密碼欄位空白不填，會維持目前的密碼。</message>
+	<message key="user.profile.oldPassword">目前使用的密碼</message>
+	<message key="user.profile.newPassword">新密碼</message>
+	<message key="user.profile.repeatNewPassword">再打一次新密碼</message>
+	<message key="user.profile.changePasswordInstructions">在下面鍵入您現在使用以及新的密碼以更改您的使用者密碼。</message>
+	<message key="user.profile.form.oldPasswordInvalid">您輸入的原有密碼不正確</message>
+	<message key="user.profile.form.newPasswordRequired">您必須輸入您的新密碼</message>
+	<message key="user.profile.form.publishedNotifications">新期刊出版電郵通知</message>
+	<message key="user.profile.form.openAccessNotifications">開放閱讀期刊電郵通知</message>
+	
+	<!-- Registration 註冊 -->
+	<message key="user.register.repeatPassword">重複密碼</message>
+	<message key="user.register.form.usernameExists">所選擇的使用者名稱已被其他使用者使用了。</message>
+	<message key="user.register.form.usernameAlphaNumeric">使用者名稱只可以含有數字和英文字母、底線(_)與連字號(-)，而且一定要以數字或英文字母作為開頭和結尾。</message>
+	<message key="user.register.form.emailExists">所選擇的電子郵件地址已被其他使用者使用了。</message>
+	<message key="user.register.form.passwordsDoNotMatch">密碼不符</message>
+	<message key="user.register.selectJournal">選擇一份期刊進行註冊</message>
+	<message key="user.register.noJournals">本站目前尚無任何期刊可供註冊，</message>
+	<message key="user.register.registerAs">註冊為</message>
+	<message key="user.register.privacyStatement">隱私權聲明</message>
+	<message key="user.register.completeForm">填寫這份表單以註冊這份期刊。</message>
+	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[如果您已經在本站上的任何一份期刊上註冊過了，請<a href="{$registerUrl}">點擊這裡</a>。]]></message>
+	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[如果您 <b>尚未</b> 在本站上的任何一份期刊上註冊過，請<a href="{$registerUrl}">點擊這裡</a>。]]></message>
+	<message key="user.register.loginToRegister">要註冊這份期刊，請輸入您現有的使用者名稱以及密碼</message>
+	<message key="user.register.registrationDisabled">這份期刊目前不接受使用者註冊。</message>
+	<message key="user.register.usernameRestriction">使用者名稱一定只能含有小寫英文字母、數字以及連字號(-)＼底線(_)。</message>
+	<message key="user.register.passwordLengthRestriction">密碼至少要有{$length}個字元。</message>
+	<message key="user.register.form.passwordLengthTooShort">您輸入的密碼不夠長.</message>
+	<message key="user.register.readerDescription">當這份期刊出版新一期期刊時，請以電子郵件通知我。</message>
+	<message key="user.register.openAccessNotificationDescription">當這份期刊有新一期的開放閱讀期刊時，請以電子郵件通知我。</message>
+	<message key="user.register.authorDescription">可以向這份期刊投稿各種項目</message>
+	<message key="user.register.reviewerDescriptionNoInterests">願意對投稿本期刊的稿件進行審查工作。</message>
+	<message key="user.register.reviewerDescription">願意對投稿本期刊的稿件進行審查工作。請指明審稿的偏好取向（研究領域與研究方法等）。</message>
+
+
+
+	<!-- Search 搜尋 -->
+	<message key="search.browseAuthorIndex">瀏覽作者索引</message>
+	<message key="search.searchFor">搜尋文章for</message>
+	<message key="search.allFields">全部</message>
+	<message key="search.author">作者</message>
+	<message key="search.title">標題</message>
+	<message key="search.abstract">摘要</message>
+	<message key="search.fullText">全文</message>
+	<message key="search.indexTerms">索引項目</message>
+	<message key="search.withinJournal">含有</message>
+	<message key="search.allJournals">所有期刊</message>
+	<message key="search.searchAllCategories">搜尋所有類別 for</message>
+	<message key="search.searchCategories">搜尋類別</message>
+	<message key="search.date">日期</message>
+	<message key="search.dateFrom">從</message>
+	<message key="search.dateTo">到</message>
+	<message key="search.discipline">學門領域</message>
+	<message key="search.subject">關鍵字</message>
+	<message key="search.typeMethodApproach">類型 (方法＼取向)</message>
+	<message key="search.coverage">涵蓋範圍</message>
+	<message key="search.matchAll">符合所有類別</message>
+	<message key="search.authorIndex">瀏覽作者索引</message>
+	<message key="search.titleIndex">瀏覽標題索引</message>
+	<message key="search.authorDetails">作者履歷</message>
+	<message key="search.searchResults">搜尋結果</message>
+	<message key="search.reviseSearch">校正搜尋</message>
+	<message key="search.noResults">沒有任何搜尋結果</message>
+	<message key="search.noKeywordError">您必須輸入至少一個關鍵字</message>
+	<message key="search.syntaxInstructions"><![CDATA[搜尋技巧： <ul>
+<li>搜尋的語詞不要有大小寫之別</li>
+<li>常用的語詞會被略過</li>
+<li>預設只會傳回包含有<i>全部</i>搜尋詞彙的文章 (也就是說，預設以<i>AND</i>連接各項目)。</li>
+<li>使用<i>OR</i>連結各個搜尋詞彙已找到含有任一個詞彙的文章；例如，<i>教育 OR 調查</i>。</li>
+<li>使用括號"()"建立更複雜的查詢；例如：<i>archive ((journal OR conference) NOT theses)。</i></li>
+<li>用引號""來搜尋整句片語；例如：<i>"開放閱讀出版品"</i></li>
+<li>在一個語詞前面加上<b>-</b> 或者 <i>NOT</i>以排除搜尋它；如：<i>online -politics</i> 或者 <i>online NOT politics</i></li>
+<li>在一個詞彙中使用<b>*</b>當作萬用字元，以搜尋符合任何字串的結果。例如：<i>soci* morality</i> 會找到包含 "sociological" 或者"societal"的文章。</li>
+</ul>]]></message>
+	<message key="search.operator.not">not</message>
+	<message key="search.operator.and">and</message>
+	<message key="search.operator.or">or</message>
+
+	<!-- Interstitial page for PDFs 插入PDF頁面 -->
+	<message key="article.pdf.title">可攜式文件格式(Portable Document Format; PDF)</message>
+	<message key="article.pdf.note"><![CDATA[您選擇的PDF檔案應該會載入至此，如果您的網頁瀏覽器安裝有PDF閱讀器的外掛程式（比方說，最新版本的<a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a>）。否則，這份PDF檔案會被下載到您的電腦上，同樣可以用一個PDF閱讀器來開啟。如果您要知道更多有關怎麼樣進行列印、存黨和編輯PDF的資訊，Highwire Press網站提供了一個有用的<a href="http://highwire.stanford.edu/help/pdf-faq.dtl">PDF常見問題</a>說明。<br /><br />如果這份檔案沒有自動下載到您的電腦上，請<a href="{$url}">點擊這裡</a>。]]></message>
+	
+	<!-- Interstitial page for non-PDF non-HTML galleys 非PDF、非HTML排版樣式的插入頁面-->
+	<message key="article.nonpdf.title">文章下載</message>
+	<message key="article.nonpdf.note"><![CDATA[您選擇的檔案應該會被自動下載到您的電腦上。如果沒有的話，請點擊下面的連結。請注意，這個檔案可能會需要一個特定的閱讀器或者外掛程式才能被檢視。<a href="{$url}">點擊這裡</a>.]]></message>
+	
+	<!-- Site index 網站索引 -->
+	<message key="site.journalsHosted">這個網站上的各種期刊</message>
+	<message key="site.journalView">瀏覽期刊</message>
+	<message key="site.journalRegister">註冊</message>
+	<message key="site.journalCurrent">當期期刊</message>
+	
+
+	<!-- Current index 當期索引 -->
+	<message key="current.current">當期</message>
+	<message key="current.noCurrentIssue">沒有當期期刊</message>
+	<message key="current.noCurrentIssueDesc">這份期刊並未出版任何一期。</message>
+
+	<!-- Archive index  過期索引 -->
+	<message key="archive.archives">過期期刊</message>
+	<message key="archive.browse">瀏覽之前的期刊</message>
+	<message key="archive.issueUnavailable">期刊無法閱讀</message>
+	
+	<!-- About The Journal -->
+	<message key="about.aboutSite">關於本站</message>
+	<message key="about.contact">聯絡資訊</message>
+	<message key="about.contact.principalContact">固定聯絡人</message>
+	<message key="about.contact.supportContact">技術支援聯絡人</message>
+	<message key="about.contact.phone">電話</message>
+	<message key="about.contact.fax">傳真</message>
+	<message key="about.contact.email">Email</message>
+	<message key="about.statistics">統計</message>
+	<message key="about.journalContact">期刊聯絡人</message>
+	<message key="about.aboutTheJournal">期刊介紹</message>
+	<message key="about.editorialTeam">編輯團隊</message>
+	<message key="about.editorialTeam.biography">履歷</message>
+	<message key="about.editorialPolicies">編輯方針</message>
+	<message key="about.focusAndScope">收稿範圍</message>
+	<message key="about.sectionPolicies">文稿類型</message>
+	<message key="about.submissions">投稿</message>
+	<message key="about.sponsors">贊助單位</message>
+	<message key="about.contributors">贊助來源</message>
+	<message key="about.onlineSubmissions">線上投稿</message>
+	<message key="about.onlineSubmissions.haveAccount">您已經在{$journalTitle}中有了一份使用者名稱＼密碼了嗎？</message>
+	<message key="about.onlineSubmissions.login">請登入本期刊</message>
+	<message key="about.onlineSubmissions.needAccount">您需要一份使用者名稱＼密碼嗎？</message>
+	<message key="about.onlineSubmissions.registration">請進行註冊</message>
+	<message key="about.onlineSubmissions.registrationRequired">線上投稿以及查詢稿件當前處理狀態，需要您事先進行註冊和登入的動作。</message>
+	<message key="about.authorGuidelines">投稿須知暨撰稿凡例</message>
+	<message key="about.submissionPreparationChecklist">投稿檢查表</message>
+	<message key="about.submissionPreparationChecklist.description">投稿程序的一部份包括，作者需要檢查其稿件是否遵循下面的項目，而沒有完成這些項目的稿件會被退回給作者。</message>
+	<message key="about.copyrightNotice">版權注意事項</message>
+	<message key="about.privacyStatement">隱私權聲明</message>
+	<message key="about.peerReviewProcess">審查流程</message>
+	<message key="about.publicationFrequency">出刊頻率</message>
+	<message key="about.openAccessPolicy">閱讀本刊注意事項</message>
+	<message key="about.delayedOpenAccess">稍後開放閱讀</message>
+	<message key="about.delayedOpenAccessDescription1">這個期刊的各項內容可以用開放閱讀的格式進行閱讀</message>
+	<message key="about.delayedOpenAccessDescription2">（出版）個月之後的期刊</message>
+	<message key="about.authorSelfArchive">作者自行典藏</message>
+	<message key="about.archiving">典藏</message>
+	<message key="about.subscriptions">投稿</message>
+	<message key="about.subscriptionsContact">期刊訂閱聯絡人</message>
+	<message key="about.availableSubscriptionTypes">訂閱方案</message>
+	<message key="about.journalSponsorship">期刊贊助單位</message>
+	<message key="about.siteMap">網站地圖</message>
+	<message key="about.aboutThisPublishingSystem">關於這個出版系統</message>
+	<message key="about.people">組織人員</message>
+	<message key="about.policies">方針</message>
+	<message key="about.other">其他</message>
+	<message key="about.aboutOJSJournal"><![CDATA[這份期刊使用「開放期刊系統」(Open Journal Systems {$ojsVersion})，此系統是一個開源碼的期刊管理與出版軟體，由<a href="http://pkp.sfu.ca/">公共知識計畫(PKP; Public Knowledge Project)</a>研發與支持，並且以通用公共許可證(GNU; General Public License)自由流通。]]></message>
+	<message key="about.aboutOJSSite"><![CDATA[這個網站使用「開放期刊系統」(Open Journal Systems {$ojsVersion})，此系統是一個開源碼的期刊管理與出版軟體，由<a href="http://pkp.sfu.ca/">公共知識計畫(PKP; Public Knowledge Project)</a>研發與支持，並且以通用公共許可證(GNU; General Public License)自由流通。]]></message>
+	
+	<!-- Announcement 公告 -->
+	<message key="announcement.announcements">公告</message>
+	<message key="announcement.announcementsHome">公告</message>
+	<message key="announcement.moreAnnouncements">更多公告消息...</message>
+	<message key="announcement.view">檢視公告消息</message>
+	<message key="announcement.viewLink">更多訊息...</message>
+	<message key="announcement.noneExist">沒有公布任何公告</message>
+
+	<!-- Help 協助資訊 -->
+	<message key="help.help">協助資訊</message>
+	<message key="help.ojsHelp">開放期刊系統協助資訊</message>
+	<message key="help.ojsHelpAbbrev">OJS協助資訊</message>	
+	<message key="help.toc">目錄</message>	
+	<message key="help.searchResults">搜尋結果</message>
+	<message key="help.matchesFound">找到{$matches}筆符合的項目</message>
+	<message key="help.noMatchingTopics">沒有找到任何相符的協助資訊主題</message>
+	<message key="help.helpIndex">協助資訊索引</message>
+	<message key="help.contents">內容</message>
+	<message key="help.upALevel">上一層</message>	
+	<message key="help.relatedTopics">相關主題</message>
+	<message key="help.search">搜尋協助資訊</message>
+	<message key="help.searchFor">搜尋協助主題 for</message>
+	<message key="help.searchResultsFor">搜尋結果 for</message>
+	
+	<!-- Installer 安裝 -->
+	<message key="installer.ojsInstallation">OJS安裝程式</message>
+	<message key="installer.ojsUpgrade">OJS升級程式</message>
+	<message key="installer.installationInstructions"><![CDATA[<h4>OJS版本{$version}</h4>
+
+<p>謝謝您下載公共知識計畫(Public Knowledge Project)的 <strong>開放期刊系統(Open Journal Systems)</strong>。在進行下一步之前，請先閱讀這份軟體中的<a href="{$baseUrl}/docs/README">README</a>檔案。想瞭解更多關於公共知識計畫以及其軟體計畫，請見：<a href="http://pkp.sfu.ca/" target="_blank">PKP網站</a>。如果您要回報關於開放期刊系統的錯誤資訊或者有相關的技術支援問題，請見：<a href="http://pkp.sfu.ca/support/forum">支援討論區</a>，或者請見PKP的線上<a href="http://pkp.sfu.ca/bugzilla/" target="_blank">錯誤回報系統</a>。雖然我們比較希望以討論區做為聯絡的管道，不過您也可以寄信給技術團隊：<a href="mailto:pkp-support@sfu.ca">pkp-support@sfu.ca</a>。</p>
+
+<h4>升級</h4>
+
+<p>如果您要升級到OJS 2.x的版本，請<a href="{$upgradeUrl}">點擊這裡</a> 以進行升級。</p>
+
+<h4>建議的系統需求</h4>
+
+<ul>
+	<li><a href="http://www.php.net/" target="_blank">PHP</a> >= 4.2.x (包括 PHP 5.x)</li>
+	<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 3.23.23 (包括 MySQL 4.x) or <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 7.1 (包括 PostgreSQL 8.x)</li>
+	<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x or >= 2.0.4x 或 Microsoft IIS 6</li>
+	<li>作業系統：任何支援上述軟體的作業系統，包括<a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.sun.com/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, <a href="http://www.microsoft.com/">Windows</a></li>
+</ul>
+
+<p>PKP沒有辦法測試所有可能的軟體版本和平台的組合，所以不保證運作正確或有效支援。</p>
+
+<p>安裝完成之後，可以編輯OJS檔案目錄中的<tt>或者使用網站管理的網頁介面，來改變這些設定。</p>
+
+<h4>支援的資料庫系統</h4>
+
+<p>OJS目前止在 MySQL與PostgreSQL上頭測試過，其他支持<a href="http://php.weblogs.com/adodb/" target="_blank">ADOdb</a>的資料庫管理系統也行得通（全部或部分）。可以寫信向OJS團隊回報相容性報告以及＼或者變更DBMSs的程式碼修訂。</p>
+
+<h4>安裝前的準備步驟</h4>
+
+<p>1. 下列的檔案和目錄（以及其內容）一定要是可寫入的：</p>
+<ul>
+	<li><tt>config.inc.php</tt> is writable (optional): {$writable_config}</li>
+	<li><tt>public/</tt> is writable: {$writable_public}</li>
+	<li><tt>cache/</tt> is writable: {$writable_cache}</li>
+	<li><tt>cache/t_cache/</tt> is writable: {$writable_templates_cache}</li>
+	<li><tt>cache/t_compile/</tt> is writable: {$writable_templates_compile}</li>
+	<li><tt>cache/_db</tt> is writable: {$writable_db_cache}</li>
+</ul>
+
+<p>2. 要建立一個可寫入的目錄以儲存上傳的檔案（見下面的「檔案設定」）。</p>
+
+<h4>手動安裝</h4>
+
+<p>選擇<strong>手動安裝</strong> 以顯示建立OJS資料庫結構和初始資料所必須的SQL指令，以手動執行安裝資料庫。在為安裝問題除錯時，可以選擇這個選項，特別是在沒有受到支援的平台上。注意，這個安裝方式並不嘗試去建立資料庫或任何資料表，雖然仍會將支持資料庫設定的內容寫入設定檔案中。</p>]]></message>
+	<message key="installer.upgradeInstructions"><![CDATA[<h4>OJS版本{$version}</h4>
+	
+<p>謝謝您下載公共知識計畫(Public Knowledge Project)的 <strong>開放期刊系統(Open Journal Systems)</strong>。在進行下一步之前，請先閱讀這份軟體中的<a href="{$baseUrl}/docs/README">README</a>檔案。想瞭解更多關於公共知識計畫以及其軟體計畫，請見：<a href="http://pkp.sfu.ca/" target="_blank">PKP網站</a>。如果您要回報關於開放期刊系統的錯誤資訊或者有相關的技術支援問題，請見：<a href="http://pkp.sfu.ca/support/forum">支援討論區</a>，或者請見PKP的線上<a href="http://pkp.sfu.ca/bugzilla/" target="_blank">錯誤回報系統</a>。雖然我們比較希望以討論區做為聯絡的管道，不過您也可以寄信給技術團隊：<a href="mailto:pkp-support@sfu.ca">pkp-support@sfu.ca</a>。</p>
+<p>我們<strong>強烈地建議您</strong>在繼續下一步之前，請備份您的資料庫、檔案目錄以及OJS的安裝目錄</p>
+<p>如果您正在執行<a href="http://www.php.net/features.safe-mode" target="_blank">PHP安全模式</a>， 請確保在您的 php.ini 設定檔中設定max_execution_time指令一個高額的上限。如果這個或者其他的時間上限（例如Apache的 "Timeout"指令）已到，而升級程序遭到中斷，您必須以手動的方式介入。</p>]]></message>
+	<message key="installer.localeSettings">語系設定</message>
+	<message key="installer.localeSettingsInstructions"><![CDATA[為了完整支援Unicode (UTF-8)編碼，請選擇以UTF-8作為編碼字元。注意，這項支援目前需要一個MySQL >= 4.1.1或者PostgreSQL >= 7.1 的資料庫伺服器。也請注意，完整的Unicode編碼需要PHP >= 4.3.0搭配支援<a href="http://www.php.net/mbstring" target="_blank">mbstring</a>庫 (最新版本的PHP安裝過程已經預設啟動)。如果您的伺服器沒有滿足這些條件的話，您可能在使用額外的字符集時會碰到問題<br /><br />
+您的伺服器目前對mbstring的支援性：<strong>{$supportsMBString}</strong>]]></message>
+	<message key="installer.localeInstructions">使用本系統的主要語言。如果您有意支援不列在這裡的語系，請參見OJS的說明文件。</message>
+	<message key="installer.additionalLocales">額外的語系</message>
+	<message key="installer.additionalLocalesInstructions">選擇額外的語系以支援本系統。這些語言可以被本站的期刊所使用。也可以在任何時間點透過網站管理介面來安裝額外的語系。</message>
+	<message key="installer.clientCharset">客戶端字符集</message>
+	<message key="installer.clientCharsetInstructions">資料送出給瀏覽器與收回的編碼方式</message>
+	<message key="installer.connectionCharset">連接字符集</message>
+	<message key="installer.connectionCharsetInstructions">資料送出給資料庫與收回的編碼方式。這應該和客戶端字符集相同。注意，這個功能只有MySQL >= 4.1.1或PostgreSQL >= 7.1支援。如果您的資料庫伺服器不符合這個條件的話，請選擇「不可用」。</message>
+	<message key="installer.databaseCharset">資料庫字符集</message>
+	<message key="installer.databaseCharsetInstructions">資料儲存在資料庫中的編碼方式。注意，這個功能只有MySQL >= 4.1.1或PostgreSQL >= 7.1支援。如果您的資料庫伺服器不符合這個條件的話，請選擇「不可用」。</message>
+	<message key="installer.locale">語系</message>
+	<message key="installer.fileSettings">檔案設定</message>
+	<message key="installer.filesDir">上傳目錄</message>
+	<message key="installer.filesDirInstructions"><![CDATA[輸入一個儲存上傳檔案的既存目錄的完整路徑名稱。這個目錄不應該直接透過網頁存取。<strong>請確定這個目錄存在而且可寫入</strong> Windows路徑名稱應該使用右斜線，例如："C:/myjournal/files".]]></message>
+	<message key="installer.securitySettings">安全性設定</message>
+	<message key="installer.encryption">密碼加密演算法</message>
+	<message key="installer.encryptionInstructions">如果您的系統支援的話，我們建議使用SHA1(需要 PHP >= 4.3.0).</message>
+	<message key="installer.administratorAccount">管理員帳號</message>
+	<message key="installer.administratorAccountInstructions">這個使用者帳號會變成網站管理員而且擁有系統的完整權限。安裝完畢之後可以建立其他的帳號。</message>
+	<message key="installer.databaseSettings">資料庫設定</message>
+	<message key="installer.databaseDriver">資料庫驅動程式</message>
+	<message key="installer.databaseHost">主機</message>
+	<message key="installer.databaseUsername">使用者名稱</message>
+	<message key="installer.databasePassword">密碼</message>
+	<message key="installer.databaseName">資料庫名稱</message>
+	<message key="installer.databaseDriverInstructions"><![CDATA[<strong>如果選擇括弧中所列的資料庫驅動程式，但沒有安裝與啟用所需的PHP函數的話，可能無法執行。</strong><br />上面個別列出由於學術目的而不支援的資料庫驅動程式，而且不太可能運作。]]></message>
+	<message key="installer.databaseHostInstructions">不填入主機名稱會使用網域接口代替TCP/IP連結。這對MySQL來說並不必要，如果輸入"localhost"它會自動使用接口，不過對某些其他的資料庫伺服器，好比PostgreSQL來說就是必要的。</message>
+	<message key="installer.createDatabase">建立新的資料庫</message>
+	<message key="installer.createDatabaseInstructions">要使用這個選項，您的資料庫系統必須支援遠單資料庫建置，而您的使用者帳號一定要有恰當的權限才能建立新的資料庫。如果選了這個選項而且安裝失敗，請在您的伺服器上面手動建立資料庫，並且停用此選項後再此安裝系統。</message>
+	<message key="installer.miscSettings">其他設定</message>
+	<message key="installer.oaiRepositoryId">OAI儲存器識別碼</message>
+	<message key="installer.oaiRepositoryIdInstructions"><![CDATA[一個獨一無二的識別碼，用來識別本站使用<a href="http://www.openarchives.org/" target="_blank">開放典藏計畫(Open Archives Initiative)</a>後設資料蒐集協定所索引的後設資料記錄 ]]></message>
+	<message key="installer.installOJS">安裝開放期刊系統</message>
+	<message key="installer.upgradeOJS">升級開放期刊系統</message>
+	<message key="installer.manualInstall">手動安裝</message>
+	<message key="installer.manualUpgrade">手動升級</message>
+	<message key="installer.form.localeRequired">必須選擇一個語系</message>
+	<message key="installer.form.clientCharsetRequired">必須選擇一個客戶端字符集</message>
+	<message key="installer.form.filesDirRequired">需要一個用來儲存上傳檔案的資料夾</message>
+	<message key="installer.form.encryptionRequired">.一定要選擇用來加密使用者密碼的演算法。</message>
+	<message key="installer.form.databaseDriverRequired">一定要選擇資料庫驅動程式</message>
+	<message key="installer.form.databaseNameRequired">必須輸入資料庫名稱</message>
+	<message key="installer.form.usernameRequired">必須輸入一個使用者名稱已建立管理員帳號。</message>
+	<message key="installer.form.passwordRequired">需要輸入一個管理員帳號的密碼。</message>
+	<message key="installer.form.usernameAlphaNumeric">管理員帳號只能含有英文和數字字元、底線(_)和連字號(-)，而且一定要以一個英文或數字作為開頭和結尾。</message>
+	<message key="installer.form.passwordsDoNotMatch">管理員密碼不符</message>
+	<message key="installer.form.emailRequired">需要一個管理員帳號的有效電子郵件地址。</message>
+	<message key="installer.form.separateMultiple">以逗號(,)分開多個項目</message>
+	<message key="installer.installErrorsOccurred">安裝時發生錯誤</message>
+	<message key="installer.installFilesDirError">用以上傳檔案的資料夾不存在或者不可寫入。</message>
+	<message key="installer.publicFilesDirError">公用的檔案資料夾並不存在或者不可寫入。</message>
+	<message key="installer.installFileError"><![CDATA[安裝檔<tt>dbscripts/xml/install.xml</tt> 並不存在或無法寫入。]]></message>
+	<message key="installer.installParseDBFileError"><![CDATA[錯誤剖析資料庫安裝檔案<tt>{$file}</tt>.]]></message>
+	<message key="installer.configFileError"><![CDATA[設定檔案<tt>config.inc.php</tt>並不存在或無法寫入。]]></message>
+	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<b>警告：</b>如果安裝失敗部分是因為安裝資料庫的關係，在嘗試重新安裝資料庫之前，您可能需要刪除您的OJS資料庫或者資料表。]]></message>
+	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>重要！</h4>
+<p>安裝檔無法自動覆寫設定檔。在嘗試使用本系統之前，請以合適的編輯器開啟<tt>config.inc.php</tt>並且變更其內容為下列文字欄位中的內容。</p>]]></message>
+	<message key="installer.contentsOfConfigFile">設定檔的內容</message>
+	<message key="installer.manualSQLInstructions"><![CDATA[<h4>手動安裝</h4>
+<p>建立OJS資料庫架構和初始資料的SQL指令已經顯示如上。注意，除非這些指令已經手動執行過了，否則系統將無法使用。您也將必須手動地設定<tt>config.inc.php</tt>設定檔。</p>]]></message>
+	<message key="installer.installerSQLStatements">安裝用SQL指令</message>
+	<message key="installer.installationComplete"><![CDATA[<p>OJS已經成功安裝！</p>
+<p>要開始使用本系統，請以您在上一個網頁中輸入的使用者名稱和密碼進行<a href="{$loginUrl}">登入</a></p>
+<p>如果您希望收到新聞和更新訊息，請<strong>在<a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>註冊。</strong> 如果您有問題或建議，請訪問<a href="http://pkp.sfu.ca/support/forum" target="_new">支援討論區</a>.</p>]]></message>
+	<message key="installer.upgradeComplete"><![CDATA[<p>以成功升級OJS到 {$version}版本。</p>
+<p>別忘了在您的config.inc.php設定檔中將"installed"設定改成<i>On</i>。</p>
+<p>If you haven't already registered and wish to receive news and updates, 如果您尚未註冊但希望收到新聞和更新訊息，<strong>請在<a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>註冊。</strong> 如果您有問題或建議，請訪問<a href="http://pkp.sfu.ca/support/forum" target="_new">支援討論區</a>.</p>]]></message>
+	<message key="installer.skipFilesDir">未建立必要的子資料夾（只對手動安裝過程有用）。</message>
+	<message key="installer.releaseNotes">釋出版本備註</message>
+	<message key="installer.checkYes">是</message>
+	<message key="installer.checkNo"><![CDATA[<span class="formError">否</span>]]></message>
+
+
+	<!-- Article Logs 文章記錄 -->
+	<message key="log.author.submitted">{$authorName}已經輸入一份新的投稿稿件， ID {$submissionId}.</message>
+	<message key="log.author.documentRevised">{$authorName}已經修改過文章{$articleId}。新檔案的 ID為{$fileId}.</message>
+	<message key="log.review.reviewerAssigned">{$reviewerName}已經被指派審查稿件{$articleId} ，進行{$round}審。</message>
+	<message key="log.review.reviewerUnassigned">{$reviewerName}已經被取消指派對稿件{$articleId}進行{$round}審。</message>
+	<message key="log.review.reviewInitiated">{$reviewerName}對稿件{$articleId}進行{$round}審的工作已經開始進行。</message>
+	<message key="log.review.reviewReinitiated">{$reviewerName}對稿件{$articleId}進行{$round}審的工作已經重新開始進行。</message>
+	<message key="log.review.reviewCancelled">{$reviewerName}對稿件{$articleId}進行{$round}審的工作已經被取消。</message>
+	<message key="log.review.reviewCleared">{$reviewerName}對稿件{$articleId}進行{$round}審的工作已經被清除。</message>
+	<message key="log.review.reviewerRated">{$reviewerName}對稿件{$articleId}進行{$round}審的工作已經受到評分。</message>
+	<message key="log.review.reviewDueDateSet">{$reviewerName}對稿件{$articleId}進行{$round}審工作的截止期限日期已經被設定為{$dueDate}。</message>
+	<message key="log.review.reviewRecommendationSet">{$reviewerName}已經對稿件{$articleId}的{$round}審工作做出建議 。</message>
+	<message key="log.review.reviewRecommendationSetByProxy">編輯{$editorName}已對審查人{$reviewerName}對稿件{$articleId}進行{$round}審的審查意見做出建議。</message>
+	<message key="log.review.resubmit">稿件{$articleId}已經被重新投稿以進行審查。</message>
+	<message key="log.review.reviewDeclined">{$reviewerName}已經婉謝對稿件{$articleId}進行{$round}審。</message>
+	<message key="log.review.reviewAccepted">{$reviewerName}已經接受對稿件{$articleId}進行{$round}審。</message>
+	<message key="log.review.reviewAcceptedByProxy">{$userName}已經代表{$reviewerName}接受對稿件{$articleId}進行{$round}審。</message>
+	<message key="log.review.reviewFileByProxy">編輯{$userName}已經代表審查人{$reviewerName}上傳了稿件{$articleId}在{$round}審時的審查意見書檔案。</message>
+	<message key="log.review.reviewerFile">已上傳一份審查意見書</message>
+
+
+	<message key="log.copyedit.initiate">校樣編輯{$copyeditorName}已對稿件{$articleId}提出校樣意見。</message>
+	<message key="log.copyedit.copyeditFileSet">已經選擇預設的校樣編輯檔案。</message>
+	<message key="log.copyedit.initialEditComplete">{$copyeditorName} 已經完成稿件{$articleId}的初始校樣編輯。</message>
+	<message key="log.copyedit.finalEditComplete">{$copyeditorName}已經完成稿件{$articleId}的最終校樣編輯。</message>
+	<message key="log.copyedit.copyeditorAssigned">稿件{$articleId}的校樣工作已經被指派給{$copyeditorName}。</message>
+	<message key="log.copyedit.copyeditorFile">已經上傳一份此稿件檔案的校樣編輯版本。</message>
+	<message key="log.copyedit.authorFile">已經上傳一份此稿件檔案的作者校樣版本。</message>
+
+	<message key="log.layout.layoutEditorAssigned">稿件{$articleId}的版面編輯工作已經被指派給版面編輯{$editorName}。</message>
+	<message key="log.layout.layoutEditorUnassigned">稿件{$articleId}的版面編輯工作已經取消指派給版面編輯{$editorName}。.</message>
+	<message key="log.layout.layoutEditComplete">{$editorName}已經完成稿件{$articleId}的版面編輯工作。</message>
+
+	<message key="log.editor.metadataModified">此文章的後設資料已經被{$editorName}加以修改。</message>
+	<message key="log.editor.editorFile">已經上傳了一份此稿件的編輯版本。</message>
+	<message key="log.editor.archived">稿件{$articleId}已經被典藏。</message>
+	<message key="log.editor.restored">稿件{$articleId}已經被復原至列表中。</message>
+	<message key="log.editor.editorAssigned">{$editorName}被指派為稿件{$articleId}的編輯。</message>
+	<message key="log.editor.submissionExpedited">{$editorName}已經在進行稿件{$articleId}的編輯流程。</message>
+
+	<message key="log.proofread.assign">{$assignerName} 已經被指派為{$proofreaderName}進行對稿件{$articleId}的校對。</message>
+	<message key="log.proofread.complete">{$proofreaderName}已經提交稿件 {$articleId}進行排程出版。.</message>
+
+	<message key="log.imported">{$userName}已經匯入文章{$articleId}。</message>
+
+	<!-- Reading Tools entries 閱讀工具項目 -->
+	<message key="rt.readingTools">閱讀工具</message>
+
+	<message key="rt.admin.status">狀態</message>
+	<message key="rt.admin.configuration">設定</message>
+	<message key="rt.admin.management">處理</message>
+
+	<!-- RT Settings 閱讀工具選項-->
+	<message key="rt.admin.settings">閱讀工具選項</message>
+
+	<message key="rt.admin.readingToolsEnabled">閱讀工具</message>
+	<message key="rt.admin.selectedVersion">相關項目</message>
+	<message key="rt.admin.rtEnable">要啟用本期刊的閱讀工具，請至閱讀工具選項。</message>
+	<message key="rt.admin.settings.description">閱讀工具以頁框的方式出現在本期刊文稿類型中已經指派索引項的出版項目的側邊。閱讀工具由一組與出版項目相關的選擇性工具（詳列在下），以及一組能夠存取相關項目、由欄位和學門所組成的工具所組成。</message>
+	<message key="rt.admin.settings.enableReadingTools">為指定的期刊文稿類型啟用閱讀工具。</message>
+	<message key="rt.admin.settings.abstract">摘要（呈現項目的摘要）。</message>
+	<message key="rt.admin.settings.relatedItems">領域</message>
+	<message key="rt.admin.settings.relatedItemsLink"><![CDATA[見<a href="{$relatedItemsLink}" class="action">相關項目集</a> 以檢視、新增、修正或刪除每個欄位相關的項目]]></message>
+
+	<message key="rt.admin.options">期刊項目工具</message>
+	<message key="rt.admin.relatedItems">相關項目工具</message>
+
+	<message key="rt.admin.settings.disableRelatedItems">停用相關項目</message>
+	<message key="rt.admin.settings.bibFormat">書目格式</message>
+	<message key="rt.admin.settings.captureCite">如何引用文章項目（為文章提供圖書細目）</message>
+	<message key="rt.admin.settings.viewMetadata">索引後設資料（顯示由作者和系統所提供的文章索引後設資料）</message>
+	<message key="rt.admin.settings.supplementaryFiles">補充檔案(顯示作者包括在稿件中檔案清單)。</message>
+	<message key="rt.admin.settings.printerFriendly">列印版本(導引至一個項目較適合列印的版本))。</message>
+	<message key="rt.admin.settings.authorBio">關於作者 （顯示作者所輸入的履歷內容）。</message>
+	<message key="rt.admin.settings.defineTerms">查詢詞彙（讓讀者雙擊一篇文章中任何字詞即可在字典中查閱該字）。</message>
+	<message key="rt.admin.settings.addComment">增加評論（讓讀者發佈評論意見，而期刊管理員可以刪除。必須要啟用「設定」步驟2的「讀者評論」。）</message>
+	<message key="rt.admin.settings.emailAuthor">電郵作者（導引到一個含有作者電子郵件地址的電郵樣版中）。</message>
+	<message key="rt.admin.settings.emailOthers">通知好友（導引到一個含有此文章項目連結的電郵樣版中）。</message>
+
+	<!-- RT Versions 閱讀工具版本 -->
+	<message key="rt.admin.versions.restoreVersions">復原至預設版本	</message>
+	<message key="rt.admin.versions.createVersion">建立版本</message>
+	<message key="rt.admin.versions.confirmRestore">您確定您希望進行不可逆的復原動作，回復所有版本到預設值？一旦如此，您將會需要在設定頁面選擇一個現有的版本。</message>
+	<message key="rt.admin.versions.confirmDelete">您確定您希望刪除這個版本以及所有相關的文章脈絡和搜尋結果？</message>
+	<message key="rt.admin.versions.edit.editVersion">編輯版本</message>
+	<message key="rt.admin.versions.metadata">後設資料</message>
+	<message key="rt.admin.versions.export">匯出</message>
+	<message key="rt.admin.versions.importVersion">匯入版本</message>
+
+	<!-- RT Contexts 閱讀工具文章脈絡 -->
+	<message key="rt.admin.contexts.edit.editContext">編輯文章脈絡</message>
+	<message key="rt.admin.contexts.createContext">建立文章脈絡</message>
+	<message key="rt.admin.contexts.confirmDelete">您確定您要刪除這個文章脈絡以及所有相關的搜尋結果？</message>
+	<message key="rt.admin.contexts.metadata">後設資料</message>
+	<message key="rt.admin.contexts.options">選項</message>
+	<message key="rt.admin.contexts.options.citedBy">使用作者名稱作為預設的搜尋項目，並將文章脈絡顯示成一個搜尋項目以引用本文。</message>
+	<message key="rt.admin.contexts.options.authorTerms">使用作者名稱當作預設的搜尋項目，讓使用者能找到本文作者的其他作品。（例如，針對一個「其他作品」的脈絡）</message>
+	<message key="rt.admin.contexts.options.geoTerms">以地理索引資料當作預設的搜尋項目。</message>
+	<message key="rt.admin.contexts.options.defineTerms"><![CDATA[使用讀者所反白的字詞作為預設的搜尋項目，或者如果沒有選擇本文任何項目的話，以留白的區域當作搜尋項目。（例如，在「詞彙定義」的情況下）。「詞彙定義」選項一定要在<a href="{$settingsUrl}">RST Settings</a>啟用才能允許雙擊文字來開啟這個文章脈絡。]]></message>
+
+	<!-- RT Searches 閱讀工具搜尋 -->
+	<message key="rt.admin.searches.edit.editSearch">編輯搜尋</message>
+	<message key="rt.admin.searches.confirmDelete">您確定您要刪除這個搜尋？</message>
+	<message key="rt.admin.searches.createSearch">建立搜尋</message>
+
+	<message key="rt.admin.validateUrls">驗證閱讀工具的網址</message>
+	<message key="rt.admin.validateUrls.description"><![CDATA[下面列出可能是無效的搜尋網站網址。<br/>
+您應該手動查證被標記成無效的任何網址，因為這個測試並非完全準確。<br/>
+驗證需要遞交表單資料的搜尋網址可能會失敗。]]></message>
+	<message key="rt.admin.validateUrls.validate">驗證</message>
+	<message key="rt.admin.validateUrls.urlIsInvalid">{$url}是無效網址。</message>
+	<message key="rt.admin.validateUrls.ok">OK</message>
+	<message key="rt.admin.validateUrls.complete">完成驗證</message>
+	
+	<!-- RT Entities 閱讀工具項目 -->
+	<message key="rt.version">版本</message>
+	<message key="rt.versions">相關項目集合</message>
+	<message key="rt.version.title">標題</message>
+	<message key="rt.version.locale">語系</message>
+	<message key="rt.version.key">關鍵字</message>
+	<message key="rt.version.description">說明</message>
+
+	<message key="rt.context">文章脈絡</message>
+	<message key="rt.contexts">文章脈絡</message>
+	<message key="rt.context.title">標題</message>
+	<message key="rt.context.abbrev">縮寫</message>
+	<message key="rt.context.description">說明</message>
+	<message key="rt.context.order">順序</message>
+
+	<message key="rt.search">搜尋</message>
+	<message key="rt.searches">搜尋</message>
+	<message key="rt.search.title">標題</message>
+	<message key="rt.search.url">URL</message>
+	<message key="rt.search.order">順序</message>
+	<message key="rt.search.description">說明</message>
+	<message key="rt.search.searchUrl">搜尋網址</message>
+	<message key="rt.search.searchPost">發佈資料</message>
+	<message key="rt.search.suggest">建議一個來源</message>
+
+	<message key="rt.authorBio">關於作者</message>
+
+	<message key="rt.viewMetadata">索引後設資料</message>
+	<message key="rt.metadata.dublinCore">都柏林核心元數據(Dublin Core)</message>
+	<message key="rt.metadata.pkpItem">PKP後設資料項目</message>
+	<message key="rt.metadata.forThisDocument">此文件的後設資料</message>
+	<message key="rt.metadata.dublinCore.title">標題</message>
+	<message key="rt.metadata.dublinCore.primaryAuthor">建立者</message>
+	<message key="rt.metadata.dublinCore.subject">主旨</message>
+	<message key="rt.metadata.dublinCore.description">說明</message>
+	<message key="rt.metadata.dublinCore.publisher">出版人</message>
+	<message key="rt.metadata.dublinCore.contributor">贊助人</message>
+	<message key="rt.metadata.dublinCore.date">日期</message>
+	<message key="rt.metadata.dublinCore.type">類型</message>
+	<message key="rt.metadata.dublinCore.format">格式</message>
+	<message key="rt.metadata.dublinCore.identifier">識別碼</message>
+	<message key="rt.metadata.dublinCore.source">來源</message>
+	<message key="rt.metadata.dublinCore.language">語言</message>
+	<message key="rt.metadata.dublinCore.relation">關係</message>
+	<message key="rt.metadata.dublinCore.coverage">涵蓋範圍</message>
+	<message key="rt.metadata.dublinCore.rights">權利</message>
+
+	<message key="rt.metadata.pkp.title">文件標題</message>
+	<message key="rt.metadata.pkp.primaryAuthor">作者姓名、所屬單位、國家</message>
+	<message key="rt.metadata.pkp.discipline">學門領域</message>
+	<message key="rt.metadata.pkp.subject">關鍵字</message>
+	<message key="rt.metadata.pkp.subjectClass">主題類別</message>
+	<message key="rt.metadata.pkp.abstract">摘要</message>
+	<message key="rt.metadata.pkp.publisher">組織機構、地區</message>
+	<message key="rt.metadata.pkp.sponsors">贊助單位</message>
+	<message key="rt.metadata.pkp.date">(YYYY-MM-DD)</message>
+	<message key="rt.metadata.pkp.type">類型</message>
+	<message key="rt.metadata.pkp.genre">狀態&amp; 類型</message>
+	<message key="rt.metadata.pkp.peerReviewed">經審查之文章</message>
+	<message key="rt.metadata.pkp.format">檔案格式</message>
+	<message key="rt.metadata.pkp.uri">統一資源指示器(Universal Resource Indicator)</message>
+	<message key="rt.metadata.pkp.source">期刊＼會議標題；冊數，期數，（年份）</message>
+	<message key="rt.metadata.pkp.language">English=en; 繁體中文=zh</message>
+	<message key="rt.metadata.pkp.suppFiles">補充檔案</message>
+	<message key="rt.metadata.pkp.coverage">地理位置、年代時期、調查樣本（性別、年紀等等）</message>
+	<message key="rt.metadata.pkp.copyright">版權與許可</message>
+
+	<message key="rt.suppFiles">補充檔案</message>
+	<message key="rt.suppFiles.viewMetadata">索引後設資料</message>
+	<message key="rt.suppFiles.download">下載</message>
+
+	<message key="rt.captureCite">如何引用文章項目</message>
+	<message key="rt.captureCite.online">線上</message>
+	<message key="rt.captureCite.available">可用</message>
+	<message key="rt.captureCite.capture">下載引文格式</message>
+	<message key="rt.captureCite.acaoLocation">北美</message>
+	<message key="rt.captureCite.capture.endNote"><![CDATA[<a href="]]>{$url}<![CDATA[">EndNote</a> - EndNote格式 (Macintosh &amp; Windows)]]></message>
+	<message key="rt.captureCite.capture.referenceManager"><![CDATA[<a href="]]>{$url}<![CDATA[">文獻管理員</a> - RIS格式 (Windows only)]]></message>
+	<message key="rt.captureCite.capture.proCite"><![CDATA[<a href="]]>{$url}<![CDATA[">專業引用</a> - RIS格式 (Macintosh &amp; Windows)]]></message>
+
+	<message key="rt.reviewPolicy">審查方針</message>
+	<message key="rt.printVersion">列印版本</message>
+	<message key="rt.lookUp">搜尋字彙</message>
+	<message key="rt.colleague">通知好友</message>
+	<message key="rt.addComment">新增評論</message>
+	<message key="rt.emailAuthor">電郵作者</message>
+	<message key="rt.beNotifiedWhen">通知我，當....</message>
+
+	<message key="rt.relatedItems">相關文章項目</message>
+	<message key="rt.thisJournal">搜尋期刊</message>
+	
+	<message key="rt.email.sent">您的訊息已經被送出。</message>
+	<message key="rt.email.needLogin"><![CDATA[* Requires <a target="_parent" href="{$loginUrl}">註冊</a>]]></message>
+
+	<message key="rt.context.searchTerms">搜尋詞彙</message>
+	<message key="rt.context.termToDefine">字詞定義</message>
+	<message key="rt.context.searchDescription">作者已經選擇了搜尋詞彙。讀者可以變更或者刪除它們，同時以兩到三個準確的詞彙或片語進行最佳的布爾邏輯(AND)搜尋。要學習更多關於搜尋資源的資訊，請點擊「介紹」。這些資源是基於其關連性與開放（自由）閱讀所有或部分內容而被選取的。</message>
+	<message key="rt.context.defineTermsDescription">如果這個項目是一個HTML檔案（而非PDF檔），請雙擊文章中的任一個字彙，使其顯示在「字詞定義」對話框中。除此之外，可以在此對話框中鍵入或者貼上字彙。要學習更多關於搜尋資源的資訊，請點擊「介紹」。這些資源是基於其關連性與開放（自由）閱讀所有或部分內容而被選取的。</message>
+	<message key="rt.context.authorTermsDescription">由於文章擁有一個以上的作者，請選取所有的姓名以搜尋類似的共同作者作品，或者選取單個姓名以一次搜尋一個人。要學習更多關於搜尋資源的資訊，請點擊「介紹」。這些資源是基於其關連性與開放（自由）閱讀所有或部分內容而被選取的。</message>
+	<message key="rt.context.citesContextDescription">如果這份文章被Google學術搜尋(Google Scholar)索引，它會隨附一個「由X引用」的連結，引導至一份引用本文的作品清單。同時Google學術搜尋會列出所有項目的引用標題與作者。要閱讀只能透過您的搜尋資料庫才能取得的線上資源，您或許可以到Google學術搜尋的「學術偏好設定」中，啟用啟用您服務單位的圖書館連結。</message>
+
+	<message key="rt.context.and">AND</message>
+
+	<!--
+	 *
+	 * MISC - Entries that do not belong in the other sections.
+	 *
+	-->
+	<!-- Icons: Default "alt" text 圖標：預設的"alt"文字-->
+	<message key="icon.view.alt">檢視</message>
+	<message key="icon.checked.alt">核取</message>
+	<message key="icon.unchecked.alt">未核取</message>
+	<message key="icon.comment.alt">評論</message>
+	<message key="icon.edit.alt">編輯</message>
+	<message key="icon.delete.alt">刪除</message>
+	<message key="icon.letter.alt">信件</message>
+	<message key="icon.mail.alt">郵件</message>
+	<message key="icon.info.alt">資訊</message>
+	<message key="icon.folder.alt">資料夾</message>
+	
+	<!-- Debug messages 除錯訊息-->
+	<message key="debug.executionTime">頁面產生於</message>
+	<message key="debug.databaseQueries">資料庫查詢數</message>
+	<message key="debug.notes">備註：</message>
+	<message key="debug.notes.localeLoad">從XML載入語系檔"{$localeFile}" </message>
+	<message key="debug.notes.localeListLoad">從XML載入語系清單"{$localeList}"</message>
+	<message key="debug.notes.missingLocaleKey">找不到語系關鍵字"{$key}".</message>
+
+	<!--
+	 *
+	 * DEFAULT - Default settings for setup items.
+	 *預設-設定項目的預設設定
+	-->
+	<message key="default.journalSettings.checklist.notPreviouslyPublished">這份稿件之前尚未出版，也未曾有其他期刊考慮出版（或者在「給編者的意見」中已經給了一個說明）。</message>
+	<message key="default.journalSettings.checklist.fileFormat">稿件檔案是Microsoft Word, RTF,或者WordPerfect的文件檔案格式</message>
+	<message key="default.journalSettings.checklist.addressesLinked"><![CDATA[如果可行的話，可提供線上閱讀參考文獻的網址，包括那些可開放閱讀版本的文獻。網址已經加上連結、可供點擊(例如，<a href="http://pkp.sfu.ca">http://pkp.sfu.ca</a>)。]]></message>
+	<message key="default.journalSettings.checklist.submissionAppearance">文字內容為單行行距；使用12pt字體大小；採用斜體而不用底線（除非是帶有網址）；而所有的圖解、圖示和表格都放在文中恰當位置，而非文末。</message>
+	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[本文依循「期刊介紹」中<a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">作者指引</a>所要求文體與書目格式。]]></message>
+	<message key="default.journalSettings.checklist.anonymous"><![CDATA[如果要投稿到需審查的期刊文稿類型，本文遵守<a href="javascript:openHelp('{$indexUrl}/{$journalPath}/help/view/editorial/topic/000044')">確保匿名審查</a>的說明指南。]]></message>
+	<message key="default.journalSettings.privacyStatement">在本期刊網站所輸入的姓名與電子郵件地址只會基於本期刊指定的目的加以使用，而不會用於其他目的或其他部分。</message>
+	<message key="default.journalSettings.openAccessPolicy">這份期刊基於讓研究成果自由授與公眾來支持更全面的知識交流的原則，而提供直接開放閱讀的內容。</message>
+	<message key="default.journalSettings.authorSelfArchivePolicy">在出版之前與之後，作者都被允許和鼓勵將投稿到本期刊的文章項目發佈到個人的或者所屬單位的網站上（同時提供該出版品的圖書細目）。</message>
+	<message key="default.journalSettings.copyeditInstructions"><![CDATA[校樣階段的目的在於改進文章的流暢度、清晰度、文法、用字和格式。作者在這個階段有最後的機會對文章內容去做出任何實質的修改，而下一階段則被限制在排印與格式化的校正。
+
+要校樣的檔案得是Word或者.rtf 的格式，因此是可以容易編輯的文字處理文件。這裡所顯示的一套指南，建立了兩個校樣的取向。一個取向是基於Microsoft Word的「追蹤修訂」功能，需要校樣編輯、編輯和作者都能使用這個程式。第二種系統，無關乎軟體，是經過許可、借用Harvard Educational Review。期刊編輯有權限可以修訂這些指南，所以可以提供建議，促進這份期刊的編輯流程。
+
+<h4>校樣系統</h4>
+
+<b>1. Microsoft Word的追蹤修訂</b>
+
+在選單工具列的「工具」中，「追蹤修訂」的功能讓校樣編輯可以插入（以有顏色的字型）和刪除文字（文字外觀以有色的刪除線標記）。校樣編輯可以在檢閱方框中插入問題，詢問作者（作者問題）和編者（編者問題）兩人。接著上傳校樣版本，並通知編輯。編輯接著審查文字內容，並通知作者。
+
+編輯和作者應該滿足這些變更處。如果需要進一步的修訂，編輯和作者可以接受初始的插入和刪除項目，同時在文章的其他地方進行插入和刪除的動作。作者和編輯應該以置放在檢閱方框中的內容回應每個對他們提出的問題。
+
+在文章內容經過編輯和作者的審查過後，校樣編輯會做出一個最終的版本，接受所有的內容修以轉被接受版面和排版樣式的階段。
+
+
+<b>2. Harvard Educational Review </b>
+
+<b>電子修訂本轉換打字稿指南</b>
+
+請依循下列的協定將電子修訂本轉換成您的打字稿。
+
+<b>回應建議的修訂</b>
+&nbsp; 針對每個您接受的修訂處，取消文字的粗體格式。
+&nbsp; 針對您不接受的每個修訂處，重新輸入原文並且<b>改成粗體字</b>。
+
+<b>增添與刪除內容</b>
+&nbsp; 以<b>粗體字</b>標明新的文字內容
+&nbsp; 以<b>[被刪除的文字]</b>替換刪除的文稿類型
+&nbsp; 如果您刪除了一個句子或更多地方，請以一個註解加以指明，例如：<b>[刪除了 2 個句子]</b>
+
+<b>回應給作者的問題(QAs)</b>
+&nbsp; 保持所有的OAs原封不動，並將文字改成粗體字。不要刪除掉它們。
+&nbsp; 要回應一個QA，請在其後新增一個評論。評論應該要使用中括號畫界：
+<b>[評論：</b>]
+&nbsp;例如，<b>[評語：補充討論您所建議的方法論。]</b>
+
+<b>做評論</b>
+&nbsp; 使用評論以說明組織上的變更或者主要修訂處。
+&nbsp; 例如：<b>[評語：將上一段從第五頁移至第七頁]</b>
+&nbsp; 注意，當涉及頁數時，請使用寄給您之打字稿的印刷頁數。這很重要，因為一份文件在經過電子修訂之後頁數可能會改變。
+
+<h4>一份電子修訂稿中的圖解</h4>
+
+<b>原始「打字稿」檔案</b>
+
+如果要對您的原始打字稿做出重大修改，請先和您的共同編輯人員確認過。當您完成您的修訂之後，請重新命名檔案，從AuthorNameQA.doc改成AuthorNameQAR.doc（例如：從"李先生QA.doc"改成"李先生QAR.doc"）。請列印出一份原稿的電腦列印槁，並以附上含有完整修訂與更名過之檔案的軟碟或光碟一併寄出。
+
+<b>將附有疑問和建議的打字稿返還作者</b>
+
+在針對<b>我們正要返還予您的打字稿</b>做出重大修改之前，請與和您<b>共同編輯您負責部分的編者</b>進行確認。當您完成您的修訂之後，請重新命名檔案，從AuthorNameQA.doc改成AuthorNameQAR.doc（例如：從"李先生QA.doc"改成"李先生QAR.doc"）。請列印出一份原稿的電腦列印槁，並以附上含有完整修訂與更名過之檔案的軟碟或光碟一併寄出。<b>[QA：在這個段落中，強調要謹慎遵循指南來進行電子修訂的重要性，或許會有點幫助。否則編輯流程可想而知會進行的很慢。]</b>
+
+<b>將修訂過的打字稿寄回給HER</b>
+
+在針對我們正要返還予您的打字稿做出重大修改之前，請與和您共同編輯您負責部分的編者進行確認。<b>請務必瞭解，若沒有遵循步驟指南，可能會嚴重拖慢稿件的出版時程。</b>
+
+當您完成您的修訂之後，請重新命名檔案，從AuthorNameQA.doc改成AuthorNameQAR.doc（例如：從"李先生QA.doc"改成"李先生QAR.doc"）。請列印出一份原稿的電腦列印槁，並以附上含有<b>[已刪除字句]</b>的修訂與更名檔案的軟碟或光碟一併寄出。<b>[QA：在這個段落中，強調要謹慎遵循指南來進行電子修訂的重要性，或許會有點幫助。否則編輯流程可想而知會進行的很慢。][評語：我增加了一個句子以回應您的建議。]</b>
+
+<b>備註：</b>
+&bull; 非粗體的文字表示接受對於原有語句的建議修改。
+&bull; 附加語句以回應QA。粗體字表示新增的文字內容。
+&bull; [被刪除的文字]表示「全部」刪掉。
+&bull; 評語包含一份對於編者QA的回覆。]]></message>
+
+	<message key="default.journalSettings.proofingInstructions"><![CDATA[校對階段的目的在於，找出校樣版的拼字、文法和格式上的錯誤。這個階段不能再做出比較根本性的修訂，除非與文稿類型編輯討論過。在「版面」頁面，點擊「檢視校對」以瀏覽用來出版這個項目的HTML、PDF和其他可用之檔案格式。
+
+<strong>拼字與文法上的錯誤</strong>
+
+複製有問題的字詞或詞組，並貼在「校對修訂」文字框裡頭，並附上「將...改成」的指示給編輯人，如下...
+
+1. 將...
+then the others
+改成...
+than the others
+
+2. 將...
+Malinowsky
+改成...
+Malinowski
+
+
+<strong>格式上的錯誤</strong>
+
+在「校對修訂」文字框中，在「格式化」的標題下，說明問題的位置和性質，如下...
+
+3. 格式化
+表格3的數字在第三列沒有對齊。
+
+4. 格式化
+以「這個最新主題...」開頭的段落沒有縮排]]></message>
+	<message key="default.journalSettings.emailSignature"><![CDATA[________________________________________________________________________
+{$journalName}
+{$indexUrl}/{$journalPath}
+]]></message>
+	<message key="default.journalSettings.forReaders"><![CDATA[我們鼓勵讀者使用本期刊的出版通知服務。請使用首頁上方的<a href="{$indexUrl}/{$journalPath}/user/register">註冊</a> 連結在本期刊註冊。這個註冊動作會讓讀者以電子郵件的方式收到每份當期期刊的目錄。這份清單也讓本期刊顯示出某種支持度或讀者群。請見本期刊的<a href="{$indexUrl}/{$journalPath}/about/submissions#privacyStatement">隱私權聲明</a>， 保障讀者的姓名和電子郵件地址不會用於其他用途。]]></message>
+	<message key="default.journalSettings.forAuthors"><![CDATA[ 對這份期刊感興趣嗎？我們建議您看一下<a href="{$indexUrl}/{$journalPath}/about">期刊介紹</a>頁面，以瞭解期刊的文稿類型方針；也請同時看一下 <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">作者指引</a>。作者在進行投稿之前必須在本期刊<a href="{$indexUrl}/{$journalPath}/user/register">註冊</a>，而如果已經註冊的話，可以簡單地<a href="{$indexUrl}/index/login">登入</a>並且開始五個步驟的投稿流程。]]></message>
+	<message key="default.journalSettings.forLibrarians"><![CDATA[我們鼓勵圖書館員將這份期刊加入其圖書館的電子期刊資料庫之中。同時，這份期刊的開源碼出版系統或許會適合圖書館放置他們的職員正在編輯的期刊。(請見<a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).]]></message>
+	<message key="default.journalSettings.lockssLicense"><![CDATA[這份期刊使用LOCKSS系統建立一份在參與之圖書館之間流通的典藏系統，並且允許那些圖書館基於保存和儲藏的目的，建立本期刊的永久性典藏檔案<a href="http://lockss.stanford.edu/">更多資訊...</a>]]></message>
+
+</locale>

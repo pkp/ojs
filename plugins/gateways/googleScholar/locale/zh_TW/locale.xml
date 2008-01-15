@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the Chinese locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="zh_TW" full_name="繁體中文">
+	<message key="plugins.gateways.googleScholar.displayName">Google學術搜尋（Google Scholar）閘道外掛程式</message>
+	<message key="plugins.gateways.googleScholar.description">這個外掛程式向Google提供了特定期刊的最新資料，以進行索引與搜尋。</message>
+	<message key="plugins.gateways.googleScholar.settings">設定</message>
+	<message key="plugins.gateways.googleScholar.settings.description"><![CDATA[<p>Google學術搜尋閘道外掛程式根據每份期刊的設定提供資料給Google學術搜尋收集器。如果啟用這個外掛程式， 目錄文件(亦稱之為出版商資訊) 將可在<span class="highlight">{$directoryUrl}</span>取得。</p>
+<p>Google學術搜尋需要某些在OJS系統中為選填的資訊。請使用「檢查資料」按鈕來確認您的資料符合Google學術搜尋的條件。</p>]]></message>
+	<message key="plugins.gateways.googleScholar.checkData">檢查資料</message>
+	<message key="plugins.gateways.googleScholar.errors">錯誤訊息</message>
+	<message key="plugins.gateways.googleScholar.errors.noErrors">沒有發現任何錯誤</message>
+
+	<message key="plugins.gateways.googleScholar.settings.publisherName">出版者名稱</message>
+	<message key="plugins.gateways.googleScholar.settings.publisherLocation">出版地點</message>
+	<message key="plugins.gateways.googleScholar.settings.publisherResultName">出版者在搜尋結果中的名稱</message>
+	<message key="plugins.gateways.googleScholar.settings.contact">聯絡用Email</message>
+	<message key="plugins.gateways.googleScholar.settings.addContact">增加聯絡Email</message>
+
+	<!-- Error message -->
+	<message key="plugins.gateways.googleScholar.errors.noPublisherName">沒有指明出版者名稱。這是一個必填欄位。</message>
+	<message key="plugins.gateways.googleScholar.errors.noContacts">聯絡emails失蹤或者無效。至少要指定一個E-mail，而所有的E-mail一定都要是有效的。</message>
+	<message key="plugins.gateways.googleScholar.errors.noIssn">沒有指定期刊的ISSN。請見「期刊設定」，步驟1.。</message>
+	<message key="plugins.gateways.googleScholar.errors.errorMessage">無法匯出Google學術搜尋資料。必須正確地設定Google學術搜尋匯出外掛程式。要瞭解具體的資訊，請使用期刊管理員的「檢查資料」功能。</message>
+</locale>

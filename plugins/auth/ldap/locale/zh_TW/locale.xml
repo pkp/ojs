@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * LDAP authentication plugin localization strings for the Chinese locale.
+  * 翻譯：鄭凱元
+  * $Id$
+  -->
+ 
+<locale name="zh_TW" full_name="繁體中文">
+	<message key="plugins.auth.ldap.displayName">LDAP</message>
+	<message key="plugins.auth.ldap.description">這個外掛程式可以讓你透過一個外部的LDAP資料來源來認證與同步化使用者的帳號資料。</message>
+	
+	<message key="plugins.auth.ldap.settings">LDAP設定</message>
+	<message key="plugins.auth.ldap.settings.hostname">伺服器主機名稱</message>
+	<message key="plugins.auth.ldap.settings.hostname.description">例如："ldap.example.com",或者 "ldaps://ldap.example.com" (使用SSL)</message>
+	<message key="plugins.auth.ldap.settings.port">伺服器端口</message>
+	<message key="plugins.auth.ldap.settings.port.description">可選用。 預設為389 (LDAP) 或者 636 (LDAP over SSL)</message>
+	<message key="plugins.auth.ldap.settings.basedn">Base DN</message>
+	<message key="plugins.auth.ldap.settings.basedn.description">例如：｜ "ou=people,dc=example,dc=com"</message>
+	<message key="plugins.auth.ldap.settings.managerdn">Manager DN</message>
+	<message key="plugins.auth.ldap.settings.managerdn.description">例如： "cn=Manager,dc=example,dc=com"</message>
+	<message key="plugins.auth.ldap.settings.managerpwd">管理密碼</message>
+	<message key="plugins.auth.ldap.settings.managerpwd.description">只有在使用者的帳號/密碼同步化或者建立使用者選項啟用的時候，才會需要管理DN和密碼 。如果LDAP只會被用來進行認證，那麼可以忽略這些選項。</message>
+	<message key="plugins.auth.ldap.settings.pwhash">Pa密碼加密</message>
+	<message key="plugins.auth.ldap.settings.pwhash.description">將密碼儲存到伺服器上得亂數格式。建議使用(需要PHP >= 4.3.0)。</message>
+	<message key="plugins.auth.ldap.settings.saslopt">SASL設定(選用)</message>
+	<message key="plugins.auth.ldap.settings.sasl">使用SASL來代替簡單的認證 (需要PHP >= 5)</message>
+	<message key="plugins.auth.ldap.settings.saslmech">SASL機制</message>
+	<message key="plugins.auth.ldap.settings.saslmech.description">例如："DIGEST-MD5"</message>
+	<message key="plugins.auth.ldap.settings.saslrealm">領域</message>
+	<message key="plugins.auth.ldap.settings.saslauthzid">請求授權之ID</message>
+	<message key="plugins.auth.ldap.settings.saslprop">SASL安全性</message>
+</locale>

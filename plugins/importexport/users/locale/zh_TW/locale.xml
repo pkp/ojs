@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * 翻譯：鄭凱元
+  * Localization strings for the Chinese locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="zh_TW" full_name="繁體中文">
+	<message key="plugins.importexport.users.displayName">使用者XML外掛程式</message>
+	<message key="plugins.importexport.users.description">匯入與匯出使用者</message>
+
+	<message key="plugins.importexport.users.cliUsage"><![CDATA[使用: {$scriptName} {$pluginName} [command] ...
+指令:
+	匯入 [xmlFileName] [journal_path] [optional flags]
+	匯出 [xmlFileName] [journal_path]
+	匯出 [xmlFileName] [journal_path] [role_path1] [role_path2] ...
+
+選擇性標示:
+	continue_on_error: 如果指定此項目，則表示除非發生錯誤，否則不會停止匯入使用者。
+
+	send_notify: 如果指定此項目，則會寄出包含使用者名稱和密碼的通知電子郵件給被匯入的使用者。
+
+範例:
+	從myImportFile.xml檔案中匯入使用者到我的期刊中, 錯誤發生時也繼續執行:
+	{$scriptName} {$pluginName} import myImportFile.xml myJournal continue_on_error
+
+	從我的期刊中匯出所有使用者:
+	{$scriptName} {$pluginName} export myExportFile.xml myJournal
+
+	匯出所有註冊為審查人的使用者，只依據他們的審查人角色:
+	{$scriptName} {$pluginName} export myExportFile.xml myJournal reviewer
+]]></message>
+	<message key="plugins.importexport.users.import.importUsers">匯入使用者</message>
+	<message key="plugins.importexport.users.import.instructions"><![CDATA[選擇一個XML資料檔案，此檔案包含使用者的資訊，以匯入到這份期刊中。見期刊協助資訊以檢視這個檔案格式的詳情。<br /><br />注意：如果要匯入的檔案包含系統內既有的使用者名稱或者電子郵件地址，那些使用者的資料將不會被匯入，而任何新建立的角色身份將會指派給這些既有的使用者。]]></message>
+	<message key="plugins.importexport.users.import.failedToImportUser">無法匯入使用者</message>
+	<message key="plugins.importexport.users.import.failedToImportRole">無法指派這個角色給使用者</message>
+	<message key="plugins.importexport.users.import.dataFile">使用者資料檔案</message>
+	<message key="plugins.importexport.users.import.sendNotify">發出一封包含使用者名稱和密碼的通知電子郵件給每個被匯入的使用者。</message>
+	<message key="plugins.importexport.users.import.continueOnError">如果發生錯誤的話也繼續匯入其他的使用者。</message>
+	<message key="plugins.importexport.users.import.noFileError">沒有上傳任何檔案！</message>
+	<message key="plugins.importexport.users.import.usersWereImported">下列的使用者已經成功地匯入本系統。</message>
+	<message key="plugins.importexport.users.import.errorsOccurred">在匯入的時候發生錯誤</message>
+	<message key="plugins.importexport.users.import.confirmUsers">請確認您想要匯入這些使用者到系統中</message>
+	<message key="plugins.importexport.users.unknownJournal">指定了一個未知的期刊路徑"{$journalPath}" 。</message>
+
+	<message key="plugins.importexport.users.export.exportUsers">匯出使用者</message>
+	<message key="plugins.importexport.users.export.exportByRole">根據角色匯出</message>
+	<message key="plugins.importexport.users.export.exportAllUsers">匯出所有資料</message>
+	<message key="plugins.importexport.users.export.errorsOccurred">在匯出時發生錯誤</message>
+	<message key="plugins.importexport.users.export.couldNotWriteFile">無法寫入檔案:"{$fileName}".</message>
+</locale>

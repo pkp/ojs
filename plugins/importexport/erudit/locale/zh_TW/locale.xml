@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the Chinese locale.
+  * 翻譯：鄭凱元
+  * $Id$
+  -->
+ 
+<locale name="zh_TW" full_name="繁體中文">
+	<message key="plugins.importexport.erudit.displayName">Erudit文章匯出外掛程式</message>
+	<message key="plugins.importexport.erudit.description">使用English Erudit文件類型定義匯出文章</message>
+
+	<message key="plugins.importexport.erudit.cliUsage"><![CDATA[Usage: {$scriptName} {$pluginName} [xmlFileName] [journalPath] [articleId] [galleyLabel]
+]]></message>
+	<message key="plugins.importexport.erudit.export">匯出資料</message>
+	<message key="plugins.importexport.erudit.export.issues">匯出期數</message>
+	<message key="plugins.importexport.erudit.export.sections">匯出文章類型</message>
+	<message key="plugins.importexport.erudit.export.articles">匯出文章</message>
+
+	<message key="plugins.importexport.erudit.selectIssue">選擇期數</message>
+	<message key="plugins.importexport.erudit.selectArticle">選擇文章</message>
+
+	<message key="plugins.importexport.erudit.cliError">錯誤:</message>
+	<message key="plugins.importexport.erudit.error.unknownJournal">指定的期刊路徑： "{$journalPath}", 並不存在。</message>
+	<message key="plugins.importexport.erudit.export.error.couldNotWrite">無法寫入檔案："{$fileName}".</message>
+	<message key="plugins.importexport.erudit.export.error.articleNotFound">沒有文章符合指定的文章ID： "{$articleId}".</message>
+	<message key="plugins.importexport.erudit.export.error.galleyNotFound">沒有galley符合指定的galley標籤："{$galleyLabel}".</message>
+
+	<message key="plugins.importexport.erudit.unavailable">Unavailable</message>
+</locale>

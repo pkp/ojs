@@ -28,5 +28,5 @@
 	<locale key="ru_RU" name="Russian"/>
 	<locale key="tr_TR" name="Türkiye Türkçesi"/>
 	<locale key="vi_VN" name="Tiếng Việt"/>
-	<locale key="te_ST" name="Test Locale"/>
+	<locale key="zh_TW" name="繁體中文"/>
 </locales>

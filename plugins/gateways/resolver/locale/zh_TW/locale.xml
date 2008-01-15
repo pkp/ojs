@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the Chinese locale.
+  * 翻譯：鄭凱元
+  * $Id$
+  -->
+ 
+<locale name="zh_TW" full_name="繁體中文">
+	<message key="plugins.gateways.resolver.displayName">解析外掛程式Resolver Plugin</message>
+	<message key="plugins.gateways.resolver.description">這個外掛程式根據引用資訊來解析期刊和文章。</message>
+	<message key="plugins.gateways.resolver.errors.errorMessage">無法使用指定的引用資訊來解析單一的項目。請確定引用資訊是可理解的並且參照到OJS中所使用的一個項目。</message>
+	<message key="plugins.gateways.resolver.exportHoldings">匯出持有部份</message>
+</locale>

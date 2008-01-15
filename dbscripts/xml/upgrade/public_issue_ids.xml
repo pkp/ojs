@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../dtd/xmldata.dtd">
+
+<!--
+  * public_issue_ids.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * 2.2.0/2.2.1: Make blank but non-null public issue IDs blank for the sake of
+  * preventing index duplicates.
+  *
+  * $Id$
+  -->
+
+<data>
+	<!-- Bug #3219: Public issue ID indexing fix -->
+	<sql>
+		<query>
+			UPDATE issues SET public_issue_id = NULL WHERE public_issue_id = ''
+		</query>
+	</sql>
+</data>

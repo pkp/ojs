@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the Chinese locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="zh_TW" full_name="繁體中文">
+	<message key="plugins.generic.tinymce.name">TinyMCE Plugin</message>
+	<message key="plugins.generic.tinymce.description"><![CDATA[This plugin enables WSYWIG editing of OJS textareas using the <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a> content editor.]]></message>
+	<message key="plugins.generic.tinymce.descriptionDisabled"><![CDATA[This plugin enables WSYWIG editing of OJS textareas using the <a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a> content editor. <strong>TinyMCE is not currently installed; please install it in {$tinyMcePath}.</strong>]]></message>
+</locale>

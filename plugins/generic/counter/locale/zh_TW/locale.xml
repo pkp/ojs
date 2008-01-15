@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the Chinese locale.
+  * 翻譯：鄭凱元
+  * $Id$
+  -->
+ 
+<locale name="zh_TW" full_name="繁體中文">
+	<message key="plugins.generic.counter.description"><![CDATA[計數器外掛程式允許紀錄以及提供<a href="http://www.projectcounter.org/about.html" target="_new">計數器</a>-報告網站活動。]]></message>
+	<message key="plugins.generic.counter">計數器統計</message>
+
+	<message key="plugins.generic.counter.clearLog">清除紀錄</message>
+	<message key="plugins.generic.counter.confirmClear">你確定你希望清除掉這分紀錄？這個動作無法復原。</message>
+	<message key="plugins.generic.counter.browseLog">瀏覽紀錄</message>
+	<message key="plugins.generic.counter.browseLog.logBrowser">紀錄瀏覽器</message>
+
+	<message key="plugins.generic.counter.entry.timestamp">時間郵戳</message>
+	<message key="plugins.generic.counter.entry.site">網站</message>
+	<message key="plugins.generic.counter.entry.journal">期刊</message>
+	<message key="plugins.generic.counter.entry.user">使用者</message>
+	<message key="plugins.generic.counter.sessionNumber">Session #{$sessionNumber}</message>
+	<message key="plugins.generic.counter.entry.type">類型</message>
+	<message key="plugins.generic.counter.entry.type.article">文章</message>
+	<message key="plugins.generic.counter.entry.type.search">搜尋</message>
+	<message key="plugins.generic.counter.entry.value">值</message>
+
+	<message key="plugins.generic.counter.1a.title">期刊報告 1 (R2): 調閱全文文章的月份和期刊。</message>
+	<message key="plugins.generic.counter.1a.title1">期刊報告 1 (R2)</message>
+	<message key="plugins.generic.counter.1a.title2">成功調閱文章全文的月份和期刊數({$year}年)</message>
+	<message key="plugins.generic.counter.1a.dateRun">橫跨時間：</message>
+	<message key="plugins.generic.counter.1a.publisher">出版者</message>
+	<message key="plugins.generic.counter.1a.platform">平台</message>
+	<message key="plugins.generic.counter.1a.printIssn">印刷書ISSN</message>
+	<message key="plugins.generic.counter.1a.onlineIssn">線上ISSN</message>
+	<message key="plugins.generic.counter.1a.ytdTotal">最近一年總數</message>
+	<message key="plugins.generic.counter.1a.ytdHtml">最近一年HTML</message>
+	<message key="plugins.generic.counter.1a.ytdPdf">最近一年PDF</message>
+	<message key="plugins.generic.counter.1a.totalForAllJournals">所有期刊總數</message>
+</locale>

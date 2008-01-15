@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Thesis abstracts plugin localization strings for the Chinese locale.
+  * 翻譯：鄭凱元
+  * $Id$
+  -->
+ 
+<locale name="zh_TW" full_name="繁體中文">
+	<message key="plugins.generic.thesis.displayName">論文摘要</message>
+	<message key="plugins.generic.thesis.description">募集與出版論文摘要。</message>
+
+	<!-- Thesis Abstract Management -->
+	<message key="plugins.generic.thesis.manager.settings">設定</message>
+	<message key="plugins.generic.thesis.manager.theses">論文摘要</message>
+	<message key="plugins.generic.thesis.manager.status">狀態</message>
+	<message key="plugins.generic.thesis.manager.status.inactive">待用</message>
+	<message key="plugins.generic.thesis.manager.status.active">啟用</message>
+	<message key="plugins.generic.thesis.manager.degree">學位</message>
+	<message key="plugins.generic.thesis.manager.degree.masters">碩士</message>
+	<message key="plugins.generic.thesis.manager.degree.doctorate">博士</message>
+	<message key="plugins.generic.thesis.manager.dateApproved">通過日期</message>
+	<message key="plugins.generic.thesis.manager.studentName">學生姓氏名</message>
+	<message key="plugins.generic.thesis.manager.title">論文題目</message>
+	<message key="plugins.generic.thesis.manager.confirmDelete">你確定你要永久性地刪除這分論文摘要？</message>
+	<message key="plugins.generic.thesis.manager.noneCreated">沒有建立任何期刊摘要。</message>
+	<message key="plugins.generic.thesis.manager.create">建立新的期刊摘要</message>
+	<message key="plugins.generic.thesis.manager.createTitle">建立</message>
+	<message key="plugins.generic.thesis.manager.edit">編輯期刊摘要</message>
+	<message key="plugins.generic.thesis.manager.editTitle">編輯</message>
+	<message key="plugins.generic.thesis.manager.form.status">狀態</message>
+	<message key="plugins.generic.thesis.manager.form.statusRequired">需要輸入一個論文摘要的狀態。</message>
+	<message key="plugins.generic.thesis.manager.form.statusValid">請選擇一個有效的狀態。</message>
+	<message key="plugins.generic.thesis.manager.form.degree">學位</message>
+	<message key="plugins.generic.thesis.manager.form.degreeRequired">需要輸入一個論文學位。</message>
+	<message key="plugins.generic.thesis.manager.form.degreeValid">請選擇一個有效的學位。</message>
+	<message key="plugins.generic.thesis.manager.form.department">科系</message>
+	<message key="plugins.generic.thesis.manager.form.departmentRequired">需要輸入一個科系。</message>
+	<message key="plugins.generic.thesis.manager.form.university">大學</message>
+	<message key="plugins.generic.thesis.manager.form.universityRequired">需要輸入一個大學。</message>
+	<message key="plugins.generic.thesis.manager.form.dateApproved">通過日期</message>
+	<message key="plugins.generic.thesis.manager.form.dateApprovedRequired">需要輸入一個通過日期。</message>
+	<message key="plugins.generic.thesis.manager.form.dateApprovedValid">請選擇一個有效的通過日期。</message>
+	<message key="plugins.generic.thesis.manager.form.title">題目</message>
+	<message key="plugins.generic.thesis.manager.form.titleRequired">需要輸入一個論文題目。</message>
+	<message key="plugins.generic.thesis.manager.form.abstract">摘要</message>
+	<message key="plugins.generic.thesis.manager.form.abstractRequired">需要輸入一個論文摘要。</message>
+	<message key="plugins.generic.thesis.manager.form.abstractInstructions"><![CDATA[插入空白換行以分開不同的段落。在&lt;b&gt;&lt;/b&gt;, &lt;i&gt;&lt;/i&gt;, 以及&lt;u&gt;&lt;/u&gt; 標籤中插入文字以分別顯示成粗體、斜體和底線。(即， 這個&lt;i&gt;字&lt;/i&gt; 會是斜體。)]]></message>
+	<message key="plugins.generic.thesis.manager.form.url">網址</message>
+	<message key="plugins.generic.thesis.manager.form.urlInstructions">如果論文是線上出版的話，請輸入。前面要包括http://, ftp://, 等前置詞。(即，http://www.sfu.ca/path/to/thesis.pdf).</message>
+	<message key="plugins.generic.thesis.manager.form.studentFirstName">學生名字</message>
+	<message key="plugins.generic.thesis.manager.form.studentFirstNameRequired">需要輸入學生的名字。</message>
+	<message key="plugins.generic.thesis.manager.form.studentLastName">學生姓氏</message>
+	<message key="plugins.generic.thesis.manager.form.studentLastNameRequired">需要輸入學生的姓氏。</message>
+	<message key="plugins.generic.thesis.manager.form.studentMiddleName">學生中間名</message>
+	<message key="plugins.generic.thesis.manager.form.studentEmail">學生Email</message>
+	<message key="plugins.generic.thesis.manager.form.studentEmailValid">需要輸入一個有效的學生E-mail。</message>
+	<message key="plugins.generic.thesis.manager.form.supervisorFirstName">指導教授名字</message>
+	<message key="plugins.generic.thesis.manager.form.supervisorFirstNameRequired">需要輸入指導教授的名字。</message>
+	<message key="plugins.generic.thesis.manager.form.supervisorLastName">指導教授姓氏</message>
+	<message key="plugins.generic.thesis.manager.form.supervisorLastNameRequired">需要輸入指導教授姓氏</message>
+	<message key="plugins.generic.thesis.manager.form.supervisorMiddleName">指導教授中間名</message>
+	<message key="plugins.generic.thesis.manager.form.supervisorEmail">指導教授Email</message>
+	<message key="plugins.generic.thesis.manager.form.supervisorEmailValid">需要輸入一個有效的指導教授email。</message>
+	<message key="plugins.generic.thesis.manager.form.saveAndCreateAnother">存檔並建立下一筆資料</message>
+
+	<!-- Thesis Abstract Settings Management -->
+	<message key="plugins.generic.thesis.settings.description"><![CDATA[<p>這個外掛程式可以讓學生使用線上的表單送出他們的論文摘要給期刊。</p><p>送出之後，論文的指導教授會自動收到電子郵件通知摘要已經送出，並被洽詢去確認提交資訊的正確性，接著送出一封電子郵件回覆給下面列出的論文摘要聯絡人，通常需要是期刊管理員。一旦收到確認信函，論文摘要聯絡人可以編輯相應的紀錄並且將「狀態」由「待用」變更為「啟用」，以啟動論文摘要上傳。接下來這分論文摘要就可以讓期刊讀者閱讀。]]></message>
+	<message key="plugins.generic.thesis.settings.thesisContact">論文摘要聯絡人</message>
+	<message key="plugins.generic.thesis.settings.thesisIntroduction">前言</message>
+	<message key="plugins.generic.thesis.settings.thesisIntroductionDescription">前言會顯示在期刊摘要頁面的頂端。</message>
+	<message key="plugins.generic.thesis.settings.thesisNameRequired">必須指定論文摘要聯絡人的姓氏名</message>
+	<message key="plugins.generic.thesis.settings.thesisEmailRequired">必須指定一個期刊摘要聯絡人的E-mail</message>
+
+	<!-- 論文摘要 -->
+	<message key="plugins.generic.thesis.theses">論文摘要</message>
+	<message key="plugins.generic.thesis.headerLink"><![CDATA[論文&nbsp;摘要]]></message>
+	<message key="plugins.generic.thesis.submit">送出論文摘要</message>
+	<message key="plugins.generic.thesis.submitLink">送出論文摘要</message>
+	<message key="plugins.generic.thesis.submitButton">送出</message>
+	<message key="plugins.generic.thesis.view">摘要</message>
+	<message key="plugins.generic.thesis.viewTitle">摘要</message>
+	<message key="plugins.generic.thesis.noneExist">沒有出版任何的論文摘要</message>
+	<message key="plugins.generic.thesis.abstract">摘要</message>
+	<message key="plugins.generic.thesis.studentFullName">{$lastName}, {$firstName} {$middleName}</message>
+	<message key="plugins.generic.thesis.form.introduction">送出下面的表單之後，論文的指導教授會收到電子郵件，並被要求確認送出資訊的正確性。一旦期刊收到這份確認信，論文摘要就會在線上出版。</message>
+	<message key="plugins.generic.thesis.form.status">狀態</message>
+	<message key="plugins.generic.thesis.form.statusValid">請選擇一個有效的狀態</message>
+	<message key="plugins.generic.thesis.form.degree">學位</message>
+	<message key="plugins.generic.thesis.form.degreeRequired">需要輸入一個論文學位。</message>
+	<message key="plugins.generic.thesis.form.degreeValid">請選擇一個有效的學位。</message>
+	<message key="plugins.generic.thesis.form.department">科系</message>
+	<message key="plugins.generic.thesis.form.departmentRequired">請輸入一個科系。</message>
+	<message key="plugins.generic.thesis.form.university">大學</message>
+	<message key="plugins.generic.thesis.form.universityRequired">請輸入一個大學。</message>
+	<message key="plugins.generic.thesis.form.dateApproved">通過日期</message>
+	<message key="plugins.generic.thesis.form.dateApprovedRequired">請輸入一個通過日期。</message>
+	<message key="plugins.generic.thesis.form.dateApprovedValid">請選擇一個有效的通過日期。</message>
+	<message key="plugins.generic.thesis.form.title">題目</message>
+	<message key="plugins.generic.thesis.form.titleRequired">請輸入論文題目。</message>
+	<message key="plugins.generic.thesis.form.abstract">摘要</message>
+	<message key="plugins.generic.thesis.form.abstractRequired">請輸入論文摘要。</message>
+	<message key="plugins.generic.thesis.form.abstractInstructions"><![CDATA[插入空白換行以分開不同的段落。在&lt;b&gt;&lt;/b&gt;, &lt;i&gt;&lt;/i&gt;, 以及&lt;u&gt;&lt;/u&gt; 標籤中插入文字以分別顯示成粗體、斜體和底線。(即， 這個&lt;i&gt;字&lt;/i&gt; 會是斜體。)]]></message>
+	<message key="plugins.generic.thesis.form.url">網址</message>
+	<message key="plugins.generic.thesis.form.urlInstructions">如果論文是線上出版的話，請輸入。前面要包括http://, ftp://, 等前置詞。(即，http://www.sfu.ca/path/to/thesis.pdf).</message>
+	<message key="plugins.generic.thesis.form.studentFirstName">學生名字</message>
+	<message key="plugins.generic.thesis.form.studentFirstNameRequired">請輸入學生名字。</message>
+	<message key="plugins.generic.thesis.form.studentLastName">學生姓氏</message>
+	<message key="plugins.generic.thesis.form.studentLastNameRequired">請輸入學生姓氏。</message>
+	<message key="plugins.generic.thesis.form.studentMiddleName">學生中間名</message>
+	<message key="plugins.generic.thesis.form.studentEmail">學生Email</message>
+	<message key="plugins.generic.thesis.form.studentEmailValid">需要輸入一個有效的學生E-mail。</message>
+	<message key="plugins.generic.thesis.form.supervisorFirstName">指導教授名字</message>
+	<message key="plugins.generic.thesis.form.supervisorFirstNameRequired">需要輸指導教授名字。</message>
+	<message key="plugins.generic.thesis.form.supervisorLastName">指導教授姓氏。</message>
+	<message key="plugins.generic.thesis.form.supervisorLastNameRequired">需要輸入指導教授的姓氏</message>
+	<message key="plugins.generic.thesis.form.supervisorMiddleName">指導教授中間名</message>
+	<message key="plugins.generic.thesis.form.supervisorEmail">指導教授Email</message>
+	<message key="plugins.generic.thesis.form.supervisorEmailValid">需要輸入一個有效的指導教授E-mail。</message>
+	<message key="plugins.generic.thesis.form.saveAndCreateAnother">存檔並建立下一筆資料</message>
+
+</locale>
