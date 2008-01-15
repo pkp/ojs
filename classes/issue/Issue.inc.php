@@ -252,7 +252,10 @@ class Issue extends DataObject {
 	 * @return string
 	 */
 	function getPublicIssueId() {
-		return $this->getData('publicIssueId');
+		// Ensure that blanks are treated as nulls
+		$returner = $this->getData('publicIssueId');
+		if ($returner === '') return null;
+		return $returner;
 	}
 
 	/**

@@ -448,11 +448,6 @@ class NativeImportDom {
 		// be used to locate an existing section. Otherwise, we'll
 		// create a new one. If $title and $abbrev each match an
 		// existing section, but not the same section, throw an error.
-
-		// problem in the earlier solution: e.g. no title matches, but an abbrev
-		// what about if just one title or just one abbrev matches ?
-		
-		// check titles:
 		$section = null;
 		$foundSectionId = $foundSectionTitle = null;
 		$index = 0;
@@ -481,7 +476,8 @@ class NativeImportDom {
 				}
 			}
 			$index++;
-		}		
+		}
+
 		// check abbrevs:
 		$abbrevSection = null;
 		$foundSectionId = $foundSectionAbbrev = null;
@@ -512,16 +508,15 @@ class NativeImportDom {
 			}
 			$index++;
 		}		
-		
+
 		if (!$section && !$abbrevSection) {
 			// The section was not matched. Create one.
 			// Note that because sections are global-ish,
 			// we're not maintaining a list of created
 			// sections to delete in case the import fails.
+			unset($section);
 			$section = &new Section();
 
-			// FIXME: This should handle localized sections
-			// with more dignity.
 			$section->setTitle($titles, null);
 			$section->setAbbrev($abbrevs, null);
 			$section->setIdentifyType($identifyTypes, null);
@@ -532,6 +527,11 @@ class NativeImportDom {
 			$section->setEditorRestricted(1);
 			$section->setSectionId($sectionDao->insertSection($section));
 			$sectionDao->resequenceSections($journal->getJournalId());
+		}
+
+		if (!$section && $abbrevSection) {
+			unset($section);
+			$section =& $abbrevSection;
 		}
 
 		// $section *must* now contain a valid section, whether it was

@@ -219,7 +219,10 @@ class PublishedArticle extends Article {
 	 * @return string
 	 */
 	function getPublicArticleId() {
-		return $this->getData('publicArticleId');
+		// Ensure that blanks are treated as nulls.
+		$returner = $this->getData('publicArticleId');
+		if ($returner === '') return null;
+		return $returner;
 	}
 
 	/**

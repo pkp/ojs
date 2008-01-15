@@ -50,7 +50,10 @@ class SuppFile extends ArticleFile {
 	 * @return string
 	 */
 	function getPublicSuppFileId() {
-		return $this->getData('publicSuppFileId');
+		// Ensure that blanks are treated as nulls.
+		$returner = $this->getData('publicSuppFileId');
+		if ($returner === '') return null;
+		return $returner;
 	}
 
 	/**

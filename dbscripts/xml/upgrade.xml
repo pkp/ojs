@@ -12,7 +12,13 @@
   * $Id$
   -->
 
-<install version="2.2.0.0">
+<install version="2.2.1.0">
+	<upgrade minversion="2.0.0.0" maxversion="2.2.1.0">
+		<!-- Correct null public issue IDs; this caused problems with
+		     2.x -> 2.2.0 upgrades using public issue IDs.-->
+		<data file="upgrade/public_issue_ids.xml" />
+	</upgrade>
+
 	<upgrade minversion="2.0.0.0" maxversion="2.0.1.0">
 		<!-- 2.0.x to 2.0.2 -->
 		<data file="upgrade/2.0.2_preupdate.xml" />
