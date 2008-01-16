@@ -466,12 +466,13 @@ class ImportOJS1 {
 		import('manager.form.setup.JournalSetupStep3Form');
 		import('manager.form.setup.JournalSetupStep4Form');
 		import('manager.form.setup.JournalSetupStep5Form');
-		$localizedSettings = array();
-		$localizedSettings += JournalSetupStep1Form::getLocaleFieldNames();
-		$localizedSettings += JournalSetupStep2Form::getLocaleFieldNames();
-		$localizedSettings += JournalSetupStep3Form::getLocaleFieldNames();
-		$localizedSettings += JournalSetupStep4Form::getLocaleFieldNames();
-		$localizedSettings += JournalSetupStep5Form::getLocaleFieldNames();
+		$localizedSettings = array_merge(
+			JournalSetupStep1Form::getLocaleFieldNames(),
+			JournalSetupStep2Form::getLocaleFieldNames(),
+			JournalSetupStep3Form::getLocaleFieldNames(),
+			JournalSetupStep4Form::getLocaleFieldNames(),
+			JournalSetupStep5Form::getLocaleFieldNames()
+		);
 
 		foreach ($journalSettings as $settingName => $settingInfo) {
 			list($settingType, $settingValue) = $settingInfo;
