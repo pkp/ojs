@@ -147,11 +147,11 @@
 			
 		</search>
 		<search>
-			<search_title>Financial Dictionary</search_title>
-			<search_description>This dictionary of financial terms is sponsored by specialinvestor.com, which aims to be &quot;the first complete portal in the world aimed at business students.&quot;</search_description>
-			<url>http://www.specialinvestor.com/dictionary/</url>
-			<search_url>http://www.specialinvestor.com/dictionary/</search_url>
-			<search_post>q={$formKeywords}</search_post>			
+			<search_title>bizterms.net</search_title>
+			<search_description>Bizterms.net provides a comprehensive dictionary of business and financial terms. Start browsing for your financial term, either by search, most popular terms, random term or simply view terms by letter.</search_description>
+			<url>http://www.bizterms.net</url>
+			<search_url>http://www.bizterms.net/index.php</search_url>
+			<search_post>query={$formKeywords}</search_post>			
 		</search>
 	</context>
 	<context>
