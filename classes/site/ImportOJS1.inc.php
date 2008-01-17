@@ -1478,10 +1478,12 @@ class ImportOJS1 {
 		$fileManager = &new ArticleFileManager($articleId);
 		$articleFileDao = &DAORegistry::getDAO('ArticleFileDAO');
 
+		$articleOldFileName = !empty($row['chOldFileName']) ? $row['chOldFileName'] : $row['chFileName'];
+
 		$articleFile = &new ArticleFile();
 		$articleFile->setArticleId($articleId);
 		$articleFile->setFileName('temp');
-		$articleFile->setOriginalFileName(Core::cleanVar($row['chOldFileName']));
+		$articleFile->setOriginalFileName(Core::cleanVar($articleOldFileName));
 		$articleFile->setFileType(Core::cleanVar($row['chFileType']));
 		$articleFile->setFileSize(filesize($oldPath));
 		$articleFile->setType($fileManager->typeToPath($fileType));
@@ -1493,7 +1495,7 @@ class ImportOJS1 {
 
 		$fileId = $articleFileDao->insertArticleFile($articleFile);
 
-		$newFileName = $fileManager->generateFilename($articleFile, $fileType, $row['chOldFileName']);
+		$newFileName = $fileManager->generateFilename($articleFile, $fileType, $articleOldFileName);
 		if (!$fileManager->copyFile($oldPath, $fileManager->filesDir . $fileManager->typeToPath($fileType) . '/' . $newFileName)) {
 			$articleFileDao->deleteArticleFileById($articleFile->getFileId());
 			printf("Failed to copy file %s\n", $oldPath);
