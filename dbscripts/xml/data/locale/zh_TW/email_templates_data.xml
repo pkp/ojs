@@ -1,0 +1,782 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../../../dtd/xmldata.dtd">
+
+<!--
+  * email_templates_data.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * email templates data XML file (繁體中文).
+  *
+  * $Id$
+  -->
+
+<data>
+	<table name="email_templates_default_data">
+		<field_default name="locale">zh_TW</field_default>
+
+		<!--
+		  *
+		  * General
+		  *一般
+		  -->
+		<row>
+			<field name="email_key">PASSWORD_RESET_CONFIRM</field>
+			<field name="subject">密碼重設確認</field>
+			<field name="body">我們收到您的要求重新設定您在{$siteTitle}網站的密碼。
+
+如果您沒有提出這個請求，請忽略這封電子郵件，同時您的密碼將會保持不變。
+如果您希望要重設您的密碼，請按下面的連結。
+
+重設我的密碼： {$url}
+
+{$principalContactSignature}</field>
+			<field name="description">當註冊使用者忘記他們的密碼或者無法登入的時候，這封電子郵件會寄給他們。信中會提供一個網址讓它們能夠登入並重設他們的密碼。</field>
+		</row>
+		<row>
+			<field name="email_key">PASSWORD_RESET</field>
+			<field name="subject">重設密碼</field>
+			<field name="body">您的密碼已經成功重新設定以使用{$siteTitle}網站。請保管好這份使用者名稱和密碼，它對於使用本站的所有功能來說是非常必要的。
+
+您的使用者名稱：{$username}
+您的新密碼：{$password}
+
+{$principalContactSignature}</field>
+			<field name="description">當註冊使用者成功依照PASSWORD_RESET_CONFIRM電子郵件的指示重新設定他們的密碼時，這封電子郵件會被寄給他們。</field>
+		</row>
+		<row>
+			<field name="email_key">USER_REGISTER</field>
+			<field name="subject">新使用者註冊</field>
+			<field name="body">謝謝您註冊成為《{$journalName}》的一個使用者。請保管好這份使用者名稱和密碼，它對於使用本站的所有功能來說是非常必要的。
+
+使用者名稱：{$username}
+密碼：{$password}
+
+謝謝您
+{$principalContactSignature}</field>
+			<field name="description">這封電子郵件會被寄給新註冊的使用者，歡迎他們加入這個系統，並且提供他們一個使用者名稱和密碼的紀錄。</field>
+		</row>
+		<row>
+			<field name="email_key">PUBLISH_NOTIFY</field>
+			<field name="subject">新一期期刊已出版</field>
+			<field name="body">親愛的讀者您好：
+
+《{$journalName}》已經出版了最新一期的期刊，請見{$journalUrl}。我們誠摯地邀請您閱覽這裡的目錄，並接著訪問我們的網站以閱讀各種文章以及有趣的項目。
+
+感謝您持續地關注我們的作品，
+{$editorialContactSignature}</field>
+			<field name="description">這封電子郵件是透過編輯的「使用者首頁」頁面中的「通知使用者」連結，寄發給註冊使用者。此郵件通知讀者有新一期的內容並邀請他們以內附的網址檢視期刊。</field>
+		</row>
+		<row>
+			<field name="email_key">LOCKSS_EXISTING_ARCHIVE</field>
+			<field name="subject">請典藏《{$journalName}》</field>
+			<field name="body"><![CDATA[Dear [University Librarian]
+
+《{$journalName}》 <{$journalUrl}>是一份適合貴單位一位教職員的期刊：[成員名稱]，[職稱]。這份期刊正試著與這個圖書館與其他大學圖書館，共同建立一個符合洛克斯典藏計畫(LOCKSS; Lots of Copies Keep Stuff Safe)的檢藏資料庫。
+
+[期刊的簡介]
+
+我們這份期刊在「洛克斯出版品一覽」的網址是：{$journalUrl}/gateway/lockss
+
+我們瞭解貴單位已經參與洛克斯計畫。我們非常樂意提供任何額外的後設資料，以在貴單位的洛克斯版本中進行註冊。
+
+謝謝您
+{$principalContactSignature}]]></field>
+			<field name="description">這封電子郵件要求一個洛克斯典藏的維護者考慮將這份期刊納入其典藏庫中。郵件中提供了連結到 「洛克斯出版品一覽」的網址。</field>
+		</row>
+		<row>
+			<field name="email_key">LOCKSS_NEW_ARCHIVE</field>
+			<field name="subject">請典藏《{$journalName}》</field>
+			<field name="body"><![CDATA[親愛的[大學圖書館]：
+
+《{$journalName}》 <{$journalUrl}>是一份適合貴單位一位教職員的期刊：[成員名稱]，[職稱]。這份期刊正試著與這個圖書館與其他大學圖書館，共同建立一個符合洛克斯典藏計畫(LOCKSS; Lots of Copies Keep Stuff Safe)的檢藏資料庫。
+
+[期刊的簡介]
+
+洛克斯計畫<http://lockss.stanford.edu/>是一個國際圖書館＼出版商發起的計畫，是一個流通性保存與典藏庫的典範，詳情如後。這份軟體在個人電腦上運作實是免費的；這個系統很容易放置到網路上；而且只需要很少的維護工作。
+
+為了協助典藏我們的期刊，我們邀請貴單位加入成為一個洛克斯社群的成員，有助於蒐集和保存由貴單位的教職員以及世界各地學者所生產的作品。要做到這一點，請貴單位的一位工作人員訪問洛克斯網站，以取得此系統如何運作的進一步資訊。我們期盼貴單位能夠實現這個職員典藏本期刊的工作。
+
+謝謝您
+{$principalContactSignature}]]></field>
+			<field name="description">這封電子郵件鼓勵收件人成為洛克斯計畫成員，並收錄本期刊進入典藏。郵件提供了關於洛克斯計畫的資訊以及如何加入的辦法。</field>
+		</row>
+
+
+		<!--
+		  *
+		  * Submission-related
+		  *投稿相關郵件
+		  -->
+		<row>
+			<field name="email_key">SUBMISSION_ACK</field>
+			<field name="subject">投稿致謝函</field>
+			<field name="body">{$authorName}先生/女士您好：
+
+感謝您將稿件 〈{$articleTitle}〉 投稿至《{$journalName}》。透過我們所使用的期刊管理系統，您將能夠登入期刊網站來追蹤稿件的編輯進度：
+
+稿件網址：{$submissionUrl}
+使用者名稱：{$authorUsername}
+
+如果您有任何問題，請與我們聯絡。再次感謝您考慮本期刊出版您的作品。
+
+{$editorialContactSignature}</field>
+			<field name="description">這封電子郵件，一旦啟用，就會在作者完成投稿一份稿件到期刊的流程之後，會自動地寄發給作者。郵件中提供了有關追蹤稿件編輯進度的資訊，以及感謝作者的投稿。</field>
+		</row>
+		<row>
+			<field name="email_key">SUBMISSION_UNSUITABLE</field>
+			<field name="subject">不適合的稿件</field>
+			<field name="body">{$authorName}先生/女士您好：
+
+我們針對〈{$articleTitle}〉稿件的初步審查顯示出，此份稿件並不適合《{$journalName}》的研究領域和焦點。我們建議您參閱在期刊「介紹」頁面底下的說明，以及期刊現有的內容，瞭解我們出版的作品。您也可以考慮將這份稿件投稿到其他更為適合的期刊上。 
+
+{$editorialContactSignature}</field>
+		</row>
+		<row>
+			<field name="email_key">SUBMISSION_COMMENT</field>
+			<field name="subject">稿件評論</field>
+			<field name="body">{$name}您好：
+
+{$commentName}已新增了一份對於《{$journalName}》中〈〈{$articleTitle}〉的稿件評論 ：
+
+{$comments}</field>
+			<field name="description">這封電子郵件通知參與稿件編輯作業的許多人說，有了一份新評論。</field>
+		</row>
+		<row>
+			<field name="email_key">SUBMISSION_DECISION_REVIEWERS</field>
+			<field name="subject">對於〈{$articleTitle}〉的決定意見</field>
+			<field name="body">您身為投稿到《{$journalName}》之稿件〈{$articleTitle}〉的審查人之一，我寄給您已經寄發給作者的審查意見書以及編輯決定意見。再次感謝您對這個審查程序所做出的重要貢獻。
+ 
+{$editorialContactSignature}
+
+{$comments}</field>
+			<field name="description">這封電子郵件通知一份稿件的所有審查人，告知審查程序已經完成。郵件內涵關於該份文章的資訊與做出的決定，並感謝審查人的貢獻。</field>
+		</row>
+
+
+		<!--
+		  *
+		  * Editor
+		  *編輯
+		  -->
+		<row>
+			<field name="email_key">EDITOR_ASSIGN</field>
+			<field name="subject">指派編輯任務</field>
+			<field name="body">{$editorialContactName}您好：
+
+我們已經將投稿到《{$journalName}》的稿件〈{$articleTitle}〉指派給您進行編輯工作，請在您的「區段編輯」介面中進行編輯工作。
+
+稿件網址：{$submissionUrl}
+使用者名稱：{$editorUsername}
+
+謝謝您
+{$editorialContactSignature}</field>
+			<field name="description">這封電子郵件通知一個區段編輯說，編輯已經指派他們透過編輯流程來審查一份稿件。郵件中含有關於稿件以及如何進入期刊網站的資訊。</field>
+		</row>
+
+
+		<!--
+		  *
+		  * Peer Review
+		  *同儕審查
+		  -->
+		<row>
+			<field name="email_key">REVIEW_REQUEST</field>
+			<field name="subject">邀請您審查稿件</field>
+			<field name="body">{$reviewerName}您好：
+
+《{$journalName}》的編輯團隊相信您是投稿到本期刊之稿件〈{$articleTitle}〉的最佳審查人選。該份稿件的摘要如下，而我們希望您會考慮進行這份對我們來說相當重要的一個工作。
+
+無論您是否接受審查工作與否，都請在{$weekLaterDate}之前登入這個期刊網站，同時檢閱這份稿件並且記錄您的審查意見和編輯建議。網站為：{$journalUrl}
+
+請注意審查工作的期限為：{$reviewDueDate}。
+
+如果您沒有您在這個期刊網站的使用者帳號和密碼。您可以使用這個連結去重新設定您的密碼（該密碼會和您的使用者帳號名稱一起電郵給您）：{$passwordResetUrl}
+
+稿件網址：{$submissionReviewUrl}
+
+非常感謝您考慮我們的邀請。
+
+{$editorialContactSignature}
+
+
+
+〈{$articleTitle}〉
+
+{$abstractTermIfEnabled}
+{$articleAbstract}</field>
+			<field name="description">這封電子郵件是由區段編輯寄發給審查人一份邀請函，詢問審查人接受或婉謝一份稿件的審查工作。郵件中含有關於稿件標題和摘要的資訊，一個審查工作到期日，以及如何存取稿件的說明資訊。在「期刊設定」之步驟2中選擇「標準審查流程」選項時，才會用到這份訊息。(否則請見：REVIEW_REQUEST_ATTACHED.)</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEW_REQUEST_ONECLICK</field>
+			<field name="subject">邀請您審查稿件</field>
+			<field name="body">{$reviewerName}您好：
+
+《{$journalName}》的編輯團隊相信您是投稿到本期刊之稿件〈{$articleTitle}〉的最佳審查人選。該份稿件的摘要如下，而我們希望您會考慮進行這份對我們來說相當重要的一個工作。
+
+無論您是否接受審查工作與否，都請在{$weekLaterDate}之前登入這個期刊網站，同時檢閱這份稿件並且記錄您的審查意見和編輯建議。網站為：{$journalUrl}
+
+請注意審查工作的期限為：{$reviewDueDate}。
+
+稿件網址：{$submissionReviewUrl}
+
+非常感謝您考慮我們的邀請。
+{$editorialContactSignature}
+
+
+
+〈{$articleTitle}〉
+
+{$abstractTermIfEnabled}
+{$articleAbstract}</field>
+			<field name="description">這封電子郵件這封電子郵件是由區段編輯寄發給審查人一份邀請函，詢問審查人接受或婉謝一份稿件的審查工作。郵件中含有關於稿件標題和摘要的資訊，一個審查工作到期日，以及如何存取稿件的說明資訊。在「期刊設定」之步驟2中選擇「標準審查流程」選項，並且啟用「審查人一點即往」的功能，才會用到這份訊息。</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEW_REQUEST_ATTACHED</field>
+			<field name="subject">邀請您審查稿件</field>
+			<field name="body">{$reviewerName}您好：
+
+《{$journalName}》的編輯團隊相信您是投稿到本期刊之稿件〈{$articleTitle}〉的最佳審查人選，而我們希望您會考慮進行這份對我們來說相當重要的一個工作。該份期刊的審查指引已經附列如下，而稿件隨附在這封電子郵件的附加檔案之中。如果您接受這份審查工作，麻煩您在{$reviewDueDate}之前，將您對這份稿件的審查意見書以及編輯建議寄給我們。
+
+無論您是否接受審查工作與否，都請在{$weekLaterDate}之內回覆此封電子郵件給我們，告知我們您是否願意進行這個審查工作。
+
+非常感謝您考慮我們的邀請。
+{$editorialContactSignature}
+
+
+審查指引
+
+{$reviewGuidelines}
+</field>
+			<field name="description">這封電子郵件是由區段編輯寄發給審查人一份邀請函，詢問審查人接受或婉謝一份稿件的審查工作。郵件中含有一份稿件的附加檔案。在「期刊設定」之步驟2中選擇「電郵附件審查流程」選項時，才會用到這份訊息。(否則請見：REVIEW_REQUEST。)</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEW_CANCEL</field>
+			<field name="subject">請取消審查工作</field>
+			<field name="body">{$reviewerName}您好：
+
+出於種種考量，我們目前已經取消了邀請您進行投稿《{$journalName}》之稿件〈{$articleTitle}〉的審查工作。造成您的不便，我們感到十分抱歉，同時我們希望在未來仍能夠請您協助審查這份期刊的稿件。
+
+如果您有任何問題，請與我們聯絡。
+
+{$editorialContactSignature}</field>
+			<field name="description">這封電子郵件是由區段編輯寄給已經在進行審稿工作的審查人，通知他們說審查工作已經被取消了。</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEW_CONFIRM</field>
+			<field name="subject">可以進行審查工作</field>
+			<field name="body">{$editorialContactName}您好：
+
+我可以並且願意為《{$journalName}》審查稿件〈{$articleTitle}〉。謝謝您考慮我當審查人，而我計畫在審查截止日{$reviewDueDate}前完成審查。
+
+{$reviewerName}</field>
+			<field name="description">這封電子郵件是由一位審查人寄給區段編輯，回覆一份審查邀請，並通知區段編輯說已經接受審查邀請而且會在特定的日期之前完成工作。</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEW_CONFIRM_ACK</field>
+			<field name="subject">感謝您願意進行審查工作</field>
+			<field name="body">{$reviewerName}您好：
+
+謝謝您願意在{$reviewDueDate}之前為《{$journalName}》完成稿件〈{$articleTitle}〉的審查工作。
+{$editorialContactSignature}</field>
+			<field name="description">這封電子郵件是由區段編輯寄給審查人，向他們接受審查工作致謝或者鼓勵他們完成審查工作。</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEW_DECLINE</field>
+			<field name="subject">無法進行審查工作</field>
+			<field name="body">{$editorialContactName}您好：
+
+我恐怕在這個時候無法為《{$journalName}》進行稿件〈{$articleTitle}〉的審查工作。謝謝您考慮我擔任審查人，有機會我仍樂意接受審查工作。
+
+{$reviewerName}</field>
+			<field name="description">這封電子郵件是由一位審查人寄給區段編輯以回覆一份審查邀請，並通知區段編輯要婉謝審查邀請。</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEW_COMPLETE</field>
+			<field name="subject">已完成文章審查工作</field>
+			<field name="body">{$editorialContactName}您好：
+
+我目前已經為 《{$journalName}》完成稿件〈{$articleTitle}〉的審查工作，並提出了我的建議：「{$recommendation}」
+
+{$reviewerName}</field>
+			<field name="description">這封電子郵件是由一位審查人寄給區段編輯以通知他們說已經完成一份審查工作，而審查意見舒和編輯建議已經記錄在網站上了。</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEW_ACK</field>
+			<field name="subject">文章審查感謝函</field>
+			<field name="body">{$reviewerName}您好：
+
+感謝您為《{$journalName}》完成了稿件〈{$articleTitle}〉的審查工作。我們非常感激您對我們出版文章之品質的重要貢獻。
+
+{$editorialContactSignature}</field>
+			<field name="description">這封電子郵件是由一位區段編輯發出，確認收到已完成審查工作的回條，並感謝審查人之貢獻。</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEW_REMIND</field>
+			<field name="subject">稿件審查提醒函</field>
+			<field name="body">{$reviewerName}您好：
+
+這封信只是禮貌地提醒您，我們已邀請您為《{$journalName}》審查稿件〈{$articleTitle}〉。我們希望您
+能在 {$reviewDueDate}前完成這份審查工作，並請您在備妥審查意見書之後盡快寄給我們。
+
+如果您沒有您在這個期刊網站的使用者帳號和密碼。您可以使用這個連結去重新設定您的密碼（該密碼會和您的使用者帳號名稱一起電郵給您）：{$passwordResetUrl}
+
+稿件網址：{$submissionReviewUrl}
+
+請確認您能夠完成這個對本期刊作品而言非常重要的貢獻。我們期盼聽到您的回覆。
+
+{$editorialContactSignature}</field>
+			<field name="description">這封電子郵件是由區段編輯發出，提醒一位審查人他們的審查工作已經到期。</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEW_REMIND_ONECLICK</field>
+			<field name="subject">稿件審查提醒函</field>
+			<field name="body">{$reviewerName}您好：
+
+這封信只是禮貌地提醒您，我們已邀請您為《{$journalName}》審查稿件〈{$articleTitle}〉。我們希望您
+能在 {$reviewDueDate}前完成這份審查工作，並請您在備妥審查意見書之後盡快寄給我們。
+
+稿件網址：{$submissionReviewUrl}
+
+請確認您能夠完成這個對本期刊作品而言非常重要的貢獻。我們期盼聽到您的回覆。
+
+{$editorialContactSignature}</field>
+			<field name="description">這封電子郵件是由區段編輯發出，提醒一位審查人他們的審查工作已經到期。</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEW_REMIND_AUTO</field>
+			<field name="subject">自動發出的稿件審查提醒函</field>
+			<field name="body">{$reviewerName}您好：
+
+這封信只是禮貌地提醒您，我們已邀請您為《{$journalName}》審查稿件〈{$articleTitle}〉。我們希望您
+能在 {$reviewDueDate}前完成這份審查工作，並請您在備妥審查意見書之後盡快寄給我們。
+
+如果您沒有您在這個期刊網站的使用者帳號和密碼。您可以使用這個連結去重新設定您的密碼（該密碼會和您的使用者帳號名稱一起電郵給您）：{$passwordResetUrl}
+
+稿件網址：{$submissionReviewUrl}
+
+請確認您能夠完成這個對本期刊作品而言非常重要的貢獻。我們期盼聽到您的回覆。
+
+{$editorialContactSignature}</field>
+			<field name="description">這封電子郵件在一位審查人的工作期限日已經超過的時候，會自動發出給他（見「期刊設定」之步驟2，「審查選項」），而審查存取一點即入的功能已經停用。必須啟用並且設定排程任務（見網站設定）。</field>
+		</row>
+		<row>
+			<field name="email_key">REVIEW_REMIND_AUTO_ONECLICK</field>
+			<field name="subject">自動發出的稿件審查提醒函</field>
+			<field name="body">{$reviewerName}您好：
+
+這封信只是禮貌地提醒您，我們已邀請您為《{$journalName}》審查稿件〈{$articleTitle}〉。我們希望您
+能在 {$reviewDueDate}前完成這份審查工作，並請您在備妥審查意見書之後盡快寄給我們。
+
+稿件網址：{$submissionReviewUrl}
+
+請確認您能夠完成這個對本期刊作品而言非常重要的貢獻。我們期盼聽到您的回覆。
+
+{$editorialContactSignature}</field>
+			<field name="description">這封電子郵件這封電子郵件在一位審查人的工作期限日已經超過的時候，會自動發出給他（見「期刊設定」之步驟2，「審查選項」），而審查存取一點即入的功能已經啟用。必須啟用並且設定排程任務（見網站設定檔案）。</field>
+		</row>
+
+
+		<!--
+		  *
+		  * Editor Review
+		  *編輯審查
+		  *
+		  -->
+		<row>
+			<field name="email_key">EDITOR_REVIEW</field>
+			<field name="subject">文章的編輯審查</field>
+			<field name="body">{$authorName}先生/女士您好：
+
+We have now completed the review of your submission 我們現在已經完成您投稿稿件〈{$articleTitle}〉的審查工作。 我們的決定是...
+
+{$comments}.
+
+您可以在登入本期刊網站，看到編輯與同儕審查對本文的審查意見書：
+
+稿件網址：{$submissionUrl}
+使用者名稱：{$authorUsername}
+
+如果您有任何問題，請與我們聯絡。
+
+{$editorialContactSignature}</field>
+			<field name="description">這封電子郵件是由一位區段編輯寄給稿件的作者，通知他們關於稿件的編輯決定已經出爐。</field>
+		</row>
+		<row>
+			<field name="email_key">COPYEDIT_REQUEST</field>
+			<field name="subject">Copyediting Request</field>
+			<field name="body">{$copyeditorName}您好：
+
+我想請您為《{$journalName}》擔任稿件〈{$articleTitle}〉的校樣編輯。您可以在網站上找到這份稿件，以及校樣編輯的工作指引。
+
+稿件網址：{$submissionCopyeditingUrl}
+使用者名稱：{$copyeditorUsername}
+
+如果您目前無法進行這份工作，或者對這項工作有任何的疑問，請直接回信與我聯絡。非常感謝您同意為這份期刊進行這份重要的工作。
+
+{$editorialContactSignature}</field>
+			<field name="description">這封電子郵件是由一位區段編輯寄發給稿件的校樣編輯，請他們開始進行校樣編輯的工作流程。郵件中含有關於稿件的資訊以及如核取得稿件的指引。</field>
+		</row>
+		<row>
+			<field name="email_key">COPYEDIT_COMPLETE</field>
+			<field name="subject">校樣編輯工作已完成</field>
+			<field name="body">{$editorialContactName}您好：
+
+我目前已經為《{$journalName}》完成稿件〈{$articleTitle}〉初步的校樣工作。稿件已經備妥，可供作者與編輯複審修訂與疑問之處。
+
+謝謝您
+{$copyeditorName}</field>
+		</row>
+		<row>
+			<field name="email_key">COPYEDIT_ACK</field>
+			<field name="subject">校樣編輯工作感謝函</field>
+			<field name="body">{$copyeditorName}您好：
+
+非常感謝您為《{$journalName}》完成稿件〈{$articleTitle}〉的校樣工作。這對本期刊的品質有非常重要的貢獻。
+
+謝謝您
+
+{$editorialContactSignature}</field>
+			<field name="description">這封電子郵件是由區段編輯寄發給稿件的校樣編輯表示謝意，感謝校樣編輯成功地完成了校樣流程，並感謝他們的貢獻。</field>
+		</row>
+		<row>
+			<field name="email_key">COPYEDIT_AUTHOR_REQUEST</field>
+			<field name="subject">請複閱校樣稿</field>
+			<field name="body">{$authorName}先生/女士您好：
+
+我們目前已經對您投稿《{$journalName}》的稿件〈{$articleTitle}〉進行了文字校樣的工作。要複閱稿件的修訂處並回覆給作者的問題，請使用下面的連結登入期刊網站。下載並且開啟「初步校樣檔案」。在複閱過校樣稿後，請在第二個步驟上傳該檔案，並且寄發「已完成」電子郵件給編輯。
+
+這是您可以對稿件做出重大修改的最後機會。您還會被要求進行校對與排版複閱工作，不過在那些工作階段時您將只能夠修正一些打字與版面等小地方的錯誤而已。
+
+稿件網址：{$submissionCopyeditingUrl}
+使用者名稱：{$authorUsername}
+ 
+如果您目前無法進行這份複閱的工作，或者對這份工作有任何的問題，請回信聯絡我們。非常感謝您對本期刊的貢獻。
+
+{$editorialContactSignature}</field>
+			<field name="description">這封電子郵件是由區段編輯寄發給稿件的作者，請他們複閱校樣編輯的工作。郵件中含有取得稿件的資訊，並且提醒作者這將是他們做出重大修改的最後機會。</field>
+		</row>
+		<row>
+			<field name="email_key">COPYEDIT_AUTHOR_COMPLETE</field>
+			<field name="subject">已完成複閱校樣槁</field>
+			<field name="body">{$editorialContactName}您好：
+
+我目前已經複閱過投稿《{$journalName}》之稿件〈{$articleTitle}〉的複閱工作，而稿件已經可以進行最後階段的校樣，並準備進行排版工作。
+
+感謝您對本文的付出
+{$authorName}</field>
+			<field name="description">這封電子郵件是由作者寄發給區段編輯，提醒他們作者已經完成作者端的校樣流程。</field>
+		</row>
+		<row>
+			<field name="email_key">COPYEDIT_AUTHOR_ACK</field>
+			<field name="subject">複閱校樣槁感謝函</field>
+			<field name="body">{$authorName}先生/女士您好：
+
+謝謝您複閱您投稿至 《{$journalName}》之稿件〈{$articleTitle}〉的校樣槁。我們會期盼能夠繼續進行出版這份作品的工作。
+
+{$editorialContactSignature}</field>
+			<field name="description">這封電子郵件是由區段編輯寄給稿件的作者，確認作者校樣流程已經完成，並且感謝他們的付出。</field>
+		</row>
+		<row>
+			<field name="email_key">COPYEDIT_FINAL_REQUEST</field>
+			<field name="subject">校樣槁的最後複閱工作</field>
+			<field name="body">{$copyeditorName}您好：
+
+作者和編輯目前都已經完成了他們對投稿《{$journalName}》之稿件〈{$articleTitle}〉的複閱工作。最終的「清樣版本」現在可以進行排版的工作了。
+
+稿件網址：{$submissionCopyeditingUrl}
+使用者名稱：{$copyeditorUsername}
+
+我們代表本期刊向您致謝
+
+{$editorialContactSignature}</field>
+			<field name="description">這封電子郵件是由區段編輯寄發給校樣編輯，請他們進行排版工作之前的最後一次校樣工作。</field>
+		</row>
+		<row>
+			<field name="email_key">COPYEDIT_FINAL_COMPLETE</field>
+			<field name="subject">已完成最後的校樣複閱工作</field>
+			<field name="body">{$editorialContactName}您好：
+
+我目前已經就投稿《{$journalName}》之稿件〈{$articleTitle}〉，備妥了一份清樣版本。此稿件已經可以交給版面編輯，並準備進行排版工作。
+
+{$copyeditorName}</field>
+			<field name="description">這封電子郵件是由校樣編輯寄給區段編輯，通知他們最後一次的校樣工作已經完成，並且現在可以開始排版的流成。</field>
+		</row>
+		<row>
+			<field name="email_key">COPYEDIT_FINAL_ACK</field>
+			<field name="subject">校樣定稿感謝函</field>
+			<field name="body">{$copyeditorName}您好：
+
+非常感謝您完成了投稿《{$journalName}》之稿件〈{$articleTitle}〉的校樣工作。這份為排版進行的「文字清理」預備工作在編輯流程中非常的重要。
+
+謝謝您
+
+{$editorialContactSignature}</field>
+			<field name="description">這封電子郵件是由區段編輯寄發給校樣編輯的感謝函，感謝他們完成了校樣版本的定稿以及他們的貢獻。</field>
+		</row>
+
+
+		<!--
+		  *
+		  * Layout Editing
+		  *版面編輯
+		  -->
+		<row>
+			<field name="email_key">LAYOUT_REQUEST</field>
+			<field name="subject">請進行排版工作</field>
+			<field name="body">{$layoutEditorName}:
+
+我想請您為投稿《{$journalName}》之稿件〈{$articleTitle}〉準備製版的工作。
+
+稿件網址：{$submissionLayoutUrl}
+使用者名稱：{$layoutEditorUsername}
+
+如果您目前無法進行這份工作，或者對這份工作有任何問題，請回信聯絡我們。感謝您對本期刊的貢獻。
+
+{$editorialContactSignature}</field>
+			<field name="description">這封電子郵件是由區段編輯寄發給版面編輯，通知他們要進行一份稿件的版面編輯工作。郵件中含有稿件的資訊以及如何取得稿件的指引。</field>
+		</row>
+		<row>
+			<field name="email_key">LAYOUT_COMPLETE</field>
+			<field name="subject">已完成製版</field>
+			<field name="body">{$editorialContactName}您好：
+
+目前已經為投稿《{$journalName}》之稿件〈{$articleTitle}〉完成製版工作，可以進行校對工作了。
+
+如果您有任何問題，請與我們聯絡。
+
+{$layoutEditorName}</field>
+			<field name="description">這封電子郵件是由版面編輯寄發給區段編輯，通知他們排版流程已經完成。</field>
+		</row>
+		<row>
+			<field name="email_key">LAYOUT_ACK</field>
+			<field name="subject">排版工作致謝</field>
+			<field name="body">{$layoutEditorName}:
+
+感謝您為對投稿《{$journalName}》之稿件〈{$articleTitle}〉完成了製版的工作。這份工作在出版的過程中有著相當重要的貢獻。
+
+謝謝您
+
+{$editorialContactSignature}</field>
+			<field name="description">這封電子郵件是由區段編輯寄發給版面編輯的感謝函，感謝他們為成版面的編輯工作以及他們的貢獻。</field>
+		</row>
+
+
+		<!--
+		  *
+		  * Proofreading
+		  *校對
+		  -->
+		<row>
+			<field name="email_key">PROOFREAD_AUTHOR_REQUEST</field>
+			<field name="subject">請作者進行校對工作</field>
+			<field name="body">{$authorName}先生/女士您好：
+
+我們要請您針對投稿《{$journalName}》之稿件〈{$articleTitle}〉進行文字排版的校對工作。要檢視排版版本，請使用下面的連結登入本期刊網站。點擊「檢視校對」連結來檢查即將出版之稿件中，有哪些地方可能會有字樣與排版上的錯誤。請依循我們提供之校對指引，將這些錯誤記錄在「校對修訂」的文字框中。
+
+稿件網址：{$submissionUrl}
+使用者名稱：{$authorUsername}
+
+如果您目前無法進行這份工作，或者對這份工作有任何問題，請回信聯絡我們。感謝您對本期刊的貢獻。
+
+{$editorialContactSignature}</field>
+			<field name="description">這封電子郵件是由區段編輯寄發給作者，通知他們一篇文章的排版稿已經可以進行校對了。郵件中含有稿件的資訊以及如何取得稿件的指引。</field>
+		</row>
+		<row>
+			<field name="email_key">PROOFREAD_AUTHOR_COMPLETE</field>
+			<field name="subject">作者已完成校對工作</field>
+			<field name="body">{$editorialContactName}您好：
+
+我目前已經為投稿《{$journalName}》之稿件〈{$articleTitle}〉完成了校對工作。排版稿目前已經可以讓校對者與版面編輯進行任何的最後修訂。
+
+{$authorName}</field>
+			<field name="description">這封電子郵件是由作者寄發給校對者與編輯，通知他們作者端的校對已經完成，而細節可以參見文章的評論意見。</field>
+		</row>
+		<row>
+			<field name="email_key">PROOFREAD_AUTHOR_ACK</field>
+			<field name="subject">作者校對致謝</field>
+			<field name="body">{$authorName}先生/女士您好：
+
+感謝您為您投稿《{$journalName}》之稿件〈{$articleTitle}〉完成了校對工作。短期內我們將會很快地出版您的作品。
+
+如果您有訂閱我們的出版通知服務，您將會在期刊出版的時候收到一封附有目錄的電子郵件通知。如果您有任何問題，請與我們聯絡。
+
+{$editorialContactSignature}</field>
+			<field name="description">這封電子郵件是由區段編輯寄發給作者，感謝他們完成了初步的校對流程並感謝他們的貢獻。</field>
+		</row>
+		<row>
+			<field name="email_key">PROOFREAD_REQUEST</field>
+			<field name="subject">請進行文章校對工作</field>
+			<field name="body">{$proofreaderName}您好：
+
+我們想請您為投稿《{$journalName}》之稿件〈{$articleTitle}〉進行校對工作。
+
+稿件網址：{$submissionUrl}
+使用者名稱：{$proofreaderUsername}
+
+如果您目前無法進行這份工作，或者對這份工作有任何問題，請回信聯絡我們。感謝您對本期刊的貢獻。
+
+{$editorialContactSignature}</field>
+			<field name="description">這封電子郵件是由區段編輯寄發給校對者，請他們進行文章排版稿的校對工作。郵件中含有稿件的資訊以及如核取得稿件的指引。</field>
+		</row>
+		<row>
+			<field name="email_key">PROOFREAD_COMPLETE</field>
+			<field name="subject">已完成校對工作</field>
+			<field name="body">{$editorialContactName}您好：
+
+我已經完成投稿《{$journalName}》之稿件〈{$articleTitle}〉的校對工作。排版稿目前已經可以由版面編輯進行最後的修訂。
+
+{$proofreaderName}</field>
+			<field name="description">這封電子郵件是由校對者寄發給區段編輯，通知他們校對者已經完成校對流程。</field>
+		</row>
+		<row>
+			<field name="email_key">PROOFREAD_ACK</field>
+			<field name="subject">校對致謝</field>
+			<field name="body">{$proofreaderName}您好：
+
+感謝您為您投稿《{$journalName}》之稿件〈{$articleTitle}〉完成了校對工作。這份工作對本期刊的品質有著很重要的貢獻。
+
+謝謝您
+
+{$editorialContactSignature}</field>
+			<field name="description">這封電子郵件是由區段編輯寄發給校對者，確認校對者完成了校對流程，並感謝他們的貢獻。</field>
+		</row>
+		<row>
+			<field name="email_key">PROOFREAD_LAYOUT_REQUEST</field>
+			<field name="subject">請版面編輯進行校對工作</field>
+			<field name="body">{$layoutEditorName}:
+
+我們想請您為投稿《{$journalName}》之稿件〈{$articleTitle}〉進行任何必要的校對工作，作為最終的排版稿校對版本。
+
+稿件網址：{$submissionUrl}
+使用者名稱：{$layoutEditorUsername}
+
+如果您目前無法進行這份工作，或者對這份工作有任何問題，請回信聯絡我們。感謝您對本期刊的貢獻。
+
+{$editorialContactSignature}</field>
+			<field name="description">這封電子郵件是由區段編輯寄發給版面編輯，通知他們文章的排版稿已經準備進行最後的校對工作。郵件中含有文章的資訊以及取得文章的指引。</field>
+		</row>
+		<row>
+			<field name="email_key">PROOFREAD_LAYOUT_COMPLETE</field>
+			<field name="subject">版面編輯的校對工作已經完成</field>
+			<field name="body">{$editorialContactName}您好：
+
+投稿《{$journalName}》之稿件〈{$articleTitle}〉的排版稿已經依照校對結果完成修訂。這篇文章現在已經可以出版了。
+
+{$layoutEditorName}</field>
+			<field name="description">這封電子郵件是由版面編輯寄發給區段編輯，通知他們已經完成了最後的校對階段以及文章目前已經可以出版了。</field>
+		</row>
+		<row>
+			<field name="email_key">PROOFREAD_LAYOUT_ACK</field>
+			<field name="subject">版面編輯校對工作致謝</field>
+			<field name="body">{$layoutEditorName}:
+
+感謝您為您投稿《{$journalName}》之稿件〈{$articleTitle}〉完成了校對修訂的工作。這份工作對本期刊的品質有著很重要的貢獻。
+
+謝謝您
+
+{$editorialContactSignature}</field>
+			<field name="description">這封電子郵件是由區段編輯寄發給版面編輯，感謝他們完成了最後階段的校對工作以及他們的貢獻。</field>
+		</row>
+		<row>
+			<field name="email_key">EMAIL_LINK</field>
+			<field name="subject">您可能會感興趣的期刊文章</field>
+			<field name="body">我想您會有興趣想看看{$authorName}所寫的〈{$articleTitle}〉，刊行在《{$journalName}》 ，第{$volume}冊，第{$number}期 ({$year}) 。網址為： "{$articleUrl}".</field>
+			<field name="description">這份電子郵件樣版讓一個註冊的讀者有機會將有關一篇文章的相關資訊寄給可能會感興趣的人。這可以透過「閱讀工具」進行，並且一定要由期刊管理員在「閱讀工具管理」頁面中啟用這項功能。</field>
+		</row>
+
+
+		<!--
+		  *
+		  * Subscriptions 
+		  * 訂閱
+		  -->
+		<row>
+			<field name="email_key">SUBSCRIPTION_NOTIFY</field>
+			<field name="subject">期刊訂閱通知信</field>
+			<field name="body">{$subscriberName}女士＼先生您好：
+
+您目前以下列的訂閱資訊，註冊登記成為我們線上期刊網站《{$journalName}》的一個訂戶：
+
+{$subscriptionType}
+
+要存取只有訂戶才能閱讀的文章內容，只要簡單地以您的使用者帳號名稱登入系統即可：「{$username}」。
+
+一旦您登入本系統，您就能夠在任何時候變更您的帳號相關設定以及密碼。
+
+請注意，如果您是以機關單位進行訂閱，貴單位的使用者就不需要進行登入，因為文章內容的訂閱動作將會自動地由系統進行授權。
+
+如果您有任何的疑問，請直接聯絡我們。
+
+謝謝您
+
+{$subscriptionContactSignature}</field>
+			<field name="description">這封電子郵件通知一位已註冊的讀者說，管理員已經替他們完成了訂閱手續。郵件中含有期刊的網址以及存取網站內容的指引。</field>
+		</row>
+		<row>
+			<field name="email_key">OPEN_ACCESS_NOTIFY</field>
+			<field name="subject">本期內容已經開放存取</field>
+			<field name="body">親愛的讀者您好：
+
+《{$journalName}》已經以開放存取的格式公開本期期刊內容。我們邀請您瀏覽這裡所附的目錄，並且接著訪問我們的網站 ({$journalUrl}) ，閱讀文章以及您感興趣的項目。
+
+感謝您持續地關注本期刊
+
+{$editorialContactSignature}</field>
+			<field name="description">這封電子郵件是寄發給要求在一期期刊變成公開格式時收到一份通知電子郵件的已註冊讀者。</field>
+		</row>
+		<row>
+			<field name="email_key">SUBSCRIPTION_BEFORE_EXPIRY</field>
+			<field name="subject">訂閱到期通知</field>
+			<field name="body">{$subscriberName}女士＼先生您好：
+
+您訂閱《{$journalName}》的期限將要到期。
+
+{$subscriptionType}
+到期日：{$expiryDate}
+
+為確保您能夠持續閱讀本期刊，請至期刊網站並且續訂本期刊。您可以使用您的帳號名稱「{$username}」登入系統。
+
+如果您有任何的疑問，請直接聯絡我們。
+
+{$subscriptionContactSignature}</field>
+			<field name="description">這封電子郵件通知一位訂戶說他們的訂閱期限將要到期了。郵件中含有期刊的網址以及進入網站的指南。</field>
+		</row>
+		<row>
+			<field name="email_key">SUBSCRIPTION_AFTER_EXPIRY</field>
+			<field name="subject">訂閱時間已經過期</field>
+			<field name="body">{$subscriberName}女士＼先生您好：
+
+您訂閱《{$journalName}》的期限已經過期。
+
+{$subscriptionType}
+到期日：{$expiryDate}
+
+要續訂本期刊，請前往本期刊網站。您可以使用您的帳號名稱「{$username}」登入系統。
+
+如果您有任何的疑問，請直接聯絡我們。
+
+{$subscriptionContactSignature}</field>
+			<field name="description">這封電子郵件通知一位訂戶說他們的訂閱時間已經到期了。郵件中含有期刊的網址以及進入網站的指南。</field>
+		</row>
+		<row>
+			<field name="email_key">SUBSCRIPTION_AFTER_EXPIRY_LAST</field>
+			<field name="subject">訂閱時間已經過期—最後提醒</field>
+			<field name="body">{$subscriberName}女士＼先生您好：
+
+您訂閱《{$journalName}》的期限已經過期。
+請注意，這是最後一封寄發給您的提醒信函。
+
+{$subscriptionType}
+到期日：{$expiryDate}
+
+要續訂本期刊，請前往本期刊網站。您可以使用您的帳號名稱「{$username}」登入系統。
+
+如果您有任何的疑問，請直接聯絡我們。
+
+{$subscriptionContactSignature}</field>
+			<field name="description">這封電子郵件通知一位訂戶說他們的訂閱時間已經到期了。郵件中含有期刊的網址以及進入網站的指南。</field>
+		</row>
+	</table>
+</data>
