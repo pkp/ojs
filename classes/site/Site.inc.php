@@ -76,6 +76,53 @@ class Site extends DataObject {
 	}
 
 	/**
+	 * Get "localized" site page title (if applicable).
+	 * @return string
+	 */
+	function getSitePageHeaderTitle() {
+		$typeArray = $this->getData('pageHeaderTitleType');
+		$imageArray = $this->getData('pageHeaderTitleImage');
+		$titleArray = $this->getData('title');
+
+		$title = null;
+
+		foreach (array(Locale::getLocale(), Locale::getPrimaryLocale()) as $locale) {
+			if (isset($typeArray[$locale]) && $typeArray[$locale]) {
+				if (isset($imageArray[$locale])) $title = $imageArray[$locale];
+			}
+			if (empty($title) && isset($titleArray[$locale])) $title = $titleArray[$locale];
+			if (!empty($title)) return $title;
+		}
+		return null;
+	}
+
+	/**
+	 * Get localized site logo type.
+	 * @return boolean
+	 */
+	function getSitePageHeaderTitleType() {
+		return $this->getLocalizedData('pageHeaderTitleType');
+	}
+
+	/**
+	 * Get site logo type.
+	 * @param $locale string
+	 * @return boolean
+	 */
+	function getPageHeaderTitleType($locale) {
+		return $this->getData('pageHeaderTitleType');
+	}
+
+	/**
+	 * Set site logo type.
+	 * @param $pageHeaderTitleType boolean
+	 * @param $locale string
+	 */
+	function setPageHeaderTitleType($pageHeaderTitleType, $locale) {
+		$this->setData('pageHeaderTitleType', $pageHeaderTitleType, $locale);
+	}
+
+	/**
 	 * Get original site stylesheet filename.
 	 * @return string
 	 */

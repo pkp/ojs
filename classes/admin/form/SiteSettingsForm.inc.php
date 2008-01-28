@@ -73,7 +73,8 @@ class SiteSettingsForm extends Form {
 			'about' => $site->getAbout(null), // Localized
 			'contactName' => $site->getContactName(null), // Localized
 			'contactEmail' => $site->getContactEmail(null), // Localized
-			'minPasswordLength' => $site->getMinPasswordLength()
+			'minPasswordLength' => $site->getMinPasswordLength(),
+			'pageHeaderTitleType' => $site->getPageHeaderTitleType(null) // Localized
 		);
 	}
 
@@ -100,6 +101,7 @@ class SiteSettingsForm extends Form {
 		$site->setContactName($this->getData('contactName'), null); // Localized
 		$site->setContactEmail($this->getData('contactEmail'), null); // Localized
 		$site->setMinPasswordLength($this->getData('minPasswordLength'));
+		$site->setPageHeaderTitleType($this->getData('pageHeaderTitleType'), null); // Localized
 
 		$siteDao->updateSite($site);
 	}

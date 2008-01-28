@@ -136,12 +136,7 @@ class TemplateManager extends Smarty {
 				$this->assign('pageFooter', $journal->getLocalizedSetting('journalPageFooter'));	
 			} else {
 				// Add the site-wide logo, if set for this locale or the primary locale
-				$logo = $site->getData('pageHeaderTitleImage');
-				foreach (array(Locale::getPrimaryLocale(), Locale::getLocale()) as $locale) {
-					if (isset($logo[$locale])) {
-						$this->assign('displayPageHeaderLogo', $logo[$locale]);
-					}
-				}
+				$this->assign('displayPageHeaderTitle', $site->getSitePageHeaderTitle());
 
 				$this->assign('siteTitle', $site->getSiteTitle());
 				$this->assign('publicFilesDir', Request::getBaseUrl() . '/' . PublicFileManager::getSiteFilesPath());
