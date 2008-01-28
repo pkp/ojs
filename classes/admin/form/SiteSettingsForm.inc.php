@@ -144,8 +144,11 @@ class SiteSettingsForm extends Form {
 			if($fileManager->uploadSiteFile('pageHeaderTitleImage', $uploadName)) {
 				$siteDao =& DAORegistry::getDAO('SiteDAO');
 				$setting = $site->getData('pageHeaderTitleImage');
+				list($width, $height) = getimagesize($fileManager->getSiteFilesPath() . '/' . $uploadName);
 				$setting[$locale] = array(
 					'originalFilename' => $fileManager->getUploadedFileName('pageHeaderTitleImage'),
+					'width' => $width,
+					'height' => $height,
 					'uploadName' => $uploadName,
 					'dateUploaded' => Core::getCurrentDate()
 				);
