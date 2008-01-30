@@ -89,12 +89,16 @@ class ImportOJS1 {
 	/** @var $conflicts array List of conflicting user accounts */
 	var $conflicts;
 
+	/** @var $redirects array List of redirect file contents */
+	var $redirects;
+
 	/**
 	 * Constructor.
 	 */
 	function ImportOJS1() {
 		$this->indexUrl = Request::getIndexUrl();
 		$this->conflicts = array();
+		$this->redirects = array();
 	}
 
 	/**
@@ -182,6 +186,10 @@ class ImportOJS1 {
 
 		// Rebuild search index
 		$this->rebuildSearchIndex();
+
+		if ($this->hasOption('redirect')) {
+			$this->generateRedirects();
+		}
 
 		return $this->journalId;
 	}
@@ -1577,10 +1585,97 @@ class ImportOJS1 {
 	}
 
 	/**
+	 * Create OJS 1 -> OJS 2 URL redirect mapping files
+	 */
+	function generateRedirects() {
+		$redirectHeader = "<?php\n\n";
+		$redirectFooter = "?>";
+
+		// index.php
+		$redirectIndex = $redirectHeader;
+		$redirectIndex .= "// Redirect OJS 1 index page to OJS 2 index page\n";
+		$redirectIndex .= "header('Location: " . $this->indexUrl . "/" . $this->journalPath . "/index');" . "\n\n";
+		$redirectIndex .= $redirectFooter;
+
+		// archive.php
+		$redirectArchive = $redirectHeader;
+		$redirectArchive .= "// Redirect OJS 1 archive page to OJS 2 archive page\n";
+		$redirectArchive .= "header('Location: " . $this->indexUrl . "/" . $this->journalPath . "/issue/archive');" . "\n\n";
+		$redirectArchive .= $redirectFooter;
+
+		// viewissue.php
+		$redirectIssue = $redirectHeader;
+		$redirectIssue .= "// Redirect OJS 1 issue TOC to OJS 2 issue TOC\n";
+		$redirectIssue .= '$issueId = (PHP_VERSION <= \'4.1.0\') ? ((isset($HTTP_GET_VARS)) ? (int)$HTTP_GET_VARS[\'id\'] : null) : (isset($_GET) ? (int)$_GET[\'id\'] : null);' . "\n\n";
+		$redirectIssue .= '$issueMap = array(' . "\n";
+		reset($this->issueMap);
+		$numIssues = sizeof($this->issueMap);
+		for ($i=0; $i<$numIssues; $i++) {
+			list($key, $item) = each($this->issueMap);
+			$redirectIssue .= "\t$key => $item";
+			if (($numIssues>1) && ($i != $numIssues-1)) {
+				$redirectIssue .= ",\n";
+			}
+		}
+		$redirectIssue .= "\n);\n\n";
+		$redirectIssue .= "header(\"Location: " . $this->indexUrl . "/" . $this->journalPath . "/issue/view/" . '$issueMap[$issueId]' . "\");" . "\n\n";
+		$redirectIssue .= $redirectFooter;
+
+		// viewarticle.php
+		$redirectArticle = $redirectHeader;
+		$redirectArticle .= "// Redirect OJS 1 articles to OJS 2 articles\n";
+		$redirectArticle .= '$articleId = (PHP_VERSION <= \'4.1.0\') ? ((isset($HTTP_GET_VARS)) ? (int)$HTTP_GET_VARS[\'id\'] : null) : (isset($_GET) ? (int)$_GET[\'id\'] : null);' . "\n\n";
+		$redirectArticle .= '$articleMap = array(' . "\n";
+		reset($this->articleMap);
+		$numArticles = sizeof($this->articleMap);
+		for ($i=0; $i<$numArticles; $i++) {
+			list($key, $item) = each($this->articleMap);
+			$redirectArticle .= "\t$key => $item";
+			if (($numArticles>1) && ($i != $numArticles-1)) {
+				$redirectArticle .= ",\n";
+			}
+		}
+		$redirectArticle .= "\n);\n\n";
+		$redirectArticle .= "header(\"Location: " . $this->indexUrl . "/" . $this->journalPath . "/article/view/" . '$articleMap[$articleId]' . "\");" . "\n\n";
+		$redirectArticle .= $redirectFooter;
+
+		// include/getdoc.php
+		$redirectArticleFile = $redirectHeader;
+		$redirectArticleFile .= "// Redirect OJS 1 article files to OJS 2 articles\n";
+		$redirectArticleFile .= '$articleId = (PHP_VERSION <= \'4.1.0\') ? ((isset($HTTP_GET_VARS)) ? (int)$HTTP_GET_VARS[\'article\'] : null) : (isset($_GET) ? (int)$_GET[\'article\'] : null);' . "\n\n";
+		$redirectArticleFile .= '$articleMap = array(' . "\n";
+		reset($this->articleMap);
+		$numArticles = sizeof($this->articleMap);
+		for ($i=0; $i<$numArticles; $i++) {
+			list($key, $item) = each($this->articleMap);
+			$redirectArticleFile .= "\t$key => $item";
+			if (($numArticles>1) && ($i != $numArticles-1)) {
+				$redirectArticleFile .= ",\n";
+			}
+		}
+		$redirectArticleFile .= "\n);\n\n";
+		$redirectArticleFile .= "header(\"Location: " . $this->indexUrl . "/" . $this->journalPath . "/article/view/" . '$articleMap[$articleId]' . "\");" . "\n\n";
+		$redirectArticleFile .= $redirectFooter;
+
+		$this->redirects[] = array('index.php', 'admin.journals.importOJS1.redirect.ojs1root', "$redirectIndex");
+		$this->redirects[] = array('archive.php', 'admin.journals.importOJS1.redirect.ojs1orojs2root', "$redirectArchive");
+		$this->redirects[] = array('viewissue.php', 'admin.journals.importOJS1.redirect.ojs1orojs2root',  "$redirectIssue");
+		$this->redirects[] = array('viewarticle.php', 'admin.journals.importOJS1.redirect.ojs1orojs2root',  "$redirectArticle");
+		$this->redirects[] = array('include/getdoc.php', 'admin.journals.importOJS1.redirect.ojs1orojs2root',  "$redirectArticleFile");
+	}
+
+	/**
 	 * Get the list of conflicting user accounts.
 	 */
 	function getConflicts() {
 		return $this->conflicts;
+	}
+
+	/**
+	 * Get OJS 1 -> OJS 2 file redirects.
+	 */
+	function getRedirects() {
+		return $this->redirects;
 	}
 }
 

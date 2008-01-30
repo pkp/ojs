@@ -61,6 +61,9 @@ class migrate extends CommandLineTool {
 			. "options           importSubscriptions - import subscription type and subscriber\n"
 			. "                  data\n"
 			. "                  transcode - convert journal metadata from Latin1 to UTF8\n"
+			. "                  redirect - generate files to map OJS 1 URLs to OJS 2 URLs.\n"
+			. "                             Requires that the user running this tool has\n"
+			. "                             write permission to the OJS 2 files directory.\n"
 			. "                  verbose - print additional debugging information\n";
 	}
 
@@ -70,13 +73,45 @@ class migrate extends CommandLineTool {
 	function execute() {
 		$importer = &new ImportOJS1();
 		if ($importer->import($this->journalPath, $this->importPath, $this->options)) {
+			$redirects = $importer->getRedirects();
+
+			$redirectResults = '';
+			if (in_array('redirect', $this->options) && !empty($redirects)) {
+				$redirectFilesDir = Config::getVar('files', 'files_dir') . DIRECTORY_SEPARATOR . 'redirect' . DIRECTORY_SEPARATOR . $this->journalPath;
+				$redirectSummary = "Redirect PHP files have been created in the following directory:\n\n$redirectFilesDir\n\nTo enable redirection, these files will need to be moved to either the OJS 1 filesystem path, or, for single journal installations, to the OJS 2 filesystem path. Once these files are moved, you can safely delete the redirect directory ($redirectFilesDir) created by this tool.\n\nSee $redirectFilesDir" . DIRECTORY_SEPARATOR . "README for more information.";
+				$redirectReadme = "To enable redirection, the following files will need to be moved to either the OJS 1 filesystem path, or, for single journal installations, to the OJS 2 filesystem path. Once these files are moved, you can safely delete the redirect directory ($redirectFilesDir).\n\n";
+				reset($redirects);
+				$errors = false;
+
+				while (list($key, $redirect) = each($redirects)) {
+					$redirectFile = $redirect[0];
+					$redirectDescKey = $redirect[1];
+					$redirectContents = $redirect[2];
+
+					$redirectFilePath = $redirectFilesDir . DIRECTORY_SEPARATOR . $redirectFile;
+					if (FileManager::writeFile($redirectFilePath, $redirectContents) !== false) {
+						$redirectReadme .= "$redirectFile\n";
+						$redirectReadme .= "-- " . Locale::translate($redirectDescKey) . "\n\n";
+					} else {
+						$errors = true;
+						$redirectSummary .= "\n\nError writing $redirectFilePath. Please ensure that the user running this script has write permission to the OJS 2 files directory.";
+					}
+				}
+			}
+
+			if (!$errors) {
+				FileManager::writeFile($redirectFilesDir . DIRECTORY_SEPARATOR . 'README', $redirectReadme);
+			}
+
 			printf("Import completed\n"
 					. "Users imported:     %u\n"
 					. "Issues imported:    %u\n"
-					. "Articles imported:  %u\n",
+					. "Articles imported:  %u\n\n"
+					. "%s\n",
 				$importer->userCount,
 				$importer->issueCount,
-				$importer->articleCount);
+				$importer->articleCount,
+				$redirectSummary);
 		} else {
 			printf("Import failed!\nERROR: %s\n", $importer->error());
 		}

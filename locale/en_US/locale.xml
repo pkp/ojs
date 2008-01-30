@@ -739,7 +739,11 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="admin.journals.enableJournalInstructions">Enable this journal to appear publicly on the site</message>
 	<message key="admin.journals.journalDescription">Journal description</message>
 	<message key="admin.journals.importOJS1">Import from OJS 1</message>
+	<message key="admin.journals.importOJS1.success">Journal import has completed successfully.</message>
 	<message key="admin.journals.importOJS1.editMigratedJournal">Edit Migrated Journal</message>
+	<message key="admin.journals.importOJS1.redirect.desc">To redirect OJS 1 URLs to OJS 2 URLs, create the following PHP files using the file contents below. The corresponding files can then be placed in the OJS 1 filesystem path, or, for single journal installations, in the OJS 2 filesystem path.</message>
+	<message key="admin.journals.importOJS1.redirect.ojs1root">Place in the old OJS 1 filesystem path (i.e., /var/www/ojs1).</message>
+	<message key="admin.journals.importOJS1.redirect.ojs1orojs2root">Place in the old OJS 1 filesystem path (i.e., /var/www/ojs1), or, for single journal installations, in the new OJS 2 filesystem path (i.e., /var/www/ojs2).</message>
 	<message key="admin.journals.importOJS1.conflict.desc">Some user accounts had conflicting information. OJS 1.x allows multiple user accounts to share the same email address, while OJS 2.x does not. In the list below, the second account listed has had a temporary email account assigned to it. These should be corrected by hand, either by assigning a different email account, or by merging accounts.</message>
 	<message key="admin.journals.importOJS1.conflict">{$firstUsername} ({$firstName}) and {$secondUsername} ({$secondName})</message>
 	<message key="admin.journals.importOJS1Instructions">Consult the UPGRADE document distributed with OJS for detailed information on migrating data from OJS 1 to OJS 2.</message>
@@ -748,6 +752,7 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="admin.journal.importPathInstructions">Complete local filesystem path to the OJS 1 installation (e.g., "/var/www/ojs").</message>
 	<message key="admin.journals.importSubscriptions">Import subscriptions</message>
 	<message key="admin.journals.transcode">Transcode article metadata from ISO8859-1</message>
+	<message key="admin.journals.redirect">Generate code to map OJS 1 URLs to OJS 2 URLs</message>
 	<message key="admin.journals.form.importPathRequired">The import path is required.</message>
 	<message key="admin.journals.importErrors">Importing failed to complete successfully</message>
 

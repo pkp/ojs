@@ -155,15 +155,14 @@ class AdminJournalHandler extends AdminHandler {
 		$importForm->readInputData();
 
 		if ($importForm->validate() && ($journalId = $importForm->execute()) !== false) {
+			$redirects = $importForm->getRedirects();
 			$conflicts = $importForm->getConflicts();
-			if (!empty($conflicts)) {
-				$templateMgr =& TemplateManager::getManager();
-				$templateMgr->assign('journalId', $journalId);
-				$templateMgr->assign('conflicts', $conflicts);
-				$templateMgr->display('admin/importConflicts.tpl');
-			} else {
-				Request::redirect(null, null, 'editJournal', $journalId);
-			}
+
+			$templateMgr =& TemplateManager::getManager();
+			$templateMgr->assign('journalId', $journalId);
+			$templateMgr->assign('redirects', $redirects);
+			$templateMgr->assign('conflicts', $conflicts);
+			$templateMgr->display('admin/importComplete.tpl');
 		} else {
 			parent::setupTemplate(true);
 			$importForm->display();

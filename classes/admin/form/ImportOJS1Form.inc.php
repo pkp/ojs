@@ -65,6 +65,10 @@ class ImportOJS1Form extends Form {
 	function getConflicts() {
 		return $this->importer->getConflicts();
 	}
+
+	function getRedirects() {
+		return $this->importer->getRedirects();
+	}
 }
 
 ?>
