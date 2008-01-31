@@ -28,10 +28,12 @@
 		{if count($searchResults) > 0}
 			<h5>{translate key="help.matchesFound" matches=$searchResults|@count}</h5>
 			<ul>
+			{assign var=resultNum value=0}
 			{foreach name=results from=$searchResults item=result}
 				{assign var=sections value=$result.topic->getSections()}
-				<li>
-					<a href="{url op="view" path=$result.topic->getId()|explode:"/"}">{$result.topic->getTitle()}</a>
+				{assign var=resultNum value=$resultNum+1}
+				<li id="result{$resultNum}">
+					<a href="{url op="view" path=$result.topic->getId()|explode:"/" keyword=$helpSearchKeyword|escape result=$resultNum}">{$result.topic->getTitle()}</a>
 					{eval var=$sections[0]->getContent()|strip_tags|truncate:200}
 					<div class="searchBreadcrumb">
 						<a href="{url op="view" path="index"|to_array:"topic":"000000"}">{translate key="navigation.home"}</a>
@@ -41,7 +43,7 @@
 							{/if}
 						{/foreach}
 						{if $result.topic->getId() != "index/topic/000000"}
-						&gt; <a href="{url op="view" path=$result.topic->getId()|explode:"/"}" class="current">{$result.topic->getTitle()}</a>
+						&gt; <a href="{url op="view" path=$result.topic->getId()|explode:"/" keyword=$helpSearchKeyword|escape result=$resultNum}" class="current">{$result.topic->getTitle()}</a>
 						{/if}
 					</div>
 				</li>

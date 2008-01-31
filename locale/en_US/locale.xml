@@ -2315,6 +2315,7 @@ current password.<br /><br />Enter your email address below to reset your passwo
 	<message key="help.toc">Table of Contents</message>	
 	<message key="help.searchResults">Search Results</message>
 	<message key="help.searchResultsFor">Results for</message>
+	<message key="help.searchReturnResults">Return to Search Results</message>
 	<message key="help.matchesFound">{$matches} matches found</message>
 	<message key="help.noMatchingTopics">No matching help topics were found.</message>
 	<message key="help.helpIndex">Help Index</message>
