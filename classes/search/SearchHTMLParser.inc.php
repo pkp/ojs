@@ -15,29 +15,20 @@
  */
 
 import('search.SearchFileParser');
+import('core.String');
 
 class SearchHTMLParser extends SearchFileParser {
 
-	// From php.net/html_entity_decode
-	function unhtmlentities($string) {
-		// replace numeric entities
-		$string = preg_replace('~&#x([0-9a-f]+);~ei', 'chr(hexdec("\\1"))', $string);
-		$string = preg_replace('~&#([0-9]+);~e', 'chr(\\1)', $string);
-		// replace literal entities
-		$trans_tbl = get_html_translation_table(HTML_ENTITIES);
-		$trans_tbl = array_flip($trans_tbl);
-		return strtr($string, $trans_tbl);
-	}
-
-
 	function doRead() {
+		// strip HTML tags from the read line
 		$line = fgetss($this->fp, 4096);
-		$line = str_replace('&nbsp;', ' ', $line);
-		if (function_exists('html_entity_decode')) {
-			$line = html_entity_decode($line);
-		} else {
-			$line = $this->unhtmlentities($line);
-		}
+
+		// convert HTML entities to valid UTF-8 characters
+		$line = String::html2utf($line);
+		
+		// slightly (~10%) faster than above, but not quite as accurate, and requires html_entity_decode()
+//		$line = html_entity_decode($line, ENT_COMPAT, strtoupper(Config::getVar('i18n', 'client_charset')));
+
 		return $line;
 	}
 

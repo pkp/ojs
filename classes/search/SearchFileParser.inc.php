@@ -107,6 +107,7 @@ class SearchFileParser {
 				$returner = &new SearchFileParser($path);
 				break;
 			case 'text/html':
+			case 'text/xml':
 			case 'application/xhtml':
 			case 'application/xml':
 				$returner = &new SearchHTMLParser($path);

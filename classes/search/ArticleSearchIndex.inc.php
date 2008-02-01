@@ -105,12 +105,13 @@ class ArticleSearchIndex {
 		$minLength = Config::getVar('search', 'min_word_length');
 		$stopwords = &ArticleSearchIndex::loadStopwords();
 
-		// Remove punctuation
-		if (is_array($text)) {
-			$text = join("\n", $text);
-		}
+		// Join multiple lines into a single string
+		if (is_array($text)) $text = join("\n", $text);
 
-		$cleanText = String::regexp_replace('/[!"\#\$%\'\(\)\.\?@\[\]\^`\{\}~]/', '', $text);
+		$cleanText = Core::cleanVar($text);
+
+		// Remove punctuation
+		$cleanText = String::regexp_replace('/[!"\#\$%\'\(\)\.\?@\[\]\^`\{\}~]/', '', $cleanText);
 		$cleanText = String::regexp_replace('/[\+,:;&\/<=>\|\\\]/', ' ', $cleanText);
 		$cleanText = String::regexp_replace('/[\*]/', $allowWildcards ? '%' : ' ', $cleanText);
 		$cleanText = String::strtolower($cleanText);
