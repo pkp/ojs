@@ -74,11 +74,13 @@ class migrate extends CommandLineTool {
 		$importer = &new ImportOJS1();
 		if ($importer->import($this->journalPath, $this->importPath, $this->options)) {
 			$redirects = $importer->getRedirects();
+			$conflicts = $importer->getConflicts();
 
-			$redirectResults = '';
+			// Generate redirect files if redirect option enabled
+			$redirectResults = $redirectSummary = '';
 			if (in_array('redirect', $this->options) && !empty($redirects)) {
 				$redirectFilesDir = Config::getVar('files', 'files_dir') . DIRECTORY_SEPARATOR . 'redirect' . DIRECTORY_SEPARATOR . $this->journalPath;
-				$redirectSummary = "Redirect PHP files have been created in the following directory:\n\n$redirectFilesDir\n\nTo enable redirection, these files will need to be moved to either the OJS 1 filesystem path, or, for single journal installations, to the OJS 2 filesystem path. Once these files are moved, you can safely delete the redirect directory ($redirectFilesDir) created by this tool.\n\nSee $redirectFilesDir" . DIRECTORY_SEPARATOR . "README for more information.";
+				$redirectSummary = "\n\nRedirect PHP files have been created in the following directory:\n\n$redirectFilesDir\n\nTo enable redirection, these files will need to be moved to either the OJS 1 filesystem path, or, for single journal installations, to the OJS 2 filesystem path. Once these files are moved, you can safely delete the redirect directory ($redirectFilesDir) created by this tool.\n\nSee $redirectFilesDir" . DIRECTORY_SEPARATOR . "README for more information.\n";
 				$redirectReadme = "To enable redirection, the following files will need to be moved to either the OJS 1 filesystem path, or, for single journal installations, to the OJS 2 filesystem path. Once these files are moved, you can safely delete the redirect directory ($redirectFilesDir).\n\n";
 				reset($redirects);
 				$errors = false;
@@ -97,21 +99,38 @@ class migrate extends CommandLineTool {
 						$redirectSummary .= "\n\nError writing $redirectFilePath. Please ensure that the user running this script has write permission to the OJS 2 files directory.";
 					}
 				}
+
+				if (!$errors) {
+					FileManager::writeFile($redirectFilesDir . DIRECTORY_SEPARATOR . 'README', $redirectReadme);
+				}
 			}
 
-			if (!$errors) {
-				FileManager::writeFile($redirectFilesDir . DIRECTORY_SEPARATOR . 'README', $redirectReadme);
+			// Get conflicts from user import
+			$conflictSummary = '';
+			if (!empty($conflicts)) {
+				$conflictSummary = "\n\n" . Locale::translate('admin.journals.importOJS1.conflict.desc') . "\n";
+				while (list($key, $conflict) = each($conflicts)) {
+					$firstUser = $conflict[0];
+					$secondUser = $conflict[1];	
+					$conflictSummary .= "\n* " . Locale::translate('admin.journals.importOJS1.conflict', array(
+											"firstUsername" => $firstUser->getUsername(),
+											"firstName" => $firstUser->getFullName(),
+											"secondUsername" => $secondUser->getUsername(),
+											"secondName" => $secondUser->getFullName()
+										));
+				}
 			}
 
 			printf("Import completed\n"
 					. "Users imported:     %u\n"
 					. "Issues imported:    %u\n"
-					. "Articles imported:  %u\n\n"
+					. "Articles imported:  %u\n"
 					. "%s\n",
 				$importer->userCount,
 				$importer->issueCount,
 				$importer->articleCount,
-				$redirectSummary);
+				$redirectSummary . $conflictSummary
+			);
 		} else {
 			printf("Import failed!\nERROR: %s\n", $importer->error());
 		}
