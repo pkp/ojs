@@ -1699,7 +1699,6 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		$rangeInfo = &Handler::getRangeInfo('submissionNotes');
 		$articleNoteDao = &DAORegistry::getDAO('ArticleNoteDAO');
-		$submissionNotes =& $articleNoteDao->getArticleNotes($articleId, $rangeInfo);
 
 		// submission note edit
 		if ($noteViewType == 'edit') {
@@ -1710,7 +1709,6 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign_by_ref('submission', $submission);
-		$templateMgr->assign_by_ref('submissionNotes', $submissionNotes);
 		$templateMgr->assign('noteViewType', $noteViewType);
 		if (isset($articleNote)) {
 			$templateMgr->assign_by_ref('articleNote', $articleNote);		
@@ -1718,6 +1716,9 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		if ($noteViewType == 'edit' || $noteViewType == 'add') {
 			$templateMgr->assign('showBackLink', true);
+		} else {
+			$submissionNotes =& $articleNoteDao->getArticleNotes($articleId, $rangeInfo);
+			$templateMgr->assign_by_ref('submissionNotes', $submissionNotes);
 		}
 
 		$templateMgr->display('sectionEditor/submissionNotes.tpl');
