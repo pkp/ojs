@@ -49,13 +49,13 @@ class UserExportDom {
 			if (is_array($user->getSignature(null))) {
 				foreach($user->getSignature(null) as $locale => $value) {
 					$signatureNode =& XMLCustomWriter::createChildWithText($doc, $userNode, 'signature', $value, false);
-					if ($interestsNode) {
-						XMLCustomWriter::setAttribute($interestsNode, 'locale', $locale);
+					if ($signatureNode) {
+						XMLCustomWriter::setAttribute($signatureNode, 'locale', $locale);
 					}
 					unset($signatureNode);
 				}
 			}
-			if (is_array($user->getSignature(null))) {
+			if (is_array($user->getInterests(null))) {
 				foreach($user->getInterests(null) as $locale => $value) {
 					$interestsNode =& XMLCustomWriter::createChildWithText($doc, $userNode, 'interests', $value, false);
 					if ($interestsNode) {

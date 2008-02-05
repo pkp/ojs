@@ -76,16 +76,19 @@ class SearchHandler extends Handler {
 			$publishedArticles = $authorDao->getPublishedArticlesForAuthor($journal?$journal->getJournalId():null, $firstName, $middleName, $lastName, $affiliation);
 
 			// Load information associated with each article.
+			$journals = array();
 			$issues = array();
 			$sections = array();
 			$issuesUnavailable = array();
 
-			$issueDao = &DAORegistry::getDAO('IssueDAO');
-			$sectionDao = &DAORegistry::getDAO('SectionDAO');
+			$issueDao =& DAORegistry::getDAO('IssueDAO');
+			$sectionDao =& DAORegistry::getDAO('SectionDAO');
+			$journalDao =& DAORegistry::getDAO('JournalDAO');
 
 			foreach ($publishedArticles as $article) {
 				$issueId = $article->getIssueId();
 				$sectionId = $article->getSectionId();
+				$journalId = $article->getJournalId();
 
 				if (!isset($issues[$issueId])) {
 					import('issue.IssueAction');
@@ -93,7 +96,12 @@ class SearchHandler extends Handler {
 					$issues[$issueId] = &$issue;
 					$issuesUnavailable[$issueId] = IssueAction::subscriptionRequired($issue) && (!IssueAction::subscribedUser($journal) && !IssueAction::subscribedDomain($journal));
 				}
-				if (!isset($sections[$sectionId])) $sections[$sectionId] = &$sectionDao->getSection($sectionId);
+				if (!isset($journals[$journalId])) {
+					$journals[$journalId] =& $journalDao->getJournal($journalId);
+				}
+				if (!isset($sections[$sectionId])) {
+					$sections[$sectionId] =& $sectionDao->getSection($sectionId);
+				}
 			}
 
 			if (empty($publishedArticles)) {
@@ -105,6 +113,7 @@ class SearchHandler extends Handler {
 			$templateMgr->assign_by_ref('issues', $issues);
 			$templateMgr->assign('issuesUnavailable', $issuesUnavailable);
 			$templateMgr->assign_by_ref('sections', $sections);
+			$templateMgr->assign_by_ref('journals', $journals);
 			$templateMgr->assign('firstName', $firstName);
 			$templateMgr->assign('middleName', $middleName);
 			$templateMgr->assign('lastName', $lastName);

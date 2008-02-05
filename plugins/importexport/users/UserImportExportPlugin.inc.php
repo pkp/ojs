@@ -80,7 +80,6 @@ class UserImportExportPlugin extends ImportExportPlugin {
 				import('file.FileManager');
 				if (($userFile = FileManager::getUploadedFilePath('userFile')) !== false) {
 					// Import the uploaded file
-					$journal = &Request::getJournal();
 					$parser = &new UserXMLParser($journal->getJournalId());
 					$users = &$parser->parseData($userFile);
 
@@ -157,7 +156,6 @@ class UserImportExportPlugin extends ImportExportPlugin {
 					array_push($users, $newUser);
 				}
 
-				$journal = &Request::getJournal();
 				$parser = &new UserXMLParser($journal->getJournalId());
 				$parser->setUsersToImport($users);
 				if (!$parser->importUsers($sendNotify, $continueOnError)) {

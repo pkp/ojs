@@ -55,7 +55,7 @@ class GroupMembershipDAO extends DAO {
 	 * @return ItemIterator
 	 */
 	function &getMemberships($groupId, $rangeInfo = null) {
-		$result = &$this->retrieve(
+		$result =& $this->retrieveRange(
 			'SELECT * FROM group_memberships m, users u WHERE group_id = ? AND u.user_id = m.user_id ORDER BY m.seq',
 			$groupId,
 			$rangeInfo

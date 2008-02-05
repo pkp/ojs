@@ -991,6 +991,7 @@ class ImportOJS1 {
 			$article->setJournalId($this->journalId);
 			$article->setSectionId(isset($this->sectionMap[$row['fkSectionID']]) ? $this->sectionMap[$row['fkSectionID']] : 0);
 			$article->setTitle(Core::cleanVar($row['chMetaTitle']), $locale);
+			$article->setPages(Core::cleanVar($row['chPages']));
 			$article->setAbstract(Core::cleanVar($row['chMetaAbstract']), $locale);
 			$article->setDiscipline(Core::cleanVar($row['chMetaDiscipline']), $locale);
 			$article->setSubjectClass(Core::cleanVar($row['chMetaSubjectClass']), $locale);
