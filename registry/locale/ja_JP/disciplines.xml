@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	
+<!--
+  * disciplines.xml
+  *
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localized list of disciplines.
+  *
+  -->
+
+<!DOCTYPE disciplines [
+	<!ELEMENT disciplines (discipline+)>
+	<!ELEMENT discipline EMPTY>
+		<!ATTLIST discipline
+			code CDATA #REQUIRED
+			name CDATA #REQUIRED>
+]>
+	
+<disciplines>
+	<!-- Natural sciences -->
+	<discipline name="天文学" code="A1"/>
+	<discipline name="行動科学" code="A2"/>
+	<discipline name="生物学" code="A3"/>
+	<discipline name="化学" code="A4"/>
+	<discipline name="物理学" code="A5"/>
+	<discipline name="地球科学" code="A6"/>
+	<!-- Mathematics and Computer science -->
+	<discipline name="数学" code="B1"/>
+	<discipline name="計算機科学" code="B2"/>
+	<!-- Social sciences -->
+	<discipline name="人類学" code="C1"/>
+	<discipline name="考古学" code="C2"/>
+	<discipline name="建築学" code="C3"/>
+	<discipline name="コミュニケーション学" code="C4"/>
+	<discipline name="経済学" code="C5"/>
+	<discipline name="倫理学" code="C6"/>
+	<discipline name="民族学" code="C7"/>
+	<discipline name="地理学" code="C8"/>
+	<discipline name="政治学" code="C9"/>
+	<discipline name="心理学" code="C10"/>
+	<discipline name="社会学" code="C11"/>
+	<discipline name="教育学" code="C12"/>
+	<!-- Humanities and arts -->
+	<discipline name="美学" code="D1"/>
+	<discipline name="文化学" code="D2"/>
+	<discipline name="古典学" code="D3"/>
+	<discipline name="創作学" code="D4"/>
+	<discipline name="舞踊学" code="D5"/>
+	<discipline name="英語学" code="D6"/>
+	<discipline name="映画学･映画評論" code="D7"/>
+	<discipline name="民俗学" code="D8"/>	
+	<discipline name="歴史学" code="D9"/>
+	<discipline name="言語学" code="D10"/>
+	<discipline name="文学" code="D11"/>
+	<discipline name="メディア学" code="D12"/>
+	<discipline name="音楽" code="D13"/>
+	<discipline name="博物館学" code="D14"/>	
+	<discipline name="神話学" code="D15"/>
+	<discipline name="文献学" code="D16"/>
+	<discipline name="哲学" code="D17"/>
+	<discipline name="宗教学" code="D18"/>
+	<discipline name="記号学" code="D19"/>
+	<discipline name="演劇学" code="D20"/>
+	<discipline name="女性学･ジェンダー学" code="D21"/>
+	<!-- Applied sciences -->
+	<discipline name="農学" code="E1"/>
+	<discipline name="ビジネス学" code="E2"/>
+	<discipline name="デザイン学" code="E3"/>
+	<discipline name="工学" code="E4"/>
+	<discipline name="人間工学" code="E5"/>
+	<discipline name="家庭科学" code="E6"/>
+	<discipline name="林学" code="E7"/>	
+	<discipline name="健康科学" code="E8"/>	
+	<discipline name="ジャーナリズム･マスコミュニケーション学" code="E9"/>
+	<discipline name="法学" code="E10"/>
+	<discipline name="図書館情報学" code="E11"/>
+	<discipline name="医学" code="E12"/>
+	<discipline name="軍事科学" code="E13"/>
+	<discipline name="社会福祉学" code="E14"/>
+	<discipline name="その他" code="F1"/>
+</disciplines>

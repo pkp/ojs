@@ -86,4 +86,34 @@
 
 	<message key="plugins.importexport.native.import.success">インポート成功</message>
 	<message key="plugins.importexport.native.import.success.description">インポートは成功しました。インポートされたアイテムを以下に示します。</message>
+	<message key="plugins.importexport.native.import.error.issueTitleLocaleUnsupported">指定された巻号タイトル（"{$issueTitle}"）にこの雑誌がサポートしていないロケール（"{$locale}"）が使用されています。</message>
+	<message key="plugins.importexport.native.import.error.issueDescriptionLocaleUnsupported">指定された巻号（"{$issueTitle}"）の記述にこの雑誌がサポートしていないロケール（"{$locale}"）が使用されています。</message>
+	<message key="plugins.importexport.native.import.error.coverLocaleUnsupported">指定された巻号（"{$issueTitle}"）の表紙にこの雑誌がサポートしていないロケール（"{$locale}"）が使用されています。</message>
+	<message key="plugins.importexport.native.import.error.sectionTitleLocaleUnsupported">巻号（"{$issueTitle}"）に指定されたセクションタイトル（"{$sectionTitle}"）に、この雑誌がサポートしていないロケール（"{$locale}"）が使用されています。</message>
+	<message key="plugins.importexport.native.import.error.sectionAbbrevLocaleUnsupported">巻号（"{$issueTitle}"）に指定されたセクション略称（"{$sectionAbbrev}"）に、この雑誌がサポートしていないロケール（"{$locale}"）が使用されています。</message>
+	<message key="plugins.importexport.native.import.error.sectionIdentifyTypeLocaleUnsupported">巻号（"{$issueTitle}"）に指定されたセクション識別種別（"{$sectionIdentifyType}"）に、この雑誌がサポートしていないロケール（"{$locale}"）が使用されています。</message>
+	<message key="plugins.importexport.native.import.error.sectionPolicyLocaleUnsupported">巻号（"{$issueTitle}"）に指定されたセクションポリシー（"{$sectionPolicy}"）に、この雑誌がサポートしていないロケール（"{$locale}"）が使用されています。</message>
+	<message key="plugins.importexport.native.import.error.sectionTitleMismatch">セクションタイトル"{$section1Title}"は、既に存在する別の巻号（"{$issueTitle}"）のセクションタイトル"{$section2Title}"と同じです。</message>
+	<message key="plugins.importexport.native.import.error.sectionTitleMatch">巻号（"{$issueTitle}"）のセクションタイトル"{$sectionTitle}"は既に存在する別のセクションタイトルと同じですが、両セクションの別タイトルが一致しません。</message>
+	<message key="plugins.importexport.native.import.error.sectionAbbrevMismatch">セクション略称"{$section1Abbrev}"は、既に存在する別の巻号（"{$issueTitle}"）のセクション略称"{$section2Abbrev}"と同じです。</message>
+	<message key="plugins.importexport.native.import.error.sectionAbbrevMatch">巻号（"{$issueTitle}"）のセクション略称"{$sectionAbbrev}"は既に存在する別のセクション略称と同じですが、両セクションの別略称が一致しません。</message>
+	<message key="plugins.importexport.native.import.error.articleDisciplineLocaleUnsupported">巻号（"{$issueTitle}"）の論文（"{$articleTitle}"）に指定された論文記述に、この雑誌がサポートしていないロケール（"{$locale}"）が使用されています。</message>
+	<message key="plugins.importexport.native.import.error.articleTypeLocaleUnsupported">巻号（"{$issueTitle}"）の論文（"{$articleTitle}"）に指定された論文種別に、この雑誌がサポートしていないロケール（"{$locale}"）が使用されています。</message>
+	<message key="plugins.importexport.native.import.error.articleSubjectLocaleUnsupported">巻号（"{$issueTitle}"）の論文（"{$articleTitle}"）に指定された論文の主題に、この雑誌がサポートしていないロケール（"{$locale}"）が使用されています。</message>
+	<message key="plugins.importexport.native.import.error.articleSubjectClassLocaleUnsupported">巻号（"{$issueTitle}"）の論文（"{$articleTitle}"）に指定された論文の主題分類に、この雑誌がサポートしていないロケール（"{$locale}"）が使用されています。</message>
+	<message key="plugins.importexport.native.import.error.articleCoverageGeoLocaleUnsupported">巻号（"{$issueTitle}"）の論文（"{$articleTitle}"）に指定された論文の地理空間的範囲に、この雑誌がサポートしていないロケール（"{$locale}"）が使用されています。</message>
+	<message key="plugins.importexport.native.import.error.articleCoverageChronLocaleUnsupported">巻号（"{$issueTitle}"）の論文（"{$articleTitle}"）に指定された論文の時代的または歴史的範囲に、この雑誌がサポートしていないロケール（"{$locale}"）が使用されています。</message>
+	<message key="plugins.importexport.native.import.error.articleCoverageSampleLocaleUnsupported">巻号（"{$issueTitle}"）の論文（"{$articleTitle}"）に指定された論文の研究資料の特徴に、この雑誌がサポートしていないロケール（"{$locale}"）が使用されています。</message>
+	<message key="plugins.importexport.native.import.error.articleSponsorLocaleUnsupported">巻号（"{$issueTitle}"）の論文（"{$articleTitle}"）に指定された論文のスポンサーに、この雑誌がサポートしていないロケール（"{$locale}"）が使用されています。</message>
+	<message key="plugins.importexport.native.import.error.articleAuthorCompetingInterestsLocaleUnsupported">巻号（"{$issueTitle}"）の論文（"{$articleTitle}"）の著者 "{$authorFullName}" に指定された著者の利害の競合に、この雑誌がサポートしていないロケール（"{$locale}"）が使用されています。</message>
+	<message key="plugins.importexport.native.import.error.articleAuthorBiographyLocaleUnsupported">巻号（"{$issueTitle}"）の論文（"{$articleTitle}"）の著者 "{$authorFullName}" に指定された著者の経歴に、この雑誌がサポートしていないロケール（"{$locale}"）が使用されています。</message>
+	<message key="plugins.importexport.native.import.error.galleyLocaleUnsupported">巻号（"{$issueTitle}"）の論文（"{$articleTitle}"）のゲラに、この雑誌がサポートしていないロケール（"{$locale}"）が使用されています。</message>
+	<message key="plugins.importexport.native.import.error.articleSuppFileTitleLocaleUnsupported">巻号（"{$issueTitle}"）の論文（"{$articleTitle}"）の補助ファイルのタイトル（"{$suppFileTitle}"）に、この雑誌がサポートしていないロケール（"{$locale}"）が使用されています。</message>
+	<message key="plugins.importexport.native.import.error.articleSuppFileCreatorLocaleUnsupported">巻号（"{$issueTitle}"）の論文（"{$articleTitle}"）の補助ファイル（"{$suppFileTitle}"）の作成者に、この雑誌がサポートしていないロケール（"{$locale}"）が使用されています。</message>
+	<message key="plugins.importexport.native.import.error.articleSuppFileSubjectLocaleUnsupported">巻号（"{$issueTitle}"）の論文（"{$articleTitle}"）の補助ファイル（"{$suppFileTitle}"）の主題に、この雑誌がサポートしていないロケール（"{$locale}"）が使用されています。</message>
+	<message key="plugins.importexport.native.import.error.articleSuppFileTypeOtherLocaleUnsupported">巻号（"{$issueTitle}"）の論文（"{$articleTitle}"）の補助ファイル（"{$suppFileTitle}"）のカスタム種別に、この雑誌がサポートしていないロケール（"{$locale}"）が使用されています。</message>
+	<message key="plugins.importexport.native.import.error.articleSuppFileDescriptionLocaleUnsupported">巻号（"{$issueTitle}"）の論文（"{$articleTitle}"）の補助ファイル（"{$suppFileTitle}"）の記述に、この雑誌がサポートしていないロケール（"{$locale}"）が使用されています。</message>
+	<message key="plugins.importexport.native.import.error.articleSuppFilePublisherLocaleUnsupported">巻号（"{$issueTitle}"）の論文（"{$articleTitle}"）の補助ファイル（"{$suppFileTitle}"）の出版社に、この雑誌がサポートしていないロケール（"{$locale}"）が使用されています。</message>
+	<message key="plugins.importexport.native.import.error.articleSuppFileSponsorLocaleUnsupported">巻号（"{$issueTitle}"）の論文（"{$articleTitle}"）の補助ファイル（"{$suppFileTitle}"）のスポンサーに、この雑誌がサポートしていないロケール（"{$locale}"）が使用されています。</message>
+	<message key="plugins.importexport.native.import.error.articleSuppFileSourceLocaleUnsupported">巻号（"{$issueTitle}"）の論文（"{$articleTitle}"）の補助ファイル（"{$suppFileTitle}"）の情報源に、この雑誌がサポートしていないロケール（"{$locale}"）が使用されています。</message>
 </locale>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * phpMyVisites plugin localization strings for the ja_JP locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="ja_JP" full_name="日本語">
+
+	<!-- phpMyVisites -->
+	<message key="plugins.generic.phpmv.displayName">phpMyVisitesプラグイン</message>
+	<message key="plugins.generic.phpmv.description"><![CDATA[OJSに、フリーでオープンソースのwebサイトトラフィック分析アプリケーションphpMyVisitesを組み込みます。phpMyVisitesが既にインストールされている必要があります。詳細については、<a href="http://www.phpmyvisites.us/" title="phpMyVisites site">phpMyVisitesサイト</a>を参照してください。]]></message>
+
+	<!-- phpMyVisites Settings Management -->
+	<message key="plugins.generic.phpmv.manager.settings">設定</message>
+	<message key="plugins.generic.phpmv.manager.phpmvSettings">phpMyVisites設定</message>
+	<message key="plugins.generic.phpmv.manager.settings.description"><![CDATA[<p>このプラグインを有効化すると、phpMyVisitesを使ってこの雑誌のWebサイトの利用およびトラフィックデータを収集･分析することができます。 このプラグインを使用するには、既にｐｈｐMyVistersがインストールされている必要があります。 詳細については、<a href="http://www.phpmyvisites.us/" title="phpMyVisites site">phpMyVisitesサイト</a>を参照してください。</p>]]></message>
+	<message key="plugins.generic.phpmv.manager.settings.phpmvUrl">phpMyVisitesのURL</message>
+	<message key="plugins.generic.phpmv.manager.settings.phpmvUrlInstructions">phpMyVisitesをインストールした完全URL（すなわち、http://myserver.net/phpmv）。</message>
+	<message key="plugins.generic.phpmv.manager.settings.phpmvUrlRequired">先頭にhttp://を含む正確なURLを入力してください。</message>
+	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteId">サイトプロファイル数</message>
+	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteIdInstructions"><![CDATA[phpMyVisitesにおいて、管理->サイトの変更と表示してください。サイトプロファイル数はサイトプロファイル名の横に表示されています。]]></message>
+	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteIdRequired">サイトフロファイル数を入力してください。</message>
+
+</locale>

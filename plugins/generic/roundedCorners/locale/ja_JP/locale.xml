@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ja_JP locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="ja_JP" full_name="日本語">
+	<message key="plugins.generic.roundedcorners.displayName">角丸プラグイン</message>
+	<message key="plugins.generic.roundedcorners.description">このプラグインは各サイドバーブロックを角の丸い四角で囲みます。背景色は、プラグインフォルダにあるCSSスタイルシートを編集することにより変更することができます。</message>
+</locale>

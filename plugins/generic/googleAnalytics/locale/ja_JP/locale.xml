@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Google Analytics plugin localization strings for the ja_JP locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="ja_JP" full_name="日本語">
+
+	<!-- Google Analytics -->
+	<message key="plugins.generic.googleAnalytics.displayName">Google Analyticsプラグイン</message>
+	<message key="plugins.generic.googleAnalytics.description"><![CDATA[OJSにGoogle Analyticsを組み込みます。Google Analyticsとは、Googleが提供するWebサイトのトラフィック分析アプリケーションです。利用するには、Google Analyticsのアカウントが必要です。詳細については、<a href="http://www.google.com/analytics/" title="Google Analytics site">Google Analytics サイト</a>を参照してください。]]></message>
+
+	<!-- Google Analytics Settings Management -->
+	<message key="plugins.generic.googleAnalytics.manager.settings">設定</message>
+	<message key="plugins.generic.googleAnalytics.manager.googleAnalyticsSettings">Google Analyticsの設定</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.description"><![CDATA[<p>このプラグインを有効化することにより、Google Analyticsを使ってこの雑誌のWebサイトの利用やトラフィックのデータを収集・分析することができます。このプラグインを使用するには、Google Analyticsのアカウントが必要なことに注意してください。詳細については、<a href="http://www.google.com/analytics/" title="Google Analytics site">Google Analytics サイト</a>を参照してください。</p>]]></message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteId">アカウント番号</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdInstructions">アカウント番号は以下の手順で確認できます。Google Analyticsの[Analytics 設定] ページで、該当するプロファイルの横にある [編集] リンクをクリックし、表の右上にある [ステータスを確認] を選択します。アカウント番号はトラッキングコード内に _uacct = "###" という形で表示されています。###に該当するテキストを入力してください。</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdRequired">アカウント番号を入力してください。</message>
+
+</locale>

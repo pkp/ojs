@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2006-2007 Gunther Eysenbach, Juan Pablo Alperin, MJ Suhonos
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ja_JP locale.
+  *
+ -->
+ 
+<locale name="ja_JP" full_name="日本語">
+	<message key="plugins.paymethod.paypal.displayName">PayPalによる料金支払い</message>
+
+	<!-- PayPal Settings Form -->
+	<message key="plugins.paymethod.paypal.settings.paypalenable">PayPalの有効化</message>
+	<message key="plugins.paymethod.paypal.settings.paypalurl">IPN URL</message>
+	<message key="plugins.paymethod.paypal.settings.paypalurl.description"><![CDATA[これはPayPalの即時支払い通知（IPN）サービスのURLです。テストには<u>https://www.sandbox.paypal.com/cgi-bin/webscr</u>を、本番システムには<u>https://www.paypal.com/cgi-bin/webscr</u>を使用してください。]]></message>
+	<message key="plugins.paymethod.paypal.settings.selleraccount">売主のアカウント</message>
+	<message key="plugins.paymethod.paypal.settings.selleraccount.description">これは売主のアカウントとして使用される、PayPalアカウントのユーザ名（通常はメールアドレス）です。売主のアカウントプロフィールで即時支払い通知（IPN）を有効にしてあることを確認してください。</message>
+	<message key="plugins.paymethod.paypal.settings.curlNotInstalled">警告: CURLをサポートしたPHPがインストールされていません。PayPal支払いをサポートするには、CURLライブラリが必要です。インストールされない限り機能しません。</message>
+	<message key="plugins.paymethod.paypal.settings">PayPalの設定</message>
+
+	<!-- PayPal -->
+	<message key="plugins.paymethod.paypal">PayPalによる料金支払い</message>
+	<message key="plugins.paymethod.paypal.description"><![CDATA[PayPalは、ユーザが支払いに主要な全てのクレジットカードを利用できるようにします（ユーザはPayPalの会員である必要はありません）。管理者は、<a href="http://www.paypal.com" target="_new">PayPal ビジネスアカウント</a>を設定する必要があります。]]></message>
+	<message key="plugins.paymethod.paypal.warning">下の継続ボタンをクリックしてPayPalサイトに行くと、料金の支払いにクレジットカードが使用できます（PayPalの会員になる必要はありません）。支払い処理が終わったら「販売元に戻る」ボタンをクリックするとこのサイトに戻ります。</message>
+	<message key="plugins.paymethod.paypal.purchase.title">タイトル</message>
+	<message key="plugins.paymethod.paypal.purchase.fee">料金</message>
+	<message key="plugins.paymethod.paypal.purchase.description">説明</message>
+	<message key="plugins.paymethod.paypal.purchase.cancelled">購入がキャンセルされました。</message>
+	<message key="plugins.paymethod.paypal.purchase.cancelled.title">購入のキャンセル</message>
+</locale>

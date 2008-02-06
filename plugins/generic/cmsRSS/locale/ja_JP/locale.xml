@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2006 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ja_JP locale.
+  *
+  -->
+ 
+<locale name="ja_JP" full_name="日本語">
+	<message key="plugins.generic.cmsrss.displayName">CMS RSSプラグイン</message>
+	<message key="plugins.generic.cmsrss.description">このプラグインはRSSアグリゲーションをCMSページに追加することを可能にします。</message>
+
+	<message key="plugins.generic.cmsrss.requirement.cms"><![CDATA[<strong>このプラグインを使用するには、CMSプラグインをインストールして有効化する必要があります。 </strong>]]></message>	
+
+	<message key="manager.plugins.cmsrss.edit">RSSフィードの編集/追加</message>
+	<message key="plugins.generic.cmsrss.pagename">ページ名</message>
+	<message key="plugins.generic.cmsrss.url">フィードURL</message>	
+	<message key="plugins.generic.cmsrss.months">最も古いアイテム（単位は月）。利用可能な全てのアイテムを指定する場合は0を指定する。</message>		
+	<message key="plugins.generic.cmsrss.aggregate">各ページにフィードを設置し、日付順にソートする</message>			
+	<message key="plugins.generic.cmsrss.form.introduction"><![CDATA[<p>このCMS RSSプラグインは、雑誌管理者がCMSプラグインの静的ページ以外にRSSフィードを追加することを可能にします。</p><p>ページ名は（目次に表示されている）CMSページの表題に一致させる必要があります。表題を分ける場合は":"（コロン）を使用する必要があります。たとえば、表題1:表題2。</p><p>フィードURLは検証されませんので、ここで使用されるURLは正しいRSS URLに一致させてください。</p>]]></message>
+	<message key="plugins.generic.cmsrss.requiredFields">全ての行にページ名とフィードURLが必要です</message>
+	<message key="plugins.generic.cmsrss.sorting">各行はページ名でソートされます</message>	
+	
+	<message key="plugins.generic.cmsrss.addUrl">別のフィードを追加</message>
+	<message key="plugins.generic.cmsrss.deleteUrl">フィードを削除</message>	
+	
+	<!-- RSS Template -->
+	<message key="plugins.generic.cmsrss.postedon">投稿先</message>
+	<message key="plugins.generic.cmsrss.permalink">パーマリンク</message>	
+</locale>

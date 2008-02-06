@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ja_JP locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="ja_JP" full_name="日本語">
+	<message key="plugins.block.user.displayName">ユーザブロック</message>
+	<message key="plugins.block.user.description">このプラグインは、サイドバーにユーザアカウントツール（ログイン、ログアウト、プロフィールリンクなど）を付けます。</message>
+	<message key="plugins.block.user.loggedInAs">次のアカウントでログインされています</message>
+	<message key="plugins.block.user.myJournals">マイ･ジャーナル</message>
+	<message key="plugins.block.user.myProfile">マイ･プロフィール</message>
+	<message key="plugins.block.user.logout">ログアウト</message>
+	<message key="plugins.block.user.signOutAsUser">ユーザとしてログアウト</message>
+	<message key="plugins.block.user.rememberMe">アカウントを記憶する</message>
+</locale>

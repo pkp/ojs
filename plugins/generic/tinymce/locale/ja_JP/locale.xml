@@ -16,4 +16,5 @@
 	<message key="plugins.generic.tinymce.name">TinyMCEプラグイン</message>
 	<message key="plugins.generic.tinymce.description"><![CDATA[このプラグインは、<a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a>コンテンツエディタを使うことによりOJSフォームのテキストエリアの内容をWSYWIGで編集できるようにします。]]></message>
 	<message key="plugins.generic.tinymce.descriptionDisabled"><![CDATA[このプラグインは、<a href="http://tinymce.moxiecode.com" target="_new">TinyMCE</a>コンテンツエディタを使うことによりOJSフォームのテキストエリアの内容をWSYWIGで編集できるようにします。<strong>TinyMCEがインストールされていません。{$tinyMcePath}でインストールしてください。</strong>]]></message>
+	<message key="plugins.generic.tinymce.settings">設定</message>
 </locale>

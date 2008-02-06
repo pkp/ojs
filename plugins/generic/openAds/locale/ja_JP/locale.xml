@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2007 Siavash Miri and Alec Smecher
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ja_JP locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="ja_JP" full_name="日本語">
+	<message key="plugins.generic.openads.description">OpenAdsプラグインはOpenAds広告サーバの動的広告をOJSに挿入することを可能にします。</message>
+	<message key="plugins.generic.openads.descriptionUnconfigured"><![CDATA[OpenAdsプラグインはOpenAds広告サーバの動的広告をOJSに挿入することを可能にします。<strong>このプラグインを有効化するための情報については、plugins/generic/openAdsにあるREADMEファイルを読んでください。</strong>]]></message>
+	<message key="plugins.generic.openads">OpenAdsプラグイン</message>
+	<message key="plugins.generic.openads.settings.description">このフォームを使って、対象候補地のOJに表示されることになるOpenAds広告対象地域を選択してください。</message>
+	<message key="plugins.generic.openads.manager.settings">設定</message>
+
+	<message key="plugins.generic.openads.error.configFileNotFound">設定ファイル {$filename} にアクセスできませんでした。</message>
+	<message key="plugins.generic.openads.error.missingParameter">少なくても1つの必須のOpenAds設定パラメタが設定ファイルから読むことができませんでした。必須パラメタは、dbhost, dbuser, dbpassword, dbname, url_prefix, table_prefix. です。</message>
+	<message key="plugins.generic.openads.error.dbConnectionError">OpenAdsデータベースに接続できません。</message>
+
+	<message key="plugins.generic.openads.headerAd">ヘッダ広告</message>
+	<message key="plugins.generic.openads.contentAd">コンテンツ広告</message>
+	<message key="plugins.generic.openads.sidebarAd">サイドバー広告</message>
+
+	<message key="plugins.generic.openads.orientation.left">左</message>
+	<message key="plugins.generic.openads.orientation.centre">中央</message>
+	<message key="plugins.generic.openads.orientation.right">右</message>
+</locale>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for this citation plugin in ja_JP.
+  *
+  * $Id$
+  -->
+ 
+<locale name="ja_JP" full_name="日本語">
+	<message key="plugins.citationFormats.proCite.displayName">ProCite引用形式プラグイン</message>
+	<message key="plugins.citationFormats.proCite.citationFormatName"><![CDATA[ProCite - RIS形式（Macintosh & Windows）]]></message>
+	<message key="plugins.citationFormats.proCite.description">このプラグインはProCite引用形式を実装します。</message>
+</locale>

@@ -32,13 +32,13 @@
 	<currency name="アゼルバイジャン・マナト" code_alpha="AZM" code_numeric="31" />
 	<currency name="バハマ・ドル" code_alpha="BSD" code_numeric="44" />
 	<currency name="バーレーン・ディナール" code_alpha="BHD" code_numeric="48" />
-	<currency name="Baht" code_alpha="THB" code_numeric="764" />
-	<currency name="Balboa" code_alpha="PAB" code_numeric="590" />
+	<currency name="バーツ" code_alpha="THB" code_numeric="764" />
+	<currency name="バルボア" code_alpha="PAB" code_numeric="590" />
 	<currency name="バルバドス・ドル" code_alpha="BBD" code_numeric="52" />
-	<currency name="Belarussian Ruble" code_alpha="BYR" code_numeric="974" />
+	<currency name="ベラルーシ･ルーブル" code_alpha="BYR" code_numeric="974" />
 	<currency name="ベリーズ・ドル" code_alpha="BZD" code_numeric="84" />
 	<currency name="バーミューダ・ドル" code_alpha="BMD" code_numeric="60" />
-	<currency name="Bolivar" code_alpha="VEB" code_numeric="862" />
+	<currency name="ボリバル" code_alpha="VEB" code_numeric="862" />
 	<currency name="ボリビアーノ" code_alpha="BOB" code_numeric="68" />
 	<currency name="ブラジル・レアル" code_alpha="BRL" code_numeric="986" />
 	<currency name="ブルネイ・ドル" code_alpha="BND" code_numeric="96" />
@@ -49,24 +49,24 @@
 	<currency name="カナダ・ドル" code_alpha="CAD" code_numeric="124" />
 	<currency name="カーボベルデ・エスクード" code_alpha="CVE" code_numeric="132" />
 	<currency name="ケイマン諸島ドル" code_alpha="KYD" code_numeric="136" />
-	<currency name="Cedi" code_alpha="GHC" code_numeric="288" />
+	<currency name="セディ" code_alpha="GHC" code_numeric="288" />
 	<currency name="チリ・ペソ" code_alpha="CLP" code_numeric="152" />
 	<currency name="コロンビア・ペソ" code_alpha="COP" code_numeric="170" />
 	<currency name="コモロ・フラン" code_alpha="KMF" code_numeric="174" />
 	<currency name="兌換マルク" code_alpha="BAM" code_numeric="977" />
-	<currency name="Cordoba Oro" code_alpha="NIO" code_numeric="558" />
+	<currency name="コルドバ･オロ" code_alpha="NIO" code_numeric="558" />
 	<currency name="コスタリカ・コロン" code_alpha="CRC" code_numeric="188" />
 	<currency name="クロアチア・クーナ" code_alpha="HRK" code_numeric="191" />
 	<currency name="キューバ・ペソ" code_alpha="CUP" code_numeric="192" />
 	<currency name="キプロス・ポンド" code_alpha="CYP" code_numeric="196" />
 	<currency name="チェコ・コルナ" code_alpha="CZK" code_numeric="203" />
-	<currency name="Dalasi" code_alpha="GMD" code_numeric="270" />
+	<currency name="ダラシ" code_alpha="GMD" code_numeric="270" />
 	<currency name="デンマーク・クローネ" code_alpha="DKK" code_numeric="208" />
-	<currency name="Denar" code_alpha="MKD" code_numeric="807" />
+	<currency name="ディナール" code_alpha="MKD" code_numeric="807" />
 	<currency name="ジブチ・フラン" code_alpha="DJF" code_numeric="262" />
-	<currency name="Dobra" code_alpha="STD" code_numeric="678" />
+	<currency name="ドブラ" code_alpha="STD" code_numeric="678" />
 	<currency name="ドミニカ・ペソ" code_alpha="DOP" code_numeric="214" />
-	<currency name="Dong" code_alpha="VND" code_numeric="704" />
+	<currency name="ドン" code_alpha="VND" code_numeric="704" />
 	<currency name="東カリブ・ドル" code_alpha="XCD" code_numeric="951" />
 	<currency name="エジプト・ポンド" code_alpha="EGP" code_numeric="818" />
 	<currency name="エルサルバドル・コロン" code_alpha="SVC" code_numeric="222" />
@@ -74,16 +74,16 @@
 	<currency name="ユーロ" code_alpha="EUR" code_numeric="978" />
 	<currency name="フォークランド島ポンド" code_alpha="FKP" code_numeric="238" />
 	<currency name="フィジー・ドル" code_alpha="FJD" code_numeric="242" />
-	<currency name="Forint" code_alpha="HUF" code_numeric="348" />
+	<currency name="フォリント" code_alpha="HUF" code_numeric="348" />
 	<currency name="コンゴ・フラン" code_alpha="CDF" code_numeric="976" />
 	<currency name="ジブラルタル・ポンド" code_alpha="GIP" code_numeric="292" />
-	<currency name="Gourde" code_alpha="HTG" code_numeric="332" />
-	<currency name="Guarani" code_alpha="PYG" code_numeric="600" />
+	<currency name="グールド" code_alpha="HTG" code_numeric="332" />
+	<currency name="グアラニー" code_alpha="PYG" code_numeric="600" />
 	<currency name="ギニア・フラン" code_alpha="GNF" code_numeric="324" />
 	<currency name="ギニアビサオ・ペソ" code_alpha="GWP" code_numeric="624" />
 	<currency name="ガイアナ・ドル" code_alpha="GYD" code_numeric="328" />
 	<currency name="香港ドル" code_alpha="HKD" code_numeric="344" />
-	<currency name="Hryvnia" code_alpha="UAH" code_numeric="980" />
+	<currency name="フリヴニャ" code_alpha="UAH" code_numeric="980" />
 	<currency name="アイスランド・クローナ" code_alpha="ISK" code_numeric="352" />
 	<currency name="インド・ルピー" code_alpha="INR" code_numeric="356" />
 	<currency name="イラン・リアル" code_alpha="IRR" code_numeric="364" />
@@ -91,67 +91,67 @@
 	<currency name="ジャマイカ・ドル" code_alpha="JMD" code_numeric="388" />
 	<currency name="ヨルダン・ディナール" code_alpha="JOD" code_numeric="400" />
 	<currency name="ケニア・シリング" code_alpha="KES" code_numeric="404" />
-	<currency name="Kina" code_alpha="PGK" code_numeric="598" />
-	<currency name="Kip" code_alpha="LAK" code_numeric="418" />
-	<currency name="Kroon" code_alpha="EEK" code_numeric="233" />
+	<currency name="キナ" code_alpha="PGK" code_numeric="598" />
+	<currency name="キープ" code_alpha="LAK" code_numeric="418" />
+	<currency name="クローン" code_alpha="EEK" code_numeric="233" />
 	<currency name="クウェート・ディナール" code_alpha="KWD" code_numeric="414" />
-	<currency name="Kwacha" code_alpha="MWK" code_numeric="454" />
-	<currency name="Kwanza" code_alpha="AOA" code_numeric="973" />
-	<currency name="Kyat" code_alpha="MMK" code_numeric="104" />
-	<currency name="Lari" code_alpha="GEL" code_numeric="981" />
+	<currency name="クワチャ" code_alpha="MWK" code_numeric="454" />
+	<currency name="クワンザ" code_alpha="AOA" code_numeric="973" />
+	<currency name="チャット" code_alpha="MMK" code_numeric="104" />
+	<currency name="ラリ" code_alpha="GEL" code_numeric="981" />
 	<currency name="ラトビア・ラッツ" code_alpha="LVL" code_numeric="428" />
 	<currency name="レバノン・ポンド" code_alpha="LBP" code_numeric="422" />
-	<currency name="Lek" code_alpha="ALL" code_numeric="8" />
-	<currency name="Lempira" code_alpha="HNL" code_numeric="340" />
+	<currency name="レク" code_alpha="ALL" code_numeric="8" />
+	<currency name="レンピラ" code_alpha="HNL" code_numeric="340" />
 	<currency name="レオネ" code_alpha="SLL" code_numeric="694" />
-	<currency name="Leu" code_alpha="ROL" code_numeric="642" />
+	<currency name="旧ルーマニア･レウ" code_alpha="ROL" code_numeric="642" />
 	<currency name="リベリア・ドル" code_alpha="LRD" code_numeric="430" />
 	<currency name="リビア・ディナール" code_alpha="LYD" code_numeric="434" />
-	<currency name="Lilangeni" code_alpha="SZL" code_numeric="748" />
+	<currency name="リランゲニ" code_alpha="SZL" code_numeric="748" />
 	<currency name="リトアニア・リタス" code_alpha="LTL" code_numeric="440" />
-	<currency name="Loti" code_alpha="LSL" code_numeric="426" />
-	<currency name="Malagasy Ariary" code_alpha="MGA" code_numeric="969" />
+	<currency name="ロチ" code_alpha="LSL" code_numeric="426" />
+	<currency name="アリアリ" code_alpha="MGA" code_numeric="969" />
 	<currency name="マダガスカル・フラン" code_alpha="MGF" code_numeric="450" />
 	<currency name="マレーシア・リンギ" code_alpha="MYR" code_numeric="458" />
 	<currency name="マルタ島リラ" code_alpha="MTL" code_numeric="470" />
-	<currency name="Manat" code_alpha="TMM" code_numeric="795" />
+	<currency name="ナナト" code_alpha="TMM" code_numeric="795" />
 	<currency name="モーリシャス・ルピー" code_alpha="MUR" code_numeric="480" />
-	<currency name="Merical" code_alpha="MZM" code_numeric="508" />
+	<currency name="メティカル" code_alpha="MZM" code_numeric="508" />
 	<currency name="メキシコ・ペソ" code_alpha="MXN" code_numeric="484" />
-	<currency name="Mexican Unidad De Inversion" code_alpha="MXV" code_numeric="979" />
+	<currency name="投資単位（UDI）" code_alpha="MXV" code_numeric="979" />
 	<currency name="モルドバ・レイ" code_alpha="MDL" code_numeric="498" />
 	<currency name="モロッコ・ディルハム" code_alpha="MAD" code_numeric="504" />
-	<currency name="Mvdol" code_alpha="BOV" code_numeric="984" />
-	<currency name="Naira" code_alpha="NGN" code_numeric="566" />
-	<currency name="Nakfa" code_alpha="ERN" code_numeric="232" />
+	<currency name="投資単位（Mvdol）" code_alpha="BOV" code_numeric="984" />
+	<currency name="ナイラ" code_alpha="NGN" code_numeric="566" />
+	<currency name="ナクファ" code_alpha="ERN" code_numeric="232" />
 	<currency name="ナミビア・ドル" code_alpha="NAD" code_numeric="516" />
 	<currency name="ネパール・ルピー" code_alpha="NPR" code_numeric="524" />
-	<currency name="Netherlands Antillian Guikder" code_alpha="ANG" code_numeric="532" />
-	<currency name="New Israeli Sheqel" code_alpha="ILS" code_numeric="376" />
+	<currency name="オランダ領アンティル･ギルダー" code_alpha="ANG" code_numeric="532" />
+	<currency name="新シェケル" code_alpha="ILS" code_numeric="376" />
 	<currency name="台湾ドル" code_alpha="TWD" code_numeric="901" />
 	<currency name="トルコ・リラ" code_alpha="TRY" code_numeric="949" />
 	<currency name="ニュージーランド・ドル" code_alpha="NZD" code_numeric="554" />
-	<currency name="Ngultrum" code_alpha="BTN" code_numeric="64" />
+	<currency name="ニュルタム" code_alpha="BTN" code_numeric="64" />
 	<currency name="北朝鮮ウオン" code_alpha="KPW" code_numeric="408" />
 	<currency name="ノルウェー・クローネ" code_alpha="NOK" code_numeric="578" />
-	<currency name="Nuevo Sol" code_alpha="PEN" code_numeric="604" />
-	<currency name="Old Turkish Lira" code_alpha="TRL" code_numeric="792" />
-	<currency name="Ouguiya" code_alpha="MRO" code_numeric="478" />
-	<currency name="Pa' anga" code_alpha="TOP" code_numeric="776" />
+	<currency name="ヌエボ･ソル" code_alpha="PEN" code_numeric="604" />
+	<currency name="トルコリア" code_alpha="TRL" code_numeric="792" />
+	<currency name="ウギア" code_alpha="MRO" code_numeric="478" />
+	<currency name="パ･アンガ" code_alpha="TOP" code_numeric="776" />
 	<currency name="パキスタン・ルピー" code_alpha="PKR" code_numeric="586" />
-	<currency name="Pataca" code_alpha="MOP" code_numeric="446" />
+	<currency name="パタカ" code_alpha="MOP" code_numeric="446" />
 	<currency name="ウルグアイ・ペソ" code_alpha="UYU" code_numeric="858" />
 	<currency name="フィリピン・ペソ" code_alpha="PHP" code_numeric="608" />
 	<currency name="ポンド・スターリング" code_alpha="GBP" code_numeric="826" />
-	<currency name="Pula" code_alpha="BWP" code_numeric="72" />
+	<currency name="プラ" code_alpha="BWP" code_numeric="72" />
 	<currency name="カタール・リアル" code_alpha="QAR" code_numeric="634" />
-	<currency name="Quetzal" code_alpha="GTQ" code_numeric="320" />
-	<currency name="Rand" code_alpha="ZAR" code_numeric="710" />
+	<currency name="ケツァル" code_alpha="GTQ" code_numeric="320" />
+	<currency name="ランド" code_alpha="ZAR" code_numeric="710" />
 	<currency name="オマーン・リアル" code_alpha="OMR" code_numeric="512" />
-	<currency name="Riel" code_alpha="KHR" code_numeric="116" />
-	<currency name="Rufiyaa" code_alpha="MVR" code_numeric="462" />
-	<currency name="Rupiah" code_alpha="IDR" code_numeric="360" />
-	<currency name="Russian Ruble" code_alpha="RUB" code_numeric="643" />
+	<currency name="リエル" code_alpha="KHR" code_numeric="116" />
+	<currency name="ルフィヤ" code_alpha="MVR" code_numeric="462" />
+	<currency name="ルピア" code_alpha="IDR" code_numeric="360" />
+	<currency name="ロシア･ルーブル" code_alpha="RUB" code_numeric="643" />
 	<currency name="ルワンダ・フラン" code_alpha="RWF" code_numeric="646" />
 	<currency name="セントヘレナ・ポンド" code_alpha="SHP" code_numeric="654" />
 	<currency name="サウジ・リアル" code_alpha="SAR" code_numeric="682" />
@@ -160,35 +160,35 @@
 	<currency name="シンガポール・ドル" code_alpha="SGD" code_numeric="702" />
 	<currency name="スロバキア・コルナ" code_alpha="SKK" code_numeric="703" />
 	<currency name="ソロモン諸島ドル" code_alpha="SBD" code_numeric="90" />
-	<currency name="Som" code_alpha="KGS" code_numeric="417" />
+	<currency name="ソム" code_alpha="KGS" code_numeric="417" />
 	<currency name="ソマリア・シリング" code_alpha="SOS" code_numeric="706" />
-	<currency name="Somoni" code_alpha="TJS" code_numeric="972" />
+	<currency name="ソモニ" code_alpha="TJS" code_numeric="972" />
 	<currency name="スリランカ・ルピー" code_alpha="LKR" code_numeric="144" />
 	<currency name="スーダン・ディナール" code_alpha="SDD" code_numeric="736" />
 	<currency name="シンガポール・ドル" code_alpha="SRD" code_numeric="968" />
 	<currency name="スウェーデン・クローナ" code_alpha="SEK" code_numeric="752" />
 	<currency name="スイス・フラン" code_alpha="CHF" code_numeric="756" />
 	<currency name="シリア・ポンド" code_alpha="SYP" code_numeric="760" />
-	<currency name="Taka" code_alpha="BDT" code_numeric="50" />
-	<currency name="Tala" code_alpha="WST" code_numeric="882" />
+	<currency name="タカ" code_alpha="BDT" code_numeric="50" />
+	<currency name="サモア･タラ" code_alpha="WST" code_numeric="882" />
 	<currency name="タンザニア・シリング" code_alpha="TZS" code_numeric="834" />
-	<currency name="Tenge" code_alpha="KZT" code_numeric="398" />
-	<currency name="Tolar" code_alpha="SIT" code_numeric="705" />
-	<currency name="Trinidad And Tobago Dollar" code_alpha="TTD" code_numeric="780" />
-	<currency name="Tugrik" code_alpha="MNT" code_numeric="496" />
+	<currency name="テンゲ" code_alpha="KZT" code_numeric="398" />
+	<currency name="トラール" code_alpha="SIT" code_numeric="705" />
+	<currency name="トリニダード･トバゴ･ドル" code_alpha="TTD" code_numeric="780" />
+	<currency name="トゥグルグ" code_alpha="MNT" code_numeric="496" />
 	<currency name="チュニジア・ディナール" code_alpha="TND" code_numeric="788" />
 	<currency name="アラブ首長国連邦ディルハム" code_alpha="AED" code_numeric="784" />
 	<currency name="米ドル" code_alpha="USD" code_numeric="840" />
-	<currency name="Uganda Shilling" code_alpha="UGX" code_numeric="800" />
-	<currency name="Unidad De Valor Real" code_alpha="COU" code_numeric="970" />
-	<currency name="Unidades De Formento" code_alpha="CLF" code_numeric="990" />
+	<currency name="ウガンダ･シリング" code_alpha="UGX" code_numeric="800" />
+	<currency name="実価融資単位" code_alpha="COU" code_numeric="970" />
+	<currency name="投資単位" code_alpha="CLF" code_numeric="990" />
 	<currency name="ウズベキスタン・スム" code_alpha="UZS" code_numeric="860" />
-	<currency name="Vatu" code_alpha="VUV" code_numeric="548" />
+	<currency name="バツ" code_alpha="VUV" code_numeric="548" />
 	<currency name="ユーロ" code_alpha="CHE" code_numeric="947" />
 	<currency name="CFAフラン" code_alpha="CHW" code_numeric="948" />
-	<currency name="Won" code_alpha="KRW" code_numeric="410" />
+	<currency name="ウォン" code_alpha="KRW" code_numeric="410" />
 	<currency name="イエメン・リアル" code_alpha="YER" code_numeric="886" />
-	<currency name="Yen" code_alpha="JPY" code_numeric="392" />
-	<currency name="Yuan Renminbi" code_alpha="CNY" code_numeric="156" />
+	<currency name="円" code_alpha="JPY" code_numeric="392" />
+	<currency name="人民元" code_alpha="CNY" code_numeric="156" />
 	<currency name="ジンバブエ・ドル" code_alpha="ZWD" code_numeric="716" />
 </currencies>

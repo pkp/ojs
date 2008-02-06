@@ -14,7 +14,7 @@
  
 <locale name="ja_JP" full_name="日本語">
 	<message key="plugins.gateways.googleScholar.displayName">Google Scholarゲートウェイプラグイン</message>
-	<message key="plugins.gateways.googleScholar.description">このプラグインはGoogle Scholarで索引化され検索できるように特定の雑誌に関するデータを提供するものです。</message>
+	<message key="plugins.gateways.googleScholar.description">このプラグインは、Google Scholarで検索できうるようにするために指定の雑誌に関する生データをGoogle Scholarに提供するものです。</message>
 	<message key="plugins.gateways.googleScholar.settings">設定</message>
 	<message key="plugins.gateways.googleScholar.settings.description"><![CDATA[<p>Google Scholarゲートウェイプラグインは、雑誌単位でGoogle Scholarハーベスタにデータを公開します。 このプラグインが有効な場合、ディレクトリに存在する文書（すなわち、出版情報）が<span class="highlight">{$directoryUrl}</span>でアクセスできます。</p>
 <p>Google Scholarは、OJSではオプションとなっているある種の情報を必要とします。あなたの提供するデータがGoogle Scholarの要件を満たしているか、「データチェック」ボタンをクリックして確認してください。 </p>]]></message>

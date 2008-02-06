@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ja_JP locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="ja_JP" full_name="日本語">
+	<message key="plugins.block.fontSize.displayName">フォントサイズブロック</message>
+	<message key="plugins.block.fontSize.description">このプラグインはサイドバーにフォントサイズ変更リンクを付けます。</message>
+	<message key="plugins.block.fontSize.title">フォントサイズ</message>
+	<message key="plugins.block.fontSize.small.alt">小</message>
+	<message key="plugins.block.fontSize.medium.alt">中</message>
+	<message key="plugins.block.fontSize.large.alt">大</message>
+</locale>

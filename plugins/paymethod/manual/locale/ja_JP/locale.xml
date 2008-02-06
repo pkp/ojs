@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2000-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ja_JP locale.
+  *
+ -->
+ 
+<locale name="ja_JP" full_name="日本語">
+	<message key="plugins.paymethod.manual.displayName">手作業による料金支払い</message>
+	<message key="plugins.paymethod.manual.description">ユーザから（このソフトウェア以外で）受け取った支払いを管理者が手作業で記録する。</message>
+	<message key="plugins.paymethod.manual">手作業による料金支払い</message>
+	<message key="plugins.paymethod.manual.settings">手作業による支払いの設定</message>
+	<message key="plugins.paymethod.manual.settings.instructions">支払い手順書</message>
+	<message key="plugins.paymethod.manual.settings.manualInstructions">マニュアルによる料金支払いを選択したユーザのための料金支払い手順書</message>
+	
+	<message key="plugins.paymethod.manual.purchase.title">タイトル</message>
+	<message key="plugins.paymethod.manual.purchase.fee">料金</message>	
+</locale>

@@ -181,9 +181,7 @@
   <!-- Common Error Messages -->
   <message key="common.error.databaseError">データベースエラーが発生しました: {$error}</message>
   <message key="common.error.databaseErrorUnknown">データベース接続エラーが発生しました。</message>
-  <message key="common.error.framesRequired">
-    <![CDATA[このページはフレームを利用しています。非フレーム版は<a href="{$url}">ここをクリック</a>してください。]]>
-  </message>
+  <message key="common.error.framesRequired"><![CDATA[このページはフレームを利用しています。非フレーム版は<a href="{$url}">ここをクリック</a>してください。]]></message>
   <!-- Navigation -->
   <message key="navigation.journalHelp">ヘルプ</message>
   <message key="navigation.home">ホーム</message>
@@ -2364,15 +2362,6 @@ OJSのシステム設定を変更することにより、このサイト全体�
   <message key="rt.suppFiles.download">ダウンロード</message>
   <message key="rt.captureCite">アイテムの引用法</message>
   <message key="rt.captureCite.online">オンライン</message>
-  <message key="rt.captureCite.capture.endNote">
-    <![CDATA[<a href="]]>{$url}<![CDATA[">EndNote</a> - EndNoteフォーマット(Macintosh &amp; Windows)]]>
-  </message>
-  <message key="rt.captureCite.capture.referenceManager">
-    <![CDATA[<a href="]]>{$url}<![CDATA[">Reference Manager</a> - RISフォーマット（Windowsのみ）]]>
-  </message>
-  <message key="rt.captureCite.capture.proCite">
-    <![CDATA[<a href="]]>{$url}<![CDATA[">ProCite</a> - RISフォーマット（Macintosh および Windows）]]>
-  </message>
   <message key="rt.reviewPolicy">査読ポリシー</message>
   <message key="rt.printVersion">印刷版</message>
   <message key="rt.lookUp">単語の調査</message>
@@ -2423,9 +2412,7 @@ OJSのシステム設定を変更することにより、このサイト全体�
 	-->
   <message key="default.journalSettings.checklist.notPreviouslyPublished">投稿物はこれまでに出版されておらず、また、別の雑誌に投稿されてもいない（または、編集者へのコメント欄で事情を説明している）。</message>
   <message key="default.journalSettings.checklist.fileFormat">投稿ファイルは、Microsoft Word、RTF、またはWordPerfect文書ファイルフォーマットのいずれかである。 </message>
-  <message key="default.journalSettings.checklist.addressesLinked">
-    <![CDATA[可能な場合、参考文献にオンラインでアクセスするためのURL（参考文献のオープンアクセス版のURLを含む）を提供している。URLはクリックできる形（例えば、<a href="http://pkp.sfu.ca">http://pkp.sfu.ca</a>）で提供されている。]]>
-  </message>
+  <message key="default.journalSettings.checklist.addressesLinked">可能な場合、参考文献のURLが提供されている。</message>
   <message key="default.journalSettings.checklist.submissionAppearance">テキストはシングルスペースで書かれており、12ポイントのフォントサイズを使用しており、下線ではなくイタリック体を使用しており（URLアドレスを除く）、すべてのイラスト、図、表は最後にまとめて示すのではなく、テキスト中の適当な場所に埋め込んでいる。</message>
   <message key="default.journalSettings.checklist.bibliographicRequirements">
     <![CDATA[テキストは、「この雑誌について」ページにある<a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines">執筆要項</a>で示された書式要件および書誌記述要件を順守している。]]>
@@ -2519,4 +2506,323 @@ OJSのシステム設定を変更することにより、このサイト全体�
   <message key="default.journalSettings.lockssLicense">
     <![CDATA[この雑誌は、参加図書館による分散型アーカイブシステムを構築するLOCKSSシステムを使用しています。このシステムの参加図書館が保存および障害復旧の目的でこの雑誌の恒久的アーカイブを作成することを許可します。<a href="http://lockss.stanford.edu/">さらなる情報</a>はここを参照してください。]]>
   </message>
+	<message key="common.add">追加</message>
+	<message key="common.discipline">分野</message>
+	<message key="common.confirmComplete">このタスクを完了にしてもいいですか。後で修正することができなくなります。</message>
+	<message key="common.captchaField">検証</message>
+	<message key="common.captchaField.description">上の図に表示されている文字を入力してください。</message>
+	<message key="common.captchaField.badCaptcha">入力した文字が図の中の文字と一致しません。文字を見直して、もう一度入力してください。</message>
+	<message key="common.suggest">提案</message>
+	<message key="common.payment">支払い</message>
+	<message key="common.payments">支払い</message>
+	<message key="form.postRequired">フォームの送信が失敗しました。</message>
+	<message key="form.formLanguage">入力欄の言語</message>
+	<message key="form.formLanguage.description">下の追加言語に入力するには、まず言語を選択してください。</message>
+	<message key="email.compose.tooSoon">メッセージの送信間隔が短すぎます。もう少し待ってから次のメッセージを送信してください。</message>
+	<message key="email.compose.tooManyRecipients">送信するメッセージの受取人が多すぎます。</message>
+	<message key="submission.sent">送信</message>
+	<message key="user.sendPassword">確認</message>
+	<message key="user.sendPassword.description">ユーザ名とパスワードを含む確認メールを送信してください。</message>
+	<message key="user.salutation">挨拶</message>
+	<message key="user.gender">姓</message>
+	<message key="user.masculine">男</message>
+	<message key="user.feminine">女</message>
+	<message key="user.signature">シグネチャー</message>
+	<message key="reader.subscribersOnly">購読者のみ</message>
+	<message key="reader.subscriptionRequiredLoginText">このアイテムにアクセスするには購読が必要です。購読を確認するために、雑誌にログインしてください。</message>
+	<message key="reader.openAccess">オープン･アクセス</message>
+	<message key="reader.subscriptionAccess">購読アクセス</message>
+	<message key="reader.subscriptionOrFeeAccess">購読アクセスまたはフリーアクセス</message>
+	<message key="admin.settings.siteStyleSheet">サイトのスタイルシート</message>
+	<message key="admin.settings.homeHeaderImageInvalid">サイトロゴの画像フォーマットが不正です。使用できるフォーマットは、.gif, .jpg, .png　です。</message>
+	<message key="admin.settings.siteStyleSheetInvalid">サイトのスタイルシートのフォーマットが不正です。使用できるフォーマットは、.css です。</message>
+	<message key="admin.languages.installLanguages">ロケールの管理</message>
+	<message key="admin.languages.downloadLocales">ロケールのダウンロード</message>
+	<message key="admin.languages.downloadFailed">ロケールのダウンロードに失敗しました。以下のエラーメッセージに失敗の理由が書かれています。</message>
+	<message key="admin.languages.localeInstalled">"{$locale}" ロケールがインストールされました。</message>
+	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>Public KnowledgeプロジェクトのWebサーバからの言語パックのダウンロードは、現在、以下の理由で利用できません。</p>
+	<ul>
+		<li>使用されているサーバにGNU "tar" ユーティリティがインストールされていない、または、実行可能になっていない。</li>
+		<li>OJSはロケールレジストリ（通常、"registry/locales.xml".）を変更することができません。 </li>
+	</ul>
+<p>言語パックは、a href="http://pkp.sfu.ca">PKPのWebサイト</a>から直接ダウンロードすることができます。</p>]]></message>
+	<message key="admin.languages.download">ロケールのダウンロード</message>
+	<message key="admin.languages.download.cannotOpen">PKPウェブサイトの言語記述ファイルをオープンできません。</message>
+	<message key="admin.languages.download.cannotModifyRegistry">新しいロケールをロケールレジストリ（通常、"registry/locales.xml"）に追加できません。</message>
+	<message key="admin.mergeUsers">ユーザのマージ</message>
+	<message key="admin.mergeUsers.mergeUser">ユーザのマージ</message>
+	<message key="admin.mergeUsers.into.description">これまでのユーザの著書や編集担当などを移行するユーザを選択してください。</message>
+	<message key="admin.mergeUsers.from.description">別のユーザアカウントにマージするユーザを選択してください（ユーザが2つのアカウントを持っている場合など）。最初に選択したアカウントが削除され、このアカウントによる投稿物、役割などは2番目のアカウントのものになります。</message>
+	<message key="admin.mergeUsers.allUsers">全登録ユーザ</message>
+	<message key="admin.mergeUsers.confirm">ユーザ名 "{$oldUsername}”のアカウントをユーザ名 "{$newUsername}" のアカウントにマージしてもよいですか。今後、ユーザ名 "{$oldUsername}" のアカウントは利用できなくなります。この処理は元に戻すことができません。</message>
+	<message key="admin.mergerUsers.noneEnrolled">登録されたユーザはいません。</message>
+	<message key="manager.statistics.statistics.articleViews">論文閲覧回数（著者のみ）</message>
+	<message key="manager.statistics.reports.description">OJSは、指定された期間における投稿物、編集者、査読者、セクションに関して投稿から出版に至る処理に関する情報を追跡して、報告書を作成します。報告書は、スプレットシートアプリケーションで読み込むことができるようにCSVフォーマットで作成されます。</message>
+	<message key="manager.plugins.description">このページでは、雑誌管理者が現在インストールされているプラグインを評価したり、場合によっては設定したりすることができます。</message>
+	<message key="manager.payments">支払い</message>
+	<message key="manager.payment.enable">可能</message>
+	<message key="manager.payment.action">アクション</message>
+	<message key="manager.payment.details">詳細</message>
+	<message key="manager.payment.description">記述</message>
+	<message key="manager.payment.addPayment">支払い項目を追加</message>
+	<message key="manager.payment.currency">通貨</message>
+	<message key="manager.payment.currencymessage">OJSは通貨の換算は行いません。購読の支払いを受け付ける場合は、購読の支払い通貨がここで指定した通貨に一致していることを確認する必要があります。</message>
+	<message key="manager.payment.feePaymentOptions">各種料金支払いの設定</message>
+	<message key="manager.payment.options">各種料金</message>
+	<message key="manager.payment.records">レコード</message>
+	<message key="manager.payment.options.enablePayments">支払いモジュールを有効にするにはここをチェックしてください。有効にした場合、以下の記入欄に入力して、支払いの設定を行う必要があります。支払いをするにはユーザはログインする必要があることに注意してください。</message>
+	<message key="manager.payment.options.text">支払い方法の説明</message>
+	<message key="manager.payment.options.fee">金額</message>
+	<message key="manager.payment.options.feeName">料金の名称</message>
+	<message key="manager.payment.options.feeDescription">料金の説明</message>
+	<message key="manager.payment.generalOptions">全般的なオプション</message>
+	<message key="manager.payment.authorFees">著者に課す料金</message>
+	<message key="manager.payment.authorFeesDescription">選択された料金項目は、その説明と金額と共に（これは以下で編集可能）、支払い項目が必要な場所だけでなく、投稿プロセスのステップ1や「この雑誌について」ページの「投稿」にも表示されます。</message>
+	<message key="manager.payment.readerFees">読者に課す料金</message>
+	<message key="manager.payment.readerFeesDescription">選択された料金項目は、その説明と金額と共に（これは以下で編集可能）、支払い項目が必要な場所だけでなく、「この雑誌について」ページの「ポリシー」にも表示されます。</message>
+	<message key="manager.payment.generalFees">一般的な料金</message>
+	<message key="manager.payment.generalFeesDescription">この項目を選択すると、「この雑誌について」ページの「ポリシー」に「会員」項目が表示され、寄付をするためのリンクが右側のフレームの検索機能の上に表示されます。</message>
+	<message key="manager.payment.options.submissionFee">論文の投稿</message>
+	<message key="manager.payment.options.publicationFee">論文の出版</message>
+	<message key="manager.payment.options.membershipFee">会費</message>
+	<message key="manager.payment.options.payPerViewFee">論文のペーパービュー</message>
+	<message key="manager.payment.options.waiverPolicy">料金免除の方針</message>
+	<message key="manager.payment.options.onlypdf">論文のPDF版へのアクセスのみ</message>
+	<message key="manager.payment.options.acceptSubscriptionPayments">購読の支払いを有効にします。種類、経費、有効期間、購読者は購読管理者により管理されます。</message>
+	<message key="manager.payment.options.donationFee">雑誌への寄付</message>
+	<message key="manager.payment.noPayments">支払い不要</message>
+	<message key="manager.payment.paymentId">支払いID</message>
+	<message key="manager.payment.userName">支払いID</message>
+	<message key="manager.payment.timestamp">タイムスタンプ</message>
+	<message key="manager.payment.amount">金額</message>
+	<message key="manager.payment.notFound">見つからない</message>
+	<message key="manager.payment.paymentMethods">料金支払い方法</message>
+	<message key="manager.payment.paymentMethod">支払い方法</message>
+	<message key="manager.payment.paymentMethod.description">この画面で以下のいずれかの支払い方法を設定することができます。</message>
+	<message key="manager.payment.paymentType">支払い種別</message>
+	<message key="manager.payment.editSubscription">購読の修正</message>
+	<message key="manager.payment.form.numeric">全ての経費は正の通知でなければなりません（小数点は可）</message>
+	<message key="plugins.categories.citationFormats">引用形式プラグイン</message>
+	<message key="plugins.categories.citationFormats.description">引用形式プラグインは、論文引用にアクセスする様々な形式をユーザに提供します。</message>
+	<message key="plugins.categories.blocks">ブロックプラグイン</message>
+	<message key="plugins.categories.blocks.description">ブロックプラグインは、様々なサイドバーツールのようなプラッガブルなUIコンポーネントです。</message>
+	<message key="plugins.categories.themes">テーマプラグイン</message>
+	<message key="plugins.categories.themes.description">テーマプラグインはシステムの見た目を変更することができます。</message>
+	<message key="plugins.categories.paymethod">支払いプラグイン</message>
+	<message key="plugins.categories.paymethod.description">支払い方法プラグインは様々なオンライン支払い処理方法をサポートしています。</message>
+	<message key="manager.setup.management.description">アクセス、セキュリティ、スケジューリング、お知らせ、コピーエディタ、レイアウトエディタ、校正者の任命。</message>
+	<message key="manager.setup.reviewOptions.blindReview">ブラインド審査</message>
+	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[著者と査読者がファイルをアップロードするページに<a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">ブラインド審査を保証する</a> へのリンクを提供する。]]></message>
+	<message key="manager.setup.editorDecision">編集者の判断</message>
+	<message key="manager.setup.notifyAllAuthorsOnDecision">「著者に通知」メールを使用する際、共著投稿物の場合は投稿したユーザだけでなく、全ての共著者のメールアドレスを含めてください。</message>
+	<message key="manager.setup.securitySettings">アクセスとセキュリティの設定</message>
+	<message key="manager.setup.securitySettingsDescription">OJSは数多くのセキュリティ関連のオプションを提供しており、雑誌コンテンツの制限や、監査目的の投稿物に関する追加情報の保守に使用できます。</message>
+	<message key="manager.setup.enableUserRegistration">ユーザはこの雑誌について以下の1つ以上の役割を持つものとして自らを登録することができます。</message>
+	<message key="manager.setup.enableUserRegistration.author">著者（この雑誌に資料を投稿することができます）</message>
+	<message key="manager.setup.enableUserRegistration.reader">読者（通知を受け取り、購読者相当としてカウントされます）</message>
+	<message key="manager.setup.enableUserRegistration.reviewer">査読者（投稿物の査読を依頼することができます）</message>
+	<message key="manager.setup.disableUserRegistration">雑誌管理者は全てのユーザを登録します。編集者とセクション編集者は査読者だけ登録することができます。</message>
+	<message key="manager.setup.siteAccess">サイトと論文に関する追加のアクセス制限</message>
+	<message key="manager.setup.restrictSiteAccess">この雑誌サイトを閲覧するには登録してログインする必要があります。</message>
+	<message key="manager.setup.restrictArticleAccess">オープンアクセスコンテンツを閲覧するには登録してログインする必要があります。</message>
+	<message key="manager.setup.submissionEventLogging">投稿物に関して行われた全てのアクションのログをその履歴ページで保守してください。</message>
+	<message key="manager.setup.submissionEmailLogging">投稿物に関して送信された全てのメールのログをその履歴ページで保守してください。</message>
+	<message key="manager.setup.reviewerDatabaseLink">査読候補者データベース</message>
+	<message key="manager.setup.reviewerDatabaseLink.desc">査読候補者を検索でき、購読権を持たない編集者に公開されている関連の文献データベースへのリンクを「査読者の選択」ページに追加してください。</message>
+	<message key="manager.setup.addReviewerDatabaseLink">新規データベースリンクの追加</message>
+	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>クリエイティブ･コモンズ著作権注記案</h3>
+<h4>1. オープンアクセスを提供する雑誌のためのポリシー案</h4>
+この雑誌で発表を行う著者は次の条件に同意する。
+<ol type="a">
+	<li>著者は作品の著作権を保持し、作品を最初に発表する権利をこの雑誌に与える。作品は同時に、作品の著者とこの雑誌で最初に発表されたことを表示することにより他者にこの作品の利用を認める<a target="_new" href="http://creativecommons.org/licenses/by/3.0/">クリエイティブ･コモンズ表示ライセンス</a> でライセンスされている。</li>
+	<li>著者は、この雑誌おいて最初に発表されたことを示すことにより、この雑誌で出版された版の作品を非独占的に配布するための独立した追加の契約協定（機関リポジトリへの投稿や図書での出版など）を結ぶことができる。</li>
+	<li>著者は投稿プロセスの前または間に作品をオンライン上（機関リポジトリや著者のWebサイトなど）で掲載することが許されており、奨励もされている。なぜなら、発表される論文の生産的な交換やより早く大きな引用を得ることができるからである（<a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">オープンアクセスの効果</a>を参照のこと）。</li>
+</ol>
+
+<h4>エンバーゴ付きオープンアクセスを提供する雑誌のためのポリシー案</h4>
+この雑誌で発表を行う著者は次の条件に同意する。
+<ol type="a">
+	<li>著者は作品の著作権を保持し、作品を最初に発表する権利をこの雑誌に与える。発表後［期間を指定］を経過した作品は同時に、作品の著者とこの雑誌で最初に発表されたことを表示することにより他者にこの作品の利用を認める<a target="_new" href="http://creativecommons.org/licenses/by/3.0/">クリエイティブ･コモンズ表示ライセンス</a> でライセンスされている。</li>
+	 <li>著者は、この雑誌おいて最初に発表されたことを示すことにより、この雑誌で出版された版の作品を非独占的に配布するための独立した追加の契約協定（機関リポジトリへの投稿や図書での出版など）を結ぶことができる。</li>
+	 <li>著者は投稿プロセスの前または間に作品をオンライン上（機関リポジトリや著者のWebサイトなど）で掲載することが許されており、奨励もされている。なぜなら、発表される論文の生産的な交換やより早く大きな引用を得ることができるからである（<a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">オープンアクセスの効果</a>を参照のこと）。</li>
+</ol>]]></message>
+	<message key="manager.setup.includeCreativeCommons">オープンアクセスを提供する（エンバーゴ付きを含む）雑誌については、適当な時点で発表される全ての作品にクリエイティブ･コモンズライセンスを与えてください。</message>
+	<message key="manager.setup.competingInterests">利害の競合</message>
+	<message key="manager.setup.competingInterests.description"><![CDATA[生物学系の雑誌は、通常著者と査読者に対して、研究上の利害の競合があるか否かを宣言することを要求しています（see <a href="http://journals.plos.org/plosclinicaltrials/competing.php" target="_new">PLoSポリシー</a>を参照のこと）。]]></message>
+	<message key="manager.setup.competingInterests.requireAuthors">著者に投稿物に利害の競合（CI）声明を添付することを求める。</message>
+	<message key="manager.setup.competingInterests.requireReviewers">査読者に彼らが行う各査読に利害の競合（CI）声明を添付することを求める。</message>
+	<message key="manager.setup.competingInterests.guidelines">利害の競合声明添付のガイドライン</message>
+	<message key="manager.setup.publicationFormatDescription">この雑誌は巻号を識別するために以下の要素を使用します（個々の巻号でこれを上書きすることができます）。</message>
+	<message key="manager.setup.publicationFormatNumber">号</message>
+	<message key="manager.setup.publicationFormatVolume">巻</message>
+	<message key="manager.setup.publicationFormatTitle">タイトル</message>
+	<message key="manager.setup.useCopyeditors">各投稿物ににコピーエディタが指名されます。</message>
+	<message key="manager.setup.noUseCopyeditors">コピーエディットは投稿物担当の編集者またはセクションエディタが行います。</message>
+	<message key="manager.setup.useLayoutEditors">レイアウトエディタは、電子出版のためのHTMLファイルやPDFファイルなどを用意するために指名されます。</message>
+	<message key="manager.setup.noUseLayoutEditors">投稿物担当の編集者またはセクションエディタがHTMLファイルやPDFファイルなどを用意します。</message>
+	<message key="manager.setup.referenceLinking">参照リンキング</message>
+	<message key="manager.setup.referenceLinkingDescription"><![CDATA[<p>著者が引用した作品のオンラインバージョンを読者に示すためには、次のオプションが利用できます。</p>
+
+<ol>
+	<li><strong>読者ツールを追加する</strong><p>雑誌管理者は出版アイテムのページに表示される読者ツールに「参考文献を探す」を追加することができます。読者はこれに参考文献のタイトルをペーストして引用文献を検索するためにあらかじめ選択された学術データベースを検索することができます。</p></li>
+	<li><strong>参考文献にリンクを埋め込む</strong><p>レイアウトエディタは参考文献に次の指示（編集可能）によりオンラインで発見することができるリンクを追加することができる。</p></li>
+</ol>]]></message>
+	<message key="manager.setup.provideRefLinkInstructions">レイアウトエディタに指示を与える</message>
+	<message key="manager.setup.refLinkInstructions.description">参照リンキングのレイアウト指示</message>
+	<message key="manager.setup.useProofreaders">出版に先立って（著者と共に）ゲラをチェックする校正者を割り当てる。</message>
+	<message key="manager.setup.noUseProofreaders">投稿物担当の編集者またはセクション編集者がゲラをチェックする。</message>
+	<message key="manager.setup.onlineAccessManagement">雑誌コンテンツへのアクセス</message>
+	<message key="manager.setup.subscriptionDescription">この雑誌は、購読モジュールにアクセスする購読管理者を割り当てる必要があります。このモジュールにはオープンアクセス、セルフアーカイビング、メール通知に関する追加オプションがあります。</message>
+	<message key="manager.setup.showGalleyLinksDescription">常にゲラリンクを示し、アクセスが制限されることを示す。</message>
+	<message key="manager.setup.journalLayout">雑誌レイアウト</message>
+	<message key="manager.setup.journalLayoutDescription">ここでは、雑誌のテーマを選び、レイアウトコンポーネントを選択してください。雑誌専用のスタイルシートをアップロードすることもできます。このスタイルシートは、システムデフォルトのスタイルシートや（テーマが選択されている場合は）テーマスタイルシートのスタイル項目を置き換えます。</message>
+	<message key="manager.setup.journalTheme">雑誌のテーマ</message>
+	<message key="manager.setup.layout.leftSidebar">左側のサイドバー</message>
+	<message key="manager.setup.layout.unselected">未選択のレイアウト</message>
+	<message key="manager.setup.layout.rightSidebar">右側のサイドバー</message>
+	<message key="manager.languages.alternateLocaleInstructions">このシステムはオプションとして、重要な情報について複数の言語で入力できるようにすることができます。この機能を使用するには、代替ロケールを以下の選択リストから選択してださい。</message>
+	<message key="manager.sections.hideAbout">このセクションは「この雑誌について」に表示しない。</message>
+	<message key="manager.groups.create">担当の作成</message>
+	<message key="manager.groups.enableBoard">雑誌管理者は担当を作成し、各担当にユーザを割り当てます。</message>
+	<message key="manager.groups.disableBoard">OJSは割り当てられた役割（雑誌管理者、コピーエディタなど）の元にユーザをリストアップします。</message>
+	<message key="manager.groups.context.editorialTeam.short">編集委員会</message>
+	<message key="manager.groups.context.editorialTeam">担当は「この雑誌について」ページのユーザ項目の編集委員会に表示されます（編集者など）。</message>
+	<message key="manager.groups.context.people">担当はユーザ項目にカテゴリ（編集委員会など）として表示されます。</message>
+	<message key="manager.people.allUsers">役割を持つ全ユーザ</message>
+	<message key="manager.people.allEnrolledUsers">この雑誌で何らかの役割を持つユーザ</message>
+	<message key="manager.people.allSiteUsers">この雑誌における役割をユーザに割り当てる</message>
+	<message key="manager.people.mustChooseRole">「選択したユーザを登録」をクリックする前にページの先頭にある役割を選択してください。</message>
+	<message key="manager.people.enrollExistingUser">既存ユーザに役割を割り当てる</message>
+	<message key="manager.people.roleEnrollment">{$role} 担当</message>
+	<message key="manager.people.enrollUserAsDescription">ユーザは任意の時点で役割を割り当てたり、解除したりすることができます。</message>
+	<message key="manager.people.mustProvideName">少なくとも苗字だけは指定してください。</message>
+	<message key="manager.subscriptionTypes.form.public">この購読種別は公開画面（たとえば、「この雑誌について」ページの「購読」項目など）には表示されません。</message>
+	<message key="editor.submissionReview.emailWillArchive">この投稿物は、著者に通知メールが送信された、またはメール送信をスキップボタンが押された後、保存されます。</message>
+	<message key="editor.submissionReview.cannotSendToCopyediting">この投稿物をコピーエディタに送信する前に、改訂版が利用可能になっていること、および、上にある「著者に通知」リンクを使って著者に判断が通知されていることを確認してください。</message>
+	<message key="editor.notifyUsers.inProgress">ユーザに通知しています</message>
+	<message key="editor.issues.volumeRequired">巻の入力は必須であり、正の数値でなければなりません。</message>
+	<message key="editor.issues.numberRequired">号の入力は必須であり、正の数値でなければなりません。</message>
+	<message key="editor.issues.yearRequired">年の入力は必須であり、正の数値でなければなりません。</message>
+	<message key="editor.issues.titleRequired">巻号にはタイトルが必要です。</message>
+	<message key="editor.issues.issueIdentificationRequired">巻号の識別が必要です。巻号の識別オプションから少なくとも1つ選択してください。</message>
+	<message key="editor.issues.showCoverPage">次の要素を持つ巻号の表紙を作成する。</message>
+	<message key="editor.issues.resetIssueOrder"><![CDATA[この雑誌はカスタム巻号ソートを使用します。<a href="{$url}" class="action">デフォルトにリセット</a>]]></message>
+	<message key="editor.article.commentsRequired">コメントフィールドの入力は必須です。</message>
+	<message key="editor.article.payment.publicationFeeNotPaid">出版料金が支払われていません。アイテムを出版スケジュールに載せるためには、料金を支払うよう著者に通知するか出版料金を免除してください。</message>
+	<message key="sectionEditor.review.enrollReviewer">既存のユーザを査読者に割り当てる</message>
+	<message key="submission.layout.imageInvalid">画像フォーマットが不正です。受入可能なフォーマットは、.gif, .jpg, .pngです。</message>
+	<message key="reviewer.article.restrictedFileAccess">査読者は査読に同意すれば投稿物を見ることができます。</message>
+	<message key="reviewer.article.enterCompetingInterests"><![CDATA[この研究に利害の競合があるか否かを宣言してください（<a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">CIポリシー</a>を参照）。]]></message>
+	<message key="reviewer.competingInterests">利害の競合</message>
+	<message key="author.competingInterests"><![CDATA[利害の競合<a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">CIポリシー</a>]]></message>
+	<message key="author.submit.startHereTitle">新規投稿を開始</message>
+	<message key="author.submit.startHereLink"><![CDATA[投稿の5ステップを開始するには<a href="{$submitUrl}" class="action">ここをクリック</a>してください。]]></message>
+	<message key="author.submit.requestWaiver">免除依頼</message>
+	<message key="author.submit.qualityForWaiver">この論文に対する論文投稿料の免除を検討してください。</message>
+	<message key="author.submit.addReasonsForWaiver">投稿料免除が必要な理由を下のコメントボックスに入力してください。</message>
+	<message key="author.submit.howToSubmitNoPhone"><![CDATA[ご不明な点がございましたら、 <a href="mailto:{$supportEmail}">{$supportName}</a>にお問い合わせください。]]></message>
+	<message key="author.submit.reorderInstructions">出版物に掲載される著者の並びを再度並び替える。</message>
+	<message key="author.submit.submissionIndexingDescription">投稿物の索引語を入力してください。各索引語は（索引語1;索引語2;索引語3）のようにセミコロンで区切ってください。</message>
+	<message key="author.submit.form.abstractRequired">論文の要旨を入力してください。</message>
+	<message key="navigation.competingInterestGuidelines">利害の競合に関するガイドライン</message>
+	<message key="author.submit.supplementaryFilesInstructions">このオプションのステップは、補足ファイルを投稿物に追加することを可能にします。補足ファイルとしては、任意の形式の(a)研究機器、(b)研究者の研究倫理検査の条件を満たすデータセット、(c)他では読者が利用できない情報源、(d)テキストに埋め込むことができなかった図や表、その他の作品に貢献する資料が考えれる。</message>
+	<message key="author.submit.supplementaryFiles.saveToUpload">保存ボタンを押してファイルをアップロードしてください（そうすると補足ファイルがアップロードされます）。</message>
+	<message key="author.submit.forgottenSubmitSuppFile">選択した補足ファイルをアップロードすることなく処理を継続しても良いですか。</message>
+	<message key="author.submit.confirmationDescription">[投稿を完了]ボタンをクリックして、「{$journalTitle}」へ原稿を投稿してください。投稿を受け付けると受領確認のメールが連絡責任者に送られます。また、雑誌のWebサイトにログインすることにより編集処理の進捗状況を見ることができます。雑誌「{$journalTitle}」による出版をご検討いただき、ありがとうございました。</message>
+	<message key="submission.layout.noLayoutFile">なし（依頼する前に最終コピーエディット版をレイアウト版としてアップロードする）</message>
+	<message key="submission.layout.galleyLocaleRequired">ゲラのロケールは必須です。</message>
+	<message key="submission.layout.galleyLanguageRequired">ゲラの言語は必須です。</message>
+	<message key="submission.layout.referenceLinking">参照リンキング</message>
+	<message key="user.login.accountNotValidated">メールアドレスが不正です。メールアドレスをチェックして、指示に従ってください。メールを受け取っていない場合は、サイトの管理者に連絡する必要があるかもしれません。</message>
+	<message key="user.login.activate">アカウントの有効化</message>
+	<message key="user.login.activated">アカウントの有効化を行ってくださいまして、ありがとうございます。ただ今から、アカウントを作成した際に登録していただいたクレデンシャルを使ってログインすることが可能です。</message>
+	<message key="author.submit.authorSubmitLoginMessage">この雑誌に投稿するにはユーザアカウントが必要です。アカウントは編集者が投稿物を追跡したり、投稿物の状態が変更された場合やあなたに関する追加情報が必要になった場合に、あなたに連絡を取ることをできるようにします。</message>
+	<message key="user.profile.form.urlInvalid">指定されたURLは不正です。URLをもう一度確認して再度入力してください。（URLの先頭にhttp://があることを確認してください）</message>
+	<message key="about.authorFees">著者料金</message>
+	<message key="about.authorFeesMessage">この雑誌は次の料金を著者に課します。</message>
+	<message key="about.memberships">会費</message>
+	<message key="help.searchResultsFor">検索結果</message>
+	<message key="donations.thankYou">ありがとうございます</message>
+	<message key="donations.thankYouMessage">寄付をしていただきありがとうございます。心より感謝いたします。</message>
+	<message key="payment.loginRequired">支払いをするにはログインする必要があります。</message>
+	<message key="payment.loginRequired.forArticle">アイテムにアクセスするには購読かペイパービューが必要です。購読の確認、または料金の支払いをするには雑誌にログインしてください。</message>
+	<message key="payment.loginRequired.forDonation">寄付をするにはログインする必要があります。</message>
+	<message key="payment.paid">支払い済</message>
+	<message key="payment.payNow">今支払う</message>
+	<message key="payment.waive">免除</message>
+	<message key="payment.alreadyPaid">既に支払い済</message>
+	<message key="payment.alreadyPaidMessage">投稿プロセスを終了するために雑誌への支払いを既に送付済みの場合はこのボックスを選択してください。投稿物の審査は支払いが到着しないと開始されません。支払い方法を確認するには、上の[今支払う]ボタンをクリックしてください。</message>
+	<message key="payment.paymentReceived">支払い受付済</message>
+	<message key="payment.paymentSent">支払いは既に送付しました</message>
+	<message key="payment.type.submission">投稿料金</message>
+	<message key="payment.type.publication">出版料金</message>
+	<message key="payment.type.fastTrack">迅速（Fast Track）審査料金</message>
+	<message key="payment.type.membership">個人会員会費</message>
+	<message key="payment.type.payPerView">論文ペイパービュー料金</message>
+	<message key="payment.type.subscription">購読料金</message>
+	<message key="payment.type.donation">寄付</message>
+	<message key="payment.donation.makeDonation">寄付をする</message>
+	<message key="payment.submission.paySubmission">投稿料金を支払う</message>
+	<message key="payment.fastTrack.payFastTrack">迅速審査料金を支払う</message>
+	<message key="payment.fastTrack.inFastTrack">迅速審査中</message>
+	<message key="payment.publication.payPublication">出版料金を支払う</message>
+	<message key="payment.publication.publicationPaid">出版料金支払済</message>
+	<message key="payment.membership.buyMembership">個人会員権を購入</message>
+	<message key="payment.membership.renewMembership">個人会員権を更新</message>
+	<message key="payment.membership.ends">終了</message>
+	<message key="payment.subscription.renew">購読を更新</message>
+	<message key="payment.subscription.expires">期限切れ</message>
+	<message key="installer.installationWrongPhp"><![CDATA[<br/><strong>警告: PHPのバージョンがインストールのための最小要件を満たしていません。もっと新しい版のPHPへアップグレードすることを推奨します。</strong>]]></message>
+	<message key="installer.connectionCharsetInstructions"><![CDATA[データベースとのデータの送受信に使用するエンコーディングです。これはクライアントの文字セットと同じにするべきです。この機能は、MySQL >=4.1.1またはPostgreSQL >= 7.1でしかサポートされていないことに注意してください。ご使用のデータベースサーバがこの要件を満たしていない場合は、[非適用]を選択してください。]]></message>
+	<message key="installer.databaseCharsetInstructions"><![CDATA[データベースにデータを格納する際に使用するエンコーディングです。これはクライアントの文字セットと同じにするべきです。この機能は、MySQL >=4.1.1またはPostgreSQL >= 7.1でしかサポートされていないことに注意してください。ご使用のデータベースサーバがこの要件を満たしていない場合は、[非適用]を選択してください。]]></message>
+	<message key="installer.databaseSettingsInstructions">OJSはデータを保管するためにSQLデータベースへのアクセスを必要とします。サポートしているデータベースの一覧は上のシステム要件を参照してください。</message>
+	<message key="log.review.reviewDeclinedByProxy">{$userName} は{$reviewerName}の代理として投稿物「{$articleId} 」の{$round} 回目の査読を謝絶しました。</message>
+	<message key="log.editor.decision">An editor decisionfor 論文「{$articleId} 」に対する編集者の判断 ({$decision}) を{$editorName}が記録しました。</message>
+	<message key="rt.admin.settings.printerFriendly">プリント版 （アイテムのプリントアウト用の版を提供する）</message>
+	<message key="rt.admin.settings.addComment">コメントの追加（読者がコメントを追加できるようにする。雑誌管理者はこれを削除できる）</message>
+	<message key="rt.admin.settings.addComment.authenticated">コメントをつけるにはユーザ登録してログインする必要があります。匿名によるコメントは許可されません。</message>
+	<message key="rt.admin.settings.addComment.anonymous">コメントをつけるにはユーザ登録してログインする必要があります。匿名によるコメントは許可されます。</message>
+	<message key="rt.admin.settings.addComment.unauthenticated">ユーザ登録なしにコメントを付けることができます。匿名によるコメントは許可されています。</message>
+	<message key="rt.admin.settings.findingReferences">参考文献を探す</message>
+	<message key="rt.metadata.pkp.doi">DOI</message>
+	<message key="rt.captureCite.format">引用形式</message>
+	<message key="rt.findingReferences">参考文献を探す</message>
+	<message key="rt.findingReferences.googleScholar">Google Scholar</message>
+	<message key="rt.findingReferences.windowsLiveAcademic">Windows Live Academic</message>
+	<message key="icon.small.alt">小</message>
+	<message key="icon.medium.alt">中</message>
+	<message key="icon.large.alt">大</message>
+	<message key="debug.notes.currencyListLoad">XMLから通貨リスト"{$filename}" をロードしました。</message>
+	<message key="debug.notes.helpMappingLoad">{$id}を捜すためにXMLヘルプマッピングファイル{$filename} を再ロードしました。</message>
+	<message key="default.journalSettings.refLinkInstructions"><![CDATA[<h4>レイアウトプロセスに参照リンキングを追加する方法</h4>
+	<p>投稿物をHTMLやPDFに変換する際、投稿物にある全てのハイパーリンクが生きていることを確認してください。</p>
+	<h4>A. 著者が参考文献にリンクをつける場合</h4>
+	<ol>
+	<li>投稿物がまだワープロ形式（Woｒｄなど）の間に、URLを持つ参考文献の最後に「VIEW ITEM」という語句を追加する。</li>
+	<li>この語句をハイライト表示することによりWordのハイパーリンク挿入ツールと項番2で用意したURLを使ってハイパーリンクに変換する。</li>
+	</ol>
+	<h4>B. 読者が参考文献をGoogle Scholarで検索できるようにする</h4>
+	<ol>
+	<li>投稿物がまだワープロ形式（Wordなど）の間に、参考文献リストの文献のタイトルをコピーする（余りにもありふれたタイトルの場合（「平和」など）は、著者とタイトルをコピーする）。</li>
+	<li>参考文献のタイトルを以下の２つの％２２の間にペーストして、各単語の間に+を挿入する:http://scholar.google.com/scholar?q=%22ここに+タイトルを+挿入%22&hl=en&lr=&btnG=Search</li>
+	<li>投稿物の参考文献リストの各文献の最後に「GS SEARCH」という語句を追加する。</li>
+	<li>この語句をハイライト表示することによりWordのハイパーリンク挿入ツールと項番2で用意したURLを使ってハイパーリンクに変換する。</li>
+	</ol>
+	<h4>C. 読者が参考文献をDOIで検索できるようにする</h4>
+	<ol>
+	<li>投稿物がまだWord形式の間に、参考文献をまとめてhttp://www.crossref.org/freeTextQuery/にある「CrossRef Text Query」にコピーする。</li>
+	<li>Queryの結果に含まれているDOIを各々以下のURL（の=と&の間）にペーストする: http://www.cmaj.ca/cgi/external_ref?access_num=ここにDOIをペースト&link_type=DOI</li>
+	<li>投稿物の参考文献リストの各文献の最後に「CrossRef」という語句を追加する。</li>
+	<li>この語句をハイライト表示することによりWordのハイパーリンク挿入ツールと項番2で用意したURLを使ってハイパーリンクに変換する。</li>
+	</ol>]]></message>
+	<message key="default.journalSettings.proofingInstructions"><![CDATA[<p>校正の段階ではゲラに見られるスペルミスや文法やフォーマッティングの間違いを修正することを目的としています。これより大きな変更は、セクションエディタと協議しない限りこの段階では行うことができません。レイアウト画面で、[校正版の閲覧]をクリックすると、このアイテムを出版する際に使用されるHTMLやPDF、その他利用可能な形式のファイルを閲覧することができます。</p>
+<h4>スペルミスや文法エラーについて</h4>]]></message>
+	<message key="default.journalSettings.submissionFeeDescription">著者は投稿プロセスの一部として審査経費を賄うための論文投稿料を支払う必要があります。</message>
+	<message key="default.journalSettings.fastTrackFeeDescription">この料金を支払うことにより、この文献に関する審査、編集判断、著者への連絡が４週間以内に行われることが保証されます。</message>
+	<message key="default.journalSettings.publicationFeeDescription">この論文の出版がアクセプトされると、出版経費をカバーするための論文出版料金を支払うよう依頼されます。</message>
+	<message key="default.journalSettings.waiverPolicy">そのような料金を支払うための資金を持っていない場合は、各料金を免除する機会を持つことになります。私たちは、価値ある作品の出版を妨げる課金は望んでいません。</message>
+	<message key="default.journalSettings.payPerViewFeeDescription">この料金を支払うと、この論文の閲覧、ダウンロード、プリントアウトが可能になります。</message>
+	<message key="default.journalSettings.membershipFeeDescription">この料金を支払うと、あなたはこの協会の会員として１年間登録され、この雑誌に自由にアクセスすることができます。</message>
+	<message key="default.journalSettings.donationFeeDescription">寄付はどんな額であれありがたく頂戴し、編集者が最高の品質の雑誌を読者に提供し続けるために利用します。</message>
+	<message key="manager.payment.options.fastTrackFee">迅速審査</message>
 </locale>

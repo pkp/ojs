@@ -55,4 +55,6 @@
 	<message key="plugins.importexport.users.export.exportAllUsers">全ユーザのエクスポート</message>
 	<message key="plugins.importexport.users.export.errorsOccurred">エクスポート処理中にエラーが発生しました</message>
 	<message key="plugins.importexport.users.export.couldNotWriteFile">ファイル "{$fileName}" に書き込むことができませんでした。</message>
+	<message key="plugins.importexport.users.import.warning">警告</message>
+	<message key="plugins.importexport.users.import.encryptionMismatch">Cannot use passwords hashed with {$importHash}でハッシュされたパスワードは使用できません。この雑誌は{$ojsHash}を使用するよう設定されています。処理を継続する場合は、インポートしたユーザパスワードを再設定する必要があります。</message>
 </locale>

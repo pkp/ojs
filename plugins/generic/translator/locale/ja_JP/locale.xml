@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ja_JP locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="ja_JP" full_name="日本語">
+	<message key="plugins.generic.translator.name">翻訳プラグイン</message>
+	<message key="plugins.generic.translator.description">このプラグインは翻訳ファイルの保守をWebで行えるようにします。</message>
+	<message key="plugins.generic.translator.longdescription">このエリアを使って、サイト管理者はOJSの翻訳ファイルを作成、変更、チェックすることができます。このファイルはサイト全体に関するものであり、個別のOJS雑誌をカスタマイズすることはできません。翻訳ファイルを修正または作成した場合は、将来のリリースで配布できるようにPublic Knowledge プロジェクトへの投稿を検討してください。</message>
+	<message key="plugins.generic.translator.localeDescription">このページはOJS翻訳パックを構成するすべてのファイルを表示し、翻訳者に各ファイルを編集する機会を提供しています。完全な翻訳パックには全ての翻訳ファイルが含まれている必要があります。</message>
+
+	<message key="plugins.generic.translator.localeName">ロケール名</message>
+	<message key="plugins.generic.translator.localeKey">キー</message>
+	<message key="plugins.generic.translator.localeKeyValue">値</message>
+	<message key="plugins.generic.translator.translate">翻訳</message>
+	<message key="plugins.generic.translator.availableLocales">利用可能なロケール</message>
+	<message key="plugins.generic.translator.check">チェック</message>
+
+	<message key="plugins.generic.translator.errors">ロケールエラー</message>
+
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_KEY.title">不足しているキー</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_EXTRA_KEY.title">余分なキー</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_SUSPICIOUS_LENGTH.title">疑わしいキー長</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_DIFFERING_PARAMS.title">異なっているパラメタリスト</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_FILE.title">不足しているロケールファイル</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_MISSING_EMAIL.title">不足しているメール文</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_EXTRA_EMAIL.title">余分なメール文</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_DIFFERING_PARAMS.title">異なっているメールパラメタリスト</message>
+
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_KEY.message">キー "{$key}" が "{$filename}"に設定されていません。英語版の値をデフォルト値として表示しています。</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_EXTRA_KEY.message">きー "{$key}" はもやは使用されていませんので、削除することが出来ます。</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_SUSPICIOUS_LENGTH.message"><![CDATA["{$filename}" のロケールキー "{$key}" の値は、参照元の値: と明らかに長さが異なります。
+<ul>
+		<li>{$value} ({$locale})</li>
+		<li>{$reference} ({$referenceLocale})</li>
+	</ul>]]></message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_DIFFERING_PARAMS.message">The locale key in "{$filename}" のロケールキー"{$key}" に使用されているパラメタは参照ロケールのパラメタとは異なります。異なるパラメタは以下の通りです。</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_FILE.message">ロケールファイル "{$filename}" が存在しない、または読むことができません。</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_MISSING_EMAIL.message">メールメッセージ文 "{$key}" が翻訳ファイルに存在しません。</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_EXTRA_EMAIL.message">The email message "{$key}" is no longer used and can be removed.</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_DIFFERING_PARAMS.message">The email message "{$key}" differs from the reference locale in its use of parameters. Please double-check that it contains all relevant parameters. The mismatching parameter(s) are:</message>
+
+	<message key="plugins.generic.translator.locale">{$locale} Locale</message>
+	<message key="plugins.generic.translator.localeFiles">Locale Files</message>
+	<message key="plugins.generic.translator.miscFiles">Miscellaneous Files</message>
+	<message key="plugins.generic.translator.emails">Email Templates</message>
+	<message key="plugins.generic.translator.file.filename">Filename</message>
+	<message key="plugins.generic.translator.file.edit">Editing {$filename}</message>
+	<message key="plugins.generic.translator.email.edit">Editing {$emailKey}</message>
+	<message key="plugins.generic.translator.file.reference">Reference Version</message>
+	<message key="plugins.generic.translator.file.translation">Translation</message>
+	<message key="plugins.generic.translator.email.reference">Reference Version</message>
+	<message key="plugins.generic.translator.email.translation">Translation</message>
+	<message key="plugins.generic.translator.file.reset">Reset</message>
+	<message key="plugins.generic.translator.file.resetToReference">Reset To Reference</message>
+	<message key="plugins.generic.translator.email.reset">Reset</message>
+	<message key="plugins.generic.translator.email.resetToReference">Reset To Reference</message>
+	<message key="plugins.generic.translator.file.resetConfirm">Are you sure you wish to reset the file contents?</message>
+	<message key="plugins.generic.translator.email.resetConfirm">Are you sure you wish to reset the email contents?</message>
+	<message key="plugins.generic.translator.file.doesNotExistNote">* This file has not yet been translated.</message>
+	<message key="plugins.generic.translator.file.confirmCreate">The file "{$filename}" will be created using the English version; you will need to translate all strings in the file. Do you wish to continue?</message>
+	<message key="plugins.generic.translator.email.description">In the following fields, translate the email template's Title, Body, and Description. The Description is for the Journal Manager's reference only.</message>
+	<message key="plugins.generic.translator.confirmDelete">Are you sure you wish to delete this item? This action cannot be undone.</message>
+	<message key="plugins.generic.translator.deleteKey">Delete this key</message>
+	<message key="plugins.generic.translator.deleteEmail">Delete this email</message>
+	<message key="plugins.generic.translator.saveBeforeContinuing">Be sure to save any changes made on this page before continuing or they will be lost. Do you wish to continue? If so, any unsaved changes will be lost.</message>
+</locale>

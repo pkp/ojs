@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ja_JP locale.
+  *
+  -->
+ 
+<locale name="ja_JP" full_name="日本語">
+	<message key="plugins.generic.cms.displayName">CMSプラグイン</message>
+	<message key="plugins.generic.cms.description">このプラグインは静的なコンテン管理ができるようにします。</message>
+
+	<message key="plugins.generic.cms.toc">目次</message>
+
+	<message key="plugins.generic.cms.requirement.layoutmanager"><![CDATA[<strong>このプラグインを使用するには、レイアウト管理プラグインをインストールして有効化しておく必要があります。</strong>]]></message>	
+	<message key="plugins.generic.cms.requirement.tinymce"><![CDATA[<strong>コンテンツを追加･編集するにはTinyMCE プラグインをインストールして有効化しておく必要があります。</strong>]]></message>
+
+	<message key="manager.plugins.content">コンテンツの追加･編集</message>
+
+	<message key="plugins.generic.cms.form.introduction">このコンテンツ管理システム（CMS）プラグインは雑誌管理者が雑誌に静的コンテンツを追加することを可能にします。コンテンツは見出しレベル1,2,3を使ってページに分割することができますが、見出しレベル4以上は分割されずに新しいページに表示されます。各見出しは（サイドバーにある）目次のメニュー項目になります。ページを編集するには、目次から選択して、編集した後保存ボタンを押します。新しいページを追加するには、単に新しい見出しとコンテンツを現在のページの下に追加します。新しいコンテンツは現在のページの下に表示されます。</message>
+	
+	<message key="plugins.generic.cms.error.muststartwithheader"><![CDATA[全てのページは見出し（<h1>, <h2>, <h3>）で始める必要があります。]]></message>
+	<message key="plugins.generic.cms.error.musthavecontent">見出しの後には、何らかのコンテンツが必要です。2つの見出しが連続して現れないよう確認してください。</message>
+	<message key="plugins.generic.cms.error.headingcannotbeempty">全ての見出しには少なくとも1つの空白以外の文字が必要です。</message>		
+</locale>

@@ -13,7 +13,13 @@
   -->
  
 <locale name="ja_JP" full_name="日本語">
-	<message key="plugins.generic.webfeed.displayName">フィードPlugin</message>
+	<message key="plugins.generic.webfeed.displayName">フィードプラグイン</message>
 	<message key="plugins.generic.webfeed.description">このプラグインは、最新号からRSS/Atom配信フィードを提供します。</message>
+	<message key="plugins.generic.webfeed.settings">設定</message>
+	<message key="plugins.generic.webfeed.settings.issue">巻号ページのみにフィードリンクを表示する。</message>
+	<message key="plugins.generic.webfeed.settings.all">全てのページにフィードリンクを表示する。</message>
+	<message key="plugins.generic.webfeed.settings.currentIssue">最新号のアイテムを表示する。</message>
+	<message key="plugins.generic.webfeed.settings.recentArticles">最新公開アイテム。</message>
+	<message key="plugins.generic.webfeed.settings.recentItemsRequired">通知する最新公開アイテムの数を正の整数で指定してください。</message>
 </locale>
 

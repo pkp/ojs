@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the ja_JP locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="ja_JP" full_name="日本語">
+	<message key="plugins.generic.xmlGalley.displayName">XMLゲラプラグイン</message>
+	<message key="plugins.generic.xmlGalley.description">このプラグインは、XSLTを使ってXML形式の論文からXHTML形式のゲラを作成します。</message>
+
+	<message key="plugins.generic.xmlGalley.manager.settings">設定</message>
+
+	<!-- XML Article Galleys Settings Management -->
+	<message key="plugins.generic.xmlGalley.settings.description"><![CDATA[<p>このプラグインを使うと、アップロードされたXML形式のソースファイルから特定のXSLスタイルシート変換を使用して論文のゲラが自動的に作成されます。</p>]]></message>
+	<message key="plugins.generic.xmlGalley.settings.renderer">XSLTレンダリング方法</message>
+	<message key="plugins.generic.xmlGalley.settings.PHP5">XSL機能(libxslt)を持つPHP 5.0.0+</message>
+	<message key="plugins.generic.xmlGalley.settings.PHP4">XSLT機能(Sablotron)を持つPHP 4.0.3+</message>
+	<message key="plugins.generic.xmlGalley.settings.notAvailable">利用できません</message>
+
+	<message key="plugins.generic.xmlGalley.settings.externalXSLT">外部コマンドラインXSLTレンダラ（Xalanなど）</message>
+	<message key="plugins.generic.xmlGalley.settings.externalXSLTDescription"><![CDATA[XSLTレンダラツールの完全パスを必要なパラメタと共に入力してください。XSLスタイルシートのロケーションに置換するには％ｘｓｌを、ＸＭＬソースファイルのロケーションには％ｘｍｌを使用してください。例）<br/><pre>/usr/bin/java -jar ~/java/xalan.jar -HTML -IN %xml -XSL %xsl</pre>]]></message>
+	<message key="plugins.generic.xmlGalley.settings.externalXSLTTest">XSLTのテスト</message>
+	<message key="plugins.generic.xmlGalley.settings.externalXSLTSuccess">外部XSLTのテストが成功しました。</message>
+	<message key="plugins.generic.xmlGalley.settings.externalXSLTFailure">外部XSLTのテストが失敗しました。</message>
+	<message key="plugins.generic.xmlGalley.settings.externalXSLTRequired">外部コマンドラインXSLTプロセッサを指定する必要があります。</message>
+
+	<message key="plugins.generic.xmlGalley.settings.stylesheet">XSLスタイルシート</message>
+	<message key="plugins.generic.xmlGalley.settings.xslNLM"><![CDATA[<a href="http://dtd.nlm.nih.gov/publishing/">NLM雑誌出版DTD</a> &rarr; XHTML]]></message>
+
+	<message key="plugins.generic.xmlGalley.settings.xslFOP">XSL-FO（たとえば、FOP）を使ったPDFゲラ作成を有効にする。</message>
+	<message key="plugins.generic.xmlGalley.settings.xslFOPDescription"><![CDATA[FOプロセッサの完全パスを必要なパラメタと共に入力してください。XSL-FOファイルのロケーションに置換するには％foを、PDFファイルのロケーションには％pdfを使用してください。例）<br/><pre>/usr/sbin/fop -fo %fo -pdf %pdf</pre>]]></message>
+	<message key="plugins.generic.xmlGalley.settings.xslFOPRequired">外部コマンドラインFOプロセッサを指定する必要があります。</message>
+
+	<message key="plugins.generic.xmlGalley.settings.customXSL">カスタムXSLスタイルシート</message>
+	<message key="plugins.generic.xmlGalley.settings.customXSLRequired">カスタムXSLスタイルシートファイルを指定する必要があります。</message>
+	<message key="plugins.generic.xmlGalley.settings.customXSLInvalid">アップロードされたXSLファイルは不正です。ファイルをチェックして、再度アップロードしてください。</message>
+
+</locale>
+
