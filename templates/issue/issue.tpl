@@ -22,7 +22,8 @@
 			{assign var=hasAbstract value=1}
 		{/if}
 
-		{if (!$subscriptionRequired || $article->getAccessStatus() || $subscribedUser || $subscribedDomain)}
+		{assign var=articleId value=$article->getArticleId()}
+		{if (!$subscriptionRequired || $article->getAccessStatus() || $subscribedUser || $subscribedDomain || ($subscriptionExpiryPartial && $articleExpiryPartial.$articleId))}
 			{assign var=hasAccess value=1}
 		{else}
 			{assign var=hasAccess value=0}

@@ -1442,6 +1442,13 @@ You may optionally provide the user with a reason for disabling their account.</
 	<message key="manager.subscriptionPolicies.authorSelfArchive">Author Self-Archiving Policy</message>
 	<message key="manager.subscriptionPolicies.authorSelfArchiveDescription">The following Author Self-Archiving Policy will be included in About the Journal under Policies.</message>
 	<message key="manager.subscriptionPolicies.subscriptionPoliciesSaved">Your subscription policy settings have been updated.</message>
+	<message key="manager.subscriptionPolicies.expiry">Subscription Expiry</message>
+	<message key="manager.subscriptionPolicies.expiryDescription">Upon subscription expiry, readers may be denied access to all subscription content or may continue to retain access to subscription content published prior to the subscription expiry date.</message>
+	<message key="manager.subscriptionPolicies.expirySelectOne">Select one of the following:</message>
+	<message key="manager.subscriptionPolicies.expiryFull">Full expiry</message>
+	<message key="manager.subscriptionPolicies.expiryFullDescription">Readers are denied access to all subscription content upon subscription expiry.</message>
+	<message key="manager.subscriptionPolicies.expiryPartial">Partial expiry</message>
+	<message key="manager.subscriptionPolicies.expiryPartialDescription">Readers are denied access to recently published subscription content, but retain access to subscription content published prior to the subscription expiry date.</message>
 	<message key="manager.subscriptionPolicies.expiryReminders">Subscription Expiry Reminders</message>
 	<message key="manager.subscriptionPolicies.expiryRemindersDescription">Automated email reminders (available for editing by Journal Managers in OJS's Prepared Emails) can be sent to subscribers both before and after a subscription has expired.</message>
 	<message key="manager.subscriptionPolicies.expiryRemindersDisabled"><![CDATA[<strong>Note:</strong> To activate these options, the site administrator must enable the <tt>scheduled_tasks</tt> option in the OJS configuration file. Additional server configuration may be required to support this functionality (which may not be possible on all servers), as indicated in the OJS documentation.]]></message>

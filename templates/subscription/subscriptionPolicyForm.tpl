@@ -99,6 +99,40 @@
 <div class="separator"></div>
 
 
+<h3>{translate key="manager.subscriptionPolicies.expiry"}</h3>
+<p>{translate key="manager.subscriptionPolicies.expiryDescription"}</p>
+
+<p>{translate key="manager.subscriptionPolicies.expirySelectOne"}</p>
+
+<table width="100%" class="data">
+	<tr valign="top">
+		<td width="5%" class="label" align="right">
+			<input type="radio" name="subscriptionExpiryPartial" id="subscriptionExpiryPartial-0" value="0"{if not $subscriptionExpiryPartial} checked="checked"{/if} />
+		</td>
+		<td width="95%" class="value">
+			<label for="subscriptionExpiry-0"><strong>{translate key="manager.subscriptionPolicies.expiryFull"}</strong></label>
+			<br />
+			<span class="instruct">{translate key="manager.subscriptionPolicies.expiryFullDescription"}</span>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2" class="separator">&nbsp;</td>
+	</tr>
+	<tr valign="top">
+		<td width="5%" class="label" align="right">
+			<input type="radio" name="subscriptionExpiryPartial" id="subscriptionExpiryPartial-1" value="1"{if $subscriptionExpiryPartial} checked="checked"{/if} />
+		</td>
+		<td width="95%" class="value">
+			<label for="subscriptionExpiry-1"><strong>{translate key="manager.subscriptionPolicies.expiryPartial"}</strong></label>
+			<br />
+			<span class="instruct">{translate key="manager.subscriptionPolicies.expiryPartialDescription"}</span>
+		</td>
+	</tr>
+</table>
+
+<div class="separator"></div>
+
+
 <h3>{translate key="manager.subscriptionPolicies.expiryReminders"}</h3>
 <p>{translate key="manager.subscriptionPolicies.expiryRemindersDescription"}</p>
 

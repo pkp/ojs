@@ -150,8 +150,9 @@ class ArticleHandler extends Handler {
 			if ($issue) {
 				$templateMgr->assign('subscriptionRequired', IssueAction::subscriptionRequired($issue));
 			}
-			$templateMgr->assign('subscribedUser', IssueAction::subscribedUser($journal));
-			$templateMgr->assign('subscribedDomain', IssueAction::subscribedDomain($journal));
+
+			$templateMgr->assign('subscribedUser', IssueAction::subscribedUser($journal, isset($issue) ? $issue->getIssueId() : null, isset($article) ? $article->getArticleId() : null));
+			$templateMgr->assign('subscribedDomain', IssueAction::subscribedDomain($journal, isset($issue) ? $issue->getIssueId() : null, isset($article) ? $article->getArticleId() : null)); 
 
 			$templateMgr->assign('showGalleyLinks', $journal->getSetting('showGalleyLinks'));
 
@@ -372,7 +373,7 @@ class ArticleHandler extends Handler {
 		// Make sure the reader has rights to view the article/issue.
 		if ($issue && $issue->getPublished()) {
 			$subscriptionRequired = IssueAction::subscriptionRequired($issue);
-			$isSubscribedDomain = IssueAction::subscribedDomain($journal);
+			$isSubscribedDomain = IssueAction::subscribedDomain($journal, $issue->getIssueId(), $articleId);
 
 			// Check if login is required for viewing.
 			if (!$isSubscribedDomain && !Validation::isLoggedIn() && $journal->getSetting('restrictArticleAccess') && isset($galleyId) && $galleyId != 0) {
@@ -385,7 +386,7 @@ class ArticleHandler extends Handler {
 			     (isset($galleyId) && $galleyId!=0) ) {
 
 				// Subscription Access
-				$subscribedUser = IssueAction::subscribedUser($journal);
+				$subscribedUser = IssueAction::subscribedUser($journal, $issue->getIssueId(), $articleId);
 
 				if (!(!$subscriptionRequired || $publishedArticle->getAccessStatus() || $subscribedUser)) {
 					// if payment information is enabled, 

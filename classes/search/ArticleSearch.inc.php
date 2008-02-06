@@ -269,7 +269,7 @@ class ArticleSearch {
 					$issue = &$issueDao->getIssueById($issueId);
 					$issueCache[$issueId] = &$issue;
 					import('issue.IssueAction');
-					$issueAvailabilityCache[$issueId] = !IssueAction::subscriptionRequired($issue) || IssueAction::subscribedUser($journalCache[$journalId]) || IssueAction::subscribedDomain($journalCache[$journalId]);
+					$issueAvailabilityCache[$issueId] = !IssueAction::subscriptionRequired($issue) || IssueAction::subscribedUser($journalCache[$journalId], $issueId, $articleId) || IssueAction::subscribedDomain($journalCache[$journalId], $issueId, $articleId);
 				}
 
 				// Store the retrieved objects in the result array.

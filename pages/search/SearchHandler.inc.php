@@ -86,6 +86,7 @@ class SearchHandler extends Handler {
 			$journalDao =& DAORegistry::getDAO('JournalDAO');
 
 			foreach ($publishedArticles as $article) {
+				$articleId = $article->getArticleId();
 				$issueId = $article->getIssueId();
 				$sectionId = $article->getSectionId();
 				$journalId = $article->getJournalId();
@@ -94,7 +95,7 @@ class SearchHandler extends Handler {
 					import('issue.IssueAction');
 					$issue = &$issueDao->getIssueById($issueId);
 					$issues[$issueId] = &$issue;
-					$issuesUnavailable[$issueId] = IssueAction::subscriptionRequired($issue) && (!IssueAction::subscribedUser($journal) && !IssueAction::subscribedDomain($journal));
+					$issuesUnavailable[$issueId] = IssueAction::subscriptionRequired($issue) && (!IssueAction::subscribedUser($journal, $issueId, $articleId) && !IssueAction::subscribedDomain($journal, $issueId, $articleId));
 				}
 				if (!isset($journals[$journalId])) {
 					$journals[$journalId] =& $journalDao->getJournal($journalId);

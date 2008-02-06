@@ -126,6 +126,7 @@ class SubscriptionPolicyForm extends Form {
 			'enableOpenAccessNotification' => $journalSettingsDao->getSetting($journalId, 'enableOpenAccessNotification'),
 			'enableAuthorSelfArchive' => $journalSettingsDao->getSetting($journalId, 'enableAuthorSelfArchive'),
 			'authorSelfArchivePolicy' => $journalSettingsDao->getSetting($journalId, 'authorSelfArchivePolicy'),
+			'subscriptionExpiryPartial' => $journalSettingsDao->getSetting($journalId, 'subscriptionExpiryPartial'),
 			'enableSubscriptionExpiryReminderBeforeMonths' => $journalSettingsDao->getSetting($journalId, 'enableSubscriptionExpiryReminderBeforeMonths'),
 			'numMonthsBeforeSubscriptionExpiryReminder' => $journalSettingsDao->getSetting($journalId, 'numMonthsBeforeSubscriptionExpiryReminder'),
 			'enableSubscriptionExpiryReminderBeforeWeeks' => $journalSettingsDao->getSetting($journalId, 'enableSubscriptionExpiryReminderBeforeWeeks'),
@@ -141,7 +142,7 @@ class SubscriptionPolicyForm extends Form {
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->readUserVars(array('subscriptionName', 'subscriptionEmail', 'subscriptionPhone', 'subscriptionFax', 'subscriptionMailingAddress', 'subscriptionAdditionalInformation', 'enableDelayedOpenAccess', 'delayedOpenAccessDuration', 'delayedOpenAccessPolicy', 'enableOpenAccessNotification', 'enableAuthorSelfArchive', 'authorSelfArchivePolicy', 'enableSubscriptionExpiryReminderBeforeMonths', 'numMonthsBeforeSubscriptionExpiryReminder', 'enableSubscriptionExpiryReminderBeforeWeeks', 'numWeeksBeforeSubscriptionExpiryReminder', 'enableSubscriptionExpiryReminderAfterWeeks', 'numWeeksAfterSubscriptionExpiryReminder', 'enableSubscriptionExpiryReminderAfterMonths', 'numMonthsAfterSubscriptionExpiryReminder'));
+		$this->readUserVars(array('subscriptionName', 'subscriptionEmail', 'subscriptionPhone', 'subscriptionFax', 'subscriptionMailingAddress', 'subscriptionAdditionalInformation', 'enableDelayedOpenAccess', 'delayedOpenAccessDuration', 'delayedOpenAccessPolicy', 'enableOpenAccessNotification', 'enableAuthorSelfArchive', 'authorSelfArchivePolicy', 'subscriptionExpiryPartial', 'enableSubscriptionExpiryReminderBeforeMonths', 'numMonthsBeforeSubscriptionExpiryReminder', 'enableSubscriptionExpiryReminderBeforeWeeks', 'numWeeksBeforeSubscriptionExpiryReminder', 'enableSubscriptionExpiryReminderAfterWeeks', 'numWeeksAfterSubscriptionExpiryReminder', 'enableSubscriptionExpiryReminderAfterMonths', 'numMonthsAfterSubscriptionExpiryReminder'));
 
 		// If delayed open access selected, ensure a valid duration is provided
 		if ($this->_data['enableDelayedOpenAccess'] == 1) {
@@ -197,6 +198,7 @@ class SubscriptionPolicyForm extends Form {
 		$journalSettingsDao->updateSetting($journalId, 'enableOpenAccessNotification', $this->getData('enableOpenAccessNotification') == null ? 0 : $this->getData('enableOpenAccessNotification'), 'bool');
 		$journalSettingsDao->updateSetting($journalId, 'enableAuthorSelfArchive', $this->getData('enableAuthorSelfArchive') == null ? 0 : $this->getData('enableAuthorSelfArchive'), 'bool');
 		$journalSettingsDao->updateSetting($journalId, 'authorSelfArchivePolicy', $this->getData('authorSelfArchivePolicy'), 'string', true); // Localized
+		$journalSettingsDao->updateSetting($journalId, 'subscriptionExpiryPartial', $this->getData('subscriptionExpiryPartial') == null ? 0 : $this->getData('subscriptionExpiryPartial'), 'bool');
 		$journalSettingsDao->updateSetting($journalId, 'enableSubscriptionExpiryReminderBeforeMonths', $this->getData('enableSubscriptionExpiryReminderBeforeMonths') == null ? 0 : $this->getData('enableSubscriptionExpiryReminderBeforeMonths'), 'bool');
 		$journalSettingsDao->updateSetting($journalId, 'numMonthsBeforeSubscriptionExpiryReminder', $this->getData('numMonthsBeforeSubscriptionExpiryReminder'), 'int');
 		$journalSettingsDao->updateSetting($journalId, 'enableSubscriptionExpiryReminderBeforeWeeks', $this->getData('enableSubscriptionExpiryReminderBeforeWeeks') == null ? 0 : $this->getData('enableSubscriptionExpiryReminderBeforeWeeks'), 'bool');

@@ -18,6 +18,10 @@
 import('subscription.Subscription');
 import('subscription.SubscriptionType');
 
+define('SUBSCRIPTION_DATE_START',	0x01);
+define('SUBSCRIPTION_DATE_END',		0x02);
+define('SUBSCRIPTION_DATE_BOTH',	0x03);
+
 class SubscriptionDAO extends DAO {
 	/**
 	 * Retrieve a subscription by subscription ID.
@@ -492,23 +496,25 @@ class SubscriptionDAO extends DAO {
 	 * @param $IP string
 	 * @param $userId int
 	 * @param $journalId int
+	 * @param $check int Test using either start date, end date, or both (default)
+	 * @param $checkDate date (YYYY-MM-DD) Use this date instead of current date
 	 * @return int
 	 */
-	function isValidSubscription($domain, $IP, $userId, $journalId) {
+	function isValidSubscription($domain, $IP, $userId, $journalId, $check = SUBSCRIPTION_DATE_BOTH, $checkDate = null) {
 		$valid = false;
 
 		if ($userId != null) {
-			$valid = $this->isValidSubscriptionByUser($userId, $journalId);
+			$valid = $this->isValidSubscriptionByUser($userId, $journalId, $check, $checkDate);
 			if ($valid !== false) { return $valid; }
 		}
 
 		if ($domain != null) {
-			$valid = $this->isValidSubscriptionByDomain($domain, $journalId);
+			$valid = $this->isValidSubscriptionByDomain($domain, $journalId, $check, $checkDate);
 			if ($valid !== false) { return $valid; }
 		}	
 
 		if ($IP != null) {
-			$valid = $this->isValidSubscriptionByIP($IP, $journalId);
+			$valid = $this->isValidSubscriptionByIP($IP, $journalId, $check, $checkDate);
 			if ($valid !== false) { return $valid; }
 		}
 
@@ -519,20 +525,38 @@ class SubscriptionDAO extends DAO {
 	 * Check whether user with ID has a valid subscription for a given journal.
 	 * @param $userId int
 	 * @param $journalId int
+	 * @param $check int Test using either start date, end date, or both (default)
+	 * @param $checkDate date (YYYY-MM-DD) Use this date instead of current date
 	 * @return int 
 	 */
-	function isValidSubscriptionByUser($userId, $journalId) {
-		$checkDate = $this->dateToDB(Core::getCurrentDate());
+	function isValidSubscriptionByUser($userId, $journalId, $check = SUBSCRIPTION_DATE_BOTH, $checkDate = null) {
+		$today = $this->dateToDB(Core::getCurrentDate()); 
+
+		if ($checkDate == null) {
+			$checkDate = $today;
+		} else {
+			$checkDate = $this->dateToDB($checkDate);
+		}
+
+		switch($check) {
+			case SUBSCRIPTION_DATE_START:
+				$sqlDate = sprintf('AND %s >= date_start AND %s >= date_start', $checkDate, $today);
+				break;
+			case SUBSCRIPTION_DATE_END:
+				$sqlDate = sprintf('AND %s <= date_end AND %s >= date_start', $checkDate, $today);
+				break;
+			default:
+				$sqlDate = sprintf('AND %s >= date_start AND %s <= date_end', $checkDate, $checkDate);
+		}
 
 		$result = &$this->retrieve(
 			sprintf('SELECT subscription_id
 				FROM subscriptions, subscription_types
 				WHERE subscriptions.user_id = ?
-				AND   subscriptions.journal_id = ?
-				AND   %s >= date_start AND %s <= date_end  
-				AND   subscriptions.type_id = subscription_types.type_id
-				AND   (subscription_types.format = ' . SUBSCRIPTION_TYPE_FORMAT_ONLINE .' OR subscription_types.format = ' . SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE . ')',
-				$checkDate, $checkDate),
+				AND   subscriptions.journal_id = ? '
+				. $sqlDate .
+				' AND   subscriptions.type_id = subscription_types.type_id
+				AND   (subscription_types.format = ' . SUBSCRIPTION_TYPE_FORMAT_ONLINE .' OR subscription_types.format = ' . SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE . ')'),
 			array(
 				$userId,
 				$journalId
@@ -554,22 +578,40 @@ class SubscriptionDAO extends DAO {
 	 * Check whether there is a valid subscription with given domain for a journal.
 	 * @param $domain string
 	 * @param $journalId int
+	 * @param $check int Test using either start date, end date, or both (default)
+	 * @param $checkDate date (YYYY-MM-DD) Use this date instead of current date
 	 * @return int
 	 */
-	function isValidSubscriptionByDomain($domain, $journalId) {
-		$checkDate = $this->dateToDB(Core::getCurrentDate());
+	function isValidSubscriptionByDomain($domain, $journalId, $check = SUBSCRIPTION_DATE_BOTH, $checkDate = null) {
+		$today = $this->dateToDB(Core::getCurrentDate()); 
+
+		if ($checkDate == null) {
+			$checkDate = $today;
+		} else {
+			$checkDate = $this->dateToDB($checkDate);
+		}
+
+		switch($check) {
+			case SUBSCRIPTION_DATE_START:
+				$sqlDate = sprintf('AND %s >= date_start AND %s >= date_start', $checkDate, $today);
+				break;
+			case SUBSCRIPTION_DATE_END:
+				$sqlDate = sprintf('AND %s <= date_end AND %s >= date_start', $checkDate, $today);
+				break;
+			default:
+				$sqlDate = sprintf('AND %s >= date_start AND %s <= date_end', $checkDate, $checkDate);
+		}
 
 		$result = &$this->retrieve(
 			sprintf('SELECT subscription_id 
 				FROM subscriptions, subscription_types
 				WHERE POSITION(UPPER(LPAD(domain, LENGTH(domain)+1, \'.\')) IN UPPER(LPAD(?, LENGTH(?)+1, \'.\'))) != 0
 				AND   domain != \'\'
-				AND   subscriptions.journal_id = ?
-				AND   %s >= date_start AND %s <= date_end  
-				AND   subscriptions.type_id = subscription_types.type_id
+				AND   subscriptions.journal_id = ? '
+				. $sqlDate . 
+				' AND   subscriptions.type_id = subscription_types.type_id
 				AND   subscription_types.institutional = 1
-				AND   (subscription_types.format = ' . SUBSCRIPTION_TYPE_FORMAT_ONLINE .' OR subscription_types.format = ' . SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE . ')',
-				$checkDate, $checkDate),
+				AND   (subscription_types.format = ' . SUBSCRIPTION_TYPE_FORMAT_ONLINE .' OR subscription_types.format = ' . SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE . ')'),
 			array(
 				$domain,
 				$domain,
@@ -592,15 +634,34 @@ class SubscriptionDAO extends DAO {
 	 * Check whether there is a valid subscription for the given IP for a journal.
 	 * @param $IP string
 	 * @param $journalId int
+	 * @param $check int Test using either start date, end date, or both (default)
+	 * @param $checkDate date (YYYY-MM-DD) Use this date instead of current date
 	 * @return int
 	 */
-	function isValidSubscriptionByIP($IP, $journalId) {
+	function isValidSubscriptionByIP($IP, $journalId, $check = SUBSCRIPTION_DATE_BOTH, $checkDate = null) {
 		if (empty($IP) || empty($journalId)) {
 			return false;
 		}
 
 		$IP = sprintf('%u', ip2long($IP));
-		$checkDate = $this->dateToDB(Core::getCurrentDate());
+		$today = $this->dateToDB(Core::getCurrentDate()); 
+
+		if ($checkDate == null) {
+			$checkDate = $today;
+		} else {
+			$checkDate = $this->dateToDB($checkDate);
+		}
+
+		switch($check) {
+			case SUBSCRIPTION_DATE_START:
+				$sqlDate = sprintf('AND %s >= date_start AND %s >= date_start', $checkDate, $today);
+				break;
+			case SUBSCRIPTION_DATE_END:
+				$sqlDate = sprintf('AND %s <= date_end AND %s >= date_start', $checkDate, $today);
+				break;
+			default:
+				$sqlDate = sprintf('AND %s >= date_start AND %s <= date_end', $checkDate, $checkDate);
+		}
 
 		$result = &$this->retrieve(
 			sprintf('SELECT subscription_ip.subscription_id
@@ -608,20 +669,19 @@ class SubscriptionDAO extends DAO {
 				WHERE ((ip_end IS NOT NULL
 				AND   ? >= ip_start AND ? <= ip_end
 				AND   subscription_ip.subscription_id = subscriptions.subscription_id   
-				AND   subscriptions.journal_id = ?
-				AND   %s >= date_start AND %s <= date_end  
-				AND   subscriptions.type_id = subscription_types.type_id
+				AND   subscriptions.journal_id = ? '
+				. $sqlDate .
+				' AND   subscriptions.type_id = subscription_types.type_id
 				AND   subscription_types.institutional = 1
 				AND   (subscription_types.format = ' . SUBSCRIPTION_TYPE_FORMAT_ONLINE .' OR subscription_types.format = ' . SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE . '))
 				OR    (ip_end IS NULL
 				AND   ? = ip_start
 				AND   subscription_ip.subscription_id = subscriptions.subscription_id   
-				AND   subscriptions.journal_id = ?
-				AND   %s >= date_start AND %s <= date_end  
-				AND   subscriptions.type_id = subscription_types.type_id
+				AND   subscriptions.journal_id = ? '
+				. $sqlDate .
+				' AND   subscriptions.type_id = subscription_types.type_id
 				AND   subscription_types.institutional = 1
-				AND   (subscription_types.format = ' . SUBSCRIPTION_TYPE_FORMAT_ONLINE .' OR subscription_types.format = ' . SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE . ')))',
-				$checkDate, $checkDate, $checkDate, $checkDate),
+				AND   (subscription_types.format = ' . SUBSCRIPTION_TYPE_FORMAT_ONLINE .' OR subscription_types.format = ' . SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE . ')))'),
 			array (
 					$IP,
 					$IP,

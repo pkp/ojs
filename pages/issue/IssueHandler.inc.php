@@ -81,10 +81,28 @@ class IssueHandler extends Handler {
 
 			// Subscription Access
 			import('issue.IssueAction');
-			$templateMgr->assign('subscriptionRequired', IssueAction::subscriptionRequired($issue));
-			$templateMgr->assign('subscribedUser', IssueAction::subscribedUser($journal));
-			$templateMgr->assign('subscribedDomain', IssueAction::subscribedDomain($journal));
+			$subscriptionRequired = IssueAction::subscriptionRequired($issue);
+			$subscribedUser = IssueAction::subscribedUser($journal);
+			$subscribedDomain = IssueAction::subscribedDomain($journal);
+			$subscriptionExpiryPartial = $journal->getSetting('subscriptionExpiryPartial');
 			
+			if ($showToc && $subscriptionRequired && !$subscribedUser && !$subscribedDomain && $subscriptionExpiryPartial) {
+				$templateMgr->assign('subscriptionExpiryPartial', true);
+				$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
+				$publishedArticlesTemp = &$publishedArticleDao->getPublishedArticles($issue->getIssueId(), null, true);
+
+				$articleExpiryPartial = array();
+				foreach ($publishedArticlesTemp as $publishedArticle) {
+					$partial = IssueAction::subscribedUser($journal, $issue->getIssueId(), $publishedArticle->getArticleId());
+					if (!$partial) IssueAction::subscribedDomain($journal, $issue->getIssueId(), $publishedArticle->getArticleId()); 
+					$articleExpiryPartial[$publishedArticle->getArticleId()] = $partial;
+				}
+				$templateMgr->assign_by_ref('articleExpiryPartial', $articleExpiryPartial);
+			}
+
+			$templateMgr->assign('subscriptionRequired', $subscriptionRequired);
+			$templateMgr->assign('subscribedUser', $subscribedUser);
+			$templateMgr->assign('subscribedDomain', $subscribedDomain);
 			$templateMgr->assign('showGalleyLinks', $journal->getSetting('showGalleyLinks'));
 
 			import('payment.ojs.OJSPaymentManager');
@@ -188,10 +206,28 @@ class IssueHandler extends Handler {
 
 			// Subscription Access
 			import('issue.IssueAction');
-			$templateMgr->assign('subscriptionRequired', IssueAction::subscriptionRequired($issue));
-			$templateMgr->assign('subscribedUser', IssueAction::subscribedUser($journal));
-			$templateMgr->assign('subscribedDomain', IssueAction::subscribedDomain($journal));
+			$subscriptionRequired = IssueAction::subscriptionRequired($issue);
+			$subscribedUser = IssueAction::subscribedUser($journal);
+			$subscribedDomain = IssueAction::subscribedDomain($journal);
+			$subscriptionExpiryPartial = $journal->getSetting('subscriptionExpiryPartial');
 			
+			if ($showToc && $subscriptionRequired && !$subscribedUser && !$subscribedDomain && $subscriptionExpiryPartial) {
+				$templateMgr->assign('subscriptionExpiryPartial', true);
+				$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
+				$publishedArticlesTemp = &$publishedArticleDao->getPublishedArticles($issue->getIssueId(), null, true);
+
+				$articleExpiryPartial = array();
+				foreach ($publishedArticlesTemp as $publishedArticle) {
+					$partial = IssueAction::subscribedUser($journal, $issue->getIssueId(), $publishedArticle->getArticleId());
+					if (!$partial) IssueAction::subscribedDomain($journal, $issue->getIssueId(), $publishedArticle->getArticleId()); 
+					$articleExpiryPartial[$publishedArticle->getArticleId()] = $partial;
+				}
+				$templateMgr->assign_by_ref('articleExpiryPartial', $articleExpiryPartial);
+			}
+
+			$templateMgr->assign('subscriptionRequired', $subscriptionRequired);
+			$templateMgr->assign('subscribedUser', $subscribedUser);
+			$templateMgr->assign('subscribedDomain', $subscribedDomain);
 			$templateMgr->assign('showGalleyLinks', $journal->getSetting('showGalleyLinks'));
 
 			import('payment.ojs.OJSPaymentManager');
