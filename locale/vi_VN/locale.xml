@@ -2600,4 +2600,94 @@ Sau khi kết thúc hiệu đính, đổi tên file từ AuthorNameQA.doc thành
 	<message key="manager.setup.restrictSiteAccess">Người dùng phải đăng ký và đăng nhập mới xem được tạp chí.</message>
 	<message key="manager.setup.restrictArticleAccess">Người dùng phải đăng ký và đăng nhập mới xem được nội dung cho truy cập tự do.</message>
 	<message key="manager.setup.addReviewerDatabaseLink">Thêm đường dẫn tới CSDL mới</message>
+	<message key="admin.mergeUsers.into.description">Chọn một người dùng sẽ tiếp nhận các quyền tác giả và công việc biên tập của người dùng trước đây.</message>
+	<message key="manager.statistics.reports.description">OJS lập các báo cáo theo dõi những chi tiết của quá trình xử lý các bài viết nộp cho tạp chí từ góc độ của bài nộp, BTV, người phản biện, và chuyên mục, trong một khoảng thời gian nhất định. Các báo cáo được lập dưới định dạng CSV (phân tách dữ liệu bằng dấu phẩy) và phải dùng các phần mềm bảng tính để xem.</message>
+	<message key="manager.plugins.description">Trang này cho phép Tổng biên tập duyệt và hiệu chỉnh tham số cho các công cụ phụ trợ đã được cài đặt. Các công cụ phụ trợ được chia thành nhóm tùy theo chức năng. Các nhóm được liệt kê dưới đây và dưới mỗi nhóm là bộ công cụ hiện có của nhóm đó.</message>
+	<message key="manager.payment.authorFeesDescription">Các phương án được lựa chọn, cùng với mô tả và lệ phí (có thể sửa được ở dưới đây), sẽ xuất hiện ở Bước 1 trong quá trình nộp bài và trong trang Giới thiệu Tạp chí dưới mục Bài nộp, đồng thời ở những nơi cần phải trả tiền để tiếp tục.</message>
+	<message key="manager.payment.readerFeesDescription">Các phương án được lựa chọn, cùng với mô tả và lệ phí (có thể sửa được ở dưới đây), sẽ xuất hiện trong trang Giới thiệu Tạp chí dưới mục Bài nộp, đồng thời ở những nơi cần phải trả tiền để tiếp tục.</message>
+	<message key="manager.payment.generalFeesDescription">Chính sách dành cho Hội viên sẽ được nêu ở trang Giới thiệu Tạp chí dưới mục Chính sách, và đường dẫn tới trang tài trợ sẽ xuất hiện ở phía trên công cụ tìm kiếm ở khung bên tay phải.</message>
+	<message key="manager.payment.options.acceptSubscriptionPayments">Tác vụ này sẽ kích hoạt các khoản thanh toán Đặt mua tạp chí, nơi Người phụ trách phát hành quản lý các hình thức đặt mua, giá và thời hạn và người đặt mua tạp chí.</message>
+	<message key="manager.payment.form.numeric">Tất cả mức giá phải có giá trị nguyên dương (cho phép giá trị thập phân)</message>
+	<message key="plugins.categories.citationFormats">Phụ trợ định dạng Trích dẫn tài liệu tham khảo</message>
+	<message key="plugins.categories.citationFormats.description">Phụ trợ định dạng Trích dẫn tài liệu tham khảo cung cấp cho người dùng các định dạng khác nhau khi trích dẫn một bài viết.</message>
+	<message key="plugins.categories.blocks">Phụ trợ Khối tác vụ</message>
+	<message key="plugins.categories.blocks.description">Phụ trợ Khối tác vụ là những thành phần có giao diện người dùng (UI), chẳng hạn các thanh công cụ.</message>
+	<message key="plugins.categories.themes">Phụ trợ Giao diện</message>
+	<message key="plugins.categories.themes.description">Phụ trợ Giao diện có thể dùng để thay đổi hình thức của website.</message>
+	<message key="plugins.categories.paymethod">Phụ trợ Thanh toán</message>
+	<message key="plugins.categories.paymethod.description">Phụ trợ Thanh toán hỗ trợ các cách thức khác nhau để xử lý các khoản thanh toán trực tuyến.</message>
+	<message key="manager.setup.management.description">Truy cập và An ninh, lịch xuất bản, thông báo, biên tập bản thảo, trình bày và soát lỗi.</message>
+	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[Cung cấp đường dẫn tới mục <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">Đảm bảo Phản biệt Khuyết danh</a> trên những trang nơi mà tác giả và người phản biện tải file của mình lên.]]></message>
+	<message key="manager.setup.notifyAllAuthorsOnDecision">Khi gửi email Thông báo Tác giả, hãy gửi tới địa chỉ email của tất cả các đồng tác giả của những bài viết nhiều tác giả, không chỉ gửi tới người nộp bài.</message>
+	<message key="manager.setup.securitySettings">Thiết lập về Truy cập và An ninh</message>
+	<message key="manager.setup.securitySettingsDescription">Phần mềm OJS cung cấp một số lựa chọn về an ninh có thể sử dụng để hạn chế truy cập vào nội dung của tạp chí và lưu giữ những thông tin thêm về các bài nộp phục vụ cho mục đích kiểm tra sau này.</message>
+	<message key="manager.setup.enableUserRegistration">Người dùng có thể tự đăng ký với tạp chí với một hoặc nhiều vai trò sau:</message>
+	<message key="manager.setup.siteAccess">Những hạn chế khác về truy cập website và tạp chí</message>
+	<message key="manager.setup.submissionEventLogging">Lưu giữ nhật ký tất cả các tác vụ đã thực hiện đối với một bài nộp trên trang Lịch sử của bài viết này.</message>
+	<message key="manager.setup.submissionEmailLogging">Lưu giữ nhật ký tất cả email đã gửi liên quan tới một bài nộp trên trang Lịch sử của bài viết này.</message>
+	<message key="manager.setup.reviewerDatabaseLink">CSDL Người phản biện tiềm năng</message>
+	<message key="manager.setup.reviewerDatabaseLink.desc">Đưa vào trang Lựa chọn Người phản biện một đường dẫn tới một cơ sở dữ liệu tri liên quan có thể dùng để tìm kiếm những người phản biện tiềm năng mà CSDL đó BTV có thể truy cập mà không cần mua quyền sử dụng.</message>
+	<message key="manager.setup.authorCopyrightNoticeDescription"><![CDATA[Thông báo về Bản quyền (hay Thỏa thuận về Bản quyền) được nhập dưới đây sẽ xuất hiện ở trang Giới thiệu về Tạp chí và trong dữ liệu mô tả của mỗi bài viết. Mặc dù nội dung trong thỏa thuận bản quyền với tác giả là do tạp chí quyết định, Dự án Tri thức Công cộng khuyến nghị sử dụng giấy phép <a href="http://creativecommons.org" target="_new" class="action">Creative Commons</a>. Với mục đích đó, Dự án đưa ra <a href="{$sampleCopyrightWordingUrl}" target="_new" class="action">Mẫu Thỏa thuận về Bản quyền</a> có thể cắt và dán vào dưới đây dành cho các tạp chí (a) cho truy cập tự do, (b) cho truy cập tự do các số cũ, hoặc (c) không cho truy cập tự do.]]></message>
+	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Thông báo về Bản quyền đề xuất theo Creative Commons</h3>
+<h4>1. Chính sách đề xuất dành cho Tạp chí cho Truy cập Tự do</h4>
+Tác giả xuất bản bài viết của mình trên tạp chí này đồng ý với những điều khoản sau:
+<ol type="a">
+	<li>Tác giả vẫn giữ bản quyền và trao cho tạp chí quyền xuất bản lần đầu tiên đồng thời phát hành tác phẩm theo giấy phép <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</a> cho phép những người khác chia sẻ tác phẩm đó với điều kiện nêu rõ tác giả và nơi xuất bản đầu tiên.</li>
+	<li>Tác giả có thể ký kết những thỏa thuận riêng rẻ khác mang tính hợp đồng đối với việc phát hành không độc quyền phiên bản của tác phẩm in trên tạp chí này (v.d., đưa vào một kho dữ liệu của một cơ quan hoặc đưa vào một cuốn sách), với điều kiện nêu rõ nơi xuất bản đầu tiên.</li>
+	<li>Tác giả được phép và được khuyến khích đưa bài viết của mình lên mạng (v.d., trong các kho dữ liệu cơ quan hoặc website của tác giả) trước và trong quá trình nộp bài viết vì nó có thể đưa lại những trao đổi hiệu quả cũng như giúp tác phẩm có nhiều địa chỉ trích dẫn hơn (Xem <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">Hiệu lực của Truy cập Tự do</a>).</li>
+</ol>
+
+<h4>1. Chính sách đề xuất dành cho Tạp chí cho Truy cập Tự do Trễ thời gian</h4>
+Tác giả xuất bản bài viết của mình trên tạp chí này đồng ý với những điều khoản sau:
+<ol type="a">
+	<li>Tác giả vẫn giữ bản quyền và trao cho tạp chí quyền xuất bản lần đầu tiên và sau [số tháng] phát hành tác phẩm theo giấy phép <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</a>cho phép những người khác chia sẻ tác phẩm đó với điều kiện nêu rõ tác giả và nơi xuất bản đầu tiên.</li>
+	<li>Tác giả có thể ký kết những thỏa thuận riêng rẻ khác mang tính hợp đồng đối với việc phát hành không độc quyền phiên bản của tác phẩm in trên tạp chí này (v.d., đưa vào một kho dữ liệu của một cơ quan hoặc đưa vào một cuốn sách), với điều kiện nêu rõ nơi xuất bản đầu tiên.</li>
+	<li>Tác giả được phép và được khuyến khích đưa bài viết của mình lên mạng (v.d., trong các kho dữ liệu cơ quan hoặc website của tác giả) trước và trong quá trình nộp bài viết vì nó có thể đưa lại những trao đổi hiệu quả cũng như giúp tác phẩm có nhiều địa chỉ trích dẫn hơn (Xem <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">Hiệu lực của Truy cập Tự do</a>).</li>
+</ol>
+
+<h4>Proposed Policy for Journals That Offer Delayed Open Access</h4>
+Authors who publish with this journal agree to the following terms:
+<ol type="a">
+	<li>Authors retain copyright and grant the journal right of first publication, with the work [SPECIFY PERIOD OF TIME] after publication simultaneously licensed under a <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</a> that allows others to share the work with an acknowledgement of the work's authorship and initial publication in this journal.</li>
+	 <li>Authors are able to enter into separate, additional contractual arrangements for the non-exclusive distribution of the journal's published version of the work (e.g., post it to an institutional repository or publish it in a book), with an acknowledgement of its initial publication in this journal.</li>
+	 <li>Authors are permitted and encouraged to post their work online (e.g., in institutional repositories or on their website) prior to and during the submission process, as it can lead to productive exchanges, as well as earlier and greater citation of published work (See <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html"> The Effect of Open Access</a>).</li>
+</ol>]]></message>
+	<message key="manager.setup.includeCreativeCommons">Đối với những tạp chí cho truy cập mở ngay lập tức hoặc trễ thời gian, đính kèm ở những thời điểm thích hợp giấy phép Creative Commons vào tất cả các bài viết đã xuất bản.</message>
+	<message key="manager.setup.competingInterests">Những lợi ích xung đột</message>
+	<message key="manager.setup.competingInterests.description"><![CDATA[Các tạp chí y sinh học thường yêu cầu tác giả và người phản biện khai báo liệu họ có bất kỳ lợi ích xung đột nào liên quan tới công trình nghiên cứu hay không (xem <a href="http://journals.plos.org/plosclinicaltrials/competing.php" target="_new">PLoS Policy</a>).]]></message>
+	<message key="manager.setup.competingInterests.requireAuthors">Đòi hỏi các Tác giả nộp bài phải nộp một bản cáo bạch về Những lợi ích xung đột kèm theo bài nộp của minh.</message>
+	<message key="manager.setup.competingInterests.requireReviewers">Yêu cầu những Người phản biện nộp một bản cáo bạch về xung đột lợi ích kèm theo mỗi bài phản biện chuyên gia.</message>
+	<message key="manager.setup.competingInterests.guidelines">Hướng dẫn nộp Bản cáo bạch về xung đột lợi ích</message>
+	<message key="manager.setup.publicationFormatDescription">Tạp chí sẽ sử dụng các yếu tố sau để định danh các số tạp chí (nhưng có thể thay đổi cho các số cụ thể)</message>
+	<message key="manager.setup.publicationFormatNumber">Số</message>
+	<message key="manager.setup.publicationFormatVolume">Tập</message>
+	<message key="manager.setup.publicationFormatTitle">Nhan đề</message>
+	<message key="manager.setup.useCopyeditors">Mỗi bài nộp sẽ được giao cho một BTV bản thảo</message>
+	<message key="manager.setup.noUseCopyeditors">Biên tập bản thảo sẽ do một BTV chính hoặc BTV chuyên mục được giao bài nộp thực hiện.</message>
+	<message key="manager.setup.useLayoutEditors">Một BTV trình bày sẽ được giao chuẩn bị các file HTML, PDF, v.v... để xuất bản bài viết ở dạng điện tử.</message>
+	<message key="manager.setup.noUseLayoutEditors">Một BTV chính hoặc BTV chuyên mục được giao bài nộp sẽ chuẩn bị các file HTML, PDF, v.v...</message>
+	<message key="manager.setup.referenceLinking">Liên kết tham chiếu</message>
+	<message key="manager.setup.referenceLinkingDescription"><![CDATA[<p>Nhằm giúp bạn đọc tìm các phiên bản trên mạng của tác phẩm được một tác giả trích dẫn, có các lựa chọn sau.</p>
+<ol>
+<li><strong>Thêm một Công cụ đọc</strong><p>Tổng biên tập có thể thêm "Tìm các bài trích dẫn" vào các Công cụ đọc đi kèm với bài viết được xuất bản, giúp cho bạn đọc dùng tiêu đề của một bài viết được trích dẫn để tìm bài viết đó trong các cơ sở dữ liệu đã được lựa chọn trước</p></li>
+</li><strong>Đường dẫn gắn sẵn trong Danh mục Tài liệu trích dẫn</strong>BTV trình bày có thể thêm một đường dẫn vào các tài liệu được trích dẫn có thể tìm thấy trên mạng bằng cách sử dụng các hướng dẫn sau đây (có thể sửa được).</p></li>
+</ol>]]></message>
+	<message key="manager.setup.provideRefLinkInstructions">Cung cấp chỉ dẫn cho BTV Trình bày</message>
+	<message key="manager.setup.refLinkInstructions.description">Chỉ dẫn trình bày đối với các liên kết bài trích dẫn</message>
+	<message key="manager.setup.useProofreaders">Một Người soát lỗi sẽ được giao kiểm tra (cùng với tác giả) các bản thảo của bài viết trước khi xuất bản.</message>
+	<message key="manager.setup.noUseProofreaders">Một BTV chính hoặc BTV chuyên mục được giao bài nộp sẽ kiểm tra các bản thảo.</message>
+	<message key="manager.setup.onlineAccessManagement">Truy cập nội dung Tạp chí</message>
+	<message key="manager.setup.subscriptionDescription">Chức năng này đòi hỏi bổ nhiệm một Quản lý Phát hành có quyền truy cập module phát hành, bao gồm cả các lựa chọn khác về truy cập tự do, tự lưu trữ và thông báo qua email.</message>
+	<message key="manager.setup.showGalleyLinksDescription">Luôn hiển thị liên kết tới bản thảo và chỉ thị truy cập hạn chế.</message>
+	<message key="manager.setup.journalLayout">Trình bày Tạp chí</message>
+	<message key="manager.setup.journalLayoutDescription">Chọn một tông giao diện cho tạp chí và chọn các hợp phần giao diện tại đây. Có thể tải lên một file định dạng tạp chí để thay thế cho các dữ liệu định dạng của hệ thống và tông giao diện (nếu chọn tông giao diện khác).</message>
+	<message key="manager.setup.journalTheme">Tông giao diện tạp chí</message>
+	<message key="manager.setup.layout.leftSidebar">Thanh lề trái</message>
+	<message key="manager.setup.layout.unselected">Chưa chọn</message>
+	<message key="manager.setup.layout.rightSidebar">Thanh lề phải</message>
+	<message key="manager.languages.languageInstructions"><![CDATA[Người dùng có thể sử dụng OJS ở bất kỳ ngôn ngữ nào trong số các ngôn ngữ có trong phần mềm. Ngoài ra, OJS còn hoạt động như một phần mềm đa ngôn ngữ, cho phép người dùng chuyển đổi giữa các ngôn ngữ trên mỗi trang, và cho phép một số dữ liệu nhất định được nhập vào ở nhiều ngôn ngữ khác nhau.<br/><br/>Nếu một ngôn ngữ mà OS hỗ trợ mà không được liệt kê dưới đây, hãy đề nghị người quản trị website cài đặt ngôn ngữ đó từ giao diện quản trị. Về các chỉ dẫn cài đặt thêm ngôn ngữ mới, vui lòng xem tài liệu hướng dẫn sử dụng OJS.]]></message>
+	<message key="manager.languages.alternateLocaleInstructions">Phần mềm này có lựa chọn cho phép nhập những thông tin quan trọng nào đó bằng một vài ngôn ngữ khác. Để sử dụng tính năng này, lựa chọn các ngôn ngữ khác trong danh sách dưới đây.</message>
+	<message key="manager.sections.hideAbout">Bỏ mục này trong trang Giới thiệu Tạp chí.</message>
+	<message key="manager.groups.create">Tạo định danh chức vụ</message>
+	<message key="manager.groups.enableBoard.description"><![CDATA[Dưới mục <a href="{$aboutEditorialTeamUrl}">Nhân sự</a> trong trang Giới thiệu Tạp chí:]]></message>
 </locale>
