@@ -413,7 +413,8 @@ class ArticleHandler extends Handler {
 						/* if the article has been paid for then forget about everything else
 						 * and just let them access the article */
 						$completedPaymentDAO =& DAORegistry::getDAO('OJSCompletedPaymentDAO');
-						if ( $completedPaymentDAO->hasPaidPerViewArticle($userId, $articleId) ) { 
+						if ( $completedPaymentDAO->hasPaidPerViewArticle($userId, $articleId) 
+							|| (!is_null($user->getDateEndMembership()) && strtotime($user->getDateEndMembership()) > time()) ) { 
 							return array($journal, $issue, $publishedArticle);
 						} else {					
 							$queuedPayment =& $paymentManager->createQueuedPayment($journalId, PAYMENT_TYPE_PAYPERVIEW, $user->getUserId(), $articleId, $journal->getSetting('payPerViewFee'));
