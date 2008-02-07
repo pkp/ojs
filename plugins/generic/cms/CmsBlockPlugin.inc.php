@@ -83,7 +83,9 @@ class CmsBlockPlugin extends BlockPlugin {
 		if (!$journal) return '';
 
 		$plugin =& $this->getCmsPlugin();
-		$templateMgr->assign('cmsPluginToc', $plugin->getSetting($journal->getJournalId(), 'toc'));
+		if ( is_null($templateMgr->get_template_vars('cmsPluginToc')) ) {
+			$templateMgr->assign('cmsPluginToc', $plugin->getSetting($journal->getJournalId(), 'toc'));
+		}
 		return parent::getContents($templateMgr);
 	}
 
