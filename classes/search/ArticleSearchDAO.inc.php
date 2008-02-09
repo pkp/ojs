@@ -169,7 +169,7 @@ class ArticleSearchDAO extends DAO {
 		if ($result->RecordCount() == 0) {
 			$this->update(
 				'INSERT INTO article_search_objects (article_id, type, assoc_id) VALUES (?, ?, ?)',
-				array($articleId, $type, $assocId)
+				array($articleId, $type, (int) $assocId)
 			);
 			$objectId = $this->getInsertId('article_search_objects', 'object_id');
 
