@@ -61,51 +61,6 @@ class PaymethodPlugin extends Plugin {
 		return parent::getTemplatePath() . 'templates' . DIRECTORY_SEPARATOR ;
 	}
 		
-	/**
-	 * Get the filename of the ADODB schema for this plugin.
-	 * Subclasses using SQL tables should override this.
-	 */
-	function getInstallSchemaFile() {
-		return null;
-	}
-
-	function updateSchema(&$plugin, $args) {
-		$installer =& $args[0];
-		$result =& $args[1];
-
-		$schemaXMLParser = &new adoSchema($installer->dbconn, $installer->dbconn->charSet);
-		$sql = $schemaXMLParser->parseSchema($this->getInstallSchemaFile());
-		if ($sql) {
-			$result = $installer->executeSQL($sql);
-		} else {
-			$installer->setError(INSTALLER_ERROR_DB, str_replace('{$file}', $this->getInstallSchemaFile(), Locale::translate('installer.installParseDBFileError')));
-			$result = false;
-		}
-		return false;
-	}
-
-	/**
-	 * Get the filename of the install data for this plugin.
-	 * Subclasses using SQL tables should override this.
-	 */
-	function getInstallDataFile() {
-		return null;
-	}
-
-	function installData(&$plugin, $args) {
-		$installer =& $args[0];
-		$result =& $args[1];
-
-		$sql = $installer->dataXMLParser->parseData($this->getInstallDataFile());
-		if ($sql) {
-			$result = $installer->executeSQL($sql);
-		} else {
-			$installer->setError(INSTALLER_ERROR_DB, str_replace('{$file}', $this->getInstallDataFile(), Locale::translate('installer.installParseDBFileError')));
-			$result = false;
-		}
-		return false;
-	}
-
 	function displayPaymentForm($queuedPaymentId, $key, &$queuedPayment) {
 		die('ABSTRACT METHOD');
 	}
