@@ -122,10 +122,11 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 
 		// Update article		
 		$article = &$this->article;
-		if ( $this->getData('commentsToEditor') != '' ) {
+
+		if ($this->getData('commentsToEditor') != '') {
 			$article->setCommentsToEditor($this->getData('commentsToEditor'));
 		}
-		
+
 		$article->setDateSubmitted(Core::getCurrentDate());
 		$article->setSubmissionProgress(0);
 		$article->stampStatusModified();
