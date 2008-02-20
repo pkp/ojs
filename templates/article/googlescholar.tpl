@@ -8,7 +8,7 @@
  *
  * $Id$
  *}
-	<meta name="gs_meta_revision" content="$Revision$" />
+	<meta name="gs_meta_revision" content="1.1" />
 	<meta name="citation_journal_title" content="{$currentJournal->getJournalTitle()|strip_tags|escape}"/>
 {if $currentJournal->getSetting('onlineIssn')}{assign var="issn" value=$currentJournal->getSetting('onlineIssn')}
 {elseif $currentJournal->getSetting('printIssn')}{assign var="issn" value=$currentJournal->getSetting('printIssn')}
