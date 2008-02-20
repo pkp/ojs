@@ -8,6 +8,7 @@
  *
  * $Id$
  *}
+	<meta name="gs_meta_revision" content="$Revision$" />
 	<meta name="citation_journal_title" content="{$currentJournal->getJournalTitle()|strip_tags|escape}"/>
 {if $currentJournal->getSetting('onlineIssn')}{assign var="issn" value=$currentJournal->getSetting('onlineIssn')}
 {elseif $currentJournal->getSetting('printIssn')}{assign var="issn" value=$currentJournal->getSetting('printIssn')}
@@ -16,7 +17,7 @@
 {if $issn}
 	<meta name="citation_issn" content="{$issn|strip_tags|escape}">
 {/if}
-	<meta name="citation_authors" content="{$article->getAuthorString()|escape}">
+	<meta name="citation_authors" content="{foreach name="authors" from=$article->getAuthors() item=author}{$author->getLastName()|escape}, {$author->getFirstName()|escape}{if $author->getMiddleName() != ""} {$author->getMiddleName()|escape}{/if}{if !$smarty.foreach.authors.last}; {/if}{/foreach}">
 	<meta name="citation_title" content="{$article->getArticleTitle()|strip_tags|escape}"/>
 	<meta name="citation_date" content="{$article->getDatePublished()|date_format:"%d/%m/%Y"}">
 	<meta name="citation_volume" content="{$issue->getVolume()|strip_tags|escape}"/>
