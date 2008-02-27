@@ -2125,7 +2125,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$paymentManager->fulfillQueuedPayment($queuedPayment, $markAsPaid?'ManualPayment':'Waiver');
 		
 		if ( $sendToScheduling ) {
-			Request::redirect(null, null, 'submissionEditing', array($articleId), 'scheduling');
+			Request::redirect(null, null, 'submissionEditing', array($articleId), null, 'scheduling');
 		} else { 
 			Request::redirect(null, null, 'submission', array($articleId));
 		}
