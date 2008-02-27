@@ -122,7 +122,7 @@ class IssueForm extends Form {
 		if ($publicFileManager->uploadedFileExists('styleFile')) {
 			$type = $publicFileManager->getUploadedFileType('styleFile');
 			if ($type != 'text/plain' && $type != 'text/css') {
-				$this->addError('styleFile', Locale::translate('editor.issues.invalidStyleFile'));
+				$this->addError('styleFile', Locale::translate('editor.issues.invalidStyleFormat'));
 			}
 		}
 

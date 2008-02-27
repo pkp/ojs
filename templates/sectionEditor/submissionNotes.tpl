@@ -94,7 +94,6 @@
 </table>
 <br />
 <input type="button" class="button" value="{translate key="submission.notes.deleteNote"}" onclick="confirmAction('{url op="removeSubmissionNote" articleId=$articleNote->getArticleId() noteId=$articleNote->getNoteId() fileId=$articleNote->getFileId()}', '{translate|escape:"jsparam" key="submission.notes.confirmDelete"}')" />&nbsp;<input type="submit" class="button defaultButton" value="{translate key="submission.notes.updateNote"}" />
-	</tr>
 </form>
 
 {elseif $noteViewType == "add"}

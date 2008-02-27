@@ -29,7 +29,6 @@ class TinyMCEPlugin extends GenericPlugin {
 	 */
 	function register($category, $path) {
 		if (parent::register($category, $path)) {
-			$journal =& Request::getJournal();
 			$this->addLocaleData();
 			if ($this->isMCEInstalled() && $this->getEnabled()) {
 				HookRegistry::register('TemplateManager::display',array(&$this, 'callback'));
@@ -89,8 +88,6 @@ class TinyMCEPlugin extends GenericPlugin {
 							$fields[] = "authors-$i-competingInterests";
 						}
 						$fields[] = 'abstract';
-						$fields[] = 'abstractAlt1';
-						$fields[] = 'abstractAlt2';
 						break;
 				}
 				break;
@@ -199,8 +196,6 @@ class TinyMCEPlugin extends GenericPlugin {
 					$fields[] = "authors-$i-competingInterests";
 				}
 				$fields[] = 'abstract';
-				$fields[] = 'abstractAlt1';
-				$fields[] = 'abstractAlt2';
 				break;
 			case 'sectionEditor/editSuppFile':
 			case 'editor/editSuppFile':
