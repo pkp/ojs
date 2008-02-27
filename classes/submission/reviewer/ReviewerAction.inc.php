@@ -121,7 +121,9 @@ class ReviewerAction extends Action {
 		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
 		$userDao = &DAORegistry::getDAO('UserDAO');
 
-		if (SUBMISSION_REVIEWER_RECOMMENDATION_ACCEPT > $recommendation || SUBMISSION_REVIEWER_RECOMMENDATION_SEE_COMMENTS < $recommendation) return true;
+		// Check validity of selected recommendation
+		$reviewerRecommendationOptions =& ReviewAssignment::getReviewerRecommendationOptions();
+		if (!isset($reviewerRecommendationOptions[$recommendation])) return true;
 
 		$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($reviewerSubmission->getReviewId());
 		$reviewer = &$userDao->getUser($reviewAssignment->getReviewerId());

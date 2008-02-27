@@ -35,20 +35,10 @@
 				{translate key="sectionEditor.regrets"}
 			{else}
 				{assign var=recommendation value=$submission->getRecommendation()}
-				{if $recommendation == SUBMISSION_REVIEWER_RECOMMENDATION_ACCEPT}
-					{translate key="reviewer.article.decision.accept"}
-				{elseif $recommendation == SUBMISSION_REVIEWER_RECOMMENDATION_PENDING_REVISIONS}
-					{translate key="reviewer.article.decision.pendingRevisions"}
-				{elseif $recommendation == SUBMISSION_REVIEWER_RECOMMENDATION_RESUBMIT_HERE}
-					{translate key="reviewer.article.decision.resubmitHere"}
-				{elseif $recommendation == SUBMISSION_REVIEWER_RECOMMENDATION_RESUBMIT_ELSEWHERE}
-					{translate key="reviewer.article.decision.resubmitElsewhere"}
-				{elseif $recommendation == SUBMISSION_REVIEWER_RECOMMENDATION_DECLINE}
-					{translate key="reviewer.article.decision.decline"}
-				{elseif $recommendation == SUBMISSION_REVIEWER_RECOMMENDATION_SEE_COMMENTS}
-					{translate key="reviewer.article.decision.seeComments"}
-				{else}
+				{if $recommendation === '' || $recommendation === null}
 					&mdash;
+				{else}
+					{translate key=$reviewerRecommendationOptions.$recommendation}
 				{/if}
 			{/if}
 		</td>
