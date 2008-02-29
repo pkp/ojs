@@ -187,7 +187,7 @@ class AuthorSubmitStep5Form extends AuthorSubmitForm {
 			// Also BCC automatically assigned section editors
 			foreach ($sectionEditors as $sectionEditorEntry) {
 				$sectionEditor =& $sectionEditorEntry['user'];
-				$mail->addBcc($sectionEditor->getFullName(), $sectionEditor->getEmail());
+				$mail->addBcc($sectionEditor->getEmail(), $sectionEditor->getFullName());
 				unset($sectionEditor);
 			}
 
