@@ -16,6 +16,7 @@
  */
 
 import('article.Author');
+import('article.Article');
 
 class AuthorDAO extends DAO {
 	/**
@@ -150,6 +151,7 @@ class AuthorDAO extends DAO {
 				AND aa.article_id = a.article_id ' .
 				(isset($journalId)?'AND a.journal_id = ? ':'') . '
 				AND pa.article_id = a.article_id
+				AND a.status = ' . STATUS_PUBLISHED . '
 				AND (aa.last_name IS NOT NULL AND aa.last_name <> \'\')' .
 				$initialSql . '
 			ORDER BY aa.last_name, aa.first_name',
