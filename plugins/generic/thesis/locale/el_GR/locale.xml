@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Thesis abstracts plugin localization strings for the Greek locale.
+  *
+  * Translation by University of Patras, Library & Information Service
+  * Vassilis Barkayannis (barkayannis@upatras.gr),
+  * Panos Georgiou (panos@lis.upatras.gr),
+  * Giannis Tsakonas (john@lis.upatras.gr),
+  * Kiriazis Vasilis (vaskir@lis.upatras.gr),
+  * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
+  *
+  * $Id$
+  -->
+ 
+<locale name="el_GR" full_name="Greek">	
+
+	<!-- Thesis Abstract Management -->
+	<message key="plugins.generic.thesis.manager.settings">Ρυθμίσεις</message>
+	<message key="plugins.generic.thesis.manager.theses">Περιλήψεις Διατριβών</message>
+	<message key="plugins.generic.thesis.manager.status">Κατάσταση</message>
+	<message key="plugins.generic.thesis.manager.status.inactive">Ανενεργή</message>
+	<message key="plugins.generic.thesis.manager.status.active">Ενεργή</message>
+	<message key="plugins.generic.thesis.manager.degree">Πτυχίο</message>
+	<message key="plugins.generic.thesis.manager.degree.masters">Μεταπτυχιακό (Master's)</message>
+	<message key="plugins.generic.thesis.manager.degree.doctorate">Διδακτορικό</message>
+	<message key="plugins.generic.thesis.manager.dateApproved">Ημερομηνία Έγκρισης</message>
+	<message key="plugins.generic.thesis.manager.studentName">Όνομα Σπουδαστή</message>
+	<message key="plugins.generic.thesis.manager.title">Τίτλος</message>
+	<message key="plugins.generic.thesis.manager.keyword">Λέξη Κλειδί</message>
+	<message key="plugins.generic.thesis.manager.studentFirstName">Όνομα</message>
+	<message key="plugins.generic.thesis.manager.studentLastName">Επώνυμο</message>
+	<message key="plugins.generic.thesis.manager.studentEmail">Email</message>
+	<message key="plugins.generic.thesis.manager.department">Τμήμα</message>
+	<message key="plugins.generic.thesis.manager.university">Πανεπιστήμιο</message>
+	<message key="plugins.generic.thesis.manager.abstract">Περίληψη</message>
+	<message key="plugins.generic.thesis.manager.confirmDelete">Είστε σίγουροι ότι θέλετε να διαγράψετε μόνιμα την περίληψη αυτής της διατριβής;</message>
+	<message key="plugins.generic.thesis.manager.noneCreated">Δεν υπάρχουν Περιλήψεις Διατριβών</message>
+	<message key="plugins.generic.thesis.manager.noResults">Δεν υπάρχουν αποτελέσματα</message>
+	<message key="plugins.generic.thesis.manager.create">Δημιουργία νέας Περίληψης Διατριβής</message>
+	<message key="plugins.generic.thesis.manager.createTitle">Δημιουργία</message>
+	<message key="plugins.generic.thesis.manager.edit">Επεξεργασία περίληψης Διατριβής</message>
+	<message key="plugins.generic.thesis.manager.editTitle">Επεξεργασία</message>
+	<message key="plugins.generic.thesis.manager.form.status">Κατάσταση</message>
+	<message key="plugins.generic.thesis.manager.form.statusRequired">Μια κατάσταση για την περίληψη της διατριβής απαιτείται.</message>
+	<message key="plugins.generic.thesis.manager.form.statusValid">Επιλέξτε μια έγκυρη κατάσταση.</message>
+	<message key="plugins.generic.thesis.manager.form.degree">Πτυχίο</message>
+	<message key="plugins.generic.thesis.manager.form.degreeRequired">Ο τύπος του πτυχίου απαιτείται.</message>
+	<message key="plugins.generic.thesis.manager.form.degreeValid">Επιλέξτε έναν έγκυρο τύπο πτυχίου.</message>
+	<message key="plugins.generic.thesis.manager.form.degreeName">Όνομα Πτυχίου</message>
+	<message key="plugins.generic.thesis.manager.form.degreeNameRequired">Ένα όνομα πτυχίου απαιτείται.</message>
+	<message key="plugins.generic.thesis.manager.form.degreeNameInstructions">Το όνομα του πτυχίου (π.χ.. Master's of Arts, Doctor of Philosophy, etc.).</message>
+	<message key="plugins.generic.thesis.manager.form.department">Τμήμα</message>
+	<message key="plugins.generic.thesis.manager.form.departmentRequired">Ένα τμήμα απαιτείται.</message>
+	<message key="plugins.generic.thesis.manager.form.university">Πανεπιστήμιο</message>
+	<message key="plugins.generic.thesis.manager.form.universityRequired">Ένα πανεπιστήμιο απαιτείται.</message>
+	<message key="plugins.generic.thesis.manager.form.dateApproved">Ημερομηνία έγκρισης</message>
+	<message key="plugins.generic.thesis.manager.form.dateApprovedRequired">Μια ημερομηνία έγκρισης απαιτείται.</message>
+	<message key="plugins.generic.thesis.manager.form.dateApprovedValid">Επιλέξτε μια έγκυρη ημερομηνία.</message>
+	<message key="plugins.generic.thesis.manager.form.title">Τίτλος</message>
+	<message key="plugins.generic.thesis.manager.form.titleRequired">Ένας τίτλος διατριβής απαιτείται.</message>
+	<message key="plugins.generic.thesis.manager.form.comment">Σχόλια</message>
+	<message key="plugins.generic.thesis.manager.form.author">Συγγραφέας και Επιβλέπων</message>
+	<message key="plugins.generic.thesis.manager.form.studentEmailPublish">Δημοσίευση email σπουδαστή</message>
+	<message key="plugins.generic.thesis.manager.form.studentEmailPublishInstructions">Αν επιλεγεί, το email του σπουδαστή θα δημοσιευτεί μαζί με την περίληψη της διατριβής.</message>
+	<message key="plugins.generic.thesis.manager.form.studentBio">Βιογραφικό σημείωμα σπουδαστή</message>
+	<message key="plugins.generic.thesis.manager.form.studentBioInstructions"><![CDATA[Εισάγετε κενές γραμμές για τον διαχωρισμό παραγράφων. Τοποθετήστε το κείμενο μεταξύ των &lt;b&gt;&lt;/b&gt;, &lt;i&gt;&lt;/i&gt;, και &lt;u&gt;&lt;/u&gt; για έντονο, πλάγιο και υπογραμμισμένο κείμενο αντίστοιχα (π.χ. αυτή η &lt;i&gt;λέξη&lt;/i&gt; θα γίνει πλάγια.)]]></message>
+	<message key="plugins.generic.thesis.manager.form.indexing">Ευρετηρίασηα</message>
+	<message key="plugins.generic.thesis.manager.form.indexingDescription">Επιλέξτε τους όρους που περιγράφουν καλύτερα το περιεχόμενο της διατριβής ανάλογα με τις κατηγορίες που χρησιμοποιούνται από το περιοδικό. Διαχωρίστε τους όρους με το σύμβολο ";" (term1; term2; term3).</message>
+	<message key="plugins.generic.thesis.manager.form.discipline">Επιστημονικά θεματικά πεδία και υπο-πεδία</message>
+	<message key="plugins.generic.thesis.manager.form.subjectClass">Θεματική Ταξινόμηση</message>
+	<message key="plugins.generic.thesis.manager.form.keyword">Λέξεις Κλειδιά</message>
+	<message key="plugins.generic.thesis.manager.form.coverageGeo">Χωροταξική κάλυψη</message>
+	<message key="plugins.generic.thesis.manager.form.coverageChron">Χρονολογική ή ιστορική κάλυψη</message>
+	<message key="plugins.generic.thesis.manager.form.coverageSample">Χαρακτηριστικά ερευνητικού δείγματος</message>
+	<message key="plugins.generic.thesis.manager.form.method">Τύπος, μέθοδος ή προσέγγιση</message>
+	<message key="plugins.generic.thesis.manager.form.language">Γλώσσα</message>
+	<message key="plugins.generic.thesis.manager.form.languageInstructions"><![CDATA[Ελληνικά=el; Αγγλικά=en; Γαλλικά=fr; Ισπανικά=es. <a href="http://www.loc.gov/standards/iso639-2/langcodes.html" target="_blank">Επιπλέον κωδικοί γλωσσών</a>.]]></message>
+	<message key="plugins.generic.thesis.manager.form.urlPrefixIncluded">Παρακαλούμε συμπληρώστε το πλήρες URL, συμπεριλαμβανομένου και του http:// ή ftp:// στην αρχή.</message>
+	<message key="plugins.generic.thesis.manager.form.abstract">Περίληψη</message>
+	<message key="plugins.generic.thesis.manager.form.abstractRequired">Μια περίληψη απαιτείται.</message>
+	<message key="plugins.generic.thesis.manager.form.abstractInstructions"><![CDATA[Εισάγετε κενές γραμμές για τον διαχωρισμό παραγράφων. Τοποθετήστε το κείμενο μεταξύ των &lt;b&gt;&lt;/b&gt;, &lt;i&gt;&lt;/i&gt;, και &lt;u&gt;&lt;/u&gt; για έντονο, πλάγιο και υπογραμμισμένο κείμενο αντίστοιχα (π.χ. αυτή η &lt;i&gt;λέξη&lt;/i&gt; θα γίνει πλάγια.)]]></message>
+	<message key="plugins.generic.thesis.manager.form.url">URL</message>
+	<message key="plugins.generic.thesis.manager.form.urlInstructions">Αν η διατριβή έχει δημοσιευτεί online. Συμπεριλάβετε τα http://, ftp://, κλπ. στην αρχή (π.χ. http://www.sfu.ca/path/to/thesis.pdf).</message>
+	<message key="plugins.generic.thesis.manager.form.studentFirstName">Όνομα Σπουδαστή</message>
+	<message key="plugins.generic.thesis.manager.form.studentFirstNameRequired">Το όνομα του σπουδαστή απαιτείται.</message>
+	<message key="plugins.generic.thesis.manager.form.studentLastName">Επώνυμο Σπουδαστή</message>
+	<message key="plugins.generic.thesis.manager.form.studentLastNameRequired">Το επώνυμο του σπουδαστή απαιτείται.</message>
+	<message key="plugins.generic.thesis.manager.form.studentMiddleName">Πατρώνυμο Σπουδαστή</message>
+	<message key="plugins.generic.thesis.manager.form.studentEmail">Email σπουδαστή</message>
+	<message key="plugins.generic.thesis.manager.form.studentEmailValid">Ένα έγκυρο email σπουδαστή απαιτείται.</message>
+	<message key="plugins.generic.thesis.manager.form.supervisorFirstName">Όνομα Επιβλέπωντος</message>
+	<message key="plugins.generic.thesis.manager.form.supervisorFirstNameRequired">Το Όνομα Επιβλέπωντος απαιτείται.</message>
+	<message key="plugins.generic.thesis.manager.form.supervisorLastName">Επώνυμο Επιβλέπωντος</message>
+	<message key="plugins.generic.thesis.manager.form.supervisorLastNameRequired">Το Επώνυμο Επιβλέπωντος απαιτείται.</message>
+	<message key="plugins.generic.thesis.manager.form.supervisorMiddleName">Πατρώνυμο Επιβλέπωντος</message>
+	<message key="plugins.generic.thesis.manager.form.supervisorEmail">Email Επιβλέπωντος</message>
+	<message key="plugins.generic.thesis.manager.form.supervisorEmailValid">Ένα έγκυρο email Επιβλέπωντος απαιτείται.</message>
+	<message key="plugins.generic.thesis.manager.form.saveAndCreateAnother">Αποθήκευση και δημιουργία νέου</message>
+
+	<!-- Thesis Abstract Settings Management -->
+	<message key="plugins.generic.thesis.settings.description"><![CDATA[<p>Με αυτό το plugin ενεργοποιημένο οι σπουδαστέ μπορούν να υποβάλλονυ τις περιλήψεις των διατριβών τους στο περιοδικό με την χρήση κατάλληλης φόρμας υποβολής.</p><p>Με την υποβολή, ο Επιβλέπων της διατριβής ενημερώνεται αυτόματα με email για την υποβολή της περίληψης και του ζητείται να επιβεβαιώσει την εγκυρότητα των πληροφορικών της υποβολής στέλνωντας κατάλληλο email στον Υπεύθυνο Επικοινωνίας Διατριβών (βλ. παρακάτω), ο οποίος θα πρέπει να είναι ένας Διαχειριστής Περιοδικού. Μόλις η παραληφθεί αυτή η επιβεβαίωση, ο υπεύθυνος μπορεί να ενεργοποιήσει την υποβολή της περίληψης της διατριβής, αλλάζοντας την Κατάσταση από Ανενεργή σε Ενεργή. Μετά από αυτό η περίληψη θα είναι διαθέσιμη στους Αναγνώστες του περιοδικού.]]></message>
+	<message key="plugins.generic.thesis.settings.thesisContact">Υπεύθυνος Επικοινωνίας Διατριβών</message>
+	<message key="plugins.generic.thesis.settings.submissions">Υποβολές</message>
+	<message key="plugins.generic.thesis.settings.uploadCode">Χρησιμοποιήστε τον παρακάτω κωδικό φόρτωσης υποβολών τμήματος:</message>
+	<message key="plugins.generic.thesis.settings.uploadCodeDescription">Ένας κωδικός φόρτωσης (μια ακολουθία γραμμάτων ή αριθμών) μπορεί να διανεμηθεί στα τμήματα που επιθυμούν να φορτώσουν τις περιλήψεις διατριβών για λογαριασμό των σπουδαστών τους. Όταν αυτός ο κωδικός συμπληρώνεται από ένα τμήμα, τότε δεν στέλνεται στον Επιβλέπων αυτόματοα για την επιβεβαίωση της υποβολής .</message>
+	<message key="plugins.generic.thesis.settings.uploadCodeRequired">Παρακαλούμε εισάγετε το κωδικό φόρτωσης.</message>
+	<message key="plugins.generic.thesis.settings.publishing">Δημοσίευση</message>
+	<message key="plugins.generic.thesis.settings.order">Σειρά δημοσίευσης</message>
+	<message key="plugins.generic.thesis.settings.order.submissionDateAsc">Ημερομηνία υποβολής (κατά αύξουσα σειρά)</message>
+	<message key="plugins.generic.thesis.settings.order.submissionDateDesc">Ημερομηνία υποβολής (κατά φθίνουσα σειρά)</message>
+	<message key="plugins.generic.thesis.settings.order.approvalDateAsc">Ημερομηνία έγκρισης (κατά αύξουσα σειρά)</message>
+	<message key="plugins.generic.thesis.settings.order.approvalDateDesc">Ημερομηνία έγκρισης (κατά φθίνουσα σειρά)</message>
+	<message key="plugins.generic.thesis.settings.order.lastNameAsc">Επώνυμο σπουδαστή (κατά αύξουσα σειρά)</message>
+	<message key="plugins.generic.thesis.settings.order.lastNameDesc">Επώνυμο σπουδαστή (κατά φθίνουσα σειρά)</message>
+	<message key="plugins.generic.thesis.settings.order.titleAsc">Τίτλος (κατά αύξουσα σειρά)</message>
+	<message key="plugins.generic.thesis.settings.order.titleDesc">Τίτλος (κατά φθίνουσα σειρά)</message>
+	<message key="plugins.generic.thesis.settings.thesisIntroduction">Εισαγωγικό σημείωμα </message>
+	<message key="plugins.generic.thesis.settings.thesisIntroductionDescription">Ένα Εισαγωγικό σημείωμα θα εμφανιστεί στην κορυφή της σελίδα των περιλήψεων διατριβών.</message>
+	<message key="plugins.generic.thesis.settings.thesisNameRequired">Ένας υπεύθυνος επικοινωνίας για την διατριβή πρέπει να οριστεί.</message>
+	<message key="plugins.generic.thesis.settings.thesisEmailRequired">Ένα email του υπεύθυνου επικοινωνίας για την διατριβή πρέπει να οριστεί.</message>
+	<message key="plugins.generic.thesis.settings.thesisOrderValid">επιλέξτε μια έγκυρη σειρά δημοσίευσης.</message>
+
+	<!-- Thesis Abstracts -->
+	<message key="plugins.generic.thesis.displayName">Περιλήψεις Διατριβών</message>
+	<message key="plugins.generic.thesis.description">Ζητήστε και δημοσιεύστε τις περιλήψεις διατριβής.</message>
+	<message key="plugins.generic.thesis.searchLink">Αναζήτηση Περιλήψεων Διατριβών</message>
+	<message key="plugins.generic.thesis.theses">Περιλήψεις Διατριβών</message>
+	<message key="plugins.generic.thesis.headerLink"><![CDATA[Περιλήψεις Διατριβών]]></message>
+	<message key="plugins.generic.thesis.submit">Υποβολή Περίληψης Διατριβής</message>
+	<message key="plugins.generic.thesis.submitLink">Υποβολή Περίληψης Διατριβής</message>
+	<message key="plugins.generic.thesis.submitButton">Υποβολή</message>
+	<message key="plugins.generic.thesis.view">Περίληψη</message>
+	<message key="plugins.generic.thesis.viewTitle">Περίληψη</message>
+	<message key="plugins.generic.thesis.noneExist">Δεν υπάρχουν Περιλήψεθς Διατριβών</message>
+	<message key="plugins.generic.thesis.noResults">Κανένα αποτέλεσμα</message>
+	<message key="plugins.generic.thesis.title">Τίτλος</message>
+	<message key="plugins.generic.thesis.keyword">Λέξη κλειδί</message>
+	<message key="plugins.generic.thesis.studentFirstName">Όνομα</message>
+	<message key="plugins.generic.thesis.studentLastName">Επώνυμο</message>
+	<message key="plugins.generic.thesis.department">Τμήμα</message>
+	<message key="plugins.generic.thesis.university">Πανεπιστήμιο</message>
+	<message key="plugins.generic.thesis.abstract">Περίληψη</message>
+	<message key="plugins.generic.thesis.fullText">Πλήρες κείμενο (εξωτερικός ιστότοπος)</message>
+	<message key="plugins.generic.thesis.studentFullNameLast">{$lastName}, {$firstName}{$space}{$middleName}</message>
+	<message key="plugins.generic.thesis.studentFullName">{$firstName} {$middleName}{$space}{$lastName}</message>
+	<message key="plugins.generic.thesis.supervisorFullNameLast">{$lastName}, {$firstName}{$space}{$middleName}</message>
+	<message key="plugins.generic.thesis.supervisorFullName">{$firstName} {$middleName}{$space}{$lastName}</message>
+	<message key="plugins.generic.thesis.form.introduction">Με την υποβολή της υποβολής, ο Επιβλέπων της διατριβής θα λάβει ένα email με το οποίο θα του ζητείται η επιβεβαίωση της εγκυρότητας των στοιχείων της υποβολής. Μόλις η επιβεβαίωσης παραληφθεί από το περιοδικό, η περίληψη της διατριβής θα δημοσιευτεί online.</message>
+	<message key="plugins.generic.thesis.form.status">Κατάσταση</message>
+	<message key="plugins.generic.thesis.form.statusValid">Εισάγετε μια έγκυρη κατάσταση.</message>
+	<message key="plugins.generic.thesis.form.degree">Πτυχίο</message>
+	<message key="plugins.generic.thesis.form.degreeRequired">Ο τύπος του πτυχίου απαιτείται.</message>
+	<message key="plugins.generic.thesis.form.degreeValid">Επιλέξτε έναν έγκυρο τύπο πτυχίου.</message>
+	<message key="plugins.generic.thesis.form.degreeName">Όνομα πτυχίου</message>
+	<message key="plugins.generic.thesis.form.degreeNameRequired">Ένα όνομα πτυχίου απαιτείται.</message>
+	<message key="plugins.generic.thesis.form.degreeNameInstructions">Το όνομα του πτυχίου (π.χ. Master's of Arts, Doctor of Philosophy, etc.).</message>
+	<message key="plugins.generic.thesis.form.department">Τμήμαμ</message>
+	<message key="plugins.generic.thesis.form.departmentRequired">Ένα τμήμα απαιτείται.</message>
+	<message key="plugins.generic.thesis.form.university">Πανεπιστήμιο</message>
+	<message key="plugins.generic.thesis.form.universityRequired">Ένα πανεπιστήμιο απαιτείται.</message>
+	<message key="plugins.generic.thesis.form.dateApproved">Ημερομηνία έγκρισης</message>
+	<message key="plugins.generic.thesis.form.dateApprovedRequired">Μια ημερομηνία έγκρισης απαιτείται.</message>
+	<message key="plugins.generic.thesis.form.dateApprovedValid">Παρακαλούμε επιλέξτε μια έγκυρη ημερομηνία έγκρισης.</message>
+	<message key="plugins.generic.thesis.form.title">Τίτλος</message>
+	<message key="plugins.generic.thesis.form.titleRequired">Ένα τίτλος για την διατριβή απαιτείται.</message>
+	<message key="plugins.generic.thesis.form.comment">Σχόλια</message>
+	<message key="plugins.generic.thesis.form.commentInstructions">Συμπεριλάβετε οποιοδήποτε σχόλιο σχετικό με την υποβολή σας.</message>
+	<message key="plugins.generic.thesis.form.author">Συγγραφέας και Επιβλέπων</message>
+	<message key="plugins.generic.thesis.form.studentBio">Βιογραφικό σημείωμα σπουδαστή</message>
+	<message key="plugins.generic.thesis.form.studentBioInstructions"><![CDATA[Εισάγετε κενές γραμμές για τον διαχωρισμό παραγράφων. Τοποθετήστε το κείμενο μεταξύ των &lt;b&gt;&lt;/b&gt;, &lt;i&gt;&lt;/i&gt;, και &lt;u&gt;&lt;/u&gt; για έντονο, πλάγιο και υπογραμμισμένο κείμενο αντίστοιχα (π.χ. αυτή η &lt;i&gt;λέξη&lt;/i&gt; θα γίνει πλάγια).]]></message>
+	<message key="plugins.generic.thesis.form.indexing">Ευρετηρίαση</message>
+	<message key="plugins.generic.thesis.form.indexingDescription">Επιλέξτε τους όρους που περιγράφουν καλύτερα το περιεχόμενο της διατριβής ανάλογα με τις κατηγορίες που χρησιμοποιούνται από το περιοδικό. Διαχωρίστε τους όρους με το σύμβολο ";" (term1; term2; term3).</message>
+	<message key="plugins.generic.thesis.form.discipline">Επιστημονικά θεματικά πεδία και υπο-πεδία</message>
+	<message key="plugins.generic.thesis.form.subjectClass">θεματική ταξινόμηση</message>
+	<message key="plugins.generic.thesis.form.keyword">Λέξεις κλειδιά</message>
+	<message key="plugins.generic.thesis.form.coverageGeo">Χωροταξική κάλυψη</message>
+	<message key="plugins.generic.thesis.form.coverageChron">Χρονολογική ή ιστορική κάλυψη</message>
+	<message key="plugins.generic.thesis.form.coverageSample">Χαρακτηριστικά ερευνητικού δείγματος</message>
+	<message key="plugins.generic.thesis.form.method">Τύπος, μέθοδος ή προσέγγιση</message>
+	<message key="plugins.generic.thesis.form.language">Γλώσσα</message>
+	<message key="plugins.generic.thesis.form.languageInstructions"><![CDATA[Ελληνικά=el; Αγγλικά=en; Γαλλικά=fr; Ισπανικά=es. <a href="http://www.loc.gov/standards/iso639-2/langcodes.html" target="_blank">Επιπλέον κωδικοί γλωσσών</a>.]]></message>
+	<message key="plugins.generic.thesis.form.urlPrefixIncluded">Παρακαλούμε συμπληρώστε το πλήρες URL, συμπεριλαμβανομένου και του http:// ή ftp:// στην αρχή.</message>
+	<message key="plugins.generic.thesis.form.abstract">Περίληψη</message>
+	<message key="plugins.generic.thesis.form.abstractRequired">Μια περίληψη απαιτείται.</message>
+	<message key="plugins.generic.thesis.form.abstractInstructions"><![CDATA[Εισάγετε κενές γραμμές για τον διαχωρισμό παραγράφων. Τοποθετήστε το κείμενο μεταξύ των &lt;b&gt;&lt;/b&gt;, &lt;i&gt;&lt;/i&gt;, και &lt;u&gt;&lt;/u&gt; για έντονο, πλάγιο και υπογραμμισμένο κείμενο αντίστοιχα (π.χ. αυτή η &lt;i&gt;λέξη&lt;/i&gt; θα γίνει πλάγια).]]></message>
+	<message key="plugins.generic.thesis.form.url">URL</message>
+	<message key="plugins.generic.thesis.form.urlInstructions">Αν η διατριβή έχει δημοσιευτεί online. Συμπεριλάβετε τα http://, ftp://, κλπ. στην αρχή (π.χ. http://www.sfu.ca/path/to/thesis.pdf).</message>
+	<message key="plugins.generic.thesis.form.uploadCode">Κωδικός φόρτωσης</message>
+	<message key="plugins.generic.thesis.form.uploadCodeInstructions">Μόνο για χρήση τμήματος .</message>
+	<message key="plugins.generic.thesis.form.studentFirstName">Όνομα Σπουδαστή</message>
+	<message key="plugins.generic.thesis.form.studentFirstNameRequired">Το Όνομα Σπουδαστή απαιτείται.</message>
+	<message key="plugins.generic.thesis.form.studentLastName">Επώνυμο Σπουδαστή</message>
+	<message key="plugins.generic.thesis.form.studentLastNameRequired">Το Επώνυμο Σπουδαστή απαιτείται.</message>
+	<message key="plugins.generic.thesis.form.studentMiddleName">Πατρώνυμο Σπουδαστή</message>
+	<message key="plugins.generic.thesis.form.studentEmail">Email σπουδαστή</message>
+	<message key="plugins.generic.thesis.form.studentEmailValid">Ένα έγκυρο Email σπουδαστή απαιτείται.</message>
+	<message key="plugins.generic.thesis.form.studentEmailPublish">Δημοσίευση email Σπουδαστή</message>
+	<message key="plugins.generic.thesis.form.studentEmailPublishInstructions">Αν επιλεγεί, το email του σπουδαστή θα δημοσιευτεί μαζί με την περίληψη της διατριβής..</message>
+	<message key="plugins.generic.thesis.form.supervisorFirstName">Όνομα Επιβλέπωντος</message>
+	<message key="plugins.generic.thesis.form.supervisorFirstNameRequired">Το Όνομα Επιβλέπωντος απαιτείται.</message>
+	<message key="plugins.generic.thesis.form.supervisorLastName">Επώνυμο Επιβλέπωντος</message>
+	<message key="plugins.generic.thesis.form.supervisorLastNameRequired">Το Επώνυμο Επιβλέπωντος απαιτείται.</message>
+	<message key="plugins.generic.thesis.form.supervisorMiddleName">Πατρώνυμο Επιβλέπωντος</message>
+	<message key="plugins.generic.thesis.form.supervisorEmail">Email Επιβλέπωντος</message>
+	<message key="plugins.generic.thesis.form.supervisorEmailValid">Ένα έγκυρο Email Επιβλέπωντος απαιτείται.</message>
+
+</locale>

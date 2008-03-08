@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000005.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * User Interface - Search and Browse
+  *
+  * Translation by University of Patras, Library & Information Service
+  * Vassilis Barkayannis (barkayannis@upatras.gr),
+  * Panos Georgiou (panos@lis.upatras.gr),
+  * Giannis Tsakonas (john@lis.upatras.gr),
+  * Kiriazis Vasilis (vaskir@lis.upatras.gr),
+  * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
+  *
+  * $Id$
+  -->
+
+<topic id="user/topic/000005" locale="el_GR" title="Αναζήτηση και Σάρωση" toc="user/toc/000000" key="user.searchAndBrowse">
+	<section>
+		<![CDATA[<p>Τα περιεχόμενα του περιοδικού μπορούν να αναζητηθούν με όνομα συγγραφέα, τίτλο, περίληψη και τους λοιπούς όρους ευρετηρίασης. Το πλήρες κείμενο των περιεχομένων μπορεί να αναζητηθεί και στις δύο μορφές αρχείων (HTML και PDF). Εναλλακτικά, με την χρήση του συνδέσμου "Σάρωση" στη δεξιά πλαϊνή μπάρα πλοήγησης, οι αναγνώστες μπορούν να πλοηγηθούν - σαρώσουν τα περιεχόμενα του περιοδικού κατά τεύχος, συγγραφέα και τίτλος. .</p>]]>
+	</section>
+</topic>

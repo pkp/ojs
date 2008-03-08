@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for this citation plugin in Greek.
+  *
+  * Translation by University of Patras, Library & Information Service
+  * Vassilis Barkayannis (barkayannis@upatras.gr),
+  * Panos Georgiou (panos@lis.upatras.gr),
+  * Giannis Tsakonas (john@lis.upatras.gr),
+  * Kiriazis Vasilis (vaskir@lis.upatras.gr),
+  * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
+  *
+  * $Id$
+  -->
+ 
+<locale name="el_GR" full_name="Greek">	
+	<message key="plugins.citationFormats.abnt.displayName">Plugin σχήματος παραπομπής ABNT </message>
+	<message key="plugins.citationFormats.abnt.citationFormatName">ABNT</message>
+	<message key="plugins.citationFormats.abnt.description">Το plugin αυτό υλοποιεί το σχήμα παραπομπής ABNT.</message>
+	<message key="plugins.citationFormat.acao.location">Βόρεια Αμερική</message>
+</locale>

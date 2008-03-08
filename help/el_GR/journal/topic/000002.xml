@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000002.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Users Index 
+  *
+  * Translation by University of Patras, Library & Information Service
+  * Vassilis Barkayannis (barkayannis@upatras.gr),
+  * Panos Georgiou (panos@lis.upatras.gr),
+  * Giannis Tsakonas (john@lis.upatras.gr),
+  * Kiriazis Vasilis (vaskir@lis.upatras.gr),
+  * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000002" locale="el_GR" title="Χρήστες" toc="journal/toc/000000" subtoc="journal/toc/000002" key="journal.users.index">
+	<section>
+		<![CDATA[<p>Η διαχείριση των χρηστών στο OJS είναι ευθύνη του Διαχειριστή του Περιοδικού. Περιλαμβάνει την δημιουργία χρηστών και λογαριασμών, την διαχείριση ρόλων κλπ. Ο Διαχειριστής του περιοδικού μπορεί να πλοηγείται και να προσθέτει νέες εγγραφές και αναθέσεις ρόλων, να επεξεργάζετε το προφίλ των χρηστών, να συγχωνεύει χρήστες και να επικοινωνεί με ομάδες χρηστών.</p>]]>	
+	</section>
+</topic>

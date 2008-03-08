@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000014.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Users - Email Users
+  *
+  * Translation by University of Patras, Library & Information Service
+  * Vassilis Barkayannis (barkayannis@upatras.gr),
+  * Panos Georgiou (panos@lis.upatras.gr),
+  * Giannis Tsakonas (john@lis.upatras.gr),
+  * Kiriazis Vasilis (vaskir@lis.upatras.gr),
+  * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000014" locale="el_GR" title="Αποστολή μηνύματος σε χρήστες" toc="journal/toc/000002" key="journal.users.emailUsers">
+	<section>
+		<![CDATA[<p>Ο Διαχειριστής του περιοδικού μπορεί να στέλνει email σε όλους τους χρήστες ή σε υποσύνολα αυτών. Σημειώστε ότι σε όλους τους Αναγνώστες αποστέλλεται ενημερωτικό email για την έκδοση κάθε νέου τεύχους μαζί με ένα αντίγραφο του Πίνακα Περιεχομένων του τεύχους ή, σε περιπτώσεις συνεχούς {help_topic key="publishing.index" text="έκδοσης"}, με τον τίτλο και τον συγγραφέα της υποβολής. Το περιοδικό θα πρέπει επίσης να έχει μια Πολιτική Προστασίας Προσωπικών Δεδομένων, που θα εισάγεται στην Οργάνωση του περιοδικού και θα είναι διαθέσιμη στο μενού Σχετικά με το περιοδικό, και η οποία θα περιγράφει πως τα προστατεύονται και θα χρησιμοποιούνται τα προσωπικά δεδομένα των εγγεγραμμένω χρηστών.</p>]]>	
+	</section>
+</topic>

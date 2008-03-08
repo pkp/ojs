@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * User Interface Index 
+  *
+  * Translation by University of Patras, Library & Information Service
+  * Vassilis Barkayannis (barkayannis@upatras.gr),
+  * Panos Georgiou (panos@lis.upatras.gr),
+  * Giannis Tsakonas (john@lis.upatras.gr),
+  * Kiriazis Vasilis (vaskir@lis.upatras.gr),
+  * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
+  *
+  * $Id$
+  -->
+
+<topic id="user/topic/000000" locale="el_GR" title="Ιστότοπος Περιοδικού" toc="index/toc/000000" subtoc="user/toc/000000" key="user.index">
+	<section>
+		<![CDATA[<p>Το περιοδικό αυτό παρέχει στους χρήστες διάφορες λειτουργίες οι οποίες έχουν σχεδιαστεί ώστε να βελτιώνουν την ανάγνωση και διαχείριση του περιεχομένου. Οι λειτουργίες αυτές χρησιμοποιούνται πάρα πολύ συχνά από ηλεκτρονικά περιοδικά και η εξοικείωση μαζί τους σε αυτό το περιοδικό θα βοηθήσει τους χρήστες και στην χρήση των υπολοίπων ηλεκτρονικών περιοδικών. Οι λειτουργίες αυτές γενικά είναι διαθέσιμες σε όλους τους αναγνώστες.</p>]]>	
+	</section>
+</topic>

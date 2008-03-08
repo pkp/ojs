@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000026.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Reading Tools - Settings
+  *
+  * Translation by University of Patras, Library & Information Service
+  * Vassilis Barkayannis (barkayannis@upatras.gr),
+  * Panos Georgiou (panos@lis.upatras.gr),
+  * Giannis Tsakonas (john@lis.upatras.gr),
+  * Kiriazis Vasilis (vaskir@lis.upatras.gr),
+  * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000026" locale="el_GR" title="Επιλογές Εργαλείων Ανάγνωσης" toc="journal/toc/000005" key="journal.managementPages.readingTools.settings">
+	<section>
+		<![CDATA[<p>Ο Διαχειριστής του περιοδικού μπορεί να επιλέξει ένα ή όλους τους εναλλακτικούς συνδέσμους για να εμφανίζονται στο σύνολο των εργαλείων, που θα εμφανίζονται στο δεξί πλαίσιο της σελίδας για κάθε τεκμήριο του περιοδικού που ευρετηριάζεται (π.χ., Άθρθα αλλά όχι Νέα κλπ). Ο Διαχειριστής Περιοδικού μπορεί επίσης να επιλέξει ένα θεματικό σύνολο Εργαλειών Ανάγνωσης, που θα φαίνεται στα Σχετικά τεκμήρια. Ο Διαχειριστής του περιοδικού μπορεί να εξετάσει, επεξεργαστεί, διαγράψει ή να προσθέσει στα εργαλεία σε κάθε σύνολο "Σχετικά τεκμήρια" πηγαίνοντας στα Σύνολα σχετικών τεκμηρίων κάτω από τα Εργαλεία Αναζήτησης.</p><p>Το ίδιο σύνολο Εργαλείων Ανάγνωσης εμφανίζεται μαζί με κάθε τεκμήριο στις ενότητες του περιοδικού που ευρετηριάζονται.  Παρ'όλα αυτά τα Εργαλεία Ανάγνωσης χρησιμοποιούν τους όρους ευρετηρίασης που παρέχει ο Συγγραφέας ώστε να διασφαλιστεί ότι το υλικό που βρίσκεται στις βάσεις δεδομένων είναι σχετικό. Ο Διαχειριστής του περιοδικού μπορεί να αλλάξει τα επιλεγμένα Εργαλεία Αναζήτησης οποιαδήποτε στιγμή.</p>]]>
+	</section>
+</topic>

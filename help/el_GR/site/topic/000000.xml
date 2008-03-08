@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Site Administration Main 
+  *
+  * Translation by University of Patras, Library & Information Service
+  * Vassilis Barkayannis (barkayannis@upatras.gr),
+  * Panos Georgiou (panos@lis.upatras.gr),
+  * Giannis Tsakonas (john@lis.upatras.gr),
+  * Kiriazis Vasilis (vaskir@lis.upatras.gr),
+  * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
+  *
+  * $Id$
+  -->
+
+<topic id="site/topic/000000" locale="el_GR" title="Διαχείριση Ιστοτόπου" toc="index/toc/000000" subtoc="site/toc/000000" key="site.index">
+	<section>
+		<![CDATA[<p>Το παρόν σύστημα διαχείρισης και έκδοσης περιοδικών έχει σχεδιαστεί για εγκατάσταση και διαχείριση σε ένα τοπικό web server. Με την εγκατάσταση ο Διαχειριστής Ιστοτόπου, μπορεί να το χρησιμοποιήσει για την δημιουργία ανεξάρτητων περιοδικών και να συντονίζει την διαχείριση και λειτουργία κάθε ιστοτόπου περιοδικού που δημιουργείται.</p>]]>	
+	</section>
+</topic>

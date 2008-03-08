@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000033.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Merge Users
+  *
+  * Translation by University of Patras, Library & Information Service
+  * Vassilis Barkayannis (barkayannis@upatras.gr),
+  * Panos Georgiou (panos@lis.upatras.gr),
+  * Giannis Tsakonas (john@lis.upatras.gr),
+  * Kiriazis Vasilis (vaskir@lis.upatras.gr),
+  * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000033" locale="el_GR" title="Συγχώνευση χρηστών" toc="journal/toc/000002" key="journal.managementPages.mergeUsers">
+	<section>
+		<![CDATA[<p>Η λειτουργία Συγχώνευση χρηστών, είναι διαθέσιμη στις σελίδες Διαχείρισης Περιοδικού στην σελίδα Χρήστες, και επιτρέπει στον Διαχειριστή του Περιοδικού να συγχωνεύει δύο λογαριασμού χρηστών σε έναν μοναδικό λογαριασμό, μεταφέροντας αναθέσεις επιμέλειας, υποβολές και διάφορες άλλες πληροφορίες, διαγράφοντας στο τέλος τον πρώτο λογαριασμό.</p>
+		<p>Κατά την συγχώνευση μεταφέρονται τα παρακάτω:
+			<ul>
+				<li>Η συγγραφική πατρότητα του άρθρου</li>
+				<li>Τα δημόσια σχόλια στα άρθρα</li>
+				<li>Οι σημειώσεις του άρθρου</li>
+				<li>Οι αναθέσεις και αποφάσεις των Επιμελητών</li>
+				<li>Οι αναθέσεις αξιολόγησης</li>
+				<li>Οι αναθέσεις στους επιμελητές σελιδοποίησης</li>
+				<li>Οι αναθέσεις στους επιμελητές τυπογραφικών δοκιμίων</li>
+				<li>Τα αρχεία των ημερολογίων email και συμβάντων για το άρθρο </li>
+				<li>Τα access keys των αξιολογητών</li>
+				<li>Οι ρόλοι</li>
+			</ul>
+		Τα παρακάτω <strong>ΔΕΝ</strong> μεταφέρονται:
+			<ul>
+				<li>Συνδέσεις</li>
+				<li>Συνδρομές</li>
+				<li>Κατάσταση ενημέρωσης (π.χ. αν ο χρήστης έχει εγγραφεί για να λαμβάνει νέα του περιοδικού)</li>
+				<li>Ιδιότητα μέλους Συντακτικής Ομάδας</li>
+				<li>Οι ρυθμίσεις του Επιμελητή Ενότητας κατά ενότητα</li>
+				<li>Οι πληροφορίες του χρήστη (π.χ. όνομα, επώνυμο κλπ.)</li>
+			</ul>
+		</p>
+		<p>Η λειτουργία αυτή θα πρέπει να χρησιμοποιείτε με προσοχή, καθώς είναι μη αναστρέψιμη και μεταφέρει δεδομένα από έναν χρήστη σε έναν άλλον.</p>]]>
+	</section>
+</topic>

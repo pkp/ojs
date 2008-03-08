@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000001.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Site Administration - Installation 
+  *
+  * Translation by University of Patras, Library & Information Service
+  * Vassilis Barkayannis (barkayannis@upatras.gr),
+  * Panos Georgiou (panos@lis.upatras.gr),
+  * Giannis Tsakonas (john@lis.upatras.gr),
+  * Kiriazis Vasilis (vaskir@lis.upatras.gr),
+  * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
+  *
+  * $Id$
+  -->
+
+<topic id="site/topic/000001" locale="el_GR" title="Εγκατάσταση" toc="site/toc/000000" key="site.installation">
+	<section>
+		<![CDATA[<p>Το Open Journal Systems είναι μια εφαρμογή ανοικτού κώδικα που μπορεί ελεύθερα να κατεβεί και να εγκατασταθεί σε σχεδόν κάθε επιτραπέζιο Η/Υ ή εξυπηρετητή (server).</p>]]>	
+	</section>
+	
+	<section title="Άδεια χρήσης">
+		<![CDATA[<p>Το OJS διανέμεται σύμφωνα με τους όρους της <a href="http://www.gnu.org/copyleft/gpl.html" target="_blank">GNU General Public License</a>. Ένα αντίγραφο των όρων της άδειας αυτής για την εναπαναδιανομή του κώδικα του OJS στην πρωτότυπη ή σε επεξεργασμένη μορφή περιλαμβάνεται με τα πρωτότυπα αρχεία του OJS που κατεβάσατε.</p>]]>
+	</section>
+	
+	<section title="Απαιτήσεις Συστήματος">
+		<![CDATA[<p>Προτείνεται ένα περιβάλλον server που ικανοποιεί τις παρακάτω απαιτήσεις:</p>
+		<ul>
+			<li><a href="http://www.php.net/" target="_blank">PHP</a> >= 4.2.x</li>
+			<li><a href="http://www.mysql.com/" target="_blank">MySQL</a> >= 3.23.23 (συμπεριλαμβανομένου 4.x) ή <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> >= 7.1 (συμπεριλαμβανομένου 
+			  PostgreSQL 8.x)</li>
+			<li><a href="http://httpd.apache.org/" target="_blank">Apache</a> >= 1.3.2x ή >= 2.0.4x ή Microsoft IIS 6+</li>
+			<li>Λειτουργικό σύστημα: Κάθε OS που υποστηρίζει το παραπάνων λογισμικόυ, συμπεριλαμβανομένων των <a href="http://www.linux.org/" target="_blank">Linux</a>, <a href="http://www.bsd.org/" target="_blank">BSD</a>, <a href="http://www.sun.com/" target="_blank">Solaris</a>, <a href="http://www.apple.com/" target="_blank">Mac OS X</a>, και <a href="http://www.microsoft.com/">Windows</a></li>
+		</ul>
+		<p>Το OJS μέχρι στιγμής έχει δοκιμαστεί μόνο σε MySQL και PostgreSQL βάσεις, αν και άλλα συστήματα διαχείρισης βάσεων δεδομένων υποστηριζόμενα από  <a href="http://adodb.sourceforge.net/" target="_blank">ADOdb</a> μπορεί να δουλέψουν (ολοκληρωμένα ή μερικώς). Αναφορές συμβατότητας ή/και σχετικές προσθήκες κώδικα (patches) για εναλλακτικά DBMS είναι ευπρόσδεκτα.</p>
+		]]>
+	</section>
+	
+	<section title="Κατέβασμα (Download)">
+		<![CDATA[<p>Το OJS μπορεί να κατέβει από τον <a href="http://pkp.sfu.ca/ojs/" target="_blank">ιστότοπο</a> του Public Knowledge Project.</p>]]>
+	</section>
+	
+	<section title="Εγκατάσταση">
+		<![CDATA[<p>Το OJS συνοδεύεται από ένα web-based script εγκατάσταση που καθοδηγεί τον Διαχειριστή του Συστήματος κατά την διαδικασία εγκατάστασης. Εναλλακτικά, ένα εργαλείο εγκατάσταση σε command-line είναι επίσης διαθέσιμο.</p>
+		<ol>
+			<li>
+				Κατεβάστε το αρχείο OJS .
+			</li>
+			<li>
+				Αποσυμπιέστε το αρχείο OJS στον web server σας και τοποθετήστε το στην επιθυμητή τοποθεσία στο "δέντρο" των web αρχείων σας:<br />
+				<tt>$ tar -zxf ojs-2.*.tar.gz<br />
+				$ mv ojs-* /var/www/myjournal</tt>
+			</li>
+			<li>
+				Μετατρέψτε τα παρακάτω αρχεία και φακέλλους σε εγγράψιμα (writable) (i.e., using chown or chmod):<br />
+				- config.inc.php (προαιρετικά)<br />
+				- public<br />
+				- cache<br />
+				- cache/t_cache<br />
+				- cache/t_config<br />
+				- cache/t_compile<br />
+				- cache/_db
+			</li>
+			<li>
+				Ανοίξτε έναν web browser στην τοποθεσία της δικής OJS εγκατάστασης (π.χ., http://www.mydomain.com/myjournal/) και ακολουθήστε τις οδηγίες που εμφανίζονται στην οθόνη για την ολοκλήρωση της εγκατάστασης. Δείτε επίσης το docs/README για περισσότερες πληροφορίες σχετικά με την διαδικασία εγκατάστασης.
+			</li>
+		</ol>
+		]]>
+	</section>
+</topic>

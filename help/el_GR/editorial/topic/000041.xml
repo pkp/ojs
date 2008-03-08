@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000041.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Layout Editor's Role - Proofreading
+  *
+  * Translation by University of Patras, Library & Information Service
+  * Vassilis Barkayannis (barkayannis@upatras.gr),
+  * Panos Georgiou (panos@lis.upatras.gr),
+  * Giannis Tsakonas (john@lis.upatras.gr),
+  * Kiriazis Vasilis (vaskir@lis.upatras.gr),
+  * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000041" locale="el_GR" title="Έλεγχος Τυπογραφικού Δοκιμίου" toc="editorial/toc/000013" key="editorial.layoutEditorsRole.proofreading">
+	<section>
+		<![CDATA[<p>Ο Συγγραφέας και ο Επιμελητής Τυπογραφικού Δοκιμίου θα ελέγξουν τα αρχεία στις διάφορες μορφές για τυπογραφικά λάθη και λάθη μορφοποίησης. Θα καταγράψουν τις απαραίτητες διοθρώσεις στο πεδίο κειμένου Διορθώσεων σύμφωνα με τις Οδηγίες επιμέλειας των τυπογραφικών δοκιμίων. Μόλις ο Επιμελητής Τυπογραφικού Δοκιμίου ενημερώσει με email τον Επιμελητή Σελιδοποίησης ότι ο έλεγχος ολοκληρώθηκε, αυτός εφαρμόζει τις αλλαγές στο τυπογραφικό δοκίμιο και κάνει τις απαραίτητες αλλαγές, διαγράφοντας τα αρχεία που διορθώθηκαν και ανεβάζοντας τις διορθωμένες εκδόσεις. Με την ολοκλήρωση της εργασίας αυτής, Επιμελητής Σελιδοποίησης μπορεί να προσθέσει σχόλια στο πεδίο κειμένου Διορθώσεων (π.χ. να δώσει εξηγήσεις για μια αλλαγή), πριν να επιλέξει το εικονίδιο του email κάτω από την Ολοκλήρωση το οποίο θα δημιουργήσει ένα email που θα ενημερώνει τον Επιμελητή Ενότητας ότι η υποβολή είναι έτοιμη να προγραμματιστεί για δημοσίευση.</p>]]>	
+	</section>
+</topic>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../toc.dtd">
+
+<!--
+  * 000003.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Editorial Process - Editor's Role - Submission Summary
+  *
+  * Translation by University of Patras, Library & Information Service
+  * Vassilis Barkayannis (barkayannis@upatras.gr),
+  * Panos Georgiou (panos@lis.upatras.gr),
+  * Giannis Tsakonas (john@lis.upatras.gr),
+  * Kiriazis Vasilis (vaskir@lis.upatras.gr),
+  * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
+  *
+  * $Id$
+  -->
+
+<toc id="editorial/toc/000003" locale="el_GR" title="Σύνοψη Υποβολών" parent_topic="editorial/topic/000003">
+	<topic id="editorial/topic/000019" title="Διαχείριση Υποβολής" />
+	<topic id="editorial/topic/000020" title="Μεταδεδομένα Υποβολής" />
+
+	<breadcrumb url="editorial/topic/000000" title="Διαδικασία Επιμέλειας" />
+	<breadcrumb url="editorial/topic/000001" title="Ο Ρόλος του Επιμελητή Περιοδικού" />
+	<breadcrumb url="editorial/topic/000003" title="Σύνοψη Υποβολών" />
+</toc>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000002.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Publishing Process - Schedule Submissions
+  *
+  * Translation by University of Patras, Library & Information Service
+  * Vassilis Barkayannis (barkayannis@upatras.gr),
+  * Panos Georgiou (panos@lis.upatras.gr),
+  * Giannis Tsakonas (john@lis.upatras.gr),
+  * Kiriazis Vasilis (vaskir@lis.upatras.gr),
+  * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
+  *
+  * $Id$
+  -->
+
+<topic id="publishing/topic/000002" locale="el_GR" title="Προγραμματισμός Υποβολών" toc="publishing/toc/000000" key="publishing.scheduleSubmissions">
+	<section>
+		<![CDATA[<p>Σε οποιοδήποτε σημείοα της διαδικασίας Επιμέλειας, ο Επιμελητής Ενότητας μπορεί να προγραμματίσει μια υποβολή για δημοσίευση σε ένα συγκεκριμένο τεύχος. Τυπικά ο Επιμελητής του περιοδικού τοποθετεί την υποβολή στο πρώτο διαθέσιμο τεύχος, αλλά πολλές φορές το τεύχος "γεμίζει" πριν της έκδοσή του, ή ένας Επιμελητής θέλει να τοποθετήσει μια υποβολή σε ένα άλλο μελλοντικό τεύχος για να εξασφαλίσει ένα εύρος θεμάτων σε κάθε τεύχος, ή από την άλλη να συγκεντρώσει σε ένα τεύχος άρθρα σε ένα συγκεκριμένο θέμα.</p><p><i>Συνεχόμενη δημοσίευση υποβολών</i>. Αν οι υποβολές δημοσιεύονται σε συνεχή βάση, μόλις ολοκληρωθεί η επιμέλειά τους, τότε ο Επιμελητής του περιοδικού προγραμματίζει την υποβολή για δημοσίευση σε αυτό που στην ουσία είναι το Τρέχον Τεύχος και το άρθρο θα δημοσιευτεί αμέσως. Στο τέλος του Τόμου - έτους, η επόμενη υποβολή προγραμματίζεται για το νέο Τόμο, για τον οποίο ο Πίνακας Περιεχομένων θα δημοσιευτεί ή θα γίνει τρέχον με αυτή την αρχική υποβολή.</p><p>Μόλις μια υποβολή προγραμματιστεί σε ένα τεύχος, το όνομα του τεύχους και ένας σύνδεσμος στον Πίνακα Περιεχομένων του θα εμφανιστεί στους Επιμελητές Σελιδοποίησης και Τυπογραφικών Δοκιμίων.</p>]]>
+	</section>
+</topic>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000001.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages Index 
+  *
+  * Translation by University of Patras, Library & Information Service
+  * Vassilis Barkayannis (barkayannis@upatras.gr),
+  * Panos Georgiou (panos@lis.upatras.gr),
+  * Giannis Tsakonas (john@lis.upatras.gr),
+  * Kiriazis Vasilis (vaskir@lis.upatras.gr),
+  * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000001" locale="el_GR" title="Σελίδες Διαχείρισης" toc="journal/toc/000000" subtoc="journal/toc/000001" key="journal.managementPages.index">
+	<section>
+		<![CDATA[<p>Ο Διαχειριστής του Περιοδικού ρυθμίζει και παραμετροποιεί το σύστημα μέσα από μια σειρά σελίδων διαχείρισης. Η διαδικασία ξεκινά με τα πέντε βήματα Οργάνωσης του περιοδικού, και συνεχίζει με τις Ενότητες, την τεκμηρίωση του περιοδικού, τα κείμενα των πρότυπων έτοιμων email επικοινωνίας, τις διαθέσιμες γλώσσες, τα στατιστικά και τα διαθέσιμα εργαλείας ανάγνωσης για τους αναγνώστες.</p>]]>	
+	</section>
+</topic>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../toc.dtd">
+
+<!--
+  * 000013.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Editorial Process - Layout Editor's Role
+  *
+  * Translation by University of Patras, Library & Information Service
+  * Vassilis Barkayannis (barkayannis@upatras.gr),
+  * Panos Georgiou (panos@lis.upatras.gr),
+  * Giannis Tsakonas (john@lis.upatras.gr),
+  * Kiriazis Vasilis (vaskir@lis.upatras.gr),
+  * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
+  *
+  * $Id$
+  -->
+
+<toc id="editorial/toc/000013" locale="el_GR" title="Ο ρόλος του Επιμελητή Σελιδοποίησης" parent_topic="editorial/topic/000013">
+	<topic id="editorial/topic/000039" title="Υποβολές" />
+	<topic id="editorial/topic/000040" title="Σελιδοποίηση" />
+	<topic id="editorial/topic/000041" title="Επιμέλεια Τυπογραφικού Δοκιμίου" />
+
+	<breadcrumb url="editorial/topic/000000" title="Διαδικασία Επιμέλειας" />
+	<breadcrumb url="editorial/topic/000013" title="Ο ρόλος του Επιμελητή Σελιδοποίησης" />
+</toc>

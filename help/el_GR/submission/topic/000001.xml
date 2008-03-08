@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000001.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author Submission Process - Author Guidelines 
+  *
+  * Translation by University of Patras, Library & Information Service
+  * Vassilis Barkayannis (barkayannis@upatras.gr),
+  * Panos Georgiou (panos@lis.upatras.gr),
+  * Giannis Tsakonas (john@lis.upatras.gr),
+  * Kiriazis Vasilis (vaskir@lis.upatras.gr),
+  * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
+  *
+  * $Id$
+  -->
+
+<topic id="submission/topic/000001" locale="el_GR" title="Οδηγίες για τους συγγραφείς" toc="submission/toc/000000" key="submission.authorGuidelines">
+	<section>
+		<![CDATA[<p>Το περιοδικό παρέχει ένα σετ από Οδηγίες για τους συγγραφείς στο μενού Σχετικά με το Περιοδικό, που καλύπτει τις βιβλιογραφικά και τα διάφορα άλλα πρότυπα μορφοποίησης που έχουν υιοθετηθεί από το περιοδικό. Για θέματα που δεν καλύπτονται στα παραδείγματα των Οδηγιών, οι Συγγραφείς μπορούν να πλοηγηθούν στα δημοσιευμένα άρθρα του περιοδικού ώστε να διαπιστώσουν πως το περιοδικό χειρίζεται τα σχετικά θέματα.</p>]]>	
+	</section>
+</topic>

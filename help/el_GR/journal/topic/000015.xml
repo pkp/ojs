@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000015.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Journal Manager 
+  *
+  * Translation by University of Patras, Library & Information Service
+  * Vassilis Barkayannis (barkayannis@upatras.gr),
+  * Panos Georgiou (panos@lis.upatras.gr),
+  * Giannis Tsakonas (john@lis.upatras.gr),
+  * Kiriazis Vasilis (vaskir@lis.upatras.gr),
+  * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000015" locale="el_GR" title="Διαχειριστής Περιοδικού" toc="journal/toc/000003" key="journal.roles.journalManager">
+	<section>
+		<![CDATA[<p>Ο Διαχειριστής Περιοδικού είναι υπεύθυνος για την διαχείριση του συστήματος. Τα σχετικά καθήκοντα δεν προϋποθέτουν προχωρημένα τεχνικά προσόντα και συνεπάγονται στην συμπλήρωση πρότυπων φορμών και διαχείριση αρχείων. Ο Διαχειριστής Περιοδικού διεκπεραιώνει την {help_topic key="journal.managementPages.setup" text="Οργάνωση"} (στήσιμο) του περιοδικού και επιστρατεύει τους Επιμελητές του Περιοδικού, τους Επιμελητές Ενότητας, Κειμένων, Σελιδοποίησης και Τυπογραφικών Δοκιμίων καθώς και τους Αξιολογητές. Εναλλακτικά, αν τα ονόματα και τα emails των Αξιολογητών βρίσκονται ήδη σε άλλη βάση δεδομένων, με την επιλογή Εισαγωγή Χρηστών στην σελίδα {help_topic key="journal.managementPages.importExport" text="Εισαγωγή/Εξαγωγή δεδομένων"}. Ο Διαχειριστής Περιοδικού έχει επίσης πρόσβαση στα υπόλοιπα συστήματα διαχείρισης του περιοδικού, μπορεί να δημιουργήσει νέες Ενότητες για το περιοδικό, να επεξεργαστεί το καθορισμένο σετ emails που χρησιμοποιεί το σύστημα, να διαχειρίζεται τα {help_topic key="journal.managementPages.readingTools" text="Εργαλεία Ανάγνωσης"} που είναι διαθέσιμα στο περιοδικό, και να βλέπει {help_topic key="journal.managementPages.statsAndReports" text="Στατιστικά Περιοδικού"} που δημιουργεί το σύστημα.</p><p>Σημειώστε ότι αν και ο ρόλος του Διαχειριστή Περιοδικού αναφέρεται φαινομενικά σε επίπεδο περιοδικού, οι διαχειριστές περιοδικών που φιλοξενούνται στο ίδιο σύστημα θα πρέπει να θεωρούνται έμπιστοι και αξιόπιστοι χρήστες σε όλο το σύστημα (συλλογή όλων των περιοδικώ), καθώς έχουν την δυνατότητα να αποκτούν τα στοιχεία άλλων χρηστών που εγγεγραμμένων σε άλλα περιοδικά.</p>]]>
+	</section>
+</topic>

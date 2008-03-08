@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000010.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Files Browser
+  *
+  * Translation by University of Patras, Library & Information Service
+  * Vassilis Barkayannis (barkayannis@upatras.gr),
+  * Panos Georgiou (panos@lis.upatras.gr),
+  * Giannis Tsakonas (john@lis.upatras.gr),
+  * Kiriazis Vasilis (vaskir@lis.upatras.gr),
+  * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000010" locale="el_GR" title="Ευρετήριο Αρχείων" toc="journal/toc/000001" key="journal.managementPages.fileBrowser">
+	<section>
+		<![CDATA[<p>Το Ευρετήριο Αρχείων επιτρέπει στον Διαχειριστή του περιοδικού να βλέπει και να διαχειρίζεται την ιεραρχία των αρχείων που φορτώνονται στο σύστημα (συμπεριλαμβανομένων των αρχείων που ανεβαίνουν κατά την διαχείριση των υποβολών). Τα αρχεία αυτά μπορούν να προβληθούν, να διαγραφούν και να μετακινηθούν όπως ακριβώς σε ένα τοπικό σύστημα αρχείων στον υπολογιστή σας.</p><p>Σημειώστε ότι η λειτουργία αυτή προορίζεται αποκλειστικά για Διαχειριστικούς (administrative) σκοπούς και γενικά δεν χρησιμεύει στην καθημερινή διαχείριση του περιοδικού. Οι πληροφορίες για τις υποβολές συντηρούνται ως συνδιασμός των αρχείων και των εγγραφών της βάσης δεδομένων. Η διαγραφή των αρχείων της υποβολής μέσω του Ευρετηρίου των Αρχείων δεν διαγράφει τις συσχετιζόμενες με την υποβολή εγγραφές της βάσης δεδομένων του συστήματος.</p>]]>
+	</section>
+</topic>

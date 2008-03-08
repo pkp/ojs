@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000032.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author's Role Index - Submissions
+  *
+  * Translation by University of Patras, Library & Information Service
+  * Vassilis Barkayannis (barkayannis@upatras.gr),
+  * Panos Georgiou (panos@lis.upatras.gr),
+  * Giannis Tsakonas (john@lis.upatras.gr),
+  * Kiriazis Vasilis (vaskir@lis.upatras.gr),
+  * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000032" locale="el_GR" title="Υποβολές" toc="editorial/toc/000009" key="editorial.authorsRole.submissions">
+	<section>
+		<![CDATA[<p>Συνδεόμενος στο περιοδικό  μεταβαίνει στην Αρχική Σελίδα Χρήστη. Πατώντας στον ρόλο του ως Συγγραφές μεταβαίνει στην σειρά αναμονής των Ενεργών Υποβολών. Στη σελίδα αυτή παρατίθενται οι υποβολές που βρίσκονται στην διαδικασία έκδοσης ενώ παρέχεται πρόσβαση σε παλαιότερες υποβολές του συγγραφέα στο περιοδικό μέσω του συνδέσμου Αρχείο. Επίσης ο Συγγραφέςα μπορεί να υποβάλλει νέο άρθρο επιλέγοντας Έναρξη νέας υποβολής.</p><p>Αν το περιοδικό δέχεται online πληρωμές, ο Συγγραφέας μπορεί να διενεργεί τις διάφορες πληρωμές (εισφορές) μέσα από αυτή τη σελίδα. Αν απαιτείται από το περιοδικό, εμφανίζονται στη σελίδα σύνδεσμοι για την πληρωμή των εισφορών υποβολής, Γρήγορης Επισκόπης άρθρου και Δημοσίευσης κάτω από την Κατάσταση. Με την επιλογή των συνδέσμων αυτών ο Συγγραφέας μεταβαίνει είτε στην σελίδα μη αυτόματης πληρωμής των εισφορών ή στην σελίδα Online πληρωμής, όπου η συναλλαγή θα ολοκληρωθεί. Περισσότερες πληροφορίες για την διαδικασία πληρωμών μπορούν να βρεθούν {help_topic key="journal.managementPages.payments" text="εδώ"}.</p><p>Περισσότερες πληροφορίες για την διαδικασία Υποβολών μπορούν να βρεθούν {help_topic key="submission.index" text="εδώ"}.</p>]]>	
+	</section>
+</topic>

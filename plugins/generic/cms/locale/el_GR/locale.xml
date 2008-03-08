@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the Greek locale.
+  *
+  * Translation by University of Patras, Library & Information Service
+  * Vassilis Barkayannis (barkayannis@upatras.gr),
+  * Panos Georgiou (panos@lis.upatras.gr),
+  * Giannis Tsakonas (john@lis.upatras.gr),
+  * Kiriazis Vasilis (vaskir@lis.upatras.gr),
+  * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
+  *
+  * $Id$
+  -->
+ 
+<locale name="el_GR" full_name="Greek">	
+	<message key="plugins.generic.cms.displayName">CMS Plugin</message>
+	<message key="plugins.generic.cms.description">Το plugin αυτό επιτρέπει την Διαχείριση Στατικού Περιεχομένου .</message>
+
+	<message key="plugins.generic.cms.toc">Πίνακας Περιεχομένωνs</message>
+
+	<message key="plugins.generic.cms.requirement.layoutmanager"><![CDATA[<strong>Το Layout Manager Plugin θα πρέπει να εγκατασταθεί και ενεργοποιηθεί ώστε να χρησιμοποιηθεί το παρόν plugin.</strong>]]></message>	
+	<message key="plugins.generic.cms.requirement.tinymce"><![CDATA[<strong>Το TinyMCE Plugin θα πρέπει να εγκατασταθεί και ενεργοποιηθεί ώστε να να προσθέτετε και να επεξεργάζεστε περιεχόμενο.</strong>]]></message>
+
+	<message key="manager.plugins.content">Επεξεργασία/Προσθήκε Περιεχομένου</message>
+
+	<message key="plugins.generic.cms.form.introduction">Αυτό το Plugin του συστήματος διαχείρισης περιεχομένου (Content Management System -CMS)  επιτρέπει στους διαχειριστές των περιοδικών να προσθέσουν στατικό περιεχόμενο στα περιοδικά τους. Το περιεχόμενο χωρίζεται σε σελίδες με επίπεδα κεφαλίδων 1, 2 and 3 ενώ από το επίπεδο 4 και πάνω το περιεχόμενο δεν χωρίζεται σε νέες σελίδες.  Κάθε κεφαλίδα μετατρέπεται σε ένα στοιχείο του μενού στον Πίνακα Περιεχομένω (που βρίσκεται στην πλαϊνή μπάρα).  Για να επεξεργαστείτε μια σελίδα, την επιλέγετε από τον πίνακα περιεχομένων και τη αποθηκεύετε. Για να προσθέστε νέα σελίδα, απλά προσθέστε μια νέα κεφαλίδα και περιεχόμενο κάτω από την τρέχουσα σελίδα. Το νέο περιεχόμενο θα εμφανιστεί κάτω από την τρέχουσα σελίδα.</message>
+	
+	<message key="plugins.generic.cms.error.muststartwithheader">Κάθε σελίδα πρέπει να αρχίζει με μια κεφαλίδα (<![CDATA[&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;]]>)</message>
+	<message key="plugins.generic.cms.error.musthavecontent">Θα πρέπει να υπάρχει κάποιο περιεχόμενο μετά από κάθε κεφαλίδα.  Σιγουρευτείτε ότι δεν υπάρχουν δύο κεφαλίδες η μια μετά την άλλη.</message>
+	<message key="plugins.generic.cms.error.headingcannotbeempty">Κάθε κεφαλίδα πρέπει να έχει τουλάχιστον έναν χαρακτήρα.</message>		
+</locale>

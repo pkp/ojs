@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../toc.dtd">
+
+<!--
+  * 000002.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Journal Management - Users. 
+  *
+  * Translation by University of Patras, Library & Information Service
+  * Vassilis Barkayannis (barkayannis@upatras.gr),
+  * Panos Georgiou (panos@lis.upatras.gr),
+  * Giannis Tsakonas (john@lis.upatras.gr),
+  * Kiriazis Vasilis (vaskir@lis.upatras.gr),
+  * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
+  *
+  * $Id$
+  -->
+
+<toc id="journal/toc/000002" locale="el_GR" title="Χρήστες" parent_topic="journal/topic/000002">
+	<topic id="journal/topic/000011" title="Εγγεγραμμένοι Χρήστες σε αυτό το περιοδικό" />
+	<topic id="journal/topic/000012" title="Δημιουργία Νέου Χρήστη" />
+	<topic id="journal/topic/000033" title="Συγχώνευση Χρηστών" />
+
+	<breadcrumb url="journal/topic/000000" title="Διαχείριση Περιοδικού" />
+	<breadcrumb url="journal/topic/000002" title="Χρήστες" />
+</toc>

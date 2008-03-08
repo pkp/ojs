@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the Greek locale.
+  *
+  * Translation by University of Patras, Library & Information Service
+  * Vassilis Barkayannis (barkayannis@upatras.gr),
+  * Panos Georgiou (panos@lis.upatras.gr),
+  * Giannis Tsakonas (john@lis.upatras.gr),
+  * Kiriazis Vasilis (vaskir@lis.upatras.gr),
+  * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
+  *
+  * $Id$
+  -->
+ 
+<locale name="el_GR" full_name="Greek">	
+	<message key="plugins.importexport.crossref.displayName">Plugin εξαγωγής CrossRef XML </message>
+	<message key="plugins.importexport.crossref.description">Εξαγωγή των μεταδεδομένων του άρθρου σε μορφή CrossRef XML .</message>
+	
+	<message key="plugins.importexport.crossref.export">Εξαγωγή δεδομένων</message>
+	<message key="plugins.importexport.crossref.export.issues">Εξαγωγή Τευχών</message>
+	<message key="plugins.importexport.crossref.export.selectIssue">Επιλέξτε ένα τεύχος για εξαγωγή.</message>
+	<message key="plugins.importexport.crossref.export.articles">Εξαγωγή Άρθρων</message>
+	<message key="plugins.importexport.crossref.export.selectArticle">Επιλέξτε ένα άρθρο για εξαγωγή.</message>
+	
+	<message key="plugins.importexport.crossref.cliUsage"><![CDATA[Usage: 
+{$scriptName} {$pluginName} [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...
+{$scriptName} {$pluginName} [xmlFileName] [journal_path] issue [issueId]
+]]></message>
+	<message key="plugins.importexport.crossref.cliError">ΣΦΑΛΜΑ:</message>
+
+	<message key="plugins.importexport.crossref.export.error.issueNotFound">Δεν βρέθηκε τεύχος που να ταιριάζει με το συγκεκριμένο ID τεύχους "{$issueId}".</message>
+	<message key="plugins.importexport.crossref.export.error.articleNotFound">Δεν βρέθηκε άρθρο που να ταιριάζει με το συγκεκριμένο ID άρθρου "{$articleId}".</message>
+
+	<message key="plugins.importexport.crossref.errors.noDOIprefix">Ένα έγκυρο πρόθημα DOI (DOI Prefix) πρέπει να καθοριστεί στην Οργάνωση του Περιοδικού ώστε να μπορέσετε να χρησιμοποιήσετε αυτό το plugin.</message>
+</locale>

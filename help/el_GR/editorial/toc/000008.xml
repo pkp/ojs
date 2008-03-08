@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../toc.dtd">
+
+<!--
+  * 000008.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Editorial Process - Reviewer's Role
+  *
+  * Translation by University of Patras, Library & Information Service
+  * Vassilis Barkayannis (barkayannis@upatras.gr),
+  * Panos Georgiou (panos@lis.upatras.gr),
+  * Giannis Tsakonas (john@lis.upatras.gr),
+  * Kiriazis Vasilis (vaskir@lis.upatras.gr),
+  * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
+  *
+  * $Id$
+  -->
+
+<toc id="editorial/toc/000008" locale="el_GR" title="Ο Ρόλος του Αξιολογητή" parent_topic="editorial/topic/000008">
+	<topic id="editorial/topic/000030" title="Υποβολές" />
+	<topic id="editorial/topic/000031" title="Αξιολόγηση" />
+
+	<breadcrumb url="editorial/topic/000000" title="Διαδικασία Επιμέλειας" />
+	<breadcrumb url="editorial/topic/000008" title="Ο Ρόλος του Αξιολογητή" />
+</toc>

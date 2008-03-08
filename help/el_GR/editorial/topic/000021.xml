@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000021.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Section Editor's Role Index - In Review
+  *
+  * Translation by University of Patras, Library & Information Service
+  * Vassilis Barkayannis (barkayannis@upatras.gr),
+  * Panos Georgiou (panos@lis.upatras.gr),
+  * Giannis Tsakonas (john@lis.upatras.gr),
+  * Kiriazis Vasilis (vaskir@lis.upatras.gr),
+  * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000021" locale="el_GR" title="Προς Αξιολόγηση" toc="editorial/toc/000005" key="editorial.sectionEditorsRole.submissions.inReview">
+	<section>
+		<![CDATA[<p>Οι υποβολές στην λίστα Προς Αξιολόγηση υπόκεινται σε μια διαδικασία αξιολόγησης που οδηγεί στην απόφαση αποδοχής ή απόρριψης της υποβολής από τον Επιμελητή Ενότητας. Το εύρος της διαδικασίας αξιολόγησης, συμπεριλαμβανομένων και του ποιες ενότητες θα χρησιμοποιούν την μέθοδο αξιολόγησης από ομότιμους αξιολογητές (peer review)  και του πόσοι αξιολογητές θα χρησιμοποιηθούν για κάθε υποβολή, περιγράφεται στην Πολιτική Αξιολόγησης του Περιοδικού που καθορίζεται από τους Επιμελητές του Περιοδικού και τον Διαχειριστή του Περιοδικού. Όταν ένας Επιμελητής Ενότητας επιλέγει τον τίτλο μιας υποβολής στην σειρά αναμονής Προς Αξιολόγηση, μεταβαίνει στη σελίδα Αξιολόγησης της υποβολής, όπου διεκπεραιώνεται η αξιολόγηση από τους ομότιμους αξιολογητές και αποφασίζεται η τύχη της υποβολής. Αν ο Επιμελητής Ενότητας αποδεχθεί την υποβολή για δημοσίευση, τότε αυτή μετακινείται στη σειρά αναμονής Προς Επιμέλεια. Αν η υποβολή απορριφθεί, τότε μετακινείται στα Αρχεία.</p><p>Για περισσότερες πληροφορίες στην διαδικασία Αξιολόγησης, δείτε {help_topic key="editorial.sectionEditorsRole.review" text="Προς Αξιολόγηση"}.</p>]]>	
+	</section>
+</topic>

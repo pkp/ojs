@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000003.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles Index 
+  *
+  * Translation by University of Patras, Library & Information Service
+  * Vassilis Barkayannis (barkayannis@upatras.gr),
+  * Panos Georgiou (panos@lis.upatras.gr),
+  * Giannis Tsakonas (john@lis.upatras.gr),
+  * Kiriazis Vasilis (vaskir@lis.upatras.gr),
+  * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000003" locale="el_GR" title="Ρόλοι" toc="journal/toc/000000" subtoc="journal/toc/000003" key="journal.roles.index">
+	<section>
+		<![CDATA[<p>Το σύστημα αυτό χρησιμοποιεί παραδοσιακούς εκδοτικούς ρόλους για την διεκπεραίωση της εκδοτικής διαδικασίας. Ένα άτομο μπορεί να αναλάβει περισσότερους από έναν ρόλους, και έτσι το περιοδικό θα μπορούσε να εκδίδεται από ένα άτομο πέρα φυσικά από τους Αξιολογητές και τους Συγγραφείς. Πιο συνηθισμένο είναι ο Διαχειριστής του Περιοδικού να λειτουργεί σαν Επιμελητής Περιοδικού και Επιμελητής Ενότητας. Επίσης οι Αξιολογητές πολλές φορές εγγράφονται και ως Συγγραφείς.</p><p><i>Περιορισμοί πρόβασης ανά ρόλο</i>. Κάθε ρόλος έχει τη δική του περιοχή πρόσβασης στις διαδικασίες επιμέλειας και έκδοσης. Για παράδειγμα, οι Συγγραφείς και οι Αξιολογητές συνδεόμενοι στο σύστημα μεταβαίνουν στο δικό τους χώρο μέσα στον ιστότοπο του περιοδικού, οι Επιμελητές Ενότητας μπορούν να δουν μόνο τις υποβολές που τους έχουν ανατεθεί να παρακολουθήσουν. </p>]]>	
+	</section>
+</topic>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../toc.dtd">
+
+<!--
+  * 000005.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Editorial Process - Section Editor's Role - Submissions
+  *
+  * Translation by University of Patras, Library & Information Service
+  * Vassilis Barkayannis (barkayannis@upatras.gr),
+  * Panos Georgiou (panos@lis.upatras.gr),
+  * Giannis Tsakonas (john@lis.upatras.gr),
+  * Kiriazis Vasilis (vaskir@lis.upatras.gr),
+  * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
+  *
+  * $Id$
+  -->
+
+<toc id="editorial/toc/000005" locale="el_GR" title="Υποβολές" parent_topic="editorial/topic/000005">
+	<topic id="editorial/topic/000021" title="Προς Αξιολόγηση" />
+	<topic id="editorial/topic/000022" title="Προς Επιμέλεια" />
+	<topic id="editorial/topic/000023" title="Αρχεία" />
+
+	<breadcrumb url="editorial/topic/000000" title="Διαδικασία Επιμέλειας" />
+	<breadcrumb url="editorial/topic/000004" title="Ο Ρόλος του Επιμελητή Ενότητας" />
+	<breadcrumb url="editorial/topic/000005" title="Υποβολές" />
+	
+</toc>

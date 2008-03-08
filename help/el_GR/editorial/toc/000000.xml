@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../toc.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Editorial Process. 
+  *
+  * Translation by University of Patras, Library & Information Service
+  * Vassilis Barkayannis (barkayannis@upatras.gr),
+  * Panos Georgiou (panos@lis.upatras.gr),
+  * Giannis Tsakonas (john@lis.upatras.gr),
+  * Kiriazis Vasilis (vaskir@lis.upatras.gr),
+  * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
+  *
+  * $Id$
+  -->
+
+<toc id="editorial/toc/000000" locale="el_GR" title="Διαδικασία Επιμέλειας" parent_topic="editorial/topic/000000">
+	<topic id="editorial/topic/000001" title="Ο ρόλος του Επιμελητή Περιοδικού" />
+	<topic id="editorial/topic/000004" title="Ο ρόλος του Επιμελητή Ενότητας" />
+	<topic id="editorial/topic/000008" title="Ο ρόλος του Αξιολογητή" />
+	<topic id="editorial/topic/000009" title="Ο ρόλος του Συγγραφέα" />
+	<topic id="editorial/topic/000012" title="Ο ρόλος του Επιμελητή Κειμένων" />
+	<topic id="editorial/topic/000013" title="Ο ρόλος του Επιμελητή Σελιδοποίησης" />
+	<topic id="editorial/topic/000014" title="Ο ρόλος του Επιμελητή Τυπογραφικού Δοκιμίου" />
+
+	<breadcrumb url="editorial/topic/000000" title="Διαδικασία Επιμέλειας" />
+</toc>

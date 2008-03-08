@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../toc.dtd">
+
+<!--
+  * 000003.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for Journal Management - Roles. 
+  *
+  * Translation by University of Patras, Library & Information Service
+  * Vassilis Barkayannis (barkayannis@upatras.gr),
+  * Panos Georgiou (panos@lis.upatras.gr),
+  * Giannis Tsakonas (john@lis.upatras.gr),
+  * Kiriazis Vasilis (vaskir@lis.upatras.gr),
+  * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
+  *
+  * $Id$
+  -->
+
+<toc id="journal/toc/000003" locale="el_GR" title="Ρόλοι" parent_topic="journal/topic/000003">
+	<topic id="journal/topic/000015" title="Διαχειριστής Περιοδικού" />
+	<topic id="journal/topic/000016" title="Επιμελητής Περιοδικού" />
+	<topic id="journal/topic/000017" title="Επιμελητής Ενότητας" />
+	<topic id="journal/topic/000019" title="Επιμελητής Κειμένων" />
+	<topic id="journal/topic/000018" title="Επιμελητής Σελιδοποίησης" />
+	<topic id="journal/topic/000020" title="Επιμελητής Τυπογραφικού Δοκιμίου" />
+	<topic id="journal/topic/000021" title="Αξιολογητής" />
+	<topic id="journal/topic/000022" title="Συγγραφές" />
+	<topic id="journal/topic/000023" title="Αναγνώστης" />
+	<topic id="journal/topic/000032" title="Διαχειριστής Συνδρομών" />
+
+	<breadcrumb url="journal/topic/000000" title="Διαχείριση Περιοδικού" />
+	<breadcrumb url="journal/topic/000003" title="Ρόλοι" />
+</toc>

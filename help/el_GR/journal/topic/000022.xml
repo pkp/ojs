@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000022.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Author 
+  *
+  * Translation by University of Patras, Library & Information Service
+  * Vassilis Barkayannis (barkayannis@upatras.gr),
+  * Panos Georgiou (panos@lis.upatras.gr),
+  * Giannis Tsakonas (john@lis.upatras.gr),
+  * Kiriazis Vasilis (vaskir@lis.upatras.gr),
+  * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000022" locale="el_GR" title="Συγγραφέας" toc="journal/toc/000003" key="journal.roles.author">
+	<section>
+		<![CDATA[<p>Οι Συγγραφείς μπορούν να συνδέονται και να υποβάλλουν εργασίες στο περιοδικό κατευθείαν μέσα από τον ιστότοπο του περιοδικού. Από τον  Συγγραφέα ζητείται να ανεβάσει την εργασία του και να παρέχει τα κατάλληλα μεταδεδομένα για την ευρετηρίαση του άρθρου. (Τα μεταδεδομένα αυτά βελτιώνουν την δυνατότητα αναζήτησης και εντοπισμού του άρθρου και του περιοδικού.) Ο Συγγραφέας μπορεί επίσης να ανεβάσει Συμπληρωματικά αρχεία, όπως σύνολα δεδομένων, εργαλεία έρευνας, πηγες κλπ, τα οποία εμπλουτίζουν την υποβολή συνεισφέροντας σε μια πιο ανοικτή και εύρωστη ευρευνητική και ακαδημαϊκή διαδικασία. Ο Συγγραφέας μπορεί να παρακολουθεί την υποβολή του κατά την διαδιασία επιμέλειας &mdash; καθώς επίσης και να συμμετάσχει στην επιμέλεια του κειμένου και τον έλεγχο των τυπογραφικών δοκιμίων των αποδεκτών υποβολών &mdash; συνδεόμενος στον ιστότοπο του περιοδικού.</p><p>Περισσότερες πληροφορίες μπορείτε να βρείτε {help_topic key="editorial.authorsRole" text="εδώ"}.</p>]]>	
+	</section>
+</topic>

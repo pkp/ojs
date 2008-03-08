@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the Greek locale.
+  *
+  * Translation by University of Patras, Library & Information Service
+  * Vassilis Barkayannis (barkayannis@upatras.gr),
+  * Panos Georgiou (panos@lis.upatras.gr),
+  * Giannis Tsakonas (john@lis.upatras.gr),
+  * Kiriazis Vasilis (vaskir@lis.upatras.gr),
+  * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
+  *
+  * $Id$
+  -->
+ 
+<locale name="el_GR" full_name="Greek">	
+	<message key="plugins.gateways.resolver.displayName">Resolver Plugin</message>
+	<message key="plugins.gateways.resolver.description">Το plugin αυτό αναλύει τεύχη και άρθρα σύμφωνα με τις πληροφορίες παραπομπής.</message>
+	<message key="plugins.gateways.resolver.errors.errorMessage">Δεν ειναι δυνατή η ανάλυση μιας μοναδικής οντότητας με την χρήση των συγκεκριμένων πληροφοριών παραπομπής. Σιγουρευτείτε ότι οι σχετικές πληροφορίες είναι αναλυτικές και αναφέρονται σε μια οντότητα στην συγκεκριμένη εγκατάσταση του OJS.</message>
+	<message key="plugins.gateways.resolver.exportHoldings">Εξαγωγή Πληροφοριών</message>
+</locale>

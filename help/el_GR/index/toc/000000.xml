@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../toc.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Main table of contents for help. 
+  *
+  * Translation by University of Patras, Library & Information Service
+  * Vassilis Barkayannis (barkayannis@upatras.gr),
+  * Panos Georgiou (panos@lis.upatras.gr),
+  * Giannis Tsakonas (john@lis.upatras.gr),
+  * Kiriazis Vasilis (vaskir@lis.upatras.gr),
+  * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
+  *
+  * $Id$
+  -->
+
+<toc id="index/toc/000000" locale="el_GR" title="Βοήθεια για το OJS " parent_topic="index/topic/000000">
+	<topic id="intro/topic/000000" title="Εισαγωγή στο OJS" />
+	<topic id="site/topic/000000" title="Διαχείριση Ιστοστόπου" />
+	<topic id="journal/topic/000000" title="Διαχείριση Περιοδικού" />
+	<topic id="submission/topic/000000" title="Διαδικασία Υποβολής" />
+	<topic id="editorial/topic/000000" title="Διαδικασία Επιμέλειας" />
+	<topic id="publishing/topic/000000" title="Διαδικασία Δημοσίευσης" />
+	<topic id="user/topic/000000" title="Ιστότοπος Περιοδικού" />
+</toc>

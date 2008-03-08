@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2006-2007 Gunther Eysenbach, Juan Pablo Alperin, MJ Suhonos
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the Greek locale.
+  *
+  * Translation by University of Patras, Library & Information Service
+  * Vassilis Barkayannis (barkayannis@upatras.gr),
+  * Panos Georgiou (panos@lis.upatras.gr),
+  * Giannis Tsakonas (john@lis.upatras.gr),
+  * Kiriazis Vasilis (vaskir@lis.upatras.gr),
+  * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
+  *
+  * $Id$
+  -->
+ 
+ <locale name="el_GR" full_name="Greek">	
+	<message key="plugins.paymethod.paypal.displayName">Πληρωμή εισφορών μέσω PayPal</message>
+
+	<!-- PayPal Settings Form -->
+	<message key="plugins.paymethod.paypal.settings.paypalenable">Ενεργοποίηση PayPal</message>
+	<message key="plugins.paymethod.paypal.settings.paypalurl">IPN URL</message>
+	<message key="plugins.paymethod.paypal.settings.paypalurl.description"><![CDATA[Αυτό είναι το URL την υπηρεσία PayPal's Instant Payment Notification (IPN). Για δοκιμές χρησιμοποιήστε <u>https://www.sandbox.paypal.com/cgi-bin/webscr</u>; για παραγωγικά συστήματα χρησιμοποιήστε <u>https://www.paypal.com/cgi-bin/webscr</u>.]]></message>
+	<message key="plugins.paymethod.paypal.settings.selleraccount">Λογαριασμός Πωλητή</message>
+	<message key="plugins.paymethod.paypal.settings.selleraccount.description">Αυτό είναι το όνομα χρήστη για τον λογαριασμό PayPal που θα χρησιμοποιηθεί, συνήθως μια διεύθυνση email. Σιγουρευτείτε ότι έχετε ενεργοποιήσει την επιλογή Instant Payment Notification (IPN) στο Προφίλ σας στο λογαριασμό του πωλητή.</message>
+	<message key="plugins.paymethod.paypal.settings.curlNotInstalled">Προειδοποίηση: Δεν έχει εγκατασταθεί υποστήριξη CURL για την. Η πληρωμή μέσω PayPal απαιτεί την CURL βιβλιοθήκη και δεν λειτουργήσεις μέχρι αυτή να εγκατασταθεί.</message>
+	<message key="plugins.paymethod.paypal.settings">Ρυθμίσεις PayPal</message>
+
+	<!-- PayPal -->
+	<message key="plugins.paymethod.paypal">Πληρωμή εισφορών μέσω PayPal</message>
+	<message key="plugins.paymethod.paypal.description"><![CDATA[Το σύστημα PayPal επιτρέπει στους χρήστες, άσχετα με το αν είναι ή όχι μέλη του PayPal, να χρησιμοποιήσουν όλες τις γνωστές πιστωτικές κάρτες. Ο Διαχειριστής του περιοδικού θα χρειαστεί να δημιουργήσει ένα λογαριασμό <a href="http://www.paypal.com" target="_new">PayPal Business Account</a>.]]></message>
+	<message key="plugins.paymethod.paypal.warning">Πατήστε στο εικονίδιο Συνέχει παρακάτω για να μεταφερθείτε στον ιστότοπο του PayPal, όπου μπορείτε να πληρώσετε την εισφορά σας στο περιοδικό με την πιστωτική σας κάρτα (χωρίς να χρειάζετε να εγγραφείτε στο PayPal). Χρησιμοποιήστε το εικονίδιο "Return to Merchant" μετά την πληρωμή σας ώστε να επιστρέψετε στον ιστότοπο του περιοδικού.</message>
+	<message key="plugins.paymethod.paypal.purchase.title">Τίτλος</message>
+	<message key="plugins.paymethod.paypal.purchase.fee">Εισφορά</message>
+	<message key="plugins.paymethod.paypal.purchase.description">Περιγραφή</message>
+	<message key="plugins.paymethod.paypal.purchase.cancelled">Η Αγορά σας ακυρώθηκε.</message>
+	<message key="plugins.paymethod.paypal.purchase.cancelled.title">Η αγορά ακυρώθηκε</message>
+</locale>

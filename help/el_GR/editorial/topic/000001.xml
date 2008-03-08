@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000001.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Editor's Role Index 
+  *
+  * Translation by University of Patras, Library & Information Service
+  * Vassilis Barkayannis (barkayannis@upatras.gr),
+  * Panos Georgiou (panos@lis.upatras.gr),
+  * Giannis Tsakonas (john@lis.upatras.gr),
+  * Kiriazis Vasilis (vaskir@lis.upatras.gr),
+  * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000001" locale="el_GR" title="Ο ρόλος του Επιμελητή Περιοδικού" toc="editorial/toc/000000" subtoc="editorial/toc/000001" key="editorial.editorsRole">
+	<section>
+		<![CDATA[<p>Ο Επιμελητής Περιοδικού συντονίζει την Διαδικασία Έκδοσης, αρχίζοντας με την ανάθεση μιας υποβολής σε έναν Επιμελητή Ενότητας. Ανάλογα με την πολιτική του περιοδικού  ο Επιμελητής Περιοδικού συχνά έχει τον ρόλο του Επιμελητή Ενότητας παρακολουθώντας τις αποδεκτές υποβολές στο στάδιο της Επιμέλειας στην διαδικασία της έκδοσης.</p><p>Ο Επιμελητής Περιοδικού μπορεί επίσης να δημιουργεί και να διαχειρίζεται τα τεύχη του περιοδικού και να ενημερώνει τους χρήστες για την έκδοση νέων τευχών και για διάφορα νέα και εκδηλώσεις.</p>]]>	
+	</section>
+</topic>

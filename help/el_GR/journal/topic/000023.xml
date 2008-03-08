@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000023.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Reader 
+  *
+  * Translation by University of Patras, Library & Information Service
+  * Vassilis Barkayannis (barkayannis@upatras.gr),
+  * Panos Georgiou (panos@lis.upatras.gr),
+  * Giannis Tsakonas (john@lis.upatras.gr),
+  * Kiriazis Vasilis (vaskir@lis.upatras.gr),
+  * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000023" locale="el_GR" title="Αναγνώστης" toc="journal/toc/000003" key="journal.roles.reader">
+	<section>
+		<![CDATA[<p>Στην κατηγορία των Αναγνωστών περιλαμβάνονται οι συνδρομητές στα περιοδικά που λειτουργούν σε συνδρομητική βάση, και οι αναγνώστες που εγγράφονται καταλλήλως στα περιοδικά ανοικτής πρόσβασης (αναξάρτητα αν πρόκειται για περιοδικά που παρέχουν άμεση ανοικτή πρόσβασης ή περιοδικά που προσφέρουν καθυστερημένη ανοικτή πρόσβαση στο περιεχόμενο). Οι Εγγεγραμμένοι Αναγνώστες λαμβάνουν ενημερωτικά email για την έκδοση νέων τευχών, που περιλαμβάνουν τον Πίνακα Περιεχομένων. Συνδεομένοι στο περιοδικό, οι Συγγραφείς έχουν την επιλογή να εγγράφουν (να αναθέτουν τον ρόλο) Χρήστες.</p><p>Περισσότερες πληροφορίες μπορείτε να βρείτε {help_topic key="user.registerAndProfile" text="εδώ"}.</p> ]]>	
+	</section>
+</topic>

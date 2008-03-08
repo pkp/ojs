@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the Greek locale.
+  *
+  * Translation by University of Patras, Library & Information Service
+  * Vassilis Barkayannis (barkayannis@upatras.gr),
+  * Panos Georgiou (panos@lis.upatras.gr),
+  * Giannis Tsakonas (john@lis.upatras.gr),
+  * Kiriazis Vasilis (vaskir@lis.upatras.gr),
+  * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
+  *
+  * $Id$
+  -->
+ 
+<locale name="el_GR" full_name="Greek">	
+	<message key="plugins.importexport.erudit.displayName">Plugin εξαγωγής άρθρου Erudit</message>
+	<message key="plugins.importexport.erudit.description">Εξαγωγή άρθρων με την χρήση του English Erudit DTD</message>
+
+	<message key="plugins.importexport.erudit.cliUsage"><![CDATA[Χρήση: {$scriptName} {$pluginName} [xmlFileName] [journalPath] [articleId] [galleyLabel]
+]]></message>
+	<message key="plugins.importexport.erudit.export">Εξαγωγή δεδομένων</message>
+	<message key="plugins.importexport.erudit.export.issues">Εξαγωγή Τευχών</message>
+	<message key="plugins.importexport.erudit.export.sections">Εξαγωγή Ενοτήτων</message>
+	<message key="plugins.importexport.erudit.export.articles">Εξαγωγή Άρθρων</message>
+
+	<message key="plugins.importexport.erudit.selectIssue">Επιλογή τεύχους</message>
+	<message key="plugins.importexport.erudit.selectArticle">Επιλογή άρθρου</message>
+
+	<message key="plugins.importexport.erudit.cliError">ΣΦΑΛΜΑ:</message>
+	<message key="plugins.importexport.erudit.error.unknownJournal">Η συγκεκριμένη διαδρομή περιοδικού, "{$journalPath}", δεν υπάρχει.</message>
+	<message key="plugins.importexport.erudit.export.error.couldNotWrite">Δεν ήταν δυνατή η εγγραφή στο αρχείο "{$fileName}".</message>
+	<message key="plugins.importexport.erudit.export.error.articleNotFound">Δεν βρέθηκε άρθρο που να ταιριάζει με το συγκεκριμένο ID άρθρου "{$articleId}".</message>
+	<message key="plugins.importexport.erudit.export.error.galleyNotFound">Δεν βρέθηκε τυπογραφικό δοκίμιο που να ταιριάζει με την συγκεκριμένη ετικέτα δοκιμίου "{$galleyLabel}".</message>
+
+	<message key="plugins.importexport.erudit.unavailable">Μη διαθέσιμο</message>
+</locale>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Editorial Process Index 
+  *
+  * Translation by University of Patras, Library & Information Service
+  * Vassilis Barkayannis (barkayannis@upatras.gr),
+  * Panos Georgiou (panos@lis.upatras.gr),
+  * Giannis Tsakonas (john@lis.upatras.gr),
+  * Kiriazis Vasilis (vaskir@lis.upatras.gr),
+  * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000000" locale="el_GR" title="Διαδικασία Έκδοσης" toc="index/toc/000000" subtoc="editorial/toc/000000" key="editorial.index">
+	<section>
+		<![CDATA[<p>Η Διαδικασία Έκδοσης μιας υποβολής στο περιοδικό συνίσταται από την αξιολόγηση, συνήθως "τυφλή" αξιολόγηση από ομότιμους αξιολογητές (peer review) και ακολουθεί η απόφαση του Επιμελητή Ενότητας  για την αποδοχή ή την απόρριψη της υποβολής. Στην περίπτωση αποδοχής στο στάδιο τς Αξιολόγησης, η υποβολή προωθείται στο στάδιο της Επιμέλειας που συμπεριλαμβάνει την Επιμέλεια του κειμένου, την σελιδοποίηση και την επιμέλεια του τυπογραφικού δοκιμίου. Έπειτα η υποβολή προγραμματίζεται για δημοσίευση σε τεύχος του περιοδικού. Ανάλογα με τον τρόπο οργάνωσης και λειτουργίας του περιοδικού η Διαδικασία Έκδοσης μπορεί να διεκπεραιωθεί από έναν και μοναδικό Επιμελητή ή από μια ομάδα Επιμελητών Περιοδικού, Ενοτήτων, Κειμένων, Σελιδοποίησης και ελέγχου του Τυπογραφικού Δοκιμίου.</p>]]>	
+	</section>
+</topic>

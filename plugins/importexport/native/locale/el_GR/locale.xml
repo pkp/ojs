@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the Greek locale.
+  *
+  * Translation by University of Patras, Library & Information Service
+  * Vassilis Barkayannis (barkayannis@upatras.gr),
+  * Panos Georgiou (panos@lis.upatras.gr),
+  * Giannis Tsakonas (john@lis.upatras.gr),
+  * Kiriazis Vasilis (vaskir@lis.upatras.gr),
+  * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
+  *
+  * $Id$
+  -->
+
+<locale name="el_GR" full_name="Greek">	
+	<message key="plugins.importexport.native.displayName">XML Plugin Άρθρων &amp; Τευχών</message>
+	<message key="plugins.importexport.native.description">Εισαγωγή και εξαγωγή άρθρων και τευχών</message>
+
+	<message key="plugins.importexport.native.cliUsage"><![CDATA[Χρήση: {$scriptName} {$pluginName} [command] ...
+Commands:
+	import [xmlFileName] [journal_path] [user_name] ...
+	export [xmlFileName] [journal_path] άρθρα [articleId1] [articleId2] ...
+	export [xmlFileName] [journal_path] άρθρο [articleId]
+	export [xmlFileName] [journal_path] τεύχη [issueId1] [issueId2] ...
+	export [xmlFileName] [journal_path] τεύχος [issueId]
+
+Επιπλέον παράμετροι απαιτούνται για την εισαγωγή δεδομένων όπως παρακάτω, ανάλογα με το root node.
+
+Αν το root node είναι <article> ή <articles>, απαιτούνται επιπλέον παράμετροι.
+Οι παρακάτω μορφές είναι αποδεκτές:
+
+{$scriptName} {$pluginName} import [xmlFileName] [journal_path] [user_name]
+	issue_id [issueId] section_id [sectionId]
+
+{$scriptName} {$pluginName} import [xmlFileName] [journal_path] [user_name]
+	issue_id [issueId] section_name [name]
+
+{$scriptName} {$pluginName} import [xmlFileName] [journal_path]
+	issue_id [issueId] section_abbrev [abbrev]
+]]></message>
+	<message key="plugins.importexport.native.export">Εξαγωγή δεδομένων</message>
+	<message key="plugins.importexport.native.export.issues">Εξαγωγή τευχών</message>
+	<message key="plugins.importexport.native.export.sections">Εξαγωγή ενοτήτων</message>
+	<message key="plugins.importexport.native.export.articles">Εξαγωγή άρθρων</message>
+
+	<message key="plugins.importexport.native.selectIssue">Επιλογή τεύχους</message>
+	<message key="plugins.importexport.native.selectArticle">Επιλογή άρθρου</message>
+
+	<message key="plugins.importexport.native.import.articles">Εισαγωγή άρθρων</message>
+	<message key="plugins.importexport.native.import.articles.description">Το αρχείο που εισάγετε περιέχει ένα ή περισσότερα άρθρα. Θα πρέπει να επιλέξετε ένα τεύχος και ενότητα όπου θα εισάγετε αυτά τα άρθρα. Αν δεν θέλετε να τα εισάγετε όλα στην ίδια ενότητα και τεύχος, μπορείτε να τα χωρίσετε σε ξεχωριστά αρχεία XML ή να τα μετακινήσετε στα κατάλληλα τεύχης και ενότητες αφού τα εισάγετε.</message>
+
+	<message key="plugins.importexport.native.import">Εισαγωγή δεδομένων</message>
+	<message key="plugins.importexport.native.import.description">Το plugin αυτό υποστηρίζει εισαγωγή δεδομένων σύμφωνα με το native.dtd Document Type Definition. Υποστηριζόμενα root nodes είναι τα &amp;lt;άρθρο&amp;gt;, &amp;lt;άρθρα&amp;gt;, &amp;lt;τεύχος&amp;gt;, και &amp;lt;τεύχη&amp;gt;.</message>
+
+	<message key="plugins.importexport.native.import.error">Σφάλμα εισαγωγής Error</message>
+	<message key="plugins.importexport.native.import.error.description">Ένα ή περισσότερα σφάλματα εμφανίστηκαν κατά την διάρκεια της εισαγωγής. Σιγουρευτείτε ότι η μορφή του αρχείου εισαγωγής ταιριάζει με την προδιαγραφή. Συγκεκριμένες λεπτομέρειες για τα σφάλματα εισαγωγής παρατίθενται παρακάτω.</message>
+
+	<message key="plugins.importexport.native.cliError">ΣΦΑΛΜΑ:</message>
+	<message key="plugins.importexport.native.error.unknownUser">Ο συγκεκριμένος χρήστης, "{$userName}", δεν υπάρχει.</message>
+	<message key="plugins.importexport.native.error.unknownJournal">Η συγκεκριμένη διαδρομή του περιοδικού, "{$journalPath}", δεν υπάρχει.</message>
+	<message key="plugins.importexport.native.export.error.couldNotWrite">Δεν ήταν δυνατή η εγγραφή στο αρχείο "{$fileName}".</message>
+	<message key="plugins.importexport.native.export.error.sectionNotFound">Δεν βρέθηκε ενότητα που να ταιριάζει με το "{$sectionIdentifier}".</message>
+	<message key="plugins.importexport.native.export.error.issueNotFound">Δεν βρέθηκε τεύχος που να ταιριάζει με το καθορισμένο ID τεύχους "{$issueId}".</message>
+	<message key="plugins.importexport.native.export.error.articleNotFound">Δεν βρέθηκε άρθρο που να ταιριάζει με το συγκεκριμένο ID άρθρου "{$articleId}".</message>
+	<message key="plugins.importexport.native.import.error.unsupportedRoot">Το plugin δεν υποστηρίζει το συγκεκριμένο root node "{$rootName}". Σιγουρευτείτε ότι το αρχείο έχει διαμορφωθεί κατάλληλα και ξαναπροσπαθείστε.</message>
+
+	<message key="plugins.importexport.native.import.error.titleMissing">Λείπει ο τίτλος για ένα τεύχος.</message>
+	<message key="plugins.importexport.native.import.error.defaultTitle">ΧΑΜΕΝΟΣ ΤΙΤΛΟΣ</message>
+	<message key="plugins.importexport.native.import.error.unknownIdentificationType">Ένας άγνωστος τύπος αναγνώρισης "{$identificationType}" καθορίστηκε στην ιδιότητα "Αναγνωριστικό" στο στοιχείο "τεύχος" του τεύχους "{$issueTitle}".</message>
+	<message key="plugins.importexport.native.import.error.invalidBooleanValue">Μια μη έγκυρη boolean τιμή "{$value}" καθορίστηκε. Χρησιμοποιήστε "true" ή "false".</message>
+	<message key="plugins.importexport.native.import.error.invalidDate">Καθορίστηκε μια μη έγκυρη ημερομηνία "{$value}".</message>
+	<message key="plugins.importexport.native.import.error.unknownEncoding">Τα δεδομένα ενσωμματώθηκαν με την χρήση άγνωστου τύπου κωδικοποίησης "{$type}".</message>
+	<message key="plugins.importexport.native.import.error.couldNotWriteFile">Δεν ήταν δυνατή η αποθήκευση ενός τοπικού αντιγράφου του "{$originalName}".</message>
+	<message key="plugins.importexport.native.import.error.illegalUrl">Το ορισμένο URL "{$url}" για το τεύχος "{$issueTitle}" είναι παράτυπο. Εισαγωγές μέσω του Web υποστηρίζουν μόνο τις http, https, ftp, ή ftps μεθόδους.</message>
+	<message key="plugins.importexport.native.import.error.unknownSuppFileType">Καθορίστηκε ένας άγνωστος τύπος συμπληρωματικού αρχείου "{$suppFileType}" .</message>
+	<message key="plugins.importexport.native.import.error.couldNotCopy">Ένα καθορισμένο URL "{$url}" δεν μπόρεσε να αντιγραφεί σε ένα τοπικό αρχείο.</message>
+	<message key="plugins.importexport.native.import.error.duplicatePublicId">Το δημόσιο ID που δόθηκε για την εισαγωγή του τεύχους "{$issueTitle}" χρησιμοποιείται ήδη από ένα άλλο τεύχος, "{$otherIssueTitle}".</message>
+	<message key="plugins.importexport.native.import.error.sectionTitleMissing">Ένας τίτλος ενότητας λείπει από το τεύχος "{$issueTitle}". Σιγουρευτείτε ότι το XML αρχείο συμμορφώνεται με το κατάλληλο DTD.</message>
+	<message key="plugins.importexport.native.import.error.sectionMismatch">Η ενότητα "{$sectionTitle}" του τεύχους "{$issueTitle}" ταίριαξε με μια υπάρχουσα ενότητα περιοδικού, αλλά η καθορισμένη συντομογραφία ("{$sectionAbbrev}") ταίριαξε με μια διαφορετική ενότητα.</message>
+	<message key="plugins.importexport.native.import.error.articleTitleMissing">Ένας τίτλος άρθρου λείπει στο τεύχος "{$issueTitle}" στην ενότητα "{$sectionTitle}". Σιγουρευτείτε ότι το XML αρχείο συμμορφώνεται με το κατάλληλο DTD, και ότι ένας τίτλος έχει δοθεί για το αρχείο τοπικών ρυθμίσεων του περιοδικού.</message>
+	<message key="plugins.importexport.native.import.error.articleTitleLocaleUnsupported">Δόθηκε ένας τίτλους άρθρου ("{$articleTitle}") για το τεύχος "{$issueTitle}" σε ένα αρχείο τοπικών ρυθμίσεων ("{$locale}") το οποίο το περιοδικό δεν υποστηρίζει.</message>
+	<message key="plugins.importexport.native.import.error.articleAbstractLocaleUnsupported">Δόθηκε μια περίληψη για το άρθρο "{$articleTitle}" στο τεύχος "{$issueTitle}" σε ένα αρχείο τοπικών ρυθμίσεων ("{$locale}") το οποίο το περιοδικό δεν υποστηρίζει.</message>
+	<message key="plugins.importexport.native.import.error.galleyLabelMissing">Το άρθρο "{$articleTitle}" στην ενότητα "{$sectionTitle}" του τεύχους  "{$issueTitle}" δεν έχει μια ετικκέτα τυπογραφικού δοκιμίου.</message>
+	<message key="plugins.importexport.native.import.error.suppFileMissing">Το άρθρο "{$articleTitle}" στην ενότητα "{$sectionTitle}" του τεύχους "{$issueTitle}" δεν συνοδεύεται από ένα συμπληρωματικό αρχείο.</message>
+	<message key="plugins.importexport.native.import.error.galleyFileMissing">Το άρθρο "{$articleTitle}" στην ενότητα "{$sectionTitle}" του τεύχους "{$issueTitle}" δεν αντιστοιχεί σε ένα αρχείο τυπογραφικού δοκιμίου.</message>
+
+	<message key="plugins.importexport.native.import.error.issueTitleLocaleUnsupported">Δόθηκε ένας τίτλος τεύχους ("{$issueTitle}") στο αρχείο τοπικών ρυθμίσεων ("{$locale}") το οποίος αυτό το περιοδικό δεν υποστηρίζει.</message>
+	<message key="plugins.importexport.native.import.error.issueDescriptionLocaleUnsupported">Δόθηκε μια περιγραφή του τεύχους "{$issueTitle}" στο αρχείο τοπικών ρυθμίσεων ("{$locale}") που αυτό το περιοδικό δεν υποστηρίζει.</message>
+	<message key="plugins.importexport.native.import.error.coverLocaleUnsupported">Δόθηκε ένα εξώφυλλο του τεύχους "{$issueTitle}" στο αρχείο τοπικών ρυθμίσεων ("{$locale}") που αυτό το περιοδικό δεν υποστηρίζει.</message>
+
+	<message key="plugins.importexport.native.import.error.sectionTitleLocaleUnsupported">Δόθηκε ένας τίτλος ενότητας ("{$sectionTitle}") στο τεύχος "{$issueTitle}" σε ένα αρχείο τοπικών ρυθμίσεων ("{$locale}") που αυτό το περιοδικό δεν υποστηρίζει.</message>
+	<message key="plugins.importexport.native.import.error.sectionAbbrevLocaleUnsupported">Δόθηκε μια συντομογραφία ενότητας ("{$sectionAbbrev}") στο τεύχος "{$issueTitle}" σε ένα αρχείο τοπικών ρυθμίσεων ("{$locale}") που αυτό το περιοδικό δεν υποστηρίζει.</message>
+	<message key="plugins.importexport.native.import.error.sectionIdentifyTypeLocaleUnsupported">Δόθηκε ένας τύπος αναγνώρισης ενότητας ("{$sectionIdentifyType}") στο τεύχος "{$issueTitle}" σε ένα αρχείο τοπικών ρυθμίσεων ("{$locale}") που αυτό το περιοδικό δεν υποστηρίζει.</message>
+	<message key="plugins.importexport.native.import.error.sectionPolicyLocaleUnsupported">Δόθηκε μια πολιτική ενότητας ("{$sectionPolicy}") στο τεύχος "{$issueTitle}" σε ένα αρχείο τοπικών ρυθμίσεων ("{$locale}") που αυτό το περιοδικό δεν υποστηρίζει.</message>
+
+	<message key="plugins.importexport.native.import.error.sectionTitleMismatch">Ο τίτλος ενότητας "{$section1Title}" και ο τίτλος ενότητας  "{$section2Title}" στο τεύχος "{$issueTitle}" ταίριαξαν με τις διαφορετικές υπάρχουσες ενότητες περιοδικών.</message>
+	<message key="plugins.importexport.native.import.error.sectionTitleMatch">Ο τίτλος ενότητας  "{$sectionTitle}" στο τεύχος "{$issueTitle}" ταίριαξε με μια υφιστάμενη ενότητα περιοδικού, αλλά ένας άλλος τίτλος αυτής της ενότητας δεν ταιριάζει με έναν άλλον τίτλο της υφιστάμενης ενότητας του περιοδικού.</message>
+	<message key="plugins.importexport.native.import.error.sectionAbbrevMismatch">Η συντομογραφία της ενότητας "{$section1Abbrev}" και της ενότητας "{$section2Abbrev}" του τεύχους "{$issueTitle}" ταίριαξαν με τις διαφορετικές υπάρχουσες ενότητες του περιοδικού.</message>
+	<message key="plugins.importexport.native.import.error.sectionAbbrevMatch">Η συντομογραφία της ενότητας "{$sectionAbbrev}" στο τεύχος "{$issueTitle}" ταίριαξε με μια υφιστάμενη ενότητα περιοδικού, αλλά μια άλλη συντομογραφία αυτής της ενότητας δεν ταιριάζει με μια άλλη συντομογραφία της υφιστάμενης ενότητας του περιοδικού.</message>
+
+	<message key="plugins.importexport.native.import.error.articleDisciplineLocaleUnsupported">Ορίστηκε μια θεματική ενότητα για το άρθρο  "{$articleTitle}" στο τεύχος "{$issueTitle}" σε ένα αρχείο τοπικών ρυθμίσεων ("{$locale}") που αυτό το περιοδικό δεν υποστηρίζει.</message>
+	<message key="plugins.importexport.native.import.error.articleTypeLocaleUnsupported">Ορίστηκε ένας τύπος άρθρου για το άρθρο "{$articleTitle}" στο τεύχος "{$issueTitle}" σε ένα αρχείο τοπικών ρυθμίσεων ("{$locale}") που αυτό το περιοδικό δεν υποστηρίζει.</message>
+	<message key="plugins.importexport.native.import.error.articleSubjectLocaleUnsupported">Ορίστηκε ένα θέμα άρθρου για το άρθρο "{$articleTitle}" στο τεύχος "{$issueTitle}" σε ένα αρχείο τοπικών ρυθμίσεων ("{$locale}") που αυτό το περιοδικό δεν υποστηρίζει.</message>
+	<message key="plugins.importexport.native.import.error.articleSubjectClassLocaleUnsupported">Ορίστηκε μια θεματική ταξινόμηση για το άρθρο "{$articleTitle}" στο τεύχος "{$issueTitle}" σε ένα αρχείο τοπικών ρυθμίσεων ("{$locale}") που αυτό το περιοδικό δεν υποστηρίζει.</message>
+	<message key="plugins.importexport.native.import.error.articleCoverageGeoLocaleUnsupported">Ορίστηκε μια γεωγραφική κάλυψη για το άρθρο "{$articleTitle}"  στο τεύχος "{$issueTitle}" σε ένα αρχείο τοπικών ρυθμίσεων ("{$locale}") που αυτό το περιοδικό δεν υποστηρίζει.</message>
+	<message key="plugins.importexport.native.import.error.articleCoverageChronLocaleUnsupported">Ορίστηκε μια χρονολογική κάλυψη για το άρθρο "{$articleTitle}"  στο τεύχος "{$issueTitle}" σε ένα αρχείο τοπικών ρυθμίσεων ("{$locale}") που αυτό το περιοδικό δεν υποστηρίζει.</message>
+	<message key="plugins.importexport.native.import.error.articleCoverageSampleLocaleUnsupported">Ορίστηκε ένα δείγμα κάλυψης για το άρθρο "{$articleTitle}" στο τεύχος "{$issueTitle}" σε ένα αρχείο τοπικών ρυθμίσεων ("{$locale}") που αυτό το περιοδικό δεν υποστηρίζει.</message>
+	<message key="plugins.importexport.native.import.error.articleSponsorLocaleUnsupported">Ορίστηκε ένας χορηγός για το άρθρο "{$articleTitle}" στο τεύχος "{$issueTitle}" σε ένα αρχείο τοπικών ρυθμίσεων ("{$locale}") που αυτό το περιοδικό δεν υποστηρίζει.</message>
+
+	<message key="plugins.importexport.native.import.error.articleAuthorCompetingInterestsLocaleUnsupported">Ορίστηκε μια σύγκρουση συμφερόντων για τον συγγραφέα "{$authorFullName}" του άρθρου "{$articleTitle}" στο τεύχος "{$issueTitle}" σε ένα αρχείο τοπικών ρυθμίσεων ("{$locale}") που αυτό το περιοδικό δεν υποστηρίζει.</message>
+	<message key="plugins.importexport.native.import.error.articleAuthorBiographyLocaleUnsupported">Ορίστηκε ένα βιογραφικό για τον συγγραφέα  "{$authorFullName}" του άρθρου "{$articleTitle}" στο τεύχος "{$issueTitle}" σε ένα αρχείο τοπικών ρυθμίσεων ("{$locale}") που αυτό το περιοδικό δεν υποστηρίζει.</message>
+
+	<message key="plugins.importexport.native.import.error.galleyLocaleUnsupported">Ορίστηκε ένα τυπογραφικό δοκίμιο του άρθρου "{$articleTitle}" στο τεύχος "{$issueTitle}" σε ένα αρχείο τοπικών ρυθμίσεων ("{$locale}") που αυτό το περιοδικό δεν υποστηρίζει.</message>
+
+	<message key="plugins.importexport.native.import.error.articleSuppFileTitleLocaleUnsupported">Ορίστηκε ένας τίτλος συμπηλρωματικού αρχείου ("{$suppFileTitle}") για το άρθρο "{$articleTitle}" στο τεύχος "{$issueTitle}" σε ένα αρχείο τοπικών ρυθμίσεων ("{$locale}") που αυτό το περιοδικό δεν υποστηρίζει.</message>
+	<message key="plugins.importexport.native.import.error.articleSuppFileCreatorLocaleUnsupported">Ορίστηκε ένας δημιουργός του συμπληρωματικού αρχείου "{$suppFileTitle}" του άρθρου "{$articleTitle}" στο τεύχος "{$issueTitle}" σε ένα αρχείο τοπικών ρυθμίσεων ("{$locale}") που αυτό το περιοδικό δεν υποστηρίζει.</message>
+	<message key="plugins.importexport.native.import.error.articleSuppFileSubjectLocaleUnsupported">Ορίστηκε ένα θέμα για το συμπληρωματικό αρχείο  "{$suppFileTitle}" του άρθρου "{$articleTitle}" στο τεύχος "{$issueTitle}" σε ένα αρχείο τοπικών ρυθμίσεων ("{$locale}") που αυτό το περιοδικό δεν υποστηρίζει.</message>
+	<message key="plugins.importexport.native.import.error.articleSuppFileTypeOtherLocaleUnsupported">Ορίστηκε ένας προσαρμοσμένος τύπος του συμπληρωματικού αρχείου  "{$suppFileTitle}" του άρθρου "{$articleTitle}" στο τεύχος "{$issueTitle}" σε ένα αρχείο τοπικών ρυθμίσεων ("{$locale}") που αυτό το περιοδικό δεν υποστηρίζει.</message>
+	<message key="plugins.importexport.native.import.error.articleSuppFileDescriptionLocaleUnsupported">Ορίστηκε μια περιγραφή του συμπληρωματικού αρχείου  "{$suppFileTitle}" του άρθρου "{$articleTitle}" στο τεύχος "{$issueTitle}" σε ένα αρχείο τοπικών ρυθμίσεων ("{$locale}") που αυτό το περιοδικό δεν υποστηρίζει.</message>
+	<message key="plugins.importexport.native.import.error.articleSuppFilePublisherLocaleUnsupported">Ορίστηκε ένας εκδότης του συμπληρωματικού αρχείου  "{$suppFileTitle}" του άρθρου "{$articleTitle}" στο τεύχος "{$issueTitle}" σε ένα αρχείο τοπικών ρυθμίσεων ("{$locale}") που αυτό το περιοδικό δεν υποστηρίζει.</message>
+	<message key="plugins.importexport.native.import.error.articleSuppFileSponsorLocaleUnsupported">Ορίστηκε ένας χορηγόες του συμπληρωματικού αρχείου  "{$suppFileTitle}" του άρθρου "{$articleTitle}" στο τεύχος "{$issueTitle}" σε ένα αρχείο τοπικών ρυθμίσεων ("{$locale}") που αυτό το περιοδικό δεν υποστηρίζει.</message>
+	<message key="plugins.importexport.native.import.error.articleSuppFileSourceLocaleUnsupported">Ορίστηκε μια πηγή του συμπληρωματικού αρχείου  "{$suppFileTitle}" του άρθρου "{$articleTitle}" στο τεύχος "{$issueTitle}" σε ένα αρχείο τοπικών ρυθμίσεων ("{$locale}") που αυτό το περιοδικό δεν υποστηρίζει.</message>
+
+	<message key="plugins.importexport.native.import.success">Επιτυχής Εισαγωγή</message>
+	<message key="plugins.importexport.native.import.success.description">Η εισαγωγή των δεδομένων ήταν επιτυχημένη. Τα στοιχεία που εισήχθηκαν επιτυχώς παρατίθενται παρακάτω.</message>
+
+</locale>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Google Analytics plugin localization strings for the Greek locale.
+  *
+  * Translation by University of Patras, Library & Information Service
+  * Vassilis Barkayannis (barkayannis@upatras.gr),
+  * Panos Georgiou (panos@lis.upatras.gr),
+  * Giannis Tsakonas (john@lis.upatras.gr),
+  * Kiriazis Vasilis (vaskir@lis.upatras.gr),
+  * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
+  *
+  * $Id$
+  -->
+ 
+<locale name="el_GR" full_name="Greek">	
+
+	<!-- Google Analytics -->
+	<message key="plugins.generic.googleAnalytics.displayName">Google Analytics Plugin</message>
+	<message key="plugins.generic.googleAnalytics.description"><![CDATA[Ενσωμματώνει το OJS με το Google Analytics, την εφαρμογή για την ανάλυση της κίνησης του ιστοτόπου του Google. Απαιτεί την ύπαρξη ενός λογαριασμού στο Google Analytics. Δείτε τον ιστότοπο του <a href="http://www.google.com/analytics/" title="Google Analytics site">Google Analytics </a> για περισσότερες πληροφορίες.]]></message>
+
+	<!-- Google Analytics Settings Management -->
+	<message key="plugins.generic.googleAnalytics.manager.settings">Ρυθμίσεις</message>
+	<message key="plugins.generic.googleAnalytics.manager.googleAnalyticsSettings">Ρυθμίσεις Google Analytics </message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.description"><![CDATA[<p>Με αυτό το plugin ενεργοποιημένο το Google Analytics μπορεί να συλλέξει και να αναλύσει τα στοιχεία χρήσης και κίνησης του ιστοτόπου αυτού του περιοδικού. Σημειώστε ότι αυτό το plugin απαιτεί την ύπαρξη ενός λογαριασμού στο Google Analytics. PΔείτε τον ιστότοπο του <a href="http://www.google.com/analytics/" title="Google Analytics site">Google Analytics </a> για περισσότερες πληροφορίες.</p>]]></message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteId">Αριθμός Λογαριασμού</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdInstructions">Μέσα στο Google Analytics, πατήστε στο Check Status για να δείτε τον κωδικό ανίχνευσης (tracking code) για τον ιστότοπό σας. Ο αριθμός λογαριασμού προβάλλεται μέσα στον κωδικό αυτό : _uacct = "###". Εισάγετ το κείμενο που αντιστοιχεί στο ###.</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdRequired">Σας παρακαλούμε εισάγετε έναν αριθμός λογαριασμού.</message>
+
+</locale>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000010.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Author's Role Review Index 
+  *
+  * Translation by University of Patras, Library & Information Service
+  * Vassilis Barkayannis (barkayannis@upatras.gr),
+  * Panos Georgiou (panos@lis.upatras.gr),
+  * Giannis Tsakonas (john@lis.upatras.gr),
+  * Kiriazis Vasilis (vaskir@lis.upatras.gr),
+  * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000010" locale="el_GR" title="Αξιολόγηση" toc="editorial/toc/000009" subtoc="editorial/toc/000010" key="editorial.authorsRole.review">
+	<section>
+		<![CDATA[<p>Ο Συγγραφέας μπορεί να παρακολουθεί την πρόοδο της Διαδικασίας Αξιολόγησης της υποβολής του, όπως επίσης να φορτώνει ανθεωρημένες εκδόσεις της, σύμφωνα με τις απαιτήσεις του Επιμελητή Ενότητας που συντονίζει την διαδικασία Αξιολόγησης.</p>]]>	
+	</section>
+</topic>

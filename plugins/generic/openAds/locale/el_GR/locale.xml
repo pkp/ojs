@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 Siavash Miri and Alec Smecher
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the Greek locale.
+  *
+  * Translation by University of Patras, Library & Information Service
+  * Vassilis Barkayannis (barkayannis@upatras.gr),
+  * Panos Georgiou (panos@lis.upatras.gr),
+  * Giannis Tsakonas (john@lis.upatras.gr),
+  * Kiriazis Vasilis (vaskir@lis.upatras.gr),
+  * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
+  *
+  * $Id$
+  -->
+ 
+<locale name="el_GR" full_name="Greek">	
+	<message key="plugins.generic.openads.description">Το OpenAds plugin επιτρέπει την εισαγωγή δυναμικών διαφημίσεων στο OJS από τον OpenAds server.</message>
+	<message key="plugins.generic.openads.descriptionUnconfigured"><![CDATA[Το OpenAds plugin επιτρέπει την εισαγωγή δυναμικών διαφημίσεων στο OJS από τον OpenAds server. <strong>Παρακαλούμε διαβάστε το αρχείο README στο plugins/generic/openAds για λεπτομέρειες σχετικά με την ενεργοποίηση αυτού του plugin.</strong>]]></message>
+	<message key="plugins.generic.openads">OpenAds Plugin</message>
+	<message key="plugins.generic.openads.settings.description">Χρησιμοποιήστε αυτή τη φόρμα για να επιλέξετε τις διαφημιστικές ζώνες του OpenAds οι οποίες θα εμφανιστούν στο OJS για κάθε πιθανή τοποθεσία.</message>
+	<message key="plugins.generic.openads.manager.settings">Ρυθμίσεις</message>
+
+	<message key="plugins.generic.openads.error.configFileNotFound">Το αρχείο ρυθμίσεων, {$filename}, δεν μπορεί να προσπελαστεί.</message>
+	<message key="plugins.generic.openads.error.missingParameter">Τουλάχιστον μια από τις απαιτούμενες παραμέτρους ρύθμισης του OpenAds δεν μπόρεσε να αναγνωστεί από το αρχείο ρυθμίσεων. Οι απαιτούμενες ρυθμίσεις είναι οι dbhost, dbuser, dbpassword, dbname, url_prefix, και table_prefix.</message>
+	<message key="plugins.generic.openads.error.dbConnectionError">Η σύνδεση με την βάση δεδομένων του OpenAds δεν είναι δυνατή.</message>
+
+	<message key="plugins.generic.openads.headerAd">Επικεφαλίδα Διαφήμισης</message>
+	<message key="plugins.generic.openads.contentAd">Περιεχόμενο Διαφήμισης</message>
+	<message key="plugins.generic.openads.sidebarAd">Πλαϊνή μπάρα Διαφήμισης</message>
+
+	<message key="plugins.generic.openads.orientation.left">Αριστερά</message>
+	<message key="plugins.generic.openads.orientation.centre">Κέντρο</message>
+	<message key="plugins.generic.openads.orientation.right">Δεξιά</message>
+</locale>

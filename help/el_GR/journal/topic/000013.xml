@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000013.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Users - Import Users
+  *
+  * Translation by University of Patras, Library & Information Service
+  * Vassilis Barkayannis (barkayannis@upatras.gr),
+  * Panos Georgiou (panos@lis.upatras.gr),
+  * Giannis Tsakonas (john@lis.upatras.gr),
+  * Kiriazis Vasilis (vaskir@lis.upatras.gr),
+  * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000013" locale="el_GR" title="Εισαγωγή Χρηστών" toc="journal/toc/000002" key="journal.users.importUsers">
+	<section>
+		<![CDATA[<p>Το OJS παρέχει μια απλή λειτουργία εισαγωγής δεδομένων χρηστών από ένα αρχείο μορφή XML, το οποίο μπορεί εύκολα να δημιουργηθεί από άλλες βάσεις δεδομένων. Συμβουλευτείτε την τεκμηρίωση του OJS για περισσότερες πληροφορίες για την μορφή XML και XML DTD.</p>]]>	
+	</section>
+</topic>

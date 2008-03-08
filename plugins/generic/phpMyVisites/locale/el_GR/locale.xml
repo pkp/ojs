@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * phpMyVisites plugin localization strings for the Greek locale.
+  *
+  * Translation by University of Patras, Library & Information Service
+  * Vassilis Barkayannis (barkayannis@upatras.gr),
+  * Panos Georgiou (panos@lis.upatras.gr),
+  * Giannis Tsakonas (john@lis.upatras.gr),
+  * Kiriazis Vasilis (vaskir@lis.upatras.gr),
+  * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
+  *
+  * $Id$
+  -->
+ 
+<locale name="el_GR" full_name="Greek">	
+
+	<!-- phpMyVisites -->
+	<message key="plugins.generic.phpmv.displayName">phpMyVisites Plugin</message>
+	<message key="plugins.generic.phpmv.description"><![CDATA[Ενσωμματώνει το OJS με το phpMyVisites, ένα δωρεάν και ανοικτού κώδικα λογισμικό καταγραφή και ανάλυσης κίνησης ιστοτόπων. Απαιτεί ότι την εγκατάσταση του phpMyVisites. Δείτε τον ιστότοπο του <a href="http://www.phpmyvisites.us/" title="phpMyVisites site">phpMyVisites</a> για περισσότερες πληροφορίες.]]></message>
+
+	<!-- phpMyVisites Settings Management -->
+	<message key="plugins.generic.phpmv.manager.settings">Ρυθμίσεις</message>
+	<message key="plugins.generic.phpmv.manager.phpmvSettings">Ρυθμίσει phpMyVisites </message>
+	<message key="plugins.generic.phpmv.manager.settings.description"><![CDATA[<p>Όταν το plugin αυτό ενεργοποιηθεί το phpMyVisites μπορεί να χρησιμοποιηθεί για την συλλογή και ανάλυση της χρήσης και κίνησης του ιστοτόπου αυτού του περιοδικού. Έχετε υπόψη σας ότι η λειτουργία αυτού το plugin απαιτή την εγκατάσταση του phpMyVisites. Δείτε τον ιστότοπο του <a href="http://www.phpmyvisites.us/" title="phpMyVisites site">phpMyVisites</a> για περισσότερες πληροφορίες.</p>]]></message>
+	<message key="plugins.generic.phpmv.manager.settings.phpmvUrl">phpMyVisites Url</message>
+	<message key="plugins.generic.phpmv.manager.settings.phpmvUrlInstructions">Το πλήρες url της phpMyVisites εγκατάστασής σας (i.e. http://myserver.net/phpmv).</message>
+	<message key="plugins.generic.phpmv.manager.settings.phpmvUrlRequired">Εισάγετε ένα έγκυρο url. Συμπεριλάβετε το http:// στην αρχή.</message>
+	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteId">Αριθμός προφίλ ιστοτόπου </message>
+	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteIdInstructions">Μέσα στο phpMyVisites, πατήστε στο Administration->Modify site. Ο αριθμός προφίλ ιστοτόπου εμφανίζεται δίπλα από το όνομα προφίλ του ιστοτόπου σας.</message>
+	<message key="plugins.generic.phpmv.manager.settings.phpmvSiteIdRequired">Εισάγετε έναν αριθμό προφίλ ιστοτόπου.</message>
+
+</locale>

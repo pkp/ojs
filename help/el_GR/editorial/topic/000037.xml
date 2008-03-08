@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000037.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Copyeditor's Role - Submissions
+  *
+  * Translation by University of Patras, Library & Information Service
+  * Vassilis Barkayannis (barkayannis@upatras.gr),
+  * Panos Georgiou (panos@lis.upatras.gr),
+  * Giannis Tsakonas (john@lis.upatras.gr),
+  * Kiriazis Vasilis (vaskir@lis.upatras.gr),
+  * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000037" locale="el_GR" title="Υποβολές" toc="editorial/toc/000012" key="editorial.copyeditorsRole.submissions">
+	<section>
+		<![CDATA[<p>Μόλις ο Επιμελητής Κειμένου συνδέεται στο σύστημα, πατώντας στον σύνδεσμο Επιμελητής κειμένου στην Αρχική Σελίδα Χρήστη οδηγείται στη λίστα Σε αναμονή. Η λίστα αυτή περιέχει τις εργασίες που περιμένουν για επιμέλεια του κειμένου τους. Παρέχεται επίσης πρόσβαση σε παλαιότερες υποβολές μέσω του συνδέσμου του Αρχείου.</p><p>Για την πρόσβασης στην σελίδα Επιμέλειας του κειμένου μιας συγκεκριμένης υποβολής, ο Επιμελητής κειμένου πατάει τον σύνδεσμο στον τίτλο της εργαίας όπως εμφανίζεται στη λίστα Ενεργές Υποβολές.</p>]]>	
+	</section>
+</topic>

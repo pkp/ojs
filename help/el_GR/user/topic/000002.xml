@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000002.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * User Interface - About
+  *
+  * Translation by University of Patras, Library & Information Service
+  * Vassilis Barkayannis (barkayannis@upatras.gr),
+  * Panos Georgiou (panos@lis.upatras.gr),
+  * Giannis Tsakonas (john@lis.upatras.gr),
+  * Kiriazis Vasilis (vaskir@lis.upatras.gr),
+  * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
+  *
+  * $Id$
+  -->
+
+<topic id="user/topic/000002" locale="el_GR" title="Σχετικά" toc="user/toc/000000" key="user.about">
+	<section>
+		<![CDATA[<p>Στο μενού Σχετικά με το Περιοδικό, παρουσιάζονται οι πολιτικές και οι διαδικασίες του περιοδικού καθώς και σχετικό υλικό, με σκοπό την μέγιστη δυνατή διαφάνεια στην λειτουργία του περιοδικού. Εδώ περιλαμβάνεται υλικό που αποτελεί κύριο θέμα στα περισσότερα επιστημονικά περιοδικά. Εδώ είναι όπου οι υποωήφιοι συγγραφείς βλέπουν τις απαραίτητες πληροφορίες για την Θεματική περιοχή και το Περιεχόμενο του περιοδικού, για την πολιτική αξιολόγησης και φυσικά τις απαραίτητες πληροφορίες για την προετοιμασία μιας υποβολής στο περιοδικό.</p>]]>	
+	</section>
+</topic>

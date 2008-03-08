@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000016.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Editor's Role Submissions - In Review 
+  *
+  * Translation by University of Patras, Library & Information Service
+  * Vassilis Barkayannis (barkayannis@upatras.gr),
+  * Panos Georgiou (panos@lis.upatras.gr),
+  * Giannis Tsakonas (john@lis.upatras.gr),
+  * Kiriazis Vasilis (vaskir@lis.upatras.gr),
+  * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000016" locale="el_GR" title="Προς Αξιολόγηση" toc="editorial/toc/000002" key="editorial.editorsRole.submissions.inReview">
+	<section>
+		<![CDATA[<p>Οι υποβολές σε αυτή τη σειρά αναμένουν την αξιολόγησή τους και την τελική απόφαση του Επιμελητή Ενότητας για την αποδοχή τους ή όχι προς δημοσίευση. Το εύρος της διαδικασίας Αξιολόγησης περιγράφεται στην Πολιτική Αξιολόγησης του περιοδικού (π.χ. εφαρμόζεται Αξιολόγηση από ομότιμους αξιολογητές  (Peer review) σε κάθε ενότητα; πόσοι αξιολογητές κρίνουν κάθε υποβολή;). Όταν ο Επιμελητής Ενότητας ή ο Επιμελητής του Περιοδικού επιλέγει τον τίτλο της υποβολής στη σειρά αναμονής Προς Αξιολόγηση, μεταβαίνουν στην σελίδα Αξιολόγησης της συγκεκριμένης υποβολής. Αν ο Επιμελητής Ενότητας εγκρίνει την υποβολή, αυτή μετακινείται στη σειρά αναμονής για Επιμέλεια, ενώ αν όχι αυτή μετακινείται στα Αρχεία.</p>]]>	
+	</section>
+</topic>

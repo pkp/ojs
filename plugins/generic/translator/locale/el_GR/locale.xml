@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the Greek  locale.
+  *
+  * Translation by University of Patras, Library & Information Service
+  * Vassilis Barkayannis (barkayannis@upatras.gr),
+  * Panos Georgiou (panos@lis.upatras.gr),
+  * Giannis Tsakonas (john@lis.upatras.gr),
+  * Kiriazis Vasilis (vaskir@lis.upatras.gr),
+  * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
+  *
+  * $Id$
+  -->
+ 
+<locale name="el_GR" full_name="Greek">	
+	<message key="plugins.generic.translator.name">Plugin Μετάφρασης</message>
+	<message key="plugins.generic.translator.description">Το plugin αυτό επιτρέπει την δικτυακή διαχείριση των μεταφρασμένων αρχείων.</message>
+	<message key="plugins.generic.translator.longdescription">Σε αυτή την περιοχή ο Διαχειριστής του Ιστοτόπου μπορεί να δημιουργήσει, επεξεργαστεί και να ελέγξει τις μεταφράσεις του OJS. Αυτό γίνεται σε επίπεδο συλλογής και δεν θα πρέπει να χρησιμοποιείται για ένα μοναδικό περιοδικό. Αν διορθώνεται ή δημιουργείτε μια μετάφραση, παρακαλούμε σκεφτείτε το ενδεχόμενο να την υποβάλλετε στο Public Knowledge Project για διανομή με μελλοντικές εκδόσεις.</message>
+	<message key="plugins.generic.translator.localeDescription">Η σελίδα αυτή παραθέτει όλα τα συστατικά μιας OJS μετάφρασης και παρέχει την δυνατότητα στον μεταφραστη να επεξεργαστεί το καθένα από αυτά..</message>
+
+	<message key="plugins.generic.translator.localeName">Όνομα Τοπικών Ρυθμίσεων</message>
+	<message key="plugins.generic.translator.localeKey">Κλειδί</message>
+	<message key="plugins.generic.translator.localeKeyValue">Τιμή</message>
+	<message key="plugins.generic.translator.translate">Μετάφραση</message>
+	<message key="plugins.generic.translator.availableLocales">Διαθέσιμες Τοπικές Ρυθμίσεις</message>
+	<message key="plugins.generic.translator.check">Έλεγχος</message>
+
+	<message key="plugins.generic.translator.errors">Σφάλματα Τοπικών Ρυθμίσεων</message>
+
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_KEY.title">Χαμένα Κλειδιά</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_EXTRA_KEY.title">Επιπλέον Κλειδιά</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_SUSPICIOUS_LENGTH.title">Ύποπτα Μήκη Κλειδιών</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_DIFFERING_PARAMS.title">Διαφορετικοί κατάλογοι παραμέτρων</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_FILE.title">Χαμένα Αρχεία Τοπικών Ρυθμίσεων</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_MISSING_EMAIL.title">Χαμένα Emails</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_EXTRA_EMAIL.title">Επιπλέον Emails</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_DIFFERING_PARAMS.title">Διαφορετικοί κατάλογοι παραμέτρων Email</message>
+
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_KEY.message">Το κλειδί "{$key}" αγνοείται από το "{$filename}". Η αγγλική έκδοση έχει παρασχεθεί ως προεπιλογή.</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_EXTRA_KEY.message">Το κλειδί "{$key}" δεν χρησιμοποιείται πλέον και μπορεί να απομακρυνθεί από το "{$filename}".</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_SUSPICIOUS_LENGTH.message"><![CDATA[Το κλειδί "{$key}" στο "{$filename}" έχει ένα αισθητά διαφορετικό μήκος από την αναφορά:<ul>
+		<li>{$value} ({$locale})</li>
+		<li>{$reference} ({$referenceLocale})</li>
+	</ul>]]></message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_DIFFERING_PARAMS.message">Το κλειδί "{$key}" στο "{$filename}" διαφέρει από την τοπική ρύθμιση αναφοράς στη χρήση των παραμέτρων του. Παρακαλούμε διπλοελέγξτε ότι περιέχει όλες τις σχετικές παραμέτρους. Η(Οι) παράμετρος(οι) που δεν ταιριάζουν είναι:</message>
+	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_FILE.message">Το κλεδικό "{$filename}" είναι χαμένο ή δεν μπορεί να αναγνωστεί.</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_MISSING_EMAIL.message">Το μήνυμα email "{$key}" είναι χαμένο από την μετάφραση.</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_EXTRA_EMAIL.message">Το μήνυμα email  "{$key}" δεν χρησιμοποιείται πλέον και μπορεί να απομακρυνθεί.</message>
+	<message key="plugins.generic.translator.errors.EMAIL_ERROR_DIFFERING_PARAMS.message">Το μήνυμα email  "{$key}" διαφέρει από την τοπική ρύθμιση αναφοράς στη χρήση των παραμέτρων του. Παρακαλούμε διπλοελέγξτε ότι περιέχει όλες τις σχετικές παραμέτρους. Η(Οι) παράμετρος(οι) που δεν ταιριάζουν είναι:</message>
+
+	<message key="plugins.generic.translator.locale">Τοπική ρύθμιση {$locale} </message>
+	<message key="plugins.generic.translator.localeFiles">Αρχεία Τοπικών Ρυθμίσεων</message>
+	<message key="plugins.generic.translator.miscFiles">Διάφορα Αρχεία</message>
+	<message key="plugins.generic.translator.emails">Email Πρότυπα</message>
+	<message key="plugins.generic.translator.file.filename">Όνομα αρχείου</message>
+	<message key="plugins.generic.translator.file.edit">Επεξεργασία {$filename}</message>
+	<message key="plugins.generic.translator.email.edit">Επεξεργασία {$emailKey}</message>
+	<message key="plugins.generic.translator.file.reference">Έκδοση Αναφοράς</message>
+	<message key="plugins.generic.translator.file.translation">Μετάφραση</message>
+	<message key="plugins.generic.translator.email.reference">Έκδοση Αναφοράς</message>
+	<message key="plugins.generic.translator.email.translation">Μετάφραση</message>
+	<message key="plugins.generic.translator.file.reset">Επαναφορά</message>
+	<message key="plugins.generic.translator.file.resetToReference">Επαναφορά στην Αναφορά</message>
+	<message key="plugins.generic.translator.email.reset">Επαναφορά</message>
+	<message key="plugins.generic.translator.email.resetToReference">Επαναφορά στην Αναφορά</message>
+	<message key="plugins.generic.translator.file.resetConfirm">Είστε σίγουροι ότι θέλετε να επαναφέρετε τα περιεχόμενα του αρχείου;</message>
+	<message key="plugins.generic.translator.email.resetConfirm">Είστε σίγουροι ότι θέλετε να επαναφέρετε τα περιεχόμενα του email;</message>
+	<message key="plugins.generic.translator.file.doesNotExistNote">* ΤΟ αρχείο αυτό δεν έχει μεταφραστεί ακόμα.</message>
+	<message key="plugins.generic.translator.file.confirmCreate">ΤΟ αρχείο "{$filename}" θα δημιουργηθεί με την χρήση της Αγγλική έκδοσης. Θα πρέπει να μεταφράσετε όλες τις σειρές (strings) του αρχείου. Επιθυμείτε να συνεχίσετε;</message>
+	<message key="plugins.generic.translator.email.description">Στα παρακάτω πεδία, μεταφράστε τον Τίτλο, το Σώμα και την περιγραφή των πρότυπων email. Η περιγραφή χρησιμοποιείται μόνο για τον Διαχειριστή του Περιοδικού.</message>
+	<message key="plugins.generic.translator.confirmDelete">Είστε σίγουροι ότι θέλετε να διαγράψετε αυτό το στοιχείο; Η ενέργεια αυτή δεν είναι ανστρέψιμη.</message>
+	<message key="plugins.generic.translator.deleteKey">Διαγράψτε αυτό το κλειδί</message>
+	<message key="plugins.generic.translator.deleteEmail">Διαγράψτε αυτό το email</message>
+	<message key="plugins.generic.translator.saveBeforeContinuing">Σιγουρευτείε ότι αποθηκεύεται κάθε αλλαγή σε αυτή τη σελίδα πριν συνεχίσετε γιατί αλλιώς θα χαθούν. Επιθυμείτε να συνεχίσετε; Αν ναι, όλες οι αλλαγές που δεν έχουν αποθηκευτεί θα χαθούν.</message>
+</locale>

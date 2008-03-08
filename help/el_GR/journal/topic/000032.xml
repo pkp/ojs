@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000015.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Subscription Manager 
+  *
+  * Translation by University of Patras, Library & Information Service
+  * Vassilis Barkayannis (barkayannis@upatras.gr),
+  * Panos Georgiou (panos@lis.upatras.gr),
+  * Giannis Tsakonas (john@lis.upatras.gr),
+  * Kiriazis Vasilis (vaskir@lis.upatras.gr),
+  * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000032" locale="el_GR" title="Διαχειριστής Συνδρομών" toc="journal/toc/000003" key="journal.roles.subscriptionManager">
+	<section>
+		<![CDATA[<p>Ο Διαχειριστής Συνδρομών διαχειρίζεται τις συνδρομές του περιοδικού και τους τύπους συνδρομών.</p><p>Περισσότερες πληροφορίες για την διαχείριση των συνδρομών μπορείτε να βρείτε {help_topic key="journal.managementPages.subscriptions" text="εδώ"}.</p>]]>
+	</section>
+</topic>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000006.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Section Editor's Role Index - Review 
+  *
+  * Translation by University of Patras, Library & Information Service
+  * Vassilis Barkayannis (barkayannis@upatras.gr),
+  * Panos Georgiou (panos@lis.upatras.gr),
+  * Giannis Tsakonas (john@lis.upatras.gr),
+  * Kiriazis Vasilis (vaskir@lis.upatras.gr),
+  * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000006" locale="el_GR" title="Αξιολόγηση" toc="editorial/toc/000004" subtoc="editorial/toc/000006" key="editorial.sectionEditorsRole.review">
+	<section>
+		<![CDATA[<p>Η σελίδα Αξιολόγησης του άρθρου παραθέτει σε λίστα όλα τα απαραίτητα στοιχεία ώστε ο Επιμελητής Ενότητας να οργανώσει και να ολοκληρώσει την διαδικασία Αξιολόγησης. Ο Επιμελητής Ενότητας ορίζει μια έκδοση του άρθρου για αξιολόγηση, αναθέτει την αξιολόγηση σε έναν ή περισσότερους αξιολογητές και εισάγει στο σύστημα μια Απόφαση Επιμελητή. Σύμφωνα με αυτήν την απόφαση, το άρθρο θα μετακινηθεί από την σειρά Αξιολόγησης είτε στην σειρά αναμονής για Επιμέλεια ή στα Αρχεία, ή θα επανυποβληθεί για αξιολόγηση.</p><p>Για περισσότερες λεπτομέρειες στην επιλογή της Έκδοσης για Αξιολόγηση, δείτε {help_topic key="editorial.sectionEditorsRole.review.reviewVersion" text="Έκδοση Αξιολόγησης"}.</p><p>Για περισσότερες λεπτομέρειες για την διαδικασία Αξιολόγησης από ομότιμους Αξιολογητές (Peer Review), δείτε  {help_topic key="editorial.sectionEditorsRole.review.peerReview" text="Αξιολόγηση από Ομότιμους Αξιολογητές"}.</p><p>Για περισσότερες λεπτομέρειες για την λήψη της Απόφασης Επιμελητή , δείτε {help_topic key="editorial.sectionEditorsRole.review.editorDecision" text="Απόφαση Επιμελητή"}.</p>]]>
+</section>
+
+</topic>

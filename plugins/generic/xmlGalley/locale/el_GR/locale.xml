@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the Greek locale.
+  *
+  * Translation by University of Patras, Library & Information Service
+  * Vassilis Barkayannis (barkayannis@upatras.gr),
+  * Panos Georgiou (panos@lis.upatras.gr),
+  * Giannis Tsakonas (john@lis.upatras.gr),
+  * Kiriazis Vasilis (vaskir@lis.upatras.gr),
+  * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
+  *
+  * $Id$
+  -->
+ 
+<locale name="el_GR" full_name="Greek">	
+	<message key="plugins.generic.xmlGalley.displayName">XML Galley Plugin</message>
+	<message key="plugins.generic.xmlGalley.description">Αυτό το plugin παράγει XHTML galleys (έκτυπα) για ένα XML άρθρο με την χρήση XSLT.</message>
+
+	<message key="plugins.generic.xmlGalley.manager.settings">Ρυθμίσεις</message>
+
+	<!-- XML Article Galleys Settings Management -->
+	<message key="plugins.generic.xmlGalley.settings.description"><![CDATA[<p>Με αυτό το plugin, τα τυπογραφικά δοκίμια του άρθρου θα αποδοθούν αυτόματα από ένα φορτωμένο αρχείο πηγής XML, χρησιμοποιώντας έναν συγκεκριμένο XSL stylesheet μετασχηματισμό.</p>]]></message>
+	<message key="plugins.generic.xmlGalley.settings.renderer">XSLT Μέθοδος Απόδοσης</message>
+	<message key="plugins.generic.xmlGalley.settings.PHP5">PHP 5.0.0+ με XSL λειτουργίες (libxslt)</message>
+	<message key="plugins.generic.xmlGalley.settings.PHP4">PHP 4.0.3+ με XSLT λειτουργίες  (Sablotron)</message>
+	<message key="plugins.generic.xmlGalley.settings.notAvailable">Δεν είναι διαθέσιμο</message>
+
+	<message key="plugins.generic.xmlGalley.settings.externalXSLT">Εξωτερική εφαρμογή γραμμής εντολών XSLT (π.χ. Xalan)</message>
+	<message key="plugins.generic.xmlGalley.settings.externalXSLTDescription"><![CDATA[Εισάγετε την πλήρη διαδρομή στο εργαλείο απόδοσης XSLT. Χρησιμοποιήστε %xsl για να ακτικαταστήσετε την τοποθεσία του αρχείου XSL stylesheet, και %xml για να ακτικαταστήσετε την τοποθεσία του XML αρχείου πηγής, π.χ.: <br/><pre>/usr/bin/java -jar ~/java/xalan.jar -HTML -IN %xml -XSL %xsl</pre>]]></message>
+	<message key="plugins.generic.xmlGalley.settings.externalXSLTTest">Έλεγχος XSLT</message>
+	<message key="plugins.generic.xmlGalley.settings.externalXSLTSuccess">Επιτυχής εξωτερικός έλεγχος XSLT.</message>
+	<message key="plugins.generic.xmlGalley.settings.externalXSLTFailure">Ανεπιτυχής εξωτερικός έλεγχος XSLT.</message>
+	<message key="plugins.generic.xmlGalley.settings.externalXSLTRequired">Ένας εξωτερικός επεξεργαστής γραμμής εντολών XSLT πρέπει να οριστεί.</message>
+
+	<message key="plugins.generic.xmlGalley.settings.stylesheet">XSL Stylesheet</message>
+	<message key="plugins.generic.xmlGalley.settings.xslNLM"><![CDATA[<a href="http://dtd.nlm.nih.gov/publishing/">NLM Journal Publishing DTD</a> &rarr; XHTML]]></message>
+
+	<message key="plugins.generic.xmlGalley.settings.xslFOP">Ενεργοποίηση απόδοσης PDF τυπογραφικών δοκιμίων με την χρήση XSL-FO (π.χ.. FOP)</message>
+	<message key="plugins.generic.xmlGalley.settings.xslFOPDescription"><![CDATA[Εισάγετε την πλήρη διαδρομή για τον FO επεξεργαστή. Χρησιμοποιήστε %fo  για να ακτικαταστήσετε την τοποθεσία του αρχείου XSL-FO, και %pdf  για να ακτικαταστήσετε την τοποθεσία του αρχείου PDF; π.χ.: <br/><pre>/usr/sbin/fop -fo %fo -pdf %pdf</pre>]]></message>
+	<message key="plugins.generic.xmlGalley.settings.xslFOPRequired">Ένας εξωτερικός επεξεργαστής γραμμής εντολών FO πρέπει να οριστεί.</message>
+
+	<message key="plugins.generic.xmlGalley.settings.customXSL">Προσαρμοσμένο XSL stylesheet</message>
+	<message key="plugins.generic.xmlGalley.settings.customXSLRequired">Ένα προσαρμοσμένο αρχείου XSL stylesheet πρέπει να οριστεί.</message>
+	<message key="plugins.generic.xmlGalley.settings.customXSLInvalid">Το ανεβασμένο αρχείο XSL δεν ήταν έγκυρο. Παρακαλούμε ελέγξτε το αρχείο και ξαναπροσπαθήστε.</message>
+
+</locale>
+

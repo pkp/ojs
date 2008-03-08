@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000015.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Editor's Role Submissions - Unassigned 
+  *
+  * Translation by University of Patras, Library & Information Service
+  * Vassilis Barkayannis (barkayannis@upatras.gr),
+  * Panos Georgiou (panos@lis.upatras.gr),
+  * Giannis Tsakonas (john@lis.upatras.gr),
+  * Kiriazis Vasilis (vaskir@lis.upatras.gr),
+  * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000015" locale="el_GR" title="Χωρίς Ανάθεση" toc="editorial/toc/000002" key="editorial.editorsRole.submissions.unassigned">
+	<section>
+		<![CDATA[<p>Κάθε υποβολή στο περιοδικό μπαίνει στην διαδικασία στην σειρά αναμονής Χωρίς Ανάθεση του Επιμελητή Περιοδικού. Για να αναθέσει μια υποβολή αυτής της λίστας σε έναν Επιμελητή Ενότητας, Ο επιμελητής του περιοδικού επιλέγει τον τίτλο της υποβολής και μεταβαίνει στην αντίστοιχη σελίδα της Υποβολής όπου γίνεται η ανάθεση. Όταν μια υποβολή ανατίθεται σε ένα Επιμελητή Ενότητας τότε μετακινείται από την σειρά αναμονής Χωρίς Ανάθεση στην σειρά Προς Αξιολόγηση.</p>]]>	
+	</section>
+</topic>

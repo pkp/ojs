@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000004.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Publishing Process - Publish
+  *
+  * Translation by University of Patras, Library & Information Service
+  * Vassilis Barkayannis (barkayannis@upatras.gr),
+  * Panos Georgiou (panos@lis.upatras.gr),
+  * Giannis Tsakonas (john@lis.upatras.gr),
+  * Kiriazis Vasilis (vaskir@lis.upatras.gr),
+  * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
+  *
+  * $Id$
+  -->
+
+<topic id="publishing/topic/000004" locale="el_GR" title="Δημοσίευση" toc="publishing/toc/000000" key="publishing.publish">
+	<section>
+		<![CDATA[<p>Όταν είναι η ώρα να δημοσιευτεί ένα τεύχος, Ο Επιμελητής περιοδικού επιλέγει "{translate key="editor.issues.publishIssue"}" στην σελίδα Ενεργών Τευχών για το τεύχος προς έκδοση, η οποία είναι η σελίδα με τον Πίνακα Περιεχομένων. Με την δημοσίευση ενός τεύχους  ο Πίνακας Περιεχομένων του εμφανίζεται όταν ο σύνδεσμος {translate key="navigation.current"} επιλέγεται από τους αναγνώστες, και το εξώφυλλο του τεύχους, αν υπάρχει, εμφανίζεται στην αρχική σελίδα του περιοδικού. Το τεύχος που μέχρι εκείνη τη στιγμή θεωρούνταν {translate key="navigation.current"} μεταφέρεται στο {translate key="navigation.archives"}. Αν δεν υπάρχει εξώφυλλο, ο Πίνακας Περιεχομένων θα εμφανιστεί στην αρχική σελίδα του περιοδικού εκτός και αν αυτή καταλαμβάνεται από μια άλλη εικόνα ή κείμενο που έχουν φορτωθεί και ρυθμιστεί στο στάδιο Οργάνωσης του Περιοδικού από τον Διαχειριστή του περιοδικού. Η δημοσίευση ενός τεύχους στέλνει επίσης ένα ενημερωτικό email σε όλους τους εγγεγραμμένους χρήστες που περιέχει τον Πίνακα Περιεχομένων και έναν σύνδεσμο στον ιστότοπο του περιοδικού.</p>]]>	
+	</section>
+</topic>

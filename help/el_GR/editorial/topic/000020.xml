@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000020.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Editor's Role Submission Summary - Submission Metadata
+  *
+  * Translation by University of Patras, Library & Information Service
+  * Vassilis Barkayannis (barkayannis@upatras.gr),
+  * Panos Georgiou (panos@lis.upatras.gr),
+  * Giannis Tsakonas (john@lis.upatras.gr),
+  * Kiriazis Vasilis (vaskir@lis.upatras.gr),
+  * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000020" locale="el_GR" title="Μεταδεδομένα Υποβολής" toc="editorial/toc/000003" key="editorial.editorsRole.submissionSummary.submissionMetadata">
+	<section>
+		<![CDATA[<p>Τα μεταδεδομένα που θα χρησιμοποιηθούν για την ευρετηρίαση της υποβολής όταν και αν δημοσιευθεί, εισάγονται από τον Συγγραφέα, και μπορούν να διορθωθούν από τον Επιμελητή Ενότητας, καθώς επίσης και από τον Συγγραφέα και τον Επιμελητή Κειμένου κατά την διάρκεια της διαδικασίας Επιμέλειας.</p>]]>	
+	</section>
+</topic>

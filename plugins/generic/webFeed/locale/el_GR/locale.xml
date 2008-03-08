@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the Greek locale.
+  *
+  * Translation by University of Patras, Library & Information Service
+  * Vassilis Barkayannis (barkayannis@upatras.gr),
+  * Panos Georgiou (panos@lis.upatras.gr),
+  * Giannis Tsakonas (john@lis.upatras.gr),
+  * Kiriazis Vasilis (vaskir@lis.upatras.gr),
+  * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
+  *
+  * $Id$
+  -->
+ 
+<locale name="el_GR" full_name="Greek">	
+	<message key="plugins.generic.webfeed.displayName">Web Feed Plugin</message>
+	<message key="plugins.generic.webfeed.description">Το plugin αυτό παράγει RSS/Atom web syndication feeds για το τρέχον τεύχος.</message>
+
+	<message key="plugins.generic.webfeed.settings">Ρυθμίσεις</message>
+	<message key="plugins.generic.webfeed.settings.issue">Εμφάνιση web feed συνδέσμους μόνο στις σελίδες του τεύχους.</message>
+	<message key="plugins.generic.webfeed.settings.all">Εμφάνιση web feed συνδέσμους σε όλες τις σελίδες του περιοδικού.</message>
+
+	<message key="plugins.generic.webfeed.settings.currentIssue">Εμφάνιση στοιχείων στο τρέχον τεύχος.</message>
+	<message key="plugins.generic.webfeed.settings.recentArticles">πιο πρόφαστα δημοσιευμένα στοιχεία.</message>
+	<message key="plugins.generic.webfeed.settings.recentItemsRequired">Παρακαλούμε εισάγετε έναν θετικό ακέραιο αριθμό για πρόσφατα δημοσιευμένα στοιχεία.</message>
+</locale>

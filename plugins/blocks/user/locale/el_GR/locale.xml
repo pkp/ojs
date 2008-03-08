@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the Greek locale.
+  *
+  * Translation by University of Patras, Library & Information Service
+  * Vassilis Barkayannis (barkayannis@upatras.gr),
+  * Panos Georgiou (panos@lis.upatras.gr),
+  * Giannis Tsakonas (john@lis.upatras.gr),
+  * Kiriazis Vasilis (vaskir@lis.upatras.gr),
+  * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
+  *
+  * $Id$
+  -->
+ 
+<locale name="el_GR" full_name="Greek">
+	<message key="plugins.block.user.displayName">Block Χρήστη</message>
+	<message key="plugins.block.user.description">Το plugin αυτό εμφανίζει στην πλαϊνή μπάρα εργαλεία διαχείρισης του λογαριασμού του χρήστη (π.χ. σύνδεση, αποσύνδεση, σύνδεσμος προφίλ χρήστη κλπ).</message>
+	<message key="plugins.block.user.loggedInAs">Είστε συνδεδεμένος ως...</message>
+	<message key="plugins.block.user.myJournals">Τα περιοδικά μου</message>
+	<message key="plugins.block.user.myProfile">Το Προφίλ μου</message>
+	<message key="plugins.block.user.logout">Αποσυνδεθείτε</message>
+	<message key="plugins.block.user.signOutAsUser">Αποσυνδεθείτε ως Χρήστης </message>
+	<message key="plugins.block.user.rememberMe">Απομνημόνευση Προφίλ μου</message>
+</locale>

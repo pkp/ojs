@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Publishing Process Index 
+  *
+  * Translation by University of Patras, Library & Information Service
+  * Vassilis Barkayannis (barkayannis@upatras.gr),
+  * Panos Georgiou (panos@lis.upatras.gr),
+  * Giannis Tsakonas (john@lis.upatras.gr),
+  * Kiriazis Vasilis (vaskir@lis.upatras.gr),
+  * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
+  *
+  * $Id$
+  -->
+
+<topic id="publishing/topic/000000" locale="el_GR" title="Διαδικασία Δημοσίευσης" toc="index/toc/000000" subtoc="publishing/toc/000000" key="publishing.index">
+	<section>
+		<![CDATA[<p>Ο Επιμελητής περιοδικού παρακολουθεί την διαδικασία δημοσίευσης με την δημιουργία τευχών ή/και τόμων του περιοδικού, με τον προγραμματισμό των υποβολών για δημοσίευση σε τεύχη, με την οργάνωση των Πινάκων Περιεχομένων και τέλος με την δημοσίευση του τεύχους. Το περιοδικό μπορεί να εκδοθεί σε διάφορες μορφές. Ο τυπικός τρόπος είναι η συγκέντρωση υποβολών σε ένα τεύχος που εκδίδεται κάθε μήνα, ή τριμήνο κλπ. Παρ'όλα αυτά πολλά ηλεκτρονικά περιοδικά προτιμούν να δημοσιεύουν τις υποβολές μόλις ολοκληρωθεί η διαδικασία επιμέλειας, ως μέρος ενός ετήσιου τόμου, το οποίο αρχίζει με την δημοσίευση της πρώτης υποβολής-άρθρου και κλείνει στο τέλος της χρονιάς οπότε και ένας άλλος τόμος αρχίζει. Για τους σκοπούς αυτού του κειμένου Βοήθειας, χρησιμοποιείται ο όρος Τεύχος αν και ένα τεύχος αποτελείται από έναν Πίνακα Περιεχομένων που μπορεί να αναγνωρίζεται από τα παρακάτω σχήματα (α) τεύχος, τόμος, έτος, (β) τόμος, έτος, (γ) έτος ή (δ) τίτλο. Ο τρόπος αναγνώρισης των τευχών είναι μέρος της διαδικασίας Οργάνωσης του περιοδικού από τον Διαχειριστή του περιοδικού.</p>]]>	
+	</section>
+</topic>

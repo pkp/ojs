@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000031.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Import/Export
+  *
+  * Translation by University of Patras, Library & Information Service
+  * Vassilis Barkayannis (barkayannis@upatras.gr),
+  * Panos Georgiou (panos@lis.upatras.gr),
+  * Giannis Tsakonas (john@lis.upatras.gr),
+  * Kiriazis Vasilis (vaskir@lis.upatras.gr),
+  * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000031" locale="el_GR" title="Εισαγωγή/Εξαγωγή δεδομένων" toc="journal/toc/000001" key="journal.managementPages.importExport">
+	<section>
+		<![CDATA[<p>Η επιλογή Εισαγωγή/Εξαγωγή δεδομένων, διαθέσιμη από την Διαχείριση του Περιοδικού, επιτρέπει στον Διαχειριστή του περιδοικού να εισάγει και να εξάγει δεδομένα στο και από το OJS.</p><p>Η Εισαγωγή/Εξαγωγή δεδομένων υλοποιείται με την βοήθεια των κατάλληλων plugins για κάθε μορφή ή τύπο δεδομένων. Για περισσότερες πληροφορίες συμβουλευτείτε την τεκμηρίωση που συνοδεύει κάθε plugin, και βρίσκεται στο σχετικό φάκελο του OJS (/path/to/install/plugins).</p><p>Πέντε plugins Εισαγωγής/Εξαγωγής δεδομένων περιλαμβάνονται στο OJS, και παρακάτω δίνονται οι απαραίτητες πληροφορίες για το καθένα.</p><p>Η λειτουργία Εισαγωγή/Εξαγωγή δεδομένων είναι επίσης διαθέσιμη ως command-line εργαλείο. Δείτε  το tools/importExport.php για περισσότερες πληροφορίες.</p>]]>
+	</section>
+	<section title="Users XML Plugin">
+			<![CDATA[<p>Το Users XML Plugin μπορεί να χρησιμοποιηθεί για την εισαγωγή και εξαγωγή στοιχείων χρηστών και των αντίστοιχων ρόλων τους στο περιοδικό. Δείτε το XML DTD στο "plugins/importexport/users/users.dtd" για περισσότερες πληροφορίες.</p>]]>
+	</section>
+	<section title="Erudit Article Export Plugin">
+			<![CDATA[<p>Το Erudit Article Export Plugin υλοποιεί εξαγωγή ενός άρθρου για ευρετηρίαση πλήρους κειμένου με την χρήση του Erudit's XML DTD. Δείτε <a href="http://www.erudit.org">http://www.erudit.org</a> για περισσότερες πληροφορίες.</p>]]>
+	</section>
+	<section title="Articles &amp; Issues XML Plugin">
+			<![CDATA[<p>Το Articles &amp; Issues XML Plugin είναι η κύρια μέθοδος για μαζική εισαγωγή και εξαγωγή. Μπορεί να χρησιμοποιηθεί για την εισαγωγή και εξαγωγή μονών και πολλαπλών άρθρων, μονών και πολλαπλών  τευχών συμπεριλαμβανομένων των συγκεντρωτικών δεδομένων. Για περισσότερες πληροφορίες για το plugin αυτό, δείτε το XML DTD στο "plugins/importexport/native/native.dtd".</p>]]>
+	</section>
+	<section title="PubMed XML Export Plugin">
+			<![CDATA[<p>Το PubMed XML Export Plugin δίνει την δυνατότητα δημιουργίας βιβλιογραφικών πληροφοριών για άρθρα του τρέχοντος τεύχους σε κατάλληλη πρότυπη XML μορφή PubMed για ευρετηρίαση από την βάση δεδομένων NLM PubMed/MEDLINE.  Λεπτομέρειες για την μορφή αυτή XML και τις απαιτήσεις δεδομένων είναι διαθέσιμες στη διεύθυνση: <a href="http://www.ncbi.nlm.nih.gov/entrez/query/static/spec.html">http://www.ncbi.nlm.nih.gov/entrez/query/static/spec.html</a>. Περισσότερες πληροφορίες για το plugin μπορείτε να βρείτε στο  "plugins/importexport/pubmed".</p>]]>
+	</section>
+	<section title="Crossref XML Export Plugin">
+			<![CDATA[<p>Το Crossref XML Export Plugin παρέχει την δυνατότητα δημιουργίας μεταδεδομένων για άρθρα και τεύχη του περιοδικού για ευρετηρίαση από το CrossRef.  Λεπτομέρειες για την μορφή αυτή XML και τις απαιτήσεις δεδομένων είναι διαθέσιμες στη διεύθυνση : <a href="http://www.crossref.org/schema">http://www.crossref.org/schema</a>. Περισσότερες πληροφορίες για το plugin μπορείτε να βρείτε στο "plugins/importexport/crossref".</p>]]>
+	</section>
+</topic>

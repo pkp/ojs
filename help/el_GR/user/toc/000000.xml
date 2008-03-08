@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../toc.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * table of contents for User Interface. 
+  *
+  * Translation by University of Patras, Library & Information Service
+  * Vassilis Barkayannis (barkayannis@upatras.gr),
+  * Panos Georgiou (panos@lis.upatras.gr),
+  * Giannis Tsakonas (john@lis.upatras.gr),
+  * Kiriazis Vasilis (vaskir@lis.upatras.gr),
+  * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
+  *
+  * $Id$
+  -->
+
+<toc id="user/toc/000000" locale="el_GR" title="Ιστότοπος Περιοδικού" parent_topic="user/topic/000000">
+	<topic id="user/topic/000001" title="Αρχική Σελίδα" />
+	<topic id="user/topic/000002" title="Σχετικά" />
+	<topic id="user/topic/000007" title="Αρχική Σελίδα Χρήστη" />
+	<topic id="user/topic/000003" title="Εγγραφή &amp; Προφίλ Χρήστη" />
+	<topic id="user/topic/000004" title="Τρέχον Τεύχος &amp; Αρχείο Τευχών" />
+	<topic id="user/topic/000005" title="Αναζήτηση &amp; Σάρωση" />
+	<topic id="user/topic/000006" title="Εργαλεία Ανάγνωσης" />
+
+	<breadcrumb url="user/topic/000000" title="Ιστότοπος Περιοδικού" />
+</toc>

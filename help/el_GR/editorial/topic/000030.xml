@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000030.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Reviewer's Role Index - Submissions 
+  *
+  * Translation by University of Patras, Library & Information Service
+  * Vassilis Barkayannis (barkayannis@upatras.gr),
+  * Panos Georgiou (panos@lis.upatras.gr),
+  * Giannis Tsakonas (john@lis.upatras.gr),
+  * Kiriazis Vasilis (vaskir@lis.upatras.gr),
+  * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000030" locale="el_GR" title="Υποβολές" toc="editorial/toc/000008" key="editorial.reviewersRole.submissions">
+	<section>
+		<![CDATA[<p>Συνδεόμενος στο περιοδικό, ο Αξιολογητής μεταβαίνει στην Αρχική Σελίδα Χρήστη. Πατώντας στον ρόλο του ως Αξιολογητής (καθώς ένας Αξιολογητής μπορεί να έχει αναλάβει και άλλους ρόλους στον περιοδικό), προχωράει στην σελίδα Υποβολών. Στην σελίδα αυτή παρατίθενται οι νέες υποβολές για τις οποίες του ζητείται να αξιολογήσει και αυτές για τις οποίες έχει ήδη αναλάβει την αξιολόγηση. Η σειρά αναμονής των Υποβολών σημειώνει επίσης σε ποιο γύρο βρίσκεται η κάθε αξιολόγηση, καθώς μερικοί αξιολογητές μπορεί να έχου μπει στην διαδικασία αξιολόγηση στον δεύτερο γύρο, ύστερα από σχετική απόφαση του Επιμελητή Ενότητας για Εκ νέου υποβολή για αξιολόγηση. Μέσω της σελίδας αυτής δίνεται επίσης πρόσβαση σε παλαιότερες αξιολογήσεις του συγκεκριμενου αξιολογητή για το περιοδικό.</p>]]>	
+	</section>
+</topic>

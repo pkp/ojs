@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000007.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Languages 
+  *
+  * Translation by University of Patras, Library & Information Service
+  * Vassilis Barkayannis (barkayannis@upatras.gr),
+  * Panos Georgiou (panos@lis.upatras.gr),
+  * Giannis Tsakonas (john@lis.upatras.gr),
+  * Kiriazis Vasilis (vaskir@lis.upatras.gr),
+  * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000007" locale="el_GR" title="Γλώσσες" toc="journal/toc/000001" key="journal.managementPages.languages">
+	<section>
+		<![CDATA[<p>Το σύστημα μπορεί να υποστηρίξει πολλυγλωσικά περιοδικά όπως επίσης περιοδικά σε γλώσσες πέραν της Αγγλικής. Οι γλώσσες που είναι διαθέσιμες για το σύστημα από τον Διαχειριστή του Ιστοτόπου παρατίθενται στην σχετική λίστα στη σελίδα Γλώσσες στις σελίδες Διαχείρισης Περιοδικού και μπορούν να επιλεγούν για χρήση στον ιστότοπο του περιοδικού. Αν επιλεχθούν περισσότερες της μιας γλώσσας στην σελίδα Συμπληρωματικές Τοπικές Ρυθμίσεις, τότε οι χρήστες θα μπορούν να αλλάζουν από τη μια γλώσσα στην άλλη μέσω ενός drop-down μενού στη μπάρα πλοήγησης. Επιπλέον οι χρήστες θα μπορούν να εισάγουν πληροφορίες στις διάφορες φόρμες σε όλες τις ενεργοποιημένες γλώσσες.</p>]]>	
+	</section>
+</topic>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000023.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Section Editor's Role Index - Archives
+  *
+  * Translation by University of Patras, Library & Information Service
+  * Vassilis Barkayannis (barkayannis@upatras.gr),
+  * Panos Georgiou (panos@lis.upatras.gr),
+  * Giannis Tsakonas (john@lis.upatras.gr),
+  * Kiriazis Vasilis (vaskir@lis.upatras.gr),
+  * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000023" locale="el_GR" title="Αρχεία" toc="editorial/toc/000005" key="editorial.sectionEditorsRole.submissions.archives">
+	<section>
+		<![CDATA[<p>Οι υποβολές αυτής της λίστας έχουν περάσει από την διαδικασία δημοσίευσης, είτε έχοντας απορριφθεί, είτε έχουν προσγραμματιστεί για δημοσίευση είτε έχουν ήδη δημοσιευτεί. Η λίστα αυτή παρέχει στους Επιμελητές του Περιοδικού και τους Επιμελητές Ενότητας στους οποίους έχει ανατεθεί μια ή περισσότερες υποβολές, πλήρη πρόσβαση στο ιστορικό της υποβολής (Σύνοψη, υποβολή, Αξιολόγηση, ΕΠιμέλειας και Ιστορικό)</p>]]>	
+	</section>
+</topic>
+

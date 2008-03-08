@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000008.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Management Pages - Stats & Reports
+  *
+  * Translation by University of Patras, Library & Information Service
+  * Vassilis Barkayannis (barkayannis@upatras.gr),
+  * Panos Georgiou (panos@lis.upatras.gr),
+  * Giannis Tsakonas (john@lis.upatras.gr),
+  * Kiriazis Vasilis (vaskir@lis.upatras.gr),
+  * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000008" locale="el_GR" title="Στατιστικά &amp; Αναφορές" toc="journal/toc/000001" key="journal.managementPages.statsAndReports">
+	<section>
+		<![CDATA[<p>Τα Στατιστικά &amp; Αναφορές παρέχουν στον Διαχειρισττή του Περιοδικού τη δυνατότητα να εξάγει χρήσιμες πληροφορίες για την χρήση του περιοδικού με δύο τρόπους. Πρώτα με την χρήση των Στατιστικών, όπου είναι διαθέσιμα στατιστικά για κάθε χρονιά και για τις υποβολές, τις πρακτικές επιμέλειας και τους χρήστες. Δεύτερον, ο Διαχειριστής του Περιοδικού μπορεί να δημιουργήσει διάφορους τύπους αναφορών για συγκεκριμένα χρονικά διαστήματα.</p><p>Υπάρχουν διαθέσιμοι 4 τύποι αναφορών :<ul>
+			<li><strong>Αναφορά Περιοδικού</strong>: Δίνει στοιχεία για όλες τις υποβολές στο περιοδικό για την συγκεκριμένη περίοδο.</li>
+			<li><strong>Αναφορά Επιμελητή</strong>: Στοιχεία για τις υποβολές ταξινομημένες κατά Επιμελητή.</li>
+			<li><strong>Αναφορά Αξιολόγησης</strong>: Στοιχεία για τις υποβολές ταξινομημένες κατά Αξιολογητή .</li>
+			<li><strong>Αναφορά Ενότητας</strong>: Στοιχεία για τις υποβολές ταξινομημένες κατά Ενότητα.</li>
+		</ul>Οι αναφορές αυτές δημιουργούνται σε μορφή Comma-Separated Values (CSV) και μπορούν να ανοιχθούν με την χρήση κατάλληλου προγράμματος υπολογιστικών φύλλων.]]>
+	</section>
+</topic>

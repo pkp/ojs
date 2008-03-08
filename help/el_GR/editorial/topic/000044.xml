@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000044.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Ensuring a blind peer review
+  *
+  * Translation by University of Patras, Library & Information Service
+  * Vassilis Barkayannis (barkayannis@upatras.gr),
+  * Panos Georgiou (panos@lis.upatras.gr),
+  * Giannis Tsakonas (john@lis.upatras.gr),
+  * Kiriazis Vasilis (vaskir@lis.upatras.gr),
+  * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000044" locale="el_GR" title="Διασφάλιση Τυφλής Αξιολόγησης" toc="editorial/toc/000001" key="editorial.sectionEditorsRole.review.blindPeerReview">
+	<section>
+		<![CDATA[<p>Για την διασφάλιση της ακεραιότητας της διαδικασίας αξιολόγησης μιας υποβολής σε αυτό το περιοδικό, θα πρέπει να καταβληθεί κάθε δυνατή προσπάθεια να μην γίνουν γνωστές οι ταυτότητες μεταξύ των συγγραφέων και των αξιολογητών. Αυτός ο σκοπός εμπλέκει τους συγγραφείς, τους επιμελητές και τους αξιολογητές (οι οποίοι ανεβάζουν αρχεία και τεκμήρια ως μέρος της αξιολόγησης) στον έλεγχο των παρακάτω βημάτων αναφορικά με τις ιδιότητες των κειμένων και των αντίστοιχων αρχείων:
+<ol><li>Οι συγγραφείς θα πρέπει να έχουν διαγράψει τα ονόματά τους από το κείμενο της υποβολής, και τα πεδία "Συγγραφέας" και έτος να χρησιμοποιούνται στις αναφορές και στις υποσημειώσεις αντί για τα ονόματα των συγγραφέων, τους τίτλους των άρθρων κλπ.</li>
+<li>Στην περίπτωση αρχείων Microsoft Office, η ταυτότητα του συγγραφέα θα πρέπει να απομακρυνθεί από τις ιδιότητες του αρχείου (στο μενού εντολών Αρχείο στο Word), με τον ακόλουθο τρόπο: Αρχείο &gt; Αποθήκευση Ως &gt; Εργαλεία (ή Επιλογές σε Mac) &gt; Επιλογές Ασφαλείας (Ασφάλεια) &gt; Κατάργηση προσωπικών πληροφοριών από τις ιδιότητες αρχείου κατά την αποθήκευση &gt; Αποθήκευση.</li>
+<li>Στην περίπτωση αρχείων PDF, τα ονόματα των συγγραφέων θα πρέπει να απομακρυνθούν από τις Ιδιότητες Αρχείου στο μενού εντολών Αρχείο του Adobe Acrobat.</li>
+</ol></p>]]>
+	</section>
+</topic>

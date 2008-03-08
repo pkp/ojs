@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000016.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Roles - Editor 
+  *
+  * Translation by University of Patras, Library & Information Service
+  * Vassilis Barkayannis (barkayannis@upatras.gr),
+  * Panos Georgiou (panos@lis.upatras.gr),
+  * Giannis Tsakonas (john@lis.upatras.gr),
+  * Kiriazis Vasilis (vaskir@lis.upatras.gr),
+  * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
+  *
+  * $Id$
+  -->
+
+<topic id="journal/topic/000016" locale="el_GR" title="Επιμελητής Περιοδικού" toc="journal/toc/000003" key="journal.roles.editor">
+	<section>
+		<![CDATA[<p>Ο Επιμελητής Περιοδικού συντονίζει το σύνολο των διαδικασιών επιμέλειας και δημοσίευσης. Ο Επιμελητής Περιοδικού σε συνεργασία με τον Διαχειριστή του Περιοδικού, συνήθως  καθορίζει τις πολιτικές και τις διαδικασίες επιμέλειας και έκδοσης για το περιοδικό, οι οποίες εμφανίζονται στην,  {help_topic key="journal.managementPages.setup" text="Οργάνωση Περιοδικού"}. Στην Διαδικασία Επιμέλειας, ο Επιμελητής, αναθέτει την παρακολούθηση υποβολών στους Επιμελητές Ενότητας στα στάδια Αξιολόγησης και Επιμέλειας. Ο Επιμελητής Περιοδικού παρακολουθεί την πρόοδο της διαδικασίας και συνεισφέρει σε κάθε δυσκολία. Μόλις η αξιολόγηση ολοκληρωθεί, συνήθως ο Επιμελητής παρακολουθεί την υποβολή στα στάδια της {help_topic key="editorial.sectionEditorsRole.editing" text="Επιμέλειας"} (που περιλαμβάνουν την επιμέλεια του κειμένου, την σελιδοποίηση και την επιμέλεια των τυπογραφικών δοκιμίων) αν και σε μερικά περιοδικά οι αρμοδιότητες αυτές παραμένουν στον Επιμελητή Ενότητας που ήταν υπεύθυνος για την  {help_topic key="editorial.sectionEditorsRole.review" text="Αξιολόγηση"} της υποβολής. Ο Επιμελητής περιοδικού επίσης προγραμματίζει τις υποβολές για δημοσίευση, σχηματίζει τον Πίνακα Περιεχομένων και δημοσιεύει τα τεύχη του περιοδικού στα πλαίσια της {help_topic key="publishing.index" text="Διαδικασίας Δημοσίευσης"}. Ο Επιμελητής του περιοδικού μπορεί να επναφέρει αρχειοθετημένες υποβολές ως ενεργές στις λίστες "Προς Αξιολόγηση" ή "Προς Επιμέλειας όπως περιγράφεται στις οδηγίες για τα {help_topic key="editorial.editorsRole.submissions.archives" text="Αρχεία"}.</p>]]>	
+	</section>
+</topic>

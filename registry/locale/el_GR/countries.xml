@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	
+<!--
+  * countries.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localized list of countries.
+  *
+  * $Id$
+  -->
+
+<!DOCTYPE countries [
+	<!ELEMENT countries (country+)>
+	<!ELEMENT country EMPTY>
+		<!ATTLIST country
+			code CDATA #REQUIRED
+			name CDATA #REQUIRED>
+]>
+	
+<countries>
+	<country name="Άαλαντ" code="AX" />
+	<country name="Άγιος Βικέντιος" code="VC" />
+	<country name="Άγιος Μαρίνος" code="SM" />
+	<country name="Άγιος Πιέρ και Μικελόν" code="PM" />
+	<country name="Άγιος Χριστόφορος και Νέβις" code="KN" />
+	<country name="Αζερμπαϊτζάν" code="AZ" />
+	<country name="Αίγυπτος" code="EG" />
+	<country name="Αιθιοπία" code="ET" />
+	<country name="Αϊτή" code="HT" />
+	<country name="Ακτή Ελεφαντοστού" code="CI" />
+	<country name="Αλβανία" code="AL" />
+	<country name="Αλγερία" code="DZ" />
+	<country name="Αμερικανική Σαμόα" code="AS" />
+	<country name="Ανατολικό Τιμόρ" code="TL" />
+	<country name="Ανγκόλα" code="AO" />
+	<country name="Ανγκουίλα" code="AI" />
+	<country name="Ανδόρρα" code="AD" />
+	<country name="Ανταρκτική" code="AQ" />
+	<country name="Αντίγκουα και Μπαρμπούντα" code="AG" />
+	<country name="Αργεντινή" code="AR" />
+	<country name="Αρμενία" code="AM" />
+	<country name="Αρούμπα" code="AW" />
+	<country name="Αυστραλία" code="AU" />
+	<country name="Αυστρία" code="AT" />
+	<country name="Αφγανιστάν" code="AF" />
+	<country name="Βανουάτου" code="VU" />
+	<country name="Βατικανό" code="VA" />
+	<country name="Βέλγιο" code="BE" />
+	<country name="Βενεζουέλα" code="VE" />
+	<country name="Βερμούδες" code="BM" />
+	<country name="Βιετνάμ" code="VN" />
+	<country name="Βιρμανία" code="MM" />
+	<country name="Βολιβία" code="BO" />
+	<country name="Βόρεια Κορέα" code="KP" />
+	<country name="Βοσνία-Ερζεγοβίνη" code="BA" />
+	<country name="Βουλγαρία" code="BG" />
+	<country name="Βραζιλία" code="BR" />
+	<country name="Βρετανικά Εδάφη Ινδικού Ωκεανού" code="IO" />
+	<country name="Βρετανικές Παρθένοι Νήσοι" code="VG" />
+	<country name="Γαλλία" code="FR" />
+	<country name="Γαλλικά νότια και ανταρκτικά εδάφη" code="TF" />
+	<country name="Γαλλική Γουιάνα" code="GF" />
+	<country name="Γαλλική Πολυνησία" code="PF" />
+	<country name="Γερμανία" code="DE" />
+	<country name="Γεωργία" code="GE" />
+	<country name="Γιβραλτάρ" code="GI" />
+	<country name="Γκάμπια" code="GM" />
+	<country name="Γκαμπόν" code="GA" />
+	<country name="Γκάνα" code="GH" />
+	<country name="Γκέρνσεϋ" code="GG" />
+	<country name="Γκουάμ" code="GU" />
+	<country name="Γουαδελούπη" code="GP" />
+	<country name="Γουατεμάλα" code="GT" />
+	<country name="Γουιάνα" code="GY" />
+	<country name="Γουινέα" code="GN" />
+	<country name="Γουινέα-Μπισσάου" code="GW" />
+	<country name="Γρενάδα" code="GD" />
+	<country name="Γροιλανδία" code="GL" />
+	<country name="Δανία" code="DK" />
+	<country name="Δημοκρατία Κεντρικής Αφρικής" code="CF" />
+	<country name="Δομινικανή Δημοκρατία" code="DO" />
+	<country name="Δυτική Όχθη" code="PS" />
+	<country name="Δυτική Σαχάρα" code="EH" />
+	<country name="Ελ Σαλβαδόρ" code="SV" />
+	<country name="Ελβετία" code="CH" />
+	<country name="Ελλάδα" code="GR" />
+	<country name="Ερυθραία" code="ER" />
+	<country name="Εσθονία" code="EE" />
+	<country name="Ζάμπια" code="ZM" />
+	<country name="Ζιμπάμπουε" code="ZW" />
+	<country name="Ηνωμένα Αραβικά Εμιράτα" code="AE" />
+	<country name="Ηνωμένες Πολιτείες" code="US" />
+	<country name="Ηνωμένες Πολιτείες - Μικρά απομακρυσμένα νησιά" code="UM" />
+	<country name="Ηνωμένο Βασίλειο" code="GB" />
+	<country name="Ιαπωνία" code="JP" />
+	<country name="Ινδία" code="IN" />
+	<country name="Ινδονησία" code="ID" />
+	<country name="Ιορδανία" code="JO" />
+	<country name="Ιράκ" code="IQ" />
+	<country name="Ιράν" code="IR" />
+	<country name="Ιρλανδία" code="IE" />
+	<country name="Ισημερινή Γουινέα" code="GQ" />
+	<country name="Ισημερινός" code="EC" />
+	<country name="Ισλανδία" code="IS" />
+	<country name="Ισπανία" code="ES" />
+	<country name="Ισραήλ" code="IL" />
+	<country name="Ιταλία" code="IT" />
+	<country name="Καζακστάν" code="KZ" />
+	<country name="Καμερούν" code="CM" />
+	<country name="Καμπότζη" code="KH" />
+	<country name="Καναδάς" code="CA" />
+	<country name="Κατάρ" code="QA" />
+	<country name="Κάτω Χώρες" code="NL" />
+	<country name="Κένυα" code="KE" />
+	<country name="Κίνα" code="CN" />
+	<country name="Κιργιζιστάν" code="KG" />
+	<country name="Κιριμπάτι" code="KI" />
+	<country name="Κογκό" code="CG" />
+	<country name="Κολομβία" code="CO" />
+	<country name="Κομόρες" code="KM" />
+	<country name="Κόστα Ρίκα" code="CR" />
+	<country name="Κούβα" code="CU" />
+	<country name="Κουβέιτ" code="KW" />
+	<country name="Κροατία" code="HR" />
+	<country name="Κύπρος" code="CY" />
+	<country name="Λαϊκή Δημοκρατία του Κογκό" code="CD" />
+	<country name="Λάος" code="LA" />
+	<country name="Λεσότο" code="LS" />
+	<country name="Λετονία" code="LV" />
+	<country name="Λευκορωσία" code="BY" />
+	<country name="Λίβανος" code="LB" />
+	<country name="Λιβερία" code="LR" />
+	<country name="Λιβύη" code="LY" />
+	<country name="Λιθουανία" code="LT" />
+	<country name="Λιχτενστάιν" code="LI" />
+	<country name="Λουξεμβούργο" code="LU" />
+	<country name="Μαγιότ" code="YT" />
+	<country name="Μαδαγασκάρη" code="MG" />
+	<country name="Μακάο" code="MO" />
+	<country name="Μαλαισία" code="MY" />
+	<country name="Μαλάουι" code="MW" />
+	<country name="Μαλβίδες" code="MV" />
+	<country name="Μαλί" code="ML" />
+	<country name="Μάλτα" code="MT" />
+	<country name="Μαρόκο" code="MA" />
+	<country name="Μαρτινίκα" code="MQ" />
+	<country name="Μαυρίκιος" code="MU" />
+	<country name="Μαυριτανία" code="MR" />
+	<country name="Μαυροβούνιο" code="ME" />
+	<country name="Μεξικό" code="MX" />
+	<country name="Μογγολία" code="MN" />
+	<country name="Μοζαμβίκη" code="MZ" />
+	<country name="Μολδαβία" code="MD" />
+	<country name="Μονακό" code="MC" />
+	<country name="Μοντσερράτ" code="MS" />
+	<country name="Μπαγκλαντές" code="BD" />
+	<country name="Μπαρμπάντος" code="BB" />
+	<country name="Μπαχάμες," code="BS" />
+	<country name="Μπαχρέιν" code="BH" />
+	<country name="Μπελίζ" code="BZ" />
+	<country name="Μπενίν" code="BJ" />
+	<country name="Μποτσουάνα" code="BW" />
+	<country name="Μπουρκίνα Φάσο" code="BF" />
+	<country name="Μπουρούντι" code="BI" />
+	<country name="Μπουτάν" code="BT" />
+	<country name="Μπρουνέι" code="BN" />
+	<country name="Ναμίμπια" code="NA" />
+	<country name="Ναουρού" code="NR" />
+	<country name="Νέα Ζηλανδία" code="NZ" />
+	<country name="Νέα Καληδονία" code="NC" />
+	<country name="Νεπάλ" code="NP" />
+	<country name="Νησί Μπουβέτ" code="BV" />
+	<country name="Νησί Νόρφολκ" code="NF" />
+	<country name="Νησί των Χριστουγέννων" code="CX" />
+	<country name="Νησιά Κόκος (Keeling)" code="CC" />
+	<country name="Νησιά Άλαντ" code="AX" />
+	<country name="Βόρειες Μαριάνες Νήσοι" code="MP" />
+	<country name="Νησιά Μάρσαλ" code="MH" />
+	<country name="Νησιά Πίτκερν" code="PN" />
+	<country name="Νήσοι Καίυμαν" code="KY" />
+	<country name="Νήσοι Κουκ" code="CK" />
+	<country name="Νήσοι του Σολομώντος" code="SB" />
+	<country name="Νήσοι Φερόες" code="FO" />
+	<country name="Νήσοι Φώκλαντ" code="FK" />
+	<country name="Νήσος Μαν" code="IM" />
+	<country name="Νήσος Χέρντ και Νησιά ΜακΝτόναλντ" code="HM" />
+	<country name="Νίγηρας" code="NE" />
+	<country name="Νιγηρία" code="NG" />
+	<country name="Νικαράγουα" code="NI" />
+	<country name="Νιούε" code="NU" />
+	<country name="Νορβηγία" code="NO" />
+	<country name="Νότια Αφρική" code="ZA" />
+	<country name="Νότια Γεωργία και Νότια Νησιά Σάντουιτς" code="GS" />
+	<country name="Νότια Κορέα" code="KR" />
+	<country name="Ντομίνικα" code="DM" />
+	<country name="Ολλανδικές Αντίλλες" code="AN" />
+	<country name="Ομάν" code="OM" />
+	<country name="Ομόσπονδα Κράτη της Μικρονησίας" code="FM" />
+	<country name="Ονδούρα" code="HN" />
+	<country name="Ουάλις και Φουτούνα" code="WF" />
+	<country name="Ουγγαρία" code="HU" />
+	<country name="Ουγκάντα" code="UG" />
+	<country name="Ουζμπεκιστάν" code="UZ" />
+	<country name="Ουκρανία" code="UA" />
+	<country name="Ουρουγουάη" code="UY" />
+	<country name="Πακιστάν" code="PK" />
+	<country name="Παλάου" code="PW" />
+	<country name="Παναμάς" code="PA" />
+	<country name="Παπούα - Νέα Γουϊνέα" code="PG" />
+	<country name="Παραγουάη" code="PY" />
+	<country name="Παρθένα Νησιά" code="VI" />
+	<country name="ΠΓΔΜ" code="MK" />
+	<country name="Περού" code="PE" />
+	<country name="Πολωνία" code="PL" />
+	<country name="Πορτογαλία" code="PT" />
+	<country name="Πουέρτο Ρίκο" code="PR" />
+	<country name="Πράσινο Ακρωτήρι" code="CV" />
+	<country name="Ρεϋνιόν" code="RE" />
+	<country name="Ρουάντα" code="RW" />
+	<country name="Ρουμανία" code="RO" />
+	<country name="Ρωσία" code="RU" />
+	<country name="Σαμόα" code="WS" />
+	<country name="Σάντα Έλενα" code="SH" />
+	<country name="Σάντα Λουτσία" code="LC" />
+	<country name="Σάο Τομέ και Πρίντσιπε" code="ST" />
+	<country name="Σαουδική Αραβία" code="SA" />
+	<country name="Σβάλμπαρντ" code="SJ" />
+	<country name="Σενεγάλη" code="SN" />
+	<country name="Σερβία" code="RS" />
+	<country name="Σεϋχέλλες" code="SC" />
+	<country name="Σιέρα Λεόνε" code="SL" />
+	<country name="Σινγκαπούρη" code="SG" />
+	<country name="Σλοβακία" code="SK" />
+	<country name="Σλοβενία" code="SI" />
+	<country name="Σομαλία" code="SO" />
+	<country name="Σουαζηλάνδη" code="SZ" />
+	<country name="Σουδάν" code="SD" />
+	<country name="Σουηδία" code="SE" />
+	<country name="Σουρινάμ" code="SR" />
+	<country name="Σρι Λάνκα" code="LK" />
+	<country name="Συρία" code="SY" />
+	<country name="Ταϊβάν" code="TW" />
+	<country name="Ταϊλάνδη" code="TH" />
+	<country name="Τανζανία" code="TZ" />
+	<country name="Τατζικιστάν" code="TJ" />
+	<country name="Τζαμάικα" code="JM" />
+	<country name="Τζέρσεϋ" code="JE" />
+	<country name="Τζιμπουτί" code="DJ" />
+	<country name="Τόγκα" code="TO" />
+	<country name="Τόγκο" code="TG" />
+	<country name="Τοκελάου" code="TK" />
+	<country name="Τουβαλού" code="TV" />
+	<country name="Τουρκία" code="TR" />
+	<country name="Τουρκμενιστάν" code="TM" />
+	<country name="Τουρκς και Κάϊκος Νήσοι" code="TC" />
+	<country name="Τρινιντάντ και Τομπάγκο" code="TT" />
+	<country name="Τσαντ" code="TD" />
+	<country name="Τσεχία" code="CZ" />
+	<country name="Τυνησία" code="TN" />
+	<country name="Υεμένη" code="YE" />
+	<country name="Φιλιππίνες" code="PH" />
+	<country name="Φινλανδία" code="FI" />
+	<country name="Φίτζι" code="FJ" />
+	<country name="Χιλή" code="CL" />
+	<country name="Χονγκ Κονγκ" code="HK" />
+</countries>

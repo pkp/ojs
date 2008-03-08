@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000008.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Reviewer's Role Index 
+  *
+  * Translation by University of Patras, Library & Information Service
+  * Vassilis Barkayannis (barkayannis@upatras.gr),
+  * Panos Georgiou (panos@lis.upatras.gr),
+  * Giannis Tsakonas (john@lis.upatras.gr),
+  * Kiriazis Vasilis (vaskir@lis.upatras.gr),
+  * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
+  *
+  * $Id$
+  -->
+
+<topic id="editorial/topic/000008" locale="el_GR" title="Ο Ρόλος του Αξιολογητή" toc="editorial/toc/000000" subtoc="editorial/toc/000008" key="editorial.reviewersRole">
+	<section>
+		<![CDATA[<p>Ο Αξιολογητής προσκαλείται με email για να αναλάβει την αξιολόγηση μιας υποβολής, το οποίο περιλαμβάνει τον τίτλο, την περίληψη, καθώς επίσης και το URL του περιοδικού μαζί με το κατάλληλο όνομα χρήστη και κωδικό πρόσβασης για να συνδεθεί στο σύστημα ως αξιολογητής. Το περιοδικό έχει την επιλογή να στέλνει την υποβολή στον Αξιολογητή συνημμένα σε ένα μήνυμα email μαζί με την αντίστοιχη πρόσκληση για την αξιολόγηση. Σε αυτή τη περίπτωση, ο Αξιολογητής απαντά μέσω email. Η διαδικασία που περιγράφεται εδώ είναι η βασική διαδικασία αξιολόγησης (και διασφάλισης ολοκλήρωμένων αρχείων της διαδικασίας) που εμπλέκει τον Αξιολογητή που διεκπεραιώνει την αξιολόγηση στον ιστότοπο του περιοδικού.</p>]]>	
+	</section>
+</topic>

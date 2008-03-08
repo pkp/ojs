@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the Greek locale.
+  *
+  * Translation by University of Patras, Library & Information Service
+  * Vassilis Barkayannis (barkayannis@upatras.gr),
+  * Panos Georgiou (panos@lis.upatras.gr),
+  * Giannis Tsakonas (john@lis.upatras.gr),
+  * Kiriazis Vasilis (vaskir@lis.upatras.gr),
+  * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
+  *
+  * $Id$
+  -->
+ 
+<locale name="el_GR" full_name="Greek">	
+	<message key="plugins.importexport.users.displayName">XML Plugin Χρηστών</message>
+	<message key="plugins.importexport.users.description">Εισαγωγή και εξαγωγή χρηστών</message>
+
+	<message key="plugins.importexport.users.cliUsage"><![CDATA[Usage: {$scriptName} {$pluginName} [command] ...
+Commands:
+	import [xmlFileName] [journal_path] [optional flags]
+	export [xmlFileName] [journal_path]
+	export [xmlFileName] [journal_path] [role_path1] [role_path2] ...
+
+Προαιρετικά flags:
+	continue_on_error: Αν οριστεί, δεν θα σταματάει η εισαγωγή χρηστών αν εμφανιστεί ένα σφάλμα
+
+	send_notify: Αν οριστεί, θα αποστέλλεται ενημερωτικό email με τα ονόματα χρηστών και του κωδικούς πρόσβασης στους εισηγμένους χρήστες
+
+Παραδείγματα:
+	Εισαγωγή χρηστών στο myJournal από το myImportFile.xml, continuing on error:
+	{$scriptName} {$pluginName} import myImportFile.xml myJournal continue_on_error
+
+	Εξαγωγή όλων των χρηστών από το myJournal:
+	{$scriptName} {$pluginName} export myExportFile.xml myJournal
+
+	Εξαγωγή όλων των χρηστών που έναι εγγεγραμμένοι ως αξιολογητές, μαζί μόνο με τον ρόλο του αξιολογητή :
+	{$scriptName} {$pluginName} export myExportFile.xml myJournal reviewer
+]]></message>
+	<message key="plugins.importexport.users.import.importUsers">Εισαγωγή Χρηστών</message>
+	<message key="plugins.importexport.users.import.instructions"><![CDATA[Επιλέξτε ένα αρχείο δεδομένων XML που περιέχει τις πληροφορίες των χρηστών για εισαγωγή σε αυτό το περιοδικό. Δείτε την βοήθεια του περιοδικου για πληροφορίες σχετικά με την μορφή του αρχείου αυτού.<br /><br />Σημειώστε ότι αν το αρχείο αυτό περιέχει ονόματα χρηστών και διευθύνσεις email που ήδη υπάρχουν στο σύστημα, τα δεδομένα για αυτούς τους χρήστες δεν θα εισαχθούν και κάθε νέος ρόλος που θα πρέπει να δημιουργηθού θα ανατεθούν στους υφιστάμενους χρήστες.]]></message>
+	<message key="plugins.importexport.users.import.failedToImportUser">Αποτυχία εισαγωγής χρήστη</message>
+	<message key="plugins.importexport.users.import.failedToImportRole">Αποτυχία ανάθεσης ρόλου σε χρήστη</message>
+	<message key="plugins.importexport.users.import.dataFile">Αρχείο δεδομένων χρηστών</message>
+	<message key="plugins.importexport.users.import.sendNotify">Αποστολή ενημερωτικού email σε κάθε εισηγμένο χρήστη με το όνομα χρήστη και τον κωδικό πρόσβασης στο σύστημα.</message>
+	<message key="plugins.importexport.users.import.continueOnError">Συνεχίστε την εισαγωγή χρηστών όταν εμφανιστεί σφάλμα.</message>
+	<message key="plugins.importexport.users.import.noFileError">Δεν φορτώθηκε κανένα αρχείο!</message>
+	<message key="plugins.importexport.users.import.usersWereImported">Οι παρακάτω χρήστες εισήχθησαν στο σύστημα με επιτυχία.</message>
+	<message key="plugins.importexport.users.import.errorsOccurred">Εμφανίστηκαν σφάλματα κατά την διάρκεια της εισαγωγής</message>
+	<message key="plugins.importexport.users.import.confirmUsers">Επιβεβαιώστε ότι αυτοί είναι οι χρήστες που θέλετε να εισάγετε στο σύστημα</message>
+	<message key="plugins.importexport.users.import.warning">Προειδοποίηση</message>
+	<message key="plugins.importexport.users.import.encryptionMismatch">Δεν μπορείτε να χρησιμοποιήσετε κωδικούς πρόσβασης κρυπτογραφημένους με το  {$importHash}. Το OJS έχει ρυθμιστεί ώστε να χρησιμοποιεί το {$ojsHash}. Αν συνεχίσετε θα πρέπει να επναφέρετε τους κωδικούς πρόσβασης των εισηγμένων χρηστών.</message>
+	<message key="plugins.importexport.users.unknownJournal">Ορίστηκε μια άγνωστη διαδρομή περιοδικού "{$journalPath}".</message>
+
+	<message key="plugins.importexport.users.export.exportUsers">Εξαγωγή χρηστών </message>
+	<message key="plugins.importexport.users.export.exportByRole">Εξαγωγή κατά ρόλο</message>
+	<message key="plugins.importexport.users.export.exportAllUsers">Εξαγωγή όλων</message>
+	<message key="plugins.importexport.users.export.errorsOccurred">Εμφανίστηκαν σφάλματα κατά την διάρκεια της εξαγωγής</message>
+	<message key="plugins.importexport.users.export.couldNotWriteFile">Δεν ήταν δυνατή η εγγραφή στο αρχείο "{$fileName}".</message>
+</locale>

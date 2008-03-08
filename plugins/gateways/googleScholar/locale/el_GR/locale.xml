@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the Greek locale.
+  *
+  * Translation by University of Patras, Library & Information Service
+  * Vassilis Barkayannis (barkayannis@upatras.gr),
+  * Panos Georgiou (panos@lis.upatras.gr),
+  * Giannis Tsakonas (john@lis.upatras.gr),
+  * Kiriazis Vasilis (vaskir@lis.upatras.gr),
+  * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
+  *
+  * $Id$
+  -->
+ 
+<locale name="el_GR" full_name="Greek">	
+	<message key="plugins.gateways.googleScholar.displayName">Google Scholar Gateway Plugin</message>
+	<message key="plugins.gateways.googleScholar.description">Το plugin αυτό παρέχει "ζωντανά" δεδομένα για ένα περιοδικό στο Google Scholar για ευρετηρίαση και αναζήτηση.</message>
+	<message key="plugins.gateways.googleScholar.settings">Ρυθμίσεις</message>
+	<message key="plugins.gateways.googleScholar.settings.description"><![CDATA[<p>Το Google Scholar Gateway Plugin διαθέτει δεδομέναν στον συλλέκτη (harvester) του Google Scholar σε επίπεδο περιοδικού. Όταν το plugin αυτό απενεργοποιηθεί, το τεκμήριο του ευρετηίου θα είναι διαθέσιμο στο <span class="highlight">{$directoryUrl}</span>.</p>
+<p>Το Google Scholar απαιτεί συγκεκριμένα κομμάτια πληροφοριών που στο OJS είναι προαιρετικά. Σιγουρευτείτε ότι τα δεδομένα σας πληρούν τις προδιαγραφές του Google Scholar χρησιμοποιώντας το κουμπί Έλεγχος Δεδομένων .</p>]]></message>
+	<message key="plugins.gateways.googleScholar.checkData">Έλεγχος Δεδομένων</message>
+	<message key="plugins.gateways.googleScholar.errors">Μηνύματα σφάλματος</message>
+	<message key="plugins.gateways.googleScholar.errors.noErrors">Δεν βρέθηκε κανένα σφάλμα.</message>
+
+	<message key="plugins.gateways.googleScholar.settings.publisherName">Όνομα Εκδότη</message>
+	<message key="plugins.gateways.googleScholar.settings.publisherLocation">Τοποθεσία Εκδότη</message>
+	<message key="plugins.gateways.googleScholar.settings.publisherResultName">Όνομα Εκδότη αποτελέσματος</message>
+	<message key="plugins.gateways.googleScholar.settings.contact">Email Επικοινωνίας</message>
+	<message key="plugins.gateways.googleScholar.settings.addContact">Προσθέστε Email Επικοινωνίας</message>
+
+	<!-- Error message -->
+	<message key="plugins.gateways.googleScholar.errors.noPublisherName">Το όνομα εκδότη δεν συμπληρώθηκε. Το πεδίο είναι υποχρεωτικό.</message>
+	<message key="plugins.gateways.googleScholar.errors.noContacts">Τα emails επικοινωνίας δεν υπάρχουν ή δεν είναι έγκυρα. Τουλάχιστον ένα email πρέπει να συμπληρωθεί και όλα πρέπει να είναι έγκυρα.</message>
+	<message key="plugins.gateways.googleScholar.errors.noIssn">Το ISSN του περιοδικού δεν συμπληρώθηκε. Δείτε Οργάνωση Περιοδικού, βήμα 1.</message>
+	<message key="plugins.gateways.googleScholar.errors.errorMessage">Η εξαγωγή των δεδομένων στο Google Scholar δεν είναι δυνατή. Το Google Scholar export plugin χρειάζεται να ρυθμιστεί κατάλληλα. Για συγκεκριμένες πληροφορίες, δείτε την λειτουργία του Διαχειριστή του Περιοδικού "Έλεγχος Δεδομένων" .</message>
+</locale>

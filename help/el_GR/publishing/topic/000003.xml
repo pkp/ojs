@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../topic.dtd">
+
+<!--
+  * 000003.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Publishing Process - Table of Contents
+  *
+  * Translation by University of Patras, Library & Information Service
+  * Vassilis Barkayannis (barkayannis@upatras.gr),
+  * Panos Georgiou (panos@lis.upatras.gr),
+  * Giannis Tsakonas (john@lis.upatras.gr),
+  * Kiriazis Vasilis (vaskir@lis.upatras.gr),
+  * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
+  *
+  * $Id$
+  -->
+
+<topic id="publishing/topic/000003" locale="el_GR" title="Πίνακας Περιεχομένων" toc="publishing/toc/000000" key="publishing.tableOfContents">
+	<section>
+		<![CDATA[<p>Μόλις μια υποβολή προγραμματιστεί για δημοσίευση σε ένα τεύχος, θα εμφανιστεί στον Πίνακα Περιεχομένων του τεύχους κάτω από την επικεφαλίδα της Ενότητας που ανήκει. Αν δεν υπάρχουν υποβολές σε μια ενότητα, η ενότητα δεν θα εμφνιστεί στον Πίνακα των Περιεχομένων. Ο Επιμελητής μπορεί να επαναταξινομήσει τις Ενότητες, καθώς και τις υποβολές μέσα σε μια ενότητα.</p><p>Επιπλέον, αν ο Διαχειριστής του περιοδικού έχει ενεργοποιήσει τον έλεγχο συνδρομής, ο Επιμελητής του Περιοδικού μπορεί να αλλάξει κανόνες πρόσβασης (συνδρομητικά ή ανοικτή πρόσβαση) σε επίπεδο άρθρου.</p>]]>	
+	</section>
+</topic>

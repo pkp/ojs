@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2000-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the Greek locale.
+  *
+  * Translation by University of Patras, Library & Information Service
+  * Vassilis Barkayannis (barkayannis@upatras.gr),
+  * Panos Georgiou (panos@lis.upatras.gr),
+  * Giannis Tsakonas (john@lis.upatras.gr),
+  * Kiriazis Vasilis (vaskir@lis.upatras.gr),
+  * Papaxristopoulos Leonidas (leonidasp@lis.upatras.gr)
+  *
+  * $Id$
+  -->
+ 
+<locale name="el_GR" full_name="Greek">	
+	<message key="plugins.paymethod.manual.displayName">Μη αυτόματη Πληρωμή Εισφορών</message>
+	<message key="plugins.paymethod.manual.description">Ο διαχεριστής του περιοδικού θα καταγράφει χειρωνακτικά τις εισπράξεις πληρωμών των χρηστών (ανεξάρτητα από το OJS).</message>
+	<message key="plugins.paymethod.manual">Μη αυτόματη Πληρωμή Εισφορώνt</message>
+	<message key="plugins.paymethod.manual.settings">Ρυθμίσεις Μη αυτόματης Πληρωμής Εισφορών</message>
+	<message key="plugins.paymethod.manual.settings.instructions">Οδηγίες</message>
+	<message key="plugins.paymethod.manual.settings.manualInstructions">Οδηγίες πληρωμήες εισφορών για τους χρήστες που επιλέγουν τη μη αυτόματη Πληρωμή των Εισφορών τους.</message>
+	
+	<message key="plugins.paymethod.manual.purchase.title">Τίτλος</message>
+	<message key="plugins.paymethod.manual.purchase.fee">Εισφορά</message>	
+</locale>
