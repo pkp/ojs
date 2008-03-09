@@ -47,7 +47,7 @@
 			{assign var=referenceValue value=$referenceLocaleContents.$key}
 			{if ($value|explode:"\n"|@count > 1) || (strlen($value) > 80) || ($referenceValue|explode:"\n"|@count > 1) || (strlen($referenceValue) > 80)}
 				{translate key="plugins.generic.translator.file.reference"}<br/>
-				<textarea name="junk[]" class="textArea" rows="5" cols="50" onkeypress="return false;">
+				<textarea name="junk[]" class="textArea" rows="5" cols="50" onkeypress="return (event.keyCode >= 37 && event.keyCode <= 40);">
 {$referenceValue|escape}
 </textarea>
 				{translate key="plugins.generic.translator.file.translation"}<br/>
@@ -56,7 +56,7 @@
 </textarea>
 			{else}
 				{translate key="plugins.generic.translator.file.reference"}<br/>
-				<input name="junk[]" class="textField" class="textField" type="text" size="50" onkeypress="return false;" value="{$referenceValue|escape}" /><br/>
+				<input name="junk[]" class="textField" class="textField" type="text" size="50" onkeypress="return (event.keyCode >= 37 && event.keyCode <= 40);" value="{$referenceValue|escape}" /><br/>
 				{translate key="plugins.generic.translator.file.translation"}<br/>
 				<input name="changes[]" class="textField" class="textField" type="text" size="50" value="{$value|escape}" />
 			{/if}
