@@ -13,6 +13,10 @@
   -->
 
 <data>
+	<sql><!-- Make sure duplicate inserts are not attempted i.e. on upgrade-->
+		<query>DELETE FROM email_templates_default WHERE email_key = 'MANUAL_PAYMENT_NOTIFICATION'</query>
+		<query>DELETE FROM email_templates_default_data WHERE email_key = 'MANUAL_PAYMENT_NOTIFICATION'</query>
+	</sql>
 	<table name="email_templates_default">
 		<row>
 			<field name="email_key">MANUAL_PAYMENT_NOTIFICATION</field>

@@ -12,6 +12,10 @@
   -->
 
 <data>
+	<sql><!-- Make sure duplicate inserts are not attempted i.e. on upgrade-->
+		<query>DELETE FROM email_templates_default WHERE email_key = 'PAYPAL_INVESTIGATE_PAYMENT'</query>
+		<query>DELETE FROM email_templates_default_data WHERE email_key = 'PAYPAL_INVESTIGATE_PAYMENT'</query>
+	</sql>
 	<table name="email_templates_default">
 		<row>
 			<field name="email_key">PAYPAL_INVESTIGATE_PAYMENT</field>
