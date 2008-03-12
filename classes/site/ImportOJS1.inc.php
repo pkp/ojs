@@ -991,7 +991,7 @@ class ImportOJS1 {
 			$article->setJournalId($this->journalId);
 			$article->setSectionId(isset($this->sectionMap[$row['fkSectionID']]) ? $this->sectionMap[$row['fkSectionID']] : 0);
 			$article->setTitle(Core::cleanVar($row['chMetaTitle']), $locale);
-			$article->setPages(Core::cleanVar($row['chPages']));
+			$article->setPages(isset($row['chPages']) ? Core::cleanVar($row['chPages']) : '');
 			$article->setAbstract(Core::cleanVar($row['chMetaAbstract']), $locale);
 			$article->setDiscipline(Core::cleanVar($row['chMetaDiscipline']), $locale);
 			$article->setSubjectClass(Core::cleanVar($row['chMetaSubjectClass']), $locale);
@@ -1009,7 +1009,6 @@ class ImportOJS1 {
 			$article->setStatus($status);
 			$article->setSubmissionProgress($row['dtDateSubmitted'] ? 0 : $row['nSubmissionProgress']);
 			$article->setCurrentRound(1);
-			$article->setPages('');
 
 			// Add article authors
 			$authorResult = &$this->importDao->retrieve('SELECT nUserID, tblmetaauthors.* FROM tblmetaauthors LEFT JOIN tblusers ON tblmetaauthors.fkAuthorID = tblusers.fkAuthorID WHERE fkArticleID = ? ORDER BY nRank', $row['nArticleID']);
