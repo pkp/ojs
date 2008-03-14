@@ -133,6 +133,10 @@ input.defaultButton {
 	line-height: 1em;
 }
 
+#headerTitle img {
+	border: 0;
+}
+
 #body {
 	width: 800px;
 	margin: 0 auto;
