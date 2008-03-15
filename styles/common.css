@@ -253,6 +253,40 @@ input.defaultButton {
 
 
 /**
+ * Homepage image
+ */
+
+#homepageImage img {
+	display: block;
+	margin: 0 auto;
+	border: 0;
+	text-align: center;
+}
+
+
+/**
+ * Issue cover image
+ */
+
+#issueCoverImage img {
+	display: block;
+	border: 0;
+}
+
+#issueCoverImage a:link {
+}
+
+#issueCoverImage a:active {
+}
+
+#issueCoverImage a:visited {
+}
+
+#issueCoverImage a:hover {
+}
+
+
+/**
  * Footer elements
  */
 

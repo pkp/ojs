@@ -31,10 +31,10 @@
 		<li><a href="{$currentUrl}">{translate key="issue.toc"}</a></li>
 	</ul>
 	<br />
-	{if $coverPagePath}<div><a href="{$currentUrl}"><img src="{$coverPagePath|escape}" style="border: 0;" alt=""{if $width} width="{$width|escape}"{/if}{if $height} height="{$height|escape}"{/if}/></a></div>{/if}
-	<div>{$issue->getIssueCoverPageDescription()|strip_unsafe_html|nl2br}</div>
+	{if $coverPagePath}<div id="issueCoverImage"><a href="{$currentUrl}"><img src="{$coverPagePath|escape}" alt=""{if $width} width="{$width|escape}"{/if}{if $height} height="{$height|escape}"{/if}/></a></div>{/if}
+	<div id="issueCoverDescription">{$issue->getIssueCoverPageDescription()|strip_unsafe_html|nl2br}</div>
 {elseif $issue}
-	<div>{$issue->getIssueDescription()|strip_unsafe_html|nl2br}</div>
+	<div id="issueDescription">{$issue->getIssueDescription()|strip_unsafe_html|nl2br}</div>
 	<h3>{translate key="issue.toc"}</h3>
 	{include file="issue/issue.tpl"}
 {else}

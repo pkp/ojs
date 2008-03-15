@@ -17,7 +17,7 @@
 
 {if $homepageImage}
 <br />
-<div align="center"><img src="{$publicFilesDir}/{$homepageImage.uploadName|escape:"url"}" width="{$homepageImage.width|escape}" height="{$homepageImage.height|escape}" style="border: 0;" alt="" /></div>
+<div id="homepageImage"><img src="{$publicFilesDir}/{$homepageImage.uploadName|escape:"url"}" width="{$homepageImage.width|escape}" height="{$homepageImage.height|escape}" alt="" /></div>
 {/if}
 
 {if $additionalHomeContent}
