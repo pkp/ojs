@@ -38,8 +38,8 @@
 		<search>
 			<search_title>SearchERIC</search_title>
 			<search_description>Tools to search the abstracts and Digests produced by the ERICSM system.</search_description>
-			<url>http://searcheric.org/</url>
-			<search_url>http://www.google.com/custom?domains=searcheric.org&amp;sa=Google+Search&amp;sitesearch=searcheric.org&amp;q={$formKeywords}</search_url>
+			<url>http://www.eric.ed.gov/</url>
+			<search_url>http://www.google.com/custom?domains=www.eric.ed.gov&amp;sa=Google+Search&amp;sitesearch=www.eric.ed.gov&amp;q={$formKeywords}</search_url>
 			
 		</search>
 		<search>
@@ -376,8 +376,8 @@ In addition, contributors have given ERIC permission to display more than 115,00
 		<search>
 			<search_title>SearchERIC</search_title>
 			<search_description>Tools to search the abstracts and Digests produced by the ERICSM system.</search_description>
-			<url>http://searcheric.org/</url>
-			<search_url>http://www.google.com/custom?domains=searcheric.org&amp;sa=Google+Search&amp;sitesearch=searcheric.org&amp;q={$formKeywords}</search_url>
+			<url>http://www.eric.ed.gov/</url>
+			<search_url>http://www.google.com/custom?domains=www.eric.ed.gov&amp;sa=Google+Search&amp;sitesearch=www.eric.ed.gov&amp;q={$formKeywords}</search_url>
 			
 		</search>
 		<search>
