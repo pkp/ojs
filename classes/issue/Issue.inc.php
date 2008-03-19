@@ -435,6 +435,32 @@ class Issue extends DataObject {
 	}
 
 	/**
+	 * Get the localized issue cover alternate text
+	 * @return string
+	 */
+	function getIssueCoverPageAltText() {
+		return $this->getLocalizedData('coverPageAltText');
+	}
+
+	/**
+	 * get cover page alternate text
+	 * @param $locale string
+	 * @return string
+	 */
+	function getCoverPageAltText($locale) {
+		return $this->getData('coverPageAltText', $locale);
+	}
+
+	/**
+	 * set cover page alternate text
+	 * @param $coverPageAltText string
+	 * @param $locale string
+	 */
+	function setCoverPageAltText($coverPageAltText, $locale) {
+		return $this->setData('coverPageAltText', $coverPageAltText, $locale);
+	}
+
+	/**
 	 * Get the localized issue cover description
 	 * @return string
 	 */

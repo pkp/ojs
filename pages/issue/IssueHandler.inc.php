@@ -59,6 +59,7 @@ class IssueHandler extends Handler {
 				$templateMgr->assign('fileName', $issue->getFileName($locale));
 				$templateMgr->assign('width', $issue->getWidth($locale));
 				$templateMgr->assign('height', $issue->getHeight($locale));
+				$templateMgr->assign('coverPageAltText', $issue->getCoverPageAltText($locale));
 				$templateMgr->assign('originalFileName', $issue->getOriginalFileName($locale));
 
 				import('file.PublicFileManager');
@@ -183,6 +184,7 @@ class IssueHandler extends Handler {
 				$templateMgr->assign('fileName', $issue->getFileName($locale));
 				$templateMgr->assign('width', $issue->getWidth($locale));
 				$templateMgr->assign('height', $issue->getHeight($locale));
+				$templateMgr->assign('coverPageAltText', $issue->getCoverPageAltText($locale));
 				$templateMgr->assign('originalFileName', $issue->getOriginalFileName($locale));
 
 				import('file.PublicFileManager');

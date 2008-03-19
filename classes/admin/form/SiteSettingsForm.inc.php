@@ -83,7 +83,7 @@ class SiteSettingsForm extends Form {
 	 */
 	function readInputData() {
 		$this->readUserVars(
-			array('pageHeaderTitleType', 'title', 'intro', 'about', 'redirect', 'contactName', 'contactEmail', 'minPasswordLength')
+			array('pageHeaderTitleType', 'title', 'intro', 'about', 'redirect', 'contactName', 'contactEmail', 'minPasswordLength', 'pageHeaderTitleImageAltText')
 		);
 	}
 
@@ -102,6 +102,14 @@ class SiteSettingsForm extends Form {
 		$site->setContactEmail($this->getData('contactEmail'), null); // Localized
 		$site->setMinPasswordLength($this->getData('minPasswordLength'));
 		$site->setPageHeaderTitleType($this->getData('pageHeaderTitleType'), null); // Localized
+
+		$setting = $site->getData('pageHeaderTitleImage');
+		if (!empty($setting)) {
+			$imageAltText = $this->getData('pageHeaderTitleImageAltText');
+			$locale = $this->getFormLocale();
+			$setting[$locale]['altText'] = $imageAltText[$locale];
+			$site->setData('pageHeaderTitleImage', $setting);
+		}
 
 		$siteDao->updateSite($site);
 	}

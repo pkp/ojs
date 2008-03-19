@@ -17,10 +17,29 @@
 import("manager.form.setup.JournalSetupForm");
 
 class JournalSetupStep5Form extends JournalSetupForm {
+	var $images;
+	var $image_settings;
+
 	/**
 	 * Constructor.
 	 */
 	function JournalSetupStep5Form() {
+		$this->images = array(
+			'homeHeaderTitleImage',
+			'homeHeaderLogoImage',
+			'homepageImage',
+			'pageHeaderTitleImage',
+			'pageHeaderLogoImage'
+		);
+
+		$this->image_settings = array(
+			'homeHeaderTitleImage' => 'homeHeaderTitleImageAltText',
+			'homeHeaderLogoImage' => 'homeHeaderLogoImageAltText',
+			'homepageImage' => 'homepageImageAltText',
+			'pageHeaderTitleImage' => 'pageHeaderTitleImageAltText',
+			'pageHeaderLogoImage' => 'pageHeaderLogoImageAltText'
+		);
+
 		parent::JournalSetupForm(
 			5,
 			array(
@@ -50,6 +69,14 @@ class JournalSetupStep5Form extends JournalSetupForm {
 	 */
 	function getLocaleFieldNames() {
 		return array('homeHeaderTitleType', 'homeHeaderTitle', 'pageHeaderTitleType', 'pageHeaderTitle', 'readerInformation', 'authorInformation', 'librarianInformation', 'journalPageHeader', 'journalPageFooter', 'homepageImage', 'additionalHomeContent', 'description', 'navItems');
+	}
+
+	/**
+	 * Assign form data to user-submitted data.
+	 */
+	function readInputData() {
+		$this->readUserVars(array_values($this->image_settings));
+		parent::readInputData();
 	}
 
 	/**
@@ -219,6 +246,23 @@ class JournalSetupStep5Form extends JournalSetupForm {
 			unset($plugin);
 		}
 
+		// Save alt text for images
+		$journal = &Request::getJournal();
+		$journalId = $journal->getJournalId();
+		$locale = $this->getFormLocale();
+		$settingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
+		$images = $this->images;
+
+		foreach($images as $settingName) {
+			$value = $journal->getSetting($settingName);
+			if (!empty($value)) {
+				$imageAltText = $this->getData($this->image_settings[$settingName]);
+				$value[$locale]['altText'] = $imageAltText[$locale];
+				$settingsDao->updateSetting($journalId, $settingName, $value, 'object', true);
+			}
+		}
+
+		// Save remaining settings
 		return parent::execute();
 	}
 }

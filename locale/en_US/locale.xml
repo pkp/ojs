@@ -150,11 +150,19 @@
 	<message key="common.addSelf">Add Self</message>
 	<message key="common.alphaList">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</message>
 	<message key="common.captchaField">Validation</message>
+	<message key="common.captchaField.altText">Validation image</message>
 	<message key="common.captchaField.description">Please enter the letters as they appear in the image above.</message>
 	<message key="common.captchaField.badCaptcha">The characters you entered did not match the characters in the image. Please check the characters and try again.</message>
 	<message key="common.suggest">Suggest</message>
 	<message key="common.payment">Payment</message>
 	<message key="common.payments">Payments</message>
+	<message key="common.altText">Alternate text</message>
+	<message key="common.altTextInstructions">Please provide alternate text for this image to ensure accessibility for users with text-only browsers or assistive devices.</message>
+	<message key="common.pageHeader.altText">Page Header</message>
+	<message key="common.pageHeaderLogo.altText">Page Header Logo</message>
+	<message key="common.homePageHeader.altText">Homepage Header</message>
+	<message key="common.homePageHeaderLogo.altText">Homepage Header Logo</message>
+	<message key="common.journalHomepageImage.altText">Journal Homepage Image</message>
 
 	<!-- Common Form Messages -->
 	<message key="form.errorsOccurred">Errors occurred processing this form</message>
@@ -503,6 +511,7 @@
 	<message key="issue.noIssues">No Issues</message>
 	<message key="issue.toc">Table of Contents</message>
 	<message key="issue.abstract">Abstract</message>
+	<message key="issue.coverPage.altText">Cover Page</message>
 
 	<!--
 	 *
@@ -624,6 +633,7 @@
 	<message key="admin.settings.contactEmail">Email of principal contact</message>
 	<message key="admin.settings.minPasswordLength">Minimum password length</message>
 	<message key="admin.settings.siteStyleSheet">Site style sheet</message>
+	<message key="admin.settings.homeHeaderImage.altText">Site Logo</message>
 	<message key="admin.settings.homeHeaderImageInvalid">Invalid site logo image format. Accepted formats are .gif, .jpg, or .png.</message>
 	<message key="admin.settings.siteStyleSheetInvalid">Invalid site stylesheet format. Accepted format is .css.</message>
 	<message key="admin.settings.form.contactNameRequired">The name of the principal contact is required.</message>
@@ -1228,8 +1238,10 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<!-- Setup Step 5 -->
 	<message key="manager.setup.customizingTheLook">Step 5. Customizing the Look</message>
 	<message key="manager.setup.journalHomepageHeader">Journal Homepage Header</message>
+	<message key="manager.setup.journalHomepageHeader.altText">Journal Homepage Header</message>
 	<message key="manager.setup.journalHomepageHeaderDescription">A graphic version of the journal's title and logo (as a .gif, .jpg, or .png file) can be uploaded for the homepage, which will replace the text version that otherwise appears.</message>
 	<message key="manager.setup.journalLogo">Journal Logo</message>
+	<message key="manager.setup.journalLogo.altText">Journal Logo</message>
 	<message key="manager.setup.lists">Lists</message>
 	<message key="manager.setup.listsDescription">Enter the maximum number of items (for example, submissions, users, or editing assignments) that appear on each page of a list, and the number of pages links to display on each page.</message>
 	<message key="manager.setup.itemsPerPage">Items per page</message>
@@ -2301,6 +2313,7 @@ current password.<br /><br />Enter your email address below to reset your passwo
 	<message key="about.journalSponsorship">Journal Sponsorship</message>
 	<message key="about.siteMap">Site Map</message>
 	<message key="about.aboutThisPublishingSystem">About this Publishing System</message>
+	<message key="about.aboutThisPublishingSystem.altText">OJS Editorial and Publishing Process</message>
 	<message key="about.people">People</message>
 	<message key="about.policies">Policies</message>
 	<message key="about.other">Other</message>

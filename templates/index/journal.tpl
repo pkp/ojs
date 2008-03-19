@@ -17,7 +17,7 @@
 
 {if $homepageImage}
 <br />
-<div id="homepageImage"><img src="{$publicFilesDir}/{$homepageImage.uploadName|escape:"url"}" width="{$homepageImage.width|escape}" height="{$homepageImage.height|escape}" alt="" /></div>
+<div id="homepageImage"><img src="{$publicFilesDir}/{$homepageImage.uploadName|escape:"url"}" width="{$homepageImage.width|escape}" height="{$homepageImage.height|escape}" {if $homepageImage.altText != ''}alt="{$homepageImage.altText|escape}"{else}alt="{translate key="common.journalHomepageImage.altText"}"{/if} /></div>
 {/if}
 
 {if $additionalHomeContent}

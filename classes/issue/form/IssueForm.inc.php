@@ -163,6 +163,7 @@ class IssueForm extends Form {
 				'fileName' => $issue->getFileName(null), // Localized
 				'originalFileName' => $issue->getOriginalFileName(null), // Localized
 				'coverPageDescription' => $issue->getCoverPageDescription(null), // Localized
+				'coverPageAltText' => $issue->getCoverPageAltText(null), // Localized
 				'showCoverPage' => $issue->getShowCoverPage(null), // Localized
 				'styleFileName' => $issue->getStyleFileName(),
 				'originalStyleFileName' => $issue->getOriginalStyleFileName()
@@ -273,6 +274,7 @@ class IssueForm extends Form {
 			'fileName',
 			'originalFileName',
 			'coverPageDescription',
+			'coverPageAltText',
 			'showCoverPage',
 			'articles',
 			'styleFileName',
@@ -295,7 +297,6 @@ class IssueForm extends Form {
 		} else {
 			$issue =& new Issue();
 		}
-
 		$volume = $this->getData('volume');
 		$number = $this->getData('number');
 		$year = $this->getData('year');
@@ -317,6 +318,7 @@ class IssueForm extends Form {
 		$issue->setShowYear(empty($showYear) ? 0 : $showYear);
 		$issue->setShowTitle(empty($showTitle) ? 0 : $showTitle);
 		$issue->setCoverPageDescription($this->getData('coverPageDescription'), null); // Localized
+		$issue->setCoverPageAltText($this->getData('coverPageAltText'), null); // Localized
 		$showCoverPage = array_map(create_function('$arrayElement', 'return (int)$arrayElement;'), (array) $this->getData('showCoverPage'));
 		foreach (array_keys($this->getData('coverPageDescription')) as $locale) {
 			if (!array_key_exists($locale, $showCoverPage)) {
