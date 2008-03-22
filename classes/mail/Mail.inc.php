@@ -336,7 +336,10 @@ class Mail extends DataObject {
 		}
 
 		$this->addHeader('X-Mailer', 'Open Journal Systems v2');
-		$this->addHeader('X-Originating-IP', Request::getRemoteAddr());
+
+		$remoteAddr = Request::getRemoteAddr();
+		if ($remoteAddr != '') $this->addHeader('X-Originating-IP', $remoteAddr);
+
 		$this->addHeader('Date', date('D, d M Y H:i:s O'));
 
 		/* Add $from, $ccs, and $bccs as headers. */
