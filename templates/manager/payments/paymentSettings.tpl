@@ -37,7 +37,7 @@
 <table width="100%" class="data">
 	<tr>
 		<td class="label" width="20%"><input type="checkbox" name="journalPaymentsEnabled" id="journalPaymentsEnabled" value="1"{if $journalPaymentsEnabled} checked="checked"{/if} /></td>
-		<td class="value" width="80%">{translate key="manager.payment.options.enablePayments"}</td>
+		<td class="value" width="80%">{fieldLabel name="journalPaymentsEnabled" key="manager.payment.options.enablePayments"}</td>
 	</tr>
 	<tr>
 		<td class="label" width="20%">{fieldLabel name="currency" key="manager.payment.currency"}</td>
@@ -54,7 +54,7 @@
 <table width="100%" class="data">
 <tr>
 	<td width="20%"><input type="checkbox" name="submissionFeeEnabled" id="submissionFeeEnabled" value="1"{if $submissionFeeEnabled} checked="checked"{/if} /></td>
-	<td width="80%">{fieldLabel name="submissionFee" key="manager.payment.options.submissionFee"}</td>		
+	<td width="80%">{fieldLabel name="submissionFeeEnabled" key="manager.payment.options.submissionFee"}</td>		
 </tr>
 <tr>
 	<td class="label" width="20%">{fieldLabel name="submissionFee" key="manager.payment.options.fee"}
@@ -70,7 +70,7 @@
 </tr>
 <tr>
 	<td width="20%"><input type="checkbox" name="fastTrackFeeEnabled" id="fastTrackFeeEnabled" value="1"{if $fastTrackFeeEnabled} checked="checked"{/if} /></td>
-	<td width="80%">{fieldLabel name="fastTrackFee" key="manager.payment.options.fastTrackFee"}</td>		
+	<td width="80%">{fieldLabel name="fastTrackFeeEnabled" key="manager.payment.options.fastTrackFee"}</td>		
 </tr>
 <tr>
 	<td class="label" width="20%">{fieldLabel name="fastTrackFee" key="manager.payment.options.fee"}
@@ -86,7 +86,7 @@
 </tr>
 <tr>
 	<td width="20%"><input type="checkbox" name="publicationFeeEnabled" id="publicationFeeEnabled" value="1"{if $publicationFeeEnabled} checked="checked"{/if} /></td>
-	<td width="80%">{fieldLabel name="publicationFee" key="manager.payment.options.publicationFee"}</td>		
+	<td width="80%">{fieldLabel name="publicationFeeEnabled" key="manager.payment.options.publicationFee"}</td>		
 </tr>
 <tr>
 	<td class="label" width="20%">{fieldLabel name="publicationFee" key="manager.payment.options.fee"}
@@ -116,7 +116,7 @@
 </tr>
 <tr>
 	<td width="20%"><input type="checkbox" name="payPerViewFeeEnabled" id="payPerViewFeeEnabled" value="1"{if $payPerViewFeeEnabled} checked="checked"{/if} /></td>
-	<td width="80%">{fieldLabel name="payPerViewFee" key="manager.payment.options.payPerViewFee"}</td>		
+	<td width="80%">{fieldLabel name="payPerViewFeeEnabled" key="manager.payment.options.payPerViewFee"}</td>		
 </tr>
 <tr>
 	<td class="label" width="20%">{fieldLabel name="payPerViewFee" key="manager.payment.options.fee"}
@@ -143,7 +143,7 @@
 <table width="100%" class="data">
 <tr>
 	<td width="20%"><input type="checkbox" name="membershipFeeEnabled" id="membershipFeeEnabled" value="1"{if $membershipFeeEnabled} checked="checked"{/if} /></td>
-	<td width="80%">{fieldLabel name="membershipFee" key="manager.payment.options.membershipFee"}</td>		
+	<td width="80%">{fieldLabel name="membershipFeeEnabled" key="manager.payment.options.membershipFee"}</td>		
 </tr>
 <tr>
 	<td class="label" width="20%">{fieldLabel name="membershipFee" key="manager.payment.options.fee"}
@@ -159,7 +159,7 @@
 </tr>
 <tr>
 	<td width="20%"><input type="checkbox" name="donationFeeEnabled" id="donationFeeEnabled" value="1"{if $donationFeeEnabled} checked="checked"{/if} /></td>
-	<td width="80%">{fieldLabel name="membershipFee" key="manager.payment.options.donationFee"}</td>		
+	<td width="80%">{fieldLabel name="donationFeeEnabled" key="manager.payment.options.donationFee"}</td>		
 </tr>
 <tr>
 	<td class="label" width="20%">{fieldLabel name="donationFeeName" key="manager.payment.options.feeName"}
