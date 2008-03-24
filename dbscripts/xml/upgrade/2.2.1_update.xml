@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../dtd/xmldata.dtd">
+
+<!--
+  * 2.2.1_update.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * 2.2.1 database updates XML file.
+  *
+  * $Id$
+  -->
+<data>
+	<!-- Bug #3289: Allow for suppression of author infomation in ToC -->
+	<sql>
+		<!-- Syntax for MySQL. -->
+		<query driver="mysql">
+			ALTER TABLE sections ADD COLUMN hide_author TINYINT NOT NULL DEFAULT 0
+			ALTER TABLE articles ADD COLUMN hide_author TINYINT NOT NULL DEFAULT 0
+		</query>
+
+		<!-- Syntax for PostgreSQL. -->
+		<query driver="postgres7">
+			ALTER TABLE sections ADD COLUMN hide_author SMALLINT NOT NULL DEFAULT 0
+			ALTER TABLE articles ADD COLUMN hide_author SMALLINT NOT NULL DEFAULT 0
+		</query>
+	</sql>
+</data>
