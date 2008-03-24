@@ -125,6 +125,7 @@ class SectionForm extends Form {
 					'identifyType' => $section->getIdentifyType(null), // Localized
 					'editorRestriction' => $section->getEditorRestricted(),
 					'hideTitle' => $section->getHideTitle(),
+					'hideAuthor' => $section->getHideAuthor(),
 					'hideAbout' => $section->getHideAbout(),
 					'policy' => $section->getPolicy(null), // Localized
 					'assignedEditors' => $sectionEditorsDao->getEditorsBySectionId($journal->getJournalId(), $this->sectionId),
@@ -138,7 +139,7 @@ class SectionForm extends Form {
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->readUserVars(array('title', 'abbrev', 'policy', 'identifyType', 'metaIndexed', 'metaReviewed', 'abstractsDisabled', 'editorRestriction', 'hideTitle', 'hideAbout'));
+		$this->readUserVars(array('title', 'abbrev', 'policy', 'identifyType', 'metaIndexed', 'metaReviewed', 'abstractsDisabled', 'editorRestriction', 'hideTitle', 'hideAuthor', 'hideAbout'));
 		$assignedEditorIds = Request::getUserVar('assignedEditorIds');
 		if (empty($assignedEditorIds)) $assignedEditorIds = array();
 		elseif (!is_array($assignedEditorIds)) $assignedEditorIds = array($assignedEditorIds);
@@ -195,6 +196,7 @@ class SectionForm extends Form {
 		$section->setIdentifyType($this->getData('identifyType'), null); // Localized
 		$section->setEditorRestricted($this->getData('editorRestriction') ? 1 : 0);
 		$section->setHideTitle($this->getData('hideTitle') ? 1 : 0);
+		$section->setHideAuthor($this->getData('hideAuthor') ? 1 : 0);
 		$section->setHideAbout($this->getData('hideAbout') ? 1 : 0);
 		$section->setPolicy($this->getData('policy'), null); // Localized
 

@@ -54,9 +54,13 @@
 </tr>
 <tr>
 	<td style="padding-left: 30px;font-style: italic;">
-		{foreach from=$article->getAuthors() item=author name=authorList}
-			{$author->getFullName()|escape}{if !$smarty.foreach.authorList.last},{/if}
-		{/foreach}
+		{if (!$section.hideAuthor && $article->getHideAuthor() == 0) || $article->getHideAuthor() == 2}
+			{foreach from=$article->getAuthors() item=author name=authorList}
+				{$author->getFullName()|escape}{if !$smarty.foreach.authorList.last},{/if}
+			{/foreach}
+		{else}
+			&nbsp;
+		{/if}
 	</td>
 	<td align="right">{$article->getPages()|escape}</td>
 </tr>

@@ -105,6 +105,13 @@ function removeSectionEditor(editorId) {
 	</td>
 </tr>
 <tr valign="top">
+	<td class="label">&nbsp;</td>
+	<td class="value">
+		<input type="checkbox" name="hideAuthor" id="hideAuthor" value="1" {if $hideAuthor}checked="checked"{/if} />
+		{fieldLabel name="hideAuthor" key="manager.sections.hideTocAuthor"}
+	</td>
+</tr>
+<tr valign="top">
 	<td class="label">{fieldLabel name="hideAbout" key="navigation.about"}</td>
 	<td class="value">
 		<input type="checkbox" name="hideAbout" id="hideAbout" value="1" {if $hideAbout}checked="checked"{/if} />

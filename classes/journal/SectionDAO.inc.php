@@ -140,6 +140,7 @@ class SectionDAO extends DAO {
 		$section->setAbstractsDisabled($row['abstracts_disabled']);
 		$section->setEditorRestricted($row['editor_restricted']);
 		$section->setHideTitle($row['hide_title']);
+		$section->setHideAuthor($row['hide_author']);
 		$section->setHideAbout($row['hide_about']);
 
 		$this->getDataObjectSettings('section_settings', 'section_id', $row['section_id'], $section);
@@ -174,9 +175,9 @@ class SectionDAO extends DAO {
 	function insertSection(&$section) {
 		$this->update(
 			'INSERT INTO sections
-				(journal_id, seq, meta_indexed, meta_reviewed, abstracts_disabled, editor_restricted, hide_title, hide_about)
+				(journal_id, seq, meta_indexed, meta_reviewed, abstracts_disabled, editor_restricted, hide_title, hide_author, hide_about)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
 				$section->getJournalId(),
 				$section->getSequence() == null ? 0 : $section->getSequence(),
@@ -185,6 +186,7 @@ class SectionDAO extends DAO {
 				$section->getAbstractsDisabled() ? 1 : 0,
 				$section->getEditorRestricted() ? 1 : 0,
 				$section->getHideTitle() ? 1 : 0,
+				$section->getHideAuthor() ? 1 : 0,
 				$section->getHideAbout() ? 1 : 0
 			)
 		);
@@ -208,6 +210,7 @@ class SectionDAO extends DAO {
 					abstracts_disabled = ?,
 					editor_restricted = ?,
 					hide_title = ?,
+					hide_author = ?,
 					hide_about = ?
 				WHERE section_id = ?',
 			array(
@@ -217,6 +220,7 @@ class SectionDAO extends DAO {
 				$section->getAbstractsDisabled(),
 				$section->getEditorRestricted(),
 				$section->getHideTitle(),
+				$section->getHideAuthor(),
 				$section->getHideAbout(),
 				$section->getSectionId()
 			)

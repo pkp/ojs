@@ -342,6 +342,23 @@ function moveAuthor(dir, authorIndex) {
 <div class="separator"></div>
 
 
+<h3>{translate key="editor.article.display"}</h3>
+
+<table width="100%" class="data">
+	<tr valign="top">
+		<td width="20%" class="label">{fieldLabel name="hideAuthor" key="issue.toc"}</td>
+		<td width="80%" class="value">{translate key="editor.article.hideTocAuthorDescription"}: 
+			<select name="hideAuthor" id="hideAuthor" class="selectMenu">
+				{html_options options=$hideAuthorOptions selected=$hideAuthor|escape}
+			</select>
+		</td>
+	</tr>
+</table>
+
+
+<div class="separator"></div>
+
+
 <p><input type="submit" value="{translate key="submission.saveMetadata"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="history.go(-1)" /></p>
 
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>

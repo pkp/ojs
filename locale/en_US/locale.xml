@@ -1316,6 +1316,7 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.sections.submissionReview">Will not be peer-reviewed</message>
 	<message key="manager.sections.editorRestriction">Items can only be submitted by Editors and Section Editors.</message>
 	<message key="manager.sections.hideTocTitle">Omit the title of this section from issues' table of contents.</message>
+	<message key="manager.sections.hideTocAuthor">Omit author names for section items from issues' table of contents.</message>
 	<message key="manager.sections.hideAbout">Omit this section from About the Journal.</message>
 	<message key="manager.sections.readingTools">Reading Tools</message>
 	<message key="manager.sections.indexed">Indexed</message>
@@ -1799,6 +1800,11 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	<message key="editor.article.scheduleForPublication.toBeAssigned">To Be Assigned</message>
 
 	<message key="editor.article.payment.publicationFeeNotPaid">Publication Fee not paid. To schedule item for publication notify author to pay fee or waive fee.</message>
+	<message key="editor.article.display">Display</message>
+	<message key="editor.article.hideTocAuthorDescription">Omit author names from issue table of contents</message>
+	<message key="editor.article.hideTocAuthorDefault">Default</message>
+	<message key="editor.article.hideTocAuthorHide">Omit</message>
+	<message key="editor.article.hideTocAuthorShow">Show</message>
 	
 	<!-- Section Editor -->
 	<message key="sectionEditor.activeEditorialAssignments">Active Editorial Assignments</message>

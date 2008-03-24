@@ -97,7 +97,8 @@ class MetadataForm extends Form {
 				'coverageSample' => $article->getCoverageSample(null), // Localized
 				'type' => $article->getType(null), // Localized
 				'language' => $article->getLanguage(),
-				'sponsor' => $article->getSponsor(null) // Localized
+				'sponsor' => $article->getSponsor(null), // Localized
+				'hideAuthor' => $article->getHideAuthor()
 			);
 
 			$authors = &$article->getAuthors();
@@ -159,6 +160,16 @@ class MetadataForm extends Form {
 			$templateMgr->assign_by_ref('section', $sectionDao->getSection($this->article->getSectionId()));
 		}
 
+		if ($this->canEdit) {
+			import('article.Article');
+			$hideAuthorOptions = array(
+				AUTHOR_TOC_DEFAULT => Locale::Translate('editor.article.hideTocAuthorDefault'),
+				AUTHOR_TOC_HIDE => Locale::Translate('editor.article.hideTocAuthorHide'),
+				AUTHOR_TOC_SHOW => Locale::Translate('editor.article.hideTocAuthorShow')
+			);
+			$templateMgr->assign('hideAuthorOptions', $hideAuthorOptions);
+		}
+
 		parent::display();
 	}
 
@@ -182,7 +193,8 @@ class MetadataForm extends Form {
 				'coverageSample',
 				'type',
 				'language',
-				'sponsor'
+				'sponsor',
+				'hideAuthor'
 			)
 		);
 
@@ -222,6 +234,7 @@ class MetadataForm extends Form {
 		$article->setType($this->getData('type'), null); // Localized
 		$article->setLanguage($this->getData('language')); // Localized
 		$article->setSponsor($this->getData('sponsor'), null); // Localized
+		$article->setHideAuthor($this->getData('hideAuthor') ? $this->getData('hideAuthor') : 0);
 
 		// Update authors
 		$authors = $this->getData('authors');

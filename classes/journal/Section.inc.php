@@ -235,6 +235,22 @@ class Section extends DataObject {
 	}
 
 	/**
+	 * Return boolean indicating if author should be hidden in issue ToC.
+	 * @return boolean
+	 */
+	function getHideAuthor() {
+		return $this->getData('hideAuthor');
+	}
+
+	/**
+	 * Set if author should be hidden in issue ToC.
+	 * @param $hideAuthor boolean
+	 */
+	function setHideAuthor($hideAuthor) {
+		return $this->setData('hideAuthor', $hideAuthor);
+	}
+
+	/**
 	 * Return boolean indicating if title should be hidden in About.
 	 * @return boolean
 	 */

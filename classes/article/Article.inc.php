@@ -27,6 +27,11 @@ define ('STATUS_QUEUED_REVIEW', 6);
 define ('STATUS_QUEUED_EDITING', 7);
 define ('STATUS_INCOMPLETE', 8);
 
+// Author display in ToC
+define ('AUTHOR_TOC_DEFAULT', 0);
+define ('AUTHOR_TOC_HIDE', 1);
+define ('AUTHOR_TOC_SHOW', 2);
+
 class Article extends DataObject {
 
 	/** @var array Authors of this article */
@@ -774,6 +779,22 @@ class Article extends DataObject {
 	function setFastTracked($fastTracked) {
 		return $this->setData('fastTracked',$fastTracked);
 	}	
+
+	/**
+	 * Return boolean indicating if author should be hidden in issue ToC.
+	 * @return boolean
+	 */
+	function getHideAuthor() {
+		return $this->getData('hideAuthor');
+	}
+
+	/**
+	 * Set if author should be hidden in issue ToC.
+	 * @param $hideAuthor boolean
+	 */
+	function setHideAuthor($hideAuthor) {
+		return $this->setData('hideAuthor', $hideAuthor);
+	}
 }
 
 ?>

@@ -132,6 +132,7 @@ class ArticleDAO extends DAO {
 		$article->setCopyeditFileId($row['copyedit_file_id']);
 		$article->setPages($row['pages']);
 		$article->setFastTracked($row['fast_tracked']);
+		$article->setHideAuthor($row['hide_author']);
 		
 
 		$article->setAuthors($this->authorDao->getAuthorsByArticle($row['article_id']));
@@ -150,9 +151,9 @@ class ArticleDAO extends DAO {
 		$article->stampModified();
 		$this->update(
 			sprintf('INSERT INTO articles
-				(user_id, journal_id, section_id, language, comments_to_ed, date_submitted, date_status_modified, last_modified, status, submission_progress, current_round, submission_file_id, revised_file_id, review_file_id, editor_file_id, copyedit_file_id, pages, fast_tracked)
+				(user_id, journal_id, section_id, language, comments_to_ed, date_submitted, date_status_modified, last_modified, status, submission_progress, current_round, submission_file_id, revised_file_id, review_file_id, editor_file_id, copyedit_file_id, pages, fast_tracked, hide_author)
 				VALUES
-				(?, ?, ?, ?, ?, %s, %s, %s, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, %s, %s, %s, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
 				$this->datetimeToDB($article->getDateSubmitted()), $this->datetimeToDB($article->getDateStatusModified()), $this->datetimeToDB($article->getLastModified())),
 			array(
 				$article->getUserId(),
@@ -169,7 +170,8 @@ class ArticleDAO extends DAO {
 				$article->getEditorFileId(),
 				$article->getCopyeditFileId(),
 				$article->getPages(),
-				$article->getFastTracked()?1:0
+				$article->getFastTracked()?1:0,
+				$article->getHideAuthor() === null ? 0 : $article->getHideAuthor()
 			)
 		);
 
@@ -211,7 +213,8 @@ class ArticleDAO extends DAO {
 					editor_file_id = ?,
 					copyedit_file_id = ?,
 					pages = ?,
-					fast_tracked = ?
+					fast_tracked = ?,
+					hide_author = ?
 				WHERE article_id = ?',
 				$this->datetimeToDB($article->getDateSubmitted()), $this->datetimeToDB($article->getDateStatusModified()), $this->datetimeToDB($article->getLastModified())),
 			array(
@@ -229,6 +232,7 @@ class ArticleDAO extends DAO {
 				$article->getCopyeditFileId(),
 				$article->getPages(),
 				$article->getFastTracked(),
+				$article->getHideAuthor(),
 				$article->getArticleId()
 			)
 		);

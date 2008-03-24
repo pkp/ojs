@@ -170,6 +170,7 @@ class PublishedArticleDAO extends DAO {
 				COALESCE(sal.setting_value, sapl.setting_value) AS section_abbrev,
 				s.abstracts_disabled AS abstracts_disabled,
 				s.hide_title AS section_hide_title,
+				s.hide_author AS section_hide_author,
 				COALESCE(o.seq, s.seq) AS section_seq,
 				pa.seq
 			FROM	published_articles pa,
@@ -207,7 +208,8 @@ class PublishedArticleDAO extends DAO {
 				$publishedArticles[$currSectionId] = array(
 					'articles'=> array(),
 					'title' => '',
-					'abstractsDisabled' => $row['abstracts_disabled']
+					'abstractsDisabled' => $row['abstracts_disabled'],
+					'hideAuthor' => $row['section_hide_author']
 				);
 
 				if (!$row['section_hide_title']) {
