@@ -17,12 +17,16 @@
 		<!-- Syntax for MySQL. -->
 		<query driver="mysql">
 			ALTER TABLE sections ADD COLUMN hide_author TINYINT NOT NULL DEFAULT 0
+		</query>
+		<query driver="mysql">
 			ALTER TABLE articles ADD COLUMN hide_author TINYINT NOT NULL DEFAULT 0
 		</query>
 
 		<!-- Syntax for PostgreSQL. -->
 		<query driver="postgres7">
 			ALTER TABLE sections ADD COLUMN hide_author SMALLINT NOT NULL DEFAULT 0
+		</query>
+		<query driver="postgres7">
 			ALTER TABLE articles ADD COLUMN hide_author SMALLINT NOT NULL DEFAULT 0
 		</query>
 	</sql>
