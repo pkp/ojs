@@ -882,7 +882,7 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="manager.payment.options.publicationFee">Article Publication</message>
 	<message key="manager.payment.options.fastTrackFee">Fast-Track Review</message>
 	<message key="manager.payment.options.membershipFee">Association Membership</message>
-	<message key="manager.payment.options.payPerViewFee">Article Pay-Per-View</message>
+	<message key="manager.payment.options.purchaseArticleFee">Purchase Article</message>
 	<message key="manager.payment.options.waiverPolicy">Waiver Policy</message>
 	<message key="manager.payment.options.onlypdf">Only Restrict Access to PDF version of articles</message>
 	<message key="manager.payment.options.acceptSubscriptionPayments">This will activate payments for Subscriptions, where types, cost, duration and subscribers are managed by the Subscription Manager.</message>
@@ -2357,7 +2357,7 @@ current password.<br /><br />Enter your email address below to reset your passwo
 	
 	<!-- Payments -->
 	<message key="payment.loginRequired">You must be logged in to make a payment.</message>
-	<message key="payment.loginRequired.forArticle">Subscription or pay-per-view required to access item. To verify subscription or to pay fee, log in to journal.</message>
+	<message key="payment.loginRequired.forArticle">Subscription or article purchase required to access item. To verify subscription, access previous purchase, or purchase article, log in to journal.</message>
 	<message key="payment.loginRequired.forDonation">You must be logged in to make a donation.</message>
 	
 	<message key="payment.paid">Paid</message>
@@ -2371,7 +2371,7 @@ current password.<br /><br />Enter your email address below to reset your passwo
 	<message key="payment.type.publication">Publication Fee</message>
 	<message key="payment.type.fastTrack">Fast Track Review Fee</message>
 	<message key="payment.type.membership">Individual Membership Fee</message>
-	<message key="payment.type.payPerView">Article Pay-Per-View Fee</message>
+	<message key="payment.type.purchaseArticle">Purchase Article Fee</message>
 	<message key="payment.type.subscription">Subscription Fee</message>
 	<message key="payment.type.donation">Donations</message>
 	
@@ -2911,7 +2911,7 @@ The paragraph that begins "This last topic..." is not indented.</pre>]]></messag
 	<message key="default.journalSettings.fastTrackFeeDescription">With the payment of this fee, the review, editorial decision, and author notification on this manuscript is guaranteed to take place within 4 weeks.</message>
 	<message key="default.journalSettings.publicationFeeDescription">If this paper is accepted for publication, you will be asked to pay an Article Publication Fee to cover publications costs.</message>
 	<message key="default.journalSettings.waiverPolicy">If you do not have funds to pay such fees, you will have an opportunity to waive each fee. We do not want fees to prevent the publication of worthy work.</message>
-	<message key="default.journalSettings.payPerViewFeeDescription">The payment of this fee will enable you to view, download, and print this article.</message>
+	<message key="default.journalSettings.purchaseArticleFeeDescription">The payment of this fee will enable you to view, download, and print this article.</message>
 	<message key="default.journalSettings.membershipFeeDescription">The payment of this fee will enroll you as a member in this association for one year and provide you with free access to this journal.</message>
 	<message key="default.journalSettings.donationFeeDescription">Donations of any amount to this journal are gratefully received and provide a means for the editors to continue to provide a journal of the highest quality to its readers.</message>
 </locale>

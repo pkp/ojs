@@ -212,16 +212,16 @@
 		<value>{translate key="default.journalSettings.waiverPolicy"}</value>
 	</setting>				
 	<setting type="int" locale="0">
-		<name>payPerViewFee</name>
+		<name>purchaseArticleFee</name>
 		<value>0</value>
 	</setting>	
 	<setting type="string" locale="1">
-		<name>payPerViewFeeName</name>
-		<value>{translate key="manager.payment.options.payPerViewFee"}</value>
+		<name>purchaseArticleFeeName</name>
+		<value>{translate key="manager.payment.options.purchaseArticleFee"}</value>
 	</setting>
 	<setting type="string" locale="1">
-		<name>payPerViewFeeDescription</name>
-		<value>{translate key="default.journalSettings.payPerViewFeeDescription"}</value>
+		<name>purchaseArticleFeeDescription</name>
+		<value>{translate key="default.journalSettings.purchaseArticleFeeDescription"}</value>
 	</setting>			
 	<setting type="int" locale="0">
 		<name>membershipFee</name>

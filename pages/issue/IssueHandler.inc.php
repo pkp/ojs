@@ -111,8 +111,8 @@ class IssueHandler extends Handler {
 			if ( $paymentManager->onlyPdfEnabled() ) {
 				$templateMgr->assign('restrictOnlyPdf', true);
 			}
-			if ( $paymentManager->payPerViewEnabled() ) {
-				$templateMgr->assign('payPerViewEnabled', true);
+			if ( $paymentManager->purchaseArticleEnabled() ) {
+				$templateMgr->assign('purchaseArticleEnabled', true);
 			}			
 			
 		} else {

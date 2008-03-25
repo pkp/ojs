@@ -48,10 +48,10 @@ class PaymentSettingsForm extends Form {
 							'fastTrackFee' => 'float', 
 							'fastTrackFeeName' => 'string',
 							'fastTrackFeeDescription' => 'string',
-							'payPerViewFeeEnabled' => 'bool', 							
-						  	'payPerViewFee' => 'float', 
-							'payPerViewFeeName' => 'string',
-							'payPerViewFeeDescription' => 'string',
+							'purchaseArticleFeeEnabled' => 'bool', 							
+						  	'purchaseArticleFee' => 'float', 
+							'purchaseArticleFeeName' => 'string',
+							'purchaseArticleFeeDescription' => 'string',
 							'membershipFeeEnabled' => 'bool', 						  	
 							'membershipFee' => 'float', 
 							'membershipFeeName' => 'string',
@@ -67,7 +67,7 @@ class PaymentSettingsForm extends Form {
 		$this->addCheck(new FormValidatorCustom($this, 'submissionFee', 'optional', 'manager.payment.form.numeric', create_function('$submissionFee', 'return is_numeric($submissionFee) && $submissionFee >= 0;')));
 		$this->addCheck(new FormValidatorCustom($this, 'publicationFee', 'optional', 'manager.payment.form.numeric', create_function('$publicationFee', 'return is_numeric($publicationFee) && $publicationFee >= 0;')));
 		$this->addCheck(new FormValidatorCustom($this, 'fastTrackFee', 'optional', 'manager.payment.form.numeric', create_function('$fastTrackFee', 'return is_numeric($fastTrackFee) && $fastTrackFee >= 0;')));
-		$this->addCheck(new FormValidatorCustom($this, 'payPerViewFee', 'optional', 'manager.payment.form.numeric', create_function('$payPerViewFee', 'return is_numeric($payPerViewFee) && $payPerViewFee >= 0;')));
+		$this->addCheck(new FormValidatorCustom($this, 'purchaseArticleFee', 'optional', 'manager.payment.form.numeric', create_function('$purchaseArticleFee', 'return is_numeric($purchaseArticleFee) && $purchaseArticleFee >= 0;')));
 		$this->addCheck(new FormValidatorCustom($this, 'membershipFee', 'optional', 'manager.payment.form.numeric', create_function('$membershipFee', 'return is_numeric($membershipFee) && $membershipFee >= 0;')));
 	
 		// grab valid currencies and add Validator	
@@ -89,7 +89,7 @@ class PaymentSettingsForm extends Form {
 	 * @return array
 	 */
 	function getLocaleFieldNames() {
-		return array('submissionFeeName', 'submissionFeeDescription', 'publicationFeeName', 'publicationFeeDescription', 'waiverPolicy', 'fastTrackFeeName', 'fastTrackFeeDescription', 'payPerViewFeeName', 'payPerViewFeeDescription', 'membershipFeeName', 'membershipFeeDescription', 	'donationFeeName', 'donationFeeDescription');
+		return array('submissionFeeName', 'submissionFeeDescription', 'publicationFeeName', 'publicationFeeDescription', 'waiverPolicy', 'fastTrackFeeName', 'fastTrackFeeDescription', 'purchaseArticleFeeName', 'purchaseArticleFeeDescription', 'membershipFeeName', 'membershipFeeDescription', 	'donationFeeName', 'donationFeeDescription');
 	}
 	
 	/**

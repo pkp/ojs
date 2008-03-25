@@ -492,6 +492,28 @@ class Upgrade extends Installer {
 
 		return true;
 	}
+
+	/**
+	 * For 2.2.1 upgrade: Replace "payPerView" to "purchaseArticle" in settings. 
+	 * @return boolean
+	 */
+	function renamePayPerViewSettings() {
+		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
+		$journalDao =& DAORegistry::getDAO('JournalDAO');
+
+		$settingNames = array(
+			'payPerViewFeeEnabled' => 'purchaseArticleFeeEnabled',
+			'payPerViewFee' => 'purchaseArticleFee',
+			'payPerViewFeeName' => 'purchaseArticleFeeName',
+			'payPerViewFeeDescription' => 'purchaseArticleFeeDescription'
+		);
+
+		foreach ($settingNames as $oldName => $newName) {
+			$journalSettingsDao->update('UPDATE journal_settings SET setting_name = ? WHERE setting_name = ?', array($newName, $oldName));
+		}
+
+		return true;
+	}
 }
 
 ?>

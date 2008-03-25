@@ -117,11 +117,11 @@ class OJSCompletedPayment extends Payment {
 				} else { 	
 					return Locale::translate('payment.type.membership');
 				}
-			case PAYMENT_TYPE_PAYPERVIEW:
-				if ( $journal->getLocalizedSetting('payPerViewFeeName') != '' ) {
-					return $journal->getLocalizedSetting('payPerViewFeeName');
+			case PAYMENT_TYPE_PURCHASE_ARTICLE:
+				if ( $journal->getLocalizedSetting('purchaseArticleFeeName') != '' ) {
+					return $journal->getLocalizedSetting('purchaseArticleFeeName');
 				} else { 	
-					return Locale::translate('payment.type.payPerView');
+					return Locale::translate('payment.type.purchaseArticle');
 				}
 			case PAYMENT_TYPE_SUBMISSION:
 				if ( $journal->getLocalizedSetting('submissionFeeName') != '' ) {
@@ -176,11 +176,11 @@ class OJSCompletedPayment extends Payment {
 				} else { 	
 					return Locale::translate('payment.type.membership');
 				}				
-			case PAYMENT_TYPE_PAYPERVIEW:
-				if ( $journal->getLocalizedSetting('payPerViewFeeDescription') != '') {
-					return $journal->getLocalizedSetting('payPerViewFeeDescription');
+			case PAYMENT_TYPE_PURCHASE_ARTICLE:
+				if ( $journal->getLocalizedSetting('purchaseArticleFeeDescription') != '') {
+					return $journal->getLocalizedSetting('purchaseArticleFeeDescription');
 				} else { 	
-					return Locale::translate('payment.type.payPerView');
+					return Locale::translate('payment.type.purchaseArticle');
 				}
 			case PAYMENT_TYPE_SUBMISSION:
 				if ( $journal->getLocalizedSetting('submissionFeeDescription') != '' ) {
@@ -298,7 +298,7 @@ class OJSCompletedPayment extends Payment {
 			case PAYMENT_TYPE_SUBMISSION:
 			case PAYMENT_TYPE_FASTTRACK:				
 			case PAYMENT_TYPE_PUBLICATION:
-			case PAYMENT_TYPE_PAYPERVIEW:
+			case PAYMENT_TYPE_PURCHASE_ARTICLE:
 				// all the article-related payments should output the article title
 				$articleDAO = &DAORegistry::getDAO('ArticleDAO');
 				$article =& $articleDAO->getArticle($this->assocId, $this->journalId);

@@ -161,8 +161,8 @@ class ArticleHandler extends Handler {
 			if ( $paymentManager->onlyPdfEnabled() ) {
 				$templateMgr->assign('restrictOnlyPdf', true);
 			}
-			if ( $paymentManager->payPerViewEnabled() ) {
-				$templateMgr->assign('payPerViewEnabled', true);
+			if ( $paymentManager->purchaseArticleEnabled() ) {
+				$templateMgr->assign('purchaseArticleEnabled', true);
 			}
 
 			// Increment the published article's abstract views count
@@ -393,7 +393,7 @@ class ArticleHandler extends Handler {
 					import('payment.ojs.OJSPaymentManager');
 					$paymentManager =& OJSPaymentManager::getManager();
 
-					if ( $paymentManager->payPerViewEnabled() || $paymentManager->membershipEnabled() ) { 
+					if ( $paymentManager->purchaseArticleEnabled() || $paymentManager->membershipEnabled() ) { 
 						/* if only pdf files are being restricted, then approve all non-pdf galleys
 						 * and continue checking if it is a pdf galley */
 						if ( $paymentManager->onlyPdfEnabled() ) {
@@ -417,7 +417,7 @@ class ArticleHandler extends Handler {
 							|| (!is_null($user->getDateEndMembership()) && strtotime($user->getDateEndMembership()) > time()) ) { 
 							return array($journal, $issue, $publishedArticle);
 						} else {					
-							$queuedPayment =& $paymentManager->createQueuedPayment($journalId, PAYMENT_TYPE_PAYPERVIEW, $user->getUserId(), $articleId, $journal->getSetting('payPerViewFee'));
+							$queuedPayment =& $paymentManager->createQueuedPayment($journalId, PAYMENT_TYPE_PURCHASE_ARTICLE, $user->getUserId(), $articleId, $journal->getSetting('purchaseArticleFee'));
 							$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);
 					
 							$templateMgr =& TemplateManager::getManager();							

@@ -115,20 +115,20 @@
 	<td class="label" width="80%">{fieldLabel name="acceptSubscriptionPayments" key="manager.payment.options.acceptSubscriptionPayments"}</td>
 </tr>
 <tr>
-	<td width="20%"><input type="checkbox" name="payPerViewFeeEnabled" id="payPerViewFeeEnabled" value="1"{if $payPerViewFeeEnabled} checked="checked"{/if} /></td>
-	<td width="80%">{fieldLabel name="payPerViewFeeEnabled" key="manager.payment.options.payPerViewFee"}</td>		
+	<td width="20%"><input type="checkbox" name="purchaseArticleFeeEnabled" id="purchaseArticleFeeEnabled" value="1"{if $purchaseArticleFeeEnabled} checked="checked"{/if} /></td>
+	<td width="80%">{fieldLabel name="purchaseArticleFeeEnabled" key="manager.payment.options.purchaseArticleFee"}</td>		
 </tr>
 <tr>
-	<td class="label" width="20%">{fieldLabel name="payPerViewFee" key="manager.payment.options.fee"}
-	<td class="value" width="80%"><input type="text" class="textField" name="payPerViewFee" id="payPerViewFee" size="10" value="{$payPerViewFee|escape}" /></td>
+	<td class="label" width="20%">{fieldLabel name="purchaseArticleFee" key="manager.payment.options.fee"}
+	<td class="value" width="80%"><input type="text" class="textField" name="purchaseArticleFee" id="purchaseArticleFee" size="10" value="{$purchaseArticleFee|escape}" /></td>
 </tr>
 <tr>
-	<td class="label" width="20%">{fieldLabel name="payPerViewFeeName" key="manager.payment.options.feeName"}
-	<td class="value" width="80%"><input type="text" class="textField" name="payPerViewFeeName[{$formLocale|escape}]" id="payPerViewFeeName" size="50" value="{$payPerViewFeeName[$formLocale]|escape}" /></td>
+	<td class="label" width="20%">{fieldLabel name="purchaseArticleFeeName" key="manager.payment.options.feeName"}
+	<td class="value" width="80%"><input type="text" class="textField" name="purchaseArticleFeeName[{$formLocale|escape}]" id="purchaseArticleFeeName" size="50" value="{$purchaseArticleFeeName[$formLocale]|escape}" /></td>
 </tr>
 <tr>
-	<td class="label" width="20%">{fieldLabel name="payPerViewFeeDescription" key="manager.payment.options.feeDescription"}
-	<td class="value" width="80%"><textarea class="textArea" name="payPerViewFeeDescription[{$formLocale|escape}]" id="payPerViewFeeDescription" rows="2" cols="50">{$payPerViewFeeDescription[$formLocale]|escape}</textarea></td>
+	<td class="label" width="20%">{fieldLabel name="purchaseArticleFeeDescription" key="manager.payment.options.feeDescription"}
+	<td class="value" width="80%"><textarea class="textArea" name="purchaseArticleFeeDescription[{$formLocale|escape}]" id="purchaseArticleFeeDescription" rows="2" cols="50">{$purchaseArticleFeeDescription[$formLocale]|escape}</textarea></td>
 </tr>
 <tr>
 	<td class="value" width="20%"><input type="checkbox" name="restrictOnlyPdf" id="restrictOnlyPdf" value="1"{if $restrictOnlyPdf} checked="checked"{/if} /></td>

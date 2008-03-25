@@ -69,14 +69,14 @@ class OJSCompletedPaymentDAO extends DAO {
 	}
 	
 	/**
-	 * Look for a completed PAYPERVIEW payment matching the journal and article IDs
+	 * Look for a completed PURCHASE_ARTICLE payment matching the journal and article IDs
 	 * @param int $journalId
 	 * @param int $articleId
 	 */	
 	function hasPaidPerViewArticle ( $userId, $articleId ) {
 		$result =& $this->retrieve(
 			'SELECT count(*) FROM completed_payments WHERE payment_type = ? AND user_id = ? AND assoc_id = ?', 
-				array(PAYMENT_TYPE_PAYPERVIEW,
+				array(PAYMENT_TYPE_PURCHASE_ARTICLE,
 					$userId,
 					$articleId )
 		);
