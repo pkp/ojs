@@ -67,6 +67,13 @@ class LocaleFile {
 	}
 
 	/**
+	 * Get the filename for this locale file.
+	 */
+	function getFilename() {
+		return $this->filename;
+	}
+
+	/**
 	 * Translate a string using the selected locale.
 	 * Substitution works by replacing tokens like "{$foo}" with the value of
 	 * the parameter named "foo" (if supplied).
