@@ -1,26 +1,27 @@
 <?php
 
 /**
- * @file EditableEmailFile.inc.php
+ * @file EditableLocaleFile.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package plugins.generic.translator
- * @class EditableEmailFile
+ * @package i18n 
+ * @class EditableLocaleFile
  *
- * This class supports updating for email XML files.
+ * This extension of LocaleFile.inc.php supports updating.
  *
  * $Id$
  */
 
-class EditableEmailFile {
-	var $locale;
+import('file.EditableFile');
+
+class EditableLocaleFile extends LocaleFile {
 	var $editableFile;
 
-	function EditableEmailFile($locale, $filename) {
-		$this->locale = $locale;
-		$this->editableFile =& new EditableFile($filename);
+	function EditableLocaleFile($locale, $filename) {
+		parent::LocaleFile($locale, $filename);
+		$this->editableFile =& new EditableFile($this->filename);
 	}
 
 	function write() {
@@ -35,11 +36,11 @@ class EditableEmailFile {
 		$this->editableFile->setContents($contents);
 	}
 
-	function update($key, $subject, $body, $description) {
+	function update($key, $value) {
 		$matches = null;
 		$quotedKey = String::regexp_quote($key);
 		preg_match(
-			"/<row>[\W]*<field name=\"email_key\">$quotedKey<\/field>/",
+			"/<message[\W]+key=\"$quotedKey\">/",
 			$this->getContents(),
 			$matches,
 			PREG_OFFSET_CAPTURE
@@ -47,16 +48,11 @@ class EditableEmailFile {
 		if (!isset($matches[0])) return false;
 
 		$offset = $matches[0][1];
-		$closeOffset = strpos($this->getContents(), '</row>', $offset);
+		$closeOffset = strpos($this->getContents(), '</message>', $offset);
 		if ($closeOffset === FALSE) return false;
 
 		$newContents = substr($this->getContents(), 0, $offset);
-		$newContents .= '<row>
-			<field name="email_key">' . $this->editableFile->xmlEscape($key) . '</field>
-			<field name="subject">' . $this->editableFile->xmlEscape($subject) . '</field>
-			<field name="body">' . $this->editableFile->xmlEscape($body) . '</field>
-			<field name="description">' . $this->editableFile->xmlEscape($description) . '</field>
-		';
+		$newContents .= "<message key=\"$key\">" . $this->editableFile->xmlEscape($value);
 		$newContents .= substr($this->getContents(), $closeOffset);
 		$this->setContents($newContents);
 		return true;
@@ -66,7 +62,7 @@ class EditableEmailFile {
 		$matches = null;
 		$quotedKey = String::regexp_quote($key);
 		preg_match(
-			"/[ \t]*<row>[\W]*<field name=\"email_key\">$quotedKey<\/field>/",
+			"/[ \t]*<message[\W]+key=\"$quotedKey\">/",
 			$this->getContents(),
 			$matches,
 			PREG_OFFSET_CAPTURE
@@ -74,7 +70,7 @@ class EditableEmailFile {
 		if (!isset($matches[0])) return false;
 		$offset = $matches[0][1];
 
-		preg_match("/<\/row>[ \t]*[\r]?\n/", $this->getContents(), $matches, PREG_OFFSET_CAPTURE, $offset);
+		preg_match("/<\/message>[\W]*[\r]?\n/", $this->getContents(), $matches, PREG_OFFSET_CAPTURE, $offset);
 		if (!isset($matches[0])) return false;
 		$closeOffset = $matches[0][1] + strlen($matches[0][0]);
 
@@ -84,20 +80,13 @@ class EditableEmailFile {
 		return true;
 	}
 
-	function insert($key, $subject, $body, $description) {
-		$offset = strrpos($this->getContents(), '</table>');
+	function insert($key, $value) {
+		$offset = strrpos($this->getContents(), '</locale>');
 		if ($offset === false) return false;
 		$newContents = substr($this->getContents(), 0, $offset);
-		$newContents .= '	<row>
-			<field name="email_key">' . $this->editableFile->xmlEscape($key) . '</field>
-			<field name="subject">' . $this->editableFile->xmlEscape($subject) . '</field>
-			<field name="body">' . $this->editableFile->xmlEscape($body) . '</field>
-			<field name="description">' . $this->editableFile->xmlEscape($description) . '</field>
-		</row>
-	';
+		$newContents .= "\t<message key=\"$key\">" . $this->editableFile->xmlEscape($value) . "</message>\n";
 		$newContents .= substr($this->getContents(), $offset);
 		$this->setContents($newContents);
 	}
 }
-
 ?>

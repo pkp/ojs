@@ -1,25 +1,28 @@
 <?php
 
 /**
- * @file EditableLocaleFile.inc.php
+ * @file EditableEmailFile.inc.php
  *
  * Copyright (c) 2003-2007 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @package plugins.generic.translator
- * @class EditableLocaleFile
+ * @package i18n 
+ * @class EditableEmailFile
  *
- * This extension of LocaleFile.inc.php supports updating.
+ * This class supports updating for email XML files.
  *
  * $Id$
  */
 
-class EditableLocaleFile extends LocaleFile {
+import('file.EditableFile');
+
+class EditableEmailFile {
+	var $locale;
 	var $editableFile;
 
-	function EditableLocaleFile($locale, $filename) {
-		parent::LocaleFile($locale, $filename);
-		$this->editableFile =& new EditableFile($this->filename);
+	function EditableEmailFile($locale, $filename) {
+		$this->locale = $locale;
+		$this->editableFile =& new EditableFile($filename);
 	}
 
 	function write() {
@@ -34,11 +37,11 @@ class EditableLocaleFile extends LocaleFile {
 		$this->editableFile->setContents($contents);
 	}
 
-	function update($key, $value) {
+	function update($key, $subject, $body, $description) {
 		$matches = null;
 		$quotedKey = String::regexp_quote($key);
 		preg_match(
-			"/<message[\W]+key=\"$quotedKey\">/",
+			"/<row>[\W]*<field name=\"email_key\">$quotedKey<\/field>/",
 			$this->getContents(),
 			$matches,
 			PREG_OFFSET_CAPTURE
@@ -46,11 +49,16 @@ class EditableLocaleFile extends LocaleFile {
 		if (!isset($matches[0])) return false;
 
 		$offset = $matches[0][1];
-		$closeOffset = strpos($this->getContents(), '</message>', $offset);
+		$closeOffset = strpos($this->getContents(), '</row>', $offset);
 		if ($closeOffset === FALSE) return false;
 
 		$newContents = substr($this->getContents(), 0, $offset);
-		$newContents .= "<message key=\"$key\">" . $this->editableFile->xmlEscape($value);
+		$newContents .= '<row>
+			<field name="email_key">' . $this->editableFile->xmlEscape($key) . '</field>
+			<field name="subject">' . $this->editableFile->xmlEscape($subject) . '</field>
+			<field name="body">' . $this->editableFile->xmlEscape($body) . '</field>
+			<field name="description">' . $this->editableFile->xmlEscape($description) . '</field>
+		';
 		$newContents .= substr($this->getContents(), $closeOffset);
 		$this->setContents($newContents);
 		return true;
@@ -60,7 +68,7 @@ class EditableLocaleFile extends LocaleFile {
 		$matches = null;
 		$quotedKey = String::regexp_quote($key);
 		preg_match(
-			"/[ \t]*<message[\W]+key=\"$quotedKey\">/",
+			"/[ \t]*<row>[\W]*<field name=\"email_key\">$quotedKey<\/field>/",
 			$this->getContents(),
 			$matches,
 			PREG_OFFSET_CAPTURE
@@ -68,7 +76,7 @@ class EditableLocaleFile extends LocaleFile {
 		if (!isset($matches[0])) return false;
 		$offset = $matches[0][1];
 
-		preg_match("/<\/message>[\W]*[\r]?\n/", $this->getContents(), $matches, PREG_OFFSET_CAPTURE, $offset);
+		preg_match("/<\/row>[ \t]*[\r]?\n/", $this->getContents(), $matches, PREG_OFFSET_CAPTURE, $offset);
 		if (!isset($matches[0])) return false;
 		$closeOffset = $matches[0][1] + strlen($matches[0][0]);
 
@@ -78,13 +86,20 @@ class EditableLocaleFile extends LocaleFile {
 		return true;
 	}
 
-	function insert($key, $value) {
-		$offset = strrpos($this->getContents(), '</locale>');
+	function insert($key, $subject, $body, $description) {
+		$offset = strrpos($this->getContents(), '</table>');
 		if ($offset === false) return false;
 		$newContents = substr($this->getContents(), 0, $offset);
-		$newContents .= "\t<message key=\"$key\">" . $this->editableFile->xmlEscape($value) . "</message>\n";
+		$newContents .= '	<row>
+			<field name="email_key">' . $this->editableFile->xmlEscape($key) . '</field>
+			<field name="subject">' . $this->editableFile->xmlEscape($subject) . '</field>
+			<field name="body">' . $this->editableFile->xmlEscape($body) . '</field>
+			<field name="description">' . $this->editableFile->xmlEscape($description) . '</field>
+		</row>
+	';
 		$newContents .= substr($this->getContents(), $offset);
 		$this->setContents($newContents);
 	}
 }
+
 ?>
