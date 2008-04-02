@@ -76,11 +76,13 @@ class WebFeedPlugin extends GenericPlugin {
 		switch ($category) {
 			case 'blocks':
 				$this->import('WebFeedBlockPlugin');
-				$plugins[$category][] =& new WebFeedBlockPlugin();
+				$blockPlugin =& new WebFeedBlockPlugin();
+				$plugins[$blockPlugin->getSeq()][$blockPlugin->getPluginPath()] =& $blockPlugin;
 				break;
 			case 'gateways':
 				$this->import('WebFeedGatewayPlugin');
-				$plugins[$category][] =& new WebFeedGatewayPlugin();
+				$gatewayPlugin =& new WebFeedGatewayPlugin();
+				$plugins[$gatewayPlugin->getSeq()][$gatewayPlugin->getPluginPath()] =& $gatewayPlugin;
 				break;
 		}
 		return false;
