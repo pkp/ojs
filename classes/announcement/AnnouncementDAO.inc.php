@@ -68,7 +68,7 @@ class AnnouncementDAO extends DAO {
 		$announcement->setJournalId($row['journal_id']);
 		$announcement->setTypeId($row['type_id']);
 		$announcement->setDateExpire($this->dateFromDB($row['date_expire']));
-		$announcement->setDatePosted($this->dateFromDB($row['date_posted']));
+		$announcement->setDatePosted($this->datetimeFromDB($row['date_posted']));
 
 		$this->getDataObjectSettings('announcement_settings', 'announcement_id', $row['announcement_id'], $announcement);
 
@@ -96,7 +96,7 @@ class AnnouncementDAO extends DAO {
 				(journal_id, type_id, date_expire, date_posted)
 				VALUES
 				(?, ?, %s, %s)',
-				$this->dateToDB($announcement->getDateExpire()), $this->dateToDB($announcement->getDatePosted())),
+				$this->dateToDB($announcement->getDateExpire()), $this->dateToDB($announcement->getDatetimePosted())),
 			array(
 				$announcement->getJournalId(),
 				$announcement->getTypeId()
@@ -242,6 +242,24 @@ class AnnouncementDAO extends DAO {
 		);
 
 		$returner = &new DAOResultFactory($result, $this, '_returnAnnouncementFromRow');
+		return $returner;
+	}
+
+	/**
+	 * Retrieve most recent announcement by journal ID.
+	 * @param $journalId int
+	 * @return Announcement
+	 */
+	function &getMostRecentAnnouncementByJournalId($journalId) {
+		$result = &$this->retrieve(
+			'SELECT * FROM announcements WHERE journal_id = ? ORDER BY announcement_id DESC LIMIT 1', $journalId
+		);
+
+		$returner = null;
+		if ($result->RecordCount() != 0) {
+			$returner = &$this->_returnAnnouncementFromRow($result->GetRowAssoc(false));
+		}
+		$result->Close();
 		return $returner;
 	}
 

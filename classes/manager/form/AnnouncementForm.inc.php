@@ -154,7 +154,7 @@ class AnnouncementForm extends Form {
 		if ($announcement->getAnnouncementId() != null) {
 			$announcementDao->updateAnnouncement($announcement);
 		} else {
-			$announcement->setDatePosted(Core::getCurrentDate());
+			$announcement->setDatetimePosted(Core::getCurrentDate());
 			$announcementDao->insertAnnouncement($announcement);
 		}
 	}

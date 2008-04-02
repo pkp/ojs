@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.generic.announcementfeed.displayName">Announcement Feed Plugin</message>
+	<message key="plugins.generic.announcementfeed.description">This plugin produces RSS/Atom web syndication feeds for journal announcements.</message>
+
+	<message key="plugins.generic.announcementfeed.settings">Settings</message>
+	<message key="plugins.generic.announcementfeed.settings.all">Display feed links on all journal pages.</message>
+	<message key="plugins.generic.announcementfeed.settings.homepage">Display feed links only on homepage and announcement page.</message>
+	<message key="plugins.generic.announcementfeed.settings.announcement">Display feed links only on announcement page.</message>
+	<message key="plugins.generic.announcementfeed.settings.recentAnnouncements1">Limit feed to</message>
+	<message key="plugins.generic.announcementfeed.settings.recentAnnouncements2">most recent announcements.</message>
+	<message key="plugins.generic.announcementfeed.settings.recentItemsRequired">Please enter a positive integer for recent announcements.</message>
+	<message key="plugins.generic.announcementfeed.atom.altText">Atom logo</message>
+	<message key="plugins.generic.announcementfeed.rss1.altText">RSS1 logo</message>
+	<message key="plugins.generic.announcementfeed.rss2.altText">RSS2 logo</message>
+</locale>

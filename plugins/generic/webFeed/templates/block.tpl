@@ -10,6 +10,7 @@
  *}
 <div class="block" id="sidebarWebFeed">
 {if ( $displayPage eq "all" ) || ($displayPage eq "issue" && $issue) }
+	<span class="blockTitle">{translate key="journal.currentIssue"}</span>	
 	<a href="{url page="gateway" op="plugin" path="WebFeedGatewayPlugin"|to_array:"atom"}">
 	<img src="{$baseUrl}/plugins/generic/webFeed/templates/images/atom10_logo.gif" alt="" border="0" /></a>
 	<br/>

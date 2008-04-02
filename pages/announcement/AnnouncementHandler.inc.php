@@ -36,7 +36,7 @@ class AnnouncementHandler extends Handler {
 			$templateMgr->assign('announcementsIntroduction', $announcementsIntroduction);
 			$templateMgr->display('announcement/index.tpl');
 		} else {
-			Request::redirect();
+			Request::redirect(null, 'index');
 		}
 
 	}
