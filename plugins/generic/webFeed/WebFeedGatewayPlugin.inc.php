@@ -113,6 +113,8 @@ class WebFeedGatewayPlugin extends GatewayPlugin {
 		$templateMgr->assign('showToc', true);
 
 		$templateMgr->display($this->getTemplatePath() . $typeMap[$type], $mimeTypeMap[$type]);
+
+		return true;
 	}
 }
 
