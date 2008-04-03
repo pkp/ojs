@@ -109,8 +109,8 @@
 </tr>
 
 <tr valign="top">
-	<td class="label">{fieldLabel name="gender" key="user.gender"}</td>
-	<td class="value"><input type="radio" name="gender" id="gender-m" value="M" {if $gender == 'M'} checked="checked"{/if}/><label for="gender-m">{translate key="user.masculine"}</label> &nbsp;&nbsp;&nbsp; <input type="radio" name="gender" id="gender-f" value="F" {if $gender == 'F'} checked="checked"{/if}><label for="gender-f">{translate key="user.feminine"}</label></td>
+	<td class="label">{fieldLabel name="gender-m" key="user.gender"}</td>
+	<td class="value"><input type="radio" name="gender" id="gender-m" value="M" {if $gender == 'M'} checked="checked"{/if}/><label for="gender-m">{translate key="user.masculine"}</label> &nbsp;&nbsp;&nbsp; <input type="radio" name="gender" id="gender-f" value="F" {if $gender == 'F'} checked="checked"{/if}/><label for="gender-f">{translate key="user.feminine"}</label></td>
 </tr>
 
 <tr valign="top">
