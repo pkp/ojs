@@ -91,7 +91,7 @@ class WebFeedBlockPlugin extends BlockPlugin {
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
 		$currentIssue =& $issueDao->getCurrentIssue($journal->getJournalId());
 
-		if ( ($currentIssue) && (($displayPage == 'all') || ($displayPage == 'issue' && $displayPage == $requestedPage)) ) { 
+		if ( ($currentIssue) && (($displayPage == 'all') || ($displayPage == 'homepage' && (empty($requestedPage) || $requestedPage == 'index' || $requestedPage == 'issue')) || ($displayPage == 'issue' && $displayPage == $requestedPage)) ) { 
 			return parent::getContents($templateMgr);
 		} else {
 			return '';

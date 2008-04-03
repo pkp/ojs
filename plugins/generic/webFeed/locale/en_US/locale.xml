@@ -18,9 +18,13 @@
 
 	<message key="plugins.generic.webfeed.settings">Settings</message>
 	<message key="plugins.generic.webfeed.settings.issue">Display web feed links on issue pages only.</message>
+	<message key="plugins.generic.webfeed.settings.homepage">Display web feed links on homepage and issue pages only.</message>
 	<message key="plugins.generic.webfeed.settings.all">Display web feed links on all journal pages.</message>
 
 	<message key="plugins.generic.webfeed.settings.currentIssue">Display items in current published issue.</message>
 	<message key="plugins.generic.webfeed.settings.recentArticles">most recent published items.</message>
 	<message key="plugins.generic.webfeed.settings.recentItemsRequired">Please enter a positive integer for recent published items.</message>
+	<message key="plugins.generic.webfeed.atom.altText">Atom logo</message>
+	<message key="plugins.generic.webfeed.rss1.altText">RSS1 logo</message>
+	<message key="plugins.generic.webfeed.rss2.altText">RSS2 logo</message>
 </locale>

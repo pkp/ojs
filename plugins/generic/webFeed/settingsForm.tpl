@@ -26,6 +26,10 @@
 		<td width="90%" class="value">{translate key="plugins.generic.webfeed.settings.all"}</td>
 	</tr>
 	<tr valign="top">
+		<td width="10%" class="label" align="right"><input type="radio" name="displayPage" id="displayPage" value="homepage" {if $displayPage eq "homepage"}checked {/if}/></td>
+		<td width="90%" class="value">{translate key="plugins.generic.webfeed.settings.homepage"}</td>
+	</tr>
+	<tr valign="top">
 		<td width="10%" class="label" align="right"><input type="radio" name="displayPage" id="displayPage" value="issue" {if $displayPage eq "issue"}checked {/if}/></td>
 		<td width="90%" class="value">{translate key="plugins.generic.webfeed.settings.issue"}</td>
 	</tr>

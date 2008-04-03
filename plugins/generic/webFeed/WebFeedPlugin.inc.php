@@ -100,7 +100,7 @@ class WebFeedPlugin extends GenericPlugin {
 				$displayPage = $this->getSetting($currentJournal->getJournalId(), 'displayPage');
 			} 
 
-			if ( ($currentIssue) && (($displayPage == 'all') || ($displayPage == 'issue' && $displayPage == $requestedPage)) ) { 
+			if ( ($currentIssue) && (($displayPage == 'all') || ($displayPage == 'homepage' && (empty($requestedPage) || $requestedPage == 'index' || $requestedPage == 'issue')) || ($displayPage == 'issue' && $displayPage == $requestedPage)) ) { 
 				$additionalHeadData = $templateManager->get_template_vars('additionalHeadData');
 
 				$feedUrl1 = '<link rel="alternate" type="application/atom+xml" href="'.$currentJournal->getUrl().'/gateway/plugin/WebFeedGatewayPlugin/atom" />';
