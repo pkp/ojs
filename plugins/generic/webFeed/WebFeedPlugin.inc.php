@@ -93,15 +93,22 @@ class WebFeedPlugin extends GenericPlugin {
 			$templateManager =& $args[0];
 
 			$currentJournal =& $templateManager->get_template_vars('currentJournal');
-			$baseUrl = $templateManager->get_template_vars('baseUrl');
-			// if we have a journal selected, append feed meta-links into the header
-			$additionalHeadData = $templateManager->get_template_vars('additionalHeadData');
+			$requestedPage = Request::getRequestedPage();
+			if ($currentJournal) {
+				$issueDao = &DAORegistry::getDAO('IssueDAO');
+				$currentIssue =& $issueDao->getCurrentIssue($currentJournal->getJournalId());
+				$displayPage = $this->getSetting($currentJournal->getJournalId(), 'displayPage');
+			} 
 
-			$feedUrl1 = '<link rel="alternate" type="application/atom+xml" href="'.$currentJournal->getUrl().'/gateway/plugin/WebFeedGatewayPlugin/atom" />';
-			$feedUrl2 = '<link rel="alternate" type="application/rdf+xml" href="'.$currentJournal->getUrl().'/gateway/plugin/WebFeedGatewayPlugin/rss" />';
-			$feedUrl3 = '<link rel="alternate" type="application/rss+xml" href="'.$currentJournal->getUrl().'/gateway/plugin/WebFeedGatewayPlugin/rss2" />';
+			if ( ($currentIssue) && (($displayPage == 'all') || ($displayPage == 'issue' && $displayPage == $requestedPage)) ) { 
+				$additionalHeadData = $templateManager->get_template_vars('additionalHeadData');
 
-			$templateManager->assign('additionalHeadData', $additionalHeadData."\n\t".$feedUrl1."\n\t".$feedUrl2."\n\t".$feedUrl3);
+				$feedUrl1 = '<link rel="alternate" type="application/atom+xml" href="'.$currentJournal->getUrl().'/gateway/plugin/WebFeedGatewayPlugin/atom" />';
+				$feedUrl2 = '<link rel="alternate" type="application/rdf+xml" href="'.$currentJournal->getUrl().'/gateway/plugin/WebFeedGatewayPlugin/rss" />';
+				$feedUrl3 = '<link rel="alternate" type="application/rss+xml" href="'.$currentJournal->getUrl().'/gateway/plugin/WebFeedGatewayPlugin/rss2" />';
+
+				$templateManager->assign('additionalHeadData', $additionalHeadData."\n\t".$feedUrl1."\n\t".$feedUrl2."\n\t".$feedUrl3);
+			}
 		}
 
 		return false;

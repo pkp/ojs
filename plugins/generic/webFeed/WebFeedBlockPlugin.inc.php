@@ -87,9 +87,15 @@ class WebFeedBlockPlugin extends BlockPlugin {
 
 		$plugin =& $this->getWebFeedPlugin();
 		$displayPage = $plugin->getSetting($journal->getJournalId(), 'displayPage');
-		$templateMgr->assign('displayPage', $displayPage);
+		$requestedPage = Request::getRequestedPage();
+		$issueDao = &DAORegistry::getDAO('IssueDAO');
+		$currentIssue =& $issueDao->getCurrentIssue($journal->getJournalId());
 
-		return parent::getContents($templateMgr);
+		if ( ($currentIssue) && (($displayPage == 'all') || ($displayPage == 'issue' && $displayPage == $requestedPage)) ) { 
+			return parent::getContents($templateMgr);
+		} else {
+			return '';
+		}
 	}
 }
 
