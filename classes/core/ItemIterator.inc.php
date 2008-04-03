@@ -28,6 +28,7 @@ class ItemIterator {
 	/**
 	 * Return the next item with key.
 	 * @return array ($key, $value);
+	 */
 	function &nextWithKey() {
 		return array(null, null);
 	}
