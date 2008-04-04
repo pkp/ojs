@@ -93,44 +93,82 @@ class ArticleHTMLGalley extends ArticleGalley {
 
 	function _handleOjsUrl($matchArray) {
 		$url = $matchArray[2];
+		$anchor = null;
+		if (($i = strpos($url, '#')) !== false) {
+			$anchor = substr($url, $i+1);
+			$url = substr($url, 0, $i);
+		}
 		$urlParts = explode('/', $url);
 		if (isset($urlParts[0])) switch(String::strtolower($urlParts[0])) {
 			case 'journal':
 				$url = Request::url(
 					isset($urlParts[1]) ?
 						$urlParts[1] :
-						Request::getRequestedJournalPath()
+						Request::getRequestedJournalPath(),
+					null,
+					null,
+					null,
+					null,
+					$anchor
 				);
 				break;
 			case 'article':
 				if (isset($urlParts[1])) {
-					$url = Request::url(null, 'article', 'view', $urlParts[1]);
+					$url = Request::url(
+						null,
+						'article',
+						'view',
+						$urlParts[1],
+						null,
+						$anchor
+					);
 				}
 				break;
 			case 'issue':
 				if (isset($urlParts[1])) {
-					$url = Request::url(null, 'issue', 'view', $urlParts[1]);
+					$url = Request::url(
+						null,
+						'issue',
+						'view',
+						$urlParts[1],
+						null,
+						$anchor
+					);
 				} else {
-					$url = Request::url(null, 'issue', 'current');
+					$url = Request::url(
+						null,
+						'issue',
+						'current',
+						null,
+						null,
+						$anchor
+					);
 				}
 				break;
 			case 'suppfile':
 				if (isset($urlParts[1]) && isset($urlParts[2])) {
-					$url = Request::url(null, 'article', 'downloadSuppFile', array($urlParts[1], $urlParts[2]));
+					$url = Request::url(
+						null,
+						'article',
+						'downloadSuppFile',
+						array($urlParts[1], $urlParts[2]),
+						null,
+						$anchor
+					);
 				}
 				break;
 			case 'sitepublic':
 					array_shift($urlParts);
 					import ('file.PublicFileManager');
 					$publicFileManager = &new PublicFileManager();
-					$url = Request::getBaseUrl() . '/' . $publicFileManager->getSiteFilesPath() . '/' . implode('/', $urlParts);
+					$url = Request::getBaseUrl() . '/' . $publicFileManager->getSiteFilesPath() . '/' . implode('/', $urlParts) . ($anchor?'#' . $anchor:'');
 				break;
 			case 'public':
 					array_shift($urlParts);
 					$journal = &Request::getJournal();
 					import ('file.PublicFileManager');
 					$publicFileManager = &new PublicFileManager();
-					$url = Request::getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($journal->getJournalId()) . '/' . implode('/', $urlParts);
+					$url = Request::getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($journal->getJournalId()) . '/' . implode('/', $urlParts) . ($anchor?'#' . $anchor:'');
 				break;
 		}
 		return $matchArray[1] . $url . $matchArray[3];
