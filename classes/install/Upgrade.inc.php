@@ -494,6 +494,37 @@ class Upgrade extends Installer {
 	}
 
 	/**
+	 * The supportedLocales setting may be missing for journals; ensure
+	 * that it is properly set.
+	 */
+	function ensureSupportedLocales() {
+		$journalDao =& DAORegistry::getDAO('JournalDAO');
+		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
+		$result =& $journalDao->retrieve(
+			'SELECT	j.journal_id,
+				j.primary_locale
+			FROM	journals j
+				LEFT JOIN journal_settings js ON (js.journal_id = j.journal_id AND js.setting_name = ?)
+			WHERE	js.setting_name IS NULL',
+			array('supportedLocales')
+		);
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+			$journalSettingsDao->updateSetting(
+				$row['journal_id'],
+				'supportedLocales',
+				array($row['primary_locale']),
+				'object',
+				false
+			);
+			$result->MoveNext();
+		}
+		$result->Close();
+		unset($result);
+		return true;
+	}
+
+	/**
 	 * For 2.2.1 upgrade: Replace "payPerView" to "purchaseArticle" in settings. 
 	 * @return boolean
 	 */

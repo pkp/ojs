@@ -108,7 +108,6 @@
 		<code function="migratePublisher" />
 		<code function="installBlockPlugins" />
 		<code function="setGalleyLocales" />
-		<code function="clearDataCache" />
 		<code function="addSubscriptionIPRanges" />
 		<note file="release-notes/README-2.2.0" />
 	</upgrade>
@@ -118,4 +117,9 @@
 		<data file="upgrade/2.2.0_usersettings2.xml" />
 	</upgrade>
 
+	<upgrade minversion="2.0.0.0" maxversion="2.2.0.0">
+		<!-- Fix bug #3321 (supportedLocales setting maybe missing) -->
+		<code function="ensureSupportedLocales" />
+		<code function="clearDataCache" />
+	</upgrade>
 </install>
