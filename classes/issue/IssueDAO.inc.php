@@ -536,14 +536,18 @@ class IssueDAO extends DAO {
 
 		for ($i=1; !$result->EOF; $i++) {
 			list($issueId) = $result->fields;
-			if ($this->update(
-				'UPDATE custom_issue_orders SET seq = ? WHERE issue_id = ? AND journal_id = ?',
-				array($i, $issueId, $journalId)
-			) == 0) {
+			$resultB =& $this->query('SELECT issue_id FROM custom_issue_orders WHERE journal_id=? AND issue_id=?', array($journalId, $issueId));
+			if (!$resultB->EOF()) {
+				$this->update(
+					'UPDATE custom_issue_orders SET seq = ? WHERE issue_id = ? AND journal_id = ?',
+					array($i, $issueId, $journalId)
+				);
+			} else {
 				// This entry is missing. Create it.
 				$this->insertCustomIssueOrder($journalId, $issueId, $i);
 			}
-
+			$resultB->Close();
+			unset($resultB);
 			$result->moveNext();
 		}
 
@@ -631,10 +635,18 @@ class IssueDAO extends DAO {
 	 * @param $up boolean Whether we're moving the section up or down
 	 */
 	function moveCustomIssueOrder($journalId, $issueId, $newPos, $up) {
-		$this->update(
-			'UPDATE custom_issue_orders SET seq = ? ' . ($up?'-':'+') . ' 0.5 WHERE journal_id = ? AND issue_id = ?',
-			array($newPos, $journalId, $issueId)
-		);
+		$result =& $this->query('SELECT issue_id FROM custom_issue_orders WHERE journal_id=? AND issue_id=?', array($journalId, $issueId));
+		if (!$result->EOF()) {
+			$this->update(
+				'UPDATE custom_issue_orders SET seq = ? ' . ($up?'-':'+') . ' 0.5 WHERE journal_id = ? AND issue_id = ?',
+				array($newPos, $journalId, $issueId)
+			);
+		} else {
+			// This entry is missing. Create it.
+			$this->insertCustomIssueOrder($journalId, $issueId, $newPos + ($up?-0.5:0.5));
+		}
+		$result->Close();
+		unset($result);
 		$this->resequenceCustomIssueOrders($journalId);
 	}
 }
