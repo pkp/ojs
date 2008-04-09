@@ -124,8 +124,9 @@ class OAIDAO extends DAO {
 		$result =& $this->retrieve(
 			'SELECT	pa.*,
 				a.article_id,
-				i.issue_id
-				s.section_id,
+				i.issue_id,
+				j.journal_id,
+				s.section_id
 			FROM	published_articles pa,
 				issues i,
 				journals j,
