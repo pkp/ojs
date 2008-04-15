@@ -33,6 +33,7 @@
 	<table width="100%">
 		<tr>
 			<td>&nbsp;</td>
+		</tr>
 		<tr>
 			<td align="right"><a href="{url page="announcement"}">{translate key="announcement.moreAnnouncements"}</a></td>
 		</tr>
