@@ -116,7 +116,7 @@ class LocaleFile {
 	 * @param $filename string Filename to locale XML to load
 	 * @param array
 	 */
-	function load($filename) {
+	function &load($filename) {
 		$localeData = array();
 
 		// Reload localization XML file

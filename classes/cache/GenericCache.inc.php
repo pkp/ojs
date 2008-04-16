@@ -83,7 +83,7 @@ class GenericCache {
 	 * by subclasses.
 	 * @param $array array of id -> value pairs
 	 */
-	function setEntireCache($contents) {
+	function setEntireCache(&$contents) {
 		$this->flush();
 		foreach ($contents as $id => $value) {
 			$this->setCache($id, $value);
