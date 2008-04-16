@@ -188,7 +188,7 @@
 		<tr valign="top">
 			<td class="label">{translate key="reviewer.article.recommendation"}</td>
 			<td>
-				{if $reviewAssignment->getRecommendation()}
+				{if $reviewAssignment->getRecommendation() !== null && $reviewAssignment->getRecommendation() !== ''}
 					{assign var="recommendation" value=$reviewAssignment->getRecommendation()}
 					{translate key=$reviewerRecommendationOptions.$recommendation}
 					&nbsp;&nbsp;{$reviewAssignment->getDateCompleted()|date_format:$dateFormatShort}
@@ -249,7 +249,7 @@
 		</tr>
 	{/if}
 
-	{if (!$reviewAssignment->getRecommendation() || !$reviewAssignment->getDateConfirmed()) && $reviewAssignment->getDateNotified() && !$reviewAssignment->getDeclined()}
+	{if (($reviewAssignment->getRecommendation() === null || $reviewAssignment->getRecommendation() === '') || !$reviewAssignment->getDateConfirmed()) && $reviewAssignment->getDateNotified() && !$reviewAssignment->getDeclined()}
 		<tr valign="top">
 			<td class="label">{translate key="reviewer.article.editorToEnter"}</td>
 			<td>

@@ -37,7 +37,7 @@ class HelpMappingFile {
 
 			// Check to see if the cache info is outdated.
 			$cacheTime = $this->cache->getCacheTime();
-			if ($cacheTime !== null && $cacheTime < filemtime($this->filename)) {
+			if ($cacheTime !== null && file_exists($this->filename) && $cacheTime < filemtime($this->filename)) {
 				// The cached data is out of date.
 				$this->cache->flush();
 			}

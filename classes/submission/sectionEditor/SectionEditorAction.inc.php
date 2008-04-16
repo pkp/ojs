@@ -723,7 +723,7 @@ class SectionEditorAction extends Action {
 			// Now, reassign all reviewers that submitted a review for this new round of reviews.
 			$previousRound = $sectionEditorSubmission->getCurrentRound() - 1;
 			foreach ($sectionEditorSubmission->getReviewAssignments($previousRound) as $reviewAssignment) {
-				if ($reviewAssignment->getRecommendation() != null) {
+				if ($reviewAssignment->getRecommendation() !== null && $reviewAssignment->getRecommendation() !== '') {
 					// Then this reviewer submitted a review.
 					SectionEditorAction::addReviewer($sectionEditorSubmission, $reviewAssignment->getReviewerId(), $sectionEditorSubmission->getCurrentRound());
 				}
@@ -2032,7 +2032,7 @@ class SectionEditorAction extends Action {
 		import('file.ArticleFileManager');
 		$articleFileManager = &new ArticleFileManager($reviewAssignment->getArticleId());
 		// Only upload the file if the reviewer has yet to submit a recommendation
-		if ($reviewAssignment->getRecommendation() == null && !$reviewAssignment->getCancelled()) {
+		if (($reviewAssignment->getRecommendation() === null || $reviewAssignment->getRecommendation() === '') && !$reviewAssignment->getCancelled()) {
 			$fileName = 'upload';
 			if ($articleFileManager->uploadedFileExists($fileName)) {
 				if ($reviewAssignment->getReviewerFileId() != null) {

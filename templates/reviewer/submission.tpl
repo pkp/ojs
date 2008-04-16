@@ -257,7 +257,7 @@ function confirmSubmissionCheck() {
 				<td class="value" width="70%">
 					<a href="{url op="downloadFile" path=$reviewId|to_array:$articleId:$reviewerFile->getFileId():$reviewerFile->getRevision()}" class="file">{$reviewerFile->getFileName()|escape}</a>
 					{$reviewerFile->getDateModified()|date_format:$dateFormatShort}
-					{if (!$submission->getRecommendation()) && (!$submission->getCancelled())}
+					{if ($submission->getRecommendation() === null || $submission->getRecommendation() === '') && (!$submission->getCancelled())}
 						<a class="action" href="{url op="deleteReviewerVersion" path=$reviewId|to_array:$reviewerFile->getFileId():$reviewerFile->getRevision()}">{translate key="common.delete"}</a>
 					{/if}
 				</td>
@@ -273,7 +273,7 @@ function confirmSubmissionCheck() {
 				</tr>
 			{/foreach}
 		</table>
-		{if not $submission->getRecommendation()}
+		{if $submission->getRecommendation() === null || $submission->getRecommendation() === ''}
 			<form method="post" action="{url op="uploadReviewerVersion"}" enctype="multipart/form-data">
 				<input type="hidden" name="reviewId" value="{$reviewId|escape}" />
 				<input type="file" name="upload" {if not $confirmedStatus or $declined or $submission->getCancelled()}disabled="disabled"{/if} class="uploadField" />
@@ -302,7 +302,7 @@ function confirmSubmissionCheck() {
 			<tr valign="top">
 				<td class="label" width="30%">{translate key="submission.recommendation"}</td>
 				<td class="value" width="70%">
-				{if $submission->getRecommendation()}
+				{if $submission->getRecommendation() !== null && $submission->getRecommendation() !== ''}
 					{assign var="recommendation" value=$submission->getRecommendation()}
 					<b>{translate key=$reviewerRecommendationOptions.$recommendation}</b>&nbsp;&nbsp;
 					{$submission->getDateCompleted()|date_format:$dateFormatShort}

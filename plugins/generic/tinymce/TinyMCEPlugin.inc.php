@@ -128,8 +128,10 @@ class TinyMCEPlugin extends GenericPlugin {
 						$fields[] = 'reviewPolicy';
 						$fields[] = 'reviewGuidelines';
 						$fields[] = 'privacyStatement';
-						$count = max(1, count($templateMgr->get_template_vars('customAboutItems')));
+						$customAboutItems = $templateMgr->get_template_vars('customAboutItems');
+						$count = max(1, isset($customAboutItems[$formLocale])?count($customAboutItems[$formLocale]):0);
 						for ($i=0; $i<$count; $i++) {
+							// 1 extra in case of new field
 							$fields[] = "customAboutItems-$i-content";
 						}
 						$fields[] = 'lockssLicense';

@@ -157,6 +157,7 @@ input.defaultButton {
 
 #main {
 	padding: 0.5em 0em 2em 0em;
+	overflow: auto;
 }
 
 #main h2 {

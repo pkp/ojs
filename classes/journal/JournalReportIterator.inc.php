@@ -184,7 +184,7 @@ class JournalReportIterator extends DBRowIterator {
 					$ret['scores'][$reviewerIndex] = Locale::translate($ratingOptions[$rating]);
 				}
 				$recommendation = $reviewAssignment->getRecommendation();
-				if ($recommendation != '') {
+				if ($recommendation !== '' && $recommendation !== null) {
 					$recommendationOptions =& $reviewAssignment->getReviewerRecommendationOptions();
 					$ret['recommendations'][$reviewerIndex] = Locale::translate($recommendationOptions[$recommendation]);
 				}
