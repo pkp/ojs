@@ -1537,7 +1537,7 @@ Activas es el número de revisiones que en este momento están consideradas como
 	<message key="editor.article.assignEditor">Añadir editor/a</message>
 	<message key="editor.article.selectDecision">Seleccionar decisión</message>
 	<message key="editor.article.decision.accept">Aceptar envíos</message>
-	<message key="editor.article.decision.pendingRevisions">No se necesitan revisiones</message>
+	<message key="editor.article.decision.pendingRevisions">Se necesitan revisiones</message>
 	<message key="editor.article.decision.resubmit">Reenviar para revisión</message>
 	<message key="editor.article.decision.decline">Rechazar envío</message>
 	<message key="editor.article.selectLayoutEditor">Seleccionar editor/a de maquetación</message>
