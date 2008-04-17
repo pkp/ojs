@@ -361,7 +361,12 @@ class Upgrade extends Installer {
 			foreach (array('note' => 'publisherNote', 'institution' => 'publisherInstitution', 'url' => 'publisherUrl') as $old => $new) {
 				if (isset($publisher[$old])) $journalSettingsDao->update(
 					'INSERT INTO journal_settings (journal_id, setting_name, setting_value, setting_type, locale) VALUES (?, ?, ?, ?, ?)',
-					array($row['journal_id'], $new, $publisher[$old], 'string', $row['primary_locale'])
+					array(
+						$row['journal_id'],
+						$new, $publisher[$old],
+						'string',
+						($new == 'publisherNote'?$row['primary_locale']:'')
+					)
 				);
 			}
 
