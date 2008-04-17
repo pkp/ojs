@@ -1399,6 +1399,9 @@ class ImportOJS1 {
 				$roleId = ROLE_ID_EDITOR;
 			}
 
+			// Replace <br /> in comment text with newline
+			$curComment = str_replace("<br />", "\n", $row['chComment']);
+
 			$articleComment = &new ArticleComment();
 			$articleComment->setCommentType($commentTypes[$row['chType']]);
 			$articleComment->setRoleId($roleId);
@@ -1406,7 +1409,7 @@ class ImportOJS1 {
 			$articleComment->setAssocId($assocId);
 			$articleComment->setAuthorId($authorId);
 			$articleComment->setCommentTitle(''); // Not applicable to 1.x
-			$articleComment->setComments(Core::cleanVar($row['chComment']));
+			$articleComment->setComments(Core::cleanVar($curComment));
 			$articleComment->setDatePosted($row['dtDateCreated']);
 			$articleComment->setDateModified($row['dtDateCreated']);
 			$articleComment->setViewable(0);
