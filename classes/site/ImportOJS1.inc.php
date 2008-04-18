@@ -1381,16 +1381,13 @@ class ImportOJS1 {
 				default:
 					$authorId = $articleUsers[$this->articleMap[$row['fkArticleID']]]['editorId'];
 					$roleId = ROLE_ID_EDITOR;
-					break;
-			}
 
-			// Check if in fact this comment is a review comment. See Bug #3387.
-			switch ($row['chType']) {
-				case 'reviewer':
-					$authorId = @$articleUsers[$this->articleMap[$row['fkArticleID']]]['reviewerId'][$row['nOrder']];
-					$roleId = ROLE_ID_REVIEWER;
-					$assocId = @$articleUsers[$this->articleMap[$row['fkArticleID']]]['reviewId'][$row['nOrder']];
-					if (!isset($assocId)) $assocId = $this->articleMap[$row['fkArticleID']];
+					// Check if in fact this comment is a review comment by the editor. See Bug #3387.
+					if ($row['chType'] == 'reviewer') {
+						$assocId = @$articleUsers[$this->articleMap[$row['fkArticleID']]]['reviewId'][$row['nOrder']];
+						if (!isset($assocId)) $assocId = $this->articleMap[$row['fkArticleID']];
+					}
+					break;
 			}
 
 			if (!isset($authorId)) {
