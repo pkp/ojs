@@ -78,9 +78,9 @@
 	{assign var=galleys value=$article->getLocalizedGalleys()}
 	{if $galleys && $subscriptionRequired && $showGalleyLinks}
 		<div id="accessKey">
-			<img src="{$baseUrl}/templates/images/icons/fulltext_open_medium.png">
+			<img src="{$baseUrl}/templates/images/icons/fulltext_open_medium.gif">
 			{translate key="reader.openAccess"}&nbsp;
-			<img src="{$baseUrl}/templates/images/icons/fulltext_restricted_medium.png">
+			<img src="{$baseUrl}/templates/images/icons/fulltext_restricted_medium.gif">
 			{if $purchaseArticleEnabled}
 				{translate key="reader.subscriptionOrFeeAccess"}
 			{else}
@@ -111,17 +111,17 @@
 				<a href="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)|to_array:$galley->getGalleyId()}" class="file" target="_parent">{$galley->getGalleyLabel()|escape}</a>
 				{if $subscriptionRequired && $showGalleyLinks && $restrictOnlyPdf}
 					{if $article->getAccessStatus() || !$galley->isPdfGalley()}	
-						<img class="accessLogo" src="{$baseUrl}/templates/images/icons/fulltext_open_medium.png">
+						<img class="accessLogo" src="{$baseUrl}/templates/images/icons/fulltext_open_medium.gif">
 					{else}
-						<img class="accessLogo" src="{$baseUrl}/templates/images/icons/fulltext_restricted_medium.png">
+						<img class="accessLogo" src="{$baseUrl}/templates/images/icons/fulltext_restricted_medium.gif">
 					{/if}
 				{/if}
 			{/foreach}
 			{if $subscriptionRequired && $showGalleyLinks && !$restrictOnlyPdf}
 				{if $article->getAccessStatus()}
-					<img class="accessLogo" src="{$baseUrl}/templates/images/icons/fulltext_open_medium.png">
+					<img class="accessLogo" src="{$baseUrl}/templates/images/icons/fulltext_open_medium.gif">
 				{else}
-					<img class="accessLogo" src="{$baseUrl}/templates/images/icons/fulltext_restricted_medium.png">
+					<img class="accessLogo" src="{$baseUrl}/templates/images/icons/fulltext_restricted_medium.gif">
 				{/if}
 			{/if}					
 		{else}

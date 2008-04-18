@@ -36,17 +36,17 @@
 				<a href="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)|to_array:$galley->getGalleyId()}" class="file">{$galley->getGalleyLabel()|escape}</a>
 				{if $subscriptionRequired && $showGalleyLinks && $restrictOnlyPdf}
 					{if $article->getAccessStatus() || !$galley->isPdfGalley()}	
-						<img class="accessLogo" src="{$baseUrl}/templates/images/icons/fulltext_open_medium.png">
+						<img class="accessLogo" src="{$baseUrl}/templates/images/icons/fulltext_open_medium.gif">
 					{else}
-						<img class="accessLogo" src="{$baseUrl}/templates/images/icons/fulltext_restricted_medium.png">
+						<img class="accessLogo" src="{$baseUrl}/templates/images/icons/fulltext_restricted_medium.gif">
 					{/if}
 				{/if}
 			{/foreach}
 			{if $subscriptionRequired && $showGalleyLinks && !$restrictOnlyPdf}
 				{if $article->getAccessStatus()}
-					<img class="accessLogo" src="{$baseUrl}/templates/images/icons/fulltext_open_medium.png">
+					<img class="accessLogo" src="{$baseUrl}/templates/images/icons/fulltext_open_medium.gif">
 				{else}
-					<img class="accessLogo" src="{$baseUrl}/templates/images/icons/fulltext_restricted_medium.png">
+					<img class="accessLogo" src="{$baseUrl}/templates/images/icons/fulltext_restricted_medium.gif">
 				{/if}
 			{/if}				
 		{/if}

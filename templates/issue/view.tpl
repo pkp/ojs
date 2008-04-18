@@ -11,9 +11,9 @@
  *}
 {if $subscriptionRequired && $showGalleyLinks && $showToc}
 	<div id="accessKey">
-		<img src="{$baseUrl}/templates/images/icons/fulltext_open_medium.png">
+		<img src="{$baseUrl}/templates/images/icons/fulltext_open_medium.gif">
 		{translate key="reader.openAccess"}&nbsp;
-		<img src="{$baseUrl}/templates/images/icons/fulltext_restricted_medium.png">
+		<img src="{$baseUrl}/templates/images/icons/fulltext_restricted_medium.gif">
 		{if $purchaseArticleEnabled}
 			{translate key="reader.subscriptionOrFeeAccess"}
 		{else}
