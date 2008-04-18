@@ -10,16 +10,16 @@
  * $Id$
  *}
 {if $subscriptionRequired && $showGalleyLinks && $showToc}
-	<img src="{$baseUrl}/templates/images/icons/fulltext_open_medium.png">
-	{translate key="reader.openAccess"}&nbsp;
-	<img src="{$baseUrl}/templates/images/icons/fulltext_restricted_medium.png">
-	{if $purchaseArticleEnabled}
-		{translate key="reader.subscriptionOrFeeAccess"}
-	{else}
-		{translate key="reader.subscriptionAccess"}
-	{/if}
-	<br />
-	<br />
+	<div id="accessKey">
+		<img src="{$baseUrl}/templates/images/icons/fulltext_open_medium.png">
+		{translate key="reader.openAccess"}&nbsp;
+		<img src="{$baseUrl}/templates/images/icons/fulltext_restricted_medium.png">
+		{if $purchaseArticleEnabled}
+			{translate key="reader.subscriptionOrFeeAccess"}
+		{else}
+			{translate key="reader.subscriptionAccess"}
+		{/if}
+	</div>
 {/if}
 {if !$showToc && $issue}
 	{if $issueId}

@@ -43,6 +43,22 @@
 	border: none;
 }
 
+#content img.accessLogo {
+	display: inline;
+	margin: 0;
+	padding: 0;
+}
+
+#accessKey {
+	margin-bottom: 2em;
+}
+
+#accessKey img {
+	display: inline;
+	margin: 0;
+	padding: 0;
+}
+
 div.rtSeparator {
 	width: 100%;
 	padding: 0;

@@ -217,6 +217,12 @@ input.defaultButton {
 	font-size: 1em;
 }
 
+#content img.accessLogo {
+	display: inline;
+	margin: 0;
+	padding: 0;
+}
+
 
 /**
  * Navigation bar
@@ -250,6 +256,20 @@ input.defaultButton {
 
 #breadcrumb a.current {
 	font-weight: bold;
+}
+
+
+/**
+ * Key for access logos 
+ */
+#accessKey {
+	margin-bottom: 2em;
+}
+
+#accessKey img {
+	display: inline;
+	margin: 0;
+	padding: 0;
 }
 
 

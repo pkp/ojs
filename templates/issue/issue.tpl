@@ -36,17 +36,17 @@
 				<a href="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)|to_array:$galley->getGalleyId()}" class="file">{$galley->getGalleyLabel()|escape}</a>
 				{if $subscriptionRequired && $showGalleyLinks && $restrictOnlyPdf}
 					{if $article->getAccessStatus() || !$galley->isPdfGalley()}	
-						<img src="{$baseUrl}/templates/images/icons/fulltext_open_medium.png">
+						<img class="accessLogo" src="{$baseUrl}/templates/images/icons/fulltext_open_medium.png">
 					{else}
-						<img src="{$baseUrl}/templates/images/icons/fulltext_restricted_medium.png">
+						<img class="accessLogo" src="{$baseUrl}/templates/images/icons/fulltext_restricted_medium.png">
 					{/if}
 				{/if}
 			{/foreach}
 			{if $subscriptionRequired && $showGalleyLinks && !$restrictOnlyPdf}
 				{if $article->getAccessStatus()}
-					<img src="{$baseUrl}/templates/images/icons/fulltext_open_medium.png">
+					<img class="accessLogo" src="{$baseUrl}/templates/images/icons/fulltext_open_medium.png">
 				{else}
-					<img src="{$baseUrl}/templates/images/icons/fulltext_restricted_medium.png">
+					<img class="accessLogo" src="{$baseUrl}/templates/images/icons/fulltext_restricted_medium.png">
 				{/if}
 			{/if}				
 		{/if}

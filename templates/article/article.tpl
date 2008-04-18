@@ -77,15 +77,16 @@
 {else}
 	{assign var=galleys value=$article->getLocalizedGalleys()}
 	{if $galleys && $subscriptionRequired && $showGalleyLinks}
-		<img src="{$baseUrl}/templates/images/icons/fulltext_open_medium.png">
-		{translate key="reader.openAccess"}&nbsp;
-		<img src="{$baseUrl}/templates/images/icons/fulltext_restricted_medium.png">
-		{if $purchaseArticleEnabled}
-			{translate key="reader.subscriptionOrFeeAccess"}
-		{else}
-			{translate key="reader.subscriptionAccess"}
-		{/if}
-	<br />
+		<div id="accessKey">
+			<img src="{$baseUrl}/templates/images/icons/fulltext_open_medium.png">
+			{translate key="reader.openAccess"}&nbsp;
+			<img src="{$baseUrl}/templates/images/icons/fulltext_restricted_medium.png">
+			{if $purchaseArticleEnabled}
+				{translate key="reader.subscriptionOrFeeAccess"}
+			{else}
+				{translate key="reader.subscriptionAccess"}
+			{/if}
+		</div>
 	{/if}
 	<h3>{$article->getArticleTitle()|strip_unsafe_html}</h3>
 	<div><i>{$article->getAuthorString()|escape}</i></div>
@@ -110,17 +111,17 @@
 				<a href="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)|to_array:$galley->getGalleyId()}" class="file" target="_parent">{$galley->getGalleyLabel()|escape}</a>
 				{if $subscriptionRequired && $showGalleyLinks && $restrictOnlyPdf}
 					{if $article->getAccessStatus() || !$galley->isPdfGalley()}	
-						<img src="{$baseUrl}/templates/images/icons/fulltext_open_medium.png">
+						<img class="accessLogo" src="{$baseUrl}/templates/images/icons/fulltext_open_medium.png">
 					{else}
-						<img src="{$baseUrl}/templates/images/icons/fulltext_restricted_medium.png">
+						<img class="accessLogo" src="{$baseUrl}/templates/images/icons/fulltext_restricted_medium.png">
 					{/if}
 				{/if}
 			{/foreach}
 			{if $subscriptionRequired && $showGalleyLinks && !$restrictOnlyPdf}
 				{if $article->getAccessStatus()}
-					<img src="{$baseUrl}/templates/images/icons/fulltext_open_medium.png">
+					<img class="accessLogo" src="{$baseUrl}/templates/images/icons/fulltext_open_medium.png">
 				{else}
-					<img src="{$baseUrl}/templates/images/icons/fulltext_restricted_medium.png">
+					<img class="accessLogo" src="{$baseUrl}/templates/images/icons/fulltext_restricted_medium.png">
 				{/if}
 			{/if}					
 		{else}
