@@ -352,7 +352,13 @@ class SectionDAO extends DAO {
 
 		$sectionsIterator =& $this->getJournalSections($journalId);
 		while (($section =& $sectionsIterator->next())) {
-			$sections[$section->getSectionId()] = $section->getSectionTitle();
+			if ($submittableOnly) {
+				if (!$section->getEditorRestricted()) {
+					$sections[$section->getSectionId()] = $section->getSectionTitle();
+				}
+			} else {
+				$sections[$section->getSectionId()] = $section->getSectionTitle();
+			}
 			unset($section);
 		}
 
