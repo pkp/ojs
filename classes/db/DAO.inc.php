@@ -186,7 +186,8 @@ class DAO {
 	 * @param $keyCols array Array of column names that are keys
 	 */
 	function replace($table, $arrFields, $keyCols) {
-		$this->_dataSource->Replace($table, $arrFields, $keyCols, true);
+		$arrFields = array_map(array($this->_dataSource, 'qstr'), $arrFields);
+		$this->_dataSource->Replace($table, $arrFields, $keyCols, false);
 	}
 
 	/**
