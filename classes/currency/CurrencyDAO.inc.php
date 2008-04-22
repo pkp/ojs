@@ -82,7 +82,8 @@ class CurrencyDAO extends DAO {
 	 */
 	function &getCurrencyByAlphaCode($codeAlpha) {
 		$cache =& $this->_getCache();
-		return $this->_returnCurrencyFromRow($codeAlpha, $cache->get($codeAlpha));
+		$returner =& $this->_returnCurrencyFromRow($codeAlpha, $cache->get($codeAlpha));
+		return $returner;
 	}
 
 	/**
