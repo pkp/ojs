@@ -219,7 +219,7 @@ class String {
 
 		// Fall back on an external "file" tool
 		$f = escapeshellarg($filename);
-		$result = trim(`file -bi $f`);
+		$result = trim(`file --brief --mime $f`);
 		// Make sure we just return the mime type.
 		if (($i = strpos($result, ';')) !== false) {
 			$result = trim(substr($result, 0, $i));

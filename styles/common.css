@@ -216,12 +216,6 @@ input.defaultButton {
 	font-size: 1em;
 }
 
-#content img.accessLogo {
-	display: inline;
-	margin: 0;
-	padding: 0;
-}
-
 
 /**
  * Navigation bar
@@ -259,20 +253,6 @@ input.defaultButton {
 
 
 /**
- * Key for access logos 
- */
-#accessKey {
-	margin-bottom: 2em;
-}
-
-#accessKey img {
-	display: inline;
-	margin: 0;
-	padding: 0;
-}
-
-
-/**
  * Homepage image
  */
 
@@ -293,16 +273,23 @@ input.defaultButton {
 	border: 0;
 }
 
-#issueCoverImage a:link {
+.issueCoverImage img {
+	border: 0;
+	float: left;
+	width: 100px;
+	margin: 1em 1em 1em 0;
 }
 
-#issueCoverImage a:active {
+#issueCoverImage a:link, .issueCoverImage a:link {
 }
 
-#issueCoverImage a:visited {
+#issueCoverImage a:active, .issueCoverImage a:active {
 }
 
-#issueCoverImage a:hover {
+#issueCoverImage a:visited, .issueCoverImage a:visited {
+}
+
+#issueCoverImage a:hover, .issueCoverImage a:hover {
 }
 
 

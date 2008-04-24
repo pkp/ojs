@@ -267,7 +267,14 @@ class IssueHandler extends Handler {
 
 		$publishedIssuesIterator = $issueDao->getPublishedIssues($journal->getJournalId(), $rangeInfo);
 
+		import('file.PublicFileManager');
+		$publicFileManager = &new PublicFileManager();
+		$coverPagePath = Request::getBaseUrl() . '/';
+		$coverPagePath .= $publicFileManager->getJournalFilesPath($journal->getJournalId()) . '/';
+
 		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign('coverPagePath', $coverPagePath);
+		$templateMgr->assign('locale', Locale::getLocale());
 		$templateMgr->assign_by_ref('issues', $publishedIssuesIterator);
 		$templateMgr->assign('helpTopicId', 'user.currentAndArchives');
 		$templateMgr->display('issue/archive.tpl');
