@@ -188,7 +188,7 @@ class CmsSettingsForm extends Form {
 			document_base_url : "'. Request::getBaseUrl() .'/'.$publicFileManager->getJournalFilesPath($journalId) .'/", 
 			theme : "advanced",
 			theme_advanced_layout_manager : "SimpleLayout",
-			theme_advanced_buttons1 : "save, formatselect, bold, italic, underline, justifyleft, justifycenter, justifyright, justifyfull, bullist, numlist, outdent, indent, code",
+			theme_advanced_buttons1 : "save, bold, italic, underline, justifyleft, justifycenter, justifyright, justifyfull, bullist, numlist, outdent, indent, code",
 			theme_advanced_buttons2 : "h1, h2, h3, h4, image, link, unlink",
 			theme_advanced_buttons3 : "tablecontrols",
 			extended_valid_elements : "span[*]"

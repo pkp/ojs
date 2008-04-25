@@ -40,17 +40,6 @@ class ContentManager {
 		$lang = Locale::getLocale();
 		$this->filePath = $journalFileManager->filesDir.'content/'.$lang.'/content.xhtml';
 
-		// if that doesn't work, use the journal's primary locale 
-		// and if that is not defined, then use use en_US		
-		if ( !$journalFileManager->fileExists($this->filePath) ) {
-			if ( $journal->getPrimaryLocale() ) 
-				$lang = $journal->getPrimaryLocale();
-			else
-				$lang = 'en_US';
-
-			$this->filePath = $journalFileManager->filesDir.'content/'.$lang.'/content.xhtml';
-		}
-
 		$this->loadContents();
 	} 
 
@@ -58,9 +47,21 @@ class ContentManager {
 		$journal = &Request::getJournal();
 		$journalFileManager =& new JournalFileManager($journal);
 
+		$filePath = $this->filePath;
+		// if that doesn't work, use the journal's primary locale 
+		// and if that is not defined, then use use en_US		
+		if ( !$journalFileManager->fileExists($this->filePath) ) {
+			if ( $journal->getPrimaryLocale() ) 
+				$lang = $journal->getPrimaryLocale();
+			else
+				$lang = 'en_US';
+				
+			$filePath = $journalFileManager->filesDir.'content/'.$lang.'/content.xhtml';
+		}
+
 		// get the current file contents into memory and strip out
 		// characters for easier regex'ing
-		$this->fileContent = $journalFileManager->readFile($this->filePath );		
+		$this->fileContent = $journalFileManager->readFile($filePath );		
 		$this->fileContent = preg_replace("/(\r\n|\r|\n)+/","",$this->fileContent);
 
 		// grab the first heading so we can default to it
