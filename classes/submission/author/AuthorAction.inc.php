@@ -524,7 +524,7 @@ class AuthorAction extends Action {
 
 			// Check editor version
 			$editorFiles = $submission->getEditorFileRevisions($article->getCurrentRound());
-			foreach ($editorFiles as $editorFile) {
+			if (is_array($editorFiles)) foreach ($editorFiles as $editorFile) {
 				if ($editorFile->getFileId() == $fileId) {
 					$canDownload = true;
 				}
