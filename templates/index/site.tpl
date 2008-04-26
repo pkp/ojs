@@ -19,13 +19,26 @@
 
 {iterate from=journals item=journal}
 
-<h3>{$journal->getJournalTitle()|escape}</h3>
+	{assign var="displayHomePageImage" value=$journal->getLocalizedSetting('homepageImage')}
+	{assign var="displayHomePageLogo" value=$journal->getJournalPageHeaderLogo(true)}
+	{assign var="displayPageHeaderLogo" value=$journal->getJournalPageHeaderLogo()}
 
-{if $journal->getJournalDescription()}
-<p>{$journal->getJournalDescription()|nl2br}</p>
-{/if}
+	<div style="clear:left;">
+	{if $displayHomePageImage && is_array($displayHomePageImage)}
+		<div class="homepageImage"><img src="{$journalFilesPath}{$journal->getJournalId()}/{$displayHomePageImage.uploadName|escape:"url"}" {if $displayPageHeaderLogo.altText != ''}alt="{$displayPageHeaderLogo.altText|escape}"{else}alt="{translate key="common.pageHeaderLogo.altText"}"{/if} /></div>
+	{elseif $displayHomePageLogo && is_array($displayHomePageLogo)}
+		<div class="homepageImage"><img src="{$journalFilesPath}{$journal->getJournalId()}/{$displayHomePageLogo.uploadName|escape:"url"}" {if $displayPageHeaderLogo.altText != ''}alt="{$displayPageHeaderLogo.altText|escape}"{else}alt="{translate key="common.pageHeaderLogo.altText"}"{/if} /></div>
+	{elseif $displayPageHeaderLogo && is_array($displayPageHeaderLogo)}
+		<div class="homepageImage"><img src="{$journalFilesPath}{$journal->getJournalId()}/{$displayPageHeaderLogo.uploadName|escape:"url"}" {if $displayPageHeaderLogo.altText != ''}alt="{$displayPageHeaderLogo.altText|escape}"{else}alt="{translate key="common.pageHeaderLogo.altText"}"{/if} /></div>
+	{/if}
+	</div>
 
-<p><a href="{url journal=$journal->getPath()}" class="action">{translate key="site.journalView"}</a> | <a href="{url journal=$journal->getPath() page="issue" op="current"}" class="action">{translate key="site.journalCurrent"}</a> | <a href="{url journal=$journal->getPath() page="user" op="register"}" class="action">{translate key="site.journalRegister"}</a></p>
+	<h3>{$journal->getJournalTitle()|escape}</h3>
+	{if $journal->getJournalDescription()}
+		<p>{$journal->getJournalDescription()|nl2br}</p>
+	{/if}
+
+	<p><a href="{url journal=$journal->getPath()}" class="action">{translate key="site.journalView"}</a> | <a href="{url journal=$journal->getPath() page="issue" op="current"}" class="action">{translate key="site.journalCurrent"}</a> | <a href="{url journal=$journal->getPath() page="user" op="register"}" class="action">{translate key="site.journalRegister"}</a></p>
 {/iterate}
 
 {include file="common/footer.tpl"}

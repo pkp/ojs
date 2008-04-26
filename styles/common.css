@@ -263,6 +263,15 @@ input.defaultButton {
 	text-align: center;
 }
 
+.homepageImage img {
+	margin: 0 auto;
+	border: 0;
+	float: left;
+	width: 100px;
+	margin: 1em 1em 1em 0;
+	text-align: center;
+}
+
 
 /**
  * Issue cover image
