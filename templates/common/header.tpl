@@ -19,6 +19,7 @@
 	<title>{$pageTitleTranslated}</title>
 	<meta name="description" content="{$metaSearchDescription|escape}" />
 	<meta name="keywords" content="{$metaSearchKeywords|escape}" />
+	<meta name="generator" content="{translate key="common.openJournalSystems"} {$currentVersionString|escape}" />
 	{$metaCustomHeaders}
 
 	<link rel="stylesheet" href="{$baseUrl}/styles/common.css" type="text/css" />
