@@ -33,5 +33,5 @@
 	<message key="plugins.gateways.googleScholar.errors.noPublisherName">O nome da fonte é obrigatório.</message>
 	<message key="plugins.gateways.googleScholar.errors.noContacts">Pelo menos um email para contato deve ser informado. Todos os emails informados devem ser válidos.</message>
 	<message key="plugins.gateways.googleScholar.errors.noIssn">O ISSN não foi informado. Verifique as Configurações da Revista, no Passo 1.</message>
-	<message key="plugins.gateways.googleScholar.errors.errorMessage">Não foi possível exportar dados para o Google Acadêmico. O plugin de comunicação Google Acadêmico deve estar configurado corretamente. Para maiores informações, veja a função "Verificar Dados" do Editor Gerente.</message>
+	<message key="plugins.gateways.googleScholar.errors.errorMessage">Não foi possível exportar dados para o Google Acadêmico. O plugin de comunicação Google Acadêmico deve estar configurado corretamente. Para maiores informações, veja a função "Verificar Dados" do Editor-Gerente.</message>
 </locale>

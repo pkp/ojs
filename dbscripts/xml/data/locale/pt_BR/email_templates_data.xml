@@ -258,7 +258,7 @@ login: {$editorUsername}
 
 Agradecendo desde já sua atenção,
 {$editorialContactSignature}</field>
-			<field name="description">Mensagem notifica o Editor de Seção que uma nova tarefa de acompanhamento de submissão lhe foi designada pelo Editor Gerente. Oferece informações sobre a submissão e como acessar o sistema.</field>
+			<field name="description">Mensagem notifica o Editor de Seção que uma nova tarefa de acompanhamento de submissão lhe foi designada pelo Editor-Gerente. Oferece informações sobre a submissão e como acessar o sistema.</field>
 		</row>
 
 

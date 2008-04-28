@@ -37,7 +37,7 @@
 	<message key="plugins.generic.counter.1a.dateRun">Data da execução:</message>
 	<message key="plugins.generic.counter.1a.publisher">Editora</message>
 	<message key="plugins.generic.counter.1a.platform">Plataforma</message>
-	<message key="plugins.generic.counter.1a.printIssn">ISSN (versão Impressa)</message>
+	<message key="plugins.generic.counter.1a.printIssn">ISSN (Impresso)</message>
 	<message key="plugins.generic.counter.1a.onlineIssn">ISSN (Eletrônico)</message>
 	<message key="plugins.generic.counter.1a.ytdTotal">Total YTD</message>
 	<message key="plugins.generic.counter.1a.ytdHtml">HTML YTD</message>

@@ -447,7 +447,7 @@
 	
 	<!-- Roles -->
 	<message key="user.role.siteAdmin">Administrador do Portal</message>
-	<message key="user.role.manager">Editor Gerente da revista</message>
+	<message key="user.role.manager">Editor-Gerente da revista</message>
 	<message key="user.role.editor">Editor</message>
 	<message key="user.role.sectionEditor">Editor de Seção</message>
 	<message key="user.role.layoutEditor">Editor de Layout</message>
@@ -687,7 +687,7 @@ Note que a interface OAI pode ser desativada para este portal nas configuraçõe
 	<message key="admin.journals.noneCreated">Nenhuma revista criada.</message>
 	<message key="admin.journals.confirmDelete">Deseja realmente excluir permanentemente esta revista e seu conteúdo?</message>
 	<message key="admin.journals.create">Criar Revista</message>
-	<message key="admin.journals.createInstructions">Seu cadastro como Editor Gerente da revista será automático. Após criação de uma revista, acesse-a como gerente e continue com as configurações da revista e cadastro de usuários.</message>
+	<message key="admin.journals.createInstructions">Seu cadastro como Editor-Gerente da revista será automático. Após criação de uma revista, acesse-a como gerente e continue com as configurações da revista e cadastro de usuários.</message>
 	<message key="admin.journals.urlWillBe">A URL da revista será: {$sampleUrl}</message>
 	<message key="admin.journals.form.titleRequired">Título obrigatório</message>
 	<message key="admin.journals.form.pathRequired">Caminho obrigatório.</message>
@@ -741,7 +741,7 @@ Note que a interface OAI pode ser desativada para este portal nas configuraçõe
 	<message key="manager.statistics.statistics.peerReviewed">Avaliados por Pares</message>
 	<message key="manager.statistics.statistics.count.accept">Aceito</message>
 	<message key="manager.statistics.statistics.count.decline">Rejeitado</message>
-	<message key="manager.statistics.statistics.count.revise">Submetidos novamente</message>
+	<message key="manager.statistics.statistics.count.revise">Submeter novamente</message>
 	<message key="manager.statistics.statistics.count.value">{$count} ({$percentage}%)</message>
 	<message key="manager.statistics.statistics.numIssues">Edições Publicadas</message>
 	<message key="manager.statistics.statistics.reviewers">Avaliadores</message>
@@ -832,7 +832,7 @@ Note que a interface OAI pode ser desativada para este portal nas configuraçõe
 	<message key="manager.setup.generalInformation">Informação Geral</message>
 	<message key="manager.setup.journalInitials">Sigla da Revista</message>
 	<message key="manager.setup.journalAbbreviation">Abreviatura da Revista</message>
-	<message key="manager.setup.printIssn">Print ISSN</message>
+	<message key="manager.setup.printIssn">ISSN (Impresso)</message>
 	<message key="manager.setup.onlineIssn">ISSN Eletrônico</message>
 	<message key="manager.setup.doiPrefix">Prefixo DOI</message>
 	<message key="manager.setup.doiPrefixDescription"><![CDATA[O Prefixo DOI (Digital Object Identifier) é controlado e oferecido por <a href="http://www.crossref.org" target="_new">CrossRef</a> e possui o formato 10.xxxx (ex.: 10.1234).]]></message>
@@ -844,7 +844,7 @@ Note que a interface OAI pode ser desativada para este portal nas configuraçõe
 	<message key="manager.setup.editorialReviewBoardDescription">A função do Comitê Editorial é definir as diretrizes, foco e público alvo da revista, definir o corpo editorial, e, pela reputação dos seus participantes, proporcionar à revista um posicionamento na área de atuação. O Comitê Avaliador tem uma função similar, porém ainda acompanha o processo de avaliação pelos pares. Os participantes do Comitê Avaliador não terão acesso à administração do sistema, mas estarão incluídos na lista de avaliadores.</message>
 	<message key="manager.setup.editorialMembers">Entre em Membros do Comitê para cadastrar pessoas no Comitê Editorial e/ou Avaliador. Pode ser realizado a qualquer tempo.</message>
 	<message key="manager.setup.principalContact">Contato Principal</message>
-	<message key="manager.setup.principalContactDescription">Esta função/posição, tratada como Editor Principal, Editor Gerente, ou Editor Administrativo, será listada na página da revista em Contato, junto com o Contato de Suporte Técnico.</message>
+	<message key="manager.setup.principalContactDescription">Esta função/posição, tratada como Editor Principal, Editor-Gerente, ou Editor Administrativo, será listada na página da revista em Contato, junto com o Contato de Suporte Técnico.</message>
 	<message key="manager.setup.technicalSupportContact">Contato de Suporte Técnico</message>
 	<message key="manager.setup.technicalSupportContactDescription">Esta pessoa será listada na página de Contato da revista, para conhecimento dos editores, autores e avaliadores, e deverá possuir conhecimento profundo de todas as características e funções do sistema, além das funções de cada ator. Sendo um sistema que necessita de pouca assistência técnica, esta pessoa poderá trabalhar meio período. Poderá haver ocasiões onde autores e avaliadores encontrem dificuldades com instruções, formatos de documentos, ou certificar-se que o sistema está constantemente atualizado e preservado (cópia de segurança) no servidor.</message>
 	<message key="manager.setup.publisher">Editora</message>
@@ -874,7 +874,7 @@ Note que a interface OAI pode ser desativada para este portal nas configuraçõe
 	<message key="manager.setup.focusAndScopeOfJournal">Foco e Escopo da Revista</message>
 	<message key="manager.setup.focusAndScopeDescription">Digite o texto no campo abaixo, que aparecerá na seção Sobre a Revista, informando autores, leitores e bibliotecários sobre a missão, objetivos, público alvo, políticas de submissão, e tipos de documentos aceitos para publicação na revista.</message>
 	<message key="manager.setup.focusAndScope">Foco e Escopo</message>
-	<message key="manager.setup.htmlSetupInstructions"><![CDATA[Em caso de utilização de código HTML nas caixas de texto das Configurações (para tamanho de fonte, estilo da fonte, cor, entre outros), as quebras de linha "automáticas (return/enter)" no texto serão automaticamente tratadas como <tt><br></tt>. O Editor HTML funciona no Firefox.]]></message>
+	<message key="manager.setup.htmlSetupInstructions"><![CDATA[Em caso de utilização de código HTML nas caixas de texto das Configurações (para tamanho de fonte, estilo da fonte, cor, entre outros), as quebras de linha "automáticas (return/enter)" no texto serão automaticamente tratadas como <tt>&lt;br&gt;</tt>. O Editor HTML funciona no Firefox.]]></message>
 	<message key="manager.setup.peerReviewPolicy">Avaliação por Pares</message>
 	<message key="manager.setup.peerReviewDescription">Inclua a Política e os processos de Avaliação por Pares da revista para leitores, autores, entre outros, incluindo o número de avaliadores normalmente utilizado para avaliar uma submissão, os critérios a serem julgados no documento, tempo padrão para conclusão de uma avaliação, e os princípios para recrutamento de avaliadores, que aparecerá na seção Sobre a Revista.</message>
 	<message key="manager.setup.reviewPolicy">Política de Avaliação</message>
@@ -920,7 +920,7 @@ Note que a interface OAI pode ser desativada para este portal nas configuraçõe
 	<message key="manager.setup.emailBounceAddressDisabled"><![CDATA[<strong>Aviso:</strong> Para ativar esta opção, o administrador do portal deve habilitar a opção <tt>allow_envelope_sender</tt> no documento de configuração do sistema. Configurações adicionais no servidor podem ser necessárias para suportar tal funcionalidade (pode não ser possível em todos os tipos de servidores!), como descrito na documentação do sistema.]]></message>
 	<message key="manager.setup.emailSignature">Assinatura</message>
 	<message key="manager.setup.emailSignatureDescription">Os e-mails padrão enviados pelo sistema em nome da revista incluirão a seguinte assinatura no final. O corpo do texto pode ser editado na seção E-mails da Administração da Revista.</message>
-	<message key="manager.setup.addItemtoAboutJournal">Incluir Item em</message>
+	<message key="manager.setup.addItemtoAboutJournal">Incluir Item em "Sobre a revista"</message>
 	<message key="manager.setup.aboutItemContent">Conteúdo</message>
 	<message key="manager.setup.addAboutItem">Incluir Item em Sobre</message>
 	<message key="manager.setup.form.numReviewersPerSubmission">Número de avaliadores por submissão obrigatório.</message>
@@ -1001,7 +1001,7 @@ Caso o administrador do portal já tenha cadastrado a revista no portal do Colet
 	<message key="manager.setup.appearInAboutJournal">(Para inclusão na seção Sobre a Revista)</message>
 	<message key="manager.setup.managementOfBasicEditorialSteps">Administração dos Passos básicos do Processo Editorial</message>
 	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[Passos: Fila de Submissão > Avaliação de Submissão > Edição de Submissão > Fila de Agendamento > Sumário.<br /><br />
-Escolha um modelo para administrar os aspectos do processo editorial. (Para designar um Editor Gerente e Editores de Seção, acesse a opção Editores em Administração da Revista.)]]></message>
+Escolha um modelo para administrar os aspectos do processo editorial. (Para designar um Editor-Gerente e Editores de Seção, acesse a opção Editores em Administração da Revista.)]]></message>
 	<message key="manager.setup.editorialProcess1">Um ou mais editores podem tratar os passos básicos sem papéis definidos.</message>
 	<message key="manager.setup.editorialProcess2">Editor Geral trata da Fila de Submissão e Sumário, enquanto Editores de Seção tratam da Avaliação e Edição da Submissão.</message>
 	<message key="manager.setup.editorialProcess3">Editor Geral trata da Fila de Submissão, Edição de Submissão e Sumário, enquanto os Editores de Seção tratam da Avaliação da Submissão.</message>
@@ -1023,7 +1023,7 @@ Escolha um modelo para administrar os aspectos do processo editorial. (Para desi
 	<message key="manager.setup.publicIdentifier">Identificação do Conteúdo da Revista</message>
 	<message key="manager.setup.uniqueIdentifier">Identificador Único</message>
 	<message key="manager.setup.uniqueIdentifierDescription">Artigos e edições podem receber um número ou texto identificador, empregando um sistema de registro como o Identificador de Objeto Digital (DOI).</message>
-	<message key="manager.setup.enablePublicIssueId">Idenficadores Personalizados serão utilizados para identificar as edições.</message>
+	<message key="manager.setup.enablePublicIssueId">Identificadores Personalizados serão utilizados para identificar as edições.</message>
 	<message key="manager.setup.enablePublicArticleId">Identificadores Personalizados serão utilizados para identificar itens publicados.</message>
 	<message key="manager.setup.enablePublicSuppFileId">Identificadores personalizados serão utilizados para identificar documentos suplementares da submissão.</message>
 	<message key="manager.setup.pageNumberIdentifier">Opção de Número de Página</message>
@@ -1217,7 +1217,7 @@ Escolha um modelo para administrar os aspectos do processo editorial. (Para desi
 	<message key="manager.subscriptionPolicies.subscriptionPoliciesSaved">Seus ajustes da política da subscrição foram atualizados.</message>
 	<message key="manager.subscriptionPolicies.subscriptionAdditionalInformation">Informação sobre Assinatura</message>
 	<message key="manager.subscriptionPolicies.subscriptionAdditionalInformationDescription">Os Tipos de Assinaturas e a estrutura de valores é exibida automaticamente na página Assinaturas, no Sobre da revista, junto com o nome do Editor de Assinaturas e as formas de contato. Outras informações para assinantes, como as formas de pagamento ou auxílio a assinantes de países em desenvolvimento, por exemplo, podem ser adicionadas aqui.</message>
-	<message key="manager.subscriptionPolicies.htmlInstructions"><![CDATA[Em caso de utilização de código HTML nas caixas de texto nas Configurações (para tamanho de fonte, estilo da fonte, cor, entre outros), as quebras de linha "automáticas (return/enter)" no texto serão automaticamente tratados como <tt><br></tt>. O Editor HTML funciona no Firefox.]]></message>
+	<message key="manager.subscriptionPolicies.htmlInstructions"><![CDATA[Em caso de utilização de código HTML nas caixas de texto nas Configurações (para tamanho de fonte, estilo da fonte, cor, entre outros), as quebras de linha "automáticas (return/enter)" no texto serão automaticamente tratados como <tt>&lt;br&gt;</tt>. O Editor HTML funciona no Firefox.]]></message>
 	<message key="manager.subscriptionPolicies.openAccessOptions">Opções de Acesso Livre para Revistas com Assinaturas</message>
 	<message key="manager.subscriptionPolicies.openAccessOptionsDescription">Revistas com Assinaturas podem oferecer "Acesso Livre adiado" e/ou "auto-arquivamento pelo autor" (o que aumenta a leitura e citação do conteúdo!). As políticas escolhidas serão exibidas no Sobre da revista.</message>
 	<message key="manager.subscriptionPolicies.delayedOpenAccess">Acesso Livre Adiado</message>
@@ -2502,7 +2502,7 @@ Após o término de suas revisões, renomeie o arquivo de NomedoAutorQA.doc para
 	<message key="default.journalSettings.lockssLicense"><![CDATA[Esta revista utiliza o sistema LOCKSS para criar um sistema de arquivo distribuído entre as bibliotecas participantes e permite às mesmas criar arquivos permanentes da revista para a preservação e restauração. <a href="http://lockss.stanford.edu/">Saiba mais...</a>]]></message>
 
 	<message key="common.add">Incluir</message>
-	<message key="common.discipline">Área e sub-área do conhecimento</message>
+	<message key="common.discipline">Área e subárea do conhecimento</message>
 	<message key="common.confirmComplete">Deseja realmente marcar esta tarefa como concluída? Não será possível realizar alterações após executar esta ação.</message>
 	<message key="common.captchaField">Validação</message>
 	<message key="common.captchaField.description">Informe o código como aparece na imagem.</message>
@@ -2541,34 +2541,15 @@ Após o término de suas revisões, renomeie o arquivo de NomedoAutorQA.doc para
 	<message key="admin.mergerUsers.noneEnrolled">Nenhum usuário cadastrado.</message>
 	<message key="manager.statistics.statistics.articleViews">Registro de visualização de artigo (Apenas para autores)</message>
 	<message key="manager.statistics.reports.description">O sistema gera relatórios que registram os detalhes associados com os procedimentos da submissão, da perspectiva de submissões, editores, avaliadores e seções, em um dado período. Relatórios são gerados no formato CSV, que exigem um aplicativo de planilha eletrônica para serem visualizados.</message>
-	<message key="manager.plugins.description">Esta página permite ao Editor Gerente verificar e possivelmente configurar os plugins atualmente instalados. Os Plugins estão divididos por categorias, de acordo com sua função. As categorias estão listadas a seguir, cada uma com seu conjunto de plugins.</message>
+	<message key="manager.plugins.description">Esta página permite ao Editor-Gerente verificar e possivelmente configurar os plugins atualmente instalados. Os Plugins estão divididos por categorias, de acordo com sua função. As categorias estão listadas a seguir, cada uma com seu conjunto de plugins.</message>
 	<message key="manager.payments">Formas de Pagamento</message>
 	<message key="manager.payment.enable">Habilitar</message>
 	<message key="manager.payment.description">Descrição</message>
-	<message key="manager.payment.cost">Preço</message>
 	<message key="manager.payment.action">Ação</message>
 	<message key="manager.payment.details">Detalhes</message>
 	<message key="manager.payment.addPayment">Incluir Forma de Pagamento</message>
 	<message key="manager.payment.currency">Moeda</message>
 	<message key="manager.payment.currencymessage">O sistema não realiza conversão de moeda. Ao aceitar pagamentos pela assinatura, certifique-se do tipo de moeda ter sido especificado corretamente.</message>
-	<message key="manager.payment.settings">Configurações</message>
-	<message key="manager.payment.settings.enablePayments">Clique aqui para habilitar o módulo de Pagamentos. Deve-se configurar as opções de pagamento utilizando o formulário a seguir. Informar um valor 0 indica que a opção não está habilitada.</message>
-	<message key="manager.payment.settings.notices">Usuários devem estar logados para realizar pagamentos.</message>
-	<message key="manager.payment.settings.text">Descrição do Método de Pagamento</message>
-	<message key="manager.payment.settings.submissionFee">Taxa de Submissão de Artigo (TSA)</message>
-	<message key="manager.payment.settings.publicationFee">Taxa de Publicação de Artigo (TPA)</message>
-	<message key="manager.payment.settings.fastTrackFee">Taxa de Acompanhamento Rápido</message>
-	<message key="manager.payment.settings.membershipFee">Assinatura Anual Individual</message>
-	<message key="manager.payment.settings.payPerViewFee">Taxa de Pay-Per-View por Artigo</message>
-	<message key="manager.payment.settings.onlypdf">Restringir acesso apenas à versão PDF do artigo</message>
-	<message key="manager.payment.settings.acceptSubscriptionPayments">Aceitar taxas de assinatura (tipos, valor e duração são especificados na seção Assinaturas)</message>
-	<message key="manager.payment.settings.acceptDonationPayments">Aceitar doações (permite ao usuário especificar o valor)</message>
-	<message key="manager.payment.checksettings">Notas sobre a Configuração da Revista</message>
-	<message key="manager.payment.checksettings.explanation1">Para o módulo de pagamentos restringir o acesso a artigos, a Política de Acesso Livre deve estar configurada para Assinatura Obrigatória na Configuração da revista (Passo 4).</message>
-	<message key="manager.payment.checksettings.enablesubscripitons">Assinatura Obrigatória</message>
-	<message key="manager.payment.checksettings.explanation2">Ao restringir o acesso a um documento, o artigo e a edição NÃO PODEM estar configuradas para Acesso Livre. Esteja atento à data de Acesso Livre Adiado.</message>
-	<message key="manager.payment.checksettings.ok">OK</message>
-	<message key="manager.payment.checksettings.notok">deve-se configurar para assinatura obrigatória</message>
 	<message key="manager.payment.noPayments">Nenhum pagamento</message>
 	<message key="manager.payment.paymentId">Código do Pagamento</message>
 	<message key="manager.payment.userName">Usuário</message>
@@ -2600,7 +2581,7 @@ Após o término de suas revisões, renomeie o arquivo de NomedoAutorQA.doc para
 	<message key="manager.setup.enableUserRegistration.author">Autores (podem submeter documentos à revista)</message>
 	<message key="manager.setup.enableUserRegistration.reader">Leitores (recebem notificações e podem ser considerados assinantes)</message>
 	<message key="manager.setup.enableUserRegistration.reviewer">Avaliadores (disponíveis para avaliar submissões)</message>
-	<message key="manager.setup.disableUserRegistration">Editor Gerente é responsável por cadastrar todos os usuários, permitindo a Editores e Editores de Seção cadastrar avaliadores.</message>
+	<message key="manager.setup.disableUserRegistration">Editor-Gerente é responsável por cadastrar todos os usuários, permitindo a Editores e Editores de Seção cadastrar avaliadores.</message>
 	<message key="manager.setup.siteAccess">Restrições adicionais de Acesso ao Portal e aos Artigos</message>
 	<message key="manager.setup.restrictSiteAccess">Usuários devem se cadastrar e acessar o sistema para visualizar o conteúdo da revista.</message>
 	<message key="manager.setup.restrictArticleAccess">Usuários devem se cadastrar e acessar o sistema para visualizar conteúdo de acesso livre.</message>
@@ -2665,8 +2646,8 @@ Autores que publicam nesta revista concordam com os seguintes termos:
 	<message key="manager.sections.hideAbout">Omitir esta seção em Sobre a Revista.</message>
 	<message key="manager.groups.create">Criar Título da Equipe Editorial</message>
 	<message key="manager.groups.enableBoard.description"><![CDATA[Exibir em <a href="{$aboutEditorialTeamUrl}">Equipe Editorial</a> no Sobre a Revista:]]></message>
-	<message key="manager.groups.enableBoard">O Editor Gerente da revista criará equipes editoriais e seus títulos, e incluirá as pessoas em cada grupo.</message>
-	<message key="manager.groups.disableBoard">O sistema gerará automaticamente a lista de participantes sob cada função editorial (Editor Gerente, Editor, Editor de Seção, Editor de Texto, etc.)</message>
+	<message key="manager.groups.enableBoard">O Editor-Gerente da revista criará equipes editoriais e seus títulos, e incluirá as pessoas em cada grupo.</message>
+	<message key="manager.groups.disableBoard">O sistema gerará automaticamente a lista de participantes sob cada função editorial (Editor-Gerente, Editor, Editor de Seção, Editor de Texto, etc.)</message>
 	<message key="manager.groups.context.editorialTeam.short">Equipe Editorial</message>
 	<message key="manager.groups.context.editorialTeam">Exibir título em Equipe Editorial na seção Pessoal do Sobre a Revista (ex.: Editor)</message>
 	<message key="manager.groups.context.people">Exibir título como categoria própria em Pessoal (ex.: Comitê Editorial)</message>
@@ -2676,7 +2657,7 @@ Autores que publicam nesta revista concordam com os seguintes termos:
 	<message key="manager.people.mustChooseRole">Escolha um papel editorial antes de confirmar</message>
 	<message key="manager.people.enrollExistingUser">Cadastrar Usuário Existente</message>
 	<message key="manager.people.roleEnrollment">{$role} Cadastro</message>
-	<message key="manager.people.enrollUserAsDescription">O sistema permite o cadastrado de usuários e os papéis editoriais podem ser designados ou removidos a qualquer momento após a criação do cadastro.</message>
+	<message key="manager.people.enrollUserAsDescription">O sistema permite o cadastro de usuários e os papéis editoriais podem ser designados ou removidos a qualquer momento após a criação do cadastro.</message>
 	<message key="manager.people.mustProvideName">Informe pelo menos o nome do usuário primeiro.</message>
 	<message key="manager.subscriptionTypes.form.public">Tipo de assinatura NÃO será exibido em Assinaturas, no Sobre a revista.</message>
 	<message key="editor.submissionReview.emailWillArchive">Esta submissão será arquivada após o e-mail de ferramenta Notificar Autor ser enviado ou pressionado o botão "Não enviar e-mail".</message>
@@ -2691,8 +2672,6 @@ Autores que publicam nesta revista concordam com os seguintes termos:
 	<message key="editor.issues.resetIssueOrder"><![CDATA[Esta revista utiliza ordenação personalizada de edições. <a href="{$url}" class="action">Restaurar para a configuração padrão.</a>]]></message>
 	<message key="editor.article.commentsRequired">Comentários obrigatórios.</message>
 	<message key="editor.article.payment.publicationFeeNotPaid">A Taxa para Publicação do artigo não foi paga. Uma vez realizado o pagamento, será permitido agendar o artigo para publicação.</message>
-	<message key="editor.article.payment.payPublicationFee">Pagar Taxa para Publicação</message>
-	<message key="editor.article.payment.waivePublicationFee">Isentar de Taxa de Publicação</message>
 	<message key="sectionEditor.review.enrollReviewer">Cadastrar usuário existente como Avaliador</message>
 	<message key="submission.layout.imageInvalid">Formato de imagem inválido. Formatos aceitáveis são .gif, .jpg, ou .png.</message>
 	<message key="reviewer.article.restrictedFileAccess">Documentos podem ser visualizados somente após assumir a tarefa de avaliação</message>
@@ -2705,7 +2684,7 @@ Autores que publicam nesta revista concordam com os seguintes termos:
 	<message key="author.submit.howToSubmitNoPhone"><![CDATA[Em caso de dificuldades com o processo, entre em contato com <a href="mailto:{$supportEmail}">{$supportName}</a> via e-mail para suporte.]]></message>
 	<message key="author.submit.journalSectionDescription"><![CDATA[Escolha a seção apropriada para a submissão (leia Seções e Políticas em <a href="{$aboutUrl}">Sobre</a> a revista).]]></message>
 	<message key="author.submit.reorderInstructions">Utilize as setas para alterar a ordem em que os nomes dos autores aparecerão na publicação.</message>
-	<message key="author.submit.submissionIndexingDescription">Digite termos que descrevam da melhor maneira o conteúdo da submissão, segundo as categorias utilizadas pela revista e os exemplos oferecidos pelo editor. Separe os termos com ponto-e-vírgula(termo1; termo2; termo3).</message>
+	<message key="author.submit.submissionIndexingDescription">Digite termos que descrevam da melhor maneira o conteúdo da submissão, segundo as categorias utilizadas pela revista e os exemplos oferecidos pelo editor. Separe os termos com ponto-e-vírgula (termo1; termo2; termo3).</message>
 	<message key="author.submit.form.abstractRequired">Please enter the abstract of your article.</message>
 	<message key="author.submit.supplementaryFilesInstructions">Este é um passo opcional no processo de submissão. Documentos Suplementares funcionam como um apêndice ao manuscrito, com o objetivo de auxiliar na compreensão e avaliação da submissão. Documentos Suplementares podem incluir (a) instrumentos de pesquisa, (b) conjuntos de dados e tabelas, que seguem os padrões de ética de avaliação, (c) fontes de informação normalmente não disponíveis para leitores, ou (d) figuras ou tabelas que não podem ser integradas ao texto em si. Estes documentos também devem ser indexados pelo autor, identificando a relação dos mesmos com a submissão, bem como a propriedade. Qualquer tipo ou formato de documento pode ser transferido como Documentos Suplementares e serão disponibilizados aos leitores em seu formato original de envio. Estes documentos podem ser disponibilizados aos Avaliadores, caso não comprometam o processo editorial.</message>
 	<message key="author.submit.supplementaryFiles.saveToUpload">Clique Salvar para transferir documento.</message>
@@ -2750,7 +2729,7 @@ Autores que publicam nesta revista concordam com os seguintes termos:
 	<message key="log.review.reviewDeclinedByProxy">{$userName} marcou indisponibilidade na rodada {$round} para avaliar a submissão {$articleId} em nome de {$reviewerName}.</message>
 	<message key="log.editor.decision">Decisão editorial ({$decision}) sobre a submissão {$articleId} registrada por {$editorName}.</message>
 	<message key="rt.admin.settings.printerFriendly">Versão de impressão (Apresenta ao leitor uma versão para impressão)</message>
-	<message key="rt.admin.settings.addComment">Incluir comentários (Permite a publicação de comentários pelos leitores, permitindo a exclusão pelo Editor Gerente).</message>
+	<message key="rt.admin.settings.addComment">Incluir comentários (Permite a publicação de comentários pelos leitores, permitindo a exclusão pelo Editor-Gerente).</message>
 	<message key="rt.admin.settings.addComment.authenticated">Usuário devem estar cadastrados e logados para comentar, sem permissão de anonimato.</message>
 	<message key="rt.admin.settings.addComment.anonymous">Usuário devem estar cadastrados e logados para comentar, com permissão de anonimato.</message>
 	<message key="rt.admin.settings.addComment.unauthenticated">Não é necessário estar cadastrado para comentar, com permissão de anonimato.</message>
@@ -2855,4 +2834,32 @@ Idiomas estão disponíveis para download manual no <a href="http://pkp.sfu.ca">
 	<message key="default.journalSettings.payPerViewFeeDescription">O pagamento desta taxa permite visualizar, baixar e imprimir este documento.</message>
 	<message key="default.journalSettings.membershipFeeDescription">O pagamento desta taxa garante sua inscrição nesta associação durante um ano, com acesso livre a esta revista.</message>
 	<message key="default.journalSettings.donationFeeDescription">Doações de qualquer valor são muito bem-vindas, e oferecem meios aos editores de manter a qualidade da revista no mais alto nível para seus leitores e usuários.</message>
+	<message key="reader.subscriptionRequiredLoginText">Assinatura exigida para acesso ao item. Para verificar sua assinatura, acesse a revista.</message>
+	<message key="admin.journals.importOJS1.success">Importação da revista concluída com sucesso.</message>
+	<message key="admin.journals.importOJS1.redirect.desc">Para redirecionar URLs da versão 1 para URLs da versão 2, crie os seguintes arquivos PHP utilizando o conteúdo a seguir. Os arquivos correspondentes podem ser colcoados na pasta raíz da versão 1 da revista, ou na pasta raíz da versão 2 para revistas individuais, ou seja, sem uso da administração de várias revistas em uma única instalação - ou portal de revistas.</message>
+	<message key="admin.journals.importOJS1.redirect.ojs1root">Coloque na pasta raíz da antifa versão 1 do sistema (ex.: /var/www/ojs1)</message>
+	<message key="admin.journals.importOJS1.redirect.ojs1orojs2root">Coloque na pasta raíz da antifa versão 1 do sistema (ex.: /var/www/ojs1) ou na pasta raíz da versão 2 (ex.: /var/www/ojs2), para revistas individuais, sem uso da administração como portal de revistas.</message>
+	<message key="admin.journals.redirect">Gerar código para mapear URLs OJS 1 para URLs 2</message>
+	<message key="manager.subscriptionPolicies.expiry">Expiração de Assinatura</message>
+	<message key="manager.subscriptionPolicies.expiryDescription">Leitores podem perder acesso ao conteúdo exclusivo a assinantes no momento da expiração da assinatura, ou podem manter acesso a conteúdo publicado anteriormente à expiração.</message>
+	<message key="manager.subscriptionPolicies.expirySelectOne">Escolha uma opção:</message>
+	<message key="manager.subscriptionPolicies.expiryFull">Expiração total</message>
+	<message key="manager.subscriptionPolicies.expiryFullDescription">Leitores perdem acesso a todo o conteúdo exclusivo a assinantes na data de expiração.</message>
+	<message key="manager.subscriptionPolicies.expiryPartial">Expiração parcial</message>
+	<message key="manager.subscriptionPolicies.expiryPartialDescription">Leitores mantém acesso apenas a conteúdo publicado anteriormente à expiração. Novas publicação não permitirão acesso a conteúdo exclusivo a assinantes.</message>
+	<message key="author.submit.requestWaiver">Solicitar isenção de taxa</message>
+	<message key="author.submit.qualityForWaiver">Solicito considerar concessão de Taxa de Submissão para este artigo</message>
+	<message key="author.submit.addReasonsForWaiver">Informe no campo de comentários a motivação para a concessão de taxa</message>
+	<message key="about.authorFees">Taxas para Autores</message>
+	<message key="about.authorFeesMessage">Este periódico cobra as seguintes taxas aos autores</message>
+	<message key="about.memberships">Associação</message>
+	<message key="help.searchReturnResults">Retornar aos Resultados da Pesquisa</message>
+	<message key="payment.paid">Pago</message>
+	<message key="payment.payNow">Pagar Agora</message>
+	<message key="payment.waive">Isenção de Taxa</message>
+	<message key="payment.alreadyPaid">Pago Anteriormente</message>
+	<message key="payment.alreadyPaidMessage">Marque esta opção caso já tenha enviado o pagamento à revista para concluir o processo de submissão. A submissão não será avaliada até o recebimento do pagamento. Clique em Pagar Agora para instruções sobre o pagamento.</message>
+	<message key="payment.paymentReceived">Pagamento Recebido</message>
+	<message key="payment.paymentSent">Pagamento já foi enviado</message>
+	<message key="payment.submission.paySubmission">Pagar Taxa de Submissão</message>
 </locale>

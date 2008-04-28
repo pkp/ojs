@@ -17,14 +17,6 @@
 import('submission.sectionEditor.SectionEditorAction');
 
 class EditorAction extends SectionEditorAction {
-
-	/**
-	 * Constructor.
-	 */
-	function EditorAction() {
-
-	}
-
 	/**
 	 * Actions.
 	 */

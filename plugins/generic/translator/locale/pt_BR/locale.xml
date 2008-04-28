@@ -67,7 +67,7 @@
 	<message key="plugins.generic.translator.email.resetConfirm">Deseja realmente redefinir o conteúdo dos e-mails para os valores originais?</message>
 	<message key="plugins.generic.translator.file.doesNotExistNote">* O arquivo ainda não foi traduzido</message>
 	<message key="plugins.generic.translator.file.confirmCreate">O arquivo "{$filename}" será criado usando a versão em Inglês; você precisará traduzir todo o texto do arquivo. Deseja continuar?</message>
-	<message key="plugins.generic.translator.email.description">Nos campos abaixo, traduza o Título, Corpo e Descrição, padrões do e-mail. A Descrição é apenas uma referência para o Editor Gerente.</message>
+	<message key="plugins.generic.translator.email.description">Nos campos abaixo, traduza o Título, Corpo e Descrição, padrões do e-mail. A Descrição é apenas uma referência para o Editor-Gerente.</message>
 	<message key="plugins.generic.translator.confirmDelete">Deseja realmente excluir este item? Esta ação é irreversível.</message>
 	<message key="plugins.generic.translator.deleteKey">Excluir chave</message>
 	<message key="plugins.generic.translator.deleteEmail">Excluir e-mail</message>

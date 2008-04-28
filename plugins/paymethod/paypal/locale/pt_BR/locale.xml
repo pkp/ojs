@@ -25,9 +25,8 @@
 
 	<!-- PayPal -->
 	<message key="plugins.paymethod.paypal">Pagamento via PayPal</message>
-	<message key="plugins.paymethod.paypal.description"><![CDATA[O Plugin PayPal permite a usuários, sendo ou não membros do PayPal, utilizar a maioria dos cartões de crédito, bem como Cheques Eletrônicos (eChecks). O editor gerente da revista ou gerente geral da conferência deve criar uma <a href="http://www.paypal.com" target="_new">Conta de Negócios PayPal</a>.]]></message>
+	<message key="plugins.paymethod.paypal.description"><![CDATA[O Plugin PayPal permite a usuários, sendo ou não membros do PayPal, utilizar a maioria dos cartões de crédito, bem como Cheques Eletrônicos (eChecks). O Editor-Gerente da revista ou gerente geral da conferência deve criar uma <a href="http://www.paypal.com" target="_new">Conta de Negócios PayPal</a>.]]></message>
 	<message key="plugins.paymethod.paypal.warning">Clicar em Continuar redirecionará para o portal do PayPal. Após realizar o pagamento através do PayPal clique em "Retornar ao vendedor" ("Return to Merchant") para retornar a este portal.</message>
-	<message key="plugins.paymethod.paypal.purchase.amount">Total</message>
 	<message key="plugins.paymethod.paypal.purchase.description">Descrição</message>
 	<message key="plugins.paymethod.paypal.purchase.cancelled">Sua compra foi cancelada.</message>
 	<message key="plugins.paymethod.paypal.purchase.cancelled.title">Compra cancelada.</message>
