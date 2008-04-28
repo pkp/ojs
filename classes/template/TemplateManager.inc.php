@@ -80,9 +80,6 @@ class TemplateManager extends Smarty {
 		$locale = Locale::getLocale();
 		$this->assign('currentLocale', $locale);
 
-		$currentVersion = &DAORegistry::getDAO('VersionDAO')->getCurrentVersion();
-		$this->assign('currentVersionString', $currentVersion->getVersionString());
-
 		if (!defined('SESSION_DISABLE_INIT')) {
 			/* Kludge to make sure no code that tries to connect to the database is executed
 			 * (e.g., when loading installer pages). */
@@ -90,6 +87,9 @@ class TemplateManager extends Smarty {
 
 			$journal = &Request::getJournal();
 			$site = &Request::getSite();
+
+			$currentVersion = &DAORegistry::getDAO('VersionDAO')->getCurrentVersion();
+			$this->assign('currentVersionString', $currentVersion->getVersionString());
 
 			$siteStyleFilename = PublicFileManager::getSiteFilesPath() . '/' . $site->getSiteStyleFilename();
 			if (file_exists($siteStyleFilename)) $this->addStyleSheet(Request::getBaseUrl() . '/' . $siteStyleFilename);
