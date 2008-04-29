@@ -478,7 +478,7 @@ class EditorHandler extends SectionEditorHandler {
 		IssueManagementHandler::editIssue($args);
 	}	
 
-	function removeCoverPage($args) {
+	function removeIssueCoverPage($args) {
 		import('pages.editor.IssueManagementHandler');
 		IssueManagementHandler::removeCoverPage($args);
 	}

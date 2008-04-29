@@ -148,9 +148,9 @@ class LayoutEditorHandler extends Handler {
 		EditorHandler::editIssue($args);
 	}
 
-	function removeCoverPage($args) {
+	function removeIssueCoverPage($args) {
 		import('pages.editor.EditorHandler');
-		EditorHandler::removeCoverPage($args);
+		EditorHandler::removeIssueCoverPage($args);
 	}
 
 	function removeStyleFile($args) {

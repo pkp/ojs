@@ -356,7 +356,7 @@ class IssueForm extends Form {
 		if ($publicFileManager->uploadedFileExists('coverPage')) {
 			$journal = Request::getJournal();
 			$originalFileName = $publicFileManager->getUploadedFileName('coverPage');
-			$newFileName = 'cover_' . $issueId . '_' . $this->getFormLocale() . '.' . $publicFileManager->getExtension($originalFileName);
+			$newFileName = 'cover_issue_' . $issueId . '_' . $this->getFormLocale() . '.' . $publicFileManager->getExtension($originalFileName);
 			$publicFileManager->uploadJournalFile($journal->getJournalId(), 'coverPage', $newFileName);
 			$issue->setOriginalFileName($publicFileManager->truncateFileName($originalFileName, 127), $this->getFormLocale());
 			$issue->setFileName($newFileName, $this->getFormLocale());

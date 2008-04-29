@@ -89,6 +89,12 @@ class MetadataForm extends Form {
 				'authors' => array(),
 				'title' => $article->getTitle(null), // Localized
 				'abstract' => $article->getAbstract(null), // Localized
+				'coverPageAltText' => $article->getCoverPageAltText(null), // Localized
+				'showCoverPage' => $article->getShowCoverPage(null), // Localized
+				'originalFileName' => $article->getOriginalFileName(null), // Localized
+				'fileName' => $article->getFileName(null), // Localized
+				'width' => $article->getWidth(null), // Localized
+				'height' => $article->getHeight(null), // Localized
 				'discipline' => $article->getDiscipline(null), // Localized
 				'subjectClass' => $article->getSubjectClass(null), // Localized
 				'subject' => $article->getSubject(null), // Localized
@@ -131,7 +137,8 @@ class MetadataForm extends Form {
 	 * @return array
 	 */
 	function getLocaleFieldNames() {
-		return array('title', 'abstract', 'discipline', 'subjectClass', 'subject', 'coverageGeo', 'coverageChron', 'coverageSample', 'type', 'sponsor');
+		return array('title', 'abstract', 'coverPageAltText', 'showCoverPage', 'originalFileName', 'fileName', 'width', 'height',
+								'discipline', 'subjectClass', 'subject', 'coverageGeo', 'coverageChron', 'coverageSample', 'type', 'sponsor');
 	}
 
 	/**
@@ -180,11 +187,18 @@ class MetadataForm extends Form {
 	function readInputData() {
 		$this->readUserVars(
 			array(
+				'articleId',
 				'authors',
 				'deletedAuthors',
 				'primaryContact',
 				'title',
 				'abstract',
+				'coverPageAltText',
+				'showCoverPage',
+				'originalFileName',
+				'fileName',
+				'width',
+				'height',
 				'discipline',
 				'subjectClass',
 				'subject',
@@ -224,6 +238,31 @@ class MetadataForm extends Form {
 		if (!$section->getAbstractsDisabled()) {
 			$article->setAbstract($this->getData('abstract'), null); // Localized
 		}
+
+		import('file.PublicFileManager');
+		$publicFileManager =& new PublicFileManager();
+		if ($publicFileManager->uploadedFileExists('coverPage')) {
+			$journal = Request::getJournal();
+			$originalFileName = $publicFileManager->getUploadedFileName('coverPage');
+			$newFileName = 'cover_article_' . $this->getData('articleId') . '_' . $this->getFormLocale() . '.' . $publicFileManager->getExtension($originalFileName);
+			$publicFileManager->uploadJournalFile($journal->getJournalId(), 'coverPage', $newFileName);
+			$article->setOriginalFileName($publicFileManager->truncateFileName($originalFileName, 127), $this->getFormLocale());
+			$article->setFileName($newFileName, $this->getFormLocale());
+
+			// Store the image dimensions.
+			list($width, $height) = getimagesize($publicFileManager->getJournalFilesPath($journal->getJournalId()) . '/' . $newFileName);
+			$article->setWidth($width, $this->getFormLocale());
+			$article->setHeight($height, $this->getFormLocale());
+		}
+
+		$article->setCoverPageAltText($this->getData('coverPageAltText'), null); // Localized
+		$showCoverPage = array_map(create_function('$arrayElement', 'return (int)$arrayElement;'), (array) $this->getData('showCoverPage'));
+		foreach (array_keys($this->getData('coverPageAltText')) as $locale) {
+			if (!array_key_exists($locale, $showCoverPage)) {
+				$showCoverPage[$locale] = 0;
+			}
+		}
+		$article->setShowCoverPage($showCoverPage, null); // Localized
 
 		$article->setDiscipline($this->getData('discipline'), null); // Localized
 		$article->setSubjectClass($this->getData('subjectClass'), null); // Localized

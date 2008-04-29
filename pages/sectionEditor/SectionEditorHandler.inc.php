@@ -305,6 +305,11 @@ class SectionEditorHandler extends Handler {
 		SubmissionEditHandler::saveMetadata();
 	}
 
+	function removeArticleCoverPage($args) {
+		import('pages.sectionEditor.SubmissionEditHandler');
+		SubmissionEditHandler::removeCoverPage($args);
+	}
+
 	function editorReview() {
 		import('pages.sectionEditor.SubmissionEditHandler');
 		SubmissionEditHandler::editorReview();

@@ -236,12 +236,17 @@ class CopyeditorHandler extends Handler {
 	function viewMetadata($args) {
 		import('pages.copyeditor.SubmissionCopyeditHandler');
 		SubmissionCopyeditHandler::viewMetadata($args);
-	}	
+	}
 
 	function saveMetadata($args) {
 		import('pages.copyeditor.SubmissionCopyeditHandler');
 		SubmissionCopyeditHandler::saveMetadata($args);
-	}	
+	}
+
+	function removeArticleCoverPage($args) {
+		import('pages.copyeditor.SubmissionCopyeditHandler');
+		SubmissionCopyeditHandler::removeCoverPage($args);
+	}
 
 }
 

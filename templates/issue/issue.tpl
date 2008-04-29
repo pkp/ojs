@@ -14,7 +14,15 @@
 {foreach from=$section.articles item=article}
 <table width="100%">
 <tr valign="top">
-	<td width="70%">{$article->getArticleTitle()|strip_unsafe_html}</td>
+	{if $article->getFileName($locale) && $article->getShowCoverPage($locale)}
+	<td rowspan="2">
+		<div class="articleCoverImage">
+		<a href="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)}" class="file">
+		<img src="{$coverPagePath|escape}{$article->getFileName($locale)|escape}"{if $article->getCoverPageAltText($locale) != ''} alt="{$article->getCoverPageAltText($locale)|escape}"{else} alt="{translate key="article.coverPage.altText"}"{/if}/></a></div>
+	</td>
+	{/if}
+
+	<td width="70%" height="100%">{$article->getArticleTitle()|strip_unsafe_html}</td>
 	<td align="right" width="30%">
 		{if $section.abstractsDisabled || $article->getArticleAbstract() == ""}
 			{assign var=hasAbstract value=0}
@@ -53,7 +61,7 @@
 	</td>
 </tr>
 <tr>
-	<td style="padding-left: 30px;font-style: italic;">
+	<td style="padding-left: 30px;font-style: italic;" valign="top">
 		{if (!$section.hideAuthor && $article->getHideAuthor() == 0) || $article->getHideAuthor() == 2}
 			{foreach from=$article->getAuthors() item=author name=authorList}
 				{$author->getFullName()|escape}{if !$smarty.foreach.authorList.last},{/if}
@@ -62,7 +70,7 @@
 			&nbsp;
 		{/if}
 	</td>
-	<td align="right">{$article->getPages()|escape}</td>
+	<td align="right" valign="top">{$article->getPages()|escape}</td>
 </tr>
 </table>
 {/foreach}

@@ -244,5 +244,27 @@ class SubmissionCopyeditHandler extends CopyeditorHandler {
 		}
 	}
 
+	/**
+	 * Remove cover page from article
+	 */
+	function removeCoverPage($args) {
+		$articleId = isset($args[0]) ? (int)$args[0] : 0;
+		$formLocale = $args[1];
+		list($journal, $submission) = SubmissionCopyeditHandler::validate($articleId);
+
+		import('file.PublicFileManager');
+		$publicFileManager = &new PublicFileManager();
+		$publicFileManager->removeJournalFile($journal->getJournalId(),$submission->getFileName($formLocale));
+		$submission->setFileName('', $formLocale);
+		$submission->setOriginalFileName('', $formLocale);
+		$submission->setWidth('', $formLocale);
+		$submission->setHeight('', $formLocale);
+
+		$articleDao = &DAORegistry::getDAO('ArticleDAO');
+		$articleDao->updateArticle($submission);
+
+		Request::redirect(null, null, 'viewMetadata', $articleId);
+	}
+
 }
 ?>

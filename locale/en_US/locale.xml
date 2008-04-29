@@ -299,6 +299,7 @@
 	<message key="article.submissions">Submissions</message>
 	<message key="article.abstract">Abstract</message>
 	<message key="article.details">Details</message>
+	<message key="article.coverPage.altText">Cover Image</message>
 
 	<!-- Submission Tracking - Common -->
 	<message key="submission.summary">Summary</message>
@@ -1805,6 +1806,14 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	<message key="editor.article.hideTocAuthorDefault">Default</message>
 	<message key="editor.article.hideTocAuthorHide">Omit</message>
 	<message key="editor.article.hideTocAuthorShow">Show</message>
+
+	<message key="editor.article.cover">Cover</message>
+	<message key="editor.article.showCoverPage">Create a cover for this article with the following elements.</message>
+	<message key="editor.article.coverPage">Cover image</message>
+	<message key="editor.article.coverPageInstructions">(Allowed formats: .gif, .jpg, or .png )</message>
+	<message key="editor.article.uploaded">Uploaded</message>
+	<message key="editor.article.removeCoverPage">Remove cover image?</message>
+	<message key="editor.article.remove">Remove</message>
 	
 	<!-- Section Editor -->
 	<message key="sectionEditor.activeEditorialAssignments">Active Editorial Assignments</message>

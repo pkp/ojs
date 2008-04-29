@@ -199,6 +199,13 @@ class IssueHandler extends Handler {
 				$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
 				$publishedArticles = &$publishedArticleDao->getPublishedArticlesInSections($issue->getIssueId(), true);
 
+				import('file.PublicFileManager');
+				$publicFileManager = &new PublicFileManager();
+				$coverPagePath = Request::getBaseUrl() . '/';
+				$coverPagePath .= $publicFileManager->getJournalFilesPath($journal->getJournalId()) . '/';
+				$templateMgr->assign('coverPagePath', $coverPagePath);
+				$templateMgr->assign('locale', $locale);
+
 				$templateMgr->assign('publishedArticles', $publishedArticles);
 				$showToc = true;
 			}

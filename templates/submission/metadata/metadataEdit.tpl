@@ -13,7 +13,7 @@
 
 {url|assign:"competingInterestGuidelinesUrl" page="information" op="competingInterestGuidelines"}
 
-<form name="metadata" method="post" action="{url op="saveMetadata"}">
+<form name="metadata" method="post" action="{url op="saveMetadata"}" enctype="multipart/form-data">
 <input type="hidden" name="articleId" value="{$articleId|escape}" />
 {include file="common/formErrors.tpl"}
 
@@ -204,9 +204,32 @@ function moveAuthor(dir, authorIndex) {
 	{/if}
 </table>
 
-
 <div class="separator"></div>
 
+<h3>{translate key="editor.article.cover"}</h3>
+
+<input type="hidden" name="fileName[{$formLocale|escape}]" value="{$fileName[$formLocale]|escape}" />
+<input type="hidden" name="originalFileName[{$formLocale|escape}]" value="{$originalFileName[$formLocale]|escape}" />
+
+<table width="100%" class="data">
+	<tr valign="top">
+		<td class="label" colspan="2"><input type="checkbox" name="showCoverPage[{$formLocale|escape}]" id="showCoverPage" value="1" {if $showCoverPage[$formLocale]} checked="checked"{/if} /> <label for="showCoverPage">{translate key="editor.article.showCoverPage"}</label></td>
+	</tr>
+	<tr valign="top">
+		<td width="20%" class="label">{fieldLabel name="coverPage" key="editor.article.coverPage"}</td>
+		<td width="80%" class="value"><input type="file" name="coverPage" id="coverPage" class="uploadField" />&nbsp;&nbsp;{translate key="form.saveToUpload"}<br />{translate key="editor.article.coverPageInstructions"}<br />{translate key="editor.article.uploaded"}:&nbsp;{if $fileName[$formLocale]}<a href="javascript:openWindow('{$publicFilesDir}/{$fileName[$formLocale]|escape:"url"}');" class="file">{$originalFileName[$formLocale]}</a>&nbsp;<a href="{url op="removeArticleCoverPage" path=$articleId|to_array:$formLocale}" onclick="return confirm('{translate|escape:"jsparam" key="editor.article.removeCoverPage"}')">{translate key="editor.article.remove"}</a>{else}&mdash;{/if}</td>
+	</tr>
+	<tr valign="top">
+		<td width="20%" class="label">{fieldLabel name="coverPageAltText" key="common.altText"}</td>
+		<td width="80%" class="value"><input type="text" name="coverPageAltText[{$formLocale|escape}]" value="{$coverPageAltText[$formLocale]|escape}" size="40" maxlength="255" class="textField" /></td>
+	</tr>
+	<tr valign="top">
+		<td>&nbsp;</td>
+		<td class="value"><span class="instruct">{translate key="common.altTextInstructions"}</span></td>
+	</tr>
+</table>
+
+<div class="separator"></div>
 
 <h3>{translate key="submission.indexing"}</h3>
 

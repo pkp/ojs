@@ -211,6 +211,11 @@ class AuthorHandler extends Handler {
 		TrackSubmissionHandler::saveMetadata();
 	}
 
+	function removeArticleCoverPage($args) {
+		import('pages.author.TrackSubmissionHandler');
+		TrackSubmissionHandler::removeCoverPage($args);
+	}
+
 	function uploadCopyeditVersion() {
 		import('pages.author.TrackSubmissionHandler');
 		TrackSubmissionHandler::uploadCopyeditVersion();

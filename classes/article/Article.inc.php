@@ -543,6 +543,162 @@ class Article extends DataObject {
 	}
 
 	/**
+	 * Get the localized article cover filename
+	 * @return string
+	 */
+	function getArticleFileName() {
+		return $this->getLocalizedData('fileName');
+	}
+
+	/**
+	 * get file name
+	 * @param $locale string
+	 * @return string
+	 */
+	function getFileName($locale) {
+		return $this->getData('fileName', $locale);
+	}
+
+	/**
+	 * set file name
+	 * @param $fileName string
+	 * @param $locale string
+	 */
+	function setFileName($fileName, $locale) {
+		return $this->setData('fileName', $fileName, $locale);
+	}
+
+	/**
+	 * Get the localized article cover width
+	 * @return string
+	 */
+	function getArticleWidth() {
+		return $this->getLocalizedData('width');
+	}
+
+	/**
+	 * get width of cover page image
+	 * @param $locale string
+	 * @return string
+	 */
+	function getWidth($locale) {
+		return $this->getData('width', $locale);
+	}
+
+	/**
+	 * set width of cover page image
+	 * @param $locale string
+	 * @param $width int
+	 */
+	function setWidth($width, $locale) {
+		return $this->setData('width', $width, $locale);
+	}
+
+	/**
+	 * Get the localized article cover height
+	 * @return string
+	 */
+	function getArticleHeight() {
+		return $this->getLocalizedData('height');
+	}
+
+	/**
+	 * get height of cover page image
+	 * @param $locale string
+	 * @return string
+	 */
+	function getHeight($locale) {
+		return $this->getData('height', $locale);
+	}
+
+	/**
+	 * set height of cover page image
+	 * @param $locale string
+	 * @param $height int
+	 */
+	function setHeight($height, $locale) {
+		return $this->setData('height', $height, $locale);
+	}
+
+	/**
+	 * Get the localized article cover filename on the uploader's computer
+	 * @return string
+	 */
+	function getArticleOriginalFileName() {
+		return $this->getLocalizedData('originalFileName');
+	}
+
+	/**
+	 * get original file name
+	 * @param $locale string
+	 * @return string
+	 */
+	function getOriginalFileName($locale) {
+		return $this->getData('originalFileName', $locale);
+	}
+
+	/**
+	 * set original file name
+	 * @param $originalFileName string
+	 * @param $locale string
+	 */
+	function setOriginalFileName($originalFileName, $locale) {
+		return $this->setData('originalFileName', $originalFileName, $locale);
+	}
+
+	/**
+	 * Get the localized article cover alternate text
+	 * @return string
+	 */
+	function getArticleCoverPageAltText() {
+		return $this->getLocalizedData('coverPageAltText');
+	}
+
+	/**
+	 * get cover page alternate text
+	 * @param $locale string
+	 * @return string
+	 */
+	function getCoverPageAltText($locale) {
+		return $this->getData('coverPageAltText', $locale);
+	}
+
+	/**
+	 * set cover page alternate text
+	 * @param $coverPageAltText string
+	 * @param $locale string
+	 */
+	function setCoverPageAltText($coverPageAltText, $locale) {
+		return $this->setData('coverPageAltText', $coverPageAltText, $locale);
+	}
+
+	/**
+	 * Get the localized article cover filename
+	 * @return string
+	 */
+	function getArticleShowCoverPage() {
+		return $this->getLocalizedData('showCoverPage');
+	}
+
+	/**
+	 * get show cover page
+	 * @param $locale string
+	 * @return int
+	 */
+	function getShowCoverPage($locale) {
+		return $this->getData('showCoverPage', $locale);
+	}
+
+	/**
+	 * set show cover page
+	 * @param $showCoverPage int
+	 * @param $locale string
+	 */
+	function setShowCoverPage($showCoverPage, $locale) {
+		return $this->setData('showCoverPage', $showCoverPage, $locale);
+	}
+
+	/**
 	 * Get comments to editor.
 	 * @return string
 	 */

@@ -294,6 +294,18 @@ input.defaultButton {
 
 
 /**
+ * Article cover image
+ */
+
+.articleCoverImage img {
+	border: 0;
+	float: left;
+	width: 100px;
+	margin: 0 1em 1em 0;
+}
+
+
+/**
  * Issue cover image
  */
 

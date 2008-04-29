@@ -91,9 +91,28 @@
 	{/if}
 </table>
 
-
 <div class="separator"></div>
 
+<h3>{translate key="editor.article.cover"}</h3>
+
+<table width="100%" class="data">
+	<tr valign="top">
+		<td width="20%" class="label">{fieldLabel name="coverPage" key="editor.article.coverPage"}</td>
+		<td width="80%" class="value">{if $fileName[$formLocale]}<a href="javascript:openWindow('{$publicFilesDir}/{$fileName[$formLocale]|escape:"url"}');" class="file">{$originalFileName[$formLocale]}</a>{else}&mdash;{/if}</td>
+	</tr>
+
+	{if !$section->getAbstractsDisabled()}
+	<tr>
+		<td colspan="2" class="separator">&nbsp;</td>
+	</tr>
+	<tr valign="top">
+		<td class="label">{fieldLabel name="coverPageAltText" key="common.altText"}</td>
+		<td class="value">{$coverPageAltText[$formLocale]|escape}</td>
+	</tr>
+	{/if}
+</table>
+
+<div class="separator"></div>
 
 <h3>{translate key="submission.indexing"}</h3>
 	
