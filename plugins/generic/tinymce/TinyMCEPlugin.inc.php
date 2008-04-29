@@ -264,6 +264,7 @@ class TinyMCEPlugin extends GenericPlugin {
 					language : "' . String::substr(Locale::getLocale(), 0, 2) . '",
 					elements : "' . $enableFields . '",
 					relative_urls : false,
+					apply_source_formatting : false,
 					theme : "advanced",
 					theme_advanced_buttons1 : "pasteword,bold,italic,underline,bullist,numlist,link,unlink,help,code",
 					theme_advanced_buttons2 : "",
