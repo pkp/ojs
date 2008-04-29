@@ -54,6 +54,13 @@ class IssueHandler extends Handler {
 			$showToc = ($arg == 'showToc') ? true : false;
 
 			$locale = Locale::getLocale();
+			$templateMgr->assign('locale', $locale);
+
+			import('file.PublicFileManager');
+			$publicFileManager = &new PublicFileManager();
+			$coverPagePath = Request::getBaseUrl() . '/';
+			$coverPagePath .= $publicFileManager->getJournalFilesPath($journal->getJournalId()) . '/';
+			$templateMgr->assign('coverPagePath', $coverPagePath);
 
 			if (!$showToc && $issue->getFileName($locale) && $issue->getShowCoverPage($locale)) {
 				$templateMgr->assign('fileName', $issue->getFileName($locale));
@@ -62,12 +69,6 @@ class IssueHandler extends Handler {
 				$templateMgr->assign('coverPageAltText', $issue->getCoverPageAltText($locale));
 				$templateMgr->assign('originalFileName', $issue->getOriginalFileName($locale));
 
-				import('file.PublicFileManager');
-				$publicFileManager = &new PublicFileManager();
-				$coverPagePath = Request::getBaseUrl() . '/';
-				$coverPagePath .= $publicFileManager->getJournalFilesPath($journal->getJournalId()) . '/';
-				$coverPagePath .= $issue->getFileName($locale);
-				$templateMgr->assign('coverPagePath', $coverPagePath);
 				$showToc = false;
 			} else {
 
