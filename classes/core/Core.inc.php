@@ -38,23 +38,29 @@ class Core {
 	 * @return string
 	 */
 	function cleanVar($var) {
-		// normalize existing HTML special characters to ASCII
-		$var = strtr(trim($var), array("&amp;" => "&", "&quot" => '"', "&lt;" => "<", "&gt;" => ">"));
-
 		// only process strings that are not UTF-8 already
 		if ( !String::isUTF8($var) && Config::getVar('i18n', 'charset_normalization') == 'On' ) {
 			import('core.Transcoder');
+			$tinyMCE = PluginRegistry::getPlugin('generic', 'TinyMCEPlugin');
 
-			// convert string to HTML entities (numeric and named)
-			$trans =& new Transcoder('CP1252', 'HTML-ENTITIES');
-			$var = $trans->trans($var);
+			if (empty($tinyMCE) || !$tinyMCE->getEnabled()) {
+				$var = strtr($var, array("&amp;" => "&", "&quot" => '"', "&lt;" => "<", "&gt;" => ">"));
 
-			// convert UTF-8 entities back to UTF-8 characters
-			$trans =& new Transcoder('HTML-ENTITIES', 'UTF-8');
-			$var = $trans->trans($var);
+				// convert string to HTML entities (numeric and named)
+				$trans =& new Transcoder('CP1252', 'HTML-ENTITIES');
+				$var = $trans->trans($var);
+
+				// convert UTF-8 entities back to UTF-8 characters
+				$trans =& new Transcoder('HTML-ENTITIES', 'UTF-8');
+				$var = $trans->trans($var);
+			} else {
+				// convert characters to UTF-8
+				$trans =& new Transcoder('CP1252', 'UTF-8');
+				$var = $trans->trans($var);
+			}
 		}		
 
-		return $var;
+		return trim($var);
 	}
 
 	/**
