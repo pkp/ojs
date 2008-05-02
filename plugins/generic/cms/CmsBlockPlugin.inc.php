@@ -104,7 +104,10 @@ class CmsBlockPlugin extends BlockPlugin {
 	 */
 	function getEnabled() {
 		$plugin =& $this->getCmsPlugin();
-		return $plugin->getEnabled();
+		if ( $plugin->getEnabled() ) {
+			return parent::getEnabled();	
+		}
+		return false;
 	}
 }
 

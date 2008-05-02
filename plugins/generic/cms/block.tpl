@@ -1,5 +1,5 @@
 {**
- * tableofcontents.tpl
+ * block.tpl
  *
  * Copyright (c) 2006-2007 Gunther Eysenbach, Juan Pablo Alperin, MJ Suhonos
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
@@ -7,7 +7,7 @@
  * Table of Contents for the CMS Plugin
  *
  *}
-<div class="block">
+<div class="block" id="cmsPluginToc">
 {if $cmsPluginToc}
 {*	<span class="blockTitle">{translate key="plugins.generic.cms.toc"}</span>*}
 	{if $cmsPluginEdit}
