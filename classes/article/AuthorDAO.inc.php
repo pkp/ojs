@@ -85,6 +85,7 @@ class AuthorDAO extends DAO {
 			FROM article_authors aa
 				LEFT JOIN articles a ON (aa.article_id = a.article_id)
 			WHERE	aa.first_name = ?
+				AND a.status = ' . STATUS_PUBLISHED . '
 				AND (aa.middle_name = ?' . (empty($middleName)?' OR aa.middle_name IS NULL':'') . ')
 				AND aa.last_name = ?
 				AND (aa.affiliation = ?' . (empty($affiliation)?' OR aa.affiliation IS NULL':'') . ')' .
