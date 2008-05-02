@@ -566,6 +566,11 @@ ul.plain {
 	padding-left: 1.5em;
 }
 
+ul.filter {
+	list-style-type: none;
+	padding-left: 1.5em;
+}
+
 div.separator {
 	width: 100%;
 	margin-top: 1em;

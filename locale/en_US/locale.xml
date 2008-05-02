@@ -1796,6 +1796,8 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	<message key="editor.submissions.lastAssigned">Latest</message>
 	<message key="editor.submissions.averageTime">Weeks</message>
 	<message key="editor.submissions.lastCompleted">Last Complete</message>
+	<message key="editor.submissions.filterEditor">Assigned to Me</message>
+	<message key="editor.submissions.showAll">All Editors</message>
 
 	<message key="editor.article.scheduleForPublication">Schedule for publication in</message>
 	<message key="editor.article.scheduleForPublication.toBeAssigned">To Be Assigned</message>

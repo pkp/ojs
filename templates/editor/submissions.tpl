@@ -17,7 +17,9 @@
 	<li{if $pageToDisplay == "submissionsInEditing"} class="current"{/if}><a href="{url op="submissions" path="submissionsInEditing"}">{translate key="common.queue.short.submissionsInEditing"}</a></li>
 	<li{if $pageToDisplay == "submissionsArchives"} class="current"{/if}><a href="{url op="submissions" path="submissionsArchives"}">{translate key="common.queue.short.submissionsArchives"}</a></li>
 </ul>
-
+<ul class="filter">
+	<li>&#187; {if $filterEditor == "filterEditor"}<a href="{url op="submissions" path=$pageToDisplay|to_array:"allEditors"}">{translate key="editor.submissions.showAll"}</a>{else}<a href="{url op="submissions" path=$pageToDisplay|to_array:"filterEditor"}">{translate key="editor.submissions.filterEditor"}</a>{/if}</li>
+</ul>
 <br />
 
 {if !$dateFrom}

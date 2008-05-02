@@ -558,6 +558,17 @@ class User extends DataObject {
 	}
 
 	/**
+	 * Set a user setting value.
+	 * @param $name string
+	 * @param $value mixed
+	 * @param $type string optional
+	 */
+	function updateSetting($name, $value, $type = null, $journalId = null) {
+		$userSettingsDao = &DAORegistry::getDAO('UserSettingsDAO');
+		return $userSettingsDao->updateSetting($this->getData('userId'), $name, $value, $type, $journalId);
+	}
+
+	/**
 	 * Get the user's complete name.
 	 * Includes first name, middle name (if applicable), and last name.
 	 * @param $lastFirst boolean return in "LastName, FirstName" format

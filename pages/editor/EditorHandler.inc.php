@@ -34,6 +34,8 @@ class EditorHandler extends SectionEditorHandler {
 
 		$templateMgr = &TemplateManager::getManager();
 		$journal = &Request::getJournal();
+		$journalId = $journal->getJournalId();
+		$user = &Request::getUser();
 
 		$editorSubmissionDao = &DAORegistry::getDAO('EditorSubmissionDAO');
 		$sectionDao = &DAORegistry::getDAO('SectionDAO');
@@ -94,7 +96,6 @@ class EditorHandler extends SectionEditorHandler {
 
 		$rangeInfo = Handler::getRangeInfo('submissions');
 
-
 		$submissionsCount = &$editorSubmissionDao->getEditorSubmissionsCount($journal->getJournalId());
 		$templateMgr->assign('submissionsCount', $submissionsCount);
 		$templateMgr->assign('helpTopicId', 'editorial.editorsRole');
@@ -109,13 +110,14 @@ class EditorHandler extends SectionEditorHandler {
 		EditorHandler::setupTemplate(EDITOR_SECTION_SUBMISSIONS);
 
 		$journal = &Request::getJournal();
+		$journalId = $journal->getJournalId();
 		$user = &Request::getUser();
 
 		$editorSubmissionDao = &DAORegistry::getDAO('EditorSubmissionDAO');
 		$sectionDao = &DAORegistry::getDAO('SectionDAO');
 
 		$page = isset($args[0]) ? $args[0] : '';
-		$sections = &$sectionDao->getSectionTitles($journal->getJournalId());
+		$sections = &$sectionDao->getSectionTitles($journalId);
 
 		// Get the user's search conditions, if any
 		$searchField = Request::getUserVar('searchField');
@@ -149,9 +151,29 @@ class EditorHandler extends SectionEditorHandler {
 				$helpTopicId = 'editorial.editorsRole.submissions.inReview';
 		}
 
+		$filterEditor = isset($args[1]) ? $args[1] : '';
+
+		if ($filterEditor == 'filterEditor') {
+			$user->updateSetting('filterEditor', 'filterEditor', 'string', $journalId);
+		} elseif ($filterEditor == 'allEditors') {
+			$user->updateSetting('filterEditor', 'allEditors', 'string', $journalId);
+		} else {
+			$filterEditor = $user->getSetting('filterEditor', $journalId);
+			if (!$filterEditor) {
+				$user->updateSetting('filterEditor', 'allEditors', 'string', $journalId);
+			}
+		}
+
+		if ($filterEditor == 'filterEditor') {
+			$editorId = $user->getUserId();
+		} else {
+			$editorId = 0;
+		}
+
 		$submissions = &$editorSubmissionDao->$functionName(
-			$journal->getJournalId(),
+			$journalId,
 			Request::getUserVar('section'),
+			$editorId,
 			$searchField,
 			$searchMatch,
 			$search,
@@ -166,6 +188,7 @@ class EditorHandler extends SectionEditorHandler {
 		$templateMgr->assign('sectionOptions', array(0 => Locale::Translate('editor.allSections')) + $sections);
 		$templateMgr->assign_by_ref('submissions', $submissions);
 		$templateMgr->assign('section', Request::getUserVar('section'));
+		$templateMgr->assign('filterEditor', $filterEditor);
 
 		// Set search parameters
 		foreach (EditorHandler::getSearchFormDuplicateParameters() as $param)
