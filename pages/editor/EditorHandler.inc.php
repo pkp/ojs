@@ -67,6 +67,7 @@ class EditorHandler extends SectionEditorHandler {
 			$rawSubmissions = &$editorSubmissionDao->getUnfilteredEditorSubmissions(
 				$journal->getJournalId(),
 				Request::getUserVar('section'),
+				0,
 				$searchField,
 				$searchMatch,
 				$search,
