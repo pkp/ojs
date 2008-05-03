@@ -66,17 +66,18 @@ class AuthorDAO extends DAO {
 
 	/**
 	 * Retrieve all published articles associated with authors with
-	 * the given first name, middle name, last name, and affiliation.
+	 * the given first name, middle name, last name, affiliation, and country.
 	 * @param $journalId int (null if no restriction desired)
-	 * @param firstName string
-	 * @param middleName string
-	 * @param lastName string
-	 * @param affiliation string
+	 * @param $firstName string
+	 * @param $middleName string
+	 * @param $lastName string
+	 * @param $affiliation string
+	 * @param $country string
 	 */
-	function &getPublishedArticlesForAuthor($journalId, $firstName, $middleName, $lastName, $affiliation) {
+	function &getPublishedArticlesForAuthor($journalId, $firstName, $middleName, $lastName, $affiliation, $country) {
 		$publishedArticles = array();
 		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
-		$params = array($firstName, $middleName, $lastName, $affiliation);
+		$params = array($firstName, $middleName, $lastName, $affiliation, $country);
 		if ($journalId !== null) $params[] = $journalId;
 
 		$result = &$this->retrieve(
@@ -88,7 +89,8 @@ class AuthorDAO extends DAO {
 				AND a.status = ' . STATUS_PUBLISHED . '
 				AND (aa.middle_name = ?' . (empty($middleName)?' OR aa.middle_name IS NULL':'') . ')
 				AND aa.last_name = ?
-				AND (aa.affiliation = ?' . (empty($affiliation)?' OR aa.affiliation IS NULL':'') . ')' .
+				AND (aa.affiliation = ?' . (empty($affiliation)?' OR aa.affiliation IS NULL':'') . ')
+				AND (aa.country = ?' . (empty($country)?' OR aa.country IS NULL':'') . ') ' . 
 				($journalId!==null?(' AND a.journal_id = ?'):''),
 			$params
 		);
