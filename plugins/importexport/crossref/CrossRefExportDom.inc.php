@@ -100,8 +100,8 @@ class CrossRefExportDom {
 		XMLCustomWriter::createChildWithText($doc, $journalMetadataNode, 'full_title', $journal->getJournalTitle());
 
 		/* Abbreviated title - defaulting to initials if no abbreviation found */
-		if  ($journal->getSetting('journalAbbreviation') != '' ) {
-			XMLCustomWriter::createChildWithText($doc, $journalMetadataNode, 'abbrev_title', $journal->getSetting('journalAbbreviation'));
+		if  ($journal->getLocalizedSetting('abbreviation') != '' ) {
+			XMLCustomWriter::createChildWithText($doc, $journalMetadataNode, 'abbrev_title', $journal->getLocalizedSetting('abbreviation'));
 		}
 
 		/* Both ISSNs are permitted for CrossRef, so sending whichever one (or both) */
