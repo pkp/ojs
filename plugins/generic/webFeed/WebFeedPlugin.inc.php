@@ -46,6 +46,7 @@ class WebFeedPlugin extends GenericPlugin {
 			if ($this->getEnabled()) {
 				HookRegistry::register('TemplateManager::display',array(&$this, 'callbackAddLinks'));
 				HookRegistry::register('PluginRegistry::loadCategory', array(&$this, 'callbackLoadCategory'));
+				HookRegistry::register('LoadHandler', array(&$this, 'callbackHandleShortURL') ); 
 			}
 			$this->addLocaleData();
 			return true;
@@ -88,6 +89,9 @@ class WebFeedPlugin extends GenericPlugin {
 		return false;
 	}
 
+	/**
+	 * Add feed links to page <head> on select/all pages.
+	 */
 	function callbackAddLinks($hookName, $args) {
 		if ($this->getEnabled()) {
 			$templateManager =& $args[0];
@@ -111,6 +115,34 @@ class WebFeedPlugin extends GenericPlugin {
 			}
 		}
 
+		return false;
+	}
+
+	/**
+	 * Handle requests for feed via short URLs (e.g., journalPath/feed/atom).
+	 * This is for backwards compatibility with older versions of this plugin.
+	 */
+	function callbackHandleShortURL($hookName, $args) {
+		if ($this->getEnabled()) {
+			$page =& $args[0];
+			$op =& $args[1];
+
+			if ($page == 'feed') {
+				switch ($op) {
+					case 'atom':
+						Request::redirect(null, 'gateway', 'plugin', array('WebFeedGatewayPlugin', 'atom'));
+						break;
+					case 'rss':
+						Request::redirect(null, 'gateway', 'plugin', array('WebFeedGatewayPlugin', 'rss'));
+						break;
+					case 'rss2':
+						Request::redirect(null, 'gateway', 'plugin', array('WebFeedGatewayPlugin', 'rss2'));
+						break;
+					default:
+						Request::redirect(null, 'index');
+				}
+			}
+		}
 		return false;
 	}
 
