@@ -14,9 +14,6 @@
  * $Id$
  */
 
-// Truncate issue titles in select menus to this length
-define('ISSUE_TITLE_SELECT_MAX_LENGTH', 40);
-
 class IssueAction {
 
 	/**
@@ -190,18 +187,18 @@ class IssueAction {
 		$issueIterator = $issueDao->getUnpublishedIssues($journalId);
 		while (!$issueIterator->eof()) {
 			$issue = &$issueIterator->next();
-			$issueOptions[$issue->getIssueId()] = String::strlen($issue->getIssueIdentification()) > ISSUE_TITLE_SELECT_MAX_LENGTH ? String::substr($issue->getIssueIdentification(), 0, ISSUE_TITLE_SELECT_MAX_LENGTH) . '...' : $issue->getIssueIdentification();
+			$issueOptions[$issue->getIssueId()] = $issue->getIssueIdentification();
 		}
 		$issueOptions['-101'] = '------    ' . Locale::translate('editor.issues.currentIssue') . '    ------';
 		$issuesIterator = $issueDao->getPublishedIssues($journalId);
 		$issues = $issuesIterator->toArray();
 		if (isset($issues[0]) && $issues[0]->getCurrent()) {
-			$issueOptions[$issues[0]->getIssueId()] = String::strlen($issues[0]->getIssueIdentification()) > ISSUE_TITLE_SELECT_MAX_LENGTH ? String::substr($issues[0]->getIssueIdentification(), 0, ISSUE_TITLE_SELECT_MAX_LENGTH) . '...' : $issues[0]->getIssueIdentification();
+			$issueOptions[$issues[0]->getIssueId()] = $issues[0]->getIssueIdentification();
 			array_shift($issues);
 		}
 		$issueOptions['-102'] = '------    ' . Locale::translate('editor.issues.backIssues') . '    ------';
 		foreach ($issues as $issue) {
-			$issueOptions[$issue->getIssueId()] = String::strlen($issue->getIssueIdentification()) > ISSUE_TITLE_SELECT_MAX_LENGTH ? String::substr($issue->getIssueIdentification(), 0, ISSUE_TITLE_SELECT_MAX_LENGTH) . '...' : $issue->getIssueIdentification();
+			$issueOptions[$issue->getIssueId()] = $issue->getIssueIdentification();
 		}
 
 		return $issueOptions;
