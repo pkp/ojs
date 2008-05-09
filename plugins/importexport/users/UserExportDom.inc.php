@@ -64,7 +64,7 @@ class UserExportDom {
 					unset($interestsNode);
 				}
 			}
-			if (is_array($user->getSignature(null))) {
+			if (is_array($user->getBiography(null))) {
 				foreach($user->getBiography(null) as $locale => $value) {
 					$biographyNode =& XMLCustomWriter::createChildWithText($doc, $userNode, 'biography', $value, false);
 					if ($biographyNode) {
