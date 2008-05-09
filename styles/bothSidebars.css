@@ -14,9 +14,19 @@
  * Common HTML elements
  */
 
+
 #main {
 	position: relative;
-	width: 450px;
-	margin-left: 170px;
-	margin-right: 170px;
+	float: left;
+	width:40%;
+	padding-left: 5px;
+	padding-right: 5px;
+	height: 100%;
+	text-align: center;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+#body {
+	width: 100%;
 }

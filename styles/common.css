@@ -19,6 +19,7 @@ body {
 	background-color: #FBFBF3;
 	color: #111;
 	font-family: Verdana,Arial,Helvetica,sans-serif;
+	text-align: center;
 }
 
 div {
@@ -107,27 +108,29 @@ input.defaultButton {
  */
 
 #container {
+	width:100% !important;
+	min-width: 730px;
+	margin: 0px auto;
 	line-height: 125%;
 	text-align: center;
 }
 
 #header {
-	padding: 0;
-	margin: 0 auto;
+	width:100%;
 	background-color: #ABA;
 	text-align: center;
 }
 
 #headerTitle {
-	text-align: left;
+	text-align: left !important;
 	margin: 0 auto;
 	padding: 0;
-	width: 800px;
+	width: 100%;
 }
 
 #header h1 {
 	margin: 0 auto;
-	padding: 0.5em 0 0.25em 0;
+	padding: 0.5em 0 0.25em 10%;
 	font-family: Georgia,'Times New Roman',Times,serif;
 	font-weight: normal;
 	line-height: 1em;
@@ -137,22 +140,19 @@ input.defaultButton {
 	border: 0;
 }
 
-#body {
-	width: 800px;
-	margin: 0 auto;
-}
-
 #footer {
+	width: 100%;
 	min-height: 50px;
-	position: relative;
+	position: static;
 	clear: both;
 	background-color: #ABA;
 	text-align: center;
 }
 
 #footerContent {
-	width: 800px;
+	width: 100%;
 	margin: 0 auto;
+	padding-left: 10%;
 }
 
 #main {

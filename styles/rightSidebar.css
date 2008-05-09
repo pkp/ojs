@@ -13,28 +13,29 @@
  * Common HTML elements
  */
 
+
 #headerTitle {
-	width: 800px;
+	text-align: center;
+	width: 100%;
 }
 
 #body {
-	width: 800px;
-}
-
-#footerContent {
-	width: 800px;
+	width: 100%;
 }
 
 #rightSidebar {
 	float: right;
-	width: 150px;
-	margin: 0;
+	width: 19%;
 	padding: 1em 0em 1em 0em;
 	font-size: 0.65em;
+	height: 100%;
+	margin-right: 10%;
 }
 
 #main {
-	width: 619px;
-	margin-right: 175px;
+	float: left;
+	width: 60%;
+	margin-left: 10%;
+
 }
 

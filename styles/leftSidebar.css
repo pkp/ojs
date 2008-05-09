@@ -14,27 +14,27 @@
  */
 
 #headerTitle {
-	width: 800px;
+	width: 100%;
 }
 
 #body {
-	width: 800px;
-}
-
-#footerContent {
-	width: 800px;
+	vertical-align: top;
+	height: 100%;
 }
 
 #leftSidebar {
 	float: left;
-	width: 150px;
+	width: 19%;
 	margin: 0;
 	padding: 1em 0em 1em 0em;
 	font-size: 0.65em;
+	height: 100%;
+	margin-left: 10%;
 }
 
 #main {
-	width: 619px;
-	margin-left: 175px;
+	float: right;
+	width: 60%;
+	margin-right: 10%;
 }
 
