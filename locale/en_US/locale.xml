@@ -2588,7 +2588,6 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 
 	<message key="rt.admin.readingToolsEnabled">Reading tools</message>
 	<message key="rt.admin.selectedVersion">Related items</message>
-	<message key="rt.admin.rtEnable">To enable Reading Tools for this journal, go to Reading Tool Options.</message>
 	<message key="rt.admin.settings.description">The reading tools appear in a frame beside published items in the sections of the journal that have been designated for indexing. The reading tools consist of a set of optional tools related to the published item, listed below, and a set of tools that provide access to related items, organized by field and discipline.</message>
 	<message key="rt.admin.settings.enableReadingTools">Enable Reading Tools for designated sections of journal.</message>
 	<message key="rt.admin.settings.abstract">Abstract (presents the item's abstract).</message>

@@ -17,8 +17,6 @@
 {translate key="rt.admin.selectedVersion"}: {if $versionTitle}{$versionTitle|escape}{else}{translate key="common.disabled"}{/if}
 </p>
 
-<p>{translate key="rt.admin.rtEnable"}</p>
-
 <h3>{translate key="rt.admin.configuration"}</h3>
 <ul class="plain">
 	<li>&#187; <a href="{url op="settings"}">{translate key="rt.admin.settings"}</a></li>
