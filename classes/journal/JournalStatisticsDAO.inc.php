@@ -125,7 +125,7 @@ class JournalStatisticsDAO extends DAO {
 		unset($result);
 
 		// Calculate percentages where necessary
-		if ($returner['numSubmissions'] != 0) {
+		if ($returner['numReviewedSubmissions'] != 0) {
 			$returner['submissionsAcceptPercent'] = round($returner['submissionsAccept'] * 100 / $returner['numReviewedSubmissions']);
 			$returner['submissionsDeclinePercent'] = round($returner['submissionsDecline'] * 100 / $returner['numReviewedSubmissions']);
 			$returner['submissionsRevisePercent'] = round($returner['submissionsRevise'] * 100 / $returner['numReviewedSubmissions']);
