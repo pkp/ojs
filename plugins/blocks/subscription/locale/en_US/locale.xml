@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.block.subscription.displayName">Subscription Block</message>
+	<message key="plugins.block.subscription.description">This plugin provides sidebar subscription information.</message>
+	<message key="plugins.block.subscription.blockTitle">Subscription</message>
+	<message key="plugins.block.subscription.expires">Expires</message>
+	<message key="plugins.block.subscription.providedBy">Access provided by: </message>
+	<message key="plugins.block.subscription.providedByInstitution">Access provided by your institution</message>
+	<message key="plugins.block.subscription.comingFromIP">Coming from IP: </message>
+</locale>
