@@ -450,7 +450,7 @@ class AboutHandler extends Handler {
 
 		if ($user) {
 			$rolesByJournal = array();
-			$journals = &$journalDao->getJournals();
+			$journals = &$journalDao->getEnabledJournals();
 			// Fetch the user's roles for each journal
 			foreach ($journals->toArray() as $journal) {
 				$roles = &$roleDao->getRolesByUserId($user->getUserId(), $journal->getJournalId());
@@ -460,7 +460,7 @@ class AboutHandler extends Handler {
 			}
 		}
 
-		$journals = &$journalDao->getJournals();
+		$journals = &$journalDao->getEnabledJournals();
 		$templateMgr->assign_by_ref('journals', $journals->toArray());
 		if (isset($rolesByJournal)) {
 			$templateMgr->assign_by_ref('rolesByJournal', $rolesByJournal);
