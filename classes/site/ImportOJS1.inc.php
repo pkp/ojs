@@ -1235,10 +1235,10 @@ class ImportOJS1 {
 				$layoutAssignment->setDateAcknowledged($row['dtDateGalleysCompleted']);
 				$layoutAssignmentDao->insertLayoutAssignment($layoutAssignment);
 
-				$reviewerOrder = 1;
 				$reviewResult = &$this->importDao->retrieve('SELECT tblreviews.*, tblarticlesassigned.*, nUserID FROM tblreviews, tblarticlesassigned, tblusers, tblarticles WHERE tblreviews.fkArticleID = tblarticles.nArticleID AND tblreviews.fkArticleID = tblarticlesassigned.fkArticleID AND tblusers.fkReviewerID = tblarticlesassigned.fkReviewerID AND tblreviews.fkReviewerID = tblarticlesassigned.fkReviewerID AND tblarticlesassigned.nOrder IS NOT NULL AND tblreviews.fkArticleID = ? ORDER BY nOrder', $row['nArticleID']);
 				while (!$reviewResult->EOF) {
 					$reviewRow = &$reviewResult->fields;
+					$reviewerOrder = $reviewRow['nOrder'];
 
 					$reviewAssignment = &new ReviewAssignment();
 
@@ -1271,7 +1271,6 @@ class ImportOJS1 {
 					if (!$reviewRow['bReplaced']) {
 						$articleUsers[$articleId]['reviewerId'][$reviewerOrder] = $reviewAssignment->getReviewerId();
 						$articleUsers[$articleId]['reviewId'][$reviewerOrder] = $reviewAssignment->getReviewId();
-						$reviewerOrder++;
 					}
 
 					$reviewResult->MoveNext();
