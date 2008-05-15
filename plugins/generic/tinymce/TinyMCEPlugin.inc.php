@@ -208,6 +208,7 @@ class TinyMCEPlugin extends GenericPlugin {
 				$fields[] = 'description';
 				break;
 			case 'manager/subscriptionPolicies':
+			case 'manager/saveSubscriptionPolicies':
 				$fields[] = 'subscriptionMailingAddress';
 				$fields[] = 'subscriptionAdditionalInformation';
 				$fields[] = 'delayedOpenAccessPolicy';
