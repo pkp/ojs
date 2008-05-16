@@ -118,6 +118,7 @@ class JournalSiteSettingsForm extends Form {
 		if ($journal->getJournalId() != null) {
 			$isNewJournal = false;
 			$journalDao->updateJournal($journal);
+			$section = null;
 		} else {
 			$isNewJournal = true;
 			$site =& Request::getSite();
