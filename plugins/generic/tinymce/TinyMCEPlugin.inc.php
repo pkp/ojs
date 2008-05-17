@@ -79,6 +79,7 @@ class TinyMCEPlugin extends GenericPlugin {
 				$fields[] = 'description';
 				break;
 			case 'author/submit':
+			case 'author/saveSubmit':
 				switch (array_shift(Request::getRequestedArgs())) {
 					case 1: $fields[] = 'commentsToEditor'; break;
 					case 2:
