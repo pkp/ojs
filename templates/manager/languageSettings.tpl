@@ -33,9 +33,16 @@
 </tr>
 <tr valign="top">
 	<td class="label">{fieldLabel suppressId="true" name="supportedLocales" key="locale.supported"}</td>
-	<td colspan="2" class="value">{foreach from=$availableLocales key=localeKey item=localeName}
-		<input type="checkbox" name="supportedLocales[]" id="supportedLocales-{$localeKey|escape}" value="{$localeKey|escape}"{if in_array($localeKey, $supportedLocales)} checked="checked"{/if}/> <label for="supportedLocales-{$localeKey|escape}">{$localeName|escape}</label><br />
-	{/foreach}</td>
+	<td colspan="2" class="value">
+		<table class="data" width="100%">
+		{foreach from=$availableLocales key=localeKey item=localeName}
+			<tr>
+				<td width="30%"><input type="checkbox" name="supportedLocales[]" id="supportedLocales-{$localeKey|escape}" value="{$localeKey|escape}"{if in_array($localeKey, $supportedLocales)} checked="checked"{/if}/> <label for="supportedLocales-{$localeKey|escape}">{$localeName|escape}</label></td>
+				<td width="70%"><a href="{url op="reloadLocalizedDefaultSettings" localeToLoad=$localeKey}" onclick="return confirm('{translate|escape:"jsparam" key="manager.language.confirmDefaultSettingsOverwrite"}')" class="action">{translate key="manager.language.reloadLocalizedDefaultSettings"}</a></td>
+			</tr>
+		{/foreach}
+		</table>
+	</td>
 </tr>
 <tr valign="top">
 	<td>&nbsp;</td>

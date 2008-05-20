@@ -1300,7 +1300,8 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.languages.supportedLocalesInstructions">Select all locales to support on the site via a language select menu to appear on each page. The menu will only appear if more than one locale is selected.</message>
 	<message key="manager.languages.alternateLocaleInstructions">This system optionally allows certain critical information to be entered in several additional languages. To use this feature, select alternate locales and choose from the options listed below.</message>
 	<message key="manager.languages.noneAvailable">Sorry, no additional languages are available. Contact your site administrator if you wish to use additional languages with this journal.</message>
-	
+	<message key="manager.language.reloadLocalizedDefaultSettings">Reload locale-specific default settings</message>
+	<message key="manager.language.confirmDefaultSettingsOverwrite">This will replace any locale-specific journal settings you had for this locale</message>
 	
 	<!-- Section Management -->
 	<message key="manager.sections.noneCreated">No sections have been created.</message>

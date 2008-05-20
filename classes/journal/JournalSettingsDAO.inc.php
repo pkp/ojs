@@ -111,7 +111,7 @@ class JournalSettingsDAO extends DAO {
 		$cache->setCache($name, $value);
 
 		$keyFields = array('setting_name', 'locale', 'journal_id');
-
+		
 		if (!$isLocalized) {
 			$value = $this->convertToDB($value, $type);
 			$this->replace('journal_settings',
@@ -125,9 +125,9 @@ class JournalSettingsDAO extends DAO {
 				$keyFields
 			);
 		} else {
-			$this->update('DELETE FROM journal_settings WHERE journal_id = ? AND setting_name = ?', array($journalId, $name));
 			if (is_array($value)) foreach ($value as $locale => $localeValue) {
 				if (empty($localeValue)) continue;
+				$this->update('DELETE FROM journal_settings WHERE journal_id = ? AND setting_name = ? AND locale = ?', array($journalId, $name, $locale));
 				$type = null;
 				$this->update('INSERT INTO journal_settings
 					(journal_id, setting_name, setting_value, setting_type, locale)
@@ -248,6 +248,104 @@ class JournalSettingsDAO extends DAO {
 					$isLocaleField?array(Locale::getLocale() => $value):$value,
 					$type,
 					$isLocaleField
+				);
+			}
+		}
+
+		$xmlParser->destroy();
+
+	}
+
+	/**
+	 * Used internally by reloadLocalizedSettingDefaults to perform variable and translation replacements.
+	 * @param $rawInput string contains text including variable and/or translate replacements.
+	 * @param $paramArray array contains variables for replacement
+	 * @param $locale string contains the name of the locale that should be used for the translation
+	 * @returns string
+	 */
+	function _performLocalizedReplacement($rawInput, $paramArray = array(), $locale = null) {
+		$value = preg_replace_callback('{{translate key="([^"]+)"}}',
+																	// this only translates from mail locale file 
+																	create_function('$matches', 
+																		'$locale = "' . $locale . '";'.
+																		'$localeFileName = Locale::getMainLocaleFilename($locale);'.
+																		'$localeFile =& new LocaleFile($locale, $localeFileName);'. 
+																		'return $localeFile->translate($matches[1]);'
+																		),
+																		$rawInput); 
+		foreach ($paramArray as $pKey => $pValue) {
+			$value = str_replace('{$' . $pKey . '}', $pValue, $value);
+		}
+		return $value;
+	}
+
+	/**
+	 * Used internally by reloadLocalizedSettingDefaults to recursively build nested arrays.
+	 * Deals with translation and variable replacement calls.
+	 * @param $node object XMLNode <array> tag
+	 * @param $paramArray array Parameters to be replaced in key/value contents
+	 * @param $locale string contains the name of the locale that should be used for the translation
+	 */
+	function &_buildLocalizedObject (&$node, $paramArray = array(), $locale = null) {
+		$value = array();
+		foreach ($node->getChildren() as $element) {
+			$key = $element->getAttribute('key');
+			$childArray = &$element->getChildByName('array');
+			if (isset($childArray)) {
+				$content = $this->_buildLocalizedObject($childArray, $paramArray, $locale);
+			} else {
+				$content = $this->_performLocalizedReplacement($element->getValue(), $paramArray, $locale);
+			}
+			if (!empty($key)) {
+				$key = $this->_performLocalizedReplacement($key, $paramArray, $locale);
+				$value[$key] = $content;
+			} else $value[] = $content;
+		}
+		return $value;
+	}
+
+	/**
+	 * Install locale field Only journal settings from an XML file.
+	 * @param $journalId int ID of journal for settings to apply to
+	 * @param $filename string Name of XML file to parse and install
+	 * @param $paramArray array Optional parameters for variable replacement in settings
+	 * @param $locale string locale id for which settings will be loaded
+	 */
+	function reloadLocalizedDefaultSettings($journalId, $filename, $paramArray, $locale) {
+		$xmlParser = &new XMLParser();
+		$tree = $xmlParser->parse($filename);
+
+		if (!$tree) {
+			$xmlParser->destroy();
+			return false;
+		}
+
+		foreach ($tree->getChildren() as $setting) {
+			$nameNode = &$setting->getChildByName('name');
+			$valueNode = &$setting->getChildByName('value');
+
+			if (isset($nameNode) && isset($valueNode)) {
+				$type = $setting->getAttribute('type');
+				$isLocaleField = $setting->getAttribute('locale');
+				$name = &$nameNode->getValue();
+
+				//skip all settings that are not locale fields
+				if (!$isLocaleField) continue;
+
+				if ($type == 'object') {
+					$arrayNode = &$valueNode->getChildByName('array');
+					$value = $this->_buildLocalizedObject($arrayNode, $paramArray, $locale);
+				} else {
+					$value = $this->_performLocalizedReplacement($valueNode->getValue(), $paramArray, $locale);
+				}
+				
+				// Replace translate calls with translated content
+				$this->updateSetting(
+					$journalId,
+					$name,
+					array($locale => $value),
+					$type,
+					true
 				);
 			}
 		}

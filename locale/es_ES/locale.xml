@@ -1101,6 +1101,8 @@ Seleccione un modelo para manejar aquellos aspectos del proceso editorial. (Para
 	<message key="manager.languages.primaryLocaleInstructions">Este será el idioma por defecto del sitio.</message>
 	<message key="manager.languages.supportedLocalesInstructions">Seleccione todos los locales a soportar en el sitio a través de un menú de selección de idioma que aparecerá en cada página. El menú sólo aparecerá si se selecciona más de un locale.</message>
 	<message key="manager.languages.noneAvailable">Lo sentimos, no hay idiomas adicionales disponibles. Póngase en contacto con el/la administrador/a del sitio si desea usar otros idiomas con esta revista.</message>
+	<message key="manager.language.reloadLocalizedDefaultSettings">Recargar configuración defectos de este locale</message>
+	<message key="manager.language.confirmDefaultSettingsOverwrite">Esto remplazara cualquier configuración específica de este locale</message>
 	
 	
 	<!-- Section Management -->

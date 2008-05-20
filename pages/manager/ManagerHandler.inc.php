@@ -318,6 +318,11 @@ class ManagerHandler extends Handler {
 		import('pages.manager.JournalLanguagesHandler');
 		JournalLanguagesHandler::saveLanguageSettings();
 	}
+	
+	function reloadLocalizedDefaultSettings() {
+		import('pages.manager.JournalLanguagesHandler');
+		JournalLanguagesHandler::reloadLocalizedDefaultSettings();
+	}
 
 
 	//
