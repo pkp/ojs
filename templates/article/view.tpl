@@ -24,6 +24,7 @@
 		<link rel="stylesheet" href="{$cssUrl}" type="text/css" />
 	{/foreach}
 
+	<script type="text/javascript" src="{$baseUrl}/js/general.js"></script>
 	{$additionalHeadData}
 </head>
 <frameset cols="*,180" style="border: 0;">
