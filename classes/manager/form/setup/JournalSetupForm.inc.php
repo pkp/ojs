@@ -40,6 +40,7 @@ class JournalSetupForm extends Form {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('setupStep', $this->step);
 		$templateMgr->assign('helpTopicId', 'journal.managementPages.setup');
+		$templateMgr->setCacheability(CACHEABILITY_MUST_REVALIDATE);
 		parent::display();
 	}
 
