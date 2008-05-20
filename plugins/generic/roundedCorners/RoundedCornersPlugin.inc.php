@@ -67,7 +67,6 @@ class RoundedCornersPlugin extends GenericPlugin {
 			$this->updateSetting($journal->getJournalId(), 'enabled', $enabled ? true : false);
 			return true;
 		}
-		var_dump($enabled);
 		return false;
 	}
 
