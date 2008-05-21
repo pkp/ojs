@@ -1,0 +1,37 @@
+================================
+=== OJS METS XML Export Plugin
+=== Version: 1.0
+=== Release date: 15/02/2008 
+=== Author: APSR
+================================
+
+About
+-----
+This plugin for OJS 2 provides an XML export feature using The Australian METS Journal Profile 1.0
+for more information about the Schema go to the Library of Congress website
+http://www.loc.gov/standards/mets/mets-registered-profiles.html
+
+License
+-------
+This plugin is licensed under the GNU General Public License v2. See the file COPYING for the complete terms of this license.
+
+System Requirements
+-------------------
+Same requirements as the OJS 2.2.x core.
+
+Installation
+------------
+To install the plugin:
+- copy the mets folder into OJS/plugins/importexport
+
+The export functionality can then be accessed through:
+- Home > User > Journal Management > Import/Export Data > METS XML Export Plugin
+
+Contact/Support
+---------------
+Please email the authors for support.
+Email: <Scott.Yeadon@anu.edu.au>
+
+Version History
+---------------
+1.0    - initial release
