@@ -24,17 +24,25 @@
 
 #leftSidebar {
 	float: left;
-	width: 19%;
-	margin: 0;
+	width: 14%;
 	padding: 1em 0em 1em 0em;
 	font-size: 0.65em;
 	height: 100%;
 	margin-left: 10%;
+	margin-right: 2%;
+	display: inline;
+	overflow: hidden;
 }
 
 #main {
 	float: right;
-	width: 60%;
+	width: 53%;
 	margin-right: 10%;
+	overflow: hidden;
 }
 
+/* hack to set width for non-IE browsers to to a percentage 
+   width of container (like it should be), not the window */
+html>body #main {
+	width: 63%;
+} 

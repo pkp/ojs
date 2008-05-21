@@ -109,7 +109,7 @@ input.defaultButton {
 
 #container {
 	width:100% !important;
-	min-width: 730px;
+	min-width: 730px !important;
 	margin: 0px auto;
 	line-height: 125%;
 	text-align: center;

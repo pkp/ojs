@@ -10,7 +10,7 @@
  */
 
 #headerTitle {
-	width: 660px;
+	width: 100%;
 }
 
 #header h1 {
@@ -19,24 +19,28 @@
 	text-align: right;
 }
 
+#container {
+	min-width: 615px;
+}
+
+
 #body {
-	width: 660px;
+	width: 615px;
+	margin: auto;
 }
 
 #footer {
-	//clear: both;
 	padding: 0;
 	background-color: #ABA;
 	text-align: center;
 }
 
 #footerContent {
-	width: 660px;
+	width: 615px;
 }
 
 #main {
-	margin: 0;
-	width: 660px;
+	margin: 0 auto;
 }
 
 #main h2 {
