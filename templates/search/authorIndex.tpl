@@ -19,7 +19,7 @@
 	{assign var=lastFirstLetter value=$firstLetter}
 	{assign var=firstLetter value=$author->getLastName()|String_substr:0:1}
 
-	{if $lastFirstLetter != $firstLetter}
+	{if $lastFirstLetter|lower != $firstLetter|lower}
 		<a name="{$firstLetter|escape}"></a>
 		<h3>{$firstLetter|escape}</h3>
 	{/if}
