@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2005 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.gateways.metsGateway.displayName">METS Gateway Plugin</message>
+	<message key="plugins.gateways.metsGateway.settings">Settings</message>
+	<message key="plugins.gateways.metsGateway.description"><![CDATA[This plugin provides raw XML data in METS format for a specified journal. <strong>NOTE: This is intended to be used by Web Services and enabling this plugin has a security issue in that it provides unrestricted access to the journal in XML form (content is base64 encoded).</strong>]]></message>
+	<message key="plugins.gateways.metsGateway.errors.errorMessage">Unable to export journal data. The METS Gateway plugin needs to be enabled and the id of the journal to exported must be provided in the URL.</message>
+	<message key="plugins.gateways.metsGateway.settings.FContent">Use base64 encoding for content wrapper</message>
+	<message key="plugins.gateways.metsGateway.settings.FLocat">Use URL of the bitsream for content wrapper</message>
+	<message key="plugins.gateways.metsGateway.settings.organization">METS:agent element organization attribute</message>
+	<message key="plugins.gateways.metsGateway.settings.preservationLevel">PREMIS preservation Level</message>
+	<message key="plugins.gateways.metsGateway.settings.exportSuppFiles">Export supplementary files</message>
+</locale>

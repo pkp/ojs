@@ -57,7 +57,7 @@ function SubmitIfAnyIsChecked() {
 
 <form action="{plugin_url path="exportIssues"}" method="post" name="issues">
 
-<h3>{translate key="plugins.generic.webfeed.settings"}</h3>
+<h3>{translate key="plugins.importexport.METSExport.settings"}</h3>
 
 <table width="100%" class="data">
 	<tr valign="top">

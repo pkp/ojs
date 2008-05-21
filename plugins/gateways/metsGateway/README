@@ -1,7 +1,7 @@
 ================================
-=== OJS METS XML Export Plugin
+=== OJS METS XML Gateway Plugin
 === Version: 1.0
-=== Release date: 15/02/2008 
+=== Release date: 15/02/2008
 === Authors: Scott Yeadon, Leo Monus
 ================================
 
@@ -22,10 +22,20 @@ Same requirements as the OJS 2.2.x core.
 Installation
 ------------
 To install the plugin:
-- copy the mets folder into OJS/plugins/importexport
+- copy the metsGateway folder into OJS/plugins/importexport
 
-The export functionality can then be accessed through:
-- Home > User > Journal Management > Import/Export Data > METS XML Export Plugin
+To enable the plugin click ENABLE under the "METS Export Gateway Plugin" in the  manager/plugins page
+
+The the Journals XML can be acessed by the following URLs:
+
+for All Issues:
+[OJS URL]/index.php/[JournalPath]/gateway/plugin/METSGatewayPlugin/
+
+for a specific [IssueID]:
+[OJS URL]/index.php/[JournalPath]/gateway/plugin/METSGatewayPlugin/[IssueID]
+
+for All Current Issues:
+[OJS URL]/index.php/[JournalPath]/gateway/plugin/METSGatewayPlugin/current
 
 Contact/Support
 ---------------

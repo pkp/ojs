@@ -76,7 +76,12 @@ class METSExportPlugin extends ImportExportPlugin {
 				$issueDao = &DAORegistry::getDAO('IssueDAO');
 				$issues = &$issueDao->getIssues($journal->getJournalId(), Handler::getRangeInfo('issues'));
 
+				$siteDao = &DAORegistry::getDAO('SiteDAO');
+				$site = $siteDao->getSite();
+				$organization = $site->getSiteTitle();
+
 				$templateMgr->assign_by_ref('issues', $issues);
+				$templateMgr->assign_by_ref('organization', $organization);
 				$templateMgr->display($this->getTemplatePath() . 'issues.tpl');
 				break;
 			default:

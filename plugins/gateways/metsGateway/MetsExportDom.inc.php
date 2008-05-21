@@ -496,7 +496,7 @@ class MetsExportDom {
 	function generateArticleHtmlGalleyImageFileDom(&$doc, &$root, $article, $galley, $imageFile, $useAttribute) {
 		import('classes.file.PublicFileManager');
 		import('classes.file.FileManager');
-		$contentWrapper = &Request::getUserVar('contentWrapper');
+		$contentWrapper = $this->getSetting($this->journalId, 'contentWrapper');
 		$mfile = &XMLCustomWriter::createElement($doc, 'METS:file');
 		$filePath  = MetsExportDom::getPublicFilePath($imageFile , '/public/');
 		$chkmd5return = md5_file($filePath);
@@ -531,7 +531,7 @@ class MetsExportDom {
 	function generateArticleFileDom(&$doc, &$root, $article, &$galleyFile, $useAttribute) {
 		import('classes.file.PublicFileManager');
 		import('classes.file.FileManager');
-		$contentWrapper = &Request::getUserVar('contentWrapper');
+		$contentWrapper = $this->getSetting($this->journalId, 'contentWrapper');
 		$mfile = &XMLCustomWriter::createElement($doc, 'METS:file');
 		$filePath  = MetsExportDom::getPublicFilePath($galleyFile , '/public/');
 		$chkmd5return = md5_file($filePath);
@@ -566,7 +566,7 @@ class MetsExportDom {
 	function generateArticleSuppFileDom(&$doc, &$root, $article, &$SuppFile) {
 		import('classes.file.PublicFileManager');
 		import('classes.file.FileManager');
-		$contentWrapper = &Request::getUserVar('contentWrapper');
+		$contentWrapper = $this->getSetting($this->journalId, 'contentWrapper');
 		$mfile = &XMLCustomWriter::createElement($doc, 'METS:file');
 		$filePath  = MetsExportDom::getPublicFilePath($SuppFile , '/supp/');;
 		$chkmd5return = md5_file($filePath);
@@ -627,7 +627,7 @@ class MetsExportDom {
 		XMLCustomWriter::createChildWithText($doc, $objectIdentifier, 'premis:objectIdentifierType', 'internal');
 		XMLCustomWriter::createChildWithText($doc, $objectIdentifier, 'premis:objectIdentifierValue', 'J-'.$journal->getJournalId());
 		XMLCustomWriter::appendChild($pObject, $objectIdentifier);
-		$preservationLevel = &Request::getUserVar('preservationLevel');
+		$preservationLevel = $this->getSetting($this->journalId, 'preservationLevel');
 		if($preservationLevel == ''){
 			$preservationLevel = '1';
 		}
@@ -651,7 +651,7 @@ class MetsExportDom {
 		$agentNode = &XMLCustomWriter::createElement($doc, 'METS:agent');
 		XMLCustomWriter::setAttribute($agentNode, 'ROLE', 'DISSEMINATOR');
 		XMLCustomWriter::setAttribute($agentNode, 'TYPE', 'ORGANIZATION');
-		$organization = &Request::getUserVar('organization');
+		$organization = $this->getSetting($this->journalId, 'organization');
 		if($organization == ''){
 			$siteDao = &DAORegistry::getDAO('SiteDAO');
 			$site = $siteDao->getSite();

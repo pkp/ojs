@@ -15,6 +15,7 @@
 <locale name="en_US" full_name="U.S. English">
 	<message key="plugins.importexport.METSExport.displayName">METS XML Export Plugin</message>
 	<message key="plugins.importexport.METSExport.description">Export Journals in METS XML</message>
+	<message key="plugins.importexport.METSExport.settings">Settings</message>
 	<message key="plugins.importexport.METSExport.export">Export Data</message>
 	<message key="plugins.importexport.METSExport.export.issues">Export Issues</message>
 	<message key="plugins.importexport.METSExport.export.selectIssue">Select Issues to export.</message>
