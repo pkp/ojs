@@ -22,9 +22,9 @@ Same requirements as the OJS 2.2.x core.
 Installation
 ------------
 To install the plugin:
-- copy the metsGateway folder into OJS/plugins/importexport
+- copy the metsGateway folder into OJS/plugins/gateways
 
-To enable the plugin click ENABLE under the "METS Export Gateway Plugin" in the  manager/plugins page
+To enable the plugin click ENABLE under the "METS Gateway Plugin" in the  manager/plugins page
 
 The the Journals XML can be acessed by the following URLs:
 
