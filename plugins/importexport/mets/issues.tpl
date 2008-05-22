@@ -103,7 +103,7 @@ function SubmitIfAnyIsChecked() {
 	<tr>
 		<td colspan="5" class="headseparator">&nbsp;</td>
 	</tr>
-	
+
 	{iterate from=issues item=issue}
 	<tr valign="top">
 		<td><input type="checkbox" name="issueId[]" value="{$issue->getIssueId()}"/></td>
@@ -115,21 +115,23 @@ function SubmitIfAnyIsChecked() {
 	<tr>
 		<td colspan="5" class="{if $issues->eof()}end{/if}separator">&nbsp;</td>
 	</tr>
-{/iterate}
-{if $issues->wasEmpty()}
+	{/iterate}
+
+	{if $issues->wasEmpty()}
 	<tr>
 		<td colspan="5" class="nodata">{translate key="issue.noIssues"}</td>
 	</tr>
 	<tr>
 		<td colspan="5" class="endseparator">&nbsp;</td>
 	</tr>
-{else}
+	{else}
 	<tr>
 		<td colspan="2" align="left">{page_info iterator=$issues}</td>
 		<td colspan="3" align="right">{page_links name="issues" iterator=$issues}</td>
 	</tr>
-{/if}
+	{/if}
 </table>
+
 <p><input type="button" value="{translate key="common.export"}" class="button defaultButton" onclick="SubmitIfAnyIsChecked();return false;"/>&nbsp;<input type="button" ID="selButton" value="Select All" class="button" onclick="javascript:selectAll();" /></p>
 </form>
 
