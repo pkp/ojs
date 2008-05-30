@@ -1,0 +1,40 @@
+.picker_layer {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	text-decoration: none;
+	background-color: #d4d0c8;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #666666;
+	overflow: visible;
+	height: auto;
+	width: auto;
+}
+.picker_buttons {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	background-color:#d4d0c8;
+	border-style:solid;
+	border-color:#666666;
+	border-width:1px;
+	padding:1px;
+	cursor:pointer;
+	color:#000000;
+}
+.cell_color {
+	cursor:pointer;
+	width:9px;
+	height:9px;
+}
+.color_table {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	text-decoration: none;
+}
+.choosed_color_cell{
+	border-style:solid; border-color:#000000; border-width:1px;
+}
+.default_color_btn{
+	width:17px; height:17px; background-image:url(defaultcolor.jpg);
+	background-repeat:no-repeat; background-position:center;
+}
