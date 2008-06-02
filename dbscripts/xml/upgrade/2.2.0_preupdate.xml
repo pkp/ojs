@@ -56,16 +56,52 @@
 
 		<!-- Syntax for PostgreSQL. -->
 		<query driver="postgres7">
-			ALTER TABLE issues ADD COLUMN show_volume SMALLINT NOT NULL DEFAULT 0
+			ALTER TABLE issues ADD COLUMN show_volume SMALLINT
 		</query>
 		<query driver="postgres7">
-			ALTER TABLE issues ADD COLUMN show_number SMALLINT NOT NULL DEFAULT 0
+			ALTER TABLE issues ALTER COLUMN show_volume SET DEFAULT 0
 		</query>
 		<query driver="postgres7">
-			ALTER TABLE issues ADD COLUMN show_year SMALLINT NOT NULL DEFAULT 0
+			UPDATE issues SET show_volume=0
 		</query>
 		<query driver="postgres7">
-			ALTER TABLE issues ADD COLUMN show_title SMALLINT NOT NULL DEFAULT 0
+			ALTER TABLE issues ALTER COLUMN show_volume SET NOT NULL
+		</query>
+		<query driver="postgres7">
+			ALTER TABLE issues ADD COLUMN show_number SMALLINT
+		</query>
+		<query driver="postgres7">
+			ALTER TABLE issues ALTER COLUMN show_number SET DEFAULT 0
+		</query>
+		<query driver="postgres7">
+			UPDATE issues SET show_number=0
+		</query>
+		<query driver="postgres7">
+			ALTER TABLE issues ALTER COLUMN show_number SET NOT NULL
+		</query>
+		<query driver="postgres7">
+			ALTER TABLE issues ADD COLUMN show_year SMALLINT
+		</query>
+		<query driver="postgres7">
+			ALTER TABLE issues ALTER COLUMN show_year SET DEFAULT 0
+		</query>
+		<query driver="postgres7">
+			UPDATE issues SET show_year=0
+		</query>
+		<query driver="postgres7">
+			ALTER TABLE issues ALTER COLUMN show_year SET NOT NULL
+		</query>
+		<query driver="postgres7">
+			ALTER TABLE issues ADD COLUMN show_title SMALLINT
+		</query>
+		<query driver="postgres7">
+			ALTER TABLE issues ALTER COLUMN show_title SET DEFAULT 0
+		</query>
+		<query driver="postgres7">
+			UPDATE issues SET show_title=0
+		</query>
+		<query driver="postgres7">
+			ALTER TABLE issues ALTER COLUMN show_title SET NOT NULL
 		</query>
 	</sql>
 
