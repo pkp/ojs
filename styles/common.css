@@ -136,10 +136,6 @@ input.defaultButton {
 	line-height: 1em;
 }
 
-#headerTitle img {
-	border: 0;
-}
-
 #footer {
 	width: 100%;
 	min-height: 50px;
@@ -150,12 +146,15 @@ input.defaultButton {
 }
 
 #footerContent {
+	width: 100%;
 	margin: 0 auto;
 	padding-left: 10%;
 }
 
 #main {
 	padding: 0.5em 0em 2em 0em;
+	width: 80%;
+	margin: 0 auto;
 }
 
 #main h2 {
@@ -163,6 +162,7 @@ input.defaultButton {
 	padding-top: 0.5em;
 	font-family: Georgia,'Times New Roman',Times,serif;
 	font-weight: normal;
+	line-height: 100%;
 }
 
 #main h3 {
