@@ -601,7 +601,7 @@ class NativeImportDom {
 		}
 
 		if (($indexingNode = $articleNode->getChildByName('indexing'))) {			
-			for ($index=0; ($node = $articleNode->getChildByName('discipline', $index)); $index++) {
+			for ($index=0; ($node = $indexingNode->getChildByName('discipline', $index)); $index++) {
 				$locale = $node->getAttribute('locale');
 				if ($locale == '') {
 					$locale = $journalPrimaryLocale;
@@ -611,7 +611,7 @@ class NativeImportDom {
 				}
 				$article->setDiscipline($node->getValue(), $locale);
 			}
-			for ($index=0; ($node = $articleNode->getChildByName('type', $index)); $index++) {
+			for ($index=0; ($node = $indexingNode->getChildByName('type', $index)); $index++) {
 				$locale = $node->getAttribute('locale');
 				if ($locale == '') {
 					$locale = $journalPrimaryLocale;
@@ -621,7 +621,7 @@ class NativeImportDom {
 				}
 				$article->setType($node->getValue(), $locale);
 			}
-			for ($index=0; ($node = $articleNode->getChildByName('subject', $index)); $index++) {
+			for ($index=0; ($node = $indexingNode->getChildByName('subject', $index)); $index++) {
 				$locale = $node->getAttribute('locale');
 				if ($locale == '') {
 					$locale = $journalPrimaryLocale;
@@ -631,7 +631,7 @@ class NativeImportDom {
 				}
 				$article->setSubject($node->getValue(), $locale);
 			}
-			for ($index=0; ($node = $articleNode->getChildByName('subject_class', $index)); $index++) {
+			for ($index=0; ($node = $indexingNode->getChildByName('subject_class', $index)); $index++) {
 				$locale = $node->getAttribute('locale');
 				if ($locale == '') {
 					$locale = $journalPrimaryLocale;
@@ -643,7 +643,7 @@ class NativeImportDom {
 			}
 			
 			if (($coverageNode = $indexingNode->getChildByName('coverage'))) {
-				for ($index=0; ($node = $articleNode->getChildByName('geographical', $index)); $index++) {
+				for ($index=0; ($node = $coverageNode->getChildByName('geographical', $index)); $index++) {
 					$locale = $node->getAttribute('locale');
 					if ($locale == '') {
 						$locale = $journalPrimaryLocale;
@@ -653,7 +653,7 @@ class NativeImportDom {
 					}
 					$article->setCoverageGeo($node->getValue(), $locale);
 				}
-				for ($index=0; ($node = $articleNode->getChildByName('chronological', $index)); $index++) {
+				for ($index=0; ($node = $coverageNode->getChildByName('chronological', $index)); $index++) {
 					$locale = $node->getAttribute('locale');
 					if ($locale == '') {
 						$locale = $journalPrimaryLocale;
@@ -663,7 +663,7 @@ class NativeImportDom {
 					}
 					$article->setCoverageChron($node->getValue(), $locale);
 				}
-				for ($index=0; ($node = $articleNode->getChildByName('sample', $index)); $index++) {
+				for ($index=0; ($node = $coverageNode->getChildByName('sample', $index)); $index++) {
 					$locale = $node->getAttribute('locale');
 					if ($locale == '') {
 						$locale = $journalPrimaryLocale;
