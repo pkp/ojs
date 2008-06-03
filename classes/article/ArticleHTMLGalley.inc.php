@@ -45,22 +45,33 @@ class ArticleHTMLGalley extends ArticleGalley {
 		$fileManager = &new ArticleFileManager($this->getArticleId());
 		$contents = $fileManager->readFile($this->getFileId());
 
-		// Replace image references
+		// Replace media file references
 		$images = &$this->getImageFiles();
 
 		foreach ($images as $image) {
 			$imageUrl = Request::url(null, 'article', 'viewFile', array($this->getArticleId(), $this->getGalleyId(), $image->getFileId()));
 			$pattern = preg_quote(rawurlencode($image->getOriginalFileName()));
+			
 			$contents = preg_replace(
-				'/[Ss][Rr][Cc]\s*=\s*"([^"]*' . $pattern . ')"/', 
-				'src="' . $imageUrl . '"',
+				'/([Ss][Rr][Cc]|[Hh][Rr][Ee][Ff]|[Dd][Aa][Tt][Aa])\s*=\s*"([^"]*' . $pattern . ')"/',
+				'\1="' . $imageUrl . '"',
 				$contents
 			);
+			
+			// Replacement for Flowplayer
 			$contents = preg_replace(
-				'/[Hh][Rr][Ee][Ff]\s*=\s*"([^"]*' . $pattern . ')"/',
-				'href="' . $imageUrl . '"',
+				'/[Uu][Rr][Ll]\s*\:\s*\'(' . $pattern . ')\'/', 
+				'url:\'' . $imageUrl . '\'',
 				$contents
 			);
+			
+			// Replacement for other players (ested with odeo; yahoo and google player won't work w/ OJS URLs, might work for others)
+			$contents = preg_replace(
+				'/[Uu][Rr][Ll]=([^"]*' . $pattern . ')/', 
+				'url=' . $imageUrl ,
+				$contents
+			);
+			
 		}
 
 		// Perform replacement for ojs://... URLs

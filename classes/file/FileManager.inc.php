@@ -306,6 +306,27 @@ class FileManager {
 			case 'image/png':
 			case 'image/x-png':
 				return '.jpg';
+			case 'application/x-shockwave-flash':
+				return '.swf';
+			case 'video/x-flv':
+			case 'application/x-flash-video':
+			case 'flv-application/octet-stream':
+			case 'application/octet-stream':
+				return '.flv';
+			case 'audio/mpeg':
+				return '.mp3';
+			case 'audio/x-aiff':
+				return '.aiff';
+			case 'audio/x-wav':
+				return '.wav';
+			case 'video/mpeg':
+				return '.mpg';
+			case 'video/quicktime':
+				return '.mov';
+			case 'video/mp4':
+				return '.mp4';
+			case 'text/javascript':
+				return '.js';
 			default:
 				return false;
 		}
