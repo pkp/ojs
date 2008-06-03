@@ -162,6 +162,10 @@ class CounterPlugin extends GenericPlugin {
 		$isEnabled = $this->getSetting(0, 'enabled');
 
 		$verbs = array();
+
+		// Non-site admin managers cannot manage Counter plugin.
+		if (!Validation::isSiteAdmin()) return $verbs;
+
 		if ($isEnabled) $verbs[] = array(
 			'counter',
 			Locale::translate('plugins.generic.counter')
@@ -174,6 +178,10 @@ class CounterPlugin extends GenericPlugin {
 	}
 
 	function manage($verb, $args) {
+
+		// Non-site admin managers cannot manage Counter plugin.
+		if (!Validation::isSiteAdmin()) return false;
+
 		$isEnabled = $this->getSetting(0, 'enabled');
 		$this->addLocaleData();
 		switch ($verb) {
