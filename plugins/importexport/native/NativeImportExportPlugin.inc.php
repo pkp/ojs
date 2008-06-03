@@ -259,7 +259,8 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 
 	function &getDocument($fileName) {
 		$parser = &new XMLParser();
-		return $parser->parse($fileName);
+		$returner =& $parser->parse($fileName);
+		return $returner;
 	}
 
 	function getRootNodeName(&$doc) {
@@ -406,7 +407,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 
 					if (!empty($articles)) echo Locale::translate('article.articles') . ":\n";
 					foreach ($articles as $article) {
-						echo "\t" . $article->getTitle() . "\n";
+						echo "\t" . $article->getArticleTitle() . "\n";
 					}
 				} else {
 					echo Locale::translate('plugins.importexport.native.cliError') . "\n";

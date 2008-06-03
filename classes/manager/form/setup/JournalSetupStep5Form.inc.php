@@ -144,7 +144,7 @@ class JournalSetupStep5Form extends JournalSetupForm {
 
 		import('file.PublicFileManager');
 		$fileManager = &new PublicFileManager();
-		if ($fileManager->uploadedFileExists($settingName, $locale)) {
+		if ($fileManager->uploadedFileExists($settingName)) {
 			$type = $fileManager->getUploadedFileType($settingName);
 			$extension = $fileManager->getImageExtension($type);
 			if (!$extension) {
