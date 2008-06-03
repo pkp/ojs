@@ -88,7 +88,7 @@ class CrossRefExportPlugin extends ImportExportPlugin {
 				// Display a list of issues for export
 				$this->setBreadcrumbs(array(), true);
 				$issueDao = &DAORegistry::getDAO('IssueDAO');
-				$issues = &$issueDao->getIssues($journal->getJournalId(), Handler::getRangeInfo('issues'));
+				$issues =& $issueDao->getPublishedIssues($journal->getJournalId(), Handler::getRangeInfo('issues'));
 
 				$templateMgr->assign_by_ref('issues', $issues);
 				$templateMgr->display($this->getTemplatePath() . 'issues.tpl');
