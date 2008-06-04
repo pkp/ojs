@@ -12,5 +12,5 @@ Smarty Template Engine
 
 TinyMCE WYSIWYG JS HTML Editor
  * URL: <http://tinymce.moxiecode.com>
- * Version: 3.0.7
+ * Version: 3.0.9
  * License: LGPL
