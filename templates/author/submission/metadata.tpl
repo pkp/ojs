@@ -11,7 +11,7 @@
 <a name="metadata"></a>
 <h3>{translate key="submission.metadata"}</h3>
 
-{if !$submission->getCopyeditorDateCompleted()}<p><a href="{url op="viewMetadata" path=$submission->getArticleId()}" class="action">{translate key="submission.editMetadata"}</a></p>{/if}
+{if !$submission->getCopyeditorDateCompleted() && $submission->getStatus() != STATUS_PUBLISHED}<p><a href="{url op="viewMetadata" path=$submission->getArticleId()}" class="action">{translate key="submission.editMetadata"}</a></p>{/if}
 
 
 <h4>{translate key="article.authors"}</h4>

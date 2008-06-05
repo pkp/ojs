@@ -45,7 +45,7 @@ class MetadataForm extends Form {
 		// If the user is an author and the article hasn't passed the Copyediting stage, make the form editable.
 		if ($roleId == ROLE_ID_AUTHOR) {
 			$copyAssignment = $copyAssignmentDao->getCopyAssignmentByArticleId($article->getArticleId());
-			if ($copyAssignment == null || $copyAssignment->getDateCompleted() == null) {
+			if ($article->getStatus() != STATUS_PUBLISHED && ($copyAssignment == null || $copyAssignment->getDateCompleted() == null)) {
 				$this->canEdit = true;
 			}
 		}
@@ -54,7 +54,7 @@ class MetadataForm extends Form {
 		// a current assignment to the article.
 		if ($roleId != null && ($roleId == ROLE_ID_COPYEDITOR)) {
 			$copyAssignment = $copyAssignmentDao->getCopyAssignmentByArticleId($article->getArticleId());
-			if ($copyAssignment != null) {
+			if ($copyAssignment != null && $article->getStatus() != STATUS_PUBLISHED) {
 				if ($copyAssignment->getDateNotified() != null && $copyAssignment->getDateFinalCompleted() == null) {
 					$this->canEdit = true;
 				}
