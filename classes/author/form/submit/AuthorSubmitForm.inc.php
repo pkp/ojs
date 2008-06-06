@@ -88,8 +88,8 @@ class AuthorSubmitForm extends Form {
 			$editAssignment =& new EditAssignment();
 			$editAssignment->setArticleId($article->getArticleId());
 			$editAssignment->setEditorId($sectionEditorEntry['user']->getUserId());
-			$editAssignment->setCanEdit($sectionEditorEntry['canReview']);
-			$editAssignment->setCanReview($sectionEditorEntry['canEdit']);
+			$editAssignment->setCanReview($sectionEditorEntry['canReview']);
+			$editAssignment->setCanEdit($sectionEditorEntry['canEdit']);
 			$editAssignmentDao->insertEditAssignment($editAssignment);
 			unset($editAssignment);
 		}
