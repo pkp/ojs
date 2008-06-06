@@ -39,7 +39,10 @@ class OpenAdsConnection {
 	}
 
 	function getConfigFilename() {
-		return $this->installPath . '/var/localhost.conf.php';
+		$variablesScriptPath = $this->installPath . '/variables.php';
+		if (!file_exists($variablesScriptPath)) return null;
+		require_once($variablesScriptPath);
+		return $this->installPath . '/var/' . getHostName() . '.conf.php';
 	}
 
 	function isConfigured() {
