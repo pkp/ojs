@@ -52,12 +52,12 @@
 			{url|assign:"competingInterestGuidelinesUrl" page="information" op="competingInterestGuidelines"}
 			{translate key="author.competingInterests" competingInterestGuidelinesUrl=$competingInterestGuidelinesUrl}
 		</td>
-		<td class="value">{$author.competingInterests|strip_unsafe_html|nl2br|default:"&mdash;"}</td>
+		<td class="value">{$author.competingInterests.$formLocale|strip_unsafe_html|nl2br|default:"&mdash;"}</td>
 	</tr>
 	{/if}
 	<tr valign="top">
 		<td class="label">{translate key="user.biography"}</td>
-		<td class="value">{$author.biography|strip_unsafe_html|nl2br|default:"&mdash;"}</td>
+		<td class="value">{$author.biography.$formLocale|strip_unsafe_html|nl2br|default:"&mdash;"}</td>
 	</tr>
 	{if !$smarty.foreach.authors.last}
 	<tr>
