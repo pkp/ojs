@@ -108,6 +108,7 @@ class CustomThemePlugin extends ThemePlugin {
 		$templateMgr =& TemplateManager::getManager();
 
 		$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
+		$templateMgr->setCacheability(CACHEABILITY_MUST_REVALIDATE);
 
 		$this->import('CustomThemeSettingsForm');
 		$form = &new CustomThemeSettingsForm($this, $journal->getJournalId());
