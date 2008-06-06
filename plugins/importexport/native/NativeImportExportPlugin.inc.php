@@ -135,6 +135,11 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 					$context['issue'] = $issueDao->getIssueById($issueId, $journal->getJournalId());
 				}
 
+				if (!$temporaryFile) {
+					$templateMgr->assign('error', 'plugins.importexport.native.error.uploadFailed');
+					return $templateMgr->display($this->getTemplatePath() . 'importError.tpl');
+				}
+
 				$doc = &$this->getDocument($temporaryFile->getFilePath());
 
 				if (substr($this->getRootNodeName($doc), 0, 7) === 'article') {

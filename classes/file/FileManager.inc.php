@@ -81,6 +81,7 @@ class FileManager {
 			// Try to create the destination directory
 			FileManager::mkdirtree($destDir);
 		}
+		if (!isset($_FILES[$fileName])) return false;
 		if (move_uploaded_file($_FILES[$fileName]['tmp_name'], $destFileName))
 			return FileManager::setMode($destFileName, FILE_MODE_MASK);
 		return false;

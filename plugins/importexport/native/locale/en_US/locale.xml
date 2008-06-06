@@ -57,6 +57,7 @@ The following formats are accepted:
 	<message key="plugins.importexport.native.import.error.description">One or more errors occurred during import. Please check to ensure that the format of the import file correctly matches the specification. Specific details of the import errors are listed below.</message>
 
 	<message key="plugins.importexport.native.cliError">ERROR:</message>
+	<message key="plugins.importexport.native.error.uploadFailed">The upload failed; please ensure that uploads are allowed on your server and that the file is not too big for your PHP and web server configuration.</message>
 	<message key="plugins.importexport.native.error.unknownUser">The specified user, "{$userName}", does not exist.</message>
 	<message key="plugins.importexport.native.error.unknownJournal">The specified journal path, "{$journalPath}", does not exist.</message>
 	<message key="plugins.importexport.native.export.error.couldNotWrite">Could not write to the file "{$fileName}".</message>
