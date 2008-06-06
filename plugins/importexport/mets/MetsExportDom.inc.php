@@ -499,6 +499,10 @@ class MetsExportDom {
 		$contentWrapper = &Request::getUserVar('contentWrapper');
 		$mfile = &XMLCustomWriter::createElement($doc, 'METS:file');
 		$filePath  = MetsExportDom::getPublicFilePath($imageFile , '/public/');
+
+		$journalDao =& DAORegistry::getDAO('JournalDAO');
+		$journal =& $journalDao->getJournal($article->getJournalId());
+
 		$chkmd5return = md5_file($filePath);
 		XMLCustomWriter::setAttribute($mfile, 'ID', 'F'.$imageFile->getFileId().'-A'.$article->getArticleId());
 		if($useAttribute != null)
@@ -516,7 +520,7 @@ class MetsExportDom {
 		}
 		else{
 			$fLocat = &XMLCustomWriter::createElement($doc, 'METS:FLocat');
-			$fileUrl = Request::url(null, 'article', 'viewFile', array($article->getArticleId(), $galley->getGalleyId(), $imageFile->getFileId()));
+			$fileUrl = Request::url(null, 'article', 'viewFile', array($article->getArticleId(), $galley->getBestGalleyId($journal), $imageFile->getFileId()));
 			XMLCustomWriter::setAttribute($fLocat, 'xlink:href', $fileUrl);
 			XMLCustomWriter::setAttribute($fLocat, 'LOCTYPE', 'URL');
 			XMLCustomWriter::appendChild($mfile, $fLocat);
@@ -700,7 +704,7 @@ class MetsExportDom {
 		$JournalDAO = &DAORegistry::getDAO('JournalDAO');
 		$journal = $JournalDAO->getJournal($article->getJournalId());
 		$base_url = &Config::getVar('general','base_url');
-		$url = $base_url.'/index.php/'.$journal->getPath().'/article/download/'.$File->getArticleId().'/'.$File->getGalleyId();
+		$url = $base_url.'/index.php/'.$journal->getPath().'/article/download/'.$File->getArticleId().'/'.$File->getBestGalleyId($journal);
 		return $url;
 	}
 

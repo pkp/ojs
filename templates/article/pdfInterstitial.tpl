@@ -26,7 +26,7 @@
 	{/foreach}
 
 	<script type="text/javascript" src="{$baseUrl}/js/general.js"></script>
-	<meta http-equiv="refresh" content="2;URL={url op="viewFile" path=$articleId|to_array:$galley->getGalleyId()}"/>
+	<meta http-equiv="refresh" content="2;URL={url op="viewFile" path=$articleId|to_array:$galley->getBestGalleyId($currentJournal)}"/>
 
 	{$additionalHeadData}
 </head>
@@ -38,7 +38,7 @@
 <div id="content">
 		<h3>{translate key="article.pdf.title"}</h3>
 
-{url|assign:"url" op="download" path=$articleId|to_array:$galley->getGalleyId()}
+{url|assign:"url" op="download" path=$articleId|to_array:$galley->getBestGalleyId($currentJournal)}
 <p>{translate key="article.pdf.note" url=$url}</p>
 
 {if $pageFooter}

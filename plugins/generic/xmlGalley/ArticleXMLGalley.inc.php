@@ -138,9 +138,11 @@ class ArticleXMLGalley extends ArticleHTMLGalley {
 		// Replace image references
 		$images = &$this->getImageFiles();
 
+		$journal =& Request::getJournal();
+
 		if ($images !== null) {
 			foreach ($images as $image) {
-				$imageUrl = Request::url(null, 'article', 'viewFile', array($this->getArticleId(), $this->getGalleyId(), $image->getFileId()));
+				$imageUrl = Request::url(null, 'article', 'viewFile', array($this->getArticleId(), $this->getBestGalleyId($journal), $image->getFileId()));
 				$contents = preg_replace(
 					'/(src|href)\s*=\s*"([^"]*' . preg_quote($image->getOriginalFileName()) . ')"/i',
 					'$1="' . $imageUrl . '"',

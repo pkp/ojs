@@ -98,7 +98,7 @@ function ensureKeyword() {
 		{else}
 			{assign var=hasAbstract value=0}
 		{/if}
-		{if !$hasAccess || $hasAbstract}<a href="{url journal=$journal->getPath() page="article" op="view" path=$publishedArticle->getBestArticleId($journal)}" class="file">{if !$hasAbstract}{translate key="article.details"}{else}{translate key="article.abstract"}{/if}{/if}</a>{if $hasAccess}{foreach from=$publishedArticle->getLocalizedGalleys() item=galley name=galleyList}&nbsp;<a href="{url journal=$journal->getPath() page="article" op="view" path=$publishedArticle->getBestArticleId($journal)|to_array:$galley->getGalleyId()}" class="file">{$galley->getGalleyLabel()|escape}</a>{/foreach}{/if}
+		{if !$hasAccess || $hasAbstract}<a href="{url journal=$journal->getPath() page="article" op="view" path=$publishedArticle->getBestArticleId($journal)}" class="file">{if !$hasAbstract}{translate key="article.details"}{else}{translate key="article.abstract"}{/if}{/if}</a>{if $hasAccess}{foreach from=$publishedArticle->getLocalizedGalleys() item=galley name=galleyList}&nbsp;<a href="{url journal=$journal->getPath() page="article" op="view" path=$publishedArticle->getBestArticleId($journal)|to_array:$galley->getBestGalleyId($journal)}" class="file">{$galley->getGalleyLabel()|escape}</a>{/foreach}{/if}
 	</td>
 </tr>
 <tr>

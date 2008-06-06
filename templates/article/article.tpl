@@ -108,7 +108,7 @@
 		{translate key="reader.fullText"}
 		{if $hasAccess || ($subscriptionRequired && $showGalleyLinks)}
 			{foreach from=$article->getLocalizedGalleys() item=galley name=galleyList}
-				<a href="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)|to_array:$galley->getGalleyId()}" class="file" target="_parent">{$galley->getGalleyLabel()|escape}</a>
+				<a href="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)|to_array:$galley->getBestGalleyId($currentJournal)}" class="file" target="_parent">{$galley->getGalleyLabel()|escape}</a>
 				{if $subscriptionRequired && $showGalleyLinks && $restrictOnlyPdf}
 					{if $article->getAccessStatus() || !$galley->isPdfGalley()}	
 						<img class="accessLogo" src="{$baseUrl}/templates/images/icons/fulltext_open_medium.gif">
@@ -139,14 +139,39 @@
 {assign var=poster value=$comment->getUser()}
 	<li>
 		<a href="{url page="comment" op="view" path=$article->getArticleId()|to_array:$galleyId:$comment->getCommentId()}" target="_parent">{$comment->getTitle()|escape|default:"&nbsp;"}</a>
-		{if $comment->getChildCommentCount()==1}{translate key="comments.oneReply"}{elseif $comment->getChildCommentCount()>0}{translate key="comments.nReplies" num=$comment->getChildCommentCount()}{/if}<br/>
-		{if $poster}{translate key="comments.authenticated" userName=$comment->getPosterName()|escape}{elseif $comment->getPosterName()}{translate key="comments.anonymousNamed" userName=$comment->getPosterName()|escape}{else}{translate key="comments.anonymous"}{/if} ({$comment->getDatePosted()|date_format:$dateFormatShort})
+		{if $comment->getChildCommentCount()==1}
+			{translate key="comments.oneReply"}
+		{elseif $comment->getChildCommentCount()>0}
+			{translate key="comments.nReplies" num=$comment->getChildCommentCount()}
+		{/if}
+
+		<br/>
+
+		{if $poster}
+			{translate key="comments.authenticated" userName=$comment->getPosterName()|escape}
+		{elseif $comment->getPosterName()}
+			{translate key="comments.anonymousNamed" userName=$comment->getPosterName()|escape}
+		{else}
+			{translate key="comments.anonymous"}
+		{/if}
+		({$comment->getDatePosted()|date_format:$dateFormatShort})
 	</li>
 {/foreach}
 </ul>
 
-<a href="{url page="comment" op="view" path=$article->getArticleId()|to_array:$galleyId}" class="action" target="_parent">{translate key="comments.viewAllComments"}</a>{if $postingAllowed}&nbsp;|&nbsp;<a class="action" href="{url page="comment" op="add" path=$article->getArticleId()|to_array:$galleyId}" target="_parent">{translate key="rt.addComment"}</a>{/if}<br />
+<a href="{url page="comment" op="view" path=$article->getArticleId()|to_array:$galleyId}" class="action" target="_parent">{translate key="comments.viewAllComments"}</a>
 
+{assign var=needsSeparator value=1}
+
+{/if}{* $comments *}
+
+{if $postingAllowed}
+	{if $needsSeparator}
+		&nbsp;|&nbsp;
+	{else}
+		<br/><br/>
+	{/if}
+	<a class="action" href="{url page="comment" op="add" path=$article->getArticleId()|to_array:$galleyId}" target="_parent">{translate key="rt.addComment"}</a>
 {/if}
 
 {if $currentJournal && $currentJournal->getSetting('includeCreativeCommons')}
@@ -212,7 +237,6 @@
 	</div><!-- footerContent -->
 </div><!-- footer -->
 {/if}
-
 
 </body>
 </html>

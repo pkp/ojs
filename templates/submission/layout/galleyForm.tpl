@@ -24,6 +24,14 @@
 	<td width="20%" class="label">{fieldLabel name="label" required="true" key="submission.layout.galleyLabel"}</td>
 	<td width="80%" class="value"><input type="text" id="label" name="label" value="{$label|escape}" size="40" maxlength="32" class="textField" /></td>
 </tr>
+
+{if $enablePublicGalleyId}
+	<tr valign="top">
+		<td class="label">{fieldLabel name="publicGalleyId" key="submission.layout.publicGalleyId"}</td>
+		<td class="value"><input type="text" name="publicGalleyId" id="publicGalleyId" value="{$publicGalleyId|escape}" size="20" maxlength="255" class="textField" /></td>
+	</tr>
+{/if}{* $enablePublicGalleyId *}
+
 <tr valign="top">
 	<td>&nbsp;</td>
 	<td class="instruct">{translate key="submission.layout.galleyLabelInstructions"}</td>

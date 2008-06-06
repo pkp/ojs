@@ -31,8 +31,8 @@
 	<meta name="citation_abstract_html_url" content="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)}"/>
 {foreach from=$article->getGalleys() item=dc_galley}
 {if $dc_galley->getFileType()=="application/pdf"}
-	<meta name="citation_pdf_url" content="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)|to_array:$dc_galley->getGalleyId()}"/>
+	<meta name="citation_pdf_url" content="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)|to_array:$dc_galley->getBestGalleyId($currentJournal)}"/>
 {else}
-	<meta name="citation_fulltext_html_url" content="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)|to_array:$dc_galley->getGalleyId()}"/>
+	<meta name="citation_fulltext_html_url" content="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)|to_array:$dc_galley->getBestGalleyId($currentJournal)}"/>
 {/if}
 {/foreach}

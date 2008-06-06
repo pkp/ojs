@@ -19,6 +19,13 @@
 	<td width="80%" class="value">{$galley->getGalleyLabel()|escape}</td>
 </tr>
 
+{if $galley->getPublicGalleyId()}
+	<tr valign="top">
+		<td class="label">{translate key="submission.layout.publicGalleyId"}</td>
+		<td class="value">{$galley->getPublicGalleyId()|escape}</td>
+	</tr>
+{/if}
+
 <tr valign="top">
 	<td class="label">{translate key="common.fileName"}</td>
 	<td class="value"><a class="action" href="{url op="downloadFile" path=$articleId|to_array:$galley->getFileId()}">{$galley->getFileName()|escape}</a></td>

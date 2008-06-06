@@ -60,12 +60,30 @@ class ArticleGalleyForm extends Form {
 		$templateMgr->assign('articleId', $this->articleId);
 		$templateMgr->assign('galleyId', $this->galleyId);
 		$templateMgr->assign('supportedLocales', $journal->getSupportedLocaleNames());
+		$templateMgr->assign('enablePublicGalleyId', $journal->getSetting('enablePublicGalleyId'));
 
 		if (isset($this->galley)) {
 			$templateMgr->assign_by_ref('galley', $this->galley);
 		}
 		$templateMgr->assign('helpTopicId', 'editorial.layoutEditorsRole.layout');
 		parent::display();
+	}
+
+	/**
+	 * Validate the form
+	 */
+	function validate() {
+		// check if public galley ID has already used
+		$journal =& Request::getJournal();
+		$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
+
+		$publicGalleyId = $this->getData('publicGalleyId');
+		if ($publicGalleyId && $galleyDao->publicGalleyIdExists($publicGalleyId, $this->galleyId)) {
+			$this->addError('publicGalleyId', Locale::translate('submission.layout.galleyPublicIdentificationExists'));
+			$this->addErrorField('publicIssueId');
+		}
+
+		return parent::validate();
 	}
 
 	/**
@@ -76,6 +94,7 @@ class ArticleGalleyForm extends Form {
 			$galley = &$this->galley;
 			$this->_data = array(
 				'label' => $galley->getLabel(),
+				'publicGalleyId' => $galley->getPublicGalleyId(),
 				'galleyLocale' => $galley->getLocale()
 			);
 
@@ -92,6 +111,7 @@ class ArticleGalleyForm extends Form {
 		$this->readUserVars(
 			array(
 				'label',
+				'publicGalleyId',
 				'deleteStyleFile',
 				'galleyLocale'
 			)
@@ -108,6 +128,7 @@ class ArticleGalleyForm extends Form {
 		$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
 
 		$fileName = isset($fileName) ? $fileName : 'galleyFile';
+		$journal =& Request::getJournal();
 
 		if (isset($this->galley)) {
 			$galley = &$this->galley;
@@ -141,6 +162,9 @@ class ArticleGalleyForm extends Form {
 
 			// Update existing galley
 			$galley->setLabel($this->getData('label'));
+			if ($journal->getSetting('enablePublicGalleyId')) {
+				$galley->setPublicGalleyId($this->getData('publicGalleyId'));
+			}
 			$galley->setLocale($this->getData('galleyLocale'));
 			$galleyDao->updateGalley($galley);
 
@@ -169,17 +193,20 @@ class ArticleGalleyForm extends Form {
 
 			if ($this->getData('label') == null) {
 				// Generate initial label based on file type
+				$enablePublicGalleyId = $journal->getSetting('enablePublicGalleyId');
 				if ($galley->isHTMLGalley()) {
 					$galley->setLabel('HTML');
-
+					if ($enablePublicGalleyId) $galley->setPublicGalleyId('html');
 				} else if (isset($fileType)) {
 					if(strstr($fileType, 'pdf')) {
 						$galley->setLabel('PDF');
-
+						if ($enablePublicGalleyId) $galley->setPublicgalleyId('pdf');
 					} else if (strstr($fileType, 'postscript')) {
 						$galley->setLabel('PostScript');
+						if ($enablePublicGalleyId) $galley->setPublicgalleyId('ps');
 					} else if (strstr($fileType, 'xml')) {
 						$galley->setLabel('XML');
+						if ($enablePublicGalleyId) $galley->setPublicgalleyId('xml');
 					}
 				}
 

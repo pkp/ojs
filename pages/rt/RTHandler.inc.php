@@ -233,7 +233,7 @@ class RTHandler extends ArticleHandler {
 		if ($galley && $galley->isHTMLGalley() && $styleFile =& $galley->getStyleFile()) {
 			$templateMgr->addStyleSheet(Request::url(null, 'article', 'viewFile', array(
 				$article->getArticleId(),
-				$galley->getGalleyId(),
+				$galley->getBestGalleyId($journal),
 				$styleFile->getFileId()
 			)));
 		}

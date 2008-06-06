@@ -1218,6 +1218,7 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.setup.uniqueIdentifierDescription">Articles and issues can be tagged with an identification number or string, employing a registration system such as the Digital Object Identifier System (DOI).</message>
 	<message key="manager.setup.enablePublicIssueId">Custom identifiers will be used to identify issues.</message>
 	<message key="manager.setup.enablePublicArticleId">Custom identifiers will be used to identify published items.</message>
+	<message key="manager.setup.enablePublicGalleyId">Custom identifiers will be used to identify galleys (e.g. HTML or PDF files) for published items.</message>
 	<message key="manager.setup.enablePublicSuppFileId">Custom identifiers will be used to identify supplemental article files.</message>
 	<message key="manager.setup.pageNumberIdentifier">Page Number Option</message>
 	<message key="manager.setup.enablePageNumber">Page numbers for items will be calculated and entered manually in the Table of Contents (e.g., pp. 13-26).</message>
@@ -2060,6 +2061,8 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	<message key="submission.layout.layoutVersion">Layout Version</message>
 	<message key="submission.layout.layoutFile">Layout File</message>
 	<message key="submission.layout.galleys">Galleys</message>
+	<message key="submission.layout.publicGalleyId">Public Galley Identifier</message>
+	<message key="submission.layout.galleyPublicIdentificationExists">Public galley identification already exists.</message>
 	<message key="submission.layout.newGalley">Create New Galley</message>
 	<message key="submission.layout.assignLayoutEditor">Assign Layout Editor</message>
 	<message key="submission.layout.replaceLayoutEditor">Replace Layout Editor</message>

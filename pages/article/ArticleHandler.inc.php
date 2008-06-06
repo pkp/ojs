@@ -24,15 +24,19 @@ class ArticleHandler extends Handler {
 	 */
 	function view($args) {
 		$articleId = isset($args[0]) ? $args[0] : 0;
-		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
+		$galleyId = isset($args[1]) ? $args[1] : 0;
 
 		list($journal, $issue, $article) = ArticleHandler::validate($articleId, $galleyId);
 
 		$rtDao = &DAORegistry::getDAO('RTDAO');
 		$journalRt = $rtDao->getJournalRTByJournal($journal);
 
-		$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
-		$galley = &$galleyDao->getGalley($galleyId, $article->getArticleId());
+		$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
+		if ($journal->getSetting('enablePublicGalleyId')) {
+			$galley =& $galleyDao->getGalleyByBestGalleyId($galleyId, $article->getArticleId());
+		} else {
+			$galley =& $galleyDao->getGalley($galleyId, $article->getArticleId());
+		}
 
 		if (!$journalRt->getEnabled()) {
 			if (!$galley || $galley->isHtmlGalley()) return ArticleHandler::viewArticle($args);
@@ -63,12 +67,16 @@ class ArticleHandler extends Handler {
 	 */
 	function viewPDFInterstitial($args, $galley = null) {
 		$articleId = isset($args[0]) ? $args[0] : 0;
-		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
+		$galleyId = isset($args[1]) ? $args[1] : 0;
 		list($journal, $issue, $article) = ArticleHandler::validate($articleId, $galleyId);
 
 		if (!$galley) {
 			$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
-			$galley = &$galleyDao->getGalley($galleyId, $article->getArticleId());
+			if ($journal->getSetting('enablePublicGalleyId')) {
+				$galley =& $galleyDao->getGalleyByBestGalleyId($galleyId, $article->getArticleId());
+			} else {
+				$galley =& $galleyDao->getGalley($galleyId, $article->getArticleId());
+			}
 		}
 
 		$templateMgr = &TemplateManager::getManager();
@@ -86,12 +94,16 @@ class ArticleHandler extends Handler {
 	 */
 	function viewDownloadInterstitial($args, $galley = null) {
 		$articleId = isset($args[0]) ? $args[0] : 0;
-		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
+		$galleyId = isset($args[1]) ? $args[1] : 0;
 		list($journal, $issue, $article) = ArticleHandler::validate($articleId, $galleyId);
 
 		if (!$galley) {
 			$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
-			$galley = &$galleyDao->getGalley($galleyId, $article->getArticleId());
+			if ($journal->getSetting('enablePublicGalleyId')) {
+				$galley =& $galleyDao->getGalleyByBestGalleyId($galleyId, $article->getArticleId());
+			} else {
+				$galley =& $galleyDao->getGalley($galleyId, $article->getArticleId());
+			}
 		}
 
 		$templateMgr = &TemplateManager::getManager();
@@ -108,7 +120,7 @@ class ArticleHandler extends Handler {
 	 */
 	function viewArticle($args) {
 		$articleId = isset($args[0]) ? $args[0] : 0;
-		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
+		$galleyId = isset($args[1]) ? $args[1] : 0;
 
 		list($journal, $issue, $article) = ArticleHandler::validate($articleId, $galleyId);
 
@@ -135,8 +147,12 @@ class ArticleHandler extends Handler {
 			$comments = &$commentDao->getRootCommentsByArticleId($article->getArticleId());
 		}
 
-		$articleGalleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
-		$galley = &$articleGalleyDao->getGalley($galleyId, $article->getArticleId());
+		$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
+		if ($journal->getSetting('enablePublicGalleyId')) {
+			$galley =& $galleyDao->getGalleyByBestGalleyId($galleyId, $article->getArticleId());
+		} else {
+			$galley =& $galleyDao->getGalley($galleyId, $article->getArticleId());
+		}
 
 		$templateMgr = &TemplateManager::getManager();
 
@@ -173,14 +189,14 @@ class ArticleHandler extends Handler {
 		} else {
 			if (!Request::isBot()) {
 				// Increment the galley's views count
-				$articleGalleyDao->incrementViews($galleyId);
+				$galleyDao->incrementViews($galleyId);
 			}
 
 			// Use the article's CSS file, if set.
 			if ($galley->isHTMLGalley() && $styleFile =& $galley->getStyleFile()) {
 				$templateMgr->addStyleSheet(Request::url(null, 'article', 'viewFile', array(
 					$article->getArticleId(),
-					$galley->getGalleyId(),
+					$galley->getBestGalleyId($journal),
 					$styleFile->getFileId()
 				)));
 			}
@@ -208,7 +224,7 @@ class ArticleHandler extends Handler {
 	 */
 	function viewRST($args) {
 		$articleId = isset($args[0]) ? $args[0] : 0;
-		$galleyId = isset($args[1]) ? (int) $args[1] : 0;
+		$galleyId = isset($args[1]) ? $args[1] : 0;
 
 		list($journal, $issue, $article) = ArticleHandler::validate($articleId, $galleyId);
 
@@ -216,8 +232,12 @@ class ArticleHandler extends Handler {
 		$journalRt = $rtDao->getJournalRTByJournal($journal);
 
 		// The RST needs to know whether this galley is HTML or not. Fetch the galley.
-		$articleGalleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
-		$galley = &$articleGalleyDao->getGalley($galleyId, $article->getArticleId());
+		$galleyDao =& DAORegistry::getDAO('ArticleGalleyDAO');
+		if ($journal->getSetting('enablePublicGalleyId')) {
+			$galley =& $galleyDao->getGalleyByBestGalleyId($galleyId, $article->getArticleId());
+		} else {
+			$galley =& $galleyDao->getGalley($galleyId, $article->getArticleId());
+		}
 
 		$sectionDao = &DAORegistry::getDAO('SectionDAO');
 		$section = &$sectionDao->getSection($article->getSectionId());
@@ -275,7 +295,11 @@ class ArticleHandler extends Handler {
 		list($journal, $issue, $article) = ArticleHandler::validate($articleId, $galleyId);
 
 		$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
-		$galley = &$galleyDao->getGalley($galleyId, $article->getArticleId());
+		if ($journal->getSetting('enablePublicGalleyId')) {
+			$galley =& $galleyDao->getGalleyByBestGalleyId($galleyId, $article->getArticleId());
+		} else {
+			$galley =& $galleyDao->getGalley($galleyId, $article->getArticleId());
+		}
 
 		if (!$galley) Request::redirect(null, null, 'view', $articleId);
 
@@ -300,11 +324,15 @@ class ArticleHandler extends Handler {
 	 */
 	function download($args) {
 		$articleId = isset($args[0]) ? $args[0] : 0;
-		$galleyId = isset($args[1]) ? (int)$args[1] : 0;
+		$galleyId = isset($args[1]) ? $args[1] : 0;
 		list($journal, $issue, $article) = ArticleHandler::validate($articleId, $galleyId);
 
 		$galleyDao = &DAORegistry::getDAO('ArticleGalleyDAO');
-		$galley = &$galleyDao->getGalley($galleyId, $article->getArticleId());
+		if ($journal->getSetting('enablePublicGalleyId')) {
+			$galley =& $galleyDao->getGalleyByBestGalleyId($galleyId, $article->getArticleId());
+		} else {
+			$galley =& $galleyDao->getGalley($galleyId, $article->getArticleId());
+		}
 		$galleyDao->incrementViews($galleyId);
 
 		if ($article && $galley && !HookRegistry::call('ArticleHandler::downloadFile', array(&$article, &$galley))) {
@@ -398,7 +426,11 @@ class ArticleHandler extends Handler {
 						 * and continue checking if it is a pdf galley */
 						if ( $paymentManager->onlyPdfEnabled() ) {
 							$galleyDAO =& DAORegistry::getDAO('ArticleGalleyDAO');
-							$galley =& $galleyDAO->getGalley($galleyId, $articleId);
+							if ($journal->getSetting('enablePublicGalleyId')) {
+								$galley =& $galleyDAO->getGalley($galleyId, $articleId);
+							} else {
+								$galley =& $galleyDAO->getGalleyByBestGalleyId($galleyId, $articleId);
+							}
 							if ( $galley && !$galley->isPdfGalley() ) {
 								return array($journal, $issue, $publishedArticle);
 							} 

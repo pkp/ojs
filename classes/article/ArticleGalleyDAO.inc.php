@@ -37,26 +37,66 @@ class ArticleGalleyDAO extends DAO {
 	 * @return ArticleGalley
 	 */
 	function &getGalley($galleyId, $articleId = null) {
-		if (isset($articleId)) {
-			$result = &$this->retrieve(
-				'SELECT g.*,
+		$params = array($galleyId);
+		if ($articleId !== null) $params[] = (int) $articleId;
+		$result = &$this->retrieve(
+			'SELECT	g.*,
 				a.file_name, a.original_file_name, a.file_type, a.file_size, a.status, a.date_uploaded, a.date_modified
-				FROM article_galleys g
+			FROM	article_galleys g
 				LEFT JOIN article_files a ON (g.file_id = a.file_id)
-				WHERE g.galley_id = ? AND g.article_id = ?',
-				array($galleyId, $articleId)
-			);
+			WHERE	g.galley_id = ?' .
+			($articleId !== null?' AND g.article_id = ?':''),
+			$params
+		);
 
+		$returner = null;
+		if ($result->RecordCount() != 0) {
+			$returner = &$this->_returnGalleyFromRow($result->GetRowAssoc(false));
 		} else {
-			$result = &$this->retrieve(
-				'SELECT g.*,
-				a.file_name, a.original_file_name, a.file_type, a.file_size, a.status, a.date_uploaded, a.date_modified
-				FROM article_galleys g
-				LEFT JOIN article_files a ON (g.file_id = a.file_id)
-				WHERE g.galley_id = ?',
-				$galleyId
-			);
+			HookRegistry::call('ArticleGalleyDAO::getNewGalley', array(&$galleyId, &$articleId, &$returner));
 		}
+
+		$result->Close();
+		unset($result);
+
+		return $returner;
+	}
+
+	/**
+	 * Checks if public identifier exists (other than for the specified
+	 * galley ID, which is treated as an exception)
+	 * @param $publicGalleyId string
+	 * @param $galleyId int
+	 * @return boolean
+	 */
+	function publicGalleyIdExists($publicGalleyId, $galleyId) {
+		$result = &$this->retrieve(
+			'SELECT COUNT(*) FROM article_galleys WHERE public_galley_id = ? AND galley_id <> ?', array($publicGalleyId, $galleyId)
+		);
+		$returner = $result->fields[0] ? true : false;
+
+		$result->Close();
+		unset($result);
+
+		return $returner;
+	}
+
+	/**
+	 * Retrieve a galley by ID.
+	 * @param $publicGalleyId string
+	 * @param $articleId int optional
+	 * @return ArticleGalley
+	 */
+	function &getGalleyByPublicGalleyId($publicGalleyId, $articleId) {
+		$result = &$this->retrieve(
+			'SELECT	g.*,
+				a.file_name, a.original_file_name, a.file_type, a.file_size, a.status, a.date_uploaded, a.date_modified
+			FROM	article_galleys g
+				LEFT JOIN article_files a ON (g.file_id = a.file_id)
+			WHERE	g.public_galley_id = ? AND
+				g.article_id = ?',
+			array($publicGalleyId, (int) $articleId)
+		);
 
 		$returner = null;
 		if ($result->RecordCount() != 0) {
@@ -102,6 +142,19 @@ class ArticleGalleyDAO extends DAO {
 	}
 
 	/**
+	 * Retrieve article galley by public galley id or, failing that,
+	 * internal galley ID; public galley ID takes precedence.
+	 * @param $galleyId string
+	 * @param $articleId int
+	 * @return galley object
+	 */
+	function &getGalleyByBestGalleyId($galleyId, $articleId) {
+		if ($galleyId != '') $galley =& $this->getGalleyByPublicGalleyId($galleyId, $articleId);
+		if (!isset($galley)) $galley =& $this->getGalley((int) $galleyId, $articleId);
+		return $galley;
+	}
+
+	/**
 	 * Internal function to return an ArticleGalley object from a row.
 	 * @param $row array
 	 * @return ArticleGalley
@@ -124,6 +177,7 @@ class ArticleGalleyDAO extends DAO {
 			$galley = &new ArticleGalley();
 		}
 		$galley->setGalleyId($row['galley_id']);
+		$galley->setPublicGalleyId($row['public_galley_id']);
 		$galley->setArticleId($row['article_id']);
 		$galley->setLocale($row['locale']);
 		$galley->setFileId($row['file_id']);
@@ -152,10 +206,11 @@ class ArticleGalleyDAO extends DAO {
 	function insertGalley(&$galley) {
 		$this->update(
 			'INSERT INTO article_galleys
-				(article_id, file_id, label, locale, html_galley, style_file_id, seq)
+				(public_galley_id, article_id, file_id, label, locale, html_galley, style_file_id, seq)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
+				$galley->getPublicGalleyId(),
 				$galley->getArticleId(),
 				$galley->getFileId(),
 				$galley->getLabel(),
@@ -180,6 +235,7 @@ class ArticleGalleyDAO extends DAO {
 		return $this->update(
 			'UPDATE article_galleys
 				SET
+					public_galley_id = ?,
 					file_id = ?,
 					label = ?,
 					locale = ?,
@@ -188,6 +244,7 @@ class ArticleGalleyDAO extends DAO {
 					seq = ?
 				WHERE galley_id = ?',
 			array(
+				$galley->getPublicGalleyId(),
 				$galley->getFileId(),
 				$galley->getLabel(),
 				$galley->getLocale(),

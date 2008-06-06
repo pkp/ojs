@@ -1346,6 +1346,7 @@
 			<KEY />
 			<AUTOINCREMENT/>
 		</field>
+		<field name="public_galley_id" type="C2" size="255" />
 		<field name="locale" type="C2" size="5"/>
 		<field name="article_id" type="I8">
 			<NOTNULL/>
@@ -1370,6 +1371,11 @@
 		<descr>Article galleys.</descr>
 		<index name="article_galleys_article_id">
 			<col>article_id</col>
+		</index>
+		<index name="article_galleys_public_id">
+			<col>public_galley_id</col>
+			<col>article_id</col>
+			<UNIQUE/>
 		</index>
 	</table>
 	

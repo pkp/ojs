@@ -44,12 +44,13 @@ class ArticleHTMLGalley extends ArticleGalley {
 		import('file.ArticleFileManager');
 		$fileManager = &new ArticleFileManager($this->getArticleId());
 		$contents = $fileManager->readFile($this->getFileId());
+		$journal =& Request::getJournal();
 
 		// Replace media file references
 		$images = &$this->getImageFiles();
 
 		foreach ($images as $image) {
-			$imageUrl = Request::url(null, 'article', 'viewFile', array($this->getArticleId(), $this->getGalleyId(), $image->getFileId()));
+			$imageUrl = Request::url(null, 'article', 'viewFile', array($this->getArticleId(), $this->getBestGalleyId($journal), $image->getFileId()));
 			$pattern = preg_quote(rawurlencode($image->getOriginalFileName()));
 			
 			$contents = preg_replace(

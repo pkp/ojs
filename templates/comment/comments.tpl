@@ -25,7 +25,16 @@
 {if $comment}
 	{assign var=user value=$comment->getUser()}
 	<h3>{$comment->getTitle()|escape|default:"&nbsp;"}</h3>
-	<h4>{if $user}{translate key="comments.authenticated" userName=$comment->getPosterName()|escape}{elseif $comment->getPosterName()}{translate key="comments.anonymousNamed" userName=$comment->getPosterName()|escape}{else}{translate key="comments.anonymous"}{/if} ({$comment->getDatePosted()|date_format:$dateFormatShort})</h4>
+	<h4>
+		{if $user}
+			{translate key="comments.authenticated" userName=$comment->getPosterName()|escape}
+		{elseif $comment->getPosterName()}
+			{translate key="comments.anonymousNamed" userName=$comment->getPosterName()|escape}
+		{else}
+			{translate key="comments.anonymous"}
+		{/if}
+		({$comment->getDatePosted()|date_format:$dateFormatShort})
+	</h4>
 
 	<p>
 
@@ -73,7 +82,16 @@
 {assign var=user value=$child->getUser()}
 {assign var=childId value=$child->getCommentId()}
 <h4><a href="{url op="view" path=$articleId|to_array:$galleyId:$childId}" target="_parent">{$child->getTitle()|escape|default:"&nbsp;"}</a></h4>
-<h5>{if $user}{translate key="comments.authenticated" userName=$child->getPosterName()|escape}{elseif $child->getPosterName()}{translate key="comments.anonymousNamed" userName=$child->getPosterName()|escape}{else}{translate key="comments.anonymous"}{/if} ({$child->getDatePosted()|date_format:$dateFormatShort})</h5>
+<h5>
+	{if $user}
+		{translate key="comments.authenticated" userName=$child->getPosterName()|escape}
+	{elseif $child->getPosterName()}
+		{translate key="comments.anonymousNamed" userName=$child->getPosterName()|escape}
+	{else}
+		{translate key="comments.anonymous"}
+	{/if}
+	({$child->getDatePosted()|date_format:$dateFormatShort})
+</h5>
 
 {assign var="hasPriorAction" value=0}
 
@@ -107,7 +125,14 @@
 	<li>
 		<a href="{url op="view" path=$articleId|to_array:$galleyId:$grandChild->getCommentId()}" target="_parent">{$grandChild->getTitle()|escape|default:"&nbsp;"}</a>
 		{if $grandChild->getChildCommentCount()==1}{translate key="comments.oneReply"}{elseif $grandChild->getChildCommentCount()>0}{translate key="comments.nReplies" num=$grandChild->getChildCommentCount()}{/if}<br/>
-		{if $user}{translate key="comments.authenticated" userName=$grandChild->getPosterName()|escape}{elseif $grandChild->getPosterName()}{translate key="comments.anonymousNamed" userName=$grandChild->getPosterName()|escape}{else}{translate key="comments.anonymous"}{/if} ({$grandChild->getDatePosted()|date_format:$dateFormatShort})
+		{if $user}
+			{translate key="comments.authenticated" userName=$grandChild->getPosterName()|escape}
+		{elseif $grandChild->getPosterName()}
+			{translate key="comments.anonymousNamed" userName=$grandChild->getPosterName()|escape}
+		{else}
+			{translate key="comments.anonymous"}
+		{/if}
+		({$grandChild->getDatePosted()|date_format:$dateFormatShort})
 	</li>
 {/foreach}
 {if $grandChildren}
@@ -125,4 +150,3 @@
 {/if}
 
 {include file="common/footer.tpl"}
-
