@@ -42,6 +42,9 @@ class CustomThemeSettingsForm extends Form {
 		$additionalHeadData .= '<script type="text/javascript" src="' . Request::getBaseUrl() . '/plugins/themes/custom/picker.js"></script>' . "\n";
 		$templateMgr->addStyleSheet(Request::getBaseUrl() . '/plugins/themes/custom/picker.css');
 		$templateMgr->assign('additionalHeadData', $additionalHeadData);
+		$stylesheetFileLocation = $this->plugin->getPluginPath() . '/' . $this->plugin->getStylesheetFilename();
+		$templateMgr->assign('canSave', is_writable($stylesheetFileLocation));
+		$templateMgr->assign('stylesheetFileLocation', $stylesheetFileLocation);
 
 		return parent::display();
 	}
