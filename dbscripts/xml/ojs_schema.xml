@@ -870,6 +870,9 @@
 		<index name="comments_article_id">
 			<col>article_id</col>
 		</index>
+		<index name="comments_user_id">
+			<col>user_id</col>
+		</index>
 	</table>
 
 	<!--

@@ -599,7 +599,7 @@
 	<message key="comments.noComments">No reader comments have been posted.</message>
 	<message key="comments.anonymous">Anonymous User</message>
 	<message key="comments.anonymousNamed">"{$userName}"</message>
-	<message key="comments.authenticated">{$userName}</message>
+	<message key="comments.authenticated"><![CDATA[by <a href="{$publicProfileUrl}" target="_parent">{$userName}</a>]]></message>
 	<message key="comments.nReplies">({$num} Replies)</message>
 	<message key="comments.oneReply">(1 Reply)</message>
 	<message key="comments.readerComments">Reader Comments</message>
@@ -2181,6 +2181,8 @@ current password.<br /><br />Enter your email address below to reset your passwo
 	<message key="user.profile.form.firstNameRequired">A first name is required.</message>
 	<message key="user.profile.form.lastNameRequired">A last name is required.</message>
 	<message key="user.profile.form.emailRequired">A valid email address is required.</message>
+	<message key="user.profile.form.profileImageInvalid">Invalid profile image format or image too big. Accepted formats are .gif, .jpg, or .png, and the image must not exceed 150x150 pixels.</message>
+	<message key="user.profile.form.profileImage">Profile Image</message>
 	<message key="user.profile.form.urlInvalid">The specified URL is not valid. Please double-check the URL and try again. (Hint: Try adding http:// to the beginning of the URL.)</message>
 	<message key="user.profile.form.usernameRequired">A username is required.</message>
 	<message key="user.profile.form.passwordRequired">A password is required.</message>
@@ -2193,6 +2195,7 @@ current password.<br /><br />Enter your email address below to reset your passwo
 	<message key="user.profile.form.newPasswordRequired">You must enter your new password.</message>
 	<message key="user.profile.form.publishedNotifications">New issue published email notifications</message>
 	<message key="user.profile.form.openAccessNotifications">Issue open access email notifications</message>
+	<message key="user.profile.publicProfile">User Profile</message>
 	
 	<!-- Registration -->
 	<message key="user.register.repeatPassword">Repeat password</message>

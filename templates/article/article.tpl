@@ -148,7 +148,8 @@
 		<br/>
 
 		{if $poster}
-			{translate key="comments.authenticated" userName=$comment->getPosterName()|escape}
+			{url|assign:"publicProfileUrl" page="user" op="viewPublicProfile" path=$poster->getUserId()}
+			{translate key="comments.authenticated" userName=$poster->getFullName()|escape publicProfileUrl=$publicProfileUrl}
 		{elseif $comment->getPosterName()}
 			{translate key="comments.anonymousNamed" userName=$comment->getPosterName()|escape}
 		{else}

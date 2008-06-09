@@ -39,13 +39,24 @@ class ProfileHandler extends UserHandler {
 	 */
 	function saveProfile() {
 		parent::validate();
+		$dataModified = false;
 
 		import('user.form.ProfileForm');
 
 		$profileForm = &new ProfileForm();
 		$profileForm->readInputData();
 
-		if ($profileForm->validate()) {
+		if (Request::getUserVar('profileImage')) {
+			if (!$profileForm->uploadProfileImage()) {
+				$profileForm->addError('profileImage', Locale::translate('user.profile.form.profileImageInvalid'));
+			}
+			$dataModified = true;
+		} else if (Request::getUserVar('deleteProfileImage')) {
+			$profileForm->deleteProfileImage();
+			$dataModified = true;
+		}
+
+		if (!$dataModified && $profileForm->validate()) {
 			$profileForm->execute();
 			Request::redirect(null, Request::getRequestedPage());
 

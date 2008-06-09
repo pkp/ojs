@@ -9,7 +9,7 @@
  * @package pages.user
  * @class UserHandler
  *
- * Handle requests for user functions. 
+ * Handle requests for user functions.
  *
  * $Id$
  */
@@ -73,20 +73,20 @@ class UserHandler extends Handler {
 			$subscriptionEnabled = $paymentManager->acceptSubscriptionPayments();
 			$templateMgr->assign('subscriptionEnabled', $subscriptionEnabled);
 
-			if ( $subscriptionEnabled ) {				
+			if ( $subscriptionEnabled ) {
 				import('subscription.SubscriptionDAO');
 				$subscriptionDAO =& DAORegistry::getDAO('SubscriptionDAO');
 				$subscriptionId = $subscriptionDAO->getSubscriptionIdByUser($user->getUserId(), $journal->getJournalId());
 				$templateMgr->assign('userHasSubscription', $subscriptionId);
 				if ( $subscriptionId !== false ) {
 					$subscription =& $subscriptionDAO->getSubscription($subscriptionId);
-					$templateMgr->assign('subscriptionEndDate', $subscription->getDateEnd());	
-				} 
+					$templateMgr->assign('subscriptionEndDate', $subscription->getDateEnd());
+				}
 			}
 
 			if ( $membershipEnabled ) {
 				$templateMgr->assign('dateEndMembership', $user->getDateEndMembership());
-			}				
+			}
 
 			$rolesToDisplay[$journal->getJournalId()] = &$roles;
 			$templateMgr->assign_by_ref('userJournal', $journal);
@@ -127,7 +127,7 @@ class UserHandler extends Handler {
 			Request::redirectUrl(Request::getProtocol() . '://' . Request::getServerHost() . $source, false);
 		}
 
-		Request::redirect(null, 'index');		
+		Request::redirect(null, 'index');
 	}
 
 	/**
@@ -225,54 +225,84 @@ class UserHandler extends Handler {
 		}
 		Request::redirect(null, 'user');
 	}
-	
+
+	/**
+	 * View the public user profile for a user, specified by user ID,
+	 * if that user should be exposed for public view.
+	 */
+	function viewPublicProfile($args) {
+		UserHandler::validate(false);
+		$templateMgr =& TemplateManager::getManager();
+		$userId = (int) array_shift($args);
+
+		$accountIsVisible = false;
+
+		// Ensure that the user's profile info should be exposed:
+
+		$commentDao =& DAORegistry::getDAO('CommentDAO');
+		if ($commentDao->attributedCommentsExistForUser($userId)) {
+			// At least one comment is attributed to the user
+			$accountIsVisible = true;
+		}
+
+		if(!$accountIsVisible) Request::redirect(null, 'index');
+
+		$userDao =& DAORegistry::getDAO('UserDAO');
+		$user =& $userDao->getUser($userId);
+
+		$templateMgr->assign_by_ref('user', $user);
+		$templateMgr->display('user/publicProfile.tpl');
+	}
+
+
 	//
 	// Payments
 	//
+
 	function payRenewSubscription($args) {
 		UserHandler::validate();
 		UserHandler::setupTemplate(true);
-		
+
 		import('payment.ojs.OJSPaymentManager');
 		$paymentManager =& OJSPaymentManager::getManager();
-		
+
 		import('subscription.SubscriptionDAO');
 		$subscriptionDAO =& DAORegistry::getDAO('SubscriptionDAO');
 		$subscriptionTypeDAO =& DAORegistry::getDAO('SubscriptionTypeDAO');
 
 		$journal =& Request::getJournal();
-		if ($journal) {		
+		if ($journal) {
 			$user =& Request::getUser();
 			$subscriptionId = $subscriptionDAO->getSubscriptionIdByUser($user->getUserId(), $journal->getJournalId());
-	
+
 			$subscriptionDAO =& DAORegistry::getDAO('SubscriptionDAO');
 			$subscription =& $subscriptionDAO->getSubscription($subscriptionId);
 			$subscriptionType =& $subscriptionTypeDAO->getSubscriptionType($subscription->getTypeId());
-	
+
 			$queuedPayment =& $paymentManager->createQueuedPayment($journal->getJournalId(), PAYMENT_TYPE_SUBSCRIPTION, $user->getUserId(), $subscriptionId, $subscriptionType->getCost(), $subscriptionType->getCurrencyCodeAlpha());
 			$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);
-		
+
 			$paymentManager->displayPaymentForm($queuedPaymentId, $queuedPayment);
 		}
 
 	}
-	
+
 	function payMembership($args) {
 		UserHandler::validate();
 		UserHandler::setupTemplate();
 
 		import('payment.ojs.OJSPaymentManager');
 		$paymentManager =& OJSPaymentManager::getManager();
-		
+
 		$journal =& Request::getJournal();
 		$user =& Request::getUser();
 
 		$queuedPayment =& $paymentManager->createQueuedPayment($journal->getJournalId(), PAYMENT_TYPE_MEMBERSHIP, $user->getUserId(), null,  $journal->getSetting('membershipFee'));
 		$queuedPaymentId = $paymentManager->queuePayment($queuedPayment);
-	
+
 		$paymentManager->displayPaymentForm($queuedPaymentId, $queuedPayment);
 
-	}	
+	}
 }
 
 ?>

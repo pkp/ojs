@@ -27,7 +27,7 @@
 	<h3>{$comment->getTitle()|escape|default:"&nbsp;"}</h3>
 	<h4>
 		{if $user}
-			{translate key="comments.authenticated" userName=$comment->getPosterName()|escape}
+			{translate key="comments.authenticated" userName=$user->getFullName()|escape}
 		{elseif $comment->getPosterName()}
 			{translate key="comments.anonymousNamed" userName=$comment->getPosterName()|escape}
 		{else}
@@ -84,7 +84,7 @@
 <h4><a href="{url op="view" path=$articleId|to_array:$galleyId:$childId}" target="_parent">{$child->getTitle()|escape|default:"&nbsp;"}</a></h4>
 <h5>
 	{if $user}
-		{translate key="comments.authenticated" userName=$child->getPosterName()|escape}
+		{translate key="comments.authenticated" userName=$user->getFullName()|escape}
 	{elseif $child->getPosterName()}
 		{translate key="comments.anonymousNamed" userName=$child->getPosterName()|escape}
 	{else}
@@ -126,7 +126,7 @@
 		<a href="{url op="view" path=$articleId|to_array:$galleyId:$grandChild->getCommentId()}" target="_parent">{$grandChild->getTitle()|escape|default:"&nbsp;"}</a>
 		{if $grandChild->getChildCommentCount()==1}{translate key="comments.oneReply"}{elseif $grandChild->getChildCommentCount()>0}{translate key="comments.nReplies" num=$grandChild->getChildCommentCount()}{/if}<br/>
 		{if $user}
-			{translate key="comments.authenticated" userName=$grandChild->getPosterName()|escape}
+			{translate key="comments.authenticated" userName=$user->getFullName()|escape}
 		{elseif $grandChild->getPosterName()}
 			{translate key="comments.anonymousNamed" userName=$grandChild->getPosterName()|escape}
 		{else}

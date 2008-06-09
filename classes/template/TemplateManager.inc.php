@@ -92,6 +92,10 @@ class TemplateManager extends Smarty {
 			$currentVersion = $versionDAO->getCurrentVersion();
 			$this->assign('currentVersionString', $currentVersion->getVersionString());
 
+			$siteFilesDir = Request::getBaseUrl() . '/' . PublicFileManager::getSiteFilesPath();
+			$this->assign('sitePublicFilesDir', $siteFilesDir);
+			$this->assign('publicFilesDir', $siteFilesDir); // May be overridden by journal
+
 			$siteStyleFilename = PublicFileManager::getSiteFilesPath() . '/' . $site->getSiteStyleFilename();
 			if (file_exists($siteStyleFilename)) $this->addStyleSheet(Request::getBaseUrl() . '/' . $siteStyleFilename);
 
@@ -143,7 +147,6 @@ class TemplateManager extends Smarty {
 				$this->assign('displayPageHeaderTitle', $site->getSitePageHeaderTitle());
 
 				$this->assign('siteTitle', $site->getSiteTitle());
-				$this->assign('publicFilesDir', Request::getBaseUrl() . '/' . PublicFileManager::getSiteFilesPath());
 				$this->assign('itemsPerPage', Config::getVar('interface', 'items_per_page'));
 				$this->assign('numPageLinks', Config::getVar('interface', 'page_links'));
 			}

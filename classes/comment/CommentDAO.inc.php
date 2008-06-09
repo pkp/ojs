@@ -20,10 +20,10 @@ import('comment.Comment');
 define ('ARTICLE_COMMENT_RECURSE_ALL', -1);
 
 // Comment system configuration constants
-define ('COMMENTS_DISABLED', 0); // All comments disabled
-define ('COMMENTS_AUTHENTICATED', 1); // Can be posted by authenticated users
-define ('COMMENTS_ANONYMOUS', 2); // Can be posted anonymously by authenticated users
-define ('COMMENTS_UNAUTHENTICATED', 3); // Can be posted anonymously by anyone
+define ('COMMENTS_DISABLED', 0);	// All comments disabled
+define ('COMMENTS_AUTHENTICATED', 1);	// Can be posted by authenticated users
+define ('COMMENTS_ANONYMOUS', 2);	// Can be posted anonymously by authenticated users
+define ('COMMENTS_UNAUTHENTICATED', 3);	// Can be posted anonymously by anyone
 
 class CommentDAO extends DAO {
 	/**
@@ -34,10 +34,10 @@ class CommentDAO extends DAO {
 	function &getRootCommentsByArticleId($articleId, $childLevels = 0) {
 		$comments = array();
 
-		$result = &$this->retrieve('SELECT * FROM comments WHERE article_id = ? AND parent_comment_id IS NULL ORDER BY date_posted', $articleId);
+		$result =& $this->retrieve('SELECT * FROM comments WHERE article_id = ? AND parent_comment_id IS NULL ORDER BY date_posted', (int) $articleId);
 
 		while (!$result->EOF) {
-			$comments[] = &$this->_returnCommentFromRow($result->GetRowAssoc(false), $childLevels);
+			$comments[] =& $this->_returnCommentFromRow($result->GetRowAssoc(false), $childLevels);
 			$result->moveNext();
 		}
 
@@ -55,10 +55,10 @@ class CommentDAO extends DAO {
 	function &getCommentsByParentId($parentId, $childLevels = 0) {
 		$comments = array();
 
-		$result = &$this->retrieve('SELECT * FROM comments WHERE parent_comment_id = ? ORDER BY date_posted', $parentId);
+		$result =& $this->retrieve('SELECT * FROM comments WHERE parent_comment_id = ? ORDER BY date_posted', (int) $parentId);
 
 		while (!$result->EOF) {
-			$comments[] = &$this->_returnCommentFromRow($result->GetRowAssoc(false), $childLevels);
+			$comments[] =& $this->_returnCommentFromRow($result->GetRowAssoc(false), $childLevels);
 			$result->moveNext();
 		}
 
@@ -76,10 +76,10 @@ class CommentDAO extends DAO {
 	function &getCommentsByUserId($userId) {
 		$comments = array();
 
-		$result = &$this->retrieve('SELECT * FROM comments WHERE user_id = ?', $userId);
+		$result =& $this->retrieve('SELECT * FROM comments WHERE user_id = ?', (int) $userId);
 
 		while (!$result->EOF) {
-			$comments[] = &$this->_returnCommentFromRow($result->GetRowAssoc(false));
+			$comments[] =& $this->_returnCommentFromRow($result->GetRowAssoc(false));
 			$result->moveNext();
 		}
 
@@ -90,18 +90,30 @@ class CommentDAO extends DAO {
 	}
 
 	/**
+	 * Check whether any reader comments are attributed to the user.
+	 * @param $userId int The ID of the user to check
+	 * @return boolean
+	 */
+	function attributedCommentsExistForUser($userId) {
+		$result =& $this->retrieve('SELECT count(*) FROM comments WHERE user_id = ?', (int) $userId);
+		$returner = $result->fields[0]?true:false;
+		$result->Close();
+		return $returner;
+	}
+
+	/**
 	 * Retrieve Comment by comment id
 	 * @param $commentId int
 	 * @return Comment object
 	 */
 	function &getComment($commentId, $articleId, $childLevels = 0) {
-		$result = &$this->retrieve(
-			'SELECT * FROM comments WHERE comment_id = ? and article_id = ?', array($commentId, $articleId)
+		$result =& $this->retrieve(
+			'SELECT * FROM comments WHERE comment_id = ? and article_id = ?', array((int) $commentId, (int) $articleId)
 		);
 
 		$comment = null;
 		if ($result->RecordCount() != 0) {
-			$comment = &$this->_returnCommentFromRow($result->GetRowAssoc(false), $childLevels);
+			$comment =& $this->_returnCommentFromRow($result->GetRowAssoc(false), $childLevels);
 		}
 
 		$result->Close();
@@ -116,9 +128,9 @@ class CommentDAO extends DAO {
 	 * @return Comment object
 	 */
 	function &_returnCommentFromRow($row, $childLevels = 0) {
-		$userDao = &DAORegistry::getDAO('UserDAO');
+		$userDao =& DAORegistry::getDAO('UserDAO');
 
-		$comment = &new Comment();
+		$comment =& new Comment();
 		$comment->setCommentId($row['comment_id']);
 		$comment->setArticleId($row['article_id']);
 		$comment->setUser($userDao->getUser($row['user_id']), true);

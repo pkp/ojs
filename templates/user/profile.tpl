@@ -11,7 +11,7 @@
 {assign var="pageTitle" value="user.profile.editProfile"}
 {url|assign:"url" op="profile"}{include file="common/header.tpl"}
 
-<form name="profile" method="post" action="{url op="saveProfile"}">
+<form name="profile" method="post" action="{url op="saveProfile"}" enctype="multipart/form-data">
 
 {include file="common/formErrors.tpl"}
 
@@ -124,6 +124,19 @@
 <tr valign="top">
 	<td class="label">{fieldLabel name="biography" key="user.biography"}<br />{translate key="user.biography.description"}</td>
 	<td class="value"><textarea name="biography[{$formLocale|escape}]" id="biography" rows="5" cols="40" class="textArea">{$biography[$formLocale]|escape}</textarea></td>
+</tr>
+<tr valign="top">
+	<td class="label">
+		{fieldLabel name="profileImage" key="user.profile.form.profileImage"}
+	</td>
+	<td class="value">
+		<input type="file" id="profileImage" name="profileImage" class="uploadField" /> <input type="submit" name="profileImage" value="{translate key="common.upload"}" class="button" />
+		{if $profileImage}
+			{translate key="common.fileName"}: {$profileImage.name|escape} {$profileImage.dateUploaded|date_format:$datetimeFormatShort} <input type="submit" name="deleteProfileImage" value="{translate key="common.delete"}" class="button" />
+			<br />
+			<img src="{$sitePublicFilesDir}/{$profileImage.uploadName|escape:"url"}" width="{$profileImage.width|escape}" height="{$profileImage.height|escape}" style="border: 0;" alt="{translate key="user.profile.form.profileImage"}" />
+		{/if}
+	</td>
 </tr>
 {if count($availableLocales) > 1}
 <tr valign="top">
