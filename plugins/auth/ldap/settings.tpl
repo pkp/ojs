@@ -46,6 +46,14 @@
 		</td>
 	</tr>
 	<tr valign="top">
+		<td class="label">{fieldLabel name="uid" key="plugins.auth.ldap.settings.uid"}</td>
+		<td class="value">
+			<input type="text" id="uid" name="settings[uid]" value="{$settings.uid|escape}" size="30" maxlength="255" class="textField" />
+			<br />
+			<span class="instruct">{translate key="plugins.auth.ldap.settings.uid.description"}</span>
+		</td>
+	</tr>
+	<tr valign="top">
 		<td class="label">{fieldLabel name="managerpwd" key="plugins.auth.ldap.settings.managerpwd"}</td>
 		<td class="value">
 			<input type="text" id="managerpwd" name="settings[managerpwd]" value="{$settings.managerpwd|escape}" size="30" maxlength="255" class="textField" />

@@ -116,7 +116,7 @@ class LDAPAuthPlugin extends AuthPlugin {
 		$exists = true;
 		if ($this->open()) {
 			if ($this->bind()) {
-				$result = ldap_search($this->conn, $this->settings['basedn'], 'uid=' . $username);
+				$result = ldap_search($this->conn, $this->settings['basedn'], $this->settings['uid'] . '=' . $username);
 				$exists = (ldap_count_entries($this->conn, $result) != 0);
 			}
 			$this->close();
@@ -192,10 +192,10 @@ class LDAPAuthPlugin extends AuthPlugin {
 		if ($this->open()) {
 			if (!($entry = $this->getUserEntry($user->getUsername()))) {
 				if ($this->bind($this->settings['managerdn'], $this->settings['managerpwd'])) {
-					$userdn = 'uid=' . $user->getUsername() . ',' . $this->settings['basedn'];
+					$userdn = $this->settings['uid'] . '=' . $user->getUsername() . ',' . $this->settings['basedn'];
 					$attr = array(
 						'objectclass' => array('top', 'person', 'organizationalPerson', 'inetorgperson'),
-						'uid' => $user->getUsername(),
+						$this->settings['uid'] => $user->getUsername(),
 						'userPassword' => $this->encodePassword($user->getPassword())
 					);
 					$this->userToAttr($user, $attr);
@@ -267,8 +267,8 @@ class LDAPAuthPlugin extends AuthPlugin {
 	 */
 	function getUserEntry($username) {
 		$entry = false;
-		if ($this->bind()) {
-			$result = ldap_search($this->conn, $this->settings['basedn'], 'uid=' . $username);
+		if ($this->bind($this->settings['managerdn'], $this->settings['managerpwd'])) {
+			$result = ldap_search($this->conn, $this->settings['basedn'], $this->settings['uid'] . '=' . $username);
 			if (ldap_count_entries($this->conn, $result) == 1) {
 				$entry = ldap_first_entry($this->conn, $result);
 			}

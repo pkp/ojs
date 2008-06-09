@@ -27,6 +27,8 @@
 	<message key="plugins.auth.ldap.settings.managerdn.description">E.g., "cn=Manager,dc=example,dc=com"</message>
 	<message key="plugins.auth.ldap.settings.managerpwd">Manager password</message>
 	<message key="plugins.auth.ldap.settings.managerpwd.description">The manager DN and password are only required if the user profile/password synchronization or user creation options are enabled. If LDAP will be used solely for authentication then these options can be omitted.</message>
+	<message key="plugins.auth.ldap.settings.uid">Account name attribute</message>
+	<message key="plugins.auth.ldap.settings.uid.description">The attribute whose value uniquely identifies a user object, such as uid or cn or sAMAccountName.</message>
 	<message key="plugins.auth.ldap.settings.pwhash">Password encryption</message>
 	<message key="plugins.auth.ldap.settings.pwhash.description">Hash format for passwords stored to the server. SSHA is recommended (requires PHP >= 4.3.0).</message>
 	<message key="plugins.auth.ldap.settings.saslopt">SASL Settings (optional)</message>
