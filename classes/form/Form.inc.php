@@ -179,6 +179,16 @@ class Form {
 	}
 
 	/**
+	 * Adds specified user date variables to input data. 
+	 * @param $vars array the names of the date variables to read
+	 */
+	function readUserDateVars($vars) {
+		foreach ($vars as $k) {
+			$this->setData($k, Request::getUserDateVar($k));
+		}
+	}
+
+	/**
 	 * Add a validation check to the form.
 	 * @param $formValidator FormValidator
 	 */

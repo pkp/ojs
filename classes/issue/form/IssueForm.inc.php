@@ -150,6 +150,7 @@ class IssueForm extends Form {
 				'volume' => $issue->getVolume(),
 				'number' => $issue->getNumber(),
 				'year' => $issue->getYear(),
+				'datePublished' => $issue->getDatePublished(),
 				'description' => $issue->getDescription(null), // Localized
 				'publicIssueId' => $issue->getPublicIssueId(),
 				'accessStatus' => $issue->getAccessStatus(),
@@ -281,6 +282,8 @@ class IssueForm extends Form {
 			'originalStyleFileName'
 		));
 
+		$this->readUserDateVars(array('datePublished'));
+
 		$this->addCheck(new FormValidatorCustom($this, 'showVolume', 'required', 'editor.issues.issueIdentificationRequired', create_function('$showVolume, $showNumber, $showYear, $showTitle', 'return $showVolume || $showNumber || $showYear || $showTitle ? true : false;'), array($this->getData('showNumber'), $this->getData('showYear'), $this->getData('showTitle'))));
 
 	}
@@ -294,8 +297,10 @@ class IssueForm extends Form {
 
 		if ($issueId) {
 			$issue = $issueDao->getIssueById($issueId);
+			$isNewIssue = false;
 		} else {
 			$issue =& new Issue();
+			$isNewIssue = true;
 		}
 		$volume = $this->getData('volume');
 		$number = $this->getData('number');
@@ -311,6 +316,9 @@ class IssueForm extends Form {
 		$issue->setVolume(empty($volume) ? 0 : $volume);
 		$issue->setNumber(empty($number) ? 0 : $number);
 		$issue->setYear(empty($year) ? 0 : $year);
+		if (!$isNewIssue) {
+			$issue->setDatePublished($this->getData('datePublished'));
+		}
 		$issue->setDescription($this->getData('description'), null); // Localized
 		$issue->setPublicIssueId($this->getData('publicIssueId'));
 		$issue->setShowVolume(empty($showVolume) ? 0 : $showVolume);

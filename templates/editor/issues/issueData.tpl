@@ -89,7 +89,12 @@
 		<td class="value">
 			{if $issue->getDatePublished()}
 				{translate key="editor.issues.published"}&nbsp;&nbsp;
-				{$issue->getDatePublished()|date_format:$dateFormatShort}
+				{* Find good values for starting and ending year options *}
+				{assign var=publishedYear value=$issue->getDatePublished()|date_format:"%Y"}
+				{assign var=currentYear value=$smarty.now|date_format:"%Y"}
+				{math|assign:"minYear" equation="min(x,y)-10" x=$publishedYear y=$currentYear}
+				{math|assign:"maxYear" equation="max(x,y)+2" x=$publishedYear y=$currentYear}
+				{html_select_date prefix="datePublished" time=$datePublished all_extra="class=\"selectMenu\"" start_year=$minYear end_year=$maxYear}
 			{else}
 				{translate key="editor.issues.unpublished"}
 			{/if}
