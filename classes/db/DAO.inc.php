@@ -282,6 +282,9 @@ class DAO {
 			case 'object':
 				$value = unserialize($value);
 				break;
+			case 'date':
+				if ($value !== null) $value = strtotime($value);
+				break;
 			case 'string':
 			default:
 				// Nothing required.
@@ -326,11 +329,20 @@ class DAO {
 			$type = $this->getType($value);
 		}
 
-		if ($type == 'object') {
-			$value = serialize($value);
-
-		} else if ($type == 'bool') {
-			$value = $value ? 1 : 0;
+		switch ($type) {
+			case 'object':
+				$value = serialize($value);
+				break;
+			case 'bool':
+				$value = $value ? 1 : 0;
+				break;
+			case 'date':
+				if ($value !== null) {
+					if (!is_numeric($value)) $value = strtotime($value);
+					$value = strftime('%Y-%m-%d %H:%M:%S', $value);
+				}
+				break;
+			default:
 		}
 
 		return $value;
