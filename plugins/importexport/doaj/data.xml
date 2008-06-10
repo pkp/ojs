@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data SYSTEM "../../../dbscripts/xml/dtd/xmldata.dtd">
+
+<!--
+  * data.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * DOAJ email template data XML file.
+  *
+  * $Id$
+  -->
+
+<data>
+	<sql><!-- Make sure duplicate inserts are not attempted i.e. on upgrade-->
+		<query>DELETE FROM email_templates_default WHERE email_key = 'DOAJ_EMAIL_REP'</query>
+		<query>DELETE FROM email_templates_default_data WHERE email_key = 'DOAJ_EMAIL_REP'</query>
+	</sql>
+	<table name="email_templates_default">
+		<row>
+			<field name="email_key">DOAJ_EMAIL_REP</field>
+			<field name="can_edit">1</field>
+			<field name="can_disable">0</field>
+		</row>
+	</table>
+
+	<table name="email_templates_default_data">
+		<row>
+			<field name="locale">en_US</field>
+			<field name="email_key">DOAJ_EMAIL_REP</field>
+			<field name="subject">DOAJ Journal Information Submission</field>
+			<field name="body">Dear Sonja, 
+			
+This message is to notify you of our interest to include {$journalName} in DOAJ.  To increase the speed of the reviewing process we would like to provide you with the following information about our journal.
+
+Open access (does not charge readers or their institutions for access) (yes/no): {$isOpenAccess}
+
+Journal title: {$journalName}
+
+Alternative journal title (use this if the journal is having a well known 2nd title): {$altTitle}
+
+URL: {$journalURL}
+
+Do you charge the authors for publishing? (yes/no): {$hasAuthorFee}
+
+Do you have an URL (link) to an info page regarding information to authors? (URL): {$infoURL}
+ 
+Peer-review or editorial control (yes/no): {$isPeerReviewed}
+
+Research journal that reports mainly original results of research or overviews of research (yes/no): {$isOriginalResearch}
+
+Academic/scholarly community as the main target group (yes/no): {$isAcademic}
+
+Active (yes/no): {$isActive}
+
+Exists also in printed version (yes/no): {$hasPrintedForm}
+
+Embargo (if printed version is published before the online version) (yes/no): {$hasEmbargo}
+
+Full text access from year: {$accessFrom}
+
+Volume (first full text accessible volume): {$firstVolume}
+
+Issue (first full text accessible issue): {$firstIssue}
+
+ISSN (ONLY fill this in if the journal has an ISSN): {$issn}
+
+EISSN (ONLY fill this in if the journal has an EISSN): {$eissn}
+
+Publisher: {$publisherName}
+
+Country: {$country}
+
+Languages: {$languages}
+
+Keywords (three-five words describing the main content of the journal): {$keywords}
+
+Contact person (name of a contact person, could be the editor): {$contactName}
+
+Contact e-mail (the e-mail address of the contact person): {$contactEmail}
+
+Publishing frequency / year: {$frequency}
+
+Number of articles / issue: {$articlesPerIssue}
+
+Please keep in mind that DOAJ only includes titles that live up to their definitions and selection criteria (http://www.doaj.org/articles/about#definitions).
+
+What DOAJ won't include: 
+	- Newsletters that mainly inform about an institution. 
+	- Journals that charge any access or subscription fees. 
+	- Journals that have an embargo period. 
+
+Thank you very much! 
+Sincerely,</field>
+			<field name="description">This email template is used to send an email to the contact at the DOAJ, to include the journal in their archives.</field>
+		</row>
+	</table>
+</data>

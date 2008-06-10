@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.importexport.doaj.displayName">DOAJ Export Plugin</message>
+	<message key="plugins.importexport.doaj.description">Export Journal for DOAJ and email DOAJ representative journal information</message>
+
+	
+	<message key="plugins.importexport.doaj.export">Export Journal Data to DOAJ</message>
+	<message key="plugins.importexport.doaj.export.journal">Export Journal</message>
+	<message key="plugins.importexport.doaj.export.email">Email DOAJ representative</message>
+	<message key="plugins.importexport.doaj.export.journalInfo">Export article information in XML for archiving in the DOAJ</message>
+	<message key="plugins.importexport.doaj.export.emailInfo">For your journal's consideration in the DOAJ, please submit this partially autofilled form to the DOAJ, and fill out incomplete information as best you can.</message>
+
+</locale>
