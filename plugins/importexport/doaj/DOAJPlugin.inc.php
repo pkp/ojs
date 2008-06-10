@@ -160,8 +160,7 @@ class DOAJPlugin extends ImportExportPlugin {
 				'articlesPerIssue' => $this->getArticlesPerIssue($journal->getJournalId())
 			);
 			$mail->assignParams($paramArray);
-			//$mail->addRecipient('Sonja.Brage@lub.lu.se', 'Sonja Brage');
-			$mail->addRecipient('alec@smecher.bc.ca', 'Sonja Brage');
+			$mail->addRecipient('Sonja.Brage@lub.lu.se', 'Sonja Brage');
 			$mail->displayEditForm(Request::url(null, 'manager', 'importexport', array('plugin', $this->getName(), 'email')));
 		}
 	}
