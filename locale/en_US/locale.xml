@@ -2349,6 +2349,7 @@ current password.<br /><br />Enter your email address below to reset your passwo
 	<message key="announcement.announcementsHome">Announcements</message>
 	<message key="announcement.moreAnnouncements">More Announcements...</message>
 	<message key="announcement.view">View Announcement</message>
+	<message key="announcement.posted">Posted</message>
 	<message key="announcement.viewLink">More...</message>
 	<message key="announcement.noneExist">No announcements have been published.</message>
 

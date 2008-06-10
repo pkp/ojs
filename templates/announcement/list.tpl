@@ -23,7 +23,11 @@
 	</tr>
 	<tr valign="top">
 		<td>{$announcement->getAnnouncementDescriptionShort()|nl2br}</td>
-		<td valign="bottom" align="right"><a href="{url page="announcement" op="view" path=$announcement->getAnnouncementId()}">{translate key="announcement.viewLink"}</a></td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr valign="bottom">
+		<td>{translate key="announcement.posted"}: {$announcement->getDatePosted()}</td>
+		<td align="right"><a href="{url page="announcement" op="view" path=$announcement->getAnnouncementId()}">{translate key="announcement.viewLink"}</a></td>
 	</tr>
 	<tr>
 		<td colspan="2" class="{if $announcements->eof()}end{/if}separator">&nbsp;</td>
