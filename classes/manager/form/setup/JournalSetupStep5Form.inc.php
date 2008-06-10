@@ -130,7 +130,8 @@ class JournalSetupStep5Form extends JournalSetupForm {
 			'rightBlockPlugins' => &$rightBlockPlugins
 		));
 
-		parent::display();	   
+		$templateMgr->setCacheability(CACHEABILITY_MUST_REVALIDATE);
+		parent::display();
 	}
 
 	/**
