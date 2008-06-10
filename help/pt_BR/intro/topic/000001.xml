@@ -32,7 +32,7 @@
 	<section title="1. Como montar uma revista no sistema?">
 		<![CDATA[
 <ol type="a">
-	<li><a href="http://pkp.sfu.ca/ojs/ojs_download.html" target="_blank">Baixe</a> o sistema e instale o programa, seguindo suas instruções de instalação, em um servidor que atenda aos requisitos de software.</li>
+	<li><a href="http://pkp.sfu.ca/ojs/ojs_download" target="_blank">Baixe</a> o sistema e instale o programa, seguindo suas instruções de instalação, em um servidor que atenda aos requisitos de software.</li>
 	<li>Use o login e a senha de Administrador informados durante a instalação para acessar o sistema.</li>
 	<li>Crie uma nova revista em Revistas Hospedadas. </li>
 	<li>O Administrador do Sistema será automaticamente cadastrado como Gerente da nova revista, mas podem ser criados outros usuários com Função de Editor Gerente, se necessário.</li>

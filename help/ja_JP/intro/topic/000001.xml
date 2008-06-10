@@ -32,7 +32,7 @@
 	<section title="1. OJSを使用するには、何から始めたらいいですか。">
 		<![CDATA[
 <ol type="a">
-	<li>OJSを<a href="http://pkp.sfu.ca/ojs/ojs_download.html" target="_blank">ダウンロード</a>し、インストール手引きに従い、ソフトウェア要件を満たすWebサーバーにOJSをインストールします。</li>
+	<li>OJSを<a href="http://pkp.sfu.ca/ojs/ojs_download" target="_blank">ダウンロード</a>し、インストール手引きに従い、ソフトウェア要件を満たすWebサーバーにOJSをインストールします。</li>
 	<li>OJSのインストール時に作成した管理用のユーザ名とパスワードを使ってログインします。</li>
 	<li>サイト管理機能で新しい雑誌を作成します</li>
 	<li>サイト管理者は自動的に新雑誌の雑誌管理者に登録されますが、必要に応じて、雑誌管理者となるユーザを新たに作成します。</li>

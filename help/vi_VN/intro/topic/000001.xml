@@ -32,7 +32,7 @@
 	<section title="1. Làm thế nào để bắt đầu xuất bản một tạp chí bằng OJS?">
 		<![CDATA[
 <ol type="a">
-	<li><a href="http://pkp.sfu.ca/ojs/ojs_download.html" target="_blank">Tải xuống</a> và cài đặt phần mềm OJS, theo các tập lệnh cài đặt của phần mềm, trên một máy chủ web đáp ứng những yêu cầu của phần mềm này.</li>
+	<li><a href="http://pkp.sfu.ca/ojs/ojs_download" target="_blank">Tải xuống</a> và cài đặt phần mềm OJS, theo các tập lệnh cài đặt của phần mềm, trên một máy chủ web đáp ứng những yêu cầu của phần mềm này.</li>
 	<li>Sử dụng bí danh và mật khẩu được tạo ra trong quá trình cài đặt OJS để đăng nhập vào hệ thống.</li>
 	<li>Tạo một tạp chí mới trong mục Các tạp chí trên website.</li>
 	<li>Người quản trị website sẽ được tự động bổ nhiệm làm Tổng biên tập cho tạp chí mới, nhưng nếu cần thiết, có thể tạo thêm một hoặc nhiều người dùng mới với vai trò Tổng biên tập.</li>

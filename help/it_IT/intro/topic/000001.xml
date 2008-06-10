@@ -33,7 +33,7 @@
 	<section title="1. How do I start a journal with OJS?">
 		<![CDATA[
 <ol type="a">
-	<li><a href="http://pkp.sfu.ca/ojs/ojs_download.html" target="_blank">Scarica</a> OJS e installa il software, seguendo le istruzioni di installazione, su un web server che soddisfa le richieste del software.</li>
+	<li><a href="http://pkp.sfu.ca/ojs/ojs_download" target="_blank">Scarica</a> OJS e installa il software, seguendo le istruzioni di installazione, su un web server che soddisfa le richieste del software.</li>
 	<li>Usa la username e password di amministrazione genarata nell'istallazione di OJS per effettuare il log in.</li>
 	<li>Crea un nuovo journal sotto Hosted Journals.</li>
 	<li>L'amministratore del sito sar&#x00E0; automaticamente incaricato come Journal Manager per il nuovo journal, ma se necessario, crea un nuovo utente (o utenti) nel ruolo di Journal Manager.</li>

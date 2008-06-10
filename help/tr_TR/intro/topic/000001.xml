@@ -32,7 +32,7 @@
 	<section title="1. ADS ile bir dergiyi nasıl başlatabilirim?">
 		<![CDATA[
 <ol type="a">
-	<li><a href="http://pkp.sfu.ca/ojs/ojs_download.html" target="_blank">ADS yazılımını indir</a> ve sitene yazılımın gereksinimlerine uygun web sunucuna kur.</li>
+	<li><a href="http://pkp.sfu.ca/ojs/ojs_download" target="_blank">ADS yazılımını indir</a> ve sitene yazılımın gereksinimlerine uygun web sunucuna kur.</li>
 	<li>Kurulumda verdiğin yönetici kullanıcı adı ve şifresi ile siteye gir.</li>
 	<li>Yayınlanan Dergiler bağlantısını izleyip, dergi oluştur bağlantısı ile yeni dergi oluşturun.</li>
 	<li>Site yöneticisi yeni dergi için kendiliğinden dergi yöneticisi olarak görelendirilir. Eğer gerekli ise, dergi yöneticisi olmak üzere bir kullanıcı ekleyin.</li>

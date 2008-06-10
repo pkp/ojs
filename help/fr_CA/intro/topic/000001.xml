@@ -32,7 +32,7 @@
 	<section title="1. Comment commencer un journal avec OJS?">
 		<![CDATA[
 <ol type="a">
-	<li><a href="http://pkp.sfu.ca/ojs/ojs_download.html" target="_blank">Télécharger </a> OJS  et  procéder à l’installation  en suivant les instructions d’installation, sur un serveur Web qui rencontre les conditions requises par le logiciel. </li>
+	<li><a href="http://pkp.sfu.ca/ojs/ojs_download" target="_blank">Télécharger </a> OJS  et  procéder à l’installation  en suivant les instructions d’installation, sur un serveur Web qui rencontre les conditions requises par le logiciel. </li>
 	<li>Utiliser le nom d’usager d’administrateur et le mot de passe générés lors de l’installation d’OJS  pour ouvrir une session.</li>
 	<li>Créer un nouveau journal sous un journal hébergé.</li>
 	<li>L’administrateur du site sera automatiquement porté sur la liste comme directeur de journal pour le nouveau journal, mais si nécessaire, voir à créer un nouveau nom d’usager(s) ayant le rôle de directeur du journal.</li>
