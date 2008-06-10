@@ -137,8 +137,10 @@ class MetadataForm extends Form {
 	 * @return array
 	 */
 	function getLocaleFieldNames() {
-		return array('title', 'abstract', 'coverPageAltText', 'showCoverPage', 'originalFileName', 'fileName', 'width', 'height',
-								'discipline', 'subjectClass', 'subject', 'coverageGeo', 'coverageChron', 'coverageSample', 'type', 'sponsor');
+		return array(
+			'title', 'abstract', 'coverPageAltText', 'showCoverPage', 'originalFileName', 'fileName', 'width', 'height',
+			'discipline', 'subjectClass', 'subject', 'coverageGeo', 'coverageChron', 'coverageSample', 'type', 'sponsor'
+		);
 	}
 
 	/**
@@ -158,9 +160,6 @@ class MetadataForm extends Form {
 
 		$countryDao =& DAORegistry::getDAO('CountryDAO');
 		$templateMgr->assign('countries', $countryDao->getCountries());
-
-		$disciplineDao =& DAORegistry::getDAO('DisciplineDAO');
-		$templateMgr->assign('disciplines', $disciplineDao->getDisciplines());
 
 		$templateMgr->assign('helpTopicId','submission.indexingAndMetadata');
 		if ($this->article) {

@@ -45,7 +45,6 @@ class UserExportDom {
 			XMLCustomWriter::createChildWithText($doc, $userNode, 'fax', $user->getFax(), false);
 			XMLCustomWriter::createChildWithText($doc, $userNode, 'mailing_address', $user->getMailingAddress(), false);
 			XMLCustomWriter::createChildWithText($doc, $userNode, 'country', $user->getCountry(), false);
-			XMLCustomWriter::createChildWithText($doc, $userNode, 'discipline', $user->getDiscipline(), false);
 			if (is_array($user->getSignature(null))) {
 				foreach($user->getSignature(null) as $locale => $value) {
 					$signatureNode =& XMLCustomWriter::createChildWithText($doc, $userNode, 'signature', $value, false);

@@ -136,7 +136,6 @@ class UserDAO extends DAO {
 		$user->setInitials($row['initials']);
 		$user->setLastName($row['last_name']);
 		$user->setGender($row['gender']);
-		$user->setDiscipline($row['discipline']);
 		$user->setAffiliation($row['affiliation']);
 		$user->setEmail($row['email']);
 		$user->setUrl($row['url']);
@@ -173,9 +172,9 @@ class UserDAO extends DAO {
 		}
 		$this->update(
 			sprintf('INSERT INTO users
-				(username, password, salutation, first_name, middle_name, initials, last_name, gender, discipline, affiliation, email, url, phone, fax, mailing_address, country, locales, date_last_email, date_registered, date_validated, date_last_login, date_end_membership, must_change_password, disabled, disabled_reason, auth_id)
+				(username, password, salutation, first_name, middle_name, initials, last_name, gender, affiliation, email, url, phone, fax, mailing_address, country, locales, date_last_email, date_registered, date_validated, date_last_login, date_end_membership, must_change_password, disabled, disabled_reason, auth_id)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, %s, %s, %s, %s, %s, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, %s, %s, %s, %s, %s, ?, ?, ?, ?)',
 				$this->datetimeToDB($user->getDateLastEmail()), $this->datetimeToDB($user->getDateRegistered()), $this->datetimeToDB($user->getDateValidated()), $this->datetimeToDB($user->getDateLastLogin()), $this->datetimeToDB($user->getDateEndMembership())),
 			array(
 				$user->getUsername(),
@@ -186,7 +185,6 @@ class UserDAO extends DAO {
 				$user->getInitials(),
 				$user->getLastName(),
 				$user->getGender(),
-				$user->getDiscipline(),
 				$user->getAffiliation(),
 				$user->getEmail(),
 				$user->getUrl(),
@@ -239,7 +237,6 @@ class UserDAO extends DAO {
 					initials = ?,
 					last_name = ?,
 					gender = ?,
-					discipline = ?,
 					affiliation = ?,
 					email = ?,
 					url = ?,
@@ -267,7 +264,6 @@ class UserDAO extends DAO {
 				$user->getInitials(),
 				$user->getLastName(),
 				$user->getGender(),
-				$user->getDiscipline(),
 				$user->getAffiliation(),
 				$user->getEmail(),
 				$user->getUrl(),

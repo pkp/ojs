@@ -81,10 +81,6 @@
 	<td class="value">{$user->getMailingAddress()|strip_unsafe_html|nl2br}</td>
 </tr>
 <tr valign="top">
-	<td class="label">{translate key="common.discipline"}</td>
-	<td class="value">{$discipline|escape}</td>
-</tr>
-<tr valign="top">
 	<td class="label">{translate key="user.biography"}:</td>
 	<td class="value">{$user->getUserBiography()|strip_unsafe_html|nl2br}</td>
 </tr>

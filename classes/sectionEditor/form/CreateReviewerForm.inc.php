@@ -68,10 +68,6 @@ class CreateReviewerForm extends Form {
 		$countries =& $countryDao->getCountries();
 		$templateMgr->assign_by_ref('countries', $countries);
 
-		$disciplineDao =& DAORegistry::getDAO('DisciplineDAO');
-		$disciplines =& $disciplineDao->getDisciplines();
-		$templateMgr->assign_by_ref('disciplines', $disciplines);
-
 		parent::display();
 	}
 
@@ -85,7 +81,6 @@ class CreateReviewerForm extends Form {
 			'middleName',
 			'lastName',
 			'gender',
-			'discipline',
 			'initials',
 			'affiliation',
 			'email',
@@ -124,7 +119,6 @@ class CreateReviewerForm extends Form {
 		$user->setMiddleName($this->getData('middleName'));
 		$user->setLastName($this->getData('lastName'));
 		$user->setGender($this->getData('gender'));
-		$user->setDiscipline($this->getData('discipline'));
 		$user->setInitials($this->getData('initials'));
 		$user->setAffiliation($this->getData('affiliation'));
 		$user->setEmail($this->getData('email'));

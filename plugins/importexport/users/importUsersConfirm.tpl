@@ -63,7 +63,6 @@
 			{foreach name=locales from=$user->getLocales() item=locale}
 				<input type="hidden" name="{$userKey|escape}_locales[]" value="{$locale|escape}" />
 			{/foreach}			
-			<input type="hidden" name="{$userKey|escape}_discipline" value="{$user->getDiscipline()|escape}" />
 			<input type="hidden" name="{$userKey|escape}_country" value="{$user->getCountry()|escape}" />
 			<input type="hidden" name="{$userKey|escape}_mailingAddress" value="{$user->getMailingAddress()|escape}" />
 			<input type="hidden" name="{$userKey|escape}_fax" value="{$user->getFax()|escape}" />

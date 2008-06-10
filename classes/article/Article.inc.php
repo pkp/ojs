@@ -327,7 +327,7 @@ class Article extends DataObject {
 	}
 
 	/**
-	 * get discipline
+	 * Get discipline
 	 * @param $locale
 	 * @return string
 	 */

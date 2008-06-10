@@ -144,17 +144,6 @@
 </tr>
 
 <tr valign="top">
-	<td class="label">{fieldLabel name="discipline" key="common.discipline"}</td>
-	<td class="value">
-		<select name="discipline" id="discipline" class="selectMenu">
-			<option value=""></option>
-			{html_options options=$disciplines selected=$discipline}
-
-		</select>
-	</td>
-</tr>
-
-<tr valign="top">
 	<td class="label">{fieldLabel name="mailingAddress" key="common.mailingAddress"}</td>
 	<td class="value"><textarea name="mailingAddress" id="mailingAddress" rows="3" cols="40" class="textArea">{$mailingAddress|escape}</textarea></td>
 </tr>

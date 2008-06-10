@@ -108,16 +108,6 @@
 	</tr>
 {/if}
 <tr valign="top">
-	<td class="label">{fieldLabel name="discipline" key="common.discipline"}</td>
-	<td class="value">
-		<select name="discipline" id="discipline" class="selectMenu">
-			<option value=""></option>
-			{html_options options=$disciplines selected=$discipline}
-
-		</select>
-	</td>
-</tr>
-<tr valign="top">
 	<td class="label">{fieldLabel name="interests" key="user.interests"}</td>
 	<td class="value"><input type="text" name="interests[{$formLocale|escape}]" id="interests" value="{$interests[$formLocale]|escape}" size="30" maxlength="255" class="textField" /></td>
 </tr>

@@ -95,10 +95,6 @@ class RegistrationForm extends Form {
 		$countries =& $countryDao->getCountries();
 		$templateMgr->assign_by_ref('countries', $countries);
 
-		$disciplineDao =& DAORegistry::getDAO('DisciplineDAO');
-		$disciplines =& $disciplineDao->getDisciplines();
-		$templateMgr->assign_by_ref('disciplines', $disciplines);
-
 		$templateMgr->assign('privacyStatement', $journal->getLocalizedSetting('privacyStatement'));
 		$templateMgr->assign('allowRegReader', $journal->getSetting('allowRegReader')==1?1:0);
 		$templateMgr->assign('enableSubscriptions', $journal->getSetting('enableSubscriptions')==1?1:0);
@@ -136,7 +132,7 @@ class RegistrationForm extends Form {
 		$userVars = array(
 			'username', 'password', 'password2',
 			'salutation', 'firstName', 'middleName', 'lastName',
-			'gender', 'initials', 'country', 'discipline',
+			'gender', 'initials', 'country',
 			'affiliation', 'email', 'userUrl', 'phone', 'fax', 'signature',
 			'mailingAddress', 'biography', 'interests', 'userLocales',
 			'registerAsReader', 'openAccessNotification', 'registerAsAuthor',

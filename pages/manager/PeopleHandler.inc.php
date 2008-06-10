@@ -749,13 +749,6 @@ class PeopleHandler extends ManagerHandler {
 			}
 			$templateMgr->assign('country', $country);
 
-			$disciplineDao =& DAORegistry::getDAO('DisciplineDAO');
-			$discipline = null;
-			if ($user->getDiscipline() != '') {
-				$discipline = $disciplineDao->getDiscipline($user->getDiscipline());
-			}
-			$templateMgr->assign('discipline', $discipline);
-
 			$templateMgr->assign_by_ref('user', $user);
 			$templateMgr->assign_by_ref('userRoles', $roles);
 			$templateMgr->assign('localeNames', Locale::getAllLocales());

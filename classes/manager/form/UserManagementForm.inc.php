@@ -99,10 +99,6 @@ class UserManagementForm extends Form {
 		$countries =& $countryDao->getCountries();
 		$templateMgr->assign_by_ref('countries', $countries);
 
-		$disciplineDao =& DAORegistry::getDAO('DisciplineDAO');
-		$disciplines =& $disciplineDao->getDisciplines();
-		$templateMgr->assign_by_ref('disciplines', $disciplines);
-
 		$authDao = &DAORegistry::getDAO('AuthSourceDAO');
 		$authSources = &$authDao->getSources();
 		$authSourceOptions = array();
@@ -143,7 +139,6 @@ class UserManagementForm extends Form {
 					'country' => $user->getCountry(),
 					'biography' => $user->getBiography(null), // Localized
 					'interests' => $user->getInterests(null), // Localized
-					'discipline' => $user->getDiscipline(),
 					'userLocales' => $user->getLocales()
 				);
 
@@ -176,7 +171,6 @@ class UserManagementForm extends Form {
 			'middleName',
 			'lastName',
 			'gender',
-			'discipline',
 			'initials',
 			'signature',
 			'affiliation',
@@ -233,7 +227,6 @@ class UserManagementForm extends Form {
 		$user->setLastName($this->getData('lastName'));
 		$user->setInitials($this->getData('initials'));
 		$user->setGender($this->getData('gender'));
-		$user->setDiscipline($this->getData('discipline'));
 		$user->setAffiliation($this->getData('affiliation'));
 		$user->setSignature($this->getData('signature'), null); // Localized
 		$user->setEmail($this->getData('email'));

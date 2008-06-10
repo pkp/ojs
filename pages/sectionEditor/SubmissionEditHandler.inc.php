@@ -731,13 +731,6 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			}
 			$templateMgr->assign('country', $country);
 
-			$disciplineDao =& DAORegistry::getDAO('DisciplineDAO');
-			$discipline = null;
-			if ($user->getDiscipline() != '') {
-				$discipline = $disciplineDao->getDiscipline($user->getDiscipline());
-			}
-			$templateMgr->assign('discipline', $discipline);
-
 			$templateMgr->assign_by_ref('user', $user);
 			$templateMgr->assign('localeNames', Locale::getAllLocales());
 			$templateMgr->assign('helpTopicId', 'journal.roles.index');

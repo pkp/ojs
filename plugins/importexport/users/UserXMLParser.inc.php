@@ -126,9 +126,6 @@ class UserXMLParser {
 							case 'country':
 								$newUser->setCountry($attrib->getValue());
 								break;
-							case 'discipline':
-								$newUser->setDiscipline($attrib->getValue());
-								break;
 							case 'signature':
 								$locale = $attrib->getAttribute('locale');
 								if (empty($locale)) $locale = $journalPrimaryLocale;

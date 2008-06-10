@@ -56,11 +56,9 @@ class TranslatorAction {
 	function getMiscLocaleFiles($locale) {
 		$countryDao =& DAORegistry::getDAO('CountryDAO');
 		$currencyDao =& DAORegistry::getDAO('CurrencyDAO');
-		$disciplineDao =& DAORegistry::getDAO('DisciplineDAO');
 		return array(
 			$countryDao->getFilename($locale),
-			$currencyDao->getCurrencyFilename($locale),
-			$disciplineDao->getFilename($locale)
+			$currencyDao->getCurrencyFilename($locale)
 		);
 	}
 

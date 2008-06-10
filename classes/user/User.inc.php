@@ -196,22 +196,6 @@ class User extends DataObject {
 	}
 
 	/**
-	 * Get user discipline.
-	 * @return string
-	 */
-	function getDiscipline() {
-		return $this->getData('discipline');
-	}
-
-	/**
-	 * Set user discipline.
-	 * @param $discipline string
-	 */
-	function setDiscipline($discipline) {
-		return $this->setData('discipline', $discipline);
-	}
-
-	/**
 	 * Get affiliation (position, institution, etc.).
 	 * @return string
 	 */

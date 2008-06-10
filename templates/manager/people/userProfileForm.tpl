@@ -217,15 +217,6 @@
 		</td>
 	</tr>
 	<tr valign="top">
-		<td class="label">{fieldLabel name="discipline" key="common.discipline"}</td>
-		<td class="value">
-			<select name="discipline" id="discipline" class="selectMenu">
-				<option value=""></option>
-				{html_options options=$disciplines selected=$discipline}
-			</select>
-		</td>
-	</tr>
-	<tr valign="top">
 		<td class="label">{fieldLabel name="biography" key="user.biography"}<br />{translate key="user.biography.description"}</td>
 		<td class="value"><textarea name="biography[{$formLocale|escape}]" id="biography" rows="5" cols="40" class="textArea">{$biography[$formLocale]|escape}</textarea></td>
 	</tr>

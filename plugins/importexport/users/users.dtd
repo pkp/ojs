@@ -10,7 +10,7 @@
   -->
 
 <!ELEMENT users (user*)>
-<!ELEMENT user (username?, password?, salutation?, first_name, middle_name?, last_name, initials?, gender?, affiliation?, signature?, email, url?, phone?, fax?, mailing_address?, country?, discipline?, interests*, biography*, locales?, role*)>
+<!ELEMENT user (username?, password?, salutation?, first_name, middle_name?, last_name, initials?, gender?, affiliation?, signature?, email, url?, phone?, fax?, mailing_address?, country?, interests*, biography*, locales?, role*)>
 <!ELEMENT username (#PCDATA)>
 <!ELEMENT password (#PCDATA)>
 	<!ATTLIST password change (true|false) "false">
@@ -35,7 +35,6 @@
 <!ELEMENT fax (#PCDATA)>
 <!ELEMENT mailing_address (#PCDATA)>
 <!ELEMENT country (#PCDATA)>
-<!ELEMENT discipline (#PCDATA)>
 <!ELEMENT interests (#PCDATA)>
 	<!ATTLIST interests
 		locale CDATA #IMPLIED>

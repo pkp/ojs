@@ -81,10 +81,6 @@
 		<td class="value">{$user->getFax()|escape|default:"&mdash;"}</td>
 	</tr>
 	<tr valign="top">
-		<td class="label">{translate key="common.discipline"}</td>
-		<td class="value">{$discipline|escape|default:"&mdash;"}</td>
-	</tr>
-	<tr valign="top">
 		<td class="label">{translate key="user.interests"}</td>
 		<td class="value">{$user->getUserInterests()|escape|default:"&mdash;"}</td>
 	</tr>
