@@ -601,7 +601,7 @@
 	<message key="admin.settings.passwordCharacters">Caractères</message>
 	<message key="admin.settings.siteLanguage">Langue du site</message>
 	<message key="admin.settings.oaiRegistration">Enregistrer le site pour l'indexation (collecte de métadonnées)</message>
-	<message key="admin.settings.oaiRegistrationDescription"><![CDATA[Pour que le contenu de toutes les revues hébergées sur ce site soit indexé dans un système de bases de données de recherche distribuées globalement, <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">enregistrer</a> l'adresse URL de votre site avec le collectionneur de métadonnées du Public Knowledge Project <a href="http://pkp.sfu.ca/harvester/" target="_blank"></a>. Cet outil recueille les métadonnées de chaque article indexé dans cette revue, ce qui permet une recherche collective précise dans les sites de recherche qui adhèrent au <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">protocole de collecte de métadonnées du Open Archives Initiative</a>. <br /><br /><a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Cliquer ici</a> et entrer <span class="highlight">{$siteUrl}</span> dans <b>l'URL du site</b>, et <span class="highlight">{$oaiUrl}</span> dans <b>l'URL de base pour l'OAI</b>.<br /><br />Remarquez que l'interface OAI peut être désactivée pour ce site en modifiant la configuration du système OJS. Des versions futures d'OJS permettront d'activer ou de désactiver l'interface OAI pour des revues individuelles sur le site.]]></message>
+	<message key="admin.settings.oaiRegistrationDescription"><![CDATA[Pour que le contenu de toutes les revues hébergées sur ce site soit indexé dans un système de bases de données de recherche distribuées globalement, <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">enregistrer</a> l'adresse URL de votre site avec le collectionneur de métadonnées du Public Knowledge Project <a href="http://pkp.sfu.ca/harvester/" target="_blank"></a>. Cet outil recueille les métadonnées de chaque article indexé dans cette revue, ce qui permet une recherche collective précise dans les sites de recherche qui adhèrent au <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">protocole de collecte de métadonnées du Open Archives Initiative</a>. <br /><br /><a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Cliquer ici</a> et entrer <span class="highlight">{$siteUrl}</span> dans <strong>l'URL du site</strong>, et <span class="highlight">{$oaiUrl}</span> dans <strong>l'URL de base pour l'OAI</strong>.<br /><br />Remarquez que l'interface OAI peut être désactivée pour ce site en modifiant la configuration du système OJS. Des versions futures d'OJS permettront d'activer ou de désactiver l'interface OAI pour des revues individuelles sur le site.]]></message>
 
 	
 	<message key="admin.siteManagement">Gestion du site</message>
@@ -812,7 +812,7 @@
 	<message key="manager.setup.look.description">En-tête de la page d'accueil, contenu, en-tête de la revue, bas de page, barre de navigation, et feuille de style.</message>
 	<message key="manager.setup.journalTitle">Titre de la revue</message>
 	<message key="manager.setup.focusScope">Politique éditoriale</message>
-	<message key="manager.setup.focusScopeDescription"><![CDATA[<b>EXEMPLE DE DONNÉES HTML</b>]]></message>
+	<message key="manager.setup.focusScopeDescription"><![CDATA[<strong>EXEMPLE DE DONNÉES HTML</strong>]]></message>
 	<message key="manager.setup.journalSetupUpdated">La configuration de la revue a été mise à jour.</message>
 	<message key="manager.setup.selectOne">En sélectionner un</message>
 
@@ -930,7 +930,7 @@
 	<!-- Setup Step 3 -->
 	<message key="manager.setup.guidingSubmissions">Étape 3. Orienter les soumissions</message>
 	<message key="manager.setup.authorGuidelines">Directives pour les auteurs</message>
-	<message key="manager.setup.authorGuidelinesDescription"><![CDATA[Établir pour les auteurs les normes pour la bibliographie et le formatage utilisées pour les articles soumis à la revue (par ex., <i>Publication Manual of the American Psychological Association</i>, 5e à d., 2001). Il est souvent utile de donner des exemples des formats usuels de citation pour les revues et les livres qui seront utilisés dans la soumission. Identifier aussi les types de fichiers supplémentaires appropriés (par ex., attribution des noms pour un ensemble de données, instruments de recherche, etc.) que les auteurs devraient être incités à télécharger, en plus de leur soumission, afin d'accroître l'engagement des lecteurs envers leur travail.]]></message>
+	<message key="manager.setup.authorGuidelinesDescription"><![CDATA[Établir pour les auteurs les normes pour la bibliographie et le formatage utilisées pour les articles soumis à la revue (par ex., <em>Publication Manual of the American Psychological Association</em>, 5e à d., 2001). Il est souvent utile de donner des exemples des formats usuels de citation pour les revues et les livres qui seront utilisés dans la soumission. Identifier aussi les types de fichiers supplémentaires appropriés (par ex., attribution des noms pour un ensemble de données, instruments de recherche, etc.) que les auteurs devraient être incités à télécharger, en plus de leur soumission, afin d'accroître l'engagement des lecteurs envers leur travail.]]></message>
 	<message key="manager.setup.submissionGuidelines">Instructions en matière de soumission</message>
 	<message key="manager.setup.submissionPreparationChecklist">Conditions requises pour soumettre un article</message>
 	<message key="manager.setup.submissionPreparationChecklistDescription">Lors d'une soumission à la revue, on demande d'abord aux auteurs de s'assurer, avant d'aller plus loin, que toutes les conditions requises pour soumettre un article sont remplies. La liste de vérification doit aussi apparaître dans Instructions aux auteurs, dans la rubrique « Au sujet de la revue ». Cette liste peut être révisée ci-dessous, mais tous les points de la liste devront être cochés avant que les auteurs puissent poursuivre leur soumission.</message>
@@ -967,7 +967,7 @@
 <br /><br />
 Prendre note que si votre webmaster a déjà  inscrit ce site auprès de PKP Harvester, votre revue sera indexée automatiquement et vous n'avez pas besoin d'inscrire votre revue.
 <br /><br />
-<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Cliquer ici</a> et entrer <span class="highlight">{$siteUrl}</span> sous <b>l'adresse URL du site</b>, et <span class="highlight">{$oaiUrl}</span> sous <b>l'adresse URL de base pour archiver OAI</b>.]]></message>
+<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Cliquer ici</a> et entrer <span class="highlight">{$siteUrl}</span> sous <strong>l'adresse URL du site</strong>, et <span class="highlight">{$oaiUrl}</span> sous <strong>l'adresse URL de base pour archiver OAI</strong>.]]></message>
 	<message key="manager.setup.notifications">Notification d'une soumission de la part d'un auteur</message>
 	<message key="manager.setup.notifications.description">Après avoir complété le processus de soumission, les auteurs reçoivent un courriel accusant réception de celle-ci. (lequel peut être vu et édité dans "Courriels préparés". De plus, une copie du courriel accusant la réception peut être envoyé comme suit :</message>
 	<message key="manager.setup.notifications.copyPrimaryContact">Envoyer une copie à la personne-ressource principale de la revue, identifiée à l'étape 1 lors de la mise en place (Setup)1.</message>
@@ -1887,7 +1887,7 @@ avec un signe plus (+) indiquant que la révision est en cours.]]></message>
 	<message key="user.register.privacyStatement">Déclaration de confidentialité</message>
 	<message key="user.register.completeForm">Remplir ce formulaire pour vous inscrire à cette revue.</message>
 	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Cliquer ici</a> si vous êtes déjà inscrit à une autre revue dans ce site.]]></message>
-	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Cliquer ici</a> si vous n'êtes <b>pas</b> déjà inscrit à une autre revue dans ce site.]]></message>
+	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Cliquer ici</a> si vous n'êtes <strong>pas</strong> déjà inscrit à une autre revue dans ce site.]]></message>
 	<message key="user.register.loginToRegister">Entrer votre nom d'usager et votre mot de passe actuels pour vous inscrire à cette revue</message>
 	<message key="user.register.registrationDisabled">Cette revue n'accepte pas actuellement l'inscription des usagers.</message>
 	<message key="user.register.usernameRestriction">Le nom d'usager ne doit contenir que des lettres minuscules, chiffres, et traits d'union ou traits de soulignement.</message>
@@ -1930,12 +1930,12 @@ avec un signe plus (+) indiquant que la révision est en cours.]]></message>
 	<message key="search.syntaxInstructions"><![CDATA[Search tips: <ul>
 <li>Les termes de recherche sont insensibles à la casse.</li>
 <li>Les noms communs sont ignorés</li>
-<li>Par défaut seulement les articles contenant <i>tout</i> les termes de la recherche sont retournés. (i.e., <i>ET</i> est implicite)</li>
-<li>Combiner plusieurs mots avec <i>OU</i>pour trouver l'un ou l'autre terme. i.e. <i>éducation OR recherche</i></li>
-<li>Utiliser des parenthèses pour faire une recherche plus complexe. i.e. <i>archive ((revue OU conférence) PAS celles-ci)</i></li>
-<li>Rechercher une phrase exacte en la mettant entre des guillemets; i.e. <i>"Publication à libre accès"</i></li>
-<li>Exclure un mot en le préfixant avec <b>-</b> ou <i>PAS</i>; e.g. <i>en ligne -politiques</i> ou <i>en ligne NON politiques</i></li>
-<li>Utiliser  <b>*</b> comme caractère de remplacement dans un terme marier toute séquence de caractères; i.e. <i>soci* moralité</i> feront apparaître les documents contenant «sociologique » ou « socialisme »</li>
+<li>Par défaut seulement les articles contenant <em>tout</em> les termes de la recherche sont retournés. (i.e., <em>ET</em> est implicite)</li>
+<li>Combiner plusieurs mots avec <em>OU</em>pour trouver l'un ou l'autre terme. i.e. <em>éducation OR recherche</em></li>
+<li>Utiliser des parenthèses pour faire une recherche plus complexe. i.e. <em>archive ((revue OU conférence) PAS celles-ci)</em></li>
+<li>Rechercher une phrase exacte en la mettant entre des guillemets; i.e. <em>"Publication à libre accès"</em></li>
+<li>Exclure un mot en le préfixant avec <strong>-</strong> ou <em>PAS</em>; e.g. <em>en ligne -politiques</em> ou <em>en ligne NON politiques</em></li>
+<li>Utiliser  <strong>*</strong> comme caractère de remplacement dans un terme marier toute séquence de caractères; i.e. <em>soci* moralité</em> feront apparaître les documents contenant «sociologique » ou « socialisme »</li>
 </ul>]]></message>
 	<message key="search.operator.not">non</message>
 	<message key="search.operator.and">et</message>
@@ -2127,7 +2127,7 @@ Votre serveur soutient actuellement mbstring: <strong>{$supportsMBString}</stron
 	<message key="installer.installFileError"><![CDATA[Le fichier d'installation <tt>dbscripts/xml/install.xml</tt> n'existe pas ou n'est pas lisible.]]></message>
 	<message key="installer.installParseDBFileError"><![CDATA[Erreur d'analyse du fichier d'installation de la base de données <tt>{$file}</tt>.]]></message>
 	<message key="installer.configFileError"><![CDATA[Le fichier de configuration <tt>config.inc.php</tt> n'existe pas ou n'est pas lisible.]]></message>
-	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<b>Avertissement :</b> Si l'installation de la base de données n'a pas réussi, vous devrez peut-être laisser tomber votre base de données OJS ou les tables de votre base de données avant de tenter de réinstaller la base de données.]]></message>
+	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<strong>Avertissement :</strong> Si l'installation de la base de données n'a pas réussi, vous devrez peut-être laisser tomber votre base de données OJS ou les tables de votre base de données avant de tenter de réinstaller la base de données.]]></message>
 	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>IMPORTANT!</h4>
 <p>L'installateur n'a pas pu écraser automatiquement le fichier de configuration. Avant de tenter d'utiliser le système, veuillez ouvrir <tt>config.inc.php</tt> dans le rédacteur de texte approprié et remplacer son contenu par le contenu de la zone de texte simple ci dessous.</p>]]></message>
 	<message key="installer.contentsOfConfigFile">Contenu du fichier de configuration</message>
@@ -2135,7 +2135,7 @@ Votre serveur soutient actuellement mbstring: <strong>{$supportsMBString}</stron
 <p>Les énoncés SQL pour créer le schéma de la base de données OJS et les données initiales sont affichés ci-dessous. Noter que le système sera inutilisable tant que ces énoncés n'auront pas été exécutés manuellement. Vous devrez aussi configurer manuellement la <tt>config.inc.php</tt> configuration file.</p>]]></message>
 	<message key="installer.installerSQLStatements">énoncés SQL pour l'installation</message>
 	<message key="installer.installationComplete"><![CDATA[<p>Installation de OJS réussie.</p><p>Pour commencer à utiliser le système, <a href="{$loginUrl}">ouvrir une session</a> avec le nom d'usager et le mot de passe entrés à la page précédente.</p><p>Si vous voulez recevoir des nouvelles et des mises à jour, <strong>veuillez vous inscrire à <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>.</strong> Si vous avez des questions ou des commentaires, veuillez visiter le <a href="http://pkp.sfu.ca/support/forum" target="_new">forum de soutien</a>.</p>]]></message>
-	<message key="installer.upgradeComplete"><![CDATA[<p>Mise à jour d'OJS jusqu'à la version {$version} a réussi.</p><p>N'oubliez pas de remettre "installed" dans votre fichier de configuration "config.inc.php" à <i>On</i>.</p><p>Si vous n'êtes pas déjà inscrit et voulez recevoir des nouvelles et mises à jour, <strong>veuillez vous inscrire à <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>.</strong> Pour toute question ou commentaire, veuillez visiter <a href="http://pkp.sfu.ca/support/forum" target="_new">forum de soutien</a>.</p>]]></message>
+	<message key="installer.upgradeComplete"><![CDATA[<p>Mise à jour d'OJS jusqu'à la version {$version} a réussi.</p><p>N'oubliez pas de remettre "installed" dans votre fichier de configuration "config.inc.php" à <em>On</em>.</p><p>Si vous n'êtes pas déjà inscrit et voulez recevoir des nouvelles et mises à jour, <strong>veuillez vous inscrire à <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>.</strong> Pour toute question ou commentaire, veuillez visiter <a href="http://pkp.sfu.ca/support/forum" target="_new">forum de soutien</a>.</p>]]></message>
 	<message key="installer.skipFilesDir">Ne pas créer de sous-répertoires</message>
 	<message key="installer.releaseNotes">Instructions d'utilisation</message>
 	<message key="installer.checkYes">Oui</message>
@@ -2392,7 +2392,7 @@ Le fichier à réviser est en format WORD ou .rtf et peut donc être facilement 
 
 <h4>Système de révision de texte</h4>
 
-<b>1. Suivi des modifications de Microsoft Word</b>
+<strong>1. Suivi des modifications de Microsoft Word</strong>
 
 Sous Outils dans la barre de menu, la fonction Suivi des modifications permet au évaluateur de faire des insertions (le texte apparaît en couleur) et des suppressions (le texte apparaît en couleur et barré ou dans la marge comme supprimé). l'évaluateur peut afficher les requêtes de l'auteur (Requêtes de l'auteur) et du rédacteur (Requêtes du rédacteur) en insérant ces requêtes dans des crochets. La version du fichier est alors téléchargée et le le rédacteur reçoit un avis. le rédacteur révise le texte et en avise l'auteur. 
 
@@ -2401,49 +2401,49 @@ le rédacteur et l'auteur doivent laisser les modifications dont ils sont satisf
 Après que le texte a été évalué par le rédacteur et l'auteur, l'évaluateur revoit une dernière fois le texte et accepte les modifications en préparation du travail éditorial et de l'épreuve en placard. 
 
 
-<b>2. Harvard Educational Review</b>
+<strong>2. Harvard Educational Review</strong>
 
-<b>Comment procéder aux révisions électroniques du manuscrit</b>
+<strong>Comment procéder aux révisions électroniques du manuscrit</strong>
 
 Veuillez suivre le protocole suivant pour faire les révisions électroniques de votre manuscrit:
 
-<b>Répondre aux modifications suggérées</b>
+<strong>Répondre aux modifications suggérées</strong>
 &nbsp; Pour chaque modification suggérée que vous acceptez, enlever le gras du texte
-&nbsp; Pour chaque modification suggérée que vous refusez, remettre le texte original et le mettre en <b>gras</b>
+&nbsp; Pour chaque modification suggérée que vous refusez, remettre le texte original et le mettre en <strong>gras</strong>
 
-<b>Adjonctions et suppressions</b>
-&nbsp; Indiquer les adjonctions en <b>mettant en gras</b> le nouveau texte
-&nbsp; Remplacer les rubriques supprimées par: <b>[texte supprimé]</b>
-&nbsp; Si vous supprimez une phrase ou plus, veuillez l'indiquer dans une note, par ex., <b>[ ai supprimé 2 phrases]</b>
+<strong>Adjonctions et suppressions</strong>
+&nbsp; Indiquer les adjonctions en <strong>mettant en gras</strong> le nouveau texte
+&nbsp; Remplacer les rubriques supprimées par: <strong>[texte supprimé]</strong>
+&nbsp; Si vous supprimez une phrase ou plus, veuillez l'indiquer dans une note, par ex., <strong>[ ai supprimé 2 phrases]</strong>
 
-<b>Répondre aux requêtes de l'auteur (QetR)</b>
+<strong>Répondre aux requêtes de l'auteur (QetR)</strong>
 &nbsp; Garder toutes les QetR intactes et en gras dans le texte. Ne pas les supprimer &nbsp; Pour répondre à une QetR, ajouter un commentaire après. Les commentaires doivent être limités Ã  :
-<b>[Commentaire :</b>]
-&nbsp; par ex., <b>[Commentaire : Discussion élargie de la méthodologie comme vous l'avez suggéré]</b>
+<strong>[Commentaire :</strong>]
+&nbsp; par ex., <strong>[Commentaire : Discussion élargie de la méthodologie comme vous l'avez suggéré]</strong>
 
-<b>Apporter des commentaires</b>
+<strong>Apporter des commentaires</strong>
 &nbsp; Utiliser les commentaires pour expliquer les modifications organisationnelles ou les révisions majeures
-&nbsp; par ex., <b>[Commentaire : Déplacer le paragraphe ci-dessus de la p. 5 à la p. 7]</b>
+&nbsp; par ex., <strong>[Commentaire : Déplacer le paragraphe ci-dessus de la p. 5 à la p. 7]</strong>
 &nbsp; Nota : Lors du renvoi à des numéros de page, veuillez utiliser les numéros de page de la copie imprimée du manuscrit qui vous a été envoyée. Cela est important car les numéros de page peuvent changer lorsqu'un document est révisé électroniquement.
 
 <h4>Illustration d'une révision électronique</h4>
 
-<b>Fichier " manuscrit " original</b>
+<strong>Fichier " manuscrit " original</strong>
 
 Avant d'apporter des changements importants à la structure ou à l'organisation de votre manuscrit original, veuillez communiquer avec les co-évaluateurs de votre article. Après que vous avez terminé vos révisions, changer le nom du fichier AuthorNameQA.doc pour AuthorNameQAR.doc (par ex., de GagnonQA.doc à GagnonQAR.doc). Imprimer une copie papier de votre manuscrit et la poster avec une disquette contenant le fichier de traitement de texte complètement révisé et renommé. 
 
 
-<b>Manuscrit retourné à l'auteur avec requêtes et suggestions</b>
+<strong>Manuscrit retourné à l'auteur avec requêtes et suggestions</strong>
 
-Avant d'apporter des changements importants à la structure ou à l'organisation <b>du manuscrit que nous vous retournons</b>, veuillez communiquer avec les <b>les rédacteurs  qui révisent</b> votre article. Après que vos modifications sont terminées, changer le nom du fichier AuthorNameQA.doc pour AuthorNameQAR.doc (par ex., de Gagnon QA.doc à GagnonQAR.doc). Imprimer une copie papier de votre manuscrit et la poster avec une disquette contenant le fichier de traitement de texte complètement révisé et renommé. <b>[QetR : Dans ce paragraphe, il serait utile d'insister sur l'importance de suivre attentivement les instructions pour la présentation des révisions électroniques. Sinon, le processus de publication pourrait être considérablement ralenti.]</b>
+Avant d'apporter des changements importants à la structure ou à l'organisation <strong>du manuscrit que nous vous retournons</strong>, veuillez communiquer avec les <strong>les rédacteurs  qui révisent</strong> votre article. Après que vos modifications sont terminées, changer le nom du fichier AuthorNameQA.doc pour AuthorNameQAR.doc (par ex., de Gagnon QA.doc à GagnonQAR.doc). Imprimer une copie papier de votre manuscrit et la poster avec une disquette contenant le fichier de traitement de texte complètement révisé et renommé. <strong>[QetR : Dans ce paragraphe, il serait utile d'insister sur l'importance de suivre attentivement les instructions pour la présentation des révisions électroniques. Sinon, le processus de publication pourrait être considérablement ralenti.]</strong>
  
-<b>Manuscrit révisé retourné à HER</b>
+<strong>Manuscrit révisé retourné à HER</strong>
 
-Avant d'apporter des changements importants à la structure et à l'organisation du manuscrit que nous vous retournons, veuillez communiquer avec les <b>rédacteurs qui révisent</b> votre article. Sinon, le processus de publication pourrait être considérablement ralenti.</b>
+Avant d'apporter des changements importants à la structure et à l'organisation du manuscrit que nous vous retournons, veuillez communiquer avec les <strong>rédacteurs qui révisent</strong> votre article. Sinon, le processus de publication pourrait être considérablement ralenti.</strong>
 
-Après que vos révisions sont terminées, changer le nom du fichier AuthorNameQA.doc pour AuthorNameQAR.doc (par ex., de GagnonQA.doc à GagnonQAR.doc). Imprimer une copie papier de votre manuscrit et la poster avec une disquette contenant le fichier de traitement de texte <b>[mot supprimé</b> révisé et renommé. <b>[QetR : Dans ce paragraphe, il serait utile d'insister sur l'importance de suivre attentivement les instructions pour la présentation des révisions électroniques. Sinon, le processus de publication pourrait être considérablement ralenti.] [Commentaire : J'ai ajouté une phrase en réponse à votre suggestion.]</b>
+Après que vos révisions sont terminées, changer le nom du fichier AuthorNameQA.doc pour AuthorNameQAR.doc (par ex., de GagnonQA.doc à GagnonQAR.doc). Imprimer une copie papier de votre manuscrit et la poster avec une disquette contenant le fichier de traitement de texte <strong>[mot supprimé</strong> révisé et renommé. <strong>[QetR : Dans ce paragraphe, il serait utile d'insister sur l'importance de suivre attentivement les instructions pour la présentation des révisions électroniques. Sinon, le processus de publication pourrait être considérablement ralenti.] [Commentaire : J'ai ajouté une phrase en réponse à votre suggestion.]</strong>
 
-<b>Notes :</b>
+<strong>Notes :</strong>
 &bull; La suppression du gras dans le texte indique que vous acceptez les modifications suggérées à la première phrase.
 &bull; Phrase ajoutée en réponse à QetR. Le texte en gras indique un ajout au nouveau texte
 &bull; [mot supprimé] indique la suppression de "entièrement "

@@ -662,7 +662,7 @@ class TemplateManager extends Smarty {
 
 		for ($i=$pageBase; $i<min($pageBase+$numPageLinks, $pageCount+1); $i++) {
 			if ($i == $page) {
-				$value .= "<b>$i</b>&nbsp;";
+				$value .= "<strong>$i</strong>&nbsp;";
 			} else {
 				$params[$paramName] = $i;
 				$value .= '<a href="' . Request::url(null, null, null, Request::getRequestedArgs(), $params, $anchor) . '"' . $allExtra . '>' . $i . '</a>&nbsp;';

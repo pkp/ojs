@@ -14,7 +14,7 @@
 
 <topic id="journal/topic/000012" locale="pt_BR" title="Incluir Novo Usuário" toc="journal/toc/000002" key="journal.users.createNewUser">
 	<section>
-		<![CDATA[<p>O Editor Gerente pode usar o link Incluir Novo Usuário para registrar alguém e atribuir-lhe uma função, de Editor Gerente a Leitor. O usuário pode, ao logar na revista, completar e mudar as informações do seu perfil cadastradas pelo Editor Gerente.</p><p><i>Mudando uma Senha</i>. Os Usuários podem mudar suas senhas uma vez que tenham logado na revista. O Editor Gerente não pode acessar a senha do usuário. Entretanto, o sistema pode gerar uma nova senha e envia-la via e-mail aos usuários que clicarem no link "Esqueceu sua senha?" abaixo da caixa de login.</p>]]>	
+		<![CDATA[<p>O Editor Gerente pode usar o link Incluir Novo Usuário para registrar alguém e atribuir-lhe uma função, de Editor Gerente a Leitor. O usuário pode, ao logar na revista, completar e mudar as informações do seu perfil cadastradas pelo Editor Gerente.</p><p><em>Mudando uma Senha</em>. Os Usuários podem mudar suas senhas uma vez que tenham logado na revista. O Editor Gerente não pode acessar a senha do usuário. Entretanto, o sistema pode gerar uma nova senha e envia-la via e-mail aos usuários que clicarem no link "Esqueceu sua senha?" abaixo da caixa de login.</p>]]>	
 	</section>
 	
 	<section title="Cadastrar Usuário Existente">

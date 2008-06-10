@@ -15,7 +15,7 @@
 <topic id="publishing/topic/000002" locale="vi_VN" title="Xếp bài để xuất bản" toc="publishing/toc/000000" key="publishing.scheduleSubmissions">
 	<section>
 		<![CDATA[<p>Ở bất kỳ thời điểm nào trong quá trình xuất bản, BTV chuyên mục có thể xếp một bài nộp để xuất bản trong một số tạp chí cụ thể. Thông thường, BTV sẽ xếp bài nộp vào trong số đầu tiên còn trống, nhưng có thể xảy ra trường hợp số tạp chí "đầy" trước khi xuất bản, hoặc BTV muốn xếp bài nộp đó cho số tạp chí sau để đảm bảo chủ đề rải đều trên các số, hoặc ngược lại, tập trung một loạt bài viết về một chủ đề nào đó.</p>
-		<p><i>Xuất bản bài viết liên lục</i>. Nếu các bài nộp cho tạp chí được xuất bản liên tục ngay khi sẵn sàng, Tổng biên tập đang xếp bài nộp vào số mà trên thực tế chính là Số mới ra, và sẽ được xuất bản ngay lập tức. Vào cuối năm của tập, bài nộp tiếp theo sẽ được xếp vào tập mới, tập mà Mục lục sẽ được xuất bản hoặc đặt thành Số mới ra cùng với bài đầu tiên này.</p>
+		<p><em>Xuất bản bài viết liên lục</em>. Nếu các bài nộp cho tạp chí được xuất bản liên tục ngay khi sẵn sàng, Tổng biên tập đang xếp bài nộp vào số mà trên thực tế chính là Số mới ra, và sẽ được xuất bản ngay lập tức. Vào cuối năm của tập, bài nộp tiếp theo sẽ được xếp vào tập mới, tập mà Mục lục sẽ được xuất bản hoặc đặt thành Số mới ra cùng với bài đầu tiên này.</p>
 		<p>Khi một bài nộp được sắp để in trong một số cụ thể, tên của số tạp chí đó và đường dẫn tới mục lục sẽ được chuyển cho BTV trình bày và Người soát lỗi.</p>]]>
 	</section>
 </topic>

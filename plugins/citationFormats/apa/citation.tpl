@@ -19,6 +19,6 @@
 
 ({$article->getDatePublished()|date_format:'%Y'}).
 {$apaCapitalized}.
-<i>{$journal->getJournalTitle()|capitalize}{if $issue}, {$issue->getVolume()|escape}</i>({$issue->getNumber()|escape}){else}</i>{/if}.
+<em>{$journal->getJournalTitle()|capitalize}{if $issue}, {$issue->getVolume()|escape}</em>({$issue->getNumber()|escape}){else}</em>{/if}.
 {translate key="plugins.citationFormats.apa.retrieved" retrievedDate=$smarty.now|date_format:$dateFormatLong url=$articleUrl}
 

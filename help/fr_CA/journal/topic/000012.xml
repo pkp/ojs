@@ -14,7 +14,7 @@
 
 <topic id="journal/topic/000012" locale="fr_CA" title="Création d’un nouvel usager" toc="journal/toc/000002" key="journal.users.createNewUser">
 	<section>
-		<![CDATA[<p>Le directeur du journal peut utiliser le lien «Création d’un nouvel usager» pour inscrire quelqu’un et lui assigner un rôle, à partir de directeur de journal à usager. L’usager peut, en ouvrant une séance dans le journal, compléter et modifier l’information de son profil entrée par le directeur du journal.</p><p><i>Changer un mot de passe</i>. Les usagers peuvent changer leur mot de passe une fois qu’ils sont connectés au journal. Le directeur du journal n’a pas accès  à un mot de passe une fois qu’il a été assigné. Cependant, le système va générer un nouveau mot de passe et l’envoyer par courriel aux usagers qui auront cliqué sur le lien «Mot de passe oublié» sous le cadre d’ouverture de session.</p>]]>	
+		<![CDATA[<p>Le directeur du journal peut utiliser le lien «Création d’un nouvel usager» pour inscrire quelqu’un et lui assigner un rôle, à partir de directeur de journal à usager. L’usager peut, en ouvrant une séance dans le journal, compléter et modifier l’information de son profil entrée par le directeur du journal.</p><p><em>Changer un mot de passe</em>. Les usagers peuvent changer leur mot de passe une fois qu’ils sont connectés au journal. Le directeur du journal n’a pas accès  à un mot de passe une fois qu’il a été assigné. Cependant, le système va générer un nouveau mot de passe et l’envoyer par courriel aux usagers qui auront cliqué sur le lien «Mot de passe oublié» sous le cadre d’ouverture de session.</p>]]>	
 	</section>
 
 	<section title="Inscrire un usager existant">

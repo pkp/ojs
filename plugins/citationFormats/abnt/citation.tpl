@@ -16,6 +16,6 @@
 	{assign var=firstName value=$author->getFirstName()}
 	{$author->getLastName()|escape}, {$firstName[0]|escape}.{if $i<$authorCount-1}; {/if}{/foreach}.
 {$article->getArticleTitle()|strip_unsafe_html}.
-<b>{$journal->getJournalTitle()|escape}</b>, {translate key="plugins.citationFormat.acao.location"}{if $issue}, {$issue->getVolume()|escape}{/if}
+<strong>{$journal->getJournalTitle()|escape}</strong>, {translate key="plugins.citationFormat.acao.location"}{if $issue}, {$issue->getVolume()|escape}{/if}
 {$article->getDatePublished()|date_format:'%e %m %Y'}.
 

@@ -34,7 +34,7 @@
 		{$plugin->getDescription()}<br/>
 		{assign var=managementVerbs value=$plugin->getManagementVerbs()}
 		{if $managementVerbs && $plugin->isSitePlugin() && !$isSiteAdmin}
-			<i>{translate key="manager.plugins.sitePlugin"}</i>
+			<em>{translate key="manager.plugins.sitePlugin"}</em>
 		{elseif $managementVerbs}
 			{foreach from=$managementVerbs item=verb}
 				<a class="action" href="{url op="plugin" path=$category|to_array:$plugin->getName():$verb[0]}">{$verb[1]|escape}</a>&nbsp;

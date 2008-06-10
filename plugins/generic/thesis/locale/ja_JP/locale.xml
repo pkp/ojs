@@ -51,7 +51,7 @@
 	<message key="plugins.generic.thesis.manager.form.titleRequired">学位名は必須です。</message>
 	<message key="plugins.generic.thesis.manager.form.abstract">要旨</message>
 	<message key="plugins.generic.thesis.manager.form.abstractRequired">学位論文要旨は必須です。</message>
-	<message key="plugins.generic.thesis.manager.form.abstractInstructions"><![CDATA[段落を分ける場合は、空文を挿入してください。テキストを修飾する場合は、<b>太字タグ</b>、 <i>イタリック体タグ</i>、<u>下線タグ</u>の間に置いてください（例えば、この <i>単語</i> はイタリック体になります）。]]></message>
+	<message key="plugins.generic.thesis.manager.form.abstractInstructions"><![CDATA[段落を分ける場合は、空文を挿入してください。テキストを修飾する場合は、<strong>太字タグ</strong>、 <em>イタリック体タグ</em>、<u>下線タグ</u>の間に置いてください（例えば、この <em>単語</em> はイタリック体になります）。]]></message>
 	<message key="plugins.generic.thesis.manager.form.url">URL</message>
 	<message key="plugins.generic.thesis.manager.form.urlInstructions">学位論文がオンラインで出版されている場合は、先頭に、http://やftp://などを付加してください（たとえば、http://www.sfu.ca/path/to/thesis.pdf）。</message>
 	<message key="plugins.generic.thesis.manager.form.studentFirstName">学生の名</message>
@@ -139,7 +139,7 @@
 	<message key="plugins.generic.thesis.manager.form.studentEmailPublish">学生のメールアドレスを公開</message>
 	<message key="plugins.generic.thesis.manager.form.studentEmailPublishInstructions">これをチェックすると、論文要旨に学生のメールアドレスが公開されます。</message>
 	<message key="plugins.generic.thesis.manager.form.studentBio">学生の履歴</message>
-	<message key="plugins.generic.thesis.manager.form.studentBioInstructions"><![CDATA[段落を分ける場合は空行を挿入してください。テキストを太字、イタリック、下線付きにする場合は各々、<b></b>, <i></i>, <u></u>タグを付けてください。]]></message>
+	<message key="plugins.generic.thesis.manager.form.studentBioInstructions"><![CDATA[段落を分ける場合は空行を挿入してください。テキストを太字、イタリック、下線付きにする場合は各々、<strong></strong>, <em></em>, <u></u>タグを付けてください。]]></message>
 	<message key="plugins.generic.thesis.manager.form.indexing">索引付け</message>
 	<message key="plugins.generic.thesis.manager.form.indexingDescription">学位論文の内容を最も表す語句をこの雑誌で使用しているカテゴリから選んでください。語句の区切りには（語1;語2;語3のように）セミコロンを使用してください。</message>
 	<message key="plugins.generic.thesis.manager.form.discipline">専攻分野と副専攻分野</message>
@@ -186,7 +186,7 @@
 	<message key="plugins.generic.thesis.form.commentInstructions">投稿に関係する追加コメントを入力してください。</message>
 	<message key="plugins.generic.thesis.form.author">著者と指導教官</message>
 	<message key="plugins.generic.thesis.form.studentBio">学生の経歴</message>
-	<message key="plugins.generic.thesis.form.studentBioInstructions"><![CDATA[段落を分ける場合は、空行を挿入してください。テキストを太字またはイタリックにする、下線を引く場合は、各々<b></b>, <i></i>, and <u></u> タグを使用してください（たとえば、この<i>単語</i>はイタリック体になります）。]]></message>
+	<message key="plugins.generic.thesis.form.studentBioInstructions"><![CDATA[段落を分ける場合は、空行を挿入してください。テキストを太字またはイタリックにする、下線を引く場合は、各々<strong></strong>, <em></em>, and <u></u> タグを使用してください（たとえば、この<em>単語</em>はイタリック体になります）。]]></message>
 	<message key="plugins.generic.thesis.form.indexing">索引付け</message>
 	<message key="plugins.generic.thesis.form.indexingDescription">論文の内容に最も相応しい語句をこの雑誌が使用しているカテゴリから選択してください。語句の区切りは（語1;語2;語3のように）セミコロンを使用してください。</message>
 	<message key="plugins.generic.thesis.form.discipline">専攻分野と副専攻分野</message>

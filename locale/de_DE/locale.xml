@@ -609,7 +609,7 @@
 	<message key="admin.settings.oaiRegistration">Die Webseite zur Indexierung (Sammlung von Metadaten) registrieren</message>
 	<message key="admin.settings.oaiRegistrationDescription"><![CDATA[Um den Inhalt aller von dieser Website beherbergten Zeitschriften bei einem allgemein verbreiteten System von Forschungsdatenbanken zu indexieren <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">registrieren Sie</a> die URL ihrer Website in den Metadatenarchiven des Public Knowledge Project <a href="http://pkp.sfu.ca/harvester/" target="_blank">Sammlers</a>. Der Sammler sammelt die Metadaten aller Artikel dieser Zeitschrift und macht so eine umfassende und genaue Suche auf allen Websites, die im Projekt <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank"> Open Archives Metadatenprotokoll (Open Archives Initiative Protocol for Metadata Harvesting) mitarbeiten</a>.
 <br /><br />
-<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Hier klicken</a> und <span class="highlight">{$siteUrl}</span> <b>als URL der Website</b>, und <span class="highlight">{$oaiUrl}</span> bei <b> als Basis-URL für OAI (Open Access Archives)eingeben </b>.
+<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Hier klicken</a> und <span class="highlight">{$siteUrl}</span> <strong>als URL der Website</strong>, und <span class="highlight">{$oaiUrl}</span> bei <strong> als Basis-URL für OAI (Open Access Archives)eingeben </strong>.
 <br /><br />
 Nehmen Sie bitte zur Kenntnis, dass die OAI-Schnittstelle unter Umständen deaktiviert wird, wenn sich die Konfiguration des OJS-Systems ändert. Zukünftige Versionen von OJS werden die Möglichkeit bieten, die OAI-Schnittstelle für jede Zeitschrift auf der Website zu aktivieren und zu deaktivieren.]]></message>
 
@@ -826,7 +826,7 @@ Nehmen Sie bitte zur Kenntnis, dass die OAI-Schnittstelle unter Umständen deakt
 	<message key="manager.setup.look.description">Titel der Eingangsseite, Inhalt, Überschrift, Fusszeile, Navigationsbalken, Style sheet.</message>
 	<message key="manager.setup.journalTitle">Titel der Zeitschrift</message>
 	<message key="manager.setup.focusScope">Redaktionelle Richtlinien</message>
-	<message key="manager.setup.focusScopeDescription"><![CDATA[<b>BEISPIEL VON HTML DATEN</b>]]></message>
+	<message key="manager.setup.focusScopeDescription"><![CDATA[<strong>BEISPIEL VON HTML DATEN</strong>]]></message>
 	<message key="manager.setup.journalSetupUpdated">Die Konfiguration der Zeitschrift wurde aktualisiert.</message>
 	<message key="manager.setup.selectOne">Auswählen</message>
 	
@@ -942,7 +942,7 @@ Nehmen Sie bitte zur Kenntnis, dass die OAI-Schnittstelle unter Umständen deakt
 	<!-- Einrichtungsschritt 3 -->
 	<message key="manager.setup.guidingSubmissions">Schritt 3. Anleitung</message>
 	<message key="manager.setup.authorGuidelines">Richtlinien für Verfasser</message>
-	<message key="manager.setup.authorGuidelinesDescription"><![CDATA[Bibliographische und Formatnormen für die Verfasser (z.B. <i>Veröffentlichungshandbuch der Amerikanischen Psychologischen Gesellschaft, 5te Auflage, 2001). Beispiele für die üblichen Zitationsnormen für Zeitschriften und Bücher sind oft eine Hilfe. Ebenso Angaben zu in Frage kommenden Zusatzdateien (z.B. Datensätze, Forschungshilfsmittel usw.), die Verfasser zu ihren Beiträgen hochladen sollten wo immer das Interesse der Leser auf diese Weise gefördert wird.]]></message>
+	<message key="manager.setup.authorGuidelinesDescription"><![CDATA[Bibliographische und Formatnormen für die Verfasser (z.B. <em>Veröffentlichungshandbuch der Amerikanischen Psychologischen Gesellschaft, 5te Auflage, 2001). Beispiele für die üblichen Zitationsnormen für Zeitschriften und Bücher sind oft eine Hilfe. Ebenso Angaben zu in Frage kommenden Zusatzdateien (z.B. Datensätze, Forschungshilfsmittel usw.), die Verfasser zu ihren Beiträgen hochladen sollten wo immer das Interesse der Leser auf diese Weise gefördert wird.]]></message>
 	<message key="manager.setup.submissionGuidelines">Beitragsrichtlinien</message>
 	<message key="manager.setup.submissionPreparationChecklist">Vorbereitungsliste für einen Beitrag</message>
 	<message key="manager.setup.submissionPreparationChecklistDescription">Verfasser, die beabsichtigen einen Beitrag einzureichen, werden als erstes aufgefordert, die Vorbereitungsliste Punkt für Punkt abzuhaken. Die Liste erscheint bei den Richtlinien für Verfasser unter AD HOC. Die Liste kann weiter unten verändert werden, aber alle Punkte der Liste müssen abgehakt sein, bevor der Beitrag weiter behandelt wird.</message>
@@ -977,7 +977,7 @@ Nehmen Sie bitte zur Kenntnis, dass die OAI-Schnittstelle unter Umständen deakt
 	<message key="manager.setup.registerJournalForIndexing">Die Zeitschrift registrieren (Metadatensammler)</message>
 	<message key="manager.setup.registerJournalForIndexingDescription"><![CDATA[Damit der Inhalt dieser Zeitschrift in weltweiten Forschungsdatenbanken erscheint, die URL Ihrer Zeitschrift beim <a href="http://pkp.sfu.ca/harvester/" target="_blank">Metadatensammler</a> des Public Knowledge Project <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">registrieren</a>. Der Sammler nimmt dann die Metadaten von jedem Beitrag der Zeitschrift auf und ermöglicht so eine genaue und umfassende Suche auf allen Forschungswebsites, die das <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Open Archives Initiative Protokoll für Metadatensammler </a>verwenden.<br /><br /> Beachten Sie, dass wenn Ihr Webmaster die Website schon beim PKP Harvester registriert hat, Ihre Zeitschrift automatisch aufgenommen wird, und Sie sie nicht extra einschreiben müssen.
 	<br /><br />
-<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Hier klicken </a> und <span class="highlight">{$siteUrl}</span> unter <b> URL der Website eingeben</b>, sowie <span class="highlight">{$oaiUrl}</span> unter <b>Basis-URL für das OAI-Archiv</b>.]]></message>
+<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Hier klicken </a> und <span class="highlight">{$siteUrl}</span> unter <strong> URL der Website eingeben</strong>, sowie <span class="highlight">{$oaiUrl}</span> unter <strong>Basis-URL für das OAI-Archiv</strong>.]]></message>
 	<message key="manager.setup.notifications">Eingangsbestätigung für den Verfasser</message>
 	<message key="manager.setup.notifications.description">Nach Abschluss des Eingabeverfahrens erhalten die Verfasser eine Email, die ihnen den Eingang des Beitrags bestätigt (sie kann unter "Vorgefertigte Emails" eingesehen und bearbeitet werden. Darüber hinaus kann eine Kopie der Bestätigungsmail wie folgt versandt werden :</message>
 	<message key="manager.setup.notifications.copyPrimaryContact">Schicken Sie eine Kopie an den in Schritt 1 deklarierten Hauptkontakt der Zeitschrift </message>
@@ -1951,12 +1951,12 @@ mit einem (+), das anzeigt, dass das Gutachten in Arbeit ist.]]></message>
 	<message key="search.syntaxInstructions"><![CDATA[Suchhinweise: <ul>
 <li>Groß- und Kleinschreibung der Suchbegriffe werden nicht unterschieden.</li>
 <li>Gattungsnamen werden ignoriert</li>
-<li>Standardmässig werden nur die Artikel aufgelistet, die <i>alle</i> Suchbegriffe enthalten. (implizites <i>UND</i>)</li>
-<li>Mehrere Suchworte verbunden durch <i>ODER</i> ergeben Artikel die den einen oder den anderen Begriff enthalten. z.B. <i>Bildung ODER Forschung</i></li>
-<li>Verwenden sie Klammern für die komplexere Suche. z.B. <i>Archiv ((Zeitschrift  ODER Vortrag) NICHT diese)</i></li>
-<li>Suchen sie nach dem genauen Text indem sie ihn in Anführungszeichen setzen; z.B. <i>"Veröffentlichung mit freiem Zugang"</i></li>
-<li>Schliessen sie ein Wort aus indem Sie <b>-</b> oder <i>NICHT</i> davor setzen; z.B. <i>Internetpublikation -Richtlinien</i> oder <i>Internetpublikation NICHT Richtlinien</i></li>
-<li>Verwenden Sie <b>*</b> als Jocker für beliebige Zeichenfolgen; z.B. <i>Sozi* Moral</i> listet alle Dokumente die "soziologisch" oder "sozialistisch" enthalten</li>
+<li>Standardmässig werden nur die Artikel aufgelistet, die <em>alle</em> Suchbegriffe enthalten. (implizites <em>UND</em>)</li>
+<li>Mehrere Suchworte verbunden durch <em>ODER</em> ergeben Artikel die den einen oder den anderen Begriff enthalten. z.B. <em>Bildung ODER Forschung</em></li>
+<li>Verwenden sie Klammern für die komplexere Suche. z.B. <em>Archiv ((Zeitschrift  ODER Vortrag) NICHT diese)</em></li>
+<li>Suchen sie nach dem genauen Text indem sie ihn in Anführungszeichen setzen; z.B. <em>"Veröffentlichung mit freiem Zugang"</em></li>
+<li>Schliessen sie ein Wort aus indem Sie <strong>-</strong> oder <em>NICHT</em> davor setzen; z.B. <em>Internetpublikation -Richtlinien</em> oder <em>Internetpublikation NICHT Richtlinien</em></li>
+<li>Verwenden Sie <strong>*</strong> als Jocker für beliebige Zeichenfolgen; z.B. <em>Sozi* Moral</em> listet alle Dokumente die "soziologisch" oder "sozialistisch" enthalten</li>
 </ul>]]></message>
 	<message key="search.operator.not">NICHT</message>
 	<message key="search.operator.and">UND</message>
@@ -2163,7 +2163,7 @@ Ihr Server unterstützt derzeit : <strong>{$supportsMBString}</strong>]]></messa
 	<message key="installer.installFileError"><![CDATA[Die Installationsdatei <tt>dbscripts/xml/install.xml</tt> existiert nicht oder kann nicht gelesen werden.]]></message>
 	<message key="installer.installParseDBFileError"><![CDATA[Fehlerhafte Installationsdatei der Datenbank<tt>{$file}</tt>.]]></message>
 	<message key="installer.configFileError"><![CDATA[Die Konfigurationsdatei<tt>config.inc.php</tt> existiert nicht oder kann nicht gelesen werden.]]></message>
-	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<b>Achtung!:</b> Falls die Einrichtung der Datenbank nicht gelungen ist, müssen vor einem erneuten Versuch die OJS Datenbank oder Tabellen unter Umständen gelöscht werden.]]></message>
+	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<strong>Achtung!:</strong> Falls die Einrichtung der Datenbank nicht gelungen ist, müssen vor einem erneuten Versuch die OJS Datenbank oder Tabellen unter Umständen gelöscht werden.]]></message>
 	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>WICHTIG!</h4>
 <p>Das Installationsprogramm konnte die Konfigurationsdatei nicht automatisch überschreiben. Öfnnen Sie <tt>config.inc.php</tt> in einer geeigneten Textverarbeitung und ersetzen Sie den Inhalt durch den Inhalt des untenstehenden Textfeldes, bevor Sie das System zu benutzen versuchen.</p>]]></message>
 	<message key="installer.contentsOfConfigFile">Inhalt der Konfigurationsdatei</message>
@@ -2174,7 +2174,7 @@ Ihr Server unterstützt derzeit : <strong>{$supportsMBString}</strong>]]></messa
 <p>Zur ersten Benutzung des Systems mit dem auf der vorangehenden Seite eingegebenen Benutzernamen und Passwort <ahref="{$indexUrl}/index/login">einloggen</a> .</p>
 <p>Falls Sie Nachrichten und Aktualisierungen empfangen wollen, <strong>registieren Sie sich bitte bei <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>.</strong> Falls Sie Fragen und Bemerkungen haben gehen Sie bitte zum <a href="http://pkp.sfu.ca/support/forum" target="_new"> Forum</a>.</p>]]></message>
 	<message key="installer.upgradeComplete"><![CDATA[<p>Aktualisierung des OJS auf die Version {$version} gelungen.</p>
-	<p>Vergessen Sie nicht in Ihrer config.inc.php Datei die Einstellung "installed" wieder auf <i>On</i> zu setzen.</p>
+	<p>Vergessen Sie nicht in Ihrer config.inc.php Datei die Einstellung "installed" wieder auf <em>On</em> zu setzen.</p>
 <p>Falls Sie sich noch registriert sind und Nachrichten und Aktualisierungen empfangen wollen, <strong>registrieren Sie sich bitte bei<a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>.</strong> Falls sie Fragen und Bemerkungen haben, gehen Sie bitte zum <a href="http://pkp.sfu.ca/support/forum" target="_new">Forum</a>.</p>]]></message>
 	<message key="installer.skipFilesDir">Legen Sie keine Unterverzeichnisse an </message>
 	<message key="installer.releaseNotes">Zur Beachtung</message>
@@ -2434,7 +2434,7 @@ Der zu bearbeitende Text hat das Format WORD oder .rtf und kann daher leicht als
 
 <h4>Textbearbeitungssysteme</h4>
 
-<b>1. Revisionsfunktion von Microsoft Word</b>
+<strong>1. Revisionsfunktion von Microsoft Word</strong>
 
 Die Funktion "Versionen verfolgen" unter Werkzeuge im Menübalken erlaubt dem Bearbeiter Einschübe im Text (die Einschübe erscheinen in Farbe) und Streichungen (die Schrift erscheint durchgestrichen und am Rand als zu löschen markiert). Der Bearbeiter kann den Wünschen des Verfassers (Verfasserwünsche) und denen des Redakteurs (Redakteurswünsche) Rechnung tragen indem er diese Wünsche in eckige Klammern setzt. Die bearbeitete Version wird hochgeladen und der Redakteur wird benachrichtigt. Der Redakteur revidiert den Text und benachrichtigt den Verfasser. 
 
@@ -2443,50 +2443,50 @@ Redakteur und Verfasser sollten die ihnen genehmen Änderungen belassen. Sollten
 Den von Redakteur und Verfasser bearbeiteten Text geht der Bearbeiter noch einmal durch, akzeptiert abschliessend die Änderungen. Die nächsten Schritte sind dann Layout und Fahnenkorrektur. 
 
 
-<b>2. Harvard Educational Review </b>
+<strong>2. Harvard Educational Review </strong>
 
-<b>Hinweise für die elektronische Bearbeitung des Manuskripts</b>
+<strong>Hinweise für die elektronische Bearbeitung des Manuskripts</strong>
 
 Gehen Sie folgende Protokollschritte durch:
 
-<b>Auf Änderungsvorschläge reagieren</b>
+<strong>Auf Änderungsvorschläge reagieren</strong>
 &nbsp; Heben Sie den Fettsatz für alle von Ihnen akzeptierten Änderungen auf
-&nbsp; Für alle abgelehnten Änderungen den Originaltext wiederherstellen und <b>fett</b>setzen
+&nbsp; Für alle abgelehnten Änderungen den Originaltext wiederherstellen und <strong>fett</strong>setzen
 
-<b>Einschübe und Streichungen </b>
-&nbsp; Einschübe: neuen Text durch <b>Fettsatz</b> markieren
-&nbsp; Streichungen: Text durch <b>[deleted text]</b> markieren
-&nbsp; Falls Sie einen ganzen Satz oder mehr streichen, machen Sie eine Anmerkung, z.B. <b>[ 2 Sätze gestrichen]</b>
+<strong>Einschübe und Streichungen </strong>
+&nbsp; Einschübe: neuen Text durch <strong>Fettsatz</strong> markieren
+&nbsp; Streichungen: Text durch <strong>[deleted text]</strong> markieren
+&nbsp; Falls Sie einen ganzen Satz oder mehr streichen, machen Sie eine Anmerkung, z.B. <strong>[ 2 Sätze gestrichen]</strong>
 
-<b>Auf Wünsche des Verfassers reagieren(WdV)</b>
+<strong>Auf Wünsche des Verfassers reagieren(WdV)</strong>
 &nbsp; Lassen Sie alle WdV in Fettsatz im Text. Nicht löschen
 &nbsp; Auf einen WdV mit einem Kommentar reagieren. Kommentare müssen wie folgt gesetzt werden :
-<b>[Comment:</b>]
-&nbsp; z.B. <b>[Comment: Erweitere Diskussion der Methodologie wie Sie vorgeschlagen]</b>
+<strong>[Comment:</strong>]
+&nbsp; z.B. <strong>[Comment: Erweitere Diskussion der Methodologie wie Sie vorgeschlagen]</strong>
 
-<b>Kommentieren</b>
+<strong>Kommentieren</strong>
 &nbsp; Verwenden Sie Kommentare um Änderungen in der Textorganisation oder größere Umarbeitungen zu erläutern
-&nbsp; z.B. <b>[Comment: Untenstehenden Absatz von S.5 nach S.7 verschieben]</b>
+&nbsp; z.B. <strong>[Comment: Untenstehenden Absatz von S.5 nach S.7 verschieben]</strong>
 &nbsp; Zur Beachtung: Beim Verweis auf die Seitennummerierung die Seitenzahlen der ihnen zugegangenen gedruckten Version des Manuskripts verwenden. Wichtig, weil sich die Nummerierung bei der elektronischen Bearbeitung änderen kann.
 
 <h4>Beispiel einer elektronischen Bearbeitung </h4>
 
-<b>Ursprüngliche "Manuskript-" Datei</b>
+<strong>Ursprüngliche "Manuskript-" Datei</strong>
 
 Bevor Sie Struktur und Organisation des Originals wesentlich verändern, setzen Sie sich bitte mit Ihren Partnern in Verbindung. Nach Änderung die Datei umbenennen von Verfassernamen WdV.doc auf Verfassernamen WdR.doc (zum Beispiel von MüllerWdV.doc zu MüllerWdR.doc. Ausdruck herstellen und zusammen mit einer Diskette mit der vollständig überarbeiteten und umbenannten Textdatei abschicken. 
 
 
-<b>Dem Verfasser mit Änderungswünschen und Vorschlägen zurückgesandtes Manuskript</b>
+<strong>Dem Verfasser mit Änderungswünschen und Vorschlägen zurückgesandtes Manuskript</strong>
 
-Before making dramatic departures from the structure and organization of <b>the manuscript that we are returning to you</b>, please check in with the <b>editors who are co-chairing</b> your piece. After you are finished with your revisions, rename the file from AuthorNameQA.doc to AuthorNameQAR.doc (e.g., from LeeQA.doc to LeeQAR.doc). Print out a hardcopy of your manuscript and mail it with a floppy disk containing the completely revised and renamed word processing file. <b>[QA: In this paragraph, it might help to stress the importance of following carefully the instructions for making electronic revisions. Otherwise the editing process may be slowed considerably]</b>
+Before making dramatic departures from the structure and organization of <strong>the manuscript that we are returning to you</strong>, please check in with the <strong>editors who are co-chairing</strong> your piece. After you are finished with your revisions, rename the file from AuthorNameQA.doc to AuthorNameQAR.doc (e.g., from LeeQA.doc to LeeQAR.doc). Print out a hardcopy of your manuscript and mail it with a floppy disk containing the completely revised and renamed word processing file. <strong>[QA: In this paragraph, it might help to stress the importance of following carefully the instructions for making electronic revisions. Otherwise the editing process may be slowed considerably]</strong>
 
-<b>Revised manuscript sent back to HER</b>
+<strong>Revised manuscript sent back to HER</strong>
 
-Before making dramatic departures from the structure and organization of the manuscript that we are returning to you, please check in with the editors who are co-chairing your piece. <b>Please understand that failure to follow the following instructions may significantly delay the publication of your manuscript.</b>
+Before making dramatic departures from the structure and organization of the manuscript that we are returning to you, please check in with the editors who are co-chairing your piece. <strong>Please understand that failure to follow the following instructions may significantly delay the publication of your manuscript.</strong>
 
-After you are finished with your revisions, rename the file from AuthorNameQA.doc to AuthorNameQAR.doc (e.g., from LeeQA.doc to LeeQAR.doc). Print out a hardcopy of your manuscript and mail it with a floppy disk containing the <b>[deleted word]</b> revised and renamed word processing file. <b>[QA: In this paragraph, it might help to stress the importance of following carefully the instructions for making electronic revisions. Otherwise the editing process may be slowed considerably] [Comment: I added a sentence in response to your suggestion.]</b>
+After you are finished with your revisions, rename the file from AuthorNameQA.doc to AuthorNameQAR.doc (e.g., from LeeQA.doc to LeeQAR.doc). Print out a hardcopy of your manuscript and mail it with a floppy disk containing the <strong>[deleted word]</strong> revised and renamed word processing file. <strong>[QA: In this paragraph, it might help to stress the importance of following carefully the instructions for making electronic revisions. Otherwise the editing process may be slowed considerably] [Comment: I added a sentence in response to your suggestion.]</strong>
 
-<b>Notes:</b>
+<strong>Notes:</strong>
 &bull; Unbolded text indicates acceptance of the suggested changes to the first sentence
 &bull; Sentence added in response to QA. Bold text indicates addition of new text
 &bull; [deleted word] indicates deletion of "completely"

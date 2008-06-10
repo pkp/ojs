@@ -44,7 +44,7 @@
 {else}
 
 	<h3>{$article->getArticleTitle()|strip_unsafe_html}</h3>
-	<div><i>{$article->getAuthorString()|escape}</i></div>
+	<div><em>{$article->getAuthorString()|escape}</em></div>
 	{if !$section->getAbstractsDisabled()}
 		<br />
 		<h4>{translate key="article.abstract"}</h4>

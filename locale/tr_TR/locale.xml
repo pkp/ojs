@@ -603,7 +603,7 @@
 	<message key="admin.settings.oaiRegistration">Siteyi dizinlenmesi için kaydet (Meta veri madenciliği)</message>
 	<message key="admin.settings.oaiRegistrationDescription"><![CDATA[Sitedeki tüm dergilerin dağıtılmış araştırma veritabanı olan Public Knowledge Project kapsamında dizine girmesi için site adresini <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">kaydedin</a>. Proje ile daha fazla bilgi için <a href="http://pkp.sfu.ca/harvester/" target="_blank">projenin veri madencisine</a> bakabilirsiniz. Bu araç, dergide yayınlanan her yazı için meta veriyi toplayıp, <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Open Archives Initiative Protocol for Metadata Harvesting</a> kapsamında taranacak biçimde veri tabanına ekler.
 <br /><br />
-Kayıt olmak için <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">burayı tıklatın</a> ve <b>Site URL</b> alanına <span class="highlight">{$siteUrl}</span> ve <b>Base URL for OAI Archive</b> alanına <span class="highlight">{$oaiUrl}</span> bilgilerini giriniz.
+Kayıt olmak için <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">burayı tıklatın</a> ve <strong>Site URL</strong> alanına <span class="highlight">{$siteUrl}</span> ve <strong>Base URL for OAI Archive</strong> alanına <span class="highlight">{$oaiUrl}</span> bilgilerini giriniz.
 <br /><br />
 Not: Açık arşiv sistemi arayüzü bu site için ADS ana düzenleme sayfasında etkinleştirilir. ADS gelecek sürümlerinde arayüz her dergi için tek, tek etkinleştirilebilecektir.]]></message>
 
@@ -822,7 +822,7 @@ Not: Açık arşiv sistemi arayüzü bu site için ADS ana düzenleme sayfasınd
 	<message key="manager.setup.look.description">Anasayfa başlığı, içerik, dergi başlığı, son satır, navigasyon barı, ve biçem sayfası.</message>
 	<message key="manager.setup.journalTitle">dergi başlığı</message>
 	<message key="manager.setup.focusScope">Odak ve Kapsam</message>
-	<message key="manager.setup.focusScopeDescription"><![CDATA[<b>ÖRNEK HTML VERİSİ</b>]]></message>
+	<message key="manager.setup.focusScopeDescription"><![CDATA[<strong>ÖRNEK HTML VERİSİ</strong>]]></message>
 	<message key="manager.setup.journalSetupUpdated">Derginizin yapıladırması yenilenmiştir.</message>
 	<message key="manager.setup.selectOne">Birini seçin</message>
 	
@@ -943,7 +943,7 @@ Açık DErgi Sistemleri için LOCKSS desteğini dergi tümüyle yayına geçmede
 	<!-- Setup Step 3 -->
 	<message key="manager.setup.guidingSubmissions">Adım 3. Makale Gönderme Rehberi</message>
 	<message key="manager.setup.authorGuidelines">Yazar Rehberleri</message>
-	<message key="manager.setup.authorGuidelinesDescription"><![CDATA[Dergiye sunulan öğeler için bibliografik ve formatlama standartlarını yazarlar için açıklayın.(örneğin., <i>Publication Manual of the American Psychological Association</i>, 5th edition, 2001). Bu açıklama sunumlarda kullanılacak olan dergi ve kitaplar için yaygın alıntı şekli ile ilgili örnekleri sağlaması açısından yararlı olur. Yazarların sunumlarına ilaveten, veri almak için teşvik edilmesini sağlayan uygun Ek Dosya tiplerini de tanımla.(örneğin, veri-takımları, araştırma araçları, vb.]]></message>
+	<message key="manager.setup.authorGuidelinesDescription"><![CDATA[Dergiye sunulan öğeler için bibliografik ve formatlama standartlarını yazarlar için açıklayın.(örneğin., <em>Publication Manual of the American Psychological Association</em>, 5th edition, 2001). Bu açıklama sunumlarda kullanılacak olan dergi ve kitaplar için yaygın alıntı şekli ile ilgili örnekleri sağlaması açısından yararlı olur. Yazarların sunumlarına ilaveten, veri almak için teşvik edilmesini sağlayan uygun Ek Dosya tiplerini de tanımla.(örneğin, veri-takımları, araştırma araçları, vb.]]></message>
 	<message key="manager.setup.submissionGuidelines">Makale Gönderme Rehberi</message>
 	<message key="manager.setup.submissionPreparationChecklist">Başvuru Hazırlık Kontrol Listesi</message>
 	<message key="manager.setup.submissionPreparationChecklistDescription">Dergiye makale başvurusu yapma, yazarlar önce Başvuru Hazırlık Kontrol Listesini kontrol etmelidirler. Kontrol listesi "Dergi Hakkında" altındaki "Yazar Rehberi" bölümündedir.Liste aşağıda düzenlenebilir, ama listedeki bütün öğelerin bir sonraki basamağa geçebilmek için yazarlar tarafından işaretlenmesi gerekmektedir.</message>
@@ -983,7 +983,7 @@ Sınıflama Sistemi Başlığı]]></message>
 <br /><br />
 Not: Site yöneticiniz PKP Harvester ile bu siteyi kayıt etti ise, derginiz otomatik olarak indekslenecek ve dergi için özel bir kayıt gerekmeyecektir.
 <br /><br />
-Kayıt olmak için <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">burayı tıklatın</a> ve <b>Site URL</b> alanına <span class="highlight">{$siteUrl}</span> ve <b>Base URL for OAI Archive</b> alanına <span class="highlight">{$oaiUrl}</span> bilgilerini giriniz.]]></message>
+Kayıt olmak için <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">burayı tıklatın</a> ve <strong>Site URL</strong> alanına <span class="highlight">{$siteUrl}</span> ve <strong>Base URL for OAI Archive</strong> alanına <span class="highlight">{$oaiUrl}</span> bilgilerini giriniz.]]></message>
 	<message key="manager.setup.notifications">Yazar Başvuruları için Norlar</message>
 	<message key="manager.setup.notifications.description">Başvuru sürecini tamamlayan yazarlara, örneği hazır e-postalar bölümünde görülüp, düzenlenebilecek, hazır bir teşekkür mesajı otomatik olarak gönderilir. Ek olarak bu teşekkür mesajının kopyaları aşağıdakilere de gönderilebilir:</message>
 	<message key="manager.setup.notifications.copyPrimaryContact">Bir kopyasını kurulumun 1. basamağında tanımlanan birincil iletişim sorumlusuna gönder</message>
@@ -1919,7 +1919,7 @@ artı (+) işareti ile hakemin şu anda değerlendirdiği yazılar belirtilmişt
 	<message key="user.register.privacyStatement">Özellik ifadesi</message>
 	<message key="user.register.completeForm">Dergiye kaydolmak için bu formu doldurun.</message>
 	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Burayı tıklayın</a> Bu sitede bu veya başka bir dergiye halihazırda kayıtlı iseniz.]]></message>
-	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Burayı tıklayın</a> Eğer siz halihazırda kayıtlı  iseniz<b>veya değilseniz</b> Bu sitede bu veya başka bir dergiye]]></message>
+	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Burayı tıklayın</a> Eğer siz halihazırda kayıtlı  iseniz<strong>veya değilseniz</strong> Bu sitede bu veya başka bir dergiye]]></message>
 	<message key="user.register.loginToRegister">Dergiye kaydolmak için mevcut kullanıcı adı ve şifrenizi giriniz.</message>
 	<message key="user.register.registrationDisabled">Bu dergi şu anda kullanıcı kayıtlarını kabul etmemektedir.</message>
 	<message key="user.register.usernameRestriction">Kullanıcı adı sadece küçük harfleri, sayıları, tire işareti /altı çizili karakterleri içermelidir.</message>
@@ -1963,12 +1963,12 @@ artı (+) işareti ile hakemin şu anda değerlendirdiği yazılar belirtilmişt
 	<message key="search.syntaxInstructions"><![CDATA[Search tips: <ul>
 <li>Araştırma terimleri olgudan bağımsızdır</li>
 <li>Sık kullanılan kelimeler ihmal edilmiştir</li>
-<li>Hata nedeniyle sadece içeren makaleler <i>hepsi</i> araştırılan sözcükler uygun değil (i.e., <b>ve</b> belirtildi)</li>
-<li>Birden fazla kelime ile birleştirin <b>veya</b> her iki sözcüğü içeren makaleleri bulmak için; ör., <i>eğitim veya araştırma</i></li>
-<li>Daha kompleks sorular için parantez kullanın; ör., <i>arşiv ((dergi veya konferans) Tez değil)</i></li>
-<li>Doğru deyimi araştırmak için tırnak işareti içinde kullanın; ör., <i>"erişime açık yayın"</i></li>
-<li>Bir kelimeyi hariç tutmak için önüne işaret koyun  <b>-</b> veya <b>değil</b>;örneğin. <i>bilgisayarla çalışan - politika</i> veya <i> politika</i></li>
-<li>Kullanın <b>*</b> bir kelime içinde ardışık karakterleri ifade etmek için özel sembol kullanın örneğin, <i>sosyo* ahlak</i> içeren dökümanlara uyacak "sosyolojik" veya "sosyal"</li>
+<li>Hata nedeniyle sadece içeren makaleler <em>hepsi</em> araştırılan sözcükler uygun değil (i.e., <strong>ve</strong> belirtildi)</li>
+<li>Birden fazla kelime ile birleştirin <strong>veya</strong> her iki sözcüğü içeren makaleleri bulmak için; ör., <em>eğitim veya araştırma</em></li>
+<li>Daha kompleks sorular için parantez kullanın; ör., <em>arşiv ((dergi veya konferans) Tez değil)</em></li>
+<li>Doğru deyimi araştırmak için tırnak işareti içinde kullanın; ör., <em>"erişime açık yayın"</em></li>
+<li>Bir kelimeyi hariç tutmak için önüne işaret koyun  <strong>-</strong> veya <strong>değil</strong>;örneğin. <em>bilgisayarla çalışan - politika</em> veya <em> politika</em></li>
+<li>Kullanın <strong>*</strong> bir kelime içinde ardışık karakterleri ifade etmek için özel sembol kullanın örneğin, <em>sosyo* ahlak</em> içeren dökümanlara uyacak "sosyolojik" veya "sosyal"</li>
 </ul>]]></message>
 	<message key="search.operator.not">İçermeyen</message>
 	<message key="search.operator.and">Ve</message>
@@ -2176,7 +2176,7 @@ Sunucunuz mbstring'i güncel olarak destekler: <strong>{$supportsMBString}</stro
 	<message key="installer.installFileError"><![CDATA[The installation file <tt>dbscripts/xml/install.xml</tt> mevcut değil veya okunabilir değil.]]></message>
 	<message key="installer.installParseDBFileError"><![CDATA[Error parsing the database installation file <tt>{$file}</tt>.]]></message>
 	<message key="installer.configFileError"><![CDATA[The configuration file <tt>config.inc.php</tt> mevcut değil veya okunabilir değil.]]></message>
-	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<b>Dikkat:</b>Eğer yükleme, veritabanının yüklenmesi yoluyla başarısız olmuşsa veritabanını yeniden yüklemeyi denemeden önce ADS veritabanını veya veritabanı tablolarını indirmeniz gerekebilir.  ]]></message>
+	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<strong>Dikkat:</strong>Eğer yükleme, veritabanının yüklenmesi yoluyla başarısız olmuşsa veritabanını yeniden yüklemeyi denemeden önce ADS veritabanını veya veritabanı tablolarını indirmeniz gerekebilir.  ]]></message>
 	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>IMPORTANT!</h4>
 <p>Yükleyici konfigürasyon dosyasını otomatik olarak yazamaz. Sistemi kullanmayı denemeden önce lütfen açınız. <tt>config.inc.php</tt>aşağıdakine uygun bir metin editöründe ve içeriklerini aşağıdaki metin alanının içerikleri ile değiştirin.</p>]]></message>
 	<message key="installer.contentsOfConfigFile">Konfigürasyon dosyasının içerikleri </message>
@@ -2187,7 +2187,7 @@ Sunucunuz mbstring'i güncel olarak destekler: <strong>{$supportsMBString}</stro
 <p>Sistemi kullanmaya başlamak için bir önceki sayfada girilen kullanıcı adı ve şifre ile <a href="{$loginUrl}">kullanıcı girişi </a> yapınız.</p>
 <p>Eğer güncellemeler ve yazılımla ilgili haberleri izlemek isterseniz, <strong>lütfen <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a> sayfasından kayıt olunuz.</strong> Soru ve yorumlarınız için lütfen <a href="http://pkp.sfu.ca/support/forum" target="_new">destek forumunu</a> kullanınız.</p>]]></message>
 	<message key="installer.upgradeComplete"><![CDATA[<p>ADS'nin sürüm {$version}  güncellenmesi başarıyla tamamlandı.</p>
-<p> config.inc.php Konfigürasyon dosyanızdaki ayarlamayı ''yüklendi'' ayarına getirmeyi unutmayın <i>On</i>.</p>
+<p> config.inc.php Konfigürasyon dosyanızdaki ayarlamayı ''yüklendi'' ayarına getirmeyi unutmayın <em>On</em>.</p>
 <p>Eğer güncellemeler ve yazılımla ilgili haberleri izlemek için üye olmadınız ise,  <strong>lütfen <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a> sayfasından kayıt olunuz.</strong> Soru ve yorumlarınız için lütfen <a href="http://pkp.sfu.ca/support/forum" target="_new">destek forumunu</a> kullanınız.</p>]]></message>
 	<message key="installer.skipFilesDir">Gerekli alt dizinleri oluşturmayın (yalnızca manuel yükleme için yaralıdır) </message>
 	<message key="installer.releaseNotes">Sürüm Notları</message>
@@ -2446,7 +2446,7 @@ Dergi editörü bu açıklamaları düzenleyip, kendi koşullarına daha uygun b
 
 <h4> Sayfa düzenlemesi Düzeltme sistemleri</h4>
 
-<b>1. Microsoft Değişiklikleri İzle özelliği ile </b>
+<strong>1. Microsoft Değişiklikleri İzle özelliği ile </strong>
 
 Menü çubuğundaki araçlar sekmesinde "Değişiklikleri İzle" etkinleştirilerek, kopya dizgisini yapan kişi değişiklikler yapar. Eklediği metinler veya sildiği metinler farklı renk ile gösterilir.
 Değiştirilen belge editöre sunulmak üzere sisteme yüklenir.
@@ -2463,61 +2463,61 @@ Bu işlemden sonra yazı görüntü açısından tamamlanıp, basılacak hale ge
 Bu basamakta da yazar ve editörlerin görüşü alınacaktır.
 
 
-<b>2. Harward Educational Review yöntemi</b>
+<strong>2. Harward Educational Review yöntemi</strong>
 
-<b> Yazıda elektronik değişiklikler yapmak için talimatlar</b>
+<strong> Yazıda elektronik değişiklikler yapmak için talimatlar</strong>
 
 Yazının elektronik kopyasında değişiklik yapılır iken, aşağıdaki yöntemleri kullanınız.
 
-<b> Önerilen değişikliklere yanıt verme</b>
+<strong> Önerilen değişikliklere yanıt verme</strong>
 &nbsp; Önerilen değişiklikleri kabul ediyorsanız, ilgili metni kalın fontlardan, normal fonta değiştiriniz.
 &nbsp; Önerilen değişiklikleri kabul etmiyorsanız, 
-orjinal metni yeniden girip, <b>kalın font</b> yaparak işaretleyiniz.
+orjinal metni yeniden girip, <strong>kalın font</strong> yaparak işaretleyiniz.
 
-<b> Ekleme ve çıkarımlar yapma</b>
-&nbsp; Eklemelerinizi <b>metni kalın font</b> yaparak işaretleyiniz
-&nbsp; Silinecek metni yandaki gibi köşeli parantez ve kalın font ile işaretleyiniz: <b>[silinecek metin]</b>
+<strong> Ekleme ve çıkarımlar yapma</strong>
+&nbsp; Eklemelerinizi <strong>metni kalın font</strong> yaparak işaretleyiniz
+&nbsp; Silinecek metni yandaki gibi köşeli parantez ve kalın font ile işaretleyiniz: <strong>[silinecek metin]</strong>
 &nbsp; Eğer bir cümle veya daha fazlasını siliyorsanız, lütfen ilgili alana bir not ekleyiniz.
-Örneğin : <b>[iki cümleyi siliyorum. silinecek metin]</b>
+Örneğin : <strong>[iki cümleyi siliyorum. silinecek metin]</strong>
 
-<b>Yazarin önerilerine yanıt verme</b>
+<strong>Yazarin önerilerine yanıt verme</strong>
 &nbsp; Yazarın yaptığı değişiklikleri değiştirmeyiniz. Kesinlikle silmeyiniz.
-&nbsp; Yazarın önerilerinin sonuna verdiğiniz kararı <b>Yorum</b> işareti ile ekleyiniz.
-Örneğin:<b>[Yazar notu..... Yorum: silmek istedikleriniz silinecek. ]</b>
+&nbsp; Yazarın önerilerinin sonuna verdiğiniz kararı <strong>Yorum</strong> işareti ile ekleyiniz.
+Örneğin:<strong>[Yazar notu..... Yorum: silmek istedikleriniz silinecek. ]</strong>
 
-<b> Yorum yapma </b>
-&nbsp; Esaslı değişiklikler veya organizasyonel değişiklikleri açıklamak için yorumları kullanınız &nbsp; e.g., <b>[Yorum: Üsteki paragrafın 5 yerine 7. olması daha uygun olacak]</b>
+<strong> Yorum yapma </strong>
+&nbsp; Esaslı değişiklikler veya organizasyonel değişiklikleri açıklamak için yorumları kullanınız &nbsp; e.g., <strong>[Yorum: Üsteki paragrafın 5 yerine 7. olması daha uygun olacak]</strong>
 &nbsp; Not: Eğer sayfa numaraları söz konusu ise, size basılarak gelen kopyadaki sayfa numaralarını kullanınız.
 Elektronik işlemler sırasında sayfa numaraları değişebilir...
 
 <h4> Elektronik düzeenleme için bir örnek</h4>
 
-<b> Orijinal "yazı" dosyası</b>
+<strong> Orijinal "yazı" dosyası</strong>
 
 Orjinal makalenizde yapısal veya biçimsel dramatik değişiklikler yaparken, lütfen birlikte çalıştığınız kişilerin görüşlerini alınız. Değişilikleri tamamladığınızde dosya adını değiştiriniz (YazaradıQA.doc -> YazaradiQAR.doc). Yazınızın bir kopyasını basıp, tümüyle değişen elektronik yazı dosyası ile birlikte geri gönderiniz.
 
-<b> Eleştiri ve önerilerle yazara geri gönderilen yazı</b>
+<strong> Eleştiri ve önerilerle yazara geri gönderilen yazı</strong>
 
 Makalenizde yapısal veya biçimsel dramatik değişiklikler yapmdan önce
-<b>yazınızı izleyen editörlerle temas kurunuz</b>.
+<strong>yazınızı izleyen editörlerle temas kurunuz</strong>.
 Revizyonlarınızı bitirdikten sonra elektronik yazı dosyanızı farklı ad ile kaydediniz.
 (Örneğin YazaradıQA.doc -> YazaradiQAR.doc). Yazınızın bir kopyasını basıp, tümüyle 
 değişen elektronik yazı dosyası ile birlikte geri gönderiniz.
 
-<b> ONA yollanan revize edilmiş yazı</b>
+<strong> ONA yollanan revize edilmiş yazı</strong>
 
 Makalenizde yapısal veya biçimsel dramatik değişiklikler yapmdan önce
-<b>yazınızı izleyen editörlerle temas kurunuz</b>.
-<b> Lütfen aşağıdaki kurallara uymadaki yetersizliğin yazınızın basılmasında 
-ciddi gecikmelere neden olabileceğini unutmayınız.</b>
+<strong>yazınızı izleyen editörlerle temas kurunuz</strong>.
+<strong> Lütfen aşağıdaki kurallara uymadaki yetersizliğin yazınızın basılmasında 
+ciddi gecikmelere neden olabileceğini unutmayınız.</strong>
 
 Revizyonlarınızı bitirdikten sonra elektronik yazı dosyanızı farklı ad ile kaydediniz.
 (Örneğin YazaradıQA.doc -> YazaradiQAR.doc). Yazınızın bir kopyasını basıp, tümüyle 
 değişen elektronik yazı dosyası ile birlikte geri gönderiniz.
-Yeni dosyada <b>[silinmiş sözcük]</b> değiştirilmiş bölümler kalsın veya işaret edilsin 
-Örneğin [Yorum: Önerinize cevaben bir cümle ekledim.]</b>
+Yeni dosyada <strong>[silinmiş sözcük]</strong> değiştirilmiş bölümler kalsın veya işaret edilsin 
+Örneğin [Yorum: Önerinize cevaben bir cümle ekledim.]</strong>
 
-<b>Notlar:</b>
+<strong>Notlar:</strong>
 &bull; Koyu yazılan metinlerin normale çevrilmesi, o paragraftaki değişikliklerin kabulünü gösterir.
 &bull; Yeni cümlleler eklendi ise, koyu renk karakterler ile işaret edilirler.
 &bull; [silinen sözcükler] Köşeli parantez içine alınmış metin tümü ile silinecek metindir

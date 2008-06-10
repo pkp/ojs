@@ -604,7 +604,7 @@
 	<message key="admin.settings.oaiRegistration">Registra il sito per l'indicizzazione (Harvest dei metadati)</message>
 	<message key="admin.settings.oaiRegistrationDescription"><![CDATA[Per indicizzare gli articoli delle riviste contenute in questo sito in un sistema globalmente distribuito di database di ricerca, <a href="http://www.pkp.ubc.ca/harvester/add.php" target="_blank">registrate</a> l'URL del vostro sito al Public Knowledge Project metadata <a href="http://www.pkp.ubc.ca/harvester/" target="_blank">harvester</a>. Questo strumento raccoglie i metadata da ogni articolo indicizzato delle riviste, permettendo in questo modo una ricerca accurata tra tutti i siti che aderiscono alla <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Open Archives Initiative Protocol for Metadata Harvesting</a>.
 <br /><br />
-<a href="http://www.pkp.ubc.ca/harvester/add.php" target="_blank">Fai click qui</a> e inserisci <span class="highlight">{$siteUrl}</span> <b>l'URL del sito</b>, e <span class="highlight">{$oaiUrl}</span> <b>l'URL di base per l'archivio OAI</b>.
+<a href="http://www.pkp.ubc.ca/harvester/add.php" target="_blank">Fai click qui</a> e inserisci <span class="highlight">{$siteUrl}</span> <strong>l'URL del sito</strong>, e <span class="highlight">{$oaiUrl}</span> <strong>l'URL di base per l'archivio OAI</strong>.
 <br /><br />
 Da notare che l'interfaccia OAI pu&#x00F2; essere disabilitata per questo sito tramite il sistema di configurazione di OJS. Nelle prossime versioni di OJS sar&#x00E0; possibile abilitare o disabilitare l'interfaccia OAI per le singole riviste.]]></message>
 
@@ -823,7 +823,7 @@ Da notare che l'interfaccia OAI pu&#x00F2; essere disabilitata per questo sito t
 	<message key="manager.setup.look.description">Header dell'homepage, contenuto, header della rivista, footer, menu di navigazione e fogli di stile.</message>
 	<message key="manager.setup.journalTitle">Titolo della rivista</message>
 	<message key="manager.setup.focusScope">Argomento e ambito</message>
-	<message key="manager.setup.focusScopeDescription"><![CDATA[<b>CODICE HTML DI ESEMPIO</b>]]></message>
+	<message key="manager.setup.focusScopeDescription"><![CDATA[<strong>CODICE HTML DI ESEMPIO</strong>]]></message>
 	<message key="manager.setup.journalSetupUpdated">Il setup della rivista &#x00E8; stato aggiornato.</message>
 	<message key="manager.setup.selectOne">Seleziona uno</message>
 	
@@ -949,7 +949,7 @@ Impostare il supporto LOCKSS per l'Open Journal Systems non deve avvenire fino a
 	<!-- Setup Step 3 -->
 	<message key="manager.setup.guidingSubmissions">Fase 3. Guida alla submission</message>
 	<message key="manager.setup.authorGuidelines">Linee guida per gli autori</message>
-	<message key="manager.setup.authorGuidelinesDescription"><![CDATA[Preparare per gli autori degli standard per le citazioni blibliografiche e la formattazione da utilizzare per gli articoli inviati alla rivista (ad esempio <i>Manuale di pubblicazione della Associazioni degli Psicologi Americani</i>, quinta edizione, 2001). Pu&#x00F2; essere utile fornire esempi dei formati comuni delle citazioni di riviste e libri da utilizzare negli articoli proposti alla rivista. &#x00C8; utile inoltre identificare il tipo di file supplementari appropriati (ad esempio dataset, strumenti di ricerca, ecc.) che gli autori sono incoraggiati ad inviare, insieme agli articoli, per aumentare il livello di coinvolgimento dei lettori con i loro lavori.]]></message>
+	<message key="manager.setup.authorGuidelinesDescription"><![CDATA[Preparare per gli autori degli standard per le citazioni blibliografiche e la formattazione da utilizzare per gli articoli inviati alla rivista (ad esempio <em>Manuale di pubblicazione della Associazioni degli Psicologi Americani</em>, quinta edizione, 2001). Pu&#x00F2; essere utile fornire esempi dei formati comuni delle citazioni di riviste e libri da utilizzare negli articoli proposti alla rivista. &#x00C8; utile inoltre identificare il tipo di file supplementari appropriati (ad esempio dataset, strumenti di ricerca, ecc.) che gli autori sono incoraggiati ad inviare, insieme agli articoli, per aumentare il livello di coinvolgimento dei lettori con i loro lavori.]]></message>
 	<message key="manager.setup.submissionGuidelines">Linee guida di submission</message>
 	<message key="manager.setup.submissionPreparationChecklist">Checklist di preparazione della submission</message>
 	<message key="manager.setup.submissionPreparationChecklistDescription">Nell'effettuare una submission alla rivista gli autori dovrebbero prima controllare le varie voci della Checklist di preparazione della submission prima di procedere oltre. Questa checklist &#x00E8; presente nelle Linee guida per gli autori, nella sezione About. Questa lista pu&#x00F2; essere modificata qui di seguito, ma tutte le voci della lista dovranno essere spuntate prima che l'autore possa proseguire con la submission.</message>
@@ -988,7 +988,7 @@ inclusa la possibilit&#x00E0; di deposito in un archivio open access. &#x00C8; p
 <br /><br />
 Nota: se l'amministratore ha gi&#x00E0; registrato il sito all'interno del PKP Harvster, la vostra rivista sar&#x00E0; indicizzata automaticamente e non avrete bisogno di effettuare la registrazione.
 <br /><br />
-Fate <a href="http://www.pkp.ubc.ca/harvester/add.php" target="_blank">click qui</a> e inserite <span class="highlight">{$siteUrl}</span> come <b>URL del sito</b>, e <span class="highlight">{$oaiUrl}</span> come <b>URL di base per l'archivio OAI</b>.]]></message>
+Fate <a href="http://www.pkp.ubc.ca/harvester/add.php" target="_blank">click qui</a> e inserite <span class="highlight">{$siteUrl}</span> come <strong>URL del sito</strong>, e <span class="highlight">{$oaiUrl}</span> come <strong>URL di base per l'archivio OAI</strong>.]]></message>
 	<message key="manager.setup.notifications">Notifica di submission dell'autore</message>
 	<message key="manager.setup.notifications.description">Nel completare il processo di submission, agli autori viene inviata automaticamente una email di riconoscimento(che pu&#x00F2; essere visionata e modificata in Emails precompilate). In aggiunta, una copia della email di riconoscimento pu&#x00F2; essere inviata come segue:</message>
 	<message key="manager.setup.notifications.copyPrimaryContact">Invia una copia al contatto principale della rivista, identificato nel passo 1 del setup.</message>
@@ -1944,7 +1944,7 @@ Attivo &#x00E8; il numero di quante revisioni si stanno considerando o stanno an
 	<message key="user.register.privacyStatement">Tutela della privacy</message>
 	<message key="user.register.completeForm">Riempi questa form per registrarti a questa rivista.</message>
 	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Clica qui</a> se sei gi&#x00E0; a questo o a un'altra rivista su questo sito.]]></message>
-	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Clica qui</a> Se <b>non</b> sei gi&#x00E0; registrato a questo o un'altra rivista su questo sito.]]></message>
+	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Clica qui</a> Se <strong>non</strong> sei gi&#x00E0; registrato a questo o un'altra rivista su questo sito.]]></message>
 	<message key="user.register.loginToRegister">Inserisci la tua username and password per registrarti a questa rivista.</message>
 	<message key="user.register.registrationDisabled">Questa rivista attualmente non sta accettando registrazioni di utenti.</message>
 	<message key="user.register.usernameRestriction">La username deve contenere solo lettere minuscole, numeri, e trattini/underscores.</message>
@@ -1989,12 +1989,12 @@ Attivo &#x00E8; il numero di quante revisioni si stanno considerando o stanno an
 	<message key="search.syntaxInstructions"><![CDATA[Consigli di ricerca: <ul>
 <li>I termini di ricerca sono case-insensitive</li>
 <li>Le parole comuni sono ignorate</li>
-<li>Per default solo gli articoli contenenti  <i>tutti</i> i termini della ricerca vengono restituiti (i.e., <i>AND</i> &#x00E8; sottointeso)</li>
-<li>Combina parole multiple con <i>OR</i> per trovare articoli contenenti entrambi i termini; e.g., <i>istruzione OR ricerca</i></li>
-<li>Usa le parentesi per creare ricerche pi&#x00F9; complesse; e.g., <i>archivio ((rivista O conferenza) NON tesi)</i></li>
-<li>Ricerca per esattamente una frase mettendola tra virgolette; e.g., <i>"pubblicazioni open access"</i></li>
-<li>Escludi una parola mettendo il prefisso con <b>-</b> o <i>NOT</i>; e.g. <i>online -politiche</i> o <i>online NOT politiche</i></li>
-<li>Usa <b>*</b> in un termine come un carattere speciale per associare ogni sequenza di caratteri; e.g., <i>soci* moralit&#x00E0;</i> potrebbe associare documenti contenenti "sociological" or "societal"</li>
+<li>Per default solo gli articoli contenenti  <em>tutti</em> i termini della ricerca vengono restituiti (i.e., <em>AND</em> &#x00E8; sottointeso)</li>
+<li>Combina parole multiple con <em>OR</em> per trovare articoli contenenti entrambi i termini; e.g., <em>istruzione OR ricerca</em></li>
+<li>Usa le parentesi per creare ricerche pi&#x00F9; complesse; e.g., <em>archivio ((rivista O conferenza) NON tesi)</em></li>
+<li>Ricerca per esattamente una frase mettendola tra virgolette; e.g., <em>"pubblicazioni open access"</em></li>
+<li>Escludi una parola mettendo il prefisso con <strong>-</strong> o <em>NOT</em>; e.g. <em>online -politiche</em> o <em>online NOT politiche</em></li>
+<li>Usa <strong>*</strong> in un termine come un carattere speciale per associare ogni sequenza di caratteri; e.g., <em>soci* moralit&#x00E0;</em> potrebbe associare documenti contenenti "sociological" or "societal"</li>
 </ul>]]></message>
 	<message key="search.operator.not">not</message>
 	<message key="search.operator.and">and</message>
@@ -2205,7 +2205,7 @@ Il vostro server supporta mbstring: <strong>{$supportsMBString}</strong>]]></mes
 	<message key="installer.installFileError"><![CDATA[Il file d&apos; <tt>dbscripts/xml/install.xml</tt> non esiste o  non &#x00E8; dotato di permessi di lettura.]]></message>
 	<message key="installer.installParseDBFileError"><![CDATA[Errore durante l&apos; del file d&apos;installazione del database <tt>{$file}</tt>.]]></message>
 	<message key="installer.configFileError"><![CDATA[Il file di configurazione <tt>config.inc.php</tt> non esiste o non &#x00E8; dotato di permessi di lettura.]]></message>
-	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<b>Attenzione:</b> Se l'installazione &#x00E8; fallita durante la creazione del database potrebbe essere necessario cancellare la base di dati di OJS o le tabelle contenute prima di ripetere il processo.]]></message>
+	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<strong>Attenzione:</strong> Se l'installazione &#x00E8; fallita durante la creazione del database potrebbe essere necessario cancellare la base di dati di OJS o le tabelle contenute prima di ripetere il processo.]]></message>
 	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>IMPORTANTE!</h4>
 <p>Il programma d'installazione non &#x00E8; riuscito a sovrascrivere il file di configurazione. Prima di utilizzare OJS, apite il file <tt>config.inc.php</tt> con un editor di testo e sostituitene il contenuto con quello del campo sottostante..</p>]]></message>
 	<message key="installer.contentsOfConfigFile">Contenuti del file di configurazione</message>
@@ -2216,7 +2216,7 @@ Il vostro server supporta mbstring: <strong>{$supportsMBString}</strong>]]></mes
 <p>Per utilizzare OJS effettuate il <a href="{$loginUrl}">login</a> utilizzando lo username e la password inseriti nella pagina precedente.</p>
 <p>Se desideri ricevere news e aggiornamenti, <strong>si prega di registrarsi a <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>.</strong> Se hai domande o commenti, si prega di visitare <a href="http://pkp.sfu.ca/support/forum" target="_new">il forum di supporto</a>.</p>]]></message>
 	<message key="installer.upgradeComplete"><![CDATA[<p>Aggiornamento di  OJS alla versione {$version} completato con successo.</p>
-<p>Non dimenticare di mettere le impostazioni installate nel tuo file di configurazione config.inc.php su <i>On</i>.</p>
+<p>Non dimenticare di mettere le impostazioni installate nel tuo file di configurazione config.inc.php su <em>On</em>.</p>
 <p>Se non sei gi&#x00E0; registrato e desideri ricevere news e aggiornamenti, <strong>si prega di registrarsi a  <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>.</strong> Se hai domande o commenti, si prega di visitare il <a href="http://pkp.sfu.ca/support/forum" target="_new">forum di supporto</a>.</p>]]></message>
 	<message key="installer.skipFilesDir">Non create sottodirectory</message>
 	<message key="installer.releaseNotes">Release Notes</message>
@@ -2486,7 +2486,7 @@ Il file di copyedited &#x00E8; ora in un formato Word o .rtf e per cui pu&#x00F2
 
 <h4>Sistemi di Copyediting</h4>
 
-<b>1.Track Changes di Microsoft Word</b>
+<strong>1.Track Changes di Microsoft Word</strong>
 
 Sotto le utility nella barra del menu, la funzione Track Changes abilita il copyeditor a fare inserzioni (il testo appare colorato) e cancellazioni (il testo appare barrato in colore o sui margini come cancellato). Il copyeditor pu&#x00F2; sia inviare interrogazioni per l'autore (Interrogazioni autore) sia all'editor (interrogazioni editor) inserendo queste interrogazioni in parentesi quadre. La  versione di copyedit &#x00E8; caricata e l'editor viene avvertito. L'editor poi revisiona il testo e avverte l'autore. 
 
@@ -2495,50 +2495,50 @@ L'editor e l'autore dovrebbero lasciare quei cambiamenti di cui sono soddisfatti
 Dopo che il testo &#x00E8; stato revisionato dall'editor e dall'autore, il copyeditor far&#x00E0; un passo finale sul testo accepting accettando i cambiamenti in preparazione per la fase di impaginazione e incolonnamento. 
 
 
-<b>2. Harvard Educational Review </b>
+<strong>2. Harvard Educational Review </strong>
 
-<b>Istruzioni per effettuare revisioni elettroniche del manoscritto</b>
+<strong>Istruzioni per effettuare revisioni elettroniche del manoscritto</strong>
 
 Si prega di seguire il protocollo per effettuare revisioni eletroniche del tuo manoscritto:
 
-<b>Rispondere ai cambiamenti suggeriti</b>
+<strong>Rispondere ai cambiamenti suggeriti</strong>
 &nbsp; Per ognuno dei cambiamenti suggeriti che hai accettato, togli il grassetto dal testo
-&nbsp; Per ognuno dei cambiamenti suggeriti che non hai accettato, reinserisci il testo originale e mettilo in <b>grassetto</b>
+&nbsp; Per ognuno dei cambiamenti suggeriti che non hai accettato, reinserisci il testo originale e mettilo in <strong>grassetto</strong>
 
-<b>Effettuare aggiunte e cancellazioni</b>
-&nbsp; Indicare le aggiunte mettendo in <b>grassetto</b> il testo nuovo
-&nbsp; Sostituire le sezioni cancellate con: <b>[testo cancellato]</b>
-&nbsp; Se cancelli una o pi&#x00F9; proposizioni, si prega di indicarle con una nota, e.g., <b>[cancellate 2 proposizioni]</b>
+<strong>Effettuare aggiunte e cancellazioni</strong>
+&nbsp; Indicare le aggiunte mettendo in <strong>grassetto</strong> il testo nuovo
+&nbsp; Sostituire le sezioni cancellate con: <strong>[testo cancellato]</strong>
+&nbsp; Se cancelli una o pi&#x00F9; proposizioni, si prega di indicarle con una nota, e.g., <strong>[cancellate 2 proposizioni]</strong>
 
-<b>Rispondere alle interrogazioni dell'autore(QAs)</b>
+<strong>Rispondere alle interrogazioni dell'autore(QAs)</strong>
 &nbsp; Mantieni tutte le QAs intatte e  in grassetto all'interno del testo. Non cancellarle
 &nbsp; Per rispondere a una QA, aggiungi un commento dopo quest'ulitma. I commenti dovrebbero essere delimitati da:
-<b>[Commento:</b>]
-&nbsp; e.g., <b>[commento: ampliata la discussione sulla metodologia come suggerito]</b>
+<strong>[Commento:</strong>]
+&nbsp; e.g., <strong>[commento: ampliata la discussione sulla metodologia come suggerito]</strong>
 
-<b>Commentare</b>
+<strong>Commentare</strong>
 &nbsp; Usa i commenti per spiegare cambi organizzativi o  revisioni maggiori
-&nbsp; e.g., <b>[Commento: spostato il paragrafo sopra da p. 5 a p. 7]</b>
+&nbsp; e.g., <strong>[Commento: spostato il paragrafo sopra da p. 5 a p. 7]</strong>
 &nbsp; Nota: quando ci si riferisce ad un numero di pagina, si prega di usare il numero di pagine della copia stampata del manoscritto che ti &#x00E8; stata inviata. Questo &#x00E8; importante dato che il numero di pagine pu&#00F2; cambiare non appena un documento viene revisionato elettronicamente.
 
 <h4>Una illustrazione di una revisione elettronica</h4>
 
-<b>Il file originale del manoscritto</b>
+<strong>Il file originale del manoscritto</strong>
 
 Prima di fare drammatici allontanamenti dalla struttura e organizzazione del tuo manoscritto originale, si prega di controllare con i vostri colleghi. Dopo che avete finito con le vostre revisioni, rinominare il file da NomeAutoreQA.doc a NomeAutoreQAR.doc (e.g., da LeeQA.doc a LeeQAR.doc). Stampa una copia del tuo manoscritto e inviala per posta con un floppy disk contenente il file di elaborazione del testo completamente modificato e rinominato.
 
 
-<b>Manoscritto ritornato all'autore con interrogazioni e suggerimenti</b>
+<strong>Manoscritto ritornato all'autore con interrogazioni e suggerimenti</strong>
 
-Prima di fare drammatici allontanamenti dalla struttura e organizzazione del<b>manoscritto che ti stiamo rimandando</b>, si prega di controllare con  gli editors dei pezzi. Dopo che avete finito con le vostre revisioni, rinominare il file da NomeAutoreQA.doc a NomeAutoreQAR.doc (e.g., da LeeQA.doc a LeeQAR.doc). Stampa una copia del tuo manoscritto e inviala per posta con un floppy disk contenente il file di elaborazione del testo completamente modificato e rinominato. <b>[QA: In questo paragrafo, potrebbe aiutare a sollevare l'importanza di seguire con attenzione le istruzioni per fare revisioni elettroniche. Altrimenti il processo di pubblicazione pu&#x00F2; essere rallentato notevolmente]</b>
+Prima di fare drammatici allontanamenti dalla struttura e organizzazione del<strong>manoscritto che ti stiamo rimandando</strong>, si prega di controllare con  gli editors dei pezzi. Dopo che avete finito con le vostre revisioni, rinominare il file da NomeAutoreQA.doc a NomeAutoreQAR.doc (e.g., da LeeQA.doc a LeeQAR.doc). Stampa una copia del tuo manoscritto e inviala per posta con un floppy disk contenente il file di elaborazione del testo completamente modificato e rinominato. <strong>[QA: In questo paragrafo, potrebbe aiutare a sollevare l'importanza di seguire con attenzione le istruzioni per fare revisioni elettroniche. Altrimenti il processo di pubblicazione pu&#x00F2; essere rallentato notevolmente]</strong>
 
-<b>Manoscitto revisionato mandato indietro</b>
+<strong>Manoscitto revisionato mandato indietro</strong>
 
-Prima di fare drammatici allontanamenti dalla struttura e organizzazione del<b>manoscritto che ti stiamo rimandando</b>, si prega di controllare con gli editors dei pezzi. <b>Si prega di capire che non seguire le seguenti istruzioni pu&#x00F2; significativamente allungare  la pubblicazione del manoscritto.</b>
+Prima di fare drammatici allontanamenti dalla struttura e organizzazione del<strong>manoscritto che ti stiamo rimandando</strong>, si prega di controllare con gli editors dei pezzi. <strong>Si prega di capire che non seguire le seguenti istruzioni pu&#x00F2; significativamente allungare  la pubblicazione del manoscritto.</strong>
 
-Dopo che avete finito con le vostre revisioni, rinominare il file da NomeAutoreQA.doc a NomeAutoreQAR.doc (e.g., da LeeQA.doc a LeeQAR.doc). Stampa una copia del tuo manoscritto e inviala per posta con un floppy disk contenente il file di elaborazione del testo completamente modificato e rinominato. <b>[QA: In questo paragrafo, potrebbe aiutare a sollevare l'importanza di seguire con attenzione le istruzioni per fare revisioni elettroniche. Altrimenti il processo di pubblicazione pu&#x00F2; essere rallentato notevolmente][Commento: ho aggiunto una frase in risposta al tuo suggerimento.]</b>
+Dopo che avete finito con le vostre revisioni, rinominare il file da NomeAutoreQA.doc a NomeAutoreQAR.doc (e.g., da LeeQA.doc a LeeQAR.doc). Stampa una copia del tuo manoscritto e inviala per posta con un floppy disk contenente il file di elaborazione del testo completamente modificato e rinominato. <strong>[QA: In questo paragrafo, potrebbe aiutare a sollevare l'importanza di seguire con attenzione le istruzioni per fare revisioni elettroniche. Altrimenti il processo di pubblicazione pu&#x00F2; essere rallentato notevolmente][Commento: ho aggiunto una frase in risposta al tuo suggerimento.]</strong>
 
-<b>Note:</b>
+<strong>Note:</strong>
 &bull; Il testo non in grassetto indica l'acettazione delle modifiche suggerite alla prima frase
 &bull; Frase aggiunta in risposta al QA. Il grassetto indica aggiunta di testo nuovo
 &bull; [parola cancellata] indica l'omissione di "completamente"

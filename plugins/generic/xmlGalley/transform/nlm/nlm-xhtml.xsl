@@ -723,7 +723,7 @@
 		<span class="xref">
 			<xsl:call-template name="make-id"/>
 
-			<sup><i>
+			<sup><em>
 				<!-- if immediately-preceding sibling was an xref, punctuate
 					(otherwise assume desired punctuation is in the source).-->
 				<xsl:if test="local-name(preceding-sibling::node()[1])='xref'">
@@ -732,7 +732,7 @@
 				<a target="xrefwindow" href="#{@rid}">
 					<xsl:value-of select="normalize-space(.)"/>
 				</a>
-			</i></sup>
+			</em></sup>
 		</span>
     </xsl:template>
 
@@ -963,7 +963,7 @@
 	    <td id="{@id}" valign="top" align="right">
 			<xsl:choose>
 				<xsl:when test="not(label)">
-				    <strong><i><xsl:value-of select="position()"/><xsl:text>. </xsl:text></i></strong>
+				    <strong><em><xsl:value-of select="position()"/><xsl:text>. </xsl:text></em></strong>
 				</xsl:when>
 				<xsl:otherwise>
 					<xsl:apply-templates select="label"/>
@@ -981,7 +981,7 @@
 	</xsl:template>
 
 	<xsl:template match="ref/label">
-	    <strong><i><xsl:apply-templates/><xsl:text>. </xsl:text></i></strong>
+	    <strong><em><xsl:apply-templates/><xsl:text>. </xsl:text></em></strong>
 	</xsl:template>
 
 

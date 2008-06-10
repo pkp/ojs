@@ -304,7 +304,7 @@ function confirmSubmissionCheck() {
 				<td class="value" width="70%">
 				{if $submission->getRecommendation() !== null && $submission->getRecommendation() !== ''}
 					{assign var="recommendation" value=$submission->getRecommendation()}
-					<b>{translate key=$reviewerRecommendationOptions.$recommendation}</b>&nbsp;&nbsp;
+					<strong>{translate key=$reviewerRecommendationOptions.$recommendation}</strong>&nbsp;&nbsp;
 					{$submission->getDateCompleted()|date_format:$dateFormatShort}
 				{else}
 					<form name="recommendation" method="post" action="{url op="recordRecommendation"}">

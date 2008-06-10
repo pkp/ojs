@@ -672,7 +672,7 @@
 
 	<message key="admin.settings.oaiRegistrationDescription"><![CDATA[To have the contents of all journals hosted on this site indexed within a globally distributed system of research databases, <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">register</a> your site's URL with the Public Knowledge Project metadata <a href="http://pkp.sfu.ca/harvester/" target="_blank">harvester</a>. This tool collects the metadata from each indexed item in this journal, enabling accurate and collective searching among the research sites that adhere to the <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Open Archives Initiative Protocol for Metadata Harvesting</a>.
 <br /><br />
-<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Click here</a> and enter <span class="highlight">{$siteUrl}</span> under <b>Site URL</b>, and <span class="highlight">{$oaiUrl}</span> under <b>Base URL for OAI Archive</b>.
+<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Click here</a> and enter <span class="highlight">{$siteUrl}</span> under <strong>Site URL</strong>, and <span class="highlight">{$oaiUrl}</span> under <strong>Base URL for OAI Archive</strong>.
 <br /><br />
 Note that the OAI interface can be disabled for this site by editing the OJS system configuration. Future versions of OJS will allow the OAI interface to be enabled or disabled for individual journals within the site.]]></message>
 
@@ -818,7 +818,7 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="manager.setup.journalTitle">Название журнала</message>
 
 	<message key="manager.setup.focusScope">Предметная область</message>
-	<message key="manager.setup.focusScopeDescription"><![CDATA[<b>EXAMPLE HTML DATA</b>]]></message>
+	<message key="manager.setup.focusScopeDescription"><![CDATA[<strong>EXAMPLE HTML DATA</strong>]]></message>
 	<message key="manager.setup.journalSetupUpdated">Установка журнала обновлена.</message>
 	<message key="manager.setup.selectOne">Выбрать</message>
 	
@@ -951,7 +951,7 @@ Setting up LOCKSS support for Slavica Journals does not need to take place until
 	<!-- Setup Step 3 -->
 	<message key="manager.setup.guidingSubmissions">Шаг 3. Указания для авторов</message>
 	<message key="manager.setup.authorGuidelines">Указания авторам</message>
-	<message key="manager.setup.authorGuidelinesDescription"><![CDATA[Set out for authors the bibliographic and formatting standards used for items submitted to the journal (e.g., <i>Publication Manual of the American Psychological Association</i>, 5th edition, 2001). It is often helpful to provide examples of the common citation formats for journals and books to be used in submissions. Also identify the types of appropriate Supplementary Files (e.g., data-sets, research instruments, etc.) which authors should be encouraged to upload, in addition to their submission, to enhance readers' engagement with their work.]]></message>
+	<message key="manager.setup.authorGuidelinesDescription"><![CDATA[Set out for authors the bibliographic and formatting standards used for items submitted to the journal (e.g., <em>Publication Manual of the American Psychological Association</em>, 5th edition, 2001). It is often helpful to provide examples of the common citation formats for journals and books to be used in submissions. Also identify the types of appropriate Supplementary Files (e.g., data-sets, research instruments, etc.) which authors should be encouraged to upload, in addition to their submission, to enhance readers' engagement with their work.]]></message>
 
 	<message key="manager.setup.submissionGuidelines">Указания</message>
 	<message key="manager.setup.submissionPreparationChecklist">Требования к статьям</message>
@@ -994,7 +994,7 @@ Title of classification system]]></message>
 <br /><br />
 Note that if your site administrator has already registered this site with the PKP Harvester, your journal will be indexed automatically and you do not need to register your journal.
 <br /><br />
-<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Click here</a> and enter <span class="highlight">{$siteUrl}</span> under <b>Site URL</b>, and <span class="highlight">{$oaiUrl}</span> under <b>Base URL for OAI Archive</b>.]]></message>
+<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Click here</a> and enter <span class="highlight">{$siteUrl}</span> under <strong>Site URL</strong>, and <span class="highlight">{$oaiUrl}</span> under <strong>Base URL for OAI Archive</strong>.]]></message>
 
 	<!-- Setup Step 4 -->
 	<message key="manager.setup.managingTheJournal">Шаг 4. Управление журналом</message>
@@ -1924,7 +1924,7 @@ with a plus sign (+) indicating review-in-progress.]]></message>
 	<message key="user.register.privacyStatement">Конфиденциальность</message>
 	<message key="user.register.completeForm">Заполните эту форму, чтобы получить доступ к этому журналу.</message>
 	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Нажать здесь</a>, если Вы зарегистрированы в качестве пользователя этого или другого журнала нашего сайта.]]></message>
-	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Нажать здесь</a> если Вы <b>не</b> зарегистрированы в качестве пользователя этого или другого журнала нашего сайта.]]></message>
+	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Нажать здесь</a> если Вы <strong>не</strong> зарегистрированы в качестве пользователя этого или другого журнала нашего сайта.]]></message>
 	<message key="user.register.loginToRegister">Введите Ваше имя и пароль, чтобы получить доступ к этому журналу.</message>
 	<message key="user.register.registrationDisabled">Этот журнал пока не регистрирует новых пользователей.</message>
 
@@ -1974,12 +1974,12 @@ with a plus sign (+) indicating review-in-progress.]]></message>
 	<message key="search.syntaxInstructions"><![CDATA[Подсказки: <ul>
 <li>Ключевые слова чувствительны к регистру</li>
 <li>Английские предлоги и союзы игнорируются</li>
-<li>По умолчанию поиск проводится <i>по всем</i> ключевым словам (агенс <b>AND</b> экспериенцер)</li>
-<li>Используйте <b>OR</b> для поиска того или иного термина, напр. <i>образование OR обучение</i></li>
-<li>Используйте скобки для создания сложных фраз, напр. <i>архив ((журналов OR конференций) NOT диссертаций)</i></li>
-<li>Для поиска точной фразы используйте кавычки, напр. <i>"научные исследования"</i></li>
-<li>Исключайте слово при помощи знака <b>-</b> (дефис) или оператора <b>NOT</b>; напр. <i>конкурс -красоты</i> или же <i>конкурс NOT красоты</i></li>
-<li>Используйте <b>*</b> в качестве версификатора, напр. <i>научн*</i> охватит слова "научный", "научные" и т.д.</li>
+<li>По умолчанию поиск проводится <em>по всем</em> ключевым словам (агенс <strong>AND</strong> экспериенцер)</li>
+<li>Используйте <strong>OR</strong> для поиска того или иного термина, напр. <em>образование OR обучение</em></li>
+<li>Используйте скобки для создания сложных фраз, напр. <em>архив ((журналов OR конференций) NOT диссертаций)</em></li>
+<li>Для поиска точной фразы используйте кавычки, напр. <em>"научные исследования"</em></li>
+<li>Исключайте слово при помощи знака <strong>-</strong> (дефис) или оператора <strong>NOT</strong>; напр. <em>конкурс -красоты</em> или же <em>конкурс NOT красоты</em></li>
+<li>Используйте <strong>*</strong> в качестве версификатора, напр. <em>научн*</em> охватит слова "научный", "научные" и т.д.</li>
 </ul>]]></message>
 
 	<!-- Interstitial page for PDFs -->
@@ -2191,7 +2191,7 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="installer.installFileError"><![CDATA[The installation file <tt>dbscripts/xml/install.xml</tt> does not exist or is not readable.]]></message>
 	<message key="installer.installParseDBFileError"><![CDATA[Error parsing the database installation file <tt>{$file}</tt>.]]></message>
 	<message key="installer.configFileError"><![CDATA[The configuration file <tt>config.inc.php</tt> does not exist or is not readable.]]></message>
-	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<b>Warning:</b> If installation failed part way through database installation you may need to drop your OJS database or database tables before attempting to reinstall the database.]]></message>
+	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<strong>Warning:</strong> If installation failed part way through database installation you may need to drop your OJS database or database tables before attempting to reinstall the database.]]></message>
 
 	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>IMPORTANT!</h4>
 <p>The installer could not automatically overwrite the configuration file. Before attempting to use the system, please open <tt>config.inc.php</tt> in a suitable text editor and replace its contents with the contents of the text field below.</p>]]></message>
@@ -2202,7 +2202,7 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="installer.installationComplete"><![CDATA[<p>Installation of OJS has completed successfully.</p>
 <p>To begin using the system, <a href="{$indexUrl}/index/login">login</a> with the username and password entered on the previous page.</p>]]></message>
 	<message key="installer.upgradeComplete"><![CDATA[<p>Upgrade of OJS to version {$version} has completed successfully.</p>
-<p>Don't forget to set the "installed" setting in your config.inc.php configuration file back to <i>On</i>.</p>]]></message>
+<p>Don't forget to set the "installed" setting in your config.inc.php configuration file back to <em>On</em>.</p>]]></message>
 	<message key="installer.skipFilesDir">Do not create required subdirectories (only useful for a manual installation)</message>
 
 	<message key="installer.releaseNotes">Release Notes</message>
@@ -2469,7 +2469,7 @@ The file to be copyedited is in Word or .rtf format and therefore can be easily 
 
 <h4>Copyediting Systems</h4>
 
-<b>1. Microsoft Word's Track Changes</b>
+<strong>1. Microsoft Word's Track Changes</strong>
 
 Under Tools in the menu bar, the feature Track Changes enables the copyeditor to make insertions (text appears in color) and deletions (text appears crossed out in color or in the margins as deleted). The copyeditor can post queries to both the author (Author Queries) and to the editor (Editor Queries) by inserting these queries in square brackets. The copyedited version is then uploaded and the editor is notified. The editor then reviews the text and notifies the author. 
 
@@ -2478,50 +2478,50 @@ The editor and author should leave those changes with which they are satisfied. 
 After the text has been reviewed by editor and author, the copyeditor will make a final pass over the text accepting the changes in preparation for the layout and galley stage. 
 
 
-<b>2. Harvard Educational Review </b>
+<strong>2. Harvard Educational Review </strong>
 
-<b>Instructions for Making Electronic Revisions to the Manuscript</b>
+<strong>Instructions for Making Electronic Revisions to the Manuscript</strong>
 
 Please follow the following protocol for making electronic revisions to your manuscript:
 
-<b>Responding to suggested changes</b>
+<strong>Responding to suggested changes</strong>
 &nbsp; For each of the suggested changes that you accept, unbold the text
-&nbsp; For each of the suggested changes that you do not accept, re-enter the original text and <b>bold</b> it
+&nbsp; For each of the suggested changes that you do not accept, re-enter the original text and <strong>bold</strong> it
 
-<b>Making additions and deletions</b>
-&nbsp; Indicate additions by <b>bolding</b> the new text
-&nbsp; Replace deleted sections with: <b>[deleted text]</b>
-&nbsp; If you delete a sentence or more, please indicate with a note, e.g., <b>[deleted 2 sentences]</b>
+<strong>Making additions and deletions</strong>
+&nbsp; Indicate additions by <strong>bolding</strong> the new text
+&nbsp; Replace deleted sections with: <strong>[deleted text]</strong>
+&nbsp; If you delete a sentence or more, please indicate with a note, e.g., <strong>[deleted 2 sentences]</strong>
 
-<b>Responding to Queries to the Author (QAs)</b>
+<strong>Responding to Queries to the Author (QAs)</strong>
 &nbsp; Keep all QAs intact and bolded within the text. Do not delete them
 &nbsp; To reply to a QA, add a comment after it. Comments should be delimited using:
-<b>[Comment:</b>]
-&nbsp; e.g., <b>[Comment: Expanded discussion of methodology as you suggested]</b>
+<strong>[Comment:</strong>]
+&nbsp; e.g., <strong>[Comment: Expanded discussion of methodology as you suggested]</strong>
 
-<b>Making comments</b>
+<strong>Making comments</strong>
 &nbsp; Use comments to explain organizational changes or major revisions
-&nbsp; e.g., <b>[Comment: Moved the above paragraph from p. 5 to p. 7]</b>
+&nbsp; e.g., <strong>[Comment: Moved the above paragraph from p. 5 to p. 7]</strong>
 &nbsp; Note: When referring to page numbers, please use the page numbers from the printed copy of the manuscript that was sent to you. This is important since page numbers may change as a document is revised electronically.
 
 <h4>An Illustration of an Electronic Revision</h4>
 
-<b>The original "manuscript" file</b>
+<strong>The original "manuscript" file</strong>
 
 Before making dramatic departures from the structure and organization of your original manuscript, please check in with the co-chairs of your piece. After you are finished with your revisions, rename the file from AuthorNameQA.doc to AuthorNameQAR.doc (e.g., from LeeQA.doc to LeeQAR.doc). Print out a hardcopy of your manuscript and mail it with a floppy disk containing the completely revised and renamed word processing file.
 
 
-<b>Manuscript returned to the author with queries and suggestions</b>
+<strong>Manuscript returned to the author with queries and suggestions</strong>
 
-Before making dramatic departures from the structure and organization of <b>the manuscript that we are returning to you</b>, please check in with the <b>editors who are co-chairing</b> your piece. After you are finished with your revisions, rename the file from AuthorNameQA.doc to AuthorNameQAR.doc (e.g., from LeeQA.doc to LeeQAR.doc). Print out a hardcopy of your manuscript and mail it with a floppy disk containing the completely revised and renamed word processing file. <b>[QA: In this paragraph, it might help to stress the importance of following carefully the instructions for making electronic revisions. Otherwise the editing process may be slowed considerably]</b>
+Before making dramatic departures from the structure and organization of <strong>the manuscript that we are returning to you</strong>, please check in with the <strong>editors who are co-chairing</strong> your piece. After you are finished with your revisions, rename the file from AuthorNameQA.doc to AuthorNameQAR.doc (e.g., from LeeQA.doc to LeeQAR.doc). Print out a hardcopy of your manuscript and mail it with a floppy disk containing the completely revised and renamed word processing file. <strong>[QA: In this paragraph, it might help to stress the importance of following carefully the instructions for making electronic revisions. Otherwise the editing process may be slowed considerably]</strong>
 
-<b>Revised manuscript sent back to HER</b>
+<strong>Revised manuscript sent back to HER</strong>
 
-Before making dramatic departures from the structure and organization of the manuscript that we are returning to you, please check in with the editors who are co-chairing your piece. <b>Please understand that failure to follow the following instructions may significantly delay the publication of your manuscript.</b>
+Before making dramatic departures from the structure and organization of the manuscript that we are returning to you, please check in with the editors who are co-chairing your piece. <strong>Please understand that failure to follow the following instructions may significantly delay the publication of your manuscript.</strong>
 
-After you are finished with your revisions, rename the file from AuthorNameQA.doc to AuthorNameQAR.doc (e.g., from LeeQA.doc to LeeQAR.doc). Print out a hardcopy of your manuscript and mail it with a floppy disk containing the <b>[deleted word]</b> revised and renamed word processing file. <b>[QA: In this paragraph, it might help to stress the importance of following carefully the instructions for making electronic revisions. Otherwise the editing process may be slowed considerably] [Comment: I added a sentence in response to your suggestion.]</b>
+After you are finished with your revisions, rename the file from AuthorNameQA.doc to AuthorNameQAR.doc (e.g., from LeeQA.doc to LeeQAR.doc). Print out a hardcopy of your manuscript and mail it with a floppy disk containing the <strong>[deleted word]</strong> revised and renamed word processing file. <strong>[QA: In this paragraph, it might help to stress the importance of following carefully the instructions for making electronic revisions. Otherwise the editing process may be slowed considerably] [Comment: I added a sentence in response to your suggestion.]</strong>
 
-<b>Notes:</b>
+<strong>Notes:</strong>
 &bull; Unbolded text indicates acceptance of the suggested changes to the first sentence
 &bull; Sentence added in response to QA. Bold text indicates addition of new text
 &bull; [deleted word] indicates deletion of "completely"

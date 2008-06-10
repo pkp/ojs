@@ -529,7 +529,7 @@
 	<message key="admin.settings.oaiRegistration">Règîþtèr ßîtè fór Îñðèxîñg (Mètåðåtå Hårvèþtîñg)</message>
 	<message key="admin.settings.oaiRegistrationDescription"><![CDATA[Tó håvè thè çóñtèñtþ óf åll jóürñålþ hóþtèð óñ thîþ þîtè îñðèxèð wîthîñ å glóbållý ðîþtrîbütèð þýþtèm óf rèþèårçh ðåtåbåþèþ, <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">règîþtèr</a> ýóür þîtè'þ ÜRL wîth thè Püblîç Kñówlèðgè Prójèçt mètåðåtå <a href="http://pkp.sfu.ca/harvester/" target="_blank">hårvèþtèr</a>. Thîþ tóól çóllèçtþ thè mètåðåtå fróm èåçh îñðèxèð îtèm îñ thîþ jóürñål, èñåblîñg åççüråtè åñð çóllèçtîvè þèårçhîñg åmóñg thè rèþèårçh þîtèþ thåt åðhèrè tó thè <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Òpèñ Ærçhîvèþ Îñîtîåtîvè Prótóçól fór Mètåðåtå Hårvèþtîñg</a>.
 <br /><br />
-<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Çlîçk hèrè</a> åñð èñtèr <span class="highlight">{$siteUrl}</span> üñðèr <b>ßîtè ÜRL</b>, åñð <span class="highlight">{$oaiUrl}</span> üñðèr <b>Båþè ÜRL fór ÒÆÎ Ærçhîvè</b>.
+<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Çlîçk hèrè</a> åñð èñtèr <span class="highlight">{$siteUrl}</span> üñðèr <strong>ßîtè ÜRL</strong>, åñð <span class="highlight">{$oaiUrl}</span> üñðèr <strong>Båþè ÜRL fór ÒÆÎ Ærçhîvè</strong>.
 <br /><br />
 Ñótè thåt thè ÒÆÎ îñtèrfåçè çåñ bè ðîþåblèð fór thîþ þîtè bý èðîtîñg thè ÒJß þýþtèm çóñfîgüråtîóñ. Fütürè vèrþîóñþ óf ÒJß wîll ållów thè ÒÆÎ îñtèrfåçè tó bè èñåblèð ór ðîþåblèð fór îñðîvîðüål jóürñålþ wîthîñ thè þîtè.]]></message>
 	<message key="admin.siteManagement">ßîtè Måñågèmèñt</message>
@@ -729,7 +729,7 @@
 	<message key="manager.setup.look.description">Hómèpågè hèåðèr, çóñtèñt, jóürñål hèåðèr, fóótèr, ñåvîgåtîóñ bår, åñð þtýlè þhèèt.</message>
 	<message key="manager.setup.journalTitle">Jóürñål tîtlè</message>
 	<message key="manager.setup.focusScope">Fóçüþ åñð ßçópè</message>
-	<message key="manager.setup.focusScopeDescription"><![CDATA[<b>ÉXÆMPLÉ HTML ÐÆTÆ</b>]]></message>
+	<message key="manager.setup.focusScopeDescription"><![CDATA[<strong>ÉXÆMPLÉ HTML ÐÆTÆ</strong>]]></message>
 	<message key="manager.setup.journalSetupUpdated">Ýóür jóürñål þètüp håþ bèèñ üpðåtèð.</message>
 	<message key="manager.setup.selectOne">ßèlèçt óñè</message>
 	<message key="manager.setup.gettingDownTheDetails">ßtèp 1. Gèttîñg Ðówñ thè Ðètåîlþ</message>
@@ -842,7 +842,7 @@
 	<message key="manager.setup.lockssLicenses"><![CDATA[ßèè <a href="http://lockss.stanford.edu/publishers/publishers.htm" target="_blank">óthèr vèrþîóñþ óf å LÒÇKßß lîçèñþè</a>.]]></message>
 	<message key="manager.setup.guidingSubmissions">ßtèp 3. Güîðîñg ßübmîþþîóñþ</message>
 	<message key="manager.setup.authorGuidelines">Æüthór Güîðèlîñèþ</message>
-	<message key="manager.setup.authorGuidelinesDescription"><![CDATA[ßèt óüt fór åüthórþ thè bîblîógråphîç åñð fórmåttîñg þtåñðårðþ üþèð fór îtèmþ þübmîttèð tó thè jóürñål (è.g., <i>Püblîçåtîóñ Måñüål óf thè Æmèrîçåñ Pþýçhólógîçål Æþþóçîåtîóñ</i>, 5th èðîtîóñ, 2001). Ît îþ óftèñ hèlpfül tó próvîðè èxåmplèþ óf thè çómmóñ çîtåtîóñ fórmåtþ fór jóürñålþ åñð bóókþ tó bè üþèð îñ þübmîþþîóñþ. Ælþó îðèñtîfý thè týpèþ óf åppróprîåtè ßüpplèmèñtårý Fîlèþ (è.g., ðåtå-þètþ, rèþèårçh îñþtrümèñtþ, ètç.) whîçh åüthórþ þhóülð bè èñçóürågèð tó üplóåð, îñ åððîtîóñ tó thèîr þübmîþþîóñ, tó èñhåñçè rèåðèrþ' èñgågèmèñt wîth thèîr wórk.]]></message>
+	<message key="manager.setup.authorGuidelinesDescription"><![CDATA[ßèt óüt fór åüthórþ thè bîblîógråphîç åñð fórmåttîñg þtåñðårðþ üþèð fór îtèmþ þübmîttèð tó thè jóürñål (è.g., <em>Püblîçåtîóñ Måñüål óf thè Æmèrîçåñ Pþýçhólógîçål Æþþóçîåtîóñ</em>, 5th èðîtîóñ, 2001). Ît îþ óftèñ hèlpfül tó próvîðè èxåmplèþ óf thè çómmóñ çîtåtîóñ fórmåtþ fór jóürñålþ åñð bóókþ tó bè üþèð îñ þübmîþþîóñþ. Ælþó îðèñtîfý thè týpèþ óf åppróprîåtè ßüpplèmèñtårý Fîlèþ (è.g., ðåtå-þètþ, rèþèårçh îñþtrümèñtþ, ètç.) whîçh åüthórþ þhóülð bè èñçóürågèð tó üplóåð, îñ åððîtîóñ tó thèîr þübmîþþîóñ, tó èñhåñçè rèåðèrþ' èñgågèmèñt wîth thèîr wórk.]]></message>
 	<message key="manager.setup.submissionGuidelines">ßübmîþþîóñ güîðèlîñèþ</message>
 	<message key="manager.setup.submissionPreparationChecklist">ßübmîþþîóñ Prèpåråtîóñ Çhèçklîþt</message>
 	<message key="manager.setup.submissionPreparationChecklistDescription">Òñ måkîñg å þübmîþþîóñ tó thè jóürñål, åüthórþ årè fîrþt åþkèð tó çhèçk èåçh îtèm óñ thè ßübmîþþîóñ Prèpåråtîóñ Çhèçklîþt åþ çómplètèð, bèfórè próçèèðîñg. Thè çhèçklîþt ålþó åppèårþ îñ thè Æüthór Güîðèlîñèþ, üñðèr Æbóüt thè Jóürñål. Thè lîþt çåñ bè èðîtèð bèlów, büt åll îtèmþ óñ thè lîþt wîll rèqüîrè å çhèçkmårk bèfórè åüthórþ çåñ próçèèð wîth thèîr þübmîþþîóñ.</message>
@@ -882,7 +882,7 @@ Tîtlè óf çlåþþîfîçåtîóñ þýþtèm]]></message>
 <br /><br />
 Ñótè thåt îf ýóür þîtè åðmîñîþtråtór håþ ålrèåðý règîþtèrèð thîþ þîtè wîth thè PKP Hårvèþtèr, ýóür jóürñål wîll bè îñðèxèð åütómåtîçållý åñð ýóü ðó ñót ñèèð tó règîþtèr ýóür jóürñål.
 <br /><br />
-<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Çlîçk hèrè</a> åñð èñtèr <span class="highlight">{$siteUrl}</span> üñðèr <b>ßîtè ÜRL</b>, åñð <span class="highlight">{$oaiUrl}</span> üñðèr <b>Båþè ÜRL fór ÒÆÎ Ærçhîvè</b>.]]></message>
+<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Çlîçk hèrè</a> åñð èñtèr <span class="highlight">{$siteUrl}</span> üñðèr <strong>ßîtè ÜRL</strong>, åñð <span class="highlight">{$oaiUrl}</span> üñðèr <strong>Båþè ÜRL fór ÒÆÎ Ærçhîvè</strong>.]]></message>
 	<message key="manager.setup.notifications">Ñótîfîçåtîóñ óf Æüthór ßübmîþþîóñ</message>
 	<message key="manager.setup.notifications.description">Òñ çómplètîñg thè þübmîþþîóñ próçèþþ, åüthórþ årè åütómåtîçållý þèñt åñ åçkñówlèðgèmèñt èmåîl (whîçh çåñ bè vîèwèð åñð èðîtèð îñ Prèpårèð Émåîlþ). Îñ åððîtîóñ, å çópý óf thè åçkñówlèðgèmèñt èmåîl çåñ bè þèñt åþ fóllówþ:</message>
 	<message key="manager.setup.notifications.copyPrimaryContact">ßèñð å çópý tó thè jóürñål'þ prîmårý çóñtåçt, îðèñtîfîèð îñ ßètüp ßtèp 1.</message>
@@ -1730,7 +1730,7 @@ Thè fîlè çåñ bè vîèwèð bý çlîçkîñg óñ thè fîlè ñåmè. Æ
 	<message key="user.register.privacyStatement">Prîvåçý ßtåtèmèñt</message>
 	<message key="user.register.completeForm">Fîll îñ thîþ fórm tó règîþtèr wîth thîþ jóürñål.</message>
 	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Çlîçk hèrè</a> îf ýóü årè ålrèåðý règîþtèrèð wîth thîþ ór åñóthèr jóürñål óñ thîþ þîtè.]]></message>
-	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Çlîçk hèrè</a> îf ýóü årè <b>ñót</b> ålrèåðý règîþtèrèð wîth thîþ ór åñóthèr jóürñål óñ thîþ þîtè.]]></message>
+	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Çlîçk hèrè</a> îf ýóü årè <strong>ñót</strong> ålrèåðý règîþtèrèð wîth thîþ ór åñóthèr jóürñål óñ thîþ þîtè.]]></message>
 	<message key="user.register.loginToRegister">Éñtèr ýóür èxîþtîñg üþèrñåmè åñð påþþwórð tó règîþtèr wîth thîþ jóürñål.</message>
 	<message key="user.register.registrationDisabled">Thîþ jóürñål îþ çürrèñtlý ñót åççèptîñg üþèr règîþtråtîóñþ.</message>
 	<message key="user.register.usernameRestriction">Thè üþèrñåmè müþt çóñtåîñ óñlý lówèrçåþè lèttèrþ, ñümbèrþ, åñð hýphèñþ/üñðèrþçórèþ.</message>
@@ -1771,12 +1771,12 @@ Thè fîlè çåñ bè vîèwèð bý çlîçkîñg óñ thè fîlè ñåmè. Æ
 	<message key="search.syntaxInstructions"><![CDATA[ßèårçh tîpþ: <ul>
 <li>ßèårçh tèrmþ årè çåþè-îñþèñþîtîvè</li>
 <li>Çómmóñ wórðþ årè îgñórèð</li>
-<li>Bý ðèfåült óñlý årtîçlèþ çóñtåîñîñg <i>åll</i> tèrmþ îñ thè qüèrý årè rètürñèð (î.è., <i>ÆÑÐ</i> îþ împlîèð)</li>
-<li>Çómbîñè mültîplè wórðþ wîth <i>ÒR</i> tó fîñð årtîçlèþ çóñtåîñîñg èîthèr tèrm; è.g., <i>èðüçåtîóñ ÒR rèþèårçh</i></li>
-<li>Üþè pårèñthèþèþ tó çrèåtè mórè çómplèx qüèrîèþ; è.g., <i>årçhîvè ((jóürñål ÒR çóñfèrèñçè) ÑÒT thèþèþ)</i></li>
-<li>ßèårçh fór åñ èxåçt phråþè bý püttîñg ît îñ qüótèþ; è.g., <i>"ópèñ åççèþþ püblîþhîñg"</i></li>
-<li>Éxçlüðè å wórð bý prèfîxîñg ît wîth <b>-</b> ór <i>ÑÒT</i>; è.g. <i>óñlîñè -pólîtîçþ</i> ór <i>óñlîñè ÑÒT pólîtîçþ</i></li>
-<li>Üþè <b>*</b> îñ å tèrm åþ å wîlðçårð tó måtçh åñý þèqüèñçè óf çhåråçtèrþ; è.g., <i>þóçî* mórålîtý</i> wóülð måtçh ðóçümèñtþ çóñtåîñîñg "þóçîólógîçål" ór "þóçîètål"</li>
+<li>Bý ðèfåült óñlý årtîçlèþ çóñtåîñîñg <em>åll</em> tèrmþ îñ thè qüèrý årè rètürñèð (î.è., <em>ÆÑÐ</em> îþ împlîèð)</li>
+<li>Çómbîñè mültîplè wórðþ wîth <em>ÒR</em> tó fîñð årtîçlèþ çóñtåîñîñg èîthèr tèrm; è.g., <em>èðüçåtîóñ ÒR rèþèårçh</em></li>
+<li>Üþè pårèñthèþèþ tó çrèåtè mórè çómplèx qüèrîèþ; è.g., <em>årçhîvè ((jóürñål ÒR çóñfèrèñçè) ÑÒT thèþèþ)</em></li>
+<li>ßèårçh fór åñ èxåçt phråþè bý püttîñg ît îñ qüótèþ; è.g., <em>"ópèñ åççèþþ püblîþhîñg"</em></li>
+<li>Éxçlüðè å wórð bý prèfîxîñg ît wîth <strong>-</strong> ór <em>ÑÒT</em>; è.g. <em>óñlîñè -pólîtîçþ</em> ór <em>óñlîñè ÑÒT pólîtîçþ</em></li>
+<li>Üþè <strong>*</strong> îñ å tèrm åþ å wîlðçårð tó måtçh åñý þèqüèñçè óf çhåråçtèrþ; è.g., <em>þóçî* mórålîtý</em> wóülð måtçh ðóçümèñtþ çóñtåîñîñg "þóçîólógîçål" ór "þóçîètål"</li>
 </ul>]]></message>
 	<message key="search.operator.not">ñót</message>
 	<message key="search.operator.and">åñð</message>
@@ -1967,7 +1967,7 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="installer.installFileError"><![CDATA[Thè îñþtållåtîóñ fîlè <tt>ðbþçrîptþ/xml/îñþtåll.xml</tt> ðóèþ ñót èxîþt ór îþ ñót rèåðåblè.]]></message>
 	<message key="installer.installParseDBFileError"><![CDATA[Érrór pårþîñg thè ðåtåbåþè îñþtållåtîóñ fîlè <tt>{$file}</tt>.]]></message>
 	<message key="installer.configFileError"><![CDATA[Thè çóñfîgüråtîóñ fîlè <tt>çóñfîg.îñç.php</tt> ðóèþ ñót èxîþt ór îþ ñót rèåðåblè.]]></message>
-	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<b>Wårñîñg:</b> Îf îñþtållåtîóñ fåîlèð pårt wåý thróügh ðåtåbåþè îñþtållåtîóñ ýóü måý ñèèð tó ðróp ýóür ÒJß ðåtåbåþè ór ðåtåbåþè tåblèþ bèfórè åttèmptîñg tó rèîñþtåll thè ðåtåbåþè.]]></message>
+	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<strong>Wårñîñg:</strong> Îf îñþtållåtîóñ fåîlèð pårt wåý thróügh ðåtåbåþè îñþtållåtîóñ ýóü måý ñèèð tó ðróp ýóür ÒJß ðåtåbåþè ór ðåtåbåþè tåblèþ bèfórè åttèmptîñg tó rèîñþtåll thè ðåtåbåþè.]]></message>
 	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>ÎMPÒRTÆÑT!</h4>
 <p>Thè îñþtållèr çóülð ñót åütómåtîçållý óvèrwrîtè thè çóñfîgüråtîóñ fîlè. Bèfórè åttèmptîñg tó üþè thè þýþtèm, plèåþè ópèñ <tt>çóñfîg.îñç.php</tt> îñ å þüîtåblè tèxt èðîtór åñð rèplåçè îtþ çóñtèñtþ wîth thè çóñtèñtþ óf thè tèxt fîèlð bèlów.</p>]]></message>
 	<message key="installer.contentsOfConfigFile">Çóñtèñtþ óf çóñfîgüråtîóñ fîlè</message>
@@ -1978,7 +1978,7 @@ Your server currently supports mbstring: <strong>{$supportsMBString}</strong>]]>
 <p>Tó bègîñ üþîñg thè þýþtèm, <a href="{$loginUrl}">lógîñ</a> wîth thè üþèrñåmè åñð påþþwórð èñtèrèð óñ thè prèvîóüþ pågè.</p>
 <p>Îf ýóü wîþh tó rèçèîvè ñèwþ åñð üpðåtèþ, <strong>plèåþè règîþtèr åt <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.þfü.çå/ójþ/règîþtèr</a>.</strong> Îf ýóü håvè qüèþtîóñþ ór çómmèñtþ, plèåþè vîþît thè <a href="http://pkp.sfu.ca/support/forum" target="_new">þüppórt fórüm</a>.</p>]]></message>
 	<message key="installer.upgradeComplete"><![CDATA[<p>Üpgråðè óf ÒJß tó vèrþîóñ {$version} håþ çómplètèð þüççèþþfüllý.</p>
-<p>Ðóñ't fórgèt tó þèt thè "îñþtållèð" þèttîñg îñ ýóür çóñfîg.îñç.php çóñfîgüråtîóñ fîlè båçk tó <i>Òñ</i>.</p>
+<p>Ðóñ't fórgèt tó þèt thè "îñþtållèð" þèttîñg îñ ýóür çóñfîg.îñç.php çóñfîgüråtîóñ fîlè båçk tó <em>Òñ</em>.</p>
 <p>Îf ýóü håvèñ't ålrèåðý règîþtèrèð åñð wîþh tó rèçèîvè ñèwþ åñð üpðåtèþ, <strong>plèåþè règîþtèr åt <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.þfü.çå/ójþ/règîþtèr</a>.</strong> Îf ýóü håvè qüèþtîóñþ ór çómmèñtþ, plèåþè vîþît thè <a href="http://pkp.sfu.ca/support/forum" target="_new">þüppórt fórüm</a>.</p>]]></message>
 	<message key="installer.skipFilesDir">Ðó ñót çrèåtè rèqüîrèð þübðîrèçtórîèþ (óñlý üþèfül fór å måñüål îñþtållåtîóñ)</message>
 	<message key="installer.releaseNotes">Rèlèåþè Ñótèþ</message>
@@ -2196,7 +2196,7 @@ Thè fîlè tó bè çópýèðîtèð îþ îñ Wórð ór .rtf fórmåt åñð
 
 <h4>Çópýèðîtîñg ßýþtèmþ</h4>
 
-<b>1. Mîçróþóft Wórð'þ Tråçk Çhåñgèþ</b>
+<strong>1. Mîçróþóft Wórð'þ Tråçk Çhåñgèþ</strong>
 
 Üñðèr Tóólþ îñ thè mèñü bår, thè fèåtürè Tråçk Çhåñgèþ èñåblèþ thè çópýèðîtór tó måkè îñþèrtîóñþ (tèxt åppèårþ îñ çólór) åñð ðèlètîóñþ (tèxt åppèårþ çróþþèð óüt îñ çólór ór îñ thè mårgîñþ åþ ðèlètèð). Thè çópýèðîtór çåñ póþt qüèrîèþ tó bóth thè åüthór (Æüthór Qüèrîèþ) åñð tó thè èðîtór (Éðîtór Qüèrîèþ) bý îñþèrtîñg thèþè qüèrîèþ îñ þqüårè bråçkètþ. Thè çópýèðîtèð vèrþîóñ îþ thèñ üplóåðèð åñð thè èðîtór îþ ñótîfîèð. Thè èðîtór thèñ rèvîèwþ thè tèxt åñð ñótîfîèþ thè åüthór. 
 
@@ -2205,50 +2205,50 @@ Thè èðîtór åñð åüthór þhóülð lèåvè thóþè çhåñgèþ wîth
 Æftèr thè tèxt håþ bèèñ rèvîèwèð bý èðîtór åñð åüthór, thè çópýèðîtór wîll måkè å fîñål påþþ óvèr thè tèxt åççèptîñg thè çhåñgèþ îñ prèpåråtîóñ fór thè låýóüt åñð gållèý þtågè. 
 
 
-<b>2. Hårvårð Éðüçåtîóñål Rèvîèw </b>
+<strong>2. Hårvårð Éðüçåtîóñål Rèvîèw </strong>
 
-<b>Îñþtrüçtîóñþ fór Måkîñg Élèçtróñîç Rèvîþîóñþ tó thè Måñüþçrîpt</b>
+<strong>Îñþtrüçtîóñþ fór Måkîñg Élèçtróñîç Rèvîþîóñþ tó thè Måñüþçrîpt</strong>
 
 Plèåþè fóllów thè fóllówîñg prótóçól fór måkîñg èlèçtróñîç rèvîþîóñþ tó ýóür måñüþçrîpt:
 
-<b>Rèþpóñðîñg tó þüggèþtèð çhåñgèþ</b>
+<strong>Rèþpóñðîñg tó þüggèþtèð çhåñgèþ</strong>
 &amp;ñbþp; Fór èåçh óf thè þüggèþtèð çhåñgèþ thåt ýóü åççèpt, üñbólð thè tèxt
-&amp;ñbþp; Fór èåçh óf thè þüggèþtèð çhåñgèþ thåt ýóü ðó ñót åççèpt, rè-èñtèr thè órîgîñål tèxt åñð <b>bólð</b> ît
+&amp;ñbþp; Fór èåçh óf thè þüggèþtèð çhåñgèþ thåt ýóü ðó ñót åççèpt, rè-èñtèr thè órîgîñål tèxt åñð <strong>bólð</strong> ît
 
-<b>Måkîñg åððîtîóñþ åñð ðèlètîóñþ</b>
-&amp;ñbþp; Îñðîçåtè åððîtîóñþ bý <b>bólðîñg</b> thè ñèw tèxt
-&amp;ñbþp; Rèplåçè ðèlètèð þèçtîóñþ wîth: <b>[ðèlètèð tèxt]</b>
-&amp;ñbþp; Îf ýóü ðèlètè å þèñtèñçè ór mórè, plèåþè îñðîçåtè wîth å ñótè, è.g., <b>[ðèlètèð 2 þèñtèñçèþ]</b>
+<strong>Måkîñg åððîtîóñþ åñð ðèlètîóñþ</strong>
+&amp;ñbþp; Îñðîçåtè åððîtîóñþ bý <strong>bólðîñg</strong> thè ñèw tèxt
+&amp;ñbþp; Rèplåçè ðèlètèð þèçtîóñþ wîth: <strong>[ðèlètèð tèxt]</strong>
+&amp;ñbþp; Îf ýóü ðèlètè å þèñtèñçè ór mórè, plèåþè îñðîçåtè wîth å ñótè, è.g., <strong>[ðèlètèð 2 þèñtèñçèþ]</strong>
 
-<b>Rèþpóñðîñg tó Qüèrîèþ tó thè Æüthór (QÆþ)</b>
+<strong>Rèþpóñðîñg tó Qüèrîèþ tó thè Æüthór (QÆþ)</strong>
 &amp;ñbþp; Kèèp åll QÆþ îñtåçt åñð bólðèð wîthîñ thè tèxt. Ðó ñót ðèlètè thèm
 &amp;ñbþp; Tó rèplý tó å QÆ, åðð å çómmèñt åftèr ît. Çómmèñtþ þhóülð bè ðèlîmîtèð üþîñg:
-<b>[Çómmèñt:</b>]
-&amp;ñbþp; è.g., <b>[Çómmèñt: Éxpåñðèð ðîþçüþþîóñ óf mèthóðólógý åþ ýóü þüggèþtèð]</b>
+<strong>[Çómmèñt:</strong>]
+&amp;ñbþp; è.g., <strong>[Çómmèñt: Éxpåñðèð ðîþçüþþîóñ óf mèthóðólógý åþ ýóü þüggèþtèð]</strong>
 
-<b>Måkîñg çómmèñtþ</b>
+<strong>Måkîñg çómmèñtþ</strong>
 &amp;ñbþp; Üþè çómmèñtþ tó èxplåîñ órgåñîzåtîóñål çhåñgèþ ór måjór rèvîþîóñþ
-&amp;ñbþp; è.g., <b>[Çómmèñt: Móvèð thè åbóvè pårågråph fróm p. 5 tó p. 7]</b>
+&amp;ñbþp; è.g., <strong>[Çómmèñt: Móvèð thè åbóvè pårågråph fróm p. 5 tó p. 7]</strong>
 &amp;ñbþp; Ñótè: Whèñ rèfèrrîñg tó pågè ñümbèrþ, plèåþè üþè thè pågè ñümbèrþ fróm thè prîñtèð çópý óf thè måñüþçrîpt thåt wåþ þèñt tó ýóü. Thîþ îþ împórtåñt þîñçè pågè ñümbèrþ måý çhåñgè åþ å ðóçümèñt îþ rèvîþèð èlèçtróñîçållý.
 
 <h4>Æñ Îllüþtråtîóñ óf åñ Élèçtróñîç Rèvîþîóñ</h4>
 
-<b>Thè órîgîñål "måñüþçrîpt" fîlè</b>
+<strong>Thè órîgîñål "måñüþçrîpt" fîlè</strong>
 
 Bèfórè måkîñg ðråmåtîç ðèpårtürèþ fróm thè þtrüçtürè åñð órgåñîzåtîóñ óf ýóür órîgîñål måñüþçrîpt, plèåþè çhèçk îñ wîth thè çó-çhåîrþ óf ýóür pîèçè. Æftèr ýóü årè fîñîþhèð wîth ýóür rèvîþîóñþ, rèñåmè thè fîlè fróm ÆüthórÑåmèQÆ.ðóç tó ÆüthórÑåmèQÆR.ðóç (è.g., fróm LèèQÆ.ðóç tó LèèQÆR.ðóç). Prîñt óüt å hårðçópý óf ýóür måñüþçrîpt åñð måîl ît wîth å flóppý ðîþk çóñtåîñîñg thè çómplètèlý rèvîþèð åñð rèñåmèð wórð próçèþþîñg fîlè.
 
 
-<b>Måñüþçrîpt rètürñèð tó thè åüthór wîth qüèrîèþ åñð þüggèþtîóñþ</b>
+<strong>Måñüþçrîpt rètürñèð tó thè åüthór wîth qüèrîèþ åñð þüggèþtîóñþ</strong>
 
-Bèfórè måkîñg ðråmåtîç ðèpårtürèþ fróm thè þtrüçtürè åñð órgåñîzåtîóñ óf <b>thè måñüþçrîpt thåt wè årè rètürñîñg tó ýóü</b>, plèåþè çhèçk îñ wîth thè <b>èðîtórþ whó årè çó-çhåîrîñg</b> ýóür pîèçè. Æftèr ýóü årè fîñîþhèð wîth ýóür rèvîþîóñþ, rèñåmè thè fîlè fróm ÆüthórÑåmèQÆ.ðóç tó ÆüthórÑåmèQÆR.ðóç (è.g., fróm LèèQÆ.ðóç tó LèèQÆR.ðóç). Prîñt óüt å hårðçópý óf ýóür måñüþçrîpt åñð måîl ît wîth å flóppý ðîþk çóñtåîñîñg thè çómplètèlý rèvîþèð åñð rèñåmèð wórð próçèþþîñg fîlè. <b>[QÆ: Îñ thîþ pårågråph, ît mîght hèlp tó þtrèþþ thè împórtåñçè óf fóllówîñg çårèfüllý thè îñþtrüçtîóñþ fór måkîñg èlèçtróñîç rèvîþîóñþ. Òthèrwîþè thè èðîtîñg próçèþþ måý bè þlówèð çóñþîðèråblý]</b>
+Bèfórè måkîñg ðråmåtîç ðèpårtürèþ fróm thè þtrüçtürè åñð órgåñîzåtîóñ óf <strong>thè måñüþçrîpt thåt wè årè rètürñîñg tó ýóü</strong>, plèåþè çhèçk îñ wîth thè <strong>èðîtórþ whó årè çó-çhåîrîñg</strong> ýóür pîèçè. Æftèr ýóü årè fîñîþhèð wîth ýóür rèvîþîóñþ, rèñåmè thè fîlè fróm ÆüthórÑåmèQÆ.ðóç tó ÆüthórÑåmèQÆR.ðóç (è.g., fróm LèèQÆ.ðóç tó LèèQÆR.ðóç). Prîñt óüt å hårðçópý óf ýóür måñüþçrîpt åñð måîl ît wîth å flóppý ðîþk çóñtåîñîñg thè çómplètèlý rèvîþèð åñð rèñåmèð wórð próçèþþîñg fîlè. <strong>[QÆ: Îñ thîþ pårågråph, ît mîght hèlp tó þtrèþþ thè împórtåñçè óf fóllówîñg çårèfüllý thè îñþtrüçtîóñþ fór måkîñg èlèçtróñîç rèvîþîóñþ. Òthèrwîþè thè èðîtîñg próçèþþ måý bè þlówèð çóñþîðèråblý]</strong>
 
-<b>Rèvîþèð måñüþçrîpt þèñt båçk tó HÉR</b>
+<strong>Rèvîþèð måñüþçrîpt þèñt båçk tó HÉR</strong>
 
-Bèfórè måkîñg ðråmåtîç ðèpårtürèþ fróm thè þtrüçtürè åñð órgåñîzåtîóñ óf thè måñüþçrîpt thåt wè årè rètürñîñg tó ýóü, plèåþè çhèçk îñ wîth thè èðîtórþ whó årè çó-çhåîrîñg ýóür pîèçè. <b>Plèåþè üñðèrþtåñð thåt fåîlürè tó fóllów thè fóllówîñg îñþtrüçtîóñþ måý þîgñîfîçåñtlý ðèlåý thè püblîçåtîóñ óf ýóür måñüþçrîpt.</b>
+Bèfórè måkîñg ðråmåtîç ðèpårtürèþ fróm thè þtrüçtürè åñð órgåñîzåtîóñ óf thè måñüþçrîpt thåt wè årè rètürñîñg tó ýóü, plèåþè çhèçk îñ wîth thè èðîtórþ whó årè çó-çhåîrîñg ýóür pîèçè. <strong>Plèåþè üñðèrþtåñð thåt fåîlürè tó fóllów thè fóllówîñg îñþtrüçtîóñþ måý þîgñîfîçåñtlý ðèlåý thè püblîçåtîóñ óf ýóür måñüþçrîpt.</strong>
 
-Æftèr ýóü årè fîñîþhèð wîth ýóür rèvîþîóñþ, rèñåmè thè fîlè fróm ÆüthórÑåmèQÆ.ðóç tó ÆüthórÑåmèQÆR.ðóç (è.g., fróm LèèQÆ.ðóç tó LèèQÆR.ðóç). Prîñt óüt å hårðçópý óf ýóür måñüþçrîpt åñð måîl ît wîth å flóppý ðîþk çóñtåîñîñg thè <b>[ðèlètèð wórð]</b> rèvîþèð åñð rèñåmèð wórð próçèþþîñg fîlè. <b>[QÆ: Îñ thîþ pårågråph, ît mîght hèlp tó þtrèþþ thè împórtåñçè óf fóllówîñg çårèfüllý thè îñþtrüçtîóñþ fór måkîñg èlèçtróñîç rèvîþîóñþ. Òthèrwîþè thè èðîtîñg próçèþþ måý bè þlówèð çóñþîðèråblý] [Çómmèñt: Î åððèð å þèñtèñçè îñ rèþpóñþè tó ýóür þüggèþtîóñ.]</b>
+Æftèr ýóü årè fîñîþhèð wîth ýóür rèvîþîóñþ, rèñåmè thè fîlè fróm ÆüthórÑåmèQÆ.ðóç tó ÆüthórÑåmèQÆR.ðóç (è.g., fróm LèèQÆ.ðóç tó LèèQÆR.ðóç). Prîñt óüt å hårðçópý óf ýóür måñüþçrîpt åñð måîl ît wîth å flóppý ðîþk çóñtåîñîñg thè <strong>[ðèlètèð wórð]</strong> rèvîþèð åñð rèñåmèð wórð próçèþþîñg fîlè. <strong>[QÆ: Îñ thîþ pårågråph, ît mîght hèlp tó þtrèþþ thè împórtåñçè óf fóllówîñg çårèfüllý thè îñþtrüçtîóñþ fór måkîñg èlèçtróñîç rèvîþîóñþ. Òthèrwîþè thè èðîtîñg próçèþþ måý bè þlówèð çóñþîðèråblý] [Çómmèñt: Î åððèð å þèñtèñçè îñ rèþpóñþè tó ýóür þüggèþtîóñ.]</strong>
 
-<b>Ñótèþ:</b>
+<strong>Ñótèþ:</strong>
 &amp;büll; Üñbólðèð tèxt îñðîçåtèþ åççèptåñçè óf thè þüggèþtèð çhåñgèþ tó thè fîrþt þèñtèñçè
 &amp;büll; ßèñtèñçè åððèð îñ rèþpóñþè tó QÆ. Bólð tèxt îñðîçåtèþ åððîtîóñ óf ñèw tèxt
 &amp;büll; [ðèlètèð wórð] îñðîçåtèþ ðèlètîóñ óf "çómplètèlý"

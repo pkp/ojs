@@ -140,7 +140,7 @@
 	<message key="plugins.generic.thesis.manager.form.author">Autor y Supervisión</message>
 	<message key="plugins.generic.thesis.manager.form.studentEmailPublish">Publicar email del estudiante</message>
 	<message key="plugins.generic.thesis.manager.form.studentEmailPublishInstructions">si se marca, se publicará el email del estudiante junto al resumen de tesis.</message>
-	<message key="plugins.generic.thesis.manager.form.studentBioInstructions"><![CDATA[Inserte líneas en blanco para separar párrafos. Coloque el texto entre etiquetas <b></b>, <i></i>, o <u></u> para negrita, cursiva o subrayado, respectivamente (i.e. esta <i>palabra</i> estará en cursiva.)]]></message>
+	<message key="plugins.generic.thesis.manager.form.studentBioInstructions"><![CDATA[Inserte líneas en blanco para separar párrafos. Coloque el texto entre etiquetas <strong></strong>, <em></em>, o <u></u> para negrita, cursiva o subrayado, respectivamente (i.e. esta <em>palabra</em> estará en cursiva.)]]></message>
 	<message key="plugins.generic.thesis.manager.form.indexing">Indexado</message>
 	<message key="plugins.generic.thesis.manager.form.keyword">Palabras Clave</message>
 	<message key="plugins.generic.thesis.manager.form.method">Tipo, método o aproximación</message>
@@ -186,7 +186,7 @@
 	<message key="plugins.generic.thesis.manager.form.coverageGeo">Cobertura geo-espacial</message>
 	<message key="plugins.generic.thesis.manager.form.coverageChron">Cobertura histórica</message>
 	<message key="plugins.generic.thesis.manager.form.coverageSample">Características de la muestra</message>
-	<message key="plugins.generic.thesis.form.studentBioInstructions"><![CDATA[Inserte líneas en blanco para separar párrafos. Coloque el texto entre las etiquetas <b></b>, <i></i>, o <u></u> para negrita, cursiva o subrayado respectivamente.]]></message>
+	<message key="plugins.generic.thesis.form.studentBioInstructions"><![CDATA[Inserte líneas en blanco para separar párrafos. Coloque el texto entre las etiquetas <strong></strong>, <em></em>, o <u></u> para negrita, cursiva o subrayado respectivamente.]]></message>
 	<message key="plugins.generic.thesis.form.indexing">Indexado</message>
 	<message key="plugins.generic.thesis.form.indexingDescription">Elija términos que describan apropiadamente el contenido de la tesis conforme a las categorías utilizadas por esta revista. Separe cada término con punto y coma (término1; término2; término3).</message>
 	<message key="plugins.generic.thesis.form.discipline">Disciplina académica y sib-disciplinas</message>

@@ -14,7 +14,7 @@
 
 <topic id="journal/topic/000012" locale="tr_TR" title="Yeni Kullanıcı Oluştur" toc="journal/toc/000002" key="journal.users.createNewUser">
 	<section>
-		<![CDATA[<p>Dergi yöneticisi "Yeni kullanıcı Oluştur" bağlantısı ile sisteme yeni kullanıcı ekleyip, dergi yöneticiliğinden, okuyucuya dek dilediği rolü verebilir. Eklenen kullanıcı sisteme girdiğinde dilerse kişisel bilgilerini güncelleyebilir ve şifresini değiştirebilir.</p><p><i>Şifre Değiştirilmesi</i>. Kullanıcılar sisteme girdiklerinde şifrelerini değiştirebilirler. Dergi yöneticisi kullanıcı şifrelerine erişemez. Ancak kullanıcılar şifrelerini unuttuklarında, giriş sayfasındaki "Şifremi unuttum" bağlantısını tıklatarak, sistemin oluşturduğu yeni bir şifrenin e-posta adreslerine gönderilmesini sağlayabilirler.</p>]]>	
+		<![CDATA[<p>Dergi yöneticisi "Yeni kullanıcı Oluştur" bağlantısı ile sisteme yeni kullanıcı ekleyip, dergi yöneticiliğinden, okuyucuya dek dilediği rolü verebilir. Eklenen kullanıcı sisteme girdiğinde dilerse kişisel bilgilerini güncelleyebilir ve şifresini değiştirebilir.</p><p><em>Şifre Değiştirilmesi</em>. Kullanıcılar sisteme girdiklerinde şifrelerini değiştirebilirler. Dergi yöneticisi kullanıcı şifrelerine erişemez. Ancak kullanıcılar şifrelerini unuttuklarında, giriş sayfasındaki "Şifremi unuttum" bağlantısını tıklatarak, sistemin oluşturduğu yeni bir şifrenin e-posta adreslerine gönderilmesini sağlayabilirler.</p>]]>	
 	</section>
         <section title="Yeni Görev Ver"> 
                    <![CDATA[<p>Dergi yöneticisi kullanıcılara bir veya daha fazla rol veya görev verebilir.</p>]]> 

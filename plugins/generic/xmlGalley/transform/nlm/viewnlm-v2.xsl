@@ -1665,7 +1665,7 @@ doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"            doctype-system="htt
 </xsl:template>
 
 <xsl:template match="italic">
-  <i><xsl:apply-templates/></i>
+  <em><xsl:apply-templates/></em>
 </xsl:template>
 
 <xsl:template match="monospace">
@@ -2622,10 +2622,10 @@ doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"            doctype-system="htt
       <xsl:apply-templates/>
     </xsl:when>
     <xsl:when test="not(.//italic) and not (.//sup)">
-      <sup><i><xsl:apply-templates/></i></sup>
+      <sup><em><xsl:apply-templates/></em></sup>
     </xsl:when>
     <xsl:when test="not(.//italic)">
-      <i><xsl:apply-templates/></i>
+      <em><xsl:apply-templates/></em>
     </xsl:when>
     <xsl:otherwise>
       <xsl:apply-templates/>
@@ -2641,10 +2641,10 @@ doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"            doctype-system="htt
       <xsl:apply-templates/>
     </xsl:when>
     <xsl:when test="not(.//italic) and not (.//sup)">
-      <sup><i><xsl:apply-templates/></i></sup>
+      <sup><em><xsl:apply-templates/></em></sup>
     </xsl:when>
     <xsl:when test="not(.//italic)">
-      <i><xsl:apply-templates/></i>
+      <em><xsl:apply-templates/></em>
     </xsl:when>
     <xsl:otherwise>
       <xsl:apply-templates/>
@@ -3071,8 +3071,8 @@ doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"            doctype-system="htt
 
     <xsl:if test="term-head|def-head">
       <tr>
-        <td valign="top" align="right"><i><xsl:apply-templates select="term-head"/></i></td>
-        <td valign="top"><i><xsl:apply-templates select="def-head"/></i></td>
+        <td valign="top" align="right"><em><xsl:apply-templates select="term-head"/></em></td>
+        <td valign="top"><em><xsl:apply-templates select="def-head"/></em></td>
       </tr>
       <xsl:call-template name="nl-1"/>
     </xsl:if>
@@ -3599,7 +3599,7 @@ doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"            doctype-system="htt
 
 <!-- becomes content of table cell, column 1-->
 <xsl:template match="ref/label">
-    <b><i><xsl:apply-templates/><xsl:text>. </xsl:text></i></b>
+    <b><em><xsl:apply-templates/><xsl:text>. </xsl:text></em></b>
 </xsl:template>
 
 
@@ -4238,7 +4238,7 @@ doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"            doctype-system="htt
 
 
 <xsl:template match="source" mode="nscitation">
-  <i><xsl:apply-templates/></i>
+  <em><xsl:apply-templates/></em>
 </xsl:template>
 
 <xsl:template match="source" mode="book">

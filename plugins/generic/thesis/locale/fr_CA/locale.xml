@@ -196,11 +196,11 @@
 	<message key="plugins.generic.thesis.form.studentEmailPublishInstructions">Si coché, le courriel de l'étudiant sera publié avec le résumé de la thèse.</message>
 	<message key="plugins.generic.thesis.form.commentInstructions">Veuillez inclure tout renseignement supplémentaire pouvant être pertinent à votre soumission.</message>
 	<message key="plugins.generic.thesis.form.uploadCodeInstructions">À l'usage du département.</message>
-	<message key="plugins.generic.thesis.manager.form.studentBioInstructions"><![CDATA[Insérez des lignes en blanc pour séparer les paragraphes. Placez le texte entre <b></b>, <i></i>, and <u></u> les étiquettes seront en gras, italiques et en surligné respectivement (p. ex. : ce <i>word</i> sera en italiques.)]]></message>
+	<message key="plugins.generic.thesis.manager.form.studentBioInstructions"><![CDATA[Insérez des lignes en blanc pour séparer les paragraphes. Placez le texte entre <strong></strong>, <em></em>, and <u></u> les étiquettes seront en gras, italiques et en surligné respectivement (p. ex. : ce <em>word</em> sera en italiques.)]]></message>
 	<message key="plugins.generic.thesis.manager.form.languageInstructions"><![CDATA[Anglais=en; français=fr; espagnol=es. <a href="http://www.loc.gov/standards/iso639-2/langcodes.html" target="_blank">Codes additionnels</a>.]]></message>
 	<message key="plugins.generic.thesis.studentFullNameLast">{$lastName}, {$firstName}{$space}{$middleName}</message>
 	<message key="plugins.generic.thesis.supervisorFullNameLast">{$lastName}, {$firstName}{$space}{$middleName}</message>
 	<message key="plugins.generic.thesis.supervisorFullName">{$firstName} {$middleName}{$space}{$lastName}</message>
-	<message key="plugins.generic.thesis.form.studentBioInstructions"><![CDATA[Insérez des lignes en blanc pour séparer les paragraphes. Placez le texte entre <b></b>, <i></i>, et <u></u> les balises en gras, italiques et en surligné respectivement (p. ex. : ce <i>motd</i> sera en italiques.)]]></message>
+	<message key="plugins.generic.thesis.form.studentBioInstructions"><![CDATA[Insérez des lignes en blanc pour séparer les paragraphes. Placez le texte entre <strong></strong>, <em></em>, et <u></u> les balises en gras, italiques et en surligné respectivement (p. ex. : ce <em>motd</em> sera en italiques.)]]></message>
 	<message key="plugins.generic.thesis.form.languageInstructions"><![CDATA[Anglais=en; français=fr; espagnol=es. <a href="http://www.loc.gov/standards/iso639-2/langcodes.html" target="_blank">Codes additionnels</a>.]]></message>
 </locale>

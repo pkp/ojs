@@ -574,7 +574,7 @@
   <message key="admin.settings.oaiRegistrationDescription">
     <![CDATA[このサイトで提供するすべての雑誌のコンテンツを世界中に存在する研究情報データベースで検索できるようにするために、このサイトのURLをPublic Knowledge Projectメタデータ<a href="http://pkp.sfu.ca/harvester/" target="_blank">ハーベスタ</a>に<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">登録</a>してください。ハーベスタはこの雑誌に登録された各アイテムからメタデータを収集し、<a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">OAI-PMH</a>に準拠する研究情報サイトの情報と共に正確で包括的な検索を可能にします。
 <br /><br />
-<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">ここをクリック</a>して<b>サイトURL</b>欄に<span class="highlight">{$siteUrl}</span>を、<b>OAIアーカイブのBase URL</b>の欄に<span class="highlight">{$oaiUrl}</span>を各々入力してください。
+<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">ここをクリック</a>して<strong>サイトURL</strong>欄に<span class="highlight">{$siteUrl}</span>を、<strong>OAIアーカイブのBase URL</strong>の欄に<span class="highlight">{$oaiUrl}</span>を各々入力してください。
 <br /><br />
 OJSのシステム設定を変更することにより、このサイト全体のOAIインターフェースを無効にすることができます。将来的には、OAIインターフェースの有効･無効を雑誌ごとに設定できるようにする予定です。]]>
   </message>
@@ -793,7 +793,7 @@ OJSのシステム設定を変更することにより、このサイト全体�
   <message key="manager.setup.journalTitle">雑誌名</message>
   <message key="manager.setup.focusScope">対象と範囲</message>
   <message key="manager.setup.focusScopeDescription">
-    <![CDATA[<b>HTMLデータ例</b>]]>
+    <![CDATA[<strong>HTMLデータ例</strong>]]>
   </message>
   <message key="manager.setup.journalSetupUpdated">雑誌設定が更新されました。</message>
   <message key="manager.setup.selectOne">1つ選択してください</message>
@@ -927,7 +927,7 @@ OJSのシステム設定を変更することにより、このサイト全体�
   <message key="manager.setup.guidingSubmissions">ステップ 3. 投稿の手引き</message>
   <message key="manager.setup.authorGuidelines">著者の手引き（執筆要項）</message>
   <message key="manager.setup.authorGuidelinesDescription">
-    <![CDATA[雑誌に投稿するアイテムに関して著者が従うべき書誌・書式標準（例えば、<i>米国心理学会出版マニュアル</i>、第5版、2001年）を設定する。投稿に使用する雑誌および図書の一般的な引用書式例の提供も参考になるでしょう。また、読者による研究の再現を容易にするために、著者にアップロードを推奨する投稿物以外の適当な補足ファイル（データセットや研究器具など）の種類を指定してください]]>
+    <![CDATA[雑誌に投稿するアイテムに関して著者が従うべき書誌・書式標準（例えば、<em>米国心理学会出版マニュアル</em>、第5版、2001年）を設定する。投稿に使用する雑誌および図書の一般的な引用書式例の提供も参考になるでしょう。また、読者による研究の再現を容易にするために、著者にアップロードを推奨する投稿物以外の適当な補足ファイル（データセットや研究器具など）の種類を指定してください]]>
   </message>
   <message key="manager.setup.submissionGuidelines">投稿の手引き</message>
   <message key="manager.setup.submissionPreparationChecklist">投稿前の確認リスト</message>
@@ -974,7 +974,7 @@ OJSのシステム設定を変更することにより、このサイト全体�
 <br /><br />
 サイト管理者がこのサイトを既にPKPハーベスタに登録している場合は、この雑誌は自動的にインデックス化されますので、登録する必要はありません。
 <br /><br />
-<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">ここをクリック</a>して<b>サイトURL</b>欄に<span class="highlight">{$siteUrl}</span>を、<b>OAIアーカイブのBase URL</b>の欄に<span class="highlight">{$oaiUrl}</span>を各々入力してください。
+<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">ここをクリック</a>して<strong>サイトURL</strong>欄に<span class="highlight">{$siteUrl}</span>を、<strong>OAIアーカイブのBase URL</strong>の欄に<span class="highlight">{$oaiUrl}</span>を各々入力してください。
 ]]>
   </message>
   <message key="manager.setup.notifications">著者への投稿受領通知</message>
@@ -1892,7 +1892,7 @@ OJSのシステム設定を変更することにより、このサイト全体�
     <![CDATA[既にこの雑誌またはこのサイトの別の雑誌に登録している場合は、<a href="{$registerUrl}">ここをクリック</a>してください。]]>
   </message>
   <message key="user.register.notAlreadyRegisteredOtherJournal">
-    <![CDATA[まだこのサイトの雑誌に登録して<b>いない</b>場合は、<a href="{$registerUrl}">ここをクリック</a>してください。]]>
+    <![CDATA[まだこのサイトの雑誌に登録して<strong>いない</strong>場合は、<a href="{$registerUrl}">ここをクリック</a>してください。]]>
   </message>
   <message key="user.register.loginToRegister">この雑誌に登録するには、ユーザ名とパスワードを入力してください。</message>
   <message key="user.register.registrationDisabled">この雑誌は、現在、ユーザ登録を受付けていません。</message>
@@ -1936,12 +1936,12 @@ OJSのシステム設定を変更することにより、このサイト全体�
     <![CDATA[検索のヒント: <ul>
 <li>検査語は大文字・小文字を区別しません。</li>
 <li>一般的な語は無視されます</li>
-<li>デフォルトでは、検索語に指定した<i>すべての</i>語を含む論文だけがヒットします（すなわち、暗黙に<i>AND</i>検索が行われます）</li>
-<li>複数の語を<i>OR</i>でつなげると、これらのいずれかの語を含む論文を検索します。例: <i>education OR reserach</i></li>
-<li>複雑なクエリの作成にはカッコを使用してください。例: <i>archive ((journal OR conference) NOT theses)</i></li>
-<li>フレーズ検索を行う場合は、引用符で囲んでください。例: <i>"open access publishing"</i></li>
-<li>ある語を除外する場合は、<b>-</b> または <i>NOT</i> を前に付けてください。例: <i>online -politics</i> または <i>online NOT politics</i></li>
-<li>任意の文字列にマッチさせるためのワイルドカードには <b>*</b> を使用してください。例えば、 <i>soci* morality</i> は、"sociological" または "societal" を持つ文書にヒットします。</li>
+<li>デフォルトでは、検索語に指定した<em>すべての</em>語を含む論文だけがヒットします（すなわち、暗黙に<em>AND</em>検索が行われます）</li>
+<li>複数の語を<em>OR</em>でつなげると、これらのいずれかの語を含む論文を検索します。例: <em>education OR reserach</em></li>
+<li>複雑なクエリの作成にはカッコを使用してください。例: <em>archive ((journal OR conference) NOT theses)</em></li>
+<li>フレーズ検索を行う場合は、引用符で囲んでください。例: <em>"open access publishing"</em></li>
+<li>ある語を除外する場合は、<strong>-</strong> または <em>NOT</em> を前に付けてください。例: <em>online -politics</em> または <em>online NOT politics</em></li>
+<li>任意の文字列にマッチさせるためのワイルドカードには <strong>*</strong> を使用してください。例えば、 <em>soci* morality</em> は、"sociological" または "societal" を持つ文書にヒットします。</li>
 </ul>]]>
   </message>
   <message key="search.operator.not">not</message>
@@ -2168,7 +2168,7 @@ OJSのシステム設定を変更することにより、このサイト全体�
     <![CDATA[設定ファイル <tt>config.inc.php</tt> が存在しない、または、読めません。]]>
   </message>
   <message key="installer.reinstallAfterDatabaseError">
-    <![CDATA[<b>警告:</b> データベースのインストール途中でインストールが失敗した場合、データベースの再インストールを行う前に、OJSデータベース、または、テーブルを削除する必要があるかもしれません。]]>
+    <![CDATA[<strong>警告:</strong> データベースのインストール途中でインストールが失敗した場合、データベースの再インストールを行う前に、OJSデータベース、または、テーブルを削除する必要があるかもしれません。]]>
   </message>
   <message key="installer.overwriteConfigFileInstructions">
     <![CDATA[<h4>重要!</h4>
@@ -2187,7 +2187,7 @@ OJSのシステム設定を変更することにより、このサイト全体�
   </message>
   <message key="installer.upgradeComplete">
     <![CDATA[<p>OJS バージョン {$version} へのバージョンアップが終了しました。</p>
-<p> config.inc.php 設定ファイルの"installed"項目を<i>On</i>に戻すことを忘れないでください。</p>
+<p> config.inc.php 設定ファイルの"installed"項目を<em>On</em>に戻すことを忘れないでください。</p>
 <p>もしまだ登録されていなくて、お知らせや更新案内を受け取りたい場合は、<a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>で<strong>登録してください</strong>。ご質問やご意見がございましたら、<a href="http://pkp.sfu.ca/support/forum" target="_new">サポートフォーラム</a>にご参加ください。</p>]]>
   </message>
   <message key="installer.skipFilesDir">必要なサブディレクトリを作成しない（マニュアルインストール時にのみ有効）</message>
@@ -2430,7 +2430,7 @@ OJSのシステム設定を変更することにより、このサイト全体�
 
 <h4>原稿整理方法</h4>
 
-<b>1. Microsoft Wordの「変更履歴の記録」機能</b>
+<strong>1. Microsoft Wordの「変更履歴の記録」機能</strong>
 
 ツールメニューの下にある「変更履歴の記録」機能を使用すると、コピーエディタは、テキストを挿入（該当テキストは色付きで表示）したり、削除（該当テキストは色付の抹消線で削除、または削除テキストとして余白部に表示）したりすることができます。また、コピーエディタは、質問を角カッコで挟むことにより、著者（著者質問）にも編集者（編集者質問）にも質問を投げることができます。その後、コピーエディタ版をアップロードし、編集者に通知します。そして、編集者はテキストを確認して、著者に通知します。
 
@@ -2439,50 +2439,50 @@ OJSのシステム設定を変更することにより、このサイト全体�
 編集者と著者によるテキストの点検が終了したら、次のレイアウトとゲラ作成ステップに渡すために、変更を適用した最終版をコピーエディタは作成します。
 
 
-<b>2. Harvard Educational Review</b>
+<strong>2. Harvard Educational Review</strong>
 
-<b>原稿の電子的改訂を行う方法</b>
+<strong>原稿の電子的改訂を行う方法</strong>
 
 原稿の電子的改訂を行うために、以下の手順に従ってください。
 
-<b>提案された変更に応じる</b>
+<strong>提案された変更に応じる</strong>
 &nbsp; 提案された変更を受け入れる場合は、テキストの太字指定を外します
-&nbsp; 提案された変更を受け入れない場合は、オリジナルテキストを再入力して、<b>太字</b>指定をします。
+&nbsp; 提案された変更を受け入れない場合は、オリジナルテキストを再入力して、<strong>太字</strong>指定をします。
 
-<b>追加と削除を行う</b>
-&nbsp; 新たなテキストを<b>太字にする</b>ことにより追加を示します
-&nbsp; 削除する部分を次のように置換します: <b>[削除テキスト]</b>
-&nbsp; 1つ以上のセンテンスを削除する場合は、注記で示してください。例: <b>[2センテンスを削除]</b>
+<strong>追加と削除を行う</strong>
+&nbsp; 新たなテキストを<strong>太字にする</strong>ことにより追加を示します
+&nbsp; 削除する部分を次のように置換します: <strong>[削除テキスト]</strong>
+&nbsp; 1つ以上のセンテンスを削除する場合は、注記で示してください。例: <strong>[2センテンスを削除]</strong>
 
-<b>著者への質問（QA）に回答する</b>
+<strong>著者への質問（QA）に回答する</strong>
 &nbsp; テキスト中で太字で示されているすべてのQAはそのままにしておく。削除しない。
 &nbsp; QAに答えるには、直後にコメントを追加する。コメントには次の区切り文字を使用する。:
-<b>[Comment:]</b>
-&nbsp; 例: <b>[Comment: ご指摘の通り、方法に関する考察を拡張しました]</b>
+<strong>[Comment:]</strong>
+&nbsp; 例: <strong>[Comment: ご指摘の通り、方法に関する考察を拡張しました]</strong>
 
-<b>コメントを付ける</b>
+<strong>コメントを付ける</strong>
 &nbsp; 構成上の変更、または大規模な改訂を説明するためにコメントを使用する
-&nbsp; 例: <b>[Comment: 上記パラグラフを5ページから7ページへ移動した]</b>
+&nbsp; 例: <strong>[Comment: 上記パラグラフを5ページから7ページへ移動した]</strong>
 &nbsp; 注: ページに言及する場合は、あなたに送付した原稿の印刷版のページを使用してください。これは重要です。文書が電子的に改訂されるとページが変わる可能性があるからです。
 
 <h4>電子的改訂の実例</h4>
 
-<b>オリジナル「原稿」ファイル</b>
+<strong>オリジナル「原稿」ファイル</strong>
 
 オリジナル原稿の構造や構成の劇的な変更を行う前に、原稿の共同作業者に連絡してください。改訂が終了したら、ファイル名を"著者名QA.doc"から"著者名QAR.doc"に変更します（例えば、"LeeQA.doc"から"LeeQAR.doc"へ変更）。原稿を印刷して、全面的に改訂してファイル名を変更したワープロファイルを含むフロッピーディスクと共に郵送してください。
 
 
-<b>質問と提案が付されて著者に返された原稿</b>
+<strong>質問と提案が付されて著者に返された原稿</strong>
 
-<b>我々があなたに返した原稿</b>の構造や構成の劇的な変更を行う前に、原稿を<b>担当している編集者</b>に連絡してください。改訂が終了したら、ファイル名を"著者名QA.doc"から"著者名QAR.doc"に変更します（例えば、"LeeQA.doc"から"LeeQAR.doc"へ変更）。原稿を印刷して、全面的に改訂してファイル名を変更したワープロファイルを含むフロッピーディスクと共に郵送してください。<b>[QA: このパラグラフでは、電子的改訂を行う際の指示に注意深く従うことの重要性を強調してもよいでしょう。そうでないと、編集処理が大幅に遅れる可能性があるからです。]</b>
+<strong>我々があなたに返した原稿</strong>の構造や構成の劇的な変更を行う前に、原稿を<strong>担当している編集者</strong>に連絡してください。改訂が終了したら、ファイル名を"著者名QA.doc"から"著者名QAR.doc"に変更します（例えば、"LeeQA.doc"から"LeeQAR.doc"へ変更）。原稿を印刷して、全面的に改訂してファイル名を変更したワープロファイルを含むフロッピーディスクと共に郵送してください。<strong>[QA: このパラグラフでは、電子的改訂を行う際の指示に注意深く従うことの重要性を強調してもよいでしょう。そうでないと、編集処理が大幅に遅れる可能性があるからです。]</strong>
 
-<b>改訂した原稿をHER誌に返送する</b>
+<strong>改訂した原稿をHER誌に返送する</strong>
 
-我々があなたに返した原稿の構造や構成の劇的な変更を行う前に、原稿を担当している編集者に連絡してください。<b>以下の指示に従わなかった場合、原稿の出版が大幅に遅れる可能性があることをご理解ください。</b>
+我々があなたに返した原稿の構造や構成の劇的な変更を行う前に、原稿を担当している編集者に連絡してください。<strong>以下の指示に従わなかった場合、原稿の出版が大幅に遅れる可能性があることをご理解ください。</strong>
 
-改訂が終了したら、ファイル名を"著者名QA.doc"から"著者名QAR.doc"に変更します（例えば、"LeeQA.doc"から"LeeQAR.doc"へ変更）。原稿を印刷して、<b>[単語を削除]</b>改訂してファイル名を変更したワープロファイルを含むフロッピーディスクと共に郵送してください。<b>[QA: このパラグラフでは、電子的改訂を行う際の指示に注意深く従うことの重要性を強調してもよいでしょう。そうでないと、編集処理が大幅に遅れる可能性があるからです。] [Comment: 提案に従って、センテンスを追加しました。]</b>
+改訂が終了したら、ファイル名を"著者名QA.doc"から"著者名QAR.doc"に変更します（例えば、"LeeQA.doc"から"LeeQAR.doc"へ変更）。原稿を印刷して、<strong>[単語を削除]</strong>改訂してファイル名を変更したワープロファイルを含むフロッピーディスクと共に郵送してください。<strong>[QA: このパラグラフでは、電子的改訂を行う際の指示に注意深く従うことの重要性を強調してもよいでしょう。そうでないと、編集処理が大幅に遅れる可能性があるからです。] [Comment: 提案に従って、センテンスを追加しました。]</strong>
 
-<b>注:</b>
+<strong>注:</strong>
 &bull; 太字を解除したテキストにより最初のセンテンスに対する変更の提案を受け入れたことを示しています
 &bull; QAに応えてセンテンスが追加されました。太字のテキストは新しいテキストが追加されたことを示しています
 &bull; [単語を削除] は単語「全面的に」を削除したことを示しています

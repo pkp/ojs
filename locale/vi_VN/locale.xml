@@ -603,7 +603,7 @@
 	<message key="admin.settings.oaiRegistration">Đăng ký web site với các công cụ Thu thập Siêu dữ liệu (Metadata Harvesting)</message>
 	<message key="admin.settings.oaiRegistrationDescription"><![CDATA[Để nội dung của tất cả các tạp chí đặt trên website này được đưa vào chỉ mục của một hệ thống các cơ sở dữ liệu nghiên cứu đặt rải rác trên toàn cầu, hãy <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">đăng ký</a> địa chỉ URL website của quý vị với <a href="http://pkp.sfu.ca/harvester/" target="_blank">công cụ thu thập siêu dữ liệu</a> của Public Knowledge Project. Công cụ này thu thập siêu dữ liệu (dữ liệu mô tả) từ các bài viết đã được lập chỉ mục trong tạp chí này, cho phép tìm kiếm chính xác và cùng lúc trên nhiều website khác nhau cùng tuân theo tiêu chuẩn <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Open Archives Initiative Protocol for Metadata Harvesting</a>.
 <br /><br />
-<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Nhấp chuột vào đây</a> và nhập đường dẫn <span class="highlight">{$siteUrl}</span> vào mục <b>Site URL</b>, và <span class="highlight">{$oaiUrl}</span> vào mục <b>Base URL for OAI Archive</b>.
+<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Nhấp chuột vào đây</a> và nhập đường dẫn <span class="highlight">{$siteUrl}</span> vào mục <strong>Site URL</strong>, và <span class="highlight">{$oaiUrl}</span> vào mục <strong>Base URL for OAI Archive</strong>.
 <br /><br />
 Lưu ý là có thể vô hiệu giao diện tìm kiếm OAI trên website này bằng cách sửa lại file cấu hình của OJS. Các phiên bản tương lai của OJS sẽ cho phép vô hiệu hoặc kích hoạt giao diện OAI cho từng tạp chí có trên website.]]></message>
 
@@ -820,7 +820,7 @@ Lưu ý là có thể vô hiệu giao diện tìm kiếm OAI trên website này 
 	<message key="manager.setup.look.description">Đầu trang chủ, nội dung, măng séc tạp chí, cuối trang, khối điều khiển và kiểu dạng (style sheet).</message>
 	<message key="manager.setup.journalTitle">Tên tạp chí</message>
 	<message key="manager.setup.focusScope">Trọng tâm và Phạm vi</message>
-	<message key="manager.setup.focusScopeDescription"><![CDATA[<b>VÍ DỤ DỮ LIỆU HTML</b>]]></message>
+	<message key="manager.setup.focusScopeDescription"><![CDATA[<strong>VÍ DỤ DỮ LIỆU HTML</strong>]]></message>
 	<message key="manager.setup.journalSetupUpdated">Thiết lập cho tạp chí của quý vị đã được cập nhật.</message>
 	<message key="manager.setup.selectOne">Chọn một</message>
 	
@@ -937,7 +937,7 @@ Setting up LOCKSS support for Open Journal Systems does not need to take place u
 	<!-- Setup Step 3 -->
 	<message key="manager.setup.guidingSubmissions">Bước 3. Hướng dẫn nộp bài</message>
 	<message key="manager.setup.authorGuidelines">Hướng dẫn dành cho Tác giả</message>
-	<message key="manager.setup.authorGuidelinesDescription"><![CDATA[Chỉ ra cho tác giả những tiêu chuẩn định dạng và thư mục áp dụng cho các bài viết nộp cho tạp chí (v.d., <i>Cẩm nang Ấn phẩm của Hội Tâm lý Hoa Kỳ</i>, ấn bản thứ 5, 2001). Thường thì rất hữu ích khi đưa ra những ví dụ về định dạng trích dẫn phổ biến đối với tạp chí và sách được dùng trong các bài nộp. Đồng thời cần xác định các kiểu File phụ trợ thích hợp (v.d., nguồn dữ liệu, công cụ nghiên cứu,, ..) mà tác giả cần được khuyến khích tải lên bổ sung cho bài nộp của mình nhằm giúp bạn đọc cảm nhận tác phẩm tốt hơn.]]></message>
+	<message key="manager.setup.authorGuidelinesDescription"><![CDATA[Chỉ ra cho tác giả những tiêu chuẩn định dạng và thư mục áp dụng cho các bài viết nộp cho tạp chí (v.d., <em>Cẩm nang Ấn phẩm của Hội Tâm lý Hoa Kỳ</em>, ấn bản thứ 5, 2001). Thường thì rất hữu ích khi đưa ra những ví dụ về định dạng trích dẫn phổ biến đối với tạp chí và sách được dùng trong các bài nộp. Đồng thời cần xác định các kiểu File phụ trợ thích hợp (v.d., nguồn dữ liệu, công cụ nghiên cứu,, ..) mà tác giả cần được khuyến khích tải lên bổ sung cho bài nộp của mình nhằm giúp bạn đọc cảm nhận tác phẩm tốt hơn.]]></message>
 	<message key="manager.setup.submissionGuidelines">Hướng dẫn bài nộp</message>
 	<message key="manager.setup.submissionPreparationChecklist">Danh mục kiểm tra việc chuẩn bị nộp bài</message>
 	<message key="manager.setup.submissionPreparationChecklistDescription">Khi nộp một bài viết cho tạp chí, trước tiên tác giả được đề nghị kiểm tra xem từng mục trong danh mục kiểm tra xem đã hoàn thành chưa trước khi tiếp tục. Danh mục kiểm tra cũng sẽ xuất hiện trong phần Hướng dẫn dành cho Tác giả. Danh mục có thể được sửa chữa dưới đây, nhưng tất cả các mục trong danh mục cần phải có dấu kiểm trước khi tác giả có thể tiếp tục nộp bài viết của mình.</message>
@@ -975,7 +975,7 @@ Tên của hệ thống phân loại]]></message>
 <br /><br />
 Lưu ý rằng nếu người quản trị website của quý vị đã đăng ký với Công cụ gặt hái dữ liệu PHKP, tạp chí của quý vị sẽ được lập chỉ mục tự động và quý vị không cần đăng ký cho tạp chí của mình.
 <br /><br />
-<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Nhấp chuột vào đây</a> và nhập vào <span class="highlight">{$siteUrl}</span> đường dẫn <b>Địa chỉ URL</b>, và <span class="highlight">{$oaiUrl}</span> dưới mục <b>URL gốc cho OAI Archive</b>.]]></message>
+<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Nhấp chuột vào đây</a> và nhập vào <span class="highlight">{$siteUrl}</span> đường dẫn <strong>Địa chỉ URL</strong>, và <span class="highlight">{$oaiUrl}</span> dưới mục <strong>URL gốc cho OAI Archive</strong>.]]></message>
 	<message key="manager.setup.notifications">Thông báo việc tác giả nộp bài</message>
 	<message key="manager.setup.notifications.description">Khi kết thúc quá trình nộp bài, tác giả sẽ nhận được email báo nhận tự động khẳng định đã nộp bài (có thể xem và sửa trong danh mục các Email mẫu in sẵn). Ngoài ra, một bản sao của thư báo nhận có thể gửi như sau:</message>
 	<message key="manager.setup.notifications.copyPrimaryContact">Gửi một bản sao cho người liên lạc chính của tạp chí, như đã được nêu ở bước Cài đặt 1.</message>
@@ -1905,7 +1905,7 @@ Mới nhất là ngày ngày bài phản biện gần nhất được chấp nh�
 	<message key="user.register.privacyStatement">Tuyên bố về bí mật cá nhân</message>
 	<message key="user.register.completeForm">Điền vào mẫu khai dưới đây để đăng ký với tạp chí này.</message>
 	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Nhấp chuột vào đây</a> nếu quý vị đã đăng ký với tạp chí này hoặc tạp chí khác trên web site này.]]></message>
-	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Nhấp chuột vào đây</a> nếu quý vị <b>chưa</b> đăng ký tạp chí này hoặc các tạp chí khác trên web site này.]]></message>
+	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Nhấp chuột vào đây</a> nếu quý vị <strong>chưa</strong> đăng ký tạp chí này hoặc các tạp chí khác trên web site này.]]></message>
 	<message key="user.register.loginToRegister">Nhập bí danh và mật khẩu hiện dùng để đăng ký với tạp chí này.</message>
 	<message key="user.register.registrationDisabled">Tạp chí này hiện không nhận đăng ký người dùng.</message>
 	<message key="user.register.usernameRestriction">Bí danh chỉ được sử dụng chữ cái in thường, chữ số và dấu trừ (-) hoặc gạch dưới (_).</message>
@@ -1948,12 +1948,12 @@ Mới nhất là ngày ngày bài phản biện gần nhất được chấp nh�
 	<message key="search.syntaxInstructions"><![CDATA[Mẹo tìm kiếm: <ul>
 <li>Từ khóa tìm kiếm có phân biệt chữ thường/hoa</li>
 <li>Các từ thông dụng được bỏ qua</li>
-<li>Theo mặc định, hệ thống chỉ tìm những bài viết có <i>tất cả</i> các thuật ngữ trong thao tác tìm kiếm (có nghĩa là, toán tử <i>AND</i> được áp dụng)</li>
-<li>Kết hợp nhiều từ khóa với toán tử <i>OR</i> để tìm các bài viết có bất kỳ thuật ngữ nào; thí dụ, <i>Mỹ OR Hoa Kỳ</i></li>
-<li>Sử dụng dấu ngoặc nhọn để tạo ra những tìm kiếm phức tạp; thí dụ, <i>lưu trữ ((journal OR conference) NOT theses)</i></li>
-<li>Tìm chính xác một cụm từ bằng cách đưa cụm từ vào trong dấu nháy kép ; thí dụ, <i>"phần mềm mã nguồn mở"</i></li>
-<li>Loại bỏ một từ bằng cách đặt trước từ đó dấu <b>-</b> hoặc <i>NOT</i>; thí dụ <i>online -politics</i> or <i>online NOT politics</i></li>
-<li>Dùng dấu <b>*</b> trong một thuật ngữ như là ký tự đại diện; thí dụ, <i>soci*</i> sẽ tìm các từ "sociological" hoặc "societal"</li>
+<li>Theo mặc định, hệ thống chỉ tìm những bài viết có <em>tất cả</em> các thuật ngữ trong thao tác tìm kiếm (có nghĩa là, toán tử <em>AND</em> được áp dụng)</li>
+<li>Kết hợp nhiều từ khóa với toán tử <em>OR</em> để tìm các bài viết có bất kỳ thuật ngữ nào; thí dụ, <em>Mỹ OR Hoa Kỳ</em></li>
+<li>Sử dụng dấu ngoặc nhọn để tạo ra những tìm kiếm phức tạp; thí dụ, <em>lưu trữ ((journal OR conference) NOT theses)</em></li>
+<li>Tìm chính xác một cụm từ bằng cách đưa cụm từ vào trong dấu nháy kép ; thí dụ, <em>"phần mềm mã nguồn mở"</em></li>
+<li>Loại bỏ một từ bằng cách đặt trước từ đó dấu <strong>-</strong> hoặc <em>NOT</em>; thí dụ <em>online -politics</em> or <em>online NOT politics</em></li>
+<li>Dùng dấu <strong>*</strong> trong một thuật ngữ như là ký tự đại diện; thí dụ, <em>soci*</em> sẽ tìm các từ "sociological" hoặc "societal"</li>
 </ul>]]></message>
 	<message key="search.operator.not">not</message>
 	<message key="search.operator.and">and</message>
@@ -2162,7 +2162,7 @@ Máy chủ của quý vị hiện có hỗ trợ mbstring: <strong>{$supportsMBS
 	<message key="installer.installFileError"><![CDATA[File cài đặt <tt>dbscripts/xml/install.xml</tt> không tồn tại hoặc không đọc được.]]></message>
 	<message key="installer.installParseDBFileError"><![CDATA[Có lỗi khi phân tích cú pháp file cài đặt CSDL <tt>{$file}</tt>.]]></message>
 	<message key="installer.configFileError"><![CDATA[File cấu hình <tt>config.inc.php</tt> không tồn tại hoặc không đọc được.]]></message>
-	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<b>Cảnh báo:</b> Nếu cài đặt CSDL thất bại giữa chừng, quý vị có thể cần bỏ CSDL OJS hoặc các bảng trong CSDL trước khi cài đặt lại CSDL.]]></message>
+	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<strong>Cảnh báo:</strong> Nếu cài đặt CSDL thất bại giữa chừng, quý vị có thể cần bỏ CSDL OJS hoặc các bảng trong CSDL trước khi cài đặt lại CSDL.]]></message>
 	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>QUAN TRỌNG!</h4>
 <p>Bộ cài đặt không thể tự động ghi đè lên file cấu hình. Trước khi thử sử dụng phần mềm, vui lòng mở file <tt>config.inc.php</tt> bằng một phần mềm soạn thảo văn bản thô (text) phù hợp và thay thế nội dung của file bằng nội dung sau đây.</p>]]></message>
 	<message key="installer.contentsOfConfigFile">Nội dung của file cấu hình</message>
@@ -2173,7 +2173,7 @@ Máy chủ của quý vị hiện có hỗ trợ mbstring: <strong>{$supportsMBS
 <p>Để bắt đầu sử dụng phần mềm, hãy <a href="{$loginUrl}">đăng nhập</a> bằng bí danh và mật khẩu đã khai báo ở trang trước.</p>
 <p>Nếu quý vị muốn nhận được tin tức và cập nhật, <strong>vui lòng đăng ký tại <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>.</strong> Nếu quý vị có câu hỏi hoặc bình luận, vui lòng ghé thăm <a href="http://pkp.sfu.ca/support/forum" target="_new">diễn đàn hỗ trợ</a>.</p>]]></message>
 	<message key="installer.upgradeComplete"><![CDATA[<p>Nâng cấp phần mềm OJS lên phiên bản {$version} đã thành công.</p>
-<p>Đừng quên chuyển tham số "installed" trong file config.inc.php trở về <i>On</i>.</p>
+<p>Đừng quên chuyển tham số "installed" trong file config.inc.php trở về <em>On</em>.</p>
 <p>Nếu quý vị chưa đăng ký và muốn nhận tin tức và cập nhật, <strong> vui lòng đăng ký tại <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>.</strong> Nếu quý vị có câu hỏi hoặc bình luận, vui lòng ghé thăm <a href="http://pkp.sfu.ca/support/forum" target="_new">diễn đàn hỗ trợ</a>.</p>]]></message>
 	<message key="installer.skipFilesDir">Không tạo các thư mục con cần thiết (chỉ có ích khi cài đặt bằng tay)</message>
 	<message key="installer.releaseNotes">Ghi chú về phát hành</message>
@@ -2434,7 +2434,7 @@ File sẽ được biên tập bản thảo ở dạng Word hoặc .rtf nên có
 
 <h4>Các phương án biên tập bản thảo</h4>
 
-<b>1. Chức năng Theo dõi các Thay đổi của phần mềm Microsoft Word </b>
+<strong>1. Chức năng Theo dõi các Thay đổi của phần mềm Microsoft Word </strong>
 
 Nằm dưới mục Tools trên thanh menu, chức năng Theo dõi các Thay đổi cho phép BTV bản thảo thêm vào (phần thêm vào được đổi màu) và xóa đi (phần xóa đi được đổi màu và gạch ngang hoặc đánh dấu đã xóa ở bên lề). BTV bản thảo có thể gửi những thắc mắc của mình cho cả tác giả (Truy vấn Tác giả) và BTV chính (Truy vấn BTV) bằng cách đưa những thắc mắc này vào trong ngoặc vuông. Phiên bản đã biên tập bản thảo sau đó sẽ được tải lên và thông báo sẽ được chuyển tới BTV chính. BTV chính xem lại bản thảo và thông báo cho tác giả.
 
@@ -2443,50 +2443,50 @@ Tác giả và BTV chính để nguyên những thay đổi mà họ hài lòng.
 Sau khi tài liệu đã được BTV và tác giả duyệt lại, BTV bản thảo sẽ hoàn thiện bản thảo cuối cùng với những thay đổi nói trên để chuẩn bị bước trình bày và bản bông. 
 
 
-<b>2. Tạp chí Giáo dục Havard (Harvard Educational Review) </b>
+<strong>2. Tạp chí Giáo dục Havard (Harvard Educational Review) </strong>
 
-<b>Hướng dẫn Hiệu đính Bản thảo bằng Công cụ Điện tử</b>
+<strong>Hướng dẫn Hiệu đính Bản thảo bằng Công cụ Điện tử</strong>
 
 Vui lòng theo trình tự sau để hiệu đính bản thảo bằng công cụ điện tử:
 
-<b>Xử lý những đề xuất thay đổi</b>
+<strong>Xử lý những đề xuất thay đổi</strong>
 &nbsp; Bỏ in đậm đối với mỗi một thay đổi mà quý vị chấp thuận.
-&nbsp; Nhập lại nội dung ban đầu <b>in đậm</b> đối với những đề xuất thay đổi mà quý vị không chấp thuận.
+&nbsp; Nhập lại nội dung ban đầu <strong>in đậm</strong> đối với những đề xuất thay đổi mà quý vị không chấp thuận.
 
-<b>Thêm vào hoặc xóa bớt</b>
-&nbsp; Đánh dấu nội dung thêm vào bằng cách <b>in đậm</b> nội dung mới
-&nbsp; Thay thế những đoạn bị xóa bằng dòng chữ: <b>[đã xóa]</b>
-&nbsp; Nếu quý vị xóa từ một câu trở lên, vui lòng đánh dấu bằng ghi chú, v.d., <b>[xóa 2 câu]</b>
+<strong>Thêm vào hoặc xóa bớt</strong>
+&nbsp; Đánh dấu nội dung thêm vào bằng cách <strong>in đậm</strong> nội dung mới
+&nbsp; Thay thế những đoạn bị xóa bằng dòng chữ: <strong>[đã xóa]</strong>
+&nbsp; Nếu quý vị xóa từ một câu trở lên, vui lòng đánh dấu bằng ghi chú, v.d., <strong>[xóa 2 câu]</strong>
 
-<b>Xử lý Truy vấn Tác giả (QA)</b>
+<strong>Xử lý Truy vấn Tác giả (QA)</strong>
 &nbsp; Giữ nguyên các QA và in đậm trong bài. Không xóa những nội dung này
 &nbsp; Để phúc đáp một QA, thêm một lời bình sau đó. Lời bình cần được phân tách như sau:
-<b>[Lời bình:</b>]
-&nbsp; v.d., <b>[Lời bình: Bàn thêm về phương pháp luận như quý vị gợi ý]</b>
+<strong>[Lời bình:</strong>]
+&nbsp; v.d., <strong>[Lời bình: Bàn thêm về phương pháp luận như quý vị gợi ý]</strong>
 
-<b>Bình luận</b>
+<strong>Bình luận</strong>
 &nbsp; Dùng lời bình để giải thích những thay đổi về cấu trúc hoặc những sửa đổi lớn
-&nbsp; v.d., <b>[Lời bình: Chuyển đoạn trên đây từ Trang 5 sang Trang 7]</b>
+&nbsp; v.d., <strong>[Lời bình: Chuyển đoạn trên đây từ Trang 5 sang Trang 7]</strong>
 &nbsp; Ghi chú: Khi dẫn chiếu tới số trang, vui lòng sử dụng số trang từ bản in của bản thảo được gửi tới quý vị. Điều này rất quan trọng vì số trang có thể thay đổi trong quá trình hiệu đính điện tử.
 
 <h4>Minh họa của Hiệu đính Điện tử</h4>
 
-<b>File bản thảo gốc</b>
+<strong>File bản thảo gốc</strong>
 
 Trước khi thay đổi đáng kể cấu trúc và cách tổ chức trong bản thảo gốc của quý vị, vui lòng tham khảo những người phụ trách tác phẩm của quý vị. Sau khi kết thúc hiệu đính, đổi tên file từ AuthorNameQA.doc thành AuthorNameQAR.doc (v.d., từ LeeQA.doc thành LeeQAR.doc). In bản thảo của quý vị ra giấy và gửi cùng với một đĩa mềm có file đã được đổi tên và hiệu đính hoàn chỉnh.
 
 
-<b>Bản thảo được gửi lại cho tác giả với thắc mắc và đề xuất</b>
+<strong>Bản thảo được gửi lại cho tác giả với thắc mắc và đề xuất</strong>
 
-Trước khi thay đổi đáng kể cấu trúc và cách tổ chức trong <b>bản thảo mà chúng tôi gửi lại cho quý vị</b>, vui lòng tham khảo <b> các BTV phụ trách</b> tác phẩm của quý vị. Sau khi kết thúc hiệu đính, đổi tên file từ AuthorNameQA.doc thành AuthorNameQAR.doc (v.d., từ LeeQA.doc thành LeeQAR.doc). In bản thảo của quý vị ra giấy và gửi cùng với một đĩa mềm có file đã được đổi tên và hiệu đính hoàn chỉnh. <b>[QA: Trong đoạn này nên nhấn mạnh tầm quan trọng của việc tuân thủ kỹ càng các hướng dẫn trong việc hiệu đính điện tử. Nếu không, quá trình biên tập sẽ bị kéo dài đáng kể]</b>
+Trước khi thay đổi đáng kể cấu trúc và cách tổ chức trong <strong>bản thảo mà chúng tôi gửi lại cho quý vị</strong>, vui lòng tham khảo <strong> các BTV phụ trách</strong> tác phẩm của quý vị. Sau khi kết thúc hiệu đính, đổi tên file từ AuthorNameQA.doc thành AuthorNameQAR.doc (v.d., từ LeeQA.doc thành LeeQAR.doc). In bản thảo của quý vị ra giấy và gửi cùng với một đĩa mềm có file đã được đổi tên và hiệu đính hoàn chỉnh. <strong>[QA: Trong đoạn này nên nhấn mạnh tầm quan trọng của việc tuân thủ kỹ càng các hướng dẫn trong việc hiệu đính điện tử. Nếu không, quá trình biên tập sẽ bị kéo dài đáng kể]</strong>
 
-<b>Bản thảo được hiệu đính và gửi lại</b>
+<strong>Bản thảo được hiệu đính và gửi lại</strong>
 
-Trước khi thay đổi đáng kể cấu trúc và cách tổ chức trong bản thảo mà chúng tôi gửi lại cho quý vị, vui lòng tham khảo các BTV phụ trách tác phẩm của quý vị. <b>Xin hiểu rằng không tuân theo những hướng dẫn này có thể làm chậm đáng kể việc xuất bản bản thảo của quý vị</b>
+Trước khi thay đổi đáng kể cấu trúc và cách tổ chức trong bản thảo mà chúng tôi gửi lại cho quý vị, vui lòng tham khảo các BTV phụ trách tác phẩm của quý vị. <strong>Xin hiểu rằng không tuân theo những hướng dẫn này có thể làm chậm đáng kể việc xuất bản bản thảo của quý vị</strong>
 
-Sau khi kết thúc hiệu đính, đổi tên file từ AuthorNameQA.doc thành AuthorNameQAR.doc (v.d., từ LeeQA.doc thành LeeQAR.doc). In bản thảo của quý vị ra giấy và gửi cùng với một đĩa mềm có file đã được đổi tên và hiệu đính [từ đã xóa]. <b>[QA: Trong đoạn này nên nhấn mạnh tầm quan trọng của việc tuân thủ kỹ càng các hướng dẫn trong việc hiệu đính điện tử. Nếu không, quá trình biên tập sẽ bị kéo dài đáng kể]</b> [Lời bình: Tôi đã thêm một câu để hồi âm đề xuất của quý vị.]</b>
+Sau khi kết thúc hiệu đính, đổi tên file từ AuthorNameQA.doc thành AuthorNameQAR.doc (v.d., từ LeeQA.doc thành LeeQAR.doc). In bản thảo của quý vị ra giấy và gửi cùng với một đĩa mềm có file đã được đổi tên và hiệu đính [từ đã xóa]. <strong>[QA: Trong đoạn này nên nhấn mạnh tầm quan trọng của việc tuân thủ kỹ càng các hướng dẫn trong việc hiệu đính điện tử. Nếu không, quá trình biên tập sẽ bị kéo dài đáng kể]</strong> [Lời bình: Tôi đã thêm một câu để hồi âm đề xuất của quý vị.]</strong>
 
-<b>Ghi chú:</b>
+<strong>Ghi chú:</strong>
 &bull; Những phần bỏ in đậm chỉ sự chấp thuật những đề xuất thay đổi đối với câu đầu tiên
 &bull; Một câu được thêm để đáp lại thắc mắc với tác giả QA. Phần chữ in đậm chỉ nội dung mới được thêm vào
 &bull; [từ đã xóa] chỉ việc xóa từ "hoàn chỉnh"

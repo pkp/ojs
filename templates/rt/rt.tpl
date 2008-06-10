@@ -43,7 +43,7 @@
 <div class="rtSeparator"></div>
 
 <h6>{$article->getArticleTitle()|strip_unsafe_html|truncate:20:"...":true}</h6>
-<p><i>{$article->getAuthorString(true)|escape}</i></p>
+<p><em>{$article->getAuthorString(true)|escape}</em></p>
 
 <div class="rtSeparator"></div>
 
@@ -160,7 +160,7 @@
 
 {if $needsLoginNote}
 {url|assign:"loginUrl" page="user" op="register"}
-<p><i style="font-size: 0.9em">{translate key="rt.email.needLogin" loginUrl=$loginUrl}</i></p>
+<p><i style="font-size: 0.9em">{translate key="rt.email.needLogin" loginUrl=$loginUrl}</em></p>
 {/if}
 
 </div>

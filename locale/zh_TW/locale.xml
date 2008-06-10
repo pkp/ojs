@@ -612,7 +612,7 @@
 	<message key="admin.settings.oaiRegistration">註冊網站以便檢索(Metadata Harvesting)</message>
 	<message key="admin.settings.oaiRegistrationDescription"><![CDATA[為了讓這個網站的所有期刊內容可以讓一個全球發行的研究資料庫檢索，請將您網站的網址(url)於「公共知識計畫」Public Knowledge Project 後設資料的<a href="http://pkp.sfu.ca/harvester/" target="_blank">收集器</a> <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">註冊</a>。這個工具將會收集期刊中每個檢索項目的後設資料，以便精確和集中搜尋每個隸屬於<a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">為收集後設資料而設的開放檔案初始協議</a>的研究網站。
 <br /><br />
-<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">點擊這裡</a>並且輸入 <span class="highlight">{$siteUrl}</span>在<b>網站網址</b>，和 <span class="highlight">{$oaiUrl}</span>在<b>供「公開檔案櫃索引」(OAI)的基礎網址</b>。
+<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">點擊這裡</a>並且輸入 <span class="highlight">{$siteUrl}</span>在<strong>網站網址</strong>，和 <span class="highlight">{$oaiUrl}</span>在<strong>供「公開檔案櫃索引」(OAI)的基礎網址</strong>。
 <br /><br />
 藉由修改開放期刊系統的設定，請注意開放典藏檢索界面可以被關閉。未來開放期刊系統的版本將會允設一個網站的各別期刊可以設定開啟或關閉OAI系統。]]></message>
 
@@ -834,7 +834,7 @@
 	<message key="manager.setup.look.description">首頁標題、內容、期刊標題、尾標、瀏覽列、和樣式。</message>
 	<message key="manager.setup.journalTitle">期刊名稱</message>
 	<message key="manager.setup.focusScope">焦點和範圍</message>
-	<message key="manager.setup.focusScopeDescription"><![CDATA[<b>HTML資料範例</b>]]></message>
+	<message key="manager.setup.focusScopeDescription"><![CDATA[<strong>HTML資料範例</strong>]]></message>
 	<message key="manager.setup.journalSetupUpdated">您的期刊設定已經更新。</message>
 	<message key="manager.setup.selectOne">請選擇一項</message>
 	
@@ -968,7 +968,7 @@
 	<!-- Setup Step 3 -->
 	<message key="manager.setup.guidingSubmissions">步驟 3：投稿導引</message>
 	<message key="manager.setup.authorGuidelines">作者須知</message>
-	<message key="manager.setup.authorGuidelinesDescription"><![CDATA[設定讓作者在投稿本期刊時要依循的書目和文件格式標準 (例如，<i>美國心理學會出版手冊</i>, 第五版, 2001).。提供用在投稿文章中的一般期刊和書目引用格式的範例通常是很有用的。也請指明恰當的「補充檔案」類型（例如資料集(data-sets)、研究器具等等），這些是應該要鼓勵作者上傳的東西，附加在他們的投稿文章上，提高讀者對其作品的瞭解程度。]]></message>
+	<message key="manager.setup.authorGuidelinesDescription"><![CDATA[設定讓作者在投稿本期刊時要依循的書目和文件格式標準 (例如，<em>美國心理學會出版手冊</em>, 第五版, 2001).。提供用在投稿文章中的一般期刊和書目引用格式的範例通常是很有用的。也請指明恰當的「補充檔案」類型（例如資料集(data-sets)、研究器具等等），這些是應該要鼓勵作者上傳的東西，附加在他們的投稿文章上，提高讀者對其作品的瞭解程度。]]></message>
 	<message key="manager.setup.submissionGuidelines">投稿須知</message>
 	<message key="manager.setup.submissionPreparationChecklist">投稿準備清單</message>
 	<message key="manager.setup.submissionPreparationChecklistDescription">在提交一份投稿文章給這個期刊時，作者首先會被要求檢查是否完成「投稿準備清單」中的每個項目，才能繼續下一步。這份清單也會出現在「期刊介紹」內的「作者須知」欄位中。這份清單能夠在下面進行編輯，而所有的項目將會需要作者進行核取後，才能繼續他們的投稿流程。</message>
@@ -1007,7 +1007,7 @@
 <br /><br />
 注意，如果您的網站管理員已經將本站註冊PKP收集器了，您的期刊會自動被索引，而您不需要再次註冊您的期刊。
 <br /><br />
-<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">點擊這裡</a> 並進入 <span class="highlight">{$siteUrl}</span> under <b>Site URL</b>，以及 <span class="highlight">{$oaiUrl}</span> under <b>Base URL for OAI Archive</b>.]]></message>
+<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">點擊這裡</a> 並進入 <span class="highlight">{$siteUrl}</span> under <strong>Site URL</strong>，以及 <span class="highlight">{$oaiUrl}</span> under <strong>Base URL for OAI Archive</strong>.]]></message>
 	<message key="manager.setup.notifications">給作者的收稿通知</message>
 	<message key="manager.setup.notifications.description">在成功完成投稿程序後，作者會自動地發出一封通知電子郵件（可以在「預備電子郵件」中檢視與編輯）。此外，通知信的副本可以用下列的方式寄出：</message>
 	<message key="manager.setup.notifications.copyPrimaryContact">送一分拷給期刊的主要連絡人(在步驟 1 的設定)。</message>
@@ -2009,7 +2009,7 @@
 	<message key="user.register.privacyStatement">隱私權聲明</message>
 	<message key="user.register.completeForm">填寫這份表單以註冊這份期刊。</message>
 	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[如果您已經在本站上的任何一份期刊上註冊過了，請<a href="{$registerUrl}">點擊這裡</a>。]]></message>
-	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[如果您 <b>尚未</b> 在本站上的任何一份期刊上註冊過，請<a href="{$registerUrl}">點擊這裡</a>。]]></message>
+	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[如果您 <strong>尚未</strong> 在本站上的任何一份期刊上註冊過，請<a href="{$registerUrl}">點擊這裡</a>。]]></message>
 	<message key="user.register.loginToRegister">要註冊這份期刊，請輸入您現有的使用者名稱以及密碼</message>
 	<message key="user.register.registrationDisabled">這份期刊目前不接受使用者註冊。</message>
 	<message key="user.register.usernameRestriction">使用者名稱一定只能含有小寫英文字母、數字以及連字號(-)＼底線(_)。</message>
@@ -2054,12 +2054,12 @@
 	<message key="search.syntaxInstructions"><![CDATA[搜尋技巧： <ul>
 <li>搜尋的語詞不要有大小寫之別</li>
 <li>常用的語詞會被略過</li>
-<li>預設只會傳回包含有<i>全部</i>搜尋詞彙的文章 (也就是說，預設以<i>AND</i>連接各項目)。</li>
-<li>使用<i>OR</i>連結各個搜尋詞彙已找到含有任一個詞彙的文章；例如，<i>教育 OR 調查</i>。</li>
-<li>使用括號"()"建立更複雜的查詢；例如：<i>archive ((journal OR conference) NOT theses)。</i></li>
-<li>用引號""來搜尋整句片語；例如：<i>"開放閱讀出版品"</i></li>
-<li>在一個語詞前面加上<b>-</b> 或者 <i>NOT</i>以排除搜尋它；如：<i>online -politics</i> 或者 <i>online NOT politics</i></li>
-<li>在一個詞彙中使用<b>*</b>當作萬用字元，以搜尋符合任何字串的結果。例如：<i>soci* morality</i> 會找到包含 "sociological" 或者"societal"的文章。</li>
+<li>預設只會傳回包含有<em>全部</em>搜尋詞彙的文章 (也就是說，預設以<em>AND</em>連接各項目)。</li>
+<li>使用<em>OR</em>連結各個搜尋詞彙已找到含有任一個詞彙的文章；例如，<em>教育 OR 調查</em>。</li>
+<li>使用括號"()"建立更複雜的查詢；例如：<em>archive ((journal OR conference) NOT theses)。</em></li>
+<li>用引號""來搜尋整句片語；例如：<em>"開放閱讀出版品"</em></li>
+<li>在一個語詞前面加上<strong>-</strong> 或者 <em>NOT</em>以排除搜尋它；如：<em>online -politics</em> 或者 <em>online NOT politics</em></li>
+<li>在一個詞彙中使用<strong>*</strong>當作萬用字元，以搜尋符合任何字串的結果。例如：<em>soci* morality</em> 會找到包含 "sociological" 或者"societal"的文章。</li>
 </ul>]]></message>
 	<message key="search.operator.not">not</message>
 	<message key="search.operator.and">and</message>
@@ -2270,7 +2270,7 @@
 	<message key="installer.installFileError"><![CDATA[安裝檔<tt>dbscripts/xml/install.xml</tt> 並不存在或無法寫入。]]></message>
 	<message key="installer.installParseDBFileError"><![CDATA[錯誤剖析資料庫安裝檔案<tt>{$file}</tt>.]]></message>
 	<message key="installer.configFileError"><![CDATA[設定檔案<tt>config.inc.php</tt>並不存在或無法寫入。]]></message>
-	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<b>警告：</b>如果安裝失敗部分是因為安裝資料庫的關係，在嘗試重新安裝資料庫之前，您可能需要刪除您的OJS資料庫或者資料表。]]></message>
+	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<strong>警告：</strong>如果安裝失敗部分是因為安裝資料庫的關係，在嘗試重新安裝資料庫之前，您可能需要刪除您的OJS資料庫或者資料表。]]></message>
 	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>重要！</h4>
 <p>安裝檔無法自動覆寫設定檔。在嘗試使用本系統之前，請以合適的編輯器開啟<tt>config.inc.php</tt>並且變更其內容為下列文字欄位中的內容。</p>]]></message>
 	<message key="installer.contentsOfConfigFile">設定檔的內容</message>
@@ -2281,7 +2281,7 @@
 <p>要開始使用本系統，請以您在上一個網頁中輸入的使用者名稱和密碼進行<a href="{$loginUrl}">登入</a></p>
 <p>如果您希望收到新聞和更新訊息，請<strong>在<a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>註冊。</strong> 如果您有問題或建議，請訪問<a href="http://pkp.sfu.ca/support/forum" target="_new">支援討論區</a>.</p>]]></message>
 	<message key="installer.upgradeComplete"><![CDATA[<p>以成功升級OJS到 {$version}版本。</p>
-<p>別忘了在您的config.inc.php設定檔中將"installed"設定改成<i>On</i>。</p>
+<p>別忘了在您的config.inc.php設定檔中將"installed"設定改成<em>On</em>。</p>
 <p>If you haven't already registered and wish to receive news and updates, 如果您尚未註冊但希望收到新聞和更新訊息，<strong>請在<a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>註冊。</strong> 如果您有問題或建議，請訪問<a href="http://pkp.sfu.ca/support/forum" target="_new">支援討論區</a>.</p>]]></message>
 	<message key="installer.skipFilesDir">未建立必要的子資料夾（只對手動安裝過程有用）。</message>
 	<message key="installer.releaseNotes">釋出版本備註</message>
@@ -2551,7 +2551,7 @@
 
 <h4>校樣系統</h4>
 
-<b>1. Microsoft Word的追蹤修訂</b>
+<strong>1. Microsoft Word的追蹤修訂</strong>
 
 在選單工具列的「工具」中，「追蹤修訂」的功能讓校樣編輯可以插入（以有顏色的字型）和刪除文字（文字外觀以有色的刪除線標記）。校樣編輯可以在檢閱方框中插入問題，詢問作者（作者問題）和編者（編者問題）兩人。接著上傳校樣版本，並通知編輯。編輯接著審查文字內容，並通知作者。
 
@@ -2560,49 +2560,49 @@
 在文章內容經過編輯和作者的審查過後，校樣編輯會做出一個最終的版本，接受所有的內容修以轉被接受版面和排版樣式的階段。
 
 
-<b>2. Harvard Educational Review </b>
+<strong>2. Harvard Educational Review </strong>
 
-<b>電子修訂本轉換打字稿指南</b>
+<strong>電子修訂本轉換打字稿指南</strong>
 
 請依循下列的協定將電子修訂本轉換成您的打字稿。
 
-<b>回應建議的修訂</b>
+<strong>回應建議的修訂</strong>
 &nbsp; 針對每個您接受的修訂處，取消文字的粗體格式。
-&nbsp; 針對您不接受的每個修訂處，重新輸入原文並且<b>改成粗體字</b>。
+&nbsp; 針對您不接受的每個修訂處，重新輸入原文並且<strong>改成粗體字</strong>。
 
-<b>增添與刪除內容</b>
-&nbsp; 以<b>粗體字</b>標明新的文字內容
-&nbsp; 以<b>[被刪除的文字]</b>替換刪除的文稿類型
-&nbsp; 如果您刪除了一個句子或更多地方，請以一個註解加以指明，例如：<b>[刪除了 2 個句子]</b>
+<strong>增添與刪除內容</strong>
+&nbsp; 以<strong>粗體字</strong>標明新的文字內容
+&nbsp; 以<strong>[被刪除的文字]</strong>替換刪除的文稿類型
+&nbsp; 如果您刪除了一個句子或更多地方，請以一個註解加以指明，例如：<strong>[刪除了 2 個句子]</strong>
 
-<b>回應給作者的問題(QAs)</b>
+<strong>回應給作者的問題(QAs)</strong>
 &nbsp; 保持所有的OAs原封不動，並將文字改成粗體字。不要刪除掉它們。
 &nbsp; 要回應一個QA，請在其後新增一個評論。評論應該要使用中括號畫界：
-<b>[評論：</b>]
-&nbsp;例如，<b>[評語：補充討論您所建議的方法論。]</b>
+<strong>[評論：</strong>]
+&nbsp;例如，<strong>[評語：補充討論您所建議的方法論。]</strong>
 
-<b>做評論</b>
+<strong>做評論</strong>
 &nbsp; 使用評論以說明組織上的變更或者主要修訂處。
-&nbsp; 例如：<b>[評語：將上一段從第五頁移至第七頁]</b>
+&nbsp; 例如：<strong>[評語：將上一段從第五頁移至第七頁]</strong>
 &nbsp; 注意，當涉及頁數時，請使用寄給您之打字稿的印刷頁數。這很重要，因為一份文件在經過電子修訂之後頁數可能會改變。
 
 <h4>一份電子修訂稿中的圖解</h4>
 
-<b>原始「打字稿」檔案</b>
+<strong>原始「打字稿」檔案</strong>
 
 如果要對您的原始打字稿做出重大修改，請先和您的共同編輯人員確認過。當您完成您的修訂之後，請重新命名檔案，從AuthorNameQA.doc改成AuthorNameQAR.doc（例如：從"李先生QA.doc"改成"李先生QAR.doc"）。請列印出一份原稿的電腦列印槁，並以附上含有完整修訂與更名過之檔案的軟碟或光碟一併寄出。
 
-<b>將附有疑問和建議的打字稿返還作者</b>
+<strong>將附有疑問和建議的打字稿返還作者</strong>
 
-在針對<b>我們正要返還予您的打字稿</b>做出重大修改之前，請與和您<b>共同編輯您負責部分的編者</b>進行確認。當您完成您的修訂之後，請重新命名檔案，從AuthorNameQA.doc改成AuthorNameQAR.doc（例如：從"李先生QA.doc"改成"李先生QAR.doc"）。請列印出一份原稿的電腦列印槁，並以附上含有完整修訂與更名過之檔案的軟碟或光碟一併寄出。<b>[QA：在這個段落中，強調要謹慎遵循指南來進行電子修訂的重要性，或許會有點幫助。否則編輯流程可想而知會進行的很慢。]</b>
+在針對<strong>我們正要返還予您的打字稿</strong>做出重大修改之前，請與和您<strong>共同編輯您負責部分的編者</strong>進行確認。當您完成您的修訂之後，請重新命名檔案，從AuthorNameQA.doc改成AuthorNameQAR.doc（例如：從"李先生QA.doc"改成"李先生QAR.doc"）。請列印出一份原稿的電腦列印槁，並以附上含有完整修訂與更名過之檔案的軟碟或光碟一併寄出。<strong>[QA：在這個段落中，強調要謹慎遵循指南來進行電子修訂的重要性，或許會有點幫助。否則編輯流程可想而知會進行的很慢。]</strong>
 
-<b>將修訂過的打字稿寄回給HER</b>
+<strong>將修訂過的打字稿寄回給HER</strong>
 
-在針對我們正要返還予您的打字稿做出重大修改之前，請與和您共同編輯您負責部分的編者進行確認。<b>請務必瞭解，若沒有遵循步驟指南，可能會嚴重拖慢稿件的出版時程。</b>
+在針對我們正要返還予您的打字稿做出重大修改之前，請與和您共同編輯您負責部分的編者進行確認。<strong>請務必瞭解，若沒有遵循步驟指南，可能會嚴重拖慢稿件的出版時程。</strong>
 
-當您完成您的修訂之後，請重新命名檔案，從AuthorNameQA.doc改成AuthorNameQAR.doc（例如：從"李先生QA.doc"改成"李先生QAR.doc"）。請列印出一份原稿的電腦列印槁，並以附上含有<b>[已刪除字句]</b>的修訂與更名檔案的軟碟或光碟一併寄出。<b>[QA：在這個段落中，強調要謹慎遵循指南來進行電子修訂的重要性，或許會有點幫助。否則編輯流程可想而知會進行的很慢。][評語：我增加了一個句子以回應您的建議。]</b>
+當您完成您的修訂之後，請重新命名檔案，從AuthorNameQA.doc改成AuthorNameQAR.doc（例如：從"李先生QA.doc"改成"李先生QAR.doc"）。請列印出一份原稿的電腦列印槁，並以附上含有<strong>[已刪除字句]</strong>的修訂與更名檔案的軟碟或光碟一併寄出。<strong>[QA：在這個段落中，強調要謹慎遵循指南來進行電子修訂的重要性，或許會有點幫助。否則編輯流程可想而知會進行的很慢。][評語：我增加了一個句子以回應您的建議。]</strong>
 
-<b>備註：</b>
+<strong>備註：</strong>
 &bull; 非粗體的文字表示接受對於原有語句的建議修改。
 &bull; 附加語句以回應QA。粗體字表示新增的文字內容。
 &bull; [被刪除的文字]表示「全部」刪掉。

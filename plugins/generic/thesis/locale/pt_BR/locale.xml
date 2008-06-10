@@ -51,7 +51,7 @@
 	<message key="plugins.generic.thesis.manager.form.titleRequired">Título da tese obrigatório.</message>
 	<message key="plugins.generic.thesis.manager.form.abstract">Resumo</message>
 	<message key="plugins.generic.thesis.manager.form.abstractRequired">Resumo da tese obrigatório.</message>
-	<message key="plugins.generic.thesis.manager.form.abstractInstructions"><![CDATA[Insira quebras de linha para separar parágrafos. Digite o texto entre as marcações <b></b>, <i></i>, e <u></u> para negrito, itálico e sublinhado, respectivamente (ex.: este <i>texto</i> está em itálico.)]]></message>
+	<message key="plugins.generic.thesis.manager.form.abstractInstructions"><![CDATA[Insira quebras de linha para separar parágrafos. Digite o texto entre as marcações <strong></strong>, <em></em>, e <u></u> para negrito, itálico e sublinhado, respectivamente (ex.: este <em>texto</em> está em itálico.)]]></message>
 	<message key="plugins.generic.thesis.manager.form.url">URL</message>
 	<message key="plugins.generic.thesis.manager.form.urlInstructions">Caso a tese esteja disponível online. Inclua http://, ftp://, etc, no início do caminho (ex.: http://www.sfu.ca/path/to/thesis.pdf).</message>
 	<message key="plugins.generic.thesis.manager.form.studentFirstName">Prénome de citação</message>
@@ -106,7 +106,7 @@
 	<message key="plugins.generic.thesis.form.titleRequired">Título da tese obrigatório.</message>
 	<message key="plugins.generic.thesis.form.abstract">Resumo</message>
 	<message key="plugins.generic.thesis.form.abstractRequired">Resumo da tese obrigatório.</message>
-	<message key="plugins.generic.thesis.form.abstractInstructions"><![CDATA[Insira quebras de linha para separar parágrafos. Digite o texto entre as marcações <b></b>, <i></i>, e <u></u> para negrito, itálico e sublinhado, respectivamente (ex.: este <i>texto</i> está em itálico.)]]></message>
+	<message key="plugins.generic.thesis.form.abstractInstructions"><![CDATA[Insira quebras de linha para separar parágrafos. Digite o texto entre as marcações <strong></strong>, <em></em>, e <u></u> para negrito, itálico e sublinhado, respectivamente (ex.: este <em>texto</em> está em itálico.)]]></message>
 	<message key="plugins.generic.thesis.form.url">URL</message>
 	<message key="plugins.generic.thesis.form.urlInstructions">Caso a tese esteja disponível online. Inclua http://, ftp://, etc, no início do caminho (ex.: http://www.sfu.ca/path/to/thesis.pdf).</message>
 	<message key="plugins.generic.thesis.form.studentFirstName">Prénome</message>
@@ -139,7 +139,7 @@
 	<message key="plugins.generic.thesis.manager.form.studentEmailPublish">Publicar e-mail do aluno</message>
 	<message key="plugins.generic.thesis.manager.form.studentEmailPublishInstructions">O e-mail do aluno será publicado junto com o resumo, se a opção estiver selecionada.</message>
 	<message key="plugins.generic.thesis.manager.form.studentBio">Biografia do autor</message>
-	<message key="plugins.generic.thesis.manager.form.studentBioInstructions"><![CDATA[Insira quebras de linha para separar parágrafos. Digite o texto entre as marcações <b></b>, <i></i>, e <u></u> para negrito, itálico e sublinhado, respectivamente (ex.: este <i>texto</i> está em itálico.]]></message>
+	<message key="plugins.generic.thesis.manager.form.studentBioInstructions"><![CDATA[Insira quebras de linha para separar parágrafos. Digite o texto entre as marcações <strong></strong>, <em></em>, e <u></u> para negrito, itálico e sublinhado, respectivamente (ex.: este <em>texto</em> está em itálico.]]></message>
 	<message key="plugins.generic.thesis.manager.form.indexing">Indexação</message>
 	<message key="plugins.generic.thesis.manager.form.indexingDescription">Escolha termos que melhor descrevem a tese, de acordo com as seções e categorias utilizadas na revista, separando os termos com ponto-e-vírgula (Ex.: termo1; termo2; termo3).</message>
 	<message key="plugins.generic.thesis.manager.form.discipline">Área e sub-área de Conhecimento Acadêmico</message>
@@ -186,7 +186,7 @@
 	<message key="plugins.generic.thesis.form.commentInstructions">Inclua comentários adicionais possivelmente relevantes à submissão.</message>
 	<message key="plugins.generic.thesis.form.author">Autor e Orientação</message>
 	<message key="plugins.generic.thesis.form.studentBio">Biografia do autor</message>
-	<message key="plugins.generic.thesis.form.studentBioInstructions"><![CDATA[Insira quebras de linha para separar parágrafos. Digite o texto entre as marcações <b></b>, <i></i>, e <u></u> para negrito, itálico e sublinhado, respectivamente (ex.: este <i>texto</i> está em itálico.]]></message>
+	<message key="plugins.generic.thesis.form.studentBioInstructions"><![CDATA[Insira quebras de linha para separar parágrafos. Digite o texto entre as marcações <strong></strong>, <em></em>, e <u></u> para negrito, itálico e sublinhado, respectivamente (ex.: este <em>texto</em> está em itálico.]]></message>
 	<message key="plugins.generic.thesis.form.indexing">Indexação</message>
 	<message key="plugins.generic.thesis.form.indexingDescription">Escolha termos que melhor descrevem o conteúdo da tese, de acordo com as seções e categorias desta revista, separando os termos com ponto-e-vírgula (termo1; termo2; termo3).</message>
 	<message key="plugins.generic.thesis.form.discipline">Área e sub-área do Conhecimento Acadêmico</message>

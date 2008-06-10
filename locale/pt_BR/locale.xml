@@ -604,7 +604,7 @@
 	<message key="admin.settings.oaiRegistration">Cadastrar Portal para Indexação (Coleta de Metadados)</message>
 	<message key="admin.settings.oaiRegistrationDescription"><![CDATA[Para indexar todo o conteúdo das revistas hospedadas neste portal em um sistema global de bases de dados de pesquisa integradas, <a href="http://www.pkp.ubc.ca/harvester/add.php" target="_blank">cadastre</a> a URL do portal no <a href="http://www.pkp.ubc.ca/harvester/" target="_blank">coletador de metadados</a> do Public Knowledge Project. Esta ferramenta coleta os metadados de cada item indexado na revista, permitindo pesquisa coletiva e precisa dentro dos portais que adotam o <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Protocolo de Arquivos Abertos para Coleta de Metadados - OAI PMH</a>.
 <br /><br />
-<a href="http://www.pkp.ubc.ca/harvester/add.php" target="_blank">Clique aqui</a> e insira <span class="highlight">{$siteUrl}</span> no campo <b>URL do Portal</b>, e <span class="highlight">{$oaiUrl}</span> no campo <b>URL Base para o Arquivo OAI</b>.
+<a href="http://www.pkp.ubc.ca/harvester/add.php" target="_blank">Clique aqui</a> e insira <span class="highlight">{$siteUrl}</span> no campo <strong>URL do Portal</strong>, e <span class="highlight">{$oaiUrl}</span> no campo <strong>URL Base para o Arquivo OAI</strong>.
 <br /><br />
 Note que a interface OAI pode ser desativada para este portal nas configurações do sistema. Futuras versões do SEER/OJS permitirão ativar ou desativar a interface OAI para revistas, individualmente.]]></message>
 
@@ -823,7 +823,7 @@ Note que a interface OAI pode ser desativada para este portal nas configuraçõe
 	<message key="manager.setup.look.description">Cabeçalho da Página Inicial, conteúdo, cabeçalho da revista, rodapé, barra de navegação e folha de estilo.</message>
 	<message key="manager.setup.journalTitle">Título da Revista</message>
 	<message key="manager.setup.focusScope">Foco e Escopo</message>
-	<message key="manager.setup.focusScopeDescription"><![CDATA[<b>EXEMPLO DE HTML</b>]]></message>
+	<message key="manager.setup.focusScopeDescription"><![CDATA[<strong>EXEMPLO DE HTML</strong>]]></message>
 	<message key="manager.setup.journalSetupUpdated">Configurações da revista atualizadas.</message>
 	<message key="manager.setup.selectOne">Escolha uma opção</message>
 	
@@ -940,7 +940,7 @@ Configurar o suporte ao LOCKSS para o SEER/OJS é necessário somente após a pu
 	<!-- Setup Step 3 -->
 	<message key="manager.setup.guidingSubmissions">Passo 3. Diretrizes para Submissão</message>
 	<message key="manager.setup.authorGuidelines">Diretrizes para Autores</message>
-	<message key="manager.setup.authorGuidelinesDescription"><![CDATA[Definição dos padrões bibliográficos e padrões de formatação de texto da revista (Ex.: <i>Publication Manual of the American Psychological Association</i>, 5th edition, 2001). Recomenda-se oferecer exemplos de formatos de citação comuns para revistas e livros para uso nas submissões. É importante também identificar os tipos apropriados de Documentos Suplementares (Ex.: conjuntos de dados, instrumentos de pesquisas, entre outros) que os autores deveriam ser estimulados a enviar, além do documento de submissão, para aumentar o interesse dos leitores com o trabalho.]]></message>
+	<message key="manager.setup.authorGuidelinesDescription"><![CDATA[Definição dos padrões bibliográficos e padrões de formatação de texto da revista (Ex.: <em>Publication Manual of the American Psychological Association</em>, 5th edition, 2001). Recomenda-se oferecer exemplos de formatos de citação comuns para revistas e livros para uso nas submissões. É importante também identificar os tipos apropriados de Documentos Suplementares (Ex.: conjuntos de dados, instrumentos de pesquisas, entre outros) que os autores deveriam ser estimulados a enviar, além do documento de submissão, para aumentar o interesse dos leitores com o trabalho.]]></message>
 	<message key="manager.setup.submissionGuidelines">Diretrizes de Submissão</message>
 	<message key="manager.setup.submissionPreparationChecklist">Normas de Submissão</message>
 	<message key="manager.setup.submissionPreparationChecklistDescription">Ao submeter um trabalho para a revista, os autores devem ler, aceitar e marcar como realizados cada Item de Verificação nas Normas de Submissão, antes de proceder. A lista de Itens de Verificação também é apresentada em Diretrizes para Autores, na seção Sobre a Revista. A lista pode ser modificada, porém todos os itens requerem a marcação dos autores para procederem à submissão.</message>
@@ -978,7 +978,7 @@ Título do sistema de classificação:]]></message>
 <br /><br />
 Caso o administrador do portal já tenha cadastrado a revista no portal do Coletador do PKP, a revista será automaticamente indexada, sem necessidade de registro individual.
 <br /><br />
-<a href="http://www.pkp.ubc.ca/harvester/add.php" target="_blank">Clique aqui</a> e digite <span class="highlight">{$siteUrl}</span> no campo <b>Site URL</b>, e <span class="highlight">{$oaiUrl}</span> no campo <b>Base URL for OAI Archive</b>.]]></message>
+<a href="http://www.pkp.ubc.ca/harvester/add.php" target="_blank">Clique aqui</a> e digite <span class="highlight">{$siteUrl}</span> no campo <strong>Site URL</strong>, e <span class="highlight">{$oaiUrl}</span> no campo <strong>Base URL for OAI Archive</strong>.]]></message>
 	<message key="manager.setup.notifications">Notificação de Submissão</message>
 	<message key="manager.setup.notifications.description">Ao concluir o processo de submissão, o autor receberá automaticamente um e-mail de confirmação (personalizado na seção E-mails). Além disso, uma cópia da mensagem pode ser enviada para outras contas, configuradas a seguir:</message>
 	<message key="manager.setup.notifications.copyPrimaryContact">Enviar cópia ao contato principal da revista, identificado no Passo 1 de configuração.</message>
@@ -1905,7 +1905,7 @@ com sinal positivo (+) indicando avaliação em progresso.]]></message>
 	<message key="user.register.privacyStatement">Política de Privacidade</message>
 	<message key="user.register.completeForm">Preencha o formulário para se cadastrar no sistema.</message>
 	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Clique aqui</a> caso já possua cadastro em alguma revista do portal.]]></message>
-	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Clique aqui</a> caso <b>não</b> seja cadastrado em outra revista do portal.]]></message>
+	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Clique aqui</a> caso <strong>não</strong> seja cadastrado em outra revista do portal.]]></message>
 	<message key="user.register.loginToRegister">Digite o login e senha para cadastrar-se na revista.</message>
 	<message key="user.register.registrationDisabled">Cadastro de usuários desativado no momento.</message>
 	<message key="user.register.usernameRestriction">O login deve conter apenas letras minúsculas (a-z), números(0-9), sublinhados(_) e hífens(-).</message>
@@ -1950,12 +1950,12 @@ com sinal positivo (+) indicando avaliação em progresso.]]></message>
 	<message key="search.syntaxInstructions"><![CDATA[Dicas para pesquisa: <ul>
 <li>O sistema de busca não diferencia maiúsculas ou minúsculas</li>
 <li>Termos irrelevantes são ignorados pelo sistema de busca</li>
-<li>São recuperados por padrão apenas artigos contendo <i>todos</i> os termos de busca (ex.: <b>E</b> é implícito)</li>
-<li>Combine múltiplos termos com <b>OU</b> para encontrar artigos contendo um ou outro termo; ex.: <i>educação OU pesquisa</i></li>
-<li>Use parênteses para criar buscas mais complexas; ex.: <i>arquivo ((revista OU conferência) NÃO teses)</i></li>
-<li>Use aspas duplas para recuperar o termo exato; ex.: <i>"Acesso Livre à informação"</i></li>
-<li>Exclua termos utilizando <b>-</b> ou <b>NÃO</b>; ex.: <i>online -políticas</i> ou <i>online NÃO políticas</i></li>
-<li>Use <b>*</b> como caracter coringa; ex.: <i>soci* moralidade</i> recuperará documentos contendo "sociedade" ou "sociológico"</li>
+<li>São recuperados por padrão apenas artigos contendo <em>todos</em> os termos de busca (ex.: <strong>E</strong> é implícito)</li>
+<li>Combine múltiplos termos com <strong>OU</strong> para encontrar artigos contendo um ou outro termo; ex.: <em>educação OU pesquisa</em></li>
+<li>Use parênteses para criar buscas mais complexas; ex.: <em>arquivo ((revista OU conferência) NÃO teses)</em></li>
+<li>Use aspas duplas para recuperar o termo exato; ex.: <em>"Acesso Livre à informação"</em></li>
+<li>Exclua termos utilizando <strong>-</strong> ou <strong>NÃO</strong>; ex.: <em>online -políticas</em> ou <em>online NÃO políticas</em></li>
+<li>Use <strong>*</strong> como caracter coringa; ex.: <em>soci* moralidade</em> recuperará documentos contendo "sociedade" ou "sociológico"</li>
 </ul>]]></message>	
 	<message key="search.operator.not">NÃO</message>
 	<message key="search.operator.and">E</message>
@@ -2169,7 +2169,7 @@ O servidor atualmente tem suporte a mbstring: <strong>{$supportsMBString}</stron
 	<message key="installer.installFileError"><![CDATA[O documento de instalação <tt>dbscripts/xml/install.xml</tt> não existe ou não possui permissão de leitura.]]></message>
 	<message key="installer.installParseDBFileError"><![CDATA[Erro na execução do documento de instalação do banco de dados <tt>{$file}</tt>.]]></message>
 	<message key="installer.configFileError"><![CDATA[O documento de configuração <tt>config.inc.php</tt> não existe ou não possui permissão de leitura.]]></message>
-	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<b>AVISO:</b> em caso de erro durante a instalação do banco de dados poder ser necessário eliminar o banco de dados ou as tabelas antes de executar novamente a instalação.]]></message>
+	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<strong>AVISO:</strong> em caso de erro durante a instalação do banco de dados poder ser necessário eliminar o banco de dados ou as tabelas antes de executar novamente a instalação.]]></message>
 	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>IMPORTANTE!</h4>
 <p>O instalador não pode sobrescrever o documento de configuração. Antes de usar o sistema, edite o documento <tt>config.inc.php</tt> em um editor de texto e substitua todo o conteúdo pelo texto no campo abaixo.</p>]]></message>
 	<message key="installer.contentsOfConfigFile">Conteúdo para documento de configuração</message>
@@ -2179,7 +2179,7 @@ O servidor atualmente tem suporte a mbstring: <strong>{$supportsMBString}</stron
 	<message key="installer.installationComplete"><![CDATA[<p>Instalação do sistema concluída com sucesso.</p>
 <p>Para iniciar o uso do sistema, <a href="{$loginUrl}">acesse o sistema</a> com o login e a senha informadas durante a instalação.</p>]]></message>
 <message key="installer.upgradeComplete"><![CDATA[<p>Atualização para a versão {$version} concluída com sucesso.</p>
-<p>Defina a variável "instalado", no documento de configuração config.inc.php, de novo para <i>On</i>.</p>]]></message>
+<p>Defina a variável "instalado", no documento de configuração config.inc.php, de novo para <em>On</em>.</p>]]></message>
 	<message key="installer.skipFilesDir">Não criar sub-diretórios (útil apenas para instalação manual)</message>
 	<message key="installer.releaseNotes">Notas de Lançamento</message>
 	<message key="installer.checkYes">Sim</message>
@@ -2438,7 +2438,7 @@ O documento a ser editado está no formato .doc, .swx ou .rtf, permitindo ediç�
 
 <h4>Processos de Edição de Texto</h4>
 
-<b>1. Controle de Alterações do Microsoft Word</b>
+<strong>1. Controle de Alterações do Microsoft Word</strong>
 
 No menu Ferramentas, a opção Controle de alterações permite ao editor de texto incluir (o texto aparece em cores) ou remover (o texto aparece tachado em cores ou nas margens como removido) conteúdo. O editor de texto pode incluir comentários para o autor e o editor através do ícone de comentários na barra de ferramentas. A versão editada pode então ser enviada e o editor é notificado via e-mail. O editor revisa as alterações no texto e notifica o autor.
 
@@ -2446,48 +2446,48 @@ O editor e o autor devem manter as alterações com as quais concordem. No caso 
 
 Após a revisão do texto por parte do editor e do autor, o editor de texto deverá realizar uma última revisão, aceitando as alterações para proceder à fase de Layout e Composição para publicação.
 
-<b>2. Harvard Educational Review </b>
+<strong>2. Harvard Educational Review </strong>
 
-<b> Instruções para Fazer Revisões Eletrônicas em Manuscritos</b>
+<strong> Instruções para Fazer Revisões Eletrônicas em Manuscritos</strong>
 
 Siga o seguinte protocolo para fazer revisões eletrônicas em seu manuscrito:
 
-<b>Respostas a sugestões de alteração</b>
+<strong>Respostas a sugestões de alteração</strong>
   Para cada sugestão aceita, remova o negrito do texto.
-   Para cada sugestão rejeitada, insira o texto original novamente e marque-o em <b>negrito</b>.
+   Para cada sugestão rejeitada, insira o texto original novamente e marque-o em <strong>negrito</strong>.
 
-<b>Realizando Inserções e Remoções</b>
-   Indique inserções novas em <b>negrito</b>.
-   Substitua o texto removido por: <b>[texto removido]</b>.
-  Caso remova uma frase ou mais, indique com um aviso (ex.: <b>[removidas 2 frases]</b>).
+<strong>Realizando Inserções e Remoções</strong>
+   Indique inserções novas em <strong>negrito</strong>.
+   Substitua o texto removido por: <strong>[texto removido]</strong>.
+  Caso remova uma frase ou mais, indique com um aviso (ex.: <strong>[removidas 2 frases]</strong>).
 
-<b>Respondendo a Dúvidas ao Autor (QAs)</b>
+<strong>Respondendo a Dúvidas ao Autor (QAs)</strong>
    Mantenha todas as QAs intactas e em negrito dentro do texto. Não as remova.
    Para responder a uma QA, insira um comentário após a dúvida. Delimite comentários da seguinte forma:
-<b>[Comentário: ]</b> 
-  Ex.: <b>[Comentário: Maior desenvolvimento da discussão da metodologia, como sugerido]</b>
+<strong>[Comentário: ]</strong> 
+  Ex.: <strong>[Comentário: Maior desenvolvimento da discussão da metodologia, como sugerido]</strong>
 
-<b>Incluindo Comentários</b>
+<strong>Incluindo Comentários</strong>
    Use comentários para explicar alterações organizacionais ou revisões mais importantes 
-  Ex.: <b>[Comentário: Parágrafo acima movido da p. 5 para a p. 7]</b>
+  Ex.: <strong>[Comentário: Parágrafo acima movido da p. 5 para a p. 7]</strong>
   Aviso: Ao se referir a numeração de páginas, use a numeração da cópia impressa enviada, pois a numeração pode ser alterada nas revisões eletrônicas.
 
 <h4>Exemplo de uma Avaliação Eletrônica</h4>
 
-<b>Manuscrito original</b>
+<strong>Manuscrito original</strong>
 
 Antes de alterar dramaticamente a estrutura e organização do texto original, apresente o documento aos contribuidores. Após o término de suas revisões, renomeie o arquivo de NomedoAutorQA.doc para NomedoAutorQAR.doc (ex.: de LeeQA.doc para LeeQAR.doc). Imprima uma cópia do texto e envie pelo correio, junto com um disquete contendo tanto a versão revisada quanto a versão renomeada em Word.
 
-<b>Manuscrito devolvido para o autor, com dúvidas e sugestões</b>
-Antes de alterar dramaticamente a estrutura e organização do <b>texto original que estamos devolvendo</b>, apresente o documento aos <b>contribuidores do trabalho</b>. Após o término de suas revisões, renomeie o arquivo de NomedoAutorQA.doc para NomedoAutorQAR.doc (ex.: de LeeQA.doc para LeeQAR.doc). Imprima uma cópia do texto e envie pelo correio, junto com um disquete contendo tanto a versão revisada quanto a versão renomeada em Word. <b>[QA: Neste parágrafo, pode ser útil enfatizar a importância de seguir às intstruções atentamente ao realizar revisões eletrônicas. Caso contrário, o processo de edição pode demorar consideravelmente]</b>
+<strong>Manuscrito devolvido para o autor, com dúvidas e sugestões</strong>
+Antes de alterar dramaticamente a estrutura e organização do <strong>texto original que estamos devolvendo</strong>, apresente o documento aos <strong>contribuidores do trabalho</strong>. Após o término de suas revisões, renomeie o arquivo de NomedoAutorQA.doc para NomedoAutorQAR.doc (ex.: de LeeQA.doc para LeeQAR.doc). Imprima uma cópia do texto e envie pelo correio, junto com um disquete contendo tanto a versão revisada quanto a versão renomeada em Word. <strong>[QA: Neste parágrafo, pode ser útil enfatizar a importância de seguir às intstruções atentamente ao realizar revisões eletrônicas. Caso contrário, o processo de edição pode demorar consideravelmente]</strong>
 
-<b>Manuscrito revisado devolvido para o autor</b>
+<strong>Manuscrito revisado devolvido para o autor</strong>
 
-Antes de alterar dramaticamente a estrutura e organização do texto original que estamos devolvendo, apresente o documento aos contribuidores do trabalho. <b>O não cumprimento das instruções a seguir pode atrasar consideravelmente a publicação do texto</b>.
+Antes de alterar dramaticamente a estrutura e organização do texto original que estamos devolvendo, apresente o documento aos contribuidores do trabalho. <strong>O não cumprimento das instruções a seguir pode atrasar consideravelmente a publicação do texto</strong>.
 
-Após o término de suas revisões, renomeie o arquivo de NomedoAutorQA.doc para NomedoAutorQAR.doc (ex.: de LeeQA.doc para LeeQAR.doc). Imprima uma cópia do texto e envie pelo correio, junto com um disquete contendo a versão <b>[deleted word]</b> revisada e a versão renomeada em Word. <b>[QA: Neste parágrafo, pode ser útil enfatizar a importância de seguir às intstruções atentamente ao realizar revisões eletrônicas. Caso contrário, o processo de edição pode demorar consideravelmente] [Comentário: frase adicionada em resposta a sua sugestão]</b>
+Após o término de suas revisões, renomeie o arquivo de NomedoAutorQA.doc para NomedoAutorQAR.doc (ex.: de LeeQA.doc para LeeQAR.doc). Imprima uma cópia do texto e envie pelo correio, junto com um disquete contendo a versão <strong>[deleted word]</strong> revisada e a versão renomeada em Word. <strong>[QA: Neste parágrafo, pode ser útil enfatizar a importância de seguir às intstruções atentamente ao realizar revisões eletrônicas. Caso contrário, o processo de edição pode demorar consideravelmente] [Comentário: frase adicionada em resposta a sua sugestão]</strong>
 
-<b>Avisos:</b>
+<strong>Avisos:</strong>
 • Texto simples indica aceitação de alterações sugeridas à primeira frase
 • Frase inserida em resposta a QA. Texto em negrito indica inserção 
 • [deleted word] indica remoção de "completamente"

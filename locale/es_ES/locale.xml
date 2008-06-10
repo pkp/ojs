@@ -606,7 +606,7 @@
 	<message key="admin.settings.oaiRegistration">Registrar para indexación (Metadata Harvesting)</message>
 	<message key="admin.settings.oaiRegistrationDescription"><![CDATA[Para disponer de los contenidos de todas las revistas alojadas en este sitio indexados dentro de un sistema globalmente distribuido de bases de datos de investigación, <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">registre la URL</a> en el Public Knowledge Project metadata <a href="http://pkp.sfu.ca/harvester/" target="_blank">harvester</a>. Esta herramienta recopila los metadatos de cada revista, permitiendo buscar de forma precisa y colectiva dentro de todos los sitios de investigación que se adhieren al <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Open Archives Initiative Protocol for Metadata Harvesting</a>.
 <br /><br />
-<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Haga click aquí</a> e introduzca <span class="highlight">{$siteUrl}</span> <b>URL del sitio</b>, y <span class="highlight">{$oaiUrl}</span> <b>la URL base para archivos OAI</b>.
+<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Haga click aquí</a> e introduzca <span class="highlight">{$siteUrl}</span> <strong>URL del sitio</strong>, y <span class="highlight">{$oaiUrl}</span> <strong>la URL base para archivos OAI</strong>.
 <br /><br />
 Tenga en cuenta que el interfaz OAI se puede desactivar editando la configuración de OJS. Versiones futuras de OJS permitirán desactivarlo o activarlo para cada revista independientemente.]]></message>
 
@@ -827,7 +827,7 @@ Tenga en cuenta que el interfaz OAI se puede desactivar editando la configuraci�
 	<message key="manager.setup.look.description">Cabecera de la página principal, contenido, cabecera de la revista, pie, barra de navegación y hoja de estilo.</message>
 	<message key="manager.setup.journalTitle">Título de la revista</message>
 	<message key="manager.setup.focusScope">Temática y alcance</message>
-	<message key="manager.setup.focusScopeDescription"><![CDATA[<b>DATOS HMTL DE EJEMPLO</b>]]></message>
+	<message key="manager.setup.focusScopeDescription"><![CDATA[<strong>DATOS HMTL DE EJEMPLO</strong>]]></message>
 	<message key="manager.setup.journalSetupUpdated">La configuración de su revista ha sido actualizada.</message>
 	<message key="manager.setup.selectOne">Seleccione una</message>
 	<message key="manager.setup.journalAbbreviation">Abreviación de la revista</message>
@@ -948,7 +948,7 @@ Configurar el soporte LOCKSS para Open Journal Systems no es necesario hasta que
 	<!-- Setup Step 3 -->
 	<message key="manager.setup.guidingSubmissions">Paso 3. Ayuda de envíos</message>
 	<message key="manager.setup.authorGuidelines">Directrices para Autores/as</message>
-	<message key="manager.setup.authorGuidelinesDescription"><![CDATA[Poner a disposición de los/as autores/as las normas bibliográficas y de presentación para los envíos a la revista (p.e., <i>Manual de Publicación de la Asociación Americana de Psicología</i>, 5ª edición, 2001). Es útil proporcionar ejemplos de los formatos más frecuentes de citar revistas y libros para que puedan usarlos en sus envíos. También identifica los tipos de Ficheros Adicionales apropiados (p.e., series de datos, instrumentos de investigación, etc.) que se recomienda a los/as autores/as que proporcionen, además de su envío, para aumentar el compromiso de los/as lectores/as con su trabajo.]]></message>
+	<message key="manager.setup.authorGuidelinesDescription"><![CDATA[Poner a disposición de los/as autores/as las normas bibliográficas y de presentación para los envíos a la revista (p.e., <em>Manual de Publicación de la Asociación Americana de Psicología</em>, 5ª edición, 2001). Es útil proporcionar ejemplos de los formatos más frecuentes de citar revistas y libros para que puedan usarlos en sus envíos. También identifica los tipos de Ficheros Adicionales apropiados (p.e., series de datos, instrumentos de investigación, etc.) que se recomienda a los/as autores/as que proporcionen, además de su envío, para aumentar el compromiso de los/as lectores/as con su trabajo.]]></message>
 	<message key="manager.setup.submissionGuidelines">Directrices de envío</message>
 	<message key="manager.setup.submissionPreparationChecklist">Lista de Comprobación de Envío</message>
 	<message key="manager.setup.submissionPreparationChecklistDescription">Al hacer un envío a la revista lo primero que se pide es revisar que se tienen todos los elementos de la Lista de Comprobación de Envío antes de continuar. La lista también aparece en las Directrices para Autores/as, en Acerca de la Revista. Es posible editar la lista, pero todos los elementos incluidos deberán ser marcados antes de proceder con el envío.</message>
@@ -987,7 +987,7 @@ incluyendo el derecho a colocarlo en un archivo de acceso libre. Además, se pue
 <br /><br />
 Tenga en cuenta que si su administrador/a ya ha registrado este sitio en el PKP Harvester, su revista será indexada automáticamente si necesidad de registrarla.
 <br /><br />
-<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Haga click aquí</a> e introduzca <span class="highlight">{$siteUrl}</span> en <b>Site URL</b>, y <span class="highlight">{$oaiUrl}</span> en <b>Base URL for OAI Archive</b>.]]></message>
+<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Haga click aquí</a> e introduzca <span class="highlight">{$siteUrl}</span> en <strong>Site URL</strong>, y <span class="highlight">{$oaiUrl}</span> en <strong>Base URL for OAI Archive</strong>.]]></message>
 	<message key="manager.setup.notifications">Notificación de envío de autor/a</message>
 	<message key="manager.setup.notifications.description">Al completar el proceso de envío, se manda automáticamente un correo-e de recepción a los autores/as (que puede ser consultado y modificado en correos-e). Además, se puede enviar una copia del correo de notificación de las siguientes maneras:</message>
 	<message key="manager.setup.notifications.copyPrimaryContact">Enviar copia al contacto primario de la revista, identificado en el paso 1 de la configuración.</message>
@@ -1930,7 +1930,7 @@ la contraseña actual.<br /><br />Introduzca su dirección de correo-e para camb
 	<message key="user.register.privacyStatement">Declaración de privacidad</message>
 	<message key="user.register.completeForm">Complete este formulario para registrarse en la revista.</message>
 	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Haga click aquí</a> si ya está registrada/o en esta u otra revista de este sitio web.]]></message>
-	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Haga click aquí</a> si <b>no</b> se ha registrado ya con esta u otra revista en este sitio web.]]></message>
+	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Haga click aquí</a> si <strong>no</strong> se ha registrado ya con esta u otra revista en este sitio web.]]></message>
 	<message key="user.register.loginToRegister">Introduzca su nombre de usuaria/o y contraseña actual para registrarse en esta revista.</message>
 	<message key="user.register.registrationDisabled">En este momento no es posible registrarse en esta revista.</message>
 	<message key="user.register.usernameRestriction">El nombre de usuaria/o debe contener sólo letras en minúscula, números, y guiones/guiones bajos.</message>
@@ -1975,12 +1975,12 @@ la contraseña actual.<br /><br />Introduzca su dirección de correo-e para camb
 	<message key="search.syntaxInstructions"><![CDATA[Consejos de búsqueda: <ul>
 <li>Los términos de búsqueda no distinguen minúsculas/MAYÚSCULAS</li>
 <li>Se ignoran las palabras comunes</li>
-<li>Por defecto sólo se recuperan los artículos que contienen <i>todos</i> los términos de la búsqueda (se usa por defecto el operador <b>AND</b>)</li>
-<li>Combine diferentes palabras con <b>OR</b> para encontrar artículos que contengan cualquiera de los términos; p.e., <i>formación OR investigación</i></li>
-<li>Use paréntesis para crear consultas más complejas; p.e., <i>archivo ((revista OR congreso) NOT tesis)</i></li>
-<li>Para buscar una frase exacta, póngala entre paréntesis; p.e., <i>"publicaciones de acceso abierto"</i></li>
-<li>Si quiere excluir una palabra póngale como prefijo <b>-</b> o <b>NOT</b>; p.e. <i>online -política</i> or <i>online NOT política</i></li>
-<li>Use <b>*</b> en un término como comodín para encontrar cualquier secuencia de caracteres; p.e., <i>moralidad soci* </i> encontraría documentos que contengan "sociológico" o "sociología"</li>
+<li>Por defecto sólo se recuperan los artículos que contienen <em>todos</em> los términos de la búsqueda (se usa por defecto el operador <strong>AND</strong>)</li>
+<li>Combine diferentes palabras con <strong>OR</strong> para encontrar artículos que contengan cualquiera de los términos; p.e., <em>formación OR investigación</em></li>
+<li>Use paréntesis para crear consultas más complejas; p.e., <em>archivo ((revista OR congreso) NOT tesis)</em></li>
+<li>Para buscar una frase exacta, póngala entre paréntesis; p.e., <em>"publicaciones de acceso abierto"</em></li>
+<li>Si quiere excluir una palabra póngale como prefijo <strong>-</strong> o <strong>NOT</strong>; p.e. <em>online -política</em> or <em>online NOT política</em></li>
+<li>Use <strong>*</strong> en un término como comodín para encontrar cualquier secuencia de caracteres; p.e., <em>moralidad soci* </em> encontraría documentos que contengan "sociológico" o "sociología"</li>
 </ul>]]></message>
 	<message key="search.operator.not">not</message>
 	<message key="search.operator.and">and</message>
@@ -2190,7 +2190,7 @@ Su servidor soporta mbstring en este momento: <strong>{$supportsMBString}</stron
 	<message key="installer.installFileError"><![CDATA[No existe o no se puede leer el fichero de instalación <tt>dbscripts/xml/install.xml</tt>.]]></message>
 	<message key="installer.installParseDBFileError"><![CDATA[Error parseando el fichero de instalación de la base de datos<tt>{$file}</tt>.]]></message>
 	<message key="installer.configFileError"><![CDATA[El fichero de configuración <tt>config.inc.php</tt> no existe o no es legible.]]></message>
-	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<b>Cuidado:</b> Si la instalación falló justo cuando estaba instalando la base de datos es posible que sea necesario eliminar la base de datos OJS o las tablas antes de intentar reinstalar la base de datos.]]></message>
+	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<strong>Cuidado:</strong> Si la instalación falló justo cuando estaba instalando la base de datos es posible que sea necesario eliminar la base de datos OJS o las tablas antes de intentar reinstalar la base de datos.]]></message>
 	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>¡IMPORTANTE!</h4>
 <p>El instalador no ha podido sobreescribir automáticamente el fichero de configuración. Antes de usar el sistema abra <tt>config.inc.php</tt> en un editor de textos y reemplace su contenido con el contenido del fichero que le mostramos abajo.</p>]]></message>
 	<message key="installer.contentsOfConfigFile">Contenidos del fichero de configuración</message>
@@ -2201,7 +2201,7 @@ Su servidor soporta mbstring en este momento: <strong>{$supportsMBString}</stron
 <p>Para empezar a usar el sistema, <a href="{$loginUrl}">lóguese</a> con el nombre de usuaria/o y contraseña introducidos en la página anterior.</p>
 <p>Si quiere recibir noticias y actualización, por favor, regístrese en <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>. Si tiene preguntas o comentarios, por favor, visite el <a href="http://pkp.sfu.ca/support/forum" target="_new">foro de soporte</a>.</p>]]></message>
 	<message key="installer.upgradeComplete"><![CDATA[<p>La actualización a la versión de OJS {$version} se ha completado con éxito.</p>
-<p>No olvide cambiar la opción "installed" en su fichero de configuración config.inc.php y ponerla en <i>On</i>.</p>
+<p>No olvide cambiar la opción "installed" en su fichero de configuración config.inc.php y ponerla en <em>On</em>.</p>
 <p>Si no se ha registrado ya y quieres recibir noticias y actualizaciones, por favor, regístrese en <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>. Si tiene preguntas o comentarios, visite el <a href="http://pkp.sfu.ca/support/forum" target="_new">foro de soporte</a>.</p>]]></message>
 	<message key="installer.skipFilesDir">No crear subdirectorios (sólo tiene utilidad en la instalación manual)</message>
 	<message key="installer.releaseNotes">Notas de lanzamiento</message>
@@ -2463,7 +2463,7 @@ El fichero a corregir está en formato Word o .rtf y por lo tanto puede ser fác
 
 <h4>Sistema de corrección</h4>
 
-<b>1. Seguimiento de Cambios de Microsoft Word</b>
+<strong>1. Seguimiento de Cambios de Microsoft Word</strong>
 
 Bajo el menú Herramientas, la característica Seguimiento de Cambios permite al / a la corrector/a hacer inserciones (el texto aparece en otro color) y borrar texto (el texto aparece tachado con otro color o en el margen cuando se borra). El/la corrector/a puede enviar preguntas tanto al / a la autor/a (Consultas de autor/a) como al / a la editor/a (Consultas de editor/a) insertando estas preguntas entre corchetes. La versión corregida se sube y se notifica al / a la editor/a. El/la editor/a revisa el texto y notifica al / a la autor/a. 
 
@@ -2472,50 +2472,50 @@ El/la editor/a y el/la autor/a deberían dejar los cambios con los que estén de
 Una vez el texto ha sido revisado por el/la editor/a y el/la autor/a, el/la corrector/a hará una pasada final por todo el texto aceptando los cambios al preparar la fase de maquetación y galeradas.
 
 
-<b>2. Harvard Educational Review </b>
+<strong>2. Harvard Educational Review </strong>
 
-<b>Instrucciones para hacer revisiones electrónicas al manuscrito</b>
+<strong>Instrucciones para hacer revisiones electrónicas al manuscrito</strong>
 
 Por favor, siga este protocolo para hacer revisiones electrónicas a su manuscrito:
 
-<b>Responder a los cambios sugeridos</b>
+<strong>Responder a los cambios sugeridos</strong>
 &nbsp; Para cada uno de los cambios sugeridos que haya aceptado, quite la negrita del texto
-&nbsp; Para cada uno de los cambios sugeridos que usted NO acepte, vuelva a introducir el texto original y póngalo en <b>negrita</b>
+&nbsp; Para cada uno de los cambios sugeridos que usted NO acepte, vuelva a introducir el texto original y póngalo en <strong>negrita</strong>
 
-<b>Introducir y borrar texto</b>
-&nbsp; Indique texto nuevo poniéndolo en <b>negrita</b>
-&nbsp; Reemplace las secciones eliminadas con: <b>[texto borrado]</b>
-&nbsp; Si borra una frase o más, indíquelo con una nota, p.e., <b>[2 frases borradas]</b>
+<strong>Introducir y borrar texto</strong>
+&nbsp; Indique texto nuevo poniéndolo en <strong>negrita</strong>
+&nbsp; Reemplace las secciones eliminadas con: <strong>[texto borrado]</strong>
+&nbsp; Si borra una frase o más, indíquelo con una nota, p.e., <strong>[2 frases borradas]</strong>
 
-<b>Responder a preguntas al / a la autor/a (PAs)</b>
+<strong>Responder a preguntas al / a la autor/a (PAs)</strong>
 &nbsp; Mantenga todas las PAs intactas y en negrita dentro del texto. No las borre
 &nbsp; Para responder a una PA, añada un comentario a continuación. Los comentarios deberían estar delimitados usando:
-<b>[Comentario:</b>]
-&nbsp; p.e., <b>[Comentario: Explicación de la metodología ampliada como sugerió]</b>
+<strong>[Comentario:</strong>]
+&nbsp; p.e., <strong>[Comentario: Explicación de la metodología ampliada como sugerió]</strong>
 
-<b>Hacer comentarios</b>
+<strong>Hacer comentarios</strong>
 &nbsp; Use comentarios para explicar cambios en la organizaciones o revisiones importantes
-&nbsp; p.e., <b>[Comentario: Este párrafo ha sido movido de la página 5 a la 7]</b>
+&nbsp; p.e., <strong>[Comentario: Este párrafo ha sido movido de la página 5 a la 7]</strong>
 &nbsp; Nota: Cuando se refiera a los número de página use los números de página de la copia impresa del manuscrito que se le envió. Esto es importante, puesto que los números de página pueden cambiar al revisar un documento electrónico.
 
 <h4>Ilustración de una revisión electrónica</h4>
 
-<b>El fichero del manuscrito original</b>
+<strong>El fichero del manuscrito original</strong>
 
 Antes de hacer cambios sustanciales en la estructura y organización de su manuscrito original, revíselo con otras personas responsables de su área. Una vez haya terminado sus revisiones, renombre el fichero de NombreAutorPA.doc a NombreAutorPAR.doc (p.e., de LuzPA.doc a LuzPAR.doc). Imprima en papel su manuscrito y mándelo por correo en un disquete con el fichero completamente revisado y renombrado.
 
 
-<b>Manuscrito devuelto al / a la autor/a con preguntas y sugerencias</b>
+<strong>Manuscrito devuelto al / a la autor/a con preguntas y sugerencias</strong>
 
-Antes de hacer cambios sustanciales en la estructura y organización <b>del manuscrito que le estamos devolviendo</b>, revíselo con otros/as editores/as. Una vez haya terminado sus revisiones, renombre el fichero de NombreAutorPA.doc a NombreAutorPAR.doc (p.e., de LuzPA.doc a LuzPAR.doc). Imprima en papel su manuscrito y mándelo por correo en un disquete con el fichero completamente revisado y renombrado. <b>[PA: En este párrafo puede ser de ayuda resaltar la importancia de seguir las instrucciones cuidadosamente a la hora de hacer revisiones electrónicas. De otra manera el proceso de la edición se podría demorar considerablemente]</b>
+Antes de hacer cambios sustanciales en la estructura y organización <strong>del manuscrito que le estamos devolviendo</strong>, revíselo con otros/as editores/as. Una vez haya terminado sus revisiones, renombre el fichero de NombreAutorPA.doc a NombreAutorPAR.doc (p.e., de LuzPA.doc a LuzPAR.doc). Imprima en papel su manuscrito y mándelo por correo en un disquete con el fichero completamente revisado y renombrado. <strong>[PA: En este párrafo puede ser de ayuda resaltar la importancia de seguir las instrucciones cuidadosamente a la hora de hacer revisiones electrónicas. De otra manera el proceso de la edición se podría demorar considerablemente]</strong>
 
-<b>Manuscrito revisado enviado de vuelta a HER</b>
+<strong>Manuscrito revisado enviado de vuelta a HER</strong>
 
-Antes de hacer cambios sustanciales en la estructura y organización del manuscrito que le estamos devolviendo, revíselo con otros/as editores/as. <b>Por favor, tenga en cuenta que no seguir al pie de la letra las instrucciones puede demorar considerablemente la publicación de su manuscrito.</b>
+Antes de hacer cambios sustanciales en la estructura y organización del manuscrito que le estamos devolviendo, revíselo con otros/as editores/as. <strong>Por favor, tenga en cuenta que no seguir al pie de la letra las instrucciones puede demorar considerablemente la publicación de su manuscrito.</strong>
 
-Una vez haya finalizado sus revisones renombre el fichero de NombreAutorPA.doc a NombreAutorPAR.doc (p.e., de LuzPA.doc a LuzPAR.doc). Imprima en papel su manuscrito y mándelo por correo en un disquete con el fichero con <b>[palabras borradas]</b>, completamente revisado y renombrado. <b>[Comentario: He añadido una frase en respuesta a su sugerencia.]</b>
+Una vez haya finalizado sus revisones renombre el fichero de NombreAutorPA.doc a NombreAutorPAR.doc (p.e., de LuzPA.doc a LuzPAR.doc). Imprima en papel su manuscrito y mándelo por correo en un disquete con el fichero con <strong>[palabras borradas]</strong>, completamente revisado y renombrado. <strong>[Comentario: He añadido una frase en respuesta a su sugerencia.]</strong>
 
-<b>Notas:</b>
+<strong>Notas:</strong>
 &bull; Si se le ha quitado la negrita a un texto significa que se aceptado la sugerencia de cambios en la primera frase
 &bull; Frase añadida en respuesta a la PA. El texto en negrita indica la inserción de texto nuevo
 &bull; [palabra borrada] indica el borrado de "completamente"

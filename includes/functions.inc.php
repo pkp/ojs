@@ -137,8 +137,8 @@ function fatalError($reason) {
 			$file = isset($bt['file'])?$bt['file']:'(unknown)';
 			$line = isset($bt['line'])?$bt['line']:'(unknown)';
 
-			echo "<b>File:</b> {$file} line {$line}<br />\n";
-			echo "<b>Function:</b> {$class}{$type}{$function}($args)<br />\n";
+			echo "<strong>File:</strong> {$file} line {$line}<br />\n";
+			echo "<strong>Function:</strong> {$class}{$type}{$function}($args)<br />\n";
 			echo "<br/>\n";
 		}
 	}

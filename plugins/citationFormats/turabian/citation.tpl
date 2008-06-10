@@ -17,5 +17,5 @@
 	{$author->getLastName()|escape}, {$firstName|escape}{if $i==$authorCount-2}, {translate key="rt.context.and"} {elseif $i<$authorCount-1}, {else}.{/if}
 {/foreach}
 
-"{$article->getArticleTitle()|strip_unsafe_html}" <i>{$journal->getJournalTitle()|escape}</i> [{translate key="rt.captureCite.online"}], {translate key="issue.volume"} {if $issue}{$issue->getVolume()|escape} {translate key="issue.number"} {$issue->getNumber()|escape} {/if}({$article->getDatePublished()|date_format:'%e %B %Y'|trim})
+"{$article->getArticleTitle()|strip_unsafe_html}" <em>{$journal->getJournalTitle()|escape}</em> [{translate key="rt.captureCite.online"}], {translate key="issue.volume"} {if $issue}{$issue->getVolume()|escape} {translate key="issue.number"} {$issue->getNumber()|escape} {/if}({$article->getDatePublished()|date_format:'%e %B %Y'|trim})
 

@@ -604,7 +604,7 @@
 	<message key="admin.settings.oaiRegistration">Evidentirajte stranicu za indeksiranje (sakupljanje metapodataka)</message>
 	<message key="admin.settings.oaiRegistrationDescription"><![CDATA[Kako biste učinili sadržaj svih časopisa izdanih u okviru ovih stranica indeksiranim unutar globalno distribuiranog sustava istraživačkih baza podataka, <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">registrirajte</a> URL ove stranice pri <a href="http://pkp.sfu.ca/harvester/" target="_blank">sakupljaču</a> metapodataka Public Knowledge Project-a. Ovaj alat sakuplja metapodatke iz svakog indeksiranog priloga svakog časopisa na ovim stranicama, omogućujući precizno i kolektivno pretraživanje istraživačkih stranica koje sudjeluju u <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Open Archives Initiative Protocol for Metadata Harvesting</a>.
 <br /><br />
-Za registraciju pri PKP sakupljaču <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">kliknite ovdje</a> i upišite: <span class="highlight">{$siteUrl}</span> unutar <b>Site URL</b>-a i <span class="highlight">{$oaiUrl}</span> unutar <b>Base URL for OAI Archive</b>.
+Za registraciju pri PKP sakupljaču <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">kliknite ovdje</a> i upišite: <span class="highlight">{$siteUrl}</span> unutar <strong>Site URL</strong>-a i <span class="highlight">{$oaiUrl}</span> unutar <strong>Base URL for OAI Archive</strong>.
 <br /><br />
 Aktivirani OAI protokol može biti isključen na razini čitave stranice promjenom sistemske konfiguracije OJS-a. Buduće verzije OJS-a omogućit će da se OAI sudjelovanje u OAI protokolu može uključiti ili isključiti individualno za svaki časopis koji se nalazi na stranici.]]></message>
 
@@ -821,7 +821,7 @@ Aktivirani OAI protokol može biti isključen na razini čitave stranice promjen
 	<message key="manager.setup.look.description">Zaglavlje i sadržaj naslovne stranice, zaglavlje i podnožje stranica časopisa, navigacijska traka, stilska tablica, način prikaza popisa.</message>
 	<message key="manager.setup.journalTitle">Naslov časopisa</message>
 	<message key="manager.setup.focusScope">Fokus i obuhvat</message>
-	<message key="manager.setup.focusScopeDescription"><![CDATA[<b>PRIMJER HTML PODATKA</b>]]></message>
+	<message key="manager.setup.focusScopeDescription"><![CDATA[<strong>PRIMJER HTML PODATKA</strong>]]></message>
 	<message key="manager.setup.journalSetupUpdated">Uređivanje postavki časopisa je ažurirano.</message>
 	<message key="manager.setup.selectOne">Izaberite</message>
 	
@@ -977,7 +977,7 @@ Naslov klasifikacijskog sustava]]></message>
 <br /><br />
 Ako je vaš administrator već registrirao ovu stranicu kod PKP sakupljača, vaš časopis će biti indeksiran automatski.
 <br /><br />
-Za registraciju pri PKP sakupljaču <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">kliknite ovdje</a> i unesite: <span class="highlight">{$siteUrl}</span> unutar <b>Site URL</b> i <span class="highlight">{$oaiUrl}</span> unutar <b>Base URL for OAI Archive</b>.]]></message>
+Za registraciju pri PKP sakupljaču <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">kliknite ovdje</a> i unesite: <span class="highlight">{$siteUrl}</span> unutar <strong>Site URL</strong> i <span class="highlight">{$oaiUrl}</span> unutar <strong>Base URL for OAI Archive</strong>.]]></message>
 	<message key="manager.setup.notifications">Obavještavanje o autorovoj prijavi</message>
 	<message key="manager.setup.notifications.description">Pri završetku postupka prijavljivanja, autorima se automatski šalje e-pošta kojom se potvrđuje da je prilog zaprimljen (ovaj obrazac e-pošte možete vidjeti i urediti u "pripremljeni obrasci e-pošte"). Dodatno, kopija ove poruke može biti poslana i sljedećim osobama:</message>
 	<message key="manager.setup.notifications.copyPrimaryContact">Pošalji kopiju glavnom kontaktu časopisa, navedenom u  1. koraku uređivanja postavki časopisa.</message>
@@ -1697,11 +1697,11 @@ Aktivnih prikazuje na koliko je recenzija recenzent trenutno angažiran.]]></mes
 	<message key="author.submit.uploadInstructions"><![CDATA[
 <p>Kako biste priložili rukopis, izvršite slijedeće korake:</p>
 <ol>
-<li>Niže na ovoj stranici, kliknite <i>Browse</i> (ili <i>Choose File</i>) koji otvara prozor <i>Choose File</i> kojim možete odabrati datoteku na tvrdom disku Vašeg računala.</li>
+<li>Niže na ovoj stranici, kliknite <em>Browse</em> (ili <em>Choose File</em>) koji otvara prozor <em>Choose File</em> kojim možete odabrati datoteku na tvrdom disku Vašeg računala.</li>
 <li>Locirajte datoteku koju želite poslati i označite je.</li>
-<li>Kliknite <i>Open</i> na prozoru <i>Choose File</i>, čime se ime datoteke postavlja na ovu stranicu.</li>
-<li>Kliknite <i>Pošalji datoteku</i> na ovoj stranici, čime se datoteka s računala prenosi na mrežnu stranicu časopisa i preimenuje u skladu s konvencijama časopisa.</li>
-<li>Jednom kada je datoteka s tekstom priložena, kliknite <i>Spremi i nastavi</i> na dnu ove stranice.</li>
+<li>Kliknite <em>Open</em> na prozoru <em>Choose File</em>, čime se ime datoteke postavlja na ovu stranicu.</li>
+<li>Kliknite <em>Pošalji datoteku</em> na ovoj stranici, čime se datoteka s računala prenosi na mrežnu stranicu časopisa i preimenuje u skladu s konvencijama časopisa.</li>
+<li>Jednom kada je datoteka s tekstom priložena, kliknite <em>Spremi i nastavi</em> na dnu ove stranice.</li>
 </ol>]]></message>
 	<message key="author.submit.submissionFile">Datoteka s prilogom</message>
 	<message key="author.submit.uploadSubmissionFile">Postavi datoteku prijave</message>
@@ -1908,7 +1908,7 @@ vaš korisnički račun, unesite u polja ispod vašu sadašnju i novu lozinku.</
 	<message key="user.register.privacyStatement">Izjava o privatnosti</message>
 	<message key="user.register.completeForm">Ispunite ovaj formular kako biste se registrirali na ovaj časopis.</message>
 	<message key="user.register.alreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Kliknite ovdje</a> ako ste se već registrirali.]]></message>
-	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Kliknite ovdje</a> ako <b>se niste</b> već registrirali za ovaj ili neki drugi časopis na ovoj stranici.]]></message>
+	<message key="user.register.notAlreadyRegisteredOtherJournal"><![CDATA[<a href="{$registerUrl}">Kliknite ovdje</a> ako <strong>se niste</strong> već registrirali za ovaj ili neki drugi časopis na ovoj stranici.]]></message>
 	<message key="user.register.loginToRegister">Unesite vaše postojeće korisničko ime i lozinku da biste se registrirali za ovaj časopis.</message>
 	<message key="user.register.registrationDisabled">Ovaj časopis trenutno ne prihvaća registracije korisnika.</message>
 	<message key="user.register.usernameRestriction">Korisničko ime mora sadržavati samo mala slova (a-ž), brojeve (0-9), crtice (-) i podvlake (_).</message>
@@ -1954,11 +1954,11 @@ vaš korisnički račun, unesite u polja ispod vašu sadašnju i novu lozinku.</
 	<message key="search.syntaxInstructions"><![CDATA[Savjeti za pretraživanje: <ul>
 <li>Pojmovi koji se pretražuju su neosjetljivi na veličinu slova</li>
 <li>Kao rezultat se vraćaju samo članci koji sadržavaju sve izraze u upitu</li>
-<li>Višestruke riječi kombinirajte s <i>ILI</i> da pronađete članke koji sadrže jedan od pojmova; npr. <i>edukacija ILI istraživanje</i></li>
-<li>Koristite zagrade da biste kreirali više složenijih upita; npr. <i>arhiv ((časopis ILI konferencija) NE radnja)</i></li>
-<li>Tražite točnu frazu stavljajući je u navodnike; npr. <i>"mirovinska reforma"</i></li>
-<li>Isključite riječ dodavajući joj <b>-</b> ili <i>NE</i>; npr. <i>online -politika</i> ili <i>online NE politika</i></li>
-<li>Koristite <i>*</i> u izrazu kao zamjenski znak za bilo koji niz znakova; npr. <i>soci*</i> pronaći će dokumente koji sadržavaju "sociološka" ili "socijalna".</li>
+<li>Višestruke riječi kombinirajte s <em>ILI</em> da pronađete članke koji sadrže jedan od pojmova; npr. <em>edukacija ILI istraživanje</em></li>
+<li>Koristite zagrade da biste kreirali više složenijih upita; npr. <em>arhiv ((časopis ILI konferencija) NE radnja)</em></li>
+<li>Tražite točnu frazu stavljajući je u navodnike; npr. <em>"mirovinska reforma"</em></li>
+<li>Isključite riječ dodavajući joj <strong>-</strong> ili <em>NE</em>; npr. <em>online -politika</em> ili <em>online NE politika</em></li>
+<li>Koristite <em>*</em> u izrazu kao zamjenski znak za bilo koji niz znakova; npr. <em>soci*</em> pronaći će dokumente koji sadržavaju "sociološka" ili "socijalna".</li>
 </ul>]]></message>
 	<message key="search.operator.not">ne</message>
 	<message key="search.operator.and">i</message>
@@ -2168,7 +2168,7 @@ Vaš poslužitelj trenutno podržava mbstring: <strong>{$supportsMBString}</stro
 	<message key="installer.installFileError"><![CDATA[Instalacijska datoteka <tt>dbscripts/xml/install.xml</tt> ne postoji ili je nečitljiva.]]></message>
 	<message key="installer.installParseDBFileError"><![CDATA[Pogreška kod sintaktičke analize instalacijske datoteke baze podataka:  <tt>{$file}</tt>.]]></message>
 	<message key="installer.configFileError"><![CDATA[Konfiguracijska datoteka <tt>config.inc.php</tt> ne postoji ili je nečitljiva.]]></message>
-	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<b>Upozorenje:</b> Ako je instalacija neuspjela djelomično prilikom instalacije baze podataka morat ćete izbrisati vašu OJS bazu podataka ili tablice baze podataka prije ponovnog pokušaja instalacije baze podataka.]]></message>
+	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<strong>Upozorenje:</strong> Ako je instalacija neuspjela djelomično prilikom instalacije baze podataka morat ćete izbrisati vašu OJS bazu podataka ili tablice baze podataka prije ponovnog pokušaja instalacije baze podataka.]]></message>
 	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>VAŽNO!</h4>
 <p>Instalacijski program ne može automatski pisati preko konfiguracijske datoteke. Prije pokušanja korištenja sustava, molimo otvorite <tt>config.inc.php</tt> u odgovarajućem uređivaču teksta i zamijenite njegov sadržaj sa sadržajem teksta koji se nalazi u polju ispod.</p>]]></message>
 	<message key="installer.contentsOfConfigFile">Sadržaj konfiguracijske datoteke</message>
@@ -2179,7 +2179,7 @@ Vaš poslužitelj trenutno podržava mbstring: <strong>{$supportsMBString}</stro
 <p>Da biste počeli koristiti sustav, <a href="{$loginUrl}">prijavite se</a> s korisničkim imenom i lozinkom navedenim na prošloj stranici.</p>
 <p>Ako želite primati vijesti i dopune, <strong>molimo da se registrirate na <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>.</strong> Ako imate pitanja ili komentare, molimo posjetite <a href="http://pkp.sfu.ca/support/forum" target="_new">forum podrške</a>.</p>]]></message>
 	<message key="installer.upgradeComplete"><![CDATA[<p>Nadogradnja OJS-a na verziju {$version} je uspješno završena.</p>
-<p>Ne zaboravite postaviti "installed" postavku u vašem config.inc.php konfiguracijskoj datoteci nazad na <i>On</i>.</p>
+<p>Ne zaboravite postaviti "installed" postavku u vašem config.inc.php konfiguracijskoj datoteci nazad na <em>On</em>.</p>
 <p>Ako se još niste registrirali i želite primati vijesti i dopune, <strong>molimo da se registrirate na <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>.</strong> IAko imate pitanja ili komentare, molimo posjetite <a href="http://pkp.sfu.ca/support/forum" target="_new">forum podrške</a>.</p>]]></message>
 	<message key="installer.skipFilesDir">Nemoj kreirati obavezne poddirektorije (jedino korisno za ručnu instalaciju)</message>
 	<message key="installer.releaseNotes">Bilješke o izdanju</message>
@@ -2435,14 +2435,14 @@ Vaš poslužitelj trenutno podržava mbstring: <strong>{$supportsMBString}</stro
 	<message key="default.journalSettings.openAccessPolicy">Ovaj časopis omogućuje trenutni otvoren pristup svojem cjelokupnom sadržaju u skladu s uvjerenjem kako javna dostupnost istraživačkih spoznaja potiče veću razmjenu znanja i ideja.</message>
 	<message key="default.journalSettings.authorSelfArchivePolicy"><![CDATA[Autorima je dozvoljeno i potiču se da tekstove koje su objavili u ovom časopisu postavljaju na osobne ili mrežne stranice svoje institucija, prije i nakon objave u časopisu, uz uvijet da prilože pune bibliografske informacije o tome gdje je članak izvorno objavljen.
 	<br /><br />
-	<i>Authors are permitted and encouraged to post items submitted to this journal on personal or institutional websites, prior to and after publication (while providing the bibliographic details of that publication).</i>]]>
+	<em>Authors are permitted and encouraged to post items submitted to this journal on personal or institutional websites, prior to and after publication (while providing the bibliographic details of that publication).</em>]]>
 	</message>
 	<message key="default.journalSettings.copyeditInstructions"><![CDATA[Faze lekture su namijenjene da poboljšaju protok, jasnoću, gramatiku, način izražavanja i oblikovanje članka. Daju autoru posljednju mogućnost da napravi bilo kakve bitne promjene u tekstu, jer je svaka sljedeća faza ograničena na ispravljanje pogrešaka pri upisu i oblikovanju. 
 
 Datoteka za lekturu je u Word ili .rtf formatu i zbog toga može biti lako uređena kao dokument za obradu riječi. Skup uputa ovdje prikazan  predlaže dva pristupa za lekturu. Jedan je temeljen na Microsoft Word osobini "evidentiraj promjene"  i zahtijeva da lektor, urednik i autor imaju pristup tom programu. Drugi pristup koristi nezavisan program koji je, uz njihovo dopuštenje, preuzet od Harvard Educational Review. Urednik časopisa može izmijeniti ove upute u svrhu poboljšanja postupka.
 <h4>Sustavi za lekturu</h4>
 
-<b>1. Microsoft Word osobina "evidentiraj promjenu"</b>
+<strong>1. Microsoft Word osobina "evidentiraj promjenu"</strong>
 
 Osobina "evidentiraj promjene", koja se nalazi  pod  Alati u izbornoj traci, omogućuje lektoru unošenje (tekst se pojavljuje u boji) i brisanje (tekst se pojavljuje prekrižen u boji ili na marginama kao obrisan). Lektor može poslati poštom upite oboma, autoru (Upiti za autora) i uredniku (Upiti za urednika), tako da unese ove upite u uglate zagrade. Lektorirana verzija se potom šalje i urednik se obaviještava. Urednik potom obavlja recenziju teksta i obaviještava autora. 
 
@@ -2451,50 +2451,50 @@ Urednik i autor ostavljaju one promjene kojima su zadovoljni. Ako su potrebne da
 Nakon što su tekst recenzirali urednik i autor, lektor će dovršititi recenziju teksta prihvaćajući promjene, te pripremiti tekst za fazu njegova prijeloma.
 
 
-<b>2. Harvardska edukacijska recenzija</b>
+<strong>2. Harvardska edukacijska recenzija</strong>
 
-<b>Upute za pretvaranje elektronskih revizija u rukopis</b>
+<strong>Upute za pretvaranje elektronskih revizija u rukopis</strong>
 
 Molimo slijedite sljedeći protokol za pretvaranje elektronskih revizija u vaš rukopis:
 
-<b>Odgovara na predložene promjene</b>
+<strong>Odgovara na predložene promjene</strong>
 &nbsp; Za svaku od predloženih promjena koju prihvaćate, isključite opciju podebljanog teksta
-&nbsp; Za svaku od predloženih promjena koju ne prihvaćate, iznova unesite originalni tekst i <b>podebljajte</b> ga
+&nbsp; Za svaku od predloženih promjena koju ne prihvaćate, iznova unesite originalni tekst i <strong>podebljajte</strong> ga
 
-<b>Stvaranje dodataka i brisanja</b>
-&nbsp; Ukažite na dodatke <b>podebljavajući</b> novi tekst
-&nbsp; Zamijenite izbrisane rubrike sa: <b>[izbrisan tekst]</b>
-&nbsp; Ako izbrišete rečenicu ili više, molimo ukažite na to bilješkom, npr. <b>[izbrisane 2 rečenice]</b>
+<strong>Stvaranje dodataka i brisanja</strong>
+&nbsp; Ukažite na dodatke <strong>podebljavajući</strong> novi tekst
+&nbsp; Zamijenite izbrisane rubrike sa: <strong>[izbrisan tekst]</strong>
+&nbsp; Ako izbrišete rečenicu ili više, molimo ukažite na to bilješkom, npr. <strong>[izbrisane 2 rečenice]</strong>
 
-<b>Odgovaranje na upite autora(UA)</b>
+<strong>Odgovaranje na upite autora(UA)</strong>
 &nbsp; Ostavite sve  upite autora (UA) netaknute i podebljane unutar teksta. Ne brišite ih
 &nbsp; Kako biste odgovorili na upite autora (UA), dodajte nakon njih komentar. Komentari bi trebali biti razgraničeni koristeći:
-<b>[Komentar:</b>]
-&nbsp; npr. <b>[Komentar: Proširena rasprava metodologije kao što ste sugerirali]</b>
+<strong>[Komentar:</strong>]
+&nbsp; npr. <strong>[Komentar: Proširena rasprava metodologije kao što ste sugerirali]</strong>
 
-<b>Sastavljanje komentara</b>
+<strong>Sastavljanje komentara</strong>
 &nbsp; Koristite komentare da bi ste objasnili organizacijske promjene ili velike revizije
-&nbsp; npr. <b>[Komentar: Premješten gornji paragraf od p. 5 do p. 7]</b>
+&nbsp; npr. <strong>[Komentar: Premješten gornji paragraf od p. 5 do p. 7]</strong>
 &nbsp; Obavijest: Kada navodite brojeve stranica molimo koristite brojeve stranica s printane kopije rukopisa koji vam je poslan. Ovo je važno jer se brojevi stranica mogu promijeniti prilikom elektronske revizije dokumenta.
 
 <h4>Ilustracija elektronske revizije</h4>
 
-<b>Originalni "rukopis" datoteke</b>
+<strong>Originalni "rukopis" datoteke</strong>
 
 Prije nego što napravite veće promjene strukture i organizacije vašeg rukopisa molimo prijavite  ko-presjedateljima vašeg rada. Nakon što se završili s vašim revizijama, preimenujte datoteku iz ImeAutoraUA.doc u ImeAutoraUAR.doc (npr. iz IvanUA.doc u IvanUAR.doc). Isprintajte vaš rukopis i pošaljite poštom zajedno s disketom koja sadrži kompletno revidiranu i preimenovanu datoteku obrade riječi.
 
 
-<b>Originalni rukopis je vraćen autoru s upitima i prijedlozima</b>
+<strong>Originalni rukopis je vraćen autoru s upitima i prijedlozima</strong>
 
-Prije nego što napravite veće promjene strukture i organizacije <b>rukopisa kojega smo vam vratili</b>, molimo prijavite s <b>urednicima koji su ko-urednici</b> vašeg rada. Nakon što se završili s vašim revizijama, preimenujte datoteku iz ImeAutoraUA.doc u ImeAutoraUAR.doc (npr. iz IvanUA.doc u IvanUAR.doc). Isprintajte vaš rukopis i pošaljite poštom zajedno s disketom koja sadrži kompletno revidiranu i preimenovanu datoteku obrade riječi. <b>[UA: U ovom paragrafu, može biti od pomoći ako stavimo važnost da treba oprezno slijediti upute prilikom elektronske revizije. U protivnom, postupak uređivanja može biti značajno usporen]</b>
+Prije nego što napravite veće promjene strukture i organizacije <strong>rukopisa kojega smo vam vratili</strong>, molimo prijavite s <strong>urednicima koji su ko-urednici</strong> vašeg rada. Nakon što se završili s vašim revizijama, preimenujte datoteku iz ImeAutoraUA.doc u ImeAutoraUAR.doc (npr. iz IvanUA.doc u IvanUAR.doc). Isprintajte vaš rukopis i pošaljite poštom zajedno s disketom koja sadrži kompletno revidiranu i preimenovanu datoteku obrade riječi. <strong>[UA: U ovom paragrafu, može biti od pomoći ako stavimo važnost da treba oprezno slijediti upute prilikom elektronske revizije. U protivnom, postupak uređivanja može biti značajno usporen]</strong>
 
-<b>Revidiran rukopis poslati natrag HER-u</b>
+<strong>Revidiran rukopis poslati natrag HER-u</strong>
 
-Prije nego što napravite veće promjene strukture i organizacije molimo prijavite s urednicima koji su ko-urednici vašeg rada.<b>Molimo uzmite u obzir da ukoliko ne slijedite sljedeće upute, može doći do značajne odgode izdavanja vašeg rukopisa.</b>
+Prije nego što napravite veće promjene strukture i organizacije molimo prijavite s urednicima koji su ko-urednici vašeg rada.<strong>Molimo uzmite u obzir da ukoliko ne slijedite sljedeće upute, može doći do značajne odgode izdavanja vašeg rukopisa.</strong>
 
-Nakon što ste završili s vašim revizijama, preimenujte datoteku iz ImeAutoraUA.doc u ImeAutoraUAR.doc (npr. iz IvanUA.doc u IvanUAR.doc). Isprintajte vaš rukopis i pošaljite poštom zajedno s disketom koja sadrži <b>[obrisanu riječ]</b> revidiranu i preimenovanu datoteku obrade riječi. <b>[UA: U ovom paragrafu, može biti od pomoći ako stavimo važnost da treba oprezno slijediti upute prilikom elektronske revizije. U protivnom, postupak uređivanja može biti značajno usporen] [Komentar: Dodana je rečenica kao odgovor na vaš prijedlog]</b>
+Nakon što ste završili s vašim revizijama, preimenujte datoteku iz ImeAutoraUA.doc u ImeAutoraUAR.doc (npr. iz IvanUA.doc u IvanUAR.doc). Isprintajte vaš rukopis i pošaljite poštom zajedno s disketom koja sadrži <strong>[obrisanu riječ]</strong> revidiranu i preimenovanu datoteku obrade riječi. <strong>[UA: U ovom paragrafu, može biti od pomoći ako stavimo važnost da treba oprezno slijediti upute prilikom elektronske revizije. U protivnom, postupak uređivanja može biti značajno usporen] [Komentar: Dodana je rečenica kao odgovor na vaš prijedlog]</strong>
 
-<b>Bilješke:</b>
+<strong>Bilješke:</strong>
 &bull; Nemasno otisnut tekst ukazuje na prihvaćanje predloženih promijena za prvu rečenicu
 &bull; Rečenica dodana kao odgovor na UA. Masno otisnut tekst ukazuje na dodavanje novog teksta
 &bull; [obrisana riječ] ukazuje na brisanje "u potpunosti"
