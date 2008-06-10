@@ -101,6 +101,7 @@ class WebFeedGatewayPlugin extends GatewayPlugin {
 			$publishedArticleObjects =& $publishedArticleDao->getPublishedArticlesByJournalId($journal->getJournalId(), $rangeInfo);
 			while ($publishedArticle =& $publishedArticleObjects->next()) {
 				$publishedArticles[]['articles'][] = &$publishedArticle;
+				unset($publishedArticle);
 			}
 		} else {
 			$publishedArticles = &$publishedArticleDao->getPublishedArticlesInSections($issue->getIssueId());
