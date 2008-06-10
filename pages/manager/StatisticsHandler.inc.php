@@ -38,6 +38,8 @@ class StatisticsHandler extends ManagerHandler {
 		foreach (StatisticsHandler::getPublicStatisticsNames() as $name) {
 			$templateMgr->assign($name, $journal->getSetting($name));
 		}
+		$templateMgr->assign('statViews', $journal->getSetting('statViews'));
+
 		$fromDate = mktime(0, 0, 0, 1, 1, $statisticsYear);
 		$toDate = mktime(23, 59, 59, 12, 31, $statisticsYear);
 
@@ -122,7 +124,6 @@ class StatisticsHandler extends ManagerHandler {
 			'statRegisteredUsers',
 			'statRegisteredReaders',
 			'statSubscriptions',
-			'statViews'
 		);
 	}
 
@@ -133,6 +134,7 @@ class StatisticsHandler extends ManagerHandler {
 		foreach (StatisticsHandler::getPublicStatisticsNames() as $name) {
 			$journal->updateSetting($name, Request::getUserVar($name)?true:false);
 		}
+		$journal->updateSetting('statViews', Request::getUserVar('statViews')?true:false);
 		Request::redirect(null, null, 'statistics', null, array('statisticsYear' => Request::getUserVar('statisticsYear')));
 	}
 
