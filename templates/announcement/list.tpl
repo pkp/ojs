@@ -8,26 +8,26 @@
  *
  * $Id$
  *}
-<table width="100%" class="listing">
+<table class="announcements">
 	<tr>
 		<td colspan="2" class="headseparator">&nbsp;</td>
 	</tr>
 {iterate from=announcements item=announcement}
-	<tr valign="top">
+	<tr class="title">
 	{if $announcement->getTypeId() != null}
-		<td width="80%"><h4>{$announcement->getAnnouncementTypeName()|escape}: {$announcement->getAnnouncementTitle()|escape}</h4></td>
+		<td class="title"><h4>{$announcement->getAnnouncementTypeName()|escape}: {$announcement->getAnnouncementTitle()|escape}</h4></td>
 	{else}
-		<td width="80%"><h4>{$announcement->getAnnouncementTitle()|escape}</h4></td>
+		<td class="title"><h4>{$announcement->getAnnouncementTitle()|escape}</h4></td>
 	{/if}
-		<td width="20%">&nbsp;</td>
+		<td class="more">&nbsp;</td>
 	</tr>
-	<tr valign="top">
-		<td>{$announcement->getAnnouncementDescriptionShort()|nl2br}</td>
-		<td>&nbsp;</td>
+	<tr class="description">
+		<td class="description">{$announcement->getAnnouncementDescriptionShort()|nl2br}</td>
+		<td class="more">&nbsp;</td>
 	</tr>
-	<tr valign="bottom">
-		<td>{translate key="announcement.posted"}: {$announcement->getDatePosted()}</td>
-		<td align="right"><a href="{url page="announcement" op="view" path=$announcement->getAnnouncementId()}">{translate key="announcement.viewLink"}</a></td>
+	<tr class="details">
+		<td class="posted">{translate key="announcement.posted"}: {$announcement->getDatePosted()}</td>
+		<td class="more"><a href="{url page="announcement" op="view" path=$announcement->getAnnouncementId()}">{translate key="announcement.viewLink"}</a></td>
 	</tr>
 	<tr>
 		<td colspan="2" class="{if $announcements->eof()}end{/if}separator">&nbsp;</td>

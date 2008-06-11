@@ -258,6 +258,107 @@ input.defaultButton {
 
 
 /**
+ * Announcements
+ */
+
+#announcementsHome {
+	width: 100%;
+	margin: 2em 0 2em 0;	
+}
+
+#announcementsHome h3 {
+	text-align: center;
+}
+
+#announcements {
+	width: 100%;
+}
+
+#announcements h3 {
+	text-align: center;
+}
+
+table.announcements {
+	width: 100%;
+}
+
+table.announcements td {
+	padding: 0.25em 0.5em 0.25em 0.5em;
+}
+
+table.announcements td.nodata {
+	text-align: center;
+	font-style: italic;
+}
+
+table.announcements td.headseparator {
+	border-top: 1px dotted #000;
+	font-size: 0.1em;
+	line-height: 1%;
+}
+
+table.announcements td.endseparator {
+	border-top: 1px dotted #000;
+	font-size: 0.25em;
+	line-height: 10%;
+}
+
+table.announcements td.separator {
+	border-top: 1px dotted #DDDDD0;
+	font-size: 0.1em;
+	line-height: 1%;
+}
+
+table.announcements tr.intro {
+}
+
+table.announcements td.intro {
+}
+
+table.announcements tr.title {
+	vertical-align: top; 
+}
+
+table.announcements td.title {
+	width: 85%;
+}
+
+table.announcements td.title h4 {
+}
+
+table.announcements tr.description {
+	vertical-align: top;
+}
+
+table.announcements td.description {
+	width: 85%;
+}
+
+table.announcements tr.details {
+	vertical-align: bottom;
+}
+
+table.announcements td.posted {
+	padding-top: 1em;
+	font-style: italic;
+}
+
+table.announcements td.more {
+	width: 15%;
+	text-align: right;
+}
+
+table.announcementsMore {
+	width: 100%;
+}
+
+table.announcementsMore td {
+	padding-top: 1.5em;
+	text-align: right;
+}
+
+
+/**
  * Table of contents
  */
 

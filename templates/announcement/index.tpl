@@ -12,36 +12,29 @@
 {assign var="pageId" value="announcement.announcements"}
 {include file="common/header.tpl"}
 
-<a name="announcements"></a>
-
-<table width="100%" class="listing">
+<div id="announcements">
+<table class="announcements">
 {if $announcementsIntroduction != null}
-	<tr>
-		<td colspan="2">{$announcementsIntroduction|nl2br}</td>
-	</tr>
-	<tr>
-		<td colspan="2">&nbsp;</td>
+	<tr class="intro">
+		<td colspan="2" class="intro">{$announcementsIntroduction|nl2br}</td>
 	</tr>
 {/if}
-	<tr>
-		<td colspan="2" class="headseparator">&nbsp;</td>
-	</tr>
 {iterate from=announcements item=announcement}
-	<tr valign="top">
+	<tr class="title">
 	{if $announcement->getTypeId() != null}
-		<td width="80%"><h4>{$announcement->getAnnouncementTypeName()|escape}: {$announcement->getAnnouncementTitle()|escape}</h4></td>
+		<td class="title"><h4>{$announcement->getAnnouncementTypeName()|escape}: {$announcement->getAnnouncementTitle()|escape}</h4></td>
 	{else}
-		<td width="80%"><h4>{$announcement->getAnnouncementTitle()|escape}</h4></td>
+		<td class="title"><h4>{$announcement->getAnnouncementTitle()|escape}</h4></td>
 	{/if}
-		<td width="20%">&nbsp;</td>
+		<td class="more">&nbsp;</td>
 	</tr>
-	<tr valign="top">
-		<td>{$announcement->getAnnouncementDescriptionShort()|nl2br}</td>
-		<td>&nbsp;</td>
+	<tr class="description">
+		<td class="description">{$announcement->getAnnouncementDescriptionShort()|nl2br}</td>
+		<td class="more">&nbsp;</td>
 	</tr>
-	<tr valign="bottom">
-		<td>{translate key="announcement.posted"}: {$announcement->getDatePosted()}</td>
-		<td align="right"><a href="{url op="view" path=$announcement->getAnnouncementId()}">{translate key="announcement.viewLink"}</a></td>
+	<tr class="details">
+		<td class="posted">{translate key="announcement.posted"}: {$announcement->getDatePosted()}</td>
+		<td class="more"><a href="{url op="view" path=$announcement->getAnnouncementId()}">{translate key="announcement.viewLink"}</a></td>
 	</tr>
 	<tr>
 		<td colspan="2" class="{if $announcements->eof()}end{/if}separator">&nbsp;</td>
@@ -61,5 +54,6 @@
 	</tr>
 {/if}
 </table>
+</div>
 
 {include file="common/footer.tpl"}

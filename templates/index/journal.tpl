@@ -27,17 +27,15 @@
 
 {if $enableAnnouncementsHomepage}
 	{* Display announcements *}
-	<br />
-	<center><h3>{translate key="announcement.announcementsHome"}</h3></center>
-	{include file="announcement/list.tpl"}	
-	<table width="100%">
-		<tr>
-			<td>&nbsp;</td>
-		</tr>
-		<tr>
-			<td align="right"><a href="{url page="announcement"}">{translate key="announcement.moreAnnouncements"}</a></td>
-		</tr>
-	</table>
+	<div id="announcementsHome">
+		<h3>{translate key="announcement.announcementsHome"}</h3>
+		{include file="announcement/list.tpl"}	
+		<table class="announcementsMore">
+			<tr>
+				<td><a href="{url page="announcement"}">{translate key="announcement.moreAnnouncements"}</a></td>
+			</tr>
+		</table>
+	</div>
 {/if}
 
 {if $issue}
