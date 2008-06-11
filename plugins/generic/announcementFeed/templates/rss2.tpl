@@ -12,18 +12,18 @@
 <rss version="2.0">
 	<channel>
 		{* required elements *}
-		<title>{$journal->getJournalTitle()|escape:"html"|strip|strip_tags}: {translate key="announcement.announcements"}</title>
+		<title>{$journal->getJournalTitle()|escape:"html"|strip}: {translate key="announcement.announcements"}</title>
 		<link>{$journal->getUrl()}</link>
 		{if $journal->getJournalDescription()}
 			{assign var="description" value=$journal->getJournalDescription()}
 		{elseif $journal->getLocalizedSetting('searchDescription')}
 			{assign var="description" value=$journal->getLocalizedSetting('searchDescription')}
 		{/if}
-		<description>{$description|escape:"html"|strip|strip_tags}</description>
+		<description>{$description|escape:"html"|strip}</description>
 
 		{* optional elements *}
 	    {if $journal->getPrimaryLocale()}
-	    <language>{$journal->getPrimaryLocale()|replace:'_':'-'|strip|strip_tags|escape:"html"}</language>
+	    <language>{$journal->getPrimaryLocale()|replace:'_':'-'|strip|escape:"html"}</language>
 	    {/if}
 		<pubDate>{$dateUpdated|date_format:"%a, %d %b %Y %T %z"}</pubDate>
 		<generator>OJS {$ojsVersion|escape}</generator>
@@ -33,9 +33,9 @@
 		{foreach from=$announcements item=announcement}
 			<item>
 				{* required elements *}
-				<title>{$announcement->getAnnouncementTitleFull()|strip|strip_tags|escape:"html"}</title>
+				<title>{$announcement->getAnnouncementTitleFull()|strip|escape:"html"}</title>
 				<link>{url page="announcement" op="view" path=$announcement->getAnnouncementId()}</link>
-				<description>{$announcement->getAnnouncementDescription()|strip|strip_tags|escape:"html"}</description>
+				<description>{$announcement->getAnnouncementDescription()|strip|escape:"html"}</description>
 
 				{* optional elements *}
 				<guid isPermaLink="true">{url page="announcement" op="view" path=$announcement->getAnnouncementId()}</guid>

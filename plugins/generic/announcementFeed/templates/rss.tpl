@@ -17,18 +17,18 @@
     
 	<channel rdf:about="{$journal->getUrl()}">
 		{* required elements *}
-		<title>{$journal->getJournalTitle()|escape:"html"|strip|strip_tags}: {translate key="announcement.announcements"}</title>
+		<title>{$journal->getJournalTitle()|escape:"html"|strip}: {translate key="announcement.announcements"}</title>
 		<link>{$journal->getUrl()}</link>
 		{if $journal->getJournalDescription()}
 			{assign var="description" value=$journal->getJournalDescription()}
 		{elseif $journal->getLocalizedSetting('searchDescription')}
 			{assign var="description" value=$journal->getLocalizedSetting('searchDescription')}
 		{/if}
-		<description>{$description|escape:"html"|strip|strip_tags}</description>
+		<description>{$description|escape:"html"|strip}</description>
 
 		{* optional elements *}
 		{if $journal->getPrimaryLocale()}
-		<dc:language>{$journal->getPrimaryLocale()|replace:'_':'-'|escape:"html"|strip|strip_tags}</dc:language>
+		<dc:language>{$journal->getPrimaryLocale()|replace:'_':'-'|escape:"html"|strip}</dc:language>
 		{/if}
 
 		<items>
@@ -43,14 +43,14 @@
 {foreach from=$announcements item=announcement}
 	<item rdf:about="{url page="announcement" op="view" path=$announcement->getAnnouncementId()}">
 		{* required elements *}
-		<title>{$announcement->getAnnouncementTitleFull()|strip|strip_tags|escape:"html"}</title>
+		<title>{$announcement->getAnnouncementTitleFull()|strip|escape:"html"}</title>
 		<link>{url page="announcement" op="view" path=$announcement->getAnnouncementId()}</link>
 
 		{* optional elements *}
 		{if $announcement->getAnnouncementDescription()}
-		<description>{$announcement->getAnnouncementDescription()|strip|strip_tags|escape:"html"}</description>
+		<description>{$announcement->getAnnouncementDescription()|strip|escape:"html"}</description>
 		{/if}
-		<dc:creator>{$journal->getJournalTitle()|strip|strip_tags|escape:"html"}</dc:creator>
+		<dc:creator>{$journal->getJournalTitle()|strip|escape:"html"}</dc:creator>
 		<dc:date>{$announcement->getDatePosted()|date_format:"%Y-%m-%d"}</dc:date>
 	</item>
 {/foreach}

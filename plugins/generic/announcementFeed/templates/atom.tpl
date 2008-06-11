@@ -12,7 +12,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	{* required elements *}
 	<id>{$selfUrl}</id>
-	<title>{$journal->getJournalTitle()|escape:"html"|strip|strip_tags}: {translate key="announcement.announcements"}</title>
+	<title>{$journal->getJournalTitle()|escape:"html"|strip}: {translate key="announcement.announcements"}</title>
 	<updated>{$dateUpdated|date_format:"%Y-%m-%dT%T%z"|regex_replace:"/00$/":":00"}</updated>
 
 	{* recommended elements *}
@@ -30,21 +30,21 @@
 		{assign var="description" value=$journal->getLocalizedSetting('searchDescription')}
 	{/if}
 	{if $description}
-	<subtitle>{$description|strip|strip_tags|escape:"html"}</subtitle>
+	<subtitle>{$description|strip|escape:"html"}</subtitle>
 	{/if}
 
 {foreach from=$announcements item=announcement}
 	<entry>
 		{* required elements *}
 		<id>{url page="announcement" op="view" path=$announcement->getAnnouncementId()}</id>
-		<title>{$announcement->getAnnouncementTitleFull()|strip|strip_tags|escape:"html"}</title>
+		<title>{$announcement->getAnnouncementTitleFull()|strip|escape:"html"}</title>
 		<updated>{$announcement->getDatetimePosted()|date_format:"%Y-%m-%dT%T%z"|regex_replace:"/00$/":":00"}</updated>
 	  	<author>
-			<name>{$journal->getJournalTitle()|escape:"html"|strip|strip_tags}</name>
+			<name>{$journal->getJournalTitle()|escape:"html"|strip}</name>
         </author>
 		<link rel="alternate" href="{url page="announcement" op="view" path=$announcement->getAnnouncementId()}" />
         {if $announcement->getAnnouncementDescription()}
-		<summary type="html" xml:base="{url page="announcement" op="view" path=$announcement->getAnnouncementId()}">{$announcement->getAnnouncementDescription()|strip|strip_tags|escape:"html"}</summary>
+		<summary type="html" xml:base="{url page="announcement" op="view" path=$announcement->getAnnouncementId()}">{$announcement->getAnnouncementDescription()|strip|escape:"html"}</summary>
         {/if}
 
 		{* optional elements *}
