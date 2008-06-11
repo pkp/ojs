@@ -12,7 +12,7 @@
 <rss version="2.0">
 	<channel>
 		{* required elements *}
-		<title>{$journal->getJournalTitle()|escape:"html"|strip|strip_tags}</title>
+		<title>{$journal->getJournalTitle()|escape:"html"|strip}</title>
 		<link>{$journal->getUrl()}</link>
 
 		{if $journal->getJournalDescription()}
@@ -21,23 +21,23 @@
 			{assign var="description" value=$journal->getLocalizedSetting('searchDescription')}
 		{/if}
 
-		<description>{$description|strip|strip_tags|escape:"html"}</description>
+		<description>{$description|strip|escape:"html"}</description>
 
 		{* optional elements *}
 		{if $journal->getPrimaryLocale()}
-			<language>{$journal->getPrimaryLocale()|replace:'_':'-'|strip|strip_tags|escape:"html"}</language>
+			<language>{$journal->getPrimaryLocale()|replace:'_':'-'|strip|escape:"html"}</language>
 		{/if}
 
 		{if $journal->getLocalizedSetting('copyrightNotice')}
-			<copyright>{$journal->getLocalizedSetting('copyrightNotice')|strip|strip_tags|escape:"html"}</copyright>
+			<copyright>{$journal->getLocalizedSetting('copyrightNotice')|strip|escape:"html"}</copyright>
 		{/if}
 
 		{if $journal->getSetting('contactEmail')}
-			<managingEditor>{$journal->getSetting('contactEmail')|strip|strip_tags|escape:"html"}{if $journal->getSetting('contactName')} ({$journal->getSetting('contactName')|strip|strip_tags|escape:"html"}){/if}</managingEditor>
+			<managingEditor>{$journal->getSetting('contactEmail')|strip|escape:"html"}{if $journal->getSetting('contactName')} ({$journal->getSetting('contactName')|strip|escape:"html"}){/if}</managingEditor>
 		{/if}
 
 		{if $journal->getSetting('supportEmail')}
-			<webMaster>{$journal->getSetting('supportEmail')|strip|strip_tags|escape:"html"}{if $journal->getSetting('contactName')} ({$journal->getSetting('supportName')|strip|strip_tags|escape:"html"}){/if}</webMaster>
+			<webMaster>{$journal->getSetting('supportEmail')|strip|escape:"html"}{if $journal->getSetting('contactName')} ({$journal->getSetting('supportName')|strip|escape:"html"}){/if}</webMaster>
 		{/if}
 
 		<pubDate>{$issue->getDatePublished()|date_format:"%a, %d %b %Y %T %z"}</pubDate>
@@ -54,9 +54,9 @@
 			{foreach from=$section.articles item=article}
 				<item>
 					{* required elements *}
-					<title>{$article->getArticleTitle()|strip|strip_tags|escape:"html"}</title>
+					<title>{$article->getArticleTitle()|strip|escape:"html"}</title>
 					<link>{url page="article" op="view" path=$article->getBestArticleId($currentJournal)}</link>
-					<description>{$article->getArticleAbstract()|strip|strip_tags|escape:"html"}</description>
+					<description>{$article->getArticleAbstract()|strip|escape:"html"}</description>
 
 					{* optional elements *}
 					<author>{$article->getAuthorString()|escape:"html"}</author>
