@@ -28,6 +28,14 @@
 		<span class="instruct">{translate key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdInstructions"}</span>
 	</td>
 	</tr>
+	<tr valign="top">
+		<td width="20%" class="label">{fieldLabel name="trackingCode-urchin" required="true" key="plugins.generic.googleAnalytics.manager.settings.trackingCode"}</td>
+		<td width="80%" class="value"><input type="radio" name="trackingCode" id="trackingCode-urchin" value="urchin" {if $trackingCode eq "urchin" || $trackingCode eq ""}checked="checked" {/if}/> {translate key="plugins.generic.googleAnalytics.manager.settings.urchin"}</td>
+	</tr>
+	<tr valign="top">
+		<td width="20%" class="label">&nbsp;</td>
+		<td width="80%" class="value"><input type="radio" name="trackingCode" id="trackingCode-ga" value="ga" {if $trackingCode eq "ga"}checked="checked" {/if}/> {translate key="plugins.generic.googleAnalytics.manager.settings.ga"}</td>
+	</tr>
 </table>
 
 <br/>

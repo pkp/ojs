@@ -36,6 +36,8 @@ class GoogleAnalyticsSettingsForm extends Form {
 		parent::Form($plugin->getTemplatePath() . 'settingsForm.tpl');
 
 		$this->addCheck(new FormValidator($this, 'googleAnalyticsSiteId', 'required', 'plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdRequired'));
+
+		$this->addCheck(new FormValidator($this, 'trackingCode', 'required', 'plugins.generic.googleAnalytics.manager.settings.trackingCodeRequired'));
 	}
 
 	/**
@@ -46,7 +48,8 @@ class GoogleAnalyticsSettingsForm extends Form {
 		$plugin = &$this->plugin;
 
 		$this->_data = array(
-			'googleAnalyticsSiteId' => $plugin->getSetting($journalId, 'googleAnalyticsSiteId')
+			'googleAnalyticsSiteId' => $plugin->getSetting($journalId, 'googleAnalyticsSiteId'),
+			'trackingCode' => $plugin->getSetting($journalId, 'trackingCode')
 		);
 	}
 
@@ -54,7 +57,7 @@ class GoogleAnalyticsSettingsForm extends Form {
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->readUserVars(array('googleAnalyticsSiteId'));
+		$this->readUserVars(array('googleAnalyticsSiteId', 'trackingCode'));
 	}
 
 	/**
@@ -65,6 +68,12 @@ class GoogleAnalyticsSettingsForm extends Form {
 		$journalId = $this->journalId;
 
 		$plugin->updateSetting($journalId, 'googleAnalyticsSiteId', trim($this->getData('googleAnalyticsSiteId'), "\"\';"), 'string');
+
+		$trackingCode = $this->getData('trackingCode');
+		if (($trackingCode != "urchin") && ($trackingCode != "ga")) {
+			$trackingCode = "urchin";
+		}	
+		$plugin->updateSetting($journalId, 'trackingCode', $trackingCode, 'string');
 	}
 }
 

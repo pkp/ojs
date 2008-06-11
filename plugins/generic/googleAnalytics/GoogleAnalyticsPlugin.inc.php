@@ -174,7 +174,12 @@ class GoogleAnalyticsPlugin extends GenericPlugin {
 
 				if (!empty($googleAnalyticsSiteId)) {
 					$templateMgr->assign('googleAnalyticsSiteId', $googleAnalyticsSiteId);
-					$output .= $templateMgr->fetch($this->getTemplatePath() . 'pageTag.tpl'); 
+					$trackingCode = $this->getSetting($journalId, 'trackingCode');
+					if ($trackingCode == "ga") {
+						$output .= $templateMgr->fetch($this->getTemplatePath() . 'pageTagGa.tpl'); 
+					} else {
+						$output .= $templateMgr->fetch($this->getTemplatePath() . 'pageTagUrchin.tpl'); 
+					}
 				}
 			}
 		}
