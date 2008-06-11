@@ -220,6 +220,26 @@ function confirmSubmissionCheck() {
 		<td colspan="2">&nbsp;</td>
 	</tr>
 {/if}
+{if $reviewAssignment->getReviewFormId() > 0}
+<tr valign="top">
+	<td>{$currentStep|escape}.{assign var="currentStep" value=$currentStep+1}</td>
+	<td><span class="instruct">{translate key="reviewer.article.enterReviewForm"}</span></td>
+</tr>
+<tr valign="top">
+	<td>&nbsp;</td>
+	<td>
+		{translate key="submission.reviewForm"} 
+		{if $confirmedStatus and not $declined}
+			<a href="{url op="editReviewFormResponse" path=$reviewId|to_array:$reviewAssignment->getReviewFormId()}" class="icon">{icon name="comment"}</a>
+		{else}
+			 {icon name="comment" disabled="disabled"}
+		{/if}
+	</td>
+</tr>
+<tr>
+	<td colspan="2">&nbsp;</td>
+</tr>
+{/if}
 <tr valign="top">
 	<td>{$currentStep|escape}.{assign var="currentStep" value=$currentStep+1}</td>
 	<td><span class="instruct">{translate key="reviewer.article.enterReviewA"}</span></td>
@@ -309,10 +329,10 @@ function confirmSubmissionCheck() {
 				{else}
 					<form name="recommendation" method="post" action="{url op="recordRecommendation"}">
 					<input type="hidden" name="reviewId" value="{$reviewId|escape}" />
-					<select name="recommendation" {if not $confirmedStatus or $declined or $submission->getCancelled() or (!$reviewAssignment->getMostRecentPeerReviewComment() and !$uploadedFileExists)}disabled="disabled"{/if} class="selectMenu">
+					<select name="recommendation" {if not $confirmedStatus or $declined or $submission->getCancelled() or (!$reviewFormResponseExists and !$reviewAssignment->getMostRecentPeerReviewComment() and !$uploadedFileExists)}disabled="disabled"{/if} class="selectMenu">
 						{html_options_translate options=$reviewerRecommendationOptions selected=''}
 					</select>&nbsp;&nbsp;&nbsp;&nbsp;
-					<input type="submit" name="submit" onclick="return confirmSubmissionCheck()" class="button" value="{translate key="reviewer.article.submitReview"}" {if not $confirmedStatus or $declined or $submission->getCancelled() or (!$reviewAssignment->getMostRecentPeerReviewComment() and !$uploadedFileExists)}disabled="disabled"{/if} />
+					<input type="submit" name="submit" onclick="return confirmSubmissionCheck()" class="button" value="{translate key="reviewer.article.submitReview"}" {if not $confirmedStatus or $declined or $submission->getCancelled() or (!$reviewFormResponseExists and !$reviewAssignment->getMostRecentPeerReviewComment() and !$uploadedFileExists)}disabled="disabled"{/if} />
 					</form>					
 				{/if}
 				</td>		

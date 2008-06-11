@@ -184,6 +184,30 @@ class ReviewAssignmentDAO extends DAO {
 	}
 
 	/**
+	 * Get all review assignments for a review form.
+	 * @param $reviewFormId int
+	 * @return array ReviewAssignments
+	 */
+	function &getReviewAssignmentsByReviewFormId($reviewFormId) {
+		$reviewAssignments = array();
+
+		$result = &$this->retrieve(
+			'SELECT r.*, r2.review_revision, a.review_file_id, u.first_name, u.last_name FROM review_assignments r LEFT JOIN users u ON (r.reviewer_id = u.user_id) LEFT JOIN review_rounds r2 ON (r.article_id = r2.article_id AND r.round = r2.round) LEFT JOIN articles a ON (r.article_id = a.article_id) WHERE r.review_form_id = ? ORDER BY round, review_id',
+			(int) $reviewFormId
+		);
+
+		while (!$result->EOF) {
+			$reviewAssignments[] =& $this->_returnReviewAssignmentFromRow($result->GetRowAssoc(false));
+			$result->MoveNext();
+		}
+
+		$result->Close();
+		unset($result);
+
+		return $reviewAssignments;
+	}
+
+	/**
 	 * Get a review file for an article for each round.
 	 * @param $articleId int
 	 * @return array ArticleFiles
@@ -354,6 +378,7 @@ class ReviewAssignmentDAO extends DAO {
 		$reviewAssignment->setRound($row['round']);
 		$reviewAssignment->setReviewFileId($row['review_file_id']);
 		$reviewAssignment->setReviewRevision($row['review_revision']);
+		$reviewAssignment->setReviewFormId($row['review_form_id']);
 
 		// Files
 		$reviewAssignment->setReviewFile($this->articleFileDao->getArticleFile($row['review_file_id'], $row['review_revision']));
@@ -377,9 +402,9 @@ class ReviewAssignmentDAO extends DAO {
 	function insertReviewAssignment(&$reviewAssignment) {
 		$this->update(
 			sprintf('INSERT INTO review_assignments
-				(article_id, reviewer_id, round, competing_interests, recommendation, declined, replaced, cancelled, date_assigned, date_notified, date_confirmed, date_completed, date_acknowledged, date_due, reviewer_file_id, quality, date_rated, last_modified, date_reminded, reminder_was_automatic)
+				(article_id, reviewer_id, round, competing_interests, recommendation, declined, replaced, cancelled, date_assigned, date_notified, date_confirmed, date_completed, date_acknowledged, date_due, reviewer_file_id, quality, date_rated, last_modified, date_reminded, reminder_was_automatic, review_form_id)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, %s, %s, %s, %s, %s, %s, ?, ?, %s, %s, %s, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?, %s, %s, %s, %s, %s, %s, ?, ?, %s, %s, %s, ?, ?)',
 				$this->datetimeToDB($reviewAssignment->getDateAssigned()), $this->datetimeToDB($reviewAssignment->getDateNotified()), $this->datetimeToDB($reviewAssignment->getDateConfirmed()), $this->datetimeToDB($reviewAssignment->getDateCompleted()), $this->datetimeToDB($reviewAssignment->getDateAcknowledged()), $this->datetimeToDB($reviewAssignment->getDateDue()), $this->datetimeToDB($reviewAssignment->getDateRated()), $this->datetimeToDB($reviewAssignment->getLastModified()), $this->datetimeToDB($reviewAssignment->getDateReminded())),
 			array(
 				(int) $reviewAssignment->getArticleId(),
@@ -392,7 +417,8 @@ class ReviewAssignmentDAO extends DAO {
 				(int) $reviewAssignment->getCancelled(),
 				$reviewAssignment->getReviewerFileId(),
 				$reviewAssignment->getQuality(),
-				$reviewAssignment->getReminderWasAutomatic()
+				$reviewAssignment->getReminderWasAutomatic(),
+				$reviewAssignment->getReviewFormId()
 			)
 		);
 
@@ -426,7 +452,8 @@ class ReviewAssignmentDAO extends DAO {
 					date_rated = %s,
 					last_modified = %s,
 					date_reminded = %s,
-					reminder_was_automatic = ?
+					reminder_was_automatic = ?,
+					review_form_id = ?
 				WHERE review_id = ?',
 				$this->datetimeToDB($reviewAssignment->getDateAssigned()), $this->datetimeToDB($reviewAssignment->getDateNotified()), $this->datetimeToDB($reviewAssignment->getDateConfirmed()), $this->datetimeToDB($reviewAssignment->getDateCompleted()), $this->datetimeToDB($reviewAssignment->getDateAcknowledged()), $this->datetimeToDB($reviewAssignment->getDateDue()), $this->datetimeToDB($reviewAssignment->getDateRated()), $this->datetimeToDB($reviewAssignment->getLastModified()), $this->datetimeToDB($reviewAssignment->getDateReminded())),
 			array(
@@ -441,6 +468,7 @@ class ReviewAssignmentDAO extends DAO {
 				$reviewAssignment->getReviewerFileId(),
 				$reviewAssignment->getQuality(),
 				$reviewAssignment->getReminderWasAutomatic(),
+				$reviewAssignment->getReviewFormId(),
 				(int) $reviewAssignment->getReviewId()
 			)
 		);
@@ -451,6 +479,9 @@ class ReviewAssignmentDAO extends DAO {
 	 * @param $reviewId int
 	 */
 	function deleteReviewAssignmentById($reviewId) {
+		$reviewFormResponseDao =& DAORegistry::getDAO('ReviewFormResponseDAO');
+		$reviewFormResponseDao->deleteReviewFormResponseByReviewId($reviewId);
+
 		return $this->update(
 			'DELETE FROM review_assignments WHERE review_id = ?',
 			(int) $reviewId
@@ -460,12 +491,27 @@ class ReviewAssignmentDAO extends DAO {
 	/**
 	 * Delete review assignments by article.
 	 * @param $articleId int
+	 * @return boolean
 	 */
 	function deleteReviewAssignmentsByArticle($articleId) {
-		return $this->update(
-			'DELETE FROM review_assignments WHERE article_id = ?',
+		$returner = false;
+		$result =& $this->retrieve(
+			'SELECT review_id FROM reviews WHERE article_id = ?',
 			(int) $articleId
 		);
+
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+			$reviewId = $row['review_id'];
+
+			$this->update('DELETE FROM review_form_responses WHERE review_id = ?', $reviewId);
+			$this->update('DELETE FROM review_assignments WHERE review_id = ?', $reviewId);
+
+			$result->MoveNext();
+			$returner = true;
+		}
+		$result->Close();
+		return $returner;
 	}
 
 	/**
@@ -516,6 +562,71 @@ class ReviewAssignmentDAO extends DAO {
 			$result->MoveNext();
 		}
 
+		$result->Close();
+		unset($result);
+
+		return $returner;
+	}
+
+	/**
+	 * Get the number of completed reviews for all published review forms of a journal.
+	 * @return array
+	 */
+	function getCompletedReviewCountsForReviewForms($journalId) {
+		$returner = array();
+		$result =& $this->retrieve(
+			'SELECT	r.review_form_id, COUNT(r.review_id) AS count
+			FROM	review_assignments r,
+				articles a,
+				review_forms rf
+			WHERE	r.article_id = a.article_id AND
+				a.journal_id = ? AND
+				r.review_form_id = rf.review_form_id AND
+				rf.published = 1 AND
+				r.date_completed IS NOT NULL
+			GROUP BY r.review_form_id',
+			(int) $journalId
+		);
+
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+			$returner[$row['review_form_id']] = $row['count'];
+			$result->MoveNext();
+		}
+		
+		$result->Close();
+		unset($result);
+
+		return $returner;
+	}
+
+	/**
+	 * Get the number of active reviews for all published review forms of a journal.
+	 * @return array
+	 */
+	function getActiveReviewCountsForReviewForms($journalId) {
+		$returner = array();
+		$result =& $this->retrieve(
+			'SELECT	r.review_form_id, COUNT(r.review_id) AS count
+			FROM	review_assignments r,
+				articles a,
+				review_forms rf
+			WHERE	r.article_id = a.article_id AND
+				a.journal_id = ? AND
+				r.review_form_id = rf.review_form_id AND
+				rf.published = 1 AND
+				r.date_confirmed IS NOT NULL AND
+				r.date_completed IS NULL
+			GROUP BY r.review_form_id',
+			$journalId
+		);
+
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+			$returner[$row['review_form_id']] = $row['count'];
+			$result->MoveNext();
+		}
+		
 		$result->Close();
 		unset($result);
 

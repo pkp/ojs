@@ -669,6 +669,28 @@ class SectionEditorHandler extends Handler {
 		SubmissionCommentsHandler::deleteComment($args);
 	}
 
+	// Submission Review Form
+
+	function clearReviewForm($args) {
+		import('pages.sectionEditor.SubmissionEditHandler');
+		SubmissionEditHandler::clearReviewForm($args);
+	}
+
+	function selectReviewForm($args) {
+		import('pages.sectionEditor.SubmissionEditHandler');
+		SubmissionEditHandler::selectReviewForm($args);
+	}
+
+	function previewReviewForm($args) {
+		import('pages.sectionEditor.SubmissionEditHandler');
+		SubmissionEditHandler::previewReviewForm($args);
+	}
+
+	function viewReviewFormResponse($args) {
+		import('pages.sectionEditor.SubmissionEditHandler');
+		SubmissionEditHandler::viewReviewFormResponse($args);
+	}
+
 	/** Proof Assignment Functions */
 	function selectProofreader($args) {
 		import('pages.sectionEditor.SubmissionEditHandler');

@@ -134,6 +134,20 @@
 	</table>
 
 	<table width="100%" class="data">
+ 	<tr valign="top">
+		<td class="label">{translate key="submission.reviewForm"}</td>
+		<td>
+		{if $reviewAssignment->getReviewFormId() > 0}
+			{assign var="reviewFormId" value=$reviewAssignment->getReviewFormId()}
+			{$reviewFormsTitles[$reviewFormId]}
+		{else}
+			{translate key="common.none"}
+		{/if}
+		{if !$reviewAssignment->getDateCompleted()}
+		&nbsp;&nbsp;&nbsp;&nbsp;<a class="action" href="{url op="selectReviewForm" path=$submission->getArticleId()|to_array:$reviewAssignment->getReviewId()}"{if $reviewFormResponses[$reviewId]} onclick="return confirm('{translate|escape:"jsparam" key="editor.article.confirmChangeReviewForm"}')"{/if}>{translate key="editor.article.selectReviewForm"}</a>{if $reviewAssignment->getReviewFormId() > 0}&nbsp;&nbsp;&nbsp;&nbsp;<a class="action" href="{url op="clearReviewForm" path=$submission->getArticleId()|to_array:$reviewAssignment->getReviewId()}"{if $reviewFormResponses[$reviewId]} onclick="return confirm('{translate|escape:"jsparam" key="editor.article.confirmChangeReviewForm"}')"{/if}>{translate key="editor.article.clearReviewForm"}</a>{/if}
+		{/if}
+		</td>
+	</tr>
 	<tr valign="top">
 		<td class="label" width="20%">&nbsp;</td>
 		<td width="80%">
@@ -210,6 +224,14 @@
 				<td>{$reviewAssignment->getCompetingInterests()|strip_unsafe_html|nl2br|default:"&mdash;"}</td>
 			</tr>
 		{/if}{* requireReviewerCompetingInterests *}
+		{if $reviewFormResponses[$reviewId]}
+			<tr valign="top">
+				<td class="label">{translate key="submission.reviewFormResponse"}</td>
+				<td>
+					<a href="javascript:openComments('{url op="viewReviewFormResponse" path=$submission->getArticleId()|to_array:$reviewAssignment->getReviewId()}');" class="icon">{icon name="letter"}</a>
+				</td>
+			</tr>
+		{/if}
 		<tr valign="top">
 			<td class="label">{translate key="submission.review"}</td>
 			<td>

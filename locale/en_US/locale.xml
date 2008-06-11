@@ -26,6 +26,74 @@
 	 *  DEFAULT - Default settings for configuration items.
 	-->
 
+	<!-- review froms start -->
+
+	<!-- common -->
+	<message key="common.copy">Copy</message>
+	<message key="common.preview">Preview</message>
+	<message key="common.publish">Publish</message>
+	<message key="common.activate">Activate</message>
+	<message key="common.deactivate">Deactivate</message>
+
+	<!-- Journal Management -->
+	<message key="manager.reviewForms">Review Forms</message>
+	
+	<message key="manager.reviewForms.publishedReviewForms">Published Review Forms</message>
+	<message key="manager.reviewForms.unpublishedReviewForms">Unpublished Review Forms</message>
+	<message key="manager.reviewForms.noneCreated">No review forms have been created.</message>
+	<message key="manager.reviewForms.nonePublished">No review forms have been published.</message>
+	<message key="manager.reviewForms.create">Create Review Form</message>
+	<message key="manager.reviewForms.edit">Edit Review Form</message>
+	<message key="manager.reviewForms.reviewFormData">Review Form Data</message>
+	<message key="manager.reviewForms.title">Title</message>
+	<message key="manager.reviewForms.description">Description</message>
+	<message key="manager.reviewForms.preview">Preview Review Form</message>
+	<message key="manager.reviewForms.completed">Completed</message>
+	<message key="manager.reviewForms.inReview">In review</message>
+	<message key="manager.reviewForms.confirmDeletePublished">Confirm delete of a published review form...</message>
+	<message key="manager.reviewForms.confirmDeleteUnpublished">Confirm delete of an upublished review form...</message>
+	
+	<message key="manager.reviewForms.form.titleRequired">A title is required for the review form.</message>	
+	
+	<message key="manager.reviewFormElements">Review Form Elements</message>
+	<message key="manager.reviewFormElements.create">Create New Element</message>
+	<message key="manager.reviewFormElements.edit">Edit Review Form Element</message>
+	<message key="manager.reviewFormElements.noneCreated">No review form elements have been created.</message>
+	<message key="manager.reviewFormElements.confirmDelete">Confirm delete of a published review form element...</message>
+	<message key="manager.reviewFormElements.copyTo">Copy to: </message>
+	<message key="manager.reviewFormElements.question">Question</message>
+	<message key="manager.reviewFormElements.required">Required review form element</message>
+	<message key="manager.reviewFormElements.viewable">Viewable (for authors)</message>
+	<message key="manager.reviewFormElements.elementType">Element type</message>
+	<message key="manager.reviewFormElements.possibleResponse">Possible response</message>
+	<message key="manager.reviewFormElements.addResponseItem">Add possible response</message>
+	<message key="manager.reviewFormElements.chooseType">Choose element type</message>
+	<message key="manager.reviewFormElement.changeType">Changing the form element type...</message>
+
+	<message key="manager.reviewFormElements.form.questionRequired">A question is required for the review form element.</message>	
+	<message key="manager.reviewFormElements.form.elementTypeRequired">An element type is required for the review form element.</message>	
+
+	<message key="manager.reviewFormElements.smalltextfield">Small text field</message>
+	<message key="manager.reviewFormElements.textfield">Single row text field</message>
+	<message key="manager.reviewFormElements.textarea">Text area</message>
+	<message key="manager.reviewFormElements.checkboxes">Checkboxes</message>
+	<message key="manager.reviewFormElements.radiobuttons">Radiobuttons</message>
+	<message key="manager.reviewFormElements.dropdownbox">Dropdownbox</message>
+
+	<!--  peer review -->
+	<message key="submission.reviewForm">Review Form</message>
+	<message key="submission.reviewFormResponse">Review Form Response</message>
+
+	<message key="editor.article.reviewForms">Review Forms</message>	
+	<message key="editor.article.selectReviewForm">Select Review Form</message>	
+	<message key="editor.article.clearReviewForm">Clear Review Form</message>	
+	<message key="editor.article.confirmChangeReviewForm">Changing the review form will remove responses...</message>	
+
+	<message key="reviewer.article.enterReviewForm">Click on icon to fill in the review form.</message>	
+	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Please fill in required fields.</message>	
+	
+	<!-- review forms end -->
+
 	<!--
 	 *
 	 * COMMON - This section contains the most frequently-used words

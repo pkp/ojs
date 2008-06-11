@@ -139,6 +139,9 @@ class DAORegistry {
 			case 'GroupMembershipDAO': return 'group.GroupMembershipDAO';
 			case 'QueuedPaymentDAO': return 'payment.QueuedPaymentDAO';
 			case 'OJSCompletedPaymentDAO': return 'payment.ojs.OJSCompletedPaymentDAO';
+			case 'ReviewFormDAO': return 'reviewForm.ReviewFormDAO';
+			case 'ReviewFormElementDAO': return 'reviewForm.ReviewFormElementDAO';
+			case 'ReviewFormResponseDAO': return 'reviewForm.ReviewFormResponseDAO';
 			default: fatalError('Unrecognized DAO ' . $name);
 		}
 		return null;

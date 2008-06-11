@@ -143,7 +143,7 @@ class SectionEditorAction extends Action {
 			import('article.log.ArticleLog');
 			import('article.log.ArticleEventLogEntry');
 			ArticleLog::logEvent($sectionEditorSubmission->getArticleId(), ARTICLE_LOG_REVIEW_CLEAR, ARTICLE_LOG_TYPE_REVIEW, $reviewAssignment->getReviewId(), 'log.review.reviewCleared', array('reviewerName' => $reviewer->getFullName(), 'articleId' => $sectionEditorSubmission->getArticleId(), 'round' => $reviewAssignment->getRound()));
-		}		
+		}
 	}
 
 	/**
@@ -314,7 +314,7 @@ class SectionEditorAction extends Action {
 					$email->displayEditForm(Request::url(null, null, 'cancelReview', 'send'), array('reviewId' => $reviewId, 'articleId' => $sectionEditorSubmission->getArticleId()));
 					return false;
 				}
-			}				
+			}
 		}
 		return true;
 	}
@@ -512,7 +512,7 @@ class SectionEditorAction extends Action {
 
 		if ($reviewAssignment->getArticleId() == $articleId && $reviewAssignment->getReviewerFileId() == $fileId && !HookRegistry::call('SectionEditorAction::makeReviewerFileViewable', array(&$reviewAssignment, &$articleFile, &$viewable))) {
 			$articleFile->setViewable($viewable);
-			$articleFileDao->updateArticleFile($articleFile);				
+			$articleFileDao->updateArticleFile($articleFile);
 		}
 	}
 
@@ -649,6 +649,77 @@ class SectionEditorAction extends Action {
 	}
 
 	/**
+	 * Clear a review form
+	 * @param $sectionEditorSubmission object
+	 * @param $reviewId int
+	 */
+	function clearReviewForm($sectionEditorSubmission, $reviewId) {
+		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
+		$reviewAssignment =& $reviewAssignmentDao->getReviewAssignmentById($reviewId);
+
+		if (HookRegistry::call('SectionEditorAction::clearReviewForm', array(&$sectionEditorSubmission, &$reviewAssignment, &$reviewId))) return $reviewId;
+
+		if (isset($reviewAssignment) && $reviewAssignment->getArticleId() == $sectionEditorSubmission->getArticleId()) {
+			$reviewFormResponseDao =& DAORegistry::getDAO('ReviewFormResponseDAO');
+			$responses = $reviewFormResponseDao->getReviewReviewFormResponseValues($reviewId);
+			if (!empty($responses)) {
+				$reviewFormResponseDao->deleteReviewFormResponseByReviewId($reviewId);
+			}
+			$reviewAssignment->setReviewFormId(null);
+			$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
+		}
+	}
+
+	/**
+	 * Assigns a review form to a review.
+	 * @param $sectionEditorSubmission object
+	 * @param $reviewId int
+	 * @param $reviewFormId int
+	 */
+	function addReviewForm($sectionEditorSubmission, $reviewId, $reviewFormId) {
+		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
+		$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($reviewId);
+
+		if (HookRegistry::call('SectionEditorAction::addReviewForm', array(&$sectionEditorSubmission, &$reviewAssignment, &$reviewId, &$reviewFormId))) return $reviewFormId;
+
+		if (isset($reviewAssignment) && $reviewAssignment->getArticleId() == $sectionEditorSubmission->getArticleId()) {
+			// Only add the review form if it has not already
+			// been assigned to the review.
+			if ($reviewAssignment->getReviewFormId() != $reviewFormId) {
+				$reviewFormResponseDao =& DAORegistry::getDAO('ReviewFormResponseDAO');
+				$responses = $reviewFormResponseDao->getReviewReviewFormResponseValues($reviewId);
+				if (!empty($responses)) {
+					$reviewFormResponseDao->deleteReviewFormResponseByReviewId($reviewId);
+				}
+				$reviewAssignment->setReviewFormId($reviewFormId);
+				$reviewAssignmentDao->updateReviewAssignment($reviewAssignment);
+			}
+		}
+	}
+
+	/**
+	 * View review form response.
+	 * @param $sectionEditorSubmission object
+	 * @param $reviewId int
+	 */
+	function viewReviewFormResponse($sectionEditorSubmission, $reviewId) {
+		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
+		$reviewAssignment = &$reviewAssignmentDao->getReviewAssignmentById($reviewId);
+
+		if (HookRegistry::call('SectionEditorAction::viewReviewFormResponse', array(&$sectionEditorSubmission, &$reviewAssignment, &$reviewId))) return $reviewId;
+
+		if (isset($reviewAssignment) && $reviewAssignment->getArticleId() == $sectionEditorSubmission->getArticleId()) {
+			$reviewFormId = $reviewAssignment->getReviewFormId();
+			if ($reviewFormId != null) {
+				import('submission.form.ReviewFormResponseForm');
+				$reviewForm =& new ReviewFormResponseForm($reviewId, $reviewFormId);
+				$reviewForm->initData();
+				$reviewForm->display();
+			}
+		}
+	}
+
+	/**
 	 * Set the file to use as the default copyedit file.
 	 * @param $sectionEditorSubmission object
 	 * @param $fileId int
@@ -755,7 +826,7 @@ class SectionEditorAction extends Action {
 		// been assigned to review this article.
 		if (!$assigned && !HookRegistry::call('SectionEditorAction::selectCopyeditor', array(&$sectionEditorSubmission, &$copyeditorId))) {
 			$sectionEditorSubmission->setCopyeditorId($copyeditorId);
-			$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);	
+			$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
 
 			$copyeditor = &$userDao->getUser($copyeditorId);
 
@@ -1611,7 +1682,7 @@ class SectionEditorAction extends Action {
 
 			foreach ($fileIds as $fileId) {
 				$articleFileManager->deleteFile($fileId);
-			}			
+			}
 		}
 
 		$articleNoteDao->clearAllArticleNotes($articleId);
@@ -1890,7 +1961,7 @@ class SectionEditorAction extends Action {
 			return false;
 		}
 		return true;
-	}	
+	}
 
 	/**
 	 * View layout comments.
@@ -1972,7 +2043,7 @@ class SectionEditorAction extends Action {
 			return false;
 		}
 		return true;
-	}	
+	}
 
 	/**
 	 * Confirms the review assignment on behalf of its reviewer.
@@ -1989,7 +2060,7 @@ class SectionEditorAction extends Action {
 
 		if (HookRegistry::call('SectionEditorAction::acceptReviewForReviewer', array(&$reviewAssignment, &$reviewer, &$accept))) return;
 
-		// Only confirm the review for the reviewer if 
+		// Only confirm the review for the reviewer if
 		// he has not previously done so.
 		if ($reviewAssignment->getDateConfirmed() == null) {
 			$reviewAssignment->setDeclined($accept?0:1);
@@ -2044,7 +2115,7 @@ class SectionEditorAction extends Action {
 		}
 
 		if (isset($fileId) && $fileId != 0) {
-			// Only confirm the review for the reviewer if 
+			// Only confirm the review for the reviewer if
 			// he has not previously done so.
 			if ($reviewAssignment->getDateConfirmed() == null) {
 				$reviewAssignment->setDeclined(0);

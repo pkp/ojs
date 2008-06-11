@@ -16,6 +16,138 @@
 
 	<!--
 	  *
+	  * TABLE review_forms
+	  *
+	  -->
+	<table name="review_forms">
+		<field name="review_form_id" type="I8">
+			<KEY/>
+			<AUTOINCREMENT/>
+		</field>
+		<field name="journal_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="seq" type="F" />
+		<field name="published" type="I1">
+			<NOTNULL />
+			<DEFAULT VALUE="0" />
+		</field>
+		<field name="is_active" type="I1" />
+		<descr>Review forms.</descr>
+		<index name="review_forms_review_form_id">
+			<col>review_form_id</col>
+		</index>
+	</table>
+	
+	<!--
+	  *
+	  * TABLE review_form_settings
+	  *
+	  -->
+	<table name="review_form_settings">
+		<field name="review_form_id" type="I8">
+			<NOTNULL />
+		</field>
+		<field name="locale" type="C2" size="5">
+			<NOTNULL />
+			<DEFAULT VALUE=""/>
+		</field>
+		<field name="setting_name" type="C2" size="255">
+			<NOTNULL />
+		</field>
+		<field name="setting_value" type="X"/>
+		<field name="setting_type" type="C2" size="6">
+			<NOTNULL/>
+		</field>
+		<descr>Review form settings</descr>
+		<index name="review_form_settings_review_form_id">
+			<col>review_form_id</col>
+		</index>
+		<index name="review_form_settings_pkey">
+			<col>review_form_id</col>
+			<col>locale</col>
+			<col>setting_name</col>
+			<UNIQUE />
+		</index>
+	</table>
+
+	<!--
+	  *
+	  * TABLE review_form_elements
+	  *
+	  -->
+	<table name="review_form_elements">
+		<field name="review_form_element_id" type="I8">
+			<KEY/>
+			<AUTOINCREMENT/>
+		</field>
+		<field name="review_form_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="seq" type="F" />
+		<field name="element_type" type="I8" />
+		<field name="required" type="I1" />
+		<descr>Review form elements.</descr>
+		<index name="review_form_elements_review_form_element_id">
+			<col>review_form_element_id</col>
+		</index>
+	</table>
+	
+	<!--
+	  *
+	  * TABLE review_form_element_settings
+	  *
+	  -->
+	<table name="review_form_element_settings">
+		<field name="review_form_element_id" type="I8">
+			<NOTNULL />
+		</field>
+		<field name="locale" type="C2" size="5">
+			<NOTNULL />
+			<DEFAULT VALUE=""/>
+		</field>
+		<field name="setting_name" type="C2" size="255">
+			<NOTNULL />
+		</field>
+		<field name="setting_value" type="X"/>
+		<field name="setting_type" type="C2" size="6">
+			<NOTNULL/>
+		</field>
+		<descr>Review form element settings</descr>
+		<index name="review_form_element_settings_review_form_element_id">
+			<col>review_form_element_id</col>
+		</index>
+		<index name="review_form_element_settings_pkey">
+			<col>review_form_element_id</col>
+			<col>locale</col>
+			<col>setting_name</col>
+			<UNIQUE />
+		</index>
+	</table>
+
+	<!--
+	  *
+	  * TABLE review_form_responses
+	  *
+	  -->
+	<table name="review_form_responses">
+		<field name="review_form_element_id" type="I8">
+			<NOTNULL />
+		</field>
+		<field name="review_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="response_type" type="C2" size="6"/>
+		<field name="response_value" type="X" />
+		<descr>Review form responses.</descr>
+		<index name="review_form_responses_pkey">
+			<col>review_form_element_id</col>
+			<col>review_id</col>
+		</index>
+	</table>
+
+	<!--
+	  *
 	  * TABLE version
 	  *
 	  -->
@@ -1257,6 +1389,7 @@
 			<NOTNULL/>
 			<DEFAULT VALUE="1"/>
 		</field>
+		<field name="review_form_id" type="I8"/>
 		<descr>Reviewing assignments.</descr>
 		<index name="review_assignments_article_id">
 			<col>article_id</col>

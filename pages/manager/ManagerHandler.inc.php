@@ -256,6 +256,106 @@ class ManagerHandler extends Handler {
 
 
 	//
+	// Review Form Management
+	//
+
+	function publishedReviewForms() {
+		import('pages.manager.ReviewFormHandler');
+		ReviewFormHandler::publishedReviewForms();
+	}
+
+	function unpublishedReviewForms() {
+		import('pages.manager.ReviewFormHandler');
+		ReviewFormHandler::unpublishedReviewForms();
+	}
+
+	function createReviewForm() {
+		import('pages.manager.ReviewFormHandler');
+		ReviewFormHandler::createReviewForm();
+	}
+
+	function editReviewForm($args) {
+		import('pages.manager.ReviewFormHandler');
+		ReviewFormHandler::editReviewForm($args);
+	}
+
+	function updateReviewForm() {
+		import('pages.manager.ReviewFormHandler');
+		ReviewFormHandler::updateReviewForm();
+	}
+
+	function previewReviewForm($args) {
+		import('pages.manager.ReviewFormHandler');
+		ReviewFormHandler::previewReviewForm($args);
+	}
+
+	function publishReviewForm($args) {
+		import('pages.manager.ReviewFormHandler');
+		ReviewFormHandler::publishReviewForm($args);
+	}
+
+	function deleteReviewForm($args) {
+		import('pages.manager.ReviewFormHandler');
+		ReviewFormHandler::deleteReviewForm($args);
+	}
+
+	function activateReviewForm($args) {
+		import('pages.manager.ReviewFormHandler');
+		ReviewFormHandler::activateReviewForm($args);
+	}
+
+	function deactivateReviewForm($args) {
+		import('pages.manager.ReviewFormHandler');
+		ReviewFormHandler::deactivateReviewForm($args);
+	}
+
+	function copyReviewForm($args) {
+		import('pages.manager.ReviewFormHandler');
+		ReviewFormHandler::copyReviewForm($args);
+	}
+
+	function moveReviewForm() {
+		import('pages.manager.ReviewFormHandler');
+		ReviewFormHandler::moveReviewForm();
+	}
+
+	function reviewFormElements($args) {
+		import('pages.manager.ReviewFormHandler');
+		ReviewFormHandler::reviewFormElements($args);
+	}
+
+	function createReviewFormElement($args) {
+		import('pages.manager.ReviewFormHandler');
+		ReviewFormHandler::createReviewFormElement($args);
+	}
+
+	function editReviewFormElement($args) {
+		import('pages.manager.ReviewFormHandler');
+		ReviewFormHandler::editReviewFormElement($args);
+	}
+
+	function deleteReviewFormElement($args) {
+		import('pages.manager.ReviewFormHandler');
+		ReviewFormHandler::deleteReviewFormElement($args);
+	}
+
+	function updateReviewFormElement() {
+		import('pages.manager.ReviewFormHandler');
+		ReviewFormHandler::updateReviewFormElement();
+	}
+
+	function moveReviewFormElement() {
+		import('pages.manager.ReviewFormHandler');
+		ReviewFormHandler::moveReviewFormElement();
+	}
+	
+	function copyReviewFormElement() {
+		import('pages.manager.ReviewFormHandler');
+		ReviewFormHandler::copyReviewFormElement();
+	}
+
+
+	//
 	// E-mail Management
 	//
 

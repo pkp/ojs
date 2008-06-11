@@ -313,6 +313,42 @@ class ReviewerAction extends Action {
 		}
 	}
 
+	/**
+	 * Edit review form response.
+	 * @param $reviewId int
+	 * @param $reviewFormId int
+	 */
+	function editReviewFormResponse($reviewId, $reviewFormId) {
+		if (!HookRegistry::call('ReviewerAction::editReviewFormResponse', array($reviewId, $reviewFormId))) {
+			import('submission.form.ReviewFormResponseForm');
+
+			$reviewForm =& new ReviewFormResponseForm($reviewId, $reviewFormId);
+			$reviewForm->initData();
+			$reviewForm->display();
+		}
+	}
+
+	/**
+	 * Save review form response.
+	 * @param $reviewId int
+	 * @param $reviewFormId int
+	 */
+	function saveReviewFormResponse($reviewId, $reviewFormId) {
+		if (!HookRegistry::call('ReviewerAction::saveReviewFormResponse', array($reviewId, $reviewFormId))) {
+			import('submission.form.ReviewFormResponseForm');
+
+			$reviewForm =& new ReviewFormResponseForm($reviewId, $reviewFormId);
+			$reviewForm->readInputData();
+			if ($reviewForm->validate()) {
+				$reviewForm->execute();
+			} else {
+				$reviewForm->display();
+				return false;
+			}
+			return true;
+		}
+	}
+
 	//
 	// Misc
 	//

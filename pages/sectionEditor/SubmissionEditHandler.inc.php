@@ -103,11 +103,20 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$reviewAssignments =& $submission->getReviewAssignments();
 		$editorDecisions = $submission->getDecisions();
 		$numRounds = $submission->getCurrentRound();
-
+		
+		$reviewFormResponseDao =& DAORegistry::getDAO('ReviewFormResponseDAO');
+		$reviewFormResponses = array();
+		if (isset($reviewAssignments[$numRounds-1])) {
+			foreach ($reviewAssignments[$numRounds-1] as $reviewAssignment) {
+				$reviewFormResponses[$reviewAssignment->getReviewId()] = $reviewFormResponseDao->reviewFormResponseExists($reviewAssignment->getReviewId());
+			}
+		}
+		
 		$templateMgr = &TemplateManager::getManager();
 
 		$templateMgr->assign_by_ref('submission', $submission);
 		$templateMgr->assign_by_ref('reviewAssignments', $reviewAssignments);
+		$templateMgr->assign('reviewFormResponses', $reviewFormResponses);
 		$templateMgr->assign_by_ref('cancelsAndRegrets', $cancelsAndRegrets);
 		$templateMgr->assign_by_ref('reviewFilesByRound', $reviewFilesByRound);
 		$templateMgr->assign_by_ref('editorDecisions', $editorDecisions);
@@ -130,6 +139,7 @@ class SubmissionEditHandler extends SectionEditorHandler {
 
 		$sectionEditorSubmissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
 		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
+		$reviewFormDao =& DAORegistry::getDAO('ReviewFormDAO');
 
 		// Setting the round.
 		$round = isset($args[1]) ? $args[1] : $submission->getCurrentRound();
@@ -164,12 +174,23 @@ class SubmissionEditHandler extends SectionEditorHandler {
 			}
 		}
 
+		// get journal published review form titles
+		$reviewFormsTitles =& $reviewFormDao->getJournalReviewFormTitles($journal->getJournalId(), 1);
+
+		$reviewFormResponseDao =& DAORegistry::getDAO('ReviewFormResponseDAO');
+		$reviewFormResponses = array();
+		foreach ($submission->getReviewAssignments($round) as $reviewAssignment) {
+			$reviewFormResponses[$reviewAssignment->getReviewId()] = $reviewFormResponseDao->reviewFormResponseExists($reviewAssignment->getReviewId());
+		}
+		
 		$templateMgr = &TemplateManager::getManager();
 
 		$templateMgr->assign_by_ref('submission', $submission);
 		$templateMgr->assign_by_ref('reviewIndexes', $reviewAssignmentDao->getReviewIndexesForRound($articleId, $round));
 		$templateMgr->assign('round', $round);
 		$templateMgr->assign_by_ref('reviewAssignments', $submission->getReviewAssignments($round));
+		$templateMgr->assign_by_ref('reviewFormsTitles', $reviewFormsTitles);
+		$templateMgr->assign('reviewFormResponses', $reviewFormResponses);
 		$templateMgr->assign_by_ref('notifyReviewerLogs', $notifyReviewerLogs);
 		$templateMgr->assign_by_ref('submissionFile', $submission->getSubmissionFile());
 		$templateMgr->assign_by_ref('suppFiles', $submission->getSuppFiles());
@@ -778,6 +799,100 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		Request::redirect(null, null, 'viewMetadata', $articleId);
 	}
 
+	//
+	// Review Form
+	//
+
+	/**
+	 * Preview a review form.
+	 * @param $args array ($reviewId, $reviewFormId)
+	 */
+	function previewReviewForm($args) {
+		parent::validate();
+		parent::setupTemplate(true);
+
+		$reviewId = isset($args[0]) ? (int) $args[0] : null;
+		$reviewFormId = isset($args[1]) ? (int)$args[1] : null;			
+
+		$journal =& Request::getJournal();
+		$reviewFormDao =& DAORegistry::getDAO('ReviewFormDAO');
+		$reviewForm =& $reviewFormDao->getReviewForm($reviewFormId, $journal->getJournalId());
+		$reviewFormElementDao =& DAORegistry::getDAO('ReviewFormElementDAO');
+		$reviewFormElements =& $reviewFormElementDao->getReviewFormElements($reviewFormId);
+		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
+		$reviewAssignment =& $reviewAssignmentDao->getReviewAssignmentById($reviewId);
+
+		$templateMgr =& TemplateManager::getManager();
+		$templateMgr->assign('pageTitle', 'manager.reviewForms.preview');	
+		$templateMgr->assign_by_ref('reviewForm', $reviewForm);
+		$templateMgr->assign('reviewFormElements', $reviewFormElements);
+		$templateMgr->assign('reviewId', $reviewId);
+		$templateMgr->assign('articleId', $reviewAssignment->getArticleId());
+		//$templateMgr->assign('helpTopicId','journal.managementPages.reviewForms');
+		$templateMgr->display('sectionEditor/previewReviewForm.tpl');
+	}
+
+	/**
+	 * Clear a review form, i.e. remove review form assignment to the review.
+	 * @param $args array ($articleId, $reviewId)
+	 */
+	function clearReviewForm($args) {
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		$reviewId = isset($args[1]) ? (int) $args[1] : null;
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
+		
+		SectionEditorAction::clearReviewForm($submission, $reviewId);
+
+		Request::redirect(null, null, 'submissionReview', $articleId);
+	}
+	
+	/**
+	 * Select a review form
+	 * @param $args array ($articleId, $reviewId, $reviewFormId)
+	 */
+	function selectReviewForm($args) {
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
+		
+		$reviewId = isset($args[1]) ? (int) $args[1] : null;
+		$reviewFormId = isset($args[2]) ? (int) $args[2] : null;
+
+		if ($reviewFormId != null) {
+			SectionEditorAction::addReviewForm($submission, $reviewId, $reviewFormId);
+			Request::redirect(null, null, 'submissionReview', $articleId);
+		} else {
+			$journal =& Request::getJournal();
+			$rangeInfo =& Handler::getRangeInfo('reviewForms');
+			$reviewFormDao =& DAORegistry::getDAO('ReviewFormDAO');
+			$reviewForms =& $reviewFormDao->getJournalActiveReviewForms($journal->getJournalId(), $rangeInfo);
+			$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
+			$reviewAssignment =& $reviewAssignmentDao->getReviewAssignmentById($reviewId);
+
+			parent::setupTemplate(true, $articleId, 'review');
+			$templateMgr =& TemplateManager::getManager();
+				
+			$templateMgr->assign('articleId', $articleId);
+			$templateMgr->assign('reviewId', $reviewId);
+			$templateMgr->assign('assignedReviewFormId', $reviewAssignment->getReviewFormId());
+			$templateMgr->assign_by_ref('reviewForms', $reviewForms);
+			//$templateMgr->assign('helpTopicId','journal.managementPages.reviewForms');
+			$templateMgr->display('sectionEditor/selectReviewForm.tpl');
+		}
+	}
+	
+	/**
+	 * View review form response.
+	 * @param $args array ($articleId, $reviewId)
+	 */
+	function viewReviewFormResponse($args) {
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId, SECTION_EDITOR_ACCESS_REVIEW);
+
+		$reviewId = isset($args[1]) ? (int) $args[1] : null;
+
+		SectionEditorAction::viewReviewFormResponse($submission, $reviewId);	
+	}
+	
 	//
 	// Editor Review
 	//

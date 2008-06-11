@@ -28,6 +28,8 @@ class SubmissionReviewHandler extends ReviewerHandler {
 		$reviewAssignmentDao = &DAORegistry::getDAO('ReviewAssignmentDAO');
 		$reviewAssignment = $reviewAssignmentDao->getReviewAssignmentById($reviewId);
 
+		$reviewFormResponseDao =& DAORegistry::getDAO('ReviewFormResponseDAO');
+
 		if ($submission->getDateConfirmed() == null) {
 			$confirmedStatus = 0;
 		} else {
@@ -43,6 +45,7 @@ class SubmissionReviewHandler extends ReviewerHandler {
 		$templateMgr->assign_by_ref('reviewAssignment', $reviewAssignment);
 		$templateMgr->assign('confirmedStatus', $confirmedStatus);
 		$templateMgr->assign('declined', $submission->getDeclined());
+		$templateMgr->assign('reviewFormResponseExists', $reviewFormResponseDao->reviewFormResponseExists($reviewId));
 		$templateMgr->assign_by_ref('reviewFile', $reviewAssignment->getReviewFile());
 		$templateMgr->assign_by_ref('reviewerFile', $submission->getReviewerFile());
 		$templateMgr->assign_by_ref('suppFiles', $submission->getSuppFiles());
@@ -176,6 +179,39 @@ class SubmissionReviewHandler extends ReviewerHandler {
 		list($journal, $reviewerSubmission) = SubmissionReviewHandler::validate($reviewId);
 		if (!ReviewerAction::downloadReviewerFile($reviewId, $reviewerSubmission, $fileId, $revision)) {
 			Request::redirect(null, null, 'submission', $reviewId);
+		}
+	}
+
+	//
+	// Review Form
+	//
+
+	/**
+	 * Edit or preview review form response.
+	 * @param $args array
+	 */
+	function editReviewFormResponse($args) {
+		$reviewId = isset($args[0]) ? $args[0] : 0;
+		
+		list($journal, $reviewerSubmission, $user) = SubmissionReviewHandler::validate($reviewId);
+
+		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
+		$reviewAssignment =& $reviewAssignmentDao->getReviewAssignmentById($reviewId);
+		$reviewFormId = $reviewAssignment->getReviewFormId();
+		if ($reviewFormId != null) {
+			ReviewerAction::editReviewFormResponse($reviewId, $reviewFormId);		
+		}
+	}
+
+	/**
+	 * Save review form response
+	 * @param $args array
+	 */
+	function saveReviewFormResponse($args) {
+		$reviewId = isset($args[0]) ? $args[0] : 0;
+		$reviewFormId = isset($args[1]) ? $args[1] : 0;
+		if (ReviewerAction::saveReviewFormResponse($reviewId, $reviewFormId)) {
+					Request::redirect(null, null, 'submission', $reviewId);
 		}
 	}
 

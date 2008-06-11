@@ -174,6 +174,9 @@ class JournalDAO extends DAO {
 		$pluginSettingsDao = &DAORegistry::getDAO('PluginSettingsDAO');
 		$pluginSettingsDao->deleteSettingsByJournalId($journalId);
 
+		$reviewFormDao =& DAORegistry::getDAO('ReviewFormDAO');
+		$reviewFormDao->deleteReviewFormsByJournalId($journalId);
+
 		return $this->update(
 			'DELETE FROM journals WHERE journal_id = ?', $journalId
 		);
