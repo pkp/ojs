@@ -18,20 +18,14 @@
 #main {
 	position: relative;
 	float: left;
-	width:37% !important;
+	width:47%;
 	height: 100%;
 	text-align: center;
 	margin-left: 0;
-	margin-right: 0;
+	margin-right: 0 !important;
 	display: inline;
 	overflow: hidden;
 }
-
-/* hack to set width for non-IE browsers to to a percentage 
-   width of container (like it should be), not the window */
-html>body #main {
-	width: 47% !important;
-} 
 
 #body {
 	width: 100%;

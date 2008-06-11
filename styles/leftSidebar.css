@@ -36,13 +36,12 @@
 
 #main {
 	float: right;
-	width: 53%;
-	margin-right: 10%;
+	width: 63%;
+	margin-right: 5%;
 	overflow: hidden;
 }
 
-/* hack to set width for non-IE browsers to to a percentage 
-   width of container (like it should be), not the window */
+// Set main on non-IE browsers to have a 10% margin
 html>body #main {
-	width: 63%;
+	margin-right: 10%;
 } 
