@@ -60,8 +60,8 @@ input.defaultButton {
 }
 
 #main {
-	padding-left: 10px;
-	padding-right: 10px;
+	padding-left: 5px;
+	padding-right: 4px;
 	background-color: #f9f9f9;
 	border-left: 1px solid black;
 	border-right: 1px solid black;

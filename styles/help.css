@@ -14,28 +14,38 @@
  */
 
 #header h1 {
-	width: 500px;
+	width: 100%;
 }
 
 #container {
-	width: 680px;
+	width: 100%;
 }
 
 #sidebar {
 	float: right;
-	width: 150px;
-	margin: 0;
+	width: 20%;
 	padding: 1em 0em 1em 0em;
 	font-size: 0.65em;
+	height: 100%;
+	margin-right: 5%;
 }
 
 #body {
-	width: 660px;
+	width: 100%;
 }
 
 #main {
-	width: 480px;
+	float: left;
+	width:58%;
+	height: 100%;
+	margin-left: 5%;
 }
+
+/* hack to set width for non-IE browsers to to a percentage 
+   width of container (like it should be), not the window */
+html>body #main {
+	width: 68%;
+} 
 
 #main h4 {
 	margin: 0em 1em 0.5em 0em;
@@ -75,10 +85,6 @@ span.blockTitle {
 /**
  * Sidebar
  */
-
-#sidebar {
-	width: 165px;
-}
 
 #sidebar div.block span.blockTitle {
 	font-family: Georgia,'Times New Roman',Times,serif;
