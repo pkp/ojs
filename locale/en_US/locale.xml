@@ -300,6 +300,8 @@
 	<message key="article.abstract">Abstract</message>
 	<message key="article.details">Details</message>
 	<message key="article.coverPage.altText">Cover Image</message>
+	<message key="article.accessLogoOpen.altText">Open Access</message>
+	<message key="article.accessLogoRestricted.altText">Restricted Access</message>
 
 	<!-- Submission Tracking - Common -->
 	<message key="submission.summary">Summary</message>

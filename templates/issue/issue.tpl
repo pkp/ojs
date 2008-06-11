@@ -44,17 +44,17 @@
 				<a href="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)|to_array:$galley->getBestGalleyId($currentJournal)}" class="file">{$galley->getGalleyLabel()|escape}</a>
 				{if $subscriptionRequired && $showGalleyLinks && $restrictOnlyPdf}
 					{if $article->getAccessStatus() || !$galley->isPdfGalley()}	
-						<img class="accessLogo" src="{$baseUrl}/templates/images/icons/fulltext_open_medium.gif">
+						<img class="accessLogo" src="{$baseUrl}/templates/images/icons/fulltext_open_medium.gif" alt="{translate key="article.accessLogoOpen.altText"}" />
 					{else}
-						<img class="accessLogo" src="{$baseUrl}/templates/images/icons/fulltext_restricted_medium.gif">
+						<img class="accessLogo" src="{$baseUrl}/templates/images/icons/fulltext_restricted_medium.gif" alt="{translate key="article.accessLogoRestricted.altText"}" />
 					{/if}
 				{/if}
 			{/foreach}
 			{if $subscriptionRequired && $showGalleyLinks && !$restrictOnlyPdf}
 				{if $article->getAccessStatus()}
-					<img class="accessLogo" src="{$baseUrl}/templates/images/icons/fulltext_open_medium.gif">
+					<img class="accessLogo" src="{$baseUrl}/templates/images/icons/fulltext_open_medium.gif" alt="{translate key="article.accessLogoOpen.altText"}" />
 				{else}
-					<img class="accessLogo" src="{$baseUrl}/templates/images/icons/fulltext_restricted_medium.gif">
+					<img class="accessLogo" src="{$baseUrl}/templates/images/icons/fulltext_restricted_medium.gif" alt="{translate key="article.accessLogoRestricted.altText"}" />
 				{/if}
 			{/if}				
 		{/if}

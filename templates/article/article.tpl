@@ -78,9 +78,9 @@
 	{assign var=galleys value=$article->getLocalizedGalleys()}
 	{if $galleys && $subscriptionRequired && $showGalleyLinks}
 		<div id="accessKey">
-			<img src="{$baseUrl}/templates/images/icons/fulltext_open_medium.gif">
+			<img src="{$baseUrl}/templates/images/icons/fulltext_open_medium.gif" alt="{translate key="article.accessLogoOpen.altText"}" />
 			{translate key="reader.openAccess"}&nbsp;
-			<img src="{$baseUrl}/templates/images/icons/fulltext_restricted_medium.gif">
+			<img src="{$baseUrl}/templates/images/icons/fulltext_restricted_medium.gif" alt="{translate key="article.accessLogoRestricted.altText"}" />
 			{if $purchaseArticleEnabled}
 				{translate key="reader.subscriptionOrFeeAccess"}
 			{else}
@@ -111,17 +111,17 @@
 				<a href="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)|to_array:$galley->getBestGalleyId($currentJournal)}" class="file" target="_parent">{$galley->getGalleyLabel()|escape}</a>
 				{if $subscriptionRequired && $showGalleyLinks && $restrictOnlyPdf}
 					{if $article->getAccessStatus() || !$galley->isPdfGalley()}	
-						<img class="accessLogo" src="{$baseUrl}/templates/images/icons/fulltext_open_medium.gif">
+						<img class="accessLogo" src="{$baseUrl}/templates/images/icons/fulltext_open_medium.gif" alt="{translate key="article.accessLogoOpen.altText"}" />
 					{else}
-						<img class="accessLogo" src="{$baseUrl}/templates/images/icons/fulltext_restricted_medium.gif">
+						<img class="accessLogo" src="{$baseUrl}/templates/images/icons/fulltext_restricted_medium.gif" alt="{translate key="article.accessLogoRestricted.altText"}" />
 					{/if}
 				{/if}
 			{/foreach}
 			{if $subscriptionRequired && $showGalleyLinks && !$restrictOnlyPdf}
 				{if $article->getAccessStatus()}
-					<img class="accessLogo" src="{$baseUrl}/templates/images/icons/fulltext_open_medium.gif">
+					<img class="accessLogo" src="{$baseUrl}/templates/images/icons/fulltext_open_medium.gif" alt="{translate key="article.accessLogoOpen.altText"}" />
 				{else}
-					<img class="accessLogo" src="{$baseUrl}/templates/images/icons/fulltext_restricted_medium.gif">
+					<img class="accessLogo" src="{$baseUrl}/templates/images/icons/fulltext_restricted_medium.gif" alt="{translate key="article.accessLogoRestricted.altText"}" />
 				{/if}
 			{/if}					
 		{else}
