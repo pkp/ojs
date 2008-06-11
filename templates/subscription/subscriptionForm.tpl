@@ -48,7 +48,12 @@
 </tr>
 <tr valign="top">
 	<td class="label">{fieldLabel name="dateEnd" required="true" key="manager.subscriptions.form.dateEnd"}</td>
-	<td class="value">{html_select_date prefix="dateEnd" start_year="$yearOffsetPast" all_extra="class=\"selectMenu\"" end_year="$yearOffsetFuture" time="$dateEnd"}</td>
+	<td class="value">
+		{html_select_date prefix="dateEnd" start_year="$yearOffsetPast" all_extra="class=\"selectMenu\"" end_year="$yearOffsetFuture" time="$dateEnd"}
+		<input type="hidden" name="dateEndHour" value="23" />
+		<input type="hidden" name="dateEndMinute" value="59" />
+		<input type="hidden" name="dateEndSecond" value="59" />
+	</td>
 </tr>
 <tr valign="top">
 	<td>&nbsp;</td>

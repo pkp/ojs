@@ -74,6 +74,9 @@
 		{else}
 			{html_select_date prefix="dateExpire" all_extra="class=\"selectMenu\"" end_year="$yearOffsetFuture" year_empty="" month_empty="" day_empty="" time="-00-00"}
 		{/if}
+		<input type="hidden" name="dateExpireHour" value="23" />
+		<input type="hidden" name="dateExpireMinute" value="59" />
+		<input type="hidden" name="dateExpireSecond" value="59" />
 		<br />
 		<span class="instruct">{translate key="manager.announcements.form.dateExpireInstructions"}</span>
 	</td>
