@@ -130,7 +130,7 @@ class RegistrationHandler extends UserHandler {
 
 			$templateMgr =& TemplateManager::getManager();
 			$templateMgr->assign('message', 'user.login.activated');
-			return $templateMgr-display('common/message.tpl');
+			return $templateMgr->display('common/message.tpl');
 		}
 		Request::redirect(null, 'login');
 	}
