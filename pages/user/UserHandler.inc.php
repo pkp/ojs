@@ -41,27 +41,28 @@ class UserHandler extends Handler {
 			$journalDao = &DAORegistry::getDAO('JournalDAO');
 			$journals = &$journalDao->getJournals();
 
+			$allJournals = array();
 			$journalsToDisplay = array();
 			$rolesToDisplay = array();
 
 			// Fetch the user's roles for each journal
-			foreach ($journals->toArray() as $journal) {
-				$roles = &$roleDao->getRolesByUserId($session->getUserId(), $journal->getJournalId());
+			while ($journal =& $journals->next()) {
+				$roles =& $roleDao->getRolesByUserId($session->getUserId(), $journal->getJournalId());
 				if (!empty($roles)) {
 					$journalsToDisplay[] = $journal;
 					$rolesToDisplay[$journal->getJournalId()] = &$roles;
 				}
+				if ($journal->getEnabled()) $allJournals[] =& $journal;
+				unset($journal);
 			}
 
+			$templateMgr->assign_by_ref('allJournals', $allJournals);
 			$templateMgr->assign('showAllJournals', 1);
 			$templateMgr->assign_by_ref('userJournals', $journalsToDisplay);
 
-		} else {
+		} else { // Currently within a journal's context.
 			// Show roles for the currently selected journal
-			$roles = &$roleDao->getRolesByUserId($session->getUserId(), $journal->getJournalId());
-			if (empty($roles)) {
-				Request::redirect('index', 'user');
-			}
+			$roles =& $roleDao->getRolesByUserId($session->getUserId(), $journal->getJournalId());
 
 			$journal =& Request::getJournal();
 			$user =& Request::getUser();
@@ -87,6 +88,9 @@ class UserHandler extends Handler {
 			if ( $membershipEnabled ) {
 				$templateMgr->assign('dateEndMembership', $user->getDateEndMembership());
 			}
+
+			$templateMgr->assign('allowRegAuthor', $journal->getSetting('allowRegAuthor'));
+			$templateMgr->assign('allowRegReviewer', $journal->getSetting('allowRegReviewer'));
 
 			$rolesToDisplay[$journal->getJournalId()] = &$roles;
 			$templateMgr->assign_by_ref('userJournal', $journal);
@@ -128,6 +132,46 @@ class UserHandler extends Handler {
 		}
 
 		Request::redirect(null, 'index');
+	}
+
+	/**
+	 * Become a given role.
+	 */
+	function become($args) {
+		parent::validate(true, true);
+		$journal =& Request::getJournal();
+		$user =& Request::getUser();
+		if (!$user) Request::redirect(null, null, 'index');
+
+		switch (array_shift($args)) {
+			case 'author':
+				$roleId = ROLE_ID_AUTHOR;
+				$setting = 'allowRegAuthor';
+				$deniedKey = 'user.noRoles.submitArticleRegClosed';
+				break;
+			case 'reviewer':
+				$roleId = ROLE_ID_REVIEWER;
+				$setting = 'allowRegReviewer';
+				$deniedKey = 'user.noRoles.regReviewerClosed';
+				break;
+			default:
+				Request::redirect(null, null, 'index');
+		}
+
+		if ($journal->getSetting($setting)) {
+			$role =& new Role();
+			$role->setJournalId($journal->getJournalId());
+			$role->setRoleId($roleId);
+			$role->setUserId($user->getUserId());
+
+			$roleDao =& DAORegistry::getDAO('RoleDAO');
+			$roleDao->insertRole($role);
+			Request::redirectUrl(Request::getUserVar('source'));
+		} else {
+			$templateMgr =& TemplateManager::getManager();
+			$templateMgr->assign('message', $deniedKey);
+			return $templateMgr->display('common/message.tpl');
+		}
 	}
 
 	/**

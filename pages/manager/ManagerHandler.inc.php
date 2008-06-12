@@ -695,9 +695,9 @@ class ManagerHandler extends Handler {
 		StatisticsHandler::savePublicStatisticsList();
 	}
 
-	function reportGenerator($args) {
+	function report($args) {
 		import('pages.manager.StatisticsHandler');
-		StatisticsHandler::reportGenerator($args);
+		StatisticsHandler::report($args);
 	}
 	
 	

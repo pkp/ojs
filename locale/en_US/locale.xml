@@ -545,7 +545,13 @@
 	<message key="user.changeMyPassword">Change My Password</message>
 	<message key="user.myJournals">My Journals</message>
 	<message key="user.myAccount">My Account</message>
-	
+	<message key="user.noRoles.chooseJournal">Your account is not currently associated with any journals. Please choose a journal:</message>
+	<message key="user.noRoles.noRolesForJournal">Your account does not currently have any roles for this journal. Please choose from the actions below:</message>
+	<message key="user.noRoles.submitArticle">Submit a Proposal</message>
+	<message key="user.noRoles.submitArticleRegClosed">Submit an Article: Author registration is currently disabled.</message>
+	<message key="user.noRoles.regReviewer">Register as a Reviewer</message>
+	<message key="user.noRoles.regReviewerClosed">Register as a Reviewer: Reviewer registration is currently disabled.</message>
+
 	<!-- Roles -->
 	<message key="user.role.siteAdmin">Site Administrator</message>
 	<message key="user.role.manager">Journal Manager</message>
@@ -896,26 +902,6 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 
 	<message key="manager.statistics.reports">Report Generator</message>
 	<message key="manager.statistics.reports.description">OJS generates reports that track the details associated with processing submissions to the journal from the perspective of submissions, editors, reviewers, and sections, over a given period of time. Reports are generated in CSV format which requires a spreadsheet application to view.</message>
-	<message key="manager.statistics.reports.dateFrom">From</message>
-	<message key="manager.statistics.reports.dateTo">Until</message>
-	<message key="manager.statistics.reports.reportType">Type of report</message>
-	<message key="manager.statistics.reports.type.journal">Journal Report</message>
-	<message key="manager.statistics.reports.type.editor">Editor Report</message>
-	<message key="manager.statistics.reports.type.reviewer">Reviewer Report</message>
-	<message key="manager.statistics.reports.type.section">Section Report</message>
-	<message key="manager.statistics.reports.generate">Generate Report</message>
-	<message key="manager.statistics.reports.status">Status (Accepted, declined, other)</message>
-	<message key="manager.statistics.reports.dateDecided">Date Decided</message>
-	<message key="manager.statistics.reports.author">Author #{$num}</message>
-	<message key="manager.statistics.reports.affiliation">Affiliation #{$num}</message>
-	<message key="manager.statistics.reports.country">Country #{$num}</message>
-	<message key="manager.statistics.reports.reviewer">Reviewer #{$num}</message>
-	<message key="manager.statistics.reports.editor">Editor #{$num}</message>
-	<message key="manager.statistics.reports.score">Score #{$num}</message>
-	<message key="manager.statistics.reports.singleScore">Score</message>
-	<message key="manager.statistics.reports.recommendation">Recommendation #{$num}</message>
-	<message key="manager.statistics.reports.daysToDecision">Days To Decision</message>
-	<message key="manager.statistics.reports.daysToPublication">Days To Publication</message>
 
 	<!-- Plugin Management -->
 	<message key="manager.plugins.description">This page allows the Journal Manager to review and potentially configure the plugins that are currently installed. Plugins are divided into categories, according to their function. The categories are listed below, and within each category, its current set of plugins.</message>

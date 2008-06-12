@@ -147,14 +147,15 @@ class PluginRegistry {
 	 */
 	function getCategories() {
 		$categories = array(
-			'generic',
 			'auth',
-			'importexport',
-			'gateways',
 			'blocks',
 			'citationFormats',
-			'themes',
-			'paymethod'
+			'gateways',
+			'generic',
+			'importexport',
+			'paymethod',
+			'reports',
+			'themes'
 		);
 		HookRegistry::call('PluginRegistry::getCategories', array(&$categories));
 		return $categories;
