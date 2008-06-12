@@ -1679,6 +1679,8 @@ You may optionally provide the user with a reason for disabling their account.</
 	<message key="editor.publishing">Publishing</message>
 	<message key="editor.publishedIssues">Published Issues</message>
 	<message key="editor.allSections">All Sections</message>
+	<message key="editor.allEditors">All Editors</message>
+	<message key="editor.me">Me</message>
 	<message key="editor.submissionArchive.noSubmissions">No submissions in the archive.</message>
 	<message key="editor.submissionArchive.saveChanges">Save changes to archived submissions? Submissions marked for deletion will be permanently deleted from the system.</message>
 	<message key="editor.submissionArchive.confirmDelete">Are you sure you want to permanently delete this submission?</message>
@@ -1854,8 +1856,8 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	<message key="editor.submissions.lastAssigned">Latest</message>
 	<message key="editor.submissions.averageTime">Weeks</message>
 	<message key="editor.submissions.lastCompleted">Last Complete</message>
-	<message key="editor.submissions.filterEditor">Assigned to Me</message>
-	<message key="editor.submissions.showAll">All Editors</message>
+	<message key="editor.submissions.assignedTo">Assigned To</message>
+	<message key="editor.submissions.inSection">In Section</message>
 
 	<message key="editor.article.scheduleForPublication">Schedule for publication in</message>
 	<message key="editor.article.scheduleForPublication.toBeAssigned">To Be Assigned</message>

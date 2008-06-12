@@ -20,6 +20,11 @@ define('EDITOR_SECTION_HOME', 0);
 define('EDITOR_SECTION_SUBMISSIONS', 1);
 define('EDITOR_SECTION_ISSUES', 2);
 
+define('FILTER_EDITOR_ALL', 0);
+define('FILTER_EDITOR_ME', 1);
+
+define('FILTER_SECTION_ALL', 0);
+
 import ('submission.editor.EditorAction');
 
 class EditorHandler extends SectionEditorHandler {
@@ -120,6 +125,15 @@ class EditorHandler extends SectionEditorHandler {
 		$page = isset($args[0]) ? $args[0] : '';
 		$sections = &$sectionDao->getSectionTitles($journalId);
 
+		$filterEditorOptions = array(
+			FILTER_EDITOR_ALL => Locale::Translate('editor.allEditors'),
+			FILTER_EDITOR_ME => Locale::Translate('editor.me')
+		);
+
+		$filterSectionOptions = array(
+			FILTER_SECTION_ALL => Locale::Translate('editor.allSections')
+		) + $sections;
+ 
 		// Get the user's search conditions, if any
 		$searchField = Request::getUserVar('searchField');
 		$dateSearchField = Request::getUserVar('dateSearchField');
@@ -152,28 +166,37 @@ class EditorHandler extends SectionEditorHandler {
 				$helpTopicId = 'editorial.editorsRole.submissions.inReview';
 		}
 
-		$filterEditor = isset($args[1]) ? $args[1] : '';
-
-		if ($filterEditor == 'filterEditor') {
-			$user->updateSetting('filterEditor', 'filterEditor', 'string', $journalId);
-		} elseif ($filterEditor == 'allEditors') {
-			$user->updateSetting('filterEditor', 'allEditors', 'string', $journalId);
+		$filterEditor = Request::getUserVar('filterEditor');
+		if ($filterEditor != '' && array_key_exists($filterEditor, $filterEditorOptions)) {
+			$user->updateSetting('filterEditor', $filterEditor, 'int', $journalId);
 		} else {
 			$filterEditor = $user->getSetting('filterEditor', $journalId);
-			if (!$filterEditor) {
-				$user->updateSetting('filterEditor', 'allEditors', 'string', $journalId);
-			}
+			if ($filterEditor == null) {
+				$filterEditor = FILTER_EDITOR_ALL;
+				$user->updateSetting('filterEditor', $filterEditor, 'int', $journalId);
+			}	
 		}
 
-		if ($filterEditor == 'filterEditor') {
+		if ($filterEditor == FILTER_EDITOR_ME) {
 			$editorId = $user->getUserId();
 		} else {
-			$editorId = 0;
+			$editorId = FILTER_EDITOR_ALL;
+		}
+
+		$filterSection = Request::getUserVar('filterSection');
+		if ($filterSection != '' && array_key_exists($filterSection, $filterSectionOptions)) {
+			$user->updateSetting('filterSection', $filterSection, 'int', $journalId);
+		} else {
+			$filterSection = $user->getSetting('filterSection', $journalId);
+			if ($filterSection == null) {
+				$filterSection = FILTER_SECTION_ALL;
+				$user->updateSetting('filterSection', $filterSection, 'int', $journalId);
+			}	
 		}
 
 		$submissions = &$editorSubmissionDao->$functionName(
 			$journalId,
-			Request::getUserVar('section'),
+			$filterSection,
 			$editorId,
 			$searchField,
 			$searchMatch,
@@ -186,10 +209,12 @@ class EditorHandler extends SectionEditorHandler {
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('pageToDisplay', $page);
 		$templateMgr->assign('editor', $user->getFullName());
-		$templateMgr->assign('sectionOptions', array(0 => Locale::Translate('editor.allSections')) + $sections);
+		$templateMgr->assign('editorOptions', $filterEditorOptions);
+		$templateMgr->assign('sectionOptions', $filterSectionOptions);
+
 		$templateMgr->assign_by_ref('submissions', $submissions);
-		$templateMgr->assign('section', Request::getUserVar('section'));
 		$templateMgr->assign('filterEditor', $filterEditor);
+		$templateMgr->assign('filterSection', $filterSection);
 
 		// Set search parameters
 		foreach (EditorHandler::getSearchFormDuplicateParameters() as $param)
