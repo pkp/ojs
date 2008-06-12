@@ -170,37 +170,44 @@ class String {
 
 	function regexp_grep($pattern, $input) {
 		$pattern .= PCRE_UTF8;
+		$input = String::utf8Clean($input);
 		return preg_grep($pattern, $input);
 	}
 
 	function regexp_match($pattern, $subject) {
 		$pattern .= PCRE_UTF8;
+		$subject = String::utf8Clean($subject);
 		return preg_match($pattern, $subject);
 	}
 
 	function regexp_match_get($pattern, $subject, &$matches) {
 		// NOTE: This function was created since PHP < 5.x does not support optional reference parameters
 		$pattern .= PCRE_UTF8;
+		$subject = String::utf8Clean($subject);
 		return preg_match($pattern, $subject, $matches);
 	}
 
 	function regexp_match_all($pattern, $subject, &$matches) {
 		$pattern .= PCRE_UTF8;
+		$subject = String::utf8Clean($subject);
 		return preg_match_all($pattern, $subject, $matches);
 	}
 
 	function regexp_replace($pattern, $replacement, $subject, $limit = -1) {
 		$pattern .= PCRE_UTF8;
+		$subject = String::utf8Clean($subject);
 		return preg_replace($pattern, $replacement, $subject, $limit);
 	}
 
 	function regexp_replace_callback($pattern, $callback, $subject, $limit = -1) {
 		$pattern .= PCRE_UTF8;
+		$subject = String::utf8Clean($subject);
 		return preg_replace_callback($pattern, $callback, $subject, $limit);
 	}
 
 	function regexp_split($pattern, $subject, $limit = -1) {
 		$pattern .= PCRE_UTF8;
+		$subject = String::utf8Clean($subject);
 		return preg_split($pattern, $subject, $limit);
 	}
 
@@ -307,6 +314,37 @@ class String {
 				|[\xF1-\xF3][\x80-\xBF]{3}						# planes 4-15
 				|\xF4[\x80-\x8F][\x80-\xBF]{2}				# plane 16
 				)+%xs', $str);
+	}
+
+	/**
+	* Strips out any bad bytes from a UTF-8 string and returns the rest
+	 * Does not require any multibyte PHP libraries
+	 * @param $input string input string
+	 * @return boolean
+	 */
+	function utf8Clean($str) {
+		// From the phputf8 project:  http://phputf8.sourceforge.net/
+		$UTF8_BAD =
+		'([\x00-\x7F]'.                          # ASCII (including control chars)
+		'|[\xC2-\xDF][\x80-\xBF]'.               # non-overlong 2-byte
+		'|\xE0[\xA0-\xBF][\x80-\xBF]'.           # excluding overlongs
+		'|[\xE1-\xEC\xEE\xEF][\x80-\xBF]{2}'.    # straight 3-byte
+		'|\xED[\x80-\x9F][\x80-\xBF]'.           # excluding surrogates
+		'|\xF0[\x90-\xBF][\x80-\xBF]{2}'.        # planes 1-3
+		'|[\xF1-\xF3][\x80-\xBF]{3}'.            # planes 4-15
+		'|\xF4[\x80-\x8F][\x80-\xBF]{2}'.        # plane 16
+		'|(.{1}))';                              # invalid byte
+
+		ob_start();
+		while (preg_match('/'.$UTF8_BAD.'/S', $str, $matches)) {
+			if ( !isset($matches[2])) {
+				echo $matches[0];
+			}
+			$str = substr($str,strlen($matches[0]));
+		}
+		$result = ob_get_contents();
+		ob_end_clean();
+		return $result;
 	}
 
 	/**
