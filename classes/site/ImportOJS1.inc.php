@@ -1626,7 +1626,11 @@ class ImportOJS1 {
 			}
 		}
 		$redirectIssue .= "\n);\n\n";
-		$redirectIssue .= "header(\"Location: " . $this->indexUrl . "/" . $this->journalPath . "/issue/view/" . '$issueMap[$issueId]' . "\");" . "\n\n";
+		$redirectIssue .= 'if (array_key_exists($issueId, $issueMap)) {' . "\n";
+		$redirectIssue .= "\theader(\"Location: " . $this->indexUrl . "/" . $this->journalPath . "/issue/view/" . '$issueMap[$issueId]' . "\");" . "\n";
+		$redirectIssue .= "} else {\n";
+		$redirectIssue .= "\theader(\"Location: " . $this->indexUrl . "/" . $this->journalPath . "\");" . "\n";
+		$redirectIssue .= "}\n\n";
 		$redirectIssue .= $redirectFooter;
 
 		// viewarticle.php
@@ -1644,7 +1648,11 @@ class ImportOJS1 {
 			}
 		}
 		$redirectArticle .= "\n);\n\n";
-		$redirectArticle .= "header(\"Location: " . $this->indexUrl . "/" . $this->journalPath . "/article/view/" . '$articleMap[$articleId]' . "\");" . "\n\n";
+		$redirectArticle .= 'if (array_key_exists($articleId, $articleMap)) {' . "\n";
+		$redirectArticle .= "\theader(\"Location: " . $this->indexUrl . "/" . $this->journalPath . "/article/view/" . '$articleMap[$articleId]' . "\");" . "\n";
+		$redirectArticle .= "} else {\n";
+		$redirectArticle .= "\theader(\"Location: " . $this->indexUrl . "/" . $this->journalPath . "\");" . "\n";
+		$redirectArticle .= "}\n\n";
 		$redirectArticle .= $redirectFooter;
 
 		// include/getdoc.php
@@ -1662,7 +1670,11 @@ class ImportOJS1 {
 			}
 		}
 		$redirectArticleFile .= "\n);\n\n";
-		$redirectArticleFile .= "header(\"Location: " . $this->indexUrl . "/" . $this->journalPath . "/article/view/" . '$articleMap[$articleId]' . "\");" . "\n\n";
+		$redirectArticleFile .= 'if (array_key_exists($articleId, $articleMap)) {' . "\n";
+		$redirectArticleFile .= "\theader(\"Location: " . $this->indexUrl . "/" . $this->journalPath . "/article/view/" . '$articleMap[$articleId]' . "\");" . "\n";
+		$redirectArticleFile .= "} else {\n";
+		$redirectArticleFile .= "\theader(\"Location: " . $this->indexUrl . "/" . $this->journalPath . "\");" . "\n";
+		$redirectArticleFile .= "}\n\n";
 		$redirectArticleFile .= $redirectFooter;
 
 		$this->redirects[] = array('index.php', 'admin.journals.importOJS1.redirect.ojs1root', "$redirectIndex");
