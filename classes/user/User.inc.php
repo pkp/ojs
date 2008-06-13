@@ -519,6 +519,22 @@ class User extends DataObject {
 	}
 
 	/**
+	 * Get implicit auth ID string.
+	 * @return String
+	 */
+	function getAuthStr() {
+		return $this->getData('authStr');
+	}
+
+	/**
+	 * Set Shib ID string for this user.
+	 * @param $authStr string
+	 */
+	function setAuthStr($authStr) {
+		return $this->setData('authStr', $authStr);
+	}
+
+	/**
 	 * Retrieve array of user settings.
 	 * @param journalId int
 	 * @return array

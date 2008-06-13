@@ -36,9 +36,12 @@ class UserManagementForm extends Form {
 			$this->addCheck(new FormValidator($this, 'username', 'required', 'user.profile.form.usernameRequired'));
 			$this->addCheck(new FormValidatorCustom($this, 'username', 'required', 'user.register.form.usernameExists', array(DAORegistry::getDAO('UserDAO'), 'userExistsByUsername'), array($this->userId, true), true));
 			$this->addCheck(new FormValidatorAlphaNum($this, 'username', 'required', 'user.register.form.usernameAlphaNumeric'));
-			$this->addCheck(new FormValidator($this, 'password', 'required', 'user.profile.form.passwordRequired'));
-			$this->addCheck(new FormValidatorLength($this, 'password', 'required', 'user.register.form.passwordLengthTooShort', '>=', $site->getMinPasswordLength()));
-			$this->addCheck(new FormValidatorCustom($this, 'password', 'required', 'user.register.form.passwordsDoNotMatch', create_function('$password,$form', 'return $password == $form->getData(\'password2\');'), array(&$this)));
+			
+			if (!Config::getVar('security', 'implicit_auth')) {
+				$this->addCheck(new FormValidator($this, 'password', 'required', 'user.profile.form.passwordRequired'));
+			    $this->addCheck(new FormValidatorLength($this, 'password', 'required', 'user.register.form.passwordLengthTooShort', '>=', $site->getMinPasswordLength()));
+			    $this->addCheck(new FormValidatorCustom($this, 'password', 'required', 'user.register.form.passwordsDoNotMatch', create_function('$password,$form', 'return $password == $form->getData(\'password2\');'), array(&$this)));
+			}
 		} else {
 			$this->addCheck(new FormValidatorLength($this, 'password', 'optional', 'user.register.form.passwordLengthTooShort', '>=', $site->getMinPasswordLength()));
 			$this->addCheck(new FormValidatorCustom($this, 'password', 'optional', 'user.register.form.passwordsDoNotMatch', create_function('$password,$form', 'return $password == $form->getData(\'password2\');'), array(&$this)));
@@ -90,6 +93,9 @@ class UserManagementForm extends Form {
 			)
 		);
 
+		// Send implicitAuth setting down to template
+		$templateMgr->assign('implicitAuth', Config::getVar('security', 'implicit_auth'));
+		
 		$site = &Request::getSite();
 		$templateMgr->assign('availableLocales', $site->getSupportedLocaleNames());
 

@@ -986,6 +986,9 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="plugins.categories.paymethod">Payment Plugins</message>
 	<message key="plugins.categories.paymethod.description">Payment Method plugins implement support for various ways of processing payments online.</message>
 
+	<message key="plugins.categories.implicitAuth">Implicit Authentication Plugins</message>
+	<message key="plugins.categories.implicitAuth.description">Implicit Authentication plugins implement support for authenticating users based on http headers.</message>
+
 	<!-- Files Browser -->
 	<message key="manager.files.indexOfDir">Index of {$dir}</message>
 	<message key="manager.files.uploadedFiles">Uploaded Files</message>

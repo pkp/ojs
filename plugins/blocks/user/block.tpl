@@ -9,7 +9,11 @@
  * $Id$
  *}
 <div class="block" id="sidebarUser">
-	<span class="blockTitle">{translate key="navigation.user"}</span>
+
+	{if !$implicitAuth}
+		<span class="blockTitle">{translate key="navigation.user"}</span>
+	{/if}
+	
 	{if $isUserLoggedIn}
 	{translate key="plugins.block.user.loggedInAs"}<br />
 	<strong>{$loggedInUsername|escape}</strong>
@@ -25,22 +29,37 @@
 	{/if}
 	</ul>
 	{else}
-	<form method="post" action="{url page="login" op="signIn"}">
+	
+	{if $implicitAuth}	
+		<a href="{url page="login" op="implicitAuthLogin"}">Journals Login</a>		
+	{else}
+		<form method="post" action="{url page="login" op="signIn"}">
+	{/if}
+	
 	<table>
-	<tr>
-		<td><label for="sidebar-username">{translate key="user.username"}</label></td>
-		<td><input type="text" id="sidebar-username" name="username" value="" size="12" maxlength="32" class="textField" /></td>
-	</tr>
-	<tr>
-		<td><label for="sidebar-password">{translate key="user.password"}</label></td>
-		<td><input type="password" id="sidebar-password" name="password" value="{$password|escape}" size="12" maxlength="32" class="textField" /></td>
-	</tr>
-	<tr>
-		<td colspan="2"><input type="checkbox" id="remember" name="remember" value="1" /> <label for="remember">{translate key="plugins.block.user.rememberMe"}</label></td>
-	</tr>
+	
+	{if ! $implicitAuth}
+		<tr>
+			<td><label for="sidebar-username">{translate key="user.username"}</label></td>
+			<td><input type="text" id="sidebar-username" name="username" value="" size="12" maxlength="32" class="textField" /></td>
+		</tr>
+		<tr>
+			<td><label for="sidebar-password">{translate key="user.password"}</label></td>
+			<td><input type="password" id="sidebar-password" name="password" value="{$password|escape}" size="12" maxlength="32" class="textField" /></td>
+		</tr>
+
+		<tr>
+			<td colspan="2"><input type="checkbox" id="remember" name="remember" value="1" /> <label for="remember">{translate key="plugins.block.user.rememberMe"}</label></td>
+		</tr>
+	
+
+	
+	
 	<tr>
 		<td colspan="2"><input type="submit" value="{translate key="user.login"}" class="button" /></td>
 	</tr>
+	
+	{/if}
 	</table>
 	</form>
 	{/if}

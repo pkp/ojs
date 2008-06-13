@@ -306,6 +306,7 @@
 		<field name="date_end_membership" type="T"/>
 		<field name="must_change_password" type="I1"/>
 		<field name="auth_id" type="I8"/>
+		<field name="auth_str" type="C2" size="255"/>
 		<field name="disabled" type="I1">
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>

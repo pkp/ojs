@@ -24,33 +24,42 @@
 	<br />
 {/if}
 
-<form name="login" action="{url page="login" op="signIn"}" method="post">
-<input type="hidden" name="source" value="{$source|escape}" />
-<table class="data">
-<tr>
-	<td class="label"><label for="loginUsername">{translate key="user.username"}</label></td>
-	<td class="value"><input type="text" id="loginUsername" name="username" value="{$username|escape}" size="20" maxlength="32" class="textField" /></td>
-</tr>
-<tr>
-	<td class="label"><label for="loginPassword">{translate key="user.password"}</label></td>
-	<td class="value"><input type="password" id="loginPassword" name="password" value="{$password|escape}" size="20" maxlength="32" class="textField" /></td>
-</tr>
-{if $showRemember}
-<tr valign="middle">
-	<td></td>
-	<td class="value"><input type="checkbox" id="loginRemember" name="remember" value="1"{if $remember} checked="checked"{/if} /> <label for="loginRemember">{translate key="user.login.rememberUsernameAndPassword"}</label></td>
-</tr>
+{if $implicitAuth}
+	<a href="{url page="login" op="implicitAuthLogin"}">Login</a>	
+{else}
+	<form method="post" action="{url page="login" op="signIn"}">
 {/if}
-<tr>
-	<td></td>
-	<td><input type="submit" value="{translate key="user.login"}" class="button" /></td>
-</tr>
-</table>
 
-<p>
-&#187; <a href="{url page="user" op="register" source=$source|escape}">{translate key="user.login.registerNewAccount"}</a><br />
-&#187; <a href="{url page="login" op="lostPassword"}">{translate key="user.login.forgotPassword"}</a>
-</p>
+<input type="hidden" name="source" value="{$source|escape}" />
+
+{if ! $implicitAuth}
+	<table class="data">
+	<tr>
+		<td class="label"><label for="loginUsername">{translate key="user.username"}</label></td>
+		<td class="value"><input type="text" id="loginUsername" name="username" value="{$username|escape}" size="20" maxlength="32" class="textField" /></td>
+	</tr>
+	<tr>
+		<td class="label"><label for="loginPassword">{translate key="user.password"}</label></td>
+		<td class="value"><input type="password" id="loginPassword" name="password" value="{$password|escape}" size="20" maxlength="32" class="textField" /></td>
+	</tr>
+	{if $showRemember}
+	<tr valign="middle">
+		<td></td>
+		<td class="value"><input type="checkbox" id="loginRemember" name="remember" value="1"{if $remember} checked="checked"{/if} /> <label for="loginRemember">{translate key="user.login.rememberUsernameAndPassword"}</label></td>
+	</tr>
+	{/if}{* $showRemember *}
+
+	<tr>
+		<td></td>
+		<td><input type="submit" value="{translate key="user.login"}" class="button" /></td>
+	</tr>
+	</table>
+
+	<p>
+		&#187; <a href="{url page="user" op="register" source=$source|escape}">{translate key="user.login.registerNewAccount"}</a><br />
+		&#187; <a href="{url page="login" op="lostPassword"}">{translate key="user.login.forgotPassword"}</a>
+	</p>
+{/if}{* !$implicitAuth *}
 
 <script type="text/javascript">
 <!--

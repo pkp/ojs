@@ -70,6 +70,26 @@ class UserDAO extends DAO {
 	}
 
 	/**
+	 * Get the user by the TDL ID (implicit authentication).
+	 * @param $authstr string
+	 * @param $allowDisabled boolean
+	 * @return object User
+	 */
+	function &getUserByAuthStr($authstr, $allowDisabled = true) {
+		$result = &$this->retrieve(
+			'SELECT * FROM users WHERE auth_str = ?' . ($allowDisabled?'':' AND disabled = 0'), $authstr
+		);
+
+		$returner = null;
+		if ($result->RecordCount() != 0) {
+			$returner = &$this->_returnUserFromRowWithData($result->GetRowAssoc(false));
+		}
+		$result->Close();
+		unset($result);
+		return $returner;
+	}
+
+	/**
 	 * Retrieve a user by email address.
 	 * @param $email string
 	 * @param $allowDisabled boolean
@@ -153,6 +173,7 @@ class UserDAO extends DAO {
 		$user->setDisabled($row['disabled']);
 		$user->setDisabledReason($row['disabled_reason']);
 		$user->setAuthId($row['auth_id']);
+		$user->setAuthStr($row['auth_str']);
 
 		if ($callHook) HookRegistry::call('UserDAO::_returnUserFromRow', array(&$user, &$row));
 
@@ -172,9 +193,9 @@ class UserDAO extends DAO {
 		}
 		$this->update(
 			sprintf('INSERT INTO users
-				(username, password, salutation, first_name, middle_name, initials, last_name, gender, affiliation, email, url, phone, fax, mailing_address, country, locales, date_last_email, date_registered, date_validated, date_last_login, date_end_membership, must_change_password, disabled, disabled_reason, auth_id)
+				(username, password, salutation, first_name, middle_name, initials, last_name, gender, affiliation, email, url, phone, fax, mailing_address, country, locales, date_last_email, date_registered, date_validated, date_last_login, date_end_membership, must_change_password, disabled, disabled_reason, auth_id, auth_str)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, %s, %s, %s, %s, %s, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, %s, %s, %s, %s, %s, ?, ?, ?, ?, ?)',
 				$this->datetimeToDB($user->getDateLastEmail()), $this->datetimeToDB($user->getDateRegistered()), $this->datetimeToDB($user->getDateValidated()), $this->datetimeToDB($user->getDateLastLogin()), $this->datetimeToDB($user->getDateEndMembership())),
 			array(
 				$user->getUsername(),
@@ -196,7 +217,8 @@ class UserDAO extends DAO {
 				$user->getMustChangePassword(),
 				$user->getDisabled() ? 1 : 0,
 				$user->getDisabledReason(),
-				$user->getAuthId()
+				$user->getAuthId(),
+				$user->getAuthStr()
 			)
 		);
 
@@ -219,7 +241,7 @@ class UserDAO extends DAO {
 	 * Update an existing user.
 	 * @param $user User
 	 */
-	function updateUser(&$user) {
+	function updateUser(&$user) {				
 		if ($user->getDateLastLogin() == null) {
 			$user->setDateLastLogin(Core::getCurrentDate());
 		}
@@ -252,7 +274,8 @@ class UserDAO extends DAO {
 					must_change_password = ?,
 					disabled = ?,
 					disabled_reason = ?,
-					auth_id = ?
+					auth_id = ?, 
+					auth_str = ?
 				WHERE user_id = ?',
 				$this->datetimeToDB($user->getDateLastEmail()), $this->datetimeToDB($user->getDateValidated()), $this->datetimeToDB($user->getDateLastLogin()), $this->dateToDB($user->getDateEndMembership())),
 			array(
@@ -276,7 +299,8 @@ class UserDAO extends DAO {
 				$user->getDisabled()?1:0,
 				$user->getDisabledReason(),
 				$user->getAuthId(),
-				$user->getUserId()
+				$user->getAuthStr(),
+				$user->getUserId(),
 			)
 		);
 	}

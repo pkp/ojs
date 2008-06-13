@@ -77,6 +77,9 @@ class TemplateManager extends Smarty {
 		$this->assign('datetimeFormatShort', Config::getVar('general', 'datetime_format_short'));
 		$this->assign('datetimeFormatLong', Config::getVar('general', 'datetime_format_long'));
 
+		// Are we using implicit authentication?
+		$this->assign('implicitAuth', Config::getVar('security', 'implicit_auth'));
+
 		$locale = Locale::getLocale();
 		$this->assign('currentLocale', $locale);
 

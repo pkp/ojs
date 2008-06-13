@@ -63,7 +63,15 @@ class RegistrationHandler extends UserHandler {
 				// registration email.
 				Request::redirect(null, 'index');
 			}
-			Validation::login($regForm->getData('username'), $regForm->getData('password'), $reason);
+
+			$reason = null;
+
+			if (Config::getVar('security', 'implicit_auth')) {
+				Validation::login('', '', $reason);
+			} else {
+				Validation::login($regForm->getData('username'), $regForm->getData('password'), $reason);
+			}
+
 			if ($reason !== null) {
 				parent::setupTemplate(true);
 				$templateMgr = &TemplateManager::getManager();

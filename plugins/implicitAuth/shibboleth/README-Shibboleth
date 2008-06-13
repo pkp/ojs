@@ -1,0 +1,29 @@
+This document describes the config parameters that control the implicit authentication plugin in OJS. It does not describe how to set up Shibboleth based authentication.
+
+In the [security] section of the config.inc.php file there are several parameters that affect the operation of the implicit auth plugin. They are all commented out - by default. They are shown here with their default settings like they are in the config file. When you enable implicit auth - you should uncomment all of these variables.
+
+    implicit_auth = On
+
+This setting turns on or off implicit authentication. If implicit_auth is not on - none of the other implicit_auth variables are consulted. The main effect of turning implicit_auth on - is that the login process goes through Shibboleth and several of the forms are modified so that they do not ask the user for name and address type information.
+
+Implicit Auth Header Variables. These variables supply the name of the header variable that contains a specific value. The header variable values shown are from the Texas Digital Library's Shibboleth environment. For example -- the user's first name - will be in the header variable HTTP_TDL_GIVENNAME.
+
+	implicit_auth_header_first_name = HTTP_TDL_GIVENNAME
+	implicit_auth_header_last_name = HTTP_TDL_SN
+	implicit_auth_header_email = HTTP_TDL_MAIL
+	implicit_auth_header_phone = HTTP_TDL_TELEPHONENUMBER
+	implicit_auth_header_initials = HTTP_TDL_METADATA_INITIALS
+	implicit_auth_header_mailing_address = HTTP_TDL_METADATA_TDLHOMEPOSTALADDRESS
+	implicit_auth_header_uin = HTTP_TDL_TDLUID
+    
+The UIN is the user's primary identification number. While some of the other information may change (like a person's last name) - the UIN is pretty much guaranteed to stay the same through time. The UIN is used to look up a user's record when they authenticate.
+
+The implicit_auth_admin_list is a blank delimited list of UINs that should be set up as an admin user. When a user logs in - if their UIN is in this list then they are made an admin user. This list is checked every time a user logs in and if they are not in the list - then their admin privilege is revoked.
+
+    implicit_auth_admin_list = "ou812@tdl.org 65B7FA8F2DAA90F7@utexas.edu joeuser@tdl.org"
+
+The implicit_auth_wayf_url is the URL of the Shibboleth Wayfinder page. This is set up in the Shibboleth configuration.
+
+    implicit_auth_wayf_url = "/Shibboleth.sso/wayf" 
+    
+One additional operational note is that when authenticating a user, if they are not found by their UIN - we make an additional check to see if they can be found by their email address. If so - we update the UIN field in their user record and log them in. This provides a stratiforward way to migrate existing users in the users table to the system with implicit authentication.

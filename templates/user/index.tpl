@@ -87,8 +87,8 @@
 				<li>&#187; <a href="{url journal=$thisJournal->getPath() page="user" op="index"}">{$thisJournal->getJournalTitle()|escape}</a></li>
 			{/foreach}
 		</ul>
-	{/if}
-{/if}
+	{/if}{* $currentJournal *}
+{/if}{* !$hasRole *}
 
 <h3>{translate key="user.myAccount"}</h3>
 <ul class="plain">
@@ -100,7 +100,11 @@
 		{/if}
 	{/if}
 	<li>&#187; <a href="{url page="user" op="profile"}">{translate key="user.editMyProfile"}</a></li>
-	<li>&#187; <a href="{url page="user" op="changePassword"}">{translate key="user.changeMyPassword"}</a></li>
+
+	{if !$implicitAuth}
+		<li>&#187; <a href="{url page="user" op="changePassword"}">{translate key="user.changeMyPassword"}</a></li>
+	{/if}
+
 	{if $userJournal}
 		{if $journalPaymentsEnabled && $subscriptionEnabled && $userHasSubscription}
 			<li>&#187; <a href="{url page="user" op="payRenewSubscription"}">{translate key="payment.subscription.renew"}</a> ({translate key="payment.subscription.expires"}: {$subscriptionEndDate|date_format:$dateFormatShort})</li>
@@ -111,8 +115,9 @@
 			{else}
 				<li>&#187; <a href="{url page="user" op="payMembership"}">{translate key="payment.membership.buyMembership"}</a></li>		
 			{/if}
-		{/if}	
-	{/if}
+		{/if}{* $journalPaymentsEnabled && $membershipEnabled *}
+	{/if}{* $userJournal *}
+
 	<li>&#187; <a href="{url page="login" op="signOut"}">{translate key="user.logOut"}</a></li>
 	{call_hook name="Templates::Admin::Index::MyAccount"}
 </ul>

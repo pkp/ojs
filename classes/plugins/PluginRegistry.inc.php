@@ -152,6 +152,7 @@ class PluginRegistry {
 			'citationFormats',
 			'gateways',
 			'generic',
+			'implicitAuth',
 			'importexport',
 			'paymethod',
 			'reports',

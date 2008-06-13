@@ -208,6 +208,29 @@ allowed_html = "<a> <em> <strong> <cite> <code> <ul> <ol> <li> <dl> <dt> <dd> <b
 ; </p></sub></sup></u></i></b></dd></dt></dl></li></ol></ul></code></cite></strong></em></a>
 
 
+;Is implicit authentication enabled or not
+
+;implicit_auth = On
+
+;Implicit Auth Hedader Variables
+
+;implicit_auth_header_first_name = HTTP_TDL_GIVENNAME
+;implicit_auth_header_last_name = HTTP_TDL_SN
+;implicit_auth_header_email = HTTP_TDL_MAIL
+;implicit_auth_header_phone = HTTP_TDL_TELEPHONENUMBER
+;implicit_auth_header_initials = HTTP_TDL_METADATA_INITIALS
+;implicit_auth_header_mailing_address = HTTP_TDL_METADATA_TDLHOMEPOSTALADDRESS
+;implicit_auth_header_uin = HTTP_TDL_TDLUID 
+
+; A space delimited list of uins to make admin
+;implicit_auth_admin_list = "100000040@tdl.org 85B7FA892DAA90F7@utexas.edu 100000012@tdl.org"
+
+; URL of the implicit auth 'Way Finder' page. See pages/login/LoginHandler.inc.php for usage.
+
+;implicit_auth_wayf_url = "/Shibboleth.sso/wayf"
+
+
+
 ;;;;;;;;;;;;;;;;;;
 ; Email Settings ;
 ;;;;;;;;;;;;;;;;;;

@@ -48,6 +48,40 @@ class LoginHandler extends Handler {
 		$templateMgr->assign('showRemember', Config::getVar('general', 'session_lifetime') > 0);
 		$templateMgr->display('user/login.tpl');
 	}
+	
+	/**
+	 * Handle login when implicitAuth is enabled.
+	 * If the user came in on a non-ssl url - then redirect back to the ssl url
+	 */
+	function implicitAuthLogin() {	
+		if (Request::getProtocol() != 'https') 
+			Request::redirectSSL();
+
+		$wayf_url = Config::getVar("security", "implicit_auth_wayf_url");
+		
+		if ($wayf_url == "")
+			die("Error in implicit authentication. WAYF URL not set in config file.");
+			
+		$url = $wayf_url . "?target=https://" . Request::getServerHost() . Request::getBasePath() . '/index.php/index/login/implicitAuthReturn';
+		
+		Request::redirectUrl($url);
+	}
+
+	/**
+	 * This is the function that Shibboleth redirects to - after the user has authenticated.
+	 */
+	function implicitAuthReturn() {
+		parent::validate();
+
+		if (Validation::isLoggedIn()) {
+			Request::redirect(null, 'user');
+		}		
+
+		// Login - set remember to false
+		$user = Validation::login(Request::getUserVar('username'), Request::getUserVar('password'), $reason, false);		
+
+		Request::redirect(null, 'user');		
+	}
 
 	/**
 	 * Validate a user's credentials and log the user in.

@@ -144,37 +144,41 @@
 		</select></td>
 	</tr>
 	{/if}
-	<tr valign="top">
-		<td class="label">{fieldLabel name="password" required=$passwordRequired key="user.password"}</td>
-		<td class="value">
-			<input type="password" name="password" id="password" value="{$password|escape}" size="20" maxlength="32" class="textField" />
-			<br />
-			<span class="instruct">{translate key="user.register.passwordLengthRestriction" length=$minPasswordLength}</span>
-		</td>
-	</tr>
-	<tr valign="top">
-		<td class="label">{fieldLabel name="password2" required=$passwordRequired key="user.register.repeatPassword"}</td>
-		<td class="value"><input type="password" name="password2"  id="password2" value="{$password2|escape}" size="20" maxlength="32" class="textField" /></td>
-	</tr>
-	{if $userId}
-	<tr valign="top">
-		<td>&nbsp;</td>
-		<td class="value">{translate key="user.register.passwordLengthRestriction" length=$minPasswordLength}<br />{translate key="user.profile.leavePasswordBlank"}</td>
-	</tr>
-	{else}
-	<tr valign="top">
-		<td class="label">&nbsp;</td>
-		<td class="value"><input type="checkbox" onclick="setGenerateRandom(this.checked)" name="generatePassword" id="generatePassword" value="1"{if $generatePassword} checked="checked"{/if} /> <label for="generatePassword">{translate key="manager.people.createUserGeneratePassword"}</label></td>
-	</tr>
-	<tr valign="top">
-		<td class="label">&nbsp;</td>
-		<td class="value"><input type="checkbox" name="sendNotify" id="sendNotify" value="1"{if $sendNotify} checked="checked"{/if} /> <label for="sendNotify">{translate key="manager.people.createUserSendNotify"}</label></td>
-	</tr>
-	{/if}
-	<tr valign="top">
-		<td class="label">&nbsp;</td>
-		<td class="value"><input type="checkbox" name="mustChangePassword" id="mustChangePassword" value="1"{if $mustChangePassword} checked="checked"{/if} /> <label for="mustChangePassword">{translate key="manager.people.userMustChangePassword"}</label></td>
-	</tr>
+	
+	{if !$implicitAuth}
+		<tr valign="top">
+			<td class="label">{fieldLabel name="password" required=$passwordRequired key="user.password"}</td>
+			<td class="value">
+				<input type="password" name="password" id="password" value="{$password|escape}" size="20" maxlength="32" class="textField" />
+				<br />
+				<span class="instruct">{translate key="user.register.passwordLengthRestriction" length=$minPasswordLength}</span>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td class="label">{fieldLabel name="password2" required=$passwordRequired key="user.register.repeatPassword"}</td>
+			<td class="value"><input type="password" name="password2"  id="password2" value="{$password2|escape}" size="20" maxlength="32" class="textField" /></td>
+		</tr>
+		{if $userId}
+		<tr valign="top">
+			<td>&nbsp;</td>
+			<td class="value">{translate key="user.register.passwordLengthRestriction" length=$minPasswordLength}<br />{translate key="user.profile.leavePasswordBlank"}</td>
+		</tr>
+		{else}
+		<tr valign="top">
+			<td class="label">&nbsp;</td>
+			<td class="value"><input type="checkbox" onclick="setGenerateRandom(this.checked)" name="generatePassword" id="generatePassword" value="1"{if $generatePassword} checked="checked"{/if} /> <label for="generatePassword">{translate key="manager.people.createUserGeneratePassword"}</label></td>
+		</tr>
+		<tr valign="top">
+			<td class="label">&nbsp;</td>
+			<td class="value"><input type="checkbox" name="sendNotify" id="sendNotify" value="1"{if $sendNotify} checked="checked"{/if} /> <label for="sendNotify">{translate key="manager.people.createUserSendNotify"}</label></td>
+		</tr>
+		{/if}
+		<tr valign="top">
+			<td class="label">&nbsp;</td>
+			<td class="value"><input type="checkbox" name="mustChangePassword" id="mustChangePassword" value="1"{if $mustChangePassword} checked="checked"{/if} /> <label for="mustChangePassword">{translate key="manager.people.userMustChangePassword"}</label></td>
+		</tr>
+	{/if}{* !$implicitAuth *}
+	
 	<tr valign="top">
 		<td class="label">{fieldLabel name="affiliation" key="user.affiliation"}</td>
 		<td class="value"><input type="text" name="affiliation" id="affiliation" value="{$affiliation|escape}" size="30" maxlength="90" class="textField" /></td>
