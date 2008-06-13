@@ -3,7 +3,7 @@
 <!--
   * ojs1-to-ojs2.xsl
   *
-  * Copyright (c) 2003-2006 John Willinsky
+  * Copyright (c) 2003-2008 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * This XSL stylesheet transforms OJS 1.x import XML into OJS 2.x import XML.

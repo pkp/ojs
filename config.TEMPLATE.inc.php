@@ -212,7 +212,7 @@ allowed_html = "<a> <em> <strong> <cite> <code> <ul> <ol> <li> <dl> <dt> <dd> <b
 
 ;implicit_auth = On
 
-;Implicit Auth Hedader Variables
+;Implicit Auth Header Variables
 
 ;implicit_auth_header_first_name = HTTP_TDL_GIVENNAME
 ;implicit_auth_header_last_name = HTTP_TDL_SN
