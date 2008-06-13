@@ -37,11 +37,11 @@
 #main {
 	float: right;
 	width: 63%;
-	margin-right: 5%;
+	margin-right: 10%;
 	overflow: hidden;
 }
 
 // Set main on non-IE browsers to have a 10% margin
-html>body #main {
-	margin-right: 10%;
+*html #main {
+	margin-right: 5%;
 } 

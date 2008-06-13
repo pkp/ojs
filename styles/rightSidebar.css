@@ -29,15 +29,12 @@
 	padding: 1em 0em 1em 0em;
 	font-size: 0.65em;
 	height: 100%;
-	margin-right: 5%;
+	margin-right: 10%;
 	margin-left: 2%;
 	overflow: hidden;
 }
 
-// Set sidebar on non-IE browsers to have a 10% margin
-html>body #rightSidebar {
-	margin-right: 10%;
-}
+* html #rightSidebar { margin-right: 5%; }
 
 #main {
 	float: left;
