@@ -161,19 +161,19 @@ class Section extends DataObject {
 	}
 
 	/**
-	 * Get boolean indicating whether abstracts are disabled
+	 * Get boolean indicating whether abstracts are required 
 	 * @return boolean
 	 */
-	function getAbstractsDisabled() {
-		return $this->getData('abstractsDisabled');
+	function getAbstractsNotRequired() {
+		return $this->getData('abstractsNotRequired');
 	}
 
 	/**
-	 * Set boolean indicating whether abstracts are disabled
-	 * @param $abstractsDisabled boolean
+	 * Set boolean indicating whether abstracts are required
+	 * @param $abstractsNotRequired boolean
 	 */
-	function setAbstractsDisabled($abstractsDisabled) {
-		return $this->setData('abstractsDisabled', $abstractsDisabled);
+	function setAbstractsNotRequired($abstractsNotRequired) {
+		return $this->setData('abstractsNotRequired', $abstractsNotRequired);
 	}
 
 	/**

@@ -24,7 +24,7 @@
 
 	<td class="tocTitle">{$article->getArticleTitle()|strip_unsafe_html}</td>
 	<td class="tocGalleys">
-		{if $section.abstractsDisabled || $article->getArticleAbstract() == ""}
+		{if $article->getArticleAbstract() == ""}
 			{assign var=hasAbstract value=0}
 		{else}
 			{assign var=hasAbstract value=1}

@@ -185,7 +185,7 @@ function moveAuthor(dir, authorIndex) {
 
 <div class="separator"></div>
 
-<h3>{if $section->getAbstractsDisabled()==1}{translate key="article.title"}{else}{translate key="submission.titleAndAbstract"}{/if}</h3>
+<h3>{translate key="submission.titleAndAbstract"}</h3>
 
 <table width="100%" class="data">
 
@@ -194,12 +194,10 @@ function moveAuthor(dir, authorIndex) {
 	<td width="80%" class="value"><input type="text" class="textField" name="title[{$formLocale|escape}]" id="title" value="{$title[$formLocale]|escape}" size="60" maxlength="255" /></td>
 </tr>
 
-{if $section->getAbstractsDisabled()==0}
 <tr valign="top">
-	<td width="20%" class="label">{fieldLabel name="abstract" required="true" key="article.abstract"}</td>
+	<td width="20%" class="label">{if $section->getAbstractsNotRequired()==0}{fieldLabel name="abstract" key="article.abstract" required="true"}{else}{fieldLabel name="abstract" key="article.abstract"}{/if}</td>
 	<td width="80%" class="value"><textarea name="abstract[{$formLocale|escape}]" id="abstract" class="textArea" rows="15" cols="60">{$abstract[$formLocale]|escape}</textarea></td>
 </tr>
-{/if}{* Abstracts enabled *}
 </table>
 
 <div class="separator"></div>

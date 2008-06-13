@@ -213,7 +213,7 @@ class MetadataForm extends Form {
 
 		$sectionDao = &DAORegistry::getDAO('SectionDAO');
 		$section = &$sectionDao->getSection($this->article->getSectionId());
-		if (!$section->getAbstractsDisabled()) {
+		if (!$section->getAbstractsNotRequired()) {
 			$this->addCheck(new FormValidatorLocale($this, 'abstract', 'required', 'author.submit.form.abstractRequired'));
 		}
 
@@ -234,9 +234,7 @@ class MetadataForm extends Form {
 		$article->setTitle($this->getData('title'), null); // Localized
 
 		$section = &$sectionDao->getSection($article->getSectionId());
-		if (!$section->getAbstractsDisabled()) {
-			$article->setAbstract($this->getData('abstract'), null); // Localized
-		}
+		$article->setAbstract($this->getData('abstract'), null); // Localized
 
 		import('file.PublicFileManager');
 		$publicFileManager =& new PublicFileManager();

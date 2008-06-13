@@ -73,8 +73,8 @@ function removeSectionEditor(editorId) {
 </tr>
 <tr valign="top">
 	<td class="value">
-		<input type="checkbox" name="abstractsDisabled" id="abstractsDisabled" value="1" {if $abstractsDisabled}checked="checked"{/if} />
-		{fieldLabel name="abstractsDisabled" key="manager.sections.abstractsDisabled"}
+		<input type="checkbox" name="abstractsNotRequired" id="abstractsNotRequired" value="1" {if $abstractsNotRequired}checked="checked"{/if} />
+		{fieldLabel name="abstractsNotRequired" key="manager.sections.abstractsNotRequired"}
 	</td>
 </tr>
 <tr valign="top">

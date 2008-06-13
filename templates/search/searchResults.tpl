@@ -93,7 +93,7 @@ function ensureKeyword() {
 		{else}
 			{assign var=hasAccess value=0}
 		{/if}
-		{if !$section->getAbstractsDisabled() && $publishedArticle->getArticleAbstract() != ""}
+		{if $publishedArticle->getArticleAbstract() != ""}
 			{assign var=hasAbstract value=1}
 		{else}
 			{assign var=hasAbstract value=0}

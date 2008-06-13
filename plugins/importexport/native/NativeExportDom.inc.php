@@ -136,12 +136,10 @@ class NativeExportDom {
 			unset($titleNode);
 		}
 
-		if (!$section->getAbstractsDisabled()) {
-			if (is_array($article->getAbstract(null))) foreach ($article->getAbstract(null) as $locale => $abstract) {
-				$abstractNode = &XMLCustomWriter::createChildWithText($doc, $root, 'abstract', $abstract, false);
-				if ($abstractNode) XMLCustomWriter::setAttribute($abstractNode, 'locale', $locale);
-				unset($abstractNode);
-			}
+		if (is_array($article->getAbstract(null))) foreach ($article->getAbstract(null) as $locale => $abstract) {
+			$abstractNode = &XMLCustomWriter::createChildWithText($doc, $root, 'abstract', $abstract, false);
+			if ($abstractNode) XMLCustomWriter::setAttribute($abstractNode, 'locale', $locale);
+			unset($abstractNode);
 		}
 
 		/* --- Indexing --- */

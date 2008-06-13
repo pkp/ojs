@@ -72,7 +72,7 @@
 {/if}
 
 
-<h3>{if $section->getAbstractsDisabled()}{translate key="article.title"}{else}{translate key="submission.titleAndAbstract"}{/if}</h3>
+<h3>{translate key="submission.titleAndAbstract"}</h3>
 
 <table width="100%" class="data">
 	<tr valign="top">
@@ -80,7 +80,6 @@
 		<td width="80%" class="value">{$title[$formLocale]|strip_unsafe_html|default:"&mdash;"}</td>
 	</tr>
 
-	{if !$section->getAbstractsDisabled()}
 	<tr>
 		<td colspan="2" class="separator">&nbsp;</td>
 	</tr>
@@ -88,7 +87,6 @@
 		<td class="label">{translate key="article.abstract"}</td>
 		<td class="value">{$abstract[$formLocale]|strip_unsafe_html|nl2br|default:"&mdash;"}</td>
 	</tr>
-	{/if}
 </table>
 
 <div class="separator"></div>
@@ -101,7 +99,6 @@
 		<td width="80%" class="value">{if $fileName[$formLocale]}<a href="javascript:openWindow('{$publicFilesDir}/{$fileName[$formLocale]|escape:"url"}');" class="file">{$originalFileName[$formLocale]}</a>{else}&mdash;{/if}</td>
 	</tr>
 
-	{if !$section->getAbstractsDisabled()}
 	<tr>
 		<td colspan="2" class="separator">&nbsp;</td>
 	</tr>
@@ -109,7 +106,6 @@
 		<td class="label">{fieldLabel name="coverPageAltText" key="common.altText"}</td>
 		<td class="value">{$coverPageAltText[$formLocale]|escape}</td>
 	</tr>
-	{/if}
 </table>
 
 <div class="separator"></div>

@@ -598,7 +598,7 @@
 			<NOTNULL/>
 			<DEFAULT VALUE="1"/>
 		</field>
-		<field name="abstracts_disabled" type="I1">
+		<field name="abstracts_not_required" type="I1">
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
 		</field>

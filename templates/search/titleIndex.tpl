@@ -33,7 +33,6 @@
 {iterate from=results item=result}
 {assign var=publishedArticle value=$result.publishedArticle}
 {assign var=article value=$result.article}
-{assign var=section value=$result.section}
 {assign var=issue value=$result.issue}
 {assign var=issueAvailable value=$result.issueAvailable}
 {assign var=journal value=$result.journal}
@@ -42,7 +41,7 @@
 	<td>{if $issue->getAccessStatus()}<a href="{url journal=$journal->getPath() page="issue" op="view" path=$issue->getBestIssueId($journal)}">{/if}{$issue->getIssueIdentification()|escape}{if $issue->getAccessStatus()}</a>{/if}</td>
 	<td width="35%">{$article->getArticleTitle()|strip_unsafe_html}</td>
 	<td width="25%" align="right">
-			<a href="{url journal=$journal->getPath() page="article" op="view" path=$publishedArticle->getBestArticleId($journal)}" class="file">{if $section->getAbstractsDisabled()}{translate key="article.details"}{else}{translate key="article.abstract"}{/if}</a>
+			<a href="{url journal=$journal->getPath() page="article" op="view" path=$publishedArticle->getBestArticleId($journal)}" class="file">{if $article->getArticleAbstract()}{translate key="article.abstract"}{else}{translate key="article.details"}{/if}</a>
 		{if ($issue->getAccessStatus() || $issueAvailable)}
 		{foreach from=$publishedArticle->getLocalizedGalleys() item=galley name=galleyList}
 			&nbsp;

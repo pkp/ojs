@@ -91,7 +91,7 @@
 	<h3>{$article->getArticleTitle()|strip_unsafe_html}</h3>
 	<div><em>{$article->getAuthorString()|escape}</em></div>
 	<br />
-	{if !$section->getAbstractsDisabled()}
+	{if $article->getArticleAbstract()}
 		<h4>{translate key="article.abstract"}</h4>
 		<br />
 		<div>{$article->getArticleAbstract()|strip_unsafe_html|nl2br}</div>

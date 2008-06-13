@@ -26,7 +26,7 @@
 
 		<em><a href="{url journal=$journal->getPath() page="issue" op="view" path=$issue->getBestIssueId()}">{$issue->getIssueIdentification()|escape}</a> - {$section->getSectionTitle()|escape}</em><br />
 		{$article->getArticleTitle()|strip_unsafe_html}<br/>
-		<a href="{url journal=$journal->getPath() page="article" op="view" path=$article->getBestArticleId()}" class="file">{if $section->getAbstractsDisabled()}{translate key="article.details"}{else}{translate key="article.abstract"}{/if}</a>
+		<a href="{url journal=$journal->getPath() page="article" op="view" path=$article->getBestArticleId()}" class="file">{if $article->getArticleAbstract()}{translate key="article.abstract"}{else}{translate key="article.details"}{/if}</a>
 		{if (!$issueUnavailable || $article->getAccessStatus())}
 		{foreach from=$article->getLocalizedGalleys() item=galley name=galleyList}
 			&nbsp;<a href="{url journal=$journal->getPath() page="article" op="view" path=$article->getBestArticleId()|to_array:$galley->getBestGalleyId($journal)}" class="file">{$galley->getGalleyLabel()|escape}</a>

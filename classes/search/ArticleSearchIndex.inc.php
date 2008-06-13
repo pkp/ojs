@@ -172,12 +172,7 @@ class ArticleSearchIndex {
 		$articleId = $article->getArticleId();
 		ArticleSearchIndex::updateTextIndex($articleId, ARTICLE_SEARCH_AUTHOR, $authorText);
 		ArticleSearchIndex::updateTextIndex($articleId, ARTICLE_SEARCH_TITLE, $article->getTitle(null));
-
-		$sectionDao = &DAORegistry::getDAO('SectionDAO');
-		$section = &$sectionDao->getSection($article->getSectionId());
-		if ($section && !$section->getAbstractsDisabled()) {
-			ArticleSearchIndex::updateTextIndex($articleId, ARTICLE_SEARCH_ABSTRACT, $article->getAbstract(null));
-		}
+		ArticleSearchIndex::updateTextIndex($articleId, ARTICLE_SEARCH_ABSTRACT, $article->getAbstract(null));
 
 		ArticleSearchIndex::updateTextIndex($articleId, ARTICLE_SEARCH_DISCIPLINE, (array) $article->getDiscipline(null));
 		ArticleSearchIndex::updateTextIndex($articleId, ARTICLE_SEARCH_SUBJECT, array_merge(array_values((array) $article->getSubjectClass(null)), array_values((array) $article->getSubject(null))));

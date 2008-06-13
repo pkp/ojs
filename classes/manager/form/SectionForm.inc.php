@@ -121,7 +121,7 @@ class SectionForm extends Form {
 					'abbrev' => $section->getAbbrev(null), // Localized
 					'metaIndexed' => !$section->getMetaIndexed(), // #2066: Inverted
 					'metaReviewed' => !$section->getMetaReviewed(), // #2066: Inverted
-					'abstractsDisabled' => $section->getAbstractsDisabled(),
+					'abstractsNotRequired' => $section->getAbstractsNotRequired(),
 					'identifyType' => $section->getIdentifyType(null), // Localized
 					'editorRestriction' => $section->getEditorRestricted(),
 					'hideTitle' => $section->getHideTitle(),
@@ -139,7 +139,7 @@ class SectionForm extends Form {
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->readUserVars(array('title', 'abbrev', 'policy', 'identifyType', 'metaIndexed', 'metaReviewed', 'abstractsDisabled', 'editorRestriction', 'hideTitle', 'hideAuthor', 'hideAbout'));
+		$this->readUserVars(array('title', 'abbrev', 'policy', 'identifyType', 'metaIndexed', 'metaReviewed', 'abstractsNotRequired', 'editorRestriction', 'hideTitle', 'hideAuthor', 'hideAbout'));
 		$assignedEditorIds = Request::getUserVar('assignedEditorIds');
 		if (empty($assignedEditorIds)) $assignedEditorIds = array();
 		elseif (!is_array($assignedEditorIds)) $assignedEditorIds = array($assignedEditorIds);
@@ -192,7 +192,7 @@ class SectionForm extends Form {
 		$section->setAbbrev($this->getData('abbrev'), null); // Localized
 		$section->setMetaIndexed($this->getData('metaIndexed') ? 0 : 1); // #2066: Inverted
 		$section->setMetaReviewed($this->getData('metaReviewed') ? 0 : 1); // #2066: Inverted
-		$section->setAbstractsDisabled($this->getData('abstractsDisabled') ? 1 : 0);
+		$section->setAbstractsNotRequired($this->getData('abstractsNotRequired') ? 1 : 0);
 		$section->setIdentifyType($this->getData('identifyType'), null); // Localized
 		$section->setEditorRestricted($this->getData('editorRestriction') ? 1 : 0);
 		$section->setHideTitle($this->getData('hideTitle') ? 1 : 0);

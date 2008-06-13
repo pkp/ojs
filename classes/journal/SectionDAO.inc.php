@@ -137,7 +137,7 @@ class SectionDAO extends DAO {
 		$section->setSequence($row['seq']);
 		$section->setMetaIndexed($row['meta_indexed']);
 		$section->setMetaReviewed($row['meta_reviewed']);
-		$section->setAbstractsDisabled($row['abstracts_disabled']);
+		$section->setAbstractsNotRequired($row['abstracts_not_required']);
 		$section->setEditorRestricted($row['editor_restricted']);
 		$section->setHideTitle($row['hide_title']);
 		$section->setHideAuthor($row['hide_author']);
@@ -175,7 +175,7 @@ class SectionDAO extends DAO {
 	function insertSection(&$section) {
 		$this->update(
 			'INSERT INTO sections
-				(journal_id, seq, meta_indexed, meta_reviewed, abstracts_disabled, editor_restricted, hide_title, hide_author, hide_about)
+				(journal_id, seq, meta_indexed, meta_reviewed, abstracts_not_required, editor_restricted, hide_title, hide_author, hide_about)
 				VALUES
 				(?, ?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
@@ -183,7 +183,7 @@ class SectionDAO extends DAO {
 				$section->getSequence() == null ? 0 : $section->getSequence(),
 				$section->getMetaIndexed() ? 1 : 0,
 				$section->getMetaReviewed() ? 1 : 0,
-				$section->getAbstractsDisabled() ? 1 : 0,
+				$section->getAbstractsNotRequired() ? 1 : 0,
 				$section->getEditorRestricted() ? 1 : 0,
 				$section->getHideTitle() ? 1 : 0,
 				$section->getHideAuthor() ? 1 : 0,
@@ -207,7 +207,7 @@ class SectionDAO extends DAO {
 					seq = ?,
 					meta_indexed = ?,
 					meta_reviewed = ?,
-					abstracts_disabled = ?,
+					abstracts_not_required = ?,
 					editor_restricted = ?,
 					hide_title = ?,
 					hide_author = ?,
@@ -217,7 +217,7 @@ class SectionDAO extends DAO {
 				$section->getSequence(),
 				$section->getMetaIndexed(),
 				$section->getMetaReviewed(),
-				$section->getAbstractsDisabled(),
+				$section->getAbstractsNotRequired(),
 				$section->getEditorRestricted(),
 				$section->getHideTitle(),
 				$section->getHideAuthor(),

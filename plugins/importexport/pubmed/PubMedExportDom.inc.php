@@ -166,7 +166,7 @@ class PubMedExportDom {
 		}
 
 		/* --- Abstract --- */
-		if (!$section->getAbstractsDisabled()) {
+		if ($article->getArticleAbstract()) {
 			$abstractNode = XMLCustomWriter::createChildWithText($doc, $root, 'Abstract', strip_tags($article->getArticleAbstract()), false);
 		}
 

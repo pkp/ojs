@@ -107,7 +107,7 @@ class AuthorSubmitStep2Form extends AuthorSubmitForm {
 		$sectionDao = &DAORegistry::getDAO('SectionDAO');
 		$this->_data['section'] = &$sectionDao->getSection($this->article->getSectionId());
 
-		if ($this->_data['section']->getAbstractsDisabled() == 0) {
+		if ($this->_data['section']->getAbstractsNotRequired() == 0) {
 			$this->addCheck(new FormValidatorLocale($this, 'abstract', 'required', 'author.submit.form.abstractRequired'));
 		}
 

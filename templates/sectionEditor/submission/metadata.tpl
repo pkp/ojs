@@ -66,7 +66,7 @@
 	{/foreach}
 </table>
 
-<h4>{if $section->getAbstractsDisabled()}{translate key="article.title"}{else}{translate key="submission.titleAndAbstract"}{/if}</h4>
+<h4>{translate key="submission.titleAndAbstract"}</h4>
 
 <table width="100%" class="data">
 	<tr valign="top">
@@ -74,7 +74,6 @@
 		<td width="80%" class="value">{$submission->getArticleTitle()|strip_unsafe_html|default:"&mdash;"}</td>
 	</tr>
 
-	{if !$section->getAbstractsDisabled()}
 	<tr>
 		<td colspan="2" class="separator">&nbsp;</td>
 	</tr>
@@ -82,7 +81,6 @@
 		<td class="label">{translate key="article.abstract"}</td>
 		<td class="value">{$submission->getArticleAbstract()|strip_unsafe_html|nl2br|default:"&mdash;"}</td>
 	</tr>
-	{/if}
 </table>
 
 <h4>{translate key="submission.indexing"}</h4>
