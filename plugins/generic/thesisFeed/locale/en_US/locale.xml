@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  *
+  * $Id$
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.generic.thesisfeed.displayName">Thesis Abstracts Feed Plugin</message>
+	<message key="plugins.generic.thesisfeed.description">This plugin produces RSS/Atom web syndication feeds for thesis abstracts.</message>
+
+	<message key="plugins.generic.thesisfeed.settings">Settings</message>
+	<message key="plugins.generic.thesisfeed.settings.all">Display feed links on all journal pages.</message>
+	<message key="plugins.generic.thesisfeed.settings.homepage">Display feed links only on homepage and thesis abstracts page.</message>
+	<message key="plugins.generic.thesisfeed.settings.thesis">Display feed links only on thesis abstracts page.</message>
+	<message key="plugins.generic.thesisfeed.settings.recentThesis1">Limit feed to</message>
+	<message key="plugins.generic.thesisfeed.settings.recentThesis2">most recently submitted thesis abstracts.</message>
+	<message key="plugins.generic.thesisfeed.settings.recentItemsRequired">Please enter a positive integer for the number of thesis abstracts.</message>
+	<message key="plugins.generic.thesisfeed.atom.altText">Atom logo</message>
+	<message key="plugins.generic.thesisfeed.rss1.altText">RSS1 logo</message>
+	<message key="plugins.generic.thesisfeed.rss2.altText">RSS2 logo</message>
+</locale>

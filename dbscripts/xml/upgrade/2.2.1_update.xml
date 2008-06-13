@@ -30,4 +30,29 @@
 			ALTER TABLE articles ADD COLUMN hide_author SMALLINT NOT NULL DEFAULT 0
 		</query>
 	</sql>
+
+	<!-- Bug #3488: Add RSS feed for thesis abstracts -->
+	<sql>
+		<!-- Syntax for MySQL. -->
+		<query driver="mysql">
+			ALTER TABLE theses ADD COLUMN date_submitted DATETIME
+		</query>
+		<query driver="mysql">
+			UPDATE theses SET date_submitted = '2008-01-01 00:00:01'
+		</query>
+		<query driver="mysql">
+			ALTER TABLE theses CHANGE COLUMN date_submitted date_submitted DATETIME NOT NULL
+		</query>
+
+		<!-- Syntax for PostgreSQL. -->
+		<query driver="postgres7">
+			ALTER TABLE theses ADD COLUMN date_submitted TIMESTAMP
+		</query>
+		<query driver="postgres7">
+			UPDATE theses SET date_submitted = '2008-01-01 00:00:01'
+		</query>
+		<query driver="postgres7">
+			ALTER TABLE theses ALTER COLUMN date_submitted SET NOT NULL
+		</query>
+	</sql>
 </data>

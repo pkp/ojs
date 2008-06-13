@@ -226,6 +226,7 @@ class ThesisForm extends Form {
 		$thesis->setCoverageSample($this->getData('coverageSample'));
 		$thesis->setMethod($this->getData('method'));
 		$thesis->setLanguage($this->getData('language'));
+		$thesis->setDateSubmitted(Core::getCurrentDate());
 
 		// Update or insert thesis
 		if ($thesis->getThesisId() != null) {

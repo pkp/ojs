@@ -552,6 +552,22 @@ class Thesis extends DataObject {
 	}
 
 	/**
+	 * Get thesis submitted date.
+	 * @return date (YYYY-MM-DD HH:MM:SS)
+	 */
+	function getDateSubmitted() {
+		return $this->getData('dateSubmitted');
+	}
+
+	/**
+	 * Set thesis submitted date.
+	 * @param $dateSubmitted date (YYYY-MM-DD HH:MM:SS)
+	 */
+	function setDateSubmitted($dateSubmitted) {
+		return $this->setData('dateSubmitted', $dateSubmitted);
+	}
+
+	/**
 	 * Get thesis status locale key.
 	 * @return int 
 	 */

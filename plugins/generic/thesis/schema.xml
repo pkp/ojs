@@ -87,6 +87,9 @@
 		<field name="language" type="C2" size="10">
 			<DEFAULT VALUE="en"/>
 		</field>
+		<field name="date_submitted" type="T">
+			<NOTNULL/>
+		</field>
 		<descr>Thesis and dissertation abstracts.</descr>
 		<index name="theses_journal_id">
 			<col>journal_id</col>

@@ -58,6 +58,24 @@ class ThesisDAO extends DAO {
 	}
 
 	/**
+	 * Retrieve most recently submitted active thesis by journal ID.
+	 * @param $journalId int
+	 * @return Thesis
+	 */
+	function &getMostRecentActiveThesisByJournalId($journalId) {
+		$result = &$this->retrieve(
+			'SELECT * FROM theses WHERE status = ? AND journal_id = ? ORDER BY date_submitted DESC, thesis_id DESC LIMIT 1', array(THESIS_STATUS_ACTIVE, $journalId)
+		);
+
+		$returner = null;
+		if ($result->RecordCount() != 0) {
+			$returner = &$this->_returnThesisFromRow($result->GetRowAssoc(false));
+		}
+		$result->Close();
+		return $returner;
+	}
+
+	/**
 	 * Retrieve thesis journal ID by thesis ID.
 	 * @param $thesisId int
 	 * @return int
@@ -126,6 +144,7 @@ class ThesisDAO extends DAO {
 		$thesis->setCoverageSample($row['coverage_sample']);
 		$thesis->setMethod($row['method']);
 		$thesis->setLanguage($row['language']);
+		$thesis->setDateSubmitted($row['date_submitted']);
 
 		return $thesis;
 	}
@@ -138,10 +157,10 @@ class ThesisDAO extends DAO {
 	function insertThesis(&$thesis) {
 		$ret = $this->update(
 			sprintf('INSERT INTO theses
-				(journal_id, status, degree, degree_name, department, university, date_approved, title, abstract, url, comment, student_first_name, student_middle_name, student_last_name, student_email, student_email_publish, student_bio, supervisor_first_name, supervisor_middle_name, supervisor_last_name, supervisor_email, discipline, subject_class, subject, coverage_geo, coverage_chron, coverage_sample, method, language)
+				(journal_id, status, degree, degree_name, department, university, date_approved, title, abstract, url, comment, student_first_name, student_middle_name, student_last_name, student_email, student_email_publish, student_bio, supervisor_first_name, supervisor_middle_name, supervisor_last_name, supervisor_email, discipline, subject_class, subject, coverage_geo, coverage_chron, coverage_sample, method, language, date_submitted)
 				VALUES
-				(?, ?, ?, ?, ?, ?, %s, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
-				$this->dateToDB($thesis->getDateApproved())),
+				(?, ?, ?, ?, ?, ?, %s, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, %s)',
+				$this->dateToDB($thesis->getDateApproved()), $this->datetimeToDB($thesis->getDateSubmitted())),
 			array(
 				$thesis->getJournalId(),
 				$thesis->getStatus(),
@@ -214,9 +233,10 @@ class ThesisDAO extends DAO {
 					coverage_chron = ?,
 					coverage_sample = ?,
 					method = ?,
-					language = ?
+					language = ?,
+					date_submitted = %s
 				WHERE thesis_id = ?',
-				$this->dateToDB($thesis->getDateApproved())),
+				$this->dateToDB($thesis->getDateApproved()), $this->datetimeToDB($thesis->getDateSubmitted())),
 			array(
 				$thesis->getJournalId(),
 				$thesis->getStatus(),
@@ -343,10 +363,10 @@ class ThesisDAO extends DAO {
 
 		switch ($resultOrder) {
 			case THESIS_ORDER_SUBMISSION_DATE_ASC:
-				$searchSql .= ' ORDER BY thesis_id ASC';
+				$searchSql .= ' ORDER BY date_submitted ASC, thesis_id ASC';
 				break;
 			case THESIS_ORDER_SUBMISSION_DATE_DESC:
-				$searchSql .= ' ORDER BY thesis_id DESC';
+				$searchSql .= ' ORDER BY date_submitted DESC, thesis_id DESC';
 				break;
 			case THESIS_ORDER_APPROVAL_DATE_ASC:
 				$searchSql .= ' ORDER BY date_approved ASC, student_last_name ASC, title ASC';
@@ -367,7 +387,7 @@ class ThesisDAO extends DAO {
 				$searchSql .= ' ORDER BY title DESC, student_last_name ASC';
 				break;
 			default:
-				$searchSql .= ' ORDER BY thesis_id DESC';
+				$searchSql .= ' ORDER BY date_submitted DESC, thesis_id DESC';
 		}
 
 		$result = &$this->retrieveRange(
@@ -445,10 +465,10 @@ class ThesisDAO extends DAO {
 
 		switch ($resultOrder) {
 			case THESIS_ORDER_SUBMISSION_DATE_ASC:
-				$searchSql .= ' ORDER BY thesis_id ASC';
+				$searchSql .= ' ORDER BY date_submitted ASC, thesis_id ASC';
 				break;
 			case THESIS_ORDER_SUBMISSION_DATE_DESC:
-				$searchSql .= ' ORDER BY thesis_id DESC';
+				$searchSql .= ' ORDER BY date_submitted DESC, thesis_id DESC';
 				break;
 			case THESIS_ORDER_APPROVAL_DATE_ASC:
 				$searchSql .= ' ORDER BY date_approved ASC, student_last_name ASC, title ASC';
@@ -469,7 +489,7 @@ class ThesisDAO extends DAO {
 				$searchSql .= ' ORDER BY title DESC, student_last_name ASC';
 				break;
 			default:
-				$searchSql .= ' ORDER BY thesis_id DESC';
+				$searchSql .= ' ORDER BY date_submitted DESC, thesis_id DESC';
 		}
 
 		$result = &$this->retrieveRange(
