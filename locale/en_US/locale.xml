@@ -963,31 +963,35 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="manager.payment.form.numeric">All costs must be positive numeric values (decimal points are allowed)</message>
 
 	<!-- General plugin information -->
-	<message key="plugins.categories.generic">Generic Plugins</message>
-	<message key="plugins.categories.generic.description">Generic plugins are used to extend Open Journal Systems in a variety of ways that are not supported by the other plugin categories.</message>
 	<message key="plugins.categories.auth">Authorization Plugins</message>
 	<message key="plugins.categories.auth.description">Authorization Plugins allow Open Journal Systems to delegate user authentication tasks to other systems, such as LDAP servers.</message>
-
-	<message key="plugins.categories.importexport">Import/Export Plugins</message>
-	<message key="plugins.categories.importexport.description">Import/Export Plugins can be used to transfer content to and from other systems.</message>
-
-	<message key="plugins.categories.gateways">Gateway Plugins</message>
-	<message key="plugins.categories.gateways.description">Gateway Plugins provide live data to external systems.</message>
-
-	<message key="plugins.categories.citationFormats">Citation Format Plugins</message>
-	<message key="plugins.categories.citationFormats.description">Citation format plugins provide users with various formats in which to access article citations.</message>
 
 	<message key="plugins.categories.blocks">Block Plugins</message>
 	<message key="plugins.categories.blocks.description">Block Plugins are pluggable UI components, such as the various sidebar tools.</message>
 
-	<message key="plugins.categories.themes">Theme Plugins</message>
-	<message key="plugins.categories.themes.description">Theme Plugins can be used to change the system's appearance.</message>
+	<message key="plugins.categories.citationFormats">Citation Format Plugins</message>
+	<message key="plugins.categories.citationFormats.description">Citation format plugins provide users with various formats in which to access article citations.</message>
+
+	<message key="plugins.categories.gateways">Gateway Plugins</message>
+	<message key="plugins.categories.gateways.description">Gateway Plugins provide live data to external systems.</message>
+
+	<message key="plugins.categories.generic">Generic Plugins</message>
+	<message key="plugins.categories.generic.description">Generic plugins are used to extend Open Journal Systems in a variety of ways that are not supported by the other plugin categories.</message>
+
+	<message key="plugins.categories.implicitAuth">Implicit Authentication Plugins</message>
+	<message key="plugins.categories.implicitAuth.description">Implicit Authentication plugins implement support for authenticating users based on http headers.</message>
+
+	<message key="plugins.categories.importexport">Import/Export Plugins</message>
+	<message key="plugins.categories.importexport.description">Import/Export Plugins can be used to transfer content to and from other systems.</message>
 
 	<message key="plugins.categories.paymethod">Payment Plugins</message>
 	<message key="plugins.categories.paymethod.description">Payment Method plugins implement support for various ways of processing payments online.</message>
 
-	<message key="plugins.categories.implicitAuth">Implicit Authentication Plugins</message>
-	<message key="plugins.categories.implicitAuth.description">Implicit Authentication plugins implement support for authenticating users based on http headers.</message>
+	<message key="plugins.categories.reports">Report Plugins</message>
+	<message key="plugins.categories.reports.description">Report Plugins are used to implement various types of reports and data extracts for Conference Managers.</message>
+ 
+	<message key="plugins.categories.themes">Theme Plugins</message>
+	<message key="plugins.categories.themes.description">Theme Plugins can be used to change the system's appearance.</message>
 
 	<!-- Files Browser -->
 	<message key="manager.files.indexOfDir">Index of {$dir}</message>
