@@ -132,7 +132,7 @@ class EmailHandler extends UserHandler {
 			if (is_array($ccs)) $recipientCount += count($ccs);
 			if (is_array($bccs)) $recipientCount += count($bccs);
 
-			if ($canSendUnlimitedEmails && $recipientCount > ((int) Config::getVar('email', 'max_recipients'))) {
+			if (!$canSendUnlimitedEmails && $recipientCount > ((int) Config::getVar('email', 'max_recipients'))) {
 				$templateMgr->assign('pageTitle', 'email.compose');
 				$templateMgr->assign('message', 'email.compose.tooManyRecipients');
 				$templateMgr->assign('backLink', 'javascript:history.back()');
