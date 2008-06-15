@@ -18,7 +18,7 @@
 {/foreach}
 
 ({$article->getDatePublished()|date_format:'%Y'}).
-{$apaCapitalized}.
+{$article->getArticleTitle()}.
 <em>{$journal->getJournalTitle()|capitalize}{if $issue}, {$issue->getVolume()|escape}</em>({$issue->getNumber()|escape}){else}</em>{/if}.
 {translate key="plugins.citationFormats.apa.retrieved" retrievedDate=$smarty.now|date_format:$dateFormatLong url=$articleUrl}
 
