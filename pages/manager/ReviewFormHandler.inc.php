@@ -495,12 +495,11 @@ class ReviewFormHandler extends ManagerHandler {
 		$journal =& Request::getJournal();
 		$reviewFormDao =& DAORegistry::getDAO('ReviewFormDAO');
 
-		if (!$reviewFormDao->reviewFormExists($reviewFormId, $journal->getJournalId(), 0)) {
-			Request::redirect(null, null, 'reviewFormElements', array($reviewFormId));
-		} else {
+		if ($reviewFormDao->reviewFormExists($reviewFormId, $journal->getJournalId(), 0)) {
 			$reviewFormElementDao =& DAORegistry::getDAO('ReviewFormElementDAO');
 			$reviewFormElementDao->deleteReviewFormElementById($reviewFormElementId);
 		}
+		Request::redirect(null, null, 'reviewFormElements', array($reviewFormId));
 	}
 
 	/**
