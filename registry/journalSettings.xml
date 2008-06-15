@@ -171,6 +171,18 @@
 		<name>rtEmailOthers</name>
 		<value>true</value>
 	</setting>
+	<setting type="bool" locale="0">
+		<name>allowRegReviewer</name>
+		<value>true</value>
+	</setting>
+	<setting type="bool" locale="0">
+		<name>allowRegAuthor</name>
+		<value>true</value>
+	</setting>
+	<setting type="bool" locale="0">
+		<name>allowRegReader</name>
+		<value>true</value>
+	</setting>
 	<setting type="int" locale="0">
 		<name>submissionFee</name>
 		<value>0</value>
