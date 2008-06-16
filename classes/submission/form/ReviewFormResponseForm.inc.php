@@ -56,7 +56,7 @@ class ReviewFormResponseForm extends Form {
 		$reviewAssignmentDao =& DAORegistry::getDAO('ReviewAssignmentDAO');
 		$reviewAssignment = $reviewAssignmentDao->getReviewAssignmentById($this->reviewId);
 
-		$editorPreview = Validation::isEditor() || Validation::isSectionEditor();
+		$editorPreview = Request::getRequestedPage() != 'reviewer';
 
 		if (!$editorPreview) {
 			ReviewerHandler::setupTemplate(true, $reviewAssignment->getArticleId(), $this->reviewId);
