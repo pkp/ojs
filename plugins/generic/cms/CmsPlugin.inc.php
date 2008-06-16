@@ -73,7 +73,8 @@ class CmsPlugin extends GenericPlugin {
 		switch ($category) {
 			case 'blocks':
 				$this->import('CmsBlockPlugin');
-				$plugins[$category][] =& new CmsBlockPlugin();
+				$blockPlugin =& new CmsBlockPlugin();
+				$plugins[$category][$blockPlugin->getSeq()] =& $blockPlugin;
 				break;
 		}
 		return false;

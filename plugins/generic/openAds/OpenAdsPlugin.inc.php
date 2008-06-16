@@ -57,7 +57,8 @@ class OpenAdsPlugin extends GenericPlugin {
 		switch ($category) {
 			case 'blocks':
 				$this->import('OpenAdsBlockPlugin');
-				$plugins[$category][] =& new OpenAdsBlockPlugin();
+				$openAdsBlockPlugin =& new OpenAdsBlockPlugin();
+				$plugins[$category][$openAdsBlockPlugin->getSeq()] =& $openAdsBlockPlugin;
 				break;
 		}
 		return false;
