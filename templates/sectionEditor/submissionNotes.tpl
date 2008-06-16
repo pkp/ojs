@@ -162,7 +162,9 @@
 {/if}
 </table>
 
-<a class="action" href="javascript:toggleNoteAll()">{translate key="submission.notes.expandNotes"} / {translate key="submission.notes.collapseNotes"}</a> | <a class="action" href="{url op="submissionNotes" path=$submission->getArticleId()|to_array:"add"}">{translate key="submission.notes.addNewNote"}</a> | <a class="action" href="{url op="clearAllSubmissionNotes" articleId=$submission->getArticleId()}" onclick="return confirm('{translate|escape:"jsparam" key="submission.notes.confirmDeleteAll"}')">{translate key="submission.notes.clearAllNotes"}</a>
+<a class="action" href="javascript:toggleNoteAll()"><div style="display:inline" id="expandNotes" name="expandNotes">{translate key="submission.notes.expandNotes"}</div><div style="display: none" id="collapseNotes" name="collapseNotes">{translate key="submission.notes.collapseNotes"}</div></a> |
+<a class="action" href="{url op="submissionNotes" path=$submission->getArticleId()|to_array:"add"}">{translate key="submission.notes.addNewNote"}</a> |
+<a class="action" href="{url op="clearAllSubmissionNotes" articleId=$submission->getArticleId()}" onclick="return confirm('{translate|escape:"jsparam" key="submission.notes.confirmDeleteAll"}')">{translate key="submission.notes.clearAllNotes"}</a>
 {/if}
 
 {include file="common/footer.tpl"}
