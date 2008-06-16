@@ -135,7 +135,7 @@ class RoleDAO extends DAO {
 	 * @param $searchType int optional, which field to search
 	 * @param $search string optional, string to match
 	 * @param $searchMatch string optional, type of match ('is' vs. 'contains')
-	 * @param $dbRangeInfo object DBRangeInfo object describing range of results to return
+	 * @param $dbResultRange object DBRangeInfo object describing range of results to return
 	 * @return array matching Users
 	 */
 	function &getUsersByRoleId($roleId = null, $journalId = null, $searchType = null, $search = null, $searchMatch = null, $dbResultRange = null) {

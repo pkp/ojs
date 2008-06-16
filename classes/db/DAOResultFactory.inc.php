@@ -155,6 +155,16 @@ class DAOResultFactory extends ItemIterator {
 		}
 		return $returner;
 	}
+
+	function isInBounds() {
+		return ($this->pageCount >= $this->page);
+	}
+
+	function &getLastPageRangeInfo() {
+		import('db.DBResultRange');
+		$returner =& new DBResultRange($this->count, $this->pageCount);
+		return $returner;
+	}
 }
 
 ?>

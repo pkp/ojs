@@ -100,8 +100,6 @@ class EditorHandler extends SectionEditorHandler {
 			$templateMgr->assign('displayResults', true);
 		}
 
-		$rangeInfo = Handler::getRangeInfo('submissions');
-
 		$submissionsCount = &$editorSubmissionDao->getEditorSubmissionsCount($journal->getJournalId());
 		$templateMgr->assign('submissionsCount', $submissionsCount);
 		$templateMgr->assign('helpTopicId', 'editorial.editorsRole');

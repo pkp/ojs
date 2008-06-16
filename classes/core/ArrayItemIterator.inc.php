@@ -138,6 +138,19 @@ class ArrayItemIterator extends ItemIterator {
 
 		return $return;
 	}
+
+	function isInBounds() {
+		return ($this->getPageCount() >= $this->page);
+	}
+
+	function &getLastPageRangeInfo() {
+		import('db.DBResultRange');
+		$returner =& new DBResultRange(
+			$this->itemsPerPage,
+			$this->getPageCount()
+		);
+		return $returner;
+	}
 }
 
 ?>

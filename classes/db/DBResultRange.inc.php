@@ -14,7 +14,8 @@
  * $Id$
  */
 
-class DBResultRange {
+import('core.ItemIterator');
+class DBResultRange extends ItemIterator {
 	/** The number of items to display */
 	var $count;
 
@@ -69,7 +70,6 @@ class DBResultRange {
 	function setCount() {
 		$this->count = $count;
 	}
-
 }
 
 ?>
