@@ -15,16 +15,32 @@
  */
 
 class Transcoder {
+	/** @var $fromEncoding string Name of source encoding */
 	var $fromEncoding;
+
+	/** @var $toEncoding string Name of target encoding */
 	var $toEncoding;
+
+	/** @var $translit boolean Whether or not to transliterate while transcoding */
 	var $translit;
 
+	/**
+	 * Constructor
+	 * @param $fromEncoding string Name of source encoding
+	 * @param $toEncoding string Name of target encoding
+	 * @param $translit boolean Whether or not to transliterate while transcoding
+	 */
 	function Transcoder($fromEncoding, $toEncoding, $translit = false) {
 		$this->fromEncoding = $fromEncoding;
 		$this->toEncoding = $toEncoding;
 		$this->translit = $translit;
 	}
 
+	/**
+	 * Transcode a string
+	 * @param $string string String to transcode
+	 * @return string Result of transcoding
+	 */
 	function trans($string) {
 		// detect existence of encoding conversion libraries
 		$mbstring = function_exists('mb_convert_encoding');
@@ -83,6 +99,6 @@ class Transcoder {
 			return $string;
 		}
 	}
-
 }
+
 ?>

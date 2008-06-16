@@ -89,4 +89,10 @@ if [ ! -z "$PATCHDIR" ]; then
 fi
 
 cd ..
+
+echo -n "Building doxygen documentation... "
+doxygen docs/dev/ojs2.doxygen > /dev/null && cd docs/doxygen && tar czf ../../${BUILD}-doxygen.tar.gz html latex && cd ../..
+
+echo "Done"
+
 rm -r $TMPDIR

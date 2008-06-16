@@ -17,16 +17,16 @@
 import('core.ItemIterator');
 
 class ArrayItemIterator extends ItemIterator {
-	/** The array of contents of this iterator. */
+	/** @var $theArray array The array of contents of this iterator. */
 	var $theArray;
 
-	/** Number of items to iterate through on this page */
+	/** @var $itemsPerPage int Number of items to iterate through on this page */
 	var $itemsPerPage;
 
-	/** The current page. */
+	/** @var $page int The current page. */
 	var $page;
 
-	/** The total number of items. */
+	/** @var $count int The total number of items. */
 	var $count;
 
 	/** Whether or not the iterator was empty from the start */
@@ -79,22 +79,42 @@ class ArrayItemIterator extends ItemIterator {
 		return array($key, $value);
 	}
 
+	/**
+	 * Determine whether or not this iterator represents the first page
+	 * @return boolean
+	 */
 	function atFirstPage() {
 		return $this->page==1;
 	}
 
+	/**
+	 * Determine whether or not this iterator represents the last page
+	 * @return boolean
+	 */
 	function atLastPage() {
 		return ($this->page * $this->itemsPerPage) + 1 > $this->count;
 	}
 
+	/**
+	 * Get the current page number
+	 * @return int
+	 */
 	function getPage() {
 		return $this->page;
 	}
 
+	/**
+	 * Get the total count of items
+	 * @return int
+	 */
 	function getCount() {
 		return $this->count;
 	}
 
+	/**
+	 * Get the number of pages
+	 * @return int
+	 */
 	function getPageCount() {
 		return max(1, ceil($this->count / $this->itemsPerPage));
 	}
@@ -115,6 +135,10 @@ class ArrayItemIterator extends ItemIterator {
 		return $this->wasEmpty;
 	}
 
+	/**
+	 * Convert this iterator to an array
+	 * @return array
+	 */
 	function &toArray() {
 		return $this->theArray;
 	}
@@ -139,10 +163,18 @@ class ArrayItemIterator extends ItemIterator {
 		return $return;
 	}
 
+	/**
+	 * Determine whether or not the iterator is within bounds.
+	 * @return boolean
+	 */
 	function isInBounds() {
 		return ($this->getPageCount() >= $this->page);
 	}
 
+	/**
+	 * Get the range info representing the last page of results.
+	 * @return object DBResultRange
+	 */
 	function &getLastPageRangeInfo() {
 		import('db.DBResultRange');
 		$returner =& new DBResultRange(

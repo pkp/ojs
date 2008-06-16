@@ -15,7 +15,6 @@
  */
 
 class String {
-
 	/**
 	 * Perform initialization required for the string wrapper library.
 	 */
@@ -49,21 +48,26 @@ class String {
 
 	/**
 	 * Check if server has the mbstring library.
-	 * Currently requires PHP >= 4.3.0 (for mb_strtolower, mb_strtoupper, and mb_substr_count)
+	 * Currently requires PHP >= 4.3.0 (for mb_strtolower, mb_strtoupper,
+	 * and mb_substr_count)
+	 * @return boolean
 	 */
 	function hasMBString() {
-		return (function_exists('mb_strlen')
-				&& function_exists('mb_strpos')
-				&& function_exists('mb_strrpos')
-				&& function_exists('mb_substr')
-				&& function_exists('mb_strtolower')
-				&& function_exists('mb_strtoupper')
-				&& function_exists('mb_substr_count')
-				&& function_exists('mb_send_mail'));
+		return (
+			function_exists('mb_strlen') &&
+			function_exists('mb_strpos') &&
+			function_exists('mb_strrpos') &&
+			function_exists('mb_substr') &&
+			function_exists('mb_strtolower') &&
+			function_exists('mb_strtoupper') &&
+			function_exists('mb_substr_count') &&
+			function_exists('mb_send_mail')
+		);
 	}
 
 	/**
 	 * Check if server supports the PCRE_UTF8 modifier.
+	 * @return boolean
 	 */
 	function hasPCREUTF8() {
 		// The PCRE_UTF8 modifier is only supported on PHP >= 4.1.0 (*nix) or PHP >= 4.2.3 (win32)
@@ -80,6 +84,9 @@ class String {
 	// See the php.net documentation for usage.
 	//
 
+	/**
+	 * @see http://ca.php.net/manual/en/function.strlen.php
+	 */
 	function strlen($string) {
 		if (defined('ENABLE_MBSTRING')) {
 			return mb_strlen($string);
@@ -88,6 +95,9 @@ class String {
 		}
 	}
 
+	/**
+	 * @see http://ca.php.net/manual/en/function.strpos.php
+	 */
 	function strpos($haystack, $needle, $offset = 0) {
 		if (defined('ENABLE_MBSTRING')) {
 			return mb_strpos($haystack, $needle, $offset);
@@ -96,6 +106,9 @@ class String {
 		}
 	}
 
+	/**
+	 * @see http://ca.php.net/manual/en/function.strrpos.php
+	 */
 	function strrpos($haystack, $needle) {
 		if (defined('ENABLE_MBSTRING')) {
 			return mb_strrpos($haystack, $needle);
@@ -104,6 +117,9 @@ class String {
 		}
 	}
 
+	/**
+	 * @see http://ca.php.net/manual/en/function.substr.php
+	 */
 	function substr($string, $start, $length = null) {
 		if (defined('ENABLE_MBSTRING')) {
 			$substr = 'mb_substr';
@@ -117,6 +133,9 @@ class String {
 		}
 	}
 
+	/**
+	 * @see http://ca.php.net/manual/en/function.strtolower.php
+	 */
 	function strtolower($string) {
 		if (defined('ENABLE_MBSTRING')) {
 			return mb_strtolower($string); // Requires PHP >= 4.3.0
@@ -125,6 +144,9 @@ class String {
 		}
 	}
 
+	/**
+	 * @see http://ca.php.net/manual/en/function.strtoupper.php
+	 */
 	function strtoupper($string) {
 		if (defined('ENABLE_MBSTRING')) {
 			return mb_strtoupper($string); // Requires PHP >= 4.3.0
@@ -133,6 +155,9 @@ class String {
 		}
 	}
 
+	/**
+	 * @see http://ca.php.net/manual/en/function.substr_count.php
+	 */
 	function substr_count($haystack, $needle) {
 		if (defined('ENABLE_MBSTRING')) {
 			return mb_substr_count($haystack, $needle); // Requires PHP >= 4.3.0
@@ -141,6 +166,9 @@ class String {
 		}
 	}
 
+	/**
+	 * @see http://ca.php.net/manual/en/function.encode_mime_header.php
+	 */
 	function encode_mime_header($string) {
 		if (defined('ENABLE_MBSTRING')) {
 			return mb_encode_mimeheader($string, ini_get('mbstring.internal_encoding'), 'B', MAIL_EOL);
@@ -149,6 +177,9 @@ class String {
 		}
 	}
 
+	/**
+	 * @see http://ca.php.net/manual/en/function.mail.php
+	 */
 	function mail($to, $subject, $message, $additional_headers = '', $additional_parameters = '') {
 		// Cannot use mb_send_mail as it base64 encodes the whole body of the email,
 		// making it useless for multipart emails
@@ -164,22 +195,34 @@ class String {
 	// See the php.net documentation for usage.
 	//
 
+	/**
+	 * @see http://ca.php.net/manual/en/function.regexp_quote.php
+	 */
 	function regexp_quote($string, $delimiter = '/') {
 		return preg_quote($string, $delimiter);
 	}
 
+	/**
+	 * @see http://ca.php.net/manual/en/function.regexp_grep.php
+	 */
 	function regexp_grep($pattern, $input) {
 		$pattern .= PCRE_UTF8;
 		$input = String::utf8Clean($input);
 		return preg_grep($pattern, $input);
 	}
 
+	/**
+	 * @see http://ca.php.net/manual/en/function.regexp_match.php
+	 */
 	function regexp_match($pattern, $subject) {
 		$pattern .= PCRE_UTF8;
 		$subject = String::utf8Clean($subject);
 		return preg_match($pattern, $subject);
 	}
 
+	/**
+	 * @see http://ca.php.net/manual/en/function.regexp_match_get.php
+	 */
 	function regexp_match_get($pattern, $subject, &$matches) {
 		// NOTE: This function was created since PHP < 5.x does not support optional reference parameters
 		$pattern .= PCRE_UTF8;
@@ -187,30 +230,45 @@ class String {
 		return preg_match($pattern, $subject, $matches);
 	}
 
+	/**
+	 * @see http://ca.php.net/manual/en/function.regexp_match_all.php
+	 */
 	function regexp_match_all($pattern, $subject, &$matches) {
 		$pattern .= PCRE_UTF8;
 		$subject = String::utf8Clean($subject);
 		return preg_match_all($pattern, $subject, $matches);
 	}
 
+	/**
+	 * @see http://ca.php.net/manual/en/function.regexp_replace.php
+	 */
 	function regexp_replace($pattern, $replacement, $subject, $limit = -1) {
 		$pattern .= PCRE_UTF8;
 		$subject = String::utf8Clean($subject);
 		return preg_replace($pattern, $replacement, $subject, $limit);
 	}
 
+	/**
+	 * @see http://ca.php.net/manual/en/function.regexp_replace_callback.php
+	 */
 	function regexp_replace_callback($pattern, $callback, $subject, $limit = -1) {
 		$pattern .= PCRE_UTF8;
 		$subject = String::utf8Clean($subject);
 		return preg_replace_callback($pattern, $callback, $subject, $limit);
 	}
 
+	/**
+	 * @see http://ca.php.net/manual/en/function.regexp_split.php
+	 */
 	function regexp_split($pattern, $subject, $limit = -1) {
 		$pattern .= PCRE_UTF8;
 		$subject = String::utf8Clean($subject);
 		return preg_split($pattern, $subject, $limit);
 	}
 
+	/**
+	 * @see http://ca.php.net/manual/en/function.mime_content_type.php
+	 */
 	function mime_content_type($filename) {
 		if (function_exists('mime_content_type')) {
 			return mime_content_type($filename);
@@ -320,20 +378,20 @@ class String {
 	* Strips out any bad bytes from a UTF-8 string and returns the rest
 	 * Does not require any multibyte PHP libraries
 	 * @param $input string input string
-	 * @return boolean
+	 * @return string
 	 */
 	function utf8Clean($str) {
 		// From the phputf8 project:  http://phputf8.sourceforge.net/
 		$UTF8_BAD =
-		'([\x00-\x7F]'.                          # ASCII (including control chars)
-		'|[\xC2-\xDF][\x80-\xBF]'.               # non-overlong 2-byte
-		'|\xE0[\xA0-\xBF][\x80-\xBF]'.           # excluding overlongs
-		'|[\xE1-\xEC\xEE\xEF][\x80-\xBF]{2}'.    # straight 3-byte
-		'|\xED[\x80-\x9F][\x80-\xBF]'.           # excluding surrogates
-		'|\xF0[\x90-\xBF][\x80-\xBF]{2}'.        # planes 1-3
-		'|[\xF1-\xF3][\x80-\xBF]{3}'.            # planes 4-15
-		'|\xF4[\x80-\x8F][\x80-\xBF]{2}'.        # plane 16
-		'|(.{1}))';                              # invalid byte
+		'([\x00-\x7F]'.				# ASCII (including control chars)
+		'|[\xC2-\xDF][\x80-\xBF]'.		# non-overlong 2-byte
+		'|\xE0[\xA0-\xBF][\x80-\xBF]'.		# excluding overlongs
+		'|[\xE1-\xEC\xEE\xEF][\x80-\xBF]{2}'.	# straight 3-byte
+		'|\xED[\x80-\x9F][\x80-\xBF]'.		# excluding surrogates
+		'|\xF0[\x90-\xBF][\x80-\xBF]{2}'.	# planes 1-3
+		'|[\xF1-\xF3][\x80-\xBF]{3}'.		# planes 4-15
+		'|\xF4[\x80-\x8F][\x80-\xBF]{2}'.	# plane 16
+		'|(.{1}))';				# invalid byte
 
 		ob_start();
 		while (preg_match('/'.$UTF8_BAD.'/S', $str, $matches)) {
@@ -351,8 +409,8 @@ class String {
 	 * Returns the UTF-8 string corresponding to the unicode value
 	 * Does not require any multibyte PHP libraries
 	 * (from php.net, courtesy - romans@void.lv)
-	 * @param $input string input string
-	 * @return boolean
+	 * @param $num int
+	 * @return string
 	 */
 	function code2utf ($num) {
 		if ($num < 128) return chr($num);
@@ -384,7 +442,7 @@ class String {
 				$c2 |= (($c1 & 3) << 6);							// last 2 bits of c1 become first 2 of c2
 				$c1 >>= 2;													// c1 shifts 2 to the right
 				$ret .= "&#" . ($c1 * 0x100 + $c2) . ";";	// this is the fastest string concatenation
-				$last = $i+1;     
+				$last = $i+1;
 			}
 			elseif ($c1>>4 == 14) { 								// 1110 xxxx, 110 prefix for 3 bytes unicode
 				$ret .= substr($str, $last, $i-$last);			// append all the regular characters we've passed
@@ -398,18 +456,18 @@ class String {
 				$c2 |= (($c1 & 15) << 4);							// last 4 bits of c1 become first 4 of c2
 				$c1 >>= 4; 												// c1 shifts 4 to the right
 				$ret .= '&#' . (($c1 * 0x10000) + ($c2 * 0x100) + $c3) . ';'; // this is the fastest string concatenation
-				$last = $i+1;     
+				$last = $i+1;
 			}
 		}
 		$str=$ret . substr($str, $last, $i); // append the last batch of regular characters
 
-		return $str;   
+		return $str;
 	}
 
 	/**
 	 * Convert numeric HTML entities in a string to UTF-8 encoded characters 
 	 * This is a native alternative to the buggy html_entity_decode() using UTF8
-	 * @param $input string input string
+	 * @param $str string input string
 	 * @return string
 	 */
 	function html2utf($str) {
@@ -426,95 +484,96 @@ class String {
 	/**
 	 * Convert UTF-8 numeric entities in a string to ASCII values
 	 * This is a helper function for transcoding into HTML/XML
-	 * @param $input string input string
+	 * @param $str string input string
 	 * @return string
 	 */
 	function html2ascii ($str) {
 		// define the conversion table
 		$entities = array(
-			"&#126;" => "~",			"&#160;" => " ",				"&#161;" => "!",
-			"&#166;" => "|",				"&#177;" => "+/-",		"&#178;" => "2",
-			"&#179;" => "3",			"&#180;" => "'",				"&#185;" => "1",
-			"&#188;" => "1/4",		"&#189;" => "1/2",		"&#190;" => "3/4",
-			"&#191;" => "?",				"&#192;" => "A",			"&#193;" => "A",
-			"&#194;" => "A",			"&#195;" => "A",			"&#196;" => "A",
-			"&#197;" => "A",			"&#198;" => "AE",			"&#199;" => "C",
-			"&#200;" => "E",			"&#201;" => "E",			"&#202;" => "E",
-			"&#203;" => "E",			"&#204;" => "I",				"&#205;" => "I",
-			"&#206;" => "I",				"&#207;" => "I",				"&#208;" => "D",
-			"&#209;" => "N",			"&#210;" => "O",			"&#211;" => "O",
-			"&#212;" => "O",			"&#213;" => "O",			"&#214;" => "O",
-			"&#215;" => "x",			"&#216;" => "O",			"&#217;" => "U",
-			"&#218;" => "U",			"&#220;" => "U",			"&#221;" => "Y",
-			"&#224;" => "a",			"&#225;" => "a",			"&#226;" => "a",
-			"&#227;" => "a",			"&#228;" => "a",			"&#229;" => "a",
-			"&#230;" => "ae",			"&#231;" => "c",				"&#232;" => "e",
-			"&#233;" => "e",			"&#234;" => "e",			"&#235;" => "e",
-			"&#236;" => "i",				"&#237;" => "i",				"&#238;" => "i",
-			"&#239;" => "i",				"&#240;" => "o",			"&#241;" => "n",
-			"&#242;" => "o",			"&#243;" => "o",			"&#244;" => "o",
-			"&#245;" => "o",			"&#246;" => "o",			"&#248;" => "o",
-			"&#249;" => "u",			"&#250;" => "u",			"&#252;" => "u",
-			"&#253;" => "y",				"&#255;" => "y",	
-			"&#256;" => "A",			"&#257;" => "a",			"&#258;" => "A",
-			"&#259;" => "a",			"&#260;" => "A",			"&#261;" => "a",
-			"&#262;" => "C",			"&#263;" => "c",				"&#264;" => "C",
-			"&#265;" => "c",				"&#266;" => "C",			"&#267;" => "c",
-			"&#268;" => "C",			"&#269;" => "c",				"&#270;" => "D",
-			"&#271;" => "d",			"&#272;" => "D",			"&#273;" => "d",
-			"&#274;" => "E",			"&#275;" => "e",			"&#276;" => "E",
-			"&#277;" => "e",			"&#278;" => "E",			"&#279;" => "e",
-			"&#280;" => "E",			"&#281;" => "e",			"&#282;" => "E",
-			"&#283;" => "e",			"&#284;" => "G",			"&#285;" => "g",
-			"&#286;" => "G",			"&#287;" => "g",			"&#288;" => "G",
-			"&#289;" => "g",			"&#290;" => "G",			"&#291;" => "g",
-			"&#292;" => "H",			"&#293;" => "h",			"&#294;" => "H",
-			"&#295;" => "h",			"&#296;" => "I",				"&#297;" => "i",
-			"&#298;" => "I",				"&#299;" => "i",				"&#300;" => "I",
-			"&#301;" => "i",				"&#302;" => "I",				"&#303;" => "i",
-			"&#304;" => "I",				"&#305;" => "i",				"&#306;" => "IJ",
-			"&#307;" => "ij",			"&#308;" => "J",				"&#309;" => "j",
-			"&#310;" => "K",			"&#311;" => "k",			"&#312;" => "K",
-			"&#313;" => "L",				"&#314;" => "l",				"&#315;" => "L",
-			"&#316;" => "l",				"&#317;" => "L",				"&#318;" => "l",
-			"&#319;" => "L",				"&#320;" => "L",				"&#321;" => "L",
-			"&#322;" => "l",				"&#323;" => "N",			"&#324;" => "n",
-			"&#325;" => "N",			"&#326;" => "n",			"&#327;" => "N",
-			"&#328;" => "n",			"&#329;" => "n",			"&#330;" => "N",
-			"&#331;" => "n",			"&#332;" => "O",			"&#333;" => "o",
-			"&#334;" => "O",			"&#335;" => "o",			"&#336;" => "O",
-			"&#337;" => "o",			"&#338;" => "OE",			"&#339;" => "oe",
-			"&#340;" => "R",			"&#341;" => "r",				"&#342;" => "R",
-			"&#343;" => "r",				"&#344;" => "R",			"&#345;" => "r",
-			"&#346;" => "S",			"&#347;" => "s",				"&#348;" => "S",
-			"&#349;" => "s",				"&#350;" => "S",			"&#351;" => "s",
-			"&#352;" => "S",			"&#353;" => "s",				"&#354;" => "T",
-			"&#355;" => "t",				"&#356;" => "T",			"&#357;" => "t",
-			"&#358;" => "T",			"&#359;" => "t",				"&#360;" => "U",
-			"&#361;" => "u",			"&#362;" => "U",			"&#363;" => "u",
-			"&#364;" => "U",			"&#365;" => "u",			"&#366;" => "U",
-			"&#367;" => "u",			"&#368;" => "U",			"&#369;" => "u",
-			"&#370;" => "U",			"&#371;" => "u",			"&#372;" => "W",
-			"&#373;" => "w",			"&#374;" => "Y",			"&#375;" => "y",
-			"&#376;" => "Y",			"&#377;" => "Z",			"&#378;" => "z",
-			"&#379;" => "Z",			"&#380;" => "z",			"&#381;" => "Z",
-			"&#382;" => "z",			"&#39;" => "'",				"&#402;" => "f",
-			"&#45;" => "-",				"&#710;" => "^",			"&#732;" => "~",
-			"&#8194;" => " ",			"&#8195;" => " ",			"&#8201;" => " ",
-			"&#8211;" => "-",			"&#8212;" => "--",		"&#8216;" => "'",
-			"&#8217;" => "'",			"&#8218;" => ",",			"&#8220;" => '"',
-			"&#8221;" => '"',			"&#8222;" => ",,",			"&#8226;" => "*",
-			"&#8230;" => "...",			"&#8240;" => "%o",		"&#8242;" => "'",
-			"&#8243;" => "''",			"&#8482;" => "TM",		"&#8722;" => "-",
-			"&#8727;" => "*",			"&#8743;" => "/\\",		"&#8744;" => "\/",
-			"&#8764;" => "~",			"&#8901;" => "*",			"&#913;" => "A",
-			"&#914;" => "B",			"&#917;" => "E",			"&#918;" => "Z",
-			"&#919;" => "H",			"&#921;" => "|",				"&#922;" => "K",
-			"&#924;" => "M",			"&#925;" => "N",			"&#927;" => "O",
-			"&#929;" => "P",			"&#932;" => "T",			"&#933;" => "Y",
-			"&#935;" => "X",			"&#94;" => "^",				"&#959;" => "o",
-			"&#961;" => "p",			"&#962;" => "?",				"&#977;" => "?",
-			"&#982;" => "?");
+			"&#126;" => "~",	"&#160;" => " ",	"&#161;" => "!",
+			"&#166;" => "|",	"&#177;" => "+/-",	"&#178;" => "2",
+			"&#179;" => "3",	"&#180;" => "'",	"&#185;" => "1",
+			"&#188;" => "1/4",	"&#189;" => "1/2",	"&#190;" => "3/4",
+			"&#191;" => "?",	"&#192;" => "A",	"&#193;" => "A",
+			"&#194;" => "A",	"&#195;" => "A",	"&#196;" => "A",
+			"&#197;" => "A",	"&#198;" => "AE",	"&#199;" => "C",
+			"&#200;" => "E",	"&#201;" => "E",	"&#202;" => "E",
+			"&#203;" => "E",	"&#204;" => "I",	"&#205;" => "I",
+			"&#206;" => "I",	"&#207;" => "I",	"&#208;" => "D",
+			"&#209;" => "N",	"&#210;" => "O",	"&#211;" => "O",
+			"&#212;" => "O",	"&#213;" => "O",	"&#214;" => "O",
+			"&#215;" => "x",	"&#216;" => "O",	"&#217;" => "U",
+			"&#218;" => "U",	"&#220;" => "U",	"&#221;" => "Y",
+			"&#224;" => "a",	"&#225;" => "a",	"&#226;" => "a",
+			"&#227;" => "a",	"&#228;" => "a",	"&#229;" => "a",
+			"&#230;" => "ae",	"&#231;" => "c",	"&#232;" => "e",
+			"&#233;" => "e",	"&#234;" => "e",	"&#235;" => "e",
+			"&#236;" => "i",	"&#237;" => "i",	"&#238;" => "i",
+			"&#239;" => "i",	"&#240;" => "o",	"&#241;" => "n",
+			"&#242;" => "o",	"&#243;" => "o",	"&#244;" => "o",
+			"&#245;" => "o",	"&#246;" => "o",	"&#248;" => "o",
+			"&#249;" => "u",	"&#250;" => "u",	"&#252;" => "u",
+			"&#253;" => "y",	"&#255;" => "y",
+			"&#256;" => "A",	"&#257;" => "a",	"&#258;" => "A",
+			"&#259;" => "a",	"&#260;" => "A",	"&#261;" => "a",
+			"&#262;" => "C",	"&#263;" => "c",	"&#264;" => "C",
+			"&#265;" => "c",	"&#266;" => "C",	"&#267;" => "c",
+			"&#268;" => "C",	"&#269;" => "c",	"&#270;" => "D",
+			"&#271;" => "d",	"&#272;" => "D",	"&#273;" => "d",
+			"&#274;" => "E",	"&#275;" => "e",	"&#276;" => "E",
+			"&#277;" => "e",	"&#278;" => "E",	"&#279;" => "e",
+			"&#280;" => "E",	"&#281;" => "e",	"&#282;" => "E",
+			"&#283;" => "e",	"&#284;" => "G",	"&#285;" => "g",
+			"&#286;" => "G",	"&#287;" => "g",	"&#288;" => "G",
+			"&#289;" => "g",	"&#290;" => "G",	"&#291;" => "g",
+			"&#292;" => "H",	"&#293;" => "h",	"&#294;" => "H",
+			"&#295;" => "h",	"&#296;" => "I",	"&#297;" => "i",
+			"&#298;" => "I",	"&#299;" => "i",	"&#300;" => "I",
+			"&#301;" => "i",	"&#302;" => "I",	"&#303;" => "i",
+			"&#304;" => "I",	"&#305;" => "i",	"&#306;" => "IJ",
+			"&#307;" => "ij",	"&#308;" => "J",	"&#309;" => "j",
+			"&#310;" => "K",	"&#311;" => "k",	"&#312;" => "K",
+			"&#313;" => "L",	"&#314;" => "l",	"&#315;" => "L",
+			"&#316;" => "l",	"&#317;" => "L",	"&#318;" => "l",
+			"&#319;" => "L",	"&#320;" => "L",	"&#321;" => "L",
+			"&#322;" => "l",	"&#323;" => "N",	"&#324;" => "n",
+			"&#325;" => "N",	"&#326;" => "n",	"&#327;" => "N",
+			"&#328;" => "n",	"&#329;" => "n",	"&#330;" => "N",
+			"&#331;" => "n",	"&#332;" => "O",	"&#333;" => "o",
+			"&#334;" => "O",	"&#335;" => "o",	"&#336;" => "O",
+			"&#337;" => "o",	"&#338;" => "OE",	"&#339;" => "oe",
+			"&#340;" => "R",	"&#341;" => "r",	"&#342;" => "R",
+			"&#343;" => "r",	"&#344;" => "R",	"&#345;" => "r",
+			"&#346;" => "S",	"&#347;" => "s",	"&#348;" => "S",
+			"&#349;" => "s",	"&#350;" => "S",	"&#351;" => "s",
+			"&#352;" => "S",	"&#353;" => "s",	"&#354;" => "T",
+			"&#355;" => "t",	"&#356;" => "T",	"&#357;" => "t",
+			"&#358;" => "T",	"&#359;" => "t",	"&#360;" => "U",
+			"&#361;" => "u",	"&#362;" => "U",	"&#363;" => "u",
+			"&#364;" => "U",	"&#365;" => "u",	"&#366;" => "U",
+			"&#367;" => "u",	"&#368;" => "U",	"&#369;" => "u",
+			"&#370;" => "U",	"&#371;" => "u",	"&#372;" => "W",
+			"&#373;" => "w",	"&#374;" => "Y",	"&#375;" => "y",
+			"&#376;" => "Y",	"&#377;" => "Z",	"&#378;" => "z",
+			"&#379;" => "Z",	"&#380;" => "z",	"&#381;" => "Z",
+			"&#382;" => "z",	"&#39;" => "'",		"&#402;" => "f",
+			"&#45;" => "-",		"&#710;" => "^",	"&#732;" => "~",
+			"&#8194;" => " ",	"&#8195;" => " ",	"&#8201;" => " ",
+			"&#8211;" => "-",	"&#8212;" => "--",	"&#8216;" => "'",
+			"&#8217;" => "'",	"&#8218;" => ",",	"&#8220;" => '"',
+			"&#8221;" => '"',	"&#8222;" => ",,",	"&#8226;" => "*",
+			"&#8230;" => "...",	"&#8240;" => "%o",	"&#8242;" => "'",
+			"&#8243;" => "''",	"&#8482;" => "TM",	"&#8722;" => "-",
+			"&#8727;" => "*",	"&#8743;" => "/\\",	"&#8744;" => "\/",
+			"&#8764;" => "~",	"&#8901;" => "*",	"&#913;" => "A",
+			"&#914;" => "B",	"&#917;" => "E",	"&#918;" => "Z",
+			"&#919;" => "H",	"&#921;" => "|",	"&#922;" => "K",
+			"&#924;" => "M",	"&#925;" => "N",	"&#927;" => "O",
+			"&#929;" => "P",	"&#932;" => "T",	"&#933;" => "Y",
+			"&#935;" => "X",	"&#94;" => "^",		"&#959;" => "o",
+			"&#961;" => "p",	"&#962;" => "?",	"&#977;" => "?",
+			"&#982;" => "?"
+		);
 
 		return strtr($str, $entities);
 	}
@@ -527,22 +586,24 @@ class String {
 	 */
 	function cp1252ToEntities ($str) {
 		// define the conversion table;  from: http://www.noqta.it/tc.html
-		$cp1252 = array(	"&#128;" => "",						"&#129;" => "",
-										"&#130;" => "&lsquor;",		"&#131;" => "&fnof;",
-										"&#132;" => "&ldquor;",		"&#133;" => "&hellip;",
-										"&#134;" => "&dagger;",		"&#135;" => "&Dagger;",
-										"&#136;" => "",						"&#137;" => "&permil;",
-										"&#138;" => "&Scaron;",		"&#139;" => "&lsaquo;",
-										"&#140;" => "&OElig;",			"&#141;" => "",
-										"&#142;" => "",						"&#143;" => "",
-										"&#144;" => "",						"&#145;" => "&lsquo;",
-										"&#146;" => "&rsquo;",			"&#147;" => "&ldquo;",
-										"&#148;" => "&rdquo;",		"&#149;" => "&bull;",
-										"&#150;" => "&ndash;",		"&#151;" => "&mdash;",
-										"&#152;" => "&tilde;",			"&#153;" => "&trade;",
-										"&#154;" => "&scaron;",		"&#155;" => "&rsaquo;",
-										"&#156;" => "&oelig;",			"&#157;" => "",
-										"&#158;" => "",						"&#159;" => "&Yuml;");
+		$cp1252 = array(
+			"&#128;" => "",		"&#129;" => "",
+			"&#130;" => "&lsquor;",	"&#131;" => "&fnof;",
+			"&#132;" => "&ldquor;",	"&#133;" => "&hellip;",
+			"&#134;" => "&dagger;",	"&#135;" => "&Dagger;",
+			"&#136;" => "",		"&#137;" => "&permil;",
+			"&#138;" => "&Scaron;",	"&#139;" => "&lsaquo;",
+			"&#140;" => "&OElig;",	"&#141;" => "",
+			"&#142;" => "",		"&#143;" => "",
+			"&#144;" => "",		"&#145;" => "&lsquo;",
+			"&#146;" => "&rsquo;",	"&#147;" => "&ldquo;",
+			"&#148;" => "&rdquo;",	"&#149;" => "&bull;",
+			"&#150;" => "&ndash;",	"&#151;" => "&mdash;",
+			"&#152;" => "&tilde;",	"&#153;" => "&trade;",
+			"&#154;" => "&scaron;",	"&#155;" => "&rsaquo;",
+			"&#156;" => "&oelig;",	"&#157;" => "",
+			"&#158;" => "",		"&#159;" => "&Yuml;"
+		);
 
 		// corrections to map to valid ISO entities
 		$cp1252["&#130;"] = "&lsquo;";
@@ -562,91 +623,92 @@ class String {
 	function getHTMLEntities () {
 		// define the conversion table
 		$html_entities = array(
-			"&Aacute;" => "&#193;",			"&aacute;" => "&#225;",			"&Acirc;" => "&#194;",
-			"&acirc;" => "&#226;",				"&acute;" => "&#180;",				"&AElig;" => "&#198;",
-			"&aelig;" => "&#230;",				"&Agrave;" => "&#192;",			"&agrave;" => "&#224;",
-			"&alefsym;" => "&#8501;",		"&Alpha;" => "&#913;",				"&alpha;" => "&#945;",
-			"&amp;" => "&#38;",					"&and;" => "&#8743;",				"&ang;" => "&#8736;",
-			"&apos;" => "&#39;",					"&Aring;" => "&#197;",				"&aring;" => "&#229;",
-			"&asymp;" => "&#8776;",			"&Atilde;" => "&#195;",				"&atilde;" => "&#227;",
-			"&Auml;" => "&#196;",				"&auml;" => "&#228;",				"&bdquo;" => "&#8222;",
-			"&Beta;" => "&#914;",				"&beta;" => "&#946;",				"&brvbar;" => "&#166;",
-			"&bull;" => "&#8226;",				"&cap;" => "&#8745;",				"&Ccedil;" => "&#199;",
-			"&ccedil;" => "&#231;",				"&cedil;" => "&#184;",				"&cent;" => "&#162;",
-			"&Chi;" => "&#935;",					"&chi;" => "&#967;",					"&circ;" => "&#94;",
-			"&clubs;" => "&#9827;",			"&cong;" => "&#8773;",			"&copy;" => "&#169;",
-			"&crarr;" => "&#8629;",			"&cup;" => "&#8746;",				"&curren;" => "&#164;",
-			"&dagger;" => "&#8224;",		"&Dagger;" => "&#8225;",		"&darr;" => "&#8595;",
-			"&dArr;" => "&#8659;",				"&deg;" => "&#176;",				"&Delta;" => "&#916;",
-			"&delta;" => "&#948;",				"&diams;" => "&#9830;",			"&divide;" => "&#247;",
-			"&Eacute;" => "&#201;",			"&eacute;" => "&#233;",			"&Ecirc;" => "&#202;",
-			"&ecirc;" => "&#234;",				"&Egrave;" => "&#200;",			"&egrave;" => "&#232;",
-			"&empty;" => "&#8709;",			"&emsp;" => "&#8195;",			"&ensp;" => "&#8194;",
-			"&Epsilon;" => "&#917;",			"&epsilon;" => "&#949;",			"&equiv;" => "&#8801;",
-			"&Eta;" => "&#919;",					"&eta;" => "&#951;",					"&ETH;" => "&#208;",
-			"&eth;" => "&#240;",					"&Euml;" => "&#203;",				"&euml;" => "&#235;",
-			"&euro;" => "&#8364;",				"&exist;" => "&#8707;",			"&fnof;" => "&#402;",
-			"&forall;" => "&#8704;",			"&frac12;" => "&#189;",			"&frac14;" => "&#188;",
-			"&frac34;" => "&#190;",			"&frasl;" => "&#8260;",				"&Gamma;" => "&#915;",
-			"&gamma;" => "&#947;",			"&ge;" => "&#8805;",				"&gt;" => "&#62;",
-			"&harr;" => "&#8596;",				"&hArr;" => "&#8660;",				"&hearts;" => "&#9829;",
-			"&hellip;" => "&#8230;",			"&Iacute;" => "&#205;",				"&iacute;" => "&#237;",
-			"&Icirc;" => "&#206;",				"&icirc;" => "&#238;",				"&iexcl;" => "&#161;",
-			"&Igrave;" => "&#204;",			"&igrave;" => "&#236;",			"&image;" => "&#8465;",
-			"&infin;" => "&#8734;",				"&int;" => "&#8747;",				"&Iota;" => "&#921;",
-			"&iota;" => "&#953;",				"&iquest;" => "&#191;",			"&isin;" => "&#8712;",
-			"&Iuml;" => "&#207;",				"&iuml;" => "&#239;",				"&Kappa;" => "&#922;",
-			"&kappa;" => "&#954;",			"&Lambda;" => "&#923;",			"&lambda;" => "&#955;",
-			"&lang;" => "&#9001;",				"&laquo;" => "&#171;",				"&larr;" => "&#8592;",
-			"&lArr;" => "&#8656;",				"&lceil;" => "&#8968;",				
-			"&ldquo;" => "&#8220;",			"&le;" => "&#8804;",					"&lfloor;" => "&#8970;",
-			"&lowast;" => "&#8727;",			"&loz;" => "&#9674;",				"&lrm;" => "&#8206;",
-			"&lsaquo;" => "&#8249;",			"&lsquo;" => "&#8216;",			"&lt;" => "&#60;",
-			"&macr;" => "&#175;",				"&mdash;" => "&#8212;",			"&micro;" => "&#181;",
-			"&middot;" => "&#183;",			"&minus;" => "&#45;",				"&Mu;" => "&#924;",
-			"&mu;" => "&#956;",					"&nabla;" => "&#8711;",			"&nbsp;" => "&#160;",
-			"&ndash;" => "&#8211;",			"&ne;" => "&#8800;",				"&ni;" => "&#8715;",
-			"&not;" => "&#172;",					"&notin;" => "&#8713;",			"&nsub;" => "&#8836;",
-			"&Ntilde;" => "&#209;",				"&ntilde;" => "&#241;",				"&Nu;" => "&#925;",
-			"&nu;" => "&#957;",					"&Oacute;" => "&#211;",			"&oacute;" => "&#243;",
-			"&Ocirc;" => "&#212;",				"&ocirc;" => "&#244;",				"&OElig;" => "&#338;",
-			"&oelig;" => "&#339;",				"&Ograve;" => "&#210;",			"&ograve;" => "&#242;",
-			"&oline;" => "&#8254;",			"&Omega;" => "&#937;",			"&omega;" => "&#969;",
-			"&Omicron;" => "&#927;",		"&omicron;" => "&#959;",			"&oplus;" => "&#8853;",
-			"&or;" => "&#8744;",					"&ordf;" => "&#170;",				"&ordm;" => "&#186;",
-			"&Oslash;" => "&#216;",			"&oslash;" => "&#248;",			"&Otilde;" => "&#213;",
-			"&otilde;" => "&#245;",				"&otimes;" => "&#8855;",			"&Ouml;" => "&#214;",
-			"&ouml;" => "&#246;",				"&para;" => "&#182;",				"&part;" => "&#8706;",
-			"&permil;" => "&#8240;",			"&perp;" => "&#8869;",				"&Phi;" => "&#934;",
-			"&phi;" => "&#966;",					"&Pi;" => "&#928;",					"&pi;" => "&#960;",
-			"&piv;" => "&#982;",					"&plusmn;" => "&#177;",			"&pound;" => "&#163;",
-			"&prime;" => "&#8242;",			"&Prime;" => "&#8243;",			"&prod;" => "&#8719;",
-			"&prop;" => "&#8733;",			"&Psi;" => "&#936;",					"&psi;" => "&#968;",
-			"&quot;" => "&#34;",					"&radic;" => "&#8730;",			"&rang;" => "&#9002;",
-			"&raquo;" => "&#187;",				"&rarr;" => "&#8594;",				"&rArr;" => "&#8658;",
-			"&rceil;" => "&#8969;",				"&rdquo;" => "&#8221;",			"&real;" => "&#8476;",
-			"&reg;" => "&#174;",					"&rfloor;" => "&#8971;",			"&Rho;" => "&#929;",
-			"&rho;" => "&#961;",					"&rlm;" => "&#8207;",				"&rsaquo;" => "&#8250;",
-			"&rsquo;" => "&#8217;",			"&sbquo;" => "&#8218;",			"&Scaron;" => "&#352;",
-			"&scaron;" => "&#353;",			"&sdot;" => "&#8901;",				"&sect;" => "&#167;",
-			"&shy;" => "&#173;",					"&Sigma;" => "&#931;",			"&sigma;" => "&#963;",
-			"&sigmaf;" => "&#962;",			"&sim;" => "&#8764;",				"&spades;" => "&#9824;",
-			"&sub;" => "&#8834;",				"&sube;" => "&#8838;",			"&sum;" => "&#8721;",
-			"&sup1;" => "&#185;",				"&sup2;" => "&#178;",				"&sup3;" => "&#179;",
-			"&sup;" => "&#8835;",				"&supe;" => "&#8839;",			"&szlig;" => "&#223;",
-			"&Tau;" => "&#932;",				"&tau;" => "&#964;",					"&there4;" => "&#8756;",
-			"&Theta;" => "&#920;",				"&theta;" => "&#952;",				"&thetasym;" => "&#977;",
-			"&thinsp;" => "&#8201;",			"&THORN;" => "&#222;",			"&thorn;" => "&#254;",
-			"&tilde;" => "&#126;",				"&times;" => "&#215;",				"&trade;" => "&#8482;",
-			"&Uacute;" => "&#218;",			"&uacute;" => "&#250;",			"&uarr;" => "&#8593;",
-			"&uArr;" => "&#8657;",				"&Ucirc;" => "&#219;",				"&ucirc;" => "&#251;",
-			"&Ugrave;" => "&#217;",			"&ugrave;" => "&#249;",			"&uml;" => "&#168;",
-			"&upsih;" => "&#978;",				"&Upsilon;" => "&#933;",			"&upsilon;" => "&#965;",
-			"&Uuml;" => "&#220;",				"&uuml;" => "&#252;",				"&weierp;" => "&#8472;",
-			"&Xi;" => "&#926;",					"&xi;" => "&#958;",					"&Yacute;" => "&#221;",
-			"&yacute;" => "&#253;",			"&yen;" => "&#165;",					"&yuml;" => "&#255;",
-			"&Yuml;" => "&#376;",				"&Zeta;" => "&#918;",				"&zeta;" => "&#950;",
-			"&zwj;" => "&#8205;",				"&zwnj;" => "&#8204;");
+			"&Aacute;" => "&#193;",	"&aacute;" => "&#225;",	"&Acirc;" => "&#194;",
+			"&acirc;" => "&#226;",	"&acute;" => "&#180;",	"&AElig;" => "&#198;",
+			"&aelig;" => "&#230;",	"&Agrave;" => "&#192;",	"&agrave;" => "&#224;",
+			"&alefsym;" => "&#8501;","&Alpha;" => "&#913;",	"&alpha;" => "&#945;",
+			"&amp;" => "&#38;",	"&and;" => "&#8743;",	"&ang;" => "&#8736;",
+			"&apos;" => "&#39;",	"&Aring;" => "&#197;",	"&aring;" => "&#229;",
+			"&asymp;" => "&#8776;",	"&Atilde;" => "&#195;",	"&atilde;" => "&#227;",
+			"&Auml;" => "&#196;",	"&auml;" => "&#228;",	"&bdquo;" => "&#8222;",
+			"&Beta;" => "&#914;",	"&beta;" => "&#946;",	"&brvbar;" => "&#166;",
+			"&bull;" => "&#8226;",	"&cap;" => "&#8745;",	"&Ccedil;" => "&#199;",
+			"&ccedil;" => "&#231;",	"&cedil;" => "&#184;",	"&cent;" => "&#162;",
+			"&Chi;" => "&#935;",	"&chi;" => "&#967;",	"&circ;" => "&#94;",
+			"&clubs;" => "&#9827;",	"&cong;" => "&#8773;",	"&copy;" => "&#169;",
+			"&crarr;" => "&#8629;",	"&cup;" => "&#8746;",	"&curren;" => "&#164;",
+			"&dagger;" => "&#8224;","&Dagger;" => "&#8225;"	"&darr;" => "&#8595;",
+			"&dArr;" => "&#8659;",	"&deg;" => "&#176;",	"&Delta;" => "&#916;",
+			"&delta;" => "&#948;",	"&diams;" => "&#9830;",	"&divide;" => "&#247;",
+			"&Eacute;" => "&#201;",	"&eacute;" => "&#233;",	"&Ecirc;" => "&#202;",
+			"&ecirc;" => "&#234;",	"&Egrave;" => "&#200;",	"&egrave;" => "&#232;",
+			"&empty;" => "&#8709;",	"&emsp;" => "&#8195;",	"&ensp;" => "&#8194;",
+			"&Epsilon;" => "&#917;","&epsilon;" => "&#949;","&equiv;" => "&#8801;",
+			"&Eta;" => "&#919;",	"&eta;" => "&#951;",	"&ETH;" => "&#208;",
+			"&eth;" => "&#240;",	"&Euml;" => "&#203;",	"&euml;" => "&#235;",
+			"&euro;" => "&#8364;",	"&exist;" => "&#8707;",	"&fnof;" => "&#402;",
+			"&forall;" => "&#8704;","&frac12;" => "&#189;",	"&frac14;" => "&#188;",
+			"&frac34;" => "&#190;",	"&frasl;" => "&#8260;",	"&Gamma;" => "&#915;",
+			"&gamma;" => "&#947;",	"&ge;" => "&#8805;",	"&gt;" => "&#62;",
+			"&harr;" => "&#8596;",	"&hArr;" => "&#8660;",	"&hearts;" => "&#9829;",
+			"&hellip;" => "&#8230;","&Iacute;" => "&#205;",	"&iacute;" => "&#237;",
+			"&Icirc;" => "&#206;",	"&icirc;" => "&#238;",	"&iexcl;" => "&#161;",
+			"&Igrave;" => "&#204;",	"&igrave;" => "&#236;",	"&image;" => "&#8465;",
+			"&infin;" => "&#8734;",	"&int;" => "&#8747;",	"&Iota;" => "&#921;",
+			"&iota;" => "&#953;",	"&iquest;" => "&#191;",	"&isin;" => "&#8712;",
+			"&Iuml;" => "&#207;",	"&iuml;" => "&#239;",	"&Kappa;" => "&#922;",
+			"&kappa;" => "&#954;",	"&Lambda;" => "&#923;",	"&lambda;" => "&#955;",
+			"&lang;" => "&#9001;",	"&laquo;" => "&#171;",	"&larr;" => "&#8592;",
+			"&lArr;" => "&#8656;",	"&lceil;" => "&#8968;",
+			"&ldquo;" => "&#8220;",	"&le;" => "&#8804;",	"&lfloor;" => "&#8970;",
+			"&lowast;" => "&#8727;","&loz;" => "&#9674;",	"&lrm;" => "&#8206;",
+			"&lsaquo;" => "&#8249;","&lsquo;" => "&#8216;",	"&lt;" => "&#60;",
+			"&macr;" => "&#175;",	"&mdash;" => "&#8212;",	"&micro;" => "&#181;",
+			"&middot;" => "&#183;",	"&minus;" => "&#45;",	"&Mu;" => "&#924;",
+			"&mu;" => "&#956;",	"&nabla;" => "&#8711;",	"&nbsp;" => "&#160;",
+			"&ndash;" => "&#8211;",	"&ne;" => "&#8800;",	"&ni;" => "&#8715;",
+			"&not;" => "&#172;",	"&notin;" => "&#8713;",	"&nsub;" => "&#8836;",
+			"&Ntilde;" => "&#209;",	"&ntilde;" => "&#241;",	"&Nu;" => "&#925;",
+			"&nu;" => "&#957;",	"&Oacute;" => "&#211;",	"&oacute;" => "&#243;",
+			"&Ocirc;" => "&#212;",	"&ocirc;" => "&#244;",	"&OElig;" => "&#338;",
+			"&oelig;" => "&#339;",	"&Ograve;" => "&#210;",	"&ograve;" => "&#242;",
+			"&oline;" => "&#8254;",	"&Omega;" => "&#937;",	"&omega;" => "&#969;",
+			"&Omicron;" => "&#927;","&omicron;" => "&#959;","&oplus;" => "&#8853;",
+			"&or;" => "&#8744;",	"&ordf;" => "&#170;",	"&ordm;" => "&#186;",
+			"&Oslash;" => "&#216;",	"&oslash;" => "&#248;",	"&Otilde;" => "&#213;",
+			"&otilde;" => "&#245;",	"&otimes;" => "&#8855;","&Ouml;" => "&#214;",
+			"&ouml;" => "&#246;",	"&para;" => "&#182;",	"&part;" => "&#8706;",
+			"&permil;" => "&#8240;","&perp;" => "&#8869;",	"&Phi;" => "&#934;",
+			"&phi;" => "&#966;",	"&Pi;" => "&#928;",	"&pi;" => "&#960;",
+			"&piv;" => "&#982;",	"&plusmn;" => "&#177;",	"&pound;" => "&#163;",
+			"&prime;" => "&#8242;",	"&Prime;" => "&#8243;",	"&prod;" => "&#8719;",
+			"&prop;" => "&#8733;",	"&Psi;" => "&#936;",	"&psi;" => "&#968;",
+			"&quot;" => "&#34;",	"&radic;" => "&#8730;",	"&rang;" => "&#9002;",
+			"&raquo;" => "&#187;",	"&rarr;" => "&#8594;",	"&rArr;" => "&#8658;",
+			"&rceil;" => "&#8969;",	"&rdquo;" => "&#8221;",	"&real;" => "&#8476;",
+			"&reg;" => "&#174;",	"&rfloor;" => "&#8971;","&Rho;" => "&#929;",
+			"&rho;" => "&#961;",	"&rlm;" => "&#8207;",	"&rsaquo;" => "&#8250;",
+			"&rsquo;" => "&#8217;",	"&sbquo;" => "&#8218;",	"&Scaron;" => "&#352;",
+			"&scaron;" => "&#353;",	"&sdot;" => "&#8901;",	"&sect;" => "&#167;",
+			"&shy;" => "&#173;",	"&Sigma;" => "&#931;",	"&sigma;" => "&#963;",
+			"&sigmaf;" => "&#962;",	"&sim;" => "&#8764;",	"&spades;" => "&#9824;",
+			"&sub;" => "&#8834;",	"&sube;" => "&#8838;",	"&sum;" => "&#8721;",
+			"&sup1;" => "&#185;",	"&sup2;" => "&#178;",	"&sup3;" => "&#179;",
+			"&sup;" => "&#8835;",	"&supe;" => "&#8839;",	"&szlig;" => "&#223;",
+			"&Tau;" => "&#932;",	"&tau;" => "&#964;",	"&there4;" => "&#8756;",
+			"&Theta;" => "&#920;",	"&theta;" => "&#952;",	"&thetasym;" => "&#977;",
+			"&thinsp;" => "&#8201;","&THORN;" => "&#222;",	"&thorn;" => "&#254;",
+			"&tilde;" => "&#126;",	"&times;" => "&#215;",	"&trade;" => "&#8482;",
+			"&Uacute;" => "&#218;",	"&uacute;" => "&#250;",	"&uarr;" => "&#8593;",
+			"&uArr;" => "&#8657;",	"&Ucirc;" => "&#219;",	"&ucirc;" => "&#251;",
+			"&Ugrave;" => "&#217;",	"&ugrave;" => "&#249;",	"&uml;" => "&#168;",
+			"&upsih;" => "&#978;",	"&Upsilon;" => "&#933;","&upsilon;" => "&#965;",
+			"&Uuml;" => "&#220;",	"&uuml;" => "&#252;",	"&weierp;" => "&#8472;",
+			"&Xi;" => "&#926;",	"&xi;" => "&#958;",	"&Yacute;" => "&#221;",
+			"&yacute;" => "&#253;",	"&yen;" => "&#165;",	"&yuml;" => "&#255;",
+			"&Yuml;" => "&#376;",	"&Zeta;" => "&#918;",	"&zeta;" => "&#950;",
+			"&zwj;" => "&#8205;",	"&zwnj;" => "&#8204;"
+		);
 
 		return $html_entities;
 	}

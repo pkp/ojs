@@ -26,7 +26,7 @@ class OpenAdsPlugin extends GenericPlugin {
 
 	/**
 	 * Called as a plugin is registered to the registry
-	 * @param @category String Name of category plugin was registered to
+	 * @param $category String Name of category plugin was registered to
 	 * @return boolean True iff plugin initialized successfully; if false,
 	 * 	the plugin will not be registered.
 	 */

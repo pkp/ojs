@@ -18,24 +18,25 @@
 import('core.ItemIterator');
 
 class VirtualArrayIterator extends ItemIterator {
-	/** The array of contents of this iterator. */
+	/** @var $theArray array The array of contents of this iterator. */
 	var $theArray;
 
-	/** Number of items to iterate through on this page */
+	/** @var $itemsPerPage int Number of items to iterate through on this page */
 	var $itemsPerPage;
 
-	/** The current page. */
+	/** @var $page int The current page. */
 	var $page;
 
-	/** The total number of items. */
+	/** @var $count int The total number of items. */
 	var $count;
 
-	/** Whether or not the iterator was empty from the start */
+	/** @var $wasEmpty boolean Whether or not the iterator was empty from the start */
 	var $wasEmpty;
 
 	/**
 	 * Constructor.
 	 * @param $theArray array The array of items to iterate through
+	 * @param $totalItems int The total number of items in the virtual "larger" array
 	 * @param $page int the current page number
 	 * @param $itemsPerPage int Number of items to display per page
 	 */
@@ -75,22 +76,42 @@ class VirtualArrayIterator extends ItemIterator {
 		return array($key, $value);
 	}
 
+	/**
+	 * Check whether or not this iterator is for the first page of a sequence
+	 * @return boolean
+	 */
 	function atFirstPage() {
 		return $this->page==1;
 	}
 
+	/**
+	 * Check whether or not this iterator is for the last page of a sequence
+	 * @return boolean
+	 */
 	function atLastPage() {
 		return ($this->page * $this->itemsPerPage) + 1 > $this->count;
 	}
 
+	/**
+	 * Get the page number that this iterator represents
+	 * @return int
+	 */
 	function getPage() {
 		return $this->page;
 	}
 
+	/**
+	 * Get the total number of items in the virtual array
+	 * @return int
+	 */
 	function getCount() {
 		return $this->count;
 	}
 
+	/**
+	 * Get the total number of pages in the virtual array
+	 * @return int
+	 */
 	function getPageCount() {
 		return max(1, ceil($this->count / $this->itemsPerPage));
 	}
@@ -113,6 +134,10 @@ class VirtualArrayIterator extends ItemIterator {
 		return $this->wasEmpty;
 	}
 
+	/**
+	 * Convert the iterator into an array
+	 * @return array
+	 */
 	function &toArray() {
 		return $this->theArray;
 	}
