@@ -17,6 +17,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset={$defaultCharset|escape}" />
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
+
 	<link rel="stylesheet" href="{$baseUrl}/styles/common.css" type="text/css" />
 	<link rel="stylesheet" href="{$baseUrl}/styles/rt.css" type="text/css" />
 
@@ -60,6 +61,14 @@
 </script>
 {/literal}
 
+<div id="profilePicContent" style="float: right;">
+	{assign var="profileImage" value=$user->getSetting('profileImage')}
+	{if $profileImage}
+		<img height="{$profileImage.height|escape}" width="{$profileImage.width|escape}" alt="{translate key="user.profile.profileImage"}" src="{$sitePublicFilesDir}/{$profileImage.uploadName}" />
+	{/if}
+</div>
+
+<div id="mainContent">
 <h2>{$pageTitleTranslated}</h2>
 
 {assign_mailto var=address address=$user->getEmail()|escape}
@@ -74,9 +83,10 @@
 
 <input type="button" onclick="window.close()" value="{translate key="common.close"}" class="button defaultButton" />
 
-</div>
-</div>
-</div>
-</div>
+</div><!-- content -->
+</div><!-- mainContent -->
+</div><!-- main -->
+</div><!-- body -->
+</div><!-- container -->
 </body>
 </html>

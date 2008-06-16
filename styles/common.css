@@ -718,7 +718,7 @@ div.separator {
 div.progressbar {
 	background-image: url(../templates/images/progbg.gif);
 	background-repeat: no-repeat;
-	height: 27;
-	width: 505;
+	height: 27px;
+	width: 505px;
 	z-index:1;
 }

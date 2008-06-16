@@ -14,7 +14,7 @@
 <div id="profilePicContent" style="float: right;">
 	{assign var="profileImage" value=$user->getSetting('profileImage')}
 	{if $profileImage}
-		<img height="{$profileImage.height|escape} width="{$profileImage.width|escape}" alt="{translate key="user.profile.profileImage"}" src="{$sitePublicFilesDir}/{$profileImage.uploadName}" />
+		<img height="{$profileImage.height|escape}" width="{$profileImage.width|escape}" alt="{translate key="user.profile.profileImage"}" src="{$sitePublicFilesDir}/{$profileImage.uploadName}" />
 	{/if}
 </div>
 
