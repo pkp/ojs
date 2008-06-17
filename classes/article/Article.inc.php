@@ -121,6 +121,19 @@ class Article extends DataObject {
 	}
 
 	/**
+	 * Return a list of author email addresses.
+	 * @return array
+	 */
+	function getAuthorEmails() {
+		import('mail.Mail');
+		$returner = array();
+		foreach ($this->authors as $a) {
+			$returner[] = Mail::encodeDisplayName($a->getFullName()) . ' <' . $a->getEmail() . '>';
+		}
+		return $returner;
+	}
+
+	/**
 	 * Return first author
 	 * @param $lastOnly boolean return lastname only (default false)
 	 * @return string
