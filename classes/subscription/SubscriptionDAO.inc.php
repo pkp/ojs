@@ -359,7 +359,7 @@ class SubscriptionDAO extends DAO {
 	 */
 	function &getSubscriptions($rangeInfo = null) {
 		$result = &$this->retrieveRange(
-			'SELECT s.* FROM subscriptions s, users u WHERE s.user_id = u.user_id ORDER BY u.last_name ASC', false, $rangeInfo
+			'SELECT s.* FROM subscriptions s, users u WHERE s.user_id = u.user_id ORDER BY u.last_name ASC, s.subscription_id', false, $rangeInfo
 		);
 
 		$returner = &new DAOResultFactory($result, $this, '_returnSubscriptionFromRow');
@@ -443,7 +443,7 @@ class SubscriptionDAO extends DAO {
 				AND journal_id = ?';
  
 		$result = &$this->retrieveRange(
-			$sql . ' ' . $searchSql . ' ORDER BY u.last_name ASC',
+			$sql . ' ' . $searchSql . ' ORDER BY u.last_name ASC, s.subscription_id',
 			count($params)===1?array_shift($params):$params,
 			$rangeInfo
 		);
@@ -471,7 +471,7 @@ class SubscriptionDAO extends DAO {
 				EXTRACT(MONTH FROM date_end) = ? AND
 				EXTRACT(DAY FROM date_end) = ? AND
 				journal_id = ?
-			ORDER BY u.last_name ASC',
+			ORDER BY u.last_name ASC, s.subscription_id',
 			array(
 				$dateEnd[0],
 				$dateEnd[1],
