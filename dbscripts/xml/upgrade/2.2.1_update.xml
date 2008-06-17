@@ -79,8 +79,14 @@
 		<!-- Syntax for PostgreSQL. -->
 		<query driver="postgres7">
 			ALTER TABLE issues ADD COLUMN number_new VARCHAR(10)
+		</query>
+		<query driver="postgres7">
 			UPDATE issues SET number_new = CAST(number AS VARCHAR)
+		</query>
+		<query driver="postgres7">
 			ALTER TABLE issues DROP COLUMN number
+		</query>
+		<query driver="postgres7">
 			ALTER TABLE issues RENAME COLUMN number_new TO number
 		</query>
 	</sql>
