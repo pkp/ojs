@@ -60,7 +60,7 @@
 	</tr>
 	<tr valign="top">
 		<td class="label">{fieldLabel name="number" key="issue.number"}</td>
-		<td class="value"><input type="text" name="number" id="number" value="{$number|escape}" size="5" maxlength="5" class="textField" /></td>
+		<td class="value"><input type="text" name="number" id="number" value="{$number|escape}" size="5" maxlength="10" class="textField" /></td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{fieldLabel name="year" key="issue.year"}</td>
