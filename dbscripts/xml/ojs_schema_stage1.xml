@@ -492,7 +492,7 @@
 		</field>
 		<field name="title" type="C2" size="120"/>
 		<field name="volume" type="I2"/>
-		<field name="number" type="I2"/>
+		<field name="number" type="C2" size="10" />
 		<field name="year" type="I2"/>
 		<field name="published" type="I1">
 			<NOTNULL/>

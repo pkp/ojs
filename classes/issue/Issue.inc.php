@@ -95,7 +95,7 @@ class Issue extends DataObject {
 
 	/**
 	 * get number
-	 * @return int
+	 * @return string 
 	 */
 	function getNumber() {
 		return $this->getData('number');
@@ -103,7 +103,7 @@ class Issue extends DataObject {
 
 	/**
 	 * set number
-	 * @param $number int
+	 * @param $number string
 	 */
 	function setNumber($number) {
 		return $this->setData('number', $number);

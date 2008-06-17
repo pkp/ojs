@@ -68,4 +68,20 @@
 			ALTER TABLE sections RENAME COLUMN abstracts_disabled TO abstracts_not_required
 		</query>
 	</sql>
+
+	<!-- Bug #3580: Add ability to indicate double issues -->
+	<sql>
+		<!-- Syntax for MySQL. -->
+		<query driver="mysql">
+			ALTER TABLE issues CHANGE COLUMN number number VARCHAR(10) 
+		</query>
+
+		<!-- Syntax for PostgreSQL. -->
+		<query driver="postgres7">
+			ALTER TABLE issues ADD COLUMN number_new VARCHAR(10)
+			UPDATE issues SET number_new = CAST(number AS VARCHAR)
+			ALTER TABLE issues DROP COLUMN number
+			ALTER TABLE issues RENAME COLUMN number_new TO number
+		</query>
+	</sql>
 </data>
