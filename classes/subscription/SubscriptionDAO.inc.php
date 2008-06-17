@@ -22,6 +22,11 @@ define('SUBSCRIPTION_DATE_START',	0x01);
 define('SUBSCRIPTION_DATE_END',		0x02);
 define('SUBSCRIPTION_DATE_BOTH',	0x03);
 
+define('SUBSCRIPTION_USER',			0x01);
+define('SUBSCRIPTION_MEMBERSHIP',	0x02);
+define('SUBSCRIPTION_DOMAIN',		0x03);
+define('SUBSCRIPTION_IP_RANGE',		0x04);
+
 class SubscriptionDAO extends DAO {
 	/**
 	 * Retrieve a subscription by subscription ID.
@@ -134,6 +139,25 @@ class SubscriptionDAO extends DAO {
 		HookRegistry::call('SubscriptionDAO::_returnSubscriptionFromRow', array(&$subscription, &$row));
 
 		return $subscription;
+	}
+
+	/**
+	 * Internal function to generate user based search query.
+	 * @return string 
+	 */
+	function _generateUserNameSearchSQL($search, $searchMatch, $prefix, &$params) {
+		$first_last = $this->_dataSource->Concat($prefix.'first_name', '\' \'', $prefix.'last_name');
+		$first_middle_last = $this->_dataSource->Concat($prefix.'first_name', '\' \'', $prefix.'middle_name', '\' \'', $prefix.'last_name');
+		$last_comma_first = $this->_dataSource->Concat($prefix.'last_name', '\', \'', $prefix.'first_name');
+		$last_comma_first_middle = $this->_dataSource->Concat($prefix.'last_name', '\', \'', $prefix.'first_name', '\' \'', $prefix.'middle_name');
+		if ($searchMatch === 'is') {
+			$searchSql = " AND (LOWER({$prefix}last_name) = LOWER(?) OR LOWER($first_last) = LOWER(?) OR LOWER($first_middle_last) = LOWER(?) OR LOWER($last_comma_first) = LOWER(?) OR LOWER($last_comma_first_middle) = LOWER(?))";
+		} else {
+			$searchSql = " AND (LOWER({$prefix}last_name) LIKE LOWER(?) OR LOWER($first_last) LIKE LOWER(?) OR LOWER($first_middle_last) LIKE LOWER(?) OR LOWER($last_comma_first) LIKE LOWER(?) OR LOWER($last_comma_first_middle) LIKE LOWER(?))";
+			$search = '%' . $search . '%';
+		}
+		$params[] = $params[] = $params[] = $params[] = $params[] = $search;
+		return $searchSql;
 	}
 
 	/**
@@ -346,11 +370,82 @@ class SubscriptionDAO extends DAO {
 	/**
 	 * Retrieve subscriptions matching a particular journal ID.
 	 * @param $journalId int
+	 * @param $searchField int
+	 * @param $searchMatch string "is" or "contains"
+	 * @param $search String to look in $searchField for
+	 * @param $dateField int 
+	 * @param $dateFrom String date to search from
+	 * @param $dateTo String date to search to
 	 * @return object DAOResultFactory containing matching Subscriptions
 	 */
-	function &getSubscriptionsByJournalId($journalId, $rangeInfo = null) {
+	function &getSubscriptionsByJournalId($journalId, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $rangeInfo = null) {
+
+		$params = array($journalId);
+		$searchSql = '';
+
+		if (!empty($search)) switch ($searchField) {
+			case SUBSCRIPTION_USER:
+				$searchSql = $this->_generateUserNameSearchSQL($search, $searchMatch, 'u.', $params);
+				break;
+			case SUBSCRIPTION_MEMBERSHIP:
+				if ($searchMatch === 'is') {
+					$searchSql = ' AND LOWER(s.membership) = LOWER(?)';
+				} else {
+					$searchSql = ' AND LOWER(s.membership) LIKE LOWER(?)';
+					$search = '%' . $search . '%';
+				}
+				$params[] = $search;
+				break;
+			case SUBSCRIPTION_DOMAIN:
+				if ($searchMatch === 'is') {
+					$searchSql = ' AND LOWER(s.domain) = LOWER(?)';
+				} else {
+					$searchSql = ' AND LOWER(s.domain) LIKE LOWER(?)';
+					$search = '%' . $search . '%';
+				}
+				$params[] = $search;
+				break;
+			case SUBSCRIPTION_IP_RANGE:
+				if ($searchMatch === 'is') {
+					$searchSql = ' AND LOWER(s.ip_range) = LOWER(?)';
+				} else {
+					$searchSql = ' AND LOWER(s.ip_range) LIKE LOWER(?)';
+					$search = '%' . $search . '%';
+				}
+				$params[] = $search;
+				break;
+		}
+
+		if (!empty($dateFrom) || !empty($dateTo)) switch($dateField) {
+			case SUBSCRIPTION_DATE_START:
+				if (!empty($dateFrom)) {
+					$searchSql .= ' AND s.date_start >= ' . $this->datetimeToDB($dateFrom);
+				}
+				if (!empty($dateTo)) {
+					$searchSql .= ' AND s.date_start <= ' . $this->datetimeToDB($dateTo);
+				}
+				break;
+			case SUBSCRIPTION_DATE_END:
+				if (!empty($dateFrom)) {
+					$searchSql .= ' AND s.date_end >= ' . $this->datetimeToDB($dateFrom);
+				}
+				if (!empty($dateTo)) {
+					$searchSql .= ' AND s.date_end <= ' . $this->datetimeToDB($dateTo);
+				}
+				break;
+		}
+
+		$sql = 'SELECT s.*
+				FROM
+				subscriptions s,
+				users u
+				WHERE s.user_id = u.user_id
+				AND journal_id = ?';
+ 
 		$result = &$this->retrieveRange(
-			'SELECT s.* FROM subscriptions s, users u WHERE s.user_id = u.user_id AND journal_id = ? ORDER BY u.last_name ASC', $journalId, $rangeInfo
+			$sql . ' ' . $searchSql . ' ORDER BY u.last_name ASC',
+			count($params)===1?array_shift($params):$params,
+			$rangeInfo
 		);
 
 		$returner = &new DAOResultFactory($result, $this, '_returnSubscriptionFromRow');

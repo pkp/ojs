@@ -1600,11 +1600,15 @@ You may optionally provide the user with a reason for disabling their account.</
 	<message key="manager.subscriptions.selectSubscriber.desc">Subscription access privileges are automatically granted to the journal's Journal Managers, Editors, Section Editors, Layout Editors, Copyeditors, and Proofreaders.</message>
 	<message key="manager.subscriptions.subscribe">Enroll</message>
 	<message key="manager.subscriptions.confirmDelete">Are you sure you want to delete this subscription?</message>
-	<message key="manager.subscriptions.noneCreated">No subscriptions have been created.</message>
+	<message key="manager.subscriptions.noneCreated">No subscriptions</message>
 	<message key="manager.subscriptions.user">User</message>
 	<message key="manager.subscriptions.subscriptionType">Subscription Type</message>
 	<message key="manager.subscriptions.dateStart">Start</message>
 	<message key="manager.subscriptions.dateEnd">End</message>
+	<message key="manager.subscriptions.dateStartSearch">Start Date</message>
+	<message key="manager.subscriptions.dateEndSearch">End Date</message>
+	<message key="manager.subscriptions.membership">Membership</message>
+	<message key="manager.subscriptions.domain">Domain</message>
 	<message key="manager.subscriptions.ipRange">IP Range</message>
 	<message key="manager.subscriptions.subscriptionCreatedSuccessfully">Subscription created successfully.</message>
 	<message key="manager.subscriptions.editTitle">Edit</message>

@@ -20,6 +20,40 @@
 
 <br />
 
+{if !$dateFrom}
+{assign var="dateFrom" value="--"}
+{/if}
+
+{if !$dateTo}
+{assign var="dateTo" value="--"}
+{/if}
+
+<form method="post" name="submit" action="{url op="subscriptions"}">
+	<select name="searchField" size="1" class="selectMenu">
+		{html_options_translate options=$fieldOptions selected=$searchField}
+	</select>
+	<select name="searchMatch" size="1" class="selectMenu">
+		<option value="contains"{if $searchMatch == 'contains'} selected="selected"{/if}>{translate key="form.contains"}</option>
+		<option value="is"{if $searchMatch == 'is'} selected="selected"{/if}>{translate key="form.is"}</option>
+	</select>
+	<input type="text" size="15" name="search" class="textField" value="{$search|escape}" />
+	<br/>
+	<select name="dateSearchField" size="1" class="selectMenu">
+		{html_options_translate options=$dateFieldOptions selected=$dateSearchField}
+	</select>
+	{translate key="common.between"}
+	{html_select_date prefix="dateFrom" time=$dateFrom all_extra="class=\"selectMenu\"" year_empty="" month_empty="" day_empty="" start_year="-5" end_year="+5"}
+	{translate key="common.and"}
+	{html_select_date prefix="dateTo" time=$dateTo all_extra="class=\"selectMenu\"" year_empty="" month_empty="" day_empty="" start_year="-5" end_year="+5"}
+	<input type="hidden" name="dateToHour" value="23" />
+	<input type="hidden" name="dateToMinute" value="59" />
+	<input type="hidden" name="dateToSecond" value="59" />
+	<br/>
+	<input type="submit" value="{translate key="common.search"}" class="button" />
+</form>
+
+<br />
+
 <a name="subscriptions"></a>
 
 <table width="100%" class="listing">
