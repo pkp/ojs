@@ -43,11 +43,11 @@
 	<message key="manager.reviewForms.noneCreated">No review forms have been created.</message>
 	<message key="manager.reviewForms.nonePublished">No review forms have been published.</message>
 	<message key="manager.reviewForms.create">Create Review Form</message>
-	<message key="manager.reviewForms.edit">Edit Review Form</message>
+	<message key="manager.reviewForms.edit">Review Form</message>
 	<message key="manager.reviewForms.reviewFormData">Review Form Data</message>
 	<message key="manager.reviewForms.title">Title</message>
-	<message key="manager.reviewForms.description">Description</message>
-	<message key="manager.reviewForms.preview">Preview Review Form</message>
+	<message key="manager.reviewForms.description">Description and Instructions</message>
+	<message key="manager.reviewForms.preview">Preview Form</message>
 	<message key="manager.reviewForms.completed">Completed</message>
 	<message key="manager.reviewForms.inReview">In review</message>
 	<message key="manager.reviewForms.confirmDeletePublished">Confirm delete of a published review form...</message>
@@ -55,30 +55,30 @@
 	
 	<message key="manager.reviewForms.form.titleRequired">A title is required for the review form.</message>	
 	
-	<message key="manager.reviewFormElements">Review Form Elements</message>
-	<message key="manager.reviewFormElements.create">Create New Element</message>
-	<message key="manager.reviewFormElements.edit">Edit Review Form Element</message>
-	<message key="manager.reviewFormElements.noneCreated">No review form elements have been created.</message>
-	<message key="manager.reviewFormElements.confirmDelete">Confirm delete of a published review form element...</message>
-	<message key="manager.reviewFormElements.copyTo">Copy to: </message>
-	<message key="manager.reviewFormElements.question">Question</message>
-	<message key="manager.reviewFormElements.required">Required review form element</message>
+	<message key="manager.reviewFormElements">Form Items</message>
+	<message key="manager.reviewFormElements.create">Create New Item</message>
+	<message key="manager.reviewFormElements.edit">Edit Form Item</message>
+	<message key="manager.reviewFormElements.noneCreated">No form items have been created.</message>
+	<message key="manager.reviewFormElements.confirmDelete">Confirm delete of a published form item...</message>
+	<message key="manager.reviewFormElements.copyTo">Copy to:</message>
+	<message key="manager.reviewFormElements.question">Item</message>
+	<message key="manager.reviewFormElements.required">Reviewers required to complete item</message>
 	<message key="manager.reviewFormElements.viewable">Viewable (for authors)</message>
-	<message key="manager.reviewFormElements.elementType">Element type</message>
-	<message key="manager.reviewFormElements.possibleResponse">Possible response</message>
-	<message key="manager.reviewFormElements.addResponseItem">Add possible response</message>
-	<message key="manager.reviewFormElements.chooseType">Choose element type</message>
-	<message key="manager.reviewFormElement.changeType">Changing the form element type...</message>
+	<message key="manager.reviewFormElements.elementType">Item type</message>
+	<message key="manager.reviewFormElements.possibleResponse">Selection</message>
+	<message key="manager.reviewFormElements.addResponseItem">Add selection</message>
+	<message key="manager.reviewFormElements.chooseType">Choose item type</message>
+	<message key="manager.reviewFormElement.changeType">Changing the form item type...</message>
 
-	<message key="manager.reviewFormElements.form.questionRequired">A question is required for the review form element.</message>	
-	<message key="manager.reviewFormElements.form.elementTypeRequired">An element type is required for the review form element.</message>	
+	<message key="manager.reviewFormElements.form.questionRequired">A question is required for the form item.</message>	
+	<message key="manager.reviewFormElements.form.elementTypeRequired">An item type is required for the form item.</message>	
 
-	<message key="manager.reviewFormElements.smalltextfield">Small text field</message>
-	<message key="manager.reviewFormElements.textfield">Single row text field</message>
-	<message key="manager.reviewFormElements.textarea">Text area</message>
-	<message key="manager.reviewFormElements.checkboxes">Checkboxes</message>
-	<message key="manager.reviewFormElements.radiobuttons">Radiobuttons</message>
-	<message key="manager.reviewFormElements.dropdownbox">Dropdownbox</message>
+	<message key="manager.reviewFormElements.smalltextfield">Single word text box</message>
+	<message key="manager.reviewFormElements.textfield">Single line text box</message>
+	<message key="manager.reviewFormElements.textarea">Extended text box</message>
+	<message key="manager.reviewFormElements.checkboxes">Checkboxes (you can choose one or more)</message>
+	<message key="manager.reviewFormElements.radiobuttons">Radio buttons (you can only choose one)</message>
+	<message key="manager.reviewFormElements.dropdownbox">Drop-down box</message>
 
 	<!--  peer review -->
 	<message key="submission.reviewForm">Review Form</message>

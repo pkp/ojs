@@ -25,38 +25,37 @@
 <p>{$reviewForm->getReviewFormDescription()}</p>
 
 {foreach from=$reviewFormElements name=reviewFormElements item=reviewFormElement}
-<p>{$reviewFormElement->getReviewFormElementQuestion()}</p>
-<p>
-{if $reviewFormElement->getElementType() == REVIEW_FORM_ELEMENT_TYPE_SMALL_TEXT_FIELD}
-<input type="text" size="10" maxlength="40" class="textField" />
-{/if}
-{if $reviewFormElement->getElementType() == REVIEW_FORM_ELEMENT_TYPE_TEXT_FIELD}
-<input type="text" size="40" maxlength="120" class="textField" />
-{/if}
-{if $reviewFormElement->getElementType() == REVIEW_FORM_ELEMENT_TYPE_TEXTAREA}
-<textarea rows="4" cols="40" class="textArea" /></textarea>
-{/if}
-{if $reviewFormElement->getElementType() == REVIEW_FORM_ELEMENT_TYPE_CHECKBOXES}
-{assign var=possibleResponses value=$reviewFormElement->getReviewFormElementPossibleResponses()}
-{foreach name=responses from=$possibleResponses key=responseId item=responseItem}
-<input type="checkbox"/> {$responseItem.content}<br/>
-{/foreach}
-{/if}
-{if $reviewFormElement->getElementType() == REVIEW_FORM_ELEMENT_TYPE_RADIO_BUTTONS}
-{assign var=possibleResponses value=$reviewFormElement->getReviewFormElementPossibleResponses()}
-{foreach name=responses from=$possibleResponses key=responseId item=responseItem}
-<input type="radio"> {$responseItem.content}<br/>
-{/foreach}
-{/if}
-{if $reviewFormElement->getElementType() == REVIEW_FORM_ELEMENT_TYPE_DROP_DOWN_BOX}
-<select size="1" class="selectMenu">
-{assign var=possibleResponses value=$reviewFormElement->getReviewFormElementPossibleResponses()}
-{foreach name=responses from=$possibleResponses key=responseId item=responseItem}
-<option>{$responseItem.content}</option>
-{/foreach}
-</select>
-{/if}
-</p>
+	<p>{$reviewFormElement->getReviewFormElementQuestion()}{if $reviewFormElement->getRequired()}*{/if}</p>
+	<p>
+		{if $reviewFormElement->getElementType() == REVIEW_FORM_ELEMENT_TYPE_SMALL_TEXT_FIELD}
+			<input type="text" size="10" maxlength="40" class="textField" />
+		{elseif $reviewFormElement->getElementType() == REVIEW_FORM_ELEMENT_TYPE_TEXT_FIELD}
+			<input type="text" size="40" maxlength="120" class="textField" />
+		{elseif $reviewFormElement->getElementType() == REVIEW_FORM_ELEMENT_TYPE_TEXTAREA}
+			<textarea rows="4" cols="40" class="textArea" /></textarea>
+		{elseif $reviewFormElement->getElementType() == REVIEW_FORM_ELEMENT_TYPE_CHECKBOXES}
+			{assign var=possibleResponses value=$reviewFormElement->getReviewFormElementPossibleResponses()}
+			{foreach name=responses from=$possibleResponses key=responseId item=responseItem}
+				<input id="check-{$responseId|escape}" type="checkbox"/>
+				<label for="check-{$responseId|escape}">{$responseItem.content}</label>
+				<br/>
+			{/foreach}
+		{elseif $reviewFormElement->getElementType() == REVIEW_FORM_ELEMENT_TYPE_RADIO_BUTTONS}
+			{assign var=possibleResponses value=$reviewFormElement->getReviewFormElementPossibleResponses()}
+			{foreach name=responses from=$possibleResponses key=responseId item=responseItem}
+				<input id="radio-{$responseId|escape}" name="{$reviewFormElement->getReviewFormElementId()}" type="radio">
+				<label for="radio-{$responseId|escape}">{$responseItem.content}</label>
+				<br/>
+			{/foreach}
+		{elseif $reviewFormElement->getElementType() == REVIEW_FORM_ELEMENT_TYPE_DROP_DOWN_BOX}
+			<select size="1" class="selectMenu">
+				{assign var=possibleResponses value=$reviewFormElement->getReviewFormElementPossibleResponses()}
+				{foreach name=responses from=$possibleResponses key=responseId item=responseItem}
+					<option>{$responseItem.content}</option>
+				{/foreach}
+			</select>
+		{/if}
+	</p>
 {/foreach}
 
 <br/>
@@ -65,4 +64,5 @@
 	<p><input type="submit" value="{translate key="common.close"}" class="button defaultButton" /></p>
 </form>
 
+<p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 {include file="common/footer.tpl"}
