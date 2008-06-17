@@ -1376,7 +1376,7 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.sections.assigned">This Section's Editors</message>
 	<message key="manager.sections.form.titleRequired">A title is required for the section.</message>
 	<message key="manager.sections.form.abbrevRequired">An abbreviated title is required for the section</message>
-	<message key="manager.section.sectionEditorInstructions">Select from among the available Section Editors and "Assign Editor" to this section.</message>
+	<message key="manager.section.sectionEditorInstructions"><![CDATA[Add a Section Editor to this section from the available Section Editors. Once added, designate whether the Section Editor will oversee the REVIEW (peer review) and/or the EDITING (copyediting, layout and proofreading) of submissions to this section. Section Editors are created by clicking <a href="{$sectionEditorsUrl}">Section Editors</a> under Roles in Journal Management.]]></message>
 	<message key="manager.section.submissionsToThisSection">Submissions made to this section of the journal</message>
 	<message key="manager.sections.submissionIndexing">Will not be included in the indexing of the journal</message>
 	<message key="manager.sections.submissionReview">Will not be peer-reviewed</message>
@@ -1389,8 +1389,8 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.sections.reviewed">Peer Reviewed</message>
 	<message key="manager.sections.open">Open Submissions</message>
 	<message key="manager.sections.policy">Section Policy</message>
-	<message key="manager.sections.identifyType">For metadata purposes, identify every item in this section as a(n)</message>
-	<message key="manager.sections.identifyTypeExamples">(For example, "Peer-reviewed Article", "Non-refereed Article", "Invited Article", etc.)</message>
+	<message key="manager.sections.identifyType">Identify items published in this section as a(n)</message>
+	<message key="manager.sections.identifyTypeExamples">(For example, "Peer-reviewed Article", "Non-refereed Book Review", "Invited Commentary", etc.)</message>
 	<message key="manager.sections.abstractsNotRequired">Do not require abstracts</message>
 
 	<!-- Import/Export -->
@@ -2865,7 +2865,7 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="default.journalSettings.checklist.addressesLinked">Where available, URLs for the references have been provided.</message>
 	<message key="default.journalSettings.checklist.submissionAppearance">The text is single-spaced; uses a 12-point font; employs italics, rather than underlining (except with URL addresses); and all illustrations, figures, and tables are placed within the text at the appropriate points, rather than at the end.</message>
 	<message key="default.journalSettings.checklist.bibliographicRequirements"><![CDATA[The text adheres to the stylistic and bibliographic requirements outlined in the <a href="{$indexUrl}/{$journalPath}/about/submissions#authorGuidelines" target="_new">Author Guidelines</a>, which is found in About the Journal.]]></message>
-	<message key="default.journalSettings.checklist.anonymous"><![CDATA[If submitting to a peer-reviewed section of the journal, the instructions in <a href="javascript:openHelp('{$indexUrl}/{$journalPath}/help/view/editorial/topic/000044')">Ensuring a Blind Review</a>) have been followed.]]></message>
+	<message key="default.journalSettings.checklist.anonymous"><![CDATA[If submitting to a peer-reviewed section of the journal, the instructions in <a href="javascript:openHelp('{$indexUrl}/{$journalPath}/help/view/editorial/topic/000044')">Ensuring a Blind Review</a> have been followed.]]></message>
 	<message key="default.journalSettings.privacyStatement">The names and email addresses entered in this journal site will be used exclusively for the stated purposes of this journal and will not be made available for any other purpose or to any other party.</message>
 	<message key="default.journalSettings.openAccessPolicy">This journal provides immediate open access to its content on the principle that making research freely available to the public supports a greater global exchange of knowledge.</message>
 	<message key="default.journalSettings.authorSelfArchivePolicy">This journal permits and encourages authors to post items submitted to the journal on personal websites or institutional repositories both prior to and after publication, while providing bibliographic details that credit, if applicable, its publication in this journal.</message>
