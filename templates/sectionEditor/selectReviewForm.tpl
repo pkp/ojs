@@ -38,7 +38,7 @@
 
 {if $reviewForms->wasEmpty()}
 	<tr>
-		<td colspan="2" class="nodata">{translate key="manager.reviewForms.nonePublished"}</td>
+		<td colspan="2" class="nodata">{translate key="manager.reviewForms.noneCreated"}</td>
 	</tr>
 	<tr>
 		<td colspan="2" class="endseparator">&nbsp;</td>

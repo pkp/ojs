@@ -60,6 +60,38 @@ class ReviewForm extends DataObject {
 	}
 
 	/**
+	 * Get the number of completed reviews for this review form.
+	 * @return int
+	 */
+	function getCompleteCount() {
+		return $this->getData('completeCount');
+	}
+
+	/**
+	 * Set the number of complete reviews for this review form.
+	 * @param $completeCount int
+	 */
+	function setCompleteCount($completeCount) {
+		return $this->setData('completeCount', $completeCount);
+	}
+
+	/**
+	 * Get the number of incomplete reviews for this review form.
+	 * @return int
+	 */
+	function getIncompleteCount() {
+		return $this->getData('incompleteCount');
+	}
+
+	/**
+	 * Set the number of incomplete reviews for this review form.
+	 * @param $incompleteCount int
+	 */
+	function setIncompleteCount($incompleteCount) {
+		return $this->setData('incompleteCount', $incompleteCount);
+	}
+
+	/**
 	 * Get ID of journal.
 	 * @return int
 	 */
@@ -89,22 +121,6 @@ class ReviewForm extends DataObject {
 	 */
 	function setSequence($sequence) {
 		return $this->setData('sequence', $sequence);
-	}
-
-	/**
-	 * get published
-	 * @return int
-	 */
-	function getPublished() {
-		return $this->getData('published');
-	}
-
-	/**
-	 * set published
-	 * @param $published int
-	 */
-	function setPublished($published) {
-		return $this->setData('published', $published);
 	}
 
 	/**

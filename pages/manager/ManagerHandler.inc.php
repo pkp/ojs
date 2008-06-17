@@ -259,14 +259,9 @@ class ManagerHandler extends Handler {
 	// Review Form Management
 	//
 
-	function publishedReviewForms() {
+	function reviewForms() {
 		import('pages.manager.ReviewFormHandler');
-		ReviewFormHandler::publishedReviewForms();
-	}
-
-	function unpublishedReviewForms() {
-		import('pages.manager.ReviewFormHandler');
-		ReviewFormHandler::unpublishedReviewForms();
+		ReviewFormHandler::reviewForms();
 	}
 
 	function createReviewForm() {
@@ -287,11 +282,6 @@ class ManagerHandler extends Handler {
 	function previewReviewForm($args) {
 		import('pages.manager.ReviewFormHandler');
 		ReviewFormHandler::previewReviewForm($args);
-	}
-
-	function publishReviewForm($args) {
-		import('pages.manager.ReviewFormHandler');
-		ReviewFormHandler::publishReviewForm($args);
 	}
 
 	function deleteReviewForm($args) {

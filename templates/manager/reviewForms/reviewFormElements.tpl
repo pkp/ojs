@@ -79,7 +79,7 @@ function toggleChecked() {
 </table>
 
 {if $reviewFormElementExists}
-	<p>{translate key="manager.reviewFormElements.copyTo"}&nbsp;<select name="targetReviewForm" class="selectMenu" size="1">{html_options options=$unpublishedReviewFormTitles}</select>&nbsp;<input type="submit" value="{translate key="common.copy"}" class="button defaultButton"/>&nbsp;<input type="button" value="{translate key="common.selectAll"}" class="button" onclick="toggleChecked()" /></p>
+	<p>{translate key="manager.reviewFormElements.copyTo"}&nbsp;<select name="targetReviewForm" class="selectMenu" size="1">{html_options options=$unusedReviewFormTitles}</select>&nbsp;<input type="submit" value="{translate key="common.copy"}" class="button defaultButton"/>&nbsp;<input type="button" value="{translate key="common.selectAll"}" class="button" onclick="toggleChecked()" /></p>
 {/if}
 </form>
 

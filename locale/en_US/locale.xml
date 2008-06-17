@@ -31,17 +31,14 @@
 	<!-- common -->
 	<message key="common.copy">Copy</message>
 	<message key="common.preview">Preview</message>
-	<message key="common.publish">Publish</message>
 	<message key="common.activate">Activate</message>
 	<message key="common.deactivate">Deactivate</message>
 
 	<!-- Journal Management -->
 	<message key="manager.reviewForms">Review Forms</message>
 	
-	<message key="manager.reviewForms.publishedReviewForms">Published Review Forms</message>
-	<message key="manager.reviewForms.unpublishedReviewForms">Unpublished Review Forms</message>
 	<message key="manager.reviewForms.noneCreated">No review forms have been created.</message>
-	<message key="manager.reviewForms.nonePublished">No review forms have been published.</message>
+	<message key="manager.reviewForms.noneUsed">No review forms have been used.</message>
 	<message key="manager.reviewForms.create">Create Review Form</message>
 	<message key="manager.reviewForms.edit">Review Form</message>
 	<message key="manager.reviewForms.reviewFormData">Review Form Data</message>
@@ -49,7 +46,7 @@
 	<message key="manager.reviewForms.description">Description and Instructions</message>
 	<message key="manager.reviewForms.preview">Preview Form</message>
 	<message key="manager.reviewForms.completed">Completed</message>
-	<message key="manager.reviewForms.inReview">In review</message>
+	<message key="manager.reviewForms.inReview">In Review</message>
 	<message key="manager.reviewForms.confirmDeletePublished">Confirm delete of a published review form...</message>
 	<message key="manager.reviewForms.confirmDeleteUnpublished">Confirm delete of an upublished review form...</message>
 	

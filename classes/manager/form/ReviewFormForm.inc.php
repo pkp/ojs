@@ -97,7 +97,6 @@ class ReviewFormForm extends Form {
 		if (!isset($reviewForm)) {
 			$reviewForm =& new ReviewForm();
 			$reviewForm->setJournalId($journalId);
-			$reviewForm->setPublished(0);
 			$reviewForm->setActive(0);
 			$reviewForm->setSequence(REALLY_BIG_NUMBER);
 		}

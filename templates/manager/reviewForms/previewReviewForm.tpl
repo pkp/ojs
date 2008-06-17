@@ -11,7 +11,7 @@
 {assign var="pageCrumbTitle" value=$pageTitle}
 {include file="common/header.tpl"}
 
-{if not $reviewForm->getPublished()}
+{if $reviewForm->getCompleteCount()==0 && $reviewForm->getIncompleteCount()==0}
 	<ul class="menu">
 		<li><a href="{url op="editReviewForm" path=$reviewForm->getReviewFormId()}">{translate key="manager.reviewForms.edit"}</a></li>
 		<li><a href="{url op="reviewFormElements" path=$reviewForm->getReviewFormId()}">{translate key="manager.reviewFormElements"}</a></li>
@@ -60,7 +60,7 @@
 
 <br/>
 
-<form name="previewReviewForm" method="post" action="{if $reviewForm->getPublished()}{url op="publishedReviewForms"}{else}{url op="editReviewForm" path=$reviewForm->getReviewFormId()}{/if}">
+<form name="previewReviewForm" method="post" action="{if $reviewForm->getCompleteCount()!=0 || $reviewForm->getIncompleteCount()!=0}{url op="reviewForms"}{else}{url op="editReviewForm" path=$reviewForm->getReviewFormId()}{/if}">
 	<p><input type="submit" value="{translate key="common.close"}" class="button defaultButton" /></p>
 </form>
 

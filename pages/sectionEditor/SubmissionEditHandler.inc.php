@@ -175,11 +175,20 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		}
 
 		// get journal published review form titles
-		$reviewFormsTitles =& $reviewFormDao->getJournalReviewFormTitles($journal->getJournalId(), 1);
+		$reviewFormTitles =& $reviewFormDao->getJournalReviewFormTitles($journal->getJournalId(), 1);
 
 		$reviewFormResponseDao =& DAORegistry::getDAO('ReviewFormResponseDAO');
 		$reviewFormResponses = array();
+
+		$reviewFormDao =& DAORegistry::getDAO('ReviewFormDAO');
+		$reviewFormTitles = array();
+
 		foreach ($submission->getReviewAssignments($round) as $reviewAssignment) {
+			$reviewForm =& $reviewFormDao->getReviewForm($reviewAssignment->getReviewFormId());
+			if ($reviewForm) {
+				$reviewFormTitles[$reviewForm->getReviewFormId()] = $reviewForm->getReviewFormTitle();
+			}
+			unset($reviewForm);
 			$reviewFormResponses[$reviewAssignment->getReviewId()] = $reviewFormResponseDao->reviewFormResponseExists($reviewAssignment->getReviewId());
 		}
 		
@@ -189,8 +198,8 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->assign_by_ref('reviewIndexes', $reviewAssignmentDao->getReviewIndexesForRound($articleId, $round));
 		$templateMgr->assign('round', $round);
 		$templateMgr->assign_by_ref('reviewAssignments', $submission->getReviewAssignments($round));
-		$templateMgr->assign_by_ref('reviewFormsTitles', $reviewFormsTitles);
 		$templateMgr->assign('reviewFormResponses', $reviewFormResponses);
+		$templateMgr->assign('reviewFormTitles', $reviewFormTitles);
 		$templateMgr->assign_by_ref('notifyReviewerLogs', $notifyReviewerLogs);
 		$templateMgr->assign_by_ref('submissionFile', $submission->getSubmissionFile());
 		$templateMgr->assign_by_ref('suppFiles', $submission->getSuppFiles());

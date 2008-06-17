@@ -32,13 +32,28 @@ class ReviewFormDAO extends DAO {
 	 * @return ReviewForm
 	 */
 	function &getReviewForm($reviewFormId, $journalId = null) {
-		$sql = 'SELECT * FROM review_forms WHERE review_form_id = ?';
-		$params = array($reviewFormId);
-		if ($journalId !== null) {
-			$sql .= ' AND journal_id = ?';
-			$params[] = $journalId;
-		}
-		$result =& $this->retrieve($sql, $params);
+		$params = array((int) $reviewFormId);
+		if ($journalId !== null) $params[] = (int) $journalId;
+
+		$result =& $this->retrieve (
+			'SELECT	rf.*,
+				COUNT(rac.review_id) AS complete_count,
+				COUNT(rai.review_id) AS incomplete_count
+			FROM	review_forms rf
+				LEFT JOIN review_assignments rac ON (
+					rac.review_form_id = rf.review_form_id AND
+					rac.date_confirmed IS NOT NULL
+				)
+				LEFT JOIN review_assignments rai ON (
+					rai.review_form_id = rf.review_form_id AND
+					rai.date_notified IS NOT NULL AND
+					rai.date_confirmed IS NULL
+				)
+			WHERE	rf.review_form_id = ?
+				' . ($journalId!==null?' AND rf.journal_id = ?':'') . '
+			GROUP BY rf.review_form_id',
+			$params
+		);
 
 		$returner = null;
 		if ($result->RecordCount() != 0) {
@@ -61,8 +76,9 @@ class ReviewFormDAO extends DAO {
 		$reviewForm->setReviewFormId($row['review_form_id']);
 		$reviewForm->setJournalId($row['journal_id']);
 		$reviewForm->setSequence($row['seq']);
-		$reviewForm->setPublished($row['published']);
 		$reviewForm->setActive($row['is_active']);
+		$reviewForm->setCompleteCount($row['complete_count']);
+		$reviewForm->setIncompleteCount($row['incomplete_count']);
 
 		$this->getDataObjectSettings('review_form_settings', 'review_form_id', $row['review_form_id'], $reviewForm);
 
@@ -96,13 +112,12 @@ class ReviewFormDAO extends DAO {
 	function insertReviewForm(&$reviewForm) {
 		$this->update(
 			'INSERT INTO review_forms
-				(journal_id, seq, published, is_active)
+				(journal_id, seq, is_active)
 				VALUES
-				(?, ?, ?, ?)',
+				(?, ?, ?)',
 			array(
 				$reviewForm->getJournalId(),
 				$reviewForm->getSequence() == null ? 0 : $reviewForm->getSequence(),
-				$reviewForm->getPublished() ? 1 : 0,
 				$reviewForm->getActive() ? 1 : 0
 			)
 		);
@@ -123,13 +138,11 @@ class ReviewFormDAO extends DAO {
 				SET
 					journal_id = ?,
 					seq = ?,
-					published = ?,
 					is_active = ?
 				WHERE review_form_id = ?',
 			array(
 				$reviewForm->getJournalId(),
 				$reviewForm->getSequence(),
-				$reviewForm->getPublished(),
 				$reviewForm->getActive(),
 				$reviewForm->getReviewFormId()
 			)
@@ -154,7 +167,11 @@ class ReviewFormDAO extends DAO {
 	 * @param $journalId int optional
 	 */
 	function deleteReviewFormById($reviewFormId, $journalId = null) {
-		if (isset($journalId) && !$this->reviewFormExists($reviewFormId, $journalId)) return false;
+		if (isset($journalId)) {
+			$reviewForm =& $this->getReviewForm($reviewFormId, $journalId);
+			if (!$reviewForm) return null;
+			unset($reviewForm);
+		}
 
 		$reviewFormElementDao =& DAORegistry::getDAO('ReviewFormElementDAO');
 		$reviewFormElementDao->deleteReviewFormElementsByReviewForm($reviewFormId);
@@ -183,7 +200,22 @@ class ReviewFormDAO extends DAO {
 	 */
 	function &getJournalReviewForms($journalId) {
 		$result =& $this->retrieveRange(
-			'SELECT * FROM review_forms WHERE journal_id = ? ORDER BY seq',
+			'SELECT	rf.*,
+				COUNT(rac.review_id) AS complete_count,
+				COUNT(rai.review_id) AS incomplete_count
+			FROM	review_forms rf
+				LEFT JOIN review_assignments rac ON (
+					rac.review_form_id = rf.review_form_id AND
+					rac.date_confirmed IS NOT NULL
+				)
+				LEFT JOIN review_assignments rai ON (
+					rai.review_form_id = rf.review_form_id AND
+					rai.date_notified IS NOT NULL AND
+					rai.date_confirmed IS NULL
+				)
+			WHERE	rf.journal_id = ?
+			GROUP BY rf.review_form_id
+			ORDER BY rf.seq',
 			$journalId
 		);
 
@@ -199,7 +231,23 @@ class ReviewFormDAO extends DAO {
 	 */
 	function &getJournalActiveReviewForms($journalId, $rangeInfo = null) {
 		$result =& $this->retrieveRange(
-			'SELECT * FROM review_forms WHERE journal_id = ? AND is_active = 1 ORDER BY seq',
+			'SELECT	rf.*,
+				COUNT(rac.review_id) AS complete_count,
+				COUNT(rai.review_id) AS incomplete_count
+			FROM	review_forms rf
+				LEFT JOIN review_assignments rac ON (
+					rac.review_form_id = rf.review_form_id AND
+					rac.date_confirmed IS NOT NULL
+				)
+				LEFT JOIN review_assignments rai ON (
+					rai.review_form_id = rf.review_form_id AND
+					rai.date_notified IS NOT NULL AND
+					rai.date_confirmed IS NULL
+				)
+			WHERE	rf.journal_id = ? AND
+				rf.is_active = 1
+			GROUP BY rf.review_form_id
+			ORDER BY rf.seq',
 			$journalId, $rangeInfo
 		);
 
@@ -208,14 +256,31 @@ class ReviewFormDAO extends DAO {
 	}
 
 	/**
-	 * Get published review forms for a journal.
+	 * Get used review forms for a journal.
 	 * @param $journalId int
 	 * @param $rangeInfo object RangeInfo object (optional)
 	 * @return DAOResultFactory containing matching ReviewForms
 	 */
-	function &getJournalPublishedReviewForms($journalId, $rangeInfo = null) {
+	function &getJournalUsedReviewForms($journalId, $rangeInfo = null) {
 		$result =& $this->retrieveRange(
-			'SELECT * FROM review_forms WHERE journal_id = ? AND published = 1 ORDER BY seq',
+			'SELECT	rf.*,
+				COUNT(rac.review_id) AS complete_count,
+				COUNT(rai.review_id) AS incomplete_count
+			FROM	review_forms rf
+				LEFT JOIN review_assignments rac ON (
+					rac.review_form_id = rf.review_form_id AND
+					rac.date_confirmed IS NOT NULL
+				)
+				LEFT JOIN review_assignments rai ON (
+					rai.review_form_id = rf.review_form_id AND
+					rai.date_notified IS NOT NULL AND
+					rai.date_confirmed IS NULL
+				)
+			WHERE	rf.journal_id = ? AND
+				rf.is_active = 1
+			GROUP BY rf.review_form_id
+			HAVING complete_count > 0 OR incomplete_count > 0
+			ORDER BY rf.seq',
 			$journalId, $rangeInfo
 		);
 
@@ -224,14 +289,30 @@ class ReviewFormDAO extends DAO {
 	}
 
 	/**
-	 * Get unpublished review forms for a journal.
+	 * Get unused review forms for a journal.
 	 * @param $journalId int
 	 * @param $rangeInfo object RangeInfo object (optional)
 	 * @return DAOResultFactory containing matching ReviewForms
 	 */
-	function &getJournalUnpublishedReviewForms($journalId, $rangeInfo = null) {
+	function &getJournalUnusedReviewForms($journalId, $rangeInfo = null) {
 		$result =& $this->retrieveRange(
-			'SELECT * FROM review_forms WHERE journal_id = ? AND published = 0 ORDER BY seq',
+			'SELECT	rf.*,
+				COUNT(rac.review_id) AS complete_count,
+				COUNT(rai.review_id) AS incomplete_count
+			FROM	review_forms rf
+				LEFT JOIN review_assignments rac ON (
+					rac.review_form_id = rf.review_form_id AND
+					rac.date_confirmed IS NOT NULL
+				)
+				LEFT JOIN review_assignments rai ON (
+					rai.review_form_id = rf.review_form_id AND
+					rai.date_notified IS NOT NULL AND
+					rai.date_confirmed IS NULL
+				)
+			WHERE	rf.journal_id = ?
+			GROUP BY rf.review_form_id
+			HAVING complete_count = 0 AND incomplete_count = 0
+			ORDER BY rf.seq',
 			$journalId, $rangeInfo
 		);
 
@@ -240,18 +321,18 @@ class ReviewFormDAO extends DAO {
 	}
 
 	/**
-	 * Retrieve the IDs and titles of all published or unpublished review forms for a journal in an associative array.
+	 * Retrieve the IDs and titles of all review forms for a journal in an associative array.
 	 * @param $journalId int
-	 * @param $published int
+	 * @param $used int
 	 * @return array
 	 */
-	function &getJournalReviewFormTitles($journalId, $published) {
+	function &getJournalReviewFormTitles($journalId, $used) {
 		$reviewFormTitles = array();
 
-		if ($published) {
-			$reviewForms =& $this->getJournalPublishedReviewForms($journalId);
+		if ($used) {
+			$reviewForms =& $this->getJournalUsedReviewForms($journalId);
 		} else {
-			$reviewForms =& $this->getJournalUnpublishedReviewForms($journalId);
+			$reviewForms =& $this->getJournalUnusedReviewForms($journalId);
 		}
 		while (($reviewForm =& $reviewForms->next())) {
 			$reviewFormTitles[$reviewForm->getReviewFormId()] = $reviewForm->getReviewFormTitle();
@@ -267,20 +348,32 @@ class ReviewFormDAO extends DAO {
 	 * @param $journalId int optional
 	 * @return boolean
 	 */
-	function reviewFormExists($reviewFormId, $journalId = null, $published = null) {
-		$sql = 'SELECT COUNT(*) FROM review_forms WHERE review_form_id = ?';
-		$params = array($reviewFormId);
-		if ($journalId !== null) {
-			$sql .= ' AND journal_id = ?';
-			$params[] = $journalId;
-		}
-		if ($published !== null) {
-			$sql .= ' AND published = ?';
-			$params[] = $published;
-		}
-		$result =& $this->retrieve($sql, $params);
+	function unusedReviewFormExists($reviewFormId, $journalId = null) {
+		$params = array((int) $reviewFormId);
+		if ($journalId !== null) $params[] = (int) $journalId;
 
-		$returner = isset($result->fields[0]) && $result->fields[0] == 1 ? true : false;
+		$result =& $this->retrieve (
+			'SELECT	rf.*,
+				COUNT(rac.review_id) AS complete_count,
+				COUNT(rai.review_id) AS incomplete_count
+			FROM	review_forms rf
+				LEFT JOIN review_assignments rac ON (
+					rac.review_form_id = rf.review_form_id AND
+					rac.date_confirmed IS NOT NULL
+				)
+				LEFT JOIN review_assignments rai ON (
+					rai.review_form_id = rf.review_form_id AND
+					rai.date_notified IS NOT NULL AND
+					rai.date_confirmed IS NULL
+				)
+			WHERE	rf.review_form_id = ?
+				' . ($journalId!==null?' AND rf.journal_id = ?':'') . '
+			GROUP BY rf.review_form_id
+			HAVING COUNT(rac.review_id) = 0 AND COUNT(rai.review_id) = 0',
+			$params
+		);
+
+		$returner = $result->RecordCount() != 0;
 
 		$result->Close();
 		unset($result);
@@ -292,10 +385,10 @@ class ReviewFormDAO extends DAO {
 	 * Sequentially renumber review form in their sequence order.
 	 * @param $journalId int
 	 */
-	function resequenceReviewForms($journalId, $published) {
+	function resequenceReviewForms($journalId) {
 		$result =& $this->retrieve(
-			'SELECT review_form_id FROM review_forms WHERE journal_id = ? AND published = ? ORDER BY seq',
-			array($journalId, $published)
+			'SELECT review_form_id FROM review_forms WHERE journal_id = ? ORDER BY seq',
+			(int) $journalId
 		);
 
 		for ($i=1; !$result->EOF; $i++) {
@@ -322,7 +415,6 @@ class ReviewFormDAO extends DAO {
 	function getInsertReviewFormId() {
 		return $this->getInsertId('review_forms', 'review_form_id');
 	}
-
 }
 
 ?>

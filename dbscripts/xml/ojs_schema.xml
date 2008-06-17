@@ -28,10 +28,6 @@
 			<NOTNULL/>
 		</field>
 		<field name="seq" type="F" />
-		<field name="published" type="I1">
-			<NOTNULL />
-			<DEFAULT VALUE="0" />
-		</field>
 		<field name="is_active" type="I1" />
 		<descr>Review forms.</descr>
 		<index name="review_forms_review_form_id">

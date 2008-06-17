@@ -139,7 +139,7 @@
 		<td>
 		{if $reviewAssignment->getReviewFormId() > 0}
 			{assign var="reviewFormId" value=$reviewAssignment->getReviewFormId()}
-			{$reviewFormsTitles[$reviewFormId]}
+			{$reviewFormTitles[$reviewFormId]}
 		{else}
 			{translate key="common.none"}
 		{/if}
