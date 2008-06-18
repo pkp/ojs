@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc SYSTEM "../../../../../../../help/toc.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Main table of contents for translator plugin help. 
+  *
+  * $Id$
+  -->
+
+<toc id="TranslatorPlugin/toc/000000" locale="en_US" title="Translator Plugin" parent_topic="index/topic/000000">
+	<topic id="TranslatorPlugin/topic/000000" title="Translator Plugin" />
+</toc>

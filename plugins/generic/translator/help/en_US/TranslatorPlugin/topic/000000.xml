@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic SYSTEM "../../../../../../../help/topic.dtd">
+
+<!--
+  * 000000.xml
+  *
+  * Copyright (c) 2003-2007 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Index Help Page 
+  *
+  * $Id$
+  -->
+
+<topic id="TranslatorPlugin/topic/000000" locale="en_US" title="Translator Plugin" toc="index/toc/000000" key="TranslatorPlugin.index">
+	<section>
+		<![CDATA[<p>OJS 2.2 onwards comes with a translation plugin that makes the task of updating incomplete translations much easier. You can also start a new translation from scratch, although this takes a bit more work initially (please see below).</p><p>To see the translations that are currently available for OJS and to check which translations are already in progress, please check the <a href="http://pkp.sfu.ca/ojs-languages">OJS languages</a> page for more information. For translations already in progress, please consider contacting the listed translators to check the status of the translation and/or to coordinate efforts and help out with the translation.</p><p>To enable the plugin, log in as a Journal Manager and go to User Home and then System Plugins; you'll find the Translator plugin listed with the generic plugins. Click on the plugin's 'Enable' link. To access the plugin, return to the System Plugin page, scroll down to the plugin, and click the newly-available 'Translate' link.</p><p>You'll now see a list of available (already-installed) locales, and three available actions: 'Check', 'Edit' and 'Export'.</p>]]>
+	</section>
+
+	<section title="Checking a Translation">
+		<![CDATA[<p>You can check the translation's completeness by clicking the 'Check' link: this will show you a list of missing locale files; keys missing from existing locale files; extra (unneeded) keys; suspicious key lengths (if your translated key value is substantially longer than the English default); and also missing or extra system emails.</p><p>If you are missing a locale file, the plugin will allow you to create one and translate the key values from the English default by entering new values against old values into relevant fields. Any other error will display the error message, plus the offending key value in an editable field.</p><p><strong>Note:</strong> You may be initially surprised by the number of missing locale files: every system plugin requires an individual locale file for its interface, and if you aren't going to be using them you don't have to worry about translating them.</p>]]>
+	</section>
+
+	<section title="Editing a Translation">
+		<![CDATA[<p>If you already know where an error is, you can click the 'Edit' link beside the language name you need to fix, and then click the 'Edit' link next to the specific locale file (please note: clicking the locale filename itself will link you directly to the locale file, which is downloadable).</p><p>You will be presented with a list of all keys in that locale file, with their English values alongside your translation values. You can edit your translation values directly here, and save your results, by clicking in the translation value field and making any necessary changes.</p><p>If you know the specific key you want to change (say "navigation.journalHelp") enter the key into the search field at the top of the table and press 'Search': you will be taken to the appropriate page, with the key/value highlighted in yellow.</p><p>You can also delete any key from the locale file by clicking the 'Delete' link next to it. Please note, however, that you can't currently add a new key with the Translator plugin: if you do delete a key only to need it later, you will have to add it manually (ie., by editing the file on the server).</p>]]>
+	</section>
+
+	<section title="Exporing a Translation">
+		<![CDATA[<p>You can export a translation by clicking the 'Export' link across from the language name on the Translator plugin page: the system will compress all locale files for that one translation to a downloadable tar.gz package. This is especially useful if you need to migrate a newly-translated language to another OJS or OCS environment, or if you would like to contribute your changes back to the PKP.</p>]]>
+	</section>
+
+	<section title="Starting a Translation from Scratch">
+		<![CDATA[<p>Using the Translation plugin to start a translation from scratch is a little more involved than editing an incomplete, installed translation. You'll need to manually create and upload the main locale file (locales/[your_LANG]/locale.xml) and email templates file (dbscripts/xml/data/locale/[your_LANG]/email_templates_data.xml), and enter your new language into registry/locales.xml, after which your language will appear in the list of editable translations when you visit the Translator plugin. Once this is done you can add new locale files as per the above instructions, and you'll even be able to edit the above two files.</p>]]>
+	</section>
+</topic>

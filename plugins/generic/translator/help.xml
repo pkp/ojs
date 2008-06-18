@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE help SYSTEM "../../../help/help.dtd">
+
+<!--
+  * help.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Help Page Numerical Mappings for this plugin's help.
+  *
+  * $Id$
+  -->
+<help>
+	<!-- Index -->
+	<topic key="plugins.generic.TranslatorPlugin" id="TranslatorPlugin/topic/000000"></topic>
+</help>
