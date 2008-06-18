@@ -158,8 +158,8 @@ class SectionForm extends Form {
 			if ((in_array($userId, $assignedEditorIds) || $isIncludeEditor) && !$isOmitEditor) {
 				$assignedEditors[] = array(
 					'user' => &$sectionEditor,
-					'canReview' => (Request::getUserVar("canReview-$userId")?1:0),
-					'canEdit' => (Request::getUserVar("canEdit-$userId")?1:0)
+					'canReview' => (Request::getUserVar('canReview' . $userId)?1:0),
+					'canEdit' => (Request::getUserVar('canEdit' . $userId)?1:0)
 				);
 			} else {
 				$unassignedEditors[] =& $sectionEditor;
@@ -230,8 +230,8 @@ class SectionForm extends Form {
 				$journalId,
 				$sectionId,
 				$userId,
-				Request::getUserVar("canReview-$userId"),
-				Request::getUserVar("canEdit-$userId")
+				Request::getUserVar('canReview' . $userId),
+				Request::getUserVar('canEdit' . $userId)
 			);
 			unset($sectionEditor);
 		}

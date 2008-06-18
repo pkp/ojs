@@ -12,7 +12,7 @@
 {assign var="pageCrumbTitle" value="section.sections"}
 {include file="common/header.tpl"}
 
-<form name="section" method="post" action="{url op="updateSection" path=$sectionId}">
+<form name="section" method="post" action="{url op="updateSection" path=$sectionId}" onsubmit="return checkEditorAssignments()">
 <input type="hidden" name="action" value="" />
 <input type="hidden" name="userId" value="" />
 
@@ -30,6 +30,23 @@ function removeSectionEditor(editorId) {
 	document.section.action.value = "removeSectionEditor";
 	document.section.userId.value = editorId;
 	document.section.submit();
+}
+
+function checkEditorAssignments() {
+	var isOk = true;
+	{/literal}
+	{foreach from=$assignedEditors item=editorEntry}
+	{assign var=editor value=$editorEntry.user}
+	{literal}
+		if (!document.section.canReview{/literal}{$editor->getUserId()}{literal}.checked && !document.section.canEdit{/literal}{$editor->getUserId()}{literal}.checked) {
+			isOk = false;
+		}
+	{/literal}{/foreach}{literal}
+	if (!isOk) {
+		alert({/literal}'{translate|escape:"jsparam" key="manager.sections.form.mustAllowPermission"}'{literal});
+		return false;
+	}
+	return true;
 }
 
 // -->
@@ -187,8 +204,8 @@ function removeSectionEditor(editorId) {
 		<tr valign="top">
 			<td>{$editor->getUsername()|escape}</td>
 			<td>{$editor->getFullName()|escape}</td>
-			<td align="center"><input type="checkbox" {if $editorEntry.canReview}checked="checked"{/if} name="canReview-{$editor->getUserId()}" /></td>
-			<td align="center"><input type="checkbox" {if $editorEntry.canEdit}checked="checked"{/if} name="canEdit-{$editor->getUserId()}" /></td>
+			<td align="center"><input type="checkbox" {if $editorEntry.canReview}checked="checked"{/if} name="canReview{$editor->getUserId()}" /></td>
+			<td align="center"><input type="checkbox" {if $editorEntry.canEdit}checked="checked"{/if} name="canEdit{$editor->getUserId()}" /></td>
 			<td align="right">
 				<a class="action" href="javascript:removeSectionEditor({$editor->getUserId()})">{translate key="common.remove"}</a>
 			</td>

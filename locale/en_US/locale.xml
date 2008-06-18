@@ -1377,6 +1377,7 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.sections.assigned">This Section's Editors</message>
 	<message key="manager.sections.form.titleRequired">A title is required for the section.</message>
 	<message key="manager.sections.form.abbrevRequired">An abbreviated title is required for the section</message>
+	<message key="manager.sections.form.mustAllowPermission">Please ensure that at least one checkbox is checked for each Section Editor assignment.</message>
 	<message key="manager.section.sectionEditorInstructions"><![CDATA[Add a Section Editor to this section from the available Section Editors. Once added, designate whether the Section Editor will oversee the REVIEW (peer review) and/or the EDITING (copyediting, layout and proofreading) of submissions to this section. Section Editors are created by clicking <a href="{$sectionEditorsUrl}">Section Editors</a> under Roles in Journal Management.]]></message>
 	<message key="manager.section.submissionsToThisSection">Submissions made to this section of the journal</message>
 	<message key="manager.sections.submissionIndexing">Will not be included in the indexing of the journal</message>
