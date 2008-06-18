@@ -20,7 +20,7 @@
 		{else}
 			</div>
 			<br />
-			<div class="separator"></div>
+			<div class="separator" style="clear:left;"></div>
 		{/if}
 		<div style="float: left; width: 100%;">
 		<h3>{$issue->getYear()|escape}</h3>
