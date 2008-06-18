@@ -88,14 +88,15 @@
 		{/if}
 		{if $postingAllowed}
 			<li><a href="{url page="comment" op="add" path=$article->getArticleId()|to_array:$galleyId}" target="_parent">{translate key="rt.addComment"}</a></li>
-		{elseif !$postingDisabled}
-			{translate key="rt.addComment"}*
-			{assign var=needsLoginNote value=1}
 		{/if}
 		{if $journalRt->getFindingReferences()}
 			<li><a href="javascript:openRTWindow('{url page="rt" op="findingReferences" path=$article->getArticleId()|to_array:$galleyId}');">{translate key="rt.findingReferences"}</a></li>
 		{/if}
 	</ul>
+	{if $postingAllowed && !$postingDisabled}
+		{translate key="rt.addComment"}*
+		{assign var=needsLoginNote value=1}
+	{/if}
 </div>
 <br />
 {/if}
