@@ -92,10 +92,6 @@ class DOAJExportDom {
 			// elocation-id (eg. "e12")
 			XMLCustomWriter::createChildWithText($doc, $root, 'startPage', $matches[1]);
 			XMLCustomWriter::createChildWithText($doc, $root, 'endPage', $matches[1]);
-		} else {
-			// we need to insert something, so use the best ID possible
-			XMLCustomWriter::createChildWithText($doc, $root, 'startPage', $article->getBestArticleId($journal));
-			XMLCustomWriter::createChildWithText($doc, $root, 'endPage', $article->getBestArticleId($journal));
 		}
 
 		/* --- Article's publication date, volume, issue, DOI --- */
