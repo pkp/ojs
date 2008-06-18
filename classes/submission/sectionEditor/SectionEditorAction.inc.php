@@ -1344,6 +1344,19 @@ class SectionEditorAction extends Action {
 		$submissionDao->updateSectionEditorSubmission($submission);
 	}
 
+	/**
+	 * Changes the submission RT comments status.
+	 * @param $submission object
+	 * @param $commentsStatus int
+	 */
+	function updateCommentsStatus($submission, $commentsStatus) {
+		if (HookRegistry::call('SectionEditorAction::updateCommentsStatus', array(&$submission, &$commentsStatus))) return;
+
+		$submissionDao = &DAORegistry::getDAO('SectionEditorSubmissionDAO');
+		$submission->setCommentsStatus($commentsStatus); // FIXME validate this?
+		$submissionDao->updateSectionEditorSubmission($submission);
+	}
+
 	//
 	// Layout Editing
 	//

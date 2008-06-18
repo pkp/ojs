@@ -367,6 +367,9 @@
 	<message key="article.coverPage.altText">Cover Image</message>
 	<message key="article.accessLogoOpen.altText">Open Access</message>
 	<message key="article.accessLogoRestricted.altText">Restricted Access</message>
+	<message key="article.comments.sectionDefault">Default</message>
+	<message key="article.comments.disable">Disable</message>
+	<message key="article.comments.enable">Enable</message>
 
 	<!-- Submission Tracking - Common -->
 	<message key="submission.summary">Summary</message>
@@ -386,6 +389,7 @@
 	<message key="submission.addSuppFile">Add a Supplementary File</message>
 	<message key="submission.submitter">Submitter</message>
 	<message key="submission.changeSection">Change to</message>
+	<message key="submission.changeComments">Change to</message>
 	<message key="submission.initiated">Initiated</message>
 	<message key="submission.lastModified">Last modified</message>
 	<message key="submission.ask">Ask</message>
@@ -1381,6 +1385,7 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.sections.hideTocTitle">Omit the title of this section from issues' table of contents.</message>
 	<message key="manager.sections.hideTocAuthor">Omit author names for section items from issues' table of contents.</message>
 	<message key="manager.sections.hideAbout">Omit this section from About the Journal.</message>
+	<message key="manager.sections.disableComments">Disable reader comments for this section.</message>
 	<message key="manager.sections.readingTools">Reading Tools</message>
 	<message key="manager.sections.indexed">Indexed</message>
 	<message key="manager.sections.reviewed">Peer Reviewed</message>

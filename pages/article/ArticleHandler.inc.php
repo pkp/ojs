@@ -143,7 +143,8 @@ class ArticleHandler extends Handler {
 
 		$commentDao = &DAORegistry::getDAO('CommentDAO');
 		$enableComments = $journal->getSetting('enableComments');
-		if ($enableComments == COMMENTS_AUTHENTICATED || $enableComments == COMMENTS_UNAUTHENTICATED || $enableComments == COMMENTS_ANONYMOUS) {
+
+		if (($article->getEnableComments()) && ($enableComments == COMMENTS_AUTHENTICATED || $enableComments == COMMENTS_UNAUTHENTICATED || $enableComments == COMMENTS_ANONYMOUS)) {
 			$comments = &$commentDao->getRootCommentsByArticleId($article->getArticleId());
 		}
 
@@ -208,10 +209,11 @@ class ArticleHandler extends Handler {
 		$templateMgr->assign_by_ref('section', $section);
 		$templateMgr->assign('articleId', $articleId);
 		$templateMgr->assign('postingAllowed', (
+			($article->getEnableComments()) && (
 			$enableComments == COMMENTS_UNAUTHENTICATED ||
 			(($enableComments == COMMENTS_AUTHENTICATED ||
 			$enableComments == COMMENTS_ANONYMOUS) &&
-			Validation::isLoggedIn())
+			Validation::isLoggedIn()))
 		));
 		$templateMgr->assign('galleyId', $galleyId);
 		$templateMgr->assign('defineTermsContextId', isset($defineTermsContextId)?$defineTermsContextId:null);
@@ -265,12 +267,13 @@ class ArticleHandler extends Handler {
 
 		$enableComments = $journal->getSetting('enableComments');
 		$templateMgr->assign('postingAllowed', (
+			($article->getEnableComments()) && (
 			$enableComments == COMMENTS_UNAUTHENTICATED ||
 			(($enableComments == COMMENTS_AUTHENTICATED ||
 			$enableComments == COMMENTS_ANONYMOUS) &&
-			Validation::isLoggedIn())
+			Validation::isLoggedIn()))
 		));
-		$templateMgr->assign('postingDisabled', $enableComments == COMMENTS_DISABLED);
+		$templateMgr->assign('postingDisabled', (!$article->getEnableComments() || $enableComments == COMMENTS_DISABLED));
 
 		$templateMgr->assign_by_ref('journalRt', $journalRt);
 		if ($journalRt->getEnabled()) {

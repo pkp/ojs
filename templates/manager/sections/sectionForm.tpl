@@ -118,6 +118,15 @@ function removeSectionEditor(editorId) {
 		{fieldLabel name="hideAbout" key="manager.sections.hideAbout"}
 	</td>
 </tr>
+{if $commentsEnabled}
+<tr valign="top">
+	<td class="label">{fieldLabel name="disableComments" key="comments.readerComments"}</td>
+	<td class="value">
+		<input type="checkbox" name="disableComments" id="disableComments" value="1" {if $disableComments}checked="checked"{/if} />
+		{fieldLabel name="disableComments" key="manager.sections.disableComments"}
+	</td>
+</tr>
+{/if}
 </table>
 <div class="separator"></div>
 

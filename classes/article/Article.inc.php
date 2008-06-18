@@ -32,6 +32,11 @@ define ('AUTHOR_TOC_DEFAULT', 0);
 define ('AUTHOR_TOC_HIDE', 1);
 define ('AUTHOR_TOC_SHOW', 2);
 
+// Article RT comments
+define ('COMMENTS_SECTION_DEFAULT', 0);
+define ('COMMENTS_DISABLE', 1);
+define ('COMMENTS_ENABLE', 2);
+
 class Article extends DataObject {
 
 	/** @var array Authors of this article */
@@ -963,6 +968,73 @@ class Article extends DataObject {
 	 */
 	function setHideAuthor($hideAuthor) {
 		return $this->setData('hideAuthor', $hideAuthor);
+	}
+
+	/**
+	 * Return article RT comments status.
+	 * @return int 
+	 */
+	function getCommentsStatus() {
+		return $this->getData('commentsStatus');
+	}
+
+	/**
+	 * Set article RT comments status.
+	 * @param $commentsStatus boolean
+	 */
+	function setCommentsStatus($commentsStatus) {
+		return $this->setData('commentsStatus', $commentsStatus);
+	}
+
+	/**
+	 * Return locale string corresponding to RT comments status.
+	 * @return string
+	 */
+	function getCommentsStatusString() {
+		switch ($this->getCommentsStatus()) {
+			case COMMENTS_DISABLE:
+				return 'article.comments.disable';
+			case COMMENTS_ENABLE:
+				return 'article.comments.enable';
+			default:
+				return 'article.comments.sectionDefault';
+		}
+	}
+
+	/**
+	 * Return boolean indicating if article RT comments should be enabled.
+	 * Checks both the section and article comments status. Article status
+	 * overrides section status.
+	 * @return int 
+	 */
+	function getEnableComments() {
+		switch ($this->getCommentsStatus()) {
+			case COMMENTS_DISABLE:
+				return false;
+			case COMMENTS_ENABLE:
+				return true;
+			case COMMENTS_SECTION_DEFAULT:
+				$sectionDao =& DAORegistry::getDAO('SectionDAO');
+				$section =& $sectionDao->getSection($this->getSectionId(), $this->getJournalId());
+				if ($section->getDisableComments()) {
+					return false;
+				} else {
+					return true;
+				}
+		}
+	}
+
+	/**
+	 * Get an associative array matching RT comments status codes with locale strings.
+	 * @return array comments status => localeString
+	 */
+	function &getCommentsStatusOptions() {
+		static $commentsStatusOptions = array(
+			COMMENTS_SECTION_DEFAULT => 'article.comments.sectionDefault',
+			COMMENTS_DISABLE => 'article.comments.disable',
+			COMMENTS_ENABLE => 'article.comments.enable'
+		);
+		return $commentsStatusOptions;
 	}
 }
 

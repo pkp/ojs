@@ -97,8 +97,10 @@ class SectionForm extends Form {
 	 * Display the form.
 	 */
 	function display() {
+		$journal =& Request::getJournal();
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('sectionId', $this->sectionId);
+		$templateMgr->assign('commentsEnabled', $journal->getSetting('enableComments'));
 		$templateMgr->assign('helpTopicId','journal.managementPages.sections');
 		parent::display();
 	}
@@ -127,6 +129,7 @@ class SectionForm extends Form {
 					'hideTitle' => $section->getHideTitle(),
 					'hideAuthor' => $section->getHideAuthor(),
 					'hideAbout' => $section->getHideAbout(),
+					'disableComments' => $section->getDisableComments(),
 					'policy' => $section->getPolicy(null), // Localized
 					'assignedEditors' => $sectionEditorsDao->getEditorsBySectionId($journal->getJournalId(), $this->sectionId),
 					'unassignedEditors' => $sectionEditorsDao->getEditorsNotInSection($journal->getJournalId(), $this->sectionId)
@@ -139,7 +142,7 @@ class SectionForm extends Form {
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->readUserVars(array('title', 'abbrev', 'policy', 'identifyType', 'metaIndexed', 'metaReviewed', 'abstractsNotRequired', 'editorRestriction', 'hideTitle', 'hideAuthor', 'hideAbout'));
+		$this->readUserVars(array('title', 'abbrev', 'policy', 'identifyType', 'metaIndexed', 'metaReviewed', 'abstractsNotRequired', 'editorRestriction', 'hideTitle', 'hideAuthor', 'hideAbout', 'disableComments'));
 		$assignedEditorIds = Request::getUserVar('assignedEditorIds');
 		if (empty($assignedEditorIds)) $assignedEditorIds = array();
 		elseif (!is_array($assignedEditorIds)) $assignedEditorIds = array($assignedEditorIds);
@@ -198,6 +201,7 @@ class SectionForm extends Form {
 		$section->setHideTitle($this->getData('hideTitle') ? 1 : 0);
 		$section->setHideAuthor($this->getData('hideAuthor') ? 1 : 0);
 		$section->setHideAbout($this->getData('hideAbout') ? 1 : 0);
+		$section->setDisableComments($this->getData('disableComments') ? 1 : 0);
 		$section->setPolicy($this->getData('policy'), null); // Localized
 
 		if ($section->getSectionId() != null) {

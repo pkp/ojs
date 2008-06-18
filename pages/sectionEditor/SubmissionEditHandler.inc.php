@@ -40,6 +40,8 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$sectionDao = &DAORegistry::getDAO('SectionDAO');
 		$section = &$sectionDao->getSection($submission->getSectionId());
 
+		$enableComments = $journal->getSetting('enableComments');
+
 		$templateMgr = &TemplateManager::getManager();
 
 		$templateMgr->assign_by_ref('submission', $submission);
@@ -51,9 +53,15 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		$templateMgr->assign_by_ref('journalSettings', $journalSettings);
 		$templateMgr->assign('userId', $user->getUserId());
 		$templateMgr->assign('isEditor', $isEditor);
+		$templateMgr->assign('enableComments', $enableComments);
 
 		$sectionDao = &DAORegistry::getDAO('SectionDAO');
 		$templateMgr->assign_by_ref('sections', $sectionDao->getSectionTitles($journal->getJournalId()));
+		if ($enableComments) {
+			import('article.Article');
+			$templateMgr->assign('commentsStatus', $submission->getCommentsStatus());
+			$templateMgr->assign_by_ref('commentsStatusOptions', Article::getCommentsStatusOptions());
+		}
 
 		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
 		$publishedArticle = &$publishedArticleDao->getPublishedArticleByArticleId($submission->getArticleId());
@@ -1278,6 +1286,16 @@ class SubmissionEditHandler extends SectionEditorHandler {
 		Request::redirect(null, null, 'submission', $articleId);
 	}
 
+	/**
+	 * Set RT comments status for article.
+	 * @param $args array ($articleId)
+	 */
+	function updateCommentsStatus($args) {
+		$articleId = isset($args[0]) ? (int) $args[0] : 0;
+		list($journal, $submission) = SubmissionEditHandler::validate($articleId);		
+		SectionEditorAction::updateCommentsStatus($submission, Request::getUserVar('commentsStatus'));
+		Request::redirect(null, null, 'submission', $articleId);
+	}
 
 	//
 	// Layout Editing

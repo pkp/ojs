@@ -430,6 +430,10 @@ class SectionEditorHandler extends Handler {
 		SubmissionEditHandler::updateSection($args);
 	}
 
+	function updateCommentsStatus($args) {
+		import('pages.sectionEditor.SubmissionEditHandler');
+		SubmissionEditHandler::updateCommentsStatus($args);
+	}
 
 	//
 	// Layout Editing

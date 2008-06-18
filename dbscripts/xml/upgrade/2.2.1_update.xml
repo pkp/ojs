@@ -90,4 +90,23 @@
 			ALTER TABLE issues RENAME COLUMN number_new TO number
 		</query>
 	</sql>
+
+	<!-- Bug #3293: Enable user comments on a per section/article basis -->
+	<sql>
+		<!-- Syntax for MySQL. -->
+		<query driver="mysql">
+			ALTER TABLE sections ADD COLUMN disable_comments TINYINT NOT NULL DEFAULT 0
+		</query>
+		<query driver="mysql">
+			ALTER TABLE articles ADD COLUMN comments_status TINYINT NOT NULL DEFAULT 0
+		</query>
+
+		<!-- Syntax for PostgreSQL. -->
+		<query driver="postgres7">
+			ALTER TABLE sections ADD COLUMN disable_comments SMALLINT NOT NULL DEFAULT 0
+		</query>
+		<query driver="postgres7">
+			ALTER TABLE articles ADD COLUMN comments_status SMALLINT NOT NULL DEFAULT 0
+		</query>
+	</sql>
 </data>

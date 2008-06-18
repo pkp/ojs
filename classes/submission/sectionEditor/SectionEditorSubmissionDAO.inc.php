@@ -342,6 +342,7 @@ class SectionEditorSubmissionDAO extends DAO {
 			$article->setCopyeditFileId($sectionEditorSubmission->getCopyeditFileId());
 			$article->setDateStatusModified($sectionEditorSubmission->getDateStatusModified());
 			$article->setLastModified($sectionEditorSubmission->getLastModified());
+			$article->setCommentsStatus($sectionEditorSubmission->getCommentsStatus());
 
 			$this->articleDao->updateArticle($article);
 		}

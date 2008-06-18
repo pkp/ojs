@@ -40,4 +40,11 @@
 		<td class="label">{translate key="submission.lastModified"}</td>
 		<td colspan="2" class="value">{$submission->getLastModified()|date_format:$dateFormatShort}</td>
 	</tr>
+{if $enableComments}
+	<tr>
+		<td class="label">{translate key="comments.readerComments"}</td>
+		<td class="value">{translate key=$submission->getCommentsStatusString()}</td>
+		<td class="value"><form action="{url op="updateCommentsStatus" path=$submission->getArticleId()}" method="post">{translate key="submission.changeComments"} <select name="commentsStatus" size="1" class="selectMenu">{html_options_translate options=$commentsStatusOptions selected=$submission->getCommentsStatus()}</select> <input type="submit" value="{translate key="common.record"}" class="button" /></form></td>
+	</tr>
+{/if}
 </table>

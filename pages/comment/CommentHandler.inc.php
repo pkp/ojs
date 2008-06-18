@@ -137,21 +137,21 @@ class CommentHandler extends Handler {
 		$journalId = $journal->getJournalId();
 		$journalSettingsDao = &DAORegistry::getDAO('JournalSettingsDAO');
 
+		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
+		$article = &$publishedArticleDao->getPublishedArticleByArticleId($articleId);
+
 		// Bring in comment constants
 		$commentDao = &DAORegistry::getDAO('CommentDAO');
 
 		$enableComments = $journal->getSetting('enableComments');
 
-		if (!Validation::isLoggedIn() && $journalSettingsDao->getSetting($journalId,'restrictArticleAccess') || ($enableComments != COMMENTS_ANONYMOUS && $enableComments != COMMENTS_AUTHENTICATED && $enableComments != COMMENTS_UNAUTHENTICATED)) {
+		if ((!Validation::isLoggedIn() && $journalSettingsDao->getSetting($journalId,'restrictArticleAccess')) || (!$article->getEnableComments()) || ($enableComments != COMMENTS_ANONYMOUS && $enableComments != COMMENTS_AUTHENTICATED && $enableComments != COMMENTS_UNAUTHENTICATED)) {
 			Validation::redirectLogin();
 		}
 
 		// Subscription Access
 		$issueDao = &DAORegistry::getDAO('IssueDAO');
 		$issue = &$issueDao->getIssueByArticleId($articleId);
-
-		$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
-		$article = &$publishedArticleDao->getPublishedArticleByArticleId($articleId);
 
 		if (isset($issue) && isset($article)) {
 			import('issue.IssueAction');
