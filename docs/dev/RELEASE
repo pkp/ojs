@@ -43,8 +43,10 @@ OJS release:
      packages against which to build patches)
 
 
-7. Place the new package, patches, and version descriptor on the OJS web site:
+7. Place the new package, patches, version descriptor, and Doxygen docs on the
+   OJS web site:
 
     http://pkp.sfu.ca/ojs/download/
     http://pkp.sfu.ca/ojs/download/patch/
     http://pkp.sfu.ca/ojs/xml/ojs-version.xml
+    http://pkp.sfu.ca/ojs/doxygen
