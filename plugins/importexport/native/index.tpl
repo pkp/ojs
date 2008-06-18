@@ -8,7 +8,8 @@
  *
  * $Id$
  *}
-{translate|escape|assign:"pageTitleTranslated" value="plugins.importexport.native.displayName"}{include file="common/header.tpl"}
+{assign var="pageTitle" value="plugins.importexport.native.displayName"}
+{include file="common/header.tpl"}
 
 <br/>
 

@@ -137,7 +137,7 @@ class DOAJExportDom {
 		$keywords =& XMLCustomWriter::createElement($doc, 'keywords');
 		XMLCustomWriter::appendChild($root, $keywords);
 
-		$subjects = ArticleSearchIndex::filterKeywords($article->getArticleSubject());
+		$subjects = array_map('trim', explode(';', $article->getArticleSubject()));
 
 		foreach ($subjects as $keyword) {
 			XMLCustomWriter::createChildWithText($doc, $keywords, 'keyword', $keyword, false);
