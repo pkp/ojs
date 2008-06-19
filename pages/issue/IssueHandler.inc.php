@@ -39,9 +39,10 @@ class IssueHandler extends Handler {
 		$templateMgr = &TemplateManager::getManager();
 
 		if ($issue != null) {
+			import('file.PublicFileManager');
+			$publicFileManager = &new PublicFileManager();
+
 			if ($styleFileName = $issue->getStyleFileName()) {
-				import('file.PublicFileManager');
-				$publicFileManager = &new PublicFileManager();
 				$templateMgr->addStyleSheet(
 					Request::getBaseUrl() . '/' . $publicFileManager->getJournalFilesPath($journal->getJournalId()) . '/' . $styleFileName
 				);
@@ -56,8 +57,6 @@ class IssueHandler extends Handler {
 			$locale = Locale::getLocale();
 			$templateMgr->assign('locale', $locale);
 
-			import('file.PublicFileManager');
-			$publicFileManager = &new PublicFileManager();
 			$coverPagePath = Request::getBaseUrl() . '/';
 			$coverPagePath .= $publicFileManager->getJournalFilesPath($journal->getJournalId()) . '/';
 			$templateMgr->assign('coverPagePath', $coverPagePath);
@@ -71,7 +70,6 @@ class IssueHandler extends Handler {
 
 				$showToc = false;
 			} else {
-
 				$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
 				$publishedArticles = &$publishedArticleDao->getPublishedArticlesInSections($issue->getIssueId(), true);
 				$templateMgr->assign_by_ref('publishedArticles', $publishedArticles);
@@ -181,6 +179,14 @@ class IssueHandler extends Handler {
 
 			$locale = Locale::getLocale();
 
+			import('file.PublicFileManager');
+			$publicFileManager = &new PublicFileManager();
+			$coverPagePath = Request::getBaseUrl() . '/';
+			$coverPagePath .= $publicFileManager->getJournalFilesPath($journalId) . '/';
+			$templateMgr->assign('coverPagePath', $coverPagePath);
+			$templateMgr->assign('locale', $locale);
+
+
 			if (!$showToc && $issue->getFileName($locale) && $issue->getShowCoverPage($locale)) {
 				$templateMgr->assign('fileName', $issue->getFileName($locale));
 				$templateMgr->assign('width', $issue->getWidth($locale));
@@ -188,25 +194,12 @@ class IssueHandler extends Handler {
 				$templateMgr->assign('coverPageAltText', $issue->getCoverPageAltText($locale));
 				$templateMgr->assign('originalFileName', $issue->getOriginalFileName($locale));
 
-				import('file.PublicFileManager');
-				$publicFileManager = &new PublicFileManager();
-				$coverPagePath = Request::getBaseUrl() . '/';
-				$coverPagePath .= $publicFileManager->getJournalFilesPath($journalId) . '/';
-				$coverPagePath .= $issue->getFileName($locale);
-				$templateMgr->assign('coverPagePath', $coverPagePath);
-
 				$showToc = false;
 			} else {
 				$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
 				$publishedArticles = &$publishedArticleDao->getPublishedArticlesInSections($issue->getIssueId(), true);
 
-				import('file.PublicFileManager');
 				$publicFileManager = &new PublicFileManager();
-				$coverPagePath = Request::getBaseUrl() . '/';
-				$coverPagePath .= $publicFileManager->getJournalFilesPath($journal->getJournalId()) . '/';
-				$templateMgr->assign('coverPagePath', $coverPagePath);
-				$templateMgr->assign('locale', $locale);
-
 				$templateMgr->assign('publishedArticles', $publishedArticles);
 				$showToc = true;
 			}
