@@ -72,22 +72,38 @@
 <div id="content">
 {if $galley}
 	{if $galley->isHTMLGalley()}
+		<div id="topBar">
+			<div id="articleFontSize">
+				{translate key="article.fontSize"}:&nbsp;
+				<a href="#" onclick="setFontSize('{translate|escape:"jsparam" key="article.fontSize.small.altText"}');" class="icon">{icon path="templates/images/icons/" name="font_small"}</a>&nbsp;
+				<a href="#" onclick="setFontSize('{translate|escape:"jsparam" key="article.fontSize.medium.altText"}');" class="icon">{icon path="templates/images/icons/" name="font_medium"}</a>&nbsp;
+				<a href="#" onclick="setFontSize('{translate|escape:"jsparam" key="article.fontSize.large.altText"}');" class="icon">{icon path="templates/images/icons/" name="font_large"}</a>
+			</div>
+		</div>
 		{$galley->getHTMLContents()}
 	{/if}
 {else}
-	{assign var=galleys value=$article->getLocalizedGalleys()}
-	{if $galleys && $subscriptionRequired && $showGalleyLinks}
-		<div id="accessKey">
-			<img src="{$baseUrl}/templates/images/icons/fulltext_open_medium.gif" alt="{translate key="article.accessLogoOpen.altText"}" />
-			{translate key="reader.openAccess"}&nbsp;
-			<img src="{$baseUrl}/templates/images/icons/fulltext_restricted_medium.gif" alt="{translate key="article.accessLogoRestricted.altText"}" />
-			{if $purchaseArticleEnabled}
-				{translate key="reader.subscriptionOrFeeAccess"}
-			{else}
-				{translate key="reader.subscriptionAccess"}
-			{/if}
+	<div id="topBar">
+		{assign var=galleys value=$article->getLocalizedGalleys()}
+		{if $galleys && $subscriptionRequired && $showGalleyLinks}
+			<div id="accessKey">
+				<img src="{$baseUrl}/templates/images/icons/fulltext_open_medium.gif" alt="{translate key="article.accessLogoOpen.altText"}" />
+				{translate key="reader.openAccess"}&nbsp;
+				<img src="{$baseUrl}/templates/images/icons/fulltext_restricted_medium.gif" alt="{translate key="article.accessLogoRestricted.altText"}" />
+				{if $purchaseArticleEnabled}
+					{translate key="reader.subscriptionOrFeeAccess"}
+				{else}
+					{translate key="reader.subscriptionAccess"}
+				{/if}
+			</div>
+		{/if}
+		<div id="articleFontSize">
+				{translate key="article.fontSize"}:&nbsp;
+			<a href="#" onclick="setFontSize('{translate|escape:"jsparam" key="article.fontSize.small.altText"}');" class="icon">{icon path="templates/images/icons/" name="font_small"}</a>&nbsp;
+			<a href="#" onclick="setFontSize('{translate|escape:"jsparam" key="article.fontSize.medium.altText"}');" class="icon">{icon path="templates/images/icons/" name="font_medium"}</a>&nbsp;
+			<a href="#" onclick="setFontSize('{translate|escape:"jsparam" key="article.fontSize.large.altText"}');" class="icon">{icon path="templates/images/icons/" name="font_large"}</a>
 		</div>
-	{/if}
+	</div>
 	<h3>{$article->getArticleTitle()|strip_unsafe_html}</h3>
 	<div><em>{$article->getAuthorString()|escape}</em></div>
 	<br />

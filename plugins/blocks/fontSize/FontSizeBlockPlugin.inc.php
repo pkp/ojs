@@ -22,7 +22,7 @@ class FontSizeBlockPlugin extends BlockPlugin {
 		if ($success) {
 			$this->addLocaleData();
 			$templateMgr =& TemplateManager::getManager();
-			$templateMgr->assign('fontSizerPluginPath', $this->getPluginPath());
+			$templateMgr->assign('fontIconPath', 'templates/images/icons');
 			$additionalHeadData = $templateMgr->get_template_vars('additionalHeadData');
 			$additionalHeadData .= $templateMgr->fetch($this->getTemplatePath() . '/header.tpl');
 			$templateMgr->assign('additionalHeadData', $additionalHeadData);

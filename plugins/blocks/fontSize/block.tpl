@@ -10,7 +10,7 @@
  *}
 <div class="block" id="sidebarFontSize">
 	<span class="blockTitle">{translate key="plugins.block.fontSize.title"}</span>
-	<a href="#" onclick="setFontSize('{translate|escape:"jsparam" key="plugins.block.fontSize.small.alt"}');" class="icon">{icon path="$fontSizerPluginPath/" name="small"}</a>&nbsp;
-	<a href="#" onclick="setFontSize('{translate|escape:"jsparam" key="plugins.block.fontSize.medium.alt"}');" class="icon">{icon path="$fontSizerPluginPath/" name="medium"}</a>&nbsp;
-	<a href="#" onclick="setFontSize('{translate|escape:"jsparam" key="plugins.block.fontSize.large.alt"}');" class="icon">{icon path="$fontSizerPluginPath/" name="large"}</a>
+	<a href="#" onclick="setFontSize('{translate|escape:"jsparam" key="plugins.block.fontSize.small"}');" class="icon">{icon path="$fontIconPath/" name="font_small"}</a>&nbsp;
+	<a href="#" onclick="setFontSize('{translate|escape:"jsparam" key="plugins.block.fontSize.medium"}');" class="icon">{icon path="$fontIconPath/" name="font_medium"}</a>&nbsp;
+	<a href="#" onclick="setFontSize('{translate|escape:"jsparam" key="plugins.block.fontSize.large"}');" class="icon">{icon path="$fontIconPath/" name="font_large"}</a>
 </div>

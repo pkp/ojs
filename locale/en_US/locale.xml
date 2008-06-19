@@ -372,6 +372,10 @@
 	<message key="article.comments.sectionDefault">Default</message>
 	<message key="article.comments.disable">Disable</message>
 	<message key="article.comments.enable">Enable</message>
+	<message key="article.fontSize">Font Size</message>
+	<message key="article.fontSize.small.altText">Small</message>
+	<message key="article.fontSize.medium.altText">Medium</message>
+	<message key="article.fontSize.large.altText">Large</message>
 
 	<!-- Submission Tracking - Common -->
 	<message key="submission.summary">Summary</message>
@@ -2851,9 +2855,9 @@ Validation may fail on search URLs that require posted form data.]]></message>
 	<message key="icon.mail.alt">Mail</message>
 	<message key="icon.info.alt">Info</message>
 	<message key="icon.folder.alt">Folder</message>
-	<message key="icon.small.alt">Small</message>
-	<message key="icon.medium.alt">Medium</message>
-	<message key="icon.large.alt">Large</message>
+	<message key="icon.font_small.alt">Small</message>
+	<message key="icon.font_medium.alt">Medium</message>
+	<message key="icon.font_large.alt">Large</message>
 	
 	<!-- Debug messages -->
 	<message key="debug.executionTime">Page generated in</message>

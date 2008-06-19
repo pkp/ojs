@@ -1,14 +1,14 @@
 /**
- * large.css
+ * fontSmall.css
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * Site-wide shared stylesheet for large fonts.
+ * Site-wide shared stylesheet for small fonts.
  *
  * $Id$
  */
 
 body {
-	font-size: 1.2em;
+	font-size: 0.8em;
 }

@@ -49,16 +49,35 @@
 
 #content img.accessLogo {
 	display: inline;
+	vertical-align: middle;
+	margin: 0;
+	padding: 0;
+}
+
+#topBar {
+	width: 100%;
+	padding-top: 1em;
+	padding-bottom: 2.5em;
+}
+
+#articleFontSize {
+	float: right;
+}
+
+#articleFontSize img {
+	display: inline;
+	vertical-align: middle;
 	margin: 0;
 	padding: 0;
 }
 
 #accessKey {
-	margin-bottom: 2em;
+	float: left;
 }
 
 #accessKey img {
 	display: inline;
+	vertical-align: middle;
 	margin: 0;
 	padding: 0;
 }
