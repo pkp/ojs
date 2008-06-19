@@ -50,7 +50,8 @@
 
 <h4>{translate key="manager.setup.reviewGuidelines"}</h4>
 
-<p>{translate key="manager.setup.reviewGuidelinesDescription"}</p>
+{url|assign:"reviewFormsUrl" op="reviewForms"}
+<p>{translate key="manager.setup.reviewGuidelinesDescription" reviewFormsUrl=$reviewFormsUrl}</p>
 
 <p><textarea name="reviewGuidelines[{$formLocale|escape}]" id="reviewGuidelines" rows="12" cols="60" class="textArea">{$reviewGuidelines[$formLocale]|escape}</textarea></p>
 

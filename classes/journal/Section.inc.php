@@ -77,6 +77,22 @@ class Section extends DataObject {
 	}
 
 	/**
+	 * Get ID of primary review form.
+	 * @return int
+	 */
+	function getReviewFormId() {
+		return $this->getData('reviewFormId');
+	}
+
+	/**
+	 * Set ID of primary review form.
+	 * @param $reviewFormId int
+	 */
+	function setReviewFormId($reviewFormId) {
+		return $this->setData('reviewFormId', $reviewFormId);
+	}
+
+	/**
 	 * Get title of section.
 	 * @param $locale string
 	 * @return string

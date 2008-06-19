@@ -36,7 +36,9 @@
 
 	<!-- Journal Management -->
 	<message key="manager.reviewForms">Review Forms</message>
-	
+
+	<message key="manager.reviewForms.list.description">The peer review forms created here will be presented to reviewers to complete, instead of the default form which consists of two open text boxes, the first "for author and editor," and the second "for editor." Review forms can be designated for a specific journal section, and editors will have the option to choose which form to use in assigning the review. In all cases, editors will have the option of including the reviews in corresponding with the author.</message>
+	<message key="manager.reviewForms.noneChosen">None / Free Form Review</message>
 	<message key="manager.reviewForms.noneCreated">No review forms have been created.</message>
 	<message key="manager.reviewForms.noneUsed">No review forms have been used.</message>
 	<message key="manager.reviewForms.create">Create Review Form</message>
@@ -1098,7 +1100,7 @@ Note that the OAI interface can be disabled for this site by editing the OJS sys
 	<message key="manager.setup.reviewOptions.showEnsuringLink"><![CDATA[Provide links to <a href="javascript:openHelp('{$blindReviewHelpId}')" class="action">Ensuring a Blind Review</a> on pages where authors and reviewers upload files.]]></message>
 	<message key="manager.setup.peerReviewPolicy2">Peer review policy</message>
 	<message key="manager.setup.reviewGuidelines">Review Guidelines</message>
-	<message key="manager.setup.reviewGuidelinesDescription">The Review Guidelines provide reviewers with criteria for judging a submission's suitability for publication in the journal, as well as any special instructions for preparing an effective and helpful review.</message>
+	<message key="manager.setup.reviewGuidelinesDescription"><![CDATA[The Review Guidelines will provide reviewers with criteria for judging a submission's suitability for publication in the journal, and can include any special instructions for preparing an effective and helpful review. In conducting the review, reviewers are presented with with two open text boxes, the first "for author and editor," and the second "for editor." Alternatively, the Journal Manager can create a peer review form under <a href="{$reviewFormsUrl}" class="action">Review Forms</a>. In all cases, editors will have the option of including the reviews in corresponding with the author.]]></message>
 	<message key="manager.setup.reviewProcess">Review Process</message>
 	<message key="manager.setup.reviewProcessDescription"><![CDATA[OJS supports two models for managing the review process. The Standard Review Process is recommended because it steps reviewers through the process, ensures a complete review history for each submission, and takes advantage of automatic reminder notification, and standard recommendations for submissions (Accept; Accept with revisions; Submit for review; Submit elsewhere; Decline; See comments).<br /><br />Select one of the following:]]></message>
 	<message key="manager.setup.reviewProcessStandard">Standard Review Process</message>
@@ -1378,6 +1380,7 @@ Select a model for handling these aspects of the editorial process. (To designat
 	<message key="manager.sections.form.titleRequired">A title is required for the section.</message>
 	<message key="manager.sections.form.abbrevRequired">An abbreviated title is required for the section</message>
 	<message key="manager.sections.form.mustAllowPermission">Please ensure that at least one checkbox is checked for each Section Editor assignment.</message>
+	<message key="manager.sections.form.reviewFormId">Please ensure that you have chosen a valid review form.</message>
 	<message key="manager.section.sectionEditorInstructions"><![CDATA[Add a Section Editor to this section from the available Section Editors. Once added, designate whether the Section Editor will oversee the REVIEW (peer review) and/or the EDITING (copyediting, layout and proofreading) of submissions to this section. Section Editors are created by clicking <a href="{$sectionEditorsUrl}">Section Editors</a> under Roles in Journal Management.]]></message>
 	<message key="manager.section.submissionsToThisSection">Submissions made to this section of the journal</message>
 	<message key="manager.sections.submissionIndexing">Will not be included in the indexing of the journal</message>

@@ -88,6 +88,25 @@ class ReviewFormDAO extends DAO {
 	}
 
 	/**
+	 * Check if a review form exists with the specified ID.
+	 * @param $reviewFormId int
+	 * @param $journalId int
+	 * @return boolean
+	 */
+	function reviewFormExists($reviewFormId, $journalId) {
+		$result = &$this->retrieve(
+			'SELECT COUNT(*) FROM review_forms WHERE review_form_id = ? AND journal_id = ?',
+			array($reviewFormId, $journalId)
+		);
+		$returner = isset($result->fields[0]) && $result->fields[0] == 1 ? true : false;
+
+		$result->Close();
+		unset($result);
+
+		return $returner;
+	}
+
+	/**
 	 * Get the list of fields for which data can be localized.
 	 * @return array
 	 */

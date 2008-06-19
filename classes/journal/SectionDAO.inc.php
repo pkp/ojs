@@ -134,6 +134,7 @@ class SectionDAO extends DAO {
 		$section = &new Section();
 		$section->setSectionId($row['section_id']);
 		$section->setJournalId($row['journal_id']);
+		$section->setReviewFormId($row['review_form_id']);
 		$section->setSequence($row['seq']);
 		$section->setMetaIndexed($row['meta_indexed']);
 		$section->setMetaReviewed($row['meta_reviewed']);
@@ -176,11 +177,12 @@ class SectionDAO extends DAO {
 	function insertSection(&$section) {
 		$this->update(
 			'INSERT INTO sections
-				(journal_id, seq, meta_indexed, meta_reviewed, abstracts_not_required, editor_restricted, hide_title, hide_author, hide_about, disable_comments)
+				(journal_id, review_form_id, seq, meta_indexed, meta_reviewed, abstracts_not_required, editor_restricted, hide_title, hide_author, hide_about, disable_comments)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
 			array(
 				$section->getJournalId(),
+				$section->getReviewFormId(),
 				$section->getSequence() == null ? 0 : $section->getSequence(),
 				$section->getMetaIndexed() ? 1 : 0,
 				$section->getMetaReviewed() ? 1 : 0,
@@ -206,6 +208,7 @@ class SectionDAO extends DAO {
 		$returner = $this->update(
 			'UPDATE sections
 				SET
+					review_form_id = ?,
 					seq = ?,
 					meta_indexed = ?,
 					meta_reviewed = ?,
@@ -217,6 +220,7 @@ class SectionDAO extends DAO {
 					disable_comments = ?
 				WHERE section_id = ?',
 			array(
+				$section->getReviewFormId(),
 				$section->getSequence(),
 				$section->getMetaIndexed(),
 				$section->getMetaReviewed(),

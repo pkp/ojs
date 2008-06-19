@@ -10,7 +10,7 @@
 {assign var="pageTitle" value="manager.reviewForms"}
 {include file="common/header.tpl"}
 
-<br/>
+<p>{translate key="manager.reviewForms.list.description"}</p>
 
 <a name="reviewForms"></a>
 

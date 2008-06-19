@@ -219,98 +219,99 @@ function confirmSubmissionCheck() {
 	<tr>
 		<td colspan="2">&nbsp;</td>
 	</tr>
-{/if}
-{if $reviewAssignment->getReviewFormId() > 0}
-<tr valign="top">
-	<td>{$currentStep|escape}.{assign var="currentStep" value=$currentStep+1}</td>
-	<td><span class="instruct">{translate key="reviewer.article.enterReviewForm"}</span></td>
-</tr>
-<tr valign="top">
-	<td>&nbsp;</td>
-	<td>
-		{translate key="submission.reviewForm"} 
-		{if $confirmedStatus and not $declined}
-			<a href="{url op="editReviewFormResponse" path=$reviewId|to_array:$reviewAssignment->getReviewFormId()}" class="icon">{icon name="comment"}</a>
-		{else}
-			 {icon name="comment" disabled="disabled"}
-		{/if}
-	</td>
-</tr>
-<tr>
-	<td colspan="2">&nbsp;</td>
-</tr>
-{/if}
-<tr valign="top">
-	<td>{$currentStep|escape}.{assign var="currentStep" value=$currentStep+1}</td>
-	<td><span class="instruct">{translate key="reviewer.article.enterReviewA"}</span></td>
-</tr>
-<tr valign="top">
-	<td>&nbsp;</td>
-	<td>
-		{translate key="submission.logType.review"} 
-		{if $confirmedStatus and not $declined}
-			<a href="javascript:openComments('{url op="viewPeerReviewComments" path=$articleId|to_array:$reviewId}');" class="icon">{icon name="comment"}</a>
-		{else}
-			 {icon name="comment" disabled="disabled"}
-		{/if}
-	</td>
-</tr>
-<tr>
-	<td colspan="2">&nbsp;</td>
-</tr>
-<tr valign="top">
-	<td>{$currentStep|escape}.{assign var="currentStep" value=$currentStep+1}</td>
-	<td><span class="instruct">{translate key="reviewer.article.uploadFile"}</span></td>
-</tr>
-<tr valign="top">
-	<td>&nbsp;</td>
-	<td>
-		<table class="data" width="100%">
-			{foreach from=$submission->getReviewerFileRevisions() item=reviewerFile key=key}
-				{assign var=uploadedFileExists value="1"}
-				<tr valign="top">
-				<td class="label" width="30%">
-					{if $key eq "0"}
-						{translate key="reviewer.article.uploadedFile"}
-					{/if}
-				</td>
-				<td class="value" width="70%">
-					<a href="{url op="downloadFile" path=$reviewId|to_array:$articleId:$reviewerFile->getFileId():$reviewerFile->getRevision()}" class="file">{$reviewerFile->getFileName()|escape}</a>
-					{$reviewerFile->getDateModified()|date_format:$dateFormatShort}
-					{if ($submission->getRecommendation() === null || $submission->getRecommendation() === '') && (!$submission->getCancelled())}
-						<a class="action" href="{url op="deleteReviewerVersion" path=$reviewId|to_array:$reviewerFile->getFileId():$reviewerFile->getRevision()}">{translate key="common.delete"}</a>
-					{/if}
-				</td>
-				</tr>
-			{foreachelse}
-				<tr valign="top">
-				<td class="label" width="30%">
-					{translate key="reviewer.article.uploadedFile"}
-				</td>
-				<td class="nodata">
-					{translate key="common.none"}
-				</td>
-				</tr>
-			{/foreach}
-		</table>
-		{if $submission->getRecommendation() === null || $submission->getRecommendation() === ''}
-			<form method="post" action="{url op="uploadReviewerVersion"}" enctype="multipart/form-data">
-				<input type="hidden" name="reviewId" value="{$reviewId|escape}" />
-				<input type="file" name="upload" {if not $confirmedStatus or $declined or $submission->getCancelled()}disabled="disabled"{/if} class="uploadField" />
-				<input type="submit" name="submit" value="{translate key="common.upload"}" {if not $confirmedStatus or $declined or $submission->getCancelled()}disabled="disabled"{/if} class="button" />
-			</form>
-
-			{if $currentJournal->getSetting('showEnsuringLink')}
-			<span class="instruct">
-				<a class="action" href="javascript:openHelp('{get_help_id key="editorial.sectionEditorsRole.review.blindPeerReview" url="true"}')">{translate key="reviewer.article.ensuringBlindReview"}</a>
-			</span>
+{/if}{* $currentJournal->getSetting('requireReviewerCompetingInterests') *}
+{if $reviewAssignment->getReviewFormId()}
+	<tr valign="top">
+		<td>{$currentStep|escape}.{assign var="currentStep" value=$currentStep+1}</td>
+		<td><span class="instruct">{translate key="reviewer.article.enterReviewForm"}</span></td>
+	</tr>
+	<tr valign="top">
+		<td>&nbsp;</td>
+		<td>
+			{translate key="submission.reviewForm"} 
+			{if $confirmedStatus and not $declined}
+				<a href="{url op="editReviewFormResponse" path=$reviewId|to_array:$reviewAssignment->getReviewFormId()}" class="icon">{icon name="comment"}</a>
+			{else}
+				 {icon name="comment" disabled="disabled"}
 			{/if}
-		{/if}
-	</td>
-</tr>
-<tr>
-	<td colspan="2">&nbsp;</td>
-</tr>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2">&nbsp;</td>
+	</tr>
+{else}{* $reviewAssignment->getReviewFormId() *}
+	<tr valign="top">
+		<td>{$currentStep|escape}.{assign var="currentStep" value=$currentStep+1}</td>
+		<td><span class="instruct">{translate key="reviewer.article.enterReviewA"}</span></td>
+	</tr>
+	<tr valign="top">
+		<td>&nbsp;</td>
+		<td>
+			{translate key="submission.logType.review"} 
+			{if $confirmedStatus and not $declined}
+				<a href="javascript:openComments('{url op="viewPeerReviewComments" path=$articleId|to_array:$reviewId}');" class="icon">{icon name="comment"}</a>
+			{else}
+				 {icon name="comment" disabled="disabled"}
+			{/if}
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2">&nbsp;</td>
+	</tr>
+	<tr valign="top">
+		<td>{$currentStep|escape}.{assign var="currentStep" value=$currentStep+1}</td>
+		<td><span class="instruct">{translate key="reviewer.article.uploadFile"}</span></td>
+	</tr>
+	<tr valign="top">
+		<td>&nbsp;</td>
+		<td>
+			<table class="data" width="100%">
+				{foreach from=$submission->getReviewerFileRevisions() item=reviewerFile key=key}
+					{assign var=uploadedFileExists value="1"}
+					<tr valign="top">
+					<td class="label" width="30%">
+						{if $key eq "0"}
+							{translate key="reviewer.article.uploadedFile"}
+						{/if}
+					</td>
+					<td class="value" width="70%">
+						<a href="{url op="downloadFile" path=$reviewId|to_array:$articleId:$reviewerFile->getFileId():$reviewerFile->getRevision()}" class="file">{$reviewerFile->getFileName()|escape}</a>
+						{$reviewerFile->getDateModified()|date_format:$dateFormatShort}
+						{if ($submission->getRecommendation() === null || $submission->getRecommendation() === '') && (!$submission->getCancelled())}
+							<a class="action" href="{url op="deleteReviewerVersion" path=$reviewId|to_array:$reviewerFile->getFileId():$reviewerFile->getRevision()}">{translate key="common.delete"}</a>
+						{/if}
+					</td>
+					</tr>
+				{foreachelse}
+					<tr valign="top">
+					<td class="label" width="30%">
+						{translate key="reviewer.article.uploadedFile"}
+					</td>
+					<td class="nodata">
+						{translate key="common.none"}
+					</td>
+					</tr>
+				{/foreach}
+			</table>
+			{if $submission->getRecommendation() === null || $submission->getRecommendation() === ''}
+				<form method="post" action="{url op="uploadReviewerVersion"}" enctype="multipart/form-data">
+					<input type="hidden" name="reviewId" value="{$reviewId|escape}" />
+					<input type="file" name="upload" {if not $confirmedStatus or $declined or $submission->getCancelled()}disabled="disabled"{/if} class="uploadField" />
+					<input type="submit" name="submit" value="{translate key="common.upload"}" {if not $confirmedStatus or $declined or $submission->getCancelled()}disabled="disabled"{/if} class="button" />
+				</form>
+	
+				{if $currentJournal->getSetting('showEnsuringLink')}
+				<span class="instruct">
+					<a class="action" href="javascript:openHelp('{get_help_id key="editorial.sectionEditorsRole.review.blindPeerReview" url="true"}')">{translate key="reviewer.article.ensuringBlindReview"}</a>
+				</span>
+				{/if}
+			{/if}
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2">&nbsp;</td>
+	</tr>
+{/if}{* $reviewAssignment->getReviewFormId() *}
 <tr valign="top">
 	<td>{$currentStep|escape}.{assign var="currentStep" value=$currentStep+1}</td>
 	<td><span class="instruct">{translate key="reviewer.article.selectRecommendation"}</span></td>

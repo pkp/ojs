@@ -50,6 +50,7 @@ class SectionForm extends Form {
 		$this->addCheck(new FormValidatorLocale($this, 'title', 'required', 'manager.sections.form.titleRequired'));
 		$this->addCheck(new FormValidatorLocale($this, 'abbrev', 'required', 'manager.sections.form.abbrevRequired'));
 		$this->addCheck(new FormValidatorPost($this));
+		$this->addCheck(new FormValidatorCustom($this, 'reviewFormId', 'optional', 'manager.sections.form.reviewFormId', array(DAORegistry::getDAO('ReviewFormDAO'), 'reviewFormExists'), array($journal->getJournalId())));
 
 		$this->includeSectionEditor = $this->omitSectionEditor = null;
 
@@ -99,9 +100,19 @@ class SectionForm extends Form {
 	function display() {
 		$journal =& Request::getJournal();
 		$templateMgr = &TemplateManager::getManager();
+
 		$templateMgr->assign('sectionId', $this->sectionId);
 		$templateMgr->assign('commentsEnabled', $journal->getSetting('enableComments'));
 		$templateMgr->assign('helpTopicId','journal.managementPages.sections');
+
+		$reviewFormDao =& DAORegistry::getDAO('ReviewFormDAO');
+		$reviewForms =& $reviewFormDao->getJournalActiveReviewForms($journal->getJournalId());
+		$reviewFormOptions = array();
+		while ($reviewForm =& $reviewForms->next()) {
+			$reviewFormOptions[$reviewForm->getReviewFormId()] = $reviewForm->getReviewFormTitle();
+		}
+		$templateMgr->assign_by_ref('reviewFormOptions', $reviewFormOptions);
+
 		parent::display();
 	}
 
@@ -121,6 +132,7 @@ class SectionForm extends Form {
 				$this->_data = array(
 					'title' => $section->getTitle(null), // Localized
 					'abbrev' => $section->getAbbrev(null), // Localized
+					'reviewFormId' => $section->getReviewFormId(),
 					'metaIndexed' => !$section->getMetaIndexed(), // #2066: Inverted
 					'metaReviewed' => !$section->getMetaReviewed(), // #2066: Inverted
 					'abstractsNotRequired' => $section->getAbstractsNotRequired(),
@@ -142,7 +154,7 @@ class SectionForm extends Form {
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->readUserVars(array('title', 'abbrev', 'policy', 'identifyType', 'metaIndexed', 'metaReviewed', 'abstractsNotRequired', 'editorRestriction', 'hideTitle', 'hideAuthor', 'hideAbout', 'disableComments'));
+		$this->readUserVars(array('title', 'abbrev', 'policy', 'reviewFormId', 'identifyType', 'metaIndexed', 'metaReviewed', 'abstractsNotRequired', 'editorRestriction', 'hideTitle', 'hideAuthor', 'hideAbout', 'disableComments'));
 		$assignedEditorIds = Request::getUserVar('assignedEditorIds');
 		if (empty($assignedEditorIds)) $assignedEditorIds = array();
 		elseif (!is_array($assignedEditorIds)) $assignedEditorIds = array($assignedEditorIds);
@@ -193,6 +205,7 @@ class SectionForm extends Form {
 
 		$section->setTitle($this->getData('title'), null); // Localized
 		$section->setAbbrev($this->getData('abbrev'), null); // Localized
+		$section->setReviewFormId($this->getData('reviewFormId'));
 		$section->setMetaIndexed($this->getData('metaIndexed') ? 0 : 1); // #2066: Inverted
 		$section->setMetaReviewed($this->getData('metaReviewed') ? 0 : 1); // #2066: Inverted
 		$section->setAbstractsNotRequired($this->getData('abstractsNotRequired') ? 1 : 0);

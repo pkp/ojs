@@ -103,6 +103,19 @@ class SectionEditorAction extends Action {
 			$reviewAssignment->setDateAssigned(Core::getCurrentDate());
 			$reviewAssignment->setRound($round);
 
+			// Assign review form automatically if needed
+			$journalId = $sectionEditorSubmission->getJournalId();
+			$sectionDao =& DAORegistry::getDAO('SectionDAO');
+			$reviewFormDao =& DAORegistry::getDAO('ReviewFormDAO');
+
+			$sectionId =& $sectionEditorSubmission->getSectionId();
+			$section =& $sectionDao->getSection($sectionId, $journalId);
+			if ($section && ($reviewFormId = (int) $section->getReviewFormId())) {
+				if ($reviewFormDao->reviewFormExists($reviewFormId, $journalId)) {
+					$reviewAssignment->setReviewFormId($reviewFormId);
+				}
+			}
+
 			$sectionEditorSubmission->addReviewAssignment($reviewAssignment);
 			$sectionEditorSubmissionDao->updateSectionEditorSubmission($sectionEditorSubmission);
 

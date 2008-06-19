@@ -137,11 +137,11 @@
  	<tr valign="top">
 		<td class="label">{translate key="submission.reviewForm"}</td>
 		<td>
-		{if $reviewAssignment->getReviewFormId() > 0}
+		{if $reviewAssignment->getReviewFormId()}
 			{assign var="reviewFormId" value=$reviewAssignment->getReviewFormId()}
 			{$reviewFormTitles[$reviewFormId]}
 		{else}
-			{translate key="common.none"}
+			{translate key="manager.reviewForms.noneChosen"}
 		{/if}
 		{if !$reviewAssignment->getDateCompleted()}
 		&nbsp;&nbsp;&nbsp;&nbsp;<a class="action" href="{url op="selectReviewForm" path=$submission->getArticleId()|to_array:$reviewAssignment->getReviewId()}"{if $reviewFormResponses[$reviewId]} onclick="return confirm('{translate|escape:"jsparam" key="editor.article.confirmChangeReviewForm"}')"{/if}>{translate key="editor.article.selectReviewForm"}</a>{if $reviewAssignment->getReviewFormId() > 0}&nbsp;&nbsp;&nbsp;&nbsp;<a class="action" href="{url op="clearReviewForm" path=$submission->getArticleId()|to_array:$reviewAssignment->getReviewId()}"{if $reviewFormResponses[$reviewId]} onclick="return confirm('{translate|escape:"jsparam" key="editor.article.confirmChangeReviewForm"}')"{/if}>{translate key="editor.article.clearReviewForm"}</a>{/if}
