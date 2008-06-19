@@ -267,13 +267,15 @@ class ArticleHandler extends Handler {
 
 		$enableComments = $journal->getSetting('enableComments');
 		$templateMgr->assign('postingAllowed', (
-			($article->getEnableComments()) && (
-			$enableComments == COMMENTS_UNAUTHENTICATED ||
-			(($enableComments == COMMENTS_AUTHENTICATED ||
-			$enableComments == COMMENTS_ANONYMOUS) &&
-			Validation::isLoggedIn()))
+			$article->getEnableComments() && 
+			$enableComments != COMMENTS_DISABLED
 		));
-		$templateMgr->assign('postingDisabled', (!$article->getEnableComments() || $enableComments == COMMENTS_DISABLED));
+
+		$templateMgr->assign('postingDisabled', (
+			($enableComments == COMMENTS_AUTHENTICATED ||
+			$enableComments == COMMENTS_ANONYMOUS) &&
+			!Validation::isLoggedIn())
+		);
 
 		$templateMgr->assign_by_ref('journalRt', $journalRt);
 		if ($journalRt->getEnabled()) {
