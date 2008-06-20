@@ -91,6 +91,8 @@ class MetadataForm extends Form {
 				'abstract' => $article->getAbstract(null), // Localized
 				'coverPageAltText' => $article->getCoverPageAltText(null), // Localized
 				'showCoverPage' => $article->getShowCoverPage(null), // Localized
+				'hideCoverPageToc' => $article->getHideCoverPageToc(null), // Localized
+				'hideCoverPageAbstract' => $article->getHideCoverPageAbstract(null), // Localized
 				'originalFileName' => $article->getOriginalFileName(null), // Localized
 				'fileName' => $article->getFileName(null), // Localized
 				'width' => $article->getWidth(null), // Localized
@@ -138,7 +140,7 @@ class MetadataForm extends Form {
 	 */
 	function getLocaleFieldNames() {
 		return array(
-			'title', 'abstract', 'coverPageAltText', 'showCoverPage', 'originalFileName', 'fileName', 'width', 'height',
+			'title', 'abstract', 'coverPageAltText', 'showCoverPage', 'hideCoverPageToc', 'hideCoverPageAbstract', 'originalFileName', 'fileName', 'width', 'height',
 			'discipline', 'subjectClass', 'subject', 'coverageGeo', 'coverageChron', 'coverageSample', 'type', 'sponsor'
 		);
 	}
@@ -194,6 +196,8 @@ class MetadataForm extends Form {
 				'abstract',
 				'coverPageAltText',
 				'showCoverPage',
+				'hideCoverPageToc',
+				'hideCoverPageAbstract',
 				'originalFileName',
 				'fileName',
 				'width',
@@ -260,6 +264,22 @@ class MetadataForm extends Form {
 			}
 		}
 		$article->setShowCoverPage($showCoverPage, null); // Localized
+
+		$hideCoverPageToc = array_map(create_function('$arrayElement', 'return (int)$arrayElement;'), (array) $this->getData('hideCoverPageToc'));
+		foreach (array_keys($this->getData('coverPageAltText')) as $locale) {
+			if (!array_key_exists($locale, $hideCoverPageToc)) {
+				$hideCoverPageToc[$locale] = 0;
+			}
+		}
+		$article->setHideCoverPageToc($hideCoverPageToc, null); // Localized
+
+		$hideCoverPageAbstract = array_map(create_function('$arrayElement', 'return (int)$arrayElement;'), (array) $this->getData('hideCoverPageAbstract'));
+		foreach (array_keys($this->getData('coverPageAltText')) as $locale) {
+			if (!array_key_exists($locale, $hideCoverPageAbstract)) {
+				$hideCoverPageAbstract[$locale] = 0;
+			}
+		}
+		$article->setHideCoverPageAbstract($hideCoverPageAbstract, null); // Localized
 
 		$article->setDiscipline($this->getData('discipline'), null); // Localized
 		$article->setSubjectClass($this->getData('subjectClass'), null); // Localized

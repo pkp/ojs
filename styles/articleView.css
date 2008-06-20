@@ -82,6 +82,18 @@
 	padding: 0;
 }
 
+#articleCoverImage {
+	width: 100%;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	clear: left;
+}
+
+#articleCoverImage img {
+	display: block;
+	border: 0;
+}
+
 div.rtSeparator {
 	width: 100%;
 	padding: 0;

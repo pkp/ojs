@@ -225,6 +225,14 @@ function moveAuthor(dir, authorIndex) {
 		<td>&nbsp;</td>
 		<td class="value"><span class="instruct">{translate key="common.altTextInstructions"}</span></td>
 	</tr>
+	<tr valign="top">
+		<td width="20%" class="label">{fieldLabel name="hideCoverPageToc" key="editor.article.coverPageDisplay"}</td>
+		<td width="80%" class="value"><input type="checkbox" name="hideCoverPageToc[{$formLocale|escape}]" id="hideCoverPageToc" value="1" {if $hideCoverPageToc[$formLocale]} checked="checked"{/if} /> <label for="hideCoverPageToc">{translate key="editor.article.hideCoverPageToc"}</label></td>
+	</tr>
+	<tr valign="top">
+		<td width="20%" class="label">&nbsp;</td>
+		<td class="label" class="value"><input type="checkbox" name="hideCoverPageAbstract[{$formLocale|escape}]" id="hideCoverPageAbstract" value="1" {if $hideCoverPageAbstract[$formLocale]} checked="checked"{/if} /> <label for="hideCoverPageAbstract">{translate key="editor.article.hideCoverPageAbstract"}</label></td>
+	</tr>
 </table>
 
 <div class="separator"></div>

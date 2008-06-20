@@ -717,6 +717,42 @@ class Article extends DataObject {
 	}
 
 	/**
+	 * get hide cover page thumbnail in Toc
+	 * @param $locale string
+	 * @return int
+	 */
+	function getHideCoverPageToc($locale) {
+		return $this->getData('hideCoverPageToc', $locale);
+	}
+
+	/**
+	 * set hide cover page thumbnail in Toc
+	 * @param $hideCoverPageToc int
+	 * @param $locale string
+	 */
+	function setHideCoverPageToc($hideCoverPageToc, $locale) {
+		return $this->setData('hideCoverPageToc', $hideCoverPageToc, $locale);
+	}
+
+	/**
+	 * get hide cover page in abstract view
+	 * @param $locale string
+	 * @return int
+	 */
+	function getHideCoverPageAbstract($locale) {
+		return $this->getData('hideCoverPageAbstract', $locale);
+	}
+
+	/**
+	 * set hide cover page in abstract view
+	 * @param $hideCoverPageAbstract int
+	 * @param $locale string
+	 */
+	function setHideCoverPageAbstract($hideCoverPageAbstract, $locale) {
+		return $this->setData('hideCoverPageAbstract', $hideCoverPageAbstract, $locale);
+	}
+
+	/**
 	 * Get comments to editor.
 	 * @return string
 	 */

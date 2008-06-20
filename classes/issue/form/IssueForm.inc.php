@@ -166,6 +166,8 @@ class IssueForm extends Form {
 				'coverPageDescription' => $issue->getCoverPageDescription(null), // Localized
 				'coverPageAltText' => $issue->getCoverPageAltText(null), // Localized
 				'showCoverPage' => $issue->getShowCoverPage(null), // Localized
+				'hideCoverPageArchives' => $issue->getHideCoverPageArchives(null), // Localized
+				'hideCoverPageCover' => $issue->getHideCoverPageCover(null), // Localized
 				'styleFileName' => $issue->getStyleFileName(),
 				'originalStyleFileName' => $issue->getOriginalStyleFileName()
 			);
@@ -277,6 +279,8 @@ class IssueForm extends Form {
 			'coverPageDescription',
 			'coverPageAltText',
 			'showCoverPage',
+			'hideCoverPageArchives',
+			'hideCoverPageCover',
 			'articles',
 			'styleFileName',
 			'originalStyleFileName'
@@ -334,6 +338,22 @@ class IssueForm extends Form {
 			}
 		}
 		$issue->setShowCoverPage($showCoverPage, null); // Localized
+
+		$hideCoverPageArchives = array_map(create_function('$arrayElement', 'return (int)$arrayElement;'), (array) $this->getData('hideCoverPageArchives'));
+		foreach (array_keys($this->getData('coverPageDescription')) as $locale) {
+			if (!array_key_exists($locale, $hideCoverPageArchives)) {
+				$hideCoverPageArchives[$locale] = 0;
+			}
+		}
+		$issue->setHideCoverPageArchives($hideCoverPageArchives, null); // Localized
+
+		$hideCoverPageCover = array_map(create_function('$arrayElement', 'return (int)$arrayElement;'), (array) $this->getData('hideCoverPageCover'));
+		foreach (array_keys($this->getData('coverPageDescription')) as $locale) {
+			if (!array_key_exists($locale, $hideCoverPageCover)) {
+				$hideCoverPageCover[$locale] = 0;
+			}
+		}
+		$issue->setHideCoverPageCover($hideCoverPageCover, null); // Localized
 
 		$month = $this->getData('Date_Month');
 		$day = $this->getData('Date_Day');

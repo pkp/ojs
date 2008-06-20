@@ -14,7 +14,7 @@
 {foreach from=$section.articles item=article}
 <table class="tocArticle" width="100%">
 <tr valign="top">
-	{if $article->getFileName($locale) && $article->getShowCoverPage($locale)}
+	{if $article->getFileName($locale) && $article->getShowCoverPage($locale) && !$article->getHideCoverPageToc($locale)}
 	<td rowspan="2">
 		<div class="tocArticleCoverImage">
 		<a href="{url page="article" op="view" path=$article->getBestArticleId($currentJournal)}" class="file">

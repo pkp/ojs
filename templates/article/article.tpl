@@ -104,6 +104,10 @@
 			<a href="#" onclick="setFontSize('{translate|escape:"jsparam" key="article.fontSize.large.altText"}');" class="icon">{icon path="templates/images/icons/" name="font_large"}</a>
 		</div>
 	</div>
+	{if $coverPagePath}
+		<div id="articleCoverImage"><img src="{$coverPagePath|escape}{$coverPageFileName|escape}"{if $coverPageAltText != ''} alt="{$coverPageAltText|escape}"{else} alt="{translate key="article.coverPage.altText"}"{/if}{if $width} width="{$width|escape}"{/if}{if $height} height="{$height|escape}"{/if}/>
+		</div>
+	{/if}
 	<h3>{$article->getArticleTitle()|strip_unsafe_html}</h3>
 	<div><em>{$article->getAuthorString()|escape}</em></div>
 	<br />

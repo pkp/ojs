@@ -61,7 +61,7 @@ class IssueHandler extends Handler {
 			$coverPagePath .= $publicFileManager->getJournalFilesPath($journal->getJournalId()) . '/';
 			$templateMgr->assign('coverPagePath', $coverPagePath);
 
-			if (!$showToc && $issue->getFileName($locale) && $issue->getShowCoverPage($locale)) {
+			if (!$showToc && $issue->getFileName($locale) && $issue->getShowCoverPage($locale) && !$issue->getHideCoverPageCover($locale)) {
 				$templateMgr->assign('fileName', $issue->getFileName($locale));
 				$templateMgr->assign('width', $issue->getWidth($locale));
 				$templateMgr->assign('height', $issue->getHeight($locale));
@@ -187,7 +187,7 @@ class IssueHandler extends Handler {
 			$templateMgr->assign('locale', $locale);
 
 
-			if (!$showToc && $issue->getFileName($locale) && $issue->getShowCoverPage($locale)) {
+			if (!$showToc && $issue->getFileName($locale) && $issue->getShowCoverPage($locale) && !$issue->getHideCoverPageCover($locale)) {
 				$templateMgr->assign('fileName', $issue->getFileName($locale));
 				$templateMgr->assign('width', $issue->getWidth($locale));
 				$templateMgr->assign('height', $issue->getHeight($locale));

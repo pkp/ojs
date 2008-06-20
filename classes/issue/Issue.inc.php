@@ -513,6 +513,42 @@ class Issue extends DataObject {
 	}
 
 	/**
+	 * get hide cover page in archives
+	 * @param $locale string
+	 * @return int
+	 */
+	function getHideCoverPageArchives($locale) {
+		return $this->getData('hideCoverPageArchives', $locale);
+	}
+
+	/**
+	 * set hide cover page in archives
+	 * @param $hideCoverPageArchives int
+	 * @param $locale string
+	 */
+	function setHideCoverPageArchives($hideCoverPageArchives, $locale) {
+		return $this->setData('hideCoverPageArchives', $hideCoverPageArchives, $locale);
+	}
+
+	/**
+	 * get hide cover page prior to ToC
+	 * @param $locale string
+	 * @return int
+	 */
+	function getHideCoverPageCover($locale) {
+		return $this->getData('hideCoverPageCover', $locale);
+	}
+
+	/**
+	 * set hide cover page prior to ToC
+	 * @param $hideCoverPageCover int
+	 * @param $locale string
+	 */
+	function setHideCoverPageCover($hideCoverPageCover, $locale) {
+		return $this->setData('hideCoverPageCover', $hideCoverPageCover, $locale);
+	}
+
+	/**
 	 * get style file name
 	 * @return string
 	 */

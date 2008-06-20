@@ -182,6 +182,20 @@ class ArticleHandler extends Handler {
 				$templateMgr->assign('purchaseArticleEnabled', true);
 			}
 
+			// Article cover page.
+			$locale = Locale::getLocale();
+			if (isset($article) && $article->getFileName($locale) && $article->getShowCoverPage($locale) && !$article->getHideCoverPageAbstract($locale)) {
+				import('file.PublicFileManager');
+				$publicFileManager = &new PublicFileManager();
+				$coverPagePath = Request::getBaseUrl() . '/';
+				$coverPagePath .= $publicFileManager->getJournalFilesPath($journal->getJournalId()) . '/';
+				$templateMgr->assign('coverPagePath', $coverPagePath);
+				$templateMgr->assign('coverPageFileName', $article->getFileName($locale));
+				$templateMgr->assign('width', $article->getWidth($locale));
+				$templateMgr->assign('height', $article->getHeight($locale));
+				$templateMgr->assign('coverPageAltText', $article->getCoverPageAltText($locale));
+			}
+
 			// Increment the published article's abstract views count
 			if (!Request::isBot()) {
 				$publishedArticleDao = &DAORegistry::getDAO('PublishedArticleDAO');
