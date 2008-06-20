@@ -91,7 +91,7 @@
 			{translate key="rt.addComment"}*
 			{assign var=needsLoginNote value=1}
 			</li>
-		{else if $postingAllowed}
+		{elseif $postingAllowed}
 			<li><a href="{url page="comment" op="add" path=$article->getArticleId()|to_array:$galleyId}" target="_parent">{translate key="rt.addComment"}</a></li>
 		{/if}
 		{if $journalRt->getFindingReferences()}
