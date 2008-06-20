@@ -1758,6 +1758,7 @@ You may optionally provide the user with a reason for disabling their account.</
 	<message key="editor.issues.removeStyleFile">Remove stylesheet?</message>
 	<message key="editor.issues.coverPageCaption">Cover caption</message>
 	<message key="editor.issues.showCoverPage">Create a cover for this issue with the following elements.</message>
+	<message key="editor.issues.coverPageDisplay">Display</message>
 	<message key="editor.issues.hideCoverPageArchives">Do not display cover image thumbnail in issue listing.</message>
 	<message key="editor.issues.hideCoverPageCover">Do not display cover image prior to table of contents.</message>
 	<message key="editor.issues.openAccess">Open access</message>
@@ -1894,6 +1895,7 @@ Active is how many reviews are currently being considered or underway.]]></messa
 
 	<message key="editor.article.cover">Cover</message>
 	<message key="editor.article.showCoverPage">Create a cover for this article with the following elements.</message>
+	<message key="editor.article.coverPageDisplay">Display</message>
 	<message key="editor.article.hideCoverPageToc">Do not display cover image thumbnail in table of contents.</message>
 	<message key="editor.article.hideCoverPageAbstract">Do not display cover image in article abstract view.</message>
 	<message key="editor.article.coverPage">Cover image</message>
