@@ -20,10 +20,9 @@ define('EDITOR_SECTION_HOME', 0);
 define('EDITOR_SECTION_SUBMISSIONS', 1);
 define('EDITOR_SECTION_ISSUES', 2);
 
+// Filter editor
 define('FILTER_EDITOR_ALL', 0);
 define('FILTER_EDITOR_ME', 1);
-
-define('FILTER_SECTION_ALL', 0);
 
 import ('submission.editor.EditorAction');
 

@@ -16,6 +16,9 @@
 
 import('submission.sectionEditor.SectionEditorAction');
 
+// Filter section
+define('FILTER_SECTION_ALL', 0);
+
 class SectionEditorHandler extends Handler {
 
 	/**
@@ -26,6 +29,7 @@ class SectionEditorHandler extends Handler {
 		SectionEditorHandler::setupTemplate();
 
 		$journal = &Request::getJournal();
+		$journalId = $journal->getJournalId();
 		$user = &Request::getUser();
 
 		$rangeInfo = Handler::getRangeInfo('submissions');
@@ -47,6 +51,10 @@ class SectionEditorHandler extends Handler {
 		$page = isset($args[0]) ? $args[0] : '';
 		$sections = &$sectionDao->getSectionTitles($journal->getJournalId());
 
+		$filterSectionOptions = array(
+			FILTER_SECTION_ALL => Locale::Translate('editor.allSections')
+		) + $sections;
+
 		switch($page) {
 			case 'submissionsInEditing':
 				$functionName = 'getSectionEditorSubmissionsInEditing';
@@ -62,10 +70,21 @@ class SectionEditorHandler extends Handler {
 				$helpTopicId = 'editorial.sectionEditorsRole.submissions.inReview';
 		}
 
+		$filterSection = Request::getUserVar('filterSection');
+		if ($filterSection != '' && array_key_exists($filterSection, $filterSectionOptions)) {
+			$user->updateSetting('filterSection', $filterSection, 'int', $journalId);
+		} else {
+			$filterSection = $user->getSetting('filterSection', $journalId);
+			if ($filterSection == null) {
+				$filterSection = FILTER_SECTION_ALL;
+				$user->updateSetting('filterSection', $filterSection, 'int', $journalId);
+			}	
+		}
+
 		$submissions = &$sectionEditorSubmissionDao->$functionName(
 			$user->getUserId(),
 			$journal->getJournalId(),
-			Request::getUserVar('section'),
+			$filterSection,
 			$searchField,
 			$searchMatch,
 			$search,
@@ -77,9 +96,9 @@ class SectionEditorHandler extends Handler {
 
 		$templateMgr = &TemplateManager::getManager();
 		$templateMgr->assign('helpTopicId', $helpTopicId);
-		$templateMgr->assign('sectionOptions', array(0 => Locale::Translate('editor.allSections')) + $sections);
+		$templateMgr->assign('sectionOptions', $filterSectionOptions);
 		$templateMgr->assign_by_ref('submissions', $submissions);
-		$templateMgr->assign('section', Request::getUserVar('section'));
+		$templateMgr->assign('filterSection', $filterSection);
 		$templateMgr->assign('pageToDisplay', $page);
 		$templateMgr->assign('sectionEditor', $user->getFullName());
 
