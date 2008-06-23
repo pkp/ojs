@@ -8,7 +8,7 @@ interface.
 
 In order to use this plugin, you must ensure the following directives are
 properly configured in OJS's config.inc.php configuration file in the
-[openads] section:
+[open_ads] section:
 
 install_path: This should contain the full path to the phpAdsNew installation.
 
