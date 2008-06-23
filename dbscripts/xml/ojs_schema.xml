@@ -578,6 +578,7 @@
 		<field name="journal_id" type="I8">
 			<NOTNULL/>
 		</field>
+		<field name="review_form_id" type="I8" />
 		<field name="seq" type="F">
 			<NOTNULL/>
 			<DEFAULT VALUE="0"/>
