@@ -386,7 +386,7 @@
 			<NOTNULL/>
 		</field>
 		<field name="user_id" type="I8"/>
-		<field name="ip_address" type="C2" size="15">
+		<field name="ip_address" type="C2" size="39">
 			<NOTNULL/>
 		</field>
 		<field name="user_agent" type="C2" size="255"/>
