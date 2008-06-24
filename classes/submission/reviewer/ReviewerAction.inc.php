@@ -210,7 +210,7 @@ class ReviewerAction extends Action {
 
 		// Only upload the file if the reviewer has yet to submit a recommendation
 		// and if review forms are not used
-		if (($reviewAssignment->getRecommendation() === null || $reviewAssignment->getRecommendation() === '') && !$reviewAssignment->getCancelled() && !$reviewAssignment->getReviewFormId()) {
+		if (($reviewAssignment->getRecommendation() === null || $reviewAssignment->getRecommendation() === '') && !$reviewAssignment->getCancelled()) {
 			$fileName = 'upload';
 			if ($articleFileManager->uploadedFileExists($fileName)) {
 				HookRegistry::call('ReviewerAction::uploadReviewFile', array(&$reviewAssignment));
