@@ -336,6 +336,8 @@
 			<NOTNULL/>
 		</field>
 		<field name="journal_id" type="I8"/>
+			<NOTNULL/>
+			<DEFAULT VALUE="0"/>
 		<field name="setting_value" type="X"/>
 		<field name="setting_type" type="C2" size="6">
 			<NOTNULL/>
@@ -348,6 +350,7 @@
 			<col>user_id</col>
 			<col>locale</col>
 			<col>setting_name</col>
+			<col>journal_id</col>
 			<UNIQUE />
 		</index>
 	</table>

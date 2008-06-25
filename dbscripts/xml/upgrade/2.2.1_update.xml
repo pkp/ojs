@@ -109,4 +109,35 @@
 			ALTER TABLE articles ADD COLUMN comments_status SMALLINT NOT NULL DEFAULT 0
 		</query>
 	</sql>
+
+	<!-- Bug #3607: User settings primary key needs to include journal id -->
+	<sql>
+		<!-- Syntax for MySQL. -->
+		<query driver="mysql">
+			UPDATE user_settings SET journal_id = 0 WHERE journal_id IS NULL
+		</query>
+		<query driver="mysql">
+			ALTER TABLE user_settings CHANGE COLUMN journal_id journal_id BIGINT NOT NULL DEFAULT 0
+		</query>
+		<query driver="mysql">
+			ALTER TABLE user_settings DROP INDEX user_settings_pkey, ADD INDEX user_settings_pkey (user_id, locale, setting_name, journal_id) 
+		</query>
+
+		<!-- Syntax for PostgreSQL. -->
+		<query driver="postgres7">
+			UPDATE user_settings SET journal_id = 0 WHERE journal_id IS NULL
+		</query>
+		<query driver="postgres7">
+			ALTER TABLE user_settings ALTER COLUMN journal_id SET NOT NULL
+		</query>
+		<query driver="postgres7">
+			ALTER TABLE user_settings ALTER COLUMN journal_id SET DEFAULT 0 
+		</query>
+		<query driver="postgres7">
+			DROP INDEX user_settings_pkey
+		</query>
+		<query driver="postgres7">
+			CREATE UNIQUE INDEX user_settings_pkey ON user_settings (user_id, locale, setting_name, journal_id)
+		</query>
+	</sql>
 </data>
