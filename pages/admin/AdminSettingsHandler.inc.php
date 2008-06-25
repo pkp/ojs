@@ -68,6 +68,10 @@ class AdminSettingsHandler extends AdminHandler {
 				$site->setData('pageHeaderTitleImage', $setting);
 				$siteDao =& DAORegistry::getDAO('SiteDAO');
 				$siteDao->updateSite($site);
+
+				// Refresh site header
+				$templateMgr = &TemplateManager::getManager();
+				$templateMgr->assign('displayPageHeaderTitle', $site->getSitePageHeaderTitle());
 			}
 		} elseif ($settingsForm->validate()) {
 			$settingsForm->execute();

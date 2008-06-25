@@ -187,7 +187,16 @@ class JournalSetupStep5Form extends JournalSetupForm {
 		import('file.PublicFileManager');
 		$fileManager = &new PublicFileManager();
 		if ($fileManager->removeJournalFile($journal->getJournalId(), $locale !== null ? $setting[$locale]['uploadName'] : $setting['uploadName'] )) {
-			return $settingsDao->deleteSetting($journal->getJournalId(), $settingName, $locale);
+			$returner = $settingsDao->deleteSetting($journal->getJournalId(), $settingName, $locale);
+			// Ensure page header is refreshed
+			if ($returner) {
+				$templateMgr = &TemplateManager::getManager();
+				$templateMgr->assign(array(
+					'displayPageHeaderTitle' => $journal->getJournalPageHeaderTitle(),
+					'displayPageHeaderLogo' => $journal->getJournalPageHeaderLogo()
+				));
+			}
+			return $returner;
 		} else {
 			return false;
 		}
