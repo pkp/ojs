@@ -200,4 +200,8 @@
 	<message key="plugins.generic.thesis.form.studentEmailPublishInstructions">Se selezionato, la email dello studente sarà pubblicata con l'abstract della tesi.</message>
 	<message key="plugins.generic.thesis.manager.form.discipline">Disciplina accademica e sotto discipline</message>
 	<message key="plugins.generic.thesis.studentFullNameLast">{$lastName}, {$firstName}{$space}{$middleName}</message>
+	<message key="plugins.generic.thesis.manager.form.studentBio">Profilo biografico dello studente</message>
+	<message key="plugins.generic.thesis.form.studentBio">Profilo biografico dello studente</message>
+	<message key="plugins.generic.thesis.manager.form.coverageSample">Esempio di caratteristiche di ricerca</message>
+	<message key="plugins.generic.thesis.form.coverageSample">Esempio di caratteristiche di ricerca</message>
 </locale>

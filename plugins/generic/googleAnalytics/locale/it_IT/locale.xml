@@ -26,4 +26,8 @@
 	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdInstructions">In Google Analytics, clica su Check Status per vedere il codice di tracciamento del tuo sito. Il numero di account è visualizzato nel codice di tracciamento: _uacct = "###". Inserisci il testo che corrisponde a ###.</message>
 	<message key="plugins.generic.googleAnalytics.manager.settings.googleAnalyticsSiteIdRequired">Per favore inserisci un numero di account.</message>
 
+	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCode">Codice di monitoraggio</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.trackingCodeRequired">Seleziona il codice di monitoraggio da utilizzare</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.urchin">Codice di monitoraggio legacy (urchin.js)</message>
+	<message key="plugins.generic.googleAnalytics.manager.settings.ga">Nuovo codice di monitoraggio (ga.js)</message>
 </locale>

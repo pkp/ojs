@@ -18,14 +18,14 @@
 	<message key="plugins.generic.translator.longdescription">Cette zone permet à l'Administrateur du site de créer, modifier et vérifier les traductions de l'OJS. Elle représente le site global et ne devrait pas être utilisée  pour personnaliser une revue à libre accès particulière. Si vous corrigez ou créez une traduction, veuillez la soumettre au Public Knowledge Project pour qu'elle puisse être distribuée dans des versions futures.</message>
 	<message key="plugins.generic.translator.localeDescription">Cette page énumère toutes les composantes d'une traduction de l'OJS et permet au traducteur de modifier chacune d'entre elles. Une traduction complète devrait inclure les traductions de toutes les composantes.</message>
 
-	<message key="plugins.generic.translator.localeName">Nom de paramètre de lieu</message>
+	<message key="plugins.generic.translator.localeName">Nom de la langue</message>
 	<message key="plugins.generic.translator.localeKey">Clé</message>
 	<message key="plugins.generic.translator.localeKeyValue">Valeur</message>
 	<message key="plugins.generic.translator.translate">Traduire</message>
 	<message key="plugins.generic.translator.availableLocales">Paramètres de lieux disponibles</message>
 	<message key="plugins.generic.translator.check">Vérifier</message>
 
-	<message key="plugins.generic.translator.errors">Erreurs de paramètres de lieu</message>
+	<message key="plugins.generic.translator.errors">Erreurs de langue</message>
 
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_MISSING_KEY.title">Clés manquantes</message>
 	<message key="plugins.generic.translator.errors.LOCALE_ERROR_EXTRA_KEY.title">Clés supplémentaires</message>
@@ -49,7 +49,7 @@
 	<message key="plugins.generic.translator.errors.EMAIL_ERROR_DIFFERING_PARAMS.message">Le courriel "{$key}" diffère du paramètre de lieu de référence dans son utilisation de paramètres. Veuillez vérifier qu'il contient tous les paramètres pertinents. Le ou les paramètres qui ne correspondent pas sont :</message>
 
 	<message key="plugins.generic.translator.locale">{$locale} Paramètre de lieu</message>
-	<message key="plugins.generic.translator.localeFiles">Fichiers de paramètre de lieu</message>
+	<message key="plugins.generic.translator.localeFiles">Fichiers de langue</message>
 	<message key="plugins.generic.translator.miscFiles">Fichiers divers</message>
 	<message key="plugins.generic.translator.emails">Modèles de courriel</message>
 	<message key="plugins.generic.translator.file.filename">Nom de fichier</message>

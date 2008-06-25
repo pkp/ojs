@@ -47,7 +47,7 @@
 	<message key="common.export">Exporter</message>
 	<message key="common.import">Importer</message>
 	<message key="common.saveAndContinue">Sauvegarder et continuer</message>
-	<message key="common.saveAndEmail">Sauvegarder et envoyer par courriel</message>
+	<message key="common.saveAndEmail">Enregistrer et envoyer par courriel</message>
 	<message key="common.continue">Continuer</message>
 	<message key="common.cancel">Annuler</message>
 	<message key="common.done">Terminé</message>
@@ -72,7 +72,7 @@
 	<message key="common.weeks">semaines</message>
 	<message key="common.source">Source</message>
 	<message key="common.language">Langue</message>
-	<message key="common.id">Identification</message>
+	<message key="common.id">ID</message>
 	<message key="common.status">État</message>
 	<message key="common.remove">Enlever</message>
 	<message key="common.file">Fichier</message>
@@ -94,7 +94,7 @@
 	<message key="common.or">ou</message>
 	<message key="common.notAvailable">Non disponible</message>
 	<message key="common.notApplicable">Non applicable</message>
-	<message key="common.notApplicableShort">Non applicable</message>
+	<message key="common.notApplicableShort">SO</message>
 	<message key="common.yes">Oui</message>
 	<message key="common.no">Non</message>
 	<message key="common.languages">Langues</message>
@@ -155,7 +155,7 @@
 	<message key="form.required">(* Obligatoire)</message>
 	<message key="form.submit">Soumettre</message>
 	<message key="form.send">Envoyer</message>
-	<message key="form.resubmit">Soumettre à nouveau</message>
+	<message key="form.resubmit">Soumettre de nouveau</message>
 	
 	<!-- Common Email Messages -->
 	<message key="email.email">Courriel</message>
@@ -165,15 +165,15 @@
 	<message key="email.from">De</message>
 	<message key="email.to">À</message>
 	<message key="email.cc">c.c.</message>
-	<message key="email.bcc">Transmission confidentielle</message>
+	<message key="email.bcc">CCI</message>
 	<message key="email.subject">Objet</message>
-	<message key="email.body">Corps du message</message>
+	<message key="email.body">Corps</message>
 	<message key="email.send">Envoyer</message>
 	<message key="email.skip">Sauter le courriel</message>
 	<message key="email.compose">Écrire un courriel</message>
 	<message key="email.addToRecipient">Ajouter un destinataire</message>
 	<message key="email.addCcRecipient">Ajouter une c.c.</message>
-	<message key="email.addBccRecipient">Ajouter un destinataire confidentiel</message>
+	<message key="email.addBccRecipient">Ajouter un CCI</message>
 	<message key="email.bccSender">Envoyer un exemplaire de ce courriel à mon adresse ({$address})</message>
 	<message key="email.invalid">L'adresse courriel {$email} n'est pas valide.</message>
 	<message key="email.multipart">Ceci est un message en plusieurs parties en format MIME.</message>
@@ -194,7 +194,7 @@
 	<message key="navigation.home">Page d'accueil</message>
 	<message key="navigation.about">Au sujet de</message>
 	<message key="navigation.userHome">Page d'accueil</message>
-	<message key="navigation.login">Ouvrir une session</message>
+	<message key="navigation.login">Se connecter</message>
 	<message key="navigation.register">S'inscrire</message>
 	<message key="navigation.user">Usager</message>
 	<message key="navigation.archives">Archives</message>
@@ -251,7 +251,7 @@
 
 	<!-- Common Article Terms -->
 	<message key="article.articles">Articles</message>
-	<message key="article.submissionId">Identification de la soumission</message>
+	<message key="article.submissionId">ID de la soumission</message>
 	<message key="article.title">Titre</message>
 	<message key="article.authors">Auteurs</message>
 	<message key="article.indexingInformation">Renseignements sur l'indexation</message>
@@ -293,7 +293,7 @@
 	<message key="submission.metadata">Métadonnées de la soumission</message>
 	<message key="submission.originalFile">Fichier original</message>
 	<message key="submission.addSuppFile">Ajouter un fichier supplémentaire</message>
-	<message key="submission.submitter">Personne effectuant la soumission</message>
+	<message key="submission.submitter">Soumissionnaire</message>
 	<message key="submission.changeSection">Changer à</message>
 	<message key="submission.initiated">Commencé</message>
 	<message key="submission.lastModified">Dernière modification</message>
@@ -340,7 +340,7 @@
 	<message key="submission.indexing">Indexation</message>
 	<message key="submission.restrictions">Restrictions</message>
 	<message key="submission.supportingAgencies">Organismes de soutien</message>
-	<message key="submission.saveMetadata">Sauvegarder les métadonnées</message>
+	<message key="submission.saveMetadata">Enregistrer les métadonnées</message>
 	
 	<message key="submissions.sec">Sec</message>
 	<message key="submissions.step1">Étape 1</message>
@@ -354,7 +354,7 @@
 	<message key="submissions.scheduled">Au calendrier</message>
 	<message key="submissions.published">Publié</message>
 	<message key="submissions.declined">Rejeté</message>
-	<message key="submissions.queued">En file d'attente</message>
+	<message key="submissions.queued">En attente</message>
 	<message key="submissions.initial">Premier</message>
 	<message key="submissions.proofread">Effectuer la correction d'épreuve</message>
 	<message key="submissions.initialProof">Première correction d'épreuve</message>
@@ -370,7 +370,7 @@
 	<message key="submission.supplementaryFiles">Fichiers supplémentaires</message>
 	<message key="submission.dueDate">Date d'échéance</message>
 	<message key="submission.recommendation">Recommandation</message>
-	<message key="submission.galley">Épreuve en placard</message>
+	<message key="submission.galley">Épreuve</message>
 	<message key="submission.emailLog">Registre de courriels</message>
 	<message key="submission.eventLog">Registre d'événements</message>
 	<message key="submission.uploadFileTo">Télécharger le fichier vers</message>
@@ -407,12 +407,12 @@
 	<message key="journal.journal">Revue</message>
 
 	<!-- User -->
-	<message key="user.userHome">Page d'accueil de l'utilisateur</message>
+	<message key="user.userHome">Accueil de l'utilisateur</message>
 	<message key="user.showAllJournals">Afficher toutes mes revues</message>
-	<message key="user.login">Ouvrir la session</message>
+	<message key="user.login">Se connecter</message>
 	<message key="user.profile">Profil</message>
 	<message key="user.register">S'inscrire</message>
-	<message key="user.logIn">Ouvrir la session</message>
+	<message key="user.logIn">Se connecter</message>
 	<message key="user.logOut">Fermer la session</message>
 	<message key="user.username">Nom d'usager</message>
 	<message key="user.password">Mot de passe</message>
@@ -435,7 +435,7 @@
 	<message key="user.biography.description">(Par ex., département et position)</message>
 	<message key="user.workingLanguages">Langues de travail</message>
 	<message key="user.dateRegistered">Date d'inscription</message>
-	<message key="user.dateLastLogin">Dernière ouverture de session</message>
+	<message key="user.dateLastLogin">Dernière connexion</message>
 	<message key="user.registerForOtherJournals">S'inscrire pour d'autres revues</message>
 	<message key="user.roles">Rôles</message>
 	<message key="user.changePassword">Modifier le mot de passe</message>
@@ -618,11 +618,11 @@
 	<message key="admin.languages.primaryLocaleInstructions">Cette langue sera la langue par défaut du site et de toute revue hébergée.</message>
 	<message key="admin.languages.supportedLocalesInstructions">Sélectionner tous les paramètres de lieu à soutenir sur le site. Les paramètres sélectionnés pourront être utilisés par toutes les revues hébergées sur le site, et apparaîtront aussi dans un menu de sélection de langue apparaissant sur chaque page du site (ce que l'usager peut sauter dans les pages qui sont particulières à des revues). Si des paramètres de lieu multiples ne sont pas sélectionnés, le menu de changement de langue n'apparaîtra pas et les paramètres de langue étendus ne seront pas disponibles aux revues.</message>
 	<message key="admin.languages.installedLocales">Paramètres de lieu installés</message>
-	<message key="admin.languages.reload">Recharger le paramètre de lieu</message>
+	<message key="admin.languages.reload">Recharger la langue</message>
 	<message key="admin.languages.confirmReload">Êtes-vous certain de vouloir recharger ce paramètre de lieu? Cela effacera toutes les données particulières aux paramètres actuels, comme la grille personnalisée pour les messages électroniques.</message>
-	<message key="admin.languages.uninstall">Désinstaller le paramètre de lieu</message>
+	<message key="admin.languages.uninstall">Désinstaller la langue</message>
 	<message key="admin.languages.confirmUninstall">Êtes-vous certain de vouloir désinstaller ce paramètre de lieu? Cela pourra avoir un effet négatif sur tout journal hébergé utilisant le paramètre de lieu en même temps.</message>
-	<message key="admin.languages.installNewLocales">Installer de nouveaux paramètres de lieu</message>
+	<message key="admin.languages.installNewLocales">Installer de nouvelles langues</message>
 	<message key="admin.languages.installNewLocalesInstructions">Sélectionner tout paramètre de lieu supplémentaire auquel il faut un soutien. Ces paramètres de lieu doivent être installés avant que les revues affichées sur le Web puissent les utiliser. Voir la documentation OJS pour les renseignements sur l'ajout de soutiens pour de nouvelles langues.</message>
 	<message key="admin.languages.noLocalesAvailable">Aucun paramètre de lieu supplémentaire n'est disponible pour installation.</message>
 	<message key="admin.languages.installLocales">Installer</message>
@@ -666,7 +666,7 @@
 	<message key="admin.displayConfigFileInstructions"><![CDATA[Le contenu de votre configuration après mise à jour est affiché ci-dessous. Pour appliquer les modifications à la configuration vous devez aller <tt>config.inc.php</tt> dans un rédacteur de texte approprié et remplacer son contenu par celui de la zone de texte simple ci dessous.]]></message>
 	<message key="admin.configFileUpdatedInstructions"><![CDATA[Votre fichier de configuration a été mis à jour avec succès. Veuillez noter que si votre site ne fonctionne plus correctement, vous pourriez avoir à  rétablir votre configuration manuellement en l'éditant <tt>config.inc.php</tt> directement.]]></message>
 	<message key="admin.contentsOfConfigFile">Contenu du fichier de configuration</message>
-	<message key="admin.version.checkForUpdates">Vérifier s'il y a des mises à  jour</message>
+	<message key="admin.version.checkForUpdates">Rechercher les mises à jour</message>
 	<message key="admin.version.latest">Dernière version</message>
 	<message key="admin.version.upToDate">Votre système est à jour</message>
 	<message key="admin.version.updateAvailable">Une version mise à jour est disponible</message>
@@ -692,7 +692,7 @@
 	<message key="admin.journals.importOJS1.conflict">{$firstUsername} ({$firstName}) et {$secondUsername} ({$secondName})</message>
 	<message key="admin.journals.importOJS1Instructions">Consulter le document UPGRADE distribué avec l'OJS pour des renseignements détaillés sur la façon de transférer les données de OJS 1 à  OJS 2.</message>
 	<message key="admin.journal.pathImportInstructions">Chemin d'accès à la revue existant ou à  créer (par ex., "ojs").</message>
-	<message key="admin.journal.importPath">Chemin d'accès à OJS 1</message>
+	<message key="admin.journal.importPath">Chemin OCS 1</message>
 	<message key="admin.journal.importPathInstructions">Compléter le chemin local pour le système des fichiers relié à l'installation d'OJS 1 (par ex., "/var/www/ojs").</message>
 	<message key="admin.journals.importSubscriptions">Importer les abonnements</message>
 	<message key="admin.journals.transcode">Traduction du code des métadonnées depuis ISO8859-1</message>
@@ -747,27 +747,6 @@
 	<message key="manager.statistics.statistics.note">Avis : Les pourcentages pour les soumissions évaluées par les pairs ne sont pas forcément égaux à 100%, car les articles soumis à nouveau sont soit acceptés, soit refusés, soit encore en train d'être évalués.</message>
 
 	<message key="manager.statistics.reports">Générateur de rapports</message>
-	<message key="manager.statistics.reports.dateFrom">De</message>
-	<message key="manager.statistics.reports.dateTo">Jusqu'à</message>
-	<message key="manager.statistics.reports.reportType">Type de rapport</message>
-	<message key="manager.statistics.reports.type.journal">Rapport sur une revue</message>
-	<message key="manager.statistics.reports.type.editor">Rapport du rédacteur</message>
-	<message key="manager.statistics.reports.type.reviewer">Rapport de l'évaluateur</message>
-	<message key="manager.statistics.reports.type.section">Rapport sur une rubrique</message>
-	<message key="manager.statistics.reports.generate">Produire un rapport</message>
-	<message key="manager.statistics.reports.status">Statut (Accepté, refusé, autre)</message>
-	<message key="manager.statistics.reports.dateDecided">Date de décision</message>
-	<message key="manager.statistics.reports.author">Auteur #{$num}</message>
-	<message key="manager.statistics.reports.affiliation">Affiliation #{$num}</message>
-	<message key="manager.statistics.reports.country">Pays #{$num}</message>
-	<message key="manager.statistics.reports.reviewer">Évaluateur #{$num}</message>
-	<message key="manager.statistics.reports.editor">Rédacteur #{$num}</message>
-	<message key="manager.statistics.reports.score">Score #{$num}</message>
-	<message key="manager.statistics.reports.singleScore">Score</message>
-	<message key="manager.statistics.reports.recommendation">Recommandation #{$num}</message>
-	<message key="manager.statistics.reports.daysToDecision">Jours requis pour évaluer</message>
-	<message key="manager.statistics.reports.daysToPublication">Jours requis pour publier</message>
-
 	<!-- Plugin Management -->
 	<message key="manager.plugins.pluginManagement">Gestion des plugiciels</message>
 	<message key="manager.plugins.sitePlugin">Ceci est un plugiciel utilisé sur tout le site Web. Seul le responsable du site peut gérer celui-ci.</message>
@@ -912,7 +891,7 @@
 
 	<message key="manager.setup.addItemtoAboutJournal">Ajouter un article pour l'insérer dans « Au sujet de la revue »</message>
 	<message key="manager.setup.aboutItemContent">Contenu</message>
-	<message key="manager.setup.addAboutItem">Ajouter « Au sujet de l'article »</message>
+	<message key="manager.setup.addAboutItem">Ajouter un élément "À propos"</message>
 	<message key="manager.setup.form.numReviewersPerSubmission">Le nombre d'évaluateurs par soumission est requis.</message>
 	<message key="manager.setup.userRegistration">Enregistrement de l'usager</message>
 
@@ -1105,8 +1084,6 @@ Prendre note que si votre webmaster a déjà  inscrit ce site auprès de PKP Ha
 	<message key="manager.sections.policy">Politique de la rubrique</message>
 	<message key="manager.sections.identifyType">Pour les métadonnées, identifier chaque item dans cette rubrique comme étant un(e)</message>
 	<message key="manager.sections.identifyTypeExamples">(Par exemple, "Article évalué par des pairs", Article non-référé, Article sur invitation, etc.)</message>
-	<message key="manager.sections.abstractsDisabled">Aucun résumé requis</message>
-
 	<!-- Import/Export -->
 	<message key="manager.importExport">Importer/Exporter les données</message>
 
@@ -1167,15 +1144,15 @@ Prendre note que si votre webmaster a déjà  inscrit ce site auprès de PKP Ha
 	<message key="manager.people.emailUsers.emailUsersEnrolledAs">Envoyer un courriel aux usagers inscrits comme</message>
 	<message key="manager.people.emailUsers.selectUsers">Cocher les noms des usagers auxquels vous désirez envoyer un courriel</message>
 	<message key="manager.people.emailUsers.selectTemplate">Sélectionner une grille</message>
-	<message key="manager.people.emailUsers.selectLocale">Sélectionner un paramètre de lieu</message>
+	<message key="manager.people.emailUsers.selectLocale">Sélectionner une langue</message>
 
 	<message key="manager.people.editProfile">Modifier le profil</message>
 
-	<message key="manager.people.signInAsUser">Ouvrir la session en tant qu'utilisateur</message>
-	<message key="manager.people.signInAs">Ouvrir la session en tant que</message>
+	<message key="manager.people.signInAsUser">Se connecter en tant qu'utilisateur</message>
+	<message key="manager.people.signInAs">Se connecter en tant que</message>
 	<message key="manager.people.syncUsers">Synchroniser l'enrôlement</message>
 	<message key="manager.people.syncUserDescription">La synchronisation de l'enrôlement enrôlera tous les usagers déjà enrôlés à jouer un rôle donné dans la revue donnée à occuper le même rôle dans cette revue. Cette fonction permet à un groupe d'usagers (i.e. évaluateurs) d'être synchronisés entre diverses revues.</message>
-	<message key="manager.people.enrollSync">Synchronisation de l'inscription</message>
+	<message key="manager.people.enrollSync">Synchroniser l'inscription</message>
 	<message key="manager.people.enrollSyncRole">Synchroniser les rôles</message>
 	<message key="manager.people.enrollSyncJournal">Avec la revue</message>
 	
@@ -1321,7 +1298,7 @@ Prendre note que si votre webmaster a déjà  inscrit ce site auprès de PKP Ha
 	<message key="manager.subscriptions.form.membershipInstructions">Entrer les renseignements sur l'adhésion si le type d'abonnement exige que les abonnés soient membres d'une association ou d'une organisation.</message>
 <message key="manager.subscriptions.form.domain">Domaine</message>
 	<message key="manager.subscriptions.form.domainInstructions">Entrer un domaine si le type d'abonnement est pour une institution. Si un domaine est entré ici, le réseau Internet est optionnel. Les valeurs valides sont les noms de domaine (par ex., lib.sfu.ca).</message>
-	<message key="manager.subscriptions.form.ipRange">Étendue du protocole Internet</message>
+	<message key="manager.subscriptions.form.ipRange">Intervalle d'adresses IP</message>
 	<message key="manager.subscriptions.form.ipRangeInstructions">Entrer une étendue du protocole Internet si le type d'abonnement est pour une institution. Si une étendue du protocole Internet est entrée ici, le domaine est optionnel. Les valeurs valides peuvent inclure un protocole Internet (par ex., 142.58.103.1), une étendue CIDR (par ex., 142,58.100.0/24), une étendue du protocole Internet (par ex., 142.58.103.1 - 142.58.103.4), une étendue avec "*" (142.58.103.*) ou toute combinaison de ceux-ci séparés par ";" (par ex., 142,58.103.* - 142.58.107.*; 142.58.108.1/24; 142.58.106.*)</message>
 	<message key="manager.subscriptions.form.notifyEmail">Envoyer à l'usager un courriel avec son nom d'usager et des renseignements sur son abonnement.</message>
 	<message key="manager.subscriptions.form.saveAndCreateAnother">Enregistrer et créer un autre</message>
@@ -1751,9 +1728,9 @@ avec un signe plus (+) indiquant que la révision est en cours.]]></message>
 	
 	<!-- Submission Tracking - Layout Specific -->
 	<message key="submission.layout.layoutVersion">Version de mise en page</message>
-	<message key="submission.layout.layoutFile">Fichier pour la mise en page</message>
-	<message key="submission.layout.galleys">Épreuves en placard</message>
-	<message key="submission.layout.newGalley">Créer une nouvelle épreuve en placard</message>
+	<message key="submission.layout.layoutFile">Fichier de mise en page</message>
+	<message key="submission.layout.galleys">Épreuves</message>
+	<message key="submission.layout.newGalley">Créer une nouvelle épreuve</message>
 	<message key="submission.layout.assignLayoutEditor">Assigner un réviseur de la mise en page</message>
 	<message key="submission.layout.replaceLayoutEditor">Remplacer le réviseur de la mise en page</message>
 	<message key="submission.layout.initialGalleyCreation">Création de l'épreuve en placard initiale</message>
@@ -1768,7 +1745,7 @@ avec un signe plus (+) indiquant que la révision est en cours.]]></message>
 	<message key="submission.layout.galleyFileData">Données sur le fichier des galées</message>
 	<message key="submission.layout.galleyLabel">Étiquette</message>
 	<message key="submission.layout.galleyLabelInstructions">L'étiquette de l'épreuve en placard sert à identifier le format du fichier de l'article (par ex., HTML, PDF, etc.).</message>
-	<message key="submission.layout.galleyHTMLData">Épreuve en placard --  Fichiers HTML</message>
+	<message key="submission.layout.galleyHTMLData">Fichiers HTML de l'épreuve</message>
 	<message key="submission.layout.galleyStylesheet">Fichier de feuilles de style</message>
 	<message key="submission.layout.noStyleFile">Aucun fichier de feuille de style n'a été ajouté à cette épreuve en placard.</message>
 	<message key="submission.layout.deleteGalleyStylesheet">Supprimer cette feuille de style.</message>
@@ -1777,7 +1754,7 @@ avec un signe plus (+) indiquant que la révision est en cours.]]></message>
 	<message key="submission.layout.confirmDeleteGalleyImage">Êtes-vous certain de vouloir supprimer cette image de l'épreuve en placard?</message>
 	<message key="submission.layout.galleyStyle">Style</message>
 	<message key="submission.layout.viewingGalley">Voir l'épreuve en placard de la submission</message>
-	<message key="submission.layout.galleyFormat">Format de l'épreuve en placard</message>
+	<message key="submission.layout.galleyFormat">Format de l'épreuve</message>
 	<message key="submission.layout.viewProof">Voir l'épreuve</message>
 	<message key="submission.layout.instructions">Instructions pour la mise en page</message>
 	
@@ -1789,8 +1766,8 @@ avec un signe plus (+) indiquant que la révision est en cours.]]></message>
 	<message key="submission.proofread.instructions">Instructions pour la correction d'épreuves</message>
 
 	<!-- Submission History -->
-	<message key="submission.history.submissionEventLog">Registre d'événement</message>
-	<message key="submission.history.submissionEmailLog">Registre de courriel</message>
+	<message key="submission.history.submissionEventLog">Registre d'événements</message>
+	<message key="submission.history.submissionEmailLog">Registre de courriels</message>
 	<message key="submission.history.submissionNotes">Notes des soumissions</message>
 	<message key="submission.history.noLogEntries">Aucune entrée dans le journal</message>
 	<message key="submission.history.recentLogEntries">Entrées récentes</message>
@@ -1987,7 +1964,7 @@ avec un signe plus (+) indiquant que la révision est en cours.]]></message>
 	<message key="about.contributors">Sources de financement</message>
 	<message key="about.onlineSubmissions">Soumission d'articles en ligne</message>
 	<message key="about.onlineSubmissions.haveAccount">A déjà un nom d'usager/mot de passe pour {$journalTitle}?</message>
-	<message key="about.onlineSubmissions.login">Aller à Ouverture de session</message>
+	<message key="about.onlineSubmissions.login">Ouvrir une session</message>
 	<message key="about.onlineSubmissions.needAccount">Besoin d'un nom d'usager/mot de passe?</message>
 	<message key="about.onlineSubmissions.registration">Aller à  Enregistrement</message>
 	<message key="about.onlineSubmissions.registrationRequired">L'enregistrement et l'ouverture de session sont obligatoires pour soumettre des articles en ligne et pour vérifier l'état des soumissions courantes.</message>
@@ -2073,7 +2050,7 @@ avec un signe plus (+) indiquant que la révision est en cours.]]></message>
 	<message key="installer.upgradeInstructions"><![CDATA[<h4>Version OJS {$version}</h4>
 	
 <p>Merci de télécharger <strong>Open Journal Systems</strong> de Public Knowledge Project. Avant de continuer, veuillez lire <a href="{$baseUrl}/docs/README">README</a> et <a href="{$baseUrl}/docs/UPGRADE">UPGRADE</a> les fichiers inclus avec ce logiciel. Pour en savoir plus sur le projet Public Knowledge et ses projets logiciels, veuillez visiter le site Web <a href="http://pkp.sfu.ca/" target="_blank">PKP</a>. Envoyer les rapports de bogues ou les demandes de soutien technique Open Journal Systems à <a href="mailto:pkp-support@sfu.ca">pkp-support@sfu.ca</a>, ou visiter le système de rapport de bogue en ligne de PKP<a href="http://pkp.sfu.ca/bugzilla/" target="_blank"> </a>.</p>]]></message>
-	<message key="installer.localeSettings">Paramètres pour le paramètre de lieu</message>
+	<message key="installer.localeSettings">Paramètres de langue</message>
 	<message key="installer.localeSettingsInstructions"><![CDATA[Pour un soutien complet Unicode (UTF-8), sélectionner UTF-8 pour tous les paramètres des jeux de caractères. Prendre note que ce soutien exige actuellement un serveur de base de données MySQL >= 4.1.1 ou PostgreSQL >= 7.1. Veuillez aussi noter que le plein soutien Unicode exige PHP >= 4.3.0 avec le soutien pour la bibliothèque<a href="http://www.php.net/mbstring" target="_blank">mbstring</a>(activé par défaut dans les plus récentes installations PHP). Vous aurez peut-être des problèmes à utiliser les jeux de caractères étendus si votre serveur ne répond pas à ces exigences.<br /><br />
 Votre serveur soutient actuellement mbstring: <strong>{$supportsMBString}</strong>]]></message>
 	<message key="installer.localeInstructions">La langue primaire à utiliser pour ce système. Veuillez consulter la documentation OJS si vous êtes intéressé à la prise en charge de langues non indiquées ici.</message>
@@ -2083,7 +2060,7 @@ Votre serveur soutient actuellement mbstring: <strong>{$supportsMBString}</stron
 	<message key="installer.clientCharsetInstructions">Le codage à utiliser pour les données envoyées et reçues des navigateurs.</message>
 	<message key="installer.connectionCharset">Jeu de caractères pour la connexion</message>
 	<message key="installer.databaseCharset">Jeu de caractères de la base de données</message>
-	<message key="installer.locale">Paramètre de lieu</message>
+	<message key="installer.locale">Langue</message>
 	<message key="installer.fileSettings">Paramètres des fichiers</message>
 	<message key="installer.filesDir">Répertoire à télécharger</message>
 	<message key="installer.filesDirInstructions">Entrer le nom complet du chemin d'accès à un répertoire existant où les fichiers téléchargés doivent être gardés. Ce répertoire ne doit pas être directement accessible sur le Web. Veuillez vous assurer que ce répertoire existe et qu'il est programmable avant l'installation. Les noms de chemin d'accès de Windows doivent utiliser des barres obliques, par ex., "C:/myJournal/files".</message>
@@ -2198,7 +2175,6 @@ Votre serveur soutient actuellement mbstring: <strong>{$supportsMBString}</stron
 
 	<message key="rt.admin.readingToolsEnabled">Outils de lecture</message>
 	<message key="rt.admin.selectedVersion">Items connexes</message>
-	<message key="rt.admin.rtEnable">Pour activer les outils de lecture pour cette revue, allez aux Options pour les outils de lecture</message>
 	<message key="rt.admin.settings.description">Les outils de lecture apparaissent dans un cadre à côté des articles publiés dans les rubriques de la revue conçues pour l'indexation. Les outils de lecture comprennent un lot d'outils facultatifs reliés à l'article publié (voir la liste ci-dessous), et un lot d'outils qui donnent accès à des articles connexes, organisés par champ et par discipline.</message>
 	<message key="rt.admin.settings.enableReadingTools">Activer les outils de lecture pour les rubriques désignées de la revue.</message>
 	<message key="rt.admin.settings.abstract">Résumé (présente le résumé de l'article).</message>
@@ -2254,7 +2230,7 @@ Votre serveur soutient actuellement mbstring: <strong>{$supportsMBString}</stron
 	<message key="rt.version">Version</message>
 	<message key="rt.versions">Lots d'articles connexes</message>
 	<message key="rt.version.title">Titre</message>
-	<message key="rt.version.locale">Paramètre de lieu</message>
+	<message key="rt.version.locale">Langue</message>
 	<message key="rt.version.key">Clé</message>
 	<message key="rt.version.description">Description</message>
 
@@ -2313,7 +2289,7 @@ Votre serveur soutient actuellement mbstring: <strong>{$supportsMBString}</stron
 	<message key="rt.metadata.pkp.uri">Système URI</message>
 	<message key="rt.metadata.pkp.source">revue/conférence, titre; vol., No. (année)</message>
 	<message key="rt.metadata.pkp.language">Anglais=an</message>
-	<message key="rt.metadata.pkp.suppFiles">Fichiers supplémentaires</message>
+	<message key="rt.metadata.pkp.suppFiles">Fichiers supp.</message>
 	<message key="rt.metadata.pkp.coverage">Emplacement géo-spatial, période chronologique, exemple de recherche (genre, âge, etc.)</message>
 	<message key="rt.metadata.pkp.copyright">droit d'auteur et autorisations</message>
 
@@ -2487,9 +2463,6 @@ Après que vos révisions sont terminées, changer le nom du fichier AuthorNameQ
 	<message key="rt.admin.settings.addComment.authenticated">Users must be registered and log into to post, with anonymity not permitted.</message>
 	<message key="rt.admin.settings.addComment.anonymous">Users must be registered and log into to post, with anonymity permitted.</message>
 	<message key="rt.admin.settings.addComment.unauthenticated">Users do not need to be registered to post, with anonymity permitted.</message>
-	<message key="icon.small.alt">Petit</message>
-	<message key="icon.medium.alt">Moyen</message>
-	<message key="icon.large.alt">Grand</message>
 	<message key="debug.notes.currencyListLoad">Liste téléchargée des unités monétaires"{$filename}" de XML</message>
 	<message key="common.add">Ajouter</message>
 	<message key="common.discipline">Discipline</message>
@@ -2497,7 +2470,7 @@ Après que vos révisions sont terminées, changer le nom du fichier AuthorNameQ
 	<message key="common.payment">Paiement</message>
 	<message key="common.payments">Paiements</message>
 	<message key="form.postRequired">Le formulaire n'a pas été soumis correctement.</message>
-	<message key="form.formLanguage">Langue d'usage dans le formulaire</message>
+	<message key="form.formLanguage">Langue du formulaire</message>
 	<message key="form.formLanguage.description">Pour entrer les renseignements ci-dessous dans d'autres langues, sélectionnez d'abord la langue désirée.</message>
 	<message key="email.compose.tooSoon">Vous n'avez pas laissé suffisamment de temps après l'envoi de votre plus récent message. Veuillez attendre avant d'envoyer un nouveau message.</message>
 	<message key="email.compose.tooManyRecipients">Le message que vous essayez d'envoyer contient trop de destinataires.</message>
@@ -2513,10 +2486,10 @@ Après que vos révisions sont terminées, changer le nom du fichier AuthorNameQ
 	<message key="reader.subscriptionOrFeeAccess">Accès à l'abonnement ou aux frais</message>
 	<message key="admin.settings.homeHeaderImageInvalid">Le format de l'image du logo du site est invalide. Seuls les formats .gif, .jpg ou .png sont acceptés.</message>
 	<message key="admin.languages.installLanguages">Gérer les paramètres de lieu</message>
-	<message key="admin.languages.downloadLocales">Télécharger les paramètres de lieu</message>
+	<message key="admin.languages.downloadLocales">Télécharger les langues</message>
 	<message key="admin.languages.downloadFailed">Le téléchargement du paramètre de lieu a échoué. Des explications sont contenues dans le message d'erreur ci-dessous.</message>
 	<message key="admin.languages.localeInstalled">Le paramètre de lieu "{$locale}" a été installé.</message>
-	<message key="admin.languages.download">Télécharger le paramètre de lieu</message>
+	<message key="admin.languages.download">Télécharger la langue</message>
 	<message key="admin.languages.download.cannotOpen">Ne peut ouvrir le descripteur de langues du site Web PKP.</message>
 	<message key="admin.languages.download.cannotModifyRegistry">Ne peut ajouter le nouveau paramètre de lieu au fichier de registre de paramètre de lieu, généralement "registry/locales.xml".</message>
 	<message key="admin.mergeUsers">Fusionner les utilisateurs</message>
@@ -2555,7 +2528,6 @@ Après que vos révisions sont terminées, changer le nom du fichier AuthorNameQ
 	<message key="manager.payment.options.publicationFee">Publication d'article</message>
 	<message key="manager.payment.options.fastTrackFee">Révision accélérée</message>
 	<message key="manager.payment.options.membershipFee">Adhésion à l'Association</message>
-	<message key="manager.payment.options.payPerViewFee">Article assujetti au paiement à la séance</message>
 	<message key="manager.payment.options.waiverPolicy">Politique d'exemption</message>
 	<message key="manager.payment.options.onlypdf">Limiter l'accès seulement aux articles en format PFD</message>
 	<message key="manager.payment.options.acceptSubscriptionPayments">Cela activera l'application des paiements d'abonnements où les types, les frais et les utilisateurs sont gérés par le responsable des abonnements.</message>
@@ -2690,7 +2662,7 @@ le droit de première publication de l’œuvre [SPÉCIFIER LA PÉRIODE DE TEMPS
 	<message key="author.submit.form.abstractRequired">Veuillez entrer le résumé de votre article.</message>
 	<message key="author.submit.supplementaryFiles.saveToUpload">Cliquer sur Sauvegarder pour télécharger le fichier (après cela, des fichiers supplémentaires peuvent être téléchargés).</message>
 	<message key="author.submit.forgottenSubmitSuppFile">Êtes-vous certain de vouloir continuer sans télécharger le fichier supplémentaire que vous avez choisi?</message>
-	<message key="submission.layout.galleyLocaleRequired">Un paramètre de lieu est requis pour l'épreuve en placard.</message>
+	<message key="submission.layout.galleyLocaleRequired">La langue de l'épreuve est obligatoire.</message>
 	<message key="submission.layout.galleyLanguageRequired">Une langue est requise pour l'épreuve en placard.</message>
 	<message key="submission.layout.referenceLinking">Liaison de référence</message>
 	<message key="user.login.accountNotValidated">Votre adresse électronique n'a pas été validée. Veuillez vérifier votre courriel et suivre les directives présentées. Si vous n'avez pas reçu de courriel, vous devrez peut-être communiquer avec le webmestre pour obtenir de l'aide.</message>
@@ -2718,7 +2690,6 @@ le droit de première publication de l’œuvre [SPÉCIFIER LA PÉRIODE DE TEMPS
 	<message key="payment.type.publication">Frais de publication</message>
 	<message key="payment.type.fastTrack">Frais de révision accélérée</message>
 	<message key="payment.type.membership">Frais d'adhésion individuelle</message>
-	<message key="payment.type.payPerView">Frais d'article payé à la séance</message>
 	<message key="payment.type.subscription">Frais d'abonnement</message>
 	<message key="payment.type.donation">Dons</message>
 	<message key="payment.donation.makeDonation">Effectuer un don</message>
@@ -2747,7 +2718,6 @@ le droit de première publication de l’œuvre [SPÉCIFIER LA PÉRIODE DE TEMPS
 	<message key="default.journalSettings.fastTrackFeeDescription">Avec le paiement de ces frais, la révision, la décision éditoriale et la notification à l'auteur de ce manuscrit sont garanties dans les quatre prochaines semaines.</message>
 	<message key="default.journalSettings.publicationFeeDescription">Si cet article est accepté pour fin de publication, vous devrez payer les frais de publication d'article pour couvrir les frais de publication.</message>
 	<message key="default.journalSettings.waiverPolicy">Si vous n'êtes pas en mesure de payer de tels frais, vous aurez l'occasion de supprimer les frais. Nous ne voulons pas que les frais empêchent la publication d'ouvrages méritants.</message>
-	<message key="default.journalSettings.payPerViewFeeDescription">Le paiement des frais vous permettra de visionner, télécharger et imprimer cet article.</message>
 	<message key="default.journalSettings.membershipFeeDescription">Le paiement des frais vous inscrira à titre de membre de cette association pendant un an et vous accordera un accès gratuit à ce journal.</message>
 	<message key="default.journalSettings.donationFeeDescription">Les dons à cette revue, quels que soient le montant, sont les bienvenus et permettent aux éditeurs de continuer à offrir une revue de la plus haute qualité à ses lecteurs.</message>
 	<message key="manager.groups.enableBoard.description"><![CDATA[Sous <a href="{$aboutEditorialTeamUrl}">Gens</a> dans À propos de la revue :]]></message>
@@ -2807,4 +2777,9 @@ Les chiffres dans le tableau 3 ne sont pas alignés dans la troisième colonne.<
 <br />
 <pre>4. FORMATAGE
 Le paragraphe qui commence « Ce dernier sujet... » est à effacer. </pre>]]></message>
+	<message key="common.copy">Copier</message>
+	<message key="common.preview">Aperçu</message>
+	<message key="common.activate">Activer</message>
+	<message key="common.deactivate">Désactiver</message>
+	<message key="manager.reviewForms">Formulaires d'évaluation</message>
 </locale>

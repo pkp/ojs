@@ -35,7 +35,7 @@ Exemples :
 
 	Exporter tous les utilisateurs inscrits à titre de réviseurs, ainsi que leurs rôles de réviseur seulement :
 	{$scriptName} {$pluginName} exporter myExportFile.xml myJournal reviewer</message>
-	<message key="plugins.importexport.users.import.importUsers">Importer des utilisateurs</message>
+	<message key="plugins.importexport.users.import.importUsers">Importer les utilisateurs</message>
 	<message key="plugins.importexport.users.import.instructions"><![CDATA[Sélectionner un fichier de données XML contenant des renseignements sur l’utilisateur à importer dans cette revue. Consulter l'aide pour les revues afin d’obtenir des renseignements concernant le format de ce fichier.<br /><br />Veuillez noter que si le fichier importé contient des noms d'utilisateurs ou des adresses courriel existant déjà dans le système, les données d’utilisateurs de ces utilisateurs ne seront pas importées, et tout nouveau rôle à créer sera assigné aux utilisateurs existants.]]></message>
 	<message key="plugins.importexport.users.import.failedToImportUser">Incapable d'importer l'utilisateur</message>
 	<message key="plugins.importexport.users.import.failedToImportRole">Incapable d'attribuer l'utilisateur à un rôle</message>
@@ -48,7 +48,7 @@ Exemples :
 	<message key="plugins.importexport.users.import.confirmUsers">Confirmez que ces utilisateurs sont bien ceux que vous souhaitez importer dans le système</message>
 	<message key="plugins.importexport.users.unknownJournal">Un chemin d'accès de revue inconnu "{$journalPath}" a été spécifié.</message>
 
-	<message key="plugins.importexport.users.export.exportUsers">Exporter des utilisateurs</message>
+	<message key="plugins.importexport.users.export.exportUsers">Exporter les utilisateurs</message>
 	<message key="plugins.importexport.users.export.exportByRole">Exporter par rôle</message>
 	<message key="plugins.importexport.users.export.exportAllUsers">Tout exporter</message>
 	<message key="plugins.importexport.users.export.errorsOccurred">Des erreurs sont se produites lors de l'exportation</message>

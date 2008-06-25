@@ -1322,7 +1322,7 @@ Puoi facoltativamente fornire all'utente una ragione per disattivare il loro acc
 	<message key="manager.subscriptions.selectSubscriber.desc">I privilegi di accesso per abbonati sono automaticamente garantiti ai Journal Manager, Editor, Section Editor, Layout Editors, Copyeditor, e Proofreader del journal.</message>
 	<message key="manager.subscriptions.subscribe">Sottoscrivi</message>
 	<message key="manager.subscriptions.confirmDelete">Siete sicuri di voler cancellare questo abbonamento?</message>
-	<message key="manager.subscriptions.noneCreated">Non &#x00E8; stato creato nessun abbonamento.</message>
+	<message key="manager.subscriptions.noneCreated">Non è stato creato nessun abbonamento.</message>
 	<message key="manager.subscriptions.user">Utente</message>
 	<message key="manager.subscriptions.subscriptionType">Tipo di abbonamento</message>
 	<message key="manager.subscriptions.dateStart">Inizio</message>
@@ -2865,5 +2865,185 @@ Authors who publish with this journal agree to the following terms:
 	<message key="manager.payment.timestamp">Marcatura oraria</message>
 	<message key="manager.groups.context.people">Fai apparire il titolo come categoria a sè sotto Persone (es. Redazione)</message>
 	<message key="submission.layout.galleyLocaleRequired">E' necessaria una lingua della bozza.</message>
+	<message key="common.copy">Copia</message>
+	<message key="common.preview">Anteprima</message>
+	<message key="common.activate">Attivare</message>
+	<message key="common.deactivate">Disattivare</message>
+	<message key="manager.reviewForms">Modulo di revisione</message>
+	<message key="manager.reviewForms.noneChosen">Nessuno / Revisione del modulo libero</message>
+	<message key="manager.reviewForms.noneCreated">Non è stato creato nessun modulo di revisione</message>
+	<message key="manager.reviewForms.noneUsed">Non è stato usato nessun modulo di revisione</message>
+	<message key="manager.reviewForms.create">Crea un modulo di revisione</message>
+	<message key="manager.reviewForms.edit">Modulo di revisione</message>
+	<message key="manager.reviewForms.reviewFormData">Data del modulo di revisione</message>
+	<message key="manager.reviewForms.title">Titolo</message>
+	<message key="manager.reviewForms.description">Descrizione e Istruzioni</message>
+	<message key="manager.reviewForms.preview">Modulo di anteprima</message>
+	<message key="manager.reviewForms.completed">Completato</message>
+	<message key="manager.reviewForms.inReview">In revisione</message>
+	<message key="manager.reviewForms.confirmDeletePublished">Conferma la cancellazione di un modulo di revisione pubblicato...</message>
+	<message key="manager.reviewForms.confirmDeleteUnpublished">Conferma la cancellazione di un modulo di revisione non pubblicato ...</message>
+	<message key="manager.reviewForms.form.titleRequired">E' necessario inserire un titolo per il modulo</message>
+	<message key="manager.reviewFormElements">Item del modulo</message>
+	<message key="manager.reviewFormElements.create">Crea un nuovo item</message>
+	<message key="manager.reviewFormElements.edit">Compila l'item</message>
+	<message key="manager.reviewFormElements.noneCreated">Non è stato creato nessun item</message>
+	<message key="manager.reviewFormElements.confirmDelete">Conferma la cancellazione di un documento pubblicato</message>
+	<message key="manager.reviewFormElements.copyTo">Copia in:</message>
+	<message key="manager.reviewFormElements.question">Item</message>
+	<message key="manager.reviewFormElements.required">E' necessario che i revisori completino il documento</message>
+	<message key="manager.reviewFormElements.viewable">Visibile (per gli autori)</message>
+	<message key="manager.reviewFormElements.elementType">Tipo di item</message>
+	<message key="manager.reviewFormElements.possibleResponse">Selezione</message>
+	<message key="manager.reviewFormElements.addResponseItem">Aggiungi una selezione</message>
+	<message key="manager.reviewFormElements.chooseType">Scegli il tipo</message>
+	<message key="manager.reviewFormElement.changeType">Cambia il tipo</message>
+	<message key="manager.reviewFormElements.form.questionRequired">E' necessario inserire una domanda</message>
+	<message key="manager.reviewFormElements.form.elementTypeRequired">E' necessario inserire il tipo di item</message>
+	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Per favore riempi i campi obbligatori</message>
+	<message key="common.homePageHeader.altText">Intestazione dell'homepage</message>
+	<message key="common.homePageHeaderLogo.altText">Logo dell'intestazione dell'homepage</message>
+	<message key="common.journalHomepageImage.altText">Immagine dell'intestazione della rivista</message>
+	<message key="article.coverPage.altText">Immagine di copertina</message>
+	<message key="article.accessLogoOpen.altText">Open Access</message>
+	<message key="article.accessLogoRestricted.altText">Accesso ristretto</message>
+	<message key="article.comments.sectionDefault">Default</message>
+	<message key="article.comments.disable">Disattivo</message>
+	<message key="article.comments.enable">Attivo</message>
+	<message key="article.fontSize">Dimenzione del font</message>
+	<message key="article.fontSize.small.altText">Piccolo</message>
+	<message key="article.fontSize.medium.altText">Medio</message>
+	<message key="article.fontSize.large.altText">Grande</message>
+	<message key="submission.changeComments">Cambia con</message>
+	<message key="user.noRoles.chooseJournal">Il tuo account non è associato a nessuna rivista. Per favore seleziona una rivista:</message>
+	<message key="manager.reviewFormElements.smalltextfield">Text box per una sola parola</message>
+	<message key="manager.reviewFormElements.textfield">Text box su una linea</message>
+	<message key="manager.reviewFormElements.textarea">Text box per testi lunghi</message>
+	<message key="manager.reviewFormElements.checkboxes">Checkbox (Possibile una o più scelte)</message>
+	<message key="manager.reviewFormElements.radiobuttons">Radio button (Una sola scelta possibile)</message>
+	<message key="reviewer.article.enterReviewForm">Cliccare sull'icona per riempire la form di revisione</message>
+	<message key="common.altText">Testo alternativo</message>
+	<message key="common.pageHeader.altText">Intestazione della pagina</message>
+	<message key="common.pageHeaderLogo.altText">Logo per l'intestaziopne della pagina</message>
+	<message key="user.noRoles.noRolesForJournal">Il tuo account non ha ruoli assegnati per questa rivista. Scegli tra le azioni elencate sotto:</message>
+	<message key="user.noRoles.submitArticle">Sottometti una proposta</message>
+	<message key="user.noRoles.submitArticleRegClosed">Sottometti un articolo: la regsitrazione degli autori è attualmente disabilitata</message>
+	<message key="user.noRoles.regReviewer">Registrati come revisore</message>
+	<message key="user.noRoles.regReviewerClosed">Registrati come revisore: la registrazione dei revisori è attualmente disabilitata.</message>
+	<message key="issue.coverPage.altText">Copertina</message>
+	<message key="admin.settings.homeHeaderImage.altText">Logo del sito</message>
+	<message key="admin.journals.importOJS1.success">L'import della rivista si è concluso regolarmente.</message>
+	<message key="admin.journals.importOJS1.redirect.desc">Per redirigere le URL di OJS1 a URL di OJS2, creare i seguenti file php, utilizzando il contenuto indicato sotto. I file corrispondenti dovranno essere sistemati nel percorso del filesystem di OJS1 o, per una singola installazione, in quello di OJS2.</message>
+	<message key="admin.journals.importOJS1.redirect.ojs1root">Inserisci nel vecchio percorso del filesystem di OJS1 (es. /var/www/ojs1).</message>
+	<message key="admin.journals.redirect">Genera il codice per mappare le URL di OJS1 verso quelle di OJS2</message>
+	<message key="manager.payment.options.purchaseArticleFee">Compra l'articolo</message>
+	<message key="manager.setup.journalHomepageHeader.altText">Intenstazione della homepage della rivista</message>
+	<message key="manager.setup.journalLogo.altText">Logo della rivista</message>
+	<message key="manager.sections.disableComments">Disabilita i commenti dei lettori per questa sezione</message>
+	<message key="manager.sections.abstractsNotRequired">Non richiede abstract.</message>
+	<message key="manager.subscriptionPolicies.expirySelectOne">Seleziona uno dei seguenti:</message>
+	<message key="manager.subscriptionPolicies.expiryFull">Scadenza totale</message>
+	<message key="manager.subscriptionPolicies.expiryFullDescription">I lettori non possono più accedere dalla scadenza dell'abbonamento.</message>
+	<message key="manager.subscriptionPolicies.expiryPartial">Scadenza parziale</message>
+	<message key="manager.subscriptions.dateStartSearch">Data di inizio</message>
+	<message key="manager.subscriptions.dateEndSearch">data di fine</message>
+	<message key="manager.subscriptions.domain">Dominio</message>
+	<message key="editor.allEditors">Tutti gli editor</message>
+	<message key="editor.me">Io</message>
+	<message key="editor.issues.coverPageDisplay">Visualizza</message>
+	<message key="editor.issues.hideCoverPageArchives">Non visualizzare l'immagine delle copertine nell'elenco dei fascicoli.</message>
+	<message key="editor.issues.hideCoverPageCover">Non visualizzare l'immagine della copertina prima dell'indice.</message>
+	<message key="editor.submissions.assignedTo">Assegnato a</message>
+	<message key="editor.submissions.inSection">in sezione</message>
+	<message key="editor.article.display">Visualizza</message>
+	<message key="editor.article.hideTocAuthorDefault">Default</message>
+	<message key="editor.article.hideTocAuthorHide">Ometti</message>
+	<message key="editor.article.hideTocAuthorShow">Mostra</message>
+	<message key="editor.article.cover">Copertina</message>
+	<message key="editor.article.showCoverPage">Crea  una copertina per questo articolo con i seguenti elementi.</message>
+	<message key="editor.article.coverPageDisplay">Visualizza</message>
+	<message key="editor.article.hideCoverPageToc">Non visualizzare l'immagine della copertina nell'indice.</message>
+	<message key="editor.article.hideCoverPageAbstract">Non visualizzare l'immagine della copertina nella vista dell'abstract dell'articolo.</message>
+	<message key="editor.article.coverPage">Immagine di copertina</message>
+	<message key="editor.article.coverPageInstructions">(Formati ammessi: .gif, .jp o .png)</message>
+	<message key="editor.article.uploaded">Caricato</message>
+	<message key="editor.article.removeCoverPage">Rimuovi l'immagine di copertina?</message>
+	<message key="editor.article.remove">Rimuovi</message>
+	<message key="icon.font_medium.alt">Medio</message>
+	<message key="icon.font_large.alt">Grande</message>
+	<message key="manager.sections.form.mustAllowPermission">Assicurarsi di aver selezionato almeno un'assegnazione per ciascun section editor.</message>
+	<message key="manager.subscriptionPolicies.expiry">Scadenza dell'abbonamento</message>
+	<message key="editor.article.hideTocAuthorDescription">Non visualizzare i nomi degli autori in indice</message>
+	<message key="user.profile.form.profileImageInvalid">Immagine non valida o troppo grande. I formati ammessi sono .gif, .jpg, or .png, e l'immagine non deve eccedere 150x150 pixels.</message>
+	<message key="user.profile.form.profileImage">Immagine del profilo</message>
+	<message key="user.profile.publicProfile">Profilo dell'utente</message>
+	<message key="about.aboutThisPublishingSystem.altText">Processo editoriale e di pubblicazione con OJS</message>
+	<message key="help.searchReturnResults">Torna ai risultati di ricerca</message>
+	<message key="payment.membership.ends">Finisce</message>
+	<message key="payment.subscription.expires">Scade</message>
+	<message key="default.journalSettings.purchaseArticleFeeDescription">Il pagamento di questa</message>
+	<message key="common.captchaField.altText">Immagine di validazione</message>
+	<message key="plugins.categories.implicitAuth">Plugin per l'autenticazione implicita</message>
+	<message key="plugins.categories.reports">Report plugin</message>
+	<message key="plugins.categories.reports.description">I reposrt plugin sono utilizzati per creare vari tipi di record per il  Conference manager</message>
+	<message key="manager.reviewFormElements.dropdownbox">Menù a tendina</message>
+	<message key="submission.reviewForm">Modulo di revisione</message>
+	<message key="submission.reviewFormResponse">Risposta del modulo di revisione</message>
+	<message key="editor.article.reviewForms">Moduli di revisione</message>
+	<message key="editor.article.selectReviewForm">Seleziona il modulo di revisione</message>
+	<message key="editor.article.clearReviewForm">Pulisci il modulo di revisione</message>
+	<message key="editor.article.confirmChangeReviewForm">Modifcare il modulo di revisione rimuoverà le risposte</message>
+	<message key="admin.journals.importOJS1.redirect.ojs1orojs2root">Inserisci il vecchio path del filesystem di OJS 1 (es: /var/www/ojs1) oppure, per una installazione con una sola rivista, inserisci il nuovo path di OJS 2 (es: /var/www/ojs2 )</message>
+	<message key="manager.payment.options.fastTrackFee">Revisione rapida</message>
+	<message key="plugins.categories.implicitAuth.description">I plugins di autenticazione implicita possono autenticare gli utenti basandosi sugli header http.</message>
+	<message key="manager.setup.enablePublicGalleyId">Gli identificatori personalizzati saranno usati per identificare le bozze (es: HTML o PDF) per gli item pubblicati</message>
+	<message key="manager.language.reloadLocalizedDefaultSettings">Ricarica i settaggi di default locali</message>
+	<message key="manager.language.confirmDefaultSettingsOverwrite">Questo sostituirà qualunque personalizzazione fatta per la rivista</message>
+	<message key="manager.sections.form.reviewFormId">Assicurati che hai scelto una forma di revisione valida</message>
+	<message key="manager.sections.hideTocAuthor">Ometti il nome degli autori per gli item della sezione dall'indice del fascicolo</message>
+	<message key="manager.subscriptionPolicies.expiryDescription">Dal momento in cui la sottoscrizione termina, l'accesso ai lettore può essere negato per tutto il contenuto della sottoscrizione oppure può essere garantito l'accesso al contenuto pubblicato prima della data di scadenza della sottoscrizione.</message>
+	<message key="manager.subscriptionPolicies.expiryPartialDescription">L'accesso ai lettori è negato per il contenuto recentemente pubblicato, ma viene mantenuto l'accesso al contenuto pubblicato prima della data di scadenza della sottoscrizione.</message>
+	<message key="manager.subscriptions.membership">Membro</message>
+	<message key="submission.layout.publicGalleyId">Identificativo pubblico</message>
+	<message key="submission.layout.galleyPublicIdentificationExists">Identificativo pubblico già esistente</message>
+	<message key="about.memberships">Membri</message>
+	<message key="announcement.posted">Inserito</message>
+	<message key="payment.type.fastTrack">Quota di revisione rapida</message>
+	<message key="payment.type.membership">Quota di iscrizione individuale</message>
+	<message key="payment.type.purchaseArticle">Quota di acquisto dell'articolo</message>
+	<message key="payment.fastTrack.payFastTrack">Paga per la velocità</message>
+	<message key="payment.fastTrack.inFastTrack">in velocità</message>
+	<message key="payment.membership.buyMembership">Compra l'iscrizione individuale</message>
+	<message key="payment.membership.renewMembership">Rinnova l'iscrizione individuale</message>
+	<message key="log.review.reviewDeclinedByProxy">{$userName} ha rifiutato il round di revisione n. {$round} per l'immissione dell'articolo {$articleId} in favore di {$reviewerName}.</message>
+	<message key="icon.font_small.alt">Piccolo</message>
+	<message key="debug.notes.helpMappingLoad">Mappatura del file XML {$filename}  di help ricaricata in cerca di {$id}.</message>
+	<message key="common.altTextInstructions">Fornisci un testo alternativo per l'immagine per assicurare l'accessibilità agli utenti con browser testuali o con dispositivi di supporto per la lettura</message>
+	<message key="default.journalSettings.proofingInstructions"><![CDATA[<p>Questo passo è fatto per togliere qualunque errore nello spelling, nella grammatica e nella formattazione. Cambiamenti più sostanziali non possono essere fatti in questo passo, a meno che non siano stati discussi con il section editor. Nel layout, fai click su "visualizza" per vedere l'HTML, il PDF o altri formati di file disponibili utilizzati nella pubblicazione di questo item </p>
+<h4>Per gli errori di grammatica o di battitura</h4>
+
+<p>Copia il testo sbagliato e incollalo dentro l'area di correzione seguendo le istruzioni di "MODIFICA" qui di seguito</p>
+
+<pre>1. MODIFICA...
+poi il resto
+IN...
+poi il resto</pre>
+<br />
+<pre>2. MODIFICA...
+Rosso
+IN...
+Rossi</pre>
+<br />
+
+<h4>Per gli errori di formattazione</h4>
+
+<p>Descrivi la locazione e la natura del problema nell'apposita area dopo aver digitato "FORMATTAZIONE" come qui di seguito</p>
+<br />
+<pre>3. FORMATTAZIONE
+Il numero nella tabella 3 non è allineato nella prima colonna
+</pre>
+<br />
+<pre>4. FORMATTAZIONE
+Il paragrafo che comincia con "Questo ultimo argomento..." non è allineato</pre></pre>]]></message>
 </locale>
 

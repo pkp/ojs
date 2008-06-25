@@ -13,10 +13,7 @@
   -->
  
 <locale name="fr_CA" full_name="Français (Canada)">
-	<message key="plugins.block.fontSize.displayName">Bloc de taille de la police de caractères</message>
+	<message key="plugins.block.fontSize.displayName">Bloc de taille de police</message>
 	<message key="plugins.block.fontSize.description">Ce plugiciel offre la taille de police de caractères dans l'encadré latéral.</message>
-	<message key="plugins.block.fontSize.title">Taille de la police de caractères</message>
-	<message key="plugins.block.fontSize.small.alt">Petit</message>
-	<message key="plugins.block.fontSize.medium.alt">Moyen</message>
-	<message key="plugins.block.fontSize.large.alt">Grand</message>
+	<message key="plugins.block.fontSize.title">Taille de police</message>
 </locale>

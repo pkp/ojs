@@ -37,4 +37,6 @@
 	<message key="plugins.auth.ldap.settings.saslrealm">Realm</message>
 	<message key="plugins.auth.ldap.settings.saslauthzid">Richiesto ID di autorizzazione</message>
 	<message key="plugins.auth.ldap.settings.saslprop">SASL propriet&#x00E0; di sicurezza</message>
+	<message key="plugins.auth.ldap.settings.uid">Attributi del nome dell'account</message>
+	<message key="plugins.auth.ldap.settings.uid.description">L'attributo il cui valore identifica univocamente un oggetto come ad esempio un uid o cn o sAMAccountName.</message>
 </locale>

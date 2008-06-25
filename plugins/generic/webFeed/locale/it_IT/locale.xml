@@ -22,5 +22,9 @@
 	<message key="plugins.generic.webfeed.settings.recentItemsRequired">Per favore inserisci un intero positivo per gli articoli recenti pubblicati</message>
 	<message key="plugins.generic.webfeed.settings.issue">Mostra i feed link su web solo sulle pagine dell'articolo.</message>
 	<message key="plugins.generic.webfeed.settings.all">Mostra i feed link su web su tutte le pagine dell'articolo.</message>
+	<message key="plugins.generic.webfeed.atom.altText">Lodo di Atom</message>
+	<message key="plugins.generic.webfeed.rss1.altText">Logo del RSS1</message>
+	<message key="plugins.generic.webfeed.rss2.altText">Logo del RSS2</message>
+	<message key="plugins.generic.webfeed.settings.homepage">Visualizza i feed wen solamente sulla home page e sulle pagine dei fascicoli.</message>
 </locale>
 

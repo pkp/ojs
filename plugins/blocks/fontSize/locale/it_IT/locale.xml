@@ -19,4 +19,7 @@
 	<message key="plugins.block.fontSize.small.alt">Piccolo</message>
 	<message key="plugins.block.fontSize.medium.alt">Medio</message>
 	<message key="plugins.block.fontSize.large.alt">Grande</message>
+	<message key="plugins.block.fontSize.small">Piccolo</message>
+	<message key="plugins.block.fontSize.medium">Medio</message>
+	<message key="plugins.block.fontSize.large">Grande</message>
 </locale>

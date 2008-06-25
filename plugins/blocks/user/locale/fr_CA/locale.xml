@@ -19,6 +19,6 @@
 	<message key="plugins.block.user.myJournals">Mes revues</message>
 	<message key="plugins.block.user.myProfile">Mon Profil</message>
 	<message key="plugins.block.user.logout">Fermer la session</message>
-	<message key="plugins.block.user.signOutAsUser">Fermer la session en tant qu'utilisateur</message>
+	<message key="plugins.block.user.signOutAsUser">Se déconnecter en tant qu'utilisateur</message>
 	<message key="plugins.block.user.rememberMe">Souvenez-vous de moi</message>
 </locale>
