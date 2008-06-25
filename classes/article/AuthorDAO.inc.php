@@ -134,10 +134,10 @@ class AuthorDAO extends DAO {
 
 		$result = &$this->retrieveRange(
 			'SELECT DISTINCT
-				CAST(\'\' AS CHAR(1)) AS url,
+				CAST(\'\' AS CHAR) AS url,
 				0 AS author_id,
 				0 AS article_id,
-				CAST(\'\' AS CHAR(1)) AS email,
+				CAST(\'\' AS CHAR) AS email,
 				0 AS primary_contact,
 				0 AS seq,
 				aa.first_name AS first_name,
