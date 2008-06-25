@@ -327,6 +327,30 @@ class Site extends DataObject {
 	function getSiteStyleFilename() {
 		return 'sitestyle.css';
 	}
+
+	/**
+	 * Retrieve a site setting value.
+	 * @param $name string
+	 * @param $locale string
+	 * @return mixed
+	 */
+	function &getSetting($name, $locale = null) {
+		$siteSettingsDao = &DAORegistry::getDAO('SiteSettingsDAO');
+		$setting = &$siteSettingsDao->getSetting($name, $locale);
+		return $setting;
+	}
+
+	/**
+	 * Update a site setting value.
+	 * @param $name string
+	 * @param $value mixed
+	 * @param $type string optional
+	 * @param $isLocalized boolean optional
+	 */
+	function updateSetting($name, $value, $type = null, $isLocalized = false) {
+		$siteSettingsDao =& DAORegistry::getDAO('SiteSettingsDAO');
+		return $siteSettingsDao->updateSetting($name, $value, $type, $isLocalized);
+	}
 }
 
 ?>

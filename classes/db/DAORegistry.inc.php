@@ -109,6 +109,7 @@ class DAORegistry {
 			case 'RoleDAO': return 'security.RoleDAO';
 			case 'SessionDAO': return 'session.SessionDAO';
 			case 'SiteDAO': return 'site.SiteDAO';
+			case 'SiteSettingsDAO': return 'site.SiteSettingsDAO';
 			case 'VersionDAO': return 'site.VersionDAO';
 			case 'AuthorSubmissionDAO': return 'submission.author.AuthorSubmissionDAO';
 			case 'CopyAssignmentDAO': return 'submission.copyAssignment.CopyAssignmentDAO';
