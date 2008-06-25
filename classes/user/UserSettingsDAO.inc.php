@@ -139,7 +139,7 @@ class UserSettingsDAO extends DAO {
 					(user_id, setting_name, journal_id, setting_value, setting_type)
 					VALUES
 					(?, ?, ?, ?, ?)',
-				array($userId, $name, $journalId, $value, $type)
+				array($userId, $name, $journalId ? $journalId : 0, $value, $type)
 			);
 		} else {
 			if ($journalId == null) {
