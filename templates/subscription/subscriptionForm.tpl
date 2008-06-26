@@ -31,12 +31,12 @@
 	<td width="20%" class="label">{fieldLabel name="userId" required="true" key="manager.subscriptions.form.userId"}</td>
 	<td width="80%" class="value">
 		{$user->getFullName()|escape}&nbsp;&nbsp;<a href="{if $subscriptionId}{url op="selectSubscriber" subscriptionId=$subscriptionId}{else}{url op="selectSubscriber"}{/if}" class="action">{translate key="common.select"}</a>
-		<input type="hidden" name="userId" value="{$user->getUserId()}"/>
+		<input type="hidden" name="userId" id="userId" value="{$user->getUserId()}"/>
 	</td>
 </tr>
 <tr valign="top">
 	<td class="label">{fieldLabel name="typeId" required="true" key="manager.subscriptions.form.typeId"}</td>
-	<td class="value"><select name="typeId" id="typeId" class="selectMenu" />
+	<td class="value"><select name="typeId" id="typeId" class="selectMenu">
 		{iterate from=subscriptionTypes item=subscriptionType}
 		<option value="{$subscriptionType->getTypeId()}"{if $typeId == $subscriptionType->getTypeId()} selected="selected"{/if}>{$subscriptionType->getSummaryString()|escape}</option>
 		{/iterate} 
@@ -44,11 +44,11 @@
 </tr>
 <tr valign="top">
 	<td class="label">{fieldLabel name="dateStart" required="true" key="manager.subscriptions.form.dateStart"}</td>
-	<td class="value">{html_select_date prefix="dateStart" all_extra="class=\"selectMenu\"" start_year="$yearOffsetPast" end_year="$yearOffsetFuture" time="$dateStart"}</td>
+	<td class="value" id="dateStart">{html_select_date prefix="dateStart" all_extra="class=\"selectMenu\"" start_year="$yearOffsetPast" end_year="$yearOffsetFuture" time="$dateStart"}</td>
 </tr>
 <tr valign="top">
 	<td class="label">{fieldLabel name="dateEnd" required="true" key="manager.subscriptions.form.dateEnd"}</td>
-	<td class="value">
+	<td class="value" id="dateEnd">
 		{html_select_date prefix="dateEnd" start_year="$yearOffsetPast" all_extra="class=\"selectMenu\"" end_year="$yearOffsetFuture" time="$dateEnd"}
 		<input type="hidden" name="dateEndHour" value="23" />
 		<input type="hidden" name="dateEndMinute" value="59" />
@@ -61,7 +61,7 @@
 		<table width="100%">
 			<tr valign="top">
 				<td width="5%"><input type="checkbox" name="notifyEmail" id="notifyEmail" value="1"{if $notifyEmail} checked="checked"{/if} /></td>
-				<td width="95%"><label for="">{translate key="manager.subscriptions.form.notifyEmail"}</label></td>
+				<td width="95%"><label for="notifyEmail">{translate key="manager.subscriptions.form.notifyEmail"}</label></td>
 			</tr>
 		</table>
 	</td>

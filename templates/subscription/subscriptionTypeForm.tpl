@@ -49,7 +49,7 @@
 </tr>
 <tr valign="top">
 	<td class="label">{fieldLabel name="description" key="manager.subscriptionTypes.form.description"}</td>
-	<td class="value"><textarea name="description[{$formLocale|escape}]" id="description" cols="40" rows="4" class="textArea" />{$description[$formLocale]|escape}</textarea></td>
+	<td class="value"><textarea name="description[{$formLocale|escape}]" id="description" cols="40" rows="4" class="textArea">{$description[$formLocale]|escape}</textarea></td>
 </tr>
 <tr valign="top">
 	<td class="label">{fieldLabel name="cost" required="true" key="manager.subscriptionTypes.form.cost"}</td>
@@ -61,7 +61,7 @@
 </tr>
 <tr valign="top">
 	<td class="label">{fieldLabel name="currency" required="true" key="manager.subscriptionTypes.form.currency"}</td>
-	<td><select name="currency" id="currency" class="selectMenu" />{html_options options=$validCurrencies selected=$currency}</select></td>
+	<td><select name="currency" id="currency" class="selectMenu">{html_options options=$validCurrencies selected=$currency}</select></td>
 </tr>
 <tr valign="top">
 	<td class="label">{fieldLabel name="duration" required="true" key="manager.subscriptionTypes.form.duration"}</td>
@@ -73,7 +73,7 @@
 </tr>
 <tr valign="top">
 	<td class="label">{fieldLabel name="format" required="true" key="manager.subscriptionTypes.form.format"}</td>
-	<td><select id="format" name="format" class="selectMenu" />{html_options options=$validFormats selected=$format}</select></td>
+	<td><select id="format" name="format" class="selectMenu">{html_options options=$validFormats selected=$format}</select></td>
 </tr>
 <tr valign="top">
 	<td>&nbsp;</td>

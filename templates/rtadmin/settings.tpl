@@ -65,7 +65,7 @@
 	</tr>
 	<tr valign="top">
 		<td class="label"><input type="checkbox" name="enableComments" id="enableComments" value="1"{if $enableComments} checked="checked"{/if} /></td>
-		<td class="value"><label for="disableComments">{translate key="rt.admin.settings.addComment"}</label></td>
+		<td class="value"><label for="enableComments">{translate key="rt.admin.settings.addComment"}</label></td>
 	</tr>
 	<tr valign="top">
 		<td class="label">&nbsp;</td>

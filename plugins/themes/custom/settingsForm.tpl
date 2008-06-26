@@ -31,21 +31,21 @@
 	<tr valign="top">
 		<td class="label">{fieldLabel name="customThemeLinkColour" required="true" key="plugins.theme.custom.link"}</td>
 		<td class="value">
-			<input name="customThemeLinkColour" type="text" id="customThemeLinkColour" size="7" maxlength="7" value="{$customThemeLinkColour|escape}" value="{$customThemeLinkColour|escape}" {if $customThemeLinkColour}style="background-color: {$customThemeLinkColour|escape};" {/if}/>
+			<input name="customThemeLinkColour" type="text" id="customThemeLinkColour" size="7" maxlength="7" value="{$customThemeLinkColour|escape}" {if $customThemeLinkColour}style="background-color: {$customThemeLinkColour|escape};" {/if}/>
 			<span onclick="openPicker('customThemeLinkColour')" class="picker_buttons">{translate key="plugins.theme.custom.pickColour"}</span>
 		</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{fieldLabel name="customThemeBackgroundColour" required="true" key="plugins.theme.custom.background"}</td>
 		<td class="value">
-			<input name="customThemeBackgroundColour" type="text" id="customThemeBackgroundColour" size="7" maxlength="7" value="{$customThemeBackgroundColour|escape}" value="{$customThemeBackgroundColour|escape}" {if $customThemeBackgroundColour}style="background-color: {$customThemeBackgroundColour|escape};" {/if}/>
+			<input name="customThemeBackgroundColour" type="text" id="customThemeBackgroundColour" size="7" maxlength="7" value="{$customThemeBackgroundColour|escape}" {if $customThemeBackgroundColour}style="background-color: {$customThemeBackgroundColour|escape};" {/if}/>
 			<span onclick="openPicker('customThemeBackgroundColour')" class="picker_buttons">{translate key="plugins.theme.custom.pickColour"}</span>
 		</td>
 	</tr>
 	<tr valign="top">
 		<td class="label">{fieldLabel name="customThemeForegroundColour" required="true" key="plugins.theme.custom.foreground"}</td>
 		<td class="value">
-			<input name="customThemeForegroundColour" type="text" id="customThemeForegroundColour" size="7" maxlength="7" value="{$customThemeForegroundColour|escape}" value="{$customThemeForegroundColour|escape}" {if $customThemeForegroundColour}style="background-color: {$customThemeForegroundColour|escape};" {/if}/>
+			<input name="customThemeForegroundColour" type="text" id="customThemeForegroundColour" size="7" maxlength="7" value="{$customThemeForegroundColour|escape}" {if $customThemeForegroundColour}style="background-color: {$customThemeForegroundColour|escape};" {/if}/>
 			<span onclick="openPicker('customThemeForegroundColour')" class="picker_buttons">{translate key="plugins.theme.custom.pickColour"}</span>
 		</td>
 	</tr>

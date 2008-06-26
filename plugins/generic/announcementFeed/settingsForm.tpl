@@ -32,22 +32,22 @@
 
 <table width="100%" class="data">
 	<tr valign="top">
-		<td width="10%" class="label" align="right"><input type="radio" name="displayPage" id="displayPage" value="all" {if $displayPage eq "all"}checked {/if}/></td>
+		<td width="10%" class="label" align="right"><input type="radio" name="displayPage" id="displayPage-all" value="all" {if $displayPage eq "all"}checked="checked" {/if}/></td>
 		<td width="90%" class="value">{translate key="plugins.generic.announcementfeed.settings.all"}</td>
 	</tr>
 	<tr valign="top">
-		<td width="10%" class="label" align="right"><input type="radio" name="displayPage" id="displayPage" value="homepage" {if $displayPage eq "homepage"}checked {/if}/></td>
+		<td width="10%" class="label" align="right"><input type="radio" name="displayPage" id="displayPage-homepage" value="homepage" {if $displayPage eq "homepage"}checked="checked" {/if}/></td>
 		<td width="90%" class="value">{translate key="plugins.generic.announcementfeed.settings.homepage"}</td>
 	</tr>
 	<tr valign="top">
-		<td width="10%" class="label" align="right"><input type="radio" name="displayPage" id="displayPage" value="announcement" {if $displayPage eq "announcement"}checked {/if}/></td>
+		<td width="10%" class="label" align="right"><input type="radio" name="displayPage" id="displayPage-announcement" value="announcement" {if $displayPage eq "announcement"}checked="checked" {/if}/></td>
 		<td width="90%" class="value">{translate key="plugins.generic.announcementfeed.settings.announcement"}</td>
 	</tr>
 	<tr>
 		<td colspan="2"><div class="separator">&nbsp;</div></td>
 	</tr>
 	<tr valign="top">
-		<td width="10%" class="label" align="right"><input type="checkbox" name="limitRecentItems" id="limitRecentItems" value="1" onclick="toggleLimitRecentItems(this.form)"{if $limitRecentItems} checked="checked"{/if}</td> 
+		<td width="10%" class="label" align="right"><input type="checkbox" name="limitRecentItems" id="limitRecentItems" value="1" onclick="toggleLimitRecentItems(this.form)"{if $limitRecentItems} checked="checked"{/if}/></td> 
 		<td width="90%" class="value">
 		{translate key="plugins.generic.announcementfeed.settings.recentAnnouncements1"} <input type="text" name="recentItems" id="recentItems" value="{$recentItems|escape}" {if not $limitRecentItems}disabled="disabled"{/if} size="2" maxlength="90" class="textField" />
 		{translate key="plugins.generic.announcementfeed.settings.recentAnnouncements2"}</td>

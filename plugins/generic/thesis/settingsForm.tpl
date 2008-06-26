@@ -60,7 +60,7 @@
 <table width="100%" class="data">
 <tr valign="top">
 	<td width="20%" class="label">{fieldLabel name="thesisOrder" required="true" key="plugins.generic.thesis.settings.order"}</td>
-	<td width="80%" class="value"><select name="thesisOrder" id="thesisOrder" class="selectMenu" />{html_options options=$validOrder selected=$thesisOrder}</select></td>
+	<td width="80%" class="value"><select name="thesisOrder" id="thesisOrder" class="selectMenu">{html_options options=$validOrder selected=$thesisOrder}</select></td>
 </tr>
 </table>
 

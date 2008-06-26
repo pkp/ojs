@@ -28,22 +28,22 @@
 
 <table width="100%" class="data">
 	<tr valign="top">
-		<td width="100%" class="label" colspan="2"><h4>{fieldLabel name="XSLTrenderer" required="true" key="plugins.generic.xmlGalley.settings.renderer"}:</h4></td>
+		<td width="100%" class="label" colspan="2"><h4 id="XSLTrenderer">{fieldLabel name="XSLTrenderer" required="true" key="plugins.generic.xmlGalley.settings.renderer"}:</h4></td>
 	</tr>
 	<tr valign="top">
-		<td width="10%" class="label" align="right"><input type="radio" name="XSLTrenderer" id="XSLTrenderer" value="PHP5" {if !$xsltPHP5}disabled{/if} {if $XSLTrenderer eq "PHP5"}checked {/if}/></td>
+		<td width="10%" class="label" align="right"><input type="radio" name="XSLTrenderer" id="XSLTrenderer-PHP5" value="PHP5" {if !$xsltPHP5}disabled="disabled"{/if} {if $XSLTrenderer eq "PHP5"}checked="checked" {/if}/></td>
 		<td width="90%" class="value">{translate key="plugins.generic.xmlGalley.settings.PHP5"}
 		{if !$xsltPHP5}<span class="formError">{translate key="plugins.generic.xmlGalley.settings.notAvailable"}</span>{/if}
 		</td>
 	</tr>
 	<tr valign="top">
-		<td width="10%" class="label" align="right"><input type="radio" name="XSLTrenderer" id="XSLTrenderer" value="PHP4" {if !$xsltPHP4}disabled{/if} {if $XSLTrenderer eq "PHP4"}checked {/if}/></td>
+		<td width="10%" class="label" align="right"><input type="radio" name="XSLTrenderer" id="XSLTrenderer-PHP4" value="PHP4" {if !$xsltPHP4}disabled="disabled"{/if} {if $XSLTrenderer eq "PHP4"}checked="checked" {/if}/></td>
 		<td width="90%" class="value">{translate key="plugins.generic.xmlGalley.settings.PHP4"}
 		{if !$xsltPHP4}<span class="formError">{translate key="plugins.generic.xmlGalley.settings.notAvailable"}</span>{/if}
 		</td>
 	</tr>
 	<tr valign="top">
-		<td width="10%" class="label" align="right"><input type="radio" name="XSLTrenderer" id="XSLTrenderer" value="external" {if $XSLTrenderer eq "external"}checked {/if}/></td>
+		<td width="10%" class="label" align="right"><input type="radio" name="XSLTrenderer" id="XSLTrenderer-external" value="external" {if $XSLTrenderer eq "external"}checked="checked" {/if}/></td>
 		<td width="90%" class="value">{translate key="plugins.generic.xmlGalley.settings.externalXSLT"}</td>
 	</tr>
 	<tr valign="top">
@@ -72,10 +72,10 @@
 
 <table width="100%" class="data">
 	<tr valign="top">
-		<td width="100%" class="label" colspan="2"><h4>{fieldLabel name="XSLsheet" required="true" key="plugins.generic.xmlGalley.settings.stylesheet"}:</h4></td>
+		<td width="100%" class="label" colspan="2"><h4 id="XSLstylesheet">{fieldLabel name="XSLstylesheet" required="true" key="plugins.generic.xmlGalley.settings.stylesheet"}:</h4></td>
 	</tr>
 	<tr valign="top">
-		<td width="10%" class="label" align="right"><input type="radio" name="XSLstylesheet" id="XSLstylesheet" value="NLM" {if $XSLstylesheet eq "NLM"}checked {/if}/></td>
+		<td width="10%" class="label" align="right"><input type="radio" name="XSLstylesheet" id="XSLstylesheet-NLM" value="NLM" {if $XSLstylesheet eq "NLM"}checked="checked" {/if}/></td>
 		<td width="90%" class="value">{translate key="plugins.generic.xmlGalley.settings.xslNLM"}</td>
 	</tr>
 	<tr valign="top">
@@ -91,7 +91,7 @@
 		<td width="90%" class="value"><input type="text" name="externalFOP" id="externalFOP" value="{$externalFOP|escape}" size="60" maxlength="90" class="textField" /></td>
 	</tr>
 	<tr valign="top">
-		<td width="10%" class="label" align="right"><input type="radio" name="XSLstylesheet" id="XSLstylesheet" value="custom" {if $XSLstylesheet eq "custom"}checked {/if}/></td>
+		<td width="10%" class="label" align="right"><input type="radio" name="XSLstylesheet" id="XSLstylesheet-custom" value="custom" {if $XSLstylesheet eq "custom"}checked="checked" {/if}/></td>
 		<td width="90%" class="value">{translate key="plugins.generic.xmlGalley.settings.customXSL"}</td>
 	</tr>
 	<tr valign="top">

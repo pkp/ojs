@@ -110,7 +110,7 @@
 			<input type="radio" name="subscriptionExpiryPartial" id="subscriptionExpiryPartial-0" value="0"{if not $subscriptionExpiryPartial} checked="checked"{/if} />
 		</td>
 		<td width="95%" class="value">
-			<label for="subscriptionExpiry-0"><strong>{translate key="manager.subscriptionPolicies.expiryFull"}</strong></label>
+			<label for="subscriptionExpiryPartial-0"><strong>{translate key="manager.subscriptionPolicies.expiryFull"}</strong></label>
 			<br />
 			<span class="instruct">{translate key="manager.subscriptionPolicies.expiryFullDescription"}</span>
 		</td>
@@ -123,7 +123,7 @@
 			<input type="radio" name="subscriptionExpiryPartial" id="subscriptionExpiryPartial-1" value="1"{if $subscriptionExpiryPartial} checked="checked"{/if} />
 		</td>
 		<td width="95%" class="value">
-			<label for="subscriptionExpiry-1"><strong>{translate key="manager.subscriptionPolicies.expiryPartial"}</strong></label>
+			<label for="subscriptionExpiryPartial-1"><strong>{translate key="manager.subscriptionPolicies.expiryPartial"}</strong></label>
 			<br />
 			<span class="instruct">{translate key="manager.subscriptionPolicies.expiryPartialDescription"}</span>
 		</td>
@@ -139,25 +139,25 @@
 <p>
 	<input type="checkbox" name="enableSubscriptionExpiryReminderBeforeMonths" id="enableSubscriptionExpiryReminderBeforeMonths" value="1" onclick="toggleAllowSetBeforeMonthsReminder(this.form)"{if !$scheduledTasksEnabled} disabled="disabled" {elseif $enableSubscriptionExpiryReminderBeforeMonths} checked="checked"{/if} />&nbsp;
 	<label for="enableSubscriptionExpiryReminderBeforeMonths">{translate key="manager.subscriptionPolicies.expiryReminderBeforeMonths1"}</label>
-	<select name="numMonthsBeforeSubscriptionExpiryReminder" id="numMonthsBeforeSubscriptionExpiryReminder" class="selectMenu"{if not $enableSubscriptionExpiryReminderBeforeMonths || !$scheduledTasksEnabled} disabled="disabled"{/if} />{html_options options=$validNumMonthsBeforeExpiry selected=$numMonthsBeforeSubscriptionExpiryReminder}</select>
+	<select name="numMonthsBeforeSubscriptionExpiryReminder" id="numMonthsBeforeSubscriptionExpiryReminder" class="selectMenu"{if not $enableSubscriptionExpiryReminderBeforeMonths || !$scheduledTasksEnabled} disabled="disabled"{/if}>{html_options options=$validNumMonthsBeforeExpiry selected=$numMonthsBeforeSubscriptionExpiryReminder}</select>
 	{translate key="manager.subscriptionPolicies.expiryReminderBeforeMonths2"}
 </p>
 <p>
 	<input type="checkbox" name="enableSubscriptionExpiryReminderBeforeWeeks" id="enableSubscriptionExpiryReminderBeforeWeeks" value="1" onclick="toggleAllowSetBeforeWeeksReminder(this.form)"{if !$scheduledTasksEnabled} disabled="disabled" {elseif $enableSubscriptionExpiryReminderBeforeWeeks} checked="checked"{/if} />&nbsp;
 	<label for="enableSubscriptionExpiryReminderBeforeWeeks">{translate key="manager.subscriptionPolicies.expiryReminderBeforeWeeks1"}</label>
-	<select name="numWeeksBeforeSubscriptionExpiryReminder" id="numWeeksBeforeSubscriptionExpiryReminder" class="selectMenu"{if not $enableSubscriptionExpiryReminderBeforeWeeks || !$scheduledTasksEnabled} disabled="disabled"{/if} />{html_options options=$validNumWeeksBeforeExpiry selected=$numWeeksBeforeSubscriptionExpiryReminder}</select>
+	<select name="numWeeksBeforeSubscriptionExpiryReminder" id="numWeeksBeforeSubscriptionExpiryReminder" class="selectMenu"{if not $enableSubscriptionExpiryReminderBeforeWeeks || !$scheduledTasksEnabled} disabled="disabled"{/if}>{html_options options=$validNumWeeksBeforeExpiry selected=$numWeeksBeforeSubscriptionExpiryReminder}</select>
 	{translate key="manager.subscriptionPolicies.expiryReminderBeforeWeeks2"}
 </p>
 <p>
 	<input type="checkbox" name="enableSubscriptionExpiryReminderAfterWeeks" id="enableSubscriptionExpiryReminderAfterWeeks" value="1" onclick="toggleAllowSetAfterWeeksReminder(this.form)"{if !$scheduledTasksEnabled} disabled="disabled" {elseif $enableSubscriptionExpiryReminderAfterWeeks} checked="checked"{/if} />&nbsp;
 	<label for="enableSubscriptionExpiryReminderAfterWeeks">{translate key="manager.subscriptionPolicies.expiryReminderAfterWeeks1"}</label>
-	<select name="numWeeksAfterSubscriptionExpiryReminder" id="numWeeksAfterSubscriptionExpiryReminder" class="selectMenu"{if not $enableSubscriptionExpiryReminderAfterWeeks || !$scheduledTasksEnabled} disabled="disabled"{/if} />{html_options options=$validNumWeeksAfterExpiry selected=$numWeeksAfterSubscriptionExpiryReminder}</select>
+	<select name="numWeeksAfterSubscriptionExpiryReminder" id="numWeeksAfterSubscriptionExpiryReminder" class="selectMenu"{if not $enableSubscriptionExpiryReminderAfterWeeks || !$scheduledTasksEnabled} disabled="disabled"{/if}>{html_options options=$validNumWeeksAfterExpiry selected=$numWeeksAfterSubscriptionExpiryReminder}</select>
 	{translate key="manager.subscriptionPolicies.expiryReminderAfterWeeks2"}
 </p>
 <p>
 	<input type="checkbox" name="enableSubscriptionExpiryReminderAfterMonths" id="enableSubscriptionExpiryReminderAfterMonths" value="1" onclick="toggleAllowSetAfterMonthsReminder(this.form)"{if !$scheduledTasksEnabled} disabled="disabled" {elseif $enableSubscriptionExpiryReminderAfterMonths} checked="checked"{/if} />&nbsp;
 	<label for="enableSubscriptionExpiryReminderAfterMonths">{translate key="manager.subscriptionPolicies.expiryReminderAfterMonths1"}</label>
-	<select name="numMonthsAfterSubscriptionExpiryReminder" id="numMonthsAfterSubscriptionExpiryReminder" class="selectMenu"{if not $enableSubscriptionExpiryReminderAfterMonths || !$scheduledTasksEnabled} disabled="disabled"{/if} />{html_options options=$validNumMonthsAfterExpiry selected=$numMonthsAfterSubscriptionExpiryReminder}</select>
+	<select name="numMonthsAfterSubscriptionExpiryReminder" id="numMonthsAfterSubscriptionExpiryReminder" class="selectMenu"{if not $enableSubscriptionExpiryReminderAfterMonths || !$scheduledTasksEnabled} disabled="disabled"{/if}>{html_options options=$validNumMonthsAfterExpiry selected=$numMonthsAfterSubscriptionExpiryReminder}</select>
 	{translate key="manager.subscriptionPolicies.expiryReminderAfterMonths2"}
 </p>
 
@@ -177,7 +177,7 @@
 	<p>{translate key="manager.subscriptionPolicies.delayedOpenAccessDescription"}</p>
 	<input type="checkbox" name="enableDelayedOpenAccess" id="enableDelayedOpenAccess" value="1" onclick="toggleAllowSetDelayedOpenAccessDuration(this.form)" {if $enableDelayedOpenAccess} checked="checked"{/if} />&nbsp;
 	<label for="enableDelayedOpenAccess">{translate key="manager.subscriptionPolicies.delayedOpenAccessDescription1"}</label>
-	<select name="delayedOpenAccessDuration" id="delayedOpenAccessDuration" class="selectMenu" {if not $enableDelayedOpenAccess} disabled="disabled"{/if} />{html_options options=$validDuration selected=$delayedOpenAccessDuration}</select>
+	<select name="delayedOpenAccessDuration" id="delayedOpenAccessDuration" class="selectMenu" {if not $enableDelayedOpenAccess} disabled="disabled"{/if}>{html_options options=$validDuration selected=$delayedOpenAccessDuration}</select>
 	{translate key="manager.subscriptionPolicies.delayedOpenAccessDescription2"}
 
 	<p>
@@ -196,8 +196,8 @@
 	<span class="instruct">{translate key="manager.subscriptionPolicies.htmlInstructions"}</span>
 	</p>
 
-<p>
 	<h4>{translate key="manager.subscriptionPolicies.authorSelfArchive"}</h4>
+<p>
 	<input type="checkbox" name="enableAuthorSelfArchive" id="enableAuthorSelfArchive" value="1"{if $enableAuthorSelfArchive} checked="checked"{/if} />&nbsp;
 	<label for="enableAuthorSelfArchive">{translate key="manager.subscriptionPolicies.authorSelfArchiveDescription"}</label>
 </p>

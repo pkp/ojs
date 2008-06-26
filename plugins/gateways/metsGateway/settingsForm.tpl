@@ -21,11 +21,11 @@
 <table width="100%" class="data">
 	<tr valign="top">
 		<td width="30%" class="label" align="right">{fieldLabel name="FLocat" key="plugins.gateways.metsGateway.settings.FLocat"}</td>
-		<td width="70%" class="value"><input type="radio" name="contentWrapper" id="contentWrapper" value="FLocat" {if $contentWrapper eq "FLocat"}checked {/if}/></td>
+		<td width="70%" class="value"><input type="radio" name="contentWrapper" id="FLocat" value="FLocat" {if $contentWrapper eq "FLocat"}checked="checked" {/if}/></td>
 	</tr>
 	<tr valign="top">
 		<td width="30%" class="label" align="right">{fieldLabel name="FContent" key="plugins.gateways.metsGateway.settings.FContent"}</td>
-		<td width="70%" class="value"><input type="radio" name="contentWrapper" id="contentWrapper" value="FContent" {if $contentWrapper eq "FContent"}checked {/if}/></td>
+		<td width="70%" class="value"><input type="radio" name="contentWrapper" id="FContent" value="FContent" {if $contentWrapper eq "FContent"}checked="checked" {/if}/></td>
 	</tr>
 	<tr>
 		<td colspan="2"><div class="separator">&nbsp;</div></td>
@@ -42,7 +42,7 @@
 	</tr>
 	<tr valign="top">
 		<td width="30%" class="label" align="right">{fieldLabel name="exportSuppFiles"  key="plugins.gateways.metsGateway.settings.exportSuppFiles"}</td>
-		<td width="70%" class="value"><input type="checkbox" name="exportSuppFiles" id="exportSuppFiles" value="on" {if $exportSuppFiles eq "on"}checked {/if}/></td>
+		<td width="70%" class="value"><input type="checkbox" name="exportSuppFiles" id="exportSuppFiles" value="on" {if $exportSuppFiles eq "on"}checked="checked" {/if}/></td>
 	</tr>
 </table>
 

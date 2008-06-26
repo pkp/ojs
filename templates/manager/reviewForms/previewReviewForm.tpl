@@ -32,7 +32,7 @@
 		{elseif $reviewFormElement->getElementType() == REVIEW_FORM_ELEMENT_TYPE_TEXT_FIELD}
 			<input type="text" size="40" maxlength="120" class="textField" />
 		{elseif $reviewFormElement->getElementType() == REVIEW_FORM_ELEMENT_TYPE_TEXTAREA}
-			<textarea rows="4" cols="40" class="textArea" /></textarea>
+			<textarea rows="4" cols="40" class="textArea"></textarea>
 		{elseif $reviewFormElement->getElementType() == REVIEW_FORM_ELEMENT_TYPE_CHECKBOXES}
 			{assign var=possibleResponses value=$reviewFormElement->getReviewFormElementPossibleResponses()}
 			{foreach name=responses from=$possibleResponses key=responseId item=responseItem}
@@ -43,7 +43,7 @@
 		{elseif $reviewFormElement->getElementType() == REVIEW_FORM_ELEMENT_TYPE_RADIO_BUTTONS}
 			{assign var=possibleResponses value=$reviewFormElement->getReviewFormElementPossibleResponses()}
 			{foreach name=responses from=$possibleResponses key=responseId item=responseItem}
-				<input id="radio-{$responseId|escape}" name="{$reviewFormElement->getReviewFormElementId()}" type="radio">
+				<input id="radio-{$responseId|escape}" name="{$reviewFormElement->getReviewFormElementId()}" type="radio"/>
 				<label for="radio-{$responseId|escape}">{$responseItem.content}</label>
 				<br/>
 			{/foreach}

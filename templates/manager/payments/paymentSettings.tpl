@@ -41,7 +41,7 @@
 	</tr>
 	<tr>
 		<td class="label" width="20%">{fieldLabel name="currency" key="manager.payment.currency"}</td>
-		<td class="value" width="80%"><select name="currency" id="currency" class="selectMenu" />{html_options options=$validCurrencies selected=$currency}</select></td>
+		<td class="value" width="80%"><select name="currency" id="currency" class="selectMenu">{html_options options=$validCurrencies selected=$currency}</select></td>
 	</tr>
 	<tr>
 		<td width="20%"></td>
@@ -57,15 +57,15 @@
 	<td width="80%">{fieldLabel name="submissionFeeEnabled" key="manager.payment.options.submissionFee"}</td>		
 </tr>
 <tr>
-	<td class="label" width="20%">{fieldLabel name="submissionFee" key="manager.payment.options.fee"}
+	<td class="label" width="20%">{fieldLabel name="submissionFee" key="manager.payment.options.fee"}</td>
 	<td class="value" width="80%"><input type="text" class="textField" name="submissionFee" id="submissionFee" size="10" value="{$submissionFee|escape}" /></td>
 </tr>
 <tr>
-	<td class="label" width="20%">{fieldLabel name="submissionFeeName" key="manager.payment.options.feeName"}
+	<td class="label" width="20%">{fieldLabel name="submissionFeeName" key="manager.payment.options.feeName"}</td>
 	<td class="value" width="80%"><input type="text" class="textField" name="submissionFeeName[{$formLocale|escape}]" id="submissionFeeName" size="50" value="{$submissionFeeName[$formLocale]|escape}" /></td>
 </tr>
 <tr>
-	<td class="label" width="20%">{fieldLabel name="submissionFeeDescription" key="manager.payment.options.feeDescription"}
+	<td class="label" width="20%">{fieldLabel name="submissionFeeDescription" key="manager.payment.options.feeDescription"}</td>
 	<td class="value" width="80%"><textarea class="textArea" name="submissionFeeDescription[{$formLocale|escape}]" id="submissionFeeDescription" rows="2" cols="50">{$submissionFeeDescription[$formLocale]|escape}</textarea></td>
 </tr>
 <tr>
@@ -73,15 +73,15 @@
 	<td width="80%">{fieldLabel name="fastTrackFeeEnabled" key="manager.payment.options.fastTrackFee"}</td>		
 </tr>
 <tr>
-	<td class="label" width="20%">{fieldLabel name="fastTrackFee" key="manager.payment.options.fee"}
+	<td class="label" width="20%">{fieldLabel name="fastTrackFee" key="manager.payment.options.fee"}</td>
 	<td class="value" width="80%"><input type="text" class="textField" name="fastTrackFee" id="fastTrackFee" size="10" value="{$fastTrackFee|escape}" /></td>
 </tr>
 <tr>
-	<td class="label" width="20%">{fieldLabel name="fastTrackFeeName" key="manager.payment.options.feeName"}
+	<td class="label" width="20%">{fieldLabel name="fastTrackFeeName" key="manager.payment.options.feeName"}</td>
 	<td class="value" width="80%"><input type="text" class="textField" name="fastTrackFeeName[{$formLocale|escape}]" id="fastTrackFeeName" size="50" value="{$fastTrackFeeName[$formLocale]|escape}" /></td>
 </tr>
 <tr>
-	<td class="label" width="20%">{fieldLabel name="fastTrackFeeDescription" key="manager.payment.options.feeDescription"}
+	<td class="label" width="20%">{fieldLabel name="fastTrackFeeDescription" key="manager.payment.options.feeDescription"}</td>
 	<td class="value" width="80%"><textarea class="textArea" name="fastTrackFeeDescription[{$formLocale|escape}]" id="fastTrackFeeDescription" rows="2" cols="50">{$fastTrackFeeDescription[$formLocale]|escape}</textarea></td>
 </tr>
 <tr>
@@ -89,19 +89,19 @@
 	<td width="80%">{fieldLabel name="publicationFeeEnabled" key="manager.payment.options.publicationFee"}</td>		
 </tr>
 <tr>
-	<td class="label" width="20%">{fieldLabel name="publicationFee" key="manager.payment.options.fee"}
+	<td class="label" width="20%">{fieldLabel name="publicationFee" key="manager.payment.options.fee"}</td>
 	<td class="value" width="80%"><input type="text" class="textField" name="publicationFee" id="publicationFee" size="10" value="{$publicationFee|escape}" /></td>
 </tr>
 <tr>
-	<td class="label" width="20%">{fieldLabel name="publicationFeeName" key="manager.payment.options.feeName"}
+	<td class="label" width="20%">{fieldLabel name="publicationFeeName" key="manager.payment.options.feeName"}</td>
 	<td class="value" width="80%"><input type="text" class="textField" name="publicationFeeName[{$formLocale|escape}]" id="publicationFeeName" size="50" value="{$publicationFeeName[$formLocale]|escape}" /></td>
 </tr>
 <tr>
-	<td class="label" width="20%">{fieldLabel name="publicationFeeDescription" key="manager.payment.options.feeDescription"}
+	<td class="label" width="20%">{fieldLabel name="publicationFeeDescription" key="manager.payment.options.feeDescription"}</td>
 	<td class="value" width="80%"><textarea class="textArea" name="publicationFeeDescription[{$formLocale|escape}]" id="publicationFeeDescription" rows="2" cols="50">{$publicationFeeDescription[$formLocale]|escape}</textarea></td>
 </tr>
 <tr> 
-	<td class="label" width="20%">{fieldLabel name="waiverPolicy" key="manager.payment.options.waiverPolicy"}
+	<td class="label" width="20%">{fieldLabel name="waiverPolicy" key="manager.payment.options.waiverPolicy"}</td>
 	<td class="value" width="80%"><textarea class="textArea" name="waiverPolicy[{$formLocale|escape}]" id="waiverPolicy" rows="2" cols="50">{$waiverPolicy[$formLocale]|escape}</textarea></td>
 </tr>
 </table>
@@ -119,15 +119,15 @@
 	<td width="80%">{fieldLabel name="purchaseArticleFeeEnabled" key="manager.payment.options.purchaseArticleFee"}</td>		
 </tr>
 <tr>
-	<td class="label" width="20%">{fieldLabel name="purchaseArticleFee" key="manager.payment.options.fee"}
+	<td class="label" width="20%">{fieldLabel name="purchaseArticleFee" key="manager.payment.options.fee"}</td>
 	<td class="value" width="80%"><input type="text" class="textField" name="purchaseArticleFee" id="purchaseArticleFee" size="10" value="{$purchaseArticleFee|escape}" /></td>
 </tr>
 <tr>
-	<td class="label" width="20%">{fieldLabel name="purchaseArticleFeeName" key="manager.payment.options.feeName"}
+	<td class="label" width="20%">{fieldLabel name="purchaseArticleFeeName" key="manager.payment.options.feeName"}</td>
 	<td class="value" width="80%"><input type="text" class="textField" name="purchaseArticleFeeName[{$formLocale|escape}]" id="purchaseArticleFeeName" size="50" value="{$purchaseArticleFeeName[$formLocale]|escape}" /></td>
 </tr>
 <tr>
-	<td class="label" width="20%">{fieldLabel name="purchaseArticleFeeDescription" key="manager.payment.options.feeDescription"}
+	<td class="label" width="20%">{fieldLabel name="purchaseArticleFeeDescription" key="manager.payment.options.feeDescription"}</td>
 	<td class="value" width="80%"><textarea class="textArea" name="purchaseArticleFeeDescription[{$formLocale|escape}]" id="purchaseArticleFeeDescription" rows="2" cols="50">{$purchaseArticleFeeDescription[$formLocale]|escape}</textarea></td>
 </tr>
 <tr>
@@ -146,15 +146,15 @@
 	<td width="80%">{fieldLabel name="membershipFeeEnabled" key="manager.payment.options.membershipFee"}</td>		
 </tr>
 <tr>
-	<td class="label" width="20%">{fieldLabel name="membershipFee" key="manager.payment.options.fee"}
+	<td class="label" width="20%">{fieldLabel name="membershipFee" key="manager.payment.options.fee"}</td>
 	<td class="value" width="80%"><input type="text" class="textField" name="membershipFee" id="membershipFee" size="10" value="{$membershipFee|escape}" /></td>
 </tr>
 <tr>
-	<td class="label" width="20%">{fieldLabel name="membershipFeeName" key="manager.payment.options.feeName"}
+	<td class="label" width="20%">{fieldLabel name="membershipFeeName" key="manager.payment.options.feeName"}</td>
 	<td class="value" width="80%"><input type="text" class="textField" name="membershipFeeName[{$formLocale|escape}]" id="membershipFeeName" size="50" value="{$membershipFeeName[$formLocale]|escape}" /></td>
 </tr>
 <tr>
-	<td class="label" width="20%">{fieldLabel name="membershipFeeDescription" key="manager.payment.options.feeDescription"}
+	<td class="label" width="20%">{fieldLabel name="membershipFeeDescription" key="manager.payment.options.feeDescription"}</td>
 	<td class="value" width="80%"><textarea class="textArea" name="membershipFeeDescription[{$formLocale|escape}]" id="membershipFeeDescription" rows="2" cols="50">{$membershipFeeDescription[$formLocale]|escape}</textarea></td>
 </tr>
 <tr>
@@ -162,11 +162,11 @@
 	<td width="80%">{fieldLabel name="donationFeeEnabled" key="manager.payment.options.donationFee"}</td>		
 </tr>
 <tr>
-	<td class="label" width="20%">{fieldLabel name="donationFeeName" key="manager.payment.options.feeName"}
+	<td class="label" width="20%">{fieldLabel name="donationFeeName" key="manager.payment.options.feeName"}</td>
 	<td class="value" width="80%"><input type="text" class="textField" name="donationFeeName[{$formLocale|escape}]" id="donationFeeName" size="50" value="{$donationFeeName[$formLocale]|escape}" /></td>
 </tr>
 <tr>
-	<td class="label" width="20%">{fieldLabel name="donationFeeDescription" key="manager.payment.options.feeDescription"}
+	<td class="label" width="20%">{fieldLabel name="donationFeeDescription" key="manager.payment.options.feeDescription"}</td>
 	<td class="value" width="80%"><textarea class="textArea" name="donationFeeDescription[{$formLocale|escape}]" id="donationFeeDescription" rows="2" cols="50">{$donationFeeDescription[$formLocale]|escape}</textarea></td>
 </tr>
 </table>

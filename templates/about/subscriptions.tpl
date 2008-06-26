@@ -34,7 +34,6 @@
 </p>
 
 <h3>{translate key="about.availableSubscriptionTypes"}</h3>
-<p>
 <table width="100%" class="listing">
 	<tr>
 		<td colspan="4" class="headseparator">&nbsp;</td>
@@ -60,6 +59,5 @@
 	{/if}
 {/iterate}
 </table>
-</p>
 
 {include file="common/footer.tpl"}

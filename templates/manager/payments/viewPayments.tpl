@@ -31,7 +31,7 @@
 	<tr>
 		<td colspan="4" class="headseparator">&nbsp;</td>
 	</tr>
-<a name="payments"></a>
+
 	{iterate from=payments item=payment}
 	<tr valign="top">
 		<td>
