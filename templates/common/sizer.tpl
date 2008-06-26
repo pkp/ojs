@@ -1,13 +1,14 @@
 {**
- * header.tpl
+ * sizer.tpl
  *
  * Copyright (c) 2003-2008 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * Additional header data for font sizer block.
+ * Header data for font sizer.
  *
  * $Id$
  *}
+
 	<!-- Add javascript required for font sizer -->
 	<script type="text/javascript" src="{$baseUrl}/js/sizer.js" ></script>
 

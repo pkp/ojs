@@ -24,8 +24,12 @@ class FontSizeBlockPlugin extends BlockPlugin {
 			$templateMgr =& TemplateManager::getManager();
 			$templateMgr->assign('fontIconPath', 'templates/images/icons');
 			$additionalHeadData = $templateMgr->get_template_vars('additionalHeadData');
-			$additionalHeadData .= $templateMgr->fetch($this->getTemplatePath() . '/header.tpl');
-			$templateMgr->assign('additionalHeadData', $additionalHeadData);
+
+			// Add font sizer js and css if not already in header
+			if (stripos($additionalHeadData, 'sizer.js') === false) {
+				$additionalHeadData .= $templateMgr->fetch('common/sizer.tpl');
+				$templateMgr->assign('additionalHeadData', $additionalHeadData);
+			}
 		}
 		return $success;
 	}
