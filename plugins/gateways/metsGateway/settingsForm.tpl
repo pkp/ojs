@@ -13,7 +13,7 @@
 
 {url|assign:"directoryUrl" page="gateway" op="plugin" path="METSGatewayPlugin"}
 
-<h3>{translate key="plugins.gateways.googleScholar.settings"}</h3>
+<h3>{translate key="plugins.gateways.metsGateway.settings"}</h3>
 
 <form method="post" action="{plugin_url path="settings"}">
 {include file="common/formErrors.tpl"}
