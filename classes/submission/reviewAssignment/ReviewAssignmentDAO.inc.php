@@ -496,7 +496,7 @@ class ReviewAssignmentDAO extends DAO {
 	function deleteReviewAssignmentsByArticle($articleId) {
 		$returner = false;
 		$result =& $this->retrieve(
-			'SELECT review_id FROM reviews WHERE article_id = ?',
+			'SELECT review_id FROM review_assignments WHERE article_id = ?',
 			(int) $articleId
 		);
 
