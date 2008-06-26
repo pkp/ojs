@@ -204,7 +204,7 @@ class ArticleHandler extends Handler {
 		} else {
 			if (!Request::isBot()) {
 				// Increment the galley's views count
-				$galleyDao->incrementViews($galleyId);
+				$galleyDao->incrementViews($galley->getGalleyId());
 			}
 
 			// Use the article's CSS file, if set.
