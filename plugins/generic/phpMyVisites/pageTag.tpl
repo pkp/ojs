@@ -15,7 +15,7 @@ onclick="window.open(this.href);return(false);"><script type="text/javascript">
 var a_vars = Array();
 var pagename='';
 
-var phpmyvisitesSite = (int) "{$phpmvSiteId|escape}";
+var phpmyvisitesSite = "{$phpmvSiteId|escape}";
 var phpmyvisitesURL = "{$phpmvUrl}/phpmyvisites.php";
 //-->
 </script>
