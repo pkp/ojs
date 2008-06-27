@@ -36,7 +36,7 @@
 	<section title="Merge Users">
 		<![CDATA[<p>The Merge Users feature allows the Site Administrator to merge two user accounts into a single account, transferring edit assignments, submissions, and numerous other records from one account to the other and effectively deleting the first.</p>
 		<p>Unlike the Merge Users feature available to a Journal Manager, which is limited to merging user accounts for a particular journal, the Merge Users feature under Site Administration allows the Site Administrator to merge any two user accounts, even across different journals.</p>
-		<p>The following items are transferred:
+		<p>The following items are transferred:</p>
 			<ul>
 				<li>Article authorship</li>
 				<li>Public comments on articles</li>
@@ -49,7 +49,7 @@
 				<li>Reviewer access keys</li>
 				<li>Roles</li>
 			</ul>
-		The following items are <strong>not</strong> transferred:
+		<p>The following items are <strong>not</strong> transferred:</p>
 			<ul>
 				<li>Sessions</li>
 				<li>Subscriptions</li>
@@ -58,7 +58,6 @@
 				<li>Section Editor status on sections</li>
 				<li>User profile information (e.g. first name, last name, etc.)</li>
 			</ul>
-		</p>
 		<p>This feature should be used with caution, as it is not reversible and involves the transfer of records from one user to another.</p>]]>
 	</section>
 </topic>

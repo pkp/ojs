@@ -15,7 +15,7 @@
 <topic id="journal/topic/000033" locale="en_US" title="Merge Users" toc="journal/toc/000002" key="journal.managementPages.mergeUsers">
 	<section>
 		<![CDATA[<p>The Merge Users feature, available from Journal Management under the Users heading, allows the Journal Manager to merge two user accounts into a single account, transferring edit assignments, submissions, and numerous other records from one account to the other and effectively deleting the first.</p>
-		<p>The following items are transferred:
+		<p>The following items are transferred:</p>
 			<ul>
 				<li>Article authorship</li>
 				<li>Public comments on articles</li>
@@ -28,7 +28,7 @@
 				<li>Reviewer access keys</li>
 				<li>Roles</li>
 			</ul>
-		The following items are <strong>not</strong> transferred:
+		<p>The following items are <strong>not</strong> transferred:</p>
 			<ul>
 				<li>Sessions</li>
 				<li>Subscriptions</li>
@@ -37,7 +37,6 @@
 				<li>Section Editor status on sections</li>
 				<li>User profile information (e.g. first name, last name, etc.)</li>
 			</ul>
-		</p>
 		<p>This feature should be used with caution, as it is not reversible and involves the transfer of records from one user to another.</p>]]>
 	</section>
 </topic>
