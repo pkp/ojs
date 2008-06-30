@@ -118,7 +118,11 @@ class AnnouncementFeedGatewayPlugin extends GatewayPlugin {
 			}
 		}
 
+		$versionDao =& DAORegistry::getDAO('VersionDAO');
+		$version =& $versionDao->getCurrentVersion();
+
 		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign('ojsVersion', $version->getVersionString());
 		$templateMgr->assign('selfUrl', Request::getCompleteUrl()); 
 		$templateMgr->assign('dateUpdated', $dateUpdated);
 		$templateMgr->assign_by_ref('announcements', $announcements->toArray());

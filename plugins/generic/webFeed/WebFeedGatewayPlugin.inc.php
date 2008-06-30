@@ -107,7 +107,11 @@ class WebFeedGatewayPlugin extends GatewayPlugin {
 			$publishedArticles = &$publishedArticleDao->getPublishedArticlesInSections($issue->getIssueId());
 		}
 
+		$versionDao =& DAORegistry::getDAO('VersionDAO');
+		$version =& $versionDao->getCurrentVersion();
+
 		$templateMgr = &TemplateManager::getManager();
+		$templateMgr->assign('ojsVersion', $version->getVersionString());
 		$templateMgr->assign_by_ref('publishedArticles', $publishedArticles);
 		$templateMgr->assign_by_ref('journal', $journal);
 		$templateMgr->assign_by_ref('issue', $issue);
