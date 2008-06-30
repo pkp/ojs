@@ -23,7 +23,7 @@
 	<message key="plugins.block.fontSize.displayName">Μέγεθος Χαρακτήρων Block</message>
 	<message key="plugins.block.fontSize.description">Το plugin αυτό παρέχει την λειτουργία αλλαγής του μεγέθους των χαρακτήρων της ιστοσελίδας στην πλαϊνή μπάρα.</message>
 	<message key="plugins.block.fontSize.title">Μέγεθος Χαρακτήρων</message>
-	<message key="plugins.block.fontSize.small.alt">Μικρά</message>
-	<message key="plugins.block.fontSize.medium.alt">Μέτρια</message>
-	<message key="plugins.block.fontSize.large.alt">Μεγάλα</message>
+	<message key="plugins.block.fontSize.small">Μικρά</message>
+	<message key="plugins.block.fontSize.medium">Μέτρια</message>
+	<message key="plugins.block.fontSize.large">Μεγάλα</message>
 </locale>

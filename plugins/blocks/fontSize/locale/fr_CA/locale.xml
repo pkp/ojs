@@ -16,4 +16,7 @@
 	<message key="plugins.block.fontSize.displayName">Bloc de taille de police</message>
 	<message key="plugins.block.fontSize.description">Ce plugiciel offre la taille de police de caractères dans l'encadré latéral.</message>
 	<message key="plugins.block.fontSize.title">Taille de police</message>
+	<message key="plugins.block.fontSize.small">Petit</message>
+	<message key="plugins.block.fontSize.medium">Moyen</message>
+	<message key="plugins.block.fontSize.large">Grand</message>
 </locale>

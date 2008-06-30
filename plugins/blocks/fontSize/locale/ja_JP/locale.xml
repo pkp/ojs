@@ -16,7 +16,7 @@
 	<message key="plugins.block.fontSize.displayName">フォントサイズブロック</message>
 	<message key="plugins.block.fontSize.description">このプラグインはサイドバーにフォントサイズ変更リンクを付けます。</message>
 	<message key="plugins.block.fontSize.title">フォントサイズ</message>
-	<message key="plugins.block.fontSize.small.alt">小</message>
-	<message key="plugins.block.fontSize.medium.alt">中</message>
-	<message key="plugins.block.fontSize.large.alt">大</message>
+	<message key="plugins.block.fontSize.small">小</message>
+	<message key="plugins.block.fontSize.medium">中</message>
+	<message key="plugins.block.fontSize.large">大</message>
 </locale>

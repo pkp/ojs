@@ -16,7 +16,7 @@
 	<message key="plugins.block.fontSize.displayName">Bloco Tamanho de Fonte</message>
 	<message key="plugins.block.fontSize.description">Este plugin habilita a ferramenta de alteração de tamanho de fonte.</message>
 	<message key="plugins.block.fontSize.title">Tamanho de Fonte</message>
-	<message key="plugins.block.fontSize.small.alt">Pequeno</message>
-	<message key="plugins.block.fontSize.medium.alt">Médio</message>
-	<message key="plugins.block.fontSize.large.alt">Grande</message>
+	<message key="plugins.block.fontSize.small">Pequeno</message>
+	<message key="plugins.block.fontSize.medium">Médio</message>
+	<message key="plugins.block.fontSize.large">Grande</message>
 </locale>
