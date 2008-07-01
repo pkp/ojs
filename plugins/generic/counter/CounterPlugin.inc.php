@@ -62,6 +62,8 @@ class CounterPlugin extends GenericPlugin {
 	}
 
 	function displayMenuOption($hookName, $args) {
+		if (!Validation::isSiteAdmin()) return false;
+
 		$params =& $args[0];
 		$smarty =& $args[1];
 		$output =& $args[2];
